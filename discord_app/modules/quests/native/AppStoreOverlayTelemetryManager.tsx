@@ -1,13 +1,12 @@
 // discord_app/modules/quests/native/AppStoreOverlayTelemetryManager.tsx
-import set from "../../../../_runtime/00002_set.js";
-import ME from "../../../Constants.tsx";
-import set2 from "../../../utils/PlatformUtils.tsx";
-import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import Constants from "../../../Constants.tsx";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
+import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const AnalyticEvents = ME.AnalyticEvents;
+const AnalyticEvents = Constants.AnalyticEvents;
 let c3 = null;
 let c4 = null;
-initializeDefault;
 class AppStoreOverlayTelemetryManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -22,7 +21,7 @@ class AppStoreOverlayTelemetryManager extends tmp2 {
 }
 AppStoreOverlayTelemetryManager.prototype["handleAppStateUpdate"] = function handleAppStateUpdate(state) {
   state = state.state;
-  const isAndroidResult = set2.isAndroid();
+  const isAndroidResult = PlatformUtils.isAndroid();
   if (isAndroidResult) {
     return !isAndroidResult;
   } else {
@@ -45,11 +44,11 @@ AppStoreOverlayTelemetryManager.prototype["handleAppStateUpdate"] = function han
   }
 };
 const appStoreOverlayTelemetryManager = new AppStoreOverlayTelemetryManager();
-const result = set.fileFinishedImporting("modules/quests/native/AppStoreOverlayTelemetryManager.tsx");
+const result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlayTelemetryManager.tsx");
 
 export default appStoreOverlayTelemetryManager;
 export function setAppStoreOverlayOpen(arg0) {
-  closure_3 = arg0;
+  c3 = arg0;
 }
 export function clearAppStoreOverlayOpen() {
   c3 = null;

@@ -1,23 +1,22 @@
 // discord_app/utils/BrowserUtils.tsx
-import formatDefault from "../../_runtime/04883_format.js";
+import _modDef4883 from "../../_runtime/metro/04883__.js";
 
-let str = formatDefault.name;
+let str = _modDef4883.name;
 if (str == null) {
   str = "unknown";
 }
 const str2 = str.toLowerCase();
 let num = -1;
-let num2 = -1;
 if ("chrome" === str2.toLowerCase()) {
-  let str3 = formatDefault.version;
+  let str3 = _modDef4883.version;
   if (str3 == null) {
     str3 = "";
   }
-  num2 = parseInt(str3, 10);
+  const num2 = parseInt(str3, 10);
 }
 let parsed = num;
 if ("electron" === str2.toLowerCase()) {
-  let str4 = formatDefault.version;
+  let str4 = _modDef4883.version;
   if (str4 == null) {
     str4 = "";
   }
@@ -25,7 +24,7 @@ if ("electron" === str2.toLowerCase()) {
 }
 let parsed1 = num;
 if ("firefox" === str2.toLowerCase()) {
-  let str5 = formatDefault.version;
+  let str5 = _modDef4883.version;
   if (str5 == null) {
     str5 = "";
   }
@@ -33,14 +32,14 @@ if ("firefox" === str2.toLowerCase()) {
 }
 let parsed2 = num;
 if ("edge" === str2.toLowerCase()) {
-  let str6 = formatDefault.version;
+  let str6 = _modDef4883.version;
   if (str6 == null) {
     str6 = "";
   }
   parsed2 = parseInt(str6, 10);
 }
 if ("safari" === str2.toLowerCase()) {
-  let str7 = formatDefault.version;
+  let str7 = _modDef4883.version;
   if (str7 == null) {
     str7 = "";
   }
@@ -77,7 +76,8 @@ function isSafari() {
   }
   return tmp2;
 }
-const result = require("set").fileFinishedImporting("utils/BrowserUtils.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("utils/BrowserUtils.tsx");
 
 export { getChromeVersion };
 export { getElectronVersion };

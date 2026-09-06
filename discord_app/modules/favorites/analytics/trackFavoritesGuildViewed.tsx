@@ -1,28 +1,27 @@
 // discord_app/modules/favorites/analytics/trackFavoritesGuildViewed.tsx
-import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
-import isPremiumAtLeastDefault from "../../../utils/PremiumTypeUtils.tsx";
-import useFavoritesAccess from "../FavoritesHooks.tsx";
-import setNextFavoritesGuildViewSource from "FavoritesGuildAnalytics.tsx";
-import closure_3 from "../../../stores/UserStore.tsx";
-import closure_4 from "../FavoriteStore.tsx";
-import { AnalyticEvents } from "../../../Constants.tsx";
-import { PremiumTypes } from "../../premium/PremiumConstants.tsx";
+import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
+import PremiumTypeUtilsDefault from "../../../utils/PremiumTypeUtils.tsx";
+import FavoritesHooks from "../FavoritesHooks.tsx";
+import FavoritesGuildAnalytics from "FavoritesGuildAnalytics.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
+import FavoriteStore from "../FavoriteStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/favorites/analytics/trackFavoritesGuildViewed.tsx");
+require = fn;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const PremiumTypes = fn(1373).PremiumTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/favorites/analytics/trackFavoritesGuildViewed.tsx");
 
 export default function trackFavoritesGuildViewed() {
-  let obj = useFavoritesAccess;
-  const obj2 = isPremiumAtLeastDefault;
-  const isPremiumExactlyResult = isPremiumAtLeastDefault.isPremiumExactly(
-    currentUser.getCurrentUser(),
+  const isPremiumExactlyResult = PremiumTypeUtilsDefault.isPremiumExactly(
+    UserStore.getCurrentUser(),
     PremiumTypes.TIER_2,
   );
-  obj = { source: null, total_favorites: null, is_xp_enabled: null, is_premium_tier_2: null };
-  const obj3 = expandEventPropertiesDefault;
-  obj[0] = setNextFavoritesGuildViewSource.consumeNextFavoritesGuildViewSource();
-  obj[1] = favoritesCountAgainstLimit.getFavoritesCountAgainstLimit();
-  obj[2] = obj.getFavoritesAccess().isExperimentEnabled;
-  obj[3] = isPremiumExactlyResult;
+  const obj = { source: null, total_favorites: null, is_xp_enabled: null, is_premium_tier_2: null };
+  const obj3 = AnalyticsUtilsDefault;
+  obj.source = FavoritesGuildAnalytics.consumeNextFavoritesGuildViewSource();
+  obj.total_favorites = FavoriteStore.getFavoritesCountAgainstLimit();
+  obj.is_xp_enabled = obj.getFavoritesAccess().isExperimentEnabled;
+  obj.is_premium_tier_2 = isPremiumExactlyResult;
   obj3.track(AnalyticEvents.FAVORITES_GUILD_VIEWED, obj);
 }

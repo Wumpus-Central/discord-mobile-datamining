@@ -1,10 +1,10 @@
 // discord_app/modules/search/native/components/tabs/hooks/useContentContainerStyles.tsx
-import set from "../../../../../../../_runtime/00002_set.js";
-import MessageEmbedTypes from "../../../../SearchConstants.tsx";
-import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
+import SearchConstants from "../../../../SearchConstants.tsx";
+import createStyles from "../../../../../../design/components/Styles/native/createStyles.tsx";
+import size from "../../../../../../../_runtime/metro/00002__.js";
 
-({ SEARCH_LIST_SECTION_TOP_PADDING, SEARCH_LIST_HORIZONTAL_PADDING, SEARCH_ROW_TAP_STATE_PADDING } = MessageEmbedTypes);
-const styles = createCacheKey.createStyles({
+({ SEARCH_LIST_SECTION_TOP_PADDING, SEARCH_LIST_HORIZONTAL_PADDING, SEARCH_ROW_TAP_STATE_PADDING } = SearchConstants);
+const styles = createStyles.createStyles({
   filesOrLinksContentContainer: {
     paddingTop: SEARCH_LIST_HORIZONTAL_PADDING,
     paddingHorizontal: SEARCH_LIST_HORIZONTAL_PADDING,
@@ -19,6 +19,6 @@ const styles = createCacheKey.createStyles({
     paddingHorizontal: SEARCH_LIST_HORIZONTAL_PADDING,
   },
 });
-const result = set.fileFinishedImporting("modules/search/native/components/tabs/hooks/useContentContainerStyles.tsx");
+const result = size.fileFinishedImporting("modules/search/native/components/tabs/hooks/useContentContainerStyles.tsx");
 
 export const useContentContainerStyles = styles;

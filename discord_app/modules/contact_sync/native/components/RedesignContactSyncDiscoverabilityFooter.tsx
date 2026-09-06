@@ -1,29 +1,29 @@
 // discord_app/modules/contact_sync/native/components/RedesignContactSyncDiscoverabilityFooter.tsx
-import set from "../../../../../_runtime/00002_set.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import ME from "../../../../Constants.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import combinedDefault from "../../../../utils/HelpdeskUtils.tsx";
-import TableRowGroupTitle from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import Constants from "../../../../Constants.tsx";
+import util from "../../../../intl/index.native.tsx";
+import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
+import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import TableSwitchRow from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const HelpdeskArticles = ME.HelpdeskArticles;
+const HelpdeskArticles = Constants.HelpdeskArticles;
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting(
+const result = size.fileFinishedImporting(
   "modules/contact_sync/native/components/RedesignContactSyncDiscoverabilityFooter.tsx",
 );
 
 export default function RedesignContactSyncDiscoverabilityFooter(arg0) {
   ({ discoverabilityEnabled, onValueChanged } = arg0);
   let obj = { hasIcons: false, helperText: null, children: null };
-  const intl = getSystemLocale.intl;
-  obj = { helpdeskUrl: combinedDefault.getArticleURL(HelpdeskArticles.CONTACT_SYNC) };
-  obj[1] = intl.format(getSystemLocale.t.zopgpe, obj);
+  const intl = util.intl;
+  obj = { helpdeskUrl: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.CONTACT_SYNC) };
+  obj.helperText = intl.format(util.t.zopgpe, obj);
   obj = { label: null, onValueChange: null, value: null };
-  const intl2 = getSystemLocale.intl;
-  obj[0] = intl2.string(getSystemLocale.t.a5QL24);
-  obj[1] = onValueChanged;
-  obj[2] = discoverabilityEnabled;
-  obj[2] = jsx(TableSwitchRow.TableSwitchRow, { label: null, onValueChange: null, value: null });
-  return jsx(TableRowGroupTitle.TableRowGroup, { label: null, onValueChange: null, value: null });
+  const intl2 = util.intl;
+  obj.label = intl2.string(util.t.a5QL24);
+  obj.onValueChange = onValueChanged;
+  obj.value = discoverabilityEnabled;
+  obj.children = jsx(TableSwitchRow.TableSwitchRow, { label: null, onValueChange: null, value: null });
+  return jsx(TableRowGroup.TableRowGroup, { label: null, onValueChange: null, value: null });
 }

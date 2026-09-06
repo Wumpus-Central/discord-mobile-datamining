@@ -1,15 +1,15 @@
 // discord_app/stores/InstantInviteStore.tsx
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../Dispatcher.tsx";
+import DispatcherDefault from "../Dispatcher.tsx";
 import headDefault from "../../_runtime/08381_head.js";
 import reverseDefault from "../../_runtime/08383_reverse.js";
 import _modDef8384 from "../../_runtime/metro/08384__.js";
-import closure_3 from "../records/InviteRecord.tsx";
-import { InviteTargetTypes } from "../modules/instant_invite/Constants.tsx";
+import InviteRecord from "../records/InviteRecord.tsx";
 
+const InviteTargetTypes = fn(7736).InviteTargetTypes;
 let closure_5 = {};
-let closure_6 = {};
-let closure_7 = {};
+const dependencyMap = {};
+const dependencyMap2 = {};
 let closure_8 = {};
 let c9 = false;
 let c10 = false;
@@ -43,16 +43,16 @@ prototype["getInvite"] = function getInvite(arg0) {
       tmp4 = tmp7;
     }
   }
-  tmp4 = table[arg0];
+  tmp4 = closure_5[arg0];
 };
 prototype["getFriendInvite"] = function getFriendInvite() {
-  return closure_2;
+  return c2;
 };
 prototype["getFriendInvitesFetching"] = function getFriendInvitesFetching() {
   return c9;
 };
 prototype["canRevokeFriendInvite"] = function canRevokeFriendInvite() {
-  let tmp = null != closure_2;
+  let tmp = null != c2;
   if (tmp) {
     tmp = !c10;
   }
@@ -65,7 +65,7 @@ prototype["getReceivedInstallationIdForInviteCode"] = function getReceivedInstal
   return map.get(result.toLowerCase());
 };
 InstantInviteStore.displayName = "InstantInviteStore";
-const instantInviteStore = new InstantInviteStore(dispatcherDefault, {
+const instantInviteStore = new InstantInviteStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     closure_5 = {};
     closure_6 = {};
@@ -83,7 +83,7 @@ const instantInviteStore = new InstantInviteStore(dispatcherDefault, {
     delete tmp2[tmp];
   },
   FRIEND_INVITE_CREATE_SUCCESS: function handleFriendInviteCreateSuccess(invite) {
-    closure_8[invite.invite.code] = closure_3.createFromServer(invite.invite);
+    closure_8[invite.invite.code] = InviteRecord.createFromServer(invite.invite);
     const tmp = headDefault;
     const tmp2 = reverseDefault;
     let tmpResult = tmp(tmp2(_modDef8384(Object.values(closure_8), "createdAt")));
@@ -100,7 +100,7 @@ const instantInviteStore = new InstantInviteStore(dispatcherDefault, {
     if (null != invites.invites) {
       invites = invites.invites;
       const item = invites.forEach((code) => {
-        if (null != table[code.code]) {
+        if (null != closure_1_8[code.code]) {
           code = code.code;
           delete tmp2[tmp];
         }
@@ -117,7 +117,7 @@ const instantInviteStore = new InstantInviteStore(dispatcherDefault, {
   },
   INSTANT_INVITE_CREATE_SUCCESS: function handleInstantInviteCreateSuccess(channelId) {
     channelId = channelId.channelId;
-    const fromServer = closure_3.createFromServer(channelId.invite);
+    const fromServer = InviteRecord.createFromServer(channelId.invite);
     if (fromServer.targetType === InviteTargetTypes.STREAM) {
       if (null != fromServer.targetUser) {
         if (null == dependencyMap[channelId]) {
@@ -156,7 +156,7 @@ const instantInviteStore = new InstantInviteStore(dispatcherDefault, {
     closure_8 = {};
     invites = invites.invites;
     const item = invites.forEach((code) => {
-      closure_8[code.code] = closure_3.createFromServer(code);
+      closure_1_8[code.code] = InviteRecord.createFromServer(code);
     });
     const tmp2 = headDefault;
     const tmp3 = reverseDefault;
@@ -183,7 +183,6 @@ const instantInviteStore = new InstantInviteStore(dispatcherDefault, {
     } else {
       return false;
     }
-    const str = inviteCode.inviteCode;
   },
   INVITE_MODAL_CLOSE: function handleInviteModalClose(inviteCode) {
     let tmp = null != str;
@@ -207,6 +206,7 @@ const instantInviteStore = new InstantInviteStore(dispatcherDefault, {
     }
   },
 });
-let result = require("set").fileFinishedImporting("stores/InstantInviteStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("stores/InstantInviteStore.tsx");
 
 export default instantInviteStore;

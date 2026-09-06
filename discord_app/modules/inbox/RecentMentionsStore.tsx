@@ -1,45 +1,43 @@
 // discord_app/modules/inbox/RecentMentionsStore.tsx
-import applyDefault from "../../../_runtime/00012_apply.js";
+import _modDef12 from "../../../_runtime/metro/00012__.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import sleep from "../../../discord_common/js/packages/time-utils/TimeUtils.tsx";
-import shouldShowAgeGateForVoiceChannel from "../age_gate/AgeGateUtils.tsx";
-import createMinimalMessageRecord from "../messages/MessageRecordUtils.tsx";
-import isMentioned from "../messages/isMessageMentioned.tsx";
-import isMentionedDefault from "../messages/isMessageMentioned.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import TimeUtils from "../../../discord_common/js/packages/time-utils/TimeUtils.tsx";
+import AgeGateUtils from "../age_gate/AgeGateUtils.tsx";
+import MessageRecordUtils from "../messages/MessageRecordUtils.tsx";
+import isMessageMentioned from "../messages/isMessageMentioned.tsx";
 import isSystemMessageDefault from "../messages/isSystemMessage.tsx";
-import closure_3 from "../../records/MessageRecord.tsx";
-import closure_4 from "../../stores/AuthenticationStore.tsx";
-import closure_5 from "../../stores/ChannelStore.tsx";
-import closure_6 from "../../stores/MessageStore.tsx";
-import closure_7 from "../../stores/ReadStateStore.tsx";
-import closure_8 from "../../stores/RelationshipStore.tsx";
-import closure_9 from "../../stores/SelectedGuildStore.tsx";
-import closure_10 from "../../stores/UserGuildSettingsStore.tsx";
-import closure_11 from "../../stores/UserStore.tsx";
-import ME from "../../Constants.tsx";
-import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
+import MessageRecord from "../../records/MessageRecord.tsx";
+import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
+import MessageStore from "../../stores/MessageStore.tsx";
+import ReadStateStore from "../../stores/ReadStateStore.tsx";
+import RelationshipStore from "../../stores/RelationshipStore.tsx";
+import SelectedGuildStore from "../../stores/SelectedGuildStore.tsx";
+import UserGuildSettingsStore from "../../stores/UserGuildSettingsStore.tsx";
+import UserStore from "../../stores/UserStore.tsx";
 
-require = arg1;
+const isMessageMentionedDefault = isMessageMentioned;
+
+require = fn;
 function findOrCreateMessageRecord(channel_id) {
-  if (channel_id instanceof closure_3) {
+  if (channel_id instanceof MessageRecord) {
     return channel_id;
   } else {
-    let message = store2.getMessage(channel_id.channel_id, channel_id.id);
+    let message = MessageStore.getMessage(channel_id.channel_id, channel_id.id);
     if (null == message) {
-      message = createMinimalMessageRecord.createMessageRecord(channel_id);
-      const obj = createMinimalMessageRecord;
+      message = MessageRecordUtils.createMessageRecord(channel_id);
     }
     return message;
   }
 }
 function hasMentionNotificationEnabled(channel_id) {
-  const basicChannel = store.getBasicChannel(channel_id.channel_id);
+  const basicChannel = ChannelStore.getBasicChannel(channel_id.channel_id);
   if (null != basicChannel) {
     const GUILD_TEXTUAL = constants4.GUILD_TEXTUAL;
     if (GUILD_TEXTUAL.has(basicChannel.type)) {
-      let obj = closure_10;
-      if (closure_10.isGuildOrCategoryOrChannelMuted(basicChannel.guild_id, basicChannel.id)) {
+      let obj = UserGuildSettingsStore;
+      if (UserGuildSettingsStore.isGuildOrCategoryOrChannelMuted(basicChannel.guild_id, basicChannel.id)) {
         return false;
       } else {
         if (obj2.shouldShowAgeGateForChannelId(basicChannel.id)) {
@@ -51,15 +49,11 @@ function hasMentionNotificationEnabled(channel_id) {
           } else if (tmp5.ONLY_MENTIONS === result) {
             const result1 = obj.isSuppressEveryoneEnabled(basicChannel.guild_id);
             const result2 = obj.isSuppressRolesEnabled(basicChannel.guild_id);
-            const currentUser = authStore.getCurrentUser();
+            const currentUser = UserStore.getCurrentUser();
             let tmp10 = null != currentUser;
             if (tmp10) {
-              obj = { message: null, userId: null, suppressEveryone: null, suppressRoles: null };
-              obj[0] = channel_id;
-              obj[1] = currentUser.id;
-              obj[2] = result1;
-              obj[3] = result2;
-              tmp10 = isMentionedDefault(obj);
+              obj = { message: channel_id, userId: currentUser.id, suppressEveryone: result1, suppressRoles: result2 };
+              tmp10 = isMessageMentionedDefault(obj);
             }
             return tmp10;
           } else {
@@ -67,7 +61,7 @@ function hasMentionNotificationEnabled(channel_id) {
             return false;
           }
         }
-        obj2 = shouldShowAgeGateForVoiceChannel;
+        obj2 = AgeGateUtils;
       }
     }
   }
@@ -87,44 +81,45 @@ function parseMessage(message, channelId) {
   if (null == channel_id) {
     channel_id = message.channel_id;
   }
-  const channel = store.getChannel(channel_id);
+  const channel = ChannelStore.getChannel(channel_id);
   if (null != channel) {
     if (channel.type !== constants.DM) {
       if (closure_23.guildFilter === RecentMentionsFilters.THIS_SERVER) {
         const guildId = channel.getGuildId();
-        if (guildId !== guildId.getGuildId()) {
+        if (guildId !== SelectedGuildStore.getGuildId()) {
           return null;
         }
       }
-      id = id.getId();
-      if (!blockedOrIgnoredForMessage.isBlockedOrIgnoredForMessage(message)) {
+      const id = AuthenticationStore.getId();
+      if (!RelationshipStore.isBlockedOrIgnoredForMessage(message)) {
         if (!tmp2(7638)(message, id)) {
           let tmp12 = message;
-          if (!(message instanceof closure_3)) {
-            message = store2.getMessage(message.channel_id, message.id);
+          if (!(message instanceof MessageRecord)) {
+            message = MessageStore.getMessage(message.channel_id, message.id);
             if (null == message) {
-              message = createMinimalMessageRecord.createMessageRecord(message);
-              const obj2 = createMinimalMessageRecord;
+              message = MessageRecordUtils.createMessageRecord(message);
             }
             tmp12 = message;
           }
-          let obj = { message: null, userId: null, suppressEveryone: null, suppressRoles: null };
-          obj[0] = tmp12;
-          obj[1] = id;
-          obj[2] = !closure_23.everyoneFilter;
-          obj[3] = !closure_23.roleFilter;
+          let obj = {
+            message: tmp12,
+            userId: id,
+            suppressEveryone: !closure_23.everyoneFilter,
+            suppressRoles: !closure_23.roleFilter,
+          };
           let tmp20 = null;
           if (tmp2(4798)(obj)) {
             let tmp2ResultResult = c26;
             if (c26) {
-              tmp2ResultResult = closure_7.ackMessageId(channel.id) !== tmp12.id;
+              tmp2ResultResult = ReadStateStore.ackMessageId(channel.id) !== tmp12.id;
             }
             if (tmp2ResultResult) {
-              obj = { message: null, userId: null, suppressEveryone: null, suppressRoles: null };
-              obj[0] = tmp12;
-              obj[1] = id;
-              obj[2] = closure_10.isSuppressEveryoneEnabled(channel.getGuildId());
-              obj[3] = closure_10.isSuppressRolesEnabled(channel.getGuildId());
+              obj = {
+                message: tmp12,
+                userId: id,
+                suppressEveryone: UserGuildSettingsStore.isSuppressEveryoneEnabled(channel.getGuildId()),
+                suppressRoles: UserGuildSettingsStore.isSuppressRolesEnabled(channel.getGuildId()),
+              };
               tmp2ResultResult = tmp2(4798)(obj);
               const tmp2Result = tmp2(4798);
             }
@@ -148,8 +143,7 @@ function deleteMessage(arg0) {
     return false;
   } else {
     delete tmp[tmp2];
-    const obj = { deletedMessages: null };
-    obj[0] = applyDefault.filter(closure_18, (id) => id.id === id);
+    const obj = { deletedMessages: _modDef12.filter(substr, (id) => id.id === id) };
     ({ addedMessages, deletedMessages } = obj);
     if (null != addedMessages) {
       const item = addedMessages.forEach((getChannelId) => {
@@ -169,17 +163,14 @@ function deleteMessage(arg0) {
         }
       });
     }
-    const arr2 = applyDefault;
-    const tmp7 = importDefault;
-    closure_18 = applyDefault.filter(closure_18, (id) => id.id !== id);
+    substr = _modDef12.filter(substr, (id) => id.id !== id);
   }
 }
 function handleMessageDelete(id) {
   id = id.id;
   if (null != dependencyMap[id]) {
     delete tmp[tmp2];
-    const obj = { deletedMessages: null };
-    obj[0] = applyDefault.filter(closure_18, (id) => id.id === id);
+    const obj = { deletedMessages: _modDef12.filter(substr, (id) => id.id === id) };
     ({ addedMessages, deletedMessages } = obj);
     if (null != addedMessages) {
       const item = addedMessages.forEach((getChannelId) => {
@@ -199,18 +190,16 @@ function handleMessageDelete(id) {
         }
       });
     }
-    const arr = applyDefault;
-    const tmp4 = importDefault;
-    closure_18 = applyDefault.filter(closure_18, (id) => id.id !== id);
-    const tmp4Result = applyDefault;
+    substr = _modDef12.filter(substr, (id) => id.id !== id);
+    const tmp4Result = _modDef12;
   }
   return false;
 }
 function handleSetRecentMentionsFilters(arg0) {
   const obj = {};
   const merged = Object.assign(closure_23);
-  const obj2 = applyDefault;
-  closure_23 = obj2.defaults(applyDefault.pick(arg0, ["guildFilter", "roleFilter", "everyoneFilter"]), closure_23);
+  const obj2 = _modDef12;
+  closure_23 = obj2.defaults(_modDef12.pick(arg0, ["guildFilter", "roleFilter", "everyoneFilter"]), closure_23);
   const Storage = items(510).Storage;
   const result = Storage.set(recentMentionFilterSettings, closure_23);
   let tmp4 = obj.guildFilter !== closure_23.guildFilter;
@@ -234,15 +223,15 @@ function handleSetRecentMentionsFilters(arg0) {
   closure_20 = {};
   items = [];
   if (tmp4) {
-    const item = items.forEach((arg0) => {
-      const tmp = closure_1_29(arg0);
+    const item = items.forEach((item) => {
+      const tmp = parseMessage(item);
       if (null != tmp) {
         items.push(tmp);
         closure_20[tmp.id] = true;
       }
     });
   }
-  closure_19 = {};
+  dependencyMap = {};
   const item1 = items.forEach((getChannelId) => {
     if (null == dependencyMap[getChannelId.getChannelId(getChannelId)]) {
       dependencyMap[getChannelId.getChannelId()] = 0;
@@ -256,7 +245,7 @@ function handleSetRecentMentionsFilters(arg0) {
 }
 function handleRelationshipUpdate() {
   const obj = {
-    deletedMessages: applyDefault.filter(closure_18, (message) => closure_8.isBlockedOrIgnoredForMessage(message)),
+    deletedMessages: _modDef12.filter(substr, (message) => RelationshipStore.isBlockedOrIgnoredForMessage(message)),
   };
   ({ addedMessages, deletedMessages } = obj);
   if (null != addedMessages) {
@@ -277,7 +266,7 @@ function handleRelationshipUpdate() {
       }
     });
   }
-  closure_18 = closure_18.filter((message) => !closure_8.isBlockedOrIgnoredForMessage(message));
+  substr = substr.filter((item) => !RelationshipStore.isBlockedOrIgnoredForMessage(item));
 }
 function handleDeleteChannel(channel) {
   channel = channel.channel;
@@ -312,29 +301,40 @@ function handleDeleteChannel(channel) {
     });
   }
 }
-const RecentMentionsFilters = ME.RecentMentionsFilters;
+const Constants = fn(1074);
+const RecentMentionsFilters = Constants.RecentMentionsFilters;
 ({
   ChannelTypes: map1,
   MessageTypesSets: closure_14,
   UserNotificationSettings: closure_15,
   ChannelTypesSets: closure_16,
-} = ME);
+} = Constants);
 const recentMentionFilterSettings = "recentMentionFilterSettings";
-let closure_18 = [];
+let substr = [];
 let closure_19 = {};
-let closure_20 = {};
+let dependencyMap = {};
 let c21 = false;
 let c22 = true;
+let Storage = fn(510).Storage;
 let obj = { guildFilter: RecentMentionsFilters.ALL_SERVERS, everyoneFilter: true, roleFilter: true };
 let closure_23 = Storage.get("recentMentionFilterSettings", obj);
 let c24 = false;
-let c25 = 0;
+let closure_25 = 0;
 let c26 = false;
 const Store = initializeDefault.Store;
 class RecentMentionsStore extends Store {}
 const prototype = RecentMentionsStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_4, closure_5, closure_6, closure_7, closure_8, closure_9, closure_10, closure_11);
+  this.waitFor(
+    AuthenticationStore,
+    ChannelStore,
+    MessageStore,
+    ReadStateStore,
+    RelationshipStore,
+    SelectedGuildStore,
+    UserGuildSettingsStore,
+    UserStore,
+  );
 };
 Object.defineProperty(prototype, "hasLoadedEver", {
   get: function hasLoadedEver() {
@@ -344,13 +344,13 @@ Object.defineProperty(prototype, "hasLoadedEver", {
 });
 Object.defineProperty(prototype, "lastLoaded", {
   get: function lastLoaded() {
-    return c25;
+    return closure_25;
   },
   set: undefined,
 });
 prototype["getMentions"] = function getMentions() {
   if (c24) {
-    let tmp2 = closure_18;
+    let tmp2 = substr;
   } else {
     tmp2 = null;
   }
@@ -358,7 +358,7 @@ prototype["getMentions"] = function getMentions() {
 };
 prototype["getSettingsFilteredMentions"] = function getSettingsFilteredMentions() {
   if (c24) {
-    let found = closure_18.filter(hasMentionNotificationEnabled);
+    let found = substr.filter(hasMentionNotificationEnabled);
   } else {
     found = null;
   }
@@ -386,13 +386,13 @@ Object.defineProperty(prototype, "guildFilter", {
   set: undefined,
 });
 Object.defineProperty(prototype, "everyoneFilter", {
-  get: function everyoneFilter(arg0) {
+  get: function everyoneFilter() {
     return closure_23.everyoneFilter;
   },
   set: undefined,
 });
 Object.defineProperty(prototype, "roleFilter", {
-  get: function roleFilter(arg0) {
+  get: function roleFilter() {
     return closure_23.roleFilter;
   },
   set: undefined,
@@ -410,7 +410,7 @@ Object.defineProperty(prototype, "mentionCountByChannel", {
   set: undefined,
 });
 prototype["getMentionCountForChannel"] = function getMentionCountForChannel(arg0) {
-  let num = table[arg0];
+  let num = closure_19[arg0];
   if (num == null) {
     num = 0;
   }
@@ -425,14 +425,13 @@ obj = {
       tmp = closure_23.guildFilter === RecentMentionsFilters.THIS_SERVER;
     }
     if (tmp) {
-      const obj = { guildFilter: null };
-      obj[0] = RecentMentionsFilters.ALL_SERVERS;
+      const obj = { guildFilter: RecentMentionsFilters.ALL_SERVERS };
       handleSetRecentMentionsFilters(obj);
     }
   },
   LOAD_RECENT_MENTIONS_SUCCESS: function handleLoadMentionsSuccess(arg0) {
     ({ hasMoreAfter, messages, isAfter } = arg0);
-    let mapped = applyDefault.map(messages, findOrCreateMessageRecord);
+    const mapped = _modDef12.map(messages, findOrCreateMessageRecord);
     ({ addedMessages, deletedMessages } = { addedMessages: mapped });
     if (null != addedMessages) {
       const item = addedMessages.forEach((getChannelId) => {
@@ -453,18 +452,18 @@ obj = {
       });
     }
     if (isAfter) {
-      mapped = mapped.concat(mapped);
+      substr = substr.concat(mapped);
     } else {
+      substr = mapped;
       closure_20 = {};
     }
-    const arr = applyDefault;
-    const tmp = importDefault;
-    const item2 = applyDefault.forEach(mapped, (id) => {
-      closure_20[id.id] = true;
+    const item2 = _modDef12.forEach(mapped, (id) => {
+      dependencyMap[id.id] = true;
     });
     c21 = false;
-    const tmpResult = applyDefault;
-    closure_25 = sleep.now();
+    c22 = hasMoreAfter;
+    const tmpResult = _modDef12;
+    closure_25 = TimeUtils.now();
     c24 = true;
   },
   LOAD_RECENT_MENTIONS_FAILURE: function handleLoadMentionsFailure() {
@@ -472,7 +471,7 @@ obj = {
   },
   SET_RECENT_MENTIONS_FILTER: handleSetRecentMentionsFilters,
   CLEAR_MENTIONS: function handleClearMentions() {
-    closure_18 = [];
+    substr = [];
     closure_20 = {};
     c24 = false;
     c26 = false;
@@ -503,12 +502,9 @@ obj = {
     let sum = size;
     if (size < substr.length) {
       do {
-        let tmp6 = closure_20;
-        let tmp7 = substr;
         let id = substr[sum].id;
         delete tmp2[tmp];
         sum = sum + 1;
-        let tmp8 = substr;
         length = substr.length;
       } while (sum < length);
     }
@@ -525,7 +521,7 @@ obj = {
     }
   },
   CONNECTION_OPEN: function handleConnectionOpen() {
-    closure_18 = [];
+    substr = [];
     closure_20 = {};
     c24 = false;
     c26 = false;
@@ -535,7 +531,7 @@ obj = {
     guild = guild.guild;
     const items = [];
     closure_18 = items(12).filter(closure_18, (channel_id) => {
-      const channel = closure_1_5.getChannel(channel_id.channel_id);
+      const channel = ChannelStore.getChannel(channel_id.channel_id);
       let flag = null != channel;
       if (flag) {
         flag = channel.getGuildId() !== guild.id;
@@ -570,11 +566,9 @@ obj = {
   },
   MESSAGE_CREATE: function handleIncomingMessage(message) {
     message = message.message;
-    const currentUser = authStore.getCurrentUser();
+    const currentUser = UserStore.getCurrentUser();
     if (null != currentUser) {
-      let obj = { rawMessage: null, userId: null, suppressRoles: false, suppressEveryone: false };
-      obj[0] = message;
-      obj[1] = currentUser.id;
+      let obj = { rawMessage: message, userId: currentUser.id, suppressRoles: false, suppressEveryone: false };
       if (obj2.isRawMessageMentioned(obj)) {
         const tmp3 = parseMessage(message, message.channelId);
         if (null == tmp3) {
@@ -585,7 +579,7 @@ obj = {
           closure_20[tmp3.id] = true;
           obj = { addedMessages: null };
           const items = [tmp3];
-          obj[0] = items;
+          obj.addedMessages = items;
           ({ addedMessages, deletedMessages } = obj);
           if (null != addedMessages) {
             const item = addedMessages.forEach((getChannelId) => {
@@ -607,7 +601,7 @@ obj = {
           }
         }
       }
-      obj2 = isMentioned;
+      obj2 = isMessageMentioned;
     }
     return false;
   },
@@ -615,11 +609,10 @@ obj = {
     const id = message.message.id;
     if (null != id) {
       if (null != dependencyMap[id]) {
-        const findIndexResult = applyDefault.findIndex(substr, (id) => id.id === id);
+        const findIndexResult = _modDef12.findIndex(substr, (id) => id.id === id);
         substr = substr.slice();
         if (null != substr[findIndexResult]) {
-          substr[findIndexResult] = id(4783).updateMessageRecord(tmp7, message.message);
-          const obj2 = id(4783);
+          substr[findIndexResult] = MessageRecordUtils.updateMessageRecord(tmp7, message.message);
         }
       }
     }
@@ -628,7 +621,7 @@ obj = {
   MESSAGE_DELETE: handleMessageDelete,
   RECENT_MENTION_DELETE: handleMessageDelete,
   MESSAGE_DELETE_BULK: function handleMessageDeleteBulk(ids) {
-    const item = applyDefault.forEach(ids.ids, deleteMessage);
+    const item = _modDef12.forEach(ids.ids, deleteMessage);
   },
   CHANNEL_DELETE: handleDeleteChannel,
   THREAD_DELETE: handleDeleteChannel,
@@ -639,8 +632,9 @@ obj = {
     c26 = true;
   },
 };
-const recentMentionsStore = new RecentMentionsStore(dispatcherDefault, obj);
-let result = require("set").fileFinishedImporting("modules/inbox/RecentMentionsStore.tsx");
+const recentMentionsStore = new RecentMentionsStore(DispatcherDefault, obj);
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/inbox/RecentMentionsStore.tsx");
 
 export default recentMentionsStore;
 export { hasMentionNotificationEnabled };

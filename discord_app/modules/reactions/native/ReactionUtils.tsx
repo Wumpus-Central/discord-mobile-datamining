@@ -1,61 +1,63 @@
 // discord_app/modules/reactions/native/ReactionUtils.tsx
 import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
-import getPremiumPlanItem from "../../../utils/PremiumUtils.tsx";
-import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import collectGuildAnalyticsMetadataDefault from "../../app_analytics/AppAnalyticsUtils.tsx";
-import setDefault from "../../../actions/AlertActionCreators.tsx";
-import registerAssetDefault from "../../../../_runtime/11268_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/11269_registerAsset.js";
-import closure_3 from "../../../stores/ChannelStore.tsx";
-import closure_4 from "../../../stores/MessageStore.tsx";
-import closure_5 from "../../../stores/SelectedGuildStore.tsx";
-import closure_6 from "../../../stores/UserStore.tsx";
-import ME from "../../../Constants.tsx";
-import { EmojiIntention } from "../../emojis/EmojiConstants.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import ReactionUtils from "../ReactionUtils.tsx";
+import PremiumUtils from "../../../utils/PremiumUtils.tsx";
+import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import haptics_HapticFeedbackTypesDefault from "../../haptics/HapticFeedbackTypes.tsx";
+import AppAnalyticsUtilsDefault from "../../app_analytics/AppAnalyticsUtils.tsx";
+import AlertActionCreatorsDefault from "../../../actions/AlertActionCreators.tsx";
+import ReactionActionCreators from "../ReactionActionCreators.tsx";
+import _modDef11268 from "../../../../_runtime/metro/11268__.js";
+import _modDef11269 from "../../../../_runtime/metro/11269__.js";
+import ChannelStore from "../../../stores/ChannelStore.tsx";
+import MessageStore from "../../../stores/MessageStore.tsx";
+import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
 
-require = arg1;
-({ AnalyticEvents: error, AnalyticsPages: closure_8, AnalyticsSections: c9 } = ME);
+require = fn;
+const Constants = fn(1074);
+({ AnalyticEvents: closure_7, AnalyticsPages: closure_8, AnalyticsSections: closure_9 } = Constants);
+const EmojiIntention = fn(1374).EmojiIntention;
+const jsx = fn(21).jsx;
 let obj = {};
-obj[require("ReactionTypes").ReactionTypes.NORMAL] = registerAssetDefault;
-obj[require("ReactionTypes").ReactionTypes.BURST] = registerAssetDefault2;
+obj[fn(7763).ReactionTypes.NORMAL] = _modDef11268;
+obj[fn(7763).ReactionTypes.BURST] = _modDef11269;
 obj = {};
-obj[require("ReactionTypes").ReactionTypes.NORMAL] = require("ReactionIcon").ReactionIcon;
-obj[require("ReactionTypes").ReactionTypes.BURST] = require("SuperReactionIcon").SuperReactionIcon;
-let result = require("set").fileFinishedImporting("modules/reactions/native/ReactionUtils.tsx");
+obj[fn(7763).ReactionTypes.NORMAL] = fn(8757).ReactionIcon;
+obj[fn(7763).ReactionTypes.BURST] = fn(9373).SuperReactionIcon;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/reactions/native/ReactionUtils.tsx");
 
-export const handleOutOfSuperReactions = function handleOutOfSuperReactions(arg0) {
-  const currentUser = authStore.getCurrentUser();
+export const handleOutOfSuperReactions = function handleOutOfSuperReactions(onDismiss) {
+  const currentUser = UserStore.getCurrentUser();
   if (null != currentUser) {
-    let obj = getPremiumPlanItem;
+    let obj = PremiumUtils;
     let openLazyResult;
     if (!obj.isPremium(currentUser)) {
-      obj = { onDismiss: null };
-      obj[0] = arg0;
-      openLazyResult = ACTION_SHEET_HEIGHT_HALFDefault.openLazy(
+      obj = { onDismiss };
+      openLazyResult = ActionSheetActionCreatorsDefault.openLazy(
         asyncRequireImpl(11136, dependencyMap.paths),
         "SuperReactionUpsellActionSheet",
         obj,
       );
-      const obj2 = ACTION_SHEET_HEIGHT_HALFDefault;
     }
     return openLazyResult;
   }
 };
 export const handleAddNewReactions = function handleAddNewReactions(channel, id, MESSAGE, burst) {
-  const _require = channel;
+  _require = channel;
   importDefault = id;
   if (MESSAGE === undefined) {
-    MESSAGE = _require(MESSAGE[10]).ReactionLocations.MESSAGE;
+    MESSAGE = require("ReactionActionCreators").ReactionLocations.MESSAGE;
   }
   if (burst != null) {
     burst = burst.burst;
   }
-  let tmp10Result = authStore;
-  const currentUser = authStore.getCurrentUser();
+  let tmp10Result = UserStore;
+  const currentUser = UserStore.getCurrentUser();
   if (null != currentUser) {
     let ReactionTypes = MESSAGE;
-    const isPremiumResult = _require(MESSAGE[11]).isPremium(currentUser);
+    const isPremiumResult = require("PremiumUtils").isPremium(currentUser);
     let tmp4 = tmp12;
     if (true === burst) {
       tmp4 = !isPremiumResult;
@@ -65,12 +67,12 @@ export const handleAddNewReactions = function handleAddNewReactions(channel, id,
       if (null != currentUser1) {
         let tmp13Result = tmp13(ReactionTypes[11]);
         if (!tmp13Result.isPremium(currentUser1)) {
-          importDefault(ReactionTypes[12]).openLazy(
+          require("ActionSheetActionCreators").openLazy(
             tmp13(ReactionTypes[14])(ReactionTypes[13], ReactionTypes.paths),
             "SuperReactionUpsellActionSheet",
             { onDismiss: "Array" },
           );
-          const obj3 = importDefault(ReactionTypes[12]);
+          const obj3 = require("ActionSheetActionCreators");
         }
       }
     }
@@ -79,40 +81,36 @@ export const handleAddNewReactions = function handleAddNewReactions(channel, id,
     if (bestActiveInputForChannelId != null) {
       bestActiveInputForChannelId.closeCustomKeyboard();
     }
-    _require(ReactionTypes[16]);
+    require("openEmojiPickerActionSheet");
     tmp10Result = {
-      onPressEmoji: null,
-      channel: null,
-      pickerIntention: null,
+      onPressEmoji(byName, burst) {
+        id = id.id;
+        const obj = { burst };
+        if (null != byName) {
+          const toReactionEmojiResult = ReactionUtils.toReactionEmoji(byName);
+          if (!obj.burst) {
+            let tmp3Result = tmp3(4528);
+            const result = tmp3Result.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
+          }
+          tmp3Result = tmp3(7764);
+          tmp3Result.addReaction(id, tmp, toReactionEmojiResult, tmp2, obj);
+        }
+      },
+      channel,
+      pickerIntention: EmojiIntention.REACTION,
       reactionType: null,
       analyticsObject: null,
       messageId: null,
     };
-    tmp10Result[0] = function onPressEmoji(byName, burst) {
-      id = channel.id;
-      const obj = { burst };
-      if (null != byName) {
-        const toReactionEmojiResult = channel(MESSAGE[7]).toReactionEmoji(byName);
-        if (!obj.burst) {
-          let tmp3Result = tmp3(tmp4[8]);
-          const result = tmp3Result.triggerHapticFeedback(id(tmp4[9]).IMPACT_LIGHT);
-        }
-        tmp3Result = tmp3(tmp4[10]);
-        tmp3Result.addReaction(id, tmp, toReactionEmojiResult, tmp2, obj);
-        const obj2 = channel(MESSAGE[7]);
-      }
-    };
-    tmp10Result[1] = channel;
-    tmp10Result[2] = EmojiIntention.REACTION;
     if (true !== burst) {
-      tmp10Result[3] = tmp13(ReactionTypes[17]).ReactionTypes.NORMAL;
-      tmp10Result[4] = MESSAGE;
-      tmp10Result[5] = id;
+      tmp10Result.reactionType = tmp13(ReactionTypes[17]).ReactionTypes.NORMAL;
+      tmp10Result.analyticsObject = MESSAGE;
+      tmp10Result.messageId = id;
       tmp10Result = tmp10(tmp10Result);
     }
     ReactionTypes = tmp13(ReactionTypes[17]).ReactionTypes;
     const BURST = ReactionTypes.BURST;
-    const obj7 = _require(MESSAGE[11]);
+    const obj7 = require("PremiumUtils");
   }
 };
 export const handleViewReactions = function handleViewReactions(isPoll) {
@@ -121,8 +119,8 @@ export const handleViewReactions = function handleViewReactions(isPoll) {
     _location = {};
   }
   isPoll = isPoll.isPoll;
-  const merged = Object.assign(isPoll, Object.create(null));
-  channel = channel.getChannel(channelId);
+  const merged = Object.assign(isPoll, Object.assign({ messageId: 0, channelId: 0, location: 0, isPoll: 0, emoji: 0 }));
+  const channel = ChannelStore.getChannel(channelId);
   let isPrivateResult;
   if (channel != null) {
     isPrivateResult = channel.isPrivate();
@@ -140,7 +138,7 @@ export const handleViewReactions = function handleViewReactions(isPoll) {
       let FORUM_CHANNEL_POST = constants2.CHANNEL;
     }
     if (isPoll == null) {
-      message = message.getMessage(channelId, messageId);
+      const message = MessageStore.getMessage(channelId, messageId);
       let isPollResult;
       if (message != null) {
         isPollResult = message.isPoll();
@@ -148,60 +146,45 @@ export const handleViewReactions = function handleViewReactions(isPoll) {
       isPoll = true === isPollResult;
     }
     let obj = {
-      guild_id: null,
-      channel_id: null,
-      location_message_id: null,
-      location_message_is_poll: null,
+      guild_id: SelectedGuildStore.getGuildId(),
+      channel_id: channelId,
+      location_message_id: messageId,
+      location_message_is_poll: isPoll,
       location: null,
     };
-    obj[0] = guildId.getGuildId();
-    obj[1] = channelId;
-    obj[2] = messageId;
-    obj[3] = isPoll;
-    obj = { page: null, section: null };
-    obj[0] = tmp4;
-    obj[1] = FORUM_CHANNEL_POST;
+    obj = { page: tmp4, section: FORUM_CHANNEL_POST };
     const merged1 = Object.assign(_location);
-    obj[4] = obj;
-    collectGuildAnalyticsMetadataDefault.trackWithMetadata(constants.REACTION_ACTION_SHEET_OPENED, obj);
-    const obj3 = collectGuildAnalyticsMetadataDefault;
-    obj1 = { messageId: null, channelId: null, emoji: null };
-    obj1[0] = messageId;
-    obj1[1] = channelId;
-    obj1[2] = isPoll.emoji;
-    const obj6 = ACTION_SHEET_HEIGHT_HALFDefault;
+    obj.location = obj;
+    AppAnalyticsUtilsDefault.trackWithMetadata(constants.REACTION_ACTION_SHEET_OPENED, obj);
+    const obj1 = { messageId, channelId, emoji: isPoll.emoji };
+    const obj6 = ActionSheetActionCreatorsDefault;
     const merged2 = Object.assign(merged);
     obj6.openLazy(asyncRequireImpl(11255, dependencyMap.paths), "MessageReactions", obj1);
   }
   FORUM_CHANNEL_POST = constants2.FORUM_CHANNEL_POST;
 };
 export const handleViewPreviewReactions = function handleViewPreviewReactions(id2, id, emoji) {
-  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj = { messageId: id2, channelId: id, emoji };
+  const obj = { messageId: id2, channelId: id, emoji };
   obj.openLazy(asyncRequireImpl(11267, dependencyMap.paths), "MessagePreviewReactions", obj);
 };
 export const ADD_REACTION_ICONS = obj;
 export const ADD_REACTION_ICON_COMPONENTS = obj;
 export const handleRemoveAllReactions = function handleRemoveAllReactions(arg0, arg1) {
-  const _require = arg0;
+  _require = arg0;
   importDefault = arg1;
-  let obj = setDefault;
-  obj = { title: null, children: null, cancelText: null, confirmText: null, onConfirm: null };
-  const intl = require("../../../intl/index.native.tsx").intl;
-  obj[0] = intl.string(require("../../../intl/index.native.tsx").t.ZbtGBm);
+  let obj = { title: null, children: null, cancelText: null, confirmText: null, onConfirm: null };
+  const intl = require("util").intl;
+  obj.title = intl.string(require("util").t.ZbtGBm);
   obj = { variant: "text-md/normal", children: null };
-  const intl2 = require("../../../intl/index.native.tsx").intl;
-  obj[1] = intl2.string(require("../../../intl/index.native.tsx").t.VpjOCo);
-  obj[1] = jsx(require("../../../design/components/Text/native/Text.tsx").Text, {
-    variant: "text-md/normal",
-    children: null,
-  });
-  const intl3 = require("../../../intl/index.native.tsx").intl;
-  obj[2] = intl3.string(require("../../../intl/index.native.tsx").t["ETE/oC"]);
-  const intl4 = require("../../../intl/index.native.tsx").intl;
-  obj[3] = intl4.string(require("../../../intl/index.native.tsx").t.oyYWHE);
-  obj[4] = function onConfirm() {
-    return callback(closure_1_2[10]).removeAllReactions(callback, closure_1);
+  const intl2 = require("util").intl;
+  obj.children = intl2.string(require("util").t.VpjOCo);
+  obj.children = jsx(require("Text/Text").Text, { variant: "text-md/normal", children: null });
+  const intl3 = require("util").intl;
+  obj.cancelText = intl3.string(require("util").t["ETE/oC"]);
+  const intl4 = require("util").intl;
+  obj.confirmText = intl4.string(require("util").t.oyYWHE);
+  obj.onConfirm = function onConfirm() {
+    return ReactionActionCreators.removeAllReactions(closure_0, closure_1);
   };
   obj.show(obj);
 };

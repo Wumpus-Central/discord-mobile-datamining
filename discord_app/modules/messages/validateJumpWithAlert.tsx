@@ -1,78 +1,73 @@
 // discord_app/modules/messages/validateJumpWithAlert.tsx
-import getSystemLocale from "../../intl/index.native.tsx";
-import setDefault from "../../actions/AlertActionCreators.tsx";
-import isSpamSupported from "isSpam.tsx";
-import closure_3 from "../../stores/ChannelStore.tsx";
-import closure_4 from "../../stores/PermissionStore.tsx";
-import closure_5 from "../../stores/RelationshipStore.tsx";
-import { Permissions } from "../../Constants.tsx";
+import util from "../../intl/index.native.tsx";
+import AlertActionCreatorsDefault from "../../actions/AlertActionCreators.tsx";
+import isSpam from "isSpam.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
+import PermissionStore from "../../stores/PermissionStore.tsx";
+import RelationshipStore from "../../stores/RelationshipStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/messages/validateJumpWithAlert.tsx");
+require = fn;
+const Permissions = fn(1074).Permissions;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/validateJumpWithAlert.tsx");
 
-export default function validateJumpWithAlert(author) {
-  let obj = blockedForMessage;
-  if (blockedForMessage.isBlockedForMessage(author)) {
+export default function validateJumpWithAlert(author, onConfirm) {
+  let obj = RelationshipStore;
+  if (RelationshipStore.isBlockedForMessage(author)) {
     obj = { title: null, body: null, confirmText: null };
-    const intl11 = getSystemLocale.intl;
-    obj[0] = intl11.string(getSystemLocale.t["j7eA/g"]);
-    const intl12 = getSystemLocale.intl;
-    obj = { name: null };
-    obj[0] = author.author.username;
-    obj[1] = intl12.formatToPlainString(getSystemLocale.t.dTNNgr, obj);
-    const intl13 = getSystemLocale.intl;
-    obj[2] = intl13.string(getSystemLocale.t.BddRzS);
-    setDefault.show(obj);
+    const intl11 = util.intl;
+    obj.title = intl11.string(util.t["j7eA/g"]);
+    const intl12 = util.intl;
+    obj = { name: author.author.username };
+    obj.body = intl12.formatToPlainString(util.t.dTNNgr, obj);
+    const intl13 = util.intl;
+    obj.confirmText = intl13.string(util.t.BddRzS);
+    AlertActionCreatorsDefault.show(obj);
     return false;
   } else if (obj.isIgnoredForMessage(author)) {
-    obj1 = { title: null, body: null, confirmText: null };
-    const intl8 = getSystemLocale.intl;
-    obj1[0] = intl8.string(getSystemLocale.t.XyWoKV);
-    const intl9 = getSystemLocale.intl;
-    const obj2 = { name: null };
-    obj2[0] = author.author.username;
-    obj1[1] = intl9.formatToPlainString(getSystemLocale.t["8t8doK"], obj2);
-    const intl10 = getSystemLocale.intl;
-    obj1[2] = intl10.string(getSystemLocale.t.BddRzS);
-    setDefault.show(obj1);
+    let obj1 = { title: null, body: null, confirmText: null };
+    const intl8 = util.intl;
+    obj1.title = intl8.string(util.t.XyWoKV);
+    const intl9 = util.intl;
+    const obj2 = { name: author.author.username };
+    obj1.body = intl9.formatToPlainString(util.t["8t8doK"], obj2);
+    const intl10 = util.intl;
+    obj1.confirmText = intl10.string(util.t.BddRzS);
+    AlertActionCreatorsDefault.show(obj1);
     return false;
   } else {
-    obj1 = isSpamSupported;
+    obj1 = isSpam;
     if (obj1.isSpam(author)) {
-      channel = channel.getChannel(author.channel_id);
+      const channel = ChannelStore.getChannel(author.channel_id);
       let isPrivateResult;
       if (channel != null) {
         isPrivateResult = channel.isPrivate();
       }
       if (!isPrivateResult) {
-        if (!closure_4.can(Permissions.MODERATE_MEMBERS, channel)) {
-          let obj3 = setDefault;
-          obj3 = { title: null, body: null, confirmText: null };
+        if (!PermissionStore.can(Permissions.MODERATE_MEMBERS, channel)) {
+          const obj3 = { title: null, body: null, confirmText: null };
           const intl = tmp(1114).intl;
-          obj3[0] = intl.string(tmp(1114).t["6vJKFk"]);
+          obj3.title = intl.string(tmp(1114).t["6vJKFk"]);
           const intl2 = tmp(1114).intl;
-          const obj4 = { name: null };
-          obj4[0] = author.author.username;
-          obj3[1] = intl2.formatToPlainString(tmp(1114).t.zKNgPF, obj4);
+          const obj4 = { name: author.author.username };
+          obj3.body = intl2.formatToPlainString(tmp(1114).t.zKNgPF, obj4);
           const intl3 = tmp(1114).intl;
-          obj3[2] = intl3.string(tmp(1114).t.BddRzS);
+          obj3.confirmText = intl3.string(tmp(1114).t.BddRzS);
           obj3.show(obj3);
         }
         return false;
       }
-      let obj6 = setDefault;
       const obj5 = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
       const intl4 = tmp(1114).intl;
-      obj5[0] = intl4.string(tmp(1114).t["cZcG+P"]);
+      obj5.title = intl4.string(tmp(1114).t["cZcG+P"]);
       const intl5 = tmp(1114).intl;
-      obj6 = { name: null };
-      obj6[0] = author.author.username;
-      obj5[1] = intl5.formatToPlainString(tmp(1114).t["1YTWty"], obj6);
+      const obj6 = { name: author.author.username };
+      obj5.body = intl5.formatToPlainString(tmp(1114).t["1YTWty"], obj6);
       const intl6 = tmp(1114).intl;
-      obj5[2] = intl6.string(tmp(1114).t["+TSRGD"]);
+      obj5.confirmText = intl6.string(tmp(1114).t["+TSRGD"]);
       const intl7 = tmp(1114).intl;
-      obj5[3] = intl7.string(tmp(1114).t["ETE/oC"]);
-      obj5[4] = arg1;
+      obj5.cancelText = intl7.string(tmp(1114).t["ETE/oC"]);
+      obj5.onConfirm = onConfirm;
       obj6.show(obj5);
     } else {
       return true;

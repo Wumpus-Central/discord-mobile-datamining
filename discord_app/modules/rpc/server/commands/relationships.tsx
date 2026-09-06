@@ -1,70 +1,59 @@
 // discord_app/modules/rpc/server/commands/relationships.tsx
-import fromStringAll from "../../../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
-import prototypeDefault from "../../RPCError.tsx";
-import recurseReplaceContentTree from "../../RPCHelpers.tsx";
-import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../../stores/RelationshipStore.tsx";
-import closure_6 from "../../../../stores/UserStore.tsx";
-import ME from "../../../../Constants.tsx";
-import CONTEXT_MENU_ICON_NAMES from "../../../../../discord_common/js/packages/rpc-schema/rpc-schema.tsx";
+import BigFlagUtilsAll from "../../../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import RPCErrorDefault from "../../RPCError.tsx";
+import RPCHelpers from "../../RPCHelpers.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import RelationshipStore from "../../../../stores/RelationshipStore.tsx";
+import UserStore from "../../../../stores/UserStore.tsx";
 
-require = arg1;
-({ ApplicationFlags: error, RelationshipTypes: closure_8, RPCCommands, RPCErrors: c9 } = ME);
+require = fn;
+const Constants = fn(1074);
+({ ApplicationFlags: closure_7, RelationshipTypes: closure_8, RPCCommands, RPCErrors: closure_9 } = Constants);
 let obj = {};
+const CONTEXT_MENU_ICON_NAMES = fn(14476);
 obj = { scope: null, handler: null };
 obj = {};
-let items = [require("set").OAuth2Scopes.RELATIONSHIPS_READ];
-obj[require("RPC_SCOPE_CONFIG").RPC_SCOPE_CONFIG.ANY] = items;
-obj[0] = obj;
-obj[1] = function handler(socket) {
-  let obj = fromStringAll;
+let items = [fn(8339).OAuth2Scopes.RELATIONSHIPS_READ];
+obj[fn(4465).RPC_SCOPE_CONFIG.ANY] = items;
+obj.scope = obj;
+obj.handler = function handler(socket) {
+  let obj = BigFlagUtilsAll;
+  const deserializer = BigFlagUtilsAll;
   let num = socket.socket.application.flags;
   if (num == null) {
     num = 0;
   }
-  const obj2 = fromStringAll;
-  const tmp = importAll;
-  const deserializeResult = fromStringAll.deserialize(num);
-  if (obj.has(deserializeResult, tmpResult.deserialize(constants.DISABLE_RELATIONSHIPS_ACCESS))) {
-    obj = { errorCode: null };
-    obj[0] = constants3.INVALID_PERMISSIONS;
-    const tmp34 = new prototypeDefault(obj, "Missing Permissions");
+  const deserializer2 = BigFlagUtilsAll;
+  if (obj.has(deserializeResult, deserializer2.deserialize(constants.DISABLE_RELATIONSHIPS_ACCESS))) {
+    obj = { errorCode: constants3.INVALID_PERMISSIONS };
+    const tmp34 = new RPCErrorDefault(obj, "Missing Permissions");
     throw tmp34;
   } else {
     const items = [];
-    mutableRelationships = mutableRelationships.getMutableRelationships();
+    const mutableRelationships = RelationshipStore.getMutableRelationships();
     const entries = mutableRelationships.entries();
     const tmp8 = entries[Symbol.iterator]();
     while (tmp8 !== undefined) {
-      let tmp12 = callback;
-      let tmp13 = callback(tmp10, 2);
+      let tmp13 = _slicedToArray(tmp10, 2);
       [tmp14, tmp15] = tmp13;
-      let tmp17 = constants2;
       if (tmp15 !== constants2.NONE) {
-        let tmp18 = user;
-        let tmp19 = tmp14;
-        user = user.getUser(tmp14);
+        let user = UserStore.getUser(tmp14);
         if (null != user) {
-          let tmp22 = require;
-          let tmp23 = dependencyMap;
-          let tmp24 = dependencyMap;
-          let obj5 = recurseReplaceContentTree;
-          let tmp25 = tmp15;
-          let tmp26 = user;
-          let result = obj5.transformBaseRelationship(tmp16, tmp21);
-          let obj6 = recurseReplaceContentTree;
-          let arr = items.push(obj6.transformApplicationRelationship(result, socket.socket.application.id));
+          let obj3 = RPCHelpers;
+          let result = obj3.transformBaseRelationship(tmp16, tmp21);
+          let obj4 = RPCHelpers;
+          let arr = items.push(obj4.transformApplicationRelationship(result, socket.socket.application.id));
         }
       }
       continue;
     }
-    obj = { relationships: null };
-    obj[0] = items;
+    obj = { relationships: items };
     return obj;
   }
-  tmpResult = fromStringAll;
+  deserializeResult = deserializer.deserialize(num);
 };
 obj[RPCCommands.GET_RELATIONSHIPS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_RELATIONSHIPS, obj);
-let result = require("set").fileFinishedImporting("modules/rpc/server/commands/relationships.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/rpc/server/commands/relationships.tsx");
 
 export default obj;

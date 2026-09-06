@@ -1,7 +1,6 @@
 // discord_app/modules/message_request/SpamMessageRequestStore.tsx
-import clearAllDefault from "../../stores/MobileCacheSnapshotStore.tsx";
-import prototype from "../../stores/ChannelStore.tsx";
-import set from "../../../_runtime/00002_set.js";
+import ChannelStore from "../../stores/ChannelStore.tsx";
+import MobileCacheSnapshotStore from "../../stores/MobileCacheSnapshotStore.tsx";
 
 function processChannel(isSpam) {
   isSpam = isSpam.isSpam;
@@ -36,9 +35,9 @@ function processChannel(isSpam) {
 function handleConnectionOpen() {
   set.clear();
   set1.clear();
-  const values = Object.values(prototype.getMutablePrivateChannels());
-  const item = values.forEach((arg0) => {
-    callback(arg0);
+  const values = Object.values(ChannelStore.getMutablePrivateChannels());
+  const item = values.forEach((item) => {
+    processChannel(item);
   });
   c3 = true;
 }
@@ -50,7 +49,6 @@ function handleChannelCreate(channel) {
 }
 function handleChannelUpdates(arg0) {
   while (tmp !== undefined) {
-    let tmp3 = processChannel;
     let tmp4 = processChannel(tmp2);
     continue;
   }
@@ -64,7 +62,6 @@ function handleChannelDelete(channel) {
   }
   return flag;
 }
-clearAllDefault;
 let set = new Set();
 const set1 = new Set();
 let c3 = false;
@@ -76,7 +73,7 @@ class SpamMessageRequestStore extends tmp4 {
       CONNECTION_OPEN: handleConnectionOpen,
       CONNECTION_OPEN_SUPPLEMENTAL: handleConnectionOpen,
       CACHE_LOADED_LAZY() {
-        return obj.loadCache();
+        return closure_0.loadCache();
       },
       CHANNEL_CREATE: handleChannelCreate,
       CHANNEL_UPDATES: handleChannelUpdates,
@@ -84,14 +81,13 @@ class SpamMessageRequestStore extends tmp4 {
       MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: handleSpamAcceptOptimistic,
     };
     tmp = new tmp(obj, handleChannelDelete, new.target, tmp);
-    // ThrowIfThisInitialized (0x7c)
     closure_0 = tmp;
     return tmp;
   }
 }
-prototype = SpamMessageRequestStore.prototype;
+let prototype = SpamMessageRequestStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(prototype);
+  this.waitFor(ChannelStore);
 };
 prototype["loadCache"] = function loadCache() {
   const snapshot = this.readSnapshot(SpamMessageRequestStore.LATEST_SNAPSHOT_VERSION);
@@ -120,7 +116,7 @@ prototype["isReady"] = function isReady() {
 };
 SpamMessageRequestStore.displayName = "SpamMessageRequestStore";
 SpamMessageRequestStore.LATEST_SNAPSHOT_VERSION = 1;
-prototype = undefined;
+let closure_129_0;
 const obj = {
   CONNECTION_OPEN: handleConnectionOpen,
   CONNECTION_OPEN_SUPPLEMENTAL: handleConnectionOpen,
@@ -132,14 +128,14 @@ const obj = {
 };
 class CACHE_LOADED_LAZY {
   constructor() {
-    return obj.loadCache();
+    return closure_0.loadCache();
   }
 }
-obj[2] = CACHE_LOADED_LAZY;
-obj[3] = handleChannelCreate;
-obj[4] = handleChannelUpdates;
-obj[5] = handleChannelDelete;
-obj[6] = handleSpamAcceptOptimistic;
+obj.CACHE_LOADED_LAZY = CACHE_LOADED_LAZY;
+obj.CHANNEL_CREATE = handleChannelCreate;
+obj.CHANNEL_UPDATES = handleChannelUpdates;
+obj.CHANNEL_DELETE = handleChannelDelete;
+obj.MESSAGE_REQUEST_ACCEPT_OPTIMISTIC = handleSpamAcceptOptimistic;
 prototype = new prototype(
   obj,
   tmp2,
@@ -151,7 +147,8 @@ prototype = new prototype(
   handleChannelUpdates,
   handleChannelDelete,
 );
-// ThrowIfThisInitialized (0x7c)
-const result = set.fileFinishedImporting("modules/message_request/SpamMessageRequestStore.tsx");
+closure_129_0 = prototype;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/message_request/SpamMessageRequestStore.tsx");
 
 export default prototype;

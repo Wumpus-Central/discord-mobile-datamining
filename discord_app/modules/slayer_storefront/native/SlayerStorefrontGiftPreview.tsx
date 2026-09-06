@@ -1,15 +1,13 @@
 // discord_app/modules/slayer_storefront/native/SlayerStorefrontGiftPreview.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
+import util from "../../../intl/index.native.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard.tsx";
 import InfoBox from "../../user_settings/authorized_apps/native/InfoBox.tsx";
-import InfoBoxDefault from "../../user_settings/authorized_apps/native/InfoBox.tsx";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+const InfoBoxDefault = InfoBox;
+
+require = fn;
 function WarningBox(application) {
   application = application.application;
   ({ canStartAuthorization, hasAccountLinked, mobileAccountLinkingDisabled, sku } = application);
@@ -19,10 +17,8 @@ function WarningBox(application) {
   } else {
     let name = importDefault;
     let BMMo2K = dependencyMap;
-    let obj = { look: null, style: null, children: null };
-    obj[0] = InfoBox.InfoBoxLooks.WARNING;
-    obj[1] = tmp.warningBox;
-    const intl = getSystemLocale.intl;
+    let obj = { look: InfoBox.InfoBoxLooks.WARNING, style: tmp.warningBox, children: null };
+    const intl = util.intl;
     if (mobileAccountLinkingDisabled) {
       BMMo2K = name(3417).BMMo2K;
       tmp2 = application == tmp2;
@@ -30,38 +26,37 @@ function WarningBox(application) {
       if (!tmp2) {
         name = application.name;
       }
-      obj = { applicationName: null };
-      obj[0] = name;
+      obj = { applicationName: name };
       application = intl.formatToPlainString(BMMo2K, obj);
-      obj[2] = application;
+      obj.children = application;
       let tmp7 = obj;
     } else if (canStartAuthorization) {
-      obj = { skuName: null, applicationName: null };
-      obj[0] = sku.name;
+      obj = { skuName: sku.name, applicationName: null };
       let name1;
       if (application != tmp2) {
         name1 = application.name;
       }
-      obj[1] = name1;
-      obj[2] = intl.formatToPlainString(tmp6(1114).t["EgCl+Q"], obj);
+      obj.applicationName = name1;
+      obj.children = intl.formatToPlainString(tmp6(1114).t["EgCl+Q"], obj);
       tmp7 = obj;
     } else {
-      obj[2] = intl.format(tmp6(1114).t["3T0cpx"], {});
+      obj.children = intl.format(tmp6(1114).t["3T0cpx"], {});
       tmp7 = obj;
     }
-    closure_4(InfoBoxDefault, tmp7);
-    const tmp3 = closure_4;
-    const tmp5 = InfoBoxDefault;
+    React4(InfoBoxDefault, tmp7);
   }
 }
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = createCacheKey.createStyles({
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4560);
+let closure_6 = createStyles.createStyles({
   container: { alignItems: "center", justifyContent: "center", gap: 16, marginTop: 20 },
   text: { textAlign: "center", paddingHorizontal: 32 },
   warningBox: { marginHorizontal: 16 },
 });
-const result = require("set").fileFinishedImporting("modules/slayer_storefront/native/SlayerStorefrontGiftPreview.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/slayer_storefront/native/SlayerStorefrontGiftPreview.tsx");
 
 export default function SlayerStorefrontGiftPreview(arg0) {
   ({ sku, application, mobileAccountLinkingDisabled } = arg0);
@@ -69,44 +64,26 @@ export default function SlayerStorefrontGiftPreview(arg0) {
   if (mobileAccountLinkingDisabled === undefined) {
     mobileAccountLinkingDisabled = false;
   }
-  const tmp = callback2();
+  const tmp = closure_6();
   let tmp3Result = null;
   if (null != sku) {
-    let obj = { style: null, children: null };
-    obj[0] = tmp.container;
-    obj = { sku: null };
-    obj[0] = sku;
-    const items = [callback(SlayerStorefrontItemCardDefault, obj), ,];
-    obj = { variant: "heading-md/normal", color: "mobile-text-heading-primary", style: null, children: null };
-    obj[2] = tmp.text;
-    const intl = getSystemLocale.intl;
-    obj1 = { sender: null, skuName: null, applicationName: null };
-    obj1[0] = sender;
-    obj1[1] = sku.name;
+    let obj = { style: tmp.container, children: null };
+    obj = { sku };
+    const items = [React4(SlayerStorefrontItemCardDefault, obj), ,];
+    obj = { variant: "heading-md/normal", color: "mobile-text-heading-primary", style: tmp.text, children: null };
+    const intl = util.intl;
+    const obj1 = { sender, skuName: sku.name, applicationName: null };
     let name;
     if (application != null) {
       name = application.name;
     }
-    obj1[2] = name;
-    obj[3] = intl.formatToPlainString(getSystemLocale.t["2tBYtA"], obj1);
-    items[1] = callback(Text.Text, obj);
-    const obj2 = {
-      canStartAuthorization: null,
-      hasAccountLinked: null,
-      mobileAccountLinkingDisabled: null,
-      sku: null,
-      application: null,
-    };
-    obj2[0] = canStartAuthorization;
-    obj2[1] = hasAccountLinked;
-    obj2[2] = mobileAccountLinkingDisabled;
-    obj2[3] = sku;
-    obj2[4] = application;
-    items[2] = callback(WarningBox, obj2);
-    obj[1] = items;
-    tmp3Result = closure_5(View, obj);
-    const tmp3 = closure_5;
-    const tmp4 = View;
+    obj1.applicationName = name;
+    obj.children = intl.formatToPlainString(util.t["2tBYtA"], obj1);
+    items[1] = React4(Text_Text.Text, obj);
+    const obj2 = { canStartAuthorization, hasAccountLinked, mobileAccountLinkingDisabled, sku, application };
+    items[2] = React4(WarningBox, obj2);
+    obj.children = items;
+    tmp3Result = hasOwnProperty(View, obj);
   }
   return tmp3Result;
 }

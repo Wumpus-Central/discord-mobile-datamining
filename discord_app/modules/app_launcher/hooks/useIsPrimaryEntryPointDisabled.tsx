@@ -1,22 +1,22 @@
 // discord_app/modules/app_launcher/hooks/useIsPrimaryEntryPointDisabled.tsx
 import getPlatformDefault from "../../activities/utils/getPlatform.tsx";
-import closure_3 from "../../../records/ApplicationRecord.tsx";
-import closure_4 from "../../../stores/PermissionStore.tsx";
-import { Permissions } from "../../../../discord_common/js/shared/Constants.tsx";
+import ApplicationRecord from "../../../records/ApplicationRecord.tsx";
+import PermissionStore from "../../../stores/PermissionStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/app_launcher/hooks/useIsPrimaryEntryPointDisabled.tsx");
+const require = fn;
+const Permissions = fn(1085).Permissions;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/hooks/useIsPrimaryEntryPointDisabled.tsx");
 
 export default function useIsPrimaryEntryPointDisabled(arg0) {
   ({ context, application, activityAction } = arg0);
   let channel;
-  channel = undefined;
   if ("channel" === context.type) {
     channel = context.channel;
   }
-  const items = [closure_4];
+  const items = [PermissionStore];
   const stateFromStores = channel(504).useStateFromStores(items, () =>
-    closure_1_4.can(closure_1_5.USE_EMBEDDED_ACTIVITIES, channel),
+    PermissionStore.can(Permissions.USE_EMBEDDED_ACTIVITIES, channel),
   );
   const obj = channel(504);
   let id;
@@ -69,7 +69,9 @@ export default function useIsPrimaryEntryPointDisabled(arg0) {
   let reason;
   if (activityAction !== channel(12057).ActivityAction.LEAVE) {
     const tmp10 =
-      application instanceof closure_3 ? application.embeddedActivityConfig : application.embedded_activity_config;
+      application instanceof ApplicationRecord
+        ? application.embeddedActivityConfig
+        : application.embedded_activity_config;
     getPlatformDefault;
     tmp2(1115);
     if (null != tmp10) {

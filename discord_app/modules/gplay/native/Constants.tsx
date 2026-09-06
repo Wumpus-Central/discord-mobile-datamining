@@ -1,7 +1,7 @@
 // discord_app/modules/gplay/native/Constants.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/gplay/native/Constants.tsx");
+const result = size.fileFinishedImporting("modules/gplay/native/Constants.tsx");
 
 export const GPlayConnectionState = {
   DISCONNECTED: 0,

@@ -1,27 +1,25 @@
 // discord_app/modules/routing/native/BackPressManager.tsx
-import set from "../../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import _mod17 from "../../../../_runtime/metro/00017__.js";
 import KeyboardTypes from "../../keyboard/native/KeyboardTypes.tsx";
-import initializeDefault from "../../../lib/LifecycleManager.tsx";
 import useKeyboardType from "../../keyboard/native/useKeyboardType.tsx";
-import updateContextMenuState from "../../../design/components/ContextMenu/native/ContextMenuState.native.tsx";
+import ContextMenuState from "../../../design/components/ContextMenu/native/ContextMenuState.native.tsx";
+import LifecycleManager from "../../../lib/LifecycleManager.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 function handleBackPress() {
-  let obj = updateContextMenuState;
+  let obj = ContextMenuState;
   obj.hideContextMenu();
   const keyboardType = useKeyboardType.getKeyboardType();
   let flag = keyboardType !== KeyboardTypes.KeyboardTypes.SYSTEM;
   if (flag) {
-    obj = { type: null };
-    obj[0] = tmp(1609).KeyboardTypes.SYSTEM;
+    obj = { type: tmp(1609).KeyboardTypes.SYSTEM };
     tmp(1481).setKeyboardType(obj);
     flag = true;
     const tmpResult = tmp(1481);
   }
   return flag;
 }
-get_ActivityIndicator.BackHandler;
-initializeDefault;
+_mod17.BackHandler;
 class BackPressManager extends tmp2 {}
 const prototype = BackPressManager.prototype;
 prototype["_initialize"] = function _initialize() {
@@ -40,6 +38,6 @@ prototype["_terminate"] = function _terminate() {
   }
 };
 const backPressManager = new BackPressManager();
-let result = set.fileFinishedImporting("modules/routing/native/BackPressManager.tsx");
+let result = size.fileFinishedImporting("modules/routing/native/BackPressManager.tsx");
 
 export default backPressManager;

@@ -1,9 +1,11 @@
 // discord_app/modules/game_detection/GameAnalyticsUtils.tsx
-import _openRobloxURLWithRootPlaceId from "../roblox_subgame_detection/RobloxSubgameUtils.tsx";
-import closure_2 from "../../stores/DetectableGameStore.tsx";
+import PlatformUtils from "../../utils/PlatformUtils.tsx";
+import RobloxSubgameUtils from "../roblox_subgame_detection/RobloxSubgameUtils.tsx";
+import DetectableGameStore from "../../stores/DetectableGameStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/game_detection/GameAnalyticsUtils.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_detection/GameAnalyticsUtils.tsx");
 
 export const removeExecutablePathPrefix = function removeExecutablePathPrefix(exePath) {
   const formatted = exePath.toLowerCase();
@@ -29,24 +31,23 @@ export const getRunningGameAnalytics = function getRunningGameAnalytics(streamAp
   } else {
     const str = "exePath" in streamApplication ? streamApplication.exePath : streamApplication.exe;
     let id = streamApplication.id;
-    let obj = { id: null, name: null, exePath: null, cmdLine: null, lastFocused: 0 };
-    obj[0] = id;
+    let obj = { id, name: null, exePath: null, cmdLine: null, lastFocused: 0 };
     const name = streamApplication.name;
-    obj[1] = name;
+    obj.name = name;
     let str2 = str;
     if (str == null) {
       str2 = "";
     }
-    obj[2] = str2;
+    obj.exePath = str2;
     let str3 = str;
     if (str == null) {
       str3 = "";
     }
-    obj[3] = str3;
-    const findGameResult = closure_2.findGame(obj);
+    obj.cmdLine = str3;
+    const findGameResult = DetectableGameStore.findGame(obj);
     const name2 = streamApplication.name;
     obj = {
-      gameName: null,
+      gameName: name2,
       gameId: null,
       exe: null,
       distributor: null,
@@ -54,7 +55,6 @@ export const getRunningGameAnalytics = function getRunningGameAnalytics(streamAp
       gameMetadata: null,
       rawExePath: null,
     };
-    obj[0] = name2;
     let id2 = streamApplication.id;
     if (id2 == null) {
       id = undefined;
@@ -63,7 +63,7 @@ export const getRunningGameAnalytics = function getRunningGameAnalytics(streamAp
       }
       id2 = id;
     }
-    obj[1] = id2;
+    obj.gameId = id2;
     let joined;
     if (null != str) {
       const formatted = str.toLowerCase();
@@ -75,32 +75,34 @@ export const getRunningGameAnalytics = function getRunningGameAnalytics(streamAp
       const substr = parts.slice(-2);
       joined = substr.join("/");
     }
-    obj[2] = joined;
+    obj.exe = joined;
     const distributor = streamApplication.distributor;
-    obj[3] = distributor;
+    obj.distributor = distributor;
     const sku = streamApplication.sku;
-    obj[4] = sku;
+    obj.sku = sku;
     let subgameMetadata;
     if (null != streamApplication) {
-      subgameMetadata = _openRobloxURLWithRootPlaceId.getSubgameMetadata(streamApplication);
-      const obj4 = _openRobloxURLWithRootPlaceId;
+      subgameMetadata = RobloxSubgameUtils.getSubgameMetadata(streamApplication);
     }
-    obj[5] = subgameMetadata;
-    obj[6] = str;
+    obj.gameMetadata = subgameMetadata;
+    obj.rawExePath = str;
     return obj;
   }
 };
-export const getGameAnalyticsMetadata = function getGameAnalyticsMetadata(currentGameForAnalytics) {
+export const getGameAnalyticsMetadata = function getGameAnalyticsMetadata(
+  currentGameForAnalytics,
+  arg1,
+  detected_game_id,
+) {
   if (arg1) {
-    if (null != arg2) {
+    if (null != detected_game_id) {
       const _JSON = JSON;
-      let obj = { detected_game_id: null };
-      obj[0] = arg2;
+      let obj = { detected_game_id };
       let json = JSON.stringify(obj);
     }
     return json;
   }
-  obj = _openRobloxURLWithRootPlaceId;
+  obj = RobloxSubgameUtils;
   json = obj.getSubgameMetadata(currentGameForAnalytics);
 };
 export const isVerifiedGameExecutable = function isVerifiedGameExecutable(str, arr) {
@@ -111,7 +113,7 @@ export const isVerifiedGameExecutable = function isVerifiedGameExecutable(str, a
       if (formatted.endsWith("/")) {
         substr = formatted.slice(0, -1);
       }
-      dependencyMap = substr(1115).getPlatformName();
+      const platformName = PlatformUtils.getPlatformName();
       return arr.some((os) => {
         let tmp = os.os === closure_1;
         if (tmp) {

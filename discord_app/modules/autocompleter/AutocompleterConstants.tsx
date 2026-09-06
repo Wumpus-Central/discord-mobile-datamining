@@ -1,7 +1,7 @@
 // discord_app/modules/autocompleter/AutocompleterConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/autocompleter/AutocompleterConstants.tsx");
+const result = size.fileFinishedImporting("modules/autocompleter/AutocompleterConstants.tsx");
 
 export const HeaderRecord = function HeaderRecord(id) {
   const obj = Object.create(new.target.prototype);

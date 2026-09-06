@@ -1,12 +1,9 @@
 // discord_app/modules/user_settings/quests/native/MobileSearchableSelect.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
+const require = fn;
 class MobileSearchableSelect {
   constructor(arg0) {
     options = global.options;
@@ -17,8 +14,8 @@ class MobileSearchableSelect {
     if (placeholder === undefined) {
       tmp = options;
       tmp2 = closure_1;
-      intl = require("getSystemLocale").intl;
-      placeholder = intl.string(require("getSystemLocale").t.XqMe3N);
+      intl = options(closure_1[6]).intl;
+      placeholder = intl.string(options(closure_1[6]).t.XqMe3N);
     }
     flag = global.allowCustomValue;
     if (flag === undefined) {
@@ -60,7 +57,7 @@ class MobileSearchableSelect {
     items[1] = first;
     items[2] = first1;
     effect = obj.useEffect(() => {
-      let tmp2 = null == closure_1;
+      let tmp2 = null == value;
       if (!tmp2) {
         tmp2 = tmp === first;
       }
@@ -68,7 +65,7 @@ class MobileSearchableSelect {
         tmp2 = first1;
       }
       if (!tmp2) {
-        callback(tmp);
+        closure_7(tmp);
       }
     }, items);
     items1 = [, ,];
@@ -76,16 +73,15 @@ class MobileSearchableSelect {
     items1[1] = first;
     items1[2] = flag;
     memo = obj.useMemo(() => {
-      let found = closure_0;
+      let found = options;
       if ("" !== first.trim()) {
         closure_0 = str.toLowerCase();
-        found = closure_0.filter((label) => {
+        found = options.filter((label) => {
           const formatted = label.label.toLowerCase();
           let hasItem = formatted.includes(closure_0);
           if (!hasItem) {
             const formatted1 = label.value.toLowerCase();
             hasItem = formatted1.includes(closure_0);
-            const str2 = label.value;
           }
           return hasItem;
         });
@@ -96,9 +92,7 @@ class MobileSearchableSelect {
         if (0 === found.length) {
           tmp = found;
           if ("" !== str.trim()) {
-            const obj = { label: null, value: null };
-            obj[0] = str.trim();
-            obj[1] = str.trim();
+            const obj = { label: str.trim(), value: str.trim() };
             const items = [obj];
             tmp = items;
           }
@@ -113,27 +107,27 @@ class MobileSearchableSelect {
     items3[0] = first;
     items3[1] = onChange;
     callback = obj.useCallback((arg0) => {
-      callback2(true);
-      callback(arg0);
+      closure_10(true);
+      closure_7(arg0);
       let tmp4 = arg0.length > 0;
       if (!tmp4) {
         tmp4 = options.length > 0;
       }
-      c8(tmp4);
+      _undefined(tmp4);
     }, items2);
     items4 = [];
     items4[0] = onChange;
     callback1 = obj.useCallback(() => {
       if ("" !== first.trim()) {
         onChange(first);
-        callback2(false);
+        closure_10(false);
         _undefined(false);
       }
     }, items3);
     closure_12 = obj.useCallback((arg0) => {
-      callback(arg0);
+      closure_7(arg0);
       onChange(arg0);
-      callback2(false);
+      closure_10(false);
       _undefined(false);
     }, items4);
     items5 = [,];
@@ -144,14 +138,14 @@ class MobileSearchableSelect {
       if (!tmp2) {
         tmp2 = options.length > 0;
       }
-      c8(tmp2);
+      _undefined(tmp2);
     }, items5);
     tmp15 = c4;
     obj = { style: { position: "relative", zIndex: 100, overflow: "visible" }, children: null };
     tmp16 = closure_7;
     callback3 = obj.useCallback(() => {
       _undefined(false);
-      callback2(false);
+      closure_10(false);
     }, []);
     tmp14 = closure_8;
     obj1 = {
@@ -161,7 +155,7 @@ class MobileSearchableSelect {
       onSubmitEditing: callback1,
       onFocus: callback2,
       onBlur: callback3,
-      leadingIcon: require("MagnifyingGlassIcon").MagnifyingGlassIcon,
+      leadingIcon: options(closure_1[8]).MagnifyingGlassIcon,
       isClearable: true,
       returnKeyType: "search",
       accessibilityRole: "search",
@@ -170,14 +164,14 @@ class MobileSearchableSelect {
       isDisabled: flag2,
     };
     items6 = [,];
-    items6[0] = closure_7(require("TextField").TextField, obj1);
+    items6[0] = closure_7(options(closure_1[7]).TextField, obj1);
     if (tmp16Result) {
       num = 0;
       tmp16Result = memo.length > 0;
     }
     if (tmp16Result) {
       obj2 = { style: null, children: null };
-      obj2[0] = tmp3.dropdownContainer;
+      obj2.style = tmp3.dropdownContainer;
       tmp17 = closure_5;
       obj3 = {
         nestedScrollEnabled: true,
@@ -185,21 +179,21 @@ class MobileSearchableSelect {
         keyboardShouldPersistTaps: "handled",
         children: null,
       };
-      obj3[3] = memo.map((children) => {
-        closure_0 = children;
+      obj3.children = memo.map((children, index) => {
+        value = children;
         const items = [dropdownItem.dropdownItem];
-        let dropdownItemLast = arg1 === memo.length - 1;
+        let dropdownItemLast = index === memo.length - 1;
         if (dropdownItemLast) {
           dropdownItemLast = tmp3.dropdownItemLast;
         }
-        obj = {
+        let obj = {
           style: items,
           activeOpacity: 0.7,
           onPress() {
-            closure_1_12(value.value);
+            closure_12(value.value);
           },
           disabled: flag2,
-          children: tmp(options(value[9]).Text, obj),
+          children: null,
         };
         items[1] = dropdownItemLast;
         obj = {
@@ -208,25 +202,29 @@ class MobileSearchableSelect {
           style: tmp3.dropdownItemText,
           children: children.label,
         };
-        return closure_7(first, obj, "option-" + children.value + "-" + arg1);
+        obj.children = closure_7(options(value[9]).Text, obj);
+        return closure_7(first, obj, "option-" + children.value + "-" + index);
       });
-      obj2[1] = tmp16(closure_5, obj3);
+      obj2.children = tmp16(closure_5, obj3);
       tmp16Result = tmp16(tmp15, obj2);
     }
     items6[1] = tmp16Result;
-    obj[1] = items6;
+    obj.children = items6;
     return tmp14(tmp15, obj);
   }
 }
-({ View: c4, ScrollView: c5, TouchableOpacity: closure_6 } = get_ActivityIndicator);
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { dropdownContainer: null, dropdownItem: null, dropdownItemLast: null, dropdownItemText: null };
-createCacheKey = {
-  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER,
-  borderRadius: ThemesDefault.radii.md,
-  marginTop: ThemesDefault.space.PX_4,
+get_ActivityIndicator = fn(17);
+({ View: closure_4, ScrollView: hasOwnProperty, TouchableOpacity: metroRequire } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+fn(4560);
+let createStyles = { dropdownContainer: null, dropdownItem: null, dropdownItemLast: null, dropdownItemText: null };
+const rect = {
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
+  borderRadius: nativeDefault.radii.md,
+  marginTop: nativeDefault.space.PX_4,
   borderWidth: 1,
-  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderColor: nativeDefault.colors.BORDER_SUBTLE,
   left: 0,
   right: 0,
   zIndex: 999999,
@@ -237,21 +235,18 @@ createCacheKey = {
   shadowRadius: 8,
   maxHeight: 250,
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = {
-  padding: ThemesDefault.space.PX_12,
+createStyles.dropdownContainer = rect;
+createStyles = {
+  padding: nativeDefault.space.PX_12,
   borderBottomWidth: 1,
-  borderBottomColor: ThemesDefault.colors.BORDER_MUTED,
+  borderBottomColor: nativeDefault.colors.BORDER_MUTED,
 };
-createCacheKey[2] = { borderBottomWidth: 0 };
-createCacheKey[3] = { fontSize: 14 };
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj1 = {
-  padding: ThemesDefault.space.PX_12,
-  borderBottomWidth: 1,
-  borderBottomColor: ThemesDefault.colors.BORDER_MUTED,
-};
-const result = require("set").fileFinishedImporting("modules/user_settings/quests/native/MobileSearchableSelect.tsx");
+createStyles.dropdownItem = createStyles;
+createStyles.dropdownItemLast = { borderBottomWidth: 0 };
+createStyles.dropdownItemText = { fontSize: 14 };
+const React7 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/quests/native/MobileSearchableSelect.tsx");
 
 export default MobileSearchableSelect;
 export { MobileSearchableSelect };

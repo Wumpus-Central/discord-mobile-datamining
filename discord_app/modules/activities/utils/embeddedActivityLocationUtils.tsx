@@ -1,7 +1,7 @@
 // discord_app/modules/activities/utils/embeddedActivityLocationUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/activities/utils/embeddedActivityLocationUtils.tsx");
+const result = size.fileFinishedImporting("modules/activities/utils/embeddedActivityLocationUtils.tsx");
 
 export const getEmbeddedActivityLocationChannelId = function getEmbeddedActivityLocationChannelId(_location) {
   if (null != _location) {

@@ -1,11 +1,12 @@
 // discord_app/modules/home_drawer/native/subtitles/UnreadSubtitle.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/home_drawer/native/subtitles/UnreadSubtitle.tsx");
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/home_drawer/native/subtitles/UnreadSubtitle.tsx");
 
 export default function UnreadSubtitle(channel) {
   channel = channel.channel;
@@ -27,57 +28,63 @@ export default function UnreadSubtitle(channel) {
   obj = {
     channelName,
     count: count - 1,
-    labelHook(children) {
-      return callback(
+    labelHook(children, arg1) {
+      return jsx(
         subtitleStyles(channelIconComponentWithGuild[7]).Text,
         { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children },
         arg1,
       );
     },
     iconHook(arg0, arg1) {
-      return closure_1_3(
-        channelIconComponentWithGuild,
-        { size: "xxs", color: "icon-muted", style: subtitleStyles.unreadChannelIcon },
-        arg1,
+      return (
+        <channelIconComponentWithGuild
+          key={arg1}
+          size="xxs"
+          color="icon-muted"
+          style={subtitleStyles.unreadChannelIcon}
+        />
       );
     },
-    channelHook(children) {
-      return closure_1_3(
-        subtitleStyles(channelIconComponentWithGuild[7]).Text,
+    channelHook(children, arg1) {
+      return jsx(
+        Text_Text.Text,
         { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, style: subtitleStyles.subtitleText, children },
         arg1,
       );
     },
-    overflowHook(children) {
-      return callback(
+    overflowHook(children, arg1) {
+      return jsx(
         subtitleStyles(channelIconComponentWithGuild[7]).Text,
         { variant: "text-xs/medium", color: "text-muted", children },
         arg1,
       );
     },
   };
-  obj[1] = intl.format(subtitleStyles(channelIconComponentWithGuild[6]).t.OqlmU6, obj);
+  obj.children = intl.format(subtitleStyles(channelIconComponentWithGuild[6]).t.OqlmU6, obj);
   return (
     <View
       channelName={channelName}
       count={count - 1}
-      labelHook={function labelHook(children) {
-        return callback(
+      labelHook={function labelHook(children, arg1) {
+        return jsx(
           subtitleStyles(channelIconComponentWithGuild[7]).Text,
           { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children },
           arg1,
         );
       }}
       iconHook={function iconHook(arg0, arg1) {
-        return closure_1_3(
-          channelIconComponentWithGuild,
-          { size: "xxs", color: "icon-muted", style: subtitleStyles.unreadChannelIcon },
-          arg1,
+        return (
+          <channelIconComponentWithGuild
+            key={arg1}
+            size="xxs"
+            color="icon-muted"
+            style={subtitleStyles.unreadChannelIcon}
+          />
         );
       }}
-      channelHook={function channelHook(children) {
-        return closure_1_3(
-          subtitleStyles(channelIconComponentWithGuild[7]).Text,
+      channelHook={function channelHook(children, arg1) {
+        return jsx(
+          Text_Text.Text,
           {
             variant: "text-xs/medium",
             color: "text-muted",
@@ -88,8 +95,8 @@ export default function UnreadSubtitle(channel) {
           arg1,
         );
       }}
-      overflowHook={function overflowHook(children) {
-        return callback(
+      overflowHook={function overflowHook(children, arg1) {
+        return jsx(
           subtitleStyles(channelIconComponentWithGuild[7]).Text,
           { variant: "text-xs/medium", color: "text-muted", children },
           arg1,

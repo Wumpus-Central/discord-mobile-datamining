@@ -1,51 +1,49 @@
 // discord_app/modules/vibegrations/native/VibegrationsMessageAuthor.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_2 from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_4 from "../../../stores/UserStore.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import vibegrationsMessageAuthors from "../lib/vibegrationsMessageAuthors.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import UserStore from "../../../stores/UserStore.tsx";
 
-const require = arg1;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { author: null };
-createCacheKey = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
-createCacheKey[0] = createCacheKey;
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/vibegrations/native/VibegrationsMessageAuthor.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+fn(4560);
+let createStyles = { author: null };
+createStyles = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
+createStyles.author = createStyles;
+let closure_7 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/vibegrations/native/VibegrationsMessageAuthor.tsx");
 
 export default function VibegrationsMessageAuthor(userId) {
   userId = userId.userId;
   const items = [userId];
-  const effect = React.useEffect(() => userId(closure_1_1[6]).requestMessageAuthor(userId), items);
+  const effect = noop.useEffect(() => vibegrationsMessageAuthors.requestMessageAuthor(userId), items);
   let obj = userId(504);
-  const items1 = [closure_4];
+  const items1 = [UserStore];
   const items2 = [userId];
   const stateFromStores = obj.useStateFromStores(
     items1,
     () => {
       let user = null;
       if (null != userId) {
-        user = closure_1_4.getUser(tmp);
+        user = UserStore.getUser(tmp);
       }
-      return userId(closure_1_1[6]).resolveMessageAuthor(userId, user, closure_1_4.getCurrentUser());
+      return vibegrationsMessageAuthors.resolveMessageAuthor(userId, user, UserStore.getCurrentUser());
     },
     items2,
   );
   userId(4404);
   let tmp8 = null;
   if (null != stateFromStores) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.author;
-    obj = { size: null, user: null, guildId: "Array" };
-    obj[0] = tmp3(1178).AvatarSizes.SIZE_16;
-    obj[1] = stateFromStores;
-    const items3 = [callback(tmp3(1178).Avatar, obj)];
-    obj1 = { variant: "text-xs/semibold", color: "text-muted", children: null };
-    obj1[2] = tmp7;
-    items3[1] = callback(tmp3(4556).Text, obj1);
-    obj[1] = items3;
-    tmp8 = callback2(View, obj);
+    obj = { style: tmp.author, children: null };
+    obj = { size: tmp3(1178).AvatarSizes.SIZE_16, user: stateFromStores, guildId: "Array" };
+    const items3 = [closure_5(tmp3(1178).Avatar, obj)];
+    const obj1 = { variant: "text-xs/semibold", color: "text-muted", children: tmp7 };
+    items3[1] = closure_5(tmp3(4556).Text, obj1);
+    obj.children = items3;
+    tmp8 = closure_6(View, obj);
   }
   return tmp8;
 }

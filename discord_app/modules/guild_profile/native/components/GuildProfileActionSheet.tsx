@@ -1,43 +1,43 @@
 // discord_app/modules/guild_profile/native/components/GuildProfileActionSheet.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../GuildProfileStore.tsx";
-import { GuildProfileFetchStatus } from "../../GuildProfileStore.tsx";
-import { INVALID_ACCESS_ERROR_CODE } from "../../GuildProfileConstants.tsx";
-import { VerticalGradient } from "../../../../Constants.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import _modDef672 from "../../../../../_runtime/metro/00672__.js";
+import GuildProfileActionCreators from "../../GuildProfileActionCreators.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import GuildProfileStore from "../../GuildProfileStore.tsx";
 
-const require = arg1;
-({ View: c4, ActivityIndicator: c5 } = get_ActivityIndicator);
-({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-createCacheKey = {
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, ActivityIndicator: hasOwnProperty } = get_ActivityIndicator);
+const GuildProfileFetchStatus = fn(9065).GuildProfileFetchStatus;
+const INVALID_ACCESS_ERROR_CODE = fn(9186).INVALID_ACCESS_ERROR_CODE;
+const VerticalGradient = fn(1074).VerticalGradient;
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+fn(4560);
+let createStyles = {
   loadingContainer: { paddingTop: 40 },
   footerContainer: { paddingHorizontal: 16, paddingVertical: 40 },
   scrollView: null,
 };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-createCacheKey[2] = createCacheKey;
-let closure_12 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting(
-  "modules/guild_profile/native/components/GuildProfileActionSheet.tsx",
-);
+createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+createStyles.scrollView = createStyles;
+let closure_12 = createStyles.createStyles(createStyles);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_profile/native/components/GuildProfileActionSheet.tsx");
 
 export default function GuildProfileActionSheet(guildId) {
   guildId = guildId.guildId;
   fetchGuildProfile = undefined;
   let analyticsLocations;
-  let token1;
   ({ context, inviteKey } = guildId);
-  const tmp = callback3();
+  const tmp = closure_12();
   let obj = guildId(analyticsLocations[9]);
   guildProfile = obj.useGuildProfile(guildId);
   ({ guildProfile, fetchGuildProfile } = guildProfile);
   const fetchStatus = guildProfile.fetchStatus;
-  obj1 = guildId(analyticsLocations[10]);
-  let items = [closure_6];
-  const stateFromStores = obj1.useStateFromStores(items, () => closure_1_6.getErrorCode(guildId));
+  let obj1 = guildId(analyticsLocations[10]);
+  let items = [GuildProfileStore];
+  const stateFromStores = obj1.useStateFromStores(items, () => GuildProfileStore.getErrorCode(guildId));
   let obj2 = guildId(analyticsLocations[11]);
   const token = obj2.useToken(
     fetchGuildProfile(analyticsLocations[7]).colors.INTERACTIVE_TEXT_HOVER,
@@ -51,11 +51,11 @@ export default function GuildProfileActionSheet(guildId) {
     fetchGuildProfile(analyticsLocations[14]).GUILD_PROFILE,
   ).analyticsLocations;
   let obj4 = guildId(analyticsLocations[11]);
-  token1 = obj4.useToken(fetchGuildProfile(analyticsLocations[7]).colors.BACKGROUND_BASE_LOW);
+  const token1 = obj4.useToken(fetchGuildProfile(analyticsLocations[7]).colors.BACKGROUND_BASE_LOW);
   let obj5 = token1;
   const items1 = [guildId, analyticsLocations];
   const effect = token1.useEffect(() => {
-    const result = guildId(analyticsLocations[15]).trackGuildProfileViewed(guildId, analyticsLocations);
+    const result = GuildProfileActionCreators.trackGuildProfileViewed(guildId, analyticsLocations);
   }, items1);
   const items2 = [fetchGuildProfile];
   const items3 = [fetchGuildProfile];
@@ -69,71 +69,63 @@ export default function GuildProfileActionSheet(guildId) {
     if (fetchStatus !== GuildProfileFetchStatus.FETCHING) {
       if (null == guildProfile) {
         if (stateFromStores === INVALID_ACCESS_ERROR_CODE) {
-          let tmp19 = callback(tmp2(tmp3[16]), {});
+          let tmp19 = closure_10(tmp2(tmp3[16]), {});
           obj = { size: "lg", text: null, onPress: null };
           const intl2 = tmp5(tmp3[18]).intl;
-          obj[1] = intl2.string(tmp5(tmp3[18]).t.cpT0Cq);
-          obj[2] = bottomSheetClose;
-          let tmp18 = callback(tmp5(tmp3[17]).Button, obj);
-          let tmp20 = callback;
+          obj.text = intl2.string(tmp5(tmp3[18]).t.cpT0Cq);
+          obj.onPress = bottomSheetClose;
+          let tmp18 = closure_10(tmp5(tmp3[17]).Button, obj);
+          let tmp20 = closure_10;
         }
       }
       if (null == guildProfile) {
-        obj = { onRetry: null };
-        obj[0] = callback;
-        tmp19 = callback(tmp2(tmp3[19]), obj);
+        obj = { onRetry: callback };
+        tmp19 = closure_10(tmp2(tmp3[19]), obj);
         obj1 = { size: "lg", text: null, onPress: null };
         const intl = tmp5(tmp3[18]).intl;
-        obj1[1] = intl.string(tmp5(tmp3[18]).t.cpT0Cq);
-        obj1[2] = bottomSheetClose;
-        tmp18 = callback(tmp5(tmp3[17]).Button, obj1);
-        tmp20 = callback;
+        obj1.text = intl.string(tmp5(tmp3[18]).t.cpT0Cq);
+        obj1.onPress = bottomSheetClose;
+        tmp18 = closure_10(tmp5(tmp3[17]).Button, obj1);
+        tmp20 = closure_10;
       } else {
-        obj2 = { guildProfile: null };
-        obj2[0] = guildProfile;
-        obj3 = { profile: null, context: null, inviteKey: null };
-        obj3[0] = guildProfile;
-        obj3[1] = context;
-        obj3[2] = inviteKey;
-        tmp18 = callback(tmp2(tmp3[21]), obj3);
-        tmp19 = callback(tmp2(tmp3[20]), obj2);
-        tmp20 = callback;
-        const tmp17 = callback(tmp2(tmp3[20]), obj2);
+        obj2 = { guildProfile };
+        obj3 = { profile: guildProfile, context, inviteKey };
+        tmp18 = closure_10(tmp2(tmp3[21]), obj3);
+        tmp19 = closure_10(tmp2(tmp3[20]), obj2);
+        tmp20 = closure_10;
+        const tmp17 = closure_10(tmp2(tmp3[20]), obj2);
       }
     }
     const items4 = [token1];
     const memo = obj5.useMemo(() => {
-      const obj = fetchGuildProfile(analyticsLocations[22])(token1);
-      const items = [fetchGuildProfile(analyticsLocations[22])(token1).alpha(0).hex(), token1];
+      const obj = _modDef672(token1);
+      const items = [_modDef672(token1).alpha(0).hex(), token1];
       return items;
     }, items4);
-    obj4 = { ref: null, scrollable: true, handleDisabled: true, footer: null, children: null };
-    obj4[0] = bottomSheetRef;
-    obj5 = { start: null, end: null, style: null, colors: null, children: null };
-    obj5[0] = VerticalGradient.START;
-    obj5[1] = { x: 0, y: 0.5 };
-    obj5[2] = tmp.footerContainer;
-    obj5[3] = memo;
-    obj5[4] = tmp18;
-    obj4[3] = tmp20(tmp2(tmp3[24]), obj5);
-    const obj6 = { enableFooterMarginAdjustment: true, style: null, children: null };
-    obj6[1] = tmp.scrollView;
-    obj6[2] = tmp19;
+    obj4 = { ref: bottomSheetRef, scrollable: true, handleDisabled: true, footer: null, children: null };
+    obj5 = {
+      start: VerticalGradient.START,
+      end: { x: 0, y: 0.5 },
+      style: tmp.footerContainer,
+      colors: memo,
+      children: tmp18,
+    };
+    obj4.footer = tmp20(tmp2(tmp3[24]), obj5);
+    const obj6 = { enableFooterMarginAdjustment: true, style: tmp.scrollView, children: tmp19 };
     const items5 = [tmp20(tmp5(tmp3[25]).BottomSheetScrollView, obj6)];
     const obj7 = { variant: "floating", tabStyle: null, onPress: null };
-    const obj8 = { backgroundColor: null };
-    obj8[0] = token;
-    obj7[1] = obj8;
-    obj7[2] = bottomSheetClose;
+    const obj8 = { backgroundColor: token };
+    obj7.tabStyle = obj8;
+    obj7.onPress = bottomSheetClose;
     items5[1] = tmp20(tmp5(tmp3[26]).ActionSheetHeaderBar, obj7);
-    obj4[4] = items5;
-    return callback2(tmp5(tmp3[23]).BottomSheet, obj4);
+    obj4.children = items5;
+    return closure_11(tmp5(tmp3[23]).BottomSheet, obj4);
   }
   const tmp10 = fetchGuildProfile(analyticsLocations[13]);
-  tmp19 = callback(closure_4, {
+  tmp19 = closure_10(closure_4, {
     style: tmp.loadingContainer,
-    children: callback(closure_5, { animating: true, size: "large" }),
+    children: closure_10(closure_5, { animating: true, size: "large" }),
   });
   tmp18 = null;
-  tmp20 = callback;
+  tmp20 = closure_10;
 }

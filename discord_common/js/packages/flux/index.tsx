@@ -1,22 +1,22 @@
 // discord_common/js/packages/flux/index.tsx
-import set from "../../../../_runtime/00002_set.js";
-import initialize2 from "Store.tsx";
-import loggerDefault from "Emitter.tsx";
-import defaultAreStatesEqual from "useStateFromStores.tsx";
-import attach from "BatchedStoreListener.tsx";
+import Store2 from "Store.tsx";
+import flux_EmitterDefault from "Emitter.tsx";
+import useStateFromStores from "useStateFromStores.tsx";
+import BatchedStoreListener from "BatchedStoreListener.tsx";
 import connectStoresDefault from "connectStores.tsx";
-import setDisplayName from "Dispatcher.tsx";
-import getClass from "PersistedStore.tsx";
-import areStatesEqual from "createFetchStore.tsx";
+import flux_Dispatcher from "Dispatcher.tsx";
+import PersistedStore from "PersistedStore.tsx";
+import createFetchStore from "createFetchStore.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 function initialize() {
   Store.initialize();
 }
-const PersistedStore = getClass.PersistedStore;
-({ DeviceSettingsStore, OfflineCacheStore } = getClass);
-const Store = initialize2.Store;
+PersistedStore = PersistedStore.PersistedStore;
+({ DeviceSettingsStore, OfflineCacheStore } = PersistedStore);
+const Store = Store2.Store;
 const obj = {
-  Emitter: loggerDefault,
+  Emitter: flux_EmitterDefault,
   Store,
   PersistedStore,
   DeviceSettingsStore,
@@ -24,20 +24,20 @@ const obj = {
   connectStores: connectStoresDefault,
   initialize,
 };
-({ createFetchStore, NO_DATA } = areStatesEqual);
+({ createFetchStore, NO_DATA } = createFetchStore);
 Object.defineProperty(obj, "initialized", { get: () => Store.initialized, set: undefined });
-const result = set.fileFinishedImporting("../discord_common/js/packages/flux/index.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/flux/index.tsx");
 
 export default obj;
 export { NO_DATA };
 export { Store };
-export const Dispatcher = setDisplayName.Dispatcher;
-export const BatchedStoreListener = attach.BatchedStoreListener;
+export const Dispatcher = flux_Dispatcher.Dispatcher;
+export const BatchedStoreListener = BatchedStoreListener.BatchedStoreListener;
 export { createFetchStore };
-export const statesWillNeverBeEqual = defaultAreStatesEqual.statesWillNeverBeEqual;
-export const useStateFromStores = defaultAreStatesEqual.useStateFromStores;
-export const useStateFromStoresObject = defaultAreStatesEqual.useStateFromStoresObject;
-export const useStateFromStoresArray = defaultAreStatesEqual.useStateFromStoresArray;
+export const statesWillNeverBeEqual = useStateFromStores.statesWillNeverBeEqual;
+export const useStateFromStores = useStateFromStores.useStateFromStores;
+export const useStateFromStoresObject = useStateFromStores.useStateFromStoresObject;
+export const useStateFromStoresArray = useStateFromStores.useStateFromStoresArray;
 export { initialize };
 export const destroy = function destroy() {
   PersistedStore.destroy();

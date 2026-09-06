@@ -1,10 +1,10 @@
 // discord_app/modules/video_calls/native/VoiceCallOverlayUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
-import dispatcherDefault from "../../../Dispatcher.tsx";
-import BOX_MODE_ACTIONSHEET_WIDTH from "ChannelCallConstants.tsx";
+import DispatcherDefault from "../../../Dispatcher.tsx";
+import ChannelCallConstants from "ChannelCallConstants.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const MIN_MARGIN_BETWEEN_OVERLAYS = BOX_MODE_ACTIONSHEET_WIDTH.MIN_MARGIN_BETWEEN_OVERLAYS;
-const VoiceCallOverlayType = BOX_MODE_ACTIONSHEET_WIDTH.VoiceCallOverlayType;
+const MIN_MARGIN_BETWEEN_OVERLAYS = ChannelCallConstants.MIN_MARGIN_BETWEEN_OVERLAYS;
+const VoiceCallOverlayType = ChannelCallConstants.VoiceCallOverlayType;
 function doRectanglesIntersectWorklet(arg0, arg1, MIN_MARGIN_BETWEEN_OVERLAYS) {
   if (null != arg0) {
     if (null != arg0.x) {
@@ -78,21 +78,19 @@ doesTargetPositionIntersectOtherOverlaysWorklet.__workletHash = 4190950618494;
 doesTargetPositionIntersectOtherOverlaysWorklet.__initData = {
   code: "function doesTargetPositionIntersectOtherOverlaysWorklet_VoiceCallOverlayUtilsTsx2(voiceCallOverlayLayoutStates,voiceCallOverlayType,targetRectangle){const{VoiceCallOverlayType,doRectanglesIntersectWorklet,MIN_MARGIN_BETWEEN_OVERLAYS}=this.__closure;switch(voiceCallOverlayType){case VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON:{if(!voiceCallOverlayLayoutStates[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE].isVisible){return false;}const doRectanglesIntersect=doRectanglesIntersectWorklet(targetRectangle,voiceCallOverlayLayoutStates[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE],MIN_MARGIN_BETWEEN_OVERLAYS);if(doRectanglesIntersect){return true;}break;}case VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE:{if(!voiceCallOverlayLayoutStates[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON].isVisible){return false;}const doRectanglesIntersect=doRectanglesIntersectWorklet(targetRectangle,voiceCallOverlayLayoutStates[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON],MIN_MARGIN_BETWEEN_OVERLAYS);if(doRectanglesIntersect){return true;}break;}}return false;}",
 };
-const result = set.fileFinishedImporting("modules/video_calls/native/VoiceCallOverlayUtils.tsx");
+const result = size.fileFinishedImporting("modules/video_calls/native/VoiceCallOverlayUtils.tsx");
 
 export { doesTargetPositionIntersectOtherOverlaysWorklet };
 export const updateVoiceCallOverlayLayoutState = function updateVoiceCallOverlayLayoutState(
   voiceCallOverlayType,
   voiceCallOverlayLayoutState,
 ) {
-  let obj = dispatcherDefault;
-  obj = { type: "VOICE_CALL_OVERLAY_LAYOUT_STATE_UPDATE", voiceCallOverlayType, voiceCallOverlayLayoutState };
+  const obj = { type: "VOICE_CALL_OVERLAY_LAYOUT_STATE_UPDATE", voiceCallOverlayType, voiceCallOverlayLayoutState };
   obj.dispatch(obj);
 };
 export const setPipEnabledWhileFocusedOnActivityOrStream = function setPipEnabledWhileFocusedOnActivityOrStream(
   pipEnabledWhileFocusedOnActivityOrStream,
 ) {
-  let obj = dispatcherDefault;
-  obj = { type: "VOICE_CALL_SET_PIP_ENABLED_FOR_ACTIVITY_OR_STREAM", pipEnabledWhileFocusedOnActivityOrStream };
+  const obj = { type: "VOICE_CALL_SET_PIP_ENABLED_FOR_ACTIVITY_OR_STREAM", pipEnabledWhileFocusedOnActivityOrStream };
   obj.dispatch(obj);
 };

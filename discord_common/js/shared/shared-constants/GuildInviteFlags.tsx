@@ -1,10 +1,8 @@
 // discord_common/js/shared/shared-constants/GuildInviteFlags.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const obj = { ALL: null };
-let set = new Set([1, 2, 4, 16]);
-obj[0] = set;
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/GuildInviteFlags.tsx");
+const obj = { ALL: new Set([1, 2, 4, 16]) };
+const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/GuildInviteFlags.tsx");
 
 export const GuildInviteFlags = {
   IS_GUEST_INVITE: 1,

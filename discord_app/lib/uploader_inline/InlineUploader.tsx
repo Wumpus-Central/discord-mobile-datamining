@@ -1,36 +1,37 @@
 // discord_app/lib/uploader_inline/InlineUploader.tsx
-import fromBlobDefault from "../../modules/discord_md5/DiscordMd5.tsx";
-import ORIGINAL_MD5_HEADER from "originalMd5Header.tsx";
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import DiscordMd5Default from "../../modules/discord_md5/DiscordMd5.tsx";
+import originalMd5Header from "originalMd5Header.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
-require = arg1;
+require = fn;
 const re4 = /^[a-f0-9]{32}$/;
 let InlineUploader;
 class InlineUploader {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
     obj.surface = global;
-    obj.originalMd5Promise = arg1;
+    obj.originalMd5Promise = fn;
     return obj;
   }
 }
 const prototype = InlineUploader.prototype;
-InlineUploader["fromBlob"] = function fromBlob(surface) {
-  let obj = fromBlobDefault;
-  const fromBlobResult = obj.fromBlob(arg1);
-  const tmp = InlineUploader;
-  if (typeof InlineUploader !== "function") {
-    HermesBuiltin.throwTypeError();
+InlineUploader["fromBlob"] = function fromBlob(surface, arg1) {
+  let obj = DiscordMd5Default;
+  obj.fromBlob(arg1);
+  if (typeof InlineUploader === "function") {
+    obj = Object.create(tmp.prototype);
+    obj.surface = surface;
+    obj.originalMd5Promise = tmp3;
+    return obj;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  obj = Object.create(tmp.prototype);
-  obj.surface = surface;
-  obj.originalMd5Promise = obj.fromBlob(arg1).catch(() => null);
-  return obj;
+  tmp = InlineUploader;
 };
 prototype["getOriginalMd5"] = function getOriginalMd5() {
   return this.originalMd5Promise;
 };
-InlineUploader["buildHeadersForMd5"] = function buildHeadersForMd5(originalMd5, buildHeadersForMd5) {
+InlineUploader["buildHeadersForMd5"] = function buildHeadersForMd5(originalMd5, arg1) {
   const tmp = (function serializeOriginalMd5Header(originalMd5) {
     if (null == originalMd5) {
       return null;
@@ -50,14 +51,10 @@ InlineUploader["buildHeadersForMd5"] = function buildHeadersForMd5(originalMd5, 
         let isMatch = null != tmp3;
         let tmp2 = item10006;
         if (isMatch) {
-          let tmp6 = regex;
-          let tmp7 = tmp3;
           isMatch = regex.test(tmp4);
         }
         if (isMatch) {
-          let tmp8 = item10006;
           let items1 = [tmp2];
-          let tmp9 = tmp3;
           items1[1] = tmp4;
           let arr = items.push(items1);
         }
@@ -78,8 +75,8 @@ InlineUploader["buildHeadersForMd5"] = function buildHeadersForMd5(originalMd5, 
           }
           return num;
         });
-        const mapped = items.map((arg0) => {
-          [str, tmp] = arg0;
+        const mapped = items.map((item) => {
+          [str, tmp] = item;
           return "" + str.toLowerCase() + '="' + tmp + '"';
         });
         joined = mapped.join(", ");
@@ -87,11 +84,11 @@ InlineUploader["buildHeadersForMd5"] = function buildHeadersForMd5(originalMd5, 
       return joined;
     }
   })(originalMd5);
-  let tmp2 = buildHeadersForMd5;
+  let tmp2 = arg1;
   if (null != tmp) {
     const obj = {};
-    const merged = Object.assign(buildHeadersForMd5);
-    obj[ORIGINAL_MD5_HEADER.ORIGINAL_MD5_HEADER] = tmp;
+    const merged = Object.assign(arg1);
+    obj[originalMd5Header.ORIGINAL_MD5_HEADER] = tmp;
     tmp2 = obj;
   }
   return tmp2;
@@ -99,14 +96,15 @@ InlineUploader["buildHeadersForMd5"] = function buildHeadersForMd5(originalMd5, 
 prototype["buildHeaders"] = function buildHeaders(arg0) {
   closure_0 = arg0;
   const self = this;
-  return callback(function* () {
+  return (async () => {
     closure_2 = tmp4;
-    closure_1 = closure_1_5;
-    const buildHeadersForMd5 = closure_1_5.buildHeadersForMd5;
-    yield closure_1_1.originalMd5Promise;
-    return buildHeadersForMd5(arg1, buildHeadersForMd5);
+    closure_1 = buildHeadersForMd5;
+    buildHeadersForMd5 = buildHeadersForMd5.buildHeadersForMd5;
+    await self.originalMd5Promise;
+    return buildHeadersForMd5(arg1, closure_130_0);
   })();
 };
-const result = require("set").fileFinishedImporting("lib/uploader_inline/InlineUploader.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("lib/uploader_inline/InlineUploader.tsx");
 
 export default InlineUploader;

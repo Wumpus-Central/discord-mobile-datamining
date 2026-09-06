@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/nameplates/types.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/collectibles/nameplates/types.tsx");
+const result = size.fileFinishedImporting("modules/collectibles/nameplates/types.tsx");
 
 export const PaletteKeys = {
   None: "none",

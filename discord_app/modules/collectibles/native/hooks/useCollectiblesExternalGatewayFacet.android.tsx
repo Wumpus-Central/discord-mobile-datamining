@@ -1,27 +1,27 @@
 // discord_app/modules/collectibles/native/hooks/useCollectiblesExternalGatewayFacet.android.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import noop from "../../../../../_runtime/00019_noop.js";
-import closure_3 from "../../../../stores/UserStore.tsx";
+import _mod19 from "../../../../../_runtime/metro/00019__.js";
+import collectibles_CollectiblesUtils from "../CollectiblesUtils.tsx";
+import UserStore from "../../../../stores/UserStore.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const useMemo = noop.useMemo;
-const result = set.fileFinishedImporting(
+const useMemo = _mod19.useMemo;
+const result = size.fileFinishedImporting(
   "modules/collectibles/native/hooks/useCollectiblesExternalGatewayFacet.android.tsx",
 );
 
 export default function useCollectiblesExternalGatewayFacet(arg0) {
-  const _require = arg0;
-  let items = [closure_3];
-  stateFromStores = _require(stateFromStores[2]).useStateFromStores(items, () => currentUser.getCurrentUser());
+  _require = arg0;
+  let items = [UserStore];
+  stateFromStores = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());
   const items1 = [stateFromStores, arg0];
   return useMemo(() => {
-    let obj = callback(stateFromStores[3]);
-    const collectibleGoogleSkuId = obj.getCollectibleGoogleSkuId(callback, stateFromStores);
+    let obj = collectibles_CollectiblesUtils;
+    const collectibleGoogleSkuId = obj.getCollectibleGoogleSkuId(closure_0, stateFromStores);
     if (null != collectibleGoogleSkuId) {
       obj = { line_items: null };
-      obj = { external_product_id: null };
-      obj[0] = collectibleGoogleSkuId;
+      obj = { external_product_id: collectibleGoogleSkuId };
       const items = [obj];
-      obj[0] = items;
+      obj.line_items = items;
       return obj;
     }
   }, items1);

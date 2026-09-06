@@ -1,19 +1,19 @@
 // discord_app/modules/media/native/Caption.tsx
-import set from "../../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import _mod17 from "../../../../_runtime/metro/00017__.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import ME from "../../../Constants.tsx";
-import Button from "../../../design/void/native.tsx";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
-import hexToRgba from "../../../utils/ColorUtils.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import Constants from "../../../Constants.tsx";
+import native from "../../../design/void/native.tsx";
+import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
+import ColorUtils from "../../../utils/ColorUtils.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const View = get_ActivityIndicator.View;
+const View = _mod17.View;
 const jsx = jsxProd.jsx;
 let obj = { captionText: null, labelContainer: null };
-obj = { fontFamily: ME.Fonts.PRIMARY_BOLD, color: ThemesDefault.colors.WHITE, fontSize: 12 };
-obj[0] = obj;
-const obj1 = {
+obj = { fontFamily: Constants.Fonts.PRIMARY_BOLD, color: nativeDefault.colors.WHITE, fontSize: 12 };
+obj.captionText = obj;
+const rect = {
   backgroundColor: null,
   borderRadius: null,
   paddingHorizontal: 8,
@@ -22,16 +22,21 @@ const obj1 = {
   right: 6,
   bottom: 6,
 };
-obj1[0] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.PRIMARY_700, 0.5);
-obj1[1] = ThemesDefault.radii.xs;
-obj[1] = obj1;
-let closure_4 = createCacheKey.createStyles(obj);
-const result = set.fileFinishedImporting("modules/media/native/Caption.tsx");
+rect.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_700, 0.5);
+rect.borderRadius = nativeDefault.radii.xs;
+obj.labelContainer = rect;
+let closure_4 = createStyles.createStyles(obj);
+const result = size.fileFinishedImporting("modules/media/native/Caption.tsx");
 
 export const Caption = function Caption(arg0) {
   ({ label, style, textStyle } = arg0);
-  const tmp = callback();
+  const tmp = closure_4();
+  let obj = { style: null, children: null };
   const items = [tmp.labelContainer, style];
+  obj.style = items;
+  obj = { style: null, children: label };
   const items1 = [tmp.captionText, textStyle];
-  return <View style={items}>{jsx(Button.LegacyText, { style: items1, children: label })}</View>;
+  obj.style = items1;
+  obj.children = jsx(native.LegacyText, { style: null, children: label });
+  return <View style={null}>{label}</View>;
 };

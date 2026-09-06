@@ -1,13 +1,14 @@
 // discord_app/modules/experiments/trigger_points/Helpers.tsx
-import closure_0 from "../apex/ApexExperimentStore.tsx";
-import { CommonTriggerPoints } from "../ExperimentConstants.tsx";
+import ApexExperimentStore from "../apex/ApexExperimentStore.tsx";
 
-let result = require("set").fileFinishedImporting("modules/experiments/trigger_points/Helpers.tsx");
+const CommonTriggerPoints = fn(4477).CommonTriggerPoints;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/experiments/trigger_points/Helpers.tsx");
 class CommonTriggerPointConfiguration {
   constructor(arg0, arg1, arg2) {
     obj = Object.create(new.target.prototype);
     obj.experiments = global;
-    obj.triggerPoint = arg1;
+    obj.triggerPoint = fn;
     obj.params = importDefault;
     return obj;
   }
@@ -22,7 +23,7 @@ prototype["trigger"] = function trigger() {
   if (arg0 === undefined) {
     obj = {};
   }
-  const result = obj.trackCommonTriggerPointExposures(this.params.location);
+  const result = ApexExperimentStore.trackCommonTriggerPointExposures(this.params.location);
   ({ triggerPoint, experiments } = this);
   obj = {};
   const merged = Object.assign(this.params);

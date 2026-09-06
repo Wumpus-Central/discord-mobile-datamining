@@ -1,37 +1,32 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsGroupEdit.tsx
-import ApplicationRejectedNoticeDefault from "GuildSettingsRoleSubscriptionContainer.tsx";
-import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_5 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_6 from "../../../../../_runtime/00019_noop.js";
-import { ScrollView } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { ApplicationTypes } from "../../../applications/ApplicationConstants.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import ToastUtils from "../../../toast/native/ToastUtils.tsx";
+import GuildSettingsRoleSubscriptionContainerDefault from "GuildSettingsRoleSubscriptionContainer.tsx";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
+require = fn;
 function GuildSettingsRoleSubscriptionsGroupEditInner(guildId) {
   guildId = guildId.guildId;
-  let navigation;
-  let subscriptionsSettings;
   let isFullServerGating;
-  let first;
-  let callback;
+  _slicedToArray = undefined;
   let str;
   let first1;
   let loading;
   let updateSubscriptionsSettings;
-  error = undefined;
+  let error;
   closure_11 = undefined;
-  callback = undefined;
+  let callback;
   let obj = guildId(isFullServerGating[6]);
-  navigation = obj.useNavigation();
-  obj1 = guildId(isFullServerGating[7]);
-  subscriptionsSettings = obj1.useSubscriptionsSettings(guildId);
+  const navigation = obj.useNavigation();
+  let obj1 = guildId(isFullServerGating[7]);
+  const subscriptionsSettings = obj1.useSubscriptionsSettings(guildId);
   isFullServerGating = navigation(isFullServerGating[8])(guildId).isFullServerGating;
   const application = navigation(isFullServerGating[9])(guildId, loading.GUILD_ROLE_SUBSCRIPTIONS).application;
   let obj2 = str;
-  const tmp7 = callback(str.useState(null), 2);
-  first = tmp7[0];
-  callback = tmp9;
+  const tmp7 = _slicedToArray(str.useState(null), 2);
+  const first = tmp7[0];
+  _slicedToArray = tmp9;
   let description;
   if (subscriptionsSettings != null) {
     description = subscriptionsSettings.description;
@@ -73,9 +68,7 @@ function GuildSettingsRoleSubscriptionsGroupEditInner(guildId) {
     if (null != cover_image_asset) {
       source = null;
       if (null != application) {
-        obj = { application_id: null, image_asset: null };
-        obj[0] = application.id;
-        obj[1] = subscriptionsSettings.cover_image_asset;
+        obj = { application_id: application.id, image_asset: subscriptionsSettings.cover_image_asset };
         source = subscriptionsSettings(tmp2[11]).getSource(obj);
         const obj5 = subscriptionsSettings(tmp2[11]);
       }
@@ -84,78 +77,74 @@ function GuildSettingsRoleSubscriptionsGroupEditInner(guildId) {
   }
   const items = [str, guildId, updateSubscriptionsSettings, subscriptionsSettings, first, first1, isFullServerGating];
   callback = obj2.useCallback(
-    first(function* () {
-      if (description === 2) {
-        description = 3;
-        HermesBuiltin.throwTypeError();
+    first(function* (arg0, value) {
+      if (c2 === 2) {
+        c2 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp4 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          let obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
         }
       } else {
         try {
-          description = 2;
-          if (0 === v0) {
+          c2 = 2;
+          if (0 === v1) {
             if (arg0 === 1) {
-              description = 3;
-              throw arg1;
+              c2 = 3;
+              throw value;
             } else if (arg0 === 2) {
-              description = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              c2 = 3;
+              obj = { value, done: true };
               return obj;
             } else {
               closure_0 = tmp2;
-              let tmp11 = null != closure_1_6;
+              let tmp11 = null != str;
               if (tmp11) {
-                description = undefined;
-                if (description != null) {
-                  description = description.description;
+                let description;
+                if (subscriptionsSettings != null) {
+                  description = subscriptionsSettings.description;
                 }
                 tmp11 = arr !== description;
               }
               if (tmp11) {
                 tmp11 = 0 !== arr.length;
               }
-              obj1 = {};
+              const obj1 = {};
               if (tmp11) {
                 obj1.description = arr;
               }
-              if (null != closure_1_4) {
-                obj1.cover_image = closure_1_4.uri;
+              if (null != first) {
+                obj1.cover_image = first.uri;
               }
-              if (closure_1_3 !== closure_1_7) {
-                obj1.full_server_gate = closure_1_7;
+              if (isFullServerGating !== first1) {
+                obj1.full_server_gate = first1;
               }
-              let obj2 = v0(closure_1_3[12]);
+              let obj2 = v1(isFullServerGating[12]);
               if (obj2.isEmpty(obj1)) {
-                description = 3;
+                c2 = 3;
               } else {
-                v0 = 1;
-                description = 1;
-                obj2 = { value: null, done: false };
-                obj2[0] = closure_1_9(closure_1_0, obj1);
+                v1 = 1;
+                c2 = 1;
+                obj2 = { value: updateSubscriptionsSettings(guildId, obj1), done: false };
                 return obj2;
               }
             }
           } else if (arg0 === 1) {
-            description = 3;
-            throw arg1;
+            c2 = 3;
+            throw value;
           } else if (arg0 !== 2) {
-            callback(null);
+            closure_128_5(null);
           }
-          description = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          c2 = 3;
+          obj = { value, done: true };
           return obj;
         } catch (tmp17) {
-          description = tmp;
+          c2 = tmp;
           throw tmp17;
         }
       }
@@ -165,14 +154,14 @@ function GuildSettingsRoleSubscriptionsGroupEditInner(guildId) {
   const items1 = [navigation, tmp15, loading, callback];
   const layoutEffect = obj2.useLayoutEffect(() => {
     if (loading) {
-      let fn = () => callback2(callback(table[13]).HeaderSubmittingIndicator, {});
+      let fn = () => updateSubscriptionsSettings(guildId(isFullServerGating[13]).HeaderSubmittingIndicator, {});
     } else if (closure_11) {
       fn = () => {
         const obj = { text: null, onPress: null };
-        const intl = closure_1_0(closure_1_3[15]).intl;
-        obj[0] = intl.string(closure_1_0(closure_1_3[15]).t["R3BPH+"]);
-        obj[1] = closure_12;
-        return closure_1_9(closure_1_0(closure_1_3[14]).HeaderActionButton, obj);
+        const intl = guildId(isFullServerGating[15]).intl;
+        obj.text = intl.string(guildId(isFullServerGating[15]).t["R3BPH+"]);
+        obj.onPress = onPress;
+        return updateSubscriptionsSettings(guildId(isFullServerGating[14]).HeaderActionButton, obj);
       };
     } else {
       fn = () => null;
@@ -184,16 +173,15 @@ function GuildSettingsRoleSubscriptionsGroupEditInner(guildId) {
     if (null != error) {
       let anyErrorMessage = error.getAnyErrorMessage();
       if (anyErrorMessage == null) {
-        const intl = tmp(tmp2[15]).intl;
-        anyErrorMessage = intl.string(tmp(tmp2[15]).t.ZUEGFn);
+        const intl = tmp(1114).intl;
+        anyErrorMessage = intl.string(tmp(1114).t.ZUEGFn);
       }
-      guildId(isFullServerGating[16]).presentError(anyErrorMessage);
-      const obj2 = guildId(isFullServerGating[16]);
+      ToastUtils.presentError(anyErrorMessage);
     }
   }, items2);
   obj = { contentContainerStyle: null, children: null };
   obj1 = { paddingBottom: tmp5(tmp2[10])({}).insets.bottom + tmp5(tmp2[17]).space.PX_16 };
-  obj[0] = obj1;
+  obj.contentContainerStyle = obj1;
   const items3 = [
     updateSubscriptionsSettings(navigation(isFullServerGating[18]), {
       isFullServerGating: first1,
@@ -211,19 +199,23 @@ function GuildSettingsRoleSubscriptionsGroupEditInner(guildId) {
   if (str == null) {
     str = "";
   }
-  obj2[2] = str;
-  obj2[3] = tmp6Result[1];
+  obj2.description = str;
+  obj2.setDescription = tmp6Result[1];
   items3[1] = updateSubscriptionsSettings(guildId(isFullServerGating[19]).Content, obj2);
-  obj[1] = items3;
+  obj.children = items3;
   return error(first1, obj);
 }
-({ jsx: c9, jsxs: c10 } = jsxProd);
-const result = require("set").fileFinishedImporting(
+const ScrollView = fn(17).ScrollView;
+const ApplicationTypes = fn(1350).ApplicationTypes;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsGroupEdit.tsx",
 );
 
 export default function GuildSettingsRoleSubscriptionsGroupEdit(guildId) {
   guildId = guildId.guildId;
-  const obj = { guildId, children: callback2(GuildSettingsRoleSubscriptionsGroupEditInner, { guildId }) };
-  return callback2(ApplicationRejectedNoticeDefault, obj);
+  const obj = { guildId, children: React7(GuildSettingsRoleSubscriptionsGroupEditInner, { guildId }) };
+  return React7(GuildSettingsRoleSubscriptionContainerDefault, obj);
 }

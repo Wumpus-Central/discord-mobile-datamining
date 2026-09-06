@@ -1,12 +1,12 @@
 // discord_app/stores/StreamerModeStore.tsx
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../Dispatcher.tsx";
-import expandEventPropertiesDefault from "../utils/AnalyticsUtils.tsx";
-import apexExperiment from "../modules/overlay/OverlayV3Experiment.tsx";
-import closure_3 from "AuthenticationStore.tsx";
-import { AnalyticEvents } from "../Constants.tsx";
+import DispatcherDefault from "../Dispatcher.tsx";
+import AnalyticsUtilsDefault from "../utils/AnalyticsUtils.tsx";
+import OverlayV3Experiment from "../modules/overlay/OverlayV3Experiment.tsx";
+import AuthenticationStore from "AuthenticationStore.tsx";
 
-require = arg1;
+require = fn;
+const AnalyticEvents = fn(1074).AnalyticEvents;
 let obj = {
   enabled: false,
   autoToggle: true,
@@ -25,21 +25,21 @@ class StreamerModeStore extends PersistedStore {}
 const prototype = StreamerModeStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   let merged = Object.assign(closure_6, arg0);
-  const items = [closure_3];
+  const items = [AuthenticationStore];
   this.syncWith(items, () => {
     id = id.getId();
     if (null != id) {
-      let tmp6 = table[id];
+      let tmp6 = closure_1_6[id];
       if (null == tmp6) {
         obj = {};
-        const merged = Object.assign(closure_5);
-        table[id] = obj;
+        const merged = Object.assign(closure_1_5);
+        closure_1_6[id] = obj;
         tmp6 = obj;
       }
       obj = tmp6;
     } else {
       obj = {};
-      const merged1 = Object.assign(closure_5);
+      const merged1 = Object.assign(closure_1_5);
     }
   });
 };
@@ -112,7 +112,7 @@ Object.defineProperty(prototype, "enableContentProtection", {
   set: undefined,
 });
 prototype["isOverlayWidgetDisabled"] = function isOverlayWidgetDisabled(arg0) {
-  obj = apexExperiment;
+  obj = OverlayV3Experiment;
   let enabled = obj.getOverlayStreamerModeConfig("StreamerModeStore").enabled;
   if (enabled) {
     const self = this;
@@ -132,7 +132,7 @@ StreamerModeStore.displayName = "StreamerModeStore";
 StreamerModeStore.persistKey = "StreamerModeStore";
 let items = [
   (arg0) => {
-    id = id.getId();
+    const id = AuthenticationStore.getId();
     if (null != arg0) {
       if (null != id) {
         obj = {};
@@ -165,14 +165,12 @@ obj = {
     const merged1 = Object.assign(obj, obj);
     if ("enabled" === value.key) {
       if (typeof value.value === "boolean") {
-        obj = { enabled: null, automatic: false };
-        obj[0] = value.value;
-        expandEventPropertiesDefault.track(AnalyticEvents.STREAMER_MODE_TOGGLE, obj);
-        const obj5 = expandEventPropertiesDefault;
+        obj = { enabled: value.value, automatic: false };
+        AnalyticsUtilsDefault.track(AnalyticEvents.STREAMER_MODE_TOGGLE, obj);
       }
       return true;
     }
-    obj1 = {
+    const obj1 = {
       enabled: obj.enabled,
       automatic: obj.autoToggle,
       disable_notifications: obj.disableNotifications,
@@ -198,15 +196,15 @@ obj = {
     if (str == null) {
       str = "";
     }
-    obj1[7] = str;
+    obj1.disabled_overlay_widgets = str;
     ({
-      enabled: obj4[8],
-      autoToggle: obj4[9],
-      disableNotifications: obj4[10],
-      disableSounds: obj4[11],
-      hideInstantInvites: obj4[12],
-      hidePersonalInformation: obj4[13],
-      enableContentProtection: obj4[14],
+      enabled: obj4.old_enabled,
+      autoToggle: obj4.old_automatic,
+      disableNotifications: obj4.old_disable_notifications,
+      disableSounds: obj4.old_disable_sounds,
+      hideInstantInvites: obj4.old_hide_instant_invites,
+      hidePersonalInformation: obj4.old_hide_personal_info,
+      enableContentProtection: obj4.old_enable_content_protection,
       disabledOverlayWidgets: disabledOverlayWidgets2,
     } = obj);
     let str3;
@@ -216,15 +214,13 @@ obj = {
     if (str3 == null) {
       str3 = "";
     }
-    obj1[15] = str3;
-    expandEventPropertiesDefault.track(AnalyticEvents.UPDATE_STREAMER_MODE_SETTINGS, obj1);
+    obj1.old_disabled_overlay_widgets = str3;
+    AnalyticsUtilsDefault.track(AnalyticEvents.UPDATE_STREAMER_MODE_SETTINGS, obj1);
   },
   RUNNING_STREAMER_TOOLS_CHANGE: function handleRunningStreamerToolsChange(count) {
     if (obj.autoToggle) {
       obj.enabled = count.count > 0;
-      obj = expandEventPropertiesDefault;
-      obj = { enabled: null, automatic: true };
-      obj[0] = count.count > 0;
+      obj = { enabled: count.count > 0, automatic: true };
       obj.track(AnalyticEvents.STREAMER_MODE_TOGGLE, obj);
       return true;
     } else {
@@ -232,7 +228,8 @@ obj = {
     }
   },
 };
-const streamerModeStore = new StreamerModeStore(dispatcherDefault, obj);
-const result = require("set").fileFinishedImporting("stores/StreamerModeStore.tsx");
+const streamerModeStore = new StreamerModeStore(DispatcherDefault, obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("stores/StreamerModeStore.tsx");
 
 export default streamerModeStore;

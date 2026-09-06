@@ -1,45 +1,47 @@
 // discord_app/modules/user_profile/hooks/usePersonalizedVoiceChannelUsers.tsx
-import closure_2 from "../../user_affinities/UserAffinitiesV2Store.tsx";
-import closure_3 from "../../../stores/ConsentStore.tsx";
-import closure_4 from "../../../stores/UserStore.tsx";
-import closure_5 from "../../../stores/views/SortedVoiceStateStore.tsx";
-import { Consents } from "../../../Constants.tsx";
+import UserAffinitiesV2Store from "../../user_affinities/UserAffinitiesV2Store.tsx";
+import ConsentStore from "../../../stores/ConsentStore.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
+import SortedVoiceStateStore from "../../../stores/views/SortedVoiceStateStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_profile/hooks/usePersonalizedVoiceChannelUsers.tsx");
+const require = fn;
+const Consents = fn(1074).Consents;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/hooks/usePersonalizedVoiceChannelUsers.tsx");
 
 export default function usePersonalizedVoiceChannelUsers(arg0) {
-  const _require = arg0;
-  const items = [closure_5];
+  _require = arg0;
+  const items = [SortedVoiceStateStore];
   const items1 = [,];
   ({ id: arr2[0], guild_id: arr2[1] } = arg0);
-  stateFromStoresArray = _require(stateFromStoresArray[5]).useStateFromStoresArray(
+  stateFromStoresArray = require("initialize").useStateFromStoresArray(
     items,
     () => {
-      const voiceStatesForChannelAlt = closure_1_5.getVoiceStatesForChannelAlt(closure_0.id, closure_0.guild_id);
+      const voiceStatesForChannelAlt = SortedVoiceStateStore.getVoiceStatesForChannelAlt(
+        closure_0.id,
+        closure_0.guild_id,
+      );
       return voiceStatesForChannelAlt.map((user) => user.user.id);
     },
     items1,
   );
-  const obj = _require(stateFromStoresArray[5]);
+  const obj = require("initialize");
   const items2 = [stateFromStores];
-  stateFromStores = _require(stateFromStoresArray[5]).useStateFromStores(items2, () =>
-    stateFromStores.getUserAffinitiesMap(),
-  );
-  const obj2 = _require(stateFromStoresArray[5]);
+  stateFromStores = require("initialize").useStateFromStores(items2, () => stateFromStores.getUserAffinitiesMap());
+  const obj2 = require("initialize");
   const items3 = [stateFromStores1];
-  stateFromStores1 = _require(stateFromStoresArray[5]).useStateFromStores(items3, () =>
+  stateFromStores1 = require("initialize").useStateFromStores(items3, () =>
     stateFromStores1.hasConsented(constants.PERSONALIZATION),
   );
-  const obj3 = _require(stateFromStoresArray[5]);
-  const items4 = [closure_4];
+  const obj3 = require("initialize");
+  const items4 = [UserStore];
   const items5 = [stateFromStores1, stateFromStores, stateFromStoresArray];
-  return _require(stateFromStoresArray[5]).useStateFromStoresArray(
+  return require("initialize").useStateFromStoresArray(
     items4,
     () => {
       if (stateFromStores1) {
         let sorted = obj.sort((arg0, arg1) => {
-          let value = closure_2.get(arg1);
+          value = stateFromStores.get(arg1);
           let num;
           if (value != null) {
             num = value.vcProbability;
@@ -47,7 +49,7 @@ export default function usePersonalizedVoiceChannelUsers(arg0) {
           if (num == null) {
             num = 0;
           }
-          value = closure_2.get(arg0);
+          value = stateFromStores.get(arg0);
           let num2;
           if (value != null) {
             num2 = value.vcProbability;
@@ -60,8 +62,8 @@ export default function usePersonalizedVoiceChannelUsers(arg0) {
       } else {
         sorted = obj;
       }
-      const mapped = sorted.map((arg0) => user.getUser(arg0));
-      return mapped.filter((arg0) => null != arg0);
+      const mapped = sorted.map((item) => user.getUser(item));
+      return mapped.filter((item) => null != item);
     },
     items5,
   );

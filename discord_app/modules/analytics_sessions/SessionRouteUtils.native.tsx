@@ -1,9 +1,9 @@
 // discord_app/modules/analytics_sessions/SessionRouteUtils.native.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/analytics_sessions/SessionRouteUtils.native.tsx");
+const result = size.fileFinishedImporting("modules/analytics_sessions/SessionRouteUtils.native.tsx");
 
 export function isActiveUserRoute() {
   return true;
 }
-export function subscribeToLocationChanges(handleLocationChange) {}
+export function subscribeToLocationChanges() {}

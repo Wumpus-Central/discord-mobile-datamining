@@ -1,21 +1,24 @@
 // discord_app/modules/age_assurance/native/AgeVerificationGetStartedModal.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
+import AgeVerificationAnalyticsUtils from "../AgeVerificationAnalyticsUtils.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-createCacheKey = { headerStyle: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" };
-createCacheKey[0] = createCacheKey;
-let closure_5 = createCacheKey.createStyles(createCacheKey);
+require = fn;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { headerStyle: null };
+createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" };
+createStyles.headerStyle = createStyles;
+let closure_5 = createStyles.createStyles(createStyles);
 let obj1 = {
   INTRO: "INTRO",
   RETRY: "RETRY",
   EXPRESSIVE_INTRO: "EXPRESSIVE_INTRO",
   GOOGLE_WALLET_VERIFICATION: "GOOGLE_WALLET_VERIFICATION",
 };
-let result = require("set").fileFinishedImporting("modules/age_assurance/native/AgeVerificationGetStartedModal.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/age_assurance/native/AgeVerificationGetStartedModal.tsx");
 
 export default function AgeVerificationGetStartedModal(entryPoint) {
   entryPoint = entryPoint.entryPoint;
@@ -26,103 +29,97 @@ export default function AgeVerificationGetStartedModal(entryPoint) {
   }
   const classificationId = entryPoint.classificationId;
   const onComplete = entryPoint.onComplete;
-  let callback;
-  let memo;
-  let memo2;
-  const tmp = callback();
-  callback = tmp;
-  memo = classificationId.useMemo(() => entryPoint(flag[10]).v4(), []);
+  closure_5 = undefined;
+  const tmp = closure_5();
+  closure_5 = tmp;
+  const memo = classificationId.useMemo(() => entryPoint(flag[10]).v4(), []);
   const items = [tmp, memo, classificationId, onComplete, entryPoint];
   const items1 = [flag, isRetry];
   const memo1 = classificationId.useMemo(() => {
-    closure_0 = memo;
-    closure_1 = closure_0;
-    closure_2 = closure_3;
-    closure_3 = closeModal;
-    closeModal = function closeModal() {
-      return callback(4763).pop();
-    };
+    const modalSessionId = memo;
+    closure_3 = onComplete;
+    function closeModal() {
+      return entryPoint(classificationId[4]).pop();
+    }
     function closeModalWithOnComplete() {
-      let arr = callback(4763);
+      let arr = isRetry(flag[4]);
       arr = arr.pop();
-      if (callback2 != null) {
-        callback2();
+      if (closure_3 != null) {
+        closure_3();
       }
     }
     let obj = {};
     obj = {
-      headerStyle: closeModalWithOnComplete.headerStyle,
+      headerStyle: closure_5.headerStyle,
       headerTitle() {
         return null;
       },
       headerLeft: null,
       render: null,
     };
-    let obj2 = entryPoint(flag[5]);
-    obj[2] = obj2.getHeaderCloseButton(closeModal);
-    obj[3] = function render() {
-      return closeModal(callback(8577), { onClose: closeModal, modalSessionId: closure_0, entryPoint: callback });
+    let obj2 = NavigatorHeader;
+    obj.headerLeft = obj2.getHeaderCloseButton(closeModal);
+    obj.render = function render() {
+      return onComplete(isRetry(flag[6]), { onClose: closeModal, modalSessionId, entryPoint });
     };
-    obj[memo.INTRO] = obj;
+    obj[obj1.INTRO] = obj;
     obj = {
-      headerStyle: closeModalWithOnComplete.headerStyle,
+      headerStyle: closure_5.headerStyle,
       headerTitle() {
         return null;
       },
-      headerLeft: entryPoint(flag[5]).getHeaderCloseButton(closeModal),
+      headerLeft: NavigatorHeader.getHeaderCloseButton(closeModal),
       render() {
-        return closeModal(callback(8582), { onClose: closeModal, modalSessionId: closure_0 });
+        return onComplete(isRetry(flag[7]), { onClose: closeModal, modalSessionId });
       },
     };
-    obj[memo.RETRY] = obj;
+    obj[obj1.RETRY] = obj;
     obj1 = {
-      headerStyle: closeModalWithOnComplete.headerStyle,
+      headerStyle: closure_5.headerStyle,
       headerTitle() {
         return null;
       },
       headerLeft: null,
       render: null,
     };
-    const obj5 = entryPoint(flag[5]);
-    obj1[2] = entryPoint(flag[5]).getHeaderCloseButton(closeModal);
-    obj1[3] = function render(arg0, navigation) {
-      return closeModal(callback(8583), {
+    obj1.headerLeft = NavigatorHeader.getHeaderCloseButton(closeModal);
+    obj1.render = function render(arg0, navigation) {
+      return onComplete(isRetry(flag[8]), {
         onClose: closeModalWithOnComplete,
-        modalSessionId: closure_0,
-        classificationId: dependencyMap,
-        entryPoint: callback,
+        modalSessionId,
+        classificationId,
+        entryPoint,
         navigation,
       });
     };
-    obj[memo.EXPRESSIVE_INTRO] = obj1;
+    obj[obj1.EXPRESSIVE_INTRO] = obj1;
     obj2 = {
-      headerStyle: closeModalWithOnComplete.headerStyle,
+      headerStyle: closure_5.headerStyle,
       headerTitle() {
         return null;
       },
       headerLeft: null,
       render: null,
     };
-    const obj7 = entryPoint(flag[5]);
-    obj2[2] = entryPoint(flag[5]).getHeaderBackButton();
-    obj2[3] = function render() {
-      return closeModal(callback(8566), { onClose: closeModalWithOnComplete, modalSessionId: closure_0 });
+    obj2.headerLeft = NavigatorHeader.getHeaderBackButton();
+    obj2.render = function render() {
+      return onComplete(isRetry(flag[9]), { onClose: closeModalWithOnComplete, modalSessionId });
     };
-    obj[memo.GOOGLE_WALLET_VERIFICATION] = obj2;
+    obj[obj1.GOOGLE_WALLET_VERIFICATION] = obj2;
     return obj;
   }, items);
-  memo2 = classificationId.useMemo(() => {
+  const memo2 = classificationId.useMemo(() => {
     if (flag) {
-      let EXPRESSIVE_PRIMARY = entryPoint(flag[11]).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY;
+      let EXPRESSIVE_PRIMARY = AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.EXPRESSIVE_PRIMARY;
     } else {
-      const AgeVerificationModalVersion = entryPoint(flag[11]).AgeVerificationModalVersion;
+      const AgeVerificationModalVersion = AgeVerificationAnalyticsUtils.AgeVerificationModalVersion;
       EXPRESSIVE_PRIMARY = isRetry ? AgeVerificationModalVersion.RETRY : AgeVerificationModalVersion.PRIMARY;
     }
     return EXPRESSIVE_PRIMARY;
   }, items1);
   const items2 = [memo, entryPoint, memo2];
   const effect = classificationId.useEffect(() => {
-    const result = entryPoint(flag[11]).trackAgeVerificationModalViewed(memo, memo2, entryPoint);
+    const result = AgeVerificationAnalyticsUtils.trackAgeVerificationModalViewed(memo, memo2, entryPoint);
   }, items2);
   let obj = { screens: memo1, initialRouteName: null, headerBackTitle: null };
   if (flag) {
@@ -130,9 +127,9 @@ export default function AgeVerificationGetStartedModal(entryPoint) {
   } else {
     EXPRESSIVE_INTRO = isRetry ? tmp9.RETRY : tmp9.INTRO;
   }
-  obj[1] = EXPRESSIVE_INTRO;
+  obj.initialRouteName = EXPRESSIVE_INTRO;
   const intl = tmp7(tmp8[13]).intl;
-  obj[2] = intl.string(entryPoint(flag[13]).t["13/7kX"]);
+  obj.headerBackTitle = intl.string(entryPoint(flag[13]).t["13/7kX"]);
   return onComplete(entryPoint(flag[12]).Navigator, obj);
 }
 export const AgeVerificationGetStartedModalScenes = obj1;

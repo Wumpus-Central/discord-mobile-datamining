@@ -1,39 +1,42 @@
 // discord_app/modules/guild_role_subscriptions/native/manage_subscriptions/CancelSubscriptionModal.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import NavigatorHeader from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-noopAll;
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
 let closure_5 = { CANCEL_SUBSCRIPTION: "CANCEL_SUBSCRIPTION" };
-const result = require("set").fileFinishedImporting(
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/native/manage_subscriptions/CancelSubscriptionModal.tsx",
 );
 
 export default function CancelSubscriptionModal(onClose) {
   onClose = onClose.onClose;
-  importDefault = Object.assign(onClose, Object.create(null));
+  importDefault = Object.assign(onClose, Object.assign({ onClose: 0 }));
   let bottom;
-  bottom = importDefault(bottom[3])().bottom;
-  ({ screens, initialStack } = importDefault(bottom[4])(() => {
-    const screens = {};
-    let obj = {
+  bottom = require("useSafeAreaInsets")().bottom;
+  ({ screens, initialStack } = require("useInitialValue")(() => {
+    let obj = {};
+    obj = {
       render(arg0) {
-        obj = { style: obj, children: null };
-        obj = { paddingBottom: closure_2, flex: 1 };
+        let obj = { style: null, children: null };
+        obj = { paddingBottom, flex: 1 };
+        obj.style = obj;
         obj = {};
         const merged = Object.assign(arg0);
-        obj.onClose = closure_0;
-        obj[1] = closure_1_4(closure_1_1(closure_1_2[5]), obj);
-        return closure_1_4(closure_1_3, obj);
+        obj.onClose = onClose;
+        obj.children = jsx(closure_1(bottom[5]), {});
+        return <View />;
       },
       title: "Subscriptions",
-      headerLeft: onClose(bottom[6]).getHeaderCloseButton(onClose),
+      headerLeft: NavigatorHeader.getHeaderCloseButton(onClose),
     };
-    screens[closure_1_5.CANCEL_SUBSCRIPTION] = obj;
-    obj = { name: closure_1_5.CANCEL_SUBSCRIPTION, params: closure_1 };
-    const initialStack = [obj];
-    return { screens, initialStack };
+    obj[constants.CANCEL_SUBSCRIPTION] = obj;
+    obj = { screens: obj, initialStack: null };
+    const items = [{ name: constants.CANCEL_SUBSCRIPTION, params }];
+    obj.initialStack = items;
+    return obj;
   }));
   return jsx(onClose(bottom[7]).Navigator, { screens, initialRouteStack });
 }

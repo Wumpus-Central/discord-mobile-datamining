@@ -1,10 +1,10 @@
 // discord_app/modules/frames/FramesConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
 let obj = { MAIN: 0, [0]: "MAIN", APP_CHANNEL: 1, [1]: "APP_CHANNEL" };
 obj = { type: obj.MAIN };
 obj = { MAIN: 0, [0]: "MAIN", INLINE: 1, [1]: "INLINE" };
-const result = set.fileFinishedImporting("modules/frames/FramesConstants.tsx");
+const result = size.fileFinishedImporting("modules/frames/FramesConstants.tsx");
 
 export const FrameLayoutModes = { FOCUSED: 0, [0]: "FOCUSED", PIP: 1, [1]: "PIP" };
 export const EmbeddedSurfaceType = obj;

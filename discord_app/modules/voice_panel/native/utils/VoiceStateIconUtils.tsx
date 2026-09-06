@@ -1,16 +1,15 @@
 // discord_app/modules/voice_panel/native/utils/VoiceStateIconUtils.tsx
-import shallowEqualDefault from "../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
-import closure_3 from "../../../../stores/MediaEngineStore.tsx";
-import closure_4 from "../../../../stores/VoiceStateStore.tsx";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import discord_common_shallowEqualDefault from "../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
+import VoiceStateStore from "../../../../stores/VoiceStateStore.tsx";
 
-const require = arg1;
+const require = fn;
 function isStableVoiceStateEqual(arg0, arg1) {
   let tmp = arg0 === arg1;
   if (!tmp) {
     let tmp3 = null != arg0 && null != arg1;
     if (tmp3) {
-      tmp3 = shallowEqualDefault(arg0, arg1);
+      tmp3 = discord_common_shallowEqualDefault(arg0, arg1);
     }
     tmp = tmp3;
   }
@@ -36,25 +35,26 @@ obj = {
   VIDEO_ACTIVE: 2,
   [2]: "VIDEO_ACTIVE",
 };
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/utils/VoiceStateIconUtils.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/native/utils/VoiceStateIconUtils.tsx");
 
 export const MuteDeafenIconState = obj;
 export const VideoIconState = obj;
 export const useStableVoiceParticipant = function useStableVoiceParticipant(arg0, arg1) {
-  const _require = arg0;
+  _require = arg0;
   closure_1 = arg1;
-  const items = [closure_3, closure_4];
+  const items = [MediaEngineStore, VoiceStateStore];
   const items1 = [arg0, arg1];
-  return require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+  return require("initialize").useStateFromStores(
     items,
     () => {
       if (null != closure_0) {
-        const voiceState = closure_1_4.getVoiceState(closure_1, tmp);
+        const voiceState = VoiceStateStore.getVoiceState(closure_1, tmp);
         if (null != voiceState) {
           obj = { deaf: null, selfDeaf: null, mute: null, isLocalMute: null, selfMute: null };
-          ({ deaf: obj[0], selfDeaf: obj[1], mute: obj[2] } = voiceState);
-          obj[3] = closure_1_3.isLocalMute(voiceState.userId);
-          obj[4] = voiceState.selfMute;
+          ({ deaf: obj.deaf, selfDeaf: obj.selfDeaf, mute: obj.mute } = voiceState);
+          obj.isLocalMute = MediaEngineStore.isLocalMute(voiceState.userId);
+          obj.selfMute = voiceState.selfMute;
           return obj;
         }
       }
@@ -64,21 +64,21 @@ export const useStableVoiceParticipant = function useStableVoiceParticipant(arg0
   );
 };
 export const useMuteDeafenIconState = function useMuteDeafenIconState(id, guildId) {
-  const _require = id;
+  _require = id;
   closure_1 = guildId;
-  obj = initialize;
-  const items = [closure_3, closure_4];
+  obj = require("initialize");
+  const items = [MediaEngineStore, VoiceStateStore];
   const items1 = [id, guildId];
   const stateFromStores = obj.useStateFromStores(
     items,
     () => {
       if (null != closure_0) {
-        const voiceState = closure_1_4.getVoiceState(closure_1, tmp);
+        const voiceState = VoiceStateStore.getVoiceState(closure_1, tmp);
         if (null != voiceState) {
           obj = { deaf: null, selfDeaf: null, mute: null, isLocalMute: null, selfMute: null };
-          ({ deaf: obj[0], selfDeaf: obj[1], mute: obj[2] } = voiceState);
-          obj[3] = closure_1_3.isLocalMute(voiceState.userId);
-          obj[4] = voiceState.selfMute;
+          ({ deaf: obj.deaf, selfDeaf: obj.selfDeaf, mute: obj.mute } = voiceState);
+          obj.isLocalMute = MediaEngineStore.isLocalMute(voiceState.userId);
+          obj.selfMute = voiceState.selfMute;
           return obj;
         }
       }
@@ -104,30 +104,28 @@ export const useMuteDeafenIconState = function useMuteDeafenIconState(id, guildI
   }
 };
 export const useStableVideoState = function useStableVideoState(arg0, arg1) {
-  const _require = arg0;
+  _require = arg0;
   closure_1 = arg1;
-  const items = [closure_3, closure_4];
+  const items = [MediaEngineStore, VoiceStateStore];
   const items1 = [arg1, arg0];
-  return require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(
+  return require("initialize").useStateFromStoresObject(
     items,
     () => {
       if (null != closure_0) {
-        const voiceState = closure_1_4.getVoiceState(closure_1, tmp);
+        const voiceState = VoiceStateStore.getVoiceState(closure_1, tmp);
       }
       if (null != closure_0) {
         if (null != voiceState) {
-          obj = closure_1_3;
-          obj = { selfVideo: null, localVideoDisabledState: null };
-          obj[0] = voiceState.selfVideo;
+          obj = { selfVideo: voiceState.selfVideo, localVideoDisabledState: null };
           let tmp5 = null;
-          if (closure_1_3.isLocalVideoDisabled(voiceState.userId)) {
+          if (MediaEngineStore.isLocalVideoDisabled(voiceState.userId)) {
             let str = "manual";
             if (obj.isLocalVideoAutoDisabled(voiceState.userId)) {
               str = "auto";
             }
             tmp5 = str;
           }
-          obj[1] = tmp5;
+          obj.localVideoDisabledState = tmp5;
           return obj;
         }
       }
@@ -137,31 +135,29 @@ export const useStableVideoState = function useStableVideoState(arg0, arg1) {
   );
 };
 export const useVideoIconState = function useVideoIconState(id, guildId) {
-  const _require = id;
+  _require = id;
   closure_1 = guildId;
-  obj = initialize;
-  const items = [closure_3, closure_4];
+  obj = require("initialize");
+  const items = [MediaEngineStore, VoiceStateStore];
   const items1 = [guildId, id];
   const stateFromStoresObject = obj.useStateFromStoresObject(
     items,
     () => {
       if (null != closure_0) {
-        const voiceState = closure_1_4.getVoiceState(closure_1, tmp);
+        const voiceState = VoiceStateStore.getVoiceState(closure_1, tmp);
       }
       if (null != closure_0) {
         if (null != voiceState) {
-          obj = closure_1_3;
-          obj = { selfVideo: null, localVideoDisabledState: null };
-          obj[0] = voiceState.selfVideo;
+          obj = { selfVideo: voiceState.selfVideo, localVideoDisabledState: null };
           let tmp5 = null;
-          if (closure_1_3.isLocalVideoDisabled(voiceState.userId)) {
+          if (MediaEngineStore.isLocalVideoDisabled(voiceState.userId)) {
             let str = "manual";
             if (obj.isLocalVideoAutoDisabled(voiceState.userId)) {
               str = "auto";
             }
             tmp5 = str;
           }
-          obj[1] = tmp5;
+          obj.localVideoDisabledState = tmp5;
           return obj;
         }
       }

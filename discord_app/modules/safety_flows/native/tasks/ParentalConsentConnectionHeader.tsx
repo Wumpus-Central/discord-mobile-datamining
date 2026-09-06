@@ -1,39 +1,37 @@
 // discord_app/modules/safety_flows/native/tasks/ParentalConsentConnectionHeader.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import messagesProxyDefault from "../../SafetyFlows.messages.js";
-import Text from "../../../../design/components/Text/native/Text.tsx";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_4 from "../../../../stores/UserStore.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import _modDef2690 from "../../SafetyFlows.messages.js";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import AuthenticationActionCreatorsDefault from "../../../../actions/AuthenticationActionCreators.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import UserStore from "../../../../stores/UserStore.tsx";
 
-require = arg1;
-noopAll;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { row: null, logOut: null };
-createCacheKey = {
-  height: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT,
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+fn(4560);
+let createStyles = { row: null, logOut: null };
+createStyles = {
+  height: fn(5682).NAV_BAR_HEIGHT,
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "center",
-  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingHorizontal: nativeDefault.space.PX_16,
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { position: "absolute", left: ThemesDefault.space.PX_16 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { position: "absolute", left: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting(
-  "modules/safety_flows/native/tasks/ParentalConsentConnectionHeader.tsx",
-);
+createStyles.row = createStyles;
+createStyles.logOut = { position: "absolute", left: nativeDefault.space.PX_16 };
+let closure_7 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_flows/native/tasks/ParentalConsentConnectionHeader.tsx");
 
 export const ParentalConsentConnectionNavbar = function ParentalConsentConnectionNavbar() {
-  const tmp = callback2();
+  const tmp = closure_7();
   let obj = initialize;
-  const items = [closure_4];
+  const items = [UserStore];
   const stateFromStores = obj.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let username;
@@ -44,32 +42,31 @@ export const ParentalConsentConnectionNavbar = function ParentalConsentConnectio
   });
   obj = { style: { paddingTop: useSafeAreaInsetsDefault().top }, children: null };
   obj = { style: tmp.row, children: null };
-  obj1 = {
+  const obj1 = {
     accessibilityRole: "button",
     variant: "text-md/medium",
     color: "text-link",
     style: tmp.logOut,
     onPress() {
-      return callback(table[10]).logout("safety_flows_parental_consent_connection");
+      return AuthenticationActionCreatorsDefault.logout("safety_flows_parental_consent_connection");
     },
     children: null,
   };
-  const intl = getSystemLocale.intl;
-  obj1[5] = intl.string(messagesProxyDefault["3HuGuY"]);
-  const items1 = [callback(Text.Text, obj1)];
+  const intl = util.intl;
+  obj1.children = intl.string(_modDef2690["3HuGuY"]);
+  const items1 = [hasOwnProperty(Text_Text.Text, obj1)];
   let tmp5Result = null != stateFromStores;
   if (tmp5Result) {
     const obj2 = {
       accessibilityRole: "header",
       variant: "text-md/semibold",
       color: "mobile-text-heading-primary",
-      children: null,
+      children: stateFromStores,
     };
-    obj2[3] = stateFromStores;
-    tmp5Result = tmp5(Text.Text, obj2);
+    tmp5Result = tmp5(Text_Text.Text, obj2);
   }
   items1[1] = tmp5Result;
-  obj[1] = items1;
-  obj[1] = closure_6(View, obj);
-  return callback(View, obj);
+  obj.children = items1;
+  obj.children = timestampProducer(View, obj);
+  return hasOwnProperty(View, obj);
 };

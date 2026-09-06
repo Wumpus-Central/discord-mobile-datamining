@@ -1,18 +1,23 @@
 // discord_app/lib/RTCControlSocket.tsx
-import timestampDefault from "../modules/debug/Logger.tsx";
+import LoggerDefault from "../modules/debug/Logger.tsx";
 import _modDef38 from "../../_runtime/metro/00038__.js";
-import failsDefault from "../../discord_common/js/packages/backoff/Backoff.tsx";
-import setDefault from "../utils/Durations.tsx";
-import set from "../utils/PlatformUtils.tsx";
-import sleep from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
-import onDefault from "../../discord_common/js/shared/utils/TypedEventEmitter.tsx";
-import closure_3 from "../stores/DeveloperOptionsStore.tsx";
-import closure_4 from "../stores/MediaEngineStore.tsx";
-import DesktopSources from "../../discord_common/js/packages/media-engine/Constants.tsx";
+import BackoffDefault from "../../discord_common/js/packages/backoff/Backoff.tsx";
+import DurationsDefault from "../utils/Durations.tsx";
+import PlatformUtils from "../utils/PlatformUtils.tsx";
+import TimeUtils from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
+import DeveloperOptionsStore from "../stores/DeveloperOptionsStore.tsx";
+import MediaEngineStore from "../stores/MediaEngineStore.tsx";
+import TypedEventEmitter from "../../discord_common/js/shared/utils/TypedEventEmitter.tsx";
 
-require = arg1;
+require = fn;
 function noop() {}
-({ Features: c5, MediaEngineContextTypes: closure_6, MediaTypes: error, SpeakingFlags: closure_8 } = DesktopSources);
+const Constants = fn(4585);
+({
+  Features: hasOwnProperty,
+  MediaEngineContextTypes: metroRequire,
+  MediaTypes: closure_7,
+  SpeakingFlags: closure_8,
+} = Constants);
 let obj = {
   IDENTIFY: 0,
   [0]: "IDENTIFY",
@@ -99,7 +104,7 @@ obj = {
   REPEATED_MLS_INVALID_MESSAGES: 4803,
   [4803]: "REPEATED_MLS_INVALID_MESSAGES",
 };
-let closure_12 = {
+const constants3 = {
   DISCONNECTED: 0,
   [0]: "DISCONNECTED",
   CONNECTING: 1,
@@ -113,9 +118,9 @@ let closure_12 = {
   RECONNECTING: 5,
   [5]: "RECONNECTING",
 };
-let closure_13 = 20 * setDefault.Millis.SECOND;
-const MINUTE = setDefault.Millis.MINUTE;
-let closure_15 = 5 * setDefault.Millis.SECOND;
+let closure_13 = 20 * DurationsDefault.Millis.SECOND;
+const MINUTE = DurationsDefault.Millis.MINUTE;
+let closure_15 = 5 * DurationsDefault.Millis.SECOND;
 obj = {
   Connecting: "connecting",
   Connect: "connect",
@@ -150,21 +155,19 @@ obj = {
   ReceiveMessage: "receive-message",
   SendMessage: "send-message",
 };
-onDefault;
 class RTCControlSocket extends tmp3 {
   constructor(arg0) {
-    DEFAULT = arg1;
-    if (arg1 === undefined) {
+    DEFAULT = fn;
+    if (fn === undefined) {
       tmp5 = MediaEngineContextTypes;
       DEFAULT = MediaEngineContextTypes.DEFAULT;
     }
     tmp6 = new RTCControlSocket(tmp4, tmp3, tmp2, DEFAULT, tmp, global);
-    // ThrowIfThisInitialized (0x7c)
-    tmp7 = new require("fails")(1000, 5000);
+    tmp7 = new closure_1(closure_2[5])(1000, 5000);
     tmp6.backoff = tmp7;
     tmp6.serverVersion = 0;
     tmp6.url = global;
-    tmp8 = require("timestamp");
+    tmp8 = closure_1(closure_2[6]);
     tmp8 = new tmp8("RTCControlSocket(" + DEFAULT + ")");
     tmp6.logger = tmp8;
     logger = tmp6.logger;
@@ -190,8 +193,7 @@ class RTCControlSocket extends tmp3 {
 }
 const prototype = RTCControlSocket.prototype;
 prototype["createWebSocket"] = function createWebSocket() {
-  let self = this;
-  self = this;
+  const self = this;
   let logger = this.logger;
   logger.info("[CONNECT] " + this.url);
   if (null !== this.webSocket) {
@@ -206,40 +208,40 @@ prototype["createWebSocket"] = function createWebSocket() {
       false,
       0,
       "The connection timed out after " +
-        self(closure_1_2[7]).now() -
+        TimeUtils.now() -
         self.connectionStartTime +
         " ms - did not receive OP_HELLO in time.",
     );
   }, closure_13);
-  obj = { location: "RTCControlSocket", supportsSfuUpdate: closure_4.supports(constants.UDP_ENDPOINT_UPDATE) };
+  obj = { location: "RTCControlSocket", supportsSfuUpdate: MediaEngineStore.supports(constants.UDP_ENDPOINT_UPDATE) };
   const webSocket = new WebSocket("" + self.url + "?v=" + self(14079).getVoiceGatewayProtocolVersion(obj));
   self.webSocket = webSocket;
   webSocket.binaryType = "arraybuffer";
   webSocket.onopen = () => {
-    if (self.connectionState === closure_1_12.CONNECTING) {
-      obj.emit(closure_1_16.Connect);
+    if (self.connectionState === constants.CONNECTING) {
+      obj.emit(obj.Connect);
     } else if (obj.connectionState === tmp.RECONNECTING) {
       obj.doResumeOrClose();
     }
-    self.connectionState = closure_1_12.CONNECTED;
-    const diff = self(closure_1_2[7]).now() - obj.connectionStartTime;
+    self.connectionState = constants.CONNECTED;
+    const diff = TimeUtils.now() - obj.connectionStartTime;
     const logger = obj.logger;
     logger.info("[CONNECTED] " + self.url + " in " + diff + " ms");
-    self.emit(closure_1_16.Ping, Math.round(diff / 2));
+    self.emit(self.Ping, Math.round(diff / 2));
   };
   webSocket.onmessage = (data) => {
     const result = self.parseWebSocketMessage(data);
     ({ op, seq, d } = result);
-    self.emit(closure_1_16.ReceiveMessage, op, d);
+    self.emit(self.ReceiveMessage, op, d);
     if (seq) {
       obj.lastRecvSeqNum = seq;
     }
-    if (closure_1_3.isLoggingGatewayEvents) {
+    if (DeveloperOptionsStore.isLoggingGatewayEvents) {
       const _Uint8Array = Uint8Array;
       if (d instanceof Uint8Array) {
         const items = [];
         HermesBuiltin.arraySpread(d, 0);
-        const mapped = items.map((arg0) => arg0.toString(16).padStart(2, "0"));
+        const mapped = items.map((item) => item.toString(16).padStart(2, "0"));
         const logger2 = obj.logger;
         const _HermesInternal2 = HermesInternal;
         logger2.info("~> " + op + ": 0x" + mapped.join(""));
@@ -250,7 +252,7 @@ prototype["createWebSocket"] = function createWebSocket() {
         logger.info("~> " + op + ": " + JSON.stringify(d));
       }
     }
-    if (closure_1_10.HELLO === op) {
+    if (self.HELLO === op) {
       obj.clearHelloTimeout();
       obj.handleHello(d);
     } else if (tmp10.READY === op) {
@@ -319,13 +321,14 @@ prototype["createWebSocket"] = function createWebSocket() {
           };
           let tmp5;
           if (null != rid.max_resolution) {
-            obj = { type: null, width: null, height: null };
-            obj[0] = rid.max_resolution.type;
-            obj[1] = rid.max_resolution.width;
-            obj[2] = rid.max_resolution.height;
-            tmp5 = obj;
+            const size = {
+              type: rid.max_resolution.type,
+              width: rid.max_resolution.width,
+              height: rid.max_resolution.height,
+            };
+            tmp5 = size;
           }
-          obj[8] = tmp5;
+          obj.maxResolution = tmp5;
           return obj;
         });
       }
@@ -402,7 +405,7 @@ prototype["createWebSocket"] = function createWebSocket() {
   webSocket.onerror = () => self.handleClose(false, 0, "An error with the websocket occurred");
   webSocket.onclose = (wasClean) => self.handleClose(wasClean.wasClean, wasClean.code, wasClean.reason);
 };
-prototype["send"] = function send(arg0) {
+prototype["send"] = function send(op) {
   let tmp = arg1;
   if (arg1 === undefined) {
     tmp = null;
@@ -413,16 +416,14 @@ prototype["send"] = function send(arg0) {
     const _WebSocket = WebSocket;
     if (webSocket.readyState === WebSocket.OPEN) {
       const _JSON = JSON;
-      obj = { op: null, d: null };
-      obj[0] = arg0;
-      obj[1] = tmp;
+      obj = { op, d: tmp };
       const json = JSON.stringify(obj);
-      if (obj.isLoggingGatewayEvents) {
+      if (DeveloperOptionsStore.isLoggingGatewayEvents) {
         const logger = self.logger;
         const _HermesInternal = HermesInternal;
         logger.info("<~ " + json);
       }
-      self.emit(obj.SendMessage, arg0, tmp);
+      self.emit(obj.SendMessage, op, tmp);
       try {
         webSocket.send(json);
       } catch (err) {}
@@ -446,7 +447,7 @@ prototype["sendBinary"] = function sendBinary(MLS_COMMIT_WELCOME, uint8Array) {
 };
 prototype["doResumeOrClose"] = function doResumeOrClose() {
   const self = this;
-  obj = sleep;
+  obj = TimeUtils;
   const nowResult = obj.now();
   if (null !== this.serverId) {
     if (null !== self.channelId) {
@@ -503,27 +504,23 @@ prototype["handleHello"] = function handleHello(d) {
   this.serverVersion = num;
   if (this.serverVersion <= 3) {
     let num3 = 0.1;
-    if (set.isPlatformEmbedded) {
+    if (PlatformUtils.isPlatformEmbedded) {
       num3 = 0.25;
     }
     self.heartbeatInterval = d.heartbeat_interval * num3;
     let tmp4 = require;
-    const tmp7 = require;
-    const tmp8 = dependencyMap;
   } else {
     self.heartbeatInterval = d.heartbeat_interval * self.heartbeatIntervalModifier;
     tmp4 = require;
-    if (!set.isPlatformEmbedded) {
+    if (!PlatformUtils.isPlatformEmbedded) {
       let num2 = self.heartbeatInterval;
       if (num2 == null) {
         num2 = NaN;
       }
       self.heartbeatInterval = Math.min(closure_15, num2);
       tmp4 = tmp;
-      const tmp6 = closure_15;
     }
     tmp = require;
-    const tmp2 = dependencyMap;
   }
   const diff = tmp4(4589).now() - self.connectionStartTime;
   ({ logger, heartbeatInterval } = self);
@@ -539,7 +536,7 @@ prototype["handleReady"] = function handleReady(experiments) {
   const self = this;
   const backoff = this.backoff;
   backoff.succeed();
-  obj = sleep;
+  obj = TimeUtils;
   const logger = this.logger;
   logger.info("[READY] took " + obj.now() - this.connectionStartTime + " ms");
   if (this.serverVersion >= 6) {
@@ -572,13 +569,14 @@ prototype["handleReady"] = function handleReady(experiments) {
       };
       let tmp5;
       if (null != rid.max_resolution) {
-        obj = { type: null, width: null, height: null };
-        obj[0] = rid.max_resolution.type;
-        obj[1] = rid.max_resolution.width;
-        obj[2] = rid.max_resolution.height;
-        tmp5 = obj;
+        const size = {
+          type: rid.max_resolution.type,
+          width: rid.max_resolution.width,
+          height: rid.max_resolution.height,
+        };
+        tmp5 = size;
       }
-      obj[8] = tmp5;
+      obj.maxResolution = tmp5;
       return obj;
     });
   }
@@ -590,15 +588,13 @@ prototype["handleReady"] = function handleReady(experiments) {
 prototype["supportsSfuUpdate"] = function supportsSfuUpdate() {
   return this.serverVersion >= 10;
 };
-prototype["handleResumed"] = function handleResumed(d) {
+prototype["handleResumed"] = function handleResumed() {
   const backoff = this.backoff;
   backoff.succeed();
 };
 prototype["handleClose"] = function handleClose(arg0, arg1, arg2) {
-  let self = this;
-  self = this;
+  const self = this;
   let flag = arg0;
-  flag = arg0;
   closure_2 = arg1;
   closure_0 = arg2;
   this.connectionState = constants3.DISCONNECTED;
@@ -654,7 +650,7 @@ prototype["reconnect"] = function reconnect(arg0, arg1, arg2) {
   this.connectionState = constants3.RECONNECTING;
   const webSocket = this.createWebSocket();
 };
-prototype["cleanupWebSocket"] = function cleanupWebSocket(arg0) {
+prototype["cleanupWebSocket"] = function cleanupWebSocket(fn) {
   this.stopHeartbeater();
   this.clearHelloTimeout();
   const webSocket = this.webSocket;
@@ -664,8 +660,8 @@ prototype["cleanupWebSocket"] = function cleanupWebSocket(arg0) {
     webSocket.onmessage = noop;
     webSocket.onerror = noop;
     webSocket.onclose = noop;
-    if (arg0 != null) {
-      arg0(webSocket);
+    if (fn != null) {
+      fn(webSocket);
     }
   }
   const backoff = this.backoff;
@@ -694,10 +690,7 @@ prototype["parseWebSocketMessage"] = function parseWebSocketMessage(data) {
     if (self.serverVersion >= 8) {
       num3 = 2;
     }
-    obj = { op: null, seq: null, d: null };
-    obj[0] = uint8Array[num3];
-    obj[1] = uint16;
-    obj[2] = uint8Array.subarray(num3 + 1);
+    obj = { op: uint8Array[num3], seq: uint16, d: uint8Array.subarray(num3 + 1) };
     return obj;
   } else {
     const _JSON = JSON;
@@ -720,9 +713,9 @@ prototype["handleHeartbeatAck"] = function handleHeartbeatAck(d) {
   if (this.serverVersion >= 8) {
     t = d.t;
   }
-  obj = sleep;
+  obj = TimeUtils;
   self.emit(obj.Ping, obj.now() - t);
-  self.lastHeartbeatAckTime = sleep.now();
+  self.lastHeartbeatAckTime = TimeUtils.now();
   self.heartbeatAck = true;
   if (null !== self.expeditedHeartbeatTimeout) {
     const _clearTimeout = clearTimeout;
@@ -736,12 +729,11 @@ prototype["handleHeartbeatTimeout"] = function handleHeartbeatTimeout() {
   const self = this;
   this.cleanupWebSocket((close) => close.close(4000));
   ({ backoff, logger } = this);
-  const result = backoff.fail(() => self.reconnect(false, closure_1_11.HEARTBEAT_TIMEOUT, "Heartbeat timeout.")) / 1000;
+  const result = backoff.fail(() => self.reconnect(false, obj.HEARTBEAT_TIMEOUT, "Heartbeat timeout.")) / 1000;
   logger.warn("[HEARTBEAT ACK TIMEOUT] reconnecting in " + result.toFixed(2) + " seconds.");
 };
 prototype["startHeartbeater"] = function startHeartbeater() {
-  let self = this;
-  self = this;
+  const self = this;
   _modDef38(null != this.heartbeatInterval, "RTCControlSocket: Heartbeat interval should never null here.");
   const logger = this.logger;
   logger.info("Starting heartbeat with interval: " + this.heartbeatInterval);
@@ -769,15 +761,12 @@ prototype["sendHeartbeat"] = function sendHeartbeat() {
     const logger2 = self.logger;
     const _HermesInternal = HermesInternal;
     logger2.info("Sending heartbeat with last received sequence number: " + num);
-    obj = { t: null, seq_ack: null };
-    obj[0] = sleep.now();
-    obj[1] = num;
+    obj = { t: TimeUtils.now(), seq_ack: num };
     self.send(obj.HEARTBEAT, obj);
-    const obj3 = sleep;
   } else {
     const logger = self.logger;
     logger.info("Sending heartbeat");
-    obj = sleep;
+    obj = TimeUtils;
     self.send(obj.HEARTBEAT, obj.now());
   }
 };
@@ -808,7 +797,7 @@ prototype["connect"] = function connect() {
   }
   return flag;
 };
-prototype["identify"] = function identify(streamParameters, arg1, arg2) {
+prototype["identify"] = function identify(streamParameters) {
   ({ serverId, channelId, sessionId, token, video } = streamParameters);
   ({ userId, maxDaveProtocolVersion } = streamParameters);
   if (video === undefined) {
@@ -846,22 +835,22 @@ prototype["identify"] = function identify(streamParameters, arg1, arg2) {
       };
       let tmp;
       if (null != type.maxResolution) {
-        obj = { type: null, width: null, height: null };
-        obj[0] = type.maxResolution.type;
-        obj[1] = type.maxResolution.width;
-        obj[2] = type.maxResolution.height;
-        tmp = obj;
+        const size = {
+          type: type.maxResolution.type,
+          width: type.maxResolution.width,
+          height: type.maxResolution.height,
+        };
+        tmp = size;
       }
-      obj[8] = tmp;
+      obj.max_resolution = tmp;
       return obj;
     });
   }
-  obj[7] = mapped;
+  obj.streams = mapped;
   this.send(obj.IDENTIFY, obj);
 };
 prototype["expeditedHeartbeat"] = function expeditedHeartbeat(arg0) {
-  let self = this;
-  self = this;
+  const self = this;
   let str = arg1;
   if (arg1 === undefined) {
     str = "";
@@ -980,8 +969,8 @@ prototype["selectProtocol"] = function selectProtocol(protocol, rTCConnectionId,
     tmp = obj;
     if (BooleanResult) {
       obj = { address: null, port: null, mode: null };
-      ({ address: obj2[0], port: obj2[1], mode: obj2[2] } = sdp);
-      obj1 = {};
+      ({ address: obj2.address, port: obj2.port, mode: obj2.mode } = sdp);
+      const obj1 = {};
       const merged1 = Object.assign(sdp);
       const codecs1 = sdp.codecs;
       obj1.codecs = codecs1.map((name) => ({
@@ -1004,18 +993,17 @@ prototype["selectProtocol"] = function selectProtocol(protocol, rTCConnectionId,
   this.send(obj.SELECT_PROTOCOL, obj2);
 };
 prototype["updateSession"] = function updateSession(codecs) {
-  obj = {
-    codecs: codecs.map((name) => ({
-      name: name.name,
-      type: name.type,
-      priority: 1000 * name.priority,
-      payload_type: name.payloadType,
-      rtx_payload_type: name.rtxPayloadType,
-      encode: name.encode,
-      decode: name.decode,
-    })),
-  };
+  obj = { codecs: null };
   codecs = codecs.codecs;
+  obj.codecs = codecs.map((name) => ({
+    name: name.name,
+    type: name.type,
+    priority: 1000 * name.priority,
+    payload_type: name.payloadType,
+    rtx_payload_type: name.rtxPayloadType,
+    encode: name.encode,
+    decode: name.decode,
+  }));
   this.send(obj.SESSION_UPDATE, obj);
 };
 prototype["speaking"] = function speaking(_lastSentSpeakingStatus, packetDelay, _lastSentSSRC) {
@@ -1052,17 +1040,18 @@ prototype["video"] = function video(audio_ssrc, video_ssrc, rtx_ssrc, arr) {
       };
       let tmp;
       if (null != type.maxResolution) {
-        obj = { type: null, width: null, height: null };
-        obj[0] = type.maxResolution.type;
-        obj[1] = type.maxResolution.width;
-        obj[2] = type.maxResolution.height;
-        tmp = obj;
+        const size = {
+          type: type.maxResolution.type,
+          width: type.maxResolution.width,
+          height: type.maxResolution.height,
+        };
+        tmp = size;
       }
-      obj[8] = tmp;
+      obj.max_resolution = tmp;
       return obj;
     });
   }
-  obj[3] = mapped;
+  obj.streams = mapped;
   this.send(obj.VIDEO, obj);
 };
 prototype["mediaSinkWants"] = function mediaSinkWants(localVideoSinkWants) {
@@ -1103,7 +1092,8 @@ prototype["noRoute"] = function noRoute() {
 prototype["setHeartbeatIntervalModifier"] = function setHeartbeatIntervalModifier(heartbeatIntervalModifier) {
   this.heartbeatIntervalModifier = heartbeatIntervalModifier;
 };
-let result = require("set").fileFinishedImporting("lib/RTCControlSocket.tsx");
+let size = fn(2);
+let result = size.fileFinishedImporting("lib/RTCControlSocket.tsx");
 
 export default RTCControlSocket;
 export const RTCSocketOpcode = obj;

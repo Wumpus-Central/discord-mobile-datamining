@@ -1,9 +1,13 @@
 // discord_app/modules/app_channels/native/AppChannelApplicationActionSheet.tsx
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import AppChannelApplicationIconDefault from "AppChannelApplicationIcon.tsx";
+import getAppChannelApplicationUnsupportedTextDefault from "../getAppChannelApplicationUnsupportedText.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/app_channels/native/AppChannelApplicationActionSheet.tsx");
+const require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_channels/native/AppChannelApplicationActionSheet.tsx");
 
 export default function AppChannelApplicationActionSheet(arg0) {
   ({ selectedApplicationId, onChange } = arg0);
@@ -11,38 +15,38 @@ export default function AppChannelApplicationActionSheet(arg0) {
   let obj = onChange(9743);
   const options = obj.useAppChannelApplicationOptions(guildId, channelId, selectedApplicationId).options;
   const items = [onChange];
-  const callback = React.useCallback((arg0) => {
+  const callback = noop.useCallback((arg0) => {
     onChange(arg0);
-    closure_1_1(closure_1_2[3]).hideActionSheet();
+    ActionSheetActionCreatorsDefault.hideActionSheet();
   }, items);
   obj = { header: null, children: null };
   obj = { title: null };
   const intl = onChange(1114).intl;
-  obj[0] = intl.string(onChange(1114).t.F2FMFR);
-  obj[0] = jsx(onChange(7149).BottomSheetTitleHeader, { title: null });
-  obj1 = { accessibilityLabel: null, value: null, onChange: null, hasIcons: true, children: null };
+  obj.title = intl.string(onChange(1114).t.F2FMFR);
+  obj.header = jsx(onChange(7149).BottomSheetTitleHeader, { title: null });
+  const obj1 = { accessibilityLabel: null, value: null, onChange: null, hasIcons: true, children: null };
   const intl2 = onChange(1114).intl;
-  obj1[0] = intl2.string(onChange(1114).t.F2FMFR);
+  obj1.accessibilityLabel = intl2.string(onChange(1114).t.F2FMFR);
   if (selectedApplicationId == null) {
     selectedApplicationId = "";
   }
-  obj1[1] = selectedApplicationId;
-  obj1[2] = callback;
-  obj1[4] = options.map((arg0) => {
-    ({ application, status } = arg0);
-    return callback2(
+  obj1.value = selectedApplicationId;
+  obj1.onChange = callback;
+  obj1.children = options.map((item) => {
+    ({ application, status } = item);
+    return jsx(
       onChange(5688).TableRadioRow,
       {
         value: application.id,
         label: application.name,
-        subLabel: callback(9747)(status),
+        subLabel: getAppChannelApplicationUnsupportedTextDefault(status),
         disabled: !status.supported,
-        icon: callback2(callback(9745), { application }),
+        icon: jsx(AppChannelApplicationIconDefault, { application }),
       },
       application.id,
     );
   });
-  obj[1] = jsx(onChange(5685).TableRadioGroup, {
+  obj.children = jsx(onChange(5685).TableRadioGroup, {
     accessibilityLabel: null,
     value: null,
     onChange: null,

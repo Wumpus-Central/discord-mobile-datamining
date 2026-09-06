@@ -1,27 +1,27 @@
 // discord_app/modules/polls/PollsUtils.tsx
-import setDefault from "../../utils/Durations.tsx";
-import getSystemLocale from "../../intl/index.native.tsx";
+import DurationsDefault from "../../utils/Durations.tsx";
+import util from "../../intl/index.native.tsx";
 import v1 from "../../../_runtime/01256_v1.js";
-import useNullableMessageAuthor from "../messages/useMessageAuthor.tsx";
-import closure_3 from "../../stores/ChannelStore.tsx";
-import closure_4 from "../../stores/MessageReactionsStore.tsx";
-import closure_5 from "../../stores/MessageStore.tsx";
-import closure_6 from "../../stores/PermissionStore.tsx";
-import closure_7 from "../../stores/RelationshipStore.tsx";
-import POLL_ATTACHMENT_FOLDER from "PollsConstants.tsx";
-import ME from "../../Constants.tsx";
+import NicknameUtilsDefault from "../../utils/NicknameUtils.tsx";
+import useMessageAuthor from "../messages/useMessageAuthor.tsx";
+import FakePlaceholderPrivateChannel from "../channel/FakePlaceholderPrivateChannel.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
+import MessageReactionsStore from "../../stores/MessageReactionsStore.tsx";
+import MessageStore from "../../stores/MessageStore.tsx";
+import PermissionStore from "../../stores/PermissionStore.tsx";
+import RelationshipStore from "../../stores/RelationshipStore.tsx";
 
-require = arg1;
+require = fn;
 function getSampleOfVoterUsernamesForAnswer(message, id) {
   const channelId = message.getChannelId();
-  reactions = reactions.getReactions(
+  const reactions = MessageReactionsStore.getReactions(
     channelId,
     message.id,
     { id, name: "", animated: false },
     closure_9,
     channel(7763).ReactionTypes.VOTE,
   );
-  channel = channel.getChannel(channelId);
+  channel = ChannelStore.getChannel(channelId);
   let guildId = null;
   if (null != channel) {
     guildId = null;
@@ -47,12 +47,12 @@ function getSampleOfVoterUsernamesForAnswer(message, id) {
   return guildId(12)(Array.from(items))
     .reject((id) => blockedOrIgnored.isBlockedOrIgnored(id.id))
     .take(tmp2)
-    .map((arg0) => {
+    .map((item) => {
       let id;
       if (channel != null) {
         id = channel.id;
       }
-      return guildId(closure_1_2[16]).getName(guildId, id, arg0);
+      return NicknameUtilsDefault.getName(guildId, id, item);
     })
     .value();
 }
@@ -61,55 +61,56 @@ function formatVoterTooltipText(arr, arg1) {
   const bound = Math.max(0, arg1 - arr.length);
   if (1 === arr.length) {
     if (bound > 0) {
-      const intl6 = getSystemLocale.intl;
+      const intl6 = util.intl;
       let obj = { a: null, n: null };
       first = first[0];
-      obj[0] = first;
-      obj[1] = bound;
-      let formatToPlainStringResult = intl6.formatToPlainString(getSystemLocale.t["SV/iZn"], obj);
+      obj.a = first;
+      obj.n = bound;
+      let formatToPlainStringResult = intl6.formatToPlainString(util.t["SV/iZn"], obj);
     } else {
       formatToPlainStringResult = first[0];
     }
   } else if (2 === first.length) {
     if (bound > 0) {
-      const intl5 = getSystemLocale.intl;
+      const intl5 = util.intl;
       obj = { a: null, b: null, n: null };
-      [obj5[0], obj5[1]] = first;
-      obj[2] = bound;
-      let formatToPlainStringResult1 = intl5.formatToPlainString(getSystemLocale.t.YBnZK0, obj);
+      [obj5.a, obj5.b] = first;
+      obj.n = bound;
+      let formatToPlainStringResult1 = intl5.formatToPlainString(util.t.YBnZK0, obj);
     } else {
-      const intl4 = getSystemLocale.intl;
-      [obj4[0], obj4[1]] = first;
-      formatToPlainStringResult1 = intl4.formatToPlainString(getSystemLocale.t["O5+f5c"], { a: null, b: null });
-      obj1 = { a: null, b: null };
+      const intl4 = util.intl;
+      [obj4.a, obj4.b] = first;
+      formatToPlainStringResult1 = intl4.formatToPlainString(util.t["O5+f5c"], { a: null, b: null });
+      const obj1 = { a: null, b: null };
     }
   } else if (3 === first.length) {
     if (bound > 0) {
-      const intl3 = getSystemLocale.intl;
+      const intl3 = util.intl;
       const obj2 = { a: null, b: null, c: null, n: null };
-      [obj3[0], obj3[1], obj3[2]] = first;
-      obj2[3] = bound;
-      let formatToPlainStringResult2 = intl3.formatToPlainString(getSystemLocale.t["ThXp+N"], obj2);
+      [obj3.a, obj3.b, obj3.c] = first;
+      obj2.n = bound;
+      let formatToPlainStringResult2 = intl3.formatToPlainString(util.t["ThXp+N"], obj2);
     } else {
-      const intl2 = getSystemLocale.intl;
+      const intl2 = util.intl;
       const obj3 = { a: null, b: null, c: null };
-      [obj2[0], obj2[1], obj2[2]] = first;
-      formatToPlainStringResult2 = intl2.formatToPlainString(getSystemLocale.t["0UzBM3"], obj3);
+      [obj2.a, obj2.b, obj2.c] = first;
+      formatToPlainStringResult2 = intl2.formatToPlainString(util.t["0UzBM3"], obj3);
     }
   } else {
-    const intl = getSystemLocale.intl;
-    obj = { n: null };
-    obj[0] = bound;
-    return intl.formatToPlainString(getSystemLocale.t.yVX6kE, obj);
+    const intl = util.intl;
+    obj = { n: bound };
+    return intl.formatToPlainString(util.t.yVX6kE, obj);
   }
 }
-({ POLL_RESULT_MESSAGE_POLL_TITLE_MAX_VISIBLE_CHARS: closure_8, VOTES_TOOLTIP_MAX_USERS: c9 } = POLL_ATTACHMENT_FOLDER);
-({ ChannelTypesSets: c10, Permissions: unpackModuleId } = ME);
-const result = require("set").fileFinishedImporting("modules/polls/PollsUtils.tsx");
+const PollsConstants = fn(7829);
+({ POLL_RESULT_MESSAGE_POLL_TITLE_MAX_VISIBLE_CHARS: closure_8, VOTES_TOOLTIP_MAX_USERS: closure_9 } = PollsConstants);
+const Constants = fn(1074);
+({ ChannelTypesSets: c10, Permissions: closure_11 } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/polls/PollsUtils.tsx");
 
 export const generateEmptyPollAnswer = function generateEmptyPollAnswer() {
-  const obj = { text: "Array", image: "isArray", localCreationAnswerId: -11665405 };
-  obj[2] = v1.v4();
+  const obj = { text: "Array", image: "isArray", localCreationAnswerId: v1.v4() };
   return obj;
 };
 export const generateLocalCreationAnswerId = function generateLocalCreationAnswerId() {
@@ -122,7 +123,6 @@ export const hasNonVoteReactions = function hasNonVoteReactions(message) {
   const iter = message.reactions[Symbol.iterator]();
   while (iter !== undefined) {
     if (null == iter.next().me_vote) {
-      let tmp = iter;
       iter.return();
       let flag = true;
       return true;
@@ -131,25 +131,23 @@ export const hasNonVoteReactions = function hasNonVoteReactions(message) {
   return false;
 };
 export const useCanPostPollsInChannel = function useCanPostPollsInChannel(channel) {
-  const _require = channel;
-  const items = [closure_6];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    let tmp = null != channel;
+  _require = channel;
+  const items = [PermissionStore];
+  return require("initialize").useStateFromStores(items, () => {
+    let tmp = null != closure_0;
     if (tmp) {
-      tmp = obj.id !== channel(closure_1_2[9]).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
+      tmp = obj.id !== FakePlaceholderPrivateChannel.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
     }
     if (tmp) {
-      const POLLS = closure_1_10.POLLS;
+      const POLLS = constants.POLLS;
       let hasItem = POLLS.has(obj.type);
       if (hasItem) {
         let isPrivateResult = obj.isPrivate();
         if (!isPrivateResult) {
           isPrivateResult =
-            closure_1_6.can(closure_1_11.SEND_MESSAGES, obj) && closure_1_6.can(closure_1_11.SEND_POLLS, obj);
-          const obj2 = closure_1_6;
-          const tmp7 = closure_1_11;
+            PermissionStore.can(constants2.SEND_MESSAGES, obj) && PermissionStore.can(constants2.SEND_POLLS, obj);
           const tmp8 =
-            closure_1_6.can(closure_1_11.SEND_MESSAGES, obj) && closure_1_6.can(closure_1_11.SEND_POLLS, obj);
+            PermissionStore.can(constants2.SEND_MESSAGES, obj) && PermissionStore.can(constants2.SEND_POLLS, obj);
         }
         hasItem = isPrivateResult;
       }
@@ -204,7 +202,7 @@ export const isIncompleteAnswer = function isIncompleteAnswer(text) {
 };
 export const createPollExpiryTimestamp = function createPollExpiryTimestamp(arg0) {
   const timestamp = Date.now();
-  return new Date(timestamp + arg0 * setDefault.Millis.HOUR).toISOString();
+  return new Date(timestamp + arg0 * DurationsDefault.Millis.HOUR).toISOString();
 };
 export const createPollServerDataFromCreateRequest = function createPollServerDataFromCreateRequest(poll) {
   if (null != poll) {
@@ -212,7 +210,7 @@ export const createPollServerDataFromCreateRequest = function createPollServerDa
     if (poll != null) {
       const answers = poll.answers;
       if (answers != null) {
-        mapped = answers.map((poll_media) => {
+        mapped = answers.map((poll_media, index) => {
           poll_media = poll_media.poll_media;
           let emoji;
           if (poll_media != null) {
@@ -223,17 +221,17 @@ export const createPollServerDataFromCreateRequest = function createPollServerDa
           let tmp3;
           if (null != emoji) {
             obj = { id: null, name: null };
-            ({ id: obj2[0], name } = emoji);
+            ({ id: obj2.id, name } = emoji);
             if (name == null) {
               name = "";
             }
-            obj[1] = name;
+            obj.name = name;
             tmp3 = obj;
           }
           obj.emoji = tmp3;
           obj = {};
           const merged1 = Object.assign(poll_media);
-          obj.answer_id = arg1 + 1;
+          obj.answer_id = index + 1;
           obj.poll_media = obj;
           return obj;
         });
@@ -248,7 +246,7 @@ export const createPollServerDataFromCreateRequest = function createPollServerDa
       const _Date = Date;
       const _Date2 = Date;
       const timestamp = Date.now();
-      const date = new Date(timestamp + poll.duration * setDefault.Millis.HOUR);
+      const date = new Date(timestamp + poll.duration * DurationsDefault.Millis.HOUR);
       str = date.toISOString();
     }
     let obj = {};
@@ -273,7 +271,7 @@ export const getPollReplyPreview = function getPollReplyPreview(message) {
   return str;
 };
 export const getPollResultsReplyPreview = function getPollResultsReplyPreview(message) {
-  let obj = useNullableMessageAuthor;
+  let obj = useMessageAuthor;
   const first = message.embeds[0];
   let str;
   const messageAuthor = obj.getMessageAuthor(message);
@@ -290,17 +288,17 @@ export const getPollResultsReplyPreview = function getPollResultsReplyPreview(me
     str = "";
   }
   let truncateTextResult = str;
-  if (null != closure_8) {
+  if (null != React6) {
     truncateTextResult = tmp(1926).truncateText(str, tmp4);
     const tmpResult = tmp(1926);
   }
   const intl = tmp(1114).intl;
   obj = { username: messageAuthor.nick, title: truncateTextResult };
-  return intl.format(getSystemLocale.t.Vn97Ka, obj);
+  return intl.format(util.t.Vn97Ka, obj);
 };
 export const getPollResultsReplyPreviewMobile = function getPollResultsReplyPreviewMobile(message2) {
   if ("author" in message2) {
-    let obj = useNullableMessageAuthor;
+    let obj = useMessageAuthor;
     const first = message2.embeds[0];
     let str;
     const messageAuthor = obj.getMessageAuthor(message2);
@@ -317,21 +315,19 @@ export const getPollResultsReplyPreviewMobile = function getPollResultsReplyPrev
       str = "";
     }
     let truncateTextResult = str;
-    if (null != closure_8) {
+    if (null != React6) {
       truncateTextResult = tmp2(1926).truncateText(str, tmp5);
       const tmp2Result = tmp2(1926);
     }
     const intl = tmp2(1114).intl;
-    obj = { username: null, title: null };
-    obj[0] = messageAuthor.nick;
-    obj[1] = truncateTextResult;
-    return intl.formatToParts(getSystemLocale.t.Vn97Ka, obj);
+    obj = { username: messageAuthor.nick, title: truncateTextResult };
+    return intl.formatToParts(util.t.Vn97Ka, obj);
   } else {
     return null;
   }
 };
 export const getTotalVotes = function getTotalVotes(reactions) {
-  return reactions.reduce((arg0, count_details) => {
+  return reactions.reduce((acc, count_details) => {
     count_details = count_details.count_details;
     let num;
     if (count_details != null) {
@@ -340,18 +336,17 @@ export const getTotalVotes = function getTotalVotes(reactions) {
     if (num == null) {
       num = 0;
     }
-    return arg0 + num;
+    return acc + num;
   }, 0);
 };
 export { getSampleOfVoterUsernamesForAnswer };
 export { formatVoterTooltipText };
 export const getPollAnswerVotesTooltipText = function getPollAnswerVotesTooltipText(arg0, arg1, id) {
-  message = message.getMessage(arg1, arg0);
+  const message = MessageStore.getMessage(arg1, arg0);
   if (null == message) {
     return "";
   } else {
-    const obj = { id: null, name: "", animated: false };
-    obj[0] = id;
+    const obj = { id, name: "", animated: false };
     const reaction = message.getReaction(obj);
     let num;
     if (reaction != null) {
@@ -380,25 +375,21 @@ export const formatPollResultNotificationCenterText = function formatPollResultN
     num = Math.round((tmp / totalVotes) * 100);
   }
   if (0 === totalVotes) {
-    const intl3 = getSystemLocale.intl;
-    let obj = { questionText: null };
-    obj[0] = questionText;
-    let formatToPlainStringResult = intl3.formatToPlainString(getSystemLocale.t["8anM0l"], obj);
+    const intl3 = util.intl;
+    let obj = { questionText };
+    let formatToPlainStringResult = intl3.formatToPlainString(util.t["8anM0l"], obj);
   } else if (null != victorAnswerId) {
-    const intl2 = getSystemLocale.intl;
-    obj = { questionText: null, victorAnswerText: null, percentage: null };
-    obj[0] = questionText;
-    obj[1] = victorAnswerText;
+    const intl2 = util.intl;
+    obj = { questionText, victorAnswerText, percentage: null };
     const _HermesInternal2 = HermesInternal;
-    obj[2] = "" + num + "%";
-    formatToPlainStringResult = intl2.formatToPlainString(getSystemLocale.t["8yEgvE"], obj);
+    obj.percentage = "" + num + "%";
+    formatToPlainStringResult = intl2.formatToPlainString(util.t["8yEgvE"], obj);
   } else {
-    const intl = getSystemLocale.intl;
-    obj = { questionText: null, percentage: null };
-    obj[0] = questionText;
+    const intl = util.intl;
+    obj = { questionText, percentage: null };
     const _HermesInternal = HermesInternal;
-    obj[1] = "" + num + "%";
-    formatToPlainStringResult = intl.formatToPlainString(getSystemLocale.t.XVk6Zv, obj);
+    obj.percentage = "" + num + "%";
+    formatToPlainStringResult = intl.formatToPlainString(util.t.XVk6Zv, obj);
   }
   return formatToPlainStringResult;
 };

@@ -1,21 +1,20 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsGuildDiscoveryPreviewElement.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import fromGuildPropertiesWithAdditionalFields from "../../../../utils/GuildRecordUtils.tsx";
-import hexToRgba from "../../../../utils/ColorUtils.tsx";
-import Text from "../../../../design/components/Text/native/Text.tsx";
-import GuildIconSizesDefault from "../../../guild/native/GuildIcon.tsx";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_4 from "../../../a11y/AccessibilityStore.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
+import GuildRecordUtils from "../../../../utils/GuildRecordUtils.tsx";
+import ColorUtils from "../../../../utils/ColorUtils.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import GuildIconDefault from "../../../guild/native/GuildIcon.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
-require = arg1;
-noopAll;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = {
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+fn(4560);
+let createStyles = {
   container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 },
   borderColor: null,
   title: null,
@@ -24,52 +23,52 @@ createCacheKey = {
   guildName: null,
   guildIcon: null,
 };
-createCacheKey = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { textTransform: "uppercase", lineHeight: 16, marginBottom: 8 };
-createCacheKey[3] = { minHeight: 40, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, padding: 8 };
-createCacheKey[4] = { display: "flex", flexDirection: "row", alignItems: "center" };
-createCacheKey[5] = { lineHeight: 18, marginStart: 8 };
-let obj1 = { minHeight: 40, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, padding: 8 };
-createCacheKey[6] = { borderRadius: ThemesDefault.radii.xs, width: 18, height: 18 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { borderRadius: ThemesDefault.radii.xs, width: 18, height: 18 };
-const result = require("set").fileFinishedImporting(
+createStyles = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+createStyles.borderColor = createStyles;
+createStyles.title = { textTransform: "uppercase", lineHeight: 16, marginBottom: 8 };
+createStyles.itemContainer = { minHeight: 40, borderRadius: nativeDefault.radii.sm, borderWidth: 1, padding: 8 };
+createStyles.guildInfo = { display: "flex", flexDirection: "row", alignItems: "center" };
+createStyles.guildName = { lineHeight: 18, marginStart: 8 };
+let size = { borderRadius: nativeDefault.radii.xs, width: 18, height: 18 };
+createStyles.guildIcon = size;
+let closure_7 = createStyles.createStyles(createStyles);
+size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/in_app_reports/native/components/InAppReportsGuildDiscoveryPreviewElement.tsx",
 );
 
 export default function GuildDiscoveryPreviewElement(guild) {
   guild = guild.guild;
-  const tmp = callback3();
+  const tmp = closure_7();
   let obj = initialize;
-  const items = [closure_4];
+  const items = [AccessibilityStore];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  obj1 = hexToRgba;
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.title, accessibilityRole: "header", variant: "text-xs/bold", children: null };
-  const intl = getSystemLocale.intl;
-  obj[3] = intl.string(getSystemLocale.t.nTe4HC);
-  const items1 = [callback(Text.Text, obj)];
-  obj1 = { style: items2, children: null };
-  items2 = [tmp.itemContainer, { borderColor: obj1.hexWithOpacity(tmp.borderColor.color, 0.08) }];
+  const intl = util.intl;
+  obj.children = intl.string(util.t.nTe4HC);
+  const items1 = [hasOwnProperty(Text_Text.Text, obj)];
+  const obj1 = { style: null, children: null };
+  const items2 = [tmp.itemContainer, { borderColor: obj1.hexWithOpacity(tmp.borderColor.color, 0.08) }];
+  obj1.style = items2;
   const obj2 = { style: tmp.guildInfo, children: null };
   const obj3 = { style: tmp.guildIcon, guild: null, animate: null };
   const hexWithOpacityResult = obj1.hexWithOpacity(tmp.borderColor.color, 0.08);
-  const tmp4 = GuildIconSizesDefault;
-  obj3[1] = fromGuildPropertiesWithAdditionalFields.fromClientDiscoverableGuild(guild);
-  obj3[2] = !stateFromStores;
+  const tmp4 = GuildIconDefault;
+  obj3.guild = GuildRecordUtils.fromClientDiscoverableGuild(guild);
+  obj3.animate = !stateFromStores;
   const items3 = [
-    callback(tmp4, obj3),
-    callback(Text.Text, {
+    hasOwnProperty(tmp4, obj3),
+    hasOwnProperty(Text_Text.Text, {
       style: tmp.guildName,
       variant: "text-sm/medium",
       color: "text-default",
       children: guild.name,
     }),
   ];
-  obj2[1] = items3;
-  obj1[1] = callback2(View, obj2);
-  items1[1] = callback(View, obj1);
-  obj[1] = items1;
-  return callback2(View, obj);
+  obj2.children = items3;
+  obj1.children = timestampProducer(View, obj2);
+  items1[1] = hasOwnProperty(View, obj1);
+  obj.children = items1;
+  return timestampProducer(View, obj);
 }

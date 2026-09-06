@@ -1,20 +1,19 @@
 // discord_app/modules/application_commands/native/ContextMenuCommandAppScreen.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_2 from "../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-createCacheKey = { list: null };
-createCacheKey = { marginHorizontal: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-let closure_4 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting(
-  "modules/application_commands/native/ContextMenuCommandAppScreen.tsx",
-);
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { list: null };
+createStyles = { marginHorizontal: nativeDefault.space.PX_16 };
+createStyles.list = createStyles;
+let closure_4 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/application_commands/native/ContextMenuCommandAppScreen.tsx");
 
 export default function ContextMenuCommandAppScreen(route) {
   const params = route.route.params;
-  const section = params.section;
+  let section = params.section;
   const commands = params.commands;
   const onPressCommand = params.onPressCommand;
   let items = [commands.length];
@@ -24,16 +23,16 @@ export default function ContextMenuCommandAppScreen(route) {
     return items;
   }, items);
   const callback = onPressCommand.useCallback((arg0, arg1) => {
-    closure_0 = tmp;
+    section = tmp;
     const diff = commands.length - 1;
-    return closure_1_3(
+    return jsx(
       section(commands[6]),
       {
         item: commands[arg1],
         onPress() {
-          return closure_1_2(closure_0);
+          return onPressCommand(closure_0);
         },
-        section: closure_0,
+        section,
         start: 0 === arg1,
         end: arg1 === diff,
       },
@@ -41,9 +40,9 @@ export default function ContextMenuCommandAppScreen(route) {
     );
   }, items1);
   const tmp = section(commands[5])();
-  const tmp4 = callback();
+  const tmp4 = closure_4();
   return jsx(section(commands[7]), {
-    style: callback().list,
+    style: closure_4().list,
     sections: memo,
     estimatedListSize: "windowSize",
     itemSize: tmp,

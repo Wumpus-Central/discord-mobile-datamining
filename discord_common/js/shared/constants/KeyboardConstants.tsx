@@ -1,6 +1,6 @@
 // discord_common/js/shared/constants/KeyboardConstants.tsx
 import _mod7505 from "../../../../_runtime/metro/07505__.js";
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const items = [_mod7505.Key.F6, "f6"];
 const items1 = [items, , , , , , ,];
@@ -18,7 +18,7 @@ const items7 = [_mod7505.Key.Home, "home"];
 items1[6] = items7;
 const items8 = [_mod7505.Key.End, "end"];
 items1[7] = items8;
-let set = new Set(["tab", "shift+tab", "down", "up", "left", "right", "home", "end"]);
+const map = new Map(items1);
 const frozen = Object.freeze({
   esc: 9,
   f1: 67,
@@ -253,27 +253,7 @@ const frozen1 = Object.freeze({
   down: 81,
   up: 82,
 });
-const merged = Object.assign(
-  Object.freeze({
-    "^": 220,
-    "§": 220,
-    "½": 220,
-    plus: 192,
-    ž: 192,
-    "@": 192,
-    "|": 220,
-    "#": 222,
-    $: 222,
-    process: 229,
-    "·": 229,
-    ذ: 192,
-    "`": 192,
-    "¬": 223,
-    "\\": 220,
-    "'": 222,
-  }),
-);
-const frozen2 = Object.freeze({
+const point = {
   a: 65,
   s: 83,
   d: 68,
@@ -389,13 +369,34 @@ const frozen2 = Object.freeze({
   rewind: 177,
   play: 179,
   "fast forward": 176,
-});
-const result = set.fileFinishedImporting("../discord_common/js/shared/constants/KeyboardConstants.tsx");
+};
+const merged = Object.assign(
+  Object.freeze({
+    "^": 220,
+    "§": 220,
+    "½": 220,
+    plus: 192,
+    ž: 192,
+    "@": 192,
+    "|": 220,
+    "#": 222,
+    $: 222,
+    process: 229,
+    "·": 229,
+    ذ: 192,
+    "`": 192,
+    "¬": 223,
+    "\\": 220,
+    "'": 222,
+  }),
+);
+const frozen2 = Object.freeze(point);
+const result = size.fileFinishedImporting("../discord_common/js/shared/constants/KeyboardConstants.tsx");
 
 export const KeyboardEventKey = _mod7505.Key;
 export const FOCUS_SECTION_JUMP_KEY = _mod7505.Key.F6;
-export const NavigationKeyShortcutMap = new Map(items1);
-export const NavigationShortcuts = set;
+export const NavigationKeyShortcutMap = map;
+export const NavigationShortcuts = new Set(["tab", "shift+tab", "down", "up", "left", "right", "home", "end"]);
 export const KeyboardDeviceTypes = {
   KEYBOARD_KEY: 0,
   [0]: "KEYBOARD_KEY",

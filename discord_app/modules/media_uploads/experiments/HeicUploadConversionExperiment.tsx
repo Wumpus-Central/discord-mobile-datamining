@@ -1,6 +1,6 @@
 // discord_app/modules/media_uploads/experiments/HeicUploadConversionExperiment.tsx
-import set from "../../../../_runtime/00002_set.js";
 import ApexExperiment from "../../experiments/apex/index.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const apexExperiment = ApexExperiment.createApexExperiment({
   name: "2026-08-heic-upload-conversion",
@@ -12,6 +12,6 @@ const apexExperiment = ApexExperiment.createApexExperiment({
     2: { enabled: true, quality: 80, maxFileSizeBytes: 20971520 },
   },
 });
-const result = set.fileFinishedImporting("modules/media_uploads/experiments/HeicUploadConversionExperiment.tsx");
+const result = size.fileFinishedImporting("modules/media_uploads/experiments/HeicUploadConversionExperiment.tsx");
 
 export const HeicUploadConversionExperiment = apexExperiment;

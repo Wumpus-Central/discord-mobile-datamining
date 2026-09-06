@@ -1,116 +1,100 @@
 // discord_app/modules/vibegrations/native/VibegrationsClarificationCard.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import VibegrationsClarification from "../lib/VibegrationsClarification.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { card: null, optionHeader: null, footer: null, customField: null };
-createCacheKey = {
-  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+fn(4560);
+let createStyles = { card: null, optionHeader: null, footer: null, customField: null };
+createStyles = {
+  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
   borderWidth: 1,
-  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
-  borderRadius: ThemesDefault.radii.md,
-  padding: ThemesDefault.space.PX_12,
-  marginTop: ThemesDefault.space.PX_8,
-  gap: ThemesDefault.space.PX_8,
+  borderColor: nativeDefault.colors.BORDER_SUBTLE,
+  borderRadius: nativeDefault.radii.md,
+  padding: nativeDefault.space.PX_12,
+  marginTop: nativeDefault.space.PX_8,
+  gap: nativeDefault.space.PX_8,
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
-let obj1 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
-createCacheKey[2] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
-let obj2 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
-createCacheKey[3] = {
+createStyles.card = createStyles;
+createStyles.optionHeader = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
+let obj1 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
+createStyles.footer = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
+let obj2 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
+createStyles.customField = {
   flex: 1,
   minHeight: 36,
   justifyContent: "center",
-  paddingHorizontal: ThemesDefault.space.PX_12,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
-  borderRadius: ThemesDefault.radii.round,
+  paddingHorizontal: nativeDefault.space.PX_12,
+  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
+  borderRadius: nativeDefault.radii.round,
 };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj3 = {
-  flex: 1,
-  minHeight: 36,
-  justifyContent: "center",
-  paddingHorizontal: ThemesDefault.space.PX_12,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
-  borderRadius: ThemesDefault.radii.round,
-};
-let result = require("set").fileFinishedImporting("modules/vibegrations/native/VibegrationsClarificationCard.tsx");
+let closure_8 = createStyles.createStyles(createStyles);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/vibegrations/native/VibegrationsClarificationCard.tsx");
 
 export default function VibegrationsClarificationCard(clarification) {
   clarification = clarification.clarification;
   const onSubmit = clarification.onSubmit;
-  dependencyMap = undefined;
   let first;
-  let React;
-  closure_5 = undefined;
-  let callback;
-  closure_7 = undefined;
+  noop = undefined;
   let bound;
-  closure_9 = undefined;
-  callback = undefined;
-  closure_11 = undefined;
-  let str;
   const tmp = bound();
   dependencyMap = tmp;
-  let obj = React;
-  const tmp2 = first(React.useState({}), 2);
+  let obj = noop;
+  const tmp2 = first(noop.useState({}), 2);
   first = tmp2[0];
-  React = tmp2[1];
-  const tmp4 = first(React.useState({}), 2);
+  noop = tmp2[1];
+  const tmp4 = first(noop.useState({}), 2);
   closure_5 = tmp4[1];
-  let tmp5 = first(React.useState(0), 2);
-  callback = tmp5[1];
+  let tmp5 = first(noop.useState(0), 2);
+  closure_6 = tmp5[1];
   closure_7 = tmp6;
   bound = Math.min(tmp5[0], length - 1);
-  closure_9 = tmp8;
+  const id = tmp8;
   let items = [first, clarification, bound, onSubmit, clarification.questions[bound].id];
-  callback = React.useCallback((arg0) => {
+  const callback = noop.useCallback((arg0) => {
     if (null != onSubmit) {
       const obj = {};
       const merged = Object.assign(first);
       obj[id.id] = arg0;
-      callback(obj);
-      const result = clarification(optionHeader[6]).nextClarificationStep(clarification, obj, bound);
+      closure_4(obj);
+      const result = VibegrationsClarification.nextClarificationStep(clarification, obj, bound);
       if (null == result) {
-        const result1 = tmp13(tmp14[6]).formatClarificationAnswers(tmp15, obj);
+        const result1 = tmp13(16607).formatClarificationAnswers(tmp15, obj);
         if ("" !== result1) {
           tmp(result1);
         }
-        const tmp13Result = tmp13(tmp14[6]);
+        const tmp13Result = tmp13(16607);
       } else {
-        callback3(result);
+        closure_6(result);
       }
-      const obj3 = clarification(optionHeader[6]);
-      tmp13 = clarification;
-      tmp14 = optionHeader;
+      tmp13 = require;
       tmp15 = clarification;
     }
   }, items);
   let items1 = [callback];
-  closure_11 = React.useCallback((id) => callback({ kind: "option", optionId: id.id, text: id.label }), items1);
+  closure_11 = noop.useCallback((id) => callback({ kind: "option", optionId: id.id, text: id.label }), items1);
   const items2 = [clarification, null == onSubmit, bound];
-  str = tmp4[0][tmp8.id];
-  const callback1 = React.useCallback(() => {
+  let str = tmp4[0][tmp8.id];
+  const callback1 = noop.useCallback(() => {
     if (!closure_7) {
       if (0 !== bound) {
-        questions = questions.questions[tmp - 1];
-        callback((arg0) => {
+        closure_0 = clarification.questions[tmp - 1];
+        closure_4((arg0) => {
           const merged = Object.assign(arg0);
           delete tmp[tmp2];
           return {};
         });
-        callback2((arg0) => {
+        closure_5((arg0) => {
           const merged = Object.assign(arg0);
           delete tmp[tmp2];
           return {};
         });
-        callback3(tmp - 1);
+        closure_6(tmp - 1);
       }
     }
   }, items2);
@@ -123,23 +107,20 @@ export default function VibegrationsClarificationCard(clarification) {
   const callback2 = obj.useCallback(() => {
     const trimmed = str.trim();
     if ("" !== trimmed) {
-      const obj = { kind: "custom", text: null };
-      obj[1] = trimmed;
+      const obj = { kind: "custom", text: trimmed };
       callback(obj);
     }
   }, items3);
   if (clarification.questions.length > 1) {
     obj = { variant: "text-xs/semibold", color: "text-muted", children: null };
     let intl = clarification(1114).intl;
-    obj1 = { index: null, total: null };
-    obj1[0] = bound + 1;
-    obj1[1] = length;
-    obj[2] = intl.formatToPlainString(onSubmit(3547)["7bypa+"], obj1);
-    tmp14 = callback(clarification(4556).Text, obj);
+    const obj1 = { index: bound + 1, total: length };
+    obj.children = intl.formatToPlainString(onSubmit(3547)["7bypa+"], obj1);
+    tmp14 = closure_6(clarification(4556).Text, obj);
   }
   const items4 = [
     tmp14,
-    callback(clarification(4556).Text, {
+    closure_6(clarification(4556).Text, {
       variant: "text-md/semibold",
       color: "text-default",
       children: clarification.questions[bound].question,
@@ -151,7 +132,7 @@ export default function VibegrationsClarificationCard(clarification) {
     closure_0 = answer;
     let fn;
     if (!closure_7) {
-      fn = () => closure_1_11(closure_0);
+      fn = () => closure_11(closure_0);
     }
     let obj = { onPress: fn, accessibilityLabel: null, children: null };
     const intl = tmp2(tmp3[8]).intl;
@@ -163,10 +144,10 @@ export default function VibegrationsClarificationCard(clarification) {
       tmp5 = onSubmit;
     }
     obj = { answer: answer.label };
-    obj[1] = intl.formatToPlainString(k7lEgj, obj);
+    obj.accessibilityLabel = intl.formatToPlainString(k7lEgj, obj);
     obj = { style: optionHeader.optionHeader, children: null };
     const items = [
-      callback3(clarification(optionHeader[7]).Text, {
+      closure_6(clarification(optionHeader[7]).Text, {
         variant: "text-sm/semibold",
         color: "text-default",
         children: answer.label,
@@ -176,23 +157,22 @@ export default function VibegrationsClarificationCard(clarification) {
     if (true === answer.recommended) {
       const obj2 = { variant: "text-xs/semibold", color: "text-muted", children: null };
       const intl2 = tmp2(tmp3[8]).intl;
-      obj2[2] = intl2.string(tmp5(tmp3[9]).OXRWyV);
+      obj2.children = intl2.string(tmp5(tmp3[9]).OXRWyV);
       tmp8Result = tmp8(tmp2(tmp3[7]).Text, obj2);
     }
     items[1] = tmp8Result;
-    obj[1] = items;
+    obj.children = items;
     const items1 = [closure_7(closure_5, obj)];
     tmp8Result = null;
     if (null != answer.detail) {
       tmp8Result = null;
       if ("" !== answer.detail) {
-        const obj3 = { variant: "text-xs/normal", color: "text-muted", children: null };
-        obj3[2] = answer.detail;
+        const obj3 = { variant: "text-xs/normal", color: "text-muted", children: answer.detail };
         tmp8Result = tmp8(tmp2(tmp3[7]).Text, obj3);
       }
     }
     items1[1] = tmp8Result;
-    obj[2] = items1;
+    obj.children = items1;
     return closure_7(clarification(optionHeader[10]).Card, obj, answer.id);
   });
   let obj3 = { style: tmp.footer, children: null };
@@ -202,8 +182,8 @@ export default function VibegrationsClarificationCard(clarification) {
     if (!tmp6) {
       const obj4 = { variant: "secondary", size: "sm", text: null, onPress: null };
       let intl2 = tmp20(1114).intl;
-      obj4[2] = intl2.string(onSubmit(3547).yKdgqw);
-      obj4[3] = callback1;
+      obj4.text = intl2.string(onSubmit(3547).yKdgqw);
+      obj4.onPress = callback1;
       tmp19Result = tmp19(tmp20(4975).Button, obj4);
     }
   }
@@ -219,22 +199,22 @@ export default function VibegrationsClarificationCard(clarification) {
     returnKeyType: "send",
   };
   const intl3 = tmp20(1114).intl;
-  obj6[2] = intl3.string(onSubmit(3547).qifsdL);
-  obj6[3] = str;
-  obj6[4] = function onChange(arg0) {
+  obj6.placeholder = intl3.string(onSubmit(3547).qifsdL);
+  obj6.value = str;
+  obj6.onChange = function onChange(arg0) {
     closure_0 = arg0;
-    return callback2((arg0) => {
+    return closure_5((arg0) => {
       const obj = {};
       const merged = Object.assign(arg0);
-      obj[closure_1_9.id] = closure_0;
+      obj[id.id] = closure_0;
       return obj;
     });
   };
-  obj6[5] = callback2;
-  obj5[1] = callback(clarification(14170).GhostInput, obj6);
-  items5[1] = callback(closure_5, obj5);
-  obj3[1] = items5;
+  obj6.onSubmitEditing = callback2;
+  obj5.children = closure_6(clarification(14170).GhostInput, obj6);
+  items5[1] = closure_6(closure_5, obj5);
+  obj3.children = items5;
   items4[3] = closure_7(closure_5, obj3);
-  obj[1] = items4;
+  obj.children = items4;
   return closure_7(closure_5, obj);
 }

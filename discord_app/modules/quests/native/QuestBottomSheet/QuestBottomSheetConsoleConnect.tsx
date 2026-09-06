@@ -1,185 +1,187 @@
 // discord_app/modules/quests/native/QuestBottomSheet/QuestBottomSheetConsoleConnect.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import TableRowGroupTitle from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import ME from "../../../../Constants.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
+import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js";
+import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import QuestTypes from "../../QuestTypes.tsx";
+import AdCreativeType from "../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
+import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import openUserSettings from "../../../user_settings/core/native/openUserSettings.tsx";
+import AnalyticsTypes from "../../lib/analytics/AnalyticsTypes.tsx";
+import XboxNeutralIcon from "../../../../design/components/Icon/native/redesign/generated/XboxNeutralIcon.tsx";
+import PlaystationNeutralIcon from "../../../../design/components/Icon/native/redesign/generated/PlaystationNeutralIcon.tsx";
+import authorizeConnectionDefault from "../../../connections/authorizeConnection.native.tsx";
+import AdAnalyticsInterfaceExperiment from "../../experiments/AdAnalyticsInterfaceExperiment.tsx";
+import captureAdUserAction from "../../../ads/analytics/captureAdUserAction.tsx";
+import captureAdUserActionTypes from "../../../ads/analytics/captureAdUserActionTypes.tsx";
+import QuestPlatformUtils from "../../utils/QuestPlatformUtils.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+require = fn;
 function NonInlineConsoleConnection(arg0) {
   ({ consoles, onConsoleSelect: require } = arg0);
-  return callback(TableRowGroupTitle.TableRowGroup, {
+  return closure_6(TableRowGroup.TableRowGroup, {
     hasIcons: true,
     children: consoles.map((type) => {
       const obj = {};
       const merged = Object.assign(type);
-      obj.onPress = closure_0;
-      return closure_1_6(closure_1_8, obj, type.type);
+      obj.onPress = onPress;
+      return timestampProducer(ConsoleRow, obj, type.type);
     }),
   });
 }
 function ConsoleRow(onPress) {
   onPress = onPress.onPress;
-  const merged = Object.assign(onPress, Object.create(null));
+  const merged = Object.assign(onPress, Object.assign({ onPress: 0 }));
   const type = merged.type;
   if (constants.PLAYSTATION === type) {
-    let obj = { arrow: true, icon: null, label: null, subLabel: null, onPress: null };
-    obj[1] = callback(onPress(8881).PlaystationNeutralIcon, {});
-    const intl3 = onPress(1114).intl;
-    obj[2] = intl3.string(onPress(1114).t.JafL6p);
+    let obj = {
+      arrow: true,
+      icon: timestampProducer(PlaystationNeutralIcon.PlaystationNeutralIcon, {}),
+      label: null,
+      subLabel: null,
+      onPress: null,
+    };
+    const intl3 = util.intl;
+    obj.label = intl3.string(util.t.JafL6p);
     let stringResult;
     if (null != merged.account) {
       const intl4 = tmp8(1114).intl;
       stringResult = intl4.string(tmp8(1114).t["u30/ut"]);
     }
-    obj[3] = stringResult;
-    obj[4] = function onPress() {
+    obj.subLabel = stringResult;
+    obj.onPress = function onPress() {
       return onPress(merged);
     };
-    return callback(onPress(5605).TableRow, obj);
+    return timestampProducer(TableRow.TableRow, obj);
   } else if (tmp2.XBOX === type) {
-    obj = { arrow: true, icon: null, label: null, subLabel: null, onPress: null };
-    obj[1] = callback(onPress(8708).XboxNeutralIcon, {});
-    const intl = onPress(1114).intl;
-    obj[2] = intl.string(onPress(1114).t.Nfvo72);
+    obj = {
+      arrow: true,
+      icon: timestampProducer(XboxNeutralIcon.XboxNeutralIcon, {}),
+      label: null,
+      subLabel: null,
+      onPress: null,
+    };
+    const intl = util.intl;
+    obj.label = intl.string(util.t.Nfvo72);
     let stringResult1;
     if (null != merged.account) {
       const intl2 = tmp4(1114).intl;
       stringResult1 = intl2.string(tmp4(1114).t["u30/ut"]);
     }
-    obj[3] = stringResult1;
-    obj[4] = function onPress() {
+    obj.subLabel = stringResult1;
+    obj.onPress = function onPress() {
       return onPress(merged);
     };
-    return callback(onPress(5605).TableRow, obj);
+    return timestampProducer(TableRow.TableRow, obj);
   } else {
     return null;
   }
 }
-({ PlatformTypes: c4, UserSettingsSections: c5 } = ME);
-({ jsx: closure_6, jsxs, Fragment } = jsxProd);
-const PLATFORM_XBOX = ThemesDefault.unsafe_rawColors.PLATFORM_XBOX;
-const PLATFORM_PLAYSTATION = ThemesDefault.unsafe_rawColors.PLATFORM_PLAYSTATION;
-createCacheKey = { platformButtonsContainer: null, platformButton: null };
-createCacheKey = {
+const View = fn(17).View;
+const Constants = fn(1074);
+({ PlatformTypes: closure_4, UserSettingsSections: hasOwnProperty } = Constants);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs, Fragment } = jsxProd);
+const PLATFORM_XBOX = nativeDefault.unsafe_rawColors.PLATFORM_XBOX;
+const PLATFORM_PLAYSTATION = nativeDefault.unsafe_rawColors.PLATFORM_PLAYSTATION;
+fn(4560);
+let createStyles = { platformButtonsContainer: null, platformButton: null };
+createStyles = {
   display: "flex",
   flexDirection: "row",
-  gap: ThemesDefault.space.PX_16,
+  gap: nativeDefault.space.PX_16,
   justifyContent: "space-between",
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flex: 1, display: "flex", justifyContent: "center", alignItems: "center" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting(
-  "modules/quests/native/QuestBottomSheet/QuestBottomSheetConsoleConnect.tsx",
-);
+createStyles.platformButtonsContainer = createStyles;
+createStyles.platformButton = { flex: 1, display: "flex", justifyContent: "center", alignItems: "center" };
+createStyles = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/QuestBottomSheet/QuestBottomSheetConsoleConnect.tsx");
 
 export default function QuestBottomSheetConsoleConnect(quest) {
   quest = quest.quest;
   ({ step: importDefault, sourceQuestContent: dependencyMap } = quest);
-  let xboxAndPlaystationAccounts;
-  closure_4 = undefined;
-  closure_5 = undefined;
-  function openQuestBottomSheet(NonInlineConsoleConnection, arg1) {
-    let obj = closure_1_1(closure_1_2[10]);
-    obj = { questId: quest.id, initialStep: closure_1, sourceQuestContent: closure_2 };
-    obj.openLazy(quest(closure_1_2[13])(closure_1_2[12], closure_1_2.paths), "QuestBottomSheet", obj);
+  function openQuestBottomSheet() {
+    const obj = { questId: quest.id, initialStep, sourceQuestContent };
+    obj.openLazy(asyncRequireImpl(15120, dependencyMap.paths), "QuestBottomSheet", obj);
   }
   let obj = quest(11483);
-  xboxAndPlaystationAccounts = obj.useConnectedAccounts().xboxAndPlaystationAccounts;
+  const xboxAndPlaystationAccounts = obj.useConnectedAccounts().xboxAndPlaystationAccounts;
   closure_4 = quest(11774).useTrackQuestContentClickedWithImpression();
   let obj2 = quest(11774);
-  closure_5 = quest(11486).useQuestImpressionId();
+  const impressionId = quest(11486).useQuestImpressionId();
   const items = [quest, xboxAndPlaystationAccounts];
   obj = {
-    consoles: xboxAndPlaystationAccounts.useMemo(() => {
-      const obj = quest(closure_1_2[9]);
-      return quest(closure_1_2[9])
-        .supportedConsoles(quest)
-        .map((type) => {
+    consoles: xboxAndPlaystationAccounts.useMemo(
+      () =>
+        QuestPlatformUtils.supportedConsoles(quest).map((type) => {
           closure_0 = type;
-          return { type, account: closure_3.find((type) => type.type === closure_0) };
-        });
-    }, items),
+          return { type, account: xboxAndPlaystationAccounts.find((type) => type.type === closure_0) };
+        }),
+      items,
+    ),
     onConsoleSelect(account) {
       if (null != account.account) {
         if (
           obj5.shouldMigrateToAdAnalyticsInterface(
-            quest(closure_1_2[14]).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL,
+            AdAnalyticsInterfaceExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL,
             "quest_bottom_sheet_console_connect",
           )
         ) {
           let obj = {
-            type: null,
-            adCreativeType: null,
-            adCreativeId: null,
-            questContentCTA: null,
-            surfaceId: null,
-            sourceQuestContent: null,
-            impressionId: null,
+            type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL,
+            adCreativeType: AdCreativeType.AdCreativeType.QUEST,
+            adCreativeId: quest.id,
+            questContentCTA: AnalyticsTypes.QuestContentCTA.VIEW_CONSOLE_CONNECTIONS,
+            surfaceId: QuestTypes.QuestContent.QUEST_BOTTOM_SHEET,
+            sourceQuestContent,
+            impressionId,
           };
-          obj[0] = quest(closure_1_2[16]).AdUserActionType.CLICK_INTERNAL;
-          obj[1] = quest(closure_1_2[17]).AdCreativeType.QUEST;
-          obj[2] = quest.id;
-          obj[3] = quest(closure_1_2[18]).QuestContentCTA.VIEW_CONSOLE_CONNECTIONS;
-          obj[4] = quest(closure_1_2[19]).QuestContent.QUEST_BOTTOM_SHEET;
-          obj[5] = closure_2;
-          obj[6] = constants;
-          quest(closure_1_2[15]).captureAdUserAction(obj);
-          const obj7 = quest(closure_1_2[15]);
+          captureAdUserAction.captureAdUserAction(obj);
         } else {
-          obj = { questId: null, questContent: null, questContentCTA: null, sourceQuestContent: null };
-          obj[0] = quest.id;
-          obj[1] = quest(closure_1_2[19]).QuestContent.QUEST_BOTTOM_SHEET;
-          obj[2] = quest(closure_1_2[18]).QuestContentCTA.VIEW_CONSOLE_CONNECTIONS;
-          obj[3] = closure_2;
-          callback(obj);
+          obj = {
+            questId: quest.id,
+            questContent: QuestTypes.QuestContent.QUEST_BOTTOM_SHEET,
+            questContentCTA: AnalyticsTypes.QuestContentCTA.VIEW_CONSOLE_CONNECTIONS,
+            sourceQuestContent,
+          };
+          closure_4(obj);
         }
-        obj5 = quest(closure_1_2[14]);
-        closure_1_1(closure_1_2[10]).hideActionSheet();
-        const obj9 = closure_1_1(closure_1_2[10]);
-        obj1 = { screen: null };
-        obj1[0] = constants.CONNECTIONS;
-        quest(closure_1_2[11]).openUserSettings(obj1);
+        obj5 = AdAnalyticsInterfaceExperiment;
+        ActionSheetActionCreatorsDefault.hideActionSheet();
+        let obj1 = { screen: constants2.CONNECTIONS };
+        openUserSettings.openUserSettings(obj1);
       } else {
         if (
           obj12.shouldMigrateToAdAnalyticsInterface(
-            quest(closure_1_2[14]).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL,
+            AdAnalyticsInterfaceExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL,
             "quest_bottom_sheet_console_connect",
           )
         ) {
-          obj1 = quest(closure_1_2[15]);
+          obj1 = captureAdUserAction;
           const obj2 = {
-            type: null,
-            adCreativeType: null,
-            adCreativeId: null,
-            questContentCTA: null,
-            surfaceId: null,
-            sourceQuestContent: null,
-            impressionId: null,
+            type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL,
+            adCreativeType: AdCreativeType.AdCreativeType.QUEST,
+            adCreativeId: quest.id,
+            questContentCTA: AnalyticsTypes.QuestContentCTA.CONNECT_CONSOLE,
+            surfaceId: QuestTypes.QuestContent.QUEST_BOTTOM_SHEET,
+            sourceQuestContent,
+            impressionId,
           };
-          obj2[0] = quest(closure_1_2[16]).AdUserActionType.CLICK_INTERNAL;
-          obj2[1] = quest(closure_1_2[17]).AdCreativeType.QUEST;
-          obj2[2] = quest.id;
-          obj2[3] = quest(closure_1_2[18]).QuestContentCTA.CONNECT_CONSOLE;
-          obj2[4] = quest(closure_1_2[19]).QuestContent.QUEST_BOTTOM_SHEET;
-          obj2[5] = closure_2;
-          obj2[6] = constants;
           obj1.captureAdUserAction(obj2);
         } else {
-          obj = { questId: null, questContent: null, questContentCTA: null, sourceQuestContent: null };
-          obj[0] = quest.id;
-          obj[1] = quest(closure_1_2[19]).QuestContent.QUEST_BOTTOM_SHEET;
-          obj[2] = quest(closure_1_2[18]).QuestContentCTA.CONNECT_CONSOLE;
-          obj[3] = closure_2;
-          callback(obj);
+          obj = {
+            questId: quest.id,
+            questContent: QuestTypes.QuestContent.QUEST_BOTTOM_SHEET,
+            questContentCTA: AnalyticsTypes.QuestContentCTA.CONNECT_CONSOLE,
+            sourceQuestContent,
+          };
+          closure_4(obj);
         }
-        const obj3 = { platformType: null, location: "quests", onClose: null };
-        obj3[0] = account.type;
-        obj3[2] = openQuestBottomSheet;
-        closure_1_1(closure_1_2[20])(obj3);
+        const obj3 = { platformType: account.type, location: "quests", onClose: openQuestBottomSheet };
+        authorizeConnectionDefault(obj3);
       }
     },
   };

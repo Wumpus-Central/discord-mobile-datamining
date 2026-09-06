@@ -1,424 +1,284 @@
 // discord_app/modules/creator_monetization_eligibility/CreatorMonetizationEligibilityActionCreators.tsx
-import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import { Endpoints } from "../../Constants.tsx";
-import { ApplicationTypes } from "../applications/ApplicationConstants.tsx";
+import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
-require = arg1;
-function _createCreatorMonetizationEnableRequest() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c2 = 0;
-    c1 = 0;
-    return (function* (arg0) {
-      if (c1 === 2) {
+require = fn;
+let closure_6 = async function _createCreatorMonetizationEnableRequest(arg0, value) {
+  if (c1 === 2) {
+    c1 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c1 = 2;
+      if (0 === c2) {
+        if (arg0 === 1) {
+          c1 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c1 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          const HTTP = HTTPUtils.HTTP;
+          const obj1 = {
+            url: Endpoints.CREATOR_MONETIZATION_ENABLE_REQUESTS(closure_0),
+            rejectWithError: HTTPUtils.rejectWithMigratedError(),
+          };
+          c2 = 1;
+          c1 = 1;
+          const obj2 = { value: HTTP.post(obj1), done: false };
+          return obj2;
+        }
+      } else if (arg0 === 1) {
         c1 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c1 = 2;
-          if (0 === dependencyMap) {
-            if (arg0 === 1) {
-              c1 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c1 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const HTTP = callback(1272).HTTP;
-              obj1 = { url: null, rejectWithError: null };
-              obj1[0] = closure_1_4.CREATOR_MONETIZATION_ENABLE_REQUESTS(callback);
-              obj1[1] = callback(1272).rejectWithMigratedError();
-              dependencyMap = 1;
-              c1 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.post(obj1);
-              return obj2;
-            }
-          } else if (arg0 === 1) {
-            c1 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c1 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            c1 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp5) {
-          c1 = tmp;
-          throw tmp5;
-        }
-      }
-    })();
-  });
-  closure_6 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _getCreatorMonetizationEligibility() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c2 = 0;
-    c1 = 0;
-    return (function* (arg0, body) {
-      const HTTP = callback(1272).HTTP;
-      obj1 = { url: null, rejectWithError: null };
-      obj1[0] = closure_1_4.CREATOR_MONETIZATION_ELIGIBILITY(callback);
-      const obj3 = callback(1272);
-      obj1[1] = obj3.rejectWithMigratedError();
-      yield HTTP.get(obj1);
-      return body.body;
-    })();
-  });
-  closure_7 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _acceptCreatorMonetizationTerms() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c3 = 0;
-    c2 = 0;
-    return (function* (arg0, arg1) {
-      if (dependencyMap === 2) {
-        dependencyMap = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          dependencyMap = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              dependencyMap = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              dependencyMap = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const HTTP = callback(1272).HTTP;
-              obj1 = { url: null, rejectWithError: null };
-              obj1[0] = closure_1_4.CREATOR_MONETIZATION_ACCEPT_TERMS(callback, closure_1);
-              obj1[1] = callback(1272).rejectWithMigratedError();
-              c3 = 1;
-              dependencyMap = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.post(obj1);
-              return obj2;
-            }
-          } else if (arg0 === 1) {
-            dependencyMap = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            dependencyMap = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            dependencyMap = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp5) {
-          dependencyMap = tmp;
-          throw tmp5;
-        }
-      }
-    })();
-  });
-  closure_8 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _acceptCreatorMonetizationTermsV() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c2 = 0;
-    c1 = 0;
-    return (function* (arg0) {
-      if (c1 === 2) {
+        throw value;
+      } else if (arg0 === 2) {
         c1 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+        obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          c1 = 2;
-          if (0 === dependencyMap) {
-            if (arg0 === 1) {
-              c1 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c1 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const HTTP = callback(1272).HTTP;
-              obj1 = { url: null, rejectWithError: null };
-              obj1[0] = closure_1_4.CREATOR_MONETIZATION_ACCEPT_TERMS_V2(callback);
-              obj1[1] = callback(1272).rejectWithMigratedError();
-              dependencyMap = 1;
-              c1 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.post(obj1);
-              return obj2;
-            }
-          } else if (arg0 === 1) {
-            c1 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c1 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            c1 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp5) {
-          c1 = tmp;
-          throw tmp5;
-        }
-      }
-    })();
-  });
-  closure_9 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _getCreatorMonetizationOnboardingMarketing() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c2 = 0;
-    c1 = 0;
-    return (function* (arg0, body) {
-      const HTTP = callback(1272).HTTP;
-      obj1 = { url: null, rejectWithError: null };
-      obj1[0] = closure_1_4.CREATOR_MONETIZATION_MARKETING_ONBOARDING(callback);
-      const obj3 = callback(1272);
-      obj1[1] = obj3.rejectWithMigratedError();
-      yield HTTP.get(obj1);
-      return body.body;
-    })();
-  });
-  closure_10 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _ownershipTransferOnboard() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c4 = 0;
-    c5 = 0;
-    return (function* (arg0, body) {
-      closure_3 = tmp2;
-      const table = tmp5;
-      const HTTP = callback(closure_1_2[3]).HTTP;
-      obj1 = { url: null, body: null, rejectWithError: null };
-      obj1[0] = c4.CREATOR_MONETIZATION_OWNERSHIP_TRANSFER_ONBOARD(body);
-      const obj2 = { team_id: null };
-      obj2[0] = callback2;
-      obj1[1] = obj2;
-      obj1[2] = callback(closure_1_2[3]).rejectWithMigratedError();
-      yield HTTP.post(obj1);
-      body = body.body;
-      if (null != body.application) {
-        const obj = callback2(table[4]);
-        const obj5 = { type: "APPLICATION_FETCH_SUCCESS", application: null };
-        obj5[1] = body.application;
-        obj.dispatch(obj5);
-      }
-      return body;
-    })();
-  });
-  closure_11 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _requestRemoveMonetization() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c2 = 0;
-    c1 = 0;
-    return (function* (arg0) {
-      if (c1 === 2) {
         c1 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
+        return { value: "HermesInternal", done: null };
+      }
+    } catch (tmp5) {
+      c1 = tmp;
+      throw tmp5;
+    }
+  }
+};
+let closure_7 = async function _getCreatorMonetizationEligibility() {
+  const HTTP = HTTPUtils.HTTP;
+  await HTTP.get({
+    url: Endpoints.CREATOR_MONETIZATION_ELIGIBILITY(closure_0),
+    rejectWithError: HTTPUtils.rejectWithMigratedError(),
+  });
+  return arg1.body;
+};
+let closure_8 = async function _acceptCreatorMonetizationTerms(arg0, value) {
+  if (c2 === 2) {
+    c2 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c2 = 2;
+      if (0 === c3) {
         if (arg0 === 1) {
-          throw arg1;
+          c2 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c2 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          const HTTP = HTTPUtils.HTTP;
+          const obj1 = {
+            url: Endpoints.CREATOR_MONETIZATION_ACCEPT_TERMS(closure_0, closure_1),
+            rejectWithError: HTTPUtils.rejectWithMigratedError(),
+          };
+          c3 = 1;
+          c2 = 1;
+          const obj2 = { value: HTTP.post(obj1), done: false };
+          return obj2;
         }
+      } else if (arg0 === 1) {
+        c2 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c2 = 3;
+        obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          c1 = 2;
-          if (0 === dependencyMap) {
-            if (arg0 === 1) {
-              c1 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c1 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const HTTP = callback(1272).HTTP;
-              obj1 = { url: null, body: null, rejectWithError: null };
-              obj1[0] = closure_1_4.CREATOR_MONETIZATION_REMOVE_MONETIZATION(callback);
-              obj1[1] = {};
-              obj1[2] = callback(1272).rejectWithMigratedError();
-              dependencyMap = 1;
-              c1 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.post(obj1);
-              return obj2;
-            }
-          } else if (arg0 === 1) {
-            c1 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c1 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            c1 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp5) {
-          c1 = tmp;
-          throw tmp5;
-        }
+        c2 = 3;
+        return { value: "HermesInternal", done: null };
       }
-    })();
-  });
-  closure_12 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp5) {
+      c2 = tmp;
+      throw tmp5;
+    }
   }
-  return applyArgumentsResult;
-}
-function _removeMonetization() {
-  let self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c3 = 0;
-    c4 = 0;
-    return (function* (arg0) {
-      const callback = tmp2;
-      yield (function requestRemoveMonetization(closure_0) {
-        const self = this;
-        const apply = closure_12.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+};
+let closure_9 = async function _acceptCreatorMonetizationTermsV(arg0, value) {
+  if (c1 === 2) {
+    c1 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c1 = 2;
+      if (0 === c2) {
+        if (arg0 === 1) {
+          c1 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c1 = 3;
+          obj = { value, done: true };
+          return obj;
         } else {
-          applyArgumentsResult = apply(self, arguments);
+          const HTTP = HTTPUtils.HTTP;
+          const obj1 = {
+            url: Endpoints.CREATOR_MONETIZATION_ACCEPT_TERMS_V2(closure_0),
+            rejectWithError: HTTPUtils.rejectWithMigratedError(),
+          };
+          c2 = 1;
+          c1 = 1;
+          const obj2 = { value: HTTP.post(obj1), done: false };
+          return obj2;
         }
-        return applyArgumentsResult;
-      })(closure_0);
-      const obj2 = callback(table[5]);
-      const obj3 = { type: null, includeTeam: true };
-      obj3[0] = constants.GUILD_ROLE_SUBSCRIPTIONS;
-      yield obj2.getApplicationsForGuild(closure_0, obj3);
-      return arg1;
-    })();
-  });
-  closure_13 = tmp;
-  let apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+      } else if (arg0 === 1) {
+        c1 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c1 = 3;
+        obj = { value, done: true };
+        return obj;
+      } else {
+        c1 = 3;
+        return { value: "HermesInternal", done: null };
+      }
+    } catch (tmp5) {
+      c1 = tmp;
+      throw tmp5;
+    }
   }
-  return applyArgumentsResult;
-}
-const result = require("set").fileFinishedImporting(
+};
+let closure_10 = async function _getCreatorMonetizationOnboardingMarketing() {
+  const HTTP = HTTPUtils.HTTP;
+  await HTTP.get({
+    url: Endpoints.CREATOR_MONETIZATION_MARKETING_ONBOARDING(closure_0),
+    rejectWithError: HTTPUtils.rejectWithMigratedError(),
+  });
+  return arg1.body;
+};
+let closure_11 = async function _ownershipTransferOnboard(arg0, team_id) {
+  closure_0 = arg0;
+  c4 = 0;
+  c5 = 0;
+  return (async (arg0, value) => {
+    closure_3 = tmp2;
+    closure_2 = tmp5;
+    const HTTP = HTTPUtils.HTTP;
+    const request = {
+      url: Endpoints.CREATOR_MONETIZATION_OWNERSHIP_TRANSFER_ONBOARD(closure_0),
+      body: { team_id },
+      rejectWithError: HTTPUtils.rejectWithMigratedError(),
+    };
+    await HTTP.post(request);
+    const body = value.body;
+    if (null != body.application) {
+      closure_131_1(closure_131_2[4]).dispatch({ type: "APPLICATION_FETCH_SUCCESS", application: body.application });
+      closure_131_1(closure_131_2[4]);
+    }
+    return body;
+  })();
+};
+let closure_12 = async function _requestRemoveMonetization(arg0, value) {
+  if (c1 === 2) {
+    c1 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c1 = 2;
+      if (0 === c2) {
+        if (arg0 === 1) {
+          c1 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c1 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          const HTTP = HTTPUtils.HTTP;
+          const request = {
+            url: Endpoints.CREATOR_MONETIZATION_REMOVE_MONETIZATION(closure_0),
+            body: {},
+            rejectWithError: HTTPUtils.rejectWithMigratedError(),
+          };
+          c2 = 1;
+          c1 = 1;
+          const obj1 = { value: HTTP.post(request), done: false };
+          return obj1;
+        }
+      } else if (arg0 === 1) {
+        c1 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c1 = 3;
+        obj = { value, done: true };
+        return obj;
+      } else {
+        c1 = 3;
+        return { value: "HermesInternal", done: null };
+      }
+    } catch (tmp5) {
+      c1 = tmp;
+      throw tmp5;
+    }
+  }
+};
+let closure_13 = async function _removeMonetization() {
+  closure_1 = tmp2;
+  closure_129_0 = closure_0;
+  await (function requestRemoveMonetization() {
+    const self = this;
+    const apply = closure_1_12.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
+  })(closure_0);
+  await closure_130_1(closure_130_2[5]).getApplicationsForGuild(closure_129_0, {
+    type: closure_130_5.GUILD_ROLE_SUBSCRIPTIONS,
+    includeTeam: true,
+  });
+  return arg1;
+};
+const Endpoints = fn(1074).Endpoints;
+const ApplicationTypes = fn(1350).ApplicationTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/creator_monetization_eligibility/CreatorMonetizationEligibilityActionCreators.tsx",
 );
 
-export const createCreatorMonetizationEnableRequest = function createCreatorMonetizationEnableRequest(arg0) {
+export const createCreatorMonetizationEnableRequest = function createCreatorMonetizationEnableRequest() {
   const self = this;
-  const apply = _createCreatorMonetizationEnableRequest.apply;
+  const apply = closure_6.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -426,9 +286,9 @@ export const createCreatorMonetizationEnableRequest = function createCreatorMone
   }
   return applyArgumentsResult;
 };
-export const getCreatorMonetizationEligibility = function getCreatorMonetizationEligibility(closure_0) {
+export const getCreatorMonetizationEligibility = function getCreatorMonetizationEligibility() {
   const self = this;
-  const apply = _getCreatorMonetizationEligibility.apply;
+  const apply = closure_7.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -436,9 +296,9 @@ export const getCreatorMonetizationEligibility = function getCreatorMonetization
   }
   return applyArgumentsResult;
 };
-export const acceptCreatorMonetizationTerms = function acceptCreatorMonetizationTerms(arg0, arg1) {
+export const acceptCreatorMonetizationTerms = function acceptCreatorMonetizationTerms() {
   const self = this;
-  const apply = _acceptCreatorMonetizationTerms.apply;
+  const apply = closure_8.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -446,9 +306,9 @@ export const acceptCreatorMonetizationTerms = function acceptCreatorMonetization
   }
   return applyArgumentsResult;
 };
-export const acceptCreatorMonetizationTermsV2 = function acceptCreatorMonetizationTermsV2(arg0) {
+export const acceptCreatorMonetizationTermsV2 = function acceptCreatorMonetizationTermsV2() {
   const self = this;
-  const apply = _acceptCreatorMonetizationTermsV.apply;
+  const apply = closure_9.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -456,9 +316,9 @@ export const acceptCreatorMonetizationTermsV2 = function acceptCreatorMonetizati
   }
   return applyArgumentsResult;
 };
-export const getCreatorMonetizationOnboardingMarketing = function getCreatorMonetizationOnboardingMarketing(closure_0) {
+export const getCreatorMonetizationOnboardingMarketing = function getCreatorMonetizationOnboardingMarketing() {
   const self = this;
-  const apply = _getCreatorMonetizationOnboardingMarketing.apply;
+  const apply = closure_10.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -468,7 +328,7 @@ export const getCreatorMonetizationOnboardingMarketing = function getCreatorMone
 };
 export const ownershipTransferOnboard = function ownershipTransferOnboard() {
   const self = this;
-  const apply = _ownershipTransferOnboard.apply;
+  const apply = closure_11.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -477,24 +337,24 @@ export const ownershipTransferOnboard = function ownershipTransferOnboard() {
   return applyArgumentsResult;
 };
 export const acceptNewTerms = function acceptNewTerms(arg0) {
-  const HTTP = sendRequest.HTTP;
+  const HTTP = HTTPUtils.HTTP;
   const obj = {
     url: Endpoints.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS(arg0),
-    rejectWithError: sendRequest.rejectWithMigratedError(),
+    rejectWithError: HTTPUtils.rejectWithMigratedError(),
   };
   return HTTP.post(obj);
 };
 export const acceptNewTermsDemonetized = function acceptNewTermsDemonetized(arg0) {
-  const HTTP = sendRequest.HTTP;
+  const HTTP = HTTPUtils.HTTP;
   const obj = {
     url: Endpoints.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_DEMONETIZED(arg0),
-    rejectWithError: sendRequest.rejectWithMigratedError(),
+    rejectWithError: HTTPUtils.rejectWithMigratedError(),
   };
   return HTTP.post(obj);
 };
 export const removeMonetization = function removeMonetization() {
   const self = this;
-  const apply = _removeMonetization.apply;
+  const apply = closure_13.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

@@ -1,23 +1,22 @@
 // discord_app/modules/user_settings/defs/native/SwipeRightToLeftSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import ME from "../../../../Constants.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import create from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import explicitContentFromProto from "../../UserSettings.tsx";
-import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
-import { UserSettingsSwipeRightToLeft } from "../../chat/native/SwipeRightToLeftScreen.tsx";
+import Constants from "../../../../Constants.tsx";
+import util from "../../../../intl/index.native.tsx";
+import preloaded_user_settings from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import UserSettings from "../../UserSettings.tsx";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["D/Dkcd"]);
+    const intl = util.intl;
+    return intl.string(util.t["D/Dkcd"]);
   },
-  parent: MobileUserSettings.MobileUserSettings.CHAT,
+  parent: SettingsConstants.MobileUserSettings.CHAT,
   useTrailing: function useSwipeRightToLeftSettingTrailing() {
-    const SwipeRightToLeftModeSetting = explicitContentFromProto.SwipeRightToLeftModeSetting;
+    const SwipeRightToLeftModeSetting = UserSettings.SwipeRightToLeftModeSetting;
     const setting = SwipeRightToLeftModeSetting.useSetting();
-    if (setting === create.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_REPLY) {
+    if (setting === preloaded_user_settings.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_REPLY) {
       const intl2 = tmp(1114).intl;
       let stringResult = intl2.string(tmp(1114).t["3tYNDS"]);
     } else {
@@ -29,15 +28,13 @@ obj = {
     }
     return stringResult;
   },
-  screen: obj,
-};
-obj = {
-  route: ME.UserSettingsSections.SWIPE_RIGHT_TO_LEFT,
-  getComponent() {
-    return UserSettingsSwipeRightToLeft /* UserSettingsSwipeRightToLeft */.default;
+  screen: {
+    route: Constants.UserSettingsSections.SWIPE_RIGHT_TO_LEFT,
+    getComponent() {
+      return require("SwipeRightToLeftScreen").default;
+    },
   },
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/SwipeRightToLeftSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/SwipeRightToLeftSetting.tsx");
 
 export default route;

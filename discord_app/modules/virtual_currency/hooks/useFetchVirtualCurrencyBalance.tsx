@@ -1,21 +1,22 @@
 // discord_app/modules/virtual_currency/hooks/useFetchVirtualCurrencyBalance.tsx
-import set from "../../../../_runtime/00002_set.js";
-import noop from "../../../../_runtime/00019_noop.js";
-import closure_3 from "../stores/VirtualCurrencyStore.tsx";
+import _mod19 from "../../../../_runtime/metro/00019__.js";
+import VirtualCurrencyActionCreators from "../VirtualCurrencyActionCreators.tsx";
+import VirtualCurrencyStore from "../stores/VirtualCurrencyStore.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const useEffect = noop.useEffect;
-const result = set.fileFinishedImporting("modules/virtual_currency/hooks/useFetchVirtualCurrencyBalance.tsx");
+const useEffect = _mod19.useEffect;
+const result = size.fileFinishedImporting("modules/virtual_currency/hooks/useFetchVirtualCurrencyBalance.tsx");
 
 export const useFetchVirtualCurrencyBalance = function useFetchVirtualCurrencyBalance(disableFetch) {
-  const _require = disableFetch;
-  const items = [closure_3];
-  const isFetching = _require(balance[2]).useStateFromStoresObject(items, () => ({
-    balance: closure_3.balance,
-    isFetching: closure_3.isFetchingBalance,
-    error: closure_3.fetchBalanceError,
+  _require = disableFetch;
+  const items = [VirtualCurrencyStore];
+  const isFetching = require("initialize").useStateFromStoresObject(items, () => ({
+    balance: VirtualCurrencyStore.balance,
+    isFetching: VirtualCurrencyStore.isFetchingBalance,
+    error: VirtualCurrencyStore.fetchBalanceError,
   }));
   balance = isFetching.balance;
-  error = isFetching.error;
+  const error = isFetching.error;
   const items1 = [balance, error];
   disableFetch = undefined;
   if (disableFetch != null) {
@@ -34,11 +35,10 @@ export const useFetchVirtualCurrencyBalance = function useFetchVirtualCurrencyBa
       disableFetch = null !== error;
     }
     if (!disableFetch) {
-      disableFetch = closure_1_3.isFetchingBalance;
+      disableFetch = VirtualCurrencyStore.isFetchingBalance;
     }
     if (!disableFetch) {
-      const virtualCurrencyBalance = disableFetch(balance[3]).fetchVirtualCurrencyBalance();
-      const obj = disableFetch(balance[3]);
+      const virtualCurrencyBalance = VirtualCurrencyActionCreators.fetchVirtualCurrencyBalance();
     }
   }, items1);
   return { balance, isFetching: isFetching.isFetching, error };

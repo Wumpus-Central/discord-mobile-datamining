@@ -1,43 +1,47 @@
 // discord_app/modules/parent_tools/native/ParentalConsentWarningModal.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../FamilyCenterStore.tsx";
-import items from "../FamilyCenterConstants.tsx";
-import ME from "../../../Constants.tsx";
-import { ContentDismissActionType } from "../../dismissible_content/DismissibleContentConstants.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import DispatcherDefault from "../../../Dispatcher.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
+import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
+import DismissibleContentUtils from "../../dismissible_content/DismissibleContentUtils.tsx";
+import RootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
+import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import FamilyCenterStore from "../FamilyCenterStore.tsx";
 
-const require = arg1;
-({ FamilyCenterSubPages: closure_6, UserLinkStatus: error, UserLinkType: closure_8 } = items);
-({ AnalyticEvents: c9, UserSettingsSections: c10 } = ME);
+require = fn;
+const View = fn(17).View;
+const FamilyCenterConstants = fn(7538);
+({ FamilyCenterSubPages: metroRequire, UserLinkStatus: closure_7, UserLinkType: closure_8 } = FamilyCenterConstants);
+const Constants = fn(1074);
+({ AnalyticEvents: closure_9, UserSettingsSections: c10 } = Constants);
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const modal = "modal";
-let closure_15 = require("DismissibleContent").DismissibleContent.PARENTAL_CONSENT_GRACE_WARNING;
-createCacheKey = { container: null, illustration: null, title: null, body: null };
-createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { alignItems: "center", paddingTop: ThemesDefault.space.PX_12 };
-createCacheKey[2] = { textAlign: "center" };
-createCacheKey[3] = { textAlign: "center" };
-let closure_16 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { alignItems: "center", paddingTop: ThemesDefault.space.PX_12 };
-let result = require("set").fileFinishedImporting("modules/parent_tools/native/ParentalConsentWarningModal.tsx");
+let closure_15 = fn(1943).DismissibleContent.PARENTAL_CONSENT_GRACE_WARNING;
+fn(4560);
+let createStyles = { container: null, illustration: null, title: null, body: null };
+createStyles = { paddingHorizontal: nativeDefault.space.PX_16 };
+createStyles.container = createStyles;
+createStyles.illustration = { alignItems: "center", paddingTop: nativeDefault.space.PX_12 };
+createStyles.title = { textAlign: "center" };
+createStyles.body = { textAlign: "center" };
+let closure_16 = createStyles.createStyles(createStyles);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/parent_tools/native/ParentalConsentWarningModal.tsx");
 
 export default function ParentalConsentWarningModal(daysRemaining) {
   daysRemaining = daysRemaining.daysRemaining;
-  importDefault = undefined;
   let callback;
   let callback1;
-  let tmp = callback3();
+  let tmp = closure_16();
   let obj = daysRemaining(callback[15]);
   const syncMessages = obj.useSyncMessages(daysRemaining(callback[16]).messagesLoader);
   const effect = callback1.useEffect(() => {
-    let obj = ref(callback[17]);
-    obj = { surface_type: closure_1_14, days_remaining: daysRemaining };
-    obj.track(closure_1_9.PARENTAL_CONSENT_WARNING_SURFACE_SHOWN, obj);
-    ref(callback[18]).dispatch({ type: "PARENTAL_CONSENT_WARNING_MODAL_SHOWN" });
+    const obj = { surface_type: modal, days_remaining: daysRemaining };
+    obj.track(constants2.PARENTAL_CONSENT_WARNING_SURFACE_SHOWN, obj);
+    DispatcherDefault.dispatch({ type: "PARENTAL_CONSENT_WARNING_MODAL_SHOWN" });
   }, []);
   importDefault = callback1.useRef(false);
   callback = callback1.useCallback(() => {
@@ -45,10 +49,8 @@ export default function ParentalConsentWarningModal(daysRemaining) {
     let flag = !current;
     if (!current) {
       tmp.current = true;
-      let obj = daysRemaining(callback[19]);
-      obj = { dismissAction: null };
-      obj[0] = closure_1_11.USER_DISMISS;
-      const result = obj.markTimeRecurringDismissibleContentAsDismissed(closure_1_15, obj);
+      const obj = { dismissAction: ContentDismissActionType.USER_DISMISS };
+      const result = obj.markTimeRecurringDismissibleContentAsDismissed(closure_15, obj);
       flag = true;
     }
     return flag;
@@ -56,24 +58,21 @@ export default function ParentalConsentWarningModal(daysRemaining) {
   const items = [daysRemaining, callback];
   callback1 = callback1.useCallback(() => {
     if (callback()) {
-      let obj = ref(callback[17]);
-      obj = { surface_type: null, days_remaining: null };
-      obj[0] = closure_1_14;
-      obj[1] = daysRemaining;
-      obj.track(closure_1_9.PARENTAL_CONSENT_WARNING_SURFACE_DISMISSED, obj);
+      const obj = { surface_type: modal, days_remaining: daysRemaining };
+      obj.track(constants2.PARENTAL_CONSENT_WARNING_SURFACE_DISMISSED, obj);
     }
   }, items);
   const items1 = [callback1];
   const items2 = [callback];
   const callback2 = callback1.useCallback(() => {
     callback1();
-    ref(callback[20]).hideActionSheet();
+    ActionSheetActionCreatorsDefault.hideActionSheet();
   }, items1);
-  callback3 = callback1.useCallback(() => {
+  const callback3 = callback1.useCallback(() => {
     callback();
-    let obj = ref(callback[20]);
+    let obj = ActionSheetActionCreatorsDefault;
     obj.hideActionSheet();
-    const values = Object.values(closure_1_5.getLinkedUsers());
+    const values = Object.values(FamilyCenterStore.getLinkedUsers());
     if (
       values.some((link_status) => {
         let tmp = link_status.link_status === constants.PENDING;
@@ -83,86 +82,83 @@ export default function ParentalConsentWarningModal(daysRemaining) {
         return tmp;
       })
     ) {
-      let tmp2Result = tmp2(tmp3[8]);
-      const tab = tmp2Result.selectTab(closure_1_6.REQUESTS);
-      const rootNavigationRef = daysRemaining(tmp3[9]).getRootNavigationRef();
+      let tmp2Result = tmp2(7539);
+      const tab = tmp2Result.selectTab(constants.REQUESTS);
+      const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
       if (null != rootNavigationRef) {
         if (rootNavigationRef.isReady()) {
-          obj = { screen: null };
-          obj[0] = closure_1_10.FAMILY_CENTER;
-          tmp9(tmp3[10]).openUserSettings(obj);
-          const tmp9Result = tmp9(tmp3[10]);
+          obj = { screen: constants3.FAMILY_CENTER };
+          tmp9(7382).openUserSettings(obj);
+          const tmp9Result = tmp9(7382);
         }
       }
-      tmp2Result = tmp2(tmp3[11]);
+      tmp2Result = tmp2(4766);
       tmp2Result.enqueue(() => {
-        let obj = callback(table[10]);
-        obj = { screen: constants3.FAMILY_CENTER };
+        daysRemaining(callback[10]);
+        const obj = { screen: constants3.FAMILY_CENTER };
         return obj.openUserSettings(obj);
       });
-      const obj5 = daysRemaining(tmp3[9]);
-      tmp9 = daysRemaining;
+      tmp9 = require;
     } else {
-      tmp2(tmp3[21]).pushLazy(daysRemaining(tmp3[23])(tmp3[22], tmp3.paths));
-      const tmp2Result1 = tmp2(tmp3[21]);
+      tmp2(4763).pushLazy(asyncRequireImpl(17463, dependencyMap.paths));
+      const tmp2Result1 = tmp2(4763);
     }
   }, items2);
   const intl = daysRemaining(callback[15]).intl;
   if (0 === daysRemaining) {
     let stringResult = intl.string(tmp2(tmp3[16]).Zo5YZD);
   } else {
-    obj = { count: null };
-    obj[0] = daysRemaining;
+    obj = { count: daysRemaining };
     stringResult = intl.formatToPlainString(tmp2(tmp3[16]).b4sYUn, obj);
   }
   const intl2 = tmp4(tmp3[15]).intl;
   if (0 === daysRemaining) {
     let stringResult1 = intl2.string(tmp2(tmp3[16]).CRZBSY);
   } else {
-    obj = { count: null };
-    obj[0] = daysRemaining;
+    obj = { count: daysRemaining };
     stringResult1 = intl2.formatToPlainString(tmp2(tmp3[16]).mQcGGY, obj);
   }
-  obj1 = { startExpanded: true, onDismiss: callback1, children: null };
-  const obj2 = { style: items3, children: null };
-  items3 = [tmp.container, { paddingBottom: importDefault(callback[14])().bottom }];
-  const obj3 = { spacing: importDefault(callback[13]).space.PX_16, children: null };
+  const obj1 = { startExpanded: true, onDismiss: callback1, children: null };
+  const obj2 = { style: null, children: null };
+  const items3 = [tmp.container, { paddingBottom: require("useSafeAreaInsets")().bottom }];
+  obj2.style = items3;
+  const obj3 = { spacing: require("native").space.PX_16, children: null };
   const items4 = [
-    callback(View, {
+    closure_12(View, {
       style: tmp.illustration,
-      children: callback(daysRemaining(callback[26]).FamilyKeysSpotIllustration, { accessible: false }),
+      children: closure_12(daysRemaining(callback[26]).FamilyKeysSpotIllustration, { accessible: false }),
     }),
-    callback(daysRemaining(callback[27]).Text, {
+    closure_12(daysRemaining(callback[27]).Text, {
       variant: "heading-lg/bold",
       color: "text-default",
       style: tmp.title,
       accessibilityRole: "header",
       children: stringResult,
     }),
-    callback(daysRemaining(callback[27]).Text, {
+    closure_12(daysRemaining(callback[27]).Text, {
       variant: "text-md/medium",
       color: "text-default",
       style: tmp.body,
       children: stringResult1,
     }),
   ];
-  const obj7 = { spacing: importDefault(callback[13]).space.PX_8, children: null };
+  const obj7 = { spacing: require("native").space.PX_8, children: null };
   const obj8 = { size: "lg", variant: "primary", grow: true, text: null, onPress: null };
   const intl3 = tmp4(tmp3[15]).intl;
-  obj8[3] = intl3.string(importDefault(callback[16]).Kp7sjX);
-  obj8[4] = callback3;
-  const items5 = [callback(daysRemaining(callback[28]).Button, obj8)];
+  obj8.text = intl3.string(require("../FamilyCenter.messages.js").Kp7sjX);
+  obj8.onPress = callback3;
+  const items5 = [closure_12(daysRemaining(callback[28]).Button, obj8)];
   const obj9 = { size: "lg", variant: "secondary", grow: true, text: null, accessibilityHint: null, onPress: null };
   const intl4 = tmp4(tmp3[15]).intl;
-  obj9[3] = intl4.string(importDefault(callback[16]).hST5o8);
+  obj9.text = intl4.string(require("../FamilyCenter.messages.js").hST5o8);
   const intl5 = tmp4(tmp3[15]).intl;
-  obj9[4] = intl5.string(importDefault(callback[16])["4fZtHa"]);
-  obj9[5] = callback2;
-  items5[1] = callback(daysRemaining(callback[28]).Button, obj9);
-  obj7[1] = items5;
-  items4[3] = callback2(daysRemaining(callback[25]).Stack, obj7);
-  obj3[1] = items4;
-  obj2[1] = callback2(daysRemaining(callback[25]).Stack, obj3);
-  obj1[2] = callback(View, obj2);
-  return callback(daysRemaining(callback[24]).BottomSheet, obj1);
+  obj9.accessibilityHint = intl5.string(require("../FamilyCenter.messages.js")["4fZtHa"]);
+  obj9.onPress = callback2;
+  items5[1] = closure_12(daysRemaining(callback[28]).Button, obj9);
+  obj7.children = items5;
+  items4[3] = closure_13(daysRemaining(callback[25]).Stack, obj7);
+  obj3.children = items4;
+  obj2.children = closure_13(daysRemaining(callback[25]).Stack, obj3);
+  obj1.children = closure_12(View, obj2);
+  return closure_12(daysRemaining(callback[24]).BottomSheet, obj1);
 }

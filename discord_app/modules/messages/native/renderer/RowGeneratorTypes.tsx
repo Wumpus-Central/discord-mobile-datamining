@@ -1,7 +1,7 @@
 // discord_app/modules/messages/native/renderer/RowGeneratorTypes.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/messages/native/renderer/RowGeneratorTypes.tsx");
+const result = size.fileFinishedImporting("modules/messages/native/renderer/RowGeneratorTypes.tsx");
 
 export const MediaGalleryItemType = {
   IMAGE: 1,

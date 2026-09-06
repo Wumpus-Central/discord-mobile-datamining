@@ -1,48 +1,46 @@
 // discord_app/modules/collectibles/hooks/useProductPurchaseState.tsx
+import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import compactDefault from "../../../../_runtime/08843_compact.js";
-import closure_3 from "../CollectiblesPurchaseStore.tsx";
+import CollectiblesPurchaseStore from "../CollectiblesPurchaseStore.tsx";
 
-const require = arg1;
-function getProductPurchaseState(closure_1_5, skuId) {
-  const _require = closure_1_5;
-  let tmp = null != closure_1_5.getPurchase(skuId.skuId);
+require = fn;
+function getProductPurchaseState(CollectiblesPurchaseStore, skuId) {
+  let tmp = null != CollectiblesPurchaseStore.getPurchase(skuId.skuId);
   let items = skuId.items;
   if (items == null) {
     items = [];
   }
-  const tmp3Result = compactDefault(items.map((skuId) => store.getPurchase(skuId.skuId)));
+  const tmp3Result = compactDefault(items.map((skuId) => CollectiblesPurchaseStore.getPurchase(skuId.skuId)));
   let type;
   if (skuId != null) {
     type = skuId.type;
   }
-  if (
-    require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx").CollectiblesItemType
-      .BUNDLE === type
-  ) {
+  if (CollectiblesItemType.CollectiblesItemType.BUNDLE === type) {
     if (!tmp) {
       tmp = items.length > 0 && tmp3Result.length === items.length;
       const tmp7 = items.length > 0 && tmp3Result.length === items.length;
     }
-    let obj = { isPurchased: null, isPartiallyOwnedBundle: null, isPartiallyOwnedVariantsGroup: false };
-    obj[0] = tmp;
-    obj[1] = tmp3Result.length > 0 && tmp3Result.length < items.length;
+    let obj = {
+      isPurchased: tmp,
+      isPartiallyOwnedBundle: tmp3Result.length > 0 && tmp3Result.length < items.length,
+      isPartiallyOwnedVariantsGroup: false,
+    };
     return obj;
-  } else if (tmp5(1889).CollectiblesItemType.VARIANTS_GROUP === type) {
+  } else if (CollectiblesItemType.CollectiblesItemType.VARIANTS_GROUP === type) {
     const variants = skuId.variants;
     let everyResult;
     if (variants != null) {
-      everyResult = variants.every((skuId) => null != store.getPurchase(skuId.skuId));
+      everyResult = variants.every((skuId) => null != CollectiblesPurchaseStore.getPurchase(skuId.skuId));
     }
     let flag = everyResult;
     if (everyResult == null) {
       flag = false;
     }
-    obj = { isPurchased: null, isPartiallyOwnedBundle: false, isPartiallyOwnedVariantsGroup: null };
-    obj[0] = flag;
+    obj = { isPurchased: flag, isPartiallyOwnedBundle: false, isPartiallyOwnedVariantsGroup: null };
     const variants2 = skuId.variants;
     let flag2;
     if (variants2 != null) {
-      flag2 = variants2.some((skuId) => null != store.getPurchase(skuId.skuId));
+      flag2 = variants2.some((skuId) => null != CollectiblesPurchaseStore.getPurchase(skuId.skuId));
     }
     if (flag2) {
       flag2 = !everyResult;
@@ -50,23 +48,21 @@ function getProductPurchaseState(closure_1_5, skuId) {
     if (flag2 == null) {
       flag2 = false;
     }
-    obj[2] = flag2;
+    obj.isPartiallyOwnedVariantsGroup = flag2;
     return obj;
   } else {
-    obj = { isPurchased: null, isPartiallyOwnedBundle: false, isPartiallyOwnedVariantsGroup: false };
-    obj[0] = tmp;
+    obj = { isPurchased: tmp, isPartiallyOwnedBundle: false, isPartiallyOwnedVariantsGroup: false };
     return obj;
   }
-  const tmp3 = compactDefault;
-  tmp5 = _require;
 }
-const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useProductPurchaseState.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/hooks/useProductPurchaseState.tsx");
 
 export { getProductPurchaseState };
 export const useProductPurchaseState = function useProductPurchaseState(product) {
-  const _require = product;
-  const items = [closure_3];
-  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () =>
-    closure_1_4(closure_1_3, closure_0),
+  _require = product;
+  const items = [CollectiblesPurchaseStore];
+  return require("initialize").useStateFromStoresObject(items, () =>
+    getProductPurchaseState(CollectiblesPurchaseStore, closure_0),
   );
 };

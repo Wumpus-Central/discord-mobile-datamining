@@ -1,16 +1,16 @@
 // discord_app/modules/auth/native/components/ExternalLink.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-({ Linking: c4, ScrollView: c5, View: closure_6 } = get_ActivityIndicator);
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-let closure_9 = createCacheKey.createStyles((arg0) => {
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ Linking: closure_4, ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4560);
+let closure_9 = createStyles.createStyles((arg0) => {
   const container = {
-    backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
     height: "100%",
     display: "flex",
     justifyContent: null,
@@ -21,28 +21,29 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
   if (arg0) {
     str = "space-between";
   }
-  container[3] = str;
+  container.justifyContent = str;
   const space = tmp(576).space;
-  container[4] = arg0 ? space.PX_24 : space.PX_16;
+  container.paddingLeft = arg0 ? space.PX_24 : space.PX_16;
   const space2 = tmp(576).space;
-  container[5] = arg0 ? space2.PX_24 : space2.PX_16;
+  container.paddingRight = arg0 ? space2.PX_24 : space2.PX_16;
   return { container, description: { textAlign: "center", marginTop: 8 } };
 });
-const result = require("set").fileFinishedImporting("modules/auth/native/components/ExternalLink.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/auth/native/components/ExternalLink.tsx");
 
 export default function ExternalLink(externalURL) {
   externalURL = externalURL.externalURL;
   importDefault = undefined;
-  let callback;
-  const tmp = callback3(importDefault(callback[5])());
-  let obj = externalURL(callback[6]);
+  let onPress;
+  const tmp = closure_9(require("useWideAuthView")());
+  let obj = externalURL(onPress[6]);
   importDefault = obj.useNavigation();
   const items = [externalURL];
-  callback = React.useCallback(() => {
-    closure_1_4.openURL(externalURL);
+  onPress = noop.useCallback(() => {
+    React4.openURL(externalURL);
   }, items);
-  const items1 = [callback];
-  const effect = React.useEffect(() => {
+  const items1 = [onPress];
+  const effect = noop.useEffect(() => {
     callback();
   }, items1);
   obj = {
@@ -52,31 +53,31 @@ export default function ExternalLink(externalURL) {
     children: null,
   };
   obj = { children: null };
-  obj1 = { children: null };
-  const intl = externalURL(callback[8]).intl;
-  obj1[0] = intl.string(externalURL(callback[8]).t["0Niu/F"]);
-  const items2 = [callback(importDefault(callback[7]), obj1)];
+  const obj1 = { children: null };
+  const intl = externalURL(onPress[8]).intl;
+  obj1.children = intl.string(externalURL(onPress[8]).t["0Niu/F"]);
+  const items2 = [closure_7(require("AuthHeader"), obj1)];
   const obj2 = { style: tmp.description, variant: "text-md/medium", color: "text-default", children: null };
-  const intl2 = externalURL(callback[8]).intl;
-  obj2[3] = intl2.string(externalURL(callback[8]).t.nToOEg);
-  items2[1] = callback(externalURL(callback[9]).Text, obj2);
-  obj[0] = items2;
-  const items3 = [callback2(closure_6, obj)];
+  const intl2 = externalURL(onPress[8]).intl;
+  obj2.children = intl2.string(externalURL(onPress[8]).t.nToOEg);
+  items2[1] = closure_7(externalURL(onPress[9]).Text, obj2);
+  obj.children = items2;
+  const items3 = [closure_8(closure_6, obj)];
   const obj3 = { children: null };
   const obj4 = { shrink: true, variant: "primary", text: null, onPress: null };
-  const intl3 = externalURL(callback[8]).intl;
-  obj4[2] = intl3.string(externalURL(callback[8]).t["2ixEBi"]);
-  obj4[3] = callback;
-  const items4 = [callback(externalURL(callback[11]).Button, obj4)];
+  const intl3 = externalURL(onPress[8]).intl;
+  obj4.text = intl3.string(externalURL(onPress[8]).t["2ixEBi"]);
+  obj4.onPress = onPress;
+  const items4 = [closure_7(externalURL(onPress[11]).Button, obj4)];
   const obj5 = { shrink: true, variant: "secondary", text: null, onPress: null };
-  const intl4 = externalURL(callback[8]).intl;
-  obj5[2] = intl4.string(externalURL(callback[8]).t.j3cG2p);
-  obj5[3] = function onPress() {
-    return arr.pop();
+  const intl4 = externalURL(onPress[8]).intl;
+  obj5.text = intl4.string(externalURL(onPress[8]).t.j3cG2p);
+  obj5.onPress = function onPress() {
+    return closure_1.pop();
   };
-  items4[1] = callback(externalURL(callback[11]).Button, obj5);
-  obj3[0] = items4;
-  items3[1] = callback2(externalURL(callback[10]).ButtonGroup, obj3);
-  obj[3] = items3;
-  return callback2(closure_5, obj);
+  items4[1] = closure_7(externalURL(onPress[11]).Button, obj5);
+  obj3.children = items4;
+  items3[1] = closure_8(externalURL(onPress[10]).ButtonGroup, obj3);
+  obj.children = items3;
+  return closure_8(closure_5, obj);
 }

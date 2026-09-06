@@ -1,25 +1,27 @@
 // discord_app/modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationWarningsForChannel.tsx
-import closure_2 from "../../ChannelSafetyWarningsStore.tsx";
-import { SafetyWarningTypes } from "../../ChannelSafetyWarningsStore.tsx";
+import ChannelSafetyWarningsStore from "../../ChannelSafetyWarningsStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
+const require = fn;
+const SafetyWarningTypes = fn(10915).SafetyWarningTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationWarningsForChannel.tsx",
 );
 
 export const useInappropriateConversationWarningsForChannel = function useInappropriateConversationWarningsForChannel(
   channelId,
 ) {
-  const _require = channelId;
-  const items = [closure_2];
+  _require = channelId;
+  const items = [ChannelSafetyWarningsStore];
   const items1 = [channelId];
-  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+  const stateFromStores = require("initialize").useStateFromStores(
     items,
-    () => closure_1_2.getChannelSafetyWarnings(closure_0),
+    () => ChannelSafetyWarningsStore.getChannelSafetyWarnings(closure_0),
     items1,
   );
   return stateFromStores.filter(
     (type) =>
-      type.type === obj.INAPPROPRIATE_CONVERSATION_TIER_1 || type.type === tmp.INAPPROPRIATE_CONVERSATION_TIER_2,
+      type.type === SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1 ||
+      type.type === tmp.INAPPROPRIATE_CONVERSATION_TIER_2,
   );
 };

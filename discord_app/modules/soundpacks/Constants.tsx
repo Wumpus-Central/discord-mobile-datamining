@@ -1,7 +1,7 @@
 // discord_app/modules/soundpacks/Constants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/soundpacks/Constants.tsx");
+const result = size.fileFinishedImporting("modules/soundpacks/Constants.tsx");
 
 export const Soundpacks = {
   CLASSIC: "classic",

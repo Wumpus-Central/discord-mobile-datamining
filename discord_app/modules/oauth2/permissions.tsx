@@ -1,9 +1,10 @@
 // discord_app/modules/oauth2/permissions.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
-import getSystemLocale from "../../intl/index.native.tsx";
+import Constants from "../../Constants.tsx";
+import BigFlagUtilsAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import util from "../../intl/index.native.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const Permissions = ME.Permissions;
+const Permissions = Constants.Permissions;
 const items = [, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,];
 ({
   ADMINISTRATOR: arr[0],
@@ -62,216 +63,216 @@ const items = [, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,
 } = Permissions);
 const obj = {
   [ADMINISTRATOR.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.PGvZqX);
+    const intl = util.intl;
+    return intl.string(util.t.PGvZqX);
   },
   [MANAGE_GUILD.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.QZRcfO);
+    const intl = util.intl;
+    return intl.string(util.t.QZRcfO);
   },
   [MANAGE_ROLES.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["C8d+oG"]);
+    const intl = util.intl;
+    return intl.string(util.t["C8d+oG"]);
   },
   [MANAGE_CHANNELS.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["9qLtWs"]);
+    const intl = util.intl;
+    return intl.string(util.t["9qLtWs"]);
   },
   [KICK_MEMBERS.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.pBNv6i);
+    const intl = util.intl;
+    return intl.string(util.t.pBNv6i);
   },
   [BAN_MEMBERS.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.oTBA7N);
+    const intl = util.intl;
+    return intl.string(util.t.oTBA7N);
   },
   [CREATE_INSTANT_INVITE.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.zJrgTG);
+    const intl = util.intl;
+    return intl.string(util.t.zJrgTG);
   },
   [MANAGE_NICKNAMES.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["t+Ct5x"]);
+    const intl = util.intl;
+    return intl.string(util.t["t+Ct5x"]);
   },
   [CHANGE_NICKNAME.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.dilOF6);
+    const intl = util.intl;
+    return intl.string(util.t.dilOF6);
   },
   [MANAGE_GUILD_EXPRESSIONS.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.bbuXIn);
+    const intl = util.intl;
+    return intl.string(util.t.bbuXIn);
   },
   [CREATE_GUILD_EXPRESSIONS.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.HarVuP);
+    const intl = util.intl;
+    return intl.string(util.t.HarVuP);
   },
   [MANAGE_WEBHOOKS.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["/ADKmM"]);
+    const intl = util.intl;
+    return intl.string(util.t["/ADKmM"]);
   },
   [VIEW_AUDIT_LOG.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.fZgLpA);
+    const intl = util.intl;
+    return intl.string(util.t.fZgLpA);
   },
   [VIEW_CHANNEL.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.uV83yi);
+    const intl = util.intl;
+    return intl.string(util.t.uV83yi);
   },
   [SEND_MESSAGES.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.T32rkC);
+    const intl = util.intl;
+    return intl.string(util.t.T32rkC);
   },
   [SEND_TTS_MESSAGES.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.Mg7bku);
+    const intl = util.intl;
+    return intl.string(util.t.Mg7bku);
   },
   [MANAGE_MESSAGES.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["6lU9xM"]);
+    const intl = util.intl;
+    return intl.string(util.t["6lU9xM"]);
   },
   [EMBED_LINKS.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["969dEL"]);
+    const intl = util.intl;
+    return intl.string(util.t["969dEL"]);
   },
   [ATTACH_FILES.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["3AS4UM"]);
+    const intl = util.intl;
+    return intl.string(util.t["3AS4UM"]);
   },
   [READ_MESSAGE_HISTORY.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.l9ufaR);
+    const intl = util.intl;
+    return intl.string(util.t.l9ufaR);
   },
   [MENTION_EVERYONE.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.Y78KGC);
+    const intl = util.intl;
+    return intl.string(util.t.Y78KGC);
   },
   [ADD_REACTIONS.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.yEoJAr);
+    const intl = util.intl;
+    return intl.string(util.t.yEoJAr);
   },
   [USE_EXTERNAL_EMOJIS.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.BpBGZU);
+    const intl = util.intl;
+    return intl.string(util.t.BpBGZU);
   },
   [USE_EXTERNAL_STICKERS.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["UeRs+b"]);
+    const intl = util.intl;
+    return intl.string(util.t["UeRs+b"]);
   },
   [USE_APPLICATION_COMMANDS.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.shbR1a);
+    const intl = util.intl;
+    return intl.string(util.t.shbR1a);
   },
   [SEND_VOICE_MESSAGES.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["+8GStU"]);
+    const intl = util.intl;
+    return intl.string(util.t["+8GStU"]);
   },
   [CONNECT.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.S0W8Z5);
+    const intl = util.intl;
+    return intl.string(util.t.S0W8Z5);
   },
   [SPEAK.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["8w1tIR"]);
+    const intl = util.intl;
+    return intl.string(util.t["8w1tIR"]);
   },
   [MUTE_MEMBERS.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["8EI30/"]);
+    const intl = util.intl;
+    return intl.string(util.t["8EI30/"]);
   },
   [DEAFEN_MEMBERS.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["9L47Fr"]);
+    const intl = util.intl;
+    return intl.string(util.t["9L47Fr"]);
   },
   [MOVE_MEMBERS.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.YtjJPQ);
+    const intl = util.intl;
+    return intl.string(util.t.YtjJPQ);
   },
   [USE_VAD.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["08zAV7"]);
+    const intl = util.intl;
+    return intl.string(util.t["08zAV7"]);
   },
   [PRIORITY_SPEAKER.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.BVK71i);
+    const intl = util.intl;
+    return intl.string(util.t.BVK71i);
   },
   [CREATE_PUBLIC_THREADS.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["25rKnX"]);
+    const intl = util.intl;
+    return intl.string(util.t["25rKnX"]);
   },
   [CREATE_PRIVATE_THREADS.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.QwbTSa);
+    const intl = util.intl;
+    return intl.string(util.t.QwbTSa);
   },
   [SEND_MESSAGES_IN_THREADS.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.fTE74g);
+    const intl = util.intl;
+    return intl.string(util.t.fTE74g);
   },
   [MANAGE_THREADS.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.kEqgr7);
+    const intl = util.intl;
+    return intl.string(util.t.kEqgr7);
   },
   [MANAGE_EVENTS.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.HIgA5a);
+    const intl = util.intl;
+    return intl.string(util.t.HIgA5a);
   },
   [CREATE_EVENTS.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.qyjZua);
+    const intl = util.intl;
+    return intl.string(util.t.qyjZua);
   },
   [MODERATE_MEMBERS.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["7DgVBr"]);
+    const intl = util.intl;
+    return intl.string(util.t["7DgVBr"]);
   },
   [REQUEST_TO_SPEAK.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["5kicT2"]);
+    const intl = util.intl;
+    return intl.string(util.t["5kicT2"]);
   },
   [VIEW_GUILD_ANALYTICS.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["rQJBE/"]);
+    const intl = util.intl;
+    return intl.string(util.t["rQJBE/"]);
   },
   [VIEW_CREATOR_MONETIZATION_ANALYTICS.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["0lTLTv"]);
+    const intl = util.intl;
+    return intl.string(util.t["0lTLTv"]);
   },
   [STREAM.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.FlNoSV);
+    const intl = util.intl;
+    return intl.string(util.t.FlNoSV);
   },
   [USE_EMBEDDED_ACTIVITIES.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.rLSGeh);
+    const intl = util.intl;
+    return intl.string(util.t.rLSGeh);
   },
   [USE_SOUNDBOARD.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.Bco7NG);
+    const intl = util.intl;
+    return intl.string(util.t.Bco7NG);
   },
   [USE_EXTERNAL_SOUNDS.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.pwaVJ6);
+    const intl = util.intl;
+    return intl.string(util.t.pwaVJ6);
   },
   [SET_VOICE_CHANNEL_STATUS.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.VBwkUf);
+    const intl = util.intl;
+    return intl.string(util.t.VBwkUf);
   },
   [SEND_POLLS.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.UMQ7Ww);
+    const intl = util.intl;
+    return intl.string(util.t.UMQ7Ww);
   },
   [USE_EXTERNAL_APPS.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.TtA5rK);
+    const intl = util.intl;
+    return intl.string(util.t.TtA5rK);
   },
   [PIN_MESSAGES.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.Y5BI39);
+    const intl = util.intl;
+    return intl.string(util.t.Y5BI39);
   },
   [BYPASS_SLOWMODE.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.kqcjeV);
+    const intl = util.intl;
+    return intl.string(util.t.kqcjeV);
   },
   [MANAGE_OFFICIAL_MESSAGES.toString()]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.Aj9ruN);
+    const intl = util.intl;
+    return intl.string(util.t.Aj9ruN);
   },
 };
 ({
@@ -329,26 +330,26 @@ const obj = {
   BYPASS_SLOWMODE,
   MANAGE_OFFICIAL_MESSAGES,
 } = Permissions);
-const result = set.fileFinishedImporting("modules/oauth2/permissions.tsx");
+const result = size.fileFinishedImporting("modules/oauth2/permissions.tsx");
 
 export const OrderedPermissions = items;
 export const containsDisallowedPermission = function containsDisallowedPermission(memo4) {
   closure_0 = memo4;
   const values = Object.values(Permissions);
-  return values.some((arg0) => {
-    let hasItem = closure_1_1(closure_1_2[1]).has(closure_0, arg0);
+  return values.some((item) => {
+    let hasItem = BigFlagUtilsAll.has(closure_0, item);
     if (hasItem) {
-      hasItem = !closure_1_4.includes(arg0);
+      hasItem = !items.includes(item);
     }
     return hasItem;
   });
 };
-export const getPermissionName = function getPermissionName(arg0) {
-  const tmp = obj[arg0.toString(arg0)];
+export const getPermissionName = function getPermissionName(item) {
+  const tmp = obj[item.toString(item)];
   if (null == tmp) {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    error = new Error("Unknown permission. Did you provide a _single_ bit flag? Perm: " + arg0);
+    const error = new Error("Unknown permission. Did you provide a _single_ bit flag? Perm: " + item);
     throw error;
   } else {
     return tmp();

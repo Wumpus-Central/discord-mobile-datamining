@@ -1,12 +1,13 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/xbox/XboxLinkDiscordConsent.tsx
-import closure_2 from "../../../../../../../_runtime/00019_noop.js";
-import { XboxLinkModalScenes } from "XboxLinkConstants.tsx";
-import { PlatformTypes } from "../../../../../../Constants.tsx";
-import { XBOX_CLIENT_SCOPES } from "../../../../../game_console/GameConsoleConstants.tsx";
-import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
+import noop from "../../../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
+const require = fn;
+const XboxLinkModalScenes = fn(9219).XboxLinkModalScenes;
+const PlatformTypes = fn(1074).PlatformTypes;
+const XBOX_CLIENT_SCOPES = fn(9233).XBOX_CLIENT_SCOPES;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/user_settings/connections/native/two_way_link/xbox/XboxLinkDiscordConsent.tsx",
 );
 
@@ -17,11 +18,11 @@ export default function XboxLinkDiscordConsent(arg0) {
   navigation = obj.useNavigation();
   const items = [navigation];
   const items1 = [navigation];
-  const callback = React.useCallback(() => {
-    navigation.push(closure_1_3.SUCCESS);
+  const callback = noop.useCallback(() => {
+    navigation.push(XboxLinkModalScenes.SUCCESS);
   }, items);
-  const callback1 = React.useCallback(() => {
-    navigation.push(closure_1_3.ERROR);
+  const callback1 = noop.useCallback(() => {
+    navigation.push(XboxLinkModalScenes.ERROR);
   }, items1);
   obj = {
     platformType: PlatformTypes.XBOX,

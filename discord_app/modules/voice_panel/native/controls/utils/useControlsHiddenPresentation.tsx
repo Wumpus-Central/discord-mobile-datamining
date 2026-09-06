@@ -1,40 +1,39 @@
 // discord_app/modules/voice_panel/native/controls/utils/useControlsHiddenPresentation.tsx
-import set from "../../../../../../_runtime/00002_set.js";
-import VoicePanelModes from "../../../VoicePanelConstants.tsx";
-import { ReanimatedRexport } from "../../../../reanimated/ReanimatedRexport.tsx";
+import spring from "../../../../../design/animation/reanimated/spring/spring.tsx";
+import VoicePanelConstants from "../../../VoicePanelConstants.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-VoicePanelModes = VoicePanelModes.VoicePanelModes;
+const VoicePanelModes = VoicePanelConstants.VoicePanelModes;
 let obj = {};
-const merged = Object.assign(VoicePanelModes.MODE_CHANGE_PHYSICS);
+const merged = Object.assign(VoicePanelConstants.MODE_CHANGE_PHYSICS);
 obj.overshootClamping = true;
-let closure_4 = {
+const __initData = {
   code: "function useControlsHiddenPresentationTsx1(){const{yeeted,mode,VoicePanelModes,wrapperSpecs}=this.__closure;return{pointerEvents:yeeted||mode.get()!==VoicePanelModes.PANEL||wrapperSpecs.get().hidden?'none':'auto'};}",
 };
-let closure_5 = {
+const __initData2 = {
   code: "function useControlsHiddenPresentationTsx2(){const{withSpring,yeeted,wrapperSpecs,HIDDEN_OPACITY_PHYSICS,cleanUp,runOnJS}=this.__closure;return{opacity:withSpring(yeeted||wrapperSpecs.get().hidden?0:1,HIDDEN_OPACITY_PHYSICS,'respect-motion-settings',cleanUp!=null?function(finished){if(finished&&yeeted){runOnJS(cleanUp)();}}:undefined)};}",
 };
-const result = set.fileFinishedImporting("modules/voice_panel/native/controls/utils/useControlsHiddenPresentation.tsx");
+const result = size.fileFinishedImporting(
+  "modules/voice_panel/native/controls/utils/useControlsHiddenPresentation.tsx",
+);
 
 export default function useControlsHiddenPresentation(mode, wrapperSpecs) {
-  const _require = mode;
+  _require = mode;
   dependencyMap = wrapperSpecs;
-  obj = arg2;
+  let obj = arg2;
   if (arg2 === undefined) {
     obj = {};
   }
   const cleanUp = obj.cleanUp;
-  closure_3 = undefined;
-  let tmp =
-    obj.state === require("../../../../../../discord_common/js/packages/design/native.tsx").TransitionStates.YEETED;
-  closure_3 = tmp;
+  let tmp = obj.state === require("native").TransitionStates.YEETED;
+  HIDDEN_OPACITY_PHYSICS = tmp;
   obj = { hiddenProps: null, hiddenStyles: null };
   let fn = function _() {
     if (!closure_3) {
-      if (mode.get() === cleanUp.PANEL) {
+      if (mode.get() === VoicePanelModes.PANEL) {
         let str = "auto";
       }
-      obj = { pointerEvents: null };
-      obj[0] = str;
+      const obj = { pointerEvents: str };
       return obj;
     }
     str = "none";
@@ -42,9 +41,9 @@ export default function useControlsHiddenPresentation(mode, wrapperSpecs) {
   obj = { yeeted: tmp, mode, VoicePanelModes: cleanUp, wrapperSpecs };
   fn.__closure = obj;
   fn.__workletHash = 2182108251011;
-  fn.__initData = closure_4;
-  obj[0] = require("../../../../reanimated/ReanimatedRexport.tsx").useAnimatedProps(fn);
-  const obj3 = ReanimatedRexport;
+  fn.__initData = __initData;
+  obj.hiddenProps = require("ReanimatedRexport").useAnimatedProps(fn);
+  const obj3 = require("ReanimatedRexport");
   class S {
     constructor() {
       obj = closure_0(closure_1[3]);
@@ -60,11 +59,11 @@ export default function useControlsHiddenPresentation(mode, wrapperSpecs) {
         fn = (arg0) => {
           let tmp = arg0;
           if (arg0) {
-            tmp = closure_3;
+            tmp = closure_1_3;
           }
           if (tmp) {
-            closure_1_0(closure_1_1[2]).runOnJS(closure_2)();
-            obj = closure_1_0(closure_1_1[2]);
+            closure_0(dependencyMap[2]).runOnJS(cleanUp)();
+            const obj = closure_0(dependencyMap[2]);
           }
         };
       }
@@ -72,17 +71,17 @@ export default function useControlsHiddenPresentation(mode, wrapperSpecs) {
       return obj;
     }
   }
-  const obj5 = ReanimatedRexport;
+  const obj5 = require("ReanimatedRexport");
   S.__closure = {
-    withSpring: require("../../../../../design/animation/reanimated/spring/spring.tsx").withSpring,
+    withSpring: require("spring").withSpring,
     yeeted: tmp,
     wrapperSpecs,
-    HIDDEN_OPACITY_PHYSICS: closure_3,
+    HIDDEN_OPACITY_PHYSICS,
     cleanUp,
-    runOnJS: require("../../../../reanimated/ReanimatedRexport.tsx").runOnJS,
+    runOnJS: require("ReanimatedRexport").runOnJS,
   };
   S.__workletHash = 13662769817707;
-  S.__initData = closure_5;
-  obj[1] = obj5.useAnimatedStyle(S);
+  S.__initData = __initData2;
+  obj.hiddenStyles = obj5.useAnimatedStyle(S);
   return obj;
 }

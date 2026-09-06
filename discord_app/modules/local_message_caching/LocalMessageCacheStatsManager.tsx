@@ -1,9 +1,9 @@
 // discord_app/modules/local_message_caching/LocalMessageCacheStatsManager.tsx
-import set from "../../../_runtime/00002_set.js";
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
-import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
-import recordChannelFetchStartDefault from "MessageCacheStats.tsx";
-import ME from "../../Constants.tsx";
+import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
+import MessageCacheStatsDefault from "MessageCacheStats.tsx";
+import Constants from "../../Constants.tsx";
+import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 function makeLogLine(channelId) {
   const items = [channelId.channelId, , ,];
@@ -37,30 +37,25 @@ function makeLogLine(channelId) {
 function handleAppStateUpdate(state) {
   if (state.state === constants2.BACKGROUND) {
     const _Array = Array;
-    const fetchLogs = recordChannelFetchStartDefault.fetchLogs;
+    const fetchLogs = MessageCacheStatsDefault.fetchLogs;
     const mapped = Array.from(fetchLogs.values()).map(makeLogLine);
-    let obj = expandEventPropertiesDefault;
-    obj = {
-      num_channels_fetch_started: null,
-      num_channels_local_cached: null,
-      num_channels_fetched_network: null,
+    const obj = {
+      num_channels_fetch_started: MessageCacheStatsDefault.channelsFetchStarted.size,
+      num_channels_local_cached: MessageCacheStatsDefault.channelsFetchedWithLocalMessages.size,
+      num_channels_fetched_network: MessageCacheStatsDefault.channelsFetchedNetwork.size,
       num_times_backgrounded: null,
       fetch_entries: null,
     };
-    obj[0] = recordChannelFetchStartDefault.channelsFetchStarted.size;
-    obj[1] = recordChannelFetchStartDefault.channelsFetchedWithLocalMessages.size;
-    obj[2] = recordChannelFetchStartDefault.channelsFetchedNetwork.size;
     const sum = c4 + 1;
     c4 = sum;
-    obj[3] = sum;
-    obj[4] = mapped;
+    obj.num_times_backgrounded = sum;
+    obj.fetch_entries = mapped;
     obj.track(constants.CACHE_STATS_RECORDED, obj);
     const arr = Array.from(fetchLogs.values());
   }
 }
-({ AnalyticEvents: obj1, AppStates: c3 } = ME);
+({ AnalyticEvents: c2, AppStates: c3 } = Constants);
 let c4 = 0;
-initializeDefault;
 let prototype = function LocalMessageCacheStatsManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { APP_STATE_UPDATE: handleAppStateUpdate };
@@ -68,6 +63,6 @@ let prototype = function LocalMessageCacheStatsManager() {
 }.prototype;
 class prototype extends tmp3 {}
 prototype = new prototype();
-const result = set.fileFinishedImporting("modules/local_message_caching/LocalMessageCacheStatsManager.tsx");
+const result = size.fileFinishedImporting("modules/local_message_caching/LocalMessageCacheStatsManager.tsx");
 
 export default prototype;

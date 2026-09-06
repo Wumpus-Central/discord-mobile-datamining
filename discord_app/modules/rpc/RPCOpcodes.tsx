@@ -1,6 +1,6 @@
 // discord_app/modules/rpc/RPCOpcodes.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/rpc/RPCOpcodes.tsx");
+const result = size.fileFinishedImporting("modules/rpc/RPCOpcodes.tsx");
 
 export default { HANDSHAKE: 0, FRAME: 1, CLOSE: 2, HELLO: 3 };

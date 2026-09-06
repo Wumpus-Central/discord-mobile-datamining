@@ -1,32 +1,32 @@
 // discord_app/modules/games/autocomplete/queryGamesAutocomplete.tsx
-import GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH from "GameAutocompleteUtils.tsx";
-import fetchStore from "useGameAutocomplete.tsx";
-import closure_2 from "GameAutocompleteStore.tsx";
-import importDefaultResult from "../../../../_runtime/00551_debounce.js";
+import GameAutocompleteUtils from "GameAutocompleteUtils.tsx";
+import useGameAutocomplete2 from "useGameAutocomplete.tsx";
+import GameAutocompleteStore from "GameAutocompleteStore.tsx";
+import debounce from "../../../../_runtime/00551_debounce.js";
 
-require = arg1;
-let closure_3 = importDefaultResult(
+require = fn;
+let closure_3 = debounce(
   (arg0) => {
-    const useGameAutocomplete = fetchStore.useGameAutocomplete;
+    const useGameAutocomplete = useGameAutocomplete2.useGameAutocomplete;
     const items = [arg0];
     const many = useGameAutocomplete.fetchMany(items);
   },
-  require("fetchStore").GAME_AUTOCOMPLETE_DEBOUNCE_MS,
-  { leading: true, maxWait: require("fetchStore").GAME_AUTOCOMPLETE_DEBOUNCE_MAX_WAIT_MS },
+  fn(8899).GAME_AUTOCOMPLETE_DEBOUNCE_MS,
+  { leading: true, maxWait: fn(8899).GAME_AUTOCOMPLETE_DEBOUNCE_MAX_WAIT_MS },
 );
-const obj = { leading: true, maxWait: require("fetchStore").GAME_AUTOCOMPLETE_DEBOUNCE_MAX_WAIT_MS };
-let result = require("set").fileFinishedImporting("modules/games/autocomplete/queryGamesAutocomplete.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/games/autocomplete/queryGamesAutocomplete.tsx");
 
 export const queryGamesAutocomplete = function queryGamesAutocomplete(query) {
-  const result = GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH.normalizeGameAutocompleteQuery(query);
+  const result = GameAutocompleteUtils.normalizeGameAutocompleteQuery(query);
   let found = null;
   if (null != result) {
-    callback(result);
-    closestResults = closestResults.getClosestResults(result);
+    closure_3(result);
+    let closestResults = GameAutocompleteStore.getClosestResults(result);
     if (closestResults == null) {
       closestResults = [];
     }
-    found = closestResults.filter(GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH.isGameAutocompleteResultAllowedInGameWidgets);
+    found = closestResults.filter(GameAutocompleteUtils.isGameAutocompleteResultAllowedInGameWidgets);
   }
   return found;
 };

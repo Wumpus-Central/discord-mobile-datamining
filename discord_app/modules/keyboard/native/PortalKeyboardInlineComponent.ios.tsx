@@ -1,33 +1,29 @@
 // discord_app/modules/keyboard/native/PortalKeyboardInlineComponent.ios.tsx
-import importAllResult from "../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../a11y/AccessibilityStore.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
-const require = arg1;
-let c3 = importAllResult;
-({ NativeModules: c4, findNodeHandle: c5 } = get_ActivityIndicator);
-const memoResult = importAllResult.memo(function InlinePortalKeyboard(messagesRef) {
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ NativeModules: closure_4, findNodeHandle: hasOwnProperty } = get_ActivityIndicator);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/keyboard/native/PortalKeyboardInlineComponent.ios.tsx");
+
+export default noop.memo(function InlinePortalKeyboard(messagesRef) {
   messagesRef = messagesRef.messagesRef;
-  let id;
-  dependencyMap = undefined;
-  importAllResult = undefined;
-  let keyboardContextForType;
-  let field;
-  let field1;
-  closure_7 = undefined;
-  id = importAllResult.useId();
+  noop = undefined;
+  const id = noop.useId();
   const tmp2 = id(4427)();
   dependencyMap = tmp2;
   let tmp4 = id(6625)({ includeCustomKeyboard: false });
-  importAllResult = tmp4;
+  noop = tmp4;
   let tmp3 = id(1877)();
-  keyboardContextForType = messagesRef(4427).useKeyboardContextForType(messagesRef(1609).KeyboardTypes.SYSTEM);
+  const keyboardContextForType = messagesRef(4427).useKeyboardContextForType(messagesRef(1609).KeyboardTypes.SYSTEM);
   id(4992)(() => () => {
-    const PortalKeyboardUIStore = closure_1_0(closure_1_2[8]).PortalKeyboardUIStore;
+    const PortalKeyboardUIStore = messagesRef(closure_2[8]).PortalKeyboardUIStore;
     field = PortalKeyboardUIStore.getField("keyboard");
     let tmp4 = null != field;
     if (tmp4) {
-      tmp4 = field.handlerId === closure_1;
+      tmp4 = field.handlerId === id;
     }
     if (tmp4) {
       let tmpResult = tmp(tmp2[9]);
@@ -37,12 +33,12 @@ const memoResult = importAllResult.memo(function InlinePortalKeyboard(messagesRe
     }
   });
   let PortalKeyboardUIStore = messagesRef(4428).PortalKeyboardUIStore;
-  field = PortalKeyboardUIStore.useField("keyboard");
+  let field = PortalKeyboardUIStore.useField("keyboard");
   const PortalKeyboardUIStore2 = messagesRef(4428).PortalKeyboardUIStore;
-  field1 = PortalKeyboardUIStore2.useField("state");
-  closure_7 = importAllResult.useRef(false);
+  const field1 = PortalKeyboardUIStore2.useField("state");
+  noop.useRef(false);
   const items = [messagesRef.channelId, id, field, field1, tmp2, messagesRef, keyboardContextForType, tmp3, tmp4];
-  const layoutEffect = importAllResult.useLayoutEffect(() => {
+  const layoutEffect = noop.useLayoutEffect(() => {
     const current = ref.current;
     if (null != field) {
       if (null == tmp2.handlerId) {
@@ -124,6 +120,3 @@ const memoResult = importAllResult.memo(function InlinePortalKeyboard(messagesRe
   }, items);
   return null;
 });
-let result = require("set").fileFinishedImporting("modules/keyboard/native/PortalKeyboardInlineComponent.ios.tsx");
-
-export default memoResult;

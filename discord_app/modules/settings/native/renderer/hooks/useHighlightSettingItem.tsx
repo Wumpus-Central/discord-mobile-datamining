@@ -1,11 +1,10 @@
 // discord_app/modules/settings/native/renderer/hooks/useHighlightSettingItem.tsx
-import closure_0 from "../../../../user_settings/UserSettingSearchStore.tsx";
+import UserSettingSearchStore from "../../../../user_settings/UserSettingSearchStore.tsx";
 
-const result = require("set").fileFinishedImporting(
-  "modules/settings/native/renderer/hooks/useHighlightSettingItem.tsx",
-);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/settings/native/renderer/hooks/useHighlightSettingItem.tsx");
 
 export const useHighlightSettingItem = function useHighlightSettingItem(setting) {
-  const React = setting;
-  return React.useState((selected) => selected.selected === closure_0);
+  closure_0 = setting;
+  return UserSettingSearchStore.useState((selected) => selected.selected === closure_0);
 };

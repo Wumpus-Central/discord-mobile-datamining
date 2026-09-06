@@ -1,17 +1,18 @@
 // discord_app/design/components/experimental/Button/native/CollapsibleFloatingActionButtonState.native.tsx
-import _mod4296 from "../../../../../modules/reanimated/ReanimatedRexport.tsx";
-import closure_2 from "../../../../../../_runtime/00019_noop.js";
+import ReanimatedRexport from "../../../../../modules/reanimated/ReanimatedRexport.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-let closure_3 = {
+require = fn;
+const __initData = {
   code: "function CollapsibleFloatingActionButtonStateNativeTsx1({nativeEvent:nativeEvent}){const{initialScrollStart,previousOffset,MINIMUM_SCROLL_DISTANCE_TO_CLOSE,collapseText,SCROLL_OFFSET_THRESHOLD}=this.__closure;if(nativeEvent==null)return;const{contentOffset:{y:currentOffset},contentSize:{height:contentHeight},layoutMeasurement:{height:layoutHeight}}=nativeEvent;if(currentOffset<initialScrollStart)return;const contentHeightAsOffset=currentOffset+layoutHeight;if(contentHeightAsOffset>contentHeight)return;const offsetChanged=currentOffset-previousOffset.get();if(currentOffset<MINIMUM_SCROLL_DISTANCE_TO_CLOSE){collapseText.set(0);}else{if(Math.abs(offsetChanged)>SCROLL_OFFSET_THRESHOLD){collapseText.set(offsetChanged<0?0:1);}}previousOffset.set(currentOffset);}",
 };
-let result = require("set").fileFinishedImporting(
+const size = fn(2);
+let result = size.fileFinishedImporting(
   "design/components/experimental/Button/native/CollapsibleFloatingActionButtonState.native.tsx",
 );
 
 export const useCollapsibleFloatingActionButtonState = function useCollapsibleFloatingActionButtonState() {
-  const obj = { collapseText: _mod4296.useSharedValue(0) };
+  const obj = { collapseText: ReanimatedRexport.useSharedValue(0) };
   return obj;
 };
 export const useCollapsibleFloatingActionButtonScroll = function useCollapsibleFloatingActionButtonScroll(
@@ -23,8 +24,7 @@ export const useCollapsibleFloatingActionButtonScroll = function useCollapsibleF
   if (UNDETERMINED === undefined) {
     num = 0;
   }
-  let sharedValue;
-  sharedValue = collapseText(num[1]).useSharedValue(num);
+  const sharedValue = ReanimatedRexport.useSharedValue(num);
   const fn = function s(nativeEvent) {
     nativeEvent = nativeEvent.nativeEvent;
     if (null != nativeEvent) {
@@ -45,7 +45,6 @@ export const useCollapsibleFloatingActionButtonScroll = function useCollapsibleF
             }
           }
           const result2 = sharedValue.set(y);
-          const obj = sharedValue;
         }
       }
     }
@@ -58,7 +57,7 @@ export const useCollapsibleFloatingActionButtonScroll = function useCollapsibleF
     SCROLL_OFFSET_THRESHOLD: 10,
   };
   fn.__workletHash = 10435259247914;
-  fn.__initData = closure_3;
+  fn.__initData = __initData;
   const items = [num, sharedValue, collapseText];
-  return sharedValue.useCallback(fn, items);
+  return noop.useCallback(fn, items);
 };

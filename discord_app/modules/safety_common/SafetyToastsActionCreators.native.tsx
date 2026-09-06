@@ -1,75 +1,72 @@
 // discord_app/modules/safety_common/SafetyToastsActionCreators.native.tsx
-import set from "../../../_runtime/00002_set.js";
-import presentAddedFriendToast from "../toast/native/ToastUtils.tsx";
-import SafetyToastType2 from "Constants.tsx";
-import getSafetyToastTypeContent from "SafetyToastsUtils.tsx";
+import ToastUtils from "../toast/native/ToastUtils.tsx";
+import Constants from "Constants.tsx";
+import SafetyToastsUtils from "SafetyToastsUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const SafetyToastType = SafetyToastType2.SafetyToastType;
-const result = set.fileFinishedImporting("modules/safety_common/SafetyToastsActionCreators.native.tsx");
+const SafetyToastType = Constants.SafetyToastType;
+const result = size.fileFinishedImporting("modules/safety_common/SafetyToastsActionCreators.native.tsx");
 
 export default {
-  showIgnoreSuccessToast(closure_0, closure_1) {
-    const obj = presentAddedFriendToast;
+  showIgnoreSuccessToast(id, channelId) {
+    const obj = ToastUtils;
     obj.showSafetySuccess(
       SafetyToastType.IGNORE_SUCCESS,
-      getSafetyToastTypeContent.getSafetyToastTypeContent(SafetyToastType.IGNORE_SUCCESS, closure_0, closure_1),
+      SafetyToastsUtils.getSafetyToastTypeContent(SafetyToastType.IGNORE_SUCCESS, id, channelId),
     );
   },
-  showUnignoreSuccessToast(closure_0, closure_1) {
-    const obj = presentAddedFriendToast;
+  showUnignoreSuccessToast(id, channelId) {
+    const obj = ToastUtils;
     obj.showSafetySuccess(
       SafetyToastType.UNIGNORE_SUCCESS,
-      getSafetyToastTypeContent.getSafetyToastTypeContent(SafetyToastType.UNIGNORE_SUCCESS, closure_0, closure_1),
+      SafetyToastsUtils.getSafetyToastTypeContent(SafetyToastType.UNIGNORE_SUCCESS, id, channelId),
     );
   },
-  showBlockSuccessToast(closure_0, closure_1) {
-    const obj = presentAddedFriendToast;
+  showBlockSuccessToast(id, channelId) {
+    const obj = ToastUtils;
     obj.showSafetySuccess(
       SafetyToastType.BLOCK_SUCCESS,
-      getSafetyToastTypeContent.getSafetyToastTypeContent(SafetyToastType.BLOCK_SUCCESS, closure_0, closure_1),
+      SafetyToastsUtils.getSafetyToastTypeContent(SafetyToastType.BLOCK_SUCCESS, id, channelId),
     );
   },
-  showUnblockSuccessToast(closure_3, id) {
-    const obj = presentAddedFriendToast;
+  showUnblockSuccessToast(id, id2) {
+    const obj = ToastUtils;
     obj.showSafetySuccess(
       SafetyToastType.UNBLOCK_SUCCESS,
-      getSafetyToastTypeContent.getSafetyToastTypeContent(SafetyToastType.UNBLOCK_SUCCESS, closure_3, id),
+      SafetyToastsUtils.getSafetyToastTypeContent(SafetyToastType.UNBLOCK_SUCCESS, id, id2),
     );
   },
   showMuteSuccessToast(id, channelId) {
-    const obj = presentAddedFriendToast;
+    const obj = ToastUtils;
     obj.showSafetySuccess(
       SafetyToastType.MUTE_SUCCESS,
-      getSafetyToastTypeContent.getSafetyToastTypeContent(SafetyToastType.MUTE_SUCCESS, id, channelId),
+      SafetyToastsUtils.getSafetyToastTypeContent(SafetyToastType.MUTE_SUCCESS, id, channelId),
     );
   },
-  showUnmuteSuccessToast(closure_0, c1) {
-    const obj = presentAddedFriendToast;
+  showUnmuteSuccessToast(id, channelId) {
+    const obj = ToastUtils;
     obj.showSafetySuccess(
       SafetyToastType.UNMUTE_SUCCESS,
-      getSafetyToastTypeContent.getSafetyToastTypeContent(SafetyToastType.UNMUTE_SUCCESS, closure_0, c1),
+      SafetyToastsUtils.getSafetyToastTypeContent(SafetyToastType.UNMUTE_SUCCESS, id, channelId),
     );
   },
-  showReportSuccessToast(closure_0, c1) {
-    const obj = presentAddedFriendToast;
+  showReportSuccessToast(id, channelId) {
+    const obj = ToastUtils;
     obj.showSafetySuccess(
       SafetyToastType.REPORT_SUCCESS,
-      getSafetyToastTypeContent.getSafetyToastTypeContent(SafetyToastType.REPORT_SUCCESS, closure_0, c1),
+      SafetyToastsUtils.getSafetyToastTypeContent(SafetyToastType.REPORT_SUCCESS, id, channelId),
     );
   },
   showSuccessToast(REPORT_TO_MOD_SUCCESS) {
-    const obj = presentAddedFriendToast;
-    obj.showSafetySuccess(
-      REPORT_TO_MOD_SUCCESS,
-      getSafetyToastTypeContent.getSafetyToastTypeContent(REPORT_TO_MOD_SUCCESS),
-    );
+    const obj = ToastUtils;
+    obj.showSafetySuccess(REPORT_TO_MOD_SUCCESS, SafetyToastsUtils.getSafetyToastTypeContent(REPORT_TO_MOD_SUCCESS));
   },
   showFailedToast(TIGGER_PAWTECT_ERROR) {
     let GENERIC_ERROR = TIGGER_PAWTECT_ERROR;
-    const obj = presentAddedFriendToast;
+    const obj = ToastUtils;
     if (TIGGER_PAWTECT_ERROR == null) {
       GENERIC_ERROR = SafetyToastType.GENERIC_ERROR;
     }
-    obj.presentFailedToast(getSafetyToastTypeContent.getSafetyToastTypeContent(GENERIC_ERROR));
+    obj.presentFailedToast(SafetyToastsUtils.getSafetyToastTypeContent(GENERIC_ERROR));
   },
 };

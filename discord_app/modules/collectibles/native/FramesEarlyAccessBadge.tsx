@@ -1,119 +1,115 @@
 // discord_app/modules/collectibles/native/FramesEarlyAccessBadge.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import AccessibilityAnnouncer from "../../../design/shared.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
+import shared from "../../../design/shared.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
-import Layer from "../../../design/components/Layers/native/LayerScope.native.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import LayerScope from "../../../design/components/Layers/native/LayerScope.native.tsx";
 import NitroWheelIcon from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import useCanPurchaseFrames from "../hooks/useCanPurchaseFrames.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import useTooltip from "../../../design/components/Tooltip/native/useTooltip.native.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-({ Pressable: c5, View: closure_6 } = get_ActivityIndicator);
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-let closure_9 = { top: 14, bottom: 14, left: 14, right: 14 };
-createCacheKey = { pillBase: null, pillDark: null, pillLight: null, text: null };
-createCacheKey = {
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Pressable: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const hitSlop = { top: 14, bottom: 14, left: 14, right: 14 };
+fn(4560);
+let createStyles = { pillBase: null, pillDark: null, pillLight: null, text: null };
+createStyles = {
   flexDirection: "row",
   alignItems: "center",
-  borderRadius: ThemesDefault.radii.round,
+  borderRadius: nativeDefault.radii.round,
   paddingVertical: 2,
-  paddingHorizontal: ThemesDefault.space.PX_8,
+  paddingHorizontal: nativeDefault.space.PX_8,
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_DEFAULT };
-let obj1 = { backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_DEFAULT };
-createCacheKey[2] = { backgroundColor: ThemesDefault.colors.BADGE_BACKGROUND_BRAND };
-const obj2 = { backgroundColor: ThemesDefault.colors.BADGE_BACKGROUND_BRAND };
-createCacheKey[3] = { marginLeft: ThemesDefault.space.PX_8, textTransform: "uppercase" };
-let closure_10 = createCacheKey.createStyles(createCacheKey);
+createStyles.pillBase = createStyles;
+createStyles.pillDark = { backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_DEFAULT };
+let obj1 = { backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_DEFAULT };
+createStyles.pillLight = { backgroundColor: nativeDefault.colors.BADGE_BACKGROUND_BRAND };
+const obj2 = { backgroundColor: nativeDefault.colors.BADGE_BACKGROUND_BRAND };
+createStyles.text = { marginLeft: nativeDefault.space.PX_8, textTransform: "uppercase" };
+let closure_10 = createStyles.createStyles(createStyles);
 function BadgeWithTooltip(tooltipPosition) {
   tooltipPosition = tooltipPosition.tooltipPosition;
-  let first;
-  dependencyMap = undefined;
-  let callback;
-  callback = undefined;
-  const tmp3 = callback4();
-  const ref = callback.useRef(null);
-  const tmp5 = callback(callback.useState(false), 2);
-  first = tmp5[0];
-  dependencyMap = tmp5[1];
-  const intl = tooltipPosition(1114).intl;
-  const stringResult = intl.string(tooltipPosition(1114).t["L9B+ZZ"]);
-  callback = stringResult;
-  callback = callback.useCallback(() => {
-    callback(false);
+  const tmp3 = closure_10();
+  const ref = noop.useRef(null);
+  const tmp5 = _slicedToArray(noop.useState(false), 2);
+  const visible = tmp5[0];
+  closure_2 = tmp5[1];
+  const intl = util.intl;
+  const stringResult = intl.string(util.t["L9B+ZZ"]);
+  c3 = stringResult;
+  const onPress = noop.useCallback(() => {
+    closure_2(false);
   }, []);
-  const items = [tooltipPosition, stringResult, first, callback];
-  const memo = callback.useMemo(
-    () => ({ position: tooltipPosition, label: c3, visible: first, onPress: callback }),
-    items,
-  );
-  let obj = tooltipPosition(11128);
+  const items = [tooltipPosition, stringResult, visible, onPress];
+  const memo = noop.useMemo(() => ({ position: tooltipPosition, label, visible, onPress }), items);
+  let obj = useTooltip;
   const tooltip = obj.useTooltip(ref, memo);
-  const items1 = [first];
-  const effect = callback.useEffect(() => {
+  const items1 = [visible];
+  const effect = noop.useEffect(() => {
     if (first) {
       const _setTimeout = setTimeout;
       const timeout = setTimeout(() => {
-        callback(false);
+        closure_1_2(false);
       }, 3000);
       return () => clearTimeout(closure_0);
     }
   }, items1);
-  const callback1 = callback.useCallback(() => {
-    callback((arg0) => !arg0);
+  const callback1 = noop.useCallback(() => {
+    closure_2((arg0) => !arg0);
   }, []);
-  const tmp2 = first(4495)();
-  const isThemeDarkResult = tooltipPosition(4411).isThemeDark(tmp2);
+  const tmp2 = useThemeDefault();
+  const isThemeDarkResult = shared.isThemeDark(tmp2);
   let str = "text-overlay-light";
   if (isThemeDarkResult) {
     str = "control-overlay-primary-text-default";
   }
   const intl2 = tmp7(1114).intl;
-  const stringResult1 = intl2.string(tooltipPosition(1114).t["1m6qcO"]);
+  const stringResult1 = intl2.string(util.t["1m6qcO"]);
   obj = {
     ref,
     onPress: callback1,
-    hitSlop: closure_9,
+    hitSlop,
     accessibilityRole: "button",
     accessibilityLabel: stringResult1,
     accessibilityHint: stringResult,
-    style: items2,
+    style: null,
     children: null,
   };
-  items2 = [tmp3.pillBase, isThemeDarkResult ? tmp3.pillDark : tmp3.pillLight];
-  const items3 = [callback2(tooltipPosition(8662).NitroWheelIcon, { size: "xs", color: str })];
+  const items2 = [tmp3.pillBase, isThemeDarkResult ? tmp3.pillDark : tmp3.pillLight];
+  obj.style = items2;
+  const items3 = [React5(NitroWheelIcon.NitroWheelIcon, { size: "xs", color: str })];
   obj = { variant: "text-sm/bold", color: str, style: tmp3.text, children: stringResult1 };
-  items3[1] = callback2(tooltipPosition(4556).Text, obj);
-  obj[7] = items3;
-  return callback3(closure_5, obj);
+  items3[1] = React5(Text_Text.Text, obj);
+  obj.children = items3;
+  return React6(hasOwnProperty, obj);
 }
 function StaticBadge() {
-  const tmp3 = callback4();
-  let obj = AccessibilityAnnouncer;
+  const tmp3 = closure_10();
+  let obj = shared;
   const isThemeDarkResult = obj.isThemeDark(useThemeDefault());
   let str = "text-overlay-light";
   if (isThemeDarkResult) {
     str = "control-overlay-primary-text-default";
   }
   const intl = tmp4(1114).intl;
-  const stringResult = intl.string(getSystemLocale.t["1m6qcO"]);
-  obj = { accessibilityLabel: stringResult, style: items, children: null };
-  items = [tmp3.pillBase, isThemeDarkResult ? tmp3.pillDark : tmp3.pillLight];
-  const items1 = [callback2(NitroWheelIcon.NitroWheelIcon, { size: "xs", color: str })];
+  const stringResult = intl.string(util.t["1m6qcO"]);
+  obj = { accessibilityLabel: stringResult, style: null, children: null };
+  const items = [tmp3.pillBase, isThemeDarkResult ? tmp3.pillDark : tmp3.pillLight];
+  obj.style = items;
+  const items1 = [React5(NitroWheelIcon.NitroWheelIcon, { size: "xs", color: str })];
   obj = { variant: "text-sm/bold", color: str, style: tmp3.text, children: stringResult };
-  items1[1] = callback2(Text.Text, obj);
-  obj[2] = items1;
-  return callback3(closure_6, obj);
+  items1[1] = React5(Text_Text.Text, obj);
+  obj.children = items1;
+  return React6(timestampProducer, obj);
 }
-const obj3 = { marginLeft: ThemesDefault.space.PX_8, textTransform: "uppercase" };
-const result = require("set").fileFinishedImporting("modules/collectibles/native/FramesEarlyAccessBadge.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/native/FramesEarlyAccessBadge.tsx");
 
 export default function _default(tooltipPosition) {
   let str = tooltipPosition.tooltipPosition;
@@ -134,14 +130,12 @@ export default function _default(tooltipPosition) {
   } else if (flag2) {
     let tmp3Result = tmp3(StaticBadge, {});
   } else if (flag) {
-    obj = { tooltipPosition: null };
-    obj[0] = str;
+    obj = { tooltipPosition: str };
     tmp3Result = tmp3(BadgeWithTooltip, obj);
   } else {
     obj = { zIndex: 3, children: null };
-    obj1 = { tooltipPosition: null };
-    obj1[0] = str;
-    obj[1] = tmp3(BadgeWithTooltip, obj1);
-    tmp3Result = tmp3(Layer.LayerScope, obj);
+    const obj1 = { tooltipPosition: str };
+    obj.children = tmp3(BadgeWithTooltip, obj1);
+    tmp3Result = tmp3(LayerScope.LayerScope, obj);
   }
 }

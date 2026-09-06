@@ -1,41 +1,44 @@
 // discord_app/components_native/MainShared.tsx
 import initialize from "../../discord_common/js/packages/flux/index.tsx";
-import coerceMainRoute from "../modules/main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import util from "../intl/index.native.tsx";
+import PlatformUtils from "../utils/PlatformUtils.tsx";
+import NavigationRouteUtils from "../modules/main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import usePipVideoOrStream from "../modules/video_calls/native/usePipVideoOrStream.tsx";
-import isVoicePanelEnabled from "../modules/voice_panel/VoicePanelUtils.native.tsx";
+import VoicePanelUtils from "../modules/voice_panel/VoicePanelUtils.native.tsx";
+import AccessibilityManagerDefault from "../modules/a11y/native/AccessibilityManager.tsx";
 import KeyCommandsView from "../modules/keyboard/native/KeyCommandsView.tsx";
 import PictureInPictureGlobalDefault from "../modules/video_calls/native/components/PictureInPictureGlobal.tsx";
-import BurstReactionAnimationContainerInnerDefault from "../modules/messages/native/burst_reactions/BurstReactionAnimationContainer.tsx";
-import MenuContainerDefault from "../modules/native_menu/native/NativeMenuPresenter.tsx";
-import ActionSheetPresenterDefault from "../modules/action_sheet/native/components/ActionSheetPresenter.tsx";
-import StyleSheetDefault from "common/Alerts.tsx";
-import MuteDeafenDefault from "../modules/soundplayer/SoundPlayer.tsx";
-import trackActionSheetImpressionDefault from "../modules/upsell_tooltip/native/MainViewTooltipActionSheetsV2.tsx";
-import AnimatedToastDefault from "../modules/toast/native/ToastContainer.tsx";
-import closure_3 from "../../_runtime/00019_noop.js";
-import { NativeModules } from "../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../stores/ChannelStore.tsx";
-import closure_6 from "../stores/RTCConnectionStore.tsx";
-import { jsx } from "../../_runtime/react/00021_jsxProd.js";
+import BurstReactionAnimationContainerDefault from "../modules/messages/native/burst_reactions/BurstReactionAnimationContainer.tsx";
+import NativeMenuPresenterDefault from "../modules/native_menu/native/NativeMenuPresenter.tsx";
+import components_ActionSheetPresenterDefault from "../modules/action_sheet/native/components/ActionSheetPresenter.tsx";
+import AlertsDefault from "common/Alerts.tsx";
+import SoundPlayerDefault from "../modules/soundplayer/SoundPlayer.tsx";
+import MainViewTooltipActionSheetsV2Default from "../modules/upsell_tooltip/native/MainViewTooltipActionSheetsV2.tsx";
+import ToastContainerDefault from "../modules/toast/native/ToastContainer.tsx";
+import noop from "../../_runtime/metro/00019__.js";
+import ChannelStore from "../stores/ChannelStore.tsx";
+import RTCConnectionStore from "../stores/RTCConnectionStore.tsx";
 
-require = arg1;
-let result = require("set").fileFinishedImporting("components_native/MainShared.tsx");
+require = fn;
+const NativeModules = fn(17).NativeModules;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("components_native/MainShared.tsx");
 
-export const BurstReactionAnimationContainer = BurstReactionAnimationContainerInnerDefault;
-export const MenuContainer = MenuContainerDefault;
-export const ActionSheetContainer = ActionSheetPresenterDefault;
-export const Alerts = StyleSheetDefault;
-export const SoundPlayer = MuteDeafenDefault;
-export const MainViewTooltipActionSheetsV2 = trackActionSheetImpressionDefault;
-export const ToastContainer = AnimatedToastDefault;
+export const BurstReactionAnimationContainer = BurstReactionAnimationContainerDefault;
+export const MenuContainer = NativeMenuPresenterDefault;
+export const ActionSheetContainer = components_ActionSheetPresenterDefault;
+export const Alerts = AlertsDefault;
+export const SoundPlayer = SoundPlayerDefault;
+export const MainViewTooltipActionSheetsV2 = MainViewTooltipActionSheetsV2Default;
+export const ToastContainer = ToastContainerDefault;
 export const PictureInPictureGlobalContainer = function PictureInPictureGlobalContainer() {
   let obj = initialize;
-  const items = [closure_5, closure_6];
+  const items = [ChannelStore, RTCConnectionStore];
   const stateFromStores = obj.useStateFromStores(items, () => channel.getChannel(channelId.getChannelId()));
   const hasPipParticipant = usePipVideoOrStream.useHasPipParticipant({ isActivityViewFocused: false });
-  const obj2 = usePipVideoOrStream;
-  const isModalOpen = coerceMainRoute.useIsModalOpen();
-  isVoicePanelEnabled;
+  const isModalOpen = NavigationRouteUtils.useIsModalOpen();
+  VoicePanelUtils;
   let tmp7 = null;
   if (null != stateFromStores) {
     tmp7 = null;
@@ -44,9 +47,8 @@ export const PictureInPictureGlobalContainer = function PictureInPictureGlobalCo
       if (!isModalOpen) {
         tmp7 = null;
         if (!tmp6) {
-          obj = { channel: null };
-          obj[0] = stateFromStores;
-          tmp7 = jsx(PictureInPictureGlobalDefault, { channel: null });
+          obj = { channel: stateFromStores };
+          tmp7 = jsx(PictureInPictureGlobalDefault, { channel: stateFromStores });
         }
       }
     }
@@ -54,11 +56,11 @@ export const PictureInPictureGlobalContainer = function PictureInPictureGlobalCo
   return tmp7;
 };
 export const useAppKeyCommands = function useAppKeyCommands() {
-  const memo = React.useMemo(() => {
-    let obj = callback(table[10]);
+  const memo = noop.useMemo(() => {
+    let obj = PlatformUtils;
     if (obj.isAndroid()) {
-      let keyModifierCommand = callback2(tmp2[11]).getConstants().keyModifierCommand;
-      const obj2 = callback2(tmp2[11]);
+      let keyModifierCommand = require("NativeKeyCommandsModule").getConstants().keyModifierCommand;
+      const obj2 = require("NativeKeyCommandsModule");
     } else {
       keyModifierCommand = KeyCommandsView.KeyCommandsView.keyModifierCommand;
     }
@@ -70,9 +72,9 @@ export const useAppKeyCommands = function useAppKeyCommands() {
       onKeyCommand: null,
     };
     const intl = tmp(tmp2[12]).intl;
-    obj[3] = intl.string(callback(table[12]).t.yYsRlD);
-    obj[4] = function onKeyCommand() {
-      callback(table[13])();
+    obj.discoverabilityTitle = intl.string(util.t.yYsRlD);
+    obj.onKeyCommand = function onKeyCommand() {
+      closure_1_1(closure_1_2[13])();
     };
     const items = [obj];
     return items;
@@ -80,7 +82,7 @@ export const useAppKeyCommands = function useAppKeyCommands() {
   const keyCommands = KeyCommandsView.useKeyCommands(memo);
 };
 export const useScreenReaderEnabled = function useScreenReaderEnabled() {
-  const effect = React.useEffect(() => {
-    const result = callback(table[15]).checkScreenreaderEnabled();
+  const effect = noop.useEffect(() => {
+    const result = AccessibilityManagerDefault.checkScreenreaderEnabled();
   }, []);
 };

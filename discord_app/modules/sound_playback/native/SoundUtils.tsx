@@ -1,10 +1,10 @@
 // discord_app/modules/sound_playback/native/SoundUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import isMetaQuest from "../../device/MetaQuestUtils.android.tsx";
+import _mod17 from "../../../../_runtime/metro/00017__.js";
+import MetaQuestUtils from "../../device/MetaQuestUtils.android.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const NativeModules = get_ActivityIndicator.NativeModules;
-let c3 = 0;
+const NativeModules = _mod17.NativeModules;
+let closure_3 = 0;
 class RNSound {
   constructor(arg0, arg1, arg2, arg3) {
     obj = Object.create(new.target.prototype);
@@ -23,11 +23,11 @@ class RNSound {
   }
 }
 const prototype = RNSound.prototype;
-prototype["_createSound"] = function _createSound(name, usage, fn) {
+prototype["_createSound"] = function _createSound(arg0, arg1, fn) {
   const self = this;
   closure_0 = fn;
   const DCDSoundManager = NativeModules.DCDSoundManager;
-  DCDSoundManager.prepare(name, usage, this._key, (arg0, arg1) => {
+  DCDSoundManager.prepare(arg0, arg1, this._key, (arg0, arg1) => {
     if (arg1) {
       ({ duration: self._duration, numberOfChannels: self._numberOfChannels } = arg1);
     }
@@ -145,41 +145,41 @@ obj = {
   activity_user_join: null,
   activity_user_left: null,
 };
-obj[1] = isMetaQuest.isMetaQuest() ? obj.MEDIA : obj.RING_TONE;
-obj[2] = isMetaQuest.isMetaQuest() ? obj.MEDIA : obj.RING_TONE;
+obj.call_ringing = MetaQuestUtils.isMetaQuest() ? obj.MEDIA : obj.RING_TONE;
+obj.call_ringing_halloween = MetaQuestUtils.isMetaQuest() ? obj.MEDIA : obj.RING_TONE;
 ({
-  VOICE: obj2[3],
-  VOICE: obj2[4],
-  VOICE: obj2[5],
-  VOICE: obj2[6],
-  NOTIFICATION: obj2[7],
-  NOTIFICATION: obj2[8],
-  NOTIFICATION: obj2[9],
-  NOTIFICATION: obj2[10],
-  NOTIFICATION: obj2[11],
-  NOTIFICATION: obj2[12],
-  VOICE: obj2[13],
-  VOICE: obj2[14],
-  VOICE: obj2[15],
-  VOICE: obj2[16],
-  VOICE: obj2[17],
-  VOICE: obj2[18],
-  VOICE: obj2[19],
-  VOICE: obj2[20],
-  VOICE: obj2[21],
-  VOICE: obj2[22],
-  VOICE: obj2[23],
-  VOICE: obj2[24],
-  VOICE: obj2[25],
-  VOICE: obj2[26],
-  VOICE: obj2[27],
-  MEDIA: obj2[28],
-  NOTIFICATION_NO_VIBRATION: obj2[29],
-  NOTIFICATION_NO_VIBRATION: obj2[30],
-  NOTIFICATION_NO_VIBRATION: obj2[31],
-  NOTIFICATION_NO_VIBRATION: obj2[32],
+  VOICE: obj2.camera_on,
+  VOICE: obj2.camera_off,
+  VOICE: obj2.deafen,
+  VOICE: obj2.disconnect,
+  NOTIFICATION: obj2.mention1,
+  NOTIFICATION: obj2.mention2,
+  NOTIFICATION: obj2.mention3,
+  NOTIFICATION: obj2.message1,
+  NOTIFICATION: obj2.message2,
+  NOTIFICATION: obj2.message3,
+  VOICE: obj2.mute,
+  VOICE: obj2.ptt_start,
+  VOICE: obj2.ptt_stop,
+  VOICE: obj2.reconnect,
+  VOICE: obj2.stage_waiting,
+  VOICE: obj2.stream_ended,
+  VOICE: obj2.stream_started,
+  VOICE: obj2.stream_user_joined,
+  VOICE: obj2.stream_user_left,
+  VOICE: obj2.soundboard_sound,
+  VOICE: obj2.undeafen,
+  VOICE: obj2.unmute,
+  VOICE: obj2.user_join,
+  VOICE: obj2.user_leave,
+  VOICE: obj2.user_moved,
+  MEDIA: obj2.vibing_wumpus,
+  NOTIFICATION_NO_VIBRATION: obj2.activity_end,
+  NOTIFICATION_NO_VIBRATION: obj2.activity_launch,
+  NOTIFICATION_NO_VIBRATION: obj2.activity_user_join,
+  NOTIFICATION_NO_VIBRATION: obj2.activity_user_left,
 } = obj);
-const result = set.fileFinishedImporting("modules/sound_playback/native/SoundUtils.tsx");
+const result = size.fileFinishedImporting("modules/sound_playback/native/SoundUtils.tsx");
 let fn = (name, arg1, _volume, outputChannel) => {
   obj = Object.create(new.target.prototype);
   obj.name = name;
@@ -198,10 +198,10 @@ Object.defineProperty(prototype2, "volume", {
 Object.defineProperty(prototype2, "volume", {
   get: undefined,
   set: function volume(_volume) {
-    closure_0 = _volume;
+    const volume = _volume;
     this._volume = _volume;
-    this.ensureSound().then((arg0) => {
-      arg0.volume = closure_0;
+    this.ensureSound().then((result) => {
+      result.volume = volume;
     });
   },
 });
@@ -219,10 +219,10 @@ prototype2["play"] = function play() {
 prototype2["playWithListener"] = function playWithListener() {
   const self = this;
   return new Promise((arg0, arg1) => {
-    const _self = arg0;
+    closure_0 = arg0;
     closure_1 = arg1;
-    const ensureSoundResult = _self.ensureSound();
-    _self
+    const ensureSoundResult = self.ensureSound();
+    self
       .ensureSound()
       .then((duration) => {
         let tmp = null != duration.duration;
@@ -230,7 +230,7 @@ prototype2["playWithListener"] = function playWithListener() {
           tmp = 0 !== duration.duration;
         }
         if (!tmp) {
-          dependencyMap("sound has no duration");
+          closure_1("sound has no duration");
         }
         duration.play();
         let num2 = 1;
@@ -238,11 +238,11 @@ prototype2["playWithListener"] = function playWithListener() {
           num2 = 1000;
         }
         const timerId = setTimeout(() => {
-          callback(true);
+          closure_1_0(true);
         }, duration.duration * num2);
       })
-      .catch((arg0) => {
-        dependencyMap(arg0);
+      .catch((error) => {
+        closure_1(error);
       });
   });
 };
@@ -267,36 +267,35 @@ prototype2["destroyAudio"] = function destroyAudio() {
   }
 };
 prototype2["ensureSound"] = function ensureSound() {
-  let self = this;
-  self = this;
+  const self = this;
   let soundPromise = this.soundPromise;
   if (soundPromise == null) {
     soundPromise = new Promise((arg0, arg1) => {
       closure_0 = arg0;
       closure_1 = arg1;
-      ({ name, usage, _volume } = closure_0);
-      if (typeof closure_1_4 !== "function") {
-        HermesBuiltin.throwTypeError();
-      }
-      const fn = (arg0) => {
-        if (null != arg0) {
-          if ("" !== arg0) {
-            callback2(arg0);
+      if (typeof RNSound === "function") {
+        const fn = (arg0) => {
+          if (null != arg0) {
+            if ("" !== arg0) {
+              closure_1(arg0);
+            }
           }
-        }
-        callback(obj);
-      };
-      obj = Object.create(closure_1_4.prototype);
-      obj._volume = _volume;
-      obj._loaded = false;
-      closure_3 = tmp2 + 1;
-      obj._key = +closure_3;
-      obj._duration = -1;
-      obj._numberOfChannels = -1;
-      obj._volume = 1;
-      obj._pan = 0;
-      obj._numberOfLoops = 0;
-      obj._sound = obj._createSound(name, usage, fn);
+          closure_0(obj);
+        };
+        obj = Object.create(tmp.prototype);
+        obj._volume = tmp4;
+        obj._loaded = false;
+        closure_3 = tmp6 + 1;
+        obj._key = +closure_3;
+        obj._duration = -1;
+        obj._numberOfChannels = -1;
+        obj._volume = 1;
+        obj._pan = 0;
+        obj._numberOfLoops = 0;
+        obj._sound = obj._createSound(tmp2, tmp3, fn);
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
     });
   }
   self.soundPromise = soundPromise;

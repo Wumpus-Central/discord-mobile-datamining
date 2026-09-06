@@ -1,10 +1,12 @@
 // discord_app/modules/activities/useFetchDeveloperActivityShelfItems.tsx
-import closure_2 from "../../../_runtime/00019_noop.js";
-import closure_3 from "DeveloperActivityShelfStore.tsx";
-import { DevShelfFetchState } from "DeveloperActivityShelfStore.tsx";
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators.tsx";
+import noop from "../../../_runtime/metro/00019__.js";
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/activities/useFetchDeveloperActivityShelfItems.tsx");
+require = fn;
+const DevShelfFetchState = fn(8855).DevShelfFetchState;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/useFetchDeveloperActivityShelfItems.tsx");
 
 export const useFetchDeveloperActivityShelfItems = function useFetchDeveloperActivityShelfItems() {
   isActivitiesEnabledForCurrentPlatform = isActivitiesEnabledForCurrentPlatform(
@@ -13,7 +15,7 @@ export const useFetchDeveloperActivityShelfItems = function useFetchDeveloperAct
   const DeveloperMode = isActivitiesEnabledForCurrentPlatform(setting[3]).DeveloperMode;
   setting = DeveloperMode.getSetting();
   let obj = isActivitiesEnabledForCurrentPlatform(setting[2]);
-  const items = [closure_3];
+  const items = [DeveloperActivityShelfStore];
   const stateFromStores = isActivitiesEnabledForCurrentPlatform(setting[4]).useStateFromStores(
     items,
     () => fetchState.getFetchState(),
@@ -26,11 +28,10 @@ export const useFetchDeveloperActivityShelfItems = function useFetchDeveloperAct
       tmp = setting;
     }
     if (tmp) {
-      tmp = stateFromStores === closure_1_4.INITIALIZED;
+      tmp = stateFromStores === DevShelfFetchState.INITIALIZED;
     }
     if (tmp) {
-      const developerApplications = isActivitiesEnabledForCurrentPlatform(setting[5]).fetchDeveloperApplications();
-      const obj = isActivitiesEnabledForCurrentPlatform(setting[5]);
+      const developerApplications = EmbeddedActivitiesActionCreators.fetchDeveloperApplications();
     }
   }, items1);
   return null;

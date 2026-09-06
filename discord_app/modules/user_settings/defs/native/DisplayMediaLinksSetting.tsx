@@ -1,28 +1,19 @@
 // discord_app/modules/user_settings/defs/native/DisplayMediaLinksSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import explicitContentFromProto from "../../UserSettings.tsx";
-import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import util from "../../../../intl/index.native.tsx";
+import UserSettings from "../../UserSettings.tsx";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const toggle = createToggle.createToggle({
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.U47N1p);
+    const intl = util.intl;
+    return intl.string(util.t.U47N1p);
   },
-  parent: MobileUserSettings.MobileUserSettings.CHAT,
-  useValue: explicitContentFromProto.InlineEmbedMedia.useSetting,
-  onValueChange: explicitContentFromProto.InlineEmbedMedia.updateSetting,
+  parent: SettingsConstants.MobileUserSettings.CHAT,
+  useValue: UserSettings.InlineEmbedMedia.useSetting,
+  onValueChange: UserSettings.InlineEmbedMedia.updateSetting,
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.U47N1p);
-  },
-  parent: MobileUserSettings.MobileUserSettings.CHAT,
-  useValue: explicitContentFromProto.InlineEmbedMedia.useSetting,
-  onValueChange: explicitContentFromProto.InlineEmbedMedia.updateSetting,
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/DisplayMediaLinksSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/DisplayMediaLinksSetting.tsx");
 
 export default toggle;

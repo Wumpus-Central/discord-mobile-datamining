@@ -1,10 +1,11 @@
 // discord_common/js/packages/rpc-schema/rpc-schema.tsx
-import set from "../../../../_runtime/00002_set.js";
-import CONTEXT_MENU_ICON_NAMES from "contextMenuIcons.tsx";
+import helpers from "helpers.tsx";
+import contextMenuIcons from "contextMenuIcons.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/rpc-schema/rpc-schema.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/rpc-schema/rpc-schema.tsx");
 
-export const CONTEXT_MENU_ICON_NAMES = CONTEXT_MENU_ICON_NAMES.CONTEXT_MENU_ICON_NAMES;
+export const CONTEXT_MENU_ICON_NAMES = contextMenuIcons.CONTEXT_MENU_ICON_NAMES;
 export const createRPCCommand = function createRPCCommand(AUTHENTICATE, scope) {
   let request;
   dependencyMap = undefined;
@@ -18,8 +19,7 @@ export const createRPCCommand = function createRPCCommand(AUTHENTICATE, scope) {
   if (null != request) {
     obj.validation = (object) => {
       if (null == closure_1) {
-        closure_1 = request(_null[1]).joiReqObj(object.object(request(object)));
-        const obj = request(_null[1]);
+        closure_1 = helpers.joiReqObj(object.object(request(object)));
       }
       return closure_1;
     };

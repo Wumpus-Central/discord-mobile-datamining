@@ -1,12 +1,12 @@
 // discord_app/modules/quests/native/openBountiesNuxPromoSheet.tsx
-import set from "../../../../_runtime/00002_set.js";
 import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
-import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const BountiesNuxPromoSheet = "BountiesNuxPromoSheet";
-const result = set.fileFinishedImporting("modules/quests/native/openBountiesNuxPromoSheet.tsx");
+const result = size.fileFinishedImporting("modules/quests/native/openBountiesNuxPromoSheet.tsx");
 
 export default function openBountiesNuxPromoSheet() {
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(15066, dependencyMap.paths), BountiesNuxPromoSheet, {});
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15066, dependencyMap.paths), BountiesNuxPromoSheet, {});
 }
 export const PROMO_SHEET_KEY = "BountiesNuxPromoSheet";

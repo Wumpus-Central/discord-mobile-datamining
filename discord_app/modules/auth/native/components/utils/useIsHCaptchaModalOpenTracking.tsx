@@ -1,38 +1,35 @@
 // discord_app/modules/auth/native/components/utils/useIsHCaptchaModalOpenTracking.tsx
-import closure_2 from "../../../../../../_runtime/00019_noop.js";
-import { doesRegistrationHaveIdentityType as closure_3 } from "../../RegistrationUIStore.tsx";
-import RegistrationTransitionActionTypes from "../../../RegistrationConstants.tsx";
+import RootNavigationRef from "../../../../main_tabs_v2/RootNavigationRef.native.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-({ RegisterTransitionSteps: c4, RegistrationTransitionActionTypes: c5 } = RegistrationTransitionActionTypes);
-const result = require("set").fileFinishedImporting(
-  "modules/auth/native/components/utils/useIsHCaptchaModalOpenTracking.tsx",
-);
+require = fn;
+let closure_3 = fn(15946).doesRegistrationHaveIdentityType;
+const RegistrationConstants = fn(15947);
+({ RegisterTransitionSteps: closure_4, RegistrationTransitionActionTypes: hasOwnProperty } = RegistrationConstants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/auth/native/components/utils/useIsHCaptchaModalOpenTracking.tsx");
 
 export const useIsHCaptchaModalOpenTracking = function useIsHCaptchaModalOpenTracking() {
-  context = React.useContext(context(15943).TrackRegistrationContext);
+  context = noop.useContext(context(15943).TrackRegistrationContext);
   const items = [context];
-  const layoutEffect = React.useLayoutEffect(() => {
-    const rootNavigationRef = context(closure_1_1[4]).getRootNavigationRef();
+  const layoutEffect = noop.useLayoutEffect(() => {
+    const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
     let current;
     if (rootNavigationRef != null) {
       current = rootNavigationRef.current;
     }
     if (null != current) {
       return rootNavigationRef.addListener("state", () => {
-        let obj = closure_1_0(closure_1_1[5]);
+        let obj = context(dependencyMap[5]);
         let isModalOpenResult = obj.isModalOpen("hcaptcha");
         if (isModalOpenResult) {
-          isModalOpenResult = closure_1_3();
+          isModalOpenResult = closure_2_3();
         }
         if (isModalOpenResult) {
-          obj = { step: null, actionType: null };
-          obj[0] = closure_1_4.CAPTCHA;
-          obj[1] = closure_1_5.VIEWED;
-          callback(obj);
+          obj = { step: constants.CAPTCHA, actionType: constants2.VIEWED };
+          closure_1_0(obj);
         }
       });
     }
-    let obj = context(closure_1_1[4]);
   }, items);
 };

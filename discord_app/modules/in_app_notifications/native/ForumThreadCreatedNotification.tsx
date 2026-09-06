@@ -1,22 +1,22 @@
 // discord_app/modules/in_app_notifications/native/ForumThreadCreatedNotification.tsx
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import { NOTIFICATION_PREVIEW_LINE_CLAMP as closure_4 } from "InAppNotificationConstants.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
+import transitionToChannel from "../../routing/transitionToChannel.tsx";
+import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
-  "modules/in_app_notifications/native/ForumThreadCreatedNotification.tsx",
-);
+require = fn;
+let closure_4 = fn(10095).NOTIFICATION_PREVIEW_LINE_CLAMP;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/in_app_notifications/native/ForumThreadCreatedNotification.tsx");
 
 export default function ForumThreadCreatedNotification(notification) {
   notification = notification.notification;
-  let thread;
   parentChannel = undefined;
-  let guild;
   let userAuthor;
-  thread = notification.thread;
+  const thread = notification.thread;
   ({ threadCreator, parentChannel } = notification);
-  guild = notification.guild;
+  const guild = notification.guild;
   let stringResult = thread(parentChannel[3])(thread);
   if (stringResult == null) {
     const intl = notification(tmp[4]).intl;
@@ -33,16 +33,15 @@ export default function ForumThreadCreatedNotification(notification) {
   );
   const items2 = [notification.parentChannel.id];
   const callback = guild.useCallback(() => {
-    notification(parentChannel[6]).transitionToThread(thread);
+    transitionToChannel.transitionToThread(thread);
   }, items1);
   const callback1 = guild.useCallback(() => {
-    let obj = thread(parentChannel[7]);
-    obj = { channelId: notification.parentChannel.id };
-    return obj.pushLazy(notification(parentChannel[9])(parentChannel[8], parentChannel.paths), obj);
+    const obj = { channelId: notification.parentChannel.id };
+    return obj.pushLazy(asyncRequireImpl(10142, dependencyMap.paths), obj);
   }, items2);
   obj = { icon: null, children: null, header: null, onPress: null, onSettingsPress: null, notification: null };
   obj = { size: notification(tmp[11]).AvatarSizes.NORMAL, user: threadCreator, guildId: thread.guild_id };
-  obj[0] = jsx(notification(parentChannel[11]).Avatar, {
+  obj.icon = jsx(notification(parentChannel[11]).Avatar, {
     size: notification(tmp[11]).AvatarSizes.NORMAL,
     user: threadCreator,
     guildId: thread.guild_id,
@@ -50,16 +49,16 @@ export default function ForumThreadCreatedNotification(notification) {
   const formatToPlainStringResult = intl2.formatToPlainString(notification(parentChannel[4]).t.WUIDu9, {
     threadName: stringResult,
   });
-  obj[1] = jsx(notification(parentChannel[12]).Text, {
+  obj.children = jsx(notification(parentChannel[12]).Text, {
     variant: "redesign/message-preview/medium",
     color: "text-subtle",
     lineClamp: userAuthor,
     children: intl2.formatToPlainString(notification(parentChannel[4]).t.WUIDu9, { threadName: stringResult }),
   });
-  obj[2] = memo;
-  obj[3] = callback;
-  obj[4] = callback1;
-  obj[5] = notification;
+  obj.header = memo;
+  obj.onPress = callback;
+  obj.onSettingsPress = callback1;
+  obj.notification = notification;
   return jsx(notification(parentChannel[10]).NotificationPressable, {
     size: notification(tmp[11]).AvatarSizes.NORMAL,
     user: threadCreator,

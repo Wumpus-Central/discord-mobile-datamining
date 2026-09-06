@@ -1,137 +1,124 @@
 // discord_app/modules/verification/native/ChangeEmailUtils.tsx
-import keys from "../../../ConstantsIOS.tsx";
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import ChangeEmailFields from "../ChangeEmailStore.tsx";
+import ConstantsIOS from "../../../ConstantsIOS.tsx";
+import UserSettingsAccountActionCreatorsAll from "../../../actions/UserSettingsAccountActionCreators.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
-require = arg1;
-function _saveEmail() {
-  const self = this;
-  const tmp = callback((arg0, arg1, arg2) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    c5 = 0;
-    c6 = 0;
-    return (function* (arg0, arg1, arg2) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
+require = fn;
+let closure_6 = async function _saveEmail(arg0, value) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
         if (arg0 === 1) {
-          throw arg1;
+          c6 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c6 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_4 = tmp5;
+          closure_3 = tmp2;
+          closure_131_0 = closure_1;
+          closure_131_1 = closure_2;
+          closure_131_2 = undefined;
+          closure_131_3 = undefined;
+          closure_131_4 = undefined;
+          closure_131_5 = undefined;
+          closure_131_6 = undefined;
+          c5 = 1;
+          c6 = 1;
+          const obj1 = {
+            value: UserSettingsAccountActionCreatorsAll.saveAccountChanges(closure_0, { close: false }),
+            done: false,
+          };
+          return obj1;
         }
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 3;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        try {
-          c6 = 2;
-          if (0 === length) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let callback2 = tmp5;
-              length = tmp2;
-              const store = callback;
-              callback = closure_2;
-              closure_2 = undefined;
-              length = undefined;
-              callback2 = undefined;
-              length = undefined;
-              c6 = undefined;
-              length = 1;
-              c6 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = callback(closure_2[2]).saveAccountChanges(store, { close: false });
-              return obj1;
-            }
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          } else {
-            closure_2 = arg1;
-            if (!closure_2.ok) {
-              const body = closure_2.body;
-              let username;
-              if (body != null) {
-                username = body.username;
-              }
-              if (null != username) {
-                obj = store(closure_2[3]);
-                const result = obj.showInvalidUsernameToast();
-              }
-              const body2 = closure_2.body;
-              let email;
-              if (body2 != null) {
-                email = body2.email;
-              }
-              if (null != email) {
-                callback2(length.EMAIL, closure_2.body.email[0]);
-                length = store.getState().routes.length;
-                callback2 = callback(store(closure_2[4]).VerificationModalScenes.ENTER_EMAIL);
-                if (-1 !== callback2) {
-                  store.pop(length - callback2 - 1);
-                } else {
-                  const replaced = store.replace(store(closure_2[4]).VerificationModalScenes.ENTER_EMAIL);
-                }
-                c6 = 3;
-              } else {
-                const body3 = closure_2.body;
-                let email_token;
-                if (body3 != null) {
-                  email_token = body3.email_token;
-                }
-                if (null != email_token) {
-                  callback2(length.EMAIL_TOKEN, closure_2.body.email_token[0]);
-                  length = store.getState().routes.length;
-                  c6 = callback(store(closure_2[4]).VerificationModalScenes.CONFIRM_EMAIL_CHANGE_CODE);
-                  if (-1 === c6) {
-                    const replaced1 = store.replace(
-                      store(closure_2[4]).VerificationModalScenes.CONFIRM_EMAIL_CHANGE_CODE,
-                    );
-                  }
-                }
-                store.pop(length - c6 - 1);
-              }
-            }
-            c6 = 3;
+        closure_131_2 = value;
+        if (!closure_131_2.ok) {
+          const body = closure_131_2.body;
+          let username;
+          if (body != null) {
+            username = body.username;
           }
-        } catch (tmp53) {
-          c6 = tmp;
-          throw tmp53;
+          if (null != username) {
+            obj = closure_132_0(closure_132_2[3]);
+            const result = obj.showInvalidUsernameToast();
+          }
+          const body2 = closure_131_2.body;
+          let email;
+          if (body2 != null) {
+            email = body2.email;
+          }
+          if (null != email) {
+            closure_132_4(closure_132_5.EMAIL, closure_131_2.body.email[0]);
+            closure_131_3 = closure_131_0.getState().routes.length;
+            closure_131_4 = closure_131_1(closure_132_0(closure_132_2[4]).VerificationModalScenes.ENTER_EMAIL);
+            if (-1 !== closure_131_4) {
+              closure_131_0.pop(closure_131_3 - closure_131_4 - 1);
+            } else {
+              const replaced = closure_131_0.replace(
+                closure_132_0(closure_132_2[4]).VerificationModalScenes.ENTER_EMAIL,
+              );
+            }
+            c6 = 3;
+          } else {
+            const body3 = closure_131_2.body;
+            let email_token;
+            if (body3 != null) {
+              email_token = body3.email_token;
+            }
+            if (null != email_token) {
+              closure_132_4(closure_132_5.EMAIL_TOKEN, closure_131_2.body.email_token[0]);
+              closure_131_5 = closure_131_0.getState().routes.length;
+              closure_131_6 = closure_131_1(
+                closure_132_0(closure_132_2[4]).VerificationModalScenes.CONFIRM_EMAIL_CHANGE_CODE,
+              );
+              if (-1 === closure_131_6) {
+                const replaced1 = closure_131_0.replace(
+                  closure_132_0(closure_132_2[4]).VerificationModalScenes.CONFIRM_EMAIL_CHANGE_CODE,
+                );
+              }
+            }
+            closure_131_0.pop(closure_131_5 - closure_131_6 - 1);
+          }
         }
+        c6 = 3;
       }
-    })();
-  });
-  closure_6 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp53) {
+      c6 = tmp;
+      throw tmp53;
+    }
   }
-  return applyArgumentsResult;
-}
-({ setChangeEmailError: c4, ChangeEmailFields: c5 } = ChangeEmailFields);
-let result = require("set").fileFinishedImporting("modules/verification/native/ChangeEmailUtils.tsx");
+};
+const ChangeEmailStore = fn(5623);
+({ setChangeEmailError: closure_4, ChangeEmailFields: hasOwnProperty } = ChangeEmailStore);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/verification/native/ChangeEmailUtils.tsx");
 
-export const saveEmail = function saveEmail(arg0, c2, closure_1_7) {
+export const saveEmail = function saveEmail() {
   const self = this;
-  const apply = _saveEmail.apply;
+  const apply = closure_6.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -139,14 +126,14 @@ export const saveEmail = function saveEmail(arg0, c2, closure_1_7) {
   }
   return applyArgumentsResult;
 };
-export const finishChangeEmailFlow = function finishChangeEmailFlow(closure_2, closure_4) {
-  const replaced = closure_2.replace(keys.VerificationModalScenes.CHANGE_EMAIL_COMPLETE, { email: closure_4 });
+export const finishChangeEmailFlow = function finishChangeEmailFlow(str, email) {
+  const replaced = str.replace(ConstantsIOS.VerificationModalScenes.CHANGE_EMAIL_COMPLETE, { email });
 };
-export const finishVerifyEmailFlow = function finishVerifyEmailFlow(closure_2, closure_7) {
-  const tmp3 = closure_7(keys.VerificationModalScenes.RESEND_EMAIL);
+export const finishVerifyEmailFlow = function finishVerifyEmailFlow(getState, fn) {
+  const tmp3 = fn(ConstantsIOS.VerificationModalScenes.RESEND_EMAIL);
   if (-1 !== tmp3) {
-    closure_2.pop(closure_2.getState().routes.length - tmp3);
+    getState.pop(getState.getState().routes.length - tmp3);
   } else {
-    const replaced = closure_2.replace(keys.VerificationModalScenes.RESEND_EMAIL);
+    const replaced = getState.replace(ConstantsIOS.VerificationModalScenes.RESEND_EMAIL);
   }
 };

@@ -1,7 +1,7 @@
 // discord_app/utils/RegexUtils.tsx
-import set from "../../_runtime/00002_set.js";
+import size from "../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("utils/RegexUtils.tsx");
+const result = size.fileFinishedImporting("utils/RegexUtils.tsx");
 
 export default {
   escape(str) {

@@ -1,35 +1,35 @@
 // discord_app/stores/StreamRTCConnectionStore.tsx
-import applyDefault from "../../_runtime/00012_apply.js";
+import _modDef12 from "../../_runtime/metro/00012__.js";
 import _modDef38 from "../../_runtime/metro/00038__.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
-import isOwnerDefault from "../modules/go_live/StreamRTCConnection.tsx";
-import isStreamKey from "../modules/go_live/utils/StreamKeyUtils.tsx";
+import StreamRTCConnectionDefault from "../modules/go_live/StreamRTCConnection.tsx";
+import StreamKeyUtils from "../modules/go_live/utils/StreamKeyUtils.tsx";
 import BaseConnectionEvent from "../../discord_common/js/packages/media-engine/index.tsx";
 import canSpectateDefault from "../modules/go_live/utils/canSpectate.tsx";
-import closure_4 from "../modules/game_detection/RunningGameStore.native.tsx";
-import closure_5 from "AuthenticationStore.tsx";
-import importDefaultResult from "MediaEngineStore.tsx";
-import closure_7 from "PresenceStore.tsx";
-import closure_8 from "RTCConnectionStore.tsx";
-import ME from "../Constants.tsx";
-import { StreamTypes } from "../modules/go_live/Constants.tsx";
-import importDefaultResult1 from "../Dispatcher.tsx";
+import RunningGameStore from "../modules/game_detection/RunningGameStore.native.tsx";
+import AuthenticationStore from "AuthenticationStore.tsx";
+import MediaEngineStore from "MediaEngineStore.tsx";
+import PresenceStore from "PresenceStore.tsx";
+import RTCConnectionStore from "RTCConnectionStore.tsx";
+import Dispatcher from "../Dispatcher.tsx";
 
-require = arg1;
-({ RTCConnectionQuality: c9, StreamLayouts } = ME);
-let closure_11 = {};
-let closure_12 = {};
+require = fn;
+const Constants = fn(1074);
+({ RTCConnectionQuality: closure_9, StreamLayouts } = Constants);
+const StreamTypes = fn(4602).StreamTypes;
+let dependencyMap = {};
+dependencyMap = {};
 let closure_13 = {};
-let closure_14 = {};
+const dependencyMap2 = {};
 let closure_15 = {};
 let closure_16 = {};
-const PORTRAIT = StreamLayouts.PORTRAIT;
-let closure_18 = {};
+let layout = StreamLayouts.PORTRAIT;
+const dependencyMap3 = {};
 const Store = initializeDefault.Store;
 class StreamRTCConnectionStore extends Store {}
 const prototype = StreamRTCConnectionStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_5, closure_6, closure_8, closure_4);
+  this.waitFor(AuthenticationStore, MediaEngineStore, RTCConnectionStore, RunningGameStore);
 };
 prototype["getRTCConnections"] = function getRTCConnections() {
   return closure_18;
@@ -41,7 +41,7 @@ prototype["getRTCConnection"] = function getRTCConnection(arg0) {
   return dependencyMap3[arg0];
 };
 prototype["getQuality"] = function getQuality(arg0) {
-  if (canSpectateDefault(closure_6)) {
+  if (canSpectateDefault(MediaEngineStore)) {
     if (null != arg0) {
       let quality;
       if (dependencyMap3[arg0] != null) {
@@ -137,7 +137,7 @@ prototype["getStreamSourceId"] = function getStreamSourceId(arg0) {
   return dependencyMap2[arg0];
 };
 prototype["getLastNonZeroRemoteVideoSinkWantsTime"] = function getLastNonZeroRemoteVideoSinkWantsTime(arg0) {
-  return table4[arg0];
+  return closure_16[arg0];
 };
 prototype["getUserIds"] = function getUserIds(arg0) {
   let userIds;
@@ -165,339 +165,314 @@ prototype["getSecureFramesRosterMapEntry"] = function getSecureFramesRosterMapEn
   if (dependencyMap3[arg0] != null) {
     secureFramesRosterMap = obj.getSecureFramesRosterMap();
   }
-  let value;
+  value = undefined;
   if (secureFramesRosterMap != null) {
     value = secureFramesRosterMap.get(arg1);
   }
   return value;
 };
 StreamRTCConnectionStore.displayName = "StreamRTCConnectionStore";
-if (importDefaultResult.isSupported()) {
+if (MediaEngineStore.isSupported()) {
   function handleRtcAction() {
     return true;
   }
   let obj = {
-    CONNECTION_OPEN: null,
-    CONNECTION_CLOSED: null,
-    RTC_CONNECTION_STATE: null,
-    RTC_CONNECTION_PING: null,
-    RTC_CONNECTION_LOSS_RATE: null,
-    RTC_CONNECTION_UPDATE_ID: null,
-    RTC_CONNECTION_SECURE_FRAMES_UPDATE: null,
-    RTC_CONNECTION_REMOTE_VIDEO_SINK_WANTS: null,
-    STREAM_START: null,
-    STREAM_STOP: null,
-    STREAM_CREATE: null,
-    STREAM_SERVER_UPDATE: null,
-    STREAM_UPDATE: null,
-    STREAM_DELETE: null,
-    STREAM_LAYOUT_UPDATE: null,
-    VIDEO_SIZE_UPDATE: null,
-  };
-  obj[0] = function handleConnectionOpen(sessionId) {
-    sessionId = sessionId.sessionId;
-    const item = applyDefault.forEach(closure_18, (isOwner) => {
-      let str = "receiver-disconnect";
-      if (isOwner.isOwner) {
-        str = "sender-disconnect";
-      }
-      isOwner.destroy(str);
-      delete tmp3[tmp2];
-      delete tmp[tmp2];
-    });
-  };
-  obj[1] = function handleConnectionClosed() {
-    c3 = null;
-    const item = applyDefault.forEach(closure_18, (isOwner) => {
-      let str = "receiver-disconnect";
-      if (isOwner.isOwner) {
-        str = "sender-disconnect";
-      }
-      isOwner.destroy(str);
-      delete tmp3[tmp2];
-      delete tmp[tmp2];
-    });
-  };
-  obj[2] = handleRtcAction;
-  obj[3] = handleRtcAction;
-  obj[4] = handleRtcAction;
-  obj[5] = function handleRtcConnectionUpdateId(arg0) {
-    closure_0 = arg0;
-    return applyDefault.some(closure_18, (arg0) => arg0 === connection.connection);
-  };
-  obj[6] = handleRtcAction;
-  obj[7] = function handleRtcConnectionRemoteVideoSinkWants(guildId) {
-    guildId = guildId.guildId;
-    ({ context, wants, userId, channelId } = guildId);
-    if (null == guildId) {
-      let GUILD = StreamTypes.CALL;
-    } else {
-      GUILD = StreamTypes.GUILD;
-    }
-    const encodeStreamKeyResult = isStreamKey.encodeStreamKey({
-      streamType: GUILD,
-      guildId,
-      channelId,
-      ownerId: userId,
-    });
-    let tmp6 = context === BaseConnectionEvent.MediaEngineContextTypes.STREAM;
-    if (tmp6) {
-      tmp6 = null != dependencyMap3[encodeStreamKeyResult];
-    }
-    if (tmp6) {
-      const _Object = Object;
-      const entries = Object.entries(wants);
-      const someResult = entries.some((arg0) => {
-        [tmp, tmp2] = arg0;
-        let tmp3 = "any" !== tmp;
-        if (tmp3) {
-          tmp3 = 0 !== tmp2;
+    CONNECTION_OPEN: function handleConnectionOpen(sessionId) {
+      sessionId = sessionId.sessionId;
+      const item = _modDef12.forEach(closure_18, (isOwner, arg1) => {
+        let str = "receiver-disconnect";
+        if (isOwner.isOwner) {
+          str = "sender-disconnect";
         }
-        return tmp3;
+        isOwner.destroy(str);
+        delete tmp3[tmp2];
+        delete tmp[tmp2];
       });
-      if (someResult) {
-        const _performance = performance;
-        closure_16[encodeStreamKeyResult] = performance.now();
-      }
-      tmp6 = someResult;
-    }
-    return tmp6;
-  };
-  obj[8] = function handleStreamStart(appContext) {
-    appContext = appContext.appContext;
-    ({ pid, nativePickerStyleUsed: importDefault, goLiveModalDurationMs } = appContext);
-    ({ streamType, guildId, channelId, sourceId, sourcePid, analyticsLocations } = appContext);
-    let obj = appContext(4612);
-    obj = { streamType, guildId, channelId, ownerId: id.getId() };
-    const encodeStreamKeyResult = obj.encodeStreamKey(obj);
-    closure_11[encodeStreamKeyResult] = { appContext, analyticsLocations };
-    const item = applyDefault.forEach(closure_18, (analyticsContext) => {
-      analyticsContext = analyticsContext.analyticsContext;
-      analyticsContext.setActionContext(appContext);
-      const result = analyticsContext.setNativePickerStyleUsed(closure_1);
-      if (analyticsContext.isOwner) {
-        analyticsContext.trackStart();
-      }
-    });
-    if (null == pid) {
-      pid = sourcePid;
-    }
-    closure_14[encodeStreamKeyResult] = sourceId;
-    closure_13[encodeStreamKeyResult] = pid;
-    if (null != pid) {
-      gameForPID = gameForPID.getGameForPID(pid);
-      if (null != gameForPID) {
-        obj = { name: null, id: null, exe: null, distributor: null, sku: null, gameMetadata: null };
-        ({
-          name: obj3[0],
-          id: obj3[1],
-          exeName: obj3[2],
-          distributor: obj3[3],
-          sku: obj3[4],
-          gameMetadata: obj3[5],
-        } = gameForPID);
-        dependencyMap[encodeStreamKeyResult] = obj;
-      }
-      if (tmp4[encodeStreamKeyResult] != null) {
-        let analyticsContext = tmp10.analyticsContext;
-        let result = analyticsContext.updateStreamApplication(dependencyMap[encodeStreamKeyResult]);
-      }
-    } else if (tmp4[encodeStreamKeyResult] != null) {
-      const analyticsContext2 = tmp6.analyticsContext;
-      const result1 = analyticsContext2.updateStreamApplication(null);
-    }
-    if (null != goLiveModalDurationMs) {
-      closure_15[encodeStreamKeyResult] = goLiveModalDurationMs;
-    } else {
-      delete tmp2[tmp];
-    }
-  };
-  obj[9] = function handleStreamStop(appContext) {
-    appContext = appContext.appContext;
-    const streamKey = appContext.streamKey;
-    closure_11[streamKey] = { appContext, analyticsLocations: "a" };
-    const item = applyDefault.forEach(closure_18, (analyticsContext) => {
-      analyticsContext = analyticsContext.analyticsContext;
-      analyticsContext.setActionContext(appContext);
-      if (analyticsContext.isOwner) {
-        analyticsContext.trackEnd();
-      }
-    });
-    closure_14[streamKey] = null;
-    closure_13[streamKey] = null;
-    delete tmp[tmp2];
-  };
-  obj[10] = function handleStreamCreate(arg0) {
-    ({ streamKey, rtcServerId, viewerIds } = arg0);
-    let obj = dependencyMap3[streamKey];
-    ({ rtcChannelId, region } = arg0);
-    obj1 = isStreamKey;
-    let tmp7 = null == obj;
-    if (tmp7) {
-      tmp7 = null != rtcServerId;
-    }
-    if (tmp7) {
-      if (null == table2[streamKey]) {
-        dependencyMap[streamKey] = null;
-      }
-      let tmp11 = null == dependencyMap[streamKey];
-      if (tmp11) {
-        tmp11 = null == dependencyMap2[streamKey];
-      }
-      if (tmp11) {
-        tmp10[streamKey] = tmp4(7738).getStreamerApplication(decodeStreamKeyResult, closure_7);
-        const tmp4Result = tmp4(7738);
-      }
-      obj = {
-        streamRegion: null,
-        streamApplication: null,
-        streamSourceType: null,
-        actionContext: null,
-        numViewers: null,
-        goLiveModalDurationMs: null,
-        analyticsLocations: null,
-      };
-      obj[0] = region;
-      obj[1] = dependencyMap[streamKey];
-      let str2 = "unknown";
-      if (null != dependencyMap2[streamKey]) {
-        if (!tmp4(1115).isPlatformEmbedded) {
-          let name;
-          if (globalThis.platform != null) {
-            name = globalThis.platform.name;
-          }
-          if ("Chrome" !== name) {
-            let name1;
-            if (globalThis.platform != null) {
-              name1 = globalThis.platform.name;
-            }
-            if ("Firefox" === name1) {
-              let str6 = "screen";
-              if ("" !== obj5) {
-                str6 = "window";
-              }
-              str2 = str6;
-            } else {
-              let name2;
-              if (globalThis.platform != null) {
-                name2 = globalThis.platform.name;
-              }
-              str2 = "unknown";
-              if ("Safari" === name2) {
-                str2 = "window";
-              }
-            }
-          }
+    },
+    CONNECTION_CLOSED: function handleConnectionClosed() {
+      c3 = null;
+      const item = _modDef12.forEach(closure_18, (isOwner, arg1) => {
+        let str = "receiver-disconnect";
+        if (isOwner.isOwner) {
+          str = "sender-disconnect";
         }
-        str2 = "tab";
-        if (!obj5.startsWith("web-contents-media-stream:")) {
-          str2 = "window";
-          if (!obj5.startsWith("window:")) {
-            str2 = "unknown";
-            if (obj5.startsWith("screen:")) {
-              str2 = "screen";
-            }
+        isOwner.destroy(str);
+        delete tmp3[tmp2];
+        delete tmp[tmp2];
+      });
+    },
+    RTC_CONNECTION_STATE: handleRtcAction,
+    RTC_CONNECTION_PING: handleRtcAction,
+    RTC_CONNECTION_LOSS_RATE: handleRtcAction,
+    RTC_CONNECTION_UPDATE_ID: function handleRtcConnectionUpdateId(arg0) {
+      const connection = arg0;
+      return _modDef12.some(closure_18, (arg0) => arg0 === connection.connection);
+    },
+    RTC_CONNECTION_SECURE_FRAMES_UPDATE: handleRtcAction,
+    RTC_CONNECTION_REMOTE_VIDEO_SINK_WANTS: function handleRtcConnectionRemoteVideoSinkWants(guildId) {
+      guildId = guildId.guildId;
+      ({ context, wants, userId, channelId } = guildId);
+      if (null == guildId) {
+        let GUILD = StreamTypes.CALL;
+      } else {
+        GUILD = StreamTypes.GUILD;
+      }
+      const encodeStreamKeyResult = StreamKeyUtils.encodeStreamKey({
+        streamType: GUILD,
+        guildId,
+        channelId,
+        ownerId: userId,
+      });
+      let tmp6 = context === BaseConnectionEvent.MediaEngineContextTypes.STREAM;
+      if (tmp6) {
+        tmp6 = null != dependencyMap3[encodeStreamKeyResult];
+      }
+      if (tmp6) {
+        const _Object = Object;
+        const entries = Object.entries(wants);
+        const someResult = entries.some((item) => {
+          [tmp, tmp2] = item;
+          let tmp3 = "any" !== tmp;
+          if (tmp3) {
+            tmp3 = 0 !== tmp2;
           }
+          return tmp3;
+        });
+        if (someResult) {
+          const _performance = performance;
+          closure_16[encodeStreamKeyResult] = performance.now();
         }
+        tmp6 = someResult;
       }
-      obj[2] = str2;
-      let appContext;
-      if (table[streamKey] != null) {
-        appContext = tmp20.appContext;
+      return tmp6;
+    },
+    STREAM_START: function handleStreamStart(appContext) {
+      appContext = appContext.appContext;
+      ({ pid, nativePickerStyleUsed: importDefault, goLiveModalDurationMs } = appContext);
+      ({ streamType, guildId, channelId, sourceId, sourcePid, analyticsLocations } = appContext);
+      let obj = { streamType, guildId, channelId, ownerId: AuthenticationStore.getId() };
+      const encodeStreamKeyResult = obj.encodeStreamKey(obj);
+      closure_11[encodeStreamKeyResult] = { appContext, analyticsLocations };
+      const item = _modDef12.forEach(closure_18, (analyticsContext) => {
+        analyticsContext = analyticsContext.analyticsContext;
+        analyticsContext.setActionContext(appContext);
+        const result = analyticsContext.setNativePickerStyleUsed(importDefault);
+        if (analyticsContext.isOwner) {
+          analyticsContext.trackStart();
+        }
+      });
+      if (null == pid) {
+        pid = sourcePid;
       }
-      obj[3] = appContext;
-      let num = 0;
-      if (null != viewerIds) {
-        num = viewerIds.length;
+      closure_14[encodeStreamKeyResult] = sourceId;
+      closure_13[encodeStreamKeyResult] = pid;
+      if (null != pid) {
+        const gameForPID = RunningGameStore.getGameForPID(pid);
+        if (null != gameForPID) {
+          obj = { name: null, id: null, exe: null, distributor: null, sku: null, gameMetadata: null };
+          ({
+            name: obj3.name,
+            id: obj3.id,
+            exeName: obj3.exe,
+            distributor: obj3.distributor,
+            sku: obj3.sku,
+            gameMetadata: obj3.gameMetadata,
+          } = gameForPID);
+          dependencyMap[encodeStreamKeyResult] = obj;
+        }
+        if (tmp4[encodeStreamKeyResult] != null) {
+          let analyticsContext = tmp10.analyticsContext;
+          let result = analyticsContext.updateStreamApplication(dependencyMap[encodeStreamKeyResult]);
+        }
+      } else if (tmp4[encodeStreamKeyResult] != null) {
+        const analyticsContext2 = tmp6.analyticsContext;
+        const result1 = analyticsContext2.updateStreamApplication(null);
       }
-      obj[4] = num;
-      obj[5] = table3[streamKey];
-      let analyticsLocations;
-      if (table[streamKey] != null) {
-        analyticsLocations = tmp23.analyticsLocations;
+      if (null != goLiveModalDurationMs) {
+        closure_15[encodeStreamKeyResult] = goLiveModalDurationMs;
+      } else {
+        delete tmp2[tmp];
       }
-      obj[6] = analyticsLocations;
-      const streamRTCAnalyticsContext = new tmp4(4604).StreamRTCAnalyticsContext(obj);
-      _modDef38(null != closure_3, "Creating RTCConnection without session.");
-      obj = {
-        sessionId: null,
-        streamKey: null,
-        serverId: null,
-        channelId: null,
-        initialLayout: null,
-        analyticsContext: null,
-        parentMediaSessionId: null,
-      };
-      obj[0] = closure_3;
-      obj[1] = streamKey;
-      obj[2] = rtcServerId;
-      obj[3] = rtcChannelId;
-      obj[4] = PORTRAIT;
-      obj[5] = streamRTCAnalyticsContext;
-      let tmp32 = isOwnerDefault;
-      obj[6] = mediaSessionId.getMediaSessionId();
-      tmp32 = new tmp32(obj);
-      tmp3[streamKey] = tmp32;
-      obj = tmp32;
-      const tmp19 = table;
-    }
-    delete tmp[tmp2];
-    decodeStreamKeyResult = obj1.decodeStreamKey(streamKey);
-    tmp3 = dependencyMap3;
-    obj1 = {
-      type: "MEDIA_ENGINE_CONNECTION_STATS_HISTORY_RESET",
-      mediaEngineConnectionId: obj.getMediaEngineConnectionId(),
-    };
-    importDefaultResult1.dispatch(obj1);
-  };
-  obj[11] = function handleStreamServerUpdate(endpoint) {
-    if (null == dependencyMap3[endpoint.streamKey]) {
-      return false;
-    } else {
-      obj.connect(endpoint.endpoint, endpoint.token);
-    }
-  };
-  obj[12] = function handleStreamUpdate(viewerIds) {
-    viewerIds = viewerIds.viewerIds;
-    if (null == dependencyMap3[viewerIds.streamKey]) {
-      return false;
-    } else {
-      if (null != viewerIds) {
-        const analyticsContext = obj.analyticsContext;
-        analyticsContext.trackViewerCount(viewerIds.length);
-      }
-      obj.streamUpdate(tmp);
-    }
-  };
-  obj[13] = function handleStreamDelete(arg0) {
-    let obj = dependencyMap3[arg0.streamKey];
-    if (null == obj) {
-      return false;
-    } else {
-      obj = { type: "MEDIA_ENGINE_CONNECTION_STATS_HISTORY_RESET", mediaEngineConnectionId: null };
-      obj[1] = obj.getMediaEngineConnectionId();
-      importDefaultResult1.dispatch(obj);
-      obj.destroy("stream-end");
+    },
+    STREAM_STOP: function handleStreamStop(appContext) {
+      appContext = appContext.appContext;
+      const streamKey = appContext.streamKey;
+      closure_11[streamKey] = { appContext, analyticsLocations: "a" };
+      const item = _modDef12.forEach(closure_18, (analyticsContext) => {
+        analyticsContext = analyticsContext.analyticsContext;
+        analyticsContext.setActionContext(appContext);
+        if (analyticsContext.isOwner) {
+          analyticsContext.trackEnd();
+        }
+      });
+      closure_14[streamKey] = null;
+      closure_13[streamKey] = null;
       delete tmp[tmp2];
-    }
-  };
-  obj[14] = function handleLayoutUpdate(layout) {
-    layout = layout.layout;
-    const values = Object.values(closure_18);
-    const item = values.forEach((layoutChange) => layoutChange.layoutChange(layout));
-  };
-  obj[15] = function handleVideoSizeUpdate(arg0) {
-    ({ streamId: require, dimensions: importDefault, zoom: dependencyMap } = arg0);
-    const item = applyDefault.forEach(closure_18, (setVideoSize) => {
-      if (setVideoSize != null) {
-        setVideoSize.setVideoSize(closure_0, closure_1, closure_2);
+    },
+    STREAM_CREATE: function handleStreamCreate(arg0) {
+      ({ streamKey, rtcServerId, viewerIds } = arg0);
+      let obj = dependencyMap3[streamKey];
+      ({ rtcChannelId, region } = arg0);
+      let obj1 = StreamKeyUtils;
+      let tmp7 = null == obj;
+      if (tmp7) {
+        tmp7 = null != rtcServerId;
       }
-    });
+      if (tmp7) {
+        if (null == closure_13[streamKey]) {
+          dependencyMap[streamKey] = null;
+        }
+        let tmp11 = null == dependencyMap[streamKey];
+        if (tmp11) {
+          tmp11 = null == dependencyMap2[streamKey];
+        }
+        if (tmp11) {
+          tmp10[streamKey] = tmp4(7738).getStreamerApplication(decodeStreamKeyResult, PresenceStore);
+          const tmp4Result = tmp4(7738);
+        }
+        obj = {
+          streamRegion: region,
+          streamApplication: dependencyMap[streamKey],
+          streamSourceType: null,
+          actionContext: null,
+          numViewers: null,
+          goLiveModalDurationMs: null,
+          analyticsLocations: null,
+        };
+        let str2 = "unknown";
+        if (null != dependencyMap2[streamKey]) {
+          if (!tmp4(1115).isPlatformEmbedded) {
+            let name;
+            if (globalThis.platform != null) {
+              name = globalThis.platform.name;
+            }
+            if ("Chrome" !== name) {
+              let name1;
+              if (globalThis.platform != null) {
+                name1 = globalThis.platform.name;
+              }
+              if ("Firefox" === name1) {
+                let str6 = "screen";
+                if ("" !== obj5) {
+                  str6 = "window";
+                }
+                str2 = str6;
+              } else {
+                let name2;
+                if (globalThis.platform != null) {
+                  name2 = globalThis.platform.name;
+                }
+                str2 = "unknown";
+                if ("Safari" === name2) {
+                  str2 = "window";
+                }
+              }
+            }
+          }
+          str2 = "tab";
+          if (!obj5.startsWith("web-contents-media-stream:")) {
+            str2 = "window";
+            if (!obj5.startsWith("window:")) {
+              str2 = "unknown";
+              if (obj5.startsWith("screen:")) {
+                str2 = "screen";
+              }
+            }
+          }
+        }
+        obj.streamSourceType = str2;
+        let appContext;
+        if (dependencyMap[streamKey] != null) {
+          appContext = tmp20.appContext;
+        }
+        obj.actionContext = appContext;
+        let num = 0;
+        if (null != viewerIds) {
+          num = viewerIds.length;
+        }
+        obj.numViewers = num;
+        obj.goLiveModalDurationMs = closure_15[streamKey];
+        let analyticsLocations;
+        if (dependencyMap[streamKey] != null) {
+          analyticsLocations = tmp23.analyticsLocations;
+        }
+        obj.analyticsLocations = analyticsLocations;
+        const streamRTCAnalyticsContext = new tmp4(4604).StreamRTCAnalyticsContext(obj);
+        _modDef38(null != sessionId, "Creating RTCConnection without session.");
+        obj = {
+          sessionId,
+          streamKey,
+          serverId: rtcServerId,
+          channelId: rtcChannelId,
+          initialLayout: layout,
+          analyticsContext: streamRTCAnalyticsContext,
+          parentMediaSessionId: null,
+        };
+        let tmp32 = StreamRTCConnectionDefault;
+        obj.parentMediaSessionId = RTCConnectionStore.getMediaSessionId();
+        tmp32 = new tmp32(obj);
+        tmp3[streamKey] = tmp32;
+        obj = tmp32;
+      }
+      delete tmp[tmp2];
+      decodeStreamKeyResult = obj1.decodeStreamKey(streamKey);
+      tmp3 = dependencyMap3;
+      obj1 = {
+        type: "MEDIA_ENGINE_CONNECTION_STATS_HISTORY_RESET",
+        mediaEngineConnectionId: obj.getMediaEngineConnectionId(),
+      };
+      Dispatcher.dispatch(obj1);
+    },
+    STREAM_SERVER_UPDATE: function handleStreamServerUpdate(endpoint) {
+      if (null == dependencyMap3[endpoint.streamKey]) {
+        return false;
+      } else {
+        obj.connect(endpoint.endpoint, endpoint.token);
+      }
+    },
+    STREAM_UPDATE: function handleStreamUpdate(viewerIds) {
+      viewerIds = viewerIds.viewerIds;
+      if (null == dependencyMap3[viewerIds.streamKey]) {
+        return false;
+      } else {
+        if (null != viewerIds) {
+          const analyticsContext = obj.analyticsContext;
+          analyticsContext.trackViewerCount(viewerIds.length);
+        }
+        obj.streamUpdate(tmp);
+      }
+    },
+    STREAM_DELETE: function handleStreamDelete(arg0) {
+      let obj = dependencyMap3[arg0.streamKey];
+      if (null == obj) {
+        return false;
+      } else {
+        obj = { type: "MEDIA_ENGINE_CONNECTION_STATS_HISTORY_RESET", mediaEngineConnectionId: null };
+        obj.mediaEngineConnectionId = obj.getMediaEngineConnectionId();
+        Dispatcher.dispatch(obj);
+        obj.destroy("stream-end");
+        delete tmp[tmp2];
+      }
+    },
+    STREAM_LAYOUT_UPDATE: function handleLayoutUpdate(layout) {
+      layout = layout.layout;
+      const values = Object.values(closure_18);
+      const item = values.forEach((layoutChange) => layoutChange.layoutChange(layout));
+    },
+    VIDEO_SIZE_UPDATE: function handleVideoSizeUpdate(arg0) {
+      ({ streamId: require, dimensions: importDefault, zoom: dependencyMap } = arg0);
+      const item = _modDef12.forEach(closure_18, (setVideoSize) => {
+        if (setVideoSize != null) {
+          setVideoSize.setVideoSize(require, importDefault, dependencyMap);
+        }
+      });
+    },
   };
 } else {
   obj = {};
 }
-const streamRTCConnectionStore = new StreamRTCConnectionStore(importDefaultResult1, obj);
-let result = require("set").fileFinishedImporting("stores/StreamRTCConnectionStore.tsx");
+const streamRTCConnectionStore = new StreamRTCConnectionStore(Dispatcher, obj);
+const size = fn(2);
+let result = size.fileFinishedImporting("stores/StreamRTCConnectionStore.tsx");
 
 export default streamRTCConnectionStore;

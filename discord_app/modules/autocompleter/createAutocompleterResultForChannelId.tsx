@@ -1,66 +1,54 @@
 // discord_app/modules/autocompleter/createAutocompleterResultForChannelId.tsx
-import computeChannelName from "../channel/useChannelName.tsx";
-import closure_2 from "../../stores/ChannelStore.tsx";
-import closure_3 from "../../stores/RelationshipStore.tsx";
-import closure_4 from "../../stores/UserStore.tsx";
-import { ChannelTypes } from "../../Constants.tsx";
+import useChannelName from "../channel/useChannelName.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
+import RelationshipStore from "../../stores/RelationshipStore.tsx";
+import UserStore from "../../stores/UserStore.tsx";
 
-require = arg1;
-require("HeaderRecord").AutocompleterResultTypes;
-const result = require("set").fileFinishedImporting("modules/autocompleter/createAutocompleterResultForChannelId.tsx");
+require = fn;
+fn(5515).AutocompleterResultTypes;
+const ChannelTypes = fn(1074).ChannelTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/autocompleter/createAutocompleterResultForChannelId.tsx");
 
-export default function createAutocompleterResultForChannelId(arg0, arg1, closure_9, closure_7) {
+export default function createAutocompleterResultForChannelId(arg0, arg1, UserStore, RelationshipStore) {
   let obj = arg1;
   if (arg1 === undefined) {
-    obj = closure_2;
+    obj = ChannelStore;
   }
-  obj1 = closure_9;
-  if (closure_9 === undefined) {
-    obj1 = closure_4;
+  let obj1 = UserStore;
+  if (UserStore === undefined) {
+    obj1 = UserStore;
   }
-  let tmp = closure_7;
-  if (closure_7 === undefined) {
-    tmp = closure_3;
+  let tmp = RelationshipStore;
+  if (RelationshipStore === undefined) {
+    tmp = RelationshipStore;
   }
   const channel = obj.getChannel(arg0);
   if (null == channel) {
     return null;
   } else {
-    const channelName = computeChannelName.computeChannelName(channel, obj1, tmp);
+    const channelName = useChannelName.computeChannelName(channel, obj1, tmp);
     const type = channel.type;
     if (ChannelTypes.DM === type) {
       const user = obj1.getUser(channel.getRecipientId());
       let tmp6 = null;
       if (null != user) {
-        obj = { type: null, record: null, score: 0, comparator: null };
-        obj[0] = AutocompleterResultTypes.USER;
-        obj[1] = user;
-        obj[3] = channelName;
+        obj = { type: AutocompleterResultTypes.USER, record: user, score: 0, comparator: channelName };
         tmp6 = obj;
       }
       return tmp6;
     } else if (tmp11.GROUP_DM === type) {
-      obj = { type: null, record: null, score: 0, comparator: null };
-      obj[0] = AutocompleterResultTypes.GROUP_DM;
-      obj[1] = channel;
-      obj[3] = channelName;
+      obj = { type: AutocompleterResultTypes.GROUP_DM, record: channel, score: 0, comparator: channelName };
       return obj;
     } else {
       if (tmp11.GUILD_VOICE !== type) {
         if (tmp11.GUILD_STAGE_VOICE !== type) {
-          obj1 = { type: null, record: null, score: 0, comparator: null };
-          obj1[0] = AutocompleterResultTypes.TEXT_CHANNEL;
-          obj1[1] = channel;
-          obj1[3] = channelName;
+          obj1 = { type: AutocompleterResultTypes.TEXT_CHANNEL, record: channel, score: 0, comparator: channelName };
           return obj1;
         }
       }
-      const obj2 = { type: null, record: null, score: 0, comparator: null };
-      obj2[0] = AutocompleterResultTypes.VOICE_CHANNEL;
-      obj2[1] = channel;
-      obj2[3] = channelName;
+      const obj2 = { type: AutocompleterResultTypes.VOICE_CHANNEL, record: channel, score: 0, comparator: channelName };
       return obj2;
     }
-    const obj8 = computeChannelName;
   }
 }

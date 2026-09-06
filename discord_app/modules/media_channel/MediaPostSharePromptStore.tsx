@@ -1,26 +1,25 @@
 // discord_app/modules/media_channel/MediaPostSharePromptStore.tsx
-import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
 import useIsFirstMessageInMediaPost from "useIsFirstMessageInMediaPost.tsx";
-import closure_3 from "../channel/GatedChannelStore.tsx";
-import closure_4 from "../../stores/AuthenticationStore.tsx";
-import closure_5 from "../../stores/ChannelStore.tsx";
-import set from "../../../_runtime/00002_set.js";
+import GatedChannelStore from "../channel/GatedChannelStore.tsx";
+import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
 
-require = arg1;
+require = fn;
 let set = new Set();
 const Store = initializeDefault.Store;
 class MediaPostSharePromptStore extends Store {}
 const prototype = MediaPostSharePromptStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_4, closure_5, closure_3);
+  this.waitFor(AuthenticationStore, ChannelStore, GatedChannelStore);
 };
 prototype["shouldDisplayPrompt"] = function shouldDisplayPrompt(id) {
   return set.has(id);
 };
 MediaPostSharePromptStore.displayName = "MediaPostSharePromptStore";
-const mediaPostSharePromptStore = new MediaPostSharePromptStore(dispatcherDefault, {
+const mediaPostSharePromptStore = new MediaPostSharePromptStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     set = new Set();
   },
@@ -29,18 +28,17 @@ const mediaPostSharePromptStore = new MediaPostSharePromptStore(dispatcherDefaul
       const message = isPushNotification.message;
       const author = message.author;
       let id1;
-      id = id.getId();
+      const id = AuthenticationStore.getId();
       if (author != null) {
         id1 = author.id;
       }
       if (id === id1) {
         if (obj2.isFirstMessageIdInMediaPost(message.id, message.channel_id)) {
-          channel = channel.getChannel(message.channel_id);
+          const channel = ChannelStore.getChannel(message.channel_id);
           if (null != channel) {
             if (null != channel.parent_id) {
-              if (channelGated.isChannelGated(channel.guild_id, channel.parent_id)) {
-                set.add(DISCORD_EPOCHDefault.castMessageIdAsChannelId(isPushNotification.message.id));
-                const obj = DISCORD_EPOCHDefault;
+              if (GatedChannelStore.isChannelGated(channel.guild_id, channel.parent_id)) {
+                set.add(SnowflakeUtilsDefault.castMessageIdAsChannelId(isPushNotification.message.id));
               }
             }
           }
@@ -56,6 +54,7 @@ const mediaPostSharePromptStore = new MediaPostSharePromptStore(dispatcherDefaul
     set.clear();
   },
 });
-const result = set.fileFinishedImporting("modules/media_channel/MediaPostSharePromptStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/media_channel/MediaPostSharePromptStore.tsx");
 
 export default mediaPostSharePromptStore;

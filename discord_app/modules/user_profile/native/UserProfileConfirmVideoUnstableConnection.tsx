@@ -1,33 +1,31 @@
 // discord_app/modules/user_profile/native/UserProfileConfirmVideoUnstableConnection.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import getAlertModalItemKey from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import util from "../../../intl/index.native.tsx";
+import AlertModal from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-({ jsx: obj1, jsxs: c3 } = jsxProd);
-const result = require("set").fileFinishedImporting(
-  "modules/user_profile/native/UserProfileConfirmVideoUnstableConnection.tsx",
-);
+require = fn;
+const jsxProd = fn(21);
+({ jsx: c2, jsxs: c3 } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileConfirmVideoUnstableConnection.tsx");
 
 export default function UserProfileConfirmVideoUnstableConnection(onConfirm) {
   let obj = { title: null, content: null, actions: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t.m2Hyj0);
-  const intl2 = getSystemLocale.intl;
-  obj[1] = intl2.string(getSystemLocale.t.EhaK6B);
+  const intl = util.intl;
+  obj.title = intl.string(util.t.m2Hyj0);
+  const intl2 = util.intl;
+  obj.content = intl2.string(util.t.EhaK6B);
   obj = { children: null };
   obj = { text: null, onPress: null };
-  const intl3 = getSystemLocale.intl;
-  obj[0] = intl3.string(getSystemLocale.t.ND1my3);
-  obj[1] = onConfirm.onConfirm;
-  const items = [callback(getAlertModalItemKey.AlertActionButton, obj, "confirm")];
-  obj1 = { variant: "secondary", text: null };
-  const intl4 = getSystemLocale.intl;
-  obj1[1] = intl4.string(getSystemLocale.t.jEqEhy);
-  items[1] = callback(getAlertModalItemKey.AlertActionButton, obj1, "cancel");
-  obj[0] = items;
-  obj[2] = callback2(getAlertModalItemKey.AlertActions, obj);
-  return callback(getAlertModalItemKey.AlertModal, obj);
+  const intl3 = util.intl;
+  obj.text = intl3.string(util.t.ND1my3);
+  obj.onPress = onConfirm.onConfirm;
+  const items = [React2(AlertModal.AlertActionButton, obj, "confirm")];
+  const obj1 = { variant: "secondary", text: null };
+  const intl4 = util.intl;
+  obj1.text = intl4.string(util.t.jEqEhy);
+  items[1] = React2(AlertModal.AlertActionButton, obj1, "cancel");
+  obj.children = items;
+  obj.actions = React3(AlertModal.AlertActions, obj);
+  return React2(AlertModal.AlertModal, obj);
 }

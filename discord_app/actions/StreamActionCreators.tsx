@@ -1,49 +1,45 @@
 // discord_app/actions/StreamActionCreators.tsx
 import _modDef38 from "../../_runtime/metro/00038__.js";
-import dispatcherDefault from "../Dispatcher.tsx";
-import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _modDef4573 from "ChannelActionCreators.tsx";
-import isStreamKey from "../modules/go_live/utils/StreamKeyUtils.tsx";
-import allowChannelAccess from "../utils/ChannelUtils.tsx";
+import DispatcherDefault from "../Dispatcher.tsx";
+import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import ChannelActionCreatorsDefault from "ChannelActionCreators.tsx";
+import StreamKeyUtils from "../modules/go_live/utils/StreamKeyUtils.tsx";
+import ChannelUtils from "../utils/ChannelUtils.tsx";
+import TrackedHTTPUtilsDefault from "../utils/TrackedHTTPUtils.tsx";
 import transitionToStreamDefault from "../modules/go_live/utils/transitionToStream.native.tsx";
-import _modDef5411 from "SelectedChannelActionCreators.tsx";
-import isPremiumResolution from "../utils/StreamQualityUtils.tsx";
-import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../modules/game_console/GameConsoleStore.tsx";
-import closure_5 from "../modules/popout-window/PopoutWindowStore.native.tsx";
-import closure_6 from "../stores/ApplicationStreamPreviewStore.tsx";
-import closure_7 from "../stores/ApplicationStreamingStore.tsx";
-import closure_8 from "../stores/AuthenticationStore.tsx";
-import closure_9 from "../stores/ChannelStore.tsx";
-import closure_10 from "../stores/GuildStore.tsx";
-import closure_11 from "../stores/SelectedChannelStore.tsx";
-import closure_12 from "../stores/VoiceStateStore.tsx";
-import ME from "../Constants.tsx";
-import { StreamTypes } from "../modules/go_live/Constants.tsx";
-import { isStreamKey } from "../modules/go_live/utils/StreamKeyUtils.tsx";
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators.tsx";
+import StreamQualityUtils from "../utils/StreamQualityUtils.tsx";
+import CallActionCreatorsDefault from "CallActionCreators.tsx";
+import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
+import GameConsoleStore from "../modules/game_console/GameConsoleStore.tsx";
+import PopoutWindowStore from "../modules/popout-window/PopoutWindowStore.native.tsx";
+import ApplicationStreamPreviewStore from "../stores/ApplicationStreamPreviewStore.tsx";
+import ApplicationStreamingStore from "../stores/ApplicationStreamingStore.tsx";
+import AuthenticationStore from "../stores/AuthenticationStore.tsx";
+import ChannelStore from "../stores/ChannelStore.tsx";
+import GuildStore from "../stores/GuildStore.tsx";
+import SelectedChannelStore from "../stores/SelectedChannelStore.tsx";
+import VoiceStateStore from "../stores/VoiceStateStore.tsx";
 
-require = arg1;
+require = fn;
 function watchStream(stream, forceMultiple) {
-  if (null == remoteSessionId.getRemoteSessionId()) {
+  if (null == GameConsoleStore.getRemoteSessionId()) {
     ({ guildId, channelId } = stream);
     if (null == guildId) {
-      const encodeStreamKeyResult = isStreamKey.encodeStreamKey(stream);
+      const encodeStreamKeyResult = StreamKeyUtils.encodeStreamKey(stream);
       forceMultiple = undefined;
       if (forceMultiple != null) {
         forceMultiple = forceMultiple.forceMultiple;
       }
       if (!forceMultiple) {
-        const allActiveStreamsForChannel = authStore.getAllActiveStreamsForChannel(channelId);
+        const allActiveStreamsForChannel = ApplicationStreamingStore.getAllActiveStreamsForChannel(channelId);
         forceMultiple =
           allActiveStreamsForChannel.filter((ownerId) => ownerId.ownerId !== id.getId()).length >= MAX_VALUE;
       }
-      const obj2 = isStreamKey;
       const tmp12 = require;
       const tmp18 = importDefault;
-      let obj = { type: "STREAM_WATCH", streamKey: null, allowMultiple: null };
-      obj[1] = encodeStreamKeyResult;
-      obj[2] = forceMultiple;
-      dispatcherDefault.dispatch(obj);
+      let obj = { type: "STREAM_WATCH", streamKey: encodeStreamKeyResult, allowMultiple: forceMultiple };
+      DispatcherDefault.dispatch(obj);
       if (null != guildId) {
         const result = tmp12(4716).maybeSetGuildRoomVideoOverlay(true, guildId, channelId);
         const tmp12Result = tmp12(4716);
@@ -67,192 +63,147 @@ function watchStream(stream, forceMultiple) {
         const participant = tmp18(4761).selectParticipant(stream.channelId, encodeStreamKeyResult);
         const tmp18Result = tmp18(4761);
       }
-      const obj3 = dispatcherDefault;
     } else {
-      const channel = store.getChannel(channelId);
+      const channel = ChannelStore.getChannel(channelId);
       _modDef38(null != channel, "Cannot join a null voice channel");
-      const isInChannelResult = closure_12.isInChannel(channelId);
+      const isInChannelResult = VoiceStateStore.isInChannel(channelId);
       let isChannelFullResult = !isInChannelResult;
       if (!isInChannelResult) {
-        obj = allowChannelAccess;
-        isChannelFullResult = obj.isChannelFull(channel, tmp6, closure_10);
+        obj = ChannelUtils;
+        isChannelFullResult = obj.isChannelFull(channel, tmp6, GuildStore);
       }
-      tmp6 = closure_12;
+      tmp6 = VoiceStateStore;
     }
   }
 }
-function _fetchStreamPreview() {
-  const self = this;
-  const tmp = callback((arg0, arg1, arg2) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    c7 = 0;
-    c8 = 0;
-    c6 = 0;
-    return (function* (arg0, arg1, arg2) {
-      if (c8 === 2) {
-        c8 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
+let closure_19 = async function _fetchStreamPreview(arg0, value) {
+  if (c8 === 2) {
+    c8 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c8 = 2;
+      if (0 === c7) {
         if (arg0 === 1) {
-          throw arg1;
+          c8 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c8 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_4 = tmp3;
+          closure_3 = tmp7;
+          let timestamp = closure_2;
+          closure_131_0 = undefined;
+          closure_131_1 = undefined;
+          closure_131_2 = undefined;
+          if (ApplicationStreamPreviewStore.shouldFetchPreview(closure_0, closure_1, closure_2)) {
+            let obj5 = _require;
+            let result = require("StreamKeyUtils");
+            let HTTP = result.encodeStreamKey;
+            if (null != tmp54) {
+              let CALL = constants.GUILD;
+            } else {
+              CALL = constants.CALL;
+            }
+            const obj1 = { streamType: CALL, guildId: tmp54, channelId: Date, ownerId: timestamp };
+            const HTTPResult = HTTP(obj1);
+            closure_131_0 = HTTPResult;
+            const obj2 = { type: "STREAM_PREVIEW_FETCH_START", streamKey: HTTPResult };
+            DispatcherDefault.dispatch(obj2);
+            c6 = 1;
+            HTTP = obj5(1272).HTTP;
+            const request = {
+              url: map1.STREAM_PREVIEW(HTTPResult),
+              query: null,
+              oldFormErrors: true,
+              rejectWithError: null,
+            };
+            let obj3 = { version: null };
+            timestamp = Date.now();
+            obj3.version = timestamp;
+            request.query = obj3;
+            obj5 = obj5(1272);
+            result = obj5.rejectWithMigratedError();
+            request.rejectWithError = result;
+            value = HTTP.get(request);
+            c7 = 2;
+            c8 = 1;
+          }
         }
       } else {
-        try {
-          c8 = 2;
-          if (0 === c7) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c8 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_4 = tmp3;
-              closure_3 = tmp7;
-              let timestamp = dependencyMap;
-              c0 = undefined;
-              let lib;
-              dependencyMap = undefined;
-              if (c6.shouldFetchPreview(c0, lib, dependencyMap)) {
-                let obj5 = callback;
-                let result = callback(4612);
-                let HTTP = result.encodeStreamKey;
-                if (null != tmp55) {
-                  let CALL = closure_1_16.GUILD;
-                } else {
-                  CALL = closure_1_16.CALL;
-                }
-                obj1 = { streamType: null, guildId: null, channelId: null, ownerId: null };
-                obj1[0] = CALL;
-                obj1[1] = tmp55;
-                obj1[2] = Date;
-                obj1[3] = timestamp;
-                const HTTPResult = HTTP(obj1);
-                c0 = HTTPResult;
-                let obj7 = lib(573);
-                const obj2 = { type: "STREAM_PREVIEW_FETCH_START", streamKey: null };
-                obj2[1] = HTTPResult;
-                obj7.dispatch(obj2);
-                c6 = 1;
-                HTTP = obj5(1272).HTTP;
-                let obj3 = { url: null, query: null, oldFormErrors: true, rejectWithError: null };
-                obj3[0] = closure_1_13.STREAM_PREVIEW(HTTPResult);
-                const obj4 = { version: null };
-                timestamp = Date.now();
-                obj4[0] = timestamp;
-                obj3[1] = obj4;
-                obj5 = obj5(1272);
-                result = obj5.rejectWithMigratedError();
-                obj3[3] = result;
-                const value = HTTP.get(obj3);
-                c7 = 2;
-                c8 = 1;
-              }
-            }
-          } else {
-            if (1 === tmp7) {
-              c6 = 0;
-              closure_3 = closure_5;
-              if (429 === closure_3.status) {
-                dependencyMap = closure_3.body.retry_after * lib(1090).Millis.SECOND;
-              }
-              obj3 = lib(573);
-              obj5 = { type: "STREAM_PREVIEW_FETCH_FAIL", streamKey: null, retryAfter: null };
-              obj5[1] = c0;
-              obj5[2] = dependencyMap;
-              obj3.dispatch(obj5);
-            } else if (arg0 === 1) {
-              c8 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              lib = arg1;
-              obj = lib(573);
-              const obj6 = { type: "STREAM_PREVIEW_FETCH_SUCCESS", streamKey: null, previewURL: null };
-              obj6[1] = c0;
-              obj6[2] = lib.body.url;
-              obj.dispatch(obj6);
-              c6 = 0;
-            }
-            c6 = 0;
-            c8 = 3;
-            obj7 = { value: null, done: true };
-            obj7[0] = arg1;
-            return obj7;
+        if (1 === tmp7) {
+          c6 = 0;
+          closure_131_3 = closure_5;
+          if (429 === closure_131_3.status) {
+            closure_131_2 = closure_131_3.body.retry_after * closure_132_1(closure_132_2[20]).Millis.SECOND;
           }
+          obj3 = closure_132_1(closure_132_2[12]);
+          const obj4 = { type: "STREAM_PREVIEW_FETCH_FAIL", streamKey: closure_131_0, retryAfter: closure_131_2 };
+          obj3.dispatch(obj4);
+        } else if (arg0 === 1) {
           c8 = 3;
-        } catch (tmp45) {
-          closure_5 = tmp45;
-          if (tmp4 === c6) {
-            c8 = tmp2;
-            throw tmp45;
-          } else {
-            c7 = tmp;
-          }
+          throw value;
+        } else if (arg0 !== 2) {
+          closure_131_1 = value;
+          obj = closure_132_1(closure_132_2[12]);
+          obj5 = { type: "STREAM_PREVIEW_FETCH_SUCCESS", streamKey: closure_131_0, previewURL: closure_131_1.body.url };
+          obj.dispatch(obj5);
+          c6 = 0;
         }
+        c6 = 0;
+        c8 = 3;
+        const obj6 = { value, done: true };
+        return obj6;
       }
-    })();
-  });
-  closure_19 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+      c8 = 3;
+    } catch (tmp45) {
+      closure_5 = tmp45;
+      if (tmp4 === c6) {
+        c8 = tmp2;
+        throw tmp45;
+      } else {
+        c7 = tmp;
+      }
+    }
   }
-  return applyArgumentsResult;
-}
-function _notifyStreamStart() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c2 = 0;
-    c1 = 0;
+};
+let closure_20 = async function _notifyStreamStart(arg0, arg1) {
+  await TrackedHTTPUtilsDefault.post({
+    url: closure_2_13.STREAM_NOTIFY(closure_0),
+    oldFormErrors: true,
+    trackedActionData: { event: require("discord_common/AnalyticsUtils").NetworkActionNames.STREAM_NOTIFY },
+    rejectWithError: true,
+  });
+  if (1 === tmp6) {
     c4 = 0;
-    return (function* (arg0) {
-      c4 = 1;
-      obj1 = { url: null, oldFormErrors: true, trackedActionData: null, rejectWithError: true };
-      obj1[0] = closure_1_13.STREAM_NOTIFY(callback);
-      const obj2 = { event: null };
-      obj2[0] = callback(1250).NetworkActionNames.STREAM_NOTIFY;
-      obj1[2] = obj2;
-      yield v0(4753).post(obj1);
-      if (1 === tmp6) {
-        c4 = 0;
-        v0 = 3;
-      } else if (arg0 === 1) {
-        v0 = 3;
-        throw arg1;
-      } else if (arg0 !== 2) {
-        c4 = 0;
-      }
-      c4 = 0;
-      return arg1;
-    })();
-  });
-  closure_20 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    c1 = 3;
+  } else if (arg0 === 1) {
+    c1 = 3;
+    throw arg1;
+  } else if (arg0 !== 2) {
+    c4 = 0;
   }
-  return applyArgumentsResult;
-}
-({ Endpoints: map1, AppContext: closure_14, PopoutWindowKeys: closure_15 } = ME);
-let result = require("set").fileFinishedImporting("actions/StreamActionCreators.tsx");
+  return arg1;
+};
+const Constants = fn(1074);
+({ Endpoints: map1, AppContext: closure_14, PopoutWindowKeys: closure_15 } = Constants);
+const StreamTypes = fn(4602).StreamTypes;
+const size = fn(2);
+let result = size.fileFinishedImporting("actions/StreamActionCreators.tsx");
 
-export const startStream = function startStream(guildId, channelId) {
-  let obj = dispatcherDefault;
+export const startStream = function startStream(guildId, channelId, arg2) {
+  let obj = DispatcherDefault;
   if (null != guildId) {
     let CALL = StreamTypes.GUILD;
   } else {
@@ -263,38 +214,36 @@ export const startStream = function startStream(guildId, channelId) {
   obj.dispatch(obj);
 };
 export const setStreamPaused = function setStreamPaused(currentUserActiveStream, paused) {
-  let obj = isStreamKey;
+  let obj = StreamKeyUtils;
   const encodeStreamKeyResult = obj.encodeStreamKey(currentUserActiveStream);
   obj = { type: "STREAM_SET_PAUSED", streamKey: encodeStreamKeyResult, paused };
-  dispatcherDefault.dispatch(obj);
+  DispatcherDefault.dispatch(obj);
 };
 export { watchStream };
 export const toggleSelfStreamHidden = function toggleSelfStreamHidden(channelId, selfStreamHidden) {
-  let obj = dispatcherDefault;
-  obj = { type: "STREAM_UPDATE_SELF_HIDDEN", channelId, selfStreamHidden };
+  const obj = { type: "STREAM_UPDATE_SELF_HIDDEN", channelId, selfStreamHidden };
   obj.dispatch(obj);
 };
 export const watchStreamAndTransitionToStream = function watchStreamAndTransitionToStream(stream, forceMultiple) {
   const channelId = stream.channelId;
   if (null == stream.guildId) {
     watchStream(stream, forceMultiple);
-    windowOpen = windowOpen.getWindowOpen(constants2.CHANNEL_CALL_POPOUT);
+    let windowOpen = PopoutWindowStore.getWindowOpen(constants2.CHANNEL_CALL_POPOUT);
     if (windowOpen) {
-      windowOpen = store2.getVoiceChannelId() === channelId;
+      windowOpen = SelectedChannelStore.getVoiceChannelId() === channelId;
     }
     if (!windowOpen) {
       transitionToStreamDefault(stream);
     }
   } else {
-    const channel = store.getChannel(channelId);
+    const channel = ChannelStore.getChannel(channelId);
     _modDef38(null != channel, "Cannot join a null voice channel");
-    const isInChannelResult = closure_12.isInChannel(channelId);
+    const isInChannelResult = VoiceStateStore.isInChannel(channelId);
     let isChannelFullResult = !isInChannelResult;
     if (!isInChannelResult) {
-      isChannelFullResult = allowChannelAccess.isChannelFull(channel, tmp6, closure_10);
-      const obj = allowChannelAccess;
+      isChannelFullResult = ChannelUtils.isChannelFull(channel, tmp6, GuildStore);
     }
-    tmp6 = closure_12;
+    tmp6 = VoiceStateStore;
   }
 };
 export const stopStream = function stopStream(streamKey) {
@@ -310,27 +259,23 @@ export const stopStream = function stopStream(streamKey) {
     if (flag === undefined) {
       flag = true;
     }
-    let obj = dispatcherDefault;
-    obj = { type: "STREAM_CLOSE", streamKey: null, canShowFeedback: null };
-    obj[1] = streamKey;
-    obj[2] = flag;
+    let obj = { type: "STREAM_CLOSE", streamKey, canShowFeedback: flag };
     obj.dispatch(obj);
   }
   obj = { type: "STREAM_STOP", streamKey, appContext: constants.APP };
-  dispatcherDefault.dispatch(obj);
+  DispatcherDefault.dispatch(obj);
 };
 export const closeStream = function closeStream(encodeStreamKeyResult1, arg1) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = true;
   }
-  let obj = dispatcherDefault;
-  obj = { type: "STREAM_CLOSE", streamKey: encodeStreamKeyResult1, canShowFeedback: flag };
+  const obj = { type: "STREAM_CLOSE", streamKey: encodeStreamKeyResult1, canShowFeedback: flag };
   obj.dispatch(obj);
 };
-export const fetchStreamPreview = function fetchStreamPreview(closure_0, closure_1, closure_2) {
+export const fetchStreamPreview = function fetchStreamPreview() {
   const self = this;
-  const apply = _fetchStreamPreview.apply;
+  const apply = closure_19.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -339,13 +284,12 @@ export const fetchStreamPreview = function fetchStreamPreview(closure_0, closure
   return applyArgumentsResult;
 };
 export const setLayout = function setLayout(layout) {
-  let obj = dispatcherDefault;
-  obj = { type: "STREAM_LAYOUT_UPDATE", layout };
+  const obj = { type: "STREAM_LAYOUT_UPDATE", layout };
   obj.dispatch(obj);
 };
 export const notifyStreamStart = function notifyStreamStart() {
   const self = this;
-  const apply = _notifyStreamStart.apply;
+  const apply = closure_20.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -355,7 +299,7 @@ export const notifyStreamStart = function notifyStreamStart() {
 };
 export const updateStreamSettings = function updateStreamSettings(noTrack) {
   if (true !== noTrack.noTrack) {
-    let obj = isPremiumResolution;
+    let obj = StreamQualityUtils;
     const result = obj.trackStreamSettingsUpdate(
       noTrack.preset,
       noTrack.resolution,
@@ -365,77 +309,72 @@ export const updateStreamSettings = function updateStreamSettings(noTrack) {
   }
   obj = { type: "STREAM_UPDATE_SETTINGS" };
   const merged = Object.assign(noTrack);
-  dispatcherDefault.dispatch(obj);
+  DispatcherDefault.dispatch(obj);
 };
 export const changeStreamRegion = function changeStreamRegion(encodeStreamKeyResult, preferredRegion) {
-  const HTTP = sendRequest.HTTP;
-  obj = { url: closure_13.STREAM(encodeStreamKeyResult), body: obj, oldFormErrors: true, rejectWithError: true };
-  obj = { region: preferredRegion };
-  HTTP.patch(obj);
+  const HTTP = HTTPUtils.HTTP;
+  const request = {
+    url: map1.STREAM(encodeStreamKeyResult),
+    body: { region: preferredRegion },
+    oldFormErrors: true,
+    rejectWithError: true,
+  };
+  HTTP.patch(request);
 };
 export const stopOwnStream = function stopOwnStream(arg0) {
   let flag = arg0;
   if (arg0 === undefined) {
     flag = true;
   }
-  const currentUserActiveStream = authStore.getCurrentUserActiveStream();
+  const currentUserActiveStream = ApplicationStreamingStore.getCurrentUserActiveStream();
   if (null != currentUserActiveStream) {
-    const encodeStreamKeyResult = isStreamKey.encodeStreamKey(currentUserActiveStream);
+    const encodeStreamKeyResult = StreamKeyUtils.encodeStreamKey(currentUserActiveStream);
     if (flag === undefined) {
       flag = true;
     }
     if (flag === undefined) {
       flag = true;
     }
-    let obj = dispatcherDefault;
-    obj = { type: "STREAM_CLOSE", streamKey: null, canShowFeedback: null };
-    obj[1] = encodeStreamKeyResult;
-    obj[2] = flag;
+    let obj = { type: "STREAM_CLOSE", streamKey: encodeStreamKeyResult, canShowFeedback: flag };
     obj.dispatch(obj);
-    const obj5 = isStreamKey;
-    obj = { type: "STREAM_STOP", streamKey: null, appContext: null };
-    obj[1] = encodeStreamKeyResult;
-    obj[2] = constants.APP;
-    dispatcherDefault.dispatch(obj);
-    const obj3 = dispatcherDefault;
+    obj = { type: "STREAM_STOP", streamKey: encodeStreamKeyResult, appContext: constants.APP };
+    DispatcherDefault.dispatch(obj);
   }
 };
 export const joinPrivateChannelAndWatchStream = function joinPrivateChannelAndWatchStream(arg0, streamKey) {
-  const _require = arg0;
-  id = id.getId();
-  importDefault = require("../modules/go_live/utils/StreamKeyUtils.tsx").decodeStreamKey(streamKey);
-  const voiceChannelId = store2.getVoiceChannelId();
+  _require = arg0;
+  const id = AuthenticationStore.getId();
+  importDefault = require("StreamKeyUtils").decodeStreamKey(streamKey);
+  const voiceChannelId = SelectedChannelStore.getVoiceChannelId();
   if (tmp4) {
-    _modDef5411.disconnect();
-    const obj2 = _modDef5411;
+    SelectedChannelActionCreatorsDefault.disconnect();
   }
-  let obj = isStreamKey;
+  let obj = require("StreamKeyUtils");
   tmp4 = null != voiceChannelId && voiceChannelId !== arg0;
-  _modDef4573.addRecipient(arg0, id, undefined, () => {
-    const tmp = callback(closure_1_2[26]);
+  ChannelActionCreatorsDefault.addRecipient(arg0, id, undefined, () => {
+    const tmp = CallActionCreatorsDefault;
     const call = tmp.call;
     const fn = () => {
-      const channelId = closure_1.channelId;
-      if (null == closure_1.guildId) {
-        closure_1_18(tmp, undefined);
-        let windowOpen = closure_1_5.getWindowOpen(closure_1_15.CHANNEL_CALL_POPOUT);
+      const channelId = closure_1_1.channelId;
+      if (null == closure_1_1.guildId) {
+        watchStream(tmp, undefined);
+        windowOpen = windowOpen.getWindowOpen(constants.CHANNEL_CALL_POPOUT);
         if (windowOpen) {
-          windowOpen = closure_1_11.getVoiceChannelId() === channelId;
+          windowOpen = voiceChannelId.getVoiceChannelId() === channelId;
         }
         if (!windowOpen) {
-          closure_1_1(closure_1_2[18])(tmp);
+          closure_1(4762)(tmp);
         }
       } else {
-        const channel = closure_1_9.getChannel(channelId);
-        closure_1_1(closure_1_2[14])(null != channel, "Cannot join a null voice channel");
-        const isInChannelResult = closure_1_12.isInChannel(channelId);
+        channel = channel.getChannel(channelId);
+        closure_1(38)(null != channel, "Cannot join a null voice channel");
+        const isInChannelResult = inChannel.isInChannel(channelId);
         let isChannelFullResult = !isInChannelResult;
         if (!isInChannelResult) {
-          isChannelFullResult = closure_1_0(tmp5[15]).isChannelFull(channel, tmp7, closure_1_10);
-          const obj = closure_1_0(tmp5[15]);
+          isChannelFullResult = closure_0(4705).isChannelFull(channel, tmp7, GuildStore);
+          const obj = closure_0(4705);
         }
-        tmp5 = closure_1_2;
-        tmp7 = closure_1_12;
+        tmp7 = inChannel;
       }
     };
     if (typeof call === "unknown") {

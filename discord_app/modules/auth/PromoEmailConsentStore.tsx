@@ -1,20 +1,19 @@
 // discord_app/modules/auth/PromoEmailConsentStore.tsx
-import set from "../../../_runtime/00002_set.js";
-import keys from "../../../_runtime/00560_keys.js";
+import 00560__ from "../../../_runtime/metro/00560__.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const obj = keys.create(() => ({ required: false, checked: false, preChecked: false }));
-const result = set.fileFinishedImporting("modules/auth/PromoEmailConsentStore.tsx");
+const usePromoEmailConsentStore = module_560.create(() => ({ required: false, checked: false, preChecked: false }));
+const result = size.fileFinishedImporting("modules/auth/PromoEmailConsentStore.tsx");
 
 export const setPromoEmailConsentState = function setPromoEmailConsentState(arg0) {
-  const _require = arg0;
-  require("../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() =>
-    closure_1_2.setState(closure_0),
-  );
+  _require = arg0;
+  require("ReactBatchUpdates").batchUpdates(() => obj.setState(closure_0));
 };
-export const setPromoEmailConsentChecked = function setPromoEmailConsentChecked(arg0) {
-  const _require = arg0;
-  require("../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() =>
-    closure_1_2.setState({ checked: closure_0 }),
-  );
+export const setPromoEmailConsentChecked = function setPromoEmailConsentChecked(checked) {
+  _require = checked;
+  require("ReactBatchUpdates").batchUpdates(() => {
+    const obj = { checked };
+    return obj.setState(obj);
+  });
 };
-export const usePromoEmailConsentStore = obj;
+export { usePromoEmailConsentStore };

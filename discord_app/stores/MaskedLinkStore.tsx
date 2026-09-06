@@ -1,16 +1,15 @@
 // discord_app/stores/MaskedLinkStore.tsx
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import Storage2 from "../../discord_common/js/packages/storage/Storage.tsx";
-import dispatcherDefault from "../Dispatcher.tsx";
-import isDiscordProxiedAssetUrlDefault from "../utils/URLUtils.tsx";
-import SPOTIFY_APP_PROTOCOL from "../modules/spotify/SpotifyConstants.tsx";
-import getHostname from "MaskedLinkStoreMethodsAdditional.native.tsx";
-import set from "../../_runtime/00002_set.js";
+import DispatcherDefault from "../Dispatcher.tsx";
+import URLUtilsDefault from "../utils/URLUtils.tsx";
+import SpotifyConstants from "../modules/spotify/SpotifyConstants.tsx";
+import MaskedLinkStoreMethodsAdditional from "MaskedLinkStoreMethodsAdditional.native.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-const SPOTIFY_HOSTNAMES = SPOTIFY_APP_PROTOCOL.SPOTIFY_HOSTNAMES;
+const SPOTIFY_HOSTNAMES = SpotifyConstants.SPOTIFY_HOSTNAMES;
 const MaskedLinkStore = "MaskedLinkStore";
 let set = new Set();
-let set1 = new Set();
 let replaced;
 if (window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT != null) {
   replaced = str.replace("//", "");
@@ -30,11 +29,11 @@ prototype["initialize"] = function initialize() {
       const _Array3 = Array;
       arr = Array.from(obj);
     }
-    set = new Set(arr);
-    let set2 = set;
+    const set = new Set(arr);
+    set2 = set;
     const _Set = Set;
-    set1 = new Set();
-    let set3 = set1;
+    const set1 = new Set();
+    set3 = set1;
   } else {
     ({ trustedDomains, trustedProtocols } = obj);
     arr = null;
@@ -52,7 +51,7 @@ prototype["initialize"] = function initialize() {
   }
 };
 prototype["isTrustedDomain"] = function isTrustedDomain(arg0) {
-  const hostname = getHostname.getHostname(arg0);
+  const hostname = MaskedLinkStoreMethodsAdditional.getHostname(arg0);
   let flag = true;
   if (window.GLOBAL_ENV.INVITE_HOST !== hostname) {
     const _window2 = window;
@@ -68,11 +67,10 @@ prototype["isTrustedDomain"] = function isTrustedDomain(arg0) {
           if (location.hostname !== hostname) {
             let hasItem = SPOTIFY_HOSTNAMES.includes(hostname);
             if (!hasItem) {
-              hasItem = isDiscordProxiedAssetUrlDefault.isDiscordHostname(hostname);
-              const obj2 = isDiscordProxiedAssetUrlDefault;
+              hasItem = URLUtilsDefault.isDiscordHostname(hostname);
             }
             if (!hasItem) {
-              hasItem = set.has(hostname);
+              hasItem = set2.has(hostname);
             }
             flag = hasItem;
           }
@@ -83,13 +81,13 @@ prototype["isTrustedDomain"] = function isTrustedDomain(arg0) {
   return flag;
 };
 prototype["isTrustedProtocol"] = function isTrustedProtocol(url) {
-  return set1.has(getHostname.getProtocol(url));
+  return set3.has(MaskedLinkStoreMethodsAdditional.getProtocol(url));
 };
 MaskedLinkStore.displayName = "MaskedLinkStore";
-const maskedLinkStore = new MaskedLinkStore(dispatcherDefault, {
+const maskedLinkStore = new MaskedLinkStore(DispatcherDefault, {
   MASKED_LINK_ADD_TRUSTED_DOMAIN: function handleAddTrustedDomain(url) {
     url = url.url;
-    let obj = getHostname;
+    let obj = MaskedLinkStoreMethodsAdditional;
     const hostname = obj.getHostname(url);
     let flag = true;
     if (window.GLOBAL_ENV.INVITE_HOST !== hostname) {
@@ -106,11 +104,10 @@ const maskedLinkStore = new MaskedLinkStore(dispatcherDefault, {
             if (location.hostname !== hostname) {
               let hasItem = SPOTIFY_HOSTNAMES.includes(hostname);
               if (!hasItem) {
-                hasItem = isDiscordProxiedAssetUrlDefault.isDiscordHostname(hostname);
-                const obj2 = isDiscordProxiedAssetUrlDefault;
+                hasItem = URLUtilsDefault.isDiscordHostname(hostname);
               }
               if (!hasItem) {
-                hasItem = set.has(hostname);
+                hasItem = set2.has(hostname);
               }
               flag = hasItem;
             }
@@ -121,29 +118,25 @@ const maskedLinkStore = new MaskedLinkStore(dispatcherDefault, {
     if (flag) {
       return false;
     } else {
-      set.add(tmp(8373).getHostname(url));
+      set2.add(tmp(8373).getHostname(url));
       const Storage = tmp(510).Storage;
-      obj = { trustedDomains: null, trustedProtocols: null };
-      obj[0] = set;
-      obj[1] = set1;
+      obj = { trustedDomains: set2, trustedProtocols: set3 };
       const result = Storage.set(MaskedLinkStore, obj);
     }
   },
   MASKED_LINK_ADD_TRUSTED_PROTOCOL: function handleAddTrustedProtocol(url) {
     url = url.url;
-    let obj = getHostname;
-    if (set1.has(obj.getProtocol(url))) {
+    let obj = MaskedLinkStoreMethodsAdditional;
+    if (set3.has(obj.getProtocol(url))) {
       return false;
     } else {
-      set1.add(tmp(8373).getProtocol(url));
+      set3.add(tmp(8373).getProtocol(url));
       const Storage = tmp(510).Storage;
-      obj = { trustedDomains: null, trustedProtocols: null };
-      obj[0] = set;
-      obj[1] = set1;
+      obj = { trustedDomains: set2, trustedProtocols: set3 };
       const result = Storage.set(MaskedLinkStore, obj);
     }
   },
 });
-let result = set.fileFinishedImporting("stores/MaskedLinkStore.tsx");
+let result = size.fileFinishedImporting("stores/MaskedLinkStore.tsx");
 
 export default maskedLinkStore;

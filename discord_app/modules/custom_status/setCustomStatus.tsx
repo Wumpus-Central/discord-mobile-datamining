@@ -1,26 +1,26 @@
 // discord_app/modules/custom_status/setCustomStatus.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
-import explicitContentFromProto from "../user_settings/UserSettings.tsx";
-import hooksDefault from "../../../_runtime/04153_hooks.js";
-import StatusTypes from "Constants.tsx";
+import Constants from "../../Constants.tsx";
+import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
+import UserSettings from "../user_settings/UserSettings.tsx";
+import _modDef4153 from "../../../_runtime/metro/04153__.js";
+import Constants2 from "Constants.tsx";
 import getClearAfterDurationDefault from "utils/getClearAfterDuration.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const ClearAfterValues = StatusTypes.ClearAfterValues;
-const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/custom_status/setCustomStatus.tsx");
+const ClearAfterValues = Constants2.ClearAfterValues;
+const AnalyticEvents = Constants.AnalyticEvents;
+const result = size.fileFinishedImporting("modules/custom_status/setCustomStatus.tsx");
 
 export default function setCustomStatus(arg0) {
   ({ text, emojiInfo, clearAfter, analyticsContext, createdAtMs, prompt: _prompt, analyticsLocations } = arg0);
   const trimmed = text.trim();
   if (trimmed.length <= 0) {
     if (null == emojiInfo) {
-      const CustomStatusSetting = explicitContentFromProto.CustomStatusSetting;
+      const CustomStatusSetting = UserSettings.CustomStatusSetting;
       return CustomStatusSetting.updateSetting(undefined);
     }
   }
-  const CustomStatusSetting2 = explicitContentFromProto.CustomStatusSetting;
+  const CustomStatusSetting2 = UserSettings.CustomStatusSetting;
   let str = "";
   if (trimmed.length > 0) {
     str = trimmed;
@@ -31,13 +31,13 @@ export default function setCustomStatus(arg0) {
     str2 = "0";
     if (clearAfter !== ClearAfterValues.DONT_CLEAR) {
       const _String = String;
-      const obj2 = hooksDefault();
-      const addResult = hooksDefault().add(getClearAfterDurationDefault(clearAfter), "ms");
-      str2 = String(hooksDefault().add(getClearAfterDurationDefault(clearAfter), "ms").toDate().getTime());
-      const toDateResult = hooksDefault().add(getClearAfterDurationDefault(clearAfter), "ms").toDate();
+      const obj2 = _modDef4153();
+      const addResult = _modDef4153().add(getClearAfterDurationDefault(clearAfter), "ms");
+      str2 = String(_modDef4153().add(getClearAfterDurationDefault(clearAfter), "ms").toDate().getTime());
+      const toDateResult = _modDef4153().add(getClearAfterDurationDefault(clearAfter), "ms").toDate();
     }
   }
-  obj[1] = str2;
+  obj.expiresAtMs = str2;
   let str4 = "0";
   if (null != emojiInfo) {
     str4 = "0";
@@ -45,18 +45,18 @@ export default function setCustomStatus(arg0) {
       str4 = emojiInfo.id;
     }
   }
-  obj[2] = str4;
+  obj.emojiId = str4;
   let str5 = "";
   if (null != emojiInfo) {
     str5 = emojiInfo.name;
   }
-  obj[3] = str5;
+  obj.emojiName = str5;
   if (createdAtMs == null) {
-    const obj5 = hooksDefault();
-    createdAtMs = hooksDefault().toDate().getTime();
-    const toDateResult1 = hooksDefault().toDate();
+    const obj5 = _modDef4153();
+    createdAtMs = _modDef4153().toDate().getTime();
+    const toDateResult1 = _modDef4153().toDate();
   }
-  obj[4] = String(createdAtMs);
+  obj.createdAtMs = String(createdAtMs);
   const updateSettingResult = CustomStatusSetting2.updateSetting(obj);
   let _location = null;
   if (null != analyticsContext) {
@@ -78,20 +78,20 @@ export default function setCustomStatus(arg0) {
     }
     tmp11 = str6;
   }
-  obj[1] = tmp11;
-  obj[2] = trimmed.length;
+  obj.emoji_type = tmp11;
+  obj.text_len = trimmed.length;
   let combined = null;
   if (null != clearAfter) {
     const _HermesInternal = HermesInternal;
     combined = "" + clearAfter;
   }
-  obj[3] = combined;
-  let value;
+  obj.clear_after = combined;
+  value = undefined;
   if (_prompt != null) {
     value = _prompt.value;
   }
-  obj[4] = value;
-  obj[5] = analyticsLocations;
-  expandEventPropertiesDefault.track(AnalyticEvents.CUSTOM_STATUS_UPDATED, obj);
+  obj.prompt_type = value;
+  obj.location_stack = analyticsLocations;
+  AnalyticsUtilsDefault.track(AnalyticEvents.CUSTOM_STATUS_UPDATED, obj);
   return updateSettingResult;
 }

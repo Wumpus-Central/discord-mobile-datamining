@@ -1,7 +1,7 @@
 // discord_app/modules/display_name_styles/types.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/display_name_styles/types.tsx");
+const result = size.fileFinishedImporting("modules/display_name_styles/types.tsx");
 
 export const DisplayNameStyleColorPreset = {
   TEAL: "#18b491",

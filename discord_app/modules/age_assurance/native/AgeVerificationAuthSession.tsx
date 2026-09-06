@@ -1,145 +1,123 @@
 // discord_app/modules/age_assurance/native/AgeVerificationAuthSession.tsx
-import timestampDefault from "../../debug/Logger.tsx";
-import closure_2 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import keys from "../../../../_runtime/00560_keys.js";
+import LoggerDefault from "../../debug/Logger.tsx";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
-const require = arg1;
+require = fn;
 function discard() {
-  if (c8 != null) {
-    c8.remove();
+  if (_null != null) {
+    _null.remove();
   }
-  c8 = null;
-  store.setState({ isOpen: false });
+  _null = null;
+  closure_6.setState({ isOpen: false });
   c7 = false;
 }
-function _openAgeVerificationAuthSession() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c5 = 0;
-    c6 = 0;
-    c4 = 0;
-    return (function* (arg0) {
-      if (state === 2) {
-        state = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
+let closure_10 = async function _openAgeVerificationAuthSession(arg0, value) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
         if (arg0 === 1) {
-          throw arg1;
+          c6 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c6 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          state = 2;
-          if (0 === logger) {
-            if (arg0 === 1) {
-              state = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              state = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_2 = tmp3;
-              closure_1 = tmp7;
-              let callback;
-              if (obj7.isIOS()) {
-                (function subscribeToFinish() {
-                  if (closure_8 != null) {
-                    closure_8.remove();
-                  }
-                  closure_8 = new closure_3(c4).addListener("authSessionDidFinish", () => {
-                    if (c8 != null) {
-                      c8.remove();
-                    }
-                    c8 = null;
-                    state.setState({ isOpen: false });
-                  });
-                })();
-                state.setState({ isOpen: true });
-                c7 = true;
-                c4 = 1;
-                logger = 2;
-                state = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = c4.openAuthSessionURL(tmp35);
-                return obj1;
-              } else {
-                state = 3;
-                return { value: false, done: true };
+          closure_2 = tmp3;
+          closure_1 = tmp7;
+          closure_129_0 = undefined;
+          if (obj7.isIOS()) {
+            (function subscribeToFinish() {
+              if (_null != null) {
+                _null.remove();
               }
-              obj7 = callback(closure_1_1[4]);
-              tmp35 = callback;
-            }
-          } else if (1 === tmp7) {
-            c4 = 0;
-            closure_1 = closure_3;
-            const obj2 = { error: null };
-            obj2[0] = closure_1;
-            logger.warn("Failed to open the verification auth session", obj2);
-            callback2();
-            state = 3;
+              _null = new closure_1_3(closure_1_4).addListener("authSessionDidFinish", () => {
+                if (_null != null) {
+                  _null.remove();
+                }
+                _null = null;
+                state.setState({ isOpen: false });
+              });
+            })();
+            state.setState({ isOpen: true });
+            c7 = true;
+            c4 = 1;
+            c5 = 2;
+            c6 = 1;
+            const obj1 = { value: BrowserManager.openAuthSessionURL(tmp34), done: false };
+            return obj1;
+          } else {
+            c6 = 3;
             return { value: false, done: true };
-          } else if (arg0 === 1) {
-            state = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 0;
-            state = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
-          } else {
-            callback = arg1;
-            if (!callback) {
-              callback2();
-            }
-            c4 = 0;
-            state = 3;
-            obj = { value: null, done: true };
-            obj[0] = callback;
-            return obj;
           }
-        } catch (tmp27) {
-          closure_3 = tmp27;
-          if (tmp4 === c4) {
-            state = tmp2;
-            throw tmp27;
-          } else {
-            logger = tmp;
-          }
+          obj7 = PlatformUtils;
+          tmp34 = closure_0;
         }
+      } else if (1 === tmp7) {
+        c4 = 0;
+        closure_129_1 = closure_3;
+        const obj2 = { error: closure_129_1 };
+        closure_130_5.warn("Failed to open the verification auth session", obj2);
+        closure_130_9();
+        c6 = 3;
+        return { value: false, done: true };
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 0;
+        c6 = 3;
+        const obj3 = { value, done: true };
+        return obj3;
+      } else {
+        closure_129_0 = value;
+        if (!closure_129_0) {
+          closure_130_9();
+        }
+        c4 = 0;
+        c6 = 3;
+        obj = { value: closure_129_0, done: true };
+        return obj;
       }
-    })();
-  });
-  closure_10 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp27) {
+      closure_3 = tmp27;
+      if (tmp4 === c4) {
+        c6 = tmp2;
+        throw tmp27;
+      } else {
+        c5 = tmp;
+      }
+    }
   }
-  return applyArgumentsResult;
-}
+};
+get_ActivityIndicator = fn(17);
 const NativeEventEmitter = get_ActivityIndicator.NativeEventEmitter;
 const BrowserManager = get_ActivityIndicator.NativeModules.BrowserManager;
-let closure_5 = new timestampDefault("AgeVerificationAuthSession");
-let closure_6 = keys.create(() => ({ isOpen: false }));
+let closure_5 = new LoggerDefault("AgeVerificationAuthSession");
+const module_560 = fn(560);
+let closure_6 = module_560.create(() => ({ isOpen: false }));
 let c7 = false;
 let c8 = null;
-const tmp3 = new timestampDefault("AgeVerificationAuthSession");
-const result = require("set").fileFinishedImporting("modules/age_assurance/native/AgeVerificationAuthSession.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/age_assurance/native/AgeVerificationAuthSession.tsx");
 
-export const openAgeVerificationAuthSession = function openAgeVerificationAuthSession(webviewUrl) {
+export const openAgeVerificationAuthSession = function openAgeVerificationAuthSession() {
   const self = this;
-  const apply = _openAgeVerificationAuthSession.apply;
+  const apply = closure_10.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -148,13 +126,13 @@ export const openAgeVerificationAuthSession = function openAgeVerificationAuthSe
   return applyArgumentsResult;
 };
 export const closeAgeVerificationAuthSession = function closeAgeVerificationAuthSession() {
-  if (c8 != null) {
-    c8.remove();
+  if (_null != null) {
+    _null.remove();
   }
-  c8 = null;
-  store.setState({ isOpen: false });
+  _null = null;
+  closure_6.setState({ isOpen: false });
   c7 = false;
-  if (store.getState().isOpen) {
+  if (closure_6.getState().isOpen) {
     BrowserManager.closeAuthSession();
   }
 };
@@ -162,8 +140,8 @@ export function getIsAgeVerificationAuthSessionAwaitingResult() {
   return c7;
 }
 export const useIsAgeVerificationAuthSessionOpen = function useIsAgeVerificationAuthSessionOpen() {
-  return store((isOpen) => isOpen.isOpen);
+  return closure_6((isOpen) => isOpen.isOpen);
 };
 export const getIsAgeVerificationAuthSessionOpen = function getIsAgeVerificationAuthSessionOpen() {
-  return store.getState().isOpen;
+  return closure_6.getState().isOpen;
 };

@@ -2,10 +2,10 @@
 import DequeDefault from "../../../_runtime/00008_Deque.js";
 
 let closure_0 = new DequeDefault(5000);
-let tmp2 = new DequeDefault(5000);
-const result = require("set").fileFinishedImporting("modules/debug/LogAggregator.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/debug/LogAggregator.tsx");
 
-export const report = function report(str) {
+export const report = function report(category) {
   let length;
   const tmp = (function stringifyMessage(arg0) {
     let str = "";
@@ -15,59 +15,52 @@ export const report = function report(str) {
       error = nextResult;
       let tmp2 = typeof nextResult;
       if (typeof nextResult !== "string") {
-        let tmp10 = tmp2;
         if ("number" !== tmp2) {
-          let tmp3 = tmp2;
           if ("boolean" !== tmp2) {
-            let tmp4 = nextResult;
             let _Error = Error;
-            let tmp5 = str;
             if (error instanceof Error) {
-              let tmp7 = nextResult;
               let _HermesInternal = HermesInternal;
               str = `` + error.message + "\n" + error.stack + " ";
             } else {
               let _JSON = JSON;
-              let tmp6 = nextResult;
               str = str + (JSON.stringify(error) + " ");
             }
           }
           continue;
         }
       }
-      let tmp8 = str;
-      let tmp9 = nextResult;
     }
     return str;
   })(HermesBuiltin.copyRestArgs());
-  if (typeof str === "string") {
+  if (typeof category === "string") {
     let obj = { time: null, category: null, message: null };
     const _Date = Date;
-    obj[0] = Date.now();
-    obj[1] = str;
-    obj[2] = tmp;
-    arr = arr.push(obj);
+    obj.time = Date.now();
+    obj.category = category;
+    obj.message = tmp;
+    closure_0.push(obj);
+    let arr = closure_0;
   } else {
     obj = { time: null, category: null, timing: null, message: null };
     const _Date2 = Date;
-    obj[0] = Date.now();
-    ({ name: obj2[1], timing: obj2[2] } = str);
-    obj[3] = tmp;
-    arr = arr.push(obj);
+    obj.time = Date.now();
+    ({ name: obj2.category, timing: obj2.timing } = category);
+    obj.message = tmp;
+    arr = closure_0.push(obj);
   }
   if (arr.length > 5000) {
     do {
-      let tmp5 = arr;
-      let arr1 = arr.shift();
-      length = arr.length;
+      let arr1 = closure_0.shift();
+      length = closure_0.length;
     } while (length > 5000);
   }
 };
 export const clear = function clear() {
-  arr.clear();
+  closure_0.clear();
 };
 export const stringify = function stringify(arg0) {
-  const found = arg0.toArray().filter((category) => {
+  closure_0 = arg0;
+  const found = closure_0.toArray().filter((category) => {
     let hasItem = null == closure_0;
     if (!hasItem) {
       hasItem = closure_0.includes(category.category);
@@ -90,7 +83,7 @@ export const getAllForDebugPanel = function getAllForDebugPanel(arg0) {
   if (arg0 === undefined) {
     flag = false;
   }
-  const toArrayResult = arr.toArray();
+  const toArrayResult = closure_0.toArray();
   if (flag) {
     let reversed = toArrayResult.reverse();
   } else {

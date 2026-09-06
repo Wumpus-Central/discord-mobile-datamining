@@ -1,12 +1,15 @@
 // discord_app/modules/app_launcher/native/screens/command_view/OptionalCommandOptionList.tsx
-import noopAll from "../../../../../../_runtime/00019_noop.js";
-import TableRowGroupTitle from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import util from "../../../../../intl/index.native.tsx";
+import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
+import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import TableRowGroup from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting(
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/app_launcher/native/screens/command_view/OptionalCommandOptionList.tsx",
 );
 
@@ -14,30 +17,107 @@ export default function OptionalCommandOptionList(arg0) {
   ({ options, onSelectOption: require } = arg0);
   let tmp2 = null;
   if (0 !== options.length) {
-    let obj = { style: null, collapsable: false, children: null };
-    obj[0] = tmp;
-    obj = { hasIcons: false, children: null };
-    obj[1] = options.map((displayName) => {
-      closure_0 = displayName;
-      let obj = {
-        onPress() {
-          return displayName(displayName);
-        },
-        label: displayName.displayName,
-        subLabel: displayName.displayDescription,
-        trailing: null,
-      };
-      obj = { accessibilityRole: "none", variant: "tertiary", size: "sm", shrink: true, text: null, onPress: null };
-      const intl = closure_1_0(closure_1_1[6]).intl;
-      obj[4] = intl.string(closure_1_0(closure_1_1[6]).t.OYkgVk);
-      obj[5] = function onPress() {
-        return displayName(displayName);
-      };
-      obj[3] = closure_1_3(closure_1_0(closure_1_1[5]).Button, obj);
-      return closure_1_3(closure_1_0(closure_1_1[4]).TableRow, obj, displayName.name);
+    let obj = { style: tmp, collapsable: false, children: null };
+    obj = {
+      hasIcons: false,
+      children: options.map((displayName) => {
+        closure_0 = displayName;
+        let obj = {
+          onPress() {
+            return require(closure_0);
+          },
+          label: displayName.displayName,
+          subLabel: displayName.displayDescription,
+          trailing: null,
+        };
+        obj = { accessibilityRole: "none", variant: "tertiary", size: "sm", shrink: true, text: null, onPress: null };
+        const intl = util.intl;
+        obj.text = intl.string(util.t.OYkgVk);
+        obj.onPress = function onPress() {
+          return require(closure_0);
+        };
+        obj.trailing = jsx(components_Button_Button.Button, {
+          accessibilityRole: "none",
+          variant: "tertiary",
+          size: "sm",
+          shrink: true,
+          text: null,
+          onPress: null,
+        });
+        return jsx(
+          TableRow.TableRow,
+          { accessibilityRole: "none", variant: "tertiary", size: "sm", shrink: true, text: null, onPress: null },
+          displayName.name,
+        );
+      }),
+    };
+    obj.children = jsx(TableRowGroup.TableRowGroup, {
+      hasIcons: false,
+      children: options.map((displayName) => {
+        closure_0 = displayName;
+        let obj = {
+          onPress() {
+            return require(closure_0);
+          },
+          label: displayName.displayName,
+          subLabel: displayName.displayDescription,
+          trailing: null,
+        };
+        obj = { accessibilityRole: "none", variant: "tertiary", size: "sm", shrink: true, text: null, onPress: null };
+        const intl = util.intl;
+        obj.text = intl.string(util.t.OYkgVk);
+        obj.onPress = function onPress() {
+          return require(closure_0);
+        };
+        obj.trailing = jsx(components_Button_Button.Button, {
+          accessibilityRole: "none",
+          variant: "tertiary",
+          size: "sm",
+          shrink: true,
+          text: null,
+          onPress: null,
+        });
+        return jsx(
+          TableRow.TableRow,
+          { accessibilityRole: "none", variant: "tertiary", size: "sm", shrink: true, text: null, onPress: null },
+          displayName.name,
+        );
+      }),
     });
-    obj[2] = jsx(TableRowGroupTitle.TableRowGroup, { hasIcons: false, children: null });
-    tmp2 = <View hasIcons={false}>{null}</View>;
+    tmp2 = (
+      <View hasIcons={false}>
+        {options.map((displayName) => {
+          closure_0 = displayName;
+          let obj = {
+            onPress() {
+              return require(closure_0);
+            },
+            label: displayName.displayName,
+            subLabel: displayName.displayDescription,
+            trailing: null,
+          };
+          obj = { accessibilityRole: "none", variant: "tertiary", size: "sm", shrink: true, text: null, onPress: null };
+          const intl = util.intl;
+          obj.text = intl.string(util.t.OYkgVk);
+          obj.onPress = function onPress() {
+            return require(closure_0);
+          };
+          obj.trailing = jsx(components_Button_Button.Button, {
+            accessibilityRole: "none",
+            variant: "tertiary",
+            size: "sm",
+            shrink: true,
+            text: null,
+            onPress: null,
+          });
+          return jsx(
+            TableRow.TableRow,
+            { accessibilityRole: "none", variant: "tertiary", size: "sm", shrink: true, text: null, onPress: null },
+            displayName.name,
+          );
+        })}
+      </View>
+    );
   }
   return tmp2;
 }

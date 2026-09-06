@@ -1,14 +1,14 @@
 // discord_app/modules/messages/native/renderer/system_messages/GuildStreamSystemMessage.tsx
-import set from "../../../../../../_runtime/00002_set.js";
-import getSystemLocale from "../../../../../intl/index.native.tsx";
-import StreamIssueReportReasons from "../../../../go_live/Constants.tsx";
-import getMessageAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
+import util from "../../../../../intl/index.native.tsx";
+import Constants from "../../../../go_live/Constants.tsx";
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
 import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
 import getHumanizedCallDurationDefault from "../../../getHumanizedCallDuration.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-const StreamTypes = StreamIssueReportReasons.StreamTypes;
-const result = set.fileFinishedImporting(
+const StreamTypes = Constants.StreamTypes;
+const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/GuildStreamSystemMessage.tsx",
 );
 
@@ -20,7 +20,7 @@ export const createGuildStreamSystemMessage = function createGuildStreamSystemMe
   }
   ({ channel_id, guild_id } = messageReference);
   const tmp3 = getHumanizedCallDurationDefault(message);
-  obj1 = getMessageAuthorWithProcessedColor;
+  let obj1 = useAuthorWithProcessedColor;
   const messageAuthorWithProcessedColor = obj1.getMessageAuthorWithProcessedColor(message);
   let obj = {
     username: messageAuthorWithProcessedColor.nick,
@@ -30,23 +30,25 @@ export const createGuildStreamSystemMessage = function createGuildStreamSystemMe
       roleStyle: roleStyle.roleStyle,
     }),
   };
-  obj = { streamType: StreamTypes.GUILD, channelId: channel_id, ownerId: message.author.id, guildId: guild_id };
-  obj1 = { ended: tmp4, content: null };
-  const intl = getSystemLocale.intl;
+  obj = { action: "bindJoinStream", stream: null };
+  obj1 = { streamType: StreamTypes.GUILD, channelId: channel_id, ownerId: message.author.id, guildId: guild_id };
+  obj.stream = obj1;
+  const obj2 = { ended: null != tmp3, content: null };
+  const intl = util.intl;
   const formatToParts = intl.formatToParts;
-  const t = getSystemLocale.t;
+  const t = util.t;
   if (null != tmp3) {
-    const obj2 = {};
-    const merged = Object.assign(obj);
-    obj2.duration = tmp3;
-    let formatToPartsResult = formatToParts(t.FP7rUI, obj2);
-  } else {
     const obj3 = {};
+    const merged = Object.assign(obj);
+    obj3.duration = tmp3;
+    let formatToPartsResult = formatToParts(t.FP7rUI, obj3);
+  } else {
+    const obj4 = {};
     const merged1 = Object.assign(obj);
-    obj3.onJoinStream = { action: "bindJoinStream", stream: obj };
-    formatToPartsResult = formatToParts(t.dMmbGk, obj3);
+    obj4.onJoinStream = obj;
+    formatToPartsResult = formatToParts(t.dMmbGk, obj4);
   }
-  obj1[1] = formatToPartsResult;
+  obj2.content = formatToPartsResult;
   const merged2 = Object.assign(createCommonMessageDefault(roleStyle));
-  return obj1;
+  return obj2;
 };

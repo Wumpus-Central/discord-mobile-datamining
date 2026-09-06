@@ -1,7 +1,7 @@
 // discord_app/modules/debug/native/ReactotronConfig.tsx
-import importDefaultResult from "../../../../_runtime/14402_reactNativeCorePlugins.js";
+import reactNativeCorePlugins from "../../../../_runtime/14402_reactNativeCorePlugins.js";
 
-const reactNative = importDefaultResult.configure({}).useReactNative();
+const reactNative = reactNativeCorePlugins.configure({}).useReactNative();
 reactNative.connect();
-const configureResult = importDefaultResult.configure({});
-const result = require("set").fileFinishedImporting("modules/debug/native/ReactotronConfig.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/debug/native/ReactotronConfig.tsx");

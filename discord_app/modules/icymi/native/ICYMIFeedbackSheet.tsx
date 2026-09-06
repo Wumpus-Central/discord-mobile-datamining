@@ -1,13 +1,14 @@
 // discord_app/modules/icymi/native/ICYMIFeedbackSheet.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import DEFAULT_UX_VARIATION from "../ICYMIAnalytics.tsx";
-import closeActionSheetDefault from "../../feedback/native/FeedbackActionSheet.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import util from "../../../intl/index.native.tsx";
+import ICYMIActionCreatorsDefault from "../ICYMIActionCreators.tsx";
+import ICYMIAnalytics2 from "../ICYMIAnalytics.tsx";
+import FeedbackActionSheetDefault from "../../feedback/native/FeedbackActionSheet.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-let result = require("set").fileFinishedImporting("modules/icymi/native/ICYMIFeedbackSheet.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/icymi/native/ICYMIFeedbackSheet.tsx");
 
 export default function ICYMIFeedbackSheet() {
   let obj = {
@@ -22,44 +23,45 @@ export default function ICYMIFeedbackSheet() {
     feedbackReasons: null,
     trackReport: null,
   };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t["ppfH9+"]);
-  const intl2 = getSystemLocale.intl;
-  obj[3] = intl2.string(getSystemLocale.t["ePk/Cf"]);
-  const intl3 = getSystemLocale.intl;
-  obj[4] = intl3.string(getSystemLocale.t.sBOuOf);
+  const intl = util.intl;
+  obj.headerLabel = intl.string(util.t["ppfH9+"]);
+  const intl2 = util.intl;
+  obj.ratingsBodyLabel = intl2.string(util.t["ePk/Cf"]);
+  const intl3 = util.intl;
+  obj.reasonsHeaderLabel = intl3.string(util.t.sBOuOf);
   obj = { label: null, value: "irrelevant_content" };
-  const intl4 = getSystemLocale.intl;
-  obj[0] = intl4.string(getSystemLocale.t.F6TmZA);
+  const intl4 = util.intl;
+  obj.label = intl4.string(util.t.F6TmZA);
   let items = [obj, , , ,];
   obj = { label: null, value: "not_enough_content" };
-  const intl5 = getSystemLocale.intl;
-  obj[0] = intl5.string(getSystemLocale.t.voWAzi);
+  const intl5 = util.intl;
+  obj.label = intl5.string(util.t.voWAzi);
   items[1] = obj;
-  obj1 = { label: null, value: "too_much_content" };
-  const intl6 = getSystemLocale.intl;
-  obj1[0] = intl6.string(getSystemLocale.t.Ay8iwx);
+  const obj1 = { label: null, value: "too_much_content" };
+  const intl6 = util.intl;
+  obj1.label = intl6.string(util.t.Ay8iwx);
   items[2] = obj1;
   const obj2 = { label: null, value: "laggy" };
-  const intl7 = getSystemLocale.intl;
-  obj2[0] = intl7.string(getSystemLocale.t["Yu+52W"]);
+  const intl7 = util.intl;
+  obj2.label = intl7.string(util.t["Yu+52W"]);
   items[3] = obj2;
   items[4] = { label: "Other", value: "other" };
-  obj[5] = items;
-  obj[7] = DEFAULT_UX_VARIATION.ICYMIAnalytics.trackFeedFeedbackPromptViewed;
-  obj[8] = ["other"];
-  obj[9] = function trackReport(reason) {
-    let obj = callback2(8351);
+  obj.reasons = items;
+  obj.trackOpen = ICYMIAnalytics2.ICYMIAnalytics.trackFeedFeedbackPromptViewed;
+  obj.feedbackReasons = ["other"];
+  obj.trackReport = function trackReport(reason) {
+    let obj = ICYMIActionCreatorsDefault;
     obj.giveFeedback();
-    const ICYMIAnalytics = callback(8359).ICYMIAnalytics;
+    const ICYMIAnalytics = ICYMIAnalytics2.ICYMIAnalytics;
     let tmp2;
     if (null != reason.reason) {
       const items = [reason.reason.value];
       tmp2 = items;
     }
-    obj = { reason_descriptions: tmp2, rating, user_feedback: reason.feedback };
-    rating = reason.rating;
+    obj = { reason_descriptions: tmp2, rating: null, user_feedback: reason.feedback };
+    const rating = reason.rating;
+    obj.rating = rating;
     const result = ICYMIAnalytics.trackFeedFeedbackSubmitted(obj);
   };
-  return jsx(closeActionSheetDefault, { label: null, value: "not_enough_content" });
+  return jsx(FeedbackActionSheetDefault, { label: null, value: "not_enough_content" });
 }

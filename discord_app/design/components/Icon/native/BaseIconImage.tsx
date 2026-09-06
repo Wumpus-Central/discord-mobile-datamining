@@ -1,11 +1,10 @@
 // discord_app/design/components/Icon/native/BaseIconImage.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import map from "../../../tokens/native/useToken.tsx";
-import { Image } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import useToken from "../../../tokens/native/useToken.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
+require = fn;
+const Image = fn(17).Image;
+const jsx = fn(21).jsx;
 let closure_4 = {
   xxs: { width: 12, height: 12 },
   xs: { width: 16, height: 16 },
@@ -15,37 +14,37 @@ let closure_4 = {
   custom: { width: "hash", height: "call" },
   refresh_sm: { width: 18, height: 18 },
 };
-const result = require("set").fileFinishedImporting("design/components/Icon/native/BaseIconImage.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Icon/native/BaseIconImage.tsx");
 
-export const BaseIconImage = function BaseIconImage(source) {
-  let str = source.size;
+export const BaseIconImage = function BaseIconImage(size) {
+  let str = size.size;
   if (str === undefined) {
     str = "md";
   }
-  const color = source.color;
-  ({ resizeMode, style, accessible, accessibilityLabel } = source);
-  let obj = map;
+  const color = size.color;
+  ({ resizeMode, style, accessible, accessibilityLabel } = size);
+  let obj = useToken;
   const token = obj.useToken(color);
   if (null != token) {
-    obj = { tintColor: null };
-    obj[0] = token;
+    obj = { tintColor: token };
     let tmp3 = obj;
   } else {
     if (tmp2) {
-      obj = { tintColor: null };
-      obj[0] = color;
+      obj = { tintColor: color };
       tmp3 = obj;
     }
     tmp2 = null != color && typeof color === "string";
   }
-  style = [table[str], tmp3];
-  style[2] = style;
+  const obj1 = { fadeDuration: 0, source: size.source, resizeMode, style: null, accessible, accessibilityLabel };
+  const items = [closure_4[str], tmp3, style];
+  obj1.style = items;
   return (
     <Image
       fadeDuration={0}
       source={arg0.source}
       resizeMode={resizeMode}
-      style={style}
+      style={null}
       accessible={accessible}
       accessibilityLabel={accessibilityLabel}
     />

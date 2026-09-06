@@ -1,20 +1,23 @@
 // discord_app/modules/notification_center/useNotificationCenterItemsLoader.tsx
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../_runtime/00019_noop.js";
-import closure_6 from "../inbox/RecentMentionsStore.tsx";
-import closure_7 from "NotificationCenterItemsStore.tsx";
-import closure_8 from "NotificationCenterStore.tsx";
-import { ReadStateTypes } from "../read_states/ReadStateConstants.tsx";
+import ReadStateActionCreators from "../../actions/ReadStateActionCreators.tsx";
+import NotificationCenterItemsActions from "NotificationCenterItemsActions.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import noop from "../../../_runtime/metro/00019__.js";
+import RecentMentionsStore from "../inbox/RecentMentionsStore.tsx";
+import NotificationCenterItemsStore from "NotificationCenterItemsStore.tsx";
+import NotificationCenterStore from "NotificationCenterStore.tsx";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/notification_center/useNotificationCenterItemsLoader.tsx");
+require = fn;
+const ReadStateTypes = fn(4742).ReadStateTypes;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/notification_center/useNotificationCenterItemsLoader.tsx");
 
 export const PAGE_SIZE_WITH_MENTIONS = 8;
 export const PAGE_SIZE = 20;
 export const useNotificationCenterItemsLoader = function useNotificationCenterItemsLoader(isFocused) {
   isFocused = isFocused.isFocused;
-  let _require = isFocused;
+  _require = isFocused;
   const navigatedAway = isFocused.navigatedAway;
   const isDesktop = isFocused.isDesktop;
   let flag = isFocused.withMentions;
@@ -22,25 +25,16 @@ export const useNotificationCenterItemsLoader = function useNotificationCenterIt
     flag = false;
   }
   const initialPageSize = isFocused.initialPageSize;
-  let stateFromStores;
-  closure_6 = undefined;
   c7 = undefined;
   let initialized;
-  let items;
-  let hasMore;
-  let cursor;
-  let errored;
-  let roleFilter;
-  let everyoneFilter;
-  closure_15 = undefined;
-  let obj = _require(isDesktop[7]);
-  items = [initialized];
-  stateFromStores = obj.useStateFromStores(items, () => initialized.shouldReload());
+  let obj = require("initialize");
+  let items = [initialized];
+  const stateFromStores = obj.useStateFromStores(items, () => initialized.shouldReload());
   closure_6 = stateFromStores.useRef(false);
   [tmp3, c7] = initialPageSize(stateFromStores.useState(false), 2);
   let tmp2 = initialPageSize(stateFromStores.useState(false), 2);
   const items1 = [c7];
-  const stateFromStoresObject = _require(isDesktop[7]).useStateFromStoresObject(items1, () => ({
+  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items1, () => ({
     initialized: _undefined.initialized,
     loading: _undefined.loading,
     items: _undefined.items,
@@ -50,30 +44,29 @@ export const useNotificationCenterItemsLoader = function useNotificationCenterIt
   }));
   initialized = stateFromStoresObject.initialized;
   items = stateFromStoresObject.items;
-  hasMore = stateFromStoresObject.hasMore;
-  cursor = stateFromStoresObject.cursor;
-  errored = stateFromStoresObject.errored;
-  let obj2 = _require(isDesktop[7]);
+  const hasMore = stateFromStoresObject.hasMore;
+  const cursor = stateFromStoresObject.cursor;
+  const errored = stateFromStoresObject.errored;
+  let obj2 = require("initialize");
   const items2 = [closure_6];
-  const stateFromStoresObject1 = _require(isDesktop[7]).useStateFromStoresObject(items2, () => ({
+  const stateFromStoresObject1 = require("initialize").useStateFromStoresObject(items2, () => ({
     everyoneFilter: closure_6.everyoneFilter,
     roleFilter: closure_6.roleFilter,
   }));
-  roleFilter = stateFromStoresObject1.roleFilter;
-  everyoneFilter = stateFromStoresObject1.everyoneFilter;
+  const roleFilter = stateFromStoresObject1.roleFilter;
+  const everyoneFilter = stateFromStoresObject1.everyoneFilter;
   const effect = stateFromStores.useEffect(() => {
-    const result = callback(isDesktop[8]).setNotificationCenterActive(true);
-    return () => callback(table[8]).setNotificationCenterActive(false);
+    const result = closure_0(isDesktop[8]).setNotificationCenterActive(true);
+    return () => closure_1_0(isDesktop[8]).setNotificationCenterActive(false);
   }, []);
   const items3 = [isFocused, initialized];
   const effect1 = stateFromStores.useEffect(() => {
     let tmp = initialized;
     if (initialized) {
-      tmp = callback;
+      tmp = closure_0;
     }
     if (tmp) {
-      callback(isDesktop[9]).ackUserFeature(items.NOTIFICATION_CENTER);
-      const obj = callback(isDesktop[9]);
+      ReadStateActionCreators.ackUserFeature(ReadStateTypes.NOTIFICATION_CENTER);
     }
   }, items3);
   let tmp8 = navigatedAway(isDesktop[10])();
@@ -81,28 +74,28 @@ export const useNotificationCenterItemsLoader = function useNotificationCenterIt
   const items4 = [navigatedAway, items, isDesktop, tmp8, errored];
   const effect2 = stateFromStores.useEffect(
     () => () => {
-      if (closure_2) {
-        const tmp7 = callback();
+      if (closure_1_2) {
+        const tmp7 = closure_1_15();
         let tmp8 = !tmp7;
         if (!tmp7) {
-          let tmp9 = closure_12;
-          if (!closure_12) {
-            tmp9 = closure_9.length > 100;
+          let tmp9 = errored;
+          if (!errored) {
+            tmp9 = items.length > 100;
           }
           tmp8 = tmp9;
         }
         if (tmp8) {
-          const result = closure_1_0(closure_1_2[8]).resetNotificationCenter();
-          const obj2 = closure_1_0(closure_1_2[8]);
+          const result = closure_0(isDesktop[8]).resetNotificationCenter();
+          const obj2 = closure_0(isDesktop[8]);
         }
       } else {
-        let tmp = closure_1;
-        if (closure_1) {
-          tmp = closure_9.length > 100;
+        let tmp = navigatedAway;
+        if (navigatedAway) {
+          tmp = items.length > 100;
         }
         if (tmp) {
-          const result1 = closure_1_0(closure_1_2[8]).resetNotificationCenter();
-          const obj = closure_1_0(closure_1_2[8]);
+          const result1 = closure_0(isDesktop[8]).resetNotificationCenter();
+          const obj = closure_0(isDesktop[8]);
         }
       }
     },
@@ -114,12 +107,12 @@ export const useNotificationCenterItemsLoader = function useNotificationCenterIt
     if (initialized) {
       let tmp2 = stateFromStores;
       if (stateFromStores) {
-        tmp2 = callback;
+        tmp2 = closure_0;
       }
       tmp = tmp2;
     }
     if (tmp) {
-      let obj = callback(isDesktop[8]);
+      let obj = NotificationCenterItemsActions;
       let tmp5 = initialPageSize;
       if (initialPageSize == null) {
         let num = 20;
@@ -128,106 +121,91 @@ export const useNotificationCenterItemsLoader = function useNotificationCenterIt
         }
         tmp5 = num;
       }
-      obj = { limit: null, with_mentions: null, roles_filter: null, everyone_filter: null };
-      obj[0] = tmp5;
-      obj[1] = flag;
-      obj[2] = roleFilter;
-      obj[3] = everyoneFilter;
+      obj = { limit: tmp5, with_mentions: flag, roles_filter: roleFilter, everyone_filter: everyoneFilter };
       const notificationCenterItems = obj.fetchNotificationCenterItems(obj);
     }
   }, items5);
-  _require = undefined;
-  _require = flag((arg0) => {
-    closure_0 = arg0;
-    c2 = 0;
-    c3 = 0;
-    return (function* (arg0) {
-      if (c3 === 2) {
-        c3 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+  _require = flag(function* (arg0, value) {
+    if (with_mentions === 2) {
+      with_mentions = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          c3 = 2;
-          if (0 === c2) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_1 = tmp2;
-              let current = closure_1_6.current;
-              if (!current) {
-                current = !closure_1_8;
-              }
-              if (!current) {
-                current = !closure_1_10;
-              }
-              if (!current) {
-                current = null == closure_1_11;
-              }
-              if (!current) {
-                let tmp13 = !tmp28;
-                if (!tmp28) {
-                  tmp13 = closure_1_12;
-                }
-                current = tmp13;
-              }
-              if (current) {
-                c3 = 3;
-              } else {
-                tmp29.current = true;
-                closure_1_7(true);
-                obj1 = callback(isDesktop[8]);
-                obj1 = { after: null, with_mentions: null, roles_filter: null, everyone_filter: null, limit: null };
-                obj1[0] = closure_1_11;
-                obj1[1] = c3;
-                obj1[2] = closure_1_13;
-                obj1[3] = closure_1_14;
-                let num7 = 20;
-                if (c3) {
-                  num7 = 8;
-                }
-                obj1[4] = num7;
-                c2 = 1;
-                c3 = 1;
-                const obj2 = { value: null, done: false };
-                obj2[0] = obj1.fetchNotificationCenterItems(obj1, () => {
-                  closure_6.current = false;
-                });
-                return obj2;
-              }
-              tmp29 = closure_1_6;
-            }
-          } else if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 !== 2) {
-            closure_1_7(false);
-          }
-          c3 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } catch (tmp22) {
-          c3 = tmp;
-          throw tmp22;
-        }
+        return { value: "HermesInternal", done: null };
       }
-    })();
+    } else {
+      try {
+        with_mentions = 2;
+        if (0 === c2) {
+          if (arg0 === 1) {
+            with_mentions = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            with_mentions = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_1 = tmp2;
+            let current = ref.current;
+            if (!current) {
+              current = !initialized;
+            }
+            if (!current) {
+              current = !hasMore;
+            }
+            if (!current) {
+              current = null == after;
+            }
+            if (!current) {
+              let tmp13 = !tmp27;
+              if (!tmp27) {
+                tmp13 = errored;
+              }
+              current = tmp13;
+            }
+            if (current) {
+              with_mentions = 3;
+            } else {
+              tmp28.current = true;
+              _undefined(true);
+              let obj1 = closure_0(isDesktop[8]);
+              obj1 = { after, with_mentions, roles_filter, everyone_filter, limit: null };
+              let num7 = 20;
+              if (with_mentions) {
+                num7 = 8;
+              }
+              obj1.limit = num7;
+              c2 = 1;
+              with_mentions = 1;
+              const obj2 = {
+                value: obj1.fetchNotificationCenterItems(obj1, () => {
+                  ref.current = false;
+                }),
+                done: false,
+              };
+              return obj2;
+            }
+            tmp28 = ref;
+          }
+        } else if (arg0 === 1) {
+          with_mentions = 3;
+          throw value;
+        } else if (arg0 !== 2) {
+          _undefined(false);
+        }
+        with_mentions = 3;
+        obj = { value, done: true };
+        return obj;
+      } catch (tmp22) {
+        with_mentions = tmp;
+        throw tmp22;
+      }
+    }
   });
   const items6 = [initialized, hasMore, cursor, errored, flag, roleFilter, everyoneFilter];
   obj = {
@@ -246,9 +224,9 @@ export const useNotificationCenterItemsLoader = function useNotificationCenterIt
       return applyArgumentsResult;
     }, items6),
     loadingMore: tmp3,
-    setReadNotifItemToAcked(acked) {
-      if (!acked.acked) {
-        acked.acked = true;
+    setReadNotifItemToAcked(addResult) {
+      if (!addResult.acked) {
+        addResult.acked = true;
       }
     },
     errored,

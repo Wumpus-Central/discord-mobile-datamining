@@ -1,33 +1,31 @@
 // discord_app/modules/parent_tools/FamilyCenterModels.tsx
-import create from "../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
-import toJSDefault from "../../lib/Record.tsx";
+import user from "../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
+import Record from "../../lib/Record.tsx";
 
-require = arg1;
-toJSDefault;
+require = fn;
 const frozen = Object.freeze({
-  0: require("create").DayOfWeek.SUNDAY,
-  1: require("create").DayOfWeek.MONDAY,
-  2: require("create").DayOfWeek.TUESDAY,
-  3: require("create").DayOfWeek.WEDNESDAY,
-  4: require("create").DayOfWeek.THURSDAY,
-  5: require("create").DayOfWeek.FRIDAY,
-  6: require("create").DayOfWeek.SATURDAY,
+  0: fn(1379).DayOfWeek.SUNDAY,
+  1: fn(1379).DayOfWeek.MONDAY,
+  2: fn(1379).DayOfWeek.TUESDAY,
+  3: fn(1379).DayOfWeek.WEDNESDAY,
+  4: fn(1379).DayOfWeek.THURSDAY,
+  5: fn(1379).DayOfWeek.FRIDAY,
+  6: fn(1379).DayOfWeek.SATURDAY,
 });
 let closure_3 = Object.freeze({
-  [arg1(1379).DayOfWeek.DAY_OF_WEEK_UNSPECIFIED]: 0,
-  [arg1(1379).DayOfWeek.MONDAY]: 1,
-  [arg1(1379).DayOfWeek.TUESDAY]: 2,
-  [arg1(1379).DayOfWeek.WEDNESDAY]: 3,
-  [arg1(1379).DayOfWeek.THURSDAY]: 4,
-  [arg1(1379).DayOfWeek.FRIDAY]: 5,
-  [arg1(1379).DayOfWeek.SATURDAY]: 6,
-  [arg1(1379).DayOfWeek.SUNDAY]: 0,
+  [fn(1379).DayOfWeek.DAY_OF_WEEK_UNSPECIFIED]: 0,
+  [fn(1379).DayOfWeek.MONDAY]: 1,
+  [fn(1379).DayOfWeek.TUESDAY]: 2,
+  [fn(1379).DayOfWeek.WEDNESDAY]: 3,
+  [fn(1379).DayOfWeek.THURSDAY]: 4,
+  [fn(1379).DayOfWeek.FRIDAY]: 5,
+  [fn(1379).DayOfWeek.SATURDAY]: 6,
+  [fn(1379).DayOfWeek.SUNDAY]: 0,
 });
 let ScheduleRuleRecord;
 class ScheduleRuleRecord extends tmp2 {
   constructor(arg0) {
     tmp = new ScheduleRuleRecord(new.target, new.target);
-    // ThrowIfThisInitialized (0x7c)
     ({
       ruleId: tmp.ruleId,
       label: tmp.label,
@@ -44,46 +42,36 @@ ScheduleRuleRecord["fromServer"] = function fromServer(end_time) {
   ({ rule_id, label, start_time } = end_time);
   end_time = end_time.end_time;
   ({ days, enabled } = end_time);
-  if (typeof ScheduleRuleRecord !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof ScheduleRuleRecord === "function") {
+    const tmp6 = new ScheduleRuleRecord(tmp, tmp2, new.target, rule_id, label, start_time, end_time, days, enabled);
+    tmp6.ruleId = rule_id;
+    tmp6.label = label;
+    tmp6.startTime = start_time;
+    tmp6.endTime = end_time;
+    tmp6.days = days;
+    tmp6.enabled = enabled;
+    return tmp6;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const tmp2 = new ScheduleRuleRecord(
-    "Trying to call a non-function",
-    ScheduleRuleRecord,
-    new.target,
-    rule_id,
-    label,
-    start_time,
-    end_time,
-    days,
-    enabled,
-  );
-  // ThrowIfThisInitialized (0x7c)
-  tmp2.ruleId = rule_id;
-  tmp2.label = label;
-  tmp2.startTime = start_time;
-  tmp2.endTime = end_time;
-  tmp2.days = days;
-  tmp2.enabled = enabled;
-  return tmp2;
 };
 ScheduleRuleRecord["fromCache"] = function fromCache(arg0) {
-  if (typeof ScheduleRuleRecord !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof ScheduleRuleRecord === "function") {
+    const tmp7 = new ScheduleRuleRecord(tmp, tmp2);
+    ({
+      ruleId: tmp7.ruleId,
+      label: tmp7.label,
+      startTime: tmp7.startTime,
+      endTime: tmp7.endTime,
+      days: tmp7.days,
+      enabled: tmp7.enabled,
+    } = arg0);
+    return tmp7;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const tmp2 = new ScheduleRuleRecord("Trying to call a non-function", ScheduleRuleRecord);
-  // ThrowIfThisInitialized (0x7c)
-  ({
-    ruleId: tmp2.ruleId,
-    label: tmp2.label,
-    startTime: tmp2.startTime,
-    endTime: tmp2.endTime,
-    days: tmp2.days,
-    enabled: tmp2.enabled,
-  } = arg0);
-  return tmp2;
 };
-prototype["isActiveAt"] = function isActiveAt(closure_0, c1) {
+prototype["isActiveAt"] = function isActiveAt(arg0, c1) {
   const self = this;
   if (null != this.startTime) {
     if (null != self.endTime) {
@@ -94,7 +82,7 @@ prototype["isActiveAt"] = function isActiveAt(closure_0, c1) {
           const endTime = self.endTime;
           const sum1 = 60 * endTime.hours + endTime.minutes;
           const days = self.days;
-          if (days.includes(closure_0)) {
+          if (days.includes(arg0)) {
             if (tmp5) {
               if (c1 >= sum) {
                 return true;
@@ -106,10 +94,10 @@ prototype["isActiveAt"] = function isActiveAt(closure_0, c1) {
             }
           }
           if (sum > sum1) {
-            if (closure_0 === create.DayOfWeek.MONDAY) {
+            if (arg0 === user.DayOfWeek.MONDAY) {
               let SUNDAY = tmp6(1379).DayOfWeek.SUNDAY;
             } else {
-              SUNDAY = closure_0 - 1;
+              SUNDAY = arg0 - 1;
             }
             const days2 = self.days;
             if (days2.includes(SUNDAY)) {
@@ -146,53 +134,38 @@ let RestrictedScheduleRecord;
 class RestrictedScheduleRecord extends tmp2 {
   constructor(arg0) {
     tmp = new RestrictedScheduleRecord(new.target);
-    // ThrowIfThisInitialized (0x7c)
     tmp.rules = global.rules;
     return tmp;
   }
 }
 const prototype2 = RestrictedScheduleRecord.prototype;
 RestrictedScheduleRecord["fromServer"] = function fromServer(rules) {
-  let tmp = null;
+  let tmp2 = null;
   if (null != rules) {
-    rules = rules.rules;
-    const mapped = rules.map(ScheduleRuleRecord.fromServer);
-    if (typeof RestrictedScheduleRecord !== "function") {
-      HermesBuiltin.throwTypeError();
+    if (typeof RestrictedScheduleRecord === "function") {
+      const tmp10 = new RestrictedScheduleRecord(tmp, rules.rules, tmp3, new.target);
+      tmp10.rules = tmp5;
+      tmp2 = tmp10;
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    const tmp9 = new RestrictedScheduleRecord(
-      "Trying to call a non-function",
-      rules,
-      RestrictedScheduleRecord,
-      new.target,
-    );
-    // ThrowIfThisInitialized (0x7c)
-    tmp9.rules = mapped;
-    tmp = tmp9;
-    const tmp2 = RestrictedScheduleRecord;
+    tmp3 = RestrictedScheduleRecord;
   }
-  return tmp;
+  return tmp2;
 };
 RestrictedScheduleRecord["fromCache"] = function fromCache(rules) {
-  let tmp = null;
+  let tmp2 = null;
   if (null != rules) {
-    rules = rules.rules;
-    const mapped = rules.map(ScheduleRuleRecord.fromCache);
-    if (typeof RestrictedScheduleRecord !== "function") {
-      HermesBuiltin.throwTypeError();
+    if (typeof RestrictedScheduleRecord === "function") {
+      const tmp10 = new RestrictedScheduleRecord(tmp, rules.rules, tmp3, new.target);
+      tmp10.rules = tmp5;
+      tmp2 = tmp10;
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    const tmp9 = new RestrictedScheduleRecord(
-      "Trying to call a non-function",
-      rules,
-      RestrictedScheduleRecord,
-      new.target,
-    );
-    // ThrowIfThisInitialized (0x7c)
-    tmp9.rules = mapped;
-    tmp = tmp9;
-    const tmp2 = RestrictedScheduleRecord;
+    tmp3 = RestrictedScheduleRecord;
   }
-  return tmp;
+  return tmp2;
 };
 prototype2["isInRestrictedHours"] = function isInRestrictedHours(date) {
   if (date === undefined) {
@@ -232,40 +205,27 @@ prototype2["getNextStartInfo"] = function getNextStartInfo(date) {
         let startMinutes = nextResult.getStartMinutes();
         let tmp15 = startMinutes;
         if (null != startMinutes) {
-          let tmp30 = nextResult;
           if (0 !== tmp13.days.length) {
-            let tmp31 = nextResult;
             let days = tmp13.days;
-            let tmp32 = days;
-            let tmp16 = days;
             for (const item10043 of days) {
-              let tmp17 = table;
-              let result1 = (table[item10043] - day + 7) % 7;
+              let result1 = (closure_3[item10043] - day + 7) % 7;
               let num4 = result1;
               let tmp19 = 0 === result1;
               if (0 === result1) {
-                let tmp20 = startMinutes;
                 tmp19 = tmp15 <= sum;
               }
               if (tmp19) {
                 num4 = 7;
               }
-              let tmp21 = num4;
-              let tmp22 = startMinutes;
               let sum1 = 24 * num4 * 60 - sum + tmp15;
-              let tmp24 = tmp8;
               let tmp25 = null == tmp8;
               if (!tmp25) {
-                let tmp26 = sum1;
-                let tmp27 = tmp8;
                 tmp25 = sum1 < tmp8.minutesUntil;
               }
               if (tmp25) {
                 let obj = { minutesUntil: null, rule: null };
-                let tmp28 = sum1;
-                obj[0] = sum1;
-                let tmp29 = nextResult;
-                obj[1] = tmp13;
+                obj.minutesUntil = sum1;
+                obj.rule = tmp13;
                 tmp8 = obj;
               }
               continue;
@@ -300,18 +260,14 @@ prototype2["getNextEndTime"] = function getNextEndTime() {
     const nextResult = iter.next();
     while (iter !== undefined) {
       let endMinutes = nextResult.getEndMinutes();
-      let tmp8 = endMinutes;
       let startMinutes = nextResult.getStartMinutes();
       if (null != endMinutes) {
-        let tmp10 = startMinutes;
         if (null != startMinutes) {
-          let tmp11 = startMinutes;
           let tmp12 = startMinutes > endMinutes;
           let tmp13 = globalThis;
           let _Date2 = Date;
           let tmp14 = new.target;
           let tmp15 = new.target;
-          let tmp16 = date;
           let date1 = new Date(date);
           let obj4 = date1;
           let _Math = Math;
@@ -321,17 +277,9 @@ prototype2["getNextEndTime"] = function getNextEndTime() {
             tmp12 = sum >= startMinutes;
           }
           if (tmp12) {
-            let tmp19 = date1;
-            let num = 1;
             let setDateResult = obj4.setDate(obj4.getDate() + 1);
           }
-          let tmp21 = rounded;
-          let tmp22 = result1;
-          let tmp23 = date1;
-          let num2 = 0;
-          let num3 = 0;
           let setHoursResult = date1.setHours(rounded, result1, 0, 0);
-          let tmp25 = iter;
           iter.return();
           return date1;
         }
@@ -341,52 +289,44 @@ prototype2["getNextEndTime"] = function getNextEndTime() {
     return null;
   }
 };
-let obj = {
-  0: require("create").DayOfWeek.SUNDAY,
-  1: require("create").DayOfWeek.MONDAY,
-  2: require("create").DayOfWeek.TUESDAY,
-  3: require("create").DayOfWeek.WEDNESDAY,
-  4: require("create").DayOfWeek.THURSDAY,
-  5: require("create").DayOfWeek.FRIDAY,
-  6: require("create").DayOfWeek.SATURDAY,
-};
-let result = require("set").fileFinishedImporting("modules/parent_tools/FamilyCenterModels.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/parent_tools/FamilyCenterModels.tsx");
 
 export const JS_DAY_TO_DAY_OF_WEEK = frozen;
 export { ScheduleRuleRecord };
 export { RestrictedScheduleRecord };
 export const ensureRestrictedScheduleRecord = function ensureRestrictedScheduleRecord(restrictedSchedule) {
-  let tmp = null;
+  let tmp2 = null;
   if (null != restrictedSchedule) {
-    let tmp2 = restrictedSchedule;
+    let tmp3 = restrictedSchedule;
     if (restrictedSchedule instanceof RestrictedScheduleRecord) {
-      tmp = tmp2;
+      tmp2 = tmp3;
     } else {
       let length = restrictedSchedule.rules.length;
       if (0 === length) {
-        if (typeof obj !== "function") {
-          HermesBuiltin.throwTypeError();
+        if (typeof obj === "function") {
+          const items = [];
+          const tmp8 = new RestrictedScheduleRecord(
+            tmp,
+            obj,
+            new.target,
+            items,
+            RestrictedScheduleRecord,
+            length,
+            tmp3,
+          );
+          tmp8.rules = items;
+          length = tmp8;
+        } else {
+          throw new TypeError("Trying to call a non-function");
         }
-        const items = [];
-        const tmp7 = new RestrictedScheduleRecord(
-          "Trying to call a non-function",
-          obj,
-          new.target,
-          items,
-          RestrictedScheduleRecord,
-          length,
-          tmp2,
-        );
-        // ThrowIfThisInitialized (0x7c)
-        tmp7.rules = items;
-        length = tmp7;
       } else if ("ruleId" in restrictedSchedule.rules[0]) {
         length = obj.fromCache(restrictedSchedule);
       } else {
         length = obj.fromServer(restrictedSchedule);
       }
-      tmp2 = length;
+      tmp3 = length;
     }
   }
-  return tmp;
+  return tmp2;
 };

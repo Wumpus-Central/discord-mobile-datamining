@@ -1,57 +1,55 @@
 // discord_app/modules/guild_profile/native/components/RestrictedGuildProfileView.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import map from "../../../../design/tokens/native/useToken.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
+import useToken from "../../../../design/tokens/native/useToken.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
-import Text from "../../../../design/components/Text/native/Text.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import LinearGradientDefault from "../../../../../_runtime/04987_LinearGradient.js";
-import GuildIconSizes from "../../../guild/native/GuildIcon.tsx";
-import GuildIconSizesDefault from "../../../guild/native/GuildIcon.tsx";
-import GuildProfileBackground from "GuildProfileView.tsx";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import GuildIcon from "../../../guild/native/GuildIcon.tsx";
+import GuildProfileView from "GuildProfileView.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-const result = require("set").fileFinishedImporting(
-  "modules/guild_profile/native/components/RestrictedGuildProfileView.tsx",
-);
+const GuildIconDefault = GuildIcon;
+
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_profile/native/components/RestrictedGuildProfileView.tsx");
 
 export default function RestrictedGuildProfileView() {
-  let obj = GuildProfileBackground;
+  let obj = GuildProfileView;
   const styles = obj.useStyles();
-  obj1 = map;
+  let obj1 = useToken;
   obj = { style: styles.container, children: null };
-  const token = obj1.useToken(ThemesDefault.colors.BACKGROUND_BASE_LOWEST);
+  const token = obj1.useToken(nativeDefault.colors.BACKGROUND_BASE_LOWEST);
   obj = { style: styles.colorBanner, start: null, end: null, colors: null };
   const tmp2 = useThemeDefault();
-  obj[1] = GuildProfileBackground.DiagonalGradient.START;
-  obj[2] = GuildProfileBackground.DiagonalGradient.END;
-  let obj4 = GuildProfileBackground;
-  obj[3] = obj4.getBackgroundForProfile(tmp2, token);
-  const items = [callback(LinearGradientDefault, obj), ,];
+  obj.start = GuildProfileView.DiagonalGradient.START;
+  obj.end = GuildProfileView.DiagonalGradient.END;
+  let obj4 = GuildProfileView;
+  obj.colors = obj4.getBackgroundForProfile(tmp2, token);
+  const items = [React4(LinearGradientDefault, obj), ,];
   obj1 = { style: styles.header, children: null };
   const obj2 = { style: styles.avatarBackground, children: null };
   const obj3 = { size: null, value: "?", selected: false, textStyle: null };
-  const tmp4 = LinearGradientDefault;
-  obj3[0] = GuildIconSizes.GuildIconSizes.XXLARGE;
-  obj3[3] = styles.restrictedAcronym;
-  obj2[1] = callback(GuildIconSizesDefault, obj3);
-  obj1[1] = callback(View, obj2);
-  items[1] = callback(View, obj1);
+  obj3.size = GuildIcon.GuildIconSizes.XXLARGE;
+  obj3.textStyle = styles.restrictedAcronym;
+  obj2.children = React4(GuildIconDefault, obj3);
+  obj1.children = React4(View, obj2);
+  items[1] = React4(View, obj1);
   obj4 = { style: styles.body, children: null };
   const obj5 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = getSystemLocale.intl;
-  obj5[2] = intl.string(getSystemLocale.t.wZmueu);
-  const items1 = [callback(Text.Text, obj5)];
+  const intl = util.intl;
+  obj5.children = intl.string(util.t.wZmueu);
+  const items1 = [React4(Text_Text.Text, obj5)];
   const obj6 = { variant: "text-md/medium", color: "text-subtle", children: null };
-  const intl2 = getSystemLocale.intl;
-  obj6[2] = intl2.string(getSystemLocale.t["8mfCqY"]);
-  items1[1] = callback(Text.Text, obj6);
-  obj4[1] = items1;
-  items[2] = callback2(View, obj4);
-  obj[1] = items;
-  return callback2(View, obj);
+  const intl2 = util.intl;
+  obj6.children = intl2.string(util.t["8mfCqY"]);
+  items1[1] = React4(Text_Text.Text, obj6);
+  obj4.children = items1;
+  items[2] = hasOwnProperty(View, obj4);
+  obj.children = items;
+  return hasOwnProperty(View, obj);
 }

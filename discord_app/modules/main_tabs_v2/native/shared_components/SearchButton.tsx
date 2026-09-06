@@ -1,36 +1,35 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/SearchButton.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import Text from "../../../../design/components/Text/native/Text.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import MagnifyingGlassIcon from "../../../../design/components/Icon/native/redesign/generated/MagnifyingGlassIcon.tsx";
-import { Pressable } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-createCacheKey = { searchButton: null, roundedCorners: null, roundedCornersAlt: null, text: null };
-createCacheKey = {
-  backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT,
+require = fn;
+const Pressable = fn(17).Pressable;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+fn(4560);
+let createStyles = { searchButton: null, roundedCorners: null, roundedCornersAlt: null, text: null };
+createStyles = {
+  backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT,
   height: 40,
   alignItems: "center",
   flexDirection: "row",
   paddingHorizontal: 12,
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { borderRadius: 20 };
-createCacheKey[2] = { borderRadius: ThemesDefault.radii.round };
-createCacheKey[3] = { marginLeft: 8 };
-let closure_5 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { borderRadius: ThemesDefault.radii.round };
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/SearchButton.tsx");
+createStyles.searchButton = createStyles;
+createStyles.roundedCorners = { borderRadius: 20 };
+createStyles.roundedCornersAlt = { borderRadius: nativeDefault.radii.round };
+createStyles.text = { marginLeft: 8 };
+let closure_5 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/SearchButton.tsx");
 
 export const SEARCH_BAR_HEIGHT = 40;
 export const SearchButtonContent = function SearchButtonContent(panelVariant) {
-  const merged = Object.assign(panelVariant, Object.create(null));
-  const tmp2 = callback2();
+  const merged = Object.assign(panelVariant, Object.assign({ panelVariant: 0 }));
+  const tmp2 = closure_5();
   let obj = {};
   const merged1 = Object.assign(merged);
   const items = [
@@ -39,11 +38,11 @@ export const SearchButtonContent = function SearchButtonContent(panelVariant) {
     merged.style,
   ];
   obj.style = items;
-  const items1 = [callback(MagnifyingGlassIcon.MagnifyingGlassIcon, { size: "xs" })];
+  const items1 = [React3(MagnifyingGlassIcon.MagnifyingGlassIcon, { size: "xs" })];
   obj = { variant: "text-sm/medium", color: "text-muted", style: tmp2.text, maxFontSizeMultiplier: 2, children: null };
-  const intl = getSystemLocale.intl;
-  obj[4] = intl.string(getSystemLocale.t["5h0QOP"]);
-  items1[1] = callback(Text.Text, obj);
+  const intl = util.intl;
+  obj.children = intl.string(util.t["5h0QOP"]);
+  items1[1] = React3(Text_Text.Text, obj);
   obj.children = items1;
-  return closure_4(Pressable, obj);
+  return React4(Pressable, obj);
 };

@@ -1,40 +1,39 @@
 // discord_app/modules/wishlists/native/SocialLayerStorefrontWishlistItemCard.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../../applications/ApplicationStore.tsx";
-import closure_5 from "../SentGiftsStore.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
+import SlayerStorefrontItemCardDefault from "../../slayer_storefront/native/SlayerStorefrontItemCard.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import ApplicationStore from "../../applications/ApplicationStore.tsx";
+import SentGiftsStore from "../SentGiftsStore.tsx";
 
-const require = arg1;
-({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { applicationIcon: null, nestedCard: null };
-createCacheKey = {
+const require = fn;
+const jsxProd = fn(21);
+({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
+fn(4560);
+let createStyles = { applicationIcon: null, nestedCard: null };
+let size = {
   position: "absolute",
-  top: ThemesDefault.space.PX_8,
-  left: ThemesDefault.space.PX_8,
+  top: nativeDefault.space.PX_8,
+  left: nativeDefault.space.PX_8,
   width: 24,
   height: 24,
-  borderRadius: ThemesDefault.radii.sm,
+  borderRadius: nativeDefault.radii.sm,
   zIndex: 1,
 };
-createCacheKey[0] = createCacheKey;
-const obj1 = {
+createStyles.applicationIcon = size;
+createStyles = {
   shadowColor: "Array",
-  shadowOffset: 0,
+  shadowOffset: { width: 0, height: 0 },
   shadowOpacity: 0,
   shadowRadius: 0,
   elevation: "visible",
   overflow: null,
-  borderRadius: "\u{1F931}\u{1F3FD}",
+  borderRadius: nativeDefault.radii.none,
 };
-obj1[1] = { width: 0, height: 0 };
-obj1[6] = ThemesDefault.radii.none;
-createCacheKey[1] = obj1;
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting(
-  "modules/wishlists/native/SocialLayerStorefrontWishlistItemCard.tsx",
-);
+createStyles.nestedCard = createStyles;
+let closure_9 = createStyles.createStyles(createStyles);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/wishlists/native/SocialLayerStorefrontWishlistItemCard.tsx");
 
 export default function SocialLayerStorefrontWishlistItemCard(sku) {
   sku = sku.sku;
@@ -44,21 +43,19 @@ export default function SocialLayerStorefrontWishlistItemCard(sku) {
   }
   const wishlistOwnerId = sku.wishlistOwnerId;
   const size = sku.size;
-  const merged = Object.assign(sku, Object.create(null));
-  let applicationId;
+  const merged = Object.assign(sku, Object.assign({ sku: 0, isOwned: 0, source: 0, wishlistOwnerId: 0, size: 0 }));
   let stateFromStores1;
   let memo;
-  closure_6 = undefined;
   let obj = sku(size[6]);
   const items = [memo];
   const items1 = [sku.id, wishlistOwnerId];
-  applicationId = sku.applicationId;
+  const applicationId = sku.applicationId;
   const stateFromStores = obj.useStateFromStores(
     items,
     () => {
       let hasSentGiftResult = null != wishlistOwnerId;
       if (hasSentGiftResult) {
-        hasSentGiftResult = memo.hasSentGift(sku.id, tmp);
+        hasSentGiftResult = SentGiftsStore.hasSentGift(sku.id, tmp);
       }
       return hasSentGiftResult;
     },
@@ -71,7 +68,7 @@ export default function SocialLayerStorefrontWishlistItemCard(sku) {
     () => {
       let application = null;
       if (null != applicationId) {
-        application = stateFromStores1.getApplication(tmp);
+        application = ApplicationStore.getApplication(tmp);
       }
       return application;
     },
@@ -85,28 +82,26 @@ export default function SocialLayerStorefrontWishlistItemCard(sku) {
     }
     return iconSource;
   }, items4);
-  const tmp7 = callback();
-  closure_6 = tmp7;
+  const tmp7 = closure_9();
+  const nestedCard = tmp7;
   const items5 = [sku, size, memo, ,];
   ({ applicationIcon: arr6[3], nestedCard: arr6[4] } = tmp7);
-  callback = applicationId.useCallback(() => {
-    let obj = { sku, size, containerStyle: lib.nestedCard };
-    const children = [lib(wishlistOwnerId(size[7]), obj)];
+  const callback = applicationId.useCallback(() => {
+    let obj = { sku, size, containerStyle: nestedCard.nestedCard };
+    const children = [timestampProducer(SlayerStorefrontItemCardDefault, obj)];
     let tmp3Result = null != memo;
     if (tmp3Result) {
-      obj = { source: null, style: null };
-      obj[0] = tmp7;
-      obj[1] = lib.applicationIcon;
-      tmp3Result = lib(wishlistOwnerId(size[8]), obj);
+      obj = { source: tmp7, style: nestedCard.applicationIcon };
+      tmp3Result = timestampProducer(FastImageDefault, obj);
     }
     children[1] = tmp3Result;
-    return closure_1_8(closure_1_7, { children });
+    return React6(React5, { children });
   }, items5);
   obj = { accessibilityLabel: sku.name, renderPreview: callback, source: sku.source, size };
   const obj2 = sku(size[6]);
   const tmp2 = sku;
   const tmp3 = size;
-  const tmp9 = closure_6;
+  const tmp9 = nestedCard;
   const merged1 = Object.assign(merged);
   if (!flag) {
     if (!stateFromStores) {

@@ -1,73 +1,78 @@
 // discord_app/modules/guild_onboarding_home/native/ResourcesRow.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
+import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import GuildOnboardingHomeActionCreators from "../GuildOnboardingHomeActionCreators.tsx";
 import useResourceChannelsDefault from "../useResourceChannels.tsx";
-import { ScrollView } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import { ONBOARDING_HOME_RESOURCES_SHEET_KEY as closure_4 } from "OnboardingHomeConstants.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-noopAll;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = {
+require = fn;
+const ScrollView = fn(17).ScrollView;
+let closure_4 = fn(16558).ONBOARDING_HOME_RESOURCES_SHEET_KEY;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+fn(4560);
+let createStyles = {
   container: { display: "flex", flexDirection: "row", paddingBottom: 8, marginBottom: 16 },
   channelItem: null,
 };
-createCacheKey = {
+createStyles = {
   display: "flex",
   justifyContent: "center",
-  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
-  borderRadius: ThemesDefault.radii.round,
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderRadius: nativeDefault.radii.round,
   marginLeft: 8,
   paddingVertical: 8,
   paddingHorizontal: 12,
 };
-createCacheKey[1] = createCacheKey;
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/native/ResourcesRow.tsx");
+createStyles.channelItem = createStyles;
+let closure_7 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_onboarding_home/native/ResourcesRow.tsx");
 
 export default function ResourcesRow(guildId) {
   guildId = guildId.guildId;
-  importDefault = undefined;
-  const tmp = callback2();
+  const tmp = closure_7();
   importDefault = tmp;
   const arr = useResourceChannelsDefault(guildId);
   let obj = { horizontal: true, style: tmp.container, children: null };
   const substr = arr.slice(0, 2);
   const items = [
     substr.map((children) => {
-      closure_0 = children;
+      const channelId = children;
       let obj = {
-        style: lib.channelItem,
+        style: channelItem.channelItem,
         onPress() {
-          const homeResourceChannel = guildId(closure_2_2[7]).selectHomeResourceChannel(channelId, channelId.channelId);
+          const homeResourceChannel = GuildOnboardingHomeActionCreators.selectHomeResourceChannel(
+            guildId,
+            channelId.channelId,
+          );
         },
         children: null,
       };
       obj = { variant: "text-md/medium", color: "text-default", children: children.title };
-      obj[2] = closure_1_5(guildId(closure_1_2[12]).Text, obj);
-      return closure_1_5(guildId(closure_1_2[11]).PressableOpacity, obj, children.channelId);
+      obj.children = closure_1_5(guildId(4556).Text, obj);
+      return closure_1_5(guildId(5123).PressableOpacity, obj, children.channelId);
     }),
   ];
   let tmp6 = null;
   if (tmp3) {
-    obj = { style: null, onPress: null, children: null };
-    obj[0] = tmp.channelItem;
-    obj[1] = function onPress() {
-      let obj = lib(closure_1_2[8]);
-      obj = { guildId };
-      obj.openLazy(guildId(closure_1_2[10])(closure_1_2[9], closure_1_2.paths), closure_1_4, obj);
+    obj = {
+      style: tmp.channelItem,
+      onPress() {
+        const obj = { guildId };
+        obj.openLazy(asyncRequireImpl(16560, dependencyMap.paths), closure_4, obj);
+      },
+      children: null,
     };
     obj = { variant: "text-md/medium", color: "text-default", children: null };
     const intl = guildId(1114).intl;
-    obj1 = { count: null };
-    obj1[0] = arr.length - 2;
-    obj[2] = intl.format(guildId(1114).t.F6iMs4, obj1);
-    obj[2] = callback(guildId(4556).Text, obj);
-    tmp6 = callback(guildId(5123).PressableOpacity, obj);
+    const obj1 = { count: arr.length - 2 };
+    obj.children = intl.format(guildId(1114).t.F6iMs4, obj1);
+    obj.children = closure_5(guildId(4556).Text, obj);
+    tmp6 = closure_5(guildId(5123).PressableOpacity, obj);
   }
   items[1] = tmp6;
-  obj[2] = items;
+  obj.children = items;
   return closure_6(ScrollView, obj);
 }

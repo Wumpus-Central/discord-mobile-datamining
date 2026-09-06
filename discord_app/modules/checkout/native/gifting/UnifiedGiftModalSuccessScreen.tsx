@@ -1,81 +1,75 @@
 // discord_app/modules/checkout/native/gifting/UnifiedGiftModalSuccessScreen.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import { Image } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { UserSettingsSections } from "../../../../Constants.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js";
+import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
+import openUserSettings from "../../../user_settings/core/native/openUserSettings.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { alertContainer: null, image: null, title: null, description: null };
-createCacheKey = {
-  paddingHorizontal: ThemesDefault.space.PX_24,
-  paddingBottom: ThemesDefault.space.PX_24,
+require = fn;
+const Image = fn(17).Image;
+const UserSettingsSections = fn(1074).UserSettingsSections;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+fn(4560);
+let createStyles = { alertContainer: null, image: null, title: null, description: null };
+createStyles = {
+  paddingHorizontal: nativeDefault.space.PX_24,
+  paddingBottom: nativeDefault.space.PX_24,
   alignItems: "center",
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { position: "relative", top: -50 };
-createCacheKey[2] = { marginTop: -ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_8 };
-let obj1 = { marginTop: -ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_8 };
-createCacheKey[3] = { marginBottom: ThemesDefault.space.PX_24 };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { marginBottom: ThemesDefault.space.PX_24 };
-const result = require("set").fileFinishedImporting(
-  "modules/checkout/native/gifting/UnifiedGiftModalSuccessScreen.tsx",
-);
+createStyles.alertContainer = createStyles;
+createStyles.image = { position: "relative", top: -50 };
+createStyles.title = { marginTop: -nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_8 };
+let obj1 = { marginTop: -nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_8 };
+createStyles.description = { marginBottom: nativeDefault.space.PX_24 };
+let closure_8 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/checkout/native/gifting/UnifiedGiftModalSuccessScreen.tsx");
 
 export default function UnifiedGiftModalSuccessScreen(giftBadgeProgress) {
   giftBadgeProgress = giftBadgeProgress.giftBadgeProgress;
   const onClose = giftBadgeProgress.onClose;
   let enabled;
-  const tmp = callback2();
+  const tmp = closure_8();
   const GiftingBadgeExperiment = giftBadgeProgress(enabled[7]).GiftingBadgeExperiment;
   enabled = GiftingBadgeExperiment.useConfig({ location: "UnifiedGiftModalSuccessScreen" }).enabled;
   const items = [enabled, giftBadgeProgress, onClose];
-  const callback = React.useCallback(() => {
+  const callback = noop.useCallback(() => {
     onClose();
     let tmp2 = enabled;
     if (enabled) {
       tmp2 = null != giftBadgeProgress;
     }
     if (tmp2) {
-      let obj = onClose(enabled[8]);
-      obj = { giftBadgeProgress: null };
-      obj[0] = giftBadgeProgress;
-      obj.pushLazy(
-        giftBadgeProgress(enabled[10])(enabled[9], enabled.paths),
-        obj,
-        "collectibles_shop_gift_badge_modal",
-      );
+      const obj = { giftBadgeProgress };
+      obj.pushLazy(asyncRequireImpl(11027, dependencyMap.paths), obj, "collectibles_shop_gift_badge_modal");
     }
   }, items);
   const items1 = [onClose];
-  const callback1 = React.useCallback(() => {
+  const callback1 = noop.useCallback(() => {
     onClose();
-    let obj = giftBadgeProgress(enabled[11]);
-    obj = { screen: closure_1_5.PREMIUM_GIFTING, params: {} };
+    const obj = { screen: UserSettingsSections.PREMIUM_GIFTING, params: {} };
     obj.openUserSettings(obj);
   }, items1);
   let obj = { onClose: callback, noDefaultButtons: true, style: tmp.alertContainer, children: null };
   obj = { source: giftBadgeProgress(enabled[6]).GIFT_STYLE_IMG[giftBadgeProgress.giftStyle], style: tmp.image };
-  const items2 = [callback(Image, obj), , ,];
+  const items2 = [closure_6(Image, obj), , ,];
   obj = { variant: "heading-lg/bold", style: tmp.title, children: null };
   const intl = giftBadgeProgress(enabled[14]).intl;
-  obj[2] = intl.string(giftBadgeProgress(enabled[14]).t.MqZXbv);
-  items2[1] = callback(giftBadgeProgress(enabled[13]).Text, obj);
-  obj1 = { variant: "text-md/medium", style: tmp.description, children: null };
+  obj.children = intl.string(giftBadgeProgress(enabled[14]).t.MqZXbv);
+  items2[1] = closure_6(giftBadgeProgress(enabled[13]).Text, obj);
+  const obj1 = { variant: "text-md/medium", style: tmp.description, children: null };
   const intl2 = giftBadgeProgress(enabled[14]).intl;
-  obj1[2] = intl2.format(giftBadgeProgress(enabled[14]).t.YS2J4S, { onClick: callback1 });
-  items2[2] = callback(giftBadgeProgress(enabled[13]).Text, obj1);
+  obj1.children = intl2.format(giftBadgeProgress(enabled[14]).t.YS2J4S, { onClick: callback1 });
+  items2[2] = closure_6(giftBadgeProgress(enabled[13]).Text, obj1);
   const obj2 = { onPress: callback, text: null, textVariant: "text-md/semibold", grow: true };
   if (enabled) {
     if (null != giftBadgeProgress) {
       let cpT0Cq = tmp2(tmp3[14]).t.PDTjLN;
     }
-    obj2[1] = tmp9(cpT0Cq);
-    items2[3] = callback(giftBadgeProgress(enabled[15]).BaseTextButton, obj2);
-    obj[3] = items2;
+    obj2.text = tmp9(cpT0Cq);
+    items2[3] = closure_6(giftBadgeProgress(enabled[15]).BaseTextButton, obj2);
+    obj.children = items2;
     return closure_7(tmp7, obj);
   }
   cpT0Cq = tmp2(tmp3[14]).t.cpT0Cq;

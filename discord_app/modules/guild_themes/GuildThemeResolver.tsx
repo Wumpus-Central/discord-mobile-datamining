@@ -1,24 +1,24 @@
 // discord_app/modules/guild_themes/GuildThemeResolver.tsx
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import set from "GuildThemePresets.tsx";
-import apexExperiment from "../premium/powerups/experiments/ServerThemeUserExperiment.tsx";
-import closure_2 from "../../../_runtime/00019_noop.js";
-import closure_3 from "../user_settings/UserSettingsProtoStore.tsx";
-import closure_4 from "../../stores/GuildStore.tsx";
-import closure_5 from "../../stores/SelectedGuildStore.tsx";
-import closure_6 from "GuildThemePreviewStore.tsx";
-import closure_7 from "GuildThemeRuntimeStore.tsx";
-import { GuildFeatures } from "../../Constants.tsx";
+import GuildThemePresets from "GuildThemePresets.tsx";
+import ServerThemeUserExperiment from "../premium/powerups/experiments/ServerThemeUserExperiment.tsx";
+import Client from "../../flow/Client.tsx";
+import noop from "../../../_runtime/metro/00019__.js";
+import UserSettingsProtoStore from "../user_settings/UserSettingsProtoStore.tsx";
+import GuildStore from "../../stores/GuildStore.tsx";
+import SelectedGuildStore from "../../stores/SelectedGuildStore.tsx";
+import GuildThemePreviewStore from "GuildThemePreviewStore.tsx";
+import GuildThemeRuntimeStore from "GuildThemeRuntimeStore.tsx";
 
-require = arg1;
-function resolveSavedActiveGuildTheme(enabled) {
-  enabled = undefined;
-  if (enabled != null) {
-    enabled = enabled.enabled;
+require = fn;
+function resolveSavedActiveGuildTheme(stateFromStores) {
+  let enabled;
+  if (stateFromStores != null) {
+    enabled = stateFromStores.enabled;
   }
   let tmp2 = null;
   if (true === enabled) {
-    const themeSettings = enabled.themeSettings;
+    const themeSettings = stateFromStores.themeSettings;
     let tmp5 = null;
     if (null != themeSettings) {
       const customUserThemeSettings = themeSettings.customUserThemeSettings;
@@ -31,8 +31,7 @@ function resolveSavedActiveGuildTheme(enabled) {
         tmp4 = null;
         if (1 === customUserThemeSettings.colors.length) {
           if (null == customUserThemeSettings.gradientColorStops) {
-            let obj = { type: "custom", customUserThemeSettings: null };
-            obj[1] = customUserThemeSettings;
+            let obj = { type: "custom", customUserThemeSettings };
             tmp4 = obj;
           } else {
             tmp4 = null;
@@ -41,52 +40,47 @@ function resolveSavedActiveGuildTheme(enabled) {
       }
       tmp5 = tmp4;
       if (null == tmp4) {
-        const guildThemePreset = set.getGuildThemePreset(themeSettings.presetId);
+        const guildThemePreset = GuildThemePresets.getGuildThemePreset(themeSettings.presetId);
         let tmp9 = null;
         if (null != guildThemePreset) {
-          obj = { type: "preset", preset: null };
-          obj[1] = guildThemePreset;
+          obj = { type: "preset", preset: guildThemePreset };
           tmp9 = obj;
         }
         tmp5 = tmp9;
-        const obj2 = set;
       }
     }
     tmp2 = tmp5;
   }
   return tmp2;
 }
-function useActiveGuildThemeForGuildId(arg0, useActiveGuildTheme) {
-  let _require = arg0;
+function useActiveGuildThemeForGuildId(context, useActiveGuildTheme) {
+  _require = context;
   let str = useActiveGuildTheme;
   if (useActiveGuildTheme === undefined) {
     str = "useActiveGuildThemeForGuildId";
   }
   let serverThemeUserEnabled;
-  let stateFromStores1;
-  let memo;
   let stateFromStores2;
-  serverThemeUserEnabled = _require(serverThemeUserEnabled[9]).useServerThemeUserEnabled(str);
-  let obj = _require(serverThemeUserEnabled[9]);
-  const items = [closure_6];
-  const items1 = [arg0, serverThemeUserEnabled];
-  const stateFromStores = _require(serverThemeUserEnabled[8]).useStateFromStores(items, () => {}, items1);
-  stateFromStores1 = stateFromStores;
-  _require = arg0;
-  stateFromStores1 = undefined;
-  let obj2 = _require(serverThemeUserEnabled[8]);
-  const items2 = [stateFromStores2, closure_7];
-  const items3 = [arg0, serverThemeUserEnabled];
-  stateFromStores1 = _require(serverThemeUserEnabled[8]).useStateFromStores(
+  serverThemeUserEnabled = require("ServerThemeUserExperiment").useServerThemeUserEnabled(str);
+  let obj = require("ServerThemeUserExperiment");
+  const items = [GuildThemePreviewStore];
+  const items1 = [context, serverThemeUserEnabled];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {}, items1);
+  closure_129_0 = context;
+  closure_129_1 = serverThemeUserEnabled;
+  let obj2 = require("initialize");
+  const items2 = [stateFromStores2, GuildThemeRuntimeStore];
+  const items3 = [context, serverThemeUserEnabled];
+  const stateFromStores1 = require("initialize").useStateFromStores(
     items2,
     () => {
       if (null != closure_0) {
         if (serverThemeUserEnabled) {
-          const guild = closure_1_4.getGuild(tmp);
+          const guild = GuildStore.getGuild(tmp);
           if (null != guild) {
             const features = guild.features;
-            if (features.has(closure_1_8.GUILD_THEME)) {
-              let guildTheme = closure_1_7.getGuildThemeSnapshot(tmp);
+            if (features.has(GuildFeatures.GUILD_THEME)) {
+              let guildTheme = GuildThemeRuntimeStore.getGuildThemeSnapshot(tmp);
               if (undefined === guildTheme) {
                 guildTheme = guild.guildTheme;
               }
@@ -100,27 +94,28 @@ function useActiveGuildThemeForGuildId(arg0, useActiveGuildTheme) {
     },
     items3,
   );
+  closure_129_2 = stateFromStores1;
   const items4 = [stateFromStores1];
-  memo = stateFromStores1.useMemo(() => closure_1_9(stateFromStores), items4);
-  const obj3 = _require(serverThemeUserEnabled[8]);
+  const memo = stateFromStores.useMemo(() => resolveSavedActiveGuildTheme(stateFromStores), items4);
+  const obj3 = require("initialize");
   const items5 = [memo];
-  const items6 = [arg0, serverThemeUserEnabled];
-  stateFromStores2 = _require(serverThemeUserEnabled[8]).useStateFromStores(
+  const items6 = [context, serverThemeUserEnabled];
+  stateFromStores2 = require("initialize").useStateFromStores(
     items5,
     () => {
-      if (null != callback) {
+      if (null != closure_0) {
         if (serverThemeUserEnabled) {
-          let PERSONAL = memo.resolveGuildThemeSourcePreference(tmp);
+          let PERSONAL = UserSettingsProtoStore.resolveGuildThemeSourcePreference(tmp);
         }
         return PERSONAL;
       }
-      PERSONAL = callback(serverThemeUserEnabled[10]).GuildThemeSourcePreference.PERSONAL;
+      PERSONAL = Client.GuildThemeSourcePreference.PERSONAL;
     },
     items6,
   );
   const items7 = [memo, stateFromStores2, stateFromStores];
-  return stateFromStores1.useMemo(() => {
-    if (undefined !== stateFromStores1) {
+  return stateFromStores.useMemo(() => {
+    if (undefined !== stateFromStores) {
       let tmp7 = null;
       if (null != tmp) {
         const customUserThemeSettings = tmp.customUserThemeSettings;
@@ -133,8 +128,7 @@ function useActiveGuildThemeForGuildId(arg0, useActiveGuildTheme) {
           tmp9 = null;
           if (1 === customUserThemeSettings.colors.length) {
             if (null == customUserThemeSettings.gradientColorStops) {
-              let obj = { type: "custom", customUserThemeSettings: null };
-              obj[1] = customUserThemeSettings;
+              let obj = { type: "custom", customUserThemeSettings };
               tmp9 = obj;
             } else {
               tmp9 = null;
@@ -143,28 +137,28 @@ function useActiveGuildThemeForGuildId(arg0, useActiveGuildTheme) {
         }
         tmp7 = tmp9;
         if (null == tmp9) {
-          const guildThemePreset = callback(serverThemeUserEnabled[7]).getGuildThemePreset(tmp.presetId);
+          const guildThemePreset = GuildThemePresets.getGuildThemePreset(tmp.presetId);
           let tmp13 = null;
           if (null != guildThemePreset) {
-            obj = { type: "preset", preset: null };
-            obj[1] = guildThemePreset;
+            obj = { type: "preset", preset: guildThemePreset };
             tmp13 = obj;
           }
           tmp7 = tmp13;
-          const obj2 = callback(serverThemeUserEnabled[7]);
         }
       }
       let tmp5 = tmp7;
     } else {
       tmp5 = null;
-      if (stateFromStores2 !== callback(serverThemeUserEnabled[10]).GuildThemeSourcePreference.PERSONAL) {
+      if (stateFromStores2 !== Client.GuildThemeSourcePreference.PERSONAL) {
         tmp5 = memo;
       }
     }
     return tmp5;
   }, items7);
 }
-const result = require("set").fileFinishedImporting("modules/guild_themes/GuildThemeResolver.tsx");
+const GuildFeatures = fn(1074).GuildFeatures;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_themes/GuildThemeResolver.tsx");
 
 export const resolveRenderableGuildThemeSettings = function resolveRenderableGuildThemeSettings(
   customUserThemeSettings,
@@ -182,8 +176,7 @@ export const resolveRenderableGuildThemeSettings = function resolveRenderableGui
       tmp2 = null;
       if (1 === customUserThemeSettings.colors.length) {
         if (null == customUserThemeSettings.gradientColorStops) {
-          let obj = { type: "custom", customUserThemeSettings: null };
-          obj[1] = customUserThemeSettings;
+          let obj = { type: "custom", customUserThemeSettings };
           tmp2 = obj;
         } else {
           tmp2 = null;
@@ -193,11 +186,10 @@ export const resolveRenderableGuildThemeSettings = function resolveRenderableGui
     if (null != tmp2) {
       return tmp2;
     } else {
-      const guildThemePreset = set.getGuildThemePreset(customUserThemeSettings.presetId);
+      const guildThemePreset = GuildThemePresets.getGuildThemePreset(customUserThemeSettings.presetId);
       let tmp6 = null;
       if (null != guildThemePreset) {
-        obj = { type: "preset", preset: null };
-        obj[1] = guildThemePreset;
+        obj = { type: "preset", preset: guildThemePreset };
         tmp6 = obj;
       }
       return tmp6;
@@ -217,8 +209,7 @@ export const isRenderableGuildThemeSettings = function isRenderableGuildThemeSet
       tmp3 = null;
       if (1 === customUserThemeSettings.colors.length) {
         if (null == customUserThemeSettings.gradientColorStops) {
-          let obj = { type: "custom", customUserThemeSettings: null };
-          obj[1] = customUserThemeSettings;
+          let obj = { type: "custom", customUserThemeSettings };
           tmp3 = obj;
         } else {
           tmp3 = null;
@@ -227,15 +218,13 @@ export const isRenderableGuildThemeSettings = function isRenderableGuildThemeSet
     }
     tmp = tmp3;
     if (null == tmp3) {
-      const guildThemePreset = set.getGuildThemePreset(customUserThemeSettings.presetId);
+      const guildThemePreset = GuildThemePresets.getGuildThemePreset(customUserThemeSettings.presetId);
       let tmp7 = null;
       if (null != guildThemePreset) {
-        obj = { type: "preset", preset: null };
-        obj[1] = guildThemePreset;
+        obj = { type: "preset", preset: guildThemePreset };
         tmp7 = obj;
       }
       tmp = tmp7;
-      const obj2 = set;
     }
   }
   return null != tmp;
@@ -246,22 +235,21 @@ export const useEnabledGuildThemeForGuildId = function useEnabledGuildThemeForGu
   if (GuildThemeNuxTrigger === undefined) {
     str = "useEnabledGuildThemeForGuildId";
   }
-  serverThemeUserEnabled = _require(serverThemeUserEnabled[9]).useServerThemeUserEnabled(str);
+  serverThemeUserEnabled = require("ServerThemeUserExperiment").useServerThemeUserEnabled(str);
   _require = guildId;
-  let stateFromStores;
-  const obj = _require(serverThemeUserEnabled[9]);
-  const items = [closure_4, closure_7];
+  const obj = require("ServerThemeUserExperiment");
+  const items = [GuildStore, GuildThemeRuntimeStore];
   const items1 = [guildId, serverThemeUserEnabled];
-  stateFromStores = _require(serverThemeUserEnabled[8]).useStateFromStores(
+  const stateFromStores = require("initialize").useStateFromStores(
     items,
     () => {
       if (null != closure_0) {
         if (serverThemeUserEnabled) {
-          const guild = closure_1_4.getGuild(tmp);
+          const guild = GuildStore.getGuild(tmp);
           if (null != guild) {
             const features = guild.features;
-            if (features.has(closure_1_8.GUILD_THEME)) {
-              let guildTheme = closure_1_7.getGuildThemeSnapshot(tmp);
+            if (features.has(GuildFeatures.GUILD_THEME)) {
+              let guildTheme = GuildThemeRuntimeStore.getGuildThemeSnapshot(tmp);
               if (undefined === guildTheme) {
                 guildTheme = guild.guildTheme;
               }
@@ -276,7 +264,7 @@ export const useEnabledGuildThemeForGuildId = function useEnabledGuildThemeForGu
     items1,
   );
   const items2 = [stateFromStores];
-  return stateFromStores.useMemo(() => closure_1_9(stateFromStores), items2);
+  return stateFromStores.useMemo(() => resolveSavedActiveGuildTheme(stateFromStores), items2);
 };
 export const getActiveGuildThemeForGuildId = function getActiveGuildThemeForGuildId(guildId, GuildPowerupsConstants) {
   let str = GuildPowerupsConstants;
@@ -285,15 +273,15 @@ export const getActiveGuildThemeForGuildId = function getActiveGuildThemeForGuil
   }
   if (null != guildId) {
     if (obj.getServerThemeUserEnabled(str)) {
-      const guild = store.getGuild(guildId);
+      const guild = GuildStore.getGuild(guildId);
       if (null != guild) {
         const features = guild.features;
         if (features.has(GuildFeatures.GUILD_THEME)) {
-          const guildThemeSourcePreference = closure_3.resolveGuildThemeSourcePreference(guildId);
+          const guildThemeSourcePreference = UserSettingsProtoStore.resolveGuildThemeSourcePreference(guildId);
           if (guildThemeSourcePreference === tmp8(4491).GuildThemeSourcePreference.PERSONAL) {
             return null;
           } else {
-            let guildTheme = store2.getGuildThemeSnapshot(guildId);
+            let guildTheme = GuildThemeRuntimeStore.getGuildThemeSnapshot(guildId);
             if (undefined === guildTheme) {
               guildTheme = guild.guildTheme;
             }
@@ -303,50 +291,49 @@ export const getActiveGuildThemeForGuildId = function getActiveGuildThemeForGuil
       }
       return null;
     }
-    obj = apexExperiment;
+    obj = ServerThemeUserExperiment;
     tmp8 = require;
   }
   return null;
 };
 export const getActiveGuildTheme = function getActiveGuildTheme() {
-  guildId = guildId.getGuildId();
+  const guildId = SelectedGuildStore.getGuildId();
   let tmp11Result = null;
   if (null != guildId) {
     tmp11Result = null;
     if (obj.getServerThemeUserEnabled("getActiveGuildTheme")) {
-      const guild = store.getGuild(guildId);
+      const guild = GuildStore.getGuild(guildId);
       tmp11Result = null;
       if (null != guild) {
         const features = guild.features;
         tmp11Result = null;
         if (features.has(GuildFeatures.GUILD_THEME)) {
-          const guildThemeSourcePreference = closure_3.resolveGuildThemeSourcePreference(guildId);
+          const guildThemeSourcePreference = UserSettingsProtoStore.resolveGuildThemeSourcePreference(guildId);
           tmp11Result = null;
           if (guildThemeSourcePreference !== tmp3(4491).GuildThemeSourcePreference.PERSONAL) {
-            let guildTheme = store2.getGuildThemeSnapshot(guildId);
+            let guildTheme = GuildThemeRuntimeStore.getGuildThemeSnapshot(guildId);
             if (undefined === guildTheme) {
               guildTheme = guild.guildTheme;
             }
             tmp11Result = resolveSavedActiveGuildTheme(guildTheme);
-            const tmp11 = resolveSavedActiveGuildTheme;
           }
         }
       }
     }
-    obj = apexExperiment;
+    obj = ServerThemeUserExperiment;
     tmp3 = require;
   }
   return tmp11Result;
 };
 export { useActiveGuildThemeForGuildId };
 export const useActiveGuildTheme = function useActiveGuildTheme() {
-  const items = [closure_5];
+  const items = [SelectedGuildStore];
   return useActiveGuildThemeForGuildId(
     initialize.useStateFromStores(items, () => guildId.getGuildId()),
     "useActiveGuildTheme",
   );
 };
 export const useIsGuildThemePreviewActive = function useIsGuildThemePreviewActive() {
-  const items = [closure_6];
+  const items = [GuildThemePreviewStore];
   return initialize.useStateFromStores(items, () => false);
 };

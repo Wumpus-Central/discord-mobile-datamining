@@ -1,12 +1,12 @@
 // discord_app/modules/icymi/native/content_inventory/CustomStatusEntryRow.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
 import useReplyActions from "useReplyActions.tsx";
-import UploadPlaceholderDefault from "ICYMICustomStatusRow.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import ICYMICustomStatusRowDefault from "ICYMICustomStatusRow.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/icymi/native/content_inventory/CustomStatusEntryRow.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/icymi/native/content_inventory/CustomStatusEntryRow.tsx");
 
 export default function CustomStatusEntryRow(content) {
   content = content.content;
@@ -26,7 +26,7 @@ export default function CustomStatusEntryRow(content) {
       handlePressSecondary: openEmojiPicker,
     },
   };
-  return jsx(UploadPlaceholderDefault, {
+  return jsx(ICYMICustomStatusRowDefault, {
     id: content.id,
     userId: content.author_id,
     customStatusExtra: content.extra,

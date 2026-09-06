@@ -1,18 +1,17 @@
 // discord_app/components_native/premium/PremiumActivatedAlert.tsx
-import noopAll from "../../../_runtime/00019_noop.js";
-import getSystemLocale from "../../intl/index.native.tsx";
-import getPremiumPlanItem from "../../utils/PremiumUtils.tsx";
+import util from "../../intl/index.native.tsx";
+import PremiumUtils from "../../utils/PremiumUtils.tsx";
 import useThemeDefault from "../../hooks/useTheme.tsx";
-import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
-import { SubscriptionStatusTypes } from "../../Constants.tsx";
-import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-({ Image: c3, ImageBackground: c4, View: c5 } = get_ActivityIndicator);
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = {
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Image: c3, ImageBackground: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const SubscriptionStatusTypes = fn(1074).SubscriptionStatusTypes;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+fn(4560);
+let createStyles = {
   alert: { overflow: "hidden", paddingBottom: 24 },
   header: { alignSelf: "stretch", margin: -16, padding: 16, height: 100, position: "relative" },
   headerImage: { position: "absolute", left: "50%" },
@@ -20,65 +19,60 @@ createCacheKey = {
   logoPlusPremiumGuild: { marginTop: 3, width: 101, height: 19 },
   description: null,
 };
-createCacheKey = {
+createStyles = {
   fontSize: 14,
   lineHeight: 16,
   textAlign: "center",
   marginTop: 20,
-  color: require("result").DARK_PRIMARY_300_LIGHT_PRIMARY_400,
+  color: fn(5441).DARK_PRIMARY_300_LIGHT_PRIMARY_400,
 };
-createCacheKey[5] = createCacheKey;
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-let closure_10 = createCacheKey.createStyles((arg0) => {
-  if (getPremiumPlanItem.Branding.TIER_0 === arg0) {
-    let obj = { headerImage: null };
-    obj[0] = { marginLeft: -27, width: 88, top: 18 };
+createStyles.description = createStyles;
+let closure_9 = createStyles.createStyles(createStyles);
+createStyles = fn(4560);
+let closure_10 = createStyles.createStyles((arg0) => {
+  if (PremiumUtils.Branding.TIER_0 === arg0) {
+    let obj = { headerImage: { marginLeft: -27, width: 88, top: 18 } };
     return obj;
   } else if (tmp(4218).Branding.TIER_1 === arg0) {
-    obj = { headerImage: null };
-    obj[0] = { marginLeft: -27, width: 87, top: 18 };
+    obj = { headerImage: { marginLeft: -27, width: 87, top: 18 } };
     return obj;
   } else if (tmp(4218).Branding.BUNDLE === arg0) {
-    obj1 = { headerImage: null };
-    obj1[0] = { marginLeft: -29.5, width: 91, top: 18 };
+    const obj1 = { headerImage: { marginLeft: -29.5, width: 91, top: 18 } };
     return obj1;
   } else if (tmp(4218).Branding.TIER_2 === arg0) {
-    const obj2 = { headerImage: null };
-    obj2[0] = { marginLeft: -58, width: 122, height: 90, top: 18 };
+    const obj2 = { headerImage: { marginLeft: -58, width: 122, height: 90, top: 18 } };
     return obj2;
   } else if (tmp(4218).Branding.PREMIUM_GUILD === arg0) {
-    obj = { headerImage: null };
-    obj[0] = { marginLeft: -54, width: 140, top: 18 };
+    obj = { headerImage: { marginLeft: -54, width: 140, top: 18 } };
     return obj;
   }
 });
-let closure_11 = createCacheKey.createStyles((arg0) => {
-  if (getPremiumPlanItem.Branding.BUNDLE === arg0) {
-    let obj = { animation: null };
-    obj[0] = { borderRadius: 6 };
+createStyles = fn(4560);
+let closure_11 = createStyles.createStyles((arg0) => {
+  if (PremiumUtils.Branding.BUNDLE === arg0) {
+    let obj = { animation: { borderRadius: 6 } };
     return obj;
   } else {
     if (tmp(4218).Branding.TIER_0 !== arg0) {
       if (tmp(4218).Branding.TIER_1 !== arg0) {
         if (tmp(4218).Branding.TIER_2 !== arg0) {
           if (tmp(4218).Branding.PREMIUM_GUILD === arg0) {
-            obj = { animation: null };
-            obj[0] = { borderRadius: 9 };
+            obj = { animation: { borderRadius: 9 } };
             return obj;
           }
         }
       }
     }
-    obj = { animation: null };
-    obj[0] = { borderRadius: 5 };
+    obj = { animation: { borderRadius: 5 } };
     return obj;
   }
 });
-const result = require("set").fileFinishedImporting("components_native/premium/PremiumActivatedAlert.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/premium/PremiumActivatedAlert.tsx");
 
 export default function PremiumActivatedAlert(onClose) {
   const subscription = onClose.subscription;
-  const tmp = callback();
+  const tmp = closure_9();
   let renewalMutations = subscription;
   if (null != subscription.renewalMutations) {
     const _Object = Object;
@@ -94,38 +88,34 @@ export default function PremiumActivatedAlert(onClose) {
     }
   }
   const tmp6 = useThemeDefault();
-  let obj = getPremiumPlanItem;
+  let obj = PremiumUtils;
   const premiumBranding = obj.getPremiumBranding(renewalMutations);
-  if (getPremiumPlanItem.Branding.TIER_0 === premiumBranding) {
-    obj = { logo: null };
-    obj[0] = { width: 82, height: 44 };
+  if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
+    obj = { logo: { width: 82, height: 44 } };
     let tmp9 = obj;
   } else if (tmp7(4218).Branding.TIER_1 === premiumBranding) {
-    obj = { logo: null };
-    obj[0] = { width: 82, height: 32 };
+    obj = { logo: { width: 82, height: 32 } };
     tmp9 = obj;
   } else {
     if (tmp7(4218).Branding.BUNDLE !== premiumBranding) {
       if (tmp7(4218).Branding.TIER_2 !== premiumBranding) {
         if (tmp7(4218).Branding.PREMIUM_GUILD === premiumBranding) {
-          obj1 = { logo: null };
-          obj1[0] = { width: 82, height: 18 };
+          const obj1 = { logo: { width: 82, height: 18 } };
           tmp9 = obj1;
         }
       }
     }
-    const obj2 = { logo: null };
-    obj2[0] = { width: 79, height: 32 };
+    const obj2 = { logo: { width: 79, height: 32 } };
     tmp9 = obj2;
   }
-  const tmp10 = callback2(premiumBranding);
+  const tmp10 = closure_10(premiumBranding);
   const obj3 = { onClose: onClose.onClose, confirmText: null, style: null, children: null };
   let tmp4Result = tmp4(4994);
   const intl = tmp7(1114).intl;
-  obj3[1] = intl.string(getSystemLocale.t.TkTvBz);
-  obj3[2] = tmp.alert;
+  obj3.confirmText = intl.string(util.t.TkTvBz);
+  obj3.style = tmp.alert;
   const obj4 = { style: tmp.header, source: null, children: null };
-  if (getPremiumPlanItem.Branding.TIER_0 === premiumBranding) {
+  if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
     tmp4Result = tmp4(10710);
   } else if (tmp7(4218).Branding.TIER_1 === premiumBranding) {
     tmp4Result = tmp4(10711);
@@ -136,8 +126,8 @@ export default function PremiumActivatedAlert(onClose) {
   } else if (tmp7(4218).Branding.PREMIUM_GUILD === premiumBranding) {
     tmp4Result = tmp4(10714);
   }
-  obj4[1] = tmp4Result;
-  if (getPremiumPlanItem.Branding.TIER_0 === premiumBranding) {
+  obj4.source = tmp4Result;
+  if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
     let tmp4Result1 = tmp4(10719);
   } else if (tmp7(4218).Branding.TIER_1 === premiumBranding) {
     tmp4Result1 = tmp4(10720);
@@ -151,16 +141,14 @@ export default function PremiumActivatedAlert(onClose) {
     }
     tmp4Result1 = tmp4(8068);
   }
-  const items = [closure_7(closure_3, { source: tmp4Result1, style: tmp9.logo }), ,];
+  const items = [React5(React3, { source: tmp4Result1, style: tmp9.logo }), ,];
   let tmp16Result = null;
-  if (premiumBranding === getPremiumPlanItem.Branding.BUNDLE) {
-    const obj6 = { source: null, style: null };
-    obj6[0] = tmp4(10731);
-    obj6[1] = tmp.logoPlusPremiumGuild;
+  if (premiumBranding === PremiumUtils.Branding.BUNDLE) {
+    const obj6 = { source: tmp4(10731), style: tmp.logoPlusPremiumGuild };
     tmp16Result = tmp16(tmp17, obj6);
   }
   items[1] = tmp16Result;
-  if (getPremiumPlanItem.Branding.TIER_0 === premiumBranding) {
+  if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
     let tmp4Result2 = tmp4(9385);
   } else if (tmp7(4218).Branding.TIER_1 === premiumBranding) {
     tmp4Result2 = tmp4(10715);
@@ -171,16 +159,17 @@ export default function PremiumActivatedAlert(onClose) {
   } else if (tmp7(4218).Branding.PREMIUM_GUILD === premiumBranding) {
     tmp4Result2 = tmp4(10718);
   }
+  const obj7 = { source: tmp4Result2, style: null };
   const items1 = [tmp10.headerImage, tmp.headerImage];
-  items[2] = closure_7(closure_3, { source: tmp4Result2, style: items1 });
-  obj4[2] = items;
-  const items2 = [closure_8(closure_4, obj4)];
-  const obj7 = { style: tmp.body, children: null };
+  obj7.style = items1;
+  items[2] = React5(React3, obj7);
+  obj4.children = items;
+  const items2 = [React6(React4, obj4)];
+  const obj8 = { style: tmp.body, children: null };
   const obj5 = { source: tmp4Result1, style: tmp9.logo };
-  const tmp11 = callback3(premiumBranding);
-  const tmp14 = closure_4;
-  const tmp21 = closure_5;
-  if (getPremiumPlanItem.Branding.TIER_0 === premiumBranding) {
+  const tmp11 = closure_11(premiumBranding);
+  const tmp21 = hasOwnProperty;
+  if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
     let tmp7Result = tmp7(4411);
     if (tmp7Result.isThemeDark(tmp6)) {
       let tmp4Result4 = tmp4(10722);
@@ -215,12 +204,9 @@ export default function PremiumActivatedAlert(onClose) {
     } else if (tmp7(4218).Branding.PREMIUM_GUILD === premiumBranding) {
       tmp4Result8 = tmp4(10730);
     }
-    const obj8 = { source: null, style: null };
-    obj8[0] = tmp4Result8;
-    obj8[1] = tmp11.animation;
-    const items3 = [tmp16(tmp4Result3, obj8)];
-    const obj9 = { style: null, children: null };
-    obj9[0] = tmp.description;
+    const obj9 = { source: tmp4Result8, style: tmp11.animation };
+    const items3 = [tmp16(tmp4Result3, obj9)];
+    const obj10 = { style: tmp.description, children: null };
     if (tmp7(4218).Branding.TIER_0 !== premiumBranding) {
       if (tmp7(4218).Branding.TIER_1 !== premiumBranding) {
         if (tmp7(4218).Branding.TIER_2 === premiumBranding) {
@@ -228,19 +214,19 @@ export default function PremiumActivatedAlert(onClose) {
           let stringResult = intl3.string(tmp7(1114).t.aTUr3Z);
         } else if (tmp7(4218).Branding.BUNDLE === premiumBranding) {
           const intl2 = tmp7(1114).intl;
-          const obj10 = { planName: null };
-          ({ planId: obj19[0], additionalPlans: obj19[1] } = renewalMutations);
-          obj10[0] = tmp7(4218).getExternalPlanDisplayName({ planId: null, additionalPlans: null });
-          stringResult = intl2.format(tmp7(1114).t.YJUUH3, obj10);
-          const obj11 = { planId: null, additionalPlans: null };
+          const obj11 = { planName: null };
+          ({ planId: obj20.planId, additionalPlans: obj20.additionalPlans } = renewalMutations);
+          obj11.planName = tmp7(4218).getExternalPlanDisplayName({ planId: null, additionalPlans: null });
+          stringResult = intl2.format(tmp7(1114).t.YJUUH3, obj11);
+          const obj12 = { planId: null, additionalPlans: null };
           const tmp7Result3 = tmp7(4218);
         }
       }
-      obj9[1] = stringResult;
-      items3[1] = tmp16(tmp7(1178).LegacyText, obj9);
-      obj7[1] = items3;
-      items2[1] = tmp12(tmp21, obj7);
-      obj3[3] = items2;
+      obj10.children = stringResult;
+      items3[1] = tmp16(tmp7(1178).LegacyText, obj10);
+      obj8.children = items3;
+      items2[1] = tmp12(tmp21, obj8);
+      obj3.children = items2;
       return tmp12(tmp4Result, obj3);
     }
     const intl4 = tmp7(1114).intl;

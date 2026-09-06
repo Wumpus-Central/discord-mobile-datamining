@@ -1,13 +1,13 @@
 // discord_app/modules/guild_badge/GuildTraits.tsx
-import set2 from "../../../_runtime/00002_set.js";
-import fromGuildPropertiesWithAdditionalFields from "../../utils/GuildRecordUtils.tsx";
-import ME from "../../Constants.tsx";
+import GuildRecordUtils from "../../utils/GuildRecordUtils.tsx";
+import Constants from "../../Constants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-({ GuildFeatures: obj1, BoostedGuildTiers: c3 } = ME);
-let obj = { PUBLIC: "PUBLIC", INVITE_ONLY: "INVITE_ONLY", APPLY_TO_JOIN: "APPLY_TO_JOIN" };
-const result = set2.fileFinishedImporting("modules/guild_badge/GuildTraits.tsx");
+({ GuildFeatures: c2, BoostedGuildTiers: c3 } = Constants);
+const GuildVisibility = { PUBLIC: "PUBLIC", INVITE_ONLY: "INVITE_ONLY", APPLY_TO_JOIN: "APPLY_TO_JOIN" };
+const result = size.fileFinishedImporting("modules/guild_badge/GuildTraits.tsx");
 
-export const GuildVisibility = obj;
+export { GuildVisibility };
 export const getGuildTraits = function getGuildTraits(fromGuildProfileResult) {
   const set = new Set(fromGuildProfileResult.features);
   let APPLY_TO_JOIN = obj.INVITE_ONLY;
@@ -18,14 +18,13 @@ export const getGuildTraits = function getGuildTraits(fromGuildProfileResult) {
     if (null == fromGuildProfileResult) {
       let num3 = 0;
       if (tmp5) {
-        let num4 = fromGuildPropertiesWithAdditionalFields.isGuildRecord(fromGuildProfileResult)
+        let num4 = GuildRecordUtils.isGuildRecord(fromGuildProfileResult)
           ? fromGuildProfileResult.premiumSubscriberCount
           : fromGuildProfileResult.premiumSubscriptionCount;
         if (num4 == null) {
           num4 = 0;
         }
         num3 = num4;
-        const obj3 = fromGuildPropertiesWithAdditionalFields;
       }
       if (obj4.isGuildRecord(fromGuildProfileResult)) {
         let NONE = fromGuildProfileResult.premiumTier;
@@ -33,23 +32,15 @@ export const getGuildTraits = function getGuildTraits(fromGuildProfileResult) {
         NONE = constants2.NONE;
       }
       obj = {
-        verified: null,
-        partnered: null,
-        community: null,
-        staff: null,
-        visibility: null,
-        premium: null,
-        premiumSubscriberCount: null,
-        premiumTier: null,
+        verified: set.has(tmp2.VERIFIED),
+        partnered: set.has(tmp2.PARTNERED),
+        community: set.has(tmp2.COMMUNITY),
+        staff: set.has(tmp2.INTERNAL_EMPLOYEE_ONLY),
+        visibility: APPLY_TO_JOIN,
+        premium: tmp5,
+        premiumSubscriberCount: num3,
+        premiumTier: NONE,
       };
-      obj[0] = set.has(tmp2.VERIFIED);
-      obj[1] = set.has(tmp2.PARTNERED);
-      obj[2] = set.has(tmp2.COMMUNITY);
-      obj[3] = set.has(tmp2.INTERNAL_EMPLOYEE_ONLY);
-      obj[4] = APPLY_TO_JOIN;
-      obj[5] = tmp5;
-      obj[6] = num3;
-      obj[7] = NONE;
       return obj;
     } else {
       if (obj2.isGuildRecord(fromGuildProfileResult)) {
@@ -64,7 +55,7 @@ export const getGuildTraits = function getGuildTraits(fromGuildProfileResult) {
           tmp8 = fromGuildProfileResult.premiumSubscriptionCount > 0;
         }
       }
-      obj2 = fromGuildPropertiesWithAdditionalFields;
+      obj2 = GuildRecordUtils;
     }
   }
   if (tmp3) {
@@ -89,7 +80,7 @@ export const isPremiumGuild = function isPremiumGuild(has) {
         tmp4 = premiumTier.premiumSubscriptionCount > 0;
       }
     }
-    obj = fromGuildPropertiesWithAdditionalFields;
+    obj = GuildRecordUtils;
   }
 };
 export const isDiscoverableGuild = function isDiscoverableGuild(features) {

@@ -1,15 +1,15 @@
 // discord_app/modules/analytics/updateDynamicSuperProperties.tsx
-import set from "../../../_runtime/00002_set.js";
-import encodeProperties from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import trackHeartbeat from "../analytics_sessions/SessionHeartbeatScheduler.tsx";
-import _modDef11300 from "../app_state/DiscordAppState.native.tsx";
+import discord_common_AnalyticsUtils from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import SessionHeartbeatScheduler from "../analytics_sessions/SessionHeartbeatScheduler.tsx";
+import DiscordAppStateDefault from "../app_state/DiscordAppState.native.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-let result = set.fileFinishedImporting("modules/analytics/updateDynamicSuperProperties.tsx");
+let result = size.fileFinishedImporting("modules/analytics/updateDynamicSuperProperties.tsx");
 
 export const updateDynamicSuperProperties = function updateDynamicSuperProperties() {
-  let obj = trackHeartbeat;
+  let obj = SessionHeartbeatScheduler;
   const activeSessionUnsafe = obj.getActiveSessionUnsafe();
-  const superProperties = encodeProperties.getSuperProperties();
+  const superProperties = discord_common_AnalyticsUtils.getSuperProperties();
   let uuid;
   if (activeSessionUnsafe != null) {
     uuid = activeSessionUnsafe.uuid;
@@ -22,9 +22,7 @@ export const updateDynamicSuperProperties = function updateDynamicSuperPropertie
   if (uuid !== prop) {
     obj.client_heartbeat_session_id = uuid;
   }
-  const obj2 = encodeProperties;
-  const tmp = require;
-  const state = _modDef11300.getState();
+  const state = DiscordAppStateDefault.getState();
   let client_app_state;
   if (superProperties != null) {
     client_app_state = superProperties.client_app_state;
@@ -33,7 +31,7 @@ export const updateDynamicSuperProperties = function updateDynamicSuperPropertie
     obj.client_app_state = state;
   }
   if (Object.keys(obj).length > 0) {
-    const result = encodeProperties.extendSuperProperties(obj);
-    const tmpResult = encodeProperties;
+    const result = discord_common_AnalyticsUtils.extendSuperProperties(obj);
+    const tmpResult = discord_common_AnalyticsUtils;
   }
 };

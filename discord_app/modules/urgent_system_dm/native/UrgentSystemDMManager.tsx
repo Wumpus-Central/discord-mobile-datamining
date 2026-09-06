@@ -1,20 +1,19 @@
 // discord_app/modules/urgent_system_dm/native/UrgentSystemDMManager.tsx
-import getSystemLocale from "../../../intl/index.native.tsx";
-import _modDef4905 from "../../../actions/native/AlertActionCreators.tsx";
-import maybeShowUrgentMessageModalDefault from "../UrgentSystemDMManagerBase.tsx";
+import util from "../../../intl/index.native.tsx";
+import actions_AlertActionCreatorsDefault from "../../../actions/native/AlertActionCreators.tsx";
+import UrgentSystemDMManagerBaseDefault from "../UrgentSystemDMManagerBase.tsx";
 import navigateToSystemDMDefault from "../navigateToSystemDM.tsx";
 
-require = arg1;
-const tmp2 = new maybeShowUrgentMessageModalDefault(() => {
-  let obj = _modDef4905;
-  obj = { title: null, body: null, isDismissable: false, onConfirm: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t.bAhz9l);
-  const intl2 = getSystemLocale.intl;
-  obj[1] = intl2.string(getSystemLocale.t["7KjxW3"]);
-  obj[3] = navigateToSystemDMDefault;
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/urgent_system_dm/native/UrgentSystemDMManager.tsx");
+
+export default new UrgentSystemDMManagerBaseDefault(() => {
+  const obj = { title: null, body: null, isDismissable: false, onConfirm: null };
+  const intl = util.intl;
+  obj.title = intl.string(util.t.bAhz9l);
+  const intl2 = util.intl;
+  obj.body = intl2.string(util.t["7KjxW3"]);
+  obj.onConfirm = navigateToSystemDMDefault;
   return obj.show(obj);
 });
-const result = require("set").fileFinishedImporting("modules/urgent_system_dm/native/UrgentSystemDMManager.tsx");
-
-export default tmp2;

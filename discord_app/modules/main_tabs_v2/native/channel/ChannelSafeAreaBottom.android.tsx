@@ -1,14 +1,14 @@
 // discord_app/modules/main_tabs_v2/native/channel/ChannelSafeAreaBottom.android.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import _modDef12643 from "ChannelSafeAreaBottomNoop.tsx";
-import _modDef12644 from "ChannelSafeAreaBottomAnimated.android.tsx";
-import apexExperiment from "../../../keyboard/native/AnimatedKeyboardExperiment.tsx";
+import ChannelSafeAreaBottomNoopDefault from "ChannelSafeAreaBottomNoop.tsx";
+import ChannelSafeAreaBottomAnimatedDefault from "ChannelSafeAreaBottomAnimated.android.tsx";
+import AnimatedKeyboardExperiment from "../../../keyboard/native/AnimatedKeyboardExperiment.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-if (apexExperiment.isAnimatedAndroidKeyboard()) {
-  let importDefaultResult = _modDef12643;
+if (AnimatedKeyboardExperiment.isAnimatedAndroidKeyboard()) {
+  let importDefaultResult = ChannelSafeAreaBottomNoopDefault;
 } else {
-  importDefaultResult = _modDef12644;
+  importDefaultResult = ChannelSafeAreaBottomAnimatedDefault;
 }
-const result = set.fileFinishedImporting("modules/main_tabs_v2/native/channel/ChannelSafeAreaBottom.android.tsx");
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/channel/ChannelSafeAreaBottom.android.tsx");
 
 export default importDefaultResult;

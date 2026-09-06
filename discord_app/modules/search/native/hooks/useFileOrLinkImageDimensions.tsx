@@ -1,19 +1,24 @@
 // discord_app/modules/search/native/hooks/useFileOrLinkImageDimensions.tsx
-import closure_0 from "../../../../../_runtime/00019_noop.js";
-import MessageEmbedTypes from "../../SearchConstants.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
+const SearchConstants = fn(7878);
 ({
   FILES_OR_LINKS_GAP_WIDTH: closure_1,
-  FILES_OR_LINKS_NUM_COLUMNS: obj1,
+  FILES_OR_LINKS_NUM_COLUMNS: c2,
   FILE_OR_LINK_IMAGE_RATIO: c3,
-  SEARCH_LIST_HORIZONTAL_PADDING: c4,
-} = MessageEmbedTypes);
-let result = require("set").fileFinishedImporting("modules/search/native/hooks/useFileOrLinkImageDimensions.tsx");
+  SEARCH_LIST_HORIZONTAL_PADDING: closure_4,
+} = SearchConstants);
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/search/native/hooks/useFileOrLinkImageDimensions.tsx");
 
 export const useFileOrLinkImageDimensions = function useFileOrLinkImageDimensions(width) {
-  const diff = (width - 2 * closure_4 - (closure_2 - 1) * result) / closure_2 - 2;
-  const React = diff;
-  result = diff * closure_3;
+  const diff = (width - 2 * React4 - (React2 - 1) * framebus) / React2 - 2;
+  noop = diff;
+  const result = diff * React3;
+  closure_1 = result;
   const items = [result, diff];
-  return React.useMemo(() => ({ width: closure_0, height: closure_1 }), items);
+  return noop.useMemo(() => {
+    const size = { width: diff, height: result };
+    return size;
+  }, items);
 };

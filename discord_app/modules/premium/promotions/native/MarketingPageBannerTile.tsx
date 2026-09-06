@@ -1,58 +1,50 @@
 // discord_app/modules/premium/promotions/native/MarketingPageBannerTile.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import contextDefault from "../../../app_analytics/useAnalyticsLocations.tsx";
-import trackImpressionDefault from "../../../app_analytics/useTrackImpression.tsx";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import LinkingDefault from "../../../../lib/native/Linking.tsx";
+import useAnalyticsLocationsDefault from "../../../app_analytics/useAnalyticsLocations.tsx";
+import useTrackImpressionDefault from "../../../app_analytics/useTrackImpression.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-noopAll;
-({ Image: c3, View: c4 } = get_ActivityIndicator);
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: { width: "100%" }, card: null, image: null, bodyText: null, ctaButton: null };
-createCacheKey = {
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ Image: c3, View: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+fn(4560);
+let createStyles = { container: { width: "100%" }, card: null, image: null, bodyText: null, ctaButton: null };
+createStyles = {
   display: "flex",
   width: "100%",
   flexDirection: "column",
   justifyContent: "flex-start",
-  padding: ThemesDefault.space.PX_16,
-  borderRadius: ThemesDefault.radii.lg,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_SECONDARY_ALT,
+  padding: nativeDefault.space.PX_16,
+  borderRadius: nativeDefault.radii.lg,
+  backgroundColor: nativeDefault.colors.BACKGROUND_SECONDARY_ALT,
   overflow: "hidden",
 };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = {
+createStyles.card = createStyles;
+let size = {
   width: "100%",
   maxWidth: 317,
   height: 144,
-  borderRadius: ThemesDefault.radii.md,
-  marginBottom: ThemesDefault.space.PX_16,
-  padding: ThemesDefault.space.PX_8,
+  borderRadius: nativeDefault.radii.md,
+  marginBottom: nativeDefault.space.PX_16,
+  padding: nativeDefault.space.PX_8,
   alignSelf: "center",
 };
-const obj1 = {
-  width: "100%",
-  maxWidth: 317,
-  height: 144,
-  borderRadius: ThemesDefault.radii.md,
-  marginBottom: ThemesDefault.space.PX_16,
-  padding: ThemesDefault.space.PX_8,
-  alignSelf: "center",
-};
-createCacheKey[3] = { marginTop: ThemesDefault.space.PX_4 };
-let obj2 = { marginTop: ThemesDefault.space.PX_4 };
-createCacheKey[4] = { marginTop: ThemesDefault.space.PX_16 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { marginTop: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/premium/promotions/native/MarketingPageBannerTile.tsx");
+createStyles.image = size;
+createStyles.bodyText = { marginTop: nativeDefault.space.PX_4 };
+const obj1 = { marginTop: nativeDefault.space.PX_4 };
+createStyles.ctaButton = { marginTop: nativeDefault.space.PX_16 };
+let closure_7 = createStyles.createStyles(createStyles);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/promotions/native/MarketingPageBannerTile.tsx");
 
 export default function MarketingPageBannerTile(bannerFields) {
   bannerFields = bannerFields.bannerFields;
   let helpArticleLinkProps;
   ({ style, cardStyle, componentId, promotionId, analyticsPage, onPaymentSuccess, onPaymentDismiss } = bannerFields);
-  const tmp = callback();
+  const tmp = closure_7();
   let obj = helpArticleLinkProps(13399);
   const button = bannerFields.button;
   let buttonAction;
@@ -68,23 +60,23 @@ export default function MarketingPageBannerTile(bannerFields) {
     onPaymentDismiss: null,
   };
   const button2 = bannerFields.button;
-  let value;
+  value = undefined;
   if (button2 != null) {
     if (button2.navigableStorefrontApplicationId != null) {
       value = iter.value;
     }
   }
-  obj[1] = value;
-  obj[2] = contextDefault().analyticsLocations;
-  obj[3] = analyticsPage;
-  obj[4] = onPaymentSuccess;
-  obj[5] = onPaymentDismiss;
+  obj.applicationId = value;
+  obj.analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
+  obj.analyticsPage = analyticsPage;
+  obj.onPaymentSuccess = onPaymentSuccess;
+  obj.onPaymentDismiss = onPaymentDismiss;
   obj = { type: null, name: null, properties: null };
   const buttonActionHandler = obj.getButtonActionHandler(obj);
-  obj[0] = helpArticleLinkProps(1250).ImpressionTypes.VIEW;
-  obj[1] = helpArticleLinkProps(1250).ImpressionNames.PREMIUM_MARKETING_COMPONENT;
-  const tmp2Result = trackImpressionDefault;
-  obj[2] = {
+  obj.type = helpArticleLinkProps(1250).ImpressionTypes.VIEW;
+  obj.name = helpArticleLinkProps(1250).ImpressionNames.PREMIUM_MARKETING_COMPONENT;
+  const tmp2Result = useTrackImpressionDefault;
+  obj.properties = {
     component_type: helpArticleLinkProps(10742).MarketingComponentType.MARKETING_PAGE_BANNER,
     component_id: componentId,
     promotion_id: promotionId,
@@ -94,17 +86,18 @@ export default function MarketingPageBannerTile(bannerFields) {
   const formatStringWithCommonPremiumParams = tmp4Result.useFormatStringWithCommonPremiumParams(bannerFields.body);
   tmp4Result = tmp4(13402);
   helpArticleLinkProps = tmp4Result.getHelpArticleLinkProps(bannerFields.helpArticle, bannerFields.helpArticleId);
-  const obj2 = { style: items, children: null };
-  items = [tmp.container, style];
-  const obj3 = { style: items1, children: null };
-  items1 = [tmp.card, cardStyle];
+  const obj2 = { style: null, children: null };
+  const items = [tmp.container, style];
+  obj2.style = items;
+  const obj3 = { style: null, children: null };
+  const items1 = [tmp.card, cardStyle];
+  obj3.style = items1;
   let tmp12Result = "" !== bannerFields.assetUrl;
   if (tmp12Result) {
     const obj4 = { source: null, style: null, resizeMode: "contain" };
-    const obj5 = { uri: null };
-    obj5[0] = bannerFields.assetUrl;
-    obj4[0] = obj5;
-    obj4[1] = tmp.image;
+    const obj5 = { uri: bannerFields.assetUrl };
+    obj4.source = obj5;
+    obj4.style = tmp.image;
     tmp12Result = tmp12(closure_3, obj4);
   }
   const items2 = [
@@ -124,30 +117,25 @@ export default function MarketingPageBannerTile(bannerFields) {
       color: "text-link",
       variant: "text-sm/medium",
       accessibilityRole: "link",
-      onPress: null,
-      children: null,
+      onPress() {
+        return LinkingDefault.openURL(helpArticleLinkProps.url);
+      },
+      children: helpArticleLinkProps.linkText,
     };
-    obj8[3] = function onPress() {
-      return closure_1_1(closure_1_2[12]).openURL(helpArticleLinkProps.url);
-    };
-    obj8[4] = helpArticleLinkProps.linkText;
     tmp12Result = tmp12(tmp4(4556).Text, obj8);
   }
   items3[2] = tmp12Result;
-  obj7[3] = items3;
+  obj7.children = items3;
   items2[2] = closure_6(helpArticleLinkProps(4556).Text, obj7);
   let tmp12Result1 = null != bannerFields.button;
   if (tmp12Result1) {
-    const obj9 = { style: null, children: null };
-    obj9[0] = tmp.ctaButton;
-    const obj10 = { text: null, onPress: null };
-    obj10[0] = bannerFields.button.copy;
-    obj10[1] = buttonActionHandler;
-    obj9[1] = tmp12(tmp2(9970), obj10);
+    const obj9 = { style: tmp.ctaButton, children: null };
+    const obj10 = { text: bannerFields.button.copy, onPress: buttonActionHandler };
+    obj9.children = tmp12(tmp2(9970), obj10);
     tmp12Result1 = tmp12(tmp13, obj9);
   }
   items2[3] = tmp12Result1;
-  obj3[1] = items2;
-  obj2[1] = closure_6(closure_4, obj3);
+  obj3.children = items2;
+  obj2.children = closure_6(closure_4, obj3);
   return closure_5(closure_4, obj2);
 }

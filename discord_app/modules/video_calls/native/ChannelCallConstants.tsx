@@ -1,10 +1,15 @@
 // discord_app/modules/video_calls/native/ChannelCallConstants.tsx
-import set from "../../../../_runtime/00002_set.js";
-import ME from "../../../Constants.tsx";
+import Constants from "../../../Constants.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const items = [, , ,];
-({ TOP_LEFT: arr[0], TOP_RIGHT: arr[1], BOTTOM_LEFT: arr[2], BOTTOM_RIGHT: arr[3] } = ME.PictureInPicturePositions);
-const result = set.fileFinishedImporting("modules/video_calls/native/ChannelCallConstants.tsx");
+({
+  TOP_LEFT: arr[0],
+  TOP_RIGHT: arr[1],
+  BOTTOM_LEFT: arr[2],
+  BOTTOM_RIGHT: arr[3],
+} = Constants.PictureInPicturePositions);
+const result = size.fileFinishedImporting("modules/video_calls/native/ChannelCallConstants.tsx");
 
 export const BOX_MODE_ACTIONSHEET_WIDTH = 360;
 export const BOX_MODE_ACTIONSHEET_HEIGHT = 720;

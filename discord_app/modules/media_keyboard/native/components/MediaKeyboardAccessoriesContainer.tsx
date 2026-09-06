@@ -1,46 +1,45 @@
 // discord_app/modules/media_keyboard/native/components/MediaKeyboardAccessoriesContainer.tsx
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../native_menu/native/NativeMenuStore.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import set from "../../../../utils/PlatformUtils.tsx";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import NativeMenuStore from "../../../native_menu/native/NativeMenuStore.tsx";
 
-const require = arg1;
-let closure_6 = set.isAndroid();
-set = { androidContainer: { flex: 1 }, iosContainer: null };
-set = {};
-let merged = Object.assign(require("get ActivityIndicator").StyleSheet.absoluteFillObject);
-set[1] = set;
-let closure_7 = createCacheKey.createStyles(set);
-let closure_8 = {
+require = fn;
+const jsx = fn(21).jsx;
+let PlatformUtils = fn(1115);
+let closure_6 = PlatformUtils.isAndroid();
+const createStyles = fn(4560);
+PlatformUtils = { androidContainer: { flex: 1 }, iosContainer: null };
+PlatformUtils = {};
+let merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
+PlatformUtils.iosContainer = PlatformUtils;
+let closure_7 = createStyles.createStyles(PlatformUtils);
+const __initData = {
   code: "function MediaKeyboardAccessoriesContainerTsx1(){const{animateOnMount,initialLayout,animatedIndex,initialPosition,animatedPosition,interpolate,IS_ANDROID}=this.__closure;const animatedMountDisabledAndNotInitialLayout=!animateOnMount&&!initialLayout.get();const animatedSheetIndexOrDefault=animatedMountDisabledAndNotInitialLayout?0:Math.min(animatedIndex.get(),0);const animatedSheetPositionOrDefault=animatedMountDisabledAndNotInitialLayout?initialPosition:animatedPosition.get();const transform=[{translateY:interpolate(animatedSheetIndexOrDefault,[-1,0],[100,0])}];if(IS_ANDROID){return{marginTop:animatedSheetPositionOrDefault,transform:transform};}return{top:animatedSheetPositionOrDefault,transform:transform};}",
 };
-let result = set.fileFinishedImporting(
+const size = fn(2);
+let result = size.fileFinishedImporting(
   "modules/media_keyboard/native/components/MediaKeyboardAccessoriesContainer.tsx",
 );
 
-export default function MediaKeyboardAccessoriesContainer(children) {
-  const animatedIndex = children.animatedIndex;
-  const animatedPosition = children.animatedPosition;
-  const animateOnMount = children.animateOnMount;
-  const initialPosition = children.initialPosition;
-  closure_4 = undefined;
-  closure_5 = undefined;
-  let sharedValue;
-  let tmp = callback();
-  closure_4 = tmp;
+export default function MediaKeyboardAccessoriesContainer(animatedIndex) {
+  animatedIndex = animatedIndex.animatedIndex;
+  const animatedPosition = animatedIndex.animatedPosition;
+  const animateOnMount = animatedIndex.animateOnMount;
+  const initialPosition = animatedIndex.initialPosition;
+  let tmp = closure_7();
+  const open = tmp;
   let items = [tmp];
   const memo = initialPosition.useMemo(() => {
     const obj = {};
-    const merged = Object.assign(sharedValue ? closure_4.androidContainer : closure_4.iosContainer);
+    const merged = Object.assign(closure_6 ? open.androidContainer : open.iosContainer);
     obj.overflow = "hidden";
     return obj;
   }, items);
-  closure_5 = initialPosition.useRef(false);
+  const ref = initialPosition.useRef(false);
   let obj = animatedIndex(animateOnMount[6]);
-  sharedValue = obj.useSharedValue(false);
+  const sharedValue = obj.useSharedValue(false);
   const items1 = [sharedValue];
-  const onLayout = initialPosition.useCallback(() => {
+  const callback = initialPosition.useCallback(() => {
     if (!ref.current) {
       tmp.current = true;
       const result = sharedValue.set(true);
@@ -57,20 +56,16 @@ export default function MediaKeyboardAccessoriesContainer(children) {
       num = Math.min(animatedIndex.get(), 0);
     }
     if (tmp) {
-      let value = initialPosition;
+      value = initialPosition;
     } else {
       value = animatedPosition.get();
     }
-    let obj = { translateY: animatedIndex(animateOnMount[6]).interpolate(num, [-1, 0], [100, 0]) };
+    let obj = { translateY: ReanimatedRexport.interpolate(num, [-1, 0], [100, 0]) };
     const items = [obj];
-    if (sharedValue) {
-      obj = { marginTop: null, transform: null };
-      obj[0] = value;
-      obj[1] = items;
+    if (closure_6) {
+      obj = { marginTop: value, transform: items };
     } else {
-      obj = { top: null, transform: null };
-      obj[0] = value;
-      obj[1] = items;
+      obj = { top: value, transform: items };
     }
     return obj;
   };
@@ -85,21 +80,23 @@ export default function MediaKeyboardAccessoriesContainer(children) {
   };
   fn.__closure = obj;
   fn.__workletHash = 10575537164844;
-  fn.__initData = closure_8;
+  fn.__initData = __initData;
   const animatedStyle = animatedIndex(animateOnMount[6]).useAnimatedStyle(fn);
   const obj2 = animatedIndex(animateOnMount[6]);
-  const items2 = [closure_4];
+  const items2 = [open];
   const stateFromStores = animatedIndex(animateOnMount[7]).useStateFromStores(items2, () => open.isOpen());
-  let importantForAccessibility;
+  let str;
   if (stateFromStores) {
-    importantForAccessibility = "no-hide-descendants";
+    str = "no-hide-descendants";
   }
-  const style = [memo, animatedStyle];
-  return closure_5(animatedPosition(animateOnMount[6]).View, {
-    importantForAccessibility,
-    style,
-    onLayout,
+  obj = {
+    importantForAccessibility: str,
+    style: null,
+    onLayout: callback,
     pointerEvents: "box-none",
-    children: children.children,
-  });
+    children: animatedIndex.children,
+  };
+  const items3 = [memo, animatedStyle];
+  obj.style = items3;
+  return ref(animatedPosition(animateOnMount[6]).View, obj);
 }

@@ -1,29 +1,30 @@
 // discord_app/modules/interaction_components/native/actions/CheckboxActionComponent.tsx
-import importAllResult from "../../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import _modDef38 from "../../../../../_runtime/metro/00038__.js";
+import Server from "../../../../flow/Server.tsx";
+import ComponentStateContext from "../../ComponentStateContext.tsx";
+import Checkbox from "../../../../design/components/Checkbox/native/Checkbox.native.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let c3 = importAllResult;
-const memoResult = importAllResult.memo((type) => {
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/interaction_components/native/actions/CheckboxActionComponent.tsx");
+
+export default noop.memo((type) => {
   type = type.type;
-  let obj = type(executeStateUpdate[2]);
+  let obj = ComponentStateContext;
   const componentStateContext = obj.useComponentStateContext();
-  state(executeStateUpdate[3])(
-    null != componentStateContext,
-    "CheckboxActionComponent must be rendered inside a ComponentStateContext",
-  );
+  _modDef38(null != componentStateContext, "CheckboxActionComponent must be rendered inside a ComponentStateContext");
   let tmp5;
   if (null != type.default) {
-    obj = { type: null, value: null };
-    obj[0] = type;
-    obj[1] = _default;
+    obj = { type, value: _default };
     tmp5 = obj;
   }
   const componentState = componentStateContext.useComponentState(type, tmp5);
-  state = componentState.state;
-  executeStateUpdate = componentState.executeStateUpdate;
+  const state = componentState.state;
+  const executeStateUpdate = componentState.executeStateUpdate;
   const items = [state, type];
-  const memo = importAllResult.useMemo(() => {
+  const memo = noop.useMemo(() => {
     type = undefined;
     if (state != null) {
       type = iter.type;
@@ -40,10 +41,10 @@ const memoResult = importAllResult.memo((type) => {
     type = first.type;
   }
   let tmp11;
-  if (type === type(executeStateUpdate[4]).ComponentType.LABEL) {
+  if (type === Server.ComponentType.LABEL) {
     tmp11 = first;
   }
-  state(executeStateUpdate[3])(null != tmp11, "CheckboxActionComponent must be a child of a Label component");
+  _modDef38(null != tmp11, "CheckboxActionComponent must be a child of a Label component");
   obj = {
     label: tmp11.label,
     description: tmp11.description,
@@ -52,7 +53,7 @@ const memoResult = importAllResult.memo((type) => {
       executeStateUpdate({ type, value });
     },
   };
-  return jsx(type(executeStateUpdate[5]).Checkbox, {
+  return jsx(Checkbox.Checkbox, {
     label: tmp11.label,
     description: tmp11.description,
     checked: memo,
@@ -61,8 +62,3 @@ const memoResult = importAllResult.memo((type) => {
     },
   });
 });
-const result = require("set").fileFinishedImporting(
-  "modules/interaction_components/native/actions/CheckboxActionComponent.tsx",
-);
-
-export default memoResult;

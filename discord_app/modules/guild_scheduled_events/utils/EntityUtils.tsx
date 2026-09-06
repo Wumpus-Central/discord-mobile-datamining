@@ -1,18 +1,19 @@
 // discord_app/modules/guild_scheduled_events/utils/EntityUtils.tsx
-import closure_0 from "../../../stores/ChannelStore.tsx";
-import GUILD_EVENT_MAX_NAME_LENGTH from "../GuildScheduledEventsConstants.tsx";
+import ChannelStore from "../../../stores/ChannelStore.tsx";
 
-({ GuildScheduledEventEntityTypes: closure_1, EntityChannelTypes: obj1 } = GUILD_EVENT_MAX_NAME_LENGTH);
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/utils/EntityUtils.tsx");
+const GuildScheduledEventsConstants = fn(1963);
+({ GuildScheduledEventEntityTypes: closure_1, EntityChannelTypes: c2 } = GuildScheduledEventsConstants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/utils/EntityUtils.tsx");
 
 export const getChannelFromEvent = function getChannelFromEvent(entity_type) {
-  let tmp2 = entity_type.entity_type in closure_2;
+  let tmp2 = entity_type.entity_type in React2;
   if (tmp2) {
     tmp2 = null != tmp;
   }
   let tmp4;
   if (tmp2) {
-    channel = channel.getChannel(entity_type.channel_id);
+    const channel = ChannelStore.getChannel(entity_type.channel_id);
     tmp4 = channel;
   }
   return tmp4;
@@ -49,7 +50,7 @@ export const getLocationFromEventData = function getLocationFromEventData(guildE
 };
 export const getChannelTypeFromEntity = function getChannelTypeFromEntity(entityType) {
   if (entityType === constants.VOICE) {
-    const tmp2 = table[entityType];
+    const tmp2 = React2[entityType];
   }
   return tmp2;
 };

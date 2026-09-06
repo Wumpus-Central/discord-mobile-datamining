@@ -1,13 +1,12 @@
 // discord_app/modules/activities/utils/confirmActivityLaunchChecks.tsx
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../stores/ChannelStore.tsx";
-import closure_5 from "../EmbeddedActivitiesStore.tsx";
-import { ApplicationFlags } from "../../../Constants.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import ChannelStore from "../../../stores/ChannelStore.tsx";
+import EmbeddedActivitiesStore from "../EmbeddedActivitiesStore.tsx";
 
-const require = arg1;
+const require = fn;
 function getOrFetchApplicationForLaunch() {
   const self = this;
-  const apply = _getOrFetchApplicationForLaunch.apply;
+  const apply = closure_8.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -15,670 +14,555 @@ function getOrFetchApplicationForLaunch() {
   }
   return applyArgumentsResult;
 }
-function _getOrFetchApplicationForLaunch() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c7 = 0;
-    c8 = 0;
-    c6 = 0;
-    const iter = (function* (arg0) {
-      if (c8 === 2) {
+let closure_8 = async function _getOrFetchApplicationForLaunch(arg0, value) {
+  if (c8 === 2) {
+    c8 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c8 = 2;
+      if (0 === c7) {
+        if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c8 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_4 = tmp3;
+          closure_3 = tmp7;
+          closure_131_0 = undefined;
+          closure_131_1 = undefined;
+          closure_131_2 = undefined;
+          ({ applicationId: closure_131_0, channelId: closure_131_1, guildId: closure_131_2 } = closure_0);
+          closure_131_3 = undefined;
+          c7 = 1;
+          c8 = 1;
+          return { value: "PX_16", done: true };
+        }
+      } else if (1 === tmp7) {
+        if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c8 = 3;
+          const obj1 = { value, done: true };
+          return obj1;
+        } else {
+          c6 = 1;
+          c7 = 3;
+          c8 = 1;
+          let obj2 = { value: closure_132_1(closure_132_2[4])(closure_131_0, closure_131_1), done: false };
+          return obj2;
+        }
+      } else if (2 === tmp7) {
+        c6 = 0;
+        closure_131_4 = closure_5;
+        if (null != closure_131_2) {
+          let PRIVATE_CHANNEL = closure_132_0(closure_132_2[5]).EmbeddedActivityLocationKind.GUILD_CHANNEL;
+        } else {
+          PRIVATE_CHANNEL = closure_132_0(closure_132_2[5]).EmbeddedActivityLocationKind.PRIVATE_CHANNEL;
+        }
+        closure_131_3 = PRIVATE_CHANNEL;
+        obj2 = closure_132_1(closure_132_2[6]);
+        const obj3 = {
+          type: "EMBEDDED_ACTIVITY_LAUNCH_FAIL",
+          nonce: "",
+          applicationId: closure_131_0,
+          channelId: null,
+          guildId: null,
+          error: null,
+          locationKind: null,
+        };
+        let channelId = closure_131_1;
+        if (closure_131_1 == null) {
+          channelId = null;
+        }
+        obj3.channelId = channelId;
+        let guildId = closure_131_2;
+        if (closure_131_2 == null) {
+          guildId = null;
+        }
+        obj3.guildId = guildId;
+        const aPIError = new closure_132_0(closure_132_2[7]).APIError(closure_131_4);
+        obj3.error = aPIError;
+        obj3.locationKind = closure_131_3;
+        obj2.dispatch(obj3);
         c8 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+        return { value: "HermesInternal", done: null };
+      } else if (arg0 === 1) {
+        c8 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 0;
+        c8 = 3;
+        const obj4 = { value, done: true };
+        return obj4;
       } else {
-        try {
-          c8 = 2;
-          if (0 === c7) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c8 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_4 = tmp3;
-              let PRIVATE_CHANNEL = tmp7;
-              let callback;
-              let callback2;
-              dependencyMap = undefined;
-              ({ applicationId: c0, channelId: c1, guildId: c2 } = callback);
-              PRIVATE_CHANNEL = undefined;
-              c7 = 1;
-              c8 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp7) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c8 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              c6 = 1;
-              c7 = 3;
-              c8 = 1;
-              let obj2 = { value: null, done: false };
-              obj2[0] = callback2(9537)(callback, callback2);
-              return obj2;
-            }
-          } else if (2 === tmp7) {
-            c6 = 0;
-            closure_4 = closure_5;
-            if (null != dependencyMap) {
-              PRIVATE_CHANNEL = callback(9525).EmbeddedActivityLocationKind.GUILD_CHANNEL;
-            } else {
-              PRIVATE_CHANNEL = callback(9525).EmbeddedActivityLocationKind.PRIVATE_CHANNEL;
-            }
-            obj2 = callback2(573);
-            const obj3 = {
-              type: "EMBEDDED_ACTIVITY_LAUNCH_FAIL",
-              nonce: "",
-              applicationId: null,
-              channelId: null,
-              guildId: null,
-              error: null,
-              locationKind: null,
-            };
-            obj3[2] = callback;
-            if (callback2 == null) {
-              callback2 = null;
-            }
-            obj3[3] = callback2;
-            if (dependencyMap == null) {
-              dependencyMap = null;
-            }
-            obj3[4] = dependencyMap;
-            const aPIError = new callback(4461).APIError(closure_4);
-            obj3[5] = aPIError;
-            obj3[6] = PRIVATE_CHANNEL;
-            obj2.dispatch(obj3);
-            c8 = 3;
-            return { value: "HermesInternal", done: null };
-          } else if (arg0 === 1) {
-            c8 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c6 = 0;
-            c8 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          } else {
-            c6 = 0;
-            c8 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp46) {
-          closure_5 = tmp46;
-          if (tmp4 === c6) {
-            c8 = tmp2;
-            throw tmp46;
-          } else {
-            c7 = tmp;
-          }
-        }
+        c6 = 0;
+        c8 = 3;
+        obj = { value, done: true };
+        return obj;
       }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_8 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp46) {
+      closure_5 = tmp46;
+      if (tmp4 === c6) {
+        c8 = tmp2;
+        throw tmp46;
+      } else {
+        c7 = tmp;
+      }
+    }
   }
-  return applyArgumentsResult;
-}
-function _confirmActivityChange() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c2 = 0;
-    c3 = 0;
-    const iter = (function* (arg0) {
-      if (c3 === 2) {
-        c3 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
+};
+let closure_9 = async function _confirmActivityChange(arg0, value) {
+  if (c3 === 2) {
+    c3 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c3 = 2;
+      if (0 === c2) {
         if (arg0 === 1) {
-          throw arg1;
+          c3 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c3 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          const shouldClosePopout = tmp2;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          ({
+            currentEmbeddedApplication: closure_129_0,
+            shouldClosePopoutOnLeaveCurrentEmbeddedApplication: closure_129_1,
+            onConfirmActivityLaunchChecksAlertOpen: closure_129_2,
+          } = closure_0);
+          c2 = 1;
+          c3 = 1;
+          return { value: "PX_16", done: true };
         }
       } else {
-        try {
-          c3 = 2;
-          if (0 === c2) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              c1 = tmp2;
-              c0 = undefined;
-              c1 = undefined;
-              c2 = undefined;
-              ({
-                currentEmbeddedApplication: c0,
-                shouldClosePopoutOnLeaveCurrentEmbeddedApplication: c1,
-                onConfirmActivityLaunchChecksAlertOpen: c2,
-              } = c0);
-              c2 = 1;
-              c3 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else {
-            if (1 === tmp5) {
-              if (arg0 === 1) {
-                c3 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c3 = 3;
-                obj1 = { value: null, done: true };
-                obj1[0] = arg1;
-                return obj1;
-              } else if (null != c0) {
-                const promise = new Promise((arg0) => {
-                  const _undefined = arg0;
-                  const selfEmbeddedActivities = closure_1_5.getSelfEmbeddedActivities();
-                  const value = selfEmbeddedActivities.get(_undefined.id);
-                  const _undefined2 = value;
-                  let _location;
-                  if (value != null) {
-                    _location = value.location;
-                  }
-                  const channel = closure_1_4.getChannel(
-                    _undefined(4189).getEmbeddedActivityLocationChannelId(_location),
-                  );
-                  if (null != value) {
-                    if (null != channel) {
-                      if (dependencyMap != null) {
-                        dependencyMap();
-                      }
-                      _undefined2(9540)(
-                        tmp,
-                        channel,
-                        () => {
-                          let obj = value(table[10])();
-                          obj = { location: value.location, applicationId: lib.id, shouldClosePopout: value };
-                          obj.leaveActivity(obj);
-                          lib(true);
-                        },
-                        () => lib(false),
-                      );
-                    }
-                  }
-                  arg0(true);
-                });
-                c2 = 2;
-                c3 = 1;
-                const obj2 = { value: null, done: false };
-                obj2[0] = promise;
-                return obj2;
-              }
-            } else if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else if (!arg1) {
-              c3 = 3;
-              return { value: false, done: true };
-            }
+        if (1 === tmp5) {
+          if (arg0 === 1) {
             c3 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            const obj1 = { value, done: true };
+            return obj1;
+          } else if (null != closure_129_0) {
+            const promise = new Promise((fn) => {
+              closure_0 = fn;
+              selfEmbeddedActivities = selfEmbeddedActivities.getSelfEmbeddedActivities();
+              value = selfEmbeddedActivities.get(closure_0.id);
+              let _location;
+              if (value != null) {
+                _location = value.location;
+              }
+              channel = channel.getChannel(closure_1_0(4189).getEmbeddedActivityLocationChannelId(_location));
+              if (null != value) {
+                if (null != channel) {
+                  if (dependencyMap != null) {
+                    dependencyMap();
+                  }
+                  shouldClosePopout(9540)(
+                    tmp,
+                    channel,
+                    () => {
+                      value(c2[10])();
+                      const obj = { location: value.location, applicationId: closure_2_0.id, shouldClosePopout };
+                      obj.leaveActivity(obj);
+                      closure_0(true);
+                    },
+                    () => closure_0(false),
+                  );
+                }
+              }
+              fn(true);
+            });
+            c2 = 2;
+            c3 = 1;
+            const obj2 = { value: promise, done: false };
+            return obj2;
+          }
+        } else if (arg0 === 1) {
+          c3 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else if (!value) {
+          c3 = 3;
+          return { value: false, done: true };
+        }
+        c3 = 3;
+        return { value: true, done: true };
+      }
+    } catch (tmp16) {
+      c3 = tmp;
+      throw tmp16;
+    }
+  }
+};
+let closure_10 = async function _confirmActivityAgeGate(arg0, value) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_4 = tmp5;
+          closure_3 = tmp2;
+          closure_131_0 = undefined;
+          closure_131_1 = undefined;
+          closure_131_2 = undefined;
+          closure_131_3 = undefined;
+          closure_131_4 = undefined;
+          ({
+            application: closure_131_0,
+            applicationId: closure_131_1,
+            channel: closure_131_2,
+            user: closure_131_3,
+            onConfirmActivityLaunchChecksAlertOpen: closure_131_4,
+          } = closure_0);
+          closure_131_5 = undefined;
+          c5 = 1;
+          c6 = 1;
+          return { value: "PX_16", done: true };
+        }
+      } else {
+        if (1 === tmp5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj1 = { value, done: true };
+            return obj1;
+          } else {
+            if (null == closure_131_3.nsfwAllowed) {
+              closure_1 = closure_131_0;
+              if (closure_131_0 == null) {
+                const obj2 = { applicationId: closure_131_1, channelId: null, guildId: null };
+                let id;
+                if (closure_131_2 != null) {
+                  id = closure_131_2.id;
+                }
+                obj2.channelId = id;
+                let obj4 = closure_131_2;
+                let guildId;
+                if (closure_131_2 != null) {
+                  guildId = obj4.getGuildId();
+                }
+                if (guildId == null) {
+                  guildId = undefined;
+                }
+                obj2.guildId = guildId;
+                c5 = 2;
+                c6 = 1;
+                const obj3 = { value: closure_132_7(obj2), done: false };
+                return obj3;
+              }
+            }
+            c6 = 3;
             return { value: true, done: true };
           }
-        } catch (tmp16) {
-          c3 = tmp;
-          throw tmp16;
-        }
-      }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_9 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _confirmActivityAgeGate() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c5 = 0;
-    c6 = 0;
-    const iter = (function* (arg0) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === obj) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              c4 = tmp5;
-              let nsfwAllowed = tmp2;
-              c0 = undefined;
-              closure_1 = undefined;
-              let id;
-              nsfwAllowed = undefined;
-              c4 = undefined;
-              ({
-                application: c0,
-                applicationId: closure_1,
-                channel: c2,
-                user: c3,
-                onConfirmActivityLaunchChecksAlertOpen: c4,
-              } = c0);
-              obj = undefined;
-              obj = 1;
-              c6 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else {
-            if (1 === tmp5) {
-              if (arg0 === 1) {
-                c6 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c6 = 3;
-                obj1 = { value: null, done: true };
-                obj1[0] = arg1;
-                return obj1;
-              } else {
-                if (null == nsfwAllowed.nsfwAllowed) {
-                  closure_1 = c0;
-                  if (c0 == null) {
-                    const obj2 = { applicationId: null, channelId: null, guildId: null };
-                    obj2[0] = closure_1;
-                    id = undefined;
-                    if (id != null) {
-                      id = id.id;
-                    }
-                    obj2[1] = id;
-                    let obj4 = id;
-                    let guildId;
-                    if (id != null) {
-                      guildId = obj4.getGuildId();
-                    }
-                    id = guildId;
-                    if (guildId == null) {
-                      id = undefined;
-                    }
-                    obj2[2] = id;
-                    obj = 2;
-                    c6 = 1;
-                    const obj3 = { value: null, done: false };
-                    obj3[0] = closure_7(obj2);
-                    return obj3;
-                  }
-                }
-                c6 = 3;
-                return { value: true, done: true };
-              }
-            } else if (2 === tmp5) {
-              if (arg0 === 1) {
-                c6 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c6 = 3;
-                obj4 = { value: null, done: true };
-                obj4[0] = arg1;
-                return obj4;
-              } else {
-                closure_1 = arg1;
-              }
-            } else if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else if (!arg1) {
-              c6 = 3;
-              return { value: false, done: true };
-            }
-            obj = closure_1;
-            if (null == obj) {
-              c6 = 3;
-              return { value: false, done: true };
-            } else {
-              const embeddedActivityConfig = obj.embeddedActivityConfig;
-              let requires_age_gate;
-              if (embeddedActivityConfig != null) {
-                requires_age_gate = embeddedActivityConfig.requires_age_gate;
-              }
-              if (requires_age_gate != null) {
-                if (requires_age_gate) {
-                  const promise = new Promise((arg0) => {
-                    closure_0 = arg0;
-                    if (c4 != null) {
-                      tmp();
-                    }
-                    let obj = _undefined(_undefined2[11]);
-                    obj = { application: c5, channelId: null, onAgree: null, onDisagree: null };
-                    let id;
-                    if (_undefined2 != null) {
-                      id = _undefined2.id;
-                    }
-                    obj[1] = id;
-                    obj[2] = function onAgree() {
-                      return callback(true);
-                    };
-                    obj[3] = function onDisagree() {
-                      return callback(false);
-                    };
-                    const result = obj.confirmActivityAgeGateAlert(obj);
-                  });
-                  obj = 3;
-                  c6 = 1;
-                  const obj5 = { value: null, done: false };
-                  obj5[0] = promise;
-                  return obj5;
-                }
-              }
-            }
-          }
-        } catch (tmp28) {
-          c6 = tmp;
-          throw tmp28;
-        }
-      }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_10 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _confirmExternalAppLaunch() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c5 = 0;
-    c6 = 0;
-    const iter = (function* (arg0) {
-      if (constants === 2) {
-        constants = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          constants = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              constants = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              constants = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let isVerified = tmp5;
-              c3 = tmp2;
-              let callback;
-              closure_1 = undefined;
-              let id;
-              c3 = undefined;
-              ({
-                application: c0,
-                applicationId: closure_1,
-                channel: c2,
-                onConfirmActivityLaunchChecksAlertOpen: c3,
-              } = callback);
-              isVerified = undefined;
-              c5 = 1;
-              constants = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else {
-            if (1 === tmp5) {
-              if (arg0 === 1) {
-                constants = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                constants = 3;
-                obj1 = { value: null, done: true };
-                obj1[0] = arg1;
-                return obj1;
-              } else {
-                closure_1 = callback;
-                if (callback == null) {
-                  const obj2 = { applicationId: null, channelId: null, guildId: null };
-                  obj2[0] = closure_1;
-                  id = undefined;
-                  if (id != null) {
-                    id = id.id;
-                  }
-                  obj2[1] = id;
-                  let obj4 = id;
-                  let guildId;
-                  if (id != null) {
-                    guildId = obj4.getGuildId();
-                  }
-                  id = guildId;
-                  if (guildId == null) {
-                    id = undefined;
-                  }
-                  obj2[2] = id;
-                  c5 = 2;
-                  constants = 1;
-                  const obj3 = { value: null, done: false };
-                  obj3[0] = closure_7(obj2);
-                  return obj3;
-                }
-              }
-            } else if (arg0 === 1) {
-              constants = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              constants = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_1 = arg1;
-            }
-            isVerified = closure_1;
-            let tmp10 = null != isVerified;
-            if (tmp10) {
-              obj1 = callback(id[12]);
-              const hasApplicationFlagResult = obj1.hasApplicationFlag(isVerified, constants.EMBEDDED_RELEASED);
-              let tmp18 = !hasApplicationFlagResult;
-              if (!hasApplicationFlagResult) {
-                tmp18 = !isVerified.isVerified;
-              }
-              let tmp21 = !tmp18;
-              if (tmp18) {
-                let result = c5.hasActivityEverBeenLaunched(closure_1);
-                if (!result) {
-                  result = new Promise((arg0) => {
-                    closure_0 = arg0;
-                    if (c3 != null) {
-                      tmp();
-                    }
-                    let obj = _undefined(_undefined2[13]);
-                    obj = {
-                      application: closure_4,
-                      onConfirm() {
-                        return callback(true);
-                      },
-                      onCancel() {
-                        return callback(false);
-                      },
-                    };
-                    const result = obj.confirmExternalAppLaunchAlert(obj);
-                  });
-                }
-                tmp21 = result;
-              }
-              tmp10 = tmp21;
-            }
-            constants = 3;
-            obj4 = { value: null, done: true };
-            obj4[0] = tmp10;
+        } else if (2 === tmp5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            obj4 = { value, done: true };
             return obj4;
+          } else {
+            closure_1 = value;
           }
-        } catch (tmp40) {
-          constants = tmp;
-          throw tmp40;
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else if (!value) {
+          c6 = 3;
+          return { value: false, done: true };
+        }
+        closure_131_5 = closure_1;
+        if (null == closure_131_5) {
+          c6 = 3;
+          return { value: false, done: true };
+        } else {
+          const embeddedActivityConfig = closure_131_5.embeddedActivityConfig;
+          let requires_age_gate;
+          if (embeddedActivityConfig != null) {
+            requires_age_gate = embeddedActivityConfig.requires_age_gate;
+          }
+          if (requires_age_gate != null) {
+            if (requires_age_gate) {
+              const promise = new Promise((arg0) => {
+                closure_0 = arg0;
+                if (closure_1_4 != null) {
+                  tmp();
+                }
+                closure_0(id[11]);
+                const obj = { application, channelId: null, onAgree: null, onDisagree: null };
+                id = undefined;
+                if (id != null) {
+                  id = id.id;
+                }
+                obj.channelId = id;
+                obj.onAgree = function onAgree() {
+                  return closure_0(true);
+                };
+                obj.onDisagree = function onDisagree() {
+                  return closure_0(false);
+                };
+                const result = obj.confirmActivityAgeGateAlert(obj);
+              });
+              c5 = 3;
+              c6 = 1;
+              const obj5 = { value: promise, done: false };
+              return obj5;
+            }
+          }
         }
       }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_11 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp28) {
+      c6 = tmp;
+      throw tmp28;
+    }
   }
-  return applyArgumentsResult;
-}
-function _confirmActivityLaunchChecks() {
-  let self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c2 = 0;
-    c3 = 0;
-    return (function* (arg0) {
-      c1 = tmp2;
-      ({
-        currentEmbeddedApplication: obj7[0],
-        shouldClosePopoutOnLeaveCurrentEmbeddedApplication: obj7[1],
-        onConfirmActivityLaunchChecksAlertOpen: obj7[2],
-      } = closure_0);
-      closure_1 = yield (function confirmActivityChange(arg0) {
-        const self = this;
-        const apply = closure_9.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
-      })({
-        currentEmbeddedApplication: null,
-        shouldClosePopoutOnLeaveCurrentEmbeddedApplication: null,
-        onConfirmActivityLaunchChecksAlertOpen: null,
-      });
-      if (!closure_1) {
-        return false;
-      }
-      c2 = yield (function confirmActivityAgeGate(closure_0) {
-        const self = this;
-        const apply = closure_10.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
-      })(closure_0);
-      if (!c2) {
-        return false;
-      }
-      c3 = yield (function confirmExternalAppLaunch(closure_0) {
-        const self = this;
-        const apply = closure_11.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
-      })(closure_0);
-      return c3;
-    })();
-  });
-  closure_12 = tmp;
-  let apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+};
+let closure_11 = async function _confirmExternalAppLaunch(arg0, value) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
   } else {
-    applyArgumentsResult = apply(self, arguments);
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          const application = tmp5;
+          closure_3 = tmp2;
+          closure_131_0 = undefined;
+          closure_131_1 = undefined;
+          closure_131_2 = undefined;
+          closure_131_3 = undefined;
+          ({
+            application: closure_131_0,
+            applicationId: closure_131_1,
+            channel: closure_131_2,
+            onConfirmActivityLaunchChecksAlertOpen: closure_131_3,
+          } = closure_0);
+          closure_131_4 = undefined;
+          c5 = 1;
+          c6 = 1;
+          return { value: "PX_16", done: true };
+        }
+      } else {
+        if (1 === tmp5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            let obj1 = { value, done: true };
+            return obj1;
+          } else {
+            closure_1 = closure_131_0;
+            if (closure_131_0 == null) {
+              const obj2 = { applicationId: closure_131_1, channelId: null, guildId: null };
+              let id;
+              if (closure_131_2 != null) {
+                id = closure_131_2.id;
+              }
+              obj2.channelId = id;
+              let obj4 = closure_131_2;
+              let guildId;
+              if (closure_131_2 != null) {
+                guildId = obj4.getGuildId();
+              }
+              if (guildId == null) {
+                guildId = undefined;
+              }
+              obj2.guildId = guildId;
+              c5 = 2;
+              c6 = 1;
+              const obj3 = { value: closure_132_7(obj2), done: false };
+              return obj3;
+            }
+          }
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_1 = value;
+        }
+        closure_131_4 = closure_1;
+        let tmp10 = null != closure_131_4;
+        if (tmp10) {
+          obj1 = closure_132_0(closure_132_2[12]);
+          const hasApplicationFlagResult = obj1.hasApplicationFlag(closure_131_4, closure_132_6.EMBEDDED_RELEASED);
+          let tmp18 = !hasApplicationFlagResult;
+          if (!hasApplicationFlagResult) {
+            tmp18 = !closure_131_4.isVerified;
+          }
+          let tmp21 = !tmp18;
+          if (tmp18) {
+            let result = closure_132_5.hasActivityEverBeenLaunched(closure_131_1);
+            if (!result) {
+              result = new Promise((arg0) => {
+                closure_0 = arg0;
+                if (closure_1_3 != null) {
+                  tmp();
+                }
+                closure_0(c2[13]);
+                const obj = {
+                  application,
+                  onConfirm() {
+                    return closure_0(true);
+                  },
+                  onCancel() {
+                    return closure_0(false);
+                  },
+                };
+                const result = obj.confirmExternalAppLaunchAlert(obj);
+              });
+            }
+            tmp21 = result;
+          }
+          tmp10 = tmp21;
+        }
+        c6 = 3;
+        obj4 = { value: tmp10, done: true };
+        return obj4;
+      }
+    } catch (tmp40) {
+      c6 = tmp;
+      throw tmp40;
+    }
   }
-  return applyArgumentsResult;
-}
-let result = require("set").fileFinishedImporting("modules/activities/utils/confirmActivityLaunchChecks.tsx");
+};
+let closure_12 = async function _confirmActivityLaunchChecks() {
+  closure_1 = tmp2;
+  closure_129_0 = closure_0;
+  ({
+    currentEmbeddedApplication: obj7.currentEmbeddedApplication,
+    shouldClosePopoutOnLeaveCurrentEmbeddedApplication: obj7.shouldClosePopoutOnLeaveCurrentEmbeddedApplication,
+    onConfirmActivityLaunchChecksAlertOpen: obj7.onConfirmActivityLaunchChecksAlertOpen,
+  } = closure_0);
+  closure_129_1 = await (function confirmActivityChange() {
+    const self = this;
+    const apply = closure_1_9.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
+  })({
+    currentEmbeddedApplication: null,
+    shouldClosePopoutOnLeaveCurrentEmbeddedApplication: null,
+    onConfirmActivityLaunchChecksAlertOpen: null,
+  });
+  if (!closure_129_1) {
+    return false;
+  }
+  closure_129_2 = await (function confirmActivityAgeGate() {
+    const self = this;
+    const apply = closure_1_10.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
+  })(closure_129_0);
+  if (!closure_129_2) {
+    return false;
+  }
+  closure_129_3 = await (function confirmExternalAppLaunch() {
+    const self = this;
+    const apply = closure_1_11.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
+  })(closure_129_0);
+  return closure_129_3;
+};
+const ApplicationFlags = fn(1074).ApplicationFlags;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/activities/utils/confirmActivityLaunchChecks.tsx");
 
-export const confirmActivityLaunchChecks = function confirmActivityLaunchChecks(arg0) {
+export const confirmActivityLaunchChecks = function confirmActivityLaunchChecks() {
   const self = this;
-  const apply = _confirmActivityLaunchChecks.apply;
+  const apply = closure_12.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

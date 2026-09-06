@@ -1,22 +1,22 @@
 // discord_app/modules/guild_tag/native/badges/GuildBadgeSpider.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
 import inlineStyles from "../../../../../_runtime/08453_inlineStyles.js";
-import getTransformedBadgeColors from "GuildBadgeUtils.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import GuildBadgeUtils from "GuildBadgeUtils.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-({ jsx: obj1, jsxs: c3 } = jsxProd);
-let closure_4 = ["#950123", "#DA1846"];
-let closure_5 = [0.2, 0.45];
+require = fn;
+const jsxProd = fn(21);
+({ jsx: c2, jsxs: c3 } = jsxProd);
+const primaryBaseColors = ["#950123", "#DA1846"];
+const primaryTintLuminances = [0.2, 0.45];
 let items = [
   { base: 5, tint: 1 },
   { base: 3, tint: 1 },
 ];
-let closure_7 = ["#1F1F1F"];
-let closure_8 = [0.15];
+const secondaryBaseColors = ["#1F1F1F"];
+const secondaryTintLuminances = [0.15];
 const items1 = [{ base: 5, tint: 1 }];
-const result = require("set").fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgeSpider.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgeSpider.tsx");
 
 export const GuildBadgeSpider = function GuildBadgeSpider(width) {
   let num = width.width;
@@ -28,16 +28,18 @@ export const GuildBadgeSpider = function GuildBadgeSpider(width) {
     num2 = 24;
   }
   ({ primaryTintColor, secondaryTintColor } = width);
-  const merged = Object.assign(width, Object.create(null));
-  let obj = getTransformedBadgeColors;
-  obj = {
-    primaryBaseColors: closure_4,
+  const merged = Object.assign(
+    width,
+    Object.assign({ width: 0, height: 0, primaryTintColor: 0, secondaryTintColor: 0 }),
+  );
+  let obj = {
+    primaryBaseColors,
     primaryTintColor,
-    primaryTintLuminances: closure_5,
+    primaryTintLuminances,
     primaryLuminanceWeights: items,
-    secondaryBaseColors: closure_7,
+    secondaryBaseColors,
     secondaryTintColor,
-    secondaryTintLuminances: closure_8,
+    secondaryTintLuminances,
     secondaryLuminanceWeights: items1,
   };
   const transformedBadgeColors = obj.getTransformedBadgeColors(obj);
@@ -49,7 +51,7 @@ export const GuildBadgeSpider = function GuildBadgeSpider(width) {
   obj.viewBox = "0 0 16 16";
   obj.fill = "none";
   items = [
-    callback(inlineStyles.Path, {
+    React2(inlineStyles.Path, {
       d: "M7 11h-1v-1h1v1ZM10 11h-1v-1h1v1ZM9 10h-2v-1h2v1ZM10 5h-1v1h-2v-1h-1v-2h4v2Z",
       fill: primaryColorsTransformed[1],
     }),
@@ -65,24 +67,24 @@ export const GuildBadgeSpider = function GuildBadgeSpider(width) {
   if (str == null) {
     str = "#1F1F1F";
   }
-  items[1] = callback(inlineStyles.Path, {
+  items[1] = React2(inlineStyles.Path, {
     d: "M9 12h-2v-2h2v2ZM6 6h1v1h2v-1h1v-1h1v3h-1v1h-1v-1h-2v1h-1v-1h-1V5h1v1Z",
     fill: str,
   });
-  items[2] = callback(inlineStyles.Path, {
+  items[2] = React2(inlineStyles.Path, {
     d: "M9 13v1h-2v-1h2ZM7 12h-1v-1h1v1ZM10 12h-1v-1h1v1ZM9 7h-2v-1h2v1ZM7 6h-1v-1h1v1ZM10 6h-1v-1h1v1ZM6 5h-1v-1h1v1ZM11 5h-1v-1h1v1Z",
     fill: primaryColorsTransformed[0],
   });
-  items[3] = callback(inlineStyles.Path, { d: "M7 14h-1v-1h1v1ZM10 14h-1v-1h1v1Z", fill: "#35ED7E" });
-  items[4] = callback(inlineStyles.Path, {
+  items[3] = React2(inlineStyles.Path, { d: "M7 14h-1v-1h1v1ZM10 14h-1v-1h1v1Z", fill: "#35ED7E" });
+  items[4] = React2(inlineStyles.Path, {
     d: "M3 7h1V4h1v4h1v1h1v1h-1v2h4v-2h-1v-1h1v-1h1V4h1v3h1V3h1v1h1v3h-1v1h-1v1h-1v1h-1v1h1v-1h2v-1h2v1h-1v1h-1v1h-2v1h2v1h1v1h1v1h-2v-1h-2v-1h-2v-1H6v1h-2v1H2v1H0v-1h1v-1h1v-1h2v-1H2v-1H1v-1H0v-1h2v1h2v-1h-1v-1H2v-1H1V4h1v-1h1v4Zm1 4h1v-1h-1v1Z",
     fill: "black",
     fillRule: "evenodd",
   });
-  items[5] = callback(inlineStyles.Path, {
+  items[5] = React2(inlineStyles.Path, {
     d: "M10 16h-1v-1h-2v1h-1v-2h4v2ZM9 9h-2v-1h2v1ZM6 4h-1v-1h1v1ZM11 4h-1v-1h1v1ZM4 3h-1V2h1v1ZM9 2h1v1H6V2h2V0h1v2ZM13 3h-1V2h1v1Z",
     fill: "black",
   });
   obj.children = items;
-  return closure_3(inlineStyles.Svg, obj);
+  return React3(inlineStyles.Svg, obj);
 };

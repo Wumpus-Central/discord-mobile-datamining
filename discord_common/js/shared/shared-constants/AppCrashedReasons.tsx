@@ -1,10 +1,8 @@
 // discord_common/js/shared/shared-constants/AppCrashedReasons.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const obj = { ALL: null };
-let set = new Set(["socket_crashed", "unhandled_js_error", "unhandled_native_error"]);
-obj[0] = set;
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/AppCrashedReasons.tsx");
+const obj = { ALL: new Set(["socket_crashed", "unhandled_js_error", "unhandled_native_error"]) };
+const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/AppCrashedReasons.tsx");
 
 export const AppCrashedReasons = {
   UNHANDLED_NATIVE_ERROR: "unhandled_native_error",

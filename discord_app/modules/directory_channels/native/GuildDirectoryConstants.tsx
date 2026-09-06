@@ -1,7 +1,7 @@
 // discord_app/modules/directory_channels/native/GuildDirectoryConstants.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/directory_channels/native/GuildDirectoryConstants.tsx");
+const result = size.fileFinishedImporting("modules/directory_channels/native/GuildDirectoryConstants.tsx");
 
 export const GuildDirectoryCreate = {
   CREATE_OR_ADD: "CREATE_OR_ADD",

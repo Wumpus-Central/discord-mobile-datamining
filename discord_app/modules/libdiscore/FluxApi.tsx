@@ -1,11 +1,11 @@
 // discord_app/modules/libdiscore/FluxApi.tsx
-import set from "../../../_runtime/00002_set.js";
-import isBlockedDomain from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
+import shim from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-isBlockedDomain = isBlockedDomain.getFluxApi();
-const result = set.fileFinishedImporting("modules/libdiscore/FluxApi.tsx");
+shim = shim.getFluxApi();
+const result = size.fileFinishedImporting("modules/libdiscore/FluxApi.tsx");
 
-export const FLUX_API = isBlockedDomain;
+export const FLUX_API = shim;
 export const hasFluxApi = function hasFluxApi() {
-  return null != isBlockedDomain;
+  return null != shim;
 };

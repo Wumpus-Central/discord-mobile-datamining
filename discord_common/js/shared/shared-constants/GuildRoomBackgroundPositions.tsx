@@ -1,6 +1,7 @@
 // discord_common/js/shared/shared-constants/GuildRoomBackgroundPositions.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
+const obj = { 0: null, 1: null };
 const items = [
   { x: 13.6, y: 56.8 },
   { x: 27.5, y: 50.5 },
@@ -25,6 +26,7 @@ const items = [
   { x: 60, y: 7 },
   { x: 36, y: 53.8 },
 ];
+obj[0] = items;
 const items1 = [
   { x: 12, y: 47.8 },
   { x: 24.5, y: 43 },
@@ -49,8 +51,9 @@ const items1 = [
   { x: 33, y: 9 },
   { x: 84, y: 31 },
 ];
-const result = set.fileFinishedImporting(
+obj[1] = items1;
+const result = size.fileFinishedImporting(
   "../discord_common/js/shared/shared-constants/GuildRoomBackgroundPositions.tsx",
 );
 
-export const GUILD_ROOM_BACKGROUND_POSITIONS = { 0: items, 1: items1 };
+export const GUILD_ROOM_BACKGROUND_POSITIONS = obj;

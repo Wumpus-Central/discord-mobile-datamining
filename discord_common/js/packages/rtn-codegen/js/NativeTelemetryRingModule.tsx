@@ -1,9 +1,9 @@
 // discord_common/js/packages/rtn-codegen/js/NativeTelemetryRingModule.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import _mod17 from "../../../../../_runtime/metro/00017__.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const TurboModuleRegistry = get_ActivityIndicator.TurboModuleRegistry;
+const TurboModuleRegistry = _mod17.TurboModuleRegistry;
 const enforcing = TurboModuleRegistry.getEnforcing("NativeTelemetryRingModule");
-const result = set.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NativeTelemetryRingModule.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NativeTelemetryRingModule.tsx");
 
 export default enforcing;

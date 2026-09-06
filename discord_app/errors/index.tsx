@@ -1,23 +1,24 @@
 // discord_app/errors/index.tsx
-import set from "../../_runtime/00002_set.js";
-import setDefault from "BillingError.tsx";
-import prototypeDefault from "V6OrEarlierAPIError.tsx";
-import prototypeDefault2 from "APIError.tsx";
-import prototypeDefault3 from "StripeError.tsx";
-import displayMessageDefault from "NativeDispatchError.tsx";
-import _getMessageFromRateLimitDefault from "AppliedGuildBoostError.tsx";
-import prototypeDefault4 from "ClientOutdatedAcceptGiftError.tsx";
-import displayMessage from "UploadVoiceDebugLogsError.tsx";
-import displayMessageDefault2 from "UploadVoiceDebugLogsError.tsx";
+import BillingErrorDefault from "BillingError.tsx";
+import errors_V6OrEarlierAPIErrorDefault from "V6OrEarlierAPIError.tsx";
+import APIErrorDefault from "APIError.tsx";
+import StripeErrorDefault from "StripeError.tsx";
+import NativeDispatchErrorDefault from "NativeDispatchError.tsx";
+import AppliedGuildBoostErrorDefault from "AppliedGuildBoostError.tsx";
+import ClientOutdatedAcceptGiftErrorDefault from "ClientOutdatedAcceptGiftError.tsx";
+import UploadVoiceDebugLogsError from "UploadVoiceDebugLogsError.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("errors/index.tsx");
+const UploadVoiceDebugLogsErrorDefault = UploadVoiceDebugLogsError;
 
-export const V6OrEarlierAPIError = prototypeDefault;
-export const APIError = prototypeDefault2;
-export const BillingError = setDefault;
-export const StripeError = prototypeDefault3;
-export const NativeDispatchError = displayMessageDefault;
-export const AppliedGuildBoostError = _getMessageFromRateLimitDefault;
-export const ClientOutdatedAcceptGiftError = prototypeDefault4;
-export const UploadVoiceDebugLogsError = displayMessageDefault2;
-export const UploadErrorCodes = displayMessage.UploadErrorCodes;
+const result = size.fileFinishedImporting("errors/index.tsx");
+
+export const V6OrEarlierAPIError = errors_V6OrEarlierAPIErrorDefault;
+export const APIError = APIErrorDefault;
+export const BillingError = BillingErrorDefault;
+export const StripeError = StripeErrorDefault;
+export const NativeDispatchError = NativeDispatchErrorDefault;
+export const AppliedGuildBoostError = AppliedGuildBoostErrorDefault;
+export const ClientOutdatedAcceptGiftError = ClientOutdatedAcceptGiftErrorDefault;
+export const UploadVoiceDebugLogsError = UploadVoiceDebugLogsErrorDefault;
+export const UploadErrorCodes = UploadVoiceDebugLogsError.UploadErrorCodes;

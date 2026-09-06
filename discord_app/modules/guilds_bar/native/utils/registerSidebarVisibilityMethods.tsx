@@ -1,26 +1,27 @@
 // discord_app/modules/guilds_bar/native/utils/registerSidebarVisibilityMethods.tsx
-import set2 from "../../../../../_runtime/00002_set.js";
-import insertUnsortedGuilds from "../../../../stores/SortedGuildStore.tsx";
+import SortedGuildStore2 from "../../../../stores/SortedGuildStore.tsx";
 import SidebarVisibilityMethodStore from "../../../guild_sidebar/SidebarVisibilityMethodStore.tsx";
-import closure_2 from "../../../../stores/GuildStore.tsx";
-import closure_3 from "../../../../stores/SortedGuildStore.tsx";
+import GuildStore from "../../../../stores/GuildStore.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-({ setGetVisibleChannelIds: c0, setGetVisibleGuildIds: closure_1 } = SidebarVisibilityMethodStore);
-const GuildsNodeType = insertUnsortedGuilds.GuildsNodeType;
-const result = set2.fileFinishedImporting("modules/guilds_bar/native/utils/registerSidebarVisibilityMethods.tsx");
+const SortedGuildStore = SortedGuildStore2;
 
-export const registerGuildVisibilityMethod = function registerGuildVisibilityMethod(listProps) {
-  const current = listProps.current;
+({ setGetVisibleChannelIds: closure_0, setGetVisibleGuildIds: closure_1 } = SidebarVisibilityMethodStore);
+const GuildsNodeType = SortedGuildStore2.GuildsNodeType;
+const result = size.fileFinishedImporting("modules/guilds_bar/native/utils/registerSidebarVisibilityMethods.tsx");
+
+export const registerGuildVisibilityMethod = function registerGuildVisibilityMethod(fastListRef) {
+  const current = fastListRef.current;
   if (null != current) {
-    callback2(() => {
-      if (null == scrollPosition) {
+    closure_1(() => {
+      if (null == current) {
         return [];
       } else {
         const items = obj.getItems();
-        scrollPosition = obj.getScrollPosition();
+        const scrollPosition = obj.getScrollPosition();
         const containerSize = obj.containerSize;
-        const guilds = closure_1_2.getGuilds();
-        const guildsTree = closure_1_3.getGuildsTree();
+        const guilds = GuildStore.getGuilds();
+        const node = SortedGuildStore.getGuildsTree();
         const _Set = Set;
         const set = new Set();
         let item = items.forEach((recyclerKey) => {
@@ -32,16 +33,16 @@ export const registerGuildVisibilityMethod = function registerGuildVisibilityMet
               tmp2 = layoutStart <= tmp + containerSize;
             }
             if (tmp2) {
-              if (forEach.type === set.FOLDER) {
+              if (forEach.type === constants.FOLDER) {
                 let children = forEach.children;
               } else {
                 children = [forEach];
               }
               forEach = children.forEach;
               const item = forEach((type) => {
-                let tmp = type.type === closure_1_4.GUILD;
+                let tmp = type.type === set.GUILD;
                 if (tmp) {
-                  tmp = type.id in closure_2;
+                  tmp = type.id in closure_1_2;
                 }
                 if (tmp) {
                   set.add(type.id);
@@ -60,15 +61,15 @@ export const registerFastListChannelVisibilityMethod = function registerFastList
   ref,
   guildChannels,
 ) {
-  const callback = guildChannels;
+  closure_0 = guildChannels;
   const current = ref.current;
   if (null != current) {
-    callback(() => {
+    React(() => {
       if (null == containerSize) {
         return [];
       } else {
         const items = obj.getItems();
-        const scrollPosition = obj.getScrollPosition();
+        let channelFromSectionRow = obj.getScrollPosition();
         containerSize = obj.containerSize;
         const items1 = [];
         const item = items.forEach((section) => {

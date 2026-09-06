@@ -1,13 +1,13 @@
 // discord_app/polyfillsNative.tsx
-import set from "../_runtime/00002_set.js";
 import q from "../_runtime/01238_q.js";
 import Buffer from "../_runtime/01253_Buffer.js";
-import _isNativeReflectConstruct from "../_runtime/14388__isNativeReflectConstruct.js";
-import timestamp from "modules/debug/Logger.tsx";
+import _mod14388 from "../_runtime/metro/14388__.js";
+import Logger from "modules/debug/Logger.tsx";
 import 14294__ from "../_runtime/metro/14294__.js";
-import get_ActivityIndicator from "../_runtime/14364_get_ActivityIndicator.js";
-import _typeof from "../_runtime/metro/14382__typeof.js";
-import GetOption from "../_runtime/14385_GetOption.js";
+import get_ActivityIndicator from "../_runtime/metro/14364__.js";
+import _typeof from "../_runtime/metro/14382__.js";
+import GetOption from "../_runtime/metro/14385__.js";
+import size from "../_runtime/metro/00002__.js";
 
 if (typeof process === "undefined") {
   const _window3 = window;
@@ -21,7 +21,7 @@ if (!global.self) {
   global.self = global;
 }
 if (null == window.crypto) {
-  const _module5 = _isNativeReflectConstruct;
+  const _module5 = _mod14388;
   const _window = window;
   window.crypto = global.crypto;
 }
@@ -46,4 +46,4 @@ if (tmp7) {
 if (!tmp7) {
   const _module6 = q;
 }
-const result = set.fileFinishedImporting("polyfillsNative.tsx");
+const result = size.fileFinishedImporting("polyfillsNative.tsx");

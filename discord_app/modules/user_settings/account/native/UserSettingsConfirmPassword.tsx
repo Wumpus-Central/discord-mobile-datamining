@@ -1,22 +1,22 @@
 // discord_app/modules/user_settings/account/native/UserSettingsConfirmPassword.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef6605 from "../../../../design/void/Form/native/FreeFormInputGroup.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import FreeFormInputGroupDefault from "../../../../design/void/Form/native/FreeFormInputGroup.tsx";
 import useSettingNavigationRoute from "../../core/native/useSettingNavigationRoute.tsx";
-import handleOpenEmailVerificationDefault from "UserSettingsAccountUnverifiedHeader.tsx";
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_8 from "../../../../stores/UserStore.tsx";
-import { UserSettingsSections } from "../../../../Constants.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import UserSettingsUtils from "../../../../utils/UserSettingsUtils.tsx";
+import UserSettingsAccountUnverifiedHeaderDefault from "UserSettingsAccountUnverifiedHeader.tsx";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import UserStore from "../../../../stores/UserStore.tsx";
 
-require = arg1;
-let c5 = importAllResult;
-({ View: closure_6, ScrollView: error } = get_ActivityIndicator);
-({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
+const UserSettingsSections = fn(1074).UserSettingsSections;
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+fn(4560);
 let obj = {
   background: null,
   container: null,
@@ -27,18 +27,18 @@ let obj = {
   button: null,
   hint: null,
 };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-obj[0] = obj;
-obj[1] = { paddingVertical: 12, paddingHorizontal: 16 };
-obj[2] = { textAlign: "center" };
-obj[3] = { marginTop: 8, lineHeight: 18, textAlign: "center" };
-obj[4] = { marginTop: 24 };
-createCacheKey = { borderRadius: ThemesDefault.radii.lg };
-obj[5] = createCacheKey;
-obj[6] = { marginTop: 16 };
-obj[7] = { color: ThemesDefault.unsafe_rawColors.RED_400 };
-let closure_12 = createCacheKey.createStyles(obj);
-const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
+obj = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj.background = obj;
+obj.container = { paddingVertical: 12, paddingHorizontal: 16 };
+obj.title = { textAlign: "center" };
+obj.prompt = { marginTop: 8, lineHeight: 18, textAlign: "center" };
+obj.input = { marginTop: 24 };
+const createStyles = { borderRadius: nativeDefault.radii.lg };
+obj.redesignInput = createStyles;
+obj.button = { marginTop: 16 };
+obj.hint = { color: nativeDefault.unsafe_rawColors.RED_400 };
+let closure_12 = createStyles.createStyles(obj);
+const forwardRefResult = noop.forwardRef((arg0, ref) => {
   ({ onSubmit: require, onSuccess: importDefault, onError: dependencyMap, parentLoading } = arg0);
   if (parentLoading === undefined) {
     parentLoading = false;
@@ -48,158 +48,139 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
     hideUnverifiedBanner = false;
   }
   c3 = undefined;
-  let first;
-  function _handleSubmit() {
-    const self = this;
-    const tmp = _undefined(function* () {
-      if (v02 === 2) {
-        v02 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp7 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+  value = undefined;
+  noop = undefined;
+  closure_6 = async function _handleSubmit(arg0, value) {
+    if (c5 === 2) {
+      c5 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp7 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          v02 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              v02 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              v02 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c5 = 2;
+        if (0 === c4) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_0 = tmp8;
+            closure_128_0 = undefined;
+            asyncGeneratorStep(true);
+            c3 = 2;
+            c4 = 3;
+            c5 = 1;
+            const obj1 = { value: _require(_slicedToArray), done: false };
+            return obj1;
+          }
+        } else if (1 === tmp8) {
+          c3 = 0;
+          closure_129_3(false);
+          throw tmp75;
+        } else {
+          if (2 === tmp8) {
+            c3 = 1;
+            closure_128_1 = tmp75;
+            let obj3 = tmp4(tmp75[13]);
+            obj3.captureException(closure_128_1);
+            const intl = closure_0(tmp75[14]).intl;
+            if (closure_128_1.message !== intl.string(closure_0(tmp75[14]).t.N2yb9a)) {
+              const v6OrEarlierAPIError = new closure_0(tmp75[12]).V6OrEarlierAPIError(closure_128_1);
+              closure_129_5(v6OrEarlierAPIError);
+            }
+            if (closure_129_2 != null) {
+              closure_129_2();
+            }
+          } else if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 0;
+            closure_129_3(false);
+            c5 = 3;
+            const obj2 = { value, done: true };
+            return obj2;
+          } else {
+            closure_128_0 = value;
+            if (null == closure_128_0) {
+              if (closure_129_2 != null) {
+                closure_129_2();
+              }
+              c3 = 0;
+              closure_129_3(false);
+              c5 = 3;
+              obj3 = { value: undefined, done: true };
+              return obj3;
+            } else {
+              if (closure_128_0.status < 400) {
+                closure_129_1();
+                c3 = 1;
+              }
+              const v6OrEarlierAPIError1 = new closure_0(tmp75[12]).V6OrEarlierAPIError(closure_128_0);
+              closure_129_5(v6OrEarlierAPIError1);
+              if (closure_129_2 != null) {
+                closure_129_2();
+              }
+              c3 = 0;
+              closure_129_3(false);
+              c5 = 3;
+              obj = { value: undefined, done: true };
               return obj;
-            } else {
-              let lib = tmp4;
-              closure_0 = tmp8;
-              closure_0 = undefined;
-              v0(true);
-              v0 = 2;
-              c4 = 3;
-              v02 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = closure_1_0(c4);
-              return obj1;
             }
-          } else if (1 === tmp8) {
-            v0 = 0;
-            v0(false);
-            throw callback;
-          } else {
-            if (2 === tmp8) {
-              v0 = 1;
-              lib = callback;
-              let obj3 = closure_1_1(closure_1_2[13]);
-              obj3.captureException(lib);
-              const intl = closure_1_0(closure_1_2[14]).intl;
-              if (lib.message !== intl.string(closure_1_0(closure_1_2[14]).t.N2yb9a)) {
-                const v6OrEarlierAPIError = new closure_1_0(closure_1_2[12]).V6OrEarlierAPIError(closure_1_1);
-                v02(v6OrEarlierAPIError);
-              }
-              if (closure_1_2 != null) {
-                closure_1_2();
-              }
-            } else if (arg0 === 1) {
-              v02 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              v0 = 0;
-              v0(false);
-              v02 = 3;
-              const obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else {
-              closure_0 = arg1;
-              if (null == closure_0) {
-                if (callback != null) {
-                  callback();
-                }
-                v0 = 0;
-                v0(false);
-                v02 = 3;
-                obj3 = { value: null, done: true };
-                obj3[0] = undefined;
-                return obj3;
-              } else {
-                if (closure_0.status < 400) {
-                  lib();
-                  v0 = 1;
-                }
-                const v6OrEarlierAPIError1 = new closure_1_0(closure_1_2[12]).V6OrEarlierAPIError(closure_0);
-                v02(v6OrEarlierAPIError1);
-                if (callback != null) {
-                  callback();
-                }
-                v0 = 0;
-                v0(false);
-                v02 = 3;
-                obj = { value: null, done: true };
-                obj[0] = undefined;
-                return obj;
-              }
-            }
-            v0 = 0;
-            v0(false);
-            v02 = 3;
           }
-        } catch (tmp75) {
-          callback = tmp75;
-          if (tmp5 === v0) {
-            v02 = tmp3;
-            throw tmp75;
-          } else if (tmp2 === tmp77) {
-            c4 = tmp2;
-          } else {
-            c4 = tmp;
-          }
+          c3 = 0;
+          closure_129_3(false);
+          c5 = 3;
+        }
+      } catch (tmp75) {
+        if (tmp5 === c3) {
+          c5 = tmp3;
+          throw tmp75;
+        } else if (tmp2 === tmp77) {
+          c4 = tmp2;
+        } else {
+          c4 = tmp;
         }
       }
-    });
-    closure_6 = tmp;
-    const apply = tmp.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
     }
-    return applyArgumentsResult;
-  }
-  let tmp = callback2();
-  const imperativeHandle = importAllResult.useImperativeHandle(ref, () => ({}));
+  };
+  const tmp = closure_12();
+  const imperativeHandle = noop.useImperativeHandle(ref, () => ({}));
   let obj = initialize;
-  const items = [closure_8];
+  const items = [UserStore];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  [tmp7, c3] = first(undefined.useState(false), 2);
-  const tmp8 = first(undefined.useState(""), 2);
-  first = tmp8[0];
-  const tmp6 = first(undefined.useState(false), 2);
-  [obj2, c5] = first(undefined.useState(null), 2);
-  const effect = importAllResult.useEffect(() => {
-    let obj = callback(table[11]);
-    obj = { destinationPane: constants.ACCOUNT_CONFIRM_PASSWORD };
+  [tmp7, c3] = value(noop.useState(false), 2);
+  const tmp8 = value(noop.useState(""), 2);
+  value = tmp8[0];
+  const tmp6 = value(noop.useState(false), 2);
+  [obj2, c5] = value(noop.useState(null), 2);
+  const effect = noop.useEffect(() => {
+    const obj = { destinationPane: constants.ACCOUNT_CONFIRM_PASSWORD };
     const result = obj.trackUserSettingsPaneViewed(obj);
   }, []);
   let tmp13Result = null;
   if (null != stateFromStores) {
     obj = { style: null, keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
     const items1 = [tmp.background, style];
-    obj[0] = items1;
+    obj.style = items1;
     let tmp15 = null;
     if (!hideUnverifiedBanner) {
-      tmp15 = callback(handleOpenEmailVerificationDefault, {});
+      tmp15 = closure_10(UserSettingsAccountUnverifiedHeaderDefault, {});
     }
     function handleSubmit() {
       const self = this;
-      const apply = _handleSubmit.apply;
+      const apply = closure_6.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
@@ -208,24 +189,21 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
       return applyArgumentsResult;
     }
     const items2 = [tmp15];
-    obj = { style: null, children: null };
-    obj[0] = tmp.container;
-    obj1 = {
-      style: null,
+    obj = { style: tmp.container, children: null };
+    let obj1 = {
+      style: tmp.title,
       accessibilityRole: "header",
       variant: "heading-xl/extrabold",
       color: "mobile-text-heading-primary",
       children: null,
     };
-    obj1[0] = tmp.title;
     let intl = tmp3(1114).intl;
-    obj1[4] = intl.string(tmp3(1114).t["x+d9t3"]);
-    const items3 = [callback(tmp3(4556).Text, obj1), , , ,];
-    obj2 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
-    obj2[0] = tmp.prompt;
+    obj1.children = intl.string(tmp3(1114).t["x+d9t3"]);
+    const items3 = [closure_10(tmp3(4556).Text, obj1), , , ,];
+    obj2 = { style: tmp.prompt, variant: "text-sm/medium", color: "text-default", children: null };
     const intl2 = tmp3(1114).intl;
-    obj2[3] = intl2.string(tmp3(1114).t.vaZmAx);
-    items3[1] = callback(tmp3(4556).Text, obj2);
+    obj2.children = intl2.string(tmp3(1114).t.vaZmAx);
+    items3[1] = closure_10(tmp3(4556).Text, obj2);
     let obj3 = {
       style: null,
       textStyle: null,
@@ -241,57 +219,49 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
       autoCapitalize: "none",
       autoFocus: true,
     };
-    ({ input: obj7[0], redesignInput: obj7[1] } = tmp);
+    ({ input: obj7.style, redesignInput: obj7.textStyle } = tmp);
     const intl3 = tmp3(1114).intl;
-    obj3[2] = intl3.string(tmp3(1114).t["CIGa+7"]);
-    obj3[6] = first;
-    obj3[7] = tmp8[1];
-    obj3[8] = handleSubmit;
+    obj3.label = intl3.string(tmp3(1114).t["CIGa+7"]);
+    obj3.value = value;
+    obj3.onChangeText = tmp8[1];
+    obj3.onSubmitEditing = handleSubmit;
     let fieldMessage;
     if (obj1 != null) {
       fieldMessage = obj1.getFieldMessage("password");
     }
-    obj3[9] = fieldMessage;
-    items3[2] = callback(_modDef6605, obj3);
+    obj3.error = fieldMessage;
+    items3[2] = closure_10(FreeFormInputGroupDefault, obj3);
     let tmp19Result = null;
     if (null != obj1) {
       tmp19Result = null;
       if (null == obj1.getFieldMessage("password")) {
-        const obj4 = { style: null, children: null };
-        obj4[0] = tmp.hint;
-        obj4[1] = obj1.message;
+        const obj4 = { style: tmp.hint, children: obj1.message };
         tmp19Result = tmp19(tmp20(6941), obj4);
       }
     }
     items3[3] = tmp19Result;
-    const obj5 = { style: null, children: null };
-    obj5[0] = tmp.button;
+    const obj5 = { style: tmp.button, children: null };
     const obj6 = { variant: "primary", size: "lg", text: null, onPress: null, loading: null };
     const intl4 = tmp3(1114).intl;
-    obj6[2] = intl4.string(tmp3(1114).t.i4jeWR);
-    obj6[3] = handleSubmit;
-    obj6[4] = tmp7;
-    obj5[1] = callback(tmp3(4975).Button, obj6);
-    items3[4] = callback(_handleSubmit, obj5);
-    obj[1] = items3;
-    items2[1] = closure_11(_handleSubmit, obj);
-    obj[3] = items2;
+    obj6.text = intl4.string(tmp3(1114).t.i4jeWR);
+    obj6.onPress = handleSubmit;
+    obj6.loading = tmp7;
+    obj5.children = closure_10(tmp3(4975).Button, obj6);
+    items3[4] = closure_10(closure_6, obj5);
+    obj.children = items3;
+    items2[1] = closure_11(closure_6, obj);
+    obj.children = items2;
     tmp13Result = tmp13(closure_7, obj);
-    const tmp14 = closure_7;
     tmp20 = importDefault;
-    const tmp21 = _modDef6605;
   }
   return tmp13Result;
 });
-let obj2 = { color: ThemesDefault.unsafe_rawColors.RED_400 };
-let result = require("set").fileFinishedImporting(
-  "modules/user_settings/account/native/UserSettingsConfirmPassword.tsx",
-);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/account/native/UserSettingsConfirmPassword.tsx");
 
 export default forwardRefResult;
 export const UserSettingsConfirmPasswordWrapped = function UserSettingsConfirmPasswordWrapped() {
-  let obj = useSettingNavigationRoute;
-  obj = {};
+  const obj = {};
   const merged = Object.assign(obj.useSettingNavigationRoute().params);
-  return callback(closure_13, obj);
+  return closure_1_10(forwardRefResult, obj);
 };

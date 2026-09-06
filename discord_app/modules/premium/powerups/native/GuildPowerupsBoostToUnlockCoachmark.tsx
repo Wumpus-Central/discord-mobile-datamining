@@ -1,19 +1,19 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsBoostToUnlockCoachmark.tsx
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import GuildPowerupsNotification from "../constants/GuildPowerupsNotification.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
-  "modules/premium/powerups/native/GuildPowerupsBoostToUnlockCoachmark.tsx",
-);
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsBoostToUnlockCoachmark.tsx");
 
 export default function GuildPowerupsBoostToUnlockCoachmark(powerup) {
   powerup = powerup.powerup;
   const markAsDismissed = powerup.markAsDismissed;
   const items = [powerup, markAsDismissed];
   ({ guildId, targetRef } = powerup);
-  const memo = React.useMemo(
+  const memo = noop.useMemo(
     () => ({
-      type: powerup(closure_1_2[1]).GuildPowerupNotificationPopoutType.BOOST_TO_UNLOCK,
+      type: GuildPowerupsNotification.GuildPowerupNotificationPopoutType.BOOST_TO_UNLOCK,
       powerup,
       markAsDismissed,
     }),

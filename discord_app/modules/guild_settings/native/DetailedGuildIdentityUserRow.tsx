@@ -1,27 +1,27 @@
 // discord_app/modules/guild_settings/native/DetailedGuildIdentityUserRow.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import Button from "../../../design/void/native.tsx";
-import getNicknameDefault from "../../../utils/NicknameUtils.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import native from "../../../design/void/native.tsx";
+import NicknameUtilsDefault from "../../../utils/NicknameUtils.tsx";
 import DiscordTagDefault from "../../user_profile/native/DiscordTag.tsx";
-import importAllResult from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_4 from "../../../stores/UserStore.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import UserStore from "../../../stores/UserStore.tsx";
 
-require = arg1;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+fn(4560);
 let obj = { mainIdentity: { flexDirection: "row", alignItems: "center" }, primaryAvatar: null, mainTag: null };
-obj = { marginRight: ThemesDefault.space.PX_4 };
-obj[1] = obj;
-createCacheKey = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, fontSize: 12 };
-obj[2] = createCacheKey;
-let closure_7 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo((height) => {
+obj = { marginRight: nativeDefault.space.PX_4 };
+obj.primaryAvatar = obj;
+const createStyles = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, fontSize: 12 };
+obj.mainTag = createStyles;
+let closure_7 = createStyles.createStyles(obj);
+const memoResult = noop.memo((height) => {
   ({ guildId, user } = height);
-  const tmp = callback2();
-  let obj = getNicknameDefault;
+  const tmp = closure_7();
+  let obj = NicknameUtilsDefault;
   let nickname = obj.getNickname(guildId, undefined, user);
   if (nickname == null) {
     nickname = tmp2(4404).getGlobalName(user);
@@ -29,33 +29,30 @@ const memoResult = importAllResult.memo((height) => {
   }
   const hasAvatarForGuildResult = user.hasAvatarForGuild(guildId);
   obj = { style: { height: height.contentHeight }, children: null };
-  const items = [callback(DiscordTagDefault, { user, nick: nickname })];
+  const items = [hasOwnProperty(DiscordTagDefault, { user, nick: nickname })];
   if (hasAvatarForGuildResult) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.mainIdentity;
+    obj = { style: tmp.mainIdentity, children: null };
     let tmp8Result = null;
     if (hasAvatarForGuildResult) {
-      obj1 = { size: null, style: null, user: null, guildId: "Array" };
-      obj1[0] = Button.AvatarSizes.SIZE_16;
-      obj1[1] = tmp.primaryAvatar;
-      obj1[2] = user;
-      tmp8Result = tmp8(Button.Avatar, obj1);
+      const obj1 = { size: native.AvatarSizes.SIZE_16, style: tmp.primaryAvatar, user, guildId: "Array" };
+      tmp8Result = tmp8(native.Avatar, obj1);
     }
     const items1 = [tmp8Result];
-    const obj2 = { user: null, usernameStyle: null, hideBotTag: true };
-    obj2[0] = user;
-    obj2[1] = tmp.mainTag;
+    const obj2 = { user, usernameStyle: tmp.mainTag, hideBotTag: true };
     items1[1] = tmp8(tmp2(9803), obj2);
-    obj[1] = items1;
+    obj.children = items1;
     let tmp6Result = tmp6(tmp7, obj);
   } else {
     tmp6Result = null;
   }
   items[1] = tmp6Result;
-  obj[1] = items;
-  return closure_6(View, obj);
+  obj.children = items;
+  return timestampProducer(View, obj);
 });
-const memoResult1 = importAllResult.memo(function DetailedGuildIdentityUserRow(arrow) {
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_settings/native/DetailedGuildIdentityUserRow.tsx");
+
+export default noop.memo(function DetailedGuildIdentityUserRow(arrow) {
   ({ accessibilityLabel, contentHeight, deprecatedFormRow } = arrow);
   if (deprecatedFormRow === undefined) {
     deprecatedFormRow = false;
@@ -74,14 +71,14 @@ const memoResult1 = importAllResult.memo(function DetailedGuildIdentityUserRow(a
   let SMALL = dependencyMap;
   ({ end, start } = arrow);
   let obj = initialize;
-  const items = [closure_4];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getUser(closure_0));
+  const items = [UserStore];
+  const stateFromStores = obj.useStateFromStores(items, () => UserStore.getUser(require));
   if (null == stateFromStores) {
     return null;
   } else if (deprecatedFormRow) {
     obj = {
-      accessibilityLabel: null,
-      disabled: null,
+      accessibilityLabel,
+      disabled,
       leading: null,
       label: null,
       onPress: null,
@@ -90,34 +87,28 @@ const memoResult1 = importAllResult.memo(function DetailedGuildIdentityUserRow(a
       accessibilityRole: null,
       accessibilityState: null,
     };
-    obj[0] = accessibilityLabel;
-    obj[1] = disabled;
     if (leading == null) {
-      disabled = { source: null, size: null };
-      disabled[0] = stateFromStores.getAvatarSource(guildId);
+      disabled = { source: stateFromStores.getAvatarSource(guildId), size: null };
       SMALL = tmp(1178).AvatarSizes.SMALL;
-      disabled[1] = SMALL;
+      disabled.size = SMALL;
       leading = tmp2(tmp(1178).Avatar, disabled);
     }
-    obj[2] = leading;
+    obj.leading = leading;
     leading = closure_8;
-    obj = { contentHeight: null, user: null, guildId: null };
-    obj[0] = contentHeight;
-    obj[1] = stateFromStores;
-    obj[2] = guildId;
-    obj[3] = tmp2(closure_8, obj);
-    obj[4] = onPress;
-    obj[5] = subLabel;
-    obj[6] = trailing;
-    obj[7] = accessibilityRole;
-    obj[8] = accessibilityState;
+    obj = { contentHeight, user: stateFromStores, guildId };
+    obj.label = tmp2(closure_8, obj);
+    obj.onPress = onPress;
+    obj.subLabel = subLabel;
+    obj.trailing = trailing;
+    obj.accessibilityRole = accessibilityRole;
+    obj.accessibilityState = accessibilityState;
     let tmp2Result = tmp2(tmp(8593).FormRow, obj);
   } else {
-    obj1 = {
-      accessibilityLabel: null,
-      arrow: null,
-      disabled: null,
-      end: null,
+    const obj1 = {
+      accessibilityLabel,
+      arrow: arrow.arrow,
+      disabled,
+      end,
       icon: null,
       label: null,
       onPress: null,
@@ -127,33 +118,21 @@ const memoResult1 = importAllResult.memo(function DetailedGuildIdentityUserRow(a
       accessibilityRole: null,
       accessibilityState: null,
     };
-    obj1[0] = accessibilityLabel;
-    obj1[1] = arrow.arrow;
-    obj1[2] = disabled;
-    obj1[3] = end;
     tmp2Result = leading;
     if (leading == null) {
-      const obj2 = { source: null, size: null };
-      obj2[0] = stateFromStores.getAvatarSource(guildId);
-      obj2[1] = tmp(1178).AvatarSizes.SMALL;
+      const obj2 = { source: stateFromStores.getAvatarSource(guildId), size: tmp(1178).AvatarSizes.SMALL };
       tmp2Result = tmp2(tmp(1178).Avatar, obj2);
     }
-    obj1[4] = tmp2Result;
-    const obj3 = { contentHeight: null, user: null, guildId: null };
-    obj3[0] = contentHeight;
-    obj3[1] = stateFromStores;
-    obj3[2] = guildId;
-    obj1[5] = tmp2(closure_8, obj3);
-    obj1[6] = onPress;
-    obj1[7] = start;
-    obj1[8] = subLabel;
-    obj1[9] = trailing;
-    obj1[10] = accessibilityRole;
-    obj1[11] = accessibilityState;
+    obj1.icon = tmp2Result;
+    const obj3 = { contentHeight, user: stateFromStores, guildId };
+    obj1.label = tmp2(closure_8, obj3);
+    obj1.onPress = onPress;
+    obj1.start = start;
+    obj1.subLabel = subLabel;
+    obj1.trailing = trailing;
+    obj1.accessibilityRole = accessibilityRole;
+    obj1.accessibilityState = accessibilityState;
     tmp2Result = tmp2(tmp(5605).TableRow, obj1);
   }
 });
-const result = require("set").fileFinishedImporting("modules/guild_settings/native/DetailedGuildIdentityUserRow.tsx");
-
-export default memoResult1;
 export const DetailedGuildIdentityUser = memoResult;

@@ -1,11 +1,11 @@
 // discord_app/design/void/Form/native/FormLabel.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import Text from "../../../components/Text/native/Text.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import Text_Text from "../../../components/Text/native/Text.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/void/Form/native/FormLabel.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/Form/native/FormLabel.tsx");
 
 export default function FormLabel(children) {
   let lineClamp = children.numberOfLines;
@@ -16,7 +16,7 @@ export default function FormLabel(children) {
   if (color === undefined) {
     color = "mobile-text-heading-primary";
   }
-  return jsx(Text.Text, {
+  return jsx(Text_Text.Text, {
     variant: "heading-md/semibold",
     color,
     lineClamp,

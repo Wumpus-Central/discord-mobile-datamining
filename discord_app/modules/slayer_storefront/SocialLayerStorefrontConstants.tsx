@@ -1,8 +1,8 @@
 // discord_app/modules/slayer_storefront/SocialLayerStorefrontConstants.tsx
-import set from "../../../_runtime/00002_set.js";
-import Environments2 from "../user/UserStoreConstants.tsx";
+import UserStoreConstants from "../user/UserStoreConstants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const Environments = Environments2.Environments;
+const Environments = UserStoreConstants.Environments;
 let str = "1193841000108531764";
 if (window.GLOBAL_ENV.RELEASE_CHANNEL === Environments.STAGING) {
   str = "1438570979889512448";
@@ -12,7 +12,7 @@ if (window.GLOBAL_ENV.RELEASE_CHANNEL === Environments.STAGING) {
   tmp2 = null;
 }
 const re0 = /^\/(?:channels\/\d+\/)?game-shop(?:\/|$)/;
-const result = set.fileFinishedImporting("modules/slayer_storefront/SocialLayerStorefrontConstants.tsx");
+const result = size.fileFinishedImporting("modules/slayer_storefront/SocialLayerStorefrontConstants.tsx");
 
 export const STOREFRONT_MARKETING_GUILD_ID = str;
 export const STOREFRONT_MARKETING_GUILD_ID_TEST = tmp2;
@@ -25,5 +25,5 @@ export const getChannelsGameShopPrefix = function getChannelsGameShopPrefix(arg0
   return "/channels/" + arg0 + "/game-shop";
 };
 export const isGameShopPath = function isGameShopPath(pathname) {
-  return regex.test(pathname);
+  return re0.test(pathname);
 };

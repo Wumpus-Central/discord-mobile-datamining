@@ -1,9 +1,9 @@
 // discord_app/modules/panels/morphable/native/MorphablePanelUtils.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import MIN_PAN_GESTURE_MOVE from "MorphablePanelConstants.tsx";
+import MorphablePanelConstants from "MorphablePanelConstants.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const MIN_PIP_TOSS_VELOCITY = MIN_PAN_GESTURE_MOVE.MIN_PIP_TOSS_VELOCITY;
-const PIP_WINDOW_OFFSET = MIN_PAN_GESTURE_MOVE.PIP_WINDOW_OFFSET;
+const MIN_PIP_TOSS_VELOCITY = MorphablePanelConstants.MIN_PIP_TOSS_VELOCITY;
+const PIP_WINDOW_OFFSET = MorphablePanelConstants.PIP_WINDOW_OFFSET;
 function clamp(arg0, arg1, arg2) {
   return Math.min(Math.max(arg0, arg1), arg2);
 }
@@ -24,8 +24,8 @@ function calculateXYDiff(state, get) {
   if (!tmp6) {
     tmp6 = diff > 0;
   }
-  obj[4] = tmp6;
-  obj[5] = bound;
+  obj.isNotPullDownGesture = tmp6;
+  obj.absoluteMovement = bound;
   return obj;
 }
 calculateXYDiff.__closure = {};
@@ -33,7 +33,7 @@ calculateXYDiff.__workletHash = 9827767064556;
 calculateXYDiff.__initData = {
   code: "function calculateXYDiff_MorphablePanelUtilsTsx2(event,initialGestureOffset){const{absoluteY:absoluteY,absoluteX:absoluteX}=event.changedTouches[0];const yDiff=initialGestureOffset.get().absoluteYStart-absoluteY;const xDiff=initialGestureOffset.get().absoluteXStart-absoluteX;const absoluteMovement=Math.max(Math.abs(yDiff),Math.abs(xDiff));const isNotPullDownGesture=Math.abs(xDiff)>=Math.abs(yDiff)||yDiff>0;return{absoluteX:absoluteX,absoluteY:absoluteY,xDiff:xDiff,yDiff:yDiff,isNotPullDownGesture:isNotPullDownGesture,absoluteMovement:absoluteMovement};}",
 };
-function getPIPWindowDimensions(width, left) {
+function getPIPWindowDimensions(width, left, arg2) {
   if (arg2) {
     const _Math = Math;
     let bound = Math.max(left.left, PIP_WINDOW_OFFSET);
@@ -48,8 +48,10 @@ function getPIPWindowDimensions(width, left) {
     diff1 = diff - Math.max(left.right, tmp);
   }
   const bound1 = Math.max(left.top, tmp);
+  const obj = { xOffset: bound, yOffset: bound1, xRange: diff1, yRange: null };
   const diff2 = width.height - bound1;
-  return { xOffset: bound, yOffset: bound1, xRange: diff1, yRange: diff2 - Math.max(left.bottom, tmp) };
+  obj.yRange = diff2 - Math.max(left.bottom, tmp);
+  return obj;
 }
 getPIPWindowDimensions.__closure = { PIP_WINDOW_OFFSET };
 getPIPWindowDimensions.__workletHash = 4008246762710;
@@ -58,122 +60,137 @@ getPIPWindowDimensions.__initData = {
 };
 function calculatePIPPositionFromVelocity(arg0) {
   ({ velocityX, velocityY, windowDimensions, safeArea, disableHorizontalSafeAreas } = arg0);
-  ({ absoluteX, absoluteY } = arg0);
-  if (typeof getPIPWindowDimensions !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  if (disableHorizontalSafeAreas) {
-    const _Math = Math;
-    let bound = Math.max(safeArea.left, PIP_WINDOW_OFFSET);
-    let tmp = PIP_WINDOW_OFFSET;
-  } else {
-    tmp = PIP_WINDOW_OFFSET;
-    bound = PIP_WINDOW_OFFSET;
-  }
-  const diff = windowDimensions.width - bound;
-  let diff1 = windowDimensions.width - safeArea.left - safeArea.right - 2 * tmp;
-  if (disableHorizontalSafeAreas) {
-    diff1 = diff - Math.max(safeArea.right, tmp);
-  }
-  const bound1 = Math.max(safeArea.top, tmp);
-  const diff2 = windowDimensions.height - bound1;
-  const diff3 = diff2 - Math.max(safeArea.bottom, tmp);
-  const diff4 = absoluteX - bound;
-  const diff5 = absoluteY - bound1;
-  const absolute = Math.abs(velocityY);
-  if (Math.max(absolute, Math.abs(velocityX)) < MIN_PIP_TOSS_VELOCITY) {
-    if (typeof clamp !== "function") {
-      HermesBuiltin.throwTypeError();
+  if (typeof getPIPWindowDimensions === "function") {
+    if (disableHorizontalSafeAreas) {
+      const _Math = Math;
+      let bound = Math.max(safeArea.left, PIP_WINDOW_OFFSET);
+      let tmp3 = PIP_WINDOW_OFFSET;
+    } else {
+      tmp3 = PIP_WINDOW_OFFSET;
+      bound = PIP_WINDOW_OFFSET;
     }
-    const rect = { left: null, right: null, top: null, bottom: null };
     const _Math2 = Math;
+    const diff = windowDimensions.width - bound;
+    let diff1 = windowDimensions.width - safeArea.left - safeArea.right - 2 * tmp3;
+    if (disableHorizontalSafeAreas) {
+      diff1 = diff - Math.max(safeArea.right, tmp3);
+    }
     const _Math3 = Math;
-    rect[0] = Math.min(Math.max(diff4, 0), diff1);
-    const diff6 = diff1 - diff4;
-    if (typeof clamp !== "function") {
-      HermesBuiltin.throwTypeError();
-    }
+    const bound1 = Math.max(safeArea.top, tmp3);
     const _Math4 = Math;
+    const diff2 = windowDimensions.height - bound1;
+    const diff3 = diff2 - Math.max(safeArea.bottom, tmp3);
+    const diff4 = tmp - bound;
+    const diff5 = tmp2 - bound1;
     const _Math5 = Math;
-    rect[1] = Math.min(Math.max(diff6, 0), diff1);
-    if (typeof clamp !== "function") {
-      HermesBuiltin.throwTypeError();
-    }
     const _Math6 = Math;
     const _Math7 = Math;
-    rect[2] = Math.min(Math.max(diff5, 0), diff3);
-    const diff7 = diff3 - diff5;
-    if (typeof clamp !== "function") {
-      HermesBuiltin.throwTypeError();
-    }
-    const _Math8 = Math;
-    const _Math9 = Math;
-    rect[3] = Math.min(Math.max(diff7, 0), diff3);
-    const _Math10 = Math;
-    const _Object = Object;
-    const items = [];
-    HermesBuiltin.arraySpread(Object.values(rect), 0);
-    const _Math11 = Math;
-    const applyResult = HermesBuiltin.apply(items, Math);
-    let str2 = "left";
-    if (rect.left !== applyResult) {
-      let str3 = "top";
-      if (rect.top !== applyResult) {
-        let str4 = "bottom";
-        if (rect.right === applyResult) {
-          str4 = "right";
+    const absolute = Math.abs(velocityY);
+    if (Math.max(absolute, Math.abs(velocityX)) < MIN_PIP_TOSS_VELOCITY) {
+      if (typeof clamp === "function") {
+        const rect = { left: null, right: null, top: null, bottom: null };
+        const _Math8 = Math;
+        const _Math9 = Math;
+        rect.left = Math.min(Math.max(diff4, 0), diff1);
+        if (typeof tmp21 === "function") {
+          const _Math10 = Math;
+          const _Math11 = Math;
+          rect.right = Math.min(Math.max(tmp22, 0), diff1);
+          if (typeof tmp21 === "function") {
+            const _Math12 = Math;
+            const _Math13 = Math;
+            rect.top = Math.min(Math.max(diff5, 0), diff3);
+            if (typeof tmp21 === "function") {
+              const _Math14 = Math;
+              const _Math15 = Math;
+              rect.bottom = Math.min(Math.max(tmp23, 0), diff3);
+              const _Math16 = Math;
+              const _Object = Object;
+              const items = [];
+              HermesBuiltin.arraySpread(Object.values(rect), 0);
+              const _Math17 = Math;
+              const applyResult = HermesBuiltin.apply(items, Math);
+              let str2 = "left";
+              if (rect.left !== applyResult) {
+                let str3 = "top";
+                if (rect.top !== applyResult) {
+                  let str4 = "bottom";
+                  if (rect.right === applyResult) {
+                    str4 = "right";
+                  }
+                  str3 = str4;
+                }
+                str2 = str3;
+              }
+              if ("left" === str2) {
+                let num7 = diff5 / diff3;
+                let num6 = 0;
+              } else if ("right" === str2) {
+                num7 = diff5 / diff3;
+                num6 = 1;
+              } else if ("top" === str2) {
+                num6 = diff4 / diff1;
+                num7 = 0;
+              } else {
+                num7 = 0;
+                num6 = 0;
+                if ("bottom" === str2) {
+                  num6 = diff4 / diff1;
+                  num7 = 1;
+                }
+              }
+            } else {
+              throw new TypeError("Trying to call a non-function");
+            }
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+        } else {
+          throw new TypeError("Trying to call a non-function");
         }
-        str3 = str4;
+      } else {
+        throw new TypeError("Trying to call a non-function");
       }
-      str2 = str3;
-    }
-    if ("left" === str2) {
-      let num6 = diff5 / diff3;
-      let num5 = 0;
-    } else if ("right" === str2) {
-      num6 = diff5 / diff3;
-      num5 = 1;
-    } else if ("top" === str2) {
-      num5 = diff4 / diff1;
-      num6 = 0;
     } else {
-      num6 = 0;
-      num5 = 0;
-      if ("bottom" === str2) {
-        num5 = diff4 / diff1;
-        num6 = 1;
+      const result = velocityY / velocityX;
+      let num3 = 0;
+      if (velocityX > 0) {
+        num3 = diff1;
       }
+      const sum = diff5 + result * (num3 - diff4);
+      if (sum >= 0) {
+        if (sum <= diff3) {
+          num6 = num3 / diff1;
+          num7 = sum / diff3;
+        }
+      }
+      let num5 = 0;
+      const result1 = 1 / result;
+      if (velocityY > 0) {
+        num5 = diff3;
+      }
+      num6 = (diff4 + result1 * (num5 - diff5)) / diff1;
+      num7 = num5 / diff3;
+    }
+    if (typeof clamp === "function") {
+      const obj = { pipX: null, pipY: null };
+      const _Math18 = Math;
+      const _Math19 = Math;
+      obj.pipX = Math.min(Math.max(num6, 0), 1);
+      if (typeof tmp29 === "function") {
+        const _Math20 = Math;
+        const _Math21 = Math;
+        obj.pipY = Math.min(Math.max(num7, 0), 1);
+        return obj;
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
   } else {
-    const result = velocityY / velocityX;
-    let num2 = 0;
-    if (velocityX > 0) {
-      num2 = diff1;
-    }
-    const sum = diff5 + result * (num2 - diff4);
-    if (sum >= 0) {
-      if (sum <= diff3) {
-        num5 = num2 / diff1;
-        num6 = sum / diff3;
-      }
-    }
-    let num4 = 0;
-    const result1 = 1 / result;
-    if (velocityY > 0) {
-      num4 = diff3;
-    }
-    num5 = (diff4 + result1 * (num4 - diff5)) / diff1;
-    num6 = num4 / diff3;
+    throw new TypeError("Trying to call a non-function");
   }
-  if (typeof clamp !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const obj = { pipX: Math.min(Math.max(num5, 0), 1), pipY: null };
-  if (typeof clamp !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  obj[1] = Math.min(Math.max(num6, 0), 1);
-  return obj;
 }
 calculatePIPPositionFromVelocity.__closure = { getPIPWindowDimensions, MIN_PIP_TOSS_VELOCITY, clamp };
 calculatePIPPositionFromVelocity.__workletHash = 3215524498124;
@@ -182,26 +199,30 @@ calculatePIPPositionFromVelocity.__initData = {
 };
 function pipXYtoAbsoluteXY(arg0) {
   ({ windowDimensions, safeArea, disableHorizontalSafeAreas } = arg0);
-  ({ pipX, pipY } = arg0);
-  if (typeof getPIPWindowDimensions !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  if (disableHorizontalSafeAreas) {
-    const _Math = Math;
-    let bound = Math.max(safeArea.left, PIP_WINDOW_OFFSET);
-    let tmp = PIP_WINDOW_OFFSET;
+  if (typeof getPIPWindowDimensions === "function") {
+    if (disableHorizontalSafeAreas) {
+      const _Math = Math;
+      let bound = Math.max(safeArea.left, PIP_WINDOW_OFFSET);
+      let tmp3 = PIP_WINDOW_OFFSET;
+    } else {
+      tmp3 = PIP_WINDOW_OFFSET;
+      bound = PIP_WINDOW_OFFSET;
+    }
+    const _Math2 = Math;
+    const diff = windowDimensions.width - bound;
+    let diff1 = windowDimensions.width - safeArea.left - safeArea.right - 2 * tmp3;
+    if (disableHorizontalSafeAreas) {
+      diff1 = diff - Math.max(safeArea.right, tmp3);
+    }
+    const _Math3 = Math;
+    const bound1 = Math.max(safeArea.top, tmp3);
+    const _Math4 = Math;
+    const diff2 = windowDimensions.height - bound1;
+    const point = { x: bound + tmp * diff1, y: bound1 + tmp2 * (diff2 - Math.max(safeArea.bottom, tmp3)) };
+    return point;
   } else {
-    tmp = PIP_WINDOW_OFFSET;
-    bound = PIP_WINDOW_OFFSET;
+    throw new TypeError("Trying to call a non-function");
   }
-  const diff = windowDimensions.width - bound;
-  let diff1 = windowDimensions.width - safeArea.left - safeArea.right - 2 * tmp;
-  if (disableHorizontalSafeAreas) {
-    diff1 = diff - Math.max(safeArea.right, tmp);
-  }
-  const bound1 = Math.max(safeArea.top, tmp);
-  const diff2 = windowDimensions.height - bound1;
-  return { x: bound + pipX * diff1, y: bound1 + pipY * (diff2 - Math.max(safeArea.bottom, tmp)) };
 }
 pipXYtoAbsoluteXY.__closure = { getPIPWindowDimensions };
 pipXYtoAbsoluteXY.__workletHash = 1981621867924;
@@ -226,61 +247,67 @@ function getClampedPIPPosition(topAvoidanceRegion) {
   if (-1 !== pipX) {
     num2 = pipX;
   }
-  let obj = { pipX: num2, pipY: null, windowDimensions: null, safeArea: null, disableHorizontalSafeAreas: null };
+  const obj = { pipX: num2, pipY: null, windowDimensions: null, safeArea: null, disableHorizontalSafeAreas: null };
   let num3 = 0;
   if (-1 !== pipY) {
     num3 = pipY;
   }
-  obj[1] = num3;
-  obj[2] = windowDimensions;
-  obj[3] = safeArea;
-  obj[4] = disableHorizontalSafeAreas;
-  const point2 = pipXYtoAbsoluteXY(obj);
-  const y = point2.y;
-  const diff = point2.x - width / 2;
+  obj.pipY = num3;
+  obj.windowDimensions = windowDimensions;
+  obj.safeArea = safeArea;
+  obj.disableHorizontalSafeAreas = disableHorizontalSafeAreas;
+  const y = pipXYtoAbsoluteXY(obj).y;
   if (-1 === pipY) {
     let sum = y + 72;
   } else {
     sum = y - height / 2;
   }
-  if (typeof getPIPWindowDimensions !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  if (disableHorizontalSafeAreas) {
-    const _Math = Math;
-    let bound = Math.max(safeArea.left, PIP_WINDOW_OFFSET);
-    let tmp5 = PIP_WINDOW_OFFSET;
+  if (typeof getPIPWindowDimensions === "function") {
+    if (disableHorizontalSafeAreas) {
+      const _Math = Math;
+      let bound = Math.max(safeArea.left, PIP_WINDOW_OFFSET);
+      let tmp5 = PIP_WINDOW_OFFSET;
+    } else {
+      tmp5 = PIP_WINDOW_OFFSET;
+      bound = PIP_WINDOW_OFFSET;
+    }
+    const _Math2 = Math;
+    const diff = windowDimensions.width - bound;
+    let diff1 = windowDimensions.width - safeArea.left - safeArea.right - 2 * tmp5;
+    if (disableHorizontalSafeAreas) {
+      diff1 = diff - Math.max(safeArea.right, tmp5);
+    }
+    const _Math3 = Math;
+    const bound1 = Math.max(safeArea.top, tmp5);
+    const _Math4 = Math;
+    const diff2 = windowDimensions.height - bound1;
+    if (typeof clamp === "function") {
+      const _Math5 = Math;
+      const _Math6 = Math;
+      if (typeof tmp15 === "function") {
+        const _Math7 = Math;
+        const _Math8 = Math;
+        point = { x: null, y: null };
+        point.x = tmp16 + point.x;
+        point.y = Math.min(Math.max(sum, tmp17), tmp18) + point.y;
+        return point;
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
   } else {
-    tmp5 = PIP_WINDOW_OFFSET;
-    bound = PIP_WINDOW_OFFSET;
+    throw new TypeError("Trying to call a non-function");
   }
-  const diff1 = windowDimensions.width - bound;
-  let diff2 = windowDimensions.width - safeArea.left - safeArea.right - 2 * tmp5;
-  if (disableHorizontalSafeAreas) {
-    diff2 = diff1 - Math.max(safeArea.right, tmp5);
-  }
-  const bound1 = Math.max(safeArea.top, tmp5);
-  const diff3 = windowDimensions.height - bound1;
-  const diff4 = diff3 - Math.max(safeArea.bottom, tmp5);
-  const diff5 = bound + diff2 - width;
-  if (typeof clamp !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const bound2 = Math.min(Math.max(diff, bound), diff5);
-  const sum1 = bound1 + num;
-  const diff6 = bound1 + diff4 - bottomAvoidanceRegion - height;
-  if (typeof clamp !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  obj = { x: bound2 + point.x, y: Math.min(Math.max(sum, sum1), diff6) + point.y };
-  return obj;
+  const tmpResult = pipXYtoAbsoluteXY(obj);
 }
 getClampedPIPPosition.__closure = { pipXYtoAbsoluteXY, getPIPWindowDimensions, clamp };
 getClampedPIPPosition.__workletHash = 7754262947803;
 getClampedPIPPosition.__initData = {
   code: "function getClampedPIPPosition_MorphablePanelUtilsTsx6({pipX:pipX,pipY:pipY,width:width,height:height,windowDimensions:windowDimensions,safeArea:safeArea,bottomAvoidanceRegion=0,topAvoidanceRegion=0,positionOffset={x:0,y:0},disableHorizontalSafeAreas:disableHorizontalSafeAreas}){const{pipXYtoAbsoluteXY,getPIPWindowDimensions,clamp}=this.__closure;let{x:x,y:y}=pipXYtoAbsoluteXY({pipX:pipX===-1?1:pipX,pipY:pipY===-1?0:pipY,windowDimensions:windowDimensions,safeArea:safeArea,disableHorizontalSafeAreas:disableHorizontalSafeAreas});const halfWidth=width/2;const halfHeight=height/2;x-=halfWidth;if(pipY===-1){y+=72;}else{y-=halfHeight;}const pipRegion=getPIPWindowDimensions(windowDimensions,safeArea,disableHorizontalSafeAreas);x=clamp(x,pipRegion.xOffset,pipRegion.xOffset+pipRegion.xRange-width);y=clamp(y,pipRegion.yOffset+topAvoidanceRegion,pipRegion.yOffset+pipRegion.yRange-bottomAvoidanceRegion-height);x+=positionOffset.x;y+=positionOffset.y;return{x:x,y:y};}",
 };
-let result = set.fileFinishedImporting("modules/panels/morphable/native/MorphablePanelUtils.tsx");
+let result = size.fileFinishedImporting("modules/panels/morphable/native/MorphablePanelUtils.tsx");
 
 export { calculateXYDiff };
 export { getPIPWindowDimensions };

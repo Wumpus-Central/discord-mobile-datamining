@@ -1,13 +1,11 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsUpsellsTableRow.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import TableRowInner from "../../../../design/components/TableRow/native/TableRow.native.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting(
-  "modules/in_app_reports/native/components/InAppReportsUpsellsTableRow.tsx",
-);
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsUpsellsTableRow.tsx");
 
 export default function InAppReportsUpsellsTableRow(disabled) {
   ({ title, disabledTitle, variant } = disabled);
@@ -28,12 +26,12 @@ export default function InAppReportsUpsellsTableRow(disabled) {
   if (!disabled) {
     description = disabled.description;
   }
-  obj[1] = description;
-  obj[2] = onPress;
-  obj[3] = icon;
-  obj[4] = disabled;
-  obj[5] = variant;
-  return jsx(TableRowInner.TableRow, {
+  obj.subLabel = description;
+  obj.onPress = onPress;
+  obj.icon = icon;
+  obj.disabled = disabled;
+  obj.variant = variant;
+  return jsx(TableRow.TableRow, {
     label: tmp2,
     subLabel: null,
     onPress: null,

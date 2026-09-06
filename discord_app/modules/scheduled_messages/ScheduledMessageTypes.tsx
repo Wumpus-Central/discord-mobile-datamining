@@ -1,7 +1,7 @@
 // discord_app/modules/scheduled_messages/ScheduledMessageTypes.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/scheduled_messages/ScheduledMessageTypes.tsx");
+const result = size.fileFinishedImporting("modules/scheduled_messages/ScheduledMessageTypes.tsx");
 
 export const ScheduledMessageSendState = {
   SCHEDULED: 0,

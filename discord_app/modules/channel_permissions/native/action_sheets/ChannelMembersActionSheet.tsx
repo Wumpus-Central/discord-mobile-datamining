@@ -1,62 +1,67 @@
 // discord_app/modules/channel_permissions/native/action_sheets/ChannelMembersActionSheet.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import useNavigation from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import getAppChannelBotUserIdFromApplication from "../../../app_channels/AppChannelPermissionUtils.tsx";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_4 from "../../../../stores/ChannelStore.tsx";
-import closure_5 from "../../../../stores/GuildMemberStore.tsx";
-import closure_6 from "../../../../stores/GuildRoleStore.tsx";
-import closure_7 from "../../../../stores/GuildStore.tsx";
-import closure_8 from "../../../../stores/PermissionStore.tsx";
-import ME from "../../../../Constants.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import ChannelSettingsActionCreatorsDefault from "../../../../actions/ChannelSettingsActionCreators.tsx";
+import ChannelOverwritesItemDefault from "../components/ChannelOverwritesItem.tsx";
+import channel_permissions_ChannelPermissionsUtils from "../ChannelPermissionsUtils.tsx";
+import AppChannelPermissionUtils from "../../../app_channels/AppChannelPermissionUtils.tsx";
+import ChannelDetailsUtils from "../../../main_tabs_v2/native/sidebar/details/ChannelDetailsUtils.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import ChannelStore from "../../../../stores/ChannelStore.tsx";
+import GuildMemberStore from "../../../../stores/GuildMemberStore.tsx";
+import GuildRoleStore from "../../../../stores/GuildRoleStore.tsx";
+import GuildStore from "../../../../stores/GuildStore.tsx";
+import PermissionStore from "../../../../stores/PermissionStore.tsx";
 
-require = arg1;
-noopAll;
-({ ChannelSettingsSections: c9, Permissions: c10 } = ME);
-({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-createCacheKey = { container: { paddingHorizontal: 16, flex: 1 }, sectionRowWrapper: null, warning: null };
-createCacheKey = { paddingVertical: ThemesDefault.space.PX_12 };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { margin: 16, marginBottom: 0 };
-let closure_13 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting(
+require = fn;
+const View = fn(17).View;
+const Constants = fn(1074);
+({ ChannelSettingsSections: closure_9, Permissions: c10 } = Constants);
+const jsxProd = fn(21);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+fn(4560);
+let createStyles = { container: { paddingHorizontal: 16, flex: 1 }, sectionRowWrapper: null, warning: null };
+createStyles = { paddingVertical: nativeDefault.space.PX_12 };
+createStyles.sectionRowWrapper = createStyles;
+createStyles.warning = { margin: 16, marginBottom: 0 };
+let closure_13 = createStyles.createStyles(createStyles);
+const size = fn(2);
+let result = size.fileFinishedImporting(
   "modules/channel_permissions/native/action_sheets/ChannelMembersActionSheet.tsx",
 );
 
 export default function ChannelMembersActionSheet(arg0) {
   ({ channelId: require, guildId: importDefault } = arg0);
-  dependencyMap = undefined;
-  let stateFromStores;
   closure_4 = undefined;
   c5 = undefined;
-  const tmp = callback();
+  const tmp = closure_13();
   dependencyMap = tmp;
   let obj = initialize;
   const items = [closure_4];
-  stateFromStores = obj.useStateFromStores(items, () => channel.getChannel(closure_0));
-  obj1 = initialize;
-  const items1 = [closure_7, closure_6];
+  const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(channelId));
+  let obj1 = initialize;
+  const items1 = [GuildStore, GuildRoleStore];
   const items2 = [stateFromStores];
   const stateFromStoresObject = obj1.useStateFromStoresObject(
     items1,
     () => {
       let obj = stateFromStores;
-      let guildId;
+      guildId = undefined;
       if (stateFromStores != null) {
         guildId = obj.getGuildId();
       }
-      const guild = closure_1_7.getGuild(guildId);
+      const guild = GuildStore.getGuild(guildId);
       obj = { guild, sortedGuildRoles: null };
       let sortedRoles;
       if (null != guild) {
-        sortedRoles = closure_1_6.getSortedRoles(guild.id);
+        sortedRoles = GuildRoleStore.getSortedRoles(guild.id);
       }
-      obj[1] = sortedRoles;
+      obj.sortedGuildRoles = sortedRoles;
       return obj;
     },
     items2,
@@ -68,23 +73,22 @@ export default function ChannelMembersActionSheet(arg0) {
   const stateFromStoresArray = obj2.useStateFromStoresArray(
     items3,
     () => {
-      let guildId;
+      guildId = undefined;
       if (stateFromStores != null) {
         guildId = stateFromStores.getGuildId();
       }
-      return _undefined.getMemberIds(guildId);
+      return GuildMemberStore.getMemberIds(guildId);
     },
     items4,
   );
   let obj3 = useNavigation;
   closure_4 = obj3.useNavigation();
-  const tmp2 = importDefault;
   const tmp4 = useSafeAreaInsetsDefault();
-  getAppChannelBotUserIdFromApplication;
+  AppChannelPermissionUtils;
   if (null != stateFromStores) {
     if (null != guild) {
       if (null != sortedGuildRoles) {
-        const canResult = closure_8.can(constants.MANAGE_ROLES, stateFromStores);
+        const canResult = PermissionStore.can(constants2.MANAGE_ROLES, stateFromStores);
         c5 = canResult;
         let tmp5Result = tmp5(9738);
         const existingRolesRows = tmp5Result.getExistingRolesRows(
@@ -94,8 +98,7 @@ export default function ChannelMembersActionSheet(arg0) {
           stateFromStores.accessPermissions,
         );
         tmp5Result = tmp5(9738);
-        obj = { appChannelBotUserId: null };
-        obj[0] = tmp11;
+        obj = { appChannelBotUserId: tmp11 };
         const items5 = [];
         obj = { title: null, data: null };
         const existingMembersRows = tmp5Result.getExistingMembersRows(
@@ -106,61 +109,60 @@ export default function ChannelMembersActionSheet(arg0) {
           obj,
         );
         const intl4 = tmp5(1114).intl;
-        obj[0] = intl4.string(tmp5(1114).t["LPJmL/"]);
-        obj[1] = existingRolesRows;
+        obj.title = intl4.string(tmp5(1114).t["LPJmL/"]);
+        obj.data = existingRolesRows;
         items5.push(obj);
         obj1 = { title: null, data: null };
         const intl5 = tmp5(1114).intl;
-        obj1[0] = intl5.string(tmp5(1114).t["9Oq93m"]);
-        obj1[1] = existingMembersRows;
+        obj1.title = intl5.string(tmp5(1114).t["9Oq93m"]);
+        obj1.data = existingMembersRows;
         items5.push(obj1);
         obj2 = { title: null, subtitle: null, trailing: null };
         const intl6 = tmp5(1114).intl;
-        obj2[0] = intl6.string(tmp5(1114).t.ES4CC6);
+        obj2.title = intl6.string(tmp5(1114).t.ES4CC6);
         const _HermesInternal = HermesInternal;
-        obj2[1] = "#" + tmp9;
+        obj2.subtitle = "#" + tmp9;
         let tmp32Result = canResult;
         if (canResult) {
-          obj3 = { onPress: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
-          obj3[0] = function onPress() {
-            closure_1_1(sectionRowWrapper[21]).hideActionSheet();
-            const obj = closure_1_1(sectionRowWrapper[21]);
-            closure_1_1(sectionRowWrapper[22]).init(closure_0);
-            const obj2 = closure_1_1(sectionRowWrapper[22]);
-            const result = closure_1_0(sectionRowWrapper[23]).navigateToChannelDetailsScreen(
-              closure_4,
-              closure_1_9.PERMISSIONS,
-              closure_0,
-              "channel-members-action-sheet",
-            );
+          obj3 = {
+            onPress() {
+              ActionSheetActionCreatorsDefault.hideActionSheet();
+              ChannelSettingsActionCreatorsDefault.init(channelId);
+              const result = ChannelDetailsUtils.navigateToChannelDetailsScreen(
+                closure_4,
+                constants.PERMISSIONS,
+                channelId,
+                "channel-members-action-sheet",
+              );
+            },
+            accessibilityRole: "button",
+            accessibilityLabel: null,
+            children: null,
           };
           let intl = tmp5(1114).intl;
-          obj3[2] = intl.string(tmp5(1114).t.XPDhcc);
-          obj3[3] = tmp32(tmp5(7380).SettingsIcon, {});
+          obj3.accessibilityLabel = intl.string(tmp5(1114).t.XPDhcc);
+          obj3.children = tmp32(tmp5(7380).SettingsIcon, {});
           tmp32Result = tmp32(tmp5(5123).PressableOpacity, obj3);
         }
         const obj4 = { scrollable: true, header: null, startExpanded: true, children: null };
-        obj2[2] = tmp32Result;
-        obj4[1] = closure_11(tmp5(7149).BottomSheetTitleHeader, obj2);
-        const obj5 = { style: null, children: null };
-        obj5[0] = tmp.container;
+        obj2.trailing = tmp32Result;
+        obj4.header = closure_11(tmp5(7149).BottomSheetTitleHeader, obj2);
+        const obj5 = { style: tmp.container, children: null };
         if (canResult) {
           const obj6 = { label: null, onPress: null, icon: null };
           const intl3 = tmp5(1114).intl;
-          obj6[0] = intl3.string(tmp5(1114).t.dMJ3Y6);
-          obj6[1] = function onPress() {
-            return closure_1_0(sectionRowWrapper[26]).openAddMembersActionSheet(stateFromStores);
+          obj6.label = intl3.string(tmp5(1114).t.dMJ3Y6);
+          obj6.onPress = function onPress() {
+            return channel_permissions_ChannelPermissionsUtils.openAddMembersActionSheet(stateFromStores);
           };
-          obj6[2] = tmp32(tmp5(10032).GroupPlusIcon, {});
+          obj6.icon = tmp32(tmp5(10032).GroupPlusIcon, {});
           tmp32Result = tmp32(tmp5(8595).RowButton, obj6);
         } else {
-          const obj7 = { style: null, children: null };
-          obj7[0] = tmp.warning;
-          const obj8 = { messageType: null, children: null };
-          obj8[0] = tmp5(1178).HelpMessageTypes.INFO;
+          const obj7 = { style: tmp.warning, children: null };
+          const obj8 = { messageType: tmp5(1178).HelpMessageTypes.INFO, children: null };
           const intl2 = tmp5(1114).intl;
-          obj8[1] = intl2.string(tmp5(1114).t.VOuiSj);
-          obj7[1] = tmp32(tmp5(1178).HelpMessage, obj8);
+          obj8.children = intl2.string(tmp5(1114).t.VOuiSj);
+          obj7.children = tmp32(tmp5(1178).HelpMessage, obj8);
           tmp32Result = tmp32(tmp14, obj7);
         }
         const items6 = [tmp32Result];
@@ -171,23 +173,22 @@ export default function ChannelMembersActionSheet(arg0) {
           sections: null,
           stickySectionHeadersEnabled: false,
         };
-        const obj10 = { paddingBottom: null };
-        obj10[0] = tmp4.bottom + ThemesDefault.space.PX_16;
-        obj9[0] = obj10;
-        obj9[1] = function renderItem(index) {
+        const obj10 = { paddingBottom: tmp4.bottom + nativeDefault.space.PX_16 };
+        obj9.contentContainerStyle = obj10;
+        obj9.renderItem = function renderItem(index) {
           index = index.index;
           ({ item, section } = index);
-          return closure_1_11(closure_1_1(sectionRowWrapper[30]), {
+          return closure_2_11(ChannelOverwritesItemDefault, {
             start: 0 === index,
             end: index === section.data.length - 1,
-            guildId: closure_1,
+            guildId,
             item,
-            channelId: closure_0,
+            channelId,
             showType: true,
-            showRemove: c5,
+            showRemove,
           });
         };
-        obj9[2] = function renderSectionHeader(section) {
+        obj9.renderSectionHeader = function renderSectionHeader(section) {
           ({ title, data } = section.section);
           let obj = {
             style: sectionRowWrapper.sectionRowWrapper,
@@ -197,15 +198,15 @@ export default function ChannelMembersActionSheet(arg0) {
             color: "interactive-text-default",
             children: null,
           };
-          const intl = closure_1_0(sectionRowWrapper[17]).intl;
+          const intl = util.intl;
           obj = { numberOfItems: data.length, sectionTitle: title };
-          obj[5] = intl.format(closure_1_0(sectionRowWrapper[17]).t.u8CWLl, obj);
-          return closure_1_11(closure_1_0(sectionRowWrapper[31]).Text, obj);
+          obj.children = intl.format(util.t.u8CWLl, obj);
+          return closure_2_11(Text_Text.Text, obj);
         };
-        obj9[3] = items5;
+        obj9.sections = items5;
         items6[1] = closure_11(tmp5(6627).BottomSheetSectionList, obj9);
-        obj5[1] = items6;
-        obj4[3] = closure_12(stateFromStores, obj5);
+        obj5.children = items6;
+        obj4.children = closure_12(stateFromStores, obj5);
         return closure_11(tmp5(7150).BottomSheet, obj4);
       }
     }

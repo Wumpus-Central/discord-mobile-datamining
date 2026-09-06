@@ -1,13 +1,13 @@
 // discord_app/modules/messages/native/renderer/getTagProperties.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import MESSAGE_GROUP_SPACING from "../../MessageConstants.tsx";
-import isPublicSystemMessage from "../../../public_guilds/PublicGuildsUtils.tsx";
+import _mod17 from "../../../../../_runtime/metro/00017__.js";
+import MessageConstants from "../../MessageConstants.tsx";
+import PublicGuildsUtils from "../../../public_guilds/PublicGuildsUtils.tsx";
 import isCrosspostDefault from "../../isCrosspost.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const Image = get_ActivityIndicator.Image;
-const MessageTagTypes = MESSAGE_GROUP_SPACING.MessageTagTypes;
-const result = set.fileFinishedImporting("modules/messages/native/renderer/getTagProperties.tsx");
+const Image = _mod17.Image;
+const MessageTagTypes = MessageConstants.MessageTagTypes;
+const result = size.fileFinishedImporting("modules/messages/native/renderer/getTagProperties.tsx");
 
 export default function getTagProperties(arg0) {
   ({ message, isSystemDM } = arg0);
@@ -17,7 +17,7 @@ export default function getTagProperties(arg0) {
   ({ channel, colors } = arg0);
   const author = message.author;
   const isVerifiedBotResult = author.isVerifiedBot();
-  let obj = isPublicSystemMessage;
+  let obj = PublicGuildsUtils;
   if (!obj.isPublicSystemMessage(message)) {
     if (!isSystemDM) {
       if (isCrosspostDefault(message)) {
@@ -61,24 +61,18 @@ export default function getTagProperties(arg0) {
         stringResult2 = intl6.string(tmp2(1114).t.fyE8sH);
       }
       obj = {
-        tagText: null,
+        tagText: stringResult,
         tagAccessibilityLabel: null,
-        tagVerified: null,
+        tagVerified: flag,
         tagTextColor: "Boolean",
         tagBackgroundColor: "accessible",
-        tagType: "rar",
-        tagIconUrl: "_a",
-        opTagText: "princess",
+        tagType: SYSTEM_DM_TAG_SYSTEM_TYPE,
+        tagIconUrl: tmp5,
+        opTagText: stringResult2,
         opTagTextColor: "isArray",
         opTagBackgroundColor: "shouldObscureSpoiler",
       };
-      obj[0] = stringResult;
-      obj[1] = null;
-      obj[2] = flag;
-      obj[5] = SYSTEM_DM_TAG_SYSTEM_TYPE;
-      obj[6] = tmp5;
-      obj[7] = stringResult2;
-      ({ opTagTextColor: obj3[8], opTagBackgroundColor: obj3[9] } = colors);
+      ({ opTagTextColor: obj3.opTagTextColor, opTagBackgroundColor: obj3.opTagBackgroundColor } = colors);
       return obj;
     } else {
       if (!tmp2Result.isPublicSystemMessage(message)) {

@@ -1,7 +1,7 @@
 // discord_app/modules/noise_cancellation/KrispUtils.tsx
-import set from "../../../_runtime/00002_set.js";
-import getKrispModel from "native/KrispUtils.tsx";
+import noise_cancellation_KrispUtils from "native/KrispUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/noise_cancellation/KrispUtils.tsx");
+const result = size.fileFinishedImporting("modules/noise_cancellation/KrispUtils.tsx");
 
-export default getKrispModel;
+export default noise_cancellation_KrispUtils;

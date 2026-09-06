@@ -1,49 +1,45 @@
 // discord_app/modules/collectibles/native/useHandleClaim.tsx
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let require = arg1;
-const result = require("set").fileFinishedImporting("modules/collectibles/native/useHandleClaim.tsx");
+let require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/native/useHandleClaim.tsx");
 
 export const useHandleClaim = function useHandleClaim(product) {
   product = product.product;
   require = product;
   const stageCollectibleChangeForEditProfile = product.stageCollectibleChangeForEditProfile;
+  const obj = { handleClaim: null };
   const items = [product, stageCollectibleChangeForEditProfile];
-  return {
-    handleClaim: React.useCallback(
-      callback(function* () {
-        closure_0 = tmp3;
-        c3 = 1;
-        let obj3 = closure_1_0(closure_1_2[2]);
-        yield obj3.claimPremiumCollectiblesProduct(closure_1_0.skuId);
-        if (1 === tmp7) {
-          c3 = 0;
-          obj1 = v0(closure_1_2[5]);
-          const obj2 = { key: "collectible shop claim error", content: null };
-          const intl = closure_1_0(closure_1_2[6]).intl;
-          obj2[1] = intl.string(closure_1_0(closure_1_2[6]).t.CKsXk3);
-          obj1.open(obj2);
-          c4 = 3;
-        } else if (arg0 === 1) {
-          c4 = 3;
-          throw arg1;
-        } else if (arg0 !== 2) {
-          v0(closure_1_2[3]).hideAllActionSheets();
-          const obj8 = v0(closure_1_2[3]);
-          obj3 = { product: null, useCategoryImage: true, stageCollectibleChangeForEditProfile: null };
-          obj3[0] = closure_0;
-          obj3[2] = v0;
-          v0(closure_1_2[4]).open(obj3);
-          const obj9 = v0(closure_1_2[4]);
-          const collectiblesPurchases = closure_1_0(closure_1_2[2]).fetchCollectiblesPurchases();
-          c3 = 0;
-          const obj11 = closure_1_0(closure_1_2[2]);
-        }
+  obj.handleClaim = noop.useCallback(
+    asyncGeneratorStep(async () => {
+      let obj3 = tmp3(tmp20[2]);
+      await obj3.claimPremiumCollectiblesProduct(product.skuId);
+      if (1 === tmp7) {
         c3 = 0;
-        return arg1;
-      }),
-      items,
-    ),
-  };
+        const obj2 = { key: "collectible shop claim error", content: null };
+        const intl = tmp3(tmp20[6]).intl;
+        obj2.content = intl.string(tmp3(tmp20[6]).t.CKsXk3);
+        v2(tmp20[5]).open(obj2);
+        c4 = 3;
+        v2(tmp20[5]);
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw arg1;
+      } else if (arg0 !== 2) {
+        v2(tmp20[3]).hideAllActionSheets();
+        v2(tmp20[3]);
+        obj3 = { product: closure_128_0, useCategoryImage: true, stageCollectibleChangeForEditProfile: closure_128_1 };
+        v2(tmp20[4]).open(obj3);
+        v2(tmp20[4]);
+        const collectiblesPurchases = tmp3(tmp20[2]).fetchCollectiblesPurchases();
+        c3 = 0;
+        tmp3(tmp20[2]);
+      }
+      return arg1;
+    }),
+    items,
+  );
+  return obj;
 };

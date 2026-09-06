@@ -1,11 +1,9 @@
 // discord_app/modules/self_mod/shared/native/SafetyWarningBanner.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import SafetyWarningUtils from "../SafetyWarningUtils.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
+require = fn;
 class SafetyWarningBanner {
   constructor(arg0) {
     channelId = global.channelId;
@@ -17,8 +15,8 @@ class SafetyWarningBanner {
     ({ header, description } = global);
     tmp = closure_9();
     effect = warningType.useEffect(() => {
-      let obj = warningId(senderId[5]);
-      obj = { name: channelId(senderId[6]).MetricEvents.SAFETY_WARNING_VIEW };
+      warningId(senderId[5]);
+      const obj = { name: channelId(senderId[6]).MetricEvents.SAFETY_WARNING_VIEW };
       obj.increment(obj);
     }, []);
     items = [, , , ,];
@@ -34,49 +32,52 @@ class SafetyWarningBanner {
         if (onDismiss != null) {
           tmp();
         }
-        let obj = channelId(senderId[7]);
-        obj = {
+        const obj = {
           channelId,
           warningId,
           senderId,
           warningType,
-          cta: channelId(senderId[7]).CtaEventTypes.USER_BANNER_DISMISS,
+          cta: SafetyWarningUtils.CtaEventTypes.USER_BANNER_DISMISS,
         };
         obj.trackCtaEvent(obj);
       }, items),
       accessibilityLabel: null,
       children: null,
     };
-    intl = require("getSystemLocale").intl;
-    obj[2] = intl.string(require("getSystemLocale").t["1UatJ0"]);
-    obj1 = { style: tmp.closeButtonIcon, source: require("registerAsset"), size: require("Button").IconSizes.MEDIUM };
-    obj[3] = jsx(require("Button").Icon, obj1);
+    intl = channelId(senderId[8]).intl;
+    obj.accessibilityLabel = intl.string(channelId(senderId[8]).t["1UatJ0"]);
+    obj1 = {
+      style: tmp.closeButtonIcon,
+      source: warningId(senderId[10]),
+      size: channelId(senderId[9]).IconSizes.MEDIUM,
+    };
+    obj.children = jsx(channelId(senderId[9]).Icon, obj1);
     items1 = [, ,];
     items1[0] = jsx(Pressable, obj);
     obj2 = { style: tmp.contentContainer, children: null };
     obj3 = { style: tmp.safetyShieldIconContainer, children: null };
-    obj4 = { style: tmp.safetyShieldIcon, source: require("registerAsset"), resizeMode: "contain" };
-    obj3[1] = jsx(onDismiss, obj4);
+    obj4 = { style: tmp.safetyShieldIcon, source: warningId(senderId[11]), resizeMode: "contain" };
+    obj3.children = jsx(onDismiss, obj4);
     items2 = [,];
     items2[0] = jsx(View, obj3);
     obj5 = { style: tmp.textContainer, children: null };
     obj6 = { style: tmp.text, variant: "heading-md/semibold", children: header };
     items3 = [,];
-    items3[0] = jsx(require("Text").Text, obj6);
+    items3[0] = jsx(channelId(senderId[12]).Text, obj6);
     obj7 = { style: tmp.text, variant: "heading-sm/normal", children: description };
-    items3[1] = jsx(require("Text").Text, obj7);
-    obj5[1] = items3;
+    items3[1] = jsx(channelId(senderId[12]).Text, obj7);
+    obj5.children = items3;
     items2[1] = jsxs(View, obj5);
-    obj2[1] = items2;
+    obj2.children = items2;
     items1[1] = jsxs(View, obj2);
     obj8 = {
       style: tmp.buttonsContainer,
-      children: buttons.map((text) => {
+      children: buttons.map((text, index) => {
         let str = text.variant;
         if (str == null) {
           str = "primary";
         }
-        return closure_7(
+        return closure_1_7(
           channelId(senderId[13]).Button,
           {
             size: "md",
@@ -86,18 +87,21 @@ class SafetyWarningBanner {
             onPress: text.onpress,
             grow: true,
           },
-          arg1,
+          index,
         );
       }),
     };
     items1[2] = jsx(View, obj8);
-    obj[1] = items1;
+    obj.children = items1;
     return jsxs(View, obj);
   }
 }
-({ Image: c4, Pressable: c5, View: closure_6 } = get_ActivityIndicator);
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = {
+get_ActivityIndicator = fn(17);
+({ Image: closure_4, Pressable: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+fn(4560);
+let createStyles = {
   container: null,
   contentContainer: null,
   safetyShieldIconContainer: null,
@@ -108,33 +112,32 @@ createCacheKey = {
   closeButtonIcon: null,
   buttonsContainer: null,
 };
-createCacheKey = {
-  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST,
-  paddingHorizontal: ThemesDefault.space.PX_16,
-  paddingVertical: ThemesDefault.space.PX_12,
+createStyles = {
+  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST,
+  paddingHorizontal: nativeDefault.space.PX_16,
+  paddingVertical: nativeDefault.space.PX_12,
 };
-const merged = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexDirection: "row", alignItems: "center" };
-createCacheKey[2] = { width: 42, height: 50 };
-createCacheKey[3] = { flex: 1, width: "auto", height: "auto" };
-createCacheKey[4] = { flex: 1, marginLeft: ThemesDefault.space.PX_16, marginRight: ThemesDefault.space.PX_40 };
-let obj1 = { flex: 1, marginLeft: ThemesDefault.space.PX_16, marginRight: ThemesDefault.space.PX_40 };
-createCacheKey[5] = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-let obj2 = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-createCacheKey[6] = {
-  position: "absolute",
-  top: ThemesDefault.space.PX_8,
-  right: ThemesDefault.space.PX_16,
-  zIndex: 1,
+const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
+createStyles.container = createStyles;
+createStyles.contentContainer = { flexDirection: "row", alignItems: "center" };
+createStyles.safetyShieldIconContainer = { width: 42, height: 50 };
+createStyles.safetyShieldIcon = { flex: 1, width: "auto", height: "auto" };
+createStyles.textContainer = { flex: 1, marginLeft: nativeDefault.space.PX_16, marginRight: nativeDefault.space.PX_40 };
+let obj1 = { flex: 1, marginLeft: nativeDefault.space.PX_16, marginRight: nativeDefault.space.PX_40 };
+createStyles.text = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+const rect = { position: "absolute", top: nativeDefault.space.PX_8, right: nativeDefault.space.PX_16, zIndex: 1 };
+createStyles.closeButton = rect;
+let obj2 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+createStyles.closeButtonIcon = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+let obj3 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+createStyles.buttonsContainer = {
+  flexDirection: "row",
+  marginTop: nativeDefault.space.PX_16,
+  gap: nativeDefault.space.PX_8,
 };
-let obj3 = { position: "absolute", top: ThemesDefault.space.PX_8, right: ThemesDefault.space.PX_16, zIndex: 1 };
-createCacheKey[7] = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-let obj4 = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-createCacheKey[8] = { flexDirection: "row", marginTop: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_8 };
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj5 = { flexDirection: "row", marginTop: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_8 };
-const result = require("set").fileFinishedImporting("modules/self_mod/shared/native/SafetyWarningBanner.tsx");
+const React7 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/self_mod/shared/native/SafetyWarningBanner.tsx");
 
 export default SafetyWarningBanner;
 export { SafetyWarningBanner };

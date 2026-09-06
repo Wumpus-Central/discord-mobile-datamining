@@ -1,5 +1,5 @@
 // discord_common/js/shared/utils/PathUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
 function getAuthenticationPath(login, arg1, flag, arg3) {
   let tmp = arg1;
@@ -49,7 +49,7 @@ class UnescapedPathParam {
 UnescapedPathParam.prototype["toString"] = function toString() {
   return this.value;
 };
-const result = set.fileFinishedImporting("../discord_common/js/shared/utils/PathUtils.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/utils/PathUtils.tsx");
 
 export const getLoginPath = function getLoginPath(arg0, flag) {
   if (flag === undefined) {
@@ -68,33 +68,33 @@ export const wrapPaths = function wrapPaths(frozen, arg1) {
   closure_1 = arg1;
   const obj = {};
   function _loop() {
-    const table = tmp2;
-    if (typeof table[closure_3] !== "function") {
+    closure_0 = tmp2;
+    if (typeof closure_0[closure_3] !== "function") {
       obj[tmp] = tmp2;
       return 1;
     } else {
       obj[tmp] = () => {
         const items = [...arguments];
-        const callback = closure_1_1;
-        return callback(
-          ...items.map((arg0) => {
-            if (null == arg0) {
-              return arg0;
-            } else if (arg0 instanceof closure_1_1) {
-              let str = arg0.toString();
+        closure_0 = closure_1;
+        return closure_0(
+          ...items.map((item) => {
+            if (null == item) {
+              return item;
+            } else if (item instanceof closure_2_1) {
+              let str = item.toString();
             } else if (null == closure_0) {
               let _encodeURIComponent = encodeURIComponent;
-              str = encodeURIComponent(arg0);
+              str = encodeURIComponent(item);
             } else {
               const _String = String;
-              str = String(arg0);
+              str = String(item);
               const parts = str.split("");
-              const mapped = parts.map((arg0) => {
-                if (null == closure_0) {
+              const mapped = parts.map((item) => {
+                if (null == closure_1_0) {
                   const _encodeURIComponent = encodeURIComponent;
-                  let encodeURIComponentResult = encodeURIComponent(arg0);
+                  let encodeURIComponentResult = encodeURIComponent(item);
                 } else {
-                  encodeURIComponentResult = arg0;
+                  encodeURIComponentResult = item;
                 }
                 return encodeURIComponentResult;
               });

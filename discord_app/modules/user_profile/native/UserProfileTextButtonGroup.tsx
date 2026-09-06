@@ -1,22 +1,22 @@
 // discord_app/modules/user_profile/native/UserProfileTextButtonGroup.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
 import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import { PROFILE_SIDE_PADDING } from "Constants.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = createCacheKey.createStyles({
+const View = fn(17).View;
+const PROFILE_SIDE_PADDING = fn(7208).PROFILE_SIDE_PADDING;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4560);
+let closure_6 = createStyles.createStyles({
   container: { flexDirection: "row", flexWrap: "wrap", gap: 12 },
   buttonArea: { flexGrow: 1 },
 });
-let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileTextButtonGroup.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileTextButtonGroup.tsx");
 
 export default function UserProfileTextButtonGroup(arg0) {
   ({ primaryButton, secondaryButton, maxWidth, style } = arg0);
-  let items = callback3();
+  let items = closure_6();
   const width = useWindowDimensionsDefault().width;
   let bound = width;
   if (null != maxWidth) {
@@ -34,37 +34,35 @@ export default function UserProfileTextButtonGroup(arg0) {
     items = [,];
     items[0] = items.container;
     items[1] = style;
-    obj[0] = items;
-    obj[1] = secondaryButton;
-    callback(View, obj);
+    obj.style = items;
+    obj.children = secondaryButton;
+    React4(View, obj);
   } else if (null == secondaryButton) {
     obj = { style: null, children: null };
     const items1 = [items.container, style];
-    obj[0] = items1;
-    obj[1] = primaryButton;
-    callback(View, obj);
+    obj.style = items1;
+    obj.children = primaryButton;
+    React4(View, obj);
   } else {
     const result = (diff - 12) / 2;
     obj = { style: null, children: null };
     const items2 = [items.container, style];
-    obj[0] = items2;
-    obj1 = { style: null, children: null };
+    obj.style = items2;
+    const obj1 = { style: null, children: null };
     const items3 = [items.buttonArea];
-    const obj2 = { minWidth: null };
-    obj2[0] = result;
+    const obj2 = { minWidth: result };
     items3[1] = obj2;
-    obj1[0] = items3;
-    obj1[1] = primaryButton;
-    const items4 = [callback(View, obj1)];
+    obj1.style = items3;
+    obj1.children = primaryButton;
+    const items4 = [React4(View, obj1)];
     const obj3 = { style: null, children: null };
     const items5 = [items.buttonArea];
-    const obj4 = { minWidth: null };
-    obj4[0] = result;
+    const obj4 = { minWidth: result };
     items5[1] = obj4;
-    obj3[0] = items5;
-    obj3[1] = secondaryButton;
-    items4[1] = callback(View, obj3);
-    obj[1] = items4;
-    callback2(View, obj);
+    obj3.style = items5;
+    obj3.children = secondaryButton;
+    items4[1] = React4(View, obj3);
+    obj.children = items4;
+    hasOwnProperty(View, obj);
   }
 }

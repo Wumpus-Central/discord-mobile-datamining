@@ -1,13 +1,14 @@
 // discord_app/modules/launchpad/native/LaunchPadConstants.tsx
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import DCDDeviceManager from "../../../utils/native/DeviceUtils.tsx";
-import set from "../../../utils/PlatformUtils.tsx";
+import _mod17 from "../../../../_runtime/metro/00017__.js";
+import DeviceUtils from "../../../utils/native/DeviceUtils.tsx";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const Dimensions = get_ActivityIndicator.Dimensions;
-const size = Dimensions.get("screen");
+const Dimensions = _mod17.Dimensions;
+let size = Dimensions.get("screen");
 let num = 24;
-if (!set.isAndroid()) {
-  const _module1 = DCDDeviceManager;
+if (!PlatformUtils.isAndroid()) {
+  const _module1 = DeviceUtils;
   let num2 = 13;
   if (!_module1.isIpadOS()) {
     const _Math = Math;
@@ -15,7 +16,7 @@ if (!set.isAndroid()) {
   }
   num = num2;
 }
-const result = set.fileFinishedImporting("modules/launchpad/native/LaunchPadConstants.tsx");
+const result = size.fileFinishedImporting("modules/launchpad/native/LaunchPadConstants.tsx");
 
 export const LAUNCH_PAD_SPRING_CONFIG = {
   damping: 20,

@@ -1,27 +1,28 @@
 // discord_app/modules/read_states/trackAckMessages.tsx
-import collectGuildAnalyticsMetadata from "../app_analytics/AppAnalyticsUtils.tsx";
-import closure_2 from "../../stores/ChannelStore.tsx";
-import closure_3 from "../../stores/GuildReadStateStore.tsx";
-import closure_4 from "../../stores/GuildStore.tsx";
-import closure_5 from "../../stores/UserGuildSettingsStore.tsx";
-import { AnalyticEvents } from "../../Constants.tsx";
+import AppAnalyticsUtils from "../app_analytics/AppAnalyticsUtils.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
+import GuildReadStateStore from "../../stores/GuildReadStateStore.tsx";
+import GuildStore from "../../stores/GuildStore.tsx";
+import UserGuildSettingsStore from "../../stores/UserGuildSettingsStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/read_states/trackAckMessages.tsx");
+require = fn;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/read_states/trackAckMessages.tsx");
 
-export default function trackAckMessages(channel_id) {
-  channel = channel.getChannel(channel_id);
+export default function trackAckMessages(channel_id, location) {
+  const channel = ChannelStore.getChannel(channel_id);
   const obj = { channel_id, guild_id: null, location: null, guild_unread_statuses: null };
   let guildId;
   if (null != channel) {
     guildId = channel.getGuildId();
   }
-  obj[1] = guildId;
-  obj[2] = arg1;
-  guildsArray = guildsArray.getGuildsArray();
-  obj[3] = guildsArray.map((id) => {
-    const mentionCount = closure_3.getMentionCount(id.id);
-    const hasUnreadResult = closure_3.hasUnread(id.id);
+  obj.guild_id = guildId;
+  obj.location = location;
+  const guildsArray = GuildStore.getGuildsArray();
+  obj.guild_unread_statuses = guildsArray.map((id) => {
+    const mentionCount = GuildReadStateStore.getMentionCount(id.id);
+    const hasUnreadResult = GuildReadStateStore.hasUnread(id.id);
     return (
       "" +
       id.id +
@@ -30,10 +31,10 @@ export default function trackAckMessages(channel_id) {
       "," +
       mentionCount +
       "," +
-      closure_5.isMuted(id.id) +
+      UserGuildSettingsStore.isMuted(id.id) +
       "," +
-      closure_5.resolveGuildUnreadSetting(id)
+      UserGuildSettingsStore.resolveGuildUnreadSetting(id)
     );
   });
-  collectGuildAnalyticsMetadata.trackWithMetadata(AnalyticEvents.ACK_MESSAGES, obj);
+  AppAnalyticsUtils.trackWithMetadata(AnalyticEvents.ACK_MESSAGES, obj);
 }

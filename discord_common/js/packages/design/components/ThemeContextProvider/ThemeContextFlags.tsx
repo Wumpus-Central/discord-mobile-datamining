@@ -1,8 +1,8 @@
 // discord_common/js/packages/design/components/ThemeContextProvider/ThemeContextFlags.tsx
-import set from "../../../../../../_runtime/00002_set.js";
-import json from "ThemeContext.tsx";
+import ThemeContext from "ThemeContext.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting(
+const result = size.fileFinishedImporting(
   "../discord_common/js/packages/design/components/ThemeContextProvider/ThemeContextFlags.tsx",
 );
 
@@ -21,9 +21,9 @@ export const ThemeContextFlags = {
 export const hasThemeFlag = function hasThemeFlag(flags, MOBILE_DARK_GRADIENT_THEME_ENABLED) {
   return (flags.flags & MOBILE_DARK_GRADIENT_THEME_ENABLED) === MOBILE_DARK_GRADIENT_THEME_ENABLED;
 };
-export const setThemeFlag = function setThemeFlag(arg0, MOBILE_DARK_GRADIENT_THEME_ENABLED) {
-  return arg0 | MOBILE_DARK_GRADIENT_THEME_ENABLED;
+export const setThemeFlag = function setThemeFlag(tmpResult, MOBILE_DARK_GRADIENT_THEME_ENABLED) {
+  return tmpResult | MOBILE_DARK_GRADIENT_THEME_ENABLED;
 };
 export const useThemeFlag = function useThemeFlag(arg0) {
-  return (json.useThemeContext().flags & arg0) === arg0;
+  return (ThemeContext.useThemeContext().flags & arg0) === arg0;
 };

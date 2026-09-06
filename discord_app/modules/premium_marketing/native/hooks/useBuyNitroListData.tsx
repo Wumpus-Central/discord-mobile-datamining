@@ -1,27 +1,27 @@
 // discord_app/modules/premium_marketing/native/hooks/useBuyNitroListData.tsx
-import closure_2 from "../../../../../_runtime/00019_noop.js";
-import { AnalyticEvents } from "../../../../Constants.tsx";
+import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const result = require("set").fileFinishedImporting("modules/premium_marketing/native/hooks/useBuyNitroListData.tsx");
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium_marketing/native/hooks/useBuyNitroListData.tsx");
 
 export default function useBuyNitroListData(selection) {
   selection = selection.selection;
   const setTier = selection.setTier;
-  let analyticsLocations = setTier;
-  dependencyMap = undefined;
-  let React;
-  const tmp = analyticsLocations(13360)(selection.tier);
-  const ref = React.useRef(null);
-  dependencyMap = ref;
-  React = React.useRef(false);
+  let ref;
+  noop = undefined;
+  const tmp = setTier(ref[4])(selection.tier);
+  ref = noop.useRef(null);
+  noop = noop.useRef(false);
   const items = [setTier];
   const items1 = [tmp];
-  const callback = React.useCallback((c4) => {
+  const callback = noop.useCallback((arg0) => {
     closure_2.current = true;
-    analyticsLocations(c4);
+    setTier(arg0);
   }, items);
-  const effect = React.useEffect(() => {
-    if (ref2.current) {
+  const effect = noop.useEffect(() => {
+    if (ref.current) {
       tmp.current = false;
       const _requestAnimationFrame = requestAnimationFrame;
       closure_0 = requestAnimationFrame(() => {
@@ -36,26 +36,22 @@ export default function useBuyNitroListData(selection) {
     }
   }, items1);
   let obj = { onScroll: null, onSelectNitroTier: null, listData: null, listRef: null };
-  analyticsLocations = undefined;
-  dependencyMap = undefined;
-  analyticsLocations = analyticsLocations(7162)().analyticsLocations;
-  dependencyMap = React.useRef(false);
-  obj[0] = function onScroll(nativeEvent) {
+  const analyticsLocations = setTier(ref[2])().analyticsLocations;
+  closure_129_1 = noop.useRef(false);
+  obj.onScroll = function onScroll(nativeEvent) {
     const current = ref.current;
     let tmp4 = !current;
     if (!current) {
       tmp4 = nativeEvent.nativeEvent.layoutMeasurement.height + tmp.y >= tmp2.height;
     }
     if (tmp4) {
-      let obj = analyticsLocations(ref[3]);
-      obj = { location_stack: null };
-      obj[0] = analyticsLocations;
-      obj.track(closure_1_3.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, obj);
+      const obj = { location_stack: setTier };
+      obj.track(AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, obj);
       ref.current = true;
     }
   };
-  obj[1] = callback;
-  obj[2] = tmp;
-  obj[3] = ref;
+  obj.onSelectNitroTier = callback;
+  obj.listData = tmp;
+  obj.listRef = ref;
   return obj;
 }

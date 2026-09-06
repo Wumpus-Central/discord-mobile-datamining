@@ -1,56 +1,58 @@
 // discord_app/modules/premium/native/hooks/usePremiumPlanPrice.tsx
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../../stores/billing/SubscriptionPlanStore.tsx";
-import closure_5 from "../../../../stores/billing/SubscriptionStore.tsx";
-import closure_6 from "../../../../stores/native/IAPStore.android.tsx";
-import { PaymentGateways } from "../../../../../discord_common/js/shared/Constants.tsx";
+import SubscriptionPlanActionCreators from "../../../../actions/SubscriptionPlanActionCreators.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import SubscriptionPlanStore from "../../../../stores/billing/SubscriptionPlanStore.tsx";
+import SubscriptionStore from "../../../../stores/billing/SubscriptionStore.tsx";
+import IAPStore from "../../../../stores/native/IAPStore.android.tsx";
 
-const require = arg1;
-let obj = { IAP: "IAP", API: "API" };
-const result = require("set").fileFinishedImporting("modules/premium/native/hooks/usePremiumPlanPrice.tsx");
+require = fn;
+const PaymentGateways = fn(1085).PaymentGateways;
+const PremiumPlanPriceSource = { IAP: "IAP", API: "API" };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/native/hooks/usePremiumPlanPrice.tsx");
 
 export default function usePremiumPlanPrice(arg0) {
-  const _require = arg0;
+  _require = arg0;
   let formatPrice = _require;
   let amount = priceState;
-  obj = _require(priceState[5]);
+  let obj = require("initialize");
   const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => closure_5.getPremiumTypeSubscription());
-  const NitroACOMSubscriptionExperiment = _require(priceState[6]).NitroACOMSubscriptionExperiment;
+  const NitroACOMSubscriptionExperiment = require("ACOMExperiments").NitroACOMSubscriptionExperiment;
   let enabled = NitroACOMSubscriptionExperiment.useConfig({ location: "usePremiumPlanPrice" }).enabled;
   storeFront = storeFront(priceState[7]).useNativeIAPPayments().storeFront;
   const obj2 = storeFront(priceState[7]);
   const tmp2 = storeFront;
-  const items1 = [closure_4];
+  const items1 = [SubscriptionPlanStore];
   const items2 = [arg0];
-  const stateFromStores1 = _require(priceState[5]).useStateFromStores(
+  const stateFromStores1 = require("initialize").useStateFromStores(
     items1,
     () => {
-      let value = null;
+      value = null;
       if (null != closure_0) {
-        value = isIOSResult.get(tmp);
+        value = SubscriptionPlanStore.get(tmp);
       }
       return value;
     },
     items2,
   );
-  const obj3 = _require(priceState[5]);
+  const obj3 = require("initialize");
   ({ price, priceState } = storeFront(priceState[8])(stateFromStores1, storeFront));
   let tmp5 = null;
   let tmp6 = null;
   if (null != arg0) {
     tmp6 = formatPrice(amount[9]).BasePlanIdToProductId[arg0];
   }
-  const React = tmp6;
+  noop = tmp6;
   const tmp4 = storeFront(priceState[8])(stateFromStores1, storeFront);
-  const items3 = [closure_6];
+  const items3 = [IAPStore];
   const items4 = [tmp6];
   const stateFromStores2 = formatPrice(amount[5]).useStateFromStores(
     items3,
     () => {
       let product = null;
       if (null != closure_3) {
-        product = closure_1_6.getProduct(tmp);
+        product = IAPStore.getProduct(tmp);
       }
       return product;
     },
@@ -68,13 +70,13 @@ export default function usePremiumPlanPrice(arg0) {
     }
     isIOSResult = enabled;
   }
-  closure_4 = isIOSResult;
+  SubscriptionPlanStore = isIOSResult;
   const tmp10 = tmp2(amount[11])(() => new storeFront(priceState[12])(500, 10000));
   closure_5 = tmp10;
   const items5 = [isIOSResult, priceState, storeFront, tmp10];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (closure_4) {
-      if (priceState !== callback(priceState[8]).PriceStates.PRICE_AVAILABLE) {
+      if (priceState !== closure_0(priceState[8]).PriceStates.PRICE_AVAILABLE) {
         if (tmp === tmp2(tmp3[8]).PriceStates.MISMATCHING_COUNTRIES) {
           let country;
           if (storeFront != null) {
@@ -86,19 +88,19 @@ export default function usePremiumPlanPrice(arg0) {
                 if (obj.fails < 3) {
                   country = tmp6.country;
                   obj.fail(() => {
-                    if (!isIOSResult.isFetchingForPremiumSKUs()) {
-                      obj = country(priceState[13]);
+                    if (!SubscriptionPlanStore.isFetchingForPremiumSKUs()) {
+                      const obj = SubscriptionPlanActionCreators;
                       const premiumSubscriptionPlans = obj.fetchPremiumSubscriptionPlans(
                         country,
                         undefined,
                         undefined,
-                        closure_2_7.APPLE_ADVANCED_COMMERCE,
+                        PaymentGateways.APPLE_ADVANCED_COMMERCE,
                       );
                       premiumSubscriptionPlans.catch(() => {});
                     }
                   });
                   return () => {
-                    closure_5.cancel();
+                    closure_1_5.cancel();
                   };
                 }
               }
@@ -113,45 +115,37 @@ export default function usePremiumPlanPrice(arg0) {
   if (tmp5 == arg0) {
     return null;
   } else if (isIOSResult) {
-    let tmp15 = null;
     if (priceState === formatPrice(amount[8]).PriceStates.PRICE_AVAILABLE) {
-      tmp15 = null;
       if (tmp5 != price) {
         obj = { price: null, currency: null, countryCode: null, priceString: null, source: null };
-        ({ amount: obj7[0], currency: obj7[1] } = price);
+        ({ amount: obj7.price, currency: obj7.currency } = price);
         tmp5 = storeFront == tmp5;
         let country;
         if (!tmp5) {
           country = storeFront.country;
         }
-        obj[2] = country;
+        obj.countryCode = country;
         priceState = formatPrice(amount[14]);
         formatPrice = priceState.formatPrice;
         amount = price.amount;
         price = formatPrice(amount, price.currency);
-        obj[3] = price;
-        obj[4] = obj.API;
-        tmp15 = obj;
+        obj.priceString = price;
+        obj.source = obj.API;
       }
     }
-    let tmp12 = tmp15;
-  } else {
-    tmp12 = null;
-    if (tmp5 != stateFromStores2) {
-      obj = { price: null, currency: null, countryCode: null, priceString: null, source: null };
-      ({ price: obj6[0], currencyCode: obj6[1] } = stateFromStores2);
-      let country1;
-      if (storeFront != tmp5) {
-        country1 = storeFront.country;
-      }
-      if (country1 == tmp5) {
-        country1 = stateFromStores2.countryCode;
-      }
-      obj[2] = country1;
-      obj[3] = stateFromStores2.priceString;
-      obj[4] = obj.IAP;
-      tmp12 = obj;
+  } else if (tmp5 != stateFromStores2) {
+    obj = { price: null, currency: null, countryCode: null, priceString: null, source: null };
+    ({ price: obj6.price, currencyCode: obj6.currency } = stateFromStores2);
+    let country1;
+    if (storeFront != tmp5) {
+      country1 = storeFront.country;
     }
+    if (country1 == tmp5) {
+      country1 = stateFromStores2.countryCode;
+    }
+    obj.countryCode = country1;
+    obj.priceString = stateFromStores2.priceString;
+    obj.source = obj.IAP;
   }
 }
-export const PremiumPlanPriceSource = obj;
+export { PremiumPlanPriceSource };

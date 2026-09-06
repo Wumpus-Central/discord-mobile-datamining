@@ -1,23 +1,20 @@
 // discord_app/actions/DraftActionCreators.tsx
-import set from "../../_runtime/00002_set.js";
-import dispatcherDefault from "../Dispatcher.tsx";
+import DispatcherDefault from "../Dispatcher.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("actions/DraftActionCreators.tsx");
+const result = size.fileFinishedImporting("actions/DraftActionCreators.tsx");
 
 export default {
   clearDraft(id, ThreadSettings) {
-    let obj = dispatcherDefault;
-    obj = { type: "DRAFT_CLEAR", channelId: id, draftType: ThreadSettings };
+    const obj = { type: "DRAFT_CLEAR", channelId: id, draftType: ThreadSettings };
     obj.dispatch(obj);
   },
   clearDraftCommand(channelId, draftType) {
-    let obj = dispatcherDefault;
-    obj = { type: "DRAFT_COMMAND_CLEAR", channelId, draftType };
+    const obj = { type: "DRAFT_COMMAND_CLEAR", channelId, draftType };
     obj.dispatch(obj);
   },
   saveDraft(id, result1, ChannelMessage, toDraftCommandResult) {
-    let obj = dispatcherDefault;
-    obj = {
+    const obj = {
       type: "DRAFT_SAVE",
       channelId: id,
       draft: result1,
@@ -26,19 +23,16 @@ export default {
     };
     obj.dispatch(obj);
   },
-  changeDraft(id, draft, ChannelMessage) {
-    let obj = dispatcherDefault;
-    obj = { type: "DRAFT_CHANGE", channelId: id, draft, draftType: ChannelMessage, command: arg3 };
+  changeDraft(id, draft, ChannelMessage, command) {
+    const obj = { type: "DRAFT_CHANGE", channelId: id, draft, draftType: ChannelMessage, command };
     obj.dispatch(obj);
   },
   changeThreadSettings(id, draft) {
-    let obj = dispatcherDefault;
-    obj = { type: "THREAD_SETTINGS_DRAFT_CHANGE", channelId: id, draft };
+    const obj = { type: "THREAD_SETTINGS_DRAFT_CHANGE", channelId: id, draft };
     obj.dispatch(obj);
   },
-  changeScheduledMessage(closure_0, draft) {
-    let obj = dispatcherDefault;
-    obj = { type: "SCHEDULED_MESSAGE_DRAFT_CHANGE", channelId: closure_0, draft };
+  changeScheduledMessage(channelId, draft) {
+    const obj = { type: "SCHEDULED_MESSAGE_DRAFT_CHANGE", channelId, draft };
     obj.dispatch(obj);
   },
 };

@@ -1,60 +1,63 @@
 // discord_app/modules/external_pip/ExternalPipView.android.tsx
-import ExternalPipViewVideoUnavailableDefault from "ExternalPipViewVideo.android.tsx";
-import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../_runtime/00019_noop.js";
-import closure_4 from "../panels/morphable/AppFreezeStore.tsx";
-import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
+import ExternalPipDefault from "ExternalPip.android.tsx";
+import ExternalPipViewVideoDefault from "ExternalPipViewVideo.android.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import noop from "../../../_runtime/metro/00019__.js";
+import AppFreezeStore from "../panels/morphable/AppFreezeStore.tsx";
 
 function FreezeAfterLayoutPipView() {
-  importDefault = React.useRef(false);
-  const onLayout = React.useCallback(() => {
+  importDefault = noop.useRef(false);
+  const onLayout = noop.useCallback(() => {
     if (!ref.current) {
       tmp.current = true;
-      const state = closure_1_4.getState();
+      state = AppFreezeStore.getState();
       const freezeLock = state.requestFreezeLock({ lockEnabled: true, key: "external-pip" });
     }
   }, []);
-  const effect = React.useEffect(
+  const effect = noop.useEffect(
     () => () => {
       if (ref.current) {
-        const state = closure_1_4.getState();
+        state = state.getState();
         const freezeLock = state.requestFreezeLock({ lockEnabled: false, key: "external-pip" });
       }
     },
     [],
   );
-  return jsx(ExternalPipViewVideoUnavailableDefault, { onLayout });
+  return jsx(ExternalPipViewVideoDefault, { onLayout });
 }
-const result = require("set").fileFinishedImporting("modules/external_pip/ExternalPipView.android.tsx");
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/external_pip/ExternalPipView.android.tsx");
 
 export default function ExternalPipView() {
   const obj = { disabled: null };
-  const tmp = importDefault(callback[4]);
-  obj[0] = !importDefault(callback[5]).isSupported();
-  importDefault = undefined;
-  const obj2 = importDefault(callback[5]);
-  [tmp3, c0] = callback(React.useState(false), 2);
-  callback = React.useCallback((arg0) => {
-    _undefined(arg0);
+  const tmp = externalPipEnabled(callback[4]);
+  obj.disabled = !externalPipEnabled(callback[5]).isSupported();
+  externalPipEnabled = tmp(obj).externalPipEnabled;
+  closure_129_0 = undefined;
+  const obj2 = externalPipEnabled(callback[5]);
+  [tmp3, closure_129_0] = _slicedToArray(noop.useState(false), 2);
+  callback = noop.useCallback((arg0) => {
+    externalPipEnabled(arg0);
     if (!arg0) {
-      const state = closure_1_4.getState();
+      const state = AppFreezeStore.getState();
       const freezeLock = state.requestFreezeLock({ lockEnabled: false, key: "external-pip" });
     }
   }, []);
-  const effect = React.useEffect(
+  const effect = noop.useEffect(
     () => () => {
       state = state.getState();
       const freezeLock = state.requestFreezeLock({ lockEnabled: false, key: "external-pip" });
     },
     [],
   );
-  const items = [tmp(obj).externalPipEnabled];
-  const effect1 = React.useEffect(() => {
-    _undefined(callback[5]).setEnabled(_undefined);
+  const items = [externalPipEnabled];
+  const effect1 = noop.useEffect(() => {
+    ExternalPipDefault.setEnabled(externalPipEnabled);
   }, items);
   const items1 = [callback];
-  const effect2 = React.useEffect(() => {
-    closure_0 = _undefined(callback[5]).addOnPipModeChangedListener((arg0) => {
+  const effect2 = noop.useEffect(() => {
+    closure_0 = externalPipEnabled(callback[5]).addOnPipModeChangedListener((arg0) => {
       callback(arg0);
     });
     return () => {
@@ -66,8 +69,8 @@ export default function ExternalPipView() {
     };
   }, items1);
   const items2 = [callback];
-  const effect3 = React.useEffect(() => {
-    closure_0 = _undefined(callback[5]).addOnPipModeWillChangeListener(() => {
+  const effect3 = noop.useEffect(() => {
+    closure_0 = externalPipEnabled(callback[5]).addOnPipModeWillChangeListener(() => {
       callback(true);
     });
     return () => {

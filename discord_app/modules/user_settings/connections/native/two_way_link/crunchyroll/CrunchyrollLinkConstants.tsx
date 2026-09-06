@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkConstants.tsx
-import set from "../../../../../../../_runtime/00002_set.js";
+import size from "../../../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting(
+const result = size.fileFinishedImporting(
   "modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkConstants.tsx",
 );
 

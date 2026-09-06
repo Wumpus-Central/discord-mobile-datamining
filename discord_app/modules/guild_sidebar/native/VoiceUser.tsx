@@ -1,51 +1,48 @@
 // discord_app/modules/guild_sidebar/native/VoiceUser.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import closure_3 from "../../activities/EmbeddedActivitiesStore.tsx";
-import closure_4 from "../../calls/ChannelRTCStore.tsx";
-import closure_5 from "../../../stores/ApplicationStreamingStore.tsx";
-import closure_6 from "../../../stores/AuthenticationStore.tsx";
-import closure_7 from "../../../stores/MediaEngineStore.tsx";
-import closure_8 from "../../../stores/SessionsStore.tsx";
-import closure_9 from "../../../stores/VoiceStateStore.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import noop from "../../../../_runtime/metro/00019__.js";
+import EmbeddedActivitiesStore from "../../activities/EmbeddedActivitiesStore.tsx";
+import ChannelRTCStore from "../../calls/ChannelRTCStore.tsx";
+import ApplicationStreamingStore from "../../../stores/ApplicationStreamingStore.tsx";
+import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
+import MediaEngineStore from "../../../stores/MediaEngineStore.tsx";
+import SessionsStore from "../../../stores/SessionsStore.tsx";
+import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
 
-const require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/guild_sidebar/native/VoiceUser.tsx");
+const require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_sidebar/native/VoiceUser.tsx");
 
 export default function VoiceUserConnected(channel) {
   channel = channel.channel;
   const user = channel.user;
   const sessionId = channel.sessionId;
   ({ selfVideo, mute } = channel);
-  closure_3 = undefined;
-  let obj = id;
+  let obj = AuthenticationStore;
   ({ member, selfMute, selfDeaf, deaf, suppress, collapsed, isGuest } = channel);
-  const tmp = id.getId() === user.id;
+  const tmp = AuthenticationStore.getId() === user.id;
   closure_3 = tmp;
-  const items = [closure_7];
+  const items = [MediaEngineStore];
   const stateFromStoresObject = channel(sessionId[9]).useStateFromStoresObject(items, () => {
     if (closure_3) {
-      let obj = { localMute: false, localDeaf: false, localVideo: null };
-      obj[2] = closure_1_7.isVideoEnabled();
+      let obj = { localMute: false, localDeaf: false, localVideo: MediaEngineStore.isVideoEnabled() };
     } else {
-      obj = { localMute: null, localDeaf: false, localVideo: false };
-      obj[0] = closure_1_7.isLocalMute(user.id);
+      obj = { localMute: MediaEngineStore.isLocalMute(user.id), localDeaf: false, localVideo: false };
     }
     return obj;
   });
   ({ localMute, localVideo } = stateFromStoresObject);
   const obj2 = channel(sessionId[9]);
-  const items1 = [closure_5];
+  const items1 = [ApplicationStreamingStore];
   const stateFromStores = channel(sessionId[9]).useStateFromStores(items1, () =>
-    closure_1_5.getStreamForUser(user.id, channel.getGuildId()),
+    ApplicationStreamingStore.getStreamForUser(user.id, channel.getGuildId()),
   );
   const obj3 = channel(sessionId[9]);
-  const items2 = [closure_8];
+  const items2 = [SessionsStore];
   const stateFromStores1 = channel(sessionId[9]).useStateFromStores(items2, () => {
     let tmp2;
     if (null != sessionId) {
-      const sessionById = closure_1_8.getSessionById(tmp);
+      const sessionById = SessionsStore.getSessionById(tmp);
       let os;
       if (sessionById != null) {
         os = sessionById.clientInfo.os;
@@ -55,12 +52,12 @@ export default function VoiceUserConnected(channel) {
     return tmp2;
   });
   const obj4 = channel(sessionId[9]);
-  const items3 = [closure_9];
+  const items3 = [VoiceStateStore];
   const items4 = [channel.id, user.id];
   let tmp8 = null != sessionId;
   const stateFromStores2 = channel(sessionId[9]).useStateFromStores(
     items3,
-    () => closure_1_9.getVoicePlatformForChannel(channel.id, user.id),
+    () => VoiceStateStore.getVoicePlatformForChannel(channel.id, user.id),
     items4,
   );
   if (tmp8) {
@@ -75,7 +72,7 @@ export default function VoiceUserConnected(channel) {
   const stateFromStores3 = tmp2Result.useStateFromStores(
     items5,
     () => {
-      embeddedActivitiesForChannel = embeddedActivitiesForChannel.getEmbeddedActivitiesForChannel(channel.id);
+      const embeddedActivitiesForChannel = EmbeddedActivitiesStore.getEmbeddedActivitiesForChannel(channel.id);
       return embeddedActivitiesForChannel.find((userIds) => {
         userIds = userIds.userIds;
         return userIds.has(id.id);
@@ -84,9 +81,9 @@ export default function VoiceUserConnected(channel) {
     items6,
   );
   tmp2Result = tmp2(tmp3[9]);
-  const items7 = [closure_4];
+  const items7 = [ChannelRTCStore];
   const stateFromStores4 = tmp2Result.useStateFromStores(items7, () => {
-    const guildRingingUsers = closure_1_4.getGuildRingingUsers(channel.id);
+    const guildRingingUsers = ChannelRTCStore.getGuildRingingUsers(channel.id);
     return guildRingingUsers.has(user.id);
   });
   obj = {
@@ -114,25 +111,25 @@ export default function VoiceUserConnected(channel) {
   if (!mute) {
     mute = suppress;
   }
-  obj[5] = mute;
-  obj[6] = deaf;
-  obj[7] = selfMute;
-  obj[8] = selfDeaf;
-  obj[9] = localMute;
+  obj.serverMute = mute;
+  obj.serverDeaf = deaf;
+  obj.mute = selfMute;
+  obj.deaf = selfDeaf;
+  obj.localMute = localMute;
   if (!selfVideo) {
     selfVideo = localVideo;
   }
-  obj[10] = selfVideo;
+  obj.video = selfVideo;
   let channelId;
   if (stateFromStores != null) {
     channelId = stateFromStores.channelId;
   }
-  obj[11] = channelId === channel.id;
-  obj[12] = stateFromStores1;
-  obj[13] = null == stateFromStores1 && tmp8;
-  obj[14] = null != stateFromStores3;
-  obj[15] = isGuest;
-  obj[16] = stateFromStores2;
-  obj[17] = stateFromStores4;
+  obj.stream = channelId === channel.id;
+  obj.platform = stateFromStores1;
+  obj.disabled = null == stateFromStores1 && tmp8;
+  obj.isInEmbeddedActivity = null != stateFromStores3;
+  obj.isGuest = isGuest;
+  obj.voicePlatform = stateFromStores2;
+  obj.ringing = stateFromStores4;
   return tmp11(user(sessionId[10]), obj);
 }

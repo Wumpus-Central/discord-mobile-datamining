@@ -1,10 +1,10 @@
 // discord_app/modules/feedback/shouldShowLogUploadForCategory.tsx
-import set from "../../../_runtime/00002_set.js";
-import FeedbackRating2 from "Constants.tsx";
+import Constants from "Constants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const FeedbackRating = FeedbackRating2.FeedbackRating;
+const FeedbackRating = Constants.FeedbackRating;
 let closure_1 = {};
-const result = set.fileFinishedImporting("modules/feedback/shouldShowLogUploadForCategory.tsx");
+const result = size.fileFinishedImporting("modules/feedback/shouldShowLogUploadForCategory.tsx");
 
 export const shouldShowLogUploadForCategory = function shouldShowLogUploadForCategory(rating, category, reason) {
   if (rating !== FeedbackRating.BAD) {
@@ -16,7 +16,7 @@ export const shouldShowLogUploadForCategory = function shouldShowLogUploadForCat
     return false;
   } else {
     let num2 = 0.01;
-    if (null != table[category]) {
+    if (null != closure_1[category]) {
       let num3 = tmp2[reason.value];
       if (num3 == null) {
         num3 = 0.01;

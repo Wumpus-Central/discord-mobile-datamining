@@ -1,10 +1,10 @@
 // discord_app/modules/interaction_components/LocalInteractionComponentStateStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
 import LimitedMapDefault from "../../lib/LimitedMap.tsx";
 
 let closure_0 = new LimitedMapDefault(196606);
-let c1 = 0;
+let closure_1 = 0;
 const tmp2 = new LimitedMapDefault(196606);
 let closure_2 = new LimitedMapDefault(196606);
 const tmp3 = new LimitedMapDefault(196606);
@@ -16,10 +16,10 @@ prototype["getInteractionComponentStates"] = function getInteractionComponentSta
   return closure_0;
 };
 prototype["getInteractionComponentStateVersion"] = function getInteractionComponentStateVersion() {
-  return c1;
+  return closure_1;
 };
-prototype["getInteractionComponentState"] = function getInteractionComponentState(closure_0, id) {
-  let value = store.get(closure_0);
+prototype["getInteractionComponentState"] = function getInteractionComponentState(customId, id) {
+  value = closure_0.get(customId);
   let tmp = null;
   if (null != value) {
     value = value.get(id);
@@ -31,67 +31,67 @@ prototype["getInteractionComponentState"] = function getInteractionComponentStat
   return tmp;
 };
 LocalInteractionComponentStateStore.displayName = "LocalInteractionComponentStateStore";
-const localInteractionComponentStateStore = new LocalInteractionComponentStateStore(dispatcherDefault, {
+const localInteractionComponentStateStore = new LocalInteractionComponentStateStore(DispatcherDefault, {
   LOGOUT: function handleInit() {
-    store.clear();
-    store2.clear();
-    store3.clear();
+    closure_0.clear();
+    closure_2.clear();
+    closure_3.clear();
     closure_1 = closure_1 + 1;
   },
   QUEUE_INTERACTION_COMPONENT_STATE: function handleQueueActionComponentState(state) {
     ({ messageId, nonce, componentId } = state);
-    const result = store2.set(messageId, nonce);
-    const result1 = store3.set(nonce, { messageId, componentId });
-    let map = store.get(messageId);
+    const result = closure_2.set(messageId, nonce);
+    const result1 = closure_3.set(nonce, { messageId, componentId });
+    let map = closure_0.get(messageId);
     if (map == null) {
       const _Map = Map;
       map = new Map();
     }
     const result2 = map.set(componentId, state.state);
-    const result3 = store.set(messageId, map);
+    const result3 = closure_0.set(messageId, map);
     closure_1 = closure_1 + 1;
   },
   SET_INTERACTION_COMPONENT_STATE: function handleSetInteractionComponentState(rootContainerId) {
     rootContainerId = rootContainerId.rootContainerId;
     ({ componentId, state } = rootContainerId);
-    let map = store.get(rootContainerId);
+    let map = closure_0.get(rootContainerId);
     if (map == null) {
       const _Map = Map;
       map = new Map();
     }
     const result = map.set(componentId, state);
-    const result1 = store.set(rootContainerId, map);
+    const result1 = closure_0.set(rootContainerId, map);
     closure_1 = closure_1 + 1;
   },
   MESSAGE_DELETE: function handleMessageDelete(id) {
     id = id.id;
-    if (store.has(id)) {
-      const value = store2.get(id);
+    if (closure_0.has(id)) {
+      value = closure_2.get(id);
       if (null != value) {
-        store3.delete(value);
+        closure_3.delete(value);
       }
-      store2.delete(id);
+      closure_2.delete(id);
       obj.delete(id);
       closure_1 = closure_1 + 1;
     } else {
       return false;
     }
-    obj = store;
+    obj = closure_0;
   },
   MESSAGE_UPDATE: function handleMessageUpdate(message) {
     message = message.message;
     if (null != message.id) {
-      if (store.has(message.id)) {
+      if (closure_0.has(message.id)) {
         const id = message.id;
-        const value = store2.get(id);
+        value = closure_2.get(id);
         if (null != value) {
-          store3.delete(value);
+          closure_3.delete(value);
         }
-        store2.delete(id);
+        closure_2.delete(id);
         obj.delete(id);
         closure_1 = closure_1 + 1;
       }
-      obj = store;
+      obj = closure_0;
     }
     return false;
   },
@@ -100,15 +100,15 @@ const localInteractionComponentStateStore = new LocalInteractionComponentStateSt
     if (null == nonce) {
       return false;
     } else {
-      const value = store3.get(nonce);
+      value = closure_3.get(nonce);
       if (null == value) {
         return false;
       } else {
-        store2.delete(value.messageId);
+        closure_2.delete(value.messageId);
         obj.delete(nonce);
         closure_1 = closure_1 + 1;
       }
-      obj = store3;
+      obj = closure_3;
     }
   },
   INTERACTION_FAILURE: function handleInteractionFailure(nonce) {
@@ -116,17 +116,17 @@ const localInteractionComponentStateStore = new LocalInteractionComponentStateSt
     if (null == nonce) {
       return false;
     } else {
-      let value = store3.get(nonce);
+      value = closure_3.get(nonce);
       if (null == value) {
         return false;
       } else {
         ({ componentId, messageId } = value);
-        value = store.get(messageId);
+        value = closure_0.get(messageId);
         if (null != value) {
           if (value.has(componentId)) {
             value.delete(componentId);
             if (0 === value.size) {
-              store.delete(messageId);
+              closure_0.delete(messageId);
             }
             closure_1 = closure_1 + 1;
           }
@@ -135,121 +135,11 @@ const localInteractionComponentStateStore = new LocalInteractionComponentStateSt
     }
   },
   CLEAR_INTERACTION_MODAL_STATE: function handleClearInteractionModalState(customId) {
-    store.delete(customId.customId);
+    closure_0.delete(customId.customId);
     closure_1 = closure_1 + 1;
   },
 });
-let obj = {
-  LOGOUT: function handleInit() {
-    store.clear();
-    store2.clear();
-    store3.clear();
-    closure_1 = closure_1 + 1;
-  },
-  QUEUE_INTERACTION_COMPONENT_STATE: function handleQueueActionComponentState(state) {
-    ({ messageId, nonce, componentId } = state);
-    const result = store2.set(messageId, nonce);
-    const result1 = store3.set(nonce, { messageId, componentId });
-    let map = store.get(messageId);
-    if (map == null) {
-      const _Map = Map;
-      map = new Map();
-    }
-    const result2 = map.set(componentId, state.state);
-    const result3 = store.set(messageId, map);
-    closure_1 = closure_1 + 1;
-  },
-  SET_INTERACTION_COMPONENT_STATE: function handleSetInteractionComponentState(rootContainerId) {
-    rootContainerId = rootContainerId.rootContainerId;
-    ({ componentId, state } = rootContainerId);
-    let map = store.get(rootContainerId);
-    if (map == null) {
-      const _Map = Map;
-      map = new Map();
-    }
-    const result = map.set(componentId, state);
-    const result1 = store.set(rootContainerId, map);
-    closure_1 = closure_1 + 1;
-  },
-  MESSAGE_DELETE: function handleMessageDelete(id) {
-    id = id.id;
-    if (store.has(id)) {
-      const value = store2.get(id);
-      if (null != value) {
-        store3.delete(value);
-      }
-      store2.delete(id);
-      obj.delete(id);
-      closure_1 = closure_1 + 1;
-    } else {
-      return false;
-    }
-    obj = store;
-  },
-  MESSAGE_UPDATE: function handleMessageUpdate(message) {
-    message = message.message;
-    if (null != message.id) {
-      if (store.has(message.id)) {
-        const id = message.id;
-        const value = store2.get(id);
-        if (null != value) {
-          store3.delete(value);
-        }
-        store2.delete(id);
-        obj.delete(id);
-        closure_1 = closure_1 + 1;
-      }
-      obj = store;
-    }
-    return false;
-  },
-  INTERACTION_SUCCESS: function handleInteractionSuccess(nonce) {
-    nonce = nonce.nonce;
-    if (null == nonce) {
-      return false;
-    } else {
-      const value = store3.get(nonce);
-      if (null == value) {
-        return false;
-      } else {
-        store2.delete(value.messageId);
-        obj.delete(nonce);
-        closure_1 = closure_1 + 1;
-      }
-      obj = store3;
-    }
-  },
-  INTERACTION_FAILURE: function handleInteractionFailure(nonce) {
-    nonce = nonce.nonce;
-    if (null == nonce) {
-      return false;
-    } else {
-      let value = store3.get(nonce);
-      if (null == value) {
-        return false;
-      } else {
-        ({ componentId, messageId } = value);
-        value = store.get(messageId);
-        if (null != value) {
-          if (value.has(componentId)) {
-            value.delete(componentId);
-            if (0 === value.size) {
-              store.delete(messageId);
-            }
-            closure_1 = closure_1 + 1;
-          }
-        }
-      }
-    }
-  },
-  CLEAR_INTERACTION_MODAL_STATE: function handleClearInteractionModalState(customId) {
-    store.delete(customId.customId);
-    closure_1 = closure_1 + 1;
-  },
-};
-const tmp4 = new LimitedMapDefault(196606);
-let result = require("set").fileFinishedImporting(
-  "modules/interaction_components/LocalInteractionComponentStateStore.tsx",
-);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/interaction_components/LocalInteractionComponentStateStore.tsx");
 
 export default localInteractionComponentStateStore;

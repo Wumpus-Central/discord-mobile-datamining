@@ -1,30 +1,30 @@
 // discord_app/modules/user_settings/defs/native/IcymiTabSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
-import _modDef8351 from "../../../icymi/ICYMIActionCreators.tsx";
-import apexExperiment from "../../../icymi/ICYMIExperiment.tsx";
+import util from "../../../../intl/index.native.tsx";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
+import ICYMIActionCreatorsDefault from "../../../icymi/ICYMIActionCreators.tsx";
+import ICYMIExperiment from "../../../icymi/ICYMIExperiment.tsx";
 import useLabFeatureDefault from "../../../labs/useLabFeature.tsx";
-import toggleLabFeature from "../../../labs/LabFeatureActions.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import LabFeatureActions from "../../../labs/LabFeatureActions.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const toggle = createToggle.createToggle({
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.D4clKq);
+    const intl = util.intl;
+    return intl.string(util.t.D4clKq);
   },
-  parent: MobileUserSettings.MobileUserSettings.ADVANCED,
+  parent: SettingsConstants.MobileUserSettings.ADVANCED,
   useValue: function useICYMISettingValue() {
-    return useLabFeatureDefault(apexExperiment.ICYMI_LAB_FEATURE);
+    return useLabFeatureDefault(ICYMIExperiment.ICYMI_LAB_FEATURE);
   },
   onValueChange: function onICYMISettingValueChange(enabled) {
-    let obj = _modDef8351;
+    let obj = ICYMIActionCreatorsDefault;
     let str = "show";
     if (enabled) {
       str = "hide";
     }
     obj.itemInteracted(str, "icymi_tab_toggle", "press");
-    _modDef8351.feedPageActioned({
+    ICYMIActionCreatorsDefault.feedPageActioned({
       actionParameters: {
         actionGestureType: "press",
         actionTargetElement: "icymi_tab_toggle",
@@ -32,50 +32,15 @@ const toggle = createToggle.createToggle({
         actionDestinationType: null,
       },
     });
-    const tmp = importDefault;
-    const tmpResult = _modDef8351;
+    const tmpResult = ICYMIActionCreatorsDefault;
     obj = { enabled };
-    toggleLabFeature.toggleLabFeature(apexExperiment.ICYMI_LAB_FEATURE, obj);
+    LabFeatureActions.toggleLabFeature(ICYMIExperiment.ICYMI_LAB_FEATURE, obj);
   },
   usePredicate: function useICYMIPredicate() {
-    const ICYMIStaffOnlyExperiment = apexExperiment.ICYMIStaffOnlyExperiment;
+    const ICYMIStaffOnlyExperiment = ICYMIExperiment.ICYMIStaffOnlyExperiment;
     return ICYMIStaffOnlyExperiment.useConfig({ location: "settings" }).enabled;
   },
 });
-let obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.D4clKq);
-  },
-  parent: MobileUserSettings.MobileUserSettings.ADVANCED,
-  useValue: function useICYMISettingValue() {
-    return useLabFeatureDefault(apexExperiment.ICYMI_LAB_FEATURE);
-  },
-  onValueChange: function onICYMISettingValueChange(enabled) {
-    let obj = _modDef8351;
-    let str = "show";
-    if (enabled) {
-      str = "hide";
-    }
-    obj.itemInteracted(str, "icymi_tab_toggle", "press");
-    _modDef8351.feedPageActioned({
-      actionParameters: {
-        actionGestureType: "press",
-        actionTargetElement: "icymi_tab_toggle",
-        actionIntentType: "configure",
-        actionDestinationType: null,
-      },
-    });
-    const tmp = importDefault;
-    const tmpResult = _modDef8351;
-    obj = { enabled };
-    toggleLabFeature.toggleLabFeature(apexExperiment.ICYMI_LAB_FEATURE, obj);
-  },
-  usePredicate: function useICYMIPredicate() {
-    const ICYMIStaffOnlyExperiment = apexExperiment.ICYMIStaffOnlyExperiment;
-    return ICYMIStaffOnlyExperiment.useConfig({ location: "settings" }).enabled;
-  },
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/IcymiTabSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/IcymiTabSetting.tsx");
 
 export default toggle;

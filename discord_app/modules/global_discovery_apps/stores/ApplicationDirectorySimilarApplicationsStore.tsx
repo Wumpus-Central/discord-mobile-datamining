@@ -1,6 +1,6 @@
 // discord_app/modules/global_discovery_apps/stores/ApplicationDirectorySimilarApplicationsStore.tsx
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../../Dispatcher.tsx";
+import DispatcherDefault from "../../../Dispatcher.tsx";
 import privDefault from "../../../../_runtime/01437_priv.js";
 
 let obj = {
@@ -14,7 +14,7 @@ let obj = {
   [3]: "ERROR",
 };
 let closure_1 = new privDefault({ max: 20 });
-let closure_2 = {};
+obj = {};
 const Store = initializeDefault.Store;
 class ApplicationDirectorySimilarApplicationsStore extends Store {}
 const prototype = ApplicationDirectorySimilarApplicationsStore.prototype;
@@ -22,14 +22,14 @@ prototype["getSimilarApplications"] = function getSimilarApplications(arg0) {
   ({ applicationId, guildId, page } = arg0);
   if (null != applicationId) {
     const _HermesInternal = HermesInternal;
-    return store.get("applicationId:" + applicationId + " guildId:" + guildId + " page:" + page);
+    return closure_1.get("applicationId:" + applicationId + " guildId:" + guildId + " page:" + page);
   }
 };
 prototype["getFetchState"] = function getFetchState(arg0) {
   ({ applicationId, guildId, page } = arg0);
   if (null != applicationId) {
     const _HermesInternal = HermesInternal;
-    return table["applicationId:" + applicationId + " guildId:" + guildId + " page:" + page];
+    return obj["applicationId:" + applicationId + " guildId:" + guildId + " page:" + page];
   }
 };
 ApplicationDirectorySimilarApplicationsStore.displayName = "ApplicationDirectorySimilarApplicationsStore";
@@ -51,7 +51,7 @@ obj = {
     ({ similarApplications, loadId, totalPages } = page);
     const combined = "applicationId:" + page.applicationId + " guildId:" + page.guildId + " page:" + page;
     obj = { lastFetchTimeMs: Date.now(), applications: similarApplications, loadId, page, totalPages };
-    const result = store.set(combined, obj);
+    const result = closure_1.set(combined, obj);
     obj = {};
     const merged = Object.assign(obj);
     obj[combined] = obj.FETCHED;
@@ -72,11 +72,11 @@ obj = {
   },
 };
 const applicationDirectorySimilarApplicationsStore = new ApplicationDirectorySimilarApplicationsStore(
-  dispatcherDefault,
+  DispatcherDefault,
   obj,
 );
-const tmp2 = new privDefault({ max: 20 });
-let result = require("set").fileFinishedImporting(
+const size = fn(2);
+let result = size.fileFinishedImporting(
   "modules/global_discovery_apps/stores/ApplicationDirectorySimilarApplicationsStore.tsx",
 );
 

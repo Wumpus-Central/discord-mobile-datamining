@@ -1,32 +1,37 @@
 // discord_app/modules/channel_list_v2/native/items/ShowAllVoiceChannelsButton.tsx
-import importAllResult from "../../../../../_runtime/00019_noop.js";
-import closure_3 from "../../../guild_sidebar/ChannelListVoiceCategoryStore.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import VoiceCategoryActionCreators from "../../../guild_sidebar/VoiceCategoryActionCreators.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import ChannelListVoiceCategoryStore from "../../../guild_sidebar/ChannelListVoiceCategoryStore.tsx";
 
-const require = arg1;
-const memoResult = importAllResult.memo((guildId) => {
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/channel_list_v2/native/items/ShowAllVoiceChannelsButton.tsx");
+
+export default noop.memo((guildId) => {
   guildId = guildId.guildId;
   const section = guildId.section;
   const listRef = guildId.listRef;
   let stateFromStores;
   let obj = guildId(section[3]);
   const items = [stateFromStores];
-  stateFromStores = obj.useStateFromStores(items, () => stateFromStores.isVoiceCategoryCollapsed(guildId));
+  stateFromStores = obj.useStateFromStores(items, () =>
+    ChannelListVoiceCategoryStore.isVoiceCategoryCollapsed(guildId),
+  );
   const items1 = [stateFromStores, guildId, section, listRef];
   const callback = listRef.useCallback(() => {
-    let obj = guildId(section[4]);
+    let obj = VoiceCategoryActionCreators;
     if (stateFromStores) {
       obj.voiceCategoryExpand(guildId);
       const _setTimeout = setTimeout;
       const timerId = setTimeout(() => {
         const current = ref.current;
         if (current != null) {
-          const obj = { animated: false, section: null, item: 0, paddingStart: null };
-          obj[1] = closure_1;
+          const obj = { animated: false, section, item: 0, paddingStart: null };
           const _Math = Math;
-          obj[3] = Math.round(0.3 * closure_1_0(closure_1_1[5]).getWindowDimensions().height);
+          obj.paddingStart = Math.round(0.3 * guildId(section[5]).getWindowDimensions().height);
           current.scrollToLocation(obj);
-          const obj2 = closure_1_0(closure_1_1[5]);
+          const obj2 = guildId(section[5]);
         }
       }, 0);
     } else {
@@ -60,8 +65,3 @@ const memoResult = importAllResult.memo((guildId) => {
     size: "sm",
   });
 });
-let result = require("set").fileFinishedImporting(
-  "modules/channel_list_v2/native/items/ShowAllVoiceChannelsButton.tsx",
-);
-
-export default memoResult;

@@ -1,25 +1,29 @@
 // discord_app/modules/age_gate/native/components/DateInput.tsx
-import importAllResult from "../../../../../_runtime/00019_noop.js";
-import { Keyboard } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js";
+import _modDef4153 from "../../../../../_runtime/metro/04153__.js";
+import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let c3 = importAllResult;
-const forwardRefResult = importAllResult.forwardRef((date, ref) => {
+require = fn;
+const Keyboard = fn(17).Keyboard;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/age_gate/native/components/DateInput.tsx");
+
+export default noop.forwardRef((date, ref) => {
   date = date.date;
   ({ onChangeDate: importDefault, label } = date);
   ref = undefined;
   function updateDate(arg0) {
-    callback(arg0);
+    importDefault(arg0);
     const current = ref.current;
     if (current != null) {
       current.blur();
     }
   }
   function openDatePicker() {
-    updateDate.dismiss();
-    let obj = closure_1_1(label[4]);
-    obj = {
+    Keyboard.dismiss();
+    const obj = {
       onSubmit: updateDate,
       title: label,
       startDate: null,
@@ -32,35 +36,35 @@ const forwardRefResult = importAllResult.forwardRef((date, ref) => {
       toDateResult = date.toDate();
     }
     if (toDateResult == null) {
-      const obj4 = tmp2(tmp3[3])();
+      const obj4 = tmp2(4153)();
       const result = obj4.set("year", obj4.year() - 10);
       toDateResult = obj4.toDate();
     }
-    obj[2] = toDateResult;
-    const obj5 = closure_1_1(label[3])();
+    obj.startDate = toDateResult;
+    const obj5 = _modDef4153();
     const result1 = obj5.set("year", obj5.year() - 3);
-    obj[3] = obj5.toDate();
-    const obj6 = closure_1_1(label[3])();
+    obj.maximumDate = obj5.toDate();
+    const obj6 = _modDef4153();
     const result2 = obj6.set("year", obj6.year() - 100);
-    obj[4] = obj6.toDate();
-    obj.openLazy(date(label[6])(label[5], label.paths), "DatePicker", obj);
+    obj.minimumDate = obj6.toDate();
+    obj.openLazy(asyncRequireImpl(9717, dependencyMap.paths), "DatePicker", obj);
   }
   ({ style, error } = date);
   ref = ref.useRef(null);
   const imperativeHandle = ref.useImperativeHandle(ref, () => ({
     focus() {
-      callback();
+      openDatePicker();
     },
   }));
   let formatResult;
   if (date != null) {
     formatResult = date.format("L");
   }
-  let obj = importDefault(label[3])();
+  let obj = require("../../../../../_runtime/metro/04153__.js")();
   let result = obj.set("year", obj.year() - 10);
   const tmp4 = label;
-  const tmp5 = importDefault(label[3]);
-  const formatResult1 = importDefault(label[3])(obj.toDate()).format("L");
+  const tmp5 = require("../../../../../_runtime/metro/04153__.js");
+  const formatResult1 = require("../../../../../_runtime/metro/04153__.js")(obj.toDate()).format("L");
   obj = {
     style,
     ref,
@@ -78,24 +82,21 @@ const forwardRefResult = importAllResult.forwardRef((date, ref) => {
     error: null,
   };
   let str2 = formatResult;
-  const tmp5Result = importDefault(label[3])(obj.toDate());
+  const tmp5Result = require("../../../../../_runtime/metro/04153__.js")(obj.toDate());
   const tmp8 = openDatePicker;
   if (formatResult == null) {
     str2 = "";
   }
-  obj[2] = str2;
-  obj[3] = formatResult1;
-  obj[7] = date(tmp4[8]).ClearButtonVisibility.NEVER;
+  obj.value = str2;
+  obj.placeholder = formatResult1;
+  obj.clearButtonVisibility = date(tmp4[8]).ClearButtonVisibility.NEVER;
   let tmp10 = formatResult1;
   if (null != formatResult) {
     tmp10 = formatResult;
   }
-  obj[10] = "" + label + ", " + tmp10;
-  obj[11] = openDatePicker;
-  obj[12] = label;
-  obj[13] = error;
-  return tmp8(importDefault(label[7]), obj);
+  obj.accessibilityLabel = "" + label + ", " + tmp10;
+  obj.onPress = openDatePicker;
+  obj.label = label;
+  obj.error = error;
+  return tmp8(require("FreeFormInputGroup"), obj);
 });
-let result = require("set").fileFinishedImporting("modules/age_gate/native/components/DateInput.tsx");
-
-export default forwardRefResult;

@@ -1,7 +1,7 @@
 // discord_app/modules/game_server/utils/gameServerResponseToInstance.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/game_server/utils/gameServerResponseToInstance.tsx");
+const result = size.fileFinishedImporting("modules/game_server/utils/gameServerResponseToInstance.tsx");
 
 export default function gameServerResponseToInstance(id) {
   const obj = {
@@ -27,18 +27,18 @@ export default function gameServerResponseToInstance(id) {
   if (num == null) {
     num = 0;
   }
-  obj[6] = num;
+  obj.onlineConnectionsCount = num;
   ({
-    max_players_count: obj[7],
-    ip: obj[8],
-    port: obj[9],
-    entitlement_id: obj[10],
-    subscription_id: obj[11],
-    provider_type: obj[12],
-    provider_url: obj[13],
-    status: obj[14],
-    game_id: obj[15],
-    game_config: obj[16],
+    max_players_count: obj.maxConnectionsCount,
+    ip: obj.serverIP,
+    port: obj.port,
+    entitlement_id: obj.entitlementId,
+    subscription_id: obj.subscriptionId,
+    provider_type: obj.providerType,
+    provider_url: obj.gameServerPanelUrl,
+    status: obj.status,
+    game_id: obj.gameId,
+    game_config: obj.gameConfig,
   } = id);
   return obj;
 }

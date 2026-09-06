@@ -1,68 +1,63 @@
 // discord_app/stores/InviteSuggestionsStore.tsx
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../Dispatcher.tsx";
-import sortByMatchScoreDefault from "../modules/autocompleter/sortByMatchScore.tsx";
-import isGuildMember from "../utils/InstantInviteUtils.tsx";
-import closure_9 from "../modules/quickswitcher/QuickSwitcherStore.tsx";
-import closure_10 from "../modules/user_affinities/UserAffinitiesV2Store.tsx";
-import closure_11 from "ChannelStore.tsx";
-import closure_12 from "PermissionStore.tsx";
-import closure_13 from "RelationshipStore.tsx";
-import ME from "../Constants.tsx";
-import { InviteTargetTypes } from "../modules/instant_invite/Constants.tsx";
-import set from "../../_runtime/00002_set.js";
+import DispatcherDefault from "../Dispatcher.tsx";
+import autocompleter_sortByMatchScoreDefault from "../modules/autocompleter/sortByMatchScore.tsx";
+import InstantInviteUtils from "../utils/InstantInviteUtils.tsx";
+import QuickSwitcherStore from "../modules/quickswitcher/QuickSwitcherStore.tsx";
+import UserAffinitiesV2Store from "../modules/user_affinities/UserAffinitiesV2Store.tsx";
+import ChannelStore from "ChannelStore.tsx";
+import PermissionStore from "PermissionStore.tsx";
+import RelationshipStore from "RelationshipStore.tsx";
 
-require = arg1;
+require = fn;
 function compareRowsByMatchScore(score, score2) {
   let num = 0;
   if (null != score.score) {
     num = 0;
     if (null != score2.score) {
-      let obj = { score: null };
-      obj[0] = score.score;
-      obj = { score: null };
-      obj[0] = score2.score;
-      num = sortByMatchScoreDefault(obj, obj);
+      let obj = { score: score.score };
+      obj = { score: score2.score };
+      num = autocompleter_sortByMatchScoreDefault(obj, obj);
     }
   }
   return num;
 }
 function _computeRows(query) {
   set = new Set();
-  if (type != null) {
-    type = type.type;
+  if (channel != null) {
+    const type = channel.type;
   }
-  let tmp = null == id;
+  let tmp = null == guild;
   if (!tmp) {
-    tmp = closure_8 === InviteTargetTypes.EMBEDDED_APPLICATION;
+    tmp = inviteTargetType === InviteTargetTypes.EMBEDDED_APPLICATION;
   }
   if (!tmp) {
     tmp = type === constants.GUILD_VOICE;
   }
-  id = null;
+  let id = null;
   if (!tmp) {
-    id = id.id;
+    id = guild.id;
   }
   const mostRecentDMedUser = set1(9822).getMostRecentDMedUser(set, id);
   let isBlockedOrIgnoredResult = null == mostRecentDMedUser;
   if (!isBlockedOrIgnoredResult) {
-    isBlockedOrIgnoredResult = closure_13.isBlockedOrIgnored(mostRecentDMedUser.id);
+    isBlockedOrIgnoredResult = RelationshipStore.isBlockedOrIgnored(mostRecentDMedUser.id);
   }
   if (!isBlockedOrIgnoredResult) {
     set.add(mostRecentDMedUser.id);
   }
-  const userAffinities = authStore.getUserAffinities();
+  const userAffinities = UserAffinitiesV2Store.getUserAffinities();
   for (const item10040 of userAffinities) {
     let addResult1 = set.add(item10040.otherUserId);
     continue;
   }
   set1 = new Set();
-  if (closure_8 === InviteTargetTypes.EMBEDDED_APPLICATION) {
-    channelHistory = channelHistory.getChannelHistory();
-    const mapped = channelHistory.map((arg0) => channel.getChannel(arg0));
+  if (inviteTargetType === InviteTargetTypes.EMBEDDED_APPLICATION) {
+    const channelHistory = QuickSwitcherStore.getChannelHistory();
+    const mapped = channelHistory.map((item) => channel.getChannel(item));
     const found = mapped.filter(set1(1369).isNotNullish);
     const found1 = found.filter((type) => type.type === constants.GUILD_TEXT);
-    const found2 = found1.filter((arg0) => closure_12.can(constants2.SEND_MESSAGES, arg0));
+    const found2 = found1.filter((item) => PermissionStore.can(constants2.SEND_MESSAGES, item));
     const substr = found2.slice(0, 3);
     const item = substr.forEach((id) => set1.add(id.id));
   }
@@ -74,83 +69,80 @@ function _computeRows(query) {
     maxRowsWithoutQuery: 100,
     omitGuildId: id,
     suggestedChannelIds: set1,
-    inviteTargetType: closure_8,
+    inviteTargetType,
   });
 }
-({ ChannelTypes: closure_14, Permissions: closure_15 } = ME);
+const Constants = fn(1074);
+({ ChannelTypes: closure_14, Permissions: closure_15 } = Constants);
+const InviteTargetTypes = fn(7736).InviteTargetTypes;
 let set = new Set();
-let closure_18 = [];
+let rows = [];
 let map = new Map();
-let closure_20 = { numFriends: 0, numDms: 0, numGroupDms: 0, numChannels: 0 };
+let counts = { numFriends: 0, numDms: 0, numGroupDms: 0, numChannels: 0 };
 const Store = initializeDefault.Store;
 class InviteSuggestionsStore extends Store {}
 const prototype = InviteSuggestionsStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_11, closure_12, closure_9, closure_13, closure_10);
+  this.waitFor(ChannelStore, PermissionStore, QuickSwitcherStore, RelationshipStore, UserAffinitiesV2Store);
 };
 prototype["getInviteSuggestionRows"] = function getInviteSuggestionRows() {
-  return closure_18;
+  return rows;
 };
 prototype["getTotalSuggestionsCount"] = function getTotalSuggestionsCount() {
-  return closure_3;
+  return length;
 };
 prototype["getInitialCounts"] = function getInitialCounts() {
-  return closure_20;
+  return counts;
 };
-prototype["getSelectedInviteMetadata"] = function getSelectedInviteMetadata(isSuggested) {
-  const value = map.get(isSuggested);
-  const userAffinities = authStore.getUserAffinities();
+prototype["getSelectedInviteMetadata"] = function getSelectedInviteMetadata(row) {
+  value = map.get(row);
+  const userAffinities = UserAffinitiesV2Store.getUserAffinities();
   if (null != value) {
     const obj = {
-      rowNum: null,
-      isAffinitySuggestion: null,
-      numTotal: null,
-      numAffinityConnections: null,
-      isFiltered: null,
+      rowNum: value.index,
+      isAffinitySuggestion: row.isSuggested,
+      numTotal: rows.length,
+      numAffinityConnections: arr.length,
+      isFiltered,
     };
-    obj[0] = value.index;
-    obj[1] = isSuggested.isSuggested;
-    obj[2] = length.length;
-    obj[3] = arr.length;
-    obj[4] = closure_4;
     return obj;
   }
 };
 InviteSuggestionsStore.displayName = "InviteSuggestionsStore";
-const inviteSuggestionsStore = new InviteSuggestionsStore(dispatcherDefault, {
+const inviteSuggestionsStore = new InviteSuggestionsStore(DispatcherDefault, {
   LOAD_INVITE_SUGGESTIONS: function refreshInviteSuggestions(guild) {
     ({ omitUserIds, channel, inviteTargetType } = guild);
     guild = null;
     if (null != channel) {
       guild = guild.guild;
     }
-    const applicationId = guild.applicationId;
-    const blockedOrIgnoredIDs = closure_13.getBlockedOrIgnoredIDs();
-    let obj = isGuildMember;
-    obj = { channel, applicationId, inviteTargetType };
+    applicationId = guild.applicationId;
+    const blockedOrIgnoredIDs = RelationshipStore.getBlockedOrIgnoredIDs();
+    const obj = { channel, applicationId, inviteTargetType };
     const usersAlreadyJoined = obj.getUsersAlreadyJoined(obj);
     const items = [...usersAlreadyJoined];
     set = new Set(items);
-    c4 = false;
+    closure_4 = false;
     const tmp5 = _computeRows("");
-    const rows = tmp5.rows;
+    rows = tmp5.rows;
     map = new Map();
-    const item = rows.forEach((arg0, index) => {
-      const result = map.set(arg0, { index });
+    const item = rows.forEach((item, index) => {
+      const result = map.set(item, { index });
     });
-    const counts = tmp5.counts;
+    counts = tmp5.counts;
   },
   INVITE_SUGGESTIONS_SEARCH: function handleSearch(query) {
     query = query.query;
     closure_4 = "" !== query;
-    const rows = _computeRows(query).rows;
+    rows = _computeRows(query).rows;
     const sorted = rows.sort(compareRowsByMatchScore);
     map = new Map();
-    const item = rows.forEach((arg0, index) => {
-      const result = map.set(arg0, { index });
+    const item = rows.forEach((item, index) => {
+      const result = map.set(item, { index });
     });
   },
 });
-let result = set.fileFinishedImporting("stores/InviteSuggestionsStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("stores/InviteSuggestionsStore.tsx");
 
 export default inviteSuggestionsStore;

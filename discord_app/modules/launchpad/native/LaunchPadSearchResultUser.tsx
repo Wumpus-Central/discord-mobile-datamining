@@ -1,26 +1,23 @@
 // discord_app/modules/launchpad/native/LaunchPadSearchResultUser.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _isStreamingDefault from "../../activities/utils/isStreaming.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import ChannelActionCreatorsDefault from "../../../actions/ChannelActionCreators.tsx";
+import isStreamingDefault from "../../activities/utils/isStreaming.tsx";
 import useChannelUnreadBadgeState from "shared/useChannelUnreadBadgeState.tsx";
-import getLayoutStyleDefault from "shared/getLayoutStyles.tsx";
+import getLayoutStylesDefault from "shared/getLayoutStyles.tsx";
 import renderChannelWrapperDefault from "shared/renderChannelWrapper.tsx";
-import _modDef16981 from "shared/UnreadBadge.tsx";
-import ChannelContentDefault from "shared/renderChannelContent.tsx";
-import renderChannelBadgeDefault from "shared/renderChannelBadge.tsx";
-import importAllResult from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../../a11y/AccessibilityStore.tsx";
-import closure_5 from "../../user_settings/LocaleStore.tsx";
-import closure_6 from "../../../stores/ChannelStore.tsx";
-import closure_7 from "../../../stores/PresenceStore.tsx";
-import closure_8 from "../../../stores/TypingStore.tsx";
-import closure_9 from "../../../stores/UserGuildSettingsStore.tsx";
-import { StatusTypes } from "../../../Constants.tsx";
-import { UnreadSetting } from "../../read_states/ReadStateConstants.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import UnreadBadgeDefault from "shared/UnreadBadge.tsx";
+import renderChannelContentDefault from "shared/renderChannelContent.tsx";
+import shared_renderChannelBadgeDefault from "shared/renderChannelBadge.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
+import LocaleStore from "../../user_settings/LocaleStore.tsx";
+import ChannelStore from "../../../stores/ChannelStore.tsx";
+import PresenceStore from "../../../stores/PresenceStore.tsx";
+import TypingStore from "../../../stores/TypingStore.tsx";
+import UserGuildSettingsStore from "../../../stores/UserGuildSettingsStore.tsx";
 
-require = arg1;
+require = fn;
 function UserResult(user) {
   user = user.user;
   ({ comparator, channel, lastMessage, unread } = user);
@@ -39,28 +36,30 @@ function UserResult(user) {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  const tmp = callback2();
-  const tmp4 = getLayoutStyleDefault();
+  const tmp = closure_15();
+  const tmp4 = getLayoutStylesDefault();
   let items = [user.id];
-  const callback = importAllResult.useCallback(() => {
+  const callback = noop.useCallback(() => {
+    const obj = { recipientIds: null };
     const items = [user.id];
-    closure_1_1(closure_1_2[13]).openPrivateChannel({ recipientIds: items });
+    obj.recipientIds = items;
+    obj.openPrivateChannel(obj);
   }, items);
   let obj = user(4982);
   const fontScale = obj.useFontScale();
-  obj1 = user(504);
-  const items1 = [closure_5];
+  let obj1 = user(504);
+  const items1 = [LocaleStore];
   const stateFromStores = obj1.useStateFromStores(items1, () => locale.locale);
   let obj2 = user(504);
-  const items2 = [closure_4];
+  const items2 = [AccessibilityStore];
   const stateFromStores1 = obj2.useStateFromStores(items2, () => useReducedMotion.useReducedMotion);
   let obj3 = user(504);
-  const items3 = [closure_7];
+  const items3 = [PresenceStore];
   const stateFromStoresObject = obj3.useStateFromStoresObject(items3, () => ({
-    isMobileOnline: closure_1_7.isMobileOnline(user.id),
-    isVROnline: closure_1_7.isVROnline(user.id),
-    status: closure_1_7.getStatus(user.id),
-    activities: closure_1_7.getActivities(user.id),
+    isMobileOnline: PresenceStore.isMobileOnline(user.id),
+    isVROnline: PresenceStore.isVROnline(user.id),
+    status: PresenceStore.getStatus(user.id),
+    activities: PresenceStore.getActivities(user.id),
   }));
   const status = stateFromStoresObject.status;
   let extractTimestampResult;
@@ -82,15 +81,16 @@ function UserResult(user) {
     }
   }
   tmp2Result = tmp2(16978);
-  obj = { onPress: callback, underlayColor: tmp.pressableUnderlayColor.backgroundColor, style: items4, children: null };
-  items4 = [tmp.pressable, { borderRadius: tmp4.container.borderRadius }];
+  obj = { onPress: callback, underlayColor: tmp.pressableUnderlayColor.backgroundColor, style: null, children: null };
+  const items4 = [tmp.pressable, { borderRadius: tmp4.container.borderRadius }];
+  obj.style = items4;
   obj = { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES };
-  const items5 = [callback(_modDef16981, obj), ,];
+  const items5 = [closure_12(UnreadBadgeDefault, obj), ,];
   obj1 = {
     user,
     guildId: "e",
-    isMobileOnline: true,
-    isVROnline: null,
+    isMobileOnline,
+    isVROnline,
     status: false,
     streaming: false,
     style: null,
@@ -99,8 +99,6 @@ function UserResult(user) {
     typing: null,
     autoStatusCutout: null,
   };
-  obj1[2] = isMobileOnline;
-  obj1[3] = isVROnline;
   let tmp19 = null;
   if (!user.isSystemUser()) {
     tmp19 = null;
@@ -108,10 +106,10 @@ function UserResult(user) {
       tmp19 = status;
     }
   }
-  obj1[4] = tmp19;
-  obj1[5] = _isStreamingDefault(activities);
-  obj1[6] = tmp4.icon.margin;
-  obj1[7] = tmp4.icon.avatarSize;
+  obj1.status = tmp19;
+  obj1.streaming = isStreamingDefault(activities);
+  obj1.style = tmp4.icon.margin;
+  obj1.size = tmp4.icon.avatarSize;
   let tmp21 = !stateFromStores1;
   if (!stateFromStores1) {
     let tmp22 = flag2;
@@ -120,9 +118,9 @@ function UserResult(user) {
     }
     tmp21 = tmp22;
   }
-  obj1[8] = tmp21;
-  obj1[9] = flag2;
-  items5[1] = callback(user(1178).Avatar, obj1);
+  obj1.animate = tmp21;
+  obj1.typing = flag2;
+  items5[1] = closure_12(user(1178).Avatar, obj1);
   const tmp16 = closure_14;
   const tmp17 = closure_13;
   const tmp18 = UnreadSetting;
@@ -144,43 +142,44 @@ function UserResult(user) {
   let tmp14Result;
   if (null != lastMessage) {
     if (null != channel) {
-      obj3 = { channel: null, message: null, color: null, muted: null, layout: null };
-      obj3[0] = channel;
-      obj3[1] = lastMessage;
-      obj3[2] = str;
-      obj3[3] = flag;
-      obj3[4] = tmp6(7879).ChannelListLayoutTypes.COMPACT;
+      obj3 = {
+        channel,
+        message: lastMessage,
+        color: str,
+        muted: flag,
+        layout: tmp6(7879).ChannelListLayoutTypes.COMPACT,
+      };
       tmp14Result = tmp14(tmp6(10109).ChannelRowPreview, obj3);
     }
   }
   const obj4 = { children: null };
-  obj2[1] = tmp14Result;
-  obj2[2] = unread;
-  obj2[3] = tmp18.ALL_MESSAGES;
-  obj2[4] = flag;
-  obj2[5] = relativeTimestamp;
-  obj2[6] = num;
-  obj2[7] = renderChannelBadgeDefault({ mentionCount: num, locale: stateFromStores });
-  items5[2] = ChannelContentDefault(obj2);
-  obj4[0] = items5;
-  obj[3] = tmp2Result1(tmp16(tmp17, obj4), { fontScale });
-  return tmp2Result(callback(user(5123).PressableHighlight, obj));
+  obj2.subtitle = tmp14Result;
+  obj2.unread = unread;
+  obj2.resolvedUnreadSetting = tmp18.ALL_MESSAGES;
+  obj2.muted = flag;
+  obj2.lastMessageTimestampString = relativeTimestamp;
+  obj2.mentionCount = num;
+  obj2.mentionBadge = shared_renderChannelBadgeDefault({ mentionCount: num, locale: stateFromStores });
+  items5[2] = renderChannelContentDefault(obj2);
+  obj4.children = items5;
+  obj.children = tmp2Result1(tmp16(tmp17, obj4), { fontScale });
+  return tmp2Result(closure_12(user(5123).PressableHighlight, obj));
 }
 function UserResultWithChannel(arg0) {
   ({ user: require, channel } = arg0);
   let obj = initialize;
-  const items = [closure_9];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_9.isChannelMuted(undefined, channel.id));
+  const items = [UserGuildSettingsStore];
+  const stateFromStores = obj.useStateFromStores(items, () =>
+    UserGuildSettingsStore.isChannelMuted(undefined, channel.id),
+  );
   const baseChannelUnreadBadgeState = useChannelUnreadBadgeState.useBaseChannelUnreadBadgeState(
     channel,
     stateFromStores,
   );
   ({ unread, mentionCount } = baseChannelUnreadBadgeState);
-  const obj2 = useChannelUnreadBadgeState;
-  const items1 = [closure_8];
-  const stateFromStores1 = initialize.useStateFromStores(items1, () => closure_1_8.isTyping(channel.id, id.id));
+  const items1 = [TypingStore];
+  const stateFromStores1 = initialize.useStateFromStores(items1, () => TypingStore.isTyping(channel.id, id.id));
   obj = {};
-  const obj3 = initialize;
   const merged = Object.assign(arg0);
   obj.channel = channel;
   obj.lastMessage = channel(15317)(channel, { unread });
@@ -188,33 +187,36 @@ function UserResultWithChannel(arg0) {
   obj.mentionCount = mentionCount;
   obj.muted = stateFromStores;
   obj.isTyping = stateFromStores1;
-  return callback(UserResult, obj);
+  return closure_12(UserResult, obj);
 }
-let c3 = importAllResult;
+const StatusTypes = fn(1074).StatusTypes;
+const UnreadSetting = fn(4742).UnreadSetting;
+const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
+const createStyles = fn(4560);
 let obj = { pressable: { flex: 1 }, pressableUnderlayColor: null };
-obj = { backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
-obj[1] = obj;
-let closure_15 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo((user) => {
+obj = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
+obj.pressableUnderlayColor = obj;
+let closure_15 = createStyles.createStyles(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/launchpad/native/LaunchPadSearchResultUser.tsx");
+
+export default noop.memo((user) => {
   user = user.user;
   let obj = user(504);
-  const items = [closure_6];
-  closure_1 = obj.useStateFromStores(items, () => closure_1_6.getDMFromUserId(user.id));
-  const items1 = [closure_6];
-  const stateFromStores = user(504).useStateFromStores(items1, () => closure_1_6.getChannel(closure_1));
+  const items = [ChannelStore];
+  closure_1 = obj.useStateFromStores(items, () => ChannelStore.getDMFromUserId(user.id));
+  const items1 = [ChannelStore];
+  const stateFromStores = user(504).useStateFromStores(items1, () => ChannelStore.getChannel(closure_1));
   if (null != stateFromStores) {
     obj = {};
     const merged = Object.assign(user);
     obj.channel = stateFromStores;
-    let tmp7 = callback(UserResultWithChannel, obj);
+    let tmp7 = closure_12(UserResultWithChannel, obj);
   } else {
     obj = {};
     const merged1 = Object.assign(user);
-    tmp7 = callback(UserResult, obj);
+    tmp7 = closure_12(UserResult, obj);
   }
   return tmp7;
 });
-const result = require("set").fileFinishedImporting("modules/launchpad/native/LaunchPadSearchResultUser.tsx");
-
-export default memoResult;

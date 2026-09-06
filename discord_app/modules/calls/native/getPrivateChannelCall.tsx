@@ -1,26 +1,28 @@
 // discord_app/modules/calls/native/getPrivateChannelCall.tsx
-import closure_2 from "../../../stores/VoiceStateStore.tsx";
-import { NOOP_NULL } from "../../../Constants.tsx";
+import CallsUtils from "../../voice_calls/native/CallsUtils.tsx";
+import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/calls/native/getPrivateChannelCall.tsx");
+require = fn;
+const NOOP_NULL = fn(1074).NOOP_NULL;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/calls/native/getPrivateChannelCall.tsx");
 
 export default function getPrivateChannelCall(id) {
-  const _require = id;
+  _require = id;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
   }
   let handleStartCall = arg2;
   if (arg2 === undefined) {
-    handleStartCall = _require(flag[2]).handleStartCall;
+    handleStartCall = require("PrivateChannelCallUtils").handleStartCall;
   }
   let handleJoinCall = arg3;
   if (arg3 === undefined) {
-    handleJoinCall = _require(flag[2]).handleJoinCall;
+    handleJoinCall = require("PrivateChannelCallUtils").handleJoinCall;
   }
   const isInChannelResult = handleStartCall.isInChannel(id.id);
-  let obj = _require(flag[3]);
+  let obj = require("useIsCallActive");
   if (id.isSystemDM()) {
     const C = handleJoinCall;
     let tmp9Result = null;
@@ -29,14 +31,14 @@ export default function getPrivateChannelCall(id) {
       const string2 = tmp6(tmp7[4]).intl.string;
       class C {
         constructor() {
-          obj = closure_0(c1[5]);
+          obj = closure_0(closure_1[5]);
           return obj.handleDisconnect(closure_0);
         }
       }
     }
     class C {
       constructor() {
-        obj = closure_0(c1[5]);
+        obj = closure_0(closure_1[5]);
         return obj.handleDisconnect(closure_0);
       }
     }
@@ -86,8 +88,8 @@ export default function getPrivateChannelCall(id) {
   if (stringResult == null) {
     stringResult = tmp9Result;
   }
-  obj[1] = stringResult;
-  obj[2] = isInChannelResult;
-  obj[3] = C;
+  obj.accessibilityHint = stringResult;
+  obj.inCall = isInChannelResult;
+  obj.onPress = C;
   return obj;
 }

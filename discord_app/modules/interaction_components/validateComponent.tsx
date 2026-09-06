@@ -1,9 +1,9 @@
 // discord_app/modules/interaction_components/validateComponent.tsx
-import set from "../../../_runtime/00002_set.js";
 import _modDef38 from "../../../_runtime/metro/00038__.js";
-import PermissionOverwriteType from "../../flow/Server.tsx";
+import Server from "../../flow/Server.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/interaction_components/validateComponent.tsx");
+const result = size.fileFinishedImporting("modules/interaction_components/validateComponent.tsx");
 
 export default function validateComponent(type, arg1, modal) {
   values = arg1;
@@ -11,7 +11,7 @@ export default function validateComponent(type, arg1, modal) {
     _modDef38(values.type === type.type, "component type matches state");
   }
   type = type.type;
-  if (PermissionOverwriteType.ComponentType.BUTTON === type) {
+  if (Server.ComponentType.BUTTON === type) {
     return null;
   } else {
     if (tmp4(1894).ComponentType.STRING_SELECT !== type) {
@@ -25,10 +25,8 @@ export default function validateComponent(type, arg1, modal) {
                   if (0 !== values.value.length) {
                     if (values.value.length < minLength) {
                       const intl8 = tmp4(1114).intl;
-                      let obj = { min: null, max: null };
-                      obj[0] = minLength;
-                      obj[1] = maxLength;
-                      let formatToPlainStringResult = intl8.formatToPlainString(tmp4(1114).t.ONSqYd, obj);
+                      const range = { min: minLength, max: maxLength };
+                      let formatToPlainStringResult = intl8.formatToPlainString(tmp4(1114).t.ONSqYd, range);
                     } else {
                       formatToPlainStringResult = null;
                     }
@@ -59,16 +57,14 @@ export default function validateComponent(type, arg1, modal) {
                   let formatToPlainStringResult1 = stringResult1;
                 } else if (num3 < minValues2) {
                   const intl6 = tmp4(1114).intl;
-                  obj = { minValues: null };
-                  obj[0] = minValues2;
+                  let obj = { minValues: minValues2 };
                   formatToPlainStringResult1 = intl6.formatToPlainString(tmp4(1114).t.pmAt62, obj);
                 } else {
                   formatToPlainStringResult1 = null;
                   if (num3 > maxValues2) {
                     const intl5 = tmp4(1114).intl;
-                    obj1 = { maxValues: null };
-                    obj1[0] = maxValues2;
-                    formatToPlainStringResult1 = intl5.formatToPlainString(tmp4(1114).t.dy6viJ, obj1);
+                    obj = { maxValues: maxValues2 };
+                    formatToPlainStringResult1 = intl5.formatToPlainString(tmp4(1114).t.dy6viJ, obj);
                   }
                 }
                 return formatToPlainStringResult1;
@@ -101,15 +97,13 @@ export default function validateComponent(type, arg1, modal) {
                   let formatToPlainStringResult2 = stringResult3;
                 } else if (num < minValues) {
                   const intl2 = tmp4(1114).intl;
-                  const obj2 = { count: null };
-                  obj2[0] = minValues;
-                  formatToPlainStringResult2 = intl2.formatToPlainString(tmp4(1114).t.Jmwzdx, obj2);
+                  const obj1 = { count: minValues };
+                  formatToPlainStringResult2 = intl2.formatToPlainString(tmp4(1114).t.Jmwzdx, obj1);
                 } else {
                   formatToPlainStringResult2 = null;
                   if (num > maxValues) {
                     const intl = tmp4(1114).intl;
-                    obj = { count: null };
-                    obj[0] = maxValues;
+                    obj = { count: maxValues };
                     formatToPlainStringResult2 = intl.formatToPlainString(tmp4(1114).t.LDvfRP, obj);
                   }
                 }
@@ -127,11 +121,9 @@ export default function validateComponent(type, arg1, modal) {
     ({ minValues: minValues3, maxValues: maxValues3 } = type);
     if (null == values) {
       {
-        const obj3 = { minValues: null, required: null };
-        obj3[0] = minValues3;
-        obj3[1] = tmp16;
+        const obj2 = { minValues: minValues3, required: tmp16 };
         let stringResult4 = null;
-        if (!tmp4Result.canSelectBeEmpty(obj3, modal)) {
+        if (!tmp4Result.canSelectBeEmpty(obj2, modal)) {
           const intl10 = tmp4(1114).intl;
           stringResult4 = intl10.string(tmp4(1114).t.eJEUvD);
         }

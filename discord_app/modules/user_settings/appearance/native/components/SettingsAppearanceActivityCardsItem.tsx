@@ -1,11 +1,12 @@
 // discord_app/modules/user_settings/appearance/native/components/SettingsAppearanceActivityCardsItem.tsx
-import noopAll from "../../../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import SettingsAppearanceActivityCardItemDefault from "SettingsAppearanceActivityCardItem.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting(
+const require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/user_settings/appearance/native/components/SettingsAppearanceActivityCardsItem.tsx",
 );
 
@@ -19,18 +20,18 @@ export default function ActivityCardsItem(animatedStyles) {
     showsHorizontalScrollIndicator: false,
     horizontal: true,
   };
-  obj = { paddingVertical: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16 };
-  obj[0] = obj;
-  obj[1] = animatedStyles.cards;
-  obj[2] = function renderItem(item) {
+  obj = { paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
+  obj.contentContainerStyle = obj;
+  obj.data = animatedStyles.cards;
+  obj.renderItem = function renderItem(item) {
     const merged = Object.assign(item.item);
-    return closure_1_3(closure_1_1(closure_1_2[4]), { animatedStyles });
+    return jsx(SettingsAppearanceActivityCardItemDefault, { animatedStyles });
   };
-  obj[3] = function keyExtractor(title) {
+  obj.keyExtractor = function keyExtractor(title) {
     return title.title;
   };
   return jsx(animatedStyles(8874).FlashList, {
-    paddingVertical: ThemesDefault.space.PX_16,
-    paddingHorizontal: ThemesDefault.space.PX_16,
+    paddingVertical: nativeDefault.space.PX_16,
+    paddingHorizontal: nativeDefault.space.PX_16,
   });
 }

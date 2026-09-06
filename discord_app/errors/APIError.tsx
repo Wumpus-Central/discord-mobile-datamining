@@ -1,30 +1,27 @@
 // discord_app/errors/APIError.tsx
-import set from "../../_runtime/00002_set.js";
-import ME from "../Constants.tsx";
-import getSystemLocale from "../intl/index.native.tsx";
-import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import Constants from "../Constants.tsx";
+import util from "../intl/index.native.tsx";
+import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-const Links = ME.Links;
-const V8APIError = sendRequest.V8APIError;
+const Links = Constants.Links;
+const V8APIError = HTTPUtils.V8APIError;
 const prototype = function APIErrorWithDefaultMessage(arg0, arg1) {
   if (null != arg1) {
-    const intl2 = getSystemLocale.intl;
-    let obj = { statusPageURL: null, details: null };
-    obj[0] = Links.STATUS;
+    const intl2 = util.intl;
+    let obj = { statusPageURL: Links.STATUS, details: null };
     const _HermesInternal = HermesInternal;
-    obj[1] = "" + arg1;
-    intl2.formatToPlainString(getSystemLocale.t.aKRa0Q, obj);
+    obj.details = "" + arg1;
+    intl2.formatToPlainString(util.t.aKRa0Q, obj);
   } else {
-    const intl = getSystemLocale.intl;
-    obj = { statusPageURL: null };
-    obj[0] = Links.STATUS;
-    intl.formatToPlainString(getSystemLocale.t.aTVNes, obj);
+    const intl = util.intl;
+    obj = { statusPageURL: Links.STATUS };
+    intl.formatToPlainString(util.t.aTVNes, obj);
   }
   tmp = new tmp();
-  // ThrowIfThisInitialized (0x7c)
   return tmp;
 }.prototype;
 class prototype extends V8APIError {}
-const result = set.fileFinishedImporting("errors/APIError.tsx");
+const result = size.fileFinishedImporting("errors/APIError.tsx");
 
 export default prototype;

@@ -1,24 +1,20 @@
 // discord_app/modules/auth/native/RegistrationUtils.tsx
-import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../stores/InviteStore.tsx";
-import closure_5 from "../../../stores/native/DisplayedInviteStore.tsx";
-import useRegistrationUIStore from "RegistrationUIStore.tsx";
-import RegistrationTransitionActionTypes from "../RegistrationConstants.tsx";
-import { AnalyticEvents } from "../../../Constants.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import InviteStore from "../../../stores/InviteStore.tsx";
+import DisplayedInviteStore from "../../../stores/native/DisplayedInviteStore.tsx";
 
-const require = arg1;
+const require = fn;
 function trackRegTransition(overrideRegistrationOptions) {
   let registrationOptions = overrideRegistrationOptions.overrideRegistrationOptions;
   ({ step, fromStep, toStep, actionType, details } = overrideRegistrationOptions);
-  displayedInviteCode = displayedInviteCode.getDisplayedInviteCode();
+  const displayedInviteCode = DisplayedInviteStore.getDisplayedInviteCode();
   if (registrationOptions == null) {
     registrationOptions = state.getState().registrationOptions;
   }
   let invite = null;
   if (null != displayedInviteCode) {
-    invite = invite.getInvite(displayedInviteCode);
+    invite = InviteStore.getInvite(displayedInviteCode);
   }
   let str = null;
   if (null != invite) {
@@ -39,8 +35,7 @@ function trackRegTransition(overrideRegistrationOptions) {
       str2 = "phone";
     }
   }
-  let obj = expandEventPropertiesDefault;
-  obj = {
+  const obj = {
     step,
     identity_type: str2,
     action_type: actionType,
@@ -58,7 +53,7 @@ function trackRegTransition(overrideRegistrationOptions) {
   if (invite != null) {
     code = invite.code;
   }
-  obj[5] = code;
+  obj.invite_code = code;
   let id;
   if (invite != null) {
     const channel = invite.channel;
@@ -66,7 +61,7 @@ function trackRegTransition(overrideRegistrationOptions) {
       id = channel.id;
     }
   }
-  obj[6] = id;
+  obj.invite_channel_id = id;
   let type;
   if (invite != null) {
     const channel2 = invite.channel;
@@ -74,7 +69,7 @@ function trackRegTransition(overrideRegistrationOptions) {
       type = channel2.type;
     }
   }
-  obj[7] = type;
+  obj.invite_channel_type = type;
   let id1;
   if (invite != null) {
     const guild = invite.guild;
@@ -82,7 +77,7 @@ function trackRegTransition(overrideRegistrationOptions) {
       id1 = guild.id;
     }
   }
-  obj[8] = id1;
+  obj.invite_guild_id = id1;
   let id2;
   if (invite != null) {
     const inviter = invite.inviter;
@@ -90,14 +85,19 @@ function trackRegTransition(overrideRegistrationOptions) {
       id2 = inviter.id;
     }
   }
-  obj[9] = id2;
-  obj[10] = fromStep;
-  obj[11] = toStep;
+  obj.invite_inviter_id = id2;
+  obj.from_step = fromStep;
+  obj.to_step = toStep;
   obj.track(AnalyticEvents.REGISTER_TRANSITION, obj);
 }
-({ clearRegistrationErrorMessage: closure_6, useRegistrationUIStore: error } = useRegistrationUIStore);
-({ RegisterTransitionSteps: closure_8, RegistrationTransitionActionTypes: c9 } = RegistrationTransitionActionTypes);
-const result = require("set").fileFinishedImporting("modules/auth/native/RegistrationUtils.tsx");
+const RegistrationUIStore = fn(15946);
+({ clearRegistrationErrorMessage: metroRequire, useRegistrationUIStore: closure_7 } = RegistrationUIStore);
+const RegistrationConstants = fn(15947);
+({ RegisterTransitionSteps: closure_8, RegistrationTransitionActionTypes: closure_9 } = RegistrationConstants);
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/auth/native/RegistrationUtils.tsx");
 
 export const hasAllRegistrationFieldsCompleted = function hasAllRegistrationFieldsCompleted(email, isConsentRequired) {
   isConsentRequired = isConsentRequired.isConsentRequired;
@@ -128,55 +128,42 @@ export const hasAllRegistrationFieldsCompleted = function hasAllRegistrationFiel
   return tmp;
 };
 export { trackRegTransition };
-export function getTrackRegTransition(closure_0) {
+export function getTrackRegTransition(arg0) {
   return (arg0) => {
     ({ step, actionType, toStep, details, overrideRegistrationOptions } = arg0);
-    if (actionType === closure_1_9.VIEWED) {
-      if (step === closure_1_8.CAPTCHA) {
-        let obj = { step: null, fromStep: null, actionType: null };
-        obj[0] = step;
-        obj[1] = ref.current;
-        obj[2] = actionType;
-        closure_1_12(obj);
+    if (actionType === constants2.VIEWED) {
+      if (step === constants.CAPTCHA) {
+        let obj = { step, fromStep: ref.current, actionType };
+        trackRegTransition(obj);
       }
     }
-    if (actionType === closure_1_9.VIEWED) {
+    if (actionType === constants2.VIEWED) {
       if (null != step) {
-        obj = { step: null, fromStep: null, actionType: null };
-        obj[0] = step;
-        obj[1] = ref.current;
-        obj[2] = actionType;
-        closure_1_12(obj);
+        obj = { step, fromStep: ref.current, actionType };
+        trackRegTransition(obj);
       }
       ref.current = step;
     } else if (null != step) {
-      obj = { step: null, toStep: null, actionType: null, details: null, overrideRegistrationOptions: null };
-      obj[0] = step;
-      obj[1] = toStep;
-      obj[2] = actionType;
-      obj[3] = details;
-      obj[4] = overrideRegistrationOptions;
-      closure_1_12(obj);
+      obj = { step, toStep, actionType, details, overrideRegistrationOptions };
+      trackRegTransition(obj);
     }
     return tmp9;
   };
 }
 export const BackButtonWithTracking = function BackButtonWithTracking(arg0) {
-  _require = React.useContext(require("components/Auth.tsx").TrackRegistrationContext);
+  _require = noop.useContext(require("Auth").TrackRegistrationContext);
   ({ destinationStep: importDefault, onPress: dependencyMap } = arg0);
   let obj = {};
   const merged = Object.assign(arg0);
   obj.onPress = function onPress() {
-    if (null != closure_2) {
-      closure_1_6();
-      const obj = { step: null, actionType: null };
-      obj[0] = closure_1;
-      obj[1] = closure_1_9.VIEWED;
-      callback(obj);
+    if (null != dependencyMap) {
+      timestampProducer();
+      const obj = { step, actionType: constants2.VIEWED };
+      closure_0(obj);
       tmp();
     }
   };
-  return jsx(require("../../../../_runtime/05631_Background.js").HeaderBackButton, {});
+  return jsx(require("../../../../_runtime/metro/05631__.js").HeaderBackButton, {});
 };
 export const getCommonErrorDetails = function getCommonErrorDetails(error_code) {
   if (-1 === error_code) {

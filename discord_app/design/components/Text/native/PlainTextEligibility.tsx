@@ -1,9 +1,9 @@
 // discord_app/design/components/Text/native/PlainTextEligibility.tsx
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import set from "../../../../../_runtime/00002_set.js";
+import _mod17 from "../../../../../_runtime/metro/00017__.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const StyleSheet = get_ActivityIndicator.StyleSheet;
-let set = new Set([
+const StyleSheet = _mod17.StyleSheet;
+const set = new Set([
   "accessibilityActions",
   "accessibilityElementsHidden",
   "accessibilityHint",
@@ -64,43 +64,38 @@ let closure_6 = { eligible: false, reason: "nested-text" };
 let closure_7 = { eligible: false, reason: "non-string-children" };
 let closure_8 = { eligible: false, reason: "non-ios" };
 let closure_9 = { eligible: false, reason: "ref" };
-const result = set.fileFinishedImporting("design/components/Text/native/PlainTextEligibility.tsx");
+const result = size.fileFinishedImporting("design/components/Text/native/PlainTextEligibility.tsx");
 
 export const isPlainTextEligible = function isPlainTextEligible(plainTextEligibility) {
   return !("eligible" in plainTextEligibility);
 };
-export const getPlainTextEligibility = function getPlainTextEligibility(enabled) {
-  if (enabled.enabled) {
-    if (enabled.isIOS) {
-      if (enabled.hasTextAncestor) {
+export const getPlainTextEligibility = function getPlainTextEligibility(element) {
+  if (element.enabled) {
+    if (element.isIOS) {
+      if (element.hasTextAncestor) {
         return closure_6;
-      } else if (enabled.hasRef) {
+      } else if (element.hasRef) {
         return closure_9;
-      } else if (enabled.animated) {
+      } else if (element.animated) {
         return closure_3;
-      } else if (enabled.experimentalUseNativeText) {
+      } else if (element.experimentalUseNativeText) {
         return closure_5;
-      } else if (typeof enabled.children !== "string") {
+      } else if (typeof element.children !== "string") {
         return closure_7;
       } else {
         for (const key10010 in arg0.props) {
-          let tmp10 = key10010;
           if (null == arg0.props[key10010]) {
             continue;
+          } else if (set.has(key10010)) {
+            continue;
           } else {
-            let tmp3 = set;
-            if (set.has(key10010)) {
-              continue;
-            } else {
-              let obj = { eligible: false, reason: "unsupported-prop", unsupportedName: null };
-              obj[2] = key10010;
-              return obj;
-            }
+            let obj = { eligible: false, reason: "unsupported-prop", unsupportedName: key10010 };
+            return obj;
           }
           continue;
         }
         return (function getPlainTextStyle(style) {
-          const flattenResult = closure_0.flatten(style);
+          const flattenResult = StyleSheet.flatten(style);
           delete tmp[tmp2];
           if (null != flattenResult.textTransform) {
             if ("none" !== flattenResult.textTransform) {
@@ -108,22 +103,18 @@ export const getPlainTextEligibility = function getPlainTextEligibility(enabled)
             }
           }
           delete tmp[tmp2];
-          for (const item10016 of closure_2) {
-            let tmp5 = item10016;
+          for (const item10016 of closure_1_2) {
             if (null != flattenResult[item10016]) {
-              let obj = { eligible: false, reason: "unsupported-style", unsupportedName: null };
-              obj[2] = item10016;
-              let tmp7 = obj;
+              let obj = { eligible: false, reason: "unsupported-style", unsupportedName: item10016 };
               obj.return();
               return obj;
             } else {
-              let tmp6 = item10016;
               delete tmp[tmp3];
               continue;
             }
           }
           return flattenResult;
-        })(enabled.style);
+        })(element.style);
       }
     } else {
       return closure_8;

@@ -1,9 +1,8 @@
 // discord_app/modules/storefront/records/StorefrontProductRecord.tsx
-import closure_0 from "../../collectibles/records/CollectiblesStoreListingStylesRecord.tsx";
-import closure_1 from "../../skus/SKURecord.tsx";
+import CollectiblesStoreListingStylesRecord from "../../collectibles/records/CollectiblesStoreListingStylesRecord.tsx";
+import SKURecord from "../../skus/SKURecord.tsx";
 
-let prototype;
-prototype = function StorefrontProductRecord(arg0) {
+const prototype = function StorefrontProductRecord(arg0) {
   ({
     id: tmp.id,
     skuIds: tmp.skuIds,
@@ -26,13 +25,18 @@ prototype = function StorefrontProductRecord(arg0) {
 prototype["fromServer"] = function fromServer(sku_ids) {
   ({ options, created_at, updated_at, skus, tenant_metadata } = sku_ids);
   let obj = {};
-  const merged = Object.assign(Object.assign(sku_ids, Object.create(null)));
+  const merged = Object.assign(
+    Object.assign(
+      sku_ids,
+      Object.assign({ sku_ids: 0, options: 0, created_at: 0, updated_at: 0, skus: 0, tenant_metadata: 0 }),
+    ),
+  );
   obj.skuIds = sku_ids.sku_ids;
   obj.options = options.map((name) => ({ name: name.name, optionValues: name.option_values }));
   obj.createdAt = new Date(created_at);
   const date = new Date(created_at);
   obj.updatedAt = new Date(updated_at);
-  obj.skus = skus.map((arg0) => closure_1.createFromServer(arg0));
+  obj.skus = skus.map((item) => SKURecord.createFromServer(item));
   const collectibles = tenant_metadata.collectibles;
   let prop;
   if (collectibles != null) {
@@ -46,7 +50,9 @@ prototype["fromServer"] = function fromServer(sku_ids) {
   }
   let fromServerResult;
   if (null != prop1) {
-    fromServerResult = closure_0.fromServer(tenant_metadata.collectibles.primary_collection_styles);
+    fromServerResult = CollectiblesStoreListingStylesRecord.fromServer(
+      tenant_metadata.collectibles.primary_collection_styles,
+    );
   }
   obj.primaryCollectionStyles = fromServerResult;
   const collectibles3 = tenant_metadata.collectibles;
@@ -87,29 +93,32 @@ prototype["fromServer"] = function fromServer(sku_ids) {
     hide_badge = collectibles6.hide_badge;
   }
   obj.hideBadge = hide_badge;
-  if (typeof prototype !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof prototype === "function") {
+    obj = Object.create(tmp.prototype);
+    ({
+      id: tmp17.id,
+      skuIds: tmp17.skuIds,
+      name: tmp17.name,
+      summary: tmp17.summary,
+      options: tmp17.options,
+      createdAt: tmp17.createdAt,
+      updatedAt: tmp17.updatedAt,
+      skus: tmp17.skus,
+      primaryCollectionId: tmp17.primaryCollectionId,
+      primaryCollectionStyles: tmp17.primaryCollectionStyles,
+      primaryCollectionPdpBgUrl: tmp17.primaryCollectionPdpBgUrl,
+      primaryCollectionWillUnpublishAt: tmp17.primaryCollectionWillUnpublishAt,
+      gameApplicationId: tmp17.gameApplicationId,
+      badgeOverride: tmp17.badgeOverride,
+      hideBadge: tmp17.hideBadge,
+    } = obj);
+    return obj;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  obj = Object.create(tmp.prototype);
-  ({
-    id: tmp17.id,
-    skuIds: tmp17.skuIds,
-    name: tmp17.name,
-    summary: tmp17.summary,
-    options: tmp17.options,
-    createdAt: tmp17.createdAt,
-    updatedAt: tmp17.updatedAt,
-    skus: tmp17.skus,
-    primaryCollectionId: tmp17.primaryCollectionId,
-    primaryCollectionStyles: tmp17.primaryCollectionStyles,
-    primaryCollectionPdpBgUrl: tmp17.primaryCollectionPdpBgUrl,
-    primaryCollectionWillUnpublishAt: tmp17.primaryCollectionWillUnpublishAt,
-    gameApplicationId: tmp17.gameApplicationId,
-    badgeOverride: tmp17.badgeOverride,
-    hideBadge: tmp17.hideBadge,
-  } = obj);
-  return obj;
+  const date1 = new Date(updated_at);
 };
-const result = require("set").fileFinishedImporting("modules/storefront/records/StorefrontProductRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/storefront/records/StorefrontProductRecord.tsx");
 
 export default prototype;

@@ -1,10 +1,9 @@
 // discord_app/lib/LimitedMap.tsx
-import set from "../../_runtime/00002_set.js";
+import size from "../../_runtime/metro/00002__.js";
 
 class LimitedMap extends Map {
   constructor(arg0) {
     tmp = new LimitedMap(new.target);
-    // ThrowIfThisInitialized (0x7c)
     tmp.maxSize = global;
     return tmp;
   }
@@ -18,6 +17,6 @@ class LimitedMap extends Map {
   }
 }
 let closure_0 = LimitedMap.prototype;
-const result = set.fileFinishedImporting("lib/LimitedMap.tsx");
+const result = size.fileFinishedImporting("lib/LimitedMap.tsx");
 
 export default LimitedMap;

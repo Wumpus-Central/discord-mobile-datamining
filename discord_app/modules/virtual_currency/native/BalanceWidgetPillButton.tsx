@@ -1,10 +1,9 @@
 // discord_app/modules/virtual_currency/native/BalanceWidgetPillButton.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import Button from "../../../design/components/Button/native/Button.native.tsx";
-import registerAssetDefault from "../../../../_runtime/08838_registerAsset.js";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
+import _modDef8838 from "../../../../_runtime/metro/08838__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+require = fn;
 class BalanceWidgetPillButton {
   constructor(arg0) {
     ({ balance, variant } = global);
@@ -38,33 +37,34 @@ class BalanceWidgetPillButton {
     if (str == null) {
       str = "";
     }
-    obj[3] = str;
-    obj[4] = require("registerAsset");
-    obj[5] = flag;
-    obj[6] = !flag;
+    obj.text = str;
+    obj.icon = closure_1(tmp3[3]);
+    obj.accessible = flag;
+    obj.accessibilityElementsHidden = !flag;
     str2 = "no";
     if (flag) {
       str2 = "auto";
     }
     tmp4 = null === balance;
-    obj[7] = str2;
-    intl = require("getSystemLocale").intl;
+    obj.importantForAccessibility = str2;
+    intl = tmp2(tmp3[4]).intl;
     if (tmp4) {
-      stringResult = intl.string(require("getSystemLocale").t.y0WGqP);
+      stringResult = intl.string(tmp2(tmp3[4]).t.y0WGqP);
     } else {
       obj = { balance: null };
-      obj[0] = balance.toString();
-      stringResult = intl.formatToPlainString(require("getSystemLocale").t.zPaLL9, obj);
+      obj.balance = balance.toString();
+      stringResult = intl.formatToPlainString(tmp2(tmp3[4]).t.zPaLL9, obj);
     }
-    obj[8] = stringResult;
-    obj[9] = tmp4;
-    obj[10] = tmp4;
-    return tmp(require("Button").Button, obj);
+    obj.accessibilityLabel = stringResult;
+    obj.disabled = tmp4;
+    obj.loading = tmp4;
+    return tmp(closure_0(closure_2[2]).Button, obj);
   }
 }
-noopAll;
+const jsx = fn(21).jsx;
 BalanceWidgetPillButton.displayName = "BalanceWidgetPillButton";
-const result = require("set").fileFinishedImporting("modules/virtual_currency/native/BalanceWidgetPillButton.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/virtual_currency/native/BalanceWidgetPillButton.tsx");
 
 export default BalanceWidgetPillButton;
 export { BalanceWidgetPillButton };

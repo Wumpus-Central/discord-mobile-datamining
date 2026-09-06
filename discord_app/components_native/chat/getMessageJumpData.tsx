@@ -1,23 +1,24 @@
 // discord_app/components_native/chat/getMessageJumpData.tsx
-import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
-import set from "../../utils/PlatformUtils.tsx";
-import useSystemKeyboardHeight from "../../modules/keyboard/native/useSystemKeyboardHeight.native.tsx";
-import GuildThemeSourcePreference from "../../flow/Client.tsx";
-import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../_runtime/00019_noop.js";
-import closure_5 from "../../modules/keyboard/native/subscribeToKeyboardUIStore.tsx";
-import closure_6 from "../../stores/UserStore.tsx";
+import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
+import PlatformUtils from "../../utils/PlatformUtils.tsx";
+import Client from "../../flow/Client.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import noop from "../../../_runtime/metro/00019__.js";
+import subscribeToKeyboardUIStore from "../../modules/keyboard/native/subscribeToKeyboardUIStore.tsx";
+import UserStore from "../../stores/UserStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("components_native/chat/getMessageJumpData.tsx");
+const useSystemKeyboardHeight = tmp(1877);
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/chat/getMessageJumpData.tsx");
 
 export default function getMessageJumpData(messages, isAtBottom, messages2) {
   messages = messages.messages;
   const lastResult = messages.last();
   messages2 = messages2.messages;
   const lastResult1 = messages2.last();
-  currentUser = currentUser.getCurrentUser();
-  const ANIMATED = GuildThemeSourcePreference.JumpType.ANIMATED;
+  const currentUser = UserStore.getCurrentUser();
+  const ANIMATED = Client.JumpType.ANIMATED;
   let tmp7 = tmp6;
   ({ jumpSequenceId, focusTargetId } = messages);
   if (messages.initialScrollSequenceId === messages2.initialScrollSequenceId) {
@@ -44,7 +45,7 @@ export default function getMessageJumpData(messages, isAtBottom, messages2) {
           if (null != currentUser) {
             if (lastResult.author.id === currentUser.id) {
               if (null != lastResult1) {
-                let obj = DISCORD_EPOCHDefault;
+                let obj = SnowflakeUtilsDefault;
               }
               let id = lastResult.id;
               let flag = false;
@@ -59,25 +60,20 @@ export default function getMessageJumpData(messages, isAtBottom, messages2) {
             }
           }
           obj = {
-            scrollToMessageId: null,
-            jumpTargetId: null,
-            jumpType: null,
-            jumpSequenceId: null,
-            minimizeScrolling: null,
+            scrollToMessageId: id,
+            jumpTargetId: tmp13,
+            jumpType: tmp12,
+            jumpSequenceId,
+            minimizeScrolling: flag,
             focusTargetId: null,
             shouldInitialScroll: null,
           };
-          obj[0] = id;
-          obj[1] = tmp13;
-          obj[2] = tmp12;
-          obj[3] = jumpSequenceId;
-          obj[4] = flag;
           let tmp18 = null;
           if (tmp8) {
             tmp18 = focusTargetId;
           }
-          obj[5] = tmp18;
-          obj[6] = tmp6;
+          obj.focusTargetId = tmp18;
+          obj.shouldInitialScroll = tmp6;
           return obj;
         }
       }
@@ -95,8 +91,7 @@ export default function getMessageJumpData(messages, isAtBottom, messages2) {
       }
     }
   }
-  const tmp4 = require;
-  const tmp4Result = set;
+  const tmp4Result = PlatformUtils;
   flag = false;
   tmp12 = ANIMATED;
   tmp13 = null;
@@ -114,15 +109,14 @@ export const useMessageJumpAndroidKeyboardHeight = function useMessageJumpAndroi
     num = useSystemKeyboardHeight.getSystemKeyboardHeight();
     const tmpResult = useSystemKeyboardHeight;
   }
-  const obj = React;
-  obj2 = set;
-  const tmp = require;
-  [tmp4, require] = callback(React.useState(num), 2);
+  const obj = noop;
+  obj2 = PlatformUtils;
+  [tmp4, require] = _slicedToArray(noop.useState(num), 2);
   const effect = obj.useEffect(
     () =>
-      closure_1_5((keyboardHeight) => {
+      subscribeToKeyboardUIStore((keyboardHeight) => {
         if (obj.isAndroid()) {
-          callback(keyboardHeight.keyboardHeight);
+          closure_1_0(keyboardHeight.keyboardHeight);
         }
       }),
     [],

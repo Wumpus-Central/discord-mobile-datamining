@@ -1,66 +1,67 @@
 // discord_app/modules/guild_scheduled_events/native/components/EditGuildEventStepContainer.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
-import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let c3 = importAllResult;
-({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
-({ jsx: closure_6, jsxs: error } = jsxProd);
+get_ActivityIndicator = fn(17);
+({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4560);
 let obj = { container: null, flex: null, scroller: null, buttonContainer: null };
 obj = {
   flex: 1,
   paddingHorizontal: 0,
   paddingVertical: 0,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   flexDirection: "column",
   height: "100%",
 };
-obj[0] = obj;
-obj[1] = { flex: 1 };
-obj[2] = { paddingHorizontal: 16 };
-createCacheKey = {
+obj.container = obj;
+obj.flex = { flex: 1 };
+obj.scroller = { paddingHorizontal: 16 };
+const rect = {
   position: "absolute",
   bottom: 0,
   left: 0,
   right: 0,
   paddingHorizontal: 16,
   paddingVertical: 16,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
 };
-obj[3] = createCacheKey;
-let closure_8 = createCacheKey.createStyles(obj);
-const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
-  importDefault = undefined;
+obj.buttonContainer = rect;
+let closure_8 = createStyles.createStyles(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting(
+  "modules/guild_scheduled_events/native/components/EditGuildEventStepContainer.tsx",
+);
+
+export default noop.forwardRef((arg0, ref) => {
   ({ children, action } = arg0);
-  const tmp = callback4();
-  const tmp2 = callback(importAllResult.useState(32), 2);
-  importDefault = tmp2[1];
+  const tmp = closure_8();
+  const tmp2 = _slicedToArray(noop.useState(32), 2);
+  closure_0 = tmp2[1];
   const insets = useSafeAreaInsetsKeyboardAwareDefault().insets;
   let obj = { style: tmp.container, children: null };
   obj = {
     ref,
     automaticallyAdjustContentInsets: false,
     keyboardShouldPersistTaps: "handled",
-    style: items,
+    style: null,
     contentContainerStyle: tmp.scroller,
     children,
   };
-  items = [tmp.flex, { marginBottom: tmp2[0] + insets.bottom }];
-  callback = importAllResult.useCallback((nativeEvent) => {
-    callback(nativeEvent.nativeEvent.layout.height);
+  const items = [tmp.flex, { marginBottom: tmp2[0] + insets.bottom }];
+  obj.style = items;
+  const callback = noop.useCallback((nativeEvent) => {
+    closure_0(nativeEvent.nativeEvent.layout.height);
   }, []);
-  const items1 = [callback2(closure_5, obj)];
+  const items1 = [timestampProducer(hasOwnProperty, obj)];
+  obj = { style: null, onLayout: callback, children: action };
   const items2 = [tmp.buttonContainer, { paddingBottom: insets.bottom }];
-  items1[1] = callback2(closure_4, { style: items2, onLayout: callback, children: action });
-  obj[1] = items1;
-  return callback3(closure_4, obj);
+  obj.style = items2;
+  items1[1] = timestampProducer(React4, obj);
+  obj.children = items1;
+  return React5(React4, obj);
 });
-const result = require("set").fileFinishedImporting(
-  "modules/guild_scheduled_events/native/components/EditGuildEventStepContainer.tsx",
-);
-
-export default forwardRefResult;

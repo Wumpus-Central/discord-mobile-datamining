@@ -1,9 +1,9 @@
 // discord_app/modules/collectibles/profile_frames/scaleProfileFrame.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-let result = set.fileFinishedImporting("modules/collectibles/profile_frames/scaleProfileFrame.tsx");
+let result = size.fileFinishedImporting("modules/collectibles/profile_frames/scaleProfileFrame.tsx");
 
-export default function scaleProfileFrame(innerWidth) {
+export default function scaleProfileFrame(innerWidth, arg1) {
   const result = arg1 / innerWidth.innerWidth;
   return {
     overflowTop: innerWidth.overflowTop * result,

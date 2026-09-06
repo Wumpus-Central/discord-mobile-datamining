@@ -1,18 +1,17 @@
 // discord_app/modules/safety_flows/SafetyFlowsManager.tsx
-import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
-import _openSafetyFlow from "openSafetyFlow.native.tsx";
+import openSafetyFlow from "openSafetyFlow.native.tsx";
+import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
-require = arg1;
+require = fn;
 function handleConnectionOpenSupplemental() {
-  _openSafetyFlow.openSafetyFlow();
+  openSafetyFlow.openSafetyFlow();
 }
 function handleSafetyFlowsModalOpen() {
-  _openSafetyFlow.openSafetyFlow();
+  openSafetyFlow.openSafetyFlow();
 }
 function handleUserRequiredActionUpdate(requiredAction) {
-  _openSafetyFlow.openSafetyFlow({ requiredAction: requiredAction.requiredAction });
+  openSafetyFlow.openSafetyFlow({ requiredAction: requiredAction.requiredAction });
 }
-initializeDefault;
 let prototype = function SafetyFlowsManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = {
@@ -24,6 +23,7 @@ let prototype = function SafetyFlowsManager() {
 }.prototype;
 class prototype extends tmp2 {}
 prototype = new prototype();
-const result = require("set").fileFinishedImporting("modules/safety_flows/SafetyFlowsManager.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_flows/SafetyFlowsManager.tsx");
 
 export default prototype;

@@ -1,48 +1,49 @@
 // discord_app/modules/guild_member_verification/native/components/alerts/MemberVerificationAlertUpdate.tsx
-import noopAll from "../../../../../../_runtime/00019_noop.js";
-import getSystemLocale from "../../../../../intl/index.native.tsx";
-import Text from "../../../../../design/components/Text/native/Text.tsx";
-import componentDidMountDefault from "../../../../../components_native/common/Alert.tsx";
-import registerAssetDefault from "../../../../../../_runtime/07091_registerAsset.js";
-import { Image } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { DownloadLinks } from "../../../../../Constants.tsx";
-import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import util from "../../../../../intl/index.native.tsx";
+import LinkingDefault from "../../../../../lib/native/Linking.tsx";
+import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
+import common_AlertDefault from "../../../../../components_native/common/Alert.tsx";
+import _modDef7091 from "../../../../../../_runtime/metro/07091__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles({
+require = fn;
+const Image = fn(17).Image;
+const DownloadLinks = fn(1074).DownloadLinks;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4560);
+let closure_7 = createStyles.createStyles({
   headerImage: { marginLeft: "auto", marginRight: "auto", marginTop: 8 },
   header: { marginTop: 24, textAlign: "center" },
   text: { marginVertical: 8, lineHeight: 18, textAlign: "center" },
 });
-const result = require("set").fileFinishedImporting(
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/guild_member_verification/native/components/alerts/MemberVerificationAlertUpdate.tsx",
 );
 
 export default function MemberVerificationAlertUpdate(onClose) {
-  const tmp = callback3();
+  const tmp = closure_7();
   let obj = {};
   const merged = Object.assign(onClose);
-  const intl = getSystemLocale.intl;
-  obj.confirmText = intl.string(getSystemLocale.t.b8siyY);
-  const intl2 = getSystemLocale.intl;
-  obj.cancelText = intl2.string(getSystemLocale.t["ETE/oC"]);
+  const intl = util.intl;
+  obj.confirmText = intl.string(util.t.b8siyY);
+  const intl2 = util.intl;
+  obj.cancelText = intl2.string(util.t["ETE/oC"]);
   obj.onConfirm = function onConfirm() {
-    return callback(table[7]).openURL(constants.IOS);
+    return LinkingDefault.openURL(constants.IOS);
   };
   obj.onCancel = onClose.onClose;
-  obj = { source: registerAssetDefault, style: tmp.headerImage };
-  const items = [callback(Image, obj), ,];
+  obj = { source: _modDef7091, style: tmp.headerImage };
+  const items = [hasOwnProperty(Image, obj), ,];
   obj = { style: tmp.header, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl3 = getSystemLocale.intl;
-  obj[3] = intl3.string(getSystemLocale.t.kkjNHU);
-  items[1] = callback(Text.Text, obj);
-  obj1 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl4 = getSystemLocale.intl;
-  obj1[3] = intl4.string(getSystemLocale.t.gnkqzQ);
-  items[2] = callback(Text.Text, obj1);
+  const intl3 = util.intl;
+  obj.children = intl3.string(util.t.kkjNHU);
+  items[1] = hasOwnProperty(Text_Text.Text, obj);
+  const obj1 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
+  const intl4 = util.intl;
+  obj1.children = intl4.string(util.t.gnkqzQ);
+  items[2] = hasOwnProperty(Text_Text.Text, obj1);
   obj.children = items;
-  return callback2(componentDidMountDefault, obj);
+  return timestampProducer(common_AlertDefault, obj);
 }

@@ -1,19 +1,18 @@
 // discord_app/modules/channel_list_v2/native/useChannelListWidth.tsx
-import set from "../../../../_runtime/00002_set.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import keys from "../../../ConstantsIOS.tsx";
-import map from "../../../design/tokens/native/useToken.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import ConstantsIOS from "../../../ConstantsIOS.tsx";
+import useToken from "../../../design/tokens/native/useToken.tsx";
 import useChatLayoutDefault from "../../chat/native/useChatLayout.tsx";
-import sum from "../../screen/native/drawer/useDrawerWidth.tsx";
+import useDrawerWidth from "../../screen/native/drawer/useDrawerWidth.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/channel_list_v2/native/useChannelListWidth.tsx");
+const result = size.fileFinishedImporting("modules/channel_list_v2/native/useChannelListWidth.tsx");
 
 export default function useChannelListWidth() {
-  const drawerWidth = sum.useDrawerWidth();
-  const obj = sum;
-  const token = map.useToken(ThemesDefault.modules.mobile.CHANNEL_DRAWER_SPACING);
+  const drawerWidth = useDrawerWidth.useDrawerWidth();
+  const token = useToken.useToken(nativeDefault.modules.mobile.CHANNEL_DRAWER_SPACING);
   let num = 0;
-  const diff = drawerWidth - keys.DM_WIDTH;
+  const diff = drawerWidth - ConstantsIOS.DM_WIDTH;
   if (useChatLayoutDefault().isChatBesideChannelList) {
     num = token;
   }

@@ -1,7 +1,7 @@
 // discord_app/modules/media_viewer/native/Constants.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/media_viewer/native/Constants.tsx");
+const result = size.fileFinishedImporting("modules/media_viewer/native/Constants.tsx");
 
 export const THUMBNAIL_MARGIN = 2;
 export const THUMBNAIL_MIN_WIDTH = 24;

@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/voice/UserSettingsVoiceAndVideoConstants.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/user_settings/voice/UserSettingsVoiceAndVideoConstants.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/voice/UserSettingsVoiceAndVideoConstants.tsx");
 
 export const InputProfile = { VOICE_ISOLATION: "VOICE_ISOLATION", STUDIO: "STUDIO", CUSTOM: "CUSTOM" };

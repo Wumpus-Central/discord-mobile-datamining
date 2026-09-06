@@ -1,54 +1,45 @@
 // discord_common/js/packages/kv-storage/js/index.tsx
-import set from "implementation/index.tsx";
+import "module_1988";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/index.tsx");
-for (const key10020 in require("prefix")) {
-  let tmp4 = key10020;
-  arg5[key10020] = require("prefix")[key10020];
+const result = size.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/index.tsx");
+for (const key10020 in require("Dao")) {
+  arg5[key10020] = require("Dao")[key10020];
   continue;
 }
-for (const key10024 in require("open")) {
-  let tmp5 = key10024;
-  arg5[key10024] = require("open")[key10024];
+for (const key10024 in require("Database")) {
+  arg5[key10024] = require("Database")[key10024];
   continue;
 }
-for (const key10028 in require("prefix")) {
-  let tmp6 = key10028;
-  arg5[key10028] = require("prefix")[key10028];
+for (const key10028 in require("EntityDao")) {
+  arg5[key10028] = require("EntityDao")[key10028];
   continue;
 }
-for (const key10032 in require("prefix")) {
-  let tmp7 = key10032;
-  arg5[key10032] = require("prefix")[key10032];
+for (const key10032 in require("GuildDao")) {
+  arg5[key10032] = require("GuildDao")[key10032];
   continue;
 }
-for (const key10036 in require("prefix")) {
-  let tmp8 = key10036;
-  arg5[key10036] = require("prefix")[key10036];
+for (const key10036 in require("GuildEntityDao")) {
+  arg5[key10036] = require("GuildEntityDao")[key10036];
   continue;
 }
-for (const key10040 in require("databases")) {
-  let tmp9 = key10040;
-  arg5[key10040] = require("databases")[key10040];
+for (const key10040 in require("Kv")) {
+  arg5[key10040] = require("Kv")[key10040];
   continue;
 }
-for (const key10044 in require("prefix")) {
-  let tmp10 = key10044;
-  arg5[key10044] = require("prefix")[key10044];
+for (const key10044 in require("MessageDao")) {
+  arg5[key10044] = require("MessageDao")[key10044];
   continue;
 }
-for (const key10048 in require("malformedValueCount")) {
-  let tmp11 = key10048;
-  arg5[key10048] = require("malformedValueCount")[key10048];
+for (const key10048 in require("api/Stats")) {
+  arg5[key10048] = require("api/Stats")[key10048];
   continue;
 }
-for (const key10052 in require("fromDatabaseTransaction")) {
-  let tmp12 = key10052;
-  arg5[key10052] = require("fromDatabaseTransaction")[key10052];
+for (const key10052 in require("Table")) {
+  arg5[key10052] = require("Table")[key10052];
   continue;
 }
 for (const key10056 in require("TableId")) {
-  let tmp13 = key10056;
   arg5[key10056] = require("TableId")[key10056];
   continue;
 }

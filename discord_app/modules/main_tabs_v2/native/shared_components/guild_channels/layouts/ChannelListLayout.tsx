@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx
-import set from "../../../../../../../_runtime/00002_set.js";
-import explicitContentFromProto from "../../../../../user_settings/UserSettings.tsx";
+import UserSettings from "../../../../../user_settings/UserSettings.tsx";
 import ChannelListLayoutTypes2 from "../../../../ChannelListLayoutTypes.tsx";
+import size from "../../../../../../../_runtime/metro/00002__.js";
 
 function getLayoutStyles(layout, launchpad) {
   let flag = launchpad;
@@ -23,16 +23,17 @@ function getLayoutStyles(layout, launchpad) {
     return flag ? tmpResult.CHANNEL_LIST_STYLES_COZY_LAUNCHPAD : tmpResult.CHANNEL_LIST_STYLES_COZY;
   }
 }
-let result = set.fileFinishedImporting(
+let result = size.fileFinishedImporting(
   "modules/main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx",
 );
 
 export { getLayoutStyles };
 export function makeSizeStyle(size) {
-  return { width: size, height: size };
+  size = { width: size, height: size };
+  return size;
 }
-export const isLayoutCompact = function isLayoutCompact(closure_1_6) {
-  return closure_1_6 === ChannelListLayoutTypes2.ChannelListLayoutTypes.COMPACT;
+export const isLayoutCompact = function isLayoutCompact(layout) {
+  return layout === ChannelListLayoutTypes2.ChannelListLayoutTypes.COMPACT;
 };
 export const isLayoutCozy = function isLayoutCozy(layout) {
   return (
@@ -42,7 +43,7 @@ export const isLayoutCozy = function isLayoutCozy(layout) {
   );
 };
 export const useMessagesTabLayout = function useMessagesTabLayout(panelVariant) {
-  const ChannelListLayoutSetting = explicitContentFromProto.ChannelListLayoutSetting;
+  const ChannelListLayoutSetting = UserSettings.ChannelListLayoutSetting;
   const setting = ChannelListLayoutSetting.useSetting();
   const ChannelListLayoutTypes = ChannelListLayoutTypes2.ChannelListLayoutTypes;
   if (panelVariant) {

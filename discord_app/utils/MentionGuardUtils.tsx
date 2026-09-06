@@ -1,10 +1,9 @@
 // discord_app/utils/MentionGuardUtils.tsx
 import _modDef38 from "../../_runtime/metro/00038__.js";
-import rebuildDefault from "../modules/messages/MessageParser.tsx";
-import closure_2 from "../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../stores/ChannelMemberStore.tsx";
-import closure_4 from "../stores/PermissionStore.tsx";
-import ME from "../Constants.tsx";
+import MessageParserDefault from "../modules/messages/MessageParser.tsx";
+import _slicedToArray from "../../_runtime/metro/00032__.js";
+import ChannelMemberStore from "../stores/ChannelMemberStore.tsx";
+import PermissionStore from "../stores/PermissionStore.tsx";
 
 function parsedItemUsesEveryoneRole(content) {
   if (typeof content.content === "string") {
@@ -15,7 +14,7 @@ function parsedItemUsesEveryoneRole(content) {
           match = str3.match(regExp);
         }
         if (null != match) {
-          return callback(match, 1)[0];
+          return _slicedToArray(match, 1)[0];
         }
       }
     }
@@ -26,11 +25,8 @@ function parsedItemUsesEveryoneRole(content) {
       content = content.content;
       const obj = content[Symbol.iterator]();
       while (obj !== undefined) {
-        let tmp6 = parsedItemUsesEveryoneRole;
         let tmp7 = parsedItemUsesEveryoneRole(tmp4);
-        let tmp8 = tmp7;
         if (null != tmp7) {
-          let tmp9 = obj;
           obj.return();
           return tmp7;
         }
@@ -40,9 +36,11 @@ function parsedItemUsesEveryoneRole(content) {
   }
   return null;
 }
-({ Permissions: c5, StatusTypes: closure_6 } = ME);
+const Constants = fn(1074);
+({ Permissions: hasOwnProperty, StatusTypes: metroRequire } = Constants);
 const regExp = new RegExp(/@(:?everyone|here)/);
-const result = require("set").fileFinishedImporting("utils/MentionGuardUtils.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("utils/MentionGuardUtils.tsx");
 
 export default {
   shouldShowEveryoneGuard(extractEveryoneRoleResult, getGuildId) {
@@ -57,11 +55,11 @@ export default {
       }
       let tmp5 = num;
     } else {
-      const groups = store.getProps(getGuildId.getGuildId(), getGuildId.id).groups;
+      const groups = ChannelMemberStore.getProps(getGuildId.getGuildId(), getGuildId.id).groups;
       const item = groups.forEach((id) => {
         let tmp = "@everyone" !== closure_0;
         if (tmp) {
-          tmp = id.id === closure_1_6.OFFLINE;
+          tmp = id.id === constants2.OFFLINE;
         }
         if (!tmp) {
           closure_1 = closure_1 + id.count;
@@ -71,7 +69,7 @@ export default {
     }
     let canResult = tmp5 > 30;
     if (canResult) {
-      canResult = closure_4.can(constants.MENTION_EVERYONE, getGuildId);
+      canResult = PermissionStore.can(constants.MENTION_EVERYONE, getGuildId);
     }
     return canResult;
   },
@@ -85,11 +83,11 @@ export default {
       }
       let tmp3 = num;
     } else {
-      const groups = store.getProps(isThread.getGuildId(), isThread.id).groups;
+      const groups = ChannelMemberStore.getProps(isThread.getGuildId(), isThread.id).groups;
       const item = groups.forEach((id) => {
         let tmp = "@everyone" !== closure_0;
         if (tmp) {
-          tmp = id.id === closure_1_6.OFFLINE;
+          tmp = id.id === constants2.OFFLINE;
         }
         if (!tmp) {
           closure_1 = closure_1 + id.count;
@@ -100,14 +98,10 @@ export default {
     return tmp3;
   },
   extractEveryoneRole(arg0, getGuildId) {
-    const obj = rebuildDefault;
-    const obj2 = rebuildDefault.parsePreprocessor(getGuildId, arg0)[Symbol.iterator]();
+    const obj2 = MessageParserDefault.parsePreprocessor(getGuildId, arg0)[Symbol.iterator]();
     while (obj2 !== undefined) {
-      let tmp3 = parsedItemUsesEveryoneRole;
       let tmp4 = parsedItemUsesEveryoneRole(tmp2);
-      let tmp5 = tmp4;
       if (null != tmp4) {
-        let tmp6 = obj2;
         obj2.return();
         return tmp4;
       }

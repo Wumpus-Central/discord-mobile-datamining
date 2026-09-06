@@ -1,18 +1,15 @@
 // discord_app/modules/accept_invite/native/AcceptInvite.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import isDiscordFrontendDevelopment from "../../../utils/GlobalUtils.tsx";
-import handleImageLoad from "../../image_upload/ImageLoaderUtils.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import GlobalUtils from "../../../utils/GlobalUtils.tsx";
+import ImageLoaderUtils from "../../image_upload/ImageLoaderUtils.tsx";
 import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
-import map from "../../../design/tokens/native/useToken.tsx";
-import PressableCard from "../../../design/components/Card/native/Card.native.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import { InviteStates } from "../../../Constants.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import useToken from "../../../design/tokens/native/useToken.tsx";
+import DeprecatedLayoutAnimation from "../../animations/native/DeprecatedLayoutAnimation.tsx";
+import Card from "../../../design/components/Card/native/Card.native.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+require = fn;
 function getInviteState(invite) {
   let state;
   if (invite != null) {
@@ -40,7 +37,7 @@ function getInviteState(invite) {
                       if (tmp4.APP_OPENED !== state) {
                         if (tmp4.APP_OPENING !== state) {
                           if (tmp4.ACCEPTING !== state) {
-                            isDiscordFrontendDevelopment.assertNever(state);
+                            GlobalUtils.assertNever(state);
                           }
                         }
                       }
@@ -60,86 +57,80 @@ function getInviteState(invite) {
   return constants.LOADING;
 }
 function InviteResolving() {
-  let obj = map;
-  obj = { style: callback4().resolvingContainer, children: null };
-  obj = { color: obj.useToken(ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT), size: "large" };
-  obj[1] = callback2(closure_5, obj);
-  return callback2(closure_7, obj);
+  let obj = { style: closure_11().resolvingContainer, children: null };
+  obj = { color: obj.useToken(nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT), size: "large" };
+  obj.children = React7(hasOwnProperty, obj);
+  return React7(React5, obj);
 }
 function AcceptInviteCardComponent(invite) {
   invite = invite.invite;
-  let tmp = callback(React.useState(getInviteState(invite)), 2);
+  let tmp = _slicedToArray(noop.useState(getInviteState(invite)), 2);
   const first = tmp[0];
   dependencyMap = tmp[1];
   const items = [invite, first];
-  const effect = React.useEffect(() => {
-    const tmp = closure_1_13(invite);
+  const effect = noop.useEffect(() => {
+    const tmp = getInviteState(invite);
     if (tmp !== first) {
-      const result = invite(5581).DeprecatedLayoutAnimation();
-      dependencyMap(tmp);
-      const obj = invite(5581);
+      const result = DeprecatedLayoutAnimation.DeprecatedLayoutAnimation();
+      closure_2(tmp);
     }
   }, items);
   if (null == invite) {
-    return callback2(InviteResolving, {});
+    return closure_9(InviteResolving, {});
   } else if (constants.DETAILS === first) {
     let obj = {};
     const merged = Object.assign(invite);
     obj.invite = invite;
-    return callback2(first(12718), obj);
+    return closure_9(first(12718), obj);
   } else if (tmp22.ERROR === first) {
     obj = {};
     const merged1 = Object.assign(invite);
     obj.invite = invite;
-    return callback2(first(12721), obj);
+    return closure_9(first(12721), obj);
   } else {
-    return callback2(InviteResolving, {});
+    return closure_9(InviteResolving, {});
   }
 }
-({ ActivityIndicator: c5, ImageBackground: closure_6, View: error } = get_ActivityIndicator);
-({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = {
+get_ActivityIndicator = fn(17);
+({ ActivityIndicator: hasOwnProperty, ImageBackground: metroRequire, View: closure_7 } = get_ActivityIndicator);
+const InviteStates = fn(1074).InviteStates;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+fn(4560);
+let createStyles = {
   parentContainer: null,
   imageStyle: null,
   cardContainer: null,
   cardContent: null,
   resolvingContainer: null,
 };
-createCacheKey = {
-  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+createStyles = {
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   alignItems: "center",
   justifyContent: "center",
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginVertical: 0, resizeMode: "cover" };
-createCacheKey[2] = {
+createStyles.parentContainer = createStyles;
+createStyles.imageStyle = { marginVertical: 0, resizeMode: "cover" };
+createStyles.cardContainer = {
   position: "absolute",
   flex: 1,
   width: "90%",
   alignItems: "center",
   justifyContent: "center",
   padding: 0,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
-createCacheKey[3] = { padding: 16, flex: 1, justifyContent: "center", alignItems: "center", width: "100%" };
-createCacheKey[4] = { padding: 64 };
-let closure_11 = createCacheKey.createStyles(createCacheKey);
-let closure_12 = { LOADING: 0, [0]: "LOADING", DETAILS: 1, [1]: "DETAILS", ERROR: 2, [2]: "ERROR" };
-const obj1 = {
-  position: "absolute",
-  flex: 1,
-  width: "90%",
-  alignItems: "center",
-  justifyContent: "center",
-  padding: 0,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
-};
-let result = require("set").fileFinishedImporting("modules/accept_invite/native/AcceptInvite.tsx");
+createStyles.cardContent = { padding: 16, flex: 1, justifyContent: "center", alignItems: "center", width: "100%" };
+createStyles.resolvingContainer = { padding: 64 };
+let closure_11 = createStyles.createStyles(createStyles);
+const constants = { LOADING: 0, [0]: "LOADING", DETAILS: 1, [1]: "DETAILS", ERROR: 2, [2]: "ERROR" };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/accept_invite/native/AcceptInvite.tsx");
 
 export default function AcceptInvite(invite) {
   invite = invite.invite;
-  const merged = Object.assign(invite, Object.create(null));
-  const tmp2 = callback4();
+  const merged = Object.assign(invite, Object.assign({ invite: 0 }));
+  const tmp2 = closure_11();
   ({ height, width } = useWindowDimensionsDefault());
   let obj = invite;
   if (invite == null) {
@@ -154,23 +145,24 @@ export default function AcceptInvite(invite) {
     let guildSplashSource = tmp3(12726);
   } else {
     obj = { id: null, splash: null, size: null };
-    ({ id: obj3[0], splash: obj3[1] } = guild);
-    let obj3 = handleImageLoad;
-    obj[2] = width * obj3.getDevicePixelRatio();
+    ({ id: obj3.id, splash: obj3.splash } = guild);
+    let obj3 = ImageLoaderUtils;
+    obj.size = width * obj3.getDevicePixelRatio();
     guildSplashSource = tmp3(1396).getGuildSplashSource(obj);
     const tmp3Result = tmp3(1396);
   }
-  obj = { style: items, children: null };
-  items = [tmp2.parentContainer, { height, width }];
+  obj = { style: null, children: null };
+  const items = [tmp2.parentContainer, { height, width }];
+  obj.style = items;
   const items1 = [
-    callback2(closure_6, { source: guildSplashSource, imageStyle: tmp2.imageStyle, style: { height, width } }),
+    React7(timestampProducer, { source: guildSplashSource, imageStyle: tmp2.imageStyle, style: { height, width } }),
   ];
   const obj2 = { style: tmp2.cardContainer, children: null };
   obj3 = { style: tmp2.cardContent, children: null };
   const merged1 = Object.assign(merged);
-  obj3[1] = callback2(AcceptInviteCardComponent, { invite });
-  obj2[1] = callback2(closure_7, obj3);
-  items1[1] = callback2(PressableCard.Card, obj2);
-  obj[1] = items1;
-  return callback3(closure_7, obj);
+  obj3.children = React7(AcceptInviteCardComponent, { invite });
+  obj2.children = React7(React5, obj3);
+  items1[1] = React7(Card.Card, obj2);
+  obj.children = items1;
+  return closure_1_10(React5, obj);
 }

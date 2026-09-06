@@ -1,34 +1,34 @@
 // discord_app/utils/ChangeLogUtils.tsx
-import tDefault from "../../_runtime/04257_t.js";
-import get_defaultRulesDefault from "../modules/markup/MarkupUtils.tsx";
-import textRegexpDefault from "../modules/markup/MarkupTextRule.tsx";
-import regExpDefault from "../modules/markup/MarkupListRule.tsx";
-import _modDef5026 from "../modules/markup/MarkupSubtextRule.tsx";
+import _modDef4257 from "../../_runtime/metro/04257__.js";
+import MarkupUtilsDefault from "../modules/markup/MarkupUtils.tsx";
+import MarkupTextRuleDefault from "../modules/markup/MarkupTextRule.tsx";
+import MarkupListRuleDefault from "../modules/markup/MarkupListRule.tsx";
+import MarkupSubtextRuleDefault from "../modules/markup/MarkupSubtextRule.tsx";
 
-const require = arg1;
-function defaultRules(uri) {
+const require = fn;
+function defaultRules(dependencyMap) {
   let obj = {};
-  const merged = Object.assign(require("native/ChangeLogUtils.tsx").baseRules);
-  if (null != require("native/ChangeLogUtils.tsx").customRules.strong) {
+  const merged = Object.assign(require("utils/ChangeLogUtils").baseRules);
+  if (null != require("utils/ChangeLogUtils").customRules.strong) {
     obj = {};
     const merged1 = Object.assign(tmp(8094).baseRules.strong);
     if (typeof tmp(8094).customRules.strong === "function") {
       const customRules = tmp(8094).customRules;
-      let strong = customRules.strong(uri);
+      let strong = customRules.strong(dependencyMap);
     } else {
       strong = tmp(8094).customRules.strong;
     }
     obj = { strong: null };
     const merged2 = Object.assign(strong);
-    obj[0] = obj;
+    obj.strong = obj;
   } else {
-    obj1 = {};
+    const obj1 = {};
     const merged3 = Object.assign(obj1);
     const obj2 = {};
     const merged4 = Object.assign(image);
     if (typeof tmp(8094).customRules.image === "function") {
       const customRules2 = tmp(8094).customRules;
-      image = customRules2.image(uri);
+      image = customRules2.image(dependencyMap);
     } else {
       image = tmp(8094).customRules.image;
     }
@@ -38,7 +38,7 @@ function defaultRules(uri) {
     const merged6 = Object.assign(link);
     if (typeof tmp(8094).customRules.link === "function") {
       const customRules3 = tmp(8094).customRules;
-      link = customRules3.link(uri);
+      link = customRules3.link(dependencyMap);
     } else {
       link = tmp(8094).customRules.link;
     }
@@ -48,37 +48,36 @@ function defaultRules(uri) {
     const merged8 = Object.assign(list);
     if (typeof tmp(8094).customRules.list === "function") {
       const customRules4 = tmp(8094).customRules;
-      list = customRules4.list(uri);
+      list = customRules4.list(dependencyMap);
     } else {
       list = tmp(8094).customRules.list;
     }
     const merged9 = Object.assign(list);
     obj.list = obj4;
-    const obj5 = { order: null, match: null, parse: null, react: null };
-    obj5[0] = textRegexpDefault.order;
-    obj5[1] = function match(arg0) {
-      return regex.exec(arg0);
-    };
-    obj5[2] = function parse(arg0, arg1, arg2) {
-      if (null == arg2.interpolations[arg0[1]]) {
-        let obj = { type: "text", content: null };
-        obj[1] = arg0[0];
-      } else {
-        obj = { type: "interpolation", renderer: null };
-        obj[1] = tmp;
-      }
-      return obj;
-    };
-    obj5[3] = function react(renderer) {
-      return renderer.renderer();
+    const obj5 = {
+      order: MarkupTextRuleDefault.order,
+      match(arg0) {
+        return regex.exec(arg0);
+      },
+      parse(arg0, arg1, arg2) {
+        if (null == arg2.interpolations[arg0[1]]) {
+          let obj = { type: "text", content: arg0[0] };
+        } else {
+          obj = { type: "interpolation", renderer: tmp };
+        }
+        return obj;
+      },
+      react(renderer) {
+        return renderer.renderer();
+      },
     };
     obj.interpolation = obj5;
     const obj6 = {};
     const merged10 = Object.assign(lheading);
     _require = true;
-    obj6.parse = (arg0, arg1, inline) => {
-      const match = closure_1_10.exec(arg0[1]);
-      const str2 = arg0[1].replace(closure_1_10, "");
+    obj6.parse = (arg0, fn, inline) => {
+      const match = re10.exec(arg0[1]);
+      const str2 = arg0[1].replace(re10, "");
       let formatted = str2;
       if (c0) {
         formatted = str2.toUpperCase();
@@ -92,13 +91,13 @@ function defaultRules(uri) {
       if ("=" === arg0[2]) {
         num = 1;
       }
-      obj[1] = num;
-      obj[2] = closure_1_1(closure_1_2[0]).parseInline(arg1, formatted, inline);
+      obj.level = num;
+      obj.content = _modDef4257.parseInline(fn, formatted, inline);
       return obj;
     };
     if (typeof tmp(8094).customRules.lheading === "function") {
       const customRules5 = tmp(8094).customRules;
-      lheading = customRules5.lheading(uri);
+      lheading = customRules5.lheading(dependencyMap);
     } else {
       lheading = tmp(8094).customRules.lheading;
     }
@@ -108,7 +107,7 @@ function defaultRules(uri) {
     const merged12 = Object.assign(heading);
     if (typeof tmp(8094).customRules.heading === "function") {
       const customRules6 = tmp(8094).customRules;
-      heading = customRules6.heading(uri);
+      heading = customRules6.heading(dependencyMap);
     } else {
       heading = tmp(8094).customRules.heading;
     }
@@ -118,7 +117,7 @@ function defaultRules(uri) {
     const merged14 = Object.assign(blockQuote);
     if (typeof tmp(8094).customRules.blockQuote === "function") {
       const customRules7 = tmp(8094).customRules;
-      blockQuote = customRules7.blockQuote(uri);
+      blockQuote = customRules7.blockQuote(dependencyMap);
     } else {
       blockQuote = tmp(8094).customRules.blockQuote;
     }
@@ -128,7 +127,7 @@ function defaultRules(uri) {
     const merged16 = Object.assign(paragraph);
     if (typeof tmp(8094).customRules.paragraph === "function") {
       const customRules8 = tmp(8094).customRules;
-      paragraph = customRules8.paragraph(uri);
+      paragraph = customRules8.paragraph(dependencyMap);
     } else {
       paragraph = tmp(8094).customRules.paragraph;
     }
@@ -137,31 +136,32 @@ function defaultRules(uri) {
     return obj;
   }
 }
-let lheading = tDefault.defaultRules.lheading;
-let heading = tDefault.defaultRules.heading;
-let link = tDefault.defaultRules.link;
-let image = tDefault.defaultRules.image;
-let list = tDefault.defaultRules.list;
-let blockQuote = tDefault.defaultRules.blockQuote;
-let paragraph = tDefault.defaultRules.paragraph;
+let lheading = _modDef4257.defaultRules.lheading;
+let heading = _modDef4257.defaultRules.heading;
+let link = _modDef4257.defaultRules.link;
+let image = _modDef4257.defaultRules.image;
+let list = _modDef4257.defaultRules.list;
+let blockQuote = _modDef4257.defaultRules.blockQuote;
+let paragraph = _modDef4257.defaultRules.paragraph;
 const re10 = /\{(.+?)}/;
 const re11 = /^\$(\w+?)\$/;
-const result = require("set").fileFinishedImporting("utils/ChangeLogUtils.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("utils/ChangeLogUtils.tsx");
 
 export default {
-  getDefaultRules(uri) {
-    const merged = Object.assign(defaultRules(uri));
+  getDefaultRules(dependencyMap) {
+    const merged = Object.assign(defaultRules(dependencyMap));
     return {};
   },
-  getSpecialRules(uri) {
+  getSpecialRules(dependencyMap) {
     let obj = {};
-    const merged = Object.assign(defaultRules(uri));
+    const merged = Object.assign(defaultRules(dependencyMap));
     obj = {};
     const merged1 = Object.assign(lheading);
-    const _require = false;
-    obj.parse = (arg0, arg1, inline) => {
-      const match = closure_1_10.exec(arg0[1]);
-      const str2 = arg0[1].replace(closure_1_10, "");
+    _require = false;
+    obj.parse = (arg0, fn, inline) => {
+      const match = re10.exec(arg0[1]);
+      const str2 = arg0[1].replace(re10, "");
       let formatted = str2;
       if (c0) {
         formatted = str2.toUpperCase();
@@ -175,44 +175,42 @@ export default {
       if ("=" === arg0[2]) {
         num = 1;
       }
-      obj[1] = num;
-      obj[2] = closure_1_1(closure_1_2[0]).parseInline(arg1, formatted, inline);
+      obj.level = num;
+      obj.content = _modDef4257.parseInline(fn, formatted, inline);
       return obj;
     };
-    if (typeof require("native/ChangeLogUtils.tsx").customRules.lheading === "function") {
+    if (typeof require("utils/ChangeLogUtils").customRules.lheading === "function") {
       const customRules = tmp3(8094).customRules;
-      lheading = customRules.lheading(uri);
+      lheading = customRules.lheading(dependencyMap);
     } else {
       lheading = tmp3(8094).customRules.lheading;
     }
     obj = { lheading: null };
     const merged2 = Object.assign(lheading);
-    obj[0] = obj;
+    obj.lheading = obj;
     const merged3 = Object.assign(obj);
     return obj;
   },
-  getMessageRules(uri) {
+  getMessageRules(dependencyMap) {
     let obj = {};
     obj = {};
-    const merged = Object.assign(defaultRules(uri));
+    const merged = Object.assign(defaultRules(dependencyMap));
     obj = {};
-    const merged1 = Object.assign(tDefault.defaultRules.newline);
+    const merged1 = Object.assign(_modDef4257.defaultRules.newline);
     obj.newline = obj;
-    obj.text = textRegexpDefault;
-    obj.list = regExpDefault;
-    obj.subtext = _modDef5026;
+    obj.text = MarkupTextRuleDefault;
+    obj.list = MarkupListRuleDefault;
+    obj.subtext = MarkupSubtextRuleDefault;
     const merged2 = Object.assign(obj);
     return obj;
   },
 };
-export const renderChangelogMessageMarkup = function renderChangelogMessageMarkup(content, uri) {
-  let obj = get_defaultRulesDefault;
-  obj = {};
-  const merged = Object.assign(defaultRules(uri));
-  if (null != arg2) {
-    obj = { changeLog: null };
-    obj[0] = arg2;
-    obj1 = obj;
+export const renderChangelogMessageMarkup = function renderChangelogMessageMarkup(content, dependencyMap, changeLog) {
+  let obj = {};
+  const merged = Object.assign(defaultRules(dependencyMap));
+  if (null != changeLog) {
+    obj = { changeLog };
+    let obj1 = obj;
   } else {
     obj1 = {};
   }

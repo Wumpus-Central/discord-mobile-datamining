@@ -1,7 +1,9 @@
 // discord_app/design/components/AccessibilityView/useAccessibilityViewIsModalToggle.native.tsx
-import closure_2 from "../../../../_runtime/00019_noop.js";
+import AccessibilityFocusLockManagerDefault from "../../../modules/a11y/native/AccessibilityFocusLockManager.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let result = require("set").fileFinishedImporting(
+const size = fn(2);
+let result = size.fileFinishedImporting(
   "design/components/AccessibilityView/useAccessibilityViewIsModalToggle.native.tsx",
 );
 
@@ -11,11 +13,10 @@ export default function useAccessibilityViewIsModalToggle(accessibilityViewIsMod
     flag = false;
   }
   const nativeID = accessibilityViewIsModal.nativeID;
-  let React;
-  let callback;
-  React = React.useRef(undefined);
+  noop = undefined;
+  noop = noop.useRef(undefined);
   let items = [flag, nativeID];
-  callback = React.useCallback(() => {
+  const callback = noop.useCallback(() => {
     let tmp = arg0;
     if (arg0 === undefined) {
       tmp = flag;
@@ -23,26 +24,24 @@ export default function useAccessibilityViewIsModalToggle(accessibilityViewIsMod
     if (tmp) {
       if (null == nativeID) {
         const _Error = Error;
-        error = new Error("Must have a unique nativeID when accessibilityViewIsModal is enabled.");
+        const error = new Error("Must have a unique nativeID when accessibilityViewIsModal is enabled.");
         throw error;
       } else if (ref.current !== tmp6) {
         ref.current = tmp6;
         const items = [tmp6];
-        const result = flag(nativeID[1]).enableAccessibilityFocusLock(items);
-        const obj2 = flag(nativeID[1]);
+        const result = AccessibilityFocusLockManagerDefault.enableAccessibilityFocusLock(items);
       }
     } else {
       const current = ref.current;
       if (null != current) {
         ref.current = undefined;
         const items1 = [current];
-        const result1 = flag(nativeID[1]).disableAccessibilityFocusLock(items1);
-        const obj = flag(nativeID[1]);
+        const result1 = AccessibilityFocusLockManagerDefault.disableAccessibilityFocusLock(items1);
       }
     }
   }, items);
   let items1 = [callback];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     callback();
     return () => {
       callback(false);

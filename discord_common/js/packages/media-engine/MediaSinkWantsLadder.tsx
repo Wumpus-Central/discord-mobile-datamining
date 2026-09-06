@@ -1,13 +1,13 @@
 // discord_common/js/packages/media-engine/MediaSinkWantsLadder.tsx
-import set2 from "../../../../_runtime/00002_set.js";
-import DesktopSources from "Constants.tsx";
+import Constants from "Constants.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 ({
-  defaultVideoQualityOptions: c0,
+  defaultVideoQualityOptions: closure_0,
   VIDEO_QUALITY_FRAMERATE: closure_1,
-  VIDEO_QUALITY_FRAMERATE_MUTED_2: obj1,
+  VIDEO_QUALITY_FRAMERATE_MUTED_2: c2,
   VIDEO_QUALITY_FRAMERATE_MUTED: c3,
-} = DesktopSources);
+} = Constants);
 let MediaSinkWantsLadder;
 class MediaSinkWantsLadder {
   constructor() {
@@ -38,7 +38,7 @@ prototype["getMaxSinkValue"] = function getMaxSinkValue(videoParticipantCount, a
   }
   if (videoParticipantCount < 0) {
     const _Error = Error;
-    error = new Error("getMaxSinkValue: Requested " + videoParticipantCount);
+    const error = new Error("getMaxSinkValue: Requested " + videoParticipantCount);
     throw error;
   } else {
     let wantValue = this.orderedLadder[0].wantValue;
@@ -46,18 +46,14 @@ prototype["getMaxSinkValue"] = function getMaxSinkValue(videoParticipantCount, a
     for (const item10015 of orderedLadder) {
       ({ pixelCount, wantValue: wantValue2 } = item10015);
       if (num > 0) {
-        let tmp4 = pixelCount;
         if (num < pixelCount) {
           wantValue = wantValue2;
-          let tmp7 = obj;
           obj.return();
           break;
         }
         return wantValue;
       }
-      let tmp5 = pixelCount;
       if (pixelCount * arg0 > tmp.pixelBudget) {
-        let tmp6 = obj;
         obj.return();
         break;
       } else {
@@ -68,15 +64,13 @@ prototype["getMaxSinkValue"] = function getMaxSinkValue(videoParticipantCount, a
     }
   }
 };
-prototype["getResolution"] = function getResolution(arg0) {
+prototype["getResolution"] = function getResolution(localWant) {
   let tmp2 = null;
   for (const item10010 of tmp3) {
-    let tmp4 = item10010;
     if (arg0 >= item10010.wantValue) {
       tmp2 = item10010;
       continue;
     } else {
-      let tmp5 = obj;
       obj.return();
       break;
     }
@@ -84,10 +78,15 @@ prototype["getResolution"] = function getResolution(arg0) {
     if (tmp2 == null) {
       first = tmp.orderedLadder[0];
     }
-    let obj = { width: null, height: null, budgetPortion: null, mutedFramerate: null, framerate: null };
-    let tmp7 = first;
-    ({ width: obj2[0], height: obj2[1], budgetPortion: obj2[2], mutedFramerate: obj2[3], framerate: obj2[4] } = first);
-    return obj;
+    let size = { width: null, height: null, budgetPortion: null, mutedFramerate: null, framerate: null };
+    ({
+      width: obj2.width,
+      height: obj2.height,
+      budgetPortion: obj2.budgetPortion,
+      mutedFramerate: obj2.mutedFramerate,
+      framerate: obj2.framerate,
+    } = first);
+    return size;
   }
 };
 MediaSinkWantsLadder["calculateLadder"] = function calculateLadder(pixelBudget) {
@@ -96,16 +95,17 @@ MediaSinkWantsLadder["calculateLadder"] = function calculateLadder(pixelBudget) 
   let num = 1;
   do {
     let result = (16 * num) / 9;
-    let tmp2 = num;
     if (set.has(result % 16)) {
       if (set.has(num % 16)) {
         let result1 = result * num;
-        let obj = { pixelCount: null, width: null, height: null, budgetPortion: null, wantValue: 0 };
-        obj[0] = result1;
-        obj[1] = result;
-        obj[2] = num;
-        obj[3] = result1 / pixelBudget;
-        let arr = items.push(obj);
+        let size = {
+          pixelCount: result1,
+          width: result,
+          height: num,
+          budgetPortion: result1 / pixelBudget,
+          wantValue: 0,
+        };
+        let arr = items.push(size);
       }
     }
     num = num + 1;
@@ -119,39 +119,29 @@ MediaSinkWantsLadder["calculateLadder"] = function calculateLadder(pixelBudget) 
   const iter = items[Symbol.iterator]();
   let tmp5 = num4;
   do {
-    let tmp6 = items;
     let nextResult = iter.next();
-    let tmp8 = iter;
     while (iter !== undefined) {
       let tmp9 = nextResult;
       if (nextResult.pixelCount * num3 > pixelBudget) {
-        let tmp11 = iter;
         iter.return();
         break;
       } else {
-        let tmp10 = nextResult;
         ({ width, height, budgetPortion } = tmp9);
         continue;
       }
       continue;
     }
-    let tmp12 = width;
     let diff = num2;
     if (tmp5 !== width) {
-      let tmp14 = MediaSinkWantsLadder;
-      obj = { width: null, height: null, budgetPortion: null, mutedFramerate: null, framerate: null };
-      let tmp15 = width;
-      obj[0] = width;
-      let tmp16 = height;
-      obj[1] = height;
-      let tmp17 = budgetPortion;
-      obj[2] = budgetPortion;
-      obj[3] = MediaSinkWantsLadder.getMutedFramerate(num2);
-      let tmp18 = closure_1;
-      obj[4] = closure_1;
+      let size1 = { width: null, height: null, budgetPortion: null, mutedFramerate: null, framerate: null };
+      size1.width = width;
+      size1.height = height;
+      size1.budgetPortion = budgetPortion;
+      size1.mutedFramerate = MediaSinkWantsLadder.getMutedFramerate(num2);
+      size1.framerate = framerate;
       {
       }
-      [num2] = obj;
+      [num2] = size1;
       diff = num2 - 10;
       tmp5 = width;
     }
@@ -161,25 +151,20 @@ MediaSinkWantsLadder["calculateLadder"] = function calculateLadder(pixelBudget) 
   } while (num3 <= 25);
 };
 MediaSinkWantsLadder["getMutedFramerate"] = function getMutedFramerate(arg0) {
-  return arg0 <= 20 ? closure_2 : closure_3;
+  return arg0 <= 20 ? React2 : React3;
 };
 MediaSinkWantsLadder["calculateOrderedLadder"] = function calculateOrderedLadder(ladder) {
   const items = [];
   const keys = Object.keys(ladder);
-  const mapped = keys.map((arg0) => Number(arg0));
+  const mapped = keys.map((item) => Number(item));
   const sorted = mapped.sort((arg0, arg1) => arg0 - arg1);
   const iter = sorted[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp3 = nextResult;
     if (0 !== nextResult) {
-      let tmp4 = nextResult;
       let size = ladder[tmp3];
-      let obj = { pixelCount: null, wantValue: null };
-      obj[0] = size.width * size.height;
-      obj[1] = tmp3;
-      let tmp5 = obj;
-      let tmp6 = size;
+      let obj = { pixelCount: size.width * size.height, wantValue: tmp3 };
       let merged = Object.assign(size);
       let arr = items.push(obj);
     }
@@ -187,6 +172,6 @@ MediaSinkWantsLadder["calculateOrderedLadder"] = function calculateOrderedLadder
   }
   return items;
 };
-let result = set2.fileFinishedImporting("../discord_common/js/packages/media-engine/MediaSinkWantsLadder.tsx");
+let result = size.fileFinishedImporting("../discord_common/js/packages/media-engine/MediaSinkWantsLadder.tsx");
 
 export { MediaSinkWantsLadder };

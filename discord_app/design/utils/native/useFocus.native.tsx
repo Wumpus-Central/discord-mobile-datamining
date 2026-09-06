@@ -1,20 +1,21 @@
 // discord_app/design/utils/native/useFocus.native.tsx
-import closure_0 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_1 from "../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const result = require("set").fileFinishedImporting("design/utils/native/useFocus.native.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("design/utils/native/useFocus.native.tsx");
 
 export const useFocus = function useFocus() {
-  const tmp = callback(React.useState(false), 2);
-  callback = tmp[1];
+  const tmp = _slicedToArray(noop.useState(false), 2);
+  closure_0 = tmp[1];
   return {
-    focusProps: React.useMemo(
+    focusProps: noop.useMemo(
       () => ({
         onFocus() {
-          return callback(true);
+          return closure_1_0(true);
         },
         onBlur() {
-          return callback(false);
+          return closure_1_0(false);
         },
       }),
       [],

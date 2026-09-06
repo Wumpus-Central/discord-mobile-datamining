@@ -1,7 +1,7 @@
 // discord_app/modules/in_app_reports/MenuTypes.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/in_app_reports/MenuTypes.tsx");
+const result = size.fileFinishedImporting("modules/in_app_reports/MenuTypes.tsx");
 
 export const ReportNames = {
   GUILD: "guild",

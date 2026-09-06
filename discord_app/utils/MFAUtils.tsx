@@ -1,9 +1,9 @@
 // discord_app/utils/MFAUtils.tsx
-import set from "../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../_runtime/00017_get_ActivityIndicator.js";
-import _modDef1232 from "SentryUtils.native.tsx";
-import isMetaQuest from "../modules/device/MetaQuestUtils.android.tsx";
+import _mod17 from "../../_runtime/metro/00017__.js";
+import SentryUtilsDefault from "SentryUtils.native.tsx";
+import MetaQuestUtils from "../modules/device/MetaQuestUtils.android.tsx";
 import encodeDefault from "../../_runtime/06952_encode.js";
+import size from "../../_runtime/metro/00002__.js";
 
 let _crypto;
 if (window != null) {
@@ -23,27 +23,27 @@ if (tmp5) {
 if (tmp5) {
   tmp5 = tmp4;
 }
-let tmp6 = null != get_ActivityIndicator.NativeModules.DCDSecurityKeyManager;
+let tmp6 = null != _mod17.NativeModules.DCDSecurityKeyManager;
 if (tmp6) {
-  const _module = isMetaQuest;
+  const _module = MetaQuestUtils;
   tmp6 = !_module.isMetaQuest();
 }
 function encodeTotpSecret(totpSecret) {
   return totpSecret.replace(/[\s._-]+/g, "").toUpperCase();
 }
-const result = set.fileFinishedImporting("utils/MFAUtils.tsx");
+const result = size.fileFinishedImporting("utils/MFAUtils.tsx");
 
 export const hasCrypto = tmp5;
 export const hasWebAuthn = tmp6;
 export const generateTotpSecret = function generateTotpSecret() {
   const uint8Array = new Uint8Array(20);
   const randomValues = _crypto.getRandomValues(uint8Array);
-  const obj = encodeDefault;
-  const str = encodeDefault.encode(randomValues);
-  const str2 = encodeDefault.encode(randomValues).toString("utf8");
-  const str3 = encodeDefault.encode(randomValues).toString("utf8").replace(/=/g, "");
-  const str4 = encodeDefault.encode(randomValues).toString("utf8").replace(/=/g, "").toLowerCase();
-  return encodeDefault
+  const encoder = encodeDefault;
+  const str = encoder.encode(randomValues);
+  const str2 = encoder.encode(randomValues).toString("utf8");
+  const str3 = encoder.encode(randomValues).toString("utf8").replace(/=/g, "");
+  const str4 = encoder.encode(randomValues).toString("utf8").replace(/=/g, "").toLowerCase();
+  return encoder
     .encode(randomValues)
     .toString("utf8")
     .replace(/=/g, "")
@@ -71,9 +71,8 @@ export const encodeTotpSecretAsUrl = function encodeTotpSecretAsUrl(arg0, str) {
     encodeURIComponent(str)
   );
 };
-export const captureWebAuthnException = function captureWebAuthnException(closure_1, tags) {
-  let obj = _modDef1232;
-  obj = {};
+export const captureWebAuthnException = function captureWebAuthnException(error, tags) {
+  let obj = {};
   const merged = Object.assign(tags);
   tags = undefined;
   if (tags != null) {
@@ -83,5 +82,5 @@ export const captureWebAuthnException = function captureWebAuthnException(closur
   const merged1 = Object.assign(tags);
   obj.app_context = "webauthn";
   obj.tags = obj;
-  obj.captureException(closure_1, obj);
+  obj.captureException(error, obj);
 };

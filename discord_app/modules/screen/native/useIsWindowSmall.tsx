@@ -1,9 +1,10 @@
 // discord_app/modules/screen/native/useIsWindowSmall.tsx
-import set from "../../../../_runtime/00002_set.js";
 import useWindowSizeClassifier from "useWindowSizeClassifier.tsx";
-import useWindowSizeClassifierDefault from "useWindowSizeClassifier.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/screen/native/useIsWindowSmall.tsx");
+const useWindowSizeClassifierDefault = useWindowSizeClassifier;
+
+const result = size.fileFinishedImporting("modules/screen/native/useIsWindowSmall.tsx");
 
 export default function getIsWindowSmall() {
   const windowSizeClassifier = useWindowSizeClassifier.getWindowSizeClassifier();

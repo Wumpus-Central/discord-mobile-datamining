@@ -1,8 +1,7 @@
 // discord_app/modules/application_account_linking/AccountLinkStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import closure_0 from "../oauth2/AuthorizedAppsStore.tsx";
-import set from "../../../_runtime/00002_set.js";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import AuthorizedAppsStore from "../oauth2/AuthorizedAppsStore.tsx";
 
 const map = new Map();
 let set = new Set();
@@ -10,7 +9,7 @@ const Store = initializeDefault.Store;
 class AccountLinkStore extends Store {}
 const prototype = AccountLinkStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_0);
+  this.waitFor(AuthorizedAppsStore);
 };
 prototype["getPendingAuthorizations"] = function getPendingAuthorizations() {
   return map;
@@ -22,14 +21,13 @@ prototype["getGloballyDisabledAuthorizationFlows"] = function getGloballyDisable
   return set;
 };
 AccountLinkStore.displayName = "AccountLinkStore";
-const accountLinkStore = new AccountLinkStore(dispatcherDefault, {
+const accountLinkStore = new AccountLinkStore(DispatcherDefault, {
   ACCOUNT_LINK_AUTHORIZATION_STARTED: function handleAuthorizationStarted(applicationId) {
     if (tmp) {
-      const obj = { applicationId: null, startedAt: null, accountLinkCallbacks: null };
-      obj[0] = applicationId.applicationId;
+      const obj = { applicationId: applicationId.applicationId, startedAt: null, accountLinkCallbacks: null };
       const _Date = Date;
-      obj[1] = Date.now();
-      obj[2] = applicationId.accountLinkCallbacks;
+      obj.startedAt = Date.now();
+      obj.accountLinkCallbacks = applicationId.accountLinkCallbacks;
       const result = map.set(applicationId.applicationId, obj);
     }
   },
@@ -37,6 +35,7 @@ const accountLinkStore = new AccountLinkStore(dispatcherDefault, {
     set = new Set(flows.flows);
   },
 });
-let result = set.fileFinishedImporting("modules/application_account_linking/AccountLinkStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/application_account_linking/AccountLinkStore.tsx");
 
 export default accountLinkStore;

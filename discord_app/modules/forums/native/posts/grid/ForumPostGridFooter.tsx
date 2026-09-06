@@ -1,65 +1,62 @@
 // discord_app/modules/forums/native/posts/grid/ForumPostGridFooter.tsx
-import noopAll from "../../../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import MaxForumPostReactions from "../reactions/ForumPostReactions.tsx";
-import useTypingUserIds from "../../../../chat/useTypingUsersIds.tsx";
-import num2Default from "../ForumPostMessageCount.tsx";
+import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import ForumPostReactions from "../reactions/ForumPostReactions.tsx";
+import useTypingUsersIds from "../../../../chat/useTypingUsersIds.tsx";
+import ForumPostMessageCountDefault from "../ForumPostMessageCount.tsx";
 import ForumPostTypingUsersDefault from "../ForumPostTypingUsers.tsx";
-import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { AnalyticsObjects } from "../../../../../Constants.tsx";
-import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-createCacheKey = {
+require = fn;
+const View = fn(17).View;
+const AnalyticsObjects = fn(1074).AnalyticsObjects;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+fn(4560);
+const createStyles = {
   footer: { display: "flex", alignItems: "center", flexDirection: "row", justifyContent: "flex-start", marginTop: 12 },
   dot: null,
 };
-createCacheKey = {
+let size = {
   height: 4,
   width: 4,
   borderRadius: 2,
-  backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+  backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
   marginHorizontal: 8,
 };
-createCacheKey[1] = createCacheKey;
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/forums/native/posts/grid/ForumPostGridFooter.tsx");
+createStyles.dot = size;
+let closure_8 = createStyles.createStyles(createStyles);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/forums/native/posts/grid/ForumPostGridFooter.tsx");
 
 export default function ForumPostGridFooter(parentChannel) {
   ({ thread, firstMessage, hasUnreads } = parentChannel);
-  const tmp = callback2();
-  let obj = useTypingUserIds;
+  const tmp = closure_8();
+  let obj = useTypingUsersIds;
   const typingUserIds = obj.useTypingUserIds(thread.id);
   let tmp5Result = typingUserIds.length > 0;
   obj = { style: tmp.footer, children: null };
-  const items = [callback(num2Default, { thread, hasUnreads }), ,];
+  const items = [hasOwnProperty(ForumPostMessageCountDefault, { thread, hasUnreads }), ,];
   if (tmp5Result) {
     obj = { children: null };
-    obj1 = { style: null };
-    obj1[0] = tmp.dot;
+    const obj1 = { style: tmp.dot };
     const items1 = [tmp7(tmp6, obj1)];
-    const obj2 = { thread: null, typingUserIds: null, hasUnreads: null };
-    obj2[0] = thread;
-    obj2[1] = typingUserIds;
-    obj2[2] = hasUnreads;
+    const obj2 = { thread, typingUserIds, hasUnreads };
     items1[1] = tmp7(ForumPostTypingUsersDefault, obj2);
-    obj[0] = items1;
-    tmp5Result = tmp5(closure_6, obj);
+    obj.children = items1;
+    tmp5Result = tmp5(timestampProducer, obj);
   }
   items[1] = tmp5Result;
   let tmp7Result = null != firstMessage;
   if (tmp7Result) {
-    const obj3 = { thread: null, firstMessage: null, parentChannel: null, locationAnalyticsObject: null };
-    obj3[0] = thread;
-    obj3[1] = firstMessage;
-    obj3[2] = parentChannel.parentChannel;
-    obj3[3] = AnalyticsObjects.FORUM_GRID_ITEM_FOOTER;
-    tmp7Result = tmp7(MaxForumPostReactions.MostCommonForumPostReaction, obj3);
+    const obj3 = {
+      thread,
+      firstMessage,
+      parentChannel: parentChannel.parentChannel,
+      locationAnalyticsObject: AnalyticsObjects.FORUM_GRID_ITEM_FOOTER,
+    };
+    tmp7Result = tmp7(ForumPostReactions.MostCommonForumPostReaction, obj3);
   }
   items[2] = tmp7Result;
-  obj[1] = items;
-  return closure_7(View, obj);
+  obj.children = items;
+  return React5(View, obj);
 }

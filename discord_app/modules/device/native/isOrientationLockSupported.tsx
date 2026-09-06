@@ -1,11 +1,11 @@
 // discord_app/modules/device/native/isOrientationLockSupported.tsx
-import set from "../../../../_runtime/00002_set.js";
-import DCDDeviceManager from "../../../utils/native/DeviceUtils.tsx";
+import DeviceUtils from "../../../utils/native/DeviceUtils.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-let result = set.fileFinishedImporting("modules/device/native/isOrientationLockSupported.tsx");
+let result = size.fileFinishedImporting("modules/device/native/isOrientationLockSupported.tsx");
 
 export default function isOrientationLockSupported() {
-  const isIpadOSResult = DCDDeviceManager.isIpadOS();
+  const isIpadOSResult = DeviceUtils.isIpadOS();
   let result = !isIpadOSResult;
   if (!isIpadOSResult) {
     let tmpResult = tmp(1608);

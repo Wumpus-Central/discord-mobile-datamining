@@ -1,36 +1,39 @@
 // discord_app/modules/icymi/native/media/ICYMIMediaMosaic.tsx
+import _mod12 from "../../../../../_runtime/metro/00012__.js";
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import VideoComponentDefault from "../../../../components_native/common/Video.tsx";
-import context2 from "../ICYMIContext.tsx";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_7 from "../../../a11y/AccessibilityStore.tsx";
-import closure_8 from "../../../../stores/ChannelStore.tsx";
-import closure_9 from "../../../../stores/RelationshipStore.tsx";
-import closure_10 from "../../../../stores/UserStore.tsx";
-import closure_11 from "../../ICYMIStore.tsx";
-import ME from "../../../../Constants.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import GlobalUtils from "../../../../utils/GlobalUtils.tsx";
+import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
+import MediaSourceUtil from "../../../media_viewer/native/MediaSourceUtil.tsx";
+import common_VideoDefault from "../../../../components_native/common/Video.tsx";
+import ICYMITypes from "../../ICYMITypes.tsx";
+import ICYMIActionCreatorsDefault from "../../ICYMIActionCreators.tsx";
+import ICYMIContext from "../ICYMIContext.tsx";
+import ThumbhashUtils from "../../../thumbhash/ThumbhashUtils.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
+import ChannelStore from "../../../../stores/ChannelStore.tsx";
+import RelationshipStore from "../../../../stores/RelationshipStore.tsx";
+import UserStore from "../../../../stores/UserStore.tsx";
+import ICYMIStore from "../../ICYMIStore.tsx";
 
-require = arg1;
+require = fn;
 function MediaMosaicVideo(source) {
   source = source.source;
   ({ height, width, autoplay, style } = source);
-  const tmp = callback4();
-  let obj = initialize;
-  const items = [closure_11];
-  let isGIFV = obj.useStateFromStores(items, () => closure_11.videosMuted());
+  const tmp = closure_18();
+  const items = [ICYMIStore];
+  let isGIFV = initialize.useStateFromStores(items, () => ICYMIStore.videosMuted());
   let uri = source.videoURI;
+  const tmp2 = __initData;
   if (uri == null) {
     uri = source.sourceURI;
   }
   if (uri == null) {
     uri = source.uri;
   }
-  obj = {
+  const size = {
     src: { videoURI: uri },
     height,
     width,
@@ -38,29 +41,28 @@ function MediaMosaicVideo(source) {
     paused: !autoplay,
     muted: isGIFV,
     resizeMode: "cover",
-    style: items1,
+    style: null,
     videoStyle: tmp.video,
     disableFocus: null,
   };
-  items1 = [tmp.media, style];
+  const items1 = [tmp.media, style];
+  size.style = items1;
   if (!isGIFV) {
     isGIFV = source.isGIFV;
   }
-  obj[9] = isGIFV;
-  return closure_15(VideoComponentDefault, obj);
+  size.disableFocus = isGIFV;
+  return tmp2(common_VideoDefault, size);
 }
 function MediaMosaicImage(source) {
   source = source.source;
   ({ dimensions, style } = source);
-  let first;
-  dependencyMap = undefined;
-  const tmp = callback4();
-  const tmp2 = callback(React.useState(false), 2);
-  first = tmp2[0];
+  const tmp = closure_18();
+  const tmp2 = _slicedToArray(noop.useState(false), 2);
+  const imageFinishedLoading = tmp2[0];
   dependencyMap = tmp2[1];
-  let obj = source(4296);
+  source(4296);
   const fn = function c() {
-    let obj = source(4561);
+    let obj = timing;
     let num = 1;
     if (first) {
       num = 0;
@@ -68,86 +70,89 @@ function MediaMosaicImage(source) {
     obj = { opacity: obj.withTiming(num, { duration: 150 }) };
     return obj;
   };
-  obj = { withTiming: source(4561).withTiming, imageFinishedLoading: first };
+  let obj = { withTiming: source(4561).withTiming, imageFinishedLoading };
   fn.__closure = obj;
   fn.__workletHash = 7803531897566;
-  fn.__initData = closure_20;
+  fn.__initData = __initData;
   const items = [, ,];
   ({ height: arr[0], placeholder: arr[1], width: arr[2] } = source);
   const animatedStyle = obj.useAnimatedStyle(fn);
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     if (null != source.placeholder) {
-      const obj = { uri: null, width: null, height: null };
-      obj[0] = source(16498).createThumbhashImageFromPlaceholder(tmp.placeholder);
-      ({ width: obj[1], height: obj[2] } = tmp);
-      return obj;
+      const size = {
+        uri: ThumbhashUtils.createThumbhashImageFromPlaceholder(tmp.placeholder),
+        width: null,
+        height: null,
+      };
+      ({ width: obj.width, height: obj.height } = tmp);
+      return size;
     }
   }, items);
-  obj = { style: items1, children: callback2(first(5587), { source: memo, style: items2 }) };
-  items1 = [animatedStyle, tmp.thumbhashMedia];
-  items2 = [style, tmp.media, dimensions];
-  const items3 = [callback2(first(4296).View, obj)];
-  obj1 = {
+  obj = { style: null, children: null };
+  const items1 = [animatedStyle, tmp.thumbhashMedia];
+  obj.style = items1;
+  const obj1 = { source: memo, style: null };
+  const items2 = [style, tmp.media, dimensions];
+  obj1.style = items2;
+  obj.children = closure_15(imageFinishedLoading(5587), obj1);
+  const items3 = [closure_15(imageFinishedLoading(4296).View, obj)];
+  const obj2 = {
     source,
-    style: items4,
+    style: null,
     onLoadEnd() {
-      return dependencyMap(true);
+      return closure_2(true);
     },
     blurRadius: null,
   };
-  items4 = [tmp.media, style, dimensions];
+  const items4 = [tmp.media, style, dimensions];
+  obj2.style = items4;
   let num = 0;
   if (source.isSpoiler) {
     num = 100;
   }
-  const obj2 = { children: null };
-  obj1[3] = num;
-  items3[1] = callback2(first(4296).Image, obj1, source.uri);
-  obj2[0] = items3;
-  return closure_17(closure_16, obj2);
+  const obj3 = { children: null };
+  obj2.blurRadius = num;
+  items3[1] = closure_15(imageFinishedLoading(4296).Image, obj2, source.uri);
+  obj3.children = items3;
+  return closure_17(closure_16, obj3);
 }
 function Media(handlePressMedia) {
   ({ source, dimensions, initialIndex } = handlePressMedia);
   handlePressMedia = handlePressMedia.handlePressMedia;
   const style = handlePressMedia.style;
-  let ref;
-  let first;
-  let React;
+  let isSpoiler;
+  noop = undefined;
   let stateFromStores;
-  const tmp = callback4();
-  let obj = React;
-  ref = React.useRef(null);
+  const tmp = closure_18();
+  let obj = noop;
+  const ref = noop.useRef(null);
   let flag = source.spoiler;
   if (flag == null) {
     flag = false;
   }
-  const tmp3 = first(React.useState(flag), 2);
-  first = tmp3[0];
-  React = tmp3[1];
-  const items = [handlePressMedia, initialIndex, first];
+  const tmp3 = isSpoiler(noop.useState(flag), 2);
+  isSpoiler = tmp3[0];
+  noop = tmp3[1];
+  const items = [handlePressMedia, initialIndex, isSpoiler];
   const callback = obj.useCallback(() => {
     if (first) {
-      callback(false);
+      closure_4(false);
     } else {
-      const obj = { ref: null, initialIndex: null };
-      obj[0] = ref;
-      obj[1] = initialIndex;
+      const obj = { ref, initialIndex };
       handlePressMedia(obj);
     }
   }, items);
-  obj1 = initialIndex(ref[14]);
-  const items1 = [closure_11];
-  stateFromStores = obj1.useStateFromStores(items1, () => closure_11.videosMuted());
+  let obj1 = initialIndex(ref[14]);
+  const items1 = [ICYMIStore];
+  stateFromStores = obj1.useStateFromStores(items1, () => ICYMIStore.videosMuted());
   let obj2 = initialIndex(ref[14]);
-  const items2 = [closure_7];
+  const items2 = [AccessibilityStore];
   obj = { ref, onPress: callback, style: dimensions, children: null };
-  let tmp12 = first;
+  let tmp12 = isSpoiler;
   const stateFromStores1 = obj2.useStateFromStores(items2, () => useReducedMotion.useReducedMotion);
-  if (first) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.centerContainer;
-    obj1 = { style: null, children: null };
-    obj1[0] = tmp.spoilerText;
+  if (isSpoiler) {
+    obj = { style: tmp.centerContainer, children: null };
+    obj1 = { style: tmp.spoilerText, children: null };
     obj2 = {
       maxFontSizeMultiplier: 1,
       variant: "heading-md/semibold",
@@ -155,14 +160,14 @@ function Media(handlePressMedia) {
       children: null,
     };
     const intl = tmp6(tmp7[21]).intl;
-    obj2[3] = intl.string(tmp6(tmp7[21]).t["F+x38C"]).toUpperCase();
-    obj1[1] = callback2(tmp6(tmp7[20]).Text, obj2);
-    obj[1] = callback2(closure_6, obj1);
-    tmp12 = callback2(closure_6, obj);
+    obj2.children = intl.string(tmp6(tmp7[21]).t["F+x38C"]).toUpperCase();
+    obj1.children = closure_15(tmp6(tmp7[20]).Text, obj2);
+    obj.children = closure_15(closure_6, obj1);
+    tmp12 = closure_15(closure_6, obj);
     const str = intl.string(tmp6(tmp7[21]).t["F+x38C"]);
   }
   const items3 = [tmp12, , ,];
-  let tmp15 = null != source.videoURI && !first;
+  let tmp15 = null != source.videoURI && !isSpoiler;
   if (tmp15) {
     let isGIFV = source.isGIFV;
     if (!isGIFV) {
@@ -175,15 +180,12 @@ function Media(handlePressMedia) {
     tmp15 = stateFromStores1;
   }
   if (tmp15) {
-    const obj3 = { style: null, children: null };
-    obj3[0] = tmp.centerContainer;
-    const obj4 = { style: null, children: null };
-    obj4[0] = tmp.videoIcon;
-    const obj5 = { color: null, size: "lg" };
-    obj5[0] = handlePressMedia(tmp7[11]).colors.REDESIGN_BUTTON_TERTIARY_TEXT;
-    obj4[1] = callback2(tmp6(tmp7[22]).PlayIcon, obj5);
-    obj3[1] = callback2(closure_6, obj4);
-    tmp15 = callback2(closure_6, obj3);
+    const obj3 = { style: tmp.centerContainer, children: null };
+    const obj4 = { style: tmp.videoIcon, children: null };
+    const obj5 = { color: handlePressMedia(tmp7[11]).colors.REDESIGN_BUTTON_TERTIARY_TEXT, size: "lg" };
+    obj4.children = closure_15(tmp6(tmp7[22]).PlayIcon, obj5);
+    obj3.children = closure_15(closure_6, obj4);
+    tmp15 = closure_15(closure_6, obj3);
   }
   items3[1] = tmp15;
   tmp6Result = tmp6(tmp7[23]);
@@ -196,43 +198,38 @@ function Media(handlePressMedia) {
     }
     tmp19 = null;
     if (!isGIFV2) {
-      const obj6 = { style: null, children: null };
-      obj6[0] = tmp.absoluteContainer;
+      const obj6 = { style: tmp.absoluteContainer, children: null };
       const items4 = [tmp.muteIcon];
       let obj7 = { style: null, onPress: null, activeOpacity: 0.8, children: null };
       items4[1] = stateFromStores ? tmp.iconBg : tmp.iconBgSelected;
-      obj7[0] = items4;
-      obj7[1] = function onPress() {
-        return handlePressMedia(ref[25]).setVideosMuted(!stateFromStores);
+      obj7.style = items4;
+      obj7.onPress = function onPress() {
+        return ICYMIActionCreatorsDefault.setVideosMuted(!stateFromStores);
       };
       if (stateFromStores) {
-        const obj8 = { color: null, size: "sm" };
-        obj8[0] = handlePressMedia(tmp7[11]).colors.INTERACTIVE_TEXT_DEFAULT;
+        const obj8 = { color: handlePressMedia(tmp7[11]).colors.INTERACTIVE_TEXT_DEFAULT, size: "sm" };
         let tmp20Result = tmp20(tmp6(tmp7[26]).VoiceXIcon, obj8);
       } else {
-        const obj9 = { color: null, size: "sm" };
-        obj9[0] = handlePressMedia(tmp7[11]).colors.BLACK;
+        const obj9 = { color: handlePressMedia(tmp7[11]).colors.BLACK, size: "sm" };
         tmp20Result = tmp20(tmp6(tmp7[27]).VoiceNormalIcon, obj9);
       }
-      obj7[3] = tmp20Result;
+      obj7.children = tmp20Result;
       obj7 = tmp20(tmp6(tmp7[24]).PressableOpacity, obj7);
-      obj6[1] = obj7;
+      obj6.children = obj7;
       tmp20Result = tmp20(closure_6, obj6);
-      const tmp21 = closure_6;
     }
   }
   items3[2] = tmp19;
   if (tmp6Result2.isVideo(source.uri)) {
     if (null != source.videoURI) {
-      const obj10 = { source: null, height: null, width: null, style: null, autoplay: null };
-      obj10[0] = source;
-      ({ height: obj20[1], width: obj20[2] } = dimensions);
-      obj10[3] = style;
-      obj10[4] = handlePressMedia.visible;
-      let tmp26 = callback2(MediaMosaicVideo, obj10);
+      const size = { source, height: null, width: null, style: null, autoplay: null };
+      ({ height: obj20.height, width: obj20.width } = dimensions);
+      size.style = style;
+      size.autoplay = handlePressMedia.visible;
+      let tmp26 = closure_15(MediaMosaicVideo, size);
     }
     items3[3] = tmp26;
-    obj[3] = items3;
+    obj.children = items3;
     return closure_17(stateFromStores, obj);
   } else {
     let isGIFV3 = source.isGIFV;
@@ -241,12 +238,12 @@ function Media(handlePressMedia) {
       const tmp6Result3 = tmp6(tmp7[12]);
     }
   }
-  tmp26 = callback2(MediaMosaicImage, { source, style, dimensions, isSpoiler: first });
+  tmp26 = closure_15(MediaMosaicImage, { source, style, dimensions, isSpoiler });
 }
 function OneImageRow(widthOverride) {
   widthOverride = widthOverride.widthOverride;
   ({ source, handlePressMedia } = widthOverride);
-  const context = React.useContext(context2.ICYMIContext);
+  const context = noop.useContext(ICYMIContext.ICYMIContext);
   if (null == widthOverride) {
     let width;
     if (context != null) {
@@ -254,17 +251,21 @@ function OneImageRow(widthOverride) {
     }
     widthOverride = width - context.inset - 2 * context.margin;
   }
-  obj = { style: items, children: callback2(Media, { handlePressMedia, initialIndex: 0, source, dimensions: obj }) };
-  items = [,];
-  ({ imageRow: arr[0], topRow: arr[1] } = callback4());
-  obj = { width: widthOverride, height: widthOverride / 1.5 };
-  return callback2(closure_6, obj);
+  let obj = { style: null, children: null };
+  const items = [,];
+  ({ imageRow: arr[0], topRow: arr[1] } = closure_18());
+  obj.style = items;
+  obj = { handlePressMedia, initialIndex: 0, source, dimensions: null };
+  const size = { width: widthOverride, height: widthOverride / 1.5 };
+  obj.dimensions = size;
+  obj.children = __initData(Media, obj);
+  return __initData(timestampProducer, obj);
 }
 function ThreeImagesRow(arg0) {
   ({ sources, start, end, offset: require, handlePressMedia: importDefault, widthOverride } = arg0);
   widthOverride = undefined;
-  const tmp = callback4();
-  const context = React.useContext(require(widthOverride[28]).ICYMIContext);
+  const tmp = closure_18();
+  const context = noop.useContext(require("ICYMIContext").ICYMIContext);
   if (null == widthOverride) {
     let width;
     if (context != null) {
@@ -283,18 +284,19 @@ function ThreeImagesRow(arg0) {
   items[2] = end;
   return closure_15(closure_6, {
     style: items,
-    children: sources.map((source) => {
-      obj = { handlePressMedia: closure_1, initialIndex: closure_0 + arg1, source, dimensions: obj };
-      obj = { width: (widthOverride - 8) / 3, height: (widthOverride - 8) / 3 };
-      return closure_1_15(closure_1_22, obj, closure_0 + arg1);
+    children: sources.map((source, index) => {
+      const obj = { handlePressMedia, initialIndex: require + index, source, dimensions: null };
+      const size = { width: (widthOverride - 8) / 3, height: (widthOverride - 8) / 3 };
+      obj.dimensions = size;
+      return __initData(Media, obj, require + index);
     }),
   });
 }
 function TwoImagesRow(arg0) {
   ({ sources, handlePressMedia: require, end, widthOverride } = arg0);
-  let obj;
-  const tmp = callback4();
-  const context = React.useContext(context2.ICYMIContext);
+  let size;
+  const tmp = closure_18();
+  const context = noop.useContext(ICYMIContext.ICYMIContext);
   if (null == widthOverride) {
     let width;
     if (context != null) {
@@ -302,26 +304,24 @@ function TwoImagesRow(arg0) {
     }
     widthOverride = width - context.inset - 2 * context.margin;
   }
-  obj = { width: (widthOverride - 4) / 2, height: (widthOverride - 4) / 2 / 0.75 };
+  size = { width: (widthOverride - 4) / 2, height: (widthOverride - 4) / 2 / 0.75 };
   const items = [, ,];
   ({ imageRow: arr[0], topRow: arr[1] } = tmp);
   if (end) {
     end = tmp.bottomRow;
   }
-  obj = {
-    style: items,
-    children: sources.map((source, initialIndex) => {
-      obj = { handlePressMedia: closure_0, initialIndex, source, dimensions: obj };
-      return closure_1_15(closure_1_22, obj, initialIndex);
-    }),
-  };
   items[2] = end;
-  return closure_15(closure_6, obj);
+  return closure_15(closure_6, {
+    style: items,
+    children: sources.map((source, initialIndex) =>
+      __initData(Media, { handlePressMedia, initialIndex, source, dimensions: size }, initialIndex),
+    ),
+  });
 }
 function ThreeImages(arg0) {
   ({ sources, handlePressMedia, widthOverride } = arg0);
-  const tmp = callback4();
-  const context = React.useContext(context2.ICYMIContext);
+  const tmp = closure_18();
+  const context = noop.useContext(ICYMIContext.ICYMIContext);
   if (null == widthOverride) {
     let width;
     if (context != null) {
@@ -329,26 +329,40 @@ function ThreeImages(arg0) {
     }
     widthOverride = width - context.inset - 2 * context.margin;
   }
-  let obj = { style: items, children: null };
-  items = [,];
+  let obj = { style: null, children: null };
+  const items = [,];
   ({ imagesContainer: arr[0], imageRow: arr[1] } = tmp);
-  obj = { style: tmp.leftColumn, children: callback2(Media, obj) };
-  obj = { handlePressMedia, initialIndex: 0, source: sources[0], dimensions: obj1 };
-  const items1 = [callback2(closure_6, obj)];
-  const obj2 = { style: tmp.rightColumn, children: null };
+  obj.style = items;
+  obj = { style: tmp.leftColumn, children: null };
+  obj = { handlePressMedia, initialIndex: 0, source: sources[0], dimensions: null };
+  const size = { width: (2 * widthOverride) / 3 - 4, height: (2 * widthOverride) / 3 };
+  obj.dimensions = size;
+  obj.children = __initData(Media, obj);
+  const items1 = [__initData(timestampProducer, obj)];
+  const obj1 = { style: tmp.rightColumn, children: null };
   const items2 = [
-    callback2(Media, { handlePressMedia, initialIndex: 1, source: sources[1], dimensions: obj4 }),
-    callback2(Media, { handlePressMedia, initialIndex: 2, source: sources[2], dimensions: obj6 }),
+    __initData(Media, {
+      handlePressMedia,
+      initialIndex: 1,
+      source: sources[1],
+      dimensions: { width: widthOverride / 3, height: widthOverride / 3 },
+    }),
+    __initData(Media, {
+      handlePressMedia,
+      initialIndex: 2,
+      source: sources[2],
+      dimensions: { width: widthOverride / 3, height: widthOverride / 3 },
+    }),
   ];
-  obj2[1] = items2;
-  items1[1] = callback3(closure_6, obj2);
-  obj[1] = items1;
-  return callback3(closure_6, obj);
+  obj1.children = items2;
+  items1[1] = closure_1_17(timestampProducer, obj1);
+  obj.children = items1;
+  return closure_1_17(timestampProducer, obj);
 }
 function FourImages(arg0) {
   ({ sources, handlePressMedia, widthOverride } = arg0);
-  const tmp = callback4();
-  const context = React.useContext(context2.ICYMIContext);
+  const tmp = closure_18();
+  const context = noop.useContext(ICYMIContext.ICYMIContext);
   if (null == widthOverride) {
     let width;
     if (context != null) {
@@ -356,37 +370,38 @@ function FourImages(arg0) {
     }
     widthOverride = width - context.inset - 2 * context.margin;
   }
-  let obj = { width: widthOverride / 2 - 4, height: (widthOverride / 2 - 4) / 1.5 };
-  obj = { style: tmp.imagesContainer, children: null };
-  obj = { style: items, children: null };
-  items = [,];
+  const size = { width: widthOverride / 2 - 4, height: (widthOverride / 2 - 4) / 1.5 };
+  let obj = { style: tmp.imagesContainer, children: null };
+  obj = { style: null, children: null };
+  const items = [,];
   ({ imageRow: arr[0], topRow: arr[1] } = tmp);
+  obj.style = items;
   const items1 = [
-    callback2(Media, { handlePressMedia, initialIndex: 0, source: sources[0], dimensions: obj }),
-    callback2(Media, { handlePressMedia, initialIndex: 1, source: sources[1], dimensions: obj }),
+    __initData(Media, { handlePressMedia, initialIndex: 0, source: sources[0], dimensions: size }),
+    __initData(Media, { handlePressMedia, initialIndex: 1, source: sources[1], dimensions: size }),
   ];
-  obj[1] = items1;
-  const items2 = [callback3(closure_6, obj)];
-  const obj3 = { style: items3, children: null };
-  items3 = [,];
+  obj.children = items1;
+  const items2 = [closure_1_17(timestampProducer, obj)];
+  const obj3 = { style: null, children: null };
+  const items3 = [,];
   ({ imageRow: arr4[0], bottomRow: arr4[1] } = tmp);
+  obj3.style = items3;
   const items4 = [
-    callback2(Media, { handlePressMedia, initialIndex: 2, source: sources[2], dimensions: obj }),
-    callback2(Media, { handlePressMedia, initialIndex: 3, source: sources[3], dimensions: obj }),
+    __initData(Media, { handlePressMedia, initialIndex: 2, source: sources[2], dimensions: size }),
+    __initData(Media, { handlePressMedia, initialIndex: 3, source: sources[3], dimensions: size }),
   ];
-  obj3[1] = items4;
-  items2[1] = callback3(closure_6, obj3);
-  obj[1] = items2;
-  return callback3(closure_6, obj);
+  obj3.children = items4;
+  items2[1] = closure_1_17(timestampProducer, obj3);
+  obj.children = items2;
+  return closure_1_17(timestampProducer, obj);
 }
 function SingleImage(source) {
   source = source.source;
-  let widthOverride = source.widthOverride;
-  widthOverride = undefined;
+  let widthOverride;
   ({ initialIndex, handlePressMedia, visible } = source);
-  const tmp = callback4();
-  let obj = React;
-  const context = React.useContext(source(16453).ICYMIContext);
+  const tmp = closure_18();
+  let obj = noop;
+  const context = noop.useContext(ICYMIContext.ICYMIContext);
   if (null == widthOverride) {
     let width;
     if (context != null) {
@@ -403,36 +418,31 @@ function SingleImage(source) {
     initialIndex,
     source,
     dimensions: obj.useMemo(() => {
-      const size = source;
+      let size = source;
       const result = source.width / source.height;
       if (result >= 1) {
         const _Math2 = Math;
         const bound = Math.min(size.width, widthOverride);
-        let obj = { height: null, width: null };
-        obj[0] = bound / result;
-        obj[1] = bound;
-        return obj;
+        size = { height: bound / result, width: bound };
+        return size;
       } else {
         const _Math = Math;
         const bound1 = Math.min(size.height, 330);
         const result1 = bound1 * result;
         if (result1 > widthOverride) {
-          obj = { width: null, height: null };
-          obj[0] = tmp5;
-          obj[1] = tmp5 / result;
+          const size1 = { width: tmp5, height: tmp5 / result };
+          let size2 = size1;
         } else {
-          obj = { width: null, height: null };
-          obj[0] = result1;
-          obj[1] = bound1;
+          size2 = { width: result1, height: bound1 };
         }
-        return obj;
+        return size2;
       }
     }, items),
     style: tmp.singleImage,
     visible,
   };
-  obj[1] = callback2(Media, obj);
-  return callback2(closure_6, obj);
+  obj.children = __initData(Media, obj);
+  return __initData(timestampProducer, obj);
 }
 class GravityAttachmentMediaMosaic {
   constructor(arg0) {
@@ -457,10 +467,8 @@ class GravityAttachmentMediaMosaic {
       items.push(sources.slice(0, num));
       if (num < length) {
         do {
-          let tmp4 = sources;
           sum = num + 3;
           let arr = items.push(sources.slice(num, sum));
-          let tmp7 = length;
           num = sum;
         } while (sum < length);
       }
@@ -475,11 +483,11 @@ class GravityAttachmentMediaMosaic {
         tmp9 = jsx;
         tmp10 = SingleImage;
         obj = { widthOverride: null, initialIndex: 0, handlePressMedia: null, source: null, visible: null };
-        obj[0] = widthOverride;
-        obj[2] = handlePressMedia;
+        obj.widthOverride = widthOverride;
+        obj.handlePressMedia = handlePressMedia;
         sources = sources[0];
-        obj[3] = sources;
-        obj[4] = global.visible;
+        obj.source = sources;
+        obj.visible = global.visible;
         tmp4 = jsx(SingleImage, obj);
       } else {
         num3 = 3;
@@ -487,9 +495,9 @@ class GravityAttachmentMediaMosaic {
           tmp7 = jsx;
           tmp8 = ThreeImages;
           obj1 = { widthOverride: null, handlePressMedia: null, sources: null };
-          obj1[0] = widthOverride;
-          obj1[1] = handlePressMedia;
-          obj1[2] = sources;
+          obj1.widthOverride = widthOverride;
+          obj1.handlePressMedia = handlePressMedia;
+          obj1.sources = sources;
           tmp4 = jsx(ThreeImages, obj1);
         } else {
           num = 4;
@@ -497,48 +505,36 @@ class GravityAttachmentMediaMosaic {
             tmp5 = jsx;
             tmp6 = FourImages;
             obj2 = { widthOverride: null, handlePressMedia: null, sources: null };
-            obj2[0] = widthOverride;
-            obj2[1] = handlePressMedia;
-            obj2[2] = sources;
+            obj2.widthOverride = widthOverride;
+            obj2.handlePressMedia = handlePressMedia;
+            obj2.sources = sources;
             tmp4 = jsx(FourImages, obj2);
           } else {
             tmp2 = jsx;
             tmp3 = View;
             obj = { style: null, children: null };
-            obj[0] = tmp.imagesContainer;
-            obj[1] = memo.map((arg0, arg1) => {
-              if (1 === arg0.length) {
-                let obj = { handlePressMedia: null, source: null };
-                obj[0] = handlePressMedia;
-                obj[1] = arg0[0];
-                return closure_1_15(closure_1_23, obj, arg1);
-              } else if (2 === arg0.length) {
-                obj = { widthOverride: null, sources: null, handlePressMedia: null, end: null };
-                obj[0] = widthOverride;
-                obj[1] = arg0;
-                obj[2] = handlePressMedia;
-                obj[3] = arg1 === memo.length - 1;
-                return closure_1_15(closure_1_25, obj, arg1);
+            obj.style = tmp.imagesContainer;
+            obj.children = memo.map((sources, index) => {
+              if (1 === sources.length) {
+                let obj = { handlePressMedia, source: sources[0] };
+                return __initData(OneImageRow, obj, index);
+              } else if (2 === sources.length) {
+                obj = { widthOverride, sources, handlePressMedia, end: index === memo.length - 1 };
+                return __initData(TwoImagesRow, obj, index);
               } else {
                 let num = 0;
-                if (0 !== arg1) {
-                  num = memo[0].length + 3 * (arg1 - 1);
+                if (0 !== index) {
+                  num = memo[0].length + 3 * (index - 1);
                 }
                 obj = {
-                  widthOverride: null,
-                  handlePressMedia: null,
-                  offset: null,
-                  sources: null,
-                  start: null,
-                  end: null,
+                  widthOverride,
+                  handlePressMedia,
+                  offset: num,
+                  sources,
+                  start: 0 === index,
+                  end: index === memo.length - 1,
                 };
-                obj[0] = widthOverride;
-                obj[1] = handlePressMedia;
-                obj[2] = num;
-                obj[3] = arg0;
-                obj[4] = 0 === arg1;
-                obj[5] = arg1 === memo.length - 1;
-                return closure_1_15(closure_1_24, obj, arg1);
+                return __initData(ThreeImagesRow, obj, index);
               }
             });
             tmp4 = jsx(View, obj);
@@ -550,10 +546,14 @@ class GravityAttachmentMediaMosaic {
     return;
   }
 }
-({ Pressable: c5, View: closure_6 } = get_ActivityIndicator);
-({ AnalyticsObjectTypes: closure_12, AnalyticsObjects: map1, AnalyticsPages: closure_14 } = ME);
+get_ActivityIndicator = fn(17);
+({ Pressable: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+const Constants = fn(1074);
+({ AnalyticsObjectTypes: closure_12, AnalyticsObjects: map1, AnalyticsPages: closure_14 } = Constants);
+const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
-let closure_18 = createCacheKey.createStyles(() => {
+const createStyles = fn(4560);
+const collapsedCategories = createStyles.createStyles(() => {
   let obj = {
     media: null,
     video: null,
@@ -574,94 +574,88 @@ let closure_18 = createCacheKey.createStyles(() => {
     iconBg: null,
     iconBgSelected: null,
   };
-  obj = { borderRadius: ThemesDefault.radii.xs };
-  obj[0] = obj;
-  obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-  obj[1] = obj;
-  obj[2] = { position: "absolute", top: 0, left: 0, zIndex: 1 };
-  obj[3] = { gap: 4 };
-  obj[4] = { justifyContent: "center", gap: 4, width: "100%" };
-  obj[5] = { flexDirection: "row", gap: 4 };
-  obj[6] = {
+  obj = { borderRadius: nativeDefault.radii.xs };
+  obj.media = obj;
+  obj = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+  obj.video = obj;
+  obj.thumbhashMedia = { position: "absolute", top: 0, left: 0, zIndex: 1 };
+  obj.container = { gap: 4 };
+  obj.imagesContainer = { justifyContent: "center", gap: 4, width: "100%" };
+  obj.imageRow = { flexDirection: "row", gap: 4 };
+  obj.topRow = {
     overflow: "hidden",
-    borderTopEndRadius: ThemesDefault.radii.lg,
-    borderTopStartRadius: ThemesDefault.radii.lg,
+    borderTopEndRadius: nativeDefault.radii.lg,
+    borderTopStartRadius: nativeDefault.radii.lg,
   };
-  obj1 = {
+  const obj1 = {
     overflow: "hidden",
-    borderTopEndRadius: ThemesDefault.radii.lg,
-    borderTopStartRadius: ThemesDefault.radii.lg,
+    borderTopEndRadius: nativeDefault.radii.lg,
+    borderTopStartRadius: nativeDefault.radii.lg,
   };
-  obj[7] = {
+  obj.bottomRow = {
     overflow: "hidden",
-    borderBottomEndRadius: ThemesDefault.radii.lg,
-    borderBottomStartRadius: ThemesDefault.radii.lg,
+    borderBottomEndRadius: nativeDefault.radii.lg,
+    borderBottomStartRadius: nativeDefault.radii.lg,
   };
   const obj2 = {
     overflow: "hidden",
-    borderBottomEndRadius: ThemesDefault.radii.lg,
-    borderBottomStartRadius: ThemesDefault.radii.lg,
+    borderBottomEndRadius: nativeDefault.radii.lg,
+    borderBottomStartRadius: nativeDefault.radii.lg,
   };
-  obj[8] = {
-    backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
-    borderRadius: ThemesDefault.radii.round,
+  obj.videoIcon = {
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
+    borderRadius: nativeDefault.radii.round,
     padding: 16,
   };
-  const obj3 = {
-    backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
-    borderRadius: ThemesDefault.radii.round,
-    padding: 16,
-  };
-  obj[9] = {
+  const rect = {
     position: "absolute",
-    borderRadius: ThemesDefault.radii.round,
-    padding: ThemesDefault.space.PX_4,
+    borderRadius: nativeDefault.radii.round,
+    padding: nativeDefault.space.PX_4,
     bottom: 8,
     right: 8,
+  };
+  obj.muteIcon = rect;
+  const obj3 = {
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
+    borderRadius: nativeDefault.radii.round,
+    padding: 16,
+  };
+  obj.spoilerText = {
+    backgroundColor: nativeDefault.colors.SPOILER_HIDDEN_BACKGROUND,
+    borderRadius: nativeDefault.radii.lg,
+    paddingHorizontal: nativeDefault.space.PX_12,
+    paddingVertical: 6,
   };
   const obj4 = {
-    position: "absolute",
-    borderRadius: ThemesDefault.radii.round,
-    padding: ThemesDefault.space.PX_4,
-    bottom: 8,
-    right: 8,
-  };
-  obj[10] = {
-    backgroundColor: ThemesDefault.colors.SPOILER_HIDDEN_BACKGROUND,
-    borderRadius: ThemesDefault.radii.lg,
-    paddingHorizontal: ThemesDefault.space.PX_12,
+    backgroundColor: nativeDefault.colors.SPOILER_HIDDEN_BACKGROUND,
+    borderRadius: nativeDefault.radii.lg,
+    paddingHorizontal: nativeDefault.space.PX_12,
     paddingVertical: 6,
+  };
+  obj.leftColumn = {
+    overflow: "hidden",
+    borderTopStartRadius: nativeDefault.radii.lg,
+    borderBottomStartRadius: nativeDefault.radii.lg,
   };
   const obj5 = {
-    backgroundColor: ThemesDefault.colors.SPOILER_HIDDEN_BACKGROUND,
-    borderRadius: ThemesDefault.radii.lg,
-    paddingHorizontal: ThemesDefault.space.PX_12,
-    paddingVertical: 6,
-  };
-  obj[11] = {
     overflow: "hidden",
-    borderTopStartRadius: ThemesDefault.radii.lg,
-    borderBottomStartRadius: ThemesDefault.radii.lg,
+    borderTopStartRadius: nativeDefault.radii.lg,
+    borderBottomStartRadius: nativeDefault.radii.lg,
+  };
+  obj.rightColumn = {
+    overflow: "hidden",
+    borderTopEndRadius: nativeDefault.radii.lg,
+    borderBottomEndRadius: nativeDefault.radii.lg,
+    gap: 4,
   };
   const obj6 = {
     overflow: "hidden",
-    borderTopStartRadius: ThemesDefault.radii.lg,
-    borderBottomStartRadius: ThemesDefault.radii.lg,
-  };
-  obj[12] = {
-    overflow: "hidden",
-    borderTopEndRadius: ThemesDefault.radii.lg,
-    borderBottomEndRadius: ThemesDefault.radii.lg,
+    borderTopEndRadius: nativeDefault.radii.lg,
+    borderBottomEndRadius: nativeDefault.radii.lg,
     gap: 4,
   };
-  const obj7 = {
-    overflow: "hidden",
-    borderTopEndRadius: ThemesDefault.radii.lg,
-    borderBottomEndRadius: ThemesDefault.radii.lg,
-    gap: 4,
-  };
-  obj[13] = { overflow: "hidden", borderRadius: ThemesDefault.radii.lg };
-  obj[14] = {
+  obj.singleImage = { overflow: "hidden", borderRadius: nativeDefault.radii.lg };
+  obj.centerContainer = {
     position: "absolute",
     width: "100%",
     height: "100%",
@@ -669,50 +663,49 @@ let closure_18 = createCacheKey.createStyles(() => {
     justifyContent: "center",
     zIndex: 2,
   };
-  obj[15] = { position: "absolute", width: "100%", height: "100%", zIndex: 2 };
-  const obj8 = { overflow: "hidden", borderRadius: ThemesDefault.radii.lg };
-  obj[16] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
-  const obj9 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
-  obj[17] = { backgroundColor: ThemesDefault.colors.WHITE };
+  obj.absoluteContainer = { position: "absolute", width: "100%", height: "100%", zIndex: 2 };
+  const obj7 = { overflow: "hidden", borderRadius: nativeDefault.radii.lg };
+  obj.iconBg = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+  const obj8 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+  obj.iconBgSelected = { backgroundColor: nativeDefault.colors.WHITE };
   return obj;
 });
-let closure_20 = {
+const __initData = {
   code: "function ICYMIMediaMosaicTsx1(){const{withTiming,imageFinishedLoading}=this.__closure;return{opacity:withTiming(imageFinishedLoading?0:1,{duration:150})};}",
 };
-let result = require("set").fileFinishedImporting("modules/icymi/native/media/ICYMIMediaMosaic.tsx");
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/icymi/native/media/ICYMIMediaMosaic.tsx");
 
 export default function ICYMIMediaMosaic(message) {
   message = message.message;
   const widthOverride = message.widthOverride;
   const itemType = message.itemType;
-  let stateFromStores;
-  let React;
-  let visible;
+  noop = undefined;
   let allMediaSources;
   let nonEmbedSources;
-  let callback;
+  let handlePressMedia;
   let obj = message(itemType[14]);
-  let items = [callback];
-  stateFromStores = obj.useStateFromStores(items, () => callback.getChannel(message.getChannelId()));
-  let tmp = callback4();
-  [tmp4, c4] = stateFromStores(React.useState(false), 2);
-  visible = !tmp4;
+  let items = [handlePressMedia];
+  const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(message.getChannelId()));
+  let tmp = closure_18();
+  [tmp4, c4] = stateFromStores(noop.useState(false), 2);
+  let visible = !tmp4;
   if (!tmp4) {
     visible = message.visible;
   }
   const items1 = [message];
   const memo = obj2.useMemo(() => {
-    let obj = message(itemType[29]);
+    let obj = MediaSourceUtil;
     const result = obj.extractMediaSourcesFromMessage(
       message,
       message,
       undefined,
-      message(itemType[30]).GRAVITY_VALID_EMBED_TYPES,
+      ICYMITypes.GRAVITY_VALID_EMBED_TYPES,
     );
-    const mapped = result.map((closure_1) => callback(table[29]).flattenSource(closure_1));
-    const found = mapped.filter(message(itemType[31]).isNotNullish);
-    const tmp2 = stateFromStores(
-      message(itemType[32]).partition(found, (accessoryType) => "embed" === accessoryType.accessoryType),
+    const mapped = result.map((item) => message(itemType[29]).flattenSource(item));
+    const found = mapped.filter(GlobalUtils.isNotNullish);
+    const tmp2 = _slicedToArray(
+      _mod12.partition(found, (accessoryType) => "embed" === accessoryType.accessoryType),
       2,
     );
     obj = { allMediaSources: found, nonEmbedSources: tmp2[1], embedSources: tmp2[0] };
@@ -726,12 +719,12 @@ export default function ICYMIMediaMosaic(message) {
   items2[2] = allMediaSources;
   items2[3] = stateFromStores;
   items2[4] = itemType;
-  callback = obj2.useCallback((arg0) => {
+  handlePressMedia = obj2.useCallback((arg0) => {
     let items;
     ({ ref, initialIndex } = arg0);
     let obj = widthOverride(itemType[25]);
     obj.itemInteracted(items.id, "message", "press_media");
-    obj1 = widthOverride(itemType[25]);
+    let obj1 = widthOverride(itemType[25]);
     obj = {
       itemId: items.id,
       itemType,
@@ -743,16 +736,12 @@ export default function ICYMIMediaMosaic(message) {
       },
     };
     obj1.feedItemActioned(obj);
-    obj = {
-      page: closure_1_14.ICYMI,
-      object: closure_1_13.ACK_MEDIA_VIEWED,
-      objectType: closure_1_12.ACK_SEMI_AUTOMATIC,
-    };
+    obj = { page: constants3.ICYMI, object: constants2.ACK_MEDIA_VIEWED, objectType: constants.ACK_SEMI_AUTOMATIC };
     message(itemType[33]).ack(items.channel_id, obj, true, true, items.id);
     items = [];
-    const item = allMediaSources.forEach((arg0) => {
+    const item = allMediaSources.forEach((item) => {
       const obj = {};
-      const merged = Object.assign(arg0);
+      const merged = Object.assign(item);
       obj.embedURI = undefined;
       items.push(obj);
     });
@@ -773,41 +762,34 @@ export default function ICYMIMediaMosaic(message) {
     };
     let str = "";
     if (null != stateFromStores) {
-      str = tmp4(tmp[35]).computeChannelName(tmp8, closure_1_10, closure_1_9);
+      str = tmp4(tmp[35]).computeChannelName(tmp8, UserStore, RelationshipStore);
       const tmp4Result = tmp4(tmp[35]);
     }
-    obj1[5] = str;
-    obj1[7] = ref.current;
-    obj1[8] = function onClose() {
-      return callback(false);
+    obj1.contextName = str;
+    obj1.originViewOrOriginLayout = ref.current;
+    obj1.onClose = function onClose() {
+      return _undefined(false);
     };
     message(itemType[34]).openMediaModal(obj1);
   }, items2);
   if (0 !== nonEmbedSources.length) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.container;
-    obj = { widthOverride: null, sources: null, handlePressMedia: null, visible: null };
-    obj[0] = widthOverride;
-    obj[1] = nonEmbedSources;
-    obj[2] = callback;
-    obj[3] = visible;
-    const items3 = [callback2(GravityAttachmentMediaMosaic, obj)];
+    obj = { style: tmp.container, children: null };
+    obj = { widthOverride, sources: nonEmbedSources, handlePressMedia, visible };
+    const items3 = [closure_15(GravityAttachmentMediaMosaic, obj)];
     let mapped;
     if (embedSources != null) {
-      mapped = embedSources.map((source) =>
-        closure_1_15(
-          closure_1_28,
-          { widthOverride, handlePressMedia: callback, initialIndex: arg1 + nonEmbedSources.length, source, visible },
-          "gif-" + arg1,
+      mapped = embedSources.map((source, index) =>
+        __initData(
+          SingleImage,
+          { widthOverride, handlePressMedia, initialIndex: index + nonEmbedSources.length, source, visible },
+          "gif-" + index,
         ),
       );
     }
     items3[1] = mapped;
-    obj[1] = items3;
+    obj.children = items3;
     const _HermesInternal = HermesInternal;
     let tmp8Result = closure_17(allMediaSources, obj, "message-image-" + message.id);
-    const tmp8 = closure_17;
-    const tmp9 = allMediaSources;
   } else {
     tmp8Result = null;
   }

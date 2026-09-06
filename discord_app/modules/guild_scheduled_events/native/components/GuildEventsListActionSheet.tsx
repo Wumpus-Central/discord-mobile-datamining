@@ -1,24 +1,21 @@
 // discord_app/modules/guild_scheduled_events/native/components/GuildEventsListActionSheet.tsx
+import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
+import ReadStateActionCreators from "../../../../actions/ReadStateActionCreators.tsx";
 import useCanCreateAnEventDefault from "../../useCanCreateAnEvent.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../../stores/ReadStateStore.tsx";
-import { ANALYTICS_GUILD_EVENTS_MODAL_NAME as closure_6 } from "../../GuildScheduledEventsConstants.tsx";
-import { AnalyticEvents } from "../../../../Constants.tsx";
-import { ReadStateTypes } from "../../../read_states/ReadStateConstants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import GuildScheduledEventModalActionCreators from "../GuildScheduledEventModalActionCreators.tsx";
+import GuildScheduledEventManagerDefault from "../../GuildScheduledEventManager.tsx";
+import guild_scheduled_events_GuildScheduledEventModalActionCreators from "../../GuildScheduledEventModalActionCreators.native.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import ReadStateStore from "../../../../stores/ReadStateStore.tsx";
 
-const require = arg1;
+require = fn;
 function GuildEventsListHeader(arg0) {
   ({ eventCount, guild } = arg0);
-  importDefault = undefined;
   let tmp3Result = useCanCreateAnEventDefault(guild.id);
   importDefault = tmp3Result;
   if (eventCount > 0) {
     const intl2 = tmp4(1114).intl;
-    let obj = { count: null };
-    obj[0] = eventCount;
+    let obj = { count: eventCount };
     let formatToPlainStringResult = intl2.formatToPlainString(tmp4(1114).t.p1zLAf, obj);
   } else {
     const intl = tmp4(1114).intl;
@@ -28,100 +25,104 @@ function GuildEventsListHeader(arg0) {
   if (tmp3Result) {
     obj = { accessibilityLabel: null, label: null, onPress: null };
     const intl3 = tmp4(1114).intl;
-    obj[0] = intl3.string(tmp4(1114).t["60lJ0C"]);
+    obj.accessibilityLabel = intl3.string(tmp4(1114).t["60lJ0C"]);
     const intl4 = tmp4(1114).intl;
-    obj[1] = intl4.string(tmp4(1114).t.NzROFF);
-    obj[2] = function onPress() {
+    obj.label = intl4.string(tmp4(1114).t.NzROFF);
+    obj.onPress = function onPress() {
       if (closure_1) {
-        let obj = guild(closure_1_2[12]);
+        let obj = GuildScheduledEventModalActionCreators;
         let result = obj.closeGuildEventListActionSheet();
-        obj = { onClose: null };
-        obj[0] = function onClose() {
-          const result = closure_1_0(closure_1_2[12]).openGuildEventListActionSheet(closure_0);
+        obj = {
+          onClose() {
+            const result = guild(dependencyMap[12]).openGuildEventListActionSheet(closure_1_0);
+          },
         };
-        const result1 = guild(closure_1_2[12]).openCreateOrEditGuildEventModal(guild, obj);
-        const obj2 = guild(closure_1_2[12]);
+        const result1 = GuildScheduledEventModalActionCreators.openCreateOrEditGuildEventModal(guild, obj);
       }
     };
     tmp3Result = tmp3(tmp4(9718).ActionSheetHeaderPressableText, obj);
   }
-  obj[1] = tmp3Result;
+  obj.trailing = tmp3Result;
   return jsx(guild(7149).BottomSheetTitleHeader, { title: formatToPlainStringResult, trailing: null });
 }
-let closure_10 = createCacheKey.createStyles({ container: { flex: 1 } });
-let result = require("set").fileFinishedImporting(
+const View = fn(17).View;
+let closure_6 = fn(1963).ANALYTICS_GUILD_EVENTS_MODAL_NAME;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const ReadStateTypes = fn(4742).ReadStateTypes;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_10 = createStyles.createStyles({ container: { flex: 1 } });
+const size = fn(2);
+let result = size.fileFinishedImporting(
   "modules/guild_scheduled_events/native/components/GuildEventsListActionSheet.tsx",
 );
 
 export default function GuildEventsListActionSheet(guild) {
   guild = guild.guild;
-  let arr;
-  arr = arr(9662)(guild.id);
-  const items = [arr, guild.id];
-  const tmp = callback();
-  const effect = React.useEffect(() => {
-    const item = arr.forEach((id) => closure_1_1(closure_1_2[14]).getGuildEventUserCounts(id.id, id.id, []));
-    const guildEventsForCurrentUser = arr(closure_1_2[14]).getGuildEventsForCurrentUser(guild.id);
+  let events;
+  events = events(9662)(guild.id);
+  const items = [events, guild.id];
+  const tmp = closure_10();
+  const effect = noop.useEffect(() => {
+    const item = arr.forEach((id) => arr(9781).getGuildEventUserCounts(id.id, id.id, []));
+    const guildEventsForCurrentUser = GuildScheduledEventManagerDefault.getGuildEventsForCurrentUser(guild.id);
   }, items);
   const items1 = [guild];
-  callback = React.useCallback(() => {
-    const result = guild(table[12]).closeGuildEventListActionSheet();
+  const callback = noop.useCallback(() => {
+    const result = guild(9698).closeGuildEventListActionSheet();
   }, []);
-  const callback1 = React.useCallback((eventId, recurrenceId) => {
-    let obj = guild(closure_1_2[15]);
-    obj = {
+  const callback1 = noop.useCallback((eventId, recurrenceId) => {
+    const obj = {
       eventId: eventId.id,
       event: eventId,
       recurrenceId,
       onClose() {
-        const result = closure_1_0(closure_1_2[12]).openGuildEventListActionSheet(closure_0);
+        const result = guild(9698).openGuildEventListActionSheet(closure_1_0);
       },
     };
     let result = obj.openGuildEventDetails(obj);
   }, items1);
-  arr(4992)(() => {
-    let obj = arr(closure_1_2[17]);
-    obj = { type: closure_1_6, guild_id: guild.id, guild_events_count: arr.length };
-    obj.track(closure_1_7.OPEN_MODAL, obj);
+  events(4992)(() => {
+    const obj = { type, guild_id: guild.id, guild_events_count: arr.length };
+    obj.track(AnalyticEvents.OPEN_MODAL, obj);
   });
   const items2 = [guild.id];
-  const effect1 = React.useEffect(() => {
+  const effect1 = noop.useEffect(() => {
     if (null != guild.id) {
-      guild(closure_1_2[18]).ackGuildFeature(tmp.id, closure_1_8.GUILD_EVENT);
-      const obj = guild(closure_1_2[18]);
+      ReadStateActionCreators.ackGuildFeature(tmp.id, ReadStateTypes.GUILD_EVENT);
     }
   }, items2);
   let obj = {
     showGradient: true,
-    scrollable: arr.length > 0,
+    scrollable: events.length > 0,
     startExpanded: true,
     dismissAccessibilityLabel: null,
     header: null,
     children: null,
   };
   const intl = guild(1114).intl;
-  obj[3] = intl.string(guild(1114).t.VSlyAn);
-  obj = { eventCount: arr.length, guild };
-  obj[4] = <GuildEventsListHeader eventCount={arr.length} guild={guild} />;
+  obj.dismissAccessibilityLabel = intl.string(guild(1114).t.VSlyAn);
+  obj = { eventCount: events.length, guild };
+  obj.header = <GuildEventsListHeader eventCount={events.length} guild={guild} />;
   obj = { style: tmp.container, children: null };
-  obj1 = {
+  const obj1 = {
     inActionSheet: true,
-    events: arr,
+    events,
     onPressEvent: callback1,
     onCloseAction: callback,
     guild,
     lastAckedId: null,
   };
-  const ref = React.useRef(closure_5.ackMessageId(guild.id, ReadStateTypes.GUILD_EVENT));
-  obj1[5] = arr(5586)(ref);
-  obj[1] = jsx(arr(9806), {
+  const ref = noop.useRef(ReadStateStore.ackMessageId(guild.id, ReadStateTypes.GUILD_EVENT));
+  obj1.lastAckedId = events(5586)(ref);
+  obj.children = jsx(events(9806), {
     inActionSheet: true,
-    events: arr,
+    events,
     onPressEvent: callback1,
     onCloseAction: callback,
     guild,
     lastAckedId: null,
   });
-  obj[5] = <View style={tmp.container}>{null}</View>;
+  obj.children = <View style={tmp.container}>{null}</View>;
   return jsx(guild(7150).BottomSheet, { style: tmp.container, children: null });
 }

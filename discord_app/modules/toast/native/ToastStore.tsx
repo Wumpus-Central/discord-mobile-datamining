@@ -1,6 +1,6 @@
 // discord_app/modules/toast/native/ToastStore.tsx
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../../Dispatcher.tsx";
+import DispatcherDefault from "../../../Dispatcher.tsx";
 
 let c0 = null;
 const Store = initializeDefault.Store;
@@ -8,27 +8,30 @@ class ToastStore extends Store {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     applyArgumentsResult.getContent = function getContent() {
-      return closure_0;
+      return _null;
     };
     return applyArgumentsResult;
   }
 }
 ToastStore.displayName = "ToastStore";
-const toastStore = new ToastStore(dispatcherDefault, {
+const toastStore = new ToastStore(DispatcherDefault, {
   TOAST_OPEN: function handleOpen(toastProps) {
     toastProps = toastProps.toastProps;
     let key;
-    if (toastProps != null) {
-      key = toastProps.key;
+    if (_null != null) {
+      key = _null.key;
     }
     if (key === toastProps.key) {
       return false;
+    } else {
+      _null = toastProps;
     }
   },
   TOAST_CLOSE: function handleClose() {
     c0 = null;
   },
 });
-const result = require("set").fileFinishedImporting("modules/toast/native/ToastStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/toast/native/ToastStore.tsx");
 
 export default toastStore;

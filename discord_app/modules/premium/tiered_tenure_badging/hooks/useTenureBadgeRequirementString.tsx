@@ -1,16 +1,16 @@
 // discord_app/modules/premium/tiered_tenure_badging/hooks/useTenureBadgeRequirementString.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import GuildFeatures from "../../PremiumConstants.tsx";
-import usePremiumSince from "useTenureBadging.tsx";
+import util from "../../../../intl/index.native.tsx";
+import PremiumConstants from "../../PremiumConstants.tsx";
+import useTenureBadging from "useTenureBadging.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const TieredTenureBadge = GuildFeatures.TieredTenureBadge;
-const result = set.fileFinishedImporting(
+const TieredTenureBadge = PremiumConstants.TieredTenureBadge;
+const result = size.fileFinishedImporting(
   "modules/premium/tiered_tenure_badging/hooks/useTenureBadgeRequirementString.tsx",
 );
 
 export const useTenureBadgeRequirementString = function useTenureBadgeRequirementString() {
-  let obj = usePremiumSince;
+  let obj = useTenureBadging;
   const tieredTenureBadge = obj.useTieredTenureBadge();
   if (null == tieredTenureBadge) {
     return null;
@@ -30,16 +30,14 @@ export const useTenureBadgeRequirementString = function useTenureBadgeRequiremen
             }
           }
           const intl = tmp(1114).intl;
-          obj = { years: null };
-          obj[0] = tenureReqNumMonths / 12;
+          obj = { years: tenureReqNumMonths / 12 };
           formatToPlainStringResult = intl.formatToPlainString(tmp(1114).t.qOdyDe, obj);
         }
         return formatToPlainStringResult;
       }
     }
     const intl2 = tmp(1114).intl;
-    obj = { months: null };
-    obj[0] = tenureReqNumMonths;
+    obj = { months: tenureReqNumMonths };
     formatToPlainStringResult = intl2.formatToPlainString(tmp(1114).t.erUSmA, obj);
     const tmpResult = tmp(7634);
   }
@@ -59,14 +57,13 @@ export const getTenureBadgeRequirementString = function getTenureBadgeRequiremen
             }
           }
         }
-        const intl = getSystemLocale.intl;
-        let obj = { years: null };
-        obj[0] = tenureReqNumMonths / 12;
-        return intl.formatToPlainString(getSystemLocale.t.qOdyDe, obj);
+        const intl = util.intl;
+        let obj = { years: tenureReqNumMonths / 12 };
+        return intl.formatToPlainString(util.t.qOdyDe, obj);
       }
     }
   }
-  const intl2 = getSystemLocale.intl;
+  const intl2 = util.intl;
   obj = { months: tenureReqNumMonths };
-  return intl2.formatToPlainString(getSystemLocale.t.erUSmA, obj);
+  return intl2.formatToPlainString(util.t.erUSmA, obj);
 };

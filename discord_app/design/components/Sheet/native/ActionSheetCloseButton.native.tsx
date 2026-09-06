@@ -1,16 +1,16 @@
 // discord_app/design/components/Sheet/native/ActionSheetCloseButton.native.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import PressableBase from "../../../void/Pressables/native/Pressables.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
+import Pressables from "../../../void/Pressables/native/Pressables.tsx";
 import XSmallIcon from "../../Icon/native/redesign/generated/XSmallIcon.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-let closure_4 = Object.freeze({ radius: 12 });
-let closure_5 = Object.freeze({ top: 8, right: 8, bottom: 8, left: 8 });
-const result = require("set").fileFinishedImporting("design/components/Sheet/native/ActionSheetCloseButton.native.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const androidRippleConfig = Object.freeze({ radius: 12 });
+const hitSlop = Object.freeze({ top: 8, right: 8, bottom: 8, left: 8 });
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Sheet/native/ActionSheetCloseButton.native.tsx");
 
 export const ActionSheetCloseButton = function ActionSheetCloseButton(arg0) {
   ({ onPress, variant } = arg0);
@@ -22,18 +22,18 @@ export const ActionSheetCloseButton = function ActionSheetCloseButton(arg0) {
     onPress: null,
     children: null,
   };
-  const intl = getSystemLocale.intl;
-  obj[1] = intl.string(getSystemLocale.t.cpT0Cq);
-  obj[2] = closure_5;
-  obj[3] = closure_4;
-  obj[4] = onPress;
+  const intl = util.intl;
+  obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
+  obj.hitSlop = hitSlop;
+  obj.androidRippleConfig = androidRippleConfig;
+  obj.onPress = onPress;
   if ("overlay" === variant) {
-    let ICON_STRONG = ThemesDefault.colors.WHITE;
+    let ICON_STRONG = nativeDefault.colors.WHITE;
   } else {
-    ICON_STRONG = ThemesDefault.colors.ICON_STRONG;
+    ICON_STRONG = nativeDefault.colors.ICON_STRONG;
   }
-  obj[5] = jsx(XSmallIcon.XSmallIcon, { color: ICON_STRONG });
-  return jsx(PressableBase.PressableOpacity, {
+  obj.children = jsx(XSmallIcon.XSmallIcon, { color: ICON_STRONG });
+  return jsx(Pressables.PressableOpacity, {
     accessibilityRole: "button",
     accessibilityLabel: null,
     hitSlop: null,

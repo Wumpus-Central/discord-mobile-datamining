@@ -1,25 +1,22 @@
 // discord_app/modules/vibegrations/native/restartVibegrationsAppFrames.tsx
-import _launchFrameOnNativeDefault from "../../frames/FramesActionCreators.native.tsx";
-import postMessageToWebViewDefault from "../../frames/native/FramesNativeManager.tsx";
-import closure_2 from "../../frames/FramesStore.tsx";
+import FramesActionCreatorsDefault from "../../frames/FramesActionCreators.native.tsx";
+import FramesNativeManagerDefault from "../../frames/native/FramesNativeManager.tsx";
+import FramesStore from "../../frames/FramesStore.tsx";
 
-const result = require("set").fileFinishedImporting("modules/vibegrations/native/restartVibegrationsAppFrames.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/vibegrations/native/restartVibegrationsAppFrames.tsx");
 
-export default function restartVibegrationsAppFrames(arg0) {
-  importDefault = arg0;
-  if (null != arg0) {
+export default function restartVibegrationsAppFrames(applicationId) {
+  closure_0 = applicationId;
+  if (null != applicationId) {
     const items = [];
-    HermesBuiltin.arraySpread(allFrames.getAllFrames(), 0);
+    HermesBuiltin.arraySpread(FramesStore.getAllFrames(), 0);
     const found = items.filter((applicationId) => applicationId.applicationId === closure_0);
     for (const item10003 of found) {
-      let tmp2 = importDefault;
-      let tmp3 = dependencyMap;
-      let obj = postMessageToWebViewDefault;
+      let obj = FramesNativeManagerDefault;
       let leaveFrameResult = obj.leaveFrame(item10003.id);
-      let obj2 = _launchFrameOnNativeDefault;
-      obj = { applicationId: null, surface: null };
-      obj[0] = arg0;
-      obj[1] = item10003.surface;
+      let obj2 = FramesActionCreatorsDefault;
+      obj = { applicationId: arg0, surface: item10003.surface };
       let launchFrameResult = obj2.launchFrame(obj);
       let catchPromise = launchFrameResult.catch(() => {});
       continue;

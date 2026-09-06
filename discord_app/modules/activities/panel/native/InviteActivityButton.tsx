@@ -1,26 +1,38 @@
 // discord_app/modules/activities/panel/native/InviteActivityButton.tsx
-import closure_3 from "../../../../stores/LocalActivityStore.tsx";
-import closure_4 from "../../../../stores/SelfPresenceStore.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
+import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js";
+import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import getCurrentUserPresenceActivityDefault from "../../utils/getCurrentUserPresenceActivity.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import LocalActivityStore from "../../../../stores/LocalActivityStore.tsx";
+import SelfPresenceStore from "../../../../stores/SelfPresenceStore.tsx";
 
-const require = arg1;
-const memoResult = importAllResult.memo(function InviteActivityButton(applicationId) {
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/panel/native/InviteActivityButton.tsx");
+
+export default noop.memo(function InviteActivityButton(applicationId) {
   applicationId = applicationId.applicationId;
-  let stateFromStores;
   let obj = applicationId(504);
-  const items = [closure_3, closure_4];
+  const items = [LocalActivityStore, SelfPresenceStore];
   const items1 = [applicationId];
-  stateFromStores = obj.useStateFromStores(
+  const stateFromStores = obj.useStateFromStores(
     items,
-    () => stateFromStores(closure_1_2[8])(closure_1_3, closure_1_4, applicationId),
+    () => getCurrentUserPresenceActivityDefault(LocalActivityStore, SelfPresenceStore, applicationId),
     items1,
   );
   let tmp4 = null;
   if (null != stateFromStores) {
     obj = {
-      onPress: null,
-      icon: null,
+      onPress() {
+        const obj = { activity: stateFromStores };
+        obj.openLazy(
+          asyncRequireImpl(17027, dependencyMap.paths),
+          "ActivityInviteSheet-" + stateFromStores.session_id,
+          obj,
+        );
+      },
+      icon: stateFromStores(10031),
       text: null,
       accessibilityLabel: null,
       variant: "secondary-overlay",
@@ -28,23 +40,20 @@ const memoResult = importAllResult.memo(function InviteActivityButton(applicatio
       shrink: true,
       maxFontSizeMultiplier: 1,
     };
-    obj[0] = function onPress() {
-      let obj = stateFromStores(closure_1_2[4]);
-      obj = { activity: stateFromStores };
-      obj.openLazy(
-        applicationId(closure_1_2[6])(closure_1_2[5], closure_1_2.paths),
-        "ActivityInviteSheet-" + stateFromStores.session_id,
-        obj,
-      );
-    };
-    obj[1] = stateFromStores(10031);
     const intl = tmp(1114).intl;
-    obj[2] = intl.string(tmp(1114).t["OzOM/q"]);
+    obj.text = intl.string(tmp(1114).t["OzOM/q"]);
     const intl2 = tmp(1114).intl;
-    obj[3] = intl2.string(tmp(1114).t["OzOM/q"]);
+    obj.accessibilityLabel = intl2.string(tmp(1114).t["OzOM/q"]);
     tmp4 = jsx(tmp(4975).Button, {
-      onPress: null,
-      icon: null,
+      onPress() {
+        const obj = { activity: stateFromStores };
+        obj.openLazy(
+          asyncRequireImpl(17027, dependencyMap.paths),
+          "ActivityInviteSheet-" + stateFromStores.session_id,
+          obj,
+        );
+      },
+      icon: stateFromStores(10031),
       text: null,
       accessibilityLabel: null,
       variant: "secondary-overlay",
@@ -55,6 +64,3 @@ const memoResult = importAllResult.memo(function InviteActivityButton(applicatio
   }
   return tmp4;
 });
-const result = require("set").fileFinishedImporting("modules/activities/panel/native/InviteActivityButton.tsx");
-
-export default memoResult;

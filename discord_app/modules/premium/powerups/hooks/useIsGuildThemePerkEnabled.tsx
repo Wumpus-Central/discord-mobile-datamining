@@ -1,34 +1,36 @@
 // discord_app/modules/premium/powerups/hooks/useIsGuildThemePerkEnabled.tsx
-import closure_2 from "../../../../stores/GuildStore.tsx";
-import closure_3 from "../GuildPowerupsStore.tsx";
-import { GuildFeatures } from "../../../../Constants.tsx";
+import Powerups from "../../../../../discord_common/js/shared/shared-constants/Powerups.tsx";
+import GuildStore from "../../../../stores/GuildStore.tsx";
+import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useIsGuildThemePerkEnabled.tsx");
+require = fn;
+const GuildFeatures = fn(1074).GuildFeatures;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useIsGuildThemePerkEnabled.tsx");
 
 export default function useIsGuildThemePerkEnabled(arg0) {
-  const _require = arg0;
-  const items = [closure_2, closure_3];
+  _require = arg0;
+  const items = [GuildStore, GuildPowerupsStore];
   const items1 = [arg0];
-  return require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+  return require("initialize").useStateFromStores(
     items,
     () => {
-      let tmp2 = null != callback;
+      let tmp2 = null != closure_0;
       if (tmp2) {
-        const guild = closure_1_2.getGuild(tmp);
+        const guild = GuildStore.getGuild(tmp);
         let hasItem;
         if (guild != null) {
           const features = guild.features;
-          hasItem = features.has(closure_1_4.GUILD_THEME);
+          hasItem = features.has(GuildFeatures.GUILD_THEME);
         }
         let tmp7 = true === hasItem;
         if (!tmp7) {
-          const stateForGuild = closure_1_3.getStateForGuild(tmp);
+          const stateForGuild = GuildPowerupsStore.getStateForGuild(tmp);
           let tmp10;
           if (stateForGuild != null) {
             const unlockedPowerups = stateForGuild.unlockedPowerups;
             if (unlockedPowerups != null) {
-              tmp10 = unlockedPowerups[callback(undefined, closure_1_1[4]).GUILD_POWERUP_GUILD_THEME_SKU_ID];
+              tmp10 = unlockedPowerups[Powerups.GUILD_POWERUP_GUILD_THEME_SKU_ID];
             }
           }
           tmp7 = null != tmp10;

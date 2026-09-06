@@ -1,8 +1,8 @@
 // discord_app/modules/emojis/utils/dedupeEmojisByNameOrId.tsx
-import set from "../../../../_runtime/00002_set.js";
-import parseRawEmojiObjectDefault from "../UnicodeEmojis.tsx";
+import UnicodeEmojisDefault from "../UnicodeEmojis.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-let result = set.fileFinishedImporting("modules/emojis/utils/dedupeEmojisByNameOrId.tsx");
+let result = size.fileFinishedImporting("modules/emojis/utils/dedupeEmojisByNameOrId.tsx");
 
 export default function dedupeEmojisByNameOrId(arg0) {
   const map = new Map();
@@ -11,17 +11,13 @@ export default function dedupeEmojisByNameOrId(arg0) {
   while (iter !== undefined) {
     let tmp2 = nextResult;
     if (null == nextResult.id) {
-      let tmp5 = importDefault;
-      let tmp6 = dependencyMap;
-      let obj2 = parseRawEmojiObjectDefault;
-      let tmp7 = nextResult;
+      let obj2 = UnicodeEmojisDefault;
       let result = obj2.convertSurrogateToBase(tmp2.surrogates);
       if (result == null) {
         result = nextResult;
       }
       let result1 = map.set(result.name, result);
     } else {
-      let tmp3 = nextResult;
       let result2 = map.set(tmp2.id, tmp2);
     }
     continue;

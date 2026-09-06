@@ -1,6 +1,6 @@
 // discord_app/modules/tiny_bronco/TinyBroncoGate.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/tiny_bronco/TinyBroncoGate.tsx");
+const result = size.fileFinishedImporting("modules/tiny_bronco/TinyBroncoGate.tsx");
 
 export const TINY_BRONCO_DEV_ONLY = false;

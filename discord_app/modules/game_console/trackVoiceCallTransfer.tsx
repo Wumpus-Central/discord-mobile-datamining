@@ -1,17 +1,18 @@
 // discord_app/modules/game_console/trackVoiceCallTransfer.tsx
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
-import closure_2 from "../../stores/ChannelStore.tsx";
-import closure_3 from "../../stores/RTCConnectionStore.tsx";
-import closure_4 from "../../stores/SessionsStore.tsx";
-import { AnalyticEvents } from "../../Constants.tsx";
+import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
+import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
+import SessionsStore from "../../stores/SessionsStore.tsx";
 
-const result = require("set").fileFinishedImporting("modules/game_console/trackVoiceCallTransfer.tsx");
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_console/trackVoiceCallTransfer.tsx");
 
-export default function trackVoiceCallTransfer(arg0, arg1, sessionId) {
-  let obj = expandEventPropertiesDefault;
+export default function trackVoiceCallTransfer(channel_id, target_platform, sessionId) {
+  let obj = AnalyticsUtilsDefault;
   let str = "discord_client";
   if (null != sessionId) {
-    sessionById = sessionById.getSessionById(sessionId);
+    const sessionById = SessionsStore.getSessionById(sessionId);
     let os;
     if (sessionById != null) {
       os = sessionById.clientInfo.os;
@@ -19,14 +20,14 @@ export default function trackVoiceCallTransfer(arg0, arg1, sessionId) {
     str = os;
   }
   obj = { source_platform: str, guild_id: null, channel_id: null, rtc_connection_id: null, target_platform: null };
-  channel = channel.getChannel(arg0);
+  const channel = ChannelStore.getChannel(channel_id);
   let guild_id;
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  obj[1] = guild_id;
-  obj[2] = arg0;
-  obj[3] = rTCConnectionId.getRTCConnectionId();
-  obj[4] = arg1;
+  obj.guild_id = guild_id;
+  obj.channel_id = channel_id;
+  obj.rtc_connection_id = RTCConnectionStore.getRTCConnectionId();
+  obj.target_platform = target_platform;
   obj.track(AnalyticEvents.VOICE_CALL_TRANSFER, obj);
 }

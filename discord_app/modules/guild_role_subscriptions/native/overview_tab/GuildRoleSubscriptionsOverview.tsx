@@ -1,35 +1,36 @@
 // discord_app/modules/guild_role_subscriptions/native/overview_tab/GuildRoleSubscriptionsOverview.tsx
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import Text from "../../../../design/components/Text/native/Text.tsx";
-import notSupportedDefault from "../../../payments/native/hooks/NativePaymentHooks.android.tsx";
-import useGroupListingsFetchContext from "../../GroupListingsFetchContext.tsx";
+import router_utils from "../../../routing/router_utils.tsx";
+import util from "../../../../intl/index.native.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import actions_AlertActionCreatorsDefault from "../../../../actions/native/AlertActionCreators.tsx";
+import NativePaymentHooksDefault from "../../../payments/native/hooks/NativePaymentHooks.android.tsx";
+import GroupListingsFetchContext from "../../GroupListingsFetchContext.tsx";
 import UnavailableNoticeDefault from "../components/UnavailableNotice.tsx";
-import SeparatorDefault from "../purchase_page/GuildRoleSubscriptionPurchasePage.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../gateway/GatewayConnectionStore.tsx";
-import closure_5 from "../../../../stores/DefaultRouteStore.tsx";
-import closure_6 from "../../../../stores/GuildStore.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import GuildRoleSubscriptionPurchasePageDefault from "../purchase_page/GuildRoleSubscriptionPurchasePage.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import GatewayConnectionStore from "../../../gateway/GatewayConnectionStore.tsx";
+import DefaultRouteStore from "../../../../stores/DefaultRouteStore.tsx";
+import GuildStore from "../../../../stores/GuildStore.tsx";
 
-require = arg1;
+require = fn;
 function serverNameHook(children) {
-  return jsx(Text.Text, { variant: "heading-lg/extrabold", color: "interactive-text-active", children });
+  return jsx(Text_Text.Text, { variant: "heading-lg/extrabold", color: "interactive-text-active", children });
 }
 class RoleSubscriptionsUnavailableNotice {
   constructor(arg0) {
     obj = { title: null, description: null };
-    tmp = require("UnavailableNotice");
-    intl = require("getSystemLocale").intl;
+    tmp = closure_1(closure_2[6]);
+    intl = closure_0(closure_2[7]).intl;
     obj = { serverName: global.serverName, serverNameHook };
-    obj[0] = intl.format(require("getSystemLocale").t.uEqG1M, obj);
-    intl2 = require("getSystemLocale").intl;
-    obj[1] = intl2.string(require("getSystemLocale").t["+3DKTf"]);
+    obj.title = intl.format(closure_0(closure_2[7]).t.uEqG1M, obj);
+    intl2 = closure_0(closure_2[7]).intl;
+    obj.description = intl2.string(closure_0(closure_2[7]).t["+3DKTf"]);
     return jsx(tmp, obj);
   }
 }
 function PurchasePage(arg0) {
   ({ guildId, gatedChannelId } = arg0);
-  let obj = notSupportedDefault;
+  let obj = NativePaymentHooksDefault;
   const storeFront = obj.useNativeIAPPayments().storeFront;
   let country;
   if (storeFront != null) {
@@ -40,60 +41,56 @@ function PurchasePage(arg0) {
     refetchOnMount: null == gatedChannelId,
     countryCode: country,
     dontFetchWhileTrue: null == country,
-    children: jsx(SeparatorDefault, { guildId, gatedChannelId }),
+    children: jsx(GuildRoleSubscriptionPurchasePageDefault, { guildId, gatedChannelId }),
   };
-  return jsx(useGroupListingsFetchContext.GroupListingsFetchContextProvider, {
+  return jsx(GroupListingsFetchContext.GroupListingsFetchContextProvider, {
     guildId,
     refetchOnMount: null == gatedChannelId,
     countryCode: country,
     dontFetchWhileTrue: null == country,
-    children: jsx(SeparatorDefault, { guildId, gatedChannelId }),
+    children: jsx(GuildRoleSubscriptionPurchasePageDefault, { guildId, gatedChannelId }),
   });
 }
-const result = require("set").fileFinishedImporting(
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/native/overview_tab/GuildRoleSubscriptionsOverview.tsx",
 );
 
 export default function GuildRoleSubscriptionsOverview(guildId) {
   guildId = guildId.guildId;
-  let stateFromStores;
   let stateFromStores1;
-  let React;
   let obj = guildId(stateFromStores1[11]);
-  const items = [closure_6];
+  const items = [GuildStore];
   const items1 = [guildId];
-  stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getGuild(guildId), items1);
-  const items2 = [closure_4];
+  const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(guildId), items1);
+  const items2 = [GatewayConnectionStore];
   stateFromStores1 = guildId(stateFromStores1[11]).useStateFromStores(items2, () => connected.isConnected());
   const tmp3 = stateFromStores(stateFromStores1[12])(guildId);
-  React = tmp3;
+  noop = tmp3;
   const obj2 = guildId(stateFromStores1[11]);
   const items3 = [stateFromStores, stateFromStores1, tmp3];
   const canUseRoleSubscriptionIAP = guildId(stateFromStores1[13]).useCanUseRoleSubscriptionIAP(guildId);
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     let tmp = !stateFromStores1;
     if (stateFromStores1) {
       tmp = null != stateFromStores && closure_3;
       const tmp4 = null != stateFromStores && closure_3;
     }
     if (!tmp) {
-      let obj = stateFromStores(stateFromStores1[14]);
-      obj = { title: null, body: null, confirmText: null };
-      const intl = guildId(stateFromStores1[7]).intl;
-      obj[0] = intl.string(guildId(stateFromStores1[7]).t.r0DLNm);
-      const intl2 = guildId(stateFromStores1[7]).intl;
-      obj[1] = intl2.string(guildId(stateFromStores1[7]).t["6Y0JlN"]);
-      const intl3 = guildId(stateFromStores1[7]).intl;
-      obj[2] = intl3.string(guildId(stateFromStores1[7]).t.BddRzS);
+      const obj = { title: null, body: null, confirmText: null };
+      const intl = util.intl;
+      obj.title = intl.string(util.t.r0DLNm);
+      const intl2 = util.intl;
+      obj.body = intl2.string(util.t["6Y0JlN"]);
+      const intl3 = util.intl;
+      obj.confirmText = intl3.string(util.t.BddRzS);
       obj.show(obj);
-      guildId(stateFromStores1[15]).replaceWith(closure_1_5.defaultRoute);
-      const obj3 = guildId(stateFromStores1[15]);
+      router_utils.replaceWith(DefaultRouteStore.defaultRoute);
     }
   }, items3);
   if (canUseRoleSubscriptionIAP) {
-    obj = { guildId: null, gatedChannelId: null };
-    obj[0] = guildId;
-    obj[1] = guildId.gatedChannelId;
+    obj = { guildId, gatedChannelId: guildId.gatedChannelId };
     let tmp6Result = tmp6(PurchasePage, obj);
   } else {
     let str;
@@ -103,10 +100,8 @@ export default function GuildRoleSubscriptionsOverview(guildId) {
     if (str == null) {
       str = "";
     }
-    obj = { serverName: null };
-    obj[0] = str;
+    obj = { serverName: str };
     tmp6Result = tmp6(RoleSubscriptionsUnavailableNotice, obj);
-    const tmp7 = RoleSubscriptionsUnavailableNotice;
   }
   return tmp6Result;
 }

@@ -1,69 +1,67 @@
 // discord_app/modules/stage_channels/StageChannelRoleStore.tsx
-import applyDefault from "../../../_runtime/00012_apply.js";
+import _modDef12 from "../../../_runtime/metro/00012__.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import applyOverwritesAll from "../../utils/PermissionUtils.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import PermissionUtilsAll from "../../utils/PermissionUtils.tsx";
 import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState.tsx";
-import useIsStageSpeakingDisabledForCurrentUser from "useStageSpeakingForCurrentUser.tsx";
-import closure_4 from "../../stores/ChannelStore.tsx";
-import closure_5 from "../../stores/GuildMemberStore.tsx";
-import closure_6 from "../../stores/GuildRoleStore.tsx";
-import closure_7 from "../../stores/GuildStore.tsx";
-import closure_8 from "../../stores/UserStore.tsx";
-import closure_9 from "../../stores/VoiceStateStore.tsx";
+import useStageSpeakingForCurrentUser from "useStageSpeakingForCurrentUser.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
+import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
+import GuildRoleStore from "../../stores/GuildRoleStore.tsx";
+import GuildStore from "../../stores/GuildStore.tsx";
+import UserStore from "../../stores/UserStore.tsx";
+import VoiceStateStore from "../../stores/VoiceStateStore.tsx";
 
-require = arg1;
-function buildStageChannelUserRoles(id, closure_0, flag) {
+require = fn;
+function buildStageChannelUserRoles(user, id2, flag) {
   if (flag === undefined) {
     flag = false;
   }
-  if (null == dependencyMap[closure_0]) {
-    dependencyMap[closure_0] = {};
+  if (null == dependencyMap[id2]) {
+    dependencyMap[id2] = {};
   }
   if (flag === undefined) {
     flag = false;
   }
-  const channel = store.getChannel(closure_0);
+  const channel = ChannelStore.getChannel(id2);
   let guildId;
   if (channel != null) {
     guildId = channel.getGuildId();
   }
-  guild = guild.getGuild(guildId);
+  const guild = GuildStore.getGuild(guildId);
   if (null != guild) {
     if (null != channel) {
       if (channel.isGuildStageVoice()) {
         obj = {};
-        voiceStateForChannel = voiceStateForChannel.getVoiceStateForChannel(closure_0, id);
+        const voiceStateForChannel = VoiceStateStore.getVoiceStateForChannel(id2, user);
         const audienceRequestToSpeakState =
           useAudienceRequestToSpeakState.getAudienceRequestToSpeakState(voiceStateForChannel);
         obj[obj.SPEAKER] = audienceRequestToSpeakState === useAudienceRequestToSpeakState.RequestToSpeakStates.ON_STAGE;
         let canResult = null;
         if (flag) {
-          obj = { permission: null, user: null, context: null, overwrites: null, roles: null };
-          obj[0] = tmp8(1965).MODERATE_STAGE_CHANNEL_PERMISSIONS;
-          obj[1] = id;
-          obj[2] = guild;
-          obj[3] = channel.permissionOverwrites;
-          obj[4] = unsafeMutableRoles.getUnsafeMutableRoles(guild.id);
-          canResult = applyOverwritesAll.can(obj);
-          const obj4 = applyOverwritesAll;
+          obj = {
+            permission: tmp8(1965).MODERATE_STAGE_CHANNEL_PERMISSIONS,
+            user,
+            context: guild,
+            overwrites: channel.permissionOverwrites,
+            roles: GuildRoleStore.getUnsafeMutableRoles(guild.id),
+          };
+          canResult = PermissionUtilsAll.can(obj);
         }
         obj[obj.MODERATOR] = canResult;
         let tmp4 = obj;
-        const obj3 = useAudienceRequestToSpeakState;
         tmp8 = require;
       }
-      dependencyMap[closure_0][id] = tmp4;
+      dependencyMap[id2][user] = tmp4;
       return tmp4;
     }
   }
   tmp4 = obj;
 }
 function resetStageChannelRolesForGuild(guildId) {
-  const values = Object.values(store.getMutableGuildChannelsForGuild(guildId));
+  const values = Object.values(ChannelStore.getMutableGuildChannelsForGuild(guildId));
   const found = values.filter((isGuildStageVoice) => isGuildStageVoice.isGuildStageVoice());
   for (const item10015 of found) {
-    let tmp3 = closure_11;
     let id = item10015.id;
     delete tmp2[tmp];
     continue;
@@ -80,15 +78,11 @@ function handleGuildMemberUpdate(arg0) {
     if (keys !== undefined) {
       flag = true;
       while (keys[tmp] !== undefined) {
-        let tmp10 = tmp6;
-        let tmp11 = store;
-        let basicChannel = store.getBasicChannel(tmp6);
+        let basicChannel = ChannelStore.getBasicChannel(tmp6);
         let tmp7 = null != basicChannel && basicChannel.guild_id === guildId;
         if (!tmp7) {
           continue;
         } else {
-          let tmp8 = dependencyMap;
-          let tmp9 = dependencyMap[tmp6];
           delete tmp3[tmp2];
           continue;
         }
@@ -100,9 +94,7 @@ function handleGuildMemberUpdate(arg0) {
 }
 function handleGuildCreateOrDelete(arg0) {
   for (const key10005 in closure_11) {
-    let tmp6 = key10005;
-    let tmp7 = store;
-    let basicChannel = store.getBasicChannel(key10005);
+    let basicChannel = ChannelStore.getBasicChannel(key10005);
     let tmp4 = null != basicChannel;
     if (tmp4) {
       tmp4 = basicChannel.guild_id !== tmp3.id;
@@ -110,7 +102,6 @@ function handleGuildCreateOrDelete(arg0) {
     if (tmp4) {
       continue;
     } else {
-      let tmp5 = closure_11;
       delete tmp[tmp2];
       continue;
     }
@@ -118,13 +109,13 @@ function handleGuildCreateOrDelete(arg0) {
   }
 }
 let obj = { SPEAKER: "speaker", MODERATOR: "moderator" };
-let closure_11 = {};
+const dependencyMap = {};
 obj = { [obj.SPEAKER]: false, [obj.MODERATOR]: false };
 const Store = initializeDefault.Store;
 class StageChannelRoleStore extends Store {}
 const prototype = StageChannelRoleStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_5, closure_4, closure_7, closure_8, closure_9, closure_6);
+  this.waitFor(GuildMemberStore, ChannelStore, GuildStore, UserStore, VoiceStateStore, GuildRoleStore);
 };
 prototype["isSpeaker"] = function isSpeaker(id, channelId) {
   return this.getPermissionsForUser(id, channelId)[obj.SPEAKER];
@@ -144,25 +135,25 @@ prototype["isAudienceMember"] = function isAudienceMember(userId, voiceChannelId
   }
   return tmp3;
 };
-prototype["getPermissionsForUser"] = function getPermissionsForUser(id, closure_0, flag) {
+prototype["getPermissionsForUser"] = function getPermissionsForUser(id, id2, flag) {
   if (flag === undefined) {
     flag = false;
   }
   if (null != id) {
-    if (null != closure_0) {
-      currentUser = currentUser.getCurrentUser();
+    if (null != id2) {
+      const currentUser = UserStore.getCurrentUser();
       id = undefined;
       if (currentUser != null) {
         id = currentUser.id;
       }
       if (id === id) {
-        obj = useIsStageSpeakingDisabledForCurrentUser;
+        obj = useStageSpeakingForCurrentUser;
         if (obj.isStageSpeakingDisabledForCurrentUser()) {
           return obj;
         }
       }
       let tmp6;
-      if (dependencyMap[closure_0] != null) {
+      if (dependencyMap[id2] != null) {
         tmp6 = tmp5[id];
       }
       if (null != tmp6) {
@@ -170,12 +161,12 @@ prototype["getPermissionsForUser"] = function getPermissionsForUser(id, closure_
         if (flag) {
           tmp9 = tmp6;
           if (null == tmp6[obj.MODERATOR]) {
-            tmp9 = buildStageChannelUserRoles(id, closure_0, true);
+            tmp9 = buildStageChannelUserRoles(id, id2, true);
           }
         }
         let tmp8 = tmp9;
       } else {
-        tmp8 = buildStageChannelUserRoles(id, closure_0, flag);
+        tmp8 = buildStageChannelUserRoles(id, id2, flag);
       }
       return tmp8;
     }
@@ -186,7 +177,6 @@ StageChannelRoleStore.displayName = "StageChannelRoleStore";
 obj = {
   CHANNEL_UPDATES: function handleChannelUpdate(arg0) {
     for (const item10006 of tmp3) {
-      let tmp4 = closure_11;
       let id = item10006.id;
       delete tmp2[tmp];
       continue;
@@ -205,18 +195,18 @@ obj = {
   },
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
     voiceStates = voiceStates.voiceStates;
-    const isEmptyResult = applyDefault.isEmpty(closure_11);
+    const isEmptyResult = _modDef12.isEmpty(closure_11);
     let reduced = !isEmptyResult;
     if (!isEmptyResult) {
-      reduced = voiceStates.reduce((arg0, arg1) => {
-        ({ userId, channelId } = arg1);
+      reduced = voiceStates.reduce((acc, item) => {
+        ({ userId, channelId } = item);
         let flag = false;
         if (null != channelId) {
           channel = channel.getChannel(channelId);
           let num = null == channel || !channel.isGuildStageVoice();
           if (!num) {
             num = 0;
-            if (table[channelId] != null) {
+            if (dependencyMap[channelId] != null) {
               delete tmp[tmp2];
               num = 0;
             }
@@ -224,7 +214,7 @@ obj = {
           flag = !num;
         }
         if (!flag) {
-          flag = arg0;
+          flag = acc;
         }
         return flag;
       }, false);
@@ -234,8 +224,9 @@ obj = {
   GUILD_CREATE: handleGuildCreateOrDelete,
   GUILD_DELETE: handleGuildCreateOrDelete,
 };
-const stageChannelRoleStore = new StageChannelRoleStore(dispatcherDefault, obj);
-const result = require("set").fileFinishedImporting("modules/stage_channels/StageChannelRoleStore.tsx");
+const stageChannelRoleStore = new StageChannelRoleStore(DispatcherDefault, obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/StageChannelRoleStore.tsx");
 
 export default stageChannelRoleStore;
 export const StagePermissionBuckets = obj;

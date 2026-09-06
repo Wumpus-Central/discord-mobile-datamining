@@ -1,6 +1,6 @@
 // discord_app/modules/settings/native/renderer/SettingRendererTypes.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/settings/native/renderer/SettingRendererTypes.tsx");
+const result = size.fileFinishedImporting("modules/settings/native/renderer/SettingRendererTypes.tsx");
 
 export const SettingsBadgeType = { BETA: 0, [0]: "BETA" };

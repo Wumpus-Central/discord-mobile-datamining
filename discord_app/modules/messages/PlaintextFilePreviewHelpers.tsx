@@ -1,7 +1,7 @@
 // discord_app/modules/messages/PlaintextFilePreviewHelpers.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-let set = new Set([
+const set = new Set([
   "1c",
   "4d",
   "abnf",
@@ -389,7 +389,7 @@ let set = new Set([
   "zephir",
   "zep",
 ]);
-const result = set.fileFinishedImporting("modules/messages/PlaintextFilePreviewHelpers.tsx");
+const result = size.fileFinishedImporting("modules/messages/PlaintextFilePreviewHelpers.tsx");
 
 export const PLAINTEXT_FILE_EXTENSIONS = set;
 export const isPlaintextPreviewableFile = function isPlaintextPreviewableFile(filename) {

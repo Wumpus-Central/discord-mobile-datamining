@@ -1,41 +1,48 @@
 // discord_app/design/components/Button/native/BaseIconButton.native.tsx
-import _mod4296 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
-import IconSizesDefault from "../../../void/Icon/native/Icon.tsx";
-import MINIMUM_HIT_AREA from "ButtonConstants.native.tsx";
-import styleProperties from "ButtonHooks.native.tsx";
-import BaseButton from "BaseButton.native.tsx";
-import PillWrapper from "ButtonPill.native.tsx";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../Styles/native/createStyles.tsx";
-import importDefaultResult from "../../../../modules/reanimated/ReanimatedRexport.tsx";
+import ReanimatedRexport2 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
+import IconDefault from "../../../void/Icon/native/Icon.tsx";
+import ButtonConstants from "ButtonConstants.native.tsx";
+import ButtonHooks from "ButtonHooks.native.tsx";
+import Button_BaseButton from "BaseButton.native.tsx";
+import ButtonPill from "ButtonPill.native.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-let closure_4 = createCacheKey.createStyles((arg0, arg1) => {
+const ReanimatedRexport = ReanimatedRexport2;
+
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_4 = createStyles.createStyles((arg0, arg1) => {
   if ("sm" === arg1) {
-    let obj = { paddingHorizontal: null, paddingVertical: null };
-    obj[0] = MINIMUM_HIT_AREA.SMALL_BUTTON_PADDING;
-    obj[1] = MINIMUM_HIT_AREA.SMALL_BUTTON_PADDING;
+    let obj = {
+      paddingHorizontal: ButtonConstants.SMALL_BUTTON_PADDING,
+      paddingVertical: ButtonConstants.SMALL_BUTTON_PADDING,
+    };
   } else if ("md" === arg1) {
-    obj = { paddingHorizontal: null, paddingVertical: null };
-    obj[0] = MINIMUM_HIT_AREA.MEDIUM_BUTTON_PADDING;
-    obj[1] = MINIMUM_HIT_AREA.MEDIUM_BUTTON_PADDING;
+    obj = {
+      paddingHorizontal: ButtonConstants.MEDIUM_BUTTON_PADDING,
+      paddingVertical: ButtonConstants.MEDIUM_BUTTON_PADDING,
+    };
   } else {
     obj = {};
     if ("lg" === arg1) {
-      obj1 = { paddingHorizontal: null, paddingVertical: null };
-      obj1[0] = MINIMUM_HIT_AREA.LARGE_BUTTON_PADDING;
-      obj1[1] = MINIMUM_HIT_AREA.LARGE_BUTTON_PADDING;
+      const obj1 = {
+        paddingHorizontal: ButtonConstants.LARGE_BUTTON_PADDING,
+        paddingVertical: ButtonConstants.LARGE_BUTTON_PADDING,
+      };
       obj = obj1;
     }
   }
   const obj2 = { button: { flexShrink: 0, flexGrow: 0, alignSelf: "center" }, pill: null };
   const merged = Object.assign(obj);
-  obj2[1] = {};
+  obj2.pill = {};
   return obj2;
 });
-let closure_5 = importDefaultResult.createAnimatedComponent(IconSizesDefault);
-const forwardRefResult = importAllResult.forwardRef((variant, ref) => {
+const Icon = ReanimatedRexport.createAnimatedComponent(IconDefault);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Button/native/BaseIconButton.native.tsx");
+
+export const BaseIconButton = noop.forwardRef((variant, ref) => {
   variant = variant.variant;
   let str = "primary";
   ({ style, pillStyle } = variant);
@@ -44,7 +51,7 @@ const forwardRefResult = importAllResult.forwardRef((variant, ref) => {
   }
   let DEFAULT_BUTTON_SIZE = variant.size;
   if (undefined === DEFAULT_BUTTON_SIZE) {
-    DEFAULT_BUTTON_SIZE = MINIMUM_HIT_AREA.DEFAULT_BUTTON_SIZE;
+    DEFAULT_BUTTON_SIZE = ButtonConstants.DEFAULT_BUTTON_SIZE;
   }
   ({ icon, scaleAmountInPx } = variant);
   let num = 4;
@@ -52,13 +59,13 @@ const forwardRefResult = importAllResult.forwardRef((variant, ref) => {
   if (undefined !== scaleAmountInPx) {
     num = scaleAmountInPx;
   }
-  const tmp3 = callback(str, DEFAULT_BUTTON_SIZE);
-  let obj = _mod4296;
+  const tmp3 = closure_4(str, DEFAULT_BUTTON_SIZE);
+  let obj = ReanimatedRexport2;
   const sharedValue = obj.useSharedValue(0);
-  obj1 = styleProperties;
+  let obj1 = ButtonHooks;
   const iconTintStyles = obj1.useIconTintStyles(str);
-  const iconSizeStyles = styleProperties.useIconSizeStyles(DEFAULT_BUTTON_SIZE, true, maxFontSizeMultiplier);
-  let MEDIUM_BUTTON_HEIGHT = MINIMUM_HIT_AREA.LARGE_BUTTON_HEIGHT;
+  const iconSizeStyles = ButtonHooks.useIconSizeStyles(DEFAULT_BUTTON_SIZE, true, maxFontSizeMultiplier);
+  let MEDIUM_BUTTON_HEIGHT = ButtonConstants.LARGE_BUTTON_HEIGHT;
   if ("sm" === DEFAULT_BUTTON_SIZE) {
     MEDIUM_BUTTON_HEIGHT = tmp4(4980).SMALL_BUTTON_HEIGHT;
   } else if ("md" === DEFAULT_BUTTON_SIZE) {
@@ -74,7 +81,7 @@ const forwardRefResult = importAllResult.forwardRef((variant, ref) => {
   obj.scaleAmountInPx = num;
   obj.hitSlop = bound;
   obj = {
-    style: items1,
+    style: null,
     variant: str,
     size: DEFAULT_BUTTON_SIZE,
     loading,
@@ -82,24 +89,24 @@ const forwardRefResult = importAllResult.forwardRef((variant, ref) => {
     pressed: null,
     children: null,
   };
-  items1 = [tmp3.pill, pillStyle];
+  const items1 = [tmp3.pill, pillStyle];
+  obj.style = items1;
   let str3 = "xs";
   if ("lg" === DEFAULT_BUTTON_SIZE) {
     str3 = "sm";
   }
-  obj[4] = str3;
-  obj[5] = sharedValue;
+  obj.loaderSize = str3;
+  obj.pressed = sharedValue;
   let tmp10Result = icon;
-  if (!importAllResult.isValidElement(icon)) {
-    obj1 = { source: null, style: null };
-    obj1[0] = icon;
+  if (!noop.isValidElement(icon)) {
+    obj1 = { source: icon, style: null };
     const items2 = [iconTintStyles, iconSizeStyles];
-    obj1[1] = items2;
-    tmp10Result = tmp10(closure_5, obj1);
+    obj1.style = items2;
+    tmp10Result = tmp10(Icon, obj1);
   }
-  obj[6] = tmp10Result;
-  obj.children = jsx(PillWrapper.ButtonPill, {
-    style: items1,
+  obj.children = tmp10Result;
+  obj.children = jsx(ButtonPill.ButtonPill, {
+    style: null,
     variant: str,
     size: DEFAULT_BUTTON_SIZE,
     loading,
@@ -107,8 +114,8 @@ const forwardRefResult = importAllResult.forwardRef((variant, ref) => {
     pressed: null,
     children: null,
   });
-  return jsx(BaseButton.BaseButton, {
-    style: items1,
+  return jsx(Button_BaseButton.BaseButton, {
+    style: null,
     variant: str,
     size: DEFAULT_BUTTON_SIZE,
     loading,
@@ -117,6 +124,3 @@ const forwardRefResult = importAllResult.forwardRef((variant, ref) => {
     children: null,
   });
 });
-const result = require("set").fileFinishedImporting("design/components/Button/native/BaseIconButton.native.tsx");
-
-export const BaseIconButton = forwardRefResult;

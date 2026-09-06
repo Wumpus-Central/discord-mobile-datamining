@@ -1,51 +1,52 @@
 // discord_app/modules/display_name_styles/hooks/useDisplayNameStylesEffectConfigs.tsx
-import messagesProxyDefault from "../intl/DisplayNameStyles.messages.js";
+import util from "../../../intl/index.native.tsx";
+import DisplayNameFont from "../../../../discord_common/js/shared/shared-constants/DisplayNameFont.tsx";
+import _modDef2786 from "../intl/DisplayNameStyles.messages.js";
 import useDisplayNameStylesEffectDefaultColorsDefault from "useDisplayNameStylesEffectDefaultColors.native.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let obj = {};
-obj[require("DisplayNameEffect").DisplayNameEffect.SOLID] = messagesProxyDefault.OpWJ3f;
-obj[require("DisplayNameEffect").DisplayNameEffect.GRADIENT] = messagesProxyDefault["i9e/u1"];
-obj[require("DisplayNameEffect").DisplayNameEffect.NEON] = messagesProxyDefault.x68b1F;
-obj[require("DisplayNameEffect").DisplayNameEffect.TOON] = messagesProxyDefault.otpeeM;
-obj[require("DisplayNameEffect").DisplayNameEffect.POP] = messagesProxyDefault.cjQOKb;
-obj[require("DisplayNameEffect").DisplayNameEffect.GUMMY] = messagesProxyDefault.x9Gtie;
-obj[require("DisplayNameEffect").DisplayNameEffect.PRISM] = messagesProxyDefault["/M7psm"];
+require = fn;
+const DISPLAY_NAME_STYLES_EFFECT_NAMES = {};
+DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1390).DisplayNameEffect.SOLID] = _modDef2786.OpWJ3f;
+DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1390).DisplayNameEffect.GRADIENT] = _modDef2786["i9e/u1"];
+DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1390).DisplayNameEffect.NEON] = _modDef2786.x68b1F;
+DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1390).DisplayNameEffect.TOON] = _modDef2786.otpeeM;
+DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1390).DisplayNameEffect.POP] = _modDef2786.cjQOKb;
+DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1390).DisplayNameEffect.GUMMY] = _modDef2786.x9Gtie;
+DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1390).DisplayNameEffect.PRISM] = _modDef2786["/M7psm"];
 let closure_5 = {
-  [arg1(1390).DisplayNameEffect.SOLID]: 3,
-  [arg1(1390).DisplayNameEffect.GRADIENT]: 2.5,
-  [arg1(1390).DisplayNameEffect.GLOW]: 2.5,
-  [arg1(1390).DisplayNameEffect.PRISM]: 2.5,
-  [arg1(1390).DisplayNameEffect.NEON]: 3,
-  [arg1(1390).DisplayNameEffect.TOON]: 3,
-  [arg1(1390).DisplayNameEffect.POP]: 3,
-  [arg1(1390).DisplayNameEffect.GUMMY]: 3,
+  [fn(1390).DisplayNameEffect.SOLID]: 3,
+  [fn(1390).DisplayNameEffect.GRADIENT]: 2.5,
+  [fn(1390).DisplayNameEffect.GLOW]: 2.5,
+  [fn(1390).DisplayNameEffect.PRISM]: 2.5,
+  [fn(1390).DisplayNameEffect.NEON]: 3,
+  [fn(1390).DisplayNameEffect.TOON]: 3,
+  [fn(1390).DisplayNameEffect.POP]: 3,
+  [fn(1390).DisplayNameEffect.GUMMY]: 3,
 };
-const result = require("set").fileFinishedImporting(
-  "modules/display_name_styles/hooks/useDisplayNameStylesEffectConfigs.tsx",
-);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesEffectConfigs.tsx");
 
-export const DISPLAY_NAME_STYLES_EFFECT_NAMES = obj;
+export { DISPLAY_NAME_STYLES_EFFECT_NAMES };
 export const useDisplayNameStylesEffectConfig = function useDisplayNameStylesEffectConfig(effectId) {
   closure_0 = effectId;
   const tmp = useDisplayNameStylesEffectDefaultColorsDefault()[effectId];
   importDefault = tmp;
   const items = [effectId, tmp];
-  return React.useMemo(() => {
-    const intl = effectId(closure_1_2[4]).intl;
-    let OpWJ3f = closure_1_4[effectId];
+  return noop.useMemo(() => {
+    const intl = util.intl;
+    let OpWJ3f = previewStyles[closure_0];
     if (OpWJ3f == null) {
-      OpWJ3f = callback(tmp2[2]).OpWJ3f;
+      OpWJ3f = _modDef2786.OpWJ3f;
     }
-    obj = { name: intl.string(OpWJ3f), defaultColors: callback, previewStyles: null, minContrastRatio: null };
-    obj = { fontId: effectId(tmp2[5]).DisplayNameFont.DEFAULT, effectId: tmp3, colors: callback };
-    obj[2] = obj;
-    let num = closure_1_5[tmp3];
+    previewStyles = { name: intl.string(OpWJ3f), defaultColors: colors, previewStyles: null, minContrastRatio: null };
+    previewStyles = { fontId: DisplayNameFont.DisplayNameFont.DEFAULT, effectId: tmp3, colors };
+    previewStyles.previewStyles = previewStyles;
+    let num = closure_5[tmp3];
     if (num == null) {
       num = 3;
     }
-    obj[3] = num;
-    return obj;
+    previewStyles.minContrastRatio = num;
+    return previewStyles;
   }, items);
 };

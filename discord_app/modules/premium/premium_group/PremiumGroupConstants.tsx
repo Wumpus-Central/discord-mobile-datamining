@@ -1,11 +1,11 @@
 // discord_app/modules/premium/premium_group/PremiumGroupConstants.tsx
-import set from "../../../../_runtime/00002_set.js";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import messagesProxyDefault from "PremiumGroup.messages.js";
-import ME from "../../../Constants.tsx";
-import importDefaultResult from "../../../utils/HelpdeskUtils.tsx";
+import util from "../../../intl/index.native.tsx";
+import _modDef3063 from "PremiumGroup.messages.js";
+import Constants from "../../../Constants.tsx";
+import HelpdeskUtils from "../../../utils/HelpdeskUtils.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-({ SubscriptionStatusTypes, HelpdeskArticles } = ME);
+({ SubscriptionStatusTypes, HelpdeskArticles } = Constants);
 const items = [, , , ,];
 ({
   CANCELED: arr[0],
@@ -14,8 +14,8 @@ const items = [, , , ,];
   ACCOUNT_HOLD: arr[3],
   BILLING_RETRY: arr[4],
 } = SubscriptionStatusTypes);
-const articleURL = importDefaultResult.getArticleURL(HelpdeskArticles.PREMIUM_GROUP_ABOUT);
-const result = set.fileFinishedImporting("modules/premium/premium_group/PremiumGroupConstants.tsx");
+const articleURL = HelpdeskUtils.getArticleURL(HelpdeskArticles.PREMIUM_GROUP_ABOUT);
+const result = size.fileFinishedImporting("modules/premium/premium_group/PremiumGroupConstants.tsx");
 
 export const TOTAL_PREMIUM_GROUP_MEMBER_SEATS = 5;
 export const TOTAL_PREMIUM_GROUP_USERS = 6;
@@ -24,12 +24,12 @@ export const PREMIUM_GROUP_ANNOUNCEMENT_MODAL_PROMOTION_KEY = "2026-07-premium-g
 export const HELP_CENTER_LINK = articleURL;
 export const CANNOT_INVITE_STATUSES = items;
 export const getPremiumGroupProductName = function getPremiumGroupProductName() {
-  const intl = getSystemLocale.intl;
-  return intl.string(messagesProxyDefault.aFBQ3d);
+  const intl = util.intl;
+  return intl.string(_modDef3063.aFBQ3d);
 };
 export const getPremiumGroupCountryName = function getPremiumGroupCountryName() {
-  const intl = getSystemLocale.intl;
-  return intl.string(getSystemLocale.t.jI66M4);
+  const intl = util.intl;
+  return intl.string(util.t.jI66M4);
 };
 export const PremiumGroupInviteState = {
   UNKNOWN: "UNKNOWN",

@@ -1,29 +1,29 @@
 // discord_app/modules/stage_channels/StageMusicStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
 
-let c0 = false;
+let muted = false;
 let c1 = false;
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class StageMusicStore extends DeviceSettingsStore {}
 const prototype = StageMusicStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   if (null != arg0) {
-    closure_0 = arg0;
+    muted = arg0;
   }
 };
 prototype["isMuted"] = function isMuted() {
-  return c0;
+  return muted;
 };
 prototype["shouldPlay"] = function shouldPlay() {
   return c1;
 };
 prototype["getUserAgnosticState"] = function getUserAgnosticState() {
-  return c0;
+  return muted;
 };
 StageMusicStore.displayName = "StageMusicStore";
 StageMusicStore.persistKey = "StageMusicStore";
-const stageMusicStore = new StageMusicStore(dispatcherDefault, {
+const stageMusicStore = new StageMusicStore(DispatcherDefault, {
   STAGE_MUSIC_MUTE: function handleMute(muted) {
     muted = muted.muted;
     c1 = false;
@@ -35,6 +35,7 @@ const stageMusicStore = new StageMusicStore(dispatcherDefault, {
     c1 = false;
   },
 });
-const result = require("set").fileFinishedImporting("modules/stage_channels/StageMusicStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/StageMusicStore.tsx");
 
 export default stageMusicStore;

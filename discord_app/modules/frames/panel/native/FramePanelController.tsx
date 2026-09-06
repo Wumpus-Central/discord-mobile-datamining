@@ -1,21 +1,23 @@
 // discord_app/modules/frames/panel/native/FramePanelController.tsx
-import contextDefault from "FramePanelStateContext.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../applications/ApplicationStore.tsx";
-import closure_5 from "../../FramesStore.tsx";
-import { asLaunched } from "../../FramesConstants.tsx";
-import { ActivityPanelModes } from "../../../activities/panel/ActivityPanelConstants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import FramesActionCreatorsDefault from "../../FramesActionCreators.native.tsx";
+import FramePanelStateContextDefault from "FramePanelStateContext.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import ApplicationStore from "../../../applications/ApplicationStore.tsx";
+import FramesStore from "../../FramesStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/frames/panel/native/FramePanelController.tsx");
+const require = fn;
+const asLaunched = fn(9511).asLaunched;
+const ActivityPanelModes = fn(9505).ActivityPanelModes;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/frames/panel/native/FramePanelController.tsx");
 
 export default function FramePanelController(children) {
   let mainFrameId;
   let obj = mainFrameId(504);
-  const items = [closure_5, closure_4];
+  const items = [FramesStore, ApplicationStore];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-    const tmp = callback(mainFrame.getMainFrame());
+    const tmp = asLaunched(mainFrame.getMainFrame());
     let mode;
     if (tmp != null) {
       mode = tmp.data.activityPanelMode;
@@ -44,14 +46,13 @@ export default function FramePanelController(children) {
   mainFrameId = stateFromStoresObject.mainFrameId;
   const items1 = [mainFrameId];
   ({ mode, connectedActivityAppId, currentApp, orientationLockStateForApp } = stateFromStoresObject);
-  const callback = React.useCallback((PIP) => {
+  const callback = noop.useCallback((PIP) => {
     if (null != mainFrameId) {
-      closure_1_1(closure_1_2[7]).updateFramePanelMode(tmp, PIP);
-      const obj = closure_1_1(closure_1_2[7]);
+      FramesActionCreatorsDefault.updateFramePanelMode(tmp, PIP);
     }
   }, items1);
   obj = {
-    context: contextDefault,
+    context: FramePanelStateContextDefault,
     orientationLockStateForApp,
     mode,
     hasConnectedActivity: null != mainFrameId,
@@ -61,7 +62,7 @@ export default function FramePanelController(children) {
     children: children.children,
   };
   return jsx(mainFrameId(17007).BaseActivityPanelController, {
-    context: contextDefault,
+    context: FramePanelStateContextDefault,
     orientationLockStateForApp,
     mode,
     hasConnectedActivity: null != mainFrameId,

@@ -1,10 +1,10 @@
 // discord_app/modules/premium/gifting/FriendAnniversaryGate.native.tsx
-import set from "../../../../_runtime/00002_set.js";
-import apexExperimentDefault from "native/MobileFriendAnniversaryExperiment.tsx";
+import MobileFriendAnniversaryExperimentDefault from "native/MobileFriendAnniversaryExperiment.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/premium/gifting/FriendAnniversaryGate.native.tsx");
+const result = size.fileFinishedImporting("modules/premium/gifting/FriendAnniversaryGate.native.tsx");
 
 export const getFriendAnniversaryGateConfig = function getFriendAnniversaryGateConfig(arg0) {
-  const obj = { enabled: apexExperimentDefault.getConfig(arg0).enabled };
+  const obj = { enabled: MobileFriendAnniversaryExperimentDefault.getConfig(arg0).enabled };
   return obj;
 };

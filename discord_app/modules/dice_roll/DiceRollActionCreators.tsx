@@ -1,11 +1,10 @@
 // discord_app/modules/dice_roll/DiceRollActionCreators.tsx
-import set from "../../../_runtime/00002_set.js";
-import dispatcherDefault from "../../Dispatcher.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/dice_roll/DiceRollActionCreators.tsx");
+const result = size.fileFinishedImporting("modules/dice_roll/DiceRollActionCreators.tsx");
 
 export const startDiceRoll = function startDiceRoll(channelId, diceCount, diceSides) {
-  let obj = dispatcherDefault;
-  obj = { type: "DICE_ROLL_START", channelId, diceCount, diceSides };
+  const obj = { type: "DICE_ROLL_START", channelId, diceCount, diceSides };
   obj.dispatch(obj);
 };

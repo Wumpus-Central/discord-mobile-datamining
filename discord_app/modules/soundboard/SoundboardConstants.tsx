@@ -1,11 +1,10 @@
 // discord_app/modules/soundboard/SoundboardConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
 const obj = { SUCCESS: 0, [0]: "SUCCESS", INTERRUPTED: 1, [1]: "INTERRUPTED" };
 const items = [,];
 ({ SUCCESS: arr[0], INTERRUPTED: arr[1] } = obj);
-let set = new Set(items);
-const result = set.fileFinishedImporting("modules/soundboard/SoundboardConstants.tsx");
+const result = size.fileFinishedImporting("modules/soundboard/SoundboardConstants.tsx");
 
 export const MAX_LENGTH_SOUND_NAME = 32;
 export const MAX_SOUND_FILE_SIZE_KILO_BYTES = 512;
@@ -14,7 +13,7 @@ export const MAX_SOUND_LENGTH_SECONDS = 5;
 export const DEFAULT_SOUND_GUILD_ID = "0";
 export const SoundboardPlaybackStatus = obj;
 export const SoundboardPickerType = { FULL_PICKER: "full", QUICK_ACCESS: "quick access", WHEEL: "wheel" };
-export const SUCCESSFUL_SOUNDBOARD_PLAYBACKS = set;
+export const SUCCESSFUL_SOUNDBOARD_PLAYBACKS = new Set(items);
 export const SoundboardWheelSize = { width: 424, height: 424, padding: 100 };
 export const DEFAULT_KEYBIND = "ctrl+`";
 export const EMPTY_SOUND_LIST = [];

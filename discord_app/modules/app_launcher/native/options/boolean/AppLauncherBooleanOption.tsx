@@ -1,34 +1,31 @@
 // discord_app/modules/app_launcher/native/options/boolean/AppLauncherBooleanOption.tsx
-import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import Form from "../../../../../design/void/Form/native/index.tsx";
-import closure_2 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-createCacheKey = { container: null };
-createCacheKey = {
+require = fn;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { container: null };
+createStyles = {
   flexDirection: "row",
   width: "100%",
-  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
-  borderRadius: ThemesDefault.radii.lg,
+  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: nativeDefault.radii.lg,
   alignItems: "center",
 };
-createCacheKey[0] = createCacheKey;
-let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting(
-  "modules/app_launcher/native/options/boolean/AppLauncherBooleanOption.tsx",
-);
+createStyles.container = createStyles;
+let closure_5 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/options/boolean/AppLauncherBooleanOption.tsx");
 
 export default function AppLauncherBooleanOption(arg0) {
   ({ initialValue: require, onPress: dependencyMap } = arg0);
-  let first;
-  let React;
   ({ style, option, hasError } = arg0);
-  let tmp2 = first(
-    React.useState(() => {
-      let tmp2 = null != closure_0;
+  let tmp2 = _slicedToArray(
+    noop.useState(() => {
+      let tmp2 = null != require;
       if (tmp2) {
         tmp2 = "text" === tmp.type;
       }
@@ -39,19 +36,32 @@ export default function AppLauncherBooleanOption(arg0) {
     }),
     2,
   );
-  first = tmp2[0];
-  React = tmp2[1];
-  const items = [callback().container, style];
+  const selected = tmp2[0];
+  closure_3 = tmp2[1];
+  const obj = {
+    start: true,
+    end: true,
+    style: null,
+    hasError,
+    label: option.displayName,
+    selected,
+    onPress() {
+      closure_3(!first);
+      dependencyMap(!first);
+    },
+  };
+  const items = [closure_5().container, style];
+  obj.style = items;
   return jsx(Form.FormCheckboxRow, {
     start: true,
     end: true,
-    style: items,
+    style: null,
     hasError,
     label: option.displayName,
-    selected: first,
+    selected,
     onPress() {
-      callback2(!first);
-      callback(!first);
+      closure_3(!first);
+      dependencyMap(!first);
     },
   });
 }

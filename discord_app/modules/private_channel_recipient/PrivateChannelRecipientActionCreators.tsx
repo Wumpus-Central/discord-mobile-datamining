@@ -1,16 +1,17 @@
 // discord_app/modules/private_channel_recipient/PrivateChannelRecipientActionCreators.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
-import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import Constants from "../../Constants.tsx";
+import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const Endpoints = ME.Endpoints;
-const result = set.fileFinishedImporting("modules/private_channel_recipient/PrivateChannelRecipientActionCreators.tsx");
+const Endpoints = Constants.Endpoints;
+const result = size.fileFinishedImporting(
+  "modules/private_channel_recipient/PrivateChannelRecipientActionCreators.tsx",
+);
 
 export default {
   updatePrivateChannelRecipientFlags(id, setFlagResult) {
-    const HTTP = sendRequest.HTTP;
-    obj = { url: Endpoints.CHANNEL_RECIPIENT_ME(id), body: obj, rejectWithError: false };
-    obj = { flags: setFlagResult };
-    return HTTP.patch(obj);
+    const HTTP = HTTPUtils.HTTP;
+    const request = { url: Endpoints.CHANNEL_RECIPIENT_ME(id), body: { flags: setFlagResult }, rejectWithError: false };
+    return HTTP.patch(request);
   },
 };

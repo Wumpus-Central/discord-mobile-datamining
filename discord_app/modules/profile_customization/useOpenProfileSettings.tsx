@@ -1,17 +1,18 @@
 // discord_app/modules/profile_customization/useOpenProfileSettings.tsx
-import set from "../../../_runtime/00002_set.js";
-import noop from "../../../_runtime/00019_noop.js";
-import ME from "../../Constants.tsx";
-import MAX_FAVORITES from "../user_settings/UserSettingsConstants.tsx";
-import mergeGuildAvatarDefault from "../../stores/UserStore.tsx";
-import closure_3 from "ProfileCustomizationNavigationStore.tsx";
-import handleFormOpen from "../user_profile/UserProfileSettingsStore.tsx";
+import _mod19 from "../../../_runtime/metro/00019__.js";
+import Constants from "../../Constants.tsx";
+import UserSettingsConstants from "../user_settings/UserSettingsConstants.tsx";
+import openUserSettings from "../user_settings/core/native/openUserSettings.tsx";
+import GuildIdentityActionCreators from "../guild_identity/GuildIdentityActionCreators.tsx";
+import UserStore from "../../stores/UserStore.tsx";
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore.tsx";
+import UserProfileSettingsStore from "../user_profile/UserProfileSettingsStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-noop.useCallback;
-mergeGuildAvatarDefault;
-const UserSettingsSections = ME.UserSettingsSections;
-let closure_5 = MAX_FAVORITES.ProfileCustomizationSubsection;
-const result = set.fileFinishedImporting("modules/profile_customization/useOpenProfileSettings.tsx");
+_mod19.useCallback;
+const UserSettingsSections = Constants.UserSettingsSections;
+let closure_5 = UserSettingsConstants.ProfileCustomizationSubsection;
+const result = size.fileFinishedImporting("modules/profile_customization/useOpenProfileSettings.tsx");
 
 export default function useOpenProfileSettings() {
   let obj = arg0;
@@ -28,17 +29,17 @@ export default function useOpenProfileSettings() {
   ];
   return useCallback(() => {
     if (null != guild) {
-      let obj = guild(scrollPosition[7]);
+      let obj = GuildIdentityActionCreators;
       const guildIdentitySettings = obj.initGuildIdentitySettings(tmp.id);
     }
     if (null != guild) {
-      let USER_PROFILE = closure_1_5.GUILD;
+      let USER_PROFILE = constants.GUILD;
     } else {
-      USER_PROFILE = closure_1_5.USER_PROFILE;
+      USER_PROFILE = constants.USER_PROFILE;
     }
     obj = { subsection: USER_PROFILE, scrollPosition };
-    closure_1_3.setState(obj);
-    obj = { screen: closure_1_4.PROFILE_CUSTOMIZATION };
-    guild(scrollPosition[8]).openUserSettings(obj);
+    ProfileCustomizationNavigationStore.setState(obj);
+    obj = { screen: UserSettingsSections.PROFILE_CUSTOMIZATION };
+    openUserSettings.openUserSettings(obj);
   }, items);
 }

@@ -1,33 +1,35 @@
 // discord_common/js/packages/time-utils/TimeUtils.tsx
 import u from "../performance-utils/index.js";
 import findLastIndexDefault from "../../../../_runtime/04591_findLastIndex.js";
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import tryCatch from "../../../../_runtime/04590_tryCatch.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
-require = arg1;
-function sleep(num) {
-  let asMillisecondsResult = num;
-  if (typeof num !== "number") {
-    asMillisecondsResult = num.asMilliseconds();
+require = fn;
+function sleep(asMilliseconds) {
+  let asMillisecondsResult = asMilliseconds;
+  if (typeof asMilliseconds !== "number") {
+    asMillisecondsResult = asMilliseconds.asMilliseconds();
   }
   require = asMillisecondsResult;
   return new Promise((arg0) => {
     closure_0 = arg0;
-    const timerId = setTimeout(() => callback(), closure_0);
+    const timerId = setTimeout(() => closure_0(), asMillisecondsResult);
   });
 }
+const tryCatch = fn(4590);
 let c4 = 3600000;
 function now() {
   const _performance = u.performance;
   return Math.floor(u.timeOrigin + _performance.now());
 }
-const fn = () => Object.create(new.target.prototype);
+fn = () => Object.create(new.target.prototype);
 fn.prototype["now"] = function now() {
-  if (typeof now !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof now === "function") {
+    const _Math = Math;
+    const _performance = u.performance;
+    return Math.floor(u.timeOrigin + _performance.now());
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const _performance = u.performance;
-  return Math.floor(u.timeOrigin + _performance.now());
 };
 let obj = Object.create(fn.prototype);
 let TimeSpan;
@@ -50,13 +52,13 @@ class TimeSpan {
       return obj.milliseconds / 1000 / 60 / 60;
     };
     obj.add = function add(milliseconds) {
-      return closure_1_12.fromMilliseconds(obj.milliseconds + milliseconds.milliseconds);
+      return TimeSpan.fromMilliseconds(obj.milliseconds + milliseconds.milliseconds);
     };
     obj.subtract = function subtract(milliseconds) {
-      return closure_1_12.fromMilliseconds(obj.milliseconds - milliseconds.milliseconds);
+      return TimeSpan.fromMilliseconds(obj.milliseconds - milliseconds.milliseconds);
     };
     obj.subtractOrZero = function subtractOrZero(milliseconds) {
-      return closure_1_12.fromMilliseconds(Math.max(obj.milliseconds - milliseconds.milliseconds, 0));
+      return TimeSpan.fromMilliseconds(Math.max(obj.milliseconds - milliseconds.milliseconds, 0));
     };
     if (!importAll) {
       num = 0;
@@ -66,9 +68,9 @@ class TimeSpan {
     if (!importDefault) {
       num2 = 0;
     }
-    num3 = arg1;
+    num3 = fn;
     obj.milliseconds = obj.milliseconds + 1000 * num2;
-    if (!arg1) {
+    if (!fn) {
       num3 = 0;
     }
     num4 = global;
@@ -88,148 +90,157 @@ prototype["isGreaterOrEqualTo"] = function isGreaterOrEqualTo(timeout) {
   return this.milliseconds >= timeout.milliseconds;
 };
 TimeSpan.fromMilliseconds = function fromMilliseconds(timePassed) {
-  if (typeof TimeSpan !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof TimeSpan === "function") {
+    let num = timePassed;
+    obj = Object.create(tmp.prototype);
+    obj.milliseconds = 0;
+    obj.asMilliseconds = function asMilliseconds() {
+      return obj.milliseconds;
+    };
+    obj.asSeconds = function asSeconds() {
+      return obj.milliseconds / 1000;
+    };
+    obj.asMinutes = function asMinutes() {
+      return obj.milliseconds / 1000 / 60;
+    };
+    obj.asHours = function asHours() {
+      return obj.milliseconds / 1000 / 60 / 60;
+    };
+    obj.add = function add(milliseconds) {
+      return TimeSpan.fromMilliseconds(obj.milliseconds + milliseconds.milliseconds);
+    };
+    obj.subtract = function subtract(milliseconds) {
+      return TimeSpan.fromMilliseconds(obj.milliseconds - milliseconds.milliseconds);
+    };
+    obj.subtractOrZero = function subtractOrZero(milliseconds) {
+      return TimeSpan.fromMilliseconds(Math.max(obj.milliseconds - milliseconds.milliseconds, 0));
+    };
+    if (!timePassed) {
+      num = 0;
+    }
+    obj.milliseconds = obj.milliseconds + num;
+    ({ milliseconds: tmp2.milliseconds, milliseconds: tmp2.milliseconds } = obj);
+    obj.milliseconds = obj.milliseconds;
+    return obj;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  let num = timePassed;
-  obj = Object.create(TimeSpan.prototype);
-  obj.milliseconds = 0;
-  obj.asMilliseconds = function asMilliseconds() {
-    return obj.milliseconds;
-  };
-  obj.asSeconds = function asSeconds() {
-    return obj.milliseconds / 1000;
-  };
-  obj.asMinutes = function asMinutes() {
-    return obj.milliseconds / 1000 / 60;
-  };
-  obj.asHours = function asHours() {
-    return obj.milliseconds / 1000 / 60 / 60;
-  };
-  obj.add = function add(milliseconds) {
-    return closure_1_12.fromMilliseconds(obj.milliseconds + milliseconds.milliseconds);
-  };
-  obj.subtract = function subtract(milliseconds) {
-    return closure_1_12.fromMilliseconds(obj.milliseconds - milliseconds.milliseconds);
-  };
-  obj.subtractOrZero = function subtractOrZero(milliseconds) {
-    return closure_1_12.fromMilliseconds(Math.max(obj.milliseconds - milliseconds.milliseconds, 0));
-  };
-  if (!timePassed) {
-    num = 0;
-  }
-  obj.milliseconds = obj.milliseconds + num;
-  ({ milliseconds: tmp2.milliseconds, milliseconds: tmp2.milliseconds } = obj);
-  obj.milliseconds = obj.milliseconds;
-  return obj;
 };
 TimeSpan.fromSeconds = function fromSeconds(arg0) {
-  if (typeof TimeSpan !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof TimeSpan === "function") {
+    let num = arg0;
+    obj = Object.create(tmp.prototype);
+    obj.milliseconds = 0;
+    obj.asMilliseconds = function asMilliseconds() {
+      return obj.milliseconds;
+    };
+    obj.asSeconds = function asSeconds() {
+      return obj.milliseconds / 1000;
+    };
+    obj.asMinutes = function asMinutes() {
+      return obj.milliseconds / 1000 / 60;
+    };
+    obj.asHours = function asHours() {
+      return obj.milliseconds / 1000 / 60 / 60;
+    };
+    obj.add = function add(milliseconds) {
+      return TimeSpan.fromMilliseconds(obj.milliseconds + milliseconds.milliseconds);
+    };
+    obj.subtract = function subtract(milliseconds) {
+      return TimeSpan.fromMilliseconds(obj.milliseconds - milliseconds.milliseconds);
+    };
+    obj.subtractOrZero = function subtractOrZero(milliseconds) {
+      return TimeSpan.fromMilliseconds(Math.max(obj.milliseconds - milliseconds.milliseconds, 0));
+    };
+    ({ milliseconds: tmp2.milliseconds, milliseconds } = obj);
+    if (!arg0) {
+      num = 0;
+    }
+    obj.milliseconds = milliseconds + 1000 * num;
+    obj.milliseconds = obj.milliseconds;
+    obj.milliseconds = obj.milliseconds;
+    return obj;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  obj = Object.create(TimeSpan.prototype);
-  obj.milliseconds = 0;
-  obj.asMilliseconds = function asMilliseconds() {
-    return obj.milliseconds;
-  };
-  obj.asSeconds = function asSeconds() {
-    return obj.milliseconds / 1000;
-  };
-  obj.asMinutes = function asMinutes() {
-    return obj.milliseconds / 1000 / 60;
-  };
-  obj.asHours = function asHours() {
-    return obj.milliseconds / 1000 / 60 / 60;
-  };
-  obj.add = function add(milliseconds) {
-    return closure_1_12.fromMilliseconds(obj.milliseconds + milliseconds.milliseconds);
-  };
-  obj.subtract = function subtract(milliseconds) {
-    return closure_1_12.fromMilliseconds(obj.milliseconds - milliseconds.milliseconds);
-  };
-  obj.subtractOrZero = function subtractOrZero(milliseconds) {
-    return closure_1_12.fromMilliseconds(Math.max(obj.milliseconds - milliseconds.milliseconds, 0));
-  };
-  ({ milliseconds: tmp2.milliseconds, milliseconds } = obj);
-  obj.milliseconds = obj.milliseconds;
-  obj.milliseconds = obj.milliseconds;
-  return obj;
 };
 TimeSpan.fromMinutes = function fromMinutes(arg0) {
-  if (typeof TimeSpan !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof TimeSpan === "function") {
+    let num = arg0;
+    obj = Object.create(tmp.prototype);
+    obj.milliseconds = 0;
+    obj.asMilliseconds = function asMilliseconds() {
+      return obj.milliseconds;
+    };
+    obj.asSeconds = function asSeconds() {
+      return obj.milliseconds / 1000;
+    };
+    obj.asMinutes = function asMinutes() {
+      return obj.milliseconds / 1000 / 60;
+    };
+    obj.asHours = function asHours() {
+      return obj.milliseconds / 1000 / 60 / 60;
+    };
+    obj.add = function add(milliseconds) {
+      return TimeSpan.fromMilliseconds(obj.milliseconds + milliseconds.milliseconds);
+    };
+    obj.subtract = function subtract(milliseconds) {
+      return TimeSpan.fromMilliseconds(obj.milliseconds - milliseconds.milliseconds);
+    };
+    obj.subtractOrZero = function subtractOrZero(milliseconds) {
+      return TimeSpan.fromMilliseconds(Math.max(obj.milliseconds - milliseconds.milliseconds, 0));
+    };
+    ({ milliseconds: tmp2.milliseconds, milliseconds: tmp2.milliseconds, milliseconds } = obj);
+    if (!arg0) {
+      num = 0;
+    }
+    obj.milliseconds = milliseconds + 60000 * num;
+    obj.milliseconds = obj.milliseconds;
+    return obj;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  let num = arg0;
-  obj = Object.create(TimeSpan.prototype);
-  obj.milliseconds = 0;
-  obj.asMilliseconds = function asMilliseconds() {
-    return obj.milliseconds;
-  };
-  obj.asSeconds = function asSeconds() {
-    return obj.milliseconds / 1000;
-  };
-  obj.asMinutes = function asMinutes() {
-    return obj.milliseconds / 1000 / 60;
-  };
-  obj.asHours = function asHours() {
-    return obj.milliseconds / 1000 / 60 / 60;
-  };
-  obj.add = function add(milliseconds) {
-    return closure_1_12.fromMilliseconds(obj.milliseconds + milliseconds.milliseconds);
-  };
-  obj.subtract = function subtract(milliseconds) {
-    return closure_1_12.fromMilliseconds(obj.milliseconds - milliseconds.milliseconds);
-  };
-  obj.subtractOrZero = function subtractOrZero(milliseconds) {
-    return closure_1_12.fromMilliseconds(Math.max(obj.milliseconds - milliseconds.milliseconds, 0));
-  };
-  ({ milliseconds: tmp2.milliseconds, milliseconds: tmp2.milliseconds, milliseconds } = obj);
-  if (!arg0) {
-    num = 0;
-  }
-  obj.milliseconds = milliseconds + 60000 * num;
-  obj.milliseconds = obj.milliseconds;
-  return obj;
 };
 TimeSpan.fromHours = function fromHours(arg0) {
-  if (typeof TimeSpan !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof TimeSpan === "function") {
+    let num = arg0;
+    obj = Object.create(tmp.prototype);
+    obj.milliseconds = 0;
+    obj.asMilliseconds = function asMilliseconds() {
+      return obj.milliseconds;
+    };
+    obj.asSeconds = function asSeconds() {
+      return obj.milliseconds / 1000;
+    };
+    obj.asMinutes = function asMinutes() {
+      return obj.milliseconds / 1000 / 60;
+    };
+    obj.asHours = function asHours() {
+      return obj.milliseconds / 1000 / 60 / 60;
+    };
+    obj.add = function add(milliseconds) {
+      return TimeSpan.fromMilliseconds(obj.milliseconds + milliseconds.milliseconds);
+    };
+    obj.subtract = function subtract(milliseconds) {
+      return TimeSpan.fromMilliseconds(obj.milliseconds - milliseconds.milliseconds);
+    };
+    obj.subtractOrZero = function subtractOrZero(milliseconds) {
+      return TimeSpan.fromMilliseconds(Math.max(obj.milliseconds - milliseconds.milliseconds, 0));
+    };
+    ({
+      milliseconds: tmp2.milliseconds,
+      milliseconds: tmp2.milliseconds,
+      milliseconds: tmp2.milliseconds,
+      milliseconds,
+    } = obj);
+    if (!arg0) {
+      num = 0;
+    }
+    obj.milliseconds = milliseconds + num * c4;
+    return obj;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  let num = arg0;
-  obj = Object.create(TimeSpan.prototype);
-  obj.milliseconds = 0;
-  obj.asMilliseconds = function asMilliseconds() {
-    return obj.milliseconds;
-  };
-  obj.asSeconds = function asSeconds() {
-    return obj.milliseconds / 1000;
-  };
-  obj.asMinutes = function asMinutes() {
-    return obj.milliseconds / 1000 / 60;
-  };
-  obj.asHours = function asHours() {
-    return obj.milliseconds / 1000 / 60 / 60;
-  };
-  obj.add = function add(milliseconds) {
-    return closure_1_12.fromMilliseconds(obj.milliseconds + milliseconds.milliseconds);
-  };
-  obj.subtract = function subtract(milliseconds) {
-    return closure_1_12.fromMilliseconds(obj.milliseconds - milliseconds.milliseconds);
-  };
-  obj.subtractOrZero = function subtractOrZero(milliseconds) {
-    return closure_1_12.fromMilliseconds(Math.max(obj.milliseconds - milliseconds.milliseconds, 0));
-  };
-  ({
-    milliseconds: tmp2.milliseconds,
-    milliseconds: tmp2.milliseconds,
-    milliseconds: tmp2.milliseconds,
-    milliseconds,
-  } = obj);
-  if (!arg0) {
-    num = 0;
-  }
-  obj.milliseconds = milliseconds + num * c4;
-  return obj;
 };
 let StopWatch;
 class StopWatch {
@@ -238,9 +249,9 @@ class StopWatch {
     if (global === undefined) {
       tmp = closure_6;
     }
-    obj = Object.create(new.target.prototype);
-    obj.timestampProducer = tmp;
-    return obj;
+    merged = Object.assign({ startTime: "ip", timePassed: false });
+    merged.timestampProducer = tmp;
+    return merged;
   }
 }
 const prototype2 = StopWatch.prototype;
@@ -259,12 +270,12 @@ Object.defineProperty(prototype2, "lastStartTime", {
 prototype2["start"] = function start() {
   const self = this;
   if (null == this.startTime) {
-    const timestampProducer = self.timestampProducer;
+    timestampProducer = self.timestampProducer;
     self.startTime = timestampProducer.now();
   }
 };
 prototype2["restart"] = function restart() {
-  const timestampProducer = this.timestampProducer;
+  timestampProducer = this.timestampProducer;
   this.startTime = timestampProducer.now();
 };
 prototype2["reset"] = function reset() {
@@ -294,7 +305,7 @@ prototype2["elapsed"] = function elapsed() {
   if (null == this.startTime) {
     return TimeSpan.fromMilliseconds(self.timePassed);
   } else {
-    const timestampProducer = self.timestampProducer;
+    timestampProducer = self.timestampProducer;
     return TimeSpan.fromMilliseconds(self.timePassed + (timestampProducer.now() - self.startTime));
   }
 };
@@ -302,28 +313,31 @@ prototype2["isRunning"] = function isRunning() {
   return null != this.startTime;
 };
 StopWatch["startNew"] = function startNew() {
-  if (typeof StopWatch !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof StopWatch === "function") {
+    const merged = Object.assign({ startTime: "ip", timePassed: false });
+    merged.timestampProducer = obj;
+    merged.start();
+    return merged;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  obj = Object.create(StopWatch.prototype);
-  obj.timestampProducer = obj;
-  obj.start();
-  return obj;
 };
 let TimeOut;
 class TimeOut {
   constructor(arg0) {
-    tmp = StopWatch;
-    if (typeof StopWatch !== "function") {
+    if (typeof StopWatch === "function") {
+      tmp3 = global;
+      merged = Object.assign({ watch: null });
+      tmp5 = closure_6;
+      merged1 = Object.assign({ startTime: "ip", timePassed: false });
+      merged1.timestampProducer = closure_6;
+      merged[0] = merged1;
+      merged.timeout = global;
+      return merged;
+    } else {
       str = "Trying to call a non-function";
-      throwTypeErrorResult = HermesBuiltin.throwTypeError();
+      throw new TypeError("Trying to call a non-function");
     }
-    obj = Object.create(new.target.prototype);
-    obj1 = Object.create(tmp.prototype);
-    obj1.timestampProducer = closure_6;
-    obj[0] = obj1;
-    obj.timeout = global;
-    return obj;
   }
 }
 const prototype3 = TimeOut.prototype;
@@ -335,7 +349,7 @@ prototype3["hasTimedOut"] = function hasTimedOut() {
     return watch2.elapsed().isGreaterOrEqualTo(self.timeout);
   } else {
     const _Error = Error;
-    error = new Error("`start` must be called before `hasTimedOut`");
+    const error = new Error("`start` must be called before `hasTimedOut`");
     throw error;
   }
 };
@@ -344,33 +358,34 @@ prototype3["start"] = function start() {
   watch.start();
 };
 TimeOut["startNew"] = function startNew(timeout) {
-  if (typeof TimeOut !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof TimeOut === "function") {
+    if (typeof StopWatch === "function") {
+      const merged = Object.assign({ watch: null });
+      const merged1 = Object.assign({ startTime: "ip", timePassed: false });
+      merged1.timestampProducer = obj;
+      merged[0] = merged1;
+      merged.timeout = timeout;
+      merged.start();
+      return merged;
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  if (typeof StopWatch !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  obj = Object.create(TimeOut.prototype);
-  obj = Object.create(StopWatch.prototype);
-  obj.timestampProducer = obj;
-  obj[0] = obj;
-  obj.timeout = timeout;
-  obj.start();
-  return obj;
 };
 TimeOut["waitFor"] = function waitFor(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
-  return callback(function* () {
+  return (async (arg0, value) => {
     if (c3 === 2) {
       c3 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp4 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        obj = { value: null, done: true };
-        obj[0] = arg1;
+        obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
@@ -381,64 +396,59 @@ TimeOut["waitFor"] = function waitFor(arg0, arg1) {
         if (0 === c2) {
           if (arg0 === 1) {
             c3 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
             closure_1 = tmp2;
-            sleep = tmp5;
+            closure_0 = tmp5;
             sleep = undefined;
-            closure_1 = undefined;
-            sleep = closure_1_7.fromMilliseconds(100);
-            let tmp13 = closure_1_0;
-            if (!(closure_1_0 instanceof closure_1_7)) {
-              const timeout = tmp24.timeout;
+            closure_128_1 = undefined;
+            sleep = TimeSpan.fromMilliseconds(100);
+            let tmp13 = closure_0;
+            if (!(closure_0 instanceof TimeSpan)) {
+              const timeout = tmp23.timeout;
               tmp13 = timeout;
-              if (null != tmp24.sleep) {
-                sleep = tmp24.sleep;
+              if (null != tmp23.sleep) {
+                sleep = tmp23.sleep;
                 tmp13 = timeout;
               }
             }
-            closure_1 = closure_1_14.startNew(tmp13);
+            closure_128_1 = TimeOut.startNew(tmp13);
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {
             c3 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj1 = { value: null, done: true };
-            obj1[0] = arg1;
+            const obj1 = { value, done: true };
             return obj1;
-          } else if (true === arg1) {
+          } else if (true === value) {
             c3 = 3;
             return { value: true, done: true };
           } else {
             c2 = 2;
             c3 = 1;
-            const obj2 = { value: null, done: false };
-            obj2[0] = closure_1_9(sleep);
+            const obj2 = { value: closure_1_9(sleep), done: false };
             return obj2;
           }
         } else if (arg0 === 1) {
           c3 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj = { value, done: true };
           return obj;
-        } else if (closure_1.hasTimedOut()) {
+        } else if (closure_128_1.hasTimedOut()) {
           c3 = 3;
           return { value: false, done: true };
         }
         c2 = 1;
         c3 = 1;
-        const obj3 = { value: null, done: false };
-        obj3[0] = closure_1_1();
+        const obj3 = { value: closure_129_1(), done: false };
         return obj3;
       } catch (tmp17) {
         c3 = tmp;
@@ -468,8 +478,13 @@ const items = [
   { unit: obj.MONTHS, max: 525600 },
   { unit: obj.YEARS, max: Infinity },
 ];
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/time-utils/TimeUtils.tsx");
-class ControllableTimeStampProducer {}
+const size = fn(2);
+const result = size.fileFinishedImporting("../discord_common/js/packages/time-utils/TimeUtils.tsx");
+class ControllableTimeStampProducer {
+  constructor() {
+    return Object.assign({ time: 0 });
+  }
+}
 const prototype4 = ControllableTimeStampProducer.prototype;
 prototype4["now"] = function now() {
   return this.time;
@@ -485,26 +500,27 @@ prototype4["reset"] = function reset() {
 };
 class DurationEnabled {
   constructor(arg0) {
-    tmp = arg1;
-    if (arg1 === undefined) {
+    tmp = fn;
+    if (fn === undefined) {
       tmp = closure_6;
     }
-    tmp2 = StopWatch;
-    if (typeof StopWatch !== "function") {
+    if (typeof StopWatch === "function") {
+      if (tmp === undefined) {
+        tmp = closure_6;
+      }
+      tmp4 = global;
+      obj = Object.create(tmp2);
+      merged = Object.assign({ startTime: "ip", timePassed: false });
+      merged.timestampProducer = tmp;
+      obj.stopwatch = merged;
+      obj.state = global;
+      stopwatch = obj.stopwatch;
+      toggleResult = stopwatch.toggle(global);
+      return obj;
+    } else {
       str = "Trying to call a non-function";
-      throwTypeErrorResult = HermesBuiltin.throwTypeError();
+      throw new TypeError("Trying to call a non-function");
     }
-    if (tmp === undefined) {
-      tmp = closure_6;
-    }
-    obj = Object.create(new.target.prototype);
-    obj1 = Object.create(tmp2.prototype);
-    obj1.timestampProducer = tmp;
-    obj.stopwatch = obj1;
-    obj.state = global;
-    stopwatch = obj.stopwatch;
-    toggleResult = stopwatch.toggle(global);
-    return obj;
   }
 }
 const prototype5 = DurationEnabled.prototype;
@@ -579,7 +595,7 @@ export const getTimeUnit = function getTimeUnit(arg0, arg1) {
     (unit) => f78394(unit.unit),
     items.findIndex((max) => {
       max = max.max;
-      let tmp = max.unit === closure_1_10.NONE;
+      let tmp = max.unit === obj.NONE;
       if (tmp) {
         tmp = closure_0 === max;
       }
@@ -602,7 +618,7 @@ export const getTimeUnit = function getTimeUnit(arg0, arg1) {
   arr = items;
   const findIndexResult = items.findIndex((max) => {
     max = max.max;
-    let tmp = max.unit === closure_1_10.NONE;
+    let tmp = max.unit === obj.NONE;
     if (tmp) {
       tmp = closure_0 === max;
     }
@@ -616,17 +632,17 @@ export const getTimeAndUnit = function getTimeAndUnit(rounded, items) {
   closure_0 = items;
   if (null == rounded) {
     obj = { unit: null, time: 0 };
-    obj[0] = obj.NONE;
+    obj.unit = obj.NONE;
     return obj;
   } else {
     closure_0 = rounded;
-    const f78394 = (arg0) => closure_0.includes(arg0);
+    const f78394 = (dependencyMap) => closure_0.includes(dependencyMap);
     const tmp12 = f78394(4591)(
       items,
       (unit) => f78394(unit.unit),
       items.findIndex((max) => {
         max = max.max;
-        let tmp = max.unit === closure_1_10.NONE;
+        let tmp = max.unit === obj.NONE;
         if (tmp) {
           tmp = closure_0 === max;
         }
@@ -646,45 +662,38 @@ export const getTimeAndUnit = function getTimeAndUnit(rounded, items) {
       }
     }
     if (null == unit) {
-      obj = { unit: null, time: null };
-      obj[0] = unit;
+      obj = { unit, time: null };
       rounded = null;
       if (null != null) {
         const _Math = Math;
         rounded = Math.floor(null);
       }
-      obj[1] = rounded;
+      obj.time = rounded;
       return obj;
-    } else {
-      let num = 0;
-      if (obj.NONE !== unit) {
-        if (tmp4.SECONDS === unit) {
-          num = 60 * rounded;
+    } else if (obj.NONE !== unit) {
+      if (tmp4.SECONDS === unit) {
+        let num = 60 * rounded;
+      } else if (tmp4.MINUTES !== unit) {
+        if (tmp4.HOURS === unit) {
+          num = rounded / 60;
+        } else if (tmp4.DAYS === unit) {
+          num = rounded / 60 / 24;
         } else {
-          num = rounded;
-          if (tmp4.MINUTES !== unit) {
-            if (tmp4.HOURS === unit) {
-              num = rounded / 60;
-            } else if (tmp4.DAYS === unit) {
-              num = rounded / 60 / 24;
-            } else {
-              if (tmp4.WEEKS === unit) {
-                num = rounded / 60 / 24 / 7;
-              } else if (tmp4.MONTHS !== unit) {
-                if (tmp4.YEARS === unit) {
-                  num = rounded / 60 / 24 / 365;
-                }
-              }
-              num = rounded / 60 / 24 / 31;
+          if (tmp4.WEEKS === unit) {
+            num = rounded / 60 / 24 / 7;
+          } else if (tmp4.MONTHS !== unit) {
+            if (tmp4.YEARS === unit) {
+              num = rounded / 60 / 24 / 365;
             }
           }
+          num = rounded / 60 / 24 / 31;
         }
       }
     }
     arr = items;
     const findIndexResult = items.findIndex((max) => {
       max = max.max;
-      let tmp = max.unit === closure_1_10.NONE;
+      let tmp = max.unit === obj.NONE;
       if (tmp) {
         tmp = closure_0 === max;
       }

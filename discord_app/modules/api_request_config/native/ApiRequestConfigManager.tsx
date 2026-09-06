@@ -1,33 +1,29 @@
 // discord_app/modules/api_request_config/native/ApiRequestConfigManager.tsx
-import set from "../../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import set2 from "../../../utils/PlatformUtils.tsx";
-import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
-import sendRequest from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
-import closure_4 from "../../../stores/AuthenticationStore.tsx";
+import _mod17 from "../../../../_runtime/metro/00017__.js";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
+import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
+import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
+import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 function updateApiRequestConfig() {
   const NativeCacheModule = NativeModules.NativeCacheModule;
   if (NativeCacheModule != null) {
     const _JSON = JSON;
-    let obj = { apiBaseUrl: null, headers: null };
-    obj[0] = sendRequest.getAPIBaseURL();
+    let obj = { apiBaseUrl: HTTPUtils.getAPIBaseURL(), headers: null };
     obj = { "X-Super-Properties": null, "X-Fingerprint": null, "X-Installation-ID": null };
-    const obj2 = sendRequest;
-    obj[0] = expandEventPropertiesDefault.getSuperPropertiesBase64();
-    obj[1] = store.getFingerprint();
-    obj[2] = store.getInstallationForTracking();
-    obj[1] = obj;
+    obj["X-Super-Properties"] = AnalyticsUtilsDefault.getSuperPropertiesBase64();
+    obj["X-Fingerprint"] = AuthenticationStore.getFingerprint();
+    obj["X-Installation-ID"] = AuthenticationStore.getInstallationForTracking();
+    obj.headers = obj;
     const result = NativeCacheModule.setItem("discordApiRequestConfig", JSON.stringify(obj));
-    const obj4 = expandEventPropertiesDefault;
   }
 }
-const NativeModules = get_ActivityIndicator.NativeModules;
-initializeDefault;
+const NativeModules = _mod17.NativeModules;
 let prototype = function ApiRequestConfigManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  applyArgumentsResult.handleUpdate = set2.isAndroid() ? updateApiRequestConfig : () => {};
+  applyArgumentsResult.handleUpdate = PlatformUtils.isAndroid() ? updateApiRequestConfig : () => {};
   applyArgumentsResult.actions = {
     POST_CONNECTION_OPEN: applyArgumentsResult.handleUpdate,
     APP_STATE_UPDATE: applyArgumentsResult.handleUpdate,
@@ -36,6 +32,6 @@ let prototype = function ApiRequestConfigManager() {
 }.prototype;
 class prototype extends tmp2 {}
 prototype = new prototype();
-let result = set.fileFinishedImporting("modules/api_request_config/native/ApiRequestConfigManager.tsx");
+let result = size.fileFinishedImporting("modules/api_request_config/native/ApiRequestConfigManager.tsx");
 
 export default prototype;

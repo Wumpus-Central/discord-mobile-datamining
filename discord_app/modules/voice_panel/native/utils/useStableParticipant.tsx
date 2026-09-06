@@ -1,43 +1,47 @@
 // discord_app/modules/voice_panel/native/utils/useStableParticipant.tsx
-import shallowEqualDefault from "../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
-import closure_3 from "../../../calls/ChannelRTCStore.tsx";
-import closure_4 from "../../../../stores/AuthenticationStore.tsx";
-import closure_5 from "../../../../stores/MediaEngineStore.tsx";
-import closure_6 from "../../../../stores/UserStore.tsx";
-import { ParticipantTypes } from "../../../calls/CallConstants.tsx";
+import discord_common_shallowEqualDefault from "../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import NicknameUtils from "../../../../utils/NicknameUtils.tsx";
+import useAvatarDecoration from "../../../collectibles/avatar_decorations/useAvatarDecoration.tsx";
+import participantHasVideoDefault from "../../../video_calls/participantHasVideo.tsx";
+import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
+import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
+import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
+import UserStore from "../../../../stores/UserStore.tsx";
 
-const require = arg1;
+require = fn;
 function areStableParticipantsEqual(arg0, arg1) {
   let tmp = arg0 === arg1;
   if (!tmp) {
     let tmp3 = null != arg0 && null != arg1;
     if (tmp3) {
-      tmp3 = shallowEqualDefault(arg0, arg1);
+      tmp3 = discord_common_shallowEqualDefault(arg0, arg1);
     }
     tmp = tmp3;
   }
   return tmp;
 }
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/utils/useStableParticipant.tsx");
+const ParticipantTypes = fn(4581).ParticipantTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/native/utils/useStableParticipant.tsx");
 
 export default function useStableParticipant(arg0, arg1, arg2) {
-  const _require = arg0;
+  _require = arg0;
   closure_1 = arg1;
   dependencyMap = arg2;
-  const items = [closure_3, closure_6, closure_4, closure_5];
+  const items = [ChannelRTCStore, UserStore, AuthenticationStore, MediaEngineStore];
   const items1 = [arg0, arg1, arg2];
-  return require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+  return require("initialize").useStateFromStores(
     items,
     () => {
-      if (null != callback) {
-        const participant = closure_1_3.getParticipant(callback2, tmp);
+      if (null != closure_0) {
+        const participant = ChannelRTCStore.getParticipant(closure_1, tmp);
         if (null == participant) {
-          const user = closure_1_6.getUser(tmp);
+          const user = UserStore.getUser(tmp);
           if (null != user) {
             let obj = {
-              type: null,
-              id: null,
-              user: null,
+              type: ParticipantTypes.USER,
+              id: tmp,
+              user,
               selfVideo: false,
               canRenderVideo: false,
               userNick: null,
@@ -47,32 +51,25 @@ export default function useStableParticipant(arg0, arg1, arg2) {
               hasVideo: 0,
               isSelf: 1,
             };
-            obj[0] = closure_1_7.USER;
-            obj[1] = tmp;
-            obj[2] = user;
-            const id = closure_1_4.getId();
-            obj[5] = callback(4712).getName(dependencyMap, tmp3, user);
-            const obj5 = callback(4712);
-            obj[6] = callback(8217).getAvatarDecoration(user, dependencyMap);
-            obj[10] = user.id === id;
+            const id = AuthenticationStore.getId();
+            obj.userNick = NicknameUtils.getName(closure_2, tmp3, user);
+            obj.userAvatarDecoration = useAvatarDecoration.getAvatarDecoration(user, closure_2);
+            obj.isSelf = user.id === id;
             return obj;
           }
         } else {
-          const tmp15 = callback2(9622)(participant);
+          const tmp15 = participantHasVideoDefault(participant);
           const type = participant.type;
-          if (closure_1_7.ACTIVITY === type) {
-            obj = { type: null, id: null, applicationId: null };
-            obj[0] = participant.type;
-            obj[1] = tmp;
-            obj[2] = participant.applicationId;
+          if (ParticipantTypes.ACTIVITY === type) {
+            obj = { type: participant.type, id: tmp, applicationId: participant.applicationId };
             return obj;
           } else {
             if (tmp16.STREAM !== type) {
               if (tmp16.HIDDEN_STREAM !== type) {
                 if (tmp16.USER === type) {
                   obj = {
-                    type: null,
-                    id: null,
+                    type: participant.type,
+                    id: tmp,
                     user: null,
                     selfVideo: null,
                     userNick: null,
@@ -83,35 +80,33 @@ export default function useStableParticipant(arg0, arg1, arg2) {
                     canRenderVideo: null,
                     isSelf: null,
                   };
-                  obj[0] = participant.type;
-                  obj[1] = tmp;
-                  ({ user: obj[2], voiceState } = participant);
+                  ({ user: obj.user, voiceState } = participant);
                   let flag;
-                  const id1 = closure_1_4.getId();
+                  const id1 = AuthenticationStore.getId();
                   if (voiceState != null) {
                     flag = voiceState.selfVideo;
                   }
                   if (flag == null) {
                     flag = false;
                   }
-                  obj[3] = flag;
-                  ({ userNick: obj[4], userAvatarDecoration: obj[5], streamId } = participant);
-                  obj[6] = streamId;
-                  obj[7] = participant.ringing;
-                  obj[8] = tmp15;
+                  obj.selfVideo = flag;
+                  ({ userNick: obj.userNick, userAvatarDecoration: obj.userAvatarDecoration, streamId } = participant);
+                  obj.streamId = streamId;
+                  obj.ringing = participant.ringing;
+                  obj.hasVideo = tmp15;
                   let tmp7 = tmp15;
                   if (tmp15) {
-                    tmp7 = !closure_1_5.isLocalVideoDisabled(participant.user.id);
+                    tmp7 = !MediaEngineStore.isLocalVideoDisabled(participant.user.id);
                   }
-                  obj[9] = tmp7;
-                  obj[10] = participant.user.id === id1;
+                  obj.canRenderVideo = tmp7;
+                  obj.isSelf = participant.user.id === id1;
                   return obj;
                 }
               }
             }
-            obj1 = {
-              type: null,
-              id: null,
+            const obj1 = {
+              type: participant.type,
+              id: tmp,
               user: null,
               userNick: null,
               streamId: null,
@@ -119,35 +114,33 @@ export default function useStableParticipant(arg0, arg1, arg2) {
               hasVideo: null,
               isSelf: null,
             };
-            obj1[0] = participant.type;
-            obj1[1] = tmp;
-            ({ user: obj2[2], userNick: obj2[3], streamId: streamId2 } = participant);
-            const id2 = closure_1_4.getId();
-            obj1[4] = streamId2;
+            ({ user: obj2.user, userNick: obj2.userNick, streamId: streamId2 } = participant);
+            const id2 = AuthenticationStore.getId();
+            obj1.streamId = streamId2;
             const guildId = participant.stream.guildId;
-            obj1[5] = guildId;
-            obj1[6] = tmp15;
-            obj1[7] = participant.user.id === id2;
+            obj1.streamGuildId = guildId;
+            obj1.hasVideo = tmp15;
+            obj1.isSelf = participant.user.id === id2;
             return obj1;
           }
         }
-        tmp3 = callback2;
+        tmp3 = closure_1;
       }
     },
     items1,
     areStableParticipantsEqual,
   );
 }
-export const isStableStreamParticipant = function isStableStreamParticipant(controlsHidden) {
+export const isStableStreamParticipant = function isStableStreamParticipant(participant) {
   let type;
-  if (controlsHidden != null) {
-    type = controlsHidden.type;
+  if (participant != null) {
+    type = participant.type;
   }
   let tmp3 = type === ParticipantTypes.STREAM;
   if (!tmp3) {
     let type1;
-    if (controlsHidden != null) {
-      type1 = controlsHidden.type;
+    if (participant != null) {
+      type1 = participant.type;
     }
     tmp3 = type1 === tmp2.HIDDEN_STREAM;
   }

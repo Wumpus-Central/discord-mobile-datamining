@@ -1,12 +1,13 @@
 // discord_app/modules/self_mod/hooks/useUserIsTeen.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import closure_2 from "../../../stores/UserStore.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/self_mod/hooks/useUserIsTeen.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/self_mod/hooks/useUserIsTeen.tsx");
 
 export const useUserIsTeen = function useUserIsTeen() {
-  const items = [closure_2];
+  const items = [UserStore];
   return (
     false ===
     initialize.useStateFromStores(items, () => {

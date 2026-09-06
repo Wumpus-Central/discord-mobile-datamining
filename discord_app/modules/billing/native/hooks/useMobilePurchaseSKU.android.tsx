@@ -1,24 +1,25 @@
 // discord_app/modules/billing/native/hooks/useMobilePurchaseSKU.android.tsx
-import timestampDefault from "../../../debug/Logger.tsx";
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
-import { useNativeCheckoutStoreOrNull as closure_5 } from "../../../checkout/native/NativeCheckoutStore.tsx";
-import closure_6 from "../../../../stores/UserStore.tsx";
-import { CurrencyCodes } from "../../../../Constants.tsx";
+import LoggerDefault from "../../../debug/Logger.tsx";
+import DispatcherDefault from "../../../../Dispatcher.tsx";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import UserStore from "../../../../stores/UserStore.tsx";
 
-const require = arg1;
-require("GPlayConnectionState").GPlayBillingResult;
-let closure_9 = new timestampDefault("useMobilePurchaseSKU.android");
-const tmp2 = new timestampDefault("useMobilePurchaseSKU.android");
-let result = require("set").fileFinishedImporting("modules/billing/native/hooks/useMobilePurchaseSKU.android.tsx");
+const require = fn;
+let closure_5 = fn(7424).useNativeCheckoutStoreOrNull;
+const CurrencyCodes = fn(1074).CurrencyCodes;
+fn(7238).GPlayBillingResult;
+let closure_9 = new LoggerDefault("useMobilePurchaseSKU.android");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/billing/native/hooks/useMobilePurchaseSKU.android.tsx");
 
 export default function useMobilePurchaseSKU(skuId) {
   skuId = skuId.skuId;
-  let _require = skuId;
-  const platformSkuId = skuId.platformSkuId;
+  _require = skuId;
+  let platformSkuId = skuId.platformSkuId;
   const analyticsLocations = skuId.analyticsLocations;
   let analyticsLoadId = skuId.analyticsLoadId;
-  let callback = analyticsLoadId;
+  asyncGeneratorStep = analyticsLoadId;
   const analyticsData = skuId.analyticsData;
   const onPurchaseComplete = skuId.onPurchaseComplete;
   const onPurchaseError = skuId.onPurchaseError;
@@ -30,19 +31,12 @@ export default function useMobilePurchaseSKU(skuId) {
     flag = true;
   }
   const orderId = skuId.orderId;
-  let handlePremiumPurchase;
-  closure_13 = undefined;
-  closure_14 = undefined;
-  closure_15 = undefined;
-  closure_16 = undefined;
-  closure_17 = undefined;
-  let flag2;
-  callback = undefined;
+  let callback;
   let callback1;
   let callback2;
   let callback3;
   const currentUser = onPurchaseError.getCurrentUser();
-  handlePremiumPurchase = _require(analyticsLocations[7]).useHandlePremiumPurchase();
+  const handlePremiumPurchase = require("handlePremiumPurchase").useHandlePremiumPurchase();
   const tmp3 = onPurchaseComplete((setOrder) => setOrder.setOrder);
   closure_13 = tmp3;
   const tmp4 = onPurchaseComplete((setCheckoutSucceeded) => setCheckoutSucceeded.setCheckoutSucceeded);
@@ -54,9 +48,8 @@ export default function useMobilePurchaseSKU(skuId) {
   let tmp7 = onPurchaseComplete((contextMetadata) => contextMetadata.contextMetadata.loadId);
   const tmp8 = undefined !== currentUser && currentUser.isStaff();
   closure_17 = tmp8;
-  flag2 = undefined;
-  let obj2 = _require(analyticsLocations[7]);
-  const tmp = analyticsLocations;
+  let flag2;
+  let obj2 = require("handlePremiumPurchase");
   if (giftParams != null) {
     flag2 = giftParams.isGift;
   }
@@ -67,23 +60,23 @@ export default function useMobilePurchaseSKU(skuId) {
     if (tmp7 == null) {
       tmp7 = tmp9;
     }
-    callback = tmp7;
+    asyncGeneratorStep = tmp7;
     analyticsLoadId = tmp7;
   }
   const items = [onPurchaseComplete, tmp4, tmp6];
   callback = analyticsData.useCallback(() => {
-    platformSkuId(analyticsLocations[10]).unsubscribe("GPLAY_PURCHASE_VERIFIED", callback);
+    DispatcherDefault.unsubscribe("GPLAY_PURCHASE_VERIFIED", callback);
     if (closure_16 != null) {
       tmp2(false);
     }
-    if (callback2 != null) {
-      callback2();
+    if (closure_14 != null) {
+      closure_14();
     }
     onPurchaseComplete();
   }, items);
   const items1 = [onPurchaseError, callback, tmp6];
   callback1 = analyticsData.useCallback(() => {
-    platformSkuId(analyticsLocations[10]).unsubscribe("GPLAY_PURCHASE_VERIFIED", callback);
+    DispatcherDefault.unsubscribe("GPLAY_PURCHASE_VERIFIED", callback);
     if (closure_16 != null) {
       tmp2(false);
     }
@@ -96,108 +89,94 @@ export default function useMobilePurchaseSKU(skuId) {
     }
     onPurchaseError();
   }, items2);
-  _require = undefined;
-  _require = callback((arg0) => {
-    closure_0 = arg0;
+  _require = asyncGeneratorStep(async (skuId) => {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function* (arg0) {
-      if (v0 === 2) {
-        v0 = 3;
-        HermesBuiltin.throwTypeError();
+    return (async (arg0, value) => {
+      if (v3 === 2) {
+        v3 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp6 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          let obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
         }
       } else {
         try {
-          v0 = 2;
+          v3 = 2;
           if (0 === c5) {
             if (arg0 === 1) {
-              v0 = 3;
-              throw arg1;
+              v3 = 3;
+              throw value;
             } else if (arg0 === 2) {
-              v0 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              v3 = 3;
+              obj = { value, done: true };
               return obj;
             } else {
               closure_2 = tmp3;
-              closure_1 = tmp7;
-              let lib;
-              if (lib.billingResult === onPurchasePending.OK) {
+              platformSkuId = tmp7;
+              closure_129_0 = undefined;
+              if (skuId.billingResult === onPurchasePending.OK) {
                 if (closure_1_16 != null) {
                   closure_1_16(true);
                 }
               } else {
-                platformSkuId(analyticsLocations[10]).unsubscribe("GPLAY_PURCHASE_VERIFIED", closure_1_19);
-                if (null != closure_1_11) {
-                  obj1 = { orderId: null, platformSkuId: null, skuId: null };
-                  obj1[0] = closure_1_11;
-                  obj1[1] = closure_1_1;
-                  obj1[2] = lib;
+                platformSkuId(analyticsLocations[10]).unsubscribe("GPLAY_PURCHASE_VERIFIED", callback);
+                if (null != orderId) {
+                  let obj1 = { orderId, platformSkuId, skuId };
                   giftParams.info(
                     "[handleGPlayUpdatePurchaseAction] User canceled purchase, canceling order signing",
                     obj1,
                   );
                   c4 = 1;
                   c5 = 2;
-                  v0 = 1;
-                  const obj2 = { value: null, done: false };
-                  obj2[0] = lib(analyticsLocations[11]).cancelOrderSigning(closure_1_11);
+                  v3 = 1;
+                  const obj2 = { value: skuId(analyticsLocations[11]).cancelOrderSigning(orderId), done: false };
                   return obj2;
                 }
                 const obj11 = platformSkuId(analyticsLocations[10]);
               }
               closure_1_8();
-              v0 = 3;
+              v3 = 3;
             }
           } else if (1 === tmp7) {
             c4 = 0;
-            closure_1 = closure_3;
-            obj1 = lib(analyticsLocations[12]);
-            const obj3 = { tags: null, extra: null };
-            obj3[0] = { source: "useMobilePurchaseSKU_cancelOrderSigning" };
-            const obj4 = { orderId: null };
-            obj4[0] = closure_1_11;
-            obj3[1] = obj4;
-            const result = obj1.captureBillingException(closure_1, obj3);
-            const obj5 = { error: null, orderId: null, skuId: null };
-            obj5[0] = closure_1;
-            obj5[1] = closure_1_11;
-            obj5[2] = lib;
+            closure_129_1 = closure_3;
+            obj1 = skuId(analyticsLocations[12]);
+            const obj3 = { tags: { source: "useMobilePurchaseSKU_cancelOrderSigning" }, extra: null };
+            const obj4 = { orderId };
+            obj3.extra = obj4;
+            const result = obj1.captureBillingException(closure_129_1, obj3);
+            const obj5 = { error: closure_129_1, orderId, skuId };
             giftParams.error("Failed to cancel order signing", obj5);
           } else if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
+            v3 = 3;
+            throw value;
           } else if (arg0 === 2) {
             c4 = 0;
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            v3 = 3;
+            obj = { value, done: true };
             return obj;
           } else {
-            lib = arg1;
+            closure_129_0 = value;
             if (closure_1_13 != null) {
-              tmp10(lib);
+              tmp10(closure_129_0);
             }
             c4 = 0;
           }
           if (closure_1_16 != null) {
             closure_1_16(false);
           }
-          v0();
+          v3();
         } catch (tmp45) {
           closure_3 = tmp45;
           if (tmp4 === c4) {
-            v0 = tmp2;
+            v3 = tmp2;
             throw tmp45;
           } else {
             c5 = tmp;
@@ -219,20 +198,15 @@ export default function useMobilePurchaseSKU(skuId) {
   }, items3);
   const items4 = [callback3, callback, callback1];
   const effect = analyticsData.useEffect(() => {
-    const subscription = platformSkuId(analyticsLocations[10]).subscribe("GPLAY_UPDATE_PURCHASE_STATE", callback3);
-    let obj = platformSkuId(analyticsLocations[10]);
-    const subscription1 = platformSkuId(analyticsLocations[10]).subscribe("GPLAY_PURCHASE_VERIFIED", callback);
-    let obj2 = platformSkuId(analyticsLocations[10]);
-    const subscription2 = platformSkuId(analyticsLocations[10]).subscribe(
-      "GPLAY_PURCHASE_VERIFICATION_FAILED",
-      callback1,
-    );
+    const subscription = DispatcherDefault.subscribe("GPLAY_UPDATE_PURCHASE_STATE", callback3);
+    const subscription1 = DispatcherDefault.subscribe("GPLAY_PURCHASE_VERIFIED", callback);
+    const subscription2 = DispatcherDefault.subscribe("GPLAY_PURCHASE_VERIFICATION_FAILED", callback1);
     return () => {
-      closure_1_1(closure_1_2[10]).unsubscribe("GPLAY_UPDATE_PURCHASE_STATE", closure_22);
-      const obj = closure_1_1(closure_1_2[10]);
-      closure_1_1(closure_1_2[10]).unsubscribe("GPLAY_PURCHASE_VERIFIED", closure_19);
-      const obj2 = closure_1_1(closure_1_2[10]);
-      closure_1_1(closure_1_2[10]).unsubscribe("GPLAY_PURCHASE_VERIFICATION_FAILED", closure_20);
+      platformSkuId(analyticsLocations[10]).unsubscribe("GPLAY_UPDATE_PURCHASE_STATE", callback3);
+      const obj = platformSkuId(analyticsLocations[10]);
+      platformSkuId(analyticsLocations[10]).unsubscribe("GPLAY_PURCHASE_VERIFIED", callback);
+      const obj2 = platformSkuId(analyticsLocations[10]);
+      platformSkuId(analyticsLocations[10]).unsubscribe("GPLAY_PURCHASE_VERIFICATION_FAILED", callback1);
     };
   }, items4);
   const items5 = [
@@ -256,212 +230,191 @@ export default function useMobilePurchaseSKU(skuId) {
     orderId,
   ];
   return analyticsData.useCallback(
-    callback(function* () {
-      if (v02 === 2) {
-        v02 = 3;
-        HermesBuiltin.throwTypeError();
+    asyncGeneratorStep(async (arg0, value) => {
+      if (c6 === 2) {
+        c6 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp8 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          let obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
         }
       } else {
         try {
-          v02 = 2;
-          if (0 === v0) {
+          c6 = 2;
+          if (0 === c5) {
             if (arg0 === 1) {
-              v02 = 3;
-              throw arg1;
+              c6 = 3;
+              throw value;
             } else if (arg0 === 2) {
-              v02 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              c6 = 3;
+              obj = { value, done: true };
               return obj;
             } else {
-              closure_2 = tmp4;
               closure_1 = tmp9;
               let tmp52;
-              if (closure_1_15 != null) {
-                tmp52 = closure_1_15();
+              if (closure_15 != null) {
+                tmp52 = closure_15();
               }
               if (true === tmp52) {
                 const _Error2 = Error;
-                error = new Error("Purchase already in progress");
+                const error = new Error("Purchase already in progress");
                 throw error;
               } else {
-                if (obj17.isNullOrEmpty(closure_1_1)) {
+                if (obj17.isNullOrEmpty(platformSkuId)) {
                   const _Error = Error;
                   const error1 = new Error("Missing google play sku ID");
                   throw error1;
                 } else {
                   c4 = 1;
-                  if (closure_1_16 != null) {
-                    closure_1_16(true);
+                  if (closure_16 != null) {
+                    closure_16(true);
                   }
-                  if (closure_1_17) {
-                    if (closure_1_10) {
-                      if (!closure_1_18) {
+                  if (closure_17) {
+                    if (flag) {
+                      if (!flag2) {
                         c4 = 3;
-                        callback = closure_1_7;
-                        if (closure_1_7 == null) {
-                          callback = closure_1_0(closure_1_2[14]).purchaseSKU;
+                        let purchaseSKU = freePurchaseCallback;
+                        if (freePurchaseCallback == null) {
+                          purchaseSKU = purchaseSKU(tmp4[14]).purchaseSKU;
                         }
-                        obj1 = { expectedAmount: 0, expectedCurrency: null, loadId: null };
-                        obj1[1] = closure_1_7.USD;
-                        let obj8 = closure_1_0(closure_1_2[15]);
-                        obj1[2] = obj8.v4();
-                        v0 = 4;
-                        v02 = 1;
-                        let obj2 = { value: null, done: false };
-                        obj2[0] = callback("collectibles", closure_1_0, obj1);
+                        const obj1 = { expectedAmount: 0, expectedCurrency: constants.USD, loadId: null };
+                        let obj8 = purchaseSKU(tmp4[15]);
+                        obj1.loadId = obj8.v4();
+                        c5 = 4;
+                        c6 = 1;
+                        let obj2 = { value: purchaseSKU("collectibles", closure_0, obj1), done: false };
                         return obj2;
                       }
                     }
                   }
-                  if (null != closure_1_11) {
+                  if (null != orderId) {
                     c4 = 4;
-                    v0 = 6;
-                    v02 = 1;
-                    const obj3 = { value: null, done: false };
-                    obj3[0] = closure_1_0(closure_1_2[11]).markOrderAsSigningInProgress(closure_1_11);
+                    c5 = 6;
+                    c6 = 1;
+                    const obj3 = { value: purchaseSKU(tmp4[11]).markOrderAsSigningInProgress(orderId), done: false };
                     return obj3;
                   }
                 }
-                obj17 = closure_1_0(closure_1_2[13]);
+                obj17 = purchaseSKU(tmp4[13]);
               }
             }
           } else if (1 === tmp9) {
             c4 = 0;
-            closure_2 = closure_3;
-            if (callback3 != null) {
-              callback3(false);
+            closure_129_2 = closure_3;
+            if (closure_130_16 != null) {
+              closure_130_16(false);
             }
-            throw closure_2;
+            throw closure_129_2;
           } else if (2 === tmp9) {
             c4 = 1;
-            if (closure_1_16 != null) {
-              closure_1_16(false);
+            if (closure_130_16 != null) {
+              closure_130_16(false);
             }
             throw closure_3;
           } else if (3 === tmp9) {
             c4 = 2;
-            callback = closure_3;
-            v02();
-            throw callback;
+            closure_129_0 = closure_3;
+            closure_130_6();
+            throw closure_129_0;
           } else {
             if (4 === tmp9) {
               if (arg0 === 1) {
-                v02 = 3;
-                throw arg1;
+                c6 = 3;
+                throw value;
               } else if (arg0 === 2) {
                 c4 = 1;
-                if (callback3 != null) {
-                  callback3(false);
+                if (closure_130_16 != null) {
+                  closure_130_16(false);
                 }
                 c4 = 0;
-                v02 = 3;
-                const obj4 = { value: null, done: true };
-                obj4[0] = arg1;
+                c6 = 3;
+                const obj4 = { value, done: true };
                 return obj4;
               } else {
-                if (callback2 != null) {
-                  callback2();
+                if (closure_130_14 != null) {
+                  closure_130_14();
                 }
-                v0();
+                closure_130_5();
                 c4 = 1;
-                if (callback3 != null) {
-                  callback3(false);
+                if (closure_130_16 != null) {
+                  closure_130_16(false);
                 }
               }
             } else if (5 === tmp9) {
               c4 = 1;
-              closure_1 = closure_3;
-              obj2 = closure_1_0(closure_1_2[12]);
-              const obj5 = { tags: null, extra: null };
-              obj5[0] = { source: "useMobilePurchaseSKU_markSigning" };
-              const obj6 = { orderId: null };
-              obj6[0] = closure_11;
-              obj5[1] = obj6;
-              const result = obj2.captureBillingException(closure_1, obj5);
-              const obj7 = { error: null, skuId: null, orderId: null };
-              obj7[0] = closure_1;
-              obj7[1] = callback;
-              obj7[2] = closure_11;
-              closure_1_9.error("Failed to mark order signing-in-progress", obj7);
-              throw closure_1;
+              closure_129_1 = closure_3;
+              obj2 = purchaseSKU(tmp4[12]);
+              const obj5 = { tags: { source: "useMobilePurchaseSKU_markSigning" }, extra: null };
+              const obj6 = { orderId: closure_130_11 };
+              obj5.extra = obj6;
+              const result = obj2.captureBillingException(closure_129_1, obj5);
+              const obj7 = { error: closure_129_1, skuId: closure_130_0, orderId: closure_130_11 };
+              logger.error("Failed to mark order signing-in-progress", obj7);
+              throw closure_129_1;
             } else if (6 === tmp9) {
               if (arg0 === 1) {
-                v02 = 3;
-                throw arg1;
+                c6 = 3;
+                throw value;
               } else if (arg0 === 2) {
                 c4 = 0;
-                v02 = 3;
-                obj8 = { value: null, done: true };
-                obj8[0] = arg1;
+                c6 = 3;
+                obj8 = { value, done: true };
                 return obj8;
               } else {
                 c4 = 1;
               }
             } else if (arg0 === 1) {
-              v02 = 3;
-              throw arg1;
+              c6 = 3;
+              throw value;
             } else if (arg0 === 2) {
               c4 = 0;
-              v02 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              c6 = 3;
+              obj = { value, done: true };
               return obj;
             }
             c4 = 0;
-            v02 = 3;
+            c6 = 3;
             return { value: "HermesInternal", done: null };
           }
           const obj9 = {
-            productId: null,
-            skuId: null,
+            productId: closure_130_1,
+            skuId: closure_130_0,
             isOneTimePurchase: true,
-            analyticsLoadId: null,
-            analyticsLocations: null,
-            analyticsData: null,
-            isGift: null,
+            analyticsLoadId: closure_130_3,
+            analyticsLocations: closure_130_2,
+            analyticsData: closure_130_4,
+            isGift: closure_130_18,
             giftInfoOptions: null,
             onPurchaseError: null,
           };
-          obj9[0] = closure_1;
-          obj9[1] = callback;
-          obj9[3] = closure_3;
-          obj9[4] = closure_2;
-          obj9[5] = c4;
-          obj9[6] = closure_18;
           let options;
-          if (options != null) {
-            options = options.options;
+          if (closure_130_9 != null) {
+            options = closure_130_9.options;
           }
-          obj9[7] = options;
-          obj9[8] = closure_21;
-          v0 = 7;
-          v02 = 1;
-          const obj10 = { value: null, done: false };
-          obj10[0] = closure_12(obj9);
+          obj9.giftInfoOptions = options;
+          obj9.onPurchaseError = closure_130_21;
+          c5 = 7;
+          c6 = 1;
+          const obj10 = { value: closure_130_12(obj9), done: false };
           return obj10;
         } catch (tmp88) {
           closure_3 = tmp88;
           if (tmp5 === c4) {
-            v02 = tmp3;
+            c6 = tmp3;
             throw tmp88;
           } else if (tmp2 === tmp90) {
-            v0 = tmp2;
+            c5 = tmp2;
           } else if (tmp === tmp90) {
-            v0 = tmp;
+            c5 = tmp;
           } else if (tmp3 === tmp90) {
-            v0 = tmp3;
+            c5 = tmp3;
           } else {
-            v0 = tmp6;
+            c5 = tmp6;
           }
         }
       }

@@ -1,29 +1,34 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/GuildRoleSubscriptionGroupGatingModal.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import getSystemLocale from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import FormGuildGatingModeSelectorDefault from "../components/FormGuildGatingModeSelector.tsx";
-import HeaderDefault from "../components/GuildRoleSubscriptionTierEditStep.tsx";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../RoleTierEditStore.tsx";
-import { GuildRoleSubscriptionsTierScenes as closure_5 } from "../../GuildRoleSubscriptionsConstants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import GuildRoleSubscriptionTierEditStepDefault from "../components/GuildRoleSubscriptionTierEditStep.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import RoleTierEditStore from "../RoleTierEditStore.tsx";
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting(
+require = fn;
+const constants = fn(15205).GuildRoleSubscriptionsTierScenes;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/native/guild_settings/GuildRoleSubscriptionGroupGatingModal.tsx",
 );
 
 export default function GuildRoleSubscriptionGroupGatingModal(arg0) {
-  [tmp2, tmp3] = callback(closure_4.useGroupIsFullGateState(), 2);
+  [tmp2, tmp3] = _slicedToArray(RoleTierEditStore.useGroupIsFullGateState(), 2);
   const obj = { title: null, description: null, canProceedToNextStep: true, nextStep: null };
-  const tmp = callback(closure_4.useGroupIsFullGateState(), 2);
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t.N38nNP);
-  const intl2 = getSystemLocale.intl;
-  obj[1] = intl2.string(getSystemLocale.t.csJWVI);
-  obj[3] = constants.GROUP;
+  const tmp = _slicedToArray(RoleTierEditStore.useGroupIsFullGateState(), 2);
+  const intl = util.intl;
+  obj.title = intl.string(util.t.N38nNP);
+  const intl2 = util.intl;
+  obj.description = intl2.string(util.t.csJWVI);
+  obj.nextStep = constants.GROUP;
   const merged = Object.assign(arg0);
   obj.children = jsx(FormGuildGatingModeSelectorDefault, { isFullServerGating: tmp2, onChange: tmp3 });
-  return jsx(HeaderDefault, { title: null, description: null, canProceedToNextStep: true, nextStep: null });
+  return jsx(GuildRoleSubscriptionTierEditStepDefault, {
+    title: null,
+    description: null,
+    canProceedToNextStep: true,
+    nextStep: null,
+  });
 }

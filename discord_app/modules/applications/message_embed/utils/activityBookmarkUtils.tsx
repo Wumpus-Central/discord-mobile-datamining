@@ -1,13 +1,13 @@
 // discord_app/modules/applications/message_embed/utils/activityBookmarkUtils.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import isDiscordProxiedAssetUrlDefault from "../../../../utils/URLUtils.tsx";
+import URLUtilsDefault from "../../../../utils/URLUtils.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/applications/message_embed/utils/activityBookmarkUtils.tsx");
+const result = size.fileFinishedImporting("modules/applications/message_embed/utils/activityBookmarkUtils.tsx");
 
 export const extractActivityBookmarkParams = function extractActivityBookmarkParams(url) {
-  let obj = isDiscordProxiedAssetUrlDefault;
+  let obj = URLUtilsDefault;
   const toURLSafeResult = obj.toURLSafe(url);
-  let value;
+  value = undefined;
   if (toURLSafeResult != null) {
     const searchParams = toURLSafeResult.searchParams;
     value = searchParams.get("referrer_id");
@@ -18,12 +18,12 @@ export const extractActivityBookmarkParams = function extractActivityBookmarkPar
     const searchParams2 = toURLSafeResult.searchParams;
     value = searchParams2.get("custom_id");
   }
-  obj[1] = value;
+  obj.customId = value;
   let value1;
   if (toURLSafeResult != null) {
     const searchParams3 = toURLSafeResult.searchParams;
     value1 = searchParams3.get("link_id");
   }
-  obj[2] = value1;
+  obj.linkId = value1;
   return obj;
 };

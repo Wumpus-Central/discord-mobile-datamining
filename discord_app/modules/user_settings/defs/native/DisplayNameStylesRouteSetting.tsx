@@ -1,30 +1,27 @@
 // discord_app/modules/user_settings/defs/native/DisplayNameStylesRouteSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import ME from "../../../../Constants.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import messagesProxyDefault from "../../../display_name_styles/intl/DisplayNameStyles.messages.js";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
-import { ApplyButton } from "../../../display_name_styles/native/DisplayNameStylesEditScreen.tsx";
+import Constants from "../../../../Constants.tsx";
+import util from "../../../../intl/index.native.tsx";
+import _modDef2786 from "../../../display_name_styles/intl/DisplayNameStyles.messages.js";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault.ZPMAlX);
+    const intl = util.intl;
+    return intl.string(_modDef2786.ZPMAlX);
   },
   parent: null,
   unsearchable: true,
-  screen: obj,
+  screen: {
+    route: Constants.UserSettingsSections.DISPLAY_NAME_STYLES,
+    getComponent() {
+      return require("DisplayNameStylesEditScreen").default;
+    },
+  },
   usePredicate() {
     return true;
   },
-};
-obj = {
-  route: ME.UserSettingsSections.DISPLAY_NAME_STYLES,
-  getComponent() {
-    return ApplyButton /* ApplyButton */.default;
-  },
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/DisplayNameStylesRouteSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/DisplayNameStylesRouteSetting.tsx");
 
 export default route;

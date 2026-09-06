@@ -1,15 +1,16 @@
 // discord_app/lib/SystemResponsiveness.tsx
-import set from "../../_runtime/00002_set.js";
+import _modDef12 from "../../_runtime/metro/00012__.js";
 import BaseConnectionEvent from "../../discord_common/js/packages/media-engine/index.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("lib/SystemResponsiveness.tsx");
+const result = size.fileFinishedImporting("lib/SystemResponsiveness.tsx");
 class SystemResponsiveness {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
     closure_0 = obj;
     obj.sampleStats = function sampleStats(rtp) {
       if (null != rtp) {
-        const item = closure_1_1(closure_1_2[2]).forEach(rtp.rtp.outbound, (type) => {
+        const item = _modDef12.forEach(rtp.rtp.outbound, (type) => {
           if ("audio" === type.type) {
             let prop = type.pttQueueLatencyMicrosSamples;
             if (prop == null) {
@@ -17,18 +18,16 @@ class SystemResponsiveness {
             }
             const iter = prop[Symbol.iterator]();
             while (iter !== undefined) {
-              let tmp5 = obj;
               let pttQueueLatencyHistogram = obj.pttQueueLatencyHistogram;
               let addSampleResult = pttQueueLatencyHistogram.addSample(iter.next() / 1000);
               continue;
             }
           }
         });
-        const arr = closure_1_1(closure_1_2[2]);
       }
     };
     obj.connection = global;
-    histogram = new require("getSamples").Histogram();
+    histogram = new closure_0(closure_2[0]).Histogram();
     obj.pttQueueLatencyHistogram = histogram;
     return obj;
   }

@@ -1,20 +1,20 @@
 // discord_app/modules/errors/av_errors/definitions/AVErrorStreamViewHighPacketLoss.tsx
-import closure_2 from "../../../../stores/ApplicationStreamingStore.tsx";
-import closure_3 from "../../../../stores/AuthenticationStore.tsx";
-import closure_4 from "../../../../stores/StreamRTCConnectionStore.tsx";
+import StreamKeyUtils from "../../../go_live/utils/StreamKeyUtils.tsx";
+import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingStore.tsx";
+import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
+import StreamRTCConnectionStore from "../../../../stores/StreamRTCConnectionStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
-  "modules/errors/av_errors/definitions/AVErrorStreamViewHighPacketLoss.tsx",
-);
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamViewHighPacketLoss.tsx");
 
 export const AVErrorStreamViewHighPacketLossDefinition = {
   getActiveErrors() {
     let reduced = null;
     if (obj.getReportInboundErrors()) {
-      allActiveStreams = allActiveStreams.getAllActiveStreams();
+      const allActiveStreams = ApplicationStreamingStore.getAllActiveStreams();
       reduced = allActiveStreams.reduce((arr, ownerId) => {
-        let obj = callback(table[4]);
+        let obj = StreamKeyUtils;
         rTCConnection = rTCConnection.getRTCConnection(obj.encodeStreamKey(ownerId));
         let mediaEngineConnectionId;
         if (rTCConnection != null) {
@@ -32,8 +32,7 @@ export const AVErrorStreamViewHighPacketLossDefinition = {
           );
           if (null != accumulatedStatsWithMinDatapoints) {
             if (10 < 100 * accumulatedStatsWithMinDatapoints.short.packetLossRate) {
-              obj = { type: null };
-              obj[0] = tmp(tmp2[5]).AVError.STREAM_VIEW_HIGH_PACKET_LOSS;
+              obj = { type: tmp(tmp2[5]).AVError.STREAM_VIEW_HIGH_PACKET_LOSS };
               tmpResult = tmp(tmp2[6]);
               const merged = Object.assign(tmpResult.getStreamErrorContext(tmp(tmp2[4]).encodeStreamKey(ownerId)));
               arr.push(obj);

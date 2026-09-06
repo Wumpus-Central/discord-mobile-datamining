@@ -1,7 +1,7 @@
 // discord_app/modules/payments/PaymentConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/payments/PaymentConstants.tsx");
+const result = size.fileFinishedImporting("modules/payments/PaymentConstants.tsx");
 
 export const CustomCheckoutFlow = {
   MOBILE_WEB_REDIRECT_CHECKOUT: "mobile_web_redirect_checkout",

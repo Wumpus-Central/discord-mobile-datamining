@@ -1,38 +1,39 @@
 // discord_app/modules/devtools/native/components/screens/DevToolsDismissableContentsScreen.tsx
-import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../../../safe_area/useSafeAreaInsets.native.tsx";
-import updateUserGuildSettings from "../../../../user_settings/UserSettingsProtoActionCreators.tsx";
-import DismissibleContent from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import UserSettingsProtoActionCreators from "../../../../user_settings/UserSettingsProtoActionCreators.tsx";
+import dismissible_content from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import TrashIcon from "../../../../../design/components/Icon/native/redesign/generated/TrashIcon.tsx";
-import Text from "../../../../../design/components/Text/native/Text.tsx";
-import TableRowInner from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
+import fuzzysearchDefault from "../../../../../../_runtime/05517_fuzzysearch.js";
+import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowArrow from "../../../../../design/components/TableRow/native/TableRowArrow.native.tsx";
-import TableRowGroupTitle from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import TableRowGroup from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import SearchField from "../../../../../design/components/TextField/native/SearchField.native.tsx";
 import TableSwitchRow from "../../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
-import handleDCShownToUser from "../../../../dismissible_content/DismissibleContentFrameworkActionCreators.tsx";
-import getSearchEmptySource from "../../../../../design/components/Illustration/native/redesign/generated/SearchEmpty.tsx";
-import useToggleDismissibleContentDismissStateDefault from "../../../../dismissible_content/utils/toggleDismissibleContentDismissState.tsx";
+import DismissibleContentFrameworkActionCreators from "../../../../dismissible_content/DismissibleContentFrameworkActionCreators.tsx";
+import SearchEmpty from "../../../../../design/components/Illustration/native/redesign/generated/SearchEmpty.tsx";
+import useBountiesAutoScroll from "../../../../quests/native/BountiesModal/useBountiesAutoScroll.tsx";
+import toggleDismissibleContentDismissStateDefault from "../../../../dismissible_content/utils/toggleDismissibleContentDismissState.tsx";
 import DoubleCheckmarkIcon from "../../../../../design/components/Icon/native/redesign/generated/DoubleCheckmarkIcon.tsx";
-import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import importAllResult from "../../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../../../dismissible_content/DismissibleContentFrameworkStore.tsx";
-import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
+import DismissibleContentFrameworkStore from "../../../../dismissible_content/DismissibleContentFrameworkStore.tsx";
 
-require = arg1;
+require = fn;
 function DismissableContentsEmpty() {
-  let obj = { style: callback4().emptyState, children: null };
+  let obj = { style: closure_10().emptyState, children: null };
   obj = { style: null, variant: "heading-lg/semibold", children: "No results found" };
-  obj = { marginBottom: ThemesDefault.space.PX_16 };
-  obj[0] = obj;
-  const items = [callback2(Text.Text, obj), callback2(getSearchEmptySource.SearchEmpty, {})];
-  obj[1] = items;
-  return callback3(View, obj);
+  obj = { marginBottom: nativeDefault.space.PX_16 };
+  obj.style = obj;
+  const items = [React5(Text_Text.Text, obj), React5(SearchEmpty.SearchEmpty, {})];
+  obj.children = items;
+  return React6(View, obj);
 }
-let c4 = importAllResult;
-({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
+fn(4560);
 let obj = {
   container: null,
   contentContainer: null,
@@ -41,27 +42,27 @@ let obj = {
   sectionHeader: null,
   emptyState: null,
 };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
-obj[0] = obj;
-createCacheKey = { padding: ThemesDefault.space.PX_16 };
-obj[1] = createCacheKey;
-obj[2] = { paddingBottom: ThemesDefault.space.PX_16 };
-let obj2 = { paddingBottom: ThemesDefault.space.PX_16 };
-obj[3] = { paddingBottom: ThemesDefault.space.PX_8 };
-let obj3 = { paddingBottom: ThemesDefault.space.PX_8 };
-obj[4] = { paddingBottom: ThemesDefault.space.PX_8 };
-let obj4 = { paddingBottom: ThemesDefault.space.PX_8 };
-obj[5] = { marginVertical: ThemesDefault.space.PX_32, justifyContent: "center", alignItems: "center" };
-let closure_10 = createCacheKey.createStyles(obj);
-let closure_11 = importAllResult.memo((content) => {
+obj = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
+obj.container = obj;
+const createStyles = { padding: nativeDefault.space.PX_16 };
+obj.contentContainer = createStyles;
+obj.headerSection = { paddingBottom: nativeDefault.space.PX_16 };
+let obj2 = { paddingBottom: nativeDefault.space.PX_16 };
+obj.search = { paddingBottom: nativeDefault.space.PX_8 };
+let obj3 = { paddingBottom: nativeDefault.space.PX_8 };
+obj.sectionHeader = { paddingBottom: nativeDefault.space.PX_8 };
+let obj4 = { paddingBottom: nativeDefault.space.PX_8 };
+obj.emptyState = { marginVertical: nativeDefault.space.PX_32, justifyContent: "center", alignItems: "center" };
+let closure_10 = createStyles.createStyles(obj);
+let closure_11 = noop.memo((content) => {
   const label = content.content;
   ({ start, end } = content);
-  ({ isDismissed, handleToggleDismissState } = useToggleDismissibleContentDismissStateDefault(
-    DismissibleContent.DismissibleContent[label],
+  ({ isDismissed, handleToggleDismissState } = toggleDismissibleContentDismissStateDefault(
+    dismissible_content.DismissibleContent[label],
   ));
-  return callback2(TableSwitchRow.TableSwitchRow, { start, end, onValueChange, value, label });
+  return React5(TableSwitchRow.TableSwitchRow, { start, end, onValueChange, value, label });
 });
-let closure_12 = importAllResult.memo((arg0) => {
+let closure_12 = noop.memo((arg0) => {
   ({
     dailyCapOverridden,
     newUserMinAgeRequiredOverridden,
@@ -70,145 +71,142 @@ let closure_12 = importAllResult.memo((arg0) => {
     onForceBountiesSwipeUpNuxChange,
     onSearchChange,
   } = arg0);
-  const tmp = callback4();
+  const tmp = closure_10();
   let obj = { children: null };
   obj = { style: tmp.headerSection, children: null };
   obj = { title: "Global Overrides", hasIcons: false, children: null };
   const items = [
-    callback2(TableSwitchRow.TableSwitchRow, {
-      onValueChange: handleDCShownToUser.overrideDismissibleContentFramework,
+    React5(TableSwitchRow.TableSwitchRow, {
+      onValueChange: DismissibleContentFrameworkActionCreators.overrideDismissibleContentFramework,
       value: dailyCapOverridden,
       label: "Daily limit",
       subLabel: "When enabled, bypass the daily limit of dismissible content shown",
     }),
     ,
   ];
-  obj1 = {
-    onValueChange: handleDCShownToUser.overrideDismissibleContentFramework,
+  const obj1 = {
+    onValueChange: DismissibleContentFrameworkActionCreators.overrideDismissibleContentFramework,
     value: dailyCapOverridden,
     label: "Daily limit",
     subLabel: "When enabled, bypass the daily limit of dismissible content shown",
   };
-  items[1] = callback2(TableSwitchRow.TableSwitchRow, {
-    onValueChange: handleDCShownToUser.overrideNewUserMinAgeRequired,
+  items[1] = React5(TableSwitchRow.TableSwitchRow, {
+    onValueChange: DismissibleContentFrameworkActionCreators.overrideNewUserMinAgeRequired,
     value: newUserMinAgeRequiredOverridden,
     label: "New user account minimum age",
     subLabel: "When enabled, bypass the minimum age requirement for new user accounts",
   });
-  items[2] = callback2(TableSwitchRow.TableSwitchRow, {
+  items[2] = React5(TableSwitchRow.TableSwitchRow, {
     onValueChange: onForceBountiesSwipeUpNuxChange,
     value: forceBountiesSwipeUpNux,
     label: "Force bounties swipe-up NUX",
     subLabel:
       "When enabled, treat bounties swipe-up NUX as shown so scroll affordances always appear. Reopen the bounties modal after toggling.",
   });
-  obj[2] = items;
-  obj[1] = callback3(TableRowGroupTitle.TableRowGroup, obj);
-  const items1 = [callback2(View, obj), , ,];
+  obj.children = items;
+  obj.children = React6(TableRowGroup.TableRowGroup, obj);
+  const items1 = [React5(View, obj), , ,];
   const obj3 = { style: tmp.headerSection, children: null };
   const obj4 = { title: "Bulk actions", hasIcons: true, children: null };
   const obj2 = {
-    onValueChange: handleDCShownToUser.overrideNewUserMinAgeRequired,
+    onValueChange: DismissibleContentFrameworkActionCreators.overrideNewUserMinAgeRequired,
     value: newUserMinAgeRequiredOverridden,
     label: "New user account minimum age",
     subLabel: "When enabled, bypass the minimum age requirement for new user accounts",
   };
   const items2 = [
-    callback2(TableRowInner.TableRow, {
+    React5(TableRow.TableRow, {
       label: "Clear all dismissed dismissible contents",
-      onPress: updateUserGuildSettings.clearDismissedContents,
-      icon: callback2(TrashIcon.TrashIcon, {}),
-      trailing: callback2(TableRowArrow.TableRowArrow, {}),
+      onPress: UserSettingsProtoActionCreators.clearDismissedContents,
+      icon: React5(TrashIcon.TrashIcon, {}),
+      trailing: React5(TableRowArrow.TableRowArrow, {}),
     }),
     ,
   ];
   const obj5 = {
     label: "Clear all dismissed dismissible contents",
-    onPress: updateUserGuildSettings.clearDismissedContents,
-    icon: callback2(TrashIcon.TrashIcon, {}),
-    trailing: callback2(TableRowArrow.TableRowArrow, {}),
+    onPress: UserSettingsProtoActionCreators.clearDismissedContents,
+    icon: React5(TrashIcon.TrashIcon, {}),
+    trailing: React5(TableRowArrow.TableRowArrow, {}),
   };
-  items2[1] = callback2(TableRowInner.TableRow, {
+  items2[1] = React5(TableRow.TableRow, {
     label: "Clear all guild dismissed dismissible contents",
-    onPress: updateUserGuildSettings.clearGuildDismissedContents,
-    icon: callback2(TrashIcon.TrashIcon, {}),
-    trailing: callback2(TableRowArrow.TableRowArrow, {}),
+    onPress: UserSettingsProtoActionCreators.clearGuildDismissedContents,
+    icon: React5(TrashIcon.TrashIcon, {}),
+    trailing: React5(TableRowArrow.TableRowArrow, {}),
   });
   const obj6 = {
     label: "Clear all guild dismissed dismissible contents",
-    onPress: updateUserGuildSettings.clearGuildDismissedContents,
-    icon: callback2(TrashIcon.TrashIcon, {}),
-    trailing: callback2(TableRowArrow.TableRowArrow, {}),
+    onPress: UserSettingsProtoActionCreators.clearGuildDismissedContents,
+    icon: React5(TrashIcon.TrashIcon, {}),
+    trailing: React5(TableRowArrow.TableRowArrow, {}),
   };
-  items2[2] = callback2(TableRowInner.TableRow, {
+  items2[2] = React5(TableRow.TableRow, {
     label: "Dismiss all dismissible contents",
-    onPress: updateUserGuildSettings.checkAllDismissedContents,
-    icon: callback2(DoubleCheckmarkIcon.DoubleCheckmarkIcon, {}),
-    trailing: callback2(TableRowArrow.TableRowArrow, {}),
+    onPress: UserSettingsProtoActionCreators.checkAllDismissedContents,
+    icon: React5(DoubleCheckmarkIcon.DoubleCheckmarkIcon, {}),
+    trailing: React5(TableRowArrow.TableRowArrow, {}),
   });
-  obj4[2] = items2;
-  obj3[1] = callback3(TableRowGroupTitle.TableRowGroup, obj4);
-  items1[1] = callback2(View, obj3);
+  obj4.children = items2;
+  obj3.children = React6(TableRowGroup.TableRowGroup, obj4);
+  items1[1] = React5(View, obj3);
   const obj7 = {
     label: "Dismiss all dismissible contents",
-    onPress: updateUserGuildSettings.checkAllDismissedContents,
-    icon: callback2(DoubleCheckmarkIcon.DoubleCheckmarkIcon, {}),
-    trailing: callback2(TableRowArrow.TableRowArrow, {}),
+    onPress: UserSettingsProtoActionCreators.checkAllDismissedContents,
+    icon: React5(DoubleCheckmarkIcon.DoubleCheckmarkIcon, {}),
+    trailing: React5(TableRowArrow.TableRowArrow, {}),
   };
-  items1[2] = callback2(View, {
+  items1[2] = React5(View, {
     style: tmp.search,
-    children: callback2(SearchField.SearchField, {
+    children: React5(SearchField.SearchField, {
       size: "md",
       defaultValue: initialSearchQuery,
       onChange: onSearchChange,
     }),
   });
-  items1[3] = callback2(Text.Text, {
+  items1[3] = React5(Text_Text.Text, {
     style: tmp.sectionHeader,
     variant: "text-sm/semibold",
     color: "text-default",
     children: "Dismissible Contents",
   });
-  obj[0] = items1;
-  return callback3(closure_9, obj);
+  obj.children = items1;
+  return React6(React7, obj);
 });
-let obj5 = { marginVertical: ThemesDefault.space.PX_32, justifyContent: "center", alignItems: "center" };
-let result = require("set").fileFinishedImporting(
+const size = fn(2);
+let result = size.fileFinishedImporting(
   "modules/devtools/native/components/screens/DevToolsDismissableContentsScreen.tsx",
 );
 
 export default function DevToolsDismissableContentsScreen() {
-  const tmp = callback4();
-  const ref = first.useRef(null);
-  importDefault = first.useRef(0);
+  const tmp = closure_10();
+  const ref = initialSearchQuery.useRef(null);
+  importDefault = initialSearchQuery.useRef(0);
   let obj = ref(9931);
   let tmp2 = useSafeAreaInsetsDefault();
-  [dependencyMap, tmp5] = callback(obj.useLocalStorageState("devtools-dc-search", ""), 2);
-  callback = tmp5;
-  first = callback(
-    first.useState(() => {
-      let str = closure_2;
-      if (closure_2 == null) {
+  [dependencyMap, tmp5] = _slicedToArray(obj.useLocalStorageState("devtools-dc-search", ""), 2);
+  _slicedToArray = tmp5;
+  initialSearchQuery = _slicedToArray(
+    initialSearchQuery.useState(() => {
+      let str = dependencyMap;
+      if (dependencyMap == null) {
         str = "";
       }
       return str;
     }),
     1,
   )[0];
-  const tmp7 = callback(
-    first.useState(() => {
-      let str = closure_2;
-      if (closure_2 == null) {
+  const tmp7 = _slicedToArray(
+    initialSearchQuery.useState(() => {
+      let str = closure_1_2;
+      if (closure_1_2 == null) {
         str = "";
       }
       const items = [];
-      for (const key10013 in ref(closure_1_2[7]).DismissibleContent) {
-        let tmp9 = key10013;
+      for (const key10013 in dismissible_content.DismissibleContent) {
         let isNaNResult = tmp;
         if (!tmp) {
-          let tmp2 = ref;
-          let tmp3 = closure_1_2;
-          let tmp4 = ref(closure_1_2[20]);
+          let tmp4 = fuzzysearchDefault;
           let formatted = str.toLowerCase();
           isNaNResult = tmp4(formatted, key10013.toLowerCase());
         }
@@ -225,14 +223,14 @@ export default function DevToolsDismissableContentsScreen() {
         }
         continue;
       }
-      const sorted = items.sort((localeCompare) => localeCompare.localeCompare(arg1));
+      const sorted = items.sort((localeCompare, arg1) => localeCompare.localeCompare(arg1));
       return items;
     }),
     2,
   );
   const first1 = tmp7[0];
   closure_6 = tmp7[1];
-  obj1 = ref(504);
+  let obj1 = ref(504);
   let items = [closure_6];
   const stateFromStoresObject = obj1.useStateFromStoresObject(items, () => ({
     dailyCapOverridden: closure_6.dailyCapOverridden,
@@ -240,41 +238,37 @@ export default function DevToolsDismissableContentsScreen() {
   }));
   const dailyCapOverridden = stateFromStoresObject.dailyCapOverridden;
   const newUserMinAgeRequiredOverridden = stateFromStoresObject.newUserMinAgeRequiredOverridden;
-  let tmp4 = callback(obj.useLocalStorageState("devtools-dc-search", ""), 2);
-  let tmp9 = callback(ref(15011).useForceBountiesSwipeUpNux(), 2);
+  let tmp4 = _slicedToArray(obj.useLocalStorageState("devtools-dc-search", ""), 2);
+  let tmp9 = _slicedToArray(ref(15011).useForceBountiesSwipeUpNux(), 2);
   const first2 = tmp9[0];
-  callback4 = tmp11;
+  closure_10 = tmp11;
   const items1 = [tmp9[1]];
-  callback = first.useCallback((arg0) => {
-    callback(arg0);
+  const onForceBountiesSwipeUpNuxChange = initialSearchQuery.useCallback((arg0) => {
+    closure_10(arg0);
     if (arg0) {
-      const result = ref(closure_1_2[25]).clearDismissedScrollAffordanceBountyIds();
-      const obj = ref(closure_1_2[25]);
+      const result = useBountiesAutoScroll.clearDismissedScrollAffordanceBountyIds();
     }
   }, items1);
-  const callback1 = first.useCallback(() => {
+  const callback1 = initialSearchQuery.useCallback(() => {
     let current = ref.current;
     const animationFrame = requestAnimationFrame(() => {
-      current = current.current;
+      current = ref.current;
       if (current != null) {
-        const obj = { offset: null, animated: false };
-        obj[0] = current;
+        const obj = { offset: current, animated: false };
         current.scrollToOffset(obj);
       }
     });
   }, []);
   const items2 = [tmp5, callback1];
-  const callback2 = first.useCallback((str) => {
+  const callback2 = initialSearchQuery.useCallback((str) => {
     let tmp5;
     tmp5(str);
     const items = [];
-    for (const key10015 in ref(closure_1_2[7]).DismissibleContent) {
-      let tmp13 = key10015;
+    for (const key10015 in dismissible_content.DismissibleContent) {
       let isNaNResult = tmp3;
       if (!tmp3) {
-        let tmp4 = ref;
-        tmp5 = closure_1_2;
-        let tmp6 = ref(closure_1_2[20]);
+        tmp5 = dependencyMap;
+        let tmp6 = fuzzysearchDefault;
         let formatted = arg0.toLowerCase();
         isNaNResult = tmp6(formatted, key10015.toLowerCase());
       }
@@ -291,35 +285,38 @@ export default function DevToolsDismissableContentsScreen() {
       }
       continue;
     }
-    const sorted = items.sort((localeCompare) => localeCompare.localeCompare(arg1));
+    const sorted = items.sort((localeCompare, arg1) => localeCompare.localeCompare(arg1));
     closure_6(items);
     callback1();
   }, items2);
-  const items3 = [dailyCapOverridden, newUserMinAgeRequiredOverridden, first2, first, callback, callback2];
-  const callback3 = first.useCallback((nativeEvent) => {
+  const items3 = [
+    dailyCapOverridden,
+    newUserMinAgeRequiredOverridden,
+    first2,
+    initialSearchQuery,
+    onForceBountiesSwipeUpNuxChange,
+    callback2,
+  ];
+  const callback3 = initialSearchQuery.useCallback((nativeEvent) => {
     closure_1.current = nativeEvent.nativeEvent.contentOffset.y;
   }, []);
   const items4 = [first1.length];
-  const memo = first.useMemo(
+  const memo = initialSearchQuery.useMemo(
     () =>
-      dailyCapOverridden(callback1, {
+      React5(closure_12, {
         dailyCapOverridden,
         newUserMinAgeRequiredOverridden,
         forceBountiesSwipeUpNux: true === first2,
-        initialSearchQuery: first,
-        onForceBountiesSwipeUpNuxChange: callback,
+        initialSearchQuery,
+        onForceBountiesSwipeUpNuxChange,
         onSearchChange: callback2,
       }),
     items3,
   );
   obj = { style: tmp.container, children: null };
-  callback4 = first.useCallback((content) => {
+  const callback4 = initialSearchQuery.useCallback((content) => {
     const index = content.index;
-    return dailyCapOverridden(callback, {
-      content: content.item,
-      start: 0 === index,
-      end: index === first1.length - 1,
-    });
+    return React5(closure_11, { content: content.item, start: 0 === index, end: index === first1.length - 1 });
   }, items4);
   obj = {
     ref,
@@ -336,16 +333,16 @@ export default function DevToolsDismissableContentsScreen() {
     scrollEventThrottle: 16,
   };
   const items5 = [tmp.contentContainer];
-  obj1 = { paddingBottom: tmp2.bottom + ThemesDefault.space.PX_16 };
+  obj1 = { paddingBottom: tmp2.bottom + nativeDefault.space.PX_16 };
   items5[1] = obj1;
-  obj[2] = items5;
-  obj[6] = memo;
-  obj[7] = callback2;
-  obj[8] = function keyExtractor(arg0) {
+  obj.contentContainerStyle = items5;
+  obj.ListHeaderComponent = memo;
+  obj.ListEmptyComponent = callback2;
+  obj.keyExtractor = function keyExtractor(arg0) {
     return arg0;
   };
-  obj[9] = callback4;
-  obj[10] = callback3;
-  obj[1] = dailyCapOverridden(ref(8874).FlashList, obj);
+  obj.renderItem = callback4;
+  obj.onScroll = callback3;
+  obj.children = dailyCapOverridden(ref(8874).FlashList, obj);
   return dailyCapOverridden(first1, obj);
 }

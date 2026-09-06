@@ -1,8 +1,8 @@
 // discord_app/modules/soundpacks/getSoundsForPack.tsx
-import set from "../../../_runtime/00002_set.js";
-import Soundpacks2 from "Constants.tsx";
+import Constants from "Constants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const Soundpacks = Soundpacks2.Soundpacks;
+const Soundpacks = Constants.Soundpacks;
 let closure_0 = {
   [Soundpacks.CLASSIC]: {
     discodo: "discodo",
@@ -60,8 +60,8 @@ let closure_0 = {
     user_leave: "winter_user_leave",
   },
 };
-const result = set.fileFinishedImporting("modules/soundpacks/getSoundsForPack.tsx");
+const result = size.fileFinishedImporting("modules/soundpacks/getSoundsForPack.tsx");
 
 export default function getSoundPack(arg0) {
-  return table[arg0];
+  return closure_0[arg0];
 }

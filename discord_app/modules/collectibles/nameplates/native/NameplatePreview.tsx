@@ -1,40 +1,42 @@
 // discord_app/modules/collectibles/nameplates/native/NameplatePreview.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../a11y/AccessibilityStore.tsx";
-import closure_6 from "../../../../stores/GuildMemberStore.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import native from "../../../../design/void/native.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
+import GuildMemberStore from "../../../../stores/GuildMemberStore.tsx";
 
-const require = arg1;
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-let closure_9 = createCacheKey.createStyles((arg0) => {
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4560);
+let closure_9 = createStyles.createStyles((arg0) => {
   let num = 0;
   if (arg0) {
-    num = ThemesDefault.radii.sm;
+    num = nativeDefault.radii.sm;
   }
   let obj = { container: null, nameplate: null, avatar: null, content: null };
   obj = {
     borderRadius: num,
-    padding: ThemesDefault.space.PX_8,
+    padding: nativeDefault.space.PX_8,
     flexDirection: "row",
     alignItems: "center",
     width: "100%",
-    backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
   };
-  obj[0] = obj;
+  obj.container = obj;
   let num2 = 0;
   if (arg0) {
     num2 = tmp3(576).radii.sm;
   }
-  obj[1] = { borderRadius: num2 };
+  obj.nameplate = { borderRadius: num2 };
   obj = { borderRadius: tmp3(576).radii.round, marginRight: tmp3(576).space.PX_8 };
-  obj[2] = obj;
-  obj[3] = { flex: 1, paddingRight: ThemesDefault.space.PX_40 };
+  obj.avatar = obj;
+  obj.content = { flex: 1, paddingRight: nativeDefault.space.PX_40 };
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/collectibles/nameplates/native/NameplatePreview.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/nameplates/native/NameplatePreview.tsx");
 
 export const NameplatePreview = function NameplatePreview(aria_hidden) {
   ({ nameplate, nameplateData, user } = aria_hidden);
@@ -48,29 +50,28 @@ export const NameplatePreview = function NameplatePreview(aria_hidden) {
   }
   const guildId = aria_hidden.guildId;
   ({ pendingDisplayNameStyles, pendingGlobalName } = aria_hidden);
-  dependencyMap = undefined;
   let stateFromStores;
   let pendingAvatarDecoration;
-  const tmp = callback2(flag);
+  const tmp = closure_9(flag);
   dependencyMap = tmp;
   if (null != nameplate) {
     let obj = user(1886);
     nameplateData = obj.getNameplateData(nameplate);
   }
-  obj1 = user(8217);
+  let obj1 = user(8217);
   const avatarDecoration = obj1.useAvatarDecoration(user, guildId);
   pendingAvatarDecoration = guildId(8159)({ guildId }).pendingAvatarDecoration;
   let obj2 = user(504);
-  const items = [closure_5];
+  const items = [AccessibilityStore];
   stateFromStores = obj2.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let obj3 = user(504);
-  const items1 = [closure_6];
+  const items1 = [GuildMemberStore];
   const stateFromStores1 = obj3.useStateFromStores(items1, () => {
     let member = null;
     if (null != guildId) {
       member = null;
       if (null != user) {
-        member = closure_1_6.getMember(tmp, tmp3.id);
+        member = GuildMemberStore.getMember(tmp, tmp3.id);
       }
     }
     return member;
@@ -106,11 +107,11 @@ export const NameplatePreview = function NameplatePreview(aria_hidden) {
   obj = { style: tmp.container, "aria-hidden": aria_hidden["aria-hidden"], children: null };
   const memo = stateFromStores.useMemo(
     () =>
-      closure_1_7(user(user[13]).Avatar, {
+      React5(native.Avatar, {
         style: user.avatar,
         user,
         guildId,
-        size: user(user[13]).AvatarSizes.NORMAL,
+        size: native.AvatarSizes.NORMAL,
         avatarDecoration: pendingAvatarDecoration,
         animate: !stateFromStores,
         autoStatusCutout: true,
@@ -119,39 +120,38 @@ export const NameplatePreview = function NameplatePreview(aria_hidden) {
     items2,
   );
   obj1 = { nameplate: nameplateData, style: tmp.nameplate, fullOpacity: true, animate: flag2 };
-  const items3 = [callback(guildId(8818), obj1), ,];
+  const items3 = [closure_7(guildId(8818), obj1), ,];
   obj2 = { style: tmp.avatar, children: memo };
-  items3[1] = callback(pendingAvatarDecoration, obj2);
+  items3[1] = closure_7(pendingAvatarDecoration, obj2);
   obj3 = { style: tmp.content, children: null };
   let tmp19Result = null != tmp15;
   if (tmp19Result) {
     obj4 = {
-      userId: null,
-      guildId: null,
-      userName: null,
+      userId: user.id,
+      guildId,
+      userName: pendingGlobalName,
       variant: "text-md/semibold",
-      effectDisplayType: null,
+      effectDisplayType: tmp4(10900).EffectDisplayType.STATIC,
       lineClamp: 1,
-      pendingDisplayNameStyles: null,
+      pendingDisplayNameStyles,
     };
-    obj4[0] = user.id;
-    obj4[1] = guildId;
-    obj4[2] = pendingGlobalName;
-    obj4[4] = tmp4(10900).EffectDisplayType.STATIC;
-    obj4[6] = pendingDisplayNameStyles;
     tmp19Result = tmp19(tmp7(10899), obj4);
     const tmp7Result = tmp7(10899);
   }
   const items4 = [tmp19Result];
   tmp19Result = null == tmp15;
   if (tmp19Result) {
-    const obj5 = { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
-    obj5[3] = pendingGlobalName;
+    const obj5 = {
+      lineClamp: 1,
+      variant: "text-md/semibold",
+      color: "mobile-text-heading-primary",
+      children: pendingGlobalName,
+    };
     tmp19Result = tmp19(tmp4(4556).Text, obj5);
   }
   items4[1] = tmp19Result;
-  obj3[1] = items4;
+  obj3.children = items4;
   items3[2] = closure_8(pendingAvatarDecoration, obj3);
-  obj[2] = items3;
+  obj.children = items3;
   return closure_8(pendingAvatarDecoration, obj);
 };

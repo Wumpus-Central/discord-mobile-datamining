@@ -1,43 +1,42 @@
 // discord_app/utils/RelationshipUtils.tsx
-import set from "../../_runtime/00002_set.js";
-import ME from "../Constants.tsx";
-import getSystemLocale from "../intl/index.native.tsx";
-import getAvatarURLDefault from "AvatarUtils.tsx";
-import _modDef15515 from "../actions/NotificationActionCreators.tsx";
+import Constants from "../Constants.tsx";
+import util from "../intl/index.native.tsx";
+import AvatarUtilsDefault from "AvatarUtils.tsx";
+import ChannelActionCreatorsDefault from "../actions/ChannelActionCreators.tsx";
+import NotificationActionCreatorsDefault from "../actions/NotificationActionCreators.tsx";
+import FriendsActionCreatorsDefault from "../actions/FriendsActionCreators.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-const FriendsSections = ME.FriendsSections;
-const result = set.fileFinishedImporting("utils/RelationshipUtils.tsx");
+const FriendsSections = Constants.FriendsSections;
+const result = size.fileFinishedImporting("utils/RelationshipUtils.tsx");
 
 export const showPendingNotification = function showPendingNotification(user) {
-  const intl = getSystemLocale.intl;
-  let obj = _modDef15515;
-  const stringResult = intl.string(getSystemLocale.t["t3+Af3"]);
-  obj = {
+  const intl = util.intl;
+  const stringResult = intl.string(util.t["t3+Af3"]);
+  const obj = {
     omitViewTracking: true,
     omitClickTracking: true,
     tag: user.id,
     onClick: () => {
-      callback(table[4]).transitionToSection(constants.PENDING, { explicit: true });
+      FriendsActionCreatorsDefault.transitionToSection(constants.PENDING, { explicit: true });
     },
     isUserAvatar: true,
   };
-  obj.showNotification(getAvatarURLDefault.getUserAvatarURL(user), user.username, stringResult, {}, obj);
+  obj.showNotification(AvatarUtilsDefault.getUserAvatarURL(user), user.username, stringResult, {}, obj);
 };
 export const showAcceptedNotification = function showAcceptedNotification(user) {
-  const _require = user;
-  const intl = require("../intl/index.native.tsx").intl;
-  let obj = _modDef15515;
-  const stringResult = intl.string(require("../intl/index.native.tsx").t.MYr3Ka);
-  obj = {
+  _require = user;
+  const intl = require("util").intl;
+  const stringResult = intl.string(require("util").t.MYr3Ka);
+  let obj = {
     omitViewTracking: true,
     omitClickTracking: true,
     tag: user.id,
     onClick: () => {
-      let obj = closure_1_1(closure_1_2[5]);
-      obj = { recipientIds: user.id };
+      const obj = { recipientIds: user.id };
       obj.openPrivateChannel(obj);
     },
     isUserAvatar: true,
   };
-  obj.showNotification(getAvatarURLDefault.getUserAvatarURL(user), user.username, stringResult, {}, obj);
+  obj.showNotification(AvatarUtilsDefault.getUserAvatarURL(user), user.username, stringResult, {}, obj);
 };

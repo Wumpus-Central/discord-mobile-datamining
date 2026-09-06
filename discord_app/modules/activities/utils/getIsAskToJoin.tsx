@@ -1,9 +1,9 @@
 // discord_app/modules/activities/utils/getIsAskToJoin.tsx
-import set from "../../../../_runtime/00002_set.js";
-import ME from "../../../Constants.tsx";
+import Constants from "../../../Constants.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const ActivityActionTypes = ME.ActivityActionTypes;
-const result = set.fileFinishedImporting("modules/activities/utils/getIsAskToJoin.tsx");
+const ActivityActionTypes = Constants.ActivityActionTypes;
+const result = size.fileFinishedImporting("modules/activities/utils/getIsAskToJoin.tsx");
 
 export const getIsAskToJoin = function getIsAskToJoin(message) {
   const activity = message.activity;

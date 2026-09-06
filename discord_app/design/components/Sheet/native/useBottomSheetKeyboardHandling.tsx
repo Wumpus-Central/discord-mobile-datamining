@@ -1,35 +1,35 @@
 // discord_app/design/components/Sheet/native/useBottomSheetKeyboardHandling.tsx
-import closure_2 from "../../../../../_runtime/00019_noop.js";
+import BottomSheetModal from "../../../../../_runtime/06627_BottomSheetModal.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("design/components/Sheet/native/useBottomSheetKeyboardHandling.tsx");
+require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting("design/components/Sheet/native/useBottomSheetKeyboardHandling.tsx");
 
 export default function useBottomSheetKeyboardHandling(onFocus) {
   onFocus = onFocus.onFocus;
   const onBlur = onFocus.onBlur;
-  let bottomSheetInternal;
-  bottomSheetInternal = onFocus(onBlur[1]).useBottomSheetInternal(true);
+  const bottomSheetInternal = BottomSheetModal.useBottomSheetInternal(true);
   const items = [bottomSheetInternal, onBlur, onFocus];
-  return bottomSheetInternal.useMemo(() => {
+  return noop.useMemo(() => {
     if (null == bottomSheetInternal) {
-      let obj = { onFocus: null, onBlur: null };
-      obj[0] = onFocus;
-      obj[1] = onBlur;
+      let obj = { onFocus, onBlur };
     } else {
-      obj = { onFocus: null, onBlur: null };
-      obj[0] = function onFocus(arg0) {
-        const shouldHandleKeyboardEvents = closure_2.shouldHandleKeyboardEvents;
-        const result = shouldHandleKeyboardEvents.set(true);
-        if (closure_0 != null) {
-          tmp2(arg0);
-        }
-      };
-      obj[1] = function onBlur(arg0) {
-        const shouldHandleKeyboardEvents = closure_2.shouldHandleKeyboardEvents;
-        const result = shouldHandleKeyboardEvents.set(false);
-        if (closure_1 != null) {
-          tmp2(arg0);
-        }
+      obj = {
+        onFocus(arg0) {
+          const shouldHandleKeyboardEvents = bottomSheetInternal.shouldHandleKeyboardEvents;
+          const result = shouldHandleKeyboardEvents.set(true);
+          if (onFocus != null) {
+            tmp2(arg0);
+          }
+        },
+        onBlur(arg0) {
+          const shouldHandleKeyboardEvents = bottomSheetInternal.shouldHandleKeyboardEvents;
+          const result = shouldHandleKeyboardEvents.set(false);
+          if (onBlur != null) {
+            tmp2(arg0);
+          }
+        },
       };
     }
     return obj;

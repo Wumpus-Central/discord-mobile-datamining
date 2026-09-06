@@ -1,11 +1,11 @@
 // discord_app/modules/game_profile/GameProfileActionCreators.native.tsx
-import set from "../../../_runtime/00002_set.js";
 import _modDef38 from "../../../_runtime/metro/00038__.js";
-import dispatcherDefault from "../../Dispatcher.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
 import asyncRequireImpl from "../../../_runtime/01896_asyncRequireImpl.js";
-import ACTION_SHEET_HEIGHT_HALFDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
+import ActionSheetActionCreatorsDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/game_profile/GameProfileActionCreators.native.tsx");
+const result = size.fileFinishedImporting("modules/game_profile/GameProfileActionCreators.native.tsx");
 
 export default {
   openGameProfileModal(arg0) {
@@ -19,16 +19,14 @@ export default {
       gameProfileModalChecks.gameId === gameId,
       "Passed an unexpected [gameId]. Are you passing a different one than you passed to useShouldOpenGameProfileModal?",
     );
-    let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-    obj = { gameId, source, sourceUserId };
+    const obj = { gameId, source, sourceUserId };
     obj.openLazy(asyncRequireImpl(8681, dependencyMap.paths), "game-profile-" + gameId, obj, stackingBehavior);
   },
   returnToGameProfile(gameId) {
     gameId = gameId.gameId;
     ({ source, initialScrollOffset } = gameId);
-    dispatcherDefault.dispatch({ type: "GAME_PROFILE_CLEAR_PENDING_RETURN", gameId });
-    const obj = dispatcherDefault;
-    const obj2 = ACTION_SHEET_HEIGHT_HALFDefault;
+    DispatcherDefault.dispatch({ type: "GAME_PROFILE_CLEAR_PENDING_RETURN", gameId });
+    const obj2 = ActionSheetActionCreatorsDefault;
     obj2.openLazy(asyncRequireImpl(8681, dependencyMap.paths), "game-profile-" + gameId, {
       gameId,
       source,
@@ -37,11 +35,10 @@ export default {
   },
   setGameProfilePendingReturn(arg0) {
     ({ gameId, channelId, initialScrollOffset } = arg0);
-    dispatcherDefault.dispatch({ type: "GAME_PROFILE_SET_PENDING_RETURN", gameId, channelId, initialScrollOffset });
+    DispatcherDefault.dispatch({ type: "GAME_PROFILE_SET_PENDING_RETURN", gameId, channelId, initialScrollOffset });
   },
   clearGameProfilePendingReturn(id) {
-    let obj = dispatcherDefault;
-    obj = { type: "GAME_PROFILE_CLEAR_PENDING_RETURN", gameId: id };
+    const obj = { type: "GAME_PROFILE_CLEAR_PENDING_RETURN", gameId: id };
     obj.dispatch(obj);
   },
 };

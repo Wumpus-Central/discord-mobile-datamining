@@ -1,6 +1,6 @@
 // discord_app/modules/share/ShareConstants.tsx
-import set from "../../../_runtime/00002_set.js";
 import sortByMatchScore from "../autocompleter/index.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const items = [
   sortByMatchScore.AutocompleterResultTypes.USER,
@@ -8,10 +8,10 @@ const items = [
   sortByMatchScore.AutocompleterResultTypes.VOICE_CHANNEL,
   sortByMatchScore.AutocompleterResultTypes.GROUP_DM,
 ];
-const arr = Array.from(items);
-const result = set.fileFinishedImporting("modules/share/ShareConstants.tsx");
+const ALLOWED_TYPES = Array.from(items);
+const result = size.fileFinishedImporting("modules/share/ShareConstants.tsx");
 
-export const ALLOWED_TYPES = arr;
+export { ALLOWED_TYPES };
 export const isAllowedType = function isAllowedType(type) {
   return arr.includes(type.type);
 };

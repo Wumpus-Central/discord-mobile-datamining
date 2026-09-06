@@ -1,17 +1,18 @@
 // discord_app/modules/app_launcher/native/screens/application_view/app/sort/CommandListSortActionSheet.tsx
-import noopAll from "../../../../../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../../../../../intl/index.native.tsx";
-import context from "../../../../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
-import RedesignBottomSheetTitleHeaderBase from "../../../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
-import Background from "../../../../../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import nativeDefault from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../../../../intl/index.native.tsx";
+import TableRadioGroup from "../../../../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
+import TableRadioRow from "../../../../../../../design/components/TableRow/native/TableRadioRow.native.tsx";
+import BottomSheetTitleHeader from "../../../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
+import Sheet_BottomSheet from "../../../../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import ArrowsUpDownIcon from "../../../../../../../design/components/Icon/native/redesign/generated/ArrowsUpDownIcon.tsx";
-import { CommandListSortOrder } from "../../../../../AppLauncherConstants.tsx";
-import { jsx } from "../../../../../../../../_runtime/react/00021_jsxProd.js";
+import noop from "../../../../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting(
+require = fn;
+const CommandListSortOrder = fn(12135).CommandListSortOrder;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/app_launcher/native/screens/application_view/app/sort/CommandListSortActionSheet.tsx",
 );
 
@@ -19,45 +20,45 @@ export default function CommandListSortActionSheet(sortOrder) {
   ({ onClose: require, onSortOptionPress: importDefault } = sortOrder);
   let obj = { startExpanded: true, header: null, children: null };
   obj = { leading: null, title: null };
-  obj = { size: "sm", color: ThemesDefault.colors.TEXT_DEFAULT };
-  obj[0] = jsx(ArrowsUpDownIcon.ArrowsUpDownIcon, { size: "sm", color: ThemesDefault.colors.TEXT_DEFAULT });
-  const intl = getSystemLocale.intl;
-  obj[1] = intl.string(getSystemLocale.t.yeYaHf);
-  obj[1] = jsx(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, {
+  obj = { size: "sm", color: nativeDefault.colors.TEXT_DEFAULT };
+  obj.leading = jsx(ArrowsUpDownIcon.ArrowsUpDownIcon, { size: "sm", color: nativeDefault.colors.TEXT_DEFAULT });
+  const intl = util.intl;
+  obj.title = intl.string(util.t.yeYaHf);
+  obj.header = jsx(BottomSheetTitleHeader.BottomSheetTitleHeader, {
     size: "sm",
-    color: ThemesDefault.colors.TEXT_DEFAULT,
+    color: nativeDefault.colors.TEXT_DEFAULT,
   });
-  obj1 = {
+  const obj1 = {
     hasIcons: false,
     value: sortOrder.sortOrder,
     onChange(arg0) {
-      callback2(arg0);
-      callback();
+      importDefault(arg0);
+      require();
     },
     children: null,
   };
   const obj2 = { label: null, value: null };
-  const intl2 = getSystemLocale.intl;
-  obj2[0] = intl2.string(getSystemLocale.t.SzxiqK);
-  obj2[1] = CommandListSortOrder.POPULAR;
+  const intl2 = util.intl;
+  obj2.label = intl2.string(util.t.SzxiqK);
+  obj2.value = CommandListSortOrder.POPULAR;
   const items = [obj2];
   const obj3 = { label: null, value: null };
-  const intl3 = getSystemLocale.intl;
-  obj3[0] = intl3.string(getSystemLocale.t.m8xsti);
-  obj3[1] = CommandListSortOrder.ALPHABETICAL;
+  const intl3 = util.intl;
+  obj3.label = intl3.string(util.t.m8xsti);
+  obj3.value = CommandListSortOrder.ALPHABETICAL;
   items[1] = obj3;
-  obj1[3] = items.map((label) => {
-    const value = label.value;
-    return callback3(callback(table[9]).TableRadioRow, { label: label.label, value }, value);
+  obj1.children = items.map((label) => {
+    value = label.value;
+    return jsx(TableRadioRow.TableRadioRow, { label: label.label, value }, value);
   });
-  obj[2] = jsx(context.TableRadioGroup, {
+  obj.children = jsx(TableRadioGroup.TableRadioGroup, {
     hasIcons: false,
     value: sortOrder.sortOrder,
     onChange(arg0) {
-      callback2(arg0);
-      callback();
+      importDefault(arg0);
+      require();
     },
     children: null,
   });
-  return jsx(Background.BottomSheet, { size: "sm", color: ThemesDefault.colors.TEXT_DEFAULT });
+  return jsx(Sheet_BottomSheet.BottomSheet, { size: "sm", color: nativeDefault.colors.TEXT_DEFAULT });
 }

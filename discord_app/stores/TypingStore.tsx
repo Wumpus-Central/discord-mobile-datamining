@@ -1,13 +1,12 @@
 // discord_app/stores/TypingStore.tsx
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../Dispatcher.tsx";
-import setDefault from "../utils/Durations.tsx";
-import closure_4 from "AuthenticationStore.tsx";
-import closure_5 from "ChannelStore.tsx";
-import { SlowmodeType } from "SlowmodeStore.tsx";
-import { Endpoints } from "../Constants.tsx";
+import DispatcherDefault from "../Dispatcher.tsx";
+import DurationsDefault from "../utils/Durations.tsx";
+import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import AuthenticationStore from "AuthenticationStore.tsx";
+import ChannelStore from "ChannelStore.tsx";
 
-const require = arg1;
+require = fn;
 function handleTypingStart(arg0) {
   ({ channelId, userId, guildId, customTypingIndicatorConfig } = arg0);
   let tmp = dependencyMap[channelId];
@@ -18,8 +17,7 @@ function handleTypingStart(arg0) {
   const merged = Object.assign(tmp);
   clearTimeout(obj[userId]);
   const timerId = setTimeout(() => {
-    let obj = userId(guildId[7]);
-    obj = { type: "TYPING_STOP", channelId, userId, guildId };
+    const obj = { type: "TYPING_STOP", channelId, userId, guildId };
     obj.dispatch(obj);
   }, closure_8);
   obj[userId] = timerId;
@@ -88,13 +86,14 @@ function handleTypingStop(arg0) {
           }
         }
       }
-      if (userId in obj1) {
+      if (userId in closure_12) {
         const _Object3 = Object;
         const values = Object.values(dependencyMap);
-        if (!values.some((arg0) => userId in arg0)) {
-          obj1 = {};
-          const merged3 = Object.assign(obj1);
+        if (!values.some((item) => userId in item)) {
+          const obj1 = {};
+          const merged3 = Object.assign(closure_12);
           delete tmp[tmp2];
+          closure_12 = obj1;
         }
       }
     }
@@ -106,10 +105,12 @@ function handleConnectionOpen() {
   closure_11 = {};
   closure_12 = {};
 }
-let closure_8 = 10 * setDefault.Millis.SECOND;
-let closure_9 = 1.5 * setDefault.Millis.SECOND;
-let closure_10 = {};
-let closure_11 = {};
+const SlowmodeType = fn(7687).SlowmodeType;
+const Endpoints = fn(1074).Endpoints;
+let closure_8 = 10 * DurationsDefault.Millis.SECOND;
+let closure_9 = 1.5 * DurationsDefault.Millis.SECOND;
+const dependencyMap = {};
+const dependencyMap2 = {};
 let closure_12 = {};
 let closure_13 = Object.freeze({});
 let closure_14 = Object.freeze({});
@@ -117,7 +118,7 @@ const Store = initializeDefault.Store;
 class TypingStore extends Store {}
 const prototype = TypingStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_4, closure_5);
+  this.waitFor(AuthenticationStore, ChannelStore);
 };
 prototype["getTypingUsers"] = function getTypingUsers(channelId) {
   let tmp = dependencyMap[channelId];
@@ -126,35 +127,34 @@ prototype["getTypingUsers"] = function getTypingUsers(channelId) {
   }
   return tmp;
 };
-prototype["getTypingUsersByGuild"] = function getTypingUsersByGuild(closure_0) {
-  let tmp = dependencyMap2[closure_0];
+prototype["getTypingUsersByGuild"] = function getTypingUsersByGuild(arg0) {
+  let tmp = dependencyMap2[arg0];
   if (tmp == null) {
     tmp = closure_14;
   }
   return tmp;
 };
-prototype["isTyping"] = function isTyping(id, id2) {
-  let tmp = dependencyMap[id];
+prototype["isTyping"] = function isTyping(isStage, id) {
+  let tmp = dependencyMap[isStage];
   if (tmp == null) {
     tmp = closure_13;
   }
-  return null != tmp[id2];
+  return null != tmp[id];
 };
 prototype["getCustomTypingIndicatorConfig"] = function getCustomTypingIndicatorConfig(arg0) {
-  let tmp = table[arg0];
+  let tmp = closure_12[arg0];
   if (tmp == null) {
     tmp = null;
   }
   return tmp;
 };
 TypingStore.displayName = "TypingStore";
-const typingStore = new TypingStore(dispatcherDefault, {
+const typingStore = new TypingStore(DispatcherDefault, {
   TYPING_START: handleTypingStart,
   TYPING_STOP: handleTypingStop,
   TYPING_START_LOCAL: function handleTypingStartLocal(channelId) {
     channelId = channelId.channelId;
-    let id;
-    id = store.getId();
+    const id = AuthenticationStore.getId();
     if (null == id) {
       return false;
     } else if (channelId === channelId(7221).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
@@ -183,107 +183,106 @@ const typingStore = new TypingStore(dispatcherDefault, {
         num3 = 0;
       }
       const _setTimeout = setTimeout;
-      obj = { channelId: null, timeout: null, prevSend: null };
-      obj[0] = channelId;
-      obj[1] = setTimeout(() => {
-        let tmp = null != obj;
-        if (tmp) {
-          tmp = obj.channelId === channelId;
-        }
-        if (tmp) {
-          tmp = id === closure_1_4.getId();
-        }
-        if (tmp) {
-          tmp = null != obj.timeout;
-        }
-        if (tmp) {
-          obj.timeout = null;
-          let tmp10 = closure_1_10[channelId];
-          if (tmp10 == null) {
-            tmp10 = closure_1_13;
+      obj = {
+        channelId,
+        timeout: setTimeout(() => {
+          let tmp = null != c3;
+          if (tmp) {
+            tmp = c3.channelId === channelId;
           }
-          let num = 0;
-          if (tmp10 !== closure_1_13) {
-            const _Object = Object;
-            num = Object.keys(tmp10).length;
+          if (tmp) {
+            tmp = id === AuthenticationStore.getId();
           }
-          if (num <= 5) {
-            const HTTP = channelId(closure_1_2[6]).HTTP;
-            obj = { url: null, oldFormErrors: true, rejectWithError: true };
-            obj[0] = closure_1_7.TYPING(tmp8);
-            HTTP.post(obj).then((status) => {
-              if (200 === status.status) {
-                let num = status.body.message_send_cooldown_ms;
-                if (num == null) {
-                  num = 0;
-                }
-                let num2 = status.body.thread_create_cooldown_ms;
-                if (num2 == null) {
-                  num2 = 0;
-                }
-                if (num > 0) {
-                  obj = closure_1_1(closure_1_2[7]);
-                  obj = { type: "SLOWMODE_SET_COOLDOWN", channelId: null, slowmodeType: null, cooldownMs: null };
-                  obj[1] = closure_0;
-                  obj[2] = closure_1_6.SendMessage;
-                  obj[3] = num;
-                  obj.dispatch(obj);
-                }
-                if (num2 > 0) {
-                  obj = { type: "SLOWMODE_SET_COOLDOWN", channelId: null, slowmodeType: null, cooldownMs: null };
-                  obj[1] = closure_0;
-                  obj[2] = closure_1_6.CreateThread;
-                  obj[3] = num2;
-                  closure_1_1(closure_1_2[7]).dispatch(obj);
-                  const obj3 = closure_1_1(closure_1_2[7]);
-                }
-              }
-            });
-            const postResult = HTTP.post(obj);
+          if (tmp) {
+            tmp = null != c3.timeout;
           }
-          tmp8 = channelId;
-        }
-      }, num3);
-      obj[2] = timestamp;
-      obj = { channelId: null, userId: null, guildId: null };
-      obj[0] = channelId;
-      obj[1] = id;
-      const channel = store2.getChannel(channelId);
+          if (tmp) {
+            c3.timeout = null;
+            let tmp10 = closure_10[channelId];
+            if (tmp10 == null) {
+              tmp10 = closure_13;
+            }
+            let num = 0;
+            if (tmp10 !== closure_13) {
+              const _Object = Object;
+              num = Object.keys(tmp10).length;
+            }
+            if (num <= 5) {
+              const HTTP = HTTPUtils.HTTP;
+              obj = { url: Endpoints.TYPING(tmp8), oldFormErrors: true, rejectWithError: true };
+              HTTP.post(obj).then((status) => {
+                if (200 === status.status) {
+                  let num = status.body.message_send_cooldown_ms;
+                  if (num == null) {
+                    num = 0;
+                  }
+                  let num2 = status.body.thread_create_cooldown_ms;
+                  if (num2 == null) {
+                    num2 = 0;
+                  }
+                  if (num > 0) {
+                    id(573);
+                    obj = {
+                      type: "SLOWMODE_SET_COOLDOWN",
+                      channelId,
+                      slowmodeType: SlowmodeType.SendMessage,
+                      cooldownMs: num,
+                    };
+                    obj.dispatch(obj);
+                  }
+                  if (num2 > 0) {
+                    obj = {
+                      type: "SLOWMODE_SET_COOLDOWN",
+                      channelId,
+                      slowmodeType: SlowmodeType.CreateThread,
+                      cooldownMs: num2,
+                    };
+                    id(573).dispatch(obj);
+                    const obj3 = id(573);
+                  }
+                }
+              });
+              const postResult = HTTP.post(obj);
+            }
+            tmp8 = channelId;
+          }
+        }, num3),
+        prevSend: timestamp,
+      };
+      obj = { channelId, userId: id, guildId: null };
+      const channel = ChannelStore.getChannel(channelId);
       let guildId;
       if (channel != null) {
         guildId = channel.getGuildId();
       }
-      obj[2] = guildId;
+      obj.guildId = guildId;
       handleTypingStart(obj);
     }
   },
   TYPING_STOP_LOCAL: function handleTypingStopLocal(channelId) {
     channelId = channelId.channelId;
-    const id = store.getId();
+    const id = AuthenticationStore.getId();
     let tmp2 = null != id;
     if (tmp2) {
-      let tmp10Result = null != config;
+      let tmp10Result = null != _null;
       if (tmp10Result) {
-        tmp10Result = config.channelId === channelId;
+        tmp10Result = _null.channelId === channelId;
       }
       if (tmp10Result) {
-        tmp10Result = null != config.timeout;
+        tmp10Result = null != _null.timeout;
       }
       if (tmp10Result) {
         const _clearTimeout = clearTimeout;
-        clearTimeout(config.timeout);
-        config = null;
-        const obj = { channelId: null, userId: null, guildId: null };
-        obj[0] = channelId;
-        obj[1] = id;
-        const channel = store2.getChannel(channelId);
+        clearTimeout(_null.timeout);
+        _null = null;
+        const obj = { channelId, userId: id, guildId: null };
+        const channel = ChannelStore.getChannel(channelId);
         let guildId;
         if (channel != null) {
           guildId = channel.getGuildId();
         }
-        obj[2] = guildId;
+        obj.guildId = guildId;
         tmp10Result = handleTypingStop(obj);
-        const tmp10 = handleTypingStop;
       }
       tmp2 = tmp10Result;
     }
@@ -295,35 +294,33 @@ const typingStore = new TypingStore(dispatcherDefault, {
     ({ channelId, guildId } = message);
     const author = message.message.author;
     if (message.optimistic) {
-      if (null != config) {
-        if (config.channelId === channelId) {
-          if (null != config.timeout) {
+      if (null != _null) {
+        if (_null.channelId === channelId) {
+          if (null != _null.timeout) {
             const _clearTimeout = clearTimeout;
-            clearTimeout(config.timeout);
+            clearTimeout(_null.timeout);
           }
-          config = null;
+          _null = null;
         }
       }
     }
     let tmp9Result = null != author;
     if (tmp9Result) {
-      const obj = { channelId: null, userId: null, guildId: null };
-      obj[0] = channelId;
-      obj[1] = author.id;
+      const obj = { channelId, userId: author.id, guildId: null };
       if (guildId == null) {
-        const channel = store2.getChannel(channelId);
+        const channel = ChannelStore.getChannel(channelId);
         guildId = undefined;
         if (channel != null) {
           guildId = channel.getGuildId();
         }
       }
-      obj[2] = guildId;
+      obj.guildId = guildId;
       tmp9Result = handleTypingStop(obj);
-      const tmp9 = handleTypingStop;
     }
     return tmp9Result;
   },
 });
-let result = require("set").fileFinishedImporting("stores/TypingStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("stores/TypingStore.tsx");
 
 export default typingStore;

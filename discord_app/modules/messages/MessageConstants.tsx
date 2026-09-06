@@ -1,10 +1,10 @@
 // discord_app/modules/messages/MessageConstants.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
-import setDefault from "../../utils/Durations.tsx";
-import importDefaultResult from "../../../discord_common/js/packages/backoff/Backoff.tsx";
+import Constants from "../../Constants.tsx";
+import DurationsDefault from "../../utils/Durations.tsx";
+import Backoff from "../../../discord_common/js/packages/backoff/Backoff.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const ChannelStreamTypes = ME.ChannelStreamTypes;
+const ChannelStreamTypes = Constants.ChannelStreamTypes;
 let obj = { timeout: null, backoff: null, retries: 8 };
 obj = { response: null, deadline: null };
 const frozen = Object.freeze({
@@ -20,13 +20,13 @@ const frozen = Object.freeze({
   moreUtilities: false,
   contextMenu: false,
 });
-obj[0] = 10 * setDefault.Millis.SECOND;
-obj[1] = setDefault.Millis.MINUTE;
-obj[0] = obj;
-const result = 0.5 * setDefault.Millis.SECOND;
-importDefaultResult = new importDefaultResult(result, 60 * setDefault.Millis.SECOND);
-obj[1] = importDefaultResult;
-const result1 = set.fileFinishedImporting("modules/messages/MessageConstants.tsx");
+obj.response = 10 * DurationsDefault.Millis.SECOND;
+obj.deadline = DurationsDefault.Millis.MINUTE;
+obj.timeout = obj;
+const result = 0.5 * DurationsDefault.Millis.SECOND;
+Backoff = new Backoff(result, 60 * DurationsDefault.Millis.SECOND);
+obj.backoff = Backoff;
+const result1 = size.fileFinishedImporting("modules/messages/MessageConstants.tsx");
 
 export const MESSAGE_GROUP_SPACING = [0, 4, 8, 16, 24];
 export const DEFAULT_COZY_SPACING = 16;

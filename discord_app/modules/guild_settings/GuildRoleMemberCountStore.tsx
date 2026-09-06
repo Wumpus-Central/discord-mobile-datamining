@@ -1,8 +1,8 @@
 // discord_app/modules/guild_settings/GuildRoleMemberCountStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
 
-let closure_0 = {};
+const dependencyMap = {};
 let closure_1 = {};
 const Store = initializeDefault.Store;
 class GuildRoleMemberCountStore extends Store {}
@@ -27,7 +27,7 @@ prototype["shouldFetch"] = function shouldFetch(arg0) {
   }
 };
 GuildRoleMemberCountStore.displayName = "GuildRoleMemberCountStore";
-const guildRoleMemberCountStore = new GuildRoleMemberCountStore(dispatcherDefault, {
+const guildRoleMemberCountStore = new GuildRoleMemberCountStore(DispatcherDefault, {
   GUILD_ROLE_MEMBER_COUNT_FETCH_SUCCESS: function handleGuildRoleMemberCountFetchSuccess(guildId) {
     guildId = guildId.guildId;
     closure_0[guildId] = guildId.roleMemberCount;
@@ -87,6 +87,7 @@ const guildRoleMemberCountStore = new GuildRoleMemberCountStore(dispatcherDefaul
     delete tmp2[tmp];
   },
 });
-const result = require("set").fileFinishedImporting("modules/guild_settings/GuildRoleMemberCountStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_settings/GuildRoleMemberCountStore.tsx");
 
 export default guildRoleMemberCountStore;

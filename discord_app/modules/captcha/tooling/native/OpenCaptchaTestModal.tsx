@@ -1,20 +1,20 @@
 // discord_app/modules/captcha/tooling/native/OpenCaptchaTestModal.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import _modDef4763 from "../../../../actions/ModalActionCreators.tsx";
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/captcha/tooling/native/OpenCaptchaTestModal.tsx");
+const require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/captcha/tooling/native/OpenCaptchaTestModal.tsx");
 
 export const showCaptchaTestModal = function showCaptchaTestModal() {
-  _modDef4763.pushLazy(
-    callback(function* () {
+  ModalActionCreatorsDefault.pushLazy(
+    asyncGeneratorStep(async () => {
       closure_0 = tmp2;
-      yield closure_1_0(paths[5])(paths[4], paths.paths);
-      closure_0 = arg1.default;
-      return () => closure_1_4(closure_0, {});
+      await require("asyncRequireImpl")(paths[4], paths.paths);
+      closure_128_0 = arg1.default;
+      return () => closure_2_4(closure_1_0, {});
     }),
   );
 };

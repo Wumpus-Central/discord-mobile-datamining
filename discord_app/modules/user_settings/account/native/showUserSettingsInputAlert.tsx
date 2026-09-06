@@ -1,40 +1,40 @@
 // discord_app/modules/user_settings/account/native/showUserSettingsInputAlert.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import _modDef4905 from "../../../../actions/native/AlertActionCreators.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import util from "../../../../intl/index.native.tsx";
+import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js";
+import actions_AlertActionCreatorsDefault from "../../../../actions/native/AlertActionCreators.tsx";
+import common_AlertDefault from "../../../../components_native/common/Alert.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting(
-  "modules/user_settings/account/native/showUserSettingsInputAlert.tsx",
-);
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/account/native/showUserSettingsInputAlert.tsx");
 
 export default function showUserSettingsInputAlert(arg0) {
   ({ onSubmit: require, onSuccess: importDefault, onError: dependencyMap } = arg0);
-  closure_3 = Object.assign(arg0, Object.create(null));
-  let obj = _modDef4905;
-  obj = {
+  closure_3 = Object.assign(arg0, Object.assign({ onSubmit: 0, onSuccess: 0, onError: 0 }));
+  let obj = {
     importer() {
-      return closure_1_0(closure_1_2[4])(closure_1_2[3], closure_1_2.paths).then((arg0) => {
-        closure_0 = arg0.default;
+      return asyncRequireImpl(14797, dependencyMap.paths).then((result) => {
+        closure_0 = result.default;
         return (arg0) => {
           const obj = {};
           const merged = Object.assign(arg0);
-          const merged1 = Object.assign(closure_1_3);
-          const intl = closure_2_0(closure_2_2[5]).intl;
-          obj.cancelText = intl.string(closure_2_0(closure_2_2[5]).t["ETE/oC"]);
-          const intl2 = closure_2_0(closure_2_2[5]).intl;
-          obj.confirmText = intl2.string(closure_2_0(closure_2_2[5]).t.BddRzS);
-          if (null != closure_1_3.confirmColor) {
-            let RED = closure_1_3.confirmColor;
+          const merged1 = Object.assign(confirmColor);
+          const intl = util.intl;
+          obj.cancelText = intl.string(util.t["ETE/oC"]);
+          const intl2 = util.intl;
+          obj.confirmText = intl2.string(util.t.BddRzS);
+          if (null != confirmColor.confirmColor) {
+            let RED = confirmColor.confirmColor;
           } else {
-            RED = closure_2_1(closure_2_2[6]).Colors.RED;
+            RED = common_AlertDefault.Colors.RED;
           }
           obj.confirmColor = RED;
-          obj.onSubmit = closure_0;
-          obj.onSuccess = closure_1_1;
-          obj.onError = closure_1_2;
-          return closure_2_3(closure_0, obj);
+          obj.onSubmit = onSubmit;
+          obj.onSuccess = onSuccess;
+          obj.onError = onError;
+          return closure_3(closure_0, obj);
         };
       });
     },

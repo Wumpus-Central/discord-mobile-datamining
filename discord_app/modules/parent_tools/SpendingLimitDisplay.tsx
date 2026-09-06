@@ -1,29 +1,27 @@
 // discord_app/modules/parent_tools/SpendingLimitDisplay.tsx
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import messagesProxyDefault from "FamilyCenter.messages.js";
-import formatSingleCurrencyPrice from "../../utils/PriceUtils.tsx";
-import spendingLimitEqual from "SpendingLimitUtils.tsx";
-import closure_3 from "../user_settings/UserSettingsProtoStore.tsx";
-import closure_4 from "FamilyCenterStore.tsx";
-import { SubscriptionIntervalTypes } from "../premium/PremiumConstants.tsx";
+import _modDef2396 from "FamilyCenter.messages.js";
+import PriceUtils from "../../utils/PriceUtils.tsx";
+import SpendingLimitUtils from "SpendingLimitUtils.tsx";
+import UserSettingsProtoStore from "../user_settings/UserSettingsProtoStore.tsx";
+import FamilyCenterStore from "FamilyCenterStore.tsx";
 
-require = arg1;
-function getSpendingLimitDisplayState(amount) {
+require = fn;
+function getSpendingLimitDisplayState(amount, arg1) {
   if (null == amount) {
     return { kind: "off" };
   } else if (0 === amount.amount) {
     return { kind: "blocked" };
   } else {
     const currency = amount.currency;
-    const obj6 = formatSingleCurrencyPrice;
+    const obj6 = PriceUtils;
     const formatRateResult = obj6.formatRate(
-      formatSingleCurrencyPrice.formatPrice(amount.amount, currency),
+      PriceUtils.formatPrice(amount.amount, currency),
       SubscriptionIntervalTypes.MONTH,
       1,
     );
     if (arg1 >= amount.amount) {
-      let obj = { kind: "spent", monthlyText: null };
-      obj[1] = formatRateResult;
+      let obj = { kind: "spent", monthlyText: formatRateResult };
       return obj;
     } else {
       let num = tmp5(7235).CurrencyExponents[amount.currency];
@@ -32,26 +30,24 @@ function getSpendingLimitDisplayState(amount) {
       }
       const diff = amount.amount - arg1;
       if (diff <= 10 * 10 ** num) {
-        obj = { kind: "close-to-limit", monthlyText: null, remainingText: null };
-        obj[1] = formatRateResult;
+        obj = { kind: "close-to-limit", monthlyText: formatRateResult, remainingText: null };
         const intl = tmp5(1114).intl;
-        obj1 = { amount: null };
-        obj1[0] = tmp5(7234).formatPrice(diff, currency);
-        obj[2] = intl.formatToPlainString(messagesProxyDefault["+Q+bU1"], obj1);
+        const obj1 = { amount: tmp5(7234).formatPrice(diff, currency) };
+        obj.remainingText = intl.formatToPlainString(_modDef2396["+Q+bU1"], obj1);
         const tmp5Result = tmp5(7234);
       } else {
-        obj = { kind: "on", monthlyText: null };
-        obj[1] = formatRateResult;
+        obj = { kind: "on", monthlyText: formatRateResult };
       }
       return obj;
     }
-    const obj7 = formatSingleCurrencyPrice;
   }
 }
-const result = require("set").fileFinishedImporting("modules/parent_tools/SpendingLimitDisplay.tsx");
+const SubscriptionIntervalTypes = fn(1373).SubscriptionIntervalTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/SpendingLimitDisplay.tsx");
 
 export const useSpendingLimitFromUserSettings = function useSpendingLimitFromUserSettings() {
-  const items = [closure_3];
+  const items = [UserSettingsProtoStore];
   return initialize.useStateFromStores(
     items,
     () => {
@@ -67,20 +63,20 @@ export const useSpendingLimitFromUserSettings = function useSpendingLimitFromUse
       if (null != oneTimePurchaseLimit) {
         const obj = { amount: null, currency: null };
         const _Number = Number;
-        obj[0] = Number(oneTimePurchaseLimit.amount);
-        obj[1] = oneTimePurchaseLimit.currency;
+        obj.amount = Number(oneTimePurchaseLimit.amount);
+        obj.currency = oneTimePurchaseLimit.currency;
         tmp2 = obj;
       }
       return tmp2;
     },
     undefined,
-    spendingLimitEqual.spendingLimitEqual,
+    SpendingLimitUtils.spendingLimitEqual,
   );
 };
 export const CLOSE_TO_LIMIT_THRESHOLD_MAJOR_UNITS = 10;
 export { getSpendingLimitDisplayState };
 export const useSpendingLimitDisplayState = function useSpendingLimitDisplayState(cap) {
-  const items = [closure_4];
+  const items = [FamilyCenterStore];
   const stateFromStores = initialize.useStateFromStores(items, () => monthlyPurchases.getMonthlyPurchases());
   let num;
   if (stateFromStores != null) {

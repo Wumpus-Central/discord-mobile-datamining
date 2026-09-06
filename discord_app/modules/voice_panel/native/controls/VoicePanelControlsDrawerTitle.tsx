@@ -1,12 +1,17 @@
 // discord_app/modules/voice_panel/native/controls/VoicePanelControlsDrawerTitle.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { StyleSheet } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
+import NativeViewDefault from "../../../core/native/NativeView.tsx";
+import VoicePanelHeaderGlassBlurDefault from "../shared/VoicePanelHeaderGlassBlur.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-({ jsx: c4, jsxs: c5 } = jsxProd);
+const Text_Text = tmp2(4556);
+const ReanimatedNativeViewDefault = tmp7(7073);
+require = fn;
+const StyleSheet = fn(17).StyleSheet;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+fn(4560);
 let obj = {
   titleWrapper: {
     position: "absolute",
@@ -16,36 +21,37 @@ let obj = {
     justifyContent: "center",
     alignItems: "center",
     padding: 16,
-    height: require("VoicePanelControlsModes").CONTROLS_DRAWER_HEADER_SIZE,
+    height: fn(12271).CONTROLS_DRAWER_HEADER_SIZE,
   },
   titlePill: null,
   titlePillBG: null,
 };
-obj = { borderRadius: ThemesDefault.radii.round, paddingHorizontal: 12, paddingTop: 1, paddingBottom: 2 };
-obj[1] = obj;
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-obj[2] = createCacheKey;
-let closure_6 = createCacheKey.createStyles(obj);
-let closure_7 = {
+obj = { borderRadius: nativeDefault.radii.round, paddingHorizontal: 12, paddingTop: 1, paddingBottom: 2 };
+obj.titlePill = obj;
+const createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj.titlePillBG = createStyles;
+let closure_6 = createStyles.createStyles(obj);
+const __initData = {
   code: "function VoicePanelControlsDrawerTitleTsx1(){const{shown,_shown,disablePill,backgroundColor}=this.__closure;const showBGColor=shown!=null?shown.get():_shown.get();return{backgroundColor:showBGColor&&!disablePill?backgroundColor:'transparent'};}",
 };
-const memoResult = importAllResult.memo(function VoicePanelControlsDrawerTitle(children) {
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelControlsDrawerTitle.tsx");
+
+export default noop.memo(function VoicePanelControlsDrawerTitle(children) {
   let shown = children.shown;
   let flag = children.disablePill;
   if (flag === undefined) {
     flag = false;
   }
-  let sharedValue;
-  let backgroundColor;
   ({ style, blurStyle } = children);
-  const tmp = callback();
-  let obj = shown(sharedValue[6]);
-  sharedValue = obj.useSharedValue(true);
-  backgroundColor = tmp.titlePillBG.backgroundColor;
-  obj1 = shown(sharedValue[6]);
+  const tmp = closure_6();
+  let obj = ReanimatedRexport;
+  const sharedValue = obj.useSharedValue(true);
+  let backgroundColor = tmp.titlePillBG.backgroundColor;
+  let obj1 = ReanimatedRexport;
   const fn = function p() {
     if (null != shown) {
-      let value = shown.get();
+      value = shown.get();
     } else {
       value = sharedValue.get();
     }
@@ -57,34 +63,28 @@ const memoResult = importAllResult.memo(function VoicePanelControlsDrawerTitle(c
   };
   fn.__closure = { shown, _shown: sharedValue, disablePill: flag, backgroundColor };
   fn.__workletHash = 14837285839887;
-  fn.__initData = closure_7;
+  fn.__initData = __initData;
   const animatedStyle = obj1.useAnimatedStyle(fn);
-  obj = { style: items, children: null };
-  items = [tmp.titleWrapper, style];
-  const tmp2 = shown;
-  const tmp6 = closure_5;
-  const tmp7 = flag;
-  const tmp8 = flag(sharedValue[7]);
+  obj = { style: null, children: null };
+  const items = [tmp.titleWrapper, style];
+  obj.style = items;
+  const tmp6 = hasOwnProperty;
+  const tmp8 = NativeViewDefault;
   if (shown == null) {
     shown = sharedValue;
   }
-  obj = { shown, style: backgroundColor.absoluteFillObject, blurStyle };
-  const items1 = [closure_4(flag(sharedValue[8]), obj)];
-  obj1 = { style: items2, children: null };
-  items2 = [tmp.titlePill, animatedStyle];
-  const tmp10 = flag(sharedValue[8]);
-  obj1[1] = closure_4(tmp2(sharedValue[10]).Text, {
+  obj = { shown, style: StyleSheet.absoluteFillObject, blurStyle };
+  const items1 = [React4(VoicePanelHeaderGlassBlurDefault, obj)];
+  obj1 = { style: null, children: null };
+  const items2 = [tmp.titlePill, animatedStyle];
+  obj1.style = items2;
+  obj1.children = React4(Text_Text.Text, {
     variant: "redesign/heading-18/bold",
     color: "mobile-text-heading-primary",
     accessibilityRole: "header",
     children: children.title,
   });
-  items1[1] = closure_4(tmp7(sharedValue[9]), obj1);
-  obj[1] = items1;
+  items1[1] = React4(ReanimatedNativeViewDefault, obj1);
+  obj.children = items1;
   return tmp6(tmp8, obj);
 });
-const result = require("set").fileFinishedImporting(
-  "modules/voice_panel/native/controls/VoicePanelControlsDrawerTitle.tsx",
-);
-
-export default memoResult;

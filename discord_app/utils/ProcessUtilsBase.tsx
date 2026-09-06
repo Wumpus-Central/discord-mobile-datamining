@@ -1,7 +1,7 @@
 // discord_app/utils/ProcessUtilsBase.tsx
-import set from "../../_runtime/00002_set.js";
+import size from "../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("utils/ProcessUtilsBase.tsx");
+const result = size.fileFinishedImporting("utils/ProcessUtilsBase.tsx");
 class ProcessUtils {}
 const prototype = ProcessUtils.prototype;
 prototype["getSystemMetrics"] = function getSystemMetrics() {

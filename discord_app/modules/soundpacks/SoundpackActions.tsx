@@ -1,15 +1,15 @@
 // discord_app/modules/soundpacks/SoundpackActions.tsx
-import dispatcherDefault from "../../Dispatcher.tsx";
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
-import closure_2 from "SoundpackStore.tsx";
-import { AnalyticEvents } from "../../Constants.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
+import SoundpackStore from "SoundpackStore.tsx";
 
-const result = require("set").fileFinishedImporting("modules/soundpacks/SoundpackActions.tsx");
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/soundpacks/SoundpackActions.tsx");
 
 export const setSoundpack = function setSoundpack(CLASSIC, name) {
-  let obj = expandEventPropertiesDefault;
-  obj = { soundpack: CLASSIC, previous_soundpack: soundpack.getSoundpack() };
+  let obj = { soundpack: CLASSIC, previous_soundpack: SoundpackStore.getSoundpack() };
   obj.track(AnalyticEvents.SOUNDPACK_UPDATED, obj);
   obj = { type: "SET_SOUNDPACK", soundpack: CLASSIC, forExperimentId: name };
-  dispatcherDefault.dispatch(obj);
+  DispatcherDefault.dispatch(obj);
 };

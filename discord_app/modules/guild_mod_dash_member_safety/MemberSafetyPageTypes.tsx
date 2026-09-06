@@ -1,17 +1,17 @@
 // discord_app/modules/guild_mod_dash_member_safety/MemberSafetyPageTypes.tsx
-import set from "../../../_runtime/00002_set.js";
-import MAX_RESULTS_PER_PAGE from "../guild_member_verification/MemberVerificationTypes.tsx";
+import MemberVerificationTypes from "../guild_member_verification/MemberVerificationTypes.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const obj = { ALL_MEMBERS: "ALL_MEMBERS" };
-const SUBMITTED = MAX_RESULTS_PER_PAGE.GuildJoinRequestApplicationStatuses.SUBMITTED;
+const SUBMITTED = MemberVerificationTypes.GuildJoinRequestApplicationStatuses.SUBMITTED;
 obj.PENDING = SUBMITTED;
 obj[SUBMITTED] = "PENDING";
-const REJECTED = MAX_RESULTS_PER_PAGE.GuildJoinRequestApplicationStatuses.REJECTED;
+const REJECTED = MemberVerificationTypes.GuildJoinRequestApplicationStatuses.REJECTED;
 obj.REJECTED = REJECTED;
 obj[REJECTED] = "REJECTED";
-const APPROVED = MAX_RESULTS_PER_PAGE.GuildJoinRequestApplicationStatuses.APPROVED;
+const APPROVED = MemberVerificationTypes.GuildJoinRequestApplicationStatuses.APPROVED;
 obj.APPROVED = APPROVED;
 obj[APPROVED] = "APPROVED";
-const result = set.fileFinishedImporting("modules/guild_mod_dash_member_safety/MemberSafetyPageTypes.tsx");
+const result = size.fileFinishedImporting("modules/guild_mod_dash_member_safety/MemberSafetyPageTypes.tsx");
 
 export const MemberSafetyPageTab = obj;

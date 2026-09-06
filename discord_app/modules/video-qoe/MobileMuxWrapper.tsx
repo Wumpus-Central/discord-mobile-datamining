@@ -1,22 +1,22 @@
 // discord_app/modules/video-qoe/MobileMuxWrapper.tsx
-import set from "../../../_runtime/00002_set.js";
-import log from "../../../discord_common/js/packages/logger/Logger.tsx";
-import logger2 from "integrations/MobileCustomMuxIntegration.tsx";
+import logger_Logger from "../../../discord_common/js/packages/logger/Logger.tsx";
+import MobileCustomMuxIntegration from "integrations/MobileCustomMuxIntegration.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const logger = new log.Logger("MobileMuxWrapper");
-let result = set.fileFinishedImporting("modules/video-qoe/MobileMuxWrapper.tsx");
+const logger = new logger_Logger.Logger("MobileMuxWrapper");
+let result = size.fileFinishedImporting("modules/video-qoe/MobileMuxWrapper.tsx");
 class MobileMuxWrapper {
   constructor(arg0) {
-    obj = Object.create(new.target.prototype);
-    obj.config = global;
-    return obj;
+    merged = Object.assign({ muxIntegration: null, seekingEmitted: false, seekTimeout: null });
+    merged.config = global;
+    return merged;
   }
 }
 const prototype = MobileMuxWrapper.prototype;
 prototype["initialize"] = function initialize() {
   const self = this;
   try {
-    const mobileCustomMuxIntegration = new logger2.MobileCustomMuxIntegration(self.config);
+    const mobileCustomMuxIntegration = new MobileCustomMuxIntegration.MobileCustomMuxIntegration(self.config);
     self.muxIntegration = mobileCustomMuxIntegration;
     const muxIntegration = self.muxIntegration;
     muxIntegration.initialize();
@@ -56,7 +56,7 @@ prototype["updatePlayerState"] = function updatePlayerState(arg0, arg1) {
     muxIntegration.updatePlayerState(arg0, arg1);
   }
 };
-prototype["onLoadStart"] = function onLoadStart(nativeEvent, arg1) {
+prototype["onLoadStart"] = function onLoadStart() {
   const muxIntegration = this.muxIntegration;
   if (muxIntegration != null) {
     muxIntegration.emitLoadStart();
@@ -92,9 +92,8 @@ prototype["onCanPlay"] = function onCanPlay() {
     muxIntegration.emitCanPlay();
   }
 };
-prototype["onSeek"] = function onSeek(nativeEvent) {
-  let self = this;
-  self = this;
+prototype["onSeek"] = function onSeek() {
+  const self = this;
   if (null != this.muxIntegration) {
     if (!self.seekingEmitted) {
       let muxIntegration = self.muxIntegration;
@@ -139,8 +138,8 @@ prototype["onProgress"] = function onProgress(arg0) {
     muxIntegration.emitTimeUpdate();
   }
 };
-prototype["onBuffer"] = function onBuffer(nativeEvent) {
-  if (!nativeEvent) {
+prototype["onBuffer"] = function onBuffer(flag2) {
+  if (!flag2) {
     const self = this;
     const muxIntegration = this.muxIntegration;
     if (muxIntegration != null) {
@@ -159,7 +158,7 @@ prototype["onBuffer"] = function onBuffer(nativeEvent) {
     }
   }
 };
-prototype["onReadyForDisplay"] = function onReadyForDisplay(nativeEvent) {
+prototype["onReadyForDisplay"] = function onReadyForDisplay() {
   const self = this;
   const muxIntegration = this.muxIntegration;
   if (muxIntegration != null) {

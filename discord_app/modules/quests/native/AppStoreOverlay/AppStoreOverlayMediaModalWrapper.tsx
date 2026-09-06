@@ -1,31 +1,31 @@
 // discord_app/modules/quests/native/AppStoreOverlay/AppStoreOverlayMediaModalWrapper.tsx
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../action_sheet/native/ActionSheetStore.tsx";
-import { MEDIA_MODAL_KEY } from "../../../../Constants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import ActionSheetStore from "../../../action_sheet/native/ActionSheetStore.tsx";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting(
-  "modules/quests/native/AppStoreOverlay/AppStoreOverlayMediaModalWrapper.tsx",
-);
+const require = fn;
+const MEDIA_MODAL_KEY = fn(1074).MEDIA_MODAL_KEY;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayMediaModalWrapper.tsx");
 
 export default function AppStoreOverlayMediaModalWrapper(onCloseCallback) {
   onCloseCallback = onCloseCallback.onCloseCallback;
-  const merged = Object.assign(onCloseCallback, Object.create(null));
-  const effect = React.useEffect(
+  const merged = Object.assign(onCloseCallback, Object.assign({ onCloseCallback: 0 }));
+  const effect = noop.useEffect(
     () => () => {
-      const result = callback(table[4]).clearMediaModalFooterAction();
+      const result = onCloseCallback(closure_1_2[4]).clearMediaModalFooterAction();
     },
     [],
   );
   const items = [onCloseCallback];
-  const callback = React.useCallback(() => {
+  const callback = noop.useCallback(() => {
     if (onCloseCallback != null) {
       tmp();
     }
-    closure_1_1(closure_1_2[5]).popWithKey(closure_1_5);
+    ModalActionCreatorsDefault.popWithKey(MEDIA_MODAL_KEY);
   }, items);
-  if (open.isOpen()) {
+  if (ActionSheetStore.isOpen()) {
     let obj = {};
     let tmp5Result = tmp5(8288);
     const merged1 = Object.assign(merged);

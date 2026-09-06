@@ -1,55 +1,53 @@
 // discord_app/modules/in_app_reports/IarSettingsUpsellsConfigScFiltersGraphicMedia.tsx
-import set from "../../../_runtime/00002_set.js";
-import getSystemLocale from "../../intl/index.native.tsx";
-import create from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import resolveGoreSettingWithDefaults from "../explicit_media_redaction/SensitiveMediaGoreRedactionSettingsUtils.tsx";
-import ReportNames from "MenuTypes.tsx";
+import util from "../../intl/index.native.tsx";
+import preloaded_user_settings from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import SensitiveMediaGoreRedactionSettingsUtils from "../explicit_media_redaction/SensitiveMediaGoreRedactionSettingsUtils.tsx";
+import MenuTypes from "MenuTypes.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 let obj = {
   getTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.RVX1zT);
+    const intl = util.intl;
+    return intl.string(util.t.RVX1zT);
   },
   getDisabledTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.SYkEBi);
+    const intl = util.intl;
+    return intl.string(util.t.SYkEBi);
   },
   getDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.aqlmp8);
+    const intl = util.intl;
+    return intl.string(util.t.aqlmp8);
   },
   eligibleReportSubtypes: null,
   onApply: null,
   predicate: null,
 };
-const items = [ReportNames.ReportSubType.SUB_GORE, ReportNames.ReportSubType.SUB_GLORIFYING_VIOLENCE];
-obj[3] = items;
-obj[4] = function onApply() {
-  let obj = resolveGoreSettingWithDefaults;
-  const goreContentSettingOrDefault = resolveGoreSettingWithDefaults.getGoreContentSettingOrDefault();
-  obj = {};
+const items = [MenuTypes.ReportSubType.SUB_GORE, MenuTypes.ReportSubType.SUB_GLORIFYING_VIOLENCE];
+obj.eligibleReportSubtypes = items;
+obj.onApply = function onApply() {
+  const goreContentSettingOrDefault = SensitiveMediaGoreRedactionSettingsUtils.getGoreContentSettingOrDefault();
+  const obj = {};
   ({ goreContentGuilds, goreContentFriendDm, goreContentNonFriendDm } = goreContentSettingOrDefault);
-  if (goreContentGuilds === create.ExplicitContentRedaction.SHOW) {
+  if (goreContentGuilds === preloaded_user_settings.ExplicitContentRedaction.SHOW) {
     obj.goreContentGuilds = tmp(1187).ExplicitContentRedaction.BLUR;
   }
-  if (goreContentFriendDm === create.ExplicitContentRedaction.SHOW) {
+  if (goreContentFriendDm === preloaded_user_settings.ExplicitContentRedaction.SHOW) {
     obj.goreContentFriendDm = tmp(1187).ExplicitContentRedaction.BLUR;
   }
-  if (goreContentNonFriendDm === create.ExplicitContentRedaction.SHOW) {
+  if (goreContentNonFriendDm === preloaded_user_settings.ExplicitContentRedaction.SHOW) {
     obj.goreContentNonFriendDm = tmp(1187).ExplicitContentRedaction.BLUR;
   }
   return obj.updateGoreContentSetting(obj);
 };
-obj[5] = function predicate() {
-  const goreContentSettingOrDefault = resolveGoreSettingWithDefaults.getGoreContentSettingOrDefault();
+obj.predicate = function predicate() {
+  const goreContentSettingOrDefault = SensitiveMediaGoreRedactionSettingsUtils.getGoreContentSettingOrDefault();
   ({ goreContentGuilds, goreContentFriendDm, goreContentNonFriendDm } = goreContentSettingOrDefault);
-  const obj = resolveGoreSettingWithDefaults;
   return (
-    goreContentGuilds === create.ExplicitContentRedaction.SHOW ||
-    goreContentFriendDm === create.ExplicitContentRedaction.SHOW ||
-    goreContentNonFriendDm === create.ExplicitContentRedaction.SHOW
+    goreContentGuilds === preloaded_user_settings.ExplicitContentRedaction.SHOW ||
+    goreContentFriendDm === preloaded_user_settings.ExplicitContentRedaction.SHOW ||
+    goreContentNonFriendDm === preloaded_user_settings.ExplicitContentRedaction.SHOW
   );
 };
-const result = set.fileFinishedImporting("modules/in_app_reports/IarSettingsUpsellsConfigScFiltersGraphicMedia.tsx");
+const result = size.fileFinishedImporting("modules/in_app_reports/IarSettingsUpsellsConfigScFiltersGraphicMedia.tsx");
 
 export default obj;

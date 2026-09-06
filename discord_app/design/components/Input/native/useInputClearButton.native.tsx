@@ -1,25 +1,23 @@
 // discord_app/design/components/Input/native/useInputClearButton.native.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import getSystemLocale from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import CircleXIcon from "../../Icon/native/redesign/generated/CircleXIcon.tsx";
-import { Pressable } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Input/native/useInputClearButton.native.tsx");
+require = fn;
+const Pressable = fn(17).Pressable;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Input/native/useInputClearButton.native.tsx");
 
 export const useInputClearButton = function useInputClearButton(clearProps, clearState) {
   let tmp;
   if (clearProps.isClearable) {
     if (clearState.hasValue) {
-      let obj = { content: null, pressableProps: null };
-      obj[0] = jsx(CircleXIcon.CircleXIcon, { size: "xs" });
-      obj = { onPress: null, accessibilityLabel: null, accessibilityRole: "button", hitSlop: 4 };
-      obj[0] = clearState.clear;
-      const intl = getSystemLocale.intl;
-      obj[1] = intl.string(getSystemLocale.t.VkKicb);
-      obj[1] = obj;
+      let obj = { content: jsx(CircleXIcon.CircleXIcon, { size: "xs" }), pressableProps: null };
+      obj = { onPress: clearState.clear, accessibilityLabel: null, accessibilityRole: "button", hitSlop: 4 };
+      const intl = util.intl;
+      obj.accessibilityLabel = intl.string(util.t.VkKicb);
+      obj.pressableProps = obj;
       tmp = obj;
     }
   }
@@ -35,13 +33,11 @@ export const useInputClearButton = function useInputClearButton(clearProps, clea
 export const useInputClearButtonConfig = function useInputClearButtonConfig(isClearable, state) {
   if (isClearable.isClearable) {
     if (state.hasValue) {
-      let obj = { content: null, pressableProps: null };
-      obj[0] = jsx(CircleXIcon.CircleXIcon, { size: "xs" });
-      obj = { onPress: null, accessibilityLabel: null, accessibilityRole: "button", hitSlop: 4 };
-      obj[0] = state.clear;
-      const intl = getSystemLocale.intl;
-      obj[1] = intl.string(getSystemLocale.t.VkKicb);
-      obj[1] = obj;
+      let obj = { content: jsx(CircleXIcon.CircleXIcon, { size: "xs" }), pressableProps: null };
+      obj = { onPress: state.clear, accessibilityLabel: null, accessibilityRole: "button", hitSlop: 4 };
+      const intl = util.intl;
+      obj.accessibilityLabel = intl.string(util.t.VkKicb);
+      obj.pressableProps = obj;
       return obj;
     }
   }

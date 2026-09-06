@@ -1,44 +1,43 @@
 // discord_app/actions/native/CreateChannelModalActionCreators.tsx
-import set from "../../../_runtime/00002_set.js";
-import createChannelRecord from "../../records/ChannelRecord.tsx";
-import _modDef4763 from "../ModalActionCreators.tsx";
-import closure_4 from "../../stores/ChannelStore.tsx";
+import ChannelRecord from "../../records/ChannelRecord.tsx";
+import transitionToChannel from "../../modules/routing/transitionToChannel.tsx";
+import ModalActionCreatorsDefault from "../ModalActionCreators.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const isGuildReadableType = createChannelRecord.isGuildReadableType;
+const isGuildReadableType = ChannelRecord.isGuildReadableType;
 const CREATE_CHANNEL_MODAL_KEY = "CREATE_CHANNEL_MODAL_KEY";
-const result = set.fileFinishedImporting("actions/native/CreateChannelModalActionCreators.tsx");
+const result = size.fileFinishedImporting("actions/native/CreateChannelModalActionCreators.tsx");
 
 export default {
   CREATE_CHANNEL_MODAL_KEY: "CREATE_CHANNEL_MODAL_KEY",
-  open(arg0, arg1, arg2, arg3) {
+  open(arg0, guildId, categoryId, cloneChannelId) {
     const self = this;
-    if (null != arg1) {
-      const obj2 = _modDef4763;
+    if (null != guildId) {
+      const obj2 = ModalActionCreatorsDefault;
       const tmp = arg0;
-      let obj = { channelType: null, guildId: null, categoryId: null, cloneChannelId: null, onChannelCreated: null };
-      obj[0] = tmp;
-      obj[1] = arg1;
-      obj[2] = arg2;
-      obj[3] = arg3;
-      obj[4] = function onChannelCreated(id) {
-        self.close();
-        const channel = closure_1_4.getChannel(id);
-        let tmp3 = null != arg1 && null != channel;
-        if (tmp3) {
-          tmp3 = closure_1_3(channel.type);
-        }
-        if (tmp3) {
-          self(closure_1_2[2]).transitionToChannel(id);
-          const obj = self(closure_1_2[2]);
-        }
+      let obj = {
+        channelType: tmp,
+        guildId,
+        categoryId,
+        cloneChannelId,
+        onChannelCreated(id, arg1) {
+          self.close();
+          const channel = ChannelStore.getChannel(id);
+          let tmp3 = null != arg1 && null != channel;
+          if (tmp3) {
+            tmp3 = isGuildReadableType(channel.type);
+          }
+          if (tmp3) {
+            transitionToChannel.transitionToChannel(id);
+          }
+        },
       };
       obj2.pushLazy(self(1896)(9732, dependencyMap.paths), obj, CREATE_CHANNEL_MODAL_KEY);
-      const tmp2 = arg2;
-      let tmp3 = arg3;
       const tmp9 = self(1896)(9732, dependencyMap.paths);
     }
   },
   close() {
-    _modDef4763.popWithKey(CREATE_CHANNEL_MODAL_KEY);
+    ModalActionCreatorsDefault.popWithKey(CREATE_CHANNEL_MODAL_KEY);
   },
 };

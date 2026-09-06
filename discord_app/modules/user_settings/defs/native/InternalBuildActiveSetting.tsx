@@ -1,27 +1,27 @@
 // discord_app/modules/user_settings/defs/native/InternalBuildActiveSetting.tsx
-import useStaffOrDeveloperSettingPredicate from "../../dev_tools/native/useIsStaffOrDeveloperSettingPredicate.tsx";
-import closure_2 from "../../../mobile_native_updater/MobileNativeUpdateStore.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import useIsStaffOrDeveloperSettingPredicate from "../../dev_tools/native/useIsStaffOrDeveloperSettingPredicate.tsx";
+import MobileNativeUpdateStore from "../../../mobile_native_updater/MobileNativeUpdateStore.tsx";
 
-require = arg1;
-createToggle = {
+require = fn;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
     return "Internal Build Active";
   },
   parent: null,
-  IconComponent: require("MobilePhoneSettingsIcon").MobilePhoneSettingsIcon,
+  IconComponent: fn(15559).MobilePhoneSettingsIcon,
   useDescription: function useInternalBuildActiveDescription() {
     return "Build installed from builds.discord.tools";
   },
   usePredicate: function useHasCheckNativeUpdateSetting() {
-    const obj = useStaffOrDeveloperSettingPredicate;
     return (
-      hasUpdatesConfigured.hasUpdatesConfigured &&
-      useStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate()
+      MobileNativeUpdateStore.hasUpdatesConfigured &&
+      useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate()
     );
   },
 };
-createToggle = createToggle.createStatic(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/InternalBuildActiveSetting.tsx");
+SettingBuilders = SettingBuilders.createStatic(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/InternalBuildActiveSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

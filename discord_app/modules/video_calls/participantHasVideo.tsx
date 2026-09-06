@@ -1,23 +1,21 @@
 // discord_app/modules/video_calls/participantHasVideo.tsx
-import closure_2 from "../../stores/AuthenticationStore.tsx";
-import closure_3 from "../../stores/MediaEngineStore.tsx";
-import ParticipantTypes from "../calls/CallConstants.tsx";
-import { Features } from "../../../discord_common/js/packages/media-engine/Constants.tsx";
+import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
+import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
 
-const require = arg1;
-function canRenderParticipantVideo(participant, closure_1_4) {
-  let obj = closure_1_4;
-  if (closure_1_4 === undefined) {
-    obj = closure_3;
+const require = fn;
+function canRenderParticipantVideo(participant, MediaEngineStore) {
+  let obj = MediaEngineStore;
+  if (MediaEngineStore === undefined) {
+    obj = MediaEngineStore;
   }
   let tmp = null != participant;
   if (tmp) {
     let tmp3 = participant.type !== constants.ACTIVITY;
     if (tmp3) {
-      const supportsResult = closure_3.supports(Features.VIDEO);
+      const supportsResult = MediaEngineStore.supports(Features.VIDEO);
       if (!supportsResult) {
         tmp3 = supportsResult;
-      } else if (callback(participant)) {
+      } else if (hasOwnProperty(participant)) {
         let flag = null != participant.streamId;
       } else {
         const voiceState = participant.voiceState;
@@ -32,13 +30,13 @@ function canRenderParticipantVideo(participant, closure_1_4) {
     }
     let tmp9 = tmp3;
     if (tmp9) {
-      const tmp11 = callback(participant);
+      const tmp11 = hasOwnProperty(participant);
       let tmp12 = !tmp11;
       if (tmp11) {
-        tmp12 = participant.user.id !== id.getId();
+        tmp12 = participant.user.id !== AuthenticationStore.getId();
       }
       if (tmp12) {
-        const tmp15 = callback2(participant);
+        const tmp15 = timestampProducer(participant);
         let tmp16 = !tmp15;
         if (tmp15) {
           tmp16 = !obj.isLocalVideoDisabled(participant.id);
@@ -51,17 +49,20 @@ function canRenderParticipantVideo(participant, closure_1_4) {
   }
   return tmp;
 }
-({ ParticipantTypes: c4, isStreamParticipant: c5, isUserParticipant: closure_6 } = ParticipantTypes);
-const result = require("set").fileFinishedImporting("modules/video_calls/participantHasVideo.tsx");
+const CallConstants = fn(4581);
+({ ParticipantTypes: closure_4, isStreamParticipant: hasOwnProperty, isUserParticipant: metroRequire } = CallConstants);
+const Features = fn(4585).Features;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/participantHasVideo.tsx");
 
 export default function participantHasVideo(type) {
   let streamId = type;
   let tmp = type.type !== constants.ACTIVITY;
   if (tmp) {
-    const supportsResult = closure_3.supports(Features.VIDEO);
+    const supportsResult = MediaEngineStore.supports(Features.VIDEO);
     if (!supportsResult) {
       tmp = supportsResult;
-    } else if (callback(streamId)) {
+    } else if (hasOwnProperty(streamId)) {
       streamId = streamId.streamId;
       let flag = null != streamId;
     } else {
@@ -79,9 +80,7 @@ export default function participantHasVideo(type) {
 }
 export { canRenderParticipantVideo };
 export const useCanRenderParticipantVideo = function useCanRenderParticipantVideo(stateFromStores) {
-  const _require = stateFromStores;
-  const items = [closure_3];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
-    closure_1_8(closure_0, closure_1_3),
-  );
+  _require = stateFromStores;
+  const items = [MediaEngineStore];
+  return require("initialize").useStateFromStores(items, () => canRenderParticipantVideo(closure_0, MediaEngineStore));
 };

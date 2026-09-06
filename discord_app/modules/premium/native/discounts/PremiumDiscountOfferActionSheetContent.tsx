@@ -1,91 +1,91 @@
 // discord_app/modules/premium/native/discounts/PremiumDiscountOfferActionSheetContent.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import Text from "../../../../design/components/Text/native/Text.tsx";
-import Button from "../../../../design/components/Button/native/Button.native.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import FolderIcon from "../../../../design/components/Icon/native/redesign/generated/FolderIcon.tsx";
-import AccountAgeTier10LargeBadge from "../../../../design/assets/native.tsx";
+import native from "../../../../design/assets/native.tsx";
 import NitroWheelIcon from "../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import ChatSmileIcon from "../../../../design/components/Icon/native/redesign/generated/ChatSmileIcon.tsx";
 import UserIcon from "../../../../design/components/Icon/native/redesign/generated/UserIcon.tsx";
 import PremiumPerksListDefault from "../../../../components_native/premium/PremiumPerksList.tsx";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-({ jsx: c4, jsxs: c5 } = jsxProd);
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4560);
 let obj = { contentContainer: null, buttonContainer: null, title: null, heroIllustrationContainer: null };
 obj = {
   paddingHorizontal: 36,
   paddingTop: 18,
   paddingBottom: 36,
   width: "100%",
-  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   alignItems: "flex-start",
   display: "flex",
   flexDirection: "column",
   gap: 0,
 };
-obj[0] = obj;
-obj[1] = { marginVertical: 6, width: "100%", height: 48 };
-obj[2] = { width: "100%", textAlign: "center" };
-obj[3] = { alignItems: "center", justifyContent: "center", height: 188, width: "100%" };
-let closure_6 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(function PremiumDiscountOfferActionSheetContent(arg0) {
+obj.contentContainer = obj;
+obj.buttonContainer = { marginVertical: 6, width: "100%", height: 48 };
+obj.title = { width: "100%", textAlign: "center" };
+obj.heroIllustrationContainer = { alignItems: "center", justifyContent: "center", height: 188, width: "100%" };
+let closure_6 = createStyles.createStyles(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting(
+  "modules/premium/native/discounts/PremiumDiscountOfferActionSheetContent.tsx",
+);
+
+export default noop.memo(function PremiumDiscountOfferActionSheetContent(arg0) {
   ({ discountOffer, onConfirm } = arg0);
-  const tmp = callback3();
+  const tmp = closure_6();
   let obj = { IconComponent: UserIcon.UserIcon, label: null, description: null };
-  const intl = getSystemLocale.intl;
-  obj[1] = intl.string(getSystemLocale.t.kpMomJ);
-  const intl2 = getSystemLocale.intl;
-  obj[2] = intl2.string(getSystemLocale.t.uVUtPw);
+  const intl = util.intl;
+  obj.label = intl.string(util.t.kpMomJ);
+  const intl2 = util.intl;
+  obj.description = intl2.string(util.t.uVUtPw);
   const items = [obj, ,];
   obj = { IconComponent: ChatSmileIcon.ChatSmileIcon, label: null, description: null };
-  const intl3 = getSystemLocale.intl;
-  obj[1] = intl3.string(getSystemLocale.t["R2IV/Q"]);
-  const intl4 = getSystemLocale.intl;
-  obj[2] = intl4.string(getSystemLocale.t["3SUJLd"]);
+  const intl3 = util.intl;
+  obj.label = intl3.string(util.t["R2IV/Q"]);
+  const intl4 = util.intl;
+  obj.description = intl4.string(util.t["3SUJLd"]);
   items[1] = obj;
   obj = { IconComponent: FolderIcon.FolderIcon, label: null, description: null };
-  const intl5 = getSystemLocale.intl;
-  obj[1] = intl5.string(getSystemLocale.t["u/NJKc"]);
-  const intl6 = getSystemLocale.intl;
-  obj[2] = intl6.string(getSystemLocale.t.i1UuMk);
+  const intl5 = util.intl;
+  obj.label = intl5.string(util.t["u/NJKc"]);
+  const intl6 = util.intl;
+  obj.description = intl6.string(util.t.i1UuMk);
   items[2] = obj;
   const amount = discountOffer.discount.amount;
-  obj1 = { style: tmp.contentContainer, children: null };
+  const obj1 = { style: tmp.contentContainer, children: null };
   const items1 = [
-    callback(View, {
+    React4(View, {
       style: tmp.heroIllustrationContainer,
-      children: callback(AccountAgeTier10LargeBadge.NitroWumpusFlightRight3dIllustration, { width: 180, height: 180 }),
+      children: React4(native.NitroWumpusFlightRight3dIllustration, { width: 180, height: 180 }),
     }),
     ,
     ,
   ];
   const obj3 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
-  const intl7 = getSystemLocale.intl;
-  obj3[3] = intl7.formatToPlainString(getSystemLocale.t.qowbUk, { percent: amount });
-  items1[1] = callback(Text.Text, obj3);
-  items1[2] = callback(PremiumPerksListDefault, { perks: items });
+  const intl7 = util.intl;
+  obj3.children = intl7.formatToPlainString(util.t.qowbUk, { percent: amount });
+  items1[1] = React4(Text_Text.Text, obj3);
+  items1[2] = React4(PremiumPerksListDefault, { perks: items });
   const obj4 = { style: tmp.buttonContainer, children: null };
   const obj5 = { size: "lg", text: null, onPress: null, grow: true, icon: null };
-  const intl8 = getSystemLocale.intl;
-  obj5[1] = intl8.formatToPlainString(getSystemLocale.t.bkQ4bH, { percent: amount });
-  obj5[2] = onConfirm;
+  const intl8 = util.intl;
+  obj5.text = intl8.formatToPlainString(util.t.bkQ4bH, { percent: amount });
+  obj5.onPress = onConfirm;
   const obj2 = {
     style: tmp.heroIllustrationContainer,
-    children: callback(AccountAgeTier10LargeBadge.NitroWumpusFlightRight3dIllustration, { width: 180, height: 180 }),
+    children: React4(native.NitroWumpusFlightRight3dIllustration, { width: 180, height: 180 }),
   };
-  obj5[4] = callback(NitroWheelIcon.NitroWheelIcon, { size: "md", color: ThemesDefault.unsafe_rawColors.WHITE });
-  obj4[1] = callback(Button.Button, obj5);
-  items1[3] = callback(View, obj4);
-  obj1[1] = items1;
-  return callback2(View, obj1);
+  obj5.icon = React4(NitroWheelIcon.NitroWheelIcon, { size: "md", color: nativeDefault.unsafe_rawColors.WHITE });
+  obj4.children = React4(components_Button_Button.Button, obj5);
+  items1[3] = React4(View, obj4);
+  obj1.children = items1;
+  return hasOwnProperty(View, obj1);
 });
-const result = require("set").fileFinishedImporting(
-  "modules/premium/native/discounts/PremiumDiscountOfferActionSheetContent.tsx",
-);
-
-export default memoResult;

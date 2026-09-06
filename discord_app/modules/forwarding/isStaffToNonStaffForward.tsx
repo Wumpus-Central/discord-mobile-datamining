@@ -1,29 +1,30 @@
 // discord_app/modules/forwarding/isStaffToNonStaffForward.tsx
-import closure_0 from "../../stores/ChannelStore.tsx";
-import closure_1 from "../../stores/GuildStore.tsx";
-import closure_2 from "../../stores/UserStore.tsx";
-import { GuildFeatures } from "../../Constants.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
+import GuildStore from "../../stores/GuildStore.tsx";
+import UserStore from "../../stores/UserStore.tsx";
 
-const result = require("set").fileFinishedImporting("modules/forwarding/isStaffToNonStaffForward.tsx");
+const GuildFeatures = fn(1074).GuildFeatures;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/forwarding/isStaffToNonStaffForward.tsx");
 
 export default function isStaffToNonStaffForward(channel_id, arr) {
-  currentUser = currentUser.getCurrentUser();
+  const currentUser = UserStore.getCurrentUser();
   let isStaffResult;
   if (currentUser != null) {
     isStaffResult = currentUser.isStaff();
   }
   if (isStaffResult) {
-    channel = channel.getChannel(channel_id.channel_id);
+    const channel = ChannelStore.getChannel(channel_id.channel_id);
     let tmp4 = null != channel;
     if (tmp4) {
       if (channel.isPrivate()) {
         let recipients = channel.recipients;
-        let everyResult = recipients.every((arg0) => {
-          user = user.getUser(arg0);
+        let everyResult = recipients.every((item) => {
+          user = user.getUser(item);
           return null != user && user.isStaff();
         });
       } else {
-        guild = guild.getGuild(channel.guild_id);
+        let guild = GuildStore.getGuild(channel.guild_id);
         everyResult = null != guild;
         if (everyResult) {
           let features = guild.features;
@@ -32,8 +33,8 @@ export default function isStaffToNonStaffForward(channel_id, arr) {
       }
       let someResult = everyResult;
       if (someResult) {
-        someResult = arr.some((arg0) => {
-          let every = channel.getChannel(arg0);
+        someResult = arr.some((item) => {
+          let every = channel.getChannel(item);
           let tmp = null != every;
           if (tmp) {
             const isPrivateResult = every.isPrivate();
@@ -42,8 +43,8 @@ export default function isStaffToNonStaffForward(channel_id, arr) {
             } else if (every.isPrivate()) {
               const recipients = every.recipients;
               every = recipients.every;
-              let everyResult = every((arg0) => {
-                user = user.getUser(arg0);
+              let everyResult = every((item) => {
+                user = user.getUser(item);
                 return null != user && user.isStaff();
               });
             } else {

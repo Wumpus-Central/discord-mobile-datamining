@@ -1,11 +1,11 @@
 // discord_app/modules/user_profile/notes/NoteStore.tsx
-import set2 from "../../../../_runtime/00002_set.js";
-import identity from "../../libdiscore/stores/LibdiscoreStore.tsx";
-import items from "../../libdiscore/libdiscoreExperiments.tsx";
-import isValueEqual from "../../../lib/PlainRecord.tsx";
+import LibdiscoreStore2 from "../../libdiscore/stores/LibdiscoreStore.tsx";
+import libdiscoreExperiments from "../../libdiscore/libdiscoreExperiments.tsx";
+import PlainRecord from "../../../lib/PlainRecord.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-({ TypeTag, constructInPlace: c0 } = isValueEqual);
-const LibdiscoreStore = identity.LibdiscoreStore;
+({ TypeTag, constructInPlace: closure_0 } = PlainRecord);
+const LibdiscoreStore = LibdiscoreStore2.LibdiscoreStore;
 const Note = "Note";
 class NoteStore extends LibdiscoreStore {
   constructor() {
@@ -23,7 +23,7 @@ prototype["stateWrapper"] = function stateWrapper() {
   return this.database;
 };
 NoteStore.displayName = "NoteStore";
-const LibdiscoreBatchStoreRefactorExperiment = items.LibdiscoreBatchStoreRefactorExperiment;
+const LibdiscoreBatchStoreRefactorExperiment = libdiscoreExperiments.LibdiscoreBatchStoreRefactorExperiment;
 const noteStore = new NoteStore(
   {
     LOGOUT(arg0, clear) {
@@ -39,15 +39,15 @@ const noteStore = new NoteStore(
       return clear.clear();
     },
     USER_NOTE_UPDATE(note, set) {
-      const result = set.set(note.id, callback(Note, { loading: false, note: note.note }));
+      const result = set.set(note.id, React(Note, { loading: false, note: note.note }));
     },
     USER_NOTE_LOAD_START(userId, set) {
-      const result = set.set(userId.userId, callback(Note, { loading: true, note: null }));
+      const result = set.set(userId.userId, React(Note, { loading: true, note: null }));
     },
   },
   LibdiscoreBatchStoreRefactorExperiment.getCachedBridgedStoreMode(),
 );
-let result = set2.fileFinishedImporting("modules/user_profile/notes/NoteStore.tsx");
+let result = size.fileFinishedImporting("modules/user_profile/notes/NoteStore.tsx");
 
 export default noteStore;
 export const NoteRecordTypeTag = "Note";

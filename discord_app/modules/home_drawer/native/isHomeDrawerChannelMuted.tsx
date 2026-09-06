@@ -1,18 +1,19 @@
 // discord_app/modules/home_drawer/native/isHomeDrawerChannelMuted.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import closure_2 from "../../threads/JoinedThreadsStore.tsx";
-import { isThread } from "../../../records/ChannelRecord.tsx";
-import closure_4 from "../../../stores/UserGuildSettingsStore.tsx";
+import JoinedThreadsStore from "../../threads/JoinedThreadsStore.tsx";
+import UserGuildSettingsStore from "../../../stores/UserGuildSettingsStore.tsx";
 
-require = arg1;
-let result = require("set").fileFinishedImporting("modules/home_drawer/native/isHomeDrawerChannelMuted.tsx");
+require = fn;
+const isThread = fn(1961).isThread;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/home_drawer/native/isHomeDrawerChannelMuted.tsx");
 
 export const useIsHomeDrawerChannelMuted = function useIsHomeDrawerChannelMuted() {
-  const items = [closure_2, closure_4];
+  const items = [JoinedThreadsStore, UserGuildSettingsStore];
   return initialize.useStateFromStores(
     items,
     () => (type) => {
-      const tmp = callback(type.type);
+      const tmp = closure_1_3(type.type);
       if (tmp) {
         if (muted.isMuted(type.id)) {
           return true;

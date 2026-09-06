@@ -1,46 +1,51 @@
 // discord_app/modules/client_themes/native/ClientThemesOverrides.tsx
+import client_themes_ClientThemesUtils from "ClientThemesUtils.tsx";
 import useIsUsingClientThemeDefault from "useIsUsingClientTheme.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let closure_4 = createCacheKey.createStyles({ none: { backgroundColor: "transparent" } });
-const result = require("set").fileFinishedImporting("modules/client_themes/native/ClientThemesOverrides.tsx");
+require = fn;
+const createStyles = fn(4560);
+let closure_4 = createStyles.createStyles({ none: { backgroundColor: "transparent" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/client_themes/native/ClientThemesOverrides.tsx");
 
 export const useGradientBottom = function useGradientBottom() {
-  gradientValue = gradientValue(4378).useGradientValue(gradientValue(4378).GradientPercentage.END);
+  const gradientValue = client_themes_ClientThemesUtils.useGradientValue(
+    client_themes_ClientThemesUtils.GradientPercentage.END,
+  );
   const items = [gradientValue];
-  return React.useMemo(() => {
+  return noop.useMemo(() => {
     let tmp2;
     if (null != gradientValue) {
-      const obj = { backgroundColor: null };
-      obj[0] = tmp;
+      const obj = { backgroundColor: tmp };
       tmp2 = obj;
     }
     return tmp2;
   }, items);
 };
 export const useGradientTop = function useGradientTop() {
-  gradientValue = gradientValue(4378).useGradientValue(gradientValue(4378).GradientPercentage.START);
+  const gradientValue = client_themes_ClientThemesUtils.useGradientValue(
+    client_themes_ClientThemesUtils.GradientPercentage.START,
+  );
   const items = [gradientValue];
-  return React.useMemo(() => {
+  return noop.useMemo(() => {
     let tmp2;
     if (null != gradientValue) {
-      const obj = { backgroundColor: null };
-      obj[0] = tmp;
+      const obj = { backgroundColor: tmp };
       tmp2 = obj;
     }
     return tmp2;
   }, items);
 };
 export const useGradientMidpoint = function useGradientMidpoint() {
-  gradientValue = gradientValue(4378).useGradientValue(gradientValue(4378).GradientPercentage.MID);
+  const gradientValue = client_themes_ClientThemesUtils.useGradientValue(
+    client_themes_ClientThemesUtils.GradientPercentage.MID,
+  );
   const items = [gradientValue];
-  return React.useMemo(() => {
+  return noop.useMemo(() => {
     let tmp2;
     if (null != gradientValue) {
-      const obj = { backgroundColor: null };
-      obj[0] = tmp;
+      const obj = { backgroundColor: tmp };
       tmp2 = obj;
     }
     return tmp2;

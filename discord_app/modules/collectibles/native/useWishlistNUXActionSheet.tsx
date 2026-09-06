@@ -1,39 +1,35 @@
 // discord_app/modules/collectibles/native/useWishlistNUXActionSheet.tsx
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../../user_profile/UserProfileStore.tsx";
-import closure_5 from "../../../stores/AuthenticationStore.tsx";
-import { ContentDismissActionType } from "../../dismissible_content/DismissibleContentConstants.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import UserProfileStore from "../../user_profile/UserProfileStore.tsx";
+import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/collectibles/native/useWishlistNUXActionSheet.tsx");
+const require = fn;
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/collectibles/native/useWishlistNUXActionSheet.tsx");
 
 export default function useWishlistNUXActionSheet() {
-  let obj = initialize;
-  const items = [closure_5];
+  let obj = require("initialize");
+  const items = [AuthenticationStore];
   _require = obj.useStateFromStores(items, () => id.getId());
-  const items1 = [closure_4];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
-    items1,
-    () => closure_1_4.getFirstWishlistId(closure_0),
+  const items1 = [UserProfileStore];
+  const stateFromStores = require("initialize").useStateFromStores(items1, () =>
+    UserProfileStore.getFirstWishlistId(closure_0),
   );
-  let obj2 = initialize;
-  const items2 = [closure_4];
-  let stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
-    items2,
-    () => {
-      const userProfile = closure_1_4.getUserProfile(closure_0);
-      let tmp2 = null != userProfile;
-      if (tmp2) {
-        tmp2 = userProfile.fetchEndedAt > 0;
-      }
-      return tmp2;
-    },
-  );
+  let obj2 = require("initialize");
+  const items2 = [UserProfileStore];
+  let stateFromStores1 = require("initialize").useStateFromStores(items2, () => {
+    const userProfile = UserProfileStore.getUserProfile(closure_0);
+    let tmp2 = null != userProfile;
+    if (tmp2) {
+      tmp2 = userProfile.fetchEndedAt > 0;
+    }
+    return tmp2;
+  });
   if (stateFromStores1) {
     stateFromStores1 = null == stateFromStores;
   }
-  const obj3 = initialize;
+  const obj3 = require("initialize");
   if (stateFromStores1) {
     stateFromStores1 = !tmpResult.useIsDismissibleContentDismissed_UNSAFE(
       tmp(1943).DismissibleContent.WISHLIST_MOBILE_NUX_ACTION_SHEET,
@@ -41,22 +37,22 @@ export default function useWishlistNUXActionSheet() {
   }
   obj = {
     shouldShowWishlistNUXActionSheet: stateFromStores1,
-    showWishlistNUXActionSheet: React.useCallback((product) => {
-      let obj = callback(paths[7]);
+    showWishlistNUXActionSheet: noop.useCallback((product) => {
+      let obj = closure_0(paths[7]);
       const result = obj.trackDismissibleContentShown(
-        callback(paths[6]).DismissibleContent.WISHLIST_MOBILE_NUX_ACTION_SHEET,
+        closure_0(paths[6]).DismissibleContent.WISHLIST_MOBILE_NUX_ACTION_SHEET,
       );
       obj = { product };
-      callback2(paths[8]).openLazy(
-        callback(paths[10])(paths[9], paths.paths),
+      require("ActionSheetActionCreators").openLazy(
+        closure_0(paths[10])(paths[9], paths.paths),
         "WishlistNUXAddedItemActionSheet",
         obj,
         "stack",
       );
-      const obj2 = callback2(paths[8]);
+      const obj2 = require("ActionSheetActionCreators");
       obj = { dismissAction: constants.USER_DISMISS, forceTrack: true };
-      const result1 = callback(paths[5]).UNSAFE_markDismissibleContentAsDismissed(
-        callback(paths[6]).DismissibleContent.WISHLIST_MOBILE_NUX_ACTION_SHEET,
+      const result1 = closure_0(paths[5]).UNSAFE_markDismissibleContentAsDismissed(
+        closure_0(paths[6]).DismissibleContent.WISHLIST_MOBILE_NUX_ACTION_SHEET,
         obj,
       );
     }, []),
@@ -64,29 +60,23 @@ export default function useWishlistNUXActionSheet() {
   return obj;
 }
 export const useHasNeverWishlisted = function useHasNeverWishlisted() {
-  const items = [closure_5];
-  _require = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
-    id.getId(),
+  const items = [AuthenticationStore];
+  _require = require("initialize").useStateFromStores(items, () => id.getId());
+  const obj = require("initialize");
+  const items1 = [UserProfileStore];
+  const stateFromStores = require("initialize").useStateFromStores(items1, () =>
+    UserProfileStore.getFirstWishlistId(closure_0),
   );
-  const obj = initialize;
-  const items1 = [closure_4];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
-    items1,
-    () => closure_1_4.getFirstWishlistId(closure_0),
-  );
-  const obj2 = initialize;
-  const items2 = [closure_4];
-  let stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
-    items2,
-    () => {
-      const userProfile = closure_1_4.getUserProfile(closure_0);
-      let tmp2 = null != userProfile;
-      if (tmp2) {
-        tmp2 = userProfile.fetchEndedAt > 0;
-      }
-      return tmp2;
-    },
-  );
+  const obj2 = require("initialize");
+  const items2 = [UserProfileStore];
+  let stateFromStores1 = require("initialize").useStateFromStores(items2, () => {
+    const userProfile = UserProfileStore.getUserProfile(closure_0);
+    let tmp2 = null != userProfile;
+    if (tmp2) {
+      tmp2 = userProfile.fetchEndedAt > 0;
+    }
+    return tmp2;
+  });
   if (stateFromStores1) {
     stateFromStores1 = null == stateFromStores;
   }

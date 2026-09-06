@@ -1,32 +1,30 @@
 // discord_app/modules/roles/native/RoleIcon.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import Button from "../../../design/void/native.tsx";
-import { Image } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import native from "../../../design/void/native.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/roles/native/RoleIcon.tsx");
+require = fn;
+const Image = fn(17).Image;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/roles/native/RoleIcon.tsx");
 
 export default function RoleIcon(arg0) {
   ({ source, unicodeEmoji, size } = arg0);
   if (size === undefined) {
     size = 20;
   }
-  let obj = { height: size, width: size, resizeMode: "contain" };
+  size = { height: size, width: size, resizeMode: "contain" };
   if (null != source) {
-    obj = { source: null, style: null };
-    obj[0] = source;
-    obj[1] = obj;
-    let tmp = <Image source={null} style={null} />;
+    let obj = { source, style: size };
+    let tmp = <Image source={source} style={size} />;
   } else {
     tmp = null;
     if (null != unicodeEmoji) {
       obj = { adjustsFontSizeToFit: true, style: null, children: null };
-      const items = [obj, { fontFamily: "System", fontSize: size, marginBottom: -2 }];
-      obj[1] = items;
-      obj[2] = unicodeEmoji.surrogates;
-      tmp = jsx(Button.LegacyText, { adjustsFontSizeToFit: true, style: null, children: null });
+      const items = [size, { fontFamily: "System", fontSize: size, marginBottom: -2 }];
+      obj.style = items;
+      obj.children = unicodeEmoji.surrogates;
+      tmp = jsx(native.LegacyText, { adjustsFontSizeToFit: true, style: null, children: null });
     }
   }
   return tmp;

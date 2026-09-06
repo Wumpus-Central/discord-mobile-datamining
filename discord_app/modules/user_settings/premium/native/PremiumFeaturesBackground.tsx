@@ -1,27 +1,26 @@
 // discord_app/modules/user_settings/premium/native/PremiumFeaturesBackground.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import _modDef672 from "../../../../../_runtime/metro/00672__.js";
 import LinearGradientDefault from "../../../../../_runtime/04987_LinearGradient.js";
-import { Gradients } from "../../../colors/native/ColorConstants.tsx";
-import { PremiumTypes } from "../../../premium/PremiumConstants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-noopAll;
-createCacheKey = { cardContainer: null };
-createCacheKey = {
+const require = fn;
+const Gradients = fn(7432).Gradients;
+const PremiumTypes = fn(1373).PremiumTypes;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { cardContainer: null };
+createStyles = {
   display: "flex",
-  borderRadius: ThemesDefault.radii.lg,
+  borderRadius: nativeDefault.radii.lg,
   flexDirection: "column",
   justifyContent: "space-between",
   overflow: "hidden",
 };
-createCacheKey[0] = createCacheKey;
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting(
-  "modules/user_settings/premium/native/PremiumFeaturesBackground.tsx",
-);
+createStyles.cardContainer = createStyles;
+let closure_6 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesBackground.tsx");
 
 export default function PremiumFeaturesBackground(opacity) {
   let num = opacity.opacity;
@@ -29,7 +28,7 @@ export default function PremiumFeaturesBackground(opacity) {
     num = 1;
   }
   ({ children, style } = opacity);
-  const merged = Object.assign(opacity, Object.create(null));
+  const merged = Object.assign(opacity, Object.assign({ premiumType: 0, opacity: 0, children: 0, style: 0 }));
   if (opacity.premiumType === PremiumTypes.TIER_0) {
     let PREMIUM_TIER_0 = Gradients.PREMIUM_TIER_0;
   } else {
@@ -37,17 +36,18 @@ export default function PremiumFeaturesBackground(opacity) {
   }
   let mapped = PREMIUM_TIER_0;
   if (num < 1) {
-    mapped = PREMIUM_TIER_0.map((arg0) => {
-      const obj = closure_1_1(closure_1_2[6])(arg0);
-      return closure_1_1(closure_1_2[6])(arg0).alpha(num).hex();
+    mapped = PREMIUM_TIER_0.map((item) => {
+      const obj = _modDef672(item);
+      return _modDef672(item).alpha(num).hex();
     });
   }
-  let obj = { style: items, colors: mapped, start: null, end: null };
-  items = [callback().cardContainer, style];
-  const tmp2 = callback();
-  obj[2] = num(1093).HorizontalGradient.START;
-  obj[3] = num(1093).HorizontalGradient.END;
+  let obj = { style: null, colors: mapped, start: null, end: null };
+  const items = [closure_6().cardContainer, style];
+  obj.style = items;
+  const tmp2 = closure_6();
+  obj.start = num(1093).HorizontalGradient.START;
+  obj.end = num(1093).HorizontalGradient.END;
   const merged1 = Object.assign(merged);
   obj.children = children;
-  return jsx(LinearGradientDefault, { style: items, colors: mapped, start: null, end: null });
+  return jsx(LinearGradientDefault, { style: null, colors: mapped, start: null, end: null });
 }

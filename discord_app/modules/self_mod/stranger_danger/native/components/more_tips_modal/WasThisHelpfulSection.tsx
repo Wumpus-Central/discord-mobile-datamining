@@ -1,23 +1,29 @@
 // discord_app/modules/self_mod/stranger_danger/native/components/more_tips_modal/WasThisHelpfulSection.tsx
-import ThemesDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../../../ChannelSafetyWarningsStore.tsx";
-import { SafetyWarningFeedbackTypes as closure_7 } from "../../../../ChannelSafetyWarningsStore.tsx";
-import LOCATION_CONTEXT_MOBILE from "../../../../Constants.tsx";
-import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../../../intl/index.native.tsx";
+import ToastActionCreatorsDefault from "../../../../../toast/native/ToastActionCreators.tsx";
+import _modDef9401 from "../../../../../../../_runtime/metro/09401__.js";
+import ShieldIcon from "../../../../../../design/components/Icon/native/redesign/generated/ShieldIcon.tsx";
+import SafetyWarningUtils from "../../../../shared/SafetyWarningUtils.tsx";
+import ChannelSafetyWarningsActionCreators from "../../../../ChannelSafetyWarningsActionCreators.tsx";
+import noop from "../../../../../../../_runtime/metro/00019__.js";
+import ChannelSafetyWarningsStore from "../../../../ChannelSafetyWarningsStore.tsx";
 
-const require = arg1;
-({ Pressable: c4, View: c5 } = get_ActivityIndicator);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+let closure_7 = fn(10915).SafetyWarningFeedbackTypes;
+const Constants = fn(11363);
 ({
   DOWNVOTE_FEEDBACK_CONFIRMATION_TOAST_KEY: closure_8,
-  TOAST_SHIELD_ICON_COLOR: c9,
+  TOAST_SHIELD_ICON_COLOR: closure_9,
   UPVOTE_FEEDBACK_CONFIRMATION_TOAST_KEY: c10,
   FEEDBACK_BUTTON_ACTIVE_BACKGROUND_COLOR,
-} = LOCATION_CONTEXT_MOBILE);
-({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-createCacheKey = {
+} = Constants);
+const jsxProd = fn(21);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+fn(4560);
+let createStyles = {
   container: { flexDirection: "column", alignItems: "center" },
   buttonsContainer: null,
   buttonsBackground: null,
@@ -27,41 +33,35 @@ createCacheKey = {
   buttonIconActive: null,
   toastContainer: null,
 };
-createCacheKey = { flexDirection: "row", marginTop: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_8 };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = {
-  width: ThemesDefault.space.PX_32,
-  height: ThemesDefault.space.PX_32,
-  borderRadius: ThemesDefault.radii.round,
+createStyles = { flexDirection: "row", marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
+createStyles.buttonsContainer = createStyles;
+let size = {
+  width: nativeDefault.space.PX_32,
+  height: nativeDefault.space.PX_32,
+  borderRadius: nativeDefault.radii.round,
   alignItems: "center",
   justifyContent: "center",
 };
-let obj1 = {
-  width: ThemesDefault.space.PX_32,
-  height: ThemesDefault.space.PX_32,
-  borderRadius: ThemesDefault.radii.round,
-  alignItems: "center",
-  justifyContent: "center",
-};
-createCacheKey[3] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-let obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-createCacheKey[4] = {
+createStyles.buttonsBackground = size;
+createStyles.buttonsBackgroundInactive = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+let obj1 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+createStyles.buttonsBackgroundActive = {
   borderWidth: 1,
-  borderColor: ThemesDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT,
+  borderColor: nativeDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT,
   backgroundColor: FEEDBACK_BUTTON_ACTIVE_BACKGROUND_COLOR,
 };
-let obj3 = {
+let obj2 = {
   borderWidth: 1,
-  borderColor: ThemesDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT,
+  borderColor: nativeDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT,
   backgroundColor: FEEDBACK_BUTTON_ACTIVE_BACKGROUND_COLOR,
 };
-createCacheKey[5] = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-let obj4 = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-createCacheKey[6] = { color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
-createCacheKey[7] = { paddingHorizontal: 8, paddingVertical: 12 };
-let closure_13 = createCacheKey.createStyles(createCacheKey);
-let obj5 = { color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
-let result = require("set").fileFinishedImporting(
+createStyles.buttonIconInactive = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+let obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+createStyles.buttonIconActive = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
+createStyles.toastContainer = { paddingHorizontal: 8, paddingVertical: 12 };
+let closure_13 = createStyles.createStyles(createStyles);
+size = fn(2);
+let result = size.fileFinishedImporting(
   "modules/self_mod/stranger_danger/native/components/more_tips_modal/WasThisHelpfulSection.tsx",
 );
 
@@ -69,36 +69,35 @@ export default function WasThisHelpfulSection(channelId) {
   channelId = channelId.channelId;
   const warningId = channelId.warningId;
   const senderId = channelId.senderId;
-  let React;
-  let stateFromStores;
-  closure_5 = undefined;
-  const tmp = callback2();
-  React = tmp;
+  const tmp = closure_13();
+  noop = tmp;
   let obj = channelId(senderId[7]);
-  const items = [closure_6];
-  stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getChannelSafetyWarning(channelId, warningId));
+  const items = [ChannelSafetyWarningsStore];
+  const stateFromStores = obj.useStateFromStores(items, () =>
+    ChannelSafetyWarningsStore.getChannelSafetyWarning(channelId, warningId),
+  );
   const items1 = [stateFromStores];
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     let feedback_type;
     if (stateFromStores != null) {
       feedback_type = stateFromStores.feedback_type;
     }
-    return feedback_type === closure_1_7.UPVOTE;
+    return feedback_type === constants.UPVOTE;
   }, items1);
   const items2 = [stateFromStores];
-  const memo1 = React.useMemo(() => {
+  const memo1 = noop.useMemo(() => {
     let feedback_type;
     if (stateFromStores != null) {
       feedback_type = stateFromStores.feedback_type;
     }
-    return feedback_type === closure_1_7.DOWNVOTE;
+    return feedback_type === constants.DOWNVOTE;
   }, items2);
   const items3 = [channelId, warningId, tmp.toastContainer, senderId, stateFromStores];
-  closure_5 = React.useCallback((feedbackType) => {
-    let obj = channelId(senderId[8]);
+  closure_5 = noop.useCallback((feedbackType, cta) => {
+    let obj = ChannelSafetyWarningsActionCreators;
     const result = obj.setChannelSafetyWarningFeedback(channelId, warningId, feedbackType);
     obj = {
-      key: feedbackType === closure_1_7.UPVOTE ? closure_1_10 : closure_1_8,
+      key: feedbackType === constants.UPVOTE ? closure_2_10 : React6,
       content: null,
       icon: null,
       IconComponent: null,
@@ -106,78 +105,76 @@ export default function WasThisHelpfulSection(channelId) {
       containerStyle: null,
       recolorLegacyIcon: true,
     };
-    const intl = tmp(tmp2[10]).intl;
-    obj[1] = intl.string(channelId(senderId[10]).t["gd/Yqs"]);
-    obj[2] = warningId(senderId[11]);
-    obj[3] = channelId(senderId[12]).ShieldIcon;
-    obj[4] = closure_1_9;
-    obj[5] = toastContainer.toastContainer;
-    warningId(senderId[9]).open(obj);
-    const obj2 = warningId(senderId[9]);
+    const intl = tmp(1114).intl;
+    obj.content = intl.string(util.t["gd/Yqs"]);
+    obj.icon = _modDef9401;
+    obj.IconComponent = ShieldIcon.ShieldIcon;
+    obj.iconColor = iconColor;
+    obj.containerStyle = toastContainer.toastContainer;
+    ToastActionCreatorsDefault.open(obj);
     const tmp3 = channelId;
     const tmp4 = warningId;
-    const tmp6 = warningId;
     obj = { channelId: tmp3, warningId: tmp4, senderId, warningType: null, cta: null };
     let type;
     if (stateFromStores != null) {
       type = stateFromStores.type;
     }
-    obj[3] = type;
-    obj[4] = arg1;
-    channelId(senderId[13]).trackCtaEvent(obj);
+    obj.warningType = type;
+    obj.cta = cta;
+    SafetyWarningUtils.trackCtaEvent(obj);
   }, items3);
   obj = { style: tmp.container, children: null };
   obj = { variant: "text-sm/normal", color: "mobile-text-heading-primary", children: null };
   let intl = channelId(senderId[10]).intl;
-  obj[2] = intl.string(channelId(senderId[10]).t.L84yVm);
-  const items4 = [callback(channelId(senderId[14]).Text, obj)];
-  obj1 = { style: tmp.buttonsContainer, children: null };
+  obj.children = intl.string(channelId(senderId[10]).t.L84yVm);
+  const items4 = [closure_11(channelId(senderId[14]).Text, obj)];
+  const obj1 = { style: tmp.buttonsContainer, children: null };
   const items5 = [tmp.buttonsBackground];
   let obj2 = {
     style: items5,
     disabled: memo,
     onPress() {
-      return callback(closure_1_7.UPVOTE, channelId(senderId[13]).CtaEventTypes.FEEDBACK_UPVOTE);
+      return closure_5(constants.UPVOTE, SafetyWarningUtils.CtaEventTypes.FEEDBACK_UPVOTE);
     },
     accessibilityLabel: null,
     children: null,
   };
   items5[1] = memo ? tmp.buttonsBackgroundActive : tmp.buttonsBackgroundInactive;
   const intl2 = tmp2(tmp3[10]).intl;
-  obj2[3] = intl2.string(channelId(senderId[10]).t["2GrOCN"]);
+  obj2.accessibilityLabel = intl2.string(channelId(senderId[10]).t["2GrOCN"]);
   const obj3 = { size: channelId(senderId[15]).Icon.Sizes.SMALL_20, source: warningId(senderId[16]), color: null };
   if (memo) {
     let color = tmp.buttonIconActive.color;
   } else {
     color = tmp.buttonIconInactive.color;
   }
-  obj3[2] = color;
-  obj2[4] = callback(channelId(senderId[15]).Icon, obj3);
-  const items6 = [callback(stateFromStores, obj2)];
+  obj3.color = color;
+  obj2.children = closure_11(channelId(senderId[15]).Icon, obj3);
+  const items6 = [closure_11(stateFromStores, obj2)];
   const items7 = [tmp.buttonsBackground];
   const obj4 = {
     style: items7,
     disabled: memo1,
     onPress() {
-      return callback(closure_1_7.DOWNVOTE, channelId(senderId[13]).CtaEventTypes.FEEDBACK_DOWNVOTE);
+      return closure_5(constants.DOWNVOTE, SafetyWarningUtils.CtaEventTypes.FEEDBACK_DOWNVOTE);
     },
     accessibilityLabel: null,
     children: null,
   };
   items7[1] = memo1 ? tmp.buttonsBackgroundActive : tmp.buttonsBackgroundInactive;
   const intl3 = tmp2(tmp3[10]).intl;
-  obj4[3] = intl3.string(channelId(senderId[10]).t.COp9BO);
+  obj4.accessibilityLabel = intl3.string(channelId(senderId[10]).t.COp9BO);
   const obj5 = { size: channelId(senderId[15]).Icon.Sizes.SMALL_20, source: warningId(senderId[17]), color: null };
   if (memo1) {
     let color2 = tmp.buttonIconActive.color;
   } else {
     color2 = tmp.buttonIconInactive.color;
   }
-  obj5[2] = color2;
-  obj4[4] = callback(channelId(senderId[15]).Icon, obj5);
-  items6[1] = callback(stateFromStores, obj4);
-  obj1[1] = items6;
+  obj5.color = color2;
+  obj4.children = closure_11(channelId(senderId[15]).Icon, obj5);
+  items6[1] = closure_11(stateFromStores, obj4);
+  obj1.children = items6;
   items4[1] = closure_12(closure_5, obj1);
-  obj[1] = items4;
+  obj.children = items4;
   return closure_12(closure_5, obj);
 }

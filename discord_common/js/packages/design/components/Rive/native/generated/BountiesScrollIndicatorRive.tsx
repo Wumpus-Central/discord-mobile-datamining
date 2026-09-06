@@ -1,11 +1,10 @@
 // discord_common/js/packages/design/components/Rive/native/generated/BountiesScrollIndicatorRive.tsx
 import BaseRive from "../BaseRive.tsx";
-import getDerivedStateFromError from "../RiveErrorBoundary.tsx";
-import closure_4 from "../../../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import importAllResult from "../../../../../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../../../../../_runtime/react/00021_jsxProd.js";
+import RiveErrorBoundary from "../RiveErrorBoundary.tsx";
+import _objectWithoutProperties from "../../../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import noop from "../../../../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+require = fn;
 let closure_3 = [
   "fallback",
   "artboard",
@@ -14,9 +13,11 @@ let closure_3 = [
   "dataBinding",
   "onDataBindingChange",
 ];
-let c5 = importAllResult;
-let closure_7 = { "Bounties Scroll Indicator": { startAnimation: "trigger", looping: "boolean", color: "color" } };
-let closure_8 = { "Bounties Scroll Indicator": ["Instance"] };
+const jsx = fn(21).jsx;
+const artboardProperties = {
+  "Bounties Scroll Indicator": { startAnimation: "trigger", looping: "boolean", color: "color" },
+};
+const artboardViewModelInstances = { "Bounties Scroll Indicator": ["Instance"] };
 let closure_9 = {
   "Bounties Scroll Indicator": function BountiesScrollIndicatorBindings(arg0) {
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = arg0);
@@ -58,7 +59,7 @@ let closure_9 = {
     return null;
   },
 };
-let closure_10 = importAllResult.forwardRef(function BountiesScrollIndicatorRiveInner(defaultViewModelInstance, ref) {
+let closure_10 = noop.forwardRef(function BountiesScrollIndicatorRiveInner(defaultViewModelInstance, ref) {
   ({ fallback, artboard } = defaultViewModelInstance);
   let str = "Bounties Scroll Indicator";
   if (undefined !== artboard) {
@@ -72,39 +73,41 @@ let closure_10 = importAllResult.forwardRef(function BountiesScrollIndicatorRive
   const dataBinding = defaultViewModelInstance.dataBinding;
   const onDataBindingChange = defaultViewModelInstance.onDataBindingChange;
   const items = [str, dataBinding, onDataBindingChange];
-  const callback = importAllResult.useCallback((arg0) => {
+  const callback = noop.useCallback((arg0) => {
     let tmp2 = null;
-    if (null != closure_1_9[str]) {
+    if (null != closure_9[str]) {
       const obj = {};
       const merged = Object.assign(arg0);
       obj.dataBinding = dataBinding;
       obj.onDataBindingChange = onDataBindingChange;
-      tmp2 = closure_1_6(tmp, obj);
+      tmp2 = <tmp />;
     }
     return tmp2;
   }, items);
-  const tmp = callback(defaultViewModelInstance, closure_3);
+  const tmp = _objectWithoutProperties(defaultViewModelInstance, closure_3);
   let merged = Object.assign(tmp);
   return jsx(str(onDataBindingChange[3]).BaseRive, {
     ref,
     src: dataBinding(onDataBindingChange[4]),
     artboard: str,
-    artboardProperties: closure_7,
-    artboardViewModelInstances: closure_8,
+    artboardProperties,
+    artboardViewModelInstances,
     defaultViewModelInstance: str2,
     stateMachine: defaultViewModelInstance.stateMachine,
     renderDataBinding: callback,
   });
 });
-const forwardRefResult = importAllResult.forwardRef(function BountiesScrollIndicatorRiveWithBoundary(fallback, ref) {
-  let obj = { fallback: fallback.fallback, children: null };
-  obj = { ref };
-  const merged = Object.assign(fallback);
-  obj[1] = <closure_10 ref={arg1} />;
-  return jsx(getDerivedStateFromError.RiveErrorBoundary, { ref });
-});
-const result = require("set").fileFinishedImporting(
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "../discord_common/js/packages/design/components/Rive/native/generated/BountiesScrollIndicatorRive.tsx",
 );
 
-export const BountiesScrollIndicatorRive = forwardRefResult;
+export const BountiesScrollIndicatorRive = noop.forwardRef(
+  function BountiesScrollIndicatorRiveWithBoundary(fallback, ref) {
+    let obj = { fallback: fallback.fallback, children: null };
+    obj = { ref };
+    const merged = Object.assign(fallback);
+    obj.children = <closure_10 ref={arg1} />;
+    return jsx(RiveErrorBoundary.RiveErrorBoundary, { ref });
+  },
+);

@@ -1,15 +1,16 @@
 // discord_app/modules/collectibles/records/CollectiblesItemRecord.tsx
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import closure_2 from "AvatarDecorationRecord.tsx";
-import closure_3 from "NameplateRecord.tsx";
-import closure_4 from "ProfileEffectRecord.tsx";
-import closure_5 from "ProfileFrameRecord.tsx";
-import closure_6 from "UnknownCollectiblesItemRecord.tsx";
-import ME from "../../../Constants.tsx";
+import AvatarDecorationRecord from "AvatarDecorationRecord.tsx";
+import NameplateRecord from "NameplateRecord.tsx";
+import ProfileEffectRecord from "ProfileEffectRecord.tsx";
+import ProfileFrameRecord from "ProfileFrameRecord.tsx";
+import UnknownCollectiblesItemRecord from "UnknownCollectiblesItemRecord.tsx";
 
-require = arg1;
-({ SKUProductLines: error, SKUTypes: closure_8 } = ME);
-const result = require("set").fileFinishedImporting("modules/collectibles/records/CollectiblesItemRecord.tsx");
+require = fn;
+const Constants = fn(1074);
+({ SKUProductLines: closure_7, SKUTypes: closure_8 } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/records/CollectiblesItemRecord.tsx");
 function transformSKUToCollectiblesItem(productLine) {
   if (productLine.productLine === constants.COLLECTIBLES) {
     if (productLine.type === constants2.BUNDLE) {
@@ -20,7 +21,6 @@ function transformSKUToCollectiblesItem(productLine) {
       }
       const tmp32 = bundledSkus[Symbol.iterator]();
       while (tmp32 !== undefined) {
-        let tmp36 = transformSKUToCollectiblesItem;
         let tmp37 = transformSKUToCollectiblesItem(tmp34);
         let type;
         let tmp38 = tmp37;
@@ -28,16 +28,14 @@ function transformSKUToCollectiblesItem(productLine) {
           type = tmp37.type;
         }
         if ("single" === type) {
-          let tmp40 = tmp37;
           let arr = items.push(tmp38.item);
         }
         continue;
       }
       if (0 !== items.length) {
-        let obj = { type: "bundle", items: null, previewAssets: null };
-        obj[1] = items;
+        let obj = { type: "bundle", items, previewAssets: null };
         const previewAssetPaths = productLine.previewAssetPaths;
-        obj[2] = previewAssetPaths;
+        obj.previewAssets = previewAssetPaths;
         return obj;
       }
     } else {
@@ -54,23 +52,21 @@ function transformSKUToCollectiblesItem(productLine) {
         type = item.type;
         if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
           obj = { type: "single", item: null };
-          obj1 = { skuId: null, type: null, asset: null, label: null };
-          obj1[0] = productLine.id;
-          ({ type: obj8[1], asset: obj8[2], label: obj8[3] } = item);
-          const tmp28 = new closure_2(obj1);
-          obj[1] = tmp28;
+          const obj1 = { skuId: productLine.id, type: null, asset: null, label: null };
+          ({ type: obj8.type, asset: obj8.asset, label: obj8.label } = item);
+          const tmp28 = new AvatarDecorationRecord(obj1);
+          obj.item = tmp28;
           return obj;
         } else if (tmp4(1889).CollectiblesItemType.NAMEPLATE === type) {
           const obj2 = { type: "single", item: null };
-          const obj3 = { skuId: null, type: null, asset: null, label: null, palette: null };
-          obj3[0] = productLine.id;
-          ({ type: obj6[1], asset: obj6[2], label: obj6[3], palette: obj6[4] } = item);
-          const tmp22 = new closure_3(obj3);
-          obj2[1] = tmp22;
+          const obj3 = { skuId: productLine.id, type: null, asset: null, label: null, palette: null };
+          ({ type: obj6.type, asset: obj6.asset, label: obj6.label, palette: obj6.palette } = item);
+          const tmp22 = new NameplateRecord(obj3);
+          obj2.item = tmp22;
           return obj2;
         } else if (tmp4(1889).CollectiblesItemType.PROFILE_EFFECT === type) {
           const obj4 = {
-            skuId: null,
+            skuId: productLine.id,
             type: null,
             title: null,
             description: null,
@@ -81,29 +77,32 @@ function transformSKUToCollectiblesItem(productLine) {
             animationType: null,
             staticFrameSrc: null,
           };
-          obj4[0] = productLine.id;
           ({
-            type: obj3[1],
-            title: obj3[2],
-            description: obj3[3],
-            thumbnailPreviewSrc: obj3[4],
-            reducedMotionSrc: obj3[5],
+            type: obj3.type,
+            title: obj3.title,
+            description: obj3.description,
+            thumbnailPreviewSrc: obj3.thumbnailPreviewSrc,
+            reducedMotionSrc: obj3.reducedMotionSrc,
             effects,
           } = item);
-          let tmp12 = closure_4;
+          let tmp12 = ProfileEffectRecord;
           if (effects == null) {
             effects = [];
           }
           const obj5 = { type: "single", item: null };
-          obj4[6] = effects;
-          ({ accessibilityLabel: obj3[7], animationType: obj3[8], staticFrameSrc: obj3[9] } = item);
+          obj4.effects = effects;
+          ({
+            accessibilityLabel: obj3.accessibilityLabel,
+            animationType: obj3.animationType,
+            staticFrameSrc: obj3.staticFrameSrc,
+          } = item);
           tmp12 = new tmp12(obj4);
-          obj5[1] = tmp12;
+          obj5.item = tmp12;
           return obj5;
         } else if (tmp4(1889).CollectiblesItemType.PROFILE_FRAME === type) {
           obj = { type: "single", item: null };
           const obj6 = {
-            skuId: null,
+            skuId: productLine.id,
             type: null,
             label: null,
             layers: null,
@@ -112,18 +111,17 @@ function transformSKUToCollectiblesItem(productLine) {
             overflowBottom: null,
             overflowHorizontal: null,
           };
-          obj6[0] = productLine.id;
           ({
-            type: obj2[1],
-            label: obj2[2],
-            layers: obj2[3],
-            innerWidth: obj2[4],
-            overflowTop: obj2[5],
-            overflowBottom: obj2[6],
-            overflowHorizontal: obj2[7],
+            type: obj2.type,
+            label: obj2.label,
+            layers: obj2.layers,
+            innerWidth: obj2.innerWidth,
+            overflowTop: obj2.overflowTop,
+            overflowBottom: obj2.overflowBottom,
+            overflowHorizontal: obj2.overflowHorizontal,
           } = item);
-          const tmp10 = new closure_5(obj6);
-          obj[1] = tmp10;
+          const tmp10 = new ProfileFrameRecord(obj6);
+          obj.item = tmp10;
           return obj;
         }
       }
@@ -137,16 +135,16 @@ export const createCollectiblesItemsFromServerResponse = function createCollecti
   } else {
     items = arr.reduce((arr, type) => {
       type = type.type;
-      if (callback(table[6]).CollectiblesItemType.AVATAR_DECORATION === type) {
-        arr.push(closure_2.fromServer(type));
+      if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
+        arr.push(AvatarDecorationRecord.fromServer(type));
       } else if (tmp(tmp2[6]).CollectiblesItemType.NAMEPLATE === type) {
-        arr.push(closure_3.fromServer(type));
+        arr.push(NameplateRecord.fromServer(type));
       } else if (tmp(tmp2[6]).CollectiblesItemType.PROFILE_EFFECT === type) {
-        arr.push(closure_4.fromServer(type));
+        arr.push(ProfileEffectRecord.fromServer(type));
       } else if (tmp(tmp2[6]).CollectiblesItemType.PROFILE_FRAME === type) {
-        arr.push(closure_5.fromServer(type));
+        arr.push(ProfileFrameRecord.fromServer(type));
       } else {
-        arr.push(closure_6.fromServer(type));
+        arr.push(UnknownCollectiblesItemRecord.fromServer(type));
       }
       return arr;
     }, []);

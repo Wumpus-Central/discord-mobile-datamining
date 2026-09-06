@@ -1,32 +1,31 @@
 // discord_app/modules/keyboard/KeyboardStateDebugging.tsx
-import timestampDefault from "../debug/Logger.tsx";
-import PlatformTypes from "../../../discord_common/js/shared/utils/PlatformUtils.tsx";
+import LoggerDefault from "../debug/Logger.tsx";
+import utils_PlatformUtils from "../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 
-require = arg1;
-let closure_2 = new timestampDefault("KeyboardStateDebugging");
-let obj = {
-  channelSafeAreaBottomLayoutHeightChanged(arg0) {
-    let obj = PlatformTypes;
+require = fn;
+const logger = new LoggerDefault("KeyboardStateDebugging");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/keyboard/KeyboardStateDebugging.tsx");
+
+export default {
+  channelSafeAreaBottomLayoutHeightChanged(layoutHeight) {
+    let obj = utils_PlatformUtils;
     if (!obj.isIOS()) {
-      obj = { layoutHeight: null };
-      obj[0] = arg0;
+      obj = { layoutHeight };
       logger.info("ChannelSafeAreaBottom layout height changed.", obj);
     }
   },
-  channelSafeAreaBottomLayoutHeightMismatch(arg0, arg1) {
-    let obj = PlatformTypes;
+  channelSafeAreaBottomLayoutHeightMismatch(layoutHeight, reportedKeyboardHeight) {
+    let obj = utils_PlatformUtils;
     if (!obj.isIOS()) {
-      obj = { layoutHeight: null, reportedKeyboardHeight: null };
-      obj[0] = arg0;
-      obj[1] = arg1;
+      obj = { layoutHeight, reportedKeyboardHeight };
       logger.warn("ChannelSafeAreaBottom layout height mismatch.", obj);
     }
   },
   keyboardControllerKeyboardWillShow(height) {
-    let obj = PlatformTypes;
+    let obj = utils_PlatformUtils;
     if (!obj.isIOS()) {
-      obj = { height: null };
-      obj[0] = height;
+      obj = { height };
       logger.info("KeyboardController keyboardWillShow.", obj);
     }
   },
@@ -35,25 +34,21 @@ let obj = {
     if (arg1 === undefined) {
       flag = false;
     }
-    let obj = PlatformTypes;
+    let obj = utils_PlatformUtils;
     if (!obj.isIOS()) {
-      obj = { height: null, rootProvider: null };
-      obj[0] = height;
-      obj[1] = flag;
+      obj = { height, rootProvider: flag };
       logger.info("KeyboardController keyboardDidShow.", obj);
     }
   },
-  keyboardControllerWorkletEvent(arg0, arg1) {
+  keyboardControllerWorkletEvent(arg0, height) {
     let flag = arg2;
     if (arg2 === undefined) {
       flag = false;
     }
-    let obj = PlatformTypes;
+    let obj = utils_PlatformUtils;
     if (!obj.isIOS()) {
       const _HermesInternal = HermesInternal;
-      obj = { height: null, rootProvider: null };
-      obj[0] = arg1;
-      obj[1] = flag;
+      obj = { height, rootProvider: flag };
       logger.info("KeyboardController worklet " + arg0 + ".", obj);
     }
   },
@@ -67,27 +62,23 @@ let obj = {
     if (arg0 === undefined) {
       flag = false;
     }
-    let obj = PlatformTypes;
+    let obj = utils_PlatformUtils;
     if (!obj.isIOS()) {
-      obj = { rootProvider: null };
-      obj[0] = flag;
+      obj = { rootProvider: flag };
       logger.info("KeyboardController keyboardDidHide.", obj);
     }
   },
   reactNativeKeyboardDidShow(height, KeyboardUIStore) {
-    let obj = PlatformTypes;
+    let obj = utils_PlatformUtils;
     if (!obj.isIOS()) {
-      obj = { height: null, location: null };
-      obj[0] = height;
-      obj[1] = KeyboardUIStore;
+      obj = { height, location: KeyboardUIStore };
       logger.info("ReactNativeKeyboard didShow.", obj);
     }
   },
   reactNativeKeyboardDidHide(KeyboardUIStore) {
-    let obj = PlatformTypes;
+    let obj = utils_PlatformUtils;
     if (!obj.isIOS()) {
-      obj = { location: null };
-      obj[0] = KeyboardUIStore;
+      obj = { location: KeyboardUIStore };
       logger.info("ReactNativeKeyboard didHide.", obj);
     }
   },
@@ -97,7 +88,3 @@ let obj = {
     }
   },
 };
-const tmp2 = new timestampDefault("KeyboardStateDebugging");
-const result = require("set").fileFinishedImporting("modules/keyboard/KeyboardStateDebugging.tsx");
-
-export default obj;

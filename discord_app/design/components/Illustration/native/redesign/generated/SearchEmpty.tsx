@@ -1,61 +1,56 @@
 // discord_app/design/components/Illustration/native/redesign/generated/SearchEmpty.tsx
-import noopAll from "../../../../../../../_runtime/00019_noop.js";
-import AccessibilityAnnouncer from "../../../../../shared.tsx";
-import getIllustrationSource from "../../index.tsx";
-import { Image } from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
+import shared from "../../../../../shared.tsx";
+import _mod8233 from "../../index.tsx";
+import noop from "../../../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting(
-  "design/components/Illustration/native/redesign/generated/SearchEmpty.tsx",
-);
+require = fn;
+const Image = fn(17).Image;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/SearchEmpty.tsx");
 
 export const getSearchEmptySource = function getSearchEmptySource(theme) {
-  let obj = getIllustrationSource;
-  obj = {
+  const obj = {
     dark() {
-      return callback(10318);
+      return require("../../../../../../../_runtime/metro/10318__.js");
     },
     darker() {
-      return callback(10319);
+      return require("../../../../../../../_runtime/metro/10319__.js");
     },
     light() {
-      return callback(10320);
+      return require("../../../../../../../_runtime/metro/10320__.js");
     },
   };
   return obj.getIllustrationSource(theme, obj);
 };
 export const useSearchEmptySource = function useSearchEmptySource() {
-  let obj = AccessibilityAnnouncer;
-  obj = {
+  const obj = {
     dark() {
-      return callback(10318);
+      return require("../../../../../../../_runtime/metro/10318__.js");
     },
     darker() {
-      return callback(10319);
+      return require("../../../../../../../_runtime/metro/10319__.js");
     },
     light() {
-      return callback(10320);
+      return require("../../../../../../../_runtime/metro/10320__.js");
     },
   };
-  return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
+  return _mod8233.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
 export const SearchEmpty = function SearchEmpty(arg0) {
-  let obj = AccessibilityAnnouncer;
-  obj = {
+  let obj = {
     dark() {
-      return callback(10318);
+      return require("../../../../../../../_runtime/metro/10318__.js");
     },
     darker() {
-      return callback(10319);
+      return require("../../../../../../../_runtime/metro/10319__.js");
     },
     light() {
-      return callback(10320);
+      return require("../../../../../../../_runtime/metro/10320__.js");
     },
   };
   obj = {};
-  const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
+  const illustrationSource = _mod8233.getIllustrationSource(obj.useThemeContext().theme, obj);
   const merged = Object.assign(arg0);
   obj.source = illustrationSource;
   return <Image />;

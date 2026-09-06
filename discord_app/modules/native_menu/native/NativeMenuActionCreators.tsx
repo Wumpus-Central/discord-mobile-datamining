@@ -1,23 +1,23 @@
 // discord_app/modules/native_menu/native/NativeMenuActionCreators.tsx
-import set from "../../../../_runtime/00002_set.js";
-import dispatcherDefault from "../../../Dispatcher.tsx";
+import DispatcherDefault from "../../../Dispatcher.tsx";
+import HapticUtils from "../../haptics/HapticUtils.native.tsx";
+import haptics_HapticFeedbackTypesDefault from "../../haptics/HapticFeedbackTypes.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-let result = set.fileFinishedImporting("modules/native_menu/native/NativeMenuActionCreators.tsx");
+let result = size.fileFinishedImporting("modules/native_menu/native/NativeMenuActionCreators.tsx");
 
 export default {
   showNativeMenu(key, memo) {
-    closure_0 = key;
     importDefault = memo;
-    dispatcherDefault.wait(() => {
-      let obj = key(closure_1_2[1]);
-      const result = obj.triggerHapticFeedback(memo(closure_1_2[2]).IMPACT_LIGHT);
-      obj = { type: "SHOW_NATIVE_MENU", key, menu: memo };
-      memo(closure_1_2[0]).dispatch(obj);
+    DispatcherDefault.wait(() => {
+      let obj = HapticUtils;
+      const result = obj.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
+      obj = { type: "SHOW_NATIVE_MENU", key, menu };
+      DispatcherDefault.dispatch(obj);
     });
   },
   hideNativeMenu(key) {
-    let obj = dispatcherDefault;
-    obj = { type: "HIDE_NATIVE_MENU", key };
+    const obj = { type: "HIDE_NATIVE_MENU", key };
     obj.dispatch(obj);
   },
 };

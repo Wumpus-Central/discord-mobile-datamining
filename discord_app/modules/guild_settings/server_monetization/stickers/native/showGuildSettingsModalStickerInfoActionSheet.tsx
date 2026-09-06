@@ -1,10 +1,10 @@
 // discord_app/modules/guild_settings/server_monetization/stickers/native/showGuildSettingsModalStickerInfoActionSheet.tsx
-import set from "../../../../../../_runtime/00002_set.js";
 import asyncRequireImpl from "../../../../../../_runtime/01896_asyncRequireImpl.js";
-import ACTION_SHEET_HEIGHT_HALFDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
 const GuildSettingsModalStickerInfoActionSheet = "GuildSettingsModalStickerInfoActionSheet";
-const result = set.fileFinishedImporting(
+const result = size.fileFinishedImporting(
   "modules/guild_settings/server_monetization/stickers/native/showGuildSettingsModalStickerInfoActionSheet.tsx",
 );
 
@@ -12,12 +12,11 @@ export const showGuildSettingsModalStickerInfoActionSheet = function showGuildSe
   arg0,
 ) {
   ({ guildId, stickerId } = arg0);
-  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj = {
+  const obj = {
     guildId,
     stickerId,
     hideActionSheet() {
-      callback(table[0]).hideActionSheet(closure_3);
+      ActionSheetActionCreatorsDefault.hideActionSheet(GuildSettingsModalStickerInfoActionSheet);
     },
   };
   obj.openLazy(asyncRequireImpl(17584, dependencyMap.paths), GuildSettingsModalStickerInfoActionSheet, obj);

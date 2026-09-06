@@ -1,14 +1,15 @@
 // discord_app/actions/UserSettingsAccountActionCreators.tsx
-import dispatcherDefault from "../Dispatcher.tsx";
-import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
-import ME from "../Constants.tsx";
-import str2 from "../modules/push_notifications/PushNotificationConstants.tsx";
+import DispatcherDefault from "../Dispatcher.tsx";
+import router_utils from "../modules/routing/router_utils.tsx";
+import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators.tsx";
+import trackUserAvatarUpdated from "../modules/user_profile/utils/trackUserAvatarUpdated.tsx";
+import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 
-require = arg1;
-function saveProfileAndAccountRequest(arg0, arg1) {
+require = fn;
+function saveProfileAndAccountRequest() {
   const self = this;
-  const apply = _saveProfileAndAccountRequest.apply;
+  const apply = closure_11.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -16,173 +17,154 @@ function saveProfileAndAccountRequest(arg0, arg1) {
   }
   return applyArgumentsResult;
 }
-function _saveProfileAndAccountRequest() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c4 = 0;
-    c5 = 0;
-    const iter = (function* (arg0) {
-      if (c5 === 2) {
-        c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
+let closure_11 = async function _saveProfileAndAccountRequest(arg0, value) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
         if (arg0 === 1) {
-          throw arg1;
+          c5 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c5 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === token) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let body = tmp7;
-              body = tmp2;
-              obj1 = undefined;
-              if (obj1 === undefined) {
-                obj1 = {};
-              }
-              body = undefined;
-              body = undefined;
-              token = undefined;
-              token = 1;
-              c5 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp7) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              let obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else {
-              const HTTP = lib(body[4]).HTTP;
-              const obj3 = { url: null, oldFormErrors: true, body: null, headers: null, rejectWithError: null };
-              obj3[0] = token.ME;
-              obj3[2] = lib;
-              obj3[3] = obj1.headers;
-              obj3[4] = lib(body[4]).rejectWithMigratedError();
-              token = 2;
-              c5 = 1;
-              let obj4 = { value: null, done: false };
-              obj4[0] = HTTP.patch(obj3);
-              return obj4;
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = arg1;
-            return obj5;
-          } else {
-            body = arg1;
-            body = body.body;
-            if (body.token) {
-              token = body.token;
-              delete tmp4[tmp3];
-              obj = obj1(body[3]);
-              const obj6 = { type: "UPDATE_TOKEN", token: null, userId: null };
-              obj6[1] = token;
-              obj6[2] = body.id;
-              obj.dispatch(obj6);
-              let password;
-              if (lib != null) {
-                password = lib.password;
-              }
-              let tmp19 = null != password;
-              if (tmp19) {
-                let new_password;
-                if (lib != null) {
-                  new_password = lib.new_password;
-                }
-                tmp19 = null != new_password;
-              }
-              if (tmp19) {
-                obj2 = obj1(body[3]);
-                const obj7 = { type: "PASSWORD_UPDATED", userId: null };
-                obj7[1] = body.id;
-                obj2.dispatch(obj7);
-              }
-            }
-            obj4 = obj1(body[3]);
-            const obj8 = { type: "CURRENT_USER_UPDATE", user: null };
-            obj8[1] = body;
-            obj4.dispatch(obj8);
-            c5 = 3;
-            const obj9 = { value: null, done: true };
-            obj9[0] = body;
-            return obj9;
+          closure_3 = tmp7;
+          closure_2 = tmp2;
+          closure_130_1 = undefined;
+          closure_130_0 = closure_0;
+          let obj1 = closure_1;
+          if (closure_1 === undefined) {
+            obj1 = {};
           }
-        } catch (tmp35) {
-          c5 = tmp;
-          throw tmp35;
+          closure_130_1 = obj1;
+          closure_130_2 = undefined;
+          let body;
+          let token;
+          c4 = 1;
+          c5 = 1;
+          return { value: "PX_16", done: true };
         }
+      } else if (1 === tmp7) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          let obj2 = { value, done: true };
+          return obj2;
+        } else {
+          const HTTP = closure_131_0(closure_131_2[4]).HTTP;
+          const request = {
+            url: closure_131_4.ME,
+            oldFormErrors: true,
+            body: closure_130_0,
+            headers: closure_130_1.headers,
+            rejectWithError: closure_131_0(closure_131_2[4]).rejectWithMigratedError(),
+          };
+          c4 = 2;
+          c5 = 1;
+          const obj3 = { value: HTTP.patch(request), done: false };
+          return obj3;
+        }
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 3;
+        let obj4 = { value, done: true };
+        return obj4;
+      } else {
+        closure_130_2 = value;
+        body = closure_130_2.body;
+        if (body.token) {
+          token = body.token;
+          delete tmp4[tmp3];
+          obj = closure_131_1(closure_131_2[3]);
+          const obj5 = { type: "UPDATE_TOKEN", token, userId: body.id };
+          obj.dispatch(obj5);
+          let password;
+          if (closure_130_0 != null) {
+            password = closure_130_0.password;
+          }
+          let tmp19 = null != password;
+          if (tmp19) {
+            let new_password;
+            if (closure_130_0 != null) {
+              new_password = closure_130_0.new_password;
+            }
+            tmp19 = null != new_password;
+          }
+          if (tmp19) {
+            obj2 = closure_131_1(closure_131_2[3]);
+            const obj6 = { type: "PASSWORD_UPDATED", userId: body.id };
+            obj2.dispatch(obj6);
+          }
+        }
+        obj4 = closure_131_1(closure_131_2[3]);
+        const obj7 = { type: "CURRENT_USER_UPDATE", user: body };
+        obj4.dispatch(obj7);
+        c5 = 3;
+        const obj8 = { value: closure_130_2, done: true };
+        return obj8;
       }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_11 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp35) {
+      c5 = tmp;
+      throw tmp35;
+    }
   }
-  return applyArgumentsResult;
-}
-({ Endpoints: c4, Routes: c5, DEVICE_TOKEN: closure_6, DEVICE_VOIP_TOKEN: error } = ME);
-({ DEVICE_PUSH_VOIP_PROVIDER: closure_8, getDevicePushProvider: c9 } = require("str2"));
-let result = require("set").fileFinishedImporting("actions/UserSettingsAccountActionCreators.tsx");
+};
+const Constants = fn(1074);
+({
+  Endpoints: closure_4,
+  Routes: hasOwnProperty,
+  DEVICE_TOKEN: metroRequire,
+  DEVICE_VOIP_TOKEN: closure_7,
+} = Constants);
+const PushNotificationConstants = fn(6596);
+({ DEVICE_PUSH_VOIP_PROVIDER: closure_8, getDevicePushProvider: closure_9 } = PushNotificationConstants);
+const size = fn(2);
+let result = size.fileFinishedImporting("actions/UserSettingsAccountActionCreators.tsx");
 
 export const accountDetailsInit = function accountDetailsInit() {
-  dispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_INIT" });
+  DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_INIT" });
 };
 export const accountDetailsClose = function accountDetailsClose() {
-  dispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_CLOSE" });
+  DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_CLOSE" });
 };
 export const disableAccount = function disableAccount(password, arg1) {
-  const HTTP = sendRequest.HTTP;
-  obj = {
-    url: arg1 ? closure_4.DELETE_ACCOUNT : closure_4.DISABLE_ACCOUNT,
-    body: obj,
+  const HTTP = HTTPUtils.HTTP;
+  const request = {
+    url: arg1 ? constants.DELETE_ACCOUNT : constants.DISABLE_ACCOUNT,
+    body: { password },
     oldFormErrors: true,
-    rejectWithError: null,
+    rejectWithError: HTTPUtils.rejectWithMigratedError(),
   };
-  obj = { password };
-  obj[3] = sendRequest.rejectWithMigratedError();
-  const obj3 = sendRequest;
-  const tmp2 = arg1 ? closure_4.DELETE_ACCOUNT : closure_4.DISABLE_ACCOUNT;
-  return HTTP.post(obj).then(() => {
-    callback2(6593).logoutInternal();
-    const obj = callback2(6593);
-    callback(1100).transitionTo(constants.DEFAULT_LOGGED_OUT);
+  const tmp2 = arg1 ? constants.DELETE_ACCOUNT : constants.DISABLE_ACCOUNT;
+  return HTTP.post(request).then(() => {
+    AuthenticationActionCreatorsDefault.logoutInternal();
+    router_utils.transitionTo(constants.DEFAULT_LOGGED_OUT);
   });
 };
 export { saveProfileAndAccountRequest };
-export const saveProfileAndAccountChanges = function saveProfileAndAccountChanges(c0) {
-  const avatar = c0.avatar;
-  const avatarId = c0.avatarId;
-  ({ avatarDecoration, nameplate, primaryGuildId, displayNameStyles, typingIndicatorStyle } = c0);
+export const saveProfileAndAccountChanges = function saveProfileAndAccountChanges(accountUpdateForUpdateRequest) {
+  const avatar = accountUpdateForUpdateRequest.avatar;
+  const avatarId = accountUpdateForUpdateRequest.avatarId;
+  ({ avatarDecoration, nameplate, primaryGuildId, displayNameStyles, typingIndicatorStyle } =
+    accountUpdateForUpdateRequest);
   ({
     username,
     discriminator,
@@ -194,10 +176,10 @@ export const saveProfileAndAccountChanges = function saveProfileAndAccountChange
     globalName,
     legacyUsername,
     avatarOriginalMd5,
-  } = c0);
+  } = accountUpdateForUpdateRequest);
   let obj = avatarId(573);
   obj.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT" });
-  obj = {
+  const user = {
     username,
     email,
     email_token: emailToken,
@@ -218,7 +200,7 @@ export const saveProfileAndAccountChanges = function saveProfileAndAccountChange
     if (skuId == null) {
       skuId = null;
     }
-    obj.avatar_decoration_sku_id = skuId;
+    user.avatar_decoration_sku_id = skuId;
   }
   if (undefined !== nameplate) {
     let skuId1;
@@ -228,10 +210,10 @@ export const saveProfileAndAccountChanges = function saveProfileAndAccountChange
     if (skuId1 == null) {
       skuId1 = null;
     }
-    obj.nameplate_sku_id = skuId1;
+    user.nameplate_sku_id = skuId1;
   }
   if (undefined !== primaryGuildId) {
-    obj.primary_guild_id = primaryGuildId;
+    user.primary_guild_id = primaryGuildId;
   }
   if (null != displayNameStyles) {
     ({
@@ -240,9 +222,9 @@ export const saveProfileAndAccountChanges = function saveProfileAndAccountChange
       colors: obj2.display_name_colors,
     } = displayNameStyles);
   } else if (null === displayNameStyles) {
-    obj.display_name_font_id = null;
-    obj.display_name_effect_id = null;
-    obj.display_name_colors = null;
+    user.display_name_font_id = null;
+    user.display_name_effect_id = null;
+    user.display_name_colors = null;
   }
   if (undefined !== typingIndicatorStyle) {
     let result = null;
@@ -250,14 +232,14 @@ export const saveProfileAndAccountChanges = function saveProfileAndAccountChange
       result = avatar(1392).serializeTypingIndicatorStyle(typingIndicatorStyle);
       const obj3 = avatar(1392);
     }
-    obj.typing_indicator_style = result;
+    user.typing_indicator_style = result;
   }
   const Storage = avatar(510).Storage;
-  let value = Storage.get(closure_6);
-  const tmp12 = callback2();
+  value = Storage.get(closure_6);
+  const tmp12 = closure_9();
   if (tmp13) {
-    obj.push_provider = tmp12;
-    obj.push_token = value;
+    user.push_provider = tmp12;
+    user.push_token = value;
   }
   const Storage2 = tmp10(510).Storage;
   value = Storage2.get(closure_7);
@@ -266,96 +248,96 @@ export const saveProfileAndAccountChanges = function saveProfileAndAccountChange
     tmp16 = null != value;
   }
   if (tmp16) {
-    obj.push_voip_provider = tmp15;
-    obj.push_voip_token = value;
+    user.push_voip_provider = tmp15;
+    user.push_voip_token = value;
   }
   obj = {
     headers: avatarId(5169).buildHeadersForMd5({
       [avatar(6985).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5,
     }),
   };
-  const tmp = avatarId;
   tmp13 = null != tmp12 && null != value;
   tmp15 = closure_8;
   let tmpResult = avatarId(5169);
-  return saveProfileAndAccountRequest(obj, obj).then(
-    (arg0) => {
-      avatarId(closure_1_2[3]).dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_SUCCESS" });
+  return saveProfileAndAccountRequest(user, obj).then(
+    (result) => {
+      DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_SUCCESS" });
       let tmp4 = null == avatar;
       if (tmp4) {
         tmp4 = null == avatarId;
       }
       if (!tmp4) {
-        avatarId(closure_1_2[3]).dispatch({ type: "RECENT_AVATARS_UPDATE" });
-        const tmpResult = avatarId(closure_1_2[3]);
+        DispatcherDefault.dispatch({ type: "RECENT_AVATARS_UPDATE" });
+        const tmpResult = DispatcherDefault;
       }
-      return arg0;
+      return result;
     },
     (body) => {
-      let obj = avatarId(table[3]);
-      obj = { type: "USER_PROFILE_SETTINGS_SUBMIT_FAILURE", errors: body.body };
+      avatarId(dependencyMap[3]);
+      const obj = { type: "USER_PROFILE_SETTINGS_SUBMIT_FAILURE", errors: body.body };
       obj.dispatch(obj);
       return body;
     },
   );
 };
 export const getHarvestStatus = function getHarvestStatus() {
-  const HTTP = sendRequest.HTTP;
+  const HTTP = HTTPUtils.HTTP;
   const obj = {
     url: constants.USER_HARVEST,
     oldFormErrors: true,
-    rejectWithError: sendRequest.rejectWithMigratedError(),
+    rejectWithError: HTTPUtils.rejectWithMigratedError(),
   };
   return HTTP.get(obj);
 };
 export const requestHarvest = function requestHarvest(backends) {
-  const HTTP = sendRequest.HTTP;
-  obj = { url: constants.USER_HARVEST, body: obj, oldFormErrors: true, rejectWithError: null };
-  obj = { backends };
-  obj[3] = sendRequest.rejectWithMigratedError();
-  return HTTP.post(obj);
+  const HTTP = HTTPUtils.HTTP;
+  const request = {
+    url: constants.USER_HARVEST,
+    body: { backends },
+    oldFormErrors: true,
+    rejectWithError: HTTPUtils.rejectWithMigratedError(),
+  };
+  return HTTP.post(request);
 };
 export const clearErrors = function clearErrors() {
-  dispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_CLEAR_ERRORS" });
+  DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_CLEAR_ERRORS" });
 };
 export const resetPendingAccountChanges = function resetPendingAccountChanges() {
-  dispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES" });
+  DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES" });
 };
 export const resetAllPending = function resetAllPending() {
-  dispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES" });
+  DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES" });
 };
 export const resetAllTryItOut = function resetAllTryItOut() {
-  dispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_TRY_IT_OUT_CHANGES" });
+  DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_TRY_IT_OUT_CHANGES" });
 };
 export const resetAndCloseUserProfileForm = function resetAndCloseUserProfileForm() {
-  dispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_AND_CLOSE_FORM" });
+  DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_AND_CLOSE_FORM" });
 };
 export const resetPendingLegacyUsernameDisabled = function resetPendingLegacyUsernameDisabled() {
-  dispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_LEGACY_USERNAME_DISABLED" });
+  DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_LEGACY_USERNAME_DISABLED" });
 };
 export const resetPendingPrimaryGuildChanges = function resetPendingPrimaryGuildChanges() {
-  dispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES" });
+  DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES" });
 };
 export const updateAccount = function updateAccount(settings) {
-  let obj = dispatcherDefault;
-  obj = { type: "USER_SETTINGS_MODAL_UPDATE_ACCOUNT", settings };
+  const obj = { type: "USER_SETTINGS_MODAL_UPDATE_ACCOUNT", settings };
   obj.dispatch(obj);
 };
 export const resetAccount = function resetAccount() {
-  dispatcherDefault.dispatch({ type: "USER_SETTINGS_MODAL_RESET" });
+  DispatcherDefault.dispatch({ type: "USER_SETTINGS_MODAL_RESET" });
 };
-export const saveAccountChanges = function saveAccountChanges(closure_0, close) {
-  let obj = avatar(newPassword[3]);
-  obj.dispatch({ type: "USER_SETTINGS_MODAL_SUBMIT" });
-  const password = closure_0.password;
-  avatar = closure_0.avatar;
-  newPassword = closure_0.newPassword;
-  const discriminator = closure_0.discriminator;
+export const saveAccountChanges = function saveAccountChanges(user, close) {
+  avatar(newPassword[3]).dispatch({ type: "USER_SETTINGS_MODAL_SUBMIT" });
+  const password = user.password;
+  avatar = user.avatar;
+  newPassword = user.newPassword;
+  const discriminator = user.discriminator;
   close = close.close;
-  obj = {
-    username: closure_0.username,
-    email: closure_0.email,
-    email_token: closure_0.emailToken,
+  user = {
+    username: user.username,
+    email: user.email,
+    email_token: user.emailToken,
     password,
     avatar,
     new_password: newPassword,
@@ -367,13 +349,13 @@ export const saveAccountChanges = function saveAccountChanges(closure_0, close) 
       tmp3 = discriminator;
     }
   }
-  obj[6] = tmp3;
+  user.discriminator = tmp3;
   const Storage = password(tmp[8]).Storage;
-  let value = Storage.get(closure_6);
-  const tmp6 = callback2();
+  value = Storage.get(closure_6);
+  const tmp6 = closure_9();
   if (tmp7) {
-    obj.push_provider = tmp6;
-    obj.push_token = value;
+    user.push_provider = tmp6;
+    user.push_token = value;
   }
   const Storage2 = tmp4(tmp[8]).Storage;
   value = Storage2.get(closure_7);
@@ -382,59 +364,50 @@ export const saveAccountChanges = function saveAccountChanges(closure_0, close) 
     tmp10 = null != value;
   }
   if (tmp10) {
-    obj.push_voip_provider = tmp9;
-    obj.push_voip_token = value;
+    user.push_voip_provider = tmp9;
+    user.push_voip_token = value;
   }
   const HTTP = tmp4(tmp[4]).HTTP;
-  obj = {
-    url: constants.ME,
-    oldFormErrors: true,
-    body: obj,
-    rejectWithError: password(newPassword[4]).rejectWithMigratedError(),
-  };
-  const tmp4Result = password(newPassword[4]);
+  const request = { url: constants.ME, oldFormErrors: true, body: user, rejectWithError: null };
+  let obj = avatar(newPassword[3]);
   tmp7 = null != tmp6 && null != value;
   tmp9 = closure_8;
-  return HTTP.patch(obj).then(
+  request.rejectWithError = password(newPassword[4]).rejectWithMigratedError();
+  const tmp4Result = password(newPassword[4]);
+  return HTTP.patch(request).then(
     (body) => {
       body = body.body;
       delete tmp2[tmp];
-      let obj = avatar(newPassword[3]);
-      obj = { type: "UPDATE_TOKEN", token: body.token, userId: body.id };
+      let obj = { type: "UPDATE_TOKEN", token: body.token, userId: body.id };
       obj.dispatch(obj);
-      let obj2 = avatar(newPassword[3]);
+      let obj2 = DispatcherDefault;
       obj2.dispatch({ type: "CURRENT_USER_UPDATE", user: body });
       if (undefined !== avatar) {
-        obj = { avatarHash: null };
-        obj[0] = body.avatar;
-        const result = password(tmp4[11]).trackUserAvatarUpdated(obj);
-        const obj4 = password(tmp4[11]);
+        obj = { avatarHash: body.avatar };
+        const result = trackUserAvatarUpdated.trackUserAvatarUpdated(obj);
       }
       if (null != newPassword) {
-        let tmp3Result = tmp3(tmp4[3]);
-        obj1 = { type: "USER_PASSWORD_UPDATE", user: null, newPassword: null };
-        obj1[1] = body;
-        obj1[2] = tmp9;
+        let tmp3Result = tmp3(573);
+        const obj1 = { type: "USER_PASSWORD_UPDATE", user: body, newPassword: tmp9 };
         tmp3Result.dispatch(obj1);
       }
       if (tmp11) {
-        tmp3Result = tmp3(tmp4[3]);
-        obj2 = { type: "PASSWORD_UPDATED", userId: null };
-        obj2[1] = body.id;
+        tmp3Result = tmp3(573);
+        obj2 = { type: "PASSWORD_UPDATED", userId: body.id };
         tmp3Result.dispatch(obj2);
       }
       if (close) {
-        tmp3(tmp4[12]).close();
-        const tmp3Result1 = tmp3(tmp4[12]);
+        tmp3(6990).close();
+        const tmp3Result1 = tmp3(6990);
       } else {
-        tmp3(tmp4[3]).dispatch({ type: "USER_SETTINGS_MODAL_SUBMIT_COMPLETE" });
-        const tmp3Result2 = tmp3(tmp4[3]);
+        tmp3(573).dispatch({ type: "USER_SETTINGS_MODAL_SUBMIT_COMPLETE" });
+        const tmp3Result2 = tmp3(573);
       }
       return body;
     },
     (body) => {
-      let obj = avatar(newPassword[3]);
-      obj = { type: "USER_SETTINGS_MODAL_SUBMIT_FAILURE", errors: body.body };
+      avatar(newPassword[3]);
+      const obj = { type: "USER_SETTINGS_MODAL_SUBMIT_FAILURE", errors: body.body };
       obj.dispatch(obj);
       return body;
     },

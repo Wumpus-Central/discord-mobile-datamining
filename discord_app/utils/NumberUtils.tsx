@@ -1,46 +1,43 @@
 // discord_app/utils/NumberUtils.tsx
-import set from "../../_runtime/00002_set.js";
-import getSystemLocale from "../intl/index.native.tsx";
+import util from "../intl/index.native.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
 let c2 = 1000000;
-let result = set.fileFinishedImporting("utils/NumberUtils.tsx");
+let result = size.fileFinishedImporting("utils/NumberUtils.tsx");
 
 export const shortenAndLocalizeNumber = function shortenAndLocalizeNumber(count) {
   if (count < c2) {
-    const intl2 = getSystemLocale.intl;
-    let obj = { value: null };
-    obj[0] = count;
-    return intl2.formatToPlainString(getSystemLocale.t.OiHat3, obj);
+    const intl2 = util.intl;
+    let obj = { value: count };
+    return intl2.formatToPlainString(util.t.OiHat3, obj);
   } else {
     const result = count / tmp;
-    const intl = getSystemLocale.intl;
-    obj = { value: null };
-    obj[0] = result.toFixed(1);
-    return intl.formatToPlainString(getSystemLocale.t.Iku48I, obj);
+    const intl = util.intl;
+    obj = { value: result.toFixed(1) };
+    return intl.formatToPlainString(util.t.Iku48I, obj);
   }
 };
 export const humanizeValue = function humanizeValue(newPostCount, stateFromStores) {
   if (newPostCount < 1000) {
-    const intl2 = getSystemLocale.intl;
+    const intl2 = util.intl;
     let obj = { value: null };
     const _Math2 = Math;
-    obj[0] = Math.floor(newPostCount);
-    return intl2.formatToPlainString(getSystemLocale.t.OiHat3, obj);
+    obj.value = Math.floor(newPostCount);
+    return intl2.formatToPlainString(util.t.OiHat3, obj);
   } else if (newPostCount < c2) {
-    const intl = getSystemLocale.intl;
+    const intl = util.intl;
     obj = { value: null };
     const _Math = Math;
-    obj[0] = Math.floor(newPostCount / 1000);
-    return intl.formatToPlainString(getSystemLocale.t["84R4Tc"], obj);
+    obj.value = Math.floor(newPostCount / 1000);
+    return intl.formatToPlainString(util.t["84R4Tc"], obj);
   } else {
     const _Math3 = Math;
     const _Intl = Intl;
     const result = Math.floor((10 * newPostCount) / tmp7) / 10;
     const numberFormat = new Intl.NumberFormat(stateFromStores, { maximumFractionDigits: 1 });
-    const intl3 = getSystemLocale.intl;
-    obj = { value: null };
-    obj[0] = numberFormat.format(result);
-    return intl3.formatToPlainString(getSystemLocale.t.Iku48I, obj);
+    const intl3 = util.intl;
+    obj = { value: numberFormat.format(result) };
+    return intl3.formatToPlainString(util.t.Iku48I, obj);
   }
 };
 export const parseInteger = function parseInteger(discriminator, arg1) {

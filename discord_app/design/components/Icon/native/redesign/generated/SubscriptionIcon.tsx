@@ -1,22 +1,20 @@
 // discord_app/design/components/Icon/native/redesign/generated/SubscriptionIcon.tsx
-import noopAll from "../../../../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import registerAsset from "../../../../../../../_runtime/14988_registerAsset.js";
-import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
+import _mod14988 from "../../../../../../../_runtime/metro/14988__.js";
+import noop from "../../../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting(
-  "design/components/Icon/native/redesign/generated/SubscriptionIcon.tsx",
-);
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/SubscriptionIcon.tsx");
 
 export const SubscriptionIcon = function SubscriptionIcon(color) {
   let ICON_STRONG = color.color;
   if (ICON_STRONG === undefined) {
-    ICON_STRONG = ThemesDefault.colors.ICON_STRONG;
+    ICON_STRONG = nativeDefault.colors.ICON_STRONG;
   }
-  const merged = Object.assign(color, Object.create(null));
+  const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: registerAsset, color: ICON_STRONG, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod14988, color: ICON_STRONG, style: color.style });
 };

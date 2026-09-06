@@ -1,10 +1,14 @@
 // discord_app/modules/safe_area/useSafeAreaInsetsKeyboardAware.native.tsx
-import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../_runtime/00019_noop.js";
-import closure_5 from "../keyboard/native/subscribeToKeyboardUIStore.tsx";
+import PlatformUtils from "../../utils/PlatformUtils.tsx";
+import useKeyboardDuration from "../keyboard/native/useKeyboardDuration.tsx";
+import DeprecatedLayoutAnimation from "../animations/native/DeprecatedLayoutAnimation.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import noop from "../../../_runtime/metro/00019__.js";
+import subscribeToKeyboardUIStore from "../keyboard/native/subscribeToKeyboardUIStore.tsx";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/safe_area/useSafeAreaInsetsKeyboardAware.native.tsx");
+require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/safe_area/useSafeAreaInsetsKeyboardAware.native.tsx");
 
 export default function useSafeAreaInsetsKeyboardAware() {
   let obj = arg0;
@@ -19,7 +23,6 @@ export default function useSafeAreaInsetsKeyboardAware() {
   if (flag2 === undefined) {
     flag2 = true;
   }
-  importDefault = flag2;
   let flag3 = obj.includeCustomKeyboardHeight;
   if (flag3 === undefined) {
     flag3 = true;
@@ -28,45 +31,43 @@ export default function useSafeAreaInsetsKeyboardAware() {
   if (flag4 === undefined) {
     flag4 = false;
   }
-  let appEntryKey;
   let callback;
-  let ref;
   c6 = undefined;
-  const tmp2 = importDefault(flag3[5])();
-  appEntryKey = flag(flag3[6]).useAppEntryKey();
+  const tmp2 = flag2(flag3[5])();
+  const appEntryKey = flag(flag3[6]).useAppEntryKey();
   const items = [appEntryKey, flag3, flag, flag2];
   callback = callback.useCallback(() => {
-    let obj = flag(flag3[7]);
+    let obj = PlatformUtils;
     if (obj.isIOS()) {
       if (!flag) {
         return 0;
       }
     }
-    let tmpResult = tmp(tmp2[7]);
+    let tmpResult = tmp(1115);
     if (tmpResult.isAndroid()) {
-      if (!closure_1) {
+      if (!flag2) {
         return 0;
       }
     }
-    tmpResult = tmp(tmp2[8]);
+    tmpResult = tmp(1877);
     obj = { appEntryKey };
     let systemKeyboardHeight = tmpResult.getSystemKeyboardHeight(obj);
     if (0 === systemKeyboardHeight) {
-      const keyboardType = tmp(tmp2[9]).getKeyboardType(tmp5);
+      const keyboardType = tmp(4427).getKeyboardType(tmp5);
       let num3 = 0;
-      if (keyboardType !== tmp(tmp2[10]).KeyboardTypes.SYSTEM) {
+      if (keyboardType !== tmp(1609).KeyboardTypes.SYSTEM) {
         num3 = 0;
         if (flag3) {
-          num3 = tmp(tmp2[11]).getCustomKeyboardHeight(tmp5);
-          const tmpResult2 = tmp(tmp2[11]);
+          num3 = tmp(5579).getCustomKeyboardHeight(tmp5);
+          const tmpResult2 = tmp(5579);
         }
       }
       systemKeyboardHeight = num3;
-      const tmpResult1 = tmp(tmp2[9]);
+      const tmpResult1 = tmp(4427);
     }
     return systemKeyboardHeight;
   }, items);
-  ref = callback.useRef(callback());
+  const ref = callback.useRef(callback());
   const obj2 = flag(flag3[6]);
   let tmp = flag3;
   const tmp3 = flag;
@@ -74,11 +75,11 @@ export default function useSafeAreaInsetsKeyboardAware() {
   const items1 = [callback, flag, flag2];
   const effect = callback.useEffect(
     () =>
-      ref(() => {
+      subscribeToKeyboardUIStore(() => {
         const tmp = callback();
         if (ref.current !== tmp) {
           ref.current = tmp;
-          callback2(tmp);
+          closure_1_6(tmp);
         }
       }),
     items1,
@@ -91,20 +92,20 @@ export default function useSafeAreaInsetsKeyboardAware() {
     isAndroidResult = tmp3(tmp[7]).isAndroid();
     const tmp3Result = tmp3(tmp[7]);
   }
-  flag = isAndroidResult;
-  importDefault = obj3.useRef(false);
+  closure_129_0 = isAndroidResult;
+  closure_129_1 = obj3.useRef(false);
   const items2 = [tmp8, isAndroidResult];
   const effect1 = obj3.useEffect(() => {
-    const keyboardDuration = flag(flag3[3]).getKeyboardDuration();
-    if (ref.current) {
+    const keyboardDuration = useKeyboardDuration.getKeyboardDuration();
+    if (flag2.current) {
       if (0 !== keyboardDuration) {
         if (!flag) {
-          const result = flag(flag3[4]).DeprecatedLayoutAnimationKeyboard(keyboardDuration);
-          const tmpResult = flag(flag3[4]);
+          const result = DeprecatedLayoutAnimation.DeprecatedLayoutAnimationKeyboard(keyboardDuration);
+          const tmpResult = DeprecatedLayoutAnimation;
         }
       }
     }
-    ref.current = true;
+    flag2.current = true;
   }, items2);
   let num = 0;
   if (flag4) {

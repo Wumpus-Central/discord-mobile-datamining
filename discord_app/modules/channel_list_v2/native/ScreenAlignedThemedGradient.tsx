@@ -1,37 +1,37 @@
 // discord_app/modules/channel_list_v2/native/ScreenAlignedThemedGradient.tsx
-import set from "../../../../_runtime/00002_set.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import getMixedGradientColorDefault from "../../client_themes/native/ThemedGradient.tsx";
-import useActiveThemeType from "../../client_themes/native/useActiveTheme.tsx";
-import tDefault from "../../voice_panel/native/utils/roundToNearestPixel.tsx";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import ThemedGradientDefault from "../../client_themes/native/ThemedGradient.tsx";
+import useActiveTheme from "../../client_themes/native/useActiveTheme.tsx";
+import roundToNearestPixelDefault from "../../voice_panel/native/utils/roundToNearestPixel.tsx";
+import get_ActivityIndicator from "../../../../_runtime/metro/00017__.js";
+import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-({ StyleSheet: c3, View: c4 } = get_ActivityIndicator);
+({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsx = jsxProd.jsx;
-let closure_6 = createCacheKey.createStyles((arg0, arg1) => {
+let closure_6 = createStyles.createStyles((arg0, arg1) => {
   let obj = { container: null };
   obj = {};
-  const merged = Object.assign(closure_3.absoluteFillObject);
-  obj = { translateX: tDefault(-arg0) };
-  const items = [obj, { translateY: tDefault(-arg1) }];
+  const merged = Object.assign(React3.absoluteFillObject);
+  obj = { translateX: roundToNearestPixelDefault(-arg0) };
+  const items = [obj, { translateY: roundToNearestPixelDefault(-arg1) }];
   obj.transform = items;
-  obj[0] = obj;
+  obj.container = obj;
   return obj;
 });
-let closure_7 = {
+const __initData = {
   code: "function ScreenAlignedThemedGradientTsx1(){const{roundToNearestPixel,offsetX,panelTranslateX,offsetY}=this.__closure;return{transform:[{translateX:roundToNearestPixel(-offsetX-panelTranslateX.get())},{translateY:roundToNearestPixel(-offsetY)}]};}",
 };
-const result = set.fileFinishedImporting("modules/channel_list_v2/native/ScreenAlignedThemedGradient.tsx");
+const result = size.fileFinishedImporting("modules/channel_list_v2/native/ScreenAlignedThemedGradient.tsx");
 
 export default function ScreenAlignedThemedGradient(arg0) {
   ({ offsetX, offsetY } = arg0);
-  let obj = useActiveThemeType;
+  let obj = useActiveTheme;
   const isClientThemeOrCustomThemeActive = obj.useIsClientThemeOrCustomThemeActive();
   obj = {
     pointerEvents: "none",
-    style: callback(offsetX, offsetY).container,
-    children: jsx(getMixedGradientColorDefault, {
+    style: closure_6(offsetX, offsetY).container,
+    children: jsx(ThemedGradientDefault, {
       absolute: true,
       tall: true,
       wide: true,
@@ -39,14 +39,9 @@ export default function ScreenAlignedThemedGradient(arg0) {
     }),
   };
   return (
-    <closure_4 pointerEvents="none" style={callback(offsetX, offsetY).container}>
-      {jsx(getMixedGradientColorDefault, {
-        absolute: true,
-        tall: true,
-        wide: true,
-        mix: isClientThemeOrCustomThemeActive,
-      })}
-    </closure_4>
+    <React4 pointerEvents="none" style={closure_6(offsetX, offsetY).container}>
+      {jsx(ThemedGradientDefault, { absolute: true, tall: true, wide: true, mix: isClientThemeOrCustomThemeActive })}
+    </React4>
   );
 }
 export const ScreenAlignedThemedGradientSliding = function ScreenAlignedThemedGradientSliding(offsetX) {
@@ -59,21 +54,21 @@ export const ScreenAlignedThemedGradientSliding = function ScreenAlignedThemedGr
   const obj2 = offsetX(panelTranslateX[6]);
   const fn = function o() {
     let obj = { transform: null };
-    obj = { translateX: offsetY(panelTranslateX[3])(-offsetX - panelTranslateX.get()) };
+    obj = { translateX: roundToNearestPixelDefault(-offsetX - panelTranslateX.get()) };
     const items = [obj];
-    obj = { translateY: offsetY(panelTranslateX[3])(-offsetY) };
+    obj = { translateY: roundToNearestPixelDefault(-offsetY) };
     items[1] = obj;
-    obj[0] = items;
+    obj.transform = items;
     return obj;
   };
   obj = { roundToNearestPixel: offsetY(panelTranslateX[3]), offsetX, panelTranslateX, offsetY };
   fn.__closure = obj;
   fn.__workletHash = 14168713340122;
-  fn.__initData = closure_7;
+  fn.__initData = __initData;
   const animatedStyle = offsetX(panelTranslateX[7]).useAnimatedStyle(fn);
   obj = {
     pointerEvents: "none",
-    style: items,
+    style: null,
     children: jsx(offsetY(panelTranslateX[5]), {
       absolute: true,
       tall: true,
@@ -81,10 +76,11 @@ export const ScreenAlignedThemedGradientSliding = function ScreenAlignedThemedGr
       mix: isClientThemeOrCustomThemeActive,
     }),
   };
-  items = [closure_3.absoluteFill, animatedStyle];
+  let items = [absoluteFill.absoluteFill, animatedStyle];
+  obj.style = items;
   return jsx(offsetY(panelTranslateX[7]).View, {
     pointerEvents: "none",
-    style: items,
+    style: null,
     children: jsx(offsetY(panelTranslateX[5]), {
       absolute: true,
       tall: true,

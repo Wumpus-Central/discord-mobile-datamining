@@ -1,52 +1,47 @@
 // discord_app/modules/guild/native/GuildBadgeV2.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import Button from "../../../design/void/native.tsx";
-import AccessibilityAnnouncer from "../../../design/shared.tsx";
-import badgeVariants from "../../guild_badge/native/GuildBadgeImageSource.tsx";
+import native from "../../../design/void/native.tsx";
+import shared from "../../../design/shared.tsx";
+import GuildBadgeImageSource from "../../guild_badge/native/GuildBadgeImageSource.tsx";
 import BadgeCategory from "../../guild_badge/BadgeCategory.tsx";
-import GuildVisibility from "../../guild_badge/GuildTraits.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import GuildTraits from "../../guild_badge/GuildTraits.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-let closure_3 = createCacheKey.createStyles({ icon: { marginRight: 8 } });
-const result = require("set").fileFinishedImporting("modules/guild/native/GuildBadgeV2.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_3 = createStyles.createStyles({ icon: { marginRight: 8 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild/native/GuildBadgeV2.tsx");
 
 export default function GuildBadgeV2(arg0) {
   ({ guild, size } = arg0);
   if (size === undefined) {
-    size = Button.Icon.Sizes.MEDIUM;
+    size = native.Icon.Sizes.MEDIUM;
   }
-  const merged = Object.assign(arg0, Object.create(null));
-  AccessibilityAnnouncer;
+  const merged = Object.assign(arg0, Object.assign({ guild: 0, size: 0 }));
+  shared;
   if (null == guild) {
     return null;
   } else {
     const guildBadgeImageSource = tmp5(8741).getGuildBadgeImageSource(guild, tmp8);
     let tmp10 = null;
     if (null != guildBadgeImageSource) {
-      const obj = { size: null, source: null, style: null, disableColor: true };
-      obj[0] = size;
-      obj[1] = guildBadgeImageSource;
-      obj[2] = tmp4.icon;
+      const obj = { size, source: guildBadgeImageSource, style: tmp4.icon, disableColor: true };
       const merged1 = Object.assign(merged);
-      tmp10 = jsx(tmp5(1178).Icon, { size: null, source: null, style: null, disableColor: true });
+      tmp10 = jsx(tmp5(1178).Icon, { size, source: guildBadgeImageSource, style: tmp4.icon, disableColor: true });
     }
     return tmp10;
   }
-  tmp4 = callback();
+  tmp4 = closure_3();
 }
-export const hasGuildBadge = function hasGuildBadge(fromGuildProfileResult) {
-  const guildTraits = GuildVisibility.getGuildTraits(fromGuildProfileResult);
-  const obj = GuildVisibility;
-  const tmp = require;
+export const hasGuildBadge = function hasGuildBadge(fromGuildProfileResult, arg1) {
+  const guildTraits = GuildTraits.getGuildTraits(fromGuildProfileResult);
   const badgeCategory = BadgeCategory.getBadgeCategory(guildTraits);
-  const tmp5 = badgeVariants.badgeVariants[badgeCategory];
+  const tmp5 = GuildBadgeImageSource.badgeVariants[badgeCategory];
   let tmp6 = null != tmp5;
   if (tmp6) {
-    tmp6 = null != badgeVariants.resolveImageSource(tmp5, guildTraits, arg1);
-    const tmpResult = badgeVariants;
+    tmp6 = null != GuildBadgeImageSource.resolveImageSource(tmp5, guildTraits, arg1);
+    const tmpResult = GuildBadgeImageSource;
   }
   return tmp6;
 };

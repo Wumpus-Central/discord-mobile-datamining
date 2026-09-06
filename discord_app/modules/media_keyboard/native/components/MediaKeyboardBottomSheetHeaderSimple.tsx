@@ -1,21 +1,25 @@
 // discord_app/modules/media_keyboard/native/components/MediaKeyboardBottomSheetHeaderSimple.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef10641 from "MediaKeyboardBottomSheetHandle.tsx";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import MediaKeyboardBottomSheetHandleDefault from "MediaKeyboardBottomSheetHandle.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
 let obj = { headerHandleOnlyWrap: null };
-obj = { height: require("DRAG_HANDLE").HEADER_HANDLE_HEIGHT, paddingBottom: ThemesDefault.space.PX_4 };
-obj[0] = obj;
-let closure_4 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(function MediaKeyboardBottomSheetHeaderSimple(arg0) {
-  ({ animatedIndex, onPress } = arg0);
-  return <View style={callback().headerHandleOnlyWrap}>{jsx(_modDef10641, { animatedIndex, onPress })}</View>;
-});
-const result = require("set").fileFinishedImporting(
+obj = { height: fn(1607).HEADER_HANDLE_HEIGHT, paddingBottom: nativeDefault.space.PX_4 };
+obj.headerHandleOnlyWrap = obj;
+let closure_4 = createStyles.createStyles(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/media_keyboard/native/components/MediaKeyboardBottomSheetHeaderSimple.tsx",
 );
 
-export default memoResult;
+export default noop.memo(function MediaKeyboardBottomSheetHeaderSimple(arg0) {
+  ({ animatedIndex, onPress } = arg0);
+  return (
+    <View style={closure_4().headerHandleOnlyWrap}>
+      {jsx(MediaKeyboardBottomSheetHandleDefault, { animatedIndex, onPress })}
+    </View>
+  );
+});

@@ -1,17 +1,19 @@
 // discord_app/modules/content_inventory/useEntryActivityAndApplication.tsx
-import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../activities/EmbeddedActivitiesStore.tsx";
-import closure_5 from "ContentInventoryActivityStore.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import EmbeddedActivitiesStore from "../activities/EmbeddedActivitiesStore.tsx";
+import ContentInventoryActivityStore from "ContentInventoryActivityStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/content_inventory/useEntryActivityAndApplication.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/content_inventory/useEntryActivityAndApplication.tsx");
 
 export default function useEntryActivityAndApplication(extra) {
-  const _require = extra;
-  let obj = initialize;
-  const items = [closure_5];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getMatchingActivity(closure_0));
+  _require = extra;
+  let obj = require("initialize");
+  const items = [ContentInventoryActivityStore];
+  const stateFromStores = obj.useStateFromStores(items, () =>
+    ContentInventoryActivityStore.getMatchingActivity(closure_0),
+  );
   let application_id;
   if (stateFromStores != null) {
     application_id = stateFromStores.application_id;
@@ -22,8 +24,8 @@ export default function useEntryActivityAndApplication(extra) {
     application_id1 = extra.extra.application_id;
   }
   items1[1] = application_id1;
-  const tmp7 = callback(first(7168)(items1), 2);
-  first = tmp7[0];
+  const tmp7 = _slicedToArray(activityApplication(7168)(items1), 2);
+  activityApplication = tmp7[0];
   obj = {
     activity: stateFromStores,
     embeddedActivity: null,
@@ -31,22 +33,21 @@ export default function useEntryActivityAndApplication(extra) {
     activityApplication: null,
     fallbackApplication: null,
   };
-  const tmp = _require;
-  const tmp4 = first(7168);
-  const items2 = [closure_4];
-  obj[1] = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
+  const tmp4 = activityApplication(7168);
+  const items2 = [EmbeddedActivitiesStore];
+  obj.embeddedActivity = require("initialize").useStateFromStores(items2, () => {
     let id;
     if (first != null) {
       id = first.id;
     }
-    return closure_1_4.getEmbeddedActivityForUserId(extra.author_id, id);
+    return EmbeddedActivitiesStore.getEmbeddedActivityForUserId(extra.author_id, id);
   });
-  let tmp10 = first;
-  if (first == null) {
+  let tmp10 = activityApplication;
+  if (activityApplication == null) {
     tmp10 = tmp9;
   }
-  obj[2] = tmp10;
-  obj[3] = first;
-  obj[4] = tmp7[1];
+  obj.anyMatchingApplication = tmp10;
+  obj.activityApplication = activityApplication;
+  obj.fallbackApplication = tmp7[1];
   return obj;
 }

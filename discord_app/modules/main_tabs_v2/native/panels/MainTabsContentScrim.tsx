@@ -1,40 +1,36 @@
 // discord_app/modules/main_tabs_v2/native/panels/MainTabsContentScrim.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 const jsx = jsxProd.jsx;
 let obj = { scrim: null };
 obj = {};
-const merged = Object.assign(get_ActivityIndicator.StyleSheet.absoluteFillObject);
+const merged = Object.assign(_mod17.StyleSheet.absoluteFillObject);
 obj.zIndex = 5;
-obj.backgroundColor = ThemesDefault.colors.BACKGROUND_SCRIM;
-obj[0] = obj;
-let closure_4 = createCacheKey.createStyles(obj);
-let closure_5 = {
+obj.backgroundColor = nativeDefault.colors.BACKGROUND_SCRIM;
+obj.scrim = obj;
+let closure_4 = createStyles.createStyles(obj);
+const __initData = {
   code: "function MainTabsContentScrimTsx1(){const{interpolate,translateX,maxWidth,Extrapolation}=this.__closure;return{opacity:interpolate(translateX.get(),[maxWidth,0],[0,0.5],Extrapolation.CLAMP)};}",
 };
-const result = set.fileFinishedImporting("modules/main_tabs_v2/native/panels/MainTabsContentScrim.tsx");
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/MainTabsContentScrim.tsx");
 
 export const MainTabsContentScrim = function MainTabsContentScrim(translateX) {
   translateX = translateX.translateX;
   const maxWidth = translateX.maxWidth;
-  let obj = translateX(4296);
+  translateX(4296);
   const fn = function c() {
     const obj = { opacity: null };
-    const value = translateX.get();
+    value = translateX.get();
     const items = [maxWidth, 0];
-    obj[0] = translateX(closure_1_2[4]).interpolate(
-      value,
-      items,
-      [0, 0.5],
-      translateX(closure_1_2[4]).Extrapolation.CLAMP,
-    );
+    obj.opacity = ReanimatedRexport.interpolate(value, items, [0, 0.5], ReanimatedRexport.Extrapolation.CLAMP);
     return obj;
   };
-  obj = {
+  let obj = {
     interpolate: translateX(4296).interpolate,
     translateX,
     maxWidth,
@@ -42,8 +38,10 @@ export const MainTabsContentScrim = function MainTabsContentScrim(translateX) {
   };
   fn.__closure = obj;
   fn.__workletHash = 7933670426250;
-  fn.__initData = closure_5;
+  fn.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  const style = [callback().scrim, animatedStyle];
-  return jsx(maxWidth(4296).View, { style, pointerEvents: "none" });
+  obj = { style: null, pointerEvents: "none" };
+  let items = [closure_4().scrim, animatedStyle];
+  obj.style = items;
+  return jsx(maxWidth(4296).View, { style: null, pointerEvents: "none" });
 };

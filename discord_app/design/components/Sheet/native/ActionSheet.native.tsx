@@ -1,22 +1,22 @@
 // discord_app/design/components/Sheet/native/ActionSheet.native.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import Background from "BottomSheet.native.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../Styles/native/createStyles.tsx";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Sheet_BottomSheet from "BottomSheet.native.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
 let obj = { content: null, body: null };
-obj = { paddingHorizontal: ThemesDefault.space.PX_16 };
-obj[0] = obj;
-obj[1] = { gap: 24 };
-let closure_3 = createCacheKey.createStyles(obj);
-const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
+obj = { paddingHorizontal: nativeDefault.space.PX_16 };
+obj.content = obj;
+obj.body = { gap: 24 };
+let closure_3 = createStyles.createStyles(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Sheet/native/ActionSheet.native.tsx");
+
+export const ActionSheet = noop.forwardRef((arg0, ref) => {
   const obj = { ref };
   const merged = Object.assign(arg0);
-  ({ content: obj.contentStyles, body: obj.bodyStyles } = callback());
-  return jsx(Background.BottomSheet, { ref });
+  ({ content: obj.contentStyles, body: obj.bodyStyles } = closure_3());
+  return jsx(Sheet_BottomSheet.BottomSheet, { ref });
 });
-const result = require("set").fileFinishedImporting("design/components/Sheet/native/ActionSheet.native.tsx");
-
-export const ActionSheet = forwardRefResult;

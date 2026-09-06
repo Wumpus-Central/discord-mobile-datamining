@@ -1,9 +1,8 @@
 // discord_app/modules/go_live/Constants.tsx
 import Notifications from "../../../discord_common/js/shared/shared-constants/Notifications.tsx";
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-let set = new Set(["chrome.exe", "opera.exe", "firefox.exe", "brave.exe", "msedge.exe"]);
-const result = set.fileFinishedImporting("modules/go_live/Constants.tsx");
+const result = size.fileFinishedImporting("modules/go_live/Constants.tsx");
 
 export const StreamIssueReportReasons = {
   BLACK_SCREEN: "BLACK_SCREEN",
@@ -32,4 +31,4 @@ export const WINDOWS_GRAPHICS_CAPTURE_BUILD = 22000;
 export const StreamTypes = { GUILD: "guild", CALL: "call" };
 export const STREAM_NOTIFY_GUILD_MAX_SIZE = Notifications.Notifications.StreamNotificationsGuildMaxSize;
 export const GO_LIVE_NOTIFY_FRIENDS_MIN_MEMBER_COUNT = 30;
-export const BROWSER_EXECUTABLES = set;
+export const BROWSER_EXECUTABLES = new Set(["chrome.exe", "opera.exe", "firefox.exe", "brave.exe", "msedge.exe"]);

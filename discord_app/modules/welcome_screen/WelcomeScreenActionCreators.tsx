@@ -1,108 +1,63 @@
 // discord_app/modules/welcome_screen/WelcomeScreenActionCreators.tsx
-import dispatcherDefault from "../../Dispatcher.tsx";
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import { Endpoints } from "../../Constants.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
-const require = arg1;
-function _fetchWelcomeScreen() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
+require = fn;
+let closure_5 = async function _fetchWelcomeScreen() {
+  closure_2 = tmp3;
+  closure_129_0 = closure_0;
+  DispatcherDefault.dispatch({ type: "WELCOME_SCREEN_FETCH_START" });
+  const HTTP = HTTPUtils.HTTP;
+  await HTTP.get({ url: Endpoints.GUILD_WELCOME_SCREEN(closure_0), oldFormErrors: true, rejectWithError: true });
+  let obj4 = closure_130_1(closure_130_2[2]);
+  obj4.dispatch({ type: "WELCOME_SCREEN_FETCH_FAIL" });
+  closure_129_1 = await "HermesInternal";
+  { url: Endpoints.GUILD_WELCOME_SCREEN(closure_0), oldFormErrors: true, rejectWithError: true };
+  obj4 = { type: "WELCOME_SCREEN_FETCH_SUCCESS", guildId: closure_129_0, welcomeScreen: closure_129_1.body };
+  closure_130_1(closure_130_2[2]).dispatch(obj4);
+  return closure_129_1.body;
+};
+let closure_6 = async function _saveWelcomeScreen(arg0, arg1) {
+  closure_3 = tmp3;
+  closure_130_0 = closure_0;
+  DispatcherDefault.dispatch({ type: "WELCOME_SCREEN_SUBMIT" });
+  const HTTP = HTTPUtils.HTTP;
+  const request = { url: Endpoints.GUILD_WELCOME_SCREEN(closure_0), body: { description: null, welcome_channels: null, enabled: null }, oldFormErrors: true, rejectWithError: true };
+  ({ description: obj10.description, channels: obj10.welcome_channels, enabled: obj10.enabled } = closure_1);
+  await HTTP.patch(request);
+  if (1 === tmp7) {
     c5 = 0;
-    c6 = 0;
-    c4 = 0;
-    return (function* (arg0) {
-      dependencyMap = tmp3;
-      closure_1_1(closure_1_2[2]).dispatch({ type: "WELCOME_SCREEN_FETCH_START" });
-      c4 = 1;
-      const HTTP = callback(closure_1_2[3]).HTTP;
-      obj1 = { url: null, oldFormErrors: true, rejectWithError: true };
-      obj1[0] = c4.GUILD_WELCOME_SCREEN(callback);
-      yield HTTP.get(obj1);
-      c4 = 0;
-      let obj4 = lib(573);
-      obj4.dispatch({ type: "WELCOME_SCREEN_FETCH_FAIL" });
-      lib = yield "HermesInternal";
-      const obj = lib(573);
-      obj4 = { type: "WELCOME_SCREEN_FETCH_SUCCESS", guildId: null, welcomeScreen: null };
-      obj4[1] = callback;
-      obj4[2] = lib.body;
-      obj.dispatch(obj4);
-      c4 = 0;
-      return lib.body;
-    })();
-  });
-  closure_5 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _saveWelcomeScreen() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c6 = 0;
-    c7 = 0;
+    let obj3 = closure_131_1(closure_131_2[2]);
+    obj3.dispatch({ type: "WELCOME_SCREEN_SUBMIT_FAILURE" });
+    c7 = 3;
+  } else if (arg0 === 1) {
+    c7 = 3;
+    throw arg1;
+  } else if (arg0 !== 2) {
+    closure_130_1 = arg1;
+    obj3 = { type: "WELCOME_SCREEN_SUBMIT_SUCCESS", guildId: closure_130_0, welcomeScreen: closure_130_1.body };
+    closure_131_1(closure_131_2[2]).dispatch(obj3);
     c5 = 0;
-    return (function* (arg0, arg1) {
-      closure_3 = tmp3;
-      lib(closure_1_2[2]).dispatch({ type: "WELCOME_SCREEN_SUBMIT" });
-      c5 = 1;
-      const HTTP = callback(closure_1_2[3]).HTTP;
-      obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: true };
-      obj1[0] = closure_1_4.GUILD_WELCOME_SCREEN(callback);
-      ({ description: obj10[0], channels: obj10[1], enabled: obj10[2] } = lib);
-      obj1[1] = { description: null, welcome_channels: null, enabled: null };
-      yield HTTP.patch(obj1);
-      if (1 === tmp7) {
-        c5 = 0;
-        const obj3 = lib(573);
-        obj3.dispatch({ type: "WELCOME_SCREEN_SUBMIT_FAILURE" });
-        c7 = 3;
-      } else if (arg0 === 1) {
-        c7 = 3;
-        throw arg1;
-      } else if (arg0 !== 2) {
-        lib = arg1;
-        const obj = lib(573);
-        const obj4 = { type: "WELCOME_SCREEN_SUBMIT_SUCCESS", guildId: null, welcomeScreen: null };
-        obj4[1] = callback;
-        obj4[2] = lib.body;
-        obj.dispatch(obj4);
-        c5 = 0;
-      }
-      c5 = 0;
-      return arg1;
-    })();
-  });
-  closure_6 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    closure_131_1(closure_131_2[2]);
   }
-  return applyArgumentsResult;
-}
-const result = require("set").fileFinishedImporting("modules/welcome_screen/WelcomeScreenActionCreators.tsx");
+  return arg1;
+};
+const Endpoints = fn(1074).Endpoints;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/welcome_screen/WelcomeScreenActionCreators.tsx");
 
-export const welcomeScreenViewed = function welcomeScreenViewed(closure_0) {
+export const welcomeScreenViewed = function welcomeScreenViewed(guildId) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
   }
-  let obj = dispatcherDefault;
-  obj = { type: "WELCOME_SCREEN_VIEW", guildId: closure_0, isLurking: flag };
+  const obj = { type: "WELCOME_SCREEN_VIEW", guildId, isLurking: flag };
   obj.dispatch(obj);
 };
-export const fetchWelcomeScreen = function fetchWelcomeScreen(closure_0) {
+export const fetchWelcomeScreen = function fetchWelcomeScreen() {
   const self = this;
-  const apply = _fetchWelcomeScreen.apply;
+  const apply = closure_5.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -111,19 +66,18 @@ export const fetchWelcomeScreen = function fetchWelcomeScreen(closure_0) {
   return applyArgumentsResult;
 };
 export const resetWelcomeScreen = function resetWelcomeScreen() {
-  dispatcherDefault.dispatch({ type: "WELCOME_SCREEN_SETTINGS_RESET" });
+  DispatcherDefault.dispatch({ type: "WELCOME_SCREEN_SETTINGS_RESET" });
 };
 export const clearWelcomeScreenSettings = function clearWelcomeScreenSettings() {
-  dispatcherDefault.dispatch({ type: "WELCOME_SCREEN_SETTINGS_CLEAR" });
+  DispatcherDefault.dispatch({ type: "WELCOME_SCREEN_SETTINGS_CLEAR" });
 };
 export const updateSettings = function updateSettings(settings) {
-  let obj = dispatcherDefault;
-  obj = { type: "WELCOME_SCREEN_SETTINGS_UPDATE", settings };
+  const obj = { type: "WELCOME_SCREEN_SETTINGS_UPDATE", settings };
   obj.dispatch(obj);
 };
 export const saveWelcomeScreen = function saveWelcomeScreen() {
   const self = this;
-  const apply = _saveWelcomeScreen.apply;
+  const apply = closure_6.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

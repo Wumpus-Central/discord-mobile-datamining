@@ -1,7 +1,7 @@
 // discord_app/modules/threads/convertServerThreadMember.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/threads/convertServerThreadMember.tsx");
+const result = size.fileFinishedImporting("modules/threads/convertServerThreadMember.tsx");
 
 export default function convertServerThreadMember(id) {
   return {

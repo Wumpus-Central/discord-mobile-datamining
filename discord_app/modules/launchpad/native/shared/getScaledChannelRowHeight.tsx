@@ -1,11 +1,11 @@
 // discord_app/modules/launchpad/native/shared/getScaledChannelRowHeight.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import getLayoutStyleDefault from "getLayoutStyles.tsx";
+import getLayoutStylesDefault from "getLayoutStyles.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/launchpad/native/shared/getScaledChannelRowHeight.tsx");
+const result = size.fileFinishedImporting("modules/launchpad/native/shared/getScaledChannelRowHeight.tsx");
 
 export default function getScaledChannelRowHeight(arg0) {
-  const tmp = getLayoutStyleDefault();
+  const tmp = getLayoutStylesDefault();
   return (
     Math.max(
       Math.max(arg0, 1) * (tmp.channelName.height + (tmp.messagePreview.margin.marginTop + tmp.messagePreview.height)),

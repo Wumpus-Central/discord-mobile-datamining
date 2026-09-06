@@ -1,24 +1,25 @@
 // discord_app/design/tokens/native/useToken.tsx
-import applyDefault from "../../../../_runtime/00012_apply.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import getSemanticColorContextFromThemeContext from "SemanticColorContext.native.tsx";
-import ManaContext from "../../../../discord_common/js/packages/design/native.tsx";
+import _modDef12 from "../../../../_runtime/metro/00012__.js";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import native from "../../../../discord_common/js/packages/design/native.tsx";
 
-require = arg1;
+const SemanticColorContext = obj(4263);
+require = fn;
 const map = new Map();
-const keys = Object.keys(ThemesDefault.colors);
+const keys = Object.keys(nativeDefault.colors);
 let closure_4 = Object.fromEntries(
-  keys.map((arg0) => {
-    const items = [applyDefault.kebabCase(arg0), arg0];
+  keys.map((item) => {
+    const items = [_modDef12.kebabCase(item), item];
     return items;
   }),
 );
-let result = require("set").fileFinishedImporting("design/tokens/native/useToken.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("design/tokens/native/useToken.tsx");
 
 export const useToken = function useToken(BACKGROUND_BASE_LOW, theme) {
   let obj = require;
   let result = dependencyMap;
-  const themeContext = ManaContext.useThemeContext();
+  const themeContext = native.useThemeContext();
   let tmp3 = null;
   if (theme == null) {
     theme = themeContext.theme;
@@ -29,25 +30,24 @@ export const useToken = function useToken(BACKGROUND_BASE_LOW, theme) {
     if (typeof BACKGROUND_BASE_LOW === "object") {
       if (tmp3 !== BACKGROUND_BASE_LOW) {
         if ("resolve" in BACKGROUND_BASE_LOW) {
-          const internal = ThemesDefault.internal;
+          const internal = nativeDefault.internal;
           if (!internal.isSemanticColor(BACKGROUND_BASE_LOW)) {
             let enabledExperiments = themeContext.enabledExperiments;
             if (enabledExperiments == tmp3) {
               enabledExperiments = [];
             }
-            obj = { enabledExperiments: null, density: null };
-            obj[0] = enabledExperiments;
+            obj = { enabledExperiments, density: null };
             let str2 = themeContext.density;
             if (str2 == tmp3) {
               str2 = "compact";
             }
-            obj[1] = str2;
+            obj.density = str2;
             let resolveResult = BACKGROUND_BASE_LOW.resolve(obj);
           }
         }
       }
     }
-    const internal2 = ThemesDefault.internal;
+    const internal2 = nativeDefault.internal;
     let semanticColorName = BACKGROUND_BASE_LOW;
     if (internal2.isSemanticColor(BACKGROUND_BASE_LOW)) {
       const internal3 = tmp6(576).internal;
@@ -55,7 +55,7 @@ export const useToken = function useToken(BACKGROUND_BASE_LOW, theme) {
     }
     const _HermesInternal = HermesInternal;
     const combined = "" + semanticColorName + "-" + themeContext.key + "-" + theme;
-    const value = map.get(combined);
+    value = map.get(combined);
     let semanticColor = value;
     if (tmp3 != value) {
       tmp3 = tmp3 != semanticColor;
@@ -69,7 +69,7 @@ export const useToken = function useToken(BACKGROUND_BASE_LOW, theme) {
         semanticColor = value;
         if (BACKGROUND_BASE_LOW in closure_4) {
           const internal5 = tmp6(576).internal;
-          obj = getSemanticColorContextFromThemeContext;
+          obj = SemanticColorContext;
           result = obj.getSemanticColorContextFromThemeContext(themeContext);
           semanticColor = internal5.resolveSemanticColor(theme, tmp6(576).colors[tmp15[BACKGROUND_BASE_LOW]], result);
         }
@@ -82,9 +82,9 @@ export const useToken = function useToken(BACKGROUND_BASE_LOW, theme) {
         semanticColor = internal4.resolveSemanticColor(
           theme,
           BACKGROUND_BASE_LOW,
-          getSemanticColorContextFromThemeContext.getSemanticColorContextFromThemeContext(themeContext),
+          SemanticColorContext.getSemanticColorContextFromThemeContext(themeContext),
         );
-        const objResult = getSemanticColorContextFromThemeContext;
+        const objResult = SemanticColorContext;
       }
     }
     resolveResult = tmp14;

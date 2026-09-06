@@ -1,11 +1,11 @@
 // discord_app/modules/user_profile/hooks/useDisplayableBoardWidgets.tsx
-import toSubmission from "../UserProfileApplicationWidgetTypes.tsx";
+import UserProfileApplicationWidgetTypes from "../UserProfileApplicationWidgetTypes.tsx";
 import useUserProfileWidgetsDefault from "useUserProfileWidgets.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+require = fn;
 function isNonEmptyBoardWidget(games) {
-  let tmp3 = games instanceof toSubmission.ApplicationWidget;
+  let tmp3 = games instanceof UserProfileApplicationWidgetTypes.ApplicationWidget;
   if (!tmp3) {
     let tmp4 = games instanceof tmp(7630).UserProfilePersonalWidget;
     if (!tmp4) {
@@ -20,7 +20,8 @@ function isNonEmptyBoardWidget(games) {
   }
   return tmp3;
 }
-const result = require("set").fileFinishedImporting("modules/user_profile/hooks/useDisplayableBoardWidgets.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/hooks/useDisplayableBoardWidgets.tsx");
 
 export const useDisplayableBoardWidgets = function useDisplayableBoardWidgets(id) {
   isMobileGameCollectionExperimentEnabled =
@@ -28,9 +29,9 @@ export const useDisplayableBoardWidgets = function useDisplayableBoardWidgets(id
   const tmp2 = useUserProfileWidgetsDefault(id);
   importDefault = tmp2;
   const items = [isMobileGameCollectionExperimentEnabled, tmp2];
-  return React.useMemo(() => {
+  return noop.useMemo(() => {
     if (isMobileGameCollectionExperimentEnabled) {
-      let found = closure_1.filter(closure_1_4);
+      let found = closure_1.filter(isNonEmptyBoardWidget);
     } else {
       found = [];
     }

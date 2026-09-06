@@ -1,70 +1,65 @@
 // discord_app/components_native/premium/PremiumSubscriptionPricingUpsell.tsx
-import getSystemLocale from "../../intl/index.native.tsx";
-import Text from "../../design/components/Text/native/Text.tsx";
-import getSubscriptionPlansLoaded from "../../modules/billing/hooks/useSubscriptionPlansLoaded.tsx";
-import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../_runtime/00019_noop.js";
-import { View } from "../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../modules/user_settings/LocaleStore.tsx";
-import closure_7 from "../../stores/UserStore.tsx";
-import closure_8 from "../../stores/billing/SubscriptionPlanStore.tsx";
-import closure_9 from "../../stores/billing/SubscriptionStore.tsx";
-import closure_10 from "../../stores/native/IAPStore.android.tsx";
-import { CurrencyCodes } from "../../Constants.tsx";
-import GuildFeatures from "../../modules/premium/PremiumConstants.tsx";
-import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
+import util from "../../intl/index.native.tsx";
+import Text_Text from "../../design/components/Text/native/Text.tsx";
+import useSubscriptionPlansLoaded from "../../modules/billing/hooks/useSubscriptionPlansLoaded.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import noop from "../../../_runtime/metro/00019__.js";
+import LocaleStore from "../../modules/user_settings/LocaleStore.tsx";
+import UserStore from "../../stores/UserStore.tsx";
+import SubscriptionPlanStore from "../../stores/billing/SubscriptionPlanStore.tsx";
+import SubscriptionStore from "../../stores/billing/SubscriptionStore.tsx";
+import IAPStore from "../../stores/native/IAPStore.android.tsx";
 
-require = arg1;
+require = fn;
 function PricingSubheadingCopy() {
-  let tmp = callback3();
-  const _require = tmp;
-  let obj = _require(str3[12]);
-  let items = [closure_7];
+  let tmp = closure_21();
+  _require = tmp;
+  let obj = require("initialize");
+  let items = [UserStore];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  obj1 = importDefault(str3[13]);
+  let obj1 = require("PremiumUtils");
   const hasBoostDiscountResult = obj1.hasBoostDiscount(stateFromStores);
-  let obj2 = _require(str3[12]);
-  const items1 = [closure_6];
+  let obj2 = require("initialize");
+  const items1 = [LocaleStore];
   const stateFromStores1 = obj2.useStateFromStores(items1, () => locale.locale);
-  let obj3 = _require(str3[14]);
+  let obj3 = require("useSubscriptionPlansLoaded");
   const subscriptionPlansLoaded = obj3.useSubscriptionPlansLoaded();
-  let obj4 = _require(str3[12]);
-  const items2 = [closure_9];
+  let obj4 = require("initialize");
+  const items2 = [SubscriptionStore];
   importDefault = obj4.useStateFromStores(items2, () => premiumTypeSubscription.getPremiumTypeSubscription());
-  let obj5 = _require(str3[12]);
-  const items3 = [closure_8];
+  let obj5 = require("initialize");
+  const items3 = [SubscriptionPlanStore];
   let stateFromStores2 = obj5.useStateFromStores(items3, () => {
-    let value;
+    value = undefined;
     if (null != closure_1) {
-      value = closure_1_8.get(tmp.planId);
+      value = SubscriptionPlanStore.get(tmp.planId);
     }
     return value;
   });
-  const effect = React.useEffect(() => {
-    if (!store.isReady()) {
-      callback(str3[15]).wait(() => callback(table[16]).loadProducts());
-      const obj = callback(str3[15]);
+  const effect = noop.useEffect(() => {
+    if (!IAPStore.isReady()) {
+      closure_1(str3[15]).wait(() => closure_1_1(str3[16]).loadProducts());
+      const obj = closure_1(str3[15]);
     }
   }, []);
-  let obj6 = _require(str3[12]);
-  let obj7 = closure_10;
-  const items4 = [closure_10];
+  let obj6 = require("initialize");
+  let obj7 = IAPStore;
+  const items4 = [IAPStore];
   [tmp12, tmp13, tmp14, tmp15, tmp16] = str2(
     obj6.useStateFromStoresArray(items4, () => {
       const items = [
-        store.getProduct(lib(str3[17]).ProductIds.PREMIUM_GUILD_1_MONTHLY),
-        store.getProduct(lib(str3[17]).ProductIds.PREMIUM_TIER_2_MONTHLY),
-        store.getProduct(lib(str3[17]).ProductIds.PREMIUM_TIER_2_PREMIUM_GUILD_1_MONTHLY),
-        store.getProduct(lib(str3[17]).ProductIds.PREMIUM_TIER_2_YEARLY),
-        store.getProduct(lib(str3[17]).ProductIds.PREMIUM_TIER_2_PREMIUM_GUILD_1_YEARLY),
+        IAPStore.getProduct(closure_0(str3[17]).ProductIds.PREMIUM_GUILD_1_MONTHLY),
+        IAPStore.getProduct(closure_0(str3[17]).ProductIds.PREMIUM_TIER_2_MONTHLY),
+        IAPStore.getProduct(closure_0(str3[17]).ProductIds.PREMIUM_TIER_2_PREMIUM_GUILD_1_MONTHLY),
+        IAPStore.getProduct(closure_0(str3[17]).ProductIds.PREMIUM_TIER_2_YEARLY),
+        IAPStore.getProduct(closure_0(str3[17]).ProductIds.PREMIUM_TIER_2_PREMIUM_GUILD_1_YEARLY),
       ];
       return items;
     }),
     5,
   );
   if (stateFromStores2 == null) {
-    stateFromStores2 = table[constants.PREMIUM_MONTH_GUILD];
+    stateFromStores2 = closure_13[constants.PREMIUM_MONTH_GUILD];
   }
   ({ interval, intervalCount } = stateFromStores2);
   if (subscriptionPlansLoaded) {
@@ -72,7 +67,6 @@ function PricingSubheadingCopy() {
       if (null != tmp12) {
         if (tmp12 != null) {
           const formatted = tmp12.currencyCode.toLowerCase();
-          const str = tmp12.currencyCode;
         }
         if (tmp12 != null) {
           const price = tmp12.price;
@@ -147,54 +141,53 @@ function PricingSubheadingCopy() {
           const tmp2Result6 = tmp2(tmp3[21]);
         }
         if (result !== result1) {
-          obj = { style: null, accessibilityLabel: null, variant: "text-md/medium", children: null };
-          obj[0] = tmp.cardText;
+          obj = { style: tmp.cardText, accessibilityLabel: null, variant: "text-md/medium", children: null };
           const intl2 = tmp2(tmp3[22]).intl;
-          obj = { price: null, originalPrice: null };
-          obj[0] = str3;
-          obj[1] = str2;
-          obj[1] = intl2.formatToPlainString(tmp2(tmp3[22]).t.lEIwDw, obj);
+          obj = { price: str3, originalPrice: str2 };
+          obj.accessibilityLabel = intl2.formatToPlainString(tmp2(tmp3[22]).t.lEIwDw, obj);
           const intl3 = tmp2(tmp3[22]).intl;
-          obj1 = { price: null, originalPrice: null, originalPriceHook: null };
-          obj1[0] = str3;
-          obj1[1] = str2;
-          obj1[2] = function originalPriceHook(arg0, arg1) {
-            let tmp = null;
-            if (str3 !== str2) {
-              const obj = { style: null, variant: "text-sm/medium", color: "text-muted", children: null };
-              obj[0] = lib.originalPrice;
-              obj[3] = arg0;
-              tmp = closure_1_18(lib(str3[18]).Text, obj, arg1);
-            }
-            return tmp;
+          obj1 = {
+            price: str3,
+            originalPrice: str2,
+            originalPriceHook(children, arg1) {
+              let tmp = null;
+              if (str3 !== str2) {
+                const obj = {
+                  style: closure_0.originalPrice,
+                  variant: "text-sm/medium",
+                  color: "text-muted",
+                  children,
+                };
+                tmp = collapsedCategories(Text_Text.Text, obj, arg1);
+              }
+              return tmp;
+            },
           };
-          obj[3] = intl3.format(tmp2(tmp3[22]).t.eRSsbf, obj1);
+          obj.children = intl3.format(tmp2(tmp3[22]).t.eRSsbf, obj1);
           obj2 = obj;
         } else {
-          obj2 = { style: null, variant: "text-md/medium", children: null };
-          obj2[0] = tmp.cardText;
+          obj2 = { style: tmp.cardText, variant: "text-md/medium", children: null };
           const intl = tmp2(tmp3[22]).intl;
-          obj3 = { price: null };
-          obj3[0] = str3;
-          obj2[2] = intl.format(tmp2(tmp3[22]).t.Mmf63F, obj3);
+          obj3 = { price: str3 };
+          obj2.children = intl.format(tmp2(tmp3[22]).t.Mmf63F, obj3);
         }
-        const tmp31Result = callback(tmp2(tmp3[18]).Text, obj2);
+        const tmp31Result = closure_18(tmp2(tmp3[18]).Text, obj2);
         let tmp5Result = tmp5(tmp3[13]);
         if (tmp5Result.hasFreeBoosts(stateFromStores)) {
           if (hasBoostDiscountResult) {
             tmp5Result = tmp5(tmp3[13]);
             if (tmp5Result.isPremium(stateFromStores, closure_14.TIER_2)) {
               obj4 = { children: null };
-              obj5 = { style: null, variant: "text-md/medium", children: null };
-              obj5[0] = tmp.cardText;
+              obj5 = { style: tmp.cardText, variant: "text-md/medium", children: null };
               const intl5 = tmp2(tmp3[22]).intl;
-              obj6 = { freeSubscriptionCount: null, discountPercent: null };
-              obj6[0] = closure_16;
-              obj6[1] = tmp2(tmp3[23]).formatPercent(stateFromStores1, closure_17 / 100);
-              obj5[2] = intl5.format(tmp2(tmp3[22]).t["ZikTt+"], obj6);
+              obj6 = {
+                freeSubscriptionCount,
+                discountPercent: tmp2(tmp3[23]).formatPercent(stateFromStores1, closure_17 / 100),
+              };
+              obj5.children = intl5.format(tmp2(tmp3[22]).t["ZikTt+"], obj6);
               const items5 = [tmp31(tmp2(tmp3[18]).Text, obj5), tmp31Result];
-              obj4[0] = items5;
-              let tmp34 = callback2(closure_19, obj4);
+              obj4.children = items5;
+              let tmp34 = closure_20(closure_19, obj4);
               const tmp2Result7 = tmp2(tmp3[23]);
             }
             return tmp34;
@@ -205,15 +198,13 @@ function PricingSubheadingCopy() {
           tmp34 = tmp31Result;
           if (tmp5Result1.isPremium(stateFromStores, closure_14.TIER_1)) {
             obj7 = { children: null };
-            const obj8 = { style: null, variant: "text-md/medium", children: null };
-            obj8[0] = tmp.cardText;
+            const obj8 = { style: tmp.cardText, variant: "text-md/medium", children: null };
             const intl4 = tmp2(tmp3[22]).intl;
-            const obj9 = { discountPercent: null };
-            obj9[0] = tmp2(tmp3[23]).formatPercent(stateFromStores1, closure_17 / 100);
-            obj8[2] = intl4.format(tmp2(tmp3[22]).t.XVMAKU, obj9);
+            const obj9 = { discountPercent: tmp2(tmp3[23]).formatPercent(stateFromStores1, closure_17 / 100) };
+            obj8.children = intl4.format(tmp2(tmp3[22]).t.XVMAKU, obj9);
             const items6 = [tmp31(tmp2(tmp3[18]).Text, obj8), tmp31Result];
-            obj7[0] = items6;
-            tmp34 = callback2(closure_19, obj7);
+            obj7.children = items6;
+            tmp34 = closure_20(closure_19, obj7);
             const tmp2Result8 = tmp2(tmp3[23]);
           }
           tmp5Result1 = tmp5(tmp3[13]);
@@ -222,8 +213,11 @@ function PricingSubheadingCopy() {
       }
     }
   }
-  return callback(_require(str3[18]).Text, { style: tmp.cardText, variant: "text-md/medium", children: "..." });
+  return closure_18(require("Text/Text").Text, { style: tmp.cardText, variant: "text-md/medium", children: "..." });
 }
+const View = fn(17).View;
+const CurrencyCodes = fn(1074).CurrencyCodes;
+const PremiumConstants = fn(1373);
 ({
   SubscriptionPlans: closure_12,
   SubscriptionPlanInfo: map1,
@@ -231,20 +225,22 @@ function PricingSubheadingCopy() {
   SubscriptionIntervalTypes: closure_15,
   NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_16,
   GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_17,
-} = GuildFeatures);
+} = PremiumConstants);
+const jsxProd = fn(21);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
-let closure_21 = createCacheKey.createStyles({
+const createStyles = fn(4560);
+let closure_21 = createStyles.createStyles({
   title: { marginTop: 16 },
   pricingSection: { alignItems: "center" },
   originalPrice: { textDecorationLine: "line-through" },
   cardText: { lineHeight: 20, marginTop: 8, textAlign: "center" },
 });
-let result = require("set").fileFinishedImporting("components_native/premium/PremiumSubscriptionPricingUpsell.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("components_native/premium/PremiumSubscriptionPricingUpsell.tsx");
 
 export default function PremiumSubscriptionPricingUpsell() {
-  const tmp = callback3();
-  let obj = getSubscriptionPlansLoaded;
-  obj = { style: tmp.pricingSection, children: null };
+  const tmp = closure_21();
+  let obj = { style: tmp.pricingSection, children: null };
   const subscriptionPlansLoaded = obj.useSubscriptionPlansLoaded();
   obj = {
     style: tmp.title,
@@ -253,14 +249,14 @@ export default function PremiumSubscriptionPricingUpsell() {
     color: "mobile-text-heading-primary",
     children: null,
   };
-  const intl = getSystemLocale.intl;
-  obj[4] = intl.string(getSystemLocale.t["3x1PFE"]);
-  const items = [callback(Text.Text, obj)];
+  const intl = util.intl;
+  obj.children = intl.string(util.t["3x1PFE"]);
+  const items = [collapsedCategories(Text_Text.Text, obj)];
   let tmp5Result = null;
   if (subscriptionPlansLoaded) {
-    tmp5Result = callback(PricingSubheadingCopy, {});
+    tmp5Result = collapsedCategories(PricingSubheadingCopy, {});
   }
   items[1] = tmp5Result;
-  obj[1] = items;
-  return closure_20(View, obj);
+  obj.children = items;
+  return closure_1_20(View, obj);
 }

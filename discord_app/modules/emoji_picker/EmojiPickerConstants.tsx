@@ -1,7 +1,7 @@
 // discord_app/modules/emoji_picker/EmojiPickerConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/emoji_picker/EmojiPickerConstants.tsx");
+const result = size.fileFinishedImporting("modules/emoji_picker/EmojiPickerConstants.tsx");
 
 export const EmojiCategoryTypes = {
   GUILD: "GUILD",

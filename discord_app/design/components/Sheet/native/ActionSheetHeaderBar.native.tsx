@@ -1,98 +1,100 @@
 // discord_app/design/components/Sheet/native/ActionSheetHeaderBar.native.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import useWindowDimensionsDefault from "../../../../modules/screen/useWindowDimensions.native.tsx";
-import map from "../../../tokens/native/useToken.tsx";
-import SCREEN_READER_ENABLED_GETTER from "../../../../modules/a11y/native/useIsScreenReaderEnabled.native.tsx";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../Styles/native/createStyles.tsx";
+import useToken from "../../../tokens/native/useToken.tsx";
+import useIsScreenReaderEnabled from "../../../../modules/a11y/native/useIsScreenReaderEnabled.native.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-({ Pressable: c3, StyleSheet: c4, TouchableWithoutFeedback: c5, View: closure_6 } = get_ActivityIndicator);
-({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
-let closure_10 = createCacheKey.createStyles((arg0, height, marginBottom) => {
+require = fn;
+get_ActivityIndicator = fn(17);
+({
+  Pressable: c3,
+  StyleSheet: closure_4,
+  TouchableWithoutFeedback: hasOwnProperty,
+  View: metroRequire,
+} = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(4560);
+let closure_10 = createStyles.createStyles((arg0, height, marginBottom) => {
   let obj = { marginBottom };
   if ("floating" === arg0) {
-    obj = { left: 0, right: 0, position: "absolute" };
+    const rect = { left: 0, right: 0, position: "absolute" };
   }
   obj = { header: null, indicator: null, accessibleDismiss: null };
-  const merged = Object.assign(obj);
-  obj[0] = obj;
+  const merged = Object.assign(rect);
+  obj.header = obj;
+  const size = {
+    alignSelf: "center",
+    width: nativeDefault.modules.mobile.SHEET_HANDLE_WIDTH,
+    height: nativeDefault.modules.mobile.SHEET_HANDLE_HEIGHT,
+    borderRadius: nativeDefault.radii.sm,
+    top: nativeDefault.modules.mobile.SHEET_HANDLE_MARGIN_TOP,
+  };
   if ("default" === arg0) {
-    const obj2 = { backgroundColor: null };
-    obj2[0] = tmp2(576).colors.BACKGROUND_MOD_STRONG;
-    let tmp4 = obj2;
+    obj = { backgroundColor: tmp2(576).colors.BACKGROUND_MOD_STRONG };
+    let tmp4 = obj;
   } else if ("floating" === arg0) {
-    const obj3 = { backgroundColor: null };
-    obj3[0] = tmp2(576).colors.BACKGROUND_MOD_MUTED;
-    tmp4 = obj3;
+    const obj1 = { backgroundColor: tmp2(576).colors.BACKGROUND_MOD_MUTED };
+    tmp4 = obj1;
   } else if ("overlay" === arg0) {
-    const obj4 = { backgroundColor: null };
-    obj4[0] = tmp2(576).unsafe_rawColors.WHITE;
+    const obj2 = { backgroundColor: tmp2(576).unsafe_rawColors.WHITE };
     const merged1 = Object.assign(tmp2(576).shadows.SHADOW_LOW);
-    tmp4 = obj4;
+    tmp4 = obj2;
   }
   const merged2 = Object.assign(tmp4);
-  obj[1] = {
-    alignSelf: "center",
-    width: ThemesDefault.modules.mobile.SHEET_HANDLE_WIDTH,
-    height: ThemesDefault.modules.mobile.SHEET_HANDLE_HEIGHT,
-    borderRadius: ThemesDefault.radii.sm,
-    top: ThemesDefault.modules.mobile.SHEET_HANDLE_MARGIN_TOP,
-  };
-  const obj5 = {};
+  obj.indicator = size;
+  const obj3 = {};
   const merged3 = Object.assign(absoluteFillObject.absoluteFillObject);
-  obj5.height = height;
-  obj5.marginTop = -height + marginBottom;
-  obj[2] = obj5;
+  obj3.height = height;
+  obj3.marginTop = -height + marginBottom;
+  obj.accessibleDismiss = obj3;
   return obj;
 });
-const result = require("set").fileFinishedImporting("design/components/Sheet/native/ActionSheetHeaderBar.native.tsx");
+let size = fn(2);
+const result = size.fileFinishedImporting("design/components/Sheet/native/ActionSheetHeaderBar.native.tsx");
 
 export const ActionSheetHeaderBar = function ActionSheetHeaderBar(accessibilityLabel) {
   accessibilityLabel = accessibilityLabel.accessibilityLabel;
   if (accessibilityLabel === undefined) {
-    const intl = getSystemLocale.intl;
-    accessibilityLabel = intl.string(getSystemLocale.t.WAI6xu);
+    const intl = util.intl;
+    accessibilityLabel = intl.string(util.t.WAI6xu);
   }
   ({ onPress, variant, style, tabStyle } = accessibilityLabel);
   if (variant === undefined) {
     variant = "default";
   }
-  let obj = map;
-  const tmp3 = callback3(
+  let obj = useToken;
+  const tmp3 = closure_10(
     variant,
     useWindowDimensionsDefault().height,
-    obj.useToken(ThemesDefault.modules.mobile.SHEET_HANDLE_MARGIN_BOTTOM),
+    obj.useToken(nativeDefault.modules.mobile.SHEET_HANDLE_MARGIN_BOTTOM),
   );
-  obj1 = SCREEN_READER_ENABLED_GETTER;
   obj = { onPress, onAccessibilityEscape: onPress, "aria-hidden": true, children: null };
-  obj = { style: items, children: null };
-  items = [tmp3.header, style];
+  obj = { style: null, children: null };
+  const items = [tmp3.header, style];
+  obj.style = items;
+  const obj1 = { style: null };
   const items1 = [tmp3.indicator, tabStyle];
+  obj1.style = items1;
   const isScreenReaderEnabled = obj1.useIsScreenReaderEnabled();
-  obj[1] = callback(closure_6, { style: items1 });
-  obj[3] = callback(closure_6, obj);
-  const tmp6 = callback(closure_5, obj);
+  obj.children = React5(timestampProducer, obj1);
+  obj.children = React5(timestampProducer, obj);
+  const tmp6 = React5(hasOwnProperty, obj);
   let tmp7 = tmp6;
   if (isScreenReaderEnabled) {
-    obj1 = { children: null };
-    const obj2 = {
-      style: null,
+    const obj2 = { children: null };
+    const obj3 = {
+      style: tmp3.accessibleDismiss,
       accessible: true,
-      accessibilityLabel: null,
+      accessibilityLabel,
       accessibilityRole: "button",
-      onPress: null,
+      onPress,
     };
-    obj2[0] = tmp3.accessibleDismiss;
-    obj2[2] = accessibilityLabel;
-    obj2[4] = onPress;
-    const items2 = [callback(closure_3, obj2), tmp6];
-    obj1[0] = items2;
-    tmp7 = callback2(closure_8, obj1);
+    const items2 = [React5(React3, obj3), tmp6];
+    obj2.children = items2;
+    tmp7 = React7(React6, obj2);
   }
   return tmp7;
 };

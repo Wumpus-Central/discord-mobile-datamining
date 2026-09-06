@@ -1,17 +1,17 @@
 // discord_app/modules/premium/powerups/hooks/useCanPurchaseBoosts.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import calculateFractionalPremiumInfoDefault from "../../../billing/hooks/useFractionalPremiumInfo.tsx";
-import closure_3 from "../../../../stores/UserStore.tsx";
-import { FractionalPremiumStates } from "../../PremiumConstants.tsx";
+import useFractionalPremiumInfoDefault from "../../../billing/hooks/useFractionalPremiumInfo.tsx";
+import UserStore from "../../../../stores/UserStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useCanPurchaseBoosts.tsx");
+require = fn;
+const FractionalPremiumStates = fn(1373).FractionalPremiumStates;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useCanPurchaseBoosts.tsx");
 
 export default function useCanPurchaseBoosts() {
-  const items = [closure_3];
-  const obj = initialize;
+  const items = [UserStore];
   return (
-    calculateFractionalPremiumInfoDefault().fractionalState === FractionalPremiumStates.NONE &&
+    useFractionalPremiumInfoDefault().fractionalState === FractionalPremiumStates.NONE &&
     !initialize.useStateFromStores(items, () => {
       currentUser = currentUser.getCurrentUser();
       let isPremiumGroupMemberResult;

@@ -1,117 +1,109 @@
 // discord_app/modules/guild_role_subscriptions/native/purchase_page/GuildRoleSubscriptionPurchaseCard.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import Button from "../../../../design/void/native.tsx";
-import Text from "../../../../design/components/Text/native/Text.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
+import native from "../../../../design/void/native.tsx";
+import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import BottomSheetModal from "../../../../../_runtime/06627_BottomSheetModal.js";
-import Background from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import getRoleEmojisAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
-import SectionTitle from "../components/listing_elements/GuildRoleSubscriptionCard.tsx";
-import TruncatedText from "Elements.tsx";
-import emphasisHookDefault from "SubscribeButton.tsx";
-import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import GuildRoleSubscriptionListingEditStateUtilsAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
+import GuildRoleSubscriptionCard from "../components/listing_elements/GuildRoleSubscriptionCard.tsx";
+import Elements from "Elements.tsx";
+import SubscribeButtonDefault from "SubscribeButton.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: null, header: null, content: null, headerText: null, headerDot: null, seperator: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { padding: 16, paddingBottom: 24 };
-createCacheKey[2] = { padding: 16, paddingTop: 24, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-createCacheKey[3] = { flexDirection: "row", alignItems: "center" };
-let obj1 = { padding: 16, paddingTop: 24, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-createCacheKey[4] = {
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+fn(4560);
+let createStyles = { container: null, header: null, content: null, headerText: null, headerDot: null, seperator: null };
+createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1 };
+createStyles.container = createStyles;
+createStyles.header = { padding: 16, paddingBottom: 24 };
+createStyles.content = { padding: 16, paddingTop: 24, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+createStyles.headerText = { flexDirection: "row", alignItems: "center" };
+let size = {
   width: 3,
   height: 3,
   borderRadius: 1.5,
-  backgroundColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT,
+  backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT,
   marginHorizontal: 8,
 };
-let obj2 = {
-  width: 3,
-  height: 3,
-  borderRadius: 1.5,
-  backgroundColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT,
-  marginHorizontal: 8,
-};
-createCacheKey[5] = {
+createStyles.headerDot = size;
+let obj1 = { padding: 16, paddingTop: 24, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+createStyles.seperator = {
   borderBottomWidth: 1,
   marginLeft: -16,
   marginRight: -16,
-  borderColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_HOVER,
+  borderColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_HOVER,
 };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-const obj3 = {
-  borderBottomWidth: 1,
-  marginLeft: -16,
-  marginRight: -16,
-  borderColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_HOVER,
-};
-const result = require("set").fileFinishedImporting(
+let closure_8 = createStyles.createStyles(createStyles);
+size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/native/purchase_page/GuildRoleSubscriptionPurchaseCard.tsx",
 );
 
 export default function GuildRoleSubscriptionPurchaseCard(guildId) {
   const listingId = guildId.listingId;
-  const tmp = callback4();
-  let obj = getRoleEmojisAll;
-  obj1 = getRoleEmojisAll;
-  let obj2 = TruncatedText;
+  const tmp = closure_8();
+  let obj2 = Elements;
   const formattedSubscriptionPlan = obj2.useFormattedSubscriptionPlan(listingId);
-  obj = { scrollable: true, startExpanded: true, children: null };
+  let obj = { scrollable: true, startExpanded: true, children: null };
   obj = { style: tmp.container, children: null };
-  obj1 = { style: tmp.header, children: null };
+  const obj1 = { style: tmp.header, children: null };
   obj2 = { style: tmp.headerText, children: null };
   const items = [
-    callback2(Text.Text, {
+    timestampProducer(Text_Text.Text, {
       variant: "heading-md/semibold",
       color: "mobile-text-heading-primary",
-      children: callback(obj1.useName(listingId), 1)[0],
+      children: _slicedToArray(obj1.useName(listingId), 1)[0],
     }),
-    callback2(View, { style: tmp.headerDot }),
-    callback2(Text.Text, {
+    timestampProducer(View, { style: tmp.headerDot }),
+    timestampProducer(Text_Text.Text, {
       variant: "heading-md/semibold",
       color: "mobile-text-heading-primary",
       children: formattedSubscriptionPlan,
     }),
   ];
-  obj2[1] = items;
+  obj2.children = items;
   const items1 = [
-    callback3(View, obj2),
-    callback2(Button.Spacer, { size: 16 }),
-    callback2(TruncatedText.TruncatedText, {
+    React5(View, obj2),
+    timestampProducer(native.Spacer, { size: 16 }),
+    timestampProducer(Elements.TruncatedText, {
       variant: "text-sm/normal",
       color: "text-default",
       lineClamp: 2,
-      children: callback(obj.useDescription(listingId), 1)[0],
+      children: _slicedToArray(obj.useDescription(listingId), 1)[0],
     }),
-    callback2(Button.Spacer, { size: 24 }),
-    callback2(emphasisHookDefault, { listingId }),
+    timestampProducer(native.Spacer, { size: 24 }),
+    timestampProducer(SubscribeButtonDefault, { listingId }),
   ];
-  obj1[1] = items1;
-  const items2 = [callback3(View, obj1), callback2(View, { style: tmp.seperator })];
-  const obj5 = { scrollsToTop: false, style: tmp.content, contentContainerStyle: obj6, children: null };
+  obj1.children = items1;
+  const items2 = [React5(View, obj1), timestampProducer(View, { style: tmp.seperator })];
+  const obj5 = {
+    scrollsToTop: false,
+    style: tmp.content,
+    contentContainerStyle: { paddingBottom: 16 + useSafeAreaInsetsDefault().bottom },
+    children: null,
+  };
   const obj7 = {
     variant: "text-sm/bold",
     color: "text-default",
     style: { textTransform: "uppercase" },
     children: null,
   };
-  const intl = getSystemLocale.intl;
-  obj7[3] = intl.string(getSystemLocale.t.UdEvUi);
+  const intl = util.intl;
+  obj7.children = intl.string(util.t.UdEvUi);
   const items3 = [
-    callback2(Text.Text, obj7),
-    callback2(Button.Spacer, { size: 24 }),
-    callback2(SectionTitle.Content, { listingId, guildId: guildId.guildId }),
+    timestampProducer(Text_Text.Text, obj7),
+    timestampProducer(native.Spacer, { size: 24 }),
+    timestampProducer(GuildRoleSubscriptionCard.Content, { listingId, guildId: guildId.guildId }),
   ];
-  obj5[3] = items3;
-  items2[2] = callback3(BottomSheetModal.BottomSheetScrollView, obj5);
-  obj[1] = items2;
-  obj[2] = callback3(View, obj);
-  return callback2(Background.BottomSheet, obj);
+  obj5.children = items3;
+  items2[2] = React5(BottomSheetModal.BottomSheetScrollView, obj5);
+  obj.children = items2;
+  obj.children = React5(View, obj);
+  return timestampProducer(Sheet_BottomSheet.BottomSheet, obj);
 }

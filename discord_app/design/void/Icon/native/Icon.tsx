@@ -1,11 +1,10 @@
 // discord_app/design/void/Icon/native/Icon.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
-import { Image } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let obj = {
+const Image = fn(17).Image;
+const jsx = fn(21).jsx;
+const IconSizes = {
   EXTRA_SMALL_10: "extraSmall10",
   EXTRA_SMALL: "extraSmall",
   SMALL: "small",
@@ -16,14 +15,15 @@ let obj = {
   REFRESH_SMALL_16: "refreshSmall16",
   SMALL_14: "small14",
 };
-let closure_5 = createCacheKey.createStyles(() => {
-  obj = { iconColor: null };
-  obj = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-  obj[0] = obj;
-  return obj;
+const createStyles = fn(4560);
+let closure_5 = createStyles.createStyles(() => {
+  let iconColor = { iconColor: null };
+  iconColor = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+  iconColor.iconColor = iconColor;
+  return iconColor;
 });
-const memoResult = importAllResult.memo(
-  importAllResult.forwardRef((size) => {
+const memoResult = noop.memo(
+  noop.forwardRef((size, ref) => {
     ({ color, disableColor } = size);
     if (disableColor === undefined) {
       disableColor = false;
@@ -39,16 +39,14 @@ const memoResult = importAllResult.memo(
     ({ accessible, accessibilityLabel } = size);
     if (disableColor) {
       obj = {
-        resizeMode: null,
-        source: null,
+        resizeMode,
+        source: size.source,
         style: null,
         accessible: null,
         accessibilityLabel: null,
         fadeDuration: 0,
         ref: null,
       };
-      obj[0] = resizeMode;
-      obj[1] = size.source;
       let num = 10;
       if (obj.EXTRA_SMALL_10 !== MEDIUM) {
         num = 12;
@@ -74,18 +72,25 @@ const memoResult = importAllResult.memo(
           }
         }
       }
-      obj = { width: null, height: null };
-      obj[0] = num;
-      obj[1] = num;
-      const items = [obj, undefined, style];
-      obj[2] = items;
-      obj[3] = accessible;
-      obj[4] = accessibilityLabel;
-      obj[6] = arg1;
-      return <Image width={null} height={null} />;
+      size = { width: num, height: num };
+      const items = [size, undefined, style];
+      obj.style = items;
+      obj.accessible = accessible;
+      obj.accessibilityLabel = accessibilityLabel;
+      obj.ref = ref;
+      return (
+        <Image
+          resizeMode={resizeMode}
+          source={arg0.source}
+          style={null}
+          accessible={null}
+          accessibilityLabel={null}
+          fadeDuration={0}
+          ref={null}
+        />
+      );
     } else if (null != color) {
-      obj = { tintColor: null };
-      obj[0] = color;
+      obj = { tintColor: color };
       let iconColor = obj;
     } else {
       iconColor = tmp2.iconColor;
@@ -93,11 +98,12 @@ const memoResult = importAllResult.memo(
   }),
 );
 memoResult.displayName = "Icon";
-memoResult.Sizes = obj;
-const result = require("set").fileFinishedImporting("design/void/Icon/native/Icon.tsx");
+memoResult.Sizes = IconSizes;
+let size = fn(2);
+const result = size.fileFinishedImporting("design/void/Icon/native/Icon.tsx");
 
 export default memoResult;
-export const IconSizes = obj;
+export { IconSizes };
 export const getIconSize = function getIconSize(arg0) {
   if (obj.EXTRA_SMALL_10 === arg0) {
     return 10;

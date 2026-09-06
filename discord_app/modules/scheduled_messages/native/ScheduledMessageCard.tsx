@@ -1,20 +1,18 @@
 // discord_app/modules/scheduled_messages/native/ScheduledMessageCard.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import ScheduledMessagesConfig from "../ScheduledMessageUtils.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import router_utils from "../../routing/router_utils.tsx";
+import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
+import ScheduledMessageUtils from "../ScheduledMessageUtils.tsx";
 import CalendarPlusIcon from "../../../design/components/Icon/native/redesign/generated/CalendarPlusIcon.tsx";
 import ForLaterCardStatusHeader from "../../saved_messages/native/ForLaterCardStatusHeader.tsx";
 import ScheduledMessageCardActionButtonsDefault from "ScheduledMessageCardActionButtons.tsx";
-import importAllResult from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../stores/ChannelStore.tsx";
-import { Routes } from "../../../Constants.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import ChannelStore from "../../../stores/ChannelStore.tsx";
 
-require = arg1;
+require = fn;
 function ScheduledMessageCardStatusHeader(isPendingRemoval) {
   const scheduledMessage = isPendingRemoval.scheduledMessage;
-  let obj = ScheduledMessagesConfig;
+  let obj = ScheduledMessageUtils;
   const messageForState = obj.getMessageForState(scheduledMessage.state);
   ({ isError, stateMessage } = messageForState);
   obj = {
@@ -29,87 +27,79 @@ function ScheduledMessageCardStatusHeader(isPendingRemoval) {
     obj = { timestamp: null };
     const _Date = Date;
     const date = new Date(scheduledMessage.sendAtTimestamp);
-    obj[0] = date.valueOf();
+    obj.timestamp = date.valueOf();
     stateMessage = intl.formatToPlainString(tmp(1114).t.ZN3tIx, obj);
   }
-  obj[1] = stateMessage;
-  obj[2] = isError;
-  obj[4] = closure_7(ScheduledMessageCardActionButtonsDefault, {
+  obj.label = stateMessage;
+  obj.isCritical = isError;
+  obj.actions = React5(ScheduledMessageCardActionButtonsDefault, {
     scheduledMessage,
     isPendingRemoval: isPendingRemoval.isPendingRemoval,
   });
-  return closure_7(ForLaterCardStatusHeader.ForLaterCardStatusHeader, obj);
+  return React5(ForLaterCardStatusHeader.ForLaterCardStatusHeader, obj);
 }
-let c3 = importAllResult;
-({ jsx: error, jsxs: closure_8 } = jsxProd);
+const View = fn(17).View;
+const Routes = fn(1074).Routes;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4560);
 let obj = { card: { gap: 16, marginBottom: 16 }, cardDivider: null, attachmentCount: null, pendingRemoval: null };
 obj = {
   marginHorizontal: -16,
   height: 1,
   alignSelf: "stretch",
-  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
 };
-obj[1] = obj;
-obj[2] = { flexDirection: "row", alignItems: "center", gap: 4 };
-obj[3] = { alignItems: "center", paddingVertical: 16 };
-let closure_9 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(function ScheduledMessageCard(scheduledMessage) {
+obj.cardDivider = obj;
+obj.attachmentCount = { flexDirection: "row", alignItems: "center", gap: 4 };
+obj.pendingRemoval = { alignItems: "center", paddingVertical: 16 };
+let closure_9 = createStyles.createStyles(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/scheduled_messages/native/ScheduledMessageCard.tsx");
+
+export default noop.memo(function ScheduledMessageCard(scheduledMessage) {
   scheduledMessage = scheduledMessage.scheduledMessage;
   const isPendingRemoval = scheduledMessage.isPendingRemoval;
-  let stateFromStores;
-  const tmp = callback2();
+  const tmp = closure_9();
   let obj = scheduledMessage(504);
-  const items = [closure_5];
-  stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getChannel(scheduledMessage.createArgs.channelId));
+  const items = [ChannelStore];
+  const stateFromStores = obj.useStateFromStores(items, () =>
+    ChannelStore.getChannel(scheduledMessage.createArgs.channelId),
+  );
   [][0] = stateFromStores;
   if (null == stateFromStores) {
     return null;
   } else {
-    obj = { variant: "primary", border: "subtle", shadow: "none", style: null, onPress: null, children: null };
-    obj[3] = tmp.card;
-    obj[4] = tmp5;
-    obj = { scheduledMessage: null, isPendingRemoval: null };
-    obj[0] = scheduledMessage;
-    obj[1] = isPendingRemoval;
-    const items1 = [callback(ScheduledMessageCardStatusHeader, obj), , ,];
-    obj1 = { channel: null, actions: null };
-    obj1[0] = stateFromStores;
-    items1[1] = callback(tmp2(12215).ForLaterCardHeader, obj1);
-    let obj2 = { style: null };
-    obj2[0] = tmp.cardDivider;
-    items1[2] = callback(View, obj2);
+    obj = { variant: "primary", border: "subtle", shadow: "none", style: tmp.card, onPress: tmp5, children: null };
+    obj = { scheduledMessage, isPendingRemoval };
+    const items1 = [closure_7(ScheduledMessageCardStatusHeader, obj), , ,];
+    const obj1 = { channel: stateFromStores, actions: null };
+    items1[1] = closure_7(tmp2(12215).ForLaterCardHeader, obj1);
+    let obj2 = { style: tmp.cardDivider };
+    items1[2] = closure_7(View, obj2);
     if (isPendingRemoval) {
-      const obj3 = { style: null, children: null };
-      obj3[0] = tmp.pendingRemoval;
-      obj3[1] = tmp10(tmp2(5577).ActivityIndicator, { size: "small" });
+      const obj3 = { style: tmp.pendingRemoval, children: tmp10(tmp2(5577).ActivityIndicator, { size: "small" }) };
       let tmp10Result = tmp10(tmp12, obj3);
     } else {
-      const obj4 = { message: null, lineClamp: 10, maxHeight: 400, footer: null };
-      obj4[0] = scheduledMessage.record;
+      const obj4 = { message: scheduledMessage.record, lineClamp: 10, maxHeight: 400, footer: null };
       let tmp9Result;
       if (length > 0) {
-        const obj5 = { style: null, children: null };
-        obj5[0] = tmp.attachmentCount;
-        const obj6 = { size: "xxs", color: null };
-        obj6[1] = stateFromStores(576).colors.TEXT_MUTED;
+        const obj5 = { style: tmp.attachmentCount, children: null };
+        const obj6 = { size: "xxs", color: stateFromStores(576).colors.TEXT_MUTED };
         const items2 = [tmp10(tmp2(10112).AttachmentIcon, obj6)];
         const obj7 = { variant: "text-sm/normal", color: "text-muted", children: null };
         const intl = tmp2(1114).intl;
-        const obj8 = { count: null };
-        obj8[0] = length;
-        obj7[2] = intl.format(tmp2(1114).t.ZJ1tPW, obj8);
+        const obj8 = { count: length };
+        obj7.children = intl.format(tmp2(1114).t.ZJ1tPW, obj8);
         items2[1] = tmp10(tmp2(4556).Text, obj7);
-        obj5[1] = items2;
+        obj5.children = items2;
         tmp9Result = tmp9(tmp12, obj5);
       }
-      obj4[3] = tmp9Result;
+      obj4.footer = tmp9Result;
       tmp10Result = tmp10(tmp2(12216).ForLaterMessageRow, obj4);
     }
     items1[3] = tmp10Result;
-    obj[5] = items1;
+    obj.children = items1;
     return closure_8(tmp2(5607).Card, obj);
   }
 });
-const result = require("set").fileFinishedImporting("modules/scheduled_messages/native/ScheduledMessageCard.tsx");
-
-export default memoResult;

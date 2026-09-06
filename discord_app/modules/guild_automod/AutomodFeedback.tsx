@@ -1,6 +1,6 @@
 // discord_app/modules/guild_automod/AutomodFeedback.tsx
-import set from "../../../_runtime/00002_set.js";
-import getSystemLocale from "../../intl/index.native.tsx";
+import util from "../../intl/index.native.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 let obj = { BUG: "BUG", ALLOWED: "ALLOWED", MENTION_RAID_REMOVE_RESTRICTION: "MENTION_RAID_REMOVE_RESTRICTION" };
 obj = {
@@ -11,19 +11,19 @@ obj = {
   JOIN_RAID: "JOIN_RAID",
   OTHER: "OTHER",
 };
-const result = set.fileFinishedImporting("modules/guild_automod/AutomodFeedback.tsx");
+const result = size.fileFinishedImporting("modules/guild_automod/AutomodFeedback.tsx");
 
 export const Feedback = obj;
 export const generateFeedbackOptions = function generateFeedbackOptions() {
   obj = { name: null, value: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t["+MbOX4"]);
-  obj[1] = obj.BUG;
+  const intl = util.intl;
+  obj.name = intl.string(util.t["+MbOX4"]);
+  obj.value = obj.BUG;
   const items = [obj];
   obj = { name: null, value: null };
-  const intl2 = getSystemLocale.intl;
-  obj[0] = intl2.string(getSystemLocale.t.CRsCRC);
-  obj[1] = obj.ALLOWED;
+  const intl2 = util.intl;
+  obj.name = intl2.string(util.t.CRsCRC);
+  obj.value = obj.ALLOWED;
   items[1] = obj;
   return items;
 };

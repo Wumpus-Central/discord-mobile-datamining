@@ -1,13 +1,13 @@
 // discord_app/modules/routing/RouteParam.tsx
-import set from "../../../_runtime/00002_set.js";
-import INVITE from "RouteConstants.tsx";
-import getAuthenticationPath from "../../../discord_common/js/shared/utils/PathUtils.tsx";
-import set2 from "../channel/ChannelConstants.tsx";
+import RouteConstants from "RouteConstants.tsx";
+import utils_PathUtils from "../../../discord_common/js/shared/utils/PathUtils.tsx";
+import ChannelConstants from "../channel/ChannelConstants.tsx";
 import escapeRegExpDefault from "../../../_runtime/04401_escapeRegExp.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const PSEUDO_GUILD_IDS = INVITE.PSEUDO_GUILD_IDS;
-const StaticChannelRoutes = set2.StaticChannelRoutes;
-const result = set.fileFinishedImporting("modules/routing/RouteParam.tsx");
+const PSEUDO_GUILD_IDS = RouteConstants.PSEUDO_GUILD_IDS;
+const StaticChannelRoutes = ChannelConstants.StaticChannelRoutes;
+const result = size.fileFinishedImporting("modules/routing/RouteParam.tsx");
 
 export const RouteParam = {
   guildId() {
@@ -33,7 +33,7 @@ export const RouteParam = {
     if (flag2) {
       str2 = "?";
     }
-    const unescapedPathParam = new getAuthenticationPath.UnescapedPathParam(
+    const unescapedPathParam = new utils_PathUtils.UnescapedPathParam(
       ":" + escapeRegExpDefault(str) + "(" + combined + ")" + str2,
     );
     return unescapedPathParam;
@@ -62,7 +62,7 @@ export const RouteParam = {
     if (flag2) {
       str2 = "?";
     }
-    const unescapedPathParam = new getAuthenticationPath.UnescapedPathParam(
+    const unescapedPathParam = new utils_PathUtils.UnescapedPathParam(
       ":" + escapeRegExpDefault(str) + "(" + combined + ")" + str2,
     );
     return unescapedPathParam;

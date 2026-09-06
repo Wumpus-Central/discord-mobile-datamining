@@ -1,18 +1,18 @@
 // discord_app/modules/creator_monetization_eligibility/CreatorMonetizationEligibilityExperimentUtils.tsx
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import closure_2 from "../../stores/UserStore.tsx";
-import closure_3 from "../../stores/billing/BillingInfoStore.tsx";
-import { GuildFeatures } from "../../Constants.tsx";
-import set from "../../../_runtime/00002_set.js";
+import UserStore from "../../stores/UserStore.tsx";
+import BillingInfoStore from "../../stores/billing/BillingInfoStore.tsx";
 
-require = arg1;
-let set = new Set(["US"]);
-const result = set.fileFinishedImporting(
+require = fn;
+const GuildFeatures = fn(1074).GuildFeatures;
+const set = new Set(["US"]);
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/creator_monetization_eligibility/CreatorMonetizationEligibilityExperimentUtils.tsx",
 );
 
 export const useIsUserInCreatorMonetizationEligibleCountry = function useIsUserInCreatorMonetizationEligibleCountry() {
-  const items = [closure_2, closure_3];
+  const items = [UserStore, BillingInfoStore];
   return initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let country;
@@ -33,7 +33,7 @@ export const useIsUserInCreatorMonetizationEligibleCountry = function useIsUserI
   });
 };
 export const isUserInCreatorMonetizationEligibleCountry = function isUserInCreatorMonetizationEligibleCountry() {
-  currentUser = currentUser.getCurrentUser();
+  const currentUser = UserStore.getCurrentUser();
   let country;
   if (currentUser != null) {
     const storeCountry = currentUser.storeCountry;
@@ -42,7 +42,7 @@ export const isUserInCreatorMonetizationEligibleCountry = function isUserInCreat
     }
   }
   if (country == null) {
-    country = ipCountryCode.ipCountryCode;
+    country = BillingInfoStore.ipCountryCode;
   }
   let hasItem = null != country;
   if (hasItem) {

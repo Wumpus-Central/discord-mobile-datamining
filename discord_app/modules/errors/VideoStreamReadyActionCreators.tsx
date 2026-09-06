@@ -1,22 +1,14 @@
 // discord_app/modules/errors/VideoStreamReadyActionCreators.tsx
-import set from "../../../_runtime/00002_set.js";
-import dispatcherDefault from "../../Dispatcher.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/errors/VideoStreamReadyActionCreators.tsx");
+const result = size.fileFinishedImporting("modules/errors/VideoStreamReadyActionCreators.tsx");
 
-export const videoStreamTimedOut = function videoStreamTimedOut(current, closure_1, closure_6, closure_2) {
-  let obj = dispatcherDefault;
-  obj = {
-    type: "VIDEO_STREAM_READY_TIMEOUT",
-    videoStreamId: current,
-    mediaContext: closure_6,
-    userId: closure_1,
-    streamKey: closure_2,
-  };
+export const videoStreamTimedOut = function videoStreamTimedOut(current, userId, mediaContext, streamKey) {
+  const obj = { type: "VIDEO_STREAM_READY_TIMEOUT", videoStreamId: current, mediaContext, userId, streamKey };
   obj.dispatch(obj);
 };
-export const clearVideoStreamTimeout = function clearVideoStreamTimeout(DEFAULT, closure_0) {
-  let obj = dispatcherDefault;
-  obj = { type: "CLEAR_VIDEO_STREAM_READY_TIMEOUT", mediaContext: DEFAULT, userId: closure_0 };
+export const clearVideoStreamTimeout = function clearVideoStreamTimeout(DEFAULT, userId) {
+  const obj = { type: "CLEAR_VIDEO_STREAM_READY_TIMEOUT", mediaContext: DEFAULT, userId };
   obj.dispatch(obj);
 };

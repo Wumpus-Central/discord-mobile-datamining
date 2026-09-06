@@ -1,17 +1,17 @@
 // discord_app/modules/experiments/trigger_points/PaymentFlowStartedTriggerPoint.tsx
-import set from "../../../../_runtime/00002_set.js";
-import ME from "../../../Constants.tsx";
-import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
-import ExperimentBuckets from "../ExperimentConstants.tsx";
-import registeredExperimentIds from "Helpers.tsx";
+import Constants from "../../../Constants.tsx";
+import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
+import ExperimentConstants from "../ExperimentConstants.tsx";
+import Helpers from "Helpers.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const AnalyticEvents = ME.AnalyticEvents;
-const commonTriggerPointConfiguration = new registeredExperimentIds.CommonTriggerPointConfiguration(
+const AnalyticEvents = Constants.AnalyticEvents;
+const commonTriggerPointConfiguration = new Helpers.CommonTriggerPointConfiguration(
   [],
-  ExperimentBuckets.CommonTriggerPoints.PAYMENT_FLOW_STARTED,
+  ExperimentConstants.CommonTriggerPoints.PAYMENT_FLOW_STARTED,
   { location: "payment flow started" },
 );
-const result = set.fileFinishedImporting("modules/experiments/trigger_points/PaymentFlowStartedTriggerPoint.tsx");
+const result = size.fileFinishedImporting("modules/experiments/trigger_points/PaymentFlowStartedTriggerPoint.tsx");
 
 export const PaymentFlowStartedTriggerPoint = commonTriggerPointConfiguration;
 export const trackPaymentFlowStartedAnalyticsAndCTP = function trackPaymentFlowStartedAnalyticsAndCTP(
@@ -21,6 +21,6 @@ export const trackPaymentFlowStartedAnalyticsAndCTP = function trackPaymentFlowS
   if (arg1 === undefined) {
     obj = {};
   }
-  expandEventPropertiesDefault.track(AnalyticEvents.PAYMENT_FLOW_STARTED, basePurchaseAnalytics, obj);
+  AnalyticsUtilsDefault.track(AnalyticEvents.PAYMENT_FLOW_STARTED, basePurchaseAnalytics, obj);
   commonTriggerPointConfiguration.trigger();
 };

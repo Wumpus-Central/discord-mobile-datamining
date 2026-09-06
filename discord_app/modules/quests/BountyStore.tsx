@@ -1,14 +1,14 @@
 // discord_app/modules/quests/BountyStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import set from "../../../_runtime/00002_set.js";
+import DispatcherDefault from "../../Dispatcher.tsx";
 
 let c0 = false;
 let closure_1 = [];
 let set = new Set();
 let set1 = new Set();
+set = set1;
+new Map();
 let map = new Map();
-let map1 = new Map();
 const Store = initializeDefault.Store;
 class BountyStore extends Store {}
 const prototype = BountyStore.prototype;
@@ -25,22 +25,20 @@ Object.defineProperty(prototype, "questHomeBounties", {
   set: undefined,
 });
 prototype["isBountyCompleted"] = function isBountyCompleted(id) {
-  return set.has(id);
+  return set1.has(id);
 };
-prototype["getCompletedBountyCount"] = function getCompletedBountyCount(first) {
+prototype["getCompletedBountyCount"] = function getCompletedBountyCount(arg0) {
   let num = 0;
   while (tmp !== undefined) {
-    let tmp3 = set;
-    if (set.has(tmp2.id)) {
-      let tmp4 = num;
+    if (set1.has(tmp2.id)) {
       num = num + 1;
     }
     continue;
   }
   return num;
 };
-prototype["isClaimingBountyReward"] = function isClaimingBountyReward(closure_0) {
-  return set1.has(closure_0);
+prototype["isClaimingBountyReward"] = function isClaimingBountyReward(arg0) {
+  return set.has(arg0);
 };
 prototype["areAllBountiesCompleted"] = function areAllBountiesCompleted() {
   return closure_1.every((id) => set.has(id.id));
@@ -49,7 +47,7 @@ prototype["getAdDecisionByPlacementAndAdCreativeId"] = function getAdDecisionByP
   arg0,
   adContentId,
 ) {
-  let value = map.get(arg0);
+  map.get(arg0);
   value = undefined;
   if (value != null) {
     value = value.get(adContentId);
@@ -60,21 +58,22 @@ prototype["getAdDecisionByPlacementAndAdCreativeId"] = function getAdDecisionByP
   return value;
 };
 prototype["getBountyVideoProgress"] = function getBountyVideoProgress(id) {
-  let value = map1.get(id);
+  value = map.get(id);
   if (value == null) {
     value = null;
   }
   return value;
 };
 BountyStore.displayName = "BountyStore";
-const bountyStore = new BountyStore(dispatcherDefault, {
+const bountyStore = new BountyStore(DispatcherDefault, {
   LOGOUT: function handleLogout() {
     c0 = false;
     closure_1 = [];
     set = new Set();
     set1 = new Set();
+    set = set1;
+    new Map();
     map = new Map();
-    map1 = new Map();
   },
   BOUNTIES_FETCH_QUEST_HOME_BOUNTIES_BEGIN: function handleFetchQuestHomeBountiesBegin() {
     c0 = true;
@@ -83,15 +82,14 @@ const bountyStore = new BountyStore(dispatcherDefault, {
     c0 = false;
     bounties = bounties.bounties;
     ({ placement, adDecisionsByAdCreativeId } = bounties);
-    set = new Set();
     map = new Map();
-    map1 = new Map(map1);
+    map1 = new Map(map);
+    map = map1;
     const result = map1.set(placement, adDecisionsByAdCreativeId);
   },
   BOUNTIES_FETCH_QUEST_HOME_BOUNTIES_FAILURE: function handleFetchQuestHomeBountiesFailure(placement) {
     c0 = false;
     closure_1 = [];
-    set = new Set();
     map = new Map(map);
     map.delete(placement.placement);
   },
@@ -119,6 +117,7 @@ const bountyStore = new BountyStore(dispatcherDefault, {
     map = new Map();
   },
 });
-let result = set.fileFinishedImporting("modules/quests/BountyStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/quests/BountyStore.tsx");
 
 export default bountyStore;

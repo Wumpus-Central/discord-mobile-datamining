@@ -1,27 +1,24 @@
 // discord_app/modules/user_settings/defs/native/AuthorizedAppPermissionsSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import ME from "../../../../Constants.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
-import { AuthorizedAppPermissionsScreen } from "../../authorized_apps/native/AuthorizedAppPermissionsScreen.tsx";
+import Constants from "../../../../Constants.tsx";
+import util from "../../../../intl/index.native.tsx";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.xrmhRX);
+    const intl = util.intl;
+    return intl.string(util.t.xrmhRX);
   },
-  parent: MobileUserSettings.MobileUserSettings.AUTHORIZED_APP,
+  parent: SettingsConstants.MobileUserSettings.AUTHORIZED_APP,
   unsearchable: true,
-  screen: obj,
-};
-obj = {
-  route: ME.UserSettingsSections.AUTHORIZED_APP_PERMISSIONS,
-  getComponent() {
-    return AuthorizedAppPermissionsScreen /* AuthorizedAppPermissionsScreen */.default;
+  screen: {
+    route: Constants.UserSettingsSections.AUTHORIZED_APP_PERMISSIONS,
+    getComponent() {
+      return require("AuthorizedAppPermissionsScreen").default;
+    },
   },
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/AuthorizedAppPermissionsSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AuthorizedAppPermissionsSetting.tsx");
 
 export default route;

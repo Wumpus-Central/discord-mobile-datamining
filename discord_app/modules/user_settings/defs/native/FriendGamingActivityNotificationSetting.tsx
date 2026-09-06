@@ -1,38 +1,25 @@
 // discord_app/modules/user_settings/defs/native/FriendGamingActivityNotificationSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import explicitContentFromProto from "../../UserSettings.tsx";
-import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
-import onFriendGamingActivityNotificationSettingsChanged from "../../../notifications/friend_gaming_activity/FriendGamingActivityNotificationUtils.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import util from "../../../../intl/index.native.tsx";
+import UserSettings from "../../UserSettings.tsx";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
+import FriendGamingActivityNotificationUtils from "../../../notifications/friend_gaming_activity/FriendGamingActivityNotificationUtils.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const toggle = createToggle.createToggle({
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["yq/aPt"]);
+    const intl = util.intl;
+    return intl.string(util.t["yq/aPt"]);
   },
   useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.Amy1fz);
+    const intl = util.intl;
+    return intl.string(util.t.Amy1fz);
   },
-  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
-  useValue: explicitContentFromProto.EnableFriendGamingActivityNotifications.useSetting,
-  onValueChange: onFriendGamingActivityNotificationSettingsChanged.onFriendGamingActivityNotificationSettingsChanged,
+  parent: SettingsConstants.MobileUserSettings.NOTIFICATIONS,
+  useValue: UserSettings.EnableFriendGamingActivityNotifications.useSetting,
+  onValueChange: FriendGamingActivityNotificationUtils.onFriendGamingActivityNotificationSettingsChanged,
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["yq/aPt"]);
-  },
-  useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.Amy1fz);
-  },
-  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
-  useValue: explicitContentFromProto.EnableFriendGamingActivityNotifications.useSetting,
-  onValueChange: onFriendGamingActivityNotificationSettingsChanged.onFriendGamingActivityNotificationSettingsChanged,
-};
-const result = set.fileFinishedImporting(
+const result = size.fileFinishedImporting(
   "modules/user_settings/defs/native/FriendGamingActivityNotificationSetting.tsx",
 );
 

@@ -1,22 +1,23 @@
 // discord_app/modules/checkout/native/GiftCardMobileConsumptionActionSheet.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
-import messagesProxyDefault from "../messages/GiftCard.messages.js";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import { ContentDismissActionType } from "../../dismissible_content/DismissibleContentConstants.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import _modDef2168 from "../messages/GiftCard.messages.js";
+import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { sheet: null, container: null, illustration: null, body: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { paddingHorizontal: ThemesDefault.space.PX_16 };
-const obj1 = { paddingHorizontal: ThemesDefault.space.PX_16 };
-createCacheKey[2] = { alignSelf: "stretch", alignItems: "center", paddingTop: ThemesDefault.space.PX_12 };
-createCacheKey[3] = {
+const require = fn;
+const View = fn(17).View;
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+fn(4560);
+let createStyles = { sheet: null, container: null, illustration: null, body: null };
+createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+createStyles.sheet = createStyles;
+createStyles.container = { paddingHorizontal: nativeDefault.space.PX_16 };
+const obj1 = { paddingHorizontal: nativeDefault.space.PX_16 };
+createStyles.illustration = { alignSelf: "stretch", alignItems: "center", paddingTop: nativeDefault.space.PX_12 };
+createStyles.body = {
   textAlign: "center",
   fontFamily: "gg sans",
   fontSize: 16,
@@ -25,70 +26,68 @@ createCacheKey[3] = {
   alignSelf: "center",
   width: 280,
 };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { alignSelf: "stretch", alignItems: "center", paddingTop: ThemesDefault.space.PX_12 };
-const result = require("set").fileFinishedImporting("modules/checkout/native/GiftCardMobileConsumptionActionSheet.tsx");
+let closure_8 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/checkout/native/GiftCardMobileConsumptionActionSheet.tsx");
 
 export default function GiftCardMobileConsumptionActionSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
-  importDefault = undefined;
-  dependencyMap = undefined;
-  let React;
-  const tmp = callback3();
-  importDefault = React.useRef(false);
-  dependencyMap = React.useRef(markAsDismissed);
+  noop = undefined;
+  const tmp = closure_8();
+  importDefault = noop.useRef(false);
+  dependencyMap = noop.useRef(markAsDismissed);
   const items = [markAsDismissed];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     closure_2.current = markAsDismissed;
   }, items);
-  const effect1 = React.useEffect(
+  const effect1 = noop.useEffect(
     () => () => {
       if (!ref.current) {
-        ref2.current(closure_1_5.AUTO_DISMISS);
+        ref2.current(constants.AUTO_DISMISS);
       }
     },
     [],
   );
   const items1 = [markAsDismissed];
-  React = React.useCallback((arg0) => {
+  noop = noop.useCallback((arg0) => {
     if (!ref.current) {
       tmp.current = true;
       markAsDismissed(arg0);
-      ref(table[7]).hideActionSheet();
-      const obj = ref(table[7]);
+      ActionSheetActionCreatorsDefault.hideActionSheet();
     }
   }, items1);
   let obj = {
     startExpanded: true,
     backgroundStyles: tmp.sheet,
     onDismiss() {
-      return callback(closure_1_5.USER_DISMISS);
+      return closure_3(ContentDismissActionType.USER_DISMISS);
     },
     children: null,
   };
-  obj = { style: items2, children: null };
-  items2 = [tmp.container, { paddingBottom: useSafeAreaInsetsDefault().bottom }];
-  obj = { spacing: ThemesDefault.space.PX_16, children: null };
+  obj = { style: null, children: null };
+  const items2 = [tmp.container, { paddingBottom: useSafeAreaInsetsDefault().bottom }];
+  obj.style = items2;
+  obj = { spacing: nativeDefault.space.PX_16, children: null };
   const items3 = [
-    callback(View, {
+    closure_6(View, {
       style: tmp.illustration,
-      children: callback(markAsDismissed(5692).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 }),
+      children: closure_6(markAsDismissed(5692).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 }),
     }),
     ,
   ];
   const obj2 = { variant: "text-md/medium", color: "text-default", style: tmp.body, children: null };
   const intl = markAsDismissed(1114).intl;
-  obj2[3] = intl.string(messagesProxyDefault.V3DI1E);
-  items3[1] = callback(markAsDismissed(4556).Text, obj2);
+  obj2.children = intl.string(_modDef2168.V3DI1E);
+  items3[1] = closure_6(markAsDismissed(4556).Text, obj2);
   const obj3 = { size: "lg", variant: "secondary", grow: true, text: null, onPress: null };
   const intl2 = markAsDismissed(1114).intl;
-  obj3[3] = intl2.string(messagesProxyDefault.YZePWx);
-  obj3[4] = function onPress() {
-    return callback(closure_1_5.USER_DISMISS);
+  obj3.text = intl2.string(_modDef2168.YZePWx);
+  obj3.onPress = function onPress() {
+    return closure_3(ContentDismissActionType.USER_DISMISS);
   };
-  items3[2] = callback(markAsDismissed(4975).Button, obj3);
-  obj[1] = items3;
-  obj[1] = callback2(markAsDismissed(4973).Stack, obj);
-  obj[3] = callback(View, obj);
-  return callback(markAsDismissed(7150).BottomSheet, obj);
+  items3[2] = closure_6(markAsDismissed(4975).Button, obj3);
+  obj.children = items3;
+  obj.children = closure_7(markAsDismissed(4973).Stack, obj);
+  obj.children = closure_6(View, obj);
+  return closure_6(markAsDismissed(7150).BottomSheet, obj);
 }

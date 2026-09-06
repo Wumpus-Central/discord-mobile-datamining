@@ -1,23 +1,27 @@
 // discord_app/modules/user_settings/defs/native/useSyncedModeThemeName.tsx
-import closure_3 from "../../ThemeStore.tsx";
-import { BACKGROUND_GRADIENT_PRESETS_MAP as closure_4 } from "../../../client_themes/ClientThemesConstants.tsx";
+import util from "../../../../intl/index.native.tsx";
+import ClientThemesUtils from "../../../client_themes/ClientThemesUtils.tsx";
+import _modDef2626 from "../../../client_themes/intl/ClientThemes.messages.js";
+import ThemeStore from "../../ThemeStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/useSyncedModeThemeName.tsx");
+require = fn;
+let closure_4 = fn(1230).BACKGROUND_GRADIENT_PRESETS_MAP;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/useSyncedModeThemeName.tsx");
 
 export const useSyncedModeThemeName = function useSyncedModeThemeName(DARK) {
-  const _require = DARK;
-  const items = [closure_3];
-  return require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    const syncedClientTheme = closure_1_3.getSyncedClientTheme(DARK);
-    const themeName = DARK(closure_1_2[3]).getThemeName(closure_1_3.themePreferenceForSystemTheme(DARK));
+  _require = DARK;
+  const items = [ThemeStore];
+  return require("initialize").useStateFromStores(items, () => {
+    const syncedClientTheme = ThemeStore.getSyncedClientTheme(closure_0);
+    const themeName = ClientThemesUtils.getThemeName(ThemeStore.themePreferenceForSystemTheme(closure_0));
     let prop;
     if (syncedClientTheme != null) {
       prop = syncedClientTheme.customUserThemeSettings;
     }
     if (null != prop) {
-      const intl = DARK(tmp3[4]).intl;
-      let stringResult = intl.string(closure_1_1(tmp3[5]).yl1iMm);
+      const intl = util.intl;
+      let stringResult = intl.string(_modDef2626.yl1iMm);
     } else {
       let prop1;
       if (syncedClientTheme != null) {
@@ -26,7 +30,7 @@ export const useSyncedModeThemeName = function useSyncedModeThemeName(DARK) {
       stringResult = themeName;
       if (null != prop1) {
         let name;
-        if (closure_1_4[syncedClientTheme.backgroundGradientPresetId] != null) {
+        if (closure_4[syncedClientTheme.backgroundGradientPresetId] != null) {
           const getName = tmp9.getName;
           if (getName != null) {
             name = getName();

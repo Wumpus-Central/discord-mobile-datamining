@@ -1,13 +1,14 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkDiscordConsent.tsx
-import closure_2 from "../../../../../../../_runtime/00019_noop.js";
-import { CrunchyrollLinkModalScenes as closure_3 } from "CrunchyrollLinkConstants.tsx";
-import { PlatformTypes } from "../../../../../../Constants.tsx";
-import CRUNCHYROLL_LINK_DEST_ORIGIN from "../../../../../connections/CrunchyrollConnectionConstants.tsx";
-import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
+import noop from "../../../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-({ CRUNCHYROLL_CLIENT_ID: c5, CRUNCHYROLL_CLIENT_SCOPES: closure_6 } = CRUNCHYROLL_LINK_DEST_ORIGIN);
-const result = require("set").fileFinishedImporting(
+const require = fn;
+let closure_3 = fn(9272).CrunchyrollLinkModalScenes;
+const PlatformTypes = fn(1074).PlatformTypes;
+const CrunchyrollConnectionConstants = fn(8338);
+({ CRUNCHYROLL_CLIENT_ID: hasOwnProperty, CRUNCHYROLL_CLIENT_SCOPES: metroRequire } = CrunchyrollConnectionConstants);
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkDiscordConsent.tsx",
 );
 
@@ -18,18 +19,18 @@ export default function CrunchyrollLinkDiscordConsent(arg0) {
   navigation = obj.useNavigation();
   const items = [navigation];
   const items1 = [navigation];
-  const callback = React.useCallback(() => {
-    navigation.push(closure_1_3.SUCCESS);
+  const callback = noop.useCallback(() => {
+    navigation.push(constants.SUCCESS);
   }, items);
-  const callback1 = React.useCallback(() => {
-    navigation.push(closure_1_3.ERROR);
+  const callback1 = noop.useCallback(() => {
+    navigation.push(constants.ERROR);
   }, items1);
   obj = {
     platformType: PlatformTypes.CRUNCHYROLL,
     callbackCode,
     callbackState,
-    clientId: closure_5,
-    scopes: closure_6,
+    clientId,
+    scopes,
     onNext: callback,
     onError: callback1,
   };
@@ -37,8 +38,8 @@ export default function CrunchyrollLinkDiscordConsent(arg0) {
     platformType: PlatformTypes.CRUNCHYROLL,
     callbackCode,
     callbackState,
-    clientId: closure_5,
-    scopes: closure_6,
+    clientId,
+    scopes,
     onNext: callback,
     onError: callback1,
   });

@@ -1,51 +1,42 @@
 // discord_app/utils/AnalyticsUtils.tsx
-import reportAll from "../modules/debug/LogAggregator.tsx";
-import dispatcherDefault from "../Dispatcher.tsx";
-import _modDef1232 from "SentryUtils.native.tsx";
+import LogAggregatorAll from "../modules/debug/LogAggregator.tsx";
+import DispatcherDefault from "../Dispatcher.tsx";
+import util from "../intl/index.native.tsx";
+import SentryUtilsDefault from "SentryUtils.native.tsx";
 import v1 from "../../_runtime/01256_v1.js";
-import IGNORE_ANALYTICS_BREADCRUMB_EVENTS2 from "../modules/errors/CommonSentryInitUtils.tsx";
-import getHermesInstrumentedStatsSummaryDefault from "ProcessUtils.native.tsx";
-import MEAll from "AnalyticsSchema.tsx";
-import closure_6 from "../../_runtime/metro/00109__objectWithoutProperties.js";
-import withEqualityFn from "../modules/app_analytics/ImpressionStore.tsx";
-import closure_9 from "../stores/DeveloperOptionsStore.tsx";
-import ME from "../Constants.tsx";
-import { AccessibilityFeatureFlags } from "../modules/a11y/AccessibilityConstants.tsx";
-import { ApplicationTypes } from "../modules/applications/ApplicationConstants.tsx";
-import isBlockedDomain from "../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
-import importAllResult from "../../_runtime/00019_noop.js";
-import encodeProperties from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import importAllResult1 from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import CommonSentryInitUtils from "../modules/errors/CommonSentryInitUtils.tsx";
+import ProcessUtilsDefault from "ProcessUtils.native.tsx";
+import utils_AnalyticsSchemaAll from "AnalyticsSchema.tsx";
+import _objectWithoutProperties from "../../_runtime/metro/00109__objectWithoutProperties.js";
+import noop from "../../_runtime/metro/00019__.js";
+import DeveloperOptionsStore from "../stores/DeveloperOptionsStore.tsx";
+import AnalyticsUtils from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 
-require = arg1;
+require = fn;
 function expandEventProperties(arg0) {
   let obj = arg0;
   if (arg0 == null) {
     obj = {};
   }
-  let obj2 = obj;
   if (null == obj.location) {
     if (null == obj.source) {
-      tmp.client_performance_cpu = getHermesInstrumentedStatsSummaryDefault.getCurrentCPUUsagePercent();
-      const obj6 = getHermesInstrumentedStatsSummaryDefault;
-      tmp.client_performance_memory = getHermesInstrumentedStatsSummaryDefault.getCurrentMemoryUsageKB();
-      const obj7 = getHermesInstrumentedStatsSummaryDefault;
-      tmp.cpu_core_count = getHermesInstrumentedStatsSummaryDefault.getCPUCoreCount();
-      tmp.accessibility_features = getAccessibilityFeatures();
-      tmp.rendered_locale = obj2(1114).intl.currentLocale;
+      tmp.client_performance_cpu = ProcessUtilsDefault.getCurrentCPUUsagePercent();
+      tmp.client_performance_memory = ProcessUtilsDefault.getCurrentMemoryUsageKB();
+      tmp.cpu_core_count = ProcessUtilsDefault.getCPUCoreCount();
+      tmp.accessibility_features = global();
+      tmp.rendered_locale = util.intl.currentLocale;
       const _Math = Math;
       const _performance = performance;
       tmp.uptime_app = Math.floor((performance.now() - closure_18) / c15);
-      const obj8 = getHermesInstrumentedStatsSummaryDefault;
-      const processUptime = getHermesInstrumentedStatsSummaryDefault.getProcessUptime();
+      const processUptime = ProcessUtilsDefault.getProcessUptime();
       if (null != processUptime) {
         const _Math2 = Math;
         tmp.uptime_process_renderer = Math.floor(processUptime);
       }
       let utmSource = tmp.utm_source;
-      ({ utmMedium, utmCampaign, utmContent } = utmSource);
+      ({ utmMedium, utmCampaign, utmContent } = global);
       if (utmSource == null) {
-        utmSource = utmSource.utmSource;
+        utmSource = global.utmSource;
       }
       tmp.utm_source = utmSource;
       let utm_medium = tmp.utm_medium;
@@ -64,16 +55,15 @@ function expandEventProperties(arg0) {
       }
       tmp.utm_content = utm_content;
       tmp.launch_signature = launchSignature;
-      const item = arr.forEach((arg0) => arg0(obj2));
+      const item = closure_20.forEach((fn) => fn(obj2));
       return tmp;
     } else {
       const source = obj.source;
       obj = {};
-      const merged = Object.assign(callback(obj, closure_5));
+      const merged = Object.assign(_objectWithoutProperties(obj, closure_5));
       if (typeof source === "string") {
-        obj = { source: null };
-        obj[0] = source;
-        obj1 = obj;
+        obj = { source };
+        let obj1 = obj;
       } else {
         obj1 = {
           source_page: null,
@@ -82,18 +72,22 @@ function expandEventProperties(arg0) {
           source_object_type: null,
           source_promotion_id: null,
         };
-        ({ page: obj5[0], section: obj5[1], object: obj5[2], objectType: obj5[3], promotionId: obj5[4] } = source);
+        ({
+          page: obj5.source_page,
+          section: obj5.source_section,
+          object: obj5.source_object,
+          objectType: obj5.source_object_type,
+          promotionId: obj5.source_promotion_id,
+        } = source);
       }
       const merged1 = Object.assign(obj1);
-      obj2 = obj;
     }
   } else {
     const _location = obj.location;
-    obj2 = {};
-    const merged2 = Object.assign(callback(obj, closure_4));
+    const obj2 = {};
+    const merged2 = Object.assign(_objectWithoutProperties(obj, closure_4));
     if (typeof _location === "string") {
-      const obj3 = { location: null };
-      obj3[0] = _location;
+      const obj3 = { location: _location };
       let obj4 = obj3;
     } else {
       obj4 = {
@@ -103,40 +97,48 @@ function expandEventProperties(arg0) {
         location_object: null,
         location_object_type: null,
       };
-      ({ page: obj3[0], page: obj3[1], section: obj3[2], object: obj3[3], objectType: obj3[4] } = _location);
+      ({
+        page: obj3.location,
+        page: obj3.location_page,
+        section: obj3.location_section,
+        object: obj3.location_object,
+        objectType: obj3.location_object_type,
+      } = _location);
     }
     const merged3 = Object.assign(obj4);
   }
 }
 let closure_4 = ["location"];
 let closure_5 = ["source"];
-({ setDebugTrackedData: error, getLocation: closure_8 } = withEqualityFn);
-({ AnalyticEvents, AnalyticsObjectTypes: c10, AnalyticsSections: unpackModuleId } = ME);
-let closure_14 = {};
+const ImpressionStore = fn(1243);
+({ setDebugTrackedData: closure_7, getLocation: closure_8 } = ImpressionStore);
+const Constants = fn(1074);
+({ AnalyticEvents, AnalyticsObjectTypes: c10, AnalyticsSections: closure_11 } = Constants);
+const AccessibilityFeatureFlags = fn(1349).AccessibilityFeatureFlags;
+const ApplicationTypes = fn(1350).ApplicationTypes;
+let global = {};
 let c15 = 1000;
 let c16 = 60000;
 let c17 = 900000;
-const context = importAllResult.createContext({ location: {} });
+const context = noop.createContext({ location: {} });
 let closure_18 = performance.now();
+let shim = fn(1351);
 let launchSignature = null;
-if (isBlockedDomain.isLibdiscoreInitialized()) {
-  let obj2 = require("isBlockedDomain");
-  let obj3 = require("getGlobalObject");
+if (shim.isLibdiscoreInitialized()) {
+  let obj2 = fn(1351);
+  let obj3 = fn(1357);
   launchSignature = obj2.generateLaunchSignature(obj3.getGlobalObject());
 }
-function addBreadcrumb(arg0) {
-  const IGNORE_ANALYTICS_BREADCRUMB_EVENTS = IGNORE_ANALYTICS_BREADCRUMB_EVENTS2.IGNORE_ANALYTICS_BREADCRUMB_EVENTS;
-  if (!IGNORE_ANALYTICS_BREADCRUMB_EVENTS.includes(arg0)) {
-    let obj = _modDef1232;
-    obj = { category: "analytics", message: null };
-    obj[1] = arg0;
+function addBreadcrumb(message) {
+  const IGNORE_ANALYTICS_BREADCRUMB_EVENTS = CommonSentryInitUtils.IGNORE_ANALYTICS_BREADCRUMB_EVENTS;
+  if (!IGNORE_ANALYTICS_BREADCRUMB_EVENTS.includes(message)) {
+    const obj = { category: "analytics", message };
     obj.addBreadcrumb(obj);
   }
 }
-function expandLocation(str) {
-  if (typeof str === "string") {
-    let obj = { location: null };
-    obj[0] = str;
+function expandLocation(location) {
+  if (typeof location === "string") {
+    let obj = { location };
   } else {
     obj = {
       location: null,
@@ -145,7 +147,13 @@ function expandLocation(str) {
       location_object: null,
       location_object_type: null,
     };
-    ({ page: obj2[0], page: obj2[1], section: obj2[2], object: obj2[3], objectType: obj2[4] } = str);
+    ({
+      page: obj2.location,
+      page: obj2.location_page,
+      section: obj2.location_section,
+      object: obj2.location_object,
+      objectType: obj2.location_object_type,
+    } = location);
   }
   return obj;
 }
@@ -154,27 +162,28 @@ function debugLogEvent(name, result) {
   if (arg2 === undefined) {
     flag = false;
   }
-  const report = reportAll.report;
+  const report = LogAggregatorAll.report;
   if (flag) {
     report("Analytics", name, result);
   } else {
     report("Analytics", name);
   }
 }
-const result = importAllResult1.extendSuperProperties({ launch_signature: launchSignature });
+const result = AnalyticsUtils.extendSuperProperties({ launch_signature: launchSignature });
 let closure_20 = [];
 obj = {
   [AnalyticEvents.APP_OPENED]: obj,
-  [AnalyticEvents.APP_BACKGROUND]: isBlockedDomain,
+  [AnalyticEvents.APP_BACKGROUND]: shim,
   [AnalyticEvents.ACK_MESSAGES]: (location_object_type) => {
     let tmp;
     if (location_object_type.location_object_type !== constants.ACK_MANUAL) {
-      const obj = { throttlePeriod: null, throttleKeys: null };
-      obj[0] = c17;
-      obj[1] = function throttleKeys(arg0) {
-        const items = [, ,];
-        ({ guild_id: arr[0], channel_id: arr[1], location_section: arr[2] } = arg0);
-        return items;
+      const obj = {
+        throttlePeriod: throttlePeriod2,
+        throttleKeys(arg0) {
+          const items = [, ,];
+          ({ guild_id: arr[0], channel_id: arr[1], location_section: arr[2] } = arg0);
+          return items;
+        },
       };
       tmp = obj;
     }
@@ -205,8 +214,8 @@ obj = {
   [AnalyticEvents.RPC_SUBSCRIPTION_REQUESTED]: obj24,
   [AnalyticEvents.ACTIVITY_HANDSHAKE]: obj25,
   [AnalyticEvents.CHANNEL_BANNER_VIEWED]: obj26,
-  [arg1(1250).ImpressionNames.GUILD_HANGOUT_WINDOW]: obj27,
-  [arg1(1250).ImpressionNames.GUILD_HANGOUT_WINDOW_ENTRY_POINT]: obj28,
+  [fn(1250).ImpressionNames.GUILD_HANGOUT_WINDOW]: obj27,
+  [fn(1250).ImpressionNames.GUILD_HANGOUT_WINDOW_ENTRY_POINT]: obj28,
   [AnalyticEvents.PREMIUM_UPSELL_VIEWED]: obj29,
   [AnalyticEvents.FORUM_CHANNEL_SEARCHED]: obj30,
   [AnalyticEvents.FORUM_CHANNEL_SCROLLED]: obj31,
@@ -230,11 +239,12 @@ obj = {
   [AnalyticEvents.OPEN_MODAL]: (type) => {
     let tmp;
     if (type.type === constants2.MEDIA_VIEWER) {
-      const obj = { throttlePeriod: null, throttleKeys: null };
-      obj[0] = c16;
-      obj[1] = function throttleKeys(type) {
-        const items = [type.type];
-        return items;
+      const obj = {
+        throttlePeriod,
+        throttleKeys(type) {
+          const items = [type.type];
+          return items;
+        },
       };
       tmp = obj;
     }
@@ -256,7 +266,7 @@ obj = {
     return [];
   },
 };
-isBlockedDomain = {
+shim = {
   throttlePeriod: 120000,
   throttleKeys() {
     return [];
@@ -277,9 +287,19 @@ obj3 = {
     return items;
   },
 };
-function getAccessibilityFeatures() {
+global = function getAccessibilityFeatures() {
   return AccessibilityFeatureFlags.NONE;
-}
+};
+AnalyticsUtils = fn(1250);
+let closure_22 = AnalyticsUtils.trackMaker({
+  addBreadcrumb,
+  analyticEventConfigs: obj,
+  dispatcher: DispatcherDefault,
+  TRACK_ACTION_NAME: "TRACK",
+});
+let c24 = false;
+let closure_25 = {};
+AnalyticsUtils = fn(1250);
 obj10 = {
   throttlePeriod: 900000,
   throttleKeys(notif_type) {
@@ -643,6 +663,7 @@ obj57 = {
     return [];
   },
 };
+const obj58 = { addBreadcrumb, analyticEventConfigs: obj, dispatcher: DispatcherDefault, TRACK_ACTION_NAME: "TRACK" };
 obj6 = {
   throttlePeriod: 900000,
   throttleKeys(server) {
@@ -679,26 +700,17 @@ obj9 = {
     return items;
   },
 };
-let closure_22 = encodeProperties.trackMaker({
+let closure_26 = AnalyticsUtils.trackMaker({
   addBreadcrumb,
   analyticEventConfigs: obj,
-  dispatcher: dispatcherDefault,
-  TRACK_ACTION_NAME: "TRACK",
-});
-let c24 = false;
-let closure_25 = {};
-const obj58 = { addBreadcrumb, analyticEventConfigs: obj, dispatcher: dispatcherDefault, TRACK_ACTION_NAME: "TRACK" };
-let closure_26 = encodeProperties.trackMaker({
-  addBreadcrumb,
-  analyticEventConfigs: obj,
-  dispatcher: dispatcherDefault,
+  dispatcher: DispatcherDefault,
   TRACK_ACTION_NAME: "TRACK",
 });
 const obj60 = {};
-let merged = Object.assign(importAllResult1);
-obj60.getCampaignParams = require("encodeProperties").getCampaignParams;
+AnalyticsUtils = Object.assign(AnalyticsUtils);
+obj60.getCampaignParams = fn(1250).getCampaignParams;
 obj60.setSystemAccessibilityFeatures = function setSystemAccessibilityFeatures(getActiveFeatures) {
-  closure_21 = getActiveFeatures;
+  global = getActiveFeatures;
 };
 obj60.expandEventProperties = expandEventProperties;
 obj60.track = function track(arg0, arg1) {
@@ -710,9 +722,8 @@ obj60.track = function track(arg0, arg1) {
   if (c24) {
     if (null != arg1) {
       const _Array = Array;
-      if (Array.isArray(table[arg0])) {
+      if (Array.isArray(closure_25[arg0])) {
         tmp3[arg0].push(arg1);
-        const arr2 = tmp3[arg0];
       } else {
         const items = [arg1];
         tmp3[arg0] = items;
@@ -730,26 +741,28 @@ obj60.track = function track(arg0, arg1) {
   if (flag === undefined) {
     flag = false;
   }
-  const report = reportAll.report;
+  const report = LogAggregatorAll.report;
   if (flag) {
     report("Analytics", StringResult, tmp5);
   } else {
     report("Analytics", StringResult);
   }
   obj = { flush: obj.flush, fingerprint: obj.fingerprint };
-  return callback4(arg0, tmp5, obj);
+  return closure_22(arg0, tmp5, obj);
 };
-const obj59 = { addBreadcrumb, analyticEventConfigs: obj, dispatcher: dispatcherDefault, TRACK_ACTION_NAME: "TRACK" };
-const result1 = require("set").fileFinishedImporting("utils/AnalyticsUtils.tsx");
+const size = fn(2);
+const result1 = size.fileFinishedImporting("utils/AnalyticsUtils.tsx");
 
 export default obj60;
 export const AnalyticsContext = context;
 export { launchSignature };
-export const addExtraAnalyticsDecorator = function addExtraAnalyticsDecorator(arg0) {};
+export const addExtraAnalyticsDecorator = function addExtraAnalyticsDecorator(arg0) {
+  closure_20.push(arg0);
+};
 export const AnalyticEventConfigs = obj;
 export { expandLocation };
 export function setUTMContext(arg0) {
-  closure_14 = arg0;
+  global = arg0;
   return arg0;
 }
 export { expandEventProperties };
@@ -765,7 +778,7 @@ export function getAnalyticsEventsRecording() {
 }
 export const clearAnalyticsEventsRecording = function clearAnalyticsEventsRecording() {
   const keys = Object.keys(closure_25);
-  const item = keys.forEach((arg0) => {
+  const item = keys.forEach((item) => {
     delete tmp2[tmp];
   });
 };
@@ -773,16 +786,16 @@ export const isGameApplicationType = function isGameApplicationType(arg0) {
   return arg0 === ApplicationTypes.GAME || arg0 === ApplicationTypes.DEPRECATED_GAME;
 };
 export const trackNetworkAction = function trackNetworkAction(event, arg1) {
-  let obj = { location: callback3() };
+  let obj = { location: React6() };
   const merged = Object.assign(arg1);
   obj = { type: "action" };
   const merged1 = Object.assign(arg1);
-  callback2(event, obj);
+  React5(event, obj);
   const tmp2 = expandEventProperties(obj);
-  reportAll.report("Analytics", event);
-  callback5(event, tmp2);
+  LogAggregatorAll.report("Analytics", event);
+  closure_26(event, tmp2);
 };
 export const getNewAnalyticsLoadId = function getNewAnalyticsLoadId() {
   return v1.v4();
 };
-export const AnalyticsSchema = MEAll;
+export const AnalyticsSchema = utils_AnalyticsSchemaAll;

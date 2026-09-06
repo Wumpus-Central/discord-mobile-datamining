@@ -1,7 +1,7 @@
 // discord_app/modules/hub/HubConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/hub/HubConstants.tsx");
+const result = size.fileFinishedImporting("modules/hub/HubConstants.tsx");
 
 export const HubEmailConnectionSteps = {
   STUDENT_PROMPT: "STUDENT_PROMPT",

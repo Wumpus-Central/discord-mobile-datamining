@@ -1,10 +1,10 @@
 // discord_common/js/packages/media-engine/Constants.tsx
-import set from "../../../../_runtime/00002_set.js";
-import SystemServiceNotAvailableError from "../discord-native-types/DiscordNative.tsx";
+import discord_common_DiscordNative from "../discord-native-types/DiscordNative.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/media-engine/Constants.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/media-engine/Constants.tsx");
 
-export const DesktopSources = SystemServiceNotAvailableError.DesktopSources;
+export const DesktopSources = discord_common_DiscordNative.DesktopSources;
 export const MediaEngineContextTypes = { DEFAULT: "default", STREAM: "stream" };
 export const DeviceTypes = { AUDIO_INPUT: "audioinput", AUDIO_OUTPUT: "audiooutput", VIDEO_INPUT: "videoinput" };
 export const InputModes = { PUSH_TO_TALK: "PUSH_TO_TALK", VOICE_ACTIVITY: "VOICE_ACTIVITY" };

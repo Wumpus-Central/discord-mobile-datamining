@@ -1,22 +1,22 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/invite/FriendInvite.tsx
-import set from "../../../../../../../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import getSystemLocale from "../../../../../../../../intl/index.native.tsx";
-import InviteSendStates from "../../../../../../../instant_invite/Constants.tsx";
+import _mod17 from "../../../../../../../../../_runtime/metro/00017__.js";
+import util from "../../../../../../../../intl/index.native.tsx";
+import Constants from "../../../../../../../instant_invite/Constants.tsx";
 import getEmbedThemeColorsDefault from "../../getEmbedThemeColors.tsx";
-import closure_4 from "../../../../../../../../stores/RelationshipStore.tsx";
+import RelationshipStore from "../../../../../../../../stores/RelationshipStore.tsx";
+import size from "../../../../../../../../../_runtime/metro/00002__.js";
 
-const Image = get_ActivityIndicator.Image;
-const InviteTypes = InviteSendStates.InviteTypes;
-const result = set.fileFinishedImporting(
+const Image = _mod17.Image;
+const InviteTypes = Constants.InviteTypes;
+const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/row_data/embeds/coded_links/invite/FriendInvite.tsx",
 );
 
-export const createFriendInvite = function createFriendInvite(inviter) {
+export const createFriendInvite = function createFriendInvite(inviter, arg1, arg2, arg3) {
   ({ colors, baseColors } = getEmbedThemeColorsDefault(arg3));
-  const intl = getSystemLocale.intl;
+  const intl = util.intl;
   const string = intl.string;
-  const t = getSystemLocale.t;
+  const t = util.t;
   if (arg1) {
     let str = string(t.eQyu1F);
     let tmp5 = tmp4;
@@ -40,7 +40,7 @@ export const createFriendInvite = function createFriendInvite(inviter) {
     if (inviter != null) {
       id = inviter.id;
     }
-    isFriendResult = friend.isFriend(id);
+    isFriendResult = RelationshipStore.isFriend(id);
   }
   let str4 = "";
   if (null != inviter.inviter) {

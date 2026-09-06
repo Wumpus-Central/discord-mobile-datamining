@@ -1,14 +1,17 @@
 // discord_app/modules/app_launcher/native/hooks/useBottomSheetFlashListBottomViewabilityInset.tsx
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import _modDef12 from "../../../../../_runtime/metro/00012__.js";
+import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
+require = fn;
 let closure_4 = {
   code: "function useBottomSheetFlashListBottomViewabilityInsetTsx1(){const{bottomSheetPosition}=this.__closure;var _bottomSheetPosition$,_bottomSheetPosition;return(_bottomSheetPosition$=(_bottomSheetPosition=bottomSheetPosition)===null||_bottomSheetPosition===void 0?void 0:_bottomSheetPosition.get())!==null&&_bottomSheetPosition$!==void 0?_bottomSheetPosition$:0;}",
 };
-let closure_5 = {
+const __initData = {
   code: "function useBottomSheetFlashListBottomViewabilityInsetTsx2(sheetPosition){const{distanceBetweenExpandedScreenTopAndSheetTop,runOnJS,handleBottomViewabilityInsetDebounced}=this.__closure;const bottomViewabilityInset=sheetPosition-distanceBetweenExpandedScreenTopAndSheetTop;runOnJS(handleBottomViewabilityInsetDebounced)(bottomViewabilityInset);}",
 };
-const result = require("set").fileFinishedImporting(
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/app_launcher/native/hooks/useBottomSheetFlashListBottomViewabilityInset.tsx",
 );
 
@@ -25,8 +28,8 @@ export const useBottomSheetFlashListBottomViewabilityInset = function useBottomS
   bottomVisibilityInsetRef = obj.useRef(9999);
   const memo = obj.useMemo(
     () =>
-      flashListRef(diff[4]).debounce((current) => {
-        closure_3.current = current;
+      _modDef12.debounce((current) => {
+        bottomVisibilityInsetRef.current = current;
         current = ref.current;
         if (current != null) {
           current.updateViewableItems();
@@ -34,7 +37,6 @@ export const useBottomSheetFlashListBottomViewabilityInset = function useBottomS
       }, 200),
     [],
   );
-  const tmp = flashListRef;
   const tmp3 = flashListRef(1477)();
   const fn = function u() {
     let num;
@@ -50,7 +52,7 @@ export const useBottomSheetFlashListBottomViewabilityInset = function useBottomS
   fn.__workletHash = 3750973667946;
   fn.__initData = memo;
   const fn2 = function s(arg0) {
-    bottomSheetPosition(diff[5]).runOnJS(memo)(arg0 - closure_2);
+    ReanimatedRexport.runOnJS(memo)(arg0 - diff);
   };
   obj = {
     distanceBetweenExpandedScreenTopAndSheetTop: diff,
@@ -59,7 +61,7 @@ export const useBottomSheetFlashListBottomViewabilityInset = function useBottomS
   };
   fn2.__closure = obj;
   fn2.__workletHash = 6025307858098;
-  fn2.__initData = closure_5;
+  fn2.__initData = __initData;
   const animatedReaction = bottomSheetPosition(4296).useAnimatedReaction(fn, fn2);
   return { flashListRef, bottomVisibilityInsetRef };
 };

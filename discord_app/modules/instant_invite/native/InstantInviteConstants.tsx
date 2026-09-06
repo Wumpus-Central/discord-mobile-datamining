@@ -1,5 +1,5 @@
 // discord_app/modules/instant_invite/native/InstantInviteConstants.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
 let obj = {
   TWITTER: "twitter",
@@ -17,7 +17,7 @@ obj = {
   [obj.MESSENGER]: (arg0) => "fb-messenger://share/?link=" + arg0,
   [obj.TELEGRAM]: (arg0, arg1) => "https://telegram.me/share/url?url=" + arg1 + "&text=" + arg0,
 };
-const result = set.fileFinishedImporting("modules/instant_invite/native/InstantInviteConstants.tsx");
+const result = size.fileFinishedImporting("modules/instant_invite/native/InstantInviteConstants.tsx");
 
 export const SHARE_APPS_KEY = obj;
 export const SHARE_URLS = obj;

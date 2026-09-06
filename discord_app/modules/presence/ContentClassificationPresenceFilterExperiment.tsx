@@ -1,6 +1,6 @@
 // discord_app/modules/presence/ContentClassificationPresenceFilterExperiment.tsx
-import set from "../../../_runtime/00002_set.js";
 import ApexExperiment from "../experiments/apex/index.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const apexExperiment = ApexExperiment.createApexExperiment({
   kind: "user",
@@ -8,6 +8,6 @@ const apexExperiment = ApexExperiment.createApexExperiment({
   defaultConfig: { enabled: false },
   variations: { 0: { enabled: false }, 1: { enabled: true } },
 });
-const result = set.fileFinishedImporting("modules/presence/ContentClassificationPresenceFilterExperiment.tsx");
+const result = size.fileFinishedImporting("modules/presence/ContentClassificationPresenceFilterExperiment.tsx");
 
 export const ContentClassificationPresenceFilterExperiment = apexExperiment;

@@ -1,28 +1,31 @@
 // discord_app/modules/premium_marketing/native/components/BuyNitroAccountCredit.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import areSetsEqual from "../../../../../discord_common/js/shared/utils/SetUtils.tsx";
-import AccountCreditTierDefault from "../../../premium/native/PremiumAccountCredit.tsx";
-import closure_3 from "../../../../stores/UserStore.tsx";
-import closure_4 from "../../../../stores/billing/SubscriptionStore.tsx";
-import closure_5 from "../../../../stores/game_store/EntitlementStore.tsx";
-import { PREMIUM_SUBSCRIPTION_APPLICATION as closure_6 } from "../../../premium/PremiumConstants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import SetUtils from "../../../../../discord_common/js/shared/utils/SetUtils.tsx";
+import PremiumAccountCreditDefault from "../../../premium/native/PremiumAccountCredit.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import UserStore from "../../../../stores/UserStore.tsx";
+import SubscriptionStore from "../../../../stores/billing/SubscriptionStore.tsx";
+import EntitlementStore from "../../../../stores/game_store/EntitlementStore.tsx";
 
-require = arg1;
+require = fn;
+let closure_6 = fn(1373).PREMIUM_SUBSCRIPTION_APPLICATION;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
 let obj = { creditList: null };
-obj = { borderRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS };
-obj[0] = obj;
-let closure_8 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(function BuyNitroAccountCredit() {
+obj = { borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS };
+obj.creditList = obj;
+let closure_8 = createStyles.createStyles(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium_marketing/native/components/BuyNitroAccountCredit.tsx");
+
+export default noop.memo(function BuyNitroAccountCredit() {
   let obj = initialize;
-  const items = [closure_5];
+  const items = [EntitlementStore];
   const stateFromStores = obj.useStateFromStores(
     items,
     () => {
-      forApplication = forApplication.getForApplication(closure_6);
+      forApplication = forApplication.getForApplication(closure_1_6);
       if (forApplication == null) {
         const _Set = Set;
         forApplication = new Set();
@@ -30,15 +33,14 @@ const memoResult = importAllResult.memo(function BuyNitroAccountCredit() {
       return forApplication;
     },
     [],
-    areSetsEqual.areSetsEqual,
+    SetUtils.areSetsEqual,
   );
-  const tmp = callback();
-  const items1 = [closure_4];
+  const tmp = closure_8();
+  const items1 = [SubscriptionStore];
   const stateFromStores1 = initialize.useStateFromStores(items1, () =>
     premiumTypeSubscription.getPremiumTypeSubscription(),
   );
-  const obj2 = initialize;
-  const items2 = [closure_3];
+  const items2 = [UserStore];
   const stateFromStores2 = initialize.useStateFromStores(items2, () => {
     currentUser = currentUser.getCurrentUser();
     let flag;
@@ -56,15 +58,10 @@ const memoResult = importAllResult.memo(function BuyNitroAccountCredit() {
     entitlements: stateFromStores,
     hasPremiumGroup: stateFromStores2,
   };
-  return jsx(AccountCreditTierDefault, {
+  return jsx(PremiumAccountCreditDefault, {
     creditListContainerStyle: tmp.creditList,
     currentSubscription: stateFromStores1,
     entitlements: stateFromStores,
     hasPremiumGroup: stateFromStores2,
   });
 });
-const result = require("set").fileFinishedImporting(
-  "modules/premium_marketing/native/components/BuyNitroAccountCredit.tsx",
-);
-
-export default memoResult;

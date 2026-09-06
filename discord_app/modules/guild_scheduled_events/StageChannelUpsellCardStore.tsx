@@ -1,28 +1,30 @@
 // discord_app/modules/guild_scheduled_events/StageChannelUpsellCardStore.tsx
-import set from "../../../_runtime/00002_set.js";
-import GUILD_EVENT_MAX_NAME_LENGTH from "GuildScheduledEventsConstants.tsx";
-import isIterable from "../../../_runtime/04184_isIterable.js";
-import identity from "../../../_runtime/01244_identity.js";
+import Storage2 from "../../../discord_common/js/packages/storage/Storage.tsx";
+import ReactBatchUpdates from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
+import GuildScheduledEventsConstants from "GuildScheduledEventsConstants.tsx";
+import _mod4184 from "../../../_runtime/metro/04184__.js";
+import identity from "../../../_runtime/metro/01244__.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-let closure_2 = GUILD_EVENT_MAX_NAME_LENGTH.GUILD_EVENT_STAGE_UPSELL_CARD_KEY;
+let closure_2 = GuildScheduledEventsConstants.GUILD_EVENT_STAGE_UPSELL_CARD_KEY;
 let closure_3 = identity.createWithEqualityFn((arg0) => {
-  const _require = arg0;
+  _require = arg0;
   const obj = { hasSeenUpsellCard: null, markAsSeen: null };
-  let Storage = require("../../../discord_common/js/packages/storage/Storage.tsx").Storage;
-  obj[0] = true === Storage.get(closure_2);
-  obj[1] = function markAsSeen() {
-    const Storage = callback(closure_1_1[2]).Storage;
-    const result = Storage.set(closure_1_2, true);
-    callback(closure_1_1[3]).batchUpdates(() => callback({ hasSeenUpsellCard: true }));
+  let Storage = require("Storage").Storage;
+  obj.hasSeenUpsellCard = true === Storage.get(closure_2);
+  obj.markAsSeen = function markAsSeen() {
+    const Storage = Storage2.Storage;
+    const result = Storage.set(closure_2, true);
+    ReactBatchUpdates.batchUpdates(() => closure_1_0({ hasSeenUpsellCard: true }));
   };
   return obj;
 });
-let result = set.fileFinishedImporting("modules/guild_scheduled_events/StageChannelUpsellCardStore.tsx");
+let result = size.fileFinishedImporting("modules/guild_scheduled_events/StageChannelUpsellCardStore.tsx");
 
 export const useStageChannelUpsellCardStore = function useStageChannelUpsellCardStore() {
-  return callback((arg0) => {
+  return closure_3((arg0) => {
     const items = [,];
     ({ hasSeenUpsellCard: arr[0], markAsSeen: arr[1] } = arg0);
     return items;
-  }, isIterable.shallow);
+  }, _mod4184.shallow);
 };

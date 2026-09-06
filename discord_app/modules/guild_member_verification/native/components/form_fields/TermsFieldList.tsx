@@ -1,18 +1,16 @@
 // discord_app/modules/guild_member_verification/native/components/form_fields/TermsFieldList.tsx
-import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../../../intl/index.native.tsx";
-import get_defaultRulesDefault from "../../../../markup/MarkupUtils.tsx";
-import Text from "../../../../../design/components/Text/native/Text.tsx";
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../../intl/index.native.tsx";
+import MarkupUtilsDefault from "../../../../markup/MarkupUtils.tsx";
+import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
+import TableRowDivider from "../../../../../design/components/TableRow/native/TableRowDivider.native.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+require = fn;
 function TermsFieldListItem(rowNumber) {
   rowNumber = rowNumber.rowNumber;
   ({ rowCount, rule, rulesChannelId } = rowNumber);
-  const tmp = callback3();
+  const tmp = closure_8();
   let obj = { style: tmp.termsRow, children: null };
   obj = {
     style: tmp.termsRowNumber,
@@ -21,21 +19,24 @@ function TermsFieldListItem(rowNumber) {
     accessibilityLabel: null,
     children: null,
   };
-  const intl = getSystemLocale.intl;
-  obj[3] = intl.formatToPlainString(getSystemLocale.t.XpgzeO, { number: rowNumber, total: rowCount });
-  obj[4] = "" + rowNumber + ".";
-  const items = [callback(Text.Text, obj)];
+  const intl = util.intl;
+  obj.accessibilityLabel = intl.formatToPlainString(util.t.XpgzeO, { number: rowNumber, total: rowCount });
+  obj.children = "" + rowNumber + ".";
+  const items = [hasOwnProperty(Text_Text.Text, obj)];
   obj = {
     style: tmp.termsRowContent,
     variant: "text-md/medium",
-    children: get_defaultRulesDefault.parseGuildVerificationFormRule(rule, true, { channelId: rulesChannelId }),
+    children: MarkupUtilsDefault.parseGuildVerificationFormRule(rule, true, { channelId: rulesChannelId }),
   };
-  items[1] = callback(Text.Text, obj);
-  obj[1] = items;
-  return callback2(View, obj);
+  items[1] = hasOwnProperty(Text_Text.Text, obj);
+  obj.children = items;
+  return timestampProducer(View, obj);
 }
-({ jsx: c5, jsxs: closure_6, Fragment: error } = jsxProd);
-createCacheKey = {
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
+fn(4560);
+let createStyles = {
   termsContainer: null,
   firstItem: null,
   lastItem: null,
@@ -44,39 +45,34 @@ createCacheKey = {
   termsRowNumber: null,
   title: null,
 };
-createCacheKey = {
+createStyles = {
   padding: 16,
   flexDirection: "column",
   justifyContent: "space-between",
-  backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT,
+  backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT,
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { borderTopLeftRadius: ThemesDefault.radii.sm, borderTopRightRadius: ThemesDefault.radii.sm };
-const obj1 = { borderTopLeftRadius: ThemesDefault.radii.sm, borderTopRightRadius: ThemesDefault.radii.sm };
-createCacheKey[2] = {
-  borderBottomLeftRadius: ThemesDefault.radii.sm,
-  borderBottomRightRadius: ThemesDefault.radii.sm,
+createStyles.termsContainer = createStyles;
+createStyles.firstItem = { borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm };
+const obj1 = { borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm };
+createStyles.lastItem = {
+  borderBottomLeftRadius: nativeDefault.radii.sm,
+  borderBottomRightRadius: nativeDefault.radii.sm,
   marginBottom: 12,
 };
-createCacheKey[3] = { flexDirection: "row" };
-createCacheKey[4] = { flex: 1, lineHeight: 20 };
-createCacheKey[5] = { paddingRight: 8, width: 20, height: 20 };
-createCacheKey[6] = { marginBottom: 16 };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-const obj2 = {
-  borderBottomLeftRadius: ThemesDefault.radii.sm,
-  borderBottomRightRadius: ThemesDefault.radii.sm,
-  marginBottom: 12,
-};
-const result = require("set").fileFinishedImporting(
+createStyles.termsRow = { flexDirection: "row" };
+createStyles.termsRowContent = { flex: 1, lineHeight: 20 };
+createStyles.termsRowNumber = { paddingRight: 8, width: 20, height: 20 };
+createStyles.title = { marginBottom: 16 };
+let closure_8 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/guild_member_verification/native/components/form_fields/TermsFieldList.tsx",
 );
 
 export default function TermsFieldList(rules) {
   rules = rules.rules;
   const rulesChannelId = rules.rulesChannelId;
-  dependencyMap = undefined;
-  const tmp = callback3();
+  const tmp = closure_8();
   dependencyMap = tmp;
   let obj = { children: null };
   obj = {
@@ -87,34 +83,35 @@ export default function TermsFieldList(rules) {
     children: null,
   };
   const intl = rules(1114).intl;
-  obj[4] = intl.string(rules(1114).t.prJqwT);
-  let items = [callback(rules(4556).Text, obj)];
+  obj.children = intl.string(rules(1114).t.prJqwT);
+  let items = [closure_5(rules(4556).Text, obj)];
   obj = {
     accessibilityRole: "list",
-    children: rules.map((rule) => {
+    children: rules.map((rule, index) => {
       const items = [termsContainer.termsContainer, ,];
       let firstItem = null;
-      if (0 === arg1) {
+      if (0 === index) {
         firstItem = tmp4.firstItem;
       }
       items[1] = firstItem;
       let lastItem = null;
-      if (arg1 === rules.length - 1) {
+      if (index === rules.length - 1) {
         lastItem = tmp4.lastItem;
       }
-      obj = { style: items, children: tmp2(closure_1_9, obj) };
+      let obj = { style: items, children: null };
       items[2] = lastItem;
-      obj = { rule, rowNumber: arg1 + 1, rowCount: arr2.length, rulesChannelId };
-      const children = [closure_1_5(closure_1_4, obj)];
+      obj = { rule, rowNumber: index + 1, rowCount: arr2.length, rulesChannelId };
+      obj.children = hasOwnProperty(TermsFieldListItem, obj);
+      const children = [hasOwnProperty(View, obj)];
       let tmp2Result = null;
-      if (arg1 !== rules.length - 1) {
-        tmp2Result = tmp2(rules(termsContainer[8]).TableRowDivider, {});
+      if (index !== rules.length - 1) {
+        tmp2Result = tmp2(TableRowDivider.TableRowDivider, {});
       }
       children[1] = tmp2Result;
-      return closure_1_6(closure_1_3.Fragment, { children }, "term-" + rule + "-" + arg1);
+      return timestampProducer(noop.Fragment, { children }, "term-" + rule + "-" + index);
     }),
   };
-  items[1] = callback(View, obj);
-  obj[0] = items;
-  return callback2(closure_7, obj);
+  items[1] = closure_5(View, obj);
+  obj.children = items;
+  return closure_6(closure_7, obj);
 }

@@ -1,9 +1,9 @@
 // discord_app/modules/game_console/activityPlatformToConnectedAccountType.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
+import Constants from "../../Constants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-({ ActivityGamePlatforms: c0, PlatformTypes: closure_1 } = ME);
-const result = set.fileFinishedImporting("modules/game_console/activityPlatformToConnectedAccountType.tsx");
+({ ActivityGamePlatforms: closure_0, PlatformTypes: closure_1 } = Constants);
+const result = size.fileFinishedImporting("modules/game_console/activityPlatformToConnectedAccountType.tsx");
 
 export default function activityPlatformToConnectedAccountType(arg0) {
   if (PS4.PS4 !== arg0) {

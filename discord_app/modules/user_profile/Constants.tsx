@@ -1,19 +1,19 @@
 // discord_app/modules/user_profile/Constants.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
+import Constants from "../../Constants.tsx";
 import BadgeId from "../../../discord_common/js/shared/shared-constants/BadgeId.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const Endpoints = ME.Endpoints;
-const result = set.fileFinishedImporting("modules/user_profile/Constants.tsx");
+const Endpoints = Constants.Endpoints;
+const result = size.fileFinishedImporting("modules/user_profile/Constants.tsx");
 
 export const USER_PROFILE_TOOLTIP_DELAY = 300;
-export const getBadgeName = function getBadgeName(ORB_PROFILE) {
-  const str = BadgeId.BadgeId[ORB_PROFILE];
+export const getBadgeName = function getBadgeName(GIFTING) {
+  const str = BadgeId.BadgeId[GIFTING];
   if (null != str) {
     let formatted = str.toLowerCase();
   } else {
     const _String = String;
-    formatted = String(ORB_PROFILE);
+    formatted = String(GIFTING);
   }
   return formatted;
 };

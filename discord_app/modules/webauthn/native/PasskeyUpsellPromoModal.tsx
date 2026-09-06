@@ -1,24 +1,23 @@
 // discord_app/modules/webauthn/native/PasskeyUpsellPromoModal.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import getSystemLocale from "../../../intl/index.native.tsx";
+import util from "../../../intl/index.native.tsx";
 import Modal from "../../../design/components/Modal/native/Modal.native.tsx";
-import getScreens from "WebAuthnScreens.tsx";
-import { WebAuthnScreens } from "../WebAuthnConstants.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import WebAuthnScreens2 from "WebAuthnScreens.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/webauthn/native/PasskeyUpsellPromoModal.tsx");
+require = fn;
+const WebAuthnScreens = fn(14657).WebAuthnScreens;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/webauthn/native/PasskeyUpsellPromoModal.tsx");
 
 export default function PasskeyUpsellPromoModal(arg0) {
-  let obj = getScreens;
-  obj = { name: WebAuthnScreens.NAME, params: null };
+  let obj = { name: WebAuthnScreens.NAME, params: null };
   obj = {};
   const screens = obj.getScreens({ isModal: true });
   const merged = Object.assign(arg0);
-  const intl = getSystemLocale.intl;
-  obj.name = intl.string(getSystemLocale.t["8H5RmH"]);
-  obj[1] = obj;
+  const intl = util.intl;
+  obj.name = intl.string(util.t["8H5RmH"]);
+  obj.params = obj;
   const initialRouteStack = [obj];
   return jsx(Modal.Modal, { screens, initialRouteStack });
 }

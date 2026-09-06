@@ -1,11 +1,11 @@
 // discord_app/modules/games/hooks/useGameNameAndCoverImage.tsx
-import set from "../../../../_runtime/00002_set.js";
-import importDefaultResult1 from "useGame.tsx";
+import useGame from "useGame.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/games/hooks/useGameNameAndCoverImage.tsx");
+const result = size.fileFinishedImporting("modules/games/hooks/useGameNameAndCoverImage.tsx");
 
 export default function useGameNameAndCoverImage(arg0, arg1, size) {
-  let obj = importDefaultResult1;
+  let obj = useGame;
   const game = obj.useGame(arg0);
   const data = game.data;
   let coverURL;
@@ -24,7 +24,7 @@ export default function useGameNameAndCoverImage(arg0, arg1, size) {
     const intl = tmp(1114).intl;
     name = intl.string(tmp(1114).t.GIWFlF);
   }
-  obj[1] = name;
-  obj[2] = game.isLoading;
+  obj.gameName = name;
+  obj.isLoading = game.isLoading;
   return obj;
 }

@@ -1,19 +1,20 @@
 // discord_app/modules/instant_invite/useInviteApplicationBypassInfo.tsx
-import closure_2 from "../../stores/PermissionStore.tsx";
-import ME from "../../Constants.tsx";
+import PermissionStore from "../../stores/PermissionStore.tsx";
 
-const require = arg1;
-({ GuildFeatures: c3, Permissions: c4 } = ME);
-const result = require("set").fileFinishedImporting("modules/instant_invite/useInviteApplicationBypassInfo.tsx");
+const require = fn;
+const Constants = fn(1074);
+({ GuildFeatures: c3, Permissions: closure_4 } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/instant_invite/useInviteApplicationBypassInfo.tsx");
 
 export const useInviteApplicationBypassInfo = function useInviteApplicationBypassInfo(guild) {
-  const _require = guild;
-  const items = [closure_2];
+  _require = guild;
+  const items = [PermissionStore];
   const items1 = [guild];
   let hasItem;
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+  const stateFromStores = require("initialize").useStateFromStores(
     items,
-    () => closure_1_2.can(closure_1_4.KICK_MEMBERS, closure_0),
+    () => PermissionStore.can(constants2.KICK_MEMBERS, closure_0),
     items1,
   );
   if (guild != null) {

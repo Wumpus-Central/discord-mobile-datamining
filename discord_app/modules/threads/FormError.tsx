@@ -1,9 +1,9 @@
 // discord_app/modules/threads/FormError.tsx
-import set from "../../../_runtime/00002_set.js";
-import getSystemLocale from "../../intl/index.native.tsx";
-import getAutomodErrorMessageFromErrorResponse from "../guild_automod/AutomodErrorUtils.tsx";
+import util from "../../intl/index.native.tsx";
+import AutomodErrorUtils from "../guild_automod/AutomodErrorUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-let obj = {
+const FormSubmitErrorType = {
   EmptyContent: 0,
   [0]: "EmptyContent",
   AutomodViolation: 1,
@@ -11,41 +11,41 @@ let obj = {
   ApiValidation: 2,
   [2]: "ApiValidation",
 };
-const result = set.fileFinishedImporting("modules/threads/FormError.tsx");
+const result = size.fileFinishedImporting("modules/threads/FormError.tsx");
 
-export const FormSubmitErrorType = obj;
+export { FormSubmitErrorType };
 export const makeEmptyTitleError = function makeEmptyTitleError() {
-  const intl = getSystemLocale.intl;
-  let stringResult = intl.string(getSystemLocale.t.uXA573);
+  const intl = util.intl;
+  let stringResult = intl.string(util.t.uXA573);
   obj = { type: obj.EmptyContent, message: null };
   if (stringResult == null) {
     stringResult = null;
   }
-  obj[1] = stringResult;
+  obj.message = stringResult;
   return obj;
 };
 export const makeEmptyMessageError = function makeEmptyMessageError() {
-  const intl = getSystemLocale.intl;
-  let stringResult = intl.string(getSystemLocale.t.kesTVT);
+  const intl = util.intl;
+  let stringResult = intl.string(util.t.kesTVT);
   obj = { type: obj.EmptyContent, message: null };
   if (stringResult == null) {
     stringResult = null;
   }
-  obj[1] = stringResult;
+  obj.message = stringResult;
   return obj;
 };
 export const makeApiNameRequiredError = function makeApiNameRequiredError() {
-  const intl = getSystemLocale.intl;
-  let stringResult = intl.string(getSystemLocale.t.uXA573);
+  const intl = util.intl;
+  let stringResult = intl.string(util.t.uXA573);
   obj = { type: obj.ApiValidation, message: null };
   if (stringResult == null) {
     stringResult = null;
   }
-  obj[1] = stringResult;
+  obj.message = stringResult;
   return obj;
 };
 export const makeAutomodViolationError = function makeAutomodViolationError(errorResponseBody, id) {
-  obj = getAutomodErrorMessageFromErrorResponse;
+  let obj = AutomodErrorUtils;
   id = undefined;
   if (id != null) {
     id = id.id;
@@ -55,7 +55,7 @@ export const makeAutomodViolationError = function makeAutomodViolationError(erro
   if (automodErrorMessageFromErrorResponse == null) {
     automodErrorMessageFromErrorResponse = null;
   }
-  obj[1] = automodErrorMessageFromErrorResponse;
+  obj.message = automodErrorMessageFromErrorResponse;
   return obj;
 };
 export const renderError = function renderError(type, content) {
@@ -64,7 +64,6 @@ export const renderError = function renderError(type, content) {
     if (type.type === obj.EmptyContent) {
       if (null != content.content) {
         tmp = null;
-        const str = content.content;
       }
     }
     let message = type.message;

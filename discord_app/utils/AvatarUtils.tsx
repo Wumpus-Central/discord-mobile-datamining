@@ -1,16 +1,17 @@
 // discord_app/utils/AvatarUtils.tsx
-import DISCORD_EPOCHDefault from "SnowflakeUtils.tsx";
+import SnowflakeUtilsDefault from "SnowflakeUtils.tsx";
 import IntegerDefault from "../../_runtime/00014_Integer.js";
 import Url from "../../_runtime/01367_Url.js";
-import DECORATION_TO_AVATAR_RATIO from "../modules/collectibles/avatar_decorations/AvatarDecorationConstants.tsx";
-import ensureAvatarSource from "native/AvatarUtils.tsx";
-import handleImageLoad from "../modules/image_upload/ImageLoaderUtils.tsx";
-import parseDefault from "../../_runtime/01471_parse.js";
-import shortenAndLocalizeNumber from "NumberUtils.tsx";
-import parseAvatarDecorationData from "../modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx";
-import registerAssetDefault from "../../_runtime/01884_registerAsset.js";
-import ME from "../Constants.tsx";
-import set from "PlatformUtils.tsx";
+import AvatarDecorationConstants from "../modules/collectibles/avatar_decorations/AvatarDecorationConstants.tsx";
+import utils_AvatarUtils from "native/AvatarUtils.tsx";
+import ImageLoaderUtils from "../modules/image_upload/ImageLoaderUtils.tsx";
+import _modDef1471 from "../../_runtime/metro/01471__.js";
+import NumberUtils from "NumberUtils.tsx";
+import AvatarDecorationUtils from "../modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx";
+import _modDef1884 from "../../_runtime/metro/01884__.js";
+import Constants from "../Constants.tsx";
+import PlatformUtils from "PlatformUtils.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
 function getAvatarURL(canAnimate) {
   ({ path, id, hash, size, lossless } = canAnimate);
@@ -27,7 +28,7 @@ function getAvatarURL(canAnimate) {
   }
   let canWebP = canAnimate.canWebP;
   if (canWebP === undefined) {
-    canWebP = closure_11;
+    canWebP = canUseWebpResult;
   }
   if (null != id) {
     if (null != hash) {
@@ -85,9 +86,8 @@ function getAvatarURL(canAnimate) {
       } else {
         let obj = {};
         if (null != size) {
-          obj = handleImageLoad;
-          obj.size = obj.getBestMediaProxySize(size * handleImageLoad.getDevicePixelRatio());
-          const obj2 = handleImageLoad;
+          obj = ImageLoaderUtils;
+          obj.size = obj.getBestMediaProxySize(size * ImageLoaderUtils.getDevicePixelRatio());
         }
         if (null != keepAspectRatio) {
           obj.keep_aspect_ratio = keepAspectRatio;
@@ -107,12 +107,12 @@ function getAvatarURL(canAnimate) {
           obj.animated = true;
         }
         const _HermesInternal2 = HermesInternal;
-        return combined + "?" + parseDefault.stringify(obj);
+        return combined + "?" + _modDef1471.stringify(obj);
       }
     }
   }
 }
-function getDefaultAvatarURL(id, discriminator, isProvisional, closure_2) {
+function getDefaultAvatarURL(id, discriminator, isProvisional, size) {
   let flag = isProvisional;
   if (isProvisional === undefined) {
     flag = false;
@@ -121,8 +121,8 @@ function getDefaultAvatarURL(id, discriminator, isProvisional, closure_2) {
     let arr = DEFAULT_PROVISIONAL_AVATARS;
   } else {
     if (!flag) {
-      if (null != closure_2) {
-        if (closure_2 <= num) {
+      if (null != size) {
+        if (size <= num) {
           arr = DEFAULT_AVATARS_SMALL;
         }
       }
@@ -134,7 +134,7 @@ function getDefaultAvatarURL(id, discriminator, isProvisional, closure_2) {
       return arr[0];
     }
   }
-  const parseIntegerResult = shortenAndLocalizeNumber.parseInteger(discriminator, 0);
+  const parseIntegerResult = NumberUtils.parseInteger(discriminator, 0);
   if (parseIntegerResult > 0) {
     let first = arr[parseIntegerResult % 5];
   } else if (null != id) {
@@ -147,13 +147,13 @@ function getDefaultAvatarURL(id, discriminator, isProvisional, closure_2) {
   }
   return first;
 }
-function getUserAvatarURL(user, flag, closure_2, format, SUPPORTS_WEBP) {
+function getUserAvatarURL(user, flag, size, format, SUPPORTS_WEBP) {
   if (flag === undefined) {
     flag = false;
   }
-  let tmp = closure_2;
-  if (closure_2 === undefined) {
-    tmp = closure_4;
+  let tmp = size;
+  if (size === undefined) {
+    tmp = size;
   }
   let tmp2 = format;
   if (format === undefined) {
@@ -161,7 +161,7 @@ function getUserAvatarURL(user, flag, closure_2, format, SUPPORTS_WEBP) {
   }
   let tmp3 = SUPPORTS_WEBP;
   if (SUPPORTS_WEBP === undefined) {
-    tmp3 = closure_11;
+    tmp3 = canUseWebpResult;
   }
   ({ avatar, id, discriminator, bot } = user);
   if (flag === undefined) {
@@ -169,35 +169,28 @@ function getUserAvatarURL(user, flag, closure_2, format, SUPPORTS_WEBP) {
   }
   let tmp4 = tmp;
   if (tmp === undefined) {
-    tmp4 = closure_4;
+    tmp4 = size;
   }
   if (tmp2 === undefined) {
     tmp2 = null;
   }
   if (tmp3 === undefined) {
-    tmp3 = closure_11;
+    tmp3 = canUseWebpResult;
   }
   if (!bot) {
     const obj = {
-      endpoint: null,
+      endpoint: React3.AVATAR,
       path: "avatars",
-      id: null,
-      hash: null,
-      size: null,
-      canAnimate: null,
-      format: null,
-      canWebP: null,
+      id,
+      hash: avatar,
+      size: tmp4,
+      canAnimate: flag,
+      format: tmp2,
+      canWebP: tmp3,
     };
-    obj[0] = closure_3.AVATAR;
-    obj[2] = id;
-    obj[3] = avatar;
-    obj[4] = tmp4;
-    obj[5] = flag;
-    obj[6] = tmp2;
-    obj[7] = tmp3;
     let first = getAvatarURL(obj);
   } else {
-    first = ensureAvatarSource.default.BOT_AVATARS[avatar];
+    first = utils_AvatarUtils.default.BOT_AVATARS[avatar];
     if (!first) {
       if (null == avatar) {
         if ("0000" === discriminator) {
@@ -218,11 +211,11 @@ function getGuildMemberAvatarURLSimple(size) {
   }
   size = size.size;
   if (size === undefined) {
-    size = closure_4;
+    size = closure_1_4;
   }
   let canWebP = size.canWebP;
   if (canWebP === undefined) {
-    canWebP = closure_11;
+    canWebP = canUseWebpResult;
   }
   let str = "jpg";
   if (canAnimate) {
@@ -249,18 +242,18 @@ function getGuildMemberAvatarURLSimple(size) {
       tmp12 = str4;
     }
     const _HermesInternal = HermesInternal;
-    let combined = "https://" + CDN_HOST + closure_3.GUILD_MEMBER_AVATAR(guildId, userId, avatar, tmp12);
+    let combined = "https://" + CDN_HOST + React3.GUILD_MEMBER_AVATAR(guildId, userId, avatar, tmp12);
     let tmp11 = tmp12;
   } else {
     const _location = location;
     const _window = window;
     const sum = location.protocol + window.GLOBAL_ENV.API_ENDPOINT;
-    combined = sum + closure_3.GUILD_MEMBER_AVATAR(guildId, userId, avatar, str);
+    combined = sum + React3.GUILD_MEMBER_AVATAR(guildId, userId, avatar, str);
     tmp11 = str;
   }
   const obj = { size: null };
-  const obj2 = handleImageLoad;
-  obj[0] = obj2.getBestMediaProxySize(size * handleImageLoad.getDevicePixelRatio());
+  const obj2 = ImageLoaderUtils;
+  obj.size = obj2.getBestMediaProxySize(size * ImageLoaderUtils.getDevicePixelRatio());
   let tmp20 = "webp" === tmp11 && canAnimate;
   if (tmp20) {
     let startsWithResult1 = null != avatar;
@@ -272,8 +265,7 @@ function getGuildMemberAvatarURLSimple(size) {
   if (tmp20) {
     obj.animated = true;
   }
-  const obj3 = handleImageLoad;
-  return combined + "?" + parseDefault.stringify(obj);
+  return combined + "?" + _modDef1471.stringify(obj);
 }
 function getGuildBannerURL(guild, flag) {
   ({ id, banner } = guild);
@@ -283,10 +275,10 @@ function getGuildBannerURL(guild, flag) {
   if (null == banner) {
     return null;
   } else {
-    const obj3 = handleImageLoad;
+    const obj3 = ImageLoaderUtils;
     let str = "jpg";
-    const bestMediaProxySize = obj3.getBestMediaProxySize(360 * handleImageLoad.getDevicePixelRatio());
-    if (closure_11) {
+    const bestMediaProxySize = obj3.getBestMediaProxySize(360 * ImageLoaderUtils.getDevicePixelRatio());
+    if (canUseWebpResult) {
       str = "webp";
     }
     let tmp = str;
@@ -312,10 +304,9 @@ function getGuildBannerURL(guild, flag) {
       const _location = location;
       const _window2 = window;
       const sum = location.protocol + window.GLOBAL_ENV.API_ENDPOINT;
-      combined = sum + closure_3.GUILD_BANNER(id, banner, tmp);
+      combined = sum + React3.GUILD_BANNER(id, banner, tmp);
     }
-    const obj = { size: null };
-    obj[0] = bestMediaProxySize;
+    const obj = { size: bestMediaProxySize };
     if ("jpg" === tmp) {
       obj.quality = "lossless";
     }
@@ -330,16 +321,15 @@ function getGuildBannerURL(guild, flag) {
     if (tmp11) {
       obj.animated = true;
     }
-    const obj4 = handleImageLoad;
-    tmp17 = closure_11;
+    tmp17 = canUseWebpResult;
     const _HermesInternal2 = HermesInternal;
-    return combined + "?" + parseDefault.stringify(obj);
+    return combined + "?" + _modDef1471.stringify(obj);
   }
 }
 function getApplicationIconURL(guildMember) {
   ({ icon, size } = guildMember);
   if (size === undefined) {
-    size = closure_4;
+    size = closure_1_4;
   }
   ({ bot, fallbackAvatar, botIconFirst } = guildMember);
   if (fallbackAvatar === undefined) {
@@ -353,10 +343,9 @@ function getApplicationIconURL(guildMember) {
   if (null != id) {
     if (null != guildMember) {
       if (null != guildMember.avatar) {
-        let obj = { userId: null, guildId: null, avatar: null, canAnimate: false, size: null };
-        obj[0] = bot.id;
-        ({ guildId: obj4[1], avatar: obj4[2] } = guildMember);
-        obj[4] = size;
+        let obj = { userId: bot.id, guildId: null, avatar: null, canAnimate: false, size: null };
+        ({ guildId: obj4.guildId, avatar: obj4.avatar } = guildMember);
+        obj.size = size;
         return getGuildMemberAvatarURLSimple(obj);
       }
     }
@@ -367,29 +356,22 @@ function getApplicationIconURL(guildMember) {
       let tmp2 = size;
       ({ id, discriminator, bot: bot2 } = bot);
       if (size === undefined) {
-        tmp2 = closure_4;
+        tmp2 = closure_1_4;
       }
       if (!bot2) {
         obj = {
-          endpoint: null,
+          endpoint: React3.AVATAR,
           path: "avatars",
-          id: null,
-          hash: null,
-          size: null,
-          canAnimate: null,
+          id,
+          hash: avatar,
+          size: tmp2,
+          canAnimate: false,
           format: null,
-          canWebP: null,
+          canWebP: tmp3,
         };
-        obj[0] = closure_3.AVATAR;
-        obj[2] = id;
-        obj[3] = avatar;
-        obj[4] = tmp2;
-        obj[5] = false;
-        obj[6] = null;
-        obj[7] = tmp3;
         let first = getAvatarURL(obj);
       } else {
-        first = ensureAvatarSource.default.BOT_AVATARS[avatar];
+        first = utils_AvatarUtils.default.BOT_AVATARS[avatar];
         if (!first) {
           if (null == avatar) {
             if ("0000" === discriminator) {
@@ -406,25 +388,20 @@ function getApplicationIconURL(guildMember) {
   if (null != icon) {
     let isMatch = null != icon;
     if (isMatch) {
-      isMatch = regex.test(icon);
+      isMatch = re6.test(icon);
     }
     let tmp23 = icon;
     if (!isMatch) {
       obj = {
-        endpoint: null,
+        endpoint: React3.APPLICATION_ICON,
         path: "app-icons",
-        id: null,
-        hash: null,
-        size: null,
+        id: guildMember.id,
+        hash: icon,
+        size,
         canAnimate: false,
         canWebP: false,
-        keepAspectRatio: null,
+        keepAspectRatio: guildMember.keepAspectRatio,
       };
-      obj[0] = closure_3.APPLICATION_ICON;
-      obj[2] = guildMember.id;
-      obj[3] = icon;
-      obj[4] = size;
-      obj[7] = guildMember.keepAspectRatio;
       tmp23 = getAvatarURL(obj);
     }
     return tmp23;
@@ -434,29 +411,22 @@ function getApplicationIconURL(guildMember) {
       let tmp10 = size;
       ({ id: id2, discriminator: discriminator2, bot: bot3 } = bot);
       if (size === undefined) {
-        tmp10 = closure_4;
+        tmp10 = closure_1_4;
       }
       if (!bot3) {
-        obj1 = {
-          endpoint: null,
+        const obj1 = {
+          endpoint: React3.AVATAR,
           path: "avatars",
-          id: null,
-          hash: null,
-          size: null,
-          canAnimate: null,
+          id: id2,
+          hash: avatar2,
+          size: tmp10,
+          canAnimate: false,
           format: null,
-          canWebP: null,
+          canWebP: tmp11,
         };
-        obj1[0] = closure_3.AVATAR;
-        obj1[2] = id2;
-        obj1[3] = avatar2;
-        obj1[4] = tmp10;
-        obj1[5] = false;
-        obj1[6] = null;
-        obj1[7] = tmp11;
         let first1 = getAvatarURL(obj1);
       } else {
-        first1 = ensureAvatarSource.default.BOT_AVATARS[avatar2];
+        first1 = utils_AvatarUtils.default.BOT_AVATARS[avatar2];
         if (!first1) {
           if (null == avatar2) {
             if ("0000" === discriminator2) {
@@ -471,7 +441,7 @@ function getApplicationIconURL(guildMember) {
     }
     let tmp18;
     if (fallbackAvatar) {
-      tmp18 = registerAssetDefault;
+      tmp18 = _modDef1884;
     }
     return tmp18;
   }
@@ -479,35 +449,28 @@ function getApplicationIconURL(guildMember) {
 function getChannelIconURL(arg0) {
   ({ id, icon, applicationId, size } = arg0);
   if (null != applicationId) {
-    let obj = { id: null, icon: null, size: null };
-    obj[0] = applicationId;
-    obj[1] = icon;
-    obj[2] = size;
+    let obj = { id: applicationId, icon, size };
     let DEFAULT_CHANNEL_ICON = getApplicationIconURL(obj);
     if (DEFAULT_CHANNEL_ICON == null) {
-      DEFAULT_CHANNEL_ICON = ensureAvatarSource.default.DEFAULT_CHANNEL_ICON;
+      DEFAULT_CHANNEL_ICON = utils_AvatarUtils.default.DEFAULT_CHANNEL_ICON;
     }
     let tmp5 = DEFAULT_CHANNEL_ICON;
   } else {
     obj = {
-      endpoint: null,
+      endpoint: React3.CHANNEL_ICON,
       path: "channel-icons",
-      id: null,
-      hash: null,
+      id,
+      hash: icon,
       canAnimate: false,
-      size: null,
+      size,
       canWebP: false,
     };
-    obj[0] = closure_3.CHANNEL_ICON;
-    obj[2] = id;
-    obj[3] = icon;
-    obj[5] = size;
     tmp5 = getAvatarURL(obj);
     if (tmp5 == null) {
-      obj = DISCORD_EPOCHDefault;
+      obj = SnowflakeUtilsDefault;
       tmp5 =
-        ensureAvatarSource.default.DEFAULT_GROUP_DM_AVATARS[
-          obj.extractTimestamp(id) % ensureAvatarSource.default.DEFAULT_GROUP_DM_AVATARS.length
+        utils_AvatarUtils.default.DEFAULT_GROUP_DM_AVATARS[
+          obj.extractTimestamp(id) % utils_AvatarUtils.default.DEFAULT_GROUP_DM_AVATARS.length
         ];
       const extractTimestampResult = obj.extractTimestamp(id);
     }
@@ -516,23 +479,22 @@ function getChannelIconURL(arg0) {
 }
 function _getAssetHash(bannerURL) {
   try {
-    const obj = Url;
     const parts = Url.parse(bannerURL).pathname.split("/");
     return parts.pop();
   } catch (err) {
     return null;
   }
 }
-({ Endpoints: c3, AVATAR_SIZE: c4 } = ME);
-const AVATAR_DECORATION_SIZE = DECORATION_TO_AVATAR_RATIO.AVATAR_DECORATION_SIZE;
+({ Endpoints: c3, AVATAR_SIZE: closure_4 } = Constants);
+const AVATAR_DECORATION_SIZE = AvatarDecorationConstants.AVATAR_DECORATION_SIZE;
 let tmp3 = /^data:/;
 const re6 = tmp3;
-const DEFAULT_AVATARS = ensureAvatarSource.default.DEFAULT_AVATARS;
-let DEFAULT_AVATARS_SMALL = ensureAvatarSource.default.DEFAULT_AVATARS_SMALL;
+const DEFAULT_AVATARS = utils_AvatarUtils.default.DEFAULT_AVATARS;
+let DEFAULT_AVATARS_SMALL = utils_AvatarUtils.default.DEFAULT_AVATARS_SMALL;
 if (DEFAULT_AVATARS_SMALL == null) {
   DEFAULT_AVATARS_SMALL = DEFAULT_AVATARS;
 }
-let num = ensureAvatarSource.default.DEFAULT_AVATARS_SMALL_MAX_SIZE;
+let num = utils_AvatarUtils.default.DEFAULT_AVATARS_SMALL_MAX_SIZE;
 if (num == null) {
   num = 0;
 }
@@ -544,16 +506,17 @@ function getEmojiURL(size) {
   let str = "png";
   if (forcePNG) {
     let str4 = "";
-    if (closure_11) {
+    if (canUseWebpResult) {
       str4 = "";
       if (animated) {
         str4 = "&animated=true";
       }
     }
-    const obj = handleImageLoad;
+    const obj = ImageLoaderUtils;
     const tmp5 = require;
     const _HermesInternal = HermesInternal;
-    const combined = "size=" + obj.getBestMediaProxySize(size.size * handleImageLoad.getDevicePixelRatio(), closure_12);
+    const combined =
+      "size=" + obj.getBestMediaProxySize(size.size * ImageLoaderUtils.getDevicePixelRatio(), closure_12);
     try {
       const enabled = tmp5(1879).getForceSdrEmojisStickersConfig({ location: "getEmojiURL" }).enabled;
       let str6 = "";
@@ -583,7 +546,7 @@ function getEmojiURL(size) {
         const _location = location;
         const _window2 = window;
         const sum = location.protocol + window.GLOBAL_ENV.API_ENDPOINT;
-        const sum1 = sum + closure_3.EMOJI(id, str);
+        const sum1 = sum + React3.EMOJI(id, str);
         let combined1 = sum1;
         if (enabled) {
           const _HermesInternal2 = HermesInternal;
@@ -592,7 +555,6 @@ function getEmojiURL(size) {
         return combined1;
       }
     } catch (err) {}
-    const obj2 = handleImageLoad;
   } else if (animated) {
     let str2 = "gif";
     if (tmp2) {
@@ -611,11 +573,7 @@ function getGuildMemberAvatarURL(avatar, flag) {
   }
   let tmp = null;
   if (null != avatar) {
-    const obj = { userId: null, avatar: null, guildId: null, canAnimate: null };
-    obj[0] = userId;
-    obj[1] = avatar;
-    obj[2] = guildId;
-    obj[3] = flag;
+    const obj = { userId, avatar, guildId, canAnimate: flag };
     tmp = getGuildMemberAvatarURLSimple(obj);
   }
   return tmp;
@@ -633,20 +591,14 @@ function getGuildMemberAvatarSource(member, author) {
   }
   let tmp = null;
   if (null != avatar) {
-    let obj = { userId: null, avatar: null, guildId: null, canAnimate: null };
-    obj[0] = userId;
-    obj[1] = avatar;
-    obj[2] = guildId;
-    obj[3] = flag2;
+    let obj = { userId, avatar, guildId, canAnimate: flag2 };
     tmp = getGuildMemberAvatarURLSimple(obj);
   }
   if (null != tmp) {
     let tmp5 = tmp;
     if (typeof tmp !== "number") {
-      obj = { uri: null };
-      obj[0] = tmp;
+      obj = { uri: tmp };
       tmp5 = obj;
-      const tmp6 = tmp;
     }
     let avatarSource = tmp5;
   } else {
@@ -667,7 +619,7 @@ function getUserBannerURL(arg0) {
       str2 = "png";
       if (startsWithResult) {
         let str4 = "gif";
-        if (closure_11) {
+        if (canUseWebpResult) {
           str4 = "webp";
         }
         str2 = str4;
@@ -680,11 +632,11 @@ function getUserBannerURL(arg0) {
       const _location = location;
       const _window2 = window;
       const sum = location.protocol + window.GLOBAL_ENV.API_ENDPOINT;
-      combined = sum + closure_3.USER_BANNER(id, banner, str2);
+      combined = sum + React3.USER_BANNER(id, banner, str2);
     }
     const obj = { size: null };
-    const obj2 = handleImageLoad;
-    obj[0] = obj2.getBestMediaProxySize(tmp * handleImageLoad.getDevicePixelRatio());
+    const obj2 = ImageLoaderUtils;
+    obj.size = obj2.getBestMediaProxySize(tmp * ImageLoaderUtils.getDevicePixelRatio());
     let tmp14 = "webp" === str2 && canAnimate;
     if (tmp14) {
       let startsWithResult1 = null != banner;
@@ -696,9 +648,8 @@ function getUserBannerURL(arg0) {
     if (tmp14) {
       obj.animated = true;
     }
-    const obj3 = handleImageLoad;
     const _HermesInternal2 = HermesInternal;
-    return combined + "?" + parseDefault.stringify(obj);
+    return combined + "?" + _modDef1471.stringify(obj);
   }
 }
 function getAvatarDecorationURL(canAnimate) {
@@ -720,9 +671,7 @@ function getAvatarDecorationURL(canAnimate) {
         } else {
           STATIC = CollectiblesItemAssetFormat.STATIC;
         }
-        const obj = { skuId: null, assetFormat: null };
-        obj[0] = avatarDecoration.skuId;
-        obj[1] = STATIC;
+        const obj = { skuId: avatarDecoration.skuId, assetFormat: STATIC };
         const collectiblesItemAssetUrl = getCollectiblesItemAssetUrl(obj);
         if (null != collectiblesItemAssetUrl) {
           return collectiblesItemAssetUrl;
@@ -733,7 +682,7 @@ function getAvatarDecorationURL(canAnimate) {
           } else {
             const _window = window;
             const CDN_HOST = GLOBAL_ENV.CDN_HOST;
-            const result = closure_3.AVATAR_DECORATION_PRESETS(asset);
+            const result = React3.AVATAR_DECORATION_PRESETS(asset);
             if (null != CDN_HOST) {
               const _URL2 = URL;
               const _HermesInternal2 = HermesInternal;
@@ -761,7 +710,7 @@ function getAvatarDecorationURL(canAnimate) {
         return tmp;
       }
     }
-    obj4 = parseAvatarDecorationData;
+    obj4 = AvatarDecorationUtils;
   }
   return null;
 }
@@ -779,13 +728,13 @@ function getGuildMemberBannerURL(arg0) {
         str2 = "png";
         if (startsWithResult) {
           let str4 = "gif";
-          if (closure_11) {
+          if (canUseWebpResult) {
             str4 = "webp";
           }
           str2 = str4;
         }
       }
-      const GUILD_MEMBER_BANNERResult = closure_3.GUILD_MEMBER_BANNER(guildId, id, banner, str2);
+      const GUILD_MEMBER_BANNERResult = React3.GUILD_MEMBER_BANNER(guildId, id, banner, str2);
       if (null != CDN_HOST) {
         const _HermesInternal = HermesInternal;
         let combined = "https://" + CDN_HOST + GUILD_MEMBER_BANNERResult;
@@ -795,8 +744,8 @@ function getGuildMemberBannerURL(arg0) {
         combined = location.protocol + window.GLOBAL_ENV.API_ENDPOINT + GUILD_MEMBER_BANNERResult;
       }
       const obj = { size: null };
-      const obj2 = handleImageLoad;
-      obj[0] = obj2.getBestMediaProxySize(tmp * handleImageLoad.getDevicePixelRatio());
+      const obj2 = ImageLoaderUtils;
+      obj.size = obj2.getBestMediaProxySize(tmp * ImageLoaderUtils.getDevicePixelRatio());
       let tmp16 = "webp" === str2 && canAnimate;
       if (tmp16) {
         let startsWithResult1 = null != banner;
@@ -808,9 +757,8 @@ function getGuildMemberBannerURL(arg0) {
       if (tmp16) {
         obj.animated = true;
       }
-      const obj3 = handleImageLoad;
       const _HermesInternal2 = HermesInternal;
-      return combined + "?" + parseDefault.stringify(obj);
+      return combined + "?" + _modDef1471.stringify(obj);
     }
   }
 }
@@ -819,18 +767,14 @@ function getResourceChannelIconURL(icon) {
   let tmp2 = null;
   if (null != icon) {
     const obj = {
-      endpoint: null,
+      endpoint: React3.GUILD_RESOURCE_CHANNELS_ICON,
       path: "resource-channels",
-      id: null,
-      hash: null,
-      size: null,
+      id: tmp,
+      hash: icon,
+      size,
       canAnimate: true,
       canWebP: false,
     };
-    obj[0] = closure_3.GUILD_RESOURCE_CHANNELS_ICON;
-    obj[2] = tmp;
-    obj[3] = icon;
-    obj[4] = closure_4;
     tmp2 = getAvatarURL(obj);
   }
   return tmp2;
@@ -840,18 +784,14 @@ function getNewMemberActionIconURL(icon) {
   let tmp2 = null;
   if (null != icon) {
     const obj = {
-      endpoint: null,
+      endpoint: React3.GUILD_NEW_MEMBER_ACTIONS_ICON,
       path: "new-member-actions",
-      id: null,
-      hash: null,
-      size: null,
+      id: tmp,
+      hash: icon,
+      size,
       canAnimate: true,
       canWebP: false,
     };
-    obj[0] = closure_3.GUILD_NEW_MEMBER_ACTIONS_ICON;
-    obj[2] = tmp;
-    obj[3] = icon;
-    obj[4] = closure_4;
     tmp2 = getAvatarURL(obj);
   }
   return tmp2;
@@ -860,14 +800,14 @@ function getGuildTemplateIconURL(size) {
   size = size.size;
   ({ id, icon } = size);
   if (size === undefined) {
-    size = closure_4;
+    size = closure_1_4;
   }
   let flag = size.canAnimate;
   if (flag === undefined) {
     flag = false;
   }
   return getAvatarURL({
-    endpoint: closure_3.GUILD_TEMPLATE_ICON,
+    endpoint: React3.GUILD_TEMPLATE_ICON,
     path: "guild-templates",
     id,
     hash: icon,
@@ -886,7 +826,7 @@ function getVideoFilterAssetURL(size) {
   }
   return getAvatarURL({
     endpoint(arg0, arg1, arg2) {
-      return closure_1_3.VIDEO_FILTER_ASSET_STORAGE(userId, assetId, assetHash, arg2);
+      return React3.VIDEO_FILTER_ASSET_STORAGE(userId, assetId, assetHash, arg2);
     },
     path: "video-filter-assets/" + userId,
     id: assetId,
@@ -917,10 +857,8 @@ function isAnimatedIconHash(storageHash) {
 function makeSource(automodAvatarURL) {
   let tmp = automodAvatarURL;
   if (typeof automodAvatarURL !== "number") {
-    const obj = { uri: null };
-    obj[0] = automodAvatarURL;
+    const obj = { uri: automodAvatarURL };
     tmp = obj;
-    const tmp2 = automodAvatarURL;
   }
   return tmp;
 }
@@ -931,11 +869,10 @@ function getGuildSplashURL(arg0) {
   } else {
     if (null == size) {
       const _window = window;
-      size = window.screen.width * handleImageLoad.getDevicePixelRatio();
-      const obj = handleImageLoad;
+      size = window.screen.width * ImageLoaderUtils.getDevicePixelRatio();
     }
     const _window2 = window;
-    const bestMediaProxySize = handleImageLoad.getBestMediaProxySize(size);
+    const bestMediaProxySize = ImageLoaderUtils.getBestMediaProxySize(size);
     if (null != CDN_HOST) {
       const _HermesInternal = HermesInternal;
       let combined = "https://" + CDN_HOST + "/splashes/" + id + "/" + splash + ".jpg";
@@ -943,7 +880,7 @@ function getGuildSplashURL(arg0) {
       const _location = location;
       const _window3 = window;
       const sum = location.protocol + window.GLOBAL_ENV.API_ENDPOINT;
-      combined = sum + closure_3.GUILD_SPLASH(id, splash);
+      combined = sum + React3.GUILD_SPLASH(id, splash);
     }
     const _HermesInternal2 = HermesInternal;
     return combined + "?size=" + bestMediaProxySize;
@@ -954,9 +891,9 @@ function getGuildHomeHeaderURL(arg0) {
   if (null == homeHeader) {
     return null;
   } else {
-    const obj = handleImageLoad;
+    const obj = ImageLoaderUtils;
     const _window2 = window;
-    const bestMediaProxySize = obj.getBestMediaProxySize(1096 * handleImageLoad.getDevicePixelRatio());
+    const bestMediaProxySize = obj.getBestMediaProxySize(1096 * ImageLoaderUtils.getDevicePixelRatio());
     if (null != CDN_HOST) {
       const _HermesInternal = HermesInternal;
       let combined = "https://" + CDN_HOST + "/home-headers/" + id + "/" + homeHeader + ".png";
@@ -964,7 +901,7 @@ function getGuildHomeHeaderURL(arg0) {
       const _location = location;
       const _window = window;
       const sum = location.protocol + window.GLOBAL_ENV.API_ENDPOINT;
-      combined = sum + closure_3.GUILD_HOME_HEADER(id, homeHeader);
+      combined = sum + React3.GUILD_HOME_HEADER(id, homeHeader);
     }
     const _HermesInternal2 = HermesInternal;
     return combined + "?size=" + bestMediaProxySize;
@@ -977,11 +914,10 @@ function getGuildDiscoverySplashURL(arg0) {
   } else {
     if (null == size) {
       const _window = window;
-      size = window.screen.width * handleImageLoad.getDevicePixelRatio();
-      const obj = handleImageLoad;
+      size = window.screen.width * ImageLoaderUtils.getDevicePixelRatio();
     }
     const _window2 = window;
-    const bestMediaProxySize = handleImageLoad.getBestMediaProxySize(size);
+    const bestMediaProxySize = ImageLoaderUtils.getBestMediaProxySize(size);
     if (null != CDN_HOST) {
       const _HermesInternal = HermesInternal;
       let combined = "https://" + CDN_HOST + "/discovery-splashes/" + id + "/" + splash + ".jpg";
@@ -989,7 +925,7 @@ function getGuildDiscoverySplashURL(arg0) {
       const _location = location;
       const _window3 = window;
       const sum = location.protocol + window.GLOBAL_ENV.API_ENDPOINT;
-      combined = sum + closure_3.GUILD_DISCOVERY_SPLASH(id, splash);
+      combined = sum + React3.GUILD_DISCOVERY_SPLASH(id, splash);
     }
     const _HermesInternal2 = HermesInternal;
     return combined + "?size=" + bestMediaProxySize;
@@ -1006,28 +942,28 @@ function getGuildIconURL(canAnimate) {
     flag2 = false;
   }
   return getAvatarURL({
-    endpoint: closure_3.GUILD_ICON,
+    endpoint: React3.GUILD_ICON,
     path: "icons",
     id,
     hash: icon,
     size,
     canAnimate: flag,
     lossless: flag2,
-    canWebP: closure_11,
+    canWebP: canUseWebpResult,
   });
 }
 function getGameAssetURL(format) {
-  let size = format.size;
+  size = format.size;
   ({ id, hash } = format);
   if (size === undefined) {
-    size = closure_4;
+    size = closure_1_4;
   }
   let flag = format.keepAspectRatio;
   if (flag === undefined) {
     flag = false;
   }
   return getAvatarURL({
-    endpoint: closure_3.APPLICATION_ICON,
+    endpoint: React3.APPLICATION_ICON,
     path: "app-icons",
     id,
     hash,
@@ -1048,15 +984,14 @@ function isVideoAssetHash(asset) {
 function isDataUri(arg0) {
   let isMatch = null != arg0;
   if (isMatch) {
-    isMatch = regex.test(arg0);
+    isMatch = re6.test(arg0);
   }
   return isMatch;
 }
-const DEFAULT_PROVISIONAL_AVATARS = ensureAvatarSource.default.DEFAULT_PROVISIONAL_AVATARS;
-const canUseWebpResult = ensureAvatarSource.default.canUseWebp();
-const unpackModuleId = canUseWebpResult;
-let closure_12 = set.isAndroid();
-let result = set.fileFinishedImporting("utils/AvatarUtils.tsx");
+const DEFAULT_PROVISIONAL_AVATARS = utils_AvatarUtils.default.DEFAULT_PROVISIONAL_AVATARS;
+const canUseWebpResult = utils_AvatarUtils.default.canUseWebp();
+let closure_12 = PlatformUtils.isAndroid();
+let result = size.fileFinishedImporting("utils/AvatarUtils.tsx");
 
 export default {
   getUserAvatarURL,
@@ -1069,14 +1004,12 @@ export default {
   getAvatarDecorationURL,
   hasAnimatedGuildIcon,
   isAnimatedIconHash,
-  getUserAvatarSource(stateFromStores, flag, closure_2) {
-    const tmp = getUserAvatarURL(stateFromStores, flag, closure_2);
+  getUserAvatarSource(stateFromStores, flag, size) {
+    const tmp = getUserAvatarURL(stateFromStores, flag, size);
     let tmp2 = tmp;
     if (typeof tmp !== "number") {
-      const obj = { uri: null };
-      obj[0] = tmp;
+      const obj = { uri: tmp };
       tmp2 = obj;
-      const tmp3 = tmp;
     }
     return tmp2;
   },
@@ -1088,30 +1021,28 @@ export default {
       let tmp15 = null;
       if (typeof null !== "number") {
         let obj = { uri: null };
-        obj[0] = null;
         tmp15 = obj;
       }
       return tmp15;
     } else {
       if (null == size) {
         const _window = window;
-        obj = handleImageLoad;
+        obj = ImageLoaderUtils;
         size = window.screen.width * obj.getDevicePixelRatio();
       }
       let combined1 = globalThis;
       const _window2 = window;
-      const bestMediaProxySize = handleImageLoad.getBestMediaProxySize(size);
+      const bestMediaProxySize = ImageLoaderUtils.getBestMediaProxySize(size);
       if (null != CDN_HOST) {
         let combined = "https://" + CDN_HOST + "/splashes/" + id + "/" + splash + ".jpg";
       } else {
         const _location = location;
         const _window3 = window;
         const sum = location.protocol + window.GLOBAL_ENV.API_ENDPOINT;
-        combined = sum + closure_3.GUILD_SPLASH(id, splash);
+        combined = sum + React3.GUILD_SPLASH(id, splash);
       }
       combined1 = "?size=" + bestMediaProxySize;
       const sum1 = combined + combined1;
-      const obj2 = handleImageLoad;
     }
   },
   getGuildDiscoverySplashURL,
@@ -1121,30 +1052,28 @@ export default {
       let tmp15 = null;
       if (typeof null !== "number") {
         let obj = { uri: null };
-        obj[0] = null;
         tmp15 = obj;
       }
       return tmp15;
     } else {
       if (null == size) {
         const _window = window;
-        obj = handleImageLoad;
+        obj = ImageLoaderUtils;
         size = window.screen.width * obj.getDevicePixelRatio();
       }
       let combined1 = globalThis;
       const _window2 = window;
-      const bestMediaProxySize = handleImageLoad.getBestMediaProxySize(size);
+      const bestMediaProxySize = ImageLoaderUtils.getBestMediaProxySize(size);
       if (null != CDN_HOST) {
         let combined = "https://" + CDN_HOST + "/discovery-splashes/" + id + "/" + splash + ".jpg";
       } else {
         const _location = location;
         const _window3 = window;
         const sum = location.protocol + window.GLOBAL_ENV.API_ENDPOINT;
-        combined = sum + closure_3.GUILD_DISCOVERY_SPLASH(id, splash);
+        combined = sum + React3.GUILD_DISCOVERY_SPLASH(id, splash);
       }
       combined1 = "?size=" + bestMediaProxySize;
       const sum1 = combined + combined1;
-      const obj2 = handleImageLoad;
     }
   },
   getGuildBannerURL,
@@ -1158,17 +1087,17 @@ export default {
   getGameAssetURL,
   getVideoFilterAssetURL,
   getGameAssetSource(format) {
-    let size = format.size;
+    size = format.size;
     ({ id, hash } = format);
     if (size === undefined) {
-      size = closure_4;
+      size = closure_1_4;
     }
     let flag = format.keepAspectRatio;
     if (flag === undefined) {
       flag = false;
     }
     let obj = {
-      endpoint: closure_3.APPLICATION_ICON,
+      endpoint: React3.APPLICATION_ICON,
       path: "app-icons",
       id,
       hash,
@@ -1181,10 +1110,8 @@ export default {
     const tmp = getAvatarURL(obj);
     let tmp2 = tmp;
     if (typeof tmp !== "number") {
-      obj = { uri: null };
-      obj[0] = tmp;
+      obj = { uri: tmp };
       tmp2 = obj;
-      const tmp3 = tmp;
     }
     return tmp2;
   },
@@ -1199,22 +1126,20 @@ export default {
       flag2 = false;
     }
     let obj = {
-      endpoint: closure_3.GUILD_ICON,
+      endpoint: React3.GUILD_ICON,
       path: "icons",
       id,
       hash: icon,
       size,
       canAnimate: flag,
       lossless: flag2,
-      canWebP: closure_11,
+      canWebP: canUseWebpResult,
     };
     const tmp = getAvatarURL(obj);
     let tmp2 = tmp;
     if (typeof tmp !== "number") {
-      obj = { uri: null };
-      obj[0] = tmp;
+      obj = { uri: tmp };
       tmp2 = obj;
-      const tmp3 = tmp;
     }
     return tmp2;
   },
@@ -1222,14 +1147,14 @@ export default {
     size = size.size;
     ({ id, icon } = size);
     if (size === undefined) {
-      size = closure_4;
+      size = closure_1_4;
     }
     let flag = size.canAnimate;
     if (flag === undefined) {
       flag = false;
     }
     let obj = {
-      endpoint: closure_3.GUILD_TEMPLATE_ICON,
+      endpoint: React3.GUILD_TEMPLATE_ICON,
       path: "guild-templates",
       id,
       hash: icon,
@@ -1240,10 +1165,8 @@ export default {
     const tmp = getAvatarURL(obj);
     let tmp2 = tmp;
     if (typeof tmp !== "number") {
-      obj = { uri: null };
-      obj[0] = tmp;
+      obj = { uri: tmp };
       tmp2 = obj;
-      const tmp3 = tmp;
     }
     return tmp2;
   },
@@ -1255,10 +1178,8 @@ export default {
     const tmp = getGuildBannerURL(guild, flag);
     let tmp2 = tmp;
     if (typeof tmp !== "number") {
-      const obj = { uri: null };
-      obj[0] = tmp;
+      const obj = { uri: tmp };
       tmp2 = obj;
-      const tmp3 = tmp;
     }
     return tmp2;
   },
@@ -1268,36 +1189,32 @@ export default {
       let tmp12 = null;
       if (typeof null !== "number") {
         let obj = { uri: null };
-        obj[0] = null;
         tmp12 = obj;
       }
       return tmp12;
     } else {
-      obj = handleImageLoad;
+      obj = ImageLoaderUtils;
       let combined1 = globalThis;
       const _window = window;
-      const bestMediaProxySize = obj.getBestMediaProxySize(1096 * handleImageLoad.getDevicePixelRatio());
+      const bestMediaProxySize = obj.getBestMediaProxySize(1096 * ImageLoaderUtils.getDevicePixelRatio());
       if (null != CDN_HOST) {
         let combined = "https://" + CDN_HOST + "/home-headers/" + id + "/" + homeHeader + ".png";
       } else {
         const _location = location;
         const _window2 = window;
         const sum = location.protocol + window.GLOBAL_ENV.API_ENDPOINT;
-        combined = sum + closure_3.GUILD_HOME_HEADER(id, homeHeader);
+        combined = sum + React3.GUILD_HOME_HEADER(id, homeHeader);
       }
       combined1 = "?size=" + bestMediaProxySize;
       const sum1 = combined + combined1;
-      const obj2 = handleImageLoad;
     }
   },
   getChannelIconSource(arg0) {
     const tmp = getChannelIconURL(arg0);
     let tmp2 = tmp;
     if (typeof tmp !== "number") {
-      const obj = { uri: null };
-      obj[0] = tmp;
+      const obj = { uri: tmp };
       tmp2 = obj;
-      const tmp3 = tmp;
     }
     return tmp2;
   },
@@ -1305,21 +1222,19 @@ export default {
     const tmp = getApplicationIconURL(guildMember);
     let tmp2 = tmp;
     if (typeof tmp !== "number") {
-      const obj = { uri: null };
-      obj[0] = tmp;
+      const obj = { uri: tmp };
       tmp2 = obj;
-      const tmp3 = tmp;
     }
     return tmp2;
   },
   makeSource,
-  getAnimatableSourceWithFallback(flag, arg1) {
-    const tmp = arg1(flag);
-    let obj = set;
+  getAnimatableSourceWithFallback(flag, fn) {
+    const tmp = fn(flag);
+    let obj = PlatformUtils;
     if (obj.isAndroid()) {
       if (flag) {
         if (typeof tmp !== "number") {
-          const tmp2 = arg1(false);
+          const tmp2 = fn(false);
           if (typeof tmp2 === "number") {
             const items = [tmp];
             obj = {};
@@ -1342,7 +1257,7 @@ export { DEFAULT_AVATARS };
 export { DEFAULT_AVATARS_SMALL };
 export const DEFAULT_AVATARS_SMALL_MAX_SIZE = num;
 export { DEFAULT_PROVISIONAL_AVATARS };
-export const DEFAULT_GROUP_DM_AVATARS = ensureAvatarSource.default.DEFAULT_GROUP_DM_AVATARS;
+export const DEFAULT_GROUP_DM_AVATARS = utils_AvatarUtils.default.DEFAULT_GROUP_DM_AVATARS;
 export const SUPPORTS_WEBP = canUseWebpResult;
 export const LEGACY_DEFAULT_AVATAR_COUNT = 5;
 export const DEFAULT_AVATAR_COUNT = 6;

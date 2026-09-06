@@ -1,39 +1,36 @@
 // discord_app/modules/user_settings/defs/native/CommunityActivityAlertsSetting.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import closure_2 from "../../../guild_antiraid/GuildIncidentsStore.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
-import { UserSettingsCommunityNotifications } from "../../notifications/native/UserSettingsCommunityNotifications.tsx";
+import util from "../../../../intl/index.native.tsx";
+import GuildIncidentsStore from "../../../guild_antiraid/GuildIncidentsStore.tsx";
 
-require = arg1;
-createToggle = {
+require = fn;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.D9yVAH);
+    const intl = util.intl;
+    return intl.string(util.t.D9yVAH);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.NOTIFICATIONS,
+  parent: fn(7975).MobileUserSettings.NOTIFICATIONS,
   useDescription: function useCommunityActivityAlertsSettingDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["0PhAOH"]);
+    const intl = util.intl;
+    return intl.string(util.t["0PhAOH"]);
   },
   usePredicate: function useHasCommunityActivityAlertsSetting() {
-    const items = [closure_2];
+    const items = [GuildIncidentsStore];
     return initialize.useStateFromStores(
       items,
       () => Object.keys(guildAlertSettings.getGuildAlertSettings()).length > 0,
     );
   },
-  screen: createToggle,
-};
-createToggle = {
-  route: require("ME").UserSettingsSections.COMMUNITY_ALERTS,
-  getComponent() {
-    return UserSettingsCommunityNotifications /* UserSettingsCommunityNotifications */.default;
+  screen: {
+    route: fn(1074).UserSettingsSections.COMMUNITY_ALERTS,
+    getComponent() {
+      return require("UserSettingsCommunityNotifications").default;
+    },
   },
 };
-createToggle = createToggle.createRoute(createToggle);
-const result = require("set").fileFinishedImporting(
-  "modules/user_settings/defs/native/CommunityActivityAlertsSetting.tsx",
-);
+SettingBuilders = SettingBuilders.createRoute(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/CommunityActivityAlertsSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

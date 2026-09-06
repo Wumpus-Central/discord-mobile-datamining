@@ -1,9 +1,9 @@
 // discord_app/modules/activities/utils/isGameActivity.tsx
-import set from "../../../../_runtime/00002_set.js";
-import ME from "../../../Constants.tsx";
+import Constants from "../../../Constants.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const ActivityTypes = ME.ActivityTypes;
-const result = set.fileFinishedImporting("modules/activities/utils/isGameActivity.tsx");
+const ActivityTypes = Constants.ActivityTypes;
+const result = size.fileFinishedImporting("modules/activities/utils/isGameActivity.tsx");
 
 export default function isGameActivity(type) {
   let tmp = null != type;

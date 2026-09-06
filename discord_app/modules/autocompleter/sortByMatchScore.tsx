@@ -1,7 +1,7 @@
 // discord_app/modules/autocompleter/sortByMatchScore.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/autocompleter/sortByMatchScore.tsx");
+const result = size.fileFinishedImporting("modules/autocompleter/sortByMatchScore.tsx");
 
 export default function sortByMatchScore(score, score2) {
   if (score.score === score2.score) {

@@ -1,9 +1,9 @@
 // discord_app/modules/markup/MarkupEligibilityUtils.tsx
-import set from "../../../_runtime/00002_set.js";
-import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/markup/MarkupEligibilityUtils.tsx");
+const result = size.fileFinishedImporting("modules/markup/MarkupEligibilityUtils.tsx");
 
-export const isMessageNewerThanImprovedMarkdownEpoch = function isMessageNewerThanImprovedMarkdownEpoch(timestamp) {
-  return timestamp >= DISCORD_EPOCHDefault.extractTimestamp("1088216706570268682");
+export const isMessageNewerThanImprovedMarkdownEpoch = function isMessageNewerThanImprovedMarkdownEpoch(arg0) {
+  return arg0 >= SnowflakeUtilsDefault.extractTimestamp("1088216706570268682");
 };

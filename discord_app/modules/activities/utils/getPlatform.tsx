@@ -1,15 +1,15 @@
 // discord_app/modules/activities/utils/getPlatform.tsx
-import set from "../../../../_runtime/00002_set.js";
-import PermissionOverwriteType from "../../../flow/Server.tsx";
+import Server from "../../../flow/Server.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/activities/utils/getPlatform.tsx");
+const result = size.fileFinishedImporting("modules/activities/utils/getPlatform.tsx");
 
 export default function getPlatform(arg0) {
   if ("android" === arg0) {
-    return PermissionOverwriteType.EmbeddedActivitySupportedPlatforms.ANDROID;
+    return Server.EmbeddedActivitySupportedPlatforms.ANDROID;
   } else if ("ios" === arg0) {
-    return PermissionOverwriteType.EmbeddedActivitySupportedPlatforms.IOS;
+    return Server.EmbeddedActivitySupportedPlatforms.IOS;
   } else {
-    return PermissionOverwriteType.EmbeddedActivitySupportedPlatforms.WEB;
+    return Server.EmbeddedActivitySupportedPlatforms.WEB;
   }
 }

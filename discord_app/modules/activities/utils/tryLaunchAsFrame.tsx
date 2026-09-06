@@ -1,16 +1,17 @@
 // discord_app/modules/activities/utils/tryLaunchAsFrame.tsx
 import canLaunchFrame from "../../frames/utils/canLaunchFrame.tsx";
-import _launchFrameOnNativeDefault from "../../frames/FramesActionCreators.native.tsx";
-import closure_3 from "../../applications/ApplicationStore.tsx";
-import { MAIN_SURFACE } from "../../frames/FramesConstants.tsx";
+import FramesActionCreatorsDefault from "../../frames/FramesActionCreators.native.tsx";
+import ApplicationStore from "../../applications/ApplicationStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/activities/utils/tryLaunchAsFrame.tsx");
+require = fn;
+const MAIN_SURFACE = fn(9511).MAIN_SURFACE;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/utils/tryLaunchAsFrame.tsx");
 
 export const tryLaunchAsFrame = function tryLaunchAsFrame(applicationId) {
   applicationId = applicationId.applicationId;
   ({ customId, referrerId, analyticsContext } = applicationId);
-  application = application.getApplication(applicationId);
+  const application = ApplicationStore.getApplication(applicationId);
   let tmp2 = null == application;
   if (!tmp2) {
     let obj = canLaunchFrame;
@@ -18,15 +19,9 @@ export const tryLaunchAsFrame = function tryLaunchAsFrame(applicationId) {
   }
   let flag = !tmp2;
   if (!tmp2) {
-    obj = { applicationId: null, surface: null, customId: null, referrerId: null, analyticsContext: null };
-    obj[0] = applicationId;
-    obj[1] = MAIN_SURFACE;
-    obj[2] = customId;
-    obj[3] = referrerId;
-    obj[4] = analyticsContext;
-    _launchFrameOnNativeDefault.launchFrame(obj);
+    obj = { applicationId, surface: MAIN_SURFACE, customId, referrerId, analyticsContext };
+    FramesActionCreatorsDefault.launchFrame(obj);
     flag = true;
-    const obj2 = _launchFrameOnNativeDefault;
   }
   return flag;
 };

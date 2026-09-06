@@ -1,20 +1,24 @@
 // discord_app/modules/stage_channels/useStageBlockedUsersCount.tsx
-import sortKey from "StageChannelParticipants.tsx";
-import closure_2 from "StageChannelParticipantStore.tsx";
+import StageChannelParticipants from "StageChannelParticipants.tsx";
+import StageChannelParticipantStore from "StageChannelParticipantStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/stage_channels/useStageBlockedUsersCount.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/useStageBlockedUsersCount.tsx");
 
 export const useStageBlockedUsersCount = function useStageBlockedUsersCount(id) {
-  const _require = id;
-  const items = [closure_2];
+  _require = id;
+  const items = [StageChannelParticipantStore];
   const items1 = [id];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+  return require("initialize").useStateFromStores(
     items,
     () => {
       let num = 0;
-      if (null != id) {
-        num = closure_1_2.getParticipantCount(tmp, id(closure_1_1[2]).StageChannelParticipantNamedIndex.BLOCKED);
+      if (null != closure_0) {
+        num = StageChannelParticipantStore.getParticipantCount(
+          tmp,
+          StageChannelParticipants.StageChannelParticipantNamedIndex.BLOCKED,
+        );
       }
       return num;
     },
@@ -22,15 +26,18 @@ export const useStageBlockedUsersCount = function useStageBlockedUsersCount(id) 
   );
 };
 export const useStageIgnoredUsersCount = function useStageIgnoredUsersCount(id1) {
-  const _require = id1;
-  const items = [closure_2];
+  _require = id1;
+  const items = [StageChannelParticipantStore];
   const items1 = [id1];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+  return require("initialize").useStateFromStores(
     items,
     () => {
       let num = 0;
-      if (null != id1) {
-        num = closure_1_2.getParticipantCount(tmp, id1(closure_1_1[2]).StageChannelParticipantNamedIndex.IGNORED);
+      if (null != closure_0) {
+        num = StageChannelParticipantStore.getParticipantCount(
+          tmp,
+          StageChannelParticipants.StageChannelParticipantNamedIndex.IGNORED,
+        );
       }
       return num;
     },
@@ -38,36 +45,50 @@ export const useStageIgnoredUsersCount = function useStageIgnoredUsersCount(id1)
   );
 };
 export const getStageBlockedUsersCount = function getStageBlockedUsersCount(id) {
-  let num = store.getParticipantCount(id, sortKey.StageChannelParticipantNamedIndex.BLOCKED);
+  let num = StageChannelParticipantStore.getParticipantCount(
+    id,
+    StageChannelParticipants.StageChannelParticipantNamedIndex.BLOCKED,
+  );
   if (num == null) {
     num = 0;
   }
   return num;
 };
 export const getStageIgnoredUsersCount = function getStageIgnoredUsersCount(id) {
-  let num = store.getParticipantCount(id, sortKey.StageChannelParticipantNamedIndex.IGNORED);
+  let num = StageChannelParticipantStore.getParticipantCount(
+    id,
+    StageChannelParticipants.StageChannelParticipantNamedIndex.IGNORED,
+  );
   if (num == null) {
     num = 0;
   }
   return num;
 };
 export const useStageBlockedUsers = function useStageBlockedUsers(id) {
-  const _require = id;
-  const items = [closure_2];
+  _require = id;
+  const items = [StageChannelParticipantStore];
   const items1 = [id];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+  return require("initialize").useStateFromStores(
     items,
-    () => closure_1_2.getMutableParticipants(id, id(closure_1_1[2]).StageChannelParticipantNamedIndex.BLOCKED),
+    () =>
+      StageChannelParticipantStore.getMutableParticipants(
+        closure_0,
+        StageChannelParticipants.StageChannelParticipantNamedIndex.BLOCKED,
+      ),
     items1,
   );
 };
 export const useStageIgnoredUsers = function useStageIgnoredUsers(id) {
-  const _require = id;
-  const items = [closure_2];
+  _require = id;
+  const items = [StageChannelParticipantStore];
   const items1 = [id];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+  return require("initialize").useStateFromStores(
     items,
-    () => closure_1_2.getMutableParticipants(id, id(closure_1_1[2]).StageChannelParticipantNamedIndex.IGNORED),
+    () =>
+      StageChannelParticipantStore.getMutableParticipants(
+        closure_0,
+        StageChannelParticipants.StageChannelParticipantNamedIndex.IGNORED,
+      ),
     items1,
   );
 };

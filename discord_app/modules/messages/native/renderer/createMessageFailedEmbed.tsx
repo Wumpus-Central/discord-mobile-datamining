@@ -1,61 +1,68 @@
 // discord_app/modules/messages/native/renderer/createMessageFailedEmbed.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import ME from "../../../../Constants.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import Changeset from "RowGeneratorConstants.tsx";
-import frozen from "EmbedUtils.tsx";
-import registerAssetDefault from "../../../../../_runtime/08155_registerAsset.js";
-import registerAssetDefault2 from "../../../../../_runtime/08156_registerAsset.js";
+import Constants from "../../../../Constants.tsx";
+import util from "../../../../intl/index.native.tsx";
+import RowGeneratorConstants from "RowGeneratorConstants.tsx";
+import renderer_EmbedUtils from "EmbedUtils.tsx";
+import _modDef8155 from "../../../../../_runtime/metro/08155__.js";
+import _modDef8156 from "../../../../../_runtime/metro/08156__.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const MessageFailureState = Changeset.MessageFailureState;
-const MessageEmbedTypes = ME.MessageEmbedTypes;
-const result = set.fileFinishedImporting("modules/messages/native/renderer/createMessageFailedEmbed.tsx");
+const MessageFailureState = RowGeneratorConstants.MessageFailureState;
+const MessageEmbedTypes = Constants.MessageEmbedTypes;
+const result = size.fileFinishedImporting("modules/messages/native/renderer/createMessageFailedEmbed.tsx");
 
 export default function createMessageFailedEmbed(useAttachmentUploadPreview) {
   ({ uploaderFile, colors } = useAttachmentUploadPreview);
   if (null != uploaderFile) {
     if (useAttachmentUploadPreview.useAttachmentUploadPreview) {
       let obj = {
-        type: null,
+        type: MessageEmbedTypes.TEXT,
         messageSendError: null,
         failureState: null,
         disableBackgroundColor: true,
         bodyTextColor: null,
         iconURL: null,
       };
-      obj[0] = MessageEmbedTypes.TEXT;
-      const intl3 = getSystemLocale.intl;
-      obj[1] = intl3.string(getSystemLocale.t.lBLP4u);
-      obj[2] = MessageFailureState.UNSPECIFIED;
-      obj[4] = colors.failedMessageBodyTextColor;
-      colors = frozen.getAssetUriForEmbed;
-      obj[5] = colors(registerAssetDefault2);
-      const tmp14 = frozen;
+      const intl3 = util.intl;
+      obj.messageSendError = intl3.string(util.t.lBLP4u);
+      obj.failureState = MessageFailureState.UNSPECIFIED;
+      obj.bodyTextColor = colors.failedMessageBodyTextColor;
+      colors = renderer_EmbedUtils.getAssetUriForEmbed;
+      obj.iconURL = colors(_modDef8156);
     } else {
-      obj = { type: null, numAttachments: null, failureState: null, attachmentsSize: null, bodyTextColor: null };
-      obj[0] = MessageEmbedTypes.TEXT;
-      const intl2 = getSystemLocale.intl;
-      obj1 = { count: null };
-      obj1[0] = uploaderFile.attachmentsCount;
-      obj[1] = intl2.formatToPlainString(getSystemLocale.t.D0noUt, obj1);
-      obj[2] = MessageFailureState.UPLOAD_FAILED;
+      obj = {
+        type: MessageEmbedTypes.TEXT,
+        numAttachments: null,
+        failureState: null,
+        attachmentsSize: null,
+        bodyTextColor: null,
+      };
+      const intl2 = util.intl;
+      const obj1 = { count: uploaderFile.attachmentsCount };
+      obj.numAttachments = intl2.formatToPlainString(util.t.D0noUt, obj1);
+      obj.failureState = MessageFailureState.UPLOAD_FAILED;
       let str = "";
       if (0 !== uploaderFile.currentSize) {
         const _HermesInternal = HermesInternal;
         str = " (" + tmp6(5134).sizeString(uploaderFile.currentSize) + ")";
         const tmp6Result = tmp6(5134);
       }
-      obj[3] = "" + str;
-      obj[4] = colors.embedBodyTextColor;
+      obj.attachmentsSize = "" + str;
+      obj.bodyTextColor = colors.embedBodyTextColor;
       tmp6 = require;
     }
   } else {
-    obj = { type: null, messageSendError: null, failureState: null, disableBackgroundColor: true, bodyTextColor: null };
-    obj[0] = MessageEmbedTypes.TEXT;
-    const intl = getSystemLocale.intl;
-    obj[1] = intl.string(getSystemLocale.t.lBLP4u);
-    obj[2] = MessageFailureState.UNSPECIFIED;
-    obj[4] = colors.failedMessageBodyTextColor;
+    obj = {
+      type: MessageEmbedTypes.TEXT,
+      messageSendError: null,
+      failureState: null,
+      disableBackgroundColor: true,
+      bodyTextColor: null,
+    };
+    const intl = util.intl;
+    obj.messageSendError = intl.string(util.t.lBLP4u);
+    obj.failureState = MessageFailureState.UNSPECIFIED;
+    obj.bodyTextColor = colors.failedMessageBodyTextColor;
     return obj;
   }
 }
@@ -66,7 +73,7 @@ export const createAutomodBlockedMessageEmbed = function createAutomodBlockedMes
     failureState: MessageFailureState.AUTO_MODERATION_BLOCKED_MESSAGE,
     disableBackgroundColor: true,
     bodyTextColor: errorMessage.colors.automodBlockedBodyTextColor,
-    iconURL: frozen.getAssetUriForEmbed(registerAssetDefault),
+    iconURL: renderer_EmbedUtils.getAssetUriForEmbed(_modDef8155),
   };
   return obj;
 };

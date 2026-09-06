@@ -1,7 +1,7 @@
 // discord_app/modules/spatial_audio/SpatialAudioConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/spatial_audio/SpatialAudioConstants.tsx");
+const result = size.fileFinishedImporting("modules/spatial_audio/SpatialAudioConstants.tsx");
 
 export const DEFAULT_ROOM_SIZE = 25;
 export const DEFAULT_AUDIO_MIXER_SETTINGS = {

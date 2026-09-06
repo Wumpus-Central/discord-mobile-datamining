@@ -1,5 +1,5 @@
 // discord_app/utils/HighlightJsAnsiLanguage.tsx
-import set from "../../_runtime/00002_set.js";
+import size from "../../_runtime/metro/00002__.js";
 
 let closure_0 = { 1: "bold", 4: "underline" };
 let closure_1 = { 30: "black", 31: "red", 32: "green", 33: "yellow", 34: "blue", 35: "magenta", 36: "cyan", 37: "white" };
@@ -7,27 +7,27 @@ let closure_2 = { 40: "black", 41: "red", 42: "green", 43: "yellow", 44: "blue",
 const tmp2 = /\x1B\[(\d+(?:[:;]\d+)*)m/;
 const re3 = tmp2;
 const regExp = new RegExp("(?=" + tmp2.source + ")");
-const result = set.fileFinishedImporting("utils/HighlightJsAnsiLanguage.tsx");
+const result = size.fileFinishedImporting("utils/HighlightJsAnsiLanguage.tsx");
 
 export default function highlightJsAnsiLanguage() {
   let length;
   let sum;
-  let style = "foreground";
+  let foreground = "foreground";
   const items = ["0"];
   HermesBuiltin.arraySpread(["38", "39"], 1);
-  let items5 = items;
-  const items1 = [...Object.keys(items5)];
+  const items1 = [...Object.keys(items)];
   let num = 0;
   items.push.apply(items1);
-  const entries = Object.entries(items5);
+  const entries = Object.entries(items);
   const items2 = [
-    ...entries.map((arg0) => {
-      [tmp, tmp2] = arg0;
-      style = tmp;
+    ...entries.map((item) => {
+      [tmp, tmp2] = item;
+      foreground = tmp;
+      closure_1 = items;
       return {
-        className: "ansi-" + style + "-" + tmp2,
+        className: "ansi-" + foreground + "-" + tmp2,
         endsParent: true,
-        begin: closure_1_4,
+        begin: regExp,
         (arg0, data) => {
           const parts = arg0[1].split(";");
           if (undefined === data.data.isOn) {
@@ -36,15 +36,10 @@ export default function highlightJsAnsiLanguage() {
           const iter = parts[Symbol.iterator]();
           const nextResult = iter.next();
           while (iter !== undefined) {
-            let tmp4 = closure_0;
             if (nextResult === closure_0) {
               data.data.isOn = true;
-            } else {
-              let tmp5 = closure_1;
-              let tmp6 = nextResult;
-              if (closure_1.includes(tmp3)) {
-                data.data.isOn = false;
-              }
+            } else if (closure_1.includes(tmp3)) {
+              data.data.isOn = false;
             }
             continue;
           }
@@ -55,28 +50,27 @@ export default function highlightJsAnsiLanguage() {
       };
     })
   ];
-  style = "background";
-  items5 = undefined;
+  closure_129_0 = "background";
   const items3 = ["0"];
   HermesBuiltin.arraySpread(["48", "49"], 1);
-  items5 = items3;
+  closure_129_1 = items3;
   const items4 = [...Object.keys(closure_2)];
   items3.push.apply(items4);
   const entries1 = Object.entries(closure_2);
-  style = "style";
-  items5 = undefined;
-  items5 = ["0"];
+  closure_130_0 = "style";
+  const items5 = ["0"];
   HermesBuiltin.arraySpread([], 1);
-  const entries2 = Object.entries(style);
-  obj = { className: "ansi-control-sequence", begin: closure_3, starts: obj };
-  obj = { end: regExp, endsParent: true };
-  items2[HermesBuiltin.arraySpread(entries2.map((arg0) => {
-    [tmp, tmp2] = arg0;
-    style = tmp;
+  closure_130_1 = items5;
+  const entries2 = Object.entries(foreground);
+  let obj = { className: "ansi-control-sequence", begin, starts: { end: regExp, endsParent: true } };
+  items2[HermesBuiltin.arraySpread(entries2.map((item) => {
+    [tmp, tmp2] = item;
+    foreground = tmp;
+    closure_1 = items;
     return {
-      className: "ansi-" + style + "-" + tmp2,
+      className: "ansi-" + foreground + "-" + tmp2,
       endsParent: true,
-      begin: closure_1_4,
+      begin: regExp,
       (arg0, data) => {
         const parts = arg0[1].split(";");
         if (undefined === data.data.isOn) {
@@ -85,15 +79,10 @@ export default function highlightJsAnsiLanguage() {
         const iter = parts[Symbol.iterator]();
         const nextResult = iter.next();
         while (iter !== undefined) {
-          let tmp4 = closure_0;
           if (nextResult === closure_0) {
             data.data.isOn = true;
-          } else {
-            let tmp5 = closure_1;
-            let tmp6 = nextResult;
-            if (closure_1.includes(tmp3)) {
-              data.data.isOn = false;
-            }
+          } else if (closure_1.includes(tmp3)) {
+            data.data.isOn = false;
           }
           continue;
         }
@@ -102,13 +91,14 @@ export default function highlightJsAnsiLanguage() {
         }
       }
     };
-  }), HermesBuiltin.arraySpread(entries1.map((arg0) => {
-    [tmp, tmp2] = arg0;
-    style = tmp;
+  }), HermesBuiltin.arraySpread(entries1.map((item) => {
+    [tmp, tmp2] = item;
+    foreground = tmp;
+    closure_1 = items;
     return {
-      className: "ansi-" + style + "-" + tmp2,
+      className: "ansi-" + foreground + "-" + tmp2,
       endsParent: true,
-      begin: closure_1_4,
+      begin: regExp,
       (arg0, data) => {
         const parts = arg0[1].split(";");
         if (undefined === data.data.isOn) {
@@ -117,15 +107,10 @@ export default function highlightJsAnsiLanguage() {
         const iter = parts[Symbol.iterator]();
         const nextResult = iter.next();
         while (iter !== undefined) {
-          let tmp4 = closure_0;
           if (nextResult === closure_0) {
             data.data.isOn = true;
-          } else {
-            let tmp5 = closure_1;
-            let tmp6 = nextResult;
-            if (closure_1.includes(tmp3)) {
-              data.data.isOn = false;
-            }
+          } else if (closure_1.includes(tmp3)) {
+            data.data.isOn = false;
           }
           continue;
         }
@@ -143,7 +128,9 @@ export default function highlightJsAnsiLanguage() {
       length = items2.length;
     } while (sum < length);
   }
-  const contains = [{ begin: regExp, contains: items2 }];
-  return { contains };
+  obj = { contains: null };
+  const items6 = [{ begin: regExp, contains: items2 }];
+  obj.contains = items6;
+  return obj;
 };
 export const ANSI_CONTROL_SEQUENCE_RE = tmp2;

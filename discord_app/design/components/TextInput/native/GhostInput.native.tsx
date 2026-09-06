@@ -1,19 +1,18 @@
 // discord_app/design/components/TextInput/native/GhostInput.native.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import Text from "../../Text/native/Text.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Text_Text from "../../Text/native/Text.tsx";
 import Input from "../../Input/native/Input.native.tsx";
 import getRequiredFieldA11yName from "../../Input/native/getRequiredFieldA11yName.native.tsx";
-import useInputStyles from "../../Input/native/InputFieldContainer.native.tsx";
-import useKeyboardBlurring from "../../Input/native/NativeTextInput.native.tsx";
-import closure_4 from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../Styles/native/createStyles.tsx";
+import InputFieldContainer from "../../Input/native/InputFieldContainer.native.tsx";
+import NativeTextInput from "../../Input/native/NativeTextInput.native.tsx";
+import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+require = fn;
 let closure_3 = ["labelId", "accessibilityLabel"];
-noopAll;
-let closure_6 = createCacheKey.createStyles(() => {
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_6 = createStyles.createStyles(() => {
   let str = arg0;
   if (arg0 === undefined) {
     str = "lg";
@@ -24,24 +23,24 @@ let closure_6 = createCacheKey.createStyles(() => {
   }
   const input = {};
   const merged = Object.assign(
-    { md: Text.TextStyleSheet["text-md/semibold"], lg: Text.TextStyleSheet["text-lg/semibold"] }[str],
+    { md: Text_Text.TextStyleSheet["text-md/semibold"], lg: Text_Text.TextStyleSheet["text-lg/semibold"] }[str],
   );
   if ("error" === str2) {
-    let TEXT_DEFAULT = ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL;
+    let TEXT_DEFAULT = nativeDefault.colors.TEXT_FEEDBACK_CRITICAL;
   } else {
-    TEXT_DEFAULT = ThemesDefault.colors.TEXT_DEFAULT;
+    TEXT_DEFAULT = nativeDefault.colors.TEXT_DEFAULT;
   }
   input.color = TEXT_DEFAULT;
   input.minWidth = 48;
   return { input, centeredContainerStyle: { alignItems: "center" } };
 });
-const result = require("set").fileFinishedImporting("design/components/TextInput/native/GhostInput.native.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/TextInput/native/GhostInput.native.tsx");
 
 export const GhostInput = function GhostInput(size) {
-  let obj = useInputStyles;
-  obj = { size: size.size };
+  let obj = { size: size.size };
   const inputStyles = obj.useInputStyles(obj);
-  const tmp4 = callback2(size.size, size.status);
+  const tmp4 = closure_6(size.size, size.status);
   const isCentered = size.isCentered;
   const autoFocus = size.autoFocus;
   let tmpResult = tmp(4278);
@@ -59,12 +58,12 @@ export const GhostInput = function GhostInput(size) {
   }
   items[1] = prop;
   obj.containerStyle = items;
-  obj1 = {};
+  const obj1 = {};
   const merged1 = Object.assign(textField.inputProps);
-  const merged2 = Object.assign(callback(fieldLabelA11yNative, closure_3));
+  const merged2 = Object.assign(_objectWithoutProperties(fieldLabelA11yNative, closure_3));
   tmp5 = undefined === isCentered || isCentered;
   const tmp6 = undefined === autoFocus || autoFocus;
-  const tmp8 = callback(fieldLabelA11yNative, closure_3);
+  const tmp8 = _objectWithoutProperties(fieldLabelA11yNative, closure_3);
   let requiredFieldA11yName = getRequiredFieldA11yName.getRequiredFieldA11yName(accessibilityLabel, size.required);
   if (requiredFieldA11yName == null) {
     requiredFieldA11yName = accessibilityLabel;
@@ -76,6 +75,6 @@ export const GhostInput = function GhostInput(size) {
   obj1.placeholderTextColor = inputStyles.placeholderText.color;
   obj1.spellCheck = false;
   obj1.autoFocus = tmp6;
-  obj.children = jsx(useKeyboardBlurring.NativeTextInput, {});
+  obj.children = jsx(NativeTextInput.NativeTextInput, {});
   return jsx(Input.Input, {});
 };

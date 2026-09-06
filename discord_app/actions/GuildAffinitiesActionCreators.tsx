@@ -1,28 +1,29 @@
 // discord_app/actions/GuildAffinitiesActionCreators.tsx
-import set from "../../_runtime/00002_set.js";
-import ME from "../Constants.tsx";
-import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import DispatcherDefault from "../Dispatcher.tsx";
+import Constants from "../Constants.tsx";
+import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-const Endpoints = ME.Endpoints;
-const result = set.fileFinishedImporting("actions/GuildAffinitiesActionCreators.tsx");
+const Endpoints = Constants.Endpoints;
+const result = size.fileFinishedImporting("actions/GuildAffinitiesActionCreators.tsx");
 
 export const fetchGuildAffinities = function fetchGuildAffinities() {
-  const HTTP = sendRequest.HTTP;
+  const HTTP = HTTPUtils.HTTP;
   const obj = {
     url: Endpoints.GUILD_AFFINITIES,
     oldFormErrors: true,
-    rejectWithError: sendRequest.rejectWithMigratedError(),
+    rejectWithError: HTTPUtils.rejectWithMigratedError(),
   };
-  const value = HTTP.get(obj);
+  value = HTTP.get(obj);
   return value.then(
     (guildAffinities) => {
-      callback(573).dispatch({
+      DispatcherDefault.dispatch({
         type: "LOAD_GUILD_AFFINITIES_SUCCESS",
         guildAffinities: guildAffinities.body.guild_affinities,
       });
     },
     () => {
-      callback(573).dispatch({ type: "LOAD_GUILD_AFFINITIES_FAILURE" });
+      DispatcherDefault.dispatch({ type: "LOAD_GUILD_AFFINITIES_FAILURE" });
     },
   );
 };

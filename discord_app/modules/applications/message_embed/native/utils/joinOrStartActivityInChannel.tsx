@@ -1,162 +1,141 @@
 // discord_app/modules/applications/message_embed/native/utils/joinOrStartActivityInChannel.tsx
-import closure_3 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../activities/EmbeddedActivitiesStore.tsx";
-import closure_5 from "../../../../../stores/ChannelStore.tsx";
-import closure_6 from "../../../../../stores/SelectedChannelStore.tsx";
+import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import EmbeddedActivitiesStore from "../../../../activities/EmbeddedActivitiesStore.tsx";
+import ChannelStore from "../../../../../stores/ChannelStore.tsx";
+import SelectedChannelStore from "../../../../../stores/SelectedChannelStore.tsx";
 
-const require = arg1;
-function _joinOrStartActivityInChannel() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c4 = 0;
-    c5 = 0;
-    const iter = (function* (arg0) {
-      if (channel === 2) {
-        channel = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp5 === 3) {
+const require = fn;
+let closure_7 = async function _joinOrStartActivityInChannel(arg0, value) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp5 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
         if (arg0 === 1) {
-          throw arg1;
+          c5 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c5 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_3 = tmp2;
+          closure_2 = tmp3;
+          closure_130_0 = undefined;
+          closure_130_1 = undefined;
+          closure_130_2 = undefined;
+          closure_130_3 = undefined;
+          closure_130_4 = undefined;
+          ({
+            appId: closure_130_0,
+            channelId: closure_130_1,
+            analyticsLocations: closure_130_2,
+            customId: closure_130_3,
+            referrerId: closure_130_4,
+          } = closure_0);
+          let selfEmbeddedActivityForChannel;
+          let voiceChannelId;
+          let channel;
+          closure_130_8 = undefined;
+          closure_130_9 = undefined;
+          closure_130_10 = undefined;
+          c4 = 1;
+          c5 = 1;
+          return { value: "PX_16", done: true };
         }
-      } else {
-        try {
-          channel = 2;
-          if (0 === store) {
-            if (arg0 === 1) {
-              channel = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              channel = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              c3 = tmp2;
-              dependencyMap = tmp3;
-              let callback;
-              let callback2;
-              dependencyMap = undefined;
-              c3 = undefined;
-              store = undefined;
-              ({ appId: c0, channelId: c1, analyticsLocations: c2, customId: c3, referrerId: c4 } = callback);
-              channel = undefined;
-              let voiceChannelId;
-              let guild_id;
-              closure_8 = undefined;
-              let length;
-              let compositeInstanceId;
-              store = 1;
-              channel = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp6) {
-            if (arg0 === 1) {
-              channel = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              channel = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              channel = store.getSelfEmbeddedActivityForChannel(callback2);
-              voiceChannelId = voiceChannelId.getVoiceChannelId();
-              let applicationId;
-              if (channel != null) {
-                applicationId = channel.applicationId;
-              }
-              if (applicationId === callback) {
-                if (voiceChannelId === callback2) {
-                  guild_id = channel.getChannel(callback2);
-                  guild_id = undefined;
-                  if (guild_id != null) {
-                    guild_id = guild_id.guild_id;
-                  }
-                  callback2 = guild_id;
-                  if (guild_id == null) {
-                    callback2 = null;
-                  }
-                  closure_8 = callback2;
-                  callback2(9535)(closure_8, channel.location);
-                  channel = 3;
-                  return { value: true, done: true };
-                }
-              }
-              const embeddedActivitiesForChannel = store.getEmbeddedActivitiesForChannel(callback2);
-              length = embeddedActivitiesForChannel.filter((applicationId) => applicationId.applicationId === c0);
-              compositeInstanceId = undefined;
-              if (length.length > 0) {
-                compositeInstanceId = length[0].compositeInstanceId;
-              }
-              let obj2 = callback(9504);
-              obj2 = {
-                channelId: null,
-                applicationId: null,
-                isStart: null,
-                embeddedActivitiesManager: null,
-                analyticsLocations: null,
-                customId: null,
-                referrerId: null,
-              };
-              obj2[0] = callback2;
-              obj2[1] = callback;
-              obj2[2] = null == compositeInstanceId;
-              obj2[3] = callback2(9514)();
-              obj2[4] = dependencyMap;
-              obj2[5] = c3;
-              obj2[6] = store;
-              store = 2;
-              channel = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = obj2.runPrimaryAppCommandOrJoinEmbeddedActivity(obj2);
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            channel = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            channel = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          } else {
-            channel = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+      } else if (1 === tmp6) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj1 = { value, done: true };
+          return obj1;
+        } else {
+          selfEmbeddedActivityForChannel = closure_131_4.getSelfEmbeddedActivityForChannel(closure_130_1);
+          voiceChannelId = closure_131_6.getVoiceChannelId();
+          let applicationId;
+          if (selfEmbeddedActivityForChannel != null) {
+            applicationId = selfEmbeddedActivityForChannel.applicationId;
           }
-        } catch (tmp43) {
-          channel = tmp;
-          throw tmp43;
+          if (applicationId === closure_130_0) {
+            if (voiceChannelId === closure_130_1) {
+              channel = closure_131_5.getChannel(closure_130_1);
+              let guild_id;
+              if (channel != null) {
+                guild_id = channel.guild_id;
+              }
+              c1 = guild_id;
+              if (guild_id == null) {
+                c1 = null;
+              }
+              closure_130_8 = c1;
+              closure_131_1(closure_131_2[4])(closure_130_8, selfEmbeddedActivityForChannel.location);
+              c5 = 3;
+              return { value: true, done: true };
+            }
+          }
+          const embeddedActivitiesForChannel = closure_131_4.getEmbeddedActivitiesForChannel(closure_130_1);
+          closure_130_9 = embeddedActivitiesForChannel.filter(
+            (applicationId) => applicationId.applicationId === closure_1_0,
+          );
+          let compositeInstanceId;
+          if (closure_130_9.length > 0) {
+            compositeInstanceId = closure_130_9[0].compositeInstanceId;
+          }
+          closure_130_10 = compositeInstanceId;
+          let obj2 = closure_131_0(closure_131_2[5]);
+          obj2 = {
+            channelId: closure_130_1,
+            applicationId: closure_130_0,
+            isStart: null == closure_130_10,
+            embeddedActivitiesManager: closure_131_1(closure_131_2[6])(),
+            analyticsLocations: closure_130_2,
+            customId: closure_130_3,
+            referrerId: closure_130_4,
+          };
+          c4 = 2;
+          c5 = 1;
+          const obj3 = { value: obj2.runPrimaryAppCommandOrJoinEmbeddedActivity(obj2), done: false };
+          return obj3;
         }
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 3;
+        const obj4 = { value, done: true };
+        return obj4;
+      } else {
+        c5 = 3;
+        obj = { value, done: true };
+        return obj;
       }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_7 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp43) {
+      c5 = tmp;
+      throw tmp43;
+    }
   }
-  return applyArgumentsResult;
-}
-const result = require("set").fileFinishedImporting(
+};
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/applications/message_embed/native/utils/joinOrStartActivityInChannel.tsx",
 );
 
-export const joinOrStartActivityInChannel = function joinOrStartActivityInChannel(arg0) {
+export const joinOrStartActivityInChannel = function joinOrStartActivityInChannel() {
   const self = this;
-  const apply = _joinOrStartActivityInChannel.apply;
+  const apply = closure_7.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

@@ -1,46 +1,48 @@
 // discord_app/modules/lurker_mode/native/ServerPreviewBannerControls.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import registerAssetDefault from "../../../../_runtime/05629_registerAsset.js";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
+import _modDef5629 from "../../../../_runtime/metro/05629__.js";
+import transitionToGuild from "../../routing/transitionToGuild.native.tsx";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
 import ServerPreviewPillDefault from "ServerPreviewPill.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import { MOBILE_GUILD_UPSELL_LIST } from "../../../Constants.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { row: null };
-createCacheKey = {
+require = fn;
+const View = fn(17).View;
+const MOBILE_GUILD_UPSELL_LIST = fn(1074).MOBILE_GUILD_UPSELL_LIST;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+fn(4560);
+const createStyles = { row: null };
+const rect = {
   position: "absolute",
-  top: ThemesDefault.space.PX_16,
-  left: ThemesDefault.space.PX_16,
+  top: nativeDefault.space.PX_16,
+  left: nativeDefault.space.PX_16,
   flexDirection: "row",
   alignItems: "center",
-  gap: ThemesDefault.space.PX_8,
+  gap: nativeDefault.space.PX_8,
 };
-createCacheKey[0] = createCacheKey;
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/lurker_mode/native/ServerPreviewBannerControls.tsx");
+createStyles.row = rect;
+let closure_8 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/lurker_mode/native/ServerPreviewBannerControls.tsx");
 
 export default function ServerPreviewBannerControls() {
-  let obj = { style: callback3().row, children: null };
-  const callback = React.useCallback(() => {
-    callback(table[6]).transitionToGuild(closure_5);
+  let obj = { style: closure_8().row, children: null };
+  const callback = noop.useCallback(() => {
+    transitionToGuild.transitionToGuild(MOBILE_GUILD_UPSELL_LIST);
   }, []);
   obj = {
     size: "md",
     variant: "secondary-overlay",
-    icon: registerAssetDefault,
+    icon: _modDef5629,
     onPress: callback,
     accessibilityLabel: null,
     maxFontSizeMultiplier: 1.5,
   };
-  const intl = getSystemLocale.intl;
-  obj[4] = intl.string(getSystemLocale.t["13/7kX"]);
-  const items = [callback(IconButton.IconButton, obj), callback(ServerPreviewPillDefault, {})];
-  obj[1] = items;
-  return callback2(View, obj);
+  const intl = util.intl;
+  obj.accessibilityLabel = intl.string(util.t["13/7kX"]);
+  const items = [timestampProducer(IconButton.IconButton, obj), timestampProducer(ServerPreviewPillDefault, {})];
+  obj.children = items;
+  return React5(View, obj);
 }

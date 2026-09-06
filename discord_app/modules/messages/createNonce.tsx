@@ -1,16 +1,17 @@
 // discord_app/modules/messages/createNonce.tsx
-import set from "../../../_runtime/00002_set.js";
-import DISCORD_EPOCH from "../../utils/SnowflakeUtils.tsx";
-import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import SnowflakeUtils from "../../utils/SnowflakeUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-let c2 = 0;
-const snowflakeSequence = new DISCORD_EPOCH.SnowflakeSequence();
-const result = set.fileFinishedImporting("modules/messages/createNonce.tsx");
+const SnowflakeUtilsDefault = SnowflakeUtils;
+
+let timestamp = 0;
+const snowflakeSequence = new SnowflakeUtils.SnowflakeSequence();
+const result = size.fileFinishedImporting("modules/messages/createNonce.tsx");
 
 export const createNonce = function createNonce() {
-  const timestamp = Date.now();
+  timestamp = Date.now();
   if (timestamp !== timestamp) {
     snowflakeSequence.reset();
   }
-  return DISCORD_EPOCHDefault.fromTimestampWithSequence(timestamp, snowflakeSequence);
+  return SnowflakeUtilsDefault.fromTimestampWithSequence(timestamp, snowflakeSequence);
 };

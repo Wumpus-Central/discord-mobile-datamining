@@ -1,27 +1,25 @@
 // discord_app/modules/activities/utils/useRefocusOrLaunchActivity.tsx
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
-import closure_5 from "../../frames/FramesStore.tsx";
-import closure_6 from "../EmbeddedActivitiesStore.tsx";
-import FrameLayoutModes from "../../frames/FramesConstants.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../../_runtime/metro/00019__.js";
+import FramesStore from "../../frames/FramesStore.tsx";
+import EmbeddedActivitiesStore from "../EmbeddedActivitiesStore.tsx";
 
-const require = arg1;
-({ MAIN_SURFACE: error, FrameLayoutModes: closure_8 } = FrameLayoutModes);
-let result = require("set").fileFinishedImporting("modules/activities/utils/useRefocusOrLaunchActivity.tsx");
+const require = fn;
+const FramesConstants = fn(9511);
+({ MAIN_SURFACE: closure_7, FrameLayoutModes: closure_8 } = FramesConstants);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/activities/utils/useRefocusOrLaunchActivity.tsx");
 
 export default function useRefocusOrLaunchActivity(applicationId) {
   applicationId = applicationId.applicationId;
-  const analyticsLocations = applicationId.analyticsLocations;
+  let analyticsLocations = applicationId.analyticsLocations;
   const runBeforeLaunchAttempt = applicationId.runBeforeLaunchAttempt;
   const runAfterLaunchAttempt = applicationId.runAfterLaunchAttempt;
-  let data;
-  let stateFromStores;
   let stateFromStores1;
-  c7 = undefined;
-  data = applicationId(runBeforeLaunchAttempt[5]).useApplication(applicationId).data;
+  const data = applicationId(runBeforeLaunchAttempt[5]).useApplication(applicationId).data;
   let obj = applicationId(runBeforeLaunchAttempt[5]);
   const items = [stateFromStores1];
-  stateFromStores = applicationId(runBeforeLaunchAttempt[6]).useStateFromStores(items, () =>
+  const stateFromStores = applicationId(runBeforeLaunchAttempt[6]).useStateFromStores(items, () =>
     stateFromStores1.getCurrentEmbeddedActivity(),
   );
   let obj2 = applicationId(runBeforeLaunchAttempt[6]);
@@ -43,16 +41,15 @@ export default function useRefocusOrLaunchActivity(applicationId) {
     runBeforeLaunchAttempt,
   ];
   return data.useCallback(
-    runAfterLaunchAttempt(function* () {
+    runAfterLaunchAttempt(function* (arg0, value) {
       if (c5 === 2) {
         c5 = 3;
-        HermesBuiltin.throwTypeError();
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp6 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          let obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
@@ -63,59 +60,51 @@ export default function useRefocusOrLaunchActivity(applicationId) {
           if (0 === dependencyMap) {
             if (arg0 === 1) {
               c5 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj = { value, done: true };
               return obj;
             } else {
-              closure_1 = tmp3;
-              if (null != closure_1_0) {
-                if (null != c4) {
-                  let tmp9 = null != c5;
+              if (null != applicationId) {
+                if (null != data) {
+                  let tmp9 = null != stateFromStores;
                   if (tmp9) {
-                    tmp9 = tmp44.applicationId === tmp42;
+                    tmp9 = tmp43.applicationId === tmp41;
                   }
-                  if (null != closure_1_6) {
-                    if (tmp10.applicationId === tmp42) {
-                      obj1 = { frameId: null, layoutMode: null };
-                      obj1[0] = tmp10.id;
-                      obj1[1] = closure_1_8.FOCUSED;
-                      const result = closure_1_1(9507).updateFrameLayoutMode(obj1);
-                      const obj10 = closure_1_1(9507);
+                  if (null != stateFromStores1) {
+                    if (tmp10.applicationId === tmp41) {
+                      const obj1 = { frameId: tmp10.id, layoutMode: constants.FOCUSED };
+                      const result = tmp3(9507).updateFrameLayoutMode(obj1);
+                      const obj10 = tmp3(9507);
                     }
                   }
                   if (tmp9) {
-                    const _location = tmp44.location;
+                    const _location = tmp43.location;
                     let guild_id = null;
                     if ("guild_id" in _location) {
                       guild_id = _location.guild_id;
                     }
-                    closure_1_1(9535)(guild_id, _location);
-                    const tmp26 = closure_1_1(9535);
+                    tmp3(9535)(guild_id, _location);
+                    const tmp26 = tmp3(9535);
                   } else {
-                    if (dependencyMap != null) {
-                      dependencyMap();
+                    if (runBeforeLaunchAttempt != null) {
+                      runBeforeLaunchAttempt();
                     }
                     c4 = 1;
-                    if (closure_1_7) {
-                      let obj5 = closure_1_1(9507);
-                      let obj2 = { applicationId: null, surface: null, analyticsContext: null };
-                      obj2[0] = tmp42;
-                      obj2[1] = closure_1_7;
-                      const obj3 = { isStart: true, analyticsLocations: null };
-                      obj3[1] = closure_1_1;
-                      obj2[2] = obj3;
+                    if (c7) {
+                      let obj5 = tmp3(9507);
+                      let obj2 = { applicationId: tmp41, surface, analyticsContext: null };
+                      const obj3 = { isStart: true, analyticsLocations };
+                      obj2.analyticsContext = obj3;
                       dependencyMap = 2;
                       c5 = 1;
-                      const obj4 = { value: null, done: false };
-                      obj4[0] = obj5.launchFrame(obj2);
+                      const obj4 = { value: obj5.launchFrame(obj2), done: false };
                       return obj4;
                     } else {
                       let id;
-                      if (tmp43 != null) {
-                        const bot = tmp43.bot;
+                      if (tmp42 != null) {
+                        const bot = tmp42.bot;
                         if (bot != null) {
                           id = bot.id;
                         }
@@ -125,26 +114,23 @@ export default function useRefocusOrLaunchActivity(applicationId) {
                       }
                     }
                   }
-                  obj2 = closure_1_0(11519);
-                  obj5 = { appId: null, botId: null, analyticsLocations: null };
-                  obj5[0] = tmp42;
+                  obj2 = analyticsLocations(11519);
+                  obj5 = { appId: tmp41, botId: null, analyticsLocations: null };
                   let id1;
-                  if (tmp43 != null) {
-                    const bot2 = tmp43.bot;
+                  if (tmp42 != null) {
+                    const bot2 = tmp42.bot;
                     if (bot2 != null) {
                       id1 = bot2.id;
                     }
                   }
-                  obj5[1] = id1;
-                  closure_0 = closure_1_1;
-                  if (closure_1_1 == null) {
-                    closure_0 = [];
+                  obj5.botId = id1;
+                  if (analyticsLocations == null) {
+                    analyticsLocations = [];
                   }
-                  obj5[2] = closure_0;
+                  obj5.analyticsLocations = analyticsLocations;
                   dependencyMap = 3;
                   c5 = 1;
-                  const obj6 = { value: null, done: false };
-                  obj6[0] = obj2.launchActivityInBotDM(obj5);
+                  const obj6 = { value: obj2.launchActivityInBotDM(obj5), done: false };
                   return obj6;
                 }
               }
@@ -155,29 +141,27 @@ export default function useRefocusOrLaunchActivity(applicationId) {
           } else if (2 === tmp7) {
             if (arg0 === 1) {
               c5 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c4 = 0;
               c5 = 3;
-              const obj7 = { value: null, done: true };
-              obj7[0] = arg1;
+              const obj7 = { value, done: true };
               return obj7;
             }
           } else if (arg0 === 1) {
             c5 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c4 = 0;
             c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           }
-          if (callback != null) {
-            callback();
+          if (closure_129_3 != null) {
+            closure_129_3();
           }
         } catch (tmp33) {
-          callback = tmp33;
+          closure_3 = tmp33;
           if (tmp4 === c4) {
             c5 = tmp2;
             throw tmp33;

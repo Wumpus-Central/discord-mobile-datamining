@@ -1,11 +1,11 @@
 // discord_app/modules/rpc/server/commands/platformBehaviors.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import sum from "../../../../../discord_common/js/shared/Constants.tsx";
+import Constants from "../../../../../discord_common/js/shared/Constants.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/rpc/server/commands/platformBehaviors.tsx");
+const result = size.fileFinishedImporting("modules/rpc/server/commands/platformBehaviors.tsx");
 
 export default {
-  [sum.RPCCommands.GET_PLATFORM_BEHAVIORS]: {
+  [Constants.RPCCommands.GET_PLATFORM_BEHAVIORS]: {
     handler() {
       return { iosKeyboardResizesView: true };
     },

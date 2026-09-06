@@ -1,135 +1,127 @@
 // discord_app/modules/auth/native/components/utils/useWithPostLoginRouting.tsx
-import closure_3 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../../../../_runtime/00019_noop.js";
-import closure_6 from "../../../../../stores/AuthenticationStore.tsx";
-import ME from "../../../../../Constants.tsx";
+import AuthenticationActionCreatorsDefault from "../../../../../actions/AuthenticationActionCreators.tsx";
+import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
+import AuthenticationStore from "../../../../../stores/AuthenticationStore.tsx";
 
-const require = arg1;
-({ LoginStates: error, AuthStates: closure_8 } = ME);
-const result = require("set").fileFinishedImporting("modules/auth/native/components/utils/useWithPostLoginRouting.tsx");
+const require = fn;
+const Constants = fn(1074);
+({ LoginStates: closure_7, AuthStates: closure_8 } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/auth/native/components/utils/useWithPostLoginRouting.tsx");
 
-export default function useWithPostLoginRouting(arg0, arg1) {
-  const _require = arg0;
-  closure_1 = arg1;
-  const tmp = loginStatus(React.useState(), 2);
+export default function useWithPostLoginRouting(arg0, handleLogin) {
+  _require = arg0;
+  const tmp = loginStatus(noop.useState(), 2);
   const first = tmp[0];
   closure_3 = tmp[1];
-  const items = [closure_6];
-  loginStatus = _require(first[5]).useStateFromStoresObject(items, () => ({
-    loginStatus: loginStatus.getLoginStatus(),
+  const items = [AuthenticationStore];
+  loginStatus = require("initialize").useStateFromStoresObject(items, () => ({
+    loginStatus: authStore.getLoginStatus(),
   })).loginStatus;
-  const items1 = [arg0, arg1, loginStatus, first];
-  const effect = React.useEffect(() => {
-    if (closure_2 !== closure_1_7.LOGGING_IN) {
+  const items1 = [arg0, handleLogin, loginStatus, first];
+  const effect = noop.useEffect(() => {
+    if (dependencyMap !== constants.LOGGING_IN) {
       if (tmp !== tmp2.FORGOT_PASSWORD) {
-        callback(loginStatus);
+        closure_3(loginStatus);
       }
     }
-    if (closure_1_7.MFA_STEP === loginStatus) {
-      arr = arr.push(closure_1_8.MFA);
+    if (constants.MFA_STEP === loginStatus) {
+      closure_0.push(constants2.MFA);
     } else {
       if (tmp2.ACCOUNT_SCHEDULED_FOR_DELETION !== tmp6) {
         if (tmp2.ACCOUNT_DISABLED !== tmp6) {
           if (tmp2.LOGIN_AGE_GATE === tmp6) {
-            arr = arr.push(closure_1_8.AGE_GATE_UNDERAGE, { existingUser: true });
+            closure_0.push(constants2.AGE_GATE_UNDERAGE, { existingUser: true });
           }
         }
       }
-      let obj = { handleLogin: null };
-      obj[0] = closure_1;
-      arr.push(closure_1_8.ACCOUNT_DISABLED_OR_DELETION_SCHEDULED, obj);
+      let obj = { handleLogin };
+      closure_0.push(constants2.ACCOUNT_DISABLED_OR_DELETION_SCHEDULED, obj);
     }
-    if (closure_1_7.PASSWORD_RECOVERY_PHONE_VERIFICATION === loginStatus) {
+    if (constants.PASSWORD_RECOVERY_PHONE_VERIFICATION === loginStatus) {
       obj = { title: null, description: null, phone: null, onPhoneTokenReceived: null, onClose: null };
-      const intl = arr(first[6]).intl;
-      obj[0] = intl.string(arr(first[6]).t["+xqy3d"]);
-      const intl2 = arr(first[6]).intl;
-      obj[1] = intl2.string(arr(first[6]).t.myKyqh);
-      obj[2] = closure_1_6.getCredentials().login;
-      obj[3] = function onPhoneTokenReceived(arg0) {
-        const replaced = closure_0.replace(closure_1_8.EXTERNAL_LINK, { externalURL: closure_1_1(6956)(arg0) });
+      const intl = closure_0(first[6]).intl;
+      obj.title = intl.string(closure_0(first[6]).t["+xqy3d"]);
+      const intl2 = closure_0(first[6]).intl;
+      obj.description = intl2.string(closure_0(first[6]).t.myKyqh);
+      obj.phone = authStore.getCredentials().login;
+      obj.onPhoneTokenReceived = function onPhoneTokenReceived(arg0) {
+        const replaced = closure_1_0.replace(constants2.EXTERNAL_LINK, { externalURL: closure_1(first[7])(arg0) });
       };
-      obj[4] = function onClose() {
-        callback(6593).loginReset();
+      obj.onClose = function onClose() {
+        handleLogin(dependencyMap[8]).loginReset();
       };
-      let replaced = arr.replace(closure_1_8.VERIFY_PHONE, obj);
+      let replaced = closure_0.replace(constants2.VERIFY_PHONE, obj);
     } else if (tmp2.PHONE_IP_AUTHORIZATION === tmp6) {
-      const credentials = closure_1_6.getCredentials();
+      const credentials = authStore.getCredentials();
       ({ login: closure_0, password: closure_1 } = credentials);
       obj = { title: null, description: null, phone: null, onPhoneTokenReceived: null, onClose: null };
-      const intl3 = arr(first[6]).intl;
-      obj[0] = intl3.string(arr(first[6]).t.w55Oco);
-      const intl4 = arr(first[6]).intl;
-      obj[1] = intl4.string(arr(first[6]).t["0/ALaJ"]);
-      obj[2] = closure_1_6.getCredentials().login;
-      closure_2 = callback((arg0) => {
-        closure_0 = arg0;
-        c3 = 0;
-        c4 = 0;
-        return (function* (arg0) {
-          if (c4 === 2) {
-            c4 = 3;
-            HermesBuiltin.throwTypeError();
-          } else if (tmp4 === 3) {
-            if (arg0 === 1) {
-              throw arg1;
-            } else if (arg0 === 2) {
-              let obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              return { value: "HermesInternal", done: null };
-            }
+      const intl3 = closure_0(first[6]).intl;
+      obj.title = intl3.string(closure_0(first[6]).t.w55Oco);
+      const intl4 = closure_0(first[6]).intl;
+      obj.description = intl4.string(closure_0(first[6]).t["0/ALaJ"]);
+      obj.phone = authStore.getCredentials().login;
+      dependencyMap = closure_3(function* (arg0, value) {
+        if (c4 === 2) {
+          c4 = 3;
+          throw new TypeError("Generator functions may not be called on executing generators");
+        } else if (tmp4 === 3) {
+          if (arg0 === 1) {
+            throw value;
+          } else if (arg0 === 2) {
+            let obj = { value, done: true };
+            return obj;
           } else {
-            try {
-              c4 = 2;
-              if (0 === c3) {
-                if (arg0 === 1) {
-                  c4 = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  c4 = 3;
-                  obj = { value: null, done: true };
-                  obj[0] = arg1;
-                  return obj;
-                } else {
-                  c2 = 0;
-                  closure_1 = tmp2;
-                  let arr;
-                  obj1 = closure_2_1(table[8]);
-                  c3 = 1;
-                  c4 = 1;
-                  obj1 = { value: null, done: false };
-                  obj1[0] = obj1.authorizeIPAddress(arr);
-                  return obj1;
-                }
-              } else if (arg0 === 1) {
+            return { value: "HermesInternal", done: null };
+          }
+        } else {
+          try {
+            c4 = 2;
+            if (0 === c3) {
+              if (arg0 === 1) {
                 c4 = 3;
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
                 c4 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
+                obj = { value, done: true };
                 return obj;
               } else {
-                const routes = arr.getState().routes;
-                arr = routes.findIndex((name) => name.name === constants.LOGIN);
-                if (arr >= 0) {
-                  arr = arr.pop(arr);
-                } else {
-                  arr = arr.pop();
-                }
-                c4 = 3;
+                c2 = 0;
+                closure_1 = tmp2;
+                closure_129_0 = undefined;
+                let obj1 = handleLogin(dependencyMap[8]);
+                c3 = 1;
+                c4 = 1;
+                obj1 = { value: null, done: false };
+                obj1.value = obj1.authorizeIPAddress(closure_0);
+                return obj1;
               }
-            } catch (tmp17) {
-              c4 = tmp;
-              throw tmp17;
+            } else if (arg0 === 1) {
+              c4 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              obj = { value, done: true };
+              return obj;
+            } else {
+              const routes = closure_0.getState().routes;
+              closure_129_0 = routes.findIndex((name) => name.name === constants.LOGIN);
+              if (closure_129_0 >= 0) {
+                closure_0.pop(closure_129_0);
+              } else {
+                closure_0.pop();
+              }
+              c4 = 3;
             }
+          } catch (tmp17) {
+            c4 = tmp;
+            throw tmp17;
           }
-        })();
+        }
       });
-      obj[3] = function () {
+      obj.onPhoneTokenReceived = function () {
         const self = this;
         const apply = closure_2.apply;
         if (typeof apply === "unknown") {
@@ -139,22 +131,21 @@ export default function useWithPostLoginRouting(arg0, arg1) {
         }
         return applyArgumentsResult;
       };
-      obj[4] = function onClose(arg0) {
+      obj.onClose = function onClose(arg0) {
         if (arg0) {
-          let tmp6 = null != callback;
+          let tmp6 = null != handleLogin;
           if (tmp6) {
             tmp6 = "" !== tmp4;
           }
           if (tmp6) {
-            closure_1_1(closure_0, tmp4);
+            closure_1(closure_1_0, tmp4);
           }
         } else {
-          callback(first[8]).loginReset();
-          const obj = callback(first[8]);
+          AuthenticationActionCreatorsDefault.loginReset();
         }
       };
-      arr.push(closure_1_8.VERIFY_PHONE, obj);
+      closure_0.push(constants2.VERIFY_PHONE, obj);
     }
-    callback(loginStatus);
+    closure_3(loginStatus);
   }, items1);
 }

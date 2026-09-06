@@ -1,8 +1,8 @@
 // discord_common/js/packages/kv-storage/js/util/Key.tsx
-import set from "../../../../../../_runtime/00002_set.js";
 import TableId from "../types/index.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/util/Key.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/util/Key.tsx");
 
 export const combineKey = function combineKey(prefix, key) {
   if (Array.isArray(key)) {
@@ -18,7 +18,7 @@ export const combineKey = function combineKey(prefix, key) {
       return items1;
     }
   }
-  error = new Error(
+  const error = new Error(
     "combination results in an invalid key that has " + items1.length + " elements: " + JSON.stringify(items1),
   );
   throw error;
@@ -38,7 +38,7 @@ export const combineKeyPrefix = function combineKeyPrefix(prefix, items) {
     const _Error = Error;
     const _JSON = JSON;
     const _HermesInternal = HermesInternal;
-    error = new Error(
+    const error = new Error(
       "combination results in an invalid prefix key that has " + items1.length + " elements: " + JSON.stringify(items1),
     );
     throw error;

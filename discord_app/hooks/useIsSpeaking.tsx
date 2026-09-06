@@ -1,11 +1,12 @@
 // discord_app/hooks/useIsSpeaking.tsx
-import closure_2 from "../modules/soundboard/SoundboardStore.tsx";
-import closure_3 from "../stores/SelectedChannelStore.tsx";
-import closure_4 from "../stores/SpeakingStore.tsx";
-import closure_5 from "../stores/VoiceStateStore.tsx";
+import SoundboardStore from "../modules/soundboard/SoundboardStore.tsx";
+import SelectedChannelStore from "../stores/SelectedChannelStore.tsx";
+import SpeakingStore from "../stores/SpeakingStore.tsx";
+import VoiceStateStore from "../stores/VoiceStateStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("hooks/useIsSpeaking.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("hooks/useIsSpeaking.tsx");
 
 export default function useIsSpeaking(checkSoundboardSounds) {
   ({ userId: require, checkSoundSharing } = checkSoundboardSounds);
@@ -22,12 +23,12 @@ export default function useIsSpeaking(checkSoundboardSounds) {
   }
   const context = checkSoundboardSounds.context;
   flag2 = undefined;
-  const items = [closure_5, context];
-  const stateFromStores = require(checkSoundSharing[4]).useStateFromStores(items, () => {
-    const voiceChannelId = context.getVoiceChannelId();
+  const items = [VoiceStateStore, context];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
+    const voiceChannelId = SelectedChannelStore.getVoiceChannelId();
     let voiceStateForChannel = null;
     if (null != voiceChannelId) {
-      voiceStateForChannel = closure_1_5.getVoiceStateForChannel(voiceChannelId, closure_0);
+      voiceStateForChannel = VoiceStateStore.getVoiceStateForChannel(voiceChannelId, require);
     }
     return voiceStateForChannel;
   });
@@ -48,7 +49,7 @@ export default function useIsSpeaking(checkSoundboardSounds) {
   let tmpResult = tmp(tmp2[4]);
   const items1 = [flag2];
   let stateFromStores1 = tmpResult.useStateFromStores(items1, () => {
-    let isSpeakingResult = flag2.isSpeaking(closure_0, context);
+    let isSpeakingResult = SpeakingStore.isSpeaking(require, context);
     if (isSpeakingResult) {
       isSpeakingResult = !flag2;
     }
@@ -58,12 +59,15 @@ export default function useIsSpeaking(checkSoundboardSounds) {
   const items2 = [flag2];
   const stateFromStores2 = tmpResult.useStateFromStores(
     items2,
-    () => flag2.isSoundSharing(closure_0) && checkSoundSharing,
+    () => SpeakingStore.isSoundSharing(require) && checkSoundSharing,
   );
-  const obj = require(checkSoundSharing[4]);
+  const obj = require("initialize");
   const items3 = [flag];
   if (!stateFromStores1) {
-    stateFromStores1 = tmpResult1.useStateFromStores(items3, () => flag.isUserPlayingSounds(closure_0) && flag);
+    stateFromStores1 = tmpResult1.useStateFromStores(
+      items3,
+      () => SoundboardStore.isUserPlayingSounds(require) && flag,
+    );
   }
   if (!stateFromStores1) {
     stateFromStores1 = stateFromStores2;
@@ -85,7 +89,7 @@ export const getIsSpeaking = function getIsSpeaking(checkSoundboardSounds) {
   }
   let tmp = arg1;
   if (arg1 === undefined) {
-    const items = [closure_5, closure_3, closure_4, closure_2];
+    const items = [VoiceStateStore, SelectedChannelStore, SpeakingStore, SoundboardStore];
     tmp = items;
   }
   [obj, obj2, obj3, obj4] = tmp;

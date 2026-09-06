@@ -1,27 +1,26 @@
 // discord_app/modules/activities/useIsActivityFocused.tsx
-import sortKey from "../calls/ChannelRTCParticipants.tsx";
-import closure_2 from "../calls/ChannelRTCStore.tsx";
-import closure_3 from "EmbeddedActivitiesStore.tsx";
+import ChannelRTCParticipants from "../calls/ChannelRTCParticipants.tsx";
+import ChannelRTCStore from "../calls/ChannelRTCStore.tsx";
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/activities/useIsActivityFocused.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/useIsActivityFocused.tsx");
 
 export default function useIsActivityFocused(arg0) {
-  const _require = arg0;
-  const items = [closure_2, closure_3];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    const selectedParticipant = closure_1_2.getSelectedParticipant(callback);
-    const currentEmbeddedActivity = closure_1_3.getCurrentEmbeddedActivity();
+  _require = arg0;
+  const items = [ChannelRTCStore, EmbeddedActivitiesStore];
+  return require("initialize").useStateFromStores(items, () => {
+    const selectedParticipant = ChannelRTCStore.getSelectedParticipant(closure_0);
+    const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
     let tmp3 = null != selectedParticipant && null != currentEmbeddedActivity;
     if (tmp3) {
-      let obj = callback(closure_1_1[2]);
-      obj = { applicationId: null, instanceId: null };
-      obj[0] = currentEmbeddedActivity.applicationId;
+      const obj = { applicationId: currentEmbeddedActivity.applicationId, instanceId: null };
       let compositeInstanceId;
       if (currentEmbeddedActivity != null) {
         compositeInstanceId = currentEmbeddedActivity.compositeInstanceId;
       }
-      obj[1] = compositeInstanceId;
+      obj.instanceId = compositeInstanceId;
       tmp3 = selectedParticipant.id === obj.getEmbeddedActivityParticipantId(obj);
     }
     return tmp3;
@@ -33,14 +32,12 @@ export const isActivityFocused = function isActivityFocused(channelId) {
   const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
   let tmp3 = null != selectedParticipant && null != currentEmbeddedActivity;
   if (tmp3) {
-    let obj = sortKey;
-    obj = { applicationId: null, instanceId: null };
-    obj[0] = currentEmbeddedActivity.applicationId;
+    const obj = { applicationId: currentEmbeddedActivity.applicationId, instanceId: null };
     let compositeInstanceId;
     if (currentEmbeddedActivity != null) {
       compositeInstanceId = currentEmbeddedActivity.compositeInstanceId;
     }
-    obj[1] = compositeInstanceId;
+    obj.instanceId = compositeInstanceId;
     tmp3 = selectedParticipant.id === obj.getEmbeddedActivityParticipantId(obj);
   }
   return tmp3;

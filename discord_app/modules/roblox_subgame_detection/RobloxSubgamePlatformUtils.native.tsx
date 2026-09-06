@@ -1,23 +1,22 @@
 // discord_app/modules/roblox_subgame_detection/RobloxSubgamePlatformUtils.native.tsx
-import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting(
-  "modules/roblox_subgame_detection/RobloxSubgamePlatformUtils.native.tsx",
-);
+const require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/roblox_subgame_detection/RobloxSubgamePlatformUtils.native.tsx");
 
 export default {
-  getRobloxSubgameURL(closure_0) {
-    return callback(function* () {
+  getRobloxSubgameURL(arg0) {
+    closure_0 = arg0;
+    return (async (arg0, value) => {
       if (c2 === 2) {
         c2 = 3;
-        HermesBuiltin.throwTypeError();
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp3 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          let obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
@@ -28,35 +27,31 @@ export default {
           if (0 === dependencyMap) {
             if (arg0 === 1) {
               c2 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c2 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj = { value, done: true };
               return obj;
             } else {
-              closure_0 = tmp4;
-              let obj2 = closure_1_0(4693);
+              let obj2 = tmp4(4693);
               dependencyMap = 1;
               c2 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = obj2.canOpenUrlScheme("roblox");
+              const obj1 = { value: obj2.canOpenUrlScheme("roblox"), done: false };
               return obj1;
             }
           } else if (arg0 === 1) {
             c2 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c2 = 3;
-            obj2 = { value: null, done: true };
-            obj2[0] = arg1;
+            obj2 = { value, done: true };
             return obj2;
           } else {
-            obj = closure_1_0(4691);
-            if (arg1) {
-              obj.ROBLOX_PROTOCOL_URL(closure_0);
+            obj = tmp4(4691);
+            if (value) {
+              obj.ROBLOX_PROTOCOL_URL(closure_128_0);
             } else {
-              const result = obj.ROBLOX_DEFERRED_WEB_URL(closure_0);
+              const result = obj.ROBLOX_DEFERRED_WEB_URL(closure_128_0);
             }
             c2 = 3;
           }

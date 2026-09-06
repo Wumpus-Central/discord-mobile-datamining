@@ -1,10 +1,10 @@
 // discord_app/modules/activities/utils/getCoverImageFromActivity.tsx
-import set from "../../../../_runtime/00002_set.js";
-import items3 from "../Constants.tsx";
-import updateAssets from "../../../utils/ApplicationAssetUtils.tsx";
+import Constants from "../Constants.tsx";
+import ApplicationAssetUtils from "../../../utils/ApplicationAssetUtils.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-let closure_2 = items3.ACTIVITY_INVITE_COVER_IMAGE_SIZE;
-const result = set.fileFinishedImporting("modules/activities/utils/getCoverImageFromActivity.tsx");
+let closure_2 = Constants.ACTIVITY_INVITE_COVER_IMAGE_SIZE;
+const result = size.fileFinishedImporting("modules/activities/utils/getCoverImageFromActivity.tsx");
 
 export default function getCoverImageFromActivity(assets, application_id) {
   let assetImage = null;
@@ -14,8 +14,7 @@ export default function getCoverImageFromActivity(assets, application_id) {
       assetImage = null;
       if (null != assets.assets.large_image) {
         const items = [closure_2, closure_2];
-        assetImage = updateAssets.getAssetImage(application_id, assets.assets.large_image, items);
-        const obj = updateAssets;
+        assetImage = ApplicationAssetUtils.getAssetImage(application_id, assets.assets.large_image, items);
       }
     }
   }

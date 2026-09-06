@@ -1,14 +1,16 @@
 // discord_app/modules/slayer_storefront/hooks/useDisplayProfileSocialLayerStorefrontApplicationIds.tsx
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../SocialLayerStorefrontStore.tsx";
+import _mod12 from "../../../../_runtime/metro/00012__.js";
+import UserProfileGameWidgetTypes from "../../user_profile/UserProfileGameWidgetTypes.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import SocialLayerStorefrontStore from "../SocialLayerStorefrontStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/slayer_storefront/hooks/useDisplayProfileSocialLayerStorefrontApplicationIds.tsx",
 );
 
 export default function useDisplayProfileSocialLayerStorefrontApplicationIds(userId) {
-  let _require;
   let usersPlayingStorefrontEnabledGamesApplicationIds;
   let usersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds;
   let areUsersInSocialLayerStorefrontMutualGuildsApplicationIds;
@@ -31,34 +33,33 @@ export default function useDisplayProfileSocialLayerStorefrontApplicationIds(use
     }
     return items1;
   }, items);
-  usersPlayingStorefrontEnabledGamesApplicationIds = _require(
-    usersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds[3],
-  ).useUsersPlayingStorefrontEnabledGamesApplicationIds({ userIds: memo });
-  let obj = _require(usersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds[3]);
-  usersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds = _require(
-    usersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds[3],
-  ).useUsersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds({ userIds: memo });
-  const obj2 = _require(usersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds[3]);
-  areUsersInSocialLayerStorefrontMutualGuildsApplicationIds = _require(
-    usersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds[3],
-  ).useAreUsersInSocialLayerStorefrontMutualGuildsApplicationIds(memo);
-  const obj3 = _require(usersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds[3]);
+  usersPlayingStorefrontEnabledGamesApplicationIds =
+    require("SocialLayerStorefrontEligibilityHooks").useUsersPlayingStorefrontEnabledGamesApplicationIds({
+      userIds: memo,
+    });
+  let obj = require("SocialLayerStorefrontEligibilityHooks");
+  usersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds =
+    require("SocialLayerStorefrontEligibilityHooks").useUsersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds({
+      userIds: memo,
+    });
+  const obj2 = require("SocialLayerStorefrontEligibilityHooks");
+  areUsersInSocialLayerStorefrontMutualGuildsApplicationIds =
+    require("SocialLayerStorefrontEligibilityHooks").useAreUsersInSocialLayerStorefrontMutualGuildsApplicationIds(memo);
+  const obj3 = require("SocialLayerStorefrontEligibilityHooks");
   let items1 = [stateFromStoresArray];
   const items2 = [tmp];
-  stateFromStoresArray = _require(
-    usersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds[4],
-  ).useStateFromStoresArray(
+  stateFromStoresArray = require("initialize").useStateFromStoresArray(
     items1,
     () => {
       let widgets;
-      if (set != null) {
+      if (closure_0 != null) {
         widgets = tmp.widgets;
       }
       if (null == widgets) {
         return [];
       } else {
         const _Set = Set;
-        set = new Set();
+        const set = new Set();
         let widgets1;
         if (tmp != null) {
           widgets1 = tmp.widgets;
@@ -68,25 +69,22 @@ export default function useDisplayProfileSocialLayerStorefrontApplicationIds(use
         }
         for (const item10011 of widgets1) {
           let tmp5 = item10011;
-          let tmp6 = lib;
-          let tmp7 = usersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds;
-          let tmp8 = item10011;
-          if (item10011 instanceof lib(usersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds[5]).BaseGameWidget) {
+          let tmp6 = require;
+          if (item10011 instanceof UserProfileGameWidgetTypes.BaseGameWidget) {
             let games = tmp5.games;
             let item = games.forEach((gameId) => {
-              const applicationIdFromDetectableId = closure_1_4.getApplicationIdFromDetectableId(gameId.gameId);
+              const applicationIdFromDetectableId = stateFromStoresArray.getApplicationIdFromDetectableId(
+                gameId.gameId,
+              );
               if (null != applicationIdFromDetectableId) {
                 set.add(applicationIdFromDetectableId);
               }
             });
-          } else if (tmp5 instanceof tmp6(tmp7[6]).ApplicationWidget) {
-            let tmp9 = stateFromStoresArray;
-            let tmp10 = item10011;
-            let applicationIdFromDetectableId = stateFromStoresArray.getApplicationIdFromDetectableId(
+          } else if (tmp5 instanceof tmp6(7633).ApplicationWidget) {
+            let applicationIdFromDetectableId = SocialLayerStorefrontStore.getApplicationIdFromDetectableId(
               tmp5.applicationId,
             );
             if (null != applicationIdFromDetectableId) {
-              let tmp13 = applicationIdFromDetectableId;
               let addResult = set.add(tmp12);
             }
           }
@@ -110,9 +108,9 @@ export default function useDisplayProfileSocialLayerStorefrontApplicationIds(use
     stateFromStoresArray,
   ];
   return areUsersInSocialLayerStorefrontMutualGuildsApplicationIds.useMemo(() => {
-    let application;
-    if (lib != null) {
-      application = lib.application;
+    application = undefined;
+    if (application != null) {
+      application = application.application;
     }
     if (null != application) {
       let items = [];
@@ -128,8 +126,7 @@ export default function useDisplayProfileSocialLayerStorefrontApplicationIds(use
           ),
         ),
       );
-      items = lib(usersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds[7]).uniq(items1);
-      const obj = lib(usersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds[7]);
+      items = _mod12.uniq(items1);
     }
     return items;
   }, items3);

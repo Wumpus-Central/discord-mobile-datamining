@@ -1,18 +1,18 @@
 // discord_app/modules/directory_channels/GuildDirectoryStore.tsx
-import set2 from "../../../_runtime/00002_set.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import guildDirectoryEntryFromServer from "GuildDirectoryUtils.tsx";
-import DirectoryEntryTypes from "GuildDirectoryConstants.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import GuildDirectoryUtils from "GuildDirectoryUtils.tsx";
+import GuildDirectoryConstants from "GuildDirectoryConstants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const DirectoryEntryCategories = DirectoryEntryTypes.DirectoryEntryCategories;
+const DirectoryEntryCategories = GuildDirectoryConstants.DirectoryEntryCategories;
 let closure_3 = Object.freeze({});
 let c4 = false;
-let closure_5 = {};
+const dependencyMap = {};
 let closure_6 = {};
-let closure_7 = {};
-let closure_8 = {};
-let closure_9 = {};
+const dependencyMap2 = {};
+const dependencyMap3 = {};
+const dependencyMap4 = {};
 const Store = initializeDefault.Store;
 class GuildDirectoryStore extends Store {}
 const prototype = GuildDirectoryStore.prototype;
@@ -20,17 +20,17 @@ prototype["isFetching"] = function isFetching() {
   return c4;
 };
 prototype["getCurrentCategoryId"] = function getCurrentCategoryId(id) {
-  let ALL = table[id];
+  let ALL = closure_6[id];
   if (ALL == null) {
     ALL = DirectoryEntryCategories.ALL;
   }
   return ALL;
 };
-prototype["getDirectoryEntries"] = function getDirectoryEntries(id, arg1) {
-  if (null != arg1) {
+prototype["getDirectoryEntries"] = function getDirectoryEntries(id, currentCategoryId) {
+  if (null != currentCategoryId) {
     let tmp5;
     if (dependencyMap2[id] != null) {
-      tmp5 = tmp4[arg1];
+      tmp5 = tmp4[currentCategoryId];
     }
     let tmp2 = tmp5;
   } else {
@@ -59,11 +59,11 @@ prototype["getDirectoryCategoryCounts"] = function getDirectoryCategoryCounts(id
   }
   return tmp;
 };
-prototype["getAdminGuildEntryIds"] = function getAdminGuildEntryIds(closure_1) {
-  return dependencyMap4[closure_1];
+prototype["getAdminGuildEntryIds"] = function getAdminGuildEntryIds(arg0) {
+  return dependencyMap4[arg0];
 };
 GuildDirectoryStore.displayName = "GuildDirectoryStore";
-const guildDirectoryStore = new GuildDirectoryStore(dispatcherDefault, {
+const guildDirectoryStore = new GuildDirectoryStore(DispatcherDefault, {
   GUILD_DIRECTORY_FETCH_START: function handleFetchStart() {
     c4 = true;
   },
@@ -72,9 +72,9 @@ const guildDirectoryStore = new GuildDirectoryStore(dispatcherDefault, {
     c4 = false;
     let obj = {};
     obj = {};
-    const item = entries.forEach((entry) => {
-      obj = obj(obj[1]);
-      const result = obj.guildDirectoryEntryFromServer(entry);
+    const item = entries.forEach((item) => {
+      obj = GuildDirectoryUtils;
+      const result = obj.guildDirectoryEntryFromServer(item);
       obj[result.guildId] = result;
       if (null != obj[result.primaryCategoryId]) {
         tmp2[result.primaryCategoryId][result.guildId] = result;
@@ -92,7 +92,7 @@ const guildDirectoryStore = new GuildDirectoryStore(dispatcherDefault, {
   },
   GUILD_DIRECTORY_ENTRY_CREATE: function handleCreateEntry(channelId) {
     channelId = channelId.channelId;
-    let obj = guildDirectoryEntryFromServer;
+    let obj = GuildDirectoryUtils;
     const result = obj.guildDirectoryEntryFromServer(channelId.entry);
     if (null != result) {
       let tmp2;
@@ -114,7 +114,7 @@ const guildDirectoryStore = new GuildDirectoryStore(dispatcherDefault, {
         if (dependencyMap2[channelId] != null) {
           tmp8 = tmp7[UNCATEGORIZED];
         }
-        obj1 = {};
+        const obj1 = {};
         const merged2 = Object.assign(tmp8);
         obj1[result.guildId] = result;
         obj[UNCATEGORIZED] = obj1;
@@ -132,7 +132,6 @@ const guildDirectoryStore = new GuildDirectoryStore(dispatcherDefault, {
           obj2[UNCATEGORIZED] = num + 1;
           tmp12[channelId] = obj2;
         }
-        const tmp4 = dependencyMap2;
       }
     }
   },
@@ -176,7 +175,7 @@ const guildDirectoryStore = new GuildDirectoryStore(dispatcherDefault, {
   },
   GUILD_DIRECTORY_ENTRY_UPDATE: function handleUpdateEntry(channelId) {
     channelId = channelId.channelId;
-    let obj = guildDirectoryEntryFromServer;
+    let obj = GuildDirectoryUtils;
     const result = obj.guildDirectoryEntryFromServer(channelId.entry);
     let tmp6;
     if (dependencyMap[channelId] != null) {
@@ -213,7 +212,7 @@ const guildDirectoryStore = new GuildDirectoryStore(dispatcherDefault, {
       const guildId = result.guildId;
       delete tmp2[tmp];
     }
-    obj1 = {};
+    const obj1 = {};
     const merged4 = Object.assign(tmp14[channelId]);
     obj1[primaryCategoryId] = merged3;
     let tmp21;
@@ -266,14 +265,13 @@ const guildDirectoryStore = new GuildDirectoryStore(dispatcherDefault, {
   },
   GUILD_DIRECTORY_ADMIN_ENTRIES_FETCH_SUCCESS: function handleFetchAdminEntries(channelId) {
     const entries = channelId.entries;
-    let set;
-    set = new Set();
-    const item = entries.forEach((entry) => {
-      set.add(set(closure_1_1[1]).guildDirectoryEntryFromServer(entry).guildId);
+    const set = new Set();
+    const item = entries.forEach((item) => {
+      set.add(GuildDirectoryUtils.guildDirectoryEntryFromServer(item).guildId);
     });
     closure_9[channelId.channelId] = set;
   },
 });
-let result = set2.fileFinishedImporting("modules/directory_channels/GuildDirectoryStore.tsx");
+let result = size.fileFinishedImporting("modules/directory_channels/GuildDirectoryStore.tsx");
 
 export default guildDirectoryStore;

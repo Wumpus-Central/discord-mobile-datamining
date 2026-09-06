@@ -1,44 +1,43 @@
 // discord_app/modules/regional_feature_config/RegionalFeatureConfigUtils.tsx
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import closure_2 from "RegionalFeatureConfigStore.tsx";
+import RegionalFeatureConfigStore from "RegionalFeatureConfigStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/regional_feature_config/RegionalFeatureConfigUtils.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/regional_feature_config/RegionalFeatureConfigUtils.tsx");
 
 export const isFeatureAgeGated = function isFeatureAgeGated(arg0) {
-  return closure_2.isFeatureAgeGated(arg0);
+  return RegionalFeatureConfigStore.isFeatureAgeGated(arg0);
 };
 export const useIsFeatureAgeGated = function useIsFeatureAgeGated(AGE_GATED_SPACES) {
-  const _require = AGE_GATED_SPACES;
-  const items = [closure_2];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
-    closure_1_2.isFeatureAgeGated(closure_0),
-  );
+  _require = AGE_GATED_SPACES;
+  const items = [RegionalFeatureConfigStore];
+  return require("initialize").useStateFromStores(items, () => RegionalFeatureConfigStore.isFeatureAgeGated(closure_0));
 };
 export const isSettingTeenByDefault = function isSettingTeenByDefault(arg0) {
-  return closure_2.isSettingTeenByDefault(arg0);
+  return RegionalFeatureConfigStore.isSettingTeenByDefault(arg0);
 };
 export const useIsSettingTeenByDefault = function useIsSettingTeenByDefault(GUILD_ACTIVITY_STATUS) {
-  const _require = GUILD_ACTIVITY_STATUS;
-  const items = [closure_2];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
-    closure_1_2.isSettingTeenByDefault(closure_0),
+  _require = GUILD_ACTIVITY_STATUS;
+  const items = [RegionalFeatureConfigStore];
+  return require("initialize").useStateFromStores(items, () =>
+    RegionalFeatureConfigStore.isSettingTeenByDefault(closure_0),
   );
 };
 export const hasAgeGatedFeatures = function hasAgeGatedFeatures() {
-  return closure_2.hasAgeGatedFeatures();
+  return RegionalFeatureConfigStore.hasAgeGatedFeatures();
 };
 export const useHasAgeGatedFeatures = function useHasAgeGatedFeatures() {
-  const items = [closure_2];
-  return initialize.useStateFromStores(items, () => closure_2.hasAgeGatedFeatures());
+  const items = [RegionalFeatureConfigStore];
+  return initialize.useStateFromStores(items, () => RegionalFeatureConfigStore.hasAgeGatedFeatures());
 };
 export const hasTeenDefaults = function hasTeenDefaults() {
-  return closure_2.hasTeenDefaults();
+  return RegionalFeatureConfigStore.hasTeenDefaults();
 };
 export const useHasTeenDefaults = function useHasTeenDefaults() {
-  const items = [closure_2];
-  return initialize.useStateFromStores(items, () => closure_2.hasTeenDefaults());
+  const items = [RegionalFeatureConfigStore];
+  return initialize.useStateFromStores(items, () => RegionalFeatureConfigStore.hasTeenDefaults());
 };
 export const shouldCollectAppStoreSignal = function shouldCollectAppStoreSignal() {
-  return closure_2.shouldCollectAppStoreSignal();
+  return RegionalFeatureConfigStore.shouldCollectAppStoreSignal();
 };

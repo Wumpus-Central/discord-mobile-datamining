@@ -1,31 +1,29 @@
 // discord_app/modules/headless_tasks/android/BackgroundSync.tsx
-import timestampDefault from "../../debug/Logger.tsx";
-import databaseNameDefault from "../../app_database/system/DatabaseManager.tsx";
-import closure_3 from "../../gateway/GatewayConnectionStore.tsx";
-import closure_4 from "../../../stores/AuthenticationStore.tsx";
-import closure_5 from "../../../stores/native/AppStateStore.tsx";
+import LoggerDefault from "../../debug/Logger.tsx";
+import DatabaseManagerDefault from "../../app_database/system/DatabaseManager.tsx";
+import background_sync_BackgroundSync from "../../app_database/background_sync/native/BackgroundSync.tsx";
+import GatewayConnectionStore from "../../gateway/GatewayConnectionStore.tsx";
+import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
+import AppStateStore from "../../../stores/native/AppStateStore.tsx";
 
-const require = arg1;
-let closure_6 = new timestampDefault("BackgroundSync");
-let tmp = new timestampDefault("BackgroundSync");
-let result = require("set").fileFinishedImporting("modules/headless_tasks/android/BackgroundSync.tsx");
+require = fn;
+let closure_6 = new LoggerDefault("BackgroundSync");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/headless_tasks/android/BackgroundSync.tsx");
 
 export default (arg0) => {
   closure_0 = arg0;
-  if ("active" === state.getState()) {
+  if ("active" === AppStateStore.getState()) {
     let resolved = Promise.resolve();
   } else {
     if (!tmp) {
-      const result = databaseNameDefault.carefullyOpenDatabase(id.getId());
-      const obj2 = databaseNameDefault;
+      const result = DatabaseManagerDefault.carefullyOpenDatabase(AuthenticationStore.getId());
     }
     resolved = new Promise((arg0) => {
-      closure_1_6.log("Executing BackgroundSync with ", callback);
-      const obj = callback(closure_1_2[5]);
-      callback(closure_1_2[5]).backgroundSync({}).then(arg0);
+      logger.log("Executing BackgroundSync with ", closure_0);
+      background_sync_BackgroundSync.backgroundSync({}).then(arg0);
     });
-    let obj = connected;
-    tmp = connected.isConnected() || connected.isTryingToConnect();
+    tmp = GatewayConnectionStore.isConnected() || GatewayConnectionStore.isTryingToConnect();
   }
   return resolved;
 };

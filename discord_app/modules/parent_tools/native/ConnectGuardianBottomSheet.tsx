@@ -1,47 +1,48 @@
 // discord_app/modules/parent_tools/native/ConnectGuardianBottomSheet.tsx
-import defaultAreStatesEqual from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import messagesProxyDefault from "../FamilyCenter.messages.js";
-import Text from "../../../design/components/Text/native/Text.tsx";
-import Button from "../../../design/components/Button/native/Button.native.tsx";
-import Background from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import useStateFromStores from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import _modDef2396 from "../FamilyCenter.messages.js";
+import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
+import Sheet_BottomSheet from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import useOnNewPendingRequestDefault from "../hooks/useOnNewPendingRequest.tsx";
 import ConnectGuardianCard from "ConnectGuardianCard.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../FamilyCenterStore.tsx";
-import { CONNECT_GUARDIAN_BOTTOM_SHEET_KEY as closure_6 } from "../FamilyCenterConstants.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import FamilyCenterStore from "../FamilyCenterStore.tsx";
 
-require = arg1;
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { container: null, info: null, centered: null, cardContainer: null };
-createCacheKey = {
-  paddingHorizontal: ThemesDefault.space.PX_24,
-  paddingVertical: ThemesDefault.space.PX_24,
-  gap: ThemesDefault.space.PX_24,
+require = fn;
+const View = fn(17).View;
+let closure_6 = fn(7538).CONNECT_GUARDIAN_BOTTOM_SHEET_KEY;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+fn(4560);
+let createStyles = { container: null, info: null, centered: null, cardContainer: null };
+createStyles = {
+  paddingHorizontal: nativeDefault.space.PX_24,
+  paddingVertical: nativeDefault.space.PX_24,
+  gap: nativeDefault.space.PX_24,
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { alignItems: "center", gap: ThemesDefault.space.PX_8 };
-createCacheKey[2] = { textAlign: "center" };
-createCacheKey[3] = { alignItems: "center" };
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { alignItems: "center", gap: ThemesDefault.space.PX_8 };
-const result = require("set").fileFinishedImporting("modules/parent_tools/native/ConnectGuardianBottomSheet.tsx");
+createStyles.container = createStyles;
+createStyles.info = { alignItems: "center", gap: nativeDefault.space.PX_8 };
+createStyles.centered = { textAlign: "center" };
+createStyles.cardContainer = { alignItems: "center" };
+let closure_9 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/native/ConnectGuardianBottomSheet.tsx");
 
 export default function ConnectGuardianBottomSheet(arg0) {
   ({ title, body } = arg0);
   ({ linkCode, expiresAt, onRefresh } = arg0);
-  const tmp = callback();
-  let obj = defaultAreStatesEqual;
-  const items = [closure_5];
-  let stateFromStores = obj.useStateFromStores(items, () => store.getLinkCode());
-  obj1 = defaultAreStatesEqual;
-  const items1 = [closure_5];
-  let stateFromStores1 = obj1.useStateFromStores(items1, () => store.getLinkCodeExpiresAt());
-  callback = React.useCallback(() => {
-    callback(table[8]).hideActionSheet(closure_6);
+  const tmp = closure_9();
+  let obj = useStateFromStores;
+  const items = [FamilyCenterStore];
+  let stateFromStores = obj.useStateFromStores(items, () => FamilyCenterStore.getLinkCode());
+  let obj1 = useStateFromStores;
+  const items1 = [FamilyCenterStore];
+  let stateFromStores1 = obj1.useStateFromStores(items1, () => FamilyCenterStore.getLinkCodeExpiresAt());
+  const callback = noop.useCallback(() => {
+    ActionSheetActionCreatorsDefault.hideActionSheet(closure_1_6);
   }, []);
   useOnNewPendingRequestDefault(callback);
   obj = { style: tmp.container, children: null };
@@ -57,17 +58,17 @@ export default function ConnectGuardianBottomSheet(arg0) {
     const intl = tmp2(1114).intl;
     title = intl.string(tmp7(2396).aCUVfL);
   }
-  obj1[4] = title;
-  const items2 = [closure_7(Text.Text, obj1)];
+  obj1.children = title;
+  const items2 = [React5(Text_Text.Text, obj1)];
   const obj2 = { style: tmp.centered, variant: "text-md/medium", color: "text-default", children: null };
   if (body == null) {
     const intl2 = tmp2(1114).intl;
     body = intl2.format(tmp7(2396)["2O6ltn"], { link: "https://support.discord.com/hc/articles/14155060633623" });
   }
-  obj2[3] = body;
-  items2[1] = closure_7(Text.Text, obj2);
-  obj[1] = items2;
-  const items3 = [closure_8(View, obj), ,];
+  obj2.children = body;
+  items2[1] = React5(Text_Text.Text, obj2);
+  obj.children = items2;
+  const items3 = [React6(View, obj), ,];
   const obj3 = { style: tmp.cardContainer, children: null };
   if (stateFromStores == null) {
     stateFromStores = linkCode;
@@ -77,16 +78,16 @@ export default function ConnectGuardianBottomSheet(arg0) {
     stateFromStores1 = expiresAt;
   }
   const obj5 = { startExpanded: true, children: null };
-  obj4[1] = stateFromStores1;
-  obj4[2] = onRefresh;
-  obj3[1] = closure_7(ConnectGuardianCard.ConnectGuardianCard, obj4);
-  items3[1] = closure_7(View, obj3);
+  obj4.expiresAt = stateFromStores1;
+  obj4.onRefresh = onRefresh;
+  obj3.children = React5(ConnectGuardianCard.ConnectGuardianCard, obj4);
+  items3[1] = React5(View, obj3);
   const obj6 = { variant: "secondary", size: "md", text: null, onPress: null };
   const intl3 = tmp2(1114).intl;
-  obj6[2] = intl3.string(messagesProxyDefault.Hsm5IF);
-  obj6[3] = callback;
-  items3[2] = closure_7(Button.Button, obj6);
-  obj[1] = items3;
-  obj5[1] = closure_8(View, obj);
-  return closure_7(Background.BottomSheet, obj5);
+  obj6.text = intl3.string(_modDef2396.Hsm5IF);
+  obj6.onPress = callback;
+  items3[2] = React5(components_Button_Button.Button, obj6);
+  obj.children = items3;
+  obj5.children = React6(View, obj);
+  return React5(Sheet_BottomSheet.BottomSheet, obj5);
 }

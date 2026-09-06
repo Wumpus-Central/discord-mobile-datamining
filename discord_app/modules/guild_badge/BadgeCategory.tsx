@@ -1,8 +1,8 @@
 // discord_app/modules/guild_badge/BadgeCategory.tsx
-import set from "../../../_runtime/00002_set.js";
-import GuildVisibility from "GuildTraits.tsx";
+import GuildTraits from "GuildTraits.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const obj = {
+const BadgeCategory = {
   PARTNERED: 0,
   [0]: "PARTNERED",
   VERIFIED: 1,
@@ -18,9 +18,9 @@ const obj = {
   NONE: 6,
   [6]: "NONE",
 };
-const result = set.fileFinishedImporting("modules/guild_badge/BadgeCategory.tsx");
+const result = size.fileFinishedImporting("modules/guild_badge/BadgeCategory.tsx");
 
-export const BadgeCategory = obj;
+export { BadgeCategory };
 export const getBadgeCategory = function getBadgeCategory(guildTraits) {
   if (guildTraits.staff) {
     let DISCOVERABLE = obj.STAFF;
@@ -36,7 +36,7 @@ export const getBadgeCategory = function getBadgeCategory(guildTraits) {
       DISCOVERABLE = obj.PARTNERED;
     } else {
       if (guildTraits.community) {
-        if (guildTraits.visibility === GuildVisibility.GuildVisibility.PUBLIC) {
+        if (guildTraits.visibility === GuildTraits.GuildVisibility.PUBLIC) {
           DISCOVERABLE = obj.DISCOVERABLE;
         }
       }

@@ -1,58 +1,61 @@
 // discord_app/modules/display_name_styles/native/DisplayNameStylesColorSwatch.tsx
-import set from "../../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import _mod17 from "../../../../_runtime/metro/00017__.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import int2hslRaw from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import DisplayNameEffect from "../../../../discord_common/js/shared/shared-constants/DisplayNameEffect.tsx";
 import LinearGradientDefault from "../../../../_runtime/04987_LinearGradient.js";
 import GummyStripesDefault from "effects/GummyStripes.tsx";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const View = get_ActivityIndicator.View;
+const utils_ColorUtils = tmp2(1091);
+const View = _mod17.View;
 const jsx = jsxProd.jsx;
 let obj = { colorSwatch: null, gummySwatch: null };
-obj = { width: 24, height: 24, borderRadius: ThemesDefault.radii.xs };
-obj[0] = obj;
-obj[1] = { flexDirection: "row", overflow: "hidden" };
-let closure_5 = createCacheKey.createStyles(obj);
-const result = set.fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesColorSwatch.tsx");
+let size = { width: 24, height: 24, borderRadius: nativeDefault.radii.xs };
+obj.colorSwatch = size;
+obj.gummySwatch = { flexDirection: "row", overflow: "hidden" };
+let closure_5 = createStyles.createStyles(obj);
+const result = size.fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesColorSwatch.tsx");
 
 export default function DisplayNameStylesColorSwatch(colors) {
   colors = colors.colors;
-  const tmp = callback();
+  const tmp = closure_5();
   if (colors.effectId === DisplayNameEffect.DisplayNameEffect.GUMMY) {
     if (colors.length > 0) {
       let obj = { style: null, children: null };
       const items = [,];
       ({ colorSwatch: arr3[0], gummySwatch: arr3[1] } = tmp);
-      obj[0] = items;
-      obj = { colors: null };
-      obj[0] = colors;
-      obj[1] = jsx(GummyStripesDefault, { colors: null });
-      return <View colors={null} />;
+      obj.style = items;
+      obj = { colors };
+      obj.children = jsx(GummyStripesDefault, { colors });
+      return <View colors={colors} />;
     }
   }
   if (colors.length >= 2) {
-    obj1 = { colors: null, start: null, end: null, style: null };
-    obj1[0] = colors.map((color) => callback(table[7]).int2hex(color));
-    obj1[1] = { x: 0, y: 0 };
-    obj1[2] = { x: 1, y: 0 };
-    obj1[3] = tmp.colorSwatch;
-    return jsx(LinearGradientDefault, { colors: null, start: null, end: null, style: null });
+    const obj1 = {
+      colors: colors.map((item) => utils_ColorUtils.int2hex(item)),
+      start: { x: 0, y: 0 },
+      end: { x: 1, y: 0 },
+      style: tmp.colorSwatch,
+    };
+    return jsx(LinearGradientDefault, {
+      colors: colors.map((item) => utils_ColorUtils.int2hex(item)),
+      start: { x: 0, y: 0 },
+      end: { x: 1, y: 0 },
+      style: tmp.colorSwatch,
+    });
   } else {
     let str = "#000000";
     if (colors.length > 0) {
-      str = int2hslRaw.int2hex(colors[0]);
-      const tmp2Result = int2hslRaw;
+      str = utils_ColorUtils.int2hex(colors[0]);
+      const tmp2Result = utils_ColorUtils;
     }
     const obj2 = { style: null };
     const items1 = [tmp.colorSwatch];
-    const obj3 = { backgroundColor: null };
-    obj3[0] = str;
+    const obj3 = { backgroundColor: str };
     items1[1] = obj3;
-    obj2[0] = items1;
+    obj2.style = items1;
     return <View style={null} />;
   }
-  const tmp2 = require;
 }

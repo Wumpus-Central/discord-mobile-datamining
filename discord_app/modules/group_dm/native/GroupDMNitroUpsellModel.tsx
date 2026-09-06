@@ -1,15 +1,16 @@
 // discord_app/modules/group_dm/native/GroupDMNitroUpsellModel.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import isPremiumAtLeast from "../../../utils/PremiumTypeUtils.tsx";
-import closure_2 from "../../../stores/UserStore.tsx";
-import { MAX_GROUP_DM_PARTICIPANTS } from "../../../Constants.tsx";
-import { PremiumTypes } from "../../premium/PremiumConstants.tsx";
+import util from "../../../intl/index.native.tsx";
+import PremiumTypeUtils from "../../../utils/PremiumTypeUtils.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
 
-require = arg1;
+require = fn;
+const MAX_GROUP_DM_PARTICIPANTS = fn(1074).MAX_GROUP_DM_PARTICIPANTS;
+const PremiumTypes = fn(1373).PremiumTypes;
 let obj = { MARKETING: "marketing", CHECKOUT: "checkout" };
 obj = { NONE: "none", MANAGE: "manage", MARKETING: "marketing", CHECKOUT: "checkout" };
-const result = require("set").fileFinishedImporting("modules/group_dm/native/GroupDMNitroUpsellModel.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/group_dm/native/GroupDMNitroUpsellModel.tsx");
 
 export const GroupDMNitroAcquisitionStrategy = obj;
 export const GroupDMNitroUpsellRoute = obj;
@@ -28,12 +29,12 @@ export const getGroupDMNitroAudience = function getGroupDMNitroAudience(premiumT
       str2 = str3;
     }
     str = str2;
-    obj = isPremiumAtLeast;
+    obj = PremiumTypeUtils;
   }
   return str;
 };
 export const useGroupDMNitroAudience = function useGroupDMNitroAudience() {
-  const items = [closure_2];
+  const items = [UserStore];
   return initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     if (currentUser != null) {
@@ -60,7 +61,7 @@ export const useGroupDMNitroAudience = function useGroupDMNitroAudience() {
         str2 = str3;
       }
       str = str2;
-      obj2 = callback(table[3]);
+      obj2 = PremiumTypeUtils;
     }
     return str;
   });
@@ -81,11 +82,11 @@ export const shouldUseGroupDMParticipantLimitUI = function shouldUseGroupDMParti
 };
 export const getGroupDMNitroCapCTAMessage = function getGroupDMNitroCapCTAMessage(groupDMNitroAudience) {
   if ("upgrade" === groupDMNitroAudience) {
-    let yZOtoD = getSystemLocale.t.KfitWs;
+    let yZOtoD = util.t.KfitWs;
   } else if ("acquire" === groupDMNitroAudience) {
-    yZOtoD = getSystemLocale.t.Sqrz1V;
+    yZOtoD = util.t.Sqrz1V;
   } else {
-    yZOtoD = getSystemLocale.t.yZOtoD;
+    yZOtoD = util.t.yZOtoD;
   }
   return yZOtoD;
 };

@@ -1,12 +1,13 @@
 // discord_app/modules/messages/native/renderer/system_messages/InGameMessageNuxSystemMessage.tsx
-import getSystemLocale from "../../../../../intl/index.native.tsx";
-import resultDefault from "../resolveMessageContentColors.tsx";
-import getMessageAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
-import closure_3 from "../../../../applications/ApplicationStore.tsx";
-import { HelpdeskArticles } from "../../../../../Constants.tsx";
+import util from "../../../../../intl/index.native.tsx";
+import resolveMessageContentColorsDefault from "../resolveMessageContentColors.tsx";
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
+import ApplicationStore from "../../../../applications/ApplicationStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting(
+require = fn;
+const HelpdeskArticles = fn(1074).HelpdeskArticles;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/InGameMessageNuxSystemMessage.tsx",
 );
 
@@ -17,29 +18,28 @@ export const createInGameMessageNuxSystemMessage = function createInGameMessageN
   if (str == null) {
     str = "";
   }
-  application = application.getApplication(str);
+  const application = ApplicationStore.getApplication(str);
   if (null == application) {
     return null;
   } else {
-    let obj = getMessageAuthorWithProcessedColor;
+    let obj = useAuthorWithProcessedColor;
     const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-    obj = { username: null, usernameOnClick: null, gameName: null, urlOnClick: null };
-    obj[0] = messageAuthorWithProcessedColor.nick;
-    obj = { message: null, author: null, roleStyle: null };
-    obj[0] = message;
-    obj[1] = messageAuthorWithProcessedColor;
-    obj[2] = roleStyle;
-    obj[1] = tmp(7962)(obj);
-    obj[2] = application.name;
-    obj1 = { action: "bindOpenUrl", url: null, linkColor: null, medium: true };
-    obj1[1] = tmp(2024).getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS);
-    obj1[2] = tmp3.linkColor;
-    obj[3] = obj1;
+    obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: null, gameName: null, urlOnClick: null };
+    obj = { message, author: messageAuthorWithProcessedColor, roleStyle };
+    obj.usernameOnClick = tmp(7962)(obj);
+    obj.gameName = application.name;
+    const obj1 = {
+      action: "bindOpenUrl",
+      url: tmp(2024).getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS),
+      linkColor: tmp3.linkColor,
+      medium: true,
+    };
+    obj.urlOnClick = obj1;
     const obj2 = { content: null };
-    const intl = getSystemLocale.intl;
-    obj2[0] = intl.formatToParts(getSystemLocale.t["92erOB"], obj);
+    const intl = util.intl;
+    obj2.content = intl.formatToParts(util.t["92erOB"], obj);
     const merged = Object.assign(tmp(7964)(message));
     return obj2;
   }
-  tmp3 = resultDefault(theme);
+  tmp3 = resolveMessageContentColorsDefault(theme);
 };

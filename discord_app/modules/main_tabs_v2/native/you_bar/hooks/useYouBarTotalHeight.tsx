@@ -1,18 +1,17 @@
 // discord_app/modules/main_tabs_v2/native/you_bar/hooks/useYouBarTotalHeight.tsx
-import set from "../../../../../../_runtime/00002_set.js";
-import useYouBarHorizontalMargin from "useYouBarMargins.tsx";
-import CONNECTION_BANNER_HEIGHT from "../YouBarConstants.tsx";
+import useYouBarMargins from "useYouBarMargins.tsx";
+import YouBarConstants from "../YouBarConstants.tsx";
 import useConnectionBannerHeight from "useConnectionBannerHeight.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-const YOU_BAR_HEIGHT = CONNECTION_BANNER_HEIGHT.YOU_BAR_HEIGHT;
-const result = set.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarTotalHeight.tsx");
+const YOU_BAR_HEIGHT = YouBarConstants.YOU_BAR_HEIGHT;
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarTotalHeight.tsx");
 
 export const useYouBarTotalHeight = function useYouBarTotalHeight(arg0) {
   let num = arg0;
   if (arg0 === undefined) {
     num = 0;
   }
-  const youBarBottomMargin = useYouBarHorizontalMargin.useYouBarBottomMargin();
-  const obj = useYouBarHorizontalMargin;
+  const youBarBottomMargin = useYouBarMargins.useYouBarBottomMargin();
   return youBarBottomMargin + YOU_BAR_HEIGHT + useConnectionBannerHeight.useConnectionBannerHeight() + num;
 };

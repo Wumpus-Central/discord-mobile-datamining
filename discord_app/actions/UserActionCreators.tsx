@@ -1,399 +1,346 @@
 // discord_app/actions/UserActionCreators.tsx
-import timestampDefault from "../modules/debug/Logger.tsx";
+import LoggerDefault from "../modules/debug/Logger.tsx";
 import _modDef38 from "../../_runtime/metro/00038__.js";
-import dispatcherDefault from "../Dispatcher.tsx";
-import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import ImpressionNames from "../../discord_common/js/packages/analytics-utils/AnalyticsSchema.tsx";
-import _modDef4753 from "../utils/TrackedHTTPUtils.tsx";
-import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../records/UserRecord.tsx";
-import closure_5 from "../stores/UserStore.tsx";
-import { Endpoints } from "../Constants.tsx";
-import { PSEUDO_GUILD_IDS } from "../modules/routing/RouteConstants.tsx";
-import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import DispatcherDefault from "../Dispatcher.tsx";
+import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import AnalyticsSchema from "../../discord_common/js/packages/analytics-utils/AnalyticsSchema.tsx";
+import TrackedHTTPUtilsDefault from "../utils/TrackedHTTPUtils.tsx";
+import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
+import UserRecord from "../records/UserRecord.tsx";
+import UserStore from "../stores/UserStore.tsx";
 
-require = arg1;
-function _fetchProfile() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    c7 = 0;
-    c8 = 0;
-    c6 = 0;
-    const iter = (function* (arg0) {
-      if (logger === 2) {
-        logger = 3;
-        HermesBuiltin.throwTypeError();
-      } else {
-        let dispatchResult = globalThis;
-        if (tmp6 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            return { value: "HermesInternal", done: null };
-          }
-        } else {
-          try {
-            logger = 2;
-            if (0 === c7) {
-              if (arg0 === 1) {
-                logger = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                logger = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                c4 = tmp3;
-                c3 = tmp7;
-                let callback2;
-                dependencyMap = undefined;
-                c3 = undefined;
-                c4 = undefined;
-                c5 = undefined;
-                c6 = undefined;
-                c7 = undefined;
-                logger = undefined;
-                closure_9 = undefined;
-                dispatchResult = callback;
-                obj1 = callback2;
-                if (callback2 === undefined) {
-                  obj1 = {};
-                }
-                ({
-                  type: c1,
-                  withMutualGuilds: c2,
-                  withMutualFriendsCount: c3,
-                  withMutualFriends: c4,
-                  guildId: c5,
-                  connectionsRoleId: c6,
-                  joinRequestId: c7,
-                  abortSignal: c8,
-                } = obj1);
-                closure_9 = dependencyMap;
-                closure_10 = undefined;
-                closure_11 = undefined;
-                closure_12 = undefined;
-                c7 = 1;
-                logger = 1;
-                return { value: "PX_16", done: true };
-              }
-            } else if (1 === tmp7) {
-              if (arg0 === 1) {
-                logger = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                logger = 3;
-                let obj2 = { value: null, done: true };
-                obj2[0] = arg1;
-                return obj2;
-              } else {
-                dispatchResult = c3;
-                dispatchResult = c4;
-                const _Date = Date;
-                closure_10 = Date.now();
-                dispatchResult = callback2;
-                dispatchResult = dependencyMap;
-                const obj3 = { type: "USER_PROFILE_FETCH_START", userId: null, guildId: null, withMutualFriends: null };
-                dispatchResult = callback;
-                obj3[1] = callback;
-                dispatchResult = c5;
-                obj3[2] = c5;
-                dispatchResult = c4;
-                obj3[3] = c4;
-                dispatchResult = callback2(573).dispatch(obj3);
-                dispatchResult = c3;
-                c6 = 1;
-                dispatchResult = c5;
-                let tmp68;
-                if (null != c5) {
-                  if (!c7.includes(c5)) {
-                    tmp68 = c5;
-                  }
-                }
-                closure_11 = tmp68;
-                const HTTP = callback(1272).HTTP;
-                let obj4 = { url: null, query: null, signal: null, rejectWithError: true };
-                obj4[0] = c6.USER_PROFILE(callback);
-                const obj5 = {
-                  type: null,
-                  with_mutual_guilds: null,
-                  with_mutual_friends: null,
-                  with_mutual_friends_count: null,
-                  guild_id: null,
-                  connections_role_id: null,
-                  join_request_id: null,
-                };
-                obj5[0] = callback2;
-                obj5[1] = dependencyMap;
-                obj5[2] = c4;
-                let tmp79 = c3;
-                if (c3) {
-                  let tmp82 = null == c4;
-                  if (!tmp82) {
-                    tmp82 = !c4;
-                  }
-                  tmp79 = tmp82;
-                }
-                obj5[3] = tmp79;
-                obj5[4] = closure_11;
-                obj5[5] = c6;
-                obj5[6] = c7;
-                obj4[1] = obj5;
-                obj4[2] = logger;
-                c7 = 3;
-                logger = 1;
-                const obj6 = { value: null, done: false };
-                obj6[0] = HTTP.get(obj4);
-                return obj6;
-              }
-            } else if (2 === tmp7) {
-              c6 = 0;
-              closure_13 = c5;
-              let tmp39 = null != closure_13;
-              if (tmp39) {
-                let body;
-                if (closure_13 != null) {
-                  body = closure_13.body;
-                }
-                tmp39 = null != body;
-              }
-              if (tmp39) {
-                const _HermesInternal = HermesInternal;
-                logger.warn("fetchProfile error: " + closure_13.body.code + " - " + closure_13.body.message);
-              }
-              let obj7 = callback2(573);
-              obj7 = {
-                type: "USER_PROFILE_FETCH_FAILURE",
-                apiError: null,
-                fetchStartedAt: null,
-                userId: null,
-                guildId: null,
-              };
-              const aPIError = new callback(4461).APIError(closure_13);
-              obj7[1] = aPIError;
-              obj7[2] = closure_10;
-              obj7[3] = callback;
-              obj7[4] = c5;
-              obj7.dispatch(obj7);
-              throw closure_13;
-            } else if (arg0 === 1) {
-              logger = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 0;
-              logger = 3;
-              const obj8 = { value: null, done: true };
-              obj8[0] = arg1;
-              return obj8;
-            } else {
-              dispatchResult = c3;
-              closure_12 = arg1;
-              if (closure_9 != null) {
-                dispatchResult(closure_12.body, c5);
-              }
-              obj = callback2(573);
-              const obj9 = { type: "USER_UPDATE", user: null };
-              obj9[1] = closure_12.body.user;
-              obj.dispatch(obj9);
-              obj2 = callback2(573);
-              const obj10 = {
-                type: "USER_PROFILE_FETCH_SUCCESS",
-                userProfile: null,
-                fetchStartedAt: null,
-                guildId: null,
-              };
-              obj10[1] = closure_12.body;
-              obj10[2] = closure_10;
-              obj10[3] = c5;
-              obj2.dispatch(obj10);
-              let tmp25 = null != c5;
-              if (tmp25) {
-                tmp25 = null != closure_12.body.guild_member;
-              }
-              if (tmp25) {
-                obj4 = callback2(573);
-                const obj11 = { type: "GUILD_MEMBER_PROFILE_UPDATE", guildId: null, guildMember: null };
-                obj11[1] = c5;
-                obj11[2] = closure_12.body.guild_member;
-                obj4.dispatch(obj11);
-              }
-              c6 = 0;
-              logger = 3;
-              return { value: "HermesInternal", done: null };
-            }
-          } catch (tmp91) {
-            c5 = tmp91;
-            if (tmp4 === c6) {
-              logger = tmp2;
-              throw tmp91;
-            } else {
-              c7 = dispatchResult;
-            }
-          }
-        }
-      }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_9 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+require = fn;
+let closure_9 = async function _fetchProfile(arg0, value) {
+  if (c8 === 2) {
+    c8 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
   } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _fetchMutualFriends() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c6 = 0;
-    c7 = 0;
-    c5 = 0;
-    return (function* (arg0, arg1) {
-      if (c7 === 2) {
-        c7 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
+    try {
+      c8 = 2;
+      if (0 === c7) {
         if (arg0 === 1) {
-          throw arg1;
+          c8 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c8 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
+          closure_4 = tmp3;
+          closure_3 = tmp7;
+          closure_131_1 = undefined;
+          closure_131_2 = undefined;
+          closure_131_3 = undefined;
+          closure_131_4 = undefined;
+          closure_131_5 = undefined;
+          closure_131_6 = undefined;
+          closure_131_7 = undefined;
+          closure_131_8 = undefined;
+          closure_131_9 = undefined;
+          closure_131_0 = closure_0;
+          let obj1 = closure_1;
+          if (closure_1 === undefined) {
+            obj1 = {};
+          }
+          ({
+            type: closure_131_1,
+            withMutualGuilds: closure_131_2,
+            withMutualFriendsCount: closure_131_3,
+            withMutualFriends: closure_131_4,
+            guildId: closure_131_5,
+            connectionsRoleId: closure_131_6,
+            joinRequestId: closure_131_7,
+            abortSignal: closure_131_8,
+          } = obj1);
+          closure_131_9 = closure_2;
+          closure_131_10 = undefined;
+          closure_131_11 = undefined;
+          closure_131_12 = undefined;
+          c7 = 1;
+          c8 = 1;
+          return { value: "PX_16", done: true };
+        }
+      } else if (1 === tmp7) {
+        if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c8 = 3;
+          let obj2 = { value, done: true };
+          return obj2;
+        } else {
+          const _Date = Date;
+          closure_131_10 = Date.now();
+          const obj3 = {
+            type: "USER_PROFILE_FETCH_START",
+            userId: closure_131_0,
+            guildId: closure_131_5,
+            withMutualFriends: closure_131_4,
+          };
+          closure_132_1(closure_132_2[7]).dispatch(obj3);
+          c6 = 1;
+          let tmp68;
+          if (null != closure_131_5) {
+            if (!closure_132_7.includes(closure_131_5)) {
+              tmp68 = closure_131_5;
+            }
+          }
+          closure_131_11 = tmp68;
+          const HTTP = closure_132_0(closure_132_2[6]).HTTP;
+          const request = {
+            url: closure_132_6.USER_PROFILE(closure_131_0),
+            query: null,
+            signal: null,
+            rejectWithError: true,
+          };
+          let obj4 = {
+            type: closure_131_1,
+            with_mutual_guilds: closure_131_2,
+            with_mutual_friends: closure_131_4,
+            with_mutual_friends_count: null,
+            guild_id: null,
+            connections_role_id: null,
+            join_request_id: null,
+          };
+          let tmp79 = closure_131_3;
+          if (closure_131_3) {
+            let tmp82 = null == closure_131_4;
+            if (!tmp82) {
+              tmp82 = !closure_131_4;
+            }
+            tmp79 = tmp82;
+          }
+          obj4.with_mutual_friends_count = tmp79;
+          obj4.guild_id = closure_131_11;
+          obj4.connections_role_id = closure_131_6;
+          obj4.join_request_id = closure_131_7;
+          request.query = obj4;
+          request.signal = closure_131_8;
+          c7 = 3;
+          c8 = 1;
+          const obj5 = { value: HTTP.get(request), done: false };
+          return obj5;
+        }
+      } else if (2 === tmp7) {
+        c6 = 0;
+        closure_131_13 = closure_5;
+        let tmp39 = null != closure_131_13;
+        if (tmp39) {
+          let body;
+          if (closure_131_13 != null) {
+            body = closure_131_13.body;
+          }
+          tmp39 = null != body;
+        }
+        if (tmp39) {
+          const _HermesInternal = HermesInternal;
+          closure_132_8.warn("fetchProfile error: " + closure_131_13.body.code + " - " + closure_131_13.body.message);
+        }
+        let obj7 = closure_132_1(closure_132_2[7]);
+        const obj6 = {
+          type: "USER_PROFILE_FETCH_FAILURE",
+          apiError: null,
+          fetchStartedAt: null,
+          userId: null,
+          guildId: null,
+        };
+        const aPIError = new closure_132_0(closure_132_2[11]).APIError(closure_131_13);
+        obj6.apiError = aPIError;
+        obj6.fetchStartedAt = closure_131_10;
+        obj6.userId = closure_131_0;
+        obj6.guildId = closure_131_5;
+        obj7.dispatch(obj6);
+        throw closure_131_13;
+      } else if (arg0 === 1) {
+        c8 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 0;
+        c8 = 3;
+        obj7 = { value, done: true };
+        return obj7;
+      } else {
+        closure_131_12 = value;
+        if (closure_131_9 != null) {
+          tmp101(closure_131_12.body, closure_131_5);
+        }
+        obj = closure_132_1(closure_132_2[7]);
+        const obj8 = { type: "USER_UPDATE", user: closure_131_12.body.user };
+        obj.dispatch(obj8);
+        obj2 = closure_132_1(closure_132_2[7]);
+        const obj9 = {
+          type: "USER_PROFILE_FETCH_SUCCESS",
+          userProfile: closure_131_12.body,
+          fetchStartedAt: closure_131_10,
+          guildId: closure_131_5,
+        };
+        obj2.dispatch(obj9);
+        let tmp25 = null != closure_131_5;
+        if (tmp25) {
+          tmp25 = null != closure_131_12.body.guild_member;
+        }
+        if (tmp25) {
+          obj4 = closure_132_1(closure_132_2[7]);
+          const obj10 = {
+            type: "GUILD_MEMBER_PROFILE_UPDATE",
+            guildId: closure_131_5,
+            guildMember: closure_131_12.body.guild_member,
+          };
+          obj4.dispatch(obj10);
+        }
+        c6 = 0;
+        c8 = 3;
+        return { value: "HermesInternal", done: null };
+      }
+    } catch (tmp91) {
+      closure_5 = tmp91;
+      if (tmp4 === c6) {
+        c8 = tmp2;
+        throw tmp91;
+      } else {
+        c7 = tmp;
+      }
+    }
+  }
+};
+let closure_10 = async function _fetchMutualFriends(userId, signal) {
+  c6 = 0;
+  c7 = 0;
+  c5 = 0;
+  return (async (arg0, value) => {
+    if (c7 === 2) {
+      c7 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c7 = 2;
+        if (0 === c6) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_3 = tmp3;
+            closure_2 = tmp7;
+            closure_130_0 = userId;
+            closure_130_1 = undefined;
+            const obj1 = { type: "MUTUAL_FRIENDS_FETCH_START", userId };
+            DispatcherDefault.dispatch(obj1);
+            c5 = 1;
+            const HTTP = require("HTTPUtils").HTTP;
+            const obj2 = {
+              url: Endpoints.USER_RELATIONSHIPS(userId),
+              oldFormErrors: true,
+              signal,
+              rejectWithError: null,
+            };
+            obj2.rejectWithError = require("HTTPUtils").rejectWithMigratedError();
+            c6 = 2;
+            c7 = 1;
+            let obj3 = { value: HTTP.get(obj2), done: false };
+            return obj3;
+          }
+        } else if (1 === tmp7) {
+          c5 = 0;
+          closure_130_2 = closure_4;
+          let body;
+          if (closure_130_2 != null) {
+            body = closure_130_2.body;
+          }
+          if (null != body) {
+            const _HermesInternal = HermesInternal;
+            closure_131_8.warn(
+              "fetchMutualFriends error: " + closure_130_2.body.code + " - " + closure_130_2.body.message,
+            );
+          }
+          obj3 = closure_131_1(closure_131_2[7]);
+          const obj4 = { type: "MUTUAL_FRIENDS_FETCH_FAILURE", userId: closure_130_0 };
+          obj3.dispatch(obj4);
+          throw closure_130_2;
+        } else if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 0;
+          c7 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
+        } else {
+          closure_130_1 = value;
+          obj = closure_131_1(closure_131_2[7]);
+          const obj6 = {
+            type: "MUTUAL_FRIENDS_FETCH_SUCCESS",
+            userId: closure_130_0,
+            mutualFriends: closure_130_1.body,
+          };
+          obj.dispatch(obj6);
+          c5 = 0;
+          c7 = 3;
           return { value: "HermesInternal", done: null };
         }
-      } else {
-        try {
-          c7 = 2;
-          if (0 === c6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_3 = tmp3;
-              closure_2 = tmp7;
-              let lib;
-              obj1 = { type: "MUTUAL_FRIENDS_FETCH_START", userId: null };
-              obj1[1] = callback;
-              lib(closure_1_2[7]).dispatch(obj1);
-              c5 = 1;
-              const HTTP = callback(closure_1_2[6]).HTTP;
-              const obj2 = { url: null, oldFormErrors: true, signal: null, rejectWithError: null };
-              obj2[0] = c6.USER_RELATIONSHIPS(callback);
-              obj2[2] = lib;
-              const obj9 = lib(closure_1_2[7]);
-              obj2[3] = callback(closure_1_2[6]).rejectWithMigratedError();
-              c6 = 2;
-              c7 = 1;
-              let obj3 = { value: null, done: false };
-              obj3[0] = HTTP.get(obj2);
-              return obj3;
-            }
-          } else if (1 === tmp7) {
-            c5 = 0;
-            closure_2 = closure_4;
-            let body;
-            if (closure_2 != null) {
-              body = closure_2.body;
-            }
-            if (null != body) {
-              const _HermesInternal = HermesInternal;
-              logger.warn("fetchMutualFriends error: " + closure_2.body.code + " - " + closure_2.body.message);
-            }
-            obj3 = lib(closure_2[7]);
-            const obj4 = { type: "MUTUAL_FRIENDS_FETCH_FAILURE", userId: null };
-            obj4[1] = callback;
-            obj3.dispatch(obj4);
-            throw closure_2;
-          } else if (arg0 === 1) {
-            c7 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 0;
-            c7 = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = arg1;
-            return obj5;
-          } else {
-            lib = arg1;
-            obj = lib(closure_2[7]);
-            const obj6 = { type: "MUTUAL_FRIENDS_FETCH_SUCCESS", userId: null, mutualFriends: null };
-            obj6[1] = callback;
-            obj6[2] = lib.body;
-            obj.dispatch(obj6);
-            c5 = 0;
-            c7 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp32) {
-          closure_4 = tmp32;
-          if (tmp4 === c5) {
-            c7 = tmp2;
-            throw tmp32;
-          } else {
-            c6 = tmp;
-          }
+      } catch (tmp32) {
+        closure_4 = tmp32;
+        if (tmp4 === c5) {
+          c7 = tmp2;
+          throw tmp32;
+        } else {
+          c6 = tmp;
         }
       }
-    })();
-  });
-  closure_10 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-let closure_8 = new timestampDefault("UserProfileModalActionCreators");
-const tmp2 = new timestampDefault("UserProfileModalActionCreators");
-const result = require("set").fileFinishedImporting("actions/UserActionCreators.tsx");
+    }
+  })();
+};
+const Endpoints = fn(1074).Endpoints;
+const PSEUDO_GUILD_IDS = fn(1075).PSEUDO_GUILD_IDS;
+let closure_8 = new LoggerDefault("UserProfileModalActionCreators");
+const size = fn(2);
+const result = size.fileFinishedImporting("actions/UserActionCreators.tsx");
 
 export const fetchCurrentUser = function fetchCurrentUser() {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
   }
-  let _require;
   const withAnalyticsToken = obj.withAnalyticsToken;
   _require = tmp;
-  const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
-  obj = {
+  const HTTP = require("HTTPUtils").HTTP;
+  const request = {
     url: Endpoints.ME,
     query: { with_analytics_token: tmp },
     oldFormErrors: true,
-    rejectWithError: require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError(),
+    rejectWithError: require("HTTPUtils").rejectWithMigratedError(),
   };
-  const value = HTTP.get(obj);
+  value = HTTP.get(request);
   return value.then((body) => {
-    let obj = closure_1_1(closure_1_2[7]);
-    obj = { type: "CURRENT_USER_UPDATE", user: body.body, analyticsToken: null };
+    const obj = { type: "CURRENT_USER_UPDATE", user: body.body, analyticsToken: null };
     let analytics_token;
     if (closure_0) {
       analytics_token = body.body.analytics_token;
     }
-    obj[2] = analytics_token;
+    obj.analyticsToken = analytics_token;
     obj.dispatch(obj);
-    return new closure_1_4(body.body);
+    return new UserRecord(body.body);
   });
 };
 export const acceptAgreements = function acceptAgreements() {
@@ -405,26 +352,24 @@ export const acceptAgreements = function acceptAgreements() {
   if (arg1 === undefined) {
     flag2 = true;
   }
-  let obj = _modDef4753;
-  obj = {
+  const request = {
     url: Endpoints.USER_AGREEMENTS,
     trackedActionData: null,
     body: null,
     oldFormErrors: true,
     rejectWithError: null,
   };
-  obj = { event: ImpressionNames.NetworkActionNames.USER_ACCEPT_AGREEMENTS };
-  obj[1] = obj;
-  obj[2] = { terms: flag, privacy: flag2 };
-  obj[4] = sendRequest.rejectWithMigratedError();
-  const obj4 = sendRequest;
-  return obj.patch(obj).then(
+  const obj = { event: AnalyticsSchema.NetworkActionNames.USER_ACCEPT_AGREEMENTS };
+  request.trackedActionData = obj;
+  request.body = { terms: flag, privacy: flag2 };
+  request.rejectWithError = HTTPUtils.rejectWithMigratedError();
+  return obj.patch(request).then(
     () => true,
     () => false,
   );
 };
 export const setFlag = function setFlag(arg0, arg1) {
-  const currentUser = authStore.getCurrentUser();
+  const currentUser = UserStore.getCurrentUser();
   _modDef38(null != currentUser, "setFlag: user cannot be undefined");
   const flags = currentUser.flags;
   if (arg1) {
@@ -432,45 +377,45 @@ export const setFlag = function setFlag(arg0, arg1) {
   } else {
     tmp4 = flags & ~arg0;
   }
-  const HTTP = sendRequest.HTTP;
-  const obj = {
+  const HTTP = HTTPUtils.HTTP;
+  const request = {
     url: Endpoints.ME,
     oldFormErrors: true,
     body: { flags: tmp4 },
-    rejectWithError: sendRequest.rejectWithMigratedError(),
+    rejectWithError: HTTPUtils.rejectWithMigratedError(),
   };
-  return HTTP.patch(obj);
+  return HTTP.patch(request);
 };
 export const getUser = function getUser(arg0) {
-  const _require = arg0;
-  const user = authStore.getUser(arg0);
+  _require = arg0;
+  const user = UserStore.getUser(arg0);
   if (null != user) {
     let resolved = Promise.resolve(user);
   } else {
-    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
-    let obj = { url: null, oldFormErrors: true, rejectWithError: null };
-    obj[0] = Endpoints.USER(arg0);
-    obj[2] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
-    const value = HTTP.get(obj);
+    const HTTP = require("HTTPUtils").HTTP;
+    let obj = {
+      url: Endpoints.USER(arg0),
+      oldFormErrors: true,
+      rejectWithError: require("HTTPUtils").rejectWithMigratedError(),
+    };
+    value = HTTP.get(obj);
     resolved = value.then((body) => {
-      let obj = closure_1_1(closure_1_2[7]);
-      obj = { type: "USER_UPDATE", user: body.body };
+      const obj = { type: "USER_UPDATE", user: body.body };
       obj.dispatch(obj);
-      return closure_1_5.getUser(closure_0);
+      return UserStore.getUser(closure_0);
     });
-    const obj2 = sendRequest;
+    const obj2 = require("HTTPUtils");
   }
   return resolved;
 };
-export const insertStaticUser = function insertStaticUser(id) {
-  let obj = dispatcherDefault;
-  obj = { type: "USER_UPDATE", user: id };
+export const insertStaticUser = function insertStaticUser(user) {
+  const obj = { type: "USER_UPDATE", user };
   obj.dispatch(obj);
-  return authStore.getUser(id.id);
+  return UserStore.getUser(user.id);
 };
-export const fetchProfile = function fetchProfile(id, guildMember, arg2) {
+export const fetchProfile = function fetchProfile() {
   const self = this;
-  const apply = _fetchProfile.apply;
+  const apply = closure_9.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -480,7 +425,7 @@ export const fetchProfile = function fetchProfile(id, guildMember, arg2) {
 };
 export const fetchMutualFriends = function fetchMutualFriends() {
   const self = this;
-  const apply = _fetchMutualFriends.apply;
+  const apply = closure_10.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

@@ -1,453 +1,381 @@
 // discord_app/modules/messages/native/burst_reactions/BurstReactionEffectUtils.tsx
-import closure_2 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import EmojiUtils from "../../../../utils/EmojiUtils.tsx";
+import getBurstAnimation from "../../getBurstAnimation.native.tsx";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-function _generateAnimationSource() {
-  const self = this;
-  const tmp = callback((arg0, arg1, arg2, arg3) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    closure_3 = arg3;
-    c9 = 0;
-    c10 = 0;
-    c8 = 0;
-    return (function* (arg0, arg1, arg2, arg3) {
-      if (c10 === 2) {
+require = fn;
+let closure_7 = async function _generateAnimationSource(arg0, value) {
+  if (c10 === 2) {
+    c10 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp7 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c10 = 2;
+      if (0 === c9) {
+        if (arg0 === 1) {
+          c10 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c10 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_6 = tmp3;
+          closure_5 = tmp5;
+          closure_133_0 = asyncGeneratorStep;
+          closure_133_1 = undefined;
+          closure_133_2 = undefined;
+          closure_133_3 = undefined;
+          closure_133_4 = undefined;
+          closure_133_5 = undefined;
+          closure_133_6 = undefined;
+          closure_133_7 = undefined;
+          closure_133_8 = undefined;
+          closure_133_9 = undefined;
+          closure_133_10 = undefined;
+          closure_133_11 = undefined;
+          c8 = 1;
+          const obj1 = {};
+          const merged = Object.assign(asyncGeneratorStep);
+          obj1.animated = false;
+          const emojiUrl = EmojiUtils.getEmojiUrl(obj1, 128);
+          c4 = emojiUrl;
+          if (emojiUrl == null) {
+            c4 = "";
+          }
+          closure_133_2 = c4;
+          const obj12 = getBurstAnimation;
+          c9 = 2;
+          c10 = 1;
+          let obj2 = {
+            value: obj12.getBurstAnimation(closure_0, closure_1, asyncGeneratorStep.name, closure_3),
+            done: false,
+          };
+          return obj2;
+        }
+      } else if (1 === tmp8) {
+        c8 = 0;
         c10 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp7 === 3) {
+        return { value: null, done: true };
+      } else if (2 === tmp8) {
         if (arg0 === 1) {
-          throw arg1;
+          c10 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          c8 = 0;
+          c10 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c10 = 2;
-          if (0 === c9) {
-            if (arg0 === 1) {
-              c10 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c10 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_6 = tmp3;
-              closure_5 = tmp5;
-              const lib = closure_2;
-              dependencyMap = undefined;
-              closure_2 = undefined;
-              let lib2;
-              closure_4 = undefined;
-              closure_5 = undefined;
-              closure_6 = undefined;
-              let table;
-              let dependencyMap2;
-              c9 = undefined;
-              c10 = undefined;
-              closure_11 = undefined;
-              dependencyMap2 = 1;
-              obj1 = {};
-              const merged = Object.assign(closure_2);
-              obj1.animated = false;
-              const emojiUrl = lib(4217).getEmojiUrl(obj1, 128);
-              closure_4 = emojiUrl;
-              if (emojiUrl == null) {
-                closure_4 = "";
-              }
-              closure_2 = closure_4;
-              const obj12 = lib(7785);
-              c9 = 2;
-              c10 = 1;
-              let obj2 = { value: null, done: false };
-              obj2[0] = obj12.getBurstAnimation(lib, dependencyMap, closure_2.name, lib2);
-              return obj2;
-            }
-          } else if (1 === tmp8) {
-            dependencyMap2 = 0;
-            c10 = 3;
-            return { value: null, done: true };
-          } else if (2 === tmp8) {
-            if (arg0 === 1) {
-              c10 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              dependencyMap2 = 0;
-              c10 = 3;
-              const obj3 = { value: null, done: true };
-              obj3[0] = arg1;
-              return obj3;
-            } else {
-              lib2 = arg1;
-              if ("" !== closure_2) {
-                let obj8 = lib(1396);
-                dependencyMap = obj8.makeSource(closure_2);
-                const ImageManager3 = closure_5.ImageManager;
-                c9 = 3;
-                c10 = 1;
-                let obj4 = { value: null, done: false };
-                obj4[0] = ImageManager3.getAvatarBase64(dependencyMap);
-                return obj4;
-              } else {
-                const ImageManager2 = closure_5.ImageManager;
-                c9 = 4;
-                c10 = 1;
-                const obj5 = { value: null, done: false };
-                obj5[0] = ImageManager2.getEmojiBase64(lib.name, 128);
-                return obj5;
-              }
-            }
-          } else {
-            if (3 === tmp8) {
-              if (arg0 === 1) {
-                c10 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                dependencyMap2 = 0;
-                c10 = 3;
-                const obj6 = { value: null, done: true };
-                obj6[0] = arg1;
-                return obj6;
-              } else {
-                closure_4 = arg1;
-                const _HermesInternal2 = HermesInternal;
-                lib2.assets[0].p = "data:image/png;base64," + closure_4;
-              }
-            } else if (4 === tmp8) {
-              if (arg0 === 1) {
-                c10 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                dependencyMap2 = 0;
-                c10 = 3;
-                const obj7 = { value: null, done: true };
-                obj7[0] = arg1;
-                return obj7;
-              } else {
-                const _HermesInternal = HermesInternal;
-                closure_5 = "data:image/png;base64," + arg1;
-                lib2.assets[0].p = closure_5;
-                obj2 = lib(1396);
-                dependencyMap = obj2.makeSource(closure_5);
-              }
-            } else if (arg0 === 1) {
-              c10 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              dependencyMap2 = 0;
-              c10 = 3;
-              obj8 = { value: null, done: true };
-              obj8[0] = arg1;
-              return obj8;
-            } else {
-              table = arg1;
-              dependencyMap2 = lib2(table[0], 3);
-              c9 = 5;
-              c10 = 32;
-              closure_11 = 19;
-              const obj9 = { r: null, g: null, b: null };
-              obj9[0] = c9;
-              obj9[1] = c10;
-              obj9[2] = closure_11;
-              closure_6 = lib(7822).replaceAnimationColors(closure_6, obj9);
-              const _JSON2 = JSON;
-              dependencyMap2 = 0;
-              c10 = 3;
-              obj = { value: null, done: true };
-              obj[0] = JSON.parse(closure_6);
-              return obj;
-            }
-            const _JSON = JSON;
-            closure_6 = JSON.stringify(lib2);
-            if (null == lib.id) {
-              closure_6 = closure_6.replace(/"a":{"a":0,"k":\[64,64/, '"a":{"a":0,"k":[36,36');
-              obj4 = lib(1115);
-              if (obj4.isAndroid()) {
-                closure_6 = closure_6.replace(/"w":128,"h":128/, '"w":72,"h":72');
-              }
-            }
-            const ImageManager = closure_5.ImageManager;
-            c9 = 5;
+          closure_133_3 = value;
+          if ("" !== closure_133_2) {
+            let obj8 = closure_134_0(closure_134_1[6]);
+            closure_133_1 = obj8.makeSource(closure_133_2);
+            const ImageManager3 = closure_134_5.ImageManager;
+            c9 = 3;
             c10 = 1;
-            const obj10 = { value: null, done: false };
-            obj10[0] = ImageManager.getDominantColors(dependencyMap);
-            return obj10;
-          }
-        } catch (tmp47) {
-          table = tmp47;
-          if (tmp4 === dependencyMap2) {
-            c10 = tmp2;
-            throw tmp47;
+            let obj4 = { value: ImageManager3.getAvatarBase64(closure_133_1), done: false };
+            return obj4;
           } else {
-            c9 = tmp;
+            const ImageManager2 = closure_134_5.ImageManager;
+            c9 = 4;
+            c10 = 1;
+            const obj5 = { value: ImageManager2.getEmojiBase64(closure_133_0.name, 128), done: false };
+            return obj5;
           }
-        }
-      }
-    })();
-  });
-  closure_7 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _generateAnimationSourceFromLocalImage() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c5 = 0;
-    c6 = 0;
-    c4 = 0;
-    const iter = (function* (arg0) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
         }
       } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let uri = tmp3;
-              dependencyMap = tmp7;
-              let lib;
-              dependencyMap = undefined;
-              ({ animationSource: c0, localImageSource: c1 } = lib);
-              uri = undefined;
-              let callback;
-              c4 = undefined;
-              c5 = undefined;
-              c6 = undefined;
-              let dependencyMap2;
-              closure_8 = undefined;
-              closure_9 = undefined;
-              closure_10 = undefined;
-              c5 = 1;
-              c6 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp7) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              c4 = 1;
-              uri = c6.resolveAssetSource(dependencyMap).uri;
-              callback = lib(1396).makeSource(uri);
-              const ImageManager2 = c5.ImageManager;
-              c5 = 3;
-              c6 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = ImageManager2.getAvatarBase64(callback);
-              return obj2;
-            }
-          } else if (2 === tmp7) {
-            c4 = 0;
-            c6 = 3;
-            return { value: null, done: true };
-          } else if (3 === tmp7) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 0;
-              c6 = 3;
-              const obj3 = { value: null, done: true };
-              obj3[0] = arg1;
-              return obj3;
-            } else {
-              c4 = arg1;
-              const _HermesInternal = HermesInternal;
-              lib.assets[0].p = "data:image/png;base64," + c4;
-              const _JSON2 = JSON;
-              c5 = JSON.stringify(lib);
-              const ImageManager = c5.ImageManager;
-              c5 = 4;
-              c6 = 1;
-              const obj4 = { value: null, done: false };
-              obj4[0] = ImageManager.getDominantColors(callback);
-              return obj4;
-            }
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw arg1;
+        if (3 === tmp8) {
+          if (arg0 === 1) {
+            c10 = 3;
+            throw value;
           } else if (arg0 === 2) {
-            c4 = 0;
-            c6 = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = arg1;
-            return obj5;
+            c8 = 0;
+            c10 = 3;
+            const obj6 = { value, done: true };
+            return obj6;
           } else {
-            c6 = arg1;
-            dependencyMap2 = callback(c6[0], 3);
-            closure_8 = 5;
-            closure_9 = 32;
-            closure_10 = 19;
-            const obj6 = { r: null, g: null, b: null };
-            obj6[0] = closure_8;
-            obj6[1] = closure_9;
-            obj6[2] = closure_10;
-            c5 = lib(7822).replaceAnimationColors(c5, obj6);
-            const _JSON = JSON;
-            c4 = 0;
-            c6 = 3;
-            obj = { value: null, done: true };
-            obj[0] = JSON.parse(c5);
-            return obj;
+            closure_133_4 = value;
+            const _HermesInternal2 = HermesInternal;
+            closure_133_3.assets[0].p = "data:image/png;base64," + closure_133_4;
           }
-        } catch (tmp10) {
-          callback = tmp10;
-          if (tmp4 === c4) {
-            c6 = tmp2;
-            throw tmp10;
+        } else if (4 === tmp8) {
+          if (arg0 === 1) {
+            c10 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c8 = 0;
+            c10 = 3;
+            const obj7 = { value, done: true };
+            return obj7;
           } else {
-            c5 = tmp;
+            const _HermesInternal = HermesInternal;
+            closure_133_5 = "data:image/png;base64," + value;
+            closure_133_3.assets[0].p = closure_133_5;
+            obj2 = closure_134_0(closure_134_1[6]);
+            closure_133_1 = obj2.makeSource(closure_133_5);
+          }
+        } else if (arg0 === 1) {
+          c10 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c8 = 0;
+          c10 = 3;
+          obj8 = { value, done: true };
+          return obj8;
+        } else {
+          closure_133_7 = value;
+          closure_133_8 = closure_134_3(closure_133_7[0], 3);
+          closure_133_9 = closure_133_8[0];
+          closure_133_10 = closure_133_8[1];
+          closure_133_11 = closure_133_8[2];
+          const obj9 = { r: closure_133_9, g: closure_133_10, b: closure_133_11 };
+          closure_133_6 = closure_134_0(closure_134_1[8]).replaceAnimationColors(closure_133_6, obj9);
+          const _JSON2 = JSON;
+          c8 = 0;
+          c10 = 3;
+          obj = { value: JSON.parse(closure_133_6), done: true };
+          return obj;
+        }
+        const _JSON = JSON;
+        closure_133_6 = JSON.stringify(closure_133_3);
+        if (null == closure_133_0.id) {
+          closure_133_6 = closure_133_6.replace(/"a":{"a":0,"k":\[64,64/, '"a":{"a":0,"k":[36,36');
+          obj4 = closure_134_0(closure_134_1[7]);
+          if (obj4.isAndroid()) {
+            closure_133_6 = closure_133_6.replace(/"w":128,"h":128/, '"w":72,"h":72');
           }
         }
+        const ImageManager = closure_134_5.ImageManager;
+        c9 = 5;
+        c10 = 1;
+        const obj10 = { value: ImageManager.getDominantColors(closure_133_1), done: false };
+        return obj10;
       }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_8 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp47) {
+      closure_7 = tmp47;
+      if (tmp4 === c8) {
+        c10 = tmp2;
+        throw tmp47;
+      } else {
+        c9 = tmp;
+      }
+    }
   }
-  return applyArgumentsResult;
-}
-({ NativeModules: c5, Image: closure_6 } = get_ActivityIndicator);
-const result = require("set").fileFinishedImporting(
-  "modules/messages/native/burst_reactions/BurstReactionEffectUtils.tsx",
-);
+};
+let closure_8 = async function _generateAnimationSourceFromLocalImage(arg0, value) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_2 = tmp3;
+          closure_1 = tmp7;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          ({ animationSource: closure_129_0, localImageSource: closure_129_1 } = closure_0);
+          let uri;
+          closure_129_3 = undefined;
+          closure_129_4 = undefined;
+          closure_129_5 = undefined;
+          closure_129_6 = undefined;
+          closure_129_7 = undefined;
+          closure_129_8 = undefined;
+          closure_129_9 = undefined;
+          closure_129_10 = undefined;
+          c5 = 1;
+          c6 = 1;
+          return { value: "PX_16", done: true };
+        }
+      } else if (1 === tmp7) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj1 = { value, done: true };
+          return obj1;
+        } else {
+          c4 = 1;
+          uri = closure_130_6.resolveAssetSource(closure_129_1).uri;
+          closure_129_3 = closure_130_0(closure_130_1[6]).makeSource(uri);
+          const ImageManager2 = closure_130_5.ImageManager;
+          c5 = 3;
+          c6 = 1;
+          const obj2 = { value: ImageManager2.getAvatarBase64(closure_129_3), done: false };
+          return obj2;
+        }
+      } else if (2 === tmp7) {
+        c4 = 0;
+        c6 = 3;
+        return { value: null, done: true };
+      } else if (3 === tmp7) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 0;
+          c6 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_129_4 = value;
+          const _HermesInternal = HermesInternal;
+          closure_129_0.assets[0].p = "data:image/png;base64," + closure_129_4;
+          const _JSON2 = JSON;
+          closure_129_5 = JSON.stringify(closure_129_0);
+          const ImageManager = closure_130_5.ImageManager;
+          c5 = 4;
+          c6 = 1;
+          const obj4 = { value: ImageManager.getDominantColors(closure_129_3), done: false };
+          return obj4;
+        }
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 0;
+        c6 = 3;
+        const obj5 = { value, done: true };
+        return obj5;
+      } else {
+        closure_129_6 = value;
+        closure_129_7 = closure_130_3(closure_129_6[0], 3);
+        closure_129_8 = closure_129_7[0];
+        closure_129_9 = closure_129_7[1];
+        closure_129_10 = closure_129_7[2];
+        const obj6 = { r: closure_129_8, g: closure_129_9, b: closure_129_10 };
+        closure_129_5 = closure_130_0(closure_130_1[8]).replaceAnimationColors(closure_129_5, obj6);
+        const _JSON = JSON;
+        c4 = 0;
+        c6 = 3;
+        obj = { value: JSON.parse(closure_129_5), done: true };
+        return obj;
+      }
+    } catch (tmp10) {
+      closure_3 = tmp10;
+      if (tmp4 === c4) {
+        c6 = tmp2;
+        throw tmp10;
+      } else {
+        c5 = tmp;
+      }
+    }
+  }
+};
+get_ActivityIndicator = fn(17);
+({ NativeModules: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/native/burst_reactions/BurstReactionEffectUtils.tsx");
 
 export const useBurstReactionAnimationSource = function useBurstReactionAnimationSource(channelId) {
   channelId = channelId.channelId;
   const messageId = channelId.messageId;
   const emoji = channelId.emoji;
   const isFullscreen = channelId.isFullscreen;
-  let React;
-  let tmp = isFullscreen(React.useState(null), 2);
-  React = tmp[1];
+  noop = undefined;
+  const tmp = isFullscreen(noop.useState(null), 2);
+  noop = tmp[1];
   const items = [channelId, messageId, emoji, isFullscreen];
-  const effect = React.useEffect(() => {
-    function _getSource() {
-      let self = this;
-      const tmp = emoji(function* () {
-        if (c3 === 2) {
-          c3 = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp5 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            return { value: "HermesInternal", done: null };
-          }
+  const effect = noop.useEffect(() => {
+    closure_0 = async function _getSource(arg0, value) {
+      if (c3 === 2) {
+        c3 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp5 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          let obj = { value, done: true };
+          return obj;
         } else {
-          try {
-            c3 = 2;
-            if (0 === c2) {
-              if (arg0 === 1) {
-                c3 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c3 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                closure_1 = tmp2;
-                closure_0 = tmp3;
-                closure_0 = undefined;
-                if (null != c2) {
-                  c2 = 1;
-                  c3 = 1;
-                  obj1 = { value: null, done: false };
-                  obj1[0] = (function generateAnimationSource(closure_1_0, closure_1_1, arg2, c3) {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c3 = 2;
+          if (0 === c2) {
+            if (arg0 === 1) {
+              c3 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c3 = 3;
+              obj = { value, done: true };
+              return obj;
+            } else {
+              closure_1 = tmp2;
+              closure_0 = tmp3;
+              closure_128_0 = undefined;
+              if (null != c2) {
+                c2 = 1;
+                c3 = 1;
+                const obj1 = {
+                  value: (function generateAnimationSource(arg0, arg1, arg2, c3) {
                     const self = this;
-                    const apply = closure_7.apply;
+                    const apply = closure_1_7.apply;
                     if (typeof apply === "unknown") {
                       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
                     } else {
                       applyArgumentsResult = apply(self, arguments);
                     }
                     return applyArgumentsResult;
-                  })(closure_1_0, closure_1_1, tmp12, c3);
-                  return obj1;
-                } else {
-                  c3 = 3;
-                }
+                  })(closure_0, closure_1, tmp12, c3),
+                  done: false,
+                };
+                return obj1;
+              } else {
+                c3 = 3;
               }
-            } else if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              closure_0 = arg1;
-              closure_1_4(closure_0);
             }
+          } else if (arg0 === 1) {
             c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } catch (tmp18) {
-            c3 = tmp;
-            throw tmp18;
+            throw value;
+          } else if (arg0 !== 2) {
+            closure_128_0 = value;
+            closure_1_4(closure_128_0);
           }
+          c3 = 3;
+          obj = { value, done: true };
+          return obj;
+        } catch (tmp18) {
+          c3 = tmp;
+          throw tmp18;
         }
-      });
-      closure_0 = tmp;
-      let apply = tmp.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
       }
-      return applyArgumentsResult;
-    }
+    };
     !(function getSource() {
       const self = this;
-      const apply = _getSource.apply;
+      const apply = closure_0.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
@@ -462,94 +390,79 @@ export const useSuperReactionAnimationSourceFromLocalImage = function useSuperRe
   animationSource,
 ) {
   animationSource = animationSource.animationSource;
-  const localImageSource = animationSource.localImageSource;
-  closure_2 = undefined;
-  let tmp = callback2(React.useState(null), 2);
+  let localImageSource = animationSource.localImageSource;
+  const tmp = _slicedToArray(noop.useState(null), 2);
   closure_2 = tmp[1];
   const items = [animationSource, localImageSource];
-  const effect = React.useEffect(() => {
-    function _getSource2() {
-      let self = this;
-      const tmp = callback(function* () {
-        if (c3 === 2) {
-          c3 = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp5 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            return { value: "HermesInternal", done: null };
-          }
+  const effect = noop.useEffect(() => {
+    closure_0 = async function _getSource2(arg0, value) {
+      if (c3 === 2) {
+        c3 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp5 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          let obj = { value, done: true };
+          return obj;
         } else {
-          try {
-            c3 = 2;
-            if (0 === v0) {
-              if (arg0 === 1) {
-                c3 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c3 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                closure_1 = tmp3;
-                closure_0 = tmp2;
-                closure_0 = undefined;
-                obj1 = { animationSource: null, localImageSource: null };
-                obj1[0] = closure_1_0;
-                obj1[1] = closure_1_1;
-                v0 = 1;
-                c3 = 1;
-                const obj2 = { value: null, done: false };
-                obj2[0] = (function generateAnimationSourceFromLocalImage(arg0) {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c3 = 2;
+          if (0 === v1) {
+            if (arg0 === 1) {
+              c3 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c3 = 3;
+              obj = { value, done: true };
+              return obj;
+            } else {
+              localImageSource = tmp3;
+              animationSource = tmp2;
+              closure_128_0 = undefined;
+              const obj1 = { animationSource, localImageSource };
+              v1 = 1;
+              c3 = 1;
+              const obj2 = {
+                value: (function generateAnimationSourceFromLocalImage(arg0) {
                   const self = this;
-                  const apply = closure_8.apply;
+                  const apply = closure_1_8.apply;
                   if (typeof apply === "unknown") {
                     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
                   } else {
                     applyArgumentsResult = apply(self, arguments);
                   }
                   return applyArgumentsResult;
-                })(obj1);
-                return obj2;
-              }
-            } else if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_0 = arg1;
-              v0(closure_0);
-              c3 = 3;
-              return { value: "HermesInternal", done: null };
+                })(obj1),
+                done: false,
+              };
+              return obj2;
             }
-          } catch (tmp14) {
-            c3 = tmp;
-            throw tmp14;
+          } else if (arg0 === 1) {
+            c3 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_128_0 = value;
+            v1(closure_128_0);
+            c3 = 3;
+            return { value: "HermesInternal", done: null };
           }
+        } catch (tmp14) {
+          c3 = tmp;
+          throw tmp14;
         }
-      });
-      closure_0 = tmp;
-      let apply = tmp.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
       }
-      return applyArgumentsResult;
-    }
+    };
     !(function getSource() {
       const self = this;
-      const apply = _getSource2.apply;
+      const apply = closure_0.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {

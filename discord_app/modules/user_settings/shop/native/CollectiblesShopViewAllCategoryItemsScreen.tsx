@@ -1,23 +1,25 @@
 // discord_app/modules/user_settings/shop/native/CollectiblesShopViewAllCategoryItemsScreen.tsx
-import _modDef15845 from "../../../collectibles/native/CollectiblesShopViewAllCategoryItems.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import useNavigation from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
+import useSettingNavigationRoute from "../../core/native/useSettingNavigationRoute.tsx";
+import CollectiblesShopViewAllCategoryItemsDefault from "../../../collectibles/native/CollectiblesShopViewAllCategoryItems.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/user_settings/shop/native/CollectiblesShopViewAllCategoryItemsScreen.tsx",
 );
 
 export default function CollectiblesShopViewAllCategoryItemsScreen() {
-  let obj = stackNavigation(6994);
+  let obj = useSettingNavigationRoute;
   const settingNavigationRoute = obj.useSettingNavigationRoute();
-  stackNavigation = stackNavigation(1483).useStackNavigation();
+  const stackNavigation = useNavigation.useStackNavigation();
   const items = [stackNavigation];
-  const layoutEffect = React.useLayoutEffect(() => {
+  const layoutEffect = noop.useLayoutEffect(() => {
     stackNavigation.setOptions({ headerShown: false });
   }, items);
   obj = {};
-  const obj2 = stackNavigation(1483);
   const merged = Object.assign(settingNavigationRoute.params);
-  return jsx(_modDef15845, {});
+  return jsx(CollectiblesShopViewAllCategoryItemsDefault, {});
 }

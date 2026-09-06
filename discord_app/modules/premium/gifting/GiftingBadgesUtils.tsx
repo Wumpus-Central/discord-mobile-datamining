@@ -1,20 +1,20 @@
 // discord_app/modules/premium/gifting/GiftingBadgesUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
-import initialize from "../../badges/BadgeDirectoryStore.tsx";
-import apexExperiment from "experiments/GiftingBadgeExperiment.tsx";
-import apexExperiment2 from "experiments/GiftingBadgeDesktopExperiment.tsx";
-import closure_3 from "../../../stores/UserStore.tsx";
+import BadgeDirectoryStore from "../../badges/BadgeDirectoryStore.tsx";
+import GiftingBadgeExperiment2 from "experiments/GiftingBadgeExperiment.tsx";
+import GiftingBadgeDesktopExperiment2 from "experiments/GiftingBadgeDesktopExperiment.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-let closure_2 = initialize.getSingleRequirementThreshold;
-let result = set.fileFinishedImporting("modules/premium/gifting/GiftingBadgesUtils.tsx");
+let closure_2 = BadgeDirectoryStore.getSingleRequirementThreshold;
+let result = size.fileFinishedImporting("modules/premium/gifting/GiftingBadgesUtils.tsx");
 
 export const getGiftingBadgeProgressPercent = function getGiftingBadgeProgressPercent(
   badgeProgress,
   currentTier,
   nextTier,
 ) {
-  const tmp = callback(currentTier);
-  const tmp2 = callback(nextTier);
+  const tmp = closure_2(currentTier);
+  const tmp2 = closure_2(nextTier);
   if (null != nextTier) {
     let num6 = 100;
     if (tmp2 > 0) {
@@ -31,10 +31,10 @@ export const getGiftingBadgeProgressPercent = function getGiftingBadgeProgressPe
   return Math.min(Math.max(num3, 0), 100);
 };
 export const useIsGiftingBadgesDesktopEnabled = function useIsGiftingBadgesDesktopEnabled(location) {
-  const GiftingBadgeExperiment = apexExperiment.GiftingBadgeExperiment;
+  const GiftingBadgeExperiment = GiftingBadgeExperiment2.GiftingBadgeExperiment;
   let obj = { location };
   const enabled = GiftingBadgeExperiment.useConfig(obj).enabled;
-  const GiftingBadgeDesktopExperiment = apexExperiment2.GiftingBadgeDesktopExperiment;
+  const GiftingBadgeDesktopExperiment = GiftingBadgeDesktopExperiment2.GiftingBadgeDesktopExperiment;
   let str = "-DISABLED";
   if (enabled) {
     str = "";
@@ -43,22 +43,21 @@ export const useIsGiftingBadgesDesktopEnabled = function useIsGiftingBadgesDeskt
   return GiftingBadgeDesktopExperiment.useConfig(obj).enabled && enabled;
 };
 export const getIsGiftingBadgesDesktopEnabled = function getIsGiftingBadgesDesktopEnabled(location) {
-  const GiftingBadgeExperiment = apexExperiment.GiftingBadgeExperiment;
+  const GiftingBadgeExperiment = GiftingBadgeExperiment2.GiftingBadgeExperiment;
   let obj = { location };
   let enabled = GiftingBadgeExperiment.getConfig(obj).enabled;
   if (enabled) {
-    const GiftingBadgeDesktopExperiment = apexExperiment2.GiftingBadgeDesktopExperiment;
-    obj = { location: null };
-    obj[0] = location;
+    const GiftingBadgeDesktopExperiment = GiftingBadgeDesktopExperiment2.GiftingBadgeDesktopExperiment;
+    obj = { location };
     enabled = GiftingBadgeDesktopExperiment.getConfig(obj).enabled;
   }
   return enabled;
 };
 export const useIsEligibleToShowGiftingBadgeCoachmark = function useIsEligibleToShowGiftingBadgeCoachmark(location) {
   const _location = location.location;
-  const GiftingBadgeExperiment = apexExperiment.GiftingBadgeExperiment;
+  const GiftingBadgeExperiment = GiftingBadgeExperiment2.GiftingBadgeExperiment;
   const enabled = GiftingBadgeExperiment.useConfig({ location: _location }).enabled;
-  const GiftingBadgeDesktopExperiment = apexExperiment2.GiftingBadgeDesktopExperiment;
+  const GiftingBadgeDesktopExperiment = GiftingBadgeDesktopExperiment2.GiftingBadgeDesktopExperiment;
   let str = "-DISABLED";
   if ("web" === location.platform) {
     str = "";
@@ -72,7 +71,7 @@ export const useIsEligibleToShowGiftingBadgeCoachmark = function useIsEligibleTo
     tmp4 = enabled2;
   }
   let tmpResult = tmp(504);
-  const items = [closure_3];
+  const items = [UserStore];
   const stateFromStores = tmpResult.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let flag;

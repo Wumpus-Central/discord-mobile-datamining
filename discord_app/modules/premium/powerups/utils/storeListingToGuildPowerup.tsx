@@ -1,13 +1,13 @@
 // discord_app/modules/premium/powerups/utils/storeListingToGuildPowerup.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import set2 from "../../../emojis/EmojiConstants.tsx";
-import BoostedGuildTiers from "../constants/GuildPowerupsConstants.tsx";
-import GuildFeatures from "../../PremiumConstants.tsx";
+import EmojiConstants from "../../../emojis/EmojiConstants.tsx";
+import GuildPowerupsConstants from "../constants/GuildPowerupsConstants.tsx";
+import PremiumConstants from "../../PremiumConstants.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-({ DEFAULT_SOUND_SLOTS: c0, DEFAULT_STICKER_SLOTS: closure_1 } = GuildFeatures);
-const GuildPowerupType = BoostedGuildTiers.GuildPowerupType;
-const DEFAULT_EMOJI_SLOTS = set2.DEFAULT_EMOJI_SLOTS;
-const result = set.fileFinishedImporting("modules/premium/powerups/utils/storeListingToGuildPowerup.tsx");
+({ DEFAULT_SOUND_SLOTS: closure_0, DEFAULT_STICKER_SLOTS: closure_1 } = PremiumConstants);
+const GuildPowerupType = GuildPowerupsConstants.GuildPowerupType;
+const DEFAULT_EMOJI_SLOTS = EmojiConstants.DEFAULT_EMOJI_SLOTS;
+const result = size.fileFinishedImporting("modules/premium/powerups/utils/storeListingToGuildPowerup.tsx");
 
 export default function storeListingToGuildPowerup(arr, powerup_metadata) {
   powerup_metadata = powerup_metadata.powerup_metadata;
@@ -23,25 +23,22 @@ export default function storeListingToGuildPowerup(arr, powerup_metadata) {
     }
     if (null != powerup_metadata) {
       let obj = {
-        title: null,
-        skuId: null,
-        cost: null,
+        title: powerup_metadata.summary,
+        skuId: powerup_metadata.sku.id,
+        cost: powerup_metadata.boost_price,
         dependencies: null,
         animatedImageUrl: null,
         staticImageUrl: null,
         storeRemovalDate: null,
         deactivationCooldownPeriodDays: null,
       };
-      obj[0] = powerup_metadata.summary;
-      obj[1] = powerup_metadata.sku.id;
-      obj[2] = powerup_metadata.boost_price;
       if (null != powerup_metadata.sku.dependent_sku_id) {
         const items = [powerup_metadata.sku.dependent_sku_id];
         let items1 = items;
       } else {
         items1 = [];
       }
-      obj[3] = items1;
+      obj.dependencies = items1;
       const powerup_metadata2 = powerup_metadata.powerup_metadata;
       let animated_image_url;
       if (powerup_metadata2 != null) {
@@ -50,7 +47,7 @@ export default function storeListingToGuildPowerup(arr, powerup_metadata) {
       if (animated_image_url == null) {
         animated_image_url = powerup_metadata.animated_image_url;
       }
-      obj[4] = animated_image_url;
+      obj.animatedImageUrl = animated_image_url;
       const powerup_metadata3 = powerup_metadata.powerup_metadata;
       let static_image_url;
       if (powerup_metadata3 != null) {
@@ -59,19 +56,19 @@ export default function storeListingToGuildPowerup(arr, powerup_metadata) {
       if (static_image_url == null) {
         static_image_url = powerup_metadata.static_image_url;
       }
-      obj[5] = static_image_url;
+      obj.staticImageUrl = static_image_url;
       const powerup_metadata4 = powerup_metadata.powerup_metadata;
       let store_removal_date;
       if (powerup_metadata4 != null) {
         store_removal_date = powerup_metadata4.store_removal_date;
       }
-      obj[6] = store_removal_date;
+      obj.storeRemovalDate = store_removal_date;
       const powerup_metadata5 = powerup_metadata.powerup_metadata;
       let prop;
       if (powerup_metadata5 != null) {
         prop = powerup_metadata5.deactivation_cooldown_period_days;
       }
-      obj[7] = prop;
+      obj.deactivationCooldownPeriodDays = prop;
       if (GuildPowerupType.LEVEL === category_type) {
         const powerup_metadata6 = powerup_metadata.sku.powerup_metadata;
         let guild_features;
@@ -80,9 +77,9 @@ export default function storeListingToGuildPowerup(arr, powerup_metadata) {
         }
         if (null != guild_features) {
           const sum = DEFAULT_EMOJI_SLOTS + guild_features.additional_emoji_slots;
-          let sum1 = dependent_sku_id + guild_features.additional_sound_slots;
-          let sum2 = closure_1 + guild_features.additional_sticker_slots;
-          dependent_sku_id = powerup_metadata.sku.dependent_sku_id;
+          let sum1 = React + guild_features.additional_sound_slots;
+          let sum2 = framebus + guild_features.additional_sticker_slots;
+          let dependent_sku_id = powerup_metadata.sku.dependent_sku_id;
           let tmp22 = sum;
           let tmp23 = sum2;
           let tmp24 = sum1;
@@ -90,9 +87,6 @@ export default function storeListingToGuildPowerup(arr, powerup_metadata) {
           if (null != dependent_sku_id) {
             do {
               let found = arr.find((sku) => dependent_sku_id === sku.sku.id);
-              let tmp13 = sum2;
-              let tmp14 = sum1;
-              let tmp15 = tmp22;
               let num;
               if (found != null) {
                 let sku = found.sku;
@@ -156,25 +150,23 @@ export default function storeListingToGuildPowerup(arr, powerup_metadata) {
               tmp25 = sum3;
             } while (null != dependent_sku_id);
           }
-          obj = { type: null, features: null };
-          obj[0] = GuildPowerupType.LEVEL;
-          obj1 = {};
+          obj = { type: GuildPowerupType.LEVEL, features: null };
+          const obj1 = {};
           const merged = Object.assign(guild_features);
           obj1.total_emoji_slots = tmp25;
           obj1.total_sound_slots = tmp24;
           obj1.total_sticker_slots = tmp23;
-          obj[1] = obj1;
+          obj.features = obj1;
           const merged1 = Object.assign(obj);
           return obj;
         }
       } else if (tmp7.PERK === category_type) {
-        obj = { type: null, description: null };
-        obj[0] = tmp7.PERK;
+        obj = { type: tmp7.PERK, description: null };
         let str = powerup_metadata.description;
         if (str == null) {
           str = "";
         }
-        obj[1] = str;
+        obj.description = str;
         const merged2 = Object.assign(obj);
         return obj;
       }

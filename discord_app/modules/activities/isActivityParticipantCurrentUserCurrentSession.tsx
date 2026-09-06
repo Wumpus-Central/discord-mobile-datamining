@@ -1,16 +1,15 @@
 // discord_app/modules/activities/isActivityParticipantCurrentUserCurrentSession.tsx
-import closure_0 from "../../stores/AuthenticationStore.tsx";
+import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 
-const result = require("set").fileFinishedImporting(
-  "modules/activities/isActivityParticipantCurrentUserCurrentSession.tsx",
-);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/isActivityParticipantCurrentUserCurrentSession.tsx");
 
 export const isActivityParticipantCurrentUserCurrentSession = function isActivityParticipantCurrentUserCurrentSession(
   userId,
 ) {
   let obj = arg1;
   if (arg1 === undefined) {
-    obj = closure_0;
+    obj = AuthenticationStore;
   }
   const id = obj.getId();
   let tmp3 = userId.userId === id;

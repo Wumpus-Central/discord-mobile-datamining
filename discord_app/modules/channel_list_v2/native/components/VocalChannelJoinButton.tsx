@@ -1,24 +1,23 @@
 // discord_app/modules/channel_list_v2/native/components/VocalChannelJoinButton.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../../../stores/PermissionStore.tsx";
-import closure_7 from "../../../../stores/VoiceStateStore.tsx";
-import ME from "../../../../Constants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import PermissionStore from "../../../../stores/PermissionStore.tsx";
+import VoiceStateStore from "../../../../stores/VoiceStateStore.tsx";
 
-const require = arg1;
-let c3 = importAllResult;
-({ View: c4, Pressable: c5 } = get_ActivityIndicator);
-({ NOOP: closure_8, Permissions: c9 } = ME);
-let closure_11 = createCacheKey.createStyles((arg0, arg1) => {
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, Pressable: hasOwnProperty } = get_ActivityIndicator);
+const Constants = fn(1074);
+({ NOOP: closure_8, Permissions: closure_9 } = Constants);
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_11 = createStyles.createStyles((arg0, arg1) => {
   let obj = {
-    borderRadius: ThemesDefault.radii.xxl,
-    paddingHorizontal: ThemesDefault.space.PX_8,
-    paddingVertical: ThemesDefault.space.PX_4,
-    marginVertical: -ThemesDefault.space.PX_4,
-    backgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT,
+    borderRadius: nativeDefault.radii.xxl,
+    paddingHorizontal: nativeDefault.space.PX_8,
+    paddingVertical: nativeDefault.space.PX_4,
+    marginVertical: -nativeDefault.space.PX_4,
+    backgroundColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT,
     minHeight: 28,
     justifyContent: "center",
     elevation: null,
@@ -33,14 +32,14 @@ let closure_11 = createCacheKey.createStyles((arg0, arg1) => {
   if (arg0) {
     num = 0;
   }
-  obj[7] = num;
-  obj[9] = { width: 0, height: 1 };
-  obj[10] = ThemesDefault.colors.BLACK;
+  obj.elevation = num;
+  obj.shadowOffset = { width: 0, height: 1 };
+  obj.shadowColor = nativeDefault.colors.BLACK;
   let num2 = 0.14;
   if (arg1) {
     num2 = 0.08;
   }
-  obj[11] = num2;
+  obj.shadowOpacity = num2;
   let str = "rgba(255, 255, 255, 0.14)";
   if (arg1) {
     str = "rgba(0, 0, 0, 0.08)";
@@ -51,20 +50,23 @@ let closure_11 = createCacheKey.createStyles((arg0, arg1) => {
     joinButtonIconActive: null,
     joinButtonIconInactive: null,
     joinButtonText: null,
+    borderColor: str,
   };
-  obj[12] = str;
   obj = { tintColor: tmp(576).colors.WHITE };
-  obj[2] = obj;
-  obj[3] = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-  obj1 = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+  obj.joinButtonIconActive = obj;
+  obj.joinButtonIconInactive = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+  const obj1 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
   let num3 = 0;
   if (obj5.isAndroid()) {
     num3 = -2;
   }
-  obj[4] = { marginTop: num3, alignSelf: "center", maxWidth: 64 };
+  obj.joinButtonText = { marginTop: num3, alignSelf: "center", maxWidth: 64 };
   return obj;
 });
-const memoResult = importAllResult.memo(function VocalChannelJoinButton(channel) {
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/channel_list_v2/native/components/VocalChannelJoinButton.tsx");
+
+export default noop.memo(function VocalChannelJoinButton(channel) {
   channel = channel.channel;
   let voiceStates = channel.voiceStates;
   if (voiceStates === undefined) {
@@ -77,12 +79,12 @@ const memoResult = importAllResult.memo(function VocalChannelJoinButton(channel)
   let VJlc0S = dependencyMap;
   const tmp = voiceStates(7873)();
   let obj = channel(4411);
-  let joinButtonText = callback(tmp, obj.isThemeLight(voiceStates(4495)()));
-  obj1 = channel(9471);
+  let joinButtonText = closure_11(tmp, obj.isThemeLight(voiceStates(4495)()));
+  let obj1 = channel(9471);
   const isConnectedToVoiceChannel = obj1.useIsConnectedToVoiceChannel(channel);
   let obj2 = channel(563);
-  const items = [closure_6];
-  const stateFromStores = obj2.useStateFromStores(items, () => !closure_1_6.can(closure_1_9.CONNECT, channel));
+  const items = [PermissionStore];
+  const stateFromStores = obj2.useStateFromStores(items, () => !PermissionStore.can(constants.CONNECT, channel));
   let obj3 = channel(5431);
   const stageParticipantsCount = obj3.useStageParticipantsCount(
     channel.id,
@@ -92,11 +94,11 @@ const memoResult = importAllResult.memo(function VocalChannelJoinButton(channel)
   const tmp2 = voiceStates(4495)();
   const obj5 = channel(5417);
   let tmp3Result = tmp3(563);
-  const items1 = [closure_7];
-  const stateFromStores1 = tmp3Result.useStateFromStores(items1, () => closure_1_7.hasVideo(channel.id));
+  const items1 = [VoiceStateStore];
+  const stateFromStores1 = tmp3Result.useStateFromStores(items1, () => VoiceStateStore.hasVideo(channel.id));
   const sum = stageParticipantsCount + voiceStates.length;
   const items2 = [voiceStates];
-  const memo = importAllResult.useMemo(() => {
+  const memo = noop.useMemo(() => {
     let found;
     if (voiceStates != null) {
       found = voiceStates.find((voiceState) => voiceState.voiceState.selfStream);
@@ -134,17 +136,14 @@ const memoResult = importAllResult.memo(function VocalChannelJoinButton(channel)
     obj = {
       accessibilityRole: "none",
       pointerEvents: "none",
-      onPress: null,
+      onPress,
       accessible: false,
       accessibilityElementsHidden: true,
       importantForAccessibility: "no",
-      style: null,
+      style: joinButtonText.joinButton,
       children: null,
     };
-    obj[2] = closure_8;
-    obj[6] = joinButtonText.joinButton;
-    obj = { style: null, children: null };
-    obj[0] = joinButtonText.joinButtonContent;
+    obj = { style: joinButtonText.joinButtonContent, children: null };
     obj1 = {
       style: null,
       color: "interactive-text-default",
@@ -153,21 +152,19 @@ const memoResult = importAllResult.memo(function VocalChannelJoinButton(channel)
       children: null,
     };
     joinButtonText = joinButtonText.joinButtonText;
-    obj1[0] = joinButtonText;
+    obj1.style = joinButtonText;
     if (connectedUserLimitFormatted == null) {
       const intl2 = tmp3(1114).intl;
       VJlc0S = tmp3(1114).t.VJlc0S;
       connectedUserLimitFormatted = intl2.string(VJlc0S);
     }
-    obj1[4] = connectedUserLimitFormatted;
-    obj[1] = tmp17(tmp3(4556).Text, obj1);
-    obj[7] = tmp17(closure_4, obj);
+    obj1.children = connectedUserLimitFormatted;
+    obj.children = tmp17(tmp3(4556).Text, obj1);
+    obj.children = tmp17(closure_4, obj);
     let tmp17Result = tmp17(closure_5, obj);
-    const tmp26 = closure_5;
-    const tmp28 = closure_4;
   } else if (tmp15) {
     obj2 = {
-      text: null,
+      text: connectedUserLimitFormatted,
       icon: null,
       size: "sm",
       variant: null,
@@ -177,7 +174,6 @@ const memoResult = importAllResult.memo(function VocalChannelJoinButton(channel)
       accessibilityElementsHidden: true,
       importantForAccessibility: "no",
     };
-    obj2[0] = connectedUserLimitFormatted;
     if (!noIcon) {
       if (!isConnectedToVoiceChannel) {
         if (!memo) {
@@ -189,19 +185,18 @@ const memoResult = importAllResult.memo(function VocalChannelJoinButton(channel)
         } else {
           VoiceNormalIcon = tmp3(5101).VoiceNormalIcon;
         }
-        obj3 = { size: "xs", style: null };
-        obj3[1] = items3;
+        obj3 = { size: "xs", style: items3 };
         tmp17Result = tmp17(VoiceNormalIcon, obj3);
       }
       joinButtonIconActive = joinButtonText.joinButtonIconActive;
     }
-    obj2[1] = undefined;
+    obj2.icon = undefined;
     let str2 = "tertiary";
     if (memo) {
       str2 = "destructive";
     }
-    obj2[3] = str2;
-    obj2[4] = closure_8;
+    obj2.variant = str2;
+    obj2.onPress = onPress;
     tmp17Result = tmp17(tmp18, obj2);
   } else {
     const intl = tmp3(1114).intl;
@@ -216,8 +211,3 @@ const memoResult = importAllResult.memo(function VocalChannelJoinButton(channel)
     }
   }
 });
-const result = require("set").fileFinishedImporting(
-  "modules/channel_list_v2/native/components/VocalChannelJoinButton.tsx",
-);
-
-export default memoResult;

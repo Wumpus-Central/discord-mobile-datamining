@@ -1,32 +1,33 @@
 // discord_app/modules/user_settings/account/native/SMSBackupWarningAlert.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import componentDidMountDefault from "../../../../components_native/common/Alert.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import actions_AlertActionCreatorsDefault from "../../../../actions/native/AlertActionCreators.tsx";
+import common_AlertDefault from "../../../../components_native/common/Alert.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-noopAll;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-let closure_5 = createCacheKey.createStyles({
+const require = fn;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const createStyles = fn(4560);
+let closure_5 = createStyles.createStyles({
   title: { textAlign: "center" },
   body: { marginTop: 8, textAlign: "center", lineHeight: 18 },
 });
-const result = require("set").fileFinishedImporting("modules/user_settings/account/native/SMSBackupWarningAlert.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/account/native/SMSBackupWarningAlert.tsx");
 
 export default function SMSBackupWarningAlert(onConfirm) {
   onConfirm = onConfirm.onConfirm;
-  const tmp = callback3();
+  const tmp = closure_5();
   let obj = { cancelText: null, confirmText: null, onConfirm: null, onCancel: null, children: null };
   const intl = onConfirm(1114).intl;
-  obj[0] = intl.string(onConfirm(1114).t["ETE/oC"]);
+  obj.cancelText = intl.string(onConfirm(1114).t["ETE/oC"]);
   const intl2 = onConfirm(1114).intl;
-  obj[1] = intl2.string(onConfirm(1114).t.N86XcP);
-  obj[2] = function onConfirm() {
+  obj.confirmText = intl2.string(onConfirm(1114).t.N86XcP);
+  obj.onConfirm = function onConfirm() {
     onConfirm();
-    closure_1_1(closure_1_2[5]).close();
+    actions_AlertActionCreatorsDefault.close();
   };
-  obj[3] = function onCancel() {
-    return callback(table[5]).close();
+  obj.onCancel = function onCancel() {
+    return actions_AlertActionCreatorsDefault.close();
   };
   obj = {
     style: tmp.title,
@@ -36,12 +37,12 @@ export default function SMSBackupWarningAlert(onConfirm) {
     children: null,
   };
   const intl3 = onConfirm(1114).intl;
-  obj[4] = intl3.string(onConfirm(1114).t.Ed4XQB);
-  const items = [callback(onConfirm(4556).Text, obj)];
+  obj.children = intl3.string(onConfirm(1114).t.Ed4XQB);
+  const items = [closure_3(onConfirm(4556).Text, obj)];
   obj = { style: tmp.body, variant: "text-sm/medium", color: "text-default", children: null };
   const intl4 = onConfirm(1114).intl;
-  obj[3] = intl4.string(onConfirm(1114).t.EDU2Eg);
-  items[1] = callback(onConfirm(4556).Text, obj);
-  obj[4] = items;
-  return callback2(componentDidMountDefault, obj);
+  obj.children = intl4.string(onConfirm(1114).t.EDU2Eg);
+  items[1] = closure_3(onConfirm(4556).Text, obj);
+  obj.children = items;
+  return closure_4(common_AlertDefault, obj);
 }

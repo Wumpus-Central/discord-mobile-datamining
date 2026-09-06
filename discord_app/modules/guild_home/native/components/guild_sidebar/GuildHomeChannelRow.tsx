@@ -1,32 +1,31 @@
 // discord_app/modules/guild_home/native/components/guild_sidebar/GuildHomeChannelRow.tsx
-import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import BaseChannelSubtitleDefault from "../../../../guild_sidebar/native/BaseChannelItem.tsx";
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
-import { Routes } from "../../../../../Constants.tsx";
-import { StaticChannelRoute } from "../../../../channel/ChannelConstants.tsx";
-import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import router_utils from "../../../../routing/router_utils.tsx";
+import BaseChannelItemDefault from "../../../../guild_sidebar/native/BaseChannelItem.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-createCacheKey = { container: null };
-createCacheKey = {
-  marginVertical: require("hairlineWidth").CHANNEL_MARGIN_VERTICAL,
+require = fn;
+const Routes = fn(1074).Routes;
+const StaticChannelRoute = fn(1964).StaticChannelRoute;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { container: null };
+createStyles = {
+  marginVertical: fn(10118).CHANNEL_MARGIN_VERTICAL,
   marginHorizontal: 8,
-  borderRadius: ThemesDefault.radii.md,
+  borderRadius: nativeDefault.radii.md,
 };
-createCacheKey[0] = createCacheKey;
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting(
-  "modules/guild_home/native/components/guild_sidebar/GuildHomeChannelRow.tsx",
-);
+createStyles.container = createStyles;
+let closure_7 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_home/native/components/guild_sidebar/GuildHomeChannelRow.tsx");
 
 export default function GuildHomeChannelRow(selected) {
   selected = selected.selected;
-  let id;
-  id = selected.guild.id;
+  const id = selected.guild.id;
   const items = [id];
-  const callback = React.useCallback(() => {
-    id(closure_1_2[7]).transitionTo(closure_1_4.CHANNEL(id, closure_1_5.GUILD_HOME));
+  const callback = noop.useCallback(() => {
+    router_utils.transitionTo(Routes.CHANNEL(id, StaticChannelRoute.GUILD_HOME));
   }, items);
   const ChannelModes = id(12379).ChannelModes;
   if (selected) {
@@ -38,7 +37,7 @@ export default function GuildHomeChannelRow(selected) {
   }
   let obj = {
     onPress: callback,
-    style: callback().container,
+    style: closure_7().container,
     accessible: true,
     accessibilityLabel: null,
     accessibilityState: null,
@@ -46,17 +45,17 @@ export default function GuildHomeChannelRow(selected) {
     name: null,
     icon: null,
   };
-  const tmp = callback();
+  const tmp = closure_7();
   const intl = tmp5(1114).intl;
-  obj[3] = intl.string(tmp5(1114).t.VbpLyU);
-  obj[4] = { selected };
-  obj[5] = DEFAULT;
+  obj.accessibilityLabel = intl.string(tmp5(1114).t.VbpLyU);
+  obj.accessibilityState = { selected };
+  obj.mode = DEFAULT;
   obj = { name: null, mode: null };
   const intl2 = tmp5(1114).intl;
-  obj[0] = intl2.string(tmp5(1114).t.VbpLyU);
-  obj[1] = DEFAULT;
-  obj[6] = jsx(tmp5(12379).BaseChannelName, { name: null, mode: null });
+  obj.name = intl2.string(tmp5(1114).t.VbpLyU);
+  obj.mode = DEFAULT;
+  obj.name = jsx(tmp5(12379).BaseChannelName, { name: null, mode: null });
   obj = { mode: DEFAULT, IconComponent: tmp5(13841).SignPostIcon };
-  obj[7] = jsx(tmp5(12379).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(13841).SignPostIcon });
-  return jsx(BaseChannelSubtitleDefault, { mode: DEFAULT, IconComponent: tmp5(13841).SignPostIcon });
+  obj.icon = jsx(tmp5(12379).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(13841).SignPostIcon });
+  return jsx(BaseChannelItemDefault, { mode: DEFAULT, IconComponent: tmp5(13841).SignPostIcon });
 }

@@ -1,9 +1,9 @@
 // discord_app/modules/markup/MarkupAttachmentLinkRule.tsx
-import set from "../../../_runtime/00002_set.js";
-import tDefault from "../../../_runtime/04257_t.js";
-import set2 from "../messages/AttachmentUrlConstants.tsx";
+import _modDef4257 from "../../../_runtime/metro/04257__.js";
+import AttachmentUrlConstants from "../messages/AttachmentUrlConstants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const mapped = Array.from(set2.ATTACHMENT_PATH_PREFIXES).map((str) => str.replaceAll("/", ""));
+const mapped = Array.from(AttachmentUrlConstants.ATTACHMENT_PATH_PREFIXES).map((item) => item.replaceAll("/", ""));
 const regExp = new RegExp(
   "^https://(?:[A-Za-z0-9-]+\\.)*(?:(?:media|images)" +
     "(?:-[A-Za-z0-9]+)?" +
@@ -15,23 +15,24 @@ const regExp = new RegExp(
 );
 let obj = { attachmentLink: null };
 obj = {
-  order: tDefault.defaultRules.url.order - 0.5,
+  order: _modDef4257.defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
     return regExp.exec(arg0);
   },
   parse(attachmentUrl) {
-    const items = [{ type: "text", content: attachmentUrl[1] }];
-    return {
+    const obj = {
       type: "attachmentLink",
-      content: items,
+      content: null,
       attachmentUrl: attachmentUrl[0],
       attachmentName: attachmentUrl[1],
     };
+    const items = [{ type: "text", content: attachmentUrl[1] }];
+    obj.content = items;
+    return obj;
   },
 };
-obj[0] = obj;
-const arr = Array.from(set2.ATTACHMENT_PATH_PREFIXES);
-const result = set.fileFinishedImporting("modules/markup/MarkupAttachmentLinkRule.tsx");
+obj.attachmentLink = obj;
+const result = size.fileFinishedImporting("modules/markup/MarkupAttachmentLinkRule.tsx");
 
 export default obj;

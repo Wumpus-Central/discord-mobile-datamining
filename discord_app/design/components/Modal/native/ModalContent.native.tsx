@@ -1,10 +1,10 @@
 // discord_app/design/components/Modal/native/ModalContent.native.tsx
-import { ScrollView } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../Styles/native/createStyles.tsx";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let closure_2 = createCacheKey.createStyles({
+const ScrollView = fn(17).ScrollView;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_2 = createStyles.createStyles({
   scrollContainer: { flex: 1 },
   contentContainer: {
     flexDirection: "column",
@@ -14,8 +14,11 @@ let closure_2 = createCacheKey.createStyles({
     flexGrow: 1,
   },
 });
-const forwardRefResult = importAllResult.forwardRef((children, ref) => {
-  const tmp = callback();
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Modal/native/ModalContent.native.tsx");
+
+export const ModalContent = noop.forwardRef((children, ref) => {
+  const tmp = closure_2();
   return (
     <ScrollView
       style={tmp.scrollContainer}
@@ -28,6 +31,3 @@ const forwardRefResult = importAllResult.forwardRef((children, ref) => {
     </ScrollView>
   );
 });
-const result = require("set").fileFinishedImporting("design/components/Modal/native/ModalContent.native.tsx");
-
-export const ModalContent = forwardRefResult;

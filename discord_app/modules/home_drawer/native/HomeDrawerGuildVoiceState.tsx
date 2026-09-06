@@ -1,22 +1,18 @@
 // discord_app/modules/home_drawer/native/HomeDrawerGuildVoiceState.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import Button from "../../../design/void/native.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
+import _modDef12 from "../../../../_runtime/metro/00012__.js";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
+import native from "../../../design/void/native.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useFetchStreamPreviewDefault from "../../go_live/useFetchStreamPreview.tsx";
 import AvatarPile from "../../../design/components/Pile/native/AvatarPile.native.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../stores/GuildChannelStore.tsx";
-import { GUILD_VOCAL_CHANNELS_KEY } from "../../../stores/GuildChannelStore.tsx";
-import closure_7 from "../../../stores/RelationshipStore.tsx";
-import closure_8 from "../../../stores/UserGuildSettingsStore.tsx";
-import closure_9 from "../../../stores/views/SortedVoiceStateStore.tsx";
-import { ChannelTypes } from "../../../Constants.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import GuildChannelStore from "../../../stores/GuildChannelStore.tsx";
+import RelationshipStore from "../../../stores/RelationshipStore.tsx";
+import UserGuildSettingsStore from "../../../stores/UserGuildSettingsStore.tsx";
+import SortedVoiceStateStore from "../../../stores/views/SortedVoiceStateStore.tsx";
 
-require = arg1;
+require = fn;
 function VoiceUsers(arg0) {
   ({ voiceUsers, guildId: require } = arg0);
   let substr = voiceUsers;
@@ -25,35 +21,36 @@ function VoiceUsers(arg0) {
   }
   let tmp = null;
   if (0 !== voiceUsers.length) {
-    let obj = { style: null, children: null };
-    obj[0] = { flexDirection: "row", alignItems: "center", gap: 4 };
-    obj = { size: null, names: null, totalCount: null, children: null };
-    obj[0] = Button.AvatarSizes.XSMALL;
-    obj[1] = substr.map((username) => username.username);
-    obj[2] = substr.length;
-    obj[3] = substr.map((id) =>
-      closure_1_11(
-        closure_1_0(closure_1_2[11]).Avatar,
-        { size: closure_1_0(closure_1_2[11]).AvatarSizes.XSMALL, user: id, guildId: closure_0, animate: false },
-        id.id,
+    let obj = { style: { flexDirection: "row", alignItems: "center", gap: 4 }, children: null };
+    obj = {
+      size: native.AvatarSizes.XSMALL,
+      names: substr.map((username) => username.username),
+      totalCount: substr.length,
+      children: substr.map((user) =>
+        closure_2_11(native.Avatar, { size: native.AvatarSizes.XSMALL, user, guildId, animate: false }, user.id),
       ),
-    );
-    obj[1] = callback(AvatarPile.AvatarPile, obj);
-    tmp = callback(View, obj);
+    };
+    obj.children = closure_11(AvatarPile.AvatarPile, obj);
+    tmp = closure_11(View, obj);
   }
   return tmp;
 }
 function LiveTag() {
-  const tmp = callback4();
+  const tmp = closure_15();
   let obj = { style: tmp.tag, children: null };
   obj = { variant: "text-xxs/bold", style: tmp.tagText, lineClamp: 1, children: null };
-  const intl = getSystemLocale.intl;
-  obj[3] = intl.string(getSystemLocale.t.dI3q4h).toUpperCase();
-  obj[1] = callback(Text.Text, obj);
-  return callback(View, obj);
+  const intl = util.intl;
+  obj.children = intl.string(util.t.dI3q4h).toUpperCase();
+  obj.children = closure_1_11(Text_Text.Text, obj);
+  return closure_1_11(View, obj);
 }
-({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-createCacheKey = {
+const View = fn(17).View;
+const GUILD_VOCAL_CHANNELS_KEY = fn(2012).GUILD_VOCAL_CHANNELS_KEY;
+const ChannelTypes = fn(1074).ChannelTypes;
+const jsxProd = fn(21);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+fn(4560);
+let createStyles = {
   voiceContainer: { paddingRight: 8, height: 40, gap: 4, justifyContent: "center" },
   streamPreviewShadow: null,
   streamPreview: null,
@@ -61,67 +58,48 @@ createCacheKey = {
   streamPreviewGradient: null,
   streamPreviewBorder: null,
 };
-createCacheKey = { borderRadius: ThemesDefault.radii.sm };
-const merged = Object.assign(ThemesDefault.shadows.SHADOW_MEDIUM);
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { width: 72, height: 44, borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
-createCacheKey[3] = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, opacity: 0.8 };
-createCacheKey[4] = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, opacity: 0.2 };
-let obj1 = { width: 72, height: 44, borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
-createCacheKey[5] = {
+createStyles = { borderRadius: nativeDefault.radii.sm };
+const merged = Object.assign(nativeDefault.shadows.SHADOW_MEDIUM);
+createStyles.streamPreviewShadow = createStyles;
+let size = { width: 72, height: 44, borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
+createStyles.streamPreview = size;
+createStyles.streamPreviewDarkGradient = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, opacity: 0.8 };
+createStyles.streamPreviewGradient = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, opacity: 0.2 };
+const rect = {
   position: "absolute",
   top: 0,
   left: 0,
   right: 0,
   bottom: 0,
   borderWidth: 1,
-  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
-  borderRadius: ThemesDefault.radii.sm,
+  borderColor: nativeDefault.colors.BORDER_SUBTLE,
+  borderRadius: nativeDefault.radii.sm,
 };
-let closure_13 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { tag: null, tagText: null };
-let obj2 = {
-  position: "absolute",
-  top: 0,
-  left: 0,
-  right: 0,
-  bottom: 0,
-  borderWidth: 1,
-  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
-  borderRadius: ThemesDefault.radii.sm,
-};
-obj3[0] = {
+createStyles.streamPreviewBorder = rect;
+let closure_13 = createStyles.createStyles(createStyles);
+createStyles = fn(4560);
+let obj1 = { tag: null, tagText: null };
+const rect1 = {
   paddingHorizontal: 4,
   paddingVertical: 1,
-  borderBottomRightRadius: ThemesDefault.radii.xs,
+  borderBottomRightRadius: nativeDefault.radii.xs,
   overflow: "hidden",
   justifyContent: "center",
   alignItems: "center",
-  backgroundColor: ThemesDefault.unsafe_rawColors.RED_400,
+  backgroundColor: nativeDefault.unsafe_rawColors.RED_400,
   position: "absolute",
   top: 0,
   left: 0,
 };
-createCacheKey = { textAlign: "center", color: ThemesDefault.unsafe_rawColors.WHITE, includeFontPadding: false };
-obj3[1] = createCacheKey;
-let closure_15 = createCacheKey.createStyles(obj3);
-let obj4 = {
-  paddingHorizontal: 4,
-  paddingVertical: 1,
-  borderBottomRightRadius: ThemesDefault.radii.xs,
-  overflow: "hidden",
-  justifyContent: "center",
-  alignItems: "center",
-  backgroundColor: ThemesDefault.unsafe_rawColors.RED_400,
-  position: "absolute",
-  top: 0,
-  left: 0,
-};
-const result = require("set").fileFinishedImporting("modules/home_drawer/native/HomeDrawerGuildVoiceState.tsx");
+obj1.tag = rect1;
+obj1.tagText = { textAlign: "center", color: nativeDefault.unsafe_rawColors.WHITE, includeFontPadding: false };
+let closure_15 = createStyles.createStyles(obj1);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawerGuildVoiceState.tsx");
 
 export const GuildVoiceState = function GuildVoiceState(arg0) {
   ({ voiceUsers, streamingChannelId, streamingUser, guildId } = arg0);
-  const tmp = callback3();
+  const tmp = closure_13();
   let id;
   if (streamingUser != null) {
     id = streamingUser.id;
@@ -136,68 +114,64 @@ export const GuildVoiceState = function GuildVoiceState(arg0) {
       num = 48;
     }
     let obj = { style: null, children: null };
-    obj = { height: null };
-    obj[0] = num;
+    obj = { height: num };
     items[1] = obj;
-    obj[0] = items;
+    obj.style = items;
     if (null == previewUrl) {
-      obj = { voiceUsers: null, guildId: null };
-      obj[0] = voiceUsers;
-      obj[1] = guildId;
+      obj = { voiceUsers, guildId };
       let tmp7Result = tmp7(VoiceUsers, obj);
     } else {
-      obj1 = { style: null, children: null };
-      obj1[0] = tmp.streamPreviewShadow;
-      const obj2 = { style: null, children: null };
-      obj2[0] = tmp.streamPreview;
-      const obj3 = { style: null, source: null };
-      obj3[0] = tmp.streamPreview;
-      const obj4 = { uri: null };
-      obj4[0] = previewUrl;
-      obj3[1] = obj4;
+      const obj1 = { style: tmp.streamPreviewShadow, children: null };
+      const obj2 = { style: tmp.streamPreview, children: null };
+      const obj3 = { style: tmp.streamPreview, source: null };
+      const obj4 = { uri: previewUrl };
+      obj3.source = obj4;
       const items1 = [tmp7(tmp3(5587), obj3), , , ,];
-      const obj5 = { colors: null, start: null, end: null, style: null, pointerEvents: "none" };
-      obj5[0] = ["rgba(0, 0, 0, 1)", "rgba(0, 0, 0, 0)"];
-      obj5[1] = { x: 0, y: 0 };
-      obj5[2] = { x: 0, y: 1 };
-      obj5[3] = tmp.streamPreviewDarkGradient;
+      const obj5 = {
+        colors: ["rgba(0, 0, 0, 1)", "rgba(0, 0, 0, 0)"],
+        start: { x: 0, y: 0 },
+        end: { x: 0, y: 1 },
+        style: tmp.streamPreviewDarkGradient,
+        pointerEvents: "none",
+      };
       items1[1] = tmp7(tmp3(4987), obj5);
-      const obj6 = { colors: null, start: null, end: null, style: null, pointerEvents: "none" };
-      obj6[0] = ["rgba(255, 255, 255, 1)", "rgba(255, 255, 255, 0)"];
-      obj6[1] = { x: 0, y: 0 };
-      obj6[2] = { x: 1, y: 1 };
-      obj6[3] = tmp.streamPreviewGradient;
+      const obj6 = {
+        colors: ["rgba(255, 255, 255, 1)", "rgba(255, 255, 255, 0)"],
+        start: { x: 0, y: 0 },
+        end: { x: 1, y: 1 },
+        style: tmp.streamPreviewGradient,
+        pointerEvents: "none",
+      };
       items1[2] = tmp7(tmp3(4987), obj6);
-      const obj7 = { style: null, pointerEvents: "none" };
-      obj7[0] = tmp.streamPreviewBorder;
+      const obj7 = { style: tmp.streamPreviewBorder, pointerEvents: "none" };
       items1[3] = tmp7(tmp8, obj7);
       items1[4] = tmp7(LiveTag, {});
-      obj2[1] = items1;
-      obj1[1] = callback2(tmp8, obj2);
+      obj2.children = items1;
+      obj1.children = closure_1_12(tmp8, obj2);
       tmp7Result = tmp7(tmp8, obj1);
     }
-    obj[1] = tmp7Result;
+    obj.children = tmp7Result;
     tmp7Result = tmp7(tmp8, obj);
   }
 };
 export const useVoiceUsers = function useVoiceUsers(guild) {
-  const _require = guild;
+  _require = guild;
   const id = guild.id;
-  let obj = _require(isHomeDrawerChannelInChannelList[17]);
+  let obj = require("isHomeDrawerChannelInChannelList");
   isHomeDrawerChannelInChannelList = obj.useIsHomeDrawerChannelInChannelList();
-  let items = [stateFromStores1, closure_8];
+  let items = [stateFromStores1, UserGuildSettingsStore];
   const items1 = [id, isHomeDrawerChannelInChannelList];
-  const stateFromStoresArray = _require(isHomeDrawerChannelInChannelList[18]).useStateFromStoresArray(
+  const stateFromStoresArray = require("initialize").useStateFromStoresArray(
     items,
     () => {
-      const found = stateFromStores1.getChannels(id)[closure_1_6].filter((channel) => {
+      const found = GuildChannelStore.getChannels(id)[GUILD_VOCAL_CHANNELS_KEY].filter((channel) => {
         channel = channel.channel;
-        let tmp = channel.type === closure_1_10.GUILD_VOICE;
+        let tmp = channel.type === constants.GUILD_VOICE;
         if (tmp) {
-          tmp = !closure_1_8.isGuildOrCategoryOrChannelMuted(closure_1, channel.id);
+          tmp = !guildOrCategoryOrChannelMuted.isGuildOrCategoryOrChannelMuted(streamingChannelId, channel.id);
         }
         if (tmp) {
-          tmp = callback(channel);
+          tmp = isHomeDrawerChannelInChannelList(channel);
         }
         return tmp;
       });
@@ -205,45 +179,48 @@ export const useVoiceUsers = function useVoiceUsers(guild) {
     },
     items1,
   );
-  const obj2 = _require(isHomeDrawerChannelInChannelList[18]);
-  const items2 = [closure_9];
+  const obj2 = require("initialize");
+  const items2 = [SortedVoiceStateStore];
   const items3 = [id];
-  const stateFromStores = _require(isHomeDrawerChannelInChannelList[18]).useStateFromStores(
+  const stateFromStores = require("initialize").useStateFromStores(
     items2,
-    () => closure_1_9.getVoiceStates(id),
+    () => SortedVoiceStateStore.getVoiceStates(id),
     items3,
   );
-  const obj3 = _require(isHomeDrawerChannelInChannelList[18]);
-  const items4 = [closure_7];
-  stateFromStores1 = _require(isHomeDrawerChannelInChannelList[18]).useStateFromStores(items4, () =>
+  const obj3 = require("initialize");
+  const items4 = [RelationshipStore];
+  stateFromStores1 = require("initialize").useStateFromStores(items4, () =>
     blockedOrIgnoredIDs.getBlockedOrIgnoredIDs(),
   );
   const items5 = [stateFromStoresArray, stateFromStores, guild.afkChannelId, stateFromStores1];
   const items6 = [stateFromStores, guild.afkChannelId, stateFromStoresArray];
   const memo = stateFromStoresArray.useMemo(
     () =>
-      id(isHomeDrawerChannelInChannelList[19]).flatMap(stateFromStoresArray, (arg0) => {
-        if (arg0 === afkChannelId.afkChannelId) {
+      _modDef12.flatMap(stateFromStoresArray, (arg0) => {
+        if (arg0 === guild.afkChannelId) {
           return [];
         } else {
-          let items = table[arg0];
+          let items = stateFromStores[arg0];
           if (items == null) {
             items = [];
           }
           const mapped = items.map((user) => user.user);
-          return closure_1_0(closure_1_2[20]).filterOutBlockedOrIgnoredUsers(mapped, closure_5);
+          return closure_0(isHomeDrawerChannelInChannelList[20]).filterOutBlockedOrIgnoredUsers(
+            mapped,
+            stateFromStores1,
+          );
         }
       }),
     items5,
   );
   const memo1 = stateFromStoresArray.useMemo(() => {
-    c0 = null;
-    c1 = null;
+    let user = null;
+    streamingChannelId = null;
     const keys = Object.keys(stateFromStores);
-    const item = keys.forEach((arg0) => {
-      if (arg0 !== _null.afkChannelId) {
-        if (closure_1_3.includes(arg0)) {
-          let items = closure_1_4[arg0];
+    const item = keys.forEach((item) => {
+      if (item !== user.afkChannelId) {
+        if (stateFromStoresArray.includes(item)) {
+          let items = stateFromStores[item];
           if (items == null) {
             items = [];
           }
@@ -254,12 +231,12 @@ export const useVoiceUsers = function useVoiceUsers(guild) {
           }
           if (tmp5) {
             user = found.user;
-            closure_1 = arg0;
+            closure_1 = item;
           }
         }
       }
     });
-    return { streamingUser: c0, streamingChannelId: c1 };
+    return { streamingUser: user, streamingChannelId };
   }, items6);
   obj = { voiceUsers: memo, streamingUser: memo1.streamingUser, streamingChannelId: memo1.streamingChannelId };
   return obj;

@@ -1,15 +1,15 @@
 // discord_app/modules/creator_monetization/CreatorMonetizationStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
 
 let map = new Map();
 let map1 = new Map();
-let obj = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHING", FETCHED: 2, [2]: "FETCHED" };
+let FetchState = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHING", FETCHED: 2, [2]: "FETCHED" };
 const Store = initializeDefault.Store;
 class CreatorMonetizationStore extends Store {}
 const prototype = CreatorMonetizationStore.prototype;
 prototype["getPriceTiersFetchStateForGuildAndType"] = function getPriceTiersFetchStateForGuildAndType(arg0, arg1) {
-  let value = map1.get(arg0);
+  map1.get(arg0);
   value = undefined;
   if (value != null) {
     value = value.get(arg1);
@@ -20,7 +20,7 @@ prototype["getPriceTiersFetchStateForGuildAndType"] = function getPriceTiersFetc
   return value;
 };
 prototype["getPriceTiersForGuildAndType"] = function getPriceTiersForGuildAndType(arg0, arg1) {
-  let value = map.get(arg0);
+  map.get(arg0);
   value = undefined;
   if (value != null) {
     value = value.get(arg1);
@@ -28,7 +28,7 @@ prototype["getPriceTiersForGuildAndType"] = function getPriceTiersForGuildAndTyp
   return value;
 };
 CreatorMonetizationStore.displayName = "CreatorMonetizationStore";
-obj = {
+FetchState = {
   CONNECTION_OPEN: function handleConnectionOpen() {
     map.clear();
     map1.clear();
@@ -40,7 +40,7 @@ obj = {
       map = new Map();
       const result = obj.set(guildId, map);
     }
-    const value = obj.get(guildId);
+    value = obj.get(guildId);
     const result1 = value.set(guildId.priceTierType, obj.FETCHING);
   },
   CREATOR_MONETIZATION_PRICE_TIERS_FETCH_SUCCESS: function handleFetchPriceTiersSuccess(priceTiers) {
@@ -50,7 +50,7 @@ obj = {
       map = new Map();
       const result = obj.set(guildId, map);
     }
-    let value = obj.get(guildId);
+    value = obj.get(guildId);
     const result1 = value.set(priceTierType, obj.FETCHED);
     if (!map.has(guildId)) {
       const _Map2 = Map;
@@ -67,12 +67,13 @@ obj = {
       map = new Map();
       const result = obj.set(guildId, map);
     }
-    const value = obj.get(guildId);
+    value = obj.get(guildId);
     const result1 = value.set(guildId.priceTierType, obj.FETCHED);
   },
 };
-const creatorMonetizationStore = new CreatorMonetizationStore(dispatcherDefault, obj);
-let result = require("set").fileFinishedImporting("modules/creator_monetization/CreatorMonetizationStore.tsx");
+const creatorMonetizationStore = new CreatorMonetizationStore(DispatcherDefault, FetchState);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/creator_monetization/CreatorMonetizationStore.tsx");
 
 export default creatorMonetizationStore;
-export const FetchState = obj;
+export { FetchState };

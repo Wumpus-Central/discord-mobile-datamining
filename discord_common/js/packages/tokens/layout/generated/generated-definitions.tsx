@@ -1,5 +1,5 @@
 // discord_common/js/packages/tokens/layout/generated/generated-definitions.tsx
-import set from "../../../../../../_runtime/00002_set.js";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
 let obj = {
   SPACE_0: 0,
@@ -69,33 +69,199 @@ let obj = {
   BREAKPOINT_MAX: "var(--breakpoint-max)",
 };
 obj = {
-  SPACE_0: obj,
-  SPACE_4: obj1,
-  SPACE_6: obj2,
-  SPACE_8: obj3,
-  SPACE_10: obj4,
-  SPACE_12: obj5,
-  SPACE_16: obj6,
-  SPACE_20: obj7,
-  SPACE_24: obj8,
-  SPACE_26: obj9,
-  SPACE_30: obj10,
-  SPACE_32: obj11,
-  SPACE_40: obj12,
-  SPACE_48: obj13,
-  SPACE_64: obj14,
-  SPACE_80: obj15,
-  SPACE_96: obj16,
-  SPACE_128: obj17,
-  SPACE_160: obj18,
-  SPACE_192: obj19,
-  SPACE_XXS: obj20,
-  SPACE_XS: obj21,
-  SPACE_SM: obj22,
-  SPACE_MD: obj23,
-  SPACE_LG: obj24,
-  SPACE_XL: obj25,
-  SPACE_XXL: obj26,
+  SPACE_0: null,
+  SPACE_4: {
+    css: "4px",
+    resolve() {
+      return 4;
+    },
+  },
+  SPACE_6: {
+    css: "6px",
+    resolve() {
+      return 6;
+    },
+  },
+  SPACE_8: {
+    css: "8px",
+    resolve() {
+      return 8;
+    },
+  },
+  SPACE_10: {
+    css: "10px",
+    resolve() {
+      return 10;
+    },
+  },
+  SPACE_12: {
+    css: "12px",
+    resolve() {
+      return 12;
+    },
+  },
+  SPACE_16: {
+    css: "16px",
+    resolve() {
+      return 16;
+    },
+  },
+  SPACE_20: {
+    css: "20px",
+    resolve() {
+      return 20;
+    },
+  },
+  SPACE_24: {
+    css: "24px",
+    resolve() {
+      return 24;
+    },
+  },
+  SPACE_26: {
+    css: "26px",
+    resolve() {
+      return 26;
+    },
+  },
+  SPACE_30: {
+    css: "30px",
+    resolve() {
+      return 30;
+    },
+  },
+  SPACE_32: {
+    css: "32px",
+    resolve() {
+      return 32;
+    },
+  },
+  SPACE_40: {
+    css: "40px",
+    resolve() {
+      return 40;
+    },
+  },
+  SPACE_48: {
+    css: "48px",
+    resolve() {
+      return 48;
+    },
+  },
+  SPACE_64: {
+    css: "64px",
+    resolve() {
+      return 64;
+    },
+  },
+  SPACE_80: {
+    css: "80px",
+    resolve() {
+      return 80;
+    },
+  },
+  SPACE_96: {
+    css: "96px",
+    resolve() {
+      return 96;
+    },
+  },
+  SPACE_128: {
+    css: "128px",
+    resolve() {
+      return 128;
+    },
+  },
+  SPACE_160: {
+    css: "160px",
+    resolve() {
+      return 160;
+    },
+  },
+  SPACE_192: {
+    css: "192px",
+    resolve() {
+      return 192;
+    },
+  },
+  SPACE_XXS: {
+    css: "var(--space-xxs)",
+    resolve(arg0) {
+      return 4;
+    },
+  },
+  SPACE_XS: {
+    css: "var(--space-xs)",
+    resolve(arg0) {
+      if ("compact" === arg0) {
+        return 6;
+      } else if ("cozy" === arg0) {
+        return 10;
+      } else if ("default" === arg0) {
+        return 8;
+      }
+    },
+  },
+  SPACE_SM: {
+    css: "var(--space-sm)",
+    resolve(arg0) {
+      if ("compact" === arg0) {
+        return 10;
+      } else if ("cozy" === arg0) {
+        return 16;
+      } else if ("default" === arg0) {
+        return 12;
+      }
+    },
+  },
+  SPACE_MD: {
+    css: "var(--space-md)",
+    resolve(arg0) {
+      if ("compact" === arg0) {
+        return 12;
+      } else if ("cozy" === arg0) {
+        return 20;
+      } else if ("default" === arg0) {
+        return 16;
+      }
+    },
+  },
+  SPACE_LG: {
+    css: "var(--space-lg)",
+    resolve(arg0) {
+      if ("compact" === arg0) {
+        return 16;
+      } else if ("cozy" === arg0) {
+        return 24;
+      } else if ("default" === arg0) {
+        return 20;
+      }
+    },
+  },
+  SPACE_XL: {
+    css: "var(--space-xl)",
+    resolve(arg0) {
+      if ("compact" === arg0) {
+        return 20;
+      } else if ("cozy" === arg0) {
+        return 30;
+      } else if ("default" === arg0) {
+        return 24;
+      }
+    },
+  },
+  SPACE_XXL: {
+    css: "var(--space-xxl)",
+    resolve(arg0) {
+      if ("compact" === arg0) {
+        return 26;
+      } else if ("cozy" === arg0) {
+        return 40;
+      } else if ("default" === arg0) {
+        return 32;
+      }
+    },
+  },
 };
 obj = {
   css: "0px",
@@ -103,7 +269,8 @@ obj = {
     return 0;
   },
 };
-const obj27 = {
+obj.SPACE_0 = obj;
+const obj1 = {
   PX_0: 0,
   PX_4: 4,
   PX_6: 6,
@@ -125,11 +292,11 @@ const obj27 = {
   PX_160: 160,
   PX_192: 192,
 };
-const result = set.fileFinishedImporting(
+const result = size.fileFinishedImporting(
   "../discord_common/js/packages/tokens/layout/generated/generated-definitions.tsx",
 );
 
 export const Layout = obj;
 export const Space = obj;
-export const SpacePx = obj27;
-export const _private = { Layout: obj, Space: obj, SpacePx: obj27 };
+export const SpacePx = obj1;
+export const _private = { Layout: obj, Space: obj, SpacePx: obj1 };

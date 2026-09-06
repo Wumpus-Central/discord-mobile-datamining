@@ -1,25 +1,26 @@
 // discord_app/stores/UserRequiredActionStore.tsx
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../Dispatcher.tsx";
+import DispatcherDefault from "../Dispatcher.tsx";
 
 function handleRequiredAction(requiredAction) {
   requiredAction = requiredAction.requiredAction;
 }
-let c0 = null;
+let requiredAction = null;
 const Store = initializeDefault.Store;
 class UserRequiredActionStore extends Store {}
 const prototype = UserRequiredActionStore.prototype;
 prototype["hasAction"] = function hasAction() {
-  return null != c0;
+  return null != requiredAction;
 };
 prototype["getAction"] = function getAction() {
-  return c0;
+  return requiredAction;
 };
 UserRequiredActionStore.displayName = "UserRequiredActionStore";
-const userRequiredActionStore = new UserRequiredActionStore(dispatcherDefault, {
+const userRequiredActionStore = new UserRequiredActionStore(DispatcherDefault, {
   CONNECTION_OPEN: handleRequiredAction,
   USER_REQUIRED_ACTION_UPDATE: handleRequiredAction,
 });
-const result = require("set").fileFinishedImporting("stores/UserRequiredActionStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("stores/UserRequiredActionStore.tsx");
 
 export default userRequiredActionStore;

@@ -1,9 +1,9 @@
 // discord_app/utils/ErrorCommonUtils.tsx
-import set from "../../_runtime/00002_set.js";
-import add from "../../discord_common/js/packages/flux/LastFewActions.tsx";
-import dispatcherDefault from "../Dispatcher.tsx";
+import LastFewActions from "../../discord_common/js/packages/flux/LastFewActions.tsx";
+import DispatcherDefault from "../Dispatcher.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("utils/ErrorCommonUtils.tsx");
+const result = size.fileFinishedImporting("utils/ErrorCommonUtils.tsx");
 
 export const getUpdatedOptions = function getUpdatedOptions(extra) {
   let obj = {};
@@ -14,16 +14,16 @@ export const getUpdatedOptions = function getUpdatedOptions(extra) {
   }
   obj = {};
   const merged1 = Object.assign(extra);
-  if (null != dispatcherDefault._currentDispatchActionType) {
-    obj = { currentAction: null };
-    obj[0] = dispatcherDefault._currentDispatchActionType;
-    obj1 = obj;
+  if (null != DispatcherDefault._currentDispatchActionType) {
+    obj = { currentAction: DispatcherDefault._currentDispatchActionType };
+    let obj1 = obj;
   } else {
     obj1 = {};
   }
   const obj2 = {};
   const merged2 = Object.assign(obj1);
-  obj2.lastFewActions = add.serialize();
+  const serializer = LastFewActions;
+  obj2.lastFewActions = serializer.serialize();
   const merged3 = Object.assign(obj2);
   obj.extra = obj;
   return obj;

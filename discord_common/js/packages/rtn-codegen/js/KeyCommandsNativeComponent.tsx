@@ -1,18 +1,14 @@
 // discord_common/js/packages/rtn-codegen/js/KeyCommandsNativeComponent.tsx
-import set from "../../../../../_runtime/00002_set.js";
 import weakSet from "../../../../../_runtime/00106_weakSet.js";
-import setRuntimeConfigProvider from "../../../../../_runtime/00065_setRuntimeConfigProvider.js";
+import 00065__ from "../../../../../_runtime/metro/00065__.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-let obj = {
-  uiViewClassName: "KeyCommandsView",
-  directEventTypes: { topKeyCommand: { registrationName: "onKeyCommand" } },
-  validAttributes: null,
-};
-obj = { keyCommands: true };
+let __INTERNAL_VIEW_CONFIG = { uiViewClassName: "KeyCommandsView", directEventTypes: { topKeyCommand: { registrationName: "onKeyCommand" } }, validAttributes: null };
+__INTERNAL_VIEW_CONFIG = { keyCommands: true };
 const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onKeyCommand: true }));
-obj[2] = obj;
-const value = setRuntimeConfigProvider.get("KeyCommandsView", () => obj);
-const result = set.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/KeyCommandsNativeComponent.tsx");
+__INTERNAL_VIEW_CONFIG.validAttributes = __INTERNAL_VIEW_CONFIG;
+const value = module_65.get("KeyCommandsView", () => obj);
+const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/KeyCommandsNativeComponent.tsx");
 
 export default value;
-export const __INTERNAL_VIEW_CONFIG = obj;
+export { __INTERNAL_VIEW_CONFIG };

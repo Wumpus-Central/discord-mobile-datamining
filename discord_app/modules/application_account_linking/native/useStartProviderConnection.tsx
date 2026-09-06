@@ -1,128 +1,110 @@
 // discord_app/modules/application_account_linking/native/useStartProviderConnection.tsx
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
-import { useProviderConnection } from "../hooks/useProviderConnection.tsx";
+import LinkingDefault from "../../../lib/native/Linking.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
-  "modules/application_account_linking/native/useStartProviderConnection.tsx",
-);
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/application_account_linking/native/useStartProviderConnection.tsx");
 
 export const useStartProviderConnection = function useStartProviderConnection(provider_id) {
-  let obj = useProviderConnection;
+  let obj = require("useProviderConnection");
   const providerConnection = obj.useProviderConnection(provider_id);
   const startConnection = providerConnection.startConnection;
-  _require = startConnection;
-  _require = undefined;
   ({ loading, hasConnection, canConnect, account } = providerConnection);
-  _require = callback((arg0) => {
-    closure_0 = arg0;
-    c5 = 0;
-    c6 = 0;
-    c4 = 0;
-    return (function* (arg0) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+  _require = asyncGeneratorStep(async (arg0, value) => {
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_2 = tmp3;
-              closure_1 = tmp7;
-              let lib;
-              c5 = 1;
-              c6 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = lib(lib);
-              return obj1;
-            }
-          } else if (1 === tmp7) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              const obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else {
-              lib = arg1;
-              if (lib.success) {
-                if (null != lib.url) {
-                  c4 = 1;
-                  let obj4 = closure_2_1(closure_2_2[3]);
-                  c5 = 3;
-                  c6 = 1;
-                  const obj3 = { value: null, done: false };
-                  obj3[0] = obj4.openURL(lib.url);
-                  return obj3;
-                }
-              }
-              c6 = 3;
-              obj4 = { value: null, done: true };
-              obj4[0] = { success: false };
-              return obj4;
-            }
-          } else if (2 === tmp7) {
-            c4 = 0;
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
             c6 = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = { success: false };
-            return obj5;
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
-            c4 = 0;
             c6 = 3;
-            const obj6 = { value: null, done: true };
-            obj6[0] = arg1;
-            return obj6;
-          } else {
-            c4 = 0;
-            c6 = 3;
-            obj = { value: null, done: true };
-            obj[0] = { success: true };
+            obj = { value, done: true };
             return obj;
-          }
-        } catch (tmp18) {
-          closure_3 = tmp18;
-          if (tmp4 === c4) {
-            c6 = tmp2;
-            throw tmp18;
           } else {
-            c5 = tmp;
+            closure_2 = tmp3;
+            closure_1 = tmp7;
+            closure_129_0 = undefined;
+            c5 = 1;
+            c6 = 1;
+            const obj1 = { value: closure_0(closure_0), done: false };
+            return obj1;
           }
+        } else if (1 === tmp7) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj2 = { value, done: true };
+            return obj2;
+          } else {
+            closure_129_0 = value;
+            if (closure_129_0.success) {
+              if (null != closure_129_0.url) {
+                c4 = 1;
+                let obj4 = LinkingDefault;
+                c5 = 3;
+                c6 = 1;
+                const obj3 = { value: obj4.openURL(closure_129_0.url), done: false };
+                return obj3;
+              }
+            }
+            c6 = 3;
+            obj4 = { value: { success: false }, done: true };
+            return obj4;
+          }
+        } else if (2 === tmp7) {
+          c4 = 0;
+          c6 = 3;
+          const obj5 = { value: { success: false }, done: true };
+          return obj5;
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 0;
+          c6 = 3;
+          const obj6 = { value, done: true };
+          return obj6;
+        } else {
+          c4 = 0;
+          c6 = 3;
+          obj = { value: { success: true }, done: true };
+          return obj;
+        }
+      } catch (tmp18) {
+        closure_3 = tmp18;
+        if (tmp4 === c4) {
+          c6 = tmp2;
+          throw tmp18;
+        } else {
+          c5 = tmp;
         }
       }
-    })();
+    }
   });
   const items = [startConnection];
   obj = {
     loading,
     hasConnection,
     canConnect,
-    startConnection: React.useCallback(function () {
+    startConnection: noop.useCallback(function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {

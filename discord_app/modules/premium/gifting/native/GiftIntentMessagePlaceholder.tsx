@@ -1,10 +1,10 @@
 // discord_app/modules/premium/gifting/native/GiftIntentMessagePlaceholder.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import getSystemLocale from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/premium/gifting/native/GiftIntentMessagePlaceholder.tsx");
+const result = size.fileFinishedImporting("modules/premium/gifting/native/GiftIntentMessagePlaceholder.tsx");
 
 export const getGiftIntentCustomMessagePlaceholder = function getGiftIntentCustomMessagePlaceholder() {
-  const intl = getSystemLocale.intl;
-  return intl.string(getSystemLocale.t.OrwKgi);
+  const intl = util.intl;
+  return intl.string(util.t.OrwKgi);
 };

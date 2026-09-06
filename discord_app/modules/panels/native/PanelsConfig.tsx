@@ -1,6 +1,6 @@
 // discord_app/modules/panels/native/PanelsConfig.tsx
-import set from "../../../../_runtime/00002_set.js";
-import Button from "../../../design/void/native.tsx";
+import native from "../../../design/void/native.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 function isTimingConfig(duration) {
   return null != duration && null != duration.duration;
@@ -21,22 +21,21 @@ obj = { damping: 30 };
 const merged = Object.assign(obj);
 obj = { damping: 20 };
 const merged1 = Object.assign(obj);
-const obj1 = { duration: 250, easing: Button.STANDARD_EASING };
-const obj2 = { duration: 200, easing: Button.STANDARD_EASING };
+const obj1 = { duration: 250, easing: native.STANDARD_EASING };
+const obj2 = { duration: 200, easing: native.STANDARD_EASING };
 const obj3 = {
-  swipeSidePanelOpen: { duration: 250, easing: Button.DECELERATED_EASING },
+  swipeSidePanelOpen: { duration: 250, easing: native.DECELERATED_EASING },
   swipeSidePanelClose: null,
   nonSwipeSidePanelOpen: null,
   nonSwipeSidePanelClose: null,
   touchSlopForPanGesture: 8,
   minFlingVelocityX: 240,
 };
-const obj4 = { duration: 250, easing: Button.DECELERATED_EASING };
-obj3[1] = { duration: 200, easing: Button.DECELERATED_EASING };
-obj3[2] = obj1;
-obj3[3] = obj2;
-const obj5 = { duration: 200, easing: Button.DECELERATED_EASING };
-const result = set.fileFinishedImporting("modules/panels/native/PanelsConfig.tsx");
+const obj4 = { duration: 250, easing: native.DECELERATED_EASING };
+obj3.swipeSidePanelClose = { duration: 200, easing: native.DECELERATED_EASING };
+obj3.nonSwipeSidePanelOpen = obj1;
+obj3.nonSwipeSidePanelClose = obj2;
+const result = size.fileFinishedImporting("modules/panels/native/PanelsConfig.tsx");
 
 export { isTimingConfig };
 export const SIDE_PANEL_OPEN_DURATION_MS = 250;

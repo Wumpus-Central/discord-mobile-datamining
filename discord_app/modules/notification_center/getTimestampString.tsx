@@ -1,72 +1,74 @@
 // discord_app/modules/notification_center/getTimestampString.tsx
-import set from "../../../_runtime/00002_set.js";
-import getSystemLocale from "../../intl/index.native.tsx";
-import hooksDefault from "../../../_runtime/04153_hooks.js";
+import util from "../../intl/index.native.tsx";
+import _modDef4153 from "../../../_runtime/metro/04153__.js";
+import size from "../../../_runtime/metro/00002__.js";
 
 function getDurationString(seconds) {
   seconds = seconds.seconds;
-  const formatter = seconds.getFormatter();
+  const time = seconds.getFormatter();
   if (seconds < 60) {
-    const intl6 = getSystemLocale.intl;
-    let formatToPlainStringResult = intl6.formatToPlainString(formatter.minutes, { minutes: 1 });
+    const intl6 = util.intl;
+    let formatToPlainStringResult = intl6.formatToPlainString(time.minutes, { minutes: 1 });
   } else if (seconds < 3600) {
-    const intl5 = getSystemLocale.intl;
+    const intl5 = util.intl;
     let obj = { minutes: null };
     const _Math5 = Math;
-    obj[0] = Math.floor(seconds / 60);
-    formatToPlainStringResult = intl5.formatToPlainString(formatter.minutes, obj);
+    obj.minutes = Math.floor(seconds / 60);
+    formatToPlainStringResult = intl5.formatToPlainString(time.minutes, obj);
   } else if (seconds < 86400) {
-    const intl4 = getSystemLocale.intl;
+    const intl4 = util.intl;
     obj = { hours: null };
     const _Math4 = Math;
-    obj[0] = Math.floor(seconds / 3600);
-    formatToPlainStringResult = intl4.formatToPlainString(formatter.hours, obj);
+    obj.hours = Math.floor(seconds / 3600);
+    formatToPlainStringResult = intl4.formatToPlainString(time.hours, obj);
   } else if (seconds < c3) {
-    const intl3 = getSystemLocale.intl;
-    obj1 = { days: null };
+    const intl3 = util.intl;
+    const obj1 = { days: null };
     const _Math3 = Math;
-    obj1[0] = Math.floor(seconds / 86400);
-    formatToPlainStringResult = intl3.formatToPlainString(formatter.days, obj1);
+    obj1.days = Math.floor(seconds / 86400);
+    formatToPlainStringResult = intl3.formatToPlainString(time.days, obj1);
   } else if (seconds < c4) {
-    const intl2 = getSystemLocale.intl;
+    const intl2 = util.intl;
     const obj2 = { months: null };
     const _Math2 = Math;
-    obj2[0] = Math.floor(seconds / tmp20);
-    formatToPlainStringResult = intl2.formatToPlainString(formatter.months, obj2);
+    obj2.months = Math.floor(seconds / tmp19);
+    formatToPlainStringResult = intl2.formatToPlainString(time.months, obj2);
   } else {
-    const intl = getSystemLocale.intl;
+    const intl = util.intl;
     obj = { years: null };
     const _Math = Math;
-    obj[0] = Math.floor(seconds / tmp21);
-    formatToPlainStringResult = intl.formatToPlainString(formatter.years, obj);
+    obj.years = Math.floor(seconds / tmp20);
+    formatToPlainStringResult = intl.formatToPlainString(time.years, obj);
   }
   return formatToPlainStringResult;
 }
 let c3 = 2592000;
 let c4 = 31104000;
-const result = set.fileFinishedImporting("modules/notification_center/getTimestampString.tsx");
+const result = size.fileFinishedImporting("modules/notification_center/getTimestampString.tsx");
 
 export default function getTimestampString(arg0) {
-  const obj = { seconds: hooksDefault().diff(hooksDefault(since), "s"), getFormatter };
+  const obj = { seconds: _modDef4153().diff(_modDef4153(since), "s"), getFormatter };
   ({ since, getFormatter } = arg0);
   return getDurationString(obj);
 }
 export const getAbbreviatedFormatter = function getAbbreviatedFormatter() {
-  return {
-    minutes: getSystemLocale.t["XIGt+W"],
-    hours: getSystemLocale.t.rhY1Rs,
-    days: getSystemLocale.t.GBLpQ8,
-    months: getSystemLocale.t.XzBNbS,
-    years: getSystemLocale.t.I1E8p6,
+  const time = {
+    minutes: util.t["XIGt+W"],
+    hours: util.t.rhY1Rs,
+    days: util.t.GBLpQ8,
+    months: util.t.XzBNbS,
+    years: util.t.I1E8p6,
   };
+  return time;
 };
 export const getFullFormatter = function getFullFormatter() {
-  return {
-    minutes: getSystemLocale.t["GqQ/Y9"],
-    hours: getSystemLocale.t.c5zfWZ,
-    days: getSystemLocale.t.amjnaI,
-    months: getSystemLocale.t.SoON3V,
-    years: getSystemLocale.t["12B3Re"],
+  const time = {
+    minutes: util.t["GqQ/Y9"],
+    hours: util.t.c5zfWZ,
+    days: util.t.amjnaI,
+    months: util.t.SoON3V,
+    years: util.t["12B3Re"],
   };
+  return time;
 };
 export { getDurationString };

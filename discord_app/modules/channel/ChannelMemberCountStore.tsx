@@ -1,20 +1,20 @@
 // discord_app/modules/channel/ChannelMemberCountStore.tsx
-import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import closure_2 from "../gateway/GatewayConnectionStore.tsx";
-import closure_3 from "../../stores/ChannelStore.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import GatewayConnectionStore from "../gateway/GatewayConnectionStore.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
 
 let closure_4 = Object.freeze({ online: null, total: null });
 let closure_5 = {};
 let closure_6 = {};
-let c7 = null;
+let closure_7 = null;
 const PersistedStore = initializeDefault.PersistedStore;
 class ChannelMemberCountStore extends PersistedStore {}
 const prototype = ChannelMemberCountStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   let tmp = arg0;
-  this.waitFor(closure_2, closure_3);
+  this.waitFor(GatewayConnectionStore, ChannelStore);
   if (arg0 == null) {
     tmp = closure_5;
   }
@@ -24,7 +24,7 @@ prototype["getState"] = function getState() {
   return closure_6;
 };
 prototype["getMemberCount"] = function getMemberCount(arg0) {
-  let tmp = table[arg0];
+  let tmp = closure_6[arg0];
   if (tmp == null) {
     tmp = closure_4;
   }
@@ -32,20 +32,20 @@ prototype["getMemberCount"] = function getMemberCount(arg0) {
 };
 prototype["requestCount"] = function requestCount(guild_id, id) {
   closure_7 = { guildId: guild_id, channelId: id };
-  const socket = store.getSocket();
+  const socket = GatewayConnectionStore.getSocket();
   const channelMemberCount = socket.requestChannelMemberCount(guild_id, id);
 };
 ChannelMemberCountStore.displayName = "ChannelMemberCountStore";
 ChannelMemberCountStore.persistKey = "channelMemberCounts";
-const channelMemberCountStore = new ChannelMemberCountStore(dispatcherDefault, {
+const channelMemberCountStore = new ChannelMemberCountStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
-    if (null != _null) {
-      const socket = store.getSocket();
-      const channelMemberCount = socket.requestChannelMemberCount(_null.guildId, _null.channelId);
+    if (null != closure_7) {
+      const socket = GatewayConnectionStore.getSocket();
+      const channelMemberCount = socket.requestChannelMemberCount(closure_7.guildId, closure_7.channelId);
     }
-    const keys = DISCORD_EPOCHDefault.keys(closure_6);
-    const item = keys.forEach((arg0) => {
-      if (null == channel.getChannel(arg0)) {
+    const keys = SnowflakeUtilsDefault.keys(closure_6);
+    const item = keys.forEach((item) => {
+      if (null == channel.getChannel(item)) {
         delete tmp[tmp2];
       }
     });
@@ -57,14 +57,13 @@ const channelMemberCountStore = new ChannelMemberCountStore(dispatcherDefault, {
       tmp = null == total;
     }
     if (!tmp) {
-      const obj = { online: null, total: null };
-      obj[0] = online;
-      obj[1] = total;
+      const obj = { online, total };
       closure_6[channelId.channelId] = obj;
     }
     return true;
   },
 });
-const result = require("set").fileFinishedImporting("modules/channel/ChannelMemberCountStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/channel/ChannelMemberCountStore.tsx");
 
 export default channelMemberCountStore;

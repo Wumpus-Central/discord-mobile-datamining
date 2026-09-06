@@ -1,11 +1,11 @@
 // discord_app/modules/verification/VerificationUtils.tsx
-import set from "../../../_runtime/00002_set.js";
-import applyDefault from "../../../_runtime/00012_apply.js";
-import getSystemLocale from "../../intl/index.native.tsx";
-import ME from "../../Constants.tsx";
+import _modDef12 from "../../../_runtime/metro/00012__.js";
+import util from "../../intl/index.native.tsx";
+import Constants from "../../Constants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const UserRequiredActions = ME.UserRequiredActions;
-const VerificationTypes = ME.VerificationTypes;
+const UserRequiredActions = Constants.UserRequiredActions;
+const VerificationTypes = Constants.VerificationTypes;
 ({ EMAIL, PHONE, REVERIFY_EMAIL, REVERIFY_PHONE } = VerificationTypes);
 const items = [EMAIL];
 const items1 = [PHONE];
@@ -29,7 +29,7 @@ let closure_5 = {
   [UserRequiredActions.AGREEMENTS]: [],
   [UserRequiredActions.REQUIRE_SAFETY_FLOWS]: [],
 };
-let result = set.fileFinishedImporting("modules/verification/VerificationUtils.tsx");
+let result = size.fileFinishedImporting("modules/verification/VerificationUtils.tsx");
 
 export default {
   isPhoneReverification(currentUser, action) {
@@ -72,25 +72,25 @@ export default {
       return [];
     }
   },
-  getButtonTitle(arg0) {
-    if (VerificationTypes.EMAIL === arg0) {
-      const intl5 = getSystemLocale.intl;
-      return intl5.string(getSystemLocale.t["1MPz27"]);
-    } else if (tmp.PHONE === arg0) {
-      const intl4 = getSystemLocale.intl;
-      return intl4.string(getSystemLocale.t.mjJeco);
-    } else if (tmp.REVERIFY_EMAIL === arg0) {
-      const intl3 = getSystemLocale.intl;
-      return intl3.string(getSystemLocale.t.nmdPFX);
-    } else if (tmp.REVERIFY_PHONE === arg0) {
-      const intl2 = getSystemLocale.intl;
-      return intl2.string(getSystemLocale.t.of2125);
+  getButtonTitle(item) {
+    if (VerificationTypes.EMAIL === item) {
+      const intl5 = util.intl;
+      return intl5.string(util.t["1MPz27"]);
+    } else if (tmp.PHONE === item) {
+      const intl4 = util.intl;
+      return intl4.string(util.t.mjJeco);
+    } else if (tmp.REVERIFY_EMAIL === item) {
+      const intl3 = util.intl;
+      return intl3.string(util.t.nmdPFX);
+    } else if (tmp.REVERIFY_PHONE === item) {
+      const intl2 = util.intl;
+      return intl2.string(util.t.of2125);
     } else {
-      const intl = getSystemLocale.intl;
-      return intl.string(getSystemLocale.t["oF6+Ww"]);
+      const intl = util.intl;
+      return intl.string(util.t["oF6+Ww"]);
     }
   },
   areVerificationTypesEqual(arg0, arg1) {
-    return applyDefault.isEqual(arg0, arg1);
+    return _modDef12.isEqual(arg0, arg1);
   },
 };

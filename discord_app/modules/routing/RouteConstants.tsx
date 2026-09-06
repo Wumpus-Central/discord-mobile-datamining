@@ -1,13 +1,12 @@
 // discord_app/modules/routing/RouteConstants.tsx
-import set from "../../../_runtime/00002_set.js";
-import items2 from "../collectibles/CollectiblesShopConstants.tsx";
-import CONFERENCE_MODE_ENABLED from "../conference_mode/ConferenceModeConstants.tsx";
-import GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID from "../global_discovery_apps/GlobalDiscoveryAppsConstants.tsx";
-import getAuthenticationPath from "../../../discord_common/js/shared/utils/PathUtils.tsx";
+import CollectiblesShopConstants from "../collectibles/CollectiblesShopConstants.tsx";
+import ConferenceModeConstants from "../conference_mode/ConferenceModeConstants.tsx";
+import GlobalDiscoveryAppsConstants from "../global_discovery_apps/GlobalDiscoveryAppsConstants.tsx";
+import PathUtils from "../../../discord_common/js/shared/utils/PathUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const CollectibleShopTab = items2.CollectibleShopTab;
-({ ApplicationDirectoryProfileSections: closure_1, GlobalDiscoveryAppsSections: obj1 } =
-  GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID);
+const CollectibleShopTab = CollectiblesShopConstants.CollectibleShopTab;
+({ ApplicationDirectoryProfileSections: closure_1, GlobalDiscoveryAppsSections: c2 } = GlobalDiscoveryAppsConstants);
 let c3 = "@me";
 const items = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-list"];
 const obj = {
@@ -224,42 +223,42 @@ const obj = {
   ICYMI: "/icymi",
 };
 let str = "/login";
-if (CONFERENCE_MODE_ENABLED.CONFERENCE_MODE_ENABLED) {
+if (ConferenceModeConstants.CONFERENCE_MODE_ENABLED) {
   str = "/register";
 }
-obj[36] = str;
-obj[37] = function INVITE(arg0) {
+obj.DEFAULT_LOGGED_OUT = str;
+obj.INVITE = function INVITE(arg0) {
   return "/invite/" + arg0;
 };
-obj[38] = function INVITE_LOGIN(arg0) {
+obj.INVITE_LOGIN = function INVITE_LOGIN(arg0) {
   return "/invite/" + arg0 + "/login";
 };
-obj[39] = function INVITE_REGISTER(arg0) {
+obj.INVITE_REGISTER = function INVITE_REGISTER(arg0) {
   return "/invite/" + arg0 + "/register";
 };
-obj[40] = function INVITE_PROXY(arg0, targetMessageId) {
+obj.INVITE_PROXY = function INVITE_PROXY(targetChannelId, targetMessageId) {
   if (null != targetMessageId) {
     const _HermesInternal2 = HermesInternal;
-    let combined = "/invite-proxy/" + arg0 + "?messageId=" + targetMessageId;
+    let combined = "/invite-proxy/" + targetChannelId + "?messageId=" + targetMessageId;
   } else {
     const _HermesInternal = HermesInternal;
-    combined = "/invite-proxy/" + arg0;
+    combined = "/invite-proxy/" + targetChannelId;
   }
   return combined;
 };
-obj[41] = function GUILD_TEMPLATE(arg0) {
+obj.GUILD_TEMPLATE = function GUILD_TEMPLATE(arg0) {
   return "/template/" + arg0;
 };
-obj[42] = function GUILD_TEMPLATE_LOGIN(arg0) {
+obj.GUILD_TEMPLATE_LOGIN = function GUILD_TEMPLATE_LOGIN(arg0) {
   return "/template/" + arg0 + "/login";
 };
-obj[43] = function GIFT_CODE(arg0) {
+obj.GIFT_CODE = function GIFT_CODE(arg0) {
   return "/gifts/" + arg0;
 };
-obj[44] = function GIFT_CODE_LOGIN(arg0) {
+obj.GIFT_CODE_LOGIN = function GIFT_CODE_LOGIN(arg0) {
   return "/gifts/" + arg0 + "/login";
 };
-obj[45] = function WELCOME(arg0, arg1) {
+obj.WELCOME = function WELCOME(arg0, arg1) {
   let tmp = arg0;
   if (null != arg1) {
     if (tmp == null) {
@@ -277,25 +276,25 @@ obj[45] = function WELCOME(arg0, arg1) {
   }
   return combined;
 };
-obj[52] = function CONNECTION_LINK(arg0) {
+obj.CONNECTION_LINK = function CONNECTION_LINK(arg0) {
   return "/connections/" + arg0 + "/link";
 };
-obj[53] = function CONNECTION_LINK_AUTHORIZE(arg0) {
+obj.CONNECTION_LINK_AUTHORIZE = function CONNECTION_LINK_AUTHORIZE(arg0) {
   return "/connections/" + arg0 + "/link-authorize";
 };
-obj[54] = function CONNECTIONS_SUCCESS(arg0) {
+obj.CONNECTIONS_SUCCESS = function CONNECTIONS_SUCCESS(arg0) {
   return "/connections/" + arg0 + "/success";
 };
-obj[55] = function CONNECTIONS_ERROR(arg0) {
+obj.CONNECTIONS_ERROR = function CONNECTIONS_ERROR(arg0) {
   return "/connections/" + arg0 + "/error";
 };
-obj[56] = function CONNECTIONS(arg0) {
+obj.CONNECTIONS = function CONNECTIONS(arg0) {
   return "/connections/" + arg0;
 };
-obj[57] = function CONNECTIONS_AUTHORIZE_CONTINUE(arg0) {
+obj.CONNECTIONS_AUTHORIZE_CONTINUE = function CONNECTIONS_AUTHORIZE_CONTINUE(arg0) {
   return "/connections/" + arg0 + "/authorize-continue";
 };
-obj[62] = function SETTINGS(arg0, arg1) {
+obj.SETTINGS = function SETTINGS(arg0, arg1) {
   let str = "";
   if (null != arg1) {
     const _HermesInternal = HermesInternal;
@@ -303,7 +302,7 @@ obj[62] = function SETTINGS(arg0, arg1) {
   }
   return "/settings/" + arg0 + str;
 };
-obj[65] = function PLAYGROUND(arg0, arg1) {
+obj.PLAYGROUND = function PLAYGROUND(arg0, arg1) {
   let str = "/playground";
   if (null != arg0) {
     const _HermesInternal = HermesInternal;
@@ -317,7 +316,7 @@ obj[65] = function PLAYGROUND(arg0, arg1) {
   }
   return str;
 };
-obj[66] = function CHANGELOGS(arg0) {
+obj.CHANGELOGS = function CHANGELOGS(arg0) {
   let str = "";
   if (null != arg0) {
     const _HermesInternal = HermesInternal;
@@ -325,28 +324,28 @@ obj[66] = function CHANGELOGS(arg0) {
   }
   return "/settings/changelogs" + str;
 };
-obj[67] = function USERS(arg0) {
+obj.USERS = function USERS(arg0) {
   return "/users/" + arg0;
 };
-obj[71] = function USER_GUILD_NOTIFICATION_SETTINGS(arg0) {
+obj.USER_GUILD_NOTIFICATION_SETTINGS = function USER_GUILD_NOTIFICATION_SETTINGS(arg0) {
   return "/guilds/" + arg0 + "/notification-settings";
 };
-obj[89] = function GLOBAL_DISCOVERY_APPS_CATEGORY(arg0) {
+obj.GLOBAL_DISCOVERY_APPS_CATEGORY = function GLOBAL_DISCOVERY_APPS_CATEGORY(arg0) {
   return "/discovery/applications/categories/" + arg0;
 };
-obj[90] = function GLOBAL_DISCOVERY_APPS_PROFILE(arg0) {
+obj.GLOBAL_DISCOVERY_APPS_PROFILE = function GLOBAL_DISCOVERY_APPS_PROFILE(arg0) {
   return "/discovery/applications/" + arg0;
 };
-obj[91] = function GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(arg0, arg1) {
+obj.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION = function GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(arg0, arg1) {
   return "/discovery/applications/" + arg0 + "/" + arg1;
 };
-obj[92] = function GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(arg0, arg1) {
+obj.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU = function GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(arg0, arg1) {
   return "/discovery/applications/" + arg0 + "/" + constants2.STORE + "/" + arg1;
 };
-obj[94] = function GUILD_MEMBER_VERIFICATION(arg0) {
+obj.GUILD_MEMBER_VERIFICATION = function GUILD_MEMBER_VERIFICATION(arg0) {
   return "/member-verification/" + arg0;
 };
-obj[95] = function GUILD_MEMBER_VERIFICATION_FOR_HUB(arg0, arg1) {
+obj.GUILD_MEMBER_VERIFICATION_FOR_HUB = function GUILD_MEMBER_VERIFICATION_FOR_HUB(arg0, arg1) {
   let str = "";
   if (null != arg1) {
     const _HermesInternal = HermesInternal;
@@ -354,7 +353,7 @@ obj[95] = function GUILD_MEMBER_VERIFICATION_FOR_HUB(arg0, arg1) {
   }
   return "/member-verification-for-hub/" + arg0 + str;
 };
-obj[97] = function UPCOMING_STAGES(arg0, arg1) {
+obj.UPCOMING_STAGES = function UPCOMING_STAGES(arg0, arg1) {
   let str = "";
   if (null != arg1) {
     const _HermesInternal = HermesInternal;
@@ -362,7 +361,10 @@ obj[97] = function UPCOMING_STAGES(arg0, arg1) {
   }
   return "/guild-stages/" + arg0 + str;
 };
-obj[102] = function BILLING_MANAGE_SUBSCRIPTION_WITH_DEEP_LINK(MOBILE_WEB_REDIRECT_CHECKOUT, loadId) {
+obj.BILLING_MANAGE_SUBSCRIPTION_WITH_DEEP_LINK = function BILLING_MANAGE_SUBSCRIPTION_WITH_DEEP_LINK(
+  MOBILE_WEB_REDIRECT_CHECKOUT,
+  loadId,
+) {
   let str = "";
   if (null != loadId) {
     const _HermesInternal = HermesInternal;
@@ -370,7 +372,10 @@ obj[102] = function BILLING_MANAGE_SUBSCRIPTION_WITH_DEEP_LINK(MOBILE_WEB_REDIRE
   }
   return "/billing/premium/manage?deep_link_type=" + MOBILE_WEB_REDIRECT_CHECKOUT + str;
 };
-obj[103] = function BILLING_MANAGE_SUBSCRIPTION_WITH_FLOW_TYPE(META_QUEST_WEB_REDIRECT_CHECKOUT, loadId) {
+obj.BILLING_MANAGE_SUBSCRIPTION_WITH_FLOW_TYPE = function BILLING_MANAGE_SUBSCRIPTION_WITH_FLOW_TYPE(
+  META_QUEST_WEB_REDIRECT_CHECKOUT,
+  loadId,
+) {
   let str = "";
   if (null != loadId) {
     const _HermesInternal = HermesInternal;
@@ -378,7 +383,7 @@ obj[103] = function BILLING_MANAGE_SUBSCRIPTION_WITH_FLOW_TYPE(META_QUEST_WEB_RE
   }
   return "/billing/premium/manage?flow_type=" + META_QUEST_WEB_REDIRECT_CHECKOUT + str;
 };
-obj[104] = function BILLING_STANDALONE_CHECKOUT_PAGE(
+obj.BILLING_STANDALONE_CHECKOUT_PAGE = function BILLING_STANDALONE_CHECKOUT_PAGE(
   planId,
   isGift,
   loadId,
@@ -420,7 +425,12 @@ obj[104] = function BILLING_STANDALONE_CHECKOUT_PAGE(
     str
   );
 };
-obj[105] = function BILLING_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE(closure_1, prop, newAnalyticsLoadId, prop1) {
+obj.BILLING_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE = function BILLING_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE(
+  arg0,
+  prop,
+  newAnalyticsLoadId,
+  prop1,
+) {
   let str = "";
   let str2 = "";
   if (null != prop) {
@@ -436,12 +446,12 @@ obj[105] = function BILLING_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE(closure_1, prop
     const _HermesInternal3 = HermesInternal;
     str = "&flow_type=" + prop1;
   }
-  return "/billing/guild-subscriptions/purchase?guild_id=" + closure_1 + str2 + combined + str;
+  return "/billing/guild-subscriptions/purchase?guild_id=" + arg0 + str2 + combined + str;
 };
-obj[106] = function GUILD_BOOSTING_MARKETING(RouteParam3) {
+obj.GUILD_BOOSTING_MARKETING = function GUILD_BOOSTING_MARKETING(RouteParam3) {
   return "/guilds/" + RouteParam3 + "/premium-guild-subscriptions";
 };
-obj[107] = function GUILD_SETTINGS(arg0, arg1, arg2) {
+obj.GUILD_SETTINGS = function GUILD_SETTINGS(arg0, arg1, arg2) {
   let str = "";
   if (null != arg1) {
     const _HermesInternal = HermesInternal;
@@ -455,7 +465,7 @@ obj[107] = function GUILD_SETTINGS(arg0, arg1, arg2) {
   }
   return combined1;
 };
-obj[108] = function PICK_GUILD_SETTINGS(arg0, arg1, arg2) {
+obj.PICK_GUILD_SETTINGS = function PICK_GUILD_SETTINGS(arg0, arg1, arg2) {
   let str = "";
   if (null != arg0) {
     const _HermesInternal = HermesInternal;
@@ -474,60 +484,60 @@ obj[108] = function PICK_GUILD_SETTINGS(arg0, arg1, arg2) {
   }
   return "" + combined + str4;
 };
-obj[109] = function GUILD_EVENT_DETAILS(guild_id, id, closure_1) {
+obj.GUILD_EVENT_DETAILS = function GUILD_EVENT_DETAILS(guild_id, id, arg2) {
   let str = "";
   const combined = "/events/" + guild_id + "/" + id;
-  if (null != closure_1) {
+  if (null != arg2) {
     const _HermesInternal = HermesInternal;
-    str = "/" + closure_1;
+    str = "/" + arg2;
   }
   return combined + str;
 };
-obj[110] = function FEATURE(DAVE_PROTOCOL_VERIFICATION) {
+obj.FEATURE = function FEATURE(DAVE_PROTOCOL_VERIFICATION) {
   return "/feature/" + DAVE_PROTOCOL_VERIFICATION;
 };
-obj[111] = function GUILD_FEATURE(arg0, arg1) {
+obj.GUILD_FEATURE = function GUILD_FEATURE(arg0, arg1) {
   return "/feature/" + arg0 + "/" + arg1;
 };
-obj[112] = function GUILD_JOIN_REQUEST(arg0, arg1) {
+obj.GUILD_JOIN_REQUEST = function GUILD_JOIN_REQUEST(arg0, arg1) {
   return "/guilds/" + arg0 + "/requests/" + arg1;
 };
-obj[115] = function APPLICATION_DIRECTORY_PROFILE(arg0) {
+obj.APPLICATION_DIRECTORY_PROFILE = function APPLICATION_DIRECTORY_PROFILE(arg0) {
   return "/application-directory/" + arg0;
 };
-obj[116] = function APPLICATION_DIRECTORY_PROFILE_SECTION(arg0, arg1) {
+obj.APPLICATION_DIRECTORY_PROFILE_SECTION = function APPLICATION_DIRECTORY_PROFILE_SECTION(arg0, arg1) {
   return "/application-directory/" + arg0 + "/" + arg1;
 };
-obj[117] = function APPLICATION_DIRECTORY_PROFILE_STORE_SKU(arg0, arg1) {
+obj.APPLICATION_DIRECTORY_PROFILE_STORE_SKU = function APPLICATION_DIRECTORY_PROFILE_STORE_SKU(arg0, arg1) {
   return "/application-directory/" + arg0 + "/" + constants.STORE + "/" + arg1;
 };
-obj[120] = function FAMILY_CENTER_MY_FAMILY(arg0, arg1) {
+obj.FAMILY_CENTER_MY_FAMILY = function FAMILY_CENTER_MY_FAMILY(arg0, arg1) {
   return "/feature/family-center/my-family/" + arg0 + "/" + arg1;
 };
-obj[121] = function SERVER_SHOP(arg0) {
+obj.SERVER_SHOP = function SERVER_SHOP(arg0) {
   return "/channels/" + arg0 + "/shop";
 };
-obj[122] = function CHANNELS_GAME_SHOP(guildId, c2, c3, c4) {
-  let num = c2;
+obj.CHANNELS_GAME_SHOP = function CHANNELS_GAME_SHOP(guildId, pageIndex, skuId, arg3) {
+  let num = pageIndex;
   const combined = "/channels/" + guildId + "/game-shop";
-  if (c2 == null) {
+  if (pageIndex == null) {
     num = 0;
   }
   const sum = combined + "/" + num;
   let tmp3 = sum;
-  if (null != c3) {
+  if (null != skuId) {
     const _HermesInternal = HermesInternal;
-    const sum1 = sum + "/" + c3;
+    const sum1 = sum + "/" + skuId;
     let sum2 = sum1;
-    if (null != c4) {
+    if (null != arg3) {
       const _HermesInternal2 = HermesInternal;
-      sum2 = sum1 + "/" + c4;
+      sum2 = sum1 + "/" + arg3;
     }
     tmp3 = sum2;
   }
   return tmp3;
 };
-obj[123] = function GAME_SHOP(arg0, id, slug) {
+obj.GAME_SHOP = function GAME_SHOP(arg0, id, slug) {
   const combined = "/game-shop/" + arg0;
   let tmp2 = combined;
   if (null != id) {
@@ -542,10 +552,10 @@ obj[123] = function GAME_SHOP(arg0, id, slug) {
   }
   return tmp2;
 };
-obj[124] = function GUILD_PRODUCT(arg0, arg1) {
+obj.GUILD_PRODUCT = function GUILD_PRODUCT(arg0, arg1) {
   return "/channels/" + arg0 + "/shop/" + arg1;
 };
-obj[128] = function COLLECTIBLES_SHOP_GAME_SHOP(applicationId, pageIndex, c1, slug) {
+obj.COLLECTIBLES_SHOP_GAME_SHOP = function COLLECTIBLES_SHOP_GAME_SHOP(applicationId, pageIndex, id, slug) {
   const combined = "/shop?tab=" + CollectibleShopTab.GAME_SHOPS + "&applicationId=" + applicationId;
   let sum = combined;
   if (null != pageIndex) {
@@ -553,9 +563,9 @@ obj[128] = function COLLECTIBLES_SHOP_GAME_SHOP(applicationId, pageIndex, c1, sl
     sum = combined + "&pageIndex=" + pageIndex;
   }
   let sum1 = sum;
-  if (null != c1) {
+  if (null != id) {
     const _HermesInternal2 = HermesInternal;
-    sum1 = sum + "&skuId=" + c1;
+    sum1 = sum + "&skuId=" + id;
   }
   let sum2 = sum1;
   if (null != slug) {
@@ -564,48 +574,47 @@ obj[128] = function COLLECTIBLES_SHOP_GAME_SHOP(applicationId, pageIndex, c1, sl
   }
   return sum2;
 };
-obj[129] = function COLLECTIBLES_SHOP_WITH_TAB(arg0) {
+obj.COLLECTIBLES_SHOP_WITH_TAB = function COLLECTIBLES_SHOP_WITH_TAB(arg0) {
   return "/shop?tab=" + arg0;
 };
-obj[130] = function COLLECTIBLES_SHOP_COLLECTION_DETAIL(arg0) {
+obj.COLLECTIBLES_SHOP_COLLECTION_DETAIL = function COLLECTIBLES_SHOP_COLLECTION_DETAIL(arg0) {
   return "/shop/collection/" + arg0;
 };
-obj[131] = function COLLECTIBLES_SHOP_PRODUCT_DETAIL(arg0) {
+obj.COLLECTIBLES_SHOP_PRODUCT_DETAIL = function COLLECTIBLES_SHOP_PRODUCT_DETAIL(arg0) {
   return "/shop/product/" + arg0;
 };
-obj[132] = function COLLECTIBLES_SHOP_LAYOUT(arg0) {
+obj.COLLECTIBLES_SHOP_LAYOUT = function COLLECTIBLES_SHOP_LAYOUT(arg0) {
   return "/shop/layout/" + arg0;
 };
-obj[135] = function CHANNEL_SUMMARIES(arg0) {
+obj.CHANNEL_SUMMARIES = function CHANNEL_SUMMARIES(arg0) {
   return "/channels/" + arg0 + "/summaries";
 };
-obj[136] = function CHANNEL_SUMMARY(channelId, id) {
+obj.CHANNEL_SUMMARY = function CHANNEL_SUMMARY(channelId, id) {
   return "/channels/" + channelId + "/summaries/" + id;
 };
-obj[138] = function QUESTS(arg0) {
+obj.QUESTS = function QUESTS(arg0) {
   return "/quests/" + arg0;
 };
-obj[139] = function GAME_PROFILE(arg0) {
+obj.GAME_PROFILE = function GAME_PROFILE(arg0) {
   return "/games/" + arg0;
 };
-obj[140] = function ACCOUNT_REVERT(arg0) {
+obj.ACCOUNT_REVERT = function ACCOUNT_REVERT(arg0) {
   return "/wasntme/" + arg0;
 };
-obj[141] = function POWERUP_STORE(arg0) {
+obj.POWERUP_STORE = function POWERUP_STORE(arg0) {
   return "/channels/" + arg0 + "/boosts";
 };
-obj[143] = function CONFERENCE_MODE_VOICE(arg0, arg1) {
+obj.CONFERENCE_MODE_VOICE = function CONFERENCE_MODE_VOICE(arg0, arg1) {
   return "/conference-mode/voice/" + arg0 + "/" + arg1;
 };
-obj[144] = function QUEST_PREVIEW(arg0) {
+obj.QUEST_PREVIEW = function QUEST_PREVIEW(arg0) {
   return "/quest-preview/" + arg0;
 };
-obj[145] = function QUEST_PREVIEW_TOOL_2(arg0) {
+obj.QUEST_PREVIEW_TOOL_2 = function QUEST_PREVIEW_TOOL_2(arg0) {
   return "/quest-home?tab=preview_tool&quest_id=" + arg0;
 };
 const frozen = Object.freeze(obj);
-const wrapPathsResult = getAuthenticationPath.wrapPaths(frozen, [":", "?", "@"]);
-const result = set.fileFinishedImporting("modules/routing/RouteConstants.tsx");
+const result = size.fileFinishedImporting("modules/routing/RouteConstants.tsx");
 
 export const ME = "@me";
 export const FAVORITES = "@favorites";
@@ -613,4 +622,4 @@ export const NOTIFICATIONS_INBOX = "@inbox";
 export const EMPTY_NUX_SERVER = "@guilds-empty-nux";
 export const MOBILE_GUILD_UPSELL_LIST = "@guild-upsell-list";
 export const PSEUDO_GUILD_IDS = items;
-export const Routes = wrapPathsResult;
+export const Routes = PathUtils.wrapPaths(frozen, [":", "?", "@"]);

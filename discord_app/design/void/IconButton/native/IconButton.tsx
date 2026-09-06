@@ -1,10 +1,8 @@
 // discord_app/design/void/IconButton/native/IconButton.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_2 from "../../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
+const require = fn;
 class SquareIconButton {
   constructor(arg0) {
     size = global.size;
@@ -20,7 +18,7 @@ class SquareIconButton {
     tmp4 = size;
     tmp5 = closure_1;
     memo = closure_2.useMemo(() => {
-      if (closure_1_4.MEDIUM_32 === size) {
+      if (obj.MEDIUM_32 === size) {
         return closure_1.medium;
       } else if (tmp2.LARGE_40 === tmp) {
         return closure_1.large;
@@ -39,17 +37,18 @@ class SquareIconButton {
       accessibilityElementsHidden: accessibilityHidden,
       onPress,
       disabled,
-      style: items1,
+      style: null,
       children: null,
     };
     items1 = [, ,];
     items1[0] = tmp.container;
     items1[1] = style;
     items1[2] = memo;
+    obj.style = items1;
     if (size === closure_4.LARGE_40) {
-      REFRESH_SMALL_16 = require("Button").Icon.Sizes.MEDIUM;
+      REFRESH_SMALL_16 = tmp4(tmp5[6]).Icon.Sizes.MEDIUM;
     } else {
-      REFRESH_SMALL_16 = require("Button").Icon.Sizes.REFRESH_SMALL_16;
+      REFRESH_SMALL_16 = tmp4(tmp5[6]).Icon.Sizes.REFRESH_SMALL_16;
     }
     obj = { size: REFRESH_SMALL_16, style: null, disableColor: null, source: null };
     icon = null;
@@ -59,18 +58,18 @@ class SquareIconButton {
     items2 = [,];
     items2[0] = icon;
     items2[1] = iconStyle;
-    obj[1] = items2;
-    obj[2] = disableColor;
-    obj[3] = source;
-    obj[6] = tmp3(require("Button").Icon, obj);
-    return tmp3(require("PressableBase").PressableOpacity, obj);
+    obj.style = items2;
+    obj.disableColor = disableColor;
+    obj.source = source;
+    obj.children = tmp3(tmp4(tmp5[6]).Icon, obj);
+    return tmp3(size(closure_1[5]).PressableOpacity, obj);
   }
 }
 class CircularIconButton {
   constructor(arg0) {
     size = global.size;
     ({ style, disableColor } = global);
-    merged = Object.assign(global, Object.create(null));
+    merged = Object.assign(global, Object.assign({ style: 0, size: 0, disableColor: 0 }));
     tmp2 = closure_5();
     tmp5 = closure_4;
     tmp3 = jsx;
@@ -82,17 +81,20 @@ class CircularIconButton {
     } else if (tmp5.LARGE_40 === size) {
       largeCircular = tmp2.largeCircular;
     }
-    obj = { style: items, size };
+    obj = { style: null, size };
     items = [,];
     items[0] = largeCircular;
     items[1] = style;
+    obj.style = items;
     merged1 = Object.assign(merged);
     obj.disableColor = disableColor;
     return tmp3(tmp4, obj);
   }
 }
-let obj = { SMALL_24: 24, [24]: "SMALL_24", MEDIUM_32: 32, [32]: "MEDIUM_32", LARGE_40: 40, [40]: "LARGE_40" };
-obj = {
+const jsx = fn(21).jsx;
+let Sizes = { SMALL_24: 24, [24]: "SMALL_24", MEDIUM_32: 32, [32]: "MEDIUM_32", LARGE_40: 40, [40]: "LARGE_40" };
+fn(4560);
+Sizes = {
   container: null,
   small: null,
   medium: null,
@@ -102,26 +104,26 @@ obj = {
   largeCircular: null,
   icon: null,
 };
-obj = {
-  borderRadius: ThemesDefault.radii.xs,
+Sizes = {
+  borderRadius: nativeDefault.radii.xs,
   alignItems: "center",
   justifyContent: "center",
-  backgroundColor: require("result").DARK_PRIMARY_700_LIGHT_PRIMARY_230,
+  backgroundColor: fn(5441).DARK_PRIMARY_700_LIGHT_PRIMARY_230,
 };
-obj[0] = obj;
-obj[1] = { height: obj.SMALL_24, width: obj.SMALL_24 };
-obj[2] = { height: obj.MEDIUM_32, width: obj.MEDIUM_32 };
-obj[3] = { height: obj.LARGE_40, width: obj.LARGE_40 };
-createCacheKey = { borderRadius: obj.SMALL_24 / 2 };
-obj[4] = createCacheKey;
-obj[5] = { borderRadius: obj.MEDIUM_32 / 2 };
-obj[6] = { borderRadius: obj.LARGE_40 / 2 };
-obj[7] = { tintColor: require("result").DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
-let closure_5 = createCacheKey.createStyles(obj);
-SquareIconButton.Sizes = obj;
-CircularIconButton.Sizes = obj;
-const obj2 = { tintColor: require("result").DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
-const result = require("set").fileFinishedImporting("design/void/IconButton/native/IconButton.tsx");
+Sizes.container = Sizes;
+Sizes.small = { height: Sizes.SMALL_24, width: Sizes.SMALL_24 };
+Sizes.medium = { height: Sizes.MEDIUM_32, width: Sizes.MEDIUM_32 };
+Sizes.large = { height: Sizes.LARGE_40, width: Sizes.LARGE_40 };
+const createStyles = { borderRadius: Sizes.SMALL_24 / 2 };
+Sizes.smallCircular = createStyles;
+Sizes.mediumCircular = { borderRadius: Sizes.MEDIUM_32 / 2 };
+Sizes.largeCircular = { borderRadius: Sizes.LARGE_40 / 2 };
+Sizes.icon = { tintColor: fn(5441).DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
+const hasOwnProperty = createStyles.createStyles(Sizes);
+SquareIconButton.Sizes = Sizes;
+CircularIconButton.Sizes = Sizes;
+let size = fn(2);
+const result = size.fileFinishedImporting("design/void/IconButton/native/IconButton.tsx");
 
 export { SquareIconButton };
 export { CircularIconButton };

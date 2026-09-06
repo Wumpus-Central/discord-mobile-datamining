@@ -1,20 +1,22 @@
 // discord_app/modules/errors/av_errors/definitions/AVErrorStreamViewLowFPS.tsx
-import closure_2 from "../../../calls/ChannelRTCStore.tsx";
-import closure_3 from "../../../../stores/ApplicationStreamingStore.tsx";
-import closure_4 from "../../../../stores/AuthenticationStore.tsx";
-import closure_5 from "../../../../stores/StreamRTCConnectionStore.tsx";
-import { ApplicationStreamStates } from "../../../../Constants.tsx";
+import StreamKeyUtils from "../../../go_live/utils/StreamKeyUtils.tsx";
+import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
+import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingStore.tsx";
+import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
+import StreamRTCConnectionStore from "../../../../stores/StreamRTCConnectionStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamViewLowFPS.tsx");
+require = fn;
+const ApplicationStreamStates = fn(1074).ApplicationStreamStates;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamViewLowFPS.tsx");
 
 export const AVErrorStreamViewLowFPSDefinition = {
   getActiveErrors() {
     let reduced = null;
     if (obj.getReportInboundErrors()) {
-      allActiveStreams = allActiveStreams.getAllActiveStreams();
+      const allActiveStreams = ApplicationStreamingStore.getAllActiveStreams();
       reduced = allActiveStreams.reduce((arr, ownerId) => {
-        let obj = callback(table[6]);
+        let obj = StreamKeyUtils;
         rTCConnection = rTCConnection.getRTCConnection(obj.encodeStreamKey(ownerId));
         let mediaEngineConnectionId;
         if (rTCConnection != null) {
@@ -44,8 +46,7 @@ export const AVErrorStreamViewLowFPSDefinition = {
                       accumulatedStatsWithMinDatapoints.short.frameRate <
                       tmpResult2.getWarningFrameRate(maxQuality.maxFrameRate)
                     ) {
-                      obj = { type: null };
-                      obj[0] = tmp(tmp2[8]).AVError.STREAM_VIEW_LOW_FPS;
+                      obj = { type: tmp(tmp2[8]).AVError.STREAM_VIEW_LOW_FPS };
                       const tmpResult3 = tmp(tmp2[9]);
                       const merged = Object.assign(
                         tmpResult3.getStreamErrorContext(tmp(tmp2[6]).encodeStreamKey(ownerId)),

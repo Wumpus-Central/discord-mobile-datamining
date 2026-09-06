@@ -1,9 +1,9 @@
 // discord_app/modules/poggermode/trackPoggermodeSettingsUpdated.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
-import ConfettiLocation from "PoggermodeConstants.tsx";
-import importDefaultResult from "../../../_runtime/00012_apply.js";
+import Constants from "../../Constants.tsx";
+import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
+import PoggermodeConstants from "PoggermodeConstants.tsx";
+import apply from "../../../_runtime/metro/00012__.js";
+import size from "../../../_runtime/metro/00002__.js";
 
 function getScreenshakeLocationName(arg0) {
   if (constants.CHAT_INPUT === arg0) {
@@ -25,9 +25,11 @@ function getConfettiLocationName(arg0) {
     return "call_tile";
   }
 }
-({ ShakeLocation: obj1, ConfettiLocation: c3 } = ConfettiLocation);
-const AnalyticEvents = ME.AnalyticEvents;
-const throttleResult = importDefaultResult.throttle((arg0) => {
+({ ShakeLocation: c2, ConfettiLocation: c3 } = PoggermodeConstants);
+const AnalyticEvents = Constants.AnalyticEvents;
+const result = size.fileFinishedImporting("modules/poggermode/trackPoggermodeSettingsUpdated.tsx");
+
+export default apply.throttle((arg0) => {
   ({
     enabled,
     combosEnabled,
@@ -40,8 +42,7 @@ const throttleResult = importDefaultResult.throttle((arg0) => {
     confettiCount,
     confettiEnabledLocations,
   } = arg0);
-  let obj = expandEventPropertiesDefault;
-  obj = {
+  const obj = {
     enabled,
     combos_enabled: combosEnabled,
     combos_required_count: combosRequiredCount,
@@ -53,31 +54,27 @@ const throttleResult = importDefaultResult.throttle((arg0) => {
     confetti_count: null,
     confetti_enabled_locations: null,
   };
-  importDefault = getScreenshakeLocationName;
   const entries = Object.entries(screenshakeEnabledLocations);
-  const found = entries.filter((arg0) => {
-    [, tmp] = arg0;
+  const found = entries.filter((item) => {
+    [, tmp] = item;
     return tmp;
   });
-  obj[5] = found.map((arg0) => {
-    [tmp] = arg0;
-    return callback(Number.parseInt(tmp));
+  obj.screenshake_enabled_locations = found.map((item) => {
+    [tmp] = item;
+    return closure_0(Number.parseInt(tmp));
   });
-  obj[6] = confettiEnabled;
-  obj[7] = confettiSize;
-  obj[8] = confettiCount;
-  importDefault = getConfettiLocationName;
+  obj.confetti_enabled = confettiEnabled;
+  obj.confetti_size = confettiSize;
+  obj.confetti_count = confettiCount;
+  closure_0 = getConfettiLocationName;
   const entries1 = Object.entries(confettiEnabledLocations);
-  const found1 = entries1.filter((arg0) => {
-    [, tmp] = arg0;
+  const found1 = entries1.filter((item) => {
+    [, tmp] = item;
     return tmp;
   });
-  obj[9] = found1.map((arg0) => {
-    [tmp] = arg0;
-    return callback(Number.parseInt(tmp));
+  obj.confetti_enabled_locations = found1.map((item) => {
+    [tmp] = item;
+    return closure_0(Number.parseInt(tmp));
   });
   obj.track(AnalyticEvents.POGGERMODE_SETTINGS_UPDATED, obj);
 }, 5000);
-const result = set.fileFinishedImporting("modules/poggermode/trackPoggermodeSettingsUpdated.tsx");
-
-export default throttleResult;

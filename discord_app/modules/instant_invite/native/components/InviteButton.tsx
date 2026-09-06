@@ -1,21 +1,24 @@
 // discord_app/modules/instant_invite/native/components/InviteButton.tsx
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import Button from "../../../../design/components/Button/native/Button.native.tsx";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { InviteSendStates } from "../../Constants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
+import util from "../../../../intl/index.native.tsx";
+import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-let closure_5 = createCacheKey.createStyles({ buttonWrapper: { minWidth: 66, flexDirection: "row" } });
-const memoResult = importAllResult.memo(function InviteButton(onPress) {
+require = fn;
+const View = fn(17).View;
+const InviteSendStates = fn(7736).InviteSendStates;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_5 = createStyles.createStyles({ buttonWrapper: { minWidth: 66, flexDirection: "row" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/instant_invite/native/components/InviteButton.tsx");
+
+export default noop.memo(function InviteButton(onPress) {
   ({ sendState, disabled } = onPress);
   if (disabled === undefined) {
     disabled = false;
   }
-  const intl = getSystemLocale.intl;
-  intl.string(getSystemLocale.t.jYnGPG);
+  const intl = util.intl;
+  intl.string(util.t.jYnGPG);
   if (InviteSendStates.SENDING === sendState) {
     const intl5 = tmp2(1114).intl;
     let stringResult1 = intl5.string(tmp2(1114).t.jYnGPG);
@@ -36,7 +39,7 @@ const memoResult = importAllResult.memo(function InviteButton(onPress) {
     stringResult1 = intl2.string(tmp2(1114).t.jYnGPG);
     flag = false;
   }
-  let obj = { style: callback().buttonWrapper, children: null };
+  let obj = { style: closure_5().buttonWrapper, children: null };
   obj = {
     accessibilityRole: "none",
     size: "sm",
@@ -49,8 +52,8 @@ const memoResult = importAllResult.memo(function InviteButton(onPress) {
   if (!disabled) {
     disabled = flag;
   }
-  obj[5] = disabled;
-  obj[1] = jsx(Button.Button, {
+  obj.disabled = disabled;
+  obj.children = jsx(components_Button_Button.Button, {
     accessibilityRole: "none",
     size: "sm",
     variant: "secondary",
@@ -71,6 +74,3 @@ const memoResult = importAllResult.memo(function InviteButton(onPress) {
     />
   );
 });
-const result = require("set").fileFinishedImporting("modules/instant_invite/native/components/InviteButton.tsx");
-
-export default memoResult;

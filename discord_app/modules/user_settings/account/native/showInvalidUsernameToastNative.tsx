@@ -1,16 +1,15 @@
 // discord_app/modules/user_settings/account/native/showInvalidUsernameToastNative.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import dispatcherDefault from "../../../toast/native/ToastActionCreators.tsx";
-import registerAssetDefault from "../../../../../_runtime/06992_registerAsset.js";
+import util from "../../../../intl/index.native.tsx";
+import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
+import _modDef6992 from "../../../../../_runtime/metro/06992__.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/user_settings/account/native/showInvalidUsernameToastNative.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/account/native/showInvalidUsernameToastNative.tsx");
 
 export const showInvalidUsernameToast = function showInvalidUsernameToast() {
-  let obj = dispatcherDefault;
-  obj = { key: "USER_SETTINGS_UPDATE_FAILURE", content: null, icon: null };
-  const intl = getSystemLocale.intl;
-  obj[1] = intl.string(getSystemLocale.t["TGg/2k"]);
-  obj[2] = registerAssetDefault;
+  const obj = { key: "USER_SETTINGS_UPDATE_FAILURE", content: null, icon: null };
+  const intl = util.intl;
+  obj.content = intl.string(util.t["TGg/2k"]);
+  obj.icon = _modDef6992;
   obj.open(obj);
 };

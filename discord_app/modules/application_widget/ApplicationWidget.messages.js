@@ -1,112 +1,112 @@
 // discord_app/modules/application_widget/ApplicationWidget.messages.js
-import set from "../../../_runtime/00002_set.js";
-import loadJsonAsset from "../asset_json/native/AssetJsonUtils.tsx";
-import registerAsset from "../../../_runtime/03043_registerAsset.js";
-import registerAsset2 from "../../../_runtime/03044_registerAsset.js";
-import registerAsset3 from "../../../_runtime/03045_registerAsset.js";
-import registerAsset4 from "../../../_runtime/03046_registerAsset.js";
-import registerAsset5 from "../../../_runtime/03047_registerAsset.js";
-import registerAsset6 from "../../../_runtime/03048_registerAsset.js";
-import registerAsset7 from "../../../_runtime/03049_registerAsset.js";
-import registerAsset8 from "../../../_runtime/03050_registerAsset.js";
-import registerAsset9 from "../../../_runtime/03051_registerAsset.js";
-import registerAsset10 from "../../../_runtime/03052_registerAsset.js";
-import registerAsset11 from "../../../_runtime/03053_registerAsset.js";
-import registerAsset12 from "../../../_runtime/03054_registerAsset.js";
-import registerAsset13 from "../../../_runtime/03055_registerAsset.js";
-import registerAsset14 from "../../../_runtime/03056_registerAsset.js";
-import registerAsset15 from "../../../_runtime/03057_registerAsset.js";
-import registerAsset16 from "../../../_runtime/03058_registerAsset.js";
-import registerAsset17 from "../../../_runtime/03059_registerAsset.js";
-import registerAsset18 from "../../../_runtime/03060_registerAsset.js";
-import registerAsset19 from "../../../_runtime/03061_registerAsset.js";
-import registerAsset20 from "../../../_runtime/03062_registerAsset.js";
+import AssetJsonUtils from "../asset_json/native/AssetJsonUtils.tsx";
+import _mod3043 from "../../../_runtime/metro/03043__.js";
+import _mod3044 from "../../../_runtime/metro/03044__.js";
+import _mod3045 from "../../../_runtime/metro/03045__.js";
+import _mod3046 from "../../../_runtime/metro/03046__.js";
+import _mod3047 from "../../../_runtime/metro/03047__.js";
+import _mod3048 from "../../../_runtime/metro/03048__.js";
+import _mod3049 from "../../../_runtime/metro/03049__.js";
+import _mod3050 from "../../../_runtime/metro/03050__.js";
+import _mod3051 from "../../../_runtime/metro/03051__.js";
+import _mod3052 from "../../../_runtime/metro/03052__.js";
+import _mod3053 from "../../../_runtime/metro/03053__.js";
+import _mod3054 from "../../../_runtime/metro/03054__.js";
+import _mod3055 from "../../../_runtime/metro/03055__.js";
+import _mod3056 from "../../../_runtime/metro/03056__.js";
+import _mod3057 from "../../../_runtime/metro/03057__.js";
+import _mod3058 from "../../../_runtime/metro/03058__.js";
+import _mod3059 from "../../../_runtime/metro/03059__.js";
+import _mod3060 from "../../../_runtime/metro/03060__.js";
+import _mod3061 from "../../../_runtime/metro/03061__.js";
+import _mod3062 from "../../../_runtime/metro/03062__.js";
 import 01155__ from "../../../_runtime/metro/01155__.js";
+import size from "../../../_runtime/metro/00002__.js";
 
 const loader = module_1155.createLoader({
   da() {
-    const jsonAsset = loadJsonAsset.loadJsonAsset(registerAsset);
-    return jsonAsset.then((arg0) => ({ default: arg0 }));
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3043);
+    return jsonAsset.then((result) => ({ default: result }));
   },
   de() {
-    const jsonAsset = loadJsonAsset.loadJsonAsset(registerAsset2);
-    return jsonAsset.then((arg0) => ({ default: arg0 }));
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3044);
+    return jsonAsset.then((result) => ({ default: result }));
   },
   el() {
-    const jsonAsset = loadJsonAsset.loadJsonAsset(registerAsset3);
-    return jsonAsset.then((arg0) => ({ default: arg0 }));
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3045);
+    return jsonAsset.then((result) => ({ default: result }));
   },
   () => {
-    const jsonAsset = loadJsonAsset.loadJsonAsset(registerAsset4);
-    return jsonAsset.then((arg0) => ({ default: arg0 }));
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3046);
+    return jsonAsset.then((result) => ({ default: result }));
   },
   () => {
-    const jsonAsset = loadJsonAsset.loadJsonAsset(registerAsset5);
-    return jsonAsset.then((arg0) => ({ default: arg0 }));
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3047);
+    return jsonAsset.then((result) => ({ default: result }));
   },
   fr() {
-    const jsonAsset = loadJsonAsset.loadJsonAsset(registerAsset6);
-    return jsonAsset.then((arg0) => ({ default: arg0 }));
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3048);
+    return jsonAsset.then((result) => ({ default: result }));
   },
   it() {
-    const jsonAsset = loadJsonAsset.loadJsonAsset(registerAsset7);
-    return jsonAsset.then((arg0) => ({ default: arg0 }));
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3049);
+    return jsonAsset.then((result) => ({ default: result }));
   },
   ja() {
-    const jsonAsset = loadJsonAsset.loadJsonAsset(registerAsset8);
-    return jsonAsset.then((arg0) => ({ default: arg0 }));
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3050);
+    return jsonAsset.then((result) => ({ default: result }));
   },
   ko() {
-    const jsonAsset = loadJsonAsset.loadJsonAsset(registerAsset9);
-    return jsonAsset.then((arg0) => ({ default: arg0 }));
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3051);
+    return jsonAsset.then((result) => ({ default: result }));
   },
   nl() {
-    const jsonAsset = loadJsonAsset.loadJsonAsset(registerAsset10);
-    return jsonAsset.then((arg0) => ({ default: arg0 }));
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3052);
+    return jsonAsset.then((result) => ({ default: result }));
   },
   pl() {
-    const jsonAsset = loadJsonAsset.loadJsonAsset(registerAsset11);
-    return jsonAsset.then((arg0) => ({ default: arg0 }));
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3053);
+    return jsonAsset.then((result) => ({ default: result }));
   },
   () => {
-    const jsonAsset = loadJsonAsset.loadJsonAsset(registerAsset12);
-    return jsonAsset.then((arg0) => ({ default: arg0 }));
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3054);
+    return jsonAsset.then((result) => ({ default: result }));
   },
   ru() {
-    const jsonAsset = loadJsonAsset.loadJsonAsset(registerAsset13);
-    return jsonAsset.then((arg0) => ({ default: arg0 }));
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3055);
+    return jsonAsset.then((result) => ({ default: result }));
   },
   () => {
-    const jsonAsset = loadJsonAsset.loadJsonAsset(registerAsset14);
-    return jsonAsset.then((arg0) => ({ default: arg0 }));
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3056);
+    return jsonAsset.then((result) => ({ default: result }));
   },
   th() {
-    const jsonAsset = loadJsonAsset.loadJsonAsset(registerAsset15);
-    return jsonAsset.then((arg0) => ({ default: arg0 }));
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3057);
+    return jsonAsset.then((result) => ({ default: result }));
   },
   tr() {
-    const jsonAsset = loadJsonAsset.loadJsonAsset(registerAsset16);
-    return jsonAsset.then((arg0) => ({ default: arg0 }));
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3058);
+    return jsonAsset.then((result) => ({ default: result }));
   },
   vi() {
-    const jsonAsset = loadJsonAsset.loadJsonAsset(registerAsset17);
-    return jsonAsset.then((arg0) => ({ default: arg0 }));
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3059);
+    return jsonAsset.then((result) => ({ default: result }));
   },
   () => {
-    const jsonAsset = loadJsonAsset.loadJsonAsset(registerAsset18);
-    return jsonAsset.then((arg0) => ({ default: arg0 }));
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3060);
+    return jsonAsset.then((result) => ({ default: result }));
   },
   () => {
-    const jsonAsset = loadJsonAsset.loadJsonAsset(registerAsset19);
-    return jsonAsset.then((arg0) => ({ default: arg0 }));
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3061);
+    return jsonAsset.then((result) => ({ default: result }));
   },
   () => {
-    const jsonAsset = loadJsonAsset.loadJsonAsset(registerAsset20);
-    return jsonAsset.then((arg0) => ({ default: arg0 }));
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3062);
+    return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");
 const messagesProxy = module_1155.makeMessagesProxy(loader);
-const result = set.fileFinishedImporting("modules/application_widget/ApplicationWidget.messages.js");
+const result = size.fileFinishedImporting("modules/application_widget/ApplicationWidget.messages.js");
 
 export default messagesProxy;
 export const messagesLoader = loader;

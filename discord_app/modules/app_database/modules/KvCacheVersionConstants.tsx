@@ -1,7 +1,7 @@
 // discord_app/modules/app_database/modules/KvCacheVersionConstants.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/app_database/modules/KvCacheVersionConstants.tsx");
+const result = size.fileFinishedImporting("modules/app_database/modules/KvCacheVersionConstants.tsx");
 
 export const HELLO_KEY = "hello";
 export const VERSION_TO_SKIP_READING_THE_DATABASE_KEY = "version";

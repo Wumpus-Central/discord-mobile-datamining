@@ -1,15 +1,16 @@
 // discord_app/modules/user_settings/profiles/native/UserPrimaryGuildListBottomSheet.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { GuildTagBadgeSize } from "../../../guild_tag/GuildTagConstants.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import set from "../../../../utils/PlatformUtils.tsx";
+import _modDef12 from "../../../../../_runtime/metro/00012__.js";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import Form from "../../../../design/void/Form/native/index.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let c3 = importAllResult;
-({ jsx: closure_6, jsxs: error } = jsxProd);
+require = fn;
+const View = fn(17).View;
+const GuildTagBadgeSize = fn(7944).GuildTagBadgeSize;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4560);
 let obj = {
   titleContainer: { paddingHorizontal: 16, flexDirection: "row", alignItems: "center", justifyContent: "center" },
   guildIcon: { marginLeft: 4 },
@@ -18,21 +19,22 @@ let obj = {
   divider: null,
   itemTrailingStyle: null,
 };
+const PlatformUtils = fn(1115);
 let num = 18;
-if (set.isAndroid()) {
+if (PlatformUtils.isAndroid()) {
   num = 16;
 }
-obj[3] = { lineHeight: num };
-obj = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-obj[4] = obj;
-obj[5] = { flexDirection: "row", alignItems: "center", gap: 8, height: 20 };
-let closure_8 = createCacheKey.createStyles(obj);
-let closure_9 = importAllResult.memo((item) => {
+obj.tagStyles = { lineHeight: num };
+obj = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+obj.divider = obj;
+obj.itemTrailingStyle = { flexDirection: "row", alignItems: "center", gap: 8, height: 20 };
+let closure_8 = createStyles.createStyles(obj);
+let closure_9 = noop.memo((item) => {
   item = item.item;
   const selected = item.selected;
   const onSelectGuild = item.onSelectGuild;
   ({ start, end } = item);
-  const tmp = callback2();
+  const tmp = closure_8();
   if (item != null) {
     const profile = item.profile;
   }
@@ -61,7 +63,7 @@ let closure_9 = importAllResult.memo((item) => {
         tmp2 = id;
       }
       onSelectGuild(tmp2);
-      selected(onSelectGuild[9]).hideActionSheet();
+      ActionSheetActionCreatorsDefault.hideActionSheet();
     },
     label: null,
     icon: null,
@@ -73,18 +75,15 @@ let closure_9 = importAllResult.memo((item) => {
     const intl = tmp8(tmp9[10]).intl;
     name = intl.string(tmp8(tmp9[10]).t.PoWNfe);
   }
-  obj[3] = name;
+  obj.label = name;
   let tmp7Result = null;
   if (null != item) {
-    obj = { style: null, guild: null, size: null };
-    obj[0] = tmp.guildIcon;
-    obj[1] = item;
-    obj[2] = tmp8(tmp9[11]).GuildIconSizes.SMALL_32;
+    obj = { style: tmp.guildIcon, guild: item, size: tmp8(tmp9[11]).GuildIconSizes.SMALL_32 };
     tmp7Result = tmp7(selected(tmp9[11]), obj);
     const tmp12 = selected(tmp9[11]);
   }
-  obj[4] = tmp7Result;
-  obj1 = { style: tmp.itemTrailingStyle, children: null };
+  obj.icon = tmp7Result;
+  const obj1 = { style: tmp.itemTrailingStyle, children: null };
   tmp7Result = null != item;
   if (tmp7Result) {
     tmp7Result = null != profile;
@@ -99,32 +98,31 @@ let closure_9 = importAllResult.memo((item) => {
       textVariant: "heading-md/semibold",
       textColor: "text-strong",
     };
-    ({ tag: obj5[0], tagStyles: obj5[1] } = tmp);
+    ({ tag: obj5.containerStyles, tagStyles: obj5.textStyle } = tmp);
     const tag = profile.tag;
-    obj2[2] = tag;
-    obj2[3] = guildTagBadgeUrl;
-    obj2[4] = GuildTagBadgeSize.SIZE_16;
+    obj2.guildTag = tag;
+    obj2.guildBadge = guildTagBadgeUrl;
+    obj2.badgeSize = GuildTagBadgeSize.SIZE_16;
     tmp7Result = tmp7(tmp8(tmp9[12]).BaseGuildTagChiplet, obj2);
   }
   const items = [tmp7Result, closure_6(item(onSelectGuild[13]).FormRadio, { selected })];
-  obj1[1] = items;
-  obj[5] = closure_7(View, obj1);
+  obj1.children = items;
+  obj.trailing = closure_7(View, obj1);
   return closure_6(item(onSelectGuild[8]).TableRow, obj);
 });
-const result = set.fileFinishedImporting("modules/user_settings/profiles/native/UserPrimaryGuildListBottomSheet.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/profiles/native/UserPrimaryGuildListBottomSheet.tsx");
 
 export default function UserPrimaryGuildListBottomSheet(availableGuilds) {
   availableGuilds = availableGuilds.availableGuilds;
   ({ selectedGuildId: importDefault, onSelectGuild: dependencyMap } = availableGuilds);
-  importAllResult = undefined;
-  let memo;
-  const tmp = callback2();
-  importAllResult = tmp;
+  const tmp = closure_8();
+  noop = tmp;
   let items = [availableGuilds];
-  memo = importAllResult.useMemo(() => {
+  const memo = noop.useMemo(() => {
     const items = [null];
     HermesBuiltin.arraySpread(
-      closure_1_1(closure_1_2[14]).sortBy(availableGuilds, (name) => name.name.toLowerCase()),
+      _modDef12.sortBy(availableGuilds, (name) => name.name.toLowerCase()),
       1,
     );
     return items;
@@ -138,12 +136,12 @@ export default function UserPrimaryGuildListBottomSheet(availableGuilds) {
     children: null,
   };
   const intl = availableGuilds(1114).intl;
-  obj[3] = intl.string(availableGuilds(1114).t.Fo0g9x);
-  obj[1] = callback(availableGuilds(4556).Text, obj);
-  obj[2] = callback(memo, obj);
-  obj[3] = callback(availableGuilds(8874).BottomSheetFlashList, {
+  obj.children = intl.string(availableGuilds(1114).t.Fo0g9x);
+  obj.children = closure_6(availableGuilds(4556).Text, obj);
+  obj.header = closure_6(memo, obj);
+  obj.children = closure_6(availableGuilds(8874).BottomSheetFlashList, {
     ItemSeparatorComponent() {
-      return closure_1_6(availableGuilds(closure_1_2[18]).FormDivider, { iconPush: true, style: divider.divider });
+      return timestampProducer(Form.FormDivider, { iconPush: true, style: divider.divider });
     },
     data: memo,
     contentContainerStyle: { padding: 16 },
@@ -157,8 +155,8 @@ export default function UserPrimaryGuildListBottomSheet(availableGuilds) {
     renderItem(arg0) {
       ({ item, index } = arg0);
       const obj = { start: 0 === index, end: index === memo.length - 1, item, selected: null, onSelectGuild: null };
-      let tmp3 = closure_1;
-      if (closure_1 == null) {
+      let tmp3 = importDefault;
+      if (importDefault == null) {
         tmp3 = null;
       }
       let id;
@@ -168,10 +166,10 @@ export default function UserPrimaryGuildListBottomSheet(availableGuilds) {
       if (id == null) {
         id = null;
       }
-      obj[3] = tmp3 === id;
-      obj[4] = closure_2;
-      return closure_1_6(closure_1_9, obj);
+      obj.selected = tmp3 === id;
+      obj.onSelectGuild = onSelectGuild;
+      return timestampProducer(closure_9, obj);
     },
   });
-  return callback(availableGuilds(7150).BottomSheet, obj);
+  return closure_6(availableGuilds(7150).BottomSheet, obj);
 }

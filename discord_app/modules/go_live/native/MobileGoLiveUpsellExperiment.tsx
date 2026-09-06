@@ -1,15 +1,17 @@
 // discord_app/modules/go_live/native/MobileGoLiveUpsellExperiment.tsx
-import set from "../../../../_runtime/00002_set.js";
 import ApexExperiment from "../../experiments/apex/index.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const obj = { 1: null, 2: { showMobileGoLiveUpsell: true, goLiveUpsellVariant: "one-step" } };
-obj[2] = { showMobileGoLiveUpsell: true, goLiveUpsellVariant: "two-step" };
-const apexExperiment = ApexExperiment.createApexExperiment({
+let obj = {
   name: "2026-04-mobile-go-live-upsell",
   kind: "user",
   defaultConfig: { showMobileGoLiveUpsell: false },
-  variations: obj,
-});
-const result = set.fileFinishedImporting("modules/go_live/native/MobileGoLiveUpsellExperiment.tsx");
+  variations: null,
+};
+obj = { 1: null, 2: { showMobileGoLiveUpsell: true, goLiveUpsellVariant: "one-step" } };
+obj[2] = { showMobileGoLiveUpsell: true, goLiveUpsellVariant: "two-step" };
+obj.variations = obj;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/go_live/native/MobileGoLiveUpsellExperiment.tsx");
 
 export default apexExperiment;

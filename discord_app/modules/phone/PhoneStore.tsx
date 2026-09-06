@@ -1,8 +1,8 @@
 // discord_app/modules/phone/PhoneStore.tsx
-import set from "../../../_runtime/00002_set.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import DEFAULT_COUNTRY_CODE_NAME from "../i18n/CountryCodeUtils.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import CountryCodeUtils from "../i18n/CountryCodeUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 function handleSetLocationMetadata(countryCode) {
   countryCode = countryCode.countryCode;
@@ -14,32 +14,32 @@ function handleSetLocationMetadata(countryCode) {
     closure_3 = tmp2;
   }
 }
-const getDefaultCountryCode = DEFAULT_COUNTRY_CODE_NAME.getDefaultCountryCode;
-const getCountryCodeByAlpha2 = DEFAULT_COUNTRY_CODE_NAME.getCountryCodeByAlpha2;
+const getDefaultCountryCode = CountryCodeUtils.getDefaultCountryCode;
+const getCountryCodeByAlpha2 = CountryCodeUtils.getCountryCodeByAlpha2;
 let closure_3 = getDefaultCountryCode();
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class PhoneStore extends DeviceSettingsStore {}
 const prototype = PhoneStore.prototype;
 prototype["initialize"] = function initialize(selectedCountryCode) {
   if (null != selectedCountryCode) {
-    selectedCountryCode = selectedCountryCode.selectedCountryCode;
+    countryCode = selectedCountryCode.selectedCountryCode;
   }
 };
 prototype["getUserAgnosticState"] = function getUserAgnosticState() {
-  return { selectedCountryCode: closure_0 };
+  return { selectedCountryCode: countryCode };
 };
 prototype["getCountryCode"] = function getCountryCode() {
-  return null != closure_0 ? closure_0 : closure_3;
+  return null != countryCode ? countryCode : closure_3;
 };
 PhoneStore.displayName = "PhoneStore";
 PhoneStore.persistKey = "PhoneStore";
-const phoneStore = new PhoneStore(dispatcherDefault, {
+const phoneStore = new PhoneStore(DispatcherDefault, {
   PHONE_SET_COUNTRY_CODE: function handleSetCountryCode(countryCode) {
     countryCode = countryCode.countryCode;
   },
   CONNECTION_OPEN: handleSetLocationMetadata,
   SET_LOCATION_METADATA: handleSetLocationMetadata,
 });
-const result = set.fileFinishedImporting("modules/phone/PhoneStore.tsx");
+const result = size.fileFinishedImporting("modules/phone/PhoneStore.tsx");
 
 export default phoneStore;

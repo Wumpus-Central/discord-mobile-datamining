@@ -1,9 +1,9 @@
 // discord_app/modules/forums/FormError.tsx
-import set from "../../../_runtime/00002_set.js";
-import getSystemLocale from "../../intl/index.native.tsx";
-import getAutomodErrorMessageFromErrorResponse from "../guild_automod/AutomodErrorUtils.tsx";
+import util from "../../intl/index.native.tsx";
+import AutomodErrorUtils from "../guild_automod/AutomodErrorUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-let obj = {
+const FormSubmitErrorType = {
   EmptyContent: 0,
   [0]: "EmptyContent",
   AutomodViolation: 1,
@@ -13,31 +13,31 @@ let obj = {
   ApiValidation: 3,
   [3]: "ApiValidation",
 };
-const result = set.fileFinishedImporting("modules/forums/FormError.tsx");
+const result = size.fileFinishedImporting("modules/forums/FormError.tsx");
 
-export const FormSubmitErrorType = obj;
+export { FormSubmitErrorType };
 export const makeEmptyTitleError = function makeEmptyTitleError() {
-  const intl = getSystemLocale.intl;
-  let stringResult = intl.string(getSystemLocale.t["71wuR0"]);
+  const intl = util.intl;
+  let stringResult = intl.string(util.t["71wuR0"]);
   obj = { type: obj.EmptyContent, message: null };
   if (stringResult == null) {
     stringResult = null;
   }
-  obj[1] = stringResult;
+  obj.message = stringResult;
   return obj;
 };
 export const makeEmptyMessageError = function makeEmptyMessageError() {
-  const intl = getSystemLocale.intl;
-  let stringResult = intl.string(getSystemLocale.t["w/BT3G"]);
+  const intl = util.intl;
+  let stringResult = intl.string(util.t["w/BT3G"]);
   obj = { type: obj.EmptyContent, message: null };
   if (stringResult == null) {
     stringResult = null;
   }
-  obj[1] = stringResult;
+  obj.message = stringResult;
   return obj;
 };
 export const makeAutomodViolationError = function makeAutomodViolationError(errorResponseBody, id) {
-  obj = getAutomodErrorMessageFromErrorResponse;
+  let obj = AutomodErrorUtils;
   id = undefined;
   if (id != null) {
     id = id.id;
@@ -47,27 +47,27 @@ export const makeAutomodViolationError = function makeAutomodViolationError(erro
   if (automodErrorMessageFromErrorResponse == null) {
     automodErrorMessageFromErrorResponse = null;
   }
-  obj[1] = automodErrorMessageFromErrorResponse;
+  obj.message = automodErrorMessageFromErrorResponse;
   return obj;
 };
 export const makeApiNameValidationError = function makeApiNameValidationError() {
-  const intl = getSystemLocale.intl;
-  let stringResult = intl.string(getSystemLocale.t["71wuR0"]);
+  const intl = util.intl;
+  let stringResult = intl.string(util.t["71wuR0"]);
   obj = { type: obj.ApiValidation, message: null };
   if (stringResult == null) {
     stringResult = null;
   }
-  obj[1] = stringResult;
+  obj.message = stringResult;
   return obj;
 };
 export const makeEmptyTagsError = function makeEmptyTagsError() {
-  const intl = getSystemLocale.intl;
-  let stringResult = intl.string(getSystemLocale.t.xPfNQi);
+  const intl = util.intl;
+  let stringResult = intl.string(util.t.xPfNQi);
   obj = { type: obj.EmptyTags, message: null };
   if (stringResult == null) {
     stringResult = null;
   }
-  obj[1] = stringResult;
+  obj.message = stringResult;
   return obj;
 };
 export const renderError = function renderError(type, content) {
@@ -76,7 +76,6 @@ export const renderError = function renderError(type, content) {
     if (type.type === obj.EmptyContent) {
       if (null != content.content) {
         tmp = null;
-        const str = content.content;
       }
     }
     if (type.type === tmp3.EmptyTags) {

@@ -1,33 +1,33 @@
 // discord_app/modules/guild_settings/GuildSettingsModalMembersStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import closure_0 from "../../stores/GuildMemberStore.tsx";
-import { FormStates } from "../../Constants.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 
 function handleStopEditingRoles() {
-  c2 = null;
+  SUBMITTING = null;
   c3 = false;
-  c4 = null;
-  c5 = null;
-  c6 = null;
+  error = null;
+  userId = null;
+  found = null;
 }
 function handleChangeNicknameSuccess() {
-  c4 = null;
+  error = null;
 }
-let c2 = null;
+const FormStates = fn(1074).FormStates;
+let SUBMITTING = null;
 let c3 = false;
-let c4 = null;
-let c5 = null;
-let c6 = null;
+let error = null;
+let userId = null;
+let found = null;
 const Store = initializeDefault.Store;
 class GuildSettingsModalMembersStore extends Store {}
 const prototype = GuildSettingsModalMembersStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_0);
+  this.waitFor(GuildMemberStore);
 };
 Object.defineProperty(prototype, "isSubmitting", {
   get: function isSubmitting() {
-    return c2 === FormStates.SUBMITTING;
+    return SUBMITTING === FormStates.SUBMITTING;
   },
   set: undefined,
 });
@@ -39,33 +39,33 @@ Object.defineProperty(prototype, "isEditing", {
 });
 Object.defineProperty(prototype, "roles", {
   get: function roles() {
-    return c6;
+    return found;
   },
   set: undefined,
 });
 Object.defineProperty(prototype, "memberId", {
   get: function memberId() {
-    return c5;
+    return userId;
   },
   set: undefined,
 });
 Object.defineProperty(prototype, "nicknameError", {
   get: function nicknameError() {
-    return c4;
+    return error;
   },
   set: undefined,
 });
 GuildSettingsModalMembersStore.displayName = "GuildSettingsModalMembersStore";
-const guildSettingsModalMembersStore = new GuildSettingsModalMembersStore(dispatcherDefault, {
+const guildSettingsModalMembersStore = new GuildSettingsModalMembersStore(DispatcherDefault, {
   GUILD_SETTINGS_MODAL_MEMBERS_START_EDITING: function handleStartEditingRoles(userId) {
     userId = userId.userId;
-    member = member.getMember(userId.guildId, userId);
+    const member = GuildMemberStore.getMember(userId.guildId, userId);
     if (null == member) {
       return false;
     } else {
-      const OPEN = FormStates.OPEN;
+      SUBMITTING = FormStates.OPEN;
       c3 = true;
-      const roles = member.roles;
+      found = member.roles;
     }
   },
   GUILD_SETTINGS_MODAL_MEMBERS_STOP_EDITING: handleStopEditingRoles,
@@ -79,11 +79,11 @@ const guildSettingsModalMembersStore = new GuildSettingsModalMembersStore(dispat
       items[HermesBuiltin.arraySpread(arr, 0)] = roleId;
       found = items;
     } else {
-      found = arr.filter((arg0) => arg0 !== roleId);
+      found = arr.filter((item) => item !== roleId);
     }
   },
   GUILD_SETTINGS_MODAL_MEMBERS_ROLES_SAVE: function handleSaveRoles() {
-    const SUBMITTING = FormStates.SUBMITTING;
+    SUBMITTING = FormStates.SUBMITTING;
   },
   GUILD_SETTINGS_MODAL_MEMBERS_START_EDITING_NICKNAME: handleChangeNicknameSuccess,
   GUILD_SETTINGS_MODAL_MEMBERS_CHANGE_NICKNAME_SUCCESS: handleChangeNicknameSuccess,
@@ -91,6 +91,7 @@ const guildSettingsModalMembersStore = new GuildSettingsModalMembersStore(dispat
     error = error.error;
   },
 });
-const result = require("set").fileFinishedImporting("modules/guild_settings/GuildSettingsModalMembersStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_settings/GuildSettingsModalMembersStore.tsx");
 
 export default guildSettingsModalMembersStore;

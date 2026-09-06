@@ -1,23 +1,23 @@
 // discord_app/modules/game_relationships/hooks/useUserProfileGameFriendApplicationIds.tsx
-import closure_2 from "../../../../_runtime/00019_noop.js";
-import closure_3 from "../../../stores/RelationshipStore.tsx";
-import closure_4 from "../../../stores/UserStore.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import RelationshipStore from "../../../stores/RelationshipStore.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
 
-const require = arg1;
+const require = fn;
 let closure_5 = [];
-const result = require("set").fileFinishedImporting(
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/game_relationships/hooks/useUserProfileGameFriendApplicationIds.tsx",
 );
 
 export const useUserProfileGameFriendApplicationIds = function useUserProfileGameFriendApplicationIds(userId) {
   userId = userId.userId;
   let stateFromStores;
-  let gameFriendsForUser;
-  const items = [closure_3, closure_4];
+  const items = [RelationshipStore, UserStore];
   stateFromStores = userId(stateFromStores[3]).useStateFromStores(items, () => {
-    let isFriendResult = closure_1_3.isFriend(userId);
+    let isFriendResult = RelationshipStore.isFriend(userId);
     if (!isFriendResult) {
-      const user = closure_1_4.getUser(userId);
+      const user = UserStore.getUser(userId);
       let isProvisional;
       if (user != null) {
         isProvisional = user.isProvisional;
@@ -27,11 +27,11 @@ export const useUserProfileGameFriendApplicationIds = function useUserProfileGam
     return isFriendResult;
   });
   const obj = userId(stateFromStores[3]);
-  gameFriendsForUser = userId(stateFromStores[4]).useGameFriendsForUser(userId);
+  const gameFriendsForUser = userId(stateFromStores[4]).useGameFriendsForUser(userId);
   const items1 = [gameFriendsForUser, stateFromStores];
   return gameFriendsForUser.useMemo(() => {
     if (stateFromStores) {
-      let mapped = closure_1_5;
+      let mapped = closure_5;
     } else {
       mapped = gameFriendsForUser.map((applicationId) => applicationId.applicationId);
     }

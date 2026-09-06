@@ -1,9 +1,10 @@
 // discord_app/modules/forwarding/getInlineForwardOptions.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
+import Constants from "../../Constants.tsx";
+import MediaFormatTesters from "../messages/MediaFormatTesters.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const MessageReferenceTypes = ME.MessageReferenceTypes;
-const result = set.fileFinishedImporting("modules/forwarding/getInlineForwardOptions.tsx");
+const MessageReferenceTypes = Constants.MessageReferenceTypes;
+const result = size.fileFinishedImporting("modules/forwarding/getInlineForwardOptions.tsx");
 
 export const getInlineForwardOptions = function getInlineForwardOptions(message, nativeSyntheticEventData) {
   ({ targetKind, embedIndex } = nativeSyntheticEventData);
@@ -27,24 +28,23 @@ export const getInlineForwardOptions = function getInlineForwardOptions(message,
       const attachments = tmp6.attachments;
       const found = attachments.filter((filename) => {
         filename = filename.filename;
-        let isImageFileResult = callback(table[1]).isImageFile(filename);
+        let isImageFileResult = MediaFormatTesters.isImageFile(filename);
         if (!isImageFileResult) {
-          isImageFileResult = callback(table[1]).isVideoFile(filename);
-          const tmpResult = callback(table[1]);
+          isImageFileResult = MediaFormatTesters.isVideoFile(filename);
+          const tmpResult = MediaFormatTesters;
         }
         return isImageFileResult;
       });
       mapped = found.map((id) => id.id);
     }
-    let obj = { onlyAttachmentIds: null };
-    obj[0] = mapped;
+    let obj = { onlyAttachmentIds: mapped };
     return obj;
   } else {
     if ("embed" === targetKind) {
       if (null != embedIndex) {
         obj = { onlyEmbedIndices: null };
         const items = [embedIndex];
-        obj[0] = items;
+        obj.onlyEmbedIndices = items;
       }
       return obj;
     }

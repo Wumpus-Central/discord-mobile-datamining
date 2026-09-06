@@ -1,23 +1,23 @@
 // discord_app/modules/user_profile/utils/getActivityPlatformDisplayName.tsx
-import set from "../../../../_runtime/00002_set.js";
-import ME from "../../../Constants.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
+import Constants from "../../../Constants.tsx";
+import util from "../../../intl/index.native.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const PlatformTypes = ME.PlatformTypes;
-const result = set.fileFinishedImporting("modules/user_profile/utils/getActivityPlatformDisplayName.tsx");
+const PlatformTypes = Constants.PlatformTypes;
+const result = size.fileFinishedImporting("modules/user_profile/utils/getActivityPlatformDisplayName.tsx");
 
-export default function getActivityPlatformDisplayName(type) {
+export default function getActivityPlatformDisplayName(type, arg1) {
   type = type.type;
   if (PlatformTypes.XBOX === type) {
-    const intl3 = getSystemLocale.intl;
-    return intl3.string(getSystemLocale.t.Nfvo72);
+    const intl3 = util.intl;
+    return intl3.string(util.t.Nfvo72);
   } else if (tmp.PLAYSTATION === type) {
-    const intl2 = getSystemLocale.intl;
-    return intl2.string(getSystemLocale.t.fFl4jo);
+    const intl2 = util.intl;
+    return intl2.string(util.t.fFl4jo);
   } else if (tmp.META_QUEST_OR_HORIZON === type) {
-    const intl = getSystemLocale.intl;
+    const intl = util.intl;
     const string = intl.string;
-    const t = getSystemLocale.t;
+    const t = util.t;
     if (tmp5) {
       let stringResult = string(t.BrHQaq);
     } else {

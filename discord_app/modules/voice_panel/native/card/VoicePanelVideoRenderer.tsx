@@ -1,25 +1,30 @@
 // discord_app/modules/voice_panel/native/card/VoicePanelVideoRenderer.tsx
-import _modDef9616 from "../../../video_calls/native/components/DCDVideoRenderer.tsx";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
-import { PixelRatio } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import VoicePanelModes from "../../VoicePanelConstants.tsx";
-import { VoicePanelControlsModes } from "../controls/VoicePanelControlsConstants.tsx";
-import { VoicePanelPIPModes } from "../pip/VoicePanelPIPConstants.tsx";
-import { SCALE_PHYSICS } from "../../../panels/morphable/native/MorphablePanelConstants.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import importDefaultResult from "../../../reanimated/ReanimatedRexport.tsx";
+import ReanimatedRexport2 from "../../../reanimated/ReanimatedRexport.tsx";
+import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
+import LegacyBaseButton from "../../../../../_runtime/06655_LegacyBaseButton.js";
+import cheapWorkletShallowEqual from "../../../reanimated/native/cheapWorkletShallowEqual.tsx";
+import DCDVideoRendererDefault from "../../../video_calls/native/components/DCDVideoRenderer.tsx";
+import updateSharedValueIfChangedDefault from "../../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
+import VideoActionCreators from "../../../media/VideoActionCreators.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let c4 = importAllResult;
-VoicePanelModes = VoicePanelModes.VoicePanelModes;
-const MODE_CHANGE_PHYSICS = VoicePanelModes.MODE_CHANGE_PHYSICS;
-({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
+const ReanimatedRexport = ReanimatedRexport2;
+
+require = fn;
+const PixelRatio = fn(17).PixelRatio;
+const VoicePanelConstants = fn(12273);
+const VoicePanelModes = VoicePanelConstants.VoicePanelModes;
+const MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
+const VoicePanelControlsModes = fn(12271).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(17088).VoicePanelPIPModes;
+let SCALE_PHYSICS = fn(12274).SCALE_PHYSICS;
+const jsxProd = fn(21);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 let c13 = 25;
 let c14 = 0.05;
 let c15 = 0.0075;
-let closure_16 = importDefaultResult.createAnimatedComponent(_modDef9616);
+const DCDVideoRenderer = ReanimatedRexport.createAnimatedComponent(DCDVideoRendererDefault);
 function getScaleChangeWithOverscroll(arg0, arg1, arg2) {
   if (arg0 >= arg2) {
     return arg1;
@@ -35,7 +40,8 @@ getScaleChangeWithOverscroll.__workletHash = 8727721301304;
 getScaleChangeWithOverscroll.__initData = {
   code: "function getScaleChangeWithOverscroll_VoicePanelVideoRendererTsx1(currentScale,scaleChange,fitScale){const{MIN_OVERSCROLL,OVERSCOLL_INTENSITY_FACTOR}=this.__closure;if(currentScale>=fitScale){return scaleChange;}const underScale=1-currentScale;const factor=Math.max(MIN_OVERSCROLL,1-underScale*underScale*OVERSCOLL_INTENSITY_FACTOR);return 1+(scaleChange-1)*factor;}",
 };
-let closure_18 = createCacheKey.createStyles({
+const createStyles = fn(4560);
+let closure_18 = createStyles.createStyles({
   wrapper: {
     position: "absolute",
     top: 0,
@@ -64,7 +70,7 @@ let closure_22 = {
 let closure_23 = {
   code: "function VoicePanelVideoRendererTsx6(){const{focused,id,videoDimensions,windowDimensions,isCamera,resetToDefaultSize}=this.__closure;var _focused$get;let resizeMode=((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)===id?'fit':'cover';const videoLandscape=videoDimensions.get().width>=videoDimensions.get().height;const parentLandscape=windowDimensions.get().width>=windowDimensions.get().height;const matchingAspect=videoLandscape===parentLandscape;if(isCamera&&resizeMode==='fit'){if(matchingAspect){resizeMode='cover';}}resetToDefaultSize(resizeMode);}",
 };
-let closure_24 = {
+let __initData = {
   code: "function VoicePanelVideoRendererTsx7(){const{containerLayout}=this.__closure;return containerLayout.get();}",
 };
 let closure_25 = {
@@ -76,38 +82,38 @@ let closure_26 = {
 let closure_27 = {
   code: "function VoicePanelVideoRendererTsx10(){const{numGesturesActive,isInSnap,resetToDefaultSize,scale,fitScale,videoDimensions,containerLayout,translateX,withSpring,SCALE_PHYSICS,translateY}=this.__closure;if(numGesturesActive.get()>0){return;}if(isInSnap.get()){isInSnap.set(false);resetToDefaultSize('cover');return;}if(scale.get()<fitScale.get()){resetToDefaultSize('fit');return;}const maxTranslateY=Math.max(0,(videoDimensions.get().height-containerLayout.get().height/scale.get())/2);const maxTranslateX=Math.max(0,(videoDimensions.get().width-containerLayout.get().width/scale.get())/2);translateX.set(withSpring(Math.min(maxTranslateX,Math.max(-maxTranslateX,translateX.get())),SCALE_PHYSICS));translateY.set(withSpring(Math.min(maxTranslateY,Math.max(-maxTranslateY,translateY.get())),SCALE_PHYSICS));}",
 };
-let closure_28 = {
+const __initData2 = {
   code: "function VoicePanelVideoRendererTsx11(){const{focused,id,isInDefaultZoom,isInPanToZoom}=this.__closure;var _focused$get;return((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)===id&&(!isInDefaultZoom.get()||isInPanToZoom.get());}",
 };
-let closure_29 = {
+const __initData3 = {
   code: "function VoicePanelVideoRendererTsx12(isFocusedZoomed,previous){const{setIsFocusedVideoZoomed}=this.__closure;if(isFocusedZoomed===previous){return;}setIsFocusedVideoZoomed(isFocusedZoomed);}",
 };
-let closure_30 = {
+const __initData4 = {
   code: "function VoicePanelVideoRendererTsx13(){const{focused,id}=this.__closure;var _focused$get;return((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)===id;}",
 };
-let closure_31 = {
+const __initData5 = {
   code: "function VoicePanelVideoRendererTsx14(isFocused,previous){const{resetOnLayoutChange}=this.__closure;if(isFocused===previous){return;}resetOnLayoutChange();}",
 };
-let closure_32 = { code: "function VoicePanelVideoRendererTsx15(){const{mode}=this.__closure;return mode.get();}" };
-let closure_33 = {
+const __initData6 = { code: "function VoicePanelVideoRendererTsx15(){const{mode}=this.__closure;return mode.get();}" };
+const __initData7 = {
   code: "function VoicePanelVideoRendererTsx16(mode,previous){const{resetOnLayoutChange}=this.__closure;if(mode===previous){return;}resetOnLayoutChange();}",
 };
-let closure_34 = {
+const __initData8 = {
   code: "function VoicePanelVideoRendererTsx17(){const{videoDimensions}=this.__closure;return videoDimensions.get();}",
 };
-let closure_35 = {
+const __initData9 = {
   code: "function VoicePanelVideoRendererTsx18(layout,previous){const{currentSizeThreshold,resetOnLayoutChange}=this.__closure;if(currentSizeThreshold==null){return;}if(layout.width===(previous===null||previous===void 0?void 0:previous.width)&&layout.height===(previous===null||previous===void 0?void 0:previous.height)){return;}resetOnLayoutChange();}",
 };
-let closure_36 = {
+const __initData10 = {
   code: "function VoicePanelVideoRendererTsx19(){const{coverScale}=this.__closure;return coverScale.get();}",
 };
-let closure_37 = {
+const __initData11 = {
   code: "function VoicePanelVideoRendererTsx20(current,previous){const{currentSizeThreshold,resetToDefaultSize}=this.__closure;const _currentSizeThreshold=currentSizeThreshold.get();if(_currentSizeThreshold!=='cover'){return;}if(current===previous){return;}resetToDefaultSize(_currentSizeThreshold);}",
 };
-let closure_38 = {
+const __initData12 = {
   code: "function VoicePanelVideoRendererTsx21(){const{isInSnap}=this.__closure;return isInSnap.get();}",
 };
-let closure_39 = {
+const __initData13 = {
   code: "function VoicePanelVideoRendererTsx22(current,previous){const{runOnJS,triggerHapticFeedback,HapticFeedbackTypes}=this.__closure;if(current===previous){return;}if(!current){return;}runOnJS(triggerHapticFeedback)(HapticFeedbackTypes.IMPACT_LIGHT);}",
 };
 let closure_40 = {
@@ -165,120 +171,103 @@ shouldMakeActive.__workletHash = 14556501664557;
 shouldMakeActive.__initData = {
   code: "function shouldMakeActive_VoicePanelVideoRendererTsx37({mode:mode,focusedId:focusedId,selfId:selfId,isScrollVisible:isScrollVisible}){const{VoicePanelModes}=this.__closure;const isPIP=mode===VoicePanelModes.PIP;if(!isScrollVisible||isPIP||focusedId!=null&&focusedId!==selfId){return false;}return true;}",
 };
-let closure_55 = {
+const __initData14 = {
   code: "function VoicePanelVideoRendererTsx38(){const{mode,focused,isScrollVisible,streamId}=this.__closure;var _focused$get;return[mode.get(),(_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id,isScrollVisible.get(),streamId];}",
 };
-let closure_56 = {
+const __initData15 = {
   code: "function VoicePanelVideoRendererTsx39(props,previous){const{cheapWorkletArrayShallowEqual,runOnJS,setHasActiveVideoOutputSink,shouldMakeActive,id}=this.__closure;if(cheapWorkletArrayShallowEqual(props,previous!==null&&previous!==void 0?previous:undefined))return;const[mode,focusedId,isScrollVisible,streamId]=props;if(streamId==null)return;runOnJS(setHasActiveVideoOutputSink)(streamId,shouldMakeActive({mode:mode,focusedId:focusedId,selfId:id,isScrollVisible:isScrollVisible}));}",
 };
-let closure_57 = {
+const __initData16 = {
   code: "function VoicePanelVideoRendererTsx40(){const{focused,id,windowDimensions,sharedCoords}=this.__closure;var _focused$get;if(((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)===id){return{width:windowDimensions.get().width,height:windowDimensions.get().height};}return{width:sharedCoords.get().width,height:sharedCoords.get().height};}",
 };
-let closure_58 = {
+const __initData17 = {
   code: "function VoicePanelVideoRendererTsx41(){const{scale,videoDimensions,mode}=this.__closure;return[scale.get(),videoDimensions.get(),mode.get()];}",
 };
-let closure_59 = {
+const __initData18 = {
   code: "function VoicePanelVideoRendererTsx42(props,previous){const{streamId,cheapWorkletShallowEqual,runOnJS,respondToVideoSizeUpdate}=this.__closure;if(streamId==null)return;if(cheapWorkletShallowEqual(props,previous!==null&&previous!==void 0?previous:undefined))return;runOnJS(respondToVideoSizeUpdate)();}",
 };
-let closure_60 = {
+const __initData19 = {
   code: "function VoicePanelVideoRendererTsx43(){const{videoDimensions,pipState,VoicePanelPIPModes,scale,disableAnimations,translateX,translateY,mirror}=this.__closure;let{width:width,height:height}=videoDimensions.get();if(pipState.mode===VoicePanelPIPModes.IN_APP){if(width>height){width=width*(pipState.height/height)/scale.get();height=pipState.height/scale.get();}else{height=height*(pipState.width/width)/scale.get();width=pipState.width/scale.get();}}return{width:width,height:height,opacity:disableAnimations.get()?0:1,transform:[{scale:scale.get()},{translateX:translateX.get()},{translateY:translateY.get()},{scaleX:mirror?-1:1}]};}",
 };
-let closure_61 = {
+const __initData20 = {
   code: "function VoicePanelVideoRendererTsx44(){const{mode,VoicePanelModes,focused,id}=this.__closure;var _focused$get;return{inPip:mode.get()===VoicePanelModes.PIP,isFocused:((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)===id};}",
 };
-let closure_62 = {
+const __initData21 = {
   code: "function VoicePanelVideoRendererTsx45(curr,prev){const{cheapWorkletShallowEqual,strokeOpacity,withDelay,withTiming}=this.__closure;if(cheapWorkletShallowEqual(curr,prev!==null&&prev!==void 0?prev:undefined))return;if(curr.inPip||curr.isFocused){strokeOpacity.set(0);return;}const shouldDelay=(prev===null||prev===void 0?void 0:prev.isFocused)===true;strokeOpacity.set(shouldDelay?withDelay(300,withTiming(0.3,{duration:0},'animate-never')):0.3);}",
 };
-let closure_63 = {
+const __initData22 = {
   code: "function VoicePanelVideoRendererTsx46(){const{isInSnap,SNAP_EDGE_INNER_THRESHOLD,borderRadius,strokeOpacity}=this.__closure;if(isInSnap.get()){return{position:'absolute',top:0,left:0,bottom:0,right:0,borderWidth:SNAP_EDGE_INNER_THRESHOLD,overflow:'hidden',borderColor:'white',opacity:0.5};}return{position:'absolute',top:-1,left:-1,bottom:-1,right:-1,borderWidth:2,borderRadius:borderRadius+2,overflow:'hidden',borderColor:'white',opacity:strokeOpacity.get()};}",
 };
-let closure_64 = {
+const __initData23 = {
   code: "function VoicePanelVideoRendererTsx47(values){const{layout,disableAnimations}=this.__closure;return layout(values,disableAnimations.get());}",
 };
-const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/voice_panel/native/card/VoicePanelVideoRenderer.tsx");
+
+export default noop.memo(function VideoRenderer(streamKey) {
   let id = streamKey.id;
   const streamId = streamKey.streamId;
-  let isCamera = streamId;
   ({ userId, videoSpinnerContext, sharedCoords } = streamKey);
-  let focused = sharedCoords;
   const isScrollVisible = streamKey.isScrollVisible;
-  let mode = isScrollVisible;
-  isCamera = streamKey.isCamera;
-  id = isCamera;
+  const isCamera = streamKey.isCamera;
   let flag = streamKey.mirror;
   if (flag === undefined) {
     flag = false;
   }
-  let derivedValue = flag;
   let flag2 = streamKey.focusOnReady;
   if (flag2 === undefined) {
     flag2 = false;
   }
-  let sharedValue1 = flag2;
   let flag3 = streamKey.paused;
   if (flag3 === undefined) {
     flag3 = false;
   }
   const layout = streamKey.layout;
-  let sharedValue = layout;
-  let setIsFocusedVideoZoomed;
-  let windowDimensions2;
-  dismissToPIPGestureRef = undefined;
-  let setFocused;
-  let hideControls;
-  let controlsSpecs;
-  let showControls;
+  SCALE_PHYSICS = undefined;
+  layoutManager = undefined;
+  c16 = undefined;
+  getScaleChangeWithOverscroll = undefined;
+  let onReady;
+  let setHasActiveVideoOutputSink;
   let sharedValue2;
-  sharedValue3 = undefined;
+  let sharedValue3;
   let sharedValue4;
-  let sharedValue5;
   let sharedValue6;
-  sharedValue2 = undefined;
-  sharedValue3 = undefined;
-  sharedValue4 = undefined;
-  sharedValue6 = undefined;
-  let derivedValue2;
+  __initData = undefined;
   let callback6;
   let token;
   let sharedValue10;
-  let tmp = sharedValue5();
-  let tmp3 = focused;
-  let obj = id(focused[16]);
-  obj1 = id;
+  let tmp = onReady();
+  let tmp3 = sharedCoords;
+  let obj = id(sharedCoords[16]);
+  let obj1 = isCamera;
   const surfaceDirectRendererExperiment = obj.useSurfaceDirectRendererExperiment(userId, {
     location: "VoicePanelVideoRenderer",
   });
-  const context = id.useContext(isCamera(focused[11]));
-  mode = context.mode;
-  setIsFocusedVideoZoomed = mode;
-  focused = context.focused;
-  windowDimensions2 = focused;
-  ({ setFocused: dismissToPIPGestureRef, layoutManager } = context);
-  setFocused = layoutManager;
+  const context = isCamera.useContext(streamId(sharedCoords[11]));
+  const mode = context.mode;
+  const focused = context.focused;
+  ({ setFocused: c10, layoutManager } = context);
   const windowDimensions = context.windowDimensions;
-  hideControls = windowDimensions;
-  let obj2 = id(focused[8]);
-  sharedValue = obj2.useSharedValue(true);
-  controlsSpecs = sharedValue;
-  let obj3 = id(focused[8]);
+  let obj2 = id(sharedCoords[8]);
+  const sharedValue = obj2.useSharedValue(true);
+  let obj3 = id(sharedCoords[8]);
   obj = {};
   const merged = Object.assign(layoutManager.getTargetDimensions(id));
-  sharedValue1 = obj3.useSharedValue(obj);
-  showControls = sharedValue1;
-  let obj5 = id(focused[17]);
+  const sharedValue1 = obj3.useSharedValue(obj);
+  let obj5 = id(sharedCoords[17]);
   const pIPState = obj5.usePIPState();
-  sharedValue2 = pIPState;
   let tmp11 = isCamera;
   if (isCamera) {
     tmp11 = pIPState.id === id;
   }
-  [tmp13, sharedValue3] = mode(obj1.useState(true), 2);
-  sharedValue4 = obj1.useRef(() => {
-    if (sharedValue1) {
-      dismissToPIPGestureRef(id);
+  [tmp13, c16] = isScrollVisible(obj1.useState(true), 2);
+  getScaleChangeWithOverscroll = obj1.useRef(() => {
+    if (flag2) {
+      _undefined(id);
     }
   });
-  const onReady = tmp5(tmp3[18])({
+  onReady = tmp5(tmp3[18])({
     streamId,
     userId,
     loading: tmp13,
@@ -286,66 +275,63 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
     paused: flag3,
     streamKey: streamKey.streamKey,
   }).onReady;
-  sharedValue5 = onReady;
-  isCamera(tmp3[19])({ location: "VideoRenderer", videoSpinnerContext, userId, streamId, loading: tmp13 });
+  streamId(tmp3[19])({ location: "VideoRenderer", videoSpinnerContext, userId, streamId, loading: tmp13 });
   let items = [onReady];
   const callback = obj1.useCallback(() => {
-    sharedValue3(false);
-    sharedValue4.current();
-    sharedValue5();
+    translateX(false);
+    translateY.current();
+    onReady();
   }, items);
   let tmp2Result = tmp2(tmp3[20]);
-  const setHasActiveVideoOutputSink = tmp2Result.useSetHasActiveVideoOutputSink(context.streamOutputSinkStack);
-  sharedValue6 = setHasActiveVideoOutputSink;
+  setHasActiveVideoOutputSink = tmp2Result.useSetHasActiveVideoOutputSink(context.streamOutputSinkStack);
   tmp2Result = tmp2(tmp3[8]);
   function qe() {
-    const items = [setIsFocusedVideoZoomed.get(), , ,];
-    const value = windowDimensions2.get();
+    const items = [mode.get(), , ,];
+    value = focused.get();
     id = undefined;
     if (value != null) {
       id = value.id;
     }
     items[1] = id;
-    items[2] = mode.get();
-    items[3] = isCamera;
+    items[2] = isScrollVisible.get();
+    items[3] = streamId;
     return items;
   }
   qe.__closure = { mode, focused, isScrollVisible, streamId };
   qe.__workletHash = 3558943323767;
-  qe.__initData = closure_55;
+  qe.__initData = __initData14;
   class Je {
     constructor(arg0, arg1) {
       tmp = arg1;
-      tmp2 = id;
-      tmp3 = focused;
-      obj = id(focused[13]);
+      tmp2 = closure_0;
+      tmp3 = closure_2;
+      obj = closure_0(closure_2[13]);
       if (!obj.cheapWorkletArrayShallowEqual(streamKey, tmp)) {
-        tmp4 = mode;
+        tmp4 = closure_3;
         num = 4;
-        tmp5 = mode(streamKey, 4);
+        tmp5 = closure_3(streamKey, 4);
         tmp7 = tmp5[1];
         tmp8 = tmp5[2];
         tmp9 = tmp5[3];
         if (null != tmp9) {
           tmp2Result = tmp2(tmp3[8]);
-          tmp10 = closure_19;
-          tmp12 = closure_1_54;
-          runOnJSResult = tmp2Result.runOnJS(closure_19);
-          tmp13 = id;
-          if (typeof closure_1_54 !== "function") {
+          tmp11 = closure_19;
+          tmp13 = shouldMakeActive;
+          if (typeof shouldMakeActive === "function") {
+            tmp15 = VoicePanelModes;
+            tmp16 = !tmp8;
+            if (tmp8) {
+              tmp16 = tmp6 === VoicePanelModes.PIP;
+            }
+            if (!tmp16) {
+              tmp17 = null != tmp7 && tmp7 !== tmp14;
+              tmp16 = tmp17;
+            }
+            tmp12Result = tmp12(tmp9, !tmp16);
+          } else {
             str = "Trying to call a non-function";
-            throwTypeErrorResult = HermesBuiltin.throwTypeError();
+            throw new TypeError("Trying to call a non-function");
           }
-          tmp14 = closure_6;
-          tmp15 = !tmp8;
-          if (tmp8) {
-            tmp15 = tmp6 === closure_6.PIP;
-          }
-          if (!tmp15) {
-            tmp16 = null != tmp7 && tmp7 !== tmp13;
-            tmp15 = tmp16;
-          }
-          tmp11Result = runOnJSResult(tmp9, !tmp15);
         }
       }
       return;
@@ -360,117 +346,122 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
   };
   Je.__closure = obj;
   Je.__workletHash = 12089612803324;
-  Je.__initData = closure_56;
+  Je.__initData = __initData15;
   const animatedReaction = tmp2Result.useAnimatedReaction(qe, Je);
   const items1 = [sharedValue1, layoutManager, id, sharedValue];
   const callback1 = obj1.useCallback((nativeEvent) => {
     ({ width, height } = nativeEvent.nativeEvent);
-    isCamera(focused[21])(showControls, { width, height });
-    setFocused.setTargetDimensions(id, width, height);
-    if (controlsSpecs.get()) {
+    updateSharedValueIfChangedDefault(sharedValue1, { width, height });
+    layoutManager.setTargetDimensions(id, width, height);
+    if (sharedValue.get()) {
       const _setTimeout = setTimeout;
       const timerId = setTimeout(() => {
-        const result = closure_13.set(false);
+        const result = borderWidth.set(false);
       }, 34);
     }
   }, items1);
-  const tmp12 = mode(obj1.useState(true), 2);
+  const tmp12 = isScrollVisible(obj1.useState(true), 2);
   class Be {
     constructor() {
-      value = windowDimensions.get();
+      value = focused.get();
       id = undefined;
       if (value != null) {
         id = value.id;
       }
       if (id === id) {
-        obj = { width: null, height: null };
-        tmp4 = hideControls;
-        obj[0] = hideControls.get().width;
-        obj[1] = hideControls.get().height;
+        size = { width: null, height: null };
+        tmp4 = windowDimensions;
+        size.width = windowDimensions.get().width;
+        size.height = windowDimensions.get().height;
+        size1 = size;
       } else {
-        obj = { width: null, height: null };
-        tmp3 = focused;
-        obj[0] = focused.get().width;
-        obj[1] = focused.get().height;
+        size1 = { width: null, height: null };
+        tmp3 = sharedCoords;
+        size1.width = sharedCoords.get().width;
+        size1.height = sharedCoords.get().height;
       }
-      return obj;
+      return size1;
     }
   }
   Be.__closure = { focused, id, windowDimensions, sharedCoords };
   Be.__workletHash = 9631392718391;
-  Be.__initData = closure_57;
-  derivedValue = id(tmp3[8]).useDerivedValue(Be);
-  id = tmp13;
-  setIsFocusedVideoZoomed = undefined;
-  windowDimensions2 = undefined;
-  dismissToPIPGestureRef = undefined;
-  setFocused = undefined;
-  hideControls = undefined;
-  controlsSpecs = undefined;
-  showControls = undefined;
-  sharedValue2 = undefined;
-  sharedValue3 = undefined;
-  sharedValue4 = undefined;
-  sharedValue5 = undefined;
-  sharedValue6 = undefined;
-  sharedValue2 = undefined;
-  sharedValue3 = undefined;
-  sharedValue4 = undefined;
-  sharedValue6 = undefined;
-  derivedValue2 = undefined;
-  callback6 = undefined;
-  token = undefined;
-  sharedValue10 = undefined;
-  let callback4;
-  let callback5;
+  Be.__initData = __initData16;
+  const derivedValue = id(tmp3[8]).useDerivedValue(Be);
+  closure_129_0 = id;
+  closure_129_1 = isCamera;
+  closure_129_2 = focused;
+  closure_129_3 = mode;
+  closure_129_4 = tmp13;
+  closure_129_5 = derivedValue;
+  closure_129_6 = sharedValue1;
+  closure_129_7 = sharedValue;
+  closure_129_24 = undefined;
+  closure_129_25 = undefined;
+  closure_129_26 = undefined;
+  closure_129_27 = undefined;
+  closure_129_28 = undefined;
+  closure_129_29 = undefined;
   const context1 = obj1.useContext(tmp5(tmp3[11]));
-  setIsFocusedVideoZoomed = context1.setIsFocusedVideoZoomed;
-  windowDimensions2 = context1.windowDimensions;
-  dismissToPIPGestureRef = context1.dismissToPIPGestureRef;
-  setFocused = context1.setFocused;
-  hideControls = context1.hideControls;
-  controlsSpecs = context1.controlsSpecs;
-  showControls = context1.showControls;
+  const setIsFocusedVideoZoomed = context1.setIsFocusedVideoZoomed;
+  closure_129_8 = setIsFocusedVideoZoomed;
+  const windowDimensions2 = context1.windowDimensions;
+  closure_129_9 = windowDimensions2;
+  const dismissToPIPGestureRef = context1.dismissToPIPGestureRef;
+  closure_129_10 = dismissToPIPGestureRef;
+  const setFocused = context1.setFocused;
+  closure_129_11 = setFocused;
+  const hideControls = context1.hideControls;
+  closure_129_12 = hideControls;
+  const controlsSpecs = context1.controlsSpecs;
+  closure_129_13 = controlsSpecs;
+  const showControls = context1.showControls;
+  closure_129_14 = showControls;
   const tmp2Result1 = id(tmp3[8]);
   sharedValue2 = id(tmp3[8]).useSharedValue(1);
+  closure_129_15 = sharedValue2;
   const tmp2Result2 = id(tmp3[8]);
   sharedValue3 = id(tmp3[8]).useSharedValue(0);
+  closure_129_16 = sharedValue3;
   const tmp2Result3 = id(tmp3[8]);
   sharedValue4 = id(tmp3[8]).useSharedValue(0);
+  closure_129_17 = sharedValue4;
   const tmp2Result4 = id(tmp3[8]);
-  sharedValue5 = id(tmp3[8]).useSharedValue(0);
+  const sharedValue5 = id(tmp3[8]).useSharedValue(0);
+  closure_129_18 = sharedValue5;
   const tmp2Result5 = id(tmp3[8]);
   sharedValue6 = id(tmp3[8]).useSharedValue(false);
+  closure_129_19 = sharedValue6;
   const tmp2Result6 = id(tmp3[8]);
   const sharedValue7 = id(tmp3[8]).useSharedValue(0);
-  sharedValue2 = sharedValue7;
+  closure_129_20 = sharedValue7;
   const tmp2Result7 = id(tmp3[8]);
   const sharedValue8 = id(tmp3[8]).useSharedValue(false);
-  sharedValue3 = sharedValue8;
+  closure_129_21 = sharedValue8;
   const tmp2Result8 = id(tmp3[8]);
   const sharedValue9 = id(tmp3[8]).useSharedValue(null);
-  sharedValue4 = sharedValue9;
+  closure_129_22 = sharedValue9;
   const tmp2Result9 = id(tmp3[8]);
   let fn = function w() {
-    const result = derivedValue.get().width / sharedValue1.get().width;
-    return Math.max(result, derivedValue.get().height / sharedValue1.get().height);
+    const result = flag.get().width / flag2.get().width;
+    return Math.max(result, flag.get().height / flag2.get().height);
   };
   fn.__closure = { containerLayout: derivedValue, videoDimensions: sharedValue1 };
   fn.__workletHash = 4177496646282;
-  fn.__initData = sharedValue6;
+  fn.__initData = setHasActiveVideoOutputSink;
   const derivedValue1 = id(tmp3[8]).useDerivedValue(fn);
-  sharedValue6 = derivedValue1;
+  closure_129_23 = derivedValue1;
   const tmp2Result10 = id(tmp3[8]);
   class D {
     constructor() {
-      result = closure_5.get().width / closure_6.get().width;
-      return Math.min(result, closure_5.get().height / closure_6.get().height);
+      result = c5.get().width / c6.get().width;
+      return Math.min(result, c5.get().height / c6.get().height);
     }
   }
   D.__closure = { containerLayout: derivedValue, videoDimensions: sharedValue1 };
   D.__workletHash = 5260375952053;
   D.__initData = sharedValue2;
-  derivedValue2 = id(tmp3[8]).useDerivedValue(D);
+  const derivedValue2 = id(tmp3[8]).useDerivedValue(D);
+  closure_129_24 = derivedValue2;
   const tmp2Result11 = id(tmp3[8]);
   class I {
     constructor() {
@@ -504,41 +495,36 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
   I.__workletHash = 15099362638406;
   I.__initData = sharedValue3;
   const derivedValue3 = id(tmp3[8]).useDerivedValue(I);
-  callback6 = derivedValue3;
+  closure_129_25 = derivedValue3;
   function ae(arg0) {
     if ("fit" === arg0) {
-      let value = derivedValue2.get();
+      value = fitScale.get();
       let str2 = "respect-motion-settings";
-      if (sharedValue.get()) {
+      if (layout.get()) {
         str2 = "animate-never";
       }
-      const result = sharedValue2.set(id(focused[12]).withSpring(value, sharedValue, str2));
-      const obj2 = id(focused[12]);
-      const tmp14 = sharedValue;
+      const result = pIPState.set(spring.withSpring(value, MODE_CHANGE_PHYSICS, str2));
     } else {
       value = sharedValue6.get();
       let str = "respect-motion-settings";
-      if (sharedValue.get()) {
+      if (layout.get()) {
         str = "animate-never";
       }
-      const result1 = sharedValue2.set(id(focused[12]).withSpring(value, sharedValue, str));
-      const obj = id(focused[12]);
-      const tmp6 = sharedValue;
+      const result1 = pIPState.set(spring.withSpring(value, MODE_CHANGE_PHYSICS, str));
     }
-    const result2 = sharedValue3.set(id(focused[12]).withSpring(0, dismissToPIPGestureRef));
-    const obj3 = id(focused[12]);
-    const result3 = sharedValue4.set(id(focused[12]).withSpring(0, dismissToPIPGestureRef));
+    const result2 = translateX.set(spring.withSpring(0, SCALE_PHYSICS));
+    const result3 = translateY.set(spring.withSpring(0, SCALE_PHYSICS));
     const result4 = sharedValue4.set(arg0);
   }
   obj1 = {
     scale: sharedValue2,
     withSpring: tmp2(tmp3[12]).withSpring,
     fitScale: derivedValue2,
-    MODE_CHANGE_PHYSICS: sharedValue,
+    MODE_CHANGE_PHYSICS: layout,
     disableAnimations: sharedValue,
     coverScale: derivedValue1,
     translateX: sharedValue3,
-    SCALE_PHYSICS: dismissToPIPGestureRef,
+    SCALE_PHYSICS,
     translateY: sharedValue4,
     currentSizeThreshold: sharedValue9,
   };
@@ -547,9 +533,9 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
   ae.__initData = sharedValue4;
   const items2 = [sharedValue2, sharedValue3, sharedValue4, derivedValue1, sharedValue9, derivedValue2, sharedValue];
   const callback2 = obj1.useCallback(ae, items2);
-  token = callback2;
+  closure_129_26 = callback2;
   function re() {
-    const value = focused.get();
+    value = sharedCoords.get();
     id = undefined;
     if (value != null) {
       id = value.id;
@@ -558,9 +544,9 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
     if (id === id) {
       str = "fit";
     }
-    let tmp5 = isCamera;
-    const tmp3 = sharedValue1.get().width >= sharedValue1.get().height;
-    if (isCamera) {
+    let tmp5 = streamId;
+    const tmp3 = flag2.get().width >= flag2.get().height;
+    if (streamId) {
       tmp5 = "fit" === str;
     }
     if (tmp5) {
@@ -583,17 +569,17 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
   re.__initData = sharedValue6;
   const items3 = [focused, id, isCamera, sharedValue1, windowDimensions2, callback2];
   const callback3 = obj1.useCallback(re, items3);
-  sharedValue10 = callback3;
+  closure_129_27 = callback3;
   const tmp2Result12 = id(tmp3[8]);
   function le() {
-    return derivedValue.get();
+    return flag.get();
   }
   le.__closure = { containerLayout: derivedValue };
   le.__workletHash = 9695573702258;
-  le.__initData = derivedValue2;
+  le.__initData = __initData;
   function ce(safeAreaState, current) {
     if (!obj.cheapWorkletShallowEqual(safeAreaState, current)) {
-      const value = focused.get();
+      value = sharedCoords.get();
       id = undefined;
       if (value != null) {
         id = value.id;
@@ -634,22 +620,22 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
           if (result <= 50) {
             if (result1 >= -50) {
               if (result1 <= 50) {
-                obj2 = closure_5;
-                tmp18 = closure_6;
+                obj2 = c5;
+                tmp18 = c6;
                 num3 = 2;
-                sum = result + (closure_5.get().width - closure_6.get().width * obj.get()) / 2;
-                sum1 = result1 + (closure_5.get().height - closure_6.get().height * obj.get()) / 2;
-                result2 = closure_6.get().width * obj.get();
-                result3 = closure_6.get().height * obj.get();
-                tmp2 = result3 >= closure_5.get().height && sum >= -50;
+                sum = result + (c5.get().width - c6.get().width * obj.get()) / 2;
+                sum1 = result1 + (c5.get().height - c6.get().height * obj.get()) / 2;
+                result2 = c6.get().width * obj.get();
+                result3 = c6.get().height * obj.get();
+                tmp2 = result3 >= c5.get().height && sum >= -50;
                 if (tmp2) {
-                  tmp3 = controlsSpecs;
-                  tmp2 = sum <= controlsSpecs;
+                  tmp3 = c13;
+                  tmp2 = sum <= c13;
                 }
                 if (tmp2) {
                   sum2 = sum + result2;
-                  tmp5 = controlsSpecs;
-                  tmp2 = sum2 >= obj2.get().width - controlsSpecs;
+                  tmp5 = c13;
+                  tmp2 = sum2 >= obj2.get().width - c13;
                 }
                 if (tmp2) {
                   sum3 = sum + result2;
@@ -658,13 +644,13 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
                 if (!tmp2) {
                   tmp7 = result2 >= obj2.get().width && sum1 >= -50;
                   if (tmp7) {
-                    tmp8 = controlsSpecs;
-                    tmp7 = sum1 <= controlsSpecs;
+                    tmp8 = c13;
+                    tmp7 = sum1 <= c13;
                   }
                   if (tmp7) {
                     sum4 = sum1 + result3;
-                    tmp10 = controlsSpecs;
-                    tmp7 = sum4 >= obj2.get().height - controlsSpecs;
+                    tmp10 = c13;
+                    tmp7 = sum4 >= obj2.get().height - c13;
                   }
                   if (tmp7) {
                     sum5 = sum1 + result3;
@@ -693,43 +679,42 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
     containerLayout: derivedValue,
     videoDimensions: sharedValue1,
     SNAP_EDGE_OUTER_THRESHOLD: 50,
-    SNAP_EDGE_INNER_THRESHOLD: controlsSpecs,
+    SNAP_EDGE_INNER_THRESHOLD: sharedValue,
   };
   Le.__workletHash = 3902544453390;
   Le.__initData = token;
   const items4 = [derivedValue1, sharedValue2, sharedValue3, sharedValue4, derivedValue, sharedValue1, derivedValue2];
-  callback4 = obj1.useCallback(Le, items4);
+  const callback4 = obj1.useCallback(Le, items4);
+  closure_129_28 = callback4;
   function ye() {
-    if (sharedValue5.get() <= 0) {
-      if (sharedValue6.get()) {
+    if (onReady.get() <= 0) {
+      if (setHasActiveVideoOutputSink.get()) {
         const result = obj2.set(false);
         token("cover");
       } else {
-        const value = sharedValue2.get();
-        if (value < derivedValue2.get()) {
+        value = pIPState.get();
+        if (value < fitScale.get()) {
           token("fit");
         } else {
           const _Math = Math;
-          const bound = Math.max(0, (sharedValue1.get().height - derivedValue.get().height / obj.get()) / 2);
+          const bound = Math.max(0, (flag2.get().height - flag.get().height / obj.get()) / 2);
           const _Math2 = Math;
-          const bound1 = Math.max(0, (sharedValue1.get().width - derivedValue.get().width / obj.get()) / 2);
+          const bound1 = Math.max(0, (flag2.get().width - flag.get().width / obj.get()) / 2);
           const _Math3 = Math;
           const _Math4 = Math;
-          const result1 = sharedValue3.set(
-            id(focused[12]).withSpring(Math.min(bound1, Math.max(-bound1, sharedValue3.get())), dismissToPIPGestureRef),
+          const result1 = translateX.set(
+            spring.withSpring(Math.min(bound1, Math.max(-bound1, translateX.get())), SCALE_PHYSICS),
           );
-          const obj3 = id(focused[12]);
           const tmp16 = -bound1;
           const _Math5 = Math;
           const _Math6 = Math;
-          const result2 = sharedValue4.set(
-            id(focused[12]).withSpring(Math.min(bound, Math.max(-bound, sharedValue4.get())), dismissToPIPGestureRef),
+          const result2 = translateY.set(
+            spring.withSpring(Math.min(bound, Math.max(-bound, translateY.get())), SCALE_PHYSICS),
           );
-          const obj4 = id(focused[12]);
           const tmp20 = -bound;
         }
       }
-      obj2 = sharedValue6;
+      obj2 = setHasActiveVideoOutputSink;
     }
   }
   obj3 = {
@@ -742,7 +727,7 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
     containerLayout: derivedValue,
     translateX: sharedValue3,
     withSpring: tmp2(tmp3[12]).withSpring,
-    SCALE_PHYSICS: dismissToPIPGestureRef,
+    SCALE_PHYSICS,
     translateY: sharedValue4,
   };
   ye.__closure = obj3;
@@ -759,11 +744,12 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
     sharedValue4,
     callback2,
   ];
-  callback5 = obj1.useCallback(ye, items5);
+  const callback5 = obj1.useCallback(ye, items5);
+  closure_129_29 = callback5;
   const tmp2Result13 = id(tmp3[8]);
-  const tmp35 = controlsSpecs;
+  const tmp35 = sharedValue;
   function xe() {
-    let value = focused.get();
+    value = sharedCoords.get();
     id = undefined;
     if (value != null) {
       id = value.id;
@@ -781,20 +767,20 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
   }
   xe.__closure = { focused, id, isInDefaultZoom: derivedValue3, isInPanToZoom: sharedValue8 };
   xe.__workletHash = 5209373786986;
-  xe.__initData = callback4;
-  function ke(arg0, arg1) {
-    if (arg0 !== arg1) {
-      setIsFocusedVideoZoomed(arg0);
+  xe.__initData = __initData2;
+  function ke(activeIndex, arg1) {
+    if (activeIndex !== arg1) {
+      mode(activeIndex);
     }
   }
   ke.__closure = { setIsFocusedVideoZoomed };
   ke.__workletHash = 10707557639101;
-  ke.__initData = callback5;
+  ke.__initData = __initData3;
   const animatedReaction2 = id(tmp3[8]).useAnimatedReaction(xe, ke);
   const tmp2Result14 = id(tmp3[8]);
   class Me {
     constructor() {
-      value = focused.get();
+      value = sharedCoords.get();
       id = undefined;
       if (value != null) {
         id = value.id;
@@ -804,7 +790,7 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
   }
   Me.__closure = { focused, id };
   Me.__workletHash = 619124678280;
-  Me.__initData = closure_30;
+  Me.__initData = __initData4;
   function be(arg0, arg1) {
     if (arg0 !== arg1) {
       sharedValue10();
@@ -812,17 +798,17 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
   }
   be.__closure = { resetOnLayoutChange: callback3 };
   be.__workletHash = 8458824233146;
-  be.__initData = closure_31;
+  be.__initData = __initData5;
   const animatedReaction3 = id(tmp3[8]).useAnimatedReaction(Me, be);
   const tmp2Result15 = id(tmp3[8]);
   class Ye {
     constructor() {
-      return mode.get();
+      return isScrollVisible.get();
     }
   }
   Ye.__closure = { mode };
   Ye.__workletHash = 7040117988961;
-  Ye.__initData = closure_32;
+  Ye.__initData = __initData6;
   class Ne {
     constructor(arg0, arg1) {
       if (streamKey !== arg1) {
@@ -834,17 +820,17 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
   }
   Ne.__closure = { resetOnLayoutChange: callback3 };
   Ne.__workletHash = 9279120690968;
-  Ne.__initData = closure_33;
+  Ne.__initData = __initData7;
   const animatedReaction4 = id(tmp3[8]).useAnimatedReaction(Ye, Ne);
   const tmp2Result16 = id(tmp3[8]);
   class Ge {
     constructor() {
-      return closure_6.get();
+      return c6.get();
     }
   }
   Ge.__closure = { videoDimensions: sharedValue1 };
   Ge.__workletHash = 8748184223523;
-  Ge.__initData = closure_34;
+  Ge.__initData = __initData8;
   class Fe {
     constructor(arg0, arg1) {
       if (null != closure_22) {
@@ -872,7 +858,7 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
   }
   Fe.__closure = { currentSizeThreshold: sharedValue9, resetOnLayoutChange: callback3 };
   Fe.__workletHash = 8464422969486;
-  Fe.__initData = closure_35;
+  Fe.__initData = __initData9;
   const animatedReaction5 = id(tmp3[8]).useAnimatedReaction(Ge, Fe);
   const tmp2Result17 = id(tmp3[8]);
   function ze() {
@@ -880,7 +866,7 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
   }
   ze.__closure = { coverScale: derivedValue1 };
   ze.__workletHash = 5444376625069;
-  ze.__initData = closure_36;
+  ze.__initData = __initData10;
   class Xe {
     constructor(arg0, arg1) {
       value = closure_22.get();
@@ -899,24 +885,24 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
   }
   Xe.__closure = { currentSizeThreshold: sharedValue9, resetToDefaultSize: callback2 };
   Xe.__workletHash = 10764193588506;
-  Xe.__initData = closure_37;
+  Xe.__initData = __initData11;
   const animatedReaction6 = id(tmp3[8]).useAnimatedReaction(ze, Xe);
   const tmp2Result18 = id(tmp3[8]);
   function $e() {
-    return sharedValue6.get();
+    return setHasActiveVideoOutputSink.get();
   }
   $e.__closure = { isInSnap: sharedValue6 };
   $e.__workletHash = 2178206594630;
-  $e.__initData = closure_38;
+  $e.__initData = __initData12;
   class Ze {
     constructor(arg0, arg1) {
       tmp = streamKey !== arg1 && streamKey;
       if (tmp) {
         tmp2 = id;
-        tmp3 = focused;
-        obj = id(focused[8]);
-        runOnJSResult = obj.runOnJS(id(focused[14]).triggerHapticFeedback);
-        tmp4Result = runOnJSResult(id(focused[14]).HapticFeedbackTypes.IMPACT_LIGHT);
+        tmp3 = sharedCoords;
+        obj = id(sharedCoords[8]);
+        runOnJSResult = obj.runOnJS(id(sharedCoords[14]).triggerHapticFeedback);
+        tmp4Result = runOnJSResult(id(sharedCoords[14]).HapticFeedbackTypes.IMPACT_LIGHT);
       }
       return;
     }
@@ -928,7 +914,7 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
     HapticFeedbackTypes: id(tmp3[14]).HapticFeedbackTypes,
   };
   Ze.__workletHash = 11115846398818;
-  Ze.__initData = closure_39;
+  Ze.__initData = __initData13;
   const animatedReaction7 = tmp2Result19.useAnimatedReaction($e, Ze);
   const items6 = [
     tmp13,
@@ -955,9 +941,9 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
     derivedValue2,
   ];
   const memo = obj1.useMemo(() => {
-    const Gesture = id(focused[15]).Gesture;
-    const Gesture2 = id(focused[15]).Gesture;
-    const Gesture3 = id(focused[15]).Gesture;
+    const Gesture = LegacyBaseButton.Gesture;
+    const Gesture2 = LegacyBaseButton.Gesture;
+    const Gesture3 = LegacyBaseButton.Gesture;
     const TapResult = Gesture3.Tap();
     class O {
       constructor(arg0, arg1) {
@@ -966,34 +952,34 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
     }
     O.__closure = {};
     O.__workletHash = 17368742583362;
-    O.__initData = closure_1_41;
+    O.__initData = __initData2;
     const numberOfTapsResult = Gesture3.Tap().numberOfTaps(2);
     class E {
       constructor() {
-        if (closure_25.get()) {
-          tmp3 = closure_2;
-          value = closure_2.get();
+        if (closure_1_25.get()) {
+          tmp3 = closure_1_2;
+          value = closure_1_2.get();
           tmp5 = null;
           id = undefined;
           if (value != null) {
             id = value.id;
           }
-          if (id !== closure_0) {
-            tmp12 = closure_1_0;
-            tmp13 = closure_1_2;
-            obj2 = closure_1_0(closure_1_2[8]);
-            tmp14 = closure_11;
-            tmp15 = obj2.runOnJS(closure_11)(tmp7);
+          if (id !== closure_1_0) {
+            tmp12 = id;
+            tmp13 = sharedCoords;
+            obj2 = id(sharedCoords[8]);
+            tmp14 = closure_1_11;
+            tmp15 = obj2.runOnJS(closure_1_11)(tmp7);
           } else {
-            tmp8 = closure_1_0;
-            tmp9 = closure_1_2;
-            obj = closure_1_0(closure_1_2[8]);
-            tmp10 = closure_11;
-            tmp11 = obj.runOnJS(closure_11)(null);
+            tmp8 = id;
+            tmp9 = sharedCoords;
+            obj = id(sharedCoords[8]);
+            tmp10 = closure_1_11;
+            tmp11 = obj.runOnJS(closure_1_11)(null);
           }
         } else {
-          tmp = closure_27;
-          tmp2 = closure_27();
+          tmp = closure_1_27;
+          tmp2 = closure_1_27();
         }
         return;
       }
@@ -1001,16 +987,16 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
     let obj = {
       isInDefaultZoom: callback6,
       resetOnLayoutChange: sharedValue10,
-      focused,
+      focused: sharedCoords,
       id,
-      runOnJS: id(focused[8]).runOnJS,
-      setFocused,
+      runOnJS: ReanimatedRexport2.runOnJS,
+      setFocused: layoutManager,
     };
     E.__closure = obj;
     E.__workletHash = 10743965328356;
-    E.__initData = closure_1_40;
+    E.__initData = __initData;
     const onTouchesMoveResult = Gesture3.Tap().numberOfTaps(2).onTouchesMove(O);
-    const Gesture4 = id(focused[15]).Gesture;
+    const Gesture4 = LegacyBaseButton.Gesture;
     const onStartResult = Gesture3.Tap().numberOfTaps(2).onTouchesMove(O).onStart(E);
     class C {
       constructor(arg0, arg1) {
@@ -1019,295 +1005,296 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
     }
     C.__closure = {};
     C.__workletHash = 8766053850176;
-    C.__initData = closure_1_43;
+    C.__initData = __initData4;
     const TapResult1 = Gesture4.Tap();
     class V {
       constructor() {
-        if (closure_13.get().mode === closure_1_8.HIDDEN) {
-          tmp5 = closure_1_0;
-          tmp6 = closure_1_2;
-          obj2 = closure_1_0(closure_1_2[8]);
-          tmp7 = closure_14;
-          tmp8 = obj2.runOnJS(closure_14)({ debounce: true });
+        if (closure_1_13.get().mode === mode.HIDDEN) {
+          tmp5 = id;
+          tmp6 = sharedCoords;
+          obj2 = id(sharedCoords[8]);
+          tmp7 = closure_1_14;
+          tmp8 = obj2.runOnJS(closure_1_14)({ debounce: true });
         } else {
-          tmp = closure_1_0;
-          tmp2 = closure_1_2;
-          obj = closure_1_0(closure_1_2[8]);
-          tmp3 = closure_12;
-          tmp4 = obj.runOnJS(closure_12)({ debounce: true });
+          tmp = id;
+          tmp2 = sharedCoords;
+          obj = id(sharedCoords[8]);
+          tmp3 = closure_1_12;
+          tmp4 = obj.runOnJS(closure_1_12)({ debounce: true });
         }
         return;
       }
     }
     obj = {
-      controlsSpecs,
-      VoicePanelControlsModes: setIsFocusedVideoZoomed,
-      runOnJS: id(focused[8]).runOnJS,
-      showControls,
-      hideControls,
+      controlsSpecs: sharedValue,
+      VoicePanelControlsModes,
+      runOnJS: ReanimatedRexport2.runOnJS,
+      showControls: sharedValue1,
+      hideControls: windowDimensions,
     };
     V.__closure = obj;
     V.__workletHash = 11260765819879;
-    V.__initData = closure_1_42;
+    V.__initData = __initData3;
     const onTouchesMoveResult1 = Gesture4.Tap().onTouchesMove(C);
-    const Gesture5 = id(focused[15]).Gesture;
+    const Gesture5 = LegacyBaseButton.Gesture;
     const ExclusiveResult = Gesture2.Exclusive(onStartResult, Gesture4.Tap().onTouchesMove(C).onStart(V));
     const PinchResult = Gesture5.Pinch();
     class I {
       constructor(arg0, arg1) {
-        value = closure_2.get();
+        value = closure_1_2.get();
         id = undefined;
         if (value != null) {
           id = value.id;
         }
-        if (id !== closure_0) {
+        if (id !== closure_1_0) {
           tmp3 = arg1;
           failResult = arg1.fail();
         }
         return;
       }
     }
-    I.__closure = { focused, id };
+    I.__closure = { focused: sharedCoords, id };
     I.__workletHash = 8765017804058;
-    I.__initData = closure_1_47;
-    const enabledResult = Gesture5.Pinch().enabled(!id);
+    I.__initData = __initData8;
+    const enabledResult = Gesture5.Pinch().enabled(!isCamera);
     class D {
       constructor() {
-        result = closure_18.set(closure_18.get() + 1);
-        result1 = closure_21.set(false);
-        result2 = closure_22.set(null);
+        result = closure_1_18.set(closure_1_18.get() + 1);
+        result1 = closure_1_21.set(false);
+        result2 = closure_1_22.set(null);
         return;
       }
     }
-    D.__closure = { numGesturesActive: sharedValue5, isInPanToZoom: sharedValue3, currentSizeThreshold: sharedValue4 };
+    D.__closure = { numGesturesActive: onReady, isInPanToZoom: sharedValue3, currentSizeThreshold: sharedValue4 };
     D.__workletHash = 3449238089307;
-    D.__initData = closure_1_46;
-    obj1 = { numGesturesActive: sharedValue5, isInPanToZoom: sharedValue3, currentSizeThreshold: sharedValue4 };
-    const onTouchesDownResult = Gesture5.Pinch().enabled(!id).onTouchesDown(I);
+    D.__initData = __initData7;
+    const obj1 = { numGesturesActive: onReady, isInPanToZoom: sharedValue3, currentSizeThreshold: sharedValue4 };
+    const onTouchesDownResult = Gesture5.Pinch().enabled(!isCamera).onTouchesDown(I);
     const fn = function w(scaleChange) {
-      let value = store3.get();
-      value = store3.get();
+      PAN_TO_ZOOM_SCALE_FACTOR.get();
+      value = PAN_TO_ZOOM_SCALE_FACTOR.get();
       scaleChange = scaleChange.scaleChange;
-      const value1 = store11.get();
-      if (typeof closure_1_17 !== "function") {
-        HermesBuiltin.throwTypeError();
+      if (typeof closure_17 === "function") {
+        let sum = scaleChange;
+        if (value < tmp3) {
+          const diff = 1 - value;
+          const _Math = Math;
+          const diff1 = scaleChange - 1;
+          sum = 1 + diff1 * Math.max(0.1, 1 - diff * diff * 5);
+        }
+        const result = PAN_TO_ZOOM_SCALE_FACTOR.set(value * sum);
+        const diff2 = scaleChange.focalX - flag.get().width / 2;
+        const diff3 = scaleChange.focalY - flag.get().height / 2;
+        const diff4 = scaleChange.scaleChange - 1;
+        const result1 = (-1 * diff2 * diff4) / obj.get();
+        const diff5 = scaleChange.scaleChange - 1;
+        const result2 = (-1 * diff3 * diff5) / obj.get();
+        const result3 = translateX.set(translateX.get() + result1);
+        const result4 = translateY.set(translateY.get() + result2);
+        const result5 = setHasActiveVideoOutputSink.set(isInCoverSnap());
+      } else {
+        throw new TypeError("Trying to call a non-function");
       }
-      let sum = scaleChange;
-      if (value < value1) {
-        const diff = 1 - value;
-        const _Math = Math;
-        const diff1 = scaleChange - 1;
-        sum = 1 + diff1 * Math.max(0.1, 1 - diff * diff * 5);
-      }
-      const result = store3.set(value * sum);
-      const diff2 = scaleChange.focalX - store2.get().width / 2;
-      const diff3 = scaleChange.focalY - store2.get().height / 2;
-      const diff4 = scaleChange.scaleChange - 1;
-      const result1 = (-1 * diff2 * diff4) / obj.get();
-      const diff5 = scaleChange.scaleChange - 1;
-      const result2 = (-1 * diff3 * diff5) / obj.get();
-      const result3 = store4.set(store4.get() + result1);
-      const result4 = store5.set(store5.get() + result2);
-      const result5 = store7.set(callback2());
     };
     fn.__closure = {
-      scale: sharedValue2,
-      getScaleChangeWithOverscroll: sharedValue4,
-      fitScale: derivedValue2,
-      containerLayout: derivedValue,
-      translateX: sharedValue3,
-      translateY: sharedValue4,
-      isInSnap: sharedValue6,
-      isInCoverSnap: callback4,
+      scale: pIPState,
+      getScaleChangeWithOverscroll,
+      fitScale,
+      containerLayout: flag,
+      translateX,
+      translateY,
+      isInSnap: setHasActiveVideoOutputSink,
+      isInCoverSnap,
     };
     fn.__workletHash = 2077670235308;
-    fn.__initData = closure_1_45;
+    fn.__initData = __initData6;
     let obj2 = {
-      scale: sharedValue2,
-      getScaleChangeWithOverscroll: sharedValue4,
-      fitScale: derivedValue2,
-      containerLayout: derivedValue,
-      translateX: sharedValue3,
-      translateY: sharedValue4,
-      isInSnap: sharedValue6,
-      isInCoverSnap: callback4,
+      scale: pIPState,
+      getScaleChangeWithOverscroll,
+      fitScale,
+      containerLayout: flag,
+      translateX,
+      translateY,
+      isInSnap: setHasActiveVideoOutputSink,
+      isInCoverSnap,
     };
-    const onStartResult1 = Gesture5.Pinch().enabled(!id).onTouchesDown(I).onStart(D);
+    const onStartResult1 = Gesture5.Pinch().enabled(!isCamera).onTouchesDown(I).onStart(D);
     const fn2 = function v() {
-      const result = store6.set(store6.get() - 1);
-      callback3();
+      const result = onReady.set(onReady.get() - 1);
+      handleMovementEnd();
     };
-    fn2.__closure = { numGesturesActive: sharedValue5, handleMovementEnd: callback5 };
+    fn2.__closure = { numGesturesActive: onReady, handleMovementEnd };
     fn2.__workletHash = 5853458336611;
-    fn2.__initData = closure_1_44;
-    const obj3 = { numGesturesActive: sharedValue5, handleMovementEnd: callback5 };
-    const onChangeResult = Gesture5.Pinch().enabled(!id).onTouchesDown(I).onStart(D).onChange(fn);
-    const Gesture6 = id(focused[15]).Gesture;
-    const onEndResult = Gesture5.Pinch().enabled(!id).onTouchesDown(I).onStart(D).onChange(fn).onEnd(fn2);
+    fn2.__initData = __initData5;
+    const obj3 = { numGesturesActive: onReady, handleMovementEnd };
+    const onChangeResult = Gesture5.Pinch().enabled(!isCamera).onTouchesDown(I).onStart(D).onChange(fn);
+    const Gesture6 = LegacyBaseButton.Gesture;
+    const onEndResult = Gesture5.Pinch().enabled(!isCamera).onTouchesDown(I).onStart(D).onChange(fn).onEnd(fn2);
     const PanResult = Gesture6.Pan();
-    let result = Gesture6.Pan().enabled(!id).requireExternalGestureToFail(dismissToPIPGestureRef);
-    const enabledResult1 = Gesture6.Pan().enabled(!id);
+    let result = Gesture6.Pan().enabled(!isCamera).requireExternalGestureToFail(c10);
+    const enabledResult1 = Gesture6.Pan().enabled(!isCamera);
     const fn3 = function f(arg0, fail) {
-      const value = store.get();
+      value = sharedCoords.get();
       id = undefined;
       if (value != null) {
         id = value.id;
       }
-      if (id !== closure_0) {
+      if (id !== closure_1_0) {
         fail.fail();
       }
     };
-    fn3.__closure = { focused, id };
+    fn3.__closure = { focused: sharedCoords, id };
     fn3.__workletHash = 2184905113389;
-    fn3.__initData = closure_1_53;
+    fn3.__initData = __initData14;
     const averageTouchesResult = result.averageTouches(true);
     class S {
       constructor() {
         timestamp = Date.now();
-        result = closure_21.set(timestamp - closure_20.get() <= 250);
-        result1 = closure_20.set(Date.now());
+        result = closure_1_21.set(timestamp - closure_1_20.get() <= 250);
+        result1 = closure_1_20.set(Date.now());
         return;
       }
     }
     S.__closure = { lastTapTimestamp: sharedValue2, PAN_TO_ZOOM_TAP_TIME_MILLIS: 250, isInPanToZoom: sharedValue3 };
     S.__workletHash = 7713579688732;
-    S.__initData = closure_1_52;
+    S.__initData = __initData13;
     const obj4 = { lastTapTimestamp: sharedValue2, PAN_TO_ZOOM_TAP_TIME_MILLIS: 250, isInPanToZoom: sharedValue3 };
     const onTouchesDownResult1 = result.averageTouches(true).onTouchesDown(fn3);
     const fn4 = function c() {
-      if (store9.get()) {
-        closure_1_0(closure_1_2[8]).runOnJS(closure_12)();
-        const obj = closure_1_0(closure_1_2[8]);
+      if (sharedValue3.get()) {
+        id(sharedCoords[8]).runOnJS(windowDimensions)();
+        const obj = id(sharedCoords[8]);
       }
-      const result = store6.set(store6.get() + 1);
-      const result1 = store10.set(null);
+      const result = onReady.set(onReady.get() + 1);
+      const result1 = sharedValue4.set(null);
     };
     const onBeginResult = result.averageTouches(true).onTouchesDown(fn3).onBegin(S);
     fn4.__closure = {
       isInPanToZoom: sharedValue3,
-      runOnJS: id(focused[8]).runOnJS,
-      hideControls,
-      numGesturesActive: sharedValue5,
+      runOnJS: ReanimatedRexport2.runOnJS,
+      hideControls: windowDimensions,
+      numGesturesActive: onReady,
       currentSizeThreshold: sharedValue4,
     };
     fn4.__workletHash = 16349993539830;
-    fn4.__initData = closure_1_51;
+    fn4.__initData = __initData12;
     const obj5 = {
       isInPanToZoom: sharedValue3,
-      runOnJS: id(focused[8]).runOnJS,
-      hideControls,
-      numGesturesActive: sharedValue5,
+      runOnJS: ReanimatedRexport2.runOnJS,
+      hideControls: windowDimensions,
+      numGesturesActive: onReady,
       currentSizeThreshold: sharedValue4,
     };
     const fn5 = function s(changeY) {
-      if (store9.get()) {
-        const result = changeY.changeY * closure_1_15;
-        let value = store3.get();
-        value = store3.get();
-        const value1 = store11.get();
-        if (typeof closure_1_17 !== "function") {
-          HermesBuiltin.throwTypeError();
+      if (sharedValue3.get()) {
+        const result = changeY.changeY * pIPState;
+        PAN_TO_ZOOM_SCALE_FACTOR.get();
+        value = PAN_TO_ZOOM_SCALE_FACTOR.get();
+        if (typeof closure_17 === "function") {
+          const sum = 1 + result;
+          let sum1 = sum;
+          if (value < tmp15) {
+            const diff = 1 - value;
+            const _Math = Math;
+            sum1 = 1 + (sum - 1) * Math.max(0.1, 1 - diff * diff * 5);
+          }
+          const result1 = PAN_TO_ZOOM_SCALE_FACTOR.set(value * sum1);
+        } else {
+          throw new TypeError("Trying to call a non-function");
         }
-        const sum = 1 + result;
-        let sum1 = sum;
-        if (value < value1) {
-          const diff = 1 - value;
-          const _Math = Math;
-          sum1 = 1 + (sum - 1) * Math.max(0.1, 1 - diff * diff * 5);
-        }
-        const result1 = store3.set(value * sum1);
       } else {
-        const value2 = store4.get();
-        const result2 = store4.set(value2 + changeY.changeX / store3.get());
-        const value3 = store5.get();
-        const result3 = store5.set(value3 + changeY.changeY / store3.get());
+        const value1 = translateX.get();
+        const result2 = translateX.set(value1 + changeY.changeX / PAN_TO_ZOOM_SCALE_FACTOR.get());
+        value2 = translateY.get();
+        const result3 = translateY.set(value2 + changeY.changeY / PAN_TO_ZOOM_SCALE_FACTOR.get());
       }
-      const result4 = store7.set(callback2());
+      const result4 = setHasActiveVideoOutputSink.set(isInCoverSnap());
     };
     fn5.__closure = {
       isInPanToZoom: sharedValue3,
-      PAN_TO_ZOOM_SCALE_FACTOR: sharedValue2,
-      scale: sharedValue2,
-      getScaleChangeWithOverscroll: sharedValue4,
-      fitScale: derivedValue2,
-      translateX: sharedValue3,
-      translateY: sharedValue4,
-      isInSnap: sharedValue6,
-      isInCoverSnap: callback4,
+      PAN_TO_ZOOM_SCALE_FACTOR,
+      scale: pIPState,
+      getScaleChangeWithOverscroll,
+      fitScale,
+      translateX,
+      translateY,
+      isInSnap: setHasActiveVideoOutputSink,
+      isInCoverSnap,
     };
     fn5.__workletHash = 17282206686388;
-    fn5.__initData = closure_1_50;
+    fn5.__initData = __initData11;
     const obj6 = {
       isInPanToZoom: sharedValue3,
-      PAN_TO_ZOOM_SCALE_FACTOR: sharedValue2,
-      scale: sharedValue2,
-      getScaleChangeWithOverscroll: sharedValue4,
-      fitScale: derivedValue2,
-      translateX: sharedValue3,
-      translateY: sharedValue4,
-      isInSnap: sharedValue6,
-      isInCoverSnap: callback4,
+      PAN_TO_ZOOM_SCALE_FACTOR,
+      scale: pIPState,
+      getScaleChangeWithOverscroll,
+      fitScale,
+      translateX,
+      translateY,
+      isInSnap: setHasActiveVideoOutputSink,
+      isInCoverSnap,
     };
     const onStartResult2 = onBeginResult.onStart(fn4);
     const fn6 = function n(velocityX) {
-      const result = store6.set(store6.get() - 1);
-      let value = store4.get();
-      const result1 = velocityX.velocityX * closure_1_14;
-      const result2 = store4.set(closure_1_0(closure_1_2[12]).withSpring(value + result1 / store3.get(), closure_1_10));
-      const obj = closure_1_0(closure_1_2[12]);
-      value = store5.get();
-      const result3 = velocityX.velocityY * closure_1_14;
-      const result4 = store5.set(closure_1_0(closure_1_2[12]).withSpring(value + result3 / store3.get(), closure_1_10));
-      callback3();
+      const result = onReady.set(onReady.get() - 1);
+      value = translateX.get();
+      const result1 = velocityX.velocityX * sharedValue1;
+      const result2 = translateX.set(
+        id(sharedCoords[12]).withSpring(value + result1 / PAN_TO_ZOOM_SCALE_FACTOR.get(), c10),
+      );
+      const obj = id(sharedCoords[12]);
+      value = translateY.get();
+      const result3 = velocityX.velocityY * sharedValue1;
+      const result4 = translateY.set(
+        id(sharedCoords[12]).withSpring(value + result3 / PAN_TO_ZOOM_SCALE_FACTOR.get(), c10),
+      );
+      handleMovementEnd();
     };
     const onChangeResult1 = onBeginResult.onStart(fn4).onChange(fn5);
     fn6.__closure = {
-      numGesturesActive: sharedValue5,
-      translateX: sharedValue3,
-      withSpring: id(focused[12]).withSpring,
-      FLING_VELOCITY_SCALING: showControls,
-      scale: sharedValue2,
-      SCALE_PHYSICS: dismissToPIPGestureRef,
-      translateY: sharedValue4,
-      handleMovementEnd: callback5,
+      numGesturesActive: onReady,
+      translateX,
+      withSpring: spring.withSpring,
+      FLING_VELOCITY_SCALING,
+      scale: pIPState,
+      SCALE_PHYSICS,
+      translateY,
+      handleMovementEnd,
     };
     fn6.__workletHash = 10045783163820;
-    fn6.__initData = closure_1_49;
+    fn6.__initData = __initData10;
     const obj7 = {
-      numGesturesActive: sharedValue5,
-      translateX: sharedValue3,
-      withSpring: id(focused[12]).withSpring,
-      FLING_VELOCITY_SCALING: showControls,
-      scale: sharedValue2,
-      SCALE_PHYSICS: dismissToPIPGestureRef,
-      translateY: sharedValue4,
-      handleMovementEnd: callback5,
+      numGesturesActive: onReady,
+      translateX,
+      withSpring: spring.withSpring,
+      FLING_VELOCITY_SCALING,
+      scale: pIPState,
+      SCALE_PHYSICS,
+      translateY,
+      handleMovementEnd,
     };
     const fn7 = function t() {
-      const result = store9.set(false);
+      const result = sharedValue3.set(false);
     };
     fn7.__closure = { isInPanToZoom: sharedValue3 };
     fn7.__workletHash = 2318423816868;
-    fn7.__initData = closure_1_48;
+    fn7.__initData = __initData9;
     return Gesture.Simultaneous(ExclusiveResult, onEndResult, onChangeResult1.onEnd(fn6).onFinalize(fn7));
   }, items6);
-  let value = derivedValue.get();
-  derivedValue2 = value;
+  value = flag.get();
+  __initData = value;
   const items7 = [streamId, isCamera, sharedValue2, sharedValue1, mode, value];
   callback6 = obj1.useCallback(() => {
-    let tmp2 = null == isCamera;
+    let tmp2 = null == streamId;
     if (!tmp2) {
-      tmp2 = id;
+      tmp2 = isCamera;
     }
     if (!tmp2) {
-      tmp2 = setIsFocusedVideoZoomed.get() !== sharedValue1.PANEL;
+      tmp2 = mode.get() !== VoicePanelModes.PANEL;
     }
     if (!tmp2) {
-      let obj = id(focused[22]);
-      obj = { width: null, height: null };
-      obj[0] = showControls.get().width * derivedValue2;
-      obj[1] = showControls.get().height * derivedValue2;
-      obj.updateVideoSize(isCamera, obj, sharedValue2.get());
+      const size = { width: sharedValue1.get().width * c24, height: sharedValue1.get().height * c24 };
+      VideoActionCreators.updateVideoSize(streamId, size, sharedValue2.get());
     }
   }, items7);
   let obj4 = {
@@ -1319,21 +1306,21 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
     constructor() {
       items = [, ,];
       items[0] = closure_20.get();
-      items[1] = showControls.get();
-      items[2] = setIsFocusedVideoZoomed.get();
+      items[1] = closure_14.get();
+      items[2] = mode.get();
       return items;
     }
   }
   Qe.__closure = { scale: sharedValue2, videoDimensions: sharedValue1, mode };
   Qe.__workletHash = 16492795532326;
-  Qe.__initData = closure_58;
+  Qe.__initData = __initData17;
   class Ke {
     constructor(arg0, arg1) {
-      if (null != isCamera) {
+      if (null != streamId) {
         tmp = arg1;
-        tmp2 = id;
-        tmp3 = focused;
-        obj = id(focused[13]);
+        tmp2 = closure_0;
+        tmp3 = closure_2;
+        obj = closure_0(closure_2[13]);
         tmp4 = streamKey;
         if (!obj.cheapWorkletShallowEqual(streamKey, tmp)) {
           tmp2Result = tmp2(tmp3[8]);
@@ -1352,13 +1339,13 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
   };
   Ke.__closure = obj5;
   Ke.__workletHash = 5259362546534;
-  Ke.__initData = closure_59;
+  Ke.__initData = __initData18;
   const animatedReaction8 = id(tmp3[8]).useAnimatedReaction(Qe, Ke);
   const items8 = [callback6];
   const effect = obj1.useEffect(() => {
-    closure_0 = isCamera(focused[23]).addOnPipModeChangedListener((arg0) => {
+    closure_0 = streamId(sharedCoords[23]).addOnPipModeChangedListener((arg0) => {
       if (!arg0) {
-        callback();
+        callback6();
       }
     });
     return () => {
@@ -1369,36 +1356,30 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
   }, items8);
   const tmp2Result20 = id(tmp3[8]);
   function dt() {
-    const value = showControls.get();
+    value = sharedValue1.get();
     ({ width, height } = value);
-    let size = sharedValue2;
-    if (sharedValue2.mode !== windowDimensions2.IN_APP) {
-      let obj = { width: null, height: null, opacity: null, transform: null };
-      obj[0] = width;
-      obj[1] = height;
+    let size = pIPState;
+    if (pIPState.mode !== VoicePanelPIPModes.IN_APP) {
+      size = { width, height, opacity: null, transform: null };
       let num = 1;
       let num2 = 1;
-      if (controlsSpecs.get()) {
+      if (sharedValue.get()) {
         num2 = 0;
       }
-      obj[2] = num2;
-      obj = { scale: null };
-      obj[0] = sharedValue2.get();
+      size.opacity = num2;
+      let obj = { scale: sharedValue2.get() };
       const items = [obj, , ,];
-      obj = { translateX: null };
-      obj[0] = sharedValue3.get();
+      obj = { translateX: sharedValue3.get() };
       items[1] = obj;
-      obj1 = { translateY: null };
-      obj1[0] = sharedValue4.get();
+      const obj1 = { translateY: sharedValue4.get() };
       items[2] = obj1;
-      if (derivedValue) {
+      if (flag) {
         num = -1;
       }
-      const obj2 = { scaleX: null };
-      obj2[0] = num;
+      const obj2 = { scaleX: num };
       items[3] = obj2;
-      obj[3] = items;
-      return obj;
+      size.transform = items;
+      return size;
     } else if (width > height) {
       const result = width * (size.height / height);
       height = sharedValue2;
@@ -1415,7 +1396,7 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
   dt.__closure = {
     videoDimensions: sharedValue1,
     pipState: pIPState,
-    VoicePanelPIPModes: windowDimensions2,
+    VoicePanelPIPModes: focused,
     scale: sharedValue2,
     disableAnimations: sharedValue,
     translateX: sharedValue3,
@@ -1423,12 +1404,12 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
     mirror: flag,
   };
   dt.__workletHash = 4149619035590;
-  dt.__initData = closure_60;
+  dt.__initData = __initData19;
   const animatedStyle = id(tmp3[8]).useAnimatedStyle(dt);
   let obj6 = {
     videoDimensions: sharedValue1,
     pipState: pIPState,
-    VoicePanelPIPModes: windowDimensions2,
+    VoicePanelPIPModes: focused,
     scale: sharedValue2,
     disableAnimations: sharedValue,
     translateX: sharedValue3,
@@ -1439,7 +1420,7 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
   token = id(tmp3[24]).useToken(tmp5(tmp3[25]).modules.mobile.VOICE_TILE_BORDER_RADIUS);
   const tmp2Result22 = id(tmp3[24]);
   let num = 0;
-  if (mode.get() !== sharedValue1.PIP) {
+  if (mode.get() !== flag2.PIP) {
     value = focused.get();
     id = undefined;
     if (value != null) {
@@ -1452,20 +1433,20 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
   }
   sharedValue10 = id(tmp3[8]).useSharedValue(num);
   const tmp2Result23 = id(tmp3[8]);
-  const tmp51 = sharedValue1;
+  const tmp51 = flag2;
   function _t() {
-    const obj = { inPip: setIsFocusedVideoZoomed.get() === sharedValue1.PIP, isFocused: null };
-    const value = windowDimensions2.get();
+    const obj = { inPip: mode.get() === VoicePanelModes.PIP, isFocused: null };
+    value = focused.get();
     id = undefined;
     if (value != null) {
       id = value.id;
     }
-    obj[1] = id === id;
+    obj.isFocused = id === id;
     return obj;
   }
   _t.__closure = { mode, VoicePanelModes: tmp51, focused, id };
   _t.__workletHash = 16147365192890;
-  _t.__initData = closure_61;
+  _t.__initData = __initData20;
   function ut(inPip, isFocused) {
     if (!obj.cheapWorkletShallowEqual(inPip, isFocused)) {
       if (!inPip.inPip) {
@@ -1476,8 +1457,8 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
           }
           let num2 = 0.3;
           if (true === isFocused) {
-            let tmpResult = tmp(tmp2[8]);
-            tmpResult = tmp(tmp2[26]);
+            tmp(4296);
+            const tmpResult = tmp(4561);
             num2 = tmpResult.withDelay(300, tmpResult.withTiming(0.3, { duration: 0 }, "animate-never"));
           }
           const result = sharedValue10.set(num2);
@@ -1494,7 +1475,7 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
     withTiming: id(tmp3[26]).withTiming,
   };
   ut.__workletHash = 5119744299592;
-  ut.__initData = closure_62;
+  ut.__initData = __initData21;
   const animatedReaction9 = tmp2Result24.useAnimatedReaction(_t, ut);
   let obj7 = {
     cheapWorkletShallowEqual: id(tmp3[13]).cheapWorkletShallowEqual,
@@ -1504,35 +1485,33 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
   };
   function ft() {
     if (sharedValue6.get()) {
-      let obj = {
+      const rect = {
         position: "absolute",
         top: 0,
         left: 0,
         bottom: 0,
         right: 0,
-        borderWidth: null,
+        borderWidth,
         overflow: "hidden",
         borderColor: "white",
         opacity: 0.5,
       };
-      obj[5] = controlsSpecs;
+      let rect1 = rect;
     } else {
-      obj = {
+      rect1 = {
         position: "absolute",
         top: -1,
         left: -1,
         bottom: -1,
         right: -1,
         borderWidth: 2,
-        borderRadius: null,
+        borderRadius: token + 2,
         overflow: "hidden",
         borderColor: "white",
-        opacity: null,
+        opacity: sharedValue10.get(),
       };
-      obj[6] = token + 2;
-      obj[9] = sharedValue10.get();
     }
-    return obj;
+    return rect1;
   }
   ft.__closure = {
     isInSnap: sharedValue6,
@@ -1541,22 +1520,24 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
     strokeOpacity: sharedValue10,
   };
   ft.__workletHash = 5172898891721;
-  ft.__initData = closure_63;
+  ft.__initData = __initData22;
   function mt(arg0) {
-    return sharedValue(arg0, controlsSpecs.get());
+    return layout(arg0, sharedValue.get());
   }
   mt.__closure = { layout, disableAnimations: sharedValue };
   mt.__workletHash = 12145775353383;
-  mt.__initData = closure_64;
+  mt.__initData = __initData23;
   const items9 = [layout, sharedValue];
   const animatedStyle1 = id(tmp3[8]).useAnimatedStyle(ft);
   const callback7 = obj1.useCallback(mt, items9);
   const obj8 = { gesture: memo, children: null };
-  const obj9 = { style: items10, layout: callback7, children: null };
-  items10 = [tmp.wrapper, streamKey.style];
-  let tmp5Result = tmp5(tmp3[27]);
-  const obj10 = { style: items11, layout: callback7, children: null };
-  items11 = [tmp.animatedWrapperStyles, animatedStyle];
+  const obj9 = { style: null, layout: callback7, children: null };
+  const items10 = [tmp.wrapper, streamKey.style];
+  obj9.style = items10;
+  tmp5(tmp3[27]);
+  const obj10 = { style: null, layout: callback7, children: null };
+  const items11 = [tmp.animatedWrapperStyles, animatedStyle];
+  obj10.style = items11;
   const obj11 = {
     useSurfaceDirectRenderer: surfaceDirectRendererExperiment,
     streamId: null,
@@ -1566,32 +1547,26 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
     layout: null,
   };
   let tmp63 = null;
-  tmp5Result = tmp5(tmp3[27]);
+  const tmp5Result = tmp5(tmp3[27]);
   if (!tmp11) {
     tmp63 = streamId;
   }
-  obj11[1] = tmp63;
-  obj11[2] = callback;
-  obj11[3] = callback1;
-  obj11[4] = tmp.video;
-  obj11[5] = callback7;
-  obj10[2] = setFocused(sharedValue3, obj11);
-  const items12 = [setFocused(tmp5Result, obj10)];
+  obj11.streamId = tmp63;
+  obj11.onReady = callback;
+  obj11.onSize = callback1;
+  obj11.style = tmp.video;
+  obj11.layout = callback7;
+  obj10.children = layoutManager(c16, obj11);
+  const items12 = [layoutManager(tmp5Result, obj10)];
   if (tmp13) {
-    const obj12 = { animate: true, style: null };
-    obj12[1] = tmp.spinner;
+    const obj12 = { animate: true, style: tmp.spinner };
     let tmp58Result = tmp58(tmp5(tmp3[28]), obj12);
   } else {
-    const obj13 = { style: null, layout: null, pointerEvents: "none" };
-    obj13[0] = animatedStyle1;
-    obj13[1] = callback7;
+    const obj13 = { style: animatedStyle1, layout: callback7, pointerEvents: "none" };
     tmp58Result = tmp58(tmp5(tmp3[27]), obj13);
   }
   items12[1] = tmp58Result;
-  obj9[2] = items12;
-  obj8[1] = hideControls(tmp5Result, obj9);
-  return setFocused(id(tmp3[15]).GestureDetector, obj8);
+  obj9.children = items12;
+  obj8.children = windowDimensions(tmp5Result, obj9);
+  return layoutManager(id(tmp3[15]).GestureDetector, obj8);
 });
-let result = require("set").fileFinishedImporting("modules/voice_panel/native/card/VoicePanelVideoRenderer.tsx");
-
-export default memoResult;

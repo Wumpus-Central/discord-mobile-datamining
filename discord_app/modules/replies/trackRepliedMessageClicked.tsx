@@ -1,13 +1,13 @@
 // discord_app/modules/replies/trackRepliedMessageClicked.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
-import collectGuildAnalyticsMetadata from "../app_analytics/AppAnalyticsUtils.tsx";
-import processMessage from "ReferencedMessageStore.tsx";
+import Constants from "../../Constants.tsx";
+import AppAnalyticsUtils from "../app_analytics/AppAnalyticsUtils.tsx";
+import ReferencedMessageStore from "ReferencedMessageStore.tsx";
 import maybeCreateMessageRecordFromSnapshotDefault from "../forwarding/maybeCreateMessageRecordFromSnapshot.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const ReferencedMessageState = processMessage.ReferencedMessageState;
-const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/replies/trackRepliedMessageClicked.tsx");
+const ReferencedMessageState = ReferencedMessageStore.ReferencedMessageState;
+const AnalyticEvents = Constants.AnalyticEvents;
+const result = size.fileFinishedImporting("modules/replies/trackRepliedMessageClicked.tsx");
 
 export default function trackRepliedMessageClicked(messageReference, state, channel_id) {
   messageReference = messageReference.messageReference;
@@ -33,9 +33,8 @@ export default function trackRepliedMessageClicked(messageReference, state, chan
     const tmp5 =
       tmp9.attachments.length > 0 || tmp9.embeds.length > 0 || tmp9.stickerItems.length > 0 || tmp9.stickers.length > 0;
   }
-  let obj = collectGuildAnalyticsMetadata;
   const guild_id = channel_id.guild_id;
-  obj = {
+  const obj = {
     guild_id,
     channel_id: channel_id.id,
     reply_message_id: messageReference.id,

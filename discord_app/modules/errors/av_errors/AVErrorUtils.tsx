@@ -1,18 +1,19 @@
 // discord_app/modules/errors/av_errors/AVErrorUtils.tsx
-import setDefault from "../../../utils/Durations.tsx";
-import isIncomingVideoEnabled from "../../../lib/WindowVisibilityVideoManager.tsx";
-import closure_2 from "../../media_engine/MediaEngineStatsStore.tsx";
+import DurationsDefault from "../../../utils/Durations.tsx";
+import WindowVisibilityVideoManager3 from "../../../lib/WindowVisibilityVideoManager.tsx";
+import MediaEngineStatsStore from "../../media_engine/MediaEngineStatsStore.tsx";
 
-require = arg1;
-let closure_3 = 10 * setDefault.Millis.SECOND;
-let result = require("set").fileFinishedImporting("modules/errors/av_errors/AVErrorUtils.tsx");
+require = fn;
+let closure_3 = 10 * DurationsDefault.Millis.SECOND;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/errors/av_errors/AVErrorUtils.tsx");
 
 export const getReportInboundErrors = function getReportInboundErrors() {
-  const WindowVisibilityVideoManager = isIncomingVideoEnabled.WindowVisibilityVideoManager;
+  const WindowVisibilityVideoManager = WindowVisibilityVideoManager3.WindowVisibilityVideoManager;
   let result = WindowVisibilityVideoManager.isIncomingVideoEnabled();
   if (result) {
     const _performance = performance;
-    const WindowVisibilityVideoManager2 = isIncomingVideoEnabled.WindowVisibilityVideoManager;
+    const WindowVisibilityVideoManager2 = WindowVisibilityVideoManager3.WindowVisibilityVideoManager;
     result = performance.now() - WindowVisibilityVideoManager2.lastIncomingVideoEnabledChangeTime() > closure_3;
     const nowResult = performance.now();
   }
@@ -26,8 +27,16 @@ export const getAccumulatedStatsWithMinDatapoints = function getAccumulatedStats
   if (arg2 === undefined) {
     num = 15;
   }
-  const accumulatedPerformanceStats = store.getAccumulatedPerformanceStats(mediaEngineConnectionId, ownerId, "short");
-  const accumulatedPerformanceStats1 = store.getAccumulatedPerformanceStats(mediaEngineConnectionId, ownerId, "long");
+  const accumulatedPerformanceStats = MediaEngineStatsStore.getAccumulatedPerformanceStats(
+    mediaEngineConnectionId,
+    ownerId,
+    "short",
+  );
+  const accumulatedPerformanceStats1 = MediaEngineStatsStore.getAccumulatedPerformanceStats(
+    mediaEngineConnectionId,
+    ownerId,
+    "long",
+  );
   let tmp3 = null;
   if (null != accumulatedPerformanceStats) {
     tmp3 = null;
@@ -36,9 +45,7 @@ export const getAccumulatedStatsWithMinDatapoints = function getAccumulatedStats
       if (accumulatedPerformanceStats.numDatapoints >= num) {
         tmp3 = null;
         if (accumulatedPerformanceStats1.numDatapoints >= num) {
-          const obj = { short: null, long: null };
-          obj[0] = accumulatedPerformanceStats;
-          obj[1] = accumulatedPerformanceStats1;
+          const obj = { short: accumulatedPerformanceStats, long: accumulatedPerformanceStats1 };
           tmp3 = obj;
         }
       }

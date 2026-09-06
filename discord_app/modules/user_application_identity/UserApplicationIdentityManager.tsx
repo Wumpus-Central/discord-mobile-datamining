@@ -1,13 +1,12 @@
 // discord_app/modules/user_application_identity/UserApplicationIdentityManager.tsx
-import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
-import fetchStore from "UserApplicationIdentityActionCreators.tsx";
+import UserApplicationIdentityActionCreators from "UserApplicationIdentityActionCreators.tsx";
+import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
-require = arg1;
+require = fn;
 function handleUserApplicationIdentityGatewayEvent(user_id) {
-  const useUserApplicationIdentities = fetchStore.useUserApplicationIdentities;
+  const useUserApplicationIdentities = UserApplicationIdentityActionCreators.useUserApplicationIdentities;
   useUserApplicationIdentities.refetch(user_id.user_id);
 }
-initializeDefault;
 let prototype = function UserApplicationIdentityManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = {
@@ -18,8 +17,7 @@ let prototype = function UserApplicationIdentityManager() {
 }.prototype;
 class prototype extends tmp2 {}
 prototype = new prototype();
-const result = require("set").fileFinishedImporting(
-  "modules/user_application_identity/UserApplicationIdentityManager.tsx",
-);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_application_identity/UserApplicationIdentityManager.tsx");
 
 export default prototype;

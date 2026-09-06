@@ -1,12 +1,15 @@
 // discord_app/modules/markup/MarkupSubtextRule.tsx
-import set from "../../../_runtime/00002_set.js";
-import t from "../../../_runtime/04257_t.js";
-import tDefault from "../../../_runtime/04257_t.js";
+import _mod4257 from "../../../_runtime/metro/04257__.js";
+import size from "../../../_runtime/metro/00002__.js";
+
+const _modDef4257 = _mod4257;
 
 const re2 = /\n$/;
 const re3 = /^ *-# +((?!-#)[^\n]+)(?:\n|$)/;
-let obj = {
-  order: tDefault.defaultRules.heading.order,
+const result = size.fileFinishedImporting("modules/markup/MarkupSubtextRule.tsx");
+
+export default {
+  order: _modDef4257.defaultRules.heading.order,
   requiredFirstCharacters: ["-"],
   match(arg0, allowSubtext, str) {
     let tmp = null;
@@ -17,21 +20,17 @@ let obj = {
         }
         tmp = tmp4;
       }
-      tmp4 = t.anyScopeRegex(closure_3)(arg0, allowSubtext, str);
-      const obj = t;
+      tmp4 = _mod4257.anyScopeRegex(re3)(arg0, allowSubtext, str);
     }
     return tmp;
   },
-  parse(arg0, arg1, arg2) {
+  parse(arg0, fn, arg2) {
     let obj = { content: null };
     obj = {};
     const trimmed = arg0[1].trim();
     const merged = Object.assign(arg2);
     obj.allowSubtext = false;
-    obj[0] = t.parseInline(arg1, trimmed, obj);
+    obj.content = _mod4257.parseInline(fn, trimmed, obj);
     return obj;
   },
 };
-const result = set.fileFinishedImporting("modules/markup/MarkupSubtextRule.tsx");
-
-export default obj;

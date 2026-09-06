@@ -1,34 +1,31 @@
 // discord_app/modules/guild_settings/creator_monetization/canUserSeeMonetizationOnboarding.tsx
-import isRestrictedFromShowingGuildPurchaseEntryPoints from "../../creator_monetization_review/CreatorMonetizationRestrictionsUtils.tsx";
-import computeGuildRoleSubscriptionSettingsVisibility from "../../guild_role_subscriptions/feature_gating/GuildRoleSubscriptionSettingUtils.tsx";
-import set from "../../creator_monetization_eligibility/CreatorMonetizationEligibilityExperimentUtils.tsx";
-import closure_2 from "../../../stores/UserStore.tsx";
+import CreatorMonetizationRestrictionsUtils from "../../creator_monetization_review/CreatorMonetizationRestrictionsUtils.tsx";
+import GuildRoleSubscriptionSettingUtils from "../../guild_role_subscriptions/feature_gating/GuildRoleSubscriptionSettingUtils.tsx";
+import CreatorMonetizationEligibilityExperimentUtils from "../../creator_monetization_eligibility/CreatorMonetizationEligibilityExperimentUtils.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting(
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/guild_settings/creator_monetization/canUserSeeMonetizationOnboarding.tsx",
 );
 
-export const canUserSeeMonetizationOnboarding = function canUserSeeMonetizationOnboarding(closure_2) {
-  currentUser = currentUser.getCurrentUser();
+export const canUserSeeMonetizationOnboarding = function canUserSeeMonetizationOnboarding(guild) {
+  const currentUser = UserStore.getCurrentUser();
   let id;
   if (currentUser != null) {
     id = currentUser.id;
   }
-  let obj = computeGuildRoleSubscriptionSettingsVisibility;
-  obj = {
-    guild: closure_2,
-    isOwner: closure_2.ownerId === id,
-    canManageGuildRoleSubscriptions:
-      computeGuildRoleSubscriptionSettingsVisibility.canManageGuildRoleSubscriptions(closure_2),
+  const obj = {
+    guild,
+    isOwner: guild.ownerId === id,
+    canManageGuildRoleSubscriptions: GuildRoleSubscriptionSettingUtils.canManageGuildRoleSubscriptions(guild),
     isUserInCreatorMonetizationEligibleCountry: null,
     shouldRestrictUpdatingRoleSubscriptionSettings: null,
   };
-  const obj3 = computeGuildRoleSubscriptionSettingsVisibility;
-  obj[3] = set.isUserInCreatorMonetizationEligibleCountry();
-  const obj4 = set;
-  obj[4] = isRestrictedFromShowingGuildPurchaseEntryPoints.shouldRestrictUpdatingCreatorMonetizationSettings(
-    closure_2.id,
-  );
+  obj.isUserInCreatorMonetizationEligibleCountry =
+    CreatorMonetizationEligibilityExperimentUtils.isUserInCreatorMonetizationEligibleCountry();
+  obj.shouldRestrictUpdatingRoleSubscriptionSettings =
+    CreatorMonetizationRestrictionsUtils.shouldRestrictUpdatingCreatorMonetizationSettings(guild.id);
   return obj.canSeeGuildRoleSubscriptionSettings(obj);
 };

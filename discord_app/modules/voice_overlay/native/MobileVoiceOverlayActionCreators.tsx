@@ -1,13 +1,12 @@
 // discord_app/modules/voice_overlay/native/MobileVoiceOverlayActionCreators.tsx
-import set from "../../../../_runtime/00002_set.js";
-import dispatcherDefault from "../../../Dispatcher.tsx";
+import DispatcherDefault from "../../../Dispatcher.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/voice_overlay/native/MobileVoiceOverlayActionCreators.tsx");
+const result = size.fileFinishedImporting("modules/voice_overlay/native/MobileVoiceOverlayActionCreators.tsx");
 
 export default {
   setEnabled(enabled) {
-    let obj = dispatcherDefault;
-    obj = { type: "MOBILE_VOICE_OVERLAY_STATE_CHANGED", enabled };
+    const obj = { type: "MOBILE_VOICE_OVERLAY_STATE_CHANGED", enabled };
     obj.dispatch(obj);
   },
 };

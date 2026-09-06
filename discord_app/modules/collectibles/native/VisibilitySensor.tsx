@@ -1,24 +1,18 @@
 // discord_app/modules/collectibles/native/VisibilitySensor.tsx
-import set from "../../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import noop from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
+import _mod17 from "../../../../_runtime/metro/00017__.js";
+import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-({ useEffect: obj1, useRef: c3 } = noop);
-const View = get_ActivityIndicator.View;
-({ jsx: closure_6, jsxs: error } = jsxProd);
-const result = set.fileFinishedImporting("modules/collectibles/native/VisibilitySensor.tsx");
+({ useEffect: c2, useRef: c3 } = noop);
+const View = _mod17.View;
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const result = size.fileFinishedImporting("modules/collectibles/native/VisibilitySensor.tsx");
 
 export default function _default(onChange) {
   onChange = onChange.onChange;
-  dependencyMap = undefined;
-  let callback;
-  let width;
-  let height;
-  closure_5 = undefined;
-  callback = undefined;
-  function stopWatching(closure_5, arg1) {
+  function stopWatching() {
     if (null !== ref.current) {
       const _clearInterval = clearInterval;
       clearInterval(tmp.current);
@@ -26,22 +20,21 @@ export default function _default(onChange) {
     }
   }
   ({ children, resetKey } = onChange);
-  let tmp = width(null);
-  dependencyMap = tmp;
-  callback = width(false);
-  const size = onChange(1477)();
-  width = size.width;
-  height = size.height;
-  closure_5 = width(null);
+  let tmp = React3(null);
+  closure_1 = tmp;
+  closure_2 = React3(false);
+  const size = useWindowDimensionsDefault();
+  const width = size.width;
+  const height = size.height;
+  React3(null);
   const items = [resetKey];
-  callback(() => {
+  React2(() => {
     closure_2.current = false;
   }, items);
   const items1 = [onChange];
-  callback = height.useCallback((arg0, arg1) => {
+  const callback = noop.useCallback((arg0, arg1) => {
     closure_0 = arg0;
-    closure_1 = arg1;
-    if (null === ref.current) {
+    if (null === arg1.current) {
       const _setInterval = setInterval;
       tmp.current = setInterval(() => {
         if (null !== ref.current) {
@@ -49,17 +42,17 @@ export default function _default(onChange) {
           current.measure((arg0, arg1, arg2, arg3, arg4, arg5) => {
             let tmp = arg5 + arg3 > 0;
             if (tmp) {
-              tmp = arg5 < closure_1;
+              tmp = arg5 < ref;
             }
             if (tmp) {
-              tmp = arg4 < closure_0;
+              tmp = arg4 < closure_1_0;
             }
             if (tmp) {
               tmp = arg4 + arg2 > 0;
             }
-            if (tmp !== closure_1_2.current) {
-              closure_1_2.current = tmp;
-              closure_1_0(tmp);
+            if (tmp !== ref2.current) {
+              ref2.current = tmp;
+              closure_0(tmp);
             }
           });
         }
@@ -67,12 +60,12 @@ export default function _default(onChange) {
     }
   }, items1);
   const items2 = [callback, height, width];
-  callback(() => {
+  React2(() => {
     callback(width, height);
     return stopWatching;
   }, items2);
   const obj = { collapsable: false, ref: tmp, children: null };
-  const items3 = [children, callback(closure_5, {})];
-  obj[2] = items3;
-  return stopWatching(closure_5, obj);
+  const items3 = [children, timestampProducer(View, {})];
+  obj.children = items3;
+  return React5(View, obj);
 }

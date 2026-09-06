@@ -1,70 +1,88 @@
 // discord_app/modules/voice_panel/native/header/VoicePanelConsoleFacepile.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
+import native from "../../../../design/void/native.tsx";
+import GlobalUtils from "../../../../utils/GlobalUtils.tsx";
+import NativeViewDefault from "../../../core/native/NativeView.tsx";
 import useGameConsoleAccountsDefault from "../../../game_console/useGameConsoleAccounts.tsx";
 import getConsoleIconDefault from "../../../game_console/native/getConsoleIcon.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import { PlatformTypes } from "../../../../Constants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+require = fn;
 function getConsoleInfo(type) {
   type = type.type;
   if (PlatformTypes.XBOX === type) {
-    let obj = { icon: null, color: null, connectLabel: null, connectSublabel: null };
-    obj[0] = getConsoleIconDefault(type.type);
-    obj[1] = ThemesDefault.unsafe_rawColors.PLATFORM_XBOX;
-    const intl3 = getSystemLocale.intl;
-    obj[2] = intl3.string(getSystemLocale.t.QN7HXV);
-    const intl4 = getSystemLocale.intl;
-    obj[3] = intl4.string(getSystemLocale.t["M/Ld86"]);
+    let obj = {
+      icon: getConsoleIconDefault(type.type),
+      color: nativeDefault.unsafe_rawColors.PLATFORM_XBOX,
+      connectLabel: null,
+      connectSublabel: null,
+    };
+    const intl3 = util.intl;
+    obj.connectLabel = intl3.string(util.t.QN7HXV);
+    const intl4 = util.intl;
+    obj.connectSublabel = intl4.string(util.t["M/Ld86"]);
     return obj;
   } else if (tmp.PLAYSTATION === type) {
-    obj = { icon: null, color: null, connectLabel: null, connectSublabel: null };
-    obj[0] = getConsoleIconDefault(type.type);
-    obj[1] = ThemesDefault.unsafe_rawColors.PLATFORM_PLAYSTATION;
-    const intl = getSystemLocale.intl;
-    obj[2] = intl.string(getSystemLocale.t["3qLlTS"]);
-    const intl2 = getSystemLocale.intl;
-    obj[3] = intl2.string(getSystemLocale.t["/uR9x1"]);
+    obj = {
+      icon: getConsoleIconDefault(type.type),
+      color: nativeDefault.unsafe_rawColors.PLATFORM_PLAYSTATION,
+      connectLabel: null,
+      connectSublabel: null,
+    };
+    const intl = util.intl;
+    obj.connectLabel = intl.string(util.t["3qLlTS"]);
+    const intl2 = util.intl;
+    obj.connectSublabel = intl2.string(util.t["/uR9x1"]);
     return obj;
   } else {
     return null;
   }
 }
-createCacheKey = { consoleIconContainer: null, consoleIcon: null };
-createCacheKey = {
-  borderRadius: ThemesDefault.radii.round,
+const PlatformTypes = fn(1074).PlatformTypes;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { consoleIconContainer: null, consoleIcon: null };
+createStyles = {
+  borderRadius: nativeDefault.radii.round,
   padding: 8,
   margin: -3,
   borderWidth: 3,
-  borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { tintColor: ThemesDefault.colors.WHITE };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { tintColor: ThemesDefault.colors.WHITE };
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/header/VoicePanelConsoleFacepile.tsx");
+createStyles.consoleIconContainer = createStyles;
+createStyles.consoleIcon = { tintColor: nativeDefault.colors.WHITE };
+let closure_6 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/native/header/VoicePanelConsoleFacepile.tsx");
 
 export default function VoicePanelConsoleFacepile() {
-  const tmp = callback();
-  const _require = tmp;
+  const tmp = closure_6();
+  _require = tmp;
   const tmp2 = useGameConsoleAccountsDefault();
   importDefault = tmp2;
   let items = [tmp2];
   const items1 = [tmp];
-  items = React.useMemo(() => {
-    const mapped = lib2.map(closure_1_7);
-    return mapped.filter(lib(closure_1_2[8]).isNotNullish);
+  items = noop.useMemo(() => {
+    const mapped = closure_1.map(getConsoleInfo);
+    return mapped.filter(GlobalUtils.isNotNullish);
   }, items);
-  const renderItem = React.useCallback((backgroundColor) => {
-    let obj = { style: items, children: null };
-    items = [lib.consoleIconContainer, { backgroundColor: backgroundColor.color }];
-    obj = { style: lib.consoleIcon, size: lib(closure_1_2[10]).Icon.Sizes.MEDIUM, source: backgroundColor.icon };
-    obj[1] = closure_1_5(lib(closure_1_2[10]).Icon, obj);
-    return closure_1_5(lib2(closure_1_2[9]), obj);
+  const renderItem = noop.useCallback((backgroundColor) => {
+    let obj = { style: null, children: null };
+    const items = [closure_0.consoleIconContainer, { backgroundColor: backgroundColor.color }];
+    obj.style = items;
+    obj = { style: closure_0.consoleIcon, size: native.Icon.Sizes.MEDIUM, source: backgroundColor.icon };
+    obj.children = jsx(native.Icon, {
+      style: closure_0.consoleIcon,
+      size: native.Icon.Sizes.MEDIUM,
+      source: backgroundColor.icon,
+    });
+    return jsx(NativeViewDefault, {
+      style: closure_0.consoleIcon,
+      size: native.Icon.Sizes.MEDIUM,
+      source: backgroundColor.icon,
+    });
   }, items1);
-  return jsx(require("../../../../design/void/native.tsx").SummarizedIconRow, { items, renderItem, offsetAmount: -3 });
+  return jsx(require("native").SummarizedIconRow, { items, renderItem, offsetAmount: -3 });
 }
 export { getConsoleInfo };

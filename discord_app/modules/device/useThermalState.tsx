@@ -1,7 +1,7 @@
 // discord_app/modules/device/useThermalState.tsx
-import set from "../../../_runtime/00002_set.js";
-import set2 from "../../utils/PlatformUtils.tsx";
-import NativeModulesDefault from "ThermalUtils.native.tsx";
+import PlatformUtils from "../../utils/PlatformUtils.tsx";
+import ThermalUtilsDefault from "ThermalUtils.native.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 let obj = {
   UNHANDLED: -1,
@@ -31,10 +31,10 @@ obj = {
   SHUTDOWN: 6,
   [6]: "SHUTDOWN",
 };
-const result = set.fileFinishedImporting("modules/device/useThermalState.tsx");
+const result = size.fileFinishedImporting("modules/device/useThermalState.tsx");
 
 export default function useThermalState() {
-  obj = NativeModulesDefault;
+  obj = ThermalUtilsDefault;
   const rawThermalState = obj.useRawThermalState();
   if (null == rawThermalState) {
     let UNHANDLED = obj.UNHANDLED;
@@ -68,7 +68,7 @@ export default function useThermalState() {
       }
       tmp11Result = tmp11(1115);
     }
-    obj3 = set2;
+    obj3 = PlatformUtils;
     tmp11 = require;
   }
   return UNHANDLED;
@@ -76,7 +76,7 @@ export default function useThermalState() {
 export const ThermalStates = obj;
 export const AndroidThermalStates = obj;
 export const getThermalState = function getThermalState() {
-  obj = NativeModulesDefault;
+  obj = ThermalUtilsDefault;
   const rawThermalState = obj.getRawThermalState();
   if (null == rawThermalState) {
     let UNHANDLED = obj.UNHANDLED;
@@ -110,7 +110,7 @@ export const getThermalState = function getThermalState() {
       }
       tmp11Result = tmp11(1115);
     }
-    obj3 = set2;
+    obj3 = PlatformUtils;
     tmp11 = require;
   }
   return UNHANDLED;

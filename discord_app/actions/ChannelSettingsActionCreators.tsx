@@ -1,51 +1,41 @@
 // discord_app/actions/ChannelSettingsActionCreators.tsx
-import dispatcherDefault from "../Dispatcher.tsx";
-import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import getRootNavigationRef from "../modules/main_tabs_v2/RootNavigationRef.native.tsx";
-import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../stores/ChannelSettingsStore.tsx";
-import closure_5 from "../stores/ChannelStore.tsx";
-import ME from "../Constants.tsx";
+import DispatcherDefault from "../Dispatcher.tsx";
+import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import RootNavigationRef from "../modules/main_tabs_v2/RootNavigationRef.native.tsx";
+import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
+import ChannelSettingsStore from "../stores/ChannelSettingsStore.tsx";
+import ChannelStore from "../stores/ChannelStore.tsx";
 
-require = arg1;
+require = fn;
 function init(channelId, location, subsection) {
-  let obj = dispatcherDefault;
-  obj = { type: "CHANNEL_SETTINGS_INIT", channelId, location, subsection };
+  const obj = { type: "CHANNEL_SETTINGS_INIT", channelId, location, subsection };
   obj.dispatch(obj);
 }
-function open(arg0, arg1, arg2) {
-  let obj = getRootNavigationRef;
+function open(channelId, location, subsection) {
+  let obj = RootNavigationRef;
   const rootNavigationRef = obj.getRootNavigationRef();
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
-      obj = { type: "CHANNEL_SETTINGS_INIT", channelId: null, location: null, subsection: null };
-      obj[1] = arg0;
-      obj[2] = arg1;
-      obj[3] = arg2;
-      dispatcherDefault.dispatch(obj);
-      let OVERVIEW = section.getSection();
+      obj = { type: "CHANNEL_SETTINGS_INIT", channelId, location, subsection };
+      DispatcherDefault.dispatch(obj);
+      let OVERVIEW = ChannelSettingsStore.getSection();
       if (OVERVIEW == null) {
         OVERVIEW = constants.OVERVIEW;
       }
-      obj = { channelId: null, initialRouteName: null, source: "channel-settings-action-creators-open" };
-      obj[0] = arg0;
-      obj[1] = OVERVIEW;
+      obj = { channelId, initialRouteName: OVERVIEW, source: "channel-settings-action-creators-open" };
       rootNavigationRef.navigate("sidebar", obj);
-      const obj3 = dispatcherDefault;
     }
   }
 }
 function close() {
-  dispatcherDefault.dispatch({ type: "CHANNEL_SETTINGS_CLOSE" });
+  DispatcherDefault.dispatch({ type: "CHANNEL_SETTINGS_CLOSE" });
 }
 function setSection(section) {
-  let obj = dispatcherDefault;
-  obj = { type: "CHANNEL_SETTINGS_SET_SECTION", section };
+  const obj = { type: "CHANNEL_SETTINGS_SET_SECTION", section };
   obj.dispatch(obj);
 }
 function selectPermissionOverwrite(overwriteId) {
-  let obj = dispatcherDefault;
-  obj = { type: "CHANNEL_SETTINGS_OVERWRITE_SELECT", overwriteId };
+  const obj = { type: "CHANNEL_SETTINGS_OVERWRITE_SELECT", overwriteId };
   obj.dispatch(obj);
 }
 function updateChannel(arg0) {
@@ -75,7 +65,7 @@ function updateChannel(arg0) {
     themeColor,
     applicationId,
   } = arg0);
-  dispatcherDefault.dispatch({
+  DispatcherDefault.dispatch({
     type: "CHANNEL_SETTINGS_UPDATE",
     name,
     channelType: type,
@@ -103,9 +93,9 @@ function updateChannel(arg0) {
     applicationId,
   });
 }
-function saveChannel(id, arg1) {
+function saveChannel() {
   const self = this;
-  const apply = _saveChannel.apply;
+  const apply = closure_9.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -113,281 +103,244 @@ function saveChannel(id, arg1) {
   }
   return applyArgumentsResult;
 }
-function _saveChannel() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c4 = 0;
-    c5 = 0;
-    const iter = (function* (arg0, arg1) {
-      if (channel === 2) {
-        channel = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
+let closure_9 = async function _saveChannel(arg0, value) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
         if (arg0 === 1) {
-          throw arg1;
+          c5 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c5 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_3 = tmp5;
+          dependencyMap = tmp2;
+          closure_130_1 = undefined;
+          closure_130_2 = undefined;
+          closure_130_3 = undefined;
+          closure_130_4 = undefined;
+          closure_130_5 = undefined;
+          closure_130_6 = undefined;
+          closure_130_7 = undefined;
+          closure_130_8 = undefined;
+          closure_130_9 = undefined;
+          closure_130_10 = undefined;
+          closure_130_11 = undefined;
+          closure_130_12 = undefined;
+          closure_130_13 = undefined;
+          closure_130_14 = undefined;
+          closure_130_15 = undefined;
+          closure_130_16 = undefined;
+          closure_130_17 = undefined;
+          closure_130_18 = undefined;
+          closure_130_19 = undefined;
+          closure_130_20 = undefined;
+          closure_130_21 = undefined;
+          closure_130_22 = undefined;
+          closure_130_23 = undefined;
+          closure_130_24 = undefined;
+          closure_130_25 = undefined;
+          closure_130_26 = undefined;
+          closure_130_0 = channelId;
+          ({
+            name: closure_130_1,
+            type: closure_130_2,
+            position: closure_130_3,
+            topic: closure_130_4,
+            bitrate: closure_130_5,
+            userLimit: closure_130_6,
+            nsfw: closure_130_7,
+            flags: closure_130_8,
+            permissionOverwrites: closure_130_9,
+            rateLimitPerUser: closure_130_10,
+            defaultThreadRateLimitPerUser: closure_130_11,
+            defaultAutoArchiveDuration: closure_130_12,
+            template: closure_130_13,
+            defaultReactionEmoji: closure_130_14,
+            rtcRegion: closure_130_15,
+            videoQualityMode: closure_130_16,
+            autoArchiveDuration: closure_130_17,
+            locked: closure_130_18,
+            invitable: closure_130_19,
+            availableTags: closure_130_20,
+            defaultSortOrder: closure_130_21,
+            defaultForumLayout: closure_130_22,
+            defaultTagSetting: closure_130_23,
+            iconEmoji: closure_130_24,
+            themeColor: closure_130_25,
+            applicationId: closure_130_26,
+          } = closure_1);
+          let channel;
+          c4 = 1;
+          c5 = 1;
+          return { value: "PX_16", done: true };
         }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj1 = { value, done: true };
+          return obj1;
+        } else {
+          channel = closure_131_5.getChannel(closure_130_0);
+          closure_131_1(closure_131_2[4]).dispatch({ type: "CHANNEL_SETTINGS_SUBMIT" });
+          const obj10 = closure_131_1(closure_131_2[4]);
+          c4 = 2;
+          c5 = 1;
+          const obj2 = {
+            value: closure_131_1(closure_131_2[6]).unarchiveThreadIfNecessary(closure_130_0),
+            done: false,
+          };
+          return obj2;
+        }
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 3;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
-        try {
-          channel = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              channel = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              channel = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              c3 = tmp5;
-              dependencyMap = tmp2;
-              c1 = undefined;
-              dependencyMap = undefined;
-              c3 = undefined;
-              c4 = undefined;
-              channel = undefined;
-              c6 = undefined;
-              c7 = undefined;
-              c8 = undefined;
-              c9 = undefined;
-              c10 = undefined;
-              c11 = undefined;
-              c12 = undefined;
-              c13 = undefined;
-              c14 = undefined;
-              c15 = undefined;
-              c16 = undefined;
-              c17 = undefined;
-              c18 = undefined;
-              c19 = undefined;
-              c20 = undefined;
-              c21 = undefined;
-              c22 = undefined;
-              c23 = undefined;
-              let user;
-              c25 = undefined;
-              c26 = undefined;
-              ({
-                name: c1,
-                type: c2,
-                position: c3,
-                topic: c4,
-                bitrate: c5,
-                userLimit: c6,
-                nsfw: c7,
-                flags: c8,
-                permissionOverwrites: c9,
-                rateLimitPerUser: c10,
-                defaultThreadRateLimitPerUser: c11,
-                defaultAutoArchiveDuration: c12,
-                template: c13,
-                defaultReactionEmoji: c14,
-                rtcRegion: c15,
-                videoQualityMode: c16,
-                autoArchiveDuration: c17,
-                locked: c18,
-                invitable: c19,
-                availableTags: c20,
-                defaultSortOrder: c21,
-                defaultForumLayout: c22,
-                defaultTagSetting: c23,
-                iconEmoji: c24,
-                themeColor: c25,
-                applicationId: c26,
-              } = c1);
-              let channel2;
-              c4 = 1;
-              channel = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              channel = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              channel = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              channel2 = channel.getChannel(callback);
-              callback2(closure_1_2[4]).dispatch({ type: "CHANNEL_SETTINGS_SUBMIT" });
-              const obj10 = callback2(closure_1_2[4]);
-              c4 = 2;
-              channel = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = callback2(closure_1_2[6]).unarchiveThreadIfNecessary(callback);
-              return obj2;
-            }
-          } else if (arg0 === 1) {
-            channel = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            channel = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
-          } else {
-            let HTTP = callback(1272).HTTP;
-            let then = HTTP.patch;
-            let obj4 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
-            obj4[0] = c6.CHANNEL(callback);
-            let obj5 = {
-              name: null,
-              type: null,
-              position: null,
-              topic: null,
-              bitrate: null,
-              user_limit: null,
-              nsfw: null,
-              flags: null,
-              permission_overwrites: null,
-              rate_limit_per_user: null,
-              default_thread_rate_limit_per_user: null,
-              default_auto_archive_duration: null,
-              template: null,
-              rtc_region: null,
-              video_quality_mode: null,
-              auto_archive_duration: null,
-              locked: null,
-              invitable: null,
-              default_reaction_emoji: null,
-              available_tags: null,
-              default_sort_order: null,
-              default_forum_layout: null,
-              default_tag_setting: null,
-              icon_emoji: null,
-              theme_color: null,
-              application_id: null,
-            };
-            obj5[0] = c1;
-            obj5[1] = dependencyMap;
-            obj5[2] = c3;
-            obj5[3] = c4;
-            obj5[4] = channel;
-            obj5[5] = c6;
-            obj5[6] = c7;
-            obj5[7] = c8;
-            obj5[8] = c9;
-            obj5[9] = c10;
-            obj5[10] = c11;
-            obj5[11] = c12;
-            obj5[12] = c13;
-            obj5[13] = c15;
-            obj5[14] = c16;
-            obj5[15] = c17;
-            obj5[16] = c18;
-            obj5[17] = c19;
-            if (null != c14) {
-              let emojiId;
-              if (c14 != null) {
-                emojiId = c14.emojiId;
-              }
-              obj = { emoji_id: null, emoji_name: null };
-              obj[0] = emojiId;
-              let emojiName;
-              if (c14 != null) {
-                emojiName = c14.emojiName;
-              }
-              obj[1] = emojiName;
-              let tmp8 = obj;
-            } else if (null === c14) {
-              tmp8 = null;
-            }
-            obj5[18] = tmp8;
-            let mapped;
-            if (c20 != null) {
-              mapped = arr.map((id) => ({
-                id: id.id,
-                name: id.name,
-                emoji_id: id.emojiId,
-                emoji_name: id.emojiName,
-                moderated: id.moderated,
-              }));
-            }
-            obj5[19] = mapped;
-            obj5[20] = c21;
-            obj5[21] = c22;
-            obj5[22] = c23;
-            if (null != user) {
-              const obj6 = { id: null, name: null };
-              obj6[0] = user.id;
-              obj6[1] = user.name;
-              let tmp22 = obj6;
-            } else if (null === user) {
-              tmp22 = null;
-            }
-            obj5[23] = tmp22;
-            obj5[24] = c25;
-            obj5[25] = c26;
-            obj4[1] = obj5;
-            obj5 = callback(1272);
-            obj4[3] = obj5.rejectWithMigratedError();
-            HTTP = then(obj4);
-            then = HTTP.then;
-            obj4 = then(
-              (arg0) => {
-                let obj = _undefined(_undefined2[4]);
-                obj = { type: "CHANNEL_SETTINGS_SUBMIT_SUCCESS", channelId: closure_0 };
-                obj.dispatch(obj);
-                let guildId;
-                if (closure_27 != null) {
-                  guildId = closure_27.getGuildId();
-                }
-                let tmp5 = null == guildId;
-                if (!tmp5) {
-                  let isThreadResult;
-                  if (closure_27 != null) {
-                    isThreadResult = obj4.isThread();
-                  }
-                  tmp5 = isThreadResult;
-                  obj4 = closure_27;
-                }
-                if (!tmp5) {
-                  const result = _undefined(_undefined2[8]).checkGuildTemplateDirty(guildId);
-                  const tmpResult = _undefined(_undefined2[8]);
-                }
-                return arg0;
-              },
-              (body) => {
-                let obj = _undefined(_undefined2[4]);
-                obj = { type: "CHANNEL_SETTINGS_SUBMIT_FAILURE", errors: body.body };
-                obj.dispatch(obj);
-                return body;
-              },
-            );
-            channel = 3;
-            arr = c20;
+        let HTTP = closure_131_0(closure_131_2[7]).HTTP;
+        let then = HTTP.patch;
+        let request = {
+          url: closure_131_6.CHANNEL(closure_130_0),
+          body: null,
+          oldFormErrors: true,
+          rejectWithError: null,
+        };
+        let obj4 = {
+          name: closure_130_1,
+          type: closure_130_2,
+          position: closure_130_3,
+          topic: closure_130_4,
+          bitrate: closure_130_5,
+          user_limit: closure_130_6,
+          nsfw: closure_130_7,
+          flags: closure_130_8,
+          permission_overwrites: closure_130_9,
+          rate_limit_per_user: closure_130_10,
+          default_thread_rate_limit_per_user: closure_130_11,
+          default_auto_archive_duration: closure_130_12,
+          template: closure_130_13,
+          rtc_region: closure_130_15,
+          video_quality_mode: closure_130_16,
+          auto_archive_duration: closure_130_17,
+          locked: closure_130_18,
+          invitable: closure_130_19,
+          default_reaction_emoji: null,
+          available_tags: null,
+          default_sort_order: null,
+          default_forum_layout: null,
+          default_tag_setting: null,
+          icon_emoji: null,
+          theme_color: null,
+          application_id: null,
+        };
+        if (null != closure_130_14) {
+          let emojiId;
+          if (closure_130_14 != null) {
+            emojiId = closure_130_14.emojiId;
           }
-        } catch (tmp32) {
-          channel = tmp;
-          throw tmp32;
+          obj = { emoji_id: emojiId, emoji_name: null };
+          let emojiName;
+          if (closure_130_14 != null) {
+            emojiName = closure_130_14.emojiName;
+          }
+          obj.emoji_name = emojiName;
+          let tmp8 = obj;
+        } else if (null === closure_130_14) {
+          tmp8 = null;
         }
+        obj4.default_reaction_emoji = tmp8;
+        let mapped;
+        if (closure_130_20 != null) {
+          mapped = arr.map((id) => ({
+            id: id.id,
+            name: id.name,
+            emoji_id: id.emojiId,
+            emoji_name: id.emojiName,
+            moderated: id.moderated,
+          }));
+        }
+        obj4.available_tags = mapped;
+        obj4.default_sort_order = closure_130_21;
+        obj4.default_forum_layout = closure_130_22;
+        obj4.default_tag_setting = closure_130_23;
+        if (null != closure_130_24) {
+          const obj5 = { id: closure_130_24.id, name: closure_130_24.name };
+          let tmp22 = obj5;
+        } else if (null === closure_130_24) {
+          tmp22 = null;
+        }
+        obj4.icon_emoji = tmp22;
+        obj4.theme_color = closure_130_25;
+        obj4.application_id = closure_130_26;
+        request.body = obj4;
+        obj4 = closure_131_0(closure_131_2[7]);
+        request.rejectWithError = obj4.rejectWithMigratedError();
+        HTTP = then(request);
+        then = HTTP.then;
+        request = then(
+          (arg0) => {
+            closure_1(573);
+            const obj = { type: "CHANNEL_SETTINGS_SUBMIT_SUCCESS", channelId };
+            obj.dispatch(obj);
+            guildId = undefined;
+            if (guildId != null) {
+              guildId = guildId.getGuildId();
+            }
+            let tmp5 = null == guildId;
+            if (!tmp5) {
+              let isThreadResult;
+              if (guildId != null) {
+                isThreadResult = obj4.isThread();
+              }
+              tmp5 = isThreadResult;
+              obj4 = guildId;
+            }
+            if (!tmp5) {
+              const result = closure_1(7323).checkGuildTemplateDirty(guildId);
+              const tmpResult = closure_1(7323);
+            }
+            return arg0;
+          },
+          (body) => {
+            closure_1_1(573);
+            const obj = { type: "CHANNEL_SETTINGS_SUBMIT_FAILURE", errors: body.body };
+            obj.dispatch(obj);
+            return body;
+          },
+        );
+        c5 = 3;
+        arr = closure_130_20;
       }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_9 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp32) {
+      c5 = tmp;
+      throw tmp32;
+    }
   }
-  return applyArgumentsResult;
-}
+};
 function deleteChannel() {
   const self = this;
-  const apply = _deleteChannel.apply;
+  const apply = closure_10.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -395,112 +348,96 @@ function deleteChannel() {
   }
   return applyArgumentsResult;
 }
-function _deleteChannel() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c3 = 0;
-    c4 = 0;
-    return (function* (arg0) {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp5 === 3) {
+let closure_10 = async function _deleteChannel(arg0, value) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp5 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
         if (arg0 === 1) {
-          throw arg1;
+          c4 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c4 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_2 = tmp3;
+          closure_1 = tmp2;
+          let channel2;
+          closure_129_1 = undefined;
+          channel2 = channel.getChannel(closure_0);
+          const HTTP = HTTPUtils.HTTP;
+          let obj1 = { url: timestampProducer.CHANNEL(closure_0), oldFormErrors: true, rejectWithError: true };
+          c3 = 1;
+          c4 = 1;
+          const obj2 = { value: HTTP.del(obj1), done: false };
+          return obj2;
         }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const table = tmp3;
-              let guildId = tmp2;
-              let callback;
-              guildId = undefined;
-              callback = closure_1_5.getChannel(callback);
-              const HTTP = callback(closure_1_2[7]).HTTP;
-              obj1 = { url: null, oldFormErrors: true, rejectWithError: true };
-              obj1[0] = closure_1_6.CHANNEL(callback);
-              c3 = 1;
-              c4 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.del(obj1);
-              return obj2;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
-          } else {
-            guildId = undefined;
-            if (callback != null) {
-              guildId = callback.getGuildId();
-            }
-            let tmp10 = null == guildId;
-            if (!tmp10) {
-              obj = callback;
-              let isThreadResult;
-              if (callback != null) {
-                isThreadResult = obj.isThread();
-              }
-              tmp10 = isThreadResult;
-            }
-            if (!tmp10) {
-              obj1 = guildId(table[8]);
-              const result = obj1.checkGuildTemplateDirty(guildId);
-            }
-            callback2();
-            c4 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp22) {
-          c4 = tmp;
-          throw tmp22;
+        let guildId;
+        if (channel2 != null) {
+          guildId = channel2.getGuildId();
         }
+        closure_129_1 = guildId;
+        let tmp10 = null == closure_129_1;
+        if (!tmp10) {
+          obj = channel2;
+          let isThreadResult;
+          if (channel2 != null) {
+            isThreadResult = obj.isThread();
+          }
+          tmp10 = isThreadResult;
+        }
+        if (!tmp10) {
+          obj1 = closure_130_1(closure_130_2[8]);
+          const result = obj1.checkGuildTemplateDirty(closure_129_1);
+        }
+        closure_130_8();
+        c4 = 3;
+        return { value: "HermesInternal", done: null };
       }
-    })();
-  });
-  closure_10 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp22) {
+      c4 = tmp;
+      throw tmp22;
+    }
   }
-  return applyArgumentsResult;
-}
+};
 function updateVoiceChannelStatus(arg0, status) {
-  const HTTP = sendRequest.HTTP;
-  obj = { url: closure_6.UPDATE_VOICE_CHANNEL_STATUS(arg0), body: obj, rejectWithError: null };
-  obj = { status };
-  obj[2] = sendRequest.rejectWithMigratedError();
-  return HTTP.put(obj);
+  const HTTP = HTTPUtils.HTTP;
+  const request = {
+    url: timestampProducer.UPDATE_VOICE_CHANNEL_STATUS(arg0),
+    body: { status },
+    rejectWithError: HTTPUtils.rejectWithMigratedError(),
+  };
+  return HTTP.put(request);
 }
-function removeLinkedLobby(closure_1_0) {
-  const HTTP = sendRequest.HTTP;
-  return HTTP.del({ url: closure_6.CHANNEL_LINKED_LOBBY(closure_1_0), rejectWithError: true });
+function removeLinkedLobby(arg0) {
+  const HTTP = HTTPUtils.HTTP;
+  return HTTP.del({ url: timestampProducer.CHANNEL_LINKED_LOBBY(arg0), rejectWithError: true });
 }
-({ Endpoints: closure_6, Layers, ChannelSettingsSections: error } = ME);
-let result = require("set").fileFinishedImporting("actions/ChannelSettingsActionCreators.tsx");
+const Constants = fn(1074);
+({ Endpoints: metroRequire, Layers, ChannelSettingsSections: closure_7 } = Constants);
+const size = fn(2);
+let result = size.fileFinishedImporting("actions/ChannelSettingsActionCreators.tsx");
 
 export default {
   init,

@@ -1,7 +1,7 @@
 // discord_app/modules/core/native/ReanimatedNativeView.tsx
-import set from "../../../../_runtime/00002_set.js";
 import REAWorkaroundViewDefault from "../../reanimated/native/REAWorkaroundView.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/core/native/ReanimatedNativeView.tsx");
+const result = size.fileFinishedImporting("modules/core/native/ReanimatedNativeView.tsx");
 
 export default REAWorkaroundViewDefault;

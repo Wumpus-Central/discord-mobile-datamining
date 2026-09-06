@@ -1,24 +1,24 @@
 // discord_app/modules/forums/ForumActivePostStore.tsx
+import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import set3 from "../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx";
-import set4 from "../../../discord_common/js/shared/shared-constants/ThreadSearchTagSetting.tsx";
-import areSetsEqual from "../../../discord_common/js/shared/utils/SetUtils.tsx";
-import getCreationDefaultFormatter from "ForumUtils.tsx";
-import closure_4 from "../threads/ActiveThreadsStore.tsx";
-import closure_5 from "../threads/ThreadMessageStore.tsx";
-import closure_6 from "../../stores/AuthenticationStore.tsx";
-import closure_7 from "../../stores/ChannelStore.tsx";
-import closure_8 from "../../stores/ReadStateStore.tsx";
-import closure_9 from "../../stores/SelectedChannelStore.tsx";
-import importDefaultResult from "../../../_runtime/00012_apply.js";
-import set from "../../../_runtime/00002_set.js";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import ThreadSortOrder from "../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx";
+import ThreadSearchTagSetting from "../../../discord_common/js/shared/shared-constants/ThreadSearchTagSetting.tsx";
+import SetUtils from "../../../discord_common/js/shared/utils/SetUtils.tsx";
+import ForumUtils from "ForumUtils.tsx";
+import ActiveThreadsStore from "../threads/ActiveThreadsStore.tsx";
+import ThreadMessageStore from "../threads/ThreadMessageStore.tsx";
+import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
+import ReadStateStore from "../../stores/ReadStateStore.tsx";
+import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
+import apply from "../../../_runtime/metro/00012__.js";
 
-require = arg1;
+require = fn;
 function maybeRebuildState() {
-  channelId = channelId.getChannelId();
+  const channelId = SelectedChannelStore.getChannelId();
   if (null != channelId) {
-    const channel = store2.getChannel(channelId);
+    const channel = ChannelStore.getChannel(channelId);
     let isForumLikeChannelResult;
     if (channel != null) {
       isForumLikeChannelResult = channel.isForumLikeChannel();
@@ -31,19 +31,18 @@ function maybeRebuildState() {
   c3 = null;
   c12 = null;
   set = new Set();
-  LATEST_ACTIVITY = set3.ThreadSortOrder.LATEST_ACTIVITY;
-  MATCH_SOME = set4.ThreadSearchTagSetting.MATCH_SOME;
-  c16 = 0;
+  LATEST_ACTIVITY = ThreadSortOrder.ThreadSortOrder.LATEST_ACTIVITY;
+  MATCH_SOME = ThreadSearchTagSetting.ThreadSearchTagSetting.MATCH_SOME;
+  closure_16 = 0;
   closure_19 = [];
-  closure_20 = importDefaultResult.chain(items);
-  const obj2 = importDefaultResult;
-  closure_21 = importDefaultResult.chain(items);
+  closure_20 = apply.chain(items);
+  closure_21 = apply.chain(items);
   set2.clear();
   set1.clear();
   return false;
 }
 function rebuildState(refreshThreadIds) {
-  let channel = store2.getChannel(c12);
+  let channel = ChannelStore.getChannel(c12);
   if (null != channel) {
     refreshThreadIds = undefined;
     if (refreshThreadIds != null) {
@@ -51,13 +50,13 @@ function rebuildState(refreshThreadIds) {
     }
     if (refreshThreadIds) {
       const _Object = Object;
-      let values = Object.values(store.getThreadsForParent(channel.guild_id, channel.id));
+      let values = Object.values(ActiveThreadsStore.getThreadsForParent(channel.guild_id, channel.id));
       closure_19 = values.map((id) => id.id);
       c16 = 0;
       c18 = true;
     }
     if (0 !== set1.size) {
-      closure_19 = closure_19.filter((arg0) => !set.has(arg0));
+      closure_19 = closure_19.filter((item) => !set.has(item));
       obj.clear();
     }
     if (0 !== set2.size) {
@@ -81,97 +80,83 @@ function rebuildState(refreshThreadIds) {
       refreshThreadIds1 = sortThreadIds;
     }
     if (refreshThreadIds1) {
-      const obj3 = importDefaultResult;
-      _require = require("../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx").ThreadSortOrder
-        .LATEST_ACTIVITY;
-      closure_21 = importDefaultResult.chain(closure_19).sort((id, id) => {
-        let compare = closure_1_2;
+      LATEST_ACTIVITY = LATEST_ACTIVITY(1966).ThreadSortOrder.LATEST_ACTIVITY;
+      closure_21 = apply.chain(closure_19).sort((id, id) => {
+        let compare = dependencyMap;
         let num = -1;
         if (!obj.isForumPostPinned(id)) {
           let lastMessageIdResult1 = id;
           if (tmpResult.isForumPostPinned(id)) {
             num = 1;
-          } else if (callback === tmp(compare[6]).ThreadSortOrder.LATEST_ACTIVITY) {
-            compare = closure_1_1(compare[10]).compare;
-            let lastMessageIdResult = closure_1_8.lastMessageId(lastMessageIdResult1);
+          } else if (closure_0 === tmp(1966).ThreadSortOrder.LATEST_ACTIVITY) {
+            compare = SnowflakeUtilsDefault.compare;
+            let lastMessageIdResult = ReadStateStore.lastMessageId(lastMessageIdResult1);
             if (lastMessageIdResult == null) {
               lastMessageIdResult = lastMessageIdResult1;
             }
-            lastMessageIdResult1 = closure_1_8.lastMessageId(id);
+            lastMessageIdResult1 = ReadStateStore.lastMessageId(id);
             if (lastMessageIdResult1 == null) {
               lastMessageIdResult1 = id;
             }
             let compareResult = compare(lastMessageIdResult, lastMessageIdResult1);
-            const obj4 = closure_1_8;
-            const tmp8 = closure_1_1(compare[10]);
           } else {
-            compareResult = closure_1_1(compare[10]).compare(lastMessageIdResult1, id);
-            const obj3 = closure_1_1(compare[10]);
+            compareResult = SnowflakeUtilsDefault.compare(lastMessageIdResult1, id);
           }
-          tmpResult = tmp(compare[9]);
+          tmpResult = tmp(7307);
         }
         return num;
       });
-      const chainResult = importDefaultResult.chain(closure_19);
-      const obj5 = importDefaultResult;
-      _require = require("../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx").ThreadSortOrder
-        .CREATION_DATE;
-      closure_20 = importDefaultResult.chain(closure_19).sort((id, id) => {
-        let compare = closure_1_2;
+      const chainResult = apply.chain(closure_19);
+      const CREATION_DATE = LATEST_ACTIVITY(1966).ThreadSortOrder.CREATION_DATE;
+      closure_20 = apply.chain(closure_19).sort((id, id) => {
+        let compare = dependencyMap;
         let num = -1;
         if (!obj.isForumPostPinned(id)) {
           let lastMessageIdResult1 = id;
           if (tmpResult.isForumPostPinned(id)) {
             num = 1;
-          } else if (callback === tmp(compare[6]).ThreadSortOrder.LATEST_ACTIVITY) {
-            compare = closure_1_1(compare[10]).compare;
-            let lastMessageIdResult = closure_1_8.lastMessageId(lastMessageIdResult1);
+          } else if (closure_0 === tmp(1966).ThreadSortOrder.LATEST_ACTIVITY) {
+            compare = SnowflakeUtilsDefault.compare;
+            let lastMessageIdResult = ReadStateStore.lastMessageId(lastMessageIdResult1);
             if (lastMessageIdResult == null) {
               lastMessageIdResult = lastMessageIdResult1;
             }
-            lastMessageIdResult1 = closure_1_8.lastMessageId(id);
+            lastMessageIdResult1 = ReadStateStore.lastMessageId(id);
             if (lastMessageIdResult1 == null) {
               lastMessageIdResult1 = id;
             }
             let compareResult = compare(lastMessageIdResult, lastMessageIdResult1);
-            const obj4 = closure_1_8;
-            const tmp8 = closure_1_1(compare[10]);
           } else {
-            compareResult = closure_1_1(compare[10]).compare(lastMessageIdResult1, id);
-            const obj3 = closure_1_1(compare[10]);
+            compareResult = SnowflakeUtilsDefault.compare(lastMessageIdResult1, id);
           }
-          tmpResult = tmp(compare[9]);
+          tmpResult = tmp(7307);
         }
         return num;
       });
-      const chainResult1 = importDefaultResult.chain(closure_19);
+      const chainResult1 = apply.chain(closure_19);
     }
     const valueResult =
-      LATEST_ACTIVITY ===
-      require("../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx").ThreadSortOrder.LATEST_ACTIVITY
-        ? closure_21
-        : closure_20.value();
+      LATEST_ACTIVITY === LATEST_ACTIVITY(1966).ThreadSortOrder.LATEST_ACTIVITY ? closure_21 : closure_20.value();
     let found = valueResult;
     if (0 !== set.size) {
-      _require = set;
-      importDefault = MATCH_SOME;
-      found = valueResult.filter((arg0) => {
-        const channel = closure_1_7.getChannel(arg0);
+      closure_130_0 = set;
+      closure_130_1 = MATCH_SOME;
+      found = valueResult.filter((item) => {
+        const channel = ChannelStore.getChannel(item);
         let appliedTags;
         if (channel != null) {
           appliedTags = channel.appliedTags;
         }
         if (null != appliedTags) {
           if (0 !== appliedTags.length) {
-            if (closure_1 === lib(closure_1_2[7]).ThreadSearchTagSetting.MATCH_SOME) {
-              return appliedTags.some((arg0) => set.has(arg0));
+            if (importDefault === ThreadSearchTagSetting.ThreadSearchTagSetting.MATCH_SOME) {
+              return appliedTags.some((item) => set.has(item));
             } else {
-              const values = lib.values();
+              const values = LATEST_ACTIVITY.values();
               for (const item10014 of values) {
                 if (appliedTags.includes(item10014)) {
                   continue;
                 } else {
-                  let tmp7 = obj;
                   obj.return();
                   let flag = false;
                   return false;
@@ -184,8 +169,8 @@ function rebuildState(refreshThreadIds) {
         return false;
       });
     }
-    let found1 = found.find((arg0) => {
-      count = count.getCount(arg0);
+    let found1 = found.find((item) => {
+      count = count.getCount(item);
       let tmp2 = null === count;
       if (!tmp2) {
         tmp2 = 0 === count;
@@ -197,54 +182,56 @@ function rebuildState(refreshThreadIds) {
       tmp33 = found1;
     }
     found1 = tmp33;
-    const iter =
-      LATEST_ACTIVITY ===
-      require("../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx").ThreadSortOrder.LATEST_ACTIVITY
-        ? closure_21
-        : closure_20;
+    const iter = LATEST_ACTIVITY === LATEST_ACTIVITY(1966).ThreadSortOrder.LATEST_ACTIVITY ? closure_21 : closure_20;
     obj = set1;
   }
 }
 let items = [];
-let c11 = null;
+let id = null;
 let c12 = null;
 let set = new Set();
-let LATEST_ACTIVITY = require("set").ThreadSortOrder.LATEST_ACTIVITY;
-let MATCH_SOME = require("set").ThreadSearchTagSetting.MATCH_SOME;
-let c16 = 0;
+let LATEST_ACTIVITY = fn(1966).ThreadSortOrder.LATEST_ACTIVITY;
+let MATCH_SOME = fn(1968).ThreadSearchTagSetting.MATCH_SOME;
+let closure_16 = 0;
 let closure_17 = [];
 let c18 = false;
 let closure_19 = [];
-let closure_20 = importDefaultResult.chain(items);
-let closure_21 = importDefaultResult.chain(items);
+let closure_20 = apply.chain(items);
+let closure_21 = apply.chain(items);
 const set1 = new Set();
 const set2 = new Set();
 const Store = initializeDefault.Store;
 class ForumActivePostStore extends Store {}
 const prototype = ForumActivePostStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_4, closure_6, closure_7, closure_8, closure_9, closure_5);
+  this.waitFor(
+    ActiveThreadsStore,
+    AuthenticationStore,
+    ChannelStore,
+    ReadStateStore,
+    SelectedChannelStore,
+    ThreadMessageStore,
+  );
 };
 prototype["getNewThreadCount"] = function getNewThreadCount() {
-  return c16;
+  return closure_16;
 };
 prototype["getCanAckThreads"] = function getCanAckThreads() {
   return c18;
 };
-prototype["getThreadIds"] = function getThreadIds(id, closure_1, closure_2, closure_3) {
-  const areSetsEqualResult = areSetsEqual.areSetsEqual(closure_2, closure_13);
+prototype["getThreadIds"] = function getThreadIds(id, arg1, set, arg3) {
+  const areSetsEqualResult = SetUtils.areSetsEqual(set, set);
   let tmp2 = !areSetsEqualResult;
-  closure_12 = id;
-  closure_13 = closure_2;
-  closure_14 = closure_1;
-  closure_15 = closure_3;
-  if (id !== closure_12) {
+  c12 = id;
+  LATEST_ACTIVITY = arg1;
+  MATCH_SOME = arg3;
+  if (id !== c12) {
     rebuildState({ refreshThreadIds: true });
-  } else if (closure_1 !== tmp3) {
+  } else if (arg1 !== tmp3) {
     rebuildState({ sortThreadIds: true });
   } else {
     if (areSetsEqualResult) {
-      tmp2 = closure_3 !== tmp4;
+      tmp2 = arg3 !== tmp4;
     }
     if (tmp2) {
       rebuildState();
@@ -256,14 +243,14 @@ prototype["getCurrentThreadIds"] = function getCurrentThreadIds() {
   return closure_17;
 };
 prototype["getAndDeleteMostRecentUserCreatedThreadId"] = function getAndDeleteMostRecentUserCreatedThreadId() {
-  c11 = null;
-  return c11;
+  id = null;
+  return id;
 };
 prototype["getFirstNoReplyThreadId"] = function getFirstNoReplyThreadId() {
-  return closure_3;
+  return c3;
 };
 ForumActivePostStore.displayName = "ForumActivePostStore";
-const forumActivePostStore = new ForumActivePostStore(dispatcherDefault, {
+const forumActivePostStore = new ForumActivePostStore(DispatcherDefault, {
   CONNECTION_OPEN: maybeRebuildState,
   OVERLAY_INITIALIZE: maybeRebuildState,
   GUILD_CREATE: maybeRebuildState,
@@ -277,13 +264,12 @@ const forumActivePostStore = new ForumActivePostStore(dispatcherDefault, {
         c12 = null;
         const _Set = Set;
         set = new Set();
-        LATEST_ACTIVITY = set3.ThreadSortOrder.LATEST_ACTIVITY;
-        MATCH_SOME = set4.ThreadSearchTagSetting.MATCH_SOME;
-        c16 = 0;
+        LATEST_ACTIVITY = ThreadSortOrder.ThreadSortOrder.LATEST_ACTIVITY;
+        MATCH_SOME = ThreadSearchTagSetting.ThreadSearchTagSetting.MATCH_SOME;
+        closure_16 = 0;
         closure_19 = [];
-        closure_20 = importDefaultResult.chain(items);
-        const obj = importDefaultResult;
-        closure_21 = importDefaultResult.chain(items);
+        closure_20 = apply.chain(items);
+        closure_21 = apply.chain(items);
         set2.clear();
         set1.clear();
       }
@@ -293,7 +279,7 @@ const forumActivePostStore = new ForumActivePostStore(dispatcherDefault, {
   THREAD_LIST_SYNC: function handleThreadListSync(arg0) {
     let tmp2 = null != c12;
     if (tmp2) {
-      const channel = store2.getChannel(c12);
+      const channel = ChannelStore.getChannel(c12);
       let guild_id;
       if (channel != null) {
         guild_id = channel.guild_id;
@@ -315,7 +301,7 @@ const forumActivePostStore = new ForumActivePostStore(dispatcherDefault, {
       const isNewlyCreated = channel.isNewlyCreated;
       if (!isNewlyCreated) {
         tmp = isNewlyCreated;
-      } else if (channel.ownerId !== id.getId()) {
+      } else if (channel.ownerId !== AuthenticationStore.getId()) {
         closure_16 = tmp6 + 1;
       } else {
         id = channel.id;
@@ -327,7 +313,7 @@ const forumActivePostStore = new ForumActivePostStore(dispatcherDefault, {
     channel = channel.channel;
     if (null != channel.parent_id) {
       if (channel.parent_id === c12) {
-        const isForumPostPinnedResult = getCreationDefaultFormatter.isForumPostPinned(channel.id);
+        const isForumPostPinnedResult = ForumUtils.isForumPostPinned(channel.id);
         const hasItem = set2.has(channel.id);
         if (isForumPostPinnedResult) {
           if (!hasItem) {
@@ -375,43 +361,41 @@ const forumActivePostStore = new ForumActivePostStore(dispatcherDefault, {
     return false;
   },
 });
-const result = set.fileFinishedImporting("modules/forums/ForumActivePostStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/forums/ForumActivePostStore.tsx");
 
 export default forumActivePostStore;
 export const computeThreadIdsSnapshot = function computeThreadIdsSnapshot(id) {
-  const channel = store2.getChannel(id);
+  const channel = ChannelStore.getChannel(id);
   if (null == channel) {
     items = [];
   } else {
     const _Object = Object;
-    const values = Object.values(store.getThreadsForParent(channel.guild_id, channel.id));
+    const values = Object.values(ActiveThreadsStore.getThreadsForParent(channel.guild_id, channel.id));
     const mapped = values.map((id) => id.id);
     closure_0 = LATEST_ACTIVITY;
     items = mapped.sort((id, id) => {
-      let compare = closure_1_2;
+      let compare = dependencyMap;
       let num = -1;
       if (!obj.isForumPostPinned(id)) {
         let lastMessageIdResult1 = id;
         if (tmpResult.isForumPostPinned(id)) {
           num = 1;
-        } else if (callback === tmp(compare[6]).ThreadSortOrder.LATEST_ACTIVITY) {
-          compare = closure_1_1(compare[10]).compare;
-          let lastMessageIdResult = closure_1_8.lastMessageId(lastMessageIdResult1);
+        } else if (closure_0 === tmp(1966).ThreadSortOrder.LATEST_ACTIVITY) {
+          compare = SnowflakeUtilsDefault.compare;
+          let lastMessageIdResult = ReadStateStore.lastMessageId(lastMessageIdResult1);
           if (lastMessageIdResult == null) {
             lastMessageIdResult = lastMessageIdResult1;
           }
-          lastMessageIdResult1 = closure_1_8.lastMessageId(id);
+          lastMessageIdResult1 = ReadStateStore.lastMessageId(id);
           if (lastMessageIdResult1 == null) {
             lastMessageIdResult1 = id;
           }
           let compareResult = compare(lastMessageIdResult, lastMessageIdResult1);
-          const obj4 = closure_1_8;
-          const tmp8 = closure_1_1(compare[10]);
         } else {
-          compareResult = closure_1_1(compare[10]).compare(lastMessageIdResult1, id);
-          const obj3 = closure_1_1(compare[10]);
+          compareResult = SnowflakeUtilsDefault.compare(lastMessageIdResult1, id);
         }
-        tmpResult = tmp(compare[9]);
+        tmpResult = tmp(7307);
       }
       return num;
     });

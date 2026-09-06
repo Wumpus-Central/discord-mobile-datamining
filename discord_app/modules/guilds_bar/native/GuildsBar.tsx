@@ -1,37 +1,45 @@
 // discord_app/modules/guilds_bar/native/GuildsBar.tsx
-import importAllResult from "../../../../_runtime/00019_noop.js";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import NativeViewDefault from "../../core/native/NativeView.tsx";
+import FastListDefault from "../../../lib/native/FastList.tsx";
+import FavoritesGuildIntroPopoverDefault from "../../favorites/onboarding/FavoritesGuildIntroPopover.tsx";
+import StartupProfilerDefault from "../../app_startup/StartupProfiler.tsx";
+import registerSidebarVisibilityMethods from "utils/registerSidebarVisibilityMethods.tsx";
+import useGuildsBarGestureDefault from "hooks/useGuildsBarGesture.tsx";
+import useGuildsBarPropsDefault from "hooks/useGuildsBarProps.tsx";
+import GuildsBarDragPreviewDefault from "GuildsBarDragPreview.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let c3 = importAllResult;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = createCacheKey.createStyles({ wrapper: { position: "relative", overflow: "visible", flex: 1 } });
-const memoResult = importAllResult.memo(function GuildsBar(enableHome) {
+require = fn;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4560);
+let closure_6 = createStyles.createStyles({ wrapper: { position: "relative", overflow: "visible", flex: 1 } });
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBar.tsx");
+
+export default noop.memo(function GuildsBar(enableHome) {
   let flag = enableHome.enableHome;
   if (flag === undefined) {
     flag = false;
   }
-  listProps = undefined;
-  let tmp4 = fastListRef(16283)();
-  fastListRef = tmp4.fastListRef;
-  listProps = fastListRef;
+  let tmp4 = useGuildsBarGestureDefault();
+  const fastListRef = tmp4.fastListRef;
   ({ scrollPosition, gesture, scrollerRef, persistantKeys, onFastListScroll, onFastListScrollWorklet } = tmp4);
-  let tmp = callback();
-  ({ listProps, listDataProps } = fastListRef(16292)(fastListRef));
+  let tmp = closure_6();
+  ({ listProps, listDataProps } = useGuildsBarPropsDefault(fastListRef));
   const items = [fastListRef];
-  const effect = importAllResult.useEffect(() => {
-    const result = listProps(ref[7]).registerGuildVisibilityMethod(listProps);
+  const effect = noop.useEffect(() => {
+    const result = registerSidebarVisibilityMethods.registerGuildVisibilityMethod(fastListRef);
   }, items);
-  dependencyMap = undefined;
-  importAllResult = undefined;
-  dependencyMap = importAllResult.useRef(listProps);
-  importAllResult = importAllResult.useRef(false);
-  const effect1 = importAllResult.useEffect(() => {
+  closure_129_0 = listProps;
+  closure_129_1 = fastListRef;
+  closure_129_2 = noop.useRef(listProps);
+  closure_129_3 = noop.useRef(false);
+  const effect1 = noop.useEffect(() => {
     if (obj.isAndroid()) {
-      closure_0 = fastListRef(tmp[4]).addOnPipModeChangedListener((arg0) => {
+      closure_0 = ref(tmp[4]).addOnPipModeChangedListener((arg0) => {
         if (arg0) {
-          closure_3.current = true;
+          ref3.current = true;
         }
       });
       return () => {
@@ -42,14 +50,14 @@ const memoResult = importAllResult.memo(function GuildsBar(enableHome) {
         return removeResult;
       };
     }
-    obj = listProps(ref[3]);
-    tmp = ref;
+    obj = fastListRef(ref2[3]);
+    tmp = ref2;
   }, []);
   const items1 = [fastListRef, listProps];
-  const effect2 = importAllResult.useEffect(() => {
-    const current = ref.current;
-    ref.current = listProps;
-    if (ref2.current) {
+  const effect2 = noop.useEffect(() => {
+    const current = ref2.current;
+    ref2.current = fastListRef;
+    if (ref3.current) {
       let num = tmp.chunkBase;
       if (num == null) {
         num = 0;
@@ -61,7 +69,7 @@ const memoResult = importAllResult.memo(function GuildsBar(enableHome) {
       if (num > num2) {
         tmp2.current = false;
         if (tmp4) {
-          const current2 = fastListRef.current;
+          const current2 = ref.current;
           if (current2 != null) {
             const blocks = current2.computeBlocks();
           }
@@ -71,14 +79,14 @@ const memoResult = importAllResult.memo(function GuildsBar(enableHome) {
     }
   }, items1);
   let obj = { profile: null, children: null };
-  const tmp5 = fastListRef(16292)(fastListRef);
-  obj[0] = listProps(11533).Profiles.Guilds;
+  const tmp5 = useGuildsBarPropsDefault(fastListRef);
+  obj.profile = fastListRef(11533).Profiles.Guilds;
   obj = { gesture, children: null };
   obj = { style: tmp.wrapper, collapsable: false, nativeID: "guilds-bar-view", children: null };
-  const tmp10 = fastListRef(11533);
+  const tmp10 = StartupProfilerDefault;
   const tmp11 = closure_5;
-  obj1 = {};
-  const tmp12 = fastListRef(5589);
+  const obj1 = {};
+  const tmp12 = NativeViewDefault;
   const merged = Object.assign(listProps);
   const merged1 = Object.assign(listDataProps);
   obj1.ref = fastListRef;
@@ -98,15 +106,12 @@ const memoResult = importAllResult.memo(function GuildsBar(enableHome) {
   obj1.style = obj2;
   obj1.nativeID = "guilds-bar-fast-list";
   const items2 = [
-    closure_4(fastListRef(7072), obj1),
-    closure_4(fastListRef(16360), {}),
-    closure_4(fastListRef(10238), {}),
+    closure_4(FastListDefault, obj1),
+    closure_4(GuildsBarDragPreviewDefault, {}),
+    closure_4(FavoritesGuildIntroPopoverDefault, {}),
   ];
-  obj[3] = items2;
-  obj[1] = tmp11(tmp12, obj);
-  obj[1] = closure_4(listProps(6655).GestureDetector, obj);
+  obj.children = items2;
+  obj.children = tmp11(tmp12, obj);
+  obj.children = closure_4(fastListRef(6655).GestureDetector, obj);
   return closure_4(tmp10, obj);
 });
-let result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBar.tsx");
-
-export default memoResult;

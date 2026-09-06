@@ -1,9 +1,8 @@
 // discord_app/stores/GuildAvailabilityStore.tsx
-import timestampDefault from "../modules/debug/Logger.tsx";
+import LoggerDefault from "../modules/debug/Logger.tsx";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../Dispatcher.tsx";
-import closure_0 from "GuildStore.tsx";
-import set from "../../_runtime/00002_set.js";
+import DispatcherDefault from "../Dispatcher.tsx";
+import GuildStore from "GuildStore.tsx";
 
 function handleConnectionOpen(unavailableGuilds) {
   set = new Set(unavailableGuilds.unavailableGuilds);
@@ -26,15 +25,15 @@ function handleGuild(guild) {
     return false;
   }
 }
-let closure_1 = new timestampDefault("GuildAvailabilityStore");
+const logger = new LoggerDefault("GuildAvailabilityStore");
 let set = new Set();
 const Store = initializeDefault.Store;
 class GuildAvailabilityStore extends Store {}
 const prototype = GuildAvailabilityStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_0);
+  this.waitFor(GuildStore);
 };
-prototype["isUnavailable"] = function isUnavailable(guildId, token, selected) {
+prototype["isUnavailable"] = function isUnavailable(guildId) {
   let hasItem = null != guildId;
   if (hasItem) {
     hasItem = set.has(guildId);
@@ -43,7 +42,7 @@ prototype["isUnavailable"] = function isUnavailable(guildId, token, selected) {
 };
 Object.defineProperty(prototype, "totalGuilds", {
   get: function totalGuilds() {
-    return store.getGuildCount() + set.size;
+    return GuildStore.getGuildCount() + set.size;
   },
   set: undefined,
 });
@@ -60,14 +59,14 @@ Object.defineProperty(prototype, "unavailableGuilds", {
   set: undefined,
 });
 GuildAvailabilityStore.displayName = "GuildAvailabilityStore";
-const guildAvailabilityStore = new GuildAvailabilityStore(dispatcherDefault, {
+const guildAvailabilityStore = new GuildAvailabilityStore(DispatcherDefault, {
   CONNECTION_OPEN: handleConnectionOpen,
   OVERLAY_INITIALIZE: handleConnectionOpen,
   GUILD_UNAVAILABLE: function handleGuildUnavailable(guildId) {
     if (set.has(guildId.guildId)) {
       return false;
     } else {
-      const guild = store.getGuild(guildId.guildId);
+      const guild = GuildStore.getGuild(guildId.guildId);
       let str = "???";
       if (tmp4) {
         str = guild.name;
@@ -92,6 +91,7 @@ const guildAvailabilityStore = new GuildAvailabilityStore(dispatcherDefault, {
     }
   },
 });
-const result = set.fileFinishedImporting("stores/GuildAvailabilityStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("stores/GuildAvailabilityStore.tsx");
 
 export default guildAvailabilityStore;

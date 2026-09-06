@@ -1,18 +1,20 @@
 // discord_app/lib/native/BundleUpdater.tsx
-import timestampDefault from "../../modules/debug/Logger.tsx";
-import t from "t" /* 4745 */;
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
-import { AnalyticEvents } from "../../Constants.tsx";
+import LoggerDefault from "../../modules/debug/Logger.tsx";
+import PlatformUtils from "../../utils/PlatformUtils.tsx";
+import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
+import _mod4745 from "module_4745" /* 4745 */;
+import MonitoringAgentDefault from "../../modules/monitoring/MonitoringAgent.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
-require = arg1;
+require = fn;
+get_ActivityIndicator = fn(17);
 ({ NativeModules, NativeEventEmitter } = get_ActivityIndicator);
-let closure_5 = new timestampDefault("BundleUpdater");
+const AnalyticEvents = fn(1074).AnalyticEvents;
+let closure_5 = new LoggerDefault("BundleUpdater");
 const BundleUpdaterManager = NativeModules.BundleUpdaterManager;
 const nativeEventEmitter = new NativeEventEmitter(BundleUpdaterManager);
 let closure_8 = { downloaded: "BundleDownloaded", otaUpdateChecked: "OtaUpdateChecked" };
-let prototype;
-prototype = function BundleUpdater() {
+const prototype = function BundleUpdater() {
   return Object.create(new.target.prototype);
 }.prototype;
 prototype["getInitialBundleDownloaded"] = function getInitialBundleDownloaded() {
@@ -22,7 +24,7 @@ prototype["getInitialOtaUpdateChecked"] = function getInitialOtaUpdateChecked() 
   return BundleUpdaterManager.getInitialOtaUpdateChecked();
 };
 prototype["addEventListener"] = function addEventListener(arg0, arg1) {
-  nativeEventEmitter.addListener(table[arg0], arg1);
+  nativeEventEmitter.addListener(closure_8[arg0], arg1);
 };
 prototype["checkForUpdateAndReload"] = function checkForUpdateAndReload() {
   const result = BundleUpdaterManager.checkForUpdateAndReload();
@@ -46,16 +48,15 @@ prototype["getManifestInfo"] = function getManifestInfo() {
   return BundleUpdaterManager.getManifestInfo();
 };
 prototype["setupOTAAssetFallback"] = function setupOTAAssetFallback() {
-  return callback(function* () {
+  return (async (arg0, value) => {
     if (c3 === 2) {
       c3 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp4 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
@@ -63,40 +64,41 @@ prototype["setupOTAAssetFallback"] = function setupOTAAssetFallback() {
     } else {
       try {
         c3 = 2;
-        if (0 === table) {
+        if (0 === c2) {
           if (arg0 === 1) {
             c3 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
             closure_1 = tmp2;
-            closure_0 = undefined;
-            obj1 = closure_1_0(table[4]);
+            closure_129_0 = undefined;
+            let obj1 = PlatformUtils;
             if (obj1.isIOS()) {
-              table = 1;
+              c2 = 1;
               c3 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = tmp14(tmp15[6])(tmp15[5], tmp15.paths);
+              obj1 = { value: tmp14(tmp15[6])(tmp15[5], tmp15.paths), done: false };
               return obj1;
             } else {
               c3 = 3;
             }
-            tmp14 = closure_1_0;
+            tmp14 = require;
           }
         } else if (arg0 === 1) {
           c3 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 !== 2) {
-          closure_0 = arg1;
+          closure_129_0 = value;
           closure_0 = _default;
+          if (closure_129_0.default == null) {
+            closure_0 = closure_129_0;
+          }
           let result = closure_0.addCustomSourceTransformer((isLoadedFromFileSystem) => {
             if (isLoadedFromFileSystem.isLoadedFromFileSystem()) {
               const result = isLoadedFromFileSystem.scaledAssetURLNearBundle();
-              const resolvedOTAAssetURIResult = closure_6.resolvedOTAAssetURI(result.uri);
+              const resolvedOTAAssetURIResult = closure_1_6.resolvedOTAAssetURI(result.uri);
               let tmp5 = null;
               if (resolvedOTAAssetURIResult !== result.uri) {
                 const obj = {};
@@ -111,8 +113,7 @@ prototype["setupOTAAssetFallback"] = function setupOTAAssetFallback() {
           });
         }
         c3 = 3;
-        obj = { value: null, done: true };
-        obj[0] = arg1;
+        obj = { value, done: true };
         return obj;
       } catch (tmp16) {
         c3 = tmp;
@@ -122,12 +123,10 @@ prototype["setupOTAAssetFallback"] = function setupOTAAssetFallback() {
   })();
 };
 prototype["emitOtaMetric"] = function emitOtaMetric(item10010) {
-  const match = t.match(item10010);
-  const str = t;
+  const match = _mod4745.match(item10010);
   const withResult = match.with({ type: "OtaCheckAttempt" }, (result) => {
-    closure_5.verbose("OTA check attempt", result);
-    let obj = callback(1242);
-    obj = {
+    closure_1_5.verbose("OTA check attempt", result);
+    const obj = {
       result: result.result,
       duration_seconds: result.durationSeconds,
       bytes_received: result.bytesReceived,
@@ -135,13 +134,12 @@ prototype["emitOtaMetric"] = function emitOtaMetric(item10010) {
       used_streaming: result.usedStreaming,
     };
     obj.track(constants.MOBILE_OTA_CHECK_ATTEMPT, obj);
-    return callback(7602).increment(closure_9.prepareOtaMetricForDatadog(result, ["result"]));
+    return MonitoringAgentDefault.increment(prototype.prepareOtaMetricForDatadog(result, ["result"]));
   });
   match
     .with({ type: "OtaCheckAttempt" }, (result) => {
-      closure_5.verbose("OTA check attempt", result);
-      let obj = callback(1242);
-      obj = {
+      closure_1_5.verbose("OTA check attempt", result);
+      const obj = {
         result: result.result,
         duration_seconds: result.durationSeconds,
         bytes_received: result.bytesReceived,
@@ -149,12 +147,11 @@ prototype["emitOtaMetric"] = function emitOtaMetric(item10010) {
         used_streaming: result.usedStreaming,
       };
       obj.track(constants.MOBILE_OTA_CHECK_ATTEMPT, obj);
-      return callback(7602).increment(closure_9.prepareOtaMetricForDatadog(result, ["result"]));
+      return MonitoringAgentDefault.increment(prototype.prepareOtaMetricForDatadog(result, ["result"]));
     })
     .with({ type: "OtaAssetDownloadAttempt" }, (result) => {
-      closure_5.verbose("OTA asset download attempt", result);
-      let obj = callback(1242);
-      obj = {
+      closure_1_5.verbose("OTA asset download attempt", result);
+      const obj = {
         result: result.result,
         duration_seconds: result.durationSeconds,
         error: result.error,
@@ -163,19 +160,18 @@ prototype["emitOtaMetric"] = function emitOtaMetric(item10010) {
         bytes_received: result.bytesReceived,
       };
       obj.track(constants.MOBILE_OTA_ASSET_DOWNLOAD_ATTEMPT, obj);
-      return callback(7602).increment(closure_9.prepareOtaMetricForDatadog(result, ["result", "statusCode"]));
+      return MonitoringAgentDefault.increment(prototype.prepareOtaMetricForDatadog(result, ["result", "statusCode"]));
     })
     .exhaustive();
 };
 prototype["prepareOtaMetricForDatadog"] = function prepareOtaMetricForDatadog(name, arg1) {
-  closure_0 = name;
   let items = arg1;
   if (arg1 === undefined) {
     items = [];
   }
-  return { name: name.type, tags: items.map((arg0) => "" + arg0 + ":" + name[arg0]) };
+  return { name: name.type, tags: items.map((item) => "" + item + ":" + name[item]) };
 };
-const tmp3 = new timestampDefault("BundleUpdater");
-let result = require("set").fileFinishedImporting("lib/native/BundleUpdater.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("lib/native/BundleUpdater.tsx");
 
 export default prototype;

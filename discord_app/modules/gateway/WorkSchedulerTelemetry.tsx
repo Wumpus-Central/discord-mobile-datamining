@@ -1,8 +1,8 @@
 // discord_app/modules/gateway/WorkSchedulerTelemetry.tsx
-import apply from "../../../_runtime/00012_apply.js";
-import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
+import _mod12 from "../../../_runtime/metro/00012__.js";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
-require = arg1;
+require = fn;
 let obj = {
   LONGER_DISPATCH: "longer_dispatch",
   EXCEEDED_MAX_CONSECUTIVE_FLUSHES: "exceeded_max_consecutive_flushes",
@@ -43,36 +43,40 @@ let closure_6 = Object.freeze({
   [obj.FIRED_DUE_TO_MAX_TIMEOUT]: 0,
   [obj.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED]: 0,
 });
-const result = require("set").fileFinishedImporting("modules/gateway/WorkSchedulerTelemetry.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/gateway/WorkSchedulerTelemetry.tsx");
 class WorkSchedulerTelemetry {
   constructor() {
-    obj = Object.create(new.target.prototype);
-    obj = require("apply");
-    obj[0] = obj.cloneDeep(closure_3);
-    obj2 = require("apply");
-    obj[1] = obj2.cloneDeep(closure_4);
-    obj3 = require("apply");
-    obj[2] = obj3.cloneDeep(closure_5);
-    obj4 = require("apply");
-    obj[3] = obj4.cloneDeep(closure_6);
-    return obj;
+    merged = Object.assign({
+      _timeTracking: null,
+      _timingStats: null,
+      _measurements: null,
+      _eventCounts: null,
+      _enabled: false,
+    });
+    obj = closure_0(closure_1[1]);
+    merged[0] = obj.cloneDeep(closure_3);
+    obj2 = closure_0(closure_1[1]);
+    merged[1] = obj2.cloneDeep(closure_4);
+    obj3 = closure_0(closure_1[1]);
+    merged[2] = obj3.cloneDeep(closure_5);
+    obj4 = closure_0(closure_1[1]);
+    merged[3] = obj4.cloneDeep(closure_6);
+    return merged;
   }
 }
 const prototype = WorkSchedulerTelemetry.prototype;
 prototype["reset"] = function reset() {
-  this._timeTracking = apply.cloneDeep(closure_3);
-  const obj = apply;
-  this._timingStats = apply.cloneDeep(closure_4);
-  const obj2 = apply;
-  this._measurements = apply.cloneDeep(closure_5);
-  const obj3 = apply;
-  this._eventCounts = apply.cloneDeep(closure_6);
+  this._timeTracking = _mod12.cloneDeep(closure_3);
+  this._timingStats = _mod12.cloneDeep(closure_4);
+  this._measurements = _mod12.cloneDeep(closure_5);
+  this._eventCounts = _mod12.cloneDeep(closure_6);
 };
 prototype["clearTime"] = function clearTime(arg0) {
   this._timeTracking[arg0] = null;
 };
 prototype["_storeTimeValue"] = function _storeTimeValue(TIME_OVER_DEADLINE, timeSinceExpiration) {
-  const tmp = callback(this._timingStats[TIME_OVER_DEADLINE], 2);
+  const tmp = _slicedToArray(this._timingStats[TIME_OVER_DEADLINE], 2);
   const items = [(tmp[0] * tmp[1] + timeSinceExpiration) / (tmp[1] + 1), tmp[1] + 1];
   this._timingStats[TIME_OVER_DEADLINE] = items;
 };
@@ -101,7 +105,7 @@ prototype["timeTrack"] = function timeTrack(TIME_OVER_DEADLINE, timeSinceExpirat
 prototype["measure"] = function measure(arg0, arg1) {
   const self = this;
   if (this._enabled) {
-    const tmp4 = callback(self._measurements[arg0], 2);
+    const tmp4 = _slicedToArray(self._measurements[arg0], 2);
     const items = [(tmp4[0] * tmp4[1] + arg1) / (tmp4[1] + 1), tmp4[1] + 1];
     self._measurements[arg0] = items;
   }
@@ -123,26 +127,26 @@ Object.defineProperty(prototype, "isTelemetryEnabled", {
 });
 prototype["generateTelemetry"] = function generateTelemetry() {
   const entries = Object.entries(this._timingStats);
-  const reduced = entries.reduce((arg0, arg1) => {
-    [tmp] = arg1;
+  const reduced = entries.reduce((acc, item) => {
+    [tmp] = item;
     const combined = "avg_" + tmp;
-    arg0[combined] = "" + obj.toFixed(2) + "ms";
-    return arg0;
+    acc[combined] = "" + obj.toFixed(2) + "ms";
+    return acc;
   }, {});
   const entries1 = Object.entries(this._measurements);
-  const reduced1 = entries1.reduce((arg0, arg1) => {
-    [tmp] = arg1;
+  const reduced1 = entries1.reduce((acc, item) => {
+    [tmp] = item;
     const combined = "avg_" + tmp;
-    arg0[combined] = "" + obj.toFixed(2);
-    return arg0;
+    acc[combined] = "" + obj.toFixed(2);
+    return acc;
   }, {});
   const entries2 = Object.entries(this._eventCounts);
   const merged = Object.assign(
-    entries2.reduce((arg0, arg1) => {
-      [tmp, tmp2] = arg1;
+    entries2.reduce((acc, item) => {
+      [tmp, tmp2] = item;
       const combined = "count_" + tmp;
-      arg0[combined] = "" + tmp2;
-      return arg0;
+      acc[combined] = "" + tmp2;
+      return acc;
     }, {}),
   );
   const merged1 = Object.assign(reduced);

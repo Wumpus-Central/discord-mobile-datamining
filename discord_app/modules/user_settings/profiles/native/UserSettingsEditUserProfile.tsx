@@ -1,36 +1,33 @@
 // discord_app/modules/user_settings/profiles/native/UserSettingsEditUserProfile.tsx
-import QUICK_SWITCHERDefault from "../../../app_analytics/AnalyticsLocation.tsx";
-import EditUserProfileBannerDefault from "../../../user_profile/native/UserProfileEditForm.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../../stores/UserStore.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
+import maybeFetchUserProfileDefault from "../../../user_profile/maybeFetchUserProfile.tsx";
+import UserProfileEditFormDefault from "../../../user_profile/native/UserProfileEditForm.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import UserStore from "../../../../stores/UserStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
-  "modules/user_settings/profiles/native/UserSettingsEditUserProfile.tsx",
-);
+const require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/profiles/native/UserSettingsEditUserProfile.tsx");
 
 export default function UserSettingsEditUserProfile(arg0) {
   let obj = stateFromStores(504);
-  const items = [closure_4];
+  const items = [UserStore];
   stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   const items1 = [stateFromStores];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (null != stateFromStores) {
-      closure_1_1(closure_1_2[6])(obj.id, obj.getAvatarURL(undefined, 80), { dispatchWait: true });
-      const tmp3 = closure_1_1(closure_1_2[6]);
+      maybeFetchUserProfileDefault(obj.id, obj.getAvatarURL(undefined, 80), { dispatchWait: true });
     }
   }, items1);
   let tmp7 = null;
   if (null != stateFromStores) {
-    obj = { value: null, children: null };
-    obj[0] = tmp3(QUICK_SWITCHERDefault.USER_SETTINGS_USER_PROFILE).analyticsLocations;
-    obj = { currentUser: null };
-    obj[0] = stateFromStores;
+    obj = { value: tmp3(AnalyticsLocationDefault.USER_SETTINGS_USER_PROFILE).analyticsLocations, children: null };
+    obj = { currentUser: stateFromStores };
     const merged = Object.assign(arg0);
-    obj[1] = jsx(EditUserProfileBannerDefault, { currentUser: null });
-    tmp7 = jsx(stateFromStores(7162).AnalyticsLocationProvider, { currentUser: null });
-    const tmpResult = EditUserProfileBannerDefault;
+    obj.children = jsx(UserProfileEditFormDefault, { currentUser: stateFromStores });
+    tmp7 = jsx(stateFromStores(7162).AnalyticsLocationProvider, { currentUser: stateFromStores });
+    const tmpResult = UserProfileEditFormDefault;
   }
   return tmp7;
 }

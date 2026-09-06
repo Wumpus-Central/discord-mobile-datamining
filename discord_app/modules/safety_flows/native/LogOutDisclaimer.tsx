@@ -1,32 +1,33 @@
 // discord_app/modules/safety_flows/native/LogOutDisclaimer.tsx
-import set from "../../../../_runtime/00002_set.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import messagesProxyDefault from "../SafetyFlows.messages.js";
-import Text from "../../../design/components/Text/native/Text.tsx";
+import util from "../../../intl/index.native.tsx";
+import _modDef2690 from "../SafetyFlows.messages.js";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import AuthenticationActionCreatorsDefault from "../../../actions/AuthenticationActionCreators.tsx";
 import ModalDisclaimer from "../../../design/components/Modal/native/ModalDisclaimer.native.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("modules/safety_flows/native/LogOutDisclaimer.tsx");
+const result = size.fileFinishedImporting("modules/safety_flows/native/LogOutDisclaimer.tsx");
 
 export default function LogOutDisclaimer() {
   let obj = { children: null };
   obj = { variant: "text-xs/medium", children: null };
-  const intl = getSystemLocale.intl;
+  const intl = util.intl;
   obj = {
     handleLogOut() {
-      callback(table[5]).logout("safety_flows_enter_email_screen");
+      AuthenticationActionCreatorsDefault.logout("safety_flows_enter_email_screen");
     },
   };
-  obj[1] = intl.format(messagesProxyDefault["0DHxym"], obj);
-  obj[0] = jsx(Text.Text, {
+  obj.children = intl.format(_modDef2690["0DHxym"], obj);
+  obj.children = jsx(Text_Text.Text, {
     handleLogOut() {
-      callback(table[5]).logout("safety_flows_enter_email_screen");
+      AuthenticationActionCreatorsDefault.logout("safety_flows_enter_email_screen");
     },
   });
   return jsx(ModalDisclaimer.ModalDisclaimer, {
     handleLogOut() {
-      callback(table[5]).logout("safety_flows_enter_email_screen");
+      AuthenticationActionCreatorsDefault.logout("safety_flows_enter_email_screen");
     },
   });
 }

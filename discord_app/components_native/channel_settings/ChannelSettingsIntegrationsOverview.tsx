@@ -1,22 +1,17 @@
 // discord_app/components_native/channel_settings/ChannelSettingsIntegrationsOverview.tsx
-import noopAll from "../../../_runtime/00019_noop.js";
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
-import getAvatarURLDefault from "../../utils/AvatarUtils.tsx";
+import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
+import AvatarUtilsDefault from "../../utils/AvatarUtils.tsx";
 import useNavigation from "../../design/components/Navigator/native/useNavigation.native.tsx";
-import { GUILD_FOLLOW_DESTINATION_CHANNEL_TYPES as closure_3 } from "../../records/ChannelRecord.tsx";
-import closure_4 from "../../stores/ChannelStore.tsx";
-import { ChannelSettingsSections } from "../../Constants.tsx";
-import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../_runtime/metro/00019__.js";
+import ChannelStore from "../../stores/ChannelStore.tsx";
 
-require = arg1;
+require = fn;
 function LinkedLobbyFormSection(channel) {
   channel = channel.channel;
-  importDefault = undefined;
   let obj = channel(1483);
   importDefault = obj.useNavigation();
-  obj1 = channel(7168);
+  let obj1 = channel(7168);
   const linkedLobby = channel.linkedLobby;
   let application_id;
   if (linkedLobby != null) {
@@ -27,80 +22,79 @@ function LinkedLobbyFormSection(channel) {
   if (null != getOrFetchApplication) {
     obj = { title: null, hasIcons: true, children: null };
     const intl = tmp(1114).intl;
-    obj[0] = intl.string(tmp(1114).t.oAvIAg);
-    obj = { label: null, icon: null, arrow: true, onPress: null };
-    obj[0] = getOrFetchApplication.name;
+    obj.title = intl.string(tmp(1114).t.oAvIAg);
+    obj = { label: getOrFetchApplication.name, icon: null, arrow: true, onPress: null };
     obj1 = { source: null, size: null };
-    ({ id: obj7[0], icon: obj7[1] } = getOrFetchApplication);
-    obj1[0] = getAvatarURLDefault.getApplicationIconSource({ id: null, icon: null });
-    obj1[1] = tmp(1178).AvatarSizes.REFRESH_MEDIUM_32;
-    obj[1] = callback(tmp(1178).Avatar, obj1);
-    obj[3] = function onPress() {};
-    obj[2] = callback(tmp(5605).TableRow, obj);
-    tmp5 = callback(tmp(5687).TableRowGroup, obj);
+    ({ id: obj7.id, icon: obj7.icon } = getOrFetchApplication);
+    obj1.source = AvatarUtilsDefault.getApplicationIconSource({ id: null, icon: null });
+    obj1.size = tmp(1178).AvatarSizes.REFRESH_MEDIUM_32;
+    obj.icon = closure_6(tmp(1178).Avatar, obj1);
+    obj.onPress = function onPress() {
+      closure_1.push(ChannelSettingsSections.EDIT_LINKED_LOBBY, { channel, numScreensToPop: 1 });
+    };
+    obj.children = closure_6(tmp(5605).TableRow, obj);
+    tmp5 = closure_6(tmp(5687).TableRowGroup, obj);
     const obj2 = { id: null, icon: null };
-    const obj6 = getAvatarURLDefault;
   }
   return tmp5;
 }
-noopAll;
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { screenContainer: null };
-createCacheKey = {
+fn(1961).GUILD_FOLLOW_DESTINATION_CHANNEL_TYPES;
+const ChannelSettingsSections = fn(1074).ChannelSettingsSections;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+fn(4560);
+let createStyles = { screenContainer: null };
+createStyles = {
   flex: 1,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER,
-  paddingTop: ThemesDefault.space.PX_16,
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
+  paddingTop: nativeDefault.space.PX_16,
 };
-createCacheKey[0] = createCacheKey;
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting(
-  "components_native/channel_settings/ChannelSettingsIntegrationsOverview.tsx",
-);
+createStyles.screenContainer = createStyles;
+let closure_9 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsIntegrationsOverview.tsx");
 
 export default function ConnectedChannelSettingsIntegrationsOverview(arg0) {
   ({ channelId: require, canManageWebhooks, canUnlinkLobby } = arg0);
-  importDefault = undefined;
   let obj = useNavigation;
   importDefault = obj.useNavigation();
-  obj1 = initialize;
-  const items = [closure_4];
-  const stateFromStores = obj1.useStateFromStores(items, () => closure_1_4.getChannel(closure_0));
+  let obj1 = initialize;
+  const items = [ChannelStore];
+  const stateFromStores = obj1.useStateFromStores(items, () => ChannelStore.getChannel(require));
   let tmp6Result = null;
   if (null != stateFromStores) {
-    obj = { style: null, children: null };
-    obj[0] = tmp4.screenContainer;
+    obj = { style: tmp4.screenContainer, children: null };
     obj = { style: null, spacing: null, children: null };
-    obj1 = { paddingHorizontal: null };
-    obj1[0] = ThemesDefault.space.PX_12;
-    obj[0] = obj1;
-    obj[1] = ThemesDefault.space.PX_24;
+    obj1 = { paddingHorizontal: nativeDefault.space.PX_12 };
+    obj.style = obj1;
+    obj.spacing = nativeDefault.space.PX_24;
     if (canManageWebhooks) {
       const obj2 = { label: null, subLabel: null, icon: null, arrow: true, onPress: null };
       const intl = tmp(1114).intl;
-      obj2[0] = intl.string(tmp(1114).t.jp25Id);
+      obj2.label = intl.string(tmp(1114).t.jp25Id);
       const intl2 = tmp(1114).intl;
-      obj2[1] = intl2.string(tmp(1114).t.mKIOkI);
-      obj2[2] = tmp6(tmp(16726).WebhookIcon, {});
-      obj2[4] = function onPress() {
-        return arr.push(closure_1_5.WEBHOOKS);
+      obj2.subLabel = intl2.string(tmp(1114).t.mKIOkI);
+      obj2.icon = tmp6(tmp(16726).WebhookIcon, {});
+      obj2.onPress = function onPress() {
+        return closure_1.push(ChannelSettingsSections.WEBHOOKS);
       };
       const items1 = [tmp6(tmp(5605).TableRow, obj2)];
       let hasItem = set.has(stateFromStores.type);
       if (hasItem) {
         const obj3 = { label: null, subLabel: null, icon: null, arrow: true, onPress: null };
         const intl3 = tmp(1114).intl;
-        obj3[0] = intl3.string(tmp(1114).t.OrV60r);
+        obj3.label = intl3.string(tmp(1114).t.OrV60r);
         const intl4 = tmp(1114).intl;
-        obj3[1] = intl4.string(tmp(1114).t.rQREJl);
-        obj3[2] = tmp6(tmp(16839).ChannelsFollowedIcon, {});
-        obj3[4] = function onPress() {
-          return arr.push(closure_1_5.CHANNELS_FOLLOWED);
+        obj3.subLabel = intl4.string(tmp(1114).t.rQREJl);
+        obj3.icon = tmp6(tmp(16839).ChannelsFollowedIcon, {});
+        obj3.onPress = function onPress() {
+          return closure_1.push(ChannelSettingsSections.CHANNELS_FOLLOWED);
         };
         hasItem = tmp6(tmp(5605).TableRow, obj3);
       }
       const obj4 = { hasIcons: true, children: null };
       items1[1] = hasItem;
-      obj4[1] = items1;
+      obj4.children = items1;
       canManageWebhooks = tmp7(tmp(5687).TableRowGroup, obj4);
     }
     const items2 = [canManageWebhooks];
@@ -108,13 +102,12 @@ export default function ConnectedChannelSettingsIntegrationsOverview(arg0) {
       canUnlinkLobby = null != stateFromStores.linkedLobby;
     }
     if (canUnlinkLobby) {
-      const obj5 = { channel: null };
-      obj5[0] = stateFromStores;
+      const obj5 = { channel: stateFromStores };
       canUnlinkLobby = tmp6(LinkedLobbyFormSection, obj5);
     }
     items2[1] = canUnlinkLobby;
-    obj[2] = items2;
-    obj[1] = closure_7(tmp(4973).Stack, obj);
+    obj.children = items2;
+    obj.children = closure_7(tmp(4973).Stack, obj);
     tmp6Result = tmp6(tmp(8593).Form, obj);
   }
   return tmp6Result;

@@ -1,17 +1,17 @@
 // discord_app/modules/wishlists/hooks/useWishlistGiftableItems.native.tsx
-import closure_0 from "../../../../_runtime/00019_noop.js";
-import set from "../../../../_runtime/00002_set.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
 let items = [, ,];
-({ COLLECTIBLES: arr[0], PREMIUM: arr[1], SOCIAL_LAYER_GAME_ITEM: arr[2] } = require("ME").SKUProductLines);
-let set = new Set(items);
-const result = set.fileFinishedImporting("modules/wishlists/hooks/useWishlistGiftableItems.native.tsx");
+({ COLLECTIBLES: arr[0], PREMIUM: arr[1], SOCIAL_LAYER_GAME_ITEM: arr[2] } = fn(1074).SKUProductLines);
+const set = new Set(items);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/wishlists/hooks/useWishlistGiftableItems.native.tsx");
 
 export const GIFTABLE_PRODUCT_LINES = set;
 export const useWishlistGiftableItems = function useWishlistGiftableItems(wishlist) {
-  const React = wishlist;
+  noop = wishlist;
   let items = [wishlist];
-  return React.useMemo(() => {
+  return noop.useMemo(() => {
     let found;
     if (wishlist != null) {
       const items = wishlist.items;

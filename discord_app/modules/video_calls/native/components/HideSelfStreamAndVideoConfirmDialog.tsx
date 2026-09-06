@@ -1,28 +1,29 @@
 // discord_app/modules/video_calls/native/components/HideSelfStreamAndVideoConfirmDialog.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import componentDidMountDefault from "../../../../components_native/common/Alert.tsx";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { SelfStreamAndVideoAlertType as closure_4 } from "../../../calls/HideSelfStreamAndVideoConstants.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import common_AlertDefault from "../../../../components_native/common/Alert.tsx";
+import UserSettingsActionCreatorsDefault from "../../../../actions/UserSettingsActionCreators.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-noopAll;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles({
+const require = fn;
+const View = fn(17).View;
+const constants = fn(17211).SelfStreamAndVideoAlertType;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4560);
+let closure_7 = createStyles.createStyles({
   wrapper: { padding: 16 },
   body: { paddingTop: 16 },
   description: { lineHeight: 18 },
   ctaLink: { paddingTop: 8, textAlign: "center", textDecorationLine: "underline" },
 });
-let result = require("set").fileFinishedImporting(
+const size = fn(2);
+let result = size.fileFinishedImporting(
   "modules/video_calls/native/components/HideSelfStreamAndVideoConfirmDialog.tsx",
 );
 
 export default function HideSelfStreamAndVideoConfirmDialog(arg0) {
   ({ type, onConfirm } = arg0);
-  const merged = Object.assign(arg0, Object.create(null));
-  const tmp2 = callback2();
+  const merged = Object.assign(arg0, Object.assign({ type: 0, onConfirm: 0 }));
+  const tmp2 = closure_7();
   if (type === constants.STREAM) {
     const intl2 = onConfirm(1114).intl;
     let stringResult = intl2.string(onConfirm(1114).t["/lFMWr"]);
@@ -56,11 +57,11 @@ export default function HideSelfStreamAndVideoConfirmDialog(arg0) {
   obj = { style: tmp2.body, children: null };
   obj = { style: tmp2.description, variant: "text-sm/medium", children: stringResult1 };
   const items = [closure_5(tmp6(4556).Text, obj)];
-  obj1 = {
+  const obj1 = {
     accessibilityRole: "link",
-    style: items1,
+    style: null,
     onPress() {
-      const result = closure_1_1(closure_1_2[8]).updatedUnsyncedSettings({
+      const result = UserSettingsActionCreatorsDefault.updatedUnsyncedSettings({
         disableHideSelfStreamAndVideoConfirmationAlert: true,
       });
       onConfirm();
@@ -68,12 +69,13 @@ export default function HideSelfStreamAndVideoConfirmDialog(arg0) {
     variant: "text-sm/medium",
     children: null,
   };
-  items1 = [,];
+  const items1 = [,];
   ({ ctaLink: arr2[0], description: arr2[1] } = tmp2);
+  obj1.style = items1;
   const intl7 = tmp6(1114).intl;
-  obj1[4] = intl7.string(tmp6(1114).t["JdIQ/Y"]);
+  obj1.children = intl7.string(tmp6(1114).t["JdIQ/Y"]);
   items[1] = closure_5(tmp6(4556).Text, obj1);
-  obj[1] = items;
-  obj.children = callback(View, obj);
-  return closure_5(componentDidMountDefault, obj);
+  obj.children = items;
+  obj.children = closure_6(View, obj);
+  return closure_5(common_AlertDefault, obj);
 }

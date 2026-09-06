@@ -1,70 +1,69 @@
 // discord_app/modules/auth/native/images/flags.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import registerAsset from "../../../../../_runtime/15425_registerAsset.js";
-import registerAsset2 from "../../../../../_runtime/15426_registerAsset.js";
-import registerAsset3 from "../../../../../_runtime/15427_registerAsset.js";
-import registerAsset4 from "../../../../../_runtime/15428_registerAsset.js";
-import registerAsset5 from "../../../../../_runtime/15429_registerAsset.js";
-import registerAsset6 from "../../../../../_runtime/15430_registerAsset.js";
-import registerAsset7 from "../../../../../_runtime/15431_registerAsset.js";
-import registerAsset8 from "../../../../../_runtime/15432_registerAsset.js";
-import registerAsset9 from "../../../../../_runtime/15433_registerAsset.js";
-import registerAsset10 from "../../../../../_runtime/15434_registerAsset.js";
-import registerAsset11 from "../../../../../_runtime/15435_registerAsset.js";
-import registerAsset12 from "../../../../../_runtime/15436_registerAsset.js";
-import registerAsset13 from "../../../../../_runtime/15437_registerAsset.js";
-import registerAsset14 from "../../../../../_runtime/15438_registerAsset.js";
-import registerAsset15 from "../../../../../_runtime/15439_registerAsset.js";
-import registerAsset16 from "../../../../../_runtime/15440_registerAsset.js";
-import registerAsset17 from "../../../../../_runtime/15441_registerAsset.js";
-import registerAsset18 from "../../../../../_runtime/15442_registerAsset.js";
-import registerAsset19 from "../../../../../_runtime/15443_registerAsset.js";
-import registerAsset20 from "../../../../../_runtime/15444_registerAsset.js";
-import registerAsset21 from "../../../../../_runtime/15445_registerAsset.js";
-import registerAsset22 from "../../../../../_runtime/15446_registerAsset.js";
-import registerAsset23 from "../../../../../_runtime/15447_registerAsset.js";
-import registerAsset24 from "../../../../../_runtime/15448_registerAsset.js";
-import registerAsset25 from "../../../../../_runtime/15449_registerAsset.js";
-import registerAsset26 from "../../../../../_runtime/15450_registerAsset.js";
-import registerAsset27 from "../../../../../_runtime/15451_registerAsset.js";
-import registerAsset28 from "../../../../../_runtime/15452_registerAsset.js";
-import registerAsset29 from "../../../../../_runtime/15453_registerAsset.js";
-import registerAsset30 from "../../../../../_runtime/15454_registerAsset.js";
-import registerAsset31 from "../../../../../_runtime/15455_registerAsset.js";
+import _mod15425 from "../../../../../_runtime/metro/15425__.js";
+import _mod15426 from "../../../../../_runtime/metro/15426__.js";
+import _mod15427 from "../../../../../_runtime/metro/15427__.js";
+import _mod15428 from "../../../../../_runtime/metro/15428__.js";
+import _mod15429 from "../../../../../_runtime/metro/15429__.js";
+import _mod15430 from "../../../../../_runtime/metro/15430__.js";
+import _mod15431 from "../../../../../_runtime/metro/15431__.js";
+import _mod15432 from "../../../../../_runtime/metro/15432__.js";
+import _mod15433 from "../../../../../_runtime/metro/15433__.js";
+import _mod15434 from "../../../../../_runtime/metro/15434__.js";
+import _mod15435 from "../../../../../_runtime/metro/15435__.js";
+import _mod15436 from "../../../../../_runtime/metro/15436__.js";
+import _mod15437 from "../../../../../_runtime/metro/15437__.js";
+import _mod15438 from "../../../../../_runtime/metro/15438__.js";
+import _mod15439 from "../../../../../_runtime/metro/15439__.js";
+import _mod15440 from "../../../../../_runtime/metro/15440__.js";
+import _mod15441 from "../../../../../_runtime/metro/15441__.js";
+import _mod15442 from "../../../../../_runtime/metro/15442__.js";
+import _mod15443 from "../../../../../_runtime/metro/15443__.js";
+import _mod15444 from "../../../../../_runtime/metro/15444__.js";
+import _mod15445 from "../../../../../_runtime/metro/15445__.js";
+import _mod15446 from "../../../../../_runtime/metro/15446__.js";
+import _mod15447 from "../../../../../_runtime/metro/15447__.js";
+import _mod15448 from "../../../../../_runtime/metro/15448__.js";
+import _mod15449 from "../../../../../_runtime/metro/15449__.js";
+import _mod15450 from "../../../../../_runtime/metro/15450__.js";
+import _mod15451 from "../../../../../_runtime/metro/15451__.js";
+import _mod15452 from "../../../../../_runtime/metro/15452__.js";
+import _mod15453 from "../../../../../_runtime/metro/15453__.js";
+import _mod15454 from "../../../../../_runtime/metro/15454__.js";
+import _mod15455 from "../../../../../_runtime/metro/15455__.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const obj = {
-  bg: registerAsset,
-  cs: registerAsset2,
-  da: registerAsset3,
-  de: registerAsset4,
-  el: registerAsset5,
-  "en-GB": registerAsset6,
-  "en-US": registerAsset7,
-  "es-ES": registerAsset8,
-  "es-419": registerAsset9,
-  fi: registerAsset10,
-  fr: registerAsset11,
-  hi: registerAsset12,
-  hr: registerAsset13,
-  hu: registerAsset14,
-  it: registerAsset15,
-  ja: registerAsset16,
-  ko: registerAsset17,
-  lt: registerAsset18,
-  nl: registerAsset19,
-  no: registerAsset20,
-  pl: registerAsset21,
-  "pt-BR": registerAsset22,
-  ro: registerAsset23,
-  ru: registerAsset24,
-  "sv-SE": registerAsset25,
-  th: registerAsset26,
-  tr: registerAsset27,
-  uk: registerAsset28,
-  vi: registerAsset29,
-  "zh-CN": registerAsset30,
-  "zh-TW": registerAsset31,
+const result = size.fileFinishedImporting("modules/auth/native/images/flags.tsx");
+
+export const flags = {
+  bg: _mod15425,
+  cs: _mod15426,
+  da: _mod15427,
+  de: _mod15428,
+  el: _mod15429,
+  "en-GB": _mod15430,
+  "en-US": _mod15431,
+  "es-ES": _mod15432,
+  "es-419": _mod15433,
+  fi: _mod15434,
+  fr: _mod15435,
+  hi: _mod15436,
+  hr: _mod15437,
+  hu: _mod15438,
+  it: _mod15439,
+  ja: _mod15440,
+  ko: _mod15441,
+  lt: _mod15442,
+  nl: _mod15443,
+  no: _mod15444,
+  pl: _mod15445,
+  "pt-BR": _mod15446,
+  ro: _mod15447,
+  ru: _mod15448,
+  "sv-SE": _mod15449,
+  th: _mod15450,
+  tr: _mod15451,
+  uk: _mod15452,
+  vi: _mod15453,
+  "zh-CN": _mod15454,
+  "zh-TW": _mod15455,
 };
-const result = set.fileFinishedImporting("modules/auth/native/images/flags.tsx");
-
-export const flags = obj;

@@ -1,26 +1,14 @@
 // discord_app/modules/video_backgrounds/VideoFilterImageError.tsx
-import set from "../../../_runtime/00002_set.js";
-import getSystemLocale from "../../intl/index.native.tsx";
-import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import util from "../../intl/index.native.tsx";
+import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-let closure_2 = { ASSET_SIZE: "BINARY_TYPE_MAX_SIZE" };
-let closure_3 = { ASSET: "asset" };
-const V8APIError = sendRequest.V8APIError;
+const constants = { ASSET_SIZE: "BINARY_TYPE_MAX_SIZE" };
+const constants2 = { ASSET: "asset" };
+const V8APIError = HTTPUtils.V8APIError;
 const prototype = function VideoFilterImageError(arg0, arg1) {
-  const intl = getSystemLocale.intl;
-  tmp3 = new tmp3(
-    arg0,
-    arg1,
-    intl.string(getSystemLocale.t.Mt8yDB),
-    new.target,
-    tmp3,
-    tmp2,
-    intl,
-    require,
-    new.target,
-    tmp,
-  );
-  // ThrowIfThisInitialized (0x7c)
+  const intl = util.intl;
+  tmp3 = new tmp3(arg0, arg1, intl.string(util.t.Mt8yDB), new.target, tmp3, tmp2, intl, require, new.target, tmp);
   const fieldErrors = tmp3.getFieldErrors(constants2.ASSET);
   let tmp7 = null != fieldErrors;
   if (tmp7) {
@@ -38,6 +26,6 @@ const prototype = function VideoFilterImageError(arg0, arg1) {
   return tmp3;
 }.prototype;
 class prototype extends V8APIError {}
-const result = set.fileFinishedImporting("modules/video_backgrounds/VideoFilterImageError.tsx");
+const result = size.fileFinishedImporting("modules/video_backgrounds/VideoFilterImageError.tsx");
 
 export default prototype;

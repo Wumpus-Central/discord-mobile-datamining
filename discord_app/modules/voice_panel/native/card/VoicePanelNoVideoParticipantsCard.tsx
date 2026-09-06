@@ -1,61 +1,54 @@
 // discord_app/modules/voice_panel/native/card/VoicePanelNoVideoParticipantsCard.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import setDefault from "../../../core/native/NativeView.tsx";
-import dismissPanelDefault from "../VoicePanelStateContext.tsx";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
-import { Pressable } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
+import NativeViewDefault from "../../../core/native/NativeView.tsx";
+import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let c3 = importAllResult;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
+const require = fn;
+const Pressable = fn(17).Pressable;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+fn(4560);
 let obj = { container: null, label: null, button: null, buttonText: null };
-obj = {
+let size = {
   width: "100%",
   height: "100%",
   alignItems: "center",
   justifyContent: "center",
   padding: 16,
-  backgroundColor: ThemesDefault.colors.VOICE_VIDEO_VIDEO_TILE_BACKGROUND,
+  backgroundColor: nativeDefault.colors.VOICE_VIDEO_VIDEO_TILE_BACKGROUND,
 };
-obj[0] = obj;
-obj[1] = { marginBottom: 16, textAlign: "center" };
-createCacheKey = {
-  paddingHorizontal: 20,
-  paddingVertical: 12,
-  backgroundColor: "white",
-  borderRadius: ThemesDefault.radii.round,
-};
-obj[2] = createCacheKey;
-obj[3] = { color: ThemesDefault.unsafe_rawColors.PRIMARY_860 };
-let closure_7 = createCacheKey.createStyles(obj);
-const obj2 = { color: ThemesDefault.unsafe_rawColors.PRIMARY_860 };
-const memoResult = importAllResult.memo(function VoicePanelNoVideoParticipantsCard() {
-  const channelId = importAllResult.useContext(dismissPanelDefault).channelId;
-  const tmp = callback3();
+obj.container = size;
+obj.label = { marginBottom: 16, textAlign: "center" };
+obj = { paddingHorizontal: 20, paddingVertical: 12, backgroundColor: "white", borderRadius: nativeDefault.radii.round };
+obj.button = obj;
+const createStyles = { color: nativeDefault.unsafe_rawColors.PRIMARY_860 };
+obj.buttonText = createStyles;
+let closure_7 = createStyles.createStyles(obj);
+size = fn(2);
+let result = size.fileFinishedImporting("modules/voice_panel/native/card/VoicePanelNoVideoParticipantsCard.tsx");
+
+export default noop.memo(function VoicePanelNoVideoParticipantsCard() {
+  const channelId = noop.useContext(VoicePanelStateContextDefault).channelId;
+  const tmp = closure_7();
   const items = [channelId];
-  const callback = importAllResult.useCallback(() => {
-    const result = closure_1_1(closure_1_2[6]).toggleVoiceParticipantsHidden(channelId, false);
+  const callback = noop.useCallback(() => {
+    const result = ChannelRTCActionCreatorsDefault.toggleVoiceParticipantsHidden(channelId, false);
   }, items);
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.label, variant: "text-md/semibold", color: "text-overlay-light", children: null };
   const intl = channelId(1114).intl;
-  obj[3] = intl.string(channelId(1114).t["8eBJ73"]);
-  const items1 = [callback(channelId(4556).Text, obj)];
+  obj.children = intl.string(channelId(1114).t["8eBJ73"]);
+  const items1 = [closure_5(channelId(4556).Text, obj)];
   obj = { style: tmp.button, onPress: callback, accessibilityRole: "button", accessibilityLabel: null, children: null };
   const intl2 = channelId(1114).intl;
-  obj[3] = intl2.string(channelId(1114).t.kLQySL);
-  obj1 = { variant: "text-sm/semibold", style: tmp.buttonText, children: null };
+  obj.accessibilityLabel = intl2.string(channelId(1114).t.kLQySL);
+  const obj1 = { variant: "text-sm/semibold", style: tmp.buttonText, children: null };
   const intl3 = channelId(1114).intl;
-  obj1[2] = intl3.string(channelId(1114).t.kLQySL);
-  obj[4] = callback(channelId(4556).Text, obj1);
-  items1[1] = callback(Pressable, obj);
-  obj[1] = items1;
-  return callback2(setDefault, obj);
+  obj1.children = intl3.string(channelId(1114).t.kLQySL);
+  obj.children = closure_5(channelId(4556).Text, obj1);
+  items1[1] = closure_5(Pressable, obj);
+  obj.children = items1;
+  return closure_6(NativeViewDefault, obj);
 });
-let result = require("set").fileFinishedImporting(
-  "modules/voice_panel/native/card/VoicePanelNoVideoParticipantsCard.tsx",
-);
-
-export default memoResult;

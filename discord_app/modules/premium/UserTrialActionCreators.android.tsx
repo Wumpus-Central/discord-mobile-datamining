@@ -1,25 +1,24 @@
 // discord_app/modules/premium/UserTrialActionCreators.android.tsx
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../user_offers/records/UserTrialOfferRecord.tsx";
-import ME from "../../Constants.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import UserTrialOfferRecord from "../user_offers/records/UserTrialOfferRecord.tsx";
 
-const require = arg1;
-({ Endpoints: c5, PaymentGateways: closure_6 } = ME);
-const result = require("set").fileFinishedImporting("modules/premium/UserTrialActionCreators.android.tsx");
+const require = fn;
+const Constants = fn(1074);
+({ Endpoints: hasOwnProperty, PaymentGateways: metroRequire } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/UserTrialActionCreators.android.tsx");
 
 export default {
-  acknowledgeUserTrialOffer(arg0) {
-    closure_0 = arg0;
-    return callback(function* () {
+  acknowledgeUserTrialOffer(userTrialOffer) {
+    return (async (arg0, value) => {
       if (c5 === 2) {
         c5 = 3;
-        HermesBuiltin.throwTypeError();
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp6 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          let obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
@@ -30,67 +29,58 @@ export default {
           if (0 === c4) {
             if (arg0 === 1) {
               c5 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj = { value, done: true };
               return obj;
             } else {
-              closure_1 = tmp3;
-              let body = tmp7;
-              body = undefined;
-              if (!closure_1_0.hasAcknowledged) {
+              userTrialOffer = tmp7;
+              let body;
+              if (!userTrialOffer.hasAcknowledged) {
                 c3 = 1;
-                const HTTP = closure_1_0(closure_1_2[3]).HTTP;
-                obj1 = { url: null, body: null, rejectWithError: null };
-                obj1[0] = c5.USER_TRIAL_OFFER_ACKNOWLEDGED(tmp39.id);
-                const obj2 = { payment_gateway: null };
-                obj2[0] = closure_1_6.GOOGLE;
-                obj1[1] = obj2;
-                let obj5 = closure_1_0(closure_1_2[3]);
-                obj1[2] = obj5.rejectWithMigratedError();
+                const HTTP = userTrialOffer(tmp26[3]).HTTP;
+                const request = { url: c5.USER_TRIAL_OFFER_ACKNOWLEDGED(tmp38.id), body: null, rejectWithError: null };
+                const obj1 = { payment_gateway: constants.GOOGLE };
+                request.body = obj1;
+                request.rejectWithError = userTrialOffer(tmp26[3]).rejectWithMigratedError();
                 c4 = 2;
                 c5 = 1;
-                const obj3 = { value: null, done: false };
-                obj3[0] = HTTP.post(obj1);
-                return obj3;
+                const obj2 = { value: HTTP.post(request), done: false };
+                return obj2;
               }
             }
           } else {
             if (1 === tmp7) {
               c3 = 0;
-              if (404 === status.status) {
-                closure_1_1(closure_1_2[4]).dispatch({
+              if (404 === tmp26.status) {
+                tmp3(tmp26[4]).dispatch({
                   type: "BILLING_USER_TRIAL_OFFER_ACKNOWLEDGED_SUCCESS",
                   userTrialOffer: null,
                 });
-                const obj10 = closure_1_1(closure_1_2[4]);
+                const obj10 = tmp3(tmp26[4]);
               }
             } else if (arg0 === 1) {
               c5 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 !== 2) {
-              body = arg1.body;
-              obj = closure_1_1(closure_1_2[4]);
+              body = value.body;
+              obj = tmp3(tmp26[4]);
               let fromServer = null;
               if (null != body) {
                 fromServer = c4.createFromServer(body);
               }
-              const obj4 = { type: "BILLING_USER_TRIAL_OFFER_ACKNOWLEDGED_SUCCESS", userTrialOffer: null };
-              obj4[1] = fromServer;
-              obj.dispatch(obj4);
+              const obj3 = { type: "BILLING_USER_TRIAL_OFFER_ACKNOWLEDGED_SUCCESS", userTrialOffer: fromServer };
+              obj.dispatch(obj3);
               c3 = 0;
             }
             c3 = 0;
             c5 = 3;
-            obj5 = { value: null, done: true };
-            obj5[0] = arg1;
-            return obj5;
+            const obj4 = { value, done: true };
+            return obj4;
           }
           c5 = 3;
         } catch (tmp26) {
-          status = tmp26;
           if (tmp4 === c3) {
             c5 = tmp2;
             throw tmp26;

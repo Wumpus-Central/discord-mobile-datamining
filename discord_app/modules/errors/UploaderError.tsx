@@ -1,10 +1,8 @@
 // discord_app/modules/errors/UploaderError.tsx
-import prototypeDefault from "../../errors/APIError.tsx";
+import APIError from "../../errors/APIError.tsx";
 
-prototypeDefault;
-const prototype = function UploaderError(body) {
+const prototype = function UploaderError(body, arg1) {
   tmp = new tmp(body, arg1, new.target, tmp, new.target);
-  // ThrowIfThisInitialized (0x7c)
   tmp.attachments = [];
   if (tmp3) {
     tmp.attachments = body.body.attachments;
@@ -12,6 +10,7 @@ const prototype = function UploaderError(body) {
   return tmp;
 }.prototype;
 class prototype extends tmp2 {}
-const result = require("set").fileFinishedImporting("modules/errors/UploaderError.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/errors/UploaderError.tsx");
 
 export default prototype;

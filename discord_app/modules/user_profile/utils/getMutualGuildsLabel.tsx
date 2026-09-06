@@ -1,21 +1,20 @@
 // discord_app/modules/user_profile/utils/getMutualGuildsLabel.tsx
-import set from "../../../../_runtime/00002_set.js";
-import getSystemLocale from "../../../intl/index.native.tsx";
+import util from "../../../intl/index.native.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/user_profile/utils/getMutualGuildsLabel.tsx");
+const result = size.fileFinishedImporting("modules/user_profile/utils/getMutualGuildsLabel.tsx");
 
-export default function getMutualGuildsLabel(arg0) {
-  if (undefined === arg0) {
-    const intl3 = getSystemLocale.intl;
-    let stringResult = intl3.string(getSystemLocale.t["4lTDZq"]);
-  } else if (0 === arg0) {
-    const intl2 = getSystemLocale.intl;
-    stringResult = intl2.string(getSystemLocale.t.jpY0X5);
+export default function getMutualGuildsLabel(count) {
+  if (undefined === count) {
+    const intl3 = util.intl;
+    let stringResult = intl3.string(util.t["4lTDZq"]);
+  } else if (0 === count) {
+    const intl2 = util.intl;
+    stringResult = intl2.string(util.t.jpY0X5);
   } else {
-    const intl = getSystemLocale.intl;
-    const obj = { count: null };
-    obj[0] = arg0;
-    stringResult = intl.formatToPlainString(getSystemLocale.t.eE3oep, obj);
+    const intl = util.intl;
+    const obj = { count };
+    stringResult = intl.formatToPlainString(util.t.eE3oep, obj);
   }
   return stringResult;
 }

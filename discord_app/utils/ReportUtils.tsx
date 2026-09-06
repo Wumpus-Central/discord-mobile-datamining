@@ -1,18 +1,19 @@
 // discord_app/utils/ReportUtils.tsx
-import closure_0 from "../stores/ChannelStore.tsx";
-import closure_1 from "../stores/GuildMemberCountStore.tsx";
-import closure_2 from "../stores/PermissionStore.tsx";
-import closure_3 from "../stores/UserStore.tsx";
-import ME from "../Constants.tsx";
+import ChannelStore from "../stores/ChannelStore.tsx";
+import GuildMemberCountStore from "../stores/GuildMemberCountStore.tsx";
+import PermissionStore from "../stores/PermissionStore.tsx";
+import UserStore from "../stores/UserStore.tsx";
 
-({ ChannelTypes: c4, Permissions: c5, MessageTypesSets: closure_6 } = ME);
-const result = require("set").fileFinishedImporting("utils/ReportUtils.tsx");
+const Constants = fn(1074);
+({ ChannelTypes: closure_4, Permissions: hasOwnProperty, MessageTypesSets: metroRequire } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("utils/ReportUtils.tsx");
 
 export const canReportUser = function canReportUser(user) {
   if (null == user) {
     return false;
   } else {
-    const currentUser = authStore.getCurrentUser();
+    const currentUser = UserStore.getCurrentUser();
     let tmp3 = null != currentUser;
     if (tmp3) {
       let tmp4 = currentUser.id !== user.id;
@@ -34,7 +35,7 @@ export const canReportMessage = function canReportMessage(message) {
     const author = message.author;
     let flag = false;
     if (null != author) {
-      const currentUser = authStore.getCurrentUser();
+      const currentUser = UserStore.getCurrentUser();
       let tmp5 = null != currentUser;
       if (tmp5) {
         let tmp6 = currentUser.id !== author.id;
@@ -49,17 +50,16 @@ export const canReportMessage = function canReportMessage(message) {
   }
   return tmp;
 };
-export const canReportAndDeleteInChannel = function canReportAndDeleteInChannel(arg0) {
-  const channel = store.getChannel(arg0);
+export const canReportAndDeleteInChannel = function canReportAndDeleteInChannel(channelId) {
+  const channel = ChannelStore.getChannel(channelId);
   if (null == channel) {
     return false;
   } else {
     if (channel.type !== constants.DM) {
       if (channel.type !== tmp6.GROUP_DM) {
-        const obj = { channelId: null };
-        obj[0] = arg0;
-        if (closure_2.canWithPartialContext(constants2.MANAGE_MESSAGES, obj)) {
-          const memberCount = store2.getMemberCount(channel.getGuildId());
+        const obj = { channelId };
+        if (PermissionStore.canWithPartialContext(constants2.MANAGE_MESSAGES, obj)) {
+          const memberCount = GuildMemberCountStore.getMemberCount(channel.getGuildId());
           let tmp5 = null != memberCount;
           if (tmp5) {
             tmp5 = memberCount >= 50;
@@ -85,7 +85,7 @@ export const canDeleteAndReportMessage = function canDeleteAndReportMessage(type
       const author = type.author;
       let flag = false;
       if (null != author) {
-        const currentUser = authStore.getCurrentUser();
+        const currentUser = UserStore.getCurrentUser();
         let tmp6 = null != currentUser;
         if (tmp6) {
           let tmp7 = currentUser.id !== author.id;
@@ -102,18 +102,17 @@ export const canDeleteAndReportMessage = function canDeleteAndReportMessage(type
   }
   if (tmp) {
     const channelId = type.getChannelId();
-    const channel = store.getChannel(channelId);
+    const channel = ChannelStore.getChannel(channelId);
     let flag3 = false;
     if (null != channel) {
       flag3 = true;
       if (channel.type !== constants.DM) {
         flag3 = true;
         if (channel.type !== tmp10.GROUP_DM) {
-          const obj = { channelId: null };
-          obj[0] = channelId;
+          const obj = { channelId };
           flag3 = false;
-          if (closure_2.canWithPartialContext(constants2.MANAGE_MESSAGES, obj)) {
-            const memberCount = store2.getMemberCount(channel.getGuildId());
+          if (PermissionStore.canWithPartialContext(constants2.MANAGE_MESSAGES, obj)) {
+            const memberCount = GuildMemberCountStore.getMemberCount(channel.getGuildId());
             let tmp15 = null != memberCount;
             if (tmp15) {
               tmp15 = memberCount >= 50;

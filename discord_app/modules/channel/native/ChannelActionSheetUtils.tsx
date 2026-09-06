@@ -1,15 +1,13 @@
 // discord_app/modules/channel/native/ChannelActionSheetUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
-import presentAddedFriendToast from "../../toast/native/ToastUtils.tsx";
-import allowChannelAccess from "../../../utils/ChannelUtils.tsx";
-import _copy from "../../../utils/ClipboardUtils.native.tsx";
+import ToastUtils from "../../toast/native/ToastUtils.tsx";
+import ChannelUtils from "../../../utils/ChannelUtils.tsx";
+import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/channel/native/ChannelActionSheetUtils.tsx");
+const result = size.fileFinishedImporting("modules/channel/native/ChannelActionSheetUtils.tsx");
 
 export const copyGuildChannelOrThreadLink = function copyGuildChannelOrThreadLink(guild_id, id) {
-  const channelPermalink = allowChannelAccess.getChannelPermalink(guild_id, id);
-  const obj = allowChannelAccess;
-  _copy.copy(channelPermalink);
-  const obj2 = _copy;
-  presentAddedFriendToast.presentLinkCopied();
+  const channelPermalink = ChannelUtils.getChannelPermalink(guild_id, id);
+  ClipboardUtils.copy(channelPermalink);
+  ToastUtils.presentLinkCopied();
 };

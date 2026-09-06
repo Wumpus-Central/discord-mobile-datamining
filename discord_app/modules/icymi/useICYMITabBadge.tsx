@@ -1,15 +1,17 @@
 // discord_app/modules/icymi/useICYMITabBadge.tsx
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import closure_2 from "ICYMIStore.tsx";
+import ICYMIStore from "ICYMIStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/icymi/useICYMITabBadge.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/icymi/useICYMITabBadge.tsx");
 
 export default function useICYMITabBadge() {
-  const obj = { value: 0, showDot: initialize.useStateFromStores(items, () => closure_2.hasNewContent(), []) };
-  items = [closure_2];
+  const obj = { value: 0, showDot: null };
+  const items = [ICYMIStore];
+  obj.showDot = initialize.useStateFromStores(items, () => ICYMIStore.hasNewContent(), []);
   return obj;
 }
 export const icymiTabBadgeShown = function icymiTabBadgeShown() {
-  return closure_2.hasNewContent();
+  return ICYMIStore.hasNewContent();
 };

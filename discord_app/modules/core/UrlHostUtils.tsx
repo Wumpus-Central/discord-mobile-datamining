@@ -1,7 +1,7 @@
 // discord_app/modules/core/UrlHostUtils.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/core/UrlHostUtils.tsx");
+const result = size.fileFinishedImporting("modules/core/UrlHostUtils.tsx");
 
 export const getHostWithoutPort = function getHostWithoutPort(arg0) {
   let first;

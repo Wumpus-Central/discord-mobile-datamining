@@ -1,14 +1,19 @@
 // discord_app/modules/oauth2/native/IntegrationTypeSelector.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
+import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
+import UserPlusIcon from "../../../design/components/Icon/native/redesign/generated/UserPlusIcon.tsx";
+import ApplicationIntegrationType from "../../../../discord_common/js/shared/shared-constants/ApplicationIntegrationType.tsx";
+import ServerIcon from "../../../design/components/Icon/native/redesign/generated/ServerIcon.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-({ View: c4, StyleSheet } = get_ActivityIndicator);
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = {
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, StyleSheet } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+fn(4560);
+let createStyles = {
   container: { alignItems: "center", flexDirection: "column" },
   header: { justifyContent: "center", alignItems: "center", gap: 16, marginTop: 24, marginBottom: 32, width: "100%" },
   rows: null,
@@ -20,82 +25,80 @@ createCacheKey = {
   appIconMask: null,
   loadingIcon: null,
 };
-createCacheKey = { alignSelf: "stretch", borderRadius: ThemesDefault.radii.sm };
-createCacheKey[2] = createCacheKey;
-createCacheKey[3] = {
+createStyles = { alignSelf: "stretch", borderRadius: nativeDefault.radii.sm };
+createStyles.rows = createStyles;
+createStyles.divider = {
   height: StyleSheet.hairlineWidth,
-  backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+  backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
   marginTop: -1 * StyleSheet.hairlineWidth,
 };
-createCacheKey[4] = { marginVertical: 16 };
+createStyles.learnMore = { marginVertical: 16 };
 let obj1 = {
   height: StyleSheet.hairlineWidth,
-  backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+  backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
   marginTop: -1 * StyleSheet.hairlineWidth,
 };
-createCacheKey[5] = {
-  backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT,
+createStyles.descriptionContainer = {
+  backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT,
   width: "100%",
-  borderRadius: ThemesDefault.radii.sm,
+  borderRadius: nativeDefault.radii.sm,
 };
-createCacheKey[6] = { padding: 8 };
+createStyles.descriptionMainContainer = { padding: 8 };
+let size = { height: 82, width: 82, borderRadius: nativeDefault.radii.xl };
+createStyles.appIcon = size;
 const obj2 = {
-  backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT,
+  backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT,
   width: "100%",
-  borderRadius: ThemesDefault.radii.sm,
+  borderRadius: nativeDefault.radii.sm,
 };
-createCacheKey[7] = { height: 82, width: 82, borderRadius: ThemesDefault.radii.xl };
-const obj3 = { height: 82, width: 82, borderRadius: ThemesDefault.radii.xl };
-createCacheKey[8] = { padding: 4, borderRadius: ThemesDefault.radii.xl + 4 };
-let obj4 = { padding: 4, borderRadius: ThemesDefault.radii.xl + 4 };
-createCacheKey[9] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj5 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
-const result = require("set").fileFinishedImporting("modules/oauth2/native/IntegrationTypeSelector.tsx");
+createStyles.appIconMask = { padding: 4, borderRadius: nativeDefault.radii.xl + 4 };
+const obj3 = { padding: 4, borderRadius: nativeDefault.radii.xl + 4 };
+createStyles.loadingIcon = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
+createStyles = createStyles.createStyles(createStyles);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/oauth2/native/IntegrationTypeSelector.tsx");
 
 export default function IntegrationTypeSelector(application) {
   application = application.application;
   const onSelect = application.onSelect;
-  let memo1;
-  const tmp = createCacheKey();
+  const tmp = createStyles();
   let items = [,];
   ({ icon: arr[0], id: arr[1] } = application);
-  const memo = React.useMemo(() => {
-    let obj = onSelect(memo1[5]);
-    obj = { id: application.id, icon: application.icon };
+  const memo = noop.useMemo(() => {
+    const obj = { id: application.id, icon: application.icon };
     return obj.getApplicationIconSource(obj);
   }, items);
   const items1 = [application.integrationTypesConfig];
-  memo1 = React.useMemo(() => {
+  const memo1 = noop.useMemo(() => {
     let obj = {
-      type: application(memo1[6]).ApplicationIntegrationType.USER_INSTALL,
-      icon: application(memo1[7]).UserPlusIcon,
+      type: ApplicationIntegrationType.ApplicationIntegrationType.USER_INSTALL,
+      icon: UserPlusIcon.UserPlusIcon,
       label: null,
       subLabel: null,
       beta: false,
     };
-    const intl = application(memo1[8]).intl;
-    obj[2] = intl.string(application(memo1[8]).t.aCg60P);
-    const intl2 = application(memo1[8]).intl;
-    obj[3] = intl2.string(application(memo1[8]).t.YeiIUZ);
+    const intl = util.intl;
+    obj.label = intl.string(util.t.aCg60P);
+    const intl2 = util.intl;
+    obj.subLabel = intl2.string(util.t.YeiIUZ);
     const items = [obj];
     obj = {
-      type: application(memo1[6]).ApplicationIntegrationType.GUILD_INSTALL,
-      icon: application(memo1[9]).ServerIcon,
+      type: ApplicationIntegrationType.ApplicationIntegrationType.GUILD_INSTALL,
+      icon: ServerIcon.ServerIcon,
       label: null,
       subLabel: null,
       beta: false,
     };
-    const intl3 = application(memo1[8]).intl;
-    obj[2] = intl3.string(application(memo1[8]).t.E64YCz);
-    const intl4 = application(memo1[8]).intl;
-    obj[3] = intl4.string(application(memo1[8]).t.bbtoKm);
+    const intl3 = util.intl;
+    obj.label = intl3.string(util.t.E64YCz);
+    const intl4 = util.intl;
+    obj.subLabel = intl4.string(util.t.bbtoKm);
     items[1] = obj;
-    return items.filter((arg0) => {
-      const integrationTypesConfig = obj.integrationTypesConfig;
+    return items.filter((item) => {
+      const integrationTypesConfig = application.integrationTypesConfig;
       let oauth2InstallParams;
       if (integrationTypesConfig != null) {
-        if (integrationTypesConfig[arg0.type] != null) {
+        if (integrationTypesConfig[item.type] != null) {
           oauth2InstallParams = tmp3.oauth2InstallParams;
         }
       }
@@ -103,21 +106,19 @@ export default function IntegrationTypeSelector(application) {
     });
   }, items1);
   if (null != memo) {
-    let obj = { style: null, source: null };
-    obj[0] = tmp.appIcon;
-    obj[1] = memo;
-    let tmp5 = callback(onSelect(memo1[10]), obj);
-    let tmp6 = callback;
+    let obj = { style: tmp.appIcon, source: memo };
+    let tmp5 = closure_5(onSelect(memo1[10]), obj);
+    let tmp6 = closure_5;
   } else {
     obj = { style: null };
     const items2 = [,];
     ({ appIcon: arr4[0], loadingIcon: arr4[1] } = tmp);
-    obj[0] = items2;
-    tmp5 = callback(closure_4, obj);
-    tmp6 = callback;
+    obj.style = items2;
+    tmp5 = closure_5(closure_4, obj);
+    tmp6 = closure_5;
   }
   obj = { style: tmp.container, children: null };
-  obj1 = { style: tmp.header, children: null };
+  const obj1 = { style: tmp.header, children: null };
   const items3 = [
     tmp6(closure_4, { style: tmp.appIconMask, children: tmp5 }),
     tmp6(application(memo1[11]).Text, {
@@ -128,44 +129,42 @@ export default function IntegrationTypeSelector(application) {
   ];
   let tmp6Result = null != application.description;
   if (tmp6Result) {
-    const obj4 = { hideName: true, application: null, viewContainerStyle: null, mainContainerStyle: null };
-    obj4[1] = application;
-    ({ descriptionContainer: obj7[2], descriptionMainContainer: obj7[3] } = tmp);
+    const obj4 = { hideName: true, application, viewContainerStyle: null, mainContainerStyle: null };
+    ({ descriptionContainer: obj7.viewContainerStyle, descriptionMainContainer: obj7.mainContainerStyle } = tmp);
     tmp6Result = tmp6(onSelect(tmp13[12]), obj4);
   }
   items3[2] = tmp6Result;
-  obj1[1] = items3;
+  obj1.children = items3;
   const items4 = [closure_6(closure_4, obj1)];
   const obj5 = {
     style: tmp.rows,
     children: tmp6(application(memo1[13]).TableRowGroup, {
       hasIcons: true,
-      children: memo1.map((icon) => {
-        closure_0 = icon;
+      children: memo1.map((icon, index) => {
         const obj = {
           icon: closure_1_5(icon.icon, { color: "interactive-text-default" }),
           label: null,
           subLabel: null,
           onPress() {
-            return closure_1_1(icon.type);
+            return onSelect(icon.type);
           },
-          start: 0 === arg1,
-          end: arg1 === memo1.length - 1,
+          start: 0 === index,
+          end: index === memo1.length - 1,
           arrow: true,
           trailing: null,
         };
-        ({ label: obj[1], subLabel: obj[2] } = icon);
+        ({ label: obj.label, subLabel: obj.subLabel } = icon);
         let tmpResult;
         if (icon.beta) {
           tmpResult = tmp(application(memo1[15]).BetaTag, {});
         }
-        obj[7] = tmpResult;
+        obj.trailing = tmpResult;
         return closure_1_5(application(memo1[14]).TableRow, obj, icon.type);
       }),
     }),
   };
   items4[1] = tmp6(closure_4, obj5);
-  obj[1] = items4;
+  obj.children = items4;
   return closure_6(closure_4, obj);
 }
-export const useStyles = createCacheKey;
+export const useStyles = createStyles;

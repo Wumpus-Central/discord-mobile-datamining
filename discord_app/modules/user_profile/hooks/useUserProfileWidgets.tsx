@@ -1,37 +1,34 @@
 // discord_app/modules/user_profile/hooks/useUserProfileWidgets.tsx
-import closure_2 from "../../../stores/AuthenticationStore.tsx";
-import closure_3 from "../UserProfileStore.tsx";
-import closure_4 from "../WidgetStore.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
+import UserProfileStore from "../UserProfileStore.tsx";
+import WidgetStore from "../WidgetStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_profile/hooks/useUserProfileWidgets.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/hooks/useUserProfileWidgets.tsx");
 
 export default function useUserProfileWidgets(arg0) {
-  const _require = arg0;
-  const items = [closure_2];
+  _require = arg0;
+  const items = [AuthenticationStore];
   const items1 = [arg0];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+  const stateFromStores = require("initialize").useStateFromStores(
     items,
-    () => null != closure_0 && closure_1_2.getId() === closure_0,
+    () => null != closure_0 && AuthenticationStore.getId() === closure_0,
     items1,
   );
-  const obj = initialize;
-  const items2 = [closure_4];
-  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
-    items2,
-    () => pendingWidgets.getPendingWidgets(),
-  );
-  const obj2 = initialize;
-  const items3 = [closure_3];
+  const obj = require("initialize");
+  const items2 = [WidgetStore];
+  const stateFromStores1 = require("initialize").useStateFromStores(items2, () => pendingWidgets.getPendingWidgets());
+  const obj2 = require("initialize");
+  const items3 = [UserProfileStore];
   const items4 = [arg0];
-  const stateFromStoresArray = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(
+  const stateFromStoresArray = require("initialize").useStateFromStoresArray(
     items3,
     () => {
       if (null == closure_0) {
         return [];
       } else {
-        const userProfile = closure_1_3.getUserProfile(tmp);
+        const userProfile = UserProfileStore.getUserProfile(tmp);
         let widgets;
         if (userProfile != null) {
           widgets = userProfile.widgets;

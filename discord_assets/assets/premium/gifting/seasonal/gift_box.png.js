@@ -1,7 +1,7 @@
 // discord_assets/assets/premium/gifting/seasonal/gift_box.png.js
-import set from "../../../../../_runtime/00002_set.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("../discord_assets/assets/premium/gifting/seasonal/gift_box.png.js");
+const result = size.fileFinishedImporting("../discord_assets/assets/premium/gifting/seasonal/gift_box.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/20df1235641b8462968612182575de82bfe25cd3f464902cecb0731c0601cd51.png";
 export const metadata = { fileBytes: 18604 };

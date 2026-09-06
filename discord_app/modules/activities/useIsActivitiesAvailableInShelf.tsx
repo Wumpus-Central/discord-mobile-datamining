@@ -1,33 +1,32 @@
 // discord_app/modules/activities/useIsActivitiesAvailableInShelf.tsx
-import closure_3 from "../../../_runtime/00019_noop.js";
-import { useIsActivitiesEnabledForCurrentPlatform } from "useIsActivitiesEnabledForCurrentPlatform.tsx";
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators.tsx";
+import noop from "../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/activities/useIsActivitiesAvailableInShelf.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/useIsActivitiesAvailableInShelf.tsx");
 
-export default function useIsActivitiesAvailableInShelf(arg0, arg1) {
-  const _require = arg0;
+export default function useIsActivitiesAvailableInShelf(guildId, arg1) {
+  _require = guildId;
   const isActivitiesEnabledForCurrentPlatform =
-    require("useIsActivitiesEnabledForCurrentPlatform.tsx").useIsActivitiesEnabledForCurrentPlatform();
-  let tmp3 = null != arg0;
-  let obj = useIsActivitiesEnabledForCurrentPlatform;
+    require("useIsActivitiesEnabledForCurrentPlatform").useIsActivitiesEnabledForCurrentPlatform();
+  let tmp3 = null != guildId;
+  let obj = require("useIsActivitiesEnabledForCurrentPlatform");
   if (tmp3) {
-    tmp3 = "" !== arg0;
+    tmp3 = "" !== guildId;
   }
   if (!tmp3) {
     tmp3 = tmp2;
   }
   dependencyMap = tmp3;
-  const items = [arg0, isActivitiesEnabledForCurrentPlatform, tmp3];
-  const effect = React.useEffect(() => {
-    let tmp = table;
-    if (table) {
+  const items = [guildId, isActivitiesEnabledForCurrentPlatform, tmp3];
+  const effect = noop.useEffect(() => {
+    let tmp = closure_2;
+    if (closure_2) {
       tmp = isActivitiesEnabledForCurrentPlatform;
     }
     if (tmp) {
-      let obj = callback(table[3]);
-      obj = { guildId: null };
-      obj[0] = callback;
+      const obj = { guildId };
       const shelf = obj.fetchShelf(obj);
     }
   }, items);

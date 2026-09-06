@@ -1,44 +1,46 @@
 // discord_app/modules/guild_profile/native/components/GuildProfileCTA.tsx
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import { AnalyticsObjects } from "../../../../Constants.tsx";
-import { ProfileCustomizationScrollPositions as closure_5 } from "../../../user_settings/UserSettingsConstants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import MemberVerificationTypes from "../../../guild_member_verification/MemberVerificationTypes.tsx";
+import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import GuildProfileTypes from "../../GuildProfileTypes.tsx";
+import MemberVerificationModalActionCreators from "../../../guild_member_verification/MemberVerificationModalActionCreators.tsx";
+import GuildDiscoveryUtils from "../../../../utils/GuildDiscoveryUtils.tsx";
+import transitionToGuild from "../../../routing/transitionToGuild.native.tsx";
+import InstantInviteActionCreatorsDefault from "../../../../actions/InstantInviteActionCreators.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/guild_profile/native/components/GuildProfileCTA.tsx");
+require = fn;
+const AnalyticsObjects = fn(1074).AnalyticsObjects;
+let constants = fn(1084).ProfileCustomizationScrollPositions;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_profile/native/components/GuildProfileCTA.tsx");
 
 export default function GuildProfileCTA(profile) {
   profile = profile.profile;
   let guildId;
   let validInviteKey;
-  let React;
-  let callback1;
-  let constants;
+  constants = undefined;
   ({ context, inviteKey } = profile);
   let tmp2 = guildId(validInviteKey[4])(profile, context, inviteKey);
   guildId = tmp2.guildId;
   validInviteKey = tmp2.validInviteKey;
   const ctaType = tmp2.ctaType;
   let obj = { scrollPosition: constants.GUILD_TAG };
-  React = guildId(validInviteKey[5])(obj);
-  obj1 = React;
+  noop = guildId(validInviteKey[5])(obj);
+  let obj1 = noop;
   const items = [guildId];
   const items1 = [guildId, validInviteKey];
-  const callback = React.useCallback(() => {
-    guildId(validInviteKey[6]).hideActionSheet("GuildProfileActionSheet:" + guildId);
-    const obj = guildId(validInviteKey[6]);
-    profile(validInviteKey[7]).transitionToGuild(guildId);
+  const callback = noop.useCallback(() => {
+    ActionSheetActionCreatorsDefault.hideActionSheet("GuildProfileActionSheet:" + guildId);
+    transitionToGuild.transitionToGuild(guildId);
   }, items);
-  callback1 = React.useCallback(() => {
+  const callback1 = noop.useCallback(() => {
     if (null != validInviteKey) {
-      let obj = guildId(validInviteKey[6]);
+      let obj = ActionSheetActionCreatorsDefault;
       const _HermesInternal = HermesInternal;
       obj.hideActionSheet("GuildProfileActionSheet:" + guildId);
-      obj = { inviteKey: null, context: null };
-      obj[0] = tmp;
-      obj[1] = { location: "guild_profile" };
-      const result = guildId(validInviteKey[8]).acceptInviteAndTransitionToInviteChannel(obj);
-      const obj2 = guildId(validInviteKey[8]);
+      obj = { inviteKey: tmp, context: { location: "guild_profile" } };
+      const result = InstantInviteActionCreatorsDefault.acceptInviteAndTransitionToInviteChannel(obj);
     }
   }, items1);
   const tmp5 = guildId(validInviteKey[9])(guildId);
@@ -50,43 +52,39 @@ export default function GuildProfileCTA(profile) {
   }
   items2[1] = applicationStatus;
   const items3 = [guildId, callback1, profile.visibility, validInviteKey];
-  const callback2 = React.useCallback(() => {
-    let applicationStatus;
+  const callback2 = noop.useCallback(() => {
+    applicationStatus = undefined;
     if (applicationStatus != null) {
       applicationStatus = applicationStatus.applicationStatus;
     }
-    if (profile(validInviteKey[10]).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
-      let tmp2Result = tmp2(tmp3[11]);
+    if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
+      let tmp2Result = tmp2(5527);
       const result = tmp2Result.openMemberVerificationPendingAlert(guildId);
-    } else if (tmp2(tmp3[10]).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
-      tmp2Result = tmp2(tmp3[11]);
-      const obj = { guildId: null, canWithdraw: true };
-      obj[0] = guildId;
+    } else if (tmp2(4384).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
+      tmp2Result = tmp2(5527);
+      const obj = { guildId, canWithdraw: true };
       const result1 = tmp2Result.openMemberVerificationRejectedAlert(obj);
-    } else if (tmp2(tmp3[10]).GuildJoinRequestApplicationStatuses.STARTED === applicationStatus) {
-      const result2 = tmp2(tmp3[11]).openMemberVerificationIncompleteAlert(guildId);
-      const tmp2Result1 = tmp2(tmp3[11]);
+    } else if (tmp2(4384).GuildJoinRequestApplicationStatuses.STARTED === applicationStatus) {
+      const result2 = tmp2(5527).openMemberVerificationIncompleteAlert(guildId);
+      const tmp2Result1 = tmp2(5527);
     }
   }, items2);
   const items4 = [guildId];
   const callback3 = obj1.useCallback(() => {
-    guildId(validInviteKey[6]).hideActionSheet("GuildProfileActionSheet:" + guildId);
-    if (profile.visibility !== profile(validInviteKey[12]).GuildProfileVisibility.PUBLIC_WITH_RECRUITMENT) {
+    ActionSheetActionCreatorsDefault.hideActionSheet("GuildProfileActionSheet:" + guildId);
+    if (profile.visibility !== GuildProfileTypes.GuildProfileVisibility.PUBLIC_WITH_RECRUITMENT) {
       if (null != validInviteKey) {
         callback1();
       }
     }
-    const obj = guildId(validInviteKey[6]);
-    const tmp = validInviteKey;
     const tmp2 = guildId;
-    const tmp4 = profile;
-    const result = profile(validInviteKey[13]).openMemberVerificationModal(tmp2);
+    const result = MemberVerificationModalActionCreators.openMemberVerificationModal(tmp2);
   }, items3);
   const callback4 = obj1.useCallback(() => {
-    let obj = guildId(validInviteKey[6]);
+    let obj = ActionSheetActionCreatorsDefault;
     obj.hideActionSheet("GuildProfileActionSheet:" + guildId);
-    obj = { object: callback1.GUILD_PROFILE };
-    profile(validInviteKey[14]).startLurking(guildId, obj);
+    obj = { object: AnalyticsObjects.GUILD_PROFILE };
+    GuildDiscoveryUtils.startLurking(guildId, obj);
   }, items4);
   const memo = obj1.useMemo(() => ({ grow: true, size: "lg", variant: "active" }), []);
   if (profile(validInviteKey[4]).CTATypes.IS_MEMBER === ctaType) {
@@ -100,8 +98,8 @@ export default function GuildProfileCTA(profile) {
     obj = {};
     const merged1 = Object.assign(memo);
     obj.onPress = function handleGoToTagSettings() {
-      guildId(validInviteKey[6]).hideActionSheet("GuildProfileActionSheet:" + guildId);
-      callback();
+      ActionSheetActionCreatorsDefault.hideActionSheet("GuildProfileActionSheet:" + guildId);
+      closure_3();
     };
     const intl6 = tmp11(tmp[16]).intl;
     obj.text = intl6.string(tmp11(tmp[16]).t.cQDYRu);

@@ -1,30 +1,31 @@
 // discord_app/modules/messages/native/renderer/system_messages/GuildReportRaidSystemMessage.tsx
-import getSystemLocale from "../../../../../intl/index.native.tsx";
-import ensureAvatarSource from "../../../../../utils/native/AvatarUtils.tsx";
-import resultDefault from "../resolveMessageContentColors.tsx";
-import getMessageAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
-import nativeStyleProperties from "GuildAlertModeSystemMessage.tsx";
+import util from "../../../../../intl/index.native.tsx";
+import utils_AvatarUtils from "../../../../../utils/native/AvatarUtils.tsx";
+import resolveMessageContentColorsDefault from "../resolveMessageContentColors.tsx";
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
+import GuildAlertModeSystemMessage from "GuildAlertModeSystemMessage.tsx";
 import getTagPropertiesDefault from "../getTagProperties.tsx";
-import closure_3 from "../../../../../stores/ChannelStore.tsx";
-import closure_4 from "../../../../../stores/GuildStore.tsx";
+import ChannelStore from "../../../../../stores/ChannelStore.tsx";
+import GuildStore from "../../../../../stores/GuildStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting(
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/GuildReportRaidSystemMessage.tsx",
 );
 
 export const createGuildReportRaidSystemMessage = function createGuildReportRaidSystemMessage(roleStyle) {
   ({ message, theme } = roleStyle);
-  channel = channel.getChannel(message.channel_id);
+  const channel = ChannelStore.getChannel(message.channel_id);
   let guild_id;
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  guild = guild.getGuild(guild_id);
-  let obj = getMessageAuthorWithProcessedColor;
+  const guild = GuildStore.getGuild(guild_id);
+  let obj = useAuthorWithProcessedColor;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-  const tmp3 = resultDefault(theme);
-  let automodUsernameColor = nativeStyleProperties.resolveAlertModeColors(theme).automodUsernameColor;
+  const tmp3 = resolveMessageContentColorsDefault(theme);
+  let automodUsernameColor = GuildAlertModeSystemMessage.resolveAlertModeColors(theme).automodUsernameColor;
   obj = {
     username: messageAuthorWithProcessedColor.nick,
     usernameOnClick: tmp(7962)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }),
@@ -37,22 +38,21 @@ export const createGuildReportRaidSystemMessage = function createGuildReportRaid
   if (str == null) {
     str = "";
   }
-  obj[2] = str;
-  const obj2 = nativeStyleProperties;
+  obj.guildName = str;
   obj = {};
   const merged = Object.assign(tmp(7964)(roleStyle));
   const intl = tmp8(1114).intl;
-  obj.content = intl.formatToParts(getSystemLocale.t["MTmH+u"], obj);
+  obj.content = intl.formatToParts(util.t["MTmH+u"], obj);
   const intl2 = tmp8(1114).intl;
-  obj.username = intl2.string(getSystemLocale.t.hG1StD);
+  obj.username = intl2.string(util.t.hG1StD);
   if (automodUsernameColor == null) {
     automodUsernameColor = null;
   }
   obj.usernameColor = automodUsernameColor;
-  let tmp8Result = tmp8(1399);
-  tmp8Result = tmp8(1396);
+  tmp8(1399);
+  const tmp8Result = tmp8(1396);
   const tmp11 = getTagPropertiesDefault({ message, channel, isSystemDM: true, colors: tmp3 });
-  obj.avatarURL = tmp8Result.ensureAvatarSource(tmp8Result.makeSource(ensureAvatarSource.getAutomodAvatarURL())).uri;
+  obj.avatarURL = tmp8Result.ensureAvatarSource(tmp8Result.makeSource(utils_AvatarUtils.getAutomodAvatarURL())).uri;
   const merged1 = Object.assign(tmp11);
   return obj;
 };

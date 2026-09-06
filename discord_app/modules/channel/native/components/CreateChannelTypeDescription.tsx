@@ -1,19 +1,19 @@
 // discord_app/modules/channel/native/components/CreateChannelTypeDescription.tsx
-import closure_2 from "../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { GuildProfileFetchStatus } from "../../../guild_profile/GuildProfileStore.tsx";
-import { ChannelTypes } from "../../../../Constants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import useGuildProfile from "../../../guild_profile/hooks/useGuildProfile.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
-  "modules/channel/native/components/CreateChannelTypeDescription.tsx",
-);
+require = fn;
+const View = fn(17).View;
+const GuildProfileFetchStatus = fn(9065).GuildProfileFetchStatus;
+const ChannelTypes = fn(1074).ChannelTypes;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/channel/native/components/CreateChannelTypeDescription.tsx");
 
 export default function CreateChannelTypeDescription(guildId) {
   guildId = guildId.guildId;
   fetchGuildProfile = undefined;
-  let obj = fetchGuildProfile(9187);
+  let obj = useGuildProfile;
   guildProfile = obj.useGuildProfile(guildId);
   ({ guildProfile, fetchGuildProfile } = guildProfile);
   let hasItem = null != guildProfile;
@@ -29,7 +29,7 @@ export default function CreateChannelTypeDescription(guildId) {
     tmp6 = guildId.channelType === ChannelTypes.GUILD_ANNOUNCEMENT;
   }
   const items = [guildId, fetchGuildProfile];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     fetchGuildProfile();
   }, items);
   let tmp9 = null;
@@ -37,8 +37,8 @@ export default function CreateChannelTypeDescription(guildId) {
     obj = { children: null };
     obj = { variant: "text-sm/normal", color: "text-subtle", children: null };
     const intl = tmp(1114).intl;
-    obj[2] = intl.string(tmp(1114).t["2Ab4Id"]);
-    obj[0] = jsx(tmp(4556).Text, { variant: "text-sm/normal", color: "text-subtle", children: null });
+    obj.children = intl.string(tmp(1114).t["2Ab4Id"]);
+    obj.children = jsx(tmp(4556).Text, { variant: "text-sm/normal", color: "text-subtle", children: null });
     tmp9 = (
       <View variant="text-sm/normal" color="text-subtle">
         {null}

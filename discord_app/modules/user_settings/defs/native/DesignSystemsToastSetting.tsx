@@ -1,24 +1,21 @@
 // discord_app/modules/user_settings/defs/native/DesignSystemsToastSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import ME from "../../../../Constants.tsx";
-import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
-import { UserSettingsDesignSystemToast } from "../../design_system/native/UserSettingsDesignSystemToast.tsx";
+import Constants from "../../../../Constants.tsx";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
     return "Toast";
   },
-  parent: MobileUserSettings.MobileUserSettings.DESIGN_SYSTEMS,
-  screen: obj,
-};
-obj = {
-  route: ME.UserSettingsSections.DESIGN_SYSTEM_TOAST,
-  getComponent() {
-    return UserSettingsDesignSystemToast /* UserSettingsDesignSystemToast */.default;
+  parent: SettingsConstants.MobileUserSettings.DESIGN_SYSTEMS,
+  screen: {
+    route: Constants.UserSettingsSections.DESIGN_SYSTEM_TOAST,
+    getComponent() {
+      return require("UserSettingsDesignSystemToast").default;
+    },
   },
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/DesignSystemsToastSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/DesignSystemsToastSetting.tsx");
 
 export default route;

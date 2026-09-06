@@ -1,15 +1,16 @@
 // discord_app/modules/quests/native/AppStoreOverlay/AppStoreOverlayMediaSize.tsx
-import getAvatarURL from "../../../../utils/AvatarUtils.tsx";
-import getSizedImageProxyURL from "../../../image_proxy/ImageProxyUtils.tsx";
-import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import { Image } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import AvatarUtils from "../../../../utils/AvatarUtils.tsx";
+import ImageProxyUtils from "../../../image_proxy/ImageProxyUtils.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+require = fn;
+const Image = fn(17).Image;
 let closure_5 = { width: 166, height: 289 };
 let closure_6 = { width: 289, height: 166 };
 let map = new Map();
-let result = require("set").fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayMediaSize.tsx");
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayMediaSize.tsx");
 
 export const MEDIA_FALLBACK_WIDTH = 1080;
 export const MEDIA_FALLBACK_HEIGHT = 1920;
@@ -24,10 +25,10 @@ export const getMediaTileSize = function getMediaTileSize(value) {
 };
 export const getAppStoreOverlayCarouselImageUrl = function getAppStoreOverlayCarouselImageUrl(posterUrl) {
   let format = null;
-  if (getAvatarURL.SUPPORTS_WEBP) {
+  if (AvatarUtils.SUPPORTS_WEBP) {
     format = "webp";
   }
-  return getSizedImageProxyURL.getSizedImageAssetURL(posterUrl, { size: 289, keepAspectRatio: true, format });
+  return ImageProxyUtils.getSizedImageAssetURL(posterUrl, { size: 289, keepAspectRatio: true, format });
 };
 export const getMediaSizeFromLoadEvent = function getMediaSizeFromLoadEvent(nativeEvent) {
   nativeEvent = nativeEvent.nativeEvent;
@@ -55,10 +56,8 @@ export const getMediaSizeFromLoadEvent = function getMediaSizeFromLoadEvent(nati
       if (width > 0) {
         tmp3 = null;
         if (height > 0) {
-          const obj = { width: null, height: null };
-          obj[0] = width;
-          obj[1] = height;
-          tmp3 = obj;
+          const size = { width, height };
+          tmp3 = size;
         }
       }
     }
@@ -66,14 +65,14 @@ export const getMediaSizeFromLoadEvent = function getMediaSizeFromLoadEvent(nati
   return tmp3;
 };
 export const useAppStoreOverlayMediaSizes = function useAppStoreOverlayMediaSizes(memo) {
-  const first = callback(React.useState(memo), 1)[0];
-  [tmp3, dependencyMap] = callback(React.useState(map), 2);
+  const first = _slicedToArray(noop.useState(memo), 1)[0];
+  [tmp3, dependencyMap] = _slicedToArray(noop.useState(map), 2);
   const items = [first];
-  const recordMediaSize = React.useCallback((arg0, arg1) => {
+  const recordMediaSize = noop.useCallback((arg0, arg1) => {
     closure_0 = arg0;
-    const callback = arg1;
-    callback((get) => {
-      const size = closure_1;
+    closure_1 = arg1;
+    dependencyMap((get) => {
+      size = closure_1;
       const size2 = get.get(closure_0);
       let width;
       if (size2 != null) {
@@ -93,29 +92,27 @@ export const useAppStoreOverlayMediaSizes = function useAppStoreOverlayMediaSize
       return result;
     });
   }, []);
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     c0 = false;
-    const item = c0.forEach((arg0) => {
-      closure_0 = arg0;
-      let size = closure_2_4.getSize(
-        arg0,
-        (arg0, arg1) => {
-          closure_0 = arg0;
-          closure_1 = arg1;
-          if (!closure_0) {
+    const item = c0.forEach((item) => {
+      closure_0 = item;
+      size = size.getSize(
+        item,
+        (width, height) => {
+          if (!width) {
             closure_2_1((get) => {
-              const size = { width: closure_0, height: closure_1 };
-              const size2 = get.get(closure_0);
-              let width;
+              size = { width, height };
+              const size2 = get.get(width);
+              width = undefined;
               if (size2 != null) {
                 width = size2.width;
               }
               if (width !== size.width) {
                 const _Map = Map;
                 map = new Map(get);
-                let result = map.set(closure_0, size);
+                let result = map.set(width, size);
               } else {
-                let height;
+                height = undefined;
                 if (size2 != null) {
                   height = size2.height;
                 }

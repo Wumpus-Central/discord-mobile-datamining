@@ -1,14 +1,15 @@
 // discord_app/design/components/Sheet/native/useBottomSheetRef.tsx
-import closure_0 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const result = require("set").fileFinishedImporting("design/components/Sheet/native/useBottomSheetRef.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Sheet/native/useBottomSheetRef.tsx");
 
 export const useBottomSheetRef = function useBottomSheetRef() {
-  ref = ref.useRef(null);
+  const ref = noop.useRef(null);
   const items = [ref];
   return {
     bottomSheetRef: ref,
-    bottomSheetClose: ref.useCallback(() => {
+    bottomSheetClose: noop.useCallback(() => {
       const current = ref.current;
       if (current != null) {
         current.closeActionSheet();

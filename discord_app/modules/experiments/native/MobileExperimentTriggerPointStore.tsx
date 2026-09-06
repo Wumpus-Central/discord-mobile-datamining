@@ -1,43 +1,42 @@
 // discord_app/modules/experiments/native/MobileExperimentTriggerPointStore.tsx
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
-import dispatcher from "../../../Dispatcher.tsx";
-import commonTriggerPointConfiguration from "../trigger_points/native/MobileConnectionOpenTriggerPoint.tsx";
-import closure_3 from "../ExperimentStore.tsx";
-import closure_4 from "../apex/ApexExperimentStore.tsx";
-import importDefaultResult from "../../../Dispatcher.tsx";
+import Dispatcher2 from "../../../Dispatcher.tsx";
+import MobileConnectionOpenTriggerPoint2 from "../trigger_points/native/MobileConnectionOpenTriggerPoint.tsx";
+import ExperimentStore from "../ExperimentStore.tsx";
+import ApexExperimentStore from "../apex/ApexExperimentStore.tsx";
 
-require = arg1;
+const Dispatcher = Dispatcher2;
+
+require = fn;
 function handleConnectionOpen() {
-  const MobileConnectionOpenTriggerPoint = commonTriggerPointConfiguration.MobileConnectionOpenTriggerPoint;
+  const MobileConnectionOpenTriggerPoint = MobileConnectionOpenTriggerPoint2.MobileConnectionOpenTriggerPoint;
   MobileConnectionOpenTriggerPoint.trigger();
 }
 const Store = initializeDefault.Store;
 class MobileExperimentTriggerPointStore extends Store {
   constructor() {
-    tmp2 = require("dispatcher");
+    tmp2 = closure_1(closure_2[4]);
     obj = { CONNECTION_OPEN: handleConnectionOpen };
-    tmp = new tmp(tmp2, obj, require("dispatcher").DispatchBand.Early, handleConnectionOpen, new.target);
-    // ThrowIfThisInitialized (0x7c)
+    tmp = new tmp(tmp2, obj, closure_0(closure_2[4]).DispatchBand.Early, handleConnectionOpen, new.target);
     return tmp;
   }
 }
 const prototype = MobileExperimentTriggerPointStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_3, closure_4);
+  this.waitFor(ExperimentStore, ApexExperimentStore);
 };
 MobileExperimentTriggerPointStore.displayName = "MobileExperimentTriggerPointStore";
 const obj = { CONNECTION_OPEN: handleConnectionOpen };
-// ThrowIfThisInitialized (0x7c)
-const tmp3 = new "initialize"(
-  importDefaultResult,
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/experiments/native/MobileExperimentTriggerPointStore.tsx");
+
+export default new "initialize"(
+  Dispatcher,
   obj,
-  require("dispatcher").DispatchBand.Early,
+  fn(573).DispatchBand.Early,
   prototype,
   MobileExperimentTriggerPointStore,
   "initialize",
-  importDefaultResult,
+  Dispatcher,
   obj,
 );
-const result = require("set").fileFinishedImporting("modules/experiments/native/MobileExperimentTriggerPointStore.tsx");
-
-export default tmp3;

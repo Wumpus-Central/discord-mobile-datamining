@@ -1,18 +1,21 @@
 // discord_app/modules/self_mod/inappropriate_conversation/updateDmSafetyAlertsSetting.tsx
-import set from "../../../../_runtime/00002_set.js";
+import wrappers from "../../../../discord_common/js/packages/protos/google/protobuf/wrappers.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/self_mod/inappropriate_conversation/updateDmSafetyAlertsSetting.tsx");
+const result = size.fileFinishedImporting(
+  "modules/self_mod/inappropriate_conversation/updateDmSafetyAlertsSetting.tsx",
+);
 
-export const updateDmSafetyAlertsSetting = function updateDmSafetyAlertsSetting(arg0) {
-  const _require = arg0;
+export const updateDmSafetyAlertsSetting = function updateDmSafetyAlertsSetting(value) {
+  _require = value;
   const PreloadedUserSettingsActionCreators =
-    require("../../user_settings/UserSettingsProtoActionCreators.tsx").PreloadedUserSettingsActionCreators;
+    require("UserSettingsProtoActionCreators").PreloadedUserSettingsActionCreators;
   return PreloadedUserSettingsActionCreators.updateAsync(
     "privacy",
-    (arg0) => {
-      const BoolValue = callback(closure_1_1[1]).BoolValue;
-      arg0.inappropriateConversationWarnings = BoolValue.create({ value: callback });
+    async (arg0) => {
+      const BoolValue = wrappers.BoolValue;
+      arg0.inappropriateConversationWarnings = BoolValue.create({ value });
     },
-    require("../../user_settings/UserSettingsProtoActionCreators.tsx").UserSettingsDelay.INFREQUENT_USER_ACTION,
+    require("UserSettingsProtoActionCreators").UserSettingsDelay.INFREQUENT_USER_ACTION,
   );
 };

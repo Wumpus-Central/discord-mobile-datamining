@@ -1,21 +1,22 @@
 // discord_app/modules/creator_monetization_eligibility/guild_settings/useIsMFAEnabled.tsx
-import defaultAreStatesEqual from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import closure_2 from "../../guild_settings/GuildSettingsStore.tsx";
-import closure_3 from "../../../stores/UserStore.tsx";
-import { MFALevels } from "../../../Constants.tsx";
+import useStateFromStores from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import GuildSettingsStore from "../../guild_settings/GuildSettingsStore.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting(
+require = fn;
+const MFALevels = fn(1074).MFALevels;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/creator_monetization_eligibility/guild_settings/useIsMFAEnabled.tsx",
 );
 
 export const useIsMFAEnabled = function useIsMFAEnabled() {
-  let obj = defaultAreStatesEqual;
-  const items = [closure_3];
+  let obj = useStateFromStores;
+  const items = [UserStore];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const items1 = [closure_2];
+  const items1 = [GuildSettingsStore];
   let mfaEnabled;
-  const stateFromStores1 = defaultAreStatesEqual.useStateFromStores(items1, () => props.getProps().mfaLevel);
+  const stateFromStores1 = useStateFromStores.useStateFromStores(items1, () => props.getProps().mfaLevel);
   if (stateFromStores != null) {
     mfaEnabled = stateFromStores.mfaEnabled;
   }

@@ -1,9 +1,8 @@
 // discord_app/modules/collectibles/records/CollectiblesMarketingBannerRecord.tsx
-import set from "../../../../_runtime/00002_set.js";
 import CollectiblesMarketingType from "../../../../discord_common/js/shared/shared-constants/CollectiblesMarketingType.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-let prototype;
-prototype = function CollectiblesMarketingBannerRecord(arg0) {
+const prototype = function CollectiblesMarketingBannerRecord(arg0) {
   const obj = Object.create(new.target.prototype);
   obj.type = CollectiblesMarketingType.CollectiblesMarketingType.BANNER;
   ({
@@ -17,21 +16,22 @@ prototype = function CollectiblesMarketingBannerRecord(arg0) {
   return obj;
 }.prototype;
 prototype["fromServer"] = function fromServer(arg0) {
-  if (typeof prototype !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof prototype === "function") {
+    const obj = Object.create(tmp.prototype);
+    obj.type = CollectiblesMarketingType.CollectiblesMarketingType.BANNER;
+    ({
+      title: tmp3.title,
+      body: tmp3.body,
+      asset: tmp3.asset,
+      popout_asset: tmp3.popoutAsset,
+      version: tmp3.version,
+      revert_text_color: tmp3.revertTextColor,
+    } = arg0);
+    return obj;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const obj = Object.create(prototype.prototype);
-  obj.type = CollectiblesMarketingType.CollectiblesMarketingType.BANNER;
-  ({
-    title: tmp2.title,
-    body: tmp2.body,
-    asset: tmp2.asset,
-    popout_asset: tmp2.popoutAsset,
-    version: tmp2.version,
-    revert_text_color: tmp2.revertTextColor,
-  } = arg0);
-  return obj;
 };
-const result = set.fileFinishedImporting("modules/collectibles/records/CollectiblesMarketingBannerRecord.tsx");
+const result = size.fileFinishedImporting("modules/collectibles/records/CollectiblesMarketingBannerRecord.tsx");
 
 export const CollectiblesMarketingBannerRecord = prototype;

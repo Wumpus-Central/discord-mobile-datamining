@@ -1,13 +1,13 @@
 // discord_common/js/shared/domain-migration/DomainMigrationUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-let obj = {
+const DomainMigrationMessageFrom = {
   MIGRATION_SOURCE_DOMAIN: 0,
   [0]: "MIGRATION_SOURCE_DOMAIN",
   MIGRATION_DESTINATION_DOMAIN: 1,
   [1]: "MIGRATION_DESTINATION_DOMAIN",
 };
-const result = set.fileFinishedImporting("../discord_common/js/shared/domain-migration/DomainMigrationUtils.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/domain-migration/DomainMigrationUtils.tsx");
 
 export const DomainMigrationEventType = {
   SKIP_MIGRATION: 0,
@@ -19,10 +19,10 @@ export const DomainMigrationEventType = {
   DATA_MIGRATED_CONFIRMED: 3,
   [3]: "DATA_MIGRATED_CONFIRMED",
 };
-export const DomainMigrationMessageFrom = obj;
+export { DomainMigrationMessageFrom };
 export const DOMAIN_MIGRATION_SUCCESS_KEY = "domainMigrationSuccess";
 export const DOMAIN_MIGRATION_FAILED_KEY = "domainMigrationFailed";
-export const sendPostMessage = function sendPostMessage(domainMigrationEvent, postMessage) {
+export const sendPostMessage = function sendPostMessage(domainMigrationEvent, postMessage, arg2) {
   if (arg2 === obj.MIGRATION_SOURCE_DOMAIN) {
     const _window2 = window;
     let MIGRATION_SOURCE_ORIGIN = window.GLOBAL_ENV.MIGRATION_DESTINATION_ORIGIN;
@@ -33,7 +33,7 @@ export const sendPostMessage = function sendPostMessage(domainMigrationEvent, po
   obj = { domainMigrationEvent };
   postMessage.postMessage(obj, MIGRATION_SOURCE_ORIGIN);
 };
-export const extractMessage = function extractMessage(origin) {
+export const extractMessage = function extractMessage(origin, arg1) {
   if (arg1 === obj.MIGRATION_SOURCE_DOMAIN) {
     const _window2 = window;
     let MIGRATION_SOURCE_ORIGIN = window.GLOBAL_ENV.MIGRATION_DESTINATION_ORIGIN;

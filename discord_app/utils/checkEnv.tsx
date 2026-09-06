@@ -1,5 +1,5 @@
 // discord_app/utils/checkEnv.tsx
-import set from "../../_runtime/00002_set.js";
+import size from "../../_runtime/metro/00002__.js";
 
 if (null == window.GLOBAL_ENV) {
   const _window = window;
@@ -145,4 +145,4 @@ global.window.GLOBAL_ENV.ACTIVITY_APPLICATION_HOST = "discordsays.com";
 global.window.GLOBAL_ENV.PUBLIC_PATH = "/assets/";
 global.window.GLOBAL_ENV.DEV_SESSION_KEY = process.env.DEV_SESSION_KEY;
 global.window.GLOBAL_ENV.MUX_ENV_KEY = "1qd16mdmdjasipqg3irobln4u";
-const result = set.fileFinishedImporting("utils/checkEnv.tsx");
+const result = size.fileFinishedImporting("utils/checkEnv.tsx");

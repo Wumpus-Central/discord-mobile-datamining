@@ -1,7 +1,7 @@
 // discord_app/modules/game_server/utils/productToGameServerGame.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/game_server/utils/productToGameServerGame.tsx");
+const result = size.fileFinishedImporting("modules/game_server/utils/productToGameServerGame.tsx");
 
 export const productToGameServerGame = function productToGameServerGame(id) {
   const skus = id.skus;
@@ -51,7 +51,7 @@ export const productToGameServerGame = function productToGameServerGame(id) {
   if (str == null) {
     str = "";
   }
-  obj[2] = str;
+  obj.gameId = str;
   const tenant_metadata2 = id.tenant_metadata;
   let provider;
   if (tenant_metadata2 != null) {
@@ -63,9 +63,9 @@ export const productToGameServerGame = function productToGameServerGame(id) {
       }
     }
   }
-  obj[3] = provider;
-  obj[4] = sorted;
-  obj[5] = num;
+  obj.provider = provider;
+  obj.plans = sorted;
+  obj.baseCost = num;
   const tenant_metadata3 = id.tenant_metadata;
   let disabled;
   if (tenant_metadata3 != null) {
@@ -77,7 +77,7 @@ export const productToGameServerGame = function productToGameServerGame(id) {
       }
     }
   }
-  obj[6] = disabled;
+  obj.disabled = disabled;
   const tenant_metadata4 = id.tenant_metadata;
   let early_access;
   if (tenant_metadata4 != null) {
@@ -89,7 +89,7 @@ export const productToGameServerGame = function productToGameServerGame(id) {
       }
     }
   }
-  obj[7] = early_access;
+  obj.early_access = early_access;
   const tenant_metadata5 = id.tenant_metadata;
   let can_market;
   if (tenant_metadata5 != null) {
@@ -101,6 +101,6 @@ export const productToGameServerGame = function productToGameServerGame(id) {
       }
     }
   }
-  obj[8] = can_market;
+  obj.can_market = can_market;
   return obj;
 };

@@ -1,13 +1,14 @@
 // discord_app/modules/voice_panel/native/utils/calculatePIPState.tsx
-import isStreamKey from "../../../go_live/utils/StreamKeyUtils.tsx";
-import PIPReferenceDimensions from "../pip/VoicePanelPIPUtils.tsx";
-import closure_2 from "../../../calls/ChannelRTCStore.tsx";
-import closure_3 from "../../../../stores/ApplicationStreamingStore.tsx";
-import { VoicePanelModes } from "../../VoicePanelConstants.tsx";
-import { ParticipantTypes } from "../../../calls/CallConstants.tsx";
+import StreamKeyUtils from "../../../go_live/utils/StreamKeyUtils.tsx";
+import VoicePanelPIPUtils from "../pip/VoicePanelPIPUtils.tsx";
+import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
+import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/utils/calculatePIPState.tsx");
+require = fn;
+const VoicePanelModes = fn(12273).VoicePanelModes;
+const ParticipantTypes = fn(4581).ParticipantTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/native/utils/calculatePIPState.tsx");
 
 export default function calculatePIPState(
   channelId,
@@ -18,7 +19,7 @@ export default function calculatePIPState(
 ) {
   let tmp = null != focusedId.focusedId;
   if (tmp) {
-    participant = participant.getParticipant(channelId, focusedId.focusedId);
+    const participant = ChannelRTCStore.getParticipant(channelId, focusedId.focusedId);
     let type;
     if (participant != null) {
       type = participant.type;
@@ -26,10 +27,9 @@ export default function calculatePIPState(
     tmp = type === ParticipantTypes.ACTIVITY;
   }
   const set = new Set();
-  currentUserActiveStream = currentUserActiveStream.getCurrentUserActiveStream();
+  const currentUserActiveStream = ApplicationStreamingStore.getCurrentUserActiveStream();
   if (null != currentUserActiveStream) {
-    set.add(isStreamKey.encodeStreamKey(currentUserActiveStream));
-    const obj2 = isStreamKey;
+    set.add(StreamKeyUtils.encodeStreamKey(currentUserActiveStream));
   }
   let tmp10 = focusedId.mode === VoicePanelModes.PANEL;
   if (tmp11) {
@@ -44,7 +44,7 @@ export default function calculatePIPState(
     panelMode: focusedId.mode,
     showSecondaryPIP: focusedId.showSecondaryPIP,
   };
-  const pIPParticipantToShow = PIPReferenceDimensions.computePIPParticipantToShow(obj);
+  const pIPParticipantToShow = VoicePanelPIPUtils.computePIPParticipantToShow(obj);
   let type1;
   if (pIPParticipantToShow != null) {
     type1 = pIPParticipantToShow.type;
@@ -68,7 +68,6 @@ export default function calculatePIPState(
     }
     tmp18 = tmp20;
   }
-  const obj3 = PIPReferenceDimensions;
   tmp11 = null != focusedId.focusedId && tmp10;
   let id1;
   if (pIPParticipantToShow != null) {
@@ -83,7 +82,7 @@ export default function calculatePIPState(
   }
   obj = {
     participant: pIPParticipantToShow,
-    dimensions: PIPReferenceDimensions.computePIPSize(
+    dimensions: VoicePanelPIPUtils.computePIPSize(
       SquarePIPReferenceDimensions,
       tmp18,
       tmp10,

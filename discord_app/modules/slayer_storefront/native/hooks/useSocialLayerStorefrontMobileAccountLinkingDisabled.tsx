@@ -1,22 +1,23 @@
 // discord_app/modules/slayer_storefront/native/hooks/useSocialLayerStorefrontMobileAccountLinkingDisabled.tsx
-import closure_2 from "../../SocialLayerStorefrontStore.tsx";
+import SocialLayerStorefrontStore from "../../SocialLayerStorefrontStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/slayer_storefront/native/hooks/useSocialLayerStorefrontMobileAccountLinkingDisabled.tsx",
 );
 
 export const useSocialLayerStorefrontMobileAccountLinkingDisabled =
   function useSocialLayerStorefrontMobileAccountLinkingDisabled(applicationId) {
-    const _require = applicationId;
-    const items = [closure_2];
+    _require = applicationId;
+    const items = [SocialLayerStorefrontStore];
     const items1 = [applicationId];
-    return require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    return require("initialize").useStateFromStores(
       items,
       () => {
         let tmp2 = null != closure_0;
         if (tmp2) {
-          const configForApplicationId = closure_1_2.getConfigForApplicationId(tmp);
+          const configForApplicationId = SocialLayerStorefrontStore.getConfigForApplicationId(tmp);
           let prop;
           if (configForApplicationId != null) {
             prop = configForApplicationId.disableMobileAccountLinking;

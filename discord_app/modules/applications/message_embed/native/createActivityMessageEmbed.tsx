@@ -1,9 +1,9 @@
 // discord_app/modules/applications/message_embed/native/createActivityMessageEmbed.tsx
-import set from "../../../../../_runtime/00002_set.js";
 import createAppMessageEmbed from "createAppMessageEmbed.tsx";
-import fetchCustomActivityLink from "../../../activities/utils/CustomActivityLinkUtils.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/applications/message_embed/native/createActivityMessageEmbed.tsx");
+const CustomActivityLinkUtils = tmp(12940);
+const result = size.fileFinishedImporting("modules/applications/message_embed/native/createActivityMessageEmbed.tsx");
 
 export const createActivityMessageEmbed = function createActivityMessageEmbed(app) {
   app = app.app;
@@ -17,7 +17,7 @@ export const createActivityMessageEmbed = function createActivityMessageEmbed(ap
     if (null == linkId) {
       return appMessageEmbed;
     } else {
-      const orFetchCustomActivityLink = fetchCustomActivityLink.getOrFetchCustomActivityLink(app.id, linkId);
+      const orFetchCustomActivityLink = CustomActivityLinkUtils.getOrFetchCustomActivityLink(app.id, linkId);
       let tmp8 = null;
       if (null != orFetchCustomActivityLink) {
         obj = {};
@@ -36,5 +36,4 @@ export const createActivityMessageEmbed = function createActivityMessageEmbed(ap
       return tmp8;
     }
   }
-  const tmp = require;
 };

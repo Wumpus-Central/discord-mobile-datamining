@@ -1,49 +1,49 @@
 // discord_app/modules/wishlists/records/WishlistRecommendationRecord.tsx
-import toJSDefault from "../../../lib/Record.tsx";
-import closure_0 from "../../skus/SKURecord.tsx";
-import closure_1 from "../../../records/ApplicationRecord.tsx";
+import Record from "../../../lib/Record.tsx";
+import SKURecord from "../../skus/SKURecord.tsx";
+import ApplicationRecord from "../../../records/ApplicationRecord.tsx";
 
-toJSDefault;
-let prototype;
-prototype = function WishlistRecommendationRecord(skus) {
+const prototype = function WishlistRecommendationRecord(skus) {
   const tmp5 = new prototype(tmp4, tmp3, tmp2, tmp);
-  // ThrowIfThisInitialized (0x7c)
   skus = skus.skus;
-  tmp5.skus = skus.map((arg0) => closure_0.createFromServer(arg0));
+  tmp5.skus = skus.map((item) => SKURecord.createFromServer(item));
   const entries = Object.entries(skus.skus_to_user_and_reason);
   tmp5.skusToUserAndReason = Object.fromEntries(
-    entries.map((arg0) => {
-      [tmp, tmp2] = arg0;
+    entries.map((item) => {
+      [tmp, tmp2] = item;
       const items = [tmp, tmp2];
       return items;
     }),
   );
   const applications = skus.applications;
-  tmp5.applications = applications.map((arg0) => closure_1.createFromServer(arg0));
+  tmp5.applications = applications.map((item) => ApplicationRecord.createFromServer(item));
   return tmp5;
 }.prototype;
 class prototype extends tmp2 {}
 prototype["fromServer"] = function fromServer(skus) {
-  if (typeof prototype !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof prototype === "function") {
+    const tmp9 = new prototype(tmp4, tmp3, tmp2, tmp);
+    skus = skus.skus;
+    tmp9.skus = skus.map((item) => SKURecord.createFromServer(item));
+    const _Object = Object;
+    const _Object2 = Object;
+    const entries = Object.entries(skus.skus_to_user_and_reason);
+    tmp9.skusToUserAndReason = Object.fromEntries(
+      entries.map((item) => {
+        [tmp, tmp2] = item;
+        const items = [tmp, tmp2];
+        return items;
+      }),
+    );
+    const applications = skus.applications;
+    tmp9.applications = applications.map((item) => ApplicationRecord.createFromServer(item));
+    return tmp9;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const tmp4 = new prototype("Trying to call a non-function", tmp3, tmp2, tmp);
-  // ThrowIfThisInitialized (0x7c)
-  skus = skus.skus;
-  tmp4.skus = skus.map((arg0) => closure_0.createFromServer(arg0));
-  const entries = Object.entries(skus.skus_to_user_and_reason);
-  tmp4.skusToUserAndReason = Object.fromEntries(
-    entries.map((arg0) => {
-      [tmp, tmp2] = arg0;
-      const items = [tmp, tmp2];
-      return items;
-    }),
-  );
-  const applications = skus.applications;
-  tmp4.applications = applications.map((arg0) => closure_1.createFromServer(arg0));
-  return tmp4;
 };
-const result = require("set").fileFinishedImporting("modules/wishlists/records/WishlistRecommendationRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/wishlists/records/WishlistRecommendationRecord.tsx");
 
 export default prototype;
 export const WishlistRecommendationReason = { WISHLIST: "WISHLIST", RECOMMENDATION: "RECOMMENDATION" };

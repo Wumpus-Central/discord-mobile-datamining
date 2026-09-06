@@ -1,33 +1,33 @@
 // discord_app/modules/voice_panel/native/alerts/VoicePanelLockedIcon.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import Button from "../../../../design/void/native.tsx";
-import setDefault from "../../../core/native/NativeView.tsx";
-import registerAssetDefault from "../../../../../_runtime/17189_registerAsset.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import native from "../../../../design/void/native.tsx";
+import NativeViewDefault from "../../../core/native/NativeView.tsx";
+import _modDef17189 from "../../../../../_runtime/metro/17189__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-createCacheKey = { container: null, icon: null };
-createCacheKey = {
+require = fn;
+const jsx = fn(21).jsx;
+fn(4560);
+const createStyles = { container: null, icon: null };
+let size = {
   alignItems: "center",
   justifyContent: "center",
   alignSelf: "center",
   width: 64,
   height: 64,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
-  borderRadius: ThemesDefault.radii.round,
+  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: nativeDefault.radii.round,
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = {};
-let closure_4 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/alerts/VoicePanelLockedIcon.tsx");
+createStyles.container = size;
+createStyles.icon = {};
+let closure_4 = createStyles.createStyles(createStyles);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/native/alerts/VoicePanelLockedIcon.tsx");
 
 export default function VoicePanelLockedIcon() {
-  const tmp = callback();
+  const tmp = closure_4();
   let obj = { style: tmp.container, children: null };
-  obj = { style: tmp.icon, source: registerAssetDefault, size: Button.IconSizes.LARGE };
-  obj[1] = jsx(Button.Icon, { style: tmp.icon, source: registerAssetDefault, size: Button.IconSizes.LARGE });
-  return jsx(setDefault, { style: tmp.icon, source: registerAssetDefault, size: Button.IconSizes.LARGE });
+  obj = { style: tmp.icon, source: _modDef17189, size: native.IconSizes.LARGE };
+  obj.children = jsx(native.Icon, { style: tmp.icon, source: _modDef17189, size: native.IconSizes.LARGE });
+  return jsx(NativeViewDefault, { style: tmp.icon, source: _modDef17189, size: native.IconSizes.LARGE });
 }

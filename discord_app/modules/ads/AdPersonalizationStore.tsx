@@ -1,19 +1,16 @@
 // discord_app/modules/ads/AdPersonalizationStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
 
-function reset() {
-  c0 = false;
-}
-let c0 = false;
+function reset() {}
 const Store = initializeDefault.Store;
 class AdPersonalizationStore extends Store {}
 AdPersonalizationStore.prototype["isTogglesDisabled"] = function isTogglesDisabled() {
-  return c0;
+  return flag;
 };
-const adPersonalizationStore = new AdPersonalizationStore(dispatcherDefault, {
+const adPersonalizationStore = new AdPersonalizationStore(DispatcherDefault, {
   AD_PERSONALIZATION_TOGGLES_RESTRICTED: function handleAdPersonalizationTogglesRestricted(disabled) {
-    let flag = disabled.disabled;
+    flag = disabled.disabled;
     if (flag == null) {
       flag = false;
     }
@@ -21,6 +18,7 @@ const adPersonalizationStore = new AdPersonalizationStore(dispatcherDefault, {
   CONNECTION_OPEN: reset,
   LOGOUT: reset,
 });
-const result = require("set").fileFinishedImporting("modules/ads/AdPersonalizationStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/ads/AdPersonalizationStore.tsx");
 
 export default adPersonalizationStore;

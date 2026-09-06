@@ -1,35 +1,35 @@
 // discord_app/modules/create_guild/native/CreateGuildIcons.tsx
-import set from "../../../../_runtime/00002_set.js";
-import AccountAgeTier10LargeBadge from "../../../design/assets/native.tsx";
-import registerAssetDefault from "../../../../_runtime/12326_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/12327_registerAsset.js";
-import registerAssetDefault3 from "../../../../_runtime/12328_registerAsset.js";
-import registerAssetDefault4 from "../../../../_runtime/12329_registerAsset.js";
-import registerAssetDefault5 from "../../../../_runtime/12330_registerAsset.js";
-import registerAssetDefault6 from "../../../../_runtime/12331_registerAsset.js";
-import registerAssetDefault7 from "../../../../_runtime/12332_registerAsset.js";
+import native from "../../../design/assets/native.tsx";
+import _modDef12326 from "../../../../_runtime/metro/12326__.js";
+import _modDef12327 from "../../../../_runtime/metro/12327__.js";
+import _modDef12328 from "../../../../_runtime/metro/12328__.js";
+import _modDef12329 from "../../../../_runtime/metro/12329__.js";
+import _modDef12330 from "../../../../_runtime/metro/12330__.js";
+import _modDef12331 from "../../../../_runtime/metro/12331__.js";
+import _modDef12332 from "../../../../_runtime/metro/12332__.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
 let obj = {
-  CREATE: registerAssetDefault,
-  GAMING: registerAssetDefault5,
-  FRIENDS: registerAssetDefault3,
-  STUDY: registerAssetDefault4,
-  CLUBS: registerAssetDefault6,
-  CREATORS: registerAssetDefault7,
-  LOCAL_COMMUNITY: registerAssetDefault2,
-  SCHOOL_CLUB: registerAssetDefault6,
+  CREATE: _modDef12326,
+  GAMING: _modDef12330,
+  FRIENDS: _modDef12328,
+  STUDY: _modDef12329,
+  CLUBS: _modDef12331,
+  CREATORS: _modDef12332,
+  LOCAL_COMMUNITY: _modDef12327,
+  SCHOOL_CLUB: _modDef12331,
 };
 obj = {
-  CREATE: AccountAgeTier10LargeBadge.PencilIllocon,
-  GAMING: AccountAgeTier10LargeBadge.ControllerIllocon,
-  FRIENDS: AccountAgeTier10LargeBadge.HeartIllocon,
-  STUDY: AccountAgeTier10LargeBadge.AppleIllocon,
-  CLUBS: AccountAgeTier10LargeBadge.BookIllocon,
-  CREATORS: AccountAgeTier10LargeBadge.PaintIllocon,
-  LOCAL_COMMUNITY: AccountAgeTier10LargeBadge.LeafIllocon,
-  SCHOOL_CLUB: AccountAgeTier10LargeBadge.BookIllocon,
+  CREATE: native.PencilIllocon,
+  GAMING: native.ControllerIllocon,
+  FRIENDS: native.HeartIllocon,
+  STUDY: native.AppleIllocon,
+  CLUBS: native.BookIllocon,
+  CREATORS: native.PaintIllocon,
+  LOCAL_COMMUNITY: native.LeafIllocon,
+  SCHOOL_CLUB: native.BookIllocon,
 };
-const result = set.fileFinishedImporting("modules/create_guild/native/CreateGuildIcons.tsx");
+const result = size.fileFinishedImporting("modules/create_guild/native/CreateGuildIcons.tsx");
 
 export const GUILD_TEMPLATE_ICONS = obj;
 export const GUILD_TEMPLATE_ICON_COMPONENTS = obj;

@@ -1,20 +1,21 @@
 // discord_app/modules/guild_scheduled_events/UpcomingEventNoticesStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import getNextShownUpcomingEventNoticeType from "GuildScheduledEventUtils.tsx";
-import closure_2 from "../../stores/AuthenticationStore.tsx";
-import closure_3 from "GuildScheduledEventStore.tsx";
-import GUILD_EVENT_MAX_NAME_LENGTH from "GuildScheduledEventsConstants.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import GuildScheduledEventUtils from "GuildScheduledEventUtils.tsx";
+import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
+import GuildScheduledEventStore from "GuildScheduledEventStore.tsx";
 
-require = arg1;
-({ GuildScheduledEventStatus: c4, UpcomingGuildEventNoticeTypes: c5 } = GUILD_EVENT_MAX_NAME_LENGTH);
-let closure_6 = {};
-let closure_7 = {};
+require = fn;
+const GuildScheduledEventsConstants = fn(1963);
+({ GuildScheduledEventStatus: closure_4, UpcomingGuildEventNoticeTypes: hasOwnProperty } =
+  GuildScheduledEventsConstants);
+let obj = {};
+obj = {};
 const PersistedStore = initializeDefault.PersistedStore;
 class UpcomingEventNoticesStore extends PersistedStore {}
 const prototype = UpcomingEventNoticesStore.prototype;
 prototype["initialize"] = function initialize(upcomingEventDismissals) {
-  this.waitFor(closure_2, closure_3);
+  this.waitFor(AuthenticationStore, GuildScheduledEventStore);
   if (null != upcomingEventDismissals) {
     let prop = upcomingEventDismissals.upcomingEventDismissals;
     if (prop == null) {
@@ -27,25 +28,26 @@ prototype["initialize"] = function initialize(upcomingEventDismissals) {
   }
 };
 prototype["getGuildEventNoticeDismissalTime"] = function getGuildEventNoticeDismissalTime(arg0) {
-  return table[arg0];
+  return obj[arg0];
 };
 prototype["getAllEventDismissals"] = function getAllEventDismissals() {
-  return closure_6;
+  return obj;
 };
 prototype["getUpcomingNoticeSeenTime"] = function getUpcomingNoticeSeenTime(arg0) {
-  return dependencyMap[arg0];
+  return obj[arg0];
 };
 prototype["getAllUpcomingNoticeSeenTimes"] = function getAllUpcomingNoticeSeenTimes() {
-  return closure_7;
+  return obj;
 };
 prototype["getState"] = function getState() {
-  return { upcomingEventDismissals: closure_6, upcomingEventSeenTimestamps: closure_7 };
+  obj = { upcomingEventDismissals: obj, upcomingEventSeenTimestamps: obj };
+  return obj;
 };
 UpcomingEventNoticesStore.displayName = "UpcomingEventNoticesStore";
 UpcomingEventNoticesStore.persistKey = "UpcomingEventNotices";
-const upcomingEventNoticesStore = new UpcomingEventNoticesStore(dispatcherDefault, {
+obj = {
   UPCOMING_GUILD_EVENT_NOTICE_HIDE: function handleHideNotice(eventId) {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(obj);
     obj[eventId.eventId] = Date.now();
   },
@@ -53,7 +55,7 @@ const upcomingEventNoticesStore = new UpcomingEventNoticesStore(dispatcherDefaul
     guildScheduledEvent = guildScheduledEvent.guildScheduledEvent;
     if (!tmp4) {
       const id = guildScheduledEvent.id;
-      let obj = {};
+      obj = {};
       const merged = Object.assign(obj);
       delete tmp[tmp2];
       obj = {};
@@ -62,7 +64,7 @@ const upcomingEventNoticesStore = new UpcomingEventNoticesStore(dispatcherDefaul
     }
   },
   GUILD_SCHEDULED_EVENT_DELETE: function handleEventDelete(arg0) {
-    let obj = {};
+    obj = {};
     const merged = Object.assign(obj);
     delete tmp[tmp2];
     obj = {};
@@ -71,19 +73,15 @@ const upcomingEventNoticesStore = new UpcomingEventNoticesStore(dispatcherDefaul
   },
   GUILD_SCHEDULED_EVENT_USER_ADD: function handleMaybeHideNewEventNotice(guildEventId) {
     guildEventId = guildEventId.guildEventId;
-    if (guildEventId.userId === id.getId()) {
-      guildScheduledEvent = guildScheduledEvent.getGuildScheduledEvent(guildEventId);
+    if (guildEventId.userId === AuthenticationStore.getId()) {
+      const guildScheduledEvent = GuildScheduledEventStore.getGuildScheduledEvent(guildEventId);
       if (null != guildScheduledEvent) {
         if (guildScheduledEvent.status === constants.SCHEDULED) {
           if (null == obj[guildEventId]) {
-            obj = getNextShownUpcomingEventNoticeType;
+            obj = GuildScheduledEventUtils;
             if (
-              obj.getNextShownUpcomingEventNoticeType(
-                guildScheduledEvent,
-                undefined,
-                dependencyMap[guildEventId],
-                false,
-              ) === constants2.NEW_EVENT
+              obj.getNextShownUpcomingEventNoticeType(guildScheduledEvent, undefined, obj[guildEventId], false) ===
+              constants2.NEW_EVENT
             ) {
               obj = {};
               const merged = Object.assign(obj);
@@ -96,11 +94,13 @@ const upcomingEventNoticesStore = new UpcomingEventNoticesStore(dispatcherDefaul
     }
   },
   UPCOMING_GUILD_EVENT_NOTICE_SEEN: function handleMarkUpcomingNoticeAsSeen(guildEventId) {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(obj);
     obj[guildEventId.guildEventId] = Date.now();
   },
-});
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/UpcomingEventNoticesStore.tsx");
+};
+const upcomingEventNoticesStore = new UpcomingEventNoticesStore(DispatcherDefault, obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/UpcomingEventNoticesStore.tsx");
 
 export default upcomingEventNoticesStore;

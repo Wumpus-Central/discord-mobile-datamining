@@ -1,62 +1,61 @@
 // discord_app/stores/ChannelSettingsStore.tsx
-import set from "../../_runtime/00002_set.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../Dispatcher.tsx";
-import AbortCodes from "../modules/threads/ThreadConstants.tsx";
-import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import createChannelRecord from "../records/ChannelRecord.tsx";
-import set2 from "../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx";
-import set3 from "../../discord_common/js/shared/shared-constants/ForumLayout.tsx";
-import fromGuildPropertiesWithAdditionalFields from "../utils/GuildRecordUtils.tsx";
-import hooksDefault from "../../_runtime/04153_hooks.js";
-import MAX_REACTIONS from "../modules/reactions/ReactionUtils.tsx";
-import parseRawEmojiObjectDefault from "../modules/emojis/UnicodeEmojis.tsx";
-import closure_10 from "../records/InviteRecord.tsx";
-import closure_11 from "../records/UserRecord.tsx";
-import closure_12 from "ChannelStore.tsx";
-import ME from "../Constants.tsx";
-import importDefaultResult from "../../_runtime/00012_apply.js";
+import DispatcherDefault from "../Dispatcher.tsx";
+import ThreadConstants from "../modules/threads/ThreadConstants.tsx";
+import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import ChannelRecord from "../records/ChannelRecord.tsx";
+import ThreadSortOrder from "../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx";
+import ForumLayout from "../../discord_common/js/shared/shared-constants/ForumLayout.tsx";
+import GuildRecordUtils from "../utils/GuildRecordUtils.tsx";
+import _modDef4153 from "../../_runtime/metro/04153__.js";
+import ReactionUtils from "../modules/reactions/ReactionUtils.tsx";
+import UnicodeEmojisDefault from "../modules/emojis/UnicodeEmojis.tsx";
+import InviteRecord from "../records/InviteRecord.tsx";
+import UserRecord from "../records/UserRecord.tsx";
+import ChannelStore from "ChannelStore.tsx";
+import Constants from "../Constants.tsx";
+import apply from "../../_runtime/metro/00012__.js";
+import size from "../../_runtime/metro/00002__.js";
 
-function normalizeChannelPropertyForCompare(arg0, arg1, arg2) {
-  let str = arg1;
-  if ("topic_" === arg0) {
+function normalizeChannelPropertyForCompare(item, toJSResult, type) {
+  let str = toJSResult;
+  if ("topic_" === item) {
     if (str == null) {
       str = "";
     }
     return str;
-  } else if ("defaultAutoArchiveDuration" === arg0) {
+  } else if ("defaultAutoArchiveDuration" === item) {
     let tmp21 = str;
     if (str == null) {
       tmp21 = closure_17;
     }
     return tmp21;
-  } else if ("defaultSortOrder" === arg0) {
+  } else if ("defaultSortOrder" === item) {
     let LATEST_ACTIVITY = str;
     if (str == null) {
-      LATEST_ACTIVITY = set2.ThreadSortOrder.LATEST_ACTIVITY;
+      LATEST_ACTIVITY = ThreadSortOrder.ThreadSortOrder.LATEST_ACTIVITY;
     }
     return LATEST_ACTIVITY;
-  } else if ("defaultForumLayout" === arg0) {
-    if (arg2 === constants2.GUILD_MEDIA) {
-      return set3.ForumLayout.GRID;
+  } else if ("defaultForumLayout" === item) {
+    if (type === constants2.GUILD_MEDIA) {
+      return ForumLayout.ForumLayout.GRID;
     } else {
       if (null == str) {
-        let LIST = set3.ForumLayout.LIST;
+        let LIST = ForumLayout.ForumLayout.LIST;
       } else {
         LIST = str;
       }
       return LIST;
     }
   } else {
-    if ("rateLimitPerUser_" !== arg0) {
-      if ("defaultThreadRateLimitPerUser" !== arg0) {
-        if ("defaultReactionEmoji" === arg0) {
+    if ("rateLimitPerUser_" !== item) {
+      if ("defaultThreadRateLimitPerUser" !== item) {
+        if ("defaultReactionEmoji" === item) {
           let tmp2 = null;
           if (null != str) {
-            let obj = MAX_REACTIONS;
+            let obj = ReactionUtils;
             if (obj.isCustomReactionEmojiId(str.emojiId)) {
-              obj = { emojiId: null };
-              obj[0] = str.emojiId;
+              obj = { emojiId: str.emojiId };
               tmp2 = obj;
             } else {
               const emojiName = str.emojiName;
@@ -64,10 +63,8 @@ function normalizeChannelPropertyForCompare(arg0, arg1, arg2) {
               if (null != emojiName) {
                 tmp5 = null;
                 if ("" !== emojiName) {
-                  obj = { emojiName: null };
-                  obj[0] = parseRawEmojiObjectDefault.translateInlineEmojiToSurrogates(emojiName);
+                  obj = { emojiName: UnicodeEmojisDefault.translateInlineEmojiToSurrogates(emojiName) };
                   tmp5 = obj;
-                  const obj3 = parseRawEmojiObjectDefault;
                 }
               }
               tmp2 = tmp5;
@@ -102,68 +99,67 @@ function _createInvite(code) {
     roles: null,
   };
   let tmp2 = null;
-  let tmp = closure_10;
+  let tmp = InviteRecord;
   if (null != code.inviter) {
-    tmp2 = new closure_11(code.inviter);
+    tmp2 = new UserRecord(code.inviter);
   }
-  obj[3] = tmp2;
-  obj[4] = callback(code.channel);
+  obj.inviter = tmp2;
+  obj.channel = closure_9(code.channel);
   let fromInviteGuildResult = null;
   if (null != code.guild) {
-    fromInviteGuildResult = fromGuildPropertiesWithAdditionalFields.fromInviteGuild(code.guild);
-    const obj2 = fromGuildPropertiesWithAdditionalFields;
+    fromInviteGuildResult = GuildRecordUtils.fromInviteGuild(code.guild);
   }
-  obj[5] = fromInviteGuildResult;
-  ({ uses: obj[6], max_uses: obj[7], max_age: obj[8] } = code);
-  obj[9] = hooksDefault(code.created_at);
-  ({ type: obj[10], roles: obj[11] } = code);
+  obj.guild = fromInviteGuildResult;
+  ({ uses: obj.uses, max_uses: obj.maxUses, max_age: obj.maxAge } = code);
+  obj.createdAt = _modDef4153(code.created_at);
+  ({ type: obj.type, roles: obj.roles } = code);
   tmp = new tmp(obj);
   return tmp;
 }
 function _syncChannelUpdate(id) {
   let flag = false;
-  if (null != channel1) {
+  if (null != closure_5) {
     flag = false;
-    if (channel1.id === id) {
-      if (channel1 === store) {
-        const channel = store2.getChannel(id);
+    if (closure_5.id === id) {
+      if (closure_5 === channel) {
+        channel = ChannelStore.getChannel(id);
         flag = false;
         if (null != channel) {
-          channel1 = channel;
-          store = channel;
-          let channel2 = obj2.getChannel(store.parent_id);
+          closure_5 = channel;
+          let channel2 = obj2.getChannel(channel.parent_id);
           flag = true;
         }
-        obj2 = store2;
+        obj2 = ChannelStore;
       } else {
-        channel1 = store2.getChannel(id);
+        const channel1 = ChannelStore.getChannel(id);
         flag = false;
         if (null != channel1) {
+          closure_5 = channel1;
           flag = true;
-          if (null != store) {
-            const result = store.set("permissionOverwrites", channel1.permissionOverwrites);
-            store = result.set("availableTags", channel1.availableTags);
-            channel2 = obj3.getChannel(store.parent_id);
+          if (null != channel) {
+            const result = channel.set("permissionOverwrites", closure_5.permissionOverwrites);
+            channel = result.set("availableTags", closure_5.availableTags);
+            channel2 = obj3.getChannel(channel.parent_id);
             flag = true;
           }
         }
-        obj3 = store2;
+        obj3 = ChannelStore;
       }
     }
   }
   let tmp10 = !flag;
   if (flag) {
-    tmp10 = null == store;
+    tmp10 = null == channel;
   }
   let flag2 = !tmp10;
   if (!tmp10) {
-    let tmp13 = null != guildId;
+    let tmp13 = null != overwriteId;
     if (tmp13) {
-      tmp13 = null == store.permissionOverwrites[guildId];
+      tmp13 = null == channel.permissionOverwrites[overwriteId];
     }
     flag2 = true;
     if (tmp13) {
-      guildId = store.getGuildId();
+      overwriteId = channel.getGuildId();
       flag2 = true;
     }
   }
@@ -172,15 +168,15 @@ function _syncChannelUpdate(id) {
 function handleOverwriteUpdate(channelId) {
   return _syncChannelUpdate(channelId.channelId);
 }
-let closure_9 = createChannelRecord.createChannelRecordFromInvite;
-({ ChannelSettingsSections: map1, ChannelTypes: closure_14, Endpoints: closure_15, FormStates } = ME);
-let closure_17 = AbortCodes.DEFAULT_AUTO_ARCHIVE_DURATION;
+let closure_9 = ChannelRecord.createChannelRecordFromInvite;
+({ ChannelSettingsSections: map1, ChannelTypes: closure_14, Endpoints: closure_15, FormStates } = Constants);
+let closure_17 = ThreadConstants.DEFAULT_AUTO_ARCHIVE_DURATION;
 let CLOSED = FormStates.CLOSED;
-let closure_19 = {};
-let closure_20 = {};
+let errors = {};
+let invites = {};
 let c21 = false;
 let c22 = false;
-let c23 = null;
+let _location = null;
 let closure_24 = [
   "name",
   "type",
@@ -206,23 +202,23 @@ let closure_24 = [
   "themeColor",
   "application_id",
 ];
-let closure_26 = importDefaultResult.debounce(() => {
-  if (null != store) {
+let closure_26 = apply.debounce(() => {
+  if (null != channel) {
     if (null != closure_5) {
-      const toJSResult = store.toJS();
+      const toJSResult = channel.toJS();
       require = toJSResult;
       closure_1 = closure_5.toJS();
       const type = toJSResult.type;
-      let everyResult = closure_24.every((arg0) => {
-        const tmp = closure_1_25(arg0, toJSResult[arg0], type);
-        const tmp2 = closure_1_25(arg0, dependencyMap[arg0], type);
-        return dependencyMap(type[12]).isEqual(tmp, tmp2);
+      let everyResult = closure_24.every((item) => {
+        const tmp = normalizeChannelPropertyForCompare(item, toJSResult[item], type);
+        const tmp2 = normalizeChannelPropertyForCompare(item, closure_1[item], type);
+        return apply.isEqual(tmp, tmp2);
       });
       if (everyResult) {
-        everyResult = store !== closure_5;
+        everyResult = channel !== closure_5;
       }
       if (everyResult) {
-        store = closure_5;
+        channel = closure_5;
         channelSettingsStore.emitChange();
       }
     }
@@ -233,7 +229,7 @@ const Store = initializeDefault.Store;
 class ChannelSettingsStore extends Store {}
 const prototype = ChannelSettingsStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_12);
+  this.waitFor(ChannelStore);
 };
 prototype["hasChanges"] = function hasChanges() {
   return closure_6 !== closure_5;
@@ -242,10 +238,11 @@ prototype["isOpen"] = function isOpen() {
   return c22;
 };
 prototype["getSection"] = function getSection() {
-  return closure_3;
+  return OVERVIEW;
 };
 prototype["getInvites"] = function getInvites() {
-  return { invites: closure_20, loading: c21 };
+  invites = { invites, loading };
+  return invites;
 };
 prototype["showNotice"] = function showNotice() {
   return this.hasChanges();
@@ -260,52 +257,53 @@ prototype["getCategory"] = function getCategory() {
   return closure_7;
 };
 prototype["getProps"] = function getProps() {
-  return {
+  invites = {
     submitting: CLOSED === FormStates.SUBMITTING,
-    errors: closure_19,
-    channel: closure_6,
-    section: closure_3,
-    subsection: closure_4,
-    invites: closure_20,
-    selectedOverwriteId: closure_8,
+    errors,
+    channel,
+    section: OVERVIEW,
+    subsection,
+    invites,
+    selectedOverwriteId: overwriteId,
     hasChanges: this.hasChanges(),
-    analyticsLocation: c23,
+    analyticsLocation: _location,
   };
+  return invites;
 };
 ChannelSettingsStore.displayName = "ChannelSettingsStore";
-const channelSettingsStore = new ChannelSettingsStore(dispatcherDefault, {
+invites = {
   CHANNEL_SETTINGS_INIT: function handleSettingsInit(channelId) {
-    let obj = store2;
-    let channel = store2.getChannel(channelId.channelId);
+    let obj = ChannelStore;
+    channel = ChannelStore.getChannel(channelId.channelId);
     if (null == channel) {
       c22 = false;
-      let OPEN = FormStates.CLOSED;
-      let OVERVIEW = null;
+      CLOSED = FormStates.CLOSED;
+      OVERVIEW = null;
+      closure_5 = null;
       channel = null;
-      let store = null;
       let channel2 = null;
-      closure_20 = {};
+      obj = {};
     } else {
-      OPEN = FormStates.OPEN;
-      store = channel;
-      let _location = null;
+      CLOSED = FormStates.OPEN;
+      closure_5 = channel;
+      _location = null;
       if ("location" in channelId) {
         _location = null;
         if (null != channelId.location) {
           _location = channelId.location;
         }
       }
-      let subsection = null;
+      subsection = null;
       if ("subsection" in channelId) {
         subsection = channelId.subsection;
       }
       closure_4 = subsection;
-      if (null != store) {
-        store = store.set("nsfw", store.isNSFW());
+      if (null != channel) {
+        channel = channel.set("nsfw", channel.isNSFW());
       }
-      channel2 = obj.getChannel(store.parent_id);
-      const guildId = store.getGuildId();
-      if (store.isModeratorReportChannel()) {
+      channel2 = obj.getChannel(channel.parent_id);
+      overwriteId = channel.getGuildId();
+      if (channel.isModeratorReportChannel()) {
         OVERVIEW = tmp10.PERMISSIONS;
         let tmp11 = tmp10;
       } else {
@@ -318,21 +316,19 @@ const channelSettingsStore = new ChannelSettingsStore(dispatcherDefault, {
         tmp12 = OVERVIEW;
       }
       OVERVIEW = tmp12;
-      let tmp15 = null != store;
+      let tmp15 = null != channel;
       if (tmp15) {
         tmp15 = OVERVIEW === tmp11.INSTANT_INVITES;
       }
       if (tmp15) {
         c21 = true;
-        const HTTP = sendRequest.HTTP;
-        obj = { url: null, oldFormErrors: true, rejectWithError: true };
-        obj[0] = closure_15.INSTANT_INVITES(store.id);
-        const value = HTTP.get(obj);
+        const HTTP = HTTPUtils.HTTP;
+        obj = { url: __initData.INSTANT_INVITES(channel.id), oldFormErrors: true, rejectWithError: true };
+        value = HTTP.get(obj);
         value.then(
           (body) => {
             c21 = false;
-            let obj = callback(table[11]);
-            obj = { type: "CHANNEL_SETTINGS_LOADED_INVITES", invites: body.body };
+            const obj = { type: "CHANNEL_SETTINGS_LOADED_INVITES", invites: body.body };
             obj.dispatch(obj);
           },
           () => {
@@ -345,38 +341,36 @@ const channelSettingsStore = new ChannelSettingsStore(dispatcherDefault, {
     }
   },
   CHANNEL_SETTINGS_SUBMIT: function handleSettingsSubmit() {
-    const SUBMITTING = FormStates.SUBMITTING;
+    CLOSED = FormStates.SUBMITTING;
     closure_19 = {};
   },
   CHANNEL_SETTINGS_SUBMIT_SUCCESS: function handleSettingsSubmitSuccess() {
     closure_5 = closure_6;
-    const OPEN = FormStates.OPEN;
+    CLOSED = FormStates.OPEN;
   },
   CHANNEL_SETTINGS_SUBMIT_FAILURE: function handleSettingsSubmitFailure(errors) {
-    closure_0 = errors;
     const OPEN = FormStates.OPEN;
     errors = errors.errors;
     if (errors == null) {
       errors = {};
     }
     const keys = Object.keys(errors);
-    closure_19 = keys.reduce((arg0, arg1) => {
-      if (obj2.isArray(errors.errors[arg1])) {
-        arg0[arg1] = obj.join("\n");
+    closure_19 = keys.reduce((acc, item) => {
+      if (obj2.isArray(errors.errors[item])) {
+        acc[item] = obj.join("\n");
       } else {
-        arg0[arg1] = obj;
+        acc[item] = obj;
       }
-      return arg0;
+      return acc;
     }, {});
   },
   CHANNEL_SETTINGS_CLOSE: function handleSettingsClose() {
     c22 = false;
     CLOSED = FormStates.CLOSED;
-    c3 = null;
-    c5 = null;
-    c6 = null;
-    c7 = null;
-    closure_20 = {};
+    OVERVIEW = null;
+    closure_5 = null;
+    closure_6 = null;
+    closure_7 = null;
   },
   CHANNEL_PERMISSIONS_PUT_OVERWRITE_SUCCESS: handleOverwriteUpdate,
   CHANNEL_PERMISSIONS_DELETE_OVERWRITE_SUCCESS: handleOverwriteUpdate,
@@ -410,411 +404,108 @@ const channelSettingsStore = new ChannelSettingsStore(dispatcherDefault, {
       themeColor,
       applicationId,
     } = arg0);
-    if (null == store) {
-      return false;
-    } else {
-      if (null != name) {
-        store = store.set("name", name);
-      }
-      if (null != topic) {
-        store = store.set("topic", topic);
-      }
-      if (null != bitrate) {
-        store = store.set("bitrate", bitrate);
-      }
-      if (null != userLimit) {
-        store = store.set("userLimit", userLimit);
-      }
-      if (null != nsfw) {
-        store = store.set("nsfw", nsfw);
-      }
-      if (null != flags) {
-        store = store.set("flags", flags);
-      }
-      if (null != rateLimitPerUser) {
-        store = store.set("rateLimitPerUser", rateLimitPerUser);
-      }
-      if (null != defaultThreadRateLimitPerUser) {
-        store = store.set("defaultThreadRateLimitPerUser", defaultThreadRateLimitPerUser);
-      }
-      if (null != autoArchiveDuration) {
-        let obj = {};
-        const merged = Object.assign(store.threadMetadata);
-        obj.autoArchiveDuration = autoArchiveDuration;
-        store = store.set("threadMetadata", obj);
-      }
-      if (null != locked) {
-        obj = {};
-        const merged1 = Object.assign(store.threadMetadata);
-        obj.locked = locked;
-        store = store.set("threadMetadata", obj);
-      }
-      if (null != invitable) {
-        obj = {};
-        const merged2 = Object.assign(store.threadMetadata);
-        obj.invitable = invitable;
-        store = store.set("threadMetadata", obj);
-      }
-      if (null != defaultAutoArchiveDuration) {
-        store = store.set("defaultAutoArchiveDuration", defaultAutoArchiveDuration);
-      }
-      if (null != template) {
-        store = store.set("template", template);
-      }
-      if (null != channelType) {
-        store = store.set("type", channelType);
-      }
-      if (undefined !== rtcRegion) {
-        store = store.set("rtcRegion", rtcRegion);
-      }
-      if (null != videoQualityMode) {
-        store = store.set("videoQualityMode", videoQualityMode);
-      }
-      if (undefined !== defaultReactionEmoji) {
-        store = store.set("defaultReactionEmoji", defaultReactionEmoji);
-      }
-      if (null != availableTags) {
-        store = store.set("availableTags", availableTags);
-      }
-      if (null != defaultSortOrder) {
-        store = store.set("defaultSortOrder", defaultSortOrder);
-      }
-      if (null != defaultTagSetting) {
-        store = store.set("defaultTagSetting", defaultTagSetting);
-      }
-      if (null != defaultForumLayout) {
-        store = store.set("defaultForumLayout", defaultForumLayout);
-      }
-      if (undefined !== iconEmoji) {
-        store = store.set("iconEmoji", iconEmoji);
-      }
-      if (null != themeColor) {
-        store = store.set("themeColor", themeColor);
-      }
-      if (null != applicationId) {
-        store = store.set("application_id", applicationId);
-      }
-      callback2();
-    }
-  },
-  CHANNEL_SETTINGS_SET_SECTION: function handleSetSection(arg0) {
-    ({ section: closure_3, subsection: closure_4 } = arg0);
-    let tmp = null != store;
-    if (tmp) {
-      tmp = closure_3 === constants.INSTANT_INVITES;
-    }
-    if (tmp) {
-      c21 = true;
-      const HTTP = sendRequest.HTTP;
-      const obj = { url: null, oldFormErrors: true, rejectWithError: true };
-      obj[0] = closure_15.INSTANT_INVITES(store.id);
-      const value = HTTP.get(obj);
-      value.then(
-        (body) => {
-          c21 = false;
-          let obj = callback(table[11]);
-          obj = { type: "CHANNEL_SETTINGS_LOADED_INVITES", invites: body.body };
-          obj.dispatch(obj);
-        },
-        () => {
-          c21 = false;
-          return false;
-        },
-      );
-    }
-  },
-  CHANNEL_SETTINGS_LOADED_INVITES: function handleLoadedInvites(invites) {
-    closure_20 = {};
-    invites = invites.invites;
-    const item = invites.forEach((code) => {
-      closure_20[code.code] = callback(code);
-    });
-  },
-  CHANNEL_UPDATES: function handleChannelUpdates(channels) {
-    channels = channels.channels;
-    if (null == closure_6) {
-      return false;
-    } else {
-      let flag = false;
-      const tmp2 = channels[Symbol.iterator]();
-      while (tmp2 !== undefined) {
-        let tmp6 = _syncChannelUpdate;
-        let tmp7 = _syncChannelUpdate(tmp4.id) || flag;
-        flag = tmp7;
-        continue;
-      }
-      return flag;
-    }
-  },
-  THREAD_UPDATE: function handleThreadUpdate(arg0) {
-    let tmp2 = null != closure_6;
-    if (tmp2) {
-      tmp2 = _syncChannelUpdate(tmp.id);
-    }
-    return tmp2;
-  },
-  CHANNEL_DELETE: function handleChannelDelete(arg0) {
-    let tmp2 = null != store;
-    if (tmp2) {
-      if (store.id === tmp) {
-        CLOSED = FormStates.CLOSED;
-      }
-      tmp2 = tmp4;
-    }
-    return tmp2;
-  },
-  INSTANT_INVITE_REVOKE_SUCCESS: function handleInviteRevoke(arg0) {
-    const obj = {};
-    const merged = Object.assign(obj);
-    delete tmp2[tmp];
-  },
-  INSTANT_INVITE_CREATE_SUCCESS: function handleInviteCreateSuccess(invite) {
-    const obj = {};
-    const merged = Object.assign(obj);
-    obj[invite.invite.code] = _createInvite(invite.invite);
-  },
-});
-let obj = {
-  CHANNEL_SETTINGS_INIT: function handleSettingsInit(channelId) {
-    let obj = store2;
-    let channel = store2.getChannel(channelId.channelId);
     if (null == channel) {
-      c22 = false;
-      let OPEN = FormStates.CLOSED;
-      let OVERVIEW = null;
-      channel = null;
-      let store = null;
-      let channel2 = null;
-      closure_20 = {};
-    } else {
-      OPEN = FormStates.OPEN;
-      store = channel;
-      let _location = null;
-      if ("location" in channelId) {
-        _location = null;
-        if (null != channelId.location) {
-          _location = channelId.location;
-        }
-      }
-      let subsection = null;
-      if ("subsection" in channelId) {
-        subsection = channelId.subsection;
-      }
-      closure_4 = subsection;
-      if (null != store) {
-        store = store.set("nsfw", store.isNSFW());
-      }
-      channel2 = obj.getChannel(store.parent_id);
-      const guildId = store.getGuildId();
-      if (store.isModeratorReportChannel()) {
-        OVERVIEW = tmp10.PERMISSIONS;
-        let tmp11 = tmp10;
-      } else {
-        OVERVIEW = tmp10.OVERVIEW;
-        tmp11 = tmp10;
-      }
-      closure_19 = {};
-      let tmp12 = OVERVIEW;
-      if (OVERVIEW == null) {
-        tmp12 = OVERVIEW;
-      }
-      OVERVIEW = tmp12;
-      let tmp15 = null != store;
-      if (tmp15) {
-        tmp15 = OVERVIEW === tmp11.INSTANT_INVITES;
-      }
-      if (tmp15) {
-        c21 = true;
-        const HTTP = sendRequest.HTTP;
-        obj = { url: null, oldFormErrors: true, rejectWithError: true };
-        obj[0] = closure_15.INSTANT_INVITES(store.id);
-        const value = HTTP.get(obj);
-        value.then(
-          (body) => {
-            c21 = false;
-            let obj = callback(table[11]);
-            obj = { type: "CHANNEL_SETTINGS_LOADED_INVITES", invites: body.body };
-            obj.dispatch(obj);
-          },
-          () => {
-            c21 = false;
-            return false;
-          },
-        );
-      }
-      return true;
-    }
-  },
-  CHANNEL_SETTINGS_SUBMIT: function handleSettingsSubmit() {
-    const SUBMITTING = FormStates.SUBMITTING;
-    closure_19 = {};
-  },
-  CHANNEL_SETTINGS_SUBMIT_SUCCESS: function handleSettingsSubmitSuccess() {
-    closure_5 = closure_6;
-    const OPEN = FormStates.OPEN;
-  },
-  CHANNEL_SETTINGS_SUBMIT_FAILURE: function handleSettingsSubmitFailure(errors) {
-    closure_0 = errors;
-    const OPEN = FormStates.OPEN;
-    errors = errors.errors;
-    if (errors == null) {
-      errors = {};
-    }
-    const keys = Object.keys(errors);
-    closure_19 = keys.reduce((arg0, arg1) => {
-      if (obj2.isArray(errors.errors[arg1])) {
-        arg0[arg1] = obj.join("\n");
-      } else {
-        arg0[arg1] = obj;
-      }
-      return arg0;
-    }, {});
-  },
-  CHANNEL_SETTINGS_CLOSE: function handleSettingsClose() {
-    c22 = false;
-    CLOSED = FormStates.CLOSED;
-    c3 = null;
-    c5 = null;
-    c6 = null;
-    c7 = null;
-    closure_20 = {};
-  },
-  CHANNEL_PERMISSIONS_PUT_OVERWRITE_SUCCESS: handleOverwriteUpdate,
-  CHANNEL_PERMISSIONS_DELETE_OVERWRITE_SUCCESS: handleOverwriteUpdate,
-  CHANNEL_SETTINGS_OVERWRITE_SELECT: function handlePermissionOverwriteSelect(overwriteId) {
-    overwriteId = overwriteId.overwriteId;
-  },
-  CHANNEL_SETTINGS_UPDATE: function handleSettingsUpdate(arg0) {
-    ({
-      name,
-      channelType,
-      topic,
-      bitrate,
-      userLimit,
-      nsfw,
-      flags,
-      rateLimitPerUser,
-      defaultThreadRateLimitPerUser,
-      autoArchiveDuration,
-      locked,
-      invitable,
-      defaultAutoArchiveDuration,
-      template,
-      defaultReactionEmoji,
-      rtcRegion,
-      videoQualityMode,
-      availableTags,
-      defaultSortOrder,
-      defaultForumLayout,
-      defaultTagSetting,
-      iconEmoji,
-      themeColor,
-      applicationId,
-    } = arg0);
-    if (null == store) {
       return false;
     } else {
       if (null != name) {
-        store = store.set("name", name);
+        channel = channel.set("name", name);
       }
       if (null != topic) {
-        store = store.set("topic", topic);
+        channel = channel.set("topic", topic);
       }
       if (null != bitrate) {
-        store = store.set("bitrate", bitrate);
+        channel = channel.set("bitrate", bitrate);
       }
       if (null != userLimit) {
-        store = store.set("userLimit", userLimit);
+        channel = channel.set("userLimit", userLimit);
       }
       if (null != nsfw) {
-        store = store.set("nsfw", nsfw);
+        channel = channel.set("nsfw", nsfw);
       }
       if (null != flags) {
-        store = store.set("flags", flags);
+        channel = channel.set("flags", flags);
       }
       if (null != rateLimitPerUser) {
-        store = store.set("rateLimitPerUser", rateLimitPerUser);
+        channel = channel.set("rateLimitPerUser", rateLimitPerUser);
       }
       if (null != defaultThreadRateLimitPerUser) {
-        store = store.set("defaultThreadRateLimitPerUser", defaultThreadRateLimitPerUser);
+        channel = channel.set("defaultThreadRateLimitPerUser", defaultThreadRateLimitPerUser);
       }
       if (null != autoArchiveDuration) {
         let obj = {};
-        const merged = Object.assign(store.threadMetadata);
+        const merged = Object.assign(channel.threadMetadata);
         obj.autoArchiveDuration = autoArchiveDuration;
-        store = store.set("threadMetadata", obj);
+        channel = channel.set("threadMetadata", obj);
       }
       if (null != locked) {
         obj = {};
-        const merged1 = Object.assign(store.threadMetadata);
+        const merged1 = Object.assign(channel.threadMetadata);
         obj.locked = locked;
-        store = store.set("threadMetadata", obj);
+        channel = channel.set("threadMetadata", obj);
       }
       if (null != invitable) {
         obj = {};
-        const merged2 = Object.assign(store.threadMetadata);
+        const merged2 = Object.assign(channel.threadMetadata);
         obj.invitable = invitable;
-        store = store.set("threadMetadata", obj);
+        channel = channel.set("threadMetadata", obj);
       }
       if (null != defaultAutoArchiveDuration) {
-        store = store.set("defaultAutoArchiveDuration", defaultAutoArchiveDuration);
+        channel = channel.set("defaultAutoArchiveDuration", defaultAutoArchiveDuration);
       }
       if (null != template) {
-        store = store.set("template", template);
+        channel = channel.set("template", template);
       }
       if (null != channelType) {
-        store = store.set("type", channelType);
+        channel = channel.set("type", channelType);
       }
       if (undefined !== rtcRegion) {
-        store = store.set("rtcRegion", rtcRegion);
+        channel = channel.set("rtcRegion", rtcRegion);
       }
       if (null != videoQualityMode) {
-        store = store.set("videoQualityMode", videoQualityMode);
+        channel = channel.set("videoQualityMode", videoQualityMode);
       }
       if (undefined !== defaultReactionEmoji) {
-        store = store.set("defaultReactionEmoji", defaultReactionEmoji);
+        channel = channel.set("defaultReactionEmoji", defaultReactionEmoji);
       }
       if (null != availableTags) {
-        store = store.set("availableTags", availableTags);
+        channel = channel.set("availableTags", availableTags);
       }
       if (null != defaultSortOrder) {
-        store = store.set("defaultSortOrder", defaultSortOrder);
+        channel = channel.set("defaultSortOrder", defaultSortOrder);
       }
       if (null != defaultTagSetting) {
-        store = store.set("defaultTagSetting", defaultTagSetting);
+        channel = channel.set("defaultTagSetting", defaultTagSetting);
       }
       if (null != defaultForumLayout) {
-        store = store.set("defaultForumLayout", defaultForumLayout);
+        channel = channel.set("defaultForumLayout", defaultForumLayout);
       }
       if (undefined !== iconEmoji) {
-        store = store.set("iconEmoji", iconEmoji);
+        channel = channel.set("iconEmoji", iconEmoji);
       }
       if (null != themeColor) {
-        store = store.set("themeColor", themeColor);
+        channel = channel.set("themeColor", themeColor);
       }
       if (null != applicationId) {
-        store = store.set("application_id", applicationId);
+        channel = channel.set("application_id", applicationId);
       }
-      callback2();
+      closure_26();
     }
   },
   CHANNEL_SETTINGS_SET_SECTION: function handleSetSection(arg0) {
-    ({ section: closure_3, subsection: closure_4 } = arg0);
-    let tmp = null != store;
+    ({ section: OVERVIEW, subsection: closure_4 } = arg0);
+    let tmp = null != channel;
     if (tmp) {
-      tmp = closure_3 === constants.INSTANT_INVITES;
+      tmp = OVERVIEW === constants.INSTANT_INVITES;
     }
     if (tmp) {
       c21 = true;
-      const HTTP = sendRequest.HTTP;
-      const obj = { url: null, oldFormErrors: true, rejectWithError: true };
-      obj[0] = closure_15.INSTANT_INVITES(store.id);
-      const value = HTTP.get(obj);
+      const HTTP = HTTPUtils.HTTP;
+      const obj = { url: __initData.INSTANT_INVITES(channel.id), oldFormErrors: true, rejectWithError: true };
+      value = HTTP.get(obj);
       value.then(
         (body) => {
           c21 = false;
-          let obj = callback(table[11]);
-          obj = { type: "CHANNEL_SETTINGS_LOADED_INVITES", invites: body.body };
+          const obj = { type: "CHANNEL_SETTINGS_LOADED_INVITES", invites: body.body };
           obj.dispatch(obj);
         },
         () => {
@@ -825,10 +516,9 @@ let obj = {
     }
   },
   CHANNEL_SETTINGS_LOADED_INVITES: function handleLoadedInvites(invites) {
-    closure_20 = {};
     invites = invites.invites;
     const item = invites.forEach((code) => {
-      closure_20[code.code] = callback(code);
+      invites[code.code] = _createInvite(code);
     });
   },
   CHANNEL_UPDATES: function handleChannelUpdates(channels) {
@@ -839,7 +529,6 @@ let obj = {
       let flag = false;
       const tmp2 = channels[Symbol.iterator]();
       while (tmp2 !== undefined) {
-        let tmp6 = _syncChannelUpdate;
         let tmp7 = _syncChannelUpdate(tmp4.id) || flag;
         flag = tmp7;
         continue;
@@ -855,9 +544,9 @@ let obj = {
     return tmp2;
   },
   CHANNEL_DELETE: function handleChannelDelete(arg0) {
-    let tmp2 = null != store;
+    let tmp2 = null != channel;
     if (tmp2) {
-      if (store.id === tmp) {
+      if (channel.id === tmp) {
         CLOSED = FormStates.CLOSED;
       }
       tmp2 = tmp4;
@@ -875,6 +564,7 @@ let obj = {
     obj[invite.invite.code] = _createInvite(invite.invite);
   },
 };
-let result = set.fileFinishedImporting("stores/ChannelSettingsStore.tsx");
+const channelSettingsStore = new ChannelSettingsStore(DispatcherDefault, invites);
+let result = size.fileFinishedImporting("stores/ChannelSettingsStore.tsx");
 
 export default channelSettingsStore;

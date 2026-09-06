@@ -1,15 +1,16 @@
 // discord_app/modules/display_name_styles/DisplayNameStylesEffectOrder.tsx
-import closure_2 from "../../../_runtime/00019_noop.js";
-import items3 from "DisplayNameStylesConstants.tsx";
+import noop from "../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const EFFECT_ORDER = items3.EFFECT_ORDER;
+const require = fn;
+const DisplayNameStylesConstants = fn(1389);
+const EFFECT_ORDER = DisplayNameStylesConstants.EFFECT_ORDER;
 let items = [...tmp2.FLYWHEEL_EFFECTS];
-const result = require("set").fileFinishedImporting("modules/display_name_styles/DisplayNameStylesEffectOrder.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/display_name_styles/DisplayNameStylesEffectOrder.tsx");
 
 export const useVisibleEffectOrder = function useVisibleEffectOrder() {
   isDisplayNameStylesFlywheelSettersEnabled =
     isDisplayNameStylesFlywheelSettersEnabled(9177).useIsDisplayNameStylesFlywheelSettersEnabled("effect-order");
   items = [isDisplayNameStylesFlywheelSettersEnabled];
-  return React.useMemo(() => (isDisplayNameStylesFlywheelSettersEnabled ? closure_1_4 : closure_1_3), items);
+  return noop.useMemo(() => (isDisplayNameStylesFlywheelSettersEnabled ? items : EFFECT_ORDER), items);
 };

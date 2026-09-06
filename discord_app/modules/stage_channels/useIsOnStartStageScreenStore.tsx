@@ -1,34 +1,34 @@
 // discord_app/modules/stage_channels/useIsOnStartStageScreenStore.tsx
-import closure_3 from "../../../_runtime/00019_noop.js";
-import closure_4 from "../../stores/PermissionStore.tsx";
-import closure_5 from "../../stores/SelectedChannelStore.tsx";
-import keys from "../../../_runtime/00560_keys.js";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import ReactBatchUpdates from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
+import StageChannelPermissions from "StageChannelPermissions.tsx";
+import noop from "../../../_runtime/metro/00019__.js";
+import PermissionStore from "../../stores/PermissionStore.tsx";
+import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
 
-const require = arg1;
-keys = keys.create(() => ({ isOnStartStageScreen: true }));
-const result = require("set").fileFinishedImporting("modules/stage_channels/useIsOnStartStageScreenStore.tsx");
+require = fn;
+let module_560 = fn(560);
+module_560 = module_560.create(() => ({ isOnStartStageScreen: true }));
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/useIsOnStartStageScreenStore.tsx");
 
-export default keys;
+export default module_560;
 export const setIsOnStartStageScreen = function setIsOnStartStageScreen(arg0) {
-  const _require = arg0;
-  require("../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() =>
-    closure_1_6.setState({ isOnStartStageScreen: closure_0 }),
-  );
+  _require = arg0;
+  require("ReactBatchUpdates").batchUpdates(() => state.setState({ isOnStartStageScreen }));
 };
 export const useUpdateIsOnStartStageScreenEffect = function useUpdateIsOnStartStageScreenEffect(id) {
-  const _require = id;
-  const items = [closure_5];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+  _require = id;
+  const items = [SelectedChannelStore];
+  const stateFromStores = require("initialize").useStateFromStores(
     items,
-    () => closure_1_5.getVoiceChannelId() === id.id,
+    () => SelectedChannelStore.getVoiceChannelId() === id.id,
   );
-  let obj = initialize;
-  const items1 = [closure_4];
+  let obj = require("initialize");
+  const items1 = [PermissionStore];
   const items2 = [id];
-  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+  const stateFromStores1 = require("initialize").useStateFromStores(
     items1,
-    () => closure_1_4.can(id(1965).MODERATE_STAGE_CHANNEL_PERMISSIONS, id),
+    () => PermissionStore.can(StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, closure_0),
     items2,
   );
   let tmp3 = stateFromStores1;
@@ -37,17 +37,15 @@ export const useUpdateIsOnStartStageScreenEffect = function useUpdateIsOnStartSt
   }
   dependencyMap = tmp3;
   const items3 = [stateFromStores, tmp3];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (stateFromStores) {
       if (!tmp) {
-        id = false;
-        id(1249).batchUpdates(() => closure_1_6.setState({ isOnStartStageScreen: closure_0 }));
-        const obj2 = id(1249);
+        let isOnStartStageScreen = false;
+        ReactBatchUpdates.batchUpdates(() => state.setState({ isOnStartStageScreen }));
       }
     } else {
-      id = tmp;
-      id(1249).batchUpdates(() => closure_1_6.setState({ isOnStartStageScreen: closure_0 }));
-      const obj = id(1249);
+      isOnStartStageScreen = tmp;
+      ReactBatchUpdates.batchUpdates(() => state.setState({ isOnStartStageScreen }));
     }
   }, items3);
 };

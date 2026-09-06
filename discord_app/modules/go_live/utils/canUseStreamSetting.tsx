@@ -1,23 +1,21 @@
 // discord_app/modules/go_live/utils/canUseStreamSetting.tsx
-import set from "../../../../_runtime/00002_set.js";
-import GuildFeatures from "../../premium/PremiumConstants.tsx";
-import getPremiumPlanItemDefault from "../../../utils/PremiumUtils.tsx";
-import getGuildTierFromGuild from "../../../utils/GuildBoostingUtils.tsx";
+import PremiumConstants from "../../premium/PremiumConstants.tsx";
+import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
+import GuildBoostingUtils from "../../../utils/GuildBoostingUtils.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const StreamQualities = GuildFeatures.StreamQualities;
-let result = set.fileFinishedImporting("modules/go_live/utils/canUseStreamSetting.tsx");
+const StreamQualities = PremiumConstants.StreamQualities;
+let result = size.fileFinishedImporting("modules/go_live/utils/canUseStreamSetting.tsx");
 
-export default function canUseStreamSetting(quality, currentUser) {
+export default function canUseStreamSetting(quality, currentUser, arg2) {
   if (null != quality) {
     let flag = false;
     if (null != quality.quality) {
       quality = quality.quality;
       if (StreamQualities.HIGH_STREAMING_QUALITY === quality) {
-        flag = getPremiumPlanItemDefault.canStreamQuality(getPremiumPlanItemDefault.StreamQuality.HIGH, currentUser);
-        const obj2 = getPremiumPlanItemDefault;
+        flag = PremiumUtilsDefault.canStreamQuality(PremiumUtilsDefault.StreamQuality.HIGH, currentUser);
       } else if (tmp2.MID_STREAMING_QUALITY === quality) {
-        flag = getPremiumPlanItemDefault.canStreamQuality(getPremiumPlanItemDefault.StreamQuality.MID, currentUser);
-        const obj = getPremiumPlanItemDefault;
+        flag = PremiumUtilsDefault.canStreamQuality(PremiumUtilsDefault.StreamQuality.MID, currentUser);
       } else {
         const quality2 = quality.quality;
         flag = false;
@@ -27,8 +25,7 @@ export default function canUseStreamSetting(quality, currentUser) {
     if (null != quality.guildPremiumTier) {
       let result = flag;
       if (!flag) {
-        result = getGuildTierFromGuild.isGuildBoostedAtLeast(arg2, quality.guildPremiumTier);
-        const obj3 = getGuildTierFromGuild;
+        result = GuildBoostingUtils.isGuildBoostedAtLeast(arg2, quality.guildPremiumTier);
       }
       tmp7 = result;
     }

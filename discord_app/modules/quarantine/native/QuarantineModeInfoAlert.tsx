@@ -1,40 +1,40 @@
 // discord_app/modules/quarantine/native/QuarantineModeInfoAlert.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import Button from "../../../design/void/native.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
-import componentDidMountDefault from "../../../components_native/common/Alert.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
-import importDefaultResult from "../../rebrand/native/TextStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
+import native from "../../../design/void/native.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import common_AlertDefault from "../../../components_native/common/Alert.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import TextStyles from "../../rebrand/native/TextStyles.tsx";
 
-require = arg1;
-noopAll;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-createCacheKey = { header: null, text: null };
-createCacheKey = {};
+require = fn;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+fn(4560);
+let createStyles = { header: null, text: null };
+createStyles = {};
 const merged = Object.assign(
-  importDefaultResult(require("ME").Fonts.PRIMARY_BOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24),
+  TextStyles(fn(1074).Fonts.PRIMARY_BOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24),
 );
-createCacheKey.textAlign = "center";
-createCacheKey.marginVertical = 12;
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { textAlign: "center", marginVertical: 8 };
-let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/quarantine/native/QuarantineModeInfoAlert.tsx");
+createStyles.textAlign = "center";
+createStyles.marginVertical = 12;
+createStyles.header = createStyles;
+createStyles.text = { textAlign: "center", marginVertical: 8 };
+let closure_5 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quarantine/native/QuarantineModeInfoAlert.tsx");
 
 export default function QuarantineModeInfoAlert(onClose) {
-  const tmp = callback3();
+  const tmp = closure_5();
   let obj = { onClose: onClose.onClose, children: null };
   obj = { style: tmp.header, children: null };
-  const intl = getSystemLocale.intl;
-  obj[1] = intl.string(getSystemLocale.t.EouHwv);
-  const items = [callback(Button.LegacyText, obj)];
+  const intl = util.intl;
+  obj.children = intl.string(util.t.EouHwv);
+  const items = [React3(native.LegacyText, obj)];
   obj = { style: tmp.text, variant: "text-md/medium", children: null };
-  const intl2 = getSystemLocale.intl;
-  obj[2] = intl2.string(getSystemLocale.t.zNPBMA);
-  items[1] = callback(Text.Text, obj);
-  obj[1] = items;
-  return callback2(componentDidMountDefault, obj);
+  const intl2 = util.intl;
+  obj.children = intl2.string(util.t.zNPBMA);
+  items[1] = React3(Text_Text.Text, obj);
+  obj.children = items;
+  return React4(common_AlertDefault, obj);
 }

@@ -1,7 +1,7 @@
 // discord_common/js/shared/DevtoolsExtension.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/DevtoolsExtension.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/DevtoolsExtension.tsx");
 
 export const logFluxAction = function logFluxAction(description, durationMs) {
   let __DISCORD_DEVTOOLS = null;
@@ -29,7 +29,7 @@ export const reportEvent = function reportEvent(arg0) {
     }
   }
 };
-export const notifyStoreCreated = function notifyStoreCreated(arg0) {
+export const notifyStoreCreated = function notifyStoreCreated(storeName) {
   let __DISCORD_DEVTOOLS = null;
   if (typeof window !== "undefined") {
     const _window = window;
@@ -38,13 +38,12 @@ export const notifyStoreCreated = function notifyStoreCreated(arg0) {
   if (__DISCORD_DEVTOOLS != null) {
     const notifyStoreCreated = __DISCORD_DEVTOOLS.notifyStoreCreated;
     if (notifyStoreCreated != null) {
-      const obj = { storeName: null };
-      obj[0] = arg0;
+      const obj = { storeName };
       notifyStoreCreated(obj);
     }
   }
 };
-export const notifyStoreChange = function notifyStoreChange(arg0) {
+export const notifyStoreChange = function notifyStoreChange(storeName) {
   let __DISCORD_DEVTOOLS = null;
   if (typeof window !== "undefined") {
     const _window = window;
@@ -53,8 +52,7 @@ export const notifyStoreChange = function notifyStoreChange(arg0) {
   if (__DISCORD_DEVTOOLS != null) {
     const notifyStoreChange = __DISCORD_DEVTOOLS.notifyStoreChange;
     if (notifyStoreChange != null) {
-      const obj = { storeName: null };
-      obj[0] = arg0;
+      const obj = { storeName };
       notifyStoreChange(obj);
     }
   }

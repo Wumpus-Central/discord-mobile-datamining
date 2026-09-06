@@ -1,9 +1,9 @@
 // discord_app/modules/guild_settings/utils/getDefaultGuildSettingsSection.tsx
-import set from "../../../../_runtime/00002_set.js";
-import ME from "../../../Constants.tsx";
+import Constants from "../../../Constants.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const GuildSettingsSections = ME.GuildSettingsSections;
-const result = set.fileFinishedImporting("modules/guild_settings/utils/getDefaultGuildSettingsSection.tsx");
+const GuildSettingsSections = Constants.GuildSettingsSections;
+const result = size.fileFinishedImporting("modules/guild_settings/utils/getDefaultGuildSettingsSection.tsx");
 
 export const getDefaultGuildSettingsSection = function getDefaultGuildSettingsSection() {
   return GuildSettingsSections.PROFILE;

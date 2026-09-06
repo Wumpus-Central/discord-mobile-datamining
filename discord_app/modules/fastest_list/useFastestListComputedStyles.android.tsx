@@ -1,8 +1,9 @@
 // discord_app/modules/fastest_list/useFastestListComputedStyles.android.tsx
-import closure_0 from "../../../_runtime/00019_noop.js";
-import { StyleSheet } from "../../../_runtime/00017_get_ActivityIndicator.js";
+import noop from "../../../_runtime/metro/00019__.js";
 
-const result = require("set").fileFinishedImporting("modules/fastest_list/useFastestListComputedStyles.android.tsx");
+const StyleSheet = fn(17).StyleSheet;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/fastest_list/useFastestListComputedStyles.android.tsx");
 
 export default function useFastestListComputedStyles(style) {
   style = style.style;
@@ -18,7 +19,7 @@ export default function useFastestListComputedStyles(style) {
     } else {
       obj = { flex: 1 };
     }
-    const flattenResult = closure_1_1.flatten(obj);
+    const flattenResult = StyleSheet.flatten(obj);
     let num;
     if (flattenResult != null) {
       num = flattenResult.marginStart;
@@ -135,15 +136,12 @@ export default function useFastestListComputedStyles(style) {
         }
         if (typeof num3 === "number") {
           if (typeof num4 === "number") {
-            obj = { style: null, marginEnd: null, marginStart: null };
-            obj[0] = flattenResult;
-            obj[1] = num3 + num4;
-            obj[2] = num + num2;
+            obj = { style: flattenResult, marginEnd: num3 + num4, marginStart: num + num2 };
             return obj;
           }
         }
         const _Error = Error;
-        error = new Error("FastestList: paddingStart and paddingEnd must be numbers.");
+        const error = new Error("FastestList: paddingStart and paddingEnd must be numbers.");
         throw error;
       }
     }

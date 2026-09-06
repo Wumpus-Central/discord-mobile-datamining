@@ -1,9 +1,9 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/invite/getChannelAndRecipientsFromInvite.tsx
-import set from "../../../../../../../../../_runtime/00002_set.js";
-import createChannelRecord from "../../../../../../../../records/ChannelRecord.tsx";
+import ChannelRecord from "../../../../../../../../records/ChannelRecord.tsx";
+import size from "../../../../../../../../../_runtime/metro/00002__.js";
 
-let closure_0 = createChannelRecord.createChannelRecordFromInvite;
-const result = set.fileFinishedImporting(
+let closure_0 = ChannelRecord.createChannelRecordFromInvite;
+const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/row_data/embeds/coded_links/invite/getChannelAndRecipientsFromInvite.tsx",
 );
 
@@ -13,16 +13,15 @@ export default function getChannelAndRecipientsFromInvite(channel) {
       const recipients = channel.channel.recipients;
       let substr = recipients.slice();
     }
-    let obj = { recipients_: null, channel: null };
-    obj[0] = substr;
+    let obj = { recipients_: substr, channel: null };
     let tmp = null;
     if (null != channel.channel) {
       obj = {};
       const merged = Object.assign(channel.channel);
       obj.recipients = substr;
-      tmp = callback(obj);
+      tmp = closure_0(obj);
     }
-    obj[1] = tmp;
+    obj.channel = tmp;
     return obj;
   }
   substr = [];

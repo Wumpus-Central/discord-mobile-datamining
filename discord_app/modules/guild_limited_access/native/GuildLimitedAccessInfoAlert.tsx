@@ -1,57 +1,53 @@
 // discord_app/modules/guild_limited_access/native/GuildLimitedAccessInfoAlert.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import Button from "../../../design/void/native.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
-import componentDidMountDefault from "../../../components_native/common/Alert.tsx";
-import closure_3 from "../../../stores/GuildStore.tsx";
-import { GUILD_LIMITED_ACCESS_HC_LINK as closure_4 } from "../GuildLimitedAccessConstants.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
-import importDefaultResult from "../../rebrand/native/TextStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
+import native from "../../../design/void/native.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import common_AlertDefault from "../../../components_native/common/Alert.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import GuildStore from "../../../stores/GuildStore.tsx";
+import TextStyles from "../../rebrand/native/TextStyles.tsx";
 
-require = arg1;
-noopAll;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { header: null, text: null };
-createCacheKey = {};
+require = fn;
+const helpdeskArticle = fn(13832).GUILD_LIMITED_ACCESS_HC_LINK;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+fn(4560);
+let createStyles = { header: null, text: null };
+createStyles = {};
 const merged = Object.assign(
-  importDefaultResult(require("ME").Fonts.PRIMARY_BOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24),
+  TextStyles(fn(1074).Fonts.PRIMARY_BOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24),
 );
-createCacheKey.textAlign = "center";
-createCacheKey.marginVertical = 12;
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { textAlign: "center", marginVertical: 8 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting(
-  "modules/guild_limited_access/native/GuildLimitedAccessInfoAlert.tsx",
-);
+createStyles.textAlign = "center";
+createStyles.marginVertical = 12;
+createStyles.header = createStyles;
+createStyles.text = { textAlign: "center", marginVertical: 8 };
+let closure_7 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_limited_access/native/GuildLimitedAccessInfoAlert.tsx");
 
 export default function GuildLimitedAccessInfoAlert(arg0) {
   ({ guildId, onClose } = arg0);
-  const tmp = callback3();
-  const intl = getSystemLocale.intl;
-  let obj = { helpdeskArticle: closure_4 };
-  guild = guild.getGuild(guildId);
-  let formatResult1 = intl.format(getSystemLocale.t.ZqkXsC, obj);
+  const tmp = closure_7();
+  const intl = util.intl;
+  let obj = { helpdeskArticle };
+  const guild = GuildStore.getGuild(guildId);
+  let formatResult1 = intl.format(util.t.ZqkXsC, obj);
   if (null != guild) {
     const intl2 = tmp2(1114).intl;
-    obj = { guildName: null, helpdeskArticle: null };
-    obj[0] = guild.name;
-    obj[1] = tmp4;
+    obj = { guildName: guild.name, helpdeskArticle: tmp4 };
     formatResult1 = intl2.format(tmp2(1114).t.jn0Xyx, obj);
   }
   obj = { onClose, children: null };
-  const formatResult = intl.format(getSystemLocale.t.ZqkXsC, obj);
-  tmp4 = closure_4;
-  obj1 = { style: tmp.header, children: null };
+  const formatResult = intl.format(util.t.ZqkXsC, obj);
+  tmp4 = helpdeskArticle;
+  const obj1 = { style: tmp.header, children: null };
   const intl3 = tmp2(1114).intl;
-  obj1[1] = intl3.string(getSystemLocale.t.kJwpBW);
+  obj1.children = intl3.string(util.t.kJwpBW);
   const items = [
-    callback(Button.LegacyText, obj1),
-    callback(Text.Text, { style: tmp.text, variant: "text-md/medium", children: formatResult1 }),
+    hasOwnProperty(native.LegacyText, obj1),
+    hasOwnProperty(Text_Text.Text, { style: tmp.text, variant: "text-md/medium", children: formatResult1 }),
   ];
-  obj[1] = items;
-  return callback2(componentDidMountDefault, obj);
+  obj.children = items;
+  return timestampProducer(common_AlertDefault, obj);
 }

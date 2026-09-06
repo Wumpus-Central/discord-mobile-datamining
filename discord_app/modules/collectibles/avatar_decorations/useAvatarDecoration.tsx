@@ -1,17 +1,18 @@
 // discord_app/modules/collectibles/avatar_decorations/useAvatarDecoration.tsx
-import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../stores/GuildMemberStore.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/collectibles/avatar_decorations/useAvatarDecoration.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/avatar_decorations/useAvatarDecoration.tsx");
 
 export const useAvatarDecoration = function useAvatarDecoration(user, guildId) {
-  const _require = user;
+  _require = user;
   dependencyMap = guildId;
-  let items = [closure_3];
-  return require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => {
-    const items = [closure_1_3];
-    const first = closure_1_2(items, 1)[0];
+  let items = [GuildMemberStore];
+  return require("useStateFromStores").useStateFromStores(items, () => {
+    const items = [GuildMemberStore];
+    const first = _slicedToArray(items, 1)[0];
     let member = null;
     if (null != closure_1) {
       member = null;
@@ -33,18 +34,18 @@ export const useAvatarDecoration = function useAvatarDecoration(user, guildId) {
     return avatarDecoration;
   });
 };
-export const getAvatarDecoration = function getAvatarDecoration(user, closure_2) {
+export const getAvatarDecoration = function getAvatarDecoration(user, guildId) {
   let tmp = arg2;
   if (arg2 === undefined) {
-    const items = [closure_3];
+    const items = [GuildMemberStore];
     tmp = items;
   }
-  const first = callback(tmp, 1)[0];
+  const first = _slicedToArray(tmp, 1)[0];
   let member = null;
-  if (null != closure_2) {
+  if (null != guildId) {
     member = null;
     if (null != user) {
-      member = first.getMember(closure_2, user.id);
+      member = first.getMember(guildId, user.id);
     }
   }
   let avatarDecoration;

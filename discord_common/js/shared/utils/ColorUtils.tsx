@@ -1,6 +1,6 @@
 // discord_common/js/shared/utils/ColorUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
-import nDefault from "../../../../_runtime/00672_n.js";
+import _modDef672 from "../../../../_runtime/metro/00672__.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
 function int2hslRaw(initialColor) {
   const result = (initialColor >> 16 & 255) / 255;
@@ -17,15 +17,14 @@ function int2hslRaw(initialColor) {
       sum = rounded + 360;
     }
     const result2 = (bound1 + bound) / 2;
-    const obj = { h: null, s: null, l: null };
-    obj[0] = sum;
+    const obj = { h: sum, s: null, l: null };
     let num7 = 0;
     if (!tmp6) {
       const _Math2 = Math;
       num7 = diff / (1 - Math.abs(2 * result2 - 1));
     }
-    obj[1] = +num7.toFixed(3);
-    obj[2] = +result2.toFixed(3);
+    obj.s = +num7.toFixed(3);
+    obj.l = +result2.toFixed(3);
     return obj;
   } else if (bound1 === result) {
     result1 = (result1 - num) / diff;
@@ -38,10 +37,10 @@ function int2hslRaw(initialColor) {
   }
 }
 const re2 = /rgba?\((\d{1,3}), ?(\d{1,3}), ?(\d{1,3})\)?(?:, ?(\d(?:\.\d*)?)\))?/;
-let result = set.fileFinishedImporting("../discord_common/js/shared/utils/ColorUtils.tsx");
+let result = size.fileFinishedImporting("../discord_common/js/shared/utils/ColorUtils.tsx");
 
-export const hex2int = function hex2int(callback) {
-  return nDefault(callback).num();
+export const hex2int = function hex2int(c8) {
+  return _modDef672(c8).num();
 };
 export const int2hex = function int2hex(color) {
   if (color <= 16777215) {
@@ -162,7 +161,7 @@ export const hex2rgb = function hex2rgb(PRIMARY_200, alphaResult) {
     alphaResult = null;
   }
   if (obj.valid(PRIMARY_200)) {
-    const obj2 = nDefault(PRIMARY_200);
+    const obj2 = _modDef672(PRIMARY_200);
     if (alphaResult == null) {
       alphaResult = obj2.alpha();
     }
@@ -170,30 +169,29 @@ export const hex2rgb = function hex2rgb(PRIMARY_200, alphaResult) {
   } else {
     return null;
   }
-  obj = nDefault;
-  const tmp2 = importDefault;
+  obj = _modDef672;
 };
-export const int2rgba = function int2rgba(int2hslRaw, arg1) {
+export const int2rgba = function int2rgba(ColorUtils, arg1) {
   let result = arg1;
   if (null == arg1) {
-    result = (int2hslRaw >> 24 & 255) / 255;
+    result = (ColorUtils >> 24 & 255) / 255;
   }
-  return "rgba(" + int2hslRaw >> 16 & 255 + ", " + int2hslRaw >> 8 & 255 + ", " + 255 & int2hslRaw + ", " + result + ")";
+  return "rgba(" + ColorUtils >> 16 & 255 + ", " + ColorUtils >> 8 & 255 + ", " + 255 & ColorUtils + ", " + result + ")";
 };
 export const rgb2int = function rgb2int(tmp2Result1) {
-  const match = tmp2Result1.match(closure_2);
+  const match = tmp2Result1.match(re2);
   if (null != match) {
-    let obj = { red: null, green: null, blue: null };
+    let color = { red: null, green: null, blue: null };
     const _parseInt = parseInt;
-    obj[0] = parseInt(match[1]);
+    color.red = parseInt(match[1]);
     const _parseInt2 = parseInt;
-    obj[1] = parseInt(match[2]);
+    color.green = parseInt(match[2]);
     const _parseInt3 = parseInt;
-    obj[2] = parseInt(match[3]);
+    color.blue = parseInt(match[3]);
   } else {
-    obj = { red: 0, green: 0, blue: 0 };
+    color = { red: 0, green: 0, blue: 0 };
   }
-  return (obj.red << 16) + (obj.green << 8) + obj.blue;
+  return (color.red << 16) + (color.green << 8) + color.blue;
 };
 export const int2hsv = function int2hsv(color) {
   let num = (color >> 16 & 255) / 255;
@@ -207,10 +205,7 @@ export const int2hsv = function int2hsv(color) {
     num2 = diff / bound;
   }
   if (bound === bound1) {
-    const obj = { h: null, s: null, v: null };
-    obj[0] = 0;
-    obj[1] = num2;
-    obj[2] = bound;
+    const obj = { h: 0, s: num2, v: bound };
     return obj;
   } else {
     if (num === bound) {
@@ -235,7 +230,7 @@ export const getDarkness = function getDarkness(hex2intResult) {
   return 1 - (0.299 * (hex2intResult >> 16 & 255) + 0.587 * (hex2intResult >> 8 & 255) + 0.114 * (255 & hex2intResult)) / 255;
 };
 export const isValidHex = function isValidHex(variantValue) {
-  return nDefault.valid(variantValue);
+  return _modDef672.valid(variantValue);
 };
 export const int2rgbArray = function int2rgbArray(modalV2BackgroundColor) {
   const items = [modalV2BackgroundColor >> 16 & 255, modalV2BackgroundColor >> 8 & 255, 255 & modalV2BackgroundColor];
@@ -243,8 +238,8 @@ export const int2rgbArray = function int2rgbArray(modalV2BackgroundColor) {
 };
 export const getLuminance = function getLuminance(arg0, arg1, arg2) {
   const items = [arg0, arg1, arg2];
-  const mapped = items.map((arg0) => {
-    const result = arg0 / 255;
+  const mapped = items.map((item) => {
+    const result = item / 255;
     if (result <= 0.03928) {
       let result1 = result / 12.92;
     } else {
@@ -260,8 +255,8 @@ export const getContrast = function getContrast(hex2intResult, hex2intResult1) {
   const items1 = [hex2intResult1 >> 16 & 255, hex2intResult1 >> 8 & 255, 255 & hex2intResult1];
   const items2 = [, , ];
   [arr3[0], arr3[1], arr3[2]] = items;
-  const mapped = items2.map((arg0) => {
-    const result = arg0 / 255;
+  const mapped = items2.map((item) => {
+    const result = item / 255;
     if (result <= 0.03928) {
       let result1 = result / 12.92;
     } else {
@@ -273,8 +268,8 @@ export const getContrast = function getContrast(hex2intResult, hex2intResult1) {
   const sum = 0.2126 * mapped[0] + 0.7152 * mapped[1] + 0.0722 * mapped[2];
   const items3 = [, , ];
   [arr4[0], arr4[1], arr4[2]] = items1;
-  const mapped1 = items3.map((arg0) => {
-    const result = arg0 / 255;
+  const mapped1 = items3.map((item) => {
+    const result = item / 255;
     if (result <= 0.03928) {
       let result1 = result / 12.92;
     } else {

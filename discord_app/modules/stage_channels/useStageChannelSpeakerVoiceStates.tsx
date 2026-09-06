@@ -1,52 +1,54 @@
 // discord_app/modules/stage_channels/useStageChannelSpeakerVoiceStates.tsx
-import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../favorites/FavoriteStore.tsx";
-import closure_5 from "../../stores/ChannelStore.tsx";
-import { getComparator } from "../../stores/views/SortedVoiceStateStore.tsx";
-import closure_7 from "StageChannelParticipantStore.tsx";
+import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
+import GlobalUtils from "../../utils/GlobalUtils.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import FavoriteStore from "../favorites/FavoriteStore.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
+import StageChannelParticipantStore from "StageChannelParticipantStore.tsx";
 
-const require = arg1;
+require = fn;
 function transformParticipantToSortedVoiceState(user) {
   ({ voiceState, userNick } = user);
   return { user: user.user, voiceState, nick: userNick, comparator: getComparator(voiceState, userNick) };
 }
-const result = require("set").fileFinishedImporting("modules/stage_channels/useStageChannelSpeakerVoiceStates.tsx");
+const getComparator = fn(4584).getComparator;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/useStageChannelSpeakerVoiceStates.tsx");
 
 export default function useStageChannelSpeakerVoiceStates(arg0) {
-  const _require = arg0;
-  let items = [closure_7, closure_5, closure_4];
+  _require = arg0;
+  let items = [StageChannelParticipantStore, ChannelStore, FavoriteStore];
   const items1 = [arg0];
-  return callback(
-    require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+  return _slicedToArray(
+    require("initialize").useStateFromStores(
       items,
       () => {
-        if (obj.isFavoritesGuildId(callback)) {
-          const keys = closure_1_1(tmp2[7]).keys(closure_1_4.getFavoriteChannels());
-          const mapped = keys.map((arg0) => channel.getChannel(arg0));
-          let found = mapped.filter(callback(tmp2[8]).isNotNullish);
+        if (obj.isFavoritesGuildId(closure_0)) {
+          const keys = SnowflakeUtilsDefault.keys(FavoriteStore.getFavoriteChannels());
+          const mapped = keys.map((item) => channel.getChannel(item));
+          let found = mapped.filter(GlobalUtils.isNotNullish);
           let found1 = found.filter((isGuildStageVoice) => isGuildStageVoice.isGuildStageVoice());
-          const obj2 = closure_1_1(tmp2[7]);
         } else {
-          found1 = closure_1_7.getChannels(callback);
+          found1 = StageChannelParticipantStore.getChannels(closure_0);
         }
         const items = [
-          found1.reduce((arg0, id) => {
-            const mutableParticipants = store.getMutableParticipants(
+          found1.reduce((acc, id) => {
+            const mutableParticipants = closure_1_7.getMutableParticipants(
               id.id,
-              callback(table[9]).StageChannelParticipantNamedIndex.SPEAKER,
+              closure_1_0(closure_1_2[9]).StageChannelParticipantNamedIndex.SPEAKER,
             );
             const found = mutableParticipants.filter(
-              (type) => type.type === callback(table[9]).StageChannelParticipantTypes.VOICE,
+              (type) => type.type === closure_1_0(closure_1_2[9]).StageChannelParticipantTypes.VOICE,
             );
-            arg0[id.id] = found.map(closure_8);
-            return arg0;
+            acc[id.id] = found.map(closure_1_8);
+            return acc;
           }, {}),
-          found1.reduce((arg0, id) => arg0 + store.getParticipantsVersion(id.id), 0),
+          found1.reduce((acc, id) => acc + closure_1_7.getParticipantsVersion(id.id), 0),
         ];
         return items;
       },
       items1,
-      require("../../utils/SecondaryIndexMapUtils.tsx").isVersionEqual,
+      require("SecondaryIndexMapUtils").isVersionEqual,
     ),
     1,
   )[0];

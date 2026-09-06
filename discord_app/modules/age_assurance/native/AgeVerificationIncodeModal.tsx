@@ -1,83 +1,83 @@
 // discord_app/modules/age_assurance/native/AgeVerificationIncodeModal.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let closure_5 = { METHOD_SELECT: "METHOD_SELECT", VERIFY_AGE: "VERIFY_AGE" };
-createCacheKey = { headerStyle: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" };
-createCacheKey[0] = createCacheKey;
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/age_assurance/native/AgeVerificationIncodeModal.tsx");
+const require = fn;
+let jsx = fn(21).jsx;
+const constants = { METHOD_SELECT: "METHOD_SELECT", VERIFY_AGE: "VERIFY_AGE" };
+fn(4560);
+let createStyles = { headerStyle: null };
+createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" };
+createStyles.headerStyle = createStyles;
+let closure_6 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/age_assurance/native/AgeVerificationIncodeModal.tsx");
 
 export default function AgeVerificationIncodeModal(webviewUrl) {
   webviewUrl = webviewUrl.webviewUrl;
-  const onComplete = webviewUrl.onComplete;
+  let onComplete = webviewUrl.onComplete;
   const onClose = webviewUrl.onClose;
-  let React;
-  jsx = undefined;
-  const tmp = callback();
-  React = tmp;
+  const tmp = closure_6();
+  noop = tmp;
   let intl = webviewUrl(onClose[6]).intl;
   const stringResult = intl.string(webviewUrl(onClose[6]).t.wJVyYR);
   jsx = stringResult;
   const items = [tmp, webviewUrl, onComplete, onClose, stringResult];
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
+    closure_2 = onClose;
     function handleClose() {
-      dependencyMap();
-      let arr = callback2(4763);
+      closure_2();
+      let arr = onComplete(onClose[4]);
       arr = arr.pop();
     }
-    const uRL = new URL(closure_0);
+    const uRL = new URL(webviewUrl);
     const origin = uRL.origin;
     let obj = {
-      headerStyle: origin.headerStyle,
+      headerStyle: closure_3.headerStyle,
       headerTitle() {
         return null;
       },
       headerLeft() {
         const obj = { onPress: handleClose, text: null };
-        const intl = callback(1114).intl;
-        obj[1] = intl.string(callback(1114).t.cpT0Cq);
-        return handleClose(callback(7377).HeaderActionButton, obj);
+        const intl = webviewUrl(onClose[6]).intl;
+        obj.text = intl.string(webviewUrl(onClose[6]).t.cpT0Cq);
+        return handleClose(webviewUrl(onClose[5]).HeaderActionButton, obj);
       },
       render(arg0, arg1) {
-        closure_0 = arg1;
-        return handleClose(callback2(8416), {
+        const navigation = arg1;
+        return handleClose(onComplete(onClose[7]), {
           onClose: handleClose,
           trustedOrigin: origin,
           onMethodSelected(injectedJavaScriptBeforeContentLoaded) {
-            return navigation.navigate(closure_1_5.VERIFY_AGE, { injectedJavaScriptBeforeContentLoaded });
+            return navigation.navigate(constants.VERIFY_AGE, { injectedJavaScriptBeforeContentLoaded });
           },
         });
       },
     };
     obj = {
-      headerStyle: origin.headerStyle,
-      headerTitle: handleClose,
+      headerStyle: closure_3.headerStyle,
+      headerTitle,
       headerLeft() {
         const obj = { onPress: handleClose, text: null };
-        const intl = callback(1114).intl;
-        obj[1] = intl.string(callback(1114).t.cpT0Cq);
-        return handleClose(callback(7377).HeaderActionButton, obj);
+        const intl = webviewUrl(onClose[6]).intl;
+        obj.text = intl.string(webviewUrl(onClose[6]).t.cpT0Cq);
+        return handleClose(webviewUrl(onClose[5]).HeaderActionButton, obj);
       },
       render(injectedJavaScriptBeforeContentLoaded) {
-        return handleClose(callback2(8423), {
-          webviewUrl: closure_0,
-          onComplete: callback2,
+        return handleClose(onComplete(onClose[8]), {
+          webviewUrl,
+          onComplete,
           onClose: handleClose,
           injectedJavaScriptBeforeContentLoaded:
             injectedJavaScriptBeforeContentLoaded.injectedJavaScriptBeforeContentLoaded,
         });
       },
     };
-    return { [closure_1_5.METHOD_SELECT]: obj, [closure_1_5.VERIFY_AGE]: obj };
+    return { [closure_2_5.METHOD_SELECT]: obj, [closure_2_5.VERIFY_AGE]: obj };
   }, items);
   let obj = { screens: memo, initialRouteName: constants.METHOD_SELECT, headerBackTitle: null };
   const intl2 = webviewUrl(onClose[6]).intl;
-  obj[2] = intl2.string(webviewUrl(onClose[6]).t["13/7kX"]);
+  obj.headerBackTitle = intl2.string(webviewUrl(onClose[6]).t["13/7kX"]);
   return jsx(webviewUrl(onClose[9]).Navigator, {
     screens: memo,
     initialRouteName: constants.METHOD_SELECT,

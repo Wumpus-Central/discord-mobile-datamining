@@ -1,8 +1,8 @@
 // discord_app/modules/rich_presence/FirstPartyRichPresenceStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import isUndefinedOrNullDefault from "../../../_runtime/01332_isUndefinedOrNull.js";
-import handleUpdateActivityDefault from "../stage_channels/StageChannelSelfRichPresenceStore.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import _modDef1332 from "../../../_runtime/metro/01332__.js";
+import StageChannelSelfRichPresenceStoreDefault from "../stage_channels/StageChannelSelfRichPresenceStore.tsx";
 
 function updateActivities() {
   items = [];
@@ -10,20 +10,19 @@ function updateActivities() {
   while (iter !== undefined) {
     let activity = nextResult.getActivity();
     if (null != activity) {
-      let tmp4 = activity;
       let arr = items.push(tmp3);
     }
     continue;
   }
-  const tmp6 = isUndefinedOrNullDefault(items, items);
+  const tmp6 = _modDef1332(items, items);
   let flag = !tmp6;
   if (!tmp6) {
     flag = true;
   }
   return flag;
 }
-let items = [handleUpdateActivityDefault];
-let closure_3 = [];
+let items = [StageChannelSelfRichPresenceStoreDefault];
+items = [];
 const Store = initializeDefault.Store;
 class FirstPartyRichPresenceStore extends Store {}
 const prototype = FirstPartyRichPresenceStore.prototype;
@@ -31,10 +30,11 @@ prototype["initialize"] = function initialize() {
   this.syncWith(items, updateActivities);
 };
 prototype["getActivities"] = function getActivities() {
-  return closure_3;
+  return items;
 };
 FirstPartyRichPresenceStore.displayName = "FirstPartyRichPresenceStore";
-const firstPartyRichPresenceStore = new FirstPartyRichPresenceStore(dispatcherDefault);
-const result = require("set").fileFinishedImporting("modules/rich_presence/FirstPartyRichPresenceStore.tsx");
+const firstPartyRichPresenceStore = new FirstPartyRichPresenceStore(DispatcherDefault);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/rich_presence/FirstPartyRichPresenceStore.tsx");
 
 export default firstPartyRichPresenceStore;

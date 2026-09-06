@@ -1,8 +1,8 @@
 // discord_app/modules/collectibles/profile_frames/native/ProfileFrameConstants.tsx
-import set from "../../../../../_runtime/00002_set.js";
 import ProfileFrameLayerOrder from "../../../../../discord_common/js/shared/shared-constants/ProfileFrameLayerOrder.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/collectibles/profile_frames/native/ProfileFrameConstants.tsx");
+const result = size.fileFinishedImporting("modules/collectibles/profile_frames/native/ProfileFrameConstants.tsx");
 
 export const PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO = 0.625;
 export const PROFILE_FRAME_ASPECT_RATIO = 0.66;

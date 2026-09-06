@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/notifications/native/codegen/MobileNotifSettingsSections.tsx
-import set from "../../../../../../_runtime/00002_set.js";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
 const frozen = Object.freeze({
   NOTIFICATIONS_REDESIGN: "Notifications (Redesign)",
@@ -8,7 +8,7 @@ const frozen = Object.freeze({
   NOTIF_CATEGORY_SERVER: "Category server",
   NOTIF_CATEGORY_OTHER: "Category other",
 });
-const result = set.fileFinishedImporting(
+const result = size.fileFinishedImporting(
   "modules/user_settings/notifications/native/codegen/MobileNotifSettingsSections.tsx",
 );
 

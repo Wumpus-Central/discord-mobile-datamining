@@ -1,9 +1,9 @@
 // discord_app/modules/guilds_bar/native/GuildsBarConstants.tsx
-import set from "../../../../_runtime/00002_set.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import map from "../../../design/tokens/native/useToken.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import useToken from "../../../design/tokens/native/useToken.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/guilds_bar/native/GuildsBarConstants.tsx");
+const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarConstants.tsx");
 
 export const GUILD_ITEM_SIZE = 48;
 export const GUILD_LIST_WIDTH = 72;
@@ -12,9 +12,8 @@ export const GUILD_ITEM_HIT_SLOP = { top: 4, left: 12, bottom: 4, right: 12 };
 export const GUILD_ITEM_BADGE_SIZE = 16;
 export const GUILD_ITEM_INSET_LEFT = 12;
 export const useGuildWrapperSize = function useGuildWrapperSize() {
-  const token = map.useToken(ThemesDefault.modules.mobile.GUILD_BAR_ITEM_SIZE);
-  const obj = map;
-  return token + 2 * map.useToken(ThemesDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN);
+  const token = useToken.useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE);
+  return token + 2 * useToken.useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN);
 };
 export const FastListRenderSections = {
   MESSAGES: 0,

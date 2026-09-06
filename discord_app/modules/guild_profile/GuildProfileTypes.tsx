@@ -1,7 +1,7 @@
 // discord_app/modules/guild_profile/GuildProfileTypes.tsx
-import set from "../../../_runtime/00002_set.js";
-import set2 from "../../../discord_common/js/shared/shared-constants/GuildProfileVisibility.tsx";
+import GuildProfileVisibility from "../../../discord_common/js/shared/shared-constants/GuildProfileVisibility.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/guild_profile/GuildProfileTypes.tsx");
+const result = size.fileFinishedImporting("modules/guild_profile/GuildProfileTypes.tsx");
 
-export const GuildProfileVisibility = set2.GuildProfileVisibility;
+export const GuildProfileVisibility = GuildProfileVisibility.GuildProfileVisibility;

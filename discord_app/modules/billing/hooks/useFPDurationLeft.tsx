@@ -1,67 +1,64 @@
 // discord_app/modules/billing/hooks/useFPDurationLeft.tsx
-import set from "../../../../_runtime/00002_set.js";
-import getSystemLocale from "../../../intl/index.native.tsx";
+import util from "../../../intl/index.native.tsx";
 import useCountdownDefault from "../../../hooks/useCountdown.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 function roundFPCountdownUnits(arg0) {
-  obj = {};
+  let time = {};
   const merged = Object.assign(arg0);
-  if (obj.seconds > 0) {
-    obj.minutes = obj.minutes + 1;
-    obj.seconds = 0;
+  if (time.seconds > 0) {
+    time.minutes = time.minutes + 1;
+    time.seconds = 0;
   }
-  if (60 === obj.minutes) {
-    obj.hours = obj.hours + 1;
-    obj.minutes = 0;
+  if (60 === time.minutes) {
+    time.hours = time.hours + 1;
+    time.minutes = 0;
   }
-  if (24 === obj.hours) {
-    obj.days = obj.days + 1;
-    obj.hours = 0;
+  if (24 === time.hours) {
+    time.days = time.days + 1;
+    time.hours = 0;
   }
-  if (obj.days > 0) {
-    if (obj.hours > 0) {
-      let days = obj.days + 1;
+  if (time.days > 0) {
+    if (time.hours > 0) {
+      let days = time.days + 1;
     } else {
-      days = obj.days;
+      days = time.days;
     }
-    obj = { days: null, hours: 0, minutes: 0, seconds: 0 };
-    obj[0] = days;
-    return obj;
-  } else if (obj.hours > 0) {
-    if (obj.minutes > 45) {
-      let hours = obj.hours + 1;
+    time = { days, hours: 0, minutes: 0, seconds: 0 };
+    return time;
+  } else if (time.hours > 0) {
+    if (time.minutes > 45) {
+      let hours = time.hours + 1;
     } else {
-      hours = obj.hours;
+      hours = time.hours;
     }
     if (hours > 11) {
-      obj = { days: 1, hours: 0, minutes: 0, seconds: 0 };
+      let time1 = { days: 1, hours: 0, minutes: 0, seconds: 0 };
     } else {
-      obj = { days: 0, hours: null, minutes: 0, seconds: 0 };
-      obj[1] = hours;
+      time1 = { days: 0, hours, minutes: 0, seconds: 0 };
     }
-    return obj;
-  } else if (obj.minutes > 0) {
+    return time1;
+  } else if (time.minutes > 0) {
     let num5 = 0;
-    if (obj.minutes > 45) {
+    if (time.minutes > 45) {
       num5 = 1;
     }
-    obj1 = { days: 0, hours: null, minutes: null, seconds: 0 };
-    obj1[1] = num5;
+    const time2 = { days: 0, hours: num5, minutes: null, seconds: 0 };
     let num7 = 0;
     if (1 !== num5) {
-      num7 = obj.minutes;
+      num7 = time.minutes;
     }
-    obj1[2] = num7;
-    return obj1;
+    time2.minutes = num7;
+    return time2;
   } else {
-    let obj2 = obj;
-    if (obj.seconds > 0) {
-      obj2 = { days: 0, hours: 0, minutes: 1, seconds: 0 };
+    let time3 = time;
+    if (time.seconds > 0) {
+      time3 = { days: 0, hours: 0, minutes: 1, seconds: 0 };
     }
-    return obj2;
+    return time3;
   }
 }
-let obj = {
+const CountDownMessageTypes = {
   SHORT_TIME_LEFT: 0,
   [0]: "SHORT_TIME_LEFT",
   LONG_TIME_LEFT: 1,
@@ -73,44 +70,29 @@ let obj = {
   CREDITS_ENDS_IN: 4,
   [4]: "CREDITS_ENDS_IN",
 };
-const result = set.fileFinishedImporting("modules/billing/hooks/useFPDurationLeft.tsx");
+const result = size.fileFinishedImporting("modules/billing/hooks/useFPDurationLeft.tsx");
 
-export default function useFPDurationLeft(toDate) {
+export default function useFPDurationLeft(toDate, arg1) {
   if (obj.SHORT_TIME_LEFT === arg1) {
-    obj = { days: null, hours: null, minutes: null };
-    obj[0] = getSystemLocale.t["/wnvqA"];
-    obj[1] = getSystemLocale.t.Jsq0XN;
-    obj[2] = getSystemLocale.t["SBd+Bs"];
+    const time = { days: util.t["/wnvqA"], hours: util.t.Jsq0XN, minutes: util.t["SBd+Bs"] };
   } else if (tmp.LONG_TIME_LEFT === arg1) {
-    obj = { days: null, hours: null, minutes: null };
-    obj[0] = getSystemLocale.t.UD5nn5;
-    obj[1] = getSystemLocale.t.Hg8Fee;
-    obj[2] = getSystemLocale.t.XSbQZZ;
+    const time1 = { days: util.t.UD5nn5, hours: util.t.Hg8Fee, minutes: util.t.XSbQZZ };
   } else {
     if (tmp.ENDS_IN === arg1) {
-      obj1 = { days: null, hours: null, minutes: null };
-      obj1[0] = getSystemLocale.t.rLqNad;
-      obj1[1] = getSystemLocale.t.d1LvCA;
-      obj1[2] = getSystemLocale.t.Z2LX7K;
+      const time2 = { days: util.t.rLqNad, hours: util.t.d1LvCA, minutes: util.t.Z2LX7K };
     } else if (tmp.CREDITS_ENDS_IN !== arg1) {
       if (tmp.SHORT_TIME === arg1) {
-        obj = { days: null, hours: null, minutes: null };
-        obj[0] = getSystemLocale.t.fYmirx;
-        obj[1] = getSystemLocale.t["C3RO+g"];
-        obj[2] = getSystemLocale.t.r77oHc;
+        const time3 = { days: util.t.fYmirx, hours: util.t["C3RO+g"], minutes: util.t.r77oHc };
       } else {
         const _Error = Error;
         const _HermesInternal = HermesInternal;
-        error = new Error("Unknown messageType (" + arg1 + ") when rendering time left");
+        const error = new Error("Unknown messageType (" + arg1 + ") when rendering time left");
         throw error;
       }
     }
-    const obj2 = { days: null, hours: null, minutes: null };
-    obj2[0] = getSystemLocale.t.xQ3zuN;
-    obj2[1] = getSystemLocale.t.SFU7QN;
-    obj2[2] = getSystemLocale.t.Y4FNdL;
+    const time4 = { days: util.t.xQ3zuN, hours: util.t.SFU7QN, minutes: util.t.Y4FNdL };
   }
   roundFPCountdownUnits(useCountdownDefault(toDate.toDate(), 60000));
 }
-export const CountDownMessageTypes = obj;
+export { CountDownMessageTypes };
 export { roundFPCountdownUnits };

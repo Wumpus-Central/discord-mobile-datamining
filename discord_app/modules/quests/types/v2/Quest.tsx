@@ -1,78 +1,71 @@
 // discord_app/modules/quests/types/v2/Quest.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import _firstPartyTasksFromServer from "Task.tsx";
-import _rewardRedemptionInstructionsFromServer from "Reward.tsx";
-import questCtaConfigFromServer from "CTA.tsx";
+import Task from "Task.tsx";
+import Reward from "Reward.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/quests/types/v2/Quest.tsx");
+const CTA = tmp(7717);
+const result = size.fileFinishedImporting("modules/quests/types/v2/Quest.tsx");
 
 export const questFromServerV2 = function questFromServerV2(id) {
-  obj = {
+  let obj = {
     id: id.id,
     configVersion: 2,
     startsAt: id.starts_at,
     expiresAt: id.expires_at,
     features: id.features,
-    assets: obj,
-    colors: obj,
-    messages: obj1,
-    taskConfigV2: null,
+    assets: {
+      hero: id.assets.hero,
+      heroVideo: id.assets.hero_video,
+      questBarHero: id.assets.quest_bar_hero,
+      questBarHeroBlurhash: id.assets.quest_bar_hero_blurhash,
+      questBarHeroVideo: id.assets.quest_bar_hero_video,
+      gameTile: id.assets.game_tile,
+      logotype: id.assets.logotype,
+      gameTileLight: id.assets.game_tile_light,
+      gameTileDark: id.assets.game_tile_dark,
+      logotypeLight: id.assets.logotype_light,
+      logotypeDark: id.assets.logotype_dark,
+    },
+    colors: { primary: id.colors.primary, secondary: id.colors.secondary },
+    messages: {
+      questName: id.messages.quest_name,
+      gameTitle: id.messages.game_title,
+      gamePublisher: id.messages.game_publisher,
+    },
+    taskConfigV2: Task.questTaskConfigV2FromServer(id.task_config_v2),
     rewardsConfig: null,
     cosponsorMetadata: null,
     sharePolicy: null,
     ctaConfig: null,
   };
-  obj = {
-    hero: id.assets.hero,
-    heroVideo: id.assets.hero_video,
-    questBarHero: id.assets.quest_bar_hero,
-    questBarHeroBlurhash: id.assets.quest_bar_hero_blurhash,
-    questBarHeroVideo: id.assets.quest_bar_hero_video,
-    gameTile: id.assets.game_tile,
-    logotype: id.assets.logotype,
-    gameTileLight: id.assets.game_tile_light,
-    gameTileDark: id.assets.game_tile_dark,
-    logotypeLight: id.assets.logotype_light,
-    logotypeDark: id.assets.logotype_dark,
-  };
-  obj = { primary: id.colors.primary, secondary: id.colors.secondary };
-  obj[8] = _firstPartyTasksFromServer.questTaskConfigV2FromServer(id.task_config_v2);
-  obj1 = {
-    questName: id.messages.quest_name,
-    gameTitle: id.messages.game_title,
-    gamePublisher: id.messages.game_publisher,
-  };
-  const obj5 = _firstPartyTasksFromServer;
-  const tmp = require;
-  obj[9] = _rewardRedemptionInstructionsFromServer.questRewardsConfigV2FromServer(id.rewards_config);
+  obj.rewardsConfig = Reward.questRewardsConfigV2FromServer(id.rewards_config);
   const cosponsor_metadata = id.cosponsor_metadata;
   let tmp3;
   if (null != cosponsor_metadata) {
+    obj = { name: null, logotype: null, redemptionInstructions: null, logotypeLight: null, logotypeDark: null };
     ({
-      name: obj7[0],
-      logotype: obj7[1],
-      redemption_instructions: obj7[2],
-      logotype_light: obj7[3],
-      logotype_dark: obj7[4],
+      name: obj4.name,
+      logotype: obj4.logotype,
+      redemption_instructions: obj4.redemptionInstructions,
+      logotype_light: obj4.logotypeLight,
+      logotype_dark: obj4.logotypeDark,
     } = cosponsor_metadata);
-    tmp3 = { name: null, logotype: null, redemptionInstructions: null, logotypeLight: null, logotypeDark: null };
-    const obj2 = { name: null, logotype: null, redemptionInstructions: null, logotypeLight: null, logotypeDark: null };
+    tmp3 = obj;
   }
-  obj[10] = tmp3;
-  obj[11] = id.share_policy;
-  const obj6 = _rewardRedemptionInstructionsFromServer;
-  obj[12] = questCtaConfigFromServer.questCtaConfigFromServer(id.cta_config);
+  obj.cosponsorMetadata = tmp3;
+  obj.sharePolicy = id.share_policy;
+  obj.ctaConfig = CTA.questCtaConfigFromServer(id.cta_config);
   return obj;
 };
 export const questCosponsorMetadataFromServer = function questCosponsorMetadataFromServer(cosponsor_metadata) {
   if (null != cosponsor_metadata) {
     const obj = { name: null, logotype: null, redemptionInstructions: null, logotypeLight: null, logotypeDark: null };
     ({
-      name: obj[0],
-      logotype: obj[1],
-      redemption_instructions: obj[2],
-      logotype_light: obj[3],
-      logotype_dark: obj[4],
+      name: obj.name,
+      logotype: obj.logotype,
+      redemption_instructions: obj.redemptionInstructions,
+      logotype_light: obj.logotypeLight,
+      logotype_dark: obj.logotypeDark,
     } = cosponsor_metadata);
     return obj;
   }

@@ -1,81 +1,82 @@
 // discord_app/modules/app_icons/native/AppIconRows.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import isPremiumAtLeast from "../../../utils/PremiumTypeUtils.tsx";
-import fetchCurrentAppIcon from "AppIconUtils.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../../stores/UserStore.tsx";
-import { createElement } from "../../../../_runtime/00019_noop.js";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import PremiumTypeUtils from "../../../utils/PremiumTypeUtils.tsx";
+import AppIconTypes from "../AppIconTypes.tsx";
+import AppIconUtils from "AppIconUtils.tsx";
+import AppIconRowDefault from "AppIconRow/AppIconRow.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
+import UserStore from "../../../stores/UserStore.tsx";
 
-require = arg1;
+require = fn;
 function BackwardsCompatibleAppIconRows(arg0) {
   if (arg0 == null) {
-    HermesBuiltin.throwTypeError();
+    throw new TypeError("Cannot destructure 'undefined' or 'null'.");
   } else {
     let merged = Object.assign(arg0, undefined);
     c1 = undefined;
     dependencyMap = undefined;
-    function onLongPress(closure_4, arg1) {
+    function onLongPress(noop) {
       let tmp = null;
-      if (closure_4 === merged(_undefined2[6]).FreemiumAppIconIds.DEFAULT) {
-        tmp = _undefined2(true);
+      if (noop === AppIconTypes.FreemiumAppIconIds.DEFAULT) {
+        tmp = _undefined(true);
       }
       return tmp;
     }
-    const tmp5 = callback2();
-    [c1, c2] = onLongPress(React.useState(false), 2);
+    const tmp4 = closure_11();
+    [c1, c2] = onLongPress(noop.useState(false), 2);
     const icons = merged.icons;
-    let obj = { style: null, children: null };
-    obj[0] = tmp5.container;
-    obj = { title: null, accessibilityRole: "radiogroup", accessibilityLabel: null, hasIcons: true, children: null };
-    obj[0] = merged.title;
+    let obj = { style: tmp4.container, children: null };
+    obj = {
+      title: merged.title,
+      accessibilityRole: "radiogroup",
+      accessibilityLabel: null,
+      hasIcons: true,
+      children: null,
+    };
     const intl = merged(1114).intl;
-    obj[2] = intl.string(merged(1114).t.N4YDao);
-    obj[4] = icons.map((id) => {
+    obj.accessibilityLabel = intl.string(merged(1114).t.N4YDao);
+    obj.children = icons.map((id) => {
       const obj = {};
       merged = Object.assign(merged);
       obj.key = id.id;
       obj.icon = id;
-      obj.showEasterEgg = _undefined;
+      obj.showEasterEgg = showEasterEgg;
       obj.onLongPress = onLongPress;
-      return closure_1_7(_undefined(_undefined2[9]), obj);
+      return createElement(AppIconRowDefault, {});
     });
-    obj[1] = callback(merged(5687).TableRowGroup, obj);
-    return callback(View, obj);
+    obj.children = closure_8(merged(5687).TableRowGroup, obj);
+    return closure_8(View, obj);
   }
 }
-({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
-let closure_11 = createCacheKey.createStyles({
-  container: { padding: 16 },
-  bottomUpsellPadding: { paddingBottom: 56 },
-});
-const result = require("set").fileFinishedImporting("modules/app_icons/native/AppIconRows.tsx");
+const View = fn(17).View;
+const createElement = fn(19).createElement;
+const jsxProd = fn(21);
+({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
+const createStyles = fn(4560);
+let closure_11 = createStyles.createStyles({ container: { padding: 16 }, bottomUpsellPadding: { paddingBottom: 56 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_icons/native/AppIconRows.tsx");
 
 export default function AppIconRows(onSelect) {
   onSelect = onSelect.onSelect;
-  let obj = fetchCurrentAppIcon;
+  let obj = AppIconUtils;
   const appIcons = obj.useAppIcons();
   ({ limitedTimeAppIcons, currentAppIcon, officialAppIcons } = appIcons);
-  obj1 = initialize;
-  const items = [closure_6];
+  let obj1 = initialize;
+  const items = [UserStore];
   const stateFromStores = obj1.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj2 = isPremiumAtLeast;
+  let obj2 = PremiumTypeUtils;
   const isPremiumResult = obj2.isPremium(stateFromStores);
   const tmp7 =
     limitedTimeAppIcons.length > 0 && limitedTimeAppIcons.filter((isHidden) => !isHidden.isHidden).length > 0;
   let tmp10 = null;
   if (tmp7) {
-    obj = { hasNitro: null, icons: null, currentAppIcon: null, title: null, onSelect: null };
-    obj[0] = isPremiumResult;
-    obj[1] = limitedTimeAppIcons;
-    obj[2] = currentAppIcon;
+    obj = { hasNitro: isPremiumResult, icons: limitedTimeAppIcons, currentAppIcon, title: null, onSelect: null };
     const intl = tmp2(1114).intl;
-    obj[3] = intl.string(tmp2(1114).t.anqaFd);
-    obj[4] = onSelect;
-    tmp10 = callback(BackwardsCompatibleAppIconRows, obj);
+    obj.title = intl.string(tmp2(1114).t.anqaFd);
+    obj.onSelect = onSelect;
+    tmp10 = React6(BackwardsCompatibleAppIconRows, obj);
   }
   const items1 = [tmp10];
   let bottomUpsellPadding = !isPremiumResult;
@@ -90,10 +91,10 @@ export default function AppIconRows(onSelect) {
     stringResult = intl2.string(tmp2(1114).t.Ipxkog);
   }
   obj2 = { children: null };
-  obj1[3] = stringResult;
-  obj1[4] = onSelect;
-  obj[1] = callback(BackwardsCompatibleAppIconRows, obj1);
-  items1[1] = callback(View, obj);
-  obj2[0] = items1;
-  return closure_10(closure_9, obj2);
+  obj1.title = stringResult;
+  obj1.onSelect = onSelect;
+  obj.children = React6(BackwardsCompatibleAppIconRows, obj1);
+  items1[1] = React6(View, obj);
+  obj2.children = items1;
+  return closure_1_10(React7, obj2);
 }

@@ -1,18 +1,18 @@
 // discord_app/utils/PathUtils.tsx
-import set from "../../_runtime/00002_set.js";
+import size from "../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("utils/PathUtils.tsx");
+const result = size.fileFinishedImporting("utils/PathUtils.tsx");
 
-export const pathJoin = function pathJoin(closure_1, closure_17) {
+export const pathJoin = function pathJoin() {
   const items = [...arguments];
   let str = "/";
   if (obj.isWindows()) {
     str = "\\";
   }
-  const found = items.filter((arg0) => arg0.length > 0);
+  const found = items.filter((item) => item.length > 0);
   return found.join(str);
 };
-export const pathBasename = function pathBasename(str) {
+export const pathBasename = function pathBasename(str, arg1) {
   let arr = str;
   const parts = str.split(/[/\\]/);
   if ("" !== parts[parts.length - 1]) {

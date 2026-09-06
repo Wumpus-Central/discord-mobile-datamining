@@ -1,48 +1,51 @@
 // discord_app/modules/user_profile/native/UserProfileActivityVoiceChannel.tsx
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import sum from "../../../../discord_common/js/shared/Constants.tsx";
-import closure_4 from "../../../stores/PermissionStore.tsx";
+import _mod17 from "../../../../_runtime/metro/00017__.js";
+import Constants from "../../../../discord_common/js/shared/Constants.tsx";
+import native from "../../../design/void/native.tsx";
+import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
+import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
+import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import PrivateChannelCallUtils from "../../../utils/native/PrivateChannelCallUtils.tsx";
+import PermissionStore from "../../../stores/PermissionStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
-import set from "../../../utils/PlatformUtils.tsx";
+import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const View = get_ActivityIndicator.View;
-const Permissions = sum.Permissions;
-({ jsx: closure_6, jsxs: error } = jsxProd);
+const View = _mod17.View;
+const Permissions = Constants.Permissions;
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let obj = {
   container: { flexDirection: "row", alignItems: "center", gap: 4, overflow: "hidden" },
   channelButton: { flex: 1, flexDirection: "row", alignItems: "center", gap: 2 },
   channelName: null,
 };
 let num = -1;
-if (set.isAndroid()) {
+if (PlatformUtils.isAndroid()) {
   num = -2;
 }
-obj[2] = { flex: 1, overflow: "hidden", marginTop: num };
-let closure_8 = createCacheKey.createStyles(obj);
-const result = set.fileFinishedImporting("modules/user_profile/native/UserProfileActivityVoiceChannel.tsx");
+obj.channelName = { flex: 1, overflow: "hidden", marginTop: num };
+let closure_8 = createStyles.createStyles(obj);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileActivityVoiceChannel.tsx");
 
 export default function UserProfileActivityVoiceChannel(guild) {
   guild = guild.guild;
   const channel = guild.channel;
   const onAction = guild.onAction;
-  let newestAnalyticsLocation;
-  let context;
-  let arr;
-  const tmp = callback();
-  newestAnalyticsLocation = channel(onAction[6])().newestAnalyticsLocation;
+  const tmp = closure_8();
+  const newestAnalyticsLocation = channel(onAction[6])().newestAnalyticsLocation;
   let obj = guild(onAction[7]);
-  context = obj.useUserProfileAnalyticsContext().context;
-  obj1 = guild(onAction[8]);
+  const context = obj.useUserProfileAnalyticsContext().context;
+  let obj1 = guild(onAction[8]);
   const isScreenReaderEnabled = obj1.useIsScreenReaderEnabled();
-  arr = channel(onAction[9])(channel);
+  const users = channel(onAction[9])(channel);
   const tmp6 = channel(onAction[10])(channel);
   let obj2 = guild(onAction[11]);
   const items = [context];
   const stateFromStores = obj2.useStateFromStores(items, () => {
     let isPrivateResult = channel.isPrivate();
     if (!isPrivateResult) {
-      isPrivateResult = context.can(arr.CONNECT, channel);
+      isPrivateResult = PermissionStore.can(Permissions.CONNECT, channel);
     }
     return isPrivateResult;
   });
@@ -51,42 +54,44 @@ export default function UserProfileActivityVoiceChannel(guild) {
   } else {
     VoiceNormalIcon = tmp4(tmp3[13]).VoiceNormalIcon;
   }
-  obj = { style: items1, children: null };
-  items1 = [tmp.container, guild.style];
+  obj = { style: null, children: null };
+  const items1 = [tmp.container, guild.style];
+  obj.style = items1;
   if (isScreenReaderEnabled) {
     obj = { accessible: true, accessibilityLabel: null, children: null };
     const intl = tmp4(tmp3[14]).intl;
-    obj1 = { guildName: null };
-    obj1[0] = guild.name;
-    obj[1] = intl.formatToPlainString(tmp4(tmp3[14]).t.xm6W9D, obj1);
+    obj1 = { guildName: guild.name };
+    obj.accessibilityLabel = intl.formatToPlainString(tmp4(tmp3[14]).t.xm6W9D, obj1);
     obj2 = { size: null, guild: null };
     let tmp2Result = tmp2(tmp3[15]);
-    obj2[0] = tmp4(tmp3[15]).GuildIconSizes.XXSMALL;
-    obj2[1] = guild;
-    obj[2] = tmp10(tmp2Result, obj2);
+    obj2.size = tmp4(tmp3[15]).GuildIconSizes.XXSMALL;
+    obj2.guild = guild;
+    obj.children = tmp10(tmp2Result, obj2);
     let tmp10Result = tmp10(tmp9, obj);
     let tmp13 = tmp10;
   } else {
-    const obj3 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
-    obj3[1] = guild.name;
-    obj3[2] = function onPress() {
-      onAction({ action: "PRESS_VOICE_CHANNEL_ICON" });
-      let obj = channel(onAction[17]);
-      obj = {
-        key: "GUILD_NAME_TOAST",
-        content: guild.name,
-        icon() {
-          const obj = { size: closure_1_0(closure_1_2[15]).GuildIconSizes.XSMALL, guild: closure_0 };
-          return closure_1_6(closure_1_1(closure_1_2[15]), obj);
-        },
-      };
-      obj.open(obj);
+    const obj3 = {
+      accessibilityRole: "button",
+      accessibilityLabel: guild.name,
+      onPress() {
+        onAction({ action: "PRESS_VOICE_CHANNEL_ICON" });
+        let obj = {
+          key: "GUILD_NAME_TOAST",
+          content: guild.name,
+          icon() {
+            const obj = { size: guild(onAction[15]).GuildIconSizes.XSMALL, guild };
+            return closure_2_6(channel(onAction[15]), obj);
+          },
+        };
+        obj.open(obj);
+      },
+      children: null,
     };
     const obj4 = { size: null, guild: null };
     tmp2Result = tmp2(tmp3[15]);
-    obj4[0] = tmp4(tmp3[15]).GuildIconSizes.XXSMALL;
-    obj4[1] = guild;
-    obj3[3] = tmp10(tmp2Result, obj4);
+    obj4.size = tmp4(tmp3[15]).GuildIconSizes.XXSMALL;
+    obj4.guild = guild;
+    obj3.children = tmp10(tmp2Result, obj4);
     tmp10Result = tmp10(tmp4(tmp3[16]).PressableOpacity, obj3);
     tmp13 = tmp10;
   }
@@ -97,86 +102,68 @@ export default function UserProfileActivityVoiceChannel(guild) {
   ];
   if (stateFromStores) {
     const obj5 = {
-      style: null,
+      style: tmp.channelButton,
       accessibilityRole: "button",
       accessibilityLabel: null,
       accessibilityHint: null,
       onPress: null,
       children: null,
     };
-    obj5[0] = tmp.channelButton;
-    const obj6 = { channel: null };
-    obj6[0] = channel;
-    obj5[2] = tmp2(tmp3[20])(obj6);
+    const obj6 = { channel };
+    obj5.accessibilityLabel = tmp2(tmp3[20])(obj6);
     const intl2 = tmp4(tmp3[14]).intl;
-    obj5[3] = intl2.string(tmp4(tmp3[14]).t["9C444m"]);
-    obj5[4] = function onPress() {
+    obj5.accessibilityHint = intl2.string(tmp4(tmp3[14]).t["9C444m"]);
+    obj5.onPress = function onPress() {
       onAction({ action: "OPEN_VOICE_CHANNEL" });
-      guild(onAction[21]).openGuildVoiceModal(channel, newestAnalyticsLocation);
-      const obj = guild(onAction[21]);
-      channel(onAction[22]).hideAllActionSheets();
+      PrivateChannelCallUtils.openGuildVoiceModal(channel, newestAnalyticsLocation);
+      ActionSheetActionCreatorsDefault.hideAllActionSheets();
     };
     const items3 = [tmp13(VoiceNormalIcon, { size: "xxs", color: "text-default" })];
-    const obj7 = { style: null, variant: "text-xs/normal", lineClamp: 1, children: null };
-    obj7[0] = tmp.channelName;
-    obj7[3] = tmp6;
+    const obj7 = { style: tmp.channelName, variant: "text-xs/normal", lineClamp: 1, children: tmp6 };
     items3[1] = tmp13(tmp4(tmp3[19]).Text, obj7);
-    obj5[5] = items3;
+    obj5.children = items3;
     let tmp8Result = tmp8(tmp4(tmp3[16]).PressableOpacity, obj5);
   } else {
-    const obj8 = { style: null, children: null };
-    obj8[0] = tmp.channelButton;
+    const obj8 = { style: tmp.channelButton, children: null };
     const items4 = [tmp13(VoiceNormalIcon, { size: "xxs", color: "text-default" })];
-    const obj9 = { style: null, variant: "text-xs/normal", lineClamp: 1, children: null };
-    obj9[0] = tmp.channelName;
-    obj9[3] = tmp6;
+    const obj9 = { style: tmp.channelName, variant: "text-xs/normal", lineClamp: 1, children: tmp6 };
     items4[1] = tmp13(tmp4(tmp3[19]).Text, obj9);
-    obj8[1] = items4;
+    obj8.children = items4;
     tmp8Result = tmp8(tmp9, obj8);
   }
   items2[2] = tmp8Result;
   const obj10 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
   const intl3 = tmp4(tmp3[14]).intl;
-  obj10[1] = intl3.formatToPlainString(guild(onAction[14]).t.e95u3C, { count: arr.length });
-  obj10[2] = function onPress() {
+  obj10.accessibilityLabel = intl3.formatToPlainString(guild(onAction[14]).t.e95u3C, { count: users.length });
+  obj10.onPress = function onPress() {
     onAction({ action: "PRESS_VOICE_CHANNEL_AVATARS" });
-    let obj = channel(onAction[22]);
-    obj = {
-      users: arr,
+    let obj = {
+      users,
       channel,
       onPressUser(userId) {
         const obj = {};
-        const merged = Object.assign(closure_4);
+        const merged = Object.assign(context);
         obj.userId = userId;
-        return closure_1_1(closure_1_2[25])(obj);
+        return channel(onAction[25])(obj);
       },
     };
-    obj.openLazy(
-      guild(onAction[24])(onAction[23], onAction.paths),
-      "UserProfileActivityVoiceChannelUsers",
-      obj,
-      "stack",
-    );
+    obj.openLazy(asyncRequireImpl(13026, dependencyMap.paths), "UserProfileActivityVoiceChannelUsers", obj, "stack");
   };
   const obj12 = {
     size: guild(onAction[27]).AvatarSizes.SIZE_16,
-    totalCount: arr.length,
-    names: arr.map((username) => username.username),
+    totalCount: users.length,
+    names: users.map((username) => username.username),
     children: null,
   };
-  let substr = arr;
-  if (arr.length > 3) {
-    substr = arr.slice(0, 3);
+  let substr = users;
+  if (users.length > 3) {
+    substr = users.slice(0, 3);
   }
-  obj12[3] = substr.map((id) =>
-    closure_1_6(
-      guild(onAction[27]).Avatar,
-      { size: guild(onAction[27]).AvatarSizes.SIZE_16, channel, guildId: guild.id, user: id },
-      id.id,
-    ),
+  obj12.children = substr.map((user) =>
+    timestampProducer(native.Avatar, { size: native.AvatarSizes.SIZE_16, channel, guildId: guild.id, user }, user.id),
   );
-  obj10[3] = tmp13(guild(onAction[26]).AvatarPile, obj12);
+  obj10.children = tmp13(guild(onAction[26]).AvatarPile, obj12);
   items2[3] = tmp13(guild(onAction[16]).PressableOpacity, obj10);
-  obj[1] = items2;
+  obj.children = items2;
   return closure_7(newestAnalyticsLocation, obj);
 }

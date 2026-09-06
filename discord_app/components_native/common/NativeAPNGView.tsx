@@ -1,13 +1,14 @@
 // discord_app/components_native/common/NativeAPNGView.tsx
-import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
-import __INTERNAL_VIEW_CONFIG from "../../../discord_common/js/packages/rtn-codegen/js/APNGStickerNativeComponent.tsx";
-import set from "../../utils/PlatformUtils.tsx";
+import _mod17 from "../../../_runtime/metro/00017__.js";
+import APNGStickerNativeComponent from "../../../discord_common/js/packages/rtn-codegen/js/APNGStickerNativeComponent.tsx";
+import PlatformUtils from "../../utils/PlatformUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-if (set.isAndroid()) {
-  let _default = __INTERNAL_VIEW_CONFIG.default;
+if (PlatformUtils.isAndroid()) {
+  let _default = APNGStickerNativeComponent.default;
 } else {
-  _default = get_ActivityIndicator.requireNativeComponent("APNGStickerView");
+  _default = _mod17.requireNativeComponent("APNGStickerView");
 }
-const result = set.fileFinishedImporting("components_native/common/NativeAPNGView.tsx");
+const result = size.fileFinishedImporting("components_native/common/NativeAPNGView.tsx");
 
 export default _default;

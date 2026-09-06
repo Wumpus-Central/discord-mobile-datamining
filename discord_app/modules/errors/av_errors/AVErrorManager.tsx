@@ -1,17 +1,17 @@
 // discord_app/modules/errors/av_errors/AVErrorManager.tsx
-import timestampDefault from "../../debug/Logger.tsx";
-import dispatcherDefault from "../../../Dispatcher.tsx";
-import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
-import mapped from "AVError.tsx";
+import LoggerDefault from "../../debug/Logger.tsx";
+import DispatcherDefault from "../../../Dispatcher.tsx";
+import AVError from "AVError.tsx";
 import ErrorDefinitions from "definitions/index.tsx";
-import getCurrentScreenshareCaptureMethod from "AVErrorAnalytics.tsx";
-import closure_4 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import closure_5 from "../../../stores/ApplicationStreamingStore.tsx";
-import closure_6 from "../../../stores/SelectedChannelStore.tsx";
-import closure_7 from "../../../stores/VoiceStateStore.tsx";
-import closure_8 from "AVErrorStore.tsx";
+import AVErrorAnalytics from "AVErrorAnalytics.tsx";
+import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import ApplicationStreamingStore from "../../../stores/ApplicationStreamingStore.tsx";
+import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
+import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
+import AVErrorStore from "AVErrorStore.tsx";
+import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
-require = arg1;
+require = fn;
 function setDifference(set, set2) {
   set = new Set();
   const iter = set[Symbol.iterator]();
@@ -19,7 +19,6 @@ function setDifference(set, set2) {
   while (iter !== undefined) {
     let tmp2 = nextResult;
     if (!set2.has(nextResult)) {
-      let tmp3 = nextResult;
       let addResult = set.add(tmp2);
     }
     continue;
@@ -35,8 +34,7 @@ function makeErrorKey(item10044) {
   return "" + item10044.type + ":" + errorContextKey;
 }
 let closure_3 = ["type"];
-let closure_9 = new timestampDefault("AVErrorManager");
-initializeDefault;
+const logger = new LoggerDefault("AVErrorManager");
 class AVErrorManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -72,41 +70,34 @@ class AVErrorManager extends tmp3 {
 }
 const prototype = AVErrorManager.prototype;
 prototype["updateActiveErrors"] = function updateActiveErrors() {
-  let activeErrors;
-  voiceChannelId = voiceChannelId.getVoiceChannelId();
+  let voiceChannelId = SelectedChannelStore.getVoiceChannelId();
   if (voiceChannelId == null) {
     voiceChannelId = null;
   }
   let tmp2 = null;
   if (null != voiceChannelId) {
-    voiceStateForChannel = voiceStateForChannel.getVoiceStateForChannel(voiceChannelId);
+    let voiceStateForChannel = VoiceStateStore.getVoiceStateForChannel(voiceChannelId);
     if (voiceStateForChannel == null) {
       voiceStateForChannel = null;
     }
     tmp2 = voiceStateForChannel;
   }
-  allActiveStreams = allActiveStreams.getAllActiveStreams();
+  const allActiveStreams = ApplicationStreamingStore.getAllActiveStreams();
   const map = new Map();
   const values = Object.values(ErrorDefinitions.ErrorDefinitions);
   const iter = values[Symbol.iterator]();
   while (iter !== undefined) {
-    let obj = { voiceChannelId: null, voiceState: null, activeStreams: null };
-    obj[0] = voiceChannelId;
-    obj[1] = tmp2;
-    obj[2] = allActiveStreams;
-    activeErrors = nextResult.getActiveErrors(obj);
+    let obj = { voiceChannelId, voiceState: tmp2, activeStreams: allActiveStreams };
+    let activeErrors = nextResult.getActiveErrors(obj);
     if (null != activeErrors) {
-      let tmp9 = tmp8;
-      let tmp10 = activeErrors;
       for (const item10044 of activeErrors) {
-        let tmp11 = makeErrorKey;
         let result = map.set(makeErrorKey(item10044), item10044);
         continue;
       }
     }
     continue;
   }
-  const activeErrors1 = activeErrors.getActiveErrors();
+  const activeErrors1 = AVErrorStore.getActiveErrors();
   if (activeErrors1 instanceof Map) {
     if (0 !== map.size) {
       const _Set = Set;
@@ -116,12 +107,9 @@ prototype["updateActiveErrors"] = function updateActiveErrors() {
       if (set.size > set1.size) {
         const tmp24 = setDifference(set, set1);
         for (const item10093 of tmp24) {
-          let value = map.get(item10093);
+          value = map.get(item10093);
           if (null != value) {
-            let tmp29 = require;
-            let tmp30 = dependencyMap;
-            let obj5 = mapped;
-            let tmp31 = value;
+            let obj5 = AVError;
             let reportAVErrorResult = obj5.reportAVError(tmp28);
           }
           continue;
@@ -134,23 +122,17 @@ prototype["updateActiveErrors"] = function updateActiveErrors() {
           value = activeErrors1.get(tmp34);
           let tmp37 = value;
           if (null != value) {
-            let tmp38 = value;
-            let tmp39 = callback;
-            let tmp40 = closure_3;
-            let tmp41 = logger;
             let _JSON = JSON;
             let _HermesInternal2 = HermesInternal;
             let infoResult = logger.info(
-              "Error resolved: " + tmp37.type + " " + JSON.stringify(callback(tmp37, closure_3)),
+              "Error resolved: " + tmp37.type + " " + JSON.stringify(_objectWithoutProperties(tmp37, closure_3)),
             );
           }
           continue;
         }
       }
-      obj = { type: "ACTIVE_AV_ERRORS_CHANGED", activeErrors: null };
-      obj[1] = map;
-      dispatcherDefault.dispatch(obj);
-      const obj6 = dispatcherDefault;
+      obj = { type: "ACTIVE_AV_ERRORS_CHANGED", activeErrors: map };
+      DispatcherDefault.dispatch(obj);
     }
   } else {
     const _Object = Object;
@@ -165,10 +147,10 @@ prototype["updateActiveErrors"] = function updateActiveErrors() {
 };
 prototype["handleReportAVError"] = function handleReportAVError(arg0) {
   ({ error, context } = arg0);
-  const result = getCurrentScreenshareCaptureMethod.sendAVErrorAnalyticsEvent(error, context);
+  const result = AVErrorAnalytics.sendAVErrorAnalyticsEvent(error, context);
 };
 const aVErrorManager = new AVErrorManager();
-let tmp2 = new timestampDefault("AVErrorManager");
-let result = require("set").fileFinishedImporting("modules/errors/av_errors/AVErrorManager.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/errors/av_errors/AVErrorManager.tsx");
 
 export default aVErrorManager;

@@ -1,21 +1,21 @@
 // discord_app/modules/libdiscore/libdiscoreExperiments.tsx
-import set from "../../../_runtime/00002_set.js";
-import timestampDefault from "../debug/Logger.tsx";
+import LoggerDefault from "../debug/Logger.tsx";
 import _modDef38 from "../../../_runtime/metro/00038__.js";
-import isBlockedDomain from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
-import ensureValidMode2 from "stores/BridgedStore.tsx";
+import js_shim_shim from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
+import BridgedStore from "stores/BridgedStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const ensureValidMode = ensureValidMode2.ensureValidMode;
-let closure_4 = new timestampDefault("libdiscoreExperiments");
+const ensureValidMode = BridgedStore.ensureValidMode;
+const logger = new LoggerDefault("libdiscoreExperiments");
 let items = [];
 let closure_6 = Symbol("unknown");
 class LibdiscoreCachedExperiment {
   constructor(arg0) {
-    obj = Object.create(new.target.prototype);
-    obj[1] = closure_6;
-    obj.id = global;
-    arr = closure_5.push(obj);
-    return obj;
+    merged = Object.assign({ inner: null, cachedConfig: null });
+    merged[1] = closure_6;
+    merged.id = global;
+    arr = closure_5.push(merged);
+    return merged;
   }
 }
 const prototype = LibdiscoreCachedExperiment.prototype;
@@ -41,7 +41,7 @@ prototype["getCachedConfig"] = function getCachedConfig() {
     } else {
       self.cachedConfig = undefined;
     }
-    obj = isBlockedDomain;
+    obj = js_shim_shim;
     tmp = require;
   }
   return self.cachedConfig;
@@ -66,7 +66,6 @@ class LibdiscoreWrapperSimpleExperiment extends LibdiscoreCachedExperiment {
       flag = false;
     }
     tmp2 = new LibdiscoreWrapperSimpleExperiment(global, tmp, new.target, new.target);
-    // ThrowIfThisInitialized (0x7c)
     tmp2.label = require;
     tmp2.defaultValue = flag;
     return tmp2;
@@ -93,7 +92,6 @@ prototype2["getCachedEnabled"] = function getCachedEnabled() {
 class LibdiscoreBridgedStoreExperiment extends LibdiscoreCachedExperiment {
   constructor(arg0, arg1, arg2) {
     tmp = new tmp(global, importDefault, new.target);
-    // ThrowIfThisInitialized (0x7c)
     tmp.storeName = require;
     return tmp;
   }
@@ -145,7 +143,6 @@ const tmp8 = new "getEnabledFeatureName"(
   require,
   dependencyMap,
 );
-// ThrowIfThisInitialized (0x7c)
 tmp8.storeName = "batch-store-refactor";
 class LibdiscoreTelemetryExperiment extends LibdiscoreCachedExperiment {
   constructor() {
@@ -216,13 +213,11 @@ const tmp10 = new "shouldCollectMetrics"(
   LibdiscoreWrapperSimpleExperiment,
   tmp8,
 );
-// ThrowIfThisInitialized (0x7c)
 tmp10.label = "Allow react to render before lazy cache is loaded";
 tmp10.defaultValue = false;
 class LibdiscoreCustomTreatmentsExperiment extends LibdiscoreCachedExperiment {
   constructor(arg0, arg1, arg2) {
     tmp = new tmp(global, new.target);
-    // ThrowIfThisInitialized (0x7c)
     tmp.label = require;
     tmp.treatmentCount = importDefault;
     return tmp;
@@ -259,7 +254,6 @@ const tmp11 = new "getTreatments"(
   new.target,
   getTreatments,
 );
-// ThrowIfThisInitialized (0x7c)
 tmp11.label = "Android Pull Mode Rendering";
 tmp11.treatmentCount = 4;
 const tmp12 = new "getTreatments"(
@@ -285,7 +279,6 @@ const tmp12 = new "getTreatments"(
   new.target,
   "Android Pull Mode Rendering",
 );
-// ThrowIfThisInitialized (0x7c)
 tmp12.label = "Android Fresco Cache";
 tmp12.treatmentCount = 3;
 const tmp13 = new "getTreatments"(
@@ -303,7 +296,6 @@ const tmp13 = new "getTreatments"(
   LibdiscoreWrapperSimpleExperiment,
   tmp8,
 );
-// ThrowIfThisInitialized (0x7c)
 tmp13.label = "Android Chat Mosaic Shared Pool";
 tmp13.defaultValue = false;
 const tmp14 = new "getTreatments"(
@@ -321,7 +313,6 @@ const tmp14 = new "getTreatments"(
   LibdiscoreWrapperSimpleExperiment,
   tmp8,
 );
-// ThrowIfThisInitialized (0x7c)
 tmp14.label = "Android Hermes Occupancy Target";
 tmp14.defaultValue = false;
 tmp2 = new tmp2(
@@ -339,7 +330,6 @@ tmp2 = new tmp2(
   LibdiscoreWrapperSimpleExperiment,
   tmp8,
 );
-// ThrowIfThisInitialized (0x7c)
 tmp2.label = "RN Flag, was false on RN 0.81 and true in RN 0.86, suspect of causing RMLE regressions";
 tmp2.defaultValue = false;
 tmp3 = new tmp3(
@@ -365,12 +355,10 @@ tmp3 = new tmp3(
   tmp2,
   "RN Flag, was false on RN 0.81 and true in RN 0.86, suspect of causing RMLE regressions",
 );
-// ThrowIfThisInitialized (0x7c)
 tmp3.label = "iOS ObjC Composed Image Cache";
 tmp3.treatmentCount = 3;
 let c7 = false;
-const tmp7 = new timestampDefault("libdiscoreExperiments");
-const result = set.fileFinishedImporting("modules/libdiscore/libdiscoreExperiments.tsx");
+const result = size.fileFinishedImporting("modules/libdiscore/libdiscoreExperiments.tsx");
 
 export const ALL_LIBDISCORE_EXPERIMENTS = items;
 export { LibdiscoreCachedExperiment };
@@ -391,8 +379,8 @@ export const clearLibdiscoreExperimentCache = function clearLibdiscoreExperiment
   if (obj.isLibdiscoreInitialized()) {
     logger.info("Clearing libdiscore experiment cache and disabling sync");
     c7 = true;
-    const experimentCacher = isBlockedDomain.getExperimentCacher();
+    const experimentCacher = js_shim_shim.getExperimentCacher();
     experimentCacher.clearCache();
-    const tmpResult = isBlockedDomain;
+    const tmpResult = js_shim_shim;
   }
 };

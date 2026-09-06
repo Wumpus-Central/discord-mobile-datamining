@@ -1,12 +1,11 @@
 // discord_app/modules/guild_themes/GuildThemePreviewStore.tsx
-import apply from "../../../_runtime/00012_apply.js";
+import _mod12 from "../../../_runtime/metro/00012__.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import cloneGuildThemeSettings from "guildThemeSerialization.tsx";
-import closure_3 from "../../stores/AuthenticationStore.tsx";
-import GuildThemePreviewOrigin from "GuildThemePreviewConstants.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import guildThemeSerialization from "guildThemeSerialization.tsx";
+import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 
-require = arg1;
+require = fn;
 function handleEnd() {
   let tmp = null == closure_5.guildId;
   if (tmp) {
@@ -31,8 +30,9 @@ function handleEnd() {
   }
   return flag;
 }
-({ GuildThemePreviewOrigin, GuildThemePreviewOwner } = GuildThemePreviewOrigin);
-const timeout = new require("start").Timeout();
+const GuildThemePreviewConstants = fn(4446);
+({ GuildThemePreviewOrigin, GuildThemePreviewOwner } = GuildThemePreviewConstants);
+const timeout = new fn(4447).Timeout();
 let closure_5 = {
   guildId: null,
   draft: null,
@@ -49,7 +49,7 @@ const Store = initializeDefault.Store;
 class GuildThemePreviewStore extends Store {}
 const prototype = GuildThemePreviewStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_3);
+  this.waitFor(AuthenticationStore);
 };
 Object.defineProperty(prototype, "guildId", {
   get: function guildId() {
@@ -82,7 +82,7 @@ Object.defineProperty(prototype, "originalEnabled", {
   set: undefined,
 });
 Object.defineProperty(prototype, "origin", {
-  get: function origin(keys, arg1) {
+  get: function origin() {
     return closure_5.origin;
   },
   set: undefined,
@@ -122,22 +122,21 @@ prototype["hasChanges"] = function hasChanges() {
   if (tmp) {
     let tmp4 = closure_5.draftEnabled !== closure_5.originalEnabled;
     if (!tmp4) {
-      tmp4 = !apply.isEqual(closure_5.draft, closure_5.original);
-      const obj = apply;
+      tmp4 = !_mod12.isEqual(closure_5.draft, closure_5.original);
     }
     tmp = tmp4;
   }
   return tmp;
 };
 GuildThemePreviewStore.displayName = "GuildThemePreviewStore";
-const guildThemePreviewStore = new GuildThemePreviewStore(dispatcherDefault, {
+const guildThemePreviewStore = new GuildThemePreviewStore(DispatcherDefault, {
   GUILD_THEME_PREVIEW_START: function handleStart(owner) {
     owner = owner.owner;
     ({ guildId, draft, original, draftEnabled, originalEnabled, origin } = owner);
     timeout.stop();
     const obj = {
       guildId,
-      draft: cloneGuildThemeSettings.cloneGuildThemeSettings(draft),
+      draft: guildThemeSerialization.cloneGuildThemeSettings(draft),
       original: null,
       draftEnabled: null,
       originalEnabled: null,
@@ -147,35 +146,35 @@ const guildThemePreviewStore = new GuildThemePreviewStore(dispatcherDefault, {
       isAwaitingGuildUpdate: false,
       saveError: null,
     };
-    const obj2 = cloneGuildThemeSettings;
-    obj[2] = cloneGuildThemeSettings.cloneGuildThemeSettings(original);
-    obj[3] = draftEnabled;
-    obj[4] = originalEnabled;
-    obj[5] = origin;
+    obj.original = guildThemeSerialization.cloneGuildThemeSettings(original);
+    obj.draftEnabled = draftEnabled;
+    obj.originalEnabled = originalEnabled;
+    obj.origin = origin;
     if (owner == null) {
-      owner = obj.owner;
+      owner = closure_5.owner;
     }
-    obj[6] = owner;
+    obj.owner = owner;
+    closure_5 = obj;
   },
   GUILD_THEME_PREVIEW_SELECT_PRESET: function handleSelectPreset(arg0) {
-    if (null == obj.guildId) {
+    if (null == closure_5.guildId) {
       return false;
     } else {
-      obj = { presetId: null, customUserThemeSettings: "a" };
-      obj[0] = tmp;
-      const isEqualResult = apply.isEqual(obj.draft, obj);
+      let obj = { presetId: tmp, customUserThemeSettings: "a" };
+      const isEqualResult = _mod12.isEqual(closure_5.draft, obj);
       let flag = !isEqualResult;
       if (isEqualResult) {
-        flag = !obj.draftEnabled;
+        flag = !closure_5.draftEnabled;
       }
       if (flag) {
         timeout.stop();
         obj = {};
-        const merged = Object.assign(obj);
+        const merged = Object.assign(closure_5);
         obj.draft = obj;
         obj.draftEnabled = true;
         obj.isAwaitingGuildUpdate = false;
         obj.saveError = null;
+        closure_5 = obj;
         flag = true;
       }
       return flag;
@@ -183,31 +182,32 @@ const guildThemePreviewStore = new GuildThemePreviewStore(dispatcherDefault, {
   },
   GUILD_THEME_PREVIEW_UPDATE_CUSTOM: function handleUpdateCustom(colors) {
     colors = colors.colors;
-    if (null == obj.guildId) {
+    if (null == closure_5.guildId) {
       return false;
     } else {
-      obj = { presetId: "Array", customUserThemeSettings: 0 };
+      let obj = { presetId: "Array", customUserThemeSettings: 0 };
       obj = { colors: null, gradientColorStops: null, gradientAngle: null, baseMix: null };
       const items = [];
       HermesBuiltin.arraySpread(colors, 0);
-      obj[0] = items;
-      obj[1] = [];
-      obj[2] = tmp;
-      obj[3] = tmp2;
-      obj[1] = obj;
-      const isEqualResult = apply.isEqual(obj.draft, obj);
+      obj.colors = items;
+      obj.gradientColorStops = [];
+      obj.gradientAngle = tmp;
+      obj.baseMix = tmp2;
+      obj.customUserThemeSettings = obj;
+      const isEqualResult = _mod12.isEqual(closure_5.draft, obj);
       let flag = !isEqualResult;
       if (isEqualResult) {
-        flag = !obj.draftEnabled;
+        flag = !closure_5.draftEnabled;
       }
       if (flag) {
         timeout.stop();
         obj = {};
-        const merged = Object.assign(obj);
+        const merged = Object.assign(closure_5);
         obj.draft = obj;
         obj.draftEnabled = true;
         obj.isAwaitingGuildUpdate = false;
         obj.saveError = null;
+        closure_5 = obj;
         flag = true;
       }
       return flag;
@@ -215,14 +215,15 @@ const guildThemePreviewStore = new GuildThemePreviewStore(dispatcherDefault, {
   },
   GUILD_THEME_PREVIEW_TRANSFER_OWNERSHIP: function handleTransferOwnership(owner) {
     owner = owner.owner;
-    let flag = null != obj.guildId;
+    let flag = null != closure_5.guildId;
     if (flag) {
-      flag = obj.owner !== owner;
+      flag = closure_5.owner !== owner;
     }
     if (flag) {
-      obj = {};
-      const merged = Object.assign(obj);
+      const obj = {};
+      const merged = Object.assign(closure_5);
       obj.owner = owner;
+      closure_5 = obj;
       flag = true;
     }
     return flag;
@@ -231,15 +232,16 @@ const guildThemePreviewStore = new GuildThemePreviewStore(dispatcherDefault, {
   GUILD_THEME_PREVIEW_SAVE_START: function handleSaveStart() {
     timeout.stop();
     const obj = {};
-    const merged = Object.assign(obj);
+    const merged = Object.assign(closure_5);
     obj.isSaving = true;
     obj.isAwaitingGuildUpdate = false;
     obj.saveError = null;
+    closure_5 = obj;
   },
   GUILD_THEME_PREVIEW_SAVE_SUCCESS: function handleSaveSuccess(guildTheme) {
     guildTheme = guildTheme.guildTheme;
-    if (null != obj.guildId) {
-      if (tmp === obj.guildId) {
+    if (null != closure_5.guildId) {
+      if (tmp === closure_5.guildId) {
         let themeSettings;
         if (guildTheme != null) {
           themeSettings = guildTheme.themeSettings;
@@ -254,21 +256,20 @@ const guildThemePreviewStore = new GuildThemePreviewStore(dispatcherDefault, {
         if (flag == null) {
           flag = false;
         }
-        obj = {};
-        const merged = Object.assign(obj);
-        obj.draft = cloneGuildThemeSettings.cloneGuildThemeSettings(themeSettings);
-        const obj2 = cloneGuildThemeSettings;
-        obj.original = cloneGuildThemeSettings.cloneGuildThemeSettings(themeSettings);
+        let obj = {};
+        const merged = Object.assign(closure_5);
+        obj.draft = guildThemeSerialization.cloneGuildThemeSettings(themeSettings);
+        obj.original = guildThemeSerialization.cloneGuildThemeSettings(themeSettings);
         obj.draftEnabled = flag;
         obj.originalEnabled = flag;
         obj.isSaving = false;
         obj.isAwaitingGuildUpdate = true;
         obj.saveError = null;
+        closure_5 = obj;
         timeout.stop();
         timeout.start(10000, () => {
-          if (obj.isAwaitingGuildUpdate) {
-            obj = callback(table[3]);
-            obj.dispatch({ type: "GUILD_THEME_PREVIEW_END" });
+          if (closure_1_5.isAwaitingGuildUpdate) {
+            DispatcherDefault.dispatch({ type: "GUILD_THEME_PREVIEW_END" });
           }
         });
         return true;
@@ -277,17 +278,18 @@ const guildThemePreviewStore = new GuildThemePreviewStore(dispatcherDefault, {
     return false;
   },
   GUILD_THEME_PREVIEW_SAVE_FAILURE: function handleSaveFailure(error) {
-    let flag = null != obj.guildId;
+    let flag = null != closure_5.guildId;
     if (flag) {
-      flag = tmp === obj.guildId;
+      flag = tmp === closure_5.guildId;
     }
     if (flag) {
       timeout.stop();
-      obj = {};
-      const merged = Object.assign(obj);
+      const obj = {};
+      const merged = Object.assign(closure_5);
       obj.isSaving = false;
       obj.isAwaitingGuildUpdate = false;
       obj.saveError = error.error;
+      closure_5 = obj;
       flag = true;
     }
     return flag;
@@ -385,7 +387,7 @@ const guildThemePreviewStore = new GuildThemePreviewStore(dispatcherDefault, {
     return flag;
   },
   GUILD_MEMBER_REMOVE: function handleGuildMemberRemove(user) {
-    let tmp = user.user.id === id.getId();
+    let tmp = user.user.id === AuthenticationStore.getId();
     if (tmp) {
       let flag = null != closure_5.guildId;
       if (flag) {
@@ -432,7 +434,7 @@ const guildThemePreviewStore = new GuildThemePreviewStore(dispatcherDefault, {
     if (!tmp) {
       let tmp6 = undefined !== guild.theme;
       if (tmp6) {
-        const fromServerGuildThemeResult = cloneGuildThemeSettings.fromServerGuildTheme(guild.theme);
+        const fromServerGuildThemeResult = guildThemeSerialization.fromServerGuildTheme(guild.theme);
         let flag;
         if (fromServerGuildThemeResult != null) {
           flag = fromServerGuildThemeResult.enabled;
@@ -477,7 +479,6 @@ const guildThemePreviewStore = new GuildThemePreviewStore(dispatcherDefault, {
           }
         }
         tmp6 = flag2;
-        const obj = cloneGuildThemeSettings;
         tmp7 = require;
       }
       tmp5 = tmp6;
@@ -486,7 +487,8 @@ const guildThemePreviewStore = new GuildThemePreviewStore(dispatcherDefault, {
   },
   LOGOUT: handleEnd,
 });
-const result = require("set").fileFinishedImporting("modules/guild_themes/GuildThemePreviewStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_themes/GuildThemePreviewStore.tsx");
 
 export default guildThemePreviewStore;
 export { GuildThemePreviewOrigin };

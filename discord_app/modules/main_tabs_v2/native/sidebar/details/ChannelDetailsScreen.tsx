@@ -1,17 +1,20 @@
 // discord_app/modules/main_tabs_v2/native/sidebar/details/ChannelDetailsScreen.tsx
+import Link from "../../../../../../_runtime/01484_Link.js";
 import useBaseAppContainerDimensionsDefault from "../../../../screen/native/useBaseAppContainerDimensions.tsx";
-import PX_8Default from "ChannelDetails.tsx";
-import importAllResult from "../../../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import ChannelDetailsDefault from "ChannelDetails.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let c3 = importAllResult;
-const memoResult = importAllResult.memo((navigation) => {
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsScreen.tsx");
+
+export default noop.memo((navigation) => {
   navigation = navigation.navigation;
-  let obj = navigation(1484);
+  let obj = Link;
   const route = obj.useRoute();
   const items = [navigation];
-  const callback = importAllResult.useCallback(() => {
+  const callback = noop.useCallback(() => {
     navigation.goBack();
   }, items);
   obj = {
@@ -22,7 +25,7 @@ const memoResult = importAllResult.memo((navigation) => {
     onChannelDeleted: callback,
     expandTopic: true === route.params.expandTopic,
   };
-  return jsx(PX_8Default, {
+  return jsx(ChannelDetailsDefault, {
     channelId: route.params.channelId,
     isSearchLocked: true === route.params.search,
     onBackPress: callback,
@@ -31,8 +34,3 @@ const memoResult = importAllResult.memo((navigation) => {
     expandTopic: true === route.params.expandTopic,
   });
 });
-const result = require("set").fileFinishedImporting(
-  "modules/main_tabs_v2/native/sidebar/details/ChannelDetailsScreen.tsx",
-);
-
-export default memoResult;

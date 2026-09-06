@@ -1,23 +1,24 @@
 // discord_app/modules/premium/experiments/PremiumReferralIncentivesExperiment.tsx
-import set from "../../../../_runtime/00002_set.js";
 import ApexExperiment from "../../experiments/apex/index.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 let obj = { ORBS: "orbs", DISCOUNT: "discount" };
-obj = { referralRewardType: obj.ORBS, useAltReferralCardArt: false };
-obj = { referralRewardType: obj.DISCOUNT, useAltReferralCardArt: false };
-const apexExperiment = ApexExperiment.createApexExperiment({
+obj = {
   name: "2026-07-premium-referral-incentives",
   kind: "user",
   defaultConfig: { referralRewardType: null, useAltReferralCardArt: false },
-  variations: {
-    0: { referralRewardType: null, useAltReferralCardArt: false },
-    1: obj,
-    2: obj,
-    3: { referralRewardType: obj.ORBS, useAltReferralCardArt: true },
-    4: { referralRewardType: obj.DISCOUNT, useAltReferralCardArt: true },
-  },
-});
-const result = set.fileFinishedImporting("modules/premium/experiments/PremiumReferralIncentivesExperiment.tsx");
+  variations: null,
+};
+obj = {
+  0: { referralRewardType: null, useAltReferralCardArt: false },
+  1: { referralRewardType: obj.ORBS, useAltReferralCardArt: false },
+  2: { referralRewardType: obj.DISCOUNT, useAltReferralCardArt: false },
+  3: { referralRewardType: obj.ORBS, useAltReferralCardArt: true },
+  4: { referralRewardType: obj.DISCOUNT, useAltReferralCardArt: true },
+};
+obj.variations = obj;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/premium/experiments/PremiumReferralIncentivesExperiment.tsx");
 
 export default apexExperiment;
 export const ReferralRewardType = obj;

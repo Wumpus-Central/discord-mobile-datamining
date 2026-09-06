@@ -1,13 +1,13 @@
 // discord_app/modules/activities/utils/ActivityFlagUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
 import Storage2 from "../../../../discord_common/js/packages/storage/Storage.tsx";
-import hasFlag from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import explicitContentFromProto from "../../user_settings/UserSettings.tsx";
+import FlagUtils from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import UserSettings from "../../user_settings/UserSettings.tsx";
 import isEmbeddedActivityDefault from "isEmbeddedActivity.tsx";
-import ME from "../../../Constants.tsx";
+import Constants from "../../../Constants.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-({ ActivityFlags: c3, ActivityPartyPrivacy: c4 } = ME);
-const result = set.fileFinishedImporting("modules/activities/utils/ActivityFlagUtils.tsx");
+({ ActivityFlags: c3, ActivityPartyPrivacy: closure_4 } = Constants);
+const result = size.fileFinishedImporting("modules/activities/utils/ActivityFlagUtils.tsx");
 
 export const computeActivityFlags = function computeActivityFlags(activity, flag, arg2, canLaunchFrameResult, privacy) {
   if (flag === undefined) {
@@ -43,9 +43,9 @@ export const computeActivityFlags = function computeActivityFlags(activity, flag
     tmp6 = tmp4 | constants.CONTEXTLESS;
   }
   if (flag2) {
-    const AllowActivityPartyPrivacyFriends2 = explicitContentFromProto.AllowActivityPartyPrivacyFriends;
+    const AllowActivityPartyPrivacyFriends2 = UserSettings.AllowActivityPartyPrivacyFriends;
     const setting = AllowActivityPartyPrivacyFriends2.getSetting();
-    const AllowActivityPartyPrivacyVoiceChannel2 = explicitContentFromProto.AllowActivityPartyPrivacyVoiceChannel;
+    const AllowActivityPartyPrivacyVoiceChannel2 = UserSettings.AllowActivityPartyPrivacyVoiceChannel;
     const PARTY_PRIVACY_FRIENDS2 = constants.PARTY_PRIVACY_FRIENDS;
     const setting1 = AllowActivityPartyPrivacyVoiceChannel2.getSetting();
     if (setting) {
@@ -59,9 +59,8 @@ export const computeActivityFlags = function computeActivityFlags(activity, flag
     } else {
       tmp29 = tmp28 & ~PARTY_PRIVACY_VOICE_CHANNEL2;
     }
-    const tmp22 = constants;
   } else {
-    let value = PRIVATE === constants2.PUBLIC;
+    value = PRIVATE === constants2.PUBLIC;
     if (!value) {
       const Storage = Storage2.Storage;
       value = Storage.get("ACTIVITIES_FORCE_PUBLIC");
@@ -69,9 +68,9 @@ export const computeActivityFlags = function computeActivityFlags(activity, flag
     if (!value) {
       return tmp6;
     } else {
-      const AllowActivityPartyPrivacyFriends = explicitContentFromProto.AllowActivityPartyPrivacyFriends;
+      const AllowActivityPartyPrivacyFriends = UserSettings.AllowActivityPartyPrivacyFriends;
       const setting2 = AllowActivityPartyPrivacyFriends.getSetting();
-      const AllowActivityPartyPrivacyVoiceChannel = explicitContentFromProto.AllowActivityPartyPrivacyVoiceChannel;
+      const AllowActivityPartyPrivacyVoiceChannel = UserSettings.AllowActivityPartyPrivacyVoiceChannel;
       const PARTY_PRIVACY_FRIENDS = constants.PARTY_PRIVACY_FRIENDS;
       const setting3 = AllowActivityPartyPrivacyVoiceChannel.getSetting();
       if (setting2) {
@@ -98,7 +97,7 @@ export const isContextlessEmbeddedActivity = function isContextlessEmbeddedActiv
   if (num == null) {
     num = 0;
   }
-  let hasFlagResult = hasFlag.hasFlag(num, constants.CONTEXTLESS);
+  let hasFlagResult = FlagUtils.hasFlag(num, constants.CONTEXTLESS);
   if (hasFlagResult) {
     hasFlagResult = isEmbeddedActivityDefault(remoteApplicationActivity);
   }

@@ -1,9 +1,9 @@
 // discord_app/modules/core/web/UID.tsx
-import set from "../../../../_runtime/00002_set.js";
 import uniqueIdDefault from "../../../../_runtime/04764_uniqueId.js";
 import useInitialValueDefault from "../../../hooks/useInitialValue.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/core/web/UID.tsx");
+const result = size.fileFinishedImporting("modules/core/web/UID.tsx");
 
 export const uid = function uid() {
   let str = arg0;
@@ -13,8 +13,8 @@ export const uid = function uid() {
   return uniqueIdDefault(str);
 };
 export const useUID = function useUID() {
-  return useInitialValueDefault(() => callback(table[0])("uid_"));
+  return useInitialValueDefault(() => uniqueIdDefault("uid_"));
 };
 export const UID = function UID(children) {
-  return children.children(useInitialValueDefault(() => callback(table[0])("uid_")));
+  return children.children(useInitialValueDefault(() => uniqueIdDefault("uid_")));
 };

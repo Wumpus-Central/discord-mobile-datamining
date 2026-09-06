@@ -1,20 +1,19 @@
 // discord_app/modules/share/native/showSearchableDestinationListModal.tsx
-import set from "../../../../_runtime/00002_set.js";
-import getBestActiveInput from "../../../utils/native/ChatInputUtils.tsx";
-import _modDef4763 from "../../../actions/ModalActionCreators.tsx";
-import useIsWindowLarge from "../../screen/native/useIsWindowLarge.tsx";
+import ChatInputUtils from "../../../utils/native/ChatInputUtils.tsx";
+import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/share/native/showSearchableDestinationListModal.tsx");
+const useIsWindowLarge = tmp(6945);
+const result = size.fileFinishedImporting("modules/share/native/showSearchableDestinationListModal.tsx");
 
-export default function showSearchableDestinationListModal(closure_1_1, closure_0, c3) {
-  let obj = getBestActiveInput;
+export default function showSearchableDestinationListModal(promise, merged, c3) {
+  let obj = ChatInputUtils;
   obj.dismissKeyboard();
-  const obj2 = _modDef4763;
-  const tmp = require;
+  const obj2 = ModalActionCreatorsDefault;
   if (!obj3.isIOS()) {
     obj = { presentation: "modal" };
   } else {
     const tmpResult = useIsWindowLarge;
   }
-  return obj2.pushLazy(closure_1_1, closure_0, c3, obj);
+  return obj2.pushLazy(promise, merged, c3, obj);
 }

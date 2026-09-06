@@ -1,35 +1,35 @@
 // discord_app/modules/voice_panel/native/pip/usePIPAvoidanceSpecs.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import VoicePanelControlsModes2 from "../controls/VoicePanelControlsConstants.tsx";
-import VoicePanelModes2 from "../../VoicePanelConstants.tsx";
-import MIN_PAN_GESTURE_MOVE from "../../../panels/morphable/native/MorphablePanelConstants.tsx";
+import cheapWorkletShallowEqual from "../../../reanimated/native/cheapWorkletShallowEqual.tsx";
+import updateSharedValueIfChangedDefault from "../../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
+import VoicePanelControlsConstants from "../controls/VoicePanelControlsConstants.tsx";
+import VoicePanelConstants from "../../VoicePanelConstants.tsx";
+import MorphablePanelConstants from "../../../panels/morphable/native/MorphablePanelConstants.tsx";
+import getPIPBottomOffsetForPIPModeDefault from "../../../panels/morphable/native/getPIPBottomOffsetForPIPMode.tsx";
+import getAdjustedBottomOffsetsDefault from "../../../panels/morphable/native/getAdjustedBottomOffsets.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const VoicePanelModes = VoicePanelModes2.VoicePanelModes;
-const VoicePanelControlsModes = VoicePanelControlsModes2.VoicePanelControlsModes;
-const PIP_WINDOW_OFFSET = MIN_PAN_GESTURE_MOVE.PIP_WINDOW_OFFSET;
+const VoicePanelModes = VoicePanelConstants.VoicePanelModes;
+let VoicePanelControlsModes = VoicePanelControlsConstants.VoicePanelControlsModes;
+let PIP_WINDOW_OFFSET = MorphablePanelConstants.PIP_WINDOW_OFFSET;
 let closure_6 = {
   code: "function usePIPAvoidanceSpecsTsx1(){const{mode,controlsSpecs,keyboardHeight,safeArea,screenName}=this.__closure;return{mode:mode.get(),controlsSpecs:controlsSpecs.get(),keyboardHeight:keyboardHeight.get(),safeArea:safeArea.get(),screenName:screenName.get()};}",
 };
-let closure_7 = {
+const __initData = {
   code: "function usePIPAvoidanceSpecsTsx2(props,previous){const{cheapWorkletShallowEqual,VoicePanelModes,VoicePanelControlsModes,DEFAULT_CHANNEL_INPUT_HEIGHT,PIP_WINDOW_OFFSET,getPIPBottomOffsetForPIPMode,getAdjustedBottomOffsets,calculateVoicePanelHeaderSpecs,edgeGutter,updateSharedValueIfChanged,pipAvoidanceSpecs}=this.__closure;if(cheapWorkletShallowEqual(props,previous!==null&&previous!==void 0?previous:undefined))return;const{mode:mode,controlsSpecs:controlsSpecs,keyboardHeight:keyboardHeight,safeArea:safeArea,screenName:screenName}=props;const screenBottomOffset=function(){if(mode!==VoicePanelModes.PIP){if(mode===VoicePanelModes.PANEL&&controlsSpecs.mode===VoicePanelControlsModes.DRAWER){return DEFAULT_CHANNEL_INPUT_HEIGHT+PIP_WINDOW_OFFSET;}return 0;}return getPIPBottomOffsetForPIPMode(screenName);}();let{bottomOffset:bottomOffset}=getAdjustedBottomOffsets({screenBottomOffset:screenBottomOffset,safeAreaBottom:safeArea.bottom,keyboardHeight:keyboardHeight});if(keyboardHeight<=0&&mode===VoicePanelModes.PANEL&&controlsSpecs.mode===VoicePanelControlsModes.FLOATING_DEFAULT){bottomOffset+=controlsSpecs.height+PIP_WINDOW_OFFSET;}const{height:headerHeight}=calculateVoicePanelHeaderSpecs(safeArea,edgeGutter);updateSharedValueIfChanged(pipAvoidanceSpecs,{top:mode===VoicePanelModes.PANEL&&controlsSpecs.mode===VoicePanelControlsModes.FLOATING_DEFAULT?headerHeight:0,bottom:bottomOffset});}",
 };
-const result = set.fileFinishedImporting("modules/voice_panel/native/pip/usePIPAvoidanceSpecs.tsx");
+const result = size.fileFinishedImporting("modules/voice_panel/native/pip/usePIPAvoidanceSpecs.tsx");
 
 export default function usePIPAvoidanceSpecs(mode) {
   mode = mode.mode;
   const controlsSpecs = mode.controlsSpecs;
   const safeArea = mode.safeArea;
-  let sharedValue;
-  closure_4 = undefined;
-  closure_5 = undefined;
-  let token;
   let obj = mode(safeArea[3]);
-  sharedValue = obj.useSharedValue({ top: 0, bottom: 0 });
+  const sharedValue = obj.useSharedValue({ top: 0, bottom: 0 });
   const tmp2 = controlsSpecs(safeArea[4])();
-  closure_4 = tmp2;
+  VoicePanelControlsModes = tmp2;
   const tmp3 = controlsSpecs(safeArea[5])();
-  closure_5 = tmp3;
-  token = mode(safeArea[6]).useToken(controlsSpecs(safeArea[7]).modules.mobile.VOICE_PANEL_GUTTER);
+  PIP_WINDOW_OFFSET = tmp3;
+  const token = mode(safeArea[6]).useToken(controlsSpecs(safeArea[7]).modules.mobile.VOICE_PANEL_GUTTER);
   const obj2 = mode(safeArea[6]);
   const fn = function p() {
     return {
@@ -44,55 +44,49 @@ export default function usePIPAvoidanceSpecs(mode) {
   fn.__workletHash = 17017598468922;
   fn.__initData = token;
   const fn2 = function u(safeAreaState, current) {
-    let obj = mode(safeArea[8]);
+    let obj = cheapWorkletShallowEqual;
     if (!obj.cheapWorkletShallowEqual(safeAreaState, current)) {
       ({ mode, controlsSpecs, keyboardHeight, safeArea } = safeAreaState);
-      if (mode !== sharedValue.PIP) {
+      if (mode !== VoicePanelModes.PIP) {
         let num = 0;
         if (mode === tmp4.PANEL) {
           num = 0;
-          if (controlsSpecs.mode === closure_4.DRAWER) {
-            num = 60 + closure_5;
+          if (controlsSpecs.mode === VoicePanelControlsModes.DRAWER) {
+            num = 60 + PIP_WINDOW_OFFSET;
           }
         }
         let tmp6 = num;
       } else {
-        tmp6 = controlsSpecs(tmp2[9])(tmp3);
+        tmp6 = getPIPBottomOffsetForPIPModeDefault(tmp3);
       }
-      obj = { screenBottomOffset: null, safeAreaBottom: null, keyboardHeight: null };
-      obj[0] = tmp6;
-      obj[1] = safeArea.bottom;
-      obj[2] = keyboardHeight;
-      const bottomOffset = controlsSpecs(tmp2[10])(obj).bottomOffset;
+      obj = { screenBottomOffset: tmp6, safeAreaBottom: safeArea.bottom, keyboardHeight };
+      const bottomOffset = getAdjustedBottomOffsetsDefault(obj).bottomOffset;
       let tmp10 = keyboardHeight <= 0 && mode === tmp4.PANEL;
       if (tmp10) {
-        tmp10 = controlsSpecs.mode === closure_4.FLOATING_DEFAULT;
+        tmp10 = controlsSpecs.mode === VoicePanelControlsModes.FLOATING_DEFAULT;
       }
       let sum = bottomOffset;
       if (tmp10) {
-        sum = bottomOffset + (controlsSpecs.height + closure_5);
+        sum = bottomOffset + (controlsSpecs.height + PIP_WINDOW_OFFSET);
       }
       let num4 = 0;
-      if (mode === sharedValue.PANEL) {
+      if (mode === VoicePanelModes.PANEL) {
         num4 = 0;
-        if (controlsSpecs.mode === closure_4.FLOATING_DEFAULT) {
-          num4 = tmp9(tmp2[11])(safeArea, token).height;
+        if (controlsSpecs.mode === VoicePanelControlsModes.FLOATING_DEFAULT) {
+          num4 = tmp9(12277)(safeArea, token).height;
         }
       }
-      obj = { top: null, bottom: null };
-      obj[0] = num4;
-      obj[1] = sum;
-      controlsSpecs(tmp2[12])(sharedValue, obj);
-      const tmp16 = sharedValue;
-      const tmp9Result = controlsSpecs(tmp2[12]);
+      const rect = { top: num4, bottom: sum };
+      updateSharedValueIfChangedDefault(sharedValue, rect);
+      const tmp9Result = updateSharedValueIfChangedDefault;
     }
   };
   obj = {
     cheapWorkletShallowEqual: mode(safeArea[8]).cheapWorkletShallowEqual,
     VoicePanelModes: sharedValue,
-    VoicePanelControlsModes: closure_4,
+    VoicePanelControlsModes,
     DEFAULT_CHANNEL_INPUT_HEIGHT: 60,
-    PIP_WINDOW_OFFSET: closure_5,
+    PIP_WINDOW_OFFSET,
     getPIPBottomOffsetForPIPMode: controlsSpecs(safeArea[9]),
     getAdjustedBottomOffsets: controlsSpecs(safeArea[10]),
     calculateVoicePanelHeaderSpecs: controlsSpecs(safeArea[11]),
@@ -102,7 +96,7 @@ export default function usePIPAvoidanceSpecs(mode) {
   };
   fn2.__closure = obj;
   fn2.__workletHash = 13029906729161;
-  fn2.__initData = closure_7;
+  fn2.__initData = __initData;
   const animatedReaction = mode(safeArea[3]).useAnimatedReaction(fn, fn2);
   return sharedValue;
 }

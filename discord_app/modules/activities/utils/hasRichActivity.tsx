@@ -1,9 +1,9 @@
 // discord_app/modules/activities/utils/hasRichActivity.tsx
-import set from "../../../../_runtime/00002_set.js";
-import ME from "../../../Constants.tsx";
+import Constants from "../../../Constants.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const ActivityTypes = ME.ActivityTypes;
-const result = set.fileFinishedImporting("modules/activities/utils/hasRichActivity.tsx");
+const ActivityTypes = Constants.ActivityTypes;
+const result = size.fileFinishedImporting("modules/activities/utils/hasRichActivity.tsx");
 
 export default function hasRichActivity(type) {
   let tmp = null != type;

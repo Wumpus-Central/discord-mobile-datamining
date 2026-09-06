@@ -1,10 +1,12 @@
 // discord_app/modules/panels/morphable/native/SafeAreaDisabledStore.tsx
-import set2 from "../../../../../_runtime/00002_set.js";
-import keys from "../../../../../_runtime/00560_keys.js";
+import 00560__ from "../../../../../_runtime/metro/00560__.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-let obj = keys.create((arg0, arg1) => {
+const result = size.fileFinishedImporting("modules/panels/morphable/native/SafeAreaDisabledStore.tsx");
+
+export default module_560.create((arg0, arg1) => {
   closure_0 = arg0;
-  closure_1 = arg1;
+  dependencyMap = arg1;
   let obj = {
     lockKeys: new Set(),
     shouldDisableSafeAreas() {
@@ -12,11 +14,11 @@ let obj = keys.create((arg0, arg1) => {
     },
     requestSafeAreaDisableLock(arg0) {
       ({ key: closure_0, lockEnabled: closure_1 } = arg0);
-      callback(1249).batchUpdates(() => {
-        closure_1_0((lockKeys) => {
+      closure_0(1249).batchUpdates(() => {
+        closure_0((lockKeys) => {
           lockKeys = lockKeys.lockKeys;
-          const hasItem = lockKeys.has(closure_0);
-          if (closure_1) {
+          const hasItem = lockKeys.has(closure_1_0);
+          if (closure_1_1) {
             let tmp12 = lockKeys;
             if (!hasItem) {
               let obj = {};
@@ -43,10 +45,7 @@ let obj = keys.create((arg0, arg1) => {
           }
         });
       });
-    },
+    }
   };
   return obj;
 });
-const result = set2.fileFinishedImporting("modules/panels/morphable/native/SafeAreaDisabledStore.tsx");
-
-export default obj;

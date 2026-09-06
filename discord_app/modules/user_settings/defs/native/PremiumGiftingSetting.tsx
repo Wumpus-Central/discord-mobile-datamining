@@ -1,51 +1,52 @@
 // discord_app/modules/user_settings/defs/native/PremiumGiftingSetting.tsx
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import Button from "../../../../design/void/native.tsx";
-import isPremiumGiftingSupported from "../../../device/BillingPlatformUtils.tsx";
-import useEligibleActiveOutboundPromotions from "../../../premium/promotions/PromotionsHooks.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
-import { GiftingSectionTitle } from "../../premium/native/UserSettingsPremiumGifting.tsx";
+import util from "../../../../intl/index.native.tsx";
+import native from "../../../../design/void/native.tsx";
+import BillingPlatformUtils from "../../../device/BillingPlatformUtils.tsx";
+import BlockedPaymentsCountryExperiment from "../../../billing/experiments/BlockedPaymentsCountryExperiment.tsx";
+import openBlockedPaymentsCountryActionSheetDefault from "../../../billing/native/openBlockedPaymentsCountryActionSheet.tsx";
+import PromotionsHooks from "../../../premium/promotions/PromotionsHooks.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-createToggle = {
+require = fn;
+const jsx = fn(21).jsx;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["jcSP+g"]);
+    const intl = util.intl;
+    return intl.string(util.t["jcSP+g"]);
   },
   parent: null,
-  IconComponent: require("GiftIcon").GiftIcon,
+  IconComponent: fn(11030).GiftIcon,
   usePredicate() {
-    return isPremiumGiftingSupported.isPremiumGiftingSupported();
+    return BillingPlatformUtils.isPremiumGiftingSupported();
   },
   usePreNavigationAction: function useCanNavigateToPaymentSetting() {
-    return React.useCallback(() => {
-      const isPaymentsBlocked = callback(table[3]).getIsPaymentsBlocked();
+    return noop.useCallback(() => {
+      const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();
       let flag = !isPaymentsBlocked;
       if (isPaymentsBlocked) {
-        callback2(table[4])();
+        openBlockedPaymentsCountryActionSheetDefault();
         flag = false;
       }
       return flag;
     }, []);
   },
   useTrailing: function usePremiumGiftingSettingTrailing() {
-    let obj = useEligibleActiveOutboundPromotions;
+    let obj = PromotionsHooks;
     const unseenOutboundPromotions = obj.useUnseenOutboundPromotions();
     obj = { value: unseenOutboundPromotions.length };
-    return jsx(Button.Badge, { value: unseenOutboundPromotions.length });
+    return jsx(native.Badge, { value: unseenOutboundPromotions.length });
   },
   unsearchable: true,
-  screen: createToggle,
-};
-createToggle = {
-  route: require("ME").UserSettingsSections.PREMIUM_GIFTING,
-  getComponent() {
-    return GiftingSectionTitle /* GiftingSectionTitle */.default;
+  screen: {
+    route: fn(1074).UserSettingsSections.PREMIUM_GIFTING,
+    getComponent() {
+      return require("UserSettingsPremiumGifting").default;
+    },
   },
 };
-createToggle = createToggle.createRoute(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/PremiumGiftingSetting.tsx");
+SettingBuilders = SettingBuilders.createRoute(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/PremiumGiftingSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

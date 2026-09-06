@@ -1,5 +1,5 @@
 // discord_app/modules/settings/native/renderer/SettingRendererConstants.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 const obj = {
   ROUTE: "route",
@@ -15,8 +15,7 @@ const obj = {
 };
 const items = [, ,];
 ({ ROUTE: arr[0], PRESSABLE: arr[1], STATIC: arr[2] } = obj);
-let set = new Set(items);
-const result = set.fileFinishedImporting("modules/settings/native/renderer/SettingRendererConstants.tsx");
+const result = size.fileFinishedImporting("modules/settings/native/renderer/SettingRendererConstants.tsx");
 
 export const GUILD_SELECT_ALL_SERVERS_OPTION_ID = "0";
 export const NodeType = obj;
@@ -27,4 +26,4 @@ export const ListItemType = {
   SECTION_ROW_PLACEHOLDER: "section_row_placeholder",
   SETTING_SEARCH_RESULT: "setting_search_result",
 };
-export const SUPPORTED_SEARCH_RESULT_NO_PARENT_RENDERER_TYPES = set;
+export const SUPPORTED_SEARCH_RESULT_NO_PARENT_RENDERER_TYPES = new Set(items);

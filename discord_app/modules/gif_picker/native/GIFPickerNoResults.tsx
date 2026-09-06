@@ -1,28 +1,34 @@
 // discord_app/modules/gif_picker/native/GIFPickerNoResults.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import native from "../../../design/void/native.tsx";
 import useExpressionPickerInsetsDefault from "../../expression_picker/native/useExpressionPickerInsets.tsx";
-import importAllResult from "../../../../_runtime/00019_noop.js";
-import { ScrollView } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import SearchEmpty from "../../../design/components/Illustration/native/redesign/generated/SearchEmpty.tsx";
+import useModalDismissGuardRefreshControl from "../../keyboard/native/useModalDismissGuardRefreshControl.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let c3 = importAllResult;
-require("ME").GIFPickerResultTypes;
+require = fn;
+const ScrollView = fn(17).ScrollView;
+fn(1074).GIFPickerResultTypes;
+const jsx = fn(21).jsx;
+fn(4560);
 let obj = { emptyStateContainer: { padding: 0, flex: 1 }, emptyStateBody: null, emptyStateImage: null };
-obj = { color: ThemesDefault.colors.TEXT_SUBTLE };
-obj[1] = obj;
-createCacheKey = { marginBottom: ThemesDefault.space.PX_8, marginTop: 0 };
-obj[2] = createCacheKey;
-let closure_7 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(function GIFPickerNoResults(inActionSheet) {
+obj = { color: nativeDefault.colors.TEXT_SUBTLE };
+obj.emptyStateBody = obj;
+const createStyles = { marginBottom: nativeDefault.space.PX_8, marginTop: 0 };
+obj.emptyStateImage = createStyles;
+let closure_7 = createStyles.createStyles(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/gif_picker/native/GIFPickerNoResults.tsx");
+
+export default noop.memo(function GIFPickerNoResults(inActionSheet) {
   inActionSheet = inActionSheet.inActionSheet;
-  let safeAreaBottomKeyboardAware;
-  const tmp = callback();
-  safeAreaBottomKeyboardAware = useExpressionPickerInsetsDefault({ hasCategories: false }).safeAreaBottomKeyboardAware;
+  const tmp = closure_7();
+  const safeAreaBottomKeyboardAware = useExpressionPickerInsetsDefault({
+    hasCategories: false,
+  }).safeAreaBottomKeyboardAware;
   const items = [safeAreaBottomKeyboardAware];
-  const memo = importAllResult.useMemo(() => ({ paddingBottom: safeAreaBottomKeyboardAware, flex: 1 }), items);
-  let obj = safeAreaBottomKeyboardAware(10317);
+  const memo = noop.useMemo(() => ({ paddingBottom: safeAreaBottomKeyboardAware, flex: 1 }), items);
+  let obj = SearchEmpty;
   const searchEmptySource = obj.useSearchEmptySource();
   if (inActionSheet.categoryType === GIFPickerResultTypes.FAVORITES) {
     const intl2 = tmp4(1114).intl;
@@ -31,7 +37,7 @@ const memoResult = importAllResult.memo(function GIFPickerNoResults(inActionShee
     const intl = tmp4(1114).intl;
     stringResult = intl.string(tmp4(1114).t["5dX4UM"]);
   }
-  const modalDismissGuardRefreshControl = safeAreaBottomKeyboardAware(10321).useModalDismissGuardRefreshControl();
+  const modalDismissGuardRefreshControl = useModalDismissGuardRefreshControl.useModalDismissGuardRefreshControl();
   if (inActionSheet) {
     let BottomSheetScrollView = tmp4(6627).BottomSheetScrollView;
   } else {
@@ -42,7 +48,7 @@ const memoResult = importAllResult.memo(function GIFPickerNoResults(inActionShee
   if (inActionSheet) {
     tmp9 = modalDismissGuardRefreshControl;
   }
-  obj[2] = tmp9;
+  obj.refreshControl = tmp9;
   obj = {
     source: searchEmptySource,
     body: stringResult,
@@ -50,7 +56,7 @@ const memoResult = importAllResult.memo(function GIFPickerNoResults(inActionShee
     containerStyle: tmp.emptyStateContainer,
     imageStyle: tmp.emptyStateImage,
   };
-  obj[3] = jsx(safeAreaBottomKeyboardAware(1178).RefreshEmptyState, {
+  obj.children = jsx(native.RefreshEmptyState, {
     source: searchEmptySource,
     body: stringResult,
     bodyStyle: tmp.emptyStateBody,
@@ -67,6 +73,3 @@ const memoResult = importAllResult.memo(function GIFPickerNoResults(inActionShee
     />
   );
 });
-const result = require("set").fileFinishedImporting("modules/gif_picker/native/GIFPickerNoResults.tsx");
-
-export default memoResult;

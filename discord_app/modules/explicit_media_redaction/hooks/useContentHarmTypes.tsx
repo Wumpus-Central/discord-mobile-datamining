@@ -1,45 +1,39 @@
 // discord_app/modules/explicit_media_redaction/hooks/useContentHarmTypes.tsx
-import getEligibleHarmTypesConfigsForContext from "../ObscuredMediaUtils.tsx";
-import closure_2 from "../../../../_runtime/00019_noop.js";
-import closure_3 from "../../user_settings/UserSettingsProtoStore.tsx";
-import closure_4 from "../../../stores/ChannelStore.tsx";
-import closure_5 from "../../../stores/RelationshipStore.tsx";
-import closure_6 from "../../../stores/UserStore.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { getEligibleHarmTypesConfigsForContext } from "../ObscuredMediaUtils.tsx";
+import ObscuredMediaUtils from "../ObscuredMediaUtils.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import UserSettingsProtoStore from "../../user_settings/UserSettingsProtoStore.tsx";
+import ChannelStore from "../../../stores/ChannelStore.tsx";
+import RelationshipStore from "../../../stores/RelationshipStore.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
 
-require = arg1;
+require = fn;
 function useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, authorId) {
-  const _require = channelId;
+  _require = channelId;
   dependencyMap = authorId;
-  const eligibleHarmTypesConfigsForContext =
-    require("../ObscuredMediaUtils.tsx").getEligibleHarmTypesConfigsForContext();
-  let obj = getEligibleHarmTypesConfigsForContext;
-  let items = [closure_6];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
-    items,
-    () => currentUser.getCurrentUser(),
-  );
-  const obj2 = initialize;
+  const eligibleHarmTypesConfigsForContext = require("ObscuredMediaUtils").getEligibleHarmTypesConfigsForContext();
+  let obj = require("ObscuredMediaUtils");
+  let items = [UserStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());
+  const obj2 = require("initialize");
   const items1 = [stateFromStores1, stateFromStores2];
-  stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
-    const items = [stateFromStores1, stateFromStores2];
-    return channelId(authorId[5]).getChannelTypeById(channelId, authorId, items);
+  stateFromStores1 = require("initialize").useStateFromStores(items1, () => {
+    const items = [ChannelStore, RelationshipStore];
+    return ObscuredMediaUtils.getChannelTypeById(closure_0, closure_1, items);
   });
-  const obj3 = initialize;
+  const obj3 = require("initialize");
   const items2 = [stateFromStores];
   const items3 = [eligibleHarmTypesConfigsForContext];
-  stateFromStores2 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+  stateFromStores2 = require("initialize").useStateFromStores(
     items2,
     () =>
-      eligibleHarmTypesConfigsForContext.reduce((arg0, harmType) => {
+      eligibleHarmTypesConfigsForContext.reduce((acc, harmType) => {
         const obj = {};
-        const merged = Object.assign(arg0);
+        const merged = Object.assign(acc);
         obj[harmType.harmType] = harmType.getProtoUserSettings(settings.settings);
         return obj;
       }, {}),
     items3,
-    require("../SensitiveMediaRedactionSettingUtils.tsx").areSettingsEqual,
+    require("SensitiveMediaRedactionSettingUtils").areSettingsEqual,
   );
   const items4 = [stateFromStores1, eligibleHarmTypesConfigsForContext, stateFromStores2, authorId, stateFromStores];
   const memo = eligibleHarmTypesConfigsForContext.useMemo(() => {
@@ -52,7 +46,7 @@ function useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, authorId) {
         if (null != tmp2) {
           const mapped = eligibleHarmTypesConfigsForContext.map((harmType) => {
             let tmp3 = null;
-            if (null != closure_4) {
+            if (null != stateFromStores1) {
               tmp3 = harmType.getUserSettingsWithDefaults(tmp)[tmp2];
             }
             harmType = null;
@@ -61,7 +55,7 @@ function useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, authorId) {
             }
             return harmType;
           });
-          const found = mapped.filter((arg0) => null != arg0);
+          const found = mapped.filter((item) => null != item);
         }
         return [];
       }
@@ -76,14 +70,15 @@ function useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, authorId) {
   }
   return NONE;
 }
-const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/hooks/useContentHarmTypes.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/explicit_media_redaction/hooks/useContentHarmTypes.tsx");
 
 export { useEnabledHarmTypesBitmaskForChannelAndAuthorId };
 export const useEnabledHarmTypesBitmaskForMessage = function useEnabledHarmTypesBitmaskForMessage(stateFromStores) {
   if (null == stateFromStores) {
     let channelIdAndAuthorIdFromMessage = {};
   } else {
-    channelIdAndAuthorIdFromMessage = getEligibleHarmTypesConfigsForContext;
+    channelIdAndAuthorIdFromMessage = ObscuredMediaUtils;
     channelIdAndAuthorIdFromMessage =
       channelIdAndAuthorIdFromMessage.getChannelIdAndAuthorIdFromMessage(stateFromStores);
   }

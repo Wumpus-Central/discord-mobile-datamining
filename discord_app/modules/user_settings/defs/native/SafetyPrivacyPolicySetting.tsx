@@ -1,34 +1,23 @@
 // discord_app/modules/user_settings/defs/native/SafetyPrivacyPolicySetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import ME from "../../../../Constants.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import _modDef4255 from "../../../../lib/native/Linking.tsx";
-import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import Constants from "../../../../Constants.tsx";
+import util from "../../../../intl/index.native.tsx";
+import LinkingDefault from "../../../../lib/native/Linking.tsx";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const MarketingURLs = ME.MarketingURLs;
-const pressable = createToggle.createPressable({
+const MarketingURLs = Constants.MarketingURLs;
+const pressable = SettingBuilders.createPressable({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.KGFTww);
+    const intl = util.intl;
+    return intl.string(util.t.KGFTww);
   },
-  parent: MobileUserSettings.MobileUserSettings.DATA_AND_PRIVACY,
+  parent: SettingsConstants.MobileUserSettings.DATA_AND_PRIVACY,
   onPress: function onPrivacyPolicyPress() {
-    _modDef4255.openURL(MarketingURLs.PRIVACY);
+    LinkingDefault.openURL(MarketingURLs.PRIVACY);
   },
   withArrow: true,
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.KGFTww);
-  },
-  parent: MobileUserSettings.MobileUserSettings.DATA_AND_PRIVACY,
-  onPress: function onPrivacyPolicyPress() {
-    _modDef4255.openURL(MarketingURLs.PRIVACY);
-  },
-  withArrow: true,
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/SafetyPrivacyPolicySetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/SafetyPrivacyPolicySetting.tsx");
 
 export default pressable;

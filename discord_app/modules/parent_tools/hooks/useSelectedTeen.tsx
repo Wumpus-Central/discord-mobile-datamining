@@ -1,32 +1,26 @@
 // discord_app/modules/parent_tools/hooks/useSelectedTeen.tsx
-import defaultAreStatesEqual from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import closure_2 from "../../../stores/UserStore.tsx";
-import closure_3 from "../FamilyCenterStore.tsx";
-import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import useStateFromStores from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
+import FamilyCenterStore from "../FamilyCenterStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useSelectedTeen.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/hooks/useSelectedTeen.tsx");
 
 export const useSelectedTeen = function useSelectedTeen() {
-  const items = [closure_3];
-  _require = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(
-    items,
-    () => selectedTeenId.getSelectedTeenId(),
-  );
-  const obj = defaultAreStatesEqual;
-  const items1 = [closure_2];
-  return require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(
-    items1,
-    () => {
-      let user;
-      if (null !== closure_0) {
-        user = closure_1_2.getUser(tmp);
-      }
-      return user;
-    },
-  );
+  const items = [FamilyCenterStore];
+  _require = require("useStateFromStores").useStateFromStores(items, () => selectedTeenId.getSelectedTeenId());
+  const obj = require("useStateFromStores");
+  const items1 = [UserStore];
+  return require("useStateFromStores").useStateFromStores(items1, () => {
+    let user;
+    if (null !== closure_0) {
+      user = UserStore.getUser(tmp);
+    }
+    return user;
+  });
 };
 export const useSelectedTeenId = function useSelectedTeenId() {
-  const items = [closure_3];
-  return defaultAreStatesEqual.useStateFromStores(items, () => selectedTeenId.getSelectedTeenId());
+  const items = [FamilyCenterStore];
+  return useStateFromStores.useStateFromStores(items, () => selectedTeenId.getSelectedTeenId());
 };

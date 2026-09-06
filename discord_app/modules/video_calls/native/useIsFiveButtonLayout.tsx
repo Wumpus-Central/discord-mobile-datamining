@@ -1,24 +1,18 @@
 // discord_app/modules/video_calls/native/useIsFiveButtonLayout.tsx
-import closure_3 from "../../../stores/ChannelStore.tsx";
-import closure_4 from "../../../stores/GuildStore.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { useIsConnectedToVoiceChannel } from "../../voice_chat/VoiceChatHooks.tsx";
+import ChannelStore from "../../../stores/ChannelStore.tsx";
+import GuildStore from "../../../stores/GuildStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/video_calls/native/useIsFiveButtonLayout.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/native/useIsFiveButtonLayout.tsx");
 
 export const useIsFiveButtonLayout = function useIsFiveButtonLayout(id) {
-  const _require = id;
-  const items = [closure_3];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
-    items,
-    () => closure_1_3.getChannel(closure_0),
-  );
-  const obj = initialize;
+  _require = id;
+  const items = [ChannelStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => ChannelStore.getChannel(closure_0));
+  const obj = require("initialize");
   const tmp = _require;
-  let isConnectedToVoiceChannel = require("../../voice_chat/VoiceChatHooks.tsx").useIsConnectedToVoiceChannel(
-    stateFromStores,
-  );
+  let isConnectedToVoiceChannel = require("VoiceChatHooks").useIsConnectedToVoiceChannel(stateFromStores);
   let guild_id;
   if (stateFromStores != null) {
     guild_id = stateFromStores.guild_id;
@@ -27,7 +21,7 @@ export const useIsFiveButtonLayout = function useIsFiveButtonLayout(id) {
     guild_id = null;
   }
   let guild_id1;
-  const obj3 = useIsConnectedToVoiceChannel;
+  const obj3 = require("VoiceChatHooks");
   if (stateFromStores != null) {
     guild_id1 = stateFromStores.guild_id;
   }
@@ -40,9 +34,9 @@ export const useIsFiveButtonLayout = function useIsFiveButtonLayout(id) {
   }
   const tmp6 = guild_id(9501);
   const tmp6Result = guild_id(9501)(guild_id1, id);
-  const items1 = [closure_4];
+  const items1 = [GuildStore];
   const items2 = [guild_id];
-  const stateFromStores1 = tmp(504).useStateFromStores(items1, () => closure_1_4.getGuild(guild_id), items2);
+  const stateFromStores1 = tmp(504).useStateFromStores(items1, () => GuildStore.getGuild(guild_id), items2);
   if (stateFromStores1 != null) {
     const afkChannelId = stateFromStores1.afkChannelId;
   }

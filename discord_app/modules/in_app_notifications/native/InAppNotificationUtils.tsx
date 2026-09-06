@@ -1,27 +1,29 @@
 // discord_app/modules/in_app_notifications/native/InAppNotificationUtils.tsx
-import apply from "../../../../_runtime/00012_apply.js";
-import setDefault from "../../../utils/Durations.tsx";
+import _mod12 from "../../../../_runtime/metro/00012__.js";
+import DurationsDefault from "../../../utils/Durations.tsx";
 import v1 from "../../../../_runtime/01256_v1.js";
-import collectGuildAnalyticsMetadataDefault from "../../app_analytics/AppAnalyticsUtils.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import { REACTION_MILESTONE_COUNTS } from "InAppNotificationConstants.tsx";
-import ME from "../../../Constants.tsx";
+import AppAnalyticsUtilsDefault from "../../app_analytics/AppAnalyticsUtils.tsx";
+import isForwardMessageDefault from "../../forwarding/isForwardMessage.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+require = fn;
+const REACTION_MILESTONE_COUNTS = fn(10095).REACTION_MILESTONE_COUNTS;
+const Constants = fn(1074);
 ({
-  AnalyticEvents: c5,
-  ChannelTypes: closure_6,
-  InAppNotificationTypes: error,
+  AnalyticEvents: hasOwnProperty,
+  ChannelTypes: metroRequire,
+  InAppNotificationTypes: closure_7,
   MessageEmbedTypes: closure_8,
-  MessageFlags: c9,
-} = ME);
-const result = require("set").fileFinishedImporting("modules/in_app_notifications/native/InAppNotificationUtils.tsx");
+  MessageFlags: closure_9,
+} = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/in_app_notifications/native/InAppNotificationUtils.tsx");
 
 export const isReactionMilestoneNotification = function isReactionMilestoneNotification(reactions, type) {
   if (null != type) {
     if (type !== constants2.GUILD_ANNOUNCEMENT) {
       return REACTION_MILESTONE_COUNTS.has(
-        apply.sumBy(reactions, (count_details) => {
+        _mod12.sumBy(reactions, (count_details) => {
           count_details = count_details.count_details;
           let num;
           if (count_details != null) {
@@ -62,16 +64,16 @@ export const getNotificationDuration = function getNotificationDuration(ALERT) {
           if (tmp.REACTION !== ALERT) {
             if (tmp.MESSAGE_REQUEST !== ALERT) {
               if (tmp.ALERT === ALERT) {
-                return 30 * setDefault.Millis.SECOND;
+                return 30 * DurationsDefault.Millis.SECOND;
               } else {
                 if (tmp.MESSAGE_REMINDER !== ALERT) {
                   if (tmp.RESTRICTED_HOURS_WARNING !== ALERT) {
                     if (tmp.RESTRICTED_SCHEDULE_UPDATED === ALERT) {
-                      return 7 * setDefault.Millis.SECOND;
+                      return 7 * DurationsDefault.Millis.SECOND;
                     }
                   }
                 }
-                return 10 * setDefault.Millis.SECOND;
+                return 10 * DurationsDefault.Millis.SECOND;
               }
             }
           }
@@ -79,13 +81,12 @@ export const getNotificationDuration = function getNotificationDuration(ALERT) {
       }
     }
   }
-  return 5 * setDefault.Millis.SECOND;
+  return 5 * DurationsDefault.Millis.SECOND;
 };
 export const useHasPreviewableMedia = function useHasPreviewableMedia(message) {
-  closure_0 = message;
   const items = [message];
-  return React.useMemo(() => {
-    let hasFlagResult = message.hasFlag(closure_1_9.IS_VOICE_MESSAGE);
+  return noop.useMemo(() => {
+    let hasFlagResult = message.hasFlag(constants4.IS_VOICE_MESSAGE);
     if (!hasFlagResult) {
       hasFlagResult = tmp.attachments.length > 0;
     }
@@ -101,7 +102,7 @@ export const useHasPreviewableMedia = function useHasPreviewableMedia(message) {
       hasFlagResult = tmp.stickerItems.length > 0;
     }
     if (!hasFlagResult) {
-      let someResult = closure_1_1(closure_1_2[7])(tmp);
+      let someResult = isForwardMessageDefault(tmp);
       if (someResult) {
         const messageSnapshots = tmp.messageSnapshots;
         someResult = messageSnapshots.some((message) => {
@@ -129,30 +130,30 @@ export const useHasPreviewableMedia = function useHasPreviewableMedia(message) {
     return hasFlagResult;
   }, items);
 };
-export const extractMetadataFromNotification = function extractMetadataFromNotification(closure_21) {
-  let type = closure_21.type;
+export const extractMetadataFromNotification = function extractMetadataFromNotification(notification) {
+  let type = notification.type;
   if (constants3.MESSAGE !== type) {
     if (tmp.REACTION !== type) {
       if (tmp.ALERT === type) {
-        const guild = closure_21.guild;
+        const guild = notification.guild;
         let id;
         if (guild != null) {
           id = guild.id;
         }
         if (id == null) {
-          const channel3 = closure_21.channel;
+          const channel3 = notification.channel;
           let guild_id;
           if (channel3 != null) {
             guild_id = channel3.guild_id;
           }
           id = guild_id;
         }
-        const channel4 = closure_21.channel;
+        const channel4 = notification.channel;
         let id1;
         if (channel4 != null) {
           id1 = channel4.id;
         }
-        const channel5 = closure_21.channel;
+        const channel5 = notification.channel;
         type = undefined;
         if (channel5 != null) {
           type = channel5.type;
@@ -161,12 +162,12 @@ export const extractMetadataFromNotification = function extractMetadataFromNotif
         let channelId = id1;
         let tmp4 = id;
       } else if (tmp.FORUM_THREAD_CREATED === type) {
-        const thread = closure_21.thread;
+        const thread = notification.thread;
         let guild_id1;
         if (thread != null) {
           guild_id1 = thread.guild_id;
         }
-        const thread2 = closure_21.thread;
+        const thread2 = notification.thread;
         let id2;
         if (thread2 != null) {
           id2 = thread2.id;
@@ -174,19 +175,19 @@ export const extractMetadataFromNotification = function extractMetadataFromNotif
         channelId = id2;
         tmp4 = guild_id1;
       } else if (tmp.MESSAGE_FAILED_TO_SEND === type) {
-        channelId = closure_21.channelId;
+        channelId = notification.channelId;
       } else if (tmp.MESSAGE_REMINDER === type) {
-        const channel9 = closure_21.channel;
+        const channel9 = notification.channel;
         let guild_id2;
         if (channel9 != null) {
           guild_id2 = channel9.guild_id;
         }
-        const channel = closure_21.channel;
+        const channel = notification.channel;
         let id3;
         if (channel != null) {
           id3 = channel.id;
         }
-        const channel2 = closure_21.channel;
+        const channel2 = notification.channel;
         let type1;
         if (channel2 != null) {
           type1 = channel2.type;
@@ -196,37 +197,33 @@ export const extractMetadataFromNotification = function extractMetadataFromNotif
         tmp4 = guild_id2;
       }
     }
-    const obj = { guildId: null, channelId: null, messageId: null, channelType: null };
-    obj[0] = tmp4;
-    obj[1] = channelId;
-    obj[2] = id6;
-    obj[3] = tmp2;
+    const obj = { guildId: tmp4, channelId, messageId: id6, channelType: tmp2 };
     return obj;
   }
-  const guild2 = closure_21.guild;
+  const guild2 = notification.guild;
   let id4;
   if (guild2 != null) {
     id4 = guild2.id;
   }
   if (id4 == null) {
-    const channel6 = closure_21.channel;
+    const channel6 = notification.channel;
     let guild_id3;
     if (channel6 != null) {
       guild_id3 = channel6.guild_id;
     }
     id4 = guild_id3;
   }
-  const channel7 = closure_21.channel;
+  const channel7 = notification.channel;
   let id5;
   if (channel7 != null) {
     id5 = channel7.id;
   }
-  const message = closure_21.message;
+  const message = notification.message;
   id6 = undefined;
   if (message != null) {
     id6 = message.id;
   }
-  const channel8 = closure_21.channel;
+  const channel8 = notification.channel;
   let type2;
   if (channel8 != null) {
     type2 = channel8.type;
@@ -237,7 +234,7 @@ export const extractMetadataFromNotification = function extractMetadataFromNotif
 };
 export const trackDismissed = function trackDismissed(arg0) {
   ({ guildId, channelId, type, dismissReason, inAppNotificationId, messageId } = arg0);
-  collectGuildAnalyticsMetadataDefault.trackWithMetadata(constants.IN_APP_NOTIFICATION_DISMISSED, {
+  AppAnalyticsUtilsDefault.trackWithMetadata(constants.IN_APP_NOTIFICATION_DISMISSED, {
     type,
     guild_id: guildId,
     channel_id: channelId,

@@ -1,35 +1,35 @@
 // discord_app/modules/guild_settings/server_monetization/boost_perks/GuildSettingsVanityURLUtils.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import ME from "../../../../Constants.tsx";
+import util from "../../../../intl/index.native.tsx";
+import Constants from "../../../../Constants.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-({ AbortCodes: obj1, GuildFeatures: c3 } = ME);
-const result = set.fileFinishedImporting(
+({ AbortCodes: c2, GuildFeatures: c3 } = Constants);
+const result = size.fileFinishedImporting(
   "modules/guild_settings/server_monetization/boost_perks/GuildSettingsVanityURLUtils.tsx",
 );
 
 export const getErrorMessageFromErrorCode = function getErrorMessageFromErrorCode(code) {
   if (constants.UNKNOWN_CHANNEL === code) {
-    const intl7 = getSystemLocale.intl;
-    return intl7.string(getSystemLocale.t.ETCmRa);
+    const intl7 = util.intl;
+    return intl7.string(util.t.ETCmRa);
   } else if (tmp.INVALID_PERMISSIONS === code) {
-    const intl6 = getSystemLocale.intl;
-    return intl6.string(getSystemLocale.t.lXtut1);
+    const intl6 = util.intl;
+    return intl6.string(util.t.lXtut1);
   } else if (tmp.INVALID_ACCESS === code) {
-    const intl5 = getSystemLocale.intl;
-    return intl5.string(getSystemLocale.t.TAXOKw);
+    const intl5 = util.intl;
+    return intl5.string(util.t.TAXOKw);
   } else if (tmp.VANITY_URL_REQUIRED_FOR_PUBLISHED_GUILDS === code) {
-    const intl4 = getSystemLocale.intl;
-    return intl4.string(getSystemLocale.t.ZpuxVs);
+    const intl4 = util.intl;
+    return intl4.string(util.t.ZpuxVs);
   } else if (tmp.VANITY_URL_EMPLOYEE_ONLY_GUILD_DISABLED === code) {
-    const intl3 = getSystemLocale.intl;
-    return intl3.string(getSystemLocale.t.tSBmIv);
+    const intl3 = util.intl;
+    return intl3.string(util.t.tSBmIv);
   } else if (tmp.VANITY_URL_REQUIREMENTS_NOT_MET === code) {
-    const intl2 = getSystemLocale.intl;
-    return intl2.string(getSystemLocale.t["w+yGQT"]);
+    const intl2 = util.intl;
+    return intl2.string(util.t["w+yGQT"]);
   } else {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.ckQidX);
+    const intl = util.intl;
+    return intl.string(util.t.ckQidX);
   }
 };
 export const canSeeVanityUrlSettings = function canSeeVanityUrlSettings(guild) {

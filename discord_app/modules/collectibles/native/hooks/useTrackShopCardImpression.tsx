@@ -1,22 +1,25 @@
 // discord_app/modules/collectibles/native/hooks/useTrackShopCardImpression.tsx
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import discord_common_AnalyticsUtils from "../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import useTrackImpression from "../../../app_analytics/useTrackImpression.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/collectibles/native/hooks/useTrackShopCardImpression.tsx");
+require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/collectibles/native/hooks/useTrackShopCardImpression.tsx");
 
 export const useTrackShopCardImpression = function useTrackShopCardImpression(product, selectedProduct) {
-  const _require = product;
+  _require = product;
   importDefault = selectedProduct;
-  collectiblesAnalyticsContext = _require(collectiblesAnalyticsContext[1]).useCollectiblesAnalyticsContext();
-  const analyticsLocations = importDefault(collectiblesAnalyticsContext[2])().analyticsLocations;
-  let obj = _require(collectiblesAnalyticsContext[1]);
+  collectiblesAnalyticsContext = require("CollectiblesAnalyticsContext").useCollectiblesAnalyticsContext();
+  const analyticsLocations = require("useAnalyticsLocations")().analyticsLocations;
+  let obj = require("CollectiblesAnalyticsContext");
   const tmp = collectiblesAnalyticsContext;
   const tmp3 = importDefault;
-  ({ width: closure_4, height: closure_5 } = importDefault(collectiblesAnalyticsContext[3])());
-  const tmp4 = importDefault(collectiblesAnalyticsContext[3])();
-  const currentUser = _require(collectiblesAnalyticsContext[4]).useCurrentUser();
-  const obj2 = _require(collectiblesAnalyticsContext[4]);
-  const shopDiscountSource = _require(collectiblesAnalyticsContext[5]).getShopDiscountSource(currentUser);
+  ({ width: closure_4, height: closure_5 } = require("useWindowDimensions")());
+  const tmp4 = require("useWindowDimensions")();
+  const currentUser = require("useCurrentUser").useCurrentUser();
+  const obj2 = require("useCurrentUser");
+  const shopDiscountSource = require("CollectiblesUtils").getShopDiscountSource(currentUser);
   const ref = analyticsLocations.useRef(null);
   closure_8 = analyticsLocations.useRef(false);
   closure_9 = analyticsLocations.useRef(false);
@@ -44,10 +47,9 @@ export const useTrackShopCardImpression = function useTrackShopCardImpression(pr
   items1[5] = analyticsLocations;
   items1[6] = shopDiscountSource;
   closure_10 = analyticsLocations.useCallback(() => {
-    let obj = product(collectiblesAnalyticsContext[6]);
-    obj = {
-      name: product(collectiblesAnalyticsContext[7]).ImpressionNames.SHOP_CARD,
-      type: product(collectiblesAnalyticsContext[7]).ImpressionTypes.VIEW,
+    let obj = {
+      name: discord_common_AnalyticsUtils.ImpressionNames.SHOP_CARD,
+      type: discord_common_AnalyticsUtils.ImpressionTypes.VIEW,
       properties: null,
     };
     obj = {
@@ -63,32 +65,32 @@ export const useTrackShopCardImpression = function useTrackShopCardImpression(pr
     if (collectiblesAnalyticsContext != null) {
       cardId = tmp3.cardId;
     }
-    obj[1] = cardId;
+    obj.card_id = cardId;
     let sessionId;
     if (collectiblesAnalyticsContext != null) {
       sessionId = tmp3.sessionId;
     }
-    obj[2] = sessionId;
+    obj.shop_session_id = sessionId;
     let tilePosition;
     if (collectiblesAnalyticsContext != null) {
       tilePosition = tmp3.tilePosition;
     }
-    obj[3] = tilePosition;
-    let tmpResult = tmp(tmp2[8]);
-    obj[4] = tmpResult.getProductSkuIds(product);
-    obj[5] = analyticsLocations;
-    tmpResult = tmp(tmp2[5]);
-    obj[6] = tmpResult.getAnalyticsShopDiscountSource(shopDiscountSource);
-    obj[2] = obj;
+    obj.position_in_section = tilePosition;
+    let tmpResult = tmp(7553);
+    obj.product_sku_ids = tmpResult.getProductSkuIds(closure_0);
+    obj.location_stack = analyticsLocations;
+    tmpResult = tmp(7554);
+    obj.discount_source = tmpResult.getAnalyticsShopDiscountSource(shopDiscountSource);
+    obj.properties = obj;
     obj.trackImpression(obj, false, true);
   }, items1);
   tmp3(tmp[9])(() => {
     const current = ref.current;
     if (current != null) {
       current.measure((arg0, arg1, arg2, arg3, arg4, arg5) => {
-        const bound = Math.min(arg4 + arg2, closure_4);
+        const bound = Math.min(arg4 + arg2, closure_1_4);
         const bound1 = Math.max(0, bound - Math.max(arg4, 0));
-        const bound2 = Math.min(arg5 + arg3, closure_5);
+        const bound2 = Math.min(arg5 + arg3, closure_1_5);
         const result = arg2 * arg3;
         let num = 0;
         if (result > 0) {
@@ -97,7 +99,7 @@ export const useTrackShopCardImpression = function useTrackShopCardImpression(pr
         if (num >= 0.5) {
           if (ref.current) {
             if (!ref2.current) {
-              callback();
+              closure_1_10();
               tmp7.current = true;
             }
             ref.current = tmp5;

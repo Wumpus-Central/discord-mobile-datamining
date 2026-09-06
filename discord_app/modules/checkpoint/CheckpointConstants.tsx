@@ -1,7 +1,7 @@
 // discord_app/modules/checkpoint/CheckpointConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/checkpoint/CheckpointConstants.tsx");
+const result = size.fileFinishedImporting("modules/checkpoint/CheckpointConstants.tsx");
 
 export const CheckpointPersonas = {
   ZERO: 0,

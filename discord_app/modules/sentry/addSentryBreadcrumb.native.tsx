@@ -1,12 +1,11 @@
 // discord_app/modules/sentry/addSentryBreadcrumb.native.tsx
-import set from "../../../_runtime/00002_set.js";
-import addBreadcrumbAll from "../../../_runtime/00675_addBreadcrumb.js";
+import _modAll675 from "../../../_runtime/metro/00675__.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/sentry/addSentryBreadcrumb.native.tsx");
+const result = size.fileFinishedImporting("modules/sentry/addSentryBreadcrumb.native.tsx");
 
 export default function addSentryBreadcrumb(category) {
-  let obj = addBreadcrumbAll;
-  obj = {
+  const obj = {
     type: "default",
     level: "info",
     category: category.category,

@@ -1,26 +1,27 @@
 // discord_app/modules/stage_channels/useRequestToSpeakPermission.tsx
-import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../_runtime/00019_noop.js";
-import closure_5 from "../../stores/ChannelStore.tsx";
-import { Permissions } from "../../Constants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import StageChannelActionCreators from "StageChannelActionCreators.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import noop from "../../../_runtime/metro/00019__.js";
+import ChannelStore from "../../stores/ChannelStore.tsx";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/stage_channels/useRequestToSpeakPermission.tsx");
+require = fn;
+const Permissions = fn(1074).Permissions;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/stage_channels/useRequestToSpeakPermission.tsx");
 
 export const useRequestToSpeakPermission = function useRequestToSpeakPermission(id) {
-  const _require = id;
-  const items = [closure_5];
+  _require = id;
+  const items = [ChannelStore];
   const items1 = [id];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+  const stateFromStores = require("initialize").useStateFromStores(
     items,
-    () => closure_1_5.getChannel(closure_0),
+    () => ChannelStore.getChannel(closure_0),
     items1,
   );
-  let obj = initialize;
+  let obj = require("initialize");
   const canEveryoneRoleResult = stateFromStores(4204).canEveryoneRole(Permissions.REQUEST_TO_SPEAK, stateFromStores);
   const obj2 = stateFromStores(4204);
-  [tmp4, tmp5] = callback(React.useState(canEveryoneRoleResult), 2);
+  [tmp4, tmp5] = _slicedToArray(noop.useState(canEveryoneRoleResult), 2);
   dependencyMap = tmp5;
   if (canEveryoneRoleResult !== tmp4) {
     tmp5(canEveryoneRoleResult);
@@ -30,8 +31,11 @@ export const useRequestToSpeakPermission = function useRequestToSpeakPermission(
     (arg0) => {
       if (null != stateFromStores) {
         tmp5(arg0);
-        const result = id(id[6]).setEveryoneRolePermissionAllowed(tmp, closure_1_6.REQUEST_TO_SPEAK, arg0);
-        const obj = id(id[6]);
+        const result = StageChannelActionCreators.setEveryoneRolePermissionAllowed(
+          tmp,
+          Permissions.REQUEST_TO_SPEAK,
+          arg0,
+        );
       }
     },
   ];

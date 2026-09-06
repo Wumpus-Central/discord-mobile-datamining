@@ -1,26 +1,24 @@
 // discord_app/modules/activities/useDispatchOpenActivity.tsx
-import closure_2 from "../../../_runtime/00019_noop.js";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import noop from "../../../_runtime/metro/00019__.js";
 
-const result = require("set").fileFinishedImporting("modules/activities/useDispatchOpenActivity.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/useDispatchOpenActivity.tsx");
 
 export default function useDispatchOpenActivity(connectedEmbeddedActivity) {
   connectedEmbeddedActivity = connectedEmbeddedActivity.connectedEmbeddedActivity;
   let applicationId;
-  applicationId = undefined;
   if (connectedEmbeddedActivity != null) {
     applicationId = connectedEmbeddedActivity.applicationId;
   }
   const items = [applicationId, connectedEmbeddedActivity];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     let tmp2 = null != connectedEmbeddedActivity;
     if (tmp2) {
       tmp2 = null != applicationId;
     }
     if (tmp2) {
-      let obj = connectedEmbeddedActivity(applicationId[1]);
-      obj = { type: "EMBEDDED_ACTIVITY_OPEN", location: null, applicationId: null };
-      obj[1] = connectedEmbeddedActivity.location;
-      obj[2] = applicationId;
+      const obj = { type: "EMBEDDED_ACTIVITY_OPEN", location: connectedEmbeddedActivity.location, applicationId };
       obj.dispatch(obj);
     }
   }, items);

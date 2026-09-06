@@ -1,12 +1,12 @@
 // discord_app/design/void/Atoms/native/Atoms.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import _modDef8612 from "../../LegacyText/native/LegacyText.tsx";
-import AccessibilityAnnouncer from "../../../native.tsx";
+import _mod17 from "../../../../../_runtime/metro/00017__.js";
+import LegacyText_LegacyTextDefault from "../../LegacyText/native/LegacyText.tsx";
+import native from "../../../native.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("design/void/Atoms/native/Atoms.tsx");
+const result = size.fileFinishedImporting("design/void/Atoms/native/Atoms.tsx");
 
-export const RNTextInput = get_ActivityIndicator.TextInput;
-export const TextInputProps = get_ActivityIndicator.TextInputProps;
-export const LegacyText = _modDef8612;
-export const Text = AccessibilityAnnouncer.Text;
+export const RNTextInput = _mod17.TextInput;
+export const TextInputProps = _mod17.TextInputProps;
+export const LegacyText = LegacyText_LegacyTextDefault;
+export const Text = native.Text;

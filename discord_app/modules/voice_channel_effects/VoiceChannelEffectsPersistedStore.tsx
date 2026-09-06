@@ -1,10 +1,10 @@
 // discord_app/modules/voice_channel_effects/VoiceChannelEffectsPersistedStore.tsx
-import set from "../../../_runtime/00002_set.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import VoiceChannelEffectAnimationType from "VoiceChannelEffectsConstants.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import VoiceChannelEffectsConstants from "VoiceChannelEffectsConstants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-let closure_1 = VoiceChannelEffectAnimationType.VoiceChannelEffectAnimationType;
+const constants = VoiceChannelEffectsConstants.VoiceChannelEffectAnimationType;
 const PersistedStore = initializeDefault.PersistedStore;
 class VoiceChannelEffectsPersistedStore extends PersistedStore {}
 const prototype = VoiceChannelEffectsPersistedStore.prototype;
@@ -16,17 +16,18 @@ prototype["initialize"] = function initialize(animationType) {
   if (animationType == null) {
     animationType = constants.PREMIUM;
   }
+  closure_0 = animationType;
 };
 prototype["getState"] = function getState() {
-  return { animationType: closure_0 };
+  return { animationType };
 };
 VoiceChannelEffectsPersistedStore.displayName = "VoiceChannelEffectsPersistedStore";
 VoiceChannelEffectsPersistedStore.persistKey = "VoiceChannelEffectsPersistedStore";
-const voiceChannelEffectsPersistedStore = new VoiceChannelEffectsPersistedStore(dispatcherDefault, {
+const voiceChannelEffectsPersistedStore = new VoiceChannelEffectsPersistedStore(DispatcherDefault, {
   VOICE_CHANNEL_EFFECT_TOGGLE_ANIMATION_TYPE: function handleToggleAnimationType() {
     closure_0 = closure_0 === constants.BASIC ? tmp.PREMIUM : tmp.BASIC;
   },
 });
-const result = set.fileFinishedImporting("modules/voice_channel_effects/VoiceChannelEffectsPersistedStore.tsx");
+const result = size.fileFinishedImporting("modules/voice_channel_effects/VoiceChannelEffectsPersistedStore.tsx");
 
 export default voiceChannelEffectsPersistedStore;

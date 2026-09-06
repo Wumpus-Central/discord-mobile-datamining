@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/defs/native/ReactCompilerSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
 import WrenchIcon from "../../../../design/components/Icon/native/redesign/generated/WrenchIcon.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 const obj = {
   useTitle() {
@@ -16,7 +16,9 @@ const obj = {
     return false;
   },
 };
-const createStaticResult = createToggle.createStatic({
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/ReactCompilerSetting.tsx");
+
+export default SettingBuilders.createStatic({
   useTitle() {
     return "React Compiler";
   },
@@ -29,6 +31,3 @@ const createStaticResult = createToggle.createStatic({
     return false;
   },
 });
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/ReactCompilerSetting.tsx");
-
-export default createStaticResult;

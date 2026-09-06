@@ -1,11 +1,10 @@
 // discord_common/js/packages/timers/Timers.tsx
-import closure_0 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 class Timeout {}
 const prototype = Timeout.prototype;
 prototype["start"] = function start(arg0, arg1) {
-  let self = this;
-  self = this;
+  const self = this;
   closure_0 = arg1;
   let flag = arg2;
   if (arg2 === undefined) {
@@ -16,7 +15,7 @@ prototype["start"] = function start(arg0, arg1) {
     const _window = window;
     self._ref = window.setTimeout(() => {
       self._ref = null;
-      callback();
+      closure_0();
     }, arg0);
   }
 };
@@ -35,14 +34,14 @@ class DelayedCall {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
     obj._delay = global;
-    obj._handler = arg1;
-    tmp2 = Timeout;
-    if (typeof Timeout !== "function") {
+    obj._handler = fn;
+    if (typeof Timeout === "function") {
+      obj._timeout = Object.create(Timeout.prototype);
+      return obj;
+    } else {
       str = "Trying to call a non-function";
-      throwTypeErrorResult = HermesBuiltin.throwTypeError();
+      throw new TypeError("Trying to call a non-function");
     }
-    obj._timeout = Object.create(tmp2.prototype);
-    return obj;
   }
 }
 const prototype2 = DelayedCall.prototype;
@@ -72,7 +71,8 @@ const prototype3 = function BatchInvocationManagerResetError() {
   return applyArgumentsResult;
 }.prototype;
 class prototype3 extends Error {}
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/timers/Timers.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("../discord_common/js/packages/timers/Timers.tsx");
 class Interval {}
 const prototype4 = Interval.prototype;
 prototype4["start"] = function start(arg0, arg1) {
@@ -92,8 +92,8 @@ prototype4["isStarted"] = function isStarted() {
 };
 class BatchInvocationManager {
   constructor(arg0) {
-    obj = arg1;
-    if (arg1 === undefined) {
+    obj = fn;
+    if (fn === undefined) {
       obj = {};
     }
     obj = Object.create(new.target.prototype);
@@ -109,28 +109,29 @@ class BatchInvocationManager {
     if (num == null) {
       num = 32;
     }
-    if (typeof tmp4 !== "function") {
+    if (typeof tmp4 === "function") {
+      fn = () => obj._flush();
+      obj1 = Object.create(tmp4.prototype);
+      obj1._delay = num;
+      obj1._handler = fn;
+      tmp6 = new.target;
+      if (typeof Timeout === "function") {
+        obj1._timeout = Object.create(Timeout.prototype);
+        obj._flushHandler = obj1;
+        return obj;
+      } else {
+        str2 = "Trying to call a non-function";
+        throw new TypeError("Trying to call a non-function");
+      }
+    } else {
       str = "Trying to call a non-function";
-      throwTypeErrorResult = HermesBuiltin.throwTypeError();
+      throw new TypeError("Trying to call a non-function");
     }
-    fn = () => obj._flush();
-    obj1 = Object.create(tmp4.prototype);
-    obj1._delay = num;
-    obj1._handler = fn;
-    tmp6 = Timeout;
-    if (typeof Timeout !== "function") {
-      str2 = "Trying to call a non-function";
-      throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
-    }
-    obj1._timeout = Object.create(tmp6.prototype);
-    obj._flushHandler = obj1;
-    return obj;
   }
 }
 const prototype5 = BatchInvocationManager.prototype;
 prototype5["queue"] = function queue(arg0) {
-  let self = this;
-  self = this;
+  const self = this;
   let tmp = arg0;
   if (!Array.isArray(arg0)) {
     const items = [arg0];
@@ -145,7 +146,6 @@ prototype5["queue"] = function queue(arg0) {
     let predicate = options.predicate;
     let num;
     if (predicate != null) {
-      let tmp4 = nextResult;
       num = predicate(tmp3);
     }
     if (num == null) {
@@ -153,12 +153,10 @@ prototype5["queue"] = function queue(arg0) {
     }
     if (num) {
       let _pending = self._pending;
-      let tmp5 = nextResult;
       num = !_pending.has(tmp3);
     }
     if (num) {
       let _pending2 = self._pending;
-      let tmp6 = nextResult;
       let addResult = _pending2.add(tmp3);
       let arr = items1.push(tmp3);
     }
@@ -202,16 +200,15 @@ prototype5["reset"] = function reset() {
 };
 prototype5["_flush"] = function _flush() {
   const self = this;
-  return self(function* () {
+  return (async (arg0, value) => {
     if (c6 === 2) {
       c6 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp5 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
@@ -222,53 +219,51 @@ prototype5["_flush"] = function _flush() {
         if (0 === c3) {
           if (arg0 === 1) {
             c6 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
             closure_2 = tmp6;
-            let items1;
-            items1 = 0;
+            closure_130_0 = undefined;
+            closure_0 = 0;
             const items = [];
-            items1 = HermesBuiltin.arraySpread(closure_1_0._pending, items1);
-            const _pending = closure_1_0._pending;
+            closure_0 = HermesBuiltin.arraySpread(self._pending, closure_0);
+            const _pending = self._pending;
             _pending.clear();
             closure_1 = 0;
-            items1 = [];
-            closure_1 = HermesBuiltin.arraySpread(closure_1_0._promises, closure_1);
-            const _promises = closure_1_0._promises;
+            const items1 = [];
+            closure_1 = HermesBuiltin.arraySpread(self._promises, closure_1);
+            closure_130_0 = items1;
+            const _promises = self._promises;
             _promises.clear();
             if (0 !== items.length) {
               c5 = 1;
               c3 = 2;
               c6 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = obj5.invoke(items);
+              const obj1 = { value: obj5.invoke(items), done: false };
               return obj1;
             } else {
               const item = items1.forEach((resolve) => resolve.resolve());
             }
-            obj5 = closure_1_0;
+            obj5 = self;
           }
         } else {
           if (1 === tmp6) {
             c5 = 0;
-            closure_1 = closure_4;
-            const item1 = items1.forEach((reject) => reject.reject(closure_1));
+            closure_130_1 = closure_4;
+            const item1 = closure_130_0.forEach((reject) => reject.reject(closure_1_1));
           } else if (arg0 === 1) {
             c6 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 !== 2) {
-            const item2 = items1.forEach((resolve) => resolve.resolve());
+            const item2 = closure_130_0.forEach((resolve) => resolve.resolve());
             c5 = 0;
           }
           c5 = 0;
           c6 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj = { value, done: true };
           return obj;
         }
         c6 = 3;
@@ -288,11 +283,11 @@ prototype5["_flush"] = function _flush() {
 export { Timeout };
 export { DelayedCall };
 export { Interval };
-export const timeoutPromise = function timeoutPromise(arg0) {
-  closure_0 = arg0;
+export const timeoutPromise = function timeoutPromise(result) {
+  closure_0 = result;
   return new Promise((arg0) => {
     closure_0 = arg0;
-    const timerId = setTimeout(() => callback(), closure_0);
+    const timerId = setTimeout(() => closure_0(), closure_0);
   });
 };
 export const DEFAULT_BATCH_INVOCATION_DELAY_MS = 32;

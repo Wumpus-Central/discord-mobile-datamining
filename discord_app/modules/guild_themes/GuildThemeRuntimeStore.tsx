@@ -1,93 +1,86 @@
 // discord_app/modules/guild_themes/GuildThemeRuntimeStore.tsx
-import apply from "../../../_runtime/00012_apply.js";
+import _mod12 from "../../../_runtime/metro/00012__.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import cloneGuildThemeSettings from "guildThemeSerialization.tsx";
-import VANITY_URL_POWERUP_SKU_ID from "../../../discord_common/js/shared/shared-constants/Powerups.tsx";
-import closure_2 from "../premium/powerups/GuildPowerupsStore.tsx";
-import closure_3 from "../../stores/GuildStore.tsx";
-import closure_4 from "../../stores/SelectedGuildStore.tsx";
-import { GuildFeatures } from "../../Constants.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import guildThemeSerialization from "guildThemeSerialization.tsx";
+import Powerups from "../../../discord_common/js/shared/shared-constants/Powerups.tsx";
+import GuildPowerupsStore from "../premium/powerups/GuildPowerupsStore.tsx";
+import GuildStore from "../../stores/GuildStore.tsx";
+import SelectedGuildStore from "../../stores/SelectedGuildStore.tsx";
 
-require = arg1;
+require = fn;
 function snapshotSelectedGuildId(guildId) {
   if (null == guildId) {
-    let flag3 = null != obj;
+    let flag3 = null != _null;
     if (flag3) {
-      obj = null;
+      _null = null;
       flag3 = true;
     }
     let flag = flag3;
   } else {
-    const guild = store.getGuild(guildId);
+    const guild = GuildStore.getGuild(guildId);
     let guildTheme;
     if (guild != null) {
       guildTheme = guild.guildTheme;
     }
-    const cloneGuildThemeResult = cloneGuildThemeSettings.cloneGuildTheme(guildTheme);
-    const guild1 = store.getGuild(guildId);
+    const cloneGuildThemeResult = guildThemeSerialization.cloneGuildTheme(guildTheme);
+    const guild1 = GuildStore.getGuild(guildId);
     let hasItem;
     if (guild1 != null) {
       const features = guild1.features;
       hasItem = features.has(GuildFeatures.GUILD_THEME);
     }
     guildId = undefined;
-    if (obj != null) {
-      guildId = obj.guildId;
+    if (_null != null) {
+      guildId = _null.guildId;
     }
     flag = guildId !== guildId;
     if (!flag) {
-      flag = !tmp11(12).isEqual(obj.guildTheme, cloneGuildThemeResult);
+      flag = !tmp11(12).isEqual(_null.guildTheme, cloneGuildThemeResult);
       const tmp11Result = tmp11(12);
     }
     if (!flag) {
-      flag = obj.hasThemeFeature !== tmp8;
+      flag = _null.hasThemeFeature !== tmp8;
     }
     if (flag) {
-      obj = { guildId: null, guildTheme: null, hasThemeFeature: null };
-      obj[0] = guildId;
-      obj[1] = cloneGuildThemeResult;
-      obj[2] = tmp8;
+      const obj = { guildId, guildTheme: cloneGuildThemeResult, hasThemeFeature: tmp8 };
+      _null = obj;
       flag = true;
     }
-    const obj3 = cloneGuildThemeSettings;
-    const obj4 = store;
     tmp11 = require;
   }
   return flag;
 }
 function snapshotSelectedGuild() {
-  return snapshotSelectedGuildId(store2.getGuildId());
+  return snapshotSelectedGuildId(SelectedGuildStore.getGuildId());
 }
 function handleSavedGuildTheme(guildId) {
   guildId = guildId.guildId;
-  let tmp = guildId === store2.getGuildId();
+  let tmp = guildId === SelectedGuildStore.getGuildId();
   if (tmp) {
-    let obj = cloneGuildThemeSettings;
+    let obj = guildThemeSerialization;
     const cloneGuildThemeResult = obj.cloneGuildTheme(guildId.guildTheme);
-    const guild = store.getGuild(guildId);
+    const guild = GuildStore.getGuild(guildId);
     let hasItem;
     if (guild != null) {
       const features = guild.features;
       hasItem = features.has(GuildFeatures.GUILD_THEME);
     }
     guildId = undefined;
-    if (obj != null) {
-      guildId = obj.guildId;
+    if (_null != null) {
+      guildId = _null.guildId;
     }
     let flag = guildId !== guildId;
     if (!flag) {
-      flag = !tmp2(12).isEqual(obj.guildTheme, cloneGuildThemeResult);
+      flag = !tmp2(12).isEqual(_null.guildTheme, cloneGuildThemeResult);
       const tmp2Result = tmp2(12);
     }
     if (!flag) {
-      flag = obj.hasThemeFeature !== tmp12;
+      flag = _null.hasThemeFeature !== tmp12;
     }
     if (flag) {
-      obj = { guildId: null, guildTheme: null, hasThemeFeature: null };
-      obj[0] = guildId;
-      obj[1] = cloneGuildThemeResult;
-      obj[2] = tmp12;
+      obj = { guildId, guildTheme: cloneGuildThemeResult, hasThemeFeature: tmp12 };
+      _null = obj;
       flag = true;
     }
     tmp = flag;
@@ -95,13 +88,14 @@ function handleSavedGuildTheme(guildId) {
   }
   return tmp;
 }
+const GuildFeatures = fn(1074).GuildFeatures;
 let c6 = null;
 let c7 = null;
 const Store = initializeDefault.Store;
 class GuildThemeRuntimeStore extends Store {}
 const prototype = GuildThemeRuntimeStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_2, closure_3, closure_4);
+  this.waitFor(GuildPowerupsStore, GuildStore, SelectedGuildStore);
 };
 prototype["getGuildThemeSnapshot"] = function getGuildThemeSnapshot(guildId) {
   let tmp = null;
@@ -119,7 +113,7 @@ prototype["getGuildThemeSnapshot"] = function getGuildThemeSnapshot(guildId) {
   return tmp;
 };
 GuildThemeRuntimeStore.displayName = "GuildThemeRuntimeStore";
-const guildThemeRuntimeStore = new GuildThemeRuntimeStore(dispatcherDefault, {
+const guildThemeRuntimeStore = new GuildThemeRuntimeStore(DispatcherDefault, {
   CACHE_LOADED: snapshotSelectedGuild,
   CACHE_LOADED_LAZY: snapshotSelectedGuild,
   CHANNEL_SELECT: function handleChannelSelect(guildId) {
@@ -152,7 +146,7 @@ const guildThemeRuntimeStore = new GuildThemeRuntimeStore(dispatcherDefault, {
     }
     let flag = false;
     if (guildId === id) {
-      const guildId1 = store2.getGuildId();
+      const guildId1 = SelectedGuildStore.getGuildId();
       let tmp4 = guildId1 !== id;
       if (tmp4) {
         tmp4 = snapshotSelectedGuildId(guildId1);
@@ -162,14 +156,13 @@ const guildThemeRuntimeStore = new GuildThemeRuntimeStore(dispatcherDefault, {
     return flag;
   },
   GUILD_MEMBER_REMOVE: function handleGuildMemberRemove(guildId) {
-    guildId = guildId.guildId;
     guildId = undefined;
     if (_null != null) {
       guildId = _null.guildId;
     }
     let flag = false;
     if (guildId === guildId) {
-      const guildId1 = store2.getGuildId();
+      const guildId1 = SelectedGuildStore.getGuildId();
       let tmp4 = guildId1 !== guildId;
       if (tmp4) {
         tmp4 = snapshotSelectedGuildId(guildId1);
@@ -182,7 +175,7 @@ const guildThemeRuntimeStore = new GuildThemeRuntimeStore(dispatcherDefault, {
     guild = guild.guild;
     let tmp = guild.id !== c7;
     if (!tmp) {
-      guild = store.getGuild(guild.id);
+      guild = GuildStore.getGuild(guild.id);
       let hasItem;
       if (guild != null) {
         const features = guild.features;
@@ -197,10 +190,10 @@ const guildThemeRuntimeStore = new GuildThemeRuntimeStore(dispatcherDefault, {
     }
     const id = guild.id;
     let flag3 = false;
-    if (null != obj) {
+    if (null != _null) {
       flag3 = false;
       if (id === tmp8.guildId) {
-        const guild1 = store.getGuild(id);
+        const guild1 = GuildStore.getGuild(id);
         let hasItem1;
         if (guild1 != null) {
           const features2 = guild1.features;
@@ -210,12 +203,12 @@ const guildThemeRuntimeStore = new GuildThemeRuntimeStore(dispatcherDefault, {
         if ((true === hasItem1) !== tmp8.hasThemeFeature) {
           let tmp19 = !tmp11;
           if (tmp11) {
-            stateForGuild = stateForGuild.getStateForGuild(id);
+            const stateForGuild = GuildPowerupsStore.getStateForGuild(id);
             let tmp14;
             if (stateForGuild != null) {
               const unlockedPowerups = stateForGuild.unlockedPowerups;
               if (unlockedPowerups != null) {
-                tmp14 = unlockedPowerups[VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_GUILD_THEME_SKU_ID];
+                tmp14 = unlockedPowerups[Powerups.GUILD_POWERUP_GUILD_THEME_SKU_ID];
               }
             }
             let tmp17 = null != tmp14;
@@ -230,7 +223,7 @@ const guildThemeRuntimeStore = new GuildThemeRuntimeStore(dispatcherDefault, {
             tmp19 = tmp17;
           }
           if (tmp19) {
-            obj = cloneGuildThemeSettings;
+            let obj = guildThemeSerialization;
             const guild2 = obj4.getGuild(id);
             guildTheme = undefined;
             if (guild2 != null) {
@@ -241,27 +234,24 @@ const guildThemeRuntimeStore = new GuildThemeRuntimeStore(dispatcherDefault, {
             guildTheme2 = tmp8.guildTheme;
           }
           let guildId;
-          if (obj != null) {
-            guildId = obj.guildId;
+          if (_null != null) {
+            guildId = _null.guildId;
           }
           let flag5 = guildId !== id;
           if (!flag5) {
-            flag5 = !apply.isEqual(obj.guildTheme, guildTheme2);
-            const obj2 = apply;
+            flag5 = !_mod12.isEqual(_null.guildTheme, guildTheme2);
           }
           if (!flag5) {
-            flag5 = obj.hasThemeFeature !== tmp11;
+            flag5 = _null.hasThemeFeature !== tmp11;
           }
           if (flag5) {
-            obj = { guildId: null, guildTheme: null, hasThemeFeature: null };
-            obj[0] = id;
-            obj[1] = guildTheme2;
-            obj[2] = tmp11;
+            obj = { guildId: id, guildTheme: guildTheme2, hasThemeFeature: tmp11 };
+            _null = obj;
             flag5 = true;
           }
           flag3 = flag5;
         }
-        obj4 = store;
+        obj4 = GuildStore;
       }
     }
     if (flag3) {
@@ -273,7 +263,7 @@ const guildThemeRuntimeStore = new GuildThemeRuntimeStore(dispatcherDefault, {
     entitlements = entitlements.entitlements;
     let tmp = c7 === entitlements.guildId;
     if (tmp) {
-      let flag = entitlements.some((sku_id) => sku_id.sku_id === callback(table[4]).GUILD_POWERUP_GUILD_THEME_SKU_ID);
+      let flag = entitlements.some((sku_id) => sku_id.sku_id === Powerups.GUILD_POWERUP_GUILD_THEME_SKU_ID);
       if (flag) {
         c7 = null;
         flag = true;
@@ -284,9 +274,7 @@ const guildThemeRuntimeStore = new GuildThemeRuntimeStore(dispatcherDefault, {
   },
   GUILD_POWERUP_ENTITLEMENTS_DELETE: function handleThemePowerupRemoved(arg0) {
     ({ guildId, entitlements } = arg0);
-    let someResult = entitlements.some(
-      (sku_id) => sku_id.sku_id === callback(table[4]).GUILD_POWERUP_GUILD_THEME_SKU_ID,
-    );
+    let someResult = entitlements.some((sku_id) => sku_id.sku_id === Powerups.GUILD_POWERUP_GUILD_THEME_SKU_ID);
     if (someResult) {
       guildId = undefined;
       if (_null != null) {
@@ -294,9 +282,10 @@ const guildThemeRuntimeStore = new GuildThemeRuntimeStore(dispatcherDefault, {
       }
       let flag = guildId === guildId;
       if (flag) {
-        flag = guildId !== guildId;
+        flag = c7 !== guildId;
       }
       if (flag) {
+        c7 = guildId;
         flag = true;
       }
       someResult = flag;
@@ -319,6 +308,7 @@ const guildThemeRuntimeStore = new GuildThemeRuntimeStore(dispatcherDefault, {
     return flag;
   },
 });
-const result = require("set").fileFinishedImporting("modules/guild_themes/GuildThemeRuntimeStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_themes/GuildThemeRuntimeStore.tsx");
 
 export default guildThemeRuntimeStore;

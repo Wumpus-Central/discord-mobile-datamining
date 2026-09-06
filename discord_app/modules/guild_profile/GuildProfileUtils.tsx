@@ -1,12 +1,12 @@
 // discord_app/modules/guild_profile/GuildProfileUtils.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
-import createChannelRecord from "../../records/ChannelRecord.tsx";
-import fromGuildPropertiesWithAdditionalFields from "../../utils/GuildRecordUtils.tsx";
+import Constants from "../../Constants.tsx";
+import ChannelRecord from "../../records/ChannelRecord.tsx";
+import GuildRecordUtils from "../../utils/GuildRecordUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-let closure_2 = createChannelRecord.createChannelRecordFromInvite;
-const GuildFeatures = ME.GuildFeatures;
-const result = set.fileFinishedImporting("modules/guild_profile/GuildProfileUtils.tsx");
+let closure_2 = ChannelRecord.createChannelRecordFromInvite;
+const GuildFeatures = Constants.GuildFeatures;
+const result = size.fileFinishedImporting("modules/guild_profile/GuildProfileUtils.tsx");
 
 export const getEstablishedDate = function getEstablishedDate(tmpResult1, locale) {
   if (null != tmpResult1) {
@@ -31,7 +31,7 @@ export const guildInviteCanEmbedProfile = function guildInviteCanEmbedProfile(gu
   if (null == guild.guild) {
     return false;
   } else {
-    const features = fromGuildPropertiesWithAdditionalFields.fromInviteGuild(guild.guild).features;
+    const features = GuildRecordUtils.fromInviteGuild(guild.guild).features;
     if (features.has(GuildFeatures.HUB)) {
       return false;
     } else {
@@ -41,7 +41,7 @@ export const guildInviteCanEmbedProfile = function guildInviteCanEmbedProfile(gu
       }
       let tmp2 = null;
       if (null != channel) {
-        tmp2 = callback(guild.channel);
+        tmp2 = closure_2(guild.channel);
       }
       let isGuildVoiceOrThreadResult;
       if (tmp2 != null) {
@@ -49,6 +49,5 @@ export const guildInviteCanEmbedProfile = function guildInviteCanEmbedProfile(gu
       }
       return !isGuildVoiceOrThreadResult;
     }
-    const obj = fromGuildPropertiesWithAdditionalFields;
   }
 };

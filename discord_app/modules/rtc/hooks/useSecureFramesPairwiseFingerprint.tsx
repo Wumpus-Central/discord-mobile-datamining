@@ -1,242 +1,215 @@
 // discord_app/modules/rtc/hooks/useSecureFramesPairwiseFingerprint.tsx
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_5 from "../../../../_runtime/00019_noop.js";
-import closure_6 from "../../../stores/AuthenticationStore.tsx";
-import closure_7 from "../../../stores/MediaEngineStore.tsx";
-import closure_8 from "../../../stores/RTCConnectionStore.tsx";
-import { SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION as closure_9 } from "../SecureFramesConstants.tsx";
-import { Features } from "../../../../discord_common/js/packages/media-engine/Constants.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../../_runtime/metro/00019__.js";
+import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
+import MediaEngineStore from "../../../stores/MediaEngineStore.tsx";
+import RTCConnectionStore from "../../../stores/RTCConnectionStore.tsx";
 
-const require = arg1;
-function _computeNativeDisplayPair() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c3 = 0;
-    c4 = 0;
-    return (function* (arg0) {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === closure_3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let rTCConnection = tmp4;
-              let secureFramesRosterMapEntry = 0;
-              secureFramesRosterMapEntry = undefined;
-              rTCConnection = undefined;
-              closure_3 = undefined;
-              secureFramesRosterMapEntry = closure_1_8.getSecureFramesRosterMapEntry(closure_0);
-              rTCConnection = closure_1_8.getRTCConnection();
-              if (null != secureFramesRosterMapEntry) {
-                if (null != rTCConnection) {
-                  const promise = new Promise((arg0) => {
-                    closure_0 = arg0;
-                    const mLSPairwiseFingerprint = rTCConnection.getMLSPairwiseFingerprint(
-                      closure_1_9,
-                      closure_0,
-                      (arg0) => {
-                        const uint8Array = new Uint8Array(arg0);
-                        return callback(uint8Array);
-                      },
-                    );
-                  });
-                  closure_3 = 1;
-                  c4 = 1;
-                  obj1 = { value: null, done: false };
-                  obj1[0] = promise;
-                  return obj1;
-                }
-              }
-              c4 = 3;
-              return { value: null, done: true };
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          } else {
-            closure_3 = arg1;
-            obj = { fingerprint: null, fingerprintUserKey: null };
-            obj1 = secureFramesRosterMapEntry(rTCConnection[8]);
-            obj[0] = obj1.fromByteArray(closure_3);
-            obj[1] = secureFramesRosterMapEntry;
-            c4 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = obj;
-            return obj3;
-          }
-        } catch (tmp16) {
-          c4 = tmp;
-          throw tmp16;
-        }
-      }
-    })();
-  });
-  closure_12 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+const require = fn;
+let closure_12 = async function _computeNativeDisplayPair(arg0, value) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      value = { value, done: true };
+      return value;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
   } else {
-    applyArgumentsResult = apply(self, arguments);
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          value = { value, done: true };
+          return value;
+        } else {
+          let mLSPairwiseFingerprint = tmp4;
+          c1 = 0;
+          closure_129_0 = closure_0;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          closure_129_3 = undefined;
+          const secureFramesRosterMapEntry = RTCConnectionStore.getSecureFramesRosterMapEntry(closure_0);
+          closure_129_1 = secureFramesRosterMapEntry;
+          const rTCConnection = RTCConnectionStore.getRTCConnection();
+          closure_129_2 = rTCConnection;
+          if (null != secureFramesRosterMapEntry) {
+            if (null != rTCConnection) {
+              const promise = new Promise((arg0) => {
+                closure_0 = arg0;
+                mLSPairwiseFingerprint = mLSPairwiseFingerprint.getMLSPairwiseFingerprint(
+                  closure_2_9,
+                  closure_1_0,
+                  (arg0) => {
+                    const uint8Array = new Uint8Array(arg0);
+                    return closure_0(uint8Array);
+                  },
+                );
+              });
+              c3 = 1;
+              c4 = 1;
+              let obj1 = { value: promise, done: false };
+              return obj1;
+            }
+          }
+          c4 = 3;
+          return { value: null, done: true };
+        }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        closure_129_3 = value;
+        value = { fingerprint: null, fingerprintUserKey: null };
+        obj1 = closure_130_1(closure_130_2[8]);
+        value.fingerprint = obj1.fromByteArray(closure_129_3);
+        value.fingerprintUserKey = closure_129_1;
+        c4 = 3;
+        const obj3 = { value, done: true };
+        return obj3;
+      }
+    } catch (tmp16) {
+      c4 = tmp;
+      throw tmp16;
+    }
   }
-  return applyArgumentsResult;
-}
-let obj = { FROZEN: "frozen", LIVE: "live" };
-const result = require("set").fileFinishedImporting("modules/rtc/hooks/useSecureFramesPairwiseFingerprint.tsx");
+};
+let closure_9 = fn(9152).SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION;
+const Features = fn(4585).Features;
+const SecureFramesPairwiseFingerprintMode = { FROZEN: "frozen", LIVE: "live" };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/rtc/hooks/useSecureFramesPairwiseFingerprint.tsx");
 
-export const SecureFramesPairwiseFingerprintMode = obj;
+export { SecureFramesPairwiseFingerprintMode };
 export const useSecureFramesPairwiseFingerprint = function useSecureFramesPairwiseFingerprint(userId) {
   userId = userId.userId;
   let FROZEN = userId.mode;
   if (FROZEN === undefined) {
-    FROZEN = obj.FROZEN;
+    FROZEN = constants.FROZEN;
   }
   let stateFromStores;
   let first;
-  let callback;
   let first1;
-  closure_6 = undefined;
-  let stateFromStores1;
+  let id;
   let stateFromStores2;
-  callback = undefined;
-  closure_10 = undefined;
-  obj = undefined;
-  closure_12 = undefined;
-  obj = userId(stateFromStores[9]);
-  const items = [closure_6];
-  stateFromStores = obj.useStateFromStores(items, () => id.getId());
+  const items = [id];
+  stateFromStores = userId(stateFromStores[9]).useStateFromStores(items, () => id.getId());
   FROZEN(stateFromStores[10])(
     stateFromStores !== userId,
     "[useSecureFramesPairwiseFingerprint] Should not pass current user id.",
   );
   const tmp4 = first(first1.useState(null), 2);
   first = tmp4[0];
-  callback = tmp4[1];
+  asyncGeneratorStep = tmp4[1];
   const tmp6 = first(first1.useState(false), 2);
   first1 = tmp6[0];
-  closure_6 = tmp6[1];
+  id = tmp6[1];
+  obj = userId(stateFromStores[9]);
   const items1 = [stateFromStores2];
-  stateFromStores1 = userId(stateFromStores[9]).useStateFromStores(items1, () =>
-    stateFromStores2.getSecureFramesRosterMapEntry(userId),
+  const stateFromStores1 = userId(stateFromStores[9]).useStateFromStores(items1, () =>
+    RTCConnectionStore.getSecureFramesRosterMapEntry(userId),
   );
   let obj2 = userId(stateFromStores[9]);
   const items2 = [stateFromStores2];
   stateFromStores2 = userId(stateFromStores[9]).useStateFromStores(items2, () =>
-    stateFromStores2.getSecureFramesRosterMapEntry(stateFromStores),
+    RTCConnectionStore.getSecureFramesRosterMapEntry(stateFromStores),
   );
   const items3 = [userId];
-  callback = first1.useCallback(
-    callback(function* () {
-      if (v0 === 2) {
-        v0 = 3;
-        HermesBuiltin.throwTypeError();
+  const callback = first1.useCallback(
+    asyncGeneratorStep(async (arg0, value) => {
+      if (v3 === 2) {
+        v3 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp3 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
         }
       } else {
         try {
-          v0 = 2;
+          v3 = 2;
           if (0 === c1) {
             if (arg0 === 1) {
-              v0 = 3;
-              throw arg1;
+              v3 = 3;
+              throw value;
             } else if (arg0 === 2) {
-              v0 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              v3 = 3;
+              obj = { value, done: true };
               return obj;
-            } else if (closure_1_7.supports(closure_1_10.MLS_PAIRWISE_FINGERPRINTS)) {
+            } else if (stateFromStores1.supports(constants.MLS_PAIRWISE_FINGERPRINTS)) {
               c1 = 2;
-              v0 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = (function computeNativeDisplayPair(c0) {
-                const self = this;
-                const apply = closure_12.apply;
-                if (typeof apply === "unknown") {
-                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                } else {
-                  applyArgumentsResult = apply(self, arguments);
-                }
-                return applyArgumentsResult;
-              })(v0);
+              v3 = 1;
+              const obj1 = {
+                value: (function computeNativeDisplayPair() {
+                  const self = this;
+                  const apply = closure_1_12.apply;
+                  if (typeof apply === "unknown") {
+                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                  } else {
+                    applyArgumentsResult = apply(self, arguments);
+                  }
+                  return applyArgumentsResult;
+                })(userId),
+                done: false,
+              };
               return obj1;
             } else {
-              let obj3 = v0(closure_1_2[11]);
+              let obj3 = v3(stateFromStores[11]);
               c1 = 1;
-              v0 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = obj3.computeBoundPairwiseFingerprint(v0);
+              v3 = 1;
+              const obj2 = { value: obj3.computeBoundPairwiseFingerprint(userId), done: false };
               return obj2;
             }
           } else {
             if (1 === tmp4) {
               if (arg0 === 1) {
-                v0 = 3;
-                throw arg1;
+                v3 = 3;
+                throw value;
               } else if (arg0 === 2) {
-                v0 = 3;
-                obj3 = { value: null, done: true };
-                obj3[0] = arg1;
+                v3 = 3;
+                obj3 = { value, done: true };
                 return obj3;
               }
             } else if (arg0 === 1) {
-              v0 = 3;
-              throw arg1;
+              v3 = 3;
+              throw value;
             } else if (arg0 === 2) {
-              v0 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              v3 = 3;
+              obj = { value, done: true };
               return obj;
             }
-            v0 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
+            v3 = 3;
+            const obj4 = { value, done: true };
             return obj4;
           }
         } catch (tmp9) {
-          v0 = tmp;
+          v3 = tmp;
           throw tmp9;
         }
       }
     }),
     items3,
   );
-  closure_10 = first1.useRef(0);
-  obj = first1.useRef(null);
-  closure_12 = first1.useRef(false);
+  first1.useRef(0);
+  constants = first1.useRef(null);
+  first1.useRef(false);
   const items4 = [FROZEN, callback, stateFromStores1, stateFromStores2];
   const effect = first1.useEffect(() => {
     if (null != stateFromStores1) {
@@ -248,13 +221,13 @@ export const useSecureFramesPairwiseFingerprint = function useSecureFramesPairwi
           userId = sum;
           const _setTimeout = setTimeout;
           constants.current = setTimeout(() => {
-            closure_1_6(true);
-            closure_1_9().then((arg0) => {
-              if (closure_0 === closure_1_10.current) {
-                if (null != arg0) {
-                  closure_1_4(arg0);
+            closure_6(true);
+            callback().then((result) => {
+              if (closure_1_0 === ref.current) {
+                if (null != result) {
+                  closure_2_4(result);
                 }
-                closure_1_6(false);
+                id(false);
               }
             });
           }, 0);
@@ -288,8 +261,8 @@ export const useSecureFramesPairwiseFingerprint = function useSecureFramesPairwi
     if (fingerprintUserKey == null) {
       fingerprintUserKey = null;
     }
-    obj[1] = fingerprintUserKey;
-    obj[2] = first1;
+    obj.fingerprintUserKey = fingerprintUserKey;
+    obj.loading = first1;
     return obj;
   }, items5);
 };

@@ -1,46 +1,52 @@
 // discord_app/modules/settings/native/renderer/SettingRendererUtils.tsx
-import set2 from "../../../../../_runtime/00002_set.js";
 import _modDef38 from "../../../../../_runtime/metro/00038__.js";
-import ME from "../../../../Constants.tsx";
-import MobileUserSettings2 from "../../../user_settings/core/native/SettingsConstants.tsx";
-import map2 from "SettingHookHarness.tsx";
-import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "SettingRendererConstants.tsx";
+import Constants from "../../../../Constants.tsx";
+import useKeyboardIsOpen from "../../../keyboard/native/useKeyboardIsOpen.tsx";
+import UserSettingsModalActionCreatorsDefault from "../../../../actions/UserSettingsModalActionCreators.tsx";
+import UserSettingsUtils from "../../../../utils/UserSettingsUtils.tsx";
+import SettingsConstants from "../../../user_settings/core/native/SettingsConstants.tsx";
+import SettingHookHarness from "SettingHookHarness.tsx";
+import SettingsRendererConfig from "../../../user_settings/core/native/SettingsRendererConfig.tsx";
+import SettingTreeManagerDefault from "SettingTreeManager.tsx";
+import SettingRendererConstants from "SettingRendererConstants.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 ({
   ListItemType: c3,
-  NodeType: c4,
-  SUPPORTED_SEARCH_RESULT_NO_PARENT_RENDERER_TYPES: c5,
-} = GUILD_SELECT_ALL_SERVERS_OPTION_ID);
-const AnalyticsPages = ME.AnalyticsPages;
-const MobileUserSettings = MobileUserSettings2.MobileUserSettings;
-let result = set2.fileFinishedImporting("modules/settings/native/renderer/SettingRendererUtils.tsx");
+  NodeType: closure_4,
+  SUPPORTED_SEARCH_RESULT_NO_PARENT_RENDERER_TYPES: hasOwnProperty,
+} = SettingRendererConstants);
+const AnalyticsPages = Constants.AnalyticsPages;
+const MobileUserSettings = SettingsConstants.MobileUserSettings;
+let result = size.fileFinishedImporting("modules/settings/native/renderer/SettingRendererUtils.tsx");
 
 export const onRouteSettingOnPress = function onRouteSettingOnPress(arg0) {
   ({ navigation: require, screen: importDefault, preNavigationAction } = arg0);
   function goToScreen() {
-    let obj = closure_1_0(closure_1_2[5]);
+    let obj = useKeyboardIsOpen;
     if (obj.getKeyboardIsOpen()) {
-      let tmpResult = tmp(tmp2[6]);
+      let tmpResult = tmp(1115);
       if (tmpResult.isIOS()) {
-        tmpResult = tmp(tmp2[7]);
+        tmpResult = tmp(1874);
         let result = tmpResult.dismissGlobalKeyboard();
         const _setTimeout = setTimeout;
         const timerId = setTimeout(() => {
-          let obj = closure_1_1(closure_1_2[3]);
-          obj.setSection(closure_1.route);
-          obj = { destinationPane: closure_1.route, source: obj };
-          obj = { page: closure_1_6.USER_SETTINGS };
-          const result = closure_1_0(closure_1_2[4]).trackUserSettingsPaneViewed(obj);
-          navigation.navigate(closure_1.route);
+          let obj = UserSettingsModalActionCreatorsDefault;
+          obj.setSection(closure_1_1.route);
+          obj = { destinationPane: closure_1_1.route, source: null };
+          obj = { page: constants.USER_SETTINGS };
+          obj.source = obj;
+          const result = navigation(6995).trackUserSettingsPaneViewed(obj);
+          navigation.navigate(closure_1_1.route);
         }, 100);
       }
     }
-    closure_1_1(closure_1_2[3]).setSection(closure_1.route);
-    const obj3 = closure_1_1(closure_1_2[3]);
-    obj = { destinationPane: closure_1.route, source: obj };
-    obj = { page: closure_1_6.USER_SETTINGS };
-    const result1 = closure_1_0(closure_1_2[4]).trackUserSettingsPaneViewed(obj);
-    navigation.navigate(closure_1.route);
+    UserSettingsModalActionCreatorsDefault.setSection(closure_1_1.route);
+    obj = { destinationPane: closure_1_1.route, source: null };
+    obj = { page: AnalyticsPages.USER_SETTINGS };
+    obj.source = obj;
+    const result1 = UserSettingsUtils.trackUserSettingsPaneViewed(obj);
+    navigation.navigate(closure_1_1.route);
   }
   let preNavigationActionResult;
   if (preNavigationAction != null) {
@@ -50,41 +56,38 @@ export const onRouteSettingOnPress = function onRouteSettingOnPress(arg0) {
     goToScreen();
   }
 };
-export const getSettingTitle = function getSettingTitle(closure_0) {
-  const cachedSettingTitle = map2.getCachedSettingTitle(closure_0);
-  const obj = map2;
-  _modDef38(null != cachedSettingTitle, "Setting " + closure_0 + " is missing a title.");
+export const getSettingTitle = function getSettingTitle(id) {
+  const cachedSettingTitle = SettingHookHarness.getCachedSettingTitle(id);
+  _modDef38(null != cachedSettingTitle, "Setting " + id + " is missing a title.");
   return cachedSettingTitle;
 };
 export const getSettingSearchableTitles = function getSettingSearchableTitles() {
   const entries = Object.entries(items(14584).SETTING_RENDERER_CONFIG);
   items = [];
-  const item = entries.forEach((arg0) => {
-    [tmp, tmp2] = arg0;
+  const item = entries.forEach((item) => {
+    [tmp, tmp2] = item;
     if (!tmp2.unsearchable) {
-      const cachedSettingTitle = items(closure_1_2[8]).getCachedSettingTitle(tmp);
+      const cachedSettingTitle = SettingHookHarness.getCachedSettingTitle(tmp);
       if (null != cachedSettingTitle) {
         items = [tmp];
         const items1 = [cachedSettingTitle];
-        HermesBuiltin.arraySpread(tmp3(tmp4[8]).getCachedSettingSearchTerms(tmp), 1);
+        HermesBuiltin.arraySpread(tmp3(14582).getCachedSettingSearchTerms(tmp), 1);
         items[1] = items1;
         items.push(items);
-        const tmp3Result = tmp3(tmp4[8]);
+        const tmp3Result = tmp3(14582);
       }
-      const obj = items(closure_1_2[8]);
-      tmp3 = items;
-      tmp4 = closure_1_2;
+      tmp3 = require;
     }
   });
   return items;
 };
 export const getSettingScreens = function getSettingScreens() {
   let items = [];
-  const set = new Set();
+  set = new Set();
   const entries = Object.entries(items(14584).SETTING_RENDERER_CONFIG);
-  const item = entries.forEach((arg0) => {
-    [tmp, tmp2] = arg0;
-    if (tmp2.type === closure_1_4.ROUTE) {
+  const item = entries.forEach((item) => {
+    [tmp, tmp2] = item;
+    if (tmp2.type === constants2.ROUTE) {
       if (!set.has(tmp2.screen.route)) {
         items = [tmp, tmp2.screen];
         items.push(items);
@@ -98,11 +101,11 @@ export const getSettingScreens = function getSettingScreens() {
 export const getDesignSystemScreens = function getDesignSystemScreens() {
   let items = [];
   const entries = Object.entries(items(14584).SETTING_RENDERER_CONFIG);
-  const item = entries.forEach((arg0) => {
-    [tmp, tmp2] = arg0;
-    let tmp3 = tmp2.type === closure_1_4.ROUTE;
+  const item = entries.forEach((item) => {
+    [tmp, tmp2] = item;
+    let tmp3 = tmp2.type === constants2.ROUTE;
     if (tmp3) {
-      tmp3 = tmp2.parent === closure_1_7.DESIGN_SYSTEMS;
+      tmp3 = tmp2.parent === MobileUserSettings.DESIGN_SYSTEMS;
     }
     if (tmp3) {
       items = [tmp, tmp2.screen];
@@ -117,29 +120,25 @@ export const toSettingListItems = function toSettingListItems(node, field) {
   const sections = node.sections;
   let item = sections.forEach((settings) => {
     settings = settings.settings;
-    const found = settings.filter((arg0) => !closure_1_1(closure_1_2[11]).isBlocked(arg0, found));
+    const found = settings.filter((item) => !items(dependencyMap[11]).isBlocked(item, found));
     if (0 !== found.length) {
-      let obj = { type: null, label: null };
-      obj[0] = closure_1_3.SECTION_HEADER;
-      obj[1] = settings.label;
+      let obj = { type: constants.SECTION_HEADER, label: settings.label };
       items.push(obj);
-      const item = found.forEach((setting) => {
-        closure_1_1.push({
-          type: closure_2_3.SECTION_ROW,
+      const item = found.forEach((setting, index) => {
+        items.push({
+          type: constants.SECTION_ROW,
           setting,
-          settingData: callback(closure_2_2[10]).SETTING_RENDERER_CONFIG[setting],
-          start: 0 === arg1,
-          end: arg1 === found.length - 1,
+          settingData: SettingsRendererConfig.SETTING_RENDERER_CONFIG[setting],
+          start: 0 === index,
+          end: index === found.length - 1,
         });
       });
       if (null != settings.subLabel) {
-        obj = { type: null, label: null };
-        obj[0] = tmp.SECTION_FOOTER;
-        obj[1] = settings.subLabel;
+        obj = { type: tmp.SECTION_FOOTER, label: settings.subLabel };
         arr3.push(obj);
       }
       arr3 = items;
-      tmp = closure_1_3;
+      tmp = constants;
     }
   });
   return items;
@@ -147,42 +146,35 @@ export const toSettingListItems = function toSettingListItems(node, field) {
 export const getSettingListSearchResultItems = function getSettingListSearchResultItems(arr) {
   const items = [];
   const item = arr.forEach((setting) => {
-    const tmp2 = items(items1[10]).SETTING_RENDERER_CONFIG[setting];
+    const tmp2 = SettingsRendererConfig.SETTING_RENDERER_CONFIG[setting];
     if (null != tmp2.parent) {
-      const highestLevelAncestor = sortByResult(tmp[11]).getHighestLevelAncestor(setting);
-      const obj2 = sortByResult(tmp[11]);
-      let obj = { category: null, setting: null, data: null };
-      obj[0] = highestLevelAncestor;
-      obj[1] = setting;
-      obj[2] = sortByResult(tmp[11]).getNearestRouteAncestorDataOrSelf(setting);
+      const highestLevelAncestor = SettingTreeManagerDefault.getHighestLevelAncestor(setting);
+      let obj = {
+        category: highestLevelAncestor,
+        setting,
+        data: SettingTreeManagerDefault.getNearestRouteAncestorDataOrSelf(setting),
+      };
       items.push(obj);
-      const obj3 = sortByResult(tmp[11]);
-    } else if (closure_1_5.has(tmp2.type)) {
-      obj = { category: null, setting: null, data: null };
-      obj[0] = setting;
-      obj[1] = setting;
-      obj[2] = tmp2;
+    } else if (set.has(tmp2.type)) {
+      obj = { category: setting, setting, data: tmp2 };
       items.push(obj);
     }
   });
   const sortByResult = items(items1[12]).sortBy(items, (category) => category.category);
   importDefault = sortByResult;
   items1 = [];
-  const set = new Set();
-  const item1 = sortByResult.forEach((data) => {
+  set = new Set();
+  const item1 = sortByResult.forEach((data, index) => {
     ({ category, setting } = data);
-    let obj = items(items1[8]);
+    let obj = SettingHookHarness;
     const cachedSettingTitle = obj.getCachedSettingTitle(setting);
-    sortByResult(items1[9])(null != cachedSettingTitle, "Setting " + setting + " is missing a title.");
-    const tmp = items;
-    const tmp2 = items1;
-    const tmp4 = sortByResult(items1[9]);
+    _modDef38(null != cachedSettingTitle, "Setting " + setting + " is missing a title.");
     const tmp5 = null != cachedSettingTitle;
-    const breadcrumbs = sortByResult(items1[11]).getBreadcrumbs(setting);
+    const breadcrumbs = SettingTreeManagerDefault.getBreadcrumbs(setting);
     const hasItem = set.has(category);
     set.add(category);
     obj = {
-      type: set.SETTING_SEARCH_RESULT,
+      type: constants.SETTING_SEARCH_RESULT,
       settingData: data.data,
       title: cachedSettingTitle,
       IconComponent: null,
@@ -193,10 +185,10 @@ export const getSettingListSearchResultItems = function getSettingListSearchResu
     };
     let tmp11;
     if (!hasItem) {
-      const tmp12 = tmp(tmp2[10]).SETTING_RENDERER_CONFIG[category];
+      const tmp12 = SettingsRendererConfig.SETTING_RENDERER_CONFIG[category];
       const type = tmp12.type;
       let IconComponent = null;
-      if (closure_1_4.RADIO !== type) {
+      if (constants2.RADIO !== type) {
         IconComponent = null;
         if (tmp13.VOLUME_SLIDER !== type) {
           IconComponent = null;
@@ -207,11 +199,11 @@ export const getSettingListSearchResultItems = function getSettingListSearchResu
       }
       tmp11 = IconComponent;
     }
-    obj[3] = tmp11;
-    obj[4] = breadcrumbs;
-    obj[5] = setting;
-    obj[6] = arg1;
-    obj[7] = sortByResult.length;
+    obj.IconComponent = tmp11;
+    obj.breadcrumbs = breadcrumbs;
+    obj.setting = setting;
+    obj.index = index;
+    obj.total = sortByResult.length;
     items1.push(obj);
   });
   return items1;
@@ -225,10 +217,9 @@ export const getScoredSettingListSearchResultItems = function getScoredSettingLi
   if (isLoading) {
     for (let num4 = 0; num4 < placeholderCount; num4 = num4 + 1) {
       let obj = { type: null, start: null, end: null };
-      let tmp13 = constants;
-      obj[0] = constants.SECTION_ROW_PLACEHOLDER;
-      obj[1] = 0 === num4;
-      obj[2] = num4 === placeholderCount - 1;
+      obj.type = constants.SECTION_ROW_PLACEHOLDER;
+      obj.start = 0 === num4;
+      obj.end = num4 === placeholderCount - 1;
       let arr = items.push(obj);
     }
     return items;
@@ -238,17 +229,17 @@ export const getScoredSettingListSearchResultItems = function getScoredSettingLi
     const _Map2 = Map;
     map1 = new Map();
     constants = 0;
-    let item = settings.forEach((arg0) => {
-      ({ setting, score } = arg0);
-      const tmp2 = items(map1[10]).SETTING_RENDERER_CONFIG[setting];
+    let item = settings.forEach((item) => {
+      ({ setting, score } = item);
+      const tmp2 = SettingsRendererConfig.SETTING_RENDERER_CONFIG[setting];
       let hasItem = null != tmp2.parent;
       if (!hasItem) {
-        hasItem = closure_1_5.has(tmp2.type);
+        hasItem = set.has(tmp2.type);
       }
       if (hasItem) {
         closure_3 = closure_3 + 1;
       }
-      const highestLevelAncestor = map(map1[11]).getHighestLevelAncestor(setting);
+      const highestLevelAncestor = SettingTreeManagerDefault.getHighestLevelAncestor(setting);
       let sum = score;
       if (highestLevelAncestor === setting) {
         sum = score + 0.05;
@@ -268,14 +259,13 @@ export const getScoredSettingListSearchResultItems = function getScoredSettingLi
     const _Array = Array;
     arr = Array.from(map1.entries());
     let sorted = arr.sort((arg0, arg1) => arg1[1] - arg0[1]);
-    const mapped = sorted.map((arg0) => {
-      [tmp] = arg0;
+    const mapped = sorted.map((item) => {
+      [tmp] = item;
       return tmp;
     });
     c4 = 0;
-    const item1 = mapped.forEach((arg0) => {
-      closure_0 = arg0;
-      const value = map.get(arg0);
+    const item1 = mapped.forEach((item) => {
+      value = map.get(item);
       if (null != value) {
         const sorted = value.sort((setting, setting2) => {
           let num = -1;
@@ -288,19 +278,19 @@ export const getScoredSettingListSearchResultItems = function getScoredSettingLi
           }
           return num;
         });
-        const item = sorted.forEach((setting) => {
+        item = sorted.forEach((setting, index) => {
           setting = setting.setting;
-          let nearestRouteAncestorDataOrSelf = arr(closure_1_2[10]).SETTING_RENDERER_CONFIG[setting];
+          let nearestRouteAncestorDataOrSelf = items(map1[10]).SETTING_RENDERER_CONFIG[setting];
           if (null != nearestRouteAncestorDataOrSelf.parent) {
-            let obj = closure_1_1(tmp2[11]);
+            let obj = map(tmp2[11]);
             let highestLevelAncestor = obj.getHighestLevelAncestor(setting);
-            nearestRouteAncestorDataOrSelf = closure_1_1(tmp2[11]).getNearestRouteAncestorDataOrSelf(setting);
-            const obj2 = closure_1_1(tmp2[11]);
+            nearestRouteAncestorDataOrSelf = map(tmp2[11]).getNearestRouteAncestorDataOrSelf(setting);
+            const obj2 = map(tmp2[11]);
           } else {
             highestLevelAncestor = setting;
           }
           obj = {
-            type: closure_1_3.SETTING_SEARCH_RESULT,
+            type: total.SETTING_SEARCH_RESULT,
             settingData: nearestRouteAncestorDataOrSelf,
             title: null,
             IconComponent: null,
@@ -309,17 +299,17 @@ export const getScoredSettingListSearchResultItems = function getScoredSettingLi
             index: null,
             total: null,
           };
-          const cachedSettingTitle = arr(closure_1_2[8]).getCachedSettingTitle(setting);
-          const tmp8 = closure_1_1;
-          const tmpResult = arr(closure_1_2[8]);
-          closure_1_1(closure_1_2[9])(null != cachedSettingTitle, "Setting " + setting + " is missing a title.");
-          obj[2] = cachedSettingTitle;
+          const cachedSettingTitle = items(map1[8]).getCachedSettingTitle(setting);
+          const tmp8 = map;
+          const tmpResult = items(map1[8]);
+          map(map1[9])(null != cachedSettingTitle, "Setting " + setting + " is missing a title.");
+          obj.title = cachedSettingTitle;
           let tmp12;
-          if (0 === arg1) {
+          if (0 === index) {
             const tmp13 = tmp(tmp2[10]).SETTING_RENDERER_CONFIG[highestLevelAncestor];
             const type = tmp13.type;
             let IconComponent = null;
-            if (closure_1_4.RADIO !== type) {
+            if (index.RADIO !== type) {
               IconComponent = null;
               if (tmp14.VOLUME_SLIDER !== type) {
                 IconComponent = null;
@@ -330,15 +320,15 @@ export const getScoredSettingListSearchResultItems = function getScoredSettingLi
             }
             tmp12 = IconComponent;
           }
-          obj[3] = tmp12;
+          obj.IconComponent = tmp12;
           const tmp10 = null != cachedSettingTitle;
-          const tmp9 = closure_1_1(closure_1_2[9]);
-          obj[4] = tmp8(closure_1_2[11]).getBreadcrumbs(setting);
-          obj[5] = setting;
-          obj[6] = closure_4;
-          obj[7] = closure_3;
-          closure_4 = closure_4 + 1;
-          arr = arr.push(obj);
+          const tmp9 = map(map1[9]);
+          obj.breadcrumbs = tmp8(map1[11]).getBreadcrumbs(setting);
+          obj.setting = setting;
+          obj.index = index;
+          obj.total = total;
+          index = index + 1;
+          item.push(obj);
         });
       }
     });
@@ -348,7 +338,7 @@ export const getScoredSettingListSearchResultItems = function getScoredSettingLi
 export const getInitialScrollIndex = function getInitialScrollIndex(arg0, findLastIndex) {
   closure_0 = arg0;
   const findLastIndexResult = findLastIndex.findLastIndex((type) => {
-    let tmp = type.type === closure_1_3.SECTION_ROW;
+    let tmp = type.type === constants.SECTION_ROW;
     if (tmp) {
       tmp = type.setting === closure_0;
     }

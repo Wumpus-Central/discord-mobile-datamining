@@ -1,32 +1,26 @@
 // discord_app/modules/devtools/dev_settings/DevSettingsActions.tsx
-import dispatcherDefault from "../../../Dispatcher.tsx";
-import closure_2 from "DevSettingsStore.tsx";
+import DispatcherDefault from "../../../Dispatcher.tsx";
+import DevSettingsStore from "DevSettingsStore.tsx";
 
-const result = require("set").fileFinishedImporting("modules/devtools/dev_settings/DevSettingsActions.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/devtools/dev_settings/DevSettingsActions.tsx");
 
 export const toggle = function toggle(toggle, flag) {
   let tmp = flag;
   if (typeof flag !== "boolean") {
-    tmp = !store.get(toggle);
+    tmp = !DevSettingsStore.get(toggle);
   }
-  let obj = dispatcherDefault;
-  obj = { type: "DEV_TOOLS_DEV_SETTING_SET", toggle, value: tmp };
+  const obj = { type: "DEV_TOOLS_DEV_SETTING_SET", toggle, value: tmp };
   obj.dispatch(obj);
 };
 export const clearAll = function clearAll() {
-  for (const key10005 in closure_2.enabled()) {
-    let tmp4 = key10005;
+  for (const key10005 in DevSettingsStore.enabled()) {
     let flag = false;
     if (typeof false !== "boolean") {
-      let tmp5 = store;
-      flag = !store.get(key10005);
+      flag = !DevSettingsStore.get(key10005);
     }
-    let tmp = importDefault;
-    let tmp2 = dependencyMap;
-    let obj = dispatcherDefault;
-    obj = { type: "DEV_TOOLS_DEV_SETTING_SET", toggle: null, value: null };
-    obj[1] = key10005;
-    obj[2] = flag;
+    let obj = DispatcherDefault;
+    obj = { type: "DEV_TOOLS_DEV_SETTING_SET", toggle: key10005, value: flag };
     let dispatchResult = obj.dispatch(obj);
     continue;
   }

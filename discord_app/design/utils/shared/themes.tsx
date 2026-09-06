@@ -1,9 +1,9 @@
 // discord_app/design/utils/shared/themes.tsx
-import set from "../../../../_runtime/00002_set.js";
-import sum from "../../../../discord_common/js/shared/Constants.tsx";
+import Constants from "../../../../discord_common/js/shared/Constants.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const ThemeTypes = sum.ThemeTypes;
-const result = set.fileFinishedImporting("design/utils/shared/themes.tsx");
+const ThemeTypes = Constants.ThemeTypes;
+const result = size.fileFinishedImporting("design/utils/shared/themes.tsx");
 
 export const isThemeLight = function isThemeLight(arg0) {
   return arg0 === ThemeTypes.LIGHT;

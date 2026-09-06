@@ -1,21 +1,20 @@
 // discord_app/modules/premium/referral_program/hooks/useMaybeFetchReferralsRemaining.tsx
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../../stores/UserStore.tsx";
-import closure_5 from "../../ReferralTrialStore.tsx";
-import GuildFeatures from "../../PremiumConstants.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import UserStore from "../../../../stores/UserStore.tsx";
+import ReferralTrialStore from "../../ReferralTrialStore.tsx";
 
-const require = arg1;
-({ PremiumTypes: closure_6, FractionalPremiumStates: error } = GuildFeatures);
-let result = require("set").fileFinishedImporting(
-  "modules/premium/referral_program/hooks/useMaybeFetchReferralsRemaining.tsx",
-);
+const require = fn;
+const PremiumConstants = fn(1373);
+({ PremiumTypes: metroRequire, FractionalPremiumStates: closure_7 } = PremiumConstants);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/premium/referral_program/hooks/useMaybeFetchReferralsRemaining.tsx");
 
 export const useMaybeFetchReferralsRemaining = function useMaybeFetchReferralsRemaining(flag) {
   if (flag === undefined) {
     flag = false;
   }
   let fetched;
-  const items = [closure_4];
+  const items = [UserStore];
   const stateFromStores = flag(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj = flag(504);
   let tmp = flag;
@@ -45,13 +44,13 @@ export const useMaybeFetchReferralsRemaining = function useMaybeFetchReferralsRe
     fetched = !hasActiveTrial;
   }
   const items1 = [fetched, flag];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     let tmp = fetched;
     if (fetched) {
       tmp = !flag;
     }
     if (tmp) {
-      const result = closure_1_5.checkAndFetchReferralsRemaining();
+      const result = ReferralTrialStore.checkAndFetchReferralsRemaining();
     }
   }, items1);
 };

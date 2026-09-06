@@ -1,7 +1,9 @@
 // discord_app/modules/voice_channel_effects/VoiceChannelEffectsUtils.tsx
-import getAvatarURLDefault from "../../utils/AvatarUtils.tsx";
-import parseRawEmojiObjectDefault from "../emojis/UnicodeEmojis.tsx";
-import getEmojiUnavailableReasonDefault from "../../utils/EmojiUtils.tsx";
+import util from "../../intl/index.native.tsx";
+import AvatarUtilsDefault from "../../utils/AvatarUtils.tsx";
+import ImageLoaderUtils from "../image_upload/ImageLoaderUtils.tsx";
+import UnicodeEmojisDefault from "../emojis/UnicodeEmojis.tsx";
+import EmojiUtilsDefault from "../../utils/EmojiUtils.tsx";
 import _modDef7350 from "../../../_runtime/metro/07350__.js";
 import _modDef7351 from "../../../_runtime/metro/07351__.js";
 import _modDef7352 from "../../../_runtime/metro/07352__.js";
@@ -24,12 +26,12 @@ import _modDef7368 from "../../../_runtime/metro/07368__.js";
 import _modDef7369 from "../../../_runtime/metro/07369__.js";
 import _modDef7370 from "../../../_runtime/metro/07370__.js";
 import _modDef7371 from "../../../_runtime/metro/07371__.js";
-import closure_3 from "../../stores/UserStore.tsx";
-import VoiceChannelEffectAnimationType from "VoiceChannelEffectsConstants.tsx";
-import importDefaultResult from "../../../_runtime/00012_apply.js";
+import UserStore from "../../stores/UserStore.tsx";
+import apply from "../../../_runtime/metro/00012__.js";
 
-const require = arg1;
-({ EMOJI_SIZE: c4, VoiceChannelEffectAnimationType } = VoiceChannelEffectAnimationType);
+require = fn;
+const VoiceChannelEffectsConstants = fn(7348);
+({ EMOJI_SIZE: closure_4, VoiceChannelEffectAnimationType } = VoiceChannelEffectsConstants);
 const items = [_modDef7350];
 const items1 = [
   _modDef7351,
@@ -54,37 +56,40 @@ const items1 = [
   _modDef7370,
   _modDef7371,
 ];
-let obj = { [VoiceChannelEffectAnimationType.BASIC]: items, [VoiceChannelEffectAnimationType.PREMIUM]: items1 };
-const memoizeResult = importDefaultResult.memoize((arg0) => {
-  closure_0 = arg0;
-  return new Promise((arg0) => {
-    closure_0 = arg0;
-    const image = new globalThis.Image();
-    image.src = closure_0;
-    image.crossOrigin = "Anonymous";
-    image.onload = () => {
-      const result = closure_2_4 * callback(closure_2_2[25]).getDevicePixelRatio();
-      if (image.width === result) {
-        if (tmp2.height === result) {
-          callback(callback);
-        }
-      }
-      const element = <canvas />;
-      element.width = result;
-      element.height = result;
-      const context = element.getContext("2d");
-      if (context != null) {
-        context.drawImage(tmp2, 0, 0);
-      }
-      callback(element.toDataURL("image/png"));
-    };
-  });
-});
-let result = require("set").fileFinishedImporting("modules/voice_channel_effects/VoiceChannelEffectsUtils.tsx");
+const AnimationTypeToAnimations = {
+  [VoiceChannelEffectAnimationType.BASIC]: items,
+  [VoiceChannelEffectAnimationType.PREMIUM]: items1,
+};
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/voice_channel_effects/VoiceChannelEffectsUtils.tsx");
 
 export const CUSTOM_CALL_SOUND_ANIMATION_RANGE = { start: 10, end: 15 };
-export const AnimationTypeToAnimations = obj;
-export const getResizedEmojiData = memoizeResult;
+export { AnimationTypeToAnimations };
+export const getResizedEmojiData = apply.memoize(
+  (src) =>
+    new Promise((arg0) => {
+      src = arg0;
+      const image = new globalThis.Image();
+      image.src = src;
+      image.crossOrigin = "Anonymous";
+      image.onload = () => {
+        const result = React4 * ImageLoaderUtils.getDevicePixelRatio();
+        if (image.width === result) {
+          if (tmp2.height === result) {
+            closure_0(closure_0);
+          }
+        }
+        const element = <canvas />;
+        element.width = result;
+        element.height = result;
+        const context = element.getContext("2d");
+        if (context != null) {
+          context.drawImage(tmp2, 0, 0);
+        }
+        closure_0(element.toDataURL("image/png"));
+      };
+    }),
+);
 export const sampleAnimationId = function sampleAnimationId(BASIC, CUSTOM_CALL_SOUND_ANIMATION_RANGE) {
   if (null != CUSTOM_CALL_SOUND_ANIMATION_RANGE) {
     if (BASIC === VoiceChannelEffectAnimationType.PREMIUM) {
@@ -99,56 +104,56 @@ export const sampleAnimationId = function sampleAnimationId(BASIC, CUSTOM_CALL_S
 export const getEffectUrl = function getEffectUrl(emoji) {
   let tmp = arg1;
   if (arg1 === undefined) {
-    tmp = closure_4;
+    tmp = React4;
   }
   if (null != emoji.id) {
-    obj = { id: null, animated: null, size: null };
-    ({ id: obj5[0], animated } = emoji);
+    let obj = { id: null, animated: null, size: null };
+    ({ id: obj5.id, animated } = emoji);
     if (animated == null) {
       animated = false;
     }
-    obj[1] = animated;
-    obj[2] = tmp;
-    return getAvatarURLDefault.getEmojiURL(obj);
+    obj.animated = animated;
+    obj.size = tmp;
+    return AvatarUtilsDefault.getEmojiURL(obj);
   } else {
-    obj = parseRawEmojiObjectDefault;
+    obj = UnicodeEmojisDefault;
     const result = obj.convertSurrogateToName(emoji.name, false);
-    const byName = parseRawEmojiObjectDefault.getByName(result);
+    const byName = UnicodeEmojisDefault.getByName(result);
     let str = "";
     if (null != byName) {
-      str = getEmojiUnavailableReasonDefault.getURL(byName.surrogates);
-      const tmp2Result = getEmojiUnavailableReasonDefault;
+      str = EmojiUtilsDefault.getURL(byName.surrogates);
+      const tmp2Result = EmojiUtilsDefault;
     }
     return str;
   }
 };
-export const getEffectAnnouncement = function getEffectAnnouncement(closure_7) {
-  if (closure_7.length < 1) {
+export const getEffectAnnouncement = function getEffectAnnouncement(items) {
+  if (items.length < 1) {
     return "";
   } else {
     let emojiName = "userId";
     let yZYxzF = dependencyMap;
-    const mapped = importDefaultResult(closure_7).map((arg0) => {
-      let tmp = arg0[emojiName];
+    const mapped = apply(items).map((item) => {
+      let tmp = item[emojiName];
       if (tmp == null) {
         tmp = null;
       }
       return tmp;
     });
-    const found = mapped.filter((arg0) => null != arg0);
-    const arr = importDefaultResult(closure_7);
-    obj = found.uniq().value();
+    const found = mapped.filter((item) => null != item);
+    const arr = apply(items);
+    let obj = found.uniq().value();
     emojiName = "emojiName";
     const iter = found.uniq();
-    const mapped1 = importDefaultResult(closure_7).map((arg0) => {
-      let tmp = arg0[emojiName];
+    const mapped1 = apply(items).map((item) => {
+      let tmp = item[emojiName];
       if (tmp == null) {
         tmp = null;
       }
       return tmp;
     });
-    const found1 = mapped1.filter((arg0) => null != arg0);
-    const arr3 = importDefaultResult(closure_7);
+    const found1 = mapped1.filter((item) => null != item);
+    const arr3 = apply(items);
     const valueResult = found1.uniq().value();
     if (valueResult.length < 2) {
       let str2;
@@ -165,54 +170,48 @@ export const getEffectAnnouncement = function getEffectAnnouncement(closure_7) {
     if (obj.length < 1) {
       return "";
     } else if (1 === obj.length) {
-      const intl2 = emojiName(1114).intl;
-      yZYxzF = emojiName(1114).t.yZYxzF;
-      const user = authStore.getUser(obj[0]);
+      const intl2 = util.intl;
+      yZYxzF = util.t.yZYxzF;
+      const user = UserStore.getUser(obj[0]);
       let username;
       if (user != null) {
         username = user.username;
       }
-      obj = { firstUsername: null, emojiNames: null };
-      obj[0] = username;
-      obj[1] = joined;
+      obj = { firstUsername: username, emojiNames: joined };
       let formatToPlainStringResult = intl2.formatToPlainString(yZYxzF, obj);
     } else if (2 === obj.length) {
-      const intl = emojiName(1114).intl;
-      const user1 = authStore.getUser(obj[0]);
+      const intl = util.intl;
+      const user1 = UserStore.getUser(obj[0]);
       let username1;
       if (user1 != null) {
         username1 = user1.username;
       }
-      obj = { firstUsername: null, secondUsername: null, emojiNames: null };
-      obj[0] = username1;
-      const user2 = authStore.getUser(obj[1]);
+      obj = { firstUsername: username1, secondUsername: null, emojiNames: null };
+      const user2 = UserStore.getUser(obj[1]);
       let username2;
       if (user2 != null) {
         username2 = user2.username;
       }
-      obj[1] = username2;
-      obj[2] = joined;
-      formatToPlainStringResult = intl.formatToPlainString(emojiName(1114).t["8rmtbd"], obj);
-      const obj2 = authStore;
+      obj.secondUsername = username2;
+      obj.emojiNames = joined;
+      formatToPlainStringResult = intl.formatToPlainString(util.t["8rmtbd"], obj);
     } else {
-      const intl3 = emojiName(1114).intl;
-      const user3 = authStore.getUser(obj[0]);
+      const intl3 = util.intl;
+      const user3 = UserStore.getUser(obj[0]);
       let username3;
       if (user3 != null) {
         username3 = user3.username;
       }
-      obj = { firstUsername: null, secondUsername: null, count: null, emojiNames: null };
-      obj[0] = username3;
-      const user4 = authStore.getUser(obj[1]);
+      obj = { firstUsername: username3, secondUsername: null, count: null, emojiNames: null };
+      const user4 = UserStore.getUser(obj[1]);
       let username4;
       if (user4 != null) {
         username4 = user4.username;
       }
-      obj[1] = username4;
-      obj[2] = obj.length - 2;
-      obj[3] = joined;
-      formatToPlainStringResult = intl3.formatToPlainString(emojiName(1114).t["/okjv0"], obj);
-      const obj7 = authStore;
+      obj.secondUsername = username4;
+      obj.count = obj.length - 2;
+      obj.emojiNames = joined;
+      formatToPlainStringResult = intl3.formatToPlainString(util.t["/okjv0"], obj);
     }
     const iter2 = found1.uniq();
   }

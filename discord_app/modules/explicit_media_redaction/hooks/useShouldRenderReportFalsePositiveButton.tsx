@@ -1,21 +1,20 @@
 // discord_app/modules/explicit_media_redaction/hooks/useShouldRenderReportFalsePositiveButton.tsx
-import closure_2 from "../ExplicitMediaStore.tsx";
+import ExplicitMediaStore from "../ExplicitMediaStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/explicit_media_redaction/hooks/useShouldRenderReportFalsePositiveButton.tsx",
 );
 
 export const shouldRenderReportFalsePositiveButton = function shouldRenderReportFalsePositiveButton(id) {
-  return null != fpMessageInfo.getFpMessageInfo(id);
+  return null != ExplicitMediaStore.getFpMessageInfo(id);
 };
 export const useShouldRenderReportFalsePositiveButton = function useShouldRenderReportFalsePositiveButton(id) {
-  const _require = id;
-  const items = [closure_2];
+  _require = id;
+  const items = [ExplicitMediaStore];
   return (
     null !=
-    require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () =>
-      closure_1_2.getFpMessageInfo(closure_0),
-    )
+    require("useStateFromStores").useStateFromStores(items, () => ExplicitMediaStore.getFpMessageInfo(closure_0))
   );
 };

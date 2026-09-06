@@ -1,7 +1,7 @@
 // discord_app/modules/contact_sync/native/ContactSyncConstants.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/contact_sync/native/ContactSyncConstants.tsx");
+const result = size.fileFinishedImporting("modules/contact_sync/native/ContactSyncConstants.tsx");
 
 export const ContactSyncLandingPage = {
   DEFAULT: 0,

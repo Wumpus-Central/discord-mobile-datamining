@@ -1,38 +1,25 @@
 // discord_app/modules/user_settings/defs/native/NotifyFriendsOnProfileUpdateSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import explicitContentFromProto from "../../UserSettings.tsx";
-import messagesProxyDefault from "../../../notifications/profile_updates/sender/NotifyFriendsOnProfileUpdate.messages.js";
-import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
-import onNotifyFriendsOnProfileUpdateSettingsChanged from "../../../notifications/profile_updates/sender/NotifyFriendsOnProfileUpdateUtils.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import util from "../../../../intl/index.native.tsx";
+import UserSettings from "../../UserSettings.tsx";
+import _modDef2594 from "../../../notifications/profile_updates/sender/NotifyFriendsOnProfileUpdate.messages.js";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
+import NotifyFriendsOnProfileUpdateUtils from "../../../notifications/profile_updates/sender/NotifyFriendsOnProfileUpdateUtils.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const toggle = createToggle.createToggle({
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault.F3llsQ);
+    const intl = util.intl;
+    return intl.string(_modDef2594.F3llsQ);
   },
   useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault["6goWcz"]);
+    const intl = util.intl;
+    return intl.string(_modDef2594["6goWcz"]);
   },
-  parent: MobileUserSettings.MobileUserSettings.DATA_AND_PRIVACY,
-  useValue: explicitContentFromProto.NotifyFriendsOnProfileUpdate.useSetting,
-  onValueChange: onNotifyFriendsOnProfileUpdateSettingsChanged.onNotifyFriendsOnProfileUpdateSettingsChanged,
+  parent: SettingsConstants.MobileUserSettings.DATA_AND_PRIVACY,
+  useValue: UserSettings.NotifyFriendsOnProfileUpdate.useSetting,
+  onValueChange: NotifyFriendsOnProfileUpdateUtils.onNotifyFriendsOnProfileUpdateSettingsChanged,
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault.F3llsQ);
-  },
-  useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault["6goWcz"]);
-  },
-  parent: MobileUserSettings.MobileUserSettings.DATA_AND_PRIVACY,
-  useValue: explicitContentFromProto.NotifyFriendsOnProfileUpdate.useSetting,
-  onValueChange: onNotifyFriendsOnProfileUpdateSettingsChanged.onNotifyFriendsOnProfileUpdateSettingsChanged,
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/NotifyFriendsOnProfileUpdateSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/NotifyFriendsOnProfileUpdateSetting.tsx");
 
 export default toggle;

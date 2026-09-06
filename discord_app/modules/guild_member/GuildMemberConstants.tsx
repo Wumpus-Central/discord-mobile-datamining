@@ -1,7 +1,7 @@
 // discord_app/modules/guild_member/GuildMemberConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/guild_member/GuildMemberConstants.tsx");
+const result = size.fileFinishedImporting("modules/guild_member/GuildMemberConstants.tsx");
 
 export const GuildMemberFlags = {
   DID_REJOIN: 1,

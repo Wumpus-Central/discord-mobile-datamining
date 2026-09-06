@@ -1,17 +1,18 @@
 // discord_app/modules/voice_calls/VoicePermissionManager.tsx
-import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
-import closure_3 from "../stage_channels/StageChannelRoleStore.tsx";
-import closure_4 from "../../records/VoiceStateRecord.tsx";
-import closure_5 from "../../stores/AuthenticationStore.tsx";
-import closure_6 from "../../stores/ChannelStore.tsx";
-import closure_7 from "../../stores/MediaEngineStore.tsx";
-import closure_8 from "../../stores/RTCConnectionStore.tsx";
-import { InputModes } from "../../Constants.tsx";
-import { NativePermissionTypes } from "../native_permissions/NativePermissionConstants.tsx";
+import useAudienceRequestToSpeakState from "../stage_channels/useAudienceRequestToSpeakState.tsx";
+import NativePermissionUtilsDefault from "../native_permissions/NativePermissionUtils.tsx";
+import StageChannelRoleStore from "../stage_channels/StageChannelRoleStore.tsx";
+import VoiceStateRecord from "../../records/VoiceStateRecord.tsx";
+import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
+import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
+import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
+import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
-const require = arg1;
+require = fn;
+const InputModes = fn(1074).InputModes;
+const NativePermissionTypes = fn(4770).NativePermissionTypes;
 let c11 = null;
-initializeDefault;
 class VoicePermissionManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -30,8 +31,8 @@ prototype["handleVoiceChannelSelect"] = function handleVoiceChannelSelect(channe
 };
 prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates(voiceStates) {
   voiceStates = voiceStates.voiceStates;
-  const item = voiceStates.forEach((arg0) => {
-    ({ userId, channelId } = arg0);
+  const item = voiceStates.forEach((item) => {
+    ({ userId, channelId } = item);
     if (null != channelId) {
       if (id.getId() === userId) {
         if (null != rTCConnectionId.getRTCConnectionId()) {
@@ -46,38 +47,36 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates(voiceSta
               isSpeakerResult = speaker.isSpeaker(userId, channelId);
             }
             if (isSpeakerResult) {
-              const permission = callback2(5139).requestPermission(constants2.AUDIO);
-              permission.then((arg0) => {
-                if (arg0) {
-                  callback(table[9])(true);
+              const permission = NativePermissionUtilsDefault.requestPermission(constants2.AUDIO);
+              permission.then((result) => {
+                if (result) {
+                  closure_1_1(dependencyMap[9])(true);
                 }
               });
-              if (store.getMode() === constants.PUSH_TO_TALK) {
-                const permission1 = callback2(5139).requestPermission(constants2.INPUT_MONITORING);
-                const tmp19Result = callback2(5139);
+              if (MediaEngineStore.getMode() === constants.PUSH_TO_TALK) {
+                const permission1 = NativePermissionUtilsDefault.requestPermission(constants2.INPUT_MONITORING);
+                const tmp19Result = NativePermissionUtilsDefault;
               }
             } else {
-              const tmp8 = new closure_4(arg0);
-              const audienceRequestToSpeakState = callback(4707).getAudienceRequestToSpeakState(tmp8);
+              const tmp8 = new VoiceStateRecord(item);
+              const audienceRequestToSpeakState = useAudienceRequestToSpeakState.getAudienceRequestToSpeakState(tmp8);
               if (
                 audienceRequestToSpeakState ===
-                callback(4707).RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK
+                useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK
               ) {
-                const permission2 = callback2(5139).requestPermission(constants2.AUDIO);
-                permission2.then((arg0) => {
-                  if (arg0) {
-                    callback(table[9])(true);
+                const permission2 = NativePermissionUtilsDefault.requestPermission(constants2.AUDIO);
+                permission2.then((result) => {
+                  if (result) {
+                    closure_1_1(dependencyMap[9])(true);
                   }
                 });
-                if (store.getMode() === constants.PUSH_TO_TALK) {
+                if (MediaEngineStore.getMode() === constants.PUSH_TO_TALK) {
                   const permission3 = tmp13(5139).requestPermission(tmp14.INPUT_MONITORING);
                   const tmp13Result = tmp13(5139);
                 }
-                const obj2 = callback2(5139);
-                tmp13 = callback2;
+                tmp13 = importDefault;
                 tmp14 = constants2;
               }
-              const obj = callback(4707);
             }
           }
         }
@@ -86,18 +85,19 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates(voiceSta
   });
 };
 const voicePermissionManager = new VoicePermissionManager();
-const result = require("set").fileFinishedImporting("modules/voice_calls/VoicePermissionManager.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_calls/VoicePermissionManager.tsx");
 
 export default voicePermissionManager;
 export const shouldImmediatelyRequestVoicePermissions = function shouldImmediatelyRequestVoicePermissions(id, id2) {
-  channel = channel.getChannel(id2);
+  const channel = ChannelStore.getChannel(id2);
   let isListenModeCapableResult;
   if (channel != null) {
     isListenModeCapableResult = channel.isListenModeCapable();
   }
   let isSpeakerResult = !isListenModeCapableResult;
   if (isListenModeCapableResult) {
-    isSpeakerResult = speaker.isSpeaker(id, id2);
+    isSpeakerResult = StageChannelRoleStore.isSpeaker(id, id2);
   }
   return isSpeakerResult;
 };

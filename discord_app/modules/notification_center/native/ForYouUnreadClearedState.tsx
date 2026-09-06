@@ -1,63 +1,63 @@
 // discord_app/modules/notification_center/native/ForYouUnreadClearedState.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import Button from "../../../design/void/native.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
-import registerAssetDefault from "../../../../_runtime/10652_registerAsset.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
+import native from "../../../design/void/native.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import _modDef10652 from "../../../../_runtime/metro/10652__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = {
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+fn(4560);
+let createStyles = {
   container: { marginBottom: 4, marginHorizontal: 24, alignItems: "center", flexDirection: "row" },
   imageContainer: null,
   icon: null,
   headerText: null,
 };
-createCacheKey = {
+let size = {
   width: 48,
   height: 48,
-  backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_400,
+  backgroundColor: nativeDefault.unsafe_rawColors.GREEN_400,
   opacity: 0.16,
-  borderRadius: ThemesDefault.radii.xl,
+  borderRadius: nativeDefault.radii.xl,
   marginRight: 16,
   justifyContent: "center",
   alignItems: "center",
 };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { margin: 12, position: "absolute", color: ThemesDefault.unsafe_rawColors.GREEN_400 };
-createCacheKey[3] = { marginBottom: 2 };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { margin: 12, position: "absolute", color: ThemesDefault.unsafe_rawColors.GREEN_400 };
-const result = require("set").fileFinishedImporting("modules/notification_center/native/ForYouUnreadClearedState.tsx");
+createStyles.imageContainer = size;
+createStyles = { margin: 12, position: "absolute", color: nativeDefault.unsafe_rawColors.GREEN_400 };
+createStyles.icon = createStyles;
+createStyles.headerText = { marginBottom: 2 };
+let closure_6 = createStyles.createStyles(createStyles);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/notification_center/native/ForYouUnreadClearedState.tsx");
 
 export const ForYouUnreadClearedState = function ForYouUnreadClearedState() {
-  const tmp = callback3();
+  const tmp = closure_6();
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.imageContainer };
-  const items = [callback(View, obj), ,];
-  obj = { source: registerAssetDefault, style: tmp.icon, color: tmp.icon.color };
-  items[1] = callback(Button.Icon, obj);
-  obj1 = { children: null };
+  const items = [React4(View, obj), ,];
+  obj = { source: _modDef10652, style: tmp.icon, color: tmp.icon.color };
+  items[1] = React4(native.Icon, obj);
+  const obj1 = { children: null };
   const obj2 = {
     color: "mobile-text-heading-primary",
     variant: "text-md/semibold",
     style: tmp.headerText,
     children: null,
   };
-  const intl = getSystemLocale.intl;
-  obj2[3] = intl.string(getSystemLocale.t.DonStq);
-  const items1 = [callback(Text.Text, obj2)];
+  const intl = util.intl;
+  obj2.children = intl.string(util.t.DonStq);
+  const items1 = [React4(Text_Text.Text, obj2)];
   const obj3 = { color: "text-default", variant: "text-md/medium", children: null };
-  const intl2 = getSystemLocale.intl;
-  obj3[2] = intl2.string(getSystemLocale.t.jXFsai);
-  items1[1] = callback(Text.Text, obj3);
-  obj1[0] = items1;
-  items[2] = callback2(View, obj1);
-  obj[1] = items;
-  return callback2(View, obj);
+  const intl2 = util.intl;
+  obj3.children = intl2.string(util.t.jXFsai);
+  items1[1] = React4(Text_Text.Text, obj3);
+  obj1.children = items1;
+  items[2] = hasOwnProperty(View, obj1);
+  obj.children = items;
+  return hasOwnProperty(View, obj);
 };

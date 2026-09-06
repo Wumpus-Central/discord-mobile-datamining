@@ -1,18 +1,20 @@
 // discord_app/modules/qualtrics/QualtricsResponseStore.tsx
-import set2 from "../../../_runtime/00002_set.js";
-import keys from "../../../_runtime/00560_keys.js";
+import 00560__ from "../../../_runtime/metro/00560__.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-let obj = keys.create((arg0, arg1) => {
+const result = size.fileFinishedImporting("modules/qualtrics/QualtricsResponseStore.tsx");
+
+export const useQualtricsResponseStore = module_560.create((arg0, arg1) => {
   closure_0 = arg0;
   closure_1 = arg1;
   return {
     responses: {},
     displayedQuestions: {},
     setResponse(arg0, arg1, arg2) {
-      const callback = arg0;
+      closure_0 = arg0;
       closure_1 = arg1;
       closure_2 = arg2;
-      callback((responses) => {
+      closure_0((responses) => {
         let obj = { responses: null };
         obj = {};
         const merged = Object.assign(responses.responses);
@@ -20,20 +22,20 @@ let obj = keys.create((arg0, arg1) => {
         const merged1 = Object.assign(responses.responses[closure_0]);
         obj[closure_1] = closure_2;
         obj[closure_0] = obj;
-        obj[0] = obj;
+        obj.responses = obj;
         return obj;
       });
     },
     getSurveyResponses(arg0) {
-      let obj = callback2().responses[arg0];
+      let obj = closure_1().responses[arg0];
       if (obj == null) {
         obj = {};
       }
       return obj;
     },
     clearSurveyResponses(arg0) {
-      const callback = arg0;
-      callback((responses) => {
+      closure_0 = arg0;
+      closure_0((responses) => {
         responses = {};
         const merged = Object.assign(responses.responses);
         delete tmp3[tmp];
@@ -44,26 +46,26 @@ let obj = keys.create((arg0, arg1) => {
       });
     },
     trackDisplayedQuestions(arg0, arg1) {
-      const callback = arg0;
+      closure_0 = arg0;
       closure_1 = arg1;
-      callback((displayedQuestions) => {
-        let set = displayedQuestions.displayedQuestions[set1];
+      closure_0((displayedQuestions) => {
+        let set = displayedQuestions.displayedQuestions[closure_0];
         if (set == null) {
           const _Set = Set;
           set = new Set();
         }
-        set1 = new Set(set);
-        const item = closure_1.forEach((arg0) => set1.add(arg0));
+        const set1 = new Set(set);
+        const item = closure_1.forEach((item) => set1.add(item));
         let obj = { displayedQuestions: null };
         obj = {};
         const merged = Object.assign(displayedQuestions.displayedQuestions);
-        obj[set1] = set1;
-        obj[0] = obj;
+        obj[closure_0] = set1;
+        obj.displayedQuestions = obj;
         return obj;
       });
     },
-    getDisplayedQuestions(closure_0) {
-      const tmp = callback2().displayedQuestions[closure_0];
+    getDisplayedQuestions(arg0) {
+      const tmp = closure_1().displayedQuestions[arg0];
       if (null != tmp) {
         const _Array = Array;
         let items = Array.from(tmp);
@@ -71,9 +73,6 @@ let obj = keys.create((arg0, arg1) => {
         items = [];
       }
       return items;
-    },
+    }
   };
 });
-const result = set2.fileFinishedImporting("modules/qualtrics/QualtricsResponseStore.tsx");
-
-export const useQualtricsResponseStore = obj;

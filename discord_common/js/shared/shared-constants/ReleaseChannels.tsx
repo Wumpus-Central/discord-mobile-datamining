@@ -1,16 +1,21 @@
 // discord_common/js/shared/shared-constants/ReleaseChannels.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const obj = { WEB_AND_IOS: null, ANDROID: null, QUEST_VR: null, OTHER: null, ALL: null };
-let set = new Set(["canary", "ptb", "stable"]);
-obj[0] = set;
-obj[1] = new Set(["betaRelease", "canaryRelease", "googleRelease"]);
+const obj = {
+  WEB_AND_IOS: new Set(["canary", "ptb", "stable"]),
+  ANDROID: null,
+  QUEST_VR: null,
+  OTHER: null,
+  ALL: null,
+};
+const set = new Set(["canary", "ptb", "stable"]);
+obj.ANDROID = new Set(["betaRelease", "canaryRelease", "googleRelease"]);
 const set1 = new Set(["betaRelease", "canaryRelease", "googleRelease"]);
-obj[2] = new Set(["questBetaRelease", "questCanaryRelease", "questProductionRelease"]);
+obj.QUEST_VR = new Set(["questBetaRelease", "questCanaryRelease", "questProductionRelease"]);
 const set2 = new Set(["questBetaRelease", "questCanaryRelease", "questProductionRelease"]);
-obj[3] = new Set(["N/A", "adhoc", "development", "staging"]);
+obj.OTHER = new Set(["N/A", "adhoc", "development", "staging"]);
 const set3 = new Set(["N/A", "adhoc", "development", "staging"]);
-obj[4] = new Set([
+obj.ALL = new Set([
   "N/A",
   "adhoc",
   "betaRelease",
@@ -25,7 +30,7 @@ obj[4] = new Set([
   "stable",
   "staging",
 ]);
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/ReleaseChannels.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ReleaseChannels.tsx");
 
 export const ReleaseChannels = {
   CANARY_RELEASE: "canaryRelease",

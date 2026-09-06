@@ -1,18 +1,18 @@
 // discord_common/js/packages/design/components/ManaContext/ManaContext.native.tsx
-import importAllResult from "../../../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-let c0 = importAllResult;
+const jsx = fn(21).jsx;
 const obj = {};
-const context = importAllResult.createContext(obj);
-const result = require("set").fileFinishedImporting(
+const context = noop.createContext(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "../discord_common/js/packages/design/components/ManaContext/ManaContext.native.tsx",
 );
 
 export const ManaContext = context;
-export const useManaContext = () => importAllResult.useContext(context);
+export const useManaContext = () => noop.useContext(context);
 export const ManaContextProvider = function ManaContextProvider(children) {
-  let value = children.value;
+  value = children.value;
   if (value == null) {
     value = obj;
   }

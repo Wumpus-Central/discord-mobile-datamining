@@ -1,21 +1,23 @@
 // discord_app/modules/collectibles/profile_frames/native/tooling/FramePreviewOverrideStore.tsx
-import timestampDefault from "../../../../debug/Logger.tsx";
-import closure_3 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
-import { Image } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import OVERRIDE_DIR from "FrameOverrideConstants.tsx";
-import keys from "../../../../../../_runtime/00560_keys.js";
+import LoggerDefault from "../../../../debug/Logger.tsx";
+import NativeFileModuleDefault from "../../../../../../discord_common/js/packages/rtn-codegen/js/NativeFileModule.tsx";
+import FileManagerUtils from "../../../../../utils/FileManagerUtils.android.tsx";
+import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 
-const require = arg1;
+require = fn;
 function measure(arg0) {
   closure_0 = arg0;
   return new Promise((arg0, arg1) => {
     closure_0 = arg0;
     closure_1 = arg1;
-    const size = closure_1_4.getSize(
+    let size = Image.getSize(
       closure_0,
-      (width, height) => callback({ width, height }),
+      (width, height) => {
+        const size = { width, height };
+        return closure_0(size);
+      },
       (arg0) => {
-        error = arg0;
+        let error = arg0;
         if (!(arg0 instanceof Error)) {
           const _Error = Error;
           const _String = String;
@@ -26,332 +28,218 @@ function measure(arg0) {
     );
   });
 }
-function _readManifest() {
-  const self = this;
-  const tmp = callback(function* () {
-    closure_0 = tmp2;
-    const _HermesInternal = HermesInternal;
-    closure_0 = yield closure_1_0(table[4]).readFile("documents", "" + closure_1_6 + "/" + closure_1_5, "utf8");
-    let parsed = null;
-    if (null != closure_0) {
-      const _JSON = JSON;
-      parsed = JSON.parse(closure_0);
-    }
-    return parsed;
-  });
-  closure_10 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+let closure_10 = async function _readManifest() {
+  closure_0 = tmp2;
+  const _HermesInternal = HermesInternal;
+  closure_128_0 = await FileManagerUtils.readFile("documents", "" + closure_2_6 + "/" + closure_2_5, "utf8");
+  let parsed = null;
+  if (null != closure_128_0) {
+    const _JSON = JSON;
+    parsed = JSON.parse(closure_128_0);
   }
-  return applyArgumentsResult;
-}
-function _buildOverride() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c7 = 0;
-    c8 = 0;
-    c6 = 0;
-    return (function* (arg0) {
-      if (c8 === 2) {
-        c8 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+  return parsed;
+};
+let closure_11 = async function _buildOverride(arg0) {
+  let layers = arg0;
+  c7 = 0;
+  c8 = 0;
+  c6 = 0;
+  return (async (arg0, value) => {
+    if (c8 === 2) {
+      c8 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        while (true) {
-          let num = 2;
-          c8 = 2;
-          if (0 === filename) {
-            if (arg0 === 1) {
-              let num7 = 3;
-              c8 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              let num6 = 3;
-              c8 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let arr = sorted;
-              closure_3 = tmp2;
-              closure_1 = undefined;
-              let layers;
-              closure_3 = undefined;
-              arr = undefined;
-              c5 = undefined;
-              let folder;
-              filename = undefined;
-              c8 = undefined;
-              let parsed;
-              let errorType;
-              let str2;
-              closure_12 = undefined;
-              closure_13 = undefined;
-              closure_14 = undefined;
-              let obj6;
-              let styles;
-              closure_17 = undefined;
-              let _Array = Array;
-              let tmp76 = lib;
-              if (Array.isArray(lib.layers)) {
-                let tmp22 = closure_1_1;
-                let tmp23 = closure_1_2;
-                let obj2 = closure_1_1(closure_1_2[5]);
-                let tmp24 = c6;
-                let _HermesInternal = HermesInternal;
-                closure_1 = "file://" + obj2.getConstants().DocumentsDirPath + "/" + c6;
-                layers = [];
-                closure_3 = {};
-                arr = [];
-                layers = tmp76.layers;
-                let tmp25 = layers;
-                closure_1 = layers[Symbol.iterator]();
-              } else {
-                let _Error = Error;
-                let tmp18 = new.target;
-                let tmp19 = new.target;
-                let str = "Malformed manifest (no layers). Re-push the frame.";
-                error = new Error("Malformed manifest (no layers). Re-push the frame.");
-                let tmp21 = error;
-                throw error;
-              }
-            }
-          } else if (1 === tmp5) {
-            let tmp15 = c5;
-            let tmp16 = c5;
-            folder = 0;
-            let tmp17 = closure_1;
-            closure_1.return();
-            throw c5;
-          } else if (arg0 === 1) {
-            let num4 = 3;
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      while (true) {
+        c8 = 2;
+        if (0 === c7) {
+          if (arg0 === 1) {
             c8 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
-            folder = 0;
-            let tmp14 = closure_1;
-            closure_1.return();
-            let num3 = 3;
             c8 = 3;
-            obj1 = { value: null, done: true };
-            obj1[0] = arg1;
-            return obj1;
+            obj = { value, done: true };
+            return obj;
           } else {
-            let tmp66 = closure_3;
-            styles = arg1;
-            let tmp67 = layers;
-            obj2 = { layer: null, order: null, index: null };
-            let tmp68 = obj6;
-            obj2[0] = obj6;
-            let tmp69 = closure_12;
-            obj2[1] = closure_12;
-            let tmp70 = parsed;
-            obj2[2] = parsed.index;
-            arr = layers.push(obj2);
-            let obj3 = { uri: null, ratio: null };
-            let tmp74 = closure_14;
-            obj3[0] = closure_14;
-            let tmp75 = styles;
-            let num2 = 0;
-            let tmp72 = closure_3;
-            let tmp73 = closure_13;
-            if (styles.width > 0) {
-              let tmp6 = closure_3;
-              let tmp7 = styles;
-              let tmp8 = styles;
-              num2 = styles.height / styles.width;
+            closure_4 = tmp;
+            closure_3 = tmp2;
+            closure_131_0 = layers;
+            closure_131_1 = undefined;
+            closure_131_2 = undefined;
+            closure_131_3 = undefined;
+            closure_131_4 = undefined;
+            closure_131_5 = undefined;
+            let folder;
+            let filename;
+            closure_131_8 = undefined;
+            let parsed;
+            let errorType;
+            closure_131_11 = undefined;
+            closure_131_12 = undefined;
+            closure_131_13 = undefined;
+            closure_131_14 = undefined;
+            closure_131_15 = undefined;
+            closure_131_16 = undefined;
+            closure_131_17 = undefined;
+            let _Array = Array;
+            let tmp75 = layers;
+            if (Array.isArray(layers.layers)) {
+              let obj2 = NativeFileModuleDefault;
+              let _HermesInternal = HermesInternal;
+              closure_131_1 = "file://" + obj2.getConstants().DocumentsDirPath + "/" + closure_2_6;
+              closure_131_2 = [];
+              closure_131_3 = {};
+              closure_131_4 = [];
+              layers = tmp75.layers;
+              closure_1 = layers[Symbol.iterator]();
+            } else {
+              let _Error = Error;
+              let tmp18 = new.target;
+              let tmp19 = new.target;
+              let str = "Malformed manifest (no layers). Re-push the frame.";
+              let error = new Error("Malformed manifest (no layers). Re-push the frame.");
+              throw error;
             }
-            let tmp9 = closure_3;
-            obj3[1] = num2;
-            tmp72[tmp73] = obj3;
-            let tmp10 = arr;
-            obj = { layer: null, dims: null };
-            let tmp11 = obj6;
-            obj[0] = obj6;
-            let tmp12 = styles;
-            obj[1] = styles;
-            arr = arr.push(obj);
-            folder = 0;
           }
-          let tmp26 = layers;
-          let tmp27 = closure_1;
-          if (closure_1 === undefined) {
-            let tmp44 = closure_3;
-            let tmp45 = layers;
-            if (0 === layers.length) {
-              let _Error3 = Error;
-              let tmp56 = new.target;
-              let tmp57 = new.target;
-              let str6 = "Frame has no valid layers.";
-              let error1 = new Error("Frame has no valid layers.");
-              let tmp59 = error1;
-              throw error1;
-            } else {
-              sorted = closure_3;
-              sorted = arr;
-              sorted = layers;
-              sorted = lib;
-              sorted = layers;
-              sorted = layers.sort(lib(layers[6]).compareLayerFiles);
-              sorted = lib;
-              sorted = layers;
-              let obj12 = lib(layers[7]);
-              sorted = arr;
-              closure_17 = obj12.computeProfileFrameDimensions(arr);
-              let obj4 = { frameKey: null, previewUri: null, layers: null, layerAssetById: null };
-              sorted = lib;
-              obj4[0] = lib.frameKey;
-              sorted = lib;
-              let combined = null;
-              if (null != lib.preview) {
-                let tmp46 = closure_3;
-                let tmp47 = closure_1;
-                let tmp48 = lib;
-                let _HermesInternal3 = HermesInternal;
-                combined = "" + closure_1 + "/" + lib.preview;
-              }
-              let tmp50 = closure_3;
-              obj4[1] = combined;
-              let tmp51 = layers;
-              obj4[2] = layers.map((layer) => layer.layer);
-              let tmp52 = closure_3;
-              obj4[3] = closure_3;
-              let tmp53 = closure_17;
-              let tmp54 = obj4;
-              let merged = Object.assign(closure_17);
-              let num5 = 3;
-              c8 = 3;
-              let obj5 = { value: null, done: true };
-              obj5[0] = obj4;
-              return obj5;
-            }
+        } else if (1 === tmp5) {
+          c6 = 0;
+          closure_1.return();
+          throw closure_1_5;
+        } else if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 0;
+          closure_1.return();
+          c8 = 3;
+          let obj1 = { value, done: true };
+          return obj1;
+        } else {
+          closure_131_16 = value;
+          obj2 = { layer: null, order: null, index: null };
+          obj2.layer = closure_131_15;
+          obj2.order = closure_131_12;
+          obj2.index = parsed.index;
+          let arr = closure_131_2.push(obj2);
+          let obj3 = { uri: null, ratio: null };
+          obj3.uri = closure_131_14;
+          let num2 = 0;
+          let tmp71 = closure_131_3;
+          let tmp72 = closure_131_13;
+          if (closure_131_16.width > 0) {
+            num2 = closure_131_16.height / closure_131_16.width;
+          }
+          obj3.ratio = num2;
+          tmp71[tmp72] = obj3;
+          obj = { layer: null, dims: null };
+          obj.layer = closure_131_15;
+          obj.dims = closure_131_16;
+          arr = closure_131_4.push(obj);
+          c6 = 0;
+        }
+        if (closure_1 === undefined) {
+          if (0 === closure_131_2.length) {
+            let _Error3 = Error;
+            let tmp56 = new.target;
+            let tmp57 = new.target;
+            let str6 = "Frame has no valid layers.";
+            let error1 = new Error("Frame has no valid layers.");
+            throw error1;
           } else {
-            let tmp77 = closure_3;
-            let tmp78 = arr;
-            folder = 1;
-            c5 = tmp28;
-            let tmp79 = c5;
-            folder = c5.folder;
-            let tmp80 = c5;
-            filename = c5.filename;
-            let tmp81 = lib;
-            let tmp82 = layers;
-            let obj10 = lib(layers[6]);
-            let tmp83 = filename;
-            c8 = obj10.parseLayerFilename(filename);
-            let tmp84 = c8;
-            parsed = c8.parsed;
-            let tmp85 = c8;
-            errorType = c8.errorType;
-            let tmp86 = parsed;
-            if (null == parsed) {
-              let tmp29 = closure_3;
-              let tmp30 = errorType;
-              str2 = "invalid";
-              if (null != errorType) {
-                let tmp31 = closure_3;
-                let tmp32 = arr;
-                let tmp33 = lib;
-                let tmp34 = layers;
-                let tmp35 = errorType;
-                str2 = lib(layers[6]).PARSE_ERROR_LABELS[errorType];
-              }
-              let tmp36 = closure_3;
-              let _Error2 = Error;
-              let tmp37 = folder;
-              let tmp38 = filename;
-              let tmp39 = str2;
-              let _HermesInternal2 = HermesInternal;
-              let str3 = 'Bad layer file "';
-              let str4 = "/";
-              let str5 = '": ';
-              let tmp40 = new.target;
-              let tmp41 = new.target;
-              let error2 = new Error('Bad layer file "' + folder + "/" + filename + '": ' + str2);
-              let tmp43 = error2;
-              throw error2;
-            } else {
-              let tmp87 = closure_3;
-              let tmp88 = arr;
-              let tmp89 = lib;
-              let tmp90 = layers;
-              let tmp91 = folder;
-              closure_12 = lib(layers[6]).FOLDER_ORDER_MAP[folder];
-              let tmp92 = closure_12;
-              let tmp93 = parsed;
-              let _HermesInternal4 = HermesInternal;
-              closure_13 = "override-" + closure_12 + "-" + parsed.index;
-              let tmp94 = closure_1;
-              let tmp95 = folder;
-              let tmp96 = filename;
-              let _HermesInternal5 = HermesInternal;
-              let str18 = "";
-              let str19 = "/";
-              let str20 = "/";
-              closure_14 = "" + closure_1 + "/" + folder + "/" + filename;
-              obj6 = { id: null, type: null, order: null, anchor: null, responsive: null };
-              let tmp97 = closure_13;
-              obj6[0] = closure_13;
-              let tmp98 = parsed;
-              obj6[1] = parsed.type;
-              let tmp99 = closure_12;
-              obj6[2] = closure_12;
-              sorted = parsed;
-              obj6[3] = parsed.anchor;
-              sorted = parsed;
-              obj6[4] = parsed.responsive;
-              sorted = parsed;
-              sorted = closure_14;
-              filename = 2;
-              let num13 = 1;
-              c8 = 1;
-              let obj7 = { value: null, done: false };
-              obj7[0] = parsed(closure_14);
-              return obj7;
+            let sorted = closure_131_2.sort(closure_132_0(closure_132_2[6]).compareLayerFiles);
+            let obj12 = closure_132_0(closure_132_2[7]);
+            closure_131_17 = obj12.computeProfileFrameDimensions(closure_131_4);
+            let obj4 = { frameKey: null, previewUri: null, layers: null, layerAssetById: null };
+            obj4.frameKey = closure_131_0.frameKey;
+            let combined = null;
+            if (null != closure_131_0.preview) {
+              let _HermesInternal3 = HermesInternal;
+              combined = "" + closure_131_1 + "/" + closure_131_0.preview;
             }
+            obj4.previewUri = combined;
+            obj4.layers = closure_131_2.map((layer) => layer.layer);
+            obj4.layerAssetById = closure_131_3;
+            let merged = Object.assign(closure_131_17);
+            c8 = 3;
+            let obj5 = { value: obj4, done: true };
+            return obj5;
+          }
+        } else {
+          c6 = 1;
+          closure_131_5 = tmp28;
+          folder = closure_131_5.folder;
+          filename = closure_131_5.filename;
+          let obj10 = closure_132_0(closure_132_2[6]);
+          closure_131_8 = obj10.parseLayerFilename(filename);
+          parsed = closure_131_8.parsed;
+          errorType = closure_131_8.errorType;
+          if (null == parsed) {
+            let str2 = "invalid";
+            if (null != errorType) {
+              str2 = closure_132_0(closure_132_2[6]).PARSE_ERROR_LABELS[errorType];
+            }
+            closure_131_11 = str2;
+            let _Error2 = Error;
+            let _HermesInternal2 = HermesInternal;
+            let str3 = 'Bad layer file "';
+            let str4 = "/";
+            let str5 = '": ';
+            let tmp40 = new.target;
+            let tmp41 = new.target;
+            let error2 = new Error('Bad layer file "' + folder + "/" + filename + '": ' + closure_131_11);
+            throw error2;
+          } else {
+            closure_131_12 = closure_132_0(closure_132_2[6]).FOLDER_ORDER_MAP[folder];
+            let _HermesInternal4 = HermesInternal;
+            closure_131_13 = "override-" + closure_131_12 + "-" + parsed.index;
+            let _HermesInternal5 = HermesInternal;
+            let str18 = "";
+            let str19 = "/";
+            let str20 = "/";
+            closure_131_14 = "" + closure_131_1 + "/" + folder + "/" + filename;
+            let obj6 = { id: null, type: null, order: null, anchor: null, responsive: null };
+            obj6.id = closure_131_13;
+            obj6.type = parsed.type;
+            obj6.order = closure_131_12;
+            obj6.anchor = parsed.anchor;
+            obj6.responsive = parsed.responsive;
+            closure_131_15 = obj6;
+            c7 = 2;
+            c8 = 1;
+            let obj7 = { value: closure_132_9(closure_131_14), done: false };
+            return obj7;
           }
         }
       }
-    })();
-  });
-  closure_11 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-({ MANIFEST_NAME: c5, OVERRIDE_DIR: closure_6 } = OVERRIDE_DIR);
-let closure_7 = new timestampDefault("FramePreviewOverrideStore");
-let c8 = 0;
-keys = keys.create((arg0) => {
+    }
+  })();
+};
+const Image = fn(17).Image;
+const FrameOverrideConstants = fn(8204);
+({ MANIFEST_NAME: hasOwnProperty, OVERRIDE_DIR: metroRequire } = FrameOverrideConstants);
+let closure_7 = new LoggerDefault("FramePreviewOverrideStore");
+let closure_8 = 0;
+let module_560 = fn(560);
+module_560 = module_560.create((arg0) => {
   closure_0 = arg0;
   let obj = { override: null, status: "idle", error: null, loadFromDevice: null, clear: null };
-  closure_1 = callback(function* () {
+  closure_1 = asyncGeneratorStep(async (arg0, value) => {
     if (c5 === 2) {
       c5 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp7 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
@@ -362,118 +250,115 @@ keys = keys.create((arg0) => {
         if (0 === c4) {
           if (arg0 === 1) {
             c5 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
-            let isStale = tmp3;
-            let callback = tmp5;
-            closure_2 = undefined;
-            c3 = undefined;
-            c4 = undefined;
-            isStale = function isStale() {
-              return closure_0 !== closure_1_8;
+            closure_1 = tmp3;
+            closure_128_2 = undefined;
+            closure_128_3 = undefined;
+            closure_128_4 = undefined;
+            closure_128_1 = function isStale() {
+              return closure_1_0 !== sum;
             };
             sum = sum + 1;
-            callback = sum;
-            closure_1_0({ status: "loading", error: null });
+            closure_128_0 = sum;
+            tmp5({ status: "loading", error: null });
             c3 = 1;
             c4 = 2;
             c5 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = (function readManifest() {
-              const self = this;
-              const apply = closure_10.apply;
-              if (typeof apply === "unknown") {
-                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-              } else {
-                applyArgumentsResult = apply(self, arguments);
-              }
-              return applyArgumentsResult;
-            })();
-            return obj1;
-          }
-        } else if (1 === tmp8) {
-          c3 = 0;
-          let message = closure_2;
-          if (closure_1_1()) {
-            c5 = 3;
-            return { value: "HermesInternal", done: null };
-          } else {
-            const _Error = Error;
-            if (message instanceof Error) {
-              message = message.message;
-            } else {
-              const _String = String;
-              message = String(message);
-            }
-            c4 = message;
-            closure_1_7.error("Failed to load frame override", c5);
-            const obj2 = { status: "error", error: null };
-            obj2[1] = c4;
-            closure_1_0(obj2);
-          }
-        } else if (2 === tmp8) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 0;
-            c5 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
-          } else {
-            closure_2 = arg1;
-            if (isStale()) {
-              c3 = 0;
-              c5 = 3;
-              return { value: "HermesInternal", done: null };
-            } else if (null == closure_2) {
-              closure_1_0({
-                status: "error",
-                error: "No frame on device. Ask Cap to push one (or run pushFrameOverride.mjs).",
-              });
-              c3 = 0;
-              c5 = 3;
-              const obj4 = { value: null, done: true };
-              obj4[0] = undefined;
-              return obj4;
-            } else {
-              c4 = 3;
-              c5 = 1;
-              const obj5 = { value: null, done: false };
-              obj5[0] = (function buildOverride(closure_2) {
+            const obj1 = {
+              value: (function readManifest() {
                 const self = this;
-                const apply = closure_11.apply;
+                const apply = closure_1_10.apply;
                 if (typeof apply === "unknown") {
                   let applyArgumentsResult = HermesBuiltin.applyArguments(self);
                 } else {
                   applyArgumentsResult = apply(self, arguments);
                 }
                 return applyArgumentsResult;
-              })(closure_2);
+              })(),
+              done: false,
+            };
+            return obj1;
+          }
+        } else if (1 === tmp8) {
+          c3 = 0;
+          closure_128_5 = closure_2;
+          if (closure_128_1()) {
+            c5 = 3;
+            return { value: "HermesInternal", done: null };
+          } else {
+            const _Error = Error;
+            if (closure_128_5 instanceof Error) {
+              let message = closure_128_5.message;
+            } else {
+              const _String = String;
+              message = String(closure_128_5);
+            }
+            closure_128_4 = message;
+            logger.error("Failed to load frame override", closure_128_5);
+            const obj2 = { status: "error", error: closure_128_4 };
+            closure_129_0(obj2);
+          }
+        } else if (2 === tmp8) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 0;
+            c5 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            closure_128_2 = value;
+            if (closure_128_1()) {
+              c3 = 0;
+              c5 = 3;
+              return { value: "HermesInternal", done: null };
+            } else if (null == closure_128_2) {
+              closure_129_0({
+                status: "error",
+                error: "No frame on device. Ask Cap to push one (or run pushFrameOverride.mjs).",
+              });
+              c3 = 0;
+              c5 = 3;
+              const obj4 = { value: undefined, done: true };
+              return obj4;
+            } else {
+              c4 = 3;
+              c5 = 1;
+              const obj5 = {
+                value: (function buildOverride() {
+                  const self = this;
+                  const apply = closure_1_11.apply;
+                  if (typeof apply === "unknown") {
+                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                  } else {
+                    applyArgumentsResult = apply(self, arguments);
+                  }
+                  return applyArgumentsResult;
+                })(closure_128_2),
+                done: false,
+              };
               return obj5;
             }
           }
         } else if (arg0 === 1) {
           c5 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c3 = 0;
           c5 = 3;
-          const obj6 = { value: null, done: true };
-          obj6[0] = arg1;
+          const obj6 = { value, done: true };
           return obj6;
         } else {
-          c3 = arg1;
-          if (!isStale()) {
-            obj = { override: null, status: "idle", error: null };
-            obj[0] = c3;
-            callback(obj);
+          closure_128_3 = value;
+          if (!closure_128_1()) {
+            obj = { override: closure_128_3, status: "idle", error: null };
+            closure_129_0(obj);
             c3 = 0;
             c5 = 3;
           }
@@ -492,7 +377,7 @@ keys = keys.create((arg0) => {
       }
     }
   });
-  obj[3] = function () {
+  obj.loadFromDevice = function () {
     const self = this;
     const apply = closure_1.apply;
     if (typeof apply === "unknown") {
@@ -502,15 +387,15 @@ keys = keys.create((arg0) => {
     }
     return applyArgumentsResult;
   };
-  obj[4] = function clear() {
+  obj.clear = function clear() {
     closure_8 = closure_8 + 1;
-    callback({ override: null, status: "idle", error: null });
+    closure_0({ override: null, status: "idle", error: null });
   };
   return obj;
 });
-const tmp3 = new timestampDefault("FramePreviewOverrideStore");
-const result = require("set").fileFinishedImporting(
+let size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/collectibles/profile_frames/native/tooling/FramePreviewOverrideStore.tsx",
 );
 
-export const useFramePreviewOverrideStore = keys;
+export const useFramePreviewOverrideStore = module_560;

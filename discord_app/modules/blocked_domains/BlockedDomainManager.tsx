@@ -1,20 +1,20 @@
 // discord_app/modules/blocked_domains/BlockedDomainManager.tsx
-import isBlockedDomain from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
-import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import js_shim_shim from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
+import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
-require = arg1;
-initializeDefault;
+require = fn;
 class BlockedDomainManager extends tmp2 {}
 BlockedDomainManager.prototype["_initialize"] = function _initialize() {
   if (obj.isLibdiscoreInitialized()) {
     const _window = window;
     const _HermesInternal = HermesInternal;
     const combined = "https:" + window.GLOBAL_ENV.WEBAPP_ENDPOINT + "/bad-hash-delta";
-    const result = isBlockedDomain.startFetchingBlockedDomains(combined);
-    const tmpResult = isBlockedDomain;
+    const result = js_shim_shim.startFetchingBlockedDomains(combined);
+    const tmpResult = js_shim_shim;
   }
 };
 const blockedDomainManager = new BlockedDomainManager();
-let result = require("set").fileFinishedImporting("modules/blocked_domains/BlockedDomainManager.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/blocked_domains/BlockedDomainManager.tsx");
 
 export default blockedDomainManager;

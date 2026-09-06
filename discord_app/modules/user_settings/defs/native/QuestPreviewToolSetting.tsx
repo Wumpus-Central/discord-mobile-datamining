@@ -1,31 +1,28 @@
 // discord_app/modules/user_settings/defs/native/QuestPreviewToolSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import ME from "../../../../Constants.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import useQuests from "../../../quests/hooks/QuestHooks.tsx";
+import Constants from "../../../../Constants.tsx";
+import util from "../../../../intl/index.native.tsx";
+import hooks_QuestHooks from "../../../quests/hooks/QuestHooks.tsx";
 import QuestsIcon from "../../../../design/components/Icon/native/redesign/generated/QuestsIcon.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
-import { SettingsQuestPreviewScreen } from "../../quests/native/SettingsQuestPreviewScreen.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.BDUDau);
+    const intl = util.intl;
+    return intl.string(util.t.BDUDau);
   },
   usePredicate() {
-    return useQuests.useIsPreviewerOnAnyQuest();
+    return hooks_QuestHooks.useIsPreviewerOnAnyQuest();
   },
   parent: null,
   IconComponent: QuestsIcon.QuestsIcon,
-  screen: obj,
-};
-obj = {
-  route: ME.UserSettingsSections.QUEST_PREVIEW_TOOL_2,
-  getComponent() {
-    return SettingsQuestPreviewScreen /* SettingsQuestPreviewScreen */.default;
+  screen: {
+    route: Constants.UserSettingsSections.QUEST_PREVIEW_TOOL_2,
+    getComponent() {
+      return require("SettingsQuestPreviewScreen").default;
+    },
   },
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/QuestPreviewToolSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/QuestPreviewToolSetting.tsx");
 
 export default route;

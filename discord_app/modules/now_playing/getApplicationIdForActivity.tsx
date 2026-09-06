@@ -1,18 +1,18 @@
 // discord_app/modules/now_playing/getApplicationIdForActivity.tsx
-import set from "../../../_runtime/00002_set.js";
-import items3 from "../activities/Constants.tsx";
-import _isStreamingDefault from "../activities/utils/isStreaming.tsx";
+import Constants from "../activities/Constants.tsx";
+import isStreamingDefault from "../activities/utils/isStreaming.tsx";
 import isListeningOnSpotifyDefault from "../activities/utils/isListeningOnSpotify.tsx";
 import isOnXboxDefault from "../activities/utils/isOnXbox.tsx";
-import getIconURL from "../../records/SpotifyApplicationRecord.tsx";
-import getIconURL2 from "../../records/TwitchApplicationRecord.tsx";
-import getIconURL3 from "../../records/XboxApplicationRecord.tsx";
+import SpotifyApplicationRecord from "../../records/SpotifyApplicationRecord.tsx";
+import TwitchApplicationRecord from "../../records/TwitchApplicationRecord.tsx";
+import XboxApplicationRecord from "../../records/XboxApplicationRecord.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const SpotifyApplication = getIconURL.SpotifyApplication;
-let closure_3 = getIconURL2.TWITCH_APPLICATION_ID_PREFIX;
-let closure_4 = getIconURL3.XBOX_APPLICATION_ID_PREFIX;
-let closure_5 = items3.XBOX_ACTIVITY_APPLICATION_ID;
-const result = set.fileFinishedImporting("modules/now_playing/getApplicationIdForActivity.tsx");
+const SpotifyApplication = SpotifyApplicationRecord.SpotifyApplication;
+let closure_3 = TwitchApplicationRecord.TWITCH_APPLICATION_ID_PREFIX;
+let closure_4 = XboxApplicationRecord.XBOX_APPLICATION_ID_PREFIX;
+let closure_5 = Constants.XBOX_ACTIVITY_APPLICATION_ID;
+const result = size.fileFinishedImporting("modules/now_playing/getApplicationIdForActivity.tsx");
 
 export default function getApplicationIdForActivity(party) {
   if (isListeningOnSpotifyDefault(party)) {
@@ -23,7 +23,7 @@ export default function getApplicationIdForActivity(party) {
       return id;
     }
   }
-  if (_isStreamingDefault(party)) {
+  if (isStreamingDefault(party)) {
     if (null != party.url) {
       id = closure_3 + party.url;
     }

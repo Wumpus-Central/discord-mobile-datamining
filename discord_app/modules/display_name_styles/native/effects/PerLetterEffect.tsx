@@ -1,32 +1,34 @@
 // discord_app/modules/display_name_styles/native/effects/PerLetterEffect.tsx
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-({ View: c4, Text: c5 } = get_ActivityIndicator);
-let closure_7 = createCacheKey.createStyles({ container: { overflow: "hidden" } });
-const result = require("set").fileFinishedImporting("modules/display_name_styles/native/effects/PerLetterEffect.tsx");
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, Text: hasOwnProperty } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_7 = createStyles.createStyles({ container: { overflow: "hidden" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/display_name_styles/native/effects/PerLetterEffect.tsx");
 
 export default function PerLetterEffect(name) {
   name = name.name;
   ({ textProps, colors } = name);
   ({ containerStyle, textStyle } = name);
   const items = [name, colors];
-  let obj = { style: items1, children: null };
-  items1 = [callback().container, containerStyle];
-  const memo = React.useMemo(() => {
-    closure_0 = colors(closure_1_2[4])();
-    c1 = 0;
-    let obj = name(closure_1_2[5]);
-    return name(closure_1_2[5])
-      .splitGraphemes(closure_0)
-      .map((children) => {
+  let obj = { style: null, children: null };
+  const items1 = [closure_7().container, containerStyle];
+  obj.style = items1;
+  const memo = noop.useMemo(() => {
+    const regex = colors(10905)();
+    closure_1 = 0;
+    let obj = name(10906);
+    return name(10906)
+      .splitGraphemes(regex)
+      .map((children, index) => {
         regex.lastIndex = 0;
         const tmp = regex.test(children) || 0 === children.trim().length;
         let tmp2;
-        if (null != c1) {
+        if (null != colors) {
           if (arr.length > 0) {
             if (!tmp) {
               tmp2 = arr[closure_1 % arr.length];
@@ -38,12 +40,15 @@ export default function PerLetterEffect(name) {
         }
         let tmp7;
         if (null != tmp2) {
-          let obj = { color: null };
-          obj[0] = tmp2;
+          let obj = { color: tmp2 };
           tmp7 = obj;
         }
         obj = { style: tmp7, children };
-        return closure_2_6(closure_2_5, obj, arg1);
+        return (
+          <hasOwnProperty key={arg1} style={tmp7}>
+            {arg0}
+          </hasOwnProperty>
+        );
       });
   }, items);
   obj = {};
@@ -57,6 +62,6 @@ export default function PerLetterEffect(name) {
   const items2 = [textStyle, { lineHeight: "Array" }];
   obj.style = items2;
   obj.children = memo;
-  obj[1] = jsx(name(4556).Text, {});
+  obj.children = jsx(name(4556).Text, {});
   return <closure_4 />;
 }

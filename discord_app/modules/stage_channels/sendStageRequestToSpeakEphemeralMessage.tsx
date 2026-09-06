@@ -1,19 +1,18 @@
 // discord_app/modules/stage_channels/sendStageRequestToSpeakEphemeralMessage.tsx
-import set from "../../../_runtime/00002_set.js";
-import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import ME from "../../Constants.tsx";
+import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import Constants from "../../Constants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-({ MessageFlags: obj1, MessageStates: c3, MessageTypes: c4 } = ME);
-const result = set.fileFinishedImporting("modules/stage_channels/sendStageRequestToSpeakEphemeralMessage.tsx");
+({ MessageFlags: c2, MessageStates: c3, MessageTypes: closure_4 } = Constants);
+const result = size.fileFinishedImporting("modules/stage_channels/sendStageRequestToSpeakEphemeralMessage.tsx");
 
 export const sendStageRequestToSpeakEphemeralMessage = function sendStageRequestToSpeakEphemeralMessage(
   channelId,
   user,
   requestToSpeakTimestamp,
 ) {
-  let obj = dispatcherDefault;
-  obj = {
+  let obj = {
     type: "MESSAGE_CREATE",
     channelId,
     message: null,
@@ -22,7 +21,7 @@ export const sendStageRequestToSpeakEphemeralMessage = function sendStageRequest
     isPushNotification: false,
   };
   obj = {
-    id: DISCORD_EPOCHDefault.fromTimestamp(Date.parse(requestToSpeakTimestamp)),
+    id: SnowflakeUtilsDefault.fromTimestamp(Date.parse(requestToSpeakTimestamp)),
     type: constants3.STAGE_RAISE_HAND,
     flags: constants.EPHEMERAL,
     content: "",
@@ -39,7 +38,7 @@ export const sendStageRequestToSpeakEphemeralMessage = function sendStageRequest
     state: constants2.SENT,
     tts: false,
   };
-  obj[2] = obj;
-  obj[4] = {};
+  obj.message = obj;
+  obj.sendMessageOptions = {};
   obj.dispatch(obj);
 };

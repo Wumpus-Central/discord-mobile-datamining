@@ -1,15 +1,15 @@
 // discord_app/modules/game_console/native/getConsoleColor.tsx
-import set from "../../../../_runtime/00002_set.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import ME from "../../../Constants.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import Constants from "../../../Constants.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const obj = {
-  [XBOX]: ThemesDefault.unsafe_rawColors.PLATFORM_XBOX,
-  [PLAYSTATION]: ThemesDefault.unsafe_rawColors.PLATFORM_PLAYSTATION,
-  [PLAYSTATION_STAGING]: ThemesDefault.unsafe_rawColors.PLATFORM_PLAYSTATION,
+  [XBOX]: nativeDefault.unsafe_rawColors.PLATFORM_XBOX,
+  [PLAYSTATION]: nativeDefault.unsafe_rawColors.PLATFORM_PLAYSTATION,
+  [PLAYSTATION_STAGING]: nativeDefault.unsafe_rawColors.PLATFORM_PLAYSTATION,
 };
-({ XBOX, PLAYSTATION, PLAYSTATION_STAGING } = ME.PlatformTypes);
-const result = set.fileFinishedImporting("modules/game_console/native/getConsoleColor.tsx");
+({ XBOX, PLAYSTATION, PLAYSTATION_STAGING } = Constants.PlatformTypes);
+const result = size.fileFinishedImporting("modules/game_console/native/getConsoleColor.tsx");
 
 export default function getConsoleColor(arg0) {
   return obj[arg0];

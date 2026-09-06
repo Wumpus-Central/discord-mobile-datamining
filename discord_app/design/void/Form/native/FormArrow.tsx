@@ -1,46 +1,44 @@
 // discord_app/design/void/Form/native/FormArrow.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import Button from "../../native.tsx";
-import Text from "../../../components/Text/native/Text.tsx";
-import registerAssetDefault from "../../../../../_runtime/07142_registerAsset.js";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import native from "../../native.tsx";
+import Text_Text from "../../../components/Text/native/Text.tsx";
+import _modDef7142 from "../../../../../_runtime/metro/07142__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { wrapper: { flexDirection: "row", alignItems: "center" }, icon: null };
-createCacheKey = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginRight: -8, marginLeft: 8 };
-createCacheKey[1] = createCacheKey;
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("design/void/Form/native/FormArrow.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+fn(4560);
+let createStyles = { wrapper: { flexDirection: "row", alignItems: "center" }, icon: null };
+createStyles = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginRight: -8, marginLeft: 8 };
+createStyles.icon = createStyles;
+let closure_6 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/Form/native/FormArrow.tsx");
 
 export default function FormArrow(arg0) {
   ({ label, style } = arg0);
-  const tmp = callback3();
+  const tmp = closure_6();
   if (null != label) {
-    let obj = { style: null, children: null };
-    obj[0] = tmp.wrapper;
-    obj = { maxFontSizeMultiplier: 1.5, variant: "text-md/medium", color: "text-muted", children: null };
-    obj[3] = label;
-    const items = [callback(Text.Text, obj)];
-    obj1 = { style: null, source: null, size: null };
+    let obj = { style: tmp.wrapper, children: null };
+    obj = { maxFontSizeMultiplier: 1.5, variant: "text-md/medium", color: "text-muted", children: label };
+    const items = [React4(Text_Text.Text, obj)];
+    const obj1 = { style: null, source: null, size: null };
     const items1 = [tmp.icon, style];
-    obj1[0] = items1;
-    obj1[1] = registerAssetDefault;
-    obj1[2] = Button.Icon.Sizes.MEDIUM;
-    items[1] = callback(Button.Icon, obj1);
-    obj[1] = items;
-    let tmp6 = callback2(View, obj);
+    obj1.style = items1;
+    obj1.source = _modDef7142;
+    obj1.size = native.Icon.Sizes.MEDIUM;
+    items[1] = React4(native.Icon, obj1);
+    obj.children = items;
+    let tmp6 = hasOwnProperty(View, obj);
   } else {
     obj = { style: null, source: null, size: null };
     const items2 = [tmp.icon, style];
-    obj[0] = items2;
-    obj[1] = registerAssetDefault;
-    obj[2] = Button.Icon.Sizes.MEDIUM;
-    tmp6 = callback(Button.Icon, obj);
+    obj.style = items2;
+    obj.source = _modDef7142;
+    obj.size = native.Icon.Sizes.MEDIUM;
+    tmp6 = React4(native.Icon, obj);
   }
   return tmp6;
 }

@@ -1,17 +1,17 @@
 // discord_app/modules/games/GameRecord.tsx
-import toJSDefault from "../../lib/Record.tsx";
-import getAvatarURL from "../../utils/AvatarUtils.tsx";
+import AvatarUtils from "../../utils/AvatarUtils.tsx";
+import Server from "../../flow/Server.tsx";
 import getGameMediaRefURLDefault from "getGameMediaRefURL.tsx";
-import closure_3 from "../../records/ApplicationRecord.tsx";
-import { createExecutable } from "../../records/ApplicationRecord.tsx";
+import Record from "../../lib/Record.tsx";
+import ApplicationRecord from "../../records/ApplicationRecord.tsx";
 
-require = arg1;
-toJSDefault;
-const result = require("set").fileFinishedImporting("modules/games/GameRecord.tsx");
+require = fn;
+const createExecutable = fn(1918).createExecutable;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/games/GameRecord.tsx");
 class GameRecord extends tmp2 {
   constructor(arg0) {
     tmp5 = new GameRecord(tmp4, tmp3, tmp2, tmp, new.target, new.target);
-    // ThrowIfThisInitialized (0x7c)
     ({ id: tmp5.id, name: tmp5.name, description: tmp5.description, aliases } = global);
     if (aliases == null) {
       aliases = [];
@@ -96,25 +96,25 @@ class GameRecord extends tmp2 {
           localizedRating: null,
           localizedRatingCount: null,
         };
-        obj[0] = reviews.steam.rating;
-        obj[1] = reviews.steam.rating_count;
-        obj[2] = reviews.steam.recent_rating;
-        obj[3] = reviews.steam.recent_rating_count;
-        obj[4] = reviews.steam.localized_rating;
-        obj[5] = reviews.steam.localized_rating_count;
+        obj.rating = reviews.steam.rating;
+        obj.ratingCount = reviews.steam.rating_count;
+        obj.recentRating = reviews.steam.recent_rating;
+        obj.recentRatingCount = reviews.steam.recent_rating_count;
+        obj.localizedRating = reviews.steam.localized_rating;
+        obj.localizedRatingCount = reviews.steam.localized_rating_count;
         tmp9 = obj;
       }
       obj = { steam: null, opencritic: null };
-      obj[0] = tmp9;
+      obj.steam = tmp9;
       tmp10 = undefined;
       if (null != reviews.opencritic) {
         obj1 = { topCriticRating: null, topCriticRatingCount: null, tier: null };
-        obj1[0] = reviews.opencritic.top_critic_rating;
-        obj1[1] = reviews.opencritic.top_critic_rating_count;
-        obj1[2] = reviews.opencritic.tier;
+        obj1.topCriticRating = reviews.opencritic.top_critic_rating;
+        obj1.topCriticRatingCount = reviews.opencritic.top_critic_rating_count;
+        obj1.tier = reviews.opencritic.tier;
         tmp10 = obj1;
       }
-      obj[1] = tmp10;
+      obj.opencritic = tmp10;
       tmp8 = obj;
     } else {
       opencritic = undefined;
@@ -137,7 +137,7 @@ prototype["getOfficialApplicationId"] = function getOfficialApplicationId() {
   const linkedApplications = this.linkedApplications;
   let id;
   if (linkedApplications != null) {
-    const found = linkedApplications.find((type) => type.type === callback(table[2]).GameLinkTypes.OFFICIAL);
+    const found = linkedApplications.find((type) => type.type === Server.GameLinkTypes.OFFICIAL);
     if (found != null) {
       id = found.id;
     }
@@ -167,7 +167,7 @@ prototype["getCoverURL"] = function getCoverURL(size) {
     cover = media.cover;
   }
   let str = "png";
-  if (getAvatarURL.SUPPORTS_WEBP) {
+  if (AvatarUtils.SUPPORTS_WEBP) {
     str = "webp";
   }
   return getGameMediaRefURLDefault(this.id, cover, { keepAspectRatio: true, format: str, size });
@@ -182,7 +182,7 @@ prototype["getArtworkURLs"] = function getArtworkURLs() {
   if (artwork == null) {
     artwork = [];
   }
-  const mapped = artwork.map((arg0) => closure_1_1(closure_1_2[3])(self.id, arg0, { keepAspectRatio: true }));
+  const mapped = artwork.map((item) => getGameMediaRefURLDefault(self.id, item, { keepAspectRatio: true }));
   return mapped.filter(self(1369).isNotNullish);
 };
 prototype["getCompanyByRole"] = function getCompanyByRole(DEVELOPER) {

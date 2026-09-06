@@ -1,49 +1,52 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/NewMessagesTagListInput.tsx
-import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import importAllResult from "../../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../../../stores/UserStore.tsx";
-import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
-import set from "../../../../../utils/PlatformUtils.tsx";
+import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../../intl/index.native.tsx";
+import GlobalUtils from "../../../../../utils/GlobalUtils.tsx";
+import AccessibilityAnnouncer2 from "../../../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
+import makeUserListPillDataDefault from "makeUserListPillData.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
+import UserStore from "../../../../../stores/UserStore.tsx";
 
-const require = arg1;
-let c3 = importAllResult;
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+fn(4560);
 let obj = { searchBarContainer: null, header: null, showSearchButton: null };
 obj = {
-  paddingHorizontal: ThemesDefault.space.PX_16,
-  paddingBottom: ThemesDefault.space.PX_8,
-  backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
+  paddingHorizontal: nativeDefault.space.PX_16,
+  paddingBottom: nativeDefault.space.PX_8,
+  backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
 };
-obj[0] = obj;
-createCacheKey = { marginLeft: ThemesDefault.space.PX_12, marginBottom: null };
+obj.searchBarContainer = obj;
+const createStyles = { marginLeft: nativeDefault.space.PX_12, marginBottom: null };
+const PlatformUtils = fn(1115);
 let num = 0;
-if (set.isAndroid()) {
+if (PlatformUtils.isAndroid()) {
   num = 2;
 }
-createCacheKey[1] = num;
-obj[1] = createCacheKey;
-obj[2] = { marginHorizontal: ThemesDefault.space.PX_12 };
-let closure_7 = createCacheKey.createStyles(obj);
-const obj2 = { marginHorizontal: ThemesDefault.space.PX_12 };
-const result = set.fileFinishedImporting(
+createStyles.marginBottom = num;
+obj.header = createStyles;
+obj.showSearchButton = { marginHorizontal: nativeDefault.space.PX_12 };
+let closure_7 = createStyles.createStyles(obj);
+const obj2 = { marginHorizontal: nativeDefault.space.PX_12 };
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/main_tabs_v2/native/shared_components/user_list/NewMessagesTagListInput.tsx",
 );
 
-export default importAllResult.memo(function NewMessagesTagListInput(forceSearchResults) {
+export default noop.memo(function NewMessagesTagListInput(forceSearchResults) {
   ({ onSelectUser: require, selectedUserIds } = forceSearchResults);
-  let memo;
   ({ autoFocus, onChangeText, onFocus, hasQuery, onForceSearchResults, tagListInputRef } = forceSearchResults);
-  const tmp = callback();
+  const tmp = closure_7();
   let items = [selectedUserIds];
-  memo = importAllResult.useMemo(() => {
+  const memo = noop.useMemo(() => {
     let items = selectedUserIds;
     if (selectedUserIds == null) {
       items = [];
     }
-    const mapped = items.map(closure_1_5.getUser);
-    const found = mapped.filter(closure_1_0(memo[7]).isNotNullish);
-    return found.map(selectedUserIds(memo[8]));
+    const mapped = items.map(UserStore.getUser);
+    const found = mapped.filter(GlobalUtils.isNotNullish);
+    return found.map(makeUserListPillDataDefault);
   }, items);
   let obj = { style: tmp.searchBarContainer, children: null };
   obj = {
@@ -62,56 +65,58 @@ export default importAllResult.memo(function NewMessagesTagListInput(forceSearch
   if (!hasQuery) {
     tmp6 = null;
     if (memo.length > 0) {
-      let intl = require(tmp4[11]).intl;
+      let intl = require("util").intl;
       const string = intl.string;
-      const t = require(tmp4[11]).t;
+      const t = require("util").t;
       if (forceSearchResults) {
         let stringResult = string(t["4wv+DE"]);
       } else {
         stringResult = string(t.fTcQm2);
       }
-      obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
-      obj[1] = stringResult;
-      obj[2] = onForceSearchResults;
-      obj[3] = tmp.showSearchButton;
+      obj = {
+        accessibilityRole: "button",
+        accessibilityLabel: stringResult,
+        onPress: onForceSearchResults,
+        style: tmp.showSearchButton,
+        children: null,
+      };
       if (forceSearchResults) {
         let CirclePlusIcon = tmp7(tmp4[12]).ChevronLargeRightIcon;
       } else {
         CirclePlusIcon = tmp7(tmp4[13]).CirclePlusIcon;
       }
-      obj[4] = tmp2(CirclePlusIcon, { size: "xs" });
-      tmp2(require(tmp4[10]).PressableOpacity, obj);
+      obj.children = tmp2(CirclePlusIcon, { size: "xs" });
+      tmp2(require("Pressables").PressableOpacity, obj);
     }
   }
-  obj[2] = tmp6;
-  obj1 = { style: tmp.header, variant: "text-sm/medium", color: "text-muted", accessible: false, children: null };
-  const intl2 = require(tmp4[11]).intl;
-  obj1[4] = intl2.string(require(memo[11]).t.kHyiXs);
-  obj[3] = jsx(require(memo[14]).Text, {
+  obj.footer = tmp6;
+  const obj1 = { style: tmp.header, variant: "text-sm/medium", color: "text-muted", accessible: false, children: null };
+  const intl2 = require("util").intl;
+  obj1.children = intl2.string(require("util").t.kHyiXs);
+  obj.icon = jsx(require("Text/Text").Text, {
     style: tmp.header,
     variant: "text-sm/medium",
     color: "text-muted",
     accessible: false,
     children: null,
   });
-  obj[4] = onChangeText;
-  obj[5] = onFocus;
-  obj[6] = function onRemove(arg0) {
-    const user = closure_1_5.getUser(tmp.id);
+  obj.onChangeText = onChangeText;
+  obj.onFocus = onFocus;
+  obj.onRemove = function onRemove(arg0) {
+    const user = UserStore.getUser(tmp.id);
     if (null != user) {
-      callback(user);
-      const AccessibilityAnnouncer = closure_1_0(memo[15]).AccessibilityAnnouncer;
-      const intl = closure_1_0(memo[11]).intl;
-      const obj = { text: null };
-      obj[0] = tmp.text;
-      AccessibilityAnnouncer.announce(intl.formatToPlainString(closure_1_0(memo[11]).t.srlxB8, obj));
+      closure_1_0(user);
+      const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
+      const intl = util.intl;
+      const obj = { text: tmp.text };
+      AccessibilityAnnouncer.announce(intl.formatToPlainString(util.t.srlxB8, obj));
     }
   };
-  const intl3 = require(tmp4[11]).intl;
-  obj[7] = intl3.string(require(memo[11]).t.CaEER6);
-  obj[8] = memo;
-  obj[9] = tagListInputRef;
-  obj[1] = jsx(selectedUserIds(memo[9]), {
+  const intl3 = require("util").intl;
+  obj.placeholder = intl3.string(require("util").t.CaEER6);
+  obj.tags = memo;
+  obj.ref = tagListInputRef;
+  obj.children = jsx(selectedUserIds(memo[9]), {
     autoFocus,
     focusOnAdd: true,
     footer: null,

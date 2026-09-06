@@ -1,44 +1,42 @@
 // discord_app/modules/premium/native/referrals/ReferralMessageManager.tsx
-import DISCORD_EPOCHDefault from "../../../../utils/SnowflakeUtils.tsx";
-import set from "../../../../../discord_common/js/shared/shared-constants/MessageTypes.tsx";
-import initializeDefault from "../../../../lib/AutomaticLifecycleManager.tsx";
-import getPaymentGateway from "../../UserOfferActionCreators.tsx";
+import SnowflakeUtilsDefault from "../../../../utils/SnowflakeUtils.tsx";
+import MessageTypes from "../../../../../discord_common/js/shared/shared-constants/MessageTypes.tsx";
+import UserOfferActionCreators from "../../UserOfferActionCreators.tsx";
 import setupLoadFromMessageManagerHandlersDefault from "../../../messages/setupLoadFromMessageManagerHandlers.tsx";
-import closure_3 from "../../../../stores/billing/SubscriptionStore.tsx";
-import closure_4 from "../../../../stores/billing/UserOfferStore.tsx";
+import SubscriptionStore from "../../../../stores/billing/SubscriptionStore.tsx";
+import UserOfferStore from "../../../../stores/billing/UserOfferStore.tsx";
+import AutomaticLifecycleManager from "../../../../lib/AutomaticLifecycleManager.tsx";
 
-require = arg1;
+require = fn;
 function handleReferralMessages(type) {
-  if (type.type === set.MessageTypes.PREMIUM_REFERRAL) {
+  if (type.type === MessageTypes.MessageTypes.PREMIUM_REFERRAL) {
     if (null != type.content) {
       if (obj3.isProbablyAValidSnowflake(type.content)) {
-        premiumTypeSubscription = premiumTypeSubscription.getPremiumTypeSubscription();
+        const premiumTypeSubscription = SubscriptionStore.getPremiumTypeSubscription();
         const tmp9Result = tmp9(11);
         if (tmp6) {
-          const userOffer = getPaymentGateway.fetchUserOffer("ReferralMessageManager");
-          const tmpResult = getPaymentGateway;
+          const userOffer = UserOfferActionCreators.fetchUserOffer("ReferralMessageManager");
+          const tmpResult = UserOfferActionCreators;
         }
         tmp6 =
           null == premiumTypeSubscription &&
-          closure_4.shouldFetchReferralOffer(tmp9(11).extractTimestamp(type.content));
+          UserOfferStore.shouldFetchReferralOffer(tmp9(11).extractTimestamp(type.content));
       }
-      obj3 = DISCORD_EPOCHDefault;
+      obj3 = SnowflakeUtilsDefault;
       tmp9 = importDefault;
     }
   }
 }
-initializeDefault;
 class ReferralMessageManager extends tmp6 {
   constructor() {
     tmp3 = new ReferralMessageManager(tmp2, tmp, new.target);
-    // ThrowIfThisInitialized (0x7c)
-    tmp4 = require("setupLoadFromMessageManagerHandlers")(tmp3, handleReferralMessages);
+    tmp4 = closure_1(closure_2[6])(tmp3, handleReferralMessages);
     return tmp3;
   }
 }
 tmp = new tmp(tmp4, tmp3, tmp2, Object, defineProperty, ReferralMessageManager, importDefault);
-// ThrowIfThisInitialized (0x7c)
 setupLoadFromMessageManagerHandlersDefault(tmp, handleReferralMessages);
-const result = require("set").fileFinishedImporting("modules/premium/native/referrals/ReferralMessageManager.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/native/referrals/ReferralMessageManager.tsx");
 
 export default tmp;

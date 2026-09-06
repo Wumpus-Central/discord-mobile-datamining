@@ -1,7 +1,7 @@
 // discord_app/modules/premium/gifting/PremiumGiftingConstants.tsx
-import set from "../../../../_runtime/00002_set.js";
-import GuildFeatures from "../PremiumConstants.tsx";
-import messagesProxyDefault from "PremiumGifting.messages.js";
+import PremiumConstants from "../PremiumConstants.tsx";
+import _modDef2460 from "PremiumGifting.messages.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
 ({
   SNOWGLOBE,
@@ -16,21 +16,20 @@ import messagesProxyDefault from "PremiumGifting.messages.js";
   SEASONAL_CHEST,
   SEASONAL_COFFEE,
   NITROWEEN_STANDARD,
-} = GuildFeatures.PremiumGiftStyles);
-const obj = {
-  [SNOWGLOBE]: messagesProxyDefault.M6cPwB,
-  [BOX]: messagesProxyDefault.B9XqQk,
-  [CUP]: messagesProxyDefault["6dCq/u"],
-  [STANDARD_BOX]: messagesProxyDefault.GzPel1,
-  [CAKE]: messagesProxyDefault.AJ4iir,
-  [CHEST]: messagesProxyDefault.P5keo3,
-  [COFFEE]: messagesProxyDefault.w84vET,
-  [SEASONAL_STANDARD_BOX]: messagesProxyDefault["vd1fu/"],
-  [SEASONAL_CAKE]: messagesProxyDefault.aubYGR,
-  [SEASONAL_CHEST]: messagesProxyDefault.vjxYqU,
-  [SEASONAL_COFFEE]: messagesProxyDefault.bHuJLa,
-  [NITROWEEN_STANDARD]: messagesProxyDefault["+HMF8k"],
-};
-const result = set.fileFinishedImporting("modules/premium/gifting/PremiumGiftingConstants.tsx");
+} = PremiumConstants.PremiumGiftStyles);
+const result = size.fileFinishedImporting("modules/premium/gifting/PremiumGiftingConstants.tsx");
 
-export const GIFT_STYLE_DESCRIPTIONS = obj;
+export const GIFT_STYLE_DESCRIPTIONS = {
+  [SNOWGLOBE]: _modDef2460.M6cPwB,
+  [BOX]: _modDef2460.B9XqQk,
+  [CUP]: _modDef2460["6dCq/u"],
+  [STANDARD_BOX]: _modDef2460.GzPel1,
+  [CAKE]: _modDef2460.AJ4iir,
+  [CHEST]: _modDef2460.P5keo3,
+  [COFFEE]: _modDef2460.w84vET,
+  [SEASONAL_STANDARD_BOX]: _modDef2460["vd1fu/"],
+  [SEASONAL_CAKE]: _modDef2460.aubYGR,
+  [SEASONAL_CHEST]: _modDef2460.vjxYqU,
+  [SEASONAL_COFFEE]: _modDef2460.bHuJLa,
+  [NITROWEEN_STANDARD]: _modDef2460["+HMF8k"],
+};

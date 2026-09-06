@@ -1,18 +1,18 @@
 // discord_app/modules/push_notifications/PushNotificationConstants.tsx
-import set from "../../../_runtime/00002_set.js";
-import set2 from "../../utils/PlatformUtils.tsx";
-import getConstants from "../../utils/native/ClientInfoUtils.tsx";
-import isMetaQuest from "../device/MetaQuestUtils.android.tsx";
+import PlatformUtils from "../../utils/PlatformUtils.tsx";
+import ClientInfoUtils from "../../utils/native/ClientInfoUtils.tsx";
+import MetaQuestUtils from "../device/MetaQuestUtils.android.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-getConstants = getConstants.getConstants();
+ClientInfoUtils = ClientInfoUtils.getConstants();
 let str;
-if (getConstants != null) {
-  str = getConstants.Identifier;
+if (ClientInfoUtils != null) {
+  str = ClientInfoUtils.Identifier;
 }
 if (str == null) {
   str = "";
 }
-isMetaQuest = isMetaQuest.isQuestRelease();
+MetaQuestUtils = MetaQuestUtils.isQuestRelease();
 const startsWithResult = str.startsWith("com.discord.kodiak");
 const startsWithResult1 = str.startsWith("com.hammerandchisel.discord.local");
 const meta_horizon = "meta_horizon";
@@ -32,23 +32,23 @@ if (!startsWithResult) {
   }
   str4 = str5;
 }
-const result = set.fileFinishedImporting("modules/push_notifications/PushNotificationConstants.tsx");
+const result = size.fileFinishedImporting("modules/push_notifications/PushNotificationConstants.tsx");
 
 export const BUNDLE_ID = str;
-export const IS_QUEST_RELEASE = isMetaQuest;
+export const IS_QUEST_RELEASE = MetaQuestUtils;
 export const DEVICE_PUSH_PROVIDER_ANDROID = "gcm";
 export const DEVICE_PUSH_PROVIDER_META_HORIZON = "meta_horizon";
 export const DEVICE_PUSH_PROVIDER_IOS = str2;
 export const DEVICE_PUSH_VOIP_PROVIDER = str4;
 export const getDevicePushProvider = function getDevicePushProvider() {
-  if (isMetaQuest) {
+  if (MetaQuestUtils) {
     let str = meta_horizon;
   } else {
     str = "gcm";
     if (!obj.isAndroid()) {
       str = str2;
     }
-    obj = set2;
+    obj = PlatformUtils;
   }
   return str;
 };

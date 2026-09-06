@@ -1,21 +1,23 @@
 // discord_app/modules/activities/useSubscribeMissingActivities.tsx
-import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../_runtime/00019_noop.js";
-import closure_4 from "../presence_subscriptions/PresenceSubscriptionsStore.tsx";
-import closure_5 from "../../stores/PresenceStore.tsx";
+import PresenceSubscriptionsActionCreators from "../presence_subscriptions/PresenceSubscriptionsActionCreators.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import noop from "../../../_runtime/metro/00019__.js";
+import PresenceSubscriptionsStore from "../presence_subscriptions/PresenceSubscriptionsStore.tsx";
+import PresenceStore from "../../stores/PresenceStore.tsx";
 
-const require = arg1;
+require = fn;
 let closure_6 = [];
 let closure_7 = [];
 let closure_8 = [];
-const result = require("set").fileFinishedImporting("modules/activities/useSubscribeMissingActivities.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/useSubscribeMissingActivities.tsx");
 
 export default function useSubscribeMissingActivities(arg0, arg1) {
-  let _require = arg0;
-  dependencyMap = arg1;
+  closure_129_0 = arg0;
+  closure_129_1 = arg1;
   let items = [arg0, arg1];
-  let tmp = first(
-    stateFromStoresArray.useMemo(() => {
+  let tmp = _slicedToArray(
+    noop.useMemo(() => {
       if (_private.isPrivate()) {
         const found = closure_0.filter((application) => {
           application = application.application;
@@ -37,24 +39,24 @@ export default function useSubscribeMissingActivities(arg0, arg1) {
         const items = [found, found.map((id) => id.id)];
         let items1 = items;
       } else {
-        items1 = [closure_1_8, closure_1_7];
+        items1 = [closure_8, closure_7];
       }
       return items1;
     }, items),
     2,
   );
-  first = tmp[0];
-  let items1 = [closure_5];
+  const first = tmp[0];
+  closure_129_2 = first;
+  let items1 = [PresenceStore];
   const items2 = [first];
-  stateFromStoresArray = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(
+  const stateFromStoresArray = require("initialize").useStateFromStoresArray(
     items1,
     () => {
-      let items = [];
-      const item = first.forEach((author) => {
-        items = author;
+      const items = [];
+      const item = _slicedToArray.forEach((author) => {
         if (
           null !=
-          closure_1_5.findActivity(
+          PresenceStore.findActivity(
             author.author.id,
             (application_id) => {
               const application = author.application;
@@ -89,16 +91,17 @@ export default function useSubscribeMissingActivities(arg0, arg1) {
     },
     items2,
   );
+  closure_129_3 = stateFromStoresArray;
   const items3 = [first, stateFromStoresArray];
   const items4 = [
     tmp[1],
-    stateFromStoresArray.useMemo(() => {
-      closure_0 = stateFromStoresArray;
-      if (0 === first.length) {
-        let items = closure_1_6;
+    noop.useMemo(() => {
+      closure_0 = noop;
+      if (0 === _slicedToArray.length) {
+        let items = closure_6;
       } else {
         items = [];
-        const item = first.forEach((application) => {
+        const item = _slicedToArray.forEach((application) => {
           application = application.application;
           if (application != null) {
             const id = application.id;
@@ -112,18 +115,15 @@ export default function useSubscribeMissingActivities(arg0, arg1) {
               if (null != party_id) {
                 const timestamp = application.timestamp;
                 const obj = {
-                  userId: null,
-                  applicationId: null,
-                  partyId: null,
+                  userId: application.author.id,
+                  applicationId: id,
+                  partyId: party_id,
                   messageId: null,
                   channelId: null,
                   inviteTime: null,
                 };
-                obj[0] = application.author.id;
-                obj[1] = id;
-                obj[2] = party_id;
-                ({ id: obj[3], channel_id: obj[4] } = application);
-                obj[5] = timestamp.getTime();
+                ({ id: obj.messageId, channel_id: obj.channelId } = application);
+                obj.inviteTime = timestamp.getTime();
                 items.push(obj);
               }
             }
@@ -133,18 +133,14 @@ export default function useSubscribeMissingActivities(arg0, arg1) {
       return items;
     }, items3),
   ];
-  let tmp4 = first(items4, 2);
+  let tmp4 = _slicedToArray(items4, 2);
   _require = tmp5;
   const items5 = [tmp4[1]];
-  const effect = stateFromStoresArray.useEffect(() => {
+  const effect = noop.useEffect(() => {
     for (const item10006 of closure_0) {
-      let tmp2 = closure_1_4;
       let tmp = item10006;
-      if (!closure_1_4.isSubscribed(item10006)) {
-        let tmp3 = callback;
-        let tmp4 = _private;
-        let obj = callback(_private[5]);
-        let tmp5 = item10006;
+      if (!PresenceSubscriptionsStore.isSubscribed(item10006)) {
+        let obj = PresenceSubscriptionsActionCreators;
         let subscription = obj.subscribe(tmp);
       }
       continue;

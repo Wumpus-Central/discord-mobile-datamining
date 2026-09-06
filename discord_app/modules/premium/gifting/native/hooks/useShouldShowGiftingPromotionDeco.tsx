@@ -1,13 +1,13 @@
 // discord_app/modules/premium/gifting/native/hooks/useShouldShowGiftingPromotionDeco.tsx
-import set from "../../../../../../_runtime/00002_set.js";
-import GuildFeatures from "../../../PremiumConstants.tsx";
-import NativeGiftContextProvider from "../../../../payments/native/NativeGiftContext.tsx";
+import PremiumConstants from "../../../PremiumConstants.tsx";
+import NativeGiftContext from "../../../../payments/native/NativeGiftContext.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-const PremiumTypes = GuildFeatures.PremiumTypes;
-const result = set.fileFinishedImporting("modules/premium/gifting/native/hooks/useShouldShowGiftingPromotionDeco.tsx");
+const PremiumTypes = PremiumConstants.PremiumTypes;
+const result = size.fileFinishedImporting("modules/premium/gifting/native/hooks/useShouldShowGiftingPromotionDeco.tsx");
 
 export default function useShouldShowGiftingPromotionDeco(arg0) {
-  const nativeGiftContext = NativeGiftContextProvider.useNativeGiftContext();
+  const nativeGiftContext = NativeGiftContext.useNativeGiftContext();
   const claimableRewards = nativeGiftContext.claimableRewards;
   if (null != arg0) {
     let tmp4 = arg0 === PremiumTypes.TIER_2;

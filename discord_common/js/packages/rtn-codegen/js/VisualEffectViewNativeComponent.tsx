@@ -1,21 +1,13 @@
 // discord_common/js/packages/rtn-codegen/js/VisualEffectViewNativeComponent.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import result2 from "../../../../../_runtime/00026_result.js";
-import setRuntimeConfigProvider from "../../../../../_runtime/00065_setRuntimeConfigProvider.js";
+import _mod26 from "../../../../../_runtime/metro/00026__.js";
+import 00065__ from "../../../../../_runtime/metro/00065__.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-let obj = { uiViewClassName: "DCDVisualEffectView", validAttributes: null };
-obj = {
-  blurAmount: true,
-  blurEffectName: true,
-  blurTintIOSParityCompensationColor: result2.colorAttribute,
-  tintColor: result2.colorAttribute,
-  blurTargetViewNativeId: true,
-};
-obj[1] = obj;
-const value = setRuntimeConfigProvider.get("DCDVisualEffectView", () => obj);
-const result = set.fileFinishedImporting(
-  "../discord_common/js/packages/rtn-codegen/js/VisualEffectViewNativeComponent.tsx",
-);
+let __INTERNAL_VIEW_CONFIG = { uiViewClassName: "DCDVisualEffectView", validAttributes: null };
+__INTERNAL_VIEW_CONFIG = { blurAmount: true, blurEffectName: true, blurTintIOSParityCompensationColor: _mod26.colorAttribute, tintColor: _mod26.colorAttribute, blurTargetViewNativeId: true };
+__INTERNAL_VIEW_CONFIG.validAttributes = __INTERNAL_VIEW_CONFIG;
+const value = module_65.get("DCDVisualEffectView", () => obj);
+const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/VisualEffectViewNativeComponent.tsx");
 
 export default value;
-export const __INTERNAL_VIEW_CONFIG = obj;
+export { __INTERNAL_VIEW_CONFIG };

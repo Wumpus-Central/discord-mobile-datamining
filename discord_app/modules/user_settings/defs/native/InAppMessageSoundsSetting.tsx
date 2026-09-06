@@ -1,40 +1,26 @@
 // discord_app/modules/user_settings/defs/native/InAppMessageSoundsSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import isMetaQuest from "../../../device/MetaQuestUtils.android.tsx";
-import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
-import isInAppMessageSoundsEnabled from "../../../notifications/native/InAppMessageSoundsStore.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import util from "../../../../intl/index.native.tsx";
+import MetaQuestUtils from "../../../device/MetaQuestUtils.android.tsx";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
+import InAppMessageSoundsStore from "../../../notifications/native/InAppMessageSoundsStore.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-({ setInAppMessageSoundsEnabled, useInAppMessageSoundsEnabled } = isInAppMessageSoundsEnabled);
-const toggle = createToggle.createToggle({
+({ setInAppMessageSoundsEnabled, useInAppMessageSoundsEnabled } = InAppMessageSoundsStore);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.jLCRyj);
+    const intl = util.intl;
+    return intl.string(util.t.jLCRyj);
   },
   useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["wls+Ax"]);
+    const intl = util.intl;
+    return intl.string(util.t["wls+Ax"]);
   },
-  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
+  parent: SettingsConstants.MobileUserSettings.NOTIFICATIONS,
   useValue: useInAppMessageSoundsEnabled,
   onValueChange: setInAppMessageSoundsEnabled,
-  usePredicate: isMetaQuest.isMetaQuest,
+  usePredicate: MetaQuestUtils.isMetaQuest,
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.jLCRyj);
-  },
-  useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["wls+Ax"]);
-  },
-  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
-  useValue: useInAppMessageSoundsEnabled,
-  onValueChange: setInAppMessageSoundsEnabled,
-  usePredicate: isMetaQuest.isMetaQuest,
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/InAppMessageSoundsSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/InAppMessageSoundsSetting.tsx");
 
 export default toggle;

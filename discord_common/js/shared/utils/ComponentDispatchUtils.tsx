@@ -1,28 +1,28 @@
 // discord_common/js/shared/utils/ComponentDispatchUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
-import EventEmitter from "../../../../_runtime/00568_EventEmitter.js";
+import _mod568 from "../../../../_runtime/metro/00568__.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-let result = set.fileFinishedImporting("../discord_common/js/shared/utils/ComponentDispatchUtils.tsx");
+let result = size.fileFinishedImporting("../discord_common/js/shared/utils/ComponentDispatchUtils.tsx");
 class ComponentDispatcher {
   constructor() {
     obj = global;
     if (global === undefined) {
       obj = {};
     }
-    obj = Object.create(new.target.prototype);
-    eventEmitter = new require("EventEmitter").EventEmitter();
-    obj[0] = eventEmitter;
-    obj[1] = {};
-    obj1 = { maxListeners: 100, enableDevtools: false };
-    merged = Object.assign(obj);
-    obj.options = obj1;
-    num = obj.options.maxListeners;
+    merged = Object.assign({ emitter: null, _savedDispatches: null });
+    eventEmitter = new closure_0(closure_1[0]).EventEmitter();
+    merged[0] = eventEmitter;
+    merged[1] = {};
+    obj = { maxListeners: 100, enableDevtools: false };
+    merged1 = Object.assign(obj);
+    merged.options = obj;
+    num = merged.options.maxListeners;
     if (num == null) {
       num = 100;
     }
-    emitter = obj.emitter;
+    emitter = merged.emitter;
     setMaxListenersResult = emitter.setMaxListeners(num);
-    return obj;
+    return merged;
   }
 }
 const prototype = ComponentDispatcher.prototype;
@@ -111,8 +111,8 @@ prototype["_checkSavedDispatches"] = function _checkSavedDispatches(arg0) {
   const self = this;
   closure_0 = arg0;
   if (null != this._savedDispatches[arg0]) {
-    const item = arr.forEach((arg0) => {
-      self.dispatch(closure_0, arg0);
+    const item = arr.forEach((item) => {
+      self.dispatch(closure_0, item);
     });
     tmp._savedDispatches[arg0] = undefined;
   }
@@ -162,16 +162,16 @@ prototype["reset"] = function reset() {
   emitter.removeAllListeners();
   return this;
 };
-prototype["dispatchKeyed"] = function dispatchKeyed(VOICE_MESSAGE_SEND, closure_0, arg2) {
+prototype["dispatchKeyed"] = function dispatchKeyed(VOICE_MESSAGE_SEND, channelId) {
   const substr = [...arguments].slice();
-  const items = ["" + VOICE_MESSAGE_SEND + "_" + closure_0, ...substr];
+  const items = ["" + VOICE_MESSAGE_SEND + "_" + channelId, ...substr];
   return this.dispatch.apply(items);
 };
 prototype["subscribeKeyed"] = function subscribeKeyed(VOICE_MESSAGE_SEND, sharedValue1, callback) {
   return this.subscribe("" + VOICE_MESSAGE_SEND + "_" + sharedValue1, callback);
 };
-prototype["unsubscribeKeyed"] = function unsubscribeKeyed(VOICE_MESSAGE_SEND, closure_1, closure_10) {
-  return this.unsubscribe("" + VOICE_MESSAGE_SEND + "_" + closure_1, closure_10);
+prototype["unsubscribeKeyed"] = function unsubscribeKeyed(VOICE_MESSAGE_SEND, arg1, arg2) {
+  return this.unsubscribe("" + VOICE_MESSAGE_SEND + "_" + arg1, arg2);
 };
 
 export { ComponentDispatcher };

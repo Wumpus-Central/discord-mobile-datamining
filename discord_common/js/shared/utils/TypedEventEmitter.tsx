@@ -1,14 +1,14 @@
 // discord_common/js/shared/utils/TypedEventEmitter.tsx
-import set from "../../../../_runtime/00002_set.js";
-import EventEmitter from "../../../../_runtime/00568_EventEmitter.js";
+import _mod568 from "../../../../_runtime/metro/00568__.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/utils/TypedEventEmitter.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/utils/TypedEventEmitter.tsx");
 class TypedEventEmitter {
   constructor() {
-    obj = Object.create(new.target.prototype);
-    eventEmitter = new require("EventEmitter").EventEmitter();
-    obj[0] = eventEmitter;
-    return obj;
+    merged = Object.assign({ emitter: null });
+    eventEmitter = new closure_0(closure_1[0]).EventEmitter();
+    merged[0] = eventEmitter;
+    return merged;
   }
 }
 const prototype = TypedEventEmitter.prototype;

@@ -1,13 +1,13 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateUtils.tsx
-import set from "../../../../../../_runtime/00002_set.js";
-import set2 from "../../../../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
+import ChannelTypes from "../../../../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting(
+const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateUtils.tsx",
 );
 
 export const getPrivateChannelIconComponent = function getPrivateChannelIconComponent(type) {
-  if (set2.ChannelTypes.GUILD_TEXT === type) {
+  if (ChannelTypes.ChannelTypes.GUILD_TEXT === type) {
     return tmp(5078).TextLockIcon;
   } else if (tmp(1094).ChannelTypes.GUILD_VOICE === type) {
     return tmp(5098).VoiceLockIcon;

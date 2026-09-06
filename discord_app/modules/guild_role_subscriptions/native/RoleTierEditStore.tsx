@@ -1,111 +1,110 @@
 // discord_app/modules/guild_role_subscriptions/native/RoleTierEditStore.tsx
-import isIterable from "../../../../_runtime/04184_isIterable.js";
-import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import identity from "../../../../_runtime/01244_identity.js";
+import ReactBatchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
+import _mod4184 from "../../../../_runtime/metro/04184__.js";
+import GuildRoleSubscriptionsHooks from "../GuildRoleSubscriptionsHooks.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
-require = arg1;
+require = fn;
 function usePriceTiers(guildId) {
-  const _require = guildId;
-  let tmp = callback(
+  _require = guildId;
+  let tmp = _slicedToArray(
     withEqualityFn((arg0) => {
       const items = [, ,];
       ({ priceTiers: arr[0], priceTierState: arr[1], loadPriceTiers: arr[2] } = arg0);
       return items;
-    }, require("../../../../_runtime/04184_isIterable.js").shallow),
+    }, require("../../../../_runtime/metro/04184__.js").shallow),
     3,
   );
-  const first = tmp[0];
+  const tiers = tmp[0];
   closure_2 = tmp3;
   dependencyMap = tmp[2];
-  first(4992)(() => {
+  tiers(4992)(() => {
     let tmp2 = null == first;
     if (tmp2) {
-      tmp2 = closure_2 !== closure_1_6.LOADING;
+      tmp2 = closure_2 !== obj.LOADING;
     }
     if (tmp2) {
-      callback(closure_0);
+      closure_3(closure_0);
     }
   });
   return {
-    tiers: first,
+    tiers,
     state: tmp[1],
     onRefresh(arg0) {
       let tmp = null == first;
       if (tmp) {
-        tmp = closure_2 !== closure_1_6.LOADING;
+        tmp = closure_2 !== obj.LOADING;
       }
       if (tmp) {
-        callback(arg0);
+        closure_3(arg0);
       }
     },
     guildId,
   };
 }
-let obj = { IDLE: 0, [0]: "IDLE", LOADING: 1, [1]: "LOADING", ERROR: 2, [2]: "ERROR" };
+const LoadingState = { IDLE: 0, [0]: "IDLE", LOADING: 1, [1]: "LOADING", ERROR: 2, [2]: "ERROR" };
 let closure_7 = Object.freeze({ currentScene: null, groupCover: null, groupDescription: "", groupIsFullGate: false });
+const identity = fn(1244);
 const withEqualityFn = identity.createWithEqualityFn((arg0) => {
   closure_0 = arg0;
-  obj = {};
+  const obj = {};
   const merged = Object.assign(closure_7);
-  obj.setScene = function setScene(arg0) {
-    const callback = arg0;
-    callback(closure_1_3[2]).batchUpdates(() => callback({ currentScene: callback }));
+  obj.setScene = function setScene(currentScene) {
+    currentScene(1249).batchUpdates(() => currentScene({ currentScene }));
   };
-  closure_0 = arg0;
-  let groupIsFullGate = "groupCover";
+  closure_129_0 = arg0;
+  closure_129_1 = "groupCover";
   obj.setGroupCover = (arg0) => {
-    const callback = arg0;
-    callback(closure_1_3[2]).batchUpdates(() => callback({ [closure_1_1]: callback }));
+    closure_0 = arg0;
+    closure_0(1249).batchUpdates(() => closure_0({ [closure_2_1]: closure_0 }));
   };
-  closure_0 = arg0;
-  groupIsFullGate = "groupDescription";
+  closure_130_0 = arg0;
+  closure_130_1 = "groupDescription";
   obj.setGroupDescription = (arg0) => {
-    const callback = arg0;
-    callback(closure_1_3[2]).batchUpdates(() => callback({ [closure_1_1]: callback }));
+    closure_0 = arg0;
+    closure_0(1249).batchUpdates(() => closure_0({ [closure_2_1]: closure_0 }));
   };
-  closure_0 = arg0;
-  groupIsFullGate = "groupIsFullGate";
+  closure_131_0 = arg0;
+  closure_131_1 = "groupIsFullGate";
   obj.setGroupIsFullGate = (arg0) => {
-    const callback = arg0;
-    callback(closure_1_3[2]).batchUpdates(() => callback({ [closure_1_1]: callback }));
+    closure_0 = arg0;
+    closure_0(1249).batchUpdates(() => closure_0({ [closure_2_1]: closure_0 }));
   };
   obj.priceTiers = null;
   obj.priceTierState = obj.IDLE;
   obj.loadPriceTiers = function loadPriceTiers(arg0) {
     closure_0 = arg0;
-    return closure_1_5(function* () {
+    return (async () => {
       closure_1 = tmp3;
-      c2 = 1;
-      callback(closure_2_3[2]).batchUpdates(() => callback({ priceTierState: closure_1_6.LOADING }));
-      const obj4 = callback(closure_2_3[2]);
-      yield closure_2_2(closure_2_3[4]).getPriceTiers(closure_1_0);
+      priceTiers(1249).batchUpdates(() => priceTiers({ priceTierState: constants.LOADING }));
+      await closure_2_2(7256).getPriceTiers(priceTiers);
       if (1 === tmp7) {
         c2 = 0;
-        const obj2 = callback(closure_2_3[2]);
-        obj2.batchUpdates(() => callback({ priceTierState: closure_1_6.ERROR }));
+        priceTiers(1249).batchUpdates(() => priceTiers({ priceTierState: constants.ERROR }));
         c4 = 3;
+        priceTiers(1249);
       } else if (arg0 === 1) {
         c4 = 3;
         throw arg1;
       } else if (arg0 !== 2) {
-        callback = arg1;
-        obj = callback(closure_2_3[2]);
-        obj.batchUpdates(() => callback({ priceTiers: callback, priceTierState: closure_2_6.IDLE }));
+        closure_128_0 = arg1;
+        priceTiers(1249).batchUpdates(() => priceTiers({ priceTiers, priceTierState: constants.IDLE }));
         c2 = 0;
+        priceTiers(1249);
       }
-      c2 = 0;
       return arg1;
     })();
   };
   obj.reset = function reset() {
-    callback(closure_1_3[2]).batchUpdates(() => callback(closure_1_7));
+    ReactBatchUpdates.batchUpdates(() => closure_1_0(closure_2_7));
   };
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/RoleTierEditStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/RoleTierEditStore.tsx");
 
-export const LoadingState = obj;
+export { LoadingState };
 export const useRoleTierEditStore = withEqualityFn;
 export const resetImperatively = function resetImperatively() {
   withEqualityFn.getState().reset();
@@ -123,15 +122,15 @@ export const usePriceTiersAvailableInGuild = function usePriceTiersAvailableInGu
   const tmp = usePriceTiers(guildId);
   let tiers = tmp.tiers;
   ({ state, onRefresh } = tmp);
-  const subscriptionListingsForGuild = set(15212).useSubscriptionListingsForGuild(guildId);
-  set = new Set();
+  const subscriptionListingsForGuild = GuildRoleSubscriptionsHooks.useSubscriptionListingsForGuild(guildId);
+  const set = new Set();
   for (const item10022 of subscriptionListingsForGuild) {
     let addResult = set.add(item10022.subscription_plans[0].price);
     continue;
   }
   tiers = undefined;
   if (tiers != null) {
-    tiers = tiers.filter((arg0) => !set.has(arg0));
+    tiers = tiers.filter((item) => !set.has(item));
   }
   return { tiers, state, onRefresh };
 };
@@ -140,19 +139,19 @@ export const useGroupCoverState = function useGroupCoverState() {
     const items = [,];
     ({ groupCover: arr[0], setGroupCover: arr[1] } = arg0);
     return items;
-  }, isIterable.shallow);
+  }, _mod4184.shallow);
 };
 export const useGroupDescriptionState = function useGroupDescriptionState() {
   return withEqualityFn((arg0) => {
     const items = [,];
     ({ groupDescription: arr[0], setGroupDescription: arr[1] } = arg0);
     return items;
-  }, isIterable.shallow);
+  }, _mod4184.shallow);
 };
 export const useGroupIsFullGateState = function useGroupIsFullGateState() {
   return withEqualityFn((arg0) => {
     const items = [,];
     ({ groupIsFullGate: arr[0], setGroupIsFullGate: arr[1] } = arg0);
     return items;
-  }, isIterable.shallow);
+  }, _mod4184.shallow);
 };

@@ -1,8 +1,8 @@
 // discord_app/modules/soundplayer/SoundPlayerContext.tsx
-import importAllResult from "../../../_runtime/00019_noop.js";
+import noop from "../../../_runtime/metro/00019__.js";
 
-const context = importAllResult.createContext({ audioRef: importAllResult.createRef() });
-const obj = { audioRef: importAllResult.createRef() };
-const result = require("set").fileFinishedImporting("modules/soundplayer/SoundPlayerContext.tsx");
+const context = noop.createContext({ audioRef: noop.createRef() });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/soundplayer/SoundPlayerContext.tsx");
 
 export default context;

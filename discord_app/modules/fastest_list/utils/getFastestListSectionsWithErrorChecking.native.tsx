@@ -1,24 +1,20 @@
 // discord_app/modules/fastest_list/utils/getFastestListSectionsWithErrorChecking.native.tsx
-import set from "../../../../_runtime/00002_set.js";
-import logFastestListError from "FastestListLogger.native.tsx";
+import FastestListLogger from "FastestListLogger.native.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting(
+const result = size.fileFinishedImporting(
   "modules/fastest_list/utils/getFastestListSectionsWithErrorChecking.native.tsx",
 );
 
 export default function getFastestListSectionsWithErrorChecking(itemSizes) {
   if (tmp) {
-    let obj = logFastestListError;
-    obj = {
-      itemSizesLength: null,
-      itemKeysLength: null,
-      listId: null,
+    const obj = {
+      itemSizesLength: itemSizes.itemSizes.length,
+      itemKeysLength: itemSizes.itemKeys.length,
+      listId: itemSizes.listId,
       detail:
         "Using non-uniform item sizes or list keys forces a full iteration of the list entries. This will cause performance issues on slower devices, please consider using a uniform configuration.",
     };
-    obj[0] = itemSizes.itemSizes.length;
-    obj[1] = itemSizes.itemKeys.length;
-    obj[2] = itemSizes.listId;
     obj.logFastestListError("Non-uniform configuration with large data set detected.", obj);
   }
   return itemSizes;

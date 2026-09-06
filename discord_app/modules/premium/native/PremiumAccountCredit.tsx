@@ -1,27 +1,24 @@
 // discord_app/modules/premium/native/PremiumAccountCredit.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import getPremiumPlanItem from "../../../utils/PremiumUtils.tsx";
-import getPremiumPlanItemDefault from "../../../utils/PremiumUtils.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
+import PremiumUtils from "../../../utils/PremiumUtils.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import GameIcon from "../../game_detection/native/GameIcon.tsx";
-import GameIconDefault from "../../game_detection/native/GameIcon.tsx";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_4 from "../../../stores/game_store/EntitlementStore.tsx";
-import { SubscriptionStatusTypes } from "../../../Constants.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import EntitlementStore from "../../../stores/game_store/EntitlementStore.tsx";
 
-require = arg1;
+const PremiumUtilsDefault = PremiumUtils;
+const GameIconDefault = GameIcon;
+
+require = fn;
 function AccountCreditTier(arg0) {
   ({ planId, currentSubscription } = arg0);
   ({ months, shouldAddDivider, unconsumedFractionalPremiumUnits, hasPremiumGroup } = arg0);
-  const tmp = callback2();
-  let obj = getPremiumPlanItem;
-  obj1 = getPremiumPlanItemDefault;
+  const tmp = closure_8();
+  let obj = PremiumUtils;
+  let obj1 = PremiumUtilsDefault;
   const result = obj.castPremiumSubscriptionAsSkuId(obj1.getSkuIdForPlan(planId));
-  let obj2 = getPremiumPlanItemDefault;
+  let obj2 = PremiumUtilsDefault;
   const tierDisplayNameByPlanId = obj2.getTierDisplayNameByPlanId(planId);
   if (hasPremiumGroup) {
     const intl3 = tmp2(1114).intl;
@@ -39,8 +36,7 @@ function AccountCreditTier(arg0) {
           if (num == null) {
             num = 0;
           }
-          obj = { date: null };
-          obj[0] = num;
+          obj = { date: num };
           stringResult = intl2.formatToPlainString(tmp2(1114).t["5CNRRA"], obj);
           const tmp2Result = tmp2(4218);
         }
@@ -49,8 +45,7 @@ function AccountCreditTier(arg0) {
       }
     }
     const intl = tmp2(1114).intl;
-    obj = { planName: null };
-    obj[0] = tierDisplayNameByPlanId;
+    obj = { planName: tierDisplayNameByPlanId };
     stringResult = intl.formatToPlainString(tmp2(1114).t.eNXZ5O, obj);
   }
   const items = [tmp.creditItem];
@@ -61,7 +56,7 @@ function AccountCreditTier(arg0) {
   obj1 = { style: items, children: null };
   items[1] = divider;
   obj2 = { size: GameIcon.GameIconSizes.SMALL, skuId: result };
-  const items1 = [callback(GameIconDefault, obj2), ,];
+  const items1 = [timestampProducer(GameIconDefault, obj2), ,];
   const obj3 = { style: tmp.textContainer, children: null };
   const obj4 = {
     style: tmp.headerText,
@@ -70,28 +65,29 @@ function AccountCreditTier(arg0) {
     children: null,
   };
   const intl4 = tmp2(1114).intl;
-  obj4[3] = intl4.format(getSystemLocale.t.LzobT9, { planName: tierDisplayNameByPlanId });
-  const items2 = [callback(Text.Text, obj4)];
+  obj4.children = intl4.format(util.t.LzobT9, { planName: tierDisplayNameByPlanId });
+  const items2 = [timestampProducer(Text_Text.Text, obj4)];
   let tmp21Result = !tmp17;
   if (!(null != currentSubscription && currentSubscription.isPurchasedExternally)) {
-    const obj5 = { style: null, variant: "text-xs/medium", color: "text-default", children: null };
-    obj5[0] = tmp.subText;
-    obj5[3] = stringResult;
+    const obj5 = { style: tmp.subText, variant: "text-xs/medium", color: "text-default", children: stringResult };
     tmp21Result = tmp21(tmp2(4556).Text, obj5);
   }
   items2[1] = tmp21Result;
-  obj3[1] = items2;
-  items1[1] = closure_7(View, obj3);
+  obj3.children = items2;
+  items1[1] = React5(View, obj3);
   const obj6 = { style: tmp.timeText, variant: "text-md/medium", color: "text-default", children: null };
   const intl5 = tmp2(1114).intl;
-  obj6[3] = intl5.format(getSystemLocale.t["ess/xl"], { count: months });
-  items1[2] = callback(Text.Text, obj6);
-  obj1[1] = items1;
-  return closure_7(View, obj1);
+  obj6.children = intl5.format(util.t["ess/xl"], { count: months });
+  items1[2] = timestampProducer(Text_Text.Text, obj6);
+  obj1.children = items1;
+  return React5(View, obj1);
 }
-noopAll;
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = {
+const View = fn(17).View;
+const SubscriptionStatusTypes = fn(1074).SubscriptionStatusTypes;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+fn(4560);
+let createStyles = {
   title: { marginBottom: 12 },
   creditList: null,
   creditItem: null,
@@ -102,31 +98,27 @@ createCacheKey = {
   divider: null,
   creditDescription: null,
 };
-createCacheKey = {
-  borderRadius: ThemesDefault.radii.xs,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
-};
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { flexDirection: "row", alignItems: "center", padding: 16 };
-createCacheKey[3] = { marginLeft: 16, marginRight: 16, flexDirection: "column", flex: 1 };
-createCacheKey[4] = { lineHeight: 20 };
-createCacheKey[5] = { lineHeight: 16 };
-createCacheKey[6] = { lineHeight: 20, alignSelf: "flex-start" };
-createCacheKey[7] = { borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE };
-createCacheKey[8] = { marginTop: 8 };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE };
-let result = require("set").fileFinishedImporting("modules/premium/native/PremiumAccountCredit.tsx");
+createStyles = { borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+createStyles.creditList = createStyles;
+createStyles.creditItem = { flexDirection: "row", alignItems: "center", padding: 16 };
+createStyles.textContainer = { marginLeft: 16, marginRight: 16, flexDirection: "column", flex: 1 };
+createStyles.headerText = { lineHeight: 20 };
+createStyles.subText = { lineHeight: 16 };
+createStyles.timeText = { lineHeight: 20, alignSelf: "flex-start" };
+createStyles.divider = { borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE };
+createStyles.creditDescription = { marginTop: 8 };
+let closure_8 = createStyles.createStyles(createStyles);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/premium/native/PremiumAccountCredit.tsx");
 
 export default function PremiumAccountCredit(currentSubscription) {
   currentSubscription = currentSubscription.currentSubscription;
   ({ entitlements, hasPremiumGroup: importDefault } = currentSubscription);
-  dependencyMap = undefined;
   c3 = undefined;
   ({ style, creditListContainerStyle } = currentSubscription);
-  let tmp = callback2();
+  let tmp = closure_8();
   let obj = currentSubscription(504);
-  const items = [closure_4];
+  const items = [EntitlementStore];
   dependencyMap = obj.useStateFromStoresArray(items, () =>
     unactivatedFractionalPremiumUnits.getUnactivatedFractionalPremiumUnits(),
   );
@@ -147,55 +139,57 @@ export default function PremiumAccountCredit(currentSubscription) {
       const tmp11ResultResult = tmp11(12)(Array.from(entitlements));
       const valueResult = found.groupBy((subscriptionPlanId) => subscriptionPlanId.subscriptionPlanId).value();
       c3 = valueResult;
-      obj = { style: null, children: null };
-      obj[0] = style;
-      obj = { style: null, accessibilityRole: "header", variant: "eyebrow", color: "text-default", children: null };
-      obj[0] = tmp.title;
+      obj = { style, children: null };
+      obj = {
+        style: tmp.title,
+        accessibilityRole: "header",
+        variant: "eyebrow",
+        color: "text-default",
+        children: null,
+      };
       const intl = tmp2(1114).intl;
-      obj[4] = intl.string(tmp2(1114).t.YugZY0);
-      const items1 = [callback(tmp2(4556).Text, obj), , ,];
-      obj1 = { style: null, children: null };
+      obj.children = intl.string(tmp2(1114).t.YugZY0);
+      const items1 = [closure_6(tmp2(4556).Text, obj), , ,];
+      const obj1 = { style: null, children: null };
       const items2 = [tmp.creditList, creditListContainerStyle];
-      obj1[0] = items2;
+      obj1.style = items2;
       const _Object = Object;
       let keys = Object.keys(valueResult);
-      obj1[1] = keys.map((planId) => {
+      obj1.children = keys.map((planId) => {
         const keys = Object.keys(_undefined);
-        return closure_1_6(
-          closure_1_9,
+        return timestampProducer(
+          AccountCreditTier,
           {
             planId,
             months: _undefined[planId].length,
             currentSubscription,
             shouldAddDivider: planId !== keys[Object.keys(Object, _undefined).length - 1],
-            unconsumedFractionalPremiumUnits: closure_2,
-            hasPremiumGroup: closure_1,
+            unconsumedFractionalPremiumUnits,
+            hasPremiumGroup,
           },
           planId,
         );
       });
-      items1[1] = callback(c3, obj1);
-      const obj2 = { style: null, variant: "text-sm/medium", children: null };
-      obj2[0] = tmp.creditDescription;
+      items1[1] = closure_6(c3, obj1);
+      const obj2 = { style: tmp.creditDescription, variant: "text-sm/medium", children: null };
       const intl2 = tmp2(1114).intl;
-      obj2[2] = intl2.string(tmp2(1114).t.kNEjGm);
-      items1[2] = callback(tmp2(4556).Text, obj2);
+      obj2.children = intl2.string(tmp2(1114).t.kNEjGm);
+      items1[2] = closure_6(tmp2(4556).Text, obj2);
       let tmp9Result = null;
       if (null != currentSubscription) {
         tmp9Result = null;
         if (currentSubscription.isPurchasedExternally) {
-          const obj3 = { style: null, variant: "text-sm/medium", children: null };
-          obj3[0] = tmp.creditDescription;
+          const obj3 = { style: tmp.creditDescription, variant: "text-sm/medium", children: null };
           const intl3 = tmp2(1114).intl;
-          obj3[2] = intl3.string(tmp2(1114).t.azRP0E);
-          tmp9Result = callback(tmp2(4556).Text, obj3);
+          obj3.children = intl3.string(tmp2(1114).t.azRP0E);
+          tmp9Result = closure_6(tmp2(4556).Text, obj3);
         }
       }
       items1[3] = tmp9Result;
-      obj[1] = items1;
+      obj.children = items1;
       return closure_7(c3, obj);
     }
-    obj8 = getPremiumPlanItemDefault;
+    obj8 = PremiumUtilsDefault;
     tmp11 = importDefault;
   }
   return null;

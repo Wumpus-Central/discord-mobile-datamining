@@ -1,41 +1,45 @@
 // discord_app/modules/content_inventory/ContentInventoryActionCreators.tsx
-import dispatcherDefault from "../../Dispatcher.tsx";
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
-import QUICK_SWITCHERDefault from "../app_analytics/AnalyticsLocation.tsx";
-import showUserProfileAll from "ContentInventoryPlatformActionCreators.native.tsx";
-import closure_3 from "../../stores/ChannelStore.tsx";
-import closure_4 from "../../stores/SelectedChannelStore.tsx";
-import closure_5 from "../../stores/SelectedGuildStore.tsx";
-import closure_6 from "../../stores/UserStore.tsx";
-import closure_7 from "ContentInventoryPersistedStore.tsx";
-import { AnalyticEvents } from "../../Constants.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
+import AnalyticsLocationDefault from "../app_analytics/AnalyticsLocation.tsx";
+import ContentInventoryPlatformActionCreatorsAll from "ContentInventoryPlatformActionCreators.native.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
+import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
+import SelectedGuildStore from "../../stores/SelectedGuildStore.tsx";
+import UserStore from "../../stores/UserStore.tsx";
+import ContentInventoryPersistedStore from "ContentInventoryPersistedStore.tsx";
 
-const result = require("set").fileFinishedImporting("modules/content_inventory/ContentInventoryActionCreators.tsx");
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/content_inventory/ContentInventoryActionCreators.tsx");
 
 export const toggleMemberListContentFeedHidden = function toggleMemberListContentFeedHidden() {
-  let obj = dispatcherDefault;
+  let obj = DispatcherDefault;
   obj.dispatch({ type: "CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN" });
-  obj = { channel_id: channelId.getChannelId(), guild_id: guildId.getGuildId(), hidden: hidden.hidden };
-  expandEventPropertiesDefault.track(AnalyticEvents.MEMBERLIST_CONTENT_FEED_HIDDEN, obj);
+  obj = {
+    channel_id: SelectedChannelStore.getChannelId(),
+    guild_id: SelectedGuildStore.getGuildId(),
+    hidden: ContentInventoryPersistedStore.hidden,
+  };
+  AnalyticsUtilsDefault.track(AnalyticEvents.MEMBERLIST_CONTENT_FEED_HIDDEN, obj);
 };
 export const onGameProfileOpen = function onGameProfileOpen() {
-  dispatcherDefault.dispatch({ type: "GAME_PROFILE_OPEN" });
+  DispatcherDefault.dispatch({ type: "GAME_PROFILE_OPEN" });
 };
 export const onTapContentInventoryEntryEmbed = function onTapContentInventoryEntryEmbed(authorId) {
   ({ message, tappedElement } = authorId);
-  channel = channel.getChannel(message.channel_id);
+  const channel = ChannelStore.getChannel(message.channel_id);
   if ("avatar" === tappedElement) {
-    user = user.getUser(authorId.authorId);
+    const user = UserStore.getUser(authorId.authorId);
     if (null != user) {
-      let showUserProfileResult = { userId: null, channelId: null, messageId: null, sourceAnalyticsLocations: null };
-      showUserProfileResult[0] = user.id;
+      let showUserProfileResult = { userId: user.id, channelId: null, messageId: null, sourceAnalyticsLocations: null };
       let id;
       if (channel != null) {
         id = channel.id;
       }
-      showUserProfileResult[1] = id;
-      showUserProfileResult[2] = message.id;
-      let items = QUICK_SWITCHERDefault;
+      showUserProfileResult.channelId = id;
+      showUserProfileResult.messageId = message.id;
+      let items = AnalyticsLocationDefault;
       if (tmp2) {
         items = [];
         items[0] = items.AVATAR;
@@ -43,12 +47,11 @@ export const onTapContentInventoryEntryEmbed = function onTapContentInventoryEnt
       } else {
         items1 = [items.USERNAME];
       }
-      showUserProfileResult[3] = items1;
-      showUserProfileResult = showUserProfileAll.showUserProfile(showUserProfileResult);
-      const obj2 = showUserProfileAll;
+      showUserProfileResult.sourceAnalyticsLocations = items1;
+      showUserProfileResult = ContentInventoryPlatformActionCreatorsAll.showUserProfile(showUserProfileResult);
     }
   }
 };
 export const clearDeleteHistoryError = function clearDeleteHistoryError() {
-  dispatcherDefault.dispatch({ type: "CONTENT_INVENTORY_CLEAR_DELETE_HISTORY_ERROR" });
+  DispatcherDefault.dispatch({ type: "CONTENT_INVENTORY_CLEAR_DELETE_HISTORY_ERROR" });
 };

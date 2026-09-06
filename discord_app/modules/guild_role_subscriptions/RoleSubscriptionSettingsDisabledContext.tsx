@@ -1,13 +1,15 @@
 // discord_app/modules/guild_role_subscriptions/RoleSubscriptionSettingsDisabledContext.tsx
-import set from "../../../_runtime/00002_set.js";
-import context from "../creator_monetization/CreatorMonetizationSettingsDisabledContext.tsx";
-import contextDefault from "../creator_monetization/CreatorMonetizationSettingsDisabledContext.tsx";
+import CreatorMonetizationSettingsDisabledContext from "../creator_monetization/CreatorMonetizationSettingsDisabledContext.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting(
+const CreatorMonetizationSettingsDisabledContextDefault = CreatorMonetizationSettingsDisabledContext;
+
+const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/RoleSubscriptionSettingsDisabledContext.tsx",
 );
 
-export default contextDefault;
-export const useRoleSubscriptionSettingsDisabled = context.useCreatorMonetizationSettingsDisabled;
+export default CreatorMonetizationSettingsDisabledContextDefault;
+export const useRoleSubscriptionSettingsDisabled =
+  CreatorMonetizationSettingsDisabledContext.useCreatorMonetizationSettingsDisabled;
 export const RoleSubscriptionSettingsDisabledContextProvider =
-  context.CreatorMonetizationSettingsDisabledContextProvider;
+  CreatorMonetizationSettingsDisabledContext.CreatorMonetizationSettingsDisabledContextProvider;

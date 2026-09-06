@@ -1,42 +1,46 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/useTextChannelPressEvents.tsx
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../../../stores/ChannelStore.tsx";
+import transitionToChannel from "../../../../routing/transitionToChannel.tsx";
+import ChannelActionCreatorsDefault from "../../../../../actions/ChannelActionCreators.tsx";
+import showLongPressForumPostActionSheetDefault from "../../../../action_sheet/native/components/showLongPressForumPostActionSheet.tsx";
+import openChannelLongPressActionSheet from "../../../../channel/native/openChannelLongPressActionSheet.tsx";
+import showThreadLongPressActionSheetDefault from "../../../../threads/native/components/showThreadLongPressActionSheet.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
+import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting(
+require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting(
   "modules/main_tabs_v2/native/shared_components/guild_channels/useTextChannelPressEvents.tsx",
 );
 
 export const useTextChannelPressEvents = function useTextChannelPressEvents(channel, flag2) {
-  closure_0 = channel;
-  closure_1 = flag2;
+  const user = channel;
+  const navigationReplace = flag2;
+  let obj = { onPress: null, onLongPress: null, unstable_pressDelay: 32 };
   const items = [, ,];
   ({ id: arr[0], guild_id: arr[1] } = channel);
   items[2] = flag2;
+  obj.onPress = noop.useCallback(() => {
+    let obj = ChannelActionCreatorsDefault;
+    obj.preload(user.guild_id, user.id);
+    obj = { navigationReplace };
+    transitionToChannel.transitionToChannel(user.id, obj);
+  }, items);
   const items1 = [channel];
-  return {
-    onPress: React.useCallback(() => {
-      let obj = callback(closure_1_2[2]);
-      obj.preload(channel.guild_id, channel.id);
-      obj = { navigationReplace: callback };
-      channel(closure_1_2[3]).transitionToChannel(channel.id, obj);
-    }, items),
-    onLongPress: React.useCallback(() => {
-      channel = closure_1_4.getChannel(channel.parent_id);
-      if (null != channel) {
-        if (channel.isForumLikeChannel()) {
-          if (obj.isForumPost()) {
-            callback(closure_1_2[4])(obj, channel);
-          }
+  obj.onLongPress = noop.useCallback(() => {
+    const channel = ChannelStore.getChannel(user.parent_id);
+    if (null != channel) {
+      if (channel.isForumLikeChannel()) {
+        if (obj.isForumPost()) {
+          showLongPressForumPostActionSheetDefault(obj, channel);
         }
       }
-      if (channel.isThread()) {
-        callback(closure_1_2[5])(obj.id);
-      } else {
-        const result = channel(closure_1_2[6]).openChannelLongPressActionSheet(obj.id);
-        const obj3 = channel(closure_1_2[6]);
-      }
-    }, items1),
-    unstable_pressDelay: 32,
-  };
+    }
+    if (user.isThread()) {
+      showThreadLongPressActionSheetDefault(obj.id);
+    } else {
+      const result = openChannelLongPressActionSheet.openChannelLongPressActionSheet(obj.id);
+    }
+  }, items1);
+  return obj;
 };

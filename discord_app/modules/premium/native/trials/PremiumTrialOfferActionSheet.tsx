@@ -1,12 +1,16 @@
 // discord_app/modules/premium/native/trials/PremiumTrialOfferActionSheet.tsx
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import { PremiumTypes } from "../../PremiumConstants.tsx";
-import { AnalyticEvents } from "../../../../Constants.tsx";
-import { ContentDismissActionType } from "../../../dismissible_content/DismissibleContentConstants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
+import openPremiumModalDefault from "../../../../components_native/premium/openPremiumModal.tsx";
+import UserTrialActionCreatorsDefault from "../../UserTrialActionCreators.android.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/premium/native/trials/PremiumTrialOfferActionSheet.tsx");
+const require = fn;
+const PremiumTypes = fn(1373).PremiumTypes;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/premium/native/trials/PremiumTrialOfferActionSheet.tsx");
 
 export default function _default(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
@@ -17,47 +21,41 @@ export default function _default(markAsDismissed) {
   }
   let analyticsLocations;
   analyticsLocations = userTrialOffer(analyticsLocations[5])(userTrialOffer(analyticsLocations[6]).PREMIUM_TRIAL_OFFER_ACTION_SHEET).analyticsLocations;
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (null != userTrialOffer) {
-      let obj = userTrialOffer(analyticsLocations[7]);
-      obj = { location: null, trial_id: null };
-      obj[0] = analyticsLocations;
-      obj[1] = tmp.trialId;
-      obj.track(closure_1_5.PREMIUM_TRIAL_OFFER_ACTION_SHEET_VIEWED, obj);
-      const result = userTrialOffer(analyticsLocations[8]).acknowledgeUserTrialOffer(tmp);
-      const obj3 = userTrialOffer(analyticsLocations[8]);
+      const obj = { location: analyticsLocations, trial_id: tmp.trialId };
+      obj.track(AnalyticEvents.PREMIUM_TRIAL_OFFER_ACTION_SHEET_VIEWED, obj);
+      const result = UserTrialActionCreatorsDefault.acknowledgeUserTrialOffer(tmp);
     }
   }, []);
   const items = [userTrialOffer, markAsDismissed];
-  const effect1 = React.useEffect(() => {
+  const effect1 = noop.useEffect(() => {
     if (null == userTrialOffer) {
-      markAsDismissed(closure_1_6.AUTO_DISMISS);
+      markAsDismissed(ContentDismissActionType.AUTO_DISMISS);
     }
   }, items);
   const items1 = [analyticsLocations, markAsDismissed, userTrialOffer];
   const items2 = [analyticsLocations, markAsDismissed, userTrialOffer];
-  const callback = React.useCallback(() => {
-    let obj = userTrialOffer(analyticsLocations[7]);
-    obj = { location: analyticsLocations, trial_id: null };
+  const callback = noop.useCallback(() => {
+    const obj = { location: analyticsLocations, trial_id: null };
     let trialId;
     if (userTrialOffer != null) {
       trialId = userTrialOffer.trialId;
     }
-    obj[1] = trialId;
-    obj.track(closure_1_5.PREMIUM_TRIAL_OFFER_ACTION_SHEET_DISMISSED, obj);
-    markAsDismissed(closure_1_6.USER_DISMISS);
+    obj.trial_id = trialId;
+    obj.track(AnalyticEvents.PREMIUM_TRIAL_OFFER_ACTION_SHEET_DISMISSED, obj);
+    markAsDismissed(ContentDismissActionType.USER_DISMISS);
   }, items1);
-  const callback1 = React.useCallback(() => {
-    let obj = userTrialOffer(analyticsLocations[7]);
-    obj = { location: analyticsLocations, trial_id: null };
+  const callback1 = noop.useCallback(() => {
+    const obj = { location: analyticsLocations, trial_id: null };
     let trialId;
     if (userTrialOffer != null) {
       trialId = userTrialOffer.trialId;
     }
-    obj[1] = trialId;
-    obj.track(closure_1_5.PREMIUM_TRIAL_OFFER_ACTION_SHEET_CTA_CLICKED, obj);
-    markAsDismissed(closure_1_6.TAKE_ACTION);
-    userTrialOffer(analyticsLocations[9])({ analyticsLocations });
+    obj.trial_id = trialId;
+    obj.track(AnalyticEvents.PREMIUM_TRIAL_OFFER_ACTION_SHEET_CTA_CLICKED, obj);
+    markAsDismissed(ContentDismissActionType.TAKE_ACTION);
+    openPremiumModalDefault({ analyticsLocations });
   }, items2);
   markAsDismissed(analyticsLocations[10]);
   let interval;
@@ -74,18 +72,13 @@ export default function _default(markAsDismissed) {
       intervalCount = subscriptionTrial2.intervalCount;
     }
   }
-  { intervalType: interval, intervalCount: null }[1] = intervalCount;
+  { intervalType: interval, intervalCount: null }.intervalCount = intervalCount;
   let tmp14 = null;
   if (null != userTrialOffer) {
-    let obj = { startExpanded: true, onDismiss: null, children: null };
-    obj[1] = callback;
-    obj = { intervalDuration: null, trialOffer: null, onConfirm: null, fallbackPremiumType: null };
-    obj[0] = tmp13;
-    obj[1] = userTrialOffer;
-    obj[2] = callback1;
-    obj[3] = TIER_2;
-    obj[2] = jsx(userTrialOffer(tmp3[12]), { intervalDuration: null, trialOffer: null, onConfirm: null, fallbackPremiumType: null });
-    tmp14 = jsx(markAsDismissed(tmp3[11]).BottomSheet, { intervalDuration: null, trialOffer: null, onConfirm: null, fallbackPremiumType: null }, userTrialOffer.id);
+    let obj = { startExpanded: true, onDismiss: callback, children: null };
+    obj = { intervalDuration: tmp13, trialOffer: userTrialOffer, onConfirm: callback1, fallbackPremiumType: TIER_2 };
+    obj.children = jsx(userTrialOffer(tmp3[12]), { intervalDuration: tmp13, trialOffer: userTrialOffer, onConfirm: callback1, fallbackPremiumType: TIER_2 });
+    tmp14 = jsx(markAsDismissed(tmp3[11]).BottomSheet, { intervalDuration: tmp13, trialOffer: userTrialOffer, onConfirm: callback1, fallbackPremiumType: TIER_2 }, userTrialOffer.id);
   }
   return tmp14;
 };

@@ -1,49 +1,49 @@
 // discord_app/modules/premium/gifting/GiftingBadgeConstants.tsx
-import set from "../../../../_runtime/00002_set.js";
-import initialize from "../../badges/BadgeDirectoryStore.tsx";
+import BadgeDirectoryStore from "../../badges/BadgeDirectoryStore.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-let closure_0 = initialize.getSingleRequirementThreshold;
-const result = set.fileFinishedImporting("modules/premium/gifting/GiftingBadgeConstants.tsx");
+let closure_0 = BadgeDirectoryStore.getSingleRequirementThreshold;
+const result = size.fileFinishedImporting("modules/premium/gifting/GiftingBadgeConstants.tsx");
 
-export const getTierForProgress = function getTierForProgress(arr) {
+export const getTierForProgress = function getTierForProgress(arr, arg1) {
   closure_0 = arg1;
-  return arr.reduce((arg0, arg1) => {
-    let tmp = arg0;
-    const tmp3 = callback(arg1);
-    let tmp4 = arg0;
-    if (callback >= tmp3) {
+  return arr.reduce((acc, item) => {
+    let tmp = acc;
+    const tmp3 = closure_0(item);
+    let tmp4 = acc;
+    if (closure_0 >= tmp3) {
       if (null == tmp) {
-        tmp = arg1;
+        tmp = item;
       }
       tmp4 = tmp;
     }
     return tmp4;
   }, null);
 };
-export const getNextTierForProgress = function getNextTierForProgress(arr) {
+export const getNextTierForProgress = function getNextTierForProgress(arr, arg1) {
   closure_0 = arg1;
-  return arr.reduce((arg0, arg1) => {
-    let tmp = arg0;
-    const tmp3 = callback(arg1);
-    let tmp4 = arg0;
-    if (callback < tmp3) {
+  return arr.reduce((acc, item) => {
+    let tmp = acc;
+    const tmp3 = closure_0(item);
+    let tmp4 = acc;
+    if (closure_0 < tmp3) {
       if (null == tmp) {
-        tmp = arg1;
+        tmp = item;
       }
       tmp4 = tmp;
     }
     return tmp4;
   }, null);
 };
-export const getRemainingGiftsToNextTier = function getRemainingGiftsToNextTier(arr) {
-  const callback = arg1;
-  const reduced = arr.reduce((arg0, arg1) => {
-    let tmp = arg0;
-    const tmp3 = callback(arg1);
-    let tmp4 = arg0;
-    if (callback < tmp3) {
+export const getRemainingGiftsToNextTier = function getRemainingGiftsToNextTier(arr, arg1) {
+  closure_0 = arg1;
+  const reduced = arr.reduce((acc, item) => {
+    let tmp = acc;
+    const tmp3 = closure_0(item);
+    let tmp4 = acc;
+    if (closure_0 < tmp3) {
       if (null == tmp) {
-        tmp = arg1;
+        tmp = item;
       }
       tmp4 = tmp;
     }
@@ -51,7 +51,7 @@ export const getRemainingGiftsToNextTier = function getRemainingGiftsToNextTier(
   }, null);
   let diff = null;
   if (null != reduced) {
-    diff = callback(reduced) - arg1;
+    diff = closure_0(reduced) - arg1;
   }
   return diff;
 };

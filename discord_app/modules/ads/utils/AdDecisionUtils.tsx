@@ -1,10 +1,12 @@
 // discord_app/modules/ads/utils/AdDecisionUtils.tsx
-import setDefault from "../../../utils/Durations.tsx";
+import DurationsDefault from "../../../utils/Durations.tsx";
 import AdCreativeType from "../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 
-require = arg1;
-let result = 6 * setDefault.Millis.HOUR;
-const result1 = require("set").fileFinishedImporting("modules/ads/utils/AdDecisionUtils.tsx");
+require = fn;
+let result = 6 * DurationsDefault.Millis.HOUR;
+let c2 = result;
+const size = fn(2);
+const result1 = size.fileFinishedImporting("modules/ads/utils/AdDecisionUtils.tsx");
 
 export const MAX_RESPONSE_TTL_MS = result;
 export const getDeliveredAdCreativeId = function getDeliveredAdCreativeId(type) {
@@ -45,11 +47,11 @@ export const getDeliveredBounty = function getDeliveredBounty(creative1) {
 };
 export const resolveResponseTtl = function resolveResponseTtl(responseTtlSeconds) {
   if (null == responseTtlSeconds) {
-    return closure_2;
+    return result;
   } else {
     result = 1000 * responseTtlSeconds;
-    let tmp3 = closure_2;
-    if (result < closure_2) {
+    let tmp3 = result;
+    if (result < result) {
       tmp3 = tmp2;
       if (0 < result) {
         tmp3 = result;
@@ -71,18 +73,18 @@ export const questAdDecisionFromAdDecision = function questAdDecisionFromAdDecis
   };
   response_ttl_seconds = response_ttl_seconds.response_ttl_seconds;
   if (null == response_ttl_seconds) {
-    let tmp3 = closure_2;
+    let tmp3 = result;
   } else {
     result = 1000 * response_ttl_seconds;
-    tmp3 = closure_2;
-    if (result < closure_2) {
+    tmp3 = result;
+    if (result < result) {
       tmp3 = tmp2;
       if (0 < result) {
         tmp3 = result;
       }
     }
   }
-  obj[2] = tmp3;
+  obj.ttlMillis = tmp3;
   const ad_identifiers = response_ttl_seconds.ad_identifiers;
   let ad_id;
   if (ad_identifiers != null) {
@@ -103,39 +105,39 @@ export const questAdDecisionFromAdDecision = function questAdDecisionFromAdDecis
   if (ad_identifiers2 != null) {
     adset_id = ad_identifiers2.adset_id;
   }
-  obj[1] = adset_id;
+  obj.adset_id = adset_id;
   const ad_identifiers3 = response_ttl_seconds.ad_identifiers;
   let ad_set_id;
   if (ad_identifiers3 != null) {
     ad_set_id = ad_identifiers3.ad_set_id;
   }
-  obj[2] = ad_set_id;
+  obj.ad_set_id = ad_set_id;
   const ad_identifiers4 = response_ttl_seconds.ad_identifiers;
   let campaign_id;
   if (ad_identifiers4 != null) {
     campaign_id = ad_identifiers4.campaign_id;
   }
-  obj[3] = campaign_id;
+  obj.campaign_id = campaign_id;
   const ad_identifiers5 = response_ttl_seconds.ad_identifiers;
   let creative_id;
   if (ad_identifiers5 != null) {
     creative_id = ad_identifiers5.creative_id;
   }
-  obj[4] = creative_id;
+  obj.creative_id = creative_id;
   const ad_identifiers6 = response_ttl_seconds.ad_identifiers;
   let creative_type;
   if (ad_identifiers6 != null) {
     creative_type = ad_identifiers6.creative_type;
   }
-  obj[5] = creative_type;
-  obj[6] = creative.requestId;
-  obj[7] = null != response_ttl_seconds.ad_identifiers;
-  obj[3] = obj;
+  obj.creative_type = creative_type;
+  obj.decision_id = creative.requestId;
+  obj.is_targeted = null != response_ttl_seconds.ad_identifiers;
+  obj.adDecisionData = obj;
   ({
-    ad_context: obj[4],
-    metadata_sealed: obj[5],
-    traffic_metadata_sealed: obj[6],
-    provenance_metadata_sealed: obj[7],
+    ad_context: obj.adContext,
+    metadata_sealed: obj.metadataSealed,
+    traffic_metadata_sealed: obj.trafficMetadataSealed,
+    provenance_metadata_sealed: obj.provenanceMetadataSealed,
   } = response_ttl_seconds);
   return obj;
 };

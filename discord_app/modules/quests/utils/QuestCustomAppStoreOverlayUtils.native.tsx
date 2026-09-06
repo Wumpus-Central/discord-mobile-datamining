@@ -1,7 +1,7 @@
 // discord_app/modules/quests/utils/QuestCustomAppStoreOverlayUtils.native.tsx
-import set from "../../../../_runtime/00002_set.js";
 import apexExperiment from "../experiments/index.tsx";
-import supportedConsoles from "QuestPlatformUtils.tsx";
+import QuestPlatformUtils from "QuestPlatformUtils.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 function fetchCustomAppStoreOverlayContent(cta) {
   const CustomAppStoreOverlayExperiment = apexExperiment.CustomAppStoreOverlayExperiment;
@@ -28,14 +28,14 @@ function fetchCustomAppStoreOverlayContent(cta) {
   }
   return resolved;
 }
-const result = set.fileFinishedImporting("modules/quests/utils/QuestCustomAppStoreOverlayUtils.native.tsx");
+const result = size.fileFinishedImporting("modules/quests/utils/QuestCustomAppStoreOverlayUtils.native.tsx");
 
 export const canOpenCustomAppStoreOverlayFromCta = function canOpenCustomAppStoreOverlayFromCta(cta) {
   const CustomAppStoreOverlayExperiment = apexExperiment.CustomAppStoreOverlayExperiment;
   let enabled = CustomAppStoreOverlayExperiment.getConfig({ location: "quest_open_game_link" }).enabled;
   if (enabled) {
-    enabled = null != supportedConsoles.getInlineStoreParamsFromCta(cta);
-    const tmpResult = supportedConsoles;
+    enabled = null != QuestPlatformUtils.getInlineStoreParamsFromCta(cta);
+    const tmpResult = QuestPlatformUtils;
   }
   return enabled;
 };
@@ -44,8 +44,8 @@ export const prefetchCustomAppStoreOverlayContent = function prefetchCustomAppSt
   const CustomAppStoreOverlayExperiment = apexExperiment.CustomAppStoreOverlayExperiment;
   let enabled = CustomAppStoreOverlayExperiment.getConfig({ location: "quest_open_game_link" }).enabled;
   if (enabled) {
-    enabled = null != supportedConsoles.getInlineStoreParamsFromCta(cta);
-    const tmpResult = supportedConsoles;
+    enabled = null != QuestPlatformUtils.getInlineStoreParamsFromCta(cta);
+    const tmpResult = QuestPlatformUtils;
   }
   if (enabled) {
     fetchCustomAppStoreOverlayContent(cta).catch(() => {});

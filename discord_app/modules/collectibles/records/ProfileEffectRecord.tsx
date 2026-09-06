@@ -1,13 +1,10 @@
 // discord_app/modules/collectibles/records/ProfileEffectRecord.tsx
-import fromServerDefault from "BaseCollectiblesItemRecord.tsx";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import BaseCollectiblesItemRecord from "BaseCollectiblesItemRecord.tsx";
 
-require = arg1;
-fromServerDefault;
-let prototype;
-prototype = function ProfileEffectRecord(arg0) {
+require = fn;
+const prototype = function ProfileEffectRecord(arg0) {
   const tmp2 = new prototype(arg0, new.target, new.target, tmp);
-  // ThrowIfThisInitialized (0x7c)
   tmp2.type = CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT;
   ({
     title: tmp2.title,
@@ -27,28 +24,29 @@ prototype["fromServer"] = function fromServer(arg0) {
   let tmp = prototype;
   const merged = Object.assign(super.fromServer(arg0));
   const merged1 = Object.assign(arg0);
-  if (typeof prototype !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof prototype === "function") {
+    tmp = new tmp(obj, arg0, this, merged);
+    tmp.type = CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT;
+    ({
+      title: tmp7.title,
+      description: tmp7.description,
+      accessibilityLabel: tmp7.accessibilityLabel,
+      reducedMotionSrc: tmp7.reducedMotionSrc,
+      thumbnailPreviewSrc: tmp7.thumbnailPreviewSrc,
+      effects: tmp7.effects,
+      animationType: tmp7.animationType,
+      staticFrameSrc: tmp7.staticFrameSrc,
+    } = obj);
+    return tmp;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  tmp = new tmp(obj, arg0, this, merged);
-  // ThrowIfThisInitialized (0x7c)
-  tmp.type = CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT;
-  ({
-    title: tmp4.title,
-    description: tmp4.description,
-    accessibilityLabel: tmp4.accessibilityLabel,
-    reducedMotionSrc: tmp4.reducedMotionSrc,
-    thumbnailPreviewSrc: tmp4.thumbnailPreviewSrc,
-    effects: tmp4.effects,
-    animationType: tmp4.animationType,
-    staticFrameSrc: tmp4.staticFrameSrc,
-  } = obj);
-  return tmp;
 };
-const result = require("set").fileFinishedImporting("modules/collectibles/records/ProfileEffectRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/records/ProfileEffectRecord.tsx");
 
 export default prototype;
 export const RestartMethod = { FromLoop: "fromLoop", FromStart: "fromStart" };
-export const isProfileEffectRecord = function isProfileEffectRecord(first) {
-  return first instanceof prototype;
+export const isProfileEffectRecord = function isProfileEffectRecord(first1) {
+  return first1 instanceof prototype;
 };

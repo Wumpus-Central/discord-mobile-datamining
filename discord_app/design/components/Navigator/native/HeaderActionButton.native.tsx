@@ -1,28 +1,31 @@
 // discord_app/design/components/Navigator/native/HeaderActionButton.native.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import Text from "../../Text/native/Text.tsx";
-import IconSizesDefault from "../../../void/Icon/native/Icon.tsx";
-import MINIMUM_HIT_AREA from "../../Button/native/ButtonConstants.native.tsx";
-import PressableBase from "../../../void/Pressables/native/Pressables.tsx";
-import { ANDROID_FOREGROUND_RIPPLE } from "../../../void/Form/native/FormConstants.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../Styles/native/createStyles.tsx";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Text_Text from "../../Text/native/Text.tsx";
+import IconDefault from "../../../void/Icon/native/Icon.tsx";
+import ButtonConstants from "../../Button/native/ButtonConstants.native.tsx";
+import Pressables from "../../../void/Pressables/native/Pressables.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-({ jsx: c4, jsxs: c5 } = jsxProd);
+require = fn;
+const ANDROID_FOREGROUND_RIPPLE = fn(1182).ANDROID_FOREGROUND_RIPPLE;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4560);
 let obj = {
   button: { alignSelf: "stretch", alignItems: "center", justifyContent: "center", flexDirection: "row" },
   text: null,
   buttonFont: null,
   buttonDisabled: null,
 };
-obj = { color: ThemesDefault.colors.TEXT_BRAND, textTransform: "capitalize" };
-obj[1] = obj;
-obj[2] = { fontSize: 16, maxWidth: 80 };
-obj[3] = { opacity: 0.6 };
-let closure_6 = createCacheKey.createStyles(obj);
-const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
+obj = { color: nativeDefault.colors.TEXT_BRAND, textTransform: "capitalize" };
+obj.text = obj;
+obj.buttonFont = { fontSize: 16, maxWidth: 80 };
+obj.buttonDisabled = { opacity: 0.6 };
+let closure_6 = createStyles.createStyles(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Navigator/native/HeaderActionButton.native.tsx");
+
+export const HeaderActionButton = noop.forwardRef((arg0, ref) => {
   ({ text, source, accessibilityLabel, IconComponent, disabled } = arg0);
   ({
     style,
@@ -38,28 +41,24 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
     iconSize,
     hitSlop,
   } = arg0);
-  const tmp = callback2();
+  const tmp = closure_6();
   if (null != text) {
     let obj = { style: null, variant: "text-md/semibold", lineClamp: 1, maxFontSizeMultiplier: null, children: null };
     const items = [, ,];
     ({ text: arr[0], buttonFont: arr[1] } = tmp);
     items[2] = textStyle;
-    obj[0] = items;
-    obj[3] = MINIMUM_HIT_AREA.BUTTON_DEFAULT_MAX_FONT_SIZE_MULTIPLIER;
-    obj[4] = text;
-    let tmp2 = callback(Text.Text, obj);
+    obj.style = items;
+    obj.maxFontSizeMultiplier = ButtonConstants.BUTTON_DEFAULT_MAX_FONT_SIZE_MULTIPLIER;
+    obj.children = text;
+    let tmp2 = React4(Text_Text.Text, obj);
   } else if (null != IconComponent) {
-    obj = { size: null };
-    obj[0] = IconComponentSize;
-    tmp2 = callback(IconComponent, obj);
+    obj = { size: IconComponentSize };
+    tmp2 = React4(IconComponent, obj);
   } else if (null != source) {
-    obj = { source: null, style: null, size: null };
-    obj[0] = source;
-    obj[1] = imageStyle;
-    obj[2] = iconSize;
-    tmp2 = callback(IconSizesDefault, obj);
+    obj = { source, style: imageStyle, size: iconSize };
+    tmp2 = React4(IconDefault, obj);
   }
-  obj1 = {
+  const obj1 = {
     ref,
     accessibilityLabel: null,
     accessibilityHint: null,
@@ -77,29 +76,26 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   if (accessibilityLabel == null) {
     accessibilityLabel = text;
   }
-  obj1[1] = accessibilityLabel;
-  obj1[2] = accessibilityHint;
-  obj1[3] = accessibilityActions;
-  obj1[4] = onAccessibilityAction;
-  obj1[6] = onPress;
+  obj1.accessibilityLabel = accessibilityLabel;
+  obj1.accessibilityHint = accessibilityHint;
+  obj1.accessibilityActions = accessibilityActions;
+  obj1.onAccessibilityAction = onAccessibilityAction;
+  obj1.onPress = onPress;
   let tmp11;
   if (foregroundRipple) {
     tmp11 = ANDROID_FOREGROUND_RIPPLE;
   }
-  obj1[8] = tmp11;
+  obj1.androidRippleConfig = tmp11;
   const items1 = [tmp.button, style];
   let buttonDisabled = disabled;
   if (disabled) {
     buttonDisabled = tmp.buttonDisabled;
   }
   items1[2] = buttonDisabled;
-  obj1[9] = items1;
-  obj1[10] = hitSlop;
-  obj1[11] = disabled;
+  obj1.style = items1;
+  obj1.hitSlop = hitSlop;
+  obj1.disabled = disabled;
   const items2 = [tmp2, icon];
-  obj1[12] = items2;
-  return closure_5(PressableBase.PressableOpacity, obj1);
+  obj1.children = items2;
+  return hasOwnProperty(Pressables.PressableOpacity, obj1);
 });
-const result = require("set").fileFinishedImporting("design/components/Navigator/native/HeaderActionButton.native.tsx");
-
-export const HeaderActionButton = forwardRefResult;

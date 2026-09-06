@@ -1,14 +1,15 @@
 // discord_app/modules/user_profile/native/openUserProfileAvatarMediaViewer.tsx
-import _openMediaModal from "../../media_viewer/native/components/openMediaModal.tsx";
-import closure_2 from "../../a11y/AccessibilityStore.tsx";
-import { AVATAR_MAX_SIZE } from "../../../Constants.tsx";
+import openMediaModal from "../../media_viewer/native/components/openMediaModal.tsx";
+import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_profile/native/openUserProfileAvatarMediaViewer.tsx");
+require = fn;
+const AVATAR_MAX_SIZE = fn(1074).AVATAR_MAX_SIZE;
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/openUserProfileAvatarMediaViewer.tsx");
 
 export default function openUserProfileAvatarMediaViewer(user) {
   user = user.user;
-  useReducedMotion = useReducedMotion.useReducedMotion;
+  const useReducedMotion = AccessibilityStore.useReducedMotion;
   let animate = !useReducedMotion;
   ({ guildId, originViewOrOriginLayout } = user);
   if (!useReducedMotion) {
@@ -16,8 +17,7 @@ export default function openUserProfileAvatarMediaViewer(user) {
   }
   const avatarURL = user.getAvatarURL(guildId, tmp, animate);
   if (typeof avatarURL === "string") {
-    let obj = _openMediaModal;
-    obj = {
+    const obj = {
       initialSources: null,
       originViewOrOriginLayout: null,
       analyticsSource: "user_profile_avatar",
@@ -27,13 +27,10 @@ export default function openUserProfileAvatarMediaViewer(user) {
       disableMediaOverlayButton: true,
       disableMediaOverlayFooter: true,
     };
-    obj = { uri: null, mediaIndex: 0, height: null, width: null, accessoryType: "embed" };
-    obj[0] = avatarURL;
-    obj[2] = tmp;
-    obj[3] = tmp;
-    const items = [obj];
-    obj[0] = items;
-    obj[1] = originViewOrOriginLayout;
+    const size = { uri: avatarURL, mediaIndex: 0, height: tmp, width: tmp, accessoryType: "embed" };
+    const items = [size];
+    obj.initialSources = items;
+    obj.originViewOrOriginLayout = originViewOrOriginLayout;
     obj.openMediaModal(obj);
   }
 }

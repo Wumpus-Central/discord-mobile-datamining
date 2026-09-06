@@ -1,8 +1,8 @@
 // discord_app/modules/premium/experiments/TwoWeekTrialOfferGate.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/premium/experiments/TwoWeekTrialOfferGate.tsx");
+const result = size.fileFinishedImporting("modules/premium/experiments/TwoWeekTrialOfferGate.tsx");
 
-export function isTwoWeekTrialOfferIngestAllowed(arg0) {
+export function isTwoWeekTrialOfferIngestAllowed() {
   return true;
 }

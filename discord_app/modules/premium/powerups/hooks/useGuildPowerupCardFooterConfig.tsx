@@ -1,35 +1,33 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupCardFooterConfig.tsx
 import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled.tsx";
 import usePowerupActiveStatusDefault from "usePowerupActiveStatus.tsx";
-import closure_3 from "../../../../stores/GuildStore.tsx";
-import BoostedGuildTiers from "../constants/GuildPowerupsConstants.tsx";
-import { GuildFeatures } from "../../../../Constants.tsx";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import GuildStore from "../../../../stores/GuildStore.tsx";
 
-const require = arg1;
+const require = fn;
+const GuildPowerupsConstants = fn(4450);
 ({
   GUILD_POWERUP_CONFIGURABLE_SKUS_DESKTOP,
-  GUILD_POWERUP_CONFIGURABLE_SKUS_MOBILE: c4,
-  PowerupActiveStatusType: c5,
-} = BoostedGuildTiers);
-const result = require("set").fileFinishedImporting(
-  "modules/premium/powerups/hooks/useGuildPowerupCardFooterConfig.tsx",
-);
+  GUILD_POWERUP_CONFIGURABLE_SKUS_MOBILE: closure_4,
+  PowerupActiveStatusType: hasOwnProperty,
+} = GuildPowerupsConstants);
+const GuildFeatures = fn(1074).GuildFeatures;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupCardFooterConfig.tsx");
 
 export default function useGuildPowerupCardFooterConfig(arg0, skuId) {
-  const _require = arg0;
+  _require = arg0;
   const tmp3 = usePowerupActiveStatusDefault(arg0, skuId);
-  let obj = initialize;
-  const items = [closure_3];
+  let obj = require("initialize");
+  const items = [GuildStore];
   const items1 = [arg0];
   const stateFromStores = obj.useStateFromStores(
     items,
     () => {
-      const guild = closure_1_3.getGuild(closure_0);
+      const guild = GuildStore.getGuild(closure_0);
       let hasItem;
       if (guild != null) {
         const features = guild.features;
-        hasItem = features.has(closure_1_6.GUILD_THEME);
+        hasItem = features.has(GuildFeatures.GUILD_THEME);
       }
       return true === hasItem;
     },
@@ -37,14 +35,8 @@ export default function useGuildPowerupCardFooterConfig(arg0, skuId) {
   );
   let tmp6 = tmp3.type !== constants.INACTIVE;
   if (!tmp6) {
-    tmp6 =
-      skuId.skuId ===
-        require("../../../../../discord_common/js/shared/shared-constants/Powerups.tsx")
-          .GUILD_POWERUP_GUILD_THEME_SKU_ID && stateFromStores;
-    const tmp7 =
-      skuId.skuId ===
-        require("../../../../../discord_common/js/shared/shared-constants/Powerups.tsx")
-          .GUILD_POWERUP_GUILD_THEME_SKU_ID && stateFromStores;
+    tmp6 = skuId.skuId === require("Powerups").GUILD_POWERUP_GUILD_THEME_SKU_ID && stateFromStores;
+    const tmp7 = skuId.skuId === require("Powerups").GUILD_POWERUP_GUILD_THEME_SKU_ID && stateFromStores;
   }
   let tmp8 = tmp6;
   if (!tmp6) {
@@ -58,7 +50,7 @@ export default function useGuildPowerupCardFooterConfig(arg0, skuId) {
   if (tmp6) {
     hasItem = set.has(skuId.skuId);
   }
-  obj[1] = hasItem;
-  obj[2] = tmp6;
+  obj.showConfigureButton = hasItem;
+  obj.isPowerupActive = tmp6;
   return obj;
 }

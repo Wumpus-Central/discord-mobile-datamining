@@ -1,12 +1,12 @@
 // discord_common/js/shared/utils/PlatformUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-let obj = { WINDOWS: "WINDOWS", OSX: "OSX", LINUX: "LINUX", WEB: "WEB" };
+const PlatformTypes = { WINDOWS: "WINDOWS", OSX: "OSX", LINUX: "LINUX", WEB: "WEB" };
 let c1 = true;
 const android = "android";
-const result = set.fileFinishedImporting("../discord_common/js/shared/utils/PlatformUtils.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/utils/PlatformUtils.tsx");
 
-export const PlatformTypes = obj;
+export { PlatformTypes };
 export const isPlatformEmbedded = true;
 export const isWindows = function isWindows() {
   return /^win/.test(android);
@@ -83,7 +83,7 @@ export const platformSupportsActivityJoin = function platformSupportsActivityJoi
   return tmp;
 };
 export const getPlatform = function getPlatform() {
-  obj = /^win/;
+  const obj = /^win/;
   return obj.test(android) ? obj.WINDOWS : obj.WEB;
 };
 export function getPlatformName() {

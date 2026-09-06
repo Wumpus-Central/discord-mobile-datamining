@@ -1,9 +1,10 @@
 // discord_app/modules/premium/sounds/soundmoji/utils/getSoundFromMessage.tsx
-import closure_2 from "../../../../../stores/MessageStore.tsx";
-import { DEFAULT_SOUND_GUILD_ID } from "../../../../soundboard/SoundboardConstants.tsx";
+import MessageReferenceTypes from "../../../../../../discord_common/js/shared/shared-constants/MessageReferenceTypes.tsx";
+import SoundboardTypes from "../../../../soundboard/SoundboardTypes.tsx";
+import MessageStore from "../../../../../stores/MessageStore.tsx";
 
-const require = arg1;
-function getSoundFromSounds(arr) {
+require = fn;
+function getSoundFromSounds(arr, arg1) {
   closure_0 = arg1;
   let found;
   if (arr != null) {
@@ -11,10 +12,12 @@ function getSoundFromSounds(arr) {
   }
   return found;
 }
-const result = require("set").fileFinishedImporting("modules/premium/sounds/soundmoji/utils/getSoundFromMessage.tsx");
+const DEFAULT_SOUND_GUILD_ID = fn(5014).DEFAULT_SOUND_GUILD_ID;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/sounds/soundmoji/utils/getSoundFromMessage.tsx");
 
 export default function getSoundFromMessage(arg0, arg1, arg2, arr) {
-  let _require = arg2;
+  closure_0 = arg2;
   let found;
   if (arr != null) {
     found = arr.find((sound_id) => String(sound_id.sound_id) === String(closure_0));
@@ -24,9 +27,9 @@ export default function getSoundFromMessage(arg0, arg1, arg2, arr) {
     if (guild_id2 == null) {
       guild_id2 = DEFAULT_SOUND_GUILD_ID;
     }
-    return require("../../../../soundboard/SoundboardTypes.tsx").soundboardSoundFromAPI(found, guild_id2);
+    return SoundboardTypes.soundboardSoundFromAPI(found, guild_id2);
   } else {
-    message = message.getMessage(arg0, arg1);
+    let message = MessageStore.getMessage(arg0, arg1);
     if (null != message) {
       let type;
       if (message != null) {
@@ -35,11 +38,7 @@ export default function getSoundFromMessage(arg0, arg1, arg2, arr) {
           type = messageReference.type;
         }
       }
-      if (
-        type ===
-        require("../../../../../../discord_common/js/shared/shared-constants/MessageReferenceTypes.tsx")
-          .MessageReferenceTypes.FORWARD
-      ) {
+      if (type === MessageReferenceTypes.MessageReferenceTypes.FORWARD) {
         let messageSnapshots;
         if (message != null) {
           messageSnapshots = message.messageSnapshots;
@@ -52,15 +51,13 @@ export default function getSoundFromMessage(arg0, arg1, arg2, arr) {
           while (obj !== undefined) {
             let message = tmp2.message;
             let soundboardSounds;
-            let tmp3 = closure_4;
+            let tmp3 = getSoundFromSounds;
             if (message != null) {
               soundboardSounds = message.soundboardSounds;
             }
             let tmp3Result = tmp3(soundboardSounds, arg1);
-            let tmp6 = tmp3Result;
             if (null != tmp3Result) {
               let tmp = tmp3Result;
-              let tmp7 = obj;
               obj.return();
               break;
             }
@@ -72,7 +69,7 @@ export default function getSoundFromMessage(arg0, arg1, arg2, arr) {
         if (message != null) {
           soundboardSounds = message.soundboardSounds;
         }
-        _require = arg2;
+        closure_0 = arg2;
         if (soundboardSounds != null) {
           found1 = soundboardSounds.find((sound_id) => String(sound_id.sound_id) === String(closure_0));
         }
@@ -84,7 +81,7 @@ export default function getSoundFromMessage(arg0, arg1, arg2, arr) {
         }
         return tmp3(5020).soundboardSoundFromAPI(found1, guild_id);
       }
-      tmp3 = _require;
+      tmp3 = require;
     }
   }
 }

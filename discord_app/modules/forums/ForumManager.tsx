@@ -1,11 +1,10 @@
 // discord_app/modules/forums/ForumManager.tsx
-import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
-import loadForumPostData from "ForumPostDataLoader.tsx";
-import closure_2 from "../../stores/ChannelStore.tsx";
-import { isStaticChannelRoute } from "../channel/ChannelConstants.tsx";
+import ForumPostDataLoader from "ForumPostDataLoader.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
+import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
-require = arg1;
-initializeDefault;
+require = fn;
+const isStaticChannelRoute = fn(1964).isStaticChannelRoute;
 class ForumManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -16,15 +15,15 @@ class ForumManager extends tmp2 {
 ForumManager.prototype["handleChannelPreload"] = function handleChannelPreload(channelId) {
   channelId = channelId.channelId;
   if (!isStaticChannelRoute(channelId)) {
-    channel = channel.getChannel(channelId);
+    const channel = ChannelStore.getChannel(channelId);
     if (tmp3) {
-      loadForumPostData.preloadForumThreads(channel);
-      const obj2 = loadForumPostData;
+      ForumPostDataLoader.preloadForumThreads(channel);
     }
     tmp3 = null != channel && channel.isForumLikeChannel();
   }
 };
 const forumManager = new ForumManager();
-const result = require("set").fileFinishedImporting("modules/forums/ForumManager.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/forums/ForumManager.tsx");
 
 export default forumManager;

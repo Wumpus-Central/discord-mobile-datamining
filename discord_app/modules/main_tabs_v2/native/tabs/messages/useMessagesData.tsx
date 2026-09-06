@@ -1,14 +1,15 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/useMessagesData.tsx
-import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../../_runtime/00019_noop.js";
-import closure_5 from "../../../../gateway/GatewayConnectionStore.tsx";
-import closure_6 from "../../../../../stores/AuthenticationStore.tsx";
-import closure_7 from "../../../../../stores/RelationshipStore.tsx";
-import closure_8 from "../../../../../stores/views/PrivateChannelSortStore.tsx";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
+import GatewayConnectionStore from "../../../../gateway/GatewayConnectionStore.tsx";
+import AuthenticationStore from "../../../../../stores/AuthenticationStore.tsx";
+import RelationshipStore from "../../../../../stores/RelationshipStore.tsx";
+import PrivateChannelSortStore from "../../../../../stores/views/PrivateChannelSortStore.tsx";
 
-const require = arg1;
-let obj = { HappeningNow: 0, [0]: "HappeningNow", EmptyState: 1, [1]: "EmptyState" };
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesData.tsx");
+const require = fn;
+const MessagesDataHeader = { HappeningNow: 0, [0]: "HappeningNow", EmptyState: 1, [1]: "EmptyState" };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesData.tsx");
 
 export default function useMessagesData() {
   let items = [numFriendSuggestions, friendSuggestions];
@@ -18,14 +19,14 @@ export default function useMessagesData() {
   }));
   connected = stateFromStoresObject.connected;
   const connectedToGateway = stateFromStoresObject.connectedToGateway;
-  obj = connected(first[6]);
+  let obj = connected(first[6]);
   const items1 = [stateFromStores];
-  const tmp4 = callback(
+  const tmp4 = _slicedToArray(
     connected(first[6]).useStateFromStoresArray(items1, () => stateFromStores.getSortedChannels()),
     2,
   );
   first = tmp4[0];
-  callback = tmp6;
+  _slicedToArray = tmp6;
   let tmp8 = connected;
   const obj2 = connected(first[6]);
   if (connected) {
@@ -40,7 +41,7 @@ export default function useMessagesData() {
   const tmp7 = connectedToGateway(first[7]);
   const items2 = [setting];
   stateFromStores = connected(first[6]).useStateFromStores(items2, () => setting.getFriendCount());
-  closure_9 = setAdded.useRef(-1);
+  setAdded.useRef(-1);
   const items3 = [
     connected,
     connectedToGateway,
@@ -78,7 +79,7 @@ export default function useMessagesData() {
       bound = Math.min(tmp4, 5);
     }
     const items = [];
-    arr = items.push(arr.length);
+    items.push(arr.length);
     arr = items.push(arr1.length);
     let num4 = 0;
     if (numFriendSuggestions > 0) {
@@ -100,13 +101,13 @@ export default function useMessagesData() {
     if (first.length + length.length > 0) {
       let HappeningNow = null;
       if (!setting) {
-        HappeningNow = ref.HappeningNow;
+        HappeningNow = obj.HappeningNow;
       }
       let EmptyState = HappeningNow;
     } else {
       EmptyState = null;
       if (tmp5) {
-        EmptyState = ref.EmptyState;
+        EmptyState = obj.EmptyState;
       }
     }
     obj = {
@@ -125,7 +126,7 @@ export default function useMessagesData() {
       const _HermesInternal = HermesInternal;
       combined = "" + tmp.current;
     }
-    obj[2] = combined;
+    obj.dataKey = combined;
     let tmp26 = !tmp3;
     if (first.length + length.length <= 0) {
       tmp26 = connected;
@@ -133,10 +134,10 @@ export default function useMessagesData() {
     if (tmp26) {
       tmp26 = !tmp5;
     }
-    obj[3] = tmp26;
-    obj[4] = setAdded;
-    obj[5] = friendSuggestions;
-    obj[6] = EmptyState;
+    obj.showFullscreenEmptyState = tmp26;
+    obj.setAddedFriendSuggestions = setAdded;
+    obj.friendSuggestions = friendSuggestions;
+    obj.renderHeader = EmptyState;
     let tmp27 = connected;
     if (connected) {
       tmp27 = stateFromStores < 4;
@@ -147,8 +148,8 @@ export default function useMessagesData() {
     if (!tmp27) {
       tmp27 = tmp5;
     }
-    obj[7] = tmp27;
-    obj[8] = items;
+    obj.renderFooter = tmp27;
+    obj.sections = items;
     return obj;
   }, items3);
 }
@@ -164,4 +165,4 @@ export const MessagesDataSections = {
   Placeholders: 4,
   [4]: "Placeholders",
 };
-export const MessagesDataHeader = obj;
+export { MessagesDataHeader };

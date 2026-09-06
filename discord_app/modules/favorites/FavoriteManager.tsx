@@ -1,43 +1,39 @@
 // discord_app/modules/favorites/FavoriteManager.tsx
-import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
-import getNextPositionFromChannels from "FavoritesActionCreators.tsx";
-import closure_2 from "../../stores/AuthenticationStore.tsx";
-import items from "FavoritesGuildSuggestionsStore.tsx";
-import { NOOP } from "../../Constants.tsx";
+import FavoritesActionCreators from "FavoritesActionCreators.tsx";
+import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
+import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
-require = arg1;
+require = fn;
 function handleChannelDelete(channel) {
-  const result = getNextPositionFromChannels.removeFavoriteChannel(channel.channel.id, { trackAnalytics: false });
+  const result = FavoritesActionCreators.removeFavoriteChannel(channel.channel.id, { trackAnalytics: false });
 }
 function handleCategoryCollapse(id) {
-  const result = getNextPositionFromChannels.setFavoriteCategoriesCollapsed(true, id.id);
+  const result = FavoritesActionCreators.setFavoriteCategoriesCollapsed(true, id.id);
 }
 function handleCategoryExpand(id) {
-  const result = getNextPositionFromChannels.setFavoriteCategoriesCollapsed(false, id.id);
+  const result = FavoritesActionCreators.setFavoriteCategoriesCollapsed(false, id.id);
 }
 function handleCategoryCollapseAll(guildId) {
   if (obj.isFavoritesGuildId(guildId.guildId)) {
-    const result = getNextPositionFromChannels.setFavoriteCategoriesCollapsed(true);
-    const tmpResult = getNextPositionFromChannels;
+    const result = FavoritesActionCreators.setFavoriteCategoriesCollapsed(true);
+    const tmpResult = FavoritesActionCreators;
   }
 }
 function handleCategoryExpandAll(guildId) {
   if (obj.isFavoritesGuildId(guildId.guildId)) {
-    const result = getNextPositionFromChannels.setFavoriteCategoriesCollapsed(false);
-    const tmpResult = getNextPositionFromChannels;
+    const result = FavoritesActionCreators.setFavoriteCategoriesCollapsed(false);
+    const tmpResult = FavoritesActionCreators;
   }
 }
 function handleLogout() {
-  callback(closure_3);
+  React4(React3);
 }
 function handleThreadMembersUpdate(addedMembers) {
   addedMembers = addedMembers.addedMembers;
-  let id;
-  id = store.getId();
+  const id = AuthenticationStore.getId();
   if (tmp2) {
-    const result = id(10223).autoAddJoinedThreadToFavorites(addedMembers.id);
+    const result = FavoritesActionCreators.autoAddJoinedThreadToFavorites(addedMembers.id);
     result.catch(NOOP);
-    const obj = id(10223);
   }
 }
 function handleThreadCreate(channel) {
@@ -60,15 +56,14 @@ function handleThreadCreate(channel) {
     tmp2 = tmp3;
   }
   if (tmp2) {
-    const result = getNextPositionFromChannels.autoAddJoinedThreadToFavorites(channel.id);
+    const result = FavoritesActionCreators.autoAddJoinedThreadToFavorites(channel.id);
     result.catch(NOOP);
-    const obj2 = getNextPositionFromChannels;
   }
 }
 function handleThreadMemberUpdate(joinTimestamp) {
   joinTimestamp = joinTimestamp.joinTimestamp;
   ({ id, userId } = joinTimestamp);
-  let tmp = store.getId() === userId;
+  let tmp = AuthenticationStore.getId() === userId;
   if (tmp) {
     let tmp3 = null != joinTimestamp;
     if (tmp3) {
@@ -81,13 +76,13 @@ function handleThreadMemberUpdate(joinTimestamp) {
     tmp = tmp3;
   }
   if (tmp) {
-    const result = getNextPositionFromChannels.autoAddJoinedThreadToFavorites(id);
+    const result = FavoritesActionCreators.autoAddJoinedThreadToFavorites(id);
     result.catch(NOOP);
-    const obj2 = getNextPositionFromChannels;
   }
 }
-({ NO_SUGGESTIONS: c3, setFavoritesGuildSuggestions: c4 } = items);
-initializeDefault;
+const FavoritesGuildSuggestionsStore = fn(16202);
+({ NO_SUGGESTIONS: c3, setFavoritesGuildSuggestions: closure_4 } = FavoritesGuildSuggestionsStore);
+const NOOP = fn(1074).NOOP;
 let prototype = function FavoriteManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = {
@@ -105,6 +100,7 @@ let prototype = function FavoriteManager() {
 }.prototype;
 class prototype extends tmp3 {}
 prototype = new prototype();
-let result = require("set").fileFinishedImporting("modules/favorites/FavoriteManager.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/favorites/FavoriteManager.tsx");
 
 export default prototype;

@@ -1,16 +1,17 @@
 // discord_app/modules/message_previews/RemoteFetchData.tsx
-import closure_0 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
-let obj = { Pending: 0, [0]: "Pending", Fetching: 1, [1]: "Fetching" };
-const result = require("set").fileFinishedImporting("modules/message_previews/RemoteFetchData.tsx");
+const FetchStatus = { Pending: 0, [0]: "Pending", Fetching: 1, [1]: "Fetching" };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/message_previews/RemoteFetchData.tsx");
 class RemoteFetchData {
   constructor() {
-    obj = Object.create(new.target.prototype);
+    merged = Object.assign({ pending: null, fetching: null });
     set = new Set();
-    obj[0] = set;
+    merged[0] = set;
     set1 = new Set();
-    obj[1] = set1;
-    return obj;
+    merged[1] = set1;
+    return merged;
   }
 }
 const prototype = RemoteFetchData.prototype;
@@ -48,9 +49,9 @@ prototype["nextWants"] = function nextWants(arg0) {
   items.length = Math.min(arg0, items.length);
   return items;
 };
-prototype["markFetching"] = function markFetching(closure_1_0) {
+prototype["markFetching"] = function markFetching(arg0) {
   const self = this;
-  const iter = closure_1_0[Symbol.iterator]();
+  const iter = arg0[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let pending = self.pending;
@@ -60,9 +61,9 @@ prototype["markFetching"] = function markFetching(closure_1_0) {
     continue;
   }
 };
-prototype["markCompleted"] = function markCompleted(closure_0) {
+prototype["markCompleted"] = function markCompleted(arg0) {
   const self = this;
-  const iter = closure_0[Symbol.iterator]();
+  const iter = arg0[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let pending = self.pending;
@@ -72,9 +73,9 @@ prototype["markCompleted"] = function markCompleted(closure_0) {
     continue;
   }
 };
-prototype["markFailed"] = function markFailed(closure_0) {
+prototype["markFailed"] = function markFailed(arg0) {
   const self = this;
-  const iter = closure_0[Symbol.iterator]();
+  const iter = arg0[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let pending = self.pending;
@@ -85,19 +86,18 @@ prototype["markFailed"] = function markFailed(closure_0) {
   }
 };
 prototype["try"] = function try(nextWantsResult, arg1) {
-  const callback = nextWantsResult;
+  closure_0 = nextWantsResult;
   closure_1 = arg1;
   const self = this;
-  return callback(function*() {
+  return (async (arg0, value) => {
     if (c5 === 2) {
       c5 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp6 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
@@ -108,45 +108,40 @@ prototype["try"] = function try(nextWantsResult, arg1) {
         if (0 === c4) {
           if (arg0 === 1) {
             c5 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
-            closure_1 = tmp3;
             closure_0 = tmp7;
-            closure_0 = undefined;
+            closure_128_0 = undefined;
             c3 = 1;
-            closure_1_2.markFetching(closure_1_0);
+            self.markFetching(closure_0);
             c4 = 2;
             c5 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = closure_1_1();
+            const obj1 = { value: tmp3(), done: false };
             return obj1;
           }
         } else if (1 === tmp7) {
           c3 = 0;
-          closure_1 = closure_2;
-          closure_2.markFailed(closure_0);
-          throw closure_1;
+          closure_128_1 = closure_2;
+          closure_129_2.markFailed(closure_129_0);
+          throw closure_128_1;
         } else if (arg0 === 1) {
           c5 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c3 = 0;
           c5 = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = arg1;
+          const obj2 = { value, done: true };
           return obj2;
         } else {
-          closure_0 = arg1;
-          closure_2.markCompleted(closure_0);
+          closure_128_0 = value;
+          closure_129_2.markCompleted(closure_129_0);
           c3 = 0;
           c5 = 3;
-          obj = { value: null, done: true };
-          obj[0] = closure_0;
+          obj = { value: closure_128_0, done: true };
           return obj;
         }
       } catch (tmp25) {
@@ -162,5 +157,5 @@ prototype["try"] = function try(nextWantsResult, arg1) {
   })();
 };
 
-export const FetchStatus = obj;
+export { FetchStatus };
 export { RemoteFetchData };

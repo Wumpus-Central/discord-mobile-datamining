@@ -1,42 +1,42 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemExperimentalButtons.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import map from "../../../../design/tokens/native/useToken.tsx";
-import ManaContext from "../../../../../discord_common/js/packages/design/native.tsx";
-import registerAssetDefault from "../../../../../_runtime/04508_registerAsset.js";
-import Text from "../../../../design/components/Text/native/Text.tsx";
-import Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
-import Button from "../../../../design/components/Button/native/Button.native.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useToken from "../../../../design/tokens/native/useToken.tsx";
+import native from "../../../../../discord_common/js/packages/design/native.tsx";
+import _modDef4508 from "../../../../../_runtime/metro/04508__.js";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
+import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import LinearGradientDefault from "../../../../../_runtime/04987_LinearGradient.js";
-import registerAssetDefault2 from "../../../../../_runtime/05613_registerAsset.js";
-import TableRowGroupTitle from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import registerAssetDefault3 from "../../../../../_runtime/07052_registerAsset.js";
-import registerAssetDefault4 from "../../../../../_runtime/07381_registerAsset.js";
-import RowButtonWrapper from "../../../../design/components/TableRow/native/RowButton.native.tsx";
-import TwinButtons from "../../../../design/components/experimental/native.tsx";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import _modDef5613 from "../../../../../_runtime/metro/05613__.js";
+import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import _modDef7052 from "../../../../../_runtime/metro/07052__.js";
+import _modDef7381 from "../../../../../_runtime/metro/07381__.js";
+import RowButton from "../../../../design/components/TableRow/native/RowButton.native.tsx";
+import native2 from "../../../../design/components/experimental/native.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-({ View: c3, ScrollView: c4 } = get_ActivityIndicator);
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-const result = require("set").fileFinishedImporting(
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/user_settings/design_system/native/UserSettingsDesignSystemExperimentalButtons.tsx",
 );
 
 export default function UserSettingsDesignSystemExperimentalButtons() {
-  let obj = map;
-  const token = obj.useToken(ThemesDefault.modules.mobile.TABLE_ROW_PADDING);
-  obj1 = TwinButtons;
+  let obj = useToken;
+  const token = obj.useToken(nativeDefault.modules.mobile.TABLE_ROW_PADDING);
+  let obj1 = native2;
   const collapsibleFloatingActionButtonState = obj1.useCollapsibleFloatingActionButtonState();
-  let obj2 = TwinButtons;
+  let obj2 = native2;
   obj = { children: null };
   obj = {
     onScroll: obj2.useCollapsibleFloatingActionButtonScroll(collapsibleFloatingActionButtonState),
     children: null,
   };
-  obj1 = { spacing: ThemesDefault.space.PX_24, style: { paddingHorizontal: token }, children: null };
+  obj1 = { spacing: nativeDefault.space.PX_24, style: { paddingHorizontal: token }, children: null };
   obj2 = {
     title: "Header Button",
     description:
@@ -47,47 +47,47 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
   const obj3 = {
     style: {
       alignItems: "center",
-      backgroundColor: ThemesDefault.unsafe_rawColors.BG_GRADIENT_CHROMA_GLOW_1,
-      paddingVertical: ThemesDefault.space.PX_48,
+      backgroundColor: nativeDefault.unsafe_rawColors.BG_GRADIENT_CHROMA_GLOW_1,
+      paddingVertical: nativeDefault.space.PX_48,
     },
     children: null,
   };
   const obj4 = {
     alignItems: "center",
-    backgroundColor: ThemesDefault.unsafe_rawColors.BG_GRADIENT_CHROMA_GLOW_1,
-    paddingVertical: ThemesDefault.space.PX_48,
+    backgroundColor: nativeDefault.unsafe_rawColors.BG_GRADIENT_CHROMA_GLOW_1,
+    paddingVertical: nativeDefault.space.PX_48,
   };
-  obj3[1] = callback(TwinButtons.HeaderButton, {
+  obj3.children = hasOwnProperty(native2.HeaderButton, {
     onPress() {},
     text: "Channel Name",
-    icon: registerAssetDefault2,
+    icon: _modDef5613,
     iconPosition: "end",
     accessibilityHint: "double-tap for more options",
     iconOpticalOffsetMargin: -6,
   });
-  obj2[3] = callback(closure_3, obj3);
-  const items = [callback(TableRowGroupTitle.TableRowGroup, obj2), , , , , ,];
+  obj2.children = hasOwnProperty(React3, obj3);
+  const items = [hasOwnProperty(TableRowGroup.TableRowGroup, obj2), , , , , ,];
   const obj6 = {
     title: "Input Button",
     description: "A specialized button which looks like a text field, but functions as a button.",
     hasIcons: false,
     children: null,
   };
-  const obj7 = { spacing: ThemesDefault.space.PX_24, children: null };
+  const obj7 = { spacing: nativeDefault.space.PX_24, children: null };
   const obj5 = {
     onPress() {},
     text: "Channel Name",
-    icon: registerAssetDefault2,
+    icon: _modDef5613,
     iconPosition: "end",
     accessibilityHint: "double-tap for more options",
     iconOpticalOffsetMargin: -6,
   };
   const items1 = [
-    callback(TwinButtons.InputButton, {
+    hasOwnProperty(native2.InputButton, {
       onPress() {},
       size: "lg",
       text: "Search",
-      icon: registerAssetDefault3,
+      icon: _modDef7052,
       isRound: true,
     }),
   ];
@@ -95,20 +95,20 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
     onPress() {},
     size: "lg",
     text: "Search",
-    icon: registerAssetDefault3,
+    icon: _modDef7052,
     isRound: true,
   };
-  items1[1] = callback(TwinButtons.InputButton, {
+  items1[1] = hasOwnProperty(native2.InputButton, {
     onPress() {},
     size: "lg",
     text: "http://discord.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    icon: registerAssetDefault,
+    icon: _modDef4508,
     iconPosition: "end",
     accessibilityLabel: "Copy, http://discord.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
   });
-  obj7[1] = items1;
-  obj6[3] = callback2(Stack.Stack, obj7);
-  items[1] = callback(TableRowGroupTitle.TableRowGroup, obj6);
+  obj7.children = items1;
+  obj6.children = timestampProducer(Stack_Stack.Stack, obj7);
+  items[1] = hasOwnProperty(TableRowGroup.TableRowGroup, obj6);
   const obj10 = {
     title: "Twin Buttons",
     description:
@@ -118,18 +118,18 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
   };
   const obj11 = { children: null };
   const items2 = [
-    callback(Button.Button, {
+    hasOwnProperty(components_Button_Button.Button, {
       onPress() {},
       text: "Add Status",
     }),
-    callback(Button.Button, {
+    hasOwnProperty(components_Button_Button.Button, {
       onPress() {},
       text: "Edit Profile",
     }),
   ];
-  obj11[0] = items2;
-  obj10[3] = callback2(TwinButtons.TwinButtons, obj11);
-  items[2] = callback(TableRowGroupTitle.TableRowGroup, obj10);
+  obj11.children = items2;
+  obj10.children = timestampProducer(native2.TwinButtons, obj11);
+  items[2] = hasOwnProperty(TableRowGroup.TableRowGroup, obj10);
   const obj14 = {
     title: "PressableScale",
     description:
@@ -154,27 +154,27 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
     onPress() {},
     size: "lg",
     text: "http://discord.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    icon: registerAssetDefault,
+    icon: _modDef4508,
     iconPosition: "end",
     accessibilityLabel: "Copy, http://discord.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
   };
-  obj16[1] = callback(closure_3, {
+  obj16.children = hasOwnProperty(React3, {
     style: { borderColor: "pink", borderWidth: 1, borderRadius: 8, padding: 12 },
-    children: callback(Text.Text, { variant: "text-md/semibold", children: "This is a custom button" }),
+    children: hasOwnProperty(Text_Text.Text, { variant: "text-md/semibold", children: "This is a custom button" }),
   });
-  obj15[1] = callback(TwinButtons.PressableScale, obj16);
-  obj14[3] = callback(closure_3, obj15);
-  items[3] = callback(TableRowGroupTitle.TableRowGroup, obj14);
+  obj15.children = hasOwnProperty(native2.PressableScale, obj16);
+  obj14.children = hasOwnProperty(React3, obj15);
+  items[3] = hasOwnProperty(TableRowGroup.TableRowGroup, obj14);
   const obj17 = {
     style: { borderColor: "pink", borderWidth: 1, borderRadius: 8, padding: 12 },
-    children: callback(Text.Text, { variant: "text-md/semibold", children: "This is a custom button" }),
+    children: hasOwnProperty(Text_Text.Text, { variant: "text-md/semibold", children: "This is a custom button" }),
   };
-  items[4] = callback(TableRowGroupTitle.TableRowGroup, {
+  items[4] = hasOwnProperty(TableRowGroup.TableRowGroup, {
     title: "Experimental Blur Background Row Button",
     description:
       "Row Button Row Buttons are full-width, high-emphasis buttons that are used as primary CTAs in a page.",
     hasIcons: false,
-    children: callback(closure_3, {}),
+    children: hasOwnProperty(React3, {}),
   });
   const obj19 = { theme: "darker", children: null };
   const obj20 = {
@@ -189,49 +189,49 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
     description:
       "Row Button Row Buttons are full-width, high-emphasis buttons that are used as primary CTAs in a page.",
     hasIcons: false,
-    children: callback(closure_3, {}),
+    children: hasOwnProperty(React3, {}),
   };
   const tmp3 = LinearGradientDefault;
-  obj20[4] = callback(RowButtonWrapper.RowButton, {
-    icon: registerAssetDefault4,
+  obj20.children = hasOwnProperty(RowButton.RowButton, {
+    icon: _modDef7381,
     label: "Row Button",
     subLabel: "With a blur background",
     experimental_withBlurBackground: true,
     onPress() {},
   });
-  obj19[1] = callback(tmp3, obj20);
-  items[5] = callback(ManaContext.ThemeContextProvider, obj19);
+  obj19.children = hasOwnProperty(tmp3, obj20);
+  items[5] = hasOwnProperty(native.ThemeContextProvider, obj19);
   const obj21 = {
-    icon: registerAssetDefault4,
+    icon: _modDef7381,
     label: "Row Button",
     subLabel: "With a blur background",
     experimental_withBlurBackground: true,
     onPress() {},
   };
-  items[6] = callback(TableRowGroupTitle.TableRowGroup, {
+  items[6] = hasOwnProperty(TableRowGroup.TableRowGroup, {
     title: "Collapsible Floating Action Button",
     description:
       "A variation of the FloatingActionButton which will display some text until the user scrolls. We currently recommend the use of the FloatingActionButton over the CollapsibleFloatingActionButton, as a singular icon button without animation is more compact, understandable, and predictable.",
     hasIcons: false,
-    children: callback(closure_3, { style: { padding: 48 } }),
+    children: hasOwnProperty(React3, { style: { padding: 48 } }),
   });
-  obj1[2] = items;
-  obj[1] = callback2(Stack.Stack, obj1);
-  const items3 = [callback(closure_4, obj)];
+  obj1.children = items;
+  obj.children = timestampProducer(Stack_Stack.Stack, obj1);
+  const items3 = [hasOwnProperty(React4, obj)];
   const obj22 = {
     title: "Collapsible Floating Action Button",
     description:
       "A variation of the FloatingActionButton which will display some text until the user scrolls. We currently recommend the use of the FloatingActionButton over the CollapsibleFloatingActionButton, as a singular icon button without animation is more compact, understandable, and predictable.",
     hasIcons: false,
-    children: callback(closure_3, { style: { padding: 48 } }),
+    children: hasOwnProperty(React3, { style: { padding: 48 } }),
   };
-  items3[1] = callback(TwinButtons.CollapsibleFloatingActionButton, {
-    icon: registerAssetDefault4,
+  items3[1] = hasOwnProperty(native2.CollapsibleFloatingActionButton, {
+    icon: _modDef7381,
     onPress() {},
     positionBottom: 32,
     text: "Floating Action Button",
     state: collapsibleFloatingActionButtonState,
   });
-  obj[0] = items3;
-  return callback2(closure_3, obj);
+  obj.children = items3;
+  return timestampProducer(React3, obj);
 }

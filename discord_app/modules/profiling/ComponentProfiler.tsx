@@ -1,8 +1,12 @@
 // discord_app/modules/profiling/ComponentProfiler.tsx
-import closure_0 from "../../../_runtime/00019_noop.js";
-import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
+import noop from "../../../_runtime/metro/00019__.js";
 
-class StatCollector {}
+const jsx = fn(21).jsx;
+class StatCollector {
+  constructor() {
+    return Object.assign({ totalMicroseconds: 0, count: 0, minMicroseconds: null, maxMicroseconds: null });
+  }
+}
 const prototype = StatCollector.prototype;
 prototype["addValue"] = function addValue(arg0) {
   const self = this;
@@ -30,31 +34,47 @@ Object.defineProperty(prototype, "mean", {
 });
 let closure_3 = {};
 let c4 = true;
-const result = require("set").fileFinishedImporting("modules/profiling/ComponentProfiler.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/profiling/ComponentProfiler.tsx");
 
 export default function ComponentProfiler(arg0) {
   ({ id, children } = arg0);
   return (
-    <React.Profiler
+    <noop.Profiler
       id={id}
-      onRender={React.useCallback((arg0, arg1, arg2) => {
-        if (closure_4) {
+      onRender={noop.useCallback((arg0, arg1, arg2) => {
+        if (closure_1_4) {
           if (!(arg0 in dependencyMap)) {
-            if (typeof closure_2 !== "function") {
-              HermesBuiltin.throwTypeError();
+            if (typeof StatCollector === "function") {
+              const obj = {
+                mount: Object.assign({ totalMicroseconds: 0, count: 0, minMicroseconds: null, maxMicroseconds: null }),
+                update: null,
+                nestedUpdate: null,
+              };
+              if (typeof tmp4 === "function") {
+                obj.update = Object.assign({
+                  totalMicroseconds: 0,
+                  count: 0,
+                  minMicroseconds: null,
+                  maxMicroseconds: null,
+                });
+                if (typeof tmp4 === "function") {
+                  obj.nestedUpdate = Object.assign({
+                    totalMicroseconds: 0,
+                    count: 0,
+                    minMicroseconds: null,
+                    maxMicroseconds: null,
+                  });
+                  tmp3[arg0] = obj;
+                } else {
+                  throw new TypeError("Trying to call a non-function");
+                }
+              } else {
+                throw new TypeError("Trying to call a non-function");
+              }
+            } else {
+              throw new TypeError("Trying to call a non-function");
             }
-            const obj = { mount: null, update: null, nestedUpdate: null };
-            obj[0] = Object.create(closure_2.prototype);
-            if (typeof closure_2 !== "function") {
-              HermesBuiltin.throwTypeError();
-            }
-            obj[1] = Object.create(closure_2.prototype);
-            if (typeof closure_2 !== "function") {
-              HermesBuiltin.throwTypeError();
-            }
-            obj[2] = Object.create(closure_2.prototype);
-            dependencyMap[arg0] = obj;
-            const tmp3 = dependencyMap;
           }
           if ("mount" === arg1) {
             const mount = dependencyMap[arg0].mount;
@@ -70,7 +90,7 @@ export default function ComponentProfiler(arg0) {
       }, [])}
     >
       {children}
-    </React.Profiler>
+    </noop.Profiler>
   );
 }
 export { StatCollector };
@@ -137,8 +157,8 @@ export const serializeComponentRenderAverages = function serializeComponentRende
     const entries = Object.entries(closure_3);
     str = `Component Render Stats (microseconds):
   ${"|" + tmp + "|" + tmp2 + "|" + tmp3 + "|" + tmp4 + "|" + tmp5 + "|" + tmp6 + "|" + obj7.padEnd(20, " ") + "|\n"}${arr.map(
-    (arg0) => {
-      [arr, tmp] = arg0;
+    (item) => {
+      [arr, tmp] = item;
       let num = 20;
       if (arr.length <= 20) {
         num = arr.length;

@@ -1,12 +1,10 @@
 // discord_app/records/GuildBoostSlotRecord.tsx
-import toJSDefault from "../lib/Record.tsx";
+import Record from "../lib/Record.tsx";
 
-toJSDefault;
 let GuildBoostSlotRecord;
 class GuildBoostSlotRecord extends tmp2 {
   constructor(arg0) {
     tmp = new GuildBoostSlotRecord(new.target, new.target);
-    // ThrowIfThisInitialized (0x7c)
     ({
       id: tmp.id,
       subscriptionId: tmp.subscriptionId,
@@ -21,35 +19,27 @@ class GuildBoostSlotRecord extends tmp2 {
 const prototype = GuildBoostSlotRecord.prototype;
 GuildBoostSlotRecord["createFromServer"] = function createFromServer(premium_guild_subscription, subscription) {
   ({ id, subscription_id } = premium_guild_subscription);
-  let tmp2 = null;
+  let tmp3 = null;
   if (null != premium_guild_subscription.premium_guild_subscription) {
-    const obj = { id: null, guildId: null };
-    obj[0] = premium_guild_subscription.premium_guild_subscription.id;
-    obj[1] = premium_guild_subscription.premium_guild_subscription.guild_id;
-    tmp2 = obj;
+    const obj = {
+      id: premium_guild_subscription.premium_guild_subscription.id,
+      guildId: premium_guild_subscription.premium_guild_subscription.guild_id,
+    };
+    tmp3 = obj;
   }
   ({ canceled, cooldown_ends_at } = premium_guild_subscription);
-  if (typeof GuildBoostSlotRecord !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof GuildBoostSlotRecord === "function") {
+    const tmp8 = new GuildBoostSlotRecord(tmp, tmp2, new.target, id, subscription_id, tmp3, canceled, cooldown_ends_at);
+    tmp8.id = id;
+    tmp8.subscriptionId = subscription_id;
+    tmp8.premiumGuildSubscription = tmp3;
+    tmp8.canceled = canceled;
+    tmp8.cooldownEndsAt = cooldown_ends_at;
+    tmp8.subscription = subscription;
+    return tmp8;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const tmp3 = new GuildBoostSlotRecord(
-    "Trying to call a non-function",
-    GuildBoostSlotRecord,
-    new.target,
-    id,
-    subscription_id,
-    tmp2,
-    canceled,
-    cooldown_ends_at,
-  );
-  // ThrowIfThisInitialized (0x7c)
-  tmp3.id = id;
-  tmp3.subscriptionId = subscription_id;
-  tmp3.premiumGuildSubscription = tmp2;
-  tmp3.canceled = canceled;
-  tmp3.cooldownEndsAt = cooldown_ends_at;
-  tmp3.subscription = subscription;
-  return tmp3;
 };
 prototype["isOnCooldown"] = function isOnCooldown() {
   let tmp2 = null != this.cooldownEndsAt;
@@ -66,6 +56,7 @@ prototype["isAvailable"] = function isAvailable() {
   const self = this;
   return null == this.premiumGuildSubscription && !self.isOnCooldown();
 };
-const result = require("set").fileFinishedImporting("records/GuildBoostSlotRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("records/GuildBoostSlotRecord.tsx");
 
 export default GuildBoostSlotRecord;

@@ -1,15 +1,16 @@
 // discord_app/design/components/Card/native/Card.native.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import map from "../../../tokens/native/useToken.tsx";
-import createCardShadowToken from "CardTokens.native.tsx";
-import closure_4 from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import closure_5 from "../../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../Styles/native/createStyles.tsx";
-import importDefaultResult from "../../../../modules/reanimated/ReanimatedRexport.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useToken from "../../../tokens/native/useToken.tsx";
+import ReanimatedRexport2 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
+import spring from "../../../animation/reanimated/spring/spring.tsx";
+import springPresets from "../../../animation/reanimated/spring/springPresets.tsx";
+import CardTokens from "CardTokens.native.tsx";
+import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+const ReanimatedRexport = ReanimatedRexport2;
+
+require = fn;
 class Card {
   constructor(arg0) {
     flag = global.start;
@@ -32,11 +33,11 @@ class Card {
     if (str3 === undefined) {
       str3 = "primary";
     }
-    merged = Object.assign(global, Object.create(null));
-    obj = require("map");
+    merged = Object.assign(global, Object.assign({ start: 0, end: 0, shadow: 0, border: 0, variant: 0 }));
+    obj = closure_0(closure_2[8]);
     radius = merged.radius;
     if (radius == null) {
-      radius = obj.useToken(require("Themes").modules.mobile.CARD_DEFAULT_RADIUS);
+      radius = obj.useToken(closure_1(closure_2[5]).modules.mobile.CARD_DEFAULT_RADIUS);
     }
     tmp2 = closure_10(flag, flag2, str3, str, str2, radius);
     items = [, ,];
@@ -54,7 +55,7 @@ class Card {
           str4 = "button";
         }
         obj = { accessibilityRole: null };
-        obj[0] = str4;
+        obj.accessibilityRole = str4;
         tmp9 = obj;
         tmp10 = tmp6;
         merged1 = Object.assign(tmp6);
@@ -82,9 +83,9 @@ function PressableCard(start) {
     const radius2 = start.radius;
     sharedValue = radius2;
     obj = {};
-    const merged = Object.assign(start, Object.create(null));
+    const merged = Object.assign(start, Object.assign({ children: 0, start: 0, end: 0, radius: 0 }));
     let items = [start2, end2, radius2];
-    const memo = React.useMemo(() => {
+    const memo = noop.useMemo(() => {
       if (onPressIn) {
         let cornerRadius = sharedValue;
       } else {
@@ -92,70 +93,67 @@ function PressableCard(start) {
       }
       return { cornerRadius };
     }, items);
-    obj = { androidRippleConfig: null };
-    obj[0] = memo;
+    obj = { androidRippleConfig: memo };
     const merged1 = Object.assign(merged);
     obj.children = start.children;
-    let tmp19 = jsx(tmp(tmp2[12]).AnimatedPressableHighlight, { androidRippleConfig: null });
+    let tmp19 = jsx(tmp(tmp2[12]).AnimatedPressableHighlight, { androidRippleConfig: memo });
   } else {
     onPressIn = start.onPressIn;
     onPressOut = start.onPressOut;
     ({ radius, start, end } = start);
     ({ children, style, variant } = start);
-    const merged2 = Object.assign(start, Object.create(null));
-    sharedValue = undefined;
-    let backgroundColor;
-    let backgroundColorPressed;
+    const merged2 = Object.assign(
+      start,
+      Object.assign({ children: 0, style: 0, variant: 0, onPressIn: 0, onPressOut: 0, radius: 0, start: 0, end: 0 }),
+    );
     let tmpResult = tmp(tmp2[4]);
     sharedValue = tmpResult.useSharedValue(0);
     const items1 = [sharedValue, onPressIn];
     const items2 = [sharedValue, onPressOut];
-    const callback = React.useCallback((arg0) => {
+    const callback = noop.useCallback((arg0) => {
       const result = sharedValue.set(1);
       if (onPressIn != null) {
         tmp2(arg0);
       }
     }, items1);
-    const callback1 = React.useCallback((arg0) => {
+    const callback1 = noop.useCallback((arg0) => {
       const result = sharedValue.set(0);
       if (onPressOut != null) {
         tmp2(arg0);
       }
     }, items2);
-    const tmp11 = callback2(variant);
-    backgroundColor = tmp11.backgroundColor;
-    backgroundColorPressed = tmp11.backgroundColorPressed;
+    const tmp11 = closure_9(variant);
+    const backgroundColor = tmp11.backgroundColor;
+    const backgroundColorPressed = tmp11.backgroundColorPressed;
     tmpResult = tmp(tmp2[4]);
     class B {
       constructor() {
         obj = { backgroundColor: null };
-        obj2 = onPressIn(closure_2[10]);
-        obj3 = onPressIn(closure_2[4]);
+        obj2 = closure_0(closure_2[10]);
+        obj3 = closure_0(closure_2[4]);
         items = [,];
         items[0] = backgroundColor;
         items[1] = backgroundColorPressed;
         interpolateColorResult = obj3.interpolateColor(closure_2.get(), [0, 1], items);
-        obj[0] = obj2.withSpring(interpolateColorResult, onPressIn(closure_2[11]).ON_PRESS_SPRING, "animate-always");
+        obj.backgroundColor = obj2.withSpring(
+          interpolateColorResult,
+          closure_0(closure_2[11]).ON_PRESS_SPRING,
+          "animate-always",
+        );
         return obj;
       }
     }
     let obj2 = {
-      withSpring: null,
-      interpolateColor: null,
-      pressed: null,
-      backgroundColor: null,
-      backgroundColorPressed: null,
-      ON_PRESS_SPRING: null,
+      withSpring: tmp(tmp2[10]).withSpring,
+      interpolateColor: tmp(tmp2[4]).interpolateColor,
+      pressed: sharedValue,
+      backgroundColor,
+      backgroundColorPressed,
+      ON_PRESS_SPRING: tmp(tmp2[11]).ON_PRESS_SPRING,
     };
-    obj2[0] = tmp(tmp2[10]).withSpring;
-    obj2[1] = tmp(tmp2[4]).interpolateColor;
-    obj2[2] = sharedValue;
-    obj2[3] = backgroundColor;
-    obj2[4] = backgroundColorPressed;
-    obj2[5] = tmp(tmp2[11]).ON_PRESS_SPRING;
     B.__closure = obj2;
     B.__workletHash = 14943431549291;
-    B.__initData = closure_12;
+    B.__initData = __initData;
     let obj3 = {};
     const animatedStyle = tmpResult.useAnimatedStyle(B);
     const merged3 = Object.assign(merged2);
@@ -170,68 +168,72 @@ function PressableCard(start) {
   return tmp19;
 }
 let closure_3 = ["accessibilityRole"];
-({ View: closure_6, Pressable } = get_ActivityIndicator);
-let closure_8 = importDefaultResult.createAnimatedComponent(Pressable);
-let closure_9 = createCacheKey.createStyleProperties((arg0) => {
+get_ActivityIndicator = fn(17);
+({ View: metroRequire, Pressable } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+let closure_8 = ReanimatedRexport.createAnimatedComponent(Pressable);
+let createStyles = fn(4560);
+let closure_9 = createStyles.createStyleProperties((arg0) => {
   if ("primary" === arg0) {
-    let backgroundColor = ThemesDefault.colors.TABLEROW_BACKGROUND_DEFAULT;
+    let backgroundColor = nativeDefault.colors.TABLEROW_BACKGROUND_DEFAULT;
   } else if ("secondary" === arg0) {
-    backgroundColor = ThemesDefault.colors.CARD_SECONDARY_BACKGROUND_DEFAULT;
+    backgroundColor = nativeDefault.colors.CARD_SECONDARY_BACKGROUND_DEFAULT;
   } else if ("muted" === arg0) {
-    backgroundColor = ThemesDefault.colors.CARD_MUTED_BG;
+    backgroundColor = nativeDefault.colors.CARD_MUTED_BG;
   } else if ("transparent" === arg0) {
-    backgroundColor = ThemesDefault.unsafe_rawColors.TRANSPARENT;
+    backgroundColor = nativeDefault.unsafe_rawColors.TRANSPARENT;
   } else if ("control-secondary" === arg0) {
-    backgroundColor = ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT;
+    backgroundColor = nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT;
   } else if ("surface-high" === arg0) {
-    backgroundColor = ThemesDefault.colors.BACKGROUND_SURFACE_HIGH;
+    backgroundColor = nativeDefault.colors.BACKGROUND_SURFACE_HIGH;
   }
   if ("primary" === arg0) {
-    let backgroundColorPressed = ThemesDefault.colors.TABLEROW_BACKGROUND_PRESSED;
+    let backgroundColorPressed = nativeDefault.colors.TABLEROW_BACKGROUND_PRESSED;
   } else if ("secondary" === arg0) {
-    backgroundColorPressed = ThemesDefault.colors.CARD_SECONDARY_BACKGROUND_ACTIVE;
+    backgroundColorPressed = nativeDefault.colors.CARD_SECONDARY_BACKGROUND_ACTIVE;
   } else if ("muted" === arg0) {
-    backgroundColorPressed = ThemesDefault.colors.CARD_MUTED_PRESSED_BG;
+    backgroundColorPressed = nativeDefault.colors.CARD_MUTED_PRESSED_BG;
   } else if ("transparent" === arg0) {
-    backgroundColorPressed = ThemesDefault.colors.BACKGROUND_MOD_SUBTLE;
+    backgroundColorPressed = nativeDefault.colors.BACKGROUND_MOD_SUBTLE;
   } else if ("control-secondary" === arg0) {
-    backgroundColorPressed = ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_ACTIVE;
+    backgroundColorPressed = nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_ACTIVE;
   } else if ("surface-high" === arg0) {
-    backgroundColorPressed = ThemesDefault.colors.BACKGROUND_BASE_LOW;
+    backgroundColorPressed = nativeDefault.colors.BACKGROUND_BASE_LOW;
   }
   return { backgroundColor, backgroundColorPressed };
 });
-let closure_10 = createCacheKey.createStyles((arg0, arg1, arg2, arg3, arg4, arg5) => {
+createStyles = fn(4560);
+let closure_10 = createStyles.createStyles((arg0, arg1, arg2, arg3, arg4, arg5) => {
   if ("primary" === arg2) {
-    let BACKGROUND_SURFACE_HIGH = ThemesDefault.colors.TABLEROW_BACKGROUND_DEFAULT;
+    let BACKGROUND_SURFACE_HIGH = nativeDefault.colors.TABLEROW_BACKGROUND_DEFAULT;
   } else if ("secondary" === arg2) {
-    BACKGROUND_SURFACE_HIGH = ThemesDefault.colors.CARD_SECONDARY_BACKGROUND_DEFAULT;
+    BACKGROUND_SURFACE_HIGH = nativeDefault.colors.CARD_SECONDARY_BACKGROUND_DEFAULT;
   } else if ("muted" === arg2) {
-    BACKGROUND_SURFACE_HIGH = ThemesDefault.colors.CARD_MUTED_BG;
+    BACKGROUND_SURFACE_HIGH = nativeDefault.colors.CARD_MUTED_BG;
   } else if ("transparent" === arg2) {
-    BACKGROUND_SURFACE_HIGH = ThemesDefault.unsafe_rawColors.TRANSPARENT;
+    BACKGROUND_SURFACE_HIGH = nativeDefault.unsafe_rawColors.TRANSPARENT;
   } else if ("control-secondary" === arg2) {
-    BACKGROUND_SURFACE_HIGH = ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT;
+    BACKGROUND_SURFACE_HIGH = nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT;
   } else if ("surface-high" === arg2) {
-    BACKGROUND_SURFACE_HIGH = ThemesDefault.colors.BACKGROUND_SURFACE_HIGH;
+    BACKGROUND_SURFACE_HIGH = nativeDefault.colors.BACKGROUND_SURFACE_HIGH;
   }
   let BORDER_SUBTLE = null;
   if ("none" !== arg4) {
     if ("subtle" === arg4) {
-      BORDER_SUBTLE = ThemesDefault.colors.BORDER_SUBTLE;
+      BORDER_SUBTLE = nativeDefault.colors.BORDER_SUBTLE;
     } else if ("strong" === arg4) {
-      BORDER_SUBTLE = ThemesDefault.colors.BORDER_STRONG;
+      BORDER_SUBTLE = nativeDefault.colors.BORDER_STRONG;
     } else if ("faint" === arg4) {
-      BORDER_SUBTLE = ThemesDefault.colors.BORDER_MUTED;
+      BORDER_SUBTLE = nativeDefault.colors.BORDER_MUTED;
     } else if ("control-secondary" === arg4) {
-      BORDER_SUBTLE = ThemesDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT;
+      BORDER_SUBTLE = nativeDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT;
     }
   }
   if (BORDER_SUBTLE == null) {
     BORDER_SUBTLE = BACKGROUND_SURFACE_HIGH;
   }
   const card = {};
-  const merged = Object.assign(createCardShadowToken.createCardShadowToken(arg3));
+  const merged = Object.assign(CardTokens.createCardShadowToken(arg3));
   let tmp21;
   if (arg0) {
     tmp21 = arg5;
@@ -261,10 +263,11 @@ let closure_10 = createCacheKey.createStyles((arg0, arg1, arg2, arg3, arg4, arg5
   card.backgroundColor = BACKGROUND_SURFACE_HIGH;
   return { card, spacing: { padding: 16 } };
 });
-let closure_12 = {
+const __initData = {
   code: "function CardNativeTsx1(){const{withSpring,interpolateColor,pressed,backgroundColor,backgroundColorPressed,ON_PRESS_SPRING}=this.__closure;const pressedColor=withSpring(interpolateColor(pressed.get(),[0,1],[backgroundColor,backgroundColorPressed]),ON_PRESS_SPRING,'animate-always');return{backgroundColor:pressedColor};}",
 };
-let result = require("set").fileFinishedImporting("design/components/Card/native/Card.native.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("design/components/Card/native/Card.native.tsx");
 
 export { Card };
 export const InternalCard = Card;

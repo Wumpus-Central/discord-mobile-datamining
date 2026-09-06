@@ -1,17 +1,14 @@
 // discord_app/modules/soundboard/native/utils/getSoundboardEmojiUrl.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import getAvatarURLDefault from "../../../../utils/AvatarUtils.tsx";
+import AvatarUtilsDefault from "../../../../utils/AvatarUtils.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/soundboard/native/utils/getSoundboardEmojiUrl.tsx");
+const result = size.fileFinishedImporting("modules/soundboard/native/utils/getSoundboardEmojiUrl.tsx");
 
-export default function getSoundboardEmojiUrl(emojiId) {
+export default function getSoundboardEmojiUrl(emojiId, size) {
   emojiId = emojiId.emojiId;
   let emojiURL;
   if (null != emojiId) {
-    let obj = getAvatarURLDefault;
-    obj = { id: null, animated: false, size: null };
-    obj[0] = emojiId;
-    obj[2] = arg1;
+    const obj = { id: emojiId, animated: false, size };
     emojiURL = obj.getEmojiURL(obj);
   }
   return emojiURL;

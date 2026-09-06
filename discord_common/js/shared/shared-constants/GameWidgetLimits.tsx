@@ -1,7 +1,17 @@
 // discord_common/js/shared/shared-constants/GameWidgetLimits.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-let set = new Set([
+const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/GameWidgetLimits.tsx");
+
+export const GAME_WIDGET_LIMITS_BY_TYPE = {
+  favorite_games: 1,
+  current_games: 5,
+  want_to_play_games: 20,
+  played_games: 20,
+};
+export const USER_WIDGET_GAME_COMMENT_MAX_LENGTH = 200;
+export const USER_WIDGET_GAME_TAGS_MAX_LENGTH = 20;
+export const GAME_WIDGET_BANNED_APPLICATION_IDS = new Set([
   "484425151631589378",
   "1124351896166076496",
   "1124351975702679583",
@@ -80,14 +90,3 @@ let set = new Set([
   "1458671686131122269",
   "1459562537145077832",
 ]);
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/GameWidgetLimits.tsx");
-
-export const GAME_WIDGET_LIMITS_BY_TYPE = {
-  favorite_games: 1,
-  current_games: 5,
-  want_to_play_games: 20,
-  played_games: 20,
-};
-export const USER_WIDGET_GAME_COMMENT_MAX_LENGTH = 200;
-export const USER_WIDGET_GAME_TAGS_MAX_LENGTH = 20;
-export const GAME_WIDGET_BANNED_APPLICATION_IDS = set;

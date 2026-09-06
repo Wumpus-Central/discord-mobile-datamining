@@ -1,34 +1,30 @@
 // discord_app/modules/hub/native/components/HubEmailConnectionModalActionCreators.tsx
-import _modDef4763 from "../../../../actions/ModalActionCreators.tsx";
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
-const require = arg1;
+const require = fn;
 const HUB_EMAIL_CONNECTION_MODAL_KEY = "HUB_EMAIL_CONNECTION_MODAL_KEY";
-const result = require("set").fileFinishedImporting(
-  "modules/hub/native/components/HubEmailConnectionModalActionCreators.tsx",
-);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/hub/native/components/HubEmailConnectionModalActionCreators.tsx");
 
 export default {
-  open(closure_0) {
+  open(merged, arg1) {
     closure_0 = arg1;
-    _modDef4763.pushLazy(
-      callback(function* () {
+    ModalActionCreatorsDefault.pushLazy(
+      asyncGeneratorStep(async () => {
         closure_1 = tmp5;
-        closure_0 = tmp2;
-        yield closure_1_0(paths[3])(paths[2], paths.paths);
-        closure_0 = arg1.default;
-        if (null != closure_0) {
-          const obj = { animation: null };
-          obj[0] = closure_0;
-          closure_0.modalConfig = obj;
+        await tmp2(paths[3])(paths[2], paths.paths);
+        closure_128_0 = arg1.default;
+        if (null != closure_129_0) {
+          closure_128_0.modalConfig = { animation: closure_129_0 };
         }
-        return closure_0;
+        return closure_128_0;
       }),
-      closure_0,
+      merged,
       HUB_EMAIL_CONNECTION_MODAL_KEY,
     );
   },
   close() {
-    _modDef4763.popWithKey(HUB_EMAIL_CONNECTION_MODAL_KEY);
+    ModalActionCreatorsDefault.popWithKey(HUB_EMAIL_CONNECTION_MODAL_KEY);
   },
 };

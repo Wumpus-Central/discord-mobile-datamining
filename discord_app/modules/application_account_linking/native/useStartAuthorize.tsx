@@ -1,21 +1,23 @@
 // discord_app/modules/application_account_linking/native/useStartAuthorize.tsx
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
-import { AuthorizeFlow } from "../ApplicationAccountLinkingConstants.tsx";
-import { AnalyticEvents } from "../../../Constants.tsx";
-import { getAuthorizationApp } from "../hooks/useAuthorizationApp.tsx";
+import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
+import LinkingDefault from "../../../lib/native/Linking.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/application_account_linking/native/useStartAuthorize.tsx");
+const require = fn;
+const AuthorizeFlow = fn(7166).AuthorizeFlow;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/application_account_linking/native/useStartAuthorize.tsx");
 
 export default function useStartAuthorize(getOfficialApplicationId) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
   }
-  let _require;
+  _require = undefined;
   const debug = obj.debug;
-  const authorizationApp = require("../hooks/useAuthorizationApp.tsx").useAuthorizationApp(getOfficialApplicationId);
+  const authorizationApp = require("useAuthorizationApp").useAuthorizationApp(getOfficialApplicationId);
   _require = authorizationApp;
   let prop;
   if (authorizationApp != null) {
@@ -25,9 +27,8 @@ export default function useStartAuthorize(getOfficialApplicationId) {
   if (null != prop) {
     WEB = AuthorizeFlow.WEB;
   }
-  let obj2 = getAuthorizationApp;
+  let obj2 = require("useAuthorizationApp");
   const tmp = undefined !== debug && debug;
-  const tmp2 = _require;
   let parentId;
   if (authorizationApp != null) {
     parentId = authorizationApp.parentId;
@@ -39,108 +40,97 @@ export default function useStartAuthorize(getOfficialApplicationId) {
     }
     parentId = id;
   }
-  const authorizedAppsToken = require("../hooks/useAuthorizedAppsToken.tsx").useAuthorizedAppsToken(parentId);
+  const authorizedAppsToken = require("useAuthorizedAppsToken").useAuthorizedAppsToken(parentId);
   ({ token, fetched } = authorizedAppsToken);
-  _require = undefined;
-  _require = callback((arg0) => {
-    closure_0 = arg0;
-    c5 = 0;
-    c6 = 0;
-    c4 = 0;
-    return (function* (arg0) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp7 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+  _require = asyncGeneratorStep(async (arg0, value) => {
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp7 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_2 = tmp3;
-              closure_1 = tmp5;
-              let prop;
-              if (lib != null) {
-                prop = lib.connectionEntrypointUrl;
-              }
-              if (null == prop) {
-                c6 = 3;
-                return { value: false, done: true };
-              } else {
-                c4 = 1;
-                c5 = 2;
-                c6 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = closure_2_1(closure_2_2[6]).openURL(lib.connectionEntrypointUrl);
-                return obj1;
-              }
-            }
-          } else if (1 === tmp8) {
-            c4 = 0;
-            closure_1 = closure_3;
-            const onError = lib.onError;
-            if (onError != null) {
-              onError(closure_1);
-            }
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
             c6 = 3;
-            return { value: false, done: true };
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
-            c4 = 0;
             c6 = 3;
-            let obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
+            obj = { value, done: true };
+            return obj;
           } else {
-            const onConfirm = lib.onConfirm;
-            if (onConfirm != null) {
-              onConfirm();
+            closure_2 = tmp3;
+            closure_1 = tmp5;
+            closure_129_0 = closure_0;
+            let prop;
+            if (closure_0 != null) {
+              prop = closure_0.connectionEntrypointUrl;
             }
-            obj = closure_2_1(closure_2_2[7]);
-            const obj3 = { location_stack: null, application_id: null, flow_type: null };
-            obj3[0] = lib.analyticsLocations;
-            obj3[1] = lib.id;
-            obj3[2] = closure_2_5.WEB;
-            obj.track(closure_2_6.ON_PLATFORM_ACCOUNT_LINK_FLOW_STARTED, obj3);
-            obj2 = lib(closure_2_2[8]);
-            const obj4 = { onSuccess: null, onError: null };
-            obj4[0] = lib.onSuccess;
-            obj4[1] = lib.onError;
-            const result = obj2.accountLinkAuthorizationStarted(lib.id, obj4);
-            c4 = 0;
-            c6 = 3;
-            return { value: true, done: true };
+            if (null == prop) {
+              c6 = 3;
+              return { value: false, done: true };
+            } else {
+              c4 = 1;
+              c5 = 2;
+              c6 = 1;
+              const obj1 = { value: LinkingDefault.openURL(closure_0.connectionEntrypointUrl), done: false };
+              return obj1;
+            }
           }
-        } catch (tmp36) {
-          closure_3 = tmp36;
-          if (tmp4 === c4) {
-            c6 = tmp2;
-            throw tmp36;
-          } else {
-            c5 = tmp;
+        } else if (1 === tmp8) {
+          c4 = 0;
+          closure_129_1 = closure_3;
+          const onError = closure_129_0.onError;
+          if (onError != null) {
+            onError(closure_129_1);
           }
+          c6 = 3;
+          return { value: false, done: true };
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 0;
+          c6 = 3;
+          let obj2 = { value, done: true };
+          return obj2;
+        } else {
+          const onConfirm = closure_129_0.onConfirm;
+          if (onConfirm != null) {
+            onConfirm();
+          }
+          obj = AnalyticsUtilsDefault;
+          const obj3 = {
+            location_stack: closure_129_0.analyticsLocations,
+            application_id: closure_0.id,
+            flow_type: constants.WEB,
+          };
+          obj.track(constants2.ON_PLATFORM_ACCOUNT_LINK_FLOW_STARTED, obj3);
+          obj2 = closure_0(7171);
+          const obj4 = { onSuccess: closure_129_0.onSuccess, onError: closure_129_0.onError };
+          const result = obj2.accountLinkAuthorizationStarted(closure_0.id, obj4);
+          c4 = 0;
+          c6 = 3;
+          return { value: true, done: true };
+        }
+      } catch (tmp36) {
+        closure_3 = tmp36;
+        if (tmp4 === c4) {
+          c6 = tmp2;
+          throw tmp36;
+        } else {
+          c5 = tmp;
         }
       }
-    })();
+    }
   });
   const items = [authorizationApp];
   obj = {
@@ -153,7 +143,7 @@ export default function useStartAuthorize(getOfficialApplicationId) {
     token: null,
     debug: null,
   };
-  callback = React.useCallback(function () {
+  const callback = noop.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -166,34 +156,33 @@ export default function useStartAuthorize(getOfficialApplicationId) {
   if (fetched) {
     fetched = null != token;
   }
-  obj[1] = fetched;
-  obj[2] = null != prop;
-  obj[3] = callback;
-  obj[4] = authorizationApp;
-  obj[5] = WEB;
-  obj[6] = token;
+  obj.hasAlreadyLinked = fetched;
+  obj.canStartAuthorization = null != prop;
+  obj.startAuthorization = callback;
+  obj.connectionApp = authorizationApp;
+  obj.chosenFlow = WEB;
+  obj.token = token;
   if (!tmp) {
-    obj[7] = undefined;
+    obj.debug = undefined;
     return obj;
   } else {
     obj = {
       isSubscribedToAuthorizeRequest: false,
-      oauth2Token: null,
+      oauth2Token: token,
       hasConnectionEntrypointUrl: null,
       validFlows: null,
     };
-    obj[1] = token;
     let prop1;
     if (authorizationApp != null) {
       prop1 = authorizationApp.connectionEntrypointUrl;
     }
-    obj[2] = null != prop1;
+    obj.hasConnectionEntrypointUrl = null != prop1;
     if (tmp6) {
       const items1 = [AuthorizeFlow.WEB];
       let items2 = items1;
     } else {
       items2 = [];
     }
-    obj[3] = items2;
+    obj.validFlows = items2;
   }
 }

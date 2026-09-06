@@ -1,23 +1,23 @@
 // discord_app/modules/safety_hub/hooks/useAccountStandingStatusLabel.tsx
-import set from "../../../../_runtime/00002_set.js";
-import getSystemLocale from "../../../intl/index.native.tsx";
+import util from "../../../intl/index.native.tsx";
 import useSafetyHubAccountStanding from "useSafetyHubAccountStanding.tsx";
 import useSafetyHubInitialized from "useSafetyHubInitialized.tsx";
 import useSafetyHubFetchError from "useSafetyHubFetchError.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/safety_hub/hooks/useAccountStandingStatusLabel.tsx");
+const result = size.fileFinishedImporting("modules/safety_hub/hooks/useAccountStandingStatusLabel.tsx");
 
 export const useAccountStandingStatusLabel = function useAccountStandingStatusLabel() {
   let obj = useSafetyHubAccountStanding;
   const safetyHubAccountStanding = obj.useSafetyHubAccountStanding();
   const safetyHubInitialized = useSafetyHubInitialized.useSafetyHubInitialized();
-  const obj2 = useSafetyHubInitialized;
   const safetyHubFetchError = useSafetyHubFetchError.useSafetyHubFetchError();
-  const intl = getSystemLocale.intl;
+  const intl = util.intl;
   if (safetyHubInitialized) {
-    obj = { hook: null };
-    obj[0] = function hook(arg0) {
-      return arg0;
+    obj = {
+      hook(arg0) {
+        return arg0;
+      },
     };
     let formatToPlainStringResult = intl.formatToPlainString(
       tmp(14766).ACCOUNT_STANDING_SHORT_STATUS[safetyHubAccountStanding.state],

@@ -1,46 +1,49 @@
 // discord_app/modules/guilds_bar/native/GuildsBarMessages.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
 import ChatIcon from "../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
-import UnreadIndicator from "GuildsBarAnimatedItemWrapper.tsx";
-import UnreadIndicatorDefault from "GuildsBarAnimatedItemWrapper.tsx";
+import GuildsBarAnimatedItemWrapper from "GuildsBarAnimatedItemWrapper.tsx";
 import useGuildsBarBottomRightBadgeDefault from "hooks/useGuildsBarBottomRightBadge.tsx";
 import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "utils/transitionGuildsBarToGuildOrOpenSelectedChannel.tsx";
-import HomeDrawerDMsRowDefault from "../../home_drawer/native/HomeDrawerDirectMessagesRow.tsx";
-import closure_3 from "../../../stores/SelectedGuildStore.tsx";
-import { ME } from "../../../Constants.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import importAllResult from "../../../../_runtime/00019_noop.js";
+import HomeDrawerDirectMessagesRowDefault from "../../home_drawer/native/HomeDrawerDirectMessagesRow.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
 
-require = arg1;
-let closure_6 = {
+const GuildsBarAnimatedItemWrapperDefault = GuildsBarAnimatedItemWrapper;
+
+require = fn;
+const ME = fn(1074).ME;
+const jsx = fn(21).jsx;
+const config = {
   onPress() {
     transitionGuildsBarToGuildOrOpenSelectedChannelDefault(ME);
   },
 };
-const memoResult = importAllResult.memo(function GuildsBarMessages() {
-  let obj = UnreadIndicator;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarMessages.tsx");
+
+export default noop.memo(function GuildsBarMessages() {
+  let obj = GuildsBarAnimatedItemWrapper;
   const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles();
-  const items = [closure_3];
+  const items = [SelectedGuildStore];
   const stateFromStores = initialize.useStateFromStores(items, () => {
     guildId = guildId.getGuildId();
     let tmp2 = null == guildId;
     if (!tmp2) {
-      tmp2 = guildId === closure_4;
+      tmp2 = guildId === ME;
     }
     return tmp2;
   });
-  const obj2 = initialize;
   ({ badge, cutouts } = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 }));
-  const colors = ThemesDefault.colors;
+  const colors = nativeDefault.colors;
   obj = {
     selected: stateFromStores,
     circle: false,
     unread: false,
     styles: guildsBarAnimatedWrapperStyles,
     cutouts,
-    config: closure_6,
+    config,
     overState: "y",
     label: "CATEGORY_COLLAPSE_ALL",
     externalChildren: null,
@@ -50,17 +53,17 @@ const memoResult = importAllResult.memo(function GuildsBarMessages() {
   const tmp6 = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 });
   const tmp7 = stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT;
   const intl = tmp(1114).intl;
-  obj[7] = intl.string(getSystemLocale.t.YUU0RF);
-  obj[8] = badge;
-  obj[9] = jsx(HomeDrawerDMsRowDefault, {});
-  obj[10] = jsx(ChatIcon.ChatIcon, { color: tmp7 });
-  return jsx(UnreadIndicatorDefault, {
+  obj.label = intl.string(util.t.YUU0RF);
+  obj.externalChildren = badge;
+  obj.expandedChildren = jsx(HomeDrawerDirectMessagesRowDefault, {});
+  obj.children = jsx(ChatIcon.ChatIcon, { color: tmp7 });
+  return jsx(GuildsBarAnimatedItemWrapperDefault, {
     selected: stateFromStores,
     circle: false,
     unread: false,
     styles: guildsBarAnimatedWrapperStyles,
     cutouts,
-    config: closure_6,
+    config,
     overState: "y",
     label: "CATEGORY_COLLAPSE_ALL",
     externalChildren: null,
@@ -68,6 +71,3 @@ const memoResult = importAllResult.memo(function GuildsBarMessages() {
     children: false,
   });
 });
-const result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarMessages.tsx");
-
-export default memoResult;

@@ -1,18 +1,16 @@
 // discord_app/modules/stage_channels/native/components/ScrollHandlingActionSheet.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import Background from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting(
-  "modules/stage_channels/native/components/ScrollHandlingActionSheet.tsx",
-);
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/native/components/ScrollHandlingActionSheet.tsx");
 
 export default function ScrollHandlingActionSheet(children) {
-  const merged = Object.assign(children, Object.create(null));
+  const merged = Object.assign(children, Object.assign({ children: 0, scrollableDeviceHeightBreakpoint: 0 }));
   const obj = { startExpanded: true };
   const merged1 = Object.assign(merged);
   obj.children = children.children;
-  return jsx(Background.BottomSheet, { startExpanded: true });
+  return jsx(Sheet_BottomSheet.BottomSheet, { startExpanded: true });
 }

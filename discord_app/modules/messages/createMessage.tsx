@@ -1,21 +1,22 @@
 // discord_app/modules/messages/createMessage.tsx
 import _modDef38 from "../../../_runtime/metro/00038__.js";
-import snowflakeSequence from "createNonce.tsx";
-import closure_3 from "../replies/ReferencedMessageStore.tsx";
-import { ReferencedMessageState } from "../replies/ReferencedMessageStore.tsx";
-import closure_5 from "../../records/UserRecord.tsx";
-import closure_6 from "../../stores/UserStore.tsx";
-import ME from "../../Constants.tsx";
+import createNonce from "createNonce.tsx";
+import ReferencedMessageStore from "../replies/ReferencedMessageStore.tsx";
+import UserRecord from "../../records/UserRecord.tsx";
+import UserStore from "../../stores/UserStore.tsx";
 
-require = arg1;
+require = fn;
+const ReferencedMessageState = fn(7595).ReferencedMessageState;
+const Constants = fn(1074);
 ({
-  MessageStates: error,
+  MessageStates: closure_7,
   MessageTypes: closure_8,
-  LOCAL_BOT_ID: c9,
+  LOCAL_BOT_ID: closure_9,
   NON_USER_BOT_DISCRIMINATOR: c10,
-  MessageFlags: unpackModuleId,
-} = ME);
-const result = require("set").fileFinishedImporting("modules/messages/createMessage.tsx");
+  MessageFlags: closure_11,
+} = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/createMessage.tsx");
 
 export default function createMessage(tts) {
   let flag = tts.tts;
@@ -33,7 +34,7 @@ export default function createMessage(tts) {
   if (DEFAULT === constants2.REPLY) {
     _modDef38(null != messageReference, "Replies must have a message reference");
     if (null == allowedMentions) {
-      messageByReference = messageByReference.getMessageByReference(messageReference);
+      const messageByReference = ReferencedMessageStore.getMessageByReference(messageReference);
       state = undefined;
       if (messageByReference != null) {
         state = messageByReference.state;
@@ -49,23 +50,23 @@ export default function createMessage(tts) {
           primary_guild: null,
         };
         ({
-          id: obj[0],
-          username: obj[1],
-          avatar: obj[2],
-          discriminator: obj[3],
-          bot: obj[4],
-          globalName: obj[5],
-          primaryGuild: obj[6],
+          id: obj.id,
+          username: obj.username,
+          avatar: obj.avatar,
+          discriminator: obj.discriminator,
+          bot: obj.bot,
+          globalName: obj.global_name,
+          primaryGuild: obj.primary_guild,
         } = messageByReference.message.author);
         items.push(obj);
       }
     }
   }
   if (null == author) {
-    author = currentUser.getCurrentUser();
+    author = UserStore.getCurrentUser();
   }
   let tmp8 = author;
-  if (author instanceof closure_5) {
+  if (author instanceof UserRecord) {
     obj = {
       id: null,
       username: null,
@@ -76,20 +77,19 @@ export default function createMessage(tts) {
       primary_guild: null,
     };
     ({
-      id: obj2[0],
-      username: obj2[1],
-      avatar: obj2[2],
-      discriminator: obj2[3],
-      bot: obj2[4],
-      globalName: obj2[5],
-      primaryGuild: obj2[6],
+      id: obj2.id,
+      username: obj2.username,
+      avatar: obj2.avatar,
+      discriminator: obj2.discriminator,
+      bot: obj2.bot,
+      globalName: obj2.global_name,
+      primaryGuild: obj2.primary_guild,
     } = author);
     tmp8 = obj;
   }
   _modDef38(null != tmp8, "createMessage: author cannot be undefined");
   if (nonce == null) {
-    nonce = snowflakeSequence.createNonce();
-    const obj3 = snowflakeSequence;
+    nonce = createNonce.createNonce();
   }
   obj = {
     id: nonce,
@@ -121,18 +121,18 @@ export default function createMessage(tts) {
   if (state == null) {
     state = constants.SENDING;
   }
-  obj[13] = state;
-  obj[14] = flag;
-  obj[15] = messageReference;
-  obj[16] = [];
-  obj[17] = flags;
-  obj[18] = nonce;
-  obj[19] = poll;
-  obj[20] = sharedCustomTheme;
-  obj[21] = changelogId;
-  obj[22] = giftingPrompt;
-  obj[23] = boostingPrompt;
-  obj[24] = mediaMention;
+  obj.state = state;
+  obj.tts = flag;
+  obj.message_reference = messageReference;
+  obj.message_snapshots = [];
+  obj.flags = flags;
+  obj.nonce = nonce;
+  obj.poll = poll;
+  obj.shared_client_theme = sharedCustomTheme;
+  obj.changelog_id = changelogId;
+  obj.gifting_prompt = giftingPrompt;
+  obj.boosting_prompt = boostingPrompt;
+  obj.media_mention = mediaMention;
   return obj;
 }
 export const userRecordToServer = function userRecordToServer(currentUser) {
@@ -150,7 +150,7 @@ export const createBotMessage = function createBotMessage(arg0) {
   ({ messageId, embeds } = arg0);
   ({ channelId, content, loggingName } = arg0);
   if (messageId == null) {
-    let obj = snowflakeSequence;
+    let obj = createNonce;
     messageId = obj.createNonce();
   }
   obj = {
@@ -159,7 +159,7 @@ export const createBotMessage = function createBotMessage(arg0) {
     flags: constants3.EPHEMERAL,
     content,
     channel_id: channelId,
-    author: obj,
+    author: null,
     attachments: [],
     embeds: null,
     pinned: false,
@@ -172,16 +172,17 @@ export const createBotMessage = function createBotMessage(arg0) {
     tts: false,
     loggingName: null,
   };
-  obj = { id: closure_9, username: "Clyde", discriminator: closure_10, avatar: "clyde", bot: true };
+  obj = { id, username: "Clyde", discriminator, avatar: "clyde", bot: true };
+  obj.author = obj;
   if (embeds == null) {
     embeds = [];
   }
-  obj[7] = embeds;
-  obj[9] = [];
-  obj[10] = [];
-  obj[11] = [];
-  obj[13] = new Date().toISOString();
-  obj[14] = constants.SENT;
-  obj[16] = loggingName;
+  obj.embeds = embeds;
+  obj.mentions = [];
+  obj.mention_channels = [];
+  obj.mention_roles = [];
+  obj.timestamp = new Date().toISOString();
+  obj.state = constants.SENT;
+  obj.loggingName = loggingName;
   return obj;
 };

@@ -1,34 +1,35 @@
 // discord_app/modules/messages/native/renderer/transformMessageComponents.tsx
-import setDefault from "../../../../utils/Durations.tsx";
-import hasFlag from "../../../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import urlMatchesFileExtension from "../../MediaFormatTesters.tsx";
-import messageAttachmentToUnfurledMediaItem from "../../../media/MediaTypes.tsx";
-import sanitizeMediaDimension from "sanitizeMediaDimension.tsx";
-import nativeStylePropertiesDefault from "RowGeneratorUtils.tsx";
-import MediaGalleryItemType from "RowGeneratorTypes.tsx";
-import closure_4 from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import { processColor } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { CheckpointVersions } from "../../../checkpoint/CheckpointConstants.tsx";
-import { TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS as closure_7 } from "../../../interaction_components/InteractionComponentConstants.tsx";
-import importDefaultResult from "../../../../../_runtime/01437_priv.js";
+import DurationsDefault from "../../../../utils/Durations.tsx";
+import URLUtilsDefault from "../../../../utils/URLUtils.tsx";
+import MediaFormatTesters from "../../MediaFormatTesters.tsx";
+import InteractionComponentUtils from "../../../interaction_components/InteractionComponentUtils.tsx";
+import RowGeneratorUtilsDefault from "RowGeneratorUtils.tsx";
+import RowGeneratorTypes from "RowGeneratorTypes.tsx";
+import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import priv from "../../../../../_runtime/01437_priv.js";
 
-require = arg1;
+const util = tmp4(1114);
+const FlagUtils = tmp4(1384);
+const AgeVerificationUtils = tmp4(4773);
+const MediaTypes = tmp4(4791);
+const sanitizeMediaDimension = tmp4(8107);
+const ExplicitMediaUtils = tmp4(8125);
+require = fn;
 function transformToRowGeneratedComponent(message, accessory) {
-  let _require = message;
-  let initialSnowflakeSelectOptions = accessory;
+  _require = message;
+  importDefault = accessory;
   message = message.message;
-  let f83333 = message;
   ({ interaction, guildId, shouldDisableInteractiveComponents, shouldObscureSpoiler } = message);
   const enabledContentHarmTypeFlags = message.enabledContentHarmTypeFlags;
   ({ shouldShowMosaicMediaDescriptions: processColor, shouldAgeVerify } = message);
   const type = accessory.type;
   let tmp = _require;
-  let tmp2 = f83333;
+  let tmp2 = message;
   ({ colors, markdownConfigs } = message);
-  if (_require(f83333[6]).ComponentType.ACTION_ROW === type) {
+  if (require("Server").ComponentType.ACTION_ROW === type) {
     const components = accessory.components;
-    let mapped = components.map((arg0) => {
-      const tmp = closure_1_8(closure_0, arg0);
+    let mapped = components.map((item) => {
+      const tmp = transformToRowGeneratedComponent(closure_0, item);
       let tmp2 = null;
       if (null != tmp) {
         tmp2 = tmp;
@@ -57,40 +58,41 @@ function transformToRowGeneratedComponent(message, accessory) {
     return obj;
   } else if (tmp(tmp2[6]).ComponentType.STRING_SELECT === type) {
     const initialStringSelectOptions = tmp(tmp2[10]).getInitialStringSelectOptions(accessory, message.id);
-    const mapped1 = initialStringSelectOptions.map((arg0) => {
-      closure_0 = arg0;
-      const options = initialSnowflakeSelectOptions.options;
+    const mapped1 = initialStringSelectOptions.map((item) => {
+      closure_0 = item;
+      const options = accessory.options;
       return options.findIndex((value) => value.value === closure_0);
     });
-    const found1 = mapped1.filter((arg0) => -1 !== arg0);
-    obj1 = {};
+    const found1 = mapped1.filter((item) => -1 !== item);
+    const obj1 = {};
     const merged2 = Object.assign(accessory);
     const tmpResult1 = tmp(tmp2[10]);
     obj1.state = tmp(tmp2[9]).getActionComponentState(interaction, accessory, shouldDisableInteractiveComponents);
     obj1.selectedOptions = found1;
     const tmpResult2 = tmp(tmp2[9]);
     obj1.placeholder = tmp(tmp2[7]).getSelectPlaceholder(accessory);
-    _require = accessory;
-    initialSnowflakeSelectOptions = found1;
-    f83333 = (arg0) => initialSnowflakeSelectOptions.options[arg0].label;
+    closure_130_0 = accessory;
+    closure_130_1 = found1;
+    closure_130_2 = (arg0) => accessory.options[arg0].label;
     const tmpResult3 = tmp(tmp2[7]);
-    const obj2 = { expensive: null, cheap: null };
-    obj2[0] = function expensive() {
-      if (null != initialSnowflakeSelectOptions) {
-        if (0 !== arr.length) {
-          const mapped = arr.map(f83333);
-          const intl = accessory(f83333[8]).intl;
-          const obj = { selections: null };
-          obj[0] = mapped.join(",");
-          return intl.formatToPlainString(accessory(f83333[8]).t["I/ROH+"], obj);
+    const obj2 = {
+      expensive() {
+        if (null != closure_1) {
+          if (0 !== arr.length) {
+            const mapped = arr.map(message);
+            const intl = util.intl;
+            const obj = { selections: mapped.join(",") };
+            return intl.formatToPlainString(util.t["I/ROH+"], obj);
+          }
         }
-      }
-      const placeholder = accessory(f83333[7]).getSelectPlaceholder(accessory);
-      const intl2 = accessory(f83333[8]).intl;
-      return intl2.formatToPlainString(accessory(f83333[8]).t["3aednA"], { placeholder });
+        const placeholder = InteractionComponentUtils.getSelectPlaceholder(closure_0);
+        const intl2 = util.intl;
+        return intl2.formatToPlainString(util.t["3aednA"], { placeholder });
+      },
+      cheap: null,
     };
     const tmpResult4 = tmp(tmp2[19]);
-    obj2[1] = tmp(tmp2[7]).getSelectPlaceholder(accessory);
+    obj2.cheap = tmp(tmp2[7]).getSelectPlaceholder(accessory);
     obj1.accessibilityLabel = tmpResult4.getAccessibilityLabelOrCheapFallbackUnsafe(obj2);
     return obj1;
   } else {
@@ -109,8 +111,8 @@ function transformToRowGeneratedComponent(message, accessory) {
                 const obj3 = {};
                 const merged3 = Object.assign(accessory);
                 const components1 = accessory.components;
-                const mapped2 = components1.map((arg0) => {
-                  const tmp = closure_1_8(closure_0, arg0);
+                const mapped2 = components1.map((item) => {
+                  const tmp = transformToRowGeneratedComponent(closure_0, item);
                   let tmp2 = null;
                   if (null != tmp) {
                     tmp2 = tmp;
@@ -131,14 +133,14 @@ function transformToRowGeneratedComponent(message, accessory) {
               const content = accessory.content;
               let _HermesInternal = HermesInternal;
               let combined = "" + textDisplayComponent.type + "-" + message.id + "-" + content;
-              let value = importDefaultResult.get(combined);
+              value = priv.get(combined);
               if (null == value) {
                 const obj5 = {};
                 const merged5 = Object.assign(textDisplayComponent.parserState);
-                const parseToASTResult = initialSnowflakeSelectOptions(tmp2[28]).parseToAST(content, true, obj5);
-                let result = importDefaultResult.set(combined, parseToASTResult);
+                const parseToASTResult = require("MarkupUtils").parseToAST(content, true, obj5);
+                let result = priv.set(combined, parseToASTResult);
                 value = parseToASTResult;
-                const obj31 = initialSnowflakeSelectOptions(tmp2[28]);
+                const obj31 = require("MarkupUtils");
               }
               obj4.content = value;
               return obj4;
@@ -163,7 +165,7 @@ function transformToRowGeneratedComponent(message, accessory) {
                       str2 = "image";
                     }
                     let obj6 = {
-                      type: null,
+                      type: str2,
                       mediaItem: null,
                       isSpoilered: null,
                       isAuthorBot: null,
@@ -171,16 +173,15 @@ function transformToRowGeneratedComponent(message, accessory) {
                       shouldAgeVerify: null,
                       enabledContentHarmTypeFlags: null,
                     };
-                    obj6[0] = str2;
-                    ({ media: obj25[1], spoiler: spoiler2 } = accessory);
+                    ({ media: obj25.mediaItem, spoiler: spoiler2 } = accessory);
                     if (spoiler2 == null) {
                       spoiler2 = false;
                     }
-                    obj6[2] = spoiler2;
-                    obj6[3] = message.author.bot;
-                    obj6[4] = shouldObscureSpoiler;
-                    obj6[5] = shouldAgeVerify;
-                    obj6[6] = enabledContentHarmTypeFlags;
+                    obj6.isSpoilered = spoiler2;
+                    obj6.isAuthorBot = message.author.bot;
+                    obj6.shouldObscureSpoiler = shouldObscureSpoiler;
+                    obj6.shouldAgeVerify = shouldAgeVerify;
+                    obj6.enabledContentHarmTypeFlags = enabledContentHarmTypeFlags;
                     let unfurledMediaItemObscurityProps = tmp(tmp2[13]).getUnfurledMediaItemObscurityProps(obj6);
                     const isObscured2 = unfurledMediaItemObscurityProps.isObscured;
                     let isVerifiedTeenResult = isObscured2;
@@ -220,37 +221,33 @@ function transformToRowGeneratedComponent(message, accessory) {
               VISUAL_PLACEHOLDER = tmp(tmp2[14]).MediaGalleryItemType.VISUAL_PLACEHOLDER;
             } else if (tmp(tmp2[6]).ComponentType.MEDIA_GALLERY === type) {
               const items = accessory.items;
-              const mapped3 = items.map((media) => {
+              const mapped3 = items.map((media, index) => {
                 ({ width, height, contentType } = media.media);
                 if (null != width) {
                   if (width > 0) {
                     if (null != height) {
                       if (height > 0) {
-                        let obj = accessory(f83333[20]);
+                        let obj = MediaFormatTesters;
                         if (obj.isImageContentType(contentType)) {
-                          let VISUAL_PLACEHOLDER = tmp(tmp2[14]).MediaGalleryItemType.IMAGE;
-                          let tmp3 = tmp2;
-                          let tmp4 = tmp;
+                          let VISUAL_PLACEHOLDER = tmp(8126).MediaGalleryItemType.IMAGE;
                         } else {
                           if (tmpResult.isVideoContentType(contentType)) {
-                            VISUAL_PLACEHOLDER = tmp(tmp2[14]).MediaGalleryItemType.VIDEO;
-                            tmp3 = tmp2;
-                            tmp4 = tmp;
+                            VISUAL_PLACEHOLDER = tmp(8126).MediaGalleryItemType.VIDEO;
                           }
-                          tmpResult = tmp(tmp2[20]);
+                          tmpResult = tmp(4710);
                         }
                       }
-                      let tmp4Result = tmp4(tmp3[13]);
+                      let tmp4Result = ExplicitMediaUtils;
                       let str = "image";
-                      if (VISUAL_PLACEHOLDER !== tmp4(tmp3[14]).MediaGalleryItemType.IMAGE) {
+                      if (VISUAL_PLACEHOLDER !== RowGeneratorTypes.MediaGalleryItemType.IMAGE) {
                         let str2 = "generic";
-                        if (VISUAL_PLACEHOLDER === tmp4(tmp3[14]).MediaGalleryItemType.VIDEO) {
+                        if (VISUAL_PLACEHOLDER === RowGeneratorTypes.MediaGalleryItemType.VIDEO) {
                           str2 = "video";
                         }
                         str = str2;
                       }
                       obj = {
-                        type: null,
+                        type: str,
                         mediaItem: null,
                         isSpoilered: null,
                         isAuthorBot: null,
@@ -258,29 +255,28 @@ function transformToRowGeneratedComponent(message, accessory) {
                         enabledContentHarmTypeFlags: null,
                         shouldAgeVerify: null,
                       };
-                      obj[0] = str;
-                      ({ media: obj4[1], spoiler } = media);
+                      ({ media: obj4.mediaItem, spoiler } = media);
                       if (spoiler == null) {
                         spoiler = false;
                       }
-                      obj[2] = spoiler;
-                      obj[3] = f83333.author.bot;
-                      obj[4] = shouldObscureSpoiler;
-                      obj[5] = enabledContentHarmTypeFlags;
-                      obj[6] = shouldAgeVerify;
+                      obj.isSpoilered = spoiler;
+                      obj.isAuthorBot = message.author.bot;
+                      obj.shouldObscureSpoiler = shouldObscureSpoiler;
+                      obj.enabledContentHarmTypeFlags = enabledContentHarmTypeFlags;
+                      obj.shouldAgeVerify = shouldAgeVerify;
                       const unfurledMediaItemObscurityProps = tmp4Result.getUnfurledMediaItemObscurityProps(obj);
                       const isObscured = unfurledMediaItemObscurityProps.isObscured;
                       let isVerifiedTeenResult = isObscured;
                       ({ isSpoiler, spoilerDescription, obscureDescription, obscureAwaitingScan } =
                         unfurledMediaItemObscurityProps);
                       if (isObscured) {
-                        tmp4Result = tmp4(tmp3[15]);
+                        tmp4Result = AgeVerificationUtils;
                         isVerifiedTeenResult = tmp4Result.isVerifiedTeen();
                       }
-                      if (VISUAL_PLACEHOLDER !== tmp4(tmp3[14]).MediaGalleryItemType.VIDEO) {
+                      if (VISUAL_PLACEHOLDER !== RowGeneratorTypes.MediaGalleryItemType.VIDEO) {
                         obj = {};
                         const merged = Object.assign(media);
-                        obj.media = closure_1_9(media.media, accessory);
+                        obj.media = transformUnfurledMediaItem(media.media, closure_0);
                         obj.mediaType = VISUAL_PLACEHOLDER;
                         obj.videoPreviewUrl = tmp12;
                         obj.isSpoiler = isSpoiler;
@@ -295,32 +291,32 @@ function transformToRowGeneratedComponent(message, accessory) {
                         obj.verifyAge = tmp22;
                         obj.obscureHideControls = isVerifiedTeenResult;
                         obj.obscureIsOpaque = isObscured;
-                        obj.showDescription = closure_5;
-                        if (VISUAL_PLACEHOLDER === tmp4(tmp3[14]).MediaGalleryItemType.VIDEO) {
-                          const intl2 = tmp4(tmp3[8]).intl;
-                          let stringResult = intl2.string(tmp4(tmp3[8]).t["BEWw/7"]);
+                        obj.showDescription = showDescription;
+                        if (VISUAL_PLACEHOLDER === RowGeneratorTypes.MediaGalleryItemType.VIDEO) {
+                          const intl2 = util.intl;
+                          let stringResult = intl2.string(util.t["BEWw/7"]);
                         } else {
-                          const intl = tmp4(tmp3[8]).intl;
-                          stringResult = intl.string(tmp4(tmp3[8]).t.IPzNKE);
+                          const intl = util.intl;
+                          stringResult = intl.string(util.t.IPzNKE);
                         }
                         obj.descriptionHint = stringResult;
-                        if (VISUAL_PLACEHOLDER === tmp4(tmp3[14]).MediaGalleryItemType.VIDEO) {
-                          const intl4 = tmp4(tmp3[8]).intl;
-                          let stringResult1 = intl4.string(tmp4(tmp3[8]).t["/SCpvi"]);
+                        if (VISUAL_PLACEHOLDER === RowGeneratorTypes.MediaGalleryItemType.VIDEO) {
+                          const intl4 = util.intl;
+                          let stringResult1 = intl4.string(util.t["/SCpvi"]);
                         } else {
-                          const intl3 = tmp4(tmp3[8]).intl;
-                          stringResult1 = intl3.string(tmp4(tmp3[8]).t.fKyfca);
+                          const intl3 = util.intl;
+                          stringResult1 = intl3.string(util.t.fKyfca);
                         }
                         obj.accessibilityRole = stringResult1;
                         let combined = null;
-                        if (VISUAL_PLACEHOLDER === tmp4(tmp3[14]).MediaGalleryItemType.VIDEO) {
+                        if (VISUAL_PLACEHOLDER === RowGeneratorTypes.MediaGalleryItemType.VIDEO) {
                           const _HermesInternal = HermesInternal;
-                          combined = "" + f83333.id + "_MediaGallery(" + initialSnowflakeSelectOptions.id + ")_" + arg1;
+                          combined = "" + message.id + "_MediaGallery(" + accessory.id + ")_" + index;
                         }
                         obj.portalId = combined;
                         let tmp16 = obj;
                       } else {
-                        const str3 = initialSnowflakeSelectOptions(tmp3[25]).toURLSafe(media.media.proxyUrl);
+                        const str3 = URLUtilsDefault.toURLSafe(media.media.proxyUrl);
                         str = null;
                         if (null != str3) {
                           const searchParams = str3.searchParams;
@@ -328,16 +324,13 @@ function transformToRowGeneratedComponent(message, accessory) {
                           str = str3.toString();
                         }
                         tmp16 = null;
-                        const obj6 = initialSnowflakeSelectOptions(tmp3[25]);
                         tmp12 = str;
                       }
                       return tmp16;
                     }
                   }
                 }
-                tmp3 = f83333;
-                VISUAL_PLACEHOLDER = accessory(f83333[14]).MediaGalleryItemType.VISUAL_PLACEHOLDER;
-                tmp4 = accessory;
+                VISUAL_PLACEHOLDER = RowGeneratorTypes.MediaGalleryItemType.VISUAL_PLACEHOLDER;
               });
               const found2 = mapped3.filter(tmp(tmp2[5]).isNotNullish);
               let tmp44 = null;
@@ -358,15 +351,15 @@ function transformToRowGeneratedComponent(message, accessory) {
                 shouldAgeVerify: null,
                 enabledContentHarmTypeFlags: null,
               };
-              ({ file: obj16[1], spoiler } = accessory);
+              ({ file: obj16.mediaItem, spoiler } = accessory);
               if (spoiler == null) {
                 spoiler = false;
               }
-              obj9[2] = spoiler;
-              obj9[3] = message.author.bot;
-              obj9[4] = shouldObscureSpoiler;
-              obj9[5] = shouldAgeVerify;
-              obj9[6] = enabledContentHarmTypeFlags;
+              obj9.isSpoilered = spoiler;
+              obj9.isAuthorBot = message.author.bot;
+              obj9.shouldObscureSpoiler = shouldObscureSpoiler;
+              obj9.shouldAgeVerify = shouldAgeVerify;
+              obj9.enabledContentHarmTypeFlags = enabledContentHarmTypeFlags;
               const unfurledMediaItemObscurityProps1 = tmp(tmp2[13]).getUnfurledMediaItemObscurityProps(obj9);
               let isObscured = unfurledMediaItemObscurityProps1.isObscured;
               let isVerifiedTeenResult1 = isObscured;
@@ -385,7 +378,7 @@ function transformToRowGeneratedComponent(message, accessory) {
                 name = intl2.string(tmp(tmp2[8]).t.GnuJ5u);
               }
               obj10.name = name;
-              let obj18 = initialSnowflakeSelectOptions(tmp2[16]);
+              let obj18 = require("noConflict");
               let num5 = accessory.size;
               if (num5 == null) {
                 num5 = 0;
@@ -412,18 +405,16 @@ function transformToRowGeneratedComponent(message, accessory) {
               return null;
             } else if (tmp(tmp2[6]).ComponentType.CONTENT_INVENTORY_ENTRY === type) {
               const obj11 = { type: null, id: null, contentInventoryEntry: null };
-              ({ type: obj12[0], id: obj12[1] } = accessory);
-              const obj12 = { component: null, message: null };
-              obj12[0] = accessory;
-              obj12[1] = message;
-              obj11[2] = tmp(tmp2[18]).transformToRowGeneratedContentInventoryEntryComponent(obj12);
+              ({ type: obj12.type, id: obj12.id } = accessory);
+              const obj12 = { component: accessory, message };
+              obj11.contentInventoryEntry = tmp(tmp2[18]).transformToRowGeneratedContentInventoryEntryComponent(obj12);
               return obj11;
             } else if (tmp(tmp2[6]).ComponentType.CONTAINER === type) {
               const obj13 = {};
               const merged9 = Object.assign(accessory);
               const components2 = accessory.components;
-              const mapped4 = components2.map((arg0) => {
-                const tmp = closure_1_8(closure_0, arg0);
+              const mapped4 = components2.map((item) => {
+                const tmp = transformToRowGeneratedComponent(closure_0, item);
                 let tmp2 = null;
                 if (null != tmp) {
                   tmp2 = tmp;
@@ -473,7 +464,6 @@ function transformToRowGeneratedComponent(message, accessory) {
                         num = 0;
                       }
                       obj15.powerLevel = numberFormat.format(num);
-                      let str = checkpointData.cardId;
                       const tmpResult15 = tmp(tmp2[29]);
                       let num2 = checkpointData.powerLevelPercentile;
                       if (num2 == null) {
@@ -498,7 +488,7 @@ function transformToRowGeneratedComponent(message, accessory) {
                         const merged12 = Object.assign(checkpointData.topEmoji);
                         let result1;
                         if (null == checkpointData.topEmoji.emojiId) {
-                          obj9 = initialSnowflakeSelectOptions(tmp2[31]);
+                          obj9 = require("UnicodeEmojis");
                           result1 = obj9.convertSurrogateToName(checkpointData.topEmoji.emojiName);
                         }
                         obj16.emojiSurrogateName = result1;
@@ -510,9 +500,7 @@ function transformToRowGeneratedComponent(message, accessory) {
                       obj = obj14;
                       const tmpResult18 = tmp(tmp2[29]);
                     } else {
-                      obj = { type: null, id: null };
-                      obj[0] = tmp(tmp2[6]).ComponentType.UNKNOWN;
-                      obj[1] = accessory.id;
+                      obj = { type: tmp(tmp2[6]).ComponentType.UNKNOWN, id: accessory.id };
                     }
                     return obj;
                   } else {
@@ -531,7 +519,11 @@ function transformToRowGeneratedComponent(message, accessory) {
         }
       }
     }
-    initialSnowflakeSelectOptions = tmp(tmp2[11]).getInitialSnowflakeSelectOptions(accessory, message.id, guildId);
+    const initialSnowflakeSelectOptions = tmp(tmp2[11]).getInitialSnowflakeSelectOptions(
+      accessory,
+      message.id,
+      guildId,
+    );
     const obj17 = {};
     const merged13 = Object.assign(accessory);
     const tmpResult19 = tmp(tmp2[11]);
@@ -540,61 +532,58 @@ function transformToRowGeneratedComponent(message, accessory) {
     obj17.selectedOptions = tmp(tmp2[12]).transformSearchableSelectOptions(initialSnowflakeSelectOptions, guildId);
     const tmpResult21 = tmp(tmp2[12]);
     obj17.placeholder = tmp(tmp2[7]).getSelectPlaceholder(accessory);
-    _require = accessory;
-    f83333 = (label) => label.label;
+    closure_129_0 = accessory;
+    closure_129_1 = initialSnowflakeSelectOptions;
+    closure_129_2 = (label) => label.label;
     const tmpResult22 = tmp(tmp2[7]);
-    obj18 = { expensive: null, cheap: null };
-    obj18[0] = function expensive() {
-      if (null != initialSnowflakeSelectOptions) {
-        if (0 !== arr.length) {
-          const mapped = arr.map(f83333);
-          const intl = accessory(f83333[8]).intl;
-          const obj = { selections: null };
-          obj[0] = mapped.join(",");
-          return intl.formatToPlainString(accessory(f83333[8]).t["I/ROH+"], obj);
+    obj18 = {
+      expensive() {
+        if (null != closure_1) {
+          if (0 !== arr.length) {
+            const mapped = arr.map(message);
+            const intl = util.intl;
+            const obj = { selections: mapped.join(",") };
+            return intl.formatToPlainString(util.t["I/ROH+"], obj);
+          }
         }
-      }
-      const placeholder = accessory(f83333[7]).getSelectPlaceholder(accessory);
-      const intl2 = accessory(f83333[8]).intl;
-      return intl2.formatToPlainString(accessory(f83333[8]).t["3aednA"], { placeholder });
+        const placeholder = InteractionComponentUtils.getSelectPlaceholder(closure_0);
+        const intl2 = util.intl;
+        return intl2.formatToPlainString(util.t["3aednA"], { placeholder });
+      },
+      cheap: null,
     };
     const tmpResult23 = tmp(tmp2[19]);
-    obj18[1] = tmp(tmp2[7]).getSelectPlaceholder(accessory);
+    obj18.cheap = tmp(tmp2[7]).getSelectPlaceholder(accessory);
     obj17.accessibilityLabel = tmpResult23.getAccessibilityLabelOrCheapFallbackUnsafe(obj18);
     return obj17;
   }
 }
-function transformUnfurledMediaItem(file, shouldShowMedia) {
-  ({ width, height, contentType } = file);
+function transformUnfurledMediaItem(media, shouldShowMedia) {
+  ({ width, height, contentType } = media);
   if (null != width) {
     if (width > 0) {
       if (null != height) {
         if (height > 0) {
           if (obj.isImageContentType(contentType)) {
             let VISUAL_PLACEHOLDER = tmp(8126).MediaGalleryItemType.IMAGE;
-            let tmp4 = tmp;
           } else {
             if (tmpResult.isVideoContentType(contentType)) {
               VISUAL_PLACEHOLDER = tmp(8126).MediaGalleryItemType.VIDEO;
-              tmp4 = tmp;
             }
             tmpResult = tmp(4710);
           }
-          obj = urlMatchesFileExtension;
+          obj = MediaFormatTesters;
         }
         const size = {};
-        const merged = Object.assign(file);
-        let tmp4Result = hasFlag;
-        size.srcIsAnimated = tmp4Result.hasFlag(
-          file.flags,
-          messageAttachmentToUnfurledMediaItem.UnfurledMediaItemFlags.IS_ANIMATED,
-        );
+        const merged = Object.assign(media);
+        let tmp4Result = FlagUtils;
+        size.srcIsAnimated = tmp4Result.hasFlag(media.flags, MediaTypes.UnfurledMediaItemFlags.IS_ANIMATED);
         if (!shouldShowMedia.shouldShowMedia) {
           size.height = 0;
           size.width = 0;
         }
-        if (VISUAL_PLACEHOLDER === MediaGalleryItemType.MediaGalleryItemType.IMAGE) {
-          const obj4 = nativeStylePropertiesDefault;
+        if (VISUAL_PLACEHOLDER === RowGeneratorTypes.MediaGalleryItemType.IMAGE) {
+          const obj4 = RowGeneratorUtilsDefault;
           ({ proxyUrl, width: width2 } = size);
           if (width2 == null) {
             width2 = 0;
@@ -612,26 +601,28 @@ function transformUnfurledMediaItem(file, shouldShowMedia) {
       }
     }
   }
-  VISUAL_PLACEHOLDER = MediaGalleryItemType.MediaGalleryItemType.VISUAL_PLACEHOLDER;
-  tmp4 = require;
+  VISUAL_PLACEHOLDER = RowGeneratorTypes.MediaGalleryItemType.VISUAL_PLACEHOLDER;
 }
 let closure_3 = ["checkpointData"];
+const processColor = fn(17).processColor;
+const CheckpointVersions = fn(4786).CheckpointVersions;
+let closure_7 = fn(8111).TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS;
 let obj = { max: Infinity, maxAge: null, updateAgeOnGet: true };
-obj[1] = 15 * setDefault.Millis.MINUTE;
-importDefaultResult = new importDefaultResult(obj);
-let c10 = importDefaultResult;
-let result = require("set").fileFinishedImporting("modules/messages/native/renderer/transformMessageComponents.tsx");
+obj.maxAge = 15 * DurationsDefault.Millis.MINUTE;
+priv = new priv(obj);
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/messages/native/renderer/transformMessageComponents.tsx");
 
 export default function transformMessageComponents(message, arr) {
-  obj = {
+  textDisplayComponent = {
     type: "textDisplayComponent",
-    parserState: obj(7888).getInitialParserStateFromMessage(message.message, closure_7),
+    parserState: textDisplayComponent(7888).getInitialParserStateFromMessage(message.message, closure_7),
   };
-  obj = {};
+  textDisplayComponent = {};
   const merged = Object.assign(message);
-  obj.markdownConfigs = { textDisplayComponent: obj };
-  const mapped = arr.map((arg0) => closure_1_8(obj, arg0));
-  return mapped.filter(obj(1369).isNotNullish);
+  textDisplayComponent.markdownConfigs = { textDisplayComponent };
+  const mapped = arr.map((item) => transformToRowGeneratedComponent(obj, item));
+  return mapped.filter(textDisplayComponent(1369).isNotNullish);
 }
 export const getUnfurledMediaItemType = function getUnfurledMediaItemType(arg0) {
   ({ width, height, contentType } = arg0);
@@ -647,10 +638,10 @@ export const getUnfurledMediaItemType = function getUnfurledMediaItemType(arg0) 
             }
             tmpResult = tmp(4710);
           }
-          obj = urlMatchesFileExtension;
+          obj = MediaFormatTesters;
         }
       }
     }
   }
-  return MediaGalleryItemType.MediaGalleryItemType.VISUAL_PLACEHOLDER;
+  return RowGeneratorTypes.MediaGalleryItemType.VISUAL_PLACEHOLDER;
 };

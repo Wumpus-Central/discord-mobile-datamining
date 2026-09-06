@@ -1,28 +1,29 @@
 // discord_app/modules/messages/native/renderer/system_messages/useIsStickerReplyEnabled.tsx
-import useCanStartPrivateThread from "../../../../threads/ThreadHooks.tsx";
-import closure_2 from "../../../../../stores/GuildMemberStore.tsx";
-import closure_3 from "../../../../../stores/PermissionStore.tsx";
-import closure_4 from "../../../../../stores/UserStore.tsx";
-import { Permissions } from "../../../../../Constants.tsx";
+import ThreadHooks from "../../../../threads/ThreadHooks.tsx";
+import GuildMemberStore from "../../../../../stores/GuildMemberStore.tsx";
+import PermissionStore from "../../../../../stores/PermissionStore.tsx";
+import UserStore from "../../../../../stores/UserStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting(
+require = fn;
+const Permissions = fn(1074).Permissions;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/useIsStickerReplyEnabled.tsx",
 );
 
 export const computeIsStickerReplyEnabled = function computeIsStickerReplyEnabled(guildId, channel, message, arg3) {
-  currentUser = currentUser.getCurrentUser();
+  const currentUser = UserStore.getCurrentUser();
   let tmp2 = null != currentUser;
   if (tmp2) {
-    member = member.getMember(guildId, currentUser.id);
+    const member = GuildMemberStore.getMember(guildId, currentUser.id);
     let isPending;
     if (member != null) {
       isPending = member.isPending;
     }
     tmp2 = isPending;
   }
-  const isReadOnlyThread = useCanStartPrivateThread.computeIsReadOnlyThread(channel);
-  let canResult = closure_3.can(Permissions.SEND_MESSAGES, channel);
+  const isReadOnlyThread = ThreadHooks.computeIsReadOnlyThread(channel);
+  let canResult = PermissionStore.can(Permissions.SEND_MESSAGES, channel);
   if (canResult) {
     canResult = !isReadOnlyThread;
   }

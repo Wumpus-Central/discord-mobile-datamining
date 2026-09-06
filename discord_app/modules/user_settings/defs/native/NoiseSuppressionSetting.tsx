@@ -1,33 +1,34 @@
 // discord_app/modules/user_settings/defs/native/NoiseSuppressionSetting.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import handleAutomaticGainControlChange from "../../voice/native/UserSettingsVoiceUtils.tsx";
-import closure_2 from "../../../../stores/MediaEngineStore.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import util from "../../../../intl/index.native.tsx";
+import UserSettingsVoiceUtils from "../../voice/native/UserSettingsVoiceUtils.tsx";
+import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
-require = arg1;
-createToggle = {
+require = fn;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.t8Qhib);
+    const intl = util.intl;
+    return intl.string(util.t.t8Qhib);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.VOICE,
+  parent: fn(7975).MobileUserSettings.VOICE,
   useValue: function useNoiseSuppressionSettingValue() {
-    const items = [closure_2];
+    const items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () => noiseSuppression.getNoiseSuppression());
   },
   onValueChange: function onNoiseSuppressionSettingValueChange(arg0) {
-    const NoiseSuppressionOpt = handleAutomaticGainControlChange.NoiseSuppressionOpt;
-    const result = handleAutomaticGainControlChange.handleNoiseSuppressionChange(
+    const NoiseSuppressionOpt = UserSettingsVoiceUtils.NoiseSuppressionOpt;
+    const result = UserSettingsVoiceUtils.handleNoiseSuppressionChange(
       arg0 ? NoiseSuppressionOpt.STANDARD : NoiseSuppressionOpt.NONE,
     );
   },
   usePredicate: function useHasNoiseSuppressionSetting() {
-    const items = [closure_2];
+    const items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () => !noiseCancellationSupported.isNoiseCancellationSupported());
   },
 };
-createToggle = createToggle.createToggle(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/NoiseSuppressionSetting.tsx");
+SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/NoiseSuppressionSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

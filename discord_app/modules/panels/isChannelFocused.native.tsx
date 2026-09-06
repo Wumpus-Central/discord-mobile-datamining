@@ -1,32 +1,31 @@
 // discord_app/modules/panels/isChannelFocused.native.tsx
-import coerceMainRoute from "../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
-import getRootNavigationRef from "../main_tabs_v2/RootNavigationRef.native.tsx";
-import getInitialGuildStateDefault from "../main_tabs_v2/native/getInitialNavigationState.tsx";
+import RootNavigationRef from "../main_tabs_v2/RootNavigationRef.native.tsx";
+import getInitialNavigationStateDefault from "../main_tabs_v2/native/getInitialNavigationState.tsx";
 import useChatLayout from "../chat/native/useChatLayout.tsx";
-import useChatLayoutDefault from "../chat/native/useChatLayout.tsx";
-import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../_runtime/00019_noop.js";
-import closure_5 from "../calls/ChannelRTCStore.tsx";
-import closure_6 from "../main_tabs_v2/native/NavigationHistoryStore.tsx";
-import { CHANNEL_PREFIX } from "../main_tabs_v2/native/NavigationHistoryStore.tsx";
-import closure_8 from "../voice_panel/VoicePanelStore.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import noop from "../../../_runtime/metro/00019__.js";
+import ChannelRTCStore from "../calls/ChannelRTCStore.tsx";
+import NavigationHistoryStore from "../main_tabs_v2/native/NavigationHistoryStore.tsx";
+import VoicePanelStore from "../voice_panel/VoicePanelStore.tsx";
 
-require = arg1;
+const useChatLayoutDefault = useChatLayout;
+
+const NavigationRouteUtils = params(4417);
+require = fn;
 function getFocusedChannelId() {
   let params = require;
   let paramsResult3 = dependencyMap;
-  const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
-  const obj = getRootNavigationRef;
+  const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
   const isChatLockedOpen = useChatLayout.getChatLayout().isChatLockedOpen;
   let tmp2 = null;
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
       const currentRoute = rootNavigationRef.getCurrentRoute();
-      const coerceChannelRouteResult = coerceMainRoute.coerceChannelRoute(currentRoute);
+      const coerceChannelRouteResult = NavigationRouteUtils.coerceChannelRoute(currentRoute);
       if (tmp2 != coerceChannelRouteResult) {
         return coerceChannelRouteResult.params.channelId;
       } else if (isChatLockedOpen) {
-        const coerceGuildsRouteResult = coerceMainRoute.coerceGuildsRoute(currentRoute);
+        const coerceGuildsRouteResult = NavigationRouteUtils.coerceGuildsRoute(currentRoute);
         let tmp6;
         if (tmp2 != coerceGuildsRouteResult) {
           const params2 = coerceGuildsRouteResult.params;
@@ -38,14 +37,14 @@ function getFocusedChannelId() {
         }
         return tmp6;
       }
-      const paramsResult = coerceMainRoute;
+      const paramsResult = NavigationRouteUtils;
     }
   }
   if (tmp2 !== c9) {
     return c9;
   } else {
-    const tmp19 = getInitialGuildStateDefault();
-    let routes2 = coerceMainRoute;
+    const tmp19 = getInitialNavigationStateDefault();
+    let routes2 = NavigationRouteUtils;
     let tmp8;
     if (tmp19 != tmp2) {
       const routes = tmp19.routes;
@@ -64,7 +63,7 @@ function getFocusedChannelId() {
     if (tmp2 == num2) {
       c9 = tmp9;
     } else {
-      routes2 = coerceMainRoute;
+      routes2 = NavigationRouteUtils;
       if (!isChatLockedOpen) {
         const state = num2.state;
         let tmp10;
@@ -111,7 +110,7 @@ function getFocusedChannelId() {
     }
     const coerceTabsRouteResult = routes2.coerceTabsRoute(tmp13);
     if (tmp2 != coerceTabsRouteResult) {
-      params = coerceMainRoute.coerceGuildsRoute;
+      params = NavigationRouteUtils.coerceGuildsRoute;
       routes2 = coerceTabsRouteResult.state;
       let tmp16;
       if (routes2 != tmp2) {
@@ -138,54 +137,56 @@ function getFocusedChannelId() {
         }
         tmp9 = paramsResult3;
       }
-      const paramsResult2 = coerceMainRoute;
+      const paramsResult2 = NavigationRouteUtils;
     }
   }
 }
+const CHANNEL_PREFIX = fn(7328).CHANNEL_PREFIX;
 let c9 = null;
-const result = require("set").fileFinishedImporting("modules/panels/isChannelFocused.native.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/panels/isChannelFocused.native.tsx");
 
 export { getFocusedChannelId };
 export const isChannelFocused = function isChannelFocused() {
   return null != getFocusedChannelId();
 };
 export const useIsChannelFocused = function useIsChannelFocused() {
-  const tmp = callback(
-    React.useState(() => null != callback2()),
+  const tmp = _slicedToArray(
+    noop.useState(() => null != getFocusedChannelId()),
     2,
   );
   closure_0 = tmp[1];
   const items = [useChatLayoutDefault()];
-  const effect = React.useEffect(() => {
-    callback(null != closure_1_10());
+  const effect = noop.useEffect(() => {
+    closure_0(null != getFocusedChannelId());
   }, items);
-  const effect1 = React.useEffect(() => {
+  const effect1 = noop.useEffect(() => {
     function handleStateChange() {
-      rootNavigationRef(null != closure_1_10());
+      rootNavigationRef(null != getFocusedChannelId());
     }
-    const rootNavigationRef = callback(closure_1_2[7]).getRootNavigationRef();
+    const rootNavigationRef = closure_0(dependencyMap[7]).getRootNavigationRef();
     if (null != rootNavigationRef) {
       rootNavigationRef.addListener("state", handleStateChange);
       return () => {
         rootNavigationRef.removeListener("state", handleStateChange);
       };
     }
-    const obj = callback(closure_1_2[7]);
+    const obj = closure_0(dependencyMap[7]);
   }, []);
   return tmp[0];
 };
 export const isChannelFocusedForReadStateAck = function isChannelFocusedForReadStateAck(channelId, arg1) {
-  if (chatOpen.getChatOpen(channelId)) {
+  if (ChannelRTCStore.getChatOpen(channelId)) {
     return true;
   } else {
-    state = state.getState();
+    const state = VoicePanelStore.getState();
     if (state.isVoicePanelFullscreen()) {
       return false;
     } else if (getFocusedChannelId() === channelId) {
       return true;
     } else {
       if (null != arg1) {
-        lastFocusedTimestampForHistoryItem = lastFocusedTimestampForHistoryItem.getLastFocusedTimestampForHistoryItem(
+        const lastFocusedTimestampForHistoryItem = NavigationHistoryStore.getLastFocusedTimestampForHistoryItem(
           CHANNEL_PREFIX + channelId,
         );
         if (null != lastFocusedTimestampForHistoryItem) {

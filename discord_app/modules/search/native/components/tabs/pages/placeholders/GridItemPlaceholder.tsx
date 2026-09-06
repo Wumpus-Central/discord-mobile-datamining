@@ -1,28 +1,28 @@
 // discord_app/modules/search/native/components/tabs/pages/placeholders/GridItemPlaceholder.tsx
-import ThemesDefault from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { View } from "../../../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../../../design/components/Styles/native/createStyles.tsx";
-import importAllResult from "../../../../../../../../_runtime/00019_noop.js";
+import nativeDefault from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import noop from "../../../../../../../../_runtime/metro/00019__.js";
 
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
 let obj = { imageContainer: null };
 obj = {
   flex: 1,
-  borderRadius: ThemesDefault.radii.xs,
+  borderRadius: nativeDefault.radii.xs,
   overflow: "hidden",
-  backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+  backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
 };
-obj[0] = obj;
-let closure_2 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo((arg0) => {
-  ({ width, height, style } = arg0);
-  const obj = { style: null };
-  const items = [{ width, height }, callback().imageContainer, style];
-  obj[0] = items;
-  return <View style={null} />;
-});
-const result = require("set").fileFinishedImporting(
+obj.imageContainer = obj;
+let closure_2 = createStyles.createStyles(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/search/native/components/tabs/pages/placeholders/GridItemPlaceholder.tsx",
 );
 
-export default memoResult;
+export default noop.memo((arg0) => {
+  ({ width, height, style } = arg0);
+  const obj = { style: null };
+  const items = [{ width, height }, closure_2().imageContainer, style];
+  obj.style = items;
+  return <View style={null} />;
+});

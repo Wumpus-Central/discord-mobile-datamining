@@ -1,53 +1,55 @@
 // discord_app/modules/nuf_channels/native/useCanSeeNUFChannelsForGuild.tsx
-import closure_2 from "../../../stores/GuildMemberStore.tsx";
-import closure_3 from "../../../stores/GuildStore.tsx";
-import closure_4 from "../../../stores/UserStore.tsx";
-import { GuildFeatures } from "../../../Constants.tsx";
-import { GuildMemberFlags } from "../../guild_member/GuildMemberConstants.tsx";
+import UserUtils from "../../../utils/UserUtils.tsx";
+import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
+import GuildStore from "../../../stores/GuildStore.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/nuf_channels/native/useCanSeeNUFChannelsForGuild.tsx");
+require = fn;
+const GuildFeatures = fn(1074).GuildFeatures;
+const GuildMemberFlags = fn(4187).GuildMemberFlags;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/nuf_channels/native/useCanSeeNUFChannelsForGuild.tsx");
 
 export const useCanSeeNUFChannelsForGuild = function useCanSeeNUFChannelsForGuild(id) {
-  const _require = id;
-  const items = [closure_4, closure_3, closure_2];
+  _require = id;
+  const items = [UserStore, GuildStore, GuildMemberStore];
   const items1 = [id];
-  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+  return require("initialize").useStateFromStores(
     items,
     () => {
-      const currentUser = closure_1_4.getCurrentUser();
+      const currentUser = UserStore.getCurrentUser();
       if (null != currentUser) {
         if (obj3.isNewUser(currentUser)) {
-          const guild = closure_1_3.getGuild(id);
+          const guild = GuildStore.getGuild(closure_0);
           if (null != guild) {
             const features2 = guild.features;
-            if (!features2.has(closure_1_5.HUB)) {
-              const selfMember = closure_1_2.getSelfMember(id);
+            if (!features2.has(GuildFeatures.HUB)) {
+              const selfMember = GuildMemberStore.getSelfMember(closure_0);
               const features = guild.features;
               let hasFlagResult = features.has(tmp12.GUILD_ONBOARDING) && null != selfMember;
               if (hasFlagResult) {
-                let tmp10Result = tmp10(tmp11[7]);
+                let tmp10Result = tmp10(1384);
                 let num = selfMember.flags;
                 if (num == null) {
                   num = 0;
                 }
-                hasFlagResult = tmp10Result.hasFlag(num, closure_1_6.STARTED_ONBOARDING);
+                hasFlagResult = tmp10Result.hasFlag(num, GuildMemberFlags.STARTED_ONBOARDING);
               }
               if (hasFlagResult) {
-                tmp10Result = tmp10(tmp11[7]);
+                tmp10Result = tmp10(1384);
                 let num2 = selfMember.flags;
                 if (num2 == null) {
                   num2 = 0;
                 }
-                hasFlagResult = !tmp10Result.hasFlag(num2, closure_1_6.COMPLETED_ONBOARDING);
+                hasFlagResult = !tmp10Result.hasFlag(num2, GuildMemberFlags.COMPLETED_ONBOARDING);
               }
               return !hasFlagResult;
             }
-            tmp12 = closure_1_5;
+            tmp12 = GuildFeatures;
           }
           return false;
         }
-        obj3 = id(closure_1_1[6]);
+        obj3 = UserUtils;
       }
       return false;
     },

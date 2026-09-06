@@ -1,101 +1,102 @@
 // discord_app/modules/launchpad/native/useLaunchPadAnimatedStyles.native.tsx
-import LAUNCH_PAD_SPRING_CONFIG2 from "LaunchPadConstants.tsx";
-import set from "../../../utils/PlatformUtils.tsx";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
+import spring from "../../../design/animation/reanimated/spring/spring.tsx";
+import LaunchPadConstants from "LaunchPadConstants.tsx";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
+import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const LAUNCH_PAD_SPRING_CONFIG = LAUNCH_PAD_SPRING_CONFIG2.LAUNCH_PAD_SPRING_CONFIG;
-let closure_4 = set.isAndroid();
-let closure_5 = createCacheKey.createStyles({
+let LAUNCH_PAD_SPRING_CONFIG = LaunchPadConstants.LAUNCH_PAD_SPRING_CONFIG;
+let IS_ANDROID = PlatformUtils.isAndroid();
+let closure_5 = createStyles.createStyles({
   launchPad: { position: "absolute", top: 0, left: 0, width: "100%", zIndex: 1 },
   launchPadCover: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: "#000" },
 });
-let closure_6 = {
+const __initData = {
   code: "function useLaunchPadAnimatedStylesNativeTsx1(){const{withSpring,interpolate,launchPadSharedState,windowDimensions,LAUNCH_PAD_SPRING_CONFIG,gestureState,launchPadShown,IS_ANDROID,height}=this.__closure;return{transform:[{translateX:withSpring(interpolate(launchPadSharedState.get(),[0,1],[windowDimensions.get().width-16,0]),LAUNCH_PAD_SPRING_CONFIG,'animate-always',function(finished){'worklet';if(!finished||gestureState.get().active)return;if(launchPadSharedState.get()===1||launchPadSharedState.get()===0){launchPadShown.set(launchPadSharedState.get()===1);}})}],bottom:IS_ANDROID?0:height.get()};}",
 };
 let closure_7 = {
   code: "function useLaunchPadAnimatedStylesNativeTsx2(finished){const{gestureState,launchPadSharedState,launchPadShown}=this.__closure;if(!finished||gestureState.get().active)return;if(launchPadSharedState.get()===1||launchPadSharedState.get()===0){launchPadShown.set(launchPadSharedState.get()===1);}}",
 };
-let closure_8 = {
+const __initData2 = {
   code: "function useLaunchPadAnimatedStylesNativeTsx3(){const{withSpring,interpolate,launchPadSharedState,LAUNCH_PAD_SPRING_CONFIG}=this.__closure;return{opacity:withSpring(interpolate(launchPadSharedState.get(),[0,1],[0,0.6]),LAUNCH_PAD_SPRING_CONFIG,'animate-always')};}",
 };
-let result = set.fileFinishedImporting("modules/launchpad/native/useLaunchPadAnimatedStyles.native.tsx");
+let result = size.fileFinishedImporting("modules/launchpad/native/useLaunchPadAnimatedStyles.native.tsx");
 
 export default function useLaunchpadAnimatedStyles(launchPadSharedState) {
   launchPadSharedState = launchPadSharedState.launchPadSharedState;
   const gestureState = launchPadSharedState.gestureState;
   const launchPadShown = launchPadSharedState.launchPadShown;
-  closure_3 = undefined;
-  closure_4 = undefined;
-  let tmp = callback();
+  let tmp = closure_5();
   const tmp2 = gestureState(launchPadShown[3])();
-  closure_3 = tmp2;
+  LAUNCH_PAD_SPRING_CONFIG = tmp2;
   let tmp3 = gestureState(launchPadShown[4])();
-  closure_4 = tmp3;
-  let obj = launchPadSharedState(launchPadShown[6]);
+  IS_ANDROID = tmp3;
+  launchPadSharedState(launchPadShown[6]);
   let fn = function _() {
     let obj = { transform: null, bottom: null };
     obj = { translateX: null };
-    const obj3 = launchPadSharedState(launchPadShown[7]);
-    const value = launchPadSharedState.get();
+    const obj3 = spring;
+    value = launchPadSharedState.get();
     const items = [closure_4.get().width - 16];
     let num = 0;
     items[1] = 0;
     const fn = function h(arg0) {
       let tmp = arg0;
       if (arg0) {
-        tmp = !closure_1.get().active;
+        tmp = !gestureState.get().active;
       }
       if (tmp) {
-        let tmp3 = 1 !== closure_0.get();
+        let tmp3 = 1 !== launchPadSharedState.get();
         if (tmp3) {
           tmp3 = 0 !== obj.get();
         }
         if (!tmp3) {
-          const result = closure_2.set(1 === obj.get());
+          const result = launchPadShown.set(1 === obj.get());
         }
       }
     };
     obj = { gestureState, launchPadSharedState, launchPadShown };
     fn.__closure = obj;
     fn.__workletHash = 7028378249389;
-    fn.__initData = closure_1_7;
-    obj[0] = obj3.withSpring(
-      launchPadSharedState(launchPadShown[6]).interpolate(value, [0, 1], items),
-      closure_3,
+    fn.__initData = __initData;
+    obj.translateX = obj3.withSpring(
+      ReanimatedRexport.interpolate(value, [0, 1], items),
+      LAUNCH_PAD_SPRING_CONFIG,
       "animate-always",
       fn,
     );
     const items1 = [obj];
-    obj[0] = items1;
+    obj.transform = items1;
     if (!closure_4) {
       num = closure_3.get();
     }
-    obj[1] = num;
+    obj.bottom = num;
     return obj;
   };
-  obj = {
+  let obj = {
     withSpring: launchPadSharedState(launchPadShown[7]).withSpring,
     interpolate: launchPadSharedState(launchPadShown[6]).interpolate,
     launchPadSharedState,
     windowDimensions: tmp3,
-    LAUNCH_PAD_SPRING_CONFIG: closure_3,
+    LAUNCH_PAD_SPRING_CONFIG,
     gestureState,
     launchPadShown,
-    IS_ANDROID: closure_4,
+    IS_ANDROID,
     height: tmp2,
   };
   fn.__closure = obj;
   fn.__workletHash = 1628632614770;
-  fn.__initData = closure_6;
+  fn.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(fn);
   class P {
     constructor() {
       obj = { opacity: null };
-      obj2 = launchPadSharedState(launchPadShown[7]);
-      obj3 = launchPadSharedState(launchPadShown[6]);
-      obj[0] = obj2.withSpring(
+      obj2 = closure_0(closure_2[7]);
+      obj3 = closure_0(closure_2[6]);
+      obj.opacity = obj2.withSpring(
         obj3.interpolate(launchPadSharedState.get(), [0, 1], [0, 0.6]),
-        closure_3,
+        LAUNCH_PAD_SPRING_CONFIG,
         "animate-always",
       );
       return obj;
@@ -105,15 +106,15 @@ export default function useLaunchpadAnimatedStyles(launchPadSharedState) {
     withSpring: launchPadSharedState(launchPadShown[7]).withSpring,
     interpolate: launchPadSharedState(launchPadShown[6]).interpolate,
     launchPadSharedState,
-    LAUNCH_PAD_SPRING_CONFIG: closure_3,
+    LAUNCH_PAD_SPRING_CONFIG,
   };
   P.__closure = obj;
   P.__workletHash = 6964438968188;
-  P.__initData = closure_8;
-  obj1 = { launchPadCoverStyles: null, launchPadStyles: null };
+  P.__initData = __initData2;
+  const obj1 = { launchPadCoverStyles: null, launchPadStyles: null };
   let items = [tmp.launchPadCover, launchPadSharedState(launchPadShown[6]).useAnimatedStyle(P)];
-  obj1[0] = items;
+  obj1.launchPadCoverStyles = items;
   let items1 = [tmp.launchPad, animatedStyle, { paddingTop: gestureState(launchPadShown[5])().top }];
-  obj1[1] = items1;
+  obj1.launchPadStyles = items1;
   return obj1;
 }

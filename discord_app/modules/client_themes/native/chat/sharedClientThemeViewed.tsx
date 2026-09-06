@@ -1,15 +1,14 @@
 // discord_app/modules/client_themes/native/chat/sharedClientThemeViewed.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import encodeProperties from "../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import trackImpression from "../../../app_analytics/useTrackImpression.tsx";
+import discord_common_AnalyticsUtils from "../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import useTrackImpression from "../../../app_analytics/useTrackImpression.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/client_themes/native/chat/sharedClientThemeViewed.tsx");
+const result = size.fileFinishedImporting("modules/client_themes/native/chat/sharedClientThemeViewed.tsx");
 
 export const handleSharedClientThemeViewed = function handleSharedClientThemeViewed() {
-  let obj = trackImpression;
-  obj = {
-    type: encodeProperties.ImpressionTypes.VIEW,
-    name: encodeProperties.ImpressionNames.CUSTOM_THEME_SHARE,
+  const obj = {
+    type: discord_common_AnalyticsUtils.ImpressionTypes.VIEW,
+    name: discord_common_AnalyticsUtils.ImpressionNames.CUSTOM_THEME_SHARE,
     properties: {},
   };
   obj.trackImpression(obj);

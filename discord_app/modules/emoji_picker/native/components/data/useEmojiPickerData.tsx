@@ -1,12 +1,16 @@
 // discord_app/modules/emoji_picker/native/components/data/useEmojiPickerData.tsx
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../../emojis/EmojiStore.tsx";
-import { LoadState } from "../../../../emojis/EmojiStore.tsx";
-import { EmojiCategoryTypes } from "../../../EmojiPickerConstants.tsx";
-import { EmojiPickerRenderingDataType as closure_7 } from "../EmojiPickerListConstants.tsx";
+import getEmojiPickerDataRowItemNativeSectionDefault from "getEmojiPickerDataRowItemNativeSection.tsx";
+import getEmojiPickerDataRowPremiumInlineRoadblockDefault from "getEmojiPickerDataRowPremiumInlineRoadblock.tsx";
+import PremiumUpsellSectionDivider from "../../../../premium/roadblocks/native/views/PremiumUpsellSectionDivider.tsx";
+import getEmojiPickerDataRowItemSlimEmojiDefault from "getEmojiPickerDataRowItemSlimEmoji.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
+import EmojiStore from "../../../../emojis/EmojiStore.tsx";
 
-const require = arg1;
-let obj = {
+require = fn;
+const LoadState = fn(5459).LoadState;
+const EmojiCategoryTypes = fn(5463).EmojiCategoryTypes;
+let closure_7 = fn(10290).EmojiPickerRenderingDataType;
+const EmojiPickerItemType = {
   PLACEHOLDER: 0,
   [0]: "PLACEHOLDER",
   TITLE: 1,
@@ -24,18 +28,16 @@ let obj = {
   NATIVE_SECTION: 7,
   [7]: "NATIVE_SECTION",
 };
-const result = require("set").fileFinishedImporting(
-  "modules/emoji_picker/native/components/data/useEmojiPickerData.tsx",
-);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/emoji_picker/native/components/data/useEmojiPickerData.tsx");
 
 export default function useEmojiPickerData(emojiSections) {
   emojiSections = emojiSections.emojiSections;
-  const rowSize = emojiSections.rowSize;
+  let rowSize = emojiSections.rowSize;
   const isNativeEmojiPickerEnabled = emojiSections.isNativeEmojiPickerEnabled;
-  let stateFromStores;
-  let items = [closure_4];
-  stateFromStores = emojiSections(isNativeEmojiPickerEnabled[4]).useStateFromStores(items, () => {
-    let tmp = closure_1_4.loadState === closure_1_5.Loaded;
+  let items = [EmojiStore];
+  const stateFromStores = emojiSections(isNativeEmojiPickerEnabled[4]).useStateFromStores(items, () => {
+    let tmp = EmojiStore.loadState === LoadState.Loaded;
     if (!tmp) {
       tmp = !isNativeEmojiPickerEnabled;
     }
@@ -43,83 +45,73 @@ export default function useEmojiPickerData(emojiSections) {
   });
   const items1 = [stateFromStores, emojiSections, rowSize, isNativeEmojiPickerEnabled];
   return stateFromStores.useMemo(() => {
-    obj = { type: closure_1_8.PLACEHOLDER, isSectionNitroLocked: false };
-    const items = [obj];
-    obj = {
+    rowSize = { type: constants.PLACEHOLDER, isSectionNitroLocked: false };
+    const items = [rowSize];
+    rowSize = {
       data: items,
-      rowSize: obj,
+      rowSize,
       headerIndices: [],
       hasGuildData: stateFromStores,
       hasSearchData: false,
       hasSearchUpsell: false,
     };
-    const item = items.forEach((isSectionNitroLocked) => {
+    const item = items.forEach((isSectionNitroLocked, index) => {
       let tmp2 = tmp;
       let tmp3 = tmp2;
       if (tmp2) {
         isSectionNitroLocked = undefined;
-        if (items[arg1 - 1] != null) {
+        if (emojiSections[index - 1] != null) {
           isSectionNitroLocked = tmp5.isSectionNitroLocked;
         }
         tmp3 = true !== isSectionNitroLocked;
       }
       if (tmp2) {
         let isSectionNitroLocked1;
-        if (items[arg1 + 1] != null) {
+        if (emojiSections[index + 1] != null) {
           isSectionNitroLocked1 = tmp9.isSectionNitroLocked;
         }
         tmp2 = true !== isSectionNitroLocked1;
       }
-      if (isSectionNitroLocked.type !== closure_2_7.NATIVE_SECTION) {
+      if (isSectionNitroLocked.type !== constants.NATIVE_SECTION) {
         if (tmp3) {
           items.push(
-            rowSize(isNativeEmojiPickerEnabled[6])(
-              emojiSections(isNativeEmojiPickerEnabled[7]).PremiumUpsellSectionDividerPosition.START,
+            getEmojiPickerDataRowPremiumInlineRoadblockDefault(
+              PremiumUpsellSectionDivider.PremiumUpsellSectionDividerPosition.START,
             ),
           );
-          const tmp19 = rowSize(isNativeEmojiPickerEnabled[6]);
         }
         if (null != isSectionNitroLocked.label) {
-          obj = { type: null, title: null, isSectionNitroLocked: null };
-          obj[0] = closure_2_8.TITLE;
-          obj[1] = isSectionNitroLocked.label;
-          obj[2] = tmp;
+          let obj = { type: null, title: null, isSectionNitroLocked: null };
+          obj.type = obj.TITLE;
+          obj.title = isSectionNitroLocked.label;
+          obj.isSectionNitroLocked = tmp;
           items.push(obj);
           const headerIndices = obj.headerIndices;
           headerIndices.push(items.length - 1);
         }
         const _Math = Math;
-        const rounded = Math.ceil(isSectionNitroLocked.emojis.length / obj);
+        const rounded = Math.ceil(isSectionNitroLocked.emojis.length / rowSize);
         for (let num6 = 0; num6 < rounded; num6 = num6 + 1) {
-          let tmp31 = closure_1_2;
-          let tmp32 = num6;
-          if (closure_1_2) {
+          if (isNativeEmojiPickerEnabled) {
             let tmp37 = 0 === num6;
             if (0 === num6) {
-              let tmp38 = closure_2_7;
-              tmp37 = isSectionNitroLocked.type === closure_2_7.EMOJI;
+              tmp37 = isSectionNitroLocked.type === constants.EMOJI;
             }
             if (tmp37) {
               let hasSearchData = obj.hasSearchData;
               let tmp39 = obj;
               if (!hasSearchData) {
-                let tmp40 = closure_2_6;
-                hasSearchData = isSectionNitroLocked.footer === closure_2_6.SEARCH_RESULTS;
+                hasSearchData = isSectionNitroLocked.footer === EmojiCategoryTypes.SEARCH_RESULTS;
               }
               if (!hasSearchData) {
-                let tmp41 = closure_2_6;
-                hasSearchData = isSectionNitroLocked.footer === closure_2_6.PREMIUM_UPSELL;
+                hasSearchData = isSectionNitroLocked.footer === EmojiCategoryTypes.PREMIUM_UPSELL;
               }
               tmp39.hasSearchData = hasSearchData;
-              let tmp42 = items;
-              let tmp43 = rowSize;
-              let tmp44 = isNativeEmojiPickerEnabled;
-              let arr2 = items.push(rowSize(isNativeEmojiPickerEnabled[8])(isSectionNitroLocked));
+              let arr2 = items.push(getEmojiPickerDataRowItemSlimEmojiDefault(isSectionNitroLocked));
             }
           } else {
             let type = isSectionNitroLocked.type;
-            if (closure_2_7.EMOJI === type) {
-              let tmp34 = items;
+            if (constants.EMOJI === type) {
               obj = {
                 type: null,
                 row: null,
@@ -128,43 +120,40 @@ export default function useEmojiPickerData(emojiSections) {
                 footer: null,
                 isSectionNitroLocked: null,
               };
-              let tmp35 = closure_2_8;
-              obj[0] = closure_2_8.EMOJI_ROW;
-              obj[1] = num6;
-              ({ emojis: obj2[2], emojisDisabled: obj2[3], footer: obj2[4] } = isSectionNitroLocked);
-              obj[5] = tmp;
+              obj.type = obj.EMOJI_ROW;
+              obj.row = num6;
+              ({
+                emojis: obj2.emojis,
+                emojisDisabled: obj2.emojisDisabled,
+                footer: obj2.footer,
+              } = isSectionNitroLocked);
+              obj.isSectionNitroLocked = tmp;
               let arr3 = items.push(obj);
             } else if (tmp33.NSFW === type) {
-              let tmp57 = items;
               obj = { type: null, isSectionNitroLocked: null };
-              let tmp58 = closure_2_8;
-              obj[0] = closure_2_8.EMOJI_ROW_NSFW;
-              obj[1] = tmp;
+              obj.type = obj.EMOJI_ROW_NSFW;
+              obj.isSectionNitroLocked = tmp;
               let arr4 = items.push(obj);
             }
           }
         }
-        if (isSectionNitroLocked.footer === closure_2_6.PREMIUM_UPSELL) {
+        if (isSectionNitroLocked.footer === EmojiCategoryTypes.PREMIUM_UPSELL) {
           obj.hasSearchUpsell = true;
-          obj1 = { type: null, id: null, isSectionNitroLocked: null };
-          obj1[0] = closure_2_8.FOOTER_UPSELL;
-          obj1[1] = tmp46.PREMIUM_UPSELL;
-          obj1[2] = tmp;
+          const obj1 = { type: obj.FOOTER_UPSELL, id: tmp46.PREMIUM_UPSELL, isSectionNitroLocked: tmp };
           items.push(obj1);
         }
         if (tmp2) {
           items.push(
-            rowSize(isNativeEmojiPickerEnabled[6])(
-              emojiSections(isNativeEmojiPickerEnabled[7]).PremiumUpsellSectionDividerPosition.END,
+            getEmojiPickerDataRowPremiumInlineRoadblockDefault(
+              PremiumUpsellSectionDivider.PremiumUpsellSectionDividerPosition.END,
             ),
           );
-          const tmp54 = rowSize(isNativeEmojiPickerEnabled[6]);
         }
       } else {
-        items.push(rowSize(isNativeEmojiPickerEnabled[5])(isSectionNitroLocked, tmp3, tmp2));
+        items.push(getEmojiPickerDataRowItemNativeSectionDefault(isSectionNitroLocked, tmp3, tmp2));
       }
     });
-    return obj;
+    return rowSize;
   }, items1);
 }
-export const EmojiPickerItemType = obj;
+export { EmojiPickerItemType };

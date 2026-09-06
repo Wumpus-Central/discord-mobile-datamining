@@ -1,9 +1,9 @@
 // discord_app/modules/app_analytics/native/useTrackNavigatorScreenImpression.tsx
-import set from "../../../../_runtime/00002_set.js";
-import encodeProperties from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import trackImpressionDefault from "../useTrackImpression.tsx";
+import discord_common_AnalyticsUtils from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import useTrackImpressionDefault from "../useTrackImpression.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/app_analytics/native/useTrackNavigatorScreenImpression.tsx");
+const result = size.fileFinishedImporting("modules/app_analytics/native/useTrackNavigatorScreenImpression.tsx");
 
 export const useTrackNavigatorScreenImpression = function useTrackNavigatorScreenImpression(
   impressionProperties,
@@ -15,9 +15,9 @@ export const useTrackNavigatorScreenImpression = function useTrackNavigatorScree
     impressionPropertiesResult = impressionProperties(params.params);
   }
   const obj = {
-    type: encodeProperties.ImpressionTypes.PAGE,
+    type: discord_common_AnalyticsUtils.ImpressionTypes.PAGE,
     name: impressionProperties.impressionName,
     properties: impressionPropertiesResult,
   };
-  trackImpressionDefault(obj);
+  useTrackImpressionDefault(obj);
 };

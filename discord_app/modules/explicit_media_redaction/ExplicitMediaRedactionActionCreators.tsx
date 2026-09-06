@@ -1,40 +1,50 @@
 // discord_app/modules/explicit_media_redaction/ExplicitMediaRedactionActionCreators.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
-import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import Constants from "../../Constants.tsx";
+import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const Endpoints = ME.Endpoints;
-const result = set.fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaRedactionActionCreators.tsx");
+const Endpoints = Constants.Endpoints;
+const result = size.fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaRedactionActionCreators.tsx");
 
 export const reportFalsePositive = function reportFalsePositive(channel_id, message_id, attachment_ids, embed_ids) {
-  const HTTP = sendRequest.HTTP;
-  obj = { url: Endpoints.EXPLICIT_MEDIA_REPORT_FALSE_POSITIVE, body: obj, rejectWithError: false };
-  obj = { channel_id, message_id, attachment_ids, embed_ids };
-  return HTTP.post(obj);
+  const HTTP = HTTPUtils.HTTP;
+  const request = {
+    url: Endpoints.EXPLICIT_MEDIA_REPORT_FALSE_POSITIVE,
+    body: { channel_id, message_id, attachment_ids, embed_ids },
+    rejectWithError: false,
+  };
+  return HTTP.post(request);
 };
 export const reportFailedSendFalsePositive = function reportFailedSendFalsePositive(
   channelId,
   messageId,
-  closure_2,
-  closure_3,
+  attachment_ids,
+  filenames,
 ) {
-  const HTTP = sendRequest.HTTP;
-  obj = { url: Endpoints.EXPLICIT_MEDIA_SENDER_REPORT_FALSE_POSITIVE, body: obj, rejectWithError: false };
-  obj = { channel_id: channelId, message_id: messageId, attachment_ids: closure_2, filenames: closure_3 };
-  return HTTP.post(obj);
+  const HTTP = HTTPUtils.HTTP;
+  const request = {
+    url: Endpoints.EXPLICIT_MEDIA_SENDER_REPORT_FALSE_POSITIVE,
+    body: { channel_id: channelId, message_id: messageId, attachment_ids, filenames },
+    rejectWithError: false,
+  };
+  return HTTP.post(request);
 };
-export const sendMessagesForScanning = function sendMessagesForScanning(channel_id, found) {
-  const HTTP = sendRequest.HTTP;
-  obj = { url: Endpoints.EXPLICIT_MEDIA_SCAN_MESSAGES(channel_id), body: obj, rejectWithError: false };
-  obj = { message_ids: found };
-  return HTTP.patch(obj);
+export const sendMessagesForScanning = function sendMessagesForScanning(channel_id, message_ids) {
+  const HTTP = HTTPUtils.HTTP;
+  const request = {
+    url: Endpoints.EXPLICIT_MEDIA_SCAN_MESSAGES(channel_id),
+    body: { message_ids },
+    rejectWithError: false,
+  };
+  return HTTP.patch(request);
 };
 export const sendMultiChannelMessagesForScanning = function sendMultiChannelMessagesForScanning(found) {
   const mapped = found.map((channel_id) => ({ channel_id: channel_id.channel_id, message_id: channel_id.id }));
-  const HTTP = sendRequest.HTTP;
-  return HTTP.patch({
+  const HTTP = HTTPUtils.HTTP;
+  const request = {
     url: Endpoints.EXPLICIT_MEDIA_SCAN_MULTI_CHANNEL_MESSAGES,
     body: { messages: mapped },
     rejectWithError: false,
-  });
+  };
+  return HTTP.patch(request);
 };

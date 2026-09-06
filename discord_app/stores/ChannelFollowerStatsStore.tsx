@@ -1,16 +1,16 @@
 // discord_app/stores/ChannelFollowerStatsStore.tsx
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../Dispatcher.tsx";
+import DispatcherDefault from "../Dispatcher.tsx";
 
-let closure_0 = { FAILED: "failed", SUCCEEDED: "succeeded" };
+const constants = { FAILED: "failed", SUCCEEDED: "succeeded" };
 let closure_1 = {};
 const Store = initializeDefault.Store;
 class ChannelFollowerStatsStore extends Store {}
-ChannelFollowerStatsStore.prototype["getFollowerStatsForChannel"] = function getFollowerStatsForChannel(closure_0) {
-  return table[closure_0];
+ChannelFollowerStatsStore.prototype["getFollowerStatsForChannel"] = function getFollowerStatsForChannel(arg0) {
+  return closure_1[arg0];
 };
 ChannelFollowerStatsStore.displayName = "ChannelFollowerStatsStore";
-const channelFollowerStatsStore = new ChannelFollowerStatsStore(dispatcherDefault, {
+const channelFollowerStatsStore = new ChannelFollowerStatsStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     closure_1 = {};
   },
@@ -43,6 +43,7 @@ const channelFollowerStatsStore = new ChannelFollowerStatsStore(dispatcherDefaul
     };
   },
 });
-const result = require("set").fileFinishedImporting("stores/ChannelFollowerStatsStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("stores/ChannelFollowerStatsStore.tsx");
 
 export default channelFollowerStatsStore;

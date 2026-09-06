@@ -1,6 +1,6 @@
 // discord_common/js/packages/libdiscore/mobile/js/timers.tsx
-import set from "../../../../../../_runtime/00002_set.js";
-import typedGlobal from "global_types.tsx";
+import global_types from "global_types.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
 function setTimeout(arg0, arg1) {
   let num = arg1;
@@ -29,12 +29,12 @@ function clearTimeout(arg0) {
     closure_3.clear(arg0);
   }
 }
-const LIBDISCORE_JSI = typedGlobal.typedGlobal.LIBDISCORE_JSI;
-let c1 = null;
+const LIBDISCORE_JSI = global_types.typedGlobal.LIBDISCORE_JSI;
+let global = null;
 const map = new Map();
 let closure_3 = LIBDISCORE_JSI.makeTimerManager(
   function expirationCallback(arg0, arg1) {
-    const value = map.get(arg0);
+    value = map.get(arg0);
     if (value) {
       if (arg1) {
         map.delete(arg0);
@@ -46,16 +46,16 @@ let closure_3 = LIBDISCORE_JSI.makeTimerManager(
     slowExecutionThresholdMillis: 500,
     delayedExecutionThresholdMillis: 5000,
     onSlowTimer(arg0, arg1, arg2, arg3) {
-      if (c1 != null) {
+      if (global != null) {
         tmp(arg0, arg1, arg2, arg3);
       }
     },
   },
 );
-let result = set.fileFinishedImporting("../discord_common/js/packages/libdiscore/mobile/js/timers.tsx");
+let result = size.fileFinishedImporting("../discord_common/js/packages/libdiscore/mobile/js/timers.tsx");
 
 export function setTimersMonitorCallback(onTimersDelayCallback) {
-  closure_1 = onTimersDelayCallback;
+  global = onTimersDelayCallback;
 }
 export { setTimeout };
 export { setInterval };

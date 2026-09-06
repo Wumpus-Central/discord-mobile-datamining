@@ -1,6 +1,6 @@
 // discord_app/modules/parent_tools/FamilyCenterPendingConnectionStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
 
 let c0 = null;
 const PersistedStore = initializeDefault.PersistedStore;
@@ -21,9 +21,9 @@ prototype["getPendingConnection"] = function getPendingConnection() {
 };
 FamilyCenterPendingConnectionStore.displayName = "FamilyCenterPendingConnectionStore";
 FamilyCenterPendingConnectionStore.persistKey = "FamilyCenterPendingConnectionStore";
-const familyCenterPendingConnectionStore = new FamilyCenterPendingConnectionStore(dispatcherDefault, {
+const familyCenterPendingConnectionStore = new FamilyCenterPendingConnectionStore(DispatcherDefault, {
   FAMILY_CENTER_PENDING_CONNECTION_SET: function handleSet(teenId) {
-    closure_0 = { teenId: teenId.teenId, linkCode: teenId.linkCode };
+    c0 = { teenId: teenId.teenId, linkCode: teenId.linkCode };
   },
   FAMILY_CENTER_PENDING_CONNECTION_CLEAR: function handleClear() {
     c0 = null;
@@ -32,6 +32,7 @@ const familyCenterPendingConnectionStore = new FamilyCenterPendingConnectionStor
     c0 = null;
   },
 });
-const result = require("set").fileFinishedImporting("modules/parent_tools/FamilyCenterPendingConnectionStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/FamilyCenterPendingConnectionStore.tsx");
 
 export default familyCenterPendingConnectionStore;

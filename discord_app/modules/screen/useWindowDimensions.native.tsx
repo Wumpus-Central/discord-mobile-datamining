@@ -1,10 +1,11 @@
 // discord_app/modules/screen/useWindowDimensions.native.tsx
-import closure_2 from "../../../_runtime/00019_noop.js";
-import closure_3 from "native/DimensionsStore.android.tsx";
+import noop from "../../../_runtime/metro/00019__.js";
+import DimensionsStore from "native/DimensionsStore.android.tsx";
 
-const require = arg1;
+const require = fn;
 let closure_4 = { ignoreKeyboard: false };
-const result = require("set").fileFinishedImporting("modules/screen/useWindowDimensions.native.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/screen/useWindowDimensions.native.tsx");
 
 export default function useWindowDimensions() {
   let tmp = arg0;
@@ -15,15 +16,14 @@ export default function useWindowDimensions() {
   if (flag === undefined) {
     flag = false;
   }
-  let appEntryKey = tmp.appEntryKey;
-  appEntryKey = undefined;
+  let appEntryKey;
   if (appEntryKey == null) {
     appEntryKey = obj.useAppEntryKey();
   }
   const items = [flag, appEntryKey];
-  return state(
-    React.useMemo(() => {
-      if (closure_0) {
+  return DimensionsStore(
+    noop.useMemo(() => {
+      if (flag) {
         closure_0 = tmp;
         let fn = (arg0) => arg0.byAppEntry[closure_0].windowDimensionsIgnoringKeyboard;
       } else {
@@ -47,6 +47,6 @@ export const getWindowDimensions = function getWindowDimensions(arg0) {
   if (str === undefined) {
     str = "main";
   }
-  const tmp2 = state.getState().byAppEntry[str];
+  const tmp2 = DimensionsStore.getState().byAppEntry[str];
   return flag ? tmp2.windowDimensionsIgnoringKeyboard : tmp2.windowDimensions;
 };

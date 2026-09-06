@@ -1,30 +1,32 @@
 // discord_app/modules/media_viewer/native/components/MediaModalWebVideoFile.tsx
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import MediaViewerAnalyticsManager from "../../MediaViewerAnalyticsManager.tsx";
+import MediaModalWebView from "MediaModalWebView.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let c4 = importAllResult;
+require = fn;
+let jsx = fn(21).jsx;
 let closure_6 = "https:" + window.GLOBAL_ENV.WEBAPP_ENDPOINT;
-const memoResult = importAllResult.memo((style) => {
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaModalWebVideoFile.tsx");
+
+export default noop.memo((style) => {
   const visible = style.visible;
   ({ source, controls } = style);
-  const merged = Object.assign(style, Object.create(null));
-  let first;
-  let callback;
-  importAllResult = undefined;
-  jsx = undefined;
-  let ref;
+  const merged = Object.assign(style, Object.assign({ visible: 0, style: 0, source: 0, controls: 0 }));
+  let playerState;
+  _slicedToArray = undefined;
+  noop = undefined;
   let mediaPlayerMutedStore;
-  let obj = importAllResult;
-  const tmp4 = callback(importAllResult.useState(visible(first[3]).PlayerState.UNREADY), 2);
-  first = tmp4[0];
-  callback = tmp4[1];
-  const tmp7 = controls(first[4])(first);
-  importAllResult = tmp7;
-  const tmp8 = controls(first[4])(visible);
+  let obj = noop;
+  const tmp4 = _slicedToArray(noop.useState(visible(playerState[3]).PlayerState.UNREADY), 2);
+  playerState = tmp4[0];
+  _slicedToArray = tmp4[1];
+  const tmp7 = controls(playerState[4])(playerState);
+  noop = tmp7;
+  const tmp8 = controls(playerState[4])(visible);
   jsx = tmp8;
-  ref = undefined;
+  let ref;
   if (controls != null) {
     let props = controls.props;
     if (props != null) {
@@ -40,21 +42,117 @@ const memoResult = importAllResult.memo((style) => {
     props = controls.props;
   }
   const items = [props];
-  callback = obj.useCallback((arg0) => {
-    if (null != tmp) {
-      if (controls != null) {
-        const props = controls.props;
-        if (props != null) {
-          const onCurrentSecond = props.onCurrentSecond;
-          if (onCurrentSecond != null) {
-            onCurrentSecond(tmp);
+  const callback = obj.useCallback((arg0) => {
+    const iter = ((arg0) => {
+      try {
+        const _JSON = JSON;
+        return JSON.parse(arg0);
+      } catch (err) {
+        return {};
+      }
+    })(arg0);
+    value = iter.value;
+    switch (iter.type) {
+      case "loaded":
+        closure_3(MediaModalWebView.PlayerState.READY);
+        break;
+      case "canplay":
+        if (controls != null) {
+          const props5 = controls.props;
+          if (props5 != null) {
+            props5.onPlayerStateChange(MediaModalWebView.PlayerState.VIDEO_CUED);
           }
         }
-      }
+        closure_3(MediaModalWebView.PlayerState.VIDEO_CUED);
+        break;
+      case "error":
+        closure_3(MediaModalWebView.PlayerState.ERRORED);
+        const MediaViewerAnalytics = MediaViewerAnalyticsManager.MediaViewerAnalytics;
+        const result = MediaViewerAnalytics.trackMessageEmbedsActionCompleted({
+          platform: "file",
+          action: "errored",
+          error: "unknown",
+        });
+        break;
+      case "ended":
+        if (controls != null) {
+          const props4 = controls.props;
+          if (props4 != null) {
+            props4.onPlayerStateChange(MediaModalWebView.PlayerState.ENDED);
+          }
+        }
+        closure_3(MediaModalWebView.PlayerState.ENDED);
+        break;
+      case "play":
+        if (controls != null) {
+          const props3 = controls.props;
+          if (props3 != null) {
+            props3.onPlayerStateChange(MediaModalWebView.PlayerState.PLAYING);
+          }
+        }
+        closure_3(MediaModalWebView.PlayerState.PLAYING);
+        break;
+      case "pause":
+        if (controls != null) {
+          const props2 = controls.props;
+          if (props2 != null) {
+            props2.onPlayerStateChange(MediaModalWebView.PlayerState.PAUSED);
+          }
+        }
+        closure_3(MediaModalWebView.PlayerState.PAUSED);
+        break;
+      case "stalled":
+        if (controls != null) {
+          const props = controls.props;
+          if (props != null) {
+            props.onPlayerStateChange(MediaModalWebView.PlayerState.BUFFERING);
+          }
+        }
+        closure_3(MediaModalWebView.PlayerState.BUFFERING);
+        break;
+      case "durationchange":
+        if (null != value) {
+          if (controls != null) {
+            const props8 = controls.props;
+            if (props8 != null) {
+              const onDuration = props8.onDuration;
+              if (onDuration != null) {
+                onDuration(value);
+              }
+            }
+          }
+        }
+        break;
+      case "progress":
+        if (null != value) {
+          if (controls != null) {
+            const props7 = controls.props;
+            if (props7 != null) {
+              const onDownloadProgress = props7.onDownloadProgress;
+              if (onDownloadProgress != null) {
+                onDownloadProgress(value);
+              }
+            }
+          }
+        }
+        break;
+      case "timeupdate":
+        if (null != value) {
+          if (controls != null) {
+            const props6 = controls.props;
+            if (props6 != null) {
+              const onCurrentSecond = props6.onCurrentSecond;
+              if (onCurrentSecond != null) {
+                onCurrentSecond(value);
+              }
+            }
+          }
+        }
+        break;
     }
   }, items);
-  mediaPlayerMutedStore = visible(first[6]).useMediaPlayerMutedStore((isMuted) => isMuted.isMuted);
-  const items1 = [ref, visible, tmp8, tmp7, first, mediaPlayerMutedStore];
+  mediaPlayerMutedStore = visible(playerState[6]).useMediaPlayerMutedStore((isMuted) => isMuted.isMuted);
+  const items1 = [ref, visible, tmp8, tmp7, playerState, mediaPlayerMutedStore];
   const effect1 = obj.useEffect(() => {
     let current;
     if (ref != null) {
@@ -62,7 +160,7 @@ const memoResult = importAllResult.memo((style) => {
     }
     let tmp3 = null != current;
     if (tmp3) {
-      tmp3 = first !== visible(first[3]).PlayerState.UNREADY;
+      tmp3 = first !== MediaModalWebView.PlayerState.UNREADY;
     }
     if (tmp3) {
       current = tmp.current;
@@ -71,10 +169,10 @@ const memoResult = importAllResult.memo((style) => {
       current.injectJavaScript("window.player.muted = " + JSON.stringify(mediaPlayerMutedStore) + "; true;");
       let tmp11 = visible;
       if (visible) {
-        tmp11 = closure_4 === visible(first[3]).PlayerState.UNREADY;
+        tmp11 = closure_4 === MediaModalWebView.PlayerState.UNREADY;
       }
       if (tmp11) {
-        tmp11 = first === visible(first[3]).PlayerState.READY;
+        tmp11 = first === MediaModalWebView.PlayerState.READY;
       }
       if (tmp11) {
         const current2 = tmp.current;
@@ -107,28 +205,25 @@ const memoResult = importAllResult.memo((style) => {
   obj = {
     ref,
     style: style.style,
-    source: obj,
+    source: null,
     baseURL: ref,
-    playerState: first,
+    playerState,
     onDataReceived: callback,
     javaScriptEnabled: true,
     javaScriptCanOpenWindowsAutomatically: true,
   };
   obj = { html: combined, baseUrl: ref };
-  const tmp2 = visible;
-  const tmp2Result = visible(first[6]);
-  const tmp6 = controls;
+  obj.source = obj;
+  const tmp2Result = visible(playerState[6]);
   const merged1 = Object.assign(merged);
-  return jsx(controls(first[3]), { html: combined, baseUrl: ref }, source.uri);
+  return jsx(controls(playerState[3]), { html: combined, baseUrl: ref }, source.uri);
 });
-let result = require("set").fileFinishedImporting("modules/media_viewer/native/components/MediaModalWebVideoFile.tsx");
-
-export default memoResult;
 export const createWebFileVideoControls = function createWebFileVideoControls() {
-  const ref = importAllResult.createRef();
-  c5 = 0;
-  c6 = 0;
-  obj = {
+  const ref = noop.createRef();
+  noop = 0;
+  closure_5 = 0;
+  closure_6 = 0;
+  return {
     seek(arg0) {
       const current = ref.current;
       if (current != null) {
@@ -152,54 +247,45 @@ export const createWebFileVideoControls = function createWebFileVideoControls() 
       closure_0 = arg0;
       closure_1 = arg1;
       closure_2 = arg2;
-      const layoutEffect = React.useLayoutEffect(() => {
-        if (closure_0 != null) {
-          tmp(closure_4, closure_5);
+      const layoutEffect = noop.useLayoutEffect(() => {
+        if (closure_1_0 != null) {
+          tmp(closure_1_4, closure_1_5);
         }
       }, []);
     },
-    props: obj,
-  };
-  obj = {
-    ref,
-    onPlayerStateChange(arg0) {
-      if (closure_1 != null) {
-        tmp(
-          arg0 === closure_1_0(closure_1_2[3]).PlayerState.PAUSED ||
-            arg0 === closure_1_0(closure_1_2[3]).PlayerState.ENDED,
-        );
-        const tmp3 = closure_1_0;
-        const tmp4 = closure_1_2;
-        const tmp5 =
-          arg0 === closure_1_0(closure_1_2[3]).PlayerState.PAUSED ||
-          arg0 === closure_1_0(closure_1_2[3]).PlayerState.ENDED;
-      }
-    },
-    onCurrentSecond(arg0) {
-      closure_4 = arg0;
-      if (closure_0 != null) {
-        tmp(closure_4, c5);
-      }
-    },
-    onDuration(arg0) {
-      closure_5 = arg0;
-      if (closure_0 != null) {
-        tmp(c4, closure_5);
-      }
-      if (closure_5 > 0) {
-        if (closure_2 != null) {
-          tmp8(tmp7);
+    props: {
+      ref,
+      onPlayerStateChange(arg0) {
+        if (closure_1 != null) {
+          tmp(arg0 === MediaModalWebView.PlayerState.PAUSED || arg0 === MediaModalWebView.PlayerState.ENDED);
+          const tmp5 = arg0 === MediaModalWebView.PlayerState.PAUSED || arg0 === MediaModalWebView.PlayerState.ENDED;
         }
-      }
-    },
-    onDownloadProgress(arg0) {
-      closure_6 = arg0;
-      if (c5 > 0) {
-        if (closure_2 != null) {
-          tmp4(tmp3);
+      },
+      onCurrentSecond(arg0) {
+        closure_4 = arg0;
+        if (closure_0 != null) {
+          tmp(closure_4, closure_5);
         }
-      }
+      },
+      onDuration(arg0) {
+        closure_5 = arg0;
+        if (closure_0 != null) {
+          tmp(closure_4, closure_5);
+        }
+        if (closure_5 > 0) {
+          if (closure_2 != null) {
+            tmp8(tmp7);
+          }
+        }
+      },
+      onDownloadProgress(arg0) {
+        closure_6 = arg0;
+        if (closure_5 > 0) {
+          if (closure_2 != null) {
+            tmp4(tmp3);
+          }
+        }
+      },
     },
   };
-  return obj;
 };

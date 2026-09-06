@@ -1,50 +1,30 @@
 // discord_app/modules/user_settings/defs/native/DisableStreamPreviewsSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import explicitContentFromProto from "../../UserSettings.tsx";
-import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import util from "../../../../intl/index.native.tsx";
+import UserSettings from "../../UserSettings.tsx";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const toggle = createToggle.createToggle({
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["1CzWUK"]);
+    const intl = util.intl;
+    return intl.string(util.t["1CzWUK"]);
   },
   useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.jTNPHM);
+    const intl = util.intl;
+    return intl.string(util.t.jTNPHM);
   },
-  parent: MobileUserSettings.MobileUserSettings.VOICE,
+  parent: SettingsConstants.MobileUserSettings.VOICE,
   useValue() {
-    const DisableStreamPreviews = explicitContentFromProto.DisableStreamPreviews;
+    const DisableStreamPreviews = UserSettings.DisableStreamPreviews;
     let flag = DisableStreamPreviews.useSetting();
     if (flag == null) {
       flag = false;
     }
     return flag;
   },
-  onValueChange: explicitContentFromProto.DisableStreamPreviews.updateSetting,
+  onValueChange: UserSettings.DisableStreamPreviews.updateSetting,
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["1CzWUK"]);
-  },
-  useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.jTNPHM);
-  },
-  parent: MobileUserSettings.MobileUserSettings.VOICE,
-  useValue() {
-    const DisableStreamPreviews = explicitContentFromProto.DisableStreamPreviews;
-    let flag = DisableStreamPreviews.useSetting();
-    if (flag == null) {
-      flag = false;
-    }
-    return flag;
-  },
-  onValueChange: explicitContentFromProto.DisableStreamPreviews.updateSetting,
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/DisableStreamPreviewsSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/DisableStreamPreviewsSetting.tsx");
 
 export default toggle;

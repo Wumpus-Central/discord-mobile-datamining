@@ -1,7 +1,7 @@
 // discord_app/modules/guild_automod/AutomodAlert.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/guild_automod/AutomodAlert.tsx");
+const result = size.fileFinishedImporting("modules/guild_automod/AutomodAlert.tsx");
 
 export const AutomodAlertActionType = {
   SET_COMPLETED: 1,
@@ -13,23 +13,23 @@ export const AutomodAlertActionType = {
   SUBMIT_FEEDBACK: 4,
   [4]: "SUBMIT_FEEDBACK",
 };
-export const parseAlertActionsExecution = function parseAlertActionsExecution(arg0) {
-  if (null == arg0) {
+export const parseAlertActionsExecution = function parseAlertActionsExecution(rawValue1) {
+  if (null == rawValue1) {
     return null;
   } else {
-    const tmp = (function safeJsonParse(arg0) {
-      if (null == arg0) {
+    const tmp = (function safeJsonParse(rawValue1) {
+      if (null == rawValue1) {
         return null;
       } else {
         try {
           const _JSON = JSON;
-          return JSON.parse(arg0);
+          return JSON.parse(rawValue1);
         } catch (err) {
           return tmp;
         }
       }
-    })(arg0);
-    closure_0 = tmp;
+    })(rawValue1);
+    const actions = tmp;
     let tmp2 = null;
     if (null != tmp) {
       tmp2 = null;

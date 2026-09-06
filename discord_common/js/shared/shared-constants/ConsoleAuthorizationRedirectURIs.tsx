@@ -1,13 +1,13 @@
 // discord_common/js/shared/shared-constants/ConsoleAuthorizationRedirectURIs.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const obj = { ALL: null };
-let set = new Set([
-  "https://discord.com/connections/playstation-stg/link",
-  "https://discord.com/connections/playstation/link",
-]);
-obj[0] = set;
-const result = set.fileFinishedImporting(
+const obj = {
+  ALL: new Set([
+    "https://discord.com/connections/playstation-stg/link",
+    "https://discord.com/connections/playstation/link",
+  ]),
+};
+const result = size.fileFinishedImporting(
   "../discord_common/js/shared/shared-constants/ConsoleAuthorizationRedirectURIs.tsx",
 );
 

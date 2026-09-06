@@ -1,23 +1,20 @@
 // discord_app/modules/premium_marketing/native/components/BuyNitroPurchaseSuccess.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import getSystemLocale from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import useAlertStore from "../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
-import getAlertModalItemKey from "../../../../design/components/AlertModal/native/AlertModal.native.tsx";
-import { reset } from "../../../premium/native/PremiumPlanPurchasedStore.tsx";
-import { PremiumTypes } from "../../../premium/PremiumConstants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import AlertModal from "../../../../design/components/AlertModal/native/AlertModal.native.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting(
-  "modules/premium_marketing/native/components/BuyNitroPurchaseSuccess.tsx",
-);
+require = fn;
+const reset = fn(7421).reset;
+const PremiumTypes = fn(1373).PremiumTypes;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium_marketing/native/components/BuyNitroPurchaseSuccess.tsx");
 
 export const presentBuyNitroPurchaseSuccess = function presentBuyNitroPurchaseSuccess(premiumTier) {
-  let obj = useAlertStore;
-  obj = { title: null, content: null, actions: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t["Q+BB2w"]);
+  let obj = { title: null, content: null, actions: null };
+  const intl = util.intl;
+  obj.title = intl.string(util.t["Q+BB2w"]);
   if (PremiumTypes.TIER_0 === premiumTier) {
     const intl4 = tmp(1114).intl;
     let stringResult = intl4.string(tmp(1114).t["6WWrVM"]);
@@ -28,14 +25,10 @@ export const presentBuyNitroPurchaseSuccess = function presentBuyNitroPurchaseSu
     const intl2 = tmp(1114).intl;
     stringResult = intl2.string(tmp(1114).t.I7xNzI);
   }
-  obj[1] = stringResult;
+  obj.content = stringResult;
   obj = { variant: "primary", text: null };
   const intl5 = tmp(1114).intl;
-  obj[1] = intl5.string(getSystemLocale.t.TkTvBz);
-  obj[2] = jsx(getAlertModalItemKey.AlertActionButton, { variant: "primary", text: null });
-  obj.openAlert(
-    "BuyNitroPurchaseSuccess",
-    jsx(getAlertModalItemKey.AlertModal, { variant: "primary", text: null }),
-    reset,
-  );
+  obj.text = intl5.string(util.t.TkTvBz);
+  obj.actions = jsx(AlertModal.AlertActionButton, { variant: "primary", text: null });
+  obj.openAlert("BuyNitroPurchaseSuccess", jsx(AlertModal.AlertModal, { variant: "primary", text: null }), reset);
 };

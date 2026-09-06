@@ -1,28 +1,27 @@
 // discord_app/modules/clips/ClipsConstants.tsx
-import timestampDefault from "../debug/Logger.tsx";
-import setDefault from "../../utils/Durations.tsx";
+import LoggerDefault from "../debug/Logger.tsx";
+import DurationsDefault from "../../utils/Durations.tsx";
 
-let obj = {};
-const result = 30 * setDefault.Millis.SECOND;
-obj.SECONDS_30 = result;
-obj[result] = "SECONDS_30";
-const MINUTE = setDefault.Millis.MINUTE;
-obj.MINUTES_1 = MINUTE;
-obj[MINUTE] = "MINUTES_1";
-const result1 = 2 * setDefault.Millis.MINUTE;
-obj.MINUTES_2 = result1;
-obj[result1] = "MINUTES_2";
-const result2 = 6 * setDefault.Millis.SECOND;
-const result3 = 60 * setDefault.Millis.SECOND;
-obj = { ORIGINAL: "original", PORTRAIT_9_16: "9:16", LANDSCAPE_16_9: "16:9" };
-obj = { TEXT: "text" };
+let ClipTrackType = {};
+const result = 30 * DurationsDefault.Millis.SECOND;
+ClipTrackType.SECONDS_30 = result;
+ClipTrackType[result] = "SECONDS_30";
+const MINUTE = DurationsDefault.Millis.MINUTE;
+ClipTrackType.MINUTES_1 = MINUTE;
+ClipTrackType[MINUTE] = "MINUTES_1";
+const result1 = 2 * DurationsDefault.Millis.MINUTE;
+ClipTrackType.MINUTES_2 = result1;
+ClipTrackType[result1] = "MINUTES_2";
+const result2 = 6 * DurationsDefault.Millis.SECOND;
+const result3 = 60 * DurationsDefault.Millis.SECOND;
+ClipTrackType = { ORIGINAL: "original", PORTRAIT_9_16: "9:16", LANDSCAPE_16_9: "16:9" };
+ClipTrackType = { TEXT: "text" };
 const obj1 = { NONE: "none", SMALL: "small", MEDIUM: "medium", LARGE: "large" };
-const result4 = 14 * setDefault.Millis.DAY;
-const obj2 = { fontSize: 0.06, color: "#FFFFFF", strokeWidth: obj1.NONE, strokeColor: "#000000" };
-const tmp5 = new timestampDefault("Clips");
-const result5 = require("set").fileFinishedImporting("modules/clips/ClipsConstants.tsx");
+const result4 = 14 * DurationsDefault.Millis.DAY;
+const size = fn(2);
+const result5 = size.fileFinishedImporting("modules/clips/ClipsConstants.tsx");
 
-export const ClipsLengthSettings = obj;
+export const ClipsLengthSettings = ClipTrackType;
 export const ClipSaveTypes = { DECOUPLED: "decoupled", STREAMER: "streamer", VOICE: "voice" };
 export const CLIP_RUNTIME = "v3";
 export const ClipsUserEducationType = {
@@ -36,7 +35,7 @@ export const ClipsUserEducationType = {
 export const DEFAULT_SAVE_CLIP_KEYBIND = "alt+c";
 export const DEFAULT_SAVE_SCREENSHOT_KEYBIND = "f12";
 export const CLIPS_TOAST_DURATION = result2;
-export const ClipsLogger = tmp5;
+export const ClipsLogger = new LoggerDefault("Clips");
 export const CURRENT_CLIP_METADATA_VERSION = 6;
 export const CLIPS_HARDWARE_CLASSIFICATION_VERSION = 2;
 export const WINDOWS_HARDWARE_MINIMUM_GPU_REGEX =
@@ -108,7 +107,7 @@ export const Emotion = {
   SAD: "sad",
   SURPRISED: "surprised",
 };
-export const ClipCropPreset = obj;
+export const ClipCropPreset = ClipTrackType;
 export const getClipCropAspectRatio = function getClipCropAspectRatio(arg0) {
   if (obj.PORTRAIT_9_16 === arg0) {
     return 0.5625;
@@ -139,15 +138,14 @@ export const getClipCropBounds = function getClipCropBounds(bounds) {
     }
     let tmp3 = null;
     if (null != num) {
-      obj = { aspectRatio: null };
-      obj[0] = num;
+      obj = { aspectRatio: num };
       tmp3 = obj;
     }
     return tmp3;
   }
 };
-export const ClipTrackType = obj;
-export const CLIP_TRACK_COLORS = { [obj.TEXT]: "#D53FAE" };
+export { ClipTrackType };
+export const CLIP_TRACK_COLORS = { [ClipTrackType.TEXT]: "#D53FAE" };
 export const DEFAULT_TRACK_DURATION_SECONDS = 5;
 export const MIN_TRACK_DURATION_SECONDS = 1;
 export const DEFAULT_TRACK_POSITION = { x: 0.5, y: 0.5 };
@@ -158,7 +156,12 @@ export const TEXT_STROKE_WIDTH_TO_FONT_SIZE_RATIO = {
   [obj1.MEDIUM]: 0.125,
   [obj1.LARGE]: 0.25,
 };
-export const DEFAULT_TEXT_TRACK_STYLE = obj2;
+export const DEFAULT_TEXT_TRACK_STYLE = {
+  fontSize: 0.06,
+  color: "#FFFFFF",
+  strokeWidth: obj1.NONE,
+  strokeColor: "#000000",
+};
 export const ClipType = { CLIP: "clip", SCREENSHOT: "screenshot", VOICE_CLIP: "voice_clip" };
 export const GameEventType = {
   UNCLASSIFIED: "unclassified",

@@ -1,28 +1,30 @@
 // discord_app/modules/premium_marketing/native/components/BuyNitroPerk.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import BuyNitroGradientDefault from "BuyNitroGradient.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-noopAll;
-({ StyleSheet: c3, View: c4 } = get_ActivityIndicator);
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = { x: 0, y: 0 };
-let closure_8 = { x: 1, y: 1 };
-createCacheKey = { iconTile: null };
-createCacheKey = {
-  width: ThemesDefault.modules.mobile.TABLE_ROW_ICON_SIZE,
-  height: ThemesDefault.modules.mobile.TABLE_ROW_ICON_SIZE,
-  borderRadius: ThemesDefault.radii.round,
+require = fn;
+get_ActivityIndicator = fn(17);
+({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const start = { x: 0, y: 0 };
+const end = { x: 1, y: 1 };
+fn(4560);
+const createStyles = { iconTile: null };
+let size = {
+  width: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE,
+  height: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE,
+  borderRadius: nativeDefault.radii.round,
   alignItems: "center",
   justifyContent: "center",
   overflow: "hidden",
 };
-createCacheKey[0] = createCacheKey;
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/premium_marketing/native/components/BuyNitroPerk.tsx");
+createStyles.iconTile = size;
+let closure_9 = createStyles.createStyles(createStyles);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/premium_marketing/native/components/BuyNitroPerk.tsx");
 
 export default function BuyNitroPerk(perk) {
   perk = perk.perk;
@@ -43,28 +45,28 @@ export default function BuyNitroPerk(perk) {
     start: null,
     end: null,
   };
-  obj = { style: callback3().iconTile, children: null };
+  obj = { style: closure_9().iconTile, children: null };
   obj = {
     selectedTier,
     nitroColors: perk.iconGradient,
     basicColors: perk.iconGradientBasic,
-    start: closure_7,
-    end: closure_8,
+    start,
+    end,
     style: absoluteFill.absoluteFill,
   };
-  const items = [callback(onOpenDetails(13394), obj)];
-  const tmp = callback3();
-  const tmp4 = callback;
-  items[1] = callback(perk.IconComponent, { size: "sm", color: onOpenDetails(576).colors.WHITE });
-  obj[1] = items;
-  obj[3] = callback2(closure_4, obj);
-  obj[4] = tmp2;
+  const items = [hasOwnProperty(BuyNitroGradientDefault, obj)];
+  const tmp = closure_9();
+  const tmp4 = hasOwnProperty;
+  items[1] = hasOwnProperty(perk.IconComponent, { size: "sm", color: nativeDefault.colors.WHITE });
+  obj.children = items;
+  obj.icon = timestampProducer(React4, obj);
+  obj.arrow = tmp2;
   let fn;
   if (tmp2) {
     fn = () => onOpenDetails(perk);
   }
-  obj[5] = fn;
-  obj[6] = start;
-  obj[7] = end;
-  return tmp4(perk(5605).TableRow, obj);
+  obj.onPress = fn;
+  obj.start = start;
+  obj.end = end;
+  return tmp4(TableRow.TableRow, obj);
 }

@@ -1,55 +1,47 @@
 // discord_app/stores/DeveloperOptionsStore.tsx
-import set from "../../_runtime/00002_set.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../Dispatcher.tsx";
-import ME from "../Constants.tsx";
-import setDefault from "../utils/Durations.tsx";
-import importDefaultResult from "../../discord_common/js/packages/backoff/Backoff.tsx";
+import DispatcherDefault from "../Dispatcher.tsx";
+import Constants from "../Constants.tsx";
+import DurationsDefault from "../utils/Durations.tsx";
+import Backoff from "../../discord_common/js/packages/backoff/Backoff.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-let closure_0 = require;
-let c1 = importDefault;
-let c2 = importAll;
-let refreshSourceMapCookie = dependencyMap;
-const UserFlags = ME.UserFlags;
-closure_0 = undefined;
-c1 = undefined;
-c2 = undefined;
-refreshSourceMapCookie = function refreshSourceMapCookie() {
-  const HTTP = callback(refreshSourceMapCookie[3]).HTTP;
-  obj = { url: callback, headers: null, oldFormErrors: true, rejectWithError: true };
-  obj = { Authorization: _undefined(refreshSourceMapCookie[4]).getToken() };
-  obj[1] = obj;
-  const obj3 = _undefined(refreshSourceMapCookie[4]);
+const UserFlags = Constants.UserFlags;
+function refreshSourceMapCookie() {
+  const HTTP = url(1272).HTTP;
+  obj = { url, headers: null, oldFormErrors: true, rejectWithError: true };
+  obj = { Authorization: Backoff(1099).getToken() };
+  obj.headers = obj;
+  const obj3 = Backoff(1099);
   HTTP.put(obj).then(
     (status) => {
       if (401 !== status.status) {
         if (403 !== status.status) {
           if (200 !== status.status) {
             const _setTimeout2 = setTimeout;
-            let timeout = setTimeout(closure_3, closure_2.fail());
+            let timeout = setTimeout(dependencyMap, Backoff.fail());
           } else {
-            closure_2.succeed();
+            Backoff.succeed();
             const _setTimeout = setTimeout;
             timeout = setTimeout(
-              closure_3,
-              status.body.sourceMapCookieTTLSeconds * closure_1_1(closure_1_3[2]).Millis.SECOND * 0.75,
+              dependencyMap,
+              status.body.sourceMapCookieTTLSeconds * c1(refreshSourceMapCookie[2]).Millis.SECOND * 0.75,
             );
           }
         }
       }
       timeout = null;
-      const result = closure_1_0(closure_1_3[5]).setDeveloperOptionSettings({ sourceMapsEnabled: false });
+      const result = closure_0(refreshSourceMapCookie[5]).setDeveloperOptionSettings({ sourceMapsEnabled: false });
     },
     () => {
-      const timeout = setTimeout(closure_3, closure_2.fail());
+      const timeout = setTimeout(dependencyMap, Backoff.fail());
     },
   );
-};
-closure_0 = "" + location.protocol + "//" + location.host + "/__development/source_maps";
-c1 = null;
-let result = 5 * setDefault.Millis.SECOND;
-importDefaultResult = new importDefaultResult(result, setDefault.Millis.MINUTE, true);
-c2 = importDefaultResult;
+}
+const url = "" + location.protocol + "//" + location.host + "/__development/source_maps";
+let c1 = null;
+let result = 5 * DurationsDefault.Millis.SECOND;
+Backoff = new Backoff(result, DurationsDefault.Millis.MINUTE, true);
 let closure_5 = {
   set(arg0) {
     if ((arg0 !== null) != timeout) {
@@ -60,14 +52,12 @@ let closure_5 = {
         const _clearTimeout = clearTimeout;
         clearTimeout(timeout);
         timeout = null;
-        const HTTP = callback(refreshSourceMapCookie[3]).HTTP;
-        obj = { url: null, headers: null, oldFormErrors: true, rejectWithError: true };
-        obj[0] = callback;
-        obj = { Authorization: null };
-        obj[0] = _undefined(refreshSourceMapCookie[4]).getToken();
-        obj[1] = obj;
+        const HTTP = url(1272).HTTP;
+        obj = { url, headers: null, oldFormErrors: true, rejectWithError: true };
+        obj = { Authorization: Backoff(1099).getToken() };
+        obj.headers = obj;
         HTTP.del(obj);
-        const obj3 = _undefined(refreshSourceMapCookie[4]);
+        const obj3 = Backoff(1099);
       }
     }
   },
@@ -96,22 +86,22 @@ let obj = {
 obj = {};
 let merged = Object.assign(obj);
 const DeveloperOptionsRoutingKey = "DeveloperOptionsRoutingKey";
-let closure_10 = [];
+let tags = [];
 const Store = initializeDefault.Store;
 class DeveloperOptionsStore extends Store {}
 const prototype = DeveloperOptionsStore.prototype;
 prototype["initialize"] = function initialize() {
-  const Storage = callback(refreshSourceMapCookie[6]).Storage;
-  let value = Storage.get(DeveloperOptionsStore);
+  const Storage = url(refreshSourceMapCookie[6]).Storage;
+  value = Storage.get(DeveloperOptionsStore);
   if (null != value) {
     obj = {};
     const merged = Object.assign(obj);
     const merged1 = Object.assign(value);
   }
-  const Storage2 = callback(refreshSourceMapCookie[6]).Storage;
+  const Storage2 = url(refreshSourceMapCookie[6]).Storage;
   value = Storage2.get(DeveloperOptionsRoutingKey);
   if (null != value) {
-    closure_10 = value;
+    tags = value;
   }
 };
 Object.defineProperty(prototype, "isTracingRequests", {
@@ -169,7 +159,7 @@ Object.defineProperty(prototype, "sourceMapsEnabled", {
   set: undefined,
 });
 Object.defineProperty(prototype, "isBugReporterEnabled", {
-  get: function isBugReporterEnabled(arg0) {
+  get: function isBugReporterEnabled() {
     return obj.bugReporterEnabled;
   },
   set: undefined,
@@ -224,21 +214,21 @@ Object.defineProperty(prototype, "isLoggingQuestEvents", {
 });
 prototype["getDebugOptionsHeaderValue"] = function getDebugOptionsHeaderValue() {
   const keys = Object.keys(obj);
-  const mapped = keys.map((arg0) => dependencyMap[arg0]);
+  const mapped = keys.map((item) => dependencyMap[item]);
   const keys1 = Object.keys(obj);
-  const found = keys1.filter((arg0) => dependencyMap[arg0]);
+  const found = keys1.filter((item) => dependencyMap[item]);
   return found.join(",");
 };
 Object.defineProperty(prototype, "routingKeyTags", {
   get: function routingKeyTags() {
-    return closure_10;
+    return tags;
   },
   set: undefined,
 });
 prototype["getRoutingKeyHeaderValue"] = function getRoutingKeyHeaderValue() {
   let joined = null;
-  if (0 !== closure_10.length) {
-    joined = closure_10.join(",");
+  if (0 !== tags.length) {
+    joined = tags.join(",");
   }
   return joined;
 };
@@ -249,12 +239,12 @@ obj = {
     const merged = Object.assign(obj);
     const merged1 = Object.assign(obj);
     const merged2 = Object.assign(obj);
-    const result = store.set(obj.sourceMapsEnabled);
-    const Storage = callback(refreshSourceMapCookie[6]).Storage;
+    const result = closure_5.set(obj.sourceMapsEnabled);
+    const Storage = url(refreshSourceMapCookie[6]).Storage;
     const result1 = Storage.set(DeveloperOptionsStore, obj);
-    closure_10 = [];
-    const Storage2 = callback(refreshSourceMapCookie[6]).Storage;
-    const result2 = Storage2.set(DeveloperOptionsRoutingKey, closure_10);
+    tags = [];
+    const Storage2 = url(refreshSourceMapCookie[6]).Storage;
+    const result2 = Storage2.set(DeveloperOptionsRoutingKey, tags);
   },
   CONNECTION_OPEN: function handleConnectionOpen(user) {
     let num = user.user.flags;
@@ -266,9 +256,9 @@ obj = {
       str = null != user.user.personal_connection_id;
     }
     if ((num & UserFlags.STAFF) === UserFlags.STAFF) {
-      const result = store.set(obj.sourceMapsEnabled);
+      const result = closure_5.set(obj.sourceMapsEnabled);
     }
-    obj = _null(refreshSourceMapCookie[7]);
+    _null(refreshSourceMapCookie[7]);
     obj = { isStaff: str.toString() };
     obj.setTags(obj);
   },
@@ -277,17 +267,17 @@ obj = {
     const merged = Object.assign(obj);
     const merged1 = Object.assign(obj);
     const merged2 = Object.assign(settings.settings);
-    const result = store.set(obj.sourceMapsEnabled);
-    const Storage = callback(refreshSourceMapCookie[6]).Storage;
+    const result = closure_5.set(obj.sourceMapsEnabled);
+    const Storage = url(refreshSourceMapCookie[6]).Storage;
     const result1 = Storage.set(DeveloperOptionsStore, obj);
   },
   DEVELOPER_OPTIONS_SET_ROUTING_KEY: function handleSetRoutingKey(tags) {
     tags = tags.tags;
-    const Storage = callback(refreshSourceMapCookie[6]).Storage;
+    const Storage = url(refreshSourceMapCookie[6]).Storage;
     const result = Storage.set(DeveloperOptionsRoutingKey, tags);
   },
 };
-const developerOptionsStore = new DeveloperOptionsStore(dispatcherDefault, obj);
-let result1 = set.fileFinishedImporting("stores/DeveloperOptionsStore.tsx");
+const developerOptionsStore = new DeveloperOptionsStore(DispatcherDefault, obj);
+let result1 = size.fileFinishedImporting("stores/DeveloperOptionsStore.tsx");
 
 export default developerOptionsStore;

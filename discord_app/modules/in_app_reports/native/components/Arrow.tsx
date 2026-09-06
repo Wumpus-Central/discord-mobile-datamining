@@ -1,24 +1,20 @@
 // discord_app/modules/in_app_reports/native/components/Arrow.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import Button from "../../../../design/void/native.tsx";
-import registerAssetDefault from "../../../../../_runtime/08639_registerAsset.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import native from "../../../../design/void/native.tsx";
+import _modDef8639 from "../../../../../_runtime/metro/08639__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-createCacheKey = { tintColor: null };
-createCacheKey = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-createCacheKey[0] = createCacheKey;
-let closure_4 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/Arrow.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { tintColor: null };
+createStyles = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+createStyles.tintColor = createStyles;
+let closure_4 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/in_app_reports/native/components/Arrow.tsx");
 
 export default function Arrow() {
-  const tmp = callback();
-  return jsx(Button.Icon, {
-    source: registerAssetDefault,
-    size: Button.Icon.Sizes.MEDIUM,
-    style: callback().tintColor,
-  });
+  const tmp = closure_4();
+  return jsx(native.Icon, { source: _modDef8639, size: native.Icon.Sizes.MEDIUM, style: closure_4().tintColor });
 }

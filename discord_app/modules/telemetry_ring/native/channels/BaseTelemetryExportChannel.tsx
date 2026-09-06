@@ -1,11 +1,10 @@
 // discord_app/modules/telemetry_ring/native/channels/BaseTelemetryExportChannel.tsx
-import timestampDefault from "../../../debug/Logger.tsx";
+import LoggerDefault from "../../../debug/Logger.tsx";
 import Storage2 from "../../../../../discord_common/js/packages/storage/Storage.tsx";
-import appendDefault from "BaseTelemetryChannel.tsx";
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import BaseTelemetryChannel from "BaseTelemetryChannel.tsx";
 
-require = arg1;
-appendDefault;
+require = fn;
 class BaseTelemetryExportChannel extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -13,7 +12,7 @@ class BaseTelemetryExportChannel extends tmp2 {
     applyArgumentsResult._timer = null;
     applyArgumentsResult._inflight = null;
     applyArgumentsResult._resetting = false;
-    tmp3 = new require("timestamp")("TelemetryRing");
+    tmp3 = new closure_1(closure_2[2])("TelemetryRing");
     applyArgumentsResult._logger = tmp3;
     return applyArgumentsResult;
   }
@@ -31,8 +30,7 @@ prototype["initialize"] = function initialize() {
   }
 };
 prototype["reset"] = function reset() {
-  let self = this;
-  self = this;
+  const self = this;
   this.stop();
   if (!this._resetting) {
     self._resetting = true;
@@ -48,8 +46,7 @@ prototype["reset"] = function reset() {
   }
 };
 prototype["start"] = function start() {
-  let self = this;
-  self = this;
+  const self = this;
   let shouldRunResult = this.shouldRun();
   if (shouldRunResult) {
     shouldRunResult = null == self._timer;
@@ -70,16 +67,15 @@ prototype["stop"] = function stop() {
 };
 prototype["flushNow"] = function flushNow() {
   const self = this;
-  return callback(function* () {
+  return (async (arg0, value) => {
     if (c0 === 2) {
       c0 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp3 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
@@ -90,29 +86,27 @@ prototype["flushNow"] = function flushNow() {
         if (0 === c1) {
           if (arg0 === 1) {
             c0 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
-            obj1 = c0;
-            if (c0.shouldRun()) {
+            let obj1 = self;
+            if (self.shouldRun()) {
               c1 = 1;
               c0 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = obj1._kick({ mode: "stream", flush: true });
+              obj1.value = obj1._kick({ mode: "stream", flush: true });
               return obj1;
             }
           }
         } else if (arg0 === 1) {
           c0 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj = { value, done: true };
           return obj;
         }
         c0 = 3;
@@ -126,7 +120,7 @@ prototype["flushNow"] = function flushNow() {
 };
 prototype["_readAckedEndOffset"] = function _readAckedEndOffset() {
   const Storage = Storage2.Storage;
-  const value = Storage.get(this.getAckedEndOffsetStorageKey());
+  value = Storage.get(this.getAckedEndOffsetStorageKey());
   let num = -1;
   if (typeof value === "number") {
     const _Number = Number;
@@ -137,32 +131,31 @@ prototype["_readAckedEndOffset"] = function _readAckedEndOffset() {
   }
   return num;
 };
-prototype["_writeAckedEndOffset"] = function _writeAckedEndOffset(maxReturnedEndOffset) {
+prototype["_writeAckedEndOffset"] = function _writeAckedEndOffset(arg0) {
   const Storage = Storage2.Storage;
-  const result = Storage.set(this.getAckedEndOffsetStorageKey(), maxReturnedEndOffset);
+  const result = Storage.set(this.getAckedEndOffsetStorageKey(), arg0);
 };
 prototype["_clearAckedEndOffset"] = function _clearAckedEndOffset() {
   const Storage = Storage2.Storage;
   Storage.remove(this.getAckedEndOffsetStorageKey());
 };
 prototype["_kick"] = function _kick(arg0) {
-  let self = this;
-  self = this;
+  const self = this;
   if (this.shouldRun()) {
     if (null == self._inflight) {
       const _drainOnceResult = self._drainOnce(arg0);
       self._inflight = self
         ._drainOnce(arg0)
-        .catch((arg0) => {
+        .catch((error) => {
           const _logger = self._logger;
-          _logger.warn("TelemetryRing export failed", arg0);
+          _logger.warn("TelemetryRing export failed", error);
         })
         .finally(() => {
           self._inflight = null;
         });
-      const catchPromise = self._drainOnce(arg0).catch((arg0) => {
+      const catchPromise = self._drainOnce(arg0).catch((error) => {
         const _logger = self._logger;
-        _logger.warn("TelemetryRing export failed", arg0);
+        _logger.warn("TelemetryRing export failed", error);
       });
     }
     let _inflight = self._inflight;
@@ -174,42 +167,36 @@ prototype["_kick"] = function _kick(arg0) {
 prototype["_drainOnce"] = function _drainOnce(arg0) {
   closure_0 = arg0;
   const self = this;
-  return callback(function* () {
-    closure_0 = tmp2;
-    const budget = closure_1_1.getBudget(closure_1_0.mode);
-    const _readAckedEndOffsetResult = closure_1_1._readAckedEndOffset();
+  return (async (arg0, value) => {
+    const budget = self.getBudget(tmp2.mode);
+    const _readAckedEndOffsetResult = self._readAckedEndOffset();
     if (_readAckedEndOffsetResult >= 0) {
       const tmp27 = _readAckedEndOffsetResult;
     }
-    yield closure_1_1._collectPages(budget, tmp27);
+    await self._collectPages(budget, tmp27);
     if (1 === tmp5) {
       if (arg0 === 1) {
         c3 = 3;
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
         c3 = 3;
-        const obj2 = { value: null, done: true };
-        obj2[0] = arg1;
-        return obj2;
+        return { value, done: true };
       } else {
-        closure_0 = arg1;
-        if (0 !== closure_0.length) {
+        closure_128_0 = value;
+        if (0 !== closure_128_0.length) {
           c2 = 2;
           c3 = 1;
-          const obj3 = { value: null, done: false };
-          obj3[0] = maxReturnedEndOffset._exportPages(closure_0, closure_0.flush);
-          return obj3;
+          return { value: closure_129_1._exportPages(closure_128_0, closure_129_0.flush), done: false };
         } else {
           c3 = 3;
         }
       }
     } else if (arg0 === 1) {
       c3 = 3;
-      throw arg1;
+      throw value;
     } else if (arg0 !== 2) {
-      if (arg1) {
-        maxReturnedEndOffset = closure_0[0].maxReturnedEndOffset;
-        if (!maxReturnedEndOffset._resetting) {
+      if (value) {
+        if (!closure_129_1._resetting) {
           let isFiniteResult = typeof maxReturnedEndOffset === "number";
           if (typeof maxReturnedEndOffset === "number") {
             const _Number = Number;
@@ -219,108 +206,27 @@ prototype["_drainOnce"] = function _drainOnce(arg0) {
             isFiniteResult = maxReturnedEndOffset >= 0;
           }
           if (isFiniteResult) {
-            maxReturnedEndOffset._writeAckedEndOffset(maxReturnedEndOffset);
+            closure_129_1._writeAckedEndOffset(maxReturnedEndOffset);
           }
         }
       }
     }
-    return arg1;
+    return value;
   })();
 };
 prototype["_collectPages"] = function _collectPages(budget, arg1) {
   closure_0 = budget;
   closure_1 = arg1;
   const self = this;
-  return callback(function* () {
+  return (async (arg0, value) => {
     if (c3 === 2) {
       c3 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp3 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c3 = 2;
-        if (0 === nextBeforeOffset) {
-          if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let arr = 1;
-            closure_0 = 0;
-            closure_0 = undefined;
-            arr = [];
-            nextBeforeOffset = -1;
-          }
-        } else if (arg0 === 1) {
-          c3 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c3 = 3;
-          obj1 = { value: null, done: true };
-          obj1[0] = arg1;
-          return obj1;
-        } else {
-          closure_0 = arg1;
-          const _Array = Array;
-          if (Array.isArray(closure_0.entries)) {
-            if (0 !== closure_0.entries.length) {
-              const obj2 = { entries: null, maxReturnedEndOffset: null, nextBeforeOffset: null };
-              obj2[0] = closure_0.entries;
-              obj2[1] = closure_0.maxReturnedEndOffset;
-              obj2[2] = closure_0.nextBeforeOffset;
-              arr = arr.push(obj2);
-              nextBeforeOffset = closure_0.nextBeforeOffset;
-              if (!closure_0.hasMore) {
-                c3 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arr;
-                return obj;
-              }
-            }
-          }
-          c3 = 3;
-          const obj3 = { value: null, done: true };
-          obj3[0] = arr;
-          return obj3;
-        }
-        nextBeforeOffset = 1;
-        c3 = 1;
-        const obj4 = { value: null, done: false };
-        obj4[0] = nextBeforeOffset.snapshot(nextBeforeOffset, closure_1_0, closure_1_1);
-        return obj4;
-      } catch (tmp15) {
-        c3 = tmp;
-        throw tmp15;
-      }
-    }
-  })();
-};
-prototype["_exportPages"] = function _exportPages(closure_0, flush) {
-  closure_1 = flush;
-  const self = this;
-  return callback(function* () {
-    if (c3 === 2) {
-      c3 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
@@ -331,73 +237,145 @@ prototype["_exportPages"] = function _exportPages(closure_0, flush) {
         if (0 === c2) {
           if (arg0 === 1) {
             c3 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            c1 = 1;
+            c0 = 0;
+            closure_128_0 = undefined;
+            closure_128_1 = [];
+            let nextBeforeOffset = -1;
+          }
+        } else if (arg0 === 1) {
+          c3 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 3;
+          const obj1 = { value, done: true };
+          return obj1;
+        } else {
+          closure_128_0 = value;
+          const _Array = Array;
+          if (Array.isArray(closure_128_0.entries)) {
+            if (0 !== closure_128_0.entries.length) {
+              const obj2 = {
+                entries: closure_128_0.entries,
+                maxReturnedEndOffset: closure_128_0.maxReturnedEndOffset,
+                nextBeforeOffset: closure_128_0.nextBeforeOffset,
+              };
+              closure_128_1.push(obj2);
+              nextBeforeOffset = closure_128_0.nextBeforeOffset;
+              if (!closure_128_0.hasMore) {
+                c3 = 3;
+                obj = { value: closure_128_1, done: true };
+                return obj;
+              }
+            }
+          }
+          c3 = 3;
+          const obj3 = { value: closure_128_1, done: true };
+          return obj3;
+        }
+        c2 = 1;
+        c3 = 1;
+        const obj4 = { value: closure_129_2.snapshot(nextBeforeOffset, closure_129_0, closure_129_1), done: false };
+        return obj4;
+      } catch (tmp15) {
+        c3 = tmp;
+        throw tmp15;
+      }
+    }
+  })();
+};
+prototype["_exportPages"] = function _exportPages(arg0, flush) {
+  closure_0 = arg0;
+  closure_1 = flush;
+  const self = this;
+  return (async (arg0, value) => {
+    if (c3 === 2) {
+      c3 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c3 = 2;
+        if (0 === c2) {
+          if (arg0 === 1) {
+            c3 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            obj = { value, done: true };
             return obj;
           } else {
             closure_1 = tmp2;
-            let exportBatchSize = tmp5;
-            exportBatchSize = undefined;
-            closure_1 = undefined;
-            c2 = undefined;
-            c3 = undefined;
-            closure_4 = undefined;
-            closure_5 = undefined;
-            closure_6 = undefined;
-            closure_7 = undefined;
-            exportBatchSize = c2.getExportBatchSize();
-            closure_1 = closure_1_0.length - 1;
-            if (closure_1 >= 0) {
-              c2 = closure_1_0[closure_1];
+            let exportBatchSize;
+            closure_128_1 = undefined;
+            closure_128_2 = undefined;
+            closure_128_3 = undefined;
+            closure_128_4 = undefined;
+            closure_128_5 = undefined;
+            closure_128_6 = undefined;
+            closure_128_7 = undefined;
+            exportBatchSize = self.getExportBatchSize();
+            closure_128_1 = tmp5.length - 1;
+            if (closure_128_1 >= 0) {
+              closure_128_2 = closure_129_0[closure_128_1];
               if (null != exportBatchSize) {
                 if (exportBatchSize > 0) {
                   let length = exportBatchSize;
-                  c3 = length;
-                  closure_4 = 0;
-                  if (closure_4 >= c2.entries.length) {
-                    closure_1 = closure_1 - 1;
+                  closure_128_3 = length;
+                  closure_128_4 = 0;
+                  if (closure_128_4 >= closure_128_2.entries.length) {
+                    closure_128_1 = closure_128_1 - 1;
                   }
                 }
               }
-              length = c2.entries.length;
+              length = closure_128_2.entries.length;
             }
             c3 = 3;
             return { value: true, done: true };
           }
         } else if (arg0 === 1) {
           c3 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj = { value, done: true };
           return obj;
-        } else if (arg1) {
-          closure_4 = closure_4 + c3;
+        } else if (value) {
+          closure_128_4 = closure_128_4 + closure_128_3;
         } else {
           c3 = 3;
           return { value: false, done: true };
         }
         const _Math = Math;
-        closure_5 = Math.min(closure_4 + c3, c2.entries.length);
-        const entries = c2.entries;
-        closure_6 = entries.slice(closure_4, closure_5);
-        let tmp38 = 0 === closure_1;
+        closure_128_5 = Math.min(closure_128_4 + closure_128_3, closure_128_2.entries.length);
+        const entries = closure_128_2.entries;
+        closure_128_6 = entries.slice(closure_128_4, closure_128_5);
+        let tmp38 = 0 === closure_128_1;
         if (tmp38) {
-          tmp38 = closure_5 === c2.entries.length;
+          tmp38 = closure_128_5 === closure_128_2.entries.length;
         }
-        closure_7 = tmp38;
-        let tmp46 = closure_1;
-        if (closure_1) {
-          tmp46 = closure_7;
+        closure_128_7 = tmp38;
+        let tmp46 = closure_129_1;
+        if (closure_129_1) {
+          tmp46 = closure_128_7;
         }
         c2 = 1;
         c3 = 1;
-        obj1 = { value: null, done: false };
-        obj1[0] = c2.exportEntries(closure_6, tmp46);
+        const obj1 = { value: closure_129_2.exportEntries(closure_128_6, tmp46), done: false };
         return obj1;
       } catch (tmp48) {
         c3 = tmp;
@@ -406,8 +384,7 @@ prototype["_exportPages"] = function _exportPages(closure_0, flush) {
     }
   })();
 };
-let result = require("set").fileFinishedImporting(
-  "modules/telemetry_ring/native/channels/BaseTelemetryExportChannel.tsx",
-);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/telemetry_ring/native/channels/BaseTelemetryExportChannel.tsx");
 
 export default BaseTelemetryExportChannel;

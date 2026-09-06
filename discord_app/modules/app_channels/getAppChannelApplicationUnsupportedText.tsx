@@ -1,8 +1,8 @@
 // discord_app/modules/app_channels/getAppChannelApplicationUnsupportedText.tsx
-import set from "../../../_runtime/00002_set.js";
 import GuildEmbeddedApplicationUnsupportedReason from "../../../discord_common/js/shared/shared-constants/GuildEmbeddedApplicationUnsupportedReason.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/app_channels/getAppChannelApplicationUnsupportedText.tsx");
+const result = size.fileFinishedImporting("modules/app_channels/getAppChannelApplicationUnsupportedText.tsx");
 
 export default function getAppChannelApplicationUnsupportedText(supported) {
   if (!supported.supported) {

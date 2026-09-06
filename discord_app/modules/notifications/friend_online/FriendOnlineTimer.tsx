@@ -1,63 +1,46 @@
 // discord_app/modules/notifications/friend_online/FriendOnlineTimer.tsx
-import setDefault from "../../../utils/Durations.tsx";
-import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../stores/SelfPresenceStore.tsx";
-import closure_5 from "FriendOnlineTimerStore.tsx";
-import { Endpoints } from "../../../Constants.tsx";
-import { StatusTypes } from "../../../../discord_common/js/shared/Constants.tsx";
+import DurationsDefault from "../../../utils/Durations.tsx";
+import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import UserSettings from "../../user_settings/UserSettings.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import SelfPresenceStore from "../../../stores/SelfPresenceStore.tsx";
+import FriendOnlineTimerStore from "FriendOnlineTimerStore.tsx";
+import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
-let require = arg1;
-function _reportSessionMeaningfullyOnline() {
-  const self = this;
-  const tmp = callback(function* () {
-    const callback = tmp3;
-    c3 = 1;
-    const HTTP = closure_1_0(closure_1_2[6]).HTTP;
-    obj1 = { url: null, rejectWithError: true };
-    obj1[0] = closure_1_6.USER_MEANINGFULLY_ONLINE;
-    yield HTTP.post(obj1);
-    if (1 === tmp7) {
-      c3 = 0;
-      const lib = dependencyMap;
-      if (lib instanceof lib(1272).HTTPResponseError) {
-        if (429 === lib.status) {
-          obj1 = callback(573);
-          let obj3 = { type: "FRIEND_ONLINE_TIMER_REPORTED", timestampMs: null };
-          const _Date = Date;
-          obj3[1] = Date.now();
-          obj1.dispatch(obj3);
-          c5 = 3;
-        }
-      }
-      obj3 = callback(1232);
-      const obj4 = { tags: null };
-      obj4[0] = { app_context: "session_timer" };
-      obj3.captureException(lib, obj4);
-      c5 = 3;
-      const obj5 = { value: null, done: true };
-      obj5[0] = undefined;
-      return obj5;
-    } else if (arg0 === 1) {
-      c5 = 3;
-      throw arg1;
-    } else if (arg0 !== 2) {
-      c3 = 0;
-    }
+require = fn;
+let closure_9 = async function _reportSessionMeaningfullyOnline() {
+  closure_1 = tmp3;
+  const HTTP = HTTPUtils.HTTP;
+  let obj1 = { url: constants.USER_MEANINGFULLY_ONLINE, rejectWithError: true };
+  await HTTP.post(obj1);
+  if (1 === tmp7) {
     c3 = 0;
-    return arg1;
-  });
-  closure_9 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    closure_128_0 = closure_2;
+    if (closure_128_0 instanceof closure_129_0(closure_129_2[6]).HTTPResponseError) {
+      if (429 === closure_128_0.status) {
+        obj1 = closure_129_1(closure_129_2[8]);
+        let obj3 = { type: "FRIEND_ONLINE_TIMER_REPORTED", timestampMs: null };
+        const _Date = Date;
+        obj3.timestampMs = Date.now();
+        obj1.dispatch(obj3);
+        c5 = 3;
+      }
+    }
+    obj3 = closure_129_1(closure_129_2[7]);
+    obj3.captureException(closure_128_0, { tags: { app_context: "session_timer" } });
+    c5 = 3;
+    return { value: undefined, done: true };
+  } else if (arg0 === 1) {
+    c5 = 3;
+    throw arg1;
+  } else if (arg0 !== 2) {
+    c3 = 0;
   }
-  return applyArgumentsResult;
-}
-let closure_8 = 5 * setDefault.Millis.MINUTE;
-initializeDefault;
+  return arg1;
+};
+const Endpoints = fn(1074).Endpoints;
+const StatusTypes = fn(1085).StatusTypes;
+let closure_8 = 5 * DurationsDefault.Millis.MINUTE;
 class FriendOnlineTimerManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -81,33 +64,33 @@ class FriendOnlineTimerManager extends tmp2 {
       },
     };
     applyArgumentsResult.start = function start() {
-      const NotifyFriendsOnComeOnline = applyArgumentsResult(closure_1_2[10]).NotifyFriendsOnComeOnline;
+      const NotifyFriendsOnComeOnline = UserSettings.NotifyFriendsOnComeOnline;
       let setting = NotifyFriendsOnComeOnline.getSetting();
       if (setting) {
-        setting = closure_1_5.isCooldownElapsed();
+        setting = FriendOnlineTimerStore.isCooldownElapsed();
       }
       if (setting) {
         setting = null == applyArgumentsResult.timerId;
       }
       if (setting) {
         let items = [,];
-        ({ ONLINE: arr[0], STREAMING: arr[1] } = closure_1_7);
-        setting = items.includes(closure_1_4.getStatus());
+        ({ ONLINE: arr[0], STREAMING: arr[1] } = StatusTypes);
+        setting = items.includes(SelfPresenceStore.getStatus());
       }
       if (setting) {
         const _setTimeout = setTimeout;
         applyArgumentsResult.timerId = setTimeout(() => {
-          closure_0.timerId = null;
+          closure_1_0.timerId = null;
           const items = [,];
-          ({ ONLINE: arr[0], STREAMING: arr[1] } = closure_1_7);
-          let hasItem = items.includes(closure_1_4.getStatus());
+          ({ ONLINE: arr[0], STREAMING: arr[1] } = StatusTypes);
+          let hasItem = items.includes(status.getStatus());
           if (hasItem) {
-            hasItem = closure_1_5.isCooldownElapsed();
+            hasItem = cooldownElapsed.isCooldownElapsed();
           }
           if (hasItem) {
             (function reportSessionMeaningfullyOnline() {
               const self = this;
-              const apply = closure_9.apply;
+              const apply = closure_1_9.apply;
               if (typeof apply === "unknown") {
                 applyArgumentsResult = HermesBuiltin.applyArguments(self);
               } else {
@@ -116,7 +99,7 @@ class FriendOnlineTimerManager extends tmp2 {
               return applyArgumentsResult;
             })();
           }
-        }, closure_1_8);
+        }, closure_8);
       }
     };
     applyArgumentsResult.clear = function clear() {
@@ -135,6 +118,7 @@ prototype["_terminate"] = function _terminate() {
   this.clear();
 };
 const friendOnlineTimerManager = new FriendOnlineTimerManager();
-const result = require("set").fileFinishedImporting("modules/notifications/friend_online/FriendOnlineTimer.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/notifications/friend_online/FriendOnlineTimer.tsx");
 
 export default friendOnlineTimerManager;

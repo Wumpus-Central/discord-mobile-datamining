@@ -1,20 +1,21 @@
 // discord_app/modules/user_settings/account/MFAUtils.tsx
-import defaultAreStatesEqual from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import _crypto from "../../../utils/MFAUtils.tsx";
-import closure_2 from "../../../stores/GuildStore.tsx";
-import closure_3 from "../../../stores/PermissionStore.tsx";
-import closure_4 from "../../../stores/UserStore.tsx";
-import ME from "../../../Constants.tsx";
+import useStateFromStores from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import util from "../../../intl/index.native.tsx";
+import MFAUtils from "../../../utils/MFAUtils.tsx";
+import GuildStore from "../../../stores/GuildStore.tsx";
+import PermissionStore from "../../../stores/PermissionStore.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
 
-require = arg1;
-({ GuildFeatures: c5, Permissions: closure_6, UserFlags: error } = ME);
-let obj = {
+require = fn;
+const Constants = fn(1074);
+({ GuildFeatures: hasOwnProperty, Permissions: metroRequire, UserFlags: closure_7 } = Constants);
+const MFAAvailability = {
   AVAILABLE: "available",
   UNAVAILABLE_NO_CRYPTO: "unavailable_no_crypto",
   UNAVAILABLE_UNVERIFIED: "unavailable_unverified",
 };
-const result = require("set").fileFinishedImporting("modules/user_settings/account/MFAUtils.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/account/MFAUtils.tsx");
 
 export const getSMSBackupDisabledMessage = function getSMSBackupDisabledMessage(stateFromStores) {
   let flag = arg1;
@@ -26,26 +27,30 @@ export const getSMSBackupDisabledMessage = function getSMSBackupDisabledMessage(
   } else {
     if (!stateFromStores.hasAnyStaffLevel()) {
       if (stateFromStores.hasFlag(constants.PARTNER)) {
-        const intl2 = getSystemLocale.intl;
+        const intl2 = util.intl;
         const string2 = intl2.string;
+        let t = util.t;
         if (flag) {
-          let string2Result = string2(_9UucjT);
+          t = t["9UucjT"];
+          let string2Result = string2(t);
         } else {
-          string2Result = string2(_9UucjT.Sq6Q1u);
+          string2Result = string2(t.Sq6Q1u);
         }
       } else if (null == stateFromStores.email) {
-        const intl = getSystemLocale.intl;
+        const intl = util.intl;
         const string = intl.string;
+        let t1 = util.t;
         if (flag) {
-          let stringResult = string(_9VWpT9);
+          t1 = t1["9VWpT9"];
+          let stringResult = string(t1);
         } else {
-          stringResult = string(_9VWpT9.LfCBZG);
+          stringResult = string(t1.LfCBZG);
         }
       }
     }
-    const intl3 = getSystemLocale.intl;
+    const intl3 = util.intl;
     const string3 = intl3.string;
-    let YJGvuD = getSystemLocale.t;
+    let YJGvuD = util.t;
     if (flag) {
       YJGvuD = YJGvuD.YJGvuD;
       let string3Result = string3(YJGvuD);
@@ -55,16 +60,16 @@ export const getSMSBackupDisabledMessage = function getSMSBackupDisabledMessage(
   }
 };
 export const useIsMFAEnabled = function useIsMFAEnabled() {
-  const items = [closure_4];
-  return defaultAreStatesEqual.useStateFromStores(items, () => {
+  const items = [UserStore];
+  return useStateFromStores.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     return null != currentUser && currentUser.mfaEnabled;
   });
 };
-export const MFAAvailability = obj;
+export { MFAAvailability };
 export const useMFAAvailability = function useMFAAvailability() {
-  obj = defaultAreStatesEqual;
-  const items = [closure_4];
+  const obj = useStateFromStores;
+  const items = [UserStore];
   const stateFromStores = obj.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let verified;
@@ -73,7 +78,7 @@ export const useMFAAvailability = function useMFAAvailability() {
     }
     return verified;
   });
-  if (_crypto.hasCrypto) {
+  if (MFAUtils.hasCrypto) {
     if (false === stateFromStores) {
       let AVAILABLE = obj.UNAVAILABLE_UNVERIFIED;
     } else {
@@ -88,17 +93,17 @@ export const use2FARemoveDisableReason = function use2FARemoveDisableReason() {
   if (arg0 === undefined) {
     flag = false;
   }
-  const items = [closure_2, closure_3, closure_4];
+  const items = [GuildStore, PermissionStore, UserStore];
   return flag(563).useStateFromStores(items, () => {
-    const currentUser = closure_1_4.getCurrentUser();
+    const currentUser = UserStore.getCurrentUser();
     let hasAnyStaffLevelResult;
     if (currentUser != null) {
       hasAnyStaffLevelResult = currentUser.hasAnyStaffLevel();
     }
     if (hasAnyStaffLevelResult) {
-      const intl2 = flag(closure_1_1[4]).intl;
+      const intl2 = util.intl;
       const string2 = intl2.string;
-      let hxf9fX = flag(closure_1_1[4]).t;
+      let hxf9fX = util.t;
       if (flag) {
         hxf9fX = hxf9fX.hxf9fX;
         let string2Result = string2(hxf9fX);
@@ -106,22 +111,22 @@ export const use2FARemoveDisableReason = function use2FARemoveDisableReason() {
         string2Result = string2(hxf9fX["3iKih7"]);
       }
     } else {
-      const guildsArray = closure_1_2.getGuildsArray();
+      const guildsArray = GuildStore.getGuildsArray();
       if (
         !guildsArray.some((features) => {
           features = features.features;
           let hasItem = features.has(constants.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE);
           if (hasItem) {
-            hasItem = closure_3.can(constants2.ADMINISTRATOR, features);
+            hasItem = closure_1_3.can(constants2.ADMINISTRATOR, features);
           }
           return hasItem;
         })
       ) {
         return null;
       } else {
-        const intl = flag(closure_1_1[4]).intl;
+        const intl = util.intl;
         const string = intl.string;
-        let OYTCUh = flag(closure_1_1[4]).t;
+        let OYTCUh = util.t;
         if (flag) {
           OYTCUh = OYTCUh.OYTCUh;
           let stringResult = string(OYTCUh);

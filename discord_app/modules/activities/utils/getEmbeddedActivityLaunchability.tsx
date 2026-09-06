@@ -1,14 +1,12 @@
 // discord_app/modules/activities/utils/getEmbeddedActivityLaunchability.tsx
-import getSystemLocale from "../../../intl/index.native.tsx";
+import util from "../../../intl/index.native.tsx";
 import useIsActivitiesEnabledForCurrentPlatform from "../useIsActivitiesEnabledForCurrentPlatform.tsx";
-import closure_2 from "../../../stores/ChannelStore.tsx";
-import closure_3 from "../../../stores/GuildStore.tsx";
-import closure_4 from "../../../stores/PermissionStore.tsx";
-import closure_5 from "../../../stores/VoiceStateStore.tsx";
-import { SUPPORTED_ACTIVITIES_CHANNEL_TYPES as closure_6 } from "../Constants.tsx";
-import { Permissions } from "../../../Constants.tsx";
+import ChannelStore from "../../../stores/ChannelStore.tsx";
+import GuildStore from "../../../stores/GuildStore.tsx";
+import PermissionStore from "../../../stores/PermissionStore.tsx";
+import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
 
-require = arg1;
+require = fn;
 function getEmbeddedActivityLaunchability(arg0) {
   ({ channelId, ChannelStore, GuildStore, PermissionStore, VoiceStateStore } = arg0);
   const channel = ChannelStore.getChannel(channelId);
@@ -58,7 +56,9 @@ function getEmbeddedActivityLaunchability(arg0) {
     return obj.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_CHANNEL;
   }
 }
-const obj = {
+let closure_6 = fn(1920).SUPPORTED_ACTIVITIES_CHANNEL_TYPES;
+const Permissions = fn(1074).Permissions;
+const EmbeddedActivityLaunchability = {
   CAN_LAUNCH: 0,
   [0]: "CAN_LAUNCH",
   NO_USE_EMBEDDED_ACTIVITIES_PERMISSION: 1,
@@ -76,47 +76,35 @@ const obj = {
   ACTIVITIES_FEATURE_NOT_ENABLED_FOR_CHANNEL: 7,
   [7]: "ACTIVITIES_FEATURE_NOT_ENABLED_FOR_CHANNEL",
 };
-const result = require("set").fileFinishedImporting("modules/activities/utils/getEmbeddedActivityLaunchability.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/utils/getEmbeddedActivityLaunchability.tsx");
 
-export const EmbeddedActivityLaunchability = obj;
+export { EmbeddedActivityLaunchability };
 export { getEmbeddedActivityLaunchability };
 export const getEmbeddedActivityLaunchabilityForChannel = function getEmbeddedActivityLaunchabilityForChannel(
   channelId,
 ) {
-  return getEmbeddedActivityLaunchability({
-    channelId,
-    ChannelStore: closure_2,
-    GuildStore: closure_3,
-    PermissionStore: closure_4,
-    VoiceStateStore: closure_5,
-  });
+  return getEmbeddedActivityLaunchability({ channelId, ChannelStore, GuildStore, PermissionStore, VoiceStateStore });
 };
 export const useEmbeddedActivityLaunchability = function useEmbeddedActivityLaunchability(channelId) {
-  const _require = channelId;
-  const items = [closure_2, closure_3, closure_4, closure_5];
+  _require = channelId;
+  const items = [ChannelStore, GuildStore, PermissionStore, VoiceStateStore];
   const items1 = [channelId];
-  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+  return require("initialize").useStateFromStores(
     items,
-    () =>
-      closure_1_9({
-        channelId: closure_0,
-        ChannelStore: closure_1_2,
-        GuildStore: closure_1_3,
-        PermissionStore: closure_1_4,
-        VoiceStateStore: closure_1_5,
-      }),
+    () => getEmbeddedActivityLaunchability({ channelId, ChannelStore, GuildStore, PermissionStore, VoiceStateStore }),
     items1,
   );
 };
 export const getEmbeddedActivityLaunchabilityLabel = function getEmbeddedActivityLaunchabilityLabel(arg0) {
   if (obj.CAN_LAUNCH === arg0) {
-    const intl3 = getSystemLocale.intl;
-    return intl3.string(getSystemLocale.t.qJvTKQ);
+    const intl3 = util.intl;
+    return intl3.string(util.t.qJvTKQ);
   } else if (tmp.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION === arg0) {
-    const intl2 = getSystemLocale.intl;
-    return intl2.string(getSystemLocale.t.hHGrWz);
+    const intl2 = util.intl;
+    return intl2.string(util.t.hHGrWz);
   } else {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.j29zCr);
+    const intl = util.intl;
+    return intl.string(util.t.j29zCr);
   }
 };

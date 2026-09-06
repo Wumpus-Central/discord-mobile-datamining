@@ -1,6 +1,6 @@
 // discord_app/modules/nuf/NewUserStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
 
 let c0 = null;
 const PersistedStore = initializeDefault.PersistedStore;
@@ -14,16 +14,17 @@ prototype["initialize"] = function initialize(type) {
   if (type == null) {
     type = null;
   }
+  c0 = type;
 };
 prototype["getType"] = function getType() {
   return c0;
 };
 prototype["getState"] = function getState() {
-  return { type: c0 };
+  return { type };
 };
 NewUserStore.displayName = "NewUserStore";
 NewUserStore.persistKey = "nuf";
-const newUserStore = new NewUserStore(dispatcherDefault, {
+const newUserStore = new NewUserStore(DispatcherDefault, {
   NUF_NEW_USER: function handleNewUser(newUserType) {
     newUserType = newUserType.newUserType;
     newUserStore.persist();
@@ -33,6 +34,7 @@ const newUserStore = new NewUserStore(dispatcherDefault, {
     newUserStore.persist();
   },
 });
-const result = require("set").fileFinishedImporting("modules/nuf/NewUserStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/nuf/NewUserStore.tsx");
 
 export default newUserStore;

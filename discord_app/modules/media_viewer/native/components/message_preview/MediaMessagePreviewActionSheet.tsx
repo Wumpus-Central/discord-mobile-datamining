@@ -1,11 +1,19 @@
 // discord_app/modules/media_viewer/native/components/message_preview/MediaMessagePreviewActionSheet.tsx
-import importAllResult from "../../../../../../_runtime/00019_noop.js";
-import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import router_utils from "../../../../routing/router_utils.tsx";
+import ToastUtils from "../../../../toast/native/ToastUtils.tsx";
+import ClipboardUtils from "../../../../../utils/ClipboardUtils.native.tsx";
+import ReportModals from "../../../../in_app_reports/ReportModals.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let c3 = importAllResult;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-const memoResult = importAllResult.memo(function MediaMessagePreviewActionSheet(channel) {
+require = fn;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const size = fn(2);
+let result = size.fileFinishedImporting(
+  "modules/media_viewer/native/components/message_preview/MediaMessagePreviewActionSheet.tsx",
+);
+
+export default noop.memo(function MediaMessagePreviewActionSheet(channel) {
   channel = channel.channel;
   const message = channel.message;
   ({ user, closeMediaModal } = channel);
@@ -32,57 +40,46 @@ const memoResult = importAllResult.memo(function MediaMessagePreviewActionSheet(
   const callback1 = callback.useCallback(() => {
     callback();
     closeMediaModal();
-    channel(closeMediaModal[5]).transitionToGuild(channel.guild_id, channel.id, message.id);
+    router_utils.transitionToGuild(channel.guild_id, channel.id, message.id);
   }, items);
   const items2 = [message, callback];
   const callback2 = callback.useCallback(() => {
     callback();
-    channel(closeMediaModal[6]).copy(message.id);
-    const obj = channel(closeMediaModal[6]);
-    channel(closeMediaModal[7]).presentIdCopied();
+    ClipboardUtils.copy(message.id);
+    ToastUtils.presentIdCopied();
   }, items1);
   const callback3 = callback.useCallback(() => {
     callback();
-    const result = channel(closeMediaModal[8]).showReportModalForMessage(
-      message,
-      "mobile_media_message_preview_action_sheet",
-    );
+    const result = ReportModals.showReportModalForMessage(message, "mobile_media_message_preview_action_sheet");
   }, items2);
   let obj = { icon: null, label: null, onPress: null };
   obj = { IconComponent: tmp(tmp2[11]).ChatArrowRightIcon };
-  obj[0] = callback(channel(closeMediaModal[10]).ActionSheetRow.Icon, obj);
+  obj.icon = closure_4(channel(closeMediaModal[10]).ActionSheetRow.Icon, obj);
   const intl = tmp(tmp2[12]).intl;
-  obj[1] = intl.string(channel(closeMediaModal[12]).t["+TSRGD"]);
-  obj[2] = callback1;
-  const items3 = [callback(channel(closeMediaModal[10]).ActionSheetRow, obj), ,];
+  obj.label = intl.string(channel(closeMediaModal[12]).t["+TSRGD"]);
+  obj.onPress = callback1;
+  const items3 = [closure_4(channel(closeMediaModal[10]).ActionSheetRow, obj), ,];
   if (setting) {
-    obj1 = { icon: null, label: null, onPress: null };
-    const obj2 = { IconComponent: null };
-    obj2[0] = tmp(tmp2[13]).IdIcon;
-    obj1[0] = tmp10(tmp(tmp2[10]).ActionSheetRow.Icon, obj2);
+    const obj1 = { icon: null, label: null, onPress: null };
+    const obj2 = { IconComponent: tmp(tmp2[13]).IdIcon };
+    obj1.icon = tmp10(tmp(tmp2[10]).ActionSheetRow.Icon, obj2);
     const intl2 = tmp(tmp2[12]).intl;
-    obj1[1] = intl2.string(tmp(tmp2[12]).t.zBoHlf);
-    obj1[2] = callback2;
+    obj1.label = intl2.string(tmp(tmp2[12]).t.zBoHlf);
+    obj1.onPress = callback2;
     setting = tmp10(tmp(tmp2[10]).ActionSheetRow, obj1);
   }
   items3[1] = setting;
   if (canReportUserResult) {
     const obj3 = { icon: null, label: null, onPress: null, variant: "danger" };
-    const obj4 = { IconComponent: null };
-    obj4[0] = tmp(tmp2[14]).FlagIcon;
-    obj3[0] = tmp10(tmp(tmp2[10]).ActionSheetRow.Icon, obj4);
+    const obj4 = { IconComponent: tmp(tmp2[14]).FlagIcon };
+    obj3.icon = tmp10(tmp(tmp2[10]).ActionSheetRow.Icon, obj4);
     const intl3 = tmp(tmp2[12]).intl;
-    obj3[1] = intl3.string(tmp(tmp2[12]).t["+78Pfm"]);
-    obj3[2] = callback3;
+    obj3.label = intl3.string(tmp(tmp2[12]).t["+78Pfm"]);
+    obj3.onPress = callback3;
     canReportUserResult = tmp10(tmp(tmp2[10]).ActionSheetRow, obj3);
   }
   items3[2] = canReportUserResult;
-  return callback(channel(closeMediaModal[9]).ActionSheet, {
+  return closure_4(channel(closeMediaModal[9]).ActionSheet, {
     children: closure_5(channel(closeMediaModal[10]).ActionSheetRow.Group, { hasIcons: true, children: items3 }),
   });
 });
-let result = require("set").fileFinishedImporting(
-  "modules/media_viewer/native/components/message_preview/MediaMessagePreviewActionSheet.tsx",
-);
-
-export default memoResult;

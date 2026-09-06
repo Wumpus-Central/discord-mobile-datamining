@@ -1,30 +1,28 @@
 // discord_common/js/shared/timeRequire.native.tsx
-import set from "../../../_runtime/00002_set.js";
-import isTracingDefault from "../packages/app-start-performance/AppStartPerformance.tsx";
+import AppStartPerformanceDefault from "../packages/app-start-performance/AppStartPerformance.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/timeRequire.native.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/timeRequire.native.tsx");
 
-export default function timeRequire(arg0, arg1) {
+export default function timeRequire(arg0, fn) {
   const timestamp = Date.now();
   const diff = Date.now() - timestamp;
   if (diff >= 5) {
-    if (typeof modules.getModules === "function") {
-      modules = obj2.getModules();
+    if (typeof require.getModules === "function") {
+      const modules = obj2.getModules();
       const _Object = Object;
       const keys = Object.keys(modules);
       const _HermesInternal = HermesInternal;
-      isTracingDefault.mark(
+      AppStartPerformanceDefault.mark(
         "\u{1F3C3}",
-        "Require " + arg0 + " (" + keys.filter((arg0) => modules[arg0].isInitialized).length + " modules)",
+        "Require " + arg0 + " (" + keys.filter((item) => modules[item].isInitialized).length + " modules)",
         diff,
       );
-      const obj = isTracingDefault;
     } else {
       const _HermesInternal2 = HermesInternal;
-      isTracingDefault.mark("\u{1F3C3}", "Require " + arg0, diff);
-      const obj3 = isTracingDefault;
+      AppStartPerformanceDefault.mark("\u{1F3C3}", "Require " + arg0, diff);
     }
-    obj2 = modules;
+    obj2 = require;
   }
-  return arg1();
+  return fn();
 }

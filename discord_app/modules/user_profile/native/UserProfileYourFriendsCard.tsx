@@ -1,118 +1,107 @@
 // discord_app/modules/user_profile/native/UserProfileYourFriendsCard.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../user_affinities/UserAffinitiesV2Store.tsx";
-import closure_7 from "../../../stores/RelationshipStore.tsx";
-import closure_8 from "../../../stores/UserStore.tsx";
-import { RelationshipTypes } from "../../../Constants.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import _modDef12 from "../../../../_runtime/metro/00012__.js";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import GlobalUtils from "../../../utils/GlobalUtils.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
+import UserAffinitiesV2Store from "../../user_affinities/UserAffinitiesV2Store.tsx";
+import RelationshipStore from "../../../stores/RelationshipStore.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
 
-const require = arg1;
-({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-let obj = { direction: require("Button").CutoutDirection.RIGHT, inset: -4 };
+require = fn;
+const View = fn(17).View;
+const RelationshipTypes = fn(1074).RelationshipTypes;
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+let obj = { direction: fn(1178).CutoutDirection.RIGHT, inset: -4 };
 let closure_12 = Object.freeze(obj);
+const createStyles = fn(4560);
 obj = { pressable: null, label: null, facepile: null, avatars: null };
-obj = { flex: 1, flexDirection: "row", alignItems: "center", padding: 16, borderRadius: ThemesDefault.radii.lg };
-obj[0] = obj;
-obj[1] = { flex: 1 };
-obj[2] = { flexDirection: "row", alignItems: "center", marginLeft: "auto", marginRight: 8 };
-obj[3] = { flexDirection: "row" };
-let closure_13 = createCacheKey.createStyles(obj);
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileYourFriendsCard.tsx");
+obj = { flex: 1, flexDirection: "row", alignItems: "center", padding: 16, borderRadius: nativeDefault.radii.lg };
+obj.pressable = obj;
+obj.label = { flex: 1 };
+obj.facepile = { flexDirection: "row", alignItems: "center", marginLeft: "auto", marginRight: 8 };
+obj.avatars = { flexDirection: "row" };
+let closure_13 = createStyles.createStyles(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileYourFriendsCard.tsx");
 
 export default function UserProfileYourFriendsCard(arg0) {
-  let _require;
-  let first;
-  dependencyMap = undefined;
   let stateFromStoresArray;
   let stateFromStoresArray1;
-  let gameRelationshipsByType;
   ({ navigateToFriends, style } = arg0);
-  let tmp = callback3();
+  let tmp = closure_13();
   _require = tmp;
   const tmp2 = stateFromStoresArray(stateFromStoresArray1.useState([]), 2);
-  first = tmp2[0];
+  const first = tmp2[0];
   dependencyMap = tmp2[1];
-  let obj = initialize;
-  let items = [closure_6];
+  let obj = require("initialize");
+  let items = [UserAffinitiesV2Store];
   stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
     userAffinities = userAffinities.getUserAffinities();
     return userAffinities.map((otherUserId) => otherUserId.otherUserId);
   });
-  const items1 = [closure_7];
-  stateFromStoresArray1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(
-    items1,
-    () => friendIDs.getFriendIDs(),
+  const items1 = [RelationshipStore];
+  stateFromStoresArray1 = require("initialize").useStateFromStoresArray(items1, () => friendIDs.getFriendIDs());
+  const obj2 = require("initialize");
+  const gameRelationshipsByType = require("GameRelationshipStoreHooks").useGameRelationshipsByType(
+    RelationshipTypes.FRIEND,
   );
-  const obj2 = initialize;
-  gameRelationshipsByType =
-    require("../../game_relationships/GameRelationshipStoreHooks.tsx").useGameRelationshipsByType(
-      RelationshipTypes.FRIEND,
-    );
   const effect = stateFromStoresArray1.useEffect(() => {
-    const userAffinitiesV2 = lib(9848).fetchUserAffinitiesV2();
+    const userAffinitiesV2 = closure_0(9848).fetchUserAffinitiesV2();
   }, []);
   const items2 = [stateFromStoresArray, stateFromStoresArray1, gameRelationshipsByType];
   const effect1 = stateFromStoresArray1.useEffect(() => {
-    const obj = first(12);
-    const tmp = first;
-    const found = first(12)
-      .chain(stateFromStoresArray)
-      .filter((arg0) => closure_4.includes(arg0));
-    const chainResult = first(12).chain(stateFromStoresArray);
-    const mapped = found.take(5).map(closure_1_8.getUser);
+    const found = _modDef12.chain(stateFromStoresArray).filter((item) => stateFromStoresArray1.includes(item));
+    const chainResult = _modDef12.chain(stateFromStoresArray);
+    const mapped = found.take(5).map(UserStore.getUser);
     const takeResult = found.take(5);
-    const tmp3 = closure_1_8;
-    const tmp4 = lib;
-    let valueResult = mapped.filter(lib(1369).isNotNullish).value();
+    const tmp3 = UserStore;
+    let valueResult = mapped.filter(GlobalUtils.isNotNullish).value();
     if (valueResult.length >= 5) {
       dependencyMap(valueResult);
     } else {
-      const tmpResult = tmp(12);
-      const mapped1 = tmp(12)
-        .chain(gameRelationshipsByType)
-        .map((id) => id.id);
-      const chainResult1 = tmp(12).chain(gameRelationshipsByType);
+      const tmpResult = _modDef12;
+      const mapped1 = _modDef12.chain(gameRelationshipsByType).map((id) => id.id);
+      const chainResult1 = _modDef12.chain(gameRelationshipsByType);
       const uniqResult = mapped1.uniq();
       const mapped2 = mapped1
         .uniq()
         .take(5 - valueResult.length)
         .map(tmp3.getUser);
       const takeResult1 = mapped1.uniq().take(5 - valueResult.length);
-      valueResult = mapped2.filter(tmp4(1369).isNotNullish).value();
+      valueResult = mapped2.filter(GlobalUtils.isNotNullish).value();
       const items = [];
       HermesBuiltin.arraySpread(valueResult, HermesBuiltin.arraySpread(valueResult, 0));
       dependencyMap(items);
-      const iter2 = mapped2.filter(tmp4(1369).isNotNullish);
+      const iter2 = mapped2.filter(GlobalUtils.isNotNullish);
     }
   }, items2);
   const items3 = [first, ,];
   ({ avatars: arr4[1], facepile: arr4[2] } = tmp);
   const memo = stateFromStoresArray1.useMemo(() => {
-    let obj = { style: lib.facepile, children: null };
+    let obj = { style: closure_0.facepile, children: null };
     obj = {
-      style: lib.avatars,
-      children: first.map((id) => {
-        let obj = { style: { transform: items }, children: null };
-        obj = { translateX: 4 * (closure_1.length - 1 - arg1) };
-        items = [obj];
-        obj = { user: id, guildId: "r", size: "PX_16", cutout: null };
-        obj[2] = closure_1_0(closure_1_2[8]).AvatarSizes.XSMALL;
+      style: closure_0.avatars,
+      children: first.map((user, index) => {
+        let obj = { style: null, children: null };
+        obj = { transform: null };
+        obj = { translateX: 4 * (first.length - 1 - index) };
+        const items = [obj];
+        obj.transform = items;
+        obj.style = obj;
+        const obj1 = { user, guildId: "r", size: closure_0(1178).AvatarSizes.XSMALL, cutout: null };
         let tmp3;
-        if (arg1 < closure_1.length - 1) {
-          tmp3 = closure_1_12;
+        if (index < first.length - 1) {
+          tmp3 = closure_2_12;
         }
-        obj[3] = tmp3;
-        obj[1] = closure_1_10(closure_1_0(closure_1_2[8]).CutoutableAvatarImage, obj);
-        return closure_1_10(closure_1_5, obj, id.id);
+        obj1.cutout = tmp3;
+        obj.children = closure_2_10(closure_0(1178).CutoutableAvatarImage, obj1);
+        return closure_2_10(gameRelationshipsByType, obj, user.id);
       }),
     };
-    obj[1] = closure_1_10(gameRelationshipsByType, obj);
-    return closure_1_10(gameRelationshipsByType, obj);
+    obj.children = closure_2_10(View, obj);
+    return closure_2_10(View, obj);
   }, items3);
   obj = {
     accessibilityRole: "button",
@@ -122,11 +111,11 @@ export default function UserProfileYourFriendsCard(arg0) {
     activeOpacity: 0.8,
     children: null,
   };
-  const intl = require("../../../intl/index.native.tsx").intl;
-  obj[1] = intl.string(require("../../../intl/index.native.tsx").t.TdEu5X);
-  obj[2] = navigateToFriends;
+  const intl = require("util").intl;
+  obj.accessibilityLabel = intl.string(require("util").t.TdEu5X);
+  obj.onPress = navigateToFriends;
   const items4 = [style, tmp.pressable];
-  obj[3] = items4;
+  obj.style = items4;
   obj = {
     accessibilityRole: "header",
     variant: "text-sm/semibold",
@@ -134,17 +123,13 @@ export default function UserProfileYourFriendsCard(arg0) {
     style: tmp.label,
     children: null,
   };
-  const intl2 = require("../../../intl/index.native.tsx").intl;
-  obj[4] = intl2.string(require("../../../intl/index.native.tsx").t.TdEu5X);
+  const intl2 = require("util").intl;
+  obj.children = intl2.string(require("util").t.TdEu5X);
   const items5 = [
-    callback(require("../../../design/components/Text/native/Text.tsx").Text, obj),
+    closure_10(require("Text/Text").Text, obj),
     memo,
-    callback(
-      require("../../../design/components/Icon/native/redesign/generated/ChevronSmallRightIcon.tsx")
-        .ChevronSmallRightIcon,
-      { size: "sm" },
-    ),
+    closure_10(require("ChevronSmallRightIcon").ChevronSmallRightIcon, { size: "sm" }),
   ];
-  obj[5] = items5;
-  return callback2(require("../../../design/void/Pressables/native/Pressables.tsx").PressableOpacity, obj);
+  obj.children = items5;
+  return closure_11(require("Pressables").PressableOpacity, obj);
 }

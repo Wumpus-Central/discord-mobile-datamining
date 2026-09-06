@@ -1,13 +1,11 @@
 // discord_app/modules/premium_marketing/native/components/BuyNitroTriggerPointEffect.tsx
-import set from "../../../../../_runtime/00002_set.js";
 import useCommonTriggerPoint from "../../../experiments/trigger_points/useCommonTriggerPoint.tsx";
-import commonTriggerPointConfiguration from "../../../experiments/trigger_points/OpenNitroTriggerPoint.tsx";
+import OpenNitroTriggerPoint from "../../../experiments/trigger_points/OpenNitroTriggerPoint.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/premium_marketing/native/components/BuyNitroTriggerPointEffect.tsx");
+const result = size.fileFinishedImporting("modules/premium_marketing/native/components/BuyNitroTriggerPointEffect.tsx");
 
 export const BuyNitroTriggerPointEffect = function BuyNitroTriggerPointEffect() {
-  const commonTriggerPoint = useCommonTriggerPoint.useCommonTriggerPoint(
-    commonTriggerPointConfiguration.OpenNitroTriggerPoint,
-  );
+  const commonTriggerPoint = useCommonTriggerPoint.useCommonTriggerPoint(OpenNitroTriggerPoint.OpenNitroTriggerPoint);
   return null;
 };

@@ -1,33 +1,39 @@
 // discord_app/components_native/common/ActionButton.tsx
-import noopAll from "../../../_runtime/00019_noop.js";
-import styleProperties from "../../design/components/Button/native/ButtonHooks.native.tsx";
+import ButtonHooks from "../../design/components/Button/native/ButtonHooks.native.tsx";
 import IconButton from "../../design/components/Button/native/IconButton.native.tsx";
-import { View } from "../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
+import noop from "../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("components_native/common/ActionButton.tsx");
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/common/ActionButton.tsx");
 
 export default function ActionButton(style) {
   let str = "tertiary";
   if ("positive" === style.type) {
     str = "active";
   }
-  let obj = styleProperties;
-  obj = { style: style.styles, children: null };
+  let obj = { style: style.styles, children: null };
   obj = {
     icon: jsx(style.IconComponent, { color: obj.useButtonTextColorStyles(str).color, size: "sm" }),
-    onPress: jsx(IconButton.IconButton, { style: style.styles, children: null }),
+    onPress: null,
     accessibilityLabel: null,
     variant: str,
     size: "sm",
   };
-  ({ onPress: obj3[1], accessibilityLabel: obj3[2] } = style);
+  ({ onPress: obj3.onPress, accessibilityLabel: obj3.accessibilityLabel } = style);
+  obj.children = jsx(IconButton.IconButton, {
+    icon: jsx(style.IconComponent, { color: obj.useButtonTextColorStyles(str).color, size: "sm" }),
+    onPress: null,
+    accessibilityLabel: null,
+    variant: str,
+    size: "sm",
+  });
   return (
     <View
       icon={jsx(arg0.IconComponent, { color: obj.useButtonTextColorStyles(str).color, size: "sm" })}
-      onPress={jsx(IconButton.IconButton, { style: arg0.styles, children: null })}
+      onPress={null}
       accessibilityLabel={null}
       variant={str}
       size="sm"

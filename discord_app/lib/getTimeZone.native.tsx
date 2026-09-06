@@ -1,9 +1,9 @@
 // discord_app/lib/getTimeZone.native.tsx
-import set from "../../_runtime/00002_set.js";
-import DCDDeviceManager from "../utils/native/DeviceUtils.tsx";
+import DeviceUtils from "../utils/native/DeviceUtils.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("lib/getTimeZone.native.tsx");
+const result = size.fileFinishedImporting("lib/getTimeZone.native.tsx");
 
 export default function getTimeZone() {
-  return DCDDeviceManager.getTimeZone();
+  return DeviceUtils.getTimeZone();
 }

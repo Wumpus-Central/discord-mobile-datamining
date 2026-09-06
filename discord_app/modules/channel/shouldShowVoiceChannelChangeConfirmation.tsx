@@ -1,24 +1,25 @@
 // discord_app/modules/channel/shouldShowVoiceChannelChangeConfirmation.tsx
-import closure_0 from "../game_console/GameConsoleStore.tsx";
-import closure_1 from "../user_settings/UnsyncedUserSettingsStore.tsx";
-import closure_2 from "../../stores/AuthenticationStore.tsx";
-import closure_3 from "../../stores/GuildStore.tsx";
-import closure_4 from "../../stores/VoiceStateStore.tsx";
+import GameConsoleStore from "../game_console/GameConsoleStore.tsx";
+import UnsyncedUserSettingsStore from "../user_settings/UnsyncedUserSettingsStore.tsx";
+import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
+import GuildStore from "../../stores/GuildStore.tsx";
+import VoiceStateStore from "../../stores/VoiceStateStore.tsx";
 
-const result = require("set").fileFinishedImporting("modules/channel/shouldShowVoiceChannelChangeConfirmation.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/channel/shouldShowVoiceChannelChangeConfirmation.tsx");
 
 export const shouldShowVoiceChannelChangeConfirmation = function shouldShowVoiceChannelChangeConfirmation(id) {
-  if (obj.disableVoiceChannelChangeAlert) {
+  if (UnsyncedUserSettingsStore.disableVoiceChannelChangeAlert) {
     return false;
   } else {
-    remoteSessionId = remoteSessionId.getRemoteSessionId();
-    if (null != voiceStateForSession.getVoiceStateForSession(id.getId(), remoteSessionId)) {
+    const remoteSessionId = GameConsoleStore.getRemoteSessionId();
+    if (null != VoiceStateStore.getVoiceStateForSession(AuthenticationStore.getId(), remoteSessionId)) {
       return false;
     } else if (obj.isCurrentClientInVoiceChannel()) {
       if (obj.isInChannel(id.id)) {
         return false;
       } else {
-        guild = guild.getGuild(id.getGuildId());
+        const guild = GuildStore.getGuild(id.getGuildId());
         let afkChannelId;
         if (guild != null) {
           afkChannelId = guild.afkChannelId;

@@ -1,8 +1,8 @@
 // discord_app/modules/messages/EmbedConstants.tsx
-import ME from "../../Constants.tsx";
-import set from "../../../_runtime/00002_set.js";
+import Constants from "../../Constants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const MessageEmbedTypes = ME.MessageEmbedTypes;
+const MessageEmbedTypes = Constants.MessageEmbedTypes;
 const items = [, , , , , , ,];
 ({
   AUTO_MODERATION_MESSAGE: arr[0],
@@ -14,7 +14,6 @@ const items = [, , , , , , ,];
   VOICE_CHANNEL: arr[6],
   POLL_RESULT: arr[7],
 } = MessageEmbedTypes);
-let set = new Set(items);
 const items1 = [, , , , , , , ,];
 ({
   AUTO_MODERATION_MESSAGE: arr2[0],
@@ -27,7 +26,8 @@ const items1 = [, , , , , , , ,];
   VOICE_CHANNEL: arr2[7],
   POLL_RESULT: arr2[8],
 } = MessageEmbedTypes);
-const result = set.fileFinishedImporting("modules/messages/EmbedConstants.tsx");
+const set = new Set(items);
+const result = size.fileFinishedImporting("modules/messages/EmbedConstants.tsx");
 
 export const EMBED_TYPES_WITH_PARSEABLE_FIELDS = set;
 export const EMBED_TYPES_WITH_SPECIAL_RENDERER = new Set(items1);

@@ -1,41 +1,40 @@
 // discord_app/modules/forums/native/posts/grid/ForumPostGridHeader.tsx
-import noopAll from "../../../../../../_runtime/00019_noop.js";
 import ForumPostPinIconDefault from "../ForumPostPinIcon.tsx";
 import ForumPostUsername from "../ForumPostUsername.tsx";
 import ForumPostTimestampDefault from "../ForumPostTimestamp.tsx";
 import ForumPostTitleDefault from "../ForumPostTitle.tsx";
-import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { ForumTimestampFormats } from "../../../ForumConstants.tsx";
-import { ChannelFlags } from "../../../../channel/ChannelConstants.tsx";
-import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_8 = createCacheKey.createStyles({
+require = fn;
+const View = fn(17).View;
+const ForumTimestampFormats = fn(7273).ForumTimestampFormats;
+const ChannelFlags = fn(1964).ChannelFlags;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4560);
+let closure_8 = createStyles.createStyles({
   pinIcon: { marginEnd: 8 },
   container: { display: "flex", flexDirection: "column", marginBottom: 4 },
   details: { flexDirection: "row", alignItems: "center", marginBottom: 4 },
   timestampText: { flex: 1 },
 });
-const result = require("set").fileFinishedImporting("modules/forums/native/posts/grid/ForumPostGridHeader.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/forums/native/posts/grid/ForumPostGridHeader.tsx");
 
 export default function ForumPostGridHeader(arg0) {
   ({ thread, hasUnreads, isNew } = arg0);
-  const tmp = callback2();
+  const tmp = closure_8();
   let hasFlagResult = thread.hasFlag(ChannelFlags.PINNED);
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.details, children: null };
   if (hasFlagResult) {
-    obj = { containerStyle: null };
-    obj[0] = tmp.pinIcon;
-    hasFlagResult = callback(ForumPostPinIconDefault, obj);
+    obj = { containerStyle: tmp.pinIcon };
+    hasFlagResult = timestampProducer(ForumPostPinIconDefault, obj);
   }
   const items = [
     hasFlagResult,
-    callback(ForumPostUsername.ForumPostAuthor, { thread, hasUnreads }),
-    callback(ForumPostTimestampDefault, {
+    timestampProducer(ForumPostUsername.ForumPostAuthor, { thread, hasUnreads }),
+    timestampProducer(ForumPostTimestampDefault, {
       thread,
       hasUnreads,
       format: ForumTimestampFormats.POSTED_DURATION_AGO,
@@ -46,8 +45,8 @@ export default function ForumPostGridHeader(arg0) {
     isNew = tmp8(tmp10(12015), {});
   }
   items[3] = isNew;
-  obj[1] = items;
-  const items1 = [closure_7(View, obj), callback(ForumPostTitleDefault, { title: thread.name, hasUnreads })];
-  obj[1] = items1;
-  return closure_7(View, obj);
+  obj.children = items;
+  const items1 = [React5(View, obj), timestampProducer(ForumPostTitleDefault, { title: thread.name, hasUnreads })];
+  obj.children = items1;
+  return React5(View, obj);
 }

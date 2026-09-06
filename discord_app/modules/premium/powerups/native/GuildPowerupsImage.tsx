@@ -1,16 +1,17 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsImage.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import preloadDefault from "../../../../components_native/common/FastImage.tsx";
-import __INTERNAL_VIEW_CONFIGDefault from "../../../../../discord_common/js/packages/rtn-codegen/js/APNGDecorationNativeComponent.tsx";
-import closure_3 from "../../../a11y/AccessibilityStore.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
+import APNGDecorationNativeComponentDefault from "../../../../../discord_common/js/packages/rtn-codegen/js/APNGDecorationNativeComponent.tsx";
+import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
-require = arg1;
-let closure_5 = createCacheKey.createStyles({
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_5 = createStyles.createStyles({
   image: { width: "75%", height: "100%", alignSelf: "center", resizeMode: "contain" },
 });
-const result = require("set").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsImage.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsImage.tsx");
 
 export default function GuildPowerupsImage(style) {
   ({ imageUrl, isAnimated } = style);
@@ -18,22 +19,24 @@ export default function GuildPowerupsImage(style) {
     isAnimated = true;
   }
   style = style.style;
-  const tmp = callback();
+  const tmp = closure_5();
   let obj = initialize;
-  const items = [closure_3];
+  const items = [AccessibilityStore];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   if (obj2.isAndroid()) {
     if (isAnimated) {
       if (!stateFromStores) {
         obj = { style: null, url: null };
         const items1 = [tmp.image, style];
-        obj[0] = items1;
-        obj[1] = imageUrl;
-        let tmp6 = jsx(__INTERNAL_VIEW_CONFIGDefault, { style: null, url: null });
+        obj.style = items1;
+        obj.url = imageUrl;
+        let tmp6 = jsx(APNGDecorationNativeComponentDefault, { style: null, url: null });
       }
       return tmp6;
     }
   }
+  obj = { style: null, source: { uri: imageUrl } };
   const items2 = [tmp.image, style];
-  tmp6 = jsx(preloadDefault, { style: items2, source: { uri: imageUrl } });
+  obj.style = items2;
+  tmp6 = jsx(FastImageDefault, { style: null, source: { uri: imageUrl } });
 }

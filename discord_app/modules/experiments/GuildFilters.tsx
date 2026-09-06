@@ -1,14 +1,16 @@
 // discord_app/modules/experiments/GuildFilters.tsx
+import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import IntegerDefault from "../../../_runtime/00014_Integer.js";
-import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../auth/AuthInviteStore.tsx";
-import closure_4 from "../../stores/GuildMemberCountStore.tsx";
-import closure_5 from "../../stores/GuildStore.tsx";
-import importDefaultResult from "../../../_runtime/01241_MurmurHashV3.js";
+import DurationsDefault from "../../utils/Durations.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import AuthInviteStore from "../auth/AuthInviteStore.tsx";
+import GuildMemberCountStore from "../../stores/GuildMemberCountStore.tsx";
+import GuildStore from "../../stores/GuildStore.tsx";
+import MurmurHashV3 from "../../../_runtime/01241_MurmurHashV3.js";
 
-function isInRange(arg0, arg1, arg2) {
+function isInRange(memberCount, arg1, arg2) {
   try {
-    const obj = IntegerDefault(arg0);
+    const obj = IntegerDefault(memberCount);
     let tmp6 = null;
     if (null != arg1) {
       tmp6 = tmp3(14)(arg1);
@@ -37,12 +39,10 @@ function getRangeData(arg0) {
   let min;
   let max;
   while (tmp3 !== undefined) {
-    let tmp5 = callback;
-    let tmp6 = callback(tmp4, 2);
+    let tmp6 = _slicedToArray(tmp4, 2);
     [tmp7, tmp8] = tmp6;
     let tmp9 = importDefault;
-    let tmp10 = dependencyMap;
-    let obj = importDefaultResult;
+    let obj = MurmurHashV3;
     if (obj.v3("min_id") === tmp7) {
       min = tmp8;
     } else {
@@ -56,91 +56,76 @@ function getRangeData(arg0) {
   return { min, max };
 }
 let obj = {};
-obj[importDefaultResult.v3("guild_ids")] = (arg0) => {
-  importDefault = [];
+obj[MurmurHashV3.v3("guild_ids")] = (arg0) => {
+  closure_0 = [];
   while (tmp !== undefined) {
-    let tmp3 = callback;
-    let tmp4 = callback(tmp2, 2);
+    let tmp4 = _slicedToArray(tmp2, 2);
     let tmp5 = tmp4[1];
-    let tmp6 = importDefault;
-    let tmp7 = dependencyMap;
-    let obj = importDefaultResult;
+    let obj = MurmurHashV3;
     if (tmp4[0] === obj.v3("guild_ids")) {
-      let tmp8 = tmp5;
-      importDefault = tmp5;
+      closure_0 = tmp5;
     }
     continue;
   }
   return (arg0) => closure_0.includes(arg0);
 };
-obj[importDefaultResult.v3("guild_id_range")] = (arg0) => {
+obj[MurmurHashV3.v3("guild_id_range")] = (arg0) => {
   ({ min: importDefault, max: dependencyMap } = getRangeData(arg0));
-  return (arg0) => closure_1_6(arg0, closure_0, closure_1);
+  return (memberCount) => isInRange(memberCount, importDefault, dependencyMap);
 };
-const importDefaultResult1 = importDefaultResult;
-obj[importDefaultResult.v3("guild_age_range_days")] = (arg0) => {
+obj[MurmurHashV3.v3("guild_age_range_days")] = (arg0) => {
+  ({ min: importDefault, max: dependencyMap } = getRangeData(arg0));
+  return (arg0) =>
+    isInRange(Math.floor(SnowflakeUtilsDefault.age(arg0) / DurationsDefault.Millis.DAY), closure_1_0, dependencyMap);
+};
+obj[MurmurHashV3.v3("guild_member_count_range")] = (arg0) => {
   ({ min: importDefault, max: dependencyMap } = getRangeData(arg0));
   return (arg0) => {
-    const obj = closure_1_0(closure_1_1[6]);
-    return closure_1_6(
-      Math.floor(closure_1_0(closure_1_1[6]).age(arg0) / closure_1_0(closure_1_1[7]).Millis.DAY),
-      closure_0,
-      closure_1,
-    );
-  };
-};
-const importDefaultResult2 = importDefaultResult;
-obj[importDefaultResult.v3("guild_member_count_range")] = (arg0) => {
-  ({ min: importDefault, max: dependencyMap } = getRangeData(arg0));
-  return (arg0) => {
-    const memberCount = closure_1_4.getMemberCount(arg0);
+    const memberCount = GuildMemberCountStore.getMemberCount(arg0);
     let tmp2 = null != memberCount;
     if (tmp2) {
-      tmp2 = closure_1_6(memberCount, closure_0, closure_1);
+      tmp2 = isInRange(memberCount, importDefault, dependencyMap);
     }
     return tmp2;
   };
 };
-const importDefaultResult3 = importDefaultResult;
-obj[importDefaultResult.v3("guild_has_feature")] = (arg0) => {
-  closure_0 = callback(callback(arg0, 1)[0], 2)[1];
+obj[MurmurHashV3.v3("guild_has_feature")] = (arg0) => {
+  closure_0 = _slicedToArray(_slicedToArray(arg0, 1)[0], 2)[1];
   return (arg0) => {
-    let guild = closure_1_5.getGuild(arg0);
+    let guild = GuildStore.getGuild(arg0);
     if (guild == null) {
-      guild = closure_1_3.getGuild(arg0);
+      guild = AuthInviteStore.getGuild(arg0);
     }
     let someResult = null != guild;
     if (someResult) {
-      someResult = guild.some((arg0) => {
+      someResult = closure_0.some((item) => {
         const features = guild.features;
-        return features.has(arg0);
+        return features.has(item);
       });
     }
     return someResult;
   };
 };
-const importDefaultResult4 = importDefaultResult;
-obj[importDefaultResult.v3("guild_hub_types")] = (arg0) => {
-  closure_0 = callback(callback(arg0, 1)[0], 2)[1];
+obj[MurmurHashV3.v3("guild_hub_types")] = (arg0) => {
+  closure_0 = _slicedToArray(_slicedToArray(arg0, 1)[0], 2)[1];
   return (arg0) => {
-    let guild = closure_1_5.getGuild(arg0);
+    let guild = GuildStore.getGuild(arg0);
     if (guild == null) {
-      guild = closure_1_3.getGuild(arg0);
+      guild = AuthInviteStore.getGuild(arg0);
     }
     let someResult = null != guild && typeof guild.hubType === "number";
     if (someResult) {
-      someResult = guild.some((arg0) => guild.hubType === arg0);
+      someResult = closure_0.some((item) => guild.hubType === item);
     }
     return someResult;
   };
 };
-const importDefaultResult5 = importDefaultResult;
-obj[importDefaultResult.v3("guild_has_vanity_url")] = (arg0) => {
-  closure_0 = callback(callback(arg0, 1)[0], 2)[1];
+obj[MurmurHashV3.v3("guild_has_vanity_url")] = (arg0) => {
+  closure_0 = _slicedToArray(_slicedToArray(arg0, 1)[0], 2)[1];
   return (arg0) => {
-    let guild = closure_1_5.getGuild(arg0);
+    let guild = GuildStore.getGuild(arg0);
     if (guild == null) {
-      guild = closure_1_3.getGuild(arg0);
+      guild = AuthInviteStore.getGuild(arg0);
     }
     if (null == guild) {
       return false;
@@ -149,23 +134,19 @@ obj[importDefaultResult.v3("guild_has_vanity_url")] = (arg0) => {
     }
   };
 };
-const importDefaultResult6 = importDefaultResult;
-obj[importDefaultResult.v3("guild_in_range_by_hash")] = (arg0) => {
+obj[MurmurHashV3.v3("guild_in_range_by_hash")] = (arg0) => {
   while (tmp !== undefined) {
-    let tmp3 = callback;
-    let tmp4 = callback(tmp2, 2);
+    let tmp4 = _slicedToArray(tmp2, 2);
     [tmp5, tmp6] = tmp4;
     let tmp7 = importDefault;
     let tmp8 = num;
-    let obj = importDefault(num[5]);
+    let obj = require("MurmurHashV3");
     if (obj.v3("hash_key") === tmp5) {
-      let tmp10 = tmp6;
       importDefault = tmp6;
     } else {
       let tmp7Result = tmp7(tmp8[5]);
       if (tmp7Result.v3("target") === tmp5) {
         let _parseInt = parseInt;
-        let tmp9 = tmp6;
         num = parseInt(tmp6);
         if (num == null) {
           num = 0;
@@ -175,11 +156,11 @@ obj[importDefaultResult.v3("guild_in_range_by_hash")] = (arg0) => {
     continue;
   }
   return (arg0) => {
-    const v3Result = tmp6(num[5]).v3("" + tmp6 + ":" + arg0);
+    const v3Result = MurmurHashV3.v3("" + closure_0 + ":" + arg0);
     return (v3Result > 0 ? v3Result + v3Result : v3Result >>> 0) % 10000 < num;
   };
 };
-const importDefaultResult7 = importDefaultResult;
-const result = require("set").fileFinishedImporting("modules/experiments/GuildFilters.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/experiments/GuildFilters.tsx");
 
 export const GUILD_FILTERS = obj;

@@ -1,10 +1,10 @@
 // discord_app/modules/guild_rooms/GuildRoomErrorUtils.native.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
+import Constants from "../../Constants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const NOOP_NULL = ME.NOOP_NULL;
-const result = set.fileFinishedImporting("modules/guild_rooms/GuildRoomErrorUtils.native.tsx");
+const NOOP_NULL = Constants.NOOP_NULL;
+const result = size.fileFinishedImporting("modules/guild_rooms/GuildRoomErrorUtils.native.tsx");
 
-export const handleGuildRoomError = function handleGuildRoomError(arg0) {
+export const handleGuildRoomError = function handleGuildRoomError() {
   NOOP_NULL();
 };

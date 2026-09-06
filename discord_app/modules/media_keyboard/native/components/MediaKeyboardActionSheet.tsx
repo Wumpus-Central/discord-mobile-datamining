@@ -1,22 +1,24 @@
 // discord_app/modules/media_keyboard/native/components/MediaKeyboardActionSheet.tsx
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import { MediaPickerActionSheetEngagedActions as closure_4 } from "../MediaKeyboardConstants.tsx";
-import { AnalyticEvents } from "../../../../Constants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import util from "../../../../intl/index.native.tsx";
+import ImageIcon from "../../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
+import AttachmentIcon from "../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
+import PollsIcon from "../../../../design/components/Icon/native/redesign/generated/PollsIcon.tsx";
+import MediaKeyboardBottomSheetHeaderSimpleDefault from "MediaKeyboardBottomSheetHeaderSimple.tsx";
+import MediaKeyboardBottomSheetActionsDefault from "MediaKeyboardBottomSheetActions.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting(
-  "modules/media_keyboard/native/components/MediaKeyboardActionSheet.tsx",
-);
+require = fn;
+let closure_4 = fn(1607).MediaPickerActionSheetEngagedActions;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardActionSheet.tsx");
 
 export default function MediaKeyboardActionSheet(onAttachPress) {
   onAttachPress = onAttachPress.onAttachPress;
   const onViewAll = onAttachPress.onViewAll;
   const onClose = onAttachPress.onClose;
   const onBack = onAttachPress.onBack;
-  let sharedValue;
-  let memo;
-  let callback2;
   ({
     channel,
     draftType,
@@ -31,26 +33,26 @@ export default function MediaKeyboardActionSheet(onAttachPress) {
     onManageLimited,
   } = onAttachPress);
   let obj = onAttachPress(onClose[4]);
-  sharedValue = obj.useSharedValue(-1);
+  const sharedValue = obj.useSharedValue(-1);
   let items = [onAttachPress];
-  memo = onBack.useMemo(() => {
+  const memo = onBack.useMemo(() => {
     let obj = { text: null, IconComponent: null, onPress: null, disabled: true };
-    const intl = onAttachPress(onClose[5]).intl;
-    obj[0] = intl.string(onAttachPress(onClose[5]).t.RgIi2B);
-    obj[1] = onAttachPress(onClose[6]).PollsIcon;
-    obj[2] = function onPress() {};
+    const intl = util.intl;
+    obj.text = intl.string(util.t.RgIi2B);
+    obj.IconComponent = PollsIcon.PollsIcon;
+    obj.onPress = function onPress() {};
     const items = [obj];
     obj = { text: null, IconComponent: null, onPress: null, disabled: false };
-    const intl2 = onAttachPress(onClose[5]).intl;
-    obj[0] = intl2.string(onAttachPress(onClose[5]).t["8Hvr3+"]);
-    obj[1] = onAttachPress(onClose[7]).AttachmentIcon;
-    obj[2] = onAttachPress;
+    const intl2 = util.intl;
+    obj.text = intl2.string(util.t["8Hvr3+"]);
+    obj.IconComponent = AttachmentIcon.AttachmentIcon;
+    obj.onPress = onAttachPress;
     items[1] = obj;
     return items;
   }, items);
   const items1 = [sharedValue, onBack];
   const callback = onBack.useCallback(
-    () => callback2(onViewAll(onClose[8]), { animatedIndex: sharedValue, onPress: onBack }),
+    () => jsx(MediaKeyboardBottomSheetHeaderSimpleDefault, { animatedIndex: sharedValue, onPress: onBack }),
     items1,
   );
   const items2 = [onClose];
@@ -60,15 +62,15 @@ export default function MediaKeyboardActionSheet(onAttachPress) {
     obj = { action: sharedValue.FULLY_EXPANDED };
     onViewAll(onClose[11]).track(memo.MEDIA_PICKER_ACTION_SHEET_ENGAGED, obj);
   }, []);
-  callback2 = onBack.useCallback(() => {
+  const callback2 = onBack.useCallback(() => {
     if (onClose != null) {
       tmp();
     }
   }, items2);
   onViewAll(onClose[12])(() => () => {
     let tmp;
-    if (callback != null) {
-      tmp = callback();
+    if (callback2 != null) {
+      tmp = callback2();
     }
     return tmp;
   });
@@ -81,13 +83,18 @@ export default function MediaKeyboardActionSheet(onAttachPress) {
       overflowButtons: null,
     };
     obj = { text: null, IconComponent: null, onPress: null, disabled: false };
-    const intl = onAttachPress(onClose[5]).intl;
-    obj[0] = intl.string(onAttachPress(onClose[5]).t.Zmm6dN);
-    obj[1] = onAttachPress(onClose[14]).ImageIcon;
-    obj[2] = onViewAll;
+    const intl = util.intl;
+    obj.text = intl.string(util.t.Zmm6dN);
+    obj.IconComponent = ImageIcon.ImageIcon;
+    obj.onPress = onViewAll;
     const items = [obj, ...memo];
-    obj[3] = items;
-    return callback2(onViewAll(onClose[13]), obj);
+    obj.overflowButtons = items;
+    return jsx(MediaKeyboardBottomSheetActionsDefault, {
+      text: null,
+      IconComponent: null,
+      onPress: null,
+      disabled: false,
+    });
   }, items3);
   obj = {
     handleComponent: callback,

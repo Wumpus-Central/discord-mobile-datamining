@@ -1,20 +1,20 @@
 // discord_app/modules/saved_messages/native/ForLaterCardStatusHeader.tsx
-import set from "../../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
+import _mod17 from "../../../../_runtime/metro/00017__.js";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const View = get_ActivityIndicator.View;
-({ jsx: c4, jsxs: c5 } = jsxProd);
+const View = _mod17.View;
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let obj = { container: null, icon: null, label: null, actionsContainer: null };
 obj = {
   flexDirection: "row",
   alignItems: "center",
-  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER,
-  borderTopLeftRadius: ThemesDefault.radii.lg,
-  borderTopRightRadius: ThemesDefault.radii.lg,
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
+  borderTopLeftRadius: nativeDefault.radii.lg,
+  borderTopRightRadius: nativeDefault.radii.lg,
   overflow: "hidden",
   gap: 8,
   marginHorizontal: -16,
@@ -22,21 +22,16 @@ obj = {
   paddingHorizontal: 16,
   paddingVertical: 12,
 };
-obj[0] = obj;
-obj[1] = {
+obj.container = obj;
+obj.icon = {
   padding: 6,
-  borderRadius: ThemesDefault.radii.sm,
-  backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT,
+  borderRadius: nativeDefault.radii.sm,
+  backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT,
 };
-obj[2] = { flexShrink: 1 };
-obj[3] = { marginVertical: -4, marginLeft: "auto" };
-let closure_6 = createCacheKey.createStyles(obj);
-const obj1 = {
-  padding: 6,
-  borderRadius: ThemesDefault.radii.sm,
-  backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT,
-};
-const result = set.fileFinishedImporting("modules/saved_messages/native/ForLaterCardStatusHeader.tsx");
+obj.label = { flexShrink: 1 };
+obj.actionsContainer = { marginVertical: -4, marginLeft: "auto" };
+let closure_6 = createStyles.createStyles(obj);
+const result = size.fileFinishedImporting("modules/saved_messages/native/ForLaterCardStatusHeader.tsx");
 
 export const ForLaterCardStatusHeader = function ForLaterCardStatusHeader(isCritical) {
   let flag = isCritical.isCritical;
@@ -45,24 +40,24 @@ export const ForLaterCardStatusHeader = function ForLaterCardStatusHeader(isCrit
     flag = false;
   }
   ({ lineClamp, actions } = isCritical);
-  const tmp = callback();
+  const tmp = closure_6();
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.icon, children: null };
-  const colors = ThemesDefault.colors;
+  const colors = nativeDefault.colors;
   if (flag) {
     let INTERACTIVE_TEXT_DEFAULT = colors.TEXT_FEEDBACK_CRITICAL;
   } else {
     INTERACTIVE_TEXT_DEFAULT = colors.INTERACTIVE_TEXT_DEFAULT;
   }
-  obj[1] = closure_4(IconComponent, { size: "xxs", color: INTERACTIVE_TEXT_DEFAULT });
-  const items = [closure_4(View, obj), ,];
+  obj.children = React4(IconComponent, { size: "xxs", color: INTERACTIVE_TEXT_DEFAULT });
+  const items = [React4(View, obj), ,];
   let str = "mobile-text-heading-primary";
   if (flag) {
     str = "text-feedback-critical";
   }
   obj = { variant: "text-md/semibold", color: str, style: tmp.label, lineClamp, children: label };
-  items[1] = closure_4(Text.Text, obj);
-  items[2] = closure_4(View, { style: tmp.actionsContainer, children: actions });
-  obj[1] = items;
-  return closure_5(View, obj);
+  items[1] = React4(Text_Text.Text, obj);
+  items[2] = React4(View, { style: tmp.actionsContainer, children: actions });
+  obj.children = items;
+  return hasOwnProperty(View, obj);
 };

@@ -1,7 +1,7 @@
 // discord_app/modules/hotspot/Constants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/hotspot/Constants.tsx");
+const result = size.fileFinishedImporting("modules/hotspot/Constants.tsx");
 
 export const HotspotLocations = {
   REPORT_PROBLEM_POST_STREAM: "REPORT_PROBLEM_POST_STREAM",

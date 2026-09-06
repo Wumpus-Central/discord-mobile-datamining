@@ -1,13 +1,13 @@
 // discord_app/modules/premium/powerups/native/utils/openGuildPowerupsModal.tsx
-import set from "../../../../../../_runtime/00002_set.js";
 import asyncRequireImpl from "../../../../../../_runtime/01896_asyncRequireImpl.js";
-import _modDef4763 from "../../../../../actions/ModalActionCreators.tsx";
+import ModalActionCreatorsDefault from "../../../../../actions/ModalActionCreators.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
 let c3 = 0;
-const result = set.fileFinishedImporting("modules/premium/powerups/native/utils/openGuildPowerupsModal.tsx");
+const result = size.fileFinishedImporting("modules/premium/powerups/native/utils/openGuildPowerupsModal.tsx");
 
 export default function openGuildPowerupsModal(navigationParams) {
-  const merged = Object.assign(navigationParams, Object.create(null));
+  const merged = Object.assign(navigationParams, Object.assign({ navigationParams: 0 }));
   let tmp2 = merged;
   if (null != merged.autoOpenPerkId) {
     const obj = {};
@@ -17,7 +17,7 @@ export default function openGuildPowerupsModal(navigationParams) {
     obj.autoOpenRequestId = sum;
     tmp2 = obj;
   }
-  _modDef4763.pushLazy(
+  ModalActionCreatorsDefault.pushLazy(
     asyncRequireImpl(12480, dependencyMap.paths),
     tmp2,
     "guild_powerups_modal_key",

@@ -1,30 +1,31 @@
 // discord_app/modules/user_settings/defs/native/ParentalControlsFriendRequestsEveryoneSetting.tsx
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import result2 from "../../family_center/ParentalControlledUserSettings.tsx";
-import closure_2 from "../../../../../_runtime/00019_noop.js";
-import closure_3 from "../../../parent_tools/FamilyCenterStore.tsx";
-import ME from "../../../../Constants.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import util from "../../../../intl/index.native.tsx";
+import UserSettingsUtils from "../../../../utils/UserSettingsUtils.tsx";
+import ParentalControlledUserSettings from "../../family_center/ParentalControlledUserSettings.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import FamilyCenterStore from "../../../parent_tools/FamilyCenterStore.tsx";
 
-require = arg1;
-({ AllFriendSourceFlags: c4, FriendSourceFlags: c5 } = ME);
-createToggle = {
+require = fn;
+const Constants = fn(1074);
+({ AllFriendSourceFlags: closure_4, FriendSourceFlags: hasOwnProperty } = Constants);
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.mGr3CX);
+    const intl = util.intl;
+    return intl.string(util.t.mGr3CX);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(7975).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: function useFriendRequestsEveryoneSettingValue() {
     const selectedTeenId = controlledSetting(8647).useSelectedTeenId();
     const ParentalControlledFriendSourceFlags = controlledSetting(14825).ParentalControlledFriendSourceFlags;
     controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(selectedTeenId);
     const items = [controlledSetting];
-    return React.useMemo(() => controlledSetting(closure_1_1[6]).computeFlags(controlledSetting), items).all;
+    return noop.useMemo(() => UserSettingsUtils.computeFlags(controlledSetting), items).all;
   },
   onValueChange: function onFriendRequestsEveryoneSettingValueChange(arg0) {
-    selectedTeenId = selectedTeenId.getSelectedTeenId();
+    const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
     if (null != selectedTeenId) {
-      const ParentalControlledFriendSourceFlags = result2.ParentalControlledFriendSourceFlags;
+      const ParentalControlledFriendSourceFlags = ParentalControlledUserSettings.ParentalControlledFriendSourceFlags;
       if (arg0) {
         let tmp7 = tmp5;
       } else {
@@ -35,9 +36,10 @@ createToggle = {
   },
   unsearchable: true,
 };
-createToggle = createToggle.createToggle(createToggle);
-let result = require("set").fileFinishedImporting(
+SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+const size = fn(2);
+let result = size.fileFinishedImporting(
   "modules/user_settings/defs/native/ParentalControlsFriendRequestsEveryoneSetting.tsx",
 );
 
-export default createToggle;
+export default SettingBuilders;

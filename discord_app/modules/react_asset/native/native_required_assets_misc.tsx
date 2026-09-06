@@ -1,48 +1,47 @@
 // discord_app/modules/react_asset/native/native_required_assets_misc.tsx
-import set from "../../../../_runtime/00002_set.js";
-import registerAssetDefault from "../../../../_runtime/01400_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/01401_registerAsset.js";
-import registerAssetDefault3 from "../../../../_runtime/01402_registerAsset.js";
-import registerAssetDefault4 from "../../../../_runtime/01403_registerAsset.js";
-import registerAssetDefault5 from "../../../../_runtime/01404_registerAsset.js";
-import registerAssetDefault6 from "../../../../_runtime/01418_registerAsset.js";
-import registerAssetDefault7 from "../../../../_runtime/01419_registerAsset.js";
-import registerAssetDefault8 from "../../../../_runtime/01420_registerAsset.js";
-import registerAssetDefault9 from "../../../../_runtime/01421_registerAsset.js";
-import registerAssetDefault10 from "../../../../_runtime/01422_registerAsset.js";
-import registerAssetDefault11 from "../../../../_runtime/01423_registerAsset.js";
-import registerAssetDefault12 from "../../../../_runtime/01424_registerAsset.js";
-import registerAssetDefault13 from "../../../../_runtime/01425_registerAsset.js";
-import registerAssetDefault14 from "../../../../_runtime/17916_registerAsset.js";
-import registerAssetDefault15 from "../../../../_runtime/17917_registerAsset.js";
-import registerAssetDefault16 from "../../../../_runtime/17918_registerAsset.js";
-import registerAssetDefault17 from "../../../../_runtime/17919_registerAsset.js";
-import registerAssetDefault18 from "../../../../_runtime/17920_registerAsset.js";
-import registerAssetDefault19 from "../../../../_runtime/17921_registerAsset.js";
-import registerAssetDefault20 from "../../../../_runtime/17922_registerAsset.js";
+import _modDef1400 from "../../../../_runtime/metro/01400__.js";
+import _modDef1401 from "../../../../_runtime/metro/01401__.js";
+import _modDef1402 from "../../../../_runtime/metro/01402__.js";
+import _modDef1403 from "../../../../_runtime/metro/01403__.js";
+import _modDef1404 from "../../../../_runtime/metro/01404__.js";
+import _modDef1418 from "../../../../_runtime/metro/01418__.js";
+import _modDef1419 from "../../../../_runtime/metro/01419__.js";
+import _modDef1420 from "../../../../_runtime/metro/01420__.js";
+import _modDef1421 from "../../../../_runtime/metro/01421__.js";
+import _modDef1422 from "../../../../_runtime/metro/01422__.js";
+import _modDef1423 from "../../../../_runtime/metro/01423__.js";
+import _modDef1424 from "../../../../_runtime/metro/01424__.js";
+import _modDef1425 from "../../../../_runtime/metro/01425__.js";
+import _modDef17916 from "../../../../_runtime/metro/17916__.js";
+import _modDef17917 from "../../../../_runtime/metro/17917__.js";
+import _modDef17918 from "../../../../_runtime/metro/17918__.js";
+import _modDef17919 from "../../../../_runtime/metro/17919__.js";
+import _modDef17920 from "../../../../_runtime/metro/17920__.js";
+import _modDef17921 from "../../../../_runtime/metro/17921__.js";
+import _modDef17922 from "../../../../_runtime/metro/17922__.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const obj = {
-  DefaultAvatar0: registerAssetDefault,
-  DefaultAvatar1: registerAssetDefault2,
-  DefaultAvatar2: registerAssetDefault3,
-  DefaultAvatar3: registerAssetDefault4,
-  DefaultAvatar4: registerAssetDefault5,
-  DefaultGroup0: registerAssetDefault6,
-  DefaultGroup1: registerAssetDefault7,
-  DefaultGroup2: registerAssetDefault8,
-  DefaultGroup3: registerAssetDefault9,
-  DefaultGroup4: registerAssetDefault10,
-  DefaultGroup5: registerAssetDefault11,
-  DefaultGroup6: registerAssetDefault12,
-  DefaultGroup7: registerAssetDefault13,
-  PoopDark: registerAssetDefault14,
-  PoopLight: registerAssetDefault15,
-  RoleSubscriptionBadge: registerAssetDefault16,
-  RoleSubscriptionLanyard: registerAssetDefault17,
-  RoleSubscriptionPurchaseCard: registerAssetDefault18,
-  SummaryIndicatorEnd: registerAssetDefault19,
-  SummaryIndicatorStart: registerAssetDefault20,
+const result = size.fileFinishedImporting("modules/react_asset/native/native_required_assets_misc.tsx");
+
+export const NATIVE_REQUIRED_ASSETS_MISC = {
+  DefaultAvatar0: _modDef1400,
+  DefaultAvatar1: _modDef1401,
+  DefaultAvatar2: _modDef1402,
+  DefaultAvatar3: _modDef1403,
+  DefaultAvatar4: _modDef1404,
+  DefaultGroup0: _modDef1418,
+  DefaultGroup1: _modDef1419,
+  DefaultGroup2: _modDef1420,
+  DefaultGroup3: _modDef1421,
+  DefaultGroup4: _modDef1422,
+  DefaultGroup5: _modDef1423,
+  DefaultGroup6: _modDef1424,
+  DefaultGroup7: _modDef1425,
+  PoopDark: _modDef17916,
+  PoopLight: _modDef17917,
+  RoleSubscriptionBadge: _modDef17918,
+  RoleSubscriptionLanyard: _modDef17919,
+  RoleSubscriptionPurchaseCard: _modDef17920,
+  SummaryIndicatorEnd: _modDef17921,
+  SummaryIndicatorStart: _modDef17922,
 };
-const result = set.fileFinishedImporting("modules/react_asset/native/native_required_assets_misc.tsx");
-
-export const NATIVE_REQUIRED_ASSETS_MISC = obj;

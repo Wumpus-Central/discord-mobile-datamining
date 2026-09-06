@@ -1,56 +1,60 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsCardFooter.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import messagesProxyDefault from "../GuildPowerups.messages.js";
+import _mod17 from "../../../../../_runtime/metro/00017__.js";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
+import _modDef2428 from "../GuildPowerups.messages.js";
 import CircleCheckIcon from "../../../../design/components/Icon/native/redesign/generated/CircleCheckIcon.tsx";
-import Text from "../../../../design/components/Text/native/Text.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import CircleErrorIcon from "../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
-import apexExperiment from "../../../design/ManaTypeConsolidationExperiment.tsx";
+import ManaTypeConsolidationExperiment from "../../../design/ManaTypeConsolidationExperiment.tsx";
 import getGuildPowerupFormattedDateStringDefault from "../utils/getGuildPowerupFormattedDateString.tsx";
 import entitlementExpirationDateToStringDefault from "../utils/entitlementExpirationDateToString.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 class GuildPowerupCardFooterActive {
   constructor(arg0) {
     obj = { style: closure_6().inline, children: null };
-    obj = { size: "xs", color: require("Themes").colors.STATUS_POSITIVE };
+    obj = { size: "xs", color: closure_1(closure_2[4]).colors.STATUS_POSITIVE };
     items = [,];
-    items[0] = jsx(require("CircleCheckIcon").CircleCheckIcon, obj);
-    items[1] = jsx(require("Text").Text, { color: "status-positive", variant: "text-sm/bold", children: global.text });
-    obj[1] = items;
+    items[0] = jsx(closure_0(closure_2[3]).CircleCheckIcon, obj);
+    items[1] = jsx(closure_0(closure_2[5]).Text, {
+      color: "status-positive",
+      variant: "text-sm/bold",
+      children: global.text,
+    });
+    obj.children = items;
     return jsxs(View, obj);
   }
 }
 class GuildPowerupCardFooterExpiring {
   constructor(arg0) {
     obj = { style: closure_6().inline, children: null };
-    obj = { size: "xs", color: require("Themes").colors.STATUS_WARNING };
+    obj = { size: "xs", color: closure_1(closure_2[4]).colors.STATUS_WARNING };
     items = [,];
-    items[0] = jsx(require("CircleErrorIcon").CircleErrorIcon, obj);
+    items[0] = jsx(closure_0(closure_2[6]).CircleErrorIcon, obj);
     obj1 = { color: "text-feedback-warning", variant: "text-sm/bold", children: null };
-    intl = require("getSystemLocale").intl;
-    obj2 = { dateString: require("entitlementExpirationDateToString")(global.dateString) };
-    obj1[2] = intl.formatToMarkdownString(require("messagesProxy")["ol/ao/"], obj2);
-    items[1] = jsx(require("Text").Text, obj1);
-    obj[1] = items;
+    intl = closure_0(closure_2[7]).intl;
+    obj2 = { dateString: closure_1(closure_2[9])(global.dateString) };
+    obj1.children = intl.formatToMarkdownString(closure_1(closure_2[8])["ol/ao/"], obj2);
+    items[1] = jsx(closure_0(closure_2[5]).Text, obj1);
+    obj.children = items;
     return jsxs(View, obj);
   }
 }
 class GuildPowerupCardFooterRemoving {
   constructor(arg0) {
     obj = { style: closure_6().inline, children: null };
-    obj = { size: "xs", color: require("Themes").colors.STATUS_WARNING };
+    obj = { size: "xs", color: closure_1(closure_2[4]).colors.STATUS_WARNING };
     items = [,];
-    items[0] = jsx(require("CircleErrorIcon").CircleErrorIcon, obj);
+    items[0] = jsx(closure_0(closure_2[6]).CircleErrorIcon, obj);
     obj1 = { color: "text-feedback-warning", variant: "text-sm/bold", children: null };
-    intl = require("getSystemLocale").intl;
-    obj2 = { dateString: require("getGuildPowerupFormattedDateString")(global.removingAt) };
-    obj1[2] = intl.formatToPlainString(require("messagesProxy")["6e2ry1"], obj2);
-    items[1] = jsx(require("Text").Text, obj1);
-    obj[1] = items;
+    intl = closure_0(closure_2[7]).intl;
+    obj2 = { dateString: closure_1(closure_2[10])(global.removingAt) };
+    obj1.children = intl.formatToPlainString(closure_1(closure_2[8])["6e2ry1"], obj2);
+    items[1] = jsx(closure_0(closure_2[5]).Text, obj1);
+    obj.children = items;
     return jsxs(View, obj);
   }
 }
@@ -66,7 +70,7 @@ class GuildPowerupCardFooterStatus {
         tmp5 = jsx;
         tmp6 = GuildPowerupCardFooterExpiring;
         obj = { dateString: null };
-        obj[0] = status.expiringAt;
+        obj.dateString = status.expiringAt;
         return jsx(GuildPowerupCardFooterExpiring, obj);
       } else {
         str = "removing";
@@ -74,7 +78,7 @@ class GuildPowerupCardFooterStatus {
           tmp3 = jsx;
           tmp4 = GuildPowerupCardFooterRemoving;
           obj1 = { removingAt: null };
-          obj1[0] = status.removingAt;
+          obj1.removingAt = status.removingAt;
           return jsx(GuildPowerupCardFooterRemoving, obj1);
         } else {
           str2 = "active";
@@ -82,7 +86,7 @@ class GuildPowerupCardFooterStatus {
             tmp = jsx;
             tmp2 = GuildPowerupCardFooterActive;
             obj = { text: null };
-            obj[0] = status.statusText;
+            obj.text = status.statusText;
             return jsx(GuildPowerupCardFooterActive, obj);
           } else {
             return;
@@ -98,47 +102,47 @@ class GuildPowerupCardFooterCost {
     tmp2 = closure_0;
     tmp3 = closure_2;
     tmp = closure_6();
-    tmp4 = require("apexExperiment");
+    tmp4 = closure_0(closure_2[11]);
     tmp7Result = null;
     if (null != cost) {
       obj = { style: null, children: null };
-      obj[0] = tmp.inline;
+      obj.style = tmp.inline;
       tmp7 = jsxs;
       tmp8 = View;
       tmp9 = jsx;
       obj = { size: "sm", color: null };
       tmp10 = closure_1;
-      obj[1] = require("Themes").unsafe_rawColors.GUILD_BOOSTING_PINK;
+      obj.color = closure_1(tmp3[4]).unsafe_rawColors.GUILD_BOOSTING_PINK;
       items = [,];
-      items[0] = jsx(require("BoostGemIcon").BoostGemIcon, obj);
+      items[0] = jsx(tmp2(tmp3[12]).BoostGemIcon, obj);
       str = "heading-sm/semibold";
       if (tmp5) {
         str = "experimental/body-sm/semibold";
       }
       obj1 = { variant: null, color: "text-subtle", children: null };
-      obj1[0] = str;
-      intl = require("getSystemLocale").intl;
+      obj1.variant = str;
+      intl = tmp2(tmp3[7]).intl;
       obj2 = { required: null, decorator: null };
-      obj2[0] = cost;
+      obj2.required = cost;
       if (costDecorator == null) {
         costDecorator = "";
       }
-      obj2[1] = costDecorator;
-      obj1[2] = intl.formatToPlainString(require("getSystemLocale").t.t2Wbo1, obj2);
-      items[1] = tmp9(require("Text").Text, obj1);
-      obj[1] = items;
+      obj2.decorator = costDecorator;
+      obj1.children = intl.formatToPlainString(tmp2(tmp3[7]).t.t2Wbo1, obj2);
+      items[1] = tmp9(tmp2(tmp3[5]).Text, obj1);
+      obj.children = items;
       tmp7Result = tmp7(tmp8, obj);
     }
     return tmp7Result;
   }
 }
-const View = get_ActivityIndicator.View;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = createCacheKey.createStyles({
+const View = _mod17.View;
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const timestampProducer = createStyles.createStyles({
   container: { justifyContent: "space-between" },
   inline: { flexDirection: "row", alignItems: "center", gap: 2 },
 });
-const result = set.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsCardFooter.tsx");
+const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsCardFooter.tsx");
 
 export { GuildPowerupCardFooterActive };
 export { GuildPowerupCardFooterExpiring };
@@ -146,15 +150,16 @@ export { GuildPowerupCardFooterRemoving };
 export { GuildPowerupCardFooterStatus };
 export { GuildPowerupCardFooterCost };
 export const GuildPowerupsCardFooter = function GuildPowerupsCardFooter(status) {
-  let obj = { style: items, children: null };
-  items = [, ,];
-  ({ inline: arr[0], container: arr[1] } = callback3());
+  let obj = { style: null, children: null };
+  const items = [, ,];
+  ({ inline: arr[0], container: arr[1] } = closure_6());
   items[2] = status.style;
+  obj.style = items;
   obj = { cost: status.cost, costDecorator: status.costDecorator };
   const items1 = [
-    callback(GuildPowerupCardFooterCost, obj),
-    callback(GuildPowerupCardFooterStatus, { status: status.status }),
+    React4(GuildPowerupCardFooterCost, obj),
+    React4(GuildPowerupCardFooterStatus, { status: status.status }),
   ];
-  obj[1] = items1;
-  return callback2(View, obj);
+  obj.children = items1;
+  return hasOwnProperty(View, obj);
 };

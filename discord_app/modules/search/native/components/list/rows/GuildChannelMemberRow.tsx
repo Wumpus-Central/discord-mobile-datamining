@@ -1,14 +1,12 @@
 // discord_app/modules/search/native/components/list/rows/GuildChannelMemberRow.tsx
-import noopAll from "../../../../../../../_runtime/00019_noop.js";
-import UserRowSubLabelDefault from "../../../../../main_tabs_v2/native/shared_components/user_list/UserRow.tsx";
-import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
+import UserRowDefault from "../../../../../main_tabs_v2/native/shared_components/user_list/UserRow.tsx";
+import noop from "../../../../../../../_runtime/metro/00019__.js";
 
-noopAll;
-const result = require("set").fileFinishedImporting(
-  "modules/search/native/components/list/rows/GuildChannelMemberRow.tsx",
-);
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/search/native/components/list/rows/GuildChannelMemberRow.tsx");
 
 export default function GuildChannelMemberRow(arg0) {
   const merged = Object.assign(arg0);
-  return jsx(UserRowSubLabelDefault, {});
+  return jsx(UserRowDefault, {});
 }

@@ -1,48 +1,44 @@
 // discord_app/modules/threads/native/components/redesign/ThreadListTableRow.tsx
-import importAllResult from "../../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_4 from "../../../../../stores/ChannelStore.tsx";
-import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import ThreadBrowserRowSubtext from "../ThreadBrowserRowSubtext.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
+import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 
-const require = arg1;
+require = fn;
 function ThreadListTableRow(thread) {
   thread = thread.thread;
   const onPress = thread.onPress;
   ({ start, end } = thread);
   const items = [onPress, thread.id];
-  const memo = importAllResult.useMemo(() => (null != onPress ? () => callback(id.id) : undefined), items);
+  const memo = noop.useMemo(() => (null != onPress ? () => onPress(id.id) : undefined), items);
   let obj = { label: thread.name, subLabel: null, onPress: null, start: null, end: null, arrow: true };
-  obj = { style: callback().subLabel, children: jsx(thread(onPress[6]).ThreadSubtext, { thread }) };
-  obj[1] = <View style={callback().subLabel}>{jsx(thread(onPress[6]).ThreadSubtext, { thread })}</View>;
-  obj[2] = memo;
-  obj[3] = start;
-  obj[4] = end;
-  return jsx(thread(onPress[5]).TableRow, {
-    style: callback().subLabel,
-    children: jsx(thread(onPress[6]).ThreadSubtext, { thread }),
+  obj = { style: closure_6().subLabel, children: jsx(ThreadBrowserRowSubtext.ThreadSubtext, { thread }) };
+  obj.subLabel = <View style={closure_6().subLabel}>{jsx(ThreadBrowserRowSubtext.ThreadSubtext, { thread })}</View>;
+  obj.onPress = memo;
+  obj.start = start;
+  obj.end = end;
+  return jsx(TableRow.TableRow, {
+    style: closure_6().subLabel,
+    children: jsx(ThreadBrowserRowSubtext.ThreadSubtext, { thread }),
   });
 }
-let closure_6 = createCacheKey.createStyles({ subLabel: { maxWidth: "100%", marginTop: 2 } });
-const memoResult = importAllResult.memo((threadId) => {
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_6 = createStyles.createStyles({ subLabel: { maxWidth: "100%", marginTop: 2 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/threads/native/components/redesign/ThreadListTableRow.tsx");
+
+export default noop.memo((threadId) => {
   threadId = threadId.threadId;
   ({ onPress, start, end } = threadId);
   let obj = threadId(504);
-  const items = [closure_4];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getChannel(threadId));
+  const items = [ChannelStore];
+  const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(threadId));
   let tmp2 = null;
   if (null != stateFromStores) {
-    obj = { thread: null, start: null, end: null, onPress: null };
-    obj[0] = stateFromStores;
-    obj[1] = start;
-    obj[2] = end;
-    obj[3] = onPress;
-    tmp2 = <ThreadListTableRow thread={null} start={null} end={null} onPress={null} />;
+    obj = { thread: stateFromStores, start, end, onPress };
+    tmp2 = <ThreadListTableRow thread={stateFromStores} start={start} end={end} onPress={onPress} />;
   }
   return tmp2;
 });
-const result = require("set").fileFinishedImporting(
-  "modules/threads/native/components/redesign/ThreadListTableRow.tsx",
-);
-
-export default memoResult;

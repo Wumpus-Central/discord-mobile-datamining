@@ -1,14 +1,15 @@
 // discord_app/modules/guild_role_subscriptions/native/feature_education/IAPUpsellActionSheet.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import { Routes } from "../../../../Constants.tsx";
-import { StaticChannelRoute } from "../../../channel/ChannelConstants.tsx";
-import { ContentDismissActionType } from "../../../dismissible_content/DismissibleContentConstants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import router_utils from "../../../routing/router_utils.tsx";
+import util from "../../../../intl/index.native.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting(
+require = fn;
+const Routes = fn(1074).Routes;
+const StaticChannelRoute = fn(1964).StaticChannelRoute;
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/native/feature_education/IAPUpsellActionSheet.tsx",
 );
 
@@ -22,17 +23,17 @@ export default function IAPUpsellActionSheet(arg0) {
     onCTAPress: null,
     markAsDismissed: null,
   };
-  const intl = getSystemLocale.intl;
-  obj[1] = intl.string(getSystemLocale.t.rBw4cE);
-  const intl2 = getSystemLocale.intl;
-  obj[2] = intl2.string(getSystemLocale.t.mKHibc);
-  const intl3 = getSystemLocale.intl;
-  obj[3] = intl3.string(getSystemLocale.t.RzWDqY);
-  obj[4] = function onCTAPress() {
-    closure_1_0(closure_1_2[8]).transitionTo(closure_1_3.CHANNEL(closure_0, closure_1_4.ROLE_SUBSCRIPTIONS));
-    markAsDismissed(closure_1_5.UNKNOWN);
+  const intl = util.intl;
+  obj.header = intl.string(util.t.rBw4cE);
+  const intl2 = util.intl;
+  obj.body = intl2.string(util.t.mKHibc);
+  const intl3 = util.intl;
+  obj.cta = intl3.string(util.t.RzWDqY);
+  obj.onCTAPress = function onCTAPress() {
+    router_utils.transitionTo(Routes.CHANNEL(closure_1_0, StaticChannelRoute.ROLE_SUBSCRIPTIONS));
+    markAsDismissed(ContentDismissActionType.UNKNOWN);
   };
-  obj[5] = markAsDismissed;
+  obj.markAsDismissed = markAsDismissed;
   return jsx(markAsDismissed(16245), {
     imageSource: markAsDismissed(16246),
     header: null,

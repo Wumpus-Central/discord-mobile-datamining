@@ -1,31 +1,29 @@
 // discord_app/modules/safe_area/shouldExcludeSafeAreaForModalKey.native.tsx
-import ME from "../../Constants.tsx";
-import openChannelCallModal from "../../utils/native/PrivateChannelCallUtils.tsx";
-import SHARE_PREPARING_MODAL_KEY from "../share/native/SharePreparingModalConstants.tsx";
-import OAUTH2_AUTHORIZE_MODAL_KEY from "../oauth2/native/Constants.tsx";
-import set from "../../../_runtime/00002_set.js";
+import Constants2 from "../../Constants.tsx";
+import PrivateChannelCallUtils from "../../utils/native/PrivateChannelCallUtils.tsx";
+import SharePreparingModalConstants from "../share/native/SharePreparingModalConstants.tsx";
+import Constants from "../oauth2/native/Constants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-({ OAUTH2_AUTHORIZE_MODAL_KEY, OAUTH2_ERROR_RESULT_MODAL_KEY, OAUTH2_SUCCESS_RESULT_MODAL_KEY } =
-  OAUTH2_AUTHORIZE_MODAL_KEY);
+({ OAUTH2_AUTHORIZE_MODAL_KEY, OAUTH2_ERROR_RESULT_MODAL_KEY, OAUTH2_SUCCESS_RESULT_MODAL_KEY } = Constants);
 const items = [
-  ME.MEDIA_MODAL_KEY,
+  Constants2.MEDIA_MODAL_KEY,
   OAUTH2_AUTHORIZE_MODAL_KEY,
   OAUTH2_SUCCESS_RESULT_MODAL_KEY,
   OAUTH2_ERROR_RESULT_MODAL_KEY,
-  SHARE_PREPARING_MODAL_KEY.SHARE_PREPARING_MODAL_KEY,
+  SharePreparingModalConstants.SHARE_PREPARING_MODAL_KEY,
 ];
-let set = new Set(items);
-const result = set.fileFinishedImporting("modules/safe_area/shouldExcludeSafeAreaForModalKey.native.tsx");
+const set = new Set(items);
+const result = size.fileFinishedImporting("modules/safe_area/shouldExcludeSafeAreaForModalKey.native.tsx");
 
 export const shouldExcludeSafeAreaForModalKey = function shouldExcludeSafeAreaForModalKey(key) {
   let tmp = null != key;
   if (tmp) {
-    let hasItem = openChannelCallModal.isVoiceChannelModalKey(key);
+    let hasItem = PrivateChannelCallUtils.isVoiceChannelModalKey(key);
     if (!hasItem) {
       hasItem = set.has(key);
     }
     tmp = hasItem;
-    const obj = openChannelCallModal;
   }
   return tmp;
 };

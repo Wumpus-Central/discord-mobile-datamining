@@ -1,27 +1,26 @@
 // discord_app/modules/telemetry_ring/native/channels/ZoomedInTelemetry.tsx
-import apexExperiment from "../ZoomedInAnalyticsExperiment.tsx";
-import getIntervalMsDefault from "BaseTelemetryExportChannel.tsx";
-import TelemetryChannel from "../TelemetryRingNative.android.tsx";
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import importDefaultResult1 from "../TelemetryRingNative.android.tsx";
+import ZoomedInAnalyticsExperiment from "../ZoomedInAnalyticsExperiment.tsx";
+import TelemetryRingNative2 from "../TelemetryRingNative.android.tsx";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import BaseTelemetryExportChannel from "BaseTelemetryExportChannel.tsx";
 
-require = arg1;
+const TelemetryRingNative = TelemetryRingNative2;
+
+require = fn;
 let closure_4 = { type: "ROWS", limit: 250 };
 let closure_5 = { type: "ROWS", limit: 10000 };
-getIntervalMsDefault;
 class ZoomedInTelemetryImpl extends tmp3 {
   constructor() {
-    tmp2 = require("TelemetryChannel");
+    tmp2 = closure_1(closure_2[3]);
     items = [];
-    items[0] = require("TelemetryChannel").TelemetryChannel.ZOOMED;
+    items[0] = closure_0(closure_2[3]).TelemetryChannel.ZOOMED;
     tmp = new tmp(tmp2, items, closure_1, new.target);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
 const prototype = ZoomedInTelemetryImpl.prototype;
 prototype["shouldRun"] = function shouldRun() {
-  return apexExperiment.isZoomedExperimentEnabled();
+  return ZoomedInAnalyticsExperiment.isZoomedExperimentEnabled();
 };
 prototype["getBudget"] = function getBudget(mode) {
   return "backlog" === mode ? closure_5 : closure_4;
@@ -35,56 +34,43 @@ prototype["getExportBatchSize"] = function getExportBatchSize() {
 prototype["exportEntries"] = function exportEntries(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
-  return callback(function* () {
-    if (table === 2) {
-      table = 3;
-      HermesBuiltin.throwTypeError();
+  return (async (arg0, value) => {
+    if (c2 === 2) {
+      c2 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp2 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
       }
     } else {
       while (true) {
-        let num = 2;
-        table = 2;
+        c2 = 2;
         let tmp3 = c3;
         if (0 === c3) {
           if (arg0 === 1) {
-            let num9 = 3;
-            table = 3;
-            throw arg1;
+            c2 = 3;
+            throw value;
           } else if (arg0 === 2) {
-            let num8 = 3;
-            table = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            c2 = 3;
+            obj = { value, done: true };
             return obj;
           } else {
             c5 = 1;
             let items = [];
-            closure_0 = items;
-            let tmp20 = closure_1_0;
-            closure_1 = closure_1_0;
-            let tmp21 = closure_1_0;
-            closure_1 = closure_1_0;
-            closure_0 = closure_1_0[Symbol.iterator]();
-            let tmp7 = closure_1;
-            let tmp8 = closure_0;
+            closure_1 = closure_0;
+            closure_0 = closure_0[Symbol.iterator]();
             while (closure_0 !== undefined) {
               c5 = 2;
-              let tmp10 = closure_1_0;
-              let tmp11 = table;
-              obj1 = closure_1_0(table[4]);
+              let obj1 = closure_0(c2[4]);
               let zoomedInAnalyticsEvent = obj1.buildZoomedInAnalyticsEvent(tmp9);
               if (null != zoomedInAnalyticsEvent) {
                 obj1 = { key: null, props: null };
-                ({ key: obj3[0], props: obj3[1] } = zoomedInAnalyticsEvent);
+                ({ key: obj3.key, props: obj3.props } = zoomedInAnalyticsEvent);
                 let arr = items.push(obj1);
               }
               c5 = 1;
@@ -92,72 +78,63 @@ prototype["exportEntries"] = function exportEntries(arg0, arg1) {
             }
             if (0 === items.length) {
               c5 = 0;
-              let num7 = 3;
-              table = 3;
+              c2 = 3;
               return { value: true, done: true };
             } else {
               let _Promise = Promise;
               c3 = 3;
-              let num6 = 1;
-              table = 1;
-              let obj2 = { value: null, done: false };
-              obj2[0] = Promise.all(
-                items.map((arg0, arg1) => {
-                  let flush = closure_1;
-                  ({ key, props } = arg0);
-                  if (closure_1) {
-                    flush = arg1 === length.length - 1;
-                  }
-                  return closure_2_1(table[5]).track(key, props, { flush });
-                }),
-              );
+              c2 = 1;
+              let obj2 = {
+                value: Promise.all(
+                  items.map((item, index) => {
+                    let flush = closure_1;
+                    ({ key, props } = item);
+                    if (closure_1) {
+                      flush = index === items.length - 1;
+                    }
+                    return closure_1(dependencyMap[5]).track(key, props, { flush });
+                  }),
+                ),
+                done: false,
+              };
               return obj2;
             }
           }
         } else if (1 === tmp3) {
           c5 = 0;
-          let num5 = 3;
-          table = 3;
+          c2 = 3;
           return { value: false, done: true };
         } else if (2 === tmp3) {
-          let tmp4 = closure_4;
-          let tmp5 = closure_4;
           c5 = 1;
-          let tmp6 = closure_0;
           closure_0.return();
-          throw closure_4;
+          throw closure_1_4;
         } else if (arg0 === 1) {
-          let num4 = 3;
-          table = 3;
-          throw arg1;
+          c2 = 3;
+          throw value;
         } else if (arg0 === 2) {
           c5 = 0;
-          let num3 = 3;
-          table = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          c2 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
           c5 = 0;
-          let num2 = 3;
-          table = 3;
+          c2 = 3;
           return { value: true, done: true };
         }
       }
     }
   })();
 };
-let items = [require("TelemetryChannel").TelemetryChannel.ZOOMED];
-// ThrowIfThisInitialized (0x7c)
-let tmp5 = new "exportEntries"(
-  importDefaultResult1,
+let items = [fn(1903).TelemetryChannel.ZOOMED];
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/telemetry_ring/native/channels/ZoomedInTelemetry.tsx");
+
+export default new "exportEntries"(
+  TelemetryRingNative,
   items,
   tmp,
   prototype,
   ZoomedInTelemetryImpl,
   "exportEntries",
-  importDefaultResult1,
+  TelemetryRingNative,
 );
-const result = require("set").fileFinishedImporting("modules/telemetry_ring/native/channels/ZoomedInTelemetry.tsx");
-
-export default tmp5;

@@ -1,57 +1,70 @@
 // discord_app/modules/game_community_upsell/native/MobileGameCommunitiesStore.tsx
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../../Dispatcher.tsx";
-import set from "../../../../_runtime/00002_set.js";
+import DispatcherDefault from "../../../Dispatcher.tsx";
+import GuildDiscoveryUtils from "../../../utils/GuildDiscoveryUtils.tsx";
 
-const require = arg1;
-let obj = { guilds: [], lastFetchedAt: 0, lastFetchedGameIds: null, dismissedGuildIds: null, guildGameIds: null };
+require = fn;
+let guildGameIds = {
+  guilds: [],
+  lastFetchedAt: 0,
+  lastFetchedGameIds: new Set(),
+  dismissedGuildIds: null,
+  guildGameIds: null,
+};
 let set = new Set();
-obj[2] = set;
-obj[3] = new Set();
-obj[4] = {};
+guildGameIds.dismissedGuildIds = new Set();
+guildGameIds.guildGameIds = {};
 const PersistedStore = initializeDefault.PersistedStore;
 class MobileGameCommunitiesStore extends PersistedStore {}
 const prototype = MobileGameCommunitiesStore.prototype;
 prototype["initialize"] = function initialize(guilds) {
   if (null != guilds) {
-    obj = { guilds: null, lastFetchedAt: null, lastFetchedGameIds: null, dismissedGuildIds: null, guildGameIds: null };
+    let obj = {
+      guilds: null,
+      lastFetchedAt: null,
+      lastFetchedGameIds: null,
+      dismissedGuildIds: null,
+      guildGameIds: null,
+    };
     guilds = guilds.guilds;
-    obj[0] = guilds.map((features) => {
-      obj = {};
+    obj.guilds = guilds.map((features) => {
+      const obj = {};
       const merged = Object.assign(features);
       obj.features = new Set(features.features);
       return obj;
     });
-    obj[1] = guilds.lastFetchedAt;
+    obj.lastFetchedAt = guilds.lastFetchedAt;
     const _Set = Set;
     const set = new Set(guilds.lastFetchedGameIds);
-    obj[2] = set;
+    obj.lastFetchedGameIds = set;
     const _Set2 = Set;
     const set1 = new Set(guilds.dismissedGuildIds);
-    obj[3] = set1;
-    let guildGameIds = guilds.guildGameIds;
+    obj.dismissedGuildIds = set1;
+    guildGameIds = guilds.guildGameIds;
     if (guildGameIds == null) {
       guildGameIds = {};
     }
-    obj[4] = guildGameIds;
+    obj.guildGameIds = guildGameIds;
   }
 };
 prototype["getState"] = function getState() {
   obj = {
-    guilds: guilds.map((features) => {
-      obj = {};
-      const merged = Object.assign(features);
-      const items = [...features.features];
-      obj.features = items;
-      return obj;
-    }),
+    guilds: null,
     lastFetchedAt: obj.lastFetchedAt,
-    lastFetchedGameIds: items,
+    lastFetchedGameIds: null,
     dismissedGuildIds: [...obj.dismissedGuildIds],
     guildGameIds: obj.guildGameIds,
   };
-  guilds = obj.guilds;
-  items = [...obj.lastFetchedGameIds];
+  const guilds = obj.guilds;
+  obj.guilds = guilds.map((features) => {
+    const obj = {};
+    const merged = Object.assign(features);
+    const items = [...features.features];
+    obj.features = items;
+    return obj;
+  });
+  let items = [...obj.lastFetchedGameIds];
+  obj.lastFetchedGameIds = items;
   return obj;
 };
 prototype["getPresentableUpsellGuilds"] = function getPresentableUpsellGuilds() {
@@ -77,7 +90,7 @@ prototype["getDismissedGuildIds"] = function getDismissedGuildIds() {
   return obj.dismissedGuildIds;
 };
 prototype["DEV_clearFetchCache"] = function DEV_clearFetchCache() {
-  obj = {};
+  const obj = {};
   const merged = Object.assign(obj);
   obj.guilds = [];
   obj.lastFetchedAt = 0;
@@ -86,57 +99,69 @@ prototype["DEV_clearFetchCache"] = function DEV_clearFetchCache() {
   this.emitChange();
 };
 prototype["DEV_clearDismissedGuilds"] = function DEV_clearDismissedGuilds() {
-  obj = {};
+  const obj = {};
   const merged = Object.assign(obj);
   obj.dismissedGuildIds = new Set();
   this.emitChange();
 };
 prototype["DEV_clearState"] = function DEV_clearState() {
-  obj = { guilds: [], lastFetchedAt: 0, lastFetchedGameIds: new Set(), dismissedGuildIds: null, guildGameIds: null };
+  const obj = {
+    guilds: [],
+    lastFetchedAt: 0,
+    lastFetchedGameIds: new Set(),
+    dismissedGuildIds: null,
+    guildGameIds: null,
+  };
   const set = new Set();
-  obj[3] = new Set();
-  obj[4] = {};
+  obj.dismissedGuildIds = new Set();
+  obj.guildGameIds = {};
   this.emitChange();
 };
 MobileGameCommunitiesStore.displayName = "MobileGameCommunitiesStore";
 MobileGameCommunitiesStore.persistKey = "MobileGameCommunitiesStore";
-obj = {
+guildGameIds = {
   MOBILE_GAME_COMMUNITIES_FETCH_SUCCESS: function handleFetchSuccess(arg0) {
     ({ guilds, gameIds } = arg0);
-    obj = {};
-    const merged = Object.assign(obj.guildGameIds);
+    guildGameIds = {};
+    const merged = Object.assign(guildGameIds.guildGameIds);
     const iter = guilds[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp3 = nextResult;
       if (null != nextResult.game_id) {
-        let tmp4 = nextResult;
-        obj[tmp3.id] = tmp3.game_id;
+        guildGameIds[tmp3.id] = tmp3.game_id;
       }
       continue;
     }
-    obj = {};
-    const merged1 = Object.assign(obj);
-    obj.guilds = guilds.map((body) => callback(table[0]).makeDiscoverableGuild(body));
-    obj.lastFetchedAt = Date.now();
-    obj.lastFetchedGameIds = new Set(gameIds);
-    obj.guildGameIds = obj;
+    guildGameIds = {};
+    const merged1 = Object.assign(guildGameIds);
+    guildGameIds.guilds = guilds.map((item) => GuildDiscoveryUtils.makeDiscoverableGuild(item));
+    guildGameIds.lastFetchedAt = Date.now();
+    guildGameIds.lastFetchedGameIds = new Set(gameIds);
+    guildGameIds.guildGameIds = guildGameIds;
   },
   MOBILE_GAME_COMMUNITIES_DISMISS_GUILD: function handleDismissGuildAction(guildId) {
-    obj = {};
+    const obj = {};
     const merged = Object.assign(obj);
     const items = [];
     items[HermesBuiltin.arraySpread(obj.dismissedGuildIds, 0)] = guildId.guildId;
     obj.dismissedGuildIds = new Set(items);
   },
   LOGOUT: function handleLogout() {
-    obj = { guilds: [], lastFetchedAt: 0, lastFetchedGameIds: new Set(), dismissedGuildIds: null, guildGameIds: null };
+    const obj = {
+      guilds: [],
+      lastFetchedAt: 0,
+      lastFetchedGameIds: new Set(),
+      dismissedGuildIds: null,
+      guildGameIds: null,
+    };
     const set = new Set();
-    obj[3] = new Set();
-    obj[4] = {};
+    obj.dismissedGuildIds = new Set();
+    obj.guildGameIds = {};
   },
 };
-const mobileGameCommunitiesStore = new MobileGameCommunitiesStore(dispatcherDefault, obj);
-const result = set.fileFinishedImporting("modules/game_community_upsell/native/MobileGameCommunitiesStore.tsx");
+const mobileGameCommunitiesStore = new MobileGameCommunitiesStore(DispatcherDefault, guildGameIds);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_community_upsell/native/MobileGameCommunitiesStore.tsx");
 
 export default mobileGameCommunitiesStore;

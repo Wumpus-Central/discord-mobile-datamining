@@ -1,16 +1,14 @@
 // discord_app/modules/qualtrics/QualtricsActionCreators.tsx
-import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_5 from "../../stores/SurveyStore.tsx";
-import { useQualtricsResponseStore } from "QualtricsResponseStore.tsx";
-import closure_7 from "QualtricsStore.tsx";
-import QuestionTypeEnum from "QualtricsConstants.tsx";
-import { Endpoints } from "../../Constants.tsx";
+import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import SurveyStore from "../../stores/SurveyStore.tsx";
+import QualtricsStore from "QualtricsStore.tsx";
 
-const require = arg1;
+require = fn;
 function fetchSurveyDetails() {
   const self = this;
-  const apply = _fetchSurveyDetails.apply;
+  const apply = closure_11.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -18,106 +16,82 @@ function fetchSurveyDetails() {
   }
   return applyArgumentsResult;
 }
-function _fetchSurveyDetails() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c5 = 0;
-    c6 = 0;
-    c4 = 0;
-    return (function* (arg0, body) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
+let closure_11 = async function _fetchSurveyDetails(arg0, value) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
         if (arg0 === 1) {
-          throw body;
+          c6 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
+          c6 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_2 = tmp3;
+          closure_1 = tmp7;
+          closure_129_0 = closure_0;
+          let body;
+          c4 = 1;
+          const HTTP = HTTPUtils.HTTP;
+          const obj1 = { url: Endpoints.EMBEDDED_SURVEY(closure_0), rejectWithError: true };
+          c5 = 2;
+          c6 = 1;
+          const obj2 = { value: HTTP.get(obj1), done: false };
+          return obj2;
         }
+      } else if (1 === tmp7) {
+        c4 = 0;
+        closure_129_2 = closure_3;
+        let obj4 = closure_130_1(closure_130_2[9]);
+        obj4.captureException(closure_129_2);
+        c6 = 3;
+        return { value: null, done: true };
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 0;
+        c6 = 3;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              dependencyMap = tmp3;
-              body = tmp7;
-              body = undefined;
-              c4 = 1;
-              const HTTP = callback(closure_1_2[7]).HTTP;
-              obj1 = { url: null, rejectWithError: true };
-              obj1[0] = closure_1_10.EMBEDDED_SURVEY(callback);
-              c5 = 2;
-              c6 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.get(obj1);
-              return obj2;
-            }
-          } else if (1 === tmp7) {
-            c4 = 0;
-            dependencyMap = closure_3;
-            let obj4 = body(1232);
-            obj4.captureException(dependencyMap);
-            c6 = 3;
-            return { value: null, done: true };
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw body;
-          } else if (arg0 === 2) {
-            c4 = 0;
-            c6 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = body;
-            return obj3;
-          } else {
-            body = body.body;
-            obj = body(573);
-            obj4 = { type: "QUALTRICS_SURVEY_FETCH_SUCCESS", surveyId: null, surveyDetails: null };
-            obj4[1] = callback;
-            obj4[2] = body;
-            obj.dispatch(obj4);
-            c4 = 0;
-            c6 = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = body;
-            return obj5;
-          }
-        } catch (tmp27) {
-          closure_3 = tmp27;
-          if (tmp4 === c4) {
-            c6 = tmp2;
-            throw tmp27;
-          } else {
-            c5 = tmp;
-          }
-        }
+        body = value.body;
+        obj = closure_130_1(closure_130_2[8]);
+        obj4 = { type: "QUALTRICS_SURVEY_FETCH_SUCCESS", surveyId: closure_129_0, surveyDetails: body };
+        obj.dispatch(obj4);
+        c4 = 0;
+        c6 = 3;
+        const obj5 = { value: body, done: true };
+        return obj5;
       }
-    })();
-  });
-  closure_11 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp27) {
+      closure_3 = tmp27;
+      if (tmp4 === c4) {
+        c6 = tmp2;
+        throw tmp27;
+      } else {
+        c5 = tmp;
+      }
+    }
   }
-  return applyArgumentsResult;
-}
+};
 function submitSurveyResponse() {
   const self = this;
-  const apply = _submitSurveyResponse.apply;
+  const apply = closure_12.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -125,292 +99,174 @@ function submitSurveyResponse() {
   }
   return applyArgumentsResult;
 }
-function _submitSurveyResponse() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c8 = 0;
-    c9 = 0;
-    c6 = 0;
-    return (function* (arg0, body) {
-      if (c9 === 2) {
-        c9 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
+let closure_12 = async function _submitSurveyResponse(arg0, value) {
+  if (c9 === 2) {
+    c9 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c9 = 2;
+      if (0 === c8) {
         if (arg0 === 1) {
-          throw body;
+          c9 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
+          c9 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c9 = 2;
-          if (0 === c8) {
-            if (arg0 === 1) {
-              c9 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c9 = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
+          closure_5 = tmp3;
+          closure_4 = tmp7;
+          state = state.getState();
+          const displayedQuestions = state.getDisplayedQuestions(closure_0);
+          closure_2 = displayedQuestions;
+          if (displayedQuestions == null) {
+            closure_2 = [];
+          }
+          let tmp19 = (function parseSurveyResponses(arg0, arg1, arr) {
+            survey = survey.getSurvey(arg0);
+            if (null == survey) {
+              return null;
             } else {
-              closure_5 = tmp3;
-              closure_4 = tmp7;
-              state = state.getState();
-              const displayedQuestions = state.getDisplayedQuestions(callback);
-              let table = displayedQuestions;
-              if (displayedQuestions == null) {
-                table = [];
-              }
-              let tmp19 = (function parseSurveyResponses(arg0, arg1, closure_2) {
-                let tmp20;
-                const survey = tmp20.getSurvey(arg0);
-                if (null == survey) {
-                  return null;
-                } else {
-                  const obj = {};
-                  const _Object2 = Object;
-                  const entries = Object.entries(arg1);
-                  const tmp43 = entries[Symbol.iterator]();
-                  while (tmp43 !== undefined) {
-                    let tmp5 = callback;
-                    let tmp6 = callback(tmp3, 2);
-                    let first = tmp6[0];
-                    let tmp8 = first;
-                    let str = tmp6[1];
-                    let tmp9 = survey.Questions[first];
-                    let tmp10 = tmp9;
-                    if (null != tmp9) {
-                      let tmp44 = tmp9;
-                      let tmp45 = constants2;
-                      if (tmp10.QuestionType === constants2.MULTIPLE_CHOICE) {
-                        let tmp11 = tmp9;
-                        let tmp12 = constants;
-                        if (tmp10.Selector === constants.MULTIPLE_ANSWER) {
-                          let tmp32 = first;
-                          let tmp33 = str;
-                          obj[tmp8] = str.split(",");
-                          let tmp34 = tmp9;
-                          if (null != tmp10.ChoiceOrder) {
-                            let tmp35 = first;
-                            let _HermesInternal4 = HermesInternal;
-                            let tmp36 = tmp9;
-                            obj["" + tmp8 + "_DO"] = tmp10.ChoiceOrder;
-                          }
-                        }
-                      }
-                      let tmp13 = tmp9;
-                      if (tmp10.QuestionType === tmp45.MULTIPLE_CHOICE) {
-                        let tmp14 = tmp9;
-                        let tmp15 = constants;
-                        if (tmp10.Selector === constants.SINGLE_ANSWER) {
-                          let tmp21 = str;
-                          if (str.includes(":TEXT:")) {
-                            let tmp24 = str;
-                            let first1 = str.split(":TEXT:", 2)[0];
-                            let tmp26 = first;
-                            let _parseInt2 = parseInt;
-                            obj[tmp8] = parseInt(first1);
-                            let _HermesInternal2 = HermesInternal;
-                            let str2 = "";
-                            let tmp27 = tmp8;
-                            let str3 = "_";
-                            let tmp28 = first1;
-                            let str4 = "_TEXT";
-                            obj["" + first + "_" + first1 + "_TEXT"] = str.split(":TEXT:", 2)[1];
-                          } else {
-                            let tmp22 = first;
-                            let _parseInt = parseInt;
-                            let tmp23 = str;
-                            obj[tmp8] = parseInt(str);
-                          }
-                          let tmp29 = tmp9;
-                          if (null != tmp10.ChoiceOrder) {
-                            let tmp30 = first;
-                            let _HermesInternal3 = HermesInternal;
-                            let tmp31 = tmp9;
-                            obj["" + tmp8 + "_DO"] = tmp10.ChoiceOrder;
-                          }
-                        }
-                      }
-                      let tmp16 = tmp9;
-                      if (tmp10.QuestionType === tmp45.TEXT_ENTRY) {
-                        let tmp19 = first;
-                        let _HermesInternal = HermesInternal;
-                        tmp20 = str;
-                        obj["" + tmp8 + "_TEXT"] = str;
-                      } else {
-                        let tmp17 = first;
-                        let tmp18 = str;
-                        obj[tmp8] = str;
+              const obj = {};
+              const _Object2 = Object;
+              const entries = Object.entries(arg1);
+              const tmp43 = entries[Symbol.iterator]();
+              while (tmp43 !== undefined) {
+                let tmp6 = closure_3(tmp3, 2);
+                let first = tmp6[0];
+                let tmp8 = first;
+                let str = tmp6[1];
+                let tmp9 = survey.Questions[first];
+                let tmp10 = tmp9;
+                if (null != tmp9) {
+                  let tmp45 = constants2;
+                  if (tmp10.QuestionType === constants2.MULTIPLE_CHOICE) {
+                    if (tmp10.Selector === constants.MULTIPLE_ANSWER) {
+                      obj[tmp8] = str.split(",");
+                      if (null != tmp10.ChoiceOrder) {
+                        let _HermesInternal4 = HermesInternal;
+                        obj["" + tmp8 + "_DO"] = tmp10.ChoiceOrder;
                       }
                     }
-                    continue;
                   }
-                  const _Object = Object;
-                  closure_2 = Object.keys(arg1);
-                  const item = closure_2.forEach((arg0) => {
-                    if (!closure_2.includes(arg0)) {
-                      if (null != survey.Questions[arg0]) {
-                        let tmp4 = null != tmp2.ChoiceOrder;
-                        if (tmp4) {
-                          tmp4 = tmp2.QuestionType === closure_1_9.MULTIPLE_CHOICE;
-                        }
-                        if (tmp4) {
-                          if (tmp2.Selector === closure_1_8.MULTIPLE_ANSWER) {
-                            obj[arg0] = [];
-                          }
-                          const _HermesInternal = HermesInternal;
-                          obj["" + arg0 + "_DO"] = tmp2.ChoiceOrder;
-                        }
+                  if (tmp10.QuestionType === tmp45.MULTIPLE_CHOICE) {
+                    if (tmp10.Selector === constants.SINGLE_ANSWER) {
+                      if (str.includes(":TEXT:")) {
+                        let first1 = str.split(":TEXT:", 2)[0];
+                        let _parseInt2 = parseInt;
+                        obj[tmp8] = parseInt(first1);
+                        let _HermesInternal2 = HermesInternal;
+                        let str2 = "";
+                        let str3 = "_";
+                        let str4 = "_TEXT";
+                        obj["" + first + "_" + first1 + "_TEXT"] = str.split(":TEXT:", 2)[1];
+                      } else {
+                        let _parseInt = parseInt;
+                        obj[tmp8] = parseInt(str);
+                      }
+                      if (null != tmp10.ChoiceOrder) {
+                        let _HermesInternal3 = HermesInternal;
+                        obj["" + tmp8 + "_DO"] = tmp10.ChoiceOrder;
                       }
                     }
-                  });
-                  return obj;
+                  }
+                  if (tmp10.QuestionType === tmp45.TEXT_ENTRY) {
+                    let _HermesInternal = HermesInternal;
+                    obj["" + tmp8 + "_TEXT"] = str;
+                  } else {
+                    obj[tmp8] = str;
+                  }
                 }
-              })(callback, callback2, table);
-              if (null == tmp19) {
-                c9 = 3;
-                obj1 = { value: null, done: true };
-                obj1[0] = { responseId: "null" };
-                return obj1;
-              } else {
-                state = 1;
-                closure_3 = {};
-                const HTTP = callback(closure_1_2[7]).HTTP;
-                let obj2 = { url: null, body: null, rejectWithError: true };
-                obj2[0] = closure_1_10.EMBEDDED_SURVEY_RESPONSE(tmp30);
-                const obj3 = { values_json: null };
-                const _JSON = JSON;
-                obj3[0] = JSON.stringify(tmp19);
-                obj2[1] = obj3;
-                c8 = 2;
-                c9 = 1;
-                const obj4 = { value: null, done: false };
-                obj4[0] = HTTP.post(obj2);
-                return obj4;
+                continue;
               }
-              let tmp31 = callback2;
+              const _Object = Object;
+              closure_2 = Object.keys(arg1);
+              const item = arr.forEach((item) => {
+                if (!closure_2.includes(item)) {
+                  if (null != survey.Questions[item]) {
+                    let tmp4 = null != tmp2.ChoiceOrder;
+                    if (tmp4) {
+                      tmp4 = tmp2.QuestionType === constants2.MULTIPLE_CHOICE;
+                    }
+                    if (tmp4) {
+                      if (tmp2.Selector === constants.MULTIPLE_ANSWER) {
+                        obj[item] = [];
+                      }
+                      const _HermesInternal = HermesInternal;
+                      obj["" + item + "_DO"] = tmp2.ChoiceOrder;
+                    }
+                  }
+                }
+              });
+              return obj;
             }
-          } else if (1 === tmp7) {
-            state = 0;
-            callback = closure_7;
-            obj2 = callback2(table[9]);
-            obj2.captureException(callback);
+          })(closure_0, closure_1, closure_2);
+          if (null == tmp19) {
             c9 = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = { responseId: "null" };
-            return obj5;
-          } else if (arg0 === 1) {
-            c9 = 3;
-            throw body;
-          } else if (arg0 === 2) {
-            state = 0;
-            c9 = 3;
-            const obj6 = { value: null, done: true };
-            obj6[0] = body;
-            return obj6;
+            const obj1 = { value: { responseId: "null" }, done: true };
+            return obj1;
           } else {
-            closure_3.responseId = body.body.responseId;
-            state = 0;
-            c9 = 3;
-            obj = { value: null, done: true };
-            obj[0] = closure_3;
-            return obj;
-          }
-        } catch (tmp20) {
-          closure_7 = tmp20;
-          if (tmp4 === state) {
-            c9 = tmp2;
-            throw tmp20;
-          } else {
-            c8 = tmp;
+            c6 = 1;
+            value = {};
+            const HTTP = HTTPUtils.HTTP;
+            const request = { url: Endpoints.EMBEDDED_SURVEY_RESPONSE(tmp29), body: null, rejectWithError: true };
+            let obj2 = { values_json: null };
+            const _JSON = JSON;
+            obj2.values_json = JSON.stringify(tmp19);
+            request.body = obj2;
+            c8 = 2;
+            c9 = 1;
+            const obj3 = { value: HTTP.post(request), done: false };
+            return obj3;
           }
         }
-      }
-    })();
-  });
-  closure_12 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function fireSurveyAction(BOUNTY_ABANDONED, arg1) {
-  const self = this;
-  const apply = _fireSurveyAction.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _fireSurveyAction() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c6 = 0;
-    c7 = 0;
-    c5 = 0;
-    return (function* (arg0, arg1) {
-      closure_4 = tmp3;
-      closure_3 = tmp5;
-      actionTriggeredSurveyOverride = actionTriggeredSurveyOverride.getActionTriggeredSurveyOverride();
-      let table = actionTriggeredSurveyOverride;
-      if (actionTriggeredSurveyOverride == null) {
-        table = undefined;
-      }
-      obj1 = { action_type: null };
-      obj1[0] = lib;
-      if (null != callback) {
-        obj1.metadata = tmp28;
-      }
-      actionTriggeredSurveyOverride = 1;
-      const HTTP = lib(closure_1_2[7]).HTTP;
-      const obj2 = { url: null, query: null, body: null, rejectWithError: true };
-      obj2[0] = closure_1_10.EMBEDDED_SURVEY_ACTION;
-      const obj3 = { force_survey_id: null };
-      obj3[0] = table;
-      obj2[1] = obj3;
-      obj2[2] = obj1;
-      yield HTTP.post(obj2);
-      if (1 === tmp8) {
-        actionTriggeredSurveyOverride = 0;
+      } else if (1 === tmp7) {
+        c6 = 0;
+        closure_132_0 = survey;
+        obj2 = closure_133_1(closure_133_2[9]);
+        obj2.captureException(closure_132_0);
+        c9 = 3;
+        const obj4 = { value: { responseId: "null" }, done: true };
+        return obj4;
       } else if (arg0 === 1) {
-        c7 = 3;
-        throw arg1;
-      } else if (arg0 !== 2) {
-        lib = arg1;
-        const obj = callback(table[8]);
-        let survey;
-        if (lib != null) {
-          const body = lib.body;
-          if (body != null) {
-            survey = body.survey;
-          }
-        }
-        const obj5 = { type: "SURVEY_FETCHED", survey: null, isActionTriggered: true };
-        obj5[1] = survey;
-        obj.dispatch(obj5);
-        actionTriggeredSurveyOverride = 0;
+        c9 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 0;
+        c9 = 3;
+        const obj5 = { value, done: true };
+        return obj5;
+      } else {
+        value.responseId = value.body.responseId;
+        c6 = 0;
+        c9 = 3;
+        obj = { value, done: true };
+        return obj;
       }
-      actionTriggeredSurveyOverride = 0;
-      return arg1;
-    })();
-  });
-  closure_13 = tmp;
-  const apply = tmp.apply;
+    } catch (tmp20) {
+      survey = tmp20;
+      if (tmp4 === c6) {
+        c9 = tmp2;
+        throw tmp20;
+      } else {
+        c8 = tmp;
+      }
+    }
+  }
+};
+function fireSurveyAction() {
+  const self = this;
+  const apply = closure_13.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -418,8 +274,52 @@ function _fireSurveyAction() {
   }
   return applyArgumentsResult;
 }
-({ QuestionSelectorEnum: closure_8, QuestionTypeEnum: c9 } = QuestionTypeEnum);
-let result = require("set").fileFinishedImporting("modules/qualtrics/QualtricsActionCreators.tsx");
+let closure_13 = async function _fireSurveyAction(arg0, arg1) {
+  closure_4 = tmp3;
+  closure_3 = tmp5;
+  actionTriggeredSurveyOverride = actionTriggeredSurveyOverride.getActionTriggeredSurveyOverride();
+  dependencyMap = actionTriggeredSurveyOverride;
+  if (actionTriggeredSurveyOverride == null) {
+    dependencyMap = undefined;
+  }
+  const obj1 = { action_type: _require };
+  if (null != closure_1) {
+    obj1.metadata = tmp27;
+  }
+  const HTTP = HTTPUtils.HTTP;
+  const request = {
+    url: constants.EMBEDDED_SURVEY_ACTION,
+    query: { force_survey_id: dependencyMap },
+    body: obj1,
+    rejectWithError: true,
+  };
+  await HTTP.post(request);
+  if (1 === tmp8) {
+    c5 = 0;
+  } else if (arg0 === 1) {
+    c7 = 3;
+    throw arg1;
+  } else if (arg0 !== 2) {
+    closure_131_0 = arg1;
+    let survey;
+    if (closure_131_0 != null) {
+      const body = closure_131_0.body;
+      if (body != null) {
+        survey = body.survey;
+      }
+    }
+    closure_132_1(closure_132_2[8]).dispatch({ type: "SURVEY_FETCHED", survey, isActionTriggered: true });
+    c5 = 0;
+    closure_132_1(closure_132_2[8]);
+  }
+  return arg1;
+};
+const useQualtricsResponseStore = fn(4754).useQualtricsResponseStore;
+const QualtricsConstants = fn(4756);
+({ QuestionSelectorEnum: closure_8, QuestionTypeEnum: closure_9 } = QualtricsConstants);
+const Endpoints = fn(1074).Endpoints;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/qualtrics/QualtricsActionCreators.tsx");
 
 export default { fetchSurveyDetails, submitSurveyResponse, fireSurveyAction };
 export { fetchSurveyDetails };

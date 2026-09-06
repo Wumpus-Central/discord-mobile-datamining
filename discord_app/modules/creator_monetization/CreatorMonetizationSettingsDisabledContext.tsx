@@ -1,20 +1,21 @@
 // discord_app/modules/creator_monetization/CreatorMonetizationSettingsDisabledContext.tsx
-import useShouldHideGuildPurchaseEntryPoints from "../creator_monetization_review/CreatorMonetizationRestrictionsHooks.tsx";
-import importAllResult from "../../../_runtime/00019_noop.js";
-import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
+import CreatorMonetizationRestrictionsHooks from "../creator_monetization_review/CreatorMonetizationRestrictionsHooks.tsx";
+import noop from "../../../_runtime/metro/00019__.js";
 
-require = arg1;
-let context = importAllResult.createContext(undefined);
-const result = require("set").fileFinishedImporting(
+require = fn;
+const jsx = fn(21).jsx;
+let context = noop.createContext(undefined);
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/creator_monetization/CreatorMonetizationSettingsDisabledContext.tsx",
 );
 
 export default context;
 export const useCreatorMonetizationSettingsDisabled = function useCreatorMonetizationSettingsDisabled() {
-  context = importAllResult.useContext(context);
+  context = noop.useContext(context);
   if (null == context) {
     const _Error = Error;
-    error = new Error(
+    const error = new Error(
       "useCreatorMonetizationSettingsDisabled must be used within a CreatorMonetizationSettingsDisabledContext",
     );
     throw error;
@@ -25,7 +26,7 @@ export const useCreatorMonetizationSettingsDisabled = function useCreatorMonetiz
 export const CreatorMonetizationSettingsDisabledContextProvider =
   function CreatorMonetizationSettingsDisabledContextProvider(arg0) {
     ({ guildId, children } = arg0);
-    let obj = useShouldHideGuildPurchaseEntryPoints;
+    let obj = CreatorMonetizationRestrictionsHooks;
     obj = {
       value:
         obj.useShouldRestrictUpdatingCreatorMonetizationSettings(guildId)

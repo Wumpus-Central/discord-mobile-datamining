@@ -1,73 +1,73 @@
 // discord_app/modules/stage_channels/native/components/EndStageActionSheet.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import StageChannelActionCreators from "../../StageChannelActionCreators.tsx";
 import ScrollHandlingActionSheetDefault from "ScrollHandlingActionSheet.tsx";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { EXPLICIT_END_STAGE_SHEET_KEY as closure_4 } from "../../StageChannelsConstants.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import CallsUtils from "../../../voice_calls/native/CallsUtils.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-noopAll;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = {
+require = fn;
+const View = fn(17).View;
+let closure_4 = fn(5414).EXPLICIT_END_STAGE_SHEET_KEY;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+fn(4560);
+let createStyles = {
   container: { paddingVertical: 24, paddingHorizontal: 16, alignItems: "center" },
   title: null,
   subtitle: null,
   cancelButton: null,
   confirmButton: null,
 };
-createCacheKey = {
+createStyles = {
   fontSize: 24,
-  fontFamily: require("ME").Fonts.PRIMARY_BOLD,
+  fontFamily: fn(1074).Fonts.PRIMARY_BOLD,
   textAlign: "center",
-  color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
+  color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
 };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { marginTop: 8, textAlign: "center" };
-createCacheKey[3] = { marginTop: 24, alignSelf: "stretch" };
-createCacheKey[4] = { marginTop: 8, alignSelf: "stretch" };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/EndStageActionSheet.tsx");
+createStyles.title = createStyles;
+createStyles.subtitle = { marginTop: 8, textAlign: "center" };
+createStyles.cancelButton = { marginTop: 24, alignSelf: "stretch" };
+createStyles.confirmButton = { marginTop: 8, alignSelf: "stretch" };
+let closure_7 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/native/components/EndStageActionSheet.tsx");
 
 export default function EndStageActionSheet(channel) {
   channel = channel.channel;
-  const tmp = callback3();
+  const tmp = closure_7();
   let obj = { children: null };
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.title, accessibilityRole: "header", children: null };
   const intl = channel(1114).intl;
-  obj[2] = intl.string(channel(1114).t.pADdJu);
-  const items = [callback(channel(1178).LegacyText, obj), , ,];
-  obj1 = { style: tmp.subtitle, variant: "text-md/medium", color: "text-default", children: null };
+  obj.children = intl.string(channel(1114).t.pADdJu);
+  const items = [closure_5(channel(1178).LegacyText, obj), , ,];
+  const obj1 = { style: tmp.subtitle, variant: "text-md/medium", color: "text-default", children: null };
   const intl2 = channel(1114).intl;
-  obj1[3] = intl2.string(channel(1114).t.mT7jwN);
-  items[1] = callback(channel(4556).Text, obj1);
+  obj1.children = intl2.string(channel(1114).t.mT7jwN);
+  items[1] = closure_5(channel(4556).Text, obj1);
   let obj2 = { style: tmp.cancelButton, children: null };
   const obj3 = { variant: "secondary", text: null, onPress: null };
   const intl3 = channel(1114).intl;
-  obj3[1] = intl3.string(channel(1114).t.xTwqz2);
-  obj3[2] = function handleClose() {
-    closure_1_1(closure_1_2[7]).hideActionSheet(closure_1_4);
-    const obj = closure_1_1(closure_1_2[7]);
-    channel(closure_1_2[8]).handleDisconnect(channel);
+  obj3.text = intl3.string(channel(1114).t.xTwqz2);
+  obj3.onPress = function handleClose() {
+    ActionSheetActionCreatorsDefault.hideActionSheet(closure_4);
+    CallsUtils.handleDisconnect(channel);
   };
-  obj2[1] = callback(channel(4975).Button, obj3);
-  items[2] = callback(View, obj2);
+  obj2.children = closure_5(channel(4975).Button, obj3);
+  items[2] = closure_5(View, obj2);
   const obj4 = { style: tmp.confirmButton, children: null };
   const obj5 = { variant: "destructive", text: null, onPress: null };
   const intl4 = channel(1114).intl;
-  obj5[1] = intl4.string(channel(1114).t.wnWqGg);
-  obj5[2] = function onPress() {
-    channel(closure_1_2[14]).endStage(channel);
-    const obj = channel(closure_1_2[14]);
-    closure_1_1(closure_1_2[7]).hideActionSheet(closure_1_4);
-    const obj2 = closure_1_1(closure_1_2[7]);
-    channel(closure_1_2[8]).handleDisconnect(channel);
+  obj5.text = intl4.string(channel(1114).t.wnWqGg);
+  obj5.onPress = function onPress() {
+    StageChannelActionCreators.endStage(channel);
+    ActionSheetActionCreatorsDefault.hideActionSheet(closure_4);
+    CallsUtils.handleDisconnect(channel);
   };
-  obj4[1] = callback(channel(4975).Button, obj5);
-  items[3] = callback(View, obj4);
-  obj[1] = items;
-  obj[0] = callback2(View, obj);
-  return callback(ScrollHandlingActionSheetDefault, obj);
+  obj4.children = closure_5(channel(4975).Button, obj5);
+  items[3] = closure_5(View, obj4);
+  obj.children = items;
+  obj.children = closure_6(View, obj);
+  return closure_5(ScrollHandlingActionSheetDefault, obj);
 }

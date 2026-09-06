@@ -1,44 +1,41 @@
 // discord_app/modules/user_settings/defs/native/DeviceInfoSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import explicitContentFromProto from "../../UserSettings.tsx";
-import DCDDeviceManager from "../../../../utils/native/DeviceUtils.tsx";
-import getClientInfo from "CopyClientInfoSetting.tsx";
+import util from "../../../../intl/index.native.tsx";
+import UserSettings from "../../UserSettings.tsx";
+import DeviceUtils from "../../../../utils/native/DeviceUtils.tsx";
+import CopyClientInfoSetting from "CopyClientInfoSetting.tsx";
 import MobilePhoneSettingsIcon from "../../../../design/components/Icon/native/redesign/generated/MobilePhoneSettingsIcon.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 let obj = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["+ynK0W"]);
+    const intl = util.intl;
+    return intl.string(util.t["+ynK0W"]);
   },
   parent: null,
   IconComponent: MobilePhoneSettingsIcon.MobilePhoneSettingsIcon,
   useTrailing: function useDeviceInfo() {
-    const obj = getClientInfo;
-    const clientInfoString = obj.getClientInfoString(DCDDeviceManager.getDeviceInfo());
-    const obj2 = DCDDeviceManager;
-    const obj3 = getClientInfo;
-    return "" + clientInfoString + " (" + obj3.getClientInfoString(DCDDeviceManager.getSystemVersion()) + ")";
+    const obj = CopyClientInfoSetting;
+    const clientInfoString = obj.getClientInfoString(DeviceUtils.getDeviceInfo());
+    const obj3 = CopyClientInfoSetting;
+    return "" + clientInfoString + " (" + obj3.getClientInfoString(DeviceUtils.getSystemVersion()) + ")";
   },
-  usePredicate: explicitContentFromProto.DeveloperMode.useSetting,
+  usePredicate: UserSettings.DeveloperMode.useSetting,
 };
-const createStaticResult = createToggle.createStatic({
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/DeviceInfoSetting.tsx");
+
+export default SettingBuilders.createStatic({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["+ynK0W"]);
+    const intl = util.intl;
+    return intl.string(util.t["+ynK0W"]);
   },
   parent: null,
   IconComponent: MobilePhoneSettingsIcon.MobilePhoneSettingsIcon,
   useTrailing: function useDeviceInfo() {
-    const obj = getClientInfo;
-    const clientInfoString = obj.getClientInfoString(DCDDeviceManager.getDeviceInfo());
-    const obj2 = DCDDeviceManager;
-    const obj3 = getClientInfo;
-    return "" + clientInfoString + " (" + obj3.getClientInfoString(DCDDeviceManager.getSystemVersion()) + ")";
+    const obj = CopyClientInfoSetting;
+    const clientInfoString = obj.getClientInfoString(DeviceUtils.getDeviceInfo());
+    const obj3 = CopyClientInfoSetting;
+    return "" + clientInfoString + " (" + obj3.getClientInfoString(DeviceUtils.getSystemVersion()) + ")";
   },
-  usePredicate: explicitContentFromProto.DeveloperMode.useSetting,
+  usePredicate: UserSettings.DeveloperMode.useSetting,
 });
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/DeviceInfoSetting.tsx");
-
-export default createStaticResult;

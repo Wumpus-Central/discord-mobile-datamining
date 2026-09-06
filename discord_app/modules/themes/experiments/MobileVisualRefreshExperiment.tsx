@@ -1,7 +1,7 @@
 // discord_app/modules/themes/experiments/MobileVisualRefreshExperiment.tsx
-import getUnitIdDefault from "../../experiments/apex/ApexExperiment.tsx";
+import apex_ApexExperimentDefault from "../../experiments/apex/ApexExperiment.tsx";
 
-const tmp2 = getUnitIdDefault({
+const tmp2 = apex_ApexExperimentDefault({
   kind: "user",
   name: "2026-02-mobile-visual-refresh",
   defaultConfig: { enabled: false, chatInputFloating: false, chatInputLegacySendButton: false },
@@ -14,7 +14,8 @@ const tmp2 = getUnitIdDefault({
   },
 });
 let closure_0 = tmp2;
-const result = require("set").fileFinishedImporting("modules/themes/experiments/MobileVisualRefreshExperiment.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/themes/experiments/MobileVisualRefreshExperiment.tsx");
 
 export default function useIsMobileVisualRefreshExperimentEnabled(location) {
   return closure_0.useConfig({ location }).enabled;

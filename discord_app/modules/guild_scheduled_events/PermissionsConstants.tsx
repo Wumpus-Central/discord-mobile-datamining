@@ -1,16 +1,18 @@
 // discord_app/modules/guild_scheduled_events/PermissionsConstants.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
-import Permissions2 from "../stage_channels/StageChannelPermissions.tsx";
-import importAllResult from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import Constants from "../../Constants.tsx";
+import StageChannelPermissions from "../stage_channels/StageChannelPermissions.tsx";
+import "BigFlagUtils";
+import BigFlagUtils from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const Permissions = ME.Permissions;
+const Permissions = Constants.Permissions;
 const VIEW_CHANNEL = Permissions.VIEW_CHANNEL;
-const combineResult = importAllResult.combine(VIEW_CHANNEL, Permissions.CONNECT);
-const importAllResult1 = importAllResult;
-const combineResult1 = importAllResult.combine(VIEW_CHANNEL, Permissions2.MODERATE_STAGE_CHANNEL_PERMISSIONS);
-const result = set.fileFinishedImporting("modules/guild_scheduled_events/PermissionsConstants.tsx");
+const combineResult = BigFlagUtils.combine(VIEW_CHANNEL, Permissions.CONNECT);
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/PermissionsConstants.tsx");
 
 export const CREATE_GUILD_EVENT_CORE_PERMISSIONS = VIEW_CHANNEL;
 export const CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS = combineResult;
-export const CREATE_GUILD_EVENT_STAGE_CHANNEL_PERMISSIONS = combineResult1;
+export const CREATE_GUILD_EVENT_STAGE_CHANNEL_PERMISSIONS = BigFlagUtils.combine(
+  VIEW_CHANNEL,
+  StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS,
+);

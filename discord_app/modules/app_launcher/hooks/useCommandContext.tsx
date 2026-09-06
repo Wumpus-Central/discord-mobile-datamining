@@ -1,29 +1,26 @@
 // discord_app/modules/app_launcher/hooks/useCommandContext.tsx
-import closure_0 from "../../../../_runtime/00019_noop.js";
-import closure_1 from "../../../stores/GuildStore.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import GuildStore from "../../../stores/GuildStore.tsx";
 
-const result = require("set").fileFinishedImporting("modules/app_launcher/hooks/useCommandContext.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/hooks/useCommandContext.tsx");
 
 export const getCommandContext = function getCommandContext(type) {
   if ("contextless" === type.type) {
     let obj = { channel: "hash", guild: "call" };
   } else {
-    obj = { channel: null, guild: null };
-    obj[0] = type.channel;
-    obj[1] = guild.getGuild(type.channel.guild_id);
+    obj = { channel: type.channel, guild: GuildStore.getGuild(type.channel.guild_id) };
   }
   return obj;
 };
 export const useCommandContext = function useCommandContext(context) {
-  const React = context;
+  noop = context;
   const items = [context];
-  return React.useMemo(() => {
+  return noop.useMemo(() => {
     if ("contextless" === type.type) {
       let obj = { channel: "hash", guild: "call" };
     } else {
-      obj = { channel: null, guild: null };
-      obj[0] = tmp.channel;
-      obj[1] = closure_1_1.getGuild(tmp.channel.guild_id);
+      obj = { channel: tmp.channel, guild: GuildStore.getGuild(tmp.channel.guild_id) };
     }
     return obj;
   }, items);

@@ -1,14 +1,14 @@
 // discord_app/modules/guild_member_verification/hooks/useShowMemberVerificationGate.tsx
-import isValidFormResponse from "../MemberVerificationUtils.tsx";
-import closure_2 from "../../../stores/GuildMemberStore.tsx";
-import closure_3 from "../../../stores/GuildStore.tsx";
-import closure_4 from "../../../stores/UserStore.tsx";
+import MemberVerificationUtils from "../MemberVerificationUtils.tsx";
+import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
+import GuildStore from "../../../stores/GuildStore.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
 
-require = arg1;
+require = fn;
 function shouldShowMembershipVerificationGate(guildId, items) {
   let tmp = items;
   if (items === undefined) {
-    items = [closure_3, closure_4, closure_2];
+    items = [GuildStore, UserStore, GuildMemberStore];
     tmp = items;
   }
   [obj, obj2, obj3] = tmp;
@@ -30,28 +30,26 @@ function shouldShowMembershipVerificationGate(guildId, items) {
       flag = flag2;
     }
     if (flag) {
-      flag = isValidFormResponse.guildHasVerificationGate(guild);
-      const obj4 = isValidFormResponse;
+      flag = MemberVerificationUtils.guildHasVerificationGate(guild);
     }
     return flag;
   }
 }
-const result = require("set").fileFinishedImporting(
-  "modules/guild_member_verification/hooks/useShowMemberVerificationGate.tsx",
-);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_member_verification/hooks/useShowMemberVerificationGate.tsx");
 
 export { shouldShowMembershipVerificationGate };
 export const useShowMemberVerificationGate = function useShowMemberVerificationGate(guild_id) {
-  const _require = guild_id;
-  let items = [closure_3, closure_4, closure_2];
+  _require = guild_id;
+  let items = [GuildStore, UserStore, GuildMemberStore];
   const items1 = [guild_id];
-  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+  return require("initialize").useStateFromStores(
     items,
     () => {
       let tmp2 = null != closure_0;
       if (tmp2) {
-        const items = [closure_1_3, closure_1_4, closure_1_2];
-        tmp2 = closure_1_5(tmp, items);
+        const items = [GuildStore, UserStore, GuildMemberStore];
+        tmp2 = shouldShowMembershipVerificationGate(tmp, items);
       }
       return tmp2;
     },

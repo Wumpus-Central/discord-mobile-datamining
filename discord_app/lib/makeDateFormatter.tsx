@@ -1,6 +1,7 @@
 // discord_app/lib/makeDateFormatter.tsx
-import set from "../../_runtime/00002_set.js";
-import { __DiscordCreateDateFormatter } from "../modules/system_date_format/SystemDateFormatter.native.tsx";
+import _modDef4153 from "../../_runtime/metro/04153__.js";
+import SystemDateFormatter from "../modules/system_date_format/SystemDateFormatter.native.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
 function defaultMeridiem(arg0, arg1, arg2) {
   if (arg0 < 12) {
@@ -18,7 +19,7 @@ function defaultMeridiem(arg0, arg1, arg2) {
   return str;
 }
 function getLocaleData() {
-  let obj = format5(4153);
+  let obj = _modDef4153;
   const _config = obj.localeData()._config;
   ({ months, monthsShort, weekdays, weekdaysShort, weekdaysMin, meridiem } = _config);
   if (undefined === meridiem) {
@@ -29,13 +30,13 @@ function getLocaleData() {
     week = { dow: 0, doy: 6 };
   }
   ordinal = "month";
-  format5 = months;
+  let format5 = months;
   if (typeof months === "function") {
     let tmpResult = tmp(4153);
-    dependencyMap = months.bind(tmpResult.localeData());
+    closure_2 = months.bind(tmpResult.localeData());
     let fn = (arg0, arg1) => {
       closure_0 = arg0;
-      return callback({ [closure_0]: () => closure_0 }, arg1);
+      return closure_2({ [closure_1_0]: () => closure_0 }, arg1);
     };
   } else {
     const _Array = Array;
@@ -62,10 +63,10 @@ function getLocaleData() {
   format5 = monthsShort;
   if (typeof monthsShort === "function") {
     tmpResult = tmp(4153);
-    dependencyMap = monthsShort.bind(tmpResult.localeData());
+    closure_2 = monthsShort.bind(tmpResult.localeData());
     let fn2 = (arg0, arg1) => {
       closure_0 = arg0;
-      return callback({ [closure_0]: () => closure_0 }, arg1);
+      return closure_2({ [closure_1_0]: () => closure_0 }, arg1);
     };
   } else {
     const _Array2 = Array;
@@ -76,14 +77,14 @@ function getLocaleData() {
     format5 = format2;
     fn2 = (arg0) => format5[arg0];
   }
-  obj[1] = fn2;
+  obj.monthsShort = fn2;
   ordinal = "day";
   format5 = weekdays;
   if (typeof weekdays === "function") {
-    dependencyMap = weekdays.bind(tmp(4153).localeData());
+    closure_2 = weekdays.bind(tmp(4153).localeData());
     let fn3 = (arg0, arg1) => {
       closure_0 = arg0;
-      return callback({ [closure_0]: () => closure_0 }, arg1);
+      return closure_2({ [closure_1_0]: () => closure_0 }, arg1);
     };
     const tmpResult1 = tmp(4153);
   } else {
@@ -95,14 +96,14 @@ function getLocaleData() {
     format5 = format3;
     fn3 = (arg0) => format5[arg0];
   }
-  obj[2] = fn3;
+  obj.weekdays = fn3;
   ordinal = "day";
   format5 = weekdaysShort;
   if (typeof weekdaysShort === "function") {
-    dependencyMap = weekdaysShort.bind(tmp(4153).localeData());
+    closure_2 = weekdaysShort.bind(tmp(4153).localeData());
     let fn4 = (arg0, arg1) => {
       closure_0 = arg0;
-      return callback({ [closure_0]: () => closure_0 }, arg1);
+      return closure_2({ [closure_1_0]: () => closure_0 }, arg1);
     };
     const tmpResult2 = tmp(4153);
   } else {
@@ -114,14 +115,14 @@ function getLocaleData() {
     format5 = format4;
     fn4 = (arg0) => format5[arg0];
   }
-  obj[3] = fn4;
+  obj.weekdaysShort = fn4;
   ordinal = "day";
   format5 = weekdaysMin;
   if (typeof weekdaysMin === "function") {
-    dependencyMap = weekdaysMin.bind(tmp(4153).localeData());
+    closure_2 = weekdaysMin.bind(tmp(4153).localeData());
     let fn5 = (arg0, arg1) => {
       closure_0 = arg0;
-      return callback({ [closure_0]: () => closure_0 }, arg1);
+      return closure_2({ [closure_1_0]: () => closure_0 }, arg1);
     };
     const tmpResult3 = tmp(4153);
   } else {
@@ -132,44 +133,42 @@ function getLocaleData() {
     }
     fn5 = (arg0) => format5[arg0];
   }
-  obj[4] = fn5;
-  obj[5] = meridiem;
+  obj.weekdaysMin = fn5;
+  obj.meridiem = meridiem;
   if (typeof ordinal === "string") {
     ordinal = (arg0) => ordinal.replace("%d", "" + arg0);
   }
-  obj[6] = ordinal;
-  obj[7] = longDateFormat;
-  obj[8] = [];
-  obj[9] = week;
+  obj.ordinal = ordinal;
+  obj.longDateFormat = longDateFormat;
+  obj.longFormatters = [];
+  obj.week = week;
   return obj;
 }
-let result = set.fileFinishedImporting("lib/makeDateFormatter.tsx");
+let result = size.fileFinishedImporting("lib/makeDateFormatter.tsx");
 
-export default function makeFormatter(str) {
+export default function makeFormatter(str, arg1) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = false;
   }
-  let _require;
+  str = undefined;
   let _function;
   let tmp = arg1;
   if (arg1 == null) {
     tmp = getLocaleData();
   }
-  _require = tmp;
+  str = tmp;
   let result = undefined === arg1 && !flag;
   if (result) {
-    result = undefined !== require("../modules/system_date_format/SystemDateFormatter.native.tsx").makeFormatter;
+    result = undefined !== SystemDateFormatter.makeFormatter;
   }
   if (result) {
-    result = require("../modules/system_date_format/SystemDateFormatter.native.tsx").supportsSystemDateFormatter();
-    const obj = __DiscordCreateDateFormatter;
+    result = SystemDateFormatter.supportsSystemDateFormatter();
   }
   let replaced = str;
   if (!result) {
-    _require = str;
     _function = tmp;
-    replaced = str.replace(/L[L|T|S]{0,3}/g, (arr) => {
+    replaced = str.replace(/L[L|T|S]{0,3}/g, (arr, arg1) => {
       if (obj.test(arr)) {
         let LLLL = _function.longDateFormat.LLLL;
       } else {
@@ -206,6 +205,7 @@ export default function makeFormatter(str) {
     });
   }
   const items = [];
+  str = replaced;
   if (replaced.length > 0) {
     str.charAt(0);
   }

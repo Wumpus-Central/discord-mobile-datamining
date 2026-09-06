@@ -1,37 +1,34 @@
 // discord_app/modules/app_icons/native/SettingsItemAppIcon.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import FreemiumAppIconIds from "../AppIconTypes.tsx";
-import ClydeIcon from "../../../design/components/Icon/native/redesign/generated/ClydeIcon.tsx";
-import fetchCurrentAppIcon from "AppIconUtils.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import AppIconTypes from "../AppIconTypes.tsx";
+import AppIconUtils from "AppIconUtils.tsx";
 import AppIconDefault from "AppIcon.tsx";
-import { getIconById } from "AppIconConstants.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-createCacheKey = { icon: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.round };
-createCacheKey[0] = createCacheKey;
-let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/app_icons/native/SettingsItemAppIcon.tsx");
+const ClydeIcon = tmp4(10818);
+require = fn;
+const getIconById = fn(9323).getIconById;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { icon: null };
+createStyles = { borderRadius: nativeDefault.radii.round };
+createStyles.icon = createStyles;
+let closure_5 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_icons/native/SettingsItemAppIcon.tsx");
 
 export default function SettingsItemAppIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;
   if (INTERACTIVE_ICON_DEFAULT === undefined) {
-    INTERACTIVE_ICON_DEFAULT = ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT;
+    INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
-  let obj = fetchCurrentAppIcon;
+  let obj = AppIconUtils;
   const currentAppIcon = obj.useCurrentAppIcon();
-  const tmp3 = callback();
-  const tmp4 = require;
-  if (currentAppIcon !== FreemiumAppIconIds.FreemiumAppIconIds.DEFAULT) {
+  const tmp3 = closure_5();
+  if (currentAppIcon !== AppIconTypes.FreemiumAppIconIds.DEFAULT) {
     if (null != tmp7) {
-      obj = { style: null, id: null, size: 32 };
-      obj[0] = tmp3.icon;
-      obj[1] = currentAppIcon;
-      let tmp11 = jsx(AppIconDefault, { style: null, id: null, size: 32 });
+      obj = { style: tmp3.icon, id: currentAppIcon, size: 32 };
+      let tmp11 = jsx(AppIconDefault, { style: tmp3.icon, id: currentAppIcon, size: 32 });
     }
     return tmp11;
   }

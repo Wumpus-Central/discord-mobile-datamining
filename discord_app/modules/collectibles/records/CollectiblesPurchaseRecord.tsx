@@ -1,12 +1,12 @@
 // discord_app/modules/collectibles/records/CollectiblesPurchaseRecord.tsx
-import closure_2 from "CollectiblesBundledProductRecord.tsx";
-import { createCollectiblesItemsFromServerResponse as closure_3 } from "CollectiblesItemRecord.tsx";
-import { CollectiblesVariantProductRecord as closure_4 } from "CollectiblesProductRecord.tsx";
-import { REWARD_CATEGORY_AND_REWARD_SKU_IDS as closure_5 } from "../CollectiblesShopConstants.tsx";
-import { PREMIUM_TYPE_NONE } from "../../../Constants.tsx";
+import getPricesFromServerDefault from "../../skus/utils/getPricesFromServer.tsx";
+import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord.tsx";
 
-let prototype;
-prototype = function CollectiblesPurchaseRecord(arg0) {
+let closure_3 = fn(7546).createCollectiblesItemsFromServerResponse;
+const fromServer = fn(7544).CollectiblesVariantProductRecord;
+let closure_5 = fn(1076).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
+const PREMIUM_TYPE_NONE = fn(1074).PREMIUM_TYPE_NONE;
+const prototype = function CollectiblesPurchaseRecord(arg0) {
   ({
     skuId: tmp.skuId,
     name: tmp.name,
@@ -44,20 +44,37 @@ prototype["fromServer"] = function fromServer(sku_id) {
     variant_value,
     purchase_type,
   } = sku_id);
-  const merged = Object.assign(sku_id, Object.create(null));
+  const merged = Object.assign(
+    sku_id,
+    Object.assign({
+      type: 0,
+      sku_id: 0,
+      name: 0,
+      premium_type: 0,
+      category_sku_id: 0,
+      prices: 0,
+      bundled_products: 0,
+      variants: 0,
+      base_variant_name: 0,
+      base_variant_sku_id: 0,
+      variant_label: 0,
+      variant_value: 0,
+      purchased_at: 0,
+      purchase_type: 0,
+      expires_at: 0,
+    }),
+  );
   let tmp3 = null;
   if (premium_type !== PREMIUM_TYPE_NONE) {
     tmp3 = premium_type;
   }
   const someResult = closure_5.some((rewardSkuId) => rewardSkuId.rewardSkuId === sku_id);
-  let mapped;
-  const tmp5 = sku_id(5513)(prices);
+  const tmp5 = getPricesFromServerDefault(prices);
   if (bundled_products != null) {
-    mapped = bundled_products.map(fromServer.fromServer);
+    const mapped = bundled_products.map(CollectiblesBundledProductRecord.fromServer);
   }
-  let mapped1;
   if (variants != null) {
-    mapped1 = variants.map(fromServer2.fromServer);
+    const mapped1 = variants.map(fromServer.fromServer);
   }
   let date = purchased_at;
   ({ google_sku_ids, eligible_offers } = merged);
@@ -70,31 +87,34 @@ prototype["fromServer"] = function fromServer(sku_id) {
     const _Date2 = Date;
     date1 = new Date(expires_at);
   }
-  if (typeof prototype !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof prototype === "function") {
+    const obj = Object.create(tmp2.prototype);
+    obj.skuId = sku_id;
+    obj.name = name;
+    obj.type = type;
+    obj.premiumType = tmp3;
+    obj.items = tmp6;
+    obj.categorySkuId = category_sku_id;
+    obj.isCategoryReward = someResult;
+    obj.prices = tmp5;
+    obj.bundledProducts = mapped;
+    obj.googleSkuIds = google_sku_ids;
+    obj.variants = mapped1;
+    obj.eligibleOffers = eligible_offers;
+    obj.baseVariantName = base_variant_name;
+    obj.baseVariantSkuId = base_variant_sku_id;
+    obj.variantLabel = variant_label;
+    obj.variantValue = variant_value;
+    obj.purchasedAt = date;
+    obj.purchaseType = purchase_type;
+    obj.expiresAt = date1;
+    return obj;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const obj = Object.create(prototype.prototype);
-  obj.skuId = sku_id;
-  obj.name = name;
-  obj.type = type;
-  obj.premiumType = tmp3;
-  obj.items = callback(merged.items);
-  obj.categorySkuId = category_sku_id;
-  obj.isCategoryReward = someResult;
-  obj.prices = tmp5;
-  obj.bundledProducts = mapped;
-  obj.googleSkuIds = google_sku_ids;
-  obj.variants = mapped1;
-  obj.eligibleOffers = eligible_offers;
-  obj.baseVariantName = base_variant_name;
-  obj.baseVariantSkuId = base_variant_sku_id;
-  obj.variantLabel = variant_label;
-  obj.variantValue = variant_value;
-  obj.purchasedAt = date;
-  obj.purchaseType = purchase_type;
-  obj.expiresAt = date1;
-  return obj;
+  tmp6 = closure_3(merged.items);
 };
-const result = require("set").fileFinishedImporting("modules/collectibles/records/CollectiblesPurchaseRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/records/CollectiblesPurchaseRecord.tsx");
 
 export default prototype;

@@ -1,9 +1,8 @@
 // discord_app/modules/calls/ParticipantFocusManager.tsx
-import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
-import closure_0 from "../../stores/RTCConnectionStore.tsx";
-import closure_1 from "ChannelRTCStore.tsx";
+import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
+import ChannelRTCStore from "ChannelRTCStore.tsx";
+import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
-initializeDefault;
 class ParticipantFocusManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -13,11 +12,11 @@ class ParticipantFocusManager extends tmp2 {
   }
 }
 ParticipantFocusManager.prototype["handleFocusParticipant"] = function handleFocusParticipant() {
-  channelId = channelId.getChannelId();
+  const channelId = RTCConnectionStore.getChannelId();
   if (null != channelId) {
-    channelId = store.getSelectedParticipantId(channelId);
-    const videoParticipants = store.getVideoParticipants(channelId);
-    const rTCConnection = channelId.getRTCConnection();
+    const selectedParticipantId = ChannelRTCStore.getSelectedParticipantId(channelId);
+    const videoParticipants = ChannelRTCStore.getVideoParticipants(channelId);
+    const rTCConnection = RTCConnectionStore.getRTCConnection();
     if (rTCConnection != null) {
       const found = videoParticipants.find((id) => id.id === closure_0 && !id.localVideoDisabled);
       let id;
@@ -29,6 +28,7 @@ ParticipantFocusManager.prototype["handleFocusParticipant"] = function handleFoc
   }
 };
 const participantFocusManager = new ParticipantFocusManager();
-let result = require("set").fileFinishedImporting("modules/calls/ParticipantFocusManager.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/calls/ParticipantFocusManager.tsx");
 
 export default participantFocusManager;

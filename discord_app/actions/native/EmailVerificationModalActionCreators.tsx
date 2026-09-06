@@ -1,14 +1,14 @@
 // discord_app/actions/native/EmailVerificationModalActionCreators.tsx
-import set from "../../../_runtime/00002_set.js";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import ME from "../../Constants.tsx";
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import Constants from "../../Constants.tsx";
+import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import asyncRequireImpl from "../../../_runtime/01896_asyncRequireImpl.js";
-import _modDef4763 from "../ModalActionCreators.tsx";
+import ModalActionCreatorsDefault from "../ModalActionCreators.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const AnalyticEvents = ME.AnalyticEvents;
+const AnalyticEvents = Constants.AnalyticEvents;
 const EMAIL_VERIFICATION_MODAL_KEY = "EMAIL_VERIFICATION_MODAL_KEY";
-const result = set.fileFinishedImporting("actions/native/EmailVerificationModalActionCreators.tsx");
+const result = size.fileFinishedImporting("actions/native/EmailVerificationModalActionCreators.tsx");
 
 export default {
   open() {
@@ -17,18 +17,17 @@ export default {
       flag = false;
     }
     if (flag) {
-      expandEventPropertiesDefault.track(AnalyticEvents.USER_ACCOUNT_EMAIL_CHANGE_ATTEMPTED);
-      const obj = expandEventPropertiesDefault;
+      AnalyticsUtilsDefault.track(AnalyticEvents.USER_ACCOUNT_EMAIL_CHANGE_ATTEMPTED);
     }
-    _modDef4763.pushLazy(
+    ModalActionCreatorsDefault.pushLazy(
       asyncRequireImpl(5622, dependencyMap.paths),
       { isChangeEmail: flag },
       EMAIL_VERIFICATION_MODAL_KEY,
     );
   },
   close() {
-    dispatcherDefault.wait(() => {
-      callback(table[2]).popWithKey(closure_4);
+    DispatcherDefault.wait(() => {
+      ModalActionCreatorsDefault.popWithKey(EMAIL_VERIFICATION_MODAL_KEY);
     });
   },
 };

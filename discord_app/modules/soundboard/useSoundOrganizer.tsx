@@ -1,5 +1,6 @@
 // discord_app/modules/soundboard/useSoundOrganizer.tsx
-import set from "../../../_runtime/00002_set.js";
+import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 function sortSoundsOldestToNewestCreationDate(value2) {
   let flag = arg1;
@@ -7,7 +8,7 @@ function sortSoundsOldestToNewestCreationDate(value2) {
     flag = true;
   }
   const items = [...value2];
-  const sorted = items.sort((soundId, soundId2) => callback(table[0]).compare(soundId.soundId, soundId2.soundId));
+  const sorted = items.sort((soundId, soundId2) => SnowflakeUtilsDefault.compare(soundId.soundId, soundId2.soundId));
   let sorted1 = sorted;
   if (flag) {
     const items1 = [];
@@ -30,7 +31,7 @@ function sortSoundsOldestToNewestCreationDate(value2) {
   }
   return sorted1;
 }
-const result = set.fileFinishedImporting("modules/soundboard/useSoundOrganizer.tsx");
+const result = size.fileFinishedImporting("modules/soundboard/useSoundOrganizer.tsx");
 
 export { sortSoundsOldestToNewestCreationDate };
 export function useSoundOrganizer() {

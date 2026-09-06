@@ -1,49 +1,53 @@
 // discord_app/modules/search/native/components/navigator/SearchNavigator.tsx
-import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../../../safe_area/useSafeAreaInsets.native.tsx";
-import importAllResult from "../../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { SearchEntrypointAnalyticsLocations as closure_5 } from "../../tracking/TrackingConstants.tsx";
-import { SearchNavigatorScreens } from "SearchNavigatorConstants.tsx";
-import { SearchTypes } from "../../../../../Constants.tsx";
-import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
-import createNativeStackNavigator from "../../../../../../_runtime/07913_createNativeStackNavigator.js";
+import search_tracking_TrackingDefault from "../../tracking/Tracking.tsx";
+import SearchNavigatorPreviewHeaderDefault from "SearchNavigatorPreviewHeader.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let c3 = importAllResult;
-({ jsx: closure_8, jsxs: c9 } = jsxProd);
+const require = fn;
+const View = fn(17).View;
+let closure_5 = fn(7877).SearchEntrypointAnalyticsLocations;
+const SearchNavigatorScreens = fn(16643).SearchNavigatorScreens;
+const SearchTypes = fn(1074).SearchTypes;
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(4560);
 let obj = { container: null };
-obj = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
-obj[0] = obj;
-let closure_10 = createCacheKey.createStyles(obj);
-let closure_11 = createNativeStackNavigator.createNativeStackNavigator();
-const memoResult = importAllResult.memo((route) => {
+obj = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+obj.container = obj;
+let closure_10 = createStyles.createStyles(obj);
+const NativeStackNavigator = fn(7913);
+let closure_11 = NativeStackNavigator.createNativeStackNavigator();
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/search/native/components/navigator/SearchNavigator.tsx");
+
+export default noop.memo((route) => {
   const searchContext = route.route.params.searchContext;
   let obj = searchContext(7000);
   const accessibilityNativeStackOptions = obj.useAccessibilityNativeStackOptions();
   const items = [searchContext];
-  const effect = importAllResult.useEffect(() => {
-    if (searchContext.type === closure_1_7.GUILD) {
-      let DM_LIST = closure_1_5.GUILD;
+  const effect = noop.useEffect(() => {
+    if (searchContext.type === SearchTypes.GUILD) {
+      let DM_LIST = constants.GUILD;
     } else {
-      DM_LIST = closure_1_5.DM_LIST;
+      DM_LIST = constants.DM_LIST;
     }
-    closure_1_1(closure_1_2[10]).trackSearchOpened({ searchContext, searchLocation: DM_LIST });
+    search_tracking_TrackingDefault.trackSearchOpened({ searchContext, searchLocation: DM_LIST });
     return () => {
-      let obj = closure_1_1(closure_1_2[10]);
-      obj = { searchContext: closure_0 };
+      const obj = { searchContext };
       obj.trackSearchClosed(obj);
     };
   }, items);
   const rect = useSafeAreaInsetsDefault();
-  obj = { style: items1, children: null };
-  items1 = [callback3().container, { paddingLeft: rect.left, paddingRight: rect.right }];
+  obj = { style: null, children: null };
+  const items1 = [closure_10().container, { paddingLeft: rect.left, paddingRight: rect.right }];
+  obj.style = items1;
   obj = { id: "search-navigator", screenOptions: null, children: null };
   const merged = Object.assign(accessibilityNativeStackOptions);
-  obj[1] = {};
+  obj.screenOptions = {};
   const items2 = [
-    callback(closure_11.Screen, {
+    closure_8(closure_11.Screen, {
       initialParams: { searchContext },
       name: SearchNavigatorScreens.SEARCH_TABS,
       options: { headerShown: false, fullScreenGestureEnabled: true },
@@ -51,7 +55,7 @@ const memoResult = importAllResult.memo((route) => {
         return searchContext(16865).default;
       },
     }),
-    callback(closure_11.Screen, {
+    closure_8(closure_11.Screen, {
       name: SearchNavigatorScreens.SEARCH_CHAT_PREVIEW,
       options(route) {
         route = route.route;
@@ -60,7 +64,7 @@ const memoResult = importAllResult.memo((route) => {
           header: route(7863).renderHeader,
           headerLeft: route(7863).getRenderBackImage(route.navigation),
           headerTitle() {
-            return closure_1_8(closure_1_1(closure_1_2[14]), { channelId: route.params.channelId });
+            return closure_2_8(SearchNavigatorPreviewHeaderDefault, { channelId: route.params.channelId });
           },
           fullScreenGestureEnabled: true,
         };
@@ -71,10 +75,7 @@ const memoResult = importAllResult.memo((route) => {
       },
     }),
   ];
-  obj[2] = items2;
-  obj[1] = callback2(closure_11.Navigator, obj);
-  return callback(View, obj);
+  obj.children = items2;
+  obj.children = closure_9(closure_11.Navigator, obj);
+  return closure_8(View, obj);
 });
-const result = require("set").fileFinishedImporting("modules/search/native/components/navigator/SearchNavigator.tsx");
-
-export default memoResult;

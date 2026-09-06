@@ -1,37 +1,30 @@
 // discord_app/modules/home_drawer/native/HomeDrawerDM.tsx
-import MobileHomeDrawerExperiment2 from "HomeDrawerExperiment.tsx";
-import useMessagePreviewDefault from "../../main_tabs_v2/useMessagePreviews.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import { isMultiUserDM } from "../../../records/ChannelRecord.tsx";
-import closure_6 from "../../../stores/RelationshipStore.tsx";
-import closure_7 from "../../../stores/UserGuildSettingsStore.tsx";
-import closure_8 from "../../../stores/UserStore.tsx";
-import { NOOP } from "../../../../discord_common/js/shared/Constants.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import HomeDrawerExperiment from "HomeDrawerExperiment.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import useChannelName from "../../channel/useChannelName.tsx";
+import ChannelListLayoutTypes from "../../main_tabs_v2/ChannelListLayoutTypes.tsx";
+import ChannelRowPreview from "../../main_tabs_v2/native/shared_components/ChannelRowPreview.tsx";
+import useMessagePreviewsDefault from "../../main_tabs_v2/useMessagePreviews.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import RelationshipStore from "../../../stores/RelationshipStore.tsx";
+import UserGuildSettingsStore from "../../../stores/UserGuildSettingsStore.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
 
-require = arg1;
+require = fn;
 function HomeDrawerDMExpandedChildren(channel) {
   channel = channel.channel;
-  importDefault = undefined;
-  dependencyMap = undefined;
-  let stateFromStores;
-  closure_4 = undefined;
-  let stateFromStores1;
   let memo;
-  const tmp = callback2();
+  const tmp = closure_12();
   importDefault = tmp;
-  let items = [closure_8];
-  dependencyMap = channel(504).useStateFromStores(items, () => closure_1_8.getUser(channel.getRecipientId()));
+  let items = [UserStore];
+  dependencyMap = channel(504).useStateFromStores(items, () => UserStore.getUser(channel.getRecipientId()));
   let obj = channel(504);
-  const items1 = [closure_8, memo];
-  stateFromStores = channel(504).useStateFromStores(items1, () => {
+  const items1 = [UserStore, memo];
+  const stateFromStores = channel(504).useStateFromStores(items1, () => {
     let tmp2 = null;
     if (null != channel) {
-      if (stateFromStores1(tmp.type)) {
-        let channelName = channel(4713).computeChannelName(tmp, closure_1_8, memo);
-        const obj = channel(4713);
+      if (isMultiUserDM(tmp.type)) {
+        let channelName = useChannelName.computeChannelName(tmp, UserStore, RelationshipStore);
       } else {
         channelName = null;
       }
@@ -40,14 +33,14 @@ function HomeDrawerDMExpandedChildren(channel) {
     return tmp2;
   });
   const obj2 = channel(504);
-  const tmp3 = useMessagePreviewDefault(channel, {
+  const tmp3 = useMessagePreviewsDefault(channel, {
     unread: channel(16343).useBaseChannelUnreadBadgeState(channel, false).unread,
   });
   closure_4 = tmp3;
   const obj3 = channel(16343);
-  const items2 = [closure_7];
-  stateFromStores1 = channel(504).useStateFromStores(items2, () =>
-    closure_1_7.getChannelMuteConfig(channel.guild_id, channel.id),
+  const items2 = [UserGuildSettingsStore];
+  const stateFromStores1 = channel(504).useStateFromStores(items2, () =>
+    UserGuildSettingsStore.getChannelMuteConfig(channel.guild_id, channel.id),
   );
   const items3 = [stateFromStores1];
   memo = stateFromStores.useMemo(() => {
@@ -62,9 +55,7 @@ function HomeDrawerDMExpandedChildren(channel) {
         const date1 = new Date();
         tmp2 = date > date1;
       }
-      obj = { isMuted: null, isTemporary: null };
-      obj[0] = tmp2;
-      obj[1] = null != tmp.end_time;
+      obj = { isMuted: tmp2, isTemporary: null != tmp.end_time };
     }
     return obj;
   }, items3);
@@ -89,53 +80,57 @@ function HomeDrawerDMExpandedChildren(channel) {
         BellSlashIcon = tmp5(9059).BellSlashIcon;
       }
     } else {
-      let obj = { style: null, children: null };
-      obj[0] = closure_1.title;
-      obj = { variant: "text-md/medium", style: null, lineClamp: 1, color: "text-default", children: null };
-      obj[1] = closure_1.titleText;
-      obj[4] = stateFromStores;
-      const items = [closure_1_10(channel(4556).Text, obj), closure_1_10(closure_1_9, { size: "xs" })];
-      obj[1] = items;
-      return closure_1_11(closure_4, obj);
+      let obj = { style: closure_1.title, children: null };
+      obj = {
+        variant: "text-md/medium",
+        style: closure_1.titleText,
+        lineClamp: 1,
+        color: "text-default",
+        children: stateFromStores,
+      };
+      const items = [closure_2_10(Text_Text.Text, obj), closure_2_10(NOOP, { size: "xs" })];
+      obj.children = items;
+      return closure_2_11(View, obj);
     }
   }, items4);
   const subtitle = stateFromStores.useMemo(() => {
     let tmp2 = null;
     if (null != closure_4) {
       const obj = {
-        channel: null,
-        message: null,
+        channel,
+        message: tmp,
         variant: "text-xs/medium",
         color: "text-strong",
-        layout: null,
-        muted: null,
+        layout: ChannelListLayoutTypes.ChannelListLayoutTypes.COZY,
+        muted: memo.isMuted,
       };
-      obj[0] = channel;
-      obj[1] = tmp;
-      obj[4] = channel(7879).ChannelListLayoutTypes.COZY;
-      obj[5] = memo.isMuted;
-      tmp2 = closure_1_10(channel(10109).ChannelRowPreview, obj);
+      tmp2 = closure_2_10(ChannelRowPreview.ChannelRowPreview, obj);
     }
     return tmp2;
   }, items5);
-  return callback(channel(16305).HomeDrawerSharedItem, { title, subtitle });
+  return closure_10(channel(16305).HomeDrawerSharedItem, { title, subtitle });
 }
-({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-let closure_12 = createCacheKey.createStyles({
+const View = fn(17).View;
+const isMultiUserDM = fn(1961).isMultiUserDM;
+const NOOP = fn(1085).NOOP;
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(4560);
+let closure_12 = createStyles.createStyles({
   title: { flexDirection: "row", alignItems: "center", gap: 4 },
   titleText: { flexShrink: 1 },
 });
-const result = require("set").fileFinishedImporting("modules/home_drawer/native/HomeDrawerDM.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawerDM.tsx");
 
 export default function HomeDrawerDMExpandedChildrenWrapper(channel) {
-  const MobileHomeDrawerExperiment = MobileHomeDrawerExperiment2.MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = HomeDrawerExperiment.MobileHomeDrawerExperiment;
   let tmp2 = null;
   if (MobileHomeDrawerExperiment.useConfig({ location: "dm-expanded-children" }).enableHome) {
     tmp2 = null;
     if (!tmp) {
-      const obj = { channel: null };
-      obj[0] = channel.channel;
-      tmp2 = callback(HomeDrawerDMExpandedChildren, obj);
+      const obj = { channel: channel.channel };
+      tmp2 = closure_1_10(HomeDrawerDMExpandedChildren, obj);
     }
   }
   return tmp2;

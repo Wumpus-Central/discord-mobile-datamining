@@ -1,11 +1,14 @@
 // discord_app/design/components/Menu/native/MenuPopout.tsx
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import NativeMenuActionCreatorsDefault from "../../../../modules/native_menu/native/NativeMenuActionCreators.tsx";
+import Menu from "Menu.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-({ jsx: c5, Fragment: closure_6 } = jsxProd);
-const result = require("set").fileFinishedImporting("design/components/Menu/native/MenuPopout.tsx");
+require = fn;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, Fragment: metroRequire } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Menu/native/MenuPopout.tsx");
 
 export const MenuPopout = function MenuPopout(onRequestOpen) {
   ({ key, menuItems } = onRequestOpen);
@@ -20,9 +23,9 @@ export const MenuPopout = function MenuPopout(onRequestOpen) {
   const offsetAnimated = onRequestOpen.offsetAnimated;
   key = undefined;
   let animatedRef;
-  let first;
+  let isShown;
   closure_10 = undefined;
-  let callback;
+  let onClose;
   let memo;
   let callback1;
   let obj = menuItems(onRequestClose[3]);
@@ -31,46 +34,46 @@ export const MenuPopout = function MenuPopout(onRequestOpen) {
   }
   animatedRef = menuItems(onRequestClose[4]).useAnimatedRef();
   const tmp4 = position(align.useState(false), 2);
-  first = tmp4[0];
+  isShown = tmp4[0];
   closure_10 = tmp4[1];
   const items = [key, onRequestClose];
   const mapped = menuItems.map((label) => ({ name: label.label, label: label.label }));
-  callback = align.useCallback(() => {
-    callback(false);
+  onClose = align.useCallback(() => {
+    closure_10(false);
     if (onRequestClose != null) {
       onRequestClose();
     }
-    onRequestOpen(onRequestClose[5]).hideNativeMenu(key);
+    NativeMenuActionCreatorsDefault.hideNativeMenu(key);
   }, items);
-  const items1 = [animatedRef, callback, menuItems, position, align, offset, offsetAnimated];
+  const items1 = [animatedRef, onClose, menuItems, position, align, offset, offsetAnimated];
   memo = align.useMemo(
     () =>
-      offset(menuItems(onRequestClose[6]).Menu, {
+      hasOwnProperty(Menu.Menu, {
         toggleButtonRef: animatedRef,
-        onClose: callback,
+        onClose,
         position,
         align,
         offset,
         offsetAnimated,
-        children: menuItems.map((arg0, arg1) => {
+        children: menuItems.map((item, index) => {
           let obj = { children: null };
           obj = { showIconFirst: true };
-          const merged = Object.assign(arg0);
-          obj[0] = callback2(callback(14132).MenuItem, obj);
-          return callback2(callback(14131).MenuGroup, obj, "chat-context-menu-group-" + arg1);
+          const merged = Object.assign(item);
+          obj.children = offset(menuItems(14132).MenuItem, obj);
+          return offset(menuItems(14131).MenuGroup, obj, "chat-context-menu-group-" + index);
         }),
       }),
     items1,
   );
   const items2 = [memo, key, onRequestOpen];
   callback1 = align.useCallback(() => {
-    callback(true);
+    closure_10(true);
     if (onRequestOpen != null) {
       onRequestOpen();
     }
-    onRequestOpen(onRequestClose[5]).showNativeMenu(key, memo);
+    NativeMenuActionCreatorsDefault.showNativeMenu(key, memo);
   }, items2);
-  const items3 = [first, callback, callback1];
+  const items3 = [isShown, onClose, callback1];
   obj = { children: null };
   obj = {
     ref: animatedRef,
@@ -81,10 +84,10 @@ export const MenuPopout = function MenuPopout(onRequestOpen) {
         callback1();
       }
     }, items3),
-    accessibilityState: { expanded: first },
+    accessibilityState: { expanded: isShown },
     accessibilityActions: mapped,
     onAccessibilityAction(arg0) {
-      menuItems = arg0;
+      const nativeEvent = arg0;
       const found = menuItems.find((label) => label.label === nativeEvent.nativeEvent.actionName);
       if (found != null) {
         const action = found.action;
@@ -94,6 +97,6 @@ export const MenuPopout = function MenuPopout(onRequestOpen) {
       }
     },
   };
-  obj[0] = onRequestOpen.children(obj, { isShown: first });
+  obj.children = onRequestOpen.children(obj, { isShown });
   return offset(offsetAnimated, obj);
 };

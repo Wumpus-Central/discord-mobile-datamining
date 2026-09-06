@@ -1,7 +1,7 @@
 // discord_app/modules/public_guilds/PublicGuildsConstants.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
-import importAllResult from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import Constants from "../../Constants.tsx";
+import BigFlagUtils from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const items = [, , , , , , , , , , , , ,];
 ({
@@ -19,17 +19,16 @@ const items = [, , , , , , , , , , , , ,];
   MODERATE_MEMBERS: arr[11],
   MENTION_EVERYONE: arr[12],
   MANAGE_OFFICIAL_MESSAGES: arr[13],
-} = ME.Permissions);
+} = Constants.Permissions);
 const items1 = [...items];
-const applyResult = importAllResult.combine.apply(items1);
-const result = set.fileFinishedImporting("modules/public_guilds/PublicGuildsConstants.tsx");
+const result = size.fileFinishedImporting("modules/public_guilds/PublicGuildsConstants.tsx");
 
 export const PUBLIC_SUCCESS_MODAL_SEEN_KEY = "publicSuccessModalSeen";
 export const PUBLIC_GUILD_ANNOUNCEMENTS_GUILD_ID = "667560445975986187";
 export const PUBLIC_GUILD_UPDATES_WEBHOOK_USER_ID = "669627189624307712";
 export const CREATE_NEW_CHANNEL_VALUE = "1";
 export const MODERATOR_PERMISSIONS = items;
-export const MODERATOR_PERMISSIONS_FLAG = applyResult;
+export const MODERATOR_PERMISSIONS_FLAG = BigFlagUtils.combine.apply(items1);
 export const COMMUNITY_UPSELL_MINIMUM_GUILD_SIZE = 1000;
 export const ENABLE_COMMUNITY_FLOW_MODAL_KEY = "Enable Community Modal";
 export const EnableCommunityModalSteps = {

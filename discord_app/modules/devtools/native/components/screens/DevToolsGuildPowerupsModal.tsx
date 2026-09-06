@@ -1,28 +1,32 @@
 // discord_app/modules/devtools/native/components/screens/DevToolsGuildPowerupsModal.tsx
-import setWarningBoostsDefault from "DevToolsGuildPowerupsScreen.tsx";
-import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createNativeStackNavigator from "../../../../../../_runtime/07913_createNativeStackNavigator.js";
-import importAllResult from "../../../../../../_runtime/00019_noop.js";
-import { NavigationStack } from "../../../../../design/components/Navigator/native/Navigator.native.tsx";
+import HeaderShared from "../../../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
+import getNavigationModalPresentationDefault from "../../../../main_tabs_v2/native/utils/getNavigationModalPresentation.tsx";
+import DevToolsGuildPowerupsScreenDefault from "DevToolsGuildPowerupsScreen.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let closure_4 = createNativeStackNavigator.createNativeStackNavigator();
-const memoResult = importAllResult.memo(function DevToolsGuildPowerupsModal() {
-  let obj = NavigationStack;
+require = fn;
+const jsx = fn(21).jsx;
+const NativeStackNavigator = fn(7913);
+let closure_4 = NativeStackNavigator.createNativeStackNavigator();
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsGuildPowerupsModal.tsx");
+
+export default noop.memo(function DevToolsGuildPowerupsModal() {
+  let obj = require("Navigator");
   _require = obj.useAccessibilityNativeStackOptions();
   obj = {
     screenOptions(navigation) {
       const obj = {
         headerTitle(children) {
-          const merged = Object.assign(children, Object.create(null));
+          const merged = Object.assign(children, Object.assign({ children: 0 }));
           const merged1 = Object.assign(merged);
-          return callback2(callback(table[4]).GenericHeaderTitle, { title: children.children });
+          return closure_1_3(closure_1_0(closure_1_2[4]).GenericHeaderTitle, { title: children.children });
         },
-        headerLeft: callback(closure_1_2[4]).getRenderModalCloseImage(navigation.navigation),
+        headerLeft: HeaderShared.getRenderModalCloseImage(navigation.navigation),
         headerTitleAlign: "center",
       };
-      let merged = Object.assign(callback);
-      let merged1 = Object.assign(closure_1_1(closure_1_2[5])());
+      let merged = Object.assign(closure_0);
+      let merged1 = Object.assign(getNavigationModalPresentationDefault());
       return obj;
     },
     children: null,
@@ -32,16 +36,16 @@ const memoResult = importAllResult.memo(function DevToolsGuildPowerupsModal() {
     options() {
       return { title: "Guild Powerups" };
     },
-    component: setWarningBoostsDefault,
+    component: DevToolsGuildPowerupsScreenDefault,
   };
   ({ Navigator, Screen } = closure_4);
-  obj[1] = (
+  obj.children = (
     <Screen
       name="DevToolsGuildPowerups"
       options={function options() {
         return { title: "Guild Powerups" };
       }}
-      component={setWarningBoostsDefault}
+      component={DevToolsGuildPowerupsScreenDefault}
     />
   );
   return (
@@ -50,12 +54,7 @@ const memoResult = importAllResult.memo(function DevToolsGuildPowerupsModal() {
       options={function options() {
         return { title: "Guild Powerups" };
       }}
-      component={setWarningBoostsDefault}
+      component={DevToolsGuildPowerupsScreenDefault}
     />
   );
 });
-const result = require("set").fileFinishedImporting(
-  "modules/devtools/native/components/screens/DevToolsGuildPowerupsModal.tsx",
-);
-
-export default memoResult;

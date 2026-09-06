@@ -1,7 +1,7 @@
 // discord_app/modules/instant_invite/getInviteURL.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/instant_invite/getInviteURL.tsx");
+const result = size.fileFinishedImporting("modules/instant_invite/getInviteURL.tsx");
 
 export default function getInviteURL() {
   let str = arg0;

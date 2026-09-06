@@ -1,38 +1,39 @@
 // discord_app/modules/icymi/native/ICYMIHeader.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createICYMIStyles from "createICYMIStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createICYMIStyles = fn(16452);
 let closure_7 = createICYMIStyles.createICYMIStyles((margin) => {
-  obj = { text: obj, separator: null };
+  let obj = { text: null, separator: null };
   obj = { flexDirection: "row", justifyContent: "space-between", marginHorizontal: margin.margin };
-  obj = {
+  obj.text = obj;
+  const size = {
     height: 1,
     width: "100%",
-    backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
-    marginBottom: ThemesDefault.space.PX_16,
+    backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
+    marginBottom: nativeDefault.space.PX_16,
   };
-  obj[1] = obj;
+  obj.separator = size;
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/icymi/native/ICYMIHeader.tsx");
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/icymi/native/ICYMIHeader.tsx");
 
 export default function ICYMIHeader() {
-  const tmp = callback3();
+  const tmp = closure_7();
   let obj = { children: null };
   obj = { style: tmp.separator };
-  const items = [callback(View, obj)];
+  const items = [React4(View, obj)];
   obj = { style: tmp.text, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = getSystemLocale.intl;
-  obj[3] = intl.string(getSystemLocale.t["jnXV/V"]);
-  items[1] = callback(Text.Text, obj);
-  obj[0] = items;
-  return callback2(closure_5, obj);
+  const intl = util.intl;
+  obj.children = intl.string(util.t["jnXV/V"]);
+  items[1] = React4(Text_Text.Text, obj);
+  obj.children = items;
+  return timestampProducer(hasOwnProperty, obj);
 }

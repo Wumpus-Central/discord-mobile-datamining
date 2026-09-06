@@ -1,36 +1,35 @@
 // discord_app/modules/safety_flows/native/UpdateAppScreen.tsx
-import set from "../../../../_runtime/00002_set.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import messagesProxyDefault from "../SafetyFlows.messages.js";
-import Text from "../../../design/components/Text/native/Text.tsx";
-import Button from "../../../design/components/Button/native/Button.native.tsx";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
+import _modDef2690 from "../SafetyFlows.messages.js";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
+import get_ActivityIndicator from "../../../../_runtime/metro/00017__.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-({ NativeModules: c3, View: c4 } = get_ActivityIndicator);
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
+({ NativeModules: c3, View: closure_4 } = get_ActivityIndicator);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let obj = { container: null, buttonContainer: null };
-obj = { flexDirection: "column", justifyContent: "center", gap: ThemesDefault.space.PX_8 };
-obj[0] = obj;
-obj[1] = { marginTop: ThemesDefault.space.PX_8 };
-let closure_7 = createCacheKey.createStyles(obj);
-let obj1 = { marginTop: ThemesDefault.space.PX_8 };
-const result = set.fileFinishedImporting("modules/safety_flows/native/UpdateAppScreen.tsx");
+obj = { flexDirection: "column", justifyContent: "center", gap: nativeDefault.space.PX_8 };
+obj.container = obj;
+obj.buttonContainer = { marginTop: nativeDefault.space.PX_8 };
+let closure_7 = createStyles.createStyles(obj);
+const result = size.fileFinishedImporting("modules/safety_flows/native/UpdateAppScreen.tsx");
 
 export default function UpdateAppScreen() {
-  const tmp = callback3();
+  const tmp = closure_7();
   let obj = { style: tmp.container, children: null };
   obj = { variant: "heading-lg/semibold", children: null };
-  const intl = getSystemLocale.intl;
-  obj[1] = intl.string(messagesProxyDefault.yxqMCD);
-  const items = [callback(Text.Text, obj), ,];
+  const intl = util.intl;
+  obj.children = intl.string(_modDef2690.yxqMCD);
+  const items = [hasOwnProperty(Text_Text.Text, obj), ,];
   obj = { variant: "text-md/normal", color: "text-muted", children: null };
-  const intl2 = getSystemLocale.intl;
-  obj[2] = intl2.string(messagesProxyDefault.VBZJJg);
-  items[1] = callback(Text.Text, obj);
-  obj1 = { style: tmp.buttonContainer, children: null };
+  const intl2 = util.intl;
+  obj.children = intl2.string(_modDef2690.VBZJJg);
+  items[1] = hasOwnProperty(Text_Text.Text, obj);
+  const obj1 = { style: tmp.buttonContainer, children: null };
   const obj2 = {
     onPress() {
       BundleUpdaterManager = BundleUpdaterManager.BundleUpdaterManager;
@@ -40,10 +39,10 @@ export default function UpdateAppScreen() {
     variant: "primary",
     size: "md",
   };
-  const intl3 = getSystemLocale.intl;
-  obj2[1] = intl3.string(messagesProxyDefault.o4D6fm);
-  obj1[1] = callback(Button.Button, obj2);
-  items[2] = callback(closure_4, obj1);
-  obj[1] = items;
-  return callback2(closure_4, obj);
+  const intl3 = util.intl;
+  obj2.text = intl3.string(_modDef2690.o4D6fm);
+  obj1.children = hasOwnProperty(components_Button_Button.Button, obj2);
+  items[2] = hasOwnProperty(React4, obj1);
+  obj.children = items;
+  return timestampProducer(React4, obj);
 }

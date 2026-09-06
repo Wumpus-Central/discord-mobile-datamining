@@ -1,11 +1,12 @@
 // discord_app/modules/creator_monetization_review/CreatorMonetizationRestrictionsUtils.tsx
-import closure_0 from "../guild_role_subscriptions/GuildRoleSubscriptionsStore.tsx";
-import { FetchState } from "../guild_role_subscriptions/GuildRoleSubscriptionsStore.tsx";
-import closure_2 from "../../stores/GuildStore.tsx";
-import { CreatorMonetizationRestrictions as closure_3 } from "CreatorMonetizationReviewConstants.tsx";
-import { GuildFeatures } from "../../Constants.tsx";
+import GuildRoleSubscriptionsStore from "../guild_role_subscriptions/GuildRoleSubscriptionsStore.tsx";
+import GuildStore from "../../stores/GuildStore.tsx";
 
-const result = require("set").fileFinishedImporting(
+const FetchState = fn(4193).FetchState;
+const constants = fn(4194).CreatorMonetizationRestrictions;
+const GuildFeatures = fn(1074).GuildFeatures;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/creator_monetization_review/CreatorMonetizationRestrictionsUtils.tsx",
 );
 
@@ -22,9 +23,10 @@ export const shouldHideGuildPurchaseEntryPoints = function shouldHideGuildPurcha
   if (null == guildId) {
     return false;
   } else {
-    const monetizationRestrictionsFetchState = store.getMonetizationRestrictionsFetchState(guildId);
-    const monetizationRestrictions = store.getMonetizationRestrictions(guildId);
-    const guild = store2.getGuild(guildId);
+    const monetizationRestrictionsFetchState =
+      GuildRoleSubscriptionsStore.getMonetizationRestrictionsFetchState(guildId);
+    const monetizationRestrictions = GuildRoleSubscriptionsStore.getMonetizationRestrictions(guildId);
+    const guild = GuildStore.getGuild(guildId);
     if (monetizationRestrictionsFetchState === FetchState.FETCHED) {
       let hasItem = null != monetizationRestrictions;
       if (hasItem) {
@@ -57,9 +59,9 @@ export const shouldRestrictUpdatingCreatorMonetizationSettings =
     if (null == id) {
       return false;
     } else {
-      const monetizationRestrictionsFetchState = store.getMonetizationRestrictionsFetchState(id);
-      const monetizationRestrictions = store.getMonetizationRestrictions(id);
-      const guild = store2.getGuild(id);
+      const monetizationRestrictionsFetchState = GuildRoleSubscriptionsStore.getMonetizationRestrictionsFetchState(id);
+      const monetizationRestrictions = GuildRoleSubscriptionsStore.getMonetizationRestrictions(id);
+      const guild = GuildStore.getGuild(id);
       if (monetizationRestrictionsFetchState === FetchState.FETCHED) {
         let hasItem = null != monetizationRestrictions;
         if (hasItem) {

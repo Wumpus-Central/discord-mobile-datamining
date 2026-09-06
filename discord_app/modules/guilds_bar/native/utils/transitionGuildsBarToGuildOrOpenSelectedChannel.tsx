@@ -1,16 +1,17 @@
 // discord_app/modules/guilds_bar/native/utils/transitionGuildsBarToGuildOrOpenSelectedChannel.tsx
-import getRootNavigationRef from "../../../main_tabs_v2/RootNavigationRef.native.tsx";
-import closure_2 from "../../../../stores/SelectedChannelStore.tsx";
-import closure_3 from "../../../../stores/SelectedGuildStore.tsx";
-import { ME } from "../../../../Constants.tsx";
+import RootNavigationRef from "../../../main_tabs_v2/RootNavigationRef.native.tsx";
+import SelectedChannelStore from "../../../../stores/SelectedChannelStore.tsx";
+import SelectedGuildStore from "../../../../stores/SelectedGuildStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting(
+require = fn;
+const ME = fn(1074).ME;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/guilds_bar/native/utils/transitionGuildsBarToGuildOrOpenSelectedChannel.tsx",
 );
 
 export default function transitionGuildsBarToGuildOrOpenSelectedChannel(arg0) {
-  const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
+  const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
   let isReadyResult;
   if (rootNavigationRef != null) {
     isReadyResult = rootNavigationRef.isReady();
@@ -31,13 +32,13 @@ export default function transitionGuildsBarToGuildOrOpenSelectedChannel(arg0) {
       if (arg0 !== ME) {
         tmp7 = arg0;
       }
-      guildId = guildId.getGuildId();
+      let guildId = SelectedGuildStore.getGuildId();
       if (guildId == null) {
         guildId = null;
       }
       let tmp10;
       if (guildId === tmp7) {
-        channelId = channelId.getChannelId(arg0, false);
+        const channelId = SelectedChannelStore.getChannelId(arg0, false);
         tmp10 = channelId;
       }
       tmp4 = tmp10;

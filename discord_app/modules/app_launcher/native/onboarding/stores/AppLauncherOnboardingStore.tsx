@@ -1,64 +1,61 @@
 // discord_app/modules/app_launcher/native/onboarding/stores/AppLauncherOnboardingStore.tsx
-import DISCORD_EPOCHDefault from "../../../../../utils/SnowflakeUtils.tsx";
+import SnowflakeUtilsDefault from "../../../../../utils/SnowflakeUtils.tsx";
 import initializeDefault from "../../../../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../../../../Dispatcher.tsx";
-import ApplicationCommandSectionType from "../../../../application_commands/ApplicationCommandTypes.tsx";
-import result2 from "../hooks/useCanShowAppLauncherOnboarding.tsx";
-import closure_5 from "../../../../../stores/UserStore.tsx";
+import DispatcherDefault from "../../../../../Dispatcher.tsx";
+import ApplicationCommandTypes from "../../../../application_commands/ApplicationCommandTypes.tsx";
+import useCanShowAppLauncherOnboarding from "../hooks/useCanShowAppLauncherOnboarding.tsx";
+import UserStore from "../../../../../stores/UserStore.tsx";
 
-require = arg1;
+require = fn;
 const Store = initializeDefault.Store;
 class AppLauncherOnboardingStore extends Store {}
 const prototype = AppLauncherOnboardingStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_5);
+  this.waitFor(UserStore);
 };
 prototype["getRecentMessageMetadata"] = function getRecentMessageMetadata() {
-  return closure_3;
+  return obj;
 };
 prototype["getRecentApplicationCommandMetadata"] = function getRecentApplicationCommandMetadata() {
-  return closure_4;
+  return obj;
 };
 AppLauncherOnboardingStore.displayName = "AppLauncherOnboardingStore";
-const appLauncherOnboardingStore = new AppLauncherOnboardingStore(dispatcherDefault, {
+const appLauncherOnboardingStore = new AppLauncherOnboardingStore(DispatcherDefault, {
   APPLICATION_COMMAND_USED: function handleApplicationCommandUsed(context) {
     context = context.context;
     ({ command, commandOrigin } = context);
-    let tmp = commandOrigin !== ApplicationCommandSectionType.CommandOrigin.APPLICATION_LAUNCHER;
+    let tmp = commandOrigin !== ApplicationCommandTypes.CommandOrigin.APPLICATION_LAUNCHER;
     if (tmp) {
       tmp = null != context.channel;
     }
     if (tmp) {
-      const obj = { timeMs: null, applicationId: null, guildId: null, channelId: null };
+      obj = { timeMs: null, applicationId: null, guildId: null, channelId: null };
       const _Date = Date;
-      obj[0] = Date.now();
-      obj[1] = command.applicationId;
+      obj.timeMs = Date.now();
+      obj.applicationId = command.applicationId;
       const guild = context.guild;
       let id;
       if (guild != null) {
         id = guild.id;
       }
-      obj[2] = id;
-      obj[3] = context.channel.id;
+      obj.guildId = id;
+      obj.channelId = context.channel.id;
     }
   },
   MESSAGE_CREATE: function handleMessageCreate(message) {
     message = message.message;
     ({ channelId, guildId } = message);
-    currentUser = currentUser.getCurrentUser();
+    const currentUser = UserStore.getCurrentUser();
     if (null != currentUser) {
       if (null != currentUser.id) {
         if (null != message.author) {
           if (currentUser.id === message.author.id) {
-            let obj = DISCORD_EPOCHDefault;
+            obj = SnowflakeUtilsDefault;
             const extractTimestampResult = obj.extractTimestamp(message.id);
             const _Date = Date;
             const timestamp = Date.now();
-            if (timestamp <= extractTimestampResult + result2.RECENT_MESSAGE_MS) {
-              obj = { timeMs: null, guildId: null, channelId: null };
-              obj[0] = extractTimestampResult;
-              obj[1] = guildId;
-              obj[2] = channelId;
+            if (timestamp <= extractTimestampResult + useCanShowAppLauncherOnboarding.RECENT_MESSAGE_MS) {
+              obj = { timeMs: extractTimestampResult, guildId, channelId };
             }
           }
         }
@@ -66,7 +63,8 @@ const appLauncherOnboardingStore = new AppLauncherOnboardingStore(dispatcherDefa
     }
   },
 });
-const result = require("set").fileFinishedImporting(
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/app_launcher/native/onboarding/stores/AppLauncherOnboardingStore.tsx",
 );
 

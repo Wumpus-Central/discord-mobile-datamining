@@ -1,28 +1,30 @@
 // discord_app/modules/age_assurance/native/AppStoreAgeAssurance.android.tsx
-import closure_2 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import PlayAgeSignals from "PlayAgeSignals.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
-const require = arg1;
+require = fn;
 let closure_3 = {
-  [arg1(8572).AgeSignalsStatus.SHARED]: "SHARED",
-  [arg1(8572).AgeSignalsStatus.NOT_SHARED]: "NOT_SHARED",
-  [arg1(8572).AgeSignalsStatus.VERIFICATION_REQUIRED]: "VERIFICATION_REQUIRED",
+  [fn(8572).AgeSignalsStatus.SHARED]: "SHARED",
+  [fn(8572).AgeSignalsStatus.NOT_SHARED]: "NOT_SHARED",
+  [fn(8572).AgeSignalsStatus.VERIFICATION_REQUIRED]: "VERIFICATION_REQUIRED",
 };
 let closure_4 = {
-  [arg1(8572).AgeRangeSource.TIER_A]: "TIER_A",
-  [arg1(8572).AgeRangeSource.TIER_B]: "TIER_B",
-  [arg1(8572).AgeRangeSource.TIER_C]: "TIER_C",
-  [arg1(8572).AgeRangeSource.TIER_D]: "TIER_D",
+  [fn(8572).AgeRangeSource.TIER_A]: "TIER_A",
+  [fn(8572).AgeRangeSource.TIER_B]: "TIER_B",
+  [fn(8572).AgeRangeSource.TIER_C]: "TIER_C",
+  [fn(8572).AgeRangeSource.TIER_D]: "TIER_D",
 };
 let closure_5 = {
-  [arg1(8572).SignificantChangeStatus.APPROVED]: "APPROVED",
-  [arg1(8572).SignificantChangeStatus.PENDING]: "PENDING",
-  [arg1(8572).SignificantChangeStatus.DECLINED]: "DECLINED",
+  [fn(8572).SignificantChangeStatus.APPROVED]: "APPROVED",
+  [fn(8572).SignificantChangeStatus.PENDING]: "PENDING",
+  [fn(8572).SignificantChangeStatus.DECLINED]: "DECLINED",
 };
-const result = require("set").fileFinishedImporting("modules/age_assurance/native/AppStoreAgeAssurance.android.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/age_assurance/native/AppStoreAgeAssurance.android.tsx");
 
 export default {
   getAgeSignals() {
-    return callback(function* () {
+    return (async () => {
       function toAppStoreAgeCheck(ageLower) {
         const obj = {
           platform: "android",
@@ -35,25 +37,24 @@ export default {
         const ageSignalsStatus = ageLower.ageSignalsStatus;
         let tmp;
         if (null != ageSignalsStatus) {
-          tmp = table[ageSignalsStatus];
+          tmp = closure_1_3[ageSignalsStatus];
         }
-        obj[3] = tmp;
+        obj.googleAgeSignalsStatus = tmp;
         const ageRangeSource = ageLower.ageRangeSource;
         let tmp2;
         if (null != ageRangeSource) {
-          tmp2 = table2[ageRangeSource];
+          tmp2 = closure_1_4[ageRangeSource];
         }
-        obj[4] = tmp2;
+        obj.googleAgeRangeSource = tmp2;
         const significantChangeStatus = ageLower.significantChangeStatus;
         let tmp3;
         if (null != significantChangeStatus) {
-          tmp3 = table3[significantChangeStatus];
+          tmp3 = closure_1_5[significantChangeStatus];
         }
-        obj[5] = tmp3;
+        obj.googleSignificantChangeStatus = tmp3;
         return obj;
       }
-      const obj2 = closure_1_0(table[1]);
-      yield obj2.getAgeSignals();
+      await PlayAgeSignals.getAgeSignals();
       return toAppStoreAgeCheck(arg1);
     })();
   },

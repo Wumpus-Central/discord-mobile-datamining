@@ -1,11 +1,12 @@
 // discord_app/modules/payments/hooks/useSubscriptionSelection.tsx
-import closure_0 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_1 from "../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const result = require("set").fileFinishedImporting("modules/payments/hooks/useSubscriptionSelection.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/payments/hooks/useSubscriptionSelection.tsx");
 
 export default function useSubscriptionSelection() {
-  [tmp2, tmp3] = callback(React.useState(undefined), 2);
-  const tmp4 = callback(React.useState(undefined), 2);
+  [tmp2, tmp3] = _slicedToArray(noop.useState(undefined), 2);
+  const tmp4 = _slicedToArray(noop.useState(undefined), 2);
   return { selectedSkuId: tmp2, setSelectedSkuId: tmp3, selectedPlanId: tmp4[0], setSelectedPlanId: tmp4[1] };
 }

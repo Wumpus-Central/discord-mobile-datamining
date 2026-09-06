@@ -1,26 +1,28 @@
 // discord_app/modules/polls/useVoteReactors.tsx
-import closure_3 from "../../stores/MessageReactionsStore.tsx";
-import { DEFAULT_NUM_REACTION_USERS as closure_4 } from "../../Constants.tsx";
+import MessageReactionsTypes from "../messages/MessageReactionsTypes.tsx";
+import MessageReactionsStore from "../../stores/MessageReactionsStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/polls/useVoteReactors.tsx");
+require = fn;
+let closure_4 = fn(1074).DEFAULT_NUM_REACTION_USERS;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/polls/useVoteReactors.tsx");
 
 export default function useVoteReactors(channelId) {
   channelId = channelId.channelId;
   const messageId = channelId.messageId;
   const reaction = channelId.reaction;
   let obj = channelId(reaction[2]);
-  let items = [closure_3];
+  let items = [MessageReactionsStore];
   const items1 = [channelId, messageId, reaction.emoji];
   const stateFromStores = obj.useStateFromStores(
     items,
     () => {
-      const reactions = closure_1_3.getReactions(
+      const reactions = MessageReactionsStore.getReactions(
         channelId,
         messageId,
         reaction.emoji,
-        closure_1_4,
-        channelId(reaction[3]).ReactionTypes.VOTE,
+        closure_4,
+        MessageReactionsTypes.ReactionTypes.VOTE,
       );
       let items;
       if (reactions != null) {
@@ -43,6 +45,6 @@ export default function useVoteReactors(channelId) {
   if (num == null) {
     num = 0;
   }
-  obj[1] = num > stateFromStores.length;
+  obj.hasMore = num > stateFromStores.length;
   return obj;
 }

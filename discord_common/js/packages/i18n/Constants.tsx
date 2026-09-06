@@ -1,7 +1,7 @@
 // discord_common/js/packages/i18n/Constants.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/i18n/Constants.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/i18n/Constants.tsx");
 
 export const FORMAT_RE = /\{.+?\}/;
 export const MARKDOWN_RE = /[~*_]{2}.+?[~*_]{2}|\[.*?\]\(.+?\)|\n\n/;

@@ -1,41 +1,44 @@
 // discord_app/modules/devtools/native/components/screens/DevToolsPerformanceTestingScreen.tsx
-import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../../../safe_area/useSafeAreaInsets.native.tsx";
-import { ScrollView } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
-import importAllResult from "../../../../../../_runtime/00019_noop.js";
-import { useNavigation } from "../../../../../design/components/Navigator/native/useNavigation.native.tsx";
+import DevToolsNavigator from "../DevToolsNavigator.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
+require = fn;
+const ScrollView = fn(17).ScrollView;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
 let obj = { container: null };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: ThemesDefault.space.PX_16 };
-obj[0] = obj;
-let closure_5 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(function DevToolsPerformanceTestingScreen() {
-  let obj = useNavigation;
+obj = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: nativeDefault.space.PX_16 };
+obj.container = obj;
+let closure_5 = createStyles.createStyles(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting(
+  "modules/devtools/native/components/screens/DevToolsPerformanceTestingScreen.tsx",
+);
+
+export default noop.memo(function DevToolsPerformanceTestingScreen() {
+  let obj = require("useNavigation");
   _require = obj.useNavigation();
-  obj = { style: callback().container, contentContainerStyle: null, children: null };
-  obj = { paddingBottom: useSafeAreaInsetsDefault().bottom + ThemesDefault.space.PX_16 };
-  obj[1] = obj;
-  obj1 = { hasIcons: true, children: null };
-  const entries = Object.entries(require("../DevToolsScreens.tsx").PerformanceTestingScreens);
-  obj1[1] = entries.map((arg0) => {
-    [tmp] = arg0;
-    return closure_1_4(
-      callback(closure_1_2[9]).TableRow,
+  obj = { style: closure_5().container, contentContainerStyle: null, children: null };
+  obj = { paddingBottom: useSafeAreaInsetsDefault().bottom + nativeDefault.space.PX_16 };
+  obj.contentContainerStyle = obj;
+  const obj1 = { hasIcons: true, children: null };
+  const entries = Object.entries(require("DevToolsScreens").PerformanceTestingScreens);
+  obj1.children = entries.map((item) => {
+    [tmp] = item;
+    return jsx(
+      screenKey(5605).TableRow,
       {
         label: tmp2,
-        icon: closure_1_4(callback(closure_1_2[9]).TableRow.Icon, { IconComponent: tmp3 }),
+        icon: jsx(screenKey(5605).TableRow.Icon, { IconComponent: tmp3 }),
         arrow: true,
         onPress() {
-          let arr = closure_1_0;
-          if (null != closure_1_0.push) {
-            arr = arr.push(callback);
+          let arr = screenKey;
+          if (null != screenKey.push) {
+            arr = arr.push(screenKey);
           } else {
-            let obj = callback(closure_2_2[10]);
-            obj = { screenKey: null };
-            obj[0] = callback;
+            const obj = { screenKey };
             obj.navigateToDevTools(obj);
           }
         },
@@ -43,14 +46,6 @@ const memoResult = importAllResult.memo(function DevToolsPerformanceTestingScree
       tmp,
     );
   });
-  obj[2] = jsx(require("../../../../../design/components/TableRow/native/TableRowGroup.native.tsx").TableRowGroup, {
-    hasIcons: true,
-    children: null,
-  });
-  return <ScrollView paddingBottom={useSafeAreaInsetsDefault().bottom + ThemesDefault.space.PX_16} />;
+  obj.children = jsx(require("TableRowGroup").TableRowGroup, { hasIcons: true, children: null });
+  return <ScrollView paddingBottom={useSafeAreaInsetsDefault().bottom + nativeDefault.space.PX_16} />;
 });
-const result = require("set").fileFinishedImporting(
-  "modules/devtools/native/components/screens/DevToolsPerformanceTestingScreen.tsx",
-);
-
-export default memoResult;

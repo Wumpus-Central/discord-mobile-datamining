@@ -1,10 +1,9 @@
 // discord_app/modules/shared_space_warnings/VoiceChannelBlockedUserStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import handleChannelSelectDefault from "SharedSpacesWarningManager.tsx";
-import closure_2 from "../../stores/RelationshipStore.tsx";
-import closure_3 from "../../stores/VoiceStateStore.tsx";
-import set from "../../../_runtime/00002_set.js";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import SharedSpacesWarningManagerDefault from "SharedSpacesWarningManager.tsx";
+import RelationshipStore from "../../stores/RelationshipStore.tsx";
+import VoiceStateStore from "../../stores/VoiceStateStore.tsx";
 
 function init() {
   closure_4 = {};
@@ -12,19 +11,19 @@ function init() {
 }
 function handleRelationshipChange(relationship) {
   relationship = relationship.relationship;
-  const voiceStateForUser = authStore.getVoiceStateForUser(relationship.id);
+  const voiceStateForUser = VoiceStateStore.getVoiceStateForUser(relationship.id);
   let tmp2 = null != voiceStateForUser && null != voiceStateForUser.channelId;
   if (tmp2) {
     tmp2 = processUserInChannel(voiceStateForUser.channelId, relationship.id);
   }
   return tmp2;
 }
-function processUserInChannel(channelId, id) {
+function processUserInChannel(channelId, userId) {
   set = new Set(dependencyMap[channelId]);
-  const isBlockedResult = blocked.isBlocked(id);
+  const isBlockedResult = RelationshipStore.isBlocked(userId);
   if (isBlockedResult) {
-    if (!set.has(id)) {
-      set.add(id);
+    if (!set.has(userId)) {
+      set.add(userId);
       let flag = true;
       let flag2 = true;
     }
@@ -34,10 +33,10 @@ function processUserInChannel(channelId, id) {
       }
       const _Set = Set;
       const set1 = new Set(dependencyMap2[channelId]);
-      const isIgnoredResult = blocked.isIgnored(id);
+      const isIgnoredResult = RelationshipStore.isIgnored(userId);
       if (isIgnoredResult) {
-        if (!set1.has(id)) {
-          set1.add(id);
+        if (!set1.has(userId)) {
+          set1.add(userId);
           let flag3 = true;
           let flag4 = true;
         }
@@ -46,8 +45,10 @@ function processUserInChannel(channelId, id) {
             delete tmp[tmp2];
           }
           if (flag3) {
-            const result = handleChannelSelectDefault.handleBlockedOrIgnoredUserVoiceChannelJoin(channelId, id);
-            const obj4 = handleChannelSelectDefault;
+            const result = SharedSpacesWarningManagerDefault.handleBlockedOrIgnoredUserVoiceChannelJoin(
+              channelId,
+              userId,
+            );
           }
           return flag4;
         }
@@ -58,7 +59,7 @@ function processUserInChannel(channelId, id) {
       flag3 = flag;
       flag4 = flag2;
       if (!isIgnoredResult) {
-        flag4 = set1.delete(id);
+        flag4 = set1.delete(userId);
         flag3 = flag;
       }
     }
@@ -69,18 +70,18 @@ function processUserInChannel(channelId, id) {
   flag = false;
   flag2 = false;
   if (!isBlockedResult) {
-    flag2 = set.delete(id);
+    flag2 = set.delete(userId);
     flag = false;
   }
 }
-let closure_4 = {};
-let closure_5 = {};
+const dependencyMap = {};
+const dependencyMap2 = {};
 let set = new Set();
 const Store = initializeDefault.Store;
 class VoiceChannelBlockedUserStore extends Store {}
 const prototype = VoiceChannelBlockedUserStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_2, closure_3);
+  this.waitFor(RelationshipStore, VoiceStateStore);
 };
 prototype["getBlockedUsersForVoiceChannel"] = function getBlockedUsersForVoiceChannel(channelId) {
   let tmp = dependencyMap[channelId];
@@ -96,23 +97,19 @@ prototype["getIgnoredUsersForVoiceChannel"] = function getIgnoredUsersForVoiceCh
   }
   return tmp;
 };
-const voiceChannelBlockedUserStore = new VoiceChannelBlockedUserStore(dispatcherDefault, {
+const voiceChannelBlockedUserStore = new VoiceChannelBlockedUserStore(DispatcherDefault, {
   CONNECTION_OPEN: init,
   LOGOUT: init,
   OVERLAY_INITIALIZE: function handleOverlayInitialize() {
     init();
     let flag = false;
-    let values = Object.values(authStore.getAllVoiceStates());
+    let values = Object.values(VoiceStateStore.getAllVoiceStates());
     while (tmp3 !== undefined) {
       let _Object = Object;
       values = Object.values(tmp4);
-      let tmp6 = values;
-      let tmp7 = values;
       for (const item10026 of values) {
         let tmp8 = item10026;
         if (null != item10026.channelId) {
-          let tmp9 = processUserInChannel;
-          let tmp10 = item10026;
           let tmp11 = processUserInChannel(tmp8.channelId, tmp8.userId);
           if (!tmp11) {
             tmp11 = flag;
@@ -127,33 +124,34 @@ const voiceChannelBlockedUserStore = new VoiceChannelBlockedUserStore(dispatcher
   },
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
     voiceStates = voiceStates.voiceStates;
-    c0 = false;
+    closure_0 = false;
     const item = voiceStates.forEach((oldChannelId) => {
       if (null != oldChannelId.oldChannelId) {
-        if (null != closure_1_4[oldChannelId.oldChannelId]) {
-          if (closure_1_4[oldChannelId.oldChannelId] != null) {
+        if (null != dependencyMap[oldChannelId.oldChannelId]) {
+          if (dependencyMap[oldChannelId.oldChannelId] != null) {
             obj.delete(oldChannelId.userId);
           }
           closure_0 = true;
         }
-        if (null != closure_1_5[oldChannelId.oldChannelId]) {
-          if (closure_1_5[oldChannelId.oldChannelId] != null) {
+        if (null != dependencyMap2[oldChannelId.oldChannelId]) {
+          if (dependencyMap2[oldChannelId.oldChannelId] != null) {
             obj2.delete(oldChannelId.userId);
           }
           closure_0 = true;
         }
       }
       if (null != oldChannelId.channelId) {
-        closure_0 = closure_1_8(oldChannelId.channelId, oldChannelId.userId) || closure_0;
-        const tmp8 = closure_1_8(oldChannelId.channelId, oldChannelId.userId) || closure_0;
+        closure_0 = processUserInChannel(oldChannelId.channelId, oldChannelId.userId) || closure_0;
+        const tmp8 = processUserInChannel(oldChannelId.channelId, oldChannelId.userId) || closure_0;
       }
     });
-    return c0;
+    return closure_0;
   },
   RELATIONSHIP_ADD: handleRelationshipChange,
   RELATIONSHIP_REMOVE: handleRelationshipChange,
   RELATIONSHIP_UPDATE: handleRelationshipChange,
 });
-let result = set.fileFinishedImporting("modules/shared_space_warnings/VoiceChannelBlockedUserStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/shared_space_warnings/VoiceChannelBlockedUserStore.tsx");
 
 export default voiceChannelBlockedUserStore;

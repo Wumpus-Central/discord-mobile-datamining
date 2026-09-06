@@ -1,27 +1,35 @@
 // discord_app/modules/rtc/native/SecureFramesUserVerificationModal.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_7 from "../../../stores/ChannelStore.tsx";
-import closure_8 from "../../../stores/UserStore.tsx";
-import SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY from "../SecureFramesConstants.tsx";
-import ME from "../../../Constants.tsx";
-import { ANDROID_FOREGROUND_RIPPLE } from "../../../design/void/Form/native/FormConstants.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
+import native from "../../../design/void/native.tsx";
+import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
+import CircleCheckIcon from "../../../design/components/Icon/native/redesign/generated/CircleCheckIcon.tsx";
+import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
+import showUserProfileActionSheetDefault from "../../user_profile/native/showUserProfileActionSheet.tsx";
+import SecureFramesUtils from "../SecureFramesUtils.tsx";
+import SecureFramesTracking from "../SecureFramesTracking.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
+import ChannelStore from "../../../stores/ChannelStore.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
 
-const require = arg1;
-({ ActivityIndicator: c5, View: closure_6 } = get_ActivityIndicator);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+const SecureFramesConstants = fn(9152);
 ({
-  USER_VERIFICATION_CHUNK_SIZE: c9,
+  USER_VERIFICATION_CHUNK_SIZE: closure_9,
   USER_VERIFICATION_LENGTH: c10,
-  USER_VERIFICATION_NUM_COLUMNS: unpackModuleId,
+  USER_VERIFICATION_NUM_COLUMNS: closure_11,
   USER_VERIFIED_TOAST_KEY: closure_12,
-} = SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY);
-({ AnalyticsLocations: map1, AnalyticsSections: closure_14 } = ME);
+} = SecureFramesConstants);
+const Constants = fn(1074);
+({ AnalyticsLocations: map1, AnalyticsSections: closure_14 } = Constants);
+const ANDROID_FOREGROUND_RIPPLE = fn(1182).ANDROID_FOREGROUND_RIPPLE;
+const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-createCacheKey = {
+fn(4560);
+let createStyles = {
   container: null,
   footer: null,
   footerText: null,
@@ -30,42 +38,39 @@ createCacheKey = {
   code: null,
   helpMessage: null,
 };
-createCacheKey = {
+createStyles = {
   flex: 1,
   padding: 16,
   flexDirection: "column",
-  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flex: 1, gap: 16, justifyContent: "flex-end" };
-createCacheKey[2] = { textAlign: "center" };
-createCacheKey[3] = { height: 56, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
-createCacheKey[4] = { textAlign: "center" };
-createCacheKey[5] = { marginTop: 24 };
-createCacheKey[6] = { marginBottom: 16 };
-let closure_18 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/rtc/native/SecureFramesUserVerificationModal.tsx");
+createStyles.container = createStyles;
+createStyles.footer = { flex: 1, gap: 16, justifyContent: "flex-end" };
+createStyles.footerText = { textAlign: "center" };
+createStyles.header = { height: 56, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
+createStyles.subtitle = { textAlign: "center" };
+createStyles.code = { marginTop: 24 };
+createStyles.helpMessage = { marginBottom: 16 };
+let closure_18 = createStyles.createStyles(createStyles);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/rtc/native/SecureFramesUserVerificationModal.tsx");
 
 export default function SecureFramesUserVerificationModal(userId) {
   userId = userId.userId;
   const channelId = userId.channelId;
   let name;
-  let fingerprint;
-  let fingerprintUserKey;
-  let readableSecureFramesFingerprint;
-  let isUserSecureFramesVerified;
   let isCurrentUserKeyPersistent;
   let isOtherUserKeyPersistent;
   let enabled;
   let analyticsLocations;
-  const tmp = callback2();
+  const tmp = closure_18();
   let obj = userId(name[11]);
   let items = [isOtherUserKeyPersistent];
-  const stateFromStores = obj.useStateFromStores(items, () => isOtherUserKeyPersistent.getUser(userId));
-  obj1 = userId(name[11]);
+  const stateFromStores = obj.useStateFromStores(items, () => UserStore.getUser(userId));
+  let obj1 = userId(name[11]);
   let items1 = [isCurrentUserKeyPersistent];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => {
-    const channel = isCurrentUserKeyPersistent.getChannel(channelId);
+    const channel = ChannelStore.getChannel(channelId);
     let guildId;
     if (channel != null) {
       guildId = channel.getGuildId();
@@ -76,13 +81,17 @@ export default function SecureFramesUserVerificationModal(userId) {
   name = obj2.useName(stateFromStores1, null, stateFromStores);
   let obj3 = userId(name[13]);
   const secureFramesPairwiseFingerprint = obj3.useSecureFramesPairwiseFingerprint({ userId });
-  fingerprint = secureFramesPairwiseFingerprint.fingerprint;
-  fingerprintUserKey = secureFramesPairwiseFingerprint.fingerprintUserKey;
+  const fingerprint = secureFramesPairwiseFingerprint.fingerprint;
+  const fingerprintUserKey = secureFramesPairwiseFingerprint.fingerprintUserKey;
   let obj4 = userId(name[14]);
   obj = { fingerprintBase64: fingerprint, chunkSize: enabled, desiredLength: analyticsLocations };
-  readableSecureFramesFingerprint = obj4.useReadableSecureFramesFingerprint(obj);
+  const readableSecureFramesFingerprint = obj4.useReadableSecureFramesFingerprint(obj);
   let obj6 = userId(name[15]);
-  isUserSecureFramesVerified = obj6.useIsUserSecureFramesVerified({ userId, channelId, userKey: fingerprintUserKey });
+  const isUserSecureFramesVerified = obj6.useIsUserSecureFramesVerified({
+    userId,
+    channelId,
+    userKey: fingerprintUserKey,
+  });
   let obj7 = userId(name[16]);
   const isPersistentSecureFramesFingerprint = obj7.useIsPersistentSecureFramesFingerprint({
     userId,
@@ -93,57 +102,47 @@ export default function SecureFramesUserVerificationModal(userId) {
   const items2 = [channelId, fingerprintUserKey, isOtherUserKeyPersistent, name, userId];
   let callback = fingerprintUserKey.useCallback(() => {
     if (null != fingerprintUserKey) {
-      let obj = userId(name[17]);
-      obj.addVerification(userId, tmp, isOtherUserKeyPersistent, channelId, closure_1_13.E2EE_USER_VERIFY_MODAL);
-      let arr = channelId(name[18]);
+      let obj = SecureFramesUtils;
+      obj.addVerification(userId, tmp, isOtherUserKeyPersistent, channelId, map1.E2EE_USER_VERIFY_MODAL);
+      let arr = ModalActionCreatorsDefault;
       arr = arr.pop();
-      obj = { key: null, iconColor: "text-feedback-positive", IconComponent: null, content: null };
-      obj[0] = closure_1_12;
-      obj[2] = userId(name[20]).CircleCheckIcon;
-      const intl = userId(name[21]).intl;
-      obj = { username: null };
-      obj[0] = name;
-      obj[3] = intl.formatToPlainString(userId(name[21]).t.Gwu134, obj);
-      channelId(name[19]).open(obj);
-      const obj2 = channelId(name[19]);
+      obj = { key, iconColor: "text-feedback-positive", IconComponent: CircleCheckIcon.CircleCheckIcon, content: null };
+      const intl = util.intl;
+      obj = { username: name };
+      obj.content = intl.formatToPlainString(util.t.Gwu134, obj);
+      ToastActionCreatorsDefault.open(obj);
     }
   }, items2);
   const items3 = [fingerprintUserKey, isOtherUserKeyPersistent, userId];
   const callback1 = fingerprintUserKey.useCallback(() => {
     if (null != fingerprintUserKey) {
-      userId(name[17]).deleteVerification(userId, tmp, isOtherUserKeyPersistent);
-      let arr = channelId(name[18]);
+      SecureFramesUtils.deleteVerification(userId, tmp, isOtherUserKeyPersistent);
+      let arr = ModalActionCreatorsDefault;
       arr = arr.pop();
-      const obj = userId(name[17]);
     }
   }, items3);
   let obj8 = userId(name[22]);
   enabled = obj8.useSecureFramesDeeplinkExperiment({ location: "SecureFramesUserVerificationModal" }).enabled;
   const items4 = [channelId, readableSecureFramesFingerprint, fingerprint, enabled, userId];
-  callback2 = fingerprintUserKey.useCallback(() => {
+  const callback2 = fingerprintUserKey.useCallback(() => {
     if (null != fingerprint) {
       if (null != readableSecureFramesFingerprint) {
-        let obj = name;
-        let arr = channelId(name[18]);
+        let arr = ModalActionCreatorsDefault;
         arr = arr.pop();
-        let showShareActionSheet = userId;
-        obj = { userId: null, channelId: null };
-        obj[0] = userId;
-        obj[1] = channelId;
-        const result = userId(name[23]).trackE2EEUserVerificationShareClicked(obj);
+        let showShareActionSheet = require;
+        let obj = { userId, channelId };
+        const result = SecureFramesTracking.trackE2EEUserVerificationShareClicked(obj);
         if (enabled) {
-          let userVerificationDeeplink = showShareActionSheet(obj[17]).getUserVerificationDeeplink(tmp8, tmp);
-          const showShareActionSheetResult = showShareActionSheet(obj[17]);
+          let userVerificationDeeplink = showShareActionSheet(9150).getUserVerificationDeeplink(tmp8, tmp);
+          const showShareActionSheetResult = showShareActionSheet(9150);
         } else {
           userVerificationDeeplink = obj3.join(" ");
         }
-        const obj4 = userId(name[23]);
         tmp8 = userId;
-        showShareActionSheet = showShareActionSheet(obj[24]).showShareActionSheet;
-        obj = { message: null };
-        obj[0] = userVerificationDeeplink;
-        showShareActionSheet(obj, closure_1_14.SECURE_FRAMES_VOICE_BOTTOM_SHEET);
-        const showShareActionSheetResult1 = showShareActionSheet(obj[24]);
+        showShareActionSheet = showShareActionSheet(8361).showShareActionSheet;
+        obj = { message: userVerificationDeeplink };
+        showShareActionSheet(obj, constants.SECURE_FRAMES_VOICE_BOTTOM_SHEET);
+        const showShareActionSheetResult1 = showShareActionSheet(8361);
       }
       obj3 = readableSecureFramesFingerprint;
     }
@@ -151,9 +150,14 @@ export default function SecureFramesUserVerificationModal(userId) {
   analyticsLocations = channelId(name[25])().analyticsLocations;
   const items5 = [analyticsLocations, channelId, userId];
   const callback3 = fingerprintUserKey.useCallback(() => {
-    let arr = channelId(name[18]);
+    let arr = ModalActionCreatorsDefault;
     arr = arr.pop();
-    channelId(name[26])({ userId, channelId, isVoiceContext: true, sourceAnalyticsLocations: analyticsLocations });
+    showUserProfileActionSheetDefault({
+      userId,
+      channelId,
+      isVoiceContext: true,
+      sourceAnalyticsLocations: analyticsLocations,
+    });
   }, items5);
   let obj9 = userId(name[27]);
   obj = { channelId, userId, nickname: name, onAlertOpen: channelId(name[18]).pop };
@@ -162,14 +166,14 @@ export default function SecureFramesUserVerificationModal(userId) {
   const items7 = [isCurrentUserKeyPersistent, isOtherUserKeyPersistent, name];
   [tmp18, tmp19] = fingerprint(
     fingerprintUserKey.useMemo(() => {
-      const intl = userId(name[21]).intl;
+      const intl = util.intl;
       const string = intl.string;
-      const t = userId(name[21]).t;
+      const t = util.t;
       if (isUserSecureFramesVerified) {
-        const items = [string(t.UNUuem), userId(name[28]).BadgeColors.INFO];
+        const items = [string(t.UNUuem), native.BadgeColors.INFO];
         let items1 = items;
       } else {
-        items1 = [string(t.y2b7CA), userId(name[28]).BadgeColors.DANGER];
+        items1 = [string(t.y2b7CA), native.BadgeColors.DANGER];
       }
       return items1;
     }, items6),
@@ -177,18 +181,16 @@ export default function SecureFramesUserVerificationModal(userId) {
   );
   const items8 = [channelId, userId];
   const memo = fingerprintUserKey.useMemo(() => {
-    let obj = userId(name[17]);
-    obj = { isCurrentUserKeyPersistent, isOtherUserKeyPersistent, otherUserNickname: name };
+    const obj = { isCurrentUserKeyPersistent, isOtherUserKeyPersistent, otherUserNickname: name };
     return obj.getUserVerificationFooterText(obj);
   }, items7);
   const effect = fingerprintUserKey.useEffect(() => {
-    let obj = userId(name[23]);
-    obj = { userId, channelId };
+    const obj = { userId, channelId };
     const result = obj.trackE2EEUserVerificationViewed(obj);
   }, items8);
-  obj1 = { top: true, bottom: true, style: tmp.container, children: null };
-  obj2 = { style: tmp.header, children: null };
-  obj3 = {
+  const rect = { top: true, bottom: true, style: tmp.container, children: null };
+  obj1 = { style: tmp.header, children: null };
+  obj2 = {
     accessibilityRole: "button",
     accessibilityLabel: null,
     androidRippleConfig: null,
@@ -197,14 +199,14 @@ export default function SecureFramesUserVerificationModal(userId) {
     children: null,
   };
   let intl = userId(name[21]).intl;
-  obj3[1] = intl.string(userId(name[21]).t.cpT0Cq);
-  obj3[2] = ANDROID_FOREGROUND_RIPPLE;
-  obj3[4] = callback3;
-  obj3[5] = callback(userId(name[31]).ArrowLargeLeftIcon, { size: "md" });
-  const items9 = [callback(userId(name[30]).PressableOpacity, obj3)];
+  obj2.accessibilityLabel = intl.string(userId(name[21]).t.cpT0Cq);
+  obj2.androidRippleConfig = ANDROID_FOREGROUND_RIPPLE;
+  obj2.onPress = callback3;
+  obj2.children = closure_16(userId(name[31]).ArrowLargeLeftIcon, { size: "md" });
+  const items9 = [closure_16(userId(name[30]).PressableOpacity, obj2)];
   let tmp24Result = null != fingerprint && null != readableSecureFramesFingerprint;
   if (tmp24Result) {
-    obj4 = {
+    obj3 = {
       accessibilityRole: "button",
       accessibilityLabel: null,
       androidRippleConfig: null,
@@ -213,43 +215,43 @@ export default function SecureFramesUserVerificationModal(userId) {
       children: null,
     };
     const intl2 = tmp2(tmp3[21]).intl;
-    obj4[1] = intl2.string(tmp2(tmp3[21]).t.RDE0Sc);
-    obj4[2] = tmp25;
-    obj4[4] = callback2;
-    const obj5 = { variant: "text-md/semibold", color: "text-brand", children: null };
+    obj3.accessibilityLabel = intl2.string(tmp2(tmp3[21]).t.RDE0Sc);
+    obj3.androidRippleConfig = tmp25;
+    obj3.onPress = callback2;
+    obj4 = { variant: "text-md/semibold", color: "text-brand", children: null };
     const intl3 = tmp2(tmp3[21]).intl;
-    obj5[2] = intl3.string(tmp2(tmp3[21]).t.RDE0Sc);
-    obj4[5] = tmp24(tmp2(tmp3[32]).Text, obj5);
-    tmp24Result = tmp24(tmp2(tmp3[30]).PressableOpacity, obj4);
+    obj4.children = intl3.string(tmp2(tmp3[21]).t.RDE0Sc);
+    obj3.children = tmp24(tmp2(tmp3[32]).Text, obj4);
+    tmp24Result = tmp24(tmp2(tmp3[30]).PressableOpacity, obj3);
   }
   items9[1] = tmp24Result;
-  obj2[1] = items9;
-  const items10 = [closure_17(isUserSecureFramesVerified, obj2), , ,];
-  obj6 = { spacing: 8, justify: "center", align: "center", direction: "vertical", children: null };
-  obj7 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
+  obj1.children = items9;
+  const items10 = [closure_17(isUserSecureFramesVerified, obj1), , ,];
+  const obj5 = { spacing: 8, justify: "center", align: "center", direction: "vertical", children: null };
+  obj6 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
   const intl4 = tmp2(tmp3[21]).intl;
-  obj7[2] = intl4.string(userId(name[21]).t["/WPGnF"]);
-  const items11 = [callback(userId(name[32]).Text, obj7)];
-  obj8 = { style: tmp.subtitle, variant: "text-md/medium", color: "text-default", children: null };
+  obj6.children = intl4.string(userId(name[21]).t["/WPGnF"]);
+  const items11 = [closure_16(userId(name[32]).Text, obj6)];
+  obj7 = { style: tmp.subtitle, variant: "text-md/medium", color: "text-default", children: null };
   const intl5 = tmp2(tmp3[21]).intl;
-  obj8[3] = intl5.format(userId(name[21]).t.oc2kce, { username: name });
-  items11[1] = callback(userId(name[32]).Text, obj8);
-  obj6[4] = items11;
-  items10[1] = closure_17(userId(name[33]).Stack, obj6);
-  obj9 = { style: tmp.code, children: null };
-  const items12 = [callback(channelId(name[34]), { style: tmp.helpMessage, userId, userKey: fingerprintUserKey })];
-  const obj11 = { title: null, chunks: null, columns: null, trailing: null };
-  const obj10 = { style: tmp.helpMessage, userId, userKey: fingerprintUserKey };
+  obj7.children = intl5.format(userId(name[21]).t.oc2kce, { username: name });
+  items11[1] = closure_16(userId(name[32]).Text, obj7);
+  obj5.children = items11;
+  items10[1] = closure_17(userId(name[33]).Stack, obj5);
+  obj8 = { style: tmp.code, children: null };
+  obj9 = { style: tmp.helpMessage, userId, userKey: fingerprintUserKey };
+  const items12 = [closure_16(channelId(name[34]), obj9)];
+  const obj10 = { title: null, chunks: null, columns: null, trailing: null };
   const tmp17 = fingerprint(
     fingerprintUserKey.useMemo(() => {
-      const intl = userId(name[21]).intl;
+      const intl = util.intl;
       const string = intl.string;
-      const t = userId(name[21]).t;
+      const t = util.t;
       if (isUserSecureFramesVerified) {
-        const items = [string(t.UNUuem), userId(name[28]).BadgeColors.INFO];
+        const items = [string(t.UNUuem), native.BadgeColors.INFO];
         let items1 = items;
       } else {
-        items1 = [string(t.y2b7CA), userId(name[28]).BadgeColors.DANGER];
+        items1 = [string(t.y2b7CA), native.BadgeColors.DANGER];
       }
       return items1;
     }, items6),
@@ -257,24 +259,22 @@ export default function SecureFramesUserVerificationModal(userId) {
   );
   tmp25 = ANDROID_FOREGROUND_RIPPLE;
   const intl6 = tmp2(tmp3[21]).intl;
-  obj11[0] = intl6.string(userId(name[21]).t["/WPGnF"]);
-  obj11[1] = readableSecureFramesFingerprint;
-  obj11[2] = closure_11;
+  obj10.title = intl6.string(userId(name[21]).t["/WPGnF"]);
+  obj10.chunks = readableSecureFramesFingerprint;
+  obj10.columns = columns;
   if (null == readableSecureFramesFingerprint) {
     tmp24Result = tmp24(readableSecureFramesFingerprint, {});
   } else {
-    const obj12 = { color: null, text: null };
-    obj12[0] = tmp19;
-    obj12[1] = tmp18;
-    tmp24Result = tmp24(tmp2(tmp3[28]).TextBadge, obj12);
+    const obj11 = { color: tmp19, text: tmp18 };
+    tmp24Result = tmp24(tmp2(tmp3[28]).TextBadge, obj11);
   }
-  obj11[3] = tmp24Result;
-  items12[1] = callback(channelId(name[35]), obj11);
-  obj9[1] = items12;
-  items10[2] = closure_17(isUserSecureFramesVerified, obj9);
-  const obj13 = { style: tmp.footer, children: null };
+  obj10.trailing = tmp24Result;
+  items12[1] = closure_16(channelId(name[35]), obj10);
+  obj8.children = items12;
+  items10[2] = closure_17(isUserSecureFramesVerified, obj8);
+  const obj12 = { style: tmp.footer, children: null };
   const items13 = [
-    callback(userId(name[32]).Text, {
+    closure_16(userId(name[32]).Text, {
       style: tmp.footerText,
       variant: "text-xs/normal",
       color: "text-default",
@@ -285,11 +285,11 @@ export default function SecureFramesUserVerificationModal(userId) {
   if (!loading) {
     loading = isPersistentSecureFramesFingerprint.loading;
   }
-  const obj15 = { disabled: loading, variant: "primary", onPress: null, text: null };
+  const obj14 = { disabled: loading, variant: "primary", onPress: null, text: null };
   if (isUserSecureFramesVerified) {
     callback = callback1;
   }
-  obj15[2] = callback;
+  obj14.onPress = callback;
   const intl7 = tmp2(tmp3[21]).intl;
   let string = intl7.string;
   let t = tmp2(tmp3[21]).t;
@@ -298,10 +298,10 @@ export default function SecureFramesUserVerificationModal(userId) {
   } else {
     stringResult = string(t["0tvNAn"]);
   }
-  obj15[3] = stringResult;
-  items13[1] = callback(userId(name[36]).Button, obj15);
-  obj13[1] = items13;
-  items10[3] = closure_17(isUserSecureFramesVerified, obj13);
-  obj1[3] = items10;
-  return closure_17(userId(name[29]).SafeAreaPaddingView, obj1);
+  obj14.text = stringResult;
+  items13[1] = closure_16(userId(name[36]).Button, obj14);
+  obj12.children = items13;
+  items10[3] = closure_17(isUserSecureFramesVerified, obj12);
+  rect.children = items10;
+  return closure_17(userId(name[29]).SafeAreaPaddingView, rect);
 }

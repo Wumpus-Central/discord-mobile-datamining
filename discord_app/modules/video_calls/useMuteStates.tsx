@@ -1,32 +1,31 @@
 // discord_app/modules/video_calls/useMuteStates.tsx
-import closure_2 from "../impersonate/ImpersonateStore.tsx";
-import closure_3 from "../../stores/AuthenticationStore.tsx";
-import closure_4 from "../../stores/MediaEngineStore.tsx";
-import closure_5 from "../../stores/PermissionStore.tsx";
-import closure_6 from "../../stores/VoiceStateStore.tsx";
-import { Permissions } from "../../Constants.tsx";
+import ImpersonateStore from "../impersonate/ImpersonateStore.tsx";
+import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
+import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
+import PermissionStore from "../../stores/PermissionStore.tsx";
+import VoiceStateStore from "../../stores/VoiceStateStore.tsx";
 
-const require = arg1;
+const require = fn;
 function getMuteStates(voiceStateStore) {
   ({ channel, authenticationStore } = voiceStateStore);
   if (authenticationStore === undefined) {
-    authenticationStore = closure_3;
+    authenticationStore = AuthenticationStore;
   }
   voiceStateStore = voiceStateStore.voiceStateStore;
   if (voiceStateStore === undefined) {
-    voiceStateStore = closure_6;
+    voiceStateStore = VoiceStateStore;
   }
   let mediaEngineStore = voiceStateStore.mediaEngineStore;
   if (mediaEngineStore === undefined) {
-    mediaEngineStore = closure_4;
+    mediaEngineStore = MediaEngineStore;
   }
   let permissionStore = voiceStateStore.permissionStore;
   if (permissionStore === undefined) {
-    permissionStore = closure_5;
+    permissionStore = PermissionStore;
   }
   let impersonateStore = voiceStateStore.impersonateStore;
   if (impersonateStore === undefined) {
-    impersonateStore = closure_2;
+    impersonateStore = ImpersonateStore;
   }
   let voiceState = null;
   if (null != channel) {
@@ -53,7 +52,7 @@ function getMuteStates(voiceStateStore) {
   if (!suppress) {
     suppress = isViewingRolesResult;
   }
-  obj[1] = suppress;
+  obj.suppress = suppress;
   let flag;
   if (voiceState != null) {
     flag = voiceState.mute;
@@ -61,22 +60,24 @@ function getMuteStates(voiceStateStore) {
   if (flag == null) {
     flag = false;
   }
-  obj[2] = flag;
+  obj.mute = flag;
   return obj;
 }
-const result = require("set").fileFinishedImporting("modules/video_calls/useMuteStates.tsx");
+const Permissions = fn(1074).Permissions;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/useMuteStates.tsx");
 
-export default function useMuteStates(arg0) {
-  const _require = arg0;
-  const items = [closure_3, closure_6, closure_4, closure_5, closure_2];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () =>
-    closure_1_8({
-      channel: closure_0,
-      authenticationStore: closure_1_3,
-      voiceStateStore: closure_1_6,
-      mediaEngineStore: closure_1_4,
-      permissionStore: closure_1_5,
-      impersonateStore: closure_1_2,
+export default function useMuteStates(channel) {
+  _require = channel;
+  const items = [AuthenticationStore, VoiceStateStore, MediaEngineStore, PermissionStore, ImpersonateStore];
+  return require("initialize").useStateFromStoresObject(items, () =>
+    getMuteStates({
+      channel,
+      authenticationStore: AuthenticationStore,
+      voiceStateStore: VoiceStateStore,
+      mediaEngineStore: MediaEngineStore,
+      permissionStore: PermissionStore,
+      impersonateStore: ImpersonateStore,
     }),
   );
 }

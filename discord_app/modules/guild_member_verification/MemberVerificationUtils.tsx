@@ -1,12 +1,12 @@
 // discord_app/modules/guild_member_verification/MemberVerificationUtils.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
-import MAX_RESULTS_PER_PAGE from "MemberVerificationTypes.tsx";
-import items from "MemberVerificationConstants.tsx";
+import Constants from "../../Constants.tsx";
+import MemberVerificationTypes from "MemberVerificationTypes.tsx";
+import MemberVerificationConstants from "MemberVerificationConstants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-({ AUTOMATIC_APPROVAL_FORM_FIELDS: obj1, MANUAL_APPROVAL_FORM_FIELDS: c3 } = items);
-const GuildFeatures = ME.GuildFeatures;
-const result = set.fileFinishedImporting("modules/guild_member_verification/MemberVerificationUtils.tsx");
+({ AUTOMATIC_APPROVAL_FORM_FIELDS: c2, MANUAL_APPROVAL_FORM_FIELDS: c3 } = MemberVerificationConstants);
+const GuildFeatures = Constants.GuildFeatures;
+const result = size.fileFinishedImporting("modules/guild_member_verification/MemberVerificationUtils.tsx");
 
 export const isValidFormResponse = function isValidFormResponse(required) {
   ({ response, field_type } = required);
@@ -14,7 +14,7 @@ export const isValidFormResponse = function isValidFormResponse(required) {
     if (null == response) {
       return false;
     } else {
-      if (MAX_RESULTS_PER_PAGE.VerificationFormFieldTypes.TERMS !== field_type) {
+      if (MemberVerificationTypes.VerificationFormFieldTypes.TERMS !== field_type) {
         if (tmp4(4384).VerificationFormFieldTypes.VERIFICATION !== field_type) {
           if (tmp4(4384).VerificationFormFieldTypes.TEXT_INPUT !== field_type) {
             if (tmp4(4384).VerificationFormFieldTypes.PARAGRAPH !== field_type) {
@@ -41,7 +41,7 @@ export const isValidFormResponse = function isValidFormResponse(required) {
 };
 export const removeInternalFields = function removeInternalFields(arr) {
   return arr.filter(
-    (field_type) => field_type.field_type !== callback(table[2]).VerificationFormFieldTypes.VERIFICATION,
+    (field_type) => field_type.field_type !== MemberVerificationTypes.VerificationFormFieldTypes.VERIFICATION,
   );
 };
 export const isAutomaticApprovalFormField = function isAutomaticApprovalFormField(field_type) {

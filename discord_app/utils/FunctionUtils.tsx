@@ -1,7 +1,7 @@
 // discord_app/utils/FunctionUtils.tsx
-import set from "../../_runtime/00002_set.js";
+import size from "../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("utils/FunctionUtils.tsx");
+const result = size.fileFinishedImporting("utils/FunctionUtils.tsx");
 
 export const areArraysShallowlyEqual = function areArraysShallowlyEqual(arg0, arg1) {
   if (arg0 === arg1) {
@@ -26,10 +26,10 @@ export const areArraysShallowlyEqual = function areArraysShallowlyEqual(arg0, ar
 };
 export function cachedFunction(arg0) {
   closure_0 = arg0;
-  c1 = null;
-  c2 = null;
+  let items = null;
+  closure_2 = null;
   return () => {
-    const items = [...arguments];
+    items = [...arguments];
     let flag = true;
     if (items !== items) {
       flag = false;
@@ -65,7 +65,6 @@ export function cachedFunction(arg0) {
 }
 export const clearObject = function clearObject(obj) {
   for (const key10003 in arg0) {
-    let tmp3 = key10003;
     if (!arg0.hasOwnProperty(key10003)) {
       continue;
     } else {

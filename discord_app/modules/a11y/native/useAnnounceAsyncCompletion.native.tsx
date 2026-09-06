@@ -1,13 +1,14 @@
 // discord_app/modules/a11y/native/useAnnounceAsyncCompletion.native.tsx
-import closure_2 from "../../../../_runtime/00019_noop.js";
-import { AccessibilityInfo } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/a11y/native/useAnnounceAsyncCompletion.native.tsx");
+const require = fn;
+const AccessibilityInfo = fn(17).AccessibilityInfo;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/a11y/native/useAnnounceAsyncCompletion.native.tsx");
 
 export default function useAnnounceAsyncCompletion() {
-  closure_0 = React.useRef(null);
-  const effect = React.useEffect(
+  noop.useRef(null);
+  const effect = noop.useEffect(
     () => () => {
       const current = ref.current;
       if (current != null) {
@@ -17,12 +18,12 @@ export default function useAnnounceAsyncCompletion() {
     },
     [],
   );
-  return React.useCallback((intl, polite) => {
+  return noop.useCallback((intl, polite) => {
     let str = polite;
     if (polite === undefined) {
       str = "assertive";
     }
-    const AccessibilityAnnouncer = ref(closure_1_1[2]).AccessibilityAnnouncer;
+    const AccessibilityAnnouncer = ref(4411).AccessibilityAnnouncer;
     AccessibilityAnnouncer.announce(intl, str);
     if (obj.isIOS()) {
       if (tmpResult.getIsScreenReaderEnabled()) {
@@ -31,7 +32,6 @@ export default function useAnnounceAsyncCompletion() {
           current();
         }
         let resolved = new Promise((arg0) => {
-          closure_0 = arg0;
           const timeout = setTimeout(() => {
             const current = ref.current;
             let currentResult;
@@ -40,7 +40,7 @@ export default function useAnnounceAsyncCompletion() {
             }
             return currentResult;
           }, 1800);
-          closure_2 = closure_2_3.addEventListener("announcementFinished", (announcement) => {
+          closure_2 = AccessibilityInfo.addEventListener("announcementFinished", (event) => {
             if (tmp) {
               const current = ref.current;
               if (current != null) {
@@ -48,7 +48,7 @@ export default function useAnnounceAsyncCompletion() {
               }
             }
           });
-          closure_0.current = () => {
+          arg0.current = () => {
             clearTimeout(closure_1);
             closure_2.remove();
             ref.current = null;

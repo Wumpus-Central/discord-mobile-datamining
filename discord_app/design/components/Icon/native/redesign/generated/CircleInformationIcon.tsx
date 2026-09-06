@@ -1,18 +1,16 @@
 // discord_app/design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx
-import noopAll from "../../../../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import registerAsset from "../../../../../../../_runtime/04516_registerAsset.js";
-import registerAsset2 from "../../../../../../../_runtime/04517_registerAsset.js";
-import { View } from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
+import _mod4516 from "../../../../../../../_runtime/metro/04516__.js";
+import _mod4517 from "../../../../../../../_runtime/metro/04517__.js";
+import noop from "../../../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-const result = require("set").fileFinishedImporting(
-  "design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx",
-);
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx");
 
 export const CircleInformationIcon = function CircleInformationIcon(color) {
   ({ style, secondaryColor } = color);
@@ -21,19 +19,20 @@ export const CircleInformationIcon = function CircleInformationIcon(color) {
   }
   let INTERACTIVE_ICON_DEFAULT = color.color;
   if (INTERACTIVE_ICON_DEFAULT === undefined) {
-    INTERACTIVE_ICON_DEFAULT = ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT;
+    INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
-  const merged = Object.assign(color, Object.create(null));
+  const merged = Object.assign(color, Object.assign({ style: 0, secondaryColor: 0, color: 0 }));
   let obj = { children: null };
-  obj = { source: registerAsset, color: secondaryColor, style };
+  obj = { source: _mod4516, color: secondaryColor, style };
   const merged1 = Object.assign(merged);
-  const items = [callback(BaseIconImage.BaseIconImage, obj)];
-  obj = { source: registerAsset2, color: INTERACTIVE_ICON_DEFAULT, style: items2 };
+  const items = [React4(BaseIconImage.BaseIconImage, obj)];
+  obj = { source: _mod4517, color: INTERACTIVE_ICON_DEFAULT, style: null };
   const items1 = [style];
-  items2 = [];
+  const items2 = [];
   items2[HermesBuiltin.arraySpread(items1.flat(), 0)] = { position: "absolute", top: 0 };
+  obj.style = items2;
   const merged2 = Object.assign(merged);
-  items[1] = callback(BaseIconImage.BaseIconImage, obj);
-  obj[0] = items;
-  return callback2(View, obj);
+  items[1] = React4(BaseIconImage.BaseIconImage, obj);
+  obj.children = items;
+  return hasOwnProperty(View, obj);
 };

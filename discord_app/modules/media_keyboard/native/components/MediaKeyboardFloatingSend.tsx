@@ -1,104 +1,108 @@
 // discord_app/modules/media_keyboard/native/components/MediaKeyboardFloatingSend.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
-import { StyleSheet } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../../stores/UploadAttachmentStore.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import _modDef672 from "../../../../../_runtime/metro/00672__.js";
+import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import UploadAttachmentStore from "../../../../stores/UploadAttachmentStore.tsx";
 
-const require = arg1;
-let c4 = importAllResult;
-({ jsx: closure_6, jsxs: error } = jsxProd);
+require = fn;
+const StyleSheet = fn(17).StyleSheet;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+fn(4560);
 let obj = { sendContainer: null, gradient: null };
 obj = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.top = undefined;
-const merged1 = Object.assign(ThemesDefault.shadows.SHADOW_HIGH);
-obj[0] = obj;
-createCacheKey = {};
+const merged1 = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
+obj.sendContainer = obj;
+const createStyles = {};
 const merged2 = Object.assign(StyleSheet.absoluteFillObject);
-createCacheKey.color = ThemesDefault.colors.BACKGROUND_SURFACE_HIGH;
-obj[1] = createCacheKey;
-let closure_8 = createCacheKey.createStyles(obj);
-let closure_9 = {
+createStyles.color = nativeDefault.colors.BACKGROUND_SURFACE_HIGH;
+obj.gradient = createStyles;
+let closure_8 = createStyles.createStyles(obj);
+const __initData = {
   code: "function MediaKeyboardFloatingSendTsx1(){const{animatedIndex,INDEX_HEADER_CHANGE_THRESHOLD,hasUploads}=this.__closure;const isSheetOpen=animatedIndex.get()>INDEX_HEADER_CHANGE_THRESHOLD;return isSheetOpen&&hasUploads;}",
 };
-let closure_10 = {
+const __initData2 = {
   code: "function MediaKeyboardFloatingSendTsx2(visible){const{isSendVisibleSharedValue}=this.__closure;isSendVisibleSharedValue.set(visible);}",
 };
-let closure_11 = {
+const __initData3 = {
   code: "function MediaKeyboardFloatingSendTsx3(){const{insetFab,tokens,withSpring,sendVisibleSharedValue}=this.__closure;return{height:insetFab+tokens.space.PX_64+tokens.space.PX_32,opacity:withSpring(sendVisibleSharedValue.get()?1:0)};}",
 };
-let closure_12 = {
+const __initData4 = {
   code: "function MediaKeyboardFloatingSendTsx4(){const{sendVisibleSharedValue}=this.__closure;return{pointerEvents:sendVisibleSharedValue.get()?'box-none':'none'};}",
 };
-const memoResult = importAllResult.memo(
-  importAllResult.forwardRef(function MediaKeyboardFloatingSendInner(onSend, ref) {
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardFloatingSend.tsx");
+
+export default noop.memo(
+  noop.forwardRef(function MediaKeyboardFloatingSendInner(onSend, ref) {
     ({ animatedIndex, channelId, draftType } = onSend);
-    animatedIndex = undefined;
-    channelId = undefined;
-    draftType = undefined;
+    importDefault = undefined;
+    bottom = undefined;
     let sharedValue;
-    const tmp = callback3();
-    animatedIndex = tmp;
-    let obj = sharedValue;
-    const tmp4 = channelId(draftType[9])();
-    [bottom, channelId] = sharedValue(sharedValue.useState(null), 2);
+    const tmp = closure_8();
+    _require = tmp;
+    let obj = noop;
+    const tmp4 = require("useSafeAreaInsets")();
+    [bottom, c1] = sharedValue(noop.useState(null), 2);
     if (bottom == null) {
       bottom = tmp4.bottom;
     }
-    draftType = bottom;
-    sharedValue = undefined;
-    sharedValue = undefined;
-    obj1 = animatedIndex(tmp3[7]);
-    let items = [closure_5];
+    closure_129_0 = animatedIndex;
+    closure_129_1 = channelId;
+    closure_129_2 = draftType;
+    let obj1 = require("initialize");
+    let items = [UploadAttachmentStore];
     const items1 = [channelId, draftType];
     const stateFromStores = obj1.useStateFromStores(
       items,
-      () => closure_1_5.getUploadCount(channelId, draftType) > 0,
+      () => UploadAttachmentStore.getUploadCount(c1, bottom) > 0,
       items1,
     );
-    sharedValue = stateFromStores;
-    let obj2 = animatedIndex(tmp3[8]);
+    closure_129_3 = stateFromStores;
+    let obj2 = require("ReanimatedRexport");
     sharedValue = obj2.useSharedValue(false);
-    const tmp5 = sharedValue(sharedValue.useState(null), 2);
+    closure_129_4 = sharedValue;
+    const tmp5 = sharedValue(noop.useState(null), 2);
     const fn = function c() {
-      return animatedIndex.get() > 0.7 && sharedValue;
+      return closure_0.get() > 0.7 && sharedValue;
     };
     fn.__closure = { animatedIndex, INDEX_HEADER_CHANGE_THRESHOLD: 0.7, hasUploads: stateFromStores };
     fn.__workletHash = 12206635621152;
-    fn.__initData = closure_9;
+    fn.__initData = __initData;
     const fn2 = function l(arg0) {
-      const result = sharedValue.set(arg0);
+      const result = noop.set(arg0);
     };
     fn2.__closure = { isSendVisibleSharedValue: sharedValue };
     fn2.__workletHash = 10753585819648;
-    fn2.__initData = closure_10;
-    const animatedReaction = animatedIndex(draftType[8]).useAnimatedReaction(fn, fn2);
-    const obj4 = animatedIndex(draftType[8]);
+    fn2.__initData = __initData2;
+    const animatedReaction = require("ReanimatedRexport").useAnimatedReaction(fn, fn2);
+    const obj4 = require("ReanimatedRexport");
     const fn3 = function y() {
       const obj = { height: null, opacity: null };
-      const sum = draftType + channelId(draftType[6]).space.PX_64;
-      obj[0] = sum + channelId(draftType[6]).space.PX_32;
+      const sum = bottom + nativeDefault.space.PX_64;
+      obj.height = sum + nativeDefault.space.PX_32;
       let num = 0;
       if (sharedValue.get()) {
         num = 1;
       }
-      obj[1] = animatedIndex(draftType[10]).withSpring(num);
+      obj.opacity = spring.withSpring(num);
       return obj;
     };
     obj = {
       insetFab: bottom,
       tokens: tmp2(tmp3[6]),
-      withSpring: animatedIndex(tmp3[10]).withSpring,
+      withSpring: require("spring").withSpring,
       sendVisibleSharedValue: sharedValue,
     };
     fn3.__closure = obj;
     fn3.__workletHash = 6402761213297;
-    fn3.__initData = closure_11;
-    const animatedStyle = animatedIndex(draftType[8]).useAnimatedStyle(fn3);
-    const obj5 = animatedIndex(draftType[8]);
+    fn3.__initData = __initData3;
+    const animatedStyle = require("ReanimatedRexport").useAnimatedStyle(fn3);
+    const obj5 = require("ReanimatedRexport");
     const fn4 = function f() {
       let pointerEvents = "none";
       if (sharedValue.get()) {
@@ -108,39 +112,35 @@ const memoResult = importAllResult.memo(
     };
     fn4.__closure = { sendVisibleSharedValue: sharedValue };
     fn4.__workletHash = 1097586248797;
-    fn4.__initData = closure_12;
+    fn4.__initData = __initData4;
     const items2 = [tmp.gradient.color];
-    const animatedProps = animatedIndex(draftType[8]).useAnimatedProps(fn4);
+    const animatedProps = require("ReanimatedRexport").useAnimatedProps(fn4);
     const memo = obj.useMemo(() => {
       const obj = { start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, colors: null };
-      const obj2 = channelId(draftType[11])(animatedIndex.gradient.color);
-      const items = [channelId(draftType[11])(animatedIndex.gradient.color).alpha(0).hex()];
-      const alphaResult = channelId(draftType[11])(animatedIndex.gradient.color).alpha(0);
-      items[1] = channelId(draftType[11])(animatedIndex.gradient.color).hex();
-      obj[2] = items;
+      const obj2 = _modDef672(closure_0.gradient.color);
+      const items = [_modDef672(closure_0.gradient.color).alpha(0).hex()];
+      const alphaResult = _modDef672(closure_0.gradient.color).alpha(0);
+      items[1] = _modDef672(closure_0.gradient.color).hex();
+      obj.colors = items;
       return obj;
     }, items2);
-    const imperativeHandle = obj.useImperativeHandle(ref, () => ({ setInsetFab: channelId }));
-    obj = { style: items3, animatedProps, children: null };
-    items3 = [animatedStyle, tmp.sendContainer];
+    const imperativeHandle = obj.useImperativeHandle(ref, () => ({ setInsetFab }));
+    obj = { style: null, animatedProps, children: null };
+    const items3 = [animatedStyle, tmp.sendContainer];
+    obj.style = items3;
     obj1 = { style: tmp.gradient };
-    const obj7 = animatedIndex(draftType[8]);
+    const obj7 = require("ReanimatedRexport");
     const merged = Object.assign(memo);
     obj1.pointerEvents = "none";
-    const items4 = [callback(channelId(draftType[12]), obj1)];
+    const items4 = [closure_6(require("LinearGradient"), obj1)];
     obj2 = { accessibilityLabel: null, icon: null, onPress: null, positionBottom: null };
-    const intl = animatedIndex(tmp3[14]).intl;
-    obj2[0] = intl.string(animatedIndex(draftType[14]).t.TXNS7S);
-    obj2[1] = callback(animatedIndex(draftType[15]).SendMessageIcon, {});
-    obj2[2] = onSend.onSend;
-    obj2[3] = bottom;
-    items4[1] = callback(animatedIndex(draftType[13]).FloatingActionButton, obj2);
-    obj[2] = items4;
-    return callback2(channelId(draftType[8]).View, obj);
+    const intl = require("util").intl;
+    obj2.accessibilityLabel = intl.string(require("util").t.TXNS7S);
+    obj2.icon = closure_6(require("SendMessageIcon").SendMessageIcon, {});
+    obj2.onPress = onSend.onSend;
+    obj2.positionBottom = bottom;
+    items4[1] = closure_6(require("FloatingActionButton").FloatingActionButton, obj2);
+    obj.children = items4;
+    return closure_7(require("ReanimatedRexport").View, obj);
   }),
 );
-let result = require("set").fileFinishedImporting(
-  "modules/media_keyboard/native/components/MediaKeyboardFloatingSend.tsx",
-);
-
-export default memoResult;

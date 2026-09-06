@@ -1,211 +1,192 @@
 // discord_app/modules/channel/useCreateChannelSubmit.tsx
-import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_5 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_6 from "../../../_runtime/00019_noop.js";
-import ME from "../../Constants.tsx";
+import CreateChannelActionCreatorsDefault from "../../actions/CreateChannelActionCreators.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import noop from "../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-({ ChannelTypes: error, Permissions: closure_8 } = ME);
-let obj = { PREMIUM_CHANNEL: 0, [0]: "PREMIUM_CHANNEL" };
-const result = require("set").fileFinishedImporting("modules/channel/useCreateChannelSubmit.tsx");
+const require = fn;
+const Constants = fn(1074);
+({ ChannelTypes: closure_7, Permissions: closure_8 } = Constants);
+const CreateChannelMode = { PREMIUM_CHANNEL: 0, [0]: "PREMIUM_CHANNEL" };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/channel/useCreateChannelSubmit.tsx");
 
 export default function useCreateChannelSubmit(arg0) {
-  closure_0 = arg0;
-  [tmp2, importDefault] = callback2(React.useState(false), 2);
-  const tmp3 = callback2(React.useState({}), 2);
+  [tmp2, importDefault] = _slicedToArray(noop.useState(false), 2);
+  const tmp3 = _slicedToArray(noop.useState({}), 2);
   closure_2 = tmp3[1];
-  closure_0 = undefined;
-  closure_0 = callback((arg0) => {
-    closure_0 = arg0;
-    c7 = 0;
-    c8 = 0;
-    c6 = 0;
-    const iter = (function* (arg0) {
-      if (c8 === 2) {
-        c8 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp7 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+  closure_0 = asyncGeneratorStep(async (arg0, value) => {
+    if (c8 === 2) {
+      c8 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp7 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          c8 = 2;
-          if (0 === arr) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c8 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              c4 = tmp4;
-              c3 = tmp8;
-              arr = undefined;
-              closure_1 = undefined;
-              let callback;
-              c3 = undefined;
-              c4 = undefined;
-              c5 = undefined;
-              c6 = undefined;
-              arr = undefined;
-              c8 = undefined;
-              ({
-                overwrites: c0,
-                bitrate: closure_1,
-                userLimit: closure_2,
-                createMode: c3,
-                guildId: c4,
-                name: c5,
-                channelType: c6,
-                categoryId: arr,
-                applicationId: c8,
-              } = arr);
-              let body;
-              closure_10 = undefined;
-              let id;
-              let guild_id;
-              arr = 1;
-              c8 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp8) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c8 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              if (closure_1_3 === closure_2_9.PREMIUM_CHANNEL) {
-                const obj2 = { id: null, type: null, deny: null, allow: null };
-                obj2[0] = c4;
-                obj2[1] = arr(closure_2_3[4]).PermissionOverwriteType.ROLE;
-                obj2[2] = closure_2_8.VIEW_CHANNEL;
-                arr = closure_2_3;
-                obj2[3] = callback(closure_2_3[5]).getFlag(0);
-                arr = arr.push(obj2);
-                const obj10 = callback(closure_2_3[5]);
-              }
-              closure_1_1(true);
-              c6 = 2;
-              obj1 = closure_2_1(closure_2_3[6]);
-              const obj3 = {
-                guildId: null,
-                type: null,
-                name: null,
-                permissionOverwrites: null,
-                bitrate: null,
-                userLimit: null,
-                parentId: null,
-                applicationId: null,
-              };
-              obj3[0] = c4;
-              obj3[1] = c6;
-              obj3[2] = c5;
-              obj3[3] = arr;
-              obj3[4] = closure_1;
-              obj3[5] = callback;
-              let tmp60 = null;
-              if (c6 !== closure_2_7.GUILD_CATEGORY) {
-                tmp60 = closure_2_7;
-              }
-              obj3[6] = tmp60;
-              obj3[7] = closure_2_8;
-              arr = 4;
-              c8 = 1;
-              const obj4 = { value: null, done: false };
-              obj4[0] = obj1.createChannel(obj3);
-              return obj4;
-            }
-          } else if (2 === tmp8) {
-            c6 = 0;
-            closure_1_1(false);
-            throw c5;
-          } else {
-            if (3 === tmp8) {
-              c6 = 1;
-              let body2 = c5;
-              const AccessibilityAnnouncer = arr(closure_2_3[7]).AccessibilityAnnouncer;
-              const intl = arr(closure_2_3[8]).intl;
-              AccessibilityAnnouncer.announce(intl.string(arr(closure_2_3[8]).t["0SbUzm"]));
-              body = body2.body;
-              let errors;
-              if (body != null) {
-                errors = body.errors;
-              }
-              closure_1 = errors;
-              if (errors == null) {
-                closure_1 = {};
-              }
-              closure_1_2(closure_1);
-              c6 = 0;
-              closure_1_1(false);
-              c8 = 3;
-              const tmp32 = closure_1_2;
-            } else if (arg0 === 1) {
-              c8 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              body = arg1;
-              if (null != body) {
-                body2 = body.body;
-                callback = body2;
-                if (body2 == null) {
-                  callback = {};
-                }
-                closure_10 = callback;
-                id = closure_10.id;
-                guild_id = closure_10.guild_id;
-                if (null != id) {
-                  const AccessibilityAnnouncer2 = arr(closure_2_3[7]).AccessibilityAnnouncer;
-                  const intl2 = arr(closure_2_3[8]).intl;
-                  const obj5 = { name: null };
-                  obj5[0] = c5;
-                  AccessibilityAnnouncer2.announce(intl2.formatToPlainString(arr(closure_2_3[8]).t.Wke70b, obj5));
-                  if (arr != null) {
-                    tmp87(closure_1_11, closure_1_12);
-                  }
-                }
-              }
-              c6 = 1;
-            }
-            c6 = 0;
-            closure_1_1(false);
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c8 = 2;
+        if (0 === c7) {
+          if (arg0 === 1) {
             c8 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            throw value;
+          } else if (arg0 === 2) {
+            c8 = 3;
+            obj = { value, done: true };
             return obj;
+          } else {
+            closure_4 = tmp4;
+            closure_3 = tmp8;
+            closure_131_0 = undefined;
+            closure_131_1 = undefined;
+            closure_131_2 = undefined;
+            closure_131_3 = undefined;
+            closure_131_4 = undefined;
+            closure_131_5 = undefined;
+            closure_131_6 = undefined;
+            closure_131_7 = undefined;
+            closure_131_8 = undefined;
+            ({
+              overwrites: closure_131_0,
+              bitrate: closure_131_1,
+              userLimit: closure_131_2,
+              createMode: closure_131_3,
+              guildId: closure_131_4,
+              name: closure_131_5,
+              channelType: closure_131_6,
+              categoryId: closure_131_7,
+              applicationId: closure_131_8,
+            } = closure_0);
+            closure_131_9 = undefined;
+            closure_131_10 = undefined;
+            let id;
+            let guild_id;
+            c7 = 1;
+            c8 = 1;
+            return { value: "PX_16", done: true };
           }
-        } catch (tmp64) {
-          c5 = tmp64;
-          if (tmp5 === c6) {
-            c8 = tmp3;
-            throw tmp64;
-          } else if (tmp2 !== tmp66) {
-            arr = tmp3;
+        } else if (1 === tmp8) {
+          if (arg0 === 1) {
+            c8 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c8 = 3;
+            let obj1 = { value, done: true };
+            return obj1;
+          } else {
+            if (closure_131_3 === constants3.PREMIUM_CHANNEL) {
+              const obj2 = {
+                id: closure_131_4,
+                type: closure_0(1894).PermissionOverwriteType.ROLE,
+                deny: constants2.VIEW_CHANNEL,
+                allow: closure_2(1086).getFlag(0),
+              };
+              closure_131_0.push(obj2);
+              const obj10 = closure_2(1086);
+            }
+            closure_1(true);
+            c6 = 2;
+            obj1 = CreateChannelActionCreatorsDefault;
+            const obj3 = {
+              guildId: closure_131_4,
+              type: closure_131_6,
+              name: closure_131_5,
+              permissionOverwrites: closure_131_0,
+              bitrate: closure_131_1,
+              userLimit: closure_131_2,
+              parentId: null,
+              applicationId: null,
+            };
+            let tmp60 = null;
+            if (closure_131_6 !== constants.GUILD_CATEGORY) {
+              tmp60 = closure_131_7;
+            }
+            obj3.parentId = tmp60;
+            obj3.applicationId = closure_131_8;
+            c7 = 4;
+            c8 = 1;
+            const obj4 = { value: obj1.createChannel(obj3), done: false };
+            return obj4;
           }
+        } else if (2 === tmp8) {
+          c6 = 0;
+          closure_1(false);
+          throw closure_5;
+        } else {
+          if (3 === tmp8) {
+            c6 = 1;
+            closure_131_13 = closure_5;
+            const AccessibilityAnnouncer = closure_0(4411).AccessibilityAnnouncer;
+            const intl = closure_0(1114).intl;
+            AccessibilityAnnouncer.announce(intl.string(closure_0(1114).t["0SbUzm"]));
+            const body = closure_131_13.body;
+            let errors;
+            if (body != null) {
+              errors = body.errors;
+            }
+            closure_1 = errors;
+            if (errors == null) {
+              closure_1 = {};
+            }
+            closure_2(closure_1);
+            c6 = 0;
+            closure_1(false);
+            c8 = 3;
+          } else if (arg0 === 1) {
+            c8 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            closure_131_9 = value;
+            if (null != closure_131_9) {
+              const body2 = closure_131_9.body;
+              closure_2 = body2;
+              if (body2 == null) {
+                closure_2 = {};
+              }
+              closure_131_10 = closure_2;
+              id = closure_131_10.id;
+              guild_id = closure_131_10.guild_id;
+              if (null != id) {
+                const AccessibilityAnnouncer2 = closure_0(4411).AccessibilityAnnouncer;
+                const intl2 = closure_0(1114).intl;
+                const obj5 = { name: closure_131_5 };
+                AccessibilityAnnouncer2.announce(intl2.formatToPlainString(closure_0(1114).t.Wke70b, obj5));
+                if (closure_0 != null) {
+                  tmp86(id, guild_id);
+                }
+              }
+            }
+            c6 = 1;
+          }
+          c6 = 0;
+          closure_1(false);
+          c8 = 3;
+          obj = { value, done: true };
+          return obj;
+        }
+      } catch (tmp64) {
+        closure_5 = tmp64;
+        if (tmp5 === c6) {
+          c8 = tmp3;
+          throw tmp64;
+        } else if (tmp2 === tmp66) {
+          c7 = tmp;
+        } else {
+          c7 = tmp3;
         }
       }
-    })();
-    iter.next();
-    return iter;
+    }
   });
   const items = [arg0];
   const items1 = [
     tmp2,
     tmp3[0],
-    React.useCallback(function () {
+    noop.useCallback(function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -218,4 +199,4 @@ export default function useCreateChannelSubmit(arg0) {
   ];
   return items1;
 }
-export const CreateChannelMode = obj;
+export { CreateChannelMode };

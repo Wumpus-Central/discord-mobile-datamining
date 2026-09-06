@@ -1,36 +1,35 @@
 // discord_app/modules/activities/useActivityShelfItemsSorting.tsx
-import closure_3 from "../../../_runtime/00019_noop.js";
+import noop from "../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/activities/useActivityShelfItemsSorting.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/useActivityShelfItemsSorting.tsx");
 
 export default function useActivityShelfItemsSorting(arg0) {
-  const _require = arg0;
+  _require = arg0;
   const FrecencyUserSettingsActionCreators =
-    require("../user_settings/UserSettingsProtoActionCreators.tsx").FrecencyUserSettingsActionCreators;
+    require("UserSettingsProtoActionCreators").FrecencyUserSettingsActionCreators;
   const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
   let items = [arg0];
-  return React.useMemo(() => {
+  return noop.useMemo(() => {
     let items = [];
-    let items2 = items;
-    const item = items2.forEach((application) => items2.push(application.application.id));
+    const item = closure_0.forEach((application) => items.push(application.application.id));
     const items1 = [...items];
     const sorted = items1.sort((arg0, arg1) => {
-      items2 = arg0;
+      closure_0 = arg0;
       closure_1 = arg1;
       let num = 1;
-      if (findIndexResult < items2.findIndex((arg0) => arg0 === closure_1)) {
+      if (findIndexResult < items.findIndex((item) => item === closure_1)) {
         num = -1;
       }
       return num;
     });
-    items2 = undefined;
-    c1 = undefined;
-    items2 = [...items2];
-    c1 = 0;
-    const item1 = items1.forEach((arg0) => {
-      let items = arg0;
-      const findIndexResult = items.findIndex((application) => application.application.id === items);
+    const items2 = [...closure_0];
+    items = items2;
+    closure_1 = 0;
+    const item1 = items1.forEach((item) => {
+      closure_0 = item;
+      const findIndexResult = items.findIndex((application) => application.application.id === closure_0);
       if (-1 !== findIndexResult) {
         items.splice(findIndexResult, 1);
         items = [];
@@ -40,36 +39,35 @@ export default function useActivityShelfItemsSorting(arg0) {
         closure_1 = closure_1 + 1;
       }
     });
-    const mapped = items2.map((arg0, arg1) => {
-      const items = [arg0, arg1];
+    const mapped = items.map((item, index) => {
+      items = [item, index];
       return items;
     });
-    const found = mapped.filter((arg0) => {
-      [tmp] = arg0;
+    const found = mapped.filter((item) => {
+      [tmp] = item;
       const embeddedActivityConfig = tmp.application.embeddedActivityConfig;
       let label_type;
       if (embeddedActivityConfig != null) {
-        const obj = items2(1115);
-        const tmp7 = embeddedActivityConfig.client_platform_config[v0(9410)(undefined, obj.getOS(obj))];
+        const obj = items(1115);
+        const tmp7 = embeddedActivityConfig.client_platform_config[closure_1(9410)(undefined, obj.getOS(obj))];
         if (tmp7 != null) {
           label_type = tmp7.label_type;
         }
-        const tmp5 = v0(9410);
+        const tmp5 = closure_1(9410);
       }
       let tmp8 = null != label_type;
       if (tmp8) {
         tmp8 =
-          label_type === items2(1894).EmbeddedActivityLabelTypes.NEW ||
-          label_type === items2(1894).EmbeddedActivityLabelTypes.UPDATED;
+          label_type === items(1894).EmbeddedActivityLabelTypes.NEW ||
+          label_type === items(1894).EmbeddedActivityLabelTypes.UPDATED;
         const tmp11 =
-          label_type === items2(1894).EmbeddedActivityLabelTypes.NEW ||
-          label_type === items2(1894).EmbeddedActivityLabelTypes.UPDATED;
-        const tmp9 = items2;
+          label_type === items(1894).EmbeddedActivityLabelTypes.NEW ||
+          label_type === items(1894).EmbeddedActivityLabelTypes.UPDATED;
       }
       return tmp8;
     });
-    const item2 = found.forEach((arg0) => {
-      [tmp, tmp2] = arg0;
+    const item2 = found.forEach((item) => {
+      [tmp, tmp2] = item;
       let diff = tmp2;
       if (null != tmp.application.embeddedActivityConfig) {
         diff = tmp2;
@@ -85,6 +83,6 @@ export default function useActivityShelfItemsSorting(arg0) {
         arraySpreadResult = HermesBuiltin.arraySpread(items.slice(diff), arraySpreadResult + 1);
       }
     });
-    return items2;
+    return items;
   }, items);
 }

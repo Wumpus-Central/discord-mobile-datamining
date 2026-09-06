@@ -1,10 +1,9 @@
 // discord_app/modules/experiments/apex/ApexTypes.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/experiments/apex/ApexTypes.tsx");
-for (const key10018 in require("UnitType")) {
-  let tmp3 = key10018;
-  arg5[key10018] = require("UnitType")[key10018];
+const result = size.fileFinishedImporting("modules/experiments/apex/ApexTypes.tsx");
+for (const key10018 in require("ApexTypes")) {
+  arg5[key10018] = require("ApexTypes")[key10018];
   continue;
 }
 

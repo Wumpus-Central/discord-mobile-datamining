@@ -1,21 +1,20 @@
 // discord_app/modules/guild_communication_disabled/CommunicationDisabledManager.tsx
-import set from "../../../_runtime/00002_set.js";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import isCommunicationDisabled from "CommunicationDisabledUtils.tsx";
-import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
-import trackCommunicationDisabled from "../../stores/GuildMemberStore.tsx";
-import closure_5 from "../../stores/GuildMemberStore.tsx";
-import closure_6 from "../../stores/UserStore.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import CommunicationDisabledUtils from "CommunicationDisabledUtils.tsx";
+import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
+import UserStore from "../../stores/UserStore.tsx";
+import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-function clearGuildMemberTimeout(closure_2, closure_1) {
-  member = member.getMember(closure_2, closure_1);
-  user = user.getUser(closure_1);
+function clearGuildMemberTimeout(guildId, arg1) {
+  const member = GuildMemberStore.getMember(guildId, arg1);
+  const user = UserStore.getUser(arg1);
   if (null != member) {
     if (null != user) {
       if (!obj6.isMemberCommunicationDisabled(member)) {
         let obj = {};
         const merged = Object.assign(member);
-        obj.guildId = closure_2;
+        obj.guildId = guildId;
         let username = member.nick;
         if (username == null) {
           username = user.username;
@@ -45,19 +44,17 @@ function clearGuildMemberTimeout(closure_2, closure_1) {
         obj.phone = phone;
         obj.user = obj;
         obj.communicationDisabledUntil = null;
-        obj1 = { type: "GUILD_MEMBER_UPDATE" };
+        const obj1 = { type: "GUILD_MEMBER_UPDATE" };
         const merged3 = Object.assign(obj);
-        dispatcherDefault.dispatch(obj1);
-        const obj4 = dispatcherDefault;
+        DispatcherDefault.dispatch(obj1);
       }
-      obj6 = isCommunicationDisabled;
+      obj6 = CommunicationDisabledUtils;
     }
   }
 }
-({ getGuildIdFromCommunicationDisabledUserKey: c3, getUserIdFromCommunicationDisabledUserKey: c4 } =
-  trackCommunicationDisabled);
-let c7 = null;
-initializeDefault;
+({ getGuildIdFromCommunicationDisabledUserKey: c3, getUserIdFromCommunicationDisabledUserKey: closure_4 } =
+  GuildMemberStore);
+let closure_7 = null;
 class CommunicationDisabledManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -70,19 +67,19 @@ prototype["_initialize"] = function _initialize() {
   const interval = setInterval(() => {
     communicationDisabledUserMap = communicationDisabledUserMap.getCommunicationDisabledUserMap();
     const keys = Object.keys(communicationDisabledUserMap);
-    const item = keys.forEach((arg0) => {
-      const tmp = closure_1_3(arg0);
-      const tmp2 = closure_1_4(arg0);
-      if (!obj.isCommunicationDisabled(communicationDisabledUserMap[arg0])) {
-        closure_1_8(tmp, tmp2);
+    const item = keys.forEach((item) => {
+      const tmp = closure_2_3(item);
+      const tmp2 = closure_2_4(item);
+      if (!obj.isCommunicationDisabled(communicationDisabledUserMap[item])) {
+        clearGuildMemberTimeout(tmp, tmp2);
       }
     });
   }, 10000);
 };
 prototype["_terminate"] = function _terminate() {
-  clearInterval(c7);
+  clearInterval(closure_7);
 };
 const communicationDisabledManager = new CommunicationDisabledManager();
-const result = set.fileFinishedImporting("modules/guild_communication_disabled/CommunicationDisabledManager.tsx");
+const result = size.fileFinishedImporting("modules/guild_communication_disabled/CommunicationDisabledManager.tsx");
 
 export default communicationDisabledManager;

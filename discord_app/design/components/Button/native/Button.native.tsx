@@ -1,7 +1,7 @@
 // discord_app/design/components/Button/native/Button.native.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import CollapsingText from "BaseTextButton.native.tsx";
+import BaseTextButton from "BaseTextButton.native.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("design/components/Button/native/Button.native.tsx");
+const result = size.fileFinishedImporting("design/components/Button/native/Button.native.tsx");
 
-export const Button = CollapsingText.BaseTextButton;
+export const Button = BaseTextButton.BaseTextButton;

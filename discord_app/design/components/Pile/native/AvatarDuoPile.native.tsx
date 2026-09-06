@@ -1,30 +1,47 @@
 // discord_app/design/components/Pile/native/AvatarDuoPile.native.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import SolidCutout from "../../Icon/native/ClipView.tsx";
+import ClipView from "../../Icon/native/ClipView.tsx";
 import Pile from "Pile.native.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import CutoutableAvatarImage from "../../../void/CutoutableAvatarImage/native/CutoutableAvatarImage.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Pile/native/AvatarDuoPile.native.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+let size = fn(2);
+const result = size.fileFinishedImporting("design/components/Pile/native/AvatarDuoPile.native.tsx");
 
 export const AvatarDuoPile = function AvatarDuoPile(size) {
   size = size.size;
-  const merged = Object.assign(size, Object.create(null));
+  const merged = Object.assign(size, Object.assign({ size: 0, children: 0 }));
   if ("aria-label" in merged) {
-    aria_label = merged["aria-label"];
+    let prop = merged["aria-label"];
   } else {
     let tmp3Result = tmp3(12619);
-    aria_label = tmp3Result.getListSummaryLabel(merged.names);
+    prop = tmp3Result.getListSummaryLabel(merged.names);
   }
-  const obj = { aria-label, shape: SolidCutout.CutoutShape.Circle, size: null, gap: 4, depthX: 0.5, depthY: 0.5, children: null };
+  const obj = {
+    "aria-label": prop,
+    shape: ClipView.CutoutShape.Circle,
+    size: null,
+    gap: 4,
+    depthX: 0.5,
+    depthY: 0.5,
+    children: null,
+  };
   tmp3Result = tmp3(12);
   if (tmp3Result.isArray(size)) {
-    let mapped = size.map((arg0) => callback(table[6]).AVATAR_SIZE_MAP[arg0]);
+    let mapped = size.map((item) => CutoutableAvatarImage.AVATAR_SIZE_MAP[item]);
   } else {
     mapped = tmp3(13028).AVATAR_SIZE_MAP[size];
   }
-  obj[2] = mapped;
-  obj[6] = size.children;
-  return jsx(Pile.Pile, { aria-label, shape: SolidCutout.CutoutShape.Circle, size: null, gap: 4, depthX: 0.5, depthY: 0.5, children: null });
+  obj.size = mapped;
+  obj.children = size.children;
+  return jsx(Pile.Pile, {
+    "aria-label": prop,
+    shape: ClipView.CutoutShape.Circle,
+    size: null,
+    gap: 4,
+    depthX: 0.5,
+    depthY: 0.5,
+    children: null,
+  });
 };

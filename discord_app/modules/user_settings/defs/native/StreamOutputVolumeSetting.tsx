@@ -1,27 +1,27 @@
 // discord_app/modules/user_settings/defs/native/StreamOutputVolumeSetting.tsx
 import _modDef38 from "../../../../../_runtime/metro/00038__.js";
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import BaseConnectionEvent from "../../../../../discord_common/js/packages/media-engine/index.tsx";
-import trackDeviceChangedDefault from "../../../../actions/AudioActionCreators.tsx";
-import apexExperimentDefault from "../../../media_engine/MobileAudioOutputExperiment.tsx";
-import closure_3 from "../../../../stores/ApplicationStreamingStore.tsx";
-import closure_4 from "../../../../stores/AuthenticationStore.tsx";
-import closure_5 from "../../../../stores/MediaEngineStore.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import AudioActionCreatorsDefault from "../../../../actions/AudioActionCreators.tsx";
+import MobileAudioOutputExperimentDefault from "../../../media_engine/MobileAudioOutputExperiment.tsx";
+import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingStore.tsx";
+import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
+import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
-require = arg1;
-createToggle = {
+require = fn;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.pEAl4b);
+    const intl = util.intl;
+    return intl.string(util.t.pEAl4b);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.VOICE,
+  parent: fn(7975).MobileUserSettings.VOICE,
   maximum: 200,
   useValue: function useStreamVolumeSettingValue() {
-    let items = [closure_3, closure_4, closure_5];
+    let items = [ApplicationStreamingStore, AuthenticationStore, MediaEngineStore];
     return initialize.useStateFromStores(items, () => {
-      const items = [closure_3, closure_4];
+      const items = [ApplicationStreamingStore, AuthenticationStore];
       [obj, obj2] = items;
       const lastActiveStream = obj.getLastActiveStream();
       let tmp2 = null;
@@ -33,13 +33,13 @@ createToggle = {
       }
       let num = 0;
       if (null != tmp2) {
-        num = localVolume.getLocalVolume(tmp2.ownerId, callback(table[5]).MediaEngineContextTypes.STREAM);
+        num = localVolume.getLocalVolume(tmp2.ownerId, BaseConnectionEvent.MediaEngineContextTypes.STREAM);
       }
       return num;
     });
   },
   onValueChange: function onStreamValueSettingValueChange(arg0) {
-    const items = [closure_3, closure_4];
+    const items = [ApplicationStreamingStore, AuthenticationStore];
     [obj, obj2] = items;
     const lastActiveStream = obj.getLastActiveStream();
     let tmp2 = null;
@@ -50,15 +50,14 @@ createToggle = {
       }
     }
     _modDef38(null != tmp2, "Can not set stream volume without active stream");
-    trackDeviceChangedDefault.setLocalVolume(tmp2.ownerId, arg0, BaseConnectionEvent.MediaEngineContextTypes.STREAM);
+    AudioActionCreatorsDefault.setLocalVolume(tmp2.ownerId, arg0, BaseConnectionEvent.MediaEngineContextTypes.STREAM);
   },
   usePredicate: function useHasStreamVolumeSetting() {
-    const obj = apexExperimentDefault;
-    let items = [closure_3, closure_4];
-    const obj2 = initialize;
+    const obj = MobileAudioOutputExperimentDefault;
+    let items = [ApplicationStreamingStore, AuthenticationStore];
     return (
       initialize.useStateFromStores(items, () => {
-        const items = [closure_3, closure_4];
+        const items = [ApplicationStreamingStore, AuthenticationStore];
         [obj, obj2] = items;
         const lastActiveStream = obj.getLastActiveStream();
         let tmp2 = null;
@@ -73,14 +72,15 @@ createToggle = {
     );
   },
   useSearchTerms() {
-    const intl = getSystemLocale.intl;
-    const items = [intl.string(getSystemLocale.t["3182VD"])];
-    const intl2 = getSystemLocale.intl;
-    items[1] = intl2.string(getSystemLocale.t["DGq/PR"]);
+    const intl = util.intl;
+    const items = [intl.string(util.t["3182VD"])];
+    const intl2 = util.intl;
+    items[1] = intl2.string(util.t["DGq/PR"]);
     return items;
   },
 };
-createToggle = createToggle.createVolumeSlider(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/StreamOutputVolumeSetting.tsx");
+SettingBuilders = SettingBuilders.createVolumeSlider(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/StreamOutputVolumeSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

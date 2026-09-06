@@ -1,34 +1,36 @@
 // discord_app/modules/collectibles/native/CollectiblesShopFeaturedPage.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import Button from "../../../design/void/native.tsx";
-import getNoResultsSource from "../../../design/components/Illustration/native/redesign/generated/NoResults.tsx";
-import blockDefault from "ShopBlockItem.tsx";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import { CollectiblesMobileShopScreen as closure_4 } from "../CollectiblesShopConstants.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import util from "../../../intl/index.native.tsx";
+import native from "../../../design/void/native.tsx";
+import generated_NoResults from "../../../design/components/Illustration/native/redesign/generated/NoResults.tsx";
+import ShopBlockItemDefault from "ShopBlockItem.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-let closure_6 = createCacheKey.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" } });
-const result = require("set").fileFinishedImporting("modules/collectibles/native/CollectiblesShopFeaturedPage.tsx");
+require = fn;
+const View = fn(17).View;
+const constants = fn(1076).CollectiblesMobileShopScreen;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_6 = createStyles.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopFeaturedPage.tsx");
 
 export default function _default(shopBlock) {
   shopBlock = shopBlock.shopBlock;
   if (null === shopBlock.fetchShopHomeError) {
     if (undefined !== shopBlock) {
-      let obj = { block: null, screen: null };
-      obj[0] = shopBlock;
-      obj[1] = constants.FEATURED_PAGE;
-      let tmp6 = jsx(blockDefault, { block: null, screen: null });
+      let obj = { block: shopBlock, screen: constants.FEATURED_PAGE };
+      let tmp6 = jsx(ShopBlockItemDefault, { block: shopBlock, screen: constants.FEATURED_PAGE });
     }
     return tmp6;
   }
-  obj = { style: callback().container, children: null };
-  obj = { style: { marginTop: 42 }, Illustration: getNoResultsSource.NoResults, body: null };
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.string(getSystemLocale.t.eAn6z2);
-  obj[1] = jsx(Button.EmptyState, { style: { marginTop: 42 }, Illustration: getNoResultsSource.NoResults, body: null });
-  tmp6 = <View style={{ marginTop: 42 }} Illustration={getNoResultsSource.NoResults} body={null} />;
+  obj = { style: closure_6().container, children: null };
+  obj = { style: { marginTop: 42 }, Illustration: generated_NoResults.NoResults, body: null };
+  const intl = util.intl;
+  obj.body = intl.string(util.t.eAn6z2);
+  obj.children = jsx(native.EmptyState, {
+    style: { marginTop: 42 },
+    Illustration: generated_NoResults.NoResults,
+    body: null,
+  });
+  tmp6 = <View style={{ marginTop: 42 }} Illustration={generated_NoResults.NoResults} body={null} />;
 }

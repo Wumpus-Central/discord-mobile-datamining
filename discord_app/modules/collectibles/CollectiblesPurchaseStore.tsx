@@ -1,10 +1,11 @@
 // discord_app/modules/collectibles/CollectiblesPurchaseStore.tsx
-import apply from "../../../_runtime/00012_apply.js";
+import _mod12 from "../../../_runtime/metro/00012__.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
 
-require = arg1;
+require = fn;
 let map = new Map();
+let closure_3 = map;
 let c4 = false;
 let c5;
 let c6;
@@ -27,7 +28,7 @@ Object.defineProperty(prototype, "isClaiming", {
 });
 Object.defineProperty(prototype, "purchases", {
   get: function purchases() {
-    return map;
+    return closure_3;
   },
   set: undefined,
 });
@@ -44,32 +45,34 @@ Object.defineProperty(prototype, "claimError", {
   set: undefined,
 });
 Object.defineProperty(prototype, "hasPreviouslyFetched", {
-  get: function hasPreviouslyFetched(arg0, items2) {
+  get: function hasPreviouslyFetched() {
     return c8;
   },
   set: undefined,
 });
 prototype["getPurchase"] = function getPurchase(skuId) {
-  let value;
+  value = undefined;
   if (null != skuId) {
-    value = map.get(skuId);
+    value = closure_3.get(skuId);
   }
   return value;
 };
 prototype["getPurchases"] = function getPurchases(arr) {
-  const mapped = arr.map((arg0) => closure_3.get(arg0));
-  return mapped.filter((arg0) => null != arg0);
+  const mapped = arr.map((item) => closure_1_3.get(item));
+  return mapped.filter((item) => null != item);
 };
 CollectiblesPurchaseStore.displayName = "CollectiblesPurchaseStore";
-const collectiblesPurchaseStore = new CollectiblesPurchaseStore(dispatcherDefault, {
+const collectiblesPurchaseStore = new CollectiblesPurchaseStore(DispatcherDefault, {
   COLLECTIBLES_PURCHASES_FETCH: function handlePurchasesFetch() {
     c4 = true;
     c6 = undefined;
   },
   COLLECTIBLES_PURCHASES_FETCH_SUCCESS: function handlePurchasesFetchSuccess(purchases) {
-    if (0 !== purchases.purchases.length) {
+    if (0 === purchases.purchases.length) {
+      closure_3 = map;
+    } else {
       let items = [];
-      HermesBuiltin.arraySpread(map.values(), 0);
+      HermesBuiltin.arraySpread(closure_3.values(), 0);
       if (!obj.isEqual(items, purchases.purchases)) {
         const _Map = Map;
         purchases = purchases.purchases;
@@ -79,8 +82,9 @@ const collectiblesPurchaseStore = new CollectiblesPurchaseStore(dispatcherDefaul
             return items;
           }),
         );
+        closure_3 = map;
       }
-      obj = apply;
+      obj = _mod12;
     }
     c8 = true;
     c4 = false;
@@ -100,7 +104,7 @@ const collectiblesPurchaseStore = new CollectiblesPurchaseStore(dispatcherDefaul
     if (null != purchases.purchases) {
       if (0 !== purchases.purchases.length) {
         let items = [];
-        HermesBuiltin.arraySpread(map.values(), 0);
+        HermesBuiltin.arraySpread(closure_3.values(), 0);
         if (!obj.isEqual(items, purchases.purchases)) {
           const _Map = Map;
           purchases = purchases.purchases;
@@ -110,12 +114,14 @@ const collectiblesPurchaseStore = new CollectiblesPurchaseStore(dispatcherDefaul
               return items;
             }),
           );
+          closure_3 = map;
         }
-        obj = apply;
+        obj = _mod12;
       }
       c5 = undefined;
       c7 = undefined;
     }
+    closure_3 = map;
   },
   COLLECTIBLES_CLAIM_FAILURE: function handleClaimFailure(arg0) {
     ({ skuId: c5, error: c7 } = arg0);
@@ -129,6 +135,7 @@ const collectiblesPurchaseStore = new CollectiblesPurchaseStore(dispatcherDefaul
     c8 = false;
   },
 });
-const result = require("set").fileFinishedImporting("modules/collectibles/CollectiblesPurchaseStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/CollectiblesPurchaseStore.tsx");
 
 export default collectiblesPurchaseStore;

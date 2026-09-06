@@ -1,16 +1,16 @@
 // discord_app/modules/activity_status/native/VoiceActivityStatus.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import getSystemLocale from "../../../intl/index.native.tsx";
+import util from "../../../intl/index.native.tsx";
 import ActivityStatusTextDefault from "ActivityStatusText.tsx";
 import UserProfileVoiceActivityIconDefault from "../../user_profile/native/UserProfileVoiceActivityIcon.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-({ jsx: c3, Fragment: c4, jsxs: c5 } = jsxProd);
-let closure_6 = createCacheKey.createStyles({ icon: { flexShrink: 0 } });
-const result = require("set").fileFinishedImporting("modules/activity_status/native/VoiceActivityStatus.tsx");
+require = fn;
+const jsxProd = fn(21);
+({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4560);
+let closure_6 = createStyles.createStyles({ icon: { flexShrink: 0 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activity_status/native/VoiceActivityStatus.tsx");
 
 export default function VoiceActivityStatus(hideText) {
   ({ channel, textStyle, maxFontSizeMultiplier, hideIcon } = hideText);
@@ -24,49 +24,43 @@ export default function VoiceActivityStatus(hideText) {
   if (!hideIcon) {
     let tmp5 = !hideIcon;
     if (!hideIcon) {
-      let obj = { channel: null, size: "xxs", color: "status-positive", style: null };
-      obj[0] = channel;
+      let obj = { channel, size: "xxs", color: "status-positive", style: null };
       const items = [tmp.icon, hideText.iconStyle];
-      obj[3] = items;
-      tmp5 = callback(UserProfileVoiceActivityIconDefault, obj);
+      obj.style = items;
+      tmp5 = React3(UserProfileVoiceActivityIconDefault, obj);
     }
     const items1 = [tmp5];
     if (flag) {
       obj = { children: null };
       items1[1] = tmp9;
-      obj[0] = items1;
+      obj.children = items1;
       let tmp3Result = tmp3(tmp4, obj);
     } else {
       if (!channel.isDM()) {
         if (!channel.isGroupDM()) {
           const tmp14 = ActivityStatusTextDefault;
-          obj = { style: null, maxFontSizeMultiplier: null, children: null };
-          obj[0] = textStyle;
-          obj[1] = maxFontSizeMultiplier;
-          const intl = getSystemLocale.intl;
+          obj = { style: textStyle, maxFontSizeMultiplier, children: null };
+          const intl = util.intl;
           const string = intl.string;
-          const t = getSystemLocale.t;
+          const t = util.t;
           if (isGuildStageVoiceResult) {
-            obj[2] = string(t.QygGCN);
+            obj.children = string(t.QygGCN);
             let tmp11Result = tmp11(tmp14, obj);
           } else {
-            obj[2] = string(t.msxteM);
+            obj.children = string(t.msxteM);
             tmp11Result = tmp11(tmp14, obj);
           }
           isGuildStageVoiceResult = channel.isGuildStageVoice();
         }
       }
-      obj1 = { style: null, maxFontSizeMultiplier: null, children: null };
-      obj1[0] = textStyle;
-      obj1[1] = maxFontSizeMultiplier;
+      const obj1 = { style: textStyle, maxFontSizeMultiplier, children: null };
       textStyle = require;
-      maxFontSizeMultiplier = getSystemLocale.intl;
-      obj1[2] = maxFontSizeMultiplier.string(getSystemLocale.t["9FaEzi"]);
-      tmp11Result = callback(ActivityStatusTextDefault, obj1);
-      const tmp20 = ActivityStatusTextDefault;
+      maxFontSizeMultiplier = util.intl;
+      obj1.children = maxFontSizeMultiplier.string(util.t["9FaEzi"]);
+      tmp11Result = React3(ActivityStatusTextDefault, obj1);
     }
-    tmp3 = closure_5;
-    tmp4 = closure_4;
+    tmp3 = hasOwnProperty;
+    tmp4 = React4;
   } else {
     tmp3Result = null;
   }

@@ -1,9 +1,8 @@
 // discord_app/modules/opt_in_channels/RecentlyActiveCollapseStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import set from "../../../_runtime/00002_set.js";
+import DispatcherDefault from "../../Dispatcher.tsx";
 
-let set = new Set();
+const set = new Set();
 const PersistedStore = initializeDefault.PersistedStore;
 class RecentlyActiveCollapseStore extends PersistedStore {}
 const prototype = RecentlyActiveCollapseStore.prototype;
@@ -11,7 +10,7 @@ prototype["initialize"] = function initialize(guilds) {
   set.clear();
   if (guilds != null) {
     guilds = guilds.guilds;
-    const item = guilds.forEach((arg0) => set.add(arg0));
+    const item = guilds.forEach((item) => set.add(item));
   }
 };
 prototype["isCollapsed"] = function isCollapsed(arg0) {
@@ -22,7 +21,7 @@ prototype["getState"] = function getState() {
 };
 RecentlyActiveCollapseStore.displayName = "RecentlyActiveCollapseStore";
 RecentlyActiveCollapseStore.persistKey = "RecentlyActiveCollapseStore";
-const recentlyActiveCollapseStore = new RecentlyActiveCollapseStore(dispatcherDefault, {
+const recentlyActiveCollapseStore = new RecentlyActiveCollapseStore(DispatcherDefault, {
   SET_RECENTLY_ACTIVE_COLLAPSED: function handleSetRecentlyActiveCollapsed(guildId) {
     guildId = guildId.guildId;
     if (guildId.collapsed) {
@@ -32,6 +31,7 @@ const recentlyActiveCollapseStore = new RecentlyActiveCollapseStore(dispatcherDe
     }
   },
 });
-const result = set.fileFinishedImporting("modules/opt_in_channels/RecentlyActiveCollapseStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/opt_in_channels/RecentlyActiveCollapseStore.tsx");
 
 export default recentlyActiveCollapseStore;

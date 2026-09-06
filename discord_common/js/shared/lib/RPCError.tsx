@@ -1,9 +1,8 @@
 // discord_common/js/shared/lib/RPCError.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const prototype = function RPCError(arg0, message) {
   const tmp = new prototype(message, new.target, new.target, arg0);
-  // ThrowIfThisInitialized (0x7c)
   if ("closeCode" in arg0) {
     ({ closeCode: tmp.code, closeCode: tmp.closeCode } = arg0);
   } else {
@@ -14,6 +13,6 @@ const prototype = function RPCError(arg0, message) {
   return tmp;
 }.prototype;
 class prototype extends Error {}
-const result = set.fileFinishedImporting("../discord_common/js/shared/lib/RPCError.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/lib/RPCError.tsx");
 
 export const RPCError = prototype;

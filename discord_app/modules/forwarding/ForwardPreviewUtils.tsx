@@ -1,15 +1,16 @@
 // discord_app/modules/forwarding/ForwardPreviewUtils.tsx
-import closure_2 from "../../stores/PermissionStore.tsx";
+import EmbedUtils from "../../utils/EmbedUtils.tsx";
+import PermissionStore from "../../stores/PermissionStore.tsx";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/forwarding/ForwardPreviewUtils.tsx");
+require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/forwarding/ForwardPreviewUtils.tsx");
 
 export const useForwardPreviewContent = function useForwardPreviewContent(message) {
   message = message.message;
   ({ channel: dependencyMap, forwardOptions } = message);
-  let onlyAttachmentIds;
   let onlyEmbedIndices;
-  onlyAttachmentIds = undefined;
+  let onlyAttachmentIds;
   if (forwardOptions != null) {
     onlyAttachmentIds = forwardOptions.onlyAttachmentIds;
   }
@@ -34,14 +35,12 @@ export const useForwardPreviewContent = function useForwardPreviewContent(messag
   const items1 = [onlyAttachmentIds];
   if (
     obj.useStateFromStores(items1, () => {
-      let shouldStripEmbedsResult = null != closure_1;
+      let shouldStripEmbedsResult = null != dependencyMap;
       if (shouldStripEmbedsResult) {
-        shouldStripEmbedsResult = !message(closure_1_1[2]).canEmbedLinks(tmp, onlyAttachmentIds);
-        const obj = message(closure_1_1[2]);
+        shouldStripEmbedsResult = !EmbedUtils.canEmbedLinks(tmp, PermissionStore);
       }
       if (shouldStripEmbedsResult) {
-        shouldStripEmbedsResult = message(closure_1_1[2]).shouldStripEmbeds(message);
-        const obj2 = message(closure_1_1[2]);
+        shouldStripEmbedsResult = EmbedUtils.shouldStripEmbeds(message);
       }
       return shouldStripEmbedsResult;
     })
@@ -72,17 +71,18 @@ export const useForwardPreviewContent = function useForwardPreviewContent(messag
     if (tmp8) {
       result1 = result.set("content", result.embeds[0].rawDescription);
     }
-    obj = { attachments: null, embeds: null, hasContent: null, contentMessage: null };
-    obj[0] = attachments;
-    obj[1] = items;
-    obj[2] = "" !== result1.content && null == onlyAttachmentIds;
-    obj[3] = result1;
+    obj = {
+      attachments,
+      embeds: items,
+      hasContent: "" !== result1.content && null == onlyAttachmentIds,
+      contentMessage: result1,
+    };
     return obj;
   } else {
     let embeds = message.embeds;
     if (null != onlyEmbedIndices) {
       const embeds1 = message.embeds;
-      embeds = embeds1.filter((arg0, arg1) => onlyEmbedIndices.includes(arg1));
+      embeds = embeds1.filter((item, index) => onlyEmbedIndices.includes(index));
     } else if (null != onlyAttachmentIds) {
       embeds = [];
     }

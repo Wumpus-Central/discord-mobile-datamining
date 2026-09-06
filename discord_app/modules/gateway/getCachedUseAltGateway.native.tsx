@@ -1,11 +1,11 @@
 // discord_app/modules/gateway/getCachedUseAltGateway.native.tsx
-import set from "../../../_runtime/00002_set.js";
-import enforcingDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeFastConnectModule.tsx";
+import NativeFastConnectModuleDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeFastConnectModule.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/gateway/getCachedUseAltGateway.native.tsx");
+const result = size.fileFinishedImporting("modules/gateway/getCachedUseAltGateway.native.tsx");
 
 export default function getCachedUseAltGateway() {
-  let flag = enforcingDefault.getConstants().useAltGateway;
+  let flag = NativeFastConnectModuleDefault.getConstants().useAltGateway;
   if (flag == null) {
     flag = false;
   }

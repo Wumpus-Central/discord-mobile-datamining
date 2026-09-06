@@ -1,29 +1,34 @@
 // discord_app/modules/guild_invite/native/AdvancedInstantInvite.tsx
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../stores/RelationshipStore.tsx";
-import closure_6 from "../../../stores/UserStore.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import util from "../../../intl/index.native.tsx";
+import FlagUtils from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
+import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import GuildInviteFlags from "../../../../discord_common/js/shared/shared-constants/GuildInviteFlags.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import RelationshipStore from "../../../stores/RelationshipStore.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
 
-const require = arg1;
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-let closure_9 = createCacheKey.createStyles({ container: { flexGrow: 1 } });
-const result = require("set").fileFinishedImporting("modules/guild_invite/native/AdvancedInstantInvite.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4560);
+let closure_9 = createStyles.createStyles({ container: { flexGrow: 1 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_invite/native/AdvancedInstantInvite.tsx");
 
 export default function AdvancedInstantInvite(maxAge) {
   ({ channel, guild } = maxAge);
-  let maxUses = guild;
   maxAge = maxAge.maxAge;
   const onChangeMaxAge = maxAge.onChangeMaxAge;
   const maxUsesOptions = maxAge.maxUsesOptions;
-  maxUses = maxAge.maxUses;
+  let maxUses = maxAge.maxUses;
   const onChangeMaxUses = maxAge.onChangeMaxUses;
   ({ onChangeTemporary, flags } = maxAge);
   ({ onChangeFlags: closure_7, roleIds } = maxAge);
   const onChangeRoleIds = maxAge.onChangeRoleIds;
   let maxAgeOptions;
-  closure_11 = undefined;
+  let assignableRoles;
   ({ style, temporary } = maxAge);
   if (null != channel) {
     let obj = maxUses(onChangeMaxAge[6]);
@@ -31,7 +36,7 @@ export default function AdvancedInstantInvite(maxAge) {
   }
   let str = " ";
   if (null != channel) {
-    obj1 = maxUses(onChangeMaxAge[7]);
+    let obj1 = maxUses(onChangeMaxAge[7]);
     str = obj1.computeChannelName(channel, flags, onChangeMaxUses, true);
   }
   let obj2 = maxUses(onChangeMaxAge[8]);
@@ -49,7 +54,7 @@ export default function AdvancedInstantInvite(maxAge) {
     tmp17 = null;
   }
   const tmp16Result = maxAge(onChangeMaxAge[10])(tmp17);
-  closure_11 = tmp16Result;
+  assignableRoles = tmp16Result;
   const items = [guild, tmp16Result, roleIds, onChangeRoleIds];
   const items1 = [maxAge, maxAgeOptions, onChangeMaxAge];
   const callback = maxUsesOptions.useCallback(() => {
@@ -58,55 +63,43 @@ export default function AdvancedInstantInvite(maxAge) {
       tmp = null != onChangeRoleIds;
     }
     if (tmp) {
-      let obj = maxAge(onChangeMaxAge[11]);
-      obj = { assignableRoles: null, selectedRoleIds: null, onSave: null };
-      obj[0] = closure_11;
-      obj[1] = roleIds;
-      obj[2] = onChangeRoleIds;
-      obj.openLazy(
-        maxUses(onChangeMaxAge[13])(onChangeMaxAge[12], onChangeMaxAge.paths),
-        "SelectInviteRolesActionSheet",
-        obj,
-        "stack",
-      );
+      const obj = { assignableRoles, selectedRoleIds: roleIds, onSave: onChangeRoleIds };
+      obj.openLazy(asyncRequireImpl(17798, dependencyMap.paths), "SelectInviteRolesActionSheet", obj, "stack");
     }
   }, items);
   const items2 = [maxUses, maxUsesOptions, onChangeMaxUses];
   const callback1 = maxUsesOptions.useCallback(() => {
     if (null != onChangeMaxAge) {
-      let obj = maxAge(onChangeMaxAge[11]);
-      const tmp5 = maxUses(onChangeMaxAge[13])(onChangeMaxAge[14], onChangeMaxAge.paths);
-      obj = { title: null, options: null, value: null, onChange: null };
-      const intl = maxUses(onChangeMaxAge[15]).intl;
-      obj[0] = intl.string(maxUses(onChangeMaxAge[15]).t.gKmKP0);
-      obj[1] = maxAgeOptions;
-      obj[2] = maxAge;
-      obj[3] = tmp;
+      const tmp5 = asyncRequireImpl(17799, dependencyMap.paths);
+      const obj = { title: null, options: null, value: null, onChange: null };
+      const intl = util.intl;
+      obj.title = intl.string(util.t.gKmKP0);
+      obj.options = maxAgeOptions;
+      obj.value = maxAge;
+      obj.onChange = tmp;
       obj.openLazy(tmp5, "InviteMaxAgeActionSheet", obj, "stack");
     }
   }, items1);
   const items3 = [tmp16Result, roleIds];
   const callback2 = maxUsesOptions.useCallback(() => {
     if (null != onChangeMaxUses) {
-      let obj = maxAge(onChangeMaxAge[11]);
-      const tmp5 = maxUses(onChangeMaxAge[13])(onChangeMaxAge[14], onChangeMaxAge.paths);
-      obj = { title: null, options: null, value: null, onChange: null };
-      const intl = maxUses(onChangeMaxAge[15]).intl;
-      obj[0] = intl.string(maxUses(onChangeMaxAge[15]).t["+3vH1h"]);
-      obj[1] = maxUsesOptions;
-      obj[2] = maxUses;
-      obj[3] = tmp;
+      const tmp5 = asyncRequireImpl(17799, dependencyMap.paths);
+      const obj = { title: null, options: null, value: null, onChange: null };
+      const intl = util.intl;
+      obj.title = intl.string(util.t["+3vH1h"]);
+      obj.options = maxUsesOptions;
+      obj.value = maxUses;
+      obj.onChange = tmp;
       obj.openLazy(tmp5, "InviteMaxUsesActionSheet", obj, "stack");
     }
   }, items2);
   const memo = maxUsesOptions.useMemo(() => {
-    const set = new Set(closure_11.map((id) => id.id));
-    return roleIds.filter((arg0) => set.has(arg0)).length;
+    const set = new Set(assignableRoles.map((id) => id.id));
+    return roleIds.filter((item) => set.has(item)).length;
   }, items3);
   if (0 !== memo) {
     let intl = tmp11(tmp12[15]).intl;
-    obj = { count: null };
-    obj[0] = memo;
+    obj = { count: memo };
     const formatToPlainStringResult = intl.formatToPlainString(tmp11(tmp12[15]).t["eXU3/V"], obj);
   }
   maxUses = maxAge;
@@ -121,71 +114,67 @@ export default function AdvancedInstantInvite(maxAge) {
     label1 = found1.label;
   }
   if (null != guild) {
-    obj = { guild: null, size: null };
-    obj[0] = guild;
-    obj[1] = tmp11(tmp12[16]).GuildIconSizes.SMALL_32;
-    let tmp28 = callback(tmp15(tmp12[16]), obj);
+    obj = { guild, size: tmp11(tmp12[16]).GuildIconSizes.SMALL_32 };
+    let tmp28 = closure_7(tmp15(tmp12[16]), obj);
     const tmp15Result = tmp15(tmp12[16]);
   } else if (null != channelIconComponent) {
-    obj1 = { IconComponent: null };
-    obj1[0] = channelIconComponent;
-    tmp28 = callback(tmp11(tmp12[17]).TableRowIcon, obj1);
+    obj1 = { IconComponent: channelIconComponent };
+    tmp28 = closure_7(tmp11(tmp12[17]).TableRowIcon, obj1);
   }
-  obj2 = { style: items4, children: null };
-  items4 = [tmp.container, style];
+  obj2 = { style: null, children: null };
+  const items4 = [tmp.container, style];
+  obj2.style = items4;
   obj3 = { spacing: tmp15(tmp12[19]).space.PX_24, children: null };
   const obj4 = { title: null, hasIcons: null, children: null };
   const intl2 = tmp11(tmp12[15]).intl;
-  obj4[0] = intl2.string(maxUses(onChangeMaxAge[15]).t.LUo0Q8);
-  obj4[1] = null != tmp28;
+  obj4.title = intl2.string(maxUses(onChangeMaxAge[15]).t.LUo0Q8);
+  obj4.hasIcons = null != tmp28;
   const obj5 = { icon: tmp28, label: str, subLabel: null };
   let name;
   if (guild != null) {
     name = guild.name;
   }
-  obj5[2] = name;
-  obj4[2] = callback(maxUses(onChangeMaxAge[21]).TableRow, obj5);
-  const items5 = [callback(maxUses(onChangeMaxAge[20]).TableRowGroup, obj4), , , ,];
+  obj5.subLabel = name;
+  obj4.children = closure_7(maxUses(onChangeMaxAge[21]).TableRow, obj5);
+  const items5 = [closure_7(maxUses(onChangeMaxAge[20]).TableRowGroup, obj4), , , ,];
   const obj6 = { title: null, hasIcons: false, children: null };
   const intl3 = tmp11(tmp12[15]).intl;
-  obj6[0] = intl3.string(maxUses(onChangeMaxAge[15]).t["4QuV7G"]);
+  obj6.title = intl3.string(maxUses(onChangeMaxAge[15]).t["4QuV7G"]);
   const obj7 = { label: null, trailing: null, arrow: true, onPress: null, disabled: null };
   const intl4 = tmp11(tmp12[15]).intl;
-  obj7[0] = intl4.string(maxUses(onChangeMaxAge[15]).t.gKmKP0);
+  obj7.label = intl4.string(maxUses(onChangeMaxAge[15]).t.gKmKP0);
   let tmp32Result;
   if (null != label) {
-    const obj8 = { text: null };
-    obj8[0] = label;
+    const obj8 = { text: label };
     tmp32Result = tmp32(tmp11(tmp12[21]).TableRow.TrailingText, obj8);
   }
-  obj7[1] = tmp32Result;
-  obj7[3] = callback1;
-  obj7[4] = null == onChangeMaxAge;
-  const items6 = [callback(maxUses(onChangeMaxAge[21]).TableRow, obj7)];
+  obj7.trailing = tmp32Result;
+  obj7.onPress = callback1;
+  obj7.disabled = null == onChangeMaxAge;
+  const items6 = [closure_7(maxUses(onChangeMaxAge[21]).TableRow, obj7)];
   const obj9 = { label: null, trailing: null, arrow: true, onPress: null, disabled: null };
   const intl5 = tmp11(tmp12[15]).intl;
-  obj9[0] = intl5.string(maxUses(onChangeMaxAge[15]).t["+3vH1h"]);
+  obj9.label = intl5.string(maxUses(onChangeMaxAge[15]).t["+3vH1h"]);
   tmp32Result = undefined;
   if (null != label1) {
-    const obj10 = { text: null };
-    obj10[0] = label1;
+    const obj10 = { text: label1 };
     tmp32Result = tmp32(tmp11(tmp12[21]).TableRow.TrailingText, obj10);
   }
-  obj9[1] = tmp32Result;
-  obj9[3] = callback2;
-  obj9[4] = null == onChangeMaxUses;
-  items6[1] = callback(maxUses(onChangeMaxAge[21]).TableRow, obj9);
-  obj6[2] = items6;
+  obj9.trailing = tmp32Result;
+  obj9.onPress = callback2;
+  obj9.disabled = null == onChangeMaxUses;
+  items6[1] = closure_7(maxUses(onChangeMaxAge[21]).TableRow, obj9);
+  obj6.children = items6;
   items5[1] = roleIds(maxUses(onChangeMaxAge[20]).TableRowGroup, obj6);
   let tmp32Result1 = null;
   if (tmp18) {
     const obj11 = { hasIcons: false, children: null };
     const obj12 = { label: null, arrow: true, subLabel: null, onPress: null };
     const intl6 = tmp11(tmp12[15]).intl;
-    obj12[0] = intl6.string(tmp11(tmp12[15]).t.rPYJxL);
-    obj12[2] = formatToPlainStringResult;
-    obj12[3] = callback;
-    obj11[1] = tmp32(tmp11(tmp12[21]).TableRow, obj12);
+    obj12.label = intl6.string(tmp11(tmp12[15]).t.rPYJxL);
+    obj12.subLabel = formatToPlainStringResult;
+    obj12.onPress = callback;
+    obj11.children = tmp32(tmp11(tmp12[21]).TableRow, obj12);
     tmp32Result1 = tmp32(tmp11(tmp12[20]).TableRowGroup, obj11);
   }
   items5[2] = tmp32Result1;
@@ -196,13 +185,13 @@ export default function AdvancedInstantInvite(maxAge) {
   if (tmp32Result2) {
     const obj13 = { hasIcons: false, helperText: null, children: null };
     const intl7 = tmp11(tmp12[15]).intl;
-    obj13[1] = intl7.string(tmp11(tmp12[15]).t.A53l87);
+    obj13.helperText = intl7.string(tmp11(tmp12[15]).t.A53l87);
     const obj14 = { label: null, value: null, onValueChange: null };
     const intl8 = tmp11(tmp12[15]).intl;
-    obj14[0] = intl8.string(tmp11(tmp12[15]).t.dy1ico);
-    obj14[1] = temporary;
-    obj14[2] = onChangeTemporary;
-    obj13[2] = tmp32(tmp11(tmp12[22]).TableSwitchRow, obj14);
+    obj14.label = intl8.string(tmp11(tmp12[15]).t.dy1ico);
+    obj14.value = temporary;
+    obj14.onValueChange = onChangeTemporary;
+    obj13.children = tmp32(tmp11(tmp12[22]).TableSwitchRow, obj14);
     tmp32Result2 = tmp32(tmp11(tmp12[20]).TableRowGroup, obj13);
   }
   items5[3] = tmp32Result2;
@@ -210,26 +199,20 @@ export default function AdvancedInstantInvite(maxAge) {
   if (canCreateApplicationBypassInvites) {
     const obj15 = { hasIcons: false, helperText: null, children: null };
     const intl9 = tmp11(tmp12[15]).intl;
-    obj15[1] = intl9.string(tmp11(tmp12[15]).t["jvd/LF"]);
+    obj15.helperText = intl9.string(tmp11(tmp12[15]).t["jvd/LF"]);
     const obj16 = { label: null, value: null, onValueChange: null };
     const intl10 = tmp11(tmp12[15]).intl;
-    obj16[0] = intl10.string(tmp11(tmp12[15]).t["1i1bUl"]);
-    obj16[1] = tmp11(tmp12[23]).hasFlag(flags, tmp11(tmp12[24]).GuildInviteFlags.IS_APPLICATION_BYPASS);
-    obj16[2] = function onValueChange(arg0) {
-      return callback(
-        maxUses(onChangeMaxAge[23]).setFlag(
-          flags,
-          maxUses(onChangeMaxAge[24]).GuildInviteFlags.IS_APPLICATION_BYPASS,
-          arg0,
-        ),
-      );
+    obj16.label = intl10.string(tmp11(tmp12[15]).t["1i1bUl"]);
+    obj16.value = tmp11(tmp12[23]).hasFlag(flags, tmp11(tmp12[24]).GuildInviteFlags.IS_APPLICATION_BYPASS);
+    obj16.onValueChange = function onValueChange(arg0) {
+      return closure_1_7(FlagUtils.setFlag(flags, GuildInviteFlags.GuildInviteFlags.IS_APPLICATION_BYPASS, arg0));
     };
-    obj15[2] = tmp32(tmp11(tmp12[22]).TableSwitchRow, obj16);
+    obj15.children = tmp32(tmp11(tmp12[22]).TableSwitchRow, obj16);
     tmp32Result3 = tmp32(tmp11(tmp12[20]).TableRowGroup, obj15);
     const tmp11Result = tmp11(tmp12[23]);
   }
   items5[4] = tmp32Result3;
-  obj3[1] = items5;
-  obj2[1] = roleIds(maxUses(onChangeMaxAge[18]).Stack, obj3);
-  return callback(maxUses, obj2);
+  obj3.children = items5;
+  obj2.children = roleIds(maxUses(onChangeMaxAge[18]).Stack, obj3);
+  return closure_7(maxUses, obj2);
 }

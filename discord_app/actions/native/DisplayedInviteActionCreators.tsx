@@ -1,10 +1,10 @@
 // discord_app/actions/native/DisplayedInviteActionCreators.tsx
-import set from "../../../_runtime/00002_set.js";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import generateAcceptInviteOptionsDefault from "../InstantInviteActionCreators.tsx";
-import getDisplayedInviteCode from "../../stores/native/DisplayedInviteStore.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import InstantInviteActionCreatorsDefault from "../InstantInviteActionCreators.tsx";
+import DisplayedInviteStore from "../../stores/native/DisplayedInviteStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("actions/native/DisplayedInviteActionCreators.tsx");
+const result = size.fileFinishedImporting("actions/native/DisplayedInviteActionCreators.tsx");
 
 export const showInvite = function showInvite(code, username, arg2) {
   let obj = arg2;
@@ -12,12 +12,11 @@ export const showInvite = function showInvite(code, username, arg2) {
     obj = {};
   }
   ({ deeplinkAttemptId, location: _location } = obj);
-  getDisplayedInviteCode;
+  DisplayedInviteStore;
   obj = { type: "DISPLAYED_INVITE_SHOW", code, username, deeplinkAttemptId };
-  dispatcherDefault.dispatch(obj);
-  const obj2 = dispatcherDefault;
-  const invite = generateAcceptInviteOptionsDefault.resolveInvite(code, _location);
+  DispatcherDefault.dispatch(obj);
+  const invite = InstantInviteActionCreatorsDefault.resolveInvite(code, _location);
 };
 export const clearDisplayedInvite = function clearDisplayedInvite() {
-  dispatcherDefault.dispatch({ type: "DISPLAYED_INVITE_CLEAR" });
+  DispatcherDefault.dispatch({ type: "DISPLAYED_INVITE_CLEAR" });
 };

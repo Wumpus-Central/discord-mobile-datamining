@@ -1,36 +1,38 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesModal.tsx
-import importAllResult from "../../../../../_runtime/00019_noop.js";
-import { QuestsExperimentLocations } from "../../QuestConstants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let c3 = importAllResult;
+const require = fn;
+const QuestsExperimentLocations = fn(5444).QuestsExperimentLocations;
+const jsx = fn(21).jsx;
 const bounty_main = "bounty_main";
-const memoResult = importAllResult.memo(function BountiesModal(bountyId) {
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModal.tsx");
+
+export default noop.memo(function BountiesModal(bountyId) {
   bountyId = bountyId.bountyId;
   const sourceQuestContent = bountyId.sourceQuestContent;
   let verticalScrollEnabled;
   let obj = bountyId(verticalScrollEnabled[3]);
   verticalScrollEnabled = obj.useBountiesExperience(QuestsExperimentLocations.VIDEO_MODAL_MOBILE).verticalScrollEnabled;
   const items = [bountyId, sourceQuestContent, verticalScrollEnabled];
-  const memo = importAllResult.useMemo(
+  const memo = noop.useMemo(
     () => ({
-      [closure_1_6]: {
+      [closure_2_6]: {
         fullscreen: true,
         headerLeft() {
           return null;
         },
         render() {
-          return closure_1_5(closure_1_1(closure_2 ? closure_1_2[4] : closure_1_2[5]), {
-            bountyId: closure_0,
-            sourceQuestContent: closure_1,
+          return jsx(sourceQuestContent(closure_1_2 ? verticalScrollEnabled[4] : verticalScrollEnabled[5]), {
+            bountyId,
+            sourceQuestContent,
           });
         },
       },
     }),
     items,
   );
-  const layoutEffect = importAllResult.useLayoutEffect(() => {
+  const layoutEffect = noop.useLayoutEffect(() => {
     bountyId(verticalScrollEnabled[6]).applyOrientationLock("PORTRAIT");
     return bountyId(verticalScrollEnabled[6]).restoreDefaultOrientationLock;
   }, []);
@@ -42,6 +44,3 @@ const memoResult = importAllResult.memo(function BountiesModal(bountyId) {
     viewStyle: { backgroundColor: "#000000" },
   });
 });
-const result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModal.tsx");
-
-export default memoResult;

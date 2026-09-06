@@ -1,23 +1,21 @@
 // discord_app/modules/user_settings/defs/native/FamilyCenterSetting.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import messagesProxyDefault from "../../../parent_tools/FamilyCenter.messages.js";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
+import _modDef2396 from "../../../parent_tools/FamilyCenter.messages.js";
 import useIsParentalConsentBannerActive from "../../../parent_tools/useIsParentalConsentBannerActive.tsx";
 import useParentalConsentWarning from "../../../parent_tools/useParentalConsentWarning.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
-import { FamilyCenterLoading } from "../../family_center/native/UserSettingsFamilyCenter.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-createToggle = {
+require = fn;
+const jsx = fn(21).jsx;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault.RZqaJn);
+    const intl = util.intl;
+    return intl.string(_modDef2396.RZqaJn);
   },
   parent: null,
-  IconComponent: require("GroupIcon").GroupIcon,
+  IconComponent: fn(5089).GroupIcon,
   useTrailing: function useFamilyCenterTrailing() {
     let obj = useIsParentalConsentBannerActive;
     const isParentalConsentBannerActive = obj.useIsParentalConsentBannerActive();
@@ -35,25 +33,34 @@ createToggle = {
       if (null != daysRemaining) {
         tmp6 = null;
         if (daysRemaining >= 0) {
-          obj = { size: "sm", color: null, accessible: true, accessibilityLabel: null };
-          obj[1] = ThemesDefault.colors.ICON_FEEDBACK_WARNING;
+          obj = {
+            size: "sm",
+            color: nativeDefault.colors.ICON_FEEDBACK_WARNING,
+            accessible: true,
+            accessibilityLabel: null,
+          };
           const intl = tmp(1114).intl;
-          obj[3] = intl.string(messagesProxyDefault.wucWfE);
-          tmp6 = jsx(tmp(8588).WarningIcon, { size: "sm", color: null, accessible: true, accessibilityLabel: null });
+          obj.accessibilityLabel = intl.string(_modDef2396.wucWfE);
+          tmp6 = jsx(tmp(8588).WarningIcon, {
+            size: "sm",
+            color: nativeDefault.colors.ICON_FEEDBACK_WARNING,
+            accessible: true,
+            accessibilityLabel: null,
+          });
         }
       }
     }
     return tmp6;
   },
-  screen: createToggle,
-};
-createToggle = {
-  route: require("ME").UserSettingsSections.FAMILY_CENTER,
-  getComponent() {
-    return FamilyCenterLoading /* FamilyCenterLoading */.default;
+  screen: {
+    route: fn(1074).UserSettingsSections.FAMILY_CENTER,
+    getComponent() {
+      return require("UserSettingsFamilyCenter").default;
+    },
   },
 };
-createToggle = createToggle.createRoute(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/FamilyCenterSetting.tsx");
+SettingBuilders = SettingBuilders.createRoute(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/FamilyCenterSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

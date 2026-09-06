@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/VideoQuestModal/captions/VideoQuestCaptionsUtils.tsx
-import set from "../../../../../../_runtime/00002_set.js";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/quests/native/VideoQuestModal/captions/VideoQuestCaptionsUtils.tsx");
+const result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/captions/VideoQuestCaptionsUtils.tsx");
 
 export const findActiveCaption = function findActiveCaption(arg0, currentTime) {
   let tmp3;
@@ -13,7 +13,6 @@ export const findActiveCaption = function findActiveCaption(arg0, currentTime) {
       let rounded = Math.floor((num + diff) / 2);
       tmp3 = arg0[rounded];
       let diff1 = diff;
-      let tmp5 = num;
       if (currentTime >= tmp3.start) {
         if (currentTime <= tmp3.end) {
           break;

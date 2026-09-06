@@ -1,25 +1,29 @@
 // discord_app/modules/activities/useDeveloperActivityShelfItems.tsx
-import closure_2 from "../../../_runtime/00019_noop.js";
-import closure_3 from "DeveloperActivityShelfStore.tsx";
-import { DEFAULT_EMBEDDED_ACTIVITY_CONFIG as closure_4 } from "Constants.tsx";
+import noop from "../../../_runtime/metro/00019__.js";
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/activities/useDeveloperActivityShelfItems.tsx");
+const require = fn;
+let closure_4 = fn(1920).DEFAULT_EMBEDDED_ACTIVITY_CONFIG;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/useDeveloperActivityShelfItems.tsx");
 
 export const useDeveloperActivityShelfItems = function useDeveloperActivityShelfItems() {
-  const items = [closure_3];
+  const items = [DeveloperActivityShelfStore];
   const stateFromStoresObject = isEnabled(lastUsedObject[3]).useStateFromStoresObject(
     items,
-    () => ({ isEnabled: store.getIsEnabled(), lastUsedObject: store.getLastUsedObject() }),
+    () => ({
+      isEnabled: DeveloperActivityShelfStore.getIsEnabled(),
+      lastUsedObject: DeveloperActivityShelfStore.getLastUsedObject(),
+    }),
     [],
   );
   isEnabled = stateFromStoresObject.isEnabled;
   lastUsedObject = stateFromStoresObject.lastUsedObject;
   let obj = isEnabled(lastUsedObject[3]);
-  const items1 = [closure_3];
+  const items1 = [DeveloperActivityShelfStore];
   const stateFromStoresArray = isEnabled(lastUsedObject[3]).useStateFromStoresArray(
     items1,
-    () => store.getDeveloperShelfItems(),
+    () => DeveloperActivityShelfStore.getDeveloperShelfItems(),
     [],
   );
   const items2 = [stateFromStoresArray, isEnabled, lastUsedObject];
@@ -28,10 +32,10 @@ export const useDeveloperActivityShelfItems = function useDeveloperActivityShelf
       const mapped = stateFromStoresArray.map((application) => {
         let obj = { application, activity: null };
         obj = {};
-        const merged = Object.assign(closure_4);
+        const merged = Object.assign(closure_1_4);
         const merged1 = Object.assign(application.embeddedActivityConfig);
         obj.application_id = application.id;
-        obj[1] = obj;
+        obj.activity = obj;
         return obj;
       });
       let sorted = mapped.sort((arg0, arg1) => {

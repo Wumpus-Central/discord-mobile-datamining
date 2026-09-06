@@ -1,17 +1,17 @@
 // discord_app/utils/native/ClientInfoUtils.tsx
-import set from "../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
-import set2 from "../PlatformUtils.tsx";
-import enforcingDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeClientInfoModule.tsx";
+import _mod17 from "../../../_runtime/metro/00017__.js";
+import PlatformUtils from "../PlatformUtils.tsx";
+import NativeClientInfoModuleDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeClientInfoModule.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const NativeModules = get_ActivityIndicator.NativeModules;
-const result = set.fileFinishedImporting("utils/native/ClientInfoUtils.tsx");
+const NativeModules = _mod17.NativeModules;
+const result = size.fileFinishedImporting("utils/native/ClientInfoUtils.tsx");
 
 export const getConstants = function getConstants() {
   if (obj.isAndroid()) {
-    if (null === enforcingDefault) {
+    if (null === NativeClientInfoModuleDefault) {
       const _Error = Error;
-      error = new Error("Turbo module RTNClientInfoManager is undefined for Android");
+      const error = new Error("Turbo module RTNClientInfoManager is undefined for Android");
       throw error;
     } else {
       return tmp3(1344).getConstants();
@@ -21,7 +21,7 @@ export const getConstants = function getConstants() {
     const InfoDictionaryManager = NativeModules.InfoDictionaryManager;
     return InfoDictionaryManager.getConstants();
   }
-  obj = set2;
+  obj = PlatformUtils;
 };
 export const getBuildNumberLabel = function getBuildNumberLabel() {
   const items = ["0", "123456", "1234567890"];

@@ -1,53 +1,50 @@
 // discord_app/modules/safety_hub/native/ClassificationEvidence.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
-import ClassificationEvidenceDefault from "ClassificationMessageEvidence.tsx";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
-import Button from "../../../design/void/native.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import ClassificationMessageEvidenceDefault from "ClassificationMessageEvidence.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { cardShadow: null, flaggedContent: null, sectionContainer: null };
-createCacheKey[0] = Button.generateBoxShadowStyle(require("Button").FOUR_DP_ELEVATION_SHADOW_PARAMS);
-createCacheKey = {
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+fn(4560);
+let createStyles = { cardShadow: null, flaggedContent: null, sectionContainer: null };
+const native = fn(1178);
+createStyles.cardShadow = native.generateBoxShadowStyle(fn(1178).FOUR_DP_ELEVATION_SHADOW_PARAMS);
+createStyles = {
   borderWidth: 1,
-  borderRadius: ThemesDefault.radii.sm,
-  borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
-  backgroundColor: ThemesDefault.colors.CHANNELTEXTAREA_BACKGROUND,
+  borderRadius: nativeDefault.radii.sm,
+  borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
+  backgroundColor: nativeDefault.colors.CHANNELTEXTAREA_BACKGROUND,
   padding: 20,
 };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { display: "flex", gap: ThemesDefault.space.PX_8 };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { display: "flex", gap: ThemesDefault.space.PX_8 };
-const result = require("set").fileFinishedImporting("modules/safety_hub/native/ClassificationEvidence.tsx");
+createStyles.flaggedContent = createStyles;
+createStyles.sectionContainer = { display: "flex", gap: nativeDefault.space.PX_8 };
+let closure_6 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_hub/native/ClassificationEvidence.tsx");
 
 export default function ClassificationEvidence(flaggedContent) {
   flaggedContent = flaggedContent.flaggedContent;
-  const tmp = callback3();
+  const tmp = closure_6();
   let tmp2 = null;
   if (0 !== flaggedContent.length) {
-    let obj = { style: null, children: null };
-    obj[0] = tmp.sectionContainer;
+    let obj = { style: tmp.sectionContainer, children: null };
     obj = { variant: "eyebrow", color: "text-default", children: null };
-    const intl = getSystemLocale.intl;
-    obj[2] = intl.string(getSystemLocale.t.s64CMg);
-    const items = [callback(Text.Text, obj)];
+    const intl = util.intl;
+    obj.children = intl.string(util.t.s64CMg);
+    const items = [React4(Text_Text.Text, obj)];
     obj = { style: null, children: null };
     const items1 = [,];
     ({ flaggedContent: arr3[0], cardShadow: arr3[1] } = tmp);
-    obj[0] = items1;
-    obj1 = { flaggedContent: null };
-    obj1[0] = flaggedContent;
-    obj[1] = callback(ClassificationEvidenceDefault, obj1);
-    items[1] = callback(View, obj);
-    obj[1] = items;
-    tmp2 = callback2(View, obj);
+    obj.style = items1;
+    const obj1 = { flaggedContent };
+    obj.children = React4(ClassificationMessageEvidenceDefault, obj1);
+    items[1] = React4(View, obj);
+    obj.children = items;
+    tmp2 = hasOwnProperty(View, obj);
   }
   return tmp2;
 }

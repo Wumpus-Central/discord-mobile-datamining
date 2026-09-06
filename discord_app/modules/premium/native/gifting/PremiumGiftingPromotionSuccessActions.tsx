@@ -1,50 +1,41 @@
 // discord_app/modules/premium/native/gifting/PremiumGiftingPromotionSuccessActions.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import PremiumGiftModal from "PremiumGiftModal.tsx";
+import ProductPurchaseSuccessActionCreatorsDefault from "../../../collectibles/native/ProductPurchaseSuccessActionCreators.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: null, promoDetails: null };
-createCacheKey = { flexDirection: "column", alignItems: "center", gap: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = {
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+fn(4560);
+let createStyles = { container: null, promoDetails: null };
+createStyles = { flexDirection: "column", alignItems: "center", gap: nativeDefault.space.PX_16 };
+createStyles.container = createStyles;
+createStyles.promoDetails = {
   alignSelf: "stretch",
-  paddingVertical: ThemesDefault.space.PX_12,
-  paddingHorizontal: ThemesDefault.space.PX_16,
-  borderRadius: ThemesDefault.radii.md,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  paddingVertical: nativeDefault.space.PX_12,
+  paddingHorizontal: nativeDefault.space.PX_16,
+  borderRadius: nativeDefault.radii.md,
+  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj1 = {
-  alignSelf: "stretch",
-  paddingVertical: ThemesDefault.space.PX_12,
-  paddingHorizontal: ThemesDefault.space.PX_16,
-  borderRadius: ThemesDefault.radii.md,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
-};
-const result = require("set").fileFinishedImporting(
-  "modules/premium/native/gifting/PremiumGiftingPromotionSuccessActions.tsx",
-);
+let closure_7 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumGiftingPromotionSuccessActions.tsx");
 
 export default function PremiumGiftingPromotionSuccessActions(purchase) {
   let onClose;
-  let prePurchaseGiftingBadgeProgress;
   let navigation;
-  let enabled;
-  c4 = undefined;
-  let callback;
-  let tmp = callback();
+  let onCancel;
+  let tmp = closure_7();
   let obj = onClose(navigation[5]);
   const nativeGiftContext = obj.useNativeGiftContext();
   onClose = nativeGiftContext.onClose;
-  prePurchaseGiftingBadgeProgress = nativeGiftContext.prePurchaseGiftingBadgeProgress;
-  obj1 = onClose(navigation[6]);
+  const prePurchaseGiftingBadgeProgress = nativeGiftContext.prePurchaseGiftingBadgeProgress;
+  let obj1 = onClose(navigation[6]);
   navigation = obj1.useNavigation();
   const GiftingBadgeExperiment = onClose(navigation[7]).GiftingBadgeExperiment;
-  enabled = GiftingBadgeExperiment.useConfig({ location: "PremiumGiftingPromotionSuccessActions" }).enabled;
+  const enabled = GiftingBadgeExperiment.useConfig({ location: "PremiumGiftingPromotionSuccessActions" }).enabled;
   const fetchCollectiblesProduct = onClose(navigation[8]).useFetchCollectiblesProduct(purchase.purchase.skuId);
   const product = fetchCollectiblesProduct.product;
   c4 = product;
@@ -53,58 +44,50 @@ export default function PremiumGiftingPromotionSuccessActions(purchase) {
     tmp12Result = product.items.length > 0;
   }
   const items = [enabled, prePurchaseGiftingBadgeProgress, navigation];
-  callback = enabled.useCallback(() => {
+  onCancel = enabled.useCallback(() => {
     let tmp = enabled;
     if (enabled) {
       tmp = null != prePurchaseGiftingBadgeProgress;
     }
     if (tmp) {
-      const obj = { currentProgress: null };
-      obj[0] = prePurchaseGiftingBadgeProgress;
-      navigation.navigate(onClose(navigation[9]).PremiumGiftScreens.GIFTING_BADGE, obj);
+      const obj = { currentProgress: prePurchaseGiftingBadgeProgress };
+      navigation.navigate(PremiumGiftModal.PremiumGiftScreens.GIFTING_BADGE, obj);
     }
   }, items);
-  const items1 = [product, onClose, callback, enabled, prePurchaseGiftingBadgeProgress, navigation];
+  const items1 = [product, onClose, onCancel, enabled, prePurchaseGiftingBadgeProgress, navigation];
   obj = { style: tmp.container, children: null };
   const callback1 = enabled.useCallback(() => {
     if (null != c4) {
-      let obj = { product: null, onCancel: null };
-      obj[0] = tmp;
-      obj[1] = callback;
-      prePurchaseGiftingBadgeProgress(navigation[10]).open(obj);
-      const obj2 = prePurchaseGiftingBadgeProgress(navigation[10]);
+      let obj = { product: tmp, onCancel };
+      ProductPurchaseSuccessActionCreatorsDefault.open(obj);
     } else {
       if (enabled) {
         if (null != prePurchaseGiftingBadgeProgress) {
-          obj = { currentProgress: null };
-          obj[0] = tmp3;
-          navigation.navigate(onClose(navigation[9]).PremiumGiftScreens.GIFTING_BADGE, obj);
+          obj = { currentProgress: tmp3 };
+          navigation.navigate(PremiumGiftModal.PremiumGiftScreens.GIFTING_BADGE, obj);
         }
       }
       onClose();
     }
   }, items1);
   if (tmp12Result) {
-    obj = { style: null, product: null, title: null, subtitle: null };
-    obj[0] = tmp.promoDetails;
-    obj[1] = product;
+    obj = { style: tmp.promoDetails, product, title: null, subtitle: null };
     const intl = tmp2(tmp3[12]).intl;
-    obj[2] = intl.string(prePurchaseGiftingBadgeProgress(tmp3[13]).XeLTZl);
+    obj.title = intl.string(prePurchaseGiftingBadgeProgress(tmp3[13]).XeLTZl);
     let name;
     if (product != null) {
       name = product.name;
     }
-    obj[3] = name;
-    tmp12Result = callback(tmp2(tmp3[11]).PremiumGiftPromotionCollectibleRewardDetails, obj);
-    const tmp12 = callback;
+    obj.subtitle = name;
+    tmp12Result = onCancel(tmp2(tmp3[11]).PremiumGiftPromotionCollectibleRewardDetails, obj);
   }
   const items2 = [tmp12Result];
   obj1 = { grow: true, text: null, loading: null, onPress: null };
   const intl2 = tmp2(tmp3[12]).intl;
-  obj1[1] = intl2.string(onClose(navigation[12]).t.kMYVwv);
-  obj1[2] = fetchCollectiblesProduct.isFetching;
-  obj1[3] = callback1;
-  items2[1] = callback(onClose(navigation[14]).Button, obj1);
-  obj[1] = items2;
+  obj1.text = intl2.string(onClose(navigation[12]).t.kMYVwv);
+  obj1.loading = fetchCollectiblesProduct.isFetching;
+  obj1.onPress = callback1;
+  items2[1] = onCancel(onClose(navigation[14]).Button, obj1);
+  obj.children = items2;
   return closure_6(c4, obj);
 }

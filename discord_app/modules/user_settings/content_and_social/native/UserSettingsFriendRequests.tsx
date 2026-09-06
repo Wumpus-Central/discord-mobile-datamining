@@ -1,13 +1,17 @@
 // discord_app/modules/user_settings/content_and_social/native/UserSettingsFriendRequests.tsx
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import ME from "../../../../Constants.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import FlagUtilsAll from "../../../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import UserSettings from "../../UserSettings.tsx";
+import UserSettingsUtils from "../../../../utils/UserSettingsUtils.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-({ AllFriendSourceFlags: c5, FriendSourceFlags: closure_6 } = ME);
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-const result = require("set").fileFinishedImporting(
+require = fn;
+const View = fn(17).View;
+const Constants = fn(1074);
+({ AllFriendSourceFlags: hasOwnProperty, FriendSourceFlags: metroRequire } = Constants);
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/user_settings/content_and_social/native/UserSettingsFriendRequests.tsx",
 );
 
@@ -15,17 +19,17 @@ export default function UserSettingsFriendRequests() {
   let FriendSourceFlagsSetting = setting(1935).FriendSourceFlagsSetting;
   setting = FriendSourceFlagsSetting.useSetting();
   const items = [setting];
-  const memo = React.useMemo(() => setting(closure_1_2[5]).computeFlags(setting), items);
+  const memo = noop.useMemo(() => UserSettingsUtils.computeFlags(setting), items);
   let obj = { children: null };
   obj = { title: null, hasIcons: false, children: null };
   const intl = setting(1114).intl;
-  obj[0] = intl.string(setting(1114).t.vyodkM);
+  obj.title = intl.string(setting(1114).t.vyodkM);
   obj = { label: null, value: null, onValueChange: null };
   const intl2 = setting(1114).intl;
-  obj[0] = intl2.string(setting(1114).t.mGr3CX);
-  obj[1] = memo.all;
-  obj[2] = function onValueChange(arg0) {
-    const FriendSourceFlagsSetting = setting(table[4]).FriendSourceFlagsSetting;
+  obj.label = intl2.string(setting(1114).t.mGr3CX);
+  obj.value = memo.all;
+  obj.onValueChange = function onValueChange(arg0) {
+    const FriendSourceFlagsSetting = setting(dependencyMap[4]).FriendSourceFlagsSetting;
     if (arg0) {
       let tmp3 = tmp;
     } else {
@@ -33,38 +37,38 @@ export default function UserSettingsFriendRequests() {
     }
     return FriendSourceFlagsSetting.updateSetting(tmp3);
   };
-  const items1 = [callback(setting(7201).TableSwitchRow, obj), ,];
-  obj1 = { label: null, value: null, onValueChange: null };
+  const items1 = [closure_7(setting(7201).TableSwitchRow, obj), ,];
+  const obj1 = { label: null, value: null, onValueChange: null };
   const intl3 = setting(1114).intl;
-  obj1[0] = intl3.string(setting(1114).t.IqlCSq);
-  obj1[1] = memo.mutualFriends;
-  obj1[2] = function onValueChange(arg0) {
-    const FriendSourceFlagsSetting = setting(closure_1_2[4]).FriendSourceFlagsSetting;
-    const obj = closure_1_1(closure_1_2[9]);
+  obj1.label = intl3.string(setting(1114).t.IqlCSq);
+  obj1.value = memo.mutualFriends;
+  obj1.onValueChange = function onValueChange(arg0) {
+    const FriendSourceFlagsSetting = UserSettings.FriendSourceFlagsSetting;
+    const obj = FlagUtilsAll;
     if (arg0) {
-      let addFlagResult = obj.addFlag(setting, closure_1_6.MUTUAL_FRIENDS);
+      let addFlagResult = obj.addFlag(setting, constants.MUTUAL_FRIENDS);
     } else {
-      addFlagResult = obj.removeFlags(setting, closure_1_6.MUTUAL_FRIENDS, closure_1_6.NO_RELATION);
+      addFlagResult = obj.removeFlags(setting, constants.MUTUAL_FRIENDS, constants.NO_RELATION);
     }
     return FriendSourceFlagsSetting.updateSetting(addFlagResult);
   };
-  items1[1] = callback(setting(7201).TableSwitchRow, obj1);
+  items1[1] = closure_7(setting(7201).TableSwitchRow, obj1);
   const obj2 = { label: null, value: null, onValueChange: null };
   const intl4 = setting(1114).intl;
-  obj2[0] = intl4.string(setting(1114).t.mozb8f);
-  obj2[1] = memo.mutualGuilds;
-  obj2[2] = function onValueChange(arg0) {
-    const FriendSourceFlagsSetting = setting(closure_1_2[4]).FriendSourceFlagsSetting;
-    const obj = closure_1_1(closure_1_2[9]);
+  obj2.label = intl4.string(setting(1114).t.mozb8f);
+  obj2.value = memo.mutualGuilds;
+  obj2.onValueChange = function onValueChange(arg0) {
+    const FriendSourceFlagsSetting = UserSettings.FriendSourceFlagsSetting;
+    const obj = FlagUtilsAll;
     if (arg0) {
-      let addFlagResult = obj.addFlag(setting, closure_1_6.MUTUAL_GUILDS);
+      let addFlagResult = obj.addFlag(setting, constants.MUTUAL_GUILDS);
     } else {
-      addFlagResult = obj.removeFlags(setting, closure_1_6.MUTUAL_GUILDS, closure_1_6.NO_RELATION);
+      addFlagResult = obj.removeFlags(setting, constants.MUTUAL_GUILDS, constants.NO_RELATION);
     }
     return FriendSourceFlagsSetting.updateSetting(addFlagResult);
   };
-  items1[2] = callback(setting(7201).TableSwitchRow, obj2);
-  obj[2] = items1;
-  obj[0] = callback2(setting(5687).TableRowGroup, obj);
-  return callback(View, obj);
+  items1[2] = closure_7(setting(7201).TableSwitchRow, obj2);
+  obj.children = items1;
+  obj.children = closure_8(setting(5687).TableRowGroup, obj);
+  return closure_7(View, obj);
 }

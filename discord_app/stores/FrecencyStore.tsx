@@ -1,15 +1,13 @@
 // discord_app/stores/FrecencyStore.tsx
-import applyDefault from "../../_runtime/00012_apply.js";
+import _modDef12 from "../../_runtime/metro/00012__.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../Dispatcher.tsx";
-import DEFAULT_FRECENCYDefault from "../lib/Frecency.tsx";
-import closure_2 from "../modules/user_settings/UserSettingsProtoStore.tsx";
-import closure_3 from "ChannelStore.tsx";
-import closure_4 from "GuildStore.tsx";
-import closure_5 from "SelectedChannelStore.tsx";
-import closure_6 from "SelectedGuildStore.tsx";
-import { ID_REGEX } from "../Constants.tsx";
-import { UserSettingsTypes } from "../modules/user_settings/UserSettingsConstants.tsx";
+import DispatcherDefault from "../Dispatcher.tsx";
+import FrecencyDefault from "../lib/Frecency.tsx";
+import UserSettingsProtoStore from "../modules/user_settings/UserSettingsProtoStore.tsx";
+import ChannelStore from "ChannelStore.tsx";
+import GuildStore from "GuildStore.tsx";
+import SelectedChannelStore from "SelectedChannelStore.tsx";
+import SelectedGuildStore from "SelectedGuildStore.tsx";
 
 function handleChannelSelect(arg0) {
   ({ guildId, channelId } = arg0);
@@ -27,11 +25,10 @@ function handleChannelSelect(arg0) {
     let flag2 = false;
     if (isMatch) {
       closure_9.track(channelId);
-      const pendingUsages = closure_13.pendingUsages;
-      let obj = { key: null, timestamp: null };
-      obj[0] = channelId;
+      const pendingUsages = global.pendingUsages;
+      let obj = { key: channelId, timestamp: null };
       const _Date = Date;
-      obj[1] = Date.now();
+      obj.timestamp = Date.now();
       pendingUsages.push(obj);
       flag2 = true;
     }
@@ -50,11 +47,10 @@ function handleChannelSelect(arg0) {
     }
     if (isMatch1) {
       closure_9.track(guildId);
-      const pendingUsages1 = closure_13.pendingUsages;
-      obj = { key: null, timestamp: null };
-      obj[0] = guildId;
+      const pendingUsages1 = global.pendingUsages;
+      obj = { key: guildId, timestamp: null };
       const _Date2 = Date;
-      obj[1] = Date.now();
+      obj.timestamp = Date.now();
       pendingUsages1.push(obj);
       flag = true;
     }
@@ -63,7 +59,7 @@ function handleChannelSelect(arg0) {
   return tmp10;
 }
 function initFrecency() {
-  const guildAndChannelFrecency = obj.frecencyWithoutFetchingLatest.guildAndChannelFrecency;
+  const guildAndChannelFrecency = UserSettingsProtoStore.frecencyWithoutFetchingLatest.guildAndChannelFrecency;
   let guildAndChannels;
   if (guildAndChannelFrecency != null) {
     guildAndChannels = guildAndChannelFrecency.guildAndChannels;
@@ -71,20 +67,21 @@ function initFrecency() {
   if (null == guildAndChannels) {
     return false;
   } else {
-    obj = applyDefault;
     closure_9.overwriteHistory(
-      obj.mapValues(guildAndChannels, (recentUses) => {
+      _modDef12.mapValues(guildAndChannels, (recentUses) => {
         const obj = {};
         const merged = Object.assign(recentUses);
         recentUses = recentUses.recentUses;
         const mapped = recentUses.map(Number);
-        obj.recentUses = mapped.filter((arg0) => arg0 > 0);
+        obj.recentUses = mapped.filter((item) => item > 0);
         return obj;
       }),
-      closure_13.pendingUsages,
+      global.pendingUsages,
     );
   }
 }
+const ID_REGEX = fn(1074).ID_REGEX;
+const UserSettingsTypes = fn(1084).UserSettingsTypes;
 let obj = {
   computeBonus() {
     return 100;
@@ -112,12 +109,12 @@ let obj = {
     return num;
   },
   lookupKey(id) {
-    guild = guild.getGuild(id);
+    let guild = GuildStore.getGuild(id);
     if (guild == null) {
-      guild = authStore.getChannel(id);
+      guild = ChannelStore.getChannel(id);
     }
     if (guild == null) {
-      guild = authStore.getChannel(authStore.getDMFromUserId(id));
+      guild = ChannelStore.getChannel(ChannelStore.getDMFromUserId(id));
     }
     return guild;
   },
@@ -125,16 +122,16 @@ let obj = {
   numFrequentlyItems: 100,
   maxSamples: 10,
 };
-let closure_9 = new DEFAULT_FRECENCYDefault(obj);
+let closure_9 = new FrecencyDefault(obj);
 let c10 = null;
 let c11 = null;
-let closure_13 = { pendingUsages: [] };
+let global = { pendingUsages: [] };
 const PersistedStore = initializeDefault.PersistedStore;
 class FrecencyStore extends PersistedStore {}
 const prototype = FrecencyStore.prototype;
 prototype["initialize"] = function initialize(pendingUsages) {
   const self = this;
-  this.waitFor(closure_3, closure_4, closure_5, closure_6, closure_2);
+  this.waitFor(ChannelStore, GuildStore, SelectedChannelStore, SelectedGuildStore, UserSettingsProtoStore);
   if (null != pendingUsages) {
     pendingUsages = pendingUsages.pendingUsages;
     pendingUsages.pendingUsages = pendingUsages.filter((key) => {
@@ -144,16 +141,16 @@ prototype["initialize"] = function initialize(pendingUsages) {
       }
       return isMatch;
     });
-    closure_13 = pendingUsages;
+    global = pendingUsages;
   }
-  const items = [closure_2];
+  const items = [UserSettingsProtoStore];
   self.syncWith(items, initFrecency);
 };
 prototype["getState"] = function getState() {
-  return closure_13;
+  return global;
 };
 prototype["hasPendingUsage"] = function hasPendingUsage() {
-  return closure_13.pendingUsages.length > 0;
+  return global.pendingUsages.length > 0;
 };
 Object.defineProperty(prototype, "frecencyWithoutFetchingLatest", {
   get: function frecencyWithoutFetchingLatest() {
@@ -172,7 +169,7 @@ prototype["getScoreWithoutFetchingLatest"] = function getScoreWithoutFetchingLat
   return num;
 };
 prototype["getScoreForDMWithoutFetchingLatest"] = function getScoreForDMWithoutFetchingLatest(id) {
-  const dMFromUserId = authStore.getDMFromUserId(id);
+  const dMFromUserId = ChannelStore.getDMFromUserId(id);
   let num = 0;
   if (null != dMFromUserId) {
     const self = this;
@@ -197,15 +194,15 @@ obj = {
   USER_SETTINGS_PROTO_UPDATE: function handleUserSettingsProtoUpdate(settings) {
     let flag = !tmp;
     if (!(settings.settings.type !== UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS || !settings.wasSaved)) {
-      closure_13.pendingUsages = [];
+      global.pendingUsages = [];
       flag = true;
     }
     return flag;
   },
 };
-const frecencyStore = new FrecencyStore(dispatcherDefault, obj);
-let tmp2 = new DEFAULT_FRECENCYDefault(obj);
-const result = require("set").fileFinishedImporting("stores/FrecencyStore.tsx");
+const frecencyStore = new FrecencyStore(DispatcherDefault, obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("stores/FrecencyStore.tsx");
 
 export default frecencyStore;
 export const MAX_NUM_SELECTED_ITEMS = 100;

@@ -1,24 +1,24 @@
 // discord_app/modules/applications/message_embed/native/utils/nativeAppMessageEmbedUtil.tsx
-import set from "../../../../../../_runtime/00002_set.js";
-import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import getAvatarURLDefault from "../../../../../utils/AvatarUtils.tsx";
-import hasFetchedColors from "../../../../avatar/useAvatarColor.tsx";
-import hexToRgba from "../../../../../utils/ColorUtils.tsx";
+import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import AvatarUtilsDefault from "../../../../../utils/AvatarUtils.tsx";
+import useAvatarColor from "../../../../avatar/useAvatarColor.tsx";
+import ColorUtils from "../../../../../utils/ColorUtils.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
 let c3 = "#000000";
-let items = [hexToRgba.hexToRgba(ThemesDefault.unsafe_rawColors.PRIMARY_760)];
-items[1] = hexToRgba.hexToRgba(ThemesDefault.unsafe_rawColors.PRIMARY_760);
-const result = set.fileFinishedImporting(
+let items = [ColorUtils.hexToRgba(nativeDefault.unsafe_rawColors.PRIMARY_760)];
+items[1] = ColorUtils.hexToRgba(nativeDefault.unsafe_rawColors.PRIMARY_760);
+const result = size.fileFinishedImporting(
   "modules/applications/message_embed/native/utils/nativeAppMessageEmbedUtil.tsx",
 );
 
-export const getAppGradientColors = function getAppGradientColors(id2) {
-  if (null == id2) {
+export const getAppGradientColors = function getAppGradientColors(appIconSrc) {
+  if (null == appIconSrc) {
     return tmp;
   } else {
-    if (obj5.hasFetchedColors(id2)) {
+    if (obj5.hasFetchedColors(appIconSrc)) {
       let tmp6Result = tmp6(8133);
-      const heroColors = tmp6Result.getHeroColors(id2);
+      const heroColors = tmp6Result.getHeroColors(appIconSrc);
       ({ primaryColor, secondaryColor } = heroColors);
       let tmp5 = tmp;
       if (false === tmp4) {
@@ -29,15 +29,14 @@ export const getAppGradientColors = function getAppGradientColors(id2) {
       }
       return tmp5;
     } else {
-      tmp6(8132).maybeFetchColors(id2);
+      tmp6(8132).maybeFetchColors(appIconSrc);
       return tmp;
     }
-    obj5 = hasFetchedColors;
+    obj5 = useAvatarColor;
   }
 };
 export const getAppIconSrc = function getAppIconSrc(id, icon, bot) {
-  let obj = getAvatarURLDefault;
-  obj = { id, icon, bot, fallbackAvatar: false };
+  const obj = { id, icon, bot, fallbackAvatar: false };
   let applicationIconURL = obj.getApplicationIconURL(obj);
   if (applicationIconURL == null) {
     applicationIconURL = null;

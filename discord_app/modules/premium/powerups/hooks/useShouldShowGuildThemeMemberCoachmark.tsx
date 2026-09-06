@@ -1,23 +1,26 @@
 // discord_app/modules/premium/powerups/hooks/useShouldShowGuildThemeMemberCoachmark.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import BoostedGuildTiers from "../constants/GuildPowerupsConstants.tsx";
-import useGuildAppliedBoostCountDefault from "useGuildPowerupsBoostCount.tsx";
-import apexExperiment from "../experiments/ServerThemeUserExperiment.tsx";
-import experiment from "../experiments/ServerThemeExperiment.tsx";
+import GuildPowerupsConstants from "../constants/GuildPowerupsConstants.tsx";
+import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount.tsx";
+import ServerThemeUserExperiment from "../experiments/ServerThemeUserExperiment.tsx";
+import ServerThemeExperiment from "../experiments/ServerThemeExperiment.tsx";
 import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission.tsx";
 import useIsGuildThemePerkEnabledDefault from "useIsGuildThemePerkEnabled.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-let closure_3 = BoostedGuildTiers.GUILD_THEME_POWERUP_BOOST_PRICE;
-const result = set.fileFinishedImporting("modules/premium/powerups/hooks/useShouldShowGuildThemeMemberCoachmark.tsx");
+let closure_3 = GuildPowerupsConstants.GUILD_THEME_POWERUP_BOOST_PRICE;
+const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useShouldShowGuildThemeMemberCoachmark.tsx");
 
 export default function useShouldShowGuildThemeMemberCoachmark(guildId) {
   const tmp = useHasAllocateBoostPermissionDefault(guildId);
-  let serverThemeEnabled = experiment.useServerThemeEnabled(guildId, "useShouldShowGuildThemeMemberCoachmark");
-  const obj = experiment;
-  const serverThemeUserEnabled = apexExperiment.useServerThemeUserEnabled("useShouldShowGuildThemeMemberCoachmark");
-  const obj2 = apexExperiment;
+  let serverThemeEnabled = ServerThemeExperiment.useServerThemeEnabled(
+    guildId,
+    "useShouldShowGuildThemeMemberCoachmark",
+  );
+  const serverThemeUserEnabled = ServerThemeUserExperiment.useServerThemeUserEnabled(
+    "useShouldShowGuildThemeMemberCoachmark",
+  );
   const tmp4 = useIsGuildThemePerkEnabledDefault(guildId);
-  const isLoading = useGuildAppliedBoostCountDefault(guildId).isLoading;
+  const isLoading = useGuildPowerupsBoostCountDefault(guildId).isLoading;
   let tmp7 = !isLoading;
   if (!isLoading) {
     if (serverThemeEnabled) {

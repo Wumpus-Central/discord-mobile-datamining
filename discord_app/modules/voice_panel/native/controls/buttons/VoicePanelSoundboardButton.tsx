@@ -1,38 +1,37 @@
 // discord_app/modules/voice_panel/native/controls/buttons/VoicePanelSoundboardButton.tsx
-import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import dismissPanelDefault from "../../VoicePanelStateContext.tsx";
-import useVoicePanelButtonStyles from "VoicePanelStyles.tsx";
+import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import VoicePanelStateContextDefault from "../../VoicePanelStateContext.tsx";
+import VoicePanelStyles from "VoicePanelStyles.tsx";
 import useSoundboardConfig from "../../hooks/useSoundboardConfig.tsx";
-import useSoundboardConfigDefault from "../../hooks/useSoundboardConfig.tsx";
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
-import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { circle: null, iconContainer: null };
-createCacheKey = { width: "100%", height: "100%", borderRadius: ThemesDefault.radii.round };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = {
+const useSoundboardConfigDefault = useSoundboardConfig;
+
+require = fn;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+fn(4560);
+const createStyles = { circle: null, iconContainer: null };
+let size = { width: "100%", height: "100%", borderRadius: nativeDefault.radii.round };
+createStyles.circle = size;
+createStyles.iconContainer = {
   position: "absolute",
   justifyContent: "center",
   alignItems: "center",
   width: "100%",
   height: "100%",
 };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting(
-  "modules/voice_panel/native/controls/buttons/VoicePanelSoundboardButton.tsx",
-);
+let closure_6 = createStyles.createStyles(createStyles);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelSoundboardButton.tsx");
 
 export default function SoundboardButton(arg0) {
   ({ props, wrapperSpecs } = arg0);
-  const tmp3 = callback3();
-  let obj = useVoicePanelButtonStyles;
+  const tmp3 = closure_6();
+  let obj = VoicePanelStyles;
   const voicePanelButtonStyles = obj.useVoicePanelButtonStyles(wrapperSpecs);
-  const tmp6 = useSoundboardConfigDefault;
   ({ disabled, handlePress, disabledAccessibilityHint, visible } = useSoundboardConfigDefault(
-    React.useContext(dismissPanelDefault).channelId,
+    noop.useContext(VoicePanelStateContextDefault).channelId,
     useSoundboardConfig.SoundboardButtonLocation.VOICE_PANEL_CONTROLS,
   ));
   if (disabled) {
@@ -42,37 +41,31 @@ export default function SoundboardButton(arg0) {
   }
   let tmp8 = null;
   if (visible) {
-    obj = {
-      onPress: null,
-      disabled: null,
-      props: null,
+    const element = {
+      onPress: handlePress,
+      disabled,
+      props,
       accessibilityLabel: null,
       accessibilityHint: null,
       children: null,
     };
-    obj[0] = handlePress;
-    obj[1] = disabled;
-    obj[2] = props;
-    let tmpResult = tmp(17185);
+    tmp(17185);
     const intl = tmp4(1114).intl;
-    obj[3] = intl.string(tmp4(1114).t["6EJvHt"]);
-    obj[4] = disabledAccessibilityHint;
+    element.accessibilityLabel = intl.string(tmp4(1114).t["6EJvHt"]);
+    element.accessibilityHint = disabledAccessibilityHint;
     obj = { style: null };
     const items = [tmp3.circle];
-    obj1 = { backgroundColor: null };
-    obj1[0] = voicePanelButtonStyles.iconBg.backgroundColor;
-    items[1] = obj1;
-    obj[0] = items;
-    const items1 = [callback(tmp(5589), obj)];
-    const obj2 = { style: null, children: null };
-    obj2[0] = tmp3.iconContainer;
-    tmpResult = tmp(5589);
-    const obj3 = { color: null };
-    obj3[0] = color;
-    obj2[1] = callback(tmp4(12528).SoundboardIcon, obj3);
-    items1[1] = callback(tmpResult, obj2);
-    obj[5] = items1;
-    tmp8 = callback2(tmpResult, obj);
+    obj = { backgroundColor: voicePanelButtonStyles.iconBg.backgroundColor };
+    items[1] = obj;
+    obj.style = items;
+    const items1 = [React4(tmp(5589), obj)];
+    const obj1 = { style: tmp3.iconContainer, children: null };
+    const tmpResult = tmp(5589);
+    const obj2 = { color };
+    obj1.children = React4(tmp4(12528).SoundboardIcon, obj2);
+    items1[1] = React4(tmpResult, obj1);
+    element.children = items1;
+    tmp8 = hasOwnProperty(tmpResult, element);
   }
   return tmp8;
 }

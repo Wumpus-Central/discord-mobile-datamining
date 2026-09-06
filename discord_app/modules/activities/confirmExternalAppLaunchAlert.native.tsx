@@ -1,55 +1,55 @@
 // discord_app/modules/activities/confirmExternalAppLaunchAlert.native.tsx
-import noopAll from "../../../_runtime/00019_noop.js";
-import getSystemLocale from "../../intl/index.native.tsx";
-import Text from "../../design/components/Text/native/Text.tsx";
-import setDefault from "../../actions/AlertActionCreators.tsx";
-import Button from "../../design/components/Button/native/Button.native.tsx";
-import registerAssetDefault from "../../../_runtime/09544_registerAsset.js";
-import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
-import { PRIVATE_APPS_HELP_ARTICLE } from "Constants.tsx";
-import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
+import util from "../../intl/index.native.tsx";
+import LinkingDefault from "../../lib/native/Linking.tsx";
+import Text_Text from "../../design/components/Text/native/Text.tsx";
+import AlertActionCreatorsDefault from "../../actions/AlertActionCreators.tsx";
+import components_Button_Button from "../../design/components/Button/native/Button.native.tsx";
+import _modDef9544 from "../../../_runtime/metro/09544__.js";
+import noop from "../../../_runtime/metro/00019__.js";
 
-require = arg1;
+require = fn;
 function ConfirmActivityGateContent(activityName) {
-  const tmp = callback3();
+  const tmp = closure_8();
   let obj = { style: tmp.alertContainer, children: null };
-  obj = { source: registerAssetDefault, style: tmp.announcementBirb };
-  const items = [callback(closure_3, obj), , ,];
+  obj = { source: _modDef9544, style: tmp.announcementBirb };
+  const items = [timestampProducer(React3, obj), , ,];
   obj = { style: tmp.alertEyebrowText, variant: "eyebrow", children: null };
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.string(getSystemLocale.t["06YebE"]);
-  items[1] = callback(Text.Text, obj);
-  obj1 = { style: tmp.alertTitleText, variant: "heading-lg/bold", children: null };
-  const intl2 = getSystemLocale.intl;
-  obj1[2] = intl2.format(getSystemLocale.t["Z/eMDT"], { activityName: activityName.application.name });
-  items[2] = callback(Text.Text, obj1);
+  const intl = util.intl;
+  obj.children = intl.string(util.t["06YebE"]);
+  items[1] = timestampProducer(Text_Text.Text, obj);
+  const obj1 = { style: tmp.alertTitleText, variant: "heading-lg/bold", children: null };
+  const intl2 = util.intl;
+  obj1.children = intl2.format(util.t["Z/eMDT"], { activityName: activityName.application.name });
+  items[2] = timestampProducer(Text_Text.Text, obj1);
   const obj3 = { style: tmp.alertSubtitleText, variant: "text-sm/normal", children: null };
-  const intl3 = getSystemLocale.intl;
-  obj3[2] = intl3.string(getSystemLocale.t.z81WwD);
-  items[3] = callback(Text.Text, obj3);
-  obj[1] = items;
-  return callback2(closure_4, obj);
+  const intl3 = util.intl;
+  obj3.children = intl3.string(util.t.z81WwD);
+  items[3] = timestampProducer(Text_Text.Text, obj3);
+  obj.children = items;
+  return React5(React4, obj);
 }
 function LinkButton() {
-  let obj = { style: callback3().linkWrapper, children: null };
+  let obj = { style: closure_8().linkWrapper, children: null };
   obj = {
     variant: "secondary",
     size: "sm",
     onPress() {
-      callback(table[9]).openURL(closure_5);
+      LinkingDefault.openURL(PRIVATE_APPS_HELP_ARTICLE);
     },
     text: null,
   };
-  const intl = getSystemLocale.intl;
-  obj[3] = intl.string(getSystemLocale.t.E0gf5l);
-  obj[1] = callback(Button.Button, obj);
-  return callback(closure_4, obj);
+  const intl = util.intl;
+  obj.text = intl.string(util.t.E0gf5l);
+  obj.children = timestampProducer(components_Button_Button.Button, obj);
+  return timestampProducer(React4, obj);
 }
-noopAll;
-({ Image: c3, View: c4 } = get_ActivityIndicator);
-({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_8 = createCacheKey.createStyles({
+get_ActivityIndicator = fn(17);
+({ Image: c3, View: closure_4 } = get_ActivityIndicator);
+const PRIVATE_APPS_HELP_ARTICLE = fn(1920).PRIVATE_APPS_HELP_ARTICLE;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4560);
+let closure_8 = createStyles.createStyles({
   alertContainer: { display: "flex", alignItems: "center", padding: 8 },
   alertEyebrowText: { marginTop: 40, textAlign: "center" },
   alertTitleText: { marginTop: 16, textAlign: "center" },
@@ -57,25 +57,25 @@ let closure_8 = createCacheKey.createStyles({
   announcementBirb: { width: 90, height: 100, position: "absolute", top: -66 },
   linkWrapper: { marginTop: 8 },
 });
-const result = require("set").fileFinishedImporting("modules/activities/confirmExternalAppLaunchAlert.native.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/confirmExternalAppLaunchAlert.native.tsx");
 
 export const confirmExternalAppLaunchAlert = function confirmExternalAppLaunchAlert(arg0) {
   ({ application, onConfirm, onCancel } = arg0);
-  let obj = setDefault;
-  obj = {
+  const obj = {
     title: "",
-    children: callback(ConfirmActivityGateContent, { application }),
+    children: timestampProducer(ConfirmActivityGateContent, { application }),
     onConfirm,
     confirmText: null,
     onCancel: null,
     cancelText: null,
     footer: null,
   };
-  const intl = getSystemLocale.intl;
-  obj[3] = intl.string(getSystemLocale.t["3PatSz"]);
-  obj[4] = onCancel;
-  const intl2 = getSystemLocale.intl;
-  obj[5] = intl2.string(getSystemLocale.t["ETE/oC"]);
-  obj[6] = callback(LinkButton, {});
+  const intl = util.intl;
+  obj.confirmText = intl.string(util.t["3PatSz"]);
+  obj.onCancel = onCancel;
+  const intl2 = util.intl;
+  obj.cancelText = intl2.string(util.t["ETE/oC"]);
+  obj.footer = timestampProducer(LinkButton, {});
   return Promise.resolve(obj.show(obj));
 };

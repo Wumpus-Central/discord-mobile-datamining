@@ -1,14 +1,13 @@
 // discord_app/modules/activities/utils/getEmbeddedActivityJoinability.tsx
-import allowChannelAccess from "../../../utils/ChannelUtils.tsx";
+import ChannelUtils from "../../../utils/ChannelUtils.tsx";
 import isActivitySupportedOnClientPlatformDefault from "isActivitySupportedOnClientPlatform.tsx";
-import closure_3 from "../../../stores/ChannelStore.tsx";
-import closure_4 from "../../../stores/GuildStore.tsx";
-import closure_5 from "../../../stores/PermissionStore.tsx";
-import closure_6 from "../../../stores/UserStore.tsx";
-import closure_7 from "../../../stores/VoiceStateStore.tsx";
-import { Permissions } from "../../../Constants.tsx";
+import ChannelStore from "../../../stores/ChannelStore.tsx";
+import GuildStore from "../../../stores/GuildStore.tsx";
+import PermissionStore from "../../../stores/PermissionStore.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
+import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
 
-require = arg1;
+require = fn;
 function getEmbeddedActivityJoinability(arg0) {
   ({
     userId,
@@ -85,8 +84,7 @@ function getEmbeddedActivityJoinability(arg0) {
                   const currentClientVoiceChannelId = VoiceStateStore.getCurrentClientVoiceChannelId(
                     channel.getGuildId(),
                   );
-                  const obj2 = allowChannelAccess;
-                  const isChannelFullResult = allowChannelAccess.isChannelFull(channel, VoiceStateStore, GuildStore);
+                  const isChannelFullResult = ChannelUtils.isChannelFull(channel, VoiceStateStore, GuildStore);
                   if (PermissionStore.can(Permissions.USE_EMBEDDED_ACTIVITIES, channel)) {
                     if (channel.isVocal()) {
                       if (currentClientVoiceChannelId !== tmp10) {
@@ -116,7 +114,8 @@ function getEmbeddedActivityJoinability(arg0) {
     }
   }
 }
-let obj = {
+const Permissions = fn(1074).Permissions;
+const EmbeddedActivityJoinability = {
   CAN_JOIN: 0,
   [0]: "CAN_JOIN",
   NO_USE_EMBEDDED_ACTIVITIES_PERMISSION: 1,
@@ -140,38 +139,37 @@ let obj = {
   NO_GUILD: 10,
   [10]: "NO_GUILD",
 };
-const result = require("set").fileFinishedImporting("modules/activities/utils/getEmbeddedActivityJoinability.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/utils/getEmbeddedActivityJoinability.tsx");
 
 export default getEmbeddedActivityJoinability;
-export const EmbeddedActivityJoinability = obj;
+export { EmbeddedActivityJoinability };
 export const useEmbeddedActivityJoinability = function useEmbeddedActivityJoinability(userId) {
   userId = userId.userId;
   const activity = userId.activity;
   const channelId = userId.channelId;
   const application = userId.application;
-  let isActivitiesEnabledForCurrentPlatform;
-  let stateFromStores;
-  isActivitiesEnabledForCurrentPlatform = userId(channelId[8]).useIsActivitiesEnabledForCurrentPlatform();
-  obj = userId(channelId[8]);
-  const items = [closure_6];
-  stateFromStores = userId(channelId[9]).useStateFromStores(items, () => currentUser.getCurrentUser());
+  const isActivitiesEnabledForCurrentPlatform = userId(channelId[8]).useIsActivitiesEnabledForCurrentPlatform();
+  const obj = userId(channelId[8]);
+  const items = [UserStore];
+  const stateFromStores = userId(channelId[9]).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj2 = userId(channelId[9]);
-  const items1 = [application, closure_7, stateFromStores, isActivitiesEnabledForCurrentPlatform];
+  const items1 = [application, VoiceStateStore, stateFromStores, isActivitiesEnabledForCurrentPlatform];
   const items2 = [activity, application, channelId, stateFromStores, isActivitiesEnabledForCurrentPlatform, userId];
   return userId(channelId[9]).useStateFromStores(
     items1,
     () =>
-      closure_1_10({
+      getEmbeddedActivityJoinability({
         userId,
         activity,
         application,
         channelId,
         currentUser: stateFromStores,
         isActivitiesEnabledForCurrentPlatform,
-        ChannelStore: application,
-        VoiceStateStore: closure_1_7,
-        PermissionStore: stateFromStores,
-        GuildStore: isActivitiesEnabledForCurrentPlatform,
+        ChannelStore,
+        VoiceStateStore,
+        PermissionStore,
+        GuildStore,
       }),
     items2,
   );

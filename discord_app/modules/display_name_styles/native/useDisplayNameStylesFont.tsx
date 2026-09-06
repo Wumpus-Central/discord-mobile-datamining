@@ -1,12 +1,12 @@
 // discord_app/modules/display_name_styles/native/useDisplayNameStylesFont.tsx
-import set from "../../../../_runtime/00002_set.js";
-import items3 from "../DisplayNameStylesConstants.tsx";
+import DisplayNameStylesConstants from "../DisplayNameStylesConstants.tsx";
 import DisplayNameFont from "../../../../discord_common/js/shared/shared-constants/DisplayNameFont.tsx";
 import useDisplayNameStylesEnabled from "../hooks/useDisplayNameStylesEnabled.tsx";
-import apexExperiment from "../DisplayNameStylesFlywheelExperiment.tsx";
+import DisplayNameStylesFlywheelExperiment from "../DisplayNameStylesFlywheelExperiment.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const FLYWHEEL_FONTS = items3.FLYWHEEL_FONTS;
-let obj = {
+const FLYWHEEL_FONTS = DisplayNameStylesConstants.FLYWHEEL_FONTS;
+const DISPLAY_NAME_STYLES_FONT_FAMILY_MAP = {
   [DisplayNameFont.DisplayNameFont.CHERRY_BOMB]: "Sakura-Normal",
   [DisplayNameFont.DisplayNameFont.CHICLE]: "Jellybean-Normal",
   [DisplayNameFont.DisplayNameFont.MUSEO_MODERNO]: "Modern-Medium",
@@ -19,17 +19,17 @@ let obj = {
   [DisplayNameFont.DisplayNameFont.NEW_ROCKER]: "Headbang-Normal",
   [DisplayNameFont.DisplayNameFont.KALAM]: "Journal-Bold",
 };
-const result = set.fileFinishedImporting("modules/display_name_styles/native/useDisplayNameStylesFont.tsx");
+const result = size.fileFinishedImporting("modules/display_name_styles/native/useDisplayNameStylesFont.tsx");
 
-export const DISPLAY_NAME_STYLES_FONT_FAMILY_MAP = obj;
+export { DISPLAY_NAME_STYLES_FONT_FAMILY_MAP };
 export const useDisplayNameStylesFont = function useDisplayNameStylesFont(arg0) {
   ({ displayNameStyles, ignoreDisabledStylesSetting } = arg0);
   if (ignoreDisabledStylesSetting === undefined) {
     ignoreDisabledStylesSetting = false;
   }
-  obj = useDisplayNameStylesEnabled;
+  const obj = useDisplayNameStylesEnabled;
   const displayNameStylesEnabled = obj.useDisplayNameStylesEnabled({ location: "useDisplayNameStylesFont-native" });
-  apexExperiment;
+  DisplayNameStylesFlywheelExperiment;
   if (displayNameStylesEnabled) {
     if (null != displayNameStyles) {
       return obj[displayNameStyles.fontId];

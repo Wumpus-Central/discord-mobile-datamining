@@ -1,11 +1,10 @@
 // discord_app/modules/guild_automod/GuildAutomodMessageActionCreators.tsx
-import set from "../../../_runtime/00002_set.js";
-import dispatcherDefault from "../../Dispatcher.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/guild_automod/GuildAutomodMessageActionCreators.tsx");
+const result = size.fileFinishedImporting("modules/guild_automod/GuildAutomodMessageActionCreators.tsx");
 
-export const removeAutomodMessageNotice = function removeAutomodMessageNotice(messageId) {
-  let obj = dispatcherDefault;
-  obj = { type: "REMOVE_AUTOMOD_MESSAGE_NOTICE", messageId };
+export const removeAutomodMessageNotice = function removeAutomodMessageNotice(id2) {
+  const obj = { type: "REMOVE_AUTOMOD_MESSAGE_NOTICE", messageId: id2 };
   obj.dispatch(obj);
 };

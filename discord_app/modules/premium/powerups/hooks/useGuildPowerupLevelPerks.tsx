@@ -1,9 +1,14 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupLevelPerks.tsx
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import { GUILD_FEATURE_TO_PERK } from "../constants/GuildPowerupsConstants.tsx";
+import util from "../../../../intl/index.native.tsx";
+import GlobalUtils from "../../../../utils/GlobalUtils.tsx";
+import _modDef2428 from "../GuildPowerups.messages.js";
+import GuildBoostingUtils from "../../../../utils/GuildBoostingUtils.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupLevelPerks.tsx");
+require = fn;
+const GUILD_FEATURE_TO_PERK = fn(4450).GUILD_FEATURE_TO_PERK;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupLevelPerks.tsx");
 
 export default function useGuildPowerupLevelPerks(arg0) {
   closure_0 = arg0;
@@ -17,39 +22,39 @@ export default function useGuildPowerupLevelPerks(arg0) {
   let items = [arg0, includeEmojis, includeStickers, includeSoundboards];
   return includeSoundboards.useMemo(() => {
     const items = [];
-    const lib = closure_1_4();
+    closure_0 = GUILD_FEATURE_TO_PERK();
     if (includeEmojis) {
-      let obj = { perkIcon: null, description: null };
-      obj[0] = lib(includeStickers[2]).PerkIcons.EMOJI;
-      const intl = lib(includeStickers[3]).intl;
-      obj = { totalEmojis: null, additionalEmojis: null };
-      obj[0] = lib.features.total_emoji_slots;
-      obj[1] = lib.features.additional_emoji_slots;
-      obj[1] = intl.formatToPlainString(includeEmojis(includeStickers[4])["NXvV0+"], obj);
+      let obj = { perkIcon: GuildBoostingUtils.PerkIcons.EMOJI, description: null };
+      const intl = util.intl;
+      obj = {
+        totalEmojis: closure_0.features.total_emoji_slots,
+        additionalEmojis: closure_0.features.additional_emoji_slots,
+      };
+      obj.description = intl.formatToPlainString(_modDef2428["NXvV0+"], obj);
       items.push(obj);
     }
     if (includeStickers) {
-      obj = { perkIcon: null, description: null };
-      obj[0] = lib(includeStickers[2]).PerkIcons.STICKER;
-      const intl2 = lib(includeStickers[3]).intl;
-      obj1 = { totalStickers: null, additionalStickers: null };
-      obj1[0] = lib.features.total_sticker_slots;
-      obj1[1] = lib.features.additional_sticker_slots;
-      obj[1] = intl2.formatToPlainString(includeEmojis(includeStickers[4]).ZEvvPz, obj1);
+      obj = { perkIcon: GuildBoostingUtils.PerkIcons.STICKER, description: null };
+      const intl2 = util.intl;
+      const obj1 = {
+        totalStickers: closure_0.features.total_sticker_slots,
+        additionalStickers: closure_0.features.additional_sticker_slots,
+      };
+      obj.description = intl2.formatToPlainString(_modDef2428.ZEvvPz, obj1);
       items.push(obj);
     }
     if (includeSoundboards) {
-      const obj2 = { perkIcon: null, description: null };
-      obj2[0] = lib(includeStickers[2]).PerkIcons.SOUNDBOARD;
-      const intl3 = lib(includeStickers[3]).intl;
-      const obj3 = { totalSoundboards: null, additionalSoundboards: null };
-      obj3[0] = lib.features.total_sound_slots;
-      obj3[1] = lib.features.additional_sound_slots;
-      obj2[1] = intl3.formatToPlainString(includeEmojis(includeStickers[4])["s9u/E7"], obj3);
+      const obj2 = { perkIcon: GuildBoostingUtils.PerkIcons.SOUNDBOARD, description: null };
+      const intl3 = util.intl;
+      const obj3 = {
+        totalSoundboards: closure_0.features.total_sound_slots,
+        additionalSoundboards: closure_0.features.additional_sound_slots,
+      };
+      obj2.description = intl3.formatToPlainString(_modDef2428["s9u/E7"], obj3);
       items.push(obj2);
     }
-    const features = lib.features.features;
-    const mapped = features.map((arg0) => table[arg0]);
-    return items.concat(mapped.filter(lib(includeStickers[5]).isNotNullish));
+    const features = closure_0.features.features;
+    const mapped = features.map((item) => closure_0[item]);
+    return items.concat(mapped.filter(GlobalUtils.isNotNullish));
   }, items);
 }

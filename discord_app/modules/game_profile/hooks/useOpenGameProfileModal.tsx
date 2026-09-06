@@ -1,7 +1,8 @@
 // discord_app/modules/game_profile/hooks/useOpenGameProfileModal.tsx
-import set from "../../../../_runtime/00002_set.js";
+import GameProfileActionCreatorsDefault from "../GameProfileActionCreators.native.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/game_profile/hooks/useOpenGameProfileModal.tsx");
+const result = size.fileFinishedImporting("modules/game_profile/hooks/useOpenGameProfileModal.tsx");
 
 export default function useOpenGameProfileModal(arg0) {
   importDefault = arg0;
@@ -10,11 +11,9 @@ export default function useOpenGameProfileModal(arg0) {
     obj = {};
   }
   const onOpened = obj.onOpened;
-  closure_2 = undefined;
-  let gameId;
-  const tmp = importDefault(onOpened[0])(arg0);
-  closure_2 = tmp;
-  gameId = tmp.gameId;
+  const tmp = require("useShouldOpenGameProfileModal")(arg0);
+  const gameProfileModalChecks = tmp;
+  const gameId = tmp.gameId;
   let fn;
   if (tmp.shouldOpenGameProfile) {
     if (null != gameId) {
@@ -25,11 +24,10 @@ export default function useOpenGameProfileModal(arg0) {
         if (stopPropagation != null) {
           stopPropagation.preventDefault();
         }
-        let obj = callback(onOpened[1]);
-        obj = {};
-        const merged = Object.assign(callback);
+        const obj = {};
+        const merged = Object.assign(closure_0);
         obj.gameId = gameId;
-        obj.gameProfileModalChecks = closure_2;
+        obj.gameProfileModalChecks = gameProfileModalChecks;
         obj.openGameProfileModal(obj);
         if (onOpened != null) {
           onOpened();

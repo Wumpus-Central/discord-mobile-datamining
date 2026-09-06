@@ -1,7 +1,7 @@
 // discord_app/modules/stickers/StickersConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/stickers/StickersConstants.tsx");
+const result = size.fileFinishedImporting("modules/stickers/StickersConstants.tsx");
 
 export const STICKER_PICKER_TAB_PANEL_ID = "sticker-picker-tab-panel";
 export const STICKER_PICKER_TAB_ID = "sticker-picker-tab";

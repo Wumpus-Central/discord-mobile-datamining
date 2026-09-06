@@ -1,7 +1,7 @@
 // discord_app/modules/webauthn/WebAuthnConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/webauthn/WebAuthnConstants.tsx");
+const result = size.fileFinishedImporting("modules/webauthn/WebAuthnConstants.tsx");
 
 export const WebAuthnScreens = {
   MODAL_UPSELL: "MODAL_UPSELL",

@@ -1,10 +1,9 @@
 // discord_app/modules/go_live/utils/StreamerApplicationSelectors.tsx
-import shallowEqualDefault from "../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import discord_common_shallowEqualDefault from "../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 import isEmbeddedActivityDefault from "../../activities/utils/isEmbeddedActivity.tsx";
-import closure_3 from "../../../stores/PresenceStore.tsx";
-import { ActivityTypes } from "../../../Constants.tsx";
+import PresenceStore from "../../../stores/PresenceStore.tsx";
 
-const require = arg1;
+const require = fn;
 function _findPlayingActivity(type) {
   let tmp = type.type === ActivityTypes.PLAYING;
   if (tmp) {
@@ -17,16 +16,18 @@ function streamApplicationEqualityCheck(arg0, arg1) {
   if (!tmp) {
     let tmp3 = null != arg0 && null != arg1;
     if (tmp3) {
-      tmp3 = shallowEqualDefault(arg0, arg1);
+      tmp3 = discord_common_shallowEqualDefault(arg0, arg1);
     }
     tmp = tmp3;
   }
   return tmp;
 }
-const result = require("set").fileFinishedImporting("modules/go_live/utils/StreamerApplicationSelectors.tsx");
+const ActivityTypes = fn(1074).ActivityTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/go_live/utils/StreamerApplicationSelectors.tsx");
 
-export const getStreamerActivityByUserId = function getStreamerActivityByUserId(id, closure_1_10) {
-  return closure_1_10.findActivity(id, _findPlayingActivity);
+export const getStreamerActivityByUserId = function getStreamerActivityByUserId(id, PresenceStore) {
+  return PresenceStore.findActivity(id, _findPlayingActivity);
 };
 export const getStreamerActivity = function getStreamerActivity(ownerId, findActivity) {
   let findActivityResult = null;
@@ -35,41 +36,41 @@ export const getStreamerActivity = function getStreamerActivity(ownerId, findAct
   }
   return findActivityResult;
 };
-export const getStreamerApplication = function getStreamerApplication(closure_0, closure_1_3) {
-  if (null == closure_0) {
+export const getStreamerApplication = function getStreamerApplication(decodeStreamKeyResult, PresenceStore) {
+  if (null == decodeStreamKeyResult) {
     return null;
   } else {
     let findActivityResult = null;
-    if (null != closure_0) {
-      findActivityResult = closure_1_3.findActivity(closure_0.ownerId, _findPlayingActivity);
+    if (null != decodeStreamKeyResult) {
+      findActivityResult = PresenceStore.findActivity(decodeStreamKeyResult.ownerId, _findPlayingActivity);
     }
     let tmp4 = null;
     if (null != findActivityResult) {
       const obj = { id: null, name: null };
-      ({ application_id: obj[0], name: obj[1] } = findActivityResult);
+      ({ application_id: obj.id, name: obj.name } = findActivityResult);
       tmp4 = obj;
     }
     return tmp4;
   }
 };
 export const useGetStreamApplication = function useGetStreamApplication(stream) {
-  const _require = stream;
-  const items = [closure_3];
+  _require = stream;
+  const items = [PresenceStore];
   const items1 = [stream];
-  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+  return require("initialize").useStateFromStores(
     items,
     () => {
-      let obj = closure_1_3;
+      let obj = PresenceStore;
       let tmp2 = null;
       if (null != closure_0) {
         let findActivityResult = null;
         if (null != tmp) {
-          findActivityResult = obj.findActivity(tmp.ownerId, closure_1_5);
+          findActivityResult = obj.findActivity(tmp.ownerId, _findPlayingActivity);
         }
         let tmp5 = null;
         if (null != findActivityResult) {
           obj = { id: null, name: null };
-          ({ application_id: obj2[0], name: obj2[1] } = findActivityResult);
+          ({ application_id: obj2.id, name: obj2.name } = findActivityResult);
           tmp5 = obj;
         }
         tmp2 = tmp5;

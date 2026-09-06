@@ -1,16 +1,15 @@
 // discord_app/modules/voice_panel/VoicePanelManager.native.tsx
-import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
-import closure_0 from "../../stores/RTCConnectionStore.tsx";
-import closure_1 from "VoicePanelStore.tsx";
+import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
+import VoicePanelStore from "VoicePanelStore.tsx";
+import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
-initializeDefault;
 let prototype = function VoicePanelManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = {
     VOICE_CHANNEL_SELECT() {
-      const channelId = store.getChannelId();
+      const channelId = RTCConnectionStore.getChannelId();
       if (null != channelId) {
-        const state = store2.getState();
+        const state = VoicePanelStore.getState();
         const channels = state.channels;
         if (!channels.has(channelId)) {
           state.openChannel(channelId);
@@ -18,9 +17,9 @@ let prototype = function VoicePanelManager() {
       }
     },
     RTC_CONNECTION_STATE() {
-      const channelId = store.getChannelId();
+      const channelId = RTCConnectionStore.getChannelId();
       if (null != channelId) {
-        const state = store2.getState();
+        const state = VoicePanelStore.getState();
         const channels = state.channels;
         if (!channels.has(channelId)) {
           state.openChannel(channelId);
@@ -32,6 +31,7 @@ let prototype = function VoicePanelManager() {
 }.prototype;
 class prototype extends tmp2 {}
 prototype = new prototype();
-const result = require("set").fileFinishedImporting("modules/voice_panel/VoicePanelManager.native.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/VoicePanelManager.native.tsx");
 
 export default prototype;

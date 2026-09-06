@@ -1,24 +1,27 @@
 // discord_app/modules/quests/native/QuestGameLogotype.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import importAllResult from "../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import spring from "../../../design/animation/reanimated/spring/spring.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let c4 = importAllResult;
-({ View: c5, Image: closure_6 } = get_ActivityIndicator);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
 let obj = {};
-const merged = Object.assign(require("SUBTLE_SPRING").springSlow);
+const merged = Object.assign(fn(4978).springSlow);
 obj.overshootClamping = true;
-obj = { logo: { marginBottom: ThemesDefault.space.PX_4 } };
-let closure_9 = createCacheKey.createStyles(obj);
-let closure_10 = {
+const createStyles = fn(4560);
+obj = { logo: { marginBottom: nativeDefault.space.PX_4 } };
+let closure_9 = createStyles.createStyles(obj);
+const __initData = {
   code: "function QuestGameLogotypeTsx1(){const{withSpring,logoDimensionStyles,SPRING_CONFIG}=this.__closure;return{opacity:withSpring(logoDimensionStyles==null?0:1,SPRING_CONFIG,'animate-always')};}",
 };
-let obj1 = { marginBottom: ThemesDefault.space.PX_4 };
-const memoResult = importAllResult.memo((assetUrl) => {
+let obj1 = { marginBottom: nativeDefault.space.PX_4 };
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/quests/native/QuestGameLogotype.tsx");
+
+export default noop.memo((assetUrl) => {
   assetUrl = assetUrl.assetUrl;
   let num = assetUrl.width;
   if (num === undefined) {
@@ -28,27 +31,20 @@ const memoResult = importAllResult.memo((assetUrl) => {
   const maxWidth = assetUrl.maxWidth;
   const maxHeight = assetUrl.maxHeight;
   const onError = assetUrl.onError;
-  let first;
-  closure_6 = undefined;
-  let memo;
-  const tmp = callback();
+  const tmp = closure_9();
   const tmp2 = maxWidth(maxHeight.useState(null), 2);
-  first = tmp2[0];
+  const first = tmp2[0];
   closure_6 = tmp2[1];
   const items = [first, num, height, maxWidth, maxHeight];
-  memo = maxHeight.useMemo(() => {
-    const size = first;
+  const memo = maxHeight.useMemo(() => {
+    size = first;
     if (null != first) {
       const result = size.width / size.height;
       if (null != height) {
-        obj = { height: null, width: null };
-        obj[0] = tmp2;
-        obj[1] = tmp2 * result;
-        let size2 = obj;
+        size = { height: tmp2, width: tmp2 * result };
+        let size2 = size;
       } else {
-        size2 = { height: null, width: null };
-        size2[0] = num / result;
-        size2[1] = num;
+        size2 = { height: num / result, width: num };
       }
       if (null != maxWidth) {
         const _Math = Math;
@@ -65,58 +61,51 @@ const memoResult = importAllResult.memo((assetUrl) => {
   }, items);
   const items1 = [assetUrl];
   const effect = maxHeight.useEffect(() => {
-    size = size.getSize(assetUrl, (arg0, arg1) => {
+    size = size.getSize(assetUrl, (width, height) => {
       if (tmp) {
-        obj = { width: null, height: null };
-        obj[0] = arg0;
-        obj[1] = arg1;
-        callback(obj);
+        size = { width, height };
+        closure_1_6(size);
       }
     });
   }, items1);
-  obj = assetUrl(height[7]);
+  let __closure = assetUrl(height[7]);
   class C {
     constructor() {
-      obj = assetUrl(height[8]);
+      obj = closure_0(closure_2[8]);
       num = 1;
       if (null == closure_7) {
         num = 0;
       }
-      obj = { opacity: obj.withSpring(num, closure_1_8, "animate-always") };
+      obj = { opacity: obj.withSpring(num, closure_8, "animate-always") };
       return obj;
     }
   }
-  obj = { withSpring: assetUrl(height[8]).withSpring, logoDimensionStyles: memo, SPRING_CONFIG: obj };
-  C.__closure = obj;
+  __closure = { withSpring: assetUrl(height[8]).withSpring, logoDimensionStyles: memo, SPRING_CONFIG: __closure };
+  C.__closure = __closure;
   C.__workletHash = 11242802634598;
-  C.__initData = closure_10;
+  C.__initData = __initData;
   const items2 = [assetUrl];
-  const animatedStyle = obj.useAnimatedStyle(C);
+  const animatedStyle = __closure.useAnimatedStyle(C);
   const memo1 = maxHeight.useMemo(() => assetUrl.endsWith(".svg"), items2);
-  obj = { style: items3, children: null };
-  items3 = [animatedStyle, assetUrl.style];
+  __closure = { style: null, children: null };
+  const items3 = [animatedStyle, assetUrl.style];
+  __closure.style = items3;
   if (memo1) {
-    obj1 = { style: null, children: null };
+    const obj1 = { style: null, children: null };
     const items4 = [memo, tmp.logo];
-    obj1[0] = items4;
-    const obj2 = { height: "100%", width: "100%", uri: null, onError: null };
-    obj2[2] = assetUrl;
-    obj2[3] = onError;
-    obj1[1] = tmp10(assetUrl(tmp7[9]).SvgUri, obj2);
+    obj1.style = items4;
+    size = { height: "100%", width: "100%", uri: assetUrl, onError };
+    obj1.children = tmp10(assetUrl(tmp7[9]).SvgUri, size);
     let tmp10Result = tmp10(first, obj1);
   } else {
-    const obj3 = { source: null, style: null, onError: null };
-    const obj4 = { uri: null };
-    obj4[0] = assetUrl;
-    obj3[0] = obj4;
+    const obj2 = { source: null, style: null, onError: null };
+    const obj3 = { uri: assetUrl };
+    obj2.source = obj3;
     const items5 = [memo, tmp.logo];
-    obj3[1] = items5;
-    obj3[2] = onError;
-    tmp10Result = tmp10(num(tmp7[10]), obj3);
+    obj2.style = items5;
+    obj2.onError = onError;
+    tmp10Result = tmp10(num(tmp7[10]), obj2);
   }
-  obj[1] = tmp10Result;
-  return memo(num(height[7]).View, obj);
+  __closure.children = tmp10Result;
+  return memo(num(height[7]).View, __closure);
 });
-let result = require("set").fileFinishedImporting("modules/quests/native/QuestGameLogotype.tsx");
-
-export default memoResult;

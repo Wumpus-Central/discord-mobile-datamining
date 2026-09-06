@@ -1,83 +1,75 @@
 // discord_app/modules/verification/native/components/ConfirmEmailChangeStart.tsx
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_9 from "../../../../stores/UserStore.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import UserStore from "../../../../stores/UserStore.tsx";
 
-const require = arg1;
-({ View: closure_6, Image: error, ScrollView: closure_8 } = get_ActivityIndicator);
-({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-let closure_12 = createCacheKey.createStyles({
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: metroRequire, Image: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(4560);
+let closure_12 = createStyles.createStyles({
   container: { flex: 1, padding: 16, alignItems: "center", justifyContent: "center" },
   image: { height: 190, width: 220, resizeMode: "contain" },
   title: { marginTop: 16, textAlign: "center" },
   body: { marginTop: 8, lineHeight: 18, textAlign: "center" },
   button: { marginTop: 16, width: "100%" },
 });
-const result = require("set").fileFinishedImporting(
-  "modules/verification/native/components/ConfirmEmailChangeStart.tsx",
-);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/verification/native/components/ConfirmEmailChangeStart.tsx");
 
 export default function ConfirmEmailChangeStart() {
-  const tmp = callback4();
-  const _require = tmp;
-  let obj = useNavigation;
+  const tmp = closure_12();
+  _require = tmp;
+  let obj = require("useNavigation");
   const navigation = obj.useNavigation();
-  obj1 = initialize;
-  const items = [closure_9];
+  let obj1 = require("initialize");
+  const items = [UserStore];
   const stateFromStores = obj1.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const tmp6 = callback(React.useState(false), 2);
+  const tmp6 = _slicedToArray(noop.useState(false), 2);
   dependencyMap = tmp6[1];
   [][0] = navigation;
   if (null == stateFromStores) {
     return null;
   } else {
     const intl = tmp2(1114).intl;
-    obj = { oldEmail: null };
-    obj[0] = stateFromStores.email;
+    obj = { oldEmail: stateFromStores.email };
     obj = { keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
-    obj1 = { style: null, children: null };
-    obj1[0] = tmp.container;
-    let obj2 = { style: null, source: null };
-    obj2[0] = tmp.image;
-    obj2[1] = navigation(6602);
-    const items1 = [callback2(closure_7, obj2), , ,];
+    obj1 = { style: tmp.container, children: null };
+    let obj2 = { style: tmp.image, source: navigation(6602) };
+    const items1 = [closure_10(closure_7, obj2), , ,];
     const obj3 = {
-      style: null,
+      style: tmp.title,
       accessibilityRole: "header",
       variant: "heading-xl/extrabold",
       color: "mobile-text-heading-primary",
       children: null,
     };
-    obj3[0] = tmp.title;
     const intl2 = tmp2(1114).intl;
-    obj3[4] = intl2.string(tmp2(1114).t.dQ71Wa);
-    items1[1] = callback2(tmp2(4556).Text, obj3);
+    obj3.children = intl2.string(tmp2(1114).t.dQ71Wa);
+    items1[1] = closure_10(tmp2(4556).Text, obj3);
     items1[2] = intl
       .format(tmp2(1114).t.oMFSgi, obj)
-      .map((children) =>
-        closure_1_10(
-          lib(table[15]).Text,
-          { style: lib.body, variant: "text-sm/medium", color: "text-default", children },
-          arg1,
+      .map((children, index) =>
+        closure_2_10(
+          Text_Text.Text,
+          { style: body.body, variant: "text-sm/medium", color: "text-default", children },
+          index,
         ),
       );
-    const obj4 = { style: null, children: null };
-    obj4[0] = tmp.button;
+    const obj4 = { style: tmp.button, children: null };
     const obj5 = { text: null, onPress: null, loading: null, grow: true };
     const intl3 = tmp2(1114).intl;
-    obj5[0] = intl3.string(tmp2(1114).t.rXV81H);
-    obj5[1] = tmp7;
-    obj5[2] = tmp6[0];
-    obj4[1] = callback2(tmp2(4975).Button, obj5);
-    items1[3] = callback2(closure_6, obj4);
-    obj1[1] = items1;
-    obj[2] = callback3(closure_6, obj1);
-    return callback2(closure_8, obj);
+    obj5.text = intl3.string(tmp2(1114).t.rXV81H);
+    obj5.onPress = tmp7;
+    obj5.loading = tmp6[0];
+    obj4.children = closure_10(tmp2(4975).Button, obj5);
+    items1[3] = closure_10(closure_6, obj4);
+    obj1.children = items1;
+    obj.children = closure_11(closure_6, obj1);
+    return closure_10(closure_8, obj);
   }
 }

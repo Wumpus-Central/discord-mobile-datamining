@@ -1,15 +1,15 @@
 // discord_app/modules/activities/utils/getActivityChannelId.tsx
-import set from "../../../../_runtime/00002_set.js";
-import createChannelRecord from "../../../records/ChannelRecord.tsx";
-import closure_1 from "../../../stores/ChannelStore.tsx";
-import closure_2 from "../../../stores/VoiceStateStore.tsx";
+import ChannelRecord from "../../../records/ChannelRecord.tsx";
+import ChannelStore from "../../../stores/ChannelStore.tsx";
+import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const isTextChannel = createChannelRecord.isTextChannel;
-const result = set.fileFinishedImporting("modules/activities/utils/getActivityChannelId.tsx");
+const isTextChannel = ChannelRecord.isTextChannel;
+const result = size.fileFinishedImporting("modules/activities/utils/getActivityChannelId.tsx");
 
 export default function getActivityChannelId(userId) {
   ({ channelId, activity } = userId);
-  channel = channel.getChannel(channelId);
+  const channel = ChannelStore.getChannel(channelId);
   let session_id;
   if (activity != null) {
     session_id = activity.session_id;
@@ -21,7 +21,7 @@ export default function getActivityChannelId(userId) {
       if (activity != null) {
         session_id1 = activity.session_id;
       }
-      voiceStateForSession = voiceStateForSession.getVoiceStateForSession(userId.userId, session_id1);
+      const voiceStateForSession = VoiceStateStore.getVoiceStateForSession(userId.userId, session_id1);
       channelId = undefined;
       if (voiceStateForSession != null) {
         channelId = voiceStateForSession.channelId;

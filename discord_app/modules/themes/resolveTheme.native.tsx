@@ -1,32 +1,37 @@
 // discord_app/modules/themes/resolveTheme.native.tsx
-import getToken from "../../utils/AuthenticationUtils.tsx";
-import closure_2 from "../client_themes/native/CustomThemeMobileStore.tsx";
-import closure_3 from "../user_settings/SelectivelySyncedUserSettingsStore.tsx";
-import closure_4 from "../user_settings/UnsyncedUserSettingsStore.tsx";
-import closure_5 from "../user_settings/UserSettingsProtoStore.tsx";
-import SystemThemeState from "../user_settings/ThemeConstants.tsx";
+import AuthenticationUtils from "../../utils/AuthenticationUtils.tsx";
+import CustomThemeMobileStore from "../client_themes/native/CustomThemeMobileStore.tsx";
+import SelectivelySyncedUserSettingsStore from "../user_settings/SelectivelySyncedUserSettingsStore.tsx";
+import UnsyncedUserSettingsStore from "../user_settings/UnsyncedUserSettingsStore.tsx";
+import UserSettingsProtoStore from "../user_settings/UserSettingsProtoStore.tsx";
 
-require = arg1;
-({ PROTO_THEME_MAP_MOBILE_REFRESH: closure_6, SystemTheme: error, SystemThemeState: closure_8 } = SystemThemeState);
-const result = require("set").fileFinishedImporting("modules/themes/resolveTheme.native.tsx");
+require = fn;
+const ThemeConstants = fn(1186);
+({
+  PROTO_THEME_MAP_MOBILE_REFRESH: metroRequire,
+  SystemTheme: closure_7,
+  SystemThemeState: closure_8,
+} = ThemeConstants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/themes/resolveTheme.native.tsx");
 
 export default function resolveTheme(arg0, arg1) {
-  previewTheme = previewTheme.getPreviewTheme();
+  const previewTheme = CustomThemeMobileStore.getPreviewTheme();
   if (undefined !== previewTheme) {
     return previewTheme.baseTheme;
   } else {
     if (!obj6.isAuthenticated()) {
       if (arg0 !== constants.NO_PREFERENCE) {
         let tmp17Result = tmp17(1229);
-        return tmp17Result.resolveThemeWithCustomSettings(arg1[arg0], previewTheme.getCustomTheme());
+        return tmp17Result.resolveThemeWithCustomSettings(arg1[arg0], CustomThemeMobileStore.getCustomTheme());
       }
     }
-    appearanceSettings = appearanceSettings.getAppearanceSettings();
+    const appearanceSettings = SelectivelySyncedUserSettingsStore.getAppearanceSettings();
     let theme;
     if (appearanceSettings != null) {
       theme = appearanceSettings.theme;
     }
-    const appearance = settings.settings.appearance;
+    const appearance = UserSettingsProtoStore.settings.appearance;
     if (null != appearanceSettings) {
       const clientThemeSettings2 = appearanceSettings.clientThemeSettings;
       let prop;
@@ -58,9 +63,12 @@ export default function resolveTheme(arg0, arg1) {
         }
         return themeWithCustomSettings;
       }
-      themeWithCustomSettings = tmp17(1229).resolveThemeWithCustomSettings(table[theme1], customUserThemeSettings);
+      themeWithCustomSettings = tmp17(1229).resolveThemeWithCustomSettings(
+        timestampProducer[theme1],
+        customUserThemeSettings,
+      );
       const tmp17Result2 = tmp17(1229);
     }
-    obj6 = getToken;
+    obj6 = AuthenticationUtils;
   }
 }

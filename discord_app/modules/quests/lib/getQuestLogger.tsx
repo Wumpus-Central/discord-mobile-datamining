@@ -1,9 +1,10 @@
 // discord_app/modules/quests/lib/getQuestLogger.tsx
-import timestampDefault from "../../debug/Logger.tsx";
-import closure_2 from "../../../stores/DeveloperOptionsStore.tsx";
-import { NOOP } from "../../../../discord_common/js/shared/Constants.tsx";
+import LoggerDefault from "../../debug/Logger.tsx";
+import DeveloperOptionsStore from "../../../stores/DeveloperOptionsStore.tsx";
 
-const result = require("set").fileFinishedImporting("modules/quests/lib/getQuestLogger.tsx");
+const NOOP = fn(1085).NOOP;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/lib/getQuestLogger.tsx");
 
 export const getQuestLogger = function getQuestLogger(getQuestLogger) {
   let obj = getQuestLogger;
@@ -11,7 +12,7 @@ export const getQuestLogger = function getQuestLogger(getQuestLogger) {
     obj = {};
   }
   ({ quest, location: _location } = obj);
-  isLoggingQuestEvents = isLoggingQuestEvents.isLoggingQuestEvents;
+  const isLoggingQuestEvents = DeveloperOptionsStore.isLoggingQuestEvents;
   let questName;
   if (quest != null) {
     questName = quest.config.messages.questName;
@@ -26,7 +27,7 @@ export const getQuestLogger = function getQuestLogger(getQuestLogger) {
     const _HermesInternal2 = HermesInternal;
     str = "-" + questName + ")";
   }
-  let tmp4 = timestampDefault;
+  let tmp4 = LoggerDefault;
   tmp4 = new tmp4("QuestLogger" + str2 + str);
   obj = {
     log: isLoggingQuestEvents ? tmp4.log : NOOP,

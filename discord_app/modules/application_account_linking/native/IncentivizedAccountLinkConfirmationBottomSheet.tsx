@@ -1,86 +1,81 @@
 // discord_app/modules/application_account_linking/native/IncentivizedAccountLinkConfirmationBottomSheet.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import Button from "../../../design/components/Button/native/Button.native.tsx";
+import util from "../../../intl/index.native.tsx";
+import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
+import LinkingDefault from "../../../lib/native/Linking.tsx";
+import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import PromoSheet from "../../../design/components/Sheet/native/PromoSheet.native.tsx";
 import WindowLaunchIcon from "../../../design/components/Icon/native/redesign/generated/WindowLaunchIcon.tsx";
-import metadataDefault from "../../../../discord_assets/assets/orbs/orb_coachmark_asset_2x.png.js";
-import { Image } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_4 from "../../a11y/AccessibilityStore.tsx";
-import { HelpdeskArticles } from "../../../Constants.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import _modDef15832 from "../../../../discord_assets/assets/orbs/orb_coachmark_asset_2x.png.js";
+import noop from "../../../../_runtime/metro/00019__.js";
+import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
-require = arg1;
-noopAll;
+require = fn;
+const Image = fn(17).Image;
+const HelpdeskArticles = fn(1074).HelpdeskArticles;
+const jsx = fn(21).jsx;
 let c7 = 150;
-const result = require("set").fileFinishedImporting(
+let size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/application_account_linking/native/IncentivizedAccountLinkConfirmationBottomSheet.tsx",
 );
 
 export default function IncentivizedAccountLinkConfirmationBottomSheet() {
   let obj = initialize;
-  const items = [closure_4];
+  const items = [AccessibilityStore];
   if (obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion)) {
     obj = { source: null, style: null };
-    obj = { uri: null };
-    obj[0] = metadataDefault;
-    obj[0] = obj;
-    obj1 = { width: null, height: null };
-    obj1[0] = c7;
-    obj1[1] = c7;
-    obj[1] = obj1;
-    let tmp3Result = <Image uri={null} />;
+    obj = { uri: _modDef15832 };
+    obj.source = obj;
+    const size = { width: v150, height: v150 };
+    obj.style = size;
+    let tmp3Result = <Image uri={_modDef15832} />;
     let tmp8 = importDefault;
     let tmp9 = jsx;
   } else {
     if (tmpResult.isAndroid()) {
-      let obj2 = { url: null, style: null };
+      const obj1 = { url: null, style: null };
       let tmp4Result = tmp4(8809);
-      obj2[0] = tmp4(15833);
-      const obj3 = { width: null, height: null };
-      obj3[0] = c7;
-      obj3[1] = c7;
-      obj2[1] = obj3;
-      tmp3Result = tmp3(tmp4Result, obj2);
+      obj1.url = tmp4(15833);
+      const size1 = { width: v150, height: v150 };
+      obj1.style = size1;
+      tmp3Result = tmp3(tmp4Result, obj1);
       tmp8 = tmp4;
       tmp9 = tmp3;
     } else {
-      const obj4 = { source: null, resizeMode: "contain", style: null };
-      const obj5 = { uri: null };
+      let obj2 = { source: null, resizeMode: "contain", style: null };
+      const obj3 = { uri: null };
       tmp4Result = tmp4(5587);
-      obj5[0] = tmp4(15833);
-      obj4[0] = obj5;
-      const obj6 = { width: null, height: null };
-      obj6[0] = c7;
-      obj6[1] = c7;
-      obj4[2] = obj6;
-      tmp3Result = tmp3(tmp4Result, obj4);
+      obj3.uri = tmp4(15833);
+      obj2.source = obj3;
+      const size2 = { width: v150, height: v150 };
+      obj2.style = size2;
+      tmp3Result = tmp3(tmp4Result, obj2);
       tmp8 = tmp4;
       tmp9 = tmp3;
     }
     tmpResult = tmp(1115);
   }
-  const obj7 = { text: null, icon: null, iconPosition: "end", size: "lg", onPress: null };
+  const obj4 = { text: null, icon: null, iconPosition: "end", size: "lg", onPress: null };
   const intl = tmp(1114).intl;
-  obj7[0] = intl.string(getSystemLocale.t.aRIFWD);
-  obj7[1] = tmp9(WindowLaunchIcon.WindowLaunchIcon, { size: "sm", color: tmp8(576).colors.WHITE });
-  obj7[4] = function onPress() {
-    callback(4527).hideActionSheet();
-    const obj = callback(4527);
-    const obj2 = callback(4255);
-    obj2.openURL(callback(2024).getArticleURL(constants.IN_GAME_FEATURES));
+  obj4.text = intl.string(util.t.aRIFWD);
+  obj4.icon = tmp9(WindowLaunchIcon.WindowLaunchIcon, { size: "sm", color: tmp8(576).colors.WHITE });
+  obj4.onPress = function onPress() {
+    ActionSheetActionCreatorsDefault.hideActionSheet();
+    const obj2 = LinkingDefault;
+    obj2.openURL(HelpdeskUtilsDefault.getArticleURL(constants.IN_GAME_FEATURES));
   };
-  const obj8 = { size: "sm", color: tmp8(576).colors.WHITE };
-  const obj9 = { title: null, description: null, actions: null, illustration: null, onDismiss: null };
+  const obj5 = { size: "sm", color: tmp8(576).colors.WHITE };
+  const obj6 = { title: null, description: null, actions: null, illustration: null, onDismiss: null };
   const intl2 = tmp(1114).intl;
-  obj9[0] = intl2.string(tmp8(3127).ublzTG);
+  obj6.title = intl2.string(tmp8(3127).ublzTG);
   const intl3 = tmp(1114).intl;
-  obj9[1] = intl3.string(tmp8(3127).JgM2xu);
-  obj9[2] = tmp9(Button.Button, obj7);
-  obj9[3] = tmp3Result;
-  obj9[4] = function onDismiss() {
-    callback(4527).hideActionSheet();
+  obj6.description = intl3.string(tmp8(3127).JgM2xu);
+  obj6.actions = tmp9(components_Button_Button.Button, obj4);
+  obj6.illustration = tmp3Result;
+  obj6.onDismiss = function onDismiss() {
+    ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  return tmp9(PromoSheet.PromoSheet, obj9);
+  return tmp9(PromoSheet.PromoSheet, obj6);
 }

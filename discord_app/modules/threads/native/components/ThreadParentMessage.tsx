@@ -1,18 +1,18 @@
 // discord_app/modules/threads/native/components/ThreadParentMessage.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
-import setOptionsDefault from "../../../messages/native/renderer/RowGenerator.tsx";
-import DCDChatItemDefault from "../../../../components_native/chat/ChatItem.tsx";
-import closure_3 from "../../../replies/ReferencedMessageStore.tsx";
-import { ReferencedMessageState } from "../../../replies/ReferencedMessageStore.tsx";
-import closure_5 from "../../../../stores/MessageStore.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import router_utils from "../../../routing/router_utils.tsx";
+import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
+import RowGeneratorDefault from "../../../messages/native/renderer/RowGenerator.tsx";
+import ChatItemDefault from "../../../../components_native/chat/ChatItem.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import ReferencedMessageStore from "../../../replies/ReferencedMessageStore.tsx";
+import MessageStore from "../../../../stores/MessageStore.tsx";
 
-require = arg1;
-noopAll;
-let obj = new setOptionsDefault();
-obj.setOptions({
+require = fn;
+const ReferencedMessageState = fn(7595).ReferencedMessageState;
+const jsx = fn(21).jsx;
+let rowGenerator = new RowGeneratorDefault();
+rowGenerator.setOptions({
   renderCodedLinks: false,
   renderGiftCode: false,
   renderActivityInstanceEmbed: false,
@@ -25,43 +25,49 @@ obj.setOptions({
   renderReplies: true,
   renderThreadEmbeds: false,
 });
-const result = require("set").fileFinishedImporting("modules/threads/native/components/ThreadParentMessage.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/threads/native/components/ThreadParentMessage.tsx");
 
 export const ThreadChannelStarterMessage = function ThreadChannelStarterMessage(arg0) {
   ({ guildId: require, messageId: importDefault, channelId: dependencyMap } = arg0);
-  obj = initialize;
-  const items = [closure_3];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_3.getMessage(closure_2, closure_1));
+  rowGenerator = initialize;
+  const items = [ReferencedMessageStore];
+  const stateFromStores = rowGenerator.useStateFromStores(items, () =>
+    ReferencedMessageStore.getMessage(dependencyMap, importDefault),
+  );
   let state;
   if (stateFromStores != null) {
     state = stateFromStores.state;
   }
   let tmp5 = null;
   if (state === ReferencedMessageState.LOADED) {
-    obj = { accessibilityRole: "button", onPress: null, children: null };
-    obj[1] = function onPress() {
-      closure_1_0(closure_1_2[7]).transitionToGuild(closure_0, closure_2, closure_1);
+    rowGenerator = {
+      accessibilityRole: "button",
+      onPress() {
+        router_utils.transitionToGuild(closure_1_0, dependencyMap, importDefault);
+      },
+      children: null,
     };
-    obj = { rowGenerator: null, message: null, pointerEvents: "none" };
-    obj[0] = obj;
-    obj[1] = stateFromStores.message;
-    obj[2] = jsx(DCDChatItemDefault, { rowGenerator: null, message: null, pointerEvents: "none" });
-    tmp5 = jsx(PressableBase.PressableOpacity, { rowGenerator: null, message: null, pointerEvents: "none" });
+    rowGenerator = { rowGenerator: null, message: null, pointerEvents: "none" };
+    rowGenerator.rowGenerator = rowGenerator;
+    rowGenerator.message = stateFromStores.message;
+    rowGenerator.children = jsx(ChatItemDefault, { rowGenerator: null, message: null, pointerEvents: "none" });
+    tmp5 = jsx(Pressables.PressableOpacity, { rowGenerator: null, message: null, pointerEvents: "none" });
   }
   return tmp5;
 };
 export const ThreadCreationStarterMessage = function ThreadCreationStarterMessage(arg0) {
   ({ messageId: require, channelId: importDefault } = arg0);
-  obj = initialize;
-  const items = [closure_5];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getMessage(closure_1, closure_0));
+  rowGenerator = initialize;
+  const items = [MessageStore];
+  const stateFromStores = rowGenerator.useStateFromStores(items, () => MessageStore.getMessage(importDefault, require));
   let tmp3 = null;
   if (null != stateFromStores) {
-    obj = { rowGenerator: null, message: null, style: null, pointerEvents: "none" };
-    obj[0] = obj;
-    obj[1] = stateFromStores;
-    obj[2] = { overflow: "visible" };
-    tmp3 = jsx(DCDChatItemDefault, { rowGenerator: null, message: null, style: null, pointerEvents: "none" });
+    rowGenerator = { rowGenerator: null, message: null, style: null, pointerEvents: "none" };
+    rowGenerator.rowGenerator = rowGenerator;
+    rowGenerator.message = stateFromStores;
+    rowGenerator.style = { overflow: "visible" };
+    tmp3 = jsx(ChatItemDefault, { rowGenerator: null, message: null, style: null, pointerEvents: "none" });
   }
   return tmp3;
 };

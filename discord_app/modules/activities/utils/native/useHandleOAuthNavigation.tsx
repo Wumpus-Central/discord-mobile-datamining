@@ -1,29 +1,31 @@
 // discord_app/modules/activities/utils/native/useHandleOAuthNavigation.tsx
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import { ComponentActions } from "../../../../Constants.tsx";
-import { OAUTH2_AUTHORIZE_MODAL_KEY as closure_5 } from "../../../oauth2/native/Constants.tsx";
+import ComponentDispatchUtils from "../../../../utils/ComponentDispatchUtils.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/activities/utils/native/useHandleOAuthNavigation.tsx");
+require = fn;
+const ComponentActions = fn(1074).ComponentActions;
+let closure_5 = fn(9574).OAUTH2_AUTHORIZE_MODAL_KEY;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/utils/native/useHandleOAuthNavigation.tsx");
 
 export default function useHandleOAuthNavigation() {
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     function showOAuth2Modal(arg0) {
-      let obj = callback(paths[3]);
-      obj.popWithKey(closure_5);
+      let obj = closure_1_1(paths[3]);
+      obj.popWithKey(closure_1_5);
       obj = {};
-      const obj2 = callback(paths[3]);
+      const obj2 = closure_1_1(paths[3]);
       const merged = Object.assign(arg0);
       obj.dismissOAuthModal = function dismissOAuthModal() {
-        callback(table[3]).popWithKey(closure_5);
+        closure_1_1(paths[3]).popWithKey(closure_1_5);
       };
-      obj2.pushLazy(showOAuth2Modal(paths[5])(paths[4], paths.paths), obj, closure_5);
+      obj2.pushLazy(showOAuth2Modal(paths[5])(paths[4], paths.paths), obj, closure_1_5);
     }
-    let ComponentDispatch = showOAuth2Modal(table[6]).ComponentDispatch;
+    let ComponentDispatch = showOAuth2Modal(1109).ComponentDispatch;
     const subscription = ComponentDispatch.subscribe(SHOW_OAUTH2_MODAL.SHOW_OAUTH2_MODAL, showOAuth2Modal);
     return () => {
-      const ComponentDispatch = showOAuth2Modal(closure_1_2[6]).ComponentDispatch;
-      ComponentDispatch.unsubscribe(closure_1_4.SHOW_OAUTH2_MODAL, showOAuth2Modal);
+      const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
+      ComponentDispatch.unsubscribe(ComponentActions.SHOW_OAUTH2_MODAL, showOAuth2Modal);
     };
   }, []);
 }

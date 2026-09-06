@@ -1,14 +1,14 @@
 // discord_app/modules/experiments/trigger_points/native/MobileConnectionOpenTriggerPoint.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import ExperimentBuckets from "../../ExperimentConstants.tsx";
-import registeredExperimentIds from "../Helpers.tsx";
+import ExperimentConstants from "../../ExperimentConstants.tsx";
+import Helpers from "../Helpers.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const commonTriggerPointConfiguration = new registeredExperimentIds.CommonTriggerPointConfiguration(
+const commonTriggerPointConfiguration = new Helpers.CommonTriggerPointConfiguration(
   [],
-  ExperimentBuckets.CommonTriggerPoints.CONNECTION_OPEN_MOBILE,
+  ExperimentConstants.CommonTriggerPoints.CONNECTION_OPEN_MOBILE,
   { location: "app open mobile" },
 );
-const result = set.fileFinishedImporting(
+const result = size.fileFinishedImporting(
   "modules/experiments/trigger_points/native/MobileConnectionOpenTriggerPoint.tsx",
 );
 

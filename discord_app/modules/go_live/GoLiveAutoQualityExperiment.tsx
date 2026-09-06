@@ -1,11 +1,11 @@
 // discord_app/modules/go_live/GoLiveAutoQualityExperiment.tsx
 import Storage3 from "../../../discord_common/js/packages/storage/Storage.tsx";
-import closure_2 from "../experiments/apex/ApexExperimentStore.tsx";
-import closure_3 from "../../stores/ApplicationStreamingSettingsStore.tsx";
-import { ApplicationStreamPresets } from "StreamSettingsConstants.tsx";
-import importDefaultResult from "../experiments/apex/ApexExperiment.tsx";
+import ApexExperimentStore from "../experiments/apex/ApexExperimentStore.tsx";
+import ApplicationStreamingSettingsStore from "../../stores/ApplicationStreamingSettingsStore.tsx";
+import ApexExperiment from "../experiments/apex/ApexExperiment.tsx";
 
-require = arg1;
+require = fn;
+const ApplicationStreamPresets = fn(4607).ApplicationStreamPresets;
 let obj = { allowAutoQuality: false, defaultAutoQuality: false, migrateAutoQuality: false };
 const GoLiveAutoQualityMigrationVersion = "GoLiveAutoQualityMigrationVersion";
 obj = { name: "2025-10-go-live-auto-quality", kind: "user", defaultConfig: obj, variations: null };
@@ -20,17 +20,18 @@ const merged1 = Object.assign(obj);
 obj2.allowAutoQuality = true;
 obj2.defaultAutoQuality = true;
 obj[2] = obj2;
-obj[3] = obj;
-let closure_6 = importDefaultResult(obj);
-let result = require("set").fileFinishedImporting("modules/go_live/GoLiveAutoQualityExperiment.tsx");
+obj.variations = obj;
+let closure_6 = ApexExperiment(obj);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/go_live/GoLiveAutoQualityExperiment.tsx");
 
 export const getGoLiveAutoQualityExperimentConfig = function getGoLiveAutoQualityExperimentConfig(location) {
-  return store.getConfig({ location: location.location });
+  return closure_6.getConfig({ location: location.location });
 };
 export const useGoLiveAutoQualityExperimentConfig = function useGoLiveAutoQualityExperimentConfig(location) {
   location = location.location;
-  const items = [closure_2];
-  return location(504).useStateFromStores(items, () => closure_1_6.getConfig({ location }));
+  const items = [ApexExperimentStore];
+  return location(504).useStateFromStores(items, () => config.getConfig({ location }));
 };
 export const maybeMigrateToAutoQuality = function maybeMigrateToAutoQuality() {
   const Storage = Storage3.Storage;
@@ -38,13 +39,18 @@ export const maybeMigrateToAutoQuality = function maybeMigrateToAutoQuality() {
   if (num == null) {
     num = 0;
   }
-  if (store.getConfig({ location: "maybeMigrateToAutoQuality" }).migrateAutoQuality) {
+  if (closure_6.getConfig({ location: "maybeMigrateToAutoQuality" }).migrateAutoQuality) {
     if (tmp4 < 1) {
-      state = state.getState();
+      const state = ApplicationStreamingSettingsStore.getState();
       if (state.preset !== ApplicationStreamPresets.PRESET_CUSTOM) {
-        const obj = { preset: null, resolution: null, frameRate: null, soundshareEnabled: null, noTrack: true };
-        obj[0] = tmp9.PRESET_AUTO;
-        ({ resolution: obj2[1], fps: obj2[2], soundshareEnabled: obj2[3] } = state);
+        const obj = {
+          preset: tmp9.PRESET_AUTO,
+          resolution: null,
+          frameRate: null,
+          soundshareEnabled: null,
+          noTrack: true,
+        };
+        ({ resolution: obj2.resolution, fps: obj2.frameRate, soundshareEnabled: obj2.soundshareEnabled } = state);
         tmp(4702).updateStreamSettings(obj);
         const Storage2 = tmp(510).Storage;
         const result = Storage2.set(GoLiveAutoQualityMigrationVersion, 1);

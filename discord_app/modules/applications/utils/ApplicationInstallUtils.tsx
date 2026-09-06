@@ -1,10 +1,11 @@
 // discord_app/modules/applications/utils/ApplicationInstallUtils.tsx
 import ApplicationIntegrationType from "../../../../discord_common/js/shared/shared-constants/ApplicationIntegrationType.tsx";
-import closure_2 from "../../application_commands/ApplicationCommandIndexStore.tsx";
-import { BuiltInSectionId } from "../../application_commands/ApplicationCommandConstants.tsx";
+import ApplicationCommandIndexStore from "../../application_commands/ApplicationCommandIndexStore.tsx";
 
-require = arg1;
-let result = require("set").fileFinishedImporting("modules/applications/utils/ApplicationInstallUtils.tsx");
+require = fn;
+const BuiltInSectionId = fn(4999).BuiltInSectionId;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/applications/utils/ApplicationInstallUtils.tsx");
 
 export const canInstallApplication = function canInstallApplication(application) {
   const integrationTypesConfig = application.integrationTypesConfig;
@@ -78,15 +79,14 @@ export const shouldInstallApplicationOnDemand = function shouldInstallApplicatio
   if (!tmp) {
     let tmp6 = applicationId !== BuiltInSectionId.BUILT_IN;
     if (tmp6) {
-      let obj = closure_2;
-      const result = closure_2.hasUserStateApplication(applicationId);
+      let obj = ApplicationCommandIndexStore;
+      const result = ApplicationCommandIndexStore.hasUserStateApplication(applicationId);
       let tmp8 = !result;
       if (!result) {
         let tmp9 = null == channel;
         if (!tmp9) {
-          obj = { applicationId: null, channelId: null, guildId: null };
-          obj[0] = applicationId;
-          ({ id: obj2[1], guild_id: obj2[2] } = channel);
+          obj = { applicationId, channelId: null, guildId: null };
+          ({ id: obj2.channelId, guild_id: obj2.guildId } = channel);
           tmp9 = !obj.hasContextStateApplication(obj);
         }
         tmp8 = tmp9;

@@ -1,12 +1,13 @@
 // discord_app/modules/games/hooks/useGetGameForAppId.tsx
+import GlobalUtils from "../../../utils/GlobalUtils.tsx";
 import useGetOrFetchApplications from "../../applications/useGetOrFetchApplications.tsx";
-import importDefaultResult1 from "useGame.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../GameStore.tsx";
-import { importDefaultResult1 } from "useGame.tsx";
+import useGame from "useGame.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import GameStore from "../GameStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/games/hooks/useGetGameForAppId.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/games/hooks/useGetGameForAppId.tsx");
 
 export default function useGetGameForAppId(applicationId) {
   let obj = useGetOrFetchApplications;
@@ -18,30 +19,30 @@ export default function useGetGameForAppId(applicationId) {
   if (canonicalGameId == null) {
     canonicalGameId = null;
   }
-  const game = importDefaultResult1.useGame(canonicalGameId);
+  const game = useGame.useGame(canonicalGameId);
   let data = game.data;
   obj = { gameId: canonicalGameId, gameRecord: null, isLoading: null };
   if (data == null) {
     data = null;
   }
-  obj[1] = data;
-  obj[2] = (null != applicationId && null == getOrFetchApplication) || game.isLoading;
+  obj.gameRecord = data;
+  obj.isLoading = (null != applicationId && null == getOrFetchApplication) || game.isLoading;
   return obj;
 }
 export const useGetGamesForAppIds = function useGetGamesForAppIds(stateFromStoresArray) {
   const tmp = memo(7168)(stateFromStoresArray);
-  const _require = tmp;
+  _require = tmp;
   const items = [tmp];
-  memo = React.useMemo(() => {
-    const found = lib.filter(lib(closure_1_2[4]).isNotNullish);
+  memo = noop.useMemo(() => {
+    const found = closure_0.filter(GlobalUtils.isNotNullish);
     const mapped = found.map((getCanonicalGameId) => getCanonicalGameId.getCanonicalGameId());
-    return mapped.filter(lib(closure_1_2[4]).isNotNullish);
+    return mapped.filter(GlobalUtils.isNotNullish);
   }, items);
-  const games = require("useGame.tsx").useGames(memo);
-  const obj = importDefaultResult1;
-  const items1 = [closure_4];
-  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items1, () => {
-    const mapped = memo.map((closure_0) => game.getGame(closure_0));
-    return mapped.filter(lib(closure_1_2[4]).isNotNullish);
+  const games = require("useGame").useGames(memo);
+  const obj = require("useGame");
+  const items1 = [GameStore];
+  return require("initialize").useStateFromStoresArray(items1, () => {
+    const mapped = memo.map((item) => game.getGame(item));
+    return mapped.filter(GlobalUtils.isNotNullish);
   });
 };

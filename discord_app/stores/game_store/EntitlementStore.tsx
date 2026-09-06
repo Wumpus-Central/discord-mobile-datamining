@@ -1,18 +1,16 @@
 // discord_app/stores/game_store/EntitlementStore.tsx
-import applyDefault from "../../../_runtime/00012_apply.js";
+import _modDef12 from "../../../_runtime/metro/00012__.js";
 import initializeAll from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import getComboId from "../../utils/LibraryApplicationUtils.tsx";
-import closure_3 from "../../records/EntitlementRecord.tsx";
-import closure_4 from "../LibraryApplicationStore.tsx";
-import closure_5 from "SKUStore.tsx";
-import ME from "../../Constants.tsx";
-import { PREMIUM_SUBSCRIPTION_APPLICATION as closure_8 } from "../../modules/premium/PremiumConstants.tsx";
-import set from "../../../_runtime/00002_set.js";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import FractionalPremiumSKUs from "../../../discord_common/js/shared/shared-constants/FractionalPremiumSKUs.tsx";
+import LibraryApplicationUtils from "../../utils/LibraryApplicationUtils.tsx";
+import EntitlementRecord from "../../records/EntitlementRecord.tsx";
+import LibraryApplicationStore from "../LibraryApplicationStore.tsx";
+import SKUStore from "SKUStore.tsx";
 
-require = arg1;
+require = fn;
 function addEntitlement(entitlement) {
-  closure_9[entitlement.id] = closure_3.createFromServer(entitlement);
+  closure_9[entitlement.id] = EntitlementRecord.createFromServer(entitlement);
   if (null == dependencyMap2[entitlement.sku_id]) {
     const _Set = Set;
     set = new Set();
@@ -30,17 +28,15 @@ function addEntitlement(entitlement) {
       tmp13[entitlement.subscription_id] = set2;
     }
     dependencyMap4[entitlement.subscription_id].add(entitlement.id);
-    const obj = dependencyMap4[entitlement.subscription_id];
   }
   dependencyMap3[entitlement.application_id].add(entitlement.id);
   dependencyMap2[entitlement.sku_id].add(entitlement.id);
 }
 function addGiftEntitlement(id) {
-  closure_10[id.id] = closure_3.createFromServer(id);
+  closure_10[id.id] = EntitlementRecord.createFromServer(id);
 }
 function handlePurchaseSuccess(arg0) {
   while (tmp !== undefined) {
-    let tmp3 = addEntitlement;
     let tmp4 = addEntitlement(tmp2);
     continue;
   }
@@ -48,29 +44,31 @@ function handlePurchaseSuccess(arg0) {
 function handleEntitlementUpdate(entitlement) {
   addEntitlement(entitlement.entitlement);
 }
-({ EntitlementSourceTypes: closure_6, EntitlementTypes: error } = ME);
-let closure_9 = {};
+const Constants = fn(1074);
+({ EntitlementSourceTypes: metroRequire, EntitlementTypes: closure_7 } = Constants);
+let closure_8 = fn(1373).PREMIUM_SUBSCRIPTION_APPLICATION;
+const dependencyMap = {};
 let closure_10 = {};
-let closure_11 = {};
-let closure_12 = {};
+const dependencyMap2 = {};
+const dependencyMap3 = {};
 let c13 = false;
 let c14 = false;
 let c15 = false;
 let set = new Set();
 let set1 = new Set();
-let closure_18 = {};
+const dependencyMap4 = {};
 const Store = initializeAll.Store;
 class EntitlementStore extends Store {}
 const prototype = EntitlementStore.prototype;
 prototype["initialize"] = function initialize() {
-  const items = [closure_4];
+  const items = [LibraryApplicationStore];
   this.syncWith(items, () => true);
 };
 prototype["get"] = function get(arg0) {
   return dependencyMap[arg0];
 };
 prototype["getGiftable"] = function getGiftable() {
-  return applyDefault.values(closure_10);
+  return _modDef12.values(closure_10);
 };
 prototype["getForApplication"] = function getForApplication(arg0) {
   if (null == dependencyMap3[arg0]) {
@@ -79,7 +77,6 @@ prototype["getForApplication"] = function getForApplication(arg0) {
     const _Set = Set;
     set = new Set();
     for (const item10014 of tmp) {
-      let tmp8 = dependencyMap;
       let addResult = set.add(dependencyMap[item10014]);
       continue;
     }
@@ -93,7 +90,6 @@ prototype["getForSku"] = function getForSku(arg0) {
     const _Set = Set;
     set = new Set();
     for (const item10014 of tmp) {
-      let tmp8 = dependencyMap;
       let addResult = set.add(dependencyMap[item10014]);
       continue;
     }
@@ -161,28 +157,23 @@ prototype["getForSubscription"] = function getForSubscription(arg0) {
     const _Set = Set;
     set = new Set();
     for (const item10014 of tmp) {
-      let tmp8 = dependencyMap;
       let addResult = set.add(dependencyMap[item10014]);
       continue;
     }
     return set;
   }
 };
-prototype["isEntitledToSku"] = function isEntitledToSku(arg0, arg1, id) {
-  let tmp = arg3;
-  if (arg3 === undefined) {
+prototype["isEntitledToSku"] = function isEntitledToSku(arg0, arg1, id, item) {
+  let tmp = item;
+  if (item === undefined) {
     tmp = null;
   }
   if (null != dependencyMap2[arg1]) {
     for (const item10011 of tmp2) {
-      let tmp5 = dependencyMap;
       let tmp6 = dependencyMap[item10011];
       let obj2 = tmp6;
       if (null != tmp6) {
-        let tmp7 = tmp6;
-        let tmp8 = closure_5;
-        if (obj2.isValid(arg0, closure_5, tmp)) {
-          let tmp9 = obj;
+        if (obj2.isValid(arg0, SKUStore, tmp)) {
           obj.return();
           let flag = true;
           return true;
@@ -195,14 +186,13 @@ prototype["isEntitledToSku"] = function isEntitledToSku(arg0, arg1, id) {
     return false;
   } else {
     if (null != tmp) {
-      let libraryApplication = store.getLibraryApplication(id, tmp);
+      let libraryApplication = LibraryApplicationStore.getLibraryApplication(id, tmp);
     } else {
-      libraryApplication = store.getActiveLibraryApplication(id);
+      libraryApplication = LibraryApplicationStore.getActiveLibraryApplication(id);
     }
     let tmp13 = null == libraryApplication || libraryApplication.sku.id !== arg1;
     if (!tmp13) {
-      tmp13 = !getComboId.isUserEntitledToLibraryApplication(libraryApplication);
-      const obj3 = getComboId;
+      tmp13 = !LibraryApplicationUtils.isUserEntitledToLibraryApplication(libraryApplication);
     }
     let tmp16 = !tmp13;
     if (tmp13) {
@@ -212,7 +202,7 @@ prototype["isEntitledToSku"] = function isEntitledToSku(arg0, arg1, id) {
   }
 };
 prototype["hasFetchedForApplicationIds"] = function hasFetchedForApplicationIds(items) {
-  return items.every((arg0) => set.has(arg0));
+  return items.every((item) => set.has(item));
 };
 prototype["getFractionalPremium"] = function getFractionalPremium(arg0) {
   let obj = arg0;
@@ -227,9 +217,8 @@ prototype["getFractionalPremium"] = function getFractionalPremium(arg0) {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  let date;
   const items = [];
-  date = new Date();
+  const date = new Date();
   const forApplication = this.getForApplication(closure_8);
   if (forApplication != null) {
     const item = forApplication.forEach((endsAt) => {
@@ -237,7 +226,7 @@ prototype["getFractionalPremium"] = function getFractionalPremium(arg0) {
       if (tmp) {
         tmp = endsAt.endsAt < date;
       }
-      let tmp4 = endsAt.type !== closure_1_7.FRACTIONAL_REDEMPTION;
+      let tmp4 = endsAt.type !== constants2.FRACTIONAL_REDEMPTION;
       if (!tmp4) {
         if (tmp) {
           tmp = !flag;
@@ -270,8 +259,8 @@ prototype["getUnactivatedFractionalPremiumUnits"] = function getUnactivatedFract
   const forApplication = this.getForApplication(closure_8);
   if (forApplication != null) {
     const item = forApplication.forEach((skuId) => {
-      const ACTIVE_FRACTIONAL_PREMIUM_SKUS = items(closure_1_2[8]).FractionalPremiumSKUsSets
-        .ACTIVE_FRACTIONAL_PREMIUM_SKUS;
+      const ACTIVE_FRACTIONAL_PREMIUM_SKUS =
+        FractionalPremiumSKUs.FractionalPremiumSKUsSets.ACTIVE_FRACTIONAL_PREMIUM_SKUS;
       if (tmp) {
         items.push(skuId);
       }
@@ -280,7 +269,7 @@ prototype["getUnactivatedFractionalPremiumUnits"] = function getUnactivatedFract
   return items;
 };
 EntitlementStore.displayName = "EntitlementStore";
-const entitlementStore = new EntitlementStore(dispatcherDefault, {
+const entitlementStore = new EntitlementStore(DispatcherDefault, {
   ENTITLEMENT_FETCH_APPLICATION_START: function handleEntitlementApplicationStart(applicationId) {
     set.add(applicationId.applicationId);
   },
@@ -292,8 +281,6 @@ const entitlementStore = new EntitlementStore(dispatcherDefault, {
     const nextResult = iter.next();
     while (iter !== undefined) {
       if (true !== nextResult.consumed) {
-        let tmp5 = addEntitlement;
-        let tmp6 = nextResult;
         let tmp7 = addEntitlement(tmp4);
       }
       continue;
@@ -312,12 +299,8 @@ const entitlementStore = new EntitlementStore(dispatcherDefault, {
     const nextResult = iter.next();
     while (iter !== undefined) {
       if (null != nextResult.entitlements) {
-        let tmp3 = nextResult;
         let entitlements = tmp2.entitlements;
-        let tmp4 = entitlements;
-        let tmp5 = entitlements;
         for (const item10018 of entitlements) {
-          let tmp6 = addEntitlement;
           let tmp7 = addEntitlement(item10018);
           continue;
         }
@@ -358,9 +341,8 @@ const entitlementStore = new EntitlementStore(dispatcherDefault, {
   ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: function handleUserEntitlementsSuccess(excludeEnded) {
     c14 = true;
     c13 = false;
-    closure_15 = !excludeEnded.excludeEnded;
+    c15 = !excludeEnded.excludeEnded;
     while (tmp !== undefined) {
-      let tmp3 = addEntitlement;
       let tmp4 = addEntitlement(tmp2);
       continue;
     }
@@ -371,6 +353,7 @@ const entitlementStore = new EntitlementStore(dispatcherDefault, {
     c15 = false;
   },
 });
-const result = set.fileFinishedImporting("stores/game_store/EntitlementStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("stores/game_store/EntitlementStore.tsx");
 
 export default entitlementStore;

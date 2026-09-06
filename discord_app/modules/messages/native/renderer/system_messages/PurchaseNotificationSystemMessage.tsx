@@ -1,9 +1,9 @@
 // discord_app/modules/messages/native/renderer/system_messages/PurchaseNotificationSystemMessage.tsx
-import set from "../../../../../../_runtime/00002_set.js";
-import PermissionOverwriteType from "../../../../../flow/Server.tsx";
-import createGuildProductPurchaseSystemMessage from "GuildProductPurchaseSystemMessage.tsx";
+import Server from "../../../../../flow/Server.tsx";
+import GuildProductPurchaseSystemMessage from "GuildProductPurchaseSystemMessage.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting(
+const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/PurchaseNotificationSystemMessage.tsx",
 );
 
@@ -14,10 +14,10 @@ export const createPurchaseNotificationSystemMessage = function createPurchaseNo
     type = purchaseNotification.type;
   }
   let guildProductPurchaseSystemMessage = null;
-  if (type === PermissionOverwriteType.PurchaseNotificationType.GUILD_PRODUCT) {
+  if (type === Server.PurchaseNotificationType.GUILD_PRODUCT) {
     guildProductPurchaseSystemMessage =
-      createGuildProductPurchaseSystemMessage.createGuildProductPurchaseSystemMessage(message);
-    const tmp2Result = createGuildProductPurchaseSystemMessage;
+      GuildProductPurchaseSystemMessage.createGuildProductPurchaseSystemMessage(message);
+    const tmp2Result = GuildProductPurchaseSystemMessage;
   }
   return guildProductPurchaseSystemMessage;
 };

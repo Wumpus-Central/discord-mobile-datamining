@@ -1,9 +1,8 @@
 // discord_app/modules/collectibles/records/CollectiblesMarketingBadgeRecord.tsx
-import set from "../../../../_runtime/00002_set.js";
 import CollectiblesMarketingType from "../../../../discord_common/js/shared/shared-constants/CollectiblesMarketingType.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-let prototype;
-prototype = function CollectiblesMarketingBadgeRecord(arg0) {
+const prototype = function CollectiblesMarketingBadgeRecord(arg0) {
   const obj = Object.create(new.target.prototype);
   obj.type = CollectiblesMarketingType.CollectiblesMarketingType.BADGE;
   ({
@@ -26,21 +25,23 @@ prototype["fromServer"] = function fromServer(arg0) {
     badge_text: obj.badgeText,
     show_hover_gradient: obj.showHoverGradient,
   } = arg0);
-  if (typeof prototype !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof prototype === "function") {
+    obj = Object.create(tmp.prototype);
+    obj.type = CollectiblesMarketingType.CollectiblesMarketingType.BADGE;
+    ({
+      dismissibleContent: tmp3.dismissibleContent,
+      version: tmp3.version,
+      refTargetBackground: tmp3.refTargetBackground,
+      badgeIcon: tmp3.badgeIcon,
+      badgeText: tmp3.badgeText,
+      showHoverGradient: tmp3.showHoverGradient,
+    } = obj);
+    return obj;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  obj = Object.create(prototype.prototype);
-  obj.type = CollectiblesMarketingType.CollectiblesMarketingType.BADGE;
-  ({
-    dismissibleContent: tmp3.dismissibleContent,
-    version: tmp3.version,
-    refTargetBackground: tmp3.refTargetBackground,
-    badgeIcon: tmp3.badgeIcon,
-    badgeText: tmp3.badgeText,
-    showHoverGradient: tmp3.showHoverGradient,
-  } = obj);
-  return obj;
+  tmp = prototype;
 };
-const result = set.fileFinishedImporting("modules/collectibles/records/CollectiblesMarketingBadgeRecord.tsx");
+const result = size.fileFinishedImporting("modules/collectibles/records/CollectiblesMarketingBadgeRecord.tsx");
 
 export const CollectiblesMarketingBadgeRecord = prototype;

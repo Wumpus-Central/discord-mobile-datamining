@@ -1,8 +1,7 @@
 // discord_app/stores/ExpandedGuildFolderStore.tsx
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../Dispatcher.tsx";
-import closure_0 from "../modules/user_settings/UserSettingsProtoStore.tsx";
-import set from "../../_runtime/00002_set.js";
+import DispatcherDefault from "../Dispatcher.tsx";
+import UserSettingsProtoStore from "../modules/user_settings/UserSettingsProtoStore.tsx";
 
 let set = new Set();
 const PersistedStore = initializeDefault.PersistedStore;
@@ -13,7 +12,7 @@ prototype["initialize"] = function initialize(expandedFolders) {
     const _Set = Set;
     set = new Set(expandedFolders.expandedFolders);
   }
-  this.waitFor(closure_0);
+  this.waitFor(UserSettingsProtoStore);
 };
 prototype["getState"] = function getState() {
   return { expandedFolders: Array.from(set) };
@@ -26,7 +25,7 @@ prototype["isFolderExpanded"] = function isFolderExpanded(folderId) {
 };
 ExpandedGuildFolderStore.displayName = "ExpandedGuildFolderStore";
 ExpandedGuildFolderStore.persistKey = "ExpandedGuildFolderStore";
-const expandedGuildFolderStore = new ExpandedGuildFolderStore(dispatcherDefault, {
+const expandedGuildFolderStore = new ExpandedGuildFolderStore(DispatcherDefault, {
   TOGGLE_GUILD_FOLDER_EXPAND: function toggleFolderExpand(folderId) {
     folderId = folderId.folderId;
     set = new Set(set);
@@ -51,7 +50,7 @@ const expandedGuildFolderStore = new ExpandedGuildFolderStore(dispatcherDefault,
       return false;
     } else {
       function _loop(iter) {
-        guildFolders = iter;
+        closure_0 = iter;
         if (!guildFolders.some((folderId) => folderId.folderId === closure_0)) {
           const _Set = Set;
           set = new Set(set);
@@ -76,6 +75,7 @@ const expandedGuildFolderStore = new ExpandedGuildFolderStore(dispatcherDefault,
     }
   },
 });
-const result = set.fileFinishedImporting("stores/ExpandedGuildFolderStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("stores/ExpandedGuildFolderStore.tsx");
 
 export default expandedGuildFolderStore;

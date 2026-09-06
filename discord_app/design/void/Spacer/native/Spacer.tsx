@@ -1,13 +1,16 @@
 // discord_app/design/void/Spacer/native/Spacer.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import apply from "../../../../../_runtime/00012_apply.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-noopAll;
-let closure_2 = apply.memoize((width) => ({ width, height: width }));
-const result = require("set").fileFinishedImporting("design/void/Spacer/native/Spacer.tsx");
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const apply = fn(12);
+let closure_2 = apply.memoize((width) => {
+  const size = { width, height: width };
+  return size;
+});
+let size = fn(2);
+const result = size.fileFinishedImporting("design/void/Spacer/native/Spacer.tsx");
 
 export default function Spacer(pointerEvents) {
-  return <View style={callback(arg0.size)} pointerEvents={arg0.pointerEvents} />;
+  return <View style={closure_2(arg0.size)} pointerEvents={arg0.pointerEvents} />;
 }

@@ -1,18 +1,20 @@
 // discord_app/modules/quests/native/QuestRewardTile.tsx
-import noopDefault from "../../../../_runtime/00019_noop.js";
-import _modDef11771 from "QuestDockRewardTile.tsx";
-import { useMemo } from "../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import AssetUtils from "../lib/AssetUtils.tsx";
+import QuestRewardUtils from "../utils/QuestRewardUtils.tsx";
+import QuestDockRewardTileDefault from "QuestDockRewardTile.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-noopDefault;
-const result = require("set").fileFinishedImporting("modules/quests/native/QuestRewardTile.tsx");
+require = fn;
+const useMemo = fn(19).useMemo;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/QuestRewardTile.tsx");
 
 export default function QuestRewardTile(quest) {
   quest = quest.quest;
-  const merged = Object.assign(quest, Object.create(null));
+  const merged = Object.assign(quest, Object.assign({ quest: 0, accessibilityLabelPrefix: 0 }));
   const items = [quest];
-  const tmp3 = useMemo(() => quest(closure_1_2[2]).getQuestPrimaryReward(quest), items);
+  const tmp3 = useMemo(() => QuestRewardUtils.getQuestPrimaryReward(quest), items);
   if (null != tmp3.name) {
     let name = tmp3.name;
   } else {
@@ -20,7 +22,7 @@ export default function QuestRewardTile(quest) {
   }
   const items1 = [quest];
   const tmp2Result = useMemo(
-    () => quest(closure_1_2[3]).getQuestAsset(quest, quest(closure_1_2[3]).QuestAssetType.REWARD, undefined, true),
+    () => AssetUtils.getQuestAsset(quest, AssetUtils.QuestAssetType.REWARD, undefined, true),
     items1,
   );
   const items2 = [quest.accessibilityLabelPrefix, name];
@@ -31,9 +33,9 @@ export default function QuestRewardTile(quest) {
   if ("" !== joined) {
     tmp8 = joined;
   }
-  obj[2] = tmp8;
+  obj.accessibilityLabel = tmp8;
   const merged1 = Object.assign(merged);
-  return jsx(_modDef11771, {
+  return jsx(QuestDockRewardTileDefault, {
     assetUrl: tmp2Result.url,
     isAnimatedAsset: tmp2Result.isAnimated,
     accessibilityLabel: null,

@@ -1,43 +1,46 @@
 // discord_app/modules/voice_panel/native/shared/VoicePanelDismissableContent.tsx
 import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
-import closure_5 from "../../../calls/ChannelRTCStore.tsx";
-import { VoicePanelModes } from "../../VoicePanelConstants.tsx";
-import { isActivityParticipant } from "../../../calls/CallConstants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
 
-require = arg1;
+require = fn;
 function VoiceControlsNuxActionSheetImporter() {
   return asyncRequireImpl(17099, dependencyMap.paths);
 }
-let c4 = importAllResult;
-let closure_10 = {
+const VoicePanelModes = fn(12273).VoicePanelModes;
+const isActivityParticipant = fn(4581).isActivityParticipant;
+const jsx = fn(21).jsx;
+const __initData = {
   code: "function VoicePanelDismissableContentTsx1(){const{mode,VoicePanelModes,focused}=this.__closure;var _focused$get;return mode.get()===VoicePanelModes.PANEL?(_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id:undefined;}",
 };
-let closure_11 = {
+const __initData2 = {
   code: "function VoicePanelDismissableContentTsx2(manualId,previousManualId){const{runOnJS,handleFocusChange}=this.__closure;if(manualId!==previousManualId){runOnJS(handleFocusChange)(manualId);}}",
 };
-const memoResult = importAllResult.memo(function VoicePanelDismissibleContent() {
-  const context = callback.useContext(focused(mode[8]));
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/native/shared/VoicePanelDismissableContent.tsx");
+
+export default noop.memo(function VoicePanelDismissibleContent() {
+  const context = handleFocusChange.useContext(focused(mode[8]));
   const channelId = context.channelId;
   focused = context.focused;
   mode = context.mode;
-  const tmp4 = callback(callback.useState(false), 2);
-  callback = tmp4[1];
+  const tmp4 = _slicedToArray(handleFocusChange.useState(false), 2);
+  _slicedToArray = tmp4[1];
   const items = [channelId];
-  callback = callback.useCallback((arg0) => {
+  handleFocusChange = handleFocusChange.useCallback((arg0) => {
     let tmp = null != arg0;
     if (tmp) {
-      tmp = closure_1_7(closure_1_5.getParticipant(channelId, arg0));
+      tmp = isActivityParticipant(ChannelRTCStore.getParticipant(channelId, arg0));
     }
-    callback(tmp);
+    closure_3(tmp);
   }, items);
-  let obj = channelId(mode[9]);
+  channelId(mode[9]);
   const fn = function h() {
     let tmp;
-    if (mode.get() === closure_1_6.PANEL) {
-      const value = focused.get();
+    if (mode.get() === VoicePanelModes.PANEL) {
+      value = focused.get();
       let id;
       if (value != null) {
         id = value.id;
@@ -46,20 +49,19 @@ const memoResult = importAllResult.memo(function VoicePanelDismissibleContent() 
     }
     return tmp;
   };
-  obj = { mode, VoicePanelModes, focused };
+  let obj = { mode, VoicePanelModes, focused };
   fn.__closure = obj;
   fn.__workletHash = 11330064461661;
-  fn.__initData = closure_10;
+  fn.__initData = __initData;
   const fn2 = function f(arg0, arg1) {
     if (arg0 !== arg1) {
-      channelId(mode[9]).runOnJS(callback)(arg0);
-      const obj = channelId(mode[9]);
+      ReanimatedRexport.runOnJS(callback)(arg0);
     }
   };
-  obj = { runOnJS: channelId(mode[9]).runOnJS, handleFocusChange: callback };
+  obj = { runOnJS: channelId(mode[9]).runOnJS, handleFocusChange };
   fn2.__closure = obj;
   fn2.__workletHash = 15579591345007;
-  fn2.__initData = closure_11;
+  fn2.__initData = __initData2;
   const animatedReaction = obj.useAnimatedReaction(fn, fn2);
   if (tmp4[0]) {
     const items1 = [channelId(tmp2[10]).DismissibleContent.ACTIVITIES_MOBILE_PIP_FAB_NUX];
@@ -73,17 +75,14 @@ const memoResult = importAllResult.memo(function VoicePanelDismissibleContent() 
       ({ visibleContent, markAsDismissed } = arg0);
       let tmp3 = null;
       if (visibleContent === channelId(mode[10]).DismissibleContent.ACTIVITIES_MOBILE_PIP_FAB_NUX) {
-        const obj = { markAsDismissed: null, importer: null, actionSheetKey: "VoiceControlToggleNuxActionSheet" };
-        obj[0] = markAsDismissed;
-        obj[1] = closure_9;
-        tmp3 = callback2(channelId(mode[12]).DismissibleActionSheet, obj);
+        const obj = { markAsDismissed, importer, actionSheetKey: "VoiceControlToggleNuxActionSheet" };
+        tmp3 = jsx(channelId(mode[12]).DismissibleActionSheet, {
+          markAsDismissed,
+          importer,
+          actionSheetKey: "VoiceControlToggleNuxActionSheet",
+        });
       }
       return tmp3;
     },
   });
 });
-const result = require("set").fileFinishedImporting(
-  "modules/voice_panel/native/shared/VoicePanelDismissableContent.tsx",
-);
-
-export default memoResult;

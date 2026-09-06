@@ -1,19 +1,21 @@
 // discord_app/modules/chat/native/useChatLayout.tsx
 import useWindowSizeClassifier from "../../screen/native/useWindowSizeClassifier.tsx";
-import useWindowSizeClassifierDefault from "../../screen/native/useWindowSizeClassifier.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/chat/native/useChatLayout.tsx");
+const useWindowSizeClassifierDefault = useWindowSizeClassifier;
+
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/chat/native/useChatLayout.tsx");
 
 export default function useChatLayout() {
   const tmp = useWindowSizeClassifierDefault();
   closure_0 = tmp;
   const items = [tmp];
-  return React.useMemo(
+  return noop.useMemo(
     () => ({
-      isChatBesideChannelList: callback >= callback(closure_1_2[1]).WindowSizeClassifier.LARGE,
-      isChatLockedOpen: callback >= callback(closure_1_2[1]).WindowSizeClassifier.XLARGE,
+      isChatBesideChannelList: closure_0 >= useWindowSizeClassifier.WindowSizeClassifier.LARGE,
+      isChatLockedOpen: closure_0 >= useWindowSizeClassifier.WindowSizeClassifier.XLARGE,
     }),
     items,
   );

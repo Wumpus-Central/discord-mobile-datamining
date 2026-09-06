@@ -1,26 +1,32 @@
 // discord_app/modules/polls/native/useRenderPollAnswerImage.tsx
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
-import { ActivityIndicator } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import { DraftType } from "../../../stores/DraftStore.tsx";
-import closure_7 from "../../../stores/UploadAttachmentStore.tsx";
-import { EMOJI_URL_BASE_SIZE } from "../../emojis/EmojiConstants.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
+import EmojiTypes from "../../emojis/EmojiTypes.tsx";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
+import EmojiDefault from "../../emojis/native/Emoji.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
+import UploadAttachmentStore from "../../../stores/UploadAttachmentStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/polls/native/useRenderPollAnswerImage.tsx");
+require = fn;
+const ActivityIndicator = fn(17).ActivityIndicator;
+const DraftType = fn(4901).DraftType;
+const EMOJI_URL_BASE_SIZE = fn(1374).EMOJI_URL_BASE_SIZE;
+const jsx = fn(21).jsx;
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/polls/native/useRenderPollAnswerImage.tsx");
 
-export default function useRenderPollAnswerImage(arg0, arg1, mediaAttachmentState) {
-  const _require = arg0;
+export default function useRenderPollAnswerImage(arg0, arg1, mediaAttachmentState, arg3, arg4) {
+  _require = arg0;
   closure_1 = arg1;
   dependencyMap = mediaAttachmentState;
-  const callback = arg3;
-  const React = arg4;
-  let obj = initialize;
+  _slicedToArray = arg3;
+  noop = arg4;
+  let obj = require("initialize");
   const items = [closure_7];
-  const stateFromStores = obj.useStateFromStores(items, () => upload.getUpload(closure_0, closure_1, first.Poll));
-  const tmp4 = callback(React.useState(), 2);
+  const stateFromStores = obj.useStateFromStores(items, () =>
+    UploadAttachmentStore.getUpload(closure_0, closure_1, DraftType.Poll),
+  );
+  const tmp4 = _slicedToArray(noop.useState(), 2);
   const first = tmp4[0];
   let status;
   if (mediaAttachmentState != null) {
@@ -29,63 +35,52 @@ export default function useRenderPollAnswerImage(arg0, arg1, mediaAttachmentStat
       status = mediaAttachmentState.status;
     }
   }
-  const tmp7 = status === require("../PollTypes.tsx").PollMediaUploadAttachmentStatus.PREPARING;
+  const tmp7 = status === require("PollTypes").PollMediaUploadAttachmentStatus.PREPARING;
   closure_7 = tmp7;
-  obj = {
-    renderImage: React.useMemo(() => {
-      if (closure_7) {
-        return closure_1_9(stateFromStores, {});
-      } else if (null != stateFromStores) {
-        let tmp14 = closure_3;
-        if (closure_3 == null) {
-          tmp14 = first;
-        }
-        let obj = { style: null, source: null };
-        obj = { width: null, height: null };
-        obj[0] = tmp14;
-        obj[1] = tmp14;
-        obj[0] = obj;
-        obj1 = { uri: null };
-        obj1[0] = stateFromStores.item.uri;
-        obj[1] = obj1;
-        return closure_1_9(callback2(mediaAttachmentState[9]), obj);
-      } else {
-        let emoji;
-        if (mediaAttachmentState != null) {
-          emoji = tmp20.emoji;
-        }
-        if (null != emoji) {
-          emoji = tmp20.emoji;
-          obj = { fastImageStyle: null, textEmojiStyle: null, name: null, src: null };
-          const obj2 = { width: null, height: null };
-          obj2[0] = closure_4;
-          obj2[1] = closure_4;
-          obj[0] = obj2;
-          let obj3 = { fontSize: null };
-          obj3[0] = closure_4;
-          obj[1] = obj3;
-          let str =
-            emoji.type === callback(mediaAttachmentState[11]).EmojiTypes.UNICODE ? emoji.surrogates : emoji.name;
-          if (str == null) {
-            str = "";
-          }
-          obj[2] = str;
-          let emojiURL;
-          if (null != emoji.id) {
-            obj3 = callback2(mediaAttachmentState[12]);
-            const obj4 = { id: null, animated: null, size: null };
-            ({ id: obj5[0], animated: obj5[1] } = emoji);
-            obj4[2] = closure_1_8;
-            emojiURL = obj3.getEmojiURL(obj4);
-          }
-          obj[3] = emojiURL;
-          return closure_1_9(callback2(mediaAttachmentState[10]), obj);
-        }
+  obj = { renderImage: null, upload: stateFromStores, setUploadSize: tmp4[1] };
+  const items1 = [mediaAttachmentState, arg4, arg3, stateFromStores, tmp7, first];
+  obj.renderImage = noop.useMemo(() => {
+    if (closure_7) {
+      return <ActivityIndicator />;
+    } else if (null != stateFromStores) {
+      let tmp14 = closure_3;
+      if (closure_3 == null) {
+        tmp14 = first;
       }
-    }, items1),
-    upload: stateFromStores,
-    setUploadSize: tmp4[1],
-  };
-  items1 = [mediaAttachmentState, arg4, arg3, stateFromStores, tmp7, first];
+      let obj = { style: null, source: null };
+      const size = { width: tmp14, height: tmp14 };
+      obj.style = size;
+      obj = { uri: stateFromStores.item.uri };
+      obj.source = obj;
+      return jsx(FastImageDefault, { uri: stateFromStores.item.uri });
+    } else {
+      let emoji;
+      if (closure_2 != null) {
+        emoji = tmp20.emoji;
+      }
+      if (null != emoji) {
+        emoji = tmp20.emoji;
+        obj = { fastImageStyle: null, textEmojiStyle: null, name: null, src: null };
+        const size1 = { width: fontSize, height: fontSize };
+        obj.fastImageStyle = size1;
+        const obj1 = { fontSize };
+        obj.textEmojiStyle = obj1;
+        let str = emoji.type === EmojiTypes.EmojiTypes.UNICODE ? emoji.surrogates : emoji.name;
+        if (str == null) {
+          str = "";
+        }
+        obj.name = str;
+        let emojiURL;
+        if (null != emoji.id) {
+          const obj2 = { id: null, animated: null, size: null };
+          ({ id: obj5.id, animated: obj5.animated } = emoji);
+          obj2.size = EMOJI_URL_BASE_SIZE;
+          emojiURL = AvatarUtilsDefault.getEmojiURL(obj2);
+        }
+        obj.src = emojiURL;
+        return jsx(EmojiDefault, { fastImageStyle: null, textEmojiStyle: null, name: null, src: null });
+      }
+    }
+  }, items1);
   return obj;
 }

@@ -1,14 +1,14 @@
 // discord_app/modules/rebrand/native/TextStyles.tsx
-import set from "../../../../_runtime/00002_set.js";
-import ME from "../../../Constants.tsx";
+import Constants from "../../../Constants.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const Fonts = ME.Fonts;
+const Fonts = Constants.Fonts;
 let closure_1 = { 10: 10, 11: 11, 12: 12, 13: 13, 14: 14, 16: 16, 18: 17, 20: 20, 24: 25, 32: 34 };
 let closure_2 = { 10: 14, 11: 14, 12: 16, 13: 16, 14: 18, 16: 20, 18: 24, 20: 24, 24: 30, 32: 40 };
-const result = set.fileFinishedImporting("modules/rebrand/native/TextStyles.tsx");
+const result = size.fileFinishedImporting("modules/rebrand/native/TextStyles.tsx");
 
 export default function createTextStyle(fontFamily, color, arg2, uppercase) {
-  const obj = { fontFamily, fontSize: table[arg2], lineHeight: table2[arg2] };
+  const obj = { fontFamily, fontSize: closure_1[arg2], lineHeight: closure_2[arg2] };
   if (null != color) {
     obj.color = color;
   }

@@ -1,7 +1,7 @@
 // discord_app/modules/native_intents/IntentsBindings.android.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/native_intents/IntentsBindings.android.tsx");
+const result = size.fileFinishedImporting("modules/native_intents/IntentsBindings.android.tsx");
 
 export default {
   hasSearch() {
@@ -11,9 +11,9 @@ export default {
     return false;
   },
   clearSearchIndex() {},
-  deleteSearchDomains(items) {},
-  deleteSearchItems(items) {},
-  indexDomains(items) {},
+  deleteSearchDomains() {},
+  deleteSearchItems() {},
+  indexDomains() {},
   resignActivity() {},
-  setActivity(arg0) {},
+  setActivity() {},
 };

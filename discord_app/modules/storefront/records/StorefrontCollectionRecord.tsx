@@ -1,10 +1,9 @@
 // discord_app/modules/storefront/records/StorefrontCollectionRecord.tsx
-import closure_0 from "../../collectibles/records/CollectiblesStoreListingStylesRecord.tsx";
-import { AssetDisplayConfigRecord } from "../../collectibles/records/ShopAssetConfigRecord.tsx";
-import closure_2 from "StorefrontProductRecord.tsx";
+import CollectiblesStoreListingStylesRecord from "../../collectibles/records/CollectiblesStoreListingStylesRecord.tsx";
+import StorefrontProductRecord from "StorefrontProductRecord.tsx";
 
-let prototype;
-prototype = function StorefrontCollectionRecord(arg0) {
+const AssetDisplayConfigRecord = fn(7555).AssetDisplayConfigRecord;
+const prototype = function StorefrontCollectionRecord(arg0) {
   ({
     id: tmp.id,
     applicationId: tmp.applicationId,
@@ -55,7 +54,18 @@ prototype = function StorefrontCollectionRecord(arg0) {
 prototype["fromServer"] = function fromServer(arg0) {
   ({ created_at, updated_at, unpublished_at, unpublish_settings } = arg0);
   ({ application_id, tenant_metadata, is_orbs_exclusive } = arg0);
-  const merged = Object.assign(arg0, Object.create(null));
+  const merged = Object.assign(
+    arg0,
+    Object.assign({
+      application_id: 0,
+      created_at: 0,
+      updated_at: 0,
+      unpublished_at: 0,
+      unpublish_settings: 0,
+      tenant_metadata: 0,
+      is_orbs_exclusive: 0,
+    }),
+  );
   let collectibles = tenant_metadata.collectibles;
   if (collectibles == null) {
     collectibles = {};
@@ -67,7 +77,7 @@ prototype["fromServer"] = function fromServer(arg0) {
   if (products == null) {
     products = [];
   }
-  obj.products = products.map(fromServer.fromServer);
+  obj.products = products.map(StorefrontProductRecord.fromServer);
   obj.isOrbsExclusive = is_orbs_exclusive;
   obj.createdAt = new Date(created_at);
   const date = new Date(created_at);
@@ -91,7 +101,7 @@ prototype["fromServer"] = function fromServer(arg0) {
   obj.willUnpublishAt = date3;
   let fromServerResult;
   if (null != collectibles.styles) {
-    fromServerResult = closure_0.fromServer(collectibles.styles);
+    fromServerResult = CollectiblesStoreListingStylesRecord.fromServer(collectibles.styles);
   }
   obj.styles = fromServerResult;
   ({ banner_text_color: obj2.bannerTextColor, hero_ranking: obj2.heroRanking } = collectibles);
@@ -137,6 +147,7 @@ prototype["fromServer"] = function fromServer(arg0) {
   } = collectibles);
   return new tmp2(obj);
 };
-const result = require("set").fileFinishedImporting("modules/storefront/records/StorefrontCollectionRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/storefront/records/StorefrontCollectionRecord.tsx");
 
 export default prototype;

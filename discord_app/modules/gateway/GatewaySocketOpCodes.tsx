@@ -1,14 +1,14 @@
 // discord_app/modules/gateway/GatewaySocketOpCodes.tsx
-import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
-import Opcode from "GatewaySocketOpcode.tsx";
-import closure_3 from "../../stores/RTCRegionStore.tsx";
-import { EventEmitter } from "../../../_runtime/00568_EventEmitter.js";
+import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
+import GatewaySocketOpcode from "GatewaySocketOpcode.tsx";
+import RTCRegionStore from "../../stores/RTCRegionStore.tsx";
 
-require = arg1;
+require = fn;
+const EventEmitter = fn(568).EventEmitter;
 class GatewaySocketOpCodes extends EventEmitter {}
 const prototype = GatewaySocketOpCodes.prototype;
 prototype["presenceUpdate"] = function presenceUpdate(status, since, activities, afk) {
-  this.send(Opcode.Opcode.PRESENCE_UPDATE, { status, since, activities, afk });
+  this.send(GatewaySocketOpcode.Opcode.PRESENCE_UPDATE, { status, since, activities, afk });
 };
 prototype["voiceStateUpdate"] = function voiceStateUpdate(guildId) {
   guildId = guildId.guildId;
@@ -57,7 +57,7 @@ prototype["voiceStateUpdate"] = function voiceStateUpdate(guildId) {
   };
   let result = null != channelId;
   if (result) {
-    result = closure_3.shouldIncludePreferredRegion();
+    result = RTCRegionStore.shouldIncludePreferredRegion();
   }
   if (result) {
     obj.preferred_region = preferredRegion;
@@ -70,64 +70,67 @@ prototype["voiceStateUpdate"] = function voiceStateUpdate(guildId) {
     }
     obj.tracks = mapped;
   }
-  this.send(Opcode.Opcode.VOICE_STATE_UPDATE, obj);
+  this.send(GatewaySocketOpcode.Opcode.VOICE_STATE_UPDATE, obj);
 };
 prototype["voiceServerPing"] = function voiceServerPing() {
-  this.send(Opcode.Opcode.VOICE_SERVER_PING, null);
+  this.send(GatewaySocketOpcode.Opcode.VOICE_SERVER_PING, null);
 };
 prototype["requestGuildMembers"] = function requestGuildMembers(guildIds, arg1) {
   ({ query, limit, userIds, presences } = arg1);
-  this.send(Opcode.Opcode.REQUEST_GUILD_MEMBERS, { guild_id: guildIds, query, limit, user_ids: userIds, presences });
+  this.send(GatewaySocketOpcode.Opcode.REQUEST_GUILD_MEMBERS, {
+    guild_id: guildIds,
+    query,
+    limit,
+    user_ids: userIds,
+    presences,
+  });
 };
-prototype["searchRecentMembers"] = function searchRecentMembers(guild_id) {
+prototype["searchRecentMembers"] = function searchRecentMembers(guild_id, arg1) {
   ({ query, continuationToken } = arg1);
   const obj = { guild_id, query: null, continuation_token: null };
   if (query == null) {
     query = "";
   }
-  obj[1] = query;
+  obj.query = query;
   if (continuationToken == null) {
     continuationToken = null;
   }
-  obj[2] = continuationToken;
-  this.send(Opcode.Opcode.SEARCH_RECENT_MEMBERS, obj);
+  obj.continuation_token = continuationToken;
+  this.send(GatewaySocketOpcode.Opcode.SEARCH_RECENT_MEMBERS, obj);
 };
 prototype["updateGuildSubscriptions"] = function updateGuildSubscriptions(subscriptions) {
-  let self = this;
-  self = this;
+  const self = this;
   importDefault = subscriptions;
   dependencyMap = {};
-  const _require = 0;
-  let obj = DISCORD_EPOCHDefault;
+  _require = 0;
+  let obj = SnowflakeUtilsDefault;
   const keys = obj.keys(subscriptions);
-  const item = keys.forEach((arg0) => {
-    const items = [arg0, subscriptions[arg0]];
+  const item = keys.forEach((item) => {
+    const items = [item, subscriptions[item]];
     const length = JSON.stringify(items).length;
     if (closure_0 + length > 15360) {
-      const obj = { subscriptions: null };
-      obj[0] = table;
-      self.send(v0(table[2]).Opcode.GUILD_SUBSCRIPTIONS_BULK, obj);
-      table = {};
+      const obj = { subscriptions: subscriptions2 };
+      self.send(GatewaySocketOpcode.Opcode.GUILD_SUBSCRIPTIONS_BULK, obj);
+      subscriptions2 = {};
       closure_0 = 0;
     }
-    table[arg0] = subscriptions[arg0];
+    subscriptions2[item] = subscriptions[item];
     closure_0 = closure_0 + length;
   });
   if (_require > 0) {
-    obj = { subscriptions: null };
-    obj[0] = dependencyMap;
-    self.send(require("GatewaySocketOpcode.tsx").Opcode.GUILD_SUBSCRIPTIONS_BULK, obj);
+    obj = { subscriptions: dependencyMap };
+    self.send(require("GatewaySocketOpcode").Opcode.GUILD_SUBSCRIPTIONS_BULK, obj);
   }
 };
 prototype["callConnect"] = function callConnect(channel_id) {
-  this.send(Opcode.Opcode.CALL_CONNECT, { channel_id });
+  this.send(GatewaySocketOpcode.Opcode.CALL_CONNECT, { channel_id });
 };
 prototype["streamCreate"] = function streamCreate(streamType, guildId, channelId, region) {
   let tmp = region;
   if (region === undefined) {
     tmp = null;
   }
-  this.send(Opcode.Opcode.STREAM_CREATE, {
+  this.send(GatewaySocketOpcode.Opcode.STREAM_CREATE, {
     type: streamType,
     guild_id: guildId,
     channel_id: channelId,
@@ -135,29 +138,29 @@ prototype["streamCreate"] = function streamCreate(streamType, guildId, channelId
   });
 };
 prototype["streamWatch"] = function streamWatch(streamKey) {
-  this.send(Opcode.Opcode.STREAM_WATCH, { stream_key: streamKey });
+  this.send(GatewaySocketOpcode.Opcode.STREAM_WATCH, { stream_key: streamKey });
 };
 prototype["streamPing"] = function streamPing(streamKey) {
-  this.send(Opcode.Opcode.STREAM_PING, { stream_key: streamKey });
+  this.send(GatewaySocketOpcode.Opcode.STREAM_PING, { stream_key: streamKey });
 };
 prototype["streamDelete"] = function streamDelete(streamKey) {
-  this.send(Opcode.Opcode.STREAM_DELETE, { stream_key: streamKey });
+  this.send(GatewaySocketOpcode.Opcode.STREAM_DELETE, { stream_key: streamKey });
 };
 prototype["streamSetPaused"] = function streamSetPaused(streamKey, paused) {
-  this.send(Opcode.Opcode.STREAM_SET_PAUSED, { stream_key: streamKey, paused });
+  this.send(GatewaySocketOpcode.Opcode.STREAM_SET_PAUSED, { stream_key: streamKey, paused });
 };
 prototype["requestForumUnreads"] = function requestForumUnreads(guildId, channelId, threads) {
-  this.send(Opcode.Opcode.REQUEST_FORUM_UNREADS, {
+  this.send(GatewaySocketOpcode.Opcode.REQUEST_FORUM_UNREADS, {
     guild_id: guildId,
     channel_id: channelId,
     threads: threads.map((threadId) => ({ thread_id: threadId.threadId, ack_message_id: threadId.ackMessageId })),
   });
 };
 prototype["requestSoundboardSounds"] = function requestSoundboardSounds(guildIds) {
-  this.send(Opcode.Opcode.REQUEST_SOUNDBOARD_SOUNDS, { guild_ids: guildIds });
+  this.send(GatewaySocketOpcode.Opcode.REQUEST_SOUNDBOARD_SOUNDS, { guild_ids: guildIds });
 };
-prototype["requestLastMessages"] = function requestLastMessages(closure_0, closure_1) {
-  this.send(Opcode.Opcode.REQUEST_LAST_MESSAGES, { guild_id: closure_0, channel_ids: closure_1 });
+prototype["requestLastMessages"] = function requestLastMessages(guild_id, nextWantsResult) {
+  this.send(GatewaySocketOpcode.Opcode.REQUEST_LAST_MESSAGES, { guild_id, channel_ids: nextWantsResult });
 };
 prototype["getDeletedEntityIdsNotMatchingHash"] = function getDeletedEntityIdsNotMatchingHash(
   guild_id,
@@ -166,7 +169,7 @@ prototype["getDeletedEntityIdsNotMatchingHash"] = function getDeletedEntityIdsNo
   emoji_ids_hash,
   sticker_ids_hash,
 ) {
-  this.send(Opcode.Opcode.GET_DELETED_ENTITY_IDS_NOT_MATCHING_HASH, {
+  this.send(GatewaySocketOpcode.Opcode.GET_DELETED_ENTITY_IDS_NOT_MATCHING_HASH, {
     guild_id,
     channel_ids_hash,
     role_ids_hash,
@@ -174,19 +177,20 @@ prototype["getDeletedEntityIdsNotMatchingHash"] = function getDeletedEntityIdsNo
     sticker_ids_hash,
   });
 };
-prototype["triggerGuildChannelResync"] = function triggerGuildChannelResync(guild_id, items) {
-  this.send(Opcode.Opcode.GUILD_CHANNELS_RESYNC, { guild_id, obfuscated_channel_ids: items });
+prototype["triggerGuildChannelResync"] = function triggerGuildChannelResync(id, items) {
+  this.send(GatewaySocketOpcode.Opcode.GUILD_CHANNELS_RESYNC, { guild_id: id, obfuscated_channel_ids: items });
 };
 prototype["requestChannelInfo"] = function requestChannelInfo(guild_id, fields) {
-  this.send(Opcode.Opcode.REQUEST_CHANNEL_INFO, { guild_id, fields });
+  this.send(GatewaySocketOpcode.Opcode.REQUEST_CHANNEL_INFO, { guild_id, fields });
 };
 prototype["requestChannelMemberCount"] = function requestChannelMemberCount(guildId, channelId) {
-  this.send(Opcode.Opcode.REQUEST_CHANNEL_MEMBER_COUNT, { guild_id: guildId, channel_id: channelId });
+  this.send(GatewaySocketOpcode.Opcode.REQUEST_CHANNEL_MEMBER_COUNT, { guild_id: guildId, channel_id: channelId });
 };
 prototype["remoteCommand"] = function remoteCommand(sessionId, payload) {
-  this.send(Opcode.Opcode.REMOTE_COMMAND, { target_session_id: sessionId, payload });
+  this.send(GatewaySocketOpcode.Opcode.REMOTE_COMMAND, { target_session_id: sessionId, payload });
 };
-let result = require("set").fileFinishedImporting("modules/gateway/GatewaySocketOpCodes.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/gateway/GatewaySocketOpCodes.tsx");
 
 export default GatewaySocketOpCodes;
-export const Opcode = require("Opcode").Opcode;
+export const Opcode = fn(1906).Opcode;

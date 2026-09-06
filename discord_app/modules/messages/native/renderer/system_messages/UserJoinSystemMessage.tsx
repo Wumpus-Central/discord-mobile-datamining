@@ -1,30 +1,29 @@
 // discord_app/modules/messages/native/renderer/system_messages/UserJoinSystemMessage.tsx
-import getSystemLocale from "../../../../../intl/index.native.tsx";
-import getMessageAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
-import getSystemMessageUserJoinMobileDefault from "../../../../../utils/SystemMessageUtils.tsx";
-import closure_3 from "../../../../../stores/ChannelStore.tsx";
-import closure_4 from "../../../../../stores/GuildStore.tsx";
-import { SystemChannelFlags } from "../../../../../Constants.tsx";
+import util from "../../../../../intl/index.native.tsx";
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
+import SystemMessageUtilsDefault from "../../../../../utils/SystemMessageUtils.tsx";
+import ChannelStore from "../../../../../stores/ChannelStore.tsx";
+import GuildStore from "../../../../../stores/GuildStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting(
-  "modules/messages/native/renderer/system_messages/UserJoinSystemMessage.tsx",
-);
+require = fn;
+const SystemChannelFlags = fn(1074).SystemChannelFlags;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/UserJoinSystemMessage.tsx");
 
 export const createUserJoinSystemMessage = function createUserJoinSystemMessage(roleStyle) {
   const message = roleStyle.message;
-  let obj = getMessageAuthorWithProcessedColor;
+  let obj = useAuthorWithProcessedColor;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-  channel = channel.getChannel(message.getChannelId());
+  const channel = ChannelStore.getChannel(message.getChannelId());
   let guildId;
-  const systemMessageUserJoinMobile = getSystemMessageUserJoinMobileDefault.getSystemMessageUserJoinMobile(message.id);
+  const systemMessageUserJoinMobile = SystemMessageUtilsDefault.getSystemMessageUserJoinMobile(message.id);
   if (channel != null) {
     guildId = channel.getGuildId();
   }
   let transformStickerResult;
   if (null != guildId) {
     if (null != channel) {
-      guild = guild.getGuild(guildId);
+      const guild = GuildStore.getGuild(guildId);
       let tmp10 = null != guild;
       if (tmp10) {
         tmp10 = !(guild.systemChannelFlags & SystemChannelFlags.SUPPRESS_JOIN_NOTIFICATION_REPLIES);
@@ -43,10 +42,10 @@ export const createUserJoinSystemMessage = function createUserJoinSystemMessage(
     username: messageAuthorWithProcessedColor.nick,
     usernameOnClick: tmp4(7962)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }),
   };
-  obj[0] = intl.formatToParts(systemMessageUserJoinMobile, obj);
-  obj[1] = transformStickerResult;
+  obj.content = intl.formatToParts(systemMessageUserJoinMobile, obj);
+  obj.sticker = transformStickerResult;
   const intl2 = tmp(1114).intl;
-  obj[2] = intl2.string(getSystemLocale.t["7Tj6HT"]);
+  obj.stickerLabel = intl2.string(util.t["7Tj6HT"]);
   const merged = Object.assign(tmp4(7964)(roleStyle));
   return obj;
 };

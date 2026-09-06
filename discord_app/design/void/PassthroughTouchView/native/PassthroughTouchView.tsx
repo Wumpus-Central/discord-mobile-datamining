@@ -1,16 +1,16 @@
 // discord_app/design/void/PassthroughTouchView/native/PassthroughTouchView.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import __INTERNAL_VIEW_CONFIGDefault from "../../../../../discord_common/js/packages/rtn-codegen/js/PassthroughTouchNativeComponent.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import PassthroughTouchNativeComponentDefault from "../../../../../discord_common/js/packages/rtn-codegen/js/PassthroughTouchNativeComponent.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-noopAll;
-const result = require("set").fileFinishedImporting("design/void/PassthroughTouchView/native/PassthroughTouchView.tsx");
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/PassthroughTouchView/native/PassthroughTouchView.tsx");
 
 export default function PassthroughTouchView(onTouchDown) {
-  const merged = Object.assign(onTouchDown, Object.create(null));
+  const merged = Object.assign(onTouchDown, Object.assign({ onTouchDown: 0 }));
   const obj = {};
   const merged1 = Object.assign(merged);
   obj.onTouchDown = onTouchDown.onTouchDown;
   obj.pointerEvents = "box-none";
-  return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
+  return jsx(PassthroughTouchNativeComponentDefault, {});
 }

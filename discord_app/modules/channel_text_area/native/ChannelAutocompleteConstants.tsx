@@ -1,7 +1,7 @@
 // discord_app/modules/channel_text_area/native/ChannelAutocompleteConstants.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/channel_text_area/native/ChannelAutocompleteConstants.tsx");
+const result = size.fileFinishedImporting("modules/channel_text_area/native/ChannelAutocompleteConstants.tsx");
 
 export const AutocompleteTypes = {
   MENTIONS: "MENTIONS",

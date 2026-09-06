@@ -1,16 +1,18 @@
 // discord_app/modules/user_profile/experiments/UserProfileWYSIWYGEditingExperiment.tsx
-import set from "../../../../_runtime/00002_set.js";
 import ApexExperiment from "../../experiments/apex/index.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const obj = { 1: null };
-obj[1] = { enabled: true };
-let closure_0 = ApexExperiment.createApexExperiment({
+let obj = {
   name: "2026-03-wysiwyg-user-profile-editing",
   kind: "user",
   defaultConfig: { enabled: false },
-  variations: obj,
-});
-const result = set.fileFinishedImporting("modules/user_profile/experiments/UserProfileWYSIWYGEditingExperiment.tsx");
+  variations: null,
+};
+obj = { 1: null };
+obj[1] = { enabled: true };
+obj.variations = obj;
+let closure_0 = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/user_profile/experiments/UserProfileWYSIWYGEditingExperiment.tsx");
 
 export const useIsEligibleForUserProfileWYSIWYGEditing = function useIsEligibleForUserProfileWYSIWYGEditing(
   AutomodQuarantineUtils,

@@ -1,6 +1,6 @@
 // discord_app/modules/parent_tools/ParentalConsentWarningStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
 
 let c0 = null;
 let c1 = null;
@@ -16,6 +16,7 @@ prototype["initialize"] = function initialize(lastWarningFetchDayStart) {
   if (prop == null) {
     prop = null;
   }
+  c0 = prop;
   let prop1;
   if (lastWarningFetchDayStart != null) {
     prop1 = lastWarningFetchDayStart.lastModalShownDayStart;
@@ -23,13 +24,15 @@ prototype["initialize"] = function initialize(lastWarningFetchDayStart) {
   if (prop1 == null) {
     prop1 = null;
   }
-  let warning;
+  c1 = prop1;
+  warning = undefined;
   if (lastWarningFetchDayStart != null) {
     warning = lastWarningFetchDayStart.warning;
   }
   if (warning == null) {
     warning = null;
   }
+  c2 = warning;
 };
 prototype["getWarning"] = function getWarning() {
   return c2;
@@ -55,7 +58,7 @@ prototype["hasShownModalToday"] = function hasShownModalToday() {
   return tmp;
 };
 prototype["getState"] = function getState() {
-  return { lastWarningFetchDayStart: c0, lastModalShownDayStart: c1, warning: c2 };
+  return { lastWarningFetchDayStart, lastModalShownDayStart, warning };
 };
 ParentalConsentWarningStore.displayName = "ParentalConsentWarningStore";
 ParentalConsentWarningStore.persistKey = "ParentalConsentWarningStore";
@@ -76,20 +79,20 @@ const items = [
     if (prop1 == null) {
       prop1 = null;
     }
-    obj[1] = prop1;
-    let warning;
+    obj.lastModalShownDayStart = prop1;
+    warning = undefined;
     if (lastWarningFetchDayStart != null) {
       warning = lastWarningFetchDayStart.warning;
     }
     if (warning == null) {
       warning = null;
     }
-    obj[2] = warning;
+    obj.warning = warning;
     return obj;
   },
 ];
 ParentalConsentWarningStore.migrations = items;
-const parentalConsentWarningStore = new ParentalConsentWarningStore(dispatcherDefault, {
+const parentalConsentWarningStore = new ParentalConsentWarningStore(DispatcherDefault, {
   PARENTAL_CONSENT_WARNING_FETCH_SUCCESS: function handleFetchSuccess(warning) {
     warning = warning.warning;
     const date = new Date();
@@ -114,6 +117,7 @@ const parentalConsentWarningStore = new ParentalConsentWarningStore(dispatcherDe
     parentalConsentWarningStore.persist();
   },
 });
-const result = require("set").fileFinishedImporting("modules/parent_tools/ParentalConsentWarningStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/ParentalConsentWarningStore.tsx");
 
 export default parentalConsentWarningStore;

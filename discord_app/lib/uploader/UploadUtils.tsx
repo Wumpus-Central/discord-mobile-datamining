@@ -1,10 +1,10 @@
 // discord_app/lib/uploader/UploadUtils.tsx
-import set from "../../../_runtime/00002_set.js";
-import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import isBlockedDomain from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
-import cancel from "Upload.tsx";
+import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import js_shim_shim from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
+import Upload from "Upload.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("lib/uploader/UploadUtils.tsx");
+const result = size.fileFinishedImporting("lib/uploader/UploadUtils.tsx");
 class DefaultHttpClient {}
 const prototype = DefaultHttpClient.prototype;
 prototype["sliceBody"] = function sliceBody(body, start) {
@@ -23,12 +23,12 @@ prototype["doUpload"] = function doUpload(body, fileByteRange) {
     const self = this;
     body.body = this.sliceBody(body.body, fileByteRange.fileByteRange.start);
   }
-  const HTTP = sendRequest.HTTP;
+  const HTTP = HTTPUtils.HTTP;
   return HTTP.put(body);
 };
 class LibdiscoreHttpClient {
   constructor() {
-    obj = require("isBlockedDomain");
+    obj = closure_0(closure_1[3]);
     if (obj.isLibdiscoreInitialized()) {
       return Object.create(new.target.prototype);
     } else {
@@ -43,12 +43,12 @@ class LibdiscoreHttpClient {
     }
   }
 }
-LibdiscoreHttpClient.prototype["doUpload"] = function doUpload(body) {
-  const _require = body;
-  httpClientAPI = _require(httpClientAPI[3]).getHttpClientAPI();
+LibdiscoreHttpClient.prototype["doUpload"] = function doUpload(body, arg1) {
+  closure_0 = body;
+  const httpClientAPI = js_shim_shim.getHttpClientAPI();
   if (null == httpClientAPI) {
     let _Error2 = Error;
-    error = new Error("Libdiscore client is not available");
+    let error = new Error("Libdiscore client is not available");
     throw error;
   } else {
     body = body.body;
@@ -74,10 +74,10 @@ LibdiscoreHttpClient.prototype["doUpload"] = function doUpload(body) {
   }
 };
 
-export const doesImageMatchUpload = function doesImageMatchUpload(image, closure_0) {
-  if (closure_0.id !== image.uri) {
-    if (closure_0.item.platform === cancel.UploadPlatform.REACT_NATIVE) {
-      const item = closure_0.item;
+export const doesImageMatchUpload = function doesImageMatchUpload(image, id) {
+  if (id.id !== image.uri) {
+    if (id.item.platform === Upload.UploadPlatform.REACT_NATIVE) {
+      const item = id.item;
       const filename = image.filename;
       let tmp3 = item.originalUri === image.uri;
       if (!tmp3) {
@@ -109,14 +109,14 @@ export const calculateProgress = function calculateProgress(loaded, currentSize)
   return num;
 };
 export { DefaultHttpClient };
-export const canUploadNatively = function canUploadNatively(item) {
-  let fileIsInAppDirResult = item.platform === cancel.UploadPlatform.REACT_NATIVE;
+export const canUploadNatively = function canUploadNatively(platform) {
+  let fileIsInAppDirResult = platform.platform === Upload.UploadPlatform.REACT_NATIVE;
   if (fileIsInAppDirResult) {
-    fileIsInAppDirResult = null != item.uri;
+    fileIsInAppDirResult = null != platform.uri;
   }
   if (fileIsInAppDirResult) {
     let tmpResult = tmp(5137);
-    fileIsInAppDirResult = tmpResult.fileIsInAppDir(item.uri);
+    fileIsInAppDirResult = tmpResult.fileIsInAppDir(platform.uri);
   }
   if (fileIsInAppDirResult) {
     tmpResult = tmp(1351);

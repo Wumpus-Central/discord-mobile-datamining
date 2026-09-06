@@ -1,11 +1,12 @@
 // discord_app/modules/billing/native/UnsupportedFeatureModal.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/billing/native/UnsupportedFeatureModal.tsx");
+const require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/billing/native/UnsupportedFeatureModal.tsx");
 
 export default function UnsupportedFeatureModal(onDismiss) {
   onDismiss = onDismiss.onDismiss;
@@ -14,7 +15,7 @@ export default function UnsupportedFeatureModal(onDismiss) {
   obj = {
     title: onDismiss.title,
     headerLeft: onDismiss(5624).getHeaderCloseButton(() => {
-      let arr = closure_1_1(closure_1_2[5]);
+      let arr = ModalActionCreatorsDefault;
       arr = arr.pop();
       if (onDismiss != null) {
         onDismiss();
@@ -24,17 +25,21 @@ export default function UnsupportedFeatureModal(onDismiss) {
       let obj = { style: { flex: 1, alignItems: "center", justifyContent: "center", padding: 24 }, children: null };
       obj = { variant: "text-lg/normal", color: "text-default", children: null };
       const intl = onDismiss(1114).intl;
-      obj[2] = intl.string(onDismiss(1114).t.I22zuX);
-      obj[1] = callback(onDismiss(4556).Text, obj);
-      return callback(closure_3, obj);
+      obj.children = intl.string(onDismiss(1114).t.I22zuX);
+      obj.children = jsx(onDismiss(4556).Text, { variant: "text-lg/normal", color: "text-default", children: null });
+      return (
+        <View variant="text-lg/normal" color="text-default">
+          {null}
+        </View>
+      );
     },
   };
-  obj[0] = obj;
-  obj[1] = obj;
+  obj.Unsupported = obj;
+  obj.screens = obj;
   return jsx(onDismiss(7000).Navigator, {
     title: onDismiss.title,
     headerLeft: onDismiss(5624).getHeaderCloseButton(() => {
-      let arr = closure_1_1(closure_1_2[5]);
+      let arr = ModalActionCreatorsDefault;
       arr = arr.pop();
       if (onDismiss != null) {
         onDismiss();
@@ -44,9 +49,13 @@ export default function UnsupportedFeatureModal(onDismiss) {
       let obj = { style: { flex: 1, alignItems: "center", justifyContent: "center", padding: 24 }, children: null };
       obj = { variant: "text-lg/normal", color: "text-default", children: null };
       const intl = onDismiss(1114).intl;
-      obj[2] = intl.string(onDismiss(1114).t.I22zuX);
-      obj[1] = callback(onDismiss(4556).Text, obj);
-      return callback(closure_3, obj);
+      obj.children = intl.string(onDismiss(1114).t.I22zuX);
+      obj.children = jsx(onDismiss(4556).Text, { variant: "text-lg/normal", color: "text-default", children: null });
+      return (
+        <View variant="text-lg/normal" color="text-default">
+          {null}
+        </View>
+      );
     },
   });
 }

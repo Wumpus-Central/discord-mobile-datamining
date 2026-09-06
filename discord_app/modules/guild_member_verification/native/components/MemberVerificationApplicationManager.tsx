@@ -1,10 +1,13 @@
 // discord_app/modules/guild_member_verification/native/components/MemberVerificationApplicationManager.tsx
-import initializeDefault from "../../../../lib/AutomaticLifecycleManager.tsx";
-import closure_3 from "../../../../stores/SelectedGuildStore.tsx";
-import closure_4 from "../../UserGuildJoinRequestStore.tsx";
+import MemberVerificationTypes from "../../MemberVerificationTypes.tsx";
+import actions_AlertActionCreatorsDefault from "../../../../actions/native/AlertActionCreators.tsx";
+import MemberVerificationAlertActionCreators from "../MemberVerificationAlertActionCreators.tsx";
+import GuildJoinRequestActionCreatorsDefault from "../../GuildJoinRequestActionCreators.tsx";
+import SelectedGuildStore from "../../../../stores/SelectedGuildStore.tsx";
+import UserGuildJoinRequestStore from "../../UserGuildJoinRequestStore.tsx";
+import AutomaticLifecycleManager from "../../../../lib/AutomaticLifecycleManager.tsx";
 
-let require = arg1;
-initializeDefault;
+require = fn;
 let prototype = function MemberVerificationApplicationManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
@@ -21,29 +24,27 @@ let prototype = function MemberVerificationApplicationManager() {
     },
   };
   applyArgumentsResult.showApplicationApprovedAlert = function showApplicationApprovedAlert() {
-    const guildId = closure_1_3.getGuildId();
+    const guildId = SelectedGuildStore.getGuildId();
     if (null == guildId) {
-      if (guildId.isShowingAlert) {
-        closure_1_1(closure_1_2[3]).close();
+      if (applyArgumentsResult.isShowingAlert) {
+        actions_AlertActionCreatorsDefault.close();
         tmp11.isShowingAlert = false;
-        const obj3 = closure_1_1(closure_1_2[3]);
       }
     } else {
-      const request = closure_1_4.getRequest(guildId);
+      const request = UserGuildJoinRequestStore.getRequest(guildId);
       let applicationStatus;
       if (request != null) {
         applicationStatus = request.applicationStatus;
       }
-      if (applicationStatus === applyArgumentsResult(closure_1_2[4]).GuildJoinRequestApplicationStatuses.APPROVED) {
-        if (guildId.isShowingAlert) {
+      if (applicationStatus === MemberVerificationTypes.GuildJoinRequestApplicationStatuses.APPROVED) {
+        if (applyArgumentsResult.isShowingAlert) {
           let lastSeen;
           if (request != null) {
             lastSeen = request.lastSeen;
           }
           if (null !== lastSeen) {
-            closure_1_1(tmp4[3]).close();
+            actions_AlertActionCreatorsDefault.close();
             tmp17.isShowingAlert = false;
-            const obj2 = closure_1_1(tmp4[3]);
           }
         }
         let tmp6 = tmp17.isShowingAlert || null == request;
@@ -55,11 +56,14 @@ let prototype = function MemberVerificationApplicationManager() {
           tmp6 = null !== lastSeen1;
         }
         if (!tmp6) {
-          let result = applyArgumentsResult(tmp4[5]).openMemberVerificationSuccessAlert(guildId, () => {
-            const result = request(closure_1_2[6]).ackUserGuildJoinRequest(guildId, request.joinRequestId);
+          let result = MemberVerificationAlertActionCreators.openMemberVerificationSuccessAlert(guildId, () => {
+            const result = GuildJoinRequestActionCreatorsDefault.ackUserGuildJoinRequest(
+              guildId,
+              request.joinRequestId,
+            );
           });
           tmp17.isShowingAlert = true;
-          const tmp3Result = applyArgumentsResult(tmp4[5]);
+          const tmp3Result = MemberVerificationAlertActionCreators;
         }
       }
     }
@@ -68,7 +72,8 @@ let prototype = function MemberVerificationApplicationManager() {
 }.prototype;
 class prototype extends tmp2 {}
 prototype = new prototype();
-let result = require("set").fileFinishedImporting(
+const size = fn(2);
+let result = size.fileFinishedImporting(
   "modules/guild_member_verification/native/components/MemberVerificationApplicationManager.tsx",
 );
 

@@ -1,39 +1,40 @@
 // discord_app/modules/guild_scheduled_events/utils/GuildEventRsvpUtils.tsx
-import getSystemLocale from "../../../intl/index.native.tsx";
+import util from "../../../intl/index.native.tsx";
 import useEventSchedule from "../useEventSchedule.tsx";
 import useEventException from "../useEventException.tsx";
-import closure_2 from "../../../stores/AuthenticationStore.tsx";
-import closure_3 from "../GuildScheduledEventStore.tsx";
-import GUILD_EVENT_MAX_NAME_LENGTH from "../GuildScheduledEventsConstants.tsx";
+import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
+import GuildScheduledEventStore from "../GuildScheduledEventStore.tsx";
 
-require = arg1;
-({ GuildScheduledEventUserResponses: c4, GuildScheduledEventStatusDone: c5 } = GUILD_EVENT_MAX_NAME_LENGTH);
-let obj = { SERIES: 0, [0]: "SERIES", RECURRENCE: 1, [1]: "RECURRENCE" };
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/utils/GuildEventRsvpUtils.tsx");
+require = fn;
+const GuildScheduledEventsConstants = fn(1963);
+({ GuildScheduledEventUserResponses: closure_4, GuildScheduledEventStatusDone: hasOwnProperty } =
+  GuildScheduledEventsConstants);
+const ResponseOptions = { SERIES: 0, [0]: "SERIES", RECURRENCE: 1, [1]: "RECURRENCE" };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/utils/GuildEventRsvpUtils.tsx");
 
-export const getExistingRsvp = function getExistingRsvp(closure_1_0, closure_1_1) {
-  return store2.getRsvp(closure_1_0, closure_1_1, store.getId());
+export const getExistingRsvp = function getExistingRsvp(id, c1) {
+  return GuildScheduledEventStore.getRsvp(id, c1, AuthenticationStore.getId());
 };
-export const ResponseOptions = obj;
+export { ResponseOptions };
 export const getResponseOptions = function getResponseOptions() {
-  obj = { name: null, value: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t.uoorxi);
-  obj[1] = obj.SERIES;
+  let obj = { name: null, value: null };
+  const intl = util.intl;
+  obj.name = intl.string(util.t.uoorxi);
+  obj.value = obj.SERIES;
   const items = [obj];
   obj = { name: null, value: null };
-  const intl2 = getSystemLocale.intl;
-  obj[0] = intl2.string(getSystemLocale.t.lwZCFT);
-  obj[1] = obj.RECURRENCE;
+  const intl2 = util.intl;
+  obj.name = intl2.string(util.t.lwZCFT);
+  obj.value = obj.RECURRENCE;
   items[1] = obj;
   return items;
 };
 export const handleRsvp = function handleRsvp(openRsvpPicker) {
   ({ eventId, recurrenceId, guildId, updateRsvp, onRsvp } = openRsvpPicker);
-  const guildScheduledEvent = store2.getGuildScheduledEvent(eventId);
+  const guildScheduledEvent = GuildScheduledEventStore.getGuildScheduledEvent(eventId);
   if (null != guildScheduledEvent) {
     const eventException = useEventException.getEventException(recurrenceId, eventId);
-    const obj4 = useEventException;
     let scheduled_start_time;
     if (guildScheduledEvent != null) {
       scheduled_start_time = guildScheduledEvent.scheduled_start_time;
@@ -61,7 +62,7 @@ export const handleRsvp = function handleRsvp(openRsvpPicker) {
     } else {
       tmp12 = null;
     }
-    const rsvp = store2.getRsvp(guildScheduledEvent.id, undefined, store.getId());
+    const rsvp = GuildScheduledEventStore.getRsvp(guildScheduledEvent.id, undefined, AuthenticationStore.getId());
     const id = guildScheduledEvent.id;
     if (null == tmp12) {
       if (null != rsvp) {

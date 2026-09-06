@@ -1,11 +1,10 @@
 // discord_app/modules/emojis/top_emojis/TopEmojisDataManager.tsx
-import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
-import maybeFetchTopEmojisByGuild from "TopEmojisUtils.tsx";
-import closure_2 from "../../../stores/SelectedGuildStore.tsx";
-import { EmojiInteractionPoint } from "../EmojiConstants.tsx";
+import TopEmojisUtils from "TopEmojisUtils.tsx";
+import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
+import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
-require = arg1;
-initializeDefault;
+require = fn;
+const EmojiInteractionPoint = fn(1374).EmojiInteractionPoint;
 class TopEmojisDataManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -16,12 +15,12 @@ class TopEmojisDataManager extends tmp2 {
 TopEmojisDataManager.prototype["handleInteraction"] = function handleInteraction(interaction) {
   const items = [EmojiInteractionPoint.EmojiButtonMouseEntered];
   if (items.includes(interaction.interaction)) {
-    guildId = guildId.getGuildId();
-    const result = maybeFetchTopEmojisByGuild.maybeFetchTopEmojisByGuild(guildId);
-    const obj = maybeFetchTopEmojisByGuild;
+    const guildId = SelectedGuildStore.getGuildId();
+    const result = TopEmojisUtils.maybeFetchTopEmojisByGuild(guildId);
   }
 };
 const topEmojisDataManager = new TopEmojisDataManager();
-let result = require("set").fileFinishedImporting("modules/emojis/top_emojis/TopEmojisDataManager.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/emojis/top_emojis/TopEmojisDataManager.tsx");
 
 export default topEmojisDataManager;

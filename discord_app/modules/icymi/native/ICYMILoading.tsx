@@ -1,18 +1,15 @@
 // discord_app/modules/icymi/native/ICYMILoading.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4296 from "../../reanimated/ReanimatedRexport.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import ReanimatedRexportDefault from "../../reanimated/ReanimatedRexport.tsx";
 import useChatPlaceholderAnimatedStylesDefault from "../../chat/native/placeholder/useChatPlaceholderAnimatedStyles.tsx";
-import Separator from "ICYMIShared.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createICYMIStyles from "createICYMIStyles.tsx";
+import ICYMIShared from "ICYMIShared.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+require = fn;
 function ICYMILoadingItem() {
-  const tmp = callback3();
+  const tmp = closure_8();
   const tmp2 = useChatPlaceholderAnimatedStylesDefault({ visible: true, animated: true });
-  const memo = React.useMemo(
+  const memo = noop.useMemo(
     () => ({
       avatarTitle: Math.floor(10 * Math.random()),
       title: Math.floor(10 * Math.random()),
@@ -24,52 +21,59 @@ function ICYMILoadingItem() {
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.avatarRow, children: null };
   ({ avatarTitle, title, subtitle } = memo);
+  const obj1 = { style: null };
   const items = [, ,];
   ({ backgroundColor: arr[0], avatar: arr[1] } = tmp);
   items[2] = tmp2;
-  const items1 = [callback(_modDef4296.View, { style: items })];
-  obj1 = { style: null };
+  obj1.style = items;
+  const items1 = [hasOwnProperty(ReanimatedRexportDefault.View, obj1)];
+  const obj2 = { style: null };
   const items2 = [, , ,];
   ({ backgroundColor: arr3[0], avatarTitle: arr3[1] } = tmp);
   items2[2] = tmp2;
-  const obj2 = { width: null };
+  const obj3 = { width: null };
   const result = 100 * Math.sin(avatarTitle);
-  obj2[0] = "" + (result - Math.floor(result)) * 30 + 30 + "%";
-  items2[3] = obj2;
-  obj1[0] = items2;
-  items1[1] = callback(_modDef4296.View, obj1);
-  obj[1] = items1;
-  const items3 = [callback2(View, obj), , ,];
-  const obj3 = { style: null };
+  obj3.width = "" + (result - Math.floor(result)) * 30 + 30 + "%";
+  items2[3] = obj3;
+  obj2.style = items2;
+  items1[1] = hasOwnProperty(ReanimatedRexportDefault.View, obj2);
+  obj.children = items1;
+  const items3 = [timestampProducer(View, obj), , ,];
+  const obj4 = { style: null };
   const items4 = [, , ,];
   ({ backgroundColor: arr5[0], title: arr5[1] } = tmp);
   items4[2] = tmp2;
-  const obj4 = { width: null };
+  const obj5 = { width: null };
   const result1 = 100 * Math.sin(title);
-  obj4[0] = "" + (result1 - Math.floor(result1)) * 25 + 75 + "%";
-  items4[3] = obj4;
-  obj3[0] = items4;
-  items3[1] = callback(_modDef4296.View, obj3);
-  const obj5 = { style: null };
+  obj5.width = "" + (result1 - Math.floor(result1)) * 25 + 75 + "%";
+  items4[3] = obj5;
+  obj4.style = items4;
+  items3[1] = hasOwnProperty(ReanimatedRexportDefault.View, obj4);
+  const obj6 = { style: null };
   const items5 = [, , ,];
   ({ backgroundColor: arr6[0], subtitle: arr6[1] } = tmp);
   items5[2] = tmp2;
-  const obj6 = { width: null };
+  const obj7 = { width: null };
   const result2 = 100 * Math.sin(subtitle);
-  obj6[0] = "" + (result2 - Math.floor(result2)) * 25 + 75 + "%";
-  items5[3] = obj6;
-  obj5[0] = items5;
-  items3[2] = callback(_modDef4296.View, obj5);
+  obj7.width = "" + (result2 - Math.floor(result2)) * 25 + 75 + "%";
+  items5[3] = obj7;
+  obj6.style = items5;
+  items3[2] = hasOwnProperty(ReanimatedRexportDefault.View, obj6);
+  const obj8 = { style: null };
   const items6 = [, ,];
   ({ backgroundColor: arr7[0], image: arr7[1] } = tmp);
   items6[2] = tmp2;
-  items3[3] = callback(_modDef4296.View, { style: items6 });
-  obj[1] = items3;
-  const items7 = [callback2(View, obj), callback(Separator.Separator, {})];
-  obj[0] = items7;
-  return callback2(closure_7, obj);
+  obj8.style = items6;
+  items3[3] = hasOwnProperty(ReanimatedRexportDefault.View, obj8);
+  obj.children = items3;
+  const items7 = [timestampProducer(View, obj), hasOwnProperty(ICYMIShared.Separator, {})];
+  obj.children = items7;
+  return timestampProducer(React5, obj);
 }
-({ jsx: c5, jsxs: closure_6, Fragment: error } = jsxProd);
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
+const createICYMIStyles = fn(16452);
 let closure_8 = createICYMIStyles.createICYMIStyles((marginBottom) => {
   let obj = {
     backgroundColor: null,
@@ -82,41 +86,32 @@ let closure_8 = createICYMIStyles.createICYMIStyles((marginBottom) => {
     image: null,
     separator: null,
   };
-  obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
-  obj[0] = obj;
-  obj[1] = { padding: marginBottom.margin };
-  obj[2] = { flexDirection: "row", alignItems: "center", marginBottom: marginBottom.margin };
-  obj = { width: 40, height: 40, borderRadius: ThemesDefault.radii.md, marginRight: ThemesDefault.space.PX_12 };
-  obj[3] = obj;
-  obj[4] = { height: 18, borderRadius: 10, flexShrink: 1 };
-  obj[5] = {
-    height: ThemesDefault.space.PX_16,
-    marginBottom: ThemesDefault.space.PX_12,
-    borderRadius: 10,
-    flexShrink: 1,
-  };
-  obj1 = {
-    height: ThemesDefault.space.PX_16,
-    marginBottom: ThemesDefault.space.PX_12,
-    borderRadius: 10,
-    flexShrink: 1,
-  };
-  obj[6] = { height: ThemesDefault.space.PX_16, marginBottom: marginBottom.margin, borderRadius: 10, flexShrink: 1 };
-  const obj2 = {
-    height: ThemesDefault.space.PX_16,
+  obj = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
+  obj.backgroundColor = obj;
+  obj.container = { padding: marginBottom.margin };
+  obj.avatarRow = { flexDirection: "row", alignItems: "center", marginBottom: marginBottom.margin };
+  const size = { width: 40, height: 40, borderRadius: nativeDefault.radii.md, marginRight: nativeDefault.space.PX_12 };
+  obj.avatar = size;
+  obj.avatarTitle = { height: 18, borderRadius: 10, flexShrink: 1 };
+  obj = { height: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_12, borderRadius: 10, flexShrink: 1 };
+  obj.title = obj;
+  obj.subtitle = {
+    height: nativeDefault.space.PX_16,
     marginBottom: marginBottom.margin,
     borderRadius: 10,
     flexShrink: 1,
   };
-  obj[7] = { width: "100%", height: 240, borderRadius: ThemesDefault.radii.lg };
-  obj[8] = {};
+  const size1 = { width: "100%", height: 240, borderRadius: nativeDefault.radii.lg };
+  obj.image = size1;
+  obj.separator = {};
   return obj;
 });
-let result = require("set").fileFinishedImporting("modules/icymi/native/ICYMILoading.tsx");
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/icymi/native/ICYMILoading.tsx");
 
 export const ICYMILoading = function ICYMILoading() {
   const obj = { children: null };
-  const items = [callback(ICYMILoadingItem, {}), callback(ICYMILoadingItem, {})];
-  obj[0] = items;
-  return callback2(closure_7, obj);
+  const items = [hasOwnProperty(ICYMILoadingItem, {}), hasOwnProperty(ICYMILoadingItem, {})];
+  obj.children = items;
+  return timestampProducer(React5, obj);
 };

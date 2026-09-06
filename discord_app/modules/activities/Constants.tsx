@@ -1,9 +1,9 @@
 // discord_app/modules/activities/Constants.tsx
-import ME from "../../Constants.tsx";
-import PermissionOverwriteType from "../../flow/Server.tsx";
-import set from "../../../_runtime/00002_set.js";
+import Constants from "../../Constants.tsx";
+import Server from "../../flow/Server.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const ChannelTypes = ME.ChannelTypes;
+const ChannelTypes = Constants.ChannelTypes;
 const items = [
   "1037680572660727838",
   "235088799074484224",
@@ -20,9 +20,8 @@ const items = [
 const items1 = ["1247266306231898122", "1257458870390099989", "1276239071764680926"];
 let obj = { UNLOCKED: 1, [1]: "UNLOCKED", PORTRAIT: 2, [2]: "PORTRAIT", LANDSCAPE: 3, [3]: "LANDSCAPE" };
 const items2 = ["755600276941176913", "880218832743055411", "1050941315912835122", "880218394199220334"];
-let set = new Set(items2);
 obj = {
-  label_type: PermissionOverwriteType.EmbeddedActivityLabelTypes.NONE,
+  label_type: Server.EmbeddedActivityLabelTypes.NONE,
   release_phase: "",
   label_from: null,
   label_until: null,
@@ -41,20 +40,20 @@ obj = {
   blocked_locales: null,
   supported_locales: null,
 };
-const items3 = [PermissionOverwriteType.EmbeddedActivitySupportedPlatforms.WEB];
-obj[5] = items3;
-obj[6] = {
-  [PermissionOverwriteType.EmbeddedActivitySupportedPlatforms.WEB]: obj,
-  [PermissionOverwriteType.EmbeddedActivitySupportedPlatforms.IOS]: obj,
-  [PermissionOverwriteType.EmbeddedActivitySupportedPlatforms.ANDROID]: obj,
+const items3 = [Server.EmbeddedActivitySupportedPlatforms.WEB];
+obj.supported_platforms = items3;
+obj.client_platform_config = {
+  [Server.EmbeddedActivitySupportedPlatforms.WEB]: obj,
+  [Server.EmbeddedActivitySupportedPlatforms.IOS]: obj,
+  [Server.EmbeddedActivitySupportedPlatforms.ANDROID]: obj,
 };
-obj[9] = [];
-obj[10] = [];
+obj.blocked_locales = [];
+obj.supported_locales = [];
 const items4 = [, , ,];
 ({ GUILD_TEXT: arr5[0], DM: arr5[1], GROUP_DM: arr5[2], GUILD_SPACE: arr5[3] } = ChannelTypes);
 const items5 = [];
 items5[HermesBuiltin.arraySpread(items4, 0)] = ChannelTypes.GUILD_VOICE;
-const result = set.fileFinishedImporting("modules/activities/Constants.tsx");
+const result = size.fileFinishedImporting("modules/activities/Constants.tsx");
 
 export const ACTIVITY_INVITE_COVER_IMAGE_SIZE = 160;
 export const validStreamURL = /^https?:\/\/(?:www\.)?(twitch\.tv\/(.+)|youtube.com\/watch\?v=)/;
@@ -126,7 +125,7 @@ export const ActivityTooltipName = {
   YOUTUBE_MARKETING_TOOLTIP: "YOUTUBE_MARKETING_TOOLTIP",
 };
 export const OrientationLockState = obj;
-export const APPLICATIONS_WITH_ALLOWED_POPUPS = set;
+export const APPLICATIONS_WITH_ALLOWED_POPUPS = new Set(items2);
 export const ActivityScreenOrientation = { PORTRAIT: 0, [0]: "PORTRAIT", LANDSCAPE: 1, [1]: "LANDSCAPE" };
 export const ActivityLayoutMode = { FOCUSED: 0, [0]: "FOCUSED", PIP: 1, [1]: "PIP", GRID: 2, [2]: "GRID" };
 export const DEFAULT_EMBEDDED_ACTIVITY_CONFIG = obj;

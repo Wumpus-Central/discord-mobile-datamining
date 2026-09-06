@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/voice/AudioSettingsUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
-import MAX_FAVORITES from "../UserSettingsConstants.tsx";
+import UserSettingsConstants from "../UserSettingsConstants.tsx";
 import BaseConnectionEvent from "../../../../discord_common/js/packages/media-engine/index.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-let closure_2 = MAX_FAVORITES.ProtoAudioSettingsContextTypes;
-let result = set.fileFinishedImporting("modules/user_settings/voice/AudioSettingsUtils.tsx");
+const constants = UserSettingsConstants.ProtoAudioSettingsContextTypes;
+let result = size.fileFinishedImporting("modules/user_settings/voice/AudioSettingsUtils.tsx");
 
 export const snapVolumeToDefault = function snapVolumeToDefault(USER, DEFAULT) {
   if (DEFAULT === BaseConnectionEvent.MediaEngineContextTypes.STREAM) {
@@ -21,11 +21,10 @@ export const snapVolumeToDefault = function snapVolumeToDefault(USER, DEFAULT) {
   }
   return tmp3;
 };
-export const coerceAudioContextForProto = function coerceAudioContextForProto(first) {
-  if (BaseConnectionEvent.MediaEngineContextTypes.DEFAULT === first) {
+export const coerceAudioContextForProto = function coerceAudioContextForProto(arg0) {
+  if (BaseConnectionEvent.MediaEngineContextTypes.DEFAULT === arg0) {
     return constants.USER;
-  } else if (BaseConnectionEvent.MediaEngineContextTypes.STREAM === first) {
+  } else if (BaseConnectionEvent.MediaEngineContextTypes.STREAM === arg0) {
     return constants.STREAM;
   }
-  const tmp = require;
 };

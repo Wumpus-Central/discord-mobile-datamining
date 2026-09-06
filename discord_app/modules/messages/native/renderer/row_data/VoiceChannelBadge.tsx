@@ -1,27 +1,27 @@
 // discord_app/modules/messages/native/renderer/row_data/VoiceChannelBadge.tsx
-import set from "../../../../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import ME from "../../../../../Constants.tsx";
-import experiment from "../../../../channel/VoiceChannelBadgeExperiment.tsx";
-import closure_3 from "../../../../../stores/ChannelStore.tsx";
-import closure_4 from "../../../../../stores/PermissionStore.tsx";
-import closure_5 from "../../../../../stores/VoiceStateStore.tsx";
+import _mod17 from "../../../../../../_runtime/metro/00017__.js";
+import Constants from "../../../../../Constants.tsx";
+import VoiceChannelBadgeExperiment from "../../../../channel/VoiceChannelBadgeExperiment.tsx";
+import ChannelStore from "../../../../../stores/ChannelStore.tsx";
+import PermissionStore from "../../../../../stores/PermissionStore.tsx";
+import VoiceStateStore from "../../../../../stores/VoiceStateStore.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-const Image = get_ActivityIndicator.Image;
-const Permissions = ME.Permissions;
-let result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/VoiceChannelBadge.tsx");
+const Image = _mod17.Image;
+const Permissions = Constants.Permissions;
+let result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/VoiceChannelBadge.tsx");
 
 export const createVoiceChannelBadge = function createVoiceChannelBadge(id, guildId) {
-  let obj = experiment;
+  let obj = VoiceChannelBadgeExperiment;
   if (obj.getVoiceChannelBadgeExperiment({ guildId, location: "VoiceChannelBadgeNative" }).enabled) {
     if (null != guildId) {
-      discoverableVoiceState = discoverableVoiceState.getDiscoverableVoiceState(guildId, id);
+      const discoverableVoiceState = VoiceStateStore.getDiscoverableVoiceState(guildId, id);
       if (null != discoverableVoiceState) {
         let channelId;
         if (discoverableVoiceState != null) {
           channelId = discoverableVoiceState.channelId;
         }
-        channel = channel.getChannel(channelId);
+        const channel = ChannelStore.getChannel(channelId);
         if (null != channel) {
           let tmpResult = tmp(5028);
           const assetSource = Image.resolveAssetSource(tmpResult.getChannelIcon(channel));
@@ -39,17 +39,15 @@ export const createVoiceChannelBadge = function createVoiceChannelBadge(id, guil
             let isPrivateResult = channel.isPrivate();
             if (!isPrivateResult) {
               isPrivateResult =
-                closure_4.can(Permissions.VIEW_CHANNEL, channel) && closure_4.can(Permissions.CONNECT, channel);
-              const obj4 = closure_4;
-              const tmp8 = Permissions;
+                PermissionStore.can(Permissions.VIEW_CHANNEL, channel) &&
+                PermissionStore.can(Permissions.CONNECT, channel);
               const tmp9 =
-                closure_4.can(Permissions.VIEW_CHANNEL, channel) && closure_4.can(Permissions.CONNECT, channel);
+                PermissionStore.can(Permissions.VIEW_CHANNEL, channel) &&
+                PermissionStore.can(Permissions.CONNECT, channel);
             }
             if (!result) {
               if (isPrivateResult) {
-                obj = { channelId: null, channelIconUrl: null };
-                obj[0] = channel.id;
-                obj[1] = uri;
+                obj = { channelId: channel.id, channelIconUrl: uri };
                 return obj;
               }
             }

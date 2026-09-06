@@ -1,25 +1,24 @@
 // discord_app/modules/interaction_components/native/renderComponents.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import PermissionOverwriteType from "../../../flow/Server.tsx";
+import Server from "../../../flow/Server.tsx";
 import StringSelectActionComponentDefault from "actions/StringSelectActionComponent.tsx";
 import SearchableSelectActionComponentDefault from "actions/SearchableSelectActionComponent.tsx";
 import TextDisplayComponentDefault from "display/TextDisplayComponent.tsx";
 import ActionRowLayoutComponentDefault from "layouts/ActionRowLayoutComponent.tsx";
-import _modDef17393 from "actions/TextInputActionComponent.tsx";
+import TextInputActionComponentDefault from "actions/TextInputActionComponent.tsx";
 import LabelLayoutComponentDefault from "layouts/LabelLayoutComponent.tsx";
-import MainAreaCanUploadDefault from "actions/FileUploadActionComponent.tsx";
-import _modDef17397 from "actions/RadioGroupActionComponent.tsx";
-import _modDef17398 from "actions/CheckboxGroupActionComponent.tsx";
-import _modDef17399 from "actions/CheckboxActionComponent.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import FileUploadActionComponentDefault from "actions/FileUploadActionComponent.tsx";
+import RadioGroupActionComponentDefault from "actions/RadioGroupActionComponent.tsx";
+import CheckboxGroupActionComponentDefault from "actions/CheckboxGroupActionComponent.tsx";
+import CheckboxActionComponentDefault from "actions/CheckboxActionComponent.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+require = fn;
 function renderComponents(components) {
-  return components.map((arg0, arg1) => callback(arg0, arg1.toString()));
+  return components.map((item, index) => renderComponent(item, index.toString()));
 }
 function renderComponent(component, arg1) {
   const type = component.type;
-  if (PermissionOverwriteType.ComponentType.ACTION_ROW === type) {
+  if (Server.ComponentType.ACTION_ROW === type) {
     let obj = {};
     const merged = Object.assign(component);
     obj.renderComponents = renderComponents;
@@ -29,9 +28,9 @@ function renderComponent(component, arg1) {
     const merged1 = Object.assign(component);
     return jsx(StringSelectActionComponentDefault, {}, arg1);
   } else if (tmp(1894).ComponentType.TEXT_INPUT === type) {
-    obj1 = {};
+    const obj1 = {};
     const merged2 = Object.assign(component);
-    return jsx(_modDef17393, {}, arg1);
+    return jsx(TextInputActionComponentDefault, {}, arg1);
   } else {
     if (tmp(1894).ComponentType.USER_SELECT !== type) {
       if (tmp(1894).ComponentType.ROLE_SELECT !== type) {
@@ -49,19 +48,19 @@ function renderComponent(component, arg1) {
             } else if (tmp(1894).ComponentType.FILE_UPLOAD === type) {
               const obj4 = {};
               const merged5 = Object.assign(component);
-              return jsx(MainAreaCanUploadDefault, {}, arg1);
+              return jsx(FileUploadActionComponentDefault, {}, arg1);
             } else if (tmp(1894).ComponentType.RADIO_GROUP === type) {
               const obj5 = {};
               const merged6 = Object.assign(component);
-              return jsx(_modDef17397, {}, arg1);
+              return jsx(RadioGroupActionComponentDefault, {}, arg1);
             } else if (tmp(1894).ComponentType.CHECKBOX_GROUP === type) {
               const obj6 = {};
               const merged7 = Object.assign(component);
-              return jsx(_modDef17398, {}, arg1);
+              return jsx(CheckboxGroupActionComponentDefault, {}, arg1);
             } else if (tmp(1894).ComponentType.CHECKBOX === type) {
               obj = {};
               const merged8 = Object.assign(component);
-              return jsx(_modDef17399, {}, arg1);
+              return jsx(CheckboxActionComponentDefault, {}, arg1);
             }
           }
         }
@@ -72,7 +71,8 @@ function renderComponent(component, arg1) {
     return jsx(SearchableSelectActionComponentDefault, {}, arg1);
   }
 }
-noopAll;
-const result = require("set").fileFinishedImporting("modules/interaction_components/native/renderComponents.tsx");
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/interaction_components/native/renderComponents.tsx");
 
 export { renderComponents };

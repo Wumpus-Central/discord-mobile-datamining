@@ -1,16 +1,18 @@
 // discord_app/design/void/Form/native/Form.tsx
-import context2 from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
+import RedesignCompat from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../../../modules/safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
-import { ScrollView } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-let c3 = importAllResult;
-let closure_6 = createCacheKey.createStyles({ form: { flex: 1 }, redesign: { paddingTop: 16 } });
-const context = importAllResult.createContext({ isForm: false });
-const forwardRefResult = importAllResult.forwardRef((keyboardShouldPersistTaps, ref) => {
+require = fn;
+const ScrollView = fn(17).ScrollView;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_6 = createStyles.createStyles({ form: { flex: 1 }, redesign: { paddingTop: 16 } });
+const context = noop.createContext({ isForm: false });
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/Form/native/Form.tsx");
+
+export default noop.forwardRef((keyboardShouldPersistTaps, ref) => {
   let str = keyboardShouldPersistTaps.keyboardShouldPersistTaps;
   ({ style, children } = keyboardShouldPersistTaps);
   if (str === undefined) {
@@ -21,8 +23,8 @@ const forwardRefResult = importAllResult.forwardRef((keyboardShouldPersistTaps, 
     flag = true;
   }
   ({ contentContainerStyle, onScroll, scrollsToTop, onLayout } = keyboardShouldPersistTaps);
-  const tmp = callback();
-  let redesign = importAllResult.useContext(context2.RedesignCompatContext);
+  const tmp = closure_6();
+  let redesign = noop.useContext(RedesignCompat.RedesignCompatContext);
   let obj = { value: { isForm: true }, children: null };
   obj = {
     ref,
@@ -42,19 +44,16 @@ const forwardRefResult = importAllResult.forwardRef((keyboardShouldPersistTaps, 
     redesign = tmp.redesign;
   }
   items[2] = redesign;
-  obj[3] = items;
+  obj.style = items;
   obj = { paddingBottom: 38 + useSafeAreaInsetsKeyboardAwareDefault().insets.bottom };
   const items1 = [obj, contentContainerStyle];
-  obj[4] = items1;
-  obj[5] = { top: 0 };
-  obj[7] = str;
-  obj[8] = flag;
-  obj[9] = onScroll;
-  obj[10] = children;
-  obj[1] = <ScrollView paddingBottom={38 + useSafeAreaInsetsKeyboardAwareDefault().insets.bottom} />;
+  obj.contentContainerStyle = items1;
+  obj.contentInset = { top: 0 };
+  obj.keyboardShouldPersistTaps = str;
+  obj.alwaysBounceVertical = flag;
+  obj.onScroll = onScroll;
+  obj.children = children;
+  obj.children = <ScrollView paddingBottom={38 + useSafeAreaInsetsKeyboardAwareDefault().insets.bottom} />;
   return <context.Provider paddingBottom={38 + useSafeAreaInsetsKeyboardAwareDefault().insets.bottom} />;
 });
-const result = require("set").fileFinishedImporting("design/void/Form/native/Form.tsx");
-
-export default forwardRefResult;
 export const FormContext = context;

@@ -1,11 +1,11 @@
 // discord_app/design/components/mana-assets/native/generated/EmojiGGsExample.native.tsx
-import set from "../../../../../../_runtime/00002_set.js";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import preloadDefault from "../../../../../components_native/common/FastImage.tsx";
-import metadataDefault from "../../../../../../discord_assets/assets/mana/asset-library/generated/EmojiGGsExample-2x.png.js";
+import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
+import _modDef5952 from "../../../../../../discord_assets/assets/mana/asset-library/generated/EmojiGGsExample-2x.png.js";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/EmojiGGsExample.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/EmojiGGsExample.native.tsx");
 
 export const EmojiGGsExample = function EmojiGGsExample(width) {
   let num = width.width;
@@ -29,13 +29,13 @@ export const EmojiGGsExample = function EmojiGGsExample(width) {
     accessibilityLabel: null,
     resizeMode: null,
   };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
-  obj = { width: num * num3, height: num2 * num3 };
-  const items = [obj];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { width: num * num3, height: num2 * num3 });
+  obj = { uri: _modDef5952 };
+  obj.source = obj;
+  const size = { width: num * num3, height: num2 * num3 };
+  const items = [size];
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { uri: _modDef5952 });
 };

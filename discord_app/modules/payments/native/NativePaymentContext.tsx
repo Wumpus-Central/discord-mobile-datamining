@@ -1,15 +1,16 @@
 // discord_app/modules/payments/native/NativePaymentContext.tsx
-import createDefinedContextDefault from "../../../utils/ContextUtils.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../stores/billing/SubscriptionPlanStore.tsx";
-import { PaymentGateways } from "../../../../discord_common/js/shared/Constants.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import importDefaultResult from "../../../../_runtime/metro/00032__slicedToArray.js";
+import SubscriptionPlanActionCreators from "../../../actions/SubscriptionPlanActionCreators.tsx";
+import ContextUtilsDefault from "../../../utils/ContextUtils.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
+import SubscriptionPlanStore from "../../../stores/billing/SubscriptionPlanStore.tsx";
 
-const require = arg1;
-[error, tmp4, tmp5] = importDefaultResult(createDefinedContextDefault(), 3);
-const importDefaultResultResult = importDefaultResult(createDefinedContextDefault(), 3);
-const result = require("set").fileFinishedImporting("modules/payments/native/NativePaymentContext.tsx");
+require = fn;
+const PaymentGateways = fn(1085).PaymentGateways;
+const jsx = fn(21).jsx;
+[closure_7, tmp4, tmp5] = _slicedToArray(ContextUtilsDefault(), 3);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/payments/native/NativePaymentContext.tsx");
 
 export const NativePaymentContextProvider = function NativePaymentContextProvider(skuIDs) {
   skuIDs = skuIDs.skuIDs;
@@ -20,23 +21,22 @@ export const NativePaymentContextProvider = function NativePaymentContextProvide
   const nativeIAPPayments = obj.useNativeIAPPayments();
   storeFront = nativeIAPPayments.storeFront;
   const items = [storeFront, skuIDs];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     let isFetchingForSKUsResult = null == storeFront;
     if (!isFetchingForSKUsResult) {
-      isFetchingForSKUsResult = closure_1_4.isFetchingForSKUs(skuIDs);
+      isFetchingForSKUsResult = SubscriptionPlanStore.isFetchingForSKUs(skuIDs);
     }
     if (!isFetchingForSKUsResult) {
-      const subscriptionPlansBySKUs = skuIDs(selectedPlanId[7]).fetchSubscriptionPlansBySKUs(
+      const subscriptionPlansBySKUs = SubscriptionPlanActionCreators.fetchSubscriptionPlansBySKUs(
         skuIDs,
         storeFront.country,
-        closure_1_5.APPLE_ADVANCED_COMMERCE,
+        PaymentGateways.APPLE_ADVANCED_COMMERCE,
       );
-      const obj = skuIDs(selectedPlanId[7]);
     }
   }, items);
   const tmp3 = storeFront(selectedPlanId[8])();
   selectedPlanId = tmp3.selectedPlanId;
-  const items1 = [closure_4];
+  const items1 = [SubscriptionPlanStore];
   const items2 = [selectedPlanId];
   obj = { value: null, children: null };
   obj = {
@@ -45,9 +45,9 @@ export const NativePaymentContextProvider = function NativePaymentContextProvide
     selectedPlan: skuIDs(selectedPlanId[9]).useStateFromStores(
       items1,
       () => {
-        let value = null;
+        value = null;
         if (null != selectedPlanId) {
-          value = closure_1_4.get(tmp);
+          value = SubscriptionPlanStore.get(tmp);
         }
         return value;
       },
@@ -56,8 +56,8 @@ export const NativePaymentContextProvider = function NativePaymentContextProvide
     storeFront,
     activeSubscription,
   };
-  obj[0] = obj;
-  obj[1] = children;
+  obj.value = obj;
+  obj.children = children;
   return (
     <redux.Provider
       isReadyToPurchase={nativeIAPPayments.nativePaymentsConnected}
@@ -65,9 +65,9 @@ export const NativePaymentContextProvider = function NativePaymentContextProvide
       selectedPlan={skuIDs(selectedPlanId[9]).useStateFromStores(
         items1,
         () => {
-          let value = null;
+          value = null;
           if (null != selectedPlanId) {
-            value = closure_1_4.get(tmp);
+            value = SubscriptionPlanStore.get(tmp);
           }
           return value;
         },

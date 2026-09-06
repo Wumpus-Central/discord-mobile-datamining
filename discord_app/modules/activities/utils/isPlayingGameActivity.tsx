@@ -1,12 +1,12 @@
 // discord_app/modules/activities/utils/isPlayingGameActivity.tsx
-import set from "../../../../_runtime/00002_set.js";
-import ME from "../../../Constants.tsx";
-import items3 from "../Constants.tsx";
+import Constants from "../../../Constants.tsx";
+import Constants2 from "../Constants.tsx";
 import isEmbeddedActivityDefault from "isEmbeddedActivity.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-let closure_2 = items3.XBOX_ACTIVITY_APPLICATION_ID;
-const ActivityTypes = ME.ActivityTypes;
-const result = set.fileFinishedImporting("modules/activities/utils/isPlayingGameActivity.tsx");
+let closure_2 = Constants2.XBOX_ACTIVITY_APPLICATION_ID;
+const ActivityTypes = Constants.ActivityTypes;
+const result = size.fileFinishedImporting("modules/activities/utils/isPlayingGameActivity.tsx");
 
 export default function isPlayingGameActivity(application_id) {
   let tmp = null != application_id;

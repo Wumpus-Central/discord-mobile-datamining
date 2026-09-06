@@ -1,11 +1,11 @@
 // discord_app/modules/tti_analytics/TTITracker.tsx
-import setAll from "../../../_runtime/00002_set.js";
-import isTracingDefault from "../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx";
-import DISCORD_EPOCH from "../../utils/SnowflakeUtils.tsx";
-import apply from "../../../_runtime/00012_apply.js";
-import closure_5 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import _modAll2 from "../../../_runtime/metro/00002__.js";
+import AppStartPerformanceDefault from "../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx";
+import SnowflakeUtils from "../../utils/SnowflakeUtils.tsx";
+import _mod12 from "../../../_runtime/metro/00012__.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
-require = arg1;
+require = fn;
 function serialize(arg0, arg1) {
   if (0 !== arg1) {
     if (null != arg1) {
@@ -27,10 +27,17 @@ global.__timingFunction = () => performance.now();
 let closure_7 = null == global.__getTotalRequireTime ? () => 0 : () => global.__getTotalRequireTime();
 class TTITimer {
   constructor(arg0, arg1) {
-    obj = Object.create(new.target.prototype);
-    obj.emoji = global;
-    obj.name = arg1;
-    return obj;
+    merged = Object.assign({
+      start_: 0,
+      startNumImports: 0,
+      startImportTime: 0,
+      end_: 0,
+      endNumImports: 0,
+      endImportTime: 0,
+    });
+    merged.emoji = global;
+    merged.name = fn;
+    return merged;
   }
 }
 const prototype = TTITimer.prototype;
@@ -57,13 +64,13 @@ prototype["recordStart"] = function recordStart() {
   if (0 === this.start_) {
     self.recordStart_();
   }
-  isTracingDefault.mark(self.emoji, "Start " + self.name);
+  AppStartPerformanceDefault.mark(self.emoji, "Start " + self.name);
   loggerCallback();
 };
 prototype["recordStart_"] = function recordStart_() {
   this.start_ = Date.now();
-  this.startNumImports = setAll.size();
-  this.startImportTime = callback2();
+  this.startNumImports = _modAll2.size();
+  this.startImportTime = closure_7();
 };
 prototype["recordEnd"] = function recordEnd() {
   const self = this;
@@ -71,28 +78,26 @@ prototype["recordEnd"] = function recordEnd() {
     if (0 !== self.start_) {
       self.recordEnd_();
       const _HermesInternal = HermesInternal;
-      isTracingDefault.mark(self.emoji, "Finish " + self.name, self.end_ - self.start_);
-      const obj2 = isTracingDefault;
+      AppStartPerformanceDefault.mark(self.emoji, "Finish " + self.name, self.end_ - self.start_);
     }
     loggerCallback();
   }
-  isTracingDefault.mark(self.emoji, "Finish " + self.name);
+  AppStartPerformanceDefault.mark(self.emoji, "Finish " + self.name);
 };
 prototype["recordEnd_"] = function recordEnd_() {
   this.end_ = Date.now();
-  this.endNumImports = setAll.size();
-  this.endImportTime = callback2();
+  this.endNumImports = _modAll2.size();
+  this.endImportTime = closure_7();
 };
-prototype["set"] = function set(start_) {
+prototype["set"] = function set(start_, arg1) {
   const self = this;
   if (0 === this.start_) {
     self.start_ = start_;
     self.end_ = start_ + arg1;
-    self.endNumImports = setAll.size();
-    self.endImportTime = callback2();
-    const obj = setAll;
+    self.endNumImports = _modAll2.size();
+    self.endImportTime = closure_7();
   }
-  isTracingDefault.mark(self.emoji, self.name, arg1);
+  AppStartPerformanceDefault.mark(self.emoji, self.name, arg1);
   loggerCallback();
 };
 prototype["serializeStart"] = function serializeStart(startTime) {
@@ -136,55 +141,51 @@ prototype["serializeEnd"] = function serializeEnd(startTime) {
 prototype["measure"] = function measure(arg0) {
   const self = this;
   if (this.start_ > 0) {
-    return isTracingDefault.time(self.emoji, self.name, arg0);
+    return AppStartPerformanceDefault.time(self.emoji, self.name, arg0);
   } else {
     self.recordStart_();
-    const obj = isTracingDefault;
     self.recordEnd_();
     loggerCallback();
-    return isTracingDefault.time(self.emoji, self.name, arg0);
+    return AppStartPerformanceDefault.time(self.emoji, self.name, arg0);
   }
 };
-prototype["measureAsync"] = function measureAsync(closure_1_5) {
-  closure_0 = closure_1_5;
+prototype["measureAsync"] = function measureAsync(arg0) {
+  closure_0 = arg0;
   const self = this;
-  return callback(function* () {
+  return (async () => {
     closure_1 = tmp5;
     closure_0 = tmp2;
-    if (closure_1_1.start_ > 0) {
-      return v0(closure_1_4[1]).timeAsync(closure_1_1.emoji, closure_1_1.name, closure_1_0);
+    if (self.start_ > 0) {
+      return v1(10).timeAsync(self.emoji, self.name, closure_0);
     }
-    closure_1_1.recordStart_();
-    const obj2 = v0(closure_1_4[1]);
-    closure_0 = yield obj2.timeAsync(closure_1_1.emoji, closure_1_1.name, closure_1_0);
-    closure_1.recordEnd_();
-    closure_1_6();
-    return closure_0;
+    self.recordStart_();
+    closure_128_0 = await v1(10).timeAsync(self.emoji, self.name, closure_0);
+    closure_129_1.recordEnd_();
+    loggerCallback();
+    return closure_128_0;
   })();
 };
 prototype["measureAsyncWithoutNesting"] = function measureAsyncWithoutNesting(arg0) {
   closure_0 = arg0;
   const self = this;
-  return callback(function* () {
+  return (async () => {
     closure_1 = tmp5;
-    closure_0 = tmp2;
-    if (closure_1_1.start_ > 0) {
-      const obj3 = v0(closure_1_4[1]);
-      return obj3.timeAsync(closure_1_1.emoji, closure_1_1.name, closure_1_0);
+    if (self.start_ > 0) {
+      return v1(10).timeAsync(self.emoji, self.name, tmp2);
     }
-    closure_1_1.recordStart_();
+    self.recordStart_();
     const _Date2 = Date;
-    closure_0 = Date.now();
+    closure_128_0 = Date.now();
     const _HermesInternal2 = HermesInternal;
-    v0(closure_1_4[1]).mark(closure_1_1.emoji, "Start " + closure_1_1.name);
-    closure_1 = yield closure_1_0();
+    v1(10).mark(self.emoji, "Start " + self.name);
+    closure_128_1 = await tmp2();
     const _HermesInternal = HermesInternal;
     const _Date = Date;
-    const combined = "Finish " + closure_1.name;
-    v0(closure_1_4[1]).mark(closure_1.emoji, combined, Date.now() - closure_0);
-    closure_1.recordEnd_();
-    closure_1_6();
-    return closure_1;
+    const combined = "Finish " + closure_129_1.name;
+    v1(10).mark(closure_129_1.emoji, combined, Date.now() - closure_128_0);
+    closure_129_1.recordEnd_();
+    loggerCallback();
+    return closure_128_1;
   })();
 };
 class TTIEvent {
@@ -197,12 +198,12 @@ class TTIEvent {
     if (importAll === undefined) {
       flag2 = false;
     }
-    obj = Object.create(new.target.prototype);
-    obj.emoji = global;
-    obj.name = arg1;
-    obj.onlyOnce = flag;
-    obj.alwaysRecord = flag2;
-    return obj;
+    merged = Object.assign({ time_: 0, numImports: null, importTime: 0 });
+    merged.emoji = global;
+    merged.name = fn;
+    merged.onlyOnce = flag;
+    merged.alwaysRecord = flag2;
+    return merged;
   }
 }
 const prototype2 = TTIEvent.prototype;
@@ -225,18 +226,16 @@ prototype2["record"] = function record(timestamp) {
       self.recordState_(timestamp);
       loggerCallback();
     } else {
-      isTracingDefault.mark(self.emoji, self.name);
-      const obj = isTracingDefault;
+      AppStartPerformanceDefault.mark(self.emoji, self.name);
     }
   }
   loggerCallback();
 };
 prototype2["recordState_"] = function recordState_(timestamp) {
   this.time_ = timestamp;
-  this.numImports = setAll.size();
-  this.importTime = callback2();
-  const obj = setAll;
-  isTracingDefault.mark(this.emoji, this.name);
+  this.numImports = _modAll2.size();
+  this.importTime = closure_7();
+  AppStartPerformanceDefault.mark(this.emoji, this.name);
 };
 prototype2["hasData"] = function hasData() {
   return this.time_ > 0;
@@ -260,7 +259,11 @@ prototype2["serialize"] = function serialize(arg0) {
   }
   return tmp;
 };
-class TTIImportEvent {}
+class TTIImportEvent {
+  constructor() {
+    return Object.assign({ time_: 0 });
+  }
+}
 const prototype3 = TTIImportEvent.prototype;
 Object.defineProperty(prototype3, "time", {
   get: function time() {
@@ -270,334 +273,668 @@ Object.defineProperty(prototype3, "time", {
 });
 prototype3["record"] = function record() {
   if (0 === this.time_) {
-    tmp.time_ = callback2();
+    tmp.time_ = closure_7();
   }
 };
 const prototype4 = function TTITrackers() {
-  const tmp = TTITimer;
-  if (typeof TTITimer !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof TTITimer === "function") {
+    const merged = Object.assign({
+      loadIndex: null,
+      loadFastConnectNativeModule: null,
+      beginFastConnect: null,
+      loadImports: null,
+      init: null,
+      loadStorage: null,
+      parseStorage: null,
+      loadMiniCache: null,
+      fetchGuildCache: null,
+      fetchGuildChannelsCache: null,
+      loadCachedMessages: null,
+      renderApp: null,
+      renderAppEffect: null,
+      firstContentfulPaint: null,
+      renderMessages: null,
+      renderMessagesWithCache: null,
+      firstRowGenerator: null,
+      displayMessagesWithCache: null,
+      firstRenderAfterReadyPayload: null,
+      renderLatestMessages: null,
+      displayLatestMessages: null,
+      initialGuild: null,
+      loadLazyCache: null,
+      fetchLazyCache: null,
+      parseLazyCache: null,
+      fetchStaleChannels: null,
+      deserializeCache: null,
+      dispatchLazyCache: null,
+      parseReady: null,
+      ready: null,
+      hydrateReady: null,
+      dispatchReady: null,
+      parseReadySupplemental: null,
+      readySupplemental: null,
+      hydrateReadySupplemental: null,
+      dispatchReadySupplemental: null,
+      fetchMessages: null,
+      dispatchMessages: null,
+      imports: null,
+    });
+    const merged1 = Object.assign({
+      start_: 0,
+      startNumImports: 0,
+      startImportTime: 0,
+      end_: 0,
+      endNumImports: 0,
+      endImportTime: 0,
+    });
+    merged1.emoji = "\u2757";
+    merged1.name = "Load index.tsx";
+    merged[0] = merged1;
+    if (typeof tmp === "function") {
+      const merged2 = Object.assign({
+        start_: 0,
+        startNumImports: 0,
+        startImportTime: 0,
+        end_: 0,
+        endNumImports: 0,
+        endImportTime: 0,
+      });
+      merged2.emoji = "\u{1F4BE}";
+      merged2.name = "Load fast_connect native module";
+      merged[1] = merged2;
+      if (typeof tmp === "function") {
+        const merged3 = Object.assign({
+          start_: 0,
+          startNumImports: 0,
+          startImportTime: 0,
+          end_: 0,
+          endNumImports: 0,
+          endImportTime: 0,
+        });
+        merged3.emoji = "\u{1F310}";
+        merged3.name = "Fast Connect IDENTIFY";
+        merged[2] = merged3;
+        if (typeof tmp === "function") {
+          const merged4 = Object.assign({
+            start_: 0,
+            startNumImports: 0,
+            startImportTime: 0,
+            end_: 0,
+            endNumImports: 0,
+            endImportTime: 0,
+          });
+          merged4.emoji = "\u{1F3C3}";
+          merged4.name = "Load Imports";
+          merged[3] = merged4;
+          if (typeof tmp === "function") {
+            const merged5 = Object.assign({
+              start_: 0,
+              startNumImports: 0,
+              startImportTime: 0,
+              end_: 0,
+              endNumImports: 0,
+              endImportTime: 0,
+            });
+            merged5.emoji = "\u{1F3C3}";
+            merged5.name = "Initial Initialization";
+            merged[4] = merged5;
+            if (typeof tmp === "function") {
+              const merged6 = Object.assign({
+                start_: 0,
+                startNumImports: 0,
+                startImportTime: 0,
+                end_: 0,
+                endNumImports: 0,
+                endImportTime: 0,
+              });
+              merged6.emoji = "\u{1F4BE}";
+              merged6.name = "Load Storage";
+              merged[5] = merged6;
+              if (typeof tmp === "function") {
+                const merged7 = Object.assign({
+                  start_: 0,
+                  startNumImports: 0,
+                  startImportTime: 0,
+                  end_: 0,
+                  endNumImports: 0,
+                  endImportTime: 0,
+                });
+                merged7.emoji = "\u{1F4BE}";
+                merged7.name = "Parse Storage";
+                merged[6] = merged7;
+                if (typeof tmp === "function") {
+                  const merged8 = Object.assign({
+                    start_: 0,
+                    startNumImports: 0,
+                    startImportTime: 0,
+                    end_: 0,
+                    endNumImports: 0,
+                    endImportTime: 0,
+                  });
+                  merged8.emoji = "\u{1F4BE}";
+                  merged8.name = "Load Mini Cache";
+                  merged[7] = merged8;
+                  if (typeof tmp === "function") {
+                    const merged9 = Object.assign({
+                      start_: 0,
+                      startNumImports: 0,
+                      startImportTime: 0,
+                      end_: 0,
+                      endNumImports: 0,
+                      endImportTime: 0,
+                    });
+                    merged9.emoji = "\u{1F4BE}";
+                    merged9.name = "Fetch Guild Cache";
+                    merged[8] = merged9;
+                    if (typeof tmp === "function") {
+                      const merged10 = Object.assign({
+                        start_: 0,
+                        startNumImports: 0,
+                        startImportTime: 0,
+                        end_: 0,
+                        endNumImports: 0,
+                        endImportTime: 0,
+                      });
+                      merged10.emoji = "\u{1F4BE}";
+                      merged10.name = "Fetch Initial Guild Channels Cache";
+                      merged[9] = merged10;
+                      if (typeof tmp === "function") {
+                        const merged11 = Object.assign({
+                          start_: 0,
+                          startNumImports: 0,
+                          startImportTime: 0,
+                          end_: 0,
+                          endNumImports: 0,
+                          endImportTime: 0,
+                        });
+                        merged11.emoji = "\u{1F4BE}";
+                        merged11.name = "Load Cached Messages";
+                        merged[10] = merged11;
+                        if (typeof TTIEvent === "function") {
+                          const merged12 = Object.assign({ time_: 0, numImports: null, importTime: 0 });
+                          merged12.emoji = "\u{1F3A8}";
+                          merged12.name = "First React Render";
+                          merged12.onlyOnce = false;
+                          merged12.alwaysRecord = false;
+                          merged[11] = merged12;
+                          if (typeof tmp24 === "function") {
+                            const merged13 = Object.assign({ time_: 0, numImports: null, importTime: 0 });
+                            merged13.emoji = "\u{1F3A8}";
+                            merged13.name = "First React Render useEffect";
+                            merged13.onlyOnce = false;
+                            merged13.alwaysRecord = false;
+                            merged[12] = merged13;
+                            if (typeof tmp24 === "function") {
+                              const merged14 = Object.assign({ time_: 0, numImports: null, importTime: 0 });
+                              merged14.emoji = "\u{1F3A8}";
+                              merged14.name = "First Contentful Paint";
+                              merged14.onlyOnce = false;
+                              merged14.alwaysRecord = true;
+                              merged[13] = merged14;
+                              if (typeof tmp24 === "function") {
+                                const merged15 = Object.assign({ time_: 0, numImports: null, importTime: 0 });
+                                merged15.emoji = "\u{1F3A8}";
+                                merged15.name = "React Render Messages";
+                                merged15.onlyOnce = true;
+                                merged15.alwaysRecord = false;
+                                merged[14] = merged15;
+                                if (typeof tmp24 === "function") {
+                                  const merged16 = Object.assign({ time_: 0, numImports: null, importTime: 0 });
+                                  merged16.emoji = "\u{1F3A8}";
+                                  merged16.name = "React Render Cached Messages";
+                                  merged16.onlyOnce = true;
+                                  merged16.alwaysRecord = false;
+                                  merged[15] = merged16;
+                                  if (typeof tmp === "function") {
+                                    const merged17 = Object.assign({
+                                      start_: 0,
+                                      startNumImports: 0,
+                                      startImportTime: 0,
+                                      end_: 0,
+                                      endNumImports: 0,
+                                      endImportTime: 0,
+                                    });
+                                    merged17.emoji = "\u{1F3A8}";
+                                    merged17.name = "RowGenerator.generate()";
+                                    merged[16] = merged17;
+                                    if (typeof tmp24 === "function") {
+                                      const merged18 = Object.assign({ time_: 0, numImports: null, importTime: 0 });
+                                      merged18.emoji = "\u{1F5A5}\uFE0F";
+                                      merged18.name = "Display Cached Messages";
+                                      merged18.onlyOnce = false;
+                                      merged18.alwaysRecord = true;
+                                      merged[17] = merged18;
+                                      if (typeof tmp24 === "function") {
+                                        const merged19 = Object.assign({ time_: 0, numImports: null, importTime: 0 });
+                                        merged19.emoji = "\u{1F3A8}";
+                                        merged19.name = "First Render after Ready Payload";
+                                        merged19.onlyOnce = true;
+                                        merged19.alwaysRecord = false;
+                                        merged[18] = merged19;
+                                        if (typeof tmp24 === "function") {
+                                          const merged20 = Object.assign({ time_: 0, numImports: null, importTime: 0 });
+                                          merged20.emoji = "\u{1F3A8}";
+                                          merged20.name = "React Render Latest Messages";
+                                          merged20.onlyOnce = false;
+                                          merged20.alwaysRecord = false;
+                                          merged[19] = merged20;
+                                          if (typeof tmp24 === "function") {
+                                            const merged21 = Object.assign({
+                                              time_: 0,
+                                              numImports: null,
+                                              importTime: 0,
+                                            });
+                                            merged21.emoji = "\u{1F5A5}\uFE0F";
+                                            merged21.name = "Display Latest Messages";
+                                            merged21.onlyOnce = false;
+                                            merged21.alwaysRecord = false;
+                                            merged[20] = merged21;
+                                            if (typeof tmp === "function") {
+                                              const merged22 = Object.assign({
+                                                start_: 0,
+                                                startNumImports: 0,
+                                                startImportTime: 0,
+                                                end_: 0,
+                                                endNumImports: 0,
+                                                endImportTime: 0,
+                                              });
+                                              merged22.emoji = "\u{1F310}";
+                                              merged22.name = "Initial Guild";
+                                              merged[21] = merged22;
+                                              if (typeof tmp === "function") {
+                                                const merged23 = Object.assign({
+                                                  start_: 0,
+                                                  startNumImports: 0,
+                                                  startImportTime: 0,
+                                                  end_: 0,
+                                                  endNumImports: 0,
+                                                  endImportTime: 0,
+                                                });
+                                                merged23.emoji = "\u{1F4BE}";
+                                                merged23.name = "Load Lazy Cache";
+                                                merged[22] = merged23;
+                                                if (typeof tmp === "function") {
+                                                  const merged24 = Object.assign({
+                                                    start_: 0,
+                                                    startNumImports: 0,
+                                                    startImportTime: 0,
+                                                    end_: 0,
+                                                    endNumImports: 0,
+                                                    endImportTime: 0,
+                                                  });
+                                                  merged24.emoji = "\u{1F4BE}";
+                                                  merged24.name = "Fetch Lazy Cache";
+                                                  merged[23] = merged24;
+                                                  if (typeof tmp === "function") {
+                                                    const merged25 = Object.assign({
+                                                      start_: 0,
+                                                      startNumImports: 0,
+                                                      startImportTime: 0,
+                                                      end_: 0,
+                                                      endNumImports: 0,
+                                                      endImportTime: 0,
+                                                    });
+                                                    merged25.emoji = "\u{1F4BE}";
+                                                    merged25.name = "Parse Lazy Cache";
+                                                    merged[24] = merged25;
+                                                    if (typeof tmp === "function") {
+                                                      const merged26 = Object.assign({
+                                                        start_: 0,
+                                                        startNumImports: 0,
+                                                        startImportTime: 0,
+                                                        end_: 0,
+                                                        endNumImports: 0,
+                                                        endImportTime: 0,
+                                                      });
+                                                      merged26.emoji = "\u{1F4BE}";
+                                                      merged26.name = "Fetch Stale Channels";
+                                                      merged[25] = merged26;
+                                                      if (typeof tmp === "function") {
+                                                        const merged27 = Object.assign({
+                                                          start_: 0,
+                                                          startNumImports: 0,
+                                                          startImportTime: 0,
+                                                          end_: 0,
+                                                          endNumImports: 0,
+                                                          endImportTime: 0,
+                                                        });
+                                                        merged27.emoji = "\u{1F4BE}";
+                                                        merged27.name = "Deserialize Cache";
+                                                        merged[26] = merged27;
+                                                        if (typeof tmp === "function") {
+                                                          const merged28 = Object.assign({
+                                                            start_: 0,
+                                                            startNumImports: 0,
+                                                            startImportTime: 0,
+                                                            end_: 0,
+                                                            endNumImports: 0,
+                                                            endImportTime: 0,
+                                                          });
+                                                          merged28.emoji = "\u{1F4BE}";
+                                                          merged28.name = "Dispatch Lazy Cache";
+                                                          merged[27] = merged28;
+                                                          if (typeof tmp === "function") {
+                                                            const merged29 = Object.assign({
+                                                              start_: 0,
+                                                              startNumImports: 0,
+                                                              startImportTime: 0,
+                                                              end_: 0,
+                                                              endNumImports: 0,
+                                                              endImportTime: 0,
+                                                            });
+                                                            merged29.emoji = "\u{1F310}";
+                                                            merged29.name = "Parse READY";
+                                                            merged[28] = merged29;
+                                                            if (typeof tmp === "function") {
+                                                              const merged30 = Object.assign({
+                                                                start_: 0,
+                                                                startNumImports: 0,
+                                                                startImportTime: 0,
+                                                                end_: 0,
+                                                                endNumImports: 0,
+                                                                endImportTime: 0,
+                                                              });
+                                                              merged30.emoji = "\u{1F310}";
+                                                              merged30.name = "READY";
+                                                              merged[29] = merged30;
+                                                              if (typeof tmp === "function") {
+                                                                const merged31 = Object.assign({
+                                                                  start_: 0,
+                                                                  startNumImports: 0,
+                                                                  startImportTime: 0,
+                                                                  end_: 0,
+                                                                  endNumImports: 0,
+                                                                  endImportTime: 0,
+                                                                });
+                                                                merged31.emoji = "\u{1F310}";
+                                                                merged31.name = "Hydrate READY";
+                                                                merged[30] = merged31;
+                                                                if (typeof tmp === "function") {
+                                                                  const merged32 = Object.assign({
+                                                                    start_: 0,
+                                                                    startNumImports: 0,
+                                                                    startImportTime: 0,
+                                                                    end_: 0,
+                                                                    endNumImports: 0,
+                                                                    endImportTime: 0,
+                                                                  });
+                                                                  merged32.emoji = "\u{1F310}";
+                                                                  merged32.name = "Dispatch READY";
+                                                                  merged[31] = merged32;
+                                                                  if (typeof tmp === "function") {
+                                                                    const merged33 = Object.assign({
+                                                                      start_: 0,
+                                                                      startNumImports: 0,
+                                                                      startImportTime: 0,
+                                                                      end_: 0,
+                                                                      endNumImports: 0,
+                                                                      endImportTime: 0,
+                                                                    });
+                                                                    merged33.emoji = "\u{1F310}";
+                                                                    merged33.name = "Parse READY Supplemental";
+                                                                    merged[32] = merged33;
+                                                                    if (typeof tmp === "function") {
+                                                                      const merged34 = Object.assign({
+                                                                        start_: 0,
+                                                                        startNumImports: 0,
+                                                                        startImportTime: 0,
+                                                                        end_: 0,
+                                                                        endNumImports: 0,
+                                                                        endImportTime: 0,
+                                                                      });
+                                                                      merged34.emoji = "\u{1F310}";
+                                                                      merged34.name = "READY Supplemental";
+                                                                      merged[33] = merged34;
+                                                                      if (typeof tmp === "function") {
+                                                                        const merged35 = Object.assign({
+                                                                          start_: 0,
+                                                                          startNumImports: 0,
+                                                                          startImportTime: 0,
+                                                                          end_: 0,
+                                                                          endNumImports: 0,
+                                                                          endImportTime: 0,
+                                                                        });
+                                                                        merged35.emoji = "\u{1F310}";
+                                                                        merged35.name = "Hydrate READY Supplemental";
+                                                                        merged[34] = merged35;
+                                                                        if (typeof tmp === "function") {
+                                                                          const merged36 = Object.assign({
+                                                                            start_: 0,
+                                                                            startNumImports: 0,
+                                                                            startImportTime: 0,
+                                                                            end_: 0,
+                                                                            endNumImports: 0,
+                                                                            endImportTime: 0,
+                                                                          });
+                                                                          merged36.emoji = "\u{1F310}";
+                                                                          merged36.name = "Dispatch READY Supplemental";
+                                                                          merged[35] = merged36;
+                                                                          if (typeof tmp === "function") {
+                                                                            const merged37 = Object.assign({
+                                                                              start_: 0,
+                                                                              startNumImports: 0,
+                                                                              startImportTime: 0,
+                                                                              end_: 0,
+                                                                              endNumImports: 0,
+                                                                              endImportTime: 0,
+                                                                            });
+                                                                            merged37.emoji = "\u{1F310}";
+                                                                            merged37.name = "Fetch messages";
+                                                                            merged[36] = merged37;
+                                                                            if (typeof tmp === "function") {
+                                                                              const merged38 = Object.assign({
+                                                                                start_: 0,
+                                                                                startNumImports: 0,
+                                                                                startImportTime: 0,
+                                                                                end_: 0,
+                                                                                endNumImports: 0,
+                                                                                endImportTime: 0,
+                                                                              });
+                                                                              merged38.emoji = "\u{1F310}";
+                                                                              merged38.name = "Dispatch messages";
+                                                                              merged[37] = merged38;
+                                                                              if (
+                                                                                typeof TTIImportEvent === "function"
+                                                                              ) {
+                                                                                const obj = {
+                                                                                  polyfillsEnd: Object.assign({
+                                                                                    time_: 0,
+                                                                                  }),
+                                                                                  sentryEnd: null,
+                                                                                  appStateChangeStart: null,
+                                                                                  appStateChangeEnd: null,
+                                                                                  loadMiniCacheStart: null,
+                                                                                  loadStorageStart: null,
+                                                                                  loadStorageEnd: null,
+                                                                                };
+                                                                                if (typeof tmp79 === "function") {
+                                                                                  obj.sentryEnd = Object.assign({
+                                                                                    time_: 0,
+                                                                                  });
+                                                                                  if (typeof tmp79 === "function") {
+                                                                                    obj.appStateChangeStart =
+                                                                                      Object.assign({ time_: 0 });
+                                                                                    if (typeof tmp79 === "function") {
+                                                                                      obj.appStateChangeEnd =
+                                                                                        Object.assign({ time_: 0 });
+                                                                                      if (typeof tmp79 === "function") {
+                                                                                        obj.loadMiniCacheStart =
+                                                                                          Object.assign({ time_: 0 });
+                                                                                        if (
+                                                                                          typeof tmp79 === "function"
+                                                                                        ) {
+                                                                                          obj.loadStorageStart =
+                                                                                            Object.assign({ time_: 0 });
+                                                                                          if (
+                                                                                            typeof tmp79 === "function"
+                                                                                          ) {
+                                                                                            obj.loadStorageEnd =
+                                                                                              Object.assign({
+                                                                                                time_: 0,
+                                                                                              });
+                                                                                            merged[38] = obj;
+                                                                                            return merged;
+                                                                                          } else {
+                                                                                            throw new TypeError(
+                                                                                              "Trying to call a non-function",
+                                                                                            );
+                                                                                          }
+                                                                                        } else {
+                                                                                          throw new TypeError(
+                                                                                            "Trying to call a non-function",
+                                                                                          );
+                                                                                        }
+                                                                                      } else {
+                                                                                        throw new TypeError(
+                                                                                          "Trying to call a non-function",
+                                                                                        );
+                                                                                      }
+                                                                                    } else {
+                                                                                      throw new TypeError(
+                                                                                        "Trying to call a non-function",
+                                                                                      );
+                                                                                    }
+                                                                                  } else {
+                                                                                    throw new TypeError(
+                                                                                      "Trying to call a non-function",
+                                                                                    );
+                                                                                  }
+                                                                                } else {
+                                                                                  throw new TypeError(
+                                                                                    "Trying to call a non-function",
+                                                                                  );
+                                                                                }
+                                                                              } else {
+                                                                                throw new TypeError(
+                                                                                  "Trying to call a non-function",
+                                                                                );
+                                                                              }
+                                                                            } else {
+                                                                              throw new TypeError(
+                                                                                "Trying to call a non-function",
+                                                                              );
+                                                                            }
+                                                                          } else {
+                                                                            throw new TypeError(
+                                                                              "Trying to call a non-function",
+                                                                            );
+                                                                          }
+                                                                        } else {
+                                                                          throw new TypeError(
+                                                                            "Trying to call a non-function",
+                                                                          );
+                                                                        }
+                                                                      } else {
+                                                                        throw new TypeError(
+                                                                          "Trying to call a non-function",
+                                                                        );
+                                                                      }
+                                                                    } else {
+                                                                      throw new TypeError(
+                                                                        "Trying to call a non-function",
+                                                                      );
+                                                                    }
+                                                                  } else {
+                                                                    throw new TypeError(
+                                                                      "Trying to call a non-function",
+                                                                    );
+                                                                  }
+                                                                } else {
+                                                                  throw new TypeError("Trying to call a non-function");
+                                                                }
+                                                              } else {
+                                                                throw new TypeError("Trying to call a non-function");
+                                                              }
+                                                            } else {
+                                                              throw new TypeError("Trying to call a non-function");
+                                                            }
+                                                          } else {
+                                                            throw new TypeError("Trying to call a non-function");
+                                                          }
+                                                        } else {
+                                                          throw new TypeError("Trying to call a non-function");
+                                                        }
+                                                      } else {
+                                                        throw new TypeError("Trying to call a non-function");
+                                                      }
+                                                    } else {
+                                                      throw new TypeError("Trying to call a non-function");
+                                                    }
+                                                  } else {
+                                                    throw new TypeError("Trying to call a non-function");
+                                                  }
+                                                } else {
+                                                  throw new TypeError("Trying to call a non-function");
+                                                }
+                                              } else {
+                                                throw new TypeError("Trying to call a non-function");
+                                              }
+                                            } else {
+                                              throw new TypeError("Trying to call a non-function");
+                                            }
+                                          } else {
+                                            throw new TypeError("Trying to call a non-function");
+                                          }
+                                        } else {
+                                          throw new TypeError("Trying to call a non-function");
+                                        }
+                                      } else {
+                                        throw new TypeError("Trying to call a non-function");
+                                      }
+                                    } else {
+                                      throw new TypeError("Trying to call a non-function");
+                                    }
+                                  } else {
+                                    throw new TypeError("Trying to call a non-function");
+                                  }
+                                } else {
+                                  throw new TypeError("Trying to call a non-function");
+                                }
+                              } else {
+                                throw new TypeError("Trying to call a non-function");
+                              }
+                            } else {
+                              throw new TypeError("Trying to call a non-function");
+                            }
+                          } else {
+                            throw new TypeError("Trying to call a non-function");
+                          }
+                        } else {
+                          throw new TypeError("Trying to call a non-function");
+                        }
+                      } else {
+                        throw new TypeError("Trying to call a non-function");
+                      }
+                    } else {
+                      throw new TypeError("Trying to call a non-function");
+                    }
+                  } else {
+                    throw new TypeError("Trying to call a non-function");
+                  }
+                } else {
+                  throw new TypeError("Trying to call a non-function");
+                }
+              } else {
+                throw new TypeError("Trying to call a non-function");
+              }
+            } else {
+              throw new TypeError("Trying to call a non-function");
+            }
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+        } else {
+          throw new TypeError("Trying to call a non-function");
+        }
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  let obj = Object.create(new.target.prototype);
-  obj = Object.create(tmp.prototype);
-  obj.emoji = "\u2757";
-  obj.name = "Load index.tsx";
-  obj[0] = obj;
-  if (typeof tmp !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  obj1 = Object.create(tmp.prototype);
-  obj1.emoji = "\u{1F4BE}";
-  obj1.name = "Load fast_connect native module";
-  obj[1] = obj1;
-  if (typeof tmp !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const obj2 = Object.create(tmp.prototype);
-  obj2.emoji = "\u{1F310}";
-  obj2.name = "Fast Connect IDENTIFY";
-  obj[2] = obj2;
-  if (typeof tmp !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const obj3 = Object.create(tmp.prototype);
-  obj3.emoji = "\u{1F3C3}";
-  obj3.name = "Load Imports";
-  obj[3] = obj3;
-  if (typeof tmp !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const obj4 = Object.create(tmp.prototype);
-  obj4.emoji = "\u{1F3C3}";
-  obj4.name = "Initial Initialization";
-  obj[4] = obj4;
-  if (typeof tmp !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const obj5 = Object.create(tmp.prototype);
-  obj5.emoji = "\u{1F4BE}";
-  obj5.name = "Load Storage";
-  obj[5] = obj5;
-  if (typeof tmp !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const obj6 = Object.create(tmp.prototype);
-  obj6.emoji = "\u{1F4BE}";
-  obj6.name = "Parse Storage";
-  obj[6] = obj6;
-  if (typeof tmp !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const obj7 = Object.create(tmp.prototype);
-  obj7.emoji = "\u{1F4BE}";
-  obj7.name = "Load Mini Cache";
-  obj[7] = obj7;
-  if (typeof tmp !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const obj8 = Object.create(tmp.prototype);
-  obj8.emoji = "\u{1F4BE}";
-  obj8.name = "Fetch Guild Cache";
-  obj[8] = obj8;
-  if (typeof tmp !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const obj9 = Object.create(tmp.prototype);
-  obj9.emoji = "\u{1F4BE}";
-  obj9.name = "Fetch Initial Guild Channels Cache";
-  obj[9] = obj9;
-  if (typeof tmp !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const obj10 = Object.create(tmp.prototype);
-  obj10.emoji = "\u{1F4BE}";
-  obj10.name = "Load Cached Messages";
-  obj[10] = obj10;
-  if (typeof TTIEvent !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const obj11 = Object.create(TTIEvent.prototype);
-  obj11.emoji = "\u{1F3A8}";
-  obj11.name = "First React Render";
-  obj11.onlyOnce = false;
-  obj11.alwaysRecord = false;
-  obj[11] = obj11;
-  if (typeof TTIEvent !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const obj12 = Object.create(TTIEvent.prototype);
-  obj12.emoji = "\u{1F3A8}";
-  obj12.name = "First React Render useEffect";
-  obj12.onlyOnce = false;
-  obj12.alwaysRecord = false;
-  obj[12] = obj12;
-  if (typeof TTIEvent !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const obj13 = Object.create(TTIEvent.prototype);
-  obj13.emoji = "\u{1F3A8}";
-  obj13.name = "First Contentful Paint";
-  obj13.onlyOnce = false;
-  obj13.alwaysRecord = true;
-  obj[13] = obj13;
-  if (typeof TTIEvent !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const obj14 = Object.create(TTIEvent.prototype);
-  obj14.emoji = "\u{1F3A8}";
-  obj14.name = "React Render Messages";
-  obj14.onlyOnce = true;
-  obj14.alwaysRecord = false;
-  obj[14] = obj14;
-  if (typeof TTIEvent !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const obj15 = Object.create(TTIEvent.prototype);
-  obj15.emoji = "\u{1F3A8}";
-  obj15.name = "React Render Cached Messages";
-  obj15.onlyOnce = true;
-  obj15.alwaysRecord = false;
-  obj[15] = obj15;
-  if (typeof tmp !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const obj16 = Object.create(tmp.prototype);
-  obj16.emoji = "\u{1F3A8}";
-  obj16.name = "RowGenerator.generate()";
-  obj[16] = obj16;
-  if (typeof TTIEvent !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const obj17 = Object.create(TTIEvent.prototype);
-  obj17.emoji = "\u{1F5A5}\uFE0F";
-  obj17.name = "Display Cached Messages";
-  obj17.onlyOnce = false;
-  obj17.alwaysRecord = true;
-  obj[17] = obj17;
-  if (typeof TTIEvent !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const obj18 = Object.create(TTIEvent.prototype);
-  obj18.emoji = "\u{1F3A8}";
-  obj18.name = "First Render after Ready Payload";
-  obj18.onlyOnce = true;
-  obj18.alwaysRecord = false;
-  obj[18] = obj18;
-  if (typeof TTIEvent !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const obj19 = Object.create(TTIEvent.prototype);
-  obj19.emoji = "\u{1F3A8}";
-  obj19.name = "React Render Latest Messages";
-  obj19.onlyOnce = false;
-  obj19.alwaysRecord = false;
-  obj[19] = obj19;
-  if (typeof TTIEvent !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const obj20 = Object.create(TTIEvent.prototype);
-  obj20.emoji = "\u{1F5A5}\uFE0F";
-  obj20.name = "Display Latest Messages";
-  obj20.onlyOnce = false;
-  obj20.alwaysRecord = false;
-  obj[20] = obj20;
-  if (typeof tmp !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const obj21 = Object.create(tmp.prototype);
-  obj21.emoji = "\u{1F310}";
-  obj21.name = "Initial Guild";
-  obj[21] = obj21;
-  if (typeof tmp !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const obj22 = Object.create(tmp.prototype);
-  obj22.emoji = "\u{1F4BE}";
-  obj22.name = "Load Lazy Cache";
-  obj[22] = obj22;
-  if (typeof tmp !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const obj23 = Object.create(tmp.prototype);
-  obj23.emoji = "\u{1F4BE}";
-  obj23.name = "Fetch Lazy Cache";
-  obj[23] = obj23;
-  if (typeof tmp !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const obj24 = Object.create(tmp.prototype);
-  obj24.emoji = "\u{1F4BE}";
-  obj24.name = "Parse Lazy Cache";
-  obj[24] = obj24;
-  if (typeof tmp !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const obj25 = Object.create(tmp.prototype);
-  obj25.emoji = "\u{1F4BE}";
-  obj25.name = "Fetch Stale Channels";
-  obj[25] = obj25;
-  if (typeof tmp !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const obj26 = Object.create(tmp.prototype);
-  obj26.emoji = "\u{1F4BE}";
-  obj26.name = "Deserialize Cache";
-  obj[26] = obj26;
-  if (typeof tmp !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const obj27 = Object.create(tmp.prototype);
-  obj27.emoji = "\u{1F4BE}";
-  obj27.name = "Dispatch Lazy Cache";
-  obj[27] = obj27;
-  if (typeof tmp !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const obj28 = Object.create(tmp.prototype);
-  obj28.emoji = "\u{1F310}";
-  obj28.name = "Parse READY";
-  obj[28] = obj28;
-  if (typeof tmp !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const obj29 = Object.create(tmp.prototype);
-  obj29.emoji = "\u{1F310}";
-  obj29.name = "READY";
-  obj[29] = obj29;
-  if (typeof tmp !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const obj30 = Object.create(tmp.prototype);
-  obj30.emoji = "\u{1F310}";
-  obj30.name = "Hydrate READY";
-  obj[30] = obj30;
-  if (typeof tmp !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const obj31 = Object.create(tmp.prototype);
-  obj31.emoji = "\u{1F310}";
-  obj31.name = "Dispatch READY";
-  obj[31] = obj31;
-  if (typeof tmp !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const obj32 = Object.create(tmp.prototype);
-  obj32.emoji = "\u{1F310}";
-  obj32.name = "Parse READY Supplemental";
-  obj[32] = obj32;
-  if (typeof tmp !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const obj33 = Object.create(tmp.prototype);
-  obj33.emoji = "\u{1F310}";
-  obj33.name = "READY Supplemental";
-  obj[33] = obj33;
-  if (typeof tmp !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const obj34 = Object.create(tmp.prototype);
-  obj34.emoji = "\u{1F310}";
-  obj34.name = "Hydrate READY Supplemental";
-  obj[34] = obj34;
-  if (typeof tmp !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const obj35 = Object.create(tmp.prototype);
-  obj35.emoji = "\u{1F310}";
-  obj35.name = "Dispatch READY Supplemental";
-  obj[35] = obj35;
-  if (typeof tmp !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const obj36 = Object.create(tmp.prototype);
-  obj36.emoji = "\u{1F310}";
-  obj36.name = "Fetch messages";
-  obj[36] = obj36;
-  if (typeof tmp !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const obj37 = Object.create(tmp.prototype);
-  obj37.emoji = "\u{1F310}";
-  obj37.name = "Dispatch messages";
-  obj[37] = obj37;
-  if (typeof TTIImportEvent !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  obj = {
-    polyfillsEnd: Object.create(tmp42.prototype),
-    sentryEnd: null,
-    appStateChangeStart: null,
-    appStateChangeEnd: null,
-    loadMiniCacheStart: null,
-    loadStorageStart: null,
-    loadStorageEnd: null,
-  };
-  if (typeof TTIImportEvent !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  obj[1] = Object.create(TTIImportEvent.prototype);
-  if (typeof TTIImportEvent !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  obj[2] = Object.create(TTIImportEvent.prototype);
-  if (typeof TTIImportEvent !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  obj[3] = Object.create(TTIImportEvent.prototype);
-  if (typeof TTIImportEvent !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  obj[4] = Object.create(TTIImportEvent.prototype);
-  if (typeof TTIImportEvent !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  obj[5] = Object.create(TTIImportEvent.prototype);
-  if (typeof TTIImportEvent !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  obj[6] = Object.create(TTIImportEvent.prototype);
-  obj[38] = obj;
-  return obj;
 }.prototype;
 class TTITracker extends prototype4 {
   constructor() {
@@ -632,7 +969,7 @@ const prototype5 = TTITracker.prototype;
 prototype5["setTTICallback"] = function setTTICallback(arg0) {
   closure_0 = arg0;
   loggerCallback = function loggerCallback() {
-    if (true === callback()) {
+    if (true === closure_0()) {
       loggerCallback = function loggerCallback() {
         return false;
       };
@@ -655,11 +992,11 @@ prototype5["setInterstitial"] = function setInterstitial(ChannelSpoiler) {
   this.interstitial = ChannelSpoiler;
   loggerCallback();
 };
-prototype5["addLocalMessages"] = function addLocalMessages(basicChannel, length) {
+prototype5["addLocalMessages"] = function addLocalMessages(arg0, length) {
   let size;
   const self = this;
   const cachedChannelCounts = this.cachedChannelCounts;
-  const result = cachedChannelCounts.set(basicChannel, length);
+  const result = cachedChannelCounts.set(arg0, length);
   if (this.cachedChannelCounts.size > 100) {
     do {
       let cachedChannelCounts2 = self.cachedChannelCounts;
@@ -686,27 +1023,26 @@ prototype5["appStateChanged"] = function appStateChanged(state) {
     self.didBackgroundApp = self.didBackgroundApp || "active" !== state;
   }
 };
-prototype5["recordRender"] = function recordRender(length, closure_1_5) {
+prototype5["recordRender"] = function recordRender(length, GatewayConnectionStore) {
   const self = this;
   const renderMessages = this.renderMessages;
   renderMessages.record();
-  let tmp2 = closure_1_5;
-  if (!closure_1_5) {
+  let tmp2 = GatewayConnectionStore;
+  if (!GatewayConnectionStore) {
     tmp2 = length > 0;
   }
   if (tmp2) {
     const renderMessagesWithCache = self.renderMessagesWithCache;
     renderMessagesWithCache.record();
   }
-  if (closure_1_5) {
+  if (GatewayConnectionStore) {
     const renderLatestMessages = self.renderLatestMessages;
     renderLatestMessages.record();
   }
 };
 prototype5["recordMessageRender"] = function recordMessageRender(channelId, mapped, hasFetched, hasMoreAfter) {
-  let self = this;
-  self = this;
-  const _default = DISCORD_EPOCH.default;
+  const self = this;
+  const _default = SnowflakeUtils.default;
   const renderLatestMessages = this.renderLatestMessages;
   if (!renderLatestMessages.hasData()) {
     const renderMessages = self.renderMessages;
@@ -736,16 +1072,16 @@ prototype5["recordMessageRender"] = function recordMessageRender(channelId, mapp
                 (_default.extractTimestamp(sorted1.reverse()[0]) - _default.extractTimestamp(sorted.reverse()[0])) /
                   1000,
               );
-              const length = mapped.filter((arg0) => {
+              const length = mapped.filter((item) => {
                 const cachedMessageIds = self.cachedMessageIds;
                 let hasItem;
                 if (cachedMessageIds != null) {
-                  hasItem = cachedMessageIds.includes(arg0);
+                  hasItem = cachedMessageIds.includes(item);
                 }
                 return hasItem;
               }).length;
               const cachedChannelCounts = self.cachedChannelCounts;
-              let value = cachedChannelCounts.get(channelId);
+              value = cachedChannelCounts.get(channelId);
               if (value == null) {
                 value = null;
               }
@@ -786,20 +1122,72 @@ prototype5["getStartTime"] = function getStartTime(arg0) {
     start = self.loadIndex.start;
   }
 };
-prototype5["processNativeLogs"] = function processNativeLogs(nativeLogs, closure_2) {
+prototype5["processNativeLogs"] = function processNativeLogs(nativeLogs, arg1) {
   const self = this;
-  const startTime = this.getStartTime(closure_2);
+  const startTime = this.getStartTime(arg1);
   const iter = nativeLogs[Symbol.iterator]();
-  iter.next();
+  const nextResult = iter.next();
   while (iter !== undefined) {
-    if (null != self.extraProperties.time_first_native_message_render_end) {
-      continue;
-    } else {
-      let tmp3 = serialize;
-      self.extraProperties.time_first_native_message_render_end = serialize(startTime, undefined.timestamp);
-      continue;
+    let tmp3 = nextResult;
+    switch (nextResult.label) {
+      case "Finish MainApplication.initialize()":
+        self.extraProperties.time_main_application_initialize_end = serialize(startTime, tmp3.timestamp);
+        continue;
+        break;
+      case "GET_REACT_INSTANCE_MANAGER_START":
+        self.extraProperties.time_get_react_instance_manager_start = serialize(startTime, tmp3.timestamp);
+        break;
+      case "GET_REACT_INSTANCE_MANAGER_END":
+        self.extraProperties.time_get_react_instance_manager_end = serialize(startTime, tmp3.timestamp);
+        break;
+      case "PROCESS_PACKAGES_START":
+        self.extraProperties.time_process_packages_start = serialize(startTime, tmp3.timestamp);
+        break;
+      case "PROCESS_PACKAGES_END":
+        self.extraProperties.time_process_packages_end = serialize(startTime, tmp3.timestamp);
+        break;
+      case "CREATE_CATALYST_INSTANCE_START":
+        self.extraProperties.time_create_catalyst_instance_start = serialize(startTime, tmp3.timestamp);
+        break;
+      case "CREATE_CATALYST_INSTANCE_END":
+        self.extraProperties.time_create_catalyst_instance_end = serialize(startTime, tmp3.timestamp);
+        break;
+      case "CREATE_UI_MANAGER_MODULE_START":
+        self.extraProperties.time_create_ui_manager_module_start = serialize(startTime, tmp3.timestamp);
+        break;
+      case "CREATE_UI_MANAGER_MODULE_END":
+        self.extraProperties.time_create_ui_manager_module_end = serialize(startTime, tmp3.timestamp);
+        break;
+      case "REACT_BRIDGE_LOADING_START":
+        self.extraProperties.time_react_bridge_loading_start = serialize(startTime, tmp3.timestamp);
+        break;
+      case "REACT_BRIDGE_LOADING_END":
+        self.extraProperties.time_react_bridge_loading_end = serialize(startTime, tmp3.timestamp);
+        break;
+      case "CacheStorage Init Start":
+        self.extraProperties.time_init_native_storage_start = serialize(startTime, tmp3.timestamp);
+        break;
+      case "CacheStorage Init End":
+        self.extraProperties.time_init_native_storage_end = serialize(startTime, tmp3.timestamp);
+        break;
+      case "RUN_JS_BUNDLE_START":
+        self.extraProperties.time_before_js_bundle_start = serialize(startTime, tmp3.timestamp);
+        break;
+      case "ChatModule.updateRows() Start":
+        if (null != self.extraProperties.time_first_native_message_render_start) {
+          continue;
+        } else {
+          self.extraProperties.time_first_native_message_render_start = serialize(startTime, tmp3.timestamp);
+        }
+        break;
+      case "ChatModule.updateRows() Finish":
+        if (null != self.extraProperties.time_first_native_message_render_end) {
+          continue;
+        } else {
+          self.extraProperties.time_first_native_message_render_end = serialize(startTime, tmp3.timestamp);
+        }
+        break;
     }
-    continue;
   }
 };
 prototype5["serializeAppStartupMetrics"] = function serializeAppStartupMetrics() {
@@ -815,11 +1203,10 @@ prototype5["serializeWebPerfStartupMetrics"] = function serializeWebPerfStartupM
   obj.time_first_render_after_ready_end = firstRenderAfterReadyPayload.serialize(arg0);
   return obj;
 };
-prototype5["serializeTTITracker"] = function serializeTTITracker(c3) {
+prototype5["serializeTTITracker"] = function serializeTTITracker(arg0) {
   const self = this;
-  const startTime = this.getStartTime(c3);
-  const tmp2 = apply;
-  const found = apply(isTracingDefault.logGroups[0].logs).filter((log) => {
+  const startTime = this.getStartTime(arg0);
+  const found = _mod12(AppStartPerformanceDefault.logGroups[0].logs).filter((log) => {
     log = log.log;
     return log.startsWith("Require ");
   });
@@ -830,7 +1217,7 @@ prototype5["serializeTTITracker"] = function serializeTTITracker(c3) {
     }
     return num;
   });
-  const tmp2Result = apply(isTracingDefault.logGroups[0].logs);
+  const tmp2Result = _mod12(AppStartPerformanceDefault.logGroups[0].logs);
   const result = this.serializeAppStartupMetrics();
   const obj = {};
   const merged = Object.assign(this.extraProperties);
@@ -1100,6 +1487,7 @@ prototype5["serializeTTITracker"] = function serializeTTITracker(c3) {
   return obj;
 };
 const tTITracker = new TTITracker();
-let result = require("set").fileFinishedImporting("modules/tti_analytics/TTITracker.tsx");
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/tti_analytics/TTITracker.tsx");
 
 export default tTITracker;

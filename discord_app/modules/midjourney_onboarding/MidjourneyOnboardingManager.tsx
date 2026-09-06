@@ -1,11 +1,10 @@
 // discord_app/modules/midjourney_onboarding/MidjourneyOnboardingManager.tsx
-import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import { MIDJOURNEY_GUILD_ID } from "MidjourneyOnboardingConstants.tsx";
-import { Routes } from "../../Constants.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
-const require = arg1;
-initializeDefault;
+const require = fn;
+const MIDJOURNEY_GUILD_ID = fn(13860).MIDJOURNEY_GUILD_ID;
+const Routes = fn(1074).Routes;
 class MidjourneyOnboardingManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -15,16 +14,15 @@ class MidjourneyOnboardingManager extends tmp2 {
 }
 MidjourneyOnboardingManager.prototype["handleChannelCreate"] = function handleChannelCreate(channel) {
   channel = channel.channel;
-  return callback(function* () {
+  return (async (arg0, value) => {
     if (dependencyMap === 2) {
       dependencyMap = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp4 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
@@ -32,39 +30,35 @@ MidjourneyOnboardingManager.prototype["handleChannelCreate"] = function handleCh
     } else {
       try {
         dependencyMap = 2;
-        if (0 === v0) {
+        if (0 === v1) {
           if (arg0 === 1) {
             dependencyMap = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             dependencyMap = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
-            const id = tmp2;
-            if (obj6.isEligibleForMidjourneyRedirect(closure_1_0)) {
-              v0 = 1;
+            if (obj6.isEligibleForMidjourneyRedirect(channel)) {
+              v1 = 1;
               dependencyMap = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = tmp22(13859).hasRedirectedToGuild(closure_1_4);
+              const obj1 = { value: tmp21(13859).hasRedirectedToGuild(MIDJOURNEY_GUILD_ID), done: false };
               return obj1;
             } else {
               dependencyMap = 3;
             }
-            obj6 = closure_1_0(13859);
-            tmp22 = closure_1_0;
+            obj6 = tmp2(13859);
+            tmp21 = tmp2;
           }
         } else if (arg0 === 1) {
           dependencyMap = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 !== 2) {
-          v0(7244)(closure_1_5.CHANNEL(null, id.id));
-          const tmp9 = v0(7244);
+          v1(7244)(Routes.CHANNEL(null, closure_128_0.id));
+          const tmp9 = v1(7244);
         }
         dependencyMap = 3;
-        obj = { value: null, done: true };
-        obj[0] = arg1;
+        obj = { value, done: true };
         return obj;
       } catch (tmp16) {
         dependencyMap = tmp;
@@ -74,6 +68,7 @@ MidjourneyOnboardingManager.prototype["handleChannelCreate"] = function handleCh
   })();
 };
 const midjourneyOnboardingManager = new MidjourneyOnboardingManager();
-const result = require("set").fileFinishedImporting("modules/midjourney_onboarding/MidjourneyOnboardingManager.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/midjourney_onboarding/MidjourneyOnboardingManager.tsx");
 
 export default midjourneyOnboardingManager;

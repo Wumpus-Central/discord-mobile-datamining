@@ -1,17 +1,17 @@
 // discord_app/design/components/TableRow/native/TableRowIcon.native.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import IconSizes from "../../../void/Icon/native/Icon.tsx";
-import IconSizesDefault from "../../../void/Icon/native/Icon.tsx";
-import closure_4 from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Icon from "../../../void/Icon/native/Icon.tsx";
+import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+const IconDefault = Icon;
+
+require = fn;
 let closure_3 = ["color"];
-noopAll;
-createCacheKey = {
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = {
   container: null,
   default: null,
   statusOnline: null,
@@ -24,111 +24,119 @@ createCacheKey = {
   secondary: null,
   translucent: null,
 };
-createCacheKey = {
-  width: ThemesDefault.modules.mobile.TABLE_ROW_ICON_SIZE,
-  height: ThemesDefault.modules.mobile.TABLE_ROW_ICON_SIZE,
+let size = {
+  width: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE,
+  height: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE,
   justifyContent: "center",
   alignItems: "center",
-  borderRadius: ThemesDefault.radii.lg,
+  borderRadius: nativeDefault.radii.lg,
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { color: ThemesDefault.colors.TABLEROW_ICON_COLOR_DEFAULT };
-const obj1 = { color: ThemesDefault.colors.TABLEROW_ICON_COLOR_DEFAULT };
-createCacheKey[2] = { color: ThemesDefault.colors.TEXT_STATUS_ONLINE };
-const obj2 = { color: ThemesDefault.colors.TEXT_STATUS_ONLINE };
-createCacheKey[3] = { color: ThemesDefault.colors.TEXT_STATUS_IDLE };
-const obj3 = { color: ThemesDefault.colors.TEXT_STATUS_IDLE };
-createCacheKey[4] = { color: ThemesDefault.colors.TEXT_STATUS_DND };
-const obj4 = { color: ThemesDefault.colors.TEXT_STATUS_DND };
-createCacheKey[5] = { color: ThemesDefault.colors.TEXT_STATUS_OFFLINE };
-const obj5 = { color: ThemesDefault.colors.TEXT_STATUS_OFFLINE };
-createCacheKey[6] = {
-  backgroundColor: ThemesDefault.unsafe_rawColors.PLATFORM_XBOX,
-  color: ThemesDefault.colors.WHITE,
+createStyles.container = size;
+createStyles = { color: nativeDefault.colors.TABLEROW_ICON_COLOR_DEFAULT };
+createStyles.default = createStyles;
+createStyles.statusOnline = { color: nativeDefault.colors.TEXT_STATUS_ONLINE };
+const obj1 = { color: nativeDefault.colors.TEXT_STATUS_ONLINE };
+createStyles.statusIdle = { color: nativeDefault.colors.TEXT_STATUS_IDLE };
+const obj2 = { color: nativeDefault.colors.TEXT_STATUS_IDLE };
+createStyles.statusDND = { color: nativeDefault.colors.TEXT_STATUS_DND };
+const obj3 = { color: nativeDefault.colors.TEXT_STATUS_DND };
+createStyles.statusOffline = { color: nativeDefault.colors.TEXT_STATUS_OFFLINE };
+const obj4 = { color: nativeDefault.colors.TEXT_STATUS_OFFLINE };
+createStyles.xbox = {
+  backgroundColor: nativeDefault.unsafe_rawColors.PLATFORM_XBOX,
+  color: nativeDefault.colors.WHITE,
 };
-const obj6 = { backgroundColor: ThemesDefault.unsafe_rawColors.PLATFORM_XBOX, color: ThemesDefault.colors.WHITE };
-createCacheKey[7] = {
-  backgroundColor: ThemesDefault.unsafe_rawColors.PLATFORM_PLAYSTATION,
-  color: ThemesDefault.colors.WHITE,
+const obj5 = { backgroundColor: nativeDefault.unsafe_rawColors.PLATFORM_XBOX, color: nativeDefault.colors.WHITE };
+createStyles.playstation = {
+  backgroundColor: nativeDefault.unsafe_rawColors.PLATFORM_PLAYSTATION,
+  color: nativeDefault.colors.WHITE,
 };
-const obj7 = {
-  backgroundColor: ThemesDefault.unsafe_rawColors.PLATFORM_PLAYSTATION,
-  color: ThemesDefault.colors.WHITE,
+const obj6 = {
+  backgroundColor: nativeDefault.unsafe_rawColors.PLATFORM_PLAYSTATION,
+  color: nativeDefault.colors.WHITE,
 };
-createCacheKey[8] = { color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL };
-const obj8 = { color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL };
-createCacheKey[9] = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-const obj9 = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-createCacheKey[10] = { color: ThemesDefault.colors.WHITE };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const obj10 = { color: ThemesDefault.colors.WHITE };
-const result = require("set").fileFinishedImporting("design/components/TableRow/native/TableRowIcon.native.tsx");
+createStyles.danger = { color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
+const obj7 = { color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
+createStyles.secondary = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+const obj8 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+createStyles.translucent = { color: nativeDefault.colors.WHITE };
+let closure_7 = createStyles.createStyles(createStyles);
+size = fn(2);
+const result = size.fileFinishedImporting("design/components/TableRow/native/TableRowIcon.native.tsx");
 
 export const TableRowIcon = function TableRowIcon(arg0) {
   ({ source, IconComponent, variant } = arg0);
   if (variant === undefined) {
     variant = "default";
   }
-  const translucent = tmp.translucent;
-  while (true) {
-    let color = translucent.color;
-    let tmp2 = callback;
-    let tmp3 = closure_3;
-    let str = "default";
-    let tmp4 = callback(translucent, closure_3);
-    if ("default" === variant) {
-      let tmp7 = require;
-      let tmp8 = dependencyMap;
-      let REFRESH_SMALL_16 = IconSizes.IconSizes.MEDIUM;
-      let tmp6 = dependencyMap;
-    } else {
-      let tmp5 = require;
-      tmp6 = dependencyMap;
-      REFRESH_SMALL_16 = IconSizes.IconSizes.REFRESH_SMALL_16;
-    }
-    let str2 = "md";
-    let str3 = "md";
-    if ("default" !== variant) {
-      let str4 = "danger";
-      str3 = "md";
-      if ("danger" !== variant) {
-        let str5 = "secondary";
+  const tmp = closure_7();
+  switch (variant) {
+    case "default":
+      let translucent = tmp.default;
+      const color = translucent.color;
+      if ("default" === variant) {
+        let REFRESH_SMALL_16 = Icon.IconSizes.MEDIUM;
+      } else {
+        REFRESH_SMALL_16 = Icon.IconSizes.REFRESH_SMALL_16;
+      }
+      let str3 = "md";
+      if ("default" !== variant) {
         str3 = "md";
-        if ("secondary" !== variant) {
-          let str6 = "translucent";
+        if ("danger" !== variant) {
           str3 = "md";
-          if ("translucent" !== variant) {
-            str3 = "sm";
+          if ("secondary" !== variant) {
+            str3 = "md";
+            if ("translucent" !== variant) {
+              str3 = "sm";
+            }
           }
         }
       }
-    }
-    let tmp9 = null;
-    if (null == source) {
-      let tmp10 = null;
-      if (null == IconComponent) {
-        return null;
+      if (null == source) {
+        if (null == IconComponent) {
+          return null;
+        }
       }
-    }
-    let tmp11 = jsx;
-    let obj = { style: null, children: null };
-    let items = [tmp.container, tmp4];
-    obj[0] = items;
-    let tmp12 = View;
-    if (null != IconComponent) {
-      obj = { size: null, color: null };
-      obj[0] = str3;
-      obj[1] = color;
-      let tmp11Result = tmp11(IconComponent, obj);
-    } else {
-      let tmp13 = importDefault;
-      obj = { color: null, source: null, size: null };
-      obj[0] = color;
-      obj[1] = source;
-      obj[2] = REFRESH_SMALL_16;
-      tmp11Result = tmp11(IconSizesDefault, obj);
-    }
-    obj[1] = tmp11Result;
-    tmp11Result = tmp11(tmp12, obj);
+      let obj = { style: null, children: null };
+      const items = [tmp.container, _objectWithoutProperties(translucent, closure_3)];
+      obj.style = items;
+      if (null != IconComponent) {
+        obj = { size: str3, color };
+        let tmp11Result = tmp11(IconComponent, obj);
+      } else {
+        obj = { color, source, size: REFRESH_SMALL_16 };
+        tmp11Result = tmp11(IconDefault, obj);
+      }
+      obj.children = tmp11Result;
+      tmp11Result = tmp11(View, obj);
+      const tmp4 = _objectWithoutProperties(translucent, closure_3);
+      break;
+    case "text-status-online":
+      translucent = tmp.statusOnline;
+      break;
+    case "text-status-idle":
+      translucent = tmp.statusIdle;
+      break;
+    case "text-status-dnd":
+      translucent = tmp.statusDND;
+      break;
+    case "text-status-offline":
+      translucent = tmp.statusOffline;
+      break;
+    case "xbox":
+      translucent = tmp.xbox;
+      break;
+    case "playstation":
+      translucent = tmp.playstation;
+      break;
+    case "danger":
+      translucent = tmp.danger;
+      break;
+    case "secondary":
+      translucent = tmp.secondary;
+      break;
+    case "translucent":
+      translucent = tmp.translucent;
+      break;
   }
 };

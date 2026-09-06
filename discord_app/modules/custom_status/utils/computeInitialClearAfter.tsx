@@ -1,14 +1,15 @@
 // discord_app/modules/custom_status/utils/computeInitialClearAfter.tsx
-import set from "../../../../_runtime/00002_set.js";
-import StatusTypes from "../Constants.tsx";
+import UserSettings from "../../user_settings/UserSettings.tsx";
+import Constants from "../Constants.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const ClearAfterValues = StatusTypes.ClearAfterValues;
+const ClearAfterValues = Constants.ClearAfterValues;
 const items = [, ,];
 ({ MINUTES_30: arr[0], HOURS_1: arr[1], HOURS_4: arr[2] } = ClearAfterValues);
-const result = set.fileFinishedImporting("modules/custom_status/utils/computeInitialClearAfter.tsx");
+const result = size.fileFinishedImporting("modules/custom_status/utils/computeInitialClearAfter.tsx");
 
 export default function computeInitialClearAfter() {
-  const CustomStatusSetting = require("../../user_settings/UserSettings.tsx").CustomStatusSetting;
+  const CustomStatusSetting = UserSettings.CustomStatusSetting;
   const setting = CustomStatusSetting.getSetting();
   if (null != setting) {
     if ("" !== setting.expiresAtMs) {
@@ -37,8 +38,8 @@ export default function computeInitialClearAfter() {
         if (tmp3) {
           const _Number = Number;
           const _Date = Date;
-          _require = Number(NumberResult) - Date.now();
-          let TODAY = items.find((arg0) => closure_0 <= arg0);
+          closure_0 = Number(NumberResult) - Date.now();
+          let TODAY = items.find((item) => closure_0 <= item);
           if (TODAY == null) {
             TODAY = ClearAfterValues.TODAY;
           }

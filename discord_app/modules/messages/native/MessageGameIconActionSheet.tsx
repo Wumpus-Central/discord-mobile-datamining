@@ -1,49 +1,46 @@
 // discord_app/modules/messages/native/MessageGameIconActionSheet.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import combinedDefault from "../../../utils/HelpdeskUtils.tsx";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_4 from "../../applications/ApplicationStore.tsx";
-import { HelpdeskArticles } from "../../../Constants.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
-import set from "../../../utils/PlatformUtils.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import ApplicationStore from "../../applications/ApplicationStore.tsx";
 
-const require = arg1;
-noopAll;
-({ jsx: closure_6, jsxs: error } = jsxProd);
+const require = fn;
+const View = fn(17).View;
+const HelpdeskArticles = fn(1074).HelpdeskArticles;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+let createStyles = fn(4560);
+const PlatformUtils = fn(1115);
 let num = 0;
-if (set.isAndroid()) {
+if (PlatformUtils.isAndroid()) {
   num = 16;
 }
-createCacheKey = {
+createStyles = {
   contentWrapper: { paddingHorizontal: 24, paddingTop: 8, paddingBottom: num },
   gameDescriptionWrapper: { flexDirection: "column", justifyContent: "flex-start", flex: 1 },
   gameIcon: null,
   gameDescriptionWrapperOuter: null,
   timestamp: null,
 };
-createCacheKey = { width: 56, height: 56, marginRight: 8, borderRadius: ThemesDefault.radii.sm };
-createCacheKey[2] = createCacheKey;
-createCacheKey[3] = { flexDirection: "row" };
-createCacheKey[4] = { marginBottom: 4 };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = set.fileFinishedImporting("modules/messages/native/MessageGameIconActionSheet.tsx");
+let size = { width: 56, height: 56, marginRight: 8, borderRadius: nativeDefault.radii.sm };
+createStyles.gameIcon = size;
+createStyles.gameDescriptionWrapperOuter = { flexDirection: "row" };
+createStyles.timestamp = { marginBottom: 4 };
+let closure_8 = createStyles.createStyles(createStyles);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/native/MessageGameIconActionSheet.tsx");
 
 export default function MessageGameIconActionSheet(applicationId) {
   applicationId = applicationId.applicationId;
-  const tmp = callback();
+  const tmp = closure_8();
   let obj = applicationId(504);
-  const items = [closure_4];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getApplication(applicationId));
+  const items = [ApplicationStore];
+  const stateFromStores = obj.useStateFromStores(items, () => ApplicationStore.getApplication(applicationId));
   let tmp5Result = null;
   if (null != stateFromStores) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.contentWrapper;
-    obj = { style: null, children: null };
-    obj[0] = tmp.gameDescriptionWrapperOuter;
-    obj1 = { style: null, resizeMode: "contain", source: null, disableColor: true };
-    obj1[0] = tmp.gameIcon;
+    obj = { style: tmp.contentWrapper, children: null };
+    obj = { style: tmp.gameDescriptionWrapperOuter, children: null };
+    const obj1 = { style: tmp.gameIcon, resizeMode: "contain", source: null, disableColor: true };
     let str;
     if (stateFromStores != null) {
       str = stateFromStores.getIconURL(56);
@@ -52,34 +49,32 @@ export default function MessageGameIconActionSheet(applicationId) {
       str = "";
     }
     const obj2 = { startExpanded: true, children: null };
-    const obj3 = { uri: null };
-    obj3[0] = str;
-    obj1[2] = obj3;
+    const obj3 = { uri: str };
+    obj1.source = obj3;
     const items1 = [closure_6(tmp2(1178).Icon, obj1)];
-    const obj4 = { style: null, children: null };
-    obj4[0] = tmp.gameDescriptionWrapper;
-    const obj5 = { style: null, variant: "text-xs/medium", color: "text-muted", children: null };
-    obj5[0] = tmp.timestamp;
-    obj5[3] = applicationId.messageTimestamp;
+    const obj4 = { style: tmp.gameDescriptionWrapper, children: null };
+    const obj5 = {
+      style: tmp.timestamp,
+      variant: "text-xs/medium",
+      color: "text-muted",
+      children: applicationId.messageTimestamp,
+    };
     const items2 = [closure_6(tmp2(4556).Text, obj5)];
     const obj6 = { variant: "text-sm/medium", children: null };
     const intl = tmp2(1114).intl;
-    const obj7 = { applicationName: null };
-    obj7[0] = stateFromStores.name;
+    const obj7 = { applicationName: stateFromStores.name };
     const items3 = [intl.format(tmp2(1114).t.J3s8JP, obj7), " "];
     const intl2 = tmp2(1114).intl;
-    const obj8 = { helpdeskArticle: null };
-    obj8[0] = combinedDefault.getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS);
+    const obj8 = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS) };
     items3[2] = intl2.format(tmp2(1114).t.BPDKoA, obj8);
-    obj6[1] = items3;
+    obj6.children = items3;
     items2[1] = closure_7(tmp2(4556).Text, obj6);
-    obj4[1] = items2;
+    obj4.children = items2;
     items1[1] = closure_7(View, obj4);
-    obj[1] = items1;
-    obj[1] = closure_7(View, obj);
-    obj2[1] = closure_6(View, obj);
+    obj.children = items1;
+    obj.children = closure_7(View, obj);
+    obj2.children = closure_6(View, obj);
     tmp5Result = tmp5(tmp2(7150).BottomSheet, obj2);
-    const obj13 = combinedDefault;
   }
   return tmp5Result;
 }

@@ -1,21 +1,21 @@
 // discord_app/modules/user/UserStoreUtils.tsx
-import set from "../../../_runtime/00002_set.js";
 import _modDef38 from "../../../_runtime/metro/00038__.js";
-import Environments2 from "UserStoreConstants.tsx";
-import hasFlag from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import ME from "../../Constants.tsx";
+import UserStoreConstants from "UserStoreConstants.tsx";
+import FlagUtils from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import Constants from "../../Constants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const Environments = Environments2.Environments;
-({ PREMIUM_TYPE_NONE: c4, UserFlags: c5 } = ME);
-const result = set.fileFinishedImporting("modules/user/UserStoreUtils.tsx");
+const Environments = UserStoreConstants.Environments;
+({ PREMIUM_TYPE_NONE: closure_4, UserFlags: hasOwnProperty } = Constants);
+const result = size.fileFinishedImporting("modules/user/UserStoreUtils.tsx");
 
-export const validatePremiumType = function validatePremiumType(arg0, arg1, premiumType) {
+export const validatePremiumType = function validatePremiumType(arg0, premiumType, premiumType2) {
   let tmp = arg0;
   if (!arg0) {
-    tmp = undefined === arg1;
+    tmp = undefined === premiumType;
   }
   if (!tmp) {
-    _modDef38(premiumType === arg1, "Premium type should not change for non-staff users");
+    _modDef38(premiumType2 === premiumType, "Premium type should not change for non-staff users");
   }
 };
 export const getEnv = function getEnv(arg0) {
@@ -70,8 +70,7 @@ export const isStaffEnvRawData = function isStaffEnvRawData(flags) {
     if (tmp9) {
       let tmp10 = null == flags.flags;
       if (!tmp10) {
-        tmp10 = !hasFlag.hasFlag(flags.flags, constants.STAFF);
-        const obj = hasFlag;
+        tmp10 = !FlagUtils.hasFlag(flags.flags, constants.STAFF);
       }
       let tmp14 = !tmp10;
       if (tmp10) {

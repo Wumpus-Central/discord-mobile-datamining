@@ -1,13 +1,12 @@
 // discord_app/modules/jank_stats/native/JankStatsManager.android.tsx
-import set from "../../../../_runtime/00002_set.js";
-import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
-import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
-import getDeviceMetadata from "../../tti_analytics/native/TTIAnalyticsUtils.tsx";
-import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeJankStatsModule.tsx";
-import ME from "../../../Constants.tsx";
+import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
+import TTIAnalyticsUtils from "../../tti_analytics/native/TTIAnalyticsUtils.tsx";
+import NativeJankStatsModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeJankStatsModule.tsx";
+import Constants from "../../../Constants.tsx";
+import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-({ AppStates: c3, AnalyticEvents: c4 } = ME);
-initializeDefault;
+({ AppStates: c3, AnalyticEvents: closure_4 } = Constants);
 class JankStatsManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -51,8 +50,7 @@ prototype["handleConnectionOpenSupplemental"] = function handleConnectionOpenSup
   }, 0);
 };
 prototype["scheduleReport"] = function scheduleReport() {
-  let self = this;
-  self = this;
+  const self = this;
   if (null == this._timeoutId) {
     self._isScheduledReportSent = false;
     const _setTimeout = setTimeout;
@@ -60,7 +58,7 @@ prototype["scheduleReport"] = function scheduleReport() {
       self._timeoutId = null;
       self.sendReport("timer");
       self._isScheduledReportSent = true;
-      const obj = closure_1_1(closure_1_2[2]);
+      const obj = NativeJankStatsModuleDefault;
       if (obj != null) {
         obj.stopTracking();
       }
@@ -68,7 +66,7 @@ prototype["scheduleReport"] = function scheduleReport() {
   }
 };
 prototype["sendReport"] = function sendReport(background) {
-  let obj = enforcingDefault;
+  let obj = NativeJankStatsModuleDefault;
   let report;
   if (obj != null) {
     report = obj.requestReport();
@@ -80,8 +78,8 @@ prototype["sendReport"] = function sendReport(background) {
   }
   if (!tmp4) {
     obj = {};
-    const tmpResult = expandEventPropertiesDefault;
-    const merged = Object.assign(getDeviceMetadata.getDeviceMetadata());
+    const tmpResult = AnalyticsUtilsDefault;
+    const merged = Object.assign(TTIAnalyticsUtils.getDeviceMetadata());
     obj.version = 2;
     ({
       totalFrameCount: obj3.total_frame_count,
@@ -91,10 +89,9 @@ prototype["sendReport"] = function sendReport(background) {
     } = report);
     obj.trigger = background;
     tmpResult.track(constants2.ANDROID_JANK_STATS, obj);
-    const obj4 = getDeviceMetadata;
   }
 };
 const jankStatsManager = new JankStatsManager();
-let result = set.fileFinishedImporting("modules/jank_stats/native/JankStatsManager.android.tsx");
+let result = size.fileFinishedImporting("modules/jank_stats/native/JankStatsManager.android.tsx");
 
 export default jankStatsManager;

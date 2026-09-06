@@ -1,5 +1,5 @@
 // discord_common/js/packages/tokens/themes/generated/generated-definitions.tsx
-import set from "../../../../../../_runtime/00002_set.js";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
 const obj = { DARK: "dark", LIGHT: "light", MIDNIGHT: "midnight", DARKER: "darker" };
 const items = [,];
@@ -8,11 +8,10 @@ const items1 = [items];
 const items2 = [,];
 ({ DARKER: arr3[0], DARK: arr3[1] } = obj);
 items1[1] = items2;
-const map = new Map(items1);
-const result = set.fileFinishedImporting(
+const result = size.fileFinishedImporting(
   "../discord_common/js/packages/tokens/themes/generated/generated-definitions.tsx",
 );
 
 export const ThemeTypes = obj;
-export const ThemeExtends = map;
+export const ThemeExtends = new Map(items1);
 export const _private = { Themes: obj };

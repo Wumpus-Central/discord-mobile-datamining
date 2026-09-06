@@ -1,17 +1,17 @@
 // discord_app/modules/app_launcher/native/screens/search/SearchLocalAndGlobalContentView.tsx
-import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import TableRowInner from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
-import usePlaceholderWidth from "../../hooks/usePlaceholderSize.tsx";
-import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import importAllResult from "../../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { getSection } from "../../../../application_commands/ApplicationCommandIndexStore.tsx";
-import { FetchState } from "../../../../global_discovery_apps/stores/ApplicationDirectorySearchStore.tsx";
-import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "../../AppLauncherNativeConstants.tsx";
-import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../../intl/index.native.tsx";
+import AccessibilityAnnouncer2 from "../../../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
+import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import ApplicationCommandUtils from "../../../../application_commands/ApplicationCommandUtils.tsx";
+import ApplicationCommandTypes from "../../../../application_commands/ApplicationCommandTypes.tsx";
+import AppLauncherTypes from "../../../AppLauncherTypes.tsx";
+import AppLauncherNativeUtils from "../../AppLauncherNativeUtils.tsx";
+import usePlaceholderSize from "../../hooks/usePlaceholderSize.tsx";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+require = fn;
 function getApplicationIdFromApplicationItem(type) {
   let id;
   if (type.type !== obj.PLACERHOLDER) {
@@ -35,13 +35,12 @@ function CommandRow(arg0) {
   let hasOptions;
   let onPressSend;
   ({ context, onPress, isFirstRow, isLastRow, beforeExecuteCommand, onExecuteCommand } = arg0);
-  obj = hasOptions(12051);
+  let obj = hasOptions(12051);
   const appLauncherIconSource = obj.getAppLauncherIconSource(application);
   let tmp4 = null != appLauncherIconSource;
   if (tmp4) {
-    obj = { iconSource: null };
-    obj[0] = appLauncherIconSource;
-    tmp4 = callback2(onPressSend(12056), obj);
+    obj = { iconSource: appLauncherIconSource };
+    tmp4 = closure_10(onPressSend(12056), obj);
   }
   let tmpResult = tmp(12105);
   obj = {
@@ -56,23 +55,23 @@ function CommandRow(arg0) {
   onPressSend = commandRowSend.onPressSend;
   let items = [hasOptions];
   const items1 = [onPressSend];
-  const memo = importAllResult.useMemo(() => {
+  const memo = noop.useMemo(() => {
     let tmp;
     if (!hasOptions) {
-      obj = { name: "send", label: null };
-      const intl = hasOptions(closure_1_2[13]).intl;
-      obj[1] = intl.string(hasOptions(closure_1_2[13]).t.TXNS7S);
+      const obj = { name: "send", label: null };
+      const intl = util.intl;
+      obj.label = intl.string(util.t.TXNS7S);
       const items = [obj];
       tmp = items;
     }
     return tmp;
   }, items);
-  const callback = importAllResult.useCallback((nativeEvent) => {
+  const callback = noop.useCallback((nativeEvent) => {
     if ("send" === nativeEvent.nativeEvent.actionName) {
       onPressSend();
     }
   }, items1);
-  obj1 = {
+  const obj1 = {
     icon: tmp4,
     label: command.displayName,
     subLabel: null,
@@ -85,14 +84,14 @@ function CommandRow(arg0) {
     trailing: null,
   };
   tmpResult = tmp(9289);
-  obj1[2] = tmpResult.getSectionName(application);
-  obj1[4] = isFirstRow;
-  obj1[5] = isLastRow;
-  obj1[6] = onPress;
-  obj1[7] = memo;
-  obj1[8] = callback;
-  obj1[9] = callback2(onPressSend(12105), { hasOptions, sending: commandRowSend.sending, onPressSend });
-  return callback2(hasOptions(5605).TableRow, obj1);
+  obj1.subLabel = tmpResult.getSectionName(application);
+  obj1.start = isFirstRow;
+  obj1.end = isLastRow;
+  obj1.onPress = onPress;
+  obj1.accessibilityActions = memo;
+  obj1.onAccessibilityAction = callback;
+  obj1.trailing = closure_10(onPressSend(12105), { hasOptions, sending: commandRowSend.sending, onPressSend });
+  return closure_10(hasOptions(5605).TableRow, obj1);
 }
 function PlaceholderCommandRow(isFirstRow) {
   let flag = isFirstRow.isFirstRow;
@@ -103,37 +102,30 @@ function PlaceholderCommandRow(isFirstRow) {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  const tmp = callback3();
-  obj = usePlaceholderWidth;
+  const tmp = closure_19();
+  let obj = usePlaceholderSize;
   const placeholderWidth = obj.usePlaceholderWidth(10, 50);
-  obj1 = usePlaceholderWidth;
+  let obj1 = usePlaceholderSize;
   const placeholderWidth1 = obj1.usePlaceholderWidth(30, 90);
-  obj = {
-    icon: callback2(View, obj),
-    label: null,
-    subLabel: null,
-    subLabelLineClamp: 1,
-    start: null,
-    end: null,
-    onPress: null,
-  };
+  obj = { icon: null, label: null, subLabel: null, subLabelLineClamp: 1, start: null, end: null, onPress: null };
   obj = { style: tmp.loadingCommandAppIcon };
+  obj.icon = closure_1_10(View, obj);
   obj1 = { style: null };
   const items = [tmp.loadingTextPlaceholder, { width: "" + placeholderWidth + "%" }];
-  obj1[0] = items;
-  obj[1] = callback2(View, obj1);
+  obj1.style = items;
+  obj.label = closure_1_10(View, obj1);
   const obj3 = { style: null };
   const items1 = [tmp.loadingTextPlaceholderSmall];
   const obj2 = { width: "" + placeholderWidth + "%" };
   items1[1] = { width: "" + placeholderWidth1 + "%" };
-  obj3[0] = items1;
-  obj[2] = callback2(View, obj3);
-  obj[4] = flag;
-  obj[5] = flag2;
-  obj[6] = function onPress() {};
-  return callback2(TableRowInner.TableRow, obj);
+  obj3.style = items1;
+  obj.subLabel = closure_1_10(View, obj3);
+  obj.start = flag;
+  obj.end = flag2;
+  obj.onPress = function onPress() {};
+  return closure_1_10(TableRow.TableRow, obj);
 }
-function keyExtractor(type) {
+function keyExtractor(type, arg1) {
   if (type.type === obj.PLACERHOLDER) {
     let id = arg1.toString();
   } else {
@@ -150,43 +142,47 @@ function CommandsExpandableList(expandedOverride) {
   let items = [beforeExecuteCommand, context, commandData, onExecuteCommand, onPressCommand];
   items = onExecuteCommand.useMemo(
     () =>
-      commandData.map((arg0, arg1) => {
-        closure_0 = arg1;
-        if (arg0 === closure_1_16) {
+      commandData.map((item, index) => {
+        closure_0 = index;
+        if (item === closure_1_16) {
           return (isLastRow) =>
-            closure_2_10(closure_2_21, { isFirstRow: 0 === closure_0, isLastRow: isLastRow.isLastRow });
+            closure_3_10(PlaceholderCommandRow, { isFirstRow: 0 === closure_0, isLastRow: isLastRow.isLastRow });
         } else {
-          ({ command: closure_1, application: closure_2 } = arg0);
+          ({ command: closure_1, application: closure_2 } = item);
           return (isLastRow) =>
-            closure_2_10(closure_2_20, {
-              context: closure_1_1,
-              command: closure_1,
-              application: closure_2,
+            closure_3_10(CommandRow, {
+              context,
+              command,
+              application,
               onPress() {
-                return closure_1_3(closure_1, closure_0);
+                return closure_2_3(command, searchResultsPosition);
               },
-              isFirstRow: 0 === closure_0,
+              isFirstRow: 0 === searchResultsPosition,
               isLastRow: isLastRow.isLastRow,
               beforeExecuteCommand() {
-                return closure_1_2({ command: closure_1, searchResultsPosition: closure_0 });
+                return application({ command, searchResultsPosition });
               },
-              onExecuteCommand: closure_1_4,
+              onExecuteCommand,
             });
         }
       }),
     items,
   );
-  return callback2(context(beforeExecuteCommand[30]), {
+  return closure_10(context(beforeExecuteCommand[30]), {
     items,
     expandedOverride: expandedOverride.expanded,
     showsExpandCTAOverride: false,
   });
 }
-let c4 = importAllResult;
-const DEFAULT_CONTENT_PADDING = APP_LAUNCHER_BUILT_IN_SECTION_ICON.DEFAULT_CONTENT_PADDING;
-const useAppLauncherNavigation = APP_LAUNCHER_BUILT_IN_SECTION_ICON.useAppLauncherNavigation;
-({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
-let obj = {
+const View = fn(17).View;
+const getSection = fn(9290).getSection;
+const FetchState = fn(12068).FetchState;
+const AppLauncherNativeConstants = fn(1482);
+const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
+const useAppLauncherNavigation = AppLauncherNativeConstants.useAppLauncherNavigation;
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
+let style = {
   PLACERHOLDER: 0,
   [0]: "PLACERHOLDER",
   LOCAL_APPLICATION: 1,
@@ -198,13 +194,14 @@ const placeholder = "placeholder";
 let array = new Array(6);
 let closure_17 = array.fill("placeholder");
 array = new Array(3);
-obj = { type: obj.PLACERHOLDER };
-let closure_18 = array.fill(obj);
+style = { type: style.PLACERHOLDER };
+let closure_18 = array.fill(style);
+fn(4560);
 let obj1 = {
   sectionHeader: { marginBottom: 8 },
   list: {
     paddingHorizontal: DEFAULT_CONTENT_PADDING,
-    backgroundColor: ThemesDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND,
+    backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND,
   },
   loadingCommandAppIcon: null,
   loadingTextPlaceholder: null,
@@ -214,71 +211,71 @@ let obj1 = {
   commandsCTA: null,
   commandsCTAUnderlayColor: null,
 };
+let size = {
+  width: 32,
+  height: 32,
+  borderRadius: nativeDefault.radii.sm,
+  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
+};
+obj1.loadingCommandAppIcon = size;
 let obj2 = {
   paddingHorizontal: DEFAULT_CONTENT_PADDING,
-  backgroundColor: ThemesDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND,
+  backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND,
 };
-obj1[2] = {
-  width: 32,
-  height: 32,
-  borderRadius: ThemesDefault.radii.sm,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+obj1.loadingTextPlaceholder = {
+  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
+  height: 16,
+  marginBottom: 4,
+  borderRadius: nativeDefault.radii.lg,
+  alignSelf: "flex-start",
 };
 let obj3 = {
-  width: 32,
-  height: 32,
-  borderRadius: ThemesDefault.radii.sm,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
-};
-obj1[3] = {
-  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
   height: 16,
   marginBottom: 4,
-  borderRadius: ThemesDefault.radii.lg,
+  borderRadius: nativeDefault.radii.lg,
   alignSelf: "flex-start",
 };
-createCacheKey = {
-  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+obj1.loadingTextPlaceholderSmall = {
+  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
   height: 16,
-  borderRadius: ThemesDefault.radii.lg,
+  borderRadius: nativeDefault.radii.lg,
   alignSelf: "flex-start",
 };
-obj1[4] = createCacheKey;
+const createStyles = { marginTop: nativeDefault.space.PX_16 };
+obj1.divider = createStyles;
+obj1.commandsHeaderContainer = { justifyContent: "space-between", flexDirection: "row" };
 let obj4 = {
-  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
   height: 16,
-  marginBottom: 4,
-  borderRadius: ThemesDefault.radii.lg,
+  borderRadius: nativeDefault.radii.lg,
   alignSelf: "flex-start",
 };
-obj1[5] = { marginTop: ThemesDefault.space.PX_16 };
-obj1[6] = { justifyContent: "space-between", flexDirection: "row" };
-let obj6 = { marginTop: ThemesDefault.space.PX_16 };
-obj1[7] = {
-  borderRadius: ThemesDefault.radii.sm,
-  paddingHorizontal: ThemesDefault.space.PX_4,
-  marginBottom: ThemesDefault.space.PX_4,
+obj1.commandsCTA = {
+  borderRadius: nativeDefault.radii.sm,
+  paddingHorizontal: nativeDefault.space.PX_4,
+  marginBottom: nativeDefault.space.PX_4,
   justifyContent: "center",
 };
-let obj7 = {
-  borderRadius: ThemesDefault.radii.sm,
-  paddingHorizontal: ThemesDefault.space.PX_4,
-  marginBottom: ThemesDefault.space.PX_4,
+let obj6 = {
+  borderRadius: nativeDefault.radii.sm,
+  paddingHorizontal: nativeDefault.space.PX_4,
+  marginBottom: nativeDefault.space.PX_4,
   justifyContent: "center",
 };
-obj1[8] = { color: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-let closure_19 = createCacheKey.createStyles(obj1);
-let obj8 = { color: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-const forwardRefResult = importAllResult.forwardRef((context, ref) => {
+obj1.commandsCTAUnderlayColor = { color: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+let closure_19 = createStyles.createStyles(obj1);
+let obj7 = { color: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+size = fn(2);
+let result = size.fileFinishedImporting(
+  "modules/app_launcher/native/screens/search/SearchLocalAndGlobalContentView.tsx",
+);
+
+export const SearchLocalAndGlobalContentView = noop.forwardRef((context, ref) => {
   context = context.context;
-  let _require = context;
+  _require = context;
   const onScroll = context.onScroll;
   const entrypoint = context.entrypoint;
-  let callback;
-  importAllResult = undefined;
-  closure_5 = undefined;
-  let first;
-  closure_7 = undefined;
   let loading;
   let commandResults;
   let applicationResults;
@@ -288,18 +285,18 @@ const forwardRefResult = importAllResult.forwardRef((context, ref) => {
   let callback3;
   let memo1;
   c16 = undefined;
-  let tmp = callback3();
-  callback = tmp;
+  let tmp = closure_19();
+  _slicedToArray = tmp;
   const tmp4 = onScroll(entrypoint[18])();
-  importAllResult = tmp4;
+  noop = tmp4;
   const tmp5 = commandResults();
-  closure_5 = tmp5;
-  obj = importAllResult;
-  const tmp7 = callback(importAllResult.useState(""), 2);
-  first = tmp7[0];
-  closure_7 = tmp7[1];
-  const imperativeHandle = importAllResult.useImperativeHandle(ref, () => ({ setQuery: closure_7 }));
-  obj1 = _require(entrypoint[19]);
+  const navigation = tmp5;
+  let obj = noop;
+  const tmp7 = _slicedToArray(noop.useState(""), 2);
+  const query = tmp7[0];
+  const setQuery = tmp7[1];
+  const imperativeHandle = noop.useImperativeHandle(ref, () => ({ setQuery }));
+  let obj1 = require("ActivitiesInTextUtils");
   let id;
   if ("channel" === context.type) {
     id = context.channel.id;
@@ -308,90 +305,87 @@ const forwardRefResult = importAllResult.forwardRef((context, ref) => {
   let tmp10Result = tmp10(tmp3[20]);
   obj = {
     context,
-    query: first,
+    query,
     commandLimit: 20,
     applicationLimit: 10,
     searchesActivities:
-      entrypoint === _require(entrypoint[12]).AppLauncherEntrypoint.VOICE || isActivitiesInTextEnabled,
-    searchesCommands: entrypoint === _require(entrypoint[12]).AppLauncherEntrypoint.TEXT,
-    searchesBots: entrypoint === _require(entrypoint[12]).AppLauncherEntrypoint.TEXT,
+      entrypoint === require("AppLauncherTypes").AppLauncherEntrypoint.VOICE || isActivitiesInTextEnabled,
+    searchesCommands: entrypoint === require("AppLauncherTypes").AppLauncherEntrypoint.TEXT,
+    searchesBots: entrypoint === require("AppLauncherTypes").AppLauncherEntrypoint.TEXT,
   };
   const localSearchResults = tmp10Result.useLocalSearchResults(obj);
   loading = localSearchResults.loading;
   commandResults = localSearchResults.commandResults;
   applicationResults = localSearchResults.applicationResults;
   tmp10Result = tmp10(tmp3[20]);
-  const globalSearchResults = tmp10Result.useGlobalSearchResults({ query: first, context, fetches: true, entrypoint });
+  const globalSearchResults = tmp10Result.useGlobalSearchResults({ query, context, fetches: true, entrypoint });
   fetchState = globalSearchResults.fetchState;
   applicationResults2 = globalSearchResults.applicationResults;
   fetchNextPage = globalSearchResults.fetchNextPage;
   _require = undefined;
-  const tmp13 = entrypoint === _require(entrypoint[12]).AppLauncherEntrypoint.VOICE || isActivitiesInTextEnabled;
-  const tmp6 = callback;
-  [tmp17, c0] = callback(obj.useState(false), 2);
-  let items = [first];
+  const tmp13 = entrypoint === require("AppLauncherTypes").AppLauncherEntrypoint.VOICE || isActivitiesInTextEnabled;
+  [tmp17, c0] = _slicedToArray(obj.useState(false), 2);
+  let items = [query];
   const effect = obj.useEffect(() => {
-    _undefined(false);
+    context(false);
   }, items);
-  let items1 = [context, entrypoint, tmp5, first];
-  callback = obj.useCallback(() => {
-    _undefined((arg0) => !arg0);
+  let items1 = [context, entrypoint, tmp5, query];
+  const callback = obj.useCallback(() => {
+    context((arg0) => !arg0);
   }, []);
-  let items2 = [context, first];
+  let items2 = [context, query];
   const callback1 = obj.useCallback((applicationId, searchResultsPosition) => {
-    const descriptor = first(_undefined, applicationId.applicationId).descriptor;
-    obj = _undefined(entrypoint[9]);
-    obj = {
-      location: _undefined(entrypoint[21]).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME_SEARCH,
-      context: _undefined,
+    const descriptor = getSection(context, applicationId.applicationId).descriptor;
+    const obj = {
+      location: ApplicationCommandTypes.ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME_SEARCH,
+      context,
       command: applicationId,
       section: descriptor,
-      sectionDescriptors: items,
-      query: first,
-      navigation: closure_5,
-      sectionName: _undefined(entrypoint[12]).AppLauncherSectionName.SEARCH,
+      sectionDescriptors: null,
+      query,
+      navigation,
+      sectionName: AppLauncherTypes.AppLauncherSectionName.SEARCH,
       searchResultsPosition,
       entrypoint,
     };
-    items = [descriptor];
+    const items = [descriptor];
+    obj.sectionDescriptors = items;
     const result = obj.handleApplicationCommandSelected(obj);
   }, items1);
-  const items3 = [tmp5, context, first, entrypoint];
+  const items3 = [tmp5, context, query, entrypoint];
   const callback2 = obj.useCallback((command) => {
     command = command.command;
-    obj = _undefined(entrypoint[22]);
-    obj = {
+    const obj = {
       command,
-      location: _undefined(entrypoint[21]).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME_SEARCH,
-      triggerSection: _undefined(entrypoint[22]).getCommandTriggerSection(
-        first(_undefined, command.applicationId).descriptor,
+      location: ApplicationCommandTypes.ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME_SEARCH,
+      triggerSection: ApplicationCommandUtils.getCommandTriggerSection(
+        getSection(c0, command.applicationId).descriptor,
       ),
-      queryLength: first.length,
-      sectionName: _undefined(entrypoint[12]).AppLauncherSectionName.SEARCH,
-      query: first,
+      queryLength: query.length,
+      sectionName: AppLauncherTypes.AppLauncherSectionName.SEARCH,
+      query,
       searchResultsPosition: command.searchResultsPosition,
     };
     obj.trackCommandSelected(obj);
   }, items2);
   callback3 = obj.useCallback((arg0) => {
     ({ section, installOnDemand, searchResultsPosition } = arg0);
-    obj = _undefined(entrypoint[9]);
-    obj = {
-      location: _undefined(entrypoint[21]).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME_SEARCH,
+    const obj = {
+      location: ApplicationCommandTypes.ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME_SEARCH,
       application: section,
-      navigation: closure_5,
-      context: _undefined,
-      sectionName: _undefined(entrypoint[12]).AppLauncherSectionName.SEARCH,
+      navigation,
+      context,
+      sectionName: AppLauncherTypes.AppLauncherSectionName.SEARCH,
       installOnDemand,
-      query: first,
+      query,
       searchResultsPosition,
       entrypoint,
     };
     const result = obj.handleApplicationSelected(obj);
   }, items3);
   const items4 = [loading, commandResults];
-  const memo = obj.useMemo(() => (loading ? closure_1_17 : commandResults), items4);
-  const tmp6Result = callback(obj.useState(false), 2);
+  const memo = obj.useMemo(() => (loading ? closure_17 : commandResults), items4);
+  const tmp6Result = _slicedToArray(obj.useState(false), 2);
   const items5 = [applicationResults, applicationResults2, loading, fetchState];
   memo1 = obj.useMemo(() => {
     const mapped = applicationResults.map((application) => ({ type: constants.LOCAL_APPLICATION, application }));
@@ -401,7 +395,7 @@ const forwardRefResult = importAllResult.forwardRef((context, ref) => {
       items = [];
     }
     const found = items.filter((type) => {
-      let tmp = type.type !== set(closure_1_2[24]).ApplicationDirectorySearchResultType.CONNECTION;
+      let tmp = type.type !== set(entrypoint[24]).ApplicationDirectorySearchResultType.CONNECTION;
       if (tmp) {
         tmp = !set.has(type.data.id);
       }
@@ -409,36 +403,32 @@ const forwardRefResult = importAllResult.forwardRef((context, ref) => {
     });
     const mapped1 = found.map((application) => ({ type: constants.GLOBAL_APPLICATION, application: application.data }));
     if (loading) {
-      let items1 = closure_1_18;
+      let items1 = closure_18;
     } else {
       if (null != fetchState) {
-        if (tmp4 !== constants.FETCHING) {
+        if (tmp4 !== FetchState.FETCHING) {
           items1 = [];
           HermesBuiltin.arraySpread(mapped1, HermesBuiltin.arraySpread(mapped, 0));
         }
       }
       const items2 = [];
-      HermesBuiltin.arraySpread(closure_1_18, HermesBuiltin.arraySpread(mapped1, HermesBuiltin.arraySpread(mapped, 0)));
+      HermesBuiltin.arraySpread(closure_18, HermesBuiltin.arraySpread(mapped1, HermesBuiltin.arraySpread(mapped, 0)));
       items1 = items2;
     }
     return items1;
   }, items5);
-  const items6 = [first, commandResults.length, memo1.length, loading, fetchState];
+  const items6 = [query, commandResults.length, memo1.length, loading, fetchState];
   const effect1 = obj.useEffect(() => {
     if (0 !== first.length) {
       if (!loading) {
-        if (fetchState !== constants.FETCHING) {
+        if (fetchState !== FetchState.FETCHING) {
           const sum = commandResults.length + memo1.length;
           if (sum > 0) {
-            const intl = _undefined(entrypoint[13]).intl;
-            obj = { count: null };
-            obj[0] = sum;
-            const AccessibilityAnnouncer = _undefined(entrypoint[25]).AccessibilityAnnouncer;
-            AccessibilityAnnouncer.announce(
-              intl.formatToPlainString(_undefined(entrypoint[13]).t.ZGVL3g, obj),
-              "polite",
-            );
-            const formatToPlainStringResult = intl.formatToPlainString(_undefined(entrypoint[13]).t.ZGVL3g, obj);
+            const intl = util.intl;
+            const obj = { count: sum };
+            const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
+            AccessibilityAnnouncer.announce(intl.formatToPlainString(util.t.ZGVL3g, obj), "polite");
+            const formatToPlainStringResult = intl.formatToPlainString(util.t.ZGVL3g, obj);
           }
         }
       }
@@ -452,13 +442,10 @@ const forwardRefResult = importAllResult.forwardRef((context, ref) => {
     let application;
     const type = item.type;
     if (fetchNextPage.PLACERHOLDER === type) {
-      obj = { isFirstRow: null, isLastRow: null, style: null };
-      obj[0] = 0 === index;
-      obj[1] = index === memo1.length - 1;
-      obj = { height: null };
-      obj[0] = closure_4;
-      obj[2] = obj;
-      return applicationResults(onScroll(entrypoint[26]), obj);
+      style = { isFirstRow: 0 === index, isLastRow: index === memo1.length - 1, style: null };
+      style = { height };
+      style.style = style;
+      return applicationResults(onScroll(entrypoint[26]), style);
     } else {
       if (tmp.LOCAL_APPLICATION !== type) {
         if (tmp.GLOBAL_APPLICATION !== type) {
@@ -466,22 +453,23 @@ const forwardRefResult = importAllResult.forwardRef((context, ref) => {
         }
       }
       application = item.application;
-      obj = _undefined(entrypoint[9]);
-      const appLauncherIconSource = obj.getAppLauncherIconSource(application);
-      obj1 = { application: null, iconSource: null, onPress: null, isFirstRow: null, isLastRow: null };
-      obj1[0] = application;
-      obj1[1] = appLauncherIconSource;
-      obj1[2] = function onPress() {
-        return closure_1_14({ section: application, installOnDemand: true, searchResultsPosition: index });
+      style = context(entrypoint[9]);
+      const appLauncherIconSource = style.getAppLauncherIconSource(application);
+      const obj1 = {
+        application,
+        iconSource: appLauncherIconSource,
+        onPress() {
+          return callback3({ section: application, installOnDemand: true, searchResultsPosition: index });
+        },
+        isFirstRow: 0 === index,
+        isLastRow: index === memo1.length - 1,
       };
-      obj1[3] = 0 === index;
-      obj1[4] = index === memo1.length - 1;
-      return applicationResults(_undefined(entrypoint[27]).BaseAppRow, obj1);
+      return applicationResults(context(entrypoint[27]).BaseAppRow, obj1);
     }
   }, items7);
-  const tmp10Result1 = _require(entrypoint[23]);
+  const tmp10Result1 = require("useTrackSearchItems");
   const tmp23 = 0 === memo.length && 0 === memo1.length;
-  const appLauncherFlashListProps = _require(entrypoint[28]).useAppLauncherFlashListProps();
+  const appLauncherFlashListProps = require("AppLauncherFlashList").useAppLauncherFlashListProps();
   const items8 = [fetchNextPage, onScroll, tmp4];
   const items9 = [tmp.list, sum];
   const callback5 = obj.useCallback((nativeEvent) => {
@@ -498,54 +486,50 @@ const forwardRefResult = importAllResult.forwardRef((context, ref) => {
   }, items8);
   const items10 = [sum];
   const memo2 = obj.useMemo(() => {
-    obj = {};
+    const obj = {};
     const merged = Object.assign(list.list);
-    obj.paddingBottom = c16;
+    obj.paddingBottom = _undefined;
     return obj;
   }, items9);
-  const memo3 = obj.useMemo(() => ({ bottom: c16 }), items10);
+  const memo3 = obj.useMemo(() => ({ bottom: _undefined }), items10);
   let tmp33Result = null;
   let tmp2Result = tmp2(tmp3[28]);
   if (0 !== memo.length) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.commandsHeaderContainer;
+    obj = { style: tmp.commandsHeaderContainer, children: null };
     obj1 = {
       accessibilityRole: "header",
       variant: "text-md/medium",
       color: "text-default",
-      style: null,
+      style: tmp.sectionHeader,
       children: null,
     };
-    obj1[3] = tmp.sectionHeader;
     const intl4 = tmp10(tmp3[13]).intl;
-    obj1[4] = intl4.string(tmp10(tmp3[13]).t["0hKkS+"]);
+    obj1.children = intl4.string(tmp10(tmp3[13]).t["0hKkS+"]);
     const items11 = [tmp31(tmp10(tmp3[29]).Text, obj1)];
     if (memo.length <= tmp10(tmp3[30]).COLLAPSED_LIST_ITEM_MAX) {
       const obj2 = { children: null };
       items11[1] = null;
-      obj[1] = items11;
+      obj.children = items11;
       const items12 = [tmp33(tmp45, obj)];
       const obj3 = {
-        commandData: null,
-        context: null,
-        beforeExecuteCommand: null,
-        onPressCommand: null,
-        onExecuteCommand: null,
-        expanded: null,
+        commandData: memo,
+        context,
+        beforeExecuteCommand: callback2,
+        onPressCommand: callback1,
+        onExecuteCommand: context.onSend,
+        expanded: tmp17,
       };
-      obj3[0] = memo;
-      obj3[1] = context;
-      obj3[2] = callback2;
-      obj3[3] = callback1;
-      obj3[4] = context.onSend;
-      obj3[5] = tmp17;
       items12[1] = tmp31(CommandsExpandableList, obj3);
-      obj2[0] = items12;
+      obj2.children = items12;
       tmp33Result = tmp33(tmp34, obj2);
     } else {
-      const obj4 = { style: null, underlayColor: null, accessibilityLabel: null, onPress: null, children: null };
-      obj4[0] = tmp.commandsCTA;
-      obj4[1] = tmp.commandsCTAUnderlayColor.color;
+      const obj4 = {
+        style: tmp.commandsCTA,
+        underlayColor: tmp.commandsCTAUnderlayColor.color,
+        accessibilityLabel: null,
+        onPress: null,
+        children: null,
+      };
       let intl = tmp10(tmp3[13]).intl;
       const string = intl.string;
       const t = tmp10(tmp3[13]).t;
@@ -554,8 +538,8 @@ const forwardRefResult = importAllResult.forwardRef((context, ref) => {
       } else {
         stringResult = string(t.xal319);
       }
-      obj4[2] = stringResult;
-      obj4[3] = callback;
+      obj4.accessibilityLabel = stringResult;
+      obj4.onPress = callback;
       const intl2 = tmp10(tmp3[13]).intl;
       const string2 = intl2.string;
       let t2 = tmp10(tmp3[13]).t;
@@ -564,22 +548,20 @@ const forwardRefResult = importAllResult.forwardRef((context, ref) => {
       } else {
         string2Result = string2(t2.xal319);
       }
-      const obj5 = { color: "text-brand", variant: "text-md/semibold", children: null };
-      obj5[2] = string2Result;
+      const obj5 = { color: "text-brand", variant: "text-md/semibold", children: string2Result };
       t2 = tmp31(tmp10(tmp3[29]).Text, obj5);
-      obj4[4] = t2;
+      obj4.children = t2;
       let tmp31Result = tmp31(tmp10(tmp3[31]).AnimatedPressableHighlight, obj4);
     }
-    tmp45 = closure_5;
+    tmp45 = navigation;
   }
   const items13 = [tmp33Result, , ,];
   tmp31Result = null;
   if (memo.length > 0) {
     tmp31Result = null;
     if (memo1.length > 0) {
-      const obj6 = { style: null };
-      obj6[0] = tmp.divider;
-      tmp31Result = tmp31(closure_5, obj6);
+      const obj6 = { style: tmp.divider };
+      tmp31Result = tmp31(navigation, obj6);
     }
   }
   items13[1] = tmp31Result;
@@ -589,24 +571,22 @@ const forwardRefResult = importAllResult.forwardRef((context, ref) => {
       accessibilityRole: "header",
       variant: "text-md/medium",
       color: "text-default",
-      style: null,
+      style: tmp.sectionHeader,
       children: null,
     };
-    obj7[3] = tmp.sectionHeader;
     const intl3 = tmp10(tmp3[13]).intl;
-    obj7[4] = intl3.string(tmp10(tmp3[13]).t.PHjkRE);
+    obj7.children = intl3.string(tmp10(tmp3[13]).t.PHjkRE);
     tmp31Result1 = tmp31(tmp10(tmp3[29]).Text, obj7);
   }
   items13[2] = tmp31Result1;
   let tmp31Result2 = null;
   if (tmp23) {
-    const obj8 = { query: null, showsGenericMessage: null };
-    obj8[0] = first;
+    const obj8 = { query, showsGenericMessage: null };
     tmp2Result = tmp2(tmp3[32]);
-    obj8[1] = entrypoint === tmp10(tmp3[12]).AppLauncherEntrypoint.VOICE;
+    obj8.showsGenericMessage = entrypoint === tmp10(tmp3[12]).AppLauncherEntrypoint.VOICE;
     tmp31Result2 = tmp31(tmp2Result, obj8);
   }
-  const tmp10Result2 = _require(entrypoint[28]);
+  const tmp10Result2 = require("AppLauncherFlashList");
   items13[3] = tmp31Result2;
   return applicationResults(
     tmp2Result,
@@ -621,7 +601,7 @@ const forwardRefResult = importAllResult.forwardRef((context, ref) => {
       keyboardShouldPersistTaps: "always",
       automaticallyAdjustsScrollIndicatorInsets: false,
       showsVerticalScrollIndicator: false,
-      onViewableItemsChanged: tmp10Result1.useTrackSearchItems(callback3, memo1, first).handleViewableItemsChanged,
+      onViewableItemsChanged: tmp10Result1.useTrackSearchItems(callback3, memo1, query).handleViewableItemsChanged,
       preserveScrollMomentum: true,
       onScroll: callback5,
       animatedOnScroll: appLauncherFlashListProps.onScroll,
@@ -629,11 +609,6 @@ const forwardRefResult = importAllResult.forwardRef((context, ref) => {
       simultaneousHandlers: appLauncherFlashListProps.gestureRef,
       animatedProps: appLauncherFlashListProps.animatedProps,
     },
-    first,
+    query,
   );
 });
-let result = require("set").fileFinishedImporting(
-  "modules/app_launcher/native/screens/search/SearchLocalAndGlobalContentView.tsx",
-);
-
-export const SearchLocalAndGlobalContentView = forwardRefResult;

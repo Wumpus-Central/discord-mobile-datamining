@@ -1,73 +1,66 @@
 // discord_app/modules/chat_input/native/guard/ChatInputGuardRequiredLobbyApplicationAuthorization.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import LinkingDefault from "../../../../lib/native/Linking.tsx";
 import ChatInputGuardDefault from "ChatInputGuard.tsx";
-import { Image } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
+const require = fn;
+const Image = fn(17).Image;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
 let obj = { icon: null };
-obj = { height: 40, width: 40, resizeMode: "contain", borderRadius: ThemesDefault.radii.md };
-obj[0] = obj;
-let closure_5 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(
-  function ChatInputGuardRequiredLobbyApplicationAuthorization(requiredLinkedLobbyApplication) {
-    requiredLinkedLobbyApplication = requiredLinkedLobbyApplication.requiredLinkedLobbyApplication;
-    let connectionEntrypointUrl;
-    ({ showLinkedLobbyApplicationLoadingIndicator, shouldRelaunchLinkedLobbyApplication } =
-      requiredLinkedLobbyApplication);
-    if (!showLinkedLobbyApplicationLoadingIndicator) {
-      if (null != requiredLinkedLobbyApplication) {
-        const iconSource = requiredLinkedLobbyApplication.getIconSource(80);
-        if (null != iconSource) {
-          let obj = { style: null, source: null };
-          obj[0] = tmp.icon;
-          obj[1] = iconSource;
-          const tmp5 = <Image style={null} source={null} />;
-        }
-        if (shouldRelaunchLinkedLobbyApplication) {
-          obj = { type: "simple-action", icon: null, message: null };
-          obj[1] = tmp5;
-          const intl3 = connectionEntrypointUrl(1114).intl;
-          obj = { name: null };
-          obj[0] = requiredLinkedLobbyApplication.name;
-          obj[2] = intl3.format(connectionEntrypointUrl(1114).t["SU2mY/"], obj);
-          return jsx(ChatInputGuardDefault, { name: null });
-        } else {
-          connectionEntrypointUrl = requiredLinkedLobbyApplication.connectionEntrypointUrl;
-          obj1 = { type: "simple-action", icon: null, message: null, actionLabel: null, actionOnPress: null };
-          obj1[1] = tmp5;
-          const intl = connectionEntrypointUrl(1114).intl;
-          const obj2 = { name: null };
-          obj2[0] = requiredLinkedLobbyApplication.name;
-          obj1[2] = intl.format(connectionEntrypointUrl(1114).t.EvDn1D, obj2);
-          let stringResult;
-          if (null != connectionEntrypointUrl) {
-            const intl2 = tmp10(1114).intl;
-            stringResult = intl2.string(tmp10(1114).t.S0W8Z5);
-          }
-          obj1[3] = stringResult;
-          let fn;
-          if (null != connectionEntrypointUrl) {
-            fn = () => closure_1_1(closure_1_2[7]).openURLExternally(connectionEntrypointUrl);
-          }
-          obj1[4] = fn;
-          return jsx(ChatInputGuardDefault, {
-            type: "simple-action",
-            icon: null,
-            message: null,
-            actionLabel: null,
-            actionOnPress: null,
-          });
-        }
-      }
-    }
-    return jsx(ChatInputGuardDefault, { type: "simple-action", message: "" });
-  },
-);
-const result = require("set").fileFinishedImporting(
+let size = { height: 40, width: 40, resizeMode: "contain", borderRadius: nativeDefault.radii.md };
+obj.icon = size;
+let closure_5 = createStyles.createStyles(obj);
+size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/chat_input/native/guard/ChatInputGuardRequiredLobbyApplicationAuthorization.tsx",
 );
 
-export default memoResult;
+export default noop.memo(function ChatInputGuardRequiredLobbyApplicationAuthorization(requiredLinkedLobbyApplication) {
+  requiredLinkedLobbyApplication = requiredLinkedLobbyApplication.requiredLinkedLobbyApplication;
+  let connectionEntrypointUrl;
+  ({ showLinkedLobbyApplicationLoadingIndicator, shouldRelaunchLinkedLobbyApplication } =
+    requiredLinkedLobbyApplication);
+  if (!showLinkedLobbyApplicationLoadingIndicator) {
+    if (null != requiredLinkedLobbyApplication) {
+      const iconSource = requiredLinkedLobbyApplication.getIconSource(80);
+      if (null != iconSource) {
+        let obj = { style: tmp.icon, source: iconSource };
+        const tmp5 = <Image style={tmp.icon} source={iconSource} />;
+      }
+      if (shouldRelaunchLinkedLobbyApplication) {
+        obj = { type: "simple-action", icon: tmp5, message: null };
+        const intl3 = connectionEntrypointUrl(1114).intl;
+        obj = { name: requiredLinkedLobbyApplication.name };
+        obj.message = intl3.format(connectionEntrypointUrl(1114).t["SU2mY/"], obj);
+        return jsx(ChatInputGuardDefault, { name: requiredLinkedLobbyApplication.name });
+      } else {
+        connectionEntrypointUrl = requiredLinkedLobbyApplication.connectionEntrypointUrl;
+        const obj1 = { type: "simple-action", icon: tmp5, message: null, actionLabel: null, actionOnPress: null };
+        const intl = connectionEntrypointUrl(1114).intl;
+        const obj2 = { name: requiredLinkedLobbyApplication.name };
+        obj1.message = intl.format(connectionEntrypointUrl(1114).t.EvDn1D, obj2);
+        let stringResult;
+        if (null != connectionEntrypointUrl) {
+          const intl2 = tmp10(1114).intl;
+          stringResult = intl2.string(tmp10(1114).t.S0W8Z5);
+        }
+        obj1.actionLabel = stringResult;
+        let fn;
+        if (null != connectionEntrypointUrl) {
+          fn = () => LinkingDefault.openURLExternally(connectionEntrypointUrl);
+        }
+        obj1.actionOnPress = fn;
+        return jsx(ChatInputGuardDefault, {
+          type: "simple-action",
+          icon: tmp5,
+          message: null,
+          actionLabel: null,
+          actionOnPress: null,
+        });
+      }
+    }
+  }
+  return jsx(ChatInputGuardDefault, { type: "simple-action", message: "" });
+});

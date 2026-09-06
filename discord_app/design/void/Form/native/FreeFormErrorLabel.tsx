@@ -1,22 +1,24 @@
 // discord_app/design/void/Form/native/FreeFormErrorLabel.tsx
-import closure_2 from "../../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import shared from "../../../shared.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("design/void/Form/native/FreeFormErrorLabel.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/Form/native/FreeFormErrorLabel.tsx");
 
 export default function Label(style) {
   const children = style.children;
   let nodeText;
   nodeText = nodeText(4264).getNodeText(children);
   const items = [nodeText];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     let tmp2 = null != nodeText;
     if (tmp2) {
       tmp2 = "" !== tmp;
     }
     if (tmp2) {
-      const AccessibilityAnnouncer = nodeText(closure_1_1[3]).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
       AccessibilityAnnouncer.announce(tmp);
     }
   }, items);

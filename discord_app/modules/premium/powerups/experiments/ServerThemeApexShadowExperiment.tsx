@@ -1,6 +1,6 @@
 // discord_app/modules/premium/powerups/experiments/ServerThemeApexShadowExperiment.tsx
-import set from "../../../../../_runtime/00002_set.js";
 import ApexExperiment from "../../../experiments/apex/index.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 const apexExperiment = ApexExperiment.createApexExperiment({
   kind: "guild",
@@ -13,6 +13,6 @@ const apexExperiment = ApexExperiment.createApexExperiment({
     3: { enabled: true, inExperiment: true, gatesApex: true },
   },
 });
-const result = set.fileFinishedImporting("modules/premium/powerups/experiments/ServerThemeApexShadowExperiment.tsx");
+const result = size.fileFinishedImporting("modules/premium/powerups/experiments/ServerThemeApexShadowExperiment.tsx");
 
 export const ServerThemeApexShadowExperiment = apexExperiment;

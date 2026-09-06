@@ -1,29 +1,29 @@
 // discord_app/modules/gplay/native/GPlayAnalyticsStore.tsx
-import set from "../../../../_runtime/00002_set.js";
-import keys from "../../../../_runtime/00560_keys.js";
+import 00560__ from "../../../../_runtime/metro/00560__.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
 let closure_2 = Object.freeze({ analyticsByProductId: {} });
-let obj = keys.create(() => closure_2);
-const result = set.fileFinishedImporting("modules/gplay/native/GPlayAnalyticsStore.tsx");
+const useGPlayAnalyticsStore = module_560.create(() => closure_2);
+const result = size.fileFinishedImporting("modules/gplay/native/GPlayAnalyticsStore.tsx");
 
 export const setGPlayAnalytics = function setGPlayAnalytics(arg0, arg1) {
-  const _require = arg0;
+  _require = arg0;
   dependencyMap = arg1;
-  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
-    closure_1_3.setState((analyticsByProductId) => {
-      obj = { analyticsByProductId: null };
-      obj = {};
+  require("ReactBatchUpdates").batchUpdates(() => {
+    obj.setState((analyticsByProductId) => {
+      analyticsByProductId = { analyticsByProductId: null };
+      analyticsByProductId = {};
       const merged = Object.assign(analyticsByProductId.analyticsByProductId);
-      obj[closure_0] = closure_1;
-      obj[0] = obj;
-      return obj;
+      analyticsByProductId[closure_1_0] = closure_1_1;
+      analyticsByProductId.analyticsByProductId = analyticsByProductId;
+      return analyticsByProductId;
     });
   });
 };
 export const deleteGPlayAnalytics = function deleteGPlayAnalytics(arg0) {
-  const _require = arg0;
-  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
-    closure_1_3.setState((analyticsByProductId) => {
+  _require = arg0;
+  require("ReactBatchUpdates").batchUpdates(() => {
+    obj.setState((analyticsByProductId) => {
       analyticsByProductId = {};
       const merged = Object.assign(analyticsByProductId.analyticsByProductId);
       delete tmp2[tmp];
@@ -31,4 +31,4 @@ export const deleteGPlayAnalytics = function deleteGPlayAnalytics(arg0) {
     });
   });
 };
-export const useGPlayAnalyticsStore = obj;
+export { useGPlayAnalyticsStore };

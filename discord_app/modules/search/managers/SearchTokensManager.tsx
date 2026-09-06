@@ -1,17 +1,16 @@
 // discord_app/modules/search/managers/SearchTokensManager.tsx
-import set from "../../../../_runtime/00002_set.js";
-import _setAppLocale from "../../../intl/IntlLoaderStore.tsx";
-import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
-import SearchTokenTypes from "../SearchUtils.tsx";
+import IntlLoaderStore from "../../../intl/IntlLoaderStore.tsx";
+import SearchUtils from "../SearchUtils.tsx";
+import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-let closure_2 = _setAppLocale.subscribeToIntlLoadingSuccess;
-initializeDefault;
+let closure_2 = IntlLoaderStore.subscribeToIntlLoadingSuccess;
 class SearchTokensManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     obj = {
-      USER_SETTINGS_PROTO_UPDATE: require("SearchTokenTypes").refreshSearchTokens,
-      POST_CONNECTION_OPEN: require("SearchTokenTypes").refreshSearchTokens,
+      USER_SETTINGS_PROTO_UPDATE: closure_0(closure_1[2]).refreshSearchTokens,
+      POST_CONNECTION_OPEN: closure_0(closure_1[2]).refreshSearchTokens,
     };
     applyArgumentsResult.actions = obj;
     return applyArgumentsResult;
@@ -19,7 +18,7 @@ class SearchTokensManager extends tmp2 {
 }
 const prototype = SearchTokensManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  this._unsubscribeIntlLoadingStore = callback(SearchTokenTypes.refreshSearchTokens);
+  this._unsubscribeIntlLoadingStore = closure_2(SearchUtils.refreshSearchTokens);
 };
 prototype["_terminate"] = function _terminate() {
   const _unsubscribeIntlLoadingStore = this._unsubscribeIntlLoadingStore;
@@ -28,6 +27,6 @@ prototype["_terminate"] = function _terminate() {
   }
 };
 const searchTokensManager = new SearchTokensManager();
-let result = set.fileFinishedImporting("modules/search/managers/SearchTokensManager.tsx");
+let result = size.fileFinishedImporting("modules/search/managers/SearchTokensManager.tsx");
 
 export default searchTokensManager;

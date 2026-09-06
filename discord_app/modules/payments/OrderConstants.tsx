@@ -1,7 +1,7 @@
 // discord_app/modules/payments/OrderConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/payments/OrderConstants.tsx");
+const result = size.fileFinishedImporting("modules/payments/OrderConstants.tsx");
 
 export const ConstraintReasonCode = {
   INSUFFICIENT_ORB_BALANCE: 1000,

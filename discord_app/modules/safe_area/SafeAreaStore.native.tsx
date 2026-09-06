@@ -1,13 +1,15 @@
 // discord_app/modules/safe_area/SafeAreaStore.native.tsx
-import set from "../../../_runtime/00002_set.js";
-import EMPTY_SAFE_AREA_INSETS from "SafeAreaConstants.native.tsx";
-import keys from "../../../_runtime/00560_keys.js";
+import SafeAreaConstants from "SafeAreaConstants.native.tsx";
+import 00560__ from "../../../_runtime/metro/00560__.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-let obj = { safeAreaInsets: EMPTY_SAFE_AREA_INSETS.INITIAL_SAFE_AREA_INSETS };
-obj = keys.create(() => {
-  const byAppEntry = { main: obj, share: obj };
-  return { byAppEntry };
+let obj = { safeAreaInsets: SafeAreaConstants.INITIAL_SAFE_AREA_INSETS };
+obj = module_560.create(() => {
+  let byAppEntry = { byAppEntry: null };
+  byAppEntry = { main: byAppEntry, share: byAppEntry };
+  byAppEntry.byAppEntry = byAppEntry;
+  return byAppEntry;
 });
-const result = set.fileFinishedImporting("modules/safe_area/SafeAreaStore.native.tsx");
+const result = size.fileFinishedImporting("modules/safe_area/SafeAreaStore.native.tsx");
 
 export default obj;

@@ -1,6 +1,7 @@
 // discord_app/modules/messages/renderMessageMarkup.tsx
-import set from "../../../_runtime/00002_set.js";
-import get_defaultRulesDefault from "../markup/MarkupUtils.tsx";
+import MarkupUtilsDefault from "../markup/MarkupUtils.tsx";
+import MarkupPostProcessors from "MarkupPostProcessors.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 function getInitialParserState(channelId) {
   const renderOptions = channelId.renderOptions;
@@ -30,17 +31,16 @@ function getInitialParserState(channelId) {
     disablePressableChannelMention: Boolean(renderOptions.disablePressableChannelMention),
   };
 }
-function render(arg0, channelId, toAST) {
-  closure_0 = channelId;
+function render(fn, channelId, toAST) {
+  const message = channelId;
   toAST = toAST.toAST;
-  closure_1 = undefined !== toAST && toAST;
-  const hideSimpleEmbedContent = toAST.hideSimpleEmbedContent;
-  closure_2 = undefined === hideSimpleEmbedContent || hideSimpleEmbedContent;
-  const formatInline = toAST.formatInline;
-  closure_3 = undefined !== formatInline && formatInline;
+  toAST = undefined !== toAST && toAST;
+  let hideSimpleEmbedContent = toAST.hideSimpleEmbedContent;
+  hideSimpleEmbedContent = undefined === hideSimpleEmbedContent || hideSimpleEmbedContent;
+  let formatInline = toAST.formatInline;
+  formatInline = undefined !== formatInline && formatInline;
   ({ postProcessor: render, contentMessage } = toAST);
-  c6 = false;
-  c7 = false;
+  hasSpoilerEmbeds = false;
   if (contentMessage == null) {
     contentMessage = channelId;
   }
@@ -51,9 +51,9 @@ function render(arg0, channelId, toAST) {
   if (author != null) {
     id = author.id;
   }
-  obj[2] = id;
-  obj[3] = toAST;
-  const tmpResult = closure_3(obj);
+  obj.authorId = id;
+  obj.renderOptions = toAST;
+  const tmpResult = formatInline(obj);
   obj = {};
   const merged = Object.assign(tmpResult);
   let allowLinks = tmp4;
@@ -68,55 +68,54 @@ function render(arg0, channelId, toAST) {
   }
   obj.soundboardSounds = soundboardSounds;
   obj = {
-    hasSpoilerEmbeds: c6,
-    hasBailedAst: c7,
-    content: arg0(content, true, obj, (ast, inline) => {
-      let flag = arg2;
+    hasSpoilerEmbeds,
+    hasBailedAst: flag,
+    content: fn(content, true, obj, (ast, inline, arg2) => {
+      flag = arg2;
       if (arg2 == null) {
         flag = false;
       }
-      let obj = channelId(table[0]);
-      obj = {
+      const obj = {
         ast,
         inline,
         hasBailedAst: flag,
-        message: channelId,
+        message,
         contentMessage,
         messageContent: content,
-        hideSimpleEmbedContent: table,
-        formatInline: closure_3,
-        toAST: closure_1,
+        hideSimpleEmbedContent,
+        formatInline,
+        toAST,
       };
       const result = obj.runMessageMarkupPostProcessors(obj);
       ({ ast, hasSpoilerEmbeds: c6 } = result);
       let tmp2 = ast;
-      if (null != callback) {
-        tmp2 = callback(ast, inline);
+      if (null != render) {
+        tmp2 = render(ast, inline);
       }
       return tmp2;
     }),
   };
   return obj;
 }
-let result = set.fileFinishedImporting("modules/messages/renderMessageMarkup.tsx");
+let result = size.fileFinishedImporting("modules/messages/renderMessageMarkup.tsx");
 
 export default function renderMessageMarkup(arg0) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
   }
-  const tmp2 = get_defaultRulesDefault;
+  const tmp2 = MarkupUtilsDefault;
   return render(obj.formatInline ? tmp2.parseInlineReply : tmp2.parse, arg0, obj);
 }
-export const getInitialParserStateFromMessage = function getInitialParserStateFromMessage(message, closure_7) {
+export const getInitialParserStateFromMessage = function getInitialParserStateFromMessage(message, renderOptions) {
   let obj = { channelId: message.channel_id, messageId: message.id, authorId: null, renderOptions: null };
   const author = message.author;
   let id;
   if (author != null) {
     id = author.id;
   }
-  obj[2] = id;
-  obj[3] = closure_7;
+  obj.authorId = id;
+  obj.renderOptions = renderOptions;
   const tmpResult = getInitialParserState(obj);
   obj = {};
   const merged = Object.assign(tmpResult);
@@ -150,7 +149,7 @@ export const renderMessageMarkupToAST = function renderMessageMarkupToAST(messag
   if (result === undefined) {
     obj = {};
   }
-  const tmp2 = get_defaultRulesDefault;
+  const tmp2 = MarkupUtilsDefault;
   obj = {};
   const merged = Object.assign(obj);
   obj.toAST = true;
@@ -200,7 +199,7 @@ export const renderMessageContentMarkup = function renderMessageContentMarkup(
   });
 };
 export const renderAutomodMessageMarkup = function renderAutomodMessageMarkup(arg0, highlightWord, channelId) {
-  return get_defaultRulesDefault.parseAutoModerationSystemMessage(
+  return MarkupUtilsDefault.parseAutoModerationSystemMessage(
     arg0,
     true,
     {
@@ -235,7 +234,7 @@ export const renderAutomodMessageMarkupToAST = function renderAutomodMessageMark
   highlightWord,
   channelId,
 ) {
-  return get_defaultRulesDefault.parseAutoModerationSystemMessageToAST(
+  return MarkupUtilsDefault.parseAutoModerationSystemMessageToAST(
     arg0,
     true,
     {

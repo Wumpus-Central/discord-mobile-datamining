@@ -1,14 +1,15 @@
 // discord_app/modules/rich_presence/PresenceActivityFiltering.tsx
-import closure_2 from "../applications/ApplicationStore.tsx";
+import Server from "../../flow/Server.tsx";
+import ApplicationStore from "../applications/ApplicationStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/rich_presence/PresenceActivityFiltering.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/rich_presence/PresenceActivityFiltering.tsx");
 
-export const doesGameHaveRichPresence = function doesGameHaveRichPresence(id, items2) {
-  closure_0 = items2;
-  if (null !== id.id) {
-    if (undefined !== id.id) {
-      application = application.getApplication(id.id);
+export const doesGameHaveRichPresence = function doesGameHaveRichPresence(visibleGame, items2) {
+  if (null !== visibleGame.id) {
+    if (undefined !== visibleGame.id) {
+      const application = ApplicationStore.getApplication(visibleGame.id);
       let tmp3 = null != application && null != application.linkedGames;
       if (tmp3) {
         tmp3 = application.linkedGames.length > 0;
@@ -18,10 +19,10 @@ export const doesGameHaveRichPresence = function doesGameHaveRichPresence(id, it
         tmp3 =
           undefined !==
           linkedGames.find((type) => {
-            let tmp = type.type === items2(closure_1_1[1]).GameLinkTypes.LINKED;
+            let tmp = type.type === Server.GameLinkTypes.LINKED;
             if (tmp) {
               const id = type.id;
-              tmp = null != id.find((application_id) => application_id.application_id === id);
+              tmp = null != items2.find((application_id) => application_id.application_id === id);
             }
             return tmp;
           });

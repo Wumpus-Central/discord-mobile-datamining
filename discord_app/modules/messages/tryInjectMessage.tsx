@@ -1,43 +1,45 @@
 // discord_app/modules/messages/tryInjectMessage.tsx
-import hasFlag from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import createMinimalMessageRecord from "MessageRecordUtils.tsx";
+import FlagUtils from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import MessageRecordUtils from "MessageRecordUtils.tsx";
 import createMessageDefault from "createMessage.tsx";
-import closure_3 from "../../stores/AuthenticationStore.tsx";
-import ME from "../../Constants.tsx";
+import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 
-require = arg1;
-({ MessageFlags: c4, MessageStates: c5, MessageTypes: closure_6 } = ME);
+require = fn;
+const Constants = fn(1074);
+({ MessageFlags: closure_4, MessageStates: hasOwnProperty, MessageTypes: metroRequire } = Constants);
 const map = new Map();
-let result = require("set").fileFinishedImporting("modules/messages/tryInjectMessage.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/messages/tryInjectMessage.tsx");
 
-export const tryCreateInjectedMessage = function tryCreateInjectedMessage(id, closure_0) {
+export const tryCreateInjectedMessage = function tryCreateInjectedMessage(id, id2) {
   let obj = map;
-  if (map.get(closure_0.id) === id.id) {
-    obj = { channelId: null, type: null, content: "", author: null, flags: null, state: null };
-    obj[0] = closure_0.id;
-    obj[1] = constants3.IN_GAME_MESSAGE_NUX;
-    obj[3] = id.author;
-    obj[4] = constants.EPHEMERAL;
-    obj[5] = constants2.SENT;
+  if (map.get(id2.id) === id.id) {
+    obj = {
+      channelId: id2.id,
+      type: constants3.IN_GAME_MESSAGE_NUX,
+      content: "",
+      author: id.author,
+      flags: constants.EPHEMERAL,
+      state: constants2.SENT,
+    };
     const tmp19 = createMessageDefault(obj);
-    const messageRecord = createMinimalMessageRecord.createMessageRecord(tmp19);
+    const messageRecord = MessageRecordUtils.createMessageRecord(tmp19);
     ({ applicationId: tmp21.applicationId, timestamp: tmp21.timestamp } = id);
     let tmp4 = messageRecord;
-    const obj9 = createMinimalMessageRecord;
   } else {
     tmp4 = null;
     if (null != id.applicationId) {
-      obj1 = hasFlag;
+      let obj1 = FlagUtils;
       tmp4 = null;
       if (obj1.hasFlag(id.flags, constants.SENT_BY_SOCIAL_LAYER_INTEGRATION)) {
         tmp4 = null;
-        if (closure_0.isDM()) {
+        if (id2.isDM()) {
           tmp4 = null;
-          if (id.author.id !== id.getId()) {
+          if (id.author.id !== AuthenticationStore.getId()) {
             tmp4 = null;
             if (null == id.activity) {
               let tmpResult = tmp(1384);
-              let num = closure_0.recipientFlags;
+              let num = id2.recipientFlags;
               if (num == null) {
                 num = 0;
               }
@@ -46,20 +48,22 @@ export const tryCreateInjectedMessage = function tryCreateInjectedMessage(id, cl
                 !tmpResult.hasFlag(num, tmp(11954).ChannelRecipientPrivateUserDataFlags.DISMISSED_IN_GAME_MESSAGE_NUX)
               ) {
                 tmp4 = null;
-                if (!obj.has(closure_0.id)) {
-                  obj = { channelId: null, type: null, content: "", author: null, flags: null, state: null };
-                  obj[0] = closure_0.id;
-                  obj[1] = constants3.IN_GAME_MESSAGE_NUX;
-                  obj[3] = id.author;
-                  obj[4] = tmp3.EPHEMERAL;
-                  obj[5] = constants2.SENT;
+                if (!obj.has(id2.id)) {
+                  obj = {
+                    channelId: id2.id,
+                    type: constants3.IN_GAME_MESSAGE_NUX,
+                    content: "",
+                    author: id.author,
+                    flags: tmp3.EPHEMERAL,
+                    state: constants2.SENT,
+                  };
                   tmpResult = tmp(4783);
                   const messageRecord1 = tmpResult.createMessageRecord(createMessageDefault(obj));
                   ({ applicationId: tmp10.applicationId, timestamp: tmp10.timestamp } = id);
-                  const result = obj.set(closure_0.id, id.id);
+                  const result = obj.set(id2.id, id.id);
                   const tmp6 = importDefault;
                   const tmp9 = createMessageDefault(obj);
-                  let num2 = closure_0.recipientFlags;
+                  let num2 = id2.recipientFlags;
                   if (num2 == null) {
                     num2 = 0;
                   }
@@ -69,7 +73,7 @@ export const tryCreateInjectedMessage = function tryCreateInjectedMessage(id, cl
                     tmp(11954).ChannelRecipientPrivateUserDataFlags.DISMISSED_IN_GAME_MESSAGE_NUX,
                     true,
                   );
-                  const result1 = tmp6(11955).updatePrivateChannelRecipientFlags(closure_0.id, setFlagResult);
+                  const result1 = tmp6(11955).updatePrivateChannelRecipientFlags(id2.id, setFlagResult);
                   tmp4 = messageRecord1;
                   const tmp6Result = tmp6(11955);
                 }
@@ -83,8 +87,7 @@ export const tryCreateInjectedMessage = function tryCreateInjectedMessage(id, cl
   }
   let tmp22 = null;
   if (null != tmp4) {
-    obj1 = { message: null, position: "before" };
-    obj1[0] = tmp4;
+    obj1 = { message: tmp4, position: "before" };
     tmp22 = obj1;
   }
   return tmp22;

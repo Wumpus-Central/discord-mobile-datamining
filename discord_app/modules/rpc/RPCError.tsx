@@ -1,7 +1,7 @@
 // discord_app/modules/rpc/RPCError.tsx
-import set from "../../../_runtime/00002_set.js";
-import prototype from "../../../discord_common/js/shared/lib/RPCError.tsx";
+import shared_RPCError from "../../../discord_common/js/shared/lib/RPCError.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/rpc/RPCError.tsx");
+const result = size.fileFinishedImporting("modules/rpc/RPCError.tsx");
 
-export default prototype.RPCError;
+export default shared_RPCError.RPCError;

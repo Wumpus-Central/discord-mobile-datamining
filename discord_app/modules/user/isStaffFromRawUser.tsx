@@ -1,9 +1,9 @@
 // discord_app/modules/user/isStaffFromRawUser.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
+import Constants from "../../Constants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const UserFlags = ME.UserFlags;
-const result = set.fileFinishedImporting("modules/user/isStaffFromRawUser.tsx");
+const UserFlags = Constants.UserFlags;
+const result = size.fileFinishedImporting("modules/user/isStaffFromRawUser.tsx");
 
 export default function isStaff(flags) {
   let num = flags.flags;

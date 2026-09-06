@@ -1,222 +1,201 @@
 // discord_app/modules/guild_boosting/native/GuildBoostPurchasingUtils.tsx
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../stores/billing/SubscriptionStore.tsx";
-import ME from "../../../Constants.tsx";
-import GuildFeatures from "../../premium/PremiumConstants.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import SubscriptionStore from "../../../stores/billing/SubscriptionStore.tsx";
 
-const require = arg1;
-function _launchGuildBoostFlowOrAlert() {
-  const self = this;
-  let tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c5 = 0;
-    c6 = 0;
-    c4 = 0;
-    const iter = (function* (arg0) {
-      if (premiumTypeSubscription === 2) {
-        premiumTypeSubscription = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp5 === 3) {
+const require = fn;
+let closure_10 = async function _launchGuildBoostFlowOrAlert(arg0, value) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp5 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
         if (arg0 === 1) {
-          throw arg1;
+          c6 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c6 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_3 = tmp2;
+          dependencyMap = tmp6;
+          closure_130_0 = undefined;
+          closure_130_1 = undefined;
+          closure_130_2 = undefined;
+          closure_130_3 = undefined;
+          closure_130_4 = undefined;
+          closure_130_5 = undefined;
+          ({
+            source: closure_130_0,
+            analyticsLocations: closure_130_1,
+            guildId: closure_130_2,
+            onBack: closure_130_3,
+            onPaymentSuccess: closure_130_4,
+            onPaymentDismiss: closure_130_5,
+          } = closure_0);
+          let premiumTypeSubscription;
+          let externalManagementMessage;
+          closure_130_8 = undefined;
+          let productIdFromSubscription;
+          closure_130_10 = undefined;
+          c5 = 1;
+          c6 = 1;
+          return { value: "PX_16", done: true };
         }
       } else {
-        try {
-          premiumTypeSubscription = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              premiumTypeSubscription = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              premiumTypeSubscription = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
+        if (1 === tmp6) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            let obj1 = { value, done: true };
+            return obj1;
+          } else if (closure_131_4.hasFetchedSubscriptions()) {
+            premiumTypeSubscription = closure_131_4.getPremiumTypeSubscription();
+            let obj3 = closure_131_0(closure_131_2[8]);
+            externalManagementMessage = obj3.getExternalManagementMessage(premiumTypeSubscription);
+            if (null != externalManagementMessage) {
+              (function alertUnableToManageSub(body, source) {
+                closure_1_1(4905);
+                let obj = { title: null, body: null };
+                const intl = closure_1_0(1114).intl;
+                obj.title = intl.string(closure_1_0(1114).t["8P7MX0"]);
+                obj.body = body;
+                obj.show(obj);
+                obj = { type: closure_1_6.IOS_CANNOT_MANAGE_SUBSCRIPTION, source };
+                closure_1_1(1242).track(constants.OPEN_MODAL, obj);
+              })(externalManagementMessage, closure_130_0);
             } else {
-              c3 = tmp2;
-              dependencyMap = tmp6;
-              let callback;
-              c1 = undefined;
-              dependencyMap = undefined;
-              c3 = undefined;
-              c4 = undefined;
-              c5 = undefined;
-              ({
-                source: c0,
-                analyticsLocations: c1,
-                guildId: c2,
-                onBack: c3,
-                onPaymentSuccess: c4,
-                onPaymentDismiss: c5,
-              } = callback);
-              premiumTypeSubscription = undefined;
-              let externalManagementMessage;
-              c8 = undefined;
-              let constants;
-              let mobileBoostingEnabled;
-              c5 = 1;
-              premiumTypeSubscription = 1;
-              return { value: "PX_16", done: true };
+              closure_130_8 = null;
+              if (null != premiumTypeSubscription) {
+                c4 = 1;
+                productIdFromSubscription = closure_131_0(closure_131_2[9]).getProductIdFromSubscription(
+                  premiumTypeSubscription,
+                  true,
+                );
+                const tmp64 = closure_131_0(closure_131_2[10]).AppStorePremiumProductIdsToPremiumBundledItems[
+                  productIdFromSubscription
+                ];
+                let interval;
+                if (tmp64 != null) {
+                  interval = tmp64.interval;
+                }
+                c1 = interval;
+                if (interval == null) {
+                  c1 = null;
+                }
+                closure_130_8 = c1;
+                c4 = 0;
+                const obj11 = closure_131_0(closure_131_2[9]);
+              }
             }
+            c6 = 3;
           } else {
-            if (1 === tmp6) {
-              if (arg0 === 1) {
-                premiumTypeSubscription = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                premiumTypeSubscription = 3;
-                obj1 = { value: null, done: true };
-                obj1[0] = arg1;
-                return obj1;
-              } else if (c4.hasFetchedSubscriptions()) {
-                premiumTypeSubscription = c4.getPremiumTypeSubscription();
-                let obj3 = callback(7404);
-                externalManagementMessage = obj3.getExternalManagementMessage(premiumTypeSubscription);
-                if (null != externalManagementMessage) {
-                  (function alertUnableToManageSub(closure_7, c0) {
-                    let obj = _null(_undefined2[4]);
-                    obj = { title: null, body: null };
-                    const intl = _undefined(_undefined2[5]).intl;
-                    obj[0] = intl.string(_undefined(_undefined2[5]).t["8P7MX0"]);
-                    obj[1] = closure_7;
-                    obj.show(obj);
-                    obj = { type: c6.IOS_CANNOT_MANAGE_SUBSCRIPTION, source: c0 };
-                    _null(_undefined2[6]).track(constants.OPEN_MODAL, obj);
-                  })(externalManagementMessage, callback);
-                } else {
-                  c8 = null;
-                  if (null != premiumTypeSubscription) {
-                    c4 = 1;
-                    constants = callback(7409).getProductIdFromSubscription(premiumTypeSubscription, true);
-                    const tmp65 = callback(7240).AppStorePremiumProductIdsToPremiumBundledItems[constants];
-                    let interval;
-                    if (tmp65 != null) {
-                      interval = tmp65.interval;
-                    }
-                    c1 = interval;
-                    if (interval == null) {
-                      c1 = null;
-                    }
-                    c8 = c1;
-                    c4 = 0;
-                    const obj11 = callback(7409);
-                  }
-                }
-                premiumTypeSubscription = 3;
-              } else {
-                obj1 = callback(4884);
-                c5 = 2;
-                premiumTypeSubscription = 1;
-                let obj2 = { value: null, done: false };
-                obj2[0] = obj1.fetchSubscriptions();
-                return obj2;
-              }
-            } else if (2 === tmp6) {
-              if (arg0 === 1) {
-                premiumTypeSubscription = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                premiumTypeSubscription = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              }
-            } else {
-              c4 = 0;
-              c8 = null;
-            }
-            mobileBoostingEnabled = callback(7410).getMobileBoostingEnabled("GuildBoostPurchasing");
-            if (mobileBoostingEnabled) {
-              mobileBoostingEnabled = c8 === constants.YEAR;
-            }
-            const obj5 = callback(7410);
-            obj3 = {
-              showCurrentPlan: false,
-              isBoostPurchaseFlow: true,
-              allowYearlyBundles: null,
-              predicate: null,
-              analyticsLocation: null,
-              analyticsLocations: null,
-              guildId: null,
-              onBack: null,
-              onPaymentSuccess: null,
-              onPaymentDismiss: null,
-            };
-            obj3[2] = mobileBoostingEnabled;
-            obj3[3] = function predicate(interval) {
-              let tmp = !mobileBoostingEnabled;
-              if (mobileBoostingEnabled) {
-                let tmp3 = interval.interval !== constants2.YEAR;
-                if (!tmp3) {
-                  tmp3 = interval.numPremiumGuild > 5;
-                }
-                tmp = !tmp3;
-              }
-              if (tmp) {
-                let num2 = 0;
-                if (interval.premiumTier === _null2.TIER_2) {
-                  num2 = closure_7;
-                }
-                let num3 = 0;
-                const sum = interval.numPremiumGuild + num2;
-                if (null != c6) {
-                  const numPremiumGuildSubscriptions = _undefined(_undefined2[13]).getNumPremiumGuildSubscriptions(
-                    c6.additionalPlans,
-                  );
-                  const obj = _undefined(_undefined2[13]);
-                  num3 =
-                    numPremiumGuildSubscriptions +
-                    _null(_undefined2[13]).getNumIncludedPremiumGuildSubscriptionSlots(c6.planId);
-                  const obj2 = _null(_undefined2[13]);
-                }
-                tmp = sum > num3;
-              }
-              return tmp;
-            };
-            obj3[4] = callback;
-            obj3[5] = c1;
-            obj3[6] = dependencyMap;
-            obj3[7] = c3;
-            obj3[8] = c4;
-            obj3[9] = c5;
-            const result = callback(7411).launchPremiumPlanSelect(obj3);
-            const obj6 = callback(7411);
+            obj1 = closure_131_0(closure_131_2[7]);
+            c5 = 2;
+            c6 = 1;
+            let obj2 = { value: obj1.fetchSubscriptions(), done: false };
+            return obj2;
           }
-        } catch (tmp45) {
-          if (tmp3 === c4) {
-            premiumTypeSubscription = tmp;
-            throw tmp45;
-          } else {
-            c5 = tmp;
+        } else if (2 === tmp6) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            obj = { value, done: true };
+            return obj;
           }
+        } else {
+          c4 = 0;
+          closure_130_8 = null;
         }
+        let mobileBoostingEnabled = closure_131_0(closure_131_2[11]).getMobileBoostingEnabled("GuildBoostPurchasing");
+        if (mobileBoostingEnabled) {
+          mobileBoostingEnabled = closure_130_8 === closure_131_9.YEAR;
+        }
+        closure_130_10 = mobileBoostingEnabled;
+        const obj5 = closure_131_0(closure_131_2[11]);
+        obj3 = {
+          showCurrentPlan: false,
+          isBoostPurchaseFlow: true,
+          allowYearlyBundles: closure_130_10,
+          predicate(interval) {
+            let tmp = !closure_1_10;
+            if (closure_1_10) {
+              let tmp3 = interval.interval !== constants.YEAR;
+              if (!tmp3) {
+                tmp3 = interval.numPremiumGuild > 5;
+              }
+              tmp = !tmp3;
+            }
+            if (tmp) {
+              let num2 = 0;
+              if (interval.premiumTier === TIER_2.TIER_2) {
+                num2 = closure_2_7;
+              }
+              let num3 = 0;
+              const sum = interval.numPremiumGuild + num2;
+              if (null != closure_1_6) {
+                const numPremiumGuildSubscriptions = closure_0(4218).getNumPremiumGuildSubscriptions(
+                  closure_1_6.additionalPlans,
+                );
+                const obj = closure_0(4218);
+                num3 =
+                  numPremiumGuildSubscriptions +
+                  c1(4218).getNumIncludedPremiumGuildSubscriptionSlots(closure_1_6.planId);
+                const obj2 = c1(4218);
+              }
+              tmp = sum > num3;
+            }
+            return tmp;
+          },
+          analyticsLocation: closure_130_0,
+          analyticsLocations: closure_130_1,
+          guildId: closure_130_2,
+          onBack: closure_130_3,
+          onPaymentSuccess: closure_130_4,
+          onPaymentDismiss: closure_130_5,
+        };
+        const result = closure_131_0(closure_131_2[12]).launchPremiumPlanSelect(obj3);
+        const obj6 = closure_131_0(closure_131_2[12]);
       }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_10 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp45) {
+      if (tmp3 === c4) {
+        c6 = tmp;
+        throw tmp45;
+      } else {
+        c5 = tmp;
+      }
+    }
   }
-  return applyArgumentsResult;
-}
-({ AnalyticEvents: c5, AnalyticsSections: closure_6 } = ME);
-({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: error, PremiumTypes: closure_8, SubscriptionIntervalTypes: c9 } = GuildFeatures);
-let result = require("set").fileFinishedImporting("modules/guild_boosting/native/GuildBoostPurchasingUtils.tsx");
+};
+const Constants = fn(1074);
+({ AnalyticEvents: hasOwnProperty, AnalyticsSections: metroRequire } = Constants);
+const PremiumConstants = fn(1373);
+({
+  NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_7,
+  PremiumTypes: closure_8,
+  SubscriptionIntervalTypes: closure_9,
+} = PremiumConstants);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_boosting/native/GuildBoostPurchasingUtils.tsx");
 
-export const launchGuildBoostFlowOrAlert = function launchGuildBoostFlowOrAlert(arg0) {
+export const launchGuildBoostFlowOrAlert = function launchGuildBoostFlowOrAlert() {
   const self = this;
-  const apply = _launchGuildBoostFlowOrAlert.apply;
+  const apply = closure_10.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

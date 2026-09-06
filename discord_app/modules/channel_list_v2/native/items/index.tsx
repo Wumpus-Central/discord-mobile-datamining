@@ -1,15 +1,15 @@
 // discord_app/modules/channel_list_v2/native/items/index.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import renderCategoryItem from "RedesignCategory.tsx";
+import RedesignCategory from "RedesignCategory.tsx";
 import ThreadChannelDefault from "ThreadChannel.tsx";
 import RedesignVoiceUserSummaryDefault from "RedesignVoiceUserSummary.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/channel_list_v2/native/items/index.tsx");
+const result = size.fileFinishedImporting("modules/channel_list_v2/native/items/index.tsx");
 
-export const CategoryChannel = renderCategoryItem.CategoryChannel;
-export const SuggestedCategory = renderCategoryItem.SuggestedCategory;
-export const RecentlyActiveCategory = renderCategoryItem.RecentlyActiveCategory;
-export const renderCategoryItem = renderCategoryItem.renderCategoryItem;
-export const useCategoryStyles = renderCategoryItem.useCategoryStyles;
+export const CategoryChannel = RedesignCategory.CategoryChannel;
+export const SuggestedCategory = RedesignCategory.SuggestedCategory;
+export const RecentlyActiveCategory = RedesignCategory.RecentlyActiveCategory;
+export const renderCategoryItem = RedesignCategory.renderCategoryItem;
+export const useCategoryStyles = RedesignCategory.useCategoryStyles;
 export const ThreadChannel = ThreadChannelDefault;
 export const RedesignVoiceUserSummary = RedesignVoiceUserSummaryDefault;

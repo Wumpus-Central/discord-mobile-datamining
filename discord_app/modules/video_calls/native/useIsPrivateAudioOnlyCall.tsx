@@ -1,35 +1,35 @@
 // discord_app/modules/video_calls/native/useIsPrivateAudioOnlyCall.tsx
-import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../activities/EmbeddedActivitiesStore.tsx";
-import closure_4 from "../../calls/ChannelRTCStore.tsx";
-import closure_5 from "../../../stores/ApplicationStreamingStore.tsx";
-import closure_6 from "../../../stores/MediaEngineStore.tsx";
-import closure_7 from "../../../stores/VoiceStateStore.tsx";
-import { isActivityParticipant } from "../../calls/CallConstants.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import EmbeddedActivitiesStore from "../../activities/EmbeddedActivitiesStore.tsx";
+import ChannelRTCStore from "../../calls/ChannelRTCStore.tsx";
+import ApplicationStreamingStore from "../../../stores/ApplicationStreamingStore.tsx";
+import MediaEngineStore from "../../../stores/MediaEngineStore.tsx";
+import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
 
-const require = arg1;
+const require = fn;
 function areParticipantStatesEqual(arg0, arg1) {
   [, tmp] = arg0;
   [, tmp2] = arg1;
   return tmp === tmp2;
 }
-const result = require("set").fileFinishedImporting("modules/video_calls/native/useIsPrivateAudioOnlyCall.tsx");
+const isActivityParticipant = fn(4581).isActivityParticipant;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/native/useIsPrivateAudioOnlyCall.tsx");
 
 export default function useIsPrivateAudioOnlyCall(id) {
-  const _require = id;
-  let items = [closure_4];
+  _require = id;
+  let items = [ChannelRTCStore];
   const items1 = [id];
-  let tmp3 = embeddedActivitiesForChannel.getEmbeddedActivitiesForChannel(id.id).length > 0;
+  let tmp3 = EmbeddedActivitiesStore.getEmbeddedActivitiesForChannel(id.id).length > 0;
   if (!tmp3) {
     tmp3 = isActivityParticipant(
-      callback(
+      _slicedToArray(
         obj.useStateFromStores(
           items,
           () => {
             const items = [
-              closure_1_4.getSelectedParticipant(_private.id),
-              closure_1_4.getParticipantsVersion(_private.id),
+              ChannelRTCStore.getSelectedParticipant(_private.id),
+              ChannelRTCStore.getParticipantsVersion(_private.id),
             ];
             return items;
           },
@@ -41,28 +41,27 @@ export default function useIsPrivateAudioOnlyCall(id) {
     );
   }
   dependencyMap = tmp3;
-  obj = initialize;
-  const tmp = _require;
-  const items2 = [closure_7, closure_6, closure_5];
+  obj = require("initialize");
+  const items2 = [VoiceStateStore, MediaEngineStore, ApplicationStreamingStore];
   const items3 = [id, tmp3];
-  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+  return require("initialize").useStateFromStores(
     items2,
     () => {
       let isPrivateResult = _private.isPrivate();
       if (isPrivateResult) {
-        isPrivateResult = !closure_1_7.hasVideo(tmp.id);
+        isPrivateResult = !VoiceStateStore.hasVideo(tmp.id);
       }
       if (isPrivateResult) {
         isPrivateResult = !closure_1;
       }
       if (isPrivateResult) {
-        isPrivateResult = 0 === closure_1_5.getAllApplicationStreamsForChannel(tmp.id).length;
+        isPrivateResult = 0 === ApplicationStreamingStore.getAllApplicationStreamsForChannel(tmp.id).length;
       }
       if (isPrivateResult) {
-        isPrivateResult = 0 === closure_1_5.getAllActiveStreamsForChannel(tmp.id).length;
+        isPrivateResult = 0 === ApplicationStreamingStore.getAllActiveStreamsForChannel(tmp.id).length;
       }
       if (isPrivateResult) {
-        isPrivateResult = !closure_1_6.isVideoEnabled();
+        isPrivateResult = !MediaEngineStore.isVideoEnabled();
       }
       return isPrivateResult;
     },

@@ -1,15 +1,16 @@
 // discord_app/modules/guilds_bar/hooks/useGuildsBarSelectedGuildScroller.tsx
-import closure_0 from "../../../../_runtime/00019_noop.js";
-import closure_1 from "../../../stores/SelectedGuildStore.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
 
-const result = require("set").fileFinishedImporting("modules/guilds_bar/hooks/useGuildsBarSelectedGuildScroller.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guilds_bar/hooks/useGuildsBarSelectedGuildScroller.tsx");
 
 export default function useGuildsBarSelectedGuildScroller(arg0) {
-  const React = arg0;
+  noop = arg0;
   const items = [arg0];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     function handleSelectedGuildChange() {
-      let guildId = closure_2_1.getGuildId();
+      let guildId = SelectedGuildStore.getGuildId();
       if (guildId !== c0) {
         let tmp3 = guildId;
         if (guildId == null) {
@@ -19,14 +20,13 @@ export default function useGuildsBarSelectedGuildScroller(arg0) {
         if (guildId == null) {
           guildId = null;
         }
-        c0(guildId, false);
-        const tmp4 = c0;
+        _null(guildId, false);
       }
     }
     c0 = null;
-    closure_1_1.addChangeListener(handleSelectedGuildChange);
+    SelectedGuildStore.addChangeListener(handleSelectedGuildChange);
     return () => {
-      closure_2_1.removeChangeListener(handleSelectedGuildChange);
+      SelectedGuildStore.removeChangeListener(handleSelectedGuildChange);
     };
   }, items);
 }

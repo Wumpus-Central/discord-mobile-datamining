@@ -1,43 +1,42 @@
 // discord_app/design/components/RowGroup/native/RowGroup.native.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import Stack from "../../Stack/native/Stack.native.tsx";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Stack_Stack from "../../Stack/native/Stack.native.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-createCacheKey = { container: { overflow: "hidden" }, content: null };
-createCacheKey = {
-  backgroundColor: ThemesDefault.colors.TABLEROW_BACKGROUND_DEFAULT,
-  borderRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS,
-  padding: ThemesDefault.modules.mobile.TABLE_ROW_PADDING,
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+fn(4560);
+let createStyles = { container: { overflow: "hidden" }, content: null };
+createStyles = {
+  backgroundColor: nativeDefault.colors.TABLEROW_BACKGROUND_DEFAULT,
+  borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS,
+  padding: nativeDefault.modules.mobile.TABLE_ROW_PADDING,
 };
-createCacheKey[1] = createCacheKey;
-let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("design/components/RowGroup/native/RowGroup.native.tsx");
+createStyles.content = createStyles;
+let closure_5 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/RowGroup/native/RowGroup.native.tsx");
 
 export const RowGroup = function RowGroup(children) {
   ({ title, trailing } = children);
-  const tmp = callback2();
+  const tmp = closure_5();
   let obj = { style: tmp.container, children: null };
   let tmp2Result = null != title || null != trailing;
   if (tmp2Result) {
     let tmp7 = null != title;
     if (tmp7) {
-      obj = { title: null };
-      obj[0] = title;
-      tmp7 = callback(tmp5(5687).TableRowGroupTitle, obj);
+      obj = { title };
+      tmp7 = React3(tmp5(5687).TableRowGroupTitle, obj);
     }
     obj = { direction: "horizontal", spacing: 4, children: null };
     const items = [tmp7, trailing];
-    obj[2] = items;
-    tmp2Result = tmp2(Stack.Stack, obj);
+    obj.children = items;
+    tmp2Result = tmp2(Stack_Stack.Stack, obj);
     tmp5 = require;
   }
-  const items1 = [tmp2Result, callback(View, { style: tmp.content, children: children.children })];
-  obj[1] = items1;
-  return closure_4(View, obj);
+  const items1 = [tmp2Result, React3(View, { style: tmp.content, children: children.children })];
+  obj.children = items1;
+  return React4(View, obj);
 };

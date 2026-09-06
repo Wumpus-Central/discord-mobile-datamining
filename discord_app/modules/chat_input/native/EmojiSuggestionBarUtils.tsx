@@ -1,25 +1,29 @@
 // discord_app/modules/chat_input/native/EmojiSuggestionBarUtils.tsx
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
-import closure_5 from "../../a11y/AccessibilityStore.tsx";
-import { UpsellTypes } from "../../../Constants.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import native from "../../../../discord_common/js/packages/design/native.tsx";
+import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
+import spring from "../../../design/animation/reanimated/spring/spring.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
+import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
-const require = arg1;
+require = fn;
+const UpsellTypes = fn(1074).UpsellTypes;
+const jsx = fn(21).jsx;
 let closure_8 = { focused: false, text: "", selectionStart: 0, selectionEnd: 0 };
-let obj = { duration: 250, easing: require("Button").STANDARD_EASING };
+const SUGGESTION_BAR_HEIGHT_TIMING = { duration: 250, easing: fn(1178).STANDARD_EASING };
 let closure_10 = { duration: 200, dampingRatio: 0.7 };
-let closure_11 = {
+const __initData = {
   code: "function EmojiSuggestionBarUtilsTsx1(){const{progress}=this.__closure;return{opacity:progress.get(),transform:[{scale:progress.get()}]};}",
 };
 let closure_12 = {
   code: "function EmojiSuggestionBarUtilsTsx2(finished){const{runOnJS,cleanUp}=this.__closure;if(finished){runOnJS(cleanUp)();}}",
 };
-let result = require("set").fileFinishedImporting("modules/chat_input/native/EmojiSuggestionBarUtils.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/chat_input/native/EmojiSuggestionBarUtils.tsx");
 
 export const MAX_SUGGESTIONS_LARGE = 12;
 export const SET_DATA_DEBOUNCE_MS = 16;
-export const SUGGESTION_BAR_HEIGHT_TIMING = obj;
+export { SUGGESTION_BAR_HEIGHT_TIMING };
 export const sortEmojisForDisplay = function sortEmojisForDisplay(unlockedEmojis, lockedEmojis, length) {
   length = unlockedEmojis.length;
   let length2 = lockedEmojis.length;
@@ -71,65 +75,62 @@ export const EmojiEntranceAnimation = function EmojiEntranceAnimation(children) 
   let sharedValue;
   sharedValue = index(sharedValue[6]).useSharedValue(0);
   let items = [sharedValue, index, reducedMotion];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     let num = 0;
     if (!reducedMotion) {
       num = 20 * index;
     }
-    obj = index(sharedValue[6]);
-    const result = sharedValue.set(obj.withDelay(num, index(sharedValue[7]).withSpring(1, closure_1_10)));
+    obj = ReanimatedRexport;
+    const result = sharedValue.set(obj.withDelay(num, spring.withSpring(1, closure_10)));
   }, items);
   obj = index(sharedValue[6]);
   const fn = function c() {
     obj = { opacity: sharedValue.get(), transform: null };
     obj = { scale: sharedValue.get() };
     const items = [obj];
-    obj[1] = items;
+    obj.transform = items;
     return obj;
   };
   fn.__closure = { progress: sharedValue };
   fn.__workletHash = 4132686130287;
-  fn.__initData = closure_11;
+  fn.__initData = __initData;
   const style = index(sharedValue[6]).useAnimatedStyle(fn);
   return jsx(reducedMotion(sharedValue[6]).View, { style, children: children.children });
 };
 export const useSuggestionBarHeight = function useSuggestionBarHeight(
   transitionState,
   cleanUp,
-  closure_6,
+  arg2,
   onOccupiedHeightChange,
 ) {
-  const _require = transitionState;
-  closure_1 = cleanUp;
-  dependencyMap = closure_6;
+  _require = transitionState;
+  dependencyMap = arg2;
   closure_3 = onOccupiedHeightChange;
-  const sharedValue = require("../../reanimated/ReanimatedRexport.tsx").useSharedValue(0);
-  const items = [transitionState, sharedValue, cleanUp, closure_6, onOccupiedHeightChange];
+  const sharedValue = require("ReanimatedRexport").useSharedValue(0);
+  const items = [transitionState, sharedValue, cleanUp, arg2, onOccupiedHeightChange];
   const effect = sharedValue.useEffect(() => {
-    if (transitionState === transitionState(table[8]).TransitionStates.YEETED) {
+    if (closure_0 === native.TransitionStates.YEETED) {
       if (closure_3 != null) {
         tmp11(0);
       }
-      let tmpResult = tmp(tmp2[9]);
+      let tmpResult = tmp(4561);
       const fn = function n(arg0) {
         if (arg0) {
-          closure_1_0(closure_1_2[6]).runOnJS(closure_1)();
-          obj = closure_1_0(closure_1_2[6]);
+          closure_0(dependencyMap[6]).runOnJS(cleanUp)();
+          obj = closure_0(dependencyMap[6]);
         }
       };
-      obj = { runOnJS: null, cleanUp: null };
-      obj[0] = tmp(tmp2[6]).runOnJS;
-      obj[1] = closure_1;
-      fn.__closure = obj;
+      const __closure = { runOnJS: tmp(4296).runOnJS, cleanUp };
+      fn.__closure = __closure;
       fn.__workletHash = 15923583203906;
-      fn.__initData = closure_1_12;
-      const result = sharedValue.set(tmpResult.withTiming(0, closure_1_9, "respect-motion-settings", fn));
+      fn.__initData = __initData;
+      const result = sharedValue.set(tmpResult.withTiming(0, __closure, "respect-motion-settings", fn));
     } else {
       if (closure_3 != null) {
-        tmp3(table);
+        tmp3(dependencyMap);
       }
-      tmpResult = tmp(tmp2[9]);
-      const result1 = sharedValue.set(tmpResult.withTiming(table, closure_1_9));
+      tmpResult = tmp(4561);
+      const result1 = sharedValue.set(tmpResult.withTiming(dependencyMap, __closure));
     }
   }, items);
   return sharedValue;
@@ -142,7 +143,6 @@ export const useEmojiSuggestionBarState = function useEmojiSuggestionBarState(me
   let queryStart;
   let queryEnd;
   let clear;
-  obj = queryStart;
   ({ channel, suppressed } = merged);
   const tmp = setDataImmediate(queryStart.useState(closure_8), 2);
   const first = tmp[0];
@@ -160,8 +160,8 @@ export const useEmojiSuggestionBarState = function useEmojiSuggestionBarState(me
   if (focused) {
     focused = !suppressed;
   }
-  obj[4] = focused;
-  obj[5] = MAX_SUGGESTIONS_LARGE;
+  obj.enabled = focused;
+  obj.maxCount = MAX_SUGGESTIONS_LARGE;
   const tmp6Result = chatInputStateRef(setData[12])(obj);
   queryStart = tmp6Result.queryStart;
   queryEnd = tmp6Result.queryEnd;
@@ -170,31 +170,33 @@ export const useEmojiSuggestionBarState = function useEmojiSuggestionBarState(me
     unlockedEmojis: tmp6Result.unlockedEmojis,
     lockedEmojis: tmp6Result.lockedEmojis,
     reducedMotion: stateFromStores,
-    handlePress: obj.useCallback((arg0) => {
-      const combined = "" + chatInputStateRef(setData[13])(arg0) + " ";
-      const current = combined.current;
-      obj = { location: queryStart, length: queryEnd - queryStart, text: combined, editId };
-      editId = ref.current.editId;
-      current.replaceRange(obj);
-      setDataImmediate((text) => {
-        obj = {};
-        const merged = Object.assign(text);
-        text = text.text;
-        const text1 = text.text;
-        const sum = text.slice(0, closure_1_4) + combined;
-        obj.text = sum + text1.slice(closure_1_5);
-        obj.selectionStart = closure_1;
-        obj.selectionEnd = closure_1;
-        return obj;
-      });
-      clear();
-    }, items2),
+    handlePress: null,
     handlePressEmojiUnavailable: obj.useCallback((animated) => {
-      obj = chatInputStateRef(setData[14]);
+      chatInputStateRef(setData[14]);
       obj = { initialUpsellKey: animated.animated ? tmp.ANIMATED_EMOJI : tmp.GLOBAL_EMOJI };
       const result = obj.handleShowUpsellAlert(obj);
     }, []),
   };
-  items2 = [chatInputRef, chatInputStateRef, queryStart, queryEnd, clear, setDataImmediate];
+  const items2 = [chatInputRef, chatInputStateRef, queryStart, queryEnd, clear, setDataImmediate];
+  obj.handlePress = obj.useCallback((arg0) => {
+    const combined = "" + chatInputStateRef(setData[13])(arg0) + " ";
+    const current = combined.current;
+    obj = { location: queryStart, length: queryEnd - queryStart, text: combined, editId: null };
+    const editId = ref.current.editId;
+    obj.editId = editId;
+    current.replaceRange(obj);
+    setDataImmediate((text) => {
+      obj = {};
+      const merged = Object.assign(text);
+      text = text.text;
+      const text1 = text.text;
+      const sum = text.slice(0, queryStart) + combined;
+      obj.text = sum + text1.slice(queryEnd);
+      obj.selectionStart = selectionEnd;
+      obj.selectionEnd = selectionEnd;
+      return obj;
+    });
+    clear();
+  }, items2);
   return obj;
 };

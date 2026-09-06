@@ -1,12 +1,13 @@
 // discord_app/modules/guild_onboarding_home/getNextResourceChannel.tsx
-import closure_2 from "GuildOnboardingHomeSettingsStore.tsx";
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/getNextResourceChannel.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_onboarding_home/getNextResourceChannel.tsx");
 
-export default function getCurrentAndNextResourceChannel(closure_0) {
+export default function getCurrentAndNextResourceChannel(guildId, arg1) {
   closure_0 = arg1;
-  resourceChannels = resourceChannels.getResourceChannels(closure_0);
+  const resourceChannels = GuildOnboardingHomeSettingsStore.getResourceChannels(guildId);
   const findIndexResult = resourceChannels.findIndex((channelId) => channelId.channelId === closure_0);
   if (findIndexResult < 0) {
     let items = [null, null];
@@ -16,11 +17,11 @@ export default function getCurrentAndNextResourceChannel(closure_0) {
   return items;
 }
 export const usePreviousAndNextResourceChannel = function usePreviousAndNextResourceChannel(guild_id, id) {
-  const _require = guild_id;
+  _require = guild_id;
   dependencyMap = id;
-  const items = [closure_2];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
-    closure_1_2.getResourceChannels(closure_0),
+  const items = [GuildOnboardingHomeSettingsStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () =>
+    GuildOnboardingHomeSettingsStore.getResourceChannels(closure_0),
   );
   const findIndexResult = stateFromStores.findIndex((channelId) => channelId.channelId === closure_1);
   if (findIndexResult >= 0) {

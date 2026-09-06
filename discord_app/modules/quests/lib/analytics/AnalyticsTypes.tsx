@@ -1,13 +1,13 @@
 // discord_app/modules/quests/lib/analytics/AnalyticsTypes.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import QuestsVisibleMessagesChangedSource from "../../QuestTypes.tsx";
+import QuestTypes from "../../QuestTypes.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-let closure_2 = Object.keys(QuestsVisibleMessagesChangedSource.QuestContent);
-const result = set.fileFinishedImporting("modules/quests/lib/analytics/AnalyticsTypes.tsx");
+let closure_2 = Object.keys(QuestTypes.QuestContent);
+const result = size.fileFinishedImporting("modules/quests/lib/analytics/AnalyticsTypes.tsx");
 
 export const getQuestContentName = function getQuestContentName(questContent) {
   closure_0 = questContent;
-  let str = closure_2.find((arg0) => questContent(closure_1_1[0]).QuestContent[arg0] === questContent);
+  let str = closure_2.find((item) => QuestTypes.QuestContent[item] === closure_0);
   if (str == null) {
     str = "";
   }
@@ -50,13 +50,13 @@ export const getContentProperties = function getContentProperties(
 ) {
   const obj = { content_id: questContent, content_name: null, content_position: null, row_index: null };
   closure_0 = questContent;
-  let str = closure_2.find((arg0) => questContent(closure_1_1[0]).QuestContent[arg0] === questContent);
+  let str = closure_2.find((item) => QuestTypes.QuestContent[item] === closure_0);
   if (str == null) {
     str = "";
   }
-  obj[1] = str;
-  obj[2] = questContentPosition;
-  obj[3] = questContentRowIndex;
+  obj.content_name = str;
+  obj.content_position = questContentPosition;
+  obj.row_index = questContentRowIndex;
   return obj;
 };
 export const BountyScrollingType = { AUTO: "AUTO", MANUAL: "MANUAL" };

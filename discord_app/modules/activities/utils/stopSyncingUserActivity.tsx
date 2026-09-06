@@ -1,9 +1,9 @@
 // discord_app/modules/activities/utils/stopSyncingUserActivity.tsx
-import set from "../../../../_runtime/00002_set.js";
-import dispatcherDefault from "../../../Dispatcher.tsx";
+import DispatcherDefault from "../../../Dispatcher.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/activities/utils/stopSyncingUserActivity.tsx");
+const result = size.fileFinishedImporting("modules/activities/utils/stopSyncingUserActivity.tsx");
 
 export default function stopSyncingUserActivity() {
-  dispatcherDefault.dispatch({ type: "ACTIVITY_SYNC_STOP" });
+  DispatcherDefault.dispatch({ type: "ACTIVITY_SYNC_STOP" });
 }

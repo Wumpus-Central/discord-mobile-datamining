@@ -1,23 +1,21 @@
 // discord_app/modules/guild_role_subscriptions/useUserRoleSubscriptionRelationship.tsx
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import closure_2 from "SubscriptionRoleStore.tsx";
-import { UserGuildRoleSubscriptionRelationship as closure_3 } from "GuildRoleSubscriptionsConstants.tsx";
+import SubscriptionRoleStore from "SubscriptionRoleStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting(
-  "modules/guild_role_subscriptions/useUserRoleSubscriptionRelationship.tsx",
-);
+require = fn;
+const constants = fn(15205).UserGuildRoleSubscriptionRelationship;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useUserRoleSubscriptionRelationship.tsx");
 
 export default function useUserRoleSubscriptionRelationship() {
-  let items = [closure_2];
+  let items = [SubscriptionRoleStore];
   return initialize.useStateFromStores(items, () => {
-    const items = [closure_2];
+    const items = [SubscriptionRoleStore];
     [obj] = items;
-    c1 = undefined;
     const guildIdsWithPurchasableRoles = obj.getGuildIdsWithPurchasableRoles();
     c1 = false;
-    const item = guildIdsWithPurchasableRoles.forEach((guildId) => {
-      if (userSubscriptionRoles.getUserSubscriptionRoles(guildId).size > 0) {
+    const item = guildIdsWithPurchasableRoles.forEach((item) => {
+      if (userSubscriptionRoles.getUserSubscriptionRoles(item).size > 0) {
         c1 = true;
       }
     });
@@ -34,15 +32,14 @@ export default function useUserRoleSubscriptionRelationship() {
 export const getUserRoleSubscriptionRelationship = function getUserRoleSubscriptionRelationship() {
   let tmp = arg0;
   if (arg0 === undefined) {
-    const items = [closure_2];
+    const items = [SubscriptionRoleStore];
     tmp = items;
   }
   [obj] = tmp;
-  c1 = undefined;
   const guildIdsWithPurchasableRoles = obj.getGuildIdsWithPurchasableRoles();
   c1 = false;
-  const item = guildIdsWithPurchasableRoles.forEach((guildId) => {
-    if (userSubscriptionRoles.getUserSubscriptionRoles(guildId).size > 0) {
+  const item = guildIdsWithPurchasableRoles.forEach((item) => {
+    if (userSubscriptionRoles.getUserSubscriptionRoles(item).size > 0) {
       c1 = true;
     }
   });

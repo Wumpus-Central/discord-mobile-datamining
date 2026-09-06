@@ -1,9 +1,9 @@
 // discord_common/js/packages/rpc-schema/helpers.tsx
-import set from "../../../../_runtime/00002_set.js";
-import sum from "../../shared/Constants.tsx";
+import Constants from "../../shared/Constants.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-({ RPCCommands, RPCEvents } = sum);
-const result = set.fileFinishedImporting("../discord_common/js/packages/rpc-schema/helpers.tsx");
+({ RPCCommands, RPCEvents } = Constants);
+const result = size.fileFinishedImporting("../discord_common/js/packages/rpc-schema/helpers.tsx");
 
 export const RPCCommand = RPCCommands;
 export const RPCEvent = RPCEvents;

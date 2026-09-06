@@ -1,12 +1,11 @@
 // discord_app/modules/user_profile/DisplayProfile.tsx
-import set from "../../../_runtime/00002_set.js";
-import GuildFeatures from "../premium/PremiumConstants.tsx";
-import getAvatarURL from "../../utils/AvatarUtils.tsx";
-import useAvatarsWithGuilds from "../profile_customization/ProfileCustomizationUtils.tsx";
-import { items } from "UserProfileGameWidgetTypes.tsx";
+import PremiumConstants from "../premium/PremiumConstants.tsx";
+import AvatarUtils from "../../utils/AvatarUtils.tsx";
+import ProfileCustomizationUtils from "../profile_customization/ProfileCustomizationUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const PremiumTypes = GuildFeatures.PremiumTypes;
-const result = set.fileFinishedImporting("modules/user_profile/DisplayProfile.tsx");
+const PremiumTypes = PremiumConstants.PremiumTypes;
+const result = size.fileFinishedImporting("modules/user_profile/DisplayProfile.tsx");
 class DisplayProfile {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
@@ -119,14 +118,14 @@ Object.defineProperty(prototype, "gameWidgets", {
     const widgets = this._userProfile.widgets;
     let found;
     if (widgets != null) {
-      found = widgets.filter(items /* items */.isGameWidget);
+      found = widgets.filter(require("UserProfileGameWidgetTypes").isGameWidget);
     }
     return found;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "primaryColor", {
-  get: function primaryColor(arg0) {
+  get: function primaryColor() {
     const themeColors = this.themeColors;
     let first;
     if (themeColors != null) {
@@ -141,7 +140,7 @@ Object.defineProperty(prototype, "primaryColor", {
 });
 Object.defineProperty(prototype, "canUsePremiumProfileCustomization", {
   get: function canUsePremiumProfileCustomization() {
-    return require("../../utils/PremiumUtils.tsx").isPremiumAtLeast(this.premiumType, PremiumTypes.TIER_2);
+    return require("PremiumUtils").isPremiumAtLeast(this.premiumType, PremiumTypes.TIER_2);
   },
   set: undefined
 });
@@ -152,7 +151,7 @@ Object.defineProperty(prototype, "canEditThemes", {
   set: undefined
 });
 Object.defineProperty(prototype, "application", {
-  get: function application(channelId, arg1, action) {
+  get: function application() {
     return this._userProfile.application;
   },
   set: undefined
@@ -248,25 +247,23 @@ prototype["getBannerURL"] = function getBannerURL(arg0) {
   if (null != this.guildId) {
     if (self.isUsingGuildMemberBanner()) {
       let obj = { id: null, guildId: null, banner: null, canAnimate: null, size: null };
-      ({ userId: obj4[0], guildId: obj4[1], banner: obj4[2] } = self);
-      obj[3] = canAnimate;
-      obj[4] = size;
-      let guildMemberBannerURL = getAvatarURL.getGuildMemberBannerURL(obj);
-      const obj3 = getAvatarURL;
+      ({ userId: obj4.id, guildId: obj4.guildId, banner: obj4.banner } = self);
+      obj.canAnimate = canAnimate;
+      obj.size = size;
+      let guildMemberBannerURL = AvatarUtils.getGuildMemberBannerURL(obj);
     }
     return guildMemberBannerURL;
   }
-  obj = getAvatarURL;
   obj = { id: self.userId, banner: self.banner, canAnimate, size };
   guildMemberBannerURL = obj.getUserBannerURL(obj);
 };
-prototype["getPreviewBanner"] = function getPreviewBanner(pendingBanner, arg1, arg2) {
+prototype["getPreviewBanner"] = function getPreviewBanner(pendingBanner, canAnimate, arg2) {
   let num = arg2;
   if (arg2 === undefined) {
     num = 480;
   }
   if (null != pendingBanner) {
-    if (arg1) {
+    if (canAnimate) {
       let imageUri = pendingBanner.imageUri;
     } else {
       imageUri = pendingBanner.staticImageUri;
@@ -279,46 +276,37 @@ prototype["getPreviewBanner"] = function getPreviewBanner(pendingBanner, arg1, a
     if (null === pendingBanner) {
       let userBannerURL = null;
       if (self.isUsingGuildMemberBanner()) {
-        let obj = { id: null, banner: null, canAnimate: null, size: null };
-        obj[0] = self.userId;
-        obj[1] = self._userProfile.banner;
-        obj[2] = arg1;
-        obj[3] = num;
-        userBannerURL = getAvatarURL.getUserBannerURL(obj);
-        const obj2 = getAvatarURL;
+        let obj = { id: self.userId, banner: self._userProfile.banner, canAnimate, size: num };
+        userBannerURL = AvatarUtils.getUserBannerURL(obj);
       }
       let bannerURL = userBannerURL;
     } else {
-      obj = { canAnimate: null, size: null };
-      obj[0] = arg1;
-      obj[1] = num;
+      obj = { canAnimate, size: num };
       bannerURL = self.getBannerURL(obj);
     }
     return bannerURL;
   }
 };
 prototype["getPreviewBio"] = function getPreviewBio(pendingBio) {
-  let obj = useAvatarsWithGuilds;
-  obj = { pendingValue: pendingBio, userValue: this._userProfile.bio, guildValue: null, guildId: null };
+  const obj = { pendingValue: pendingBio, userValue: this._userProfile.bio, guildValue: null, guildId: null };
   const _guildMemberProfile = this._guildMemberProfile;
   let bio;
   if (_guildMemberProfile != null) {
     bio = _guildMemberProfile.bio;
   }
-  obj[2] = bio;
-  obj[3] = this.guildId;
+  obj.guildValue = bio;
+  obj.guildId = this.guildId;
   return obj.getProfilePreviewValue(obj);
 };
 prototype["getPreviewPronouns"] = function getPreviewPronouns(pendingValue) {
-  let obj = useAvatarsWithGuilds;
-  obj = { pendingValue, userValue: this._userProfile.pronouns, guildValue: null, guildId: null };
+  const obj = { pendingValue, userValue: this._userProfile.pronouns, guildValue: null, guildId: null };
   const _guildMemberProfile = this._guildMemberProfile;
   let pronouns;
   if (_guildMemberProfile != null) {
     pronouns = _guildMemberProfile.pronouns;
   }
-  obj[2] = pronouns;
-  obj[3] = this.guildId;
+  obj.guildValue = pronouns;
+  obj.guildId = this.guildId;
   return obj.getProfilePreviewValue(obj);
 };
 prototype["getPreviewThemeColors"] = function getPreviewThemeColors(pendingThemeColors) {

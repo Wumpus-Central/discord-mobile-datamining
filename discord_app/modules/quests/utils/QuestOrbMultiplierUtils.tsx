@@ -1,23 +1,23 @@
 // discord_app/modules/quests/utils/QuestOrbMultiplierUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
-import parseServerPerkConfigKind from "../../premium/perks_state/PerksStateUtils.tsx";
-import getPremiumPlanItemDefault from "../../../utils/PremiumUtils.tsx";
+import PerksStateUtils from "../../premium/perks_state/PerksStateUtils.tsx";
+import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-let obj = { UPSELL: "UPSELL", NITRO: "NITRO", CREPE: "CREPE", INELIGIBLE: "INELIGIBLE" };
-obj = { NITRO: "nitro", CREPE: "crepe" };
+let QuestOrbMultiplierSource = { UPSELL: "UPSELL", NITRO: "NITRO", CREPE: "CREPE", INELIGIBLE: "INELIGIBLE" };
+QuestOrbMultiplierSource = { NITRO: "nitro", CREPE: "crepe" };
 const items = [,];
-({ CREPE: arr[0], NITRO: arr[1] } = obj);
-const result = set.fileFinishedImporting("modules/quests/utils/QuestOrbMultiplierUtils.tsx");
+({ CREPE: arr[0], NITRO: arr[1] } = QuestOrbMultiplierSource);
+const result = size.fileFinishedImporting("modules/quests/utils/QuestOrbMultiplierUtils.tsx");
 
-export const QuestOrbMultiplierEligibilityType = obj;
-export const QuestOrbMultiplierSource = obj;
+export const QuestOrbMultiplierEligibilityType = QuestOrbMultiplierSource;
+export { QuestOrbMultiplierSource };
 export const shouldReceiveQuestOrbMultiplier = function shouldReceiveQuestOrbMultiplier(
   questOrbMultiplierEligibilityForUser,
 ) {
   return items.includes(questOrbMultiplierEligibilityForUser);
 };
 export const getQuestOrbMultiplierSource = function getQuestOrbMultiplierSource(perks) {
-  obj = getPremiumPlanItemDefault;
+  obj = PremiumUtilsDefault;
   if (obj.canUseMoreQuestOrbs(perks)) {
     if (tmpResult.canUseQuestOrbMultiplier(perks)) {
       return obj.NITRO;
@@ -26,7 +26,7 @@ export const getQuestOrbMultiplierSource = function getQuestOrbMultiplierSource(
       if (perks != null) {
         perks = perks.perks;
       }
-      const perkSource = parseServerPerkConfigKind.getPerkSource(perks, tmp4(1379).Perk.MORE_QUEST_ORBS);
+      const perkSource = PerksStateUtils.getPerkSource(perks, tmp4(1379).Perk.MORE_QUEST_ORBS);
       let hasItem;
       if (perkSource != null) {
         hasItem = perkSource.includes(tmp4(1379).PerkSource.SOURCE_NITRO);
@@ -49,9 +49,8 @@ export const getQuestOrbMultiplierSource = function getQuestOrbMultiplierSource(
       }
       return NITRO;
     }
-    tmpResult = getPremiumPlanItemDefault;
+    tmpResult = PremiumUtilsDefault;
   } else {
     return null;
   }
-  const tmp = importDefault;
 };

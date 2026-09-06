@@ -1,11 +1,12 @@
 // discord_app/modules/content_inventory/memberlist/useTimestampTickedNow.tsx
-import setDefault from "../../../utils/Durations.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
-import closure_5 from "../../a11y/AccessibilityStore.tsx";
+import DurationsDefault from "../../../utils/Durations.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
+import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/content_inventory/memberlist/useTimestampTickedNow.tsx");
+const require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/content_inventory/memberlist/useTimestampTickedNow.tsx");
 
 export const useTimestampTickedNow = function useTimestampTickedNow() {
   let obj = arg0;
@@ -16,10 +17,9 @@ export const useTimestampTickedNow = function useTimestampTickedNow() {
   if (isAppFocused === undefined) {
     isAppFocused = true;
   }
-  let _require;
   importDefault = undefined;
-  const now = callback(
-    React.useState(() => {
+  const now = _slicedToArray(
+    noop.useState(() => {
       const timestamp = Date.now();
       const rounded = Math.floor(timestamp / _undefined(1090).Millis.SECOND);
       return rounded * _undefined(1090).Millis.SECOND;
@@ -27,11 +27,8 @@ export const useTimestampTickedNow = function useTimestampTickedNow() {
     2,
   );
   _require = now[1];
-  const items = [closure_5];
-  let stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
-    items,
-    () => useReducedMotion.useReducedMotion,
-  );
+  const items = [AccessibilityStore];
+  let stateFromStores = require("initialize").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let slowTickMode = !isAppFocused;
   if (isAppFocused) {
     if (stateFromStores) {
@@ -39,7 +36,7 @@ export const useTimestampTickedNow = function useTimestampTickedNow() {
     }
     slowTickMode = stateFromStores;
   }
-  const SECOND = setDefault.Millis.SECOND;
+  const SECOND = DurationsDefault.Millis.SECOND;
   if (slowTickMode) {
     let result = 15 * SECOND;
   } else {
@@ -47,12 +44,12 @@ export const useTimestampTickedNow = function useTimestampTickedNow() {
   }
   importDefault = result;
   const items1 = [result];
-  const effect = React.useEffect(() => {
-    const interval = new callback(closure_1_2[5]).Interval();
+  const effect = noop.useEffect(() => {
+    const interval = new closure_0(4447).Interval();
     interval.start(c1, () => {
       const timestamp = Date.now();
-      const rounded = Math.floor(timestamp / closure_1_1(closure_1_2[3]).Millis.SECOND);
-      interval(rounded * closure_1_1(closure_1_2[3]).Millis.SECOND);
+      const rounded = Math.floor(timestamp / c1(1090).Millis.SECOND);
+      interval(rounded * c1(1090).Millis.SECOND);
     });
     return () => interval.stop();
   }, items1);

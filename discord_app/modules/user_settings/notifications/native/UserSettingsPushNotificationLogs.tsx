@@ -1,50 +1,43 @@
 // discord_app/modules/user_settings/notifications/native/UserSettingsPushNotificationLogs.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { wrap: null, list: null, searchWrap: null, shareButton: null, log: null, code: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { paddingHorizontal: ThemesDefault.space.PX_16 };
-let obj1 = { paddingHorizontal: ThemesDefault.space.PX_16 };
-createCacheKey[2] = { padding: ThemesDefault.space.PX_16, flexDirection: "row", alignItems: "center" };
-let obj2 = { padding: ThemesDefault.space.PX_16, flexDirection: "row", alignItems: "center" };
-createCacheKey[3] = {
-  backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT,
-  marginLeft: ThemesDefault.space.PX_8,
-  borderRadius: ThemesDefault.radii.md,
-  height: require("InputHeights").InputHeights.MD,
-  width: require("InputHeights").InputHeights.MD,
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+fn(4560);
+let createStyles = { wrap: null, list: null, searchWrap: null, shareButton: null, log: null, code: null };
+createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
+createStyles.wrap = createStyles;
+createStyles.list = { paddingHorizontal: nativeDefault.space.PX_16 };
+let obj1 = { paddingHorizontal: nativeDefault.space.PX_16 };
+createStyles.searchWrap = { padding: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center" };
+let size = {
+  backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT,
+  marginLeft: nativeDefault.space.PX_8,
+  borderRadius: nativeDefault.radii.md,
+  height: fn(6622).InputHeights.MD,
+  width: fn(6622).InputHeights.MD,
   justifyContent: "center",
   alignItems: "center",
 };
-let obj3 = {
-  backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT,
-  marginLeft: ThemesDefault.space.PX_8,
-  borderRadius: ThemesDefault.radii.md,
-  height: require("InputHeights").InputHeights.MD,
-  width: require("InputHeights").InputHeights.MD,
-  justifyContent: "center",
-  alignItems: "center",
-};
-createCacheKey[4] = { paddingBottom: ThemesDefault.space.PX_16 };
-createCacheKey[5] = { fontFamily: require("ME").Fonts.CODE_BOLD };
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-const obj4 = { paddingBottom: ThemesDefault.space.PX_16 };
-let result = require("set").fileFinishedImporting(
+createStyles.shareButton = size;
+let obj2 = { padding: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center" };
+createStyles.log = { paddingBottom: nativeDefault.space.PX_16 };
+createStyles.code = { fontFamily: fn(1074).Fonts.CODE_BOLD };
+let closure_9 = createStyles.createStyles(createStyles);
+size = fn(2);
+let result = size.fileFinishedImporting(
   "modules/user_settings/notifications/native/UserSettingsPushNotificationLogs.tsx",
 );
 
 export default function UserSettingsPushNotificationLogs() {
-  let tmp = callback2(
-    React.useState(() => {
+  const tmp = _slicedToArray(
+    noop.useState(() => {
       const Storage = first(510).Storage;
       let str = Storage.get("push-notification-logs-query", "");
       if (str == null) {
@@ -54,82 +47,67 @@ export default function UserSettingsPushNotificationLogs() {
     }),
     2,
   );
-  const first = tmp[0];
-  const tmp3 = callback2(React.useState([]), 2);
+  const defaultValue = tmp[0];
+  const tmp3 = _slicedToArray(noop.useState([]), 2);
   const first1 = tmp3[0];
   dependencyMap = tmp3[1];
-  [tmp6, closure_3] = callback2(React.useState([]), 2);
-  const effect = React.useEffect(() => {
-    function _load() {
-      const self = this;
-      const tmp = closure_2_3(function* () {
-        if (c3 === 2) {
-          c3 = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp4 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            return { value: "HermesInternal", done: null };
-          }
+  [tmp6, asyncGeneratorStep] = _slicedToArray(noop.useState([]), 2);
+  const effect = noop.useEffect(() => {
+    closure_0 = async function _load(arg0, value) {
+      if (c3 === 2) {
+        c3 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          let obj = { value, done: true };
+          return obj;
         } else {
-          try {
-            c3 = 2;
-            if (0 === v0) {
-              if (arg0 === 1) {
-                c3 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c3 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                closure_1 = tmp5;
-                closure_0 = tmp2;
-                closure_0 = undefined;
-                v0 = 1;
-                c3 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = closure_2_1(closure_2_2[10])();
-                return obj1;
-              }
-            } else if (arg0 === 1) {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c3 = 2;
+          if (0 === v1) {
+            if (arg0 === 1) {
               c3 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj = { value, done: true };
               return obj;
             } else {
-              closure_0 = arg1;
-              v0(closure_0);
-              c3 = 3;
-              return { value: "HermesInternal", done: null };
+              closure_1 = tmp5;
+              closure_0 = tmp2;
+              closure_128_0 = undefined;
+              v1 = 1;
+              c3 = 1;
+              const obj1 = { value: first1(dependencyMap[10])(), done: false };
+              return obj1;
             }
-          } catch (tmp13) {
-            c3 = tmp;
-            throw tmp13;
+          } else if (arg0 === 1) {
+            c3 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_128_0 = value;
+            v1(closure_128_0);
+            c3 = 3;
+            return { value: "HermesInternal", done: null };
           }
+        } catch (tmp13) {
+          c3 = tmp;
+          throw tmp13;
         }
-      });
-      closure_0 = tmp;
-      const apply = tmp.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
       }
-      return applyArgumentsResult;
-    }
+    };
     !(function load() {
       const self = this;
-      const apply = _load.apply;
+      const apply = closure_0.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
@@ -138,20 +116,19 @@ export default function UserSettingsPushNotificationLogs() {
       return applyArgumentsResult;
     })();
   }, []);
-  let items = [first1, first];
-  const effect1 = React.useEffect(() => {
+  let items = [first1, defaultValue];
+  const effect1 = noop.useEffect(() => {
     if ("" !== timeout) {
       const _setTimeout = setTimeout;
       timeout = setTimeout(() => {
         try {
           const _RegExp = RegExp;
-          regExp = new RegExp(regExp, "i");
-          callback2(
-            closure_1.filter((type) => {
+          const regExp = new RegExp(closure_0, "i");
+          closure_1_3(
+            first1.filter((type) => {
               let tmp2 = null != type.type.match(regExp);
               if (!tmp2) {
                 tmp2 = null != type.title.match(tmp);
-                const str2 = type.title;
               }
               if (!tmp2) {
                 let match;
@@ -163,42 +140,41 @@ export default function UserSettingsPushNotificationLogs() {
               return tmp2;
             }),
           );
-          const Storage = callback(closure_1_2[9]).Storage;
-          const result = Storage.set("push-notification-logs-query", regExp);
+          const Storage = first(closure_2[9]).Storage;
+          const result = Storage.set("push-notification-logs-query", closure_0);
         } catch (err) {}
       }, 300);
       return () => clearTimeout(closure_0);
     } else {
-      callback(first1);
+      closure_3(first1);
       let Storage = first(510).Storage;
       let result = Storage.set("push-notification-logs-query", tmp);
     }
   }, items);
-  const tmp9 = callback5();
-  callback2 = tmp9;
+  const tmp9 = closure_9();
+  _slicedToArray = tmp9;
   let obj = { style: tmp9.wrap, children: null };
   obj = { style: tmp9.searchWrap, children: null };
   let items1 = [
-    callback3(first(7050).SearchField, {
+    closure_7(defaultValue(7050).SearchField, {
       size: "md",
       placeholder: "Filter (regex)",
       onChange: tmp[1],
-      defaultValue: first,
+      defaultValue,
     }),
   ];
   obj = { style: tmp9.shareButton, accessibilityLabel: null, onPress: null, children: null };
-  const intl = first(1114).intl;
-  obj[1] = intl.string(first(1114).t.leICvh);
-  obj[2] = callback(function* () {
+  const intl = defaultValue(1114).intl;
+  obj.accessibilityLabel = intl.string(defaultValue(1114).t.leICvh);
+  obj.onPress = asyncGeneratorStep(async (arg0, value) => {
     if (c3 === 2) {
       c3 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp4 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
@@ -209,35 +185,29 @@ export default function UserSettingsPushNotificationLogs() {
         if (0 === dependencyMap) {
           if (arg0 === 1) {
             c3 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
-            closure_1 = tmp5;
-            closure_0 = tmp2;
-            closure_0 = undefined;
+            closure_128_0 = undefined;
             dependencyMap = 1;
             c3 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = closure_1_1(10191)();
+            const obj1 = { value: tmp5(10191)(), done: false };
             return obj1;
           }
         } else if (arg0 === 1) {
           c3 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = arg1;
+          const obj2 = { value, done: true };
           return obj2;
         } else {
-          closure_0 = arg1;
-          obj = closure_1_0(8361);
-          const obj3 = { message: null };
-          obj3[0] = closure_1_1(10192)(closure_0, false);
+          closure_128_0 = value;
+          obj = tmp2(8361);
+          const obj3 = { message: tmp5(10192)(closure_128_0, false) };
           obj.showShareActionSheet(obj3, "push-notification-logs");
           c3 = 3;
           return { value: "HermesInternal", done: null };
@@ -248,17 +218,17 @@ export default function UserSettingsPushNotificationLogs() {
       }
     }
   });
-  obj[3] = callback3(first(9053).ShareIcon, {});
-  items1[1] = callback3(first(5123).PressableOpacity, obj);
-  obj[1] = items1;
-  let items2 = [callback4(View, obj)];
-  obj1 = { contentContainerStyle: null, data: null, renderItem: null };
+  obj.children = closure_7(defaultValue(9053).ShareIcon, {});
+  items1[1] = closure_7(defaultValue(5123).PressableOpacity, obj);
+  obj.children = items1;
+  let items2 = [closure_8(View, obj)];
+  let obj1 = { contentContainerStyle: null, data: null, renderItem: null };
   let obj2 = {};
   const merged = Object.assign(tmp9.list);
   obj2.paddingBottom = first1(1611)().bottom + first1(576).space.PX_16;
-  obj1[0] = obj2;
-  obj1[1] = tmp6;
-  obj1[2] = function renderItem(item) {
+  obj1.contentContainerStyle = obj2;
+  obj1.data = tmp6;
+  obj1.renderItem = function renderItem(item) {
     item = item.item;
     let str = "";
     if (item.silent) {
@@ -270,26 +240,18 @@ export default function UserSettingsPushNotificationLogs() {
       variant: "text-xs/normal",
       children: new Date(item.receivedTimestamp).toISOString(),
     };
-    const items = [closure_1_7(first(4556).Text, obj)];
+    const items = [React5(Text_Text.Text, obj)];
     obj = { style: closure_4.code, variant: "text-sm/normal", children: null };
+    const obj1 = { style: closure_4.code, variant: "text-sm/normal", color: "text-brand", children: null };
     const items1 = [str, "[", item.type, "]", " "];
-    const items2 = [
-      closure_1_8(first(4556).Text, {
-        style: closure_4.code,
-        variant: "text-sm/normal",
-        color: "text-brand",
-        children: items1,
-      }),
-      item.title,
-      " - ",
-      item.content,
-    ];
-    obj[2] = items2;
-    items[1] = closure_1_8(first(4556).Text, obj);
-    obj[1] = items;
-    return closure_1_8(closure_1_6, obj, item.index);
+    obj1.children = items1;
+    const items2 = [React6(Text_Text.Text, obj1), item.title, " - ", item.content];
+    obj.children = items2;
+    items[1] = React6(Text_Text.Text, obj);
+    obj.children = items;
+    return React6(View, obj, item.index);
   };
-  items2[1] = callback3(first(8874).FlashList, obj1);
-  obj[1] = items2;
-  return callback4(View, obj);
+  items2[1] = closure_7(defaultValue(8874).FlashList, obj1);
+  obj.children = items2;
+  return closure_8(View, obj);
 }

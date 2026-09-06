@@ -1,15 +1,17 @@
 // discord_app/modules/guild_onboarding_home/native/OnboardingHomeScrollView.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_2 from "../../../../_runtime/00019_noop.js";
-import { ScrollView } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-createCacheKey = { guildFeedBackground: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-createCacheKey[0] = createCacheKey;
-let closure_5 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/guild_onboarding_home/native/OnboardingHomeScrollView.tsx");
+const ScrollView = fn(17).ScrollView;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { guildFeedBackground: null };
+createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+createStyles.guildFeedBackground = createStyles;
+let closure_5 = createStyles.createStyles(createStyles);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_onboarding_home/native/OnboardingHomeScrollView.tsx");
 
 export default function OnboardingHomeScrollView(children) {
   ({ guildId, headerOffset } = children);
@@ -17,20 +19,16 @@ export default function OnboardingHomeScrollView(children) {
     headerOffset = 0;
   }
   const scrollValue = children.scrollValue;
-  let React;
-  let ref;
-  let bottom;
-  let callback;
-  React = React.useRef(false);
-  ref = React.useRef(null);
-  bottom = headerOffset(scrollValue[5])().bottom;
+  closure_2 = noop.useRef(false);
+  noop.useRef(null);
+  const bottom = useSafeAreaInsetsDefault().bottom;
   const items = [guildId];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     closure_2.current = false;
   }, items);
-  callback = React.useRef(true);
+  const ref = noop.useRef(true);
   const items1 = [guildId];
-  const effect1 = React.useEffect(() => {
+  const effect1 = noop.useEffect(() => {
     let current = null == ref.current;
     if (!current) {
       current = ref.current;
@@ -42,16 +40,19 @@ export default function OnboardingHomeScrollView(children) {
     ref.current = false;
   }, items1);
   const items2 = [bottom, headerOffset];
-  const tmp = callback();
-  return bottom(ref, {
-    ref,
-    scrollIndicatorInsets: { right: 1 },
-    onScroll(nativeEvent) {
-      const result = scrollValue.set(nativeEvent.nativeEvent.contentOffset.y);
-    },
-    scrollEventThrottle: 16,
-    style: callback().guildFeedBackground,
-    contentContainerStyle: React.useMemo(() => ({ paddingBottom: 16 + bottom, marginTop: headerOffset }), items2),
-    children: children.children,
-  });
+  const tmp = ref();
+  return (
+    <ScrollView
+      ref={ref}
+      scrollIndicatorInsets={{ right: 1 }}
+      onScroll={function onScroll(nativeEvent) {
+        const result = scrollValue.set(nativeEvent.nativeEvent.contentOffset.y);
+      }}
+      scrollEventThrottle={16}
+      style={ref().guildFeedBackground}
+      contentContainerStyle={noop.useMemo(() => ({ paddingBottom: 16 + bottom, marginTop: headerOffset }), items2)}
+    >
+      {arg0.children}
+    </ScrollView>
+  );
 }

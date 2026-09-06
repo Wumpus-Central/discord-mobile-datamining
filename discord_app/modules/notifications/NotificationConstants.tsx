@@ -1,7 +1,7 @@
 // discord_app/modules/notifications/NotificationConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/notifications/NotificationConstants.tsx");
+const result = size.fileFinishedImporting("modules/notifications/NotificationConstants.tsx");
 
 export const AccountNotificationFlags = {
   USE_NEW_NOTIFICATIONS: 16,

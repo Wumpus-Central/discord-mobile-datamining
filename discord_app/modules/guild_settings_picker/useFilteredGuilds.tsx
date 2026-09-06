@@ -1,55 +1,52 @@
 // discord_app/modules/guild_settings_picker/useFilteredGuilds.tsx
-import closure_3 from "../../../_runtime/00019_noop.js";
-import closure_4 from "../../stores/GuildStore.tsx";
-import closure_5 from "../../stores/SortedGuildStore.tsx";
-import closure_6 from "../../stores/UserStore.tsx";
+import noop from "../../../_runtime/metro/00019__.js";
+import GuildStore from "../../stores/GuildStore.tsx";
+import SortedGuildStore from "../../stores/SortedGuildStore.tsx";
+import UserStore from "../../stores/UserStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_settings_picker/useFilteredGuilds.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_settings_picker/useFilteredGuilds.tsx");
 
 export default function useFilteredGuilds(isGuildIncluded) {
   isGuildIncluded = isGuildIncluded.isGuildIncluded;
   const selectedGuildId = isGuildIncluded.selectedGuildId;
-  let stateFromStores;
   let stateFromStores1;
-  let stateFromStores2;
   let obj = isGuildIncluded(stateFromStores1[4]);
-  let items = [closure_5];
-  stateFromStores = obj.useStateFromStores(items, () => flattenedGuildIds.getFlattenedGuildIds());
-  const items1 = [closure_4];
+  let items = [SortedGuildStore];
+  const stateFromStores = obj.useStateFromStores(items, () => flattenedGuildIds.getFlattenedGuildIds());
+  const items1 = [GuildStore];
   stateFromStores1 = isGuildIncluded(stateFromStores1[4]).useStateFromStores(items1, () => guilds.getGuilds());
   const obj2 = isGuildIncluded(stateFromStores1[4]);
-  const items2 = [closure_6];
-  stateFromStores2 = isGuildIncluded(stateFromStores1[4]).useStateFromStores(items2, () =>
+  const items2 = [UserStore];
+  const stateFromStores2 = isGuildIncluded(stateFromStores1[4]).useStateFromStores(items2, () =>
     currentUser.getCurrentUser(),
   );
-  obj = {
-    options: stateFromStores2.useMemo(() => {
-      if (null == stateFromStores2) {
-        let items = [];
+  obj = { options: null, selectedGuild: null };
+  const items3 = [stateFromStores, stateFromStores1, stateFromStores2, isGuildIncluded];
+  obj.options = stateFromStores2.useMemo(() => {
+    if (null == stateFromStores2) {
+      let items = [];
+    } else {
+      if (null == isGuildIncluded) {
+        let found = stateFromStores;
       } else {
-        if (null == isGuildIncluded) {
-          let found = stateFromStores;
-        } else {
-          found = stateFromStores.filter((arg0) => {
-            closure_1_1(closure_1_2[5])(null != dependencyMap[arg0], "guild should not be null");
-            return callback(dependencyMap[arg0], closure_3);
-          });
-        }
-        items = found.map((id) => {
-          closure_1_1(closure_1_2[5])(null != dependencyMap[id], "guild should not be null");
-          return { id, label: dependencyMap[id].name, value: dependencyMap[id].id };
+        found = stateFromStores.filter((item) => {
+          stateFromStores(stateFromStores1[5])(null != dependencyMap[item], "guild should not be null");
+          return isGuildIncluded(dependencyMap[item], stateFromStores2);
         });
       }
-      return items;
-    }, items3),
-    selectedGuild: null,
-  };
-  items3 = [stateFromStores, stateFromStores1, stateFromStores2, isGuildIncluded];
+      items = found.map((id) => {
+        stateFromStores(stateFromStores1[5])(null != dependencyMap[id], "guild should not be null");
+        return { id, label: dependencyMap[id].name, value: dependencyMap[id].id };
+      });
+    }
+    return items;
+  }, items3);
   let tmp4;
   if (null != selectedGuildId) {
     tmp4 = stateFromStores1[selectedGuildId];
   }
-  obj[1] = tmp4;
+  obj.selectedGuild = tmp4;
   return obj;
 }

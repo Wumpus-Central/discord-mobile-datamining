@@ -1,9 +1,9 @@
 // discord_common/js/packages/kv-storage/js/api/Table.tsx
-import combineKey from "../util/Key.tsx";
+import Key from "../util/Key.tsx";
 import TableId from "../types/index.tsx";
-import closure_2 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 
-require = arg1;
+require = fn;
 let TableTransaction;
 class TableTransaction {
   constructor(arg0, arg1, arg2) {
@@ -14,119 +14,99 @@ class TableTransaction {
             if (1 === obj.prefix.length) {
               if (1 === arg0.length) {
                 const transaction = tmp.transaction;
-                obj = { type: "messages.trim_orphans", table: null, channelKey: null, messageKey: null };
-                obj[1] = tmp.tableId;
-                obj[2] = arg0[0];
-                obj[3] = tmp.prefix[0];
+                obj = { type: "messages.trim_orphans", table: tmp.tableId, channelKey: arg0[0], messageKey: tmp.prefix[0] };
                 transaction.add(obj);
               }
             }
-            error = new Error("trimOrphans: only one prefix component is supported at this time");
+            const error = new Error("trimOrphans: only one prefix component is supported at this time");
             throw error;
           },
-      trimChannel(key) {
+      trimChannel(key, limit) {
             const transaction = obj.transaction;
-            obj = { type: "messages.trim_channel", table: obj.tableId, key: obj(closure_1_1[1]).combineKey(obj.prefix, key), limit: arg1 };
+            obj = { type: "messages.trim_channel", table: obj.tableId, key: messages(self[1]).combineKey(obj.prefix, key), limit };
             transaction.add(obj);
           },
-      trimChannelsIn(arg0, arg1) {
+      trimChannelsIn(arg0, limit) {
             if (1 === obj.prefix.length) {
               if (1 === arg0.length) {
                 const transaction = tmp.transaction;
-                obj = { type: "messages.trim_channels_in", table: null, channelKey: null, messageKey: null, limit: null };
-                obj[1] = tmp.tableId;
-                obj[2] = arg0[0];
-                obj[3] = tmp.prefix[0];
-                obj[4] = arg1;
+                obj = { type: "messages.trim_channels_in", table: tmp.tableId, channelKey: arg0[0], messageKey: tmp.prefix[0], limit };
                 transaction.add(obj);
               }
             }
-            error = new Error("trimChannelsIn: only one prefix component is supported at this time");
+            const error = new Error("trimChannelsIn: only one prefix component is supported at this time");
             throw error;
           },
-      trimChannelsNotIn(arg0, arg1) {
+      trimChannelsNotIn(arg0, limit) {
             if (1 === obj.prefix.length) {
               if (1 === arg0.length) {
                 const transaction = tmp.transaction;
-                obj = { type: "messages.trim_channels_not_in", table: null, channelKey: null, messageKey: null, limit: null };
-                obj[1] = tmp.tableId;
-                obj[2] = arg0[0];
-                obj[3] = tmp.prefix[0];
-                obj[4] = arg1;
+                obj = { type: "messages.trim_channels_not_in", table: tmp.tableId, channelKey: arg0[0], messageKey: tmp.prefix[0], limit };
                 transaction.add(obj);
               }
             }
-            error = new Error("trimChannelsNotIn: only one prefix component is supported at this time");
+            const error = new Error("trimChannelsNotIn: only one prefix component is supported at this time");
             throw error;
           }
     };
     obj.prefix = global;
-    obj.tableId = arg1;
+    obj.tableId = fn;
     obj.transaction = importDefault;
     return obj;
   }
 }
 const prototype = TableTransaction.prototype;
 TableTransaction["fromDatabaseTransaction"] = function fromDatabaseTransaction(prefix, tableId, transaction) {
-  if (typeof TableTransaction !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof TableTransaction === "function") {
+    Object.create(tmp.prototype);
+    const messages = {
+      trimOrphans(arg0) {
+          if (1 === obj.prefix.length) {
+            if (1 === arg0.length) {
+              const transaction = tmp.transaction;
+              obj = { type: "messages.trim_orphans", table: tmp.tableId, channelKey: arg0[0], messageKey: tmp.prefix[0] };
+              transaction.add(obj);
+            }
+          }
+          const error = new Error("trimOrphans: only one prefix component is supported at this time");
+          throw error;
+        },
+      trimChannel(key, limit) {
+          const transaction = obj.transaction;
+          obj = { type: "messages.trim_channel", table: obj.tableId, key: messages(self[1]).combineKey(obj.prefix, key), limit };
+          transaction.add(obj);
+        },
+      trimChannelsIn(arg0, limit) {
+          if (1 === obj.prefix.length) {
+            if (1 === arg0.length) {
+              const transaction = tmp.transaction;
+              obj = { type: "messages.trim_channels_in", table: tmp.tableId, channelKey: arg0[0], messageKey: tmp.prefix[0], limit };
+              transaction.add(obj);
+            }
+          }
+          const error = new Error("trimChannelsIn: only one prefix component is supported at this time");
+          throw error;
+        },
+      trimChannelsNotIn(arg0, limit) {
+          if (1 === obj.prefix.length) {
+            if (1 === arg0.length) {
+              const transaction = tmp.transaction;
+              obj = { type: "messages.trim_channels_not_in", table: tmp.tableId, channelKey: arg0[0], messageKey: tmp.prefix[0], limit };
+              transaction.add(obj);
+            }
+          }
+          const error = new Error("trimChannelsNotIn: only one prefix component is supported at this time");
+          throw error;
+        }
+    };
+    messages.messages = messages;
+    messages.prefix = prefix;
+    messages.tableId = tableId;
+    messages.transaction = transaction;
+    return messages;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const obj = Object.create(TableTransaction.prototype);
-  obj.messages = {
-    trimOrphans(arg0) {
-      if (1 === obj.prefix.length) {
-        if (1 === arg0.length) {
-          const transaction = tmp.transaction;
-          obj = { type: "messages.trim_orphans", table: null, channelKey: null, messageKey: null };
-          obj[1] = tmp.tableId;
-          obj[2] = arg0[0];
-          obj[3] = tmp.prefix[0];
-          transaction.add(obj);
-        }
-      }
-      error = new Error("trimOrphans: only one prefix component is supported at this time");
-      throw error;
-    },
-    trimChannel(key) {
-      const transaction = obj.transaction;
-      obj = { type: "messages.trim_channel", table: obj.tableId, key: obj(closure_1_1[1]).combineKey(obj.prefix, key), limit: arg1 };
-      transaction.add(obj);
-    },
-    trimChannelsIn(arg0, arg1) {
-      if (1 === obj.prefix.length) {
-        if (1 === arg0.length) {
-          const transaction = tmp.transaction;
-          obj = { type: "messages.trim_channels_in", table: null, channelKey: null, messageKey: null, limit: null };
-          obj[1] = tmp.tableId;
-          obj[2] = arg0[0];
-          obj[3] = tmp.prefix[0];
-          obj[4] = arg1;
-          transaction.add(obj);
-        }
-      }
-      error = new Error("trimChannelsIn: only one prefix component is supported at this time");
-      throw error;
-    },
-    trimChannelsNotIn(arg0, arg1) {
-      if (1 === obj.prefix.length) {
-        if (1 === arg0.length) {
-          const transaction = tmp.transaction;
-          obj = { type: "messages.trim_channels_not_in", table: null, channelKey: null, messageKey: null, limit: null };
-          obj[1] = tmp.tableId;
-          obj[2] = arg0[0];
-          obj[3] = tmp.prefix[0];
-          obj[4] = arg1;
-          transaction.add(obj);
-        }
-      }
-      error = new Error("trimChannelsNotIn: only one prefix component is supported at this time");
-      throw error;
-    }
-  };
-  obj.prefix = prefix;
-  obj.tableId = tableId;
-  obj.transaction = transaction;
-  return obj;
 };
 prototype["put"] = function put(key) {
   let Replace = arg1;
@@ -138,14 +118,12 @@ prototype["put"] = function put(key) {
   const prefix = this.prefix;
   let tmp3 = key;
   if (0 !== prefix.length) {
-    obj = { key: null, data: null, generation: null };
-    obj[0] = combineKey.combineKey(prefix, key.key);
-    ({ data: obj2[1], generation: obj2[2] } = key);
+    obj = { key: Key.combineKey(prefix, key.key), data: null, generation: null };
+    ({ data: obj2.data, generation: obj2.generation } = key);
     tmp3 = obj;
-    const obj3 = combineKey;
   }
-  obj[2] = tmp3;
-  obj[3] = Replace === TableId.ConflictOptions.Replace;
+  obj.cell = tmp3;
+  obj.overwrite = Replace === TableId.ConflictOptions.Replace;
   transaction.add(obj);
 };
 prototype["putAll"] = function putAll(arr) {
@@ -161,17 +139,15 @@ prototype["putAll"] = function putAll(arr) {
     mapped = arr.map((key) => {
       let tmp2 = key;
       if (0 !== prefix.length) {
-        const obj = { key: null, data: null, generation: null };
-        obj[0] = prefix(closure_1_1[1]).combineKey(tmp, key.key);
-        ({ data: obj[1], generation: obj[2] } = key);
+        const obj = { key: Key.combineKey(tmp, key.key), data: null, generation: null };
+        ({ data: obj.data, generation: obj.generation } = key);
         tmp2 = obj;
-        const obj2 = prefix(closure_1_1[1]);
       }
       return tmp2;
     });
   }
-  obj[2] = mapped;
-  obj[3] = Replace === prefix(1993).ConflictOptions.Replace;
+  obj.cells = mapped;
+  obj.overwrite = Replace === prefix(1993).ConflictOptions.Replace;
   transaction.add(obj);
 };
 prototype["delete"] = function delete(items) {
@@ -179,35 +155,36 @@ prototype["delete"] = function delete(items) {
     items = [];
   }
   const transaction = this.transaction;
-  const obj = { type: "kv.delete_many", table: this.tableId, key: combineKey.combineKeyPrefix(this.prefix, items) };
+  const obj = { type: "kv.delete_many", table: this.tableId, key: Key.combineKeyPrefix(this.prefix, items) };
   transaction.add(obj);
 };
 prototype["deleteRange"] = function deleteRange(key, key) {
-  let obj = combineKey;
+  let obj = Key;
   const combineKeyResult = obj.combineKey(this.prefix, key);
   const transaction = this.transaction;
   obj = { type: "kv.delete_range", table: this.tableId, range: null };
-  const items = [combineKeyResult, combineKey.combineKey(this.prefix, key)];
-  obj[2] = items;
+  const items = [combineKeyResult, Key.combineKey(this.prefix, key)];
+  obj.range = items;
   transaction.add(obj);
 };
-prototype["deleteAllExcept"] = function deleteAllExcept(items) {
+prototype["deleteAllExcept"] = function deleteAllExcept(items, retain) {
   if (items === undefined) {
     items = [];
   }
   const transaction = this.transaction;
-  const obj = { type: "kv.delete_all_except", table: this.tableId, key: combineKey.combineKeyPrefix(this.prefix, items), retain: arg1 };
+  const obj = { type: "kv.delete_all_except", table: this.tableId, key: Key.combineKeyPrefix(this.prefix, items), retain };
   transaction.add(obj);
 };
-prototype["deleteGeneration"] = function deleteGeneration(items) {
+prototype["deleteGeneration"] = function deleteGeneration(items, comparer, generation) {
   if (items === undefined) {
     items = [];
   }
   const transaction = this.transaction;
-  const obj = { type: "kv.delete_generation", table: this.tableId, key: combineKey.combineKeyPrefix(this.prefix, items), generation: arg2, comparer: arg1 };
+  const obj = { type: "kv.delete_generation", table: this.tableId, key: Key.combineKeyPrefix(this.prefix, items), generation, comparer };
   transaction.add(obj);
 };
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/Table.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/Table.tsx");
 class Table {
   constructor(arg0, arg1, arg2, arg3) {
     obj = Object.create(new.target.prototype);
@@ -220,7 +197,7 @@ class Table {
           }
     };
     obj.prefix = global;
-    obj.tableId = arg1;
+    obj.tableId = fn;
     obj.database = importDefault;
     tmp2 = null;
     obj.defaultDebugTag = tmp2;
@@ -235,14 +212,14 @@ prototype2["close"] = function close() {
 prototype2["get"] = function get(arg0) {
   closure_0 = arg0;
   const self = this;
-  return callback(function*() {
-    yield many.getMany(closure_1_0, { limit: 1 });
+  return (async () => {
+    await self.getMany(closure_0, { limit: 1 });
     const first = arg1[0];
-    c0 = first;
+    value = first;
     if (first == null) {
-      c0 = null;
+      value = null;
     }
-    return c0;
+    return value;
   })();
 };
 prototype2["getMany"] = function getMany(items, ordering) {
@@ -250,36 +227,36 @@ prototype2["getMany"] = function getMany(items, ordering) {
     items = [];
   }
   const database = this.database;
-  const obj = { type: "kv.get_many", table: this.tableId, key: combineKey.combineKeyPrefix(this.prefix, items), ordering: null, limit: null };
+  const obj = { type: "kv.get_many", table: this.tableId, key: Key.combineKeyPrefix(this.prefix, items), ordering: null, limit: null };
   ordering = undefined;
   if (ordering != null) {
     ordering = ordering.ordering;
   }
-  obj[3] = ordering;
+  obj.ordering = ordering;
   let limit;
   if (ordering != null) {
     limit = ordering.limit;
   }
-  obj[4] = limit;
+  obj.limit = limit;
   return database.execute(obj, this.defaultDebugTag);
 };
 prototype2["getRange"] = function getRange(key, key, ordering) {
-  let obj = combineKey;
+  let obj = Key;
   const combineKeyResult = obj.combineKey(this.prefix, key);
   const database = this.database;
   obj = { type: "kv.get_range", table: this.tableId, range: null, ordering: null, limit: null };
-  const items = [combineKeyResult, combineKey.combineKey(this.prefix, key)];
-  obj[2] = items;
+  const items = [combineKeyResult, Key.combineKey(this.prefix, key)];
+  obj.range = items;
   ordering = undefined;
   if (ordering != null) {
     ordering = ordering.ordering;
   }
-  obj[3] = ordering;
+  obj.ordering = ordering;
   let limit;
   if (ordering != null) {
     limit = ordering.limit;
   }
-  obj[4] = limit;
+  obj.limit = limit;
   return database.execute(obj, this.defaultDebugTag);
 };
 prototype2["getKvEntries"] = function getKvEntries(items) {
@@ -287,7 +264,7 @@ prototype2["getKvEntries"] = function getKvEntries(items) {
     items = [];
   }
   const database = this.database;
-  const obj = { type: "kv.get_kv_entries", table: this.tableId, key: combineKey.combineKeyPrefix(this.prefix, items) };
+  const obj = { type: "kv.get_kv_entries", table: this.tableId, key: Key.combineKeyPrefix(this.prefix, items) };
   return database.execute(obj, this.defaultDebugTag);
 };
 prototype2["getMapEntries"] = function getMapEntries(items) {
@@ -295,7 +272,7 @@ prototype2["getMapEntries"] = function getMapEntries(items) {
     items = [];
   }
   const database = this.database;
-  const obj = { type: "kv.get_map_entries", table: this.tableId, key: combineKey.combineKeyPrefix(this.prefix, items) };
+  const obj = { type: "kv.get_map_entries", table: this.tableId, key: Key.combineKeyPrefix(this.prefix, items) };
   return database.execute(obj, this.defaultDebugTag);
 };
 prototype2["getChildIds"] = function getChildIds(items) {
@@ -303,7 +280,7 @@ prototype2["getChildIds"] = function getChildIds(items) {
     items = [];
   }
   const database = this.database;
-  const obj = { type: "kv.get_child_ids", table: this.tableId, key: combineKey.combineKeyPrefix(this.prefix, items) };
+  const obj = { type: "kv.get_child_ids", table: this.tableId, key: Key.combineKeyPrefix(this.prefix, items) };
   return database.execute(obj, this.defaultDebugTag);
 };
 prototype2["getParentId"] = function getParentId(key) {
@@ -312,7 +289,7 @@ prototype2["getParentId"] = function getParentId(key) {
     items = [];
   }
   const database = this.database;
-  const obj = { type: "kv.get_parent_id", table: this.tableId, key: combineKey.combineKey(this.prefix, items) };
+  const obj = { type: "kv.get_parent_id", table: this.tableId, key: Key.combineKey(this.prefix, items) };
   return database.execute(obj, this.defaultDebugTag);
 };
 prototype2["put"] = function put(key) {
@@ -325,14 +302,12 @@ prototype2["put"] = function put(key) {
   const prefix = this.prefix;
   let tmp3 = key;
   if (0 !== prefix.length) {
-    obj = { key: null, data: null, generation: null };
-    obj[0] = combineKey.combineKey(prefix, key.key);
-    ({ data: obj2[1], generation: obj2[2] } = key);
+    obj = { key: Key.combineKey(prefix, key.key), data: null, generation: null };
+    ({ data: obj2.data, generation: obj2.generation } = key);
     tmp3 = obj;
-    const obj3 = combineKey;
   }
-  obj[2] = tmp3;
-  obj[3] = Replace === TableId.ConflictOptions.Replace;
+  obj.cell = tmp3;
+  obj.overwrite = Replace === TableId.ConflictOptions.Replace;
   return database.execute(obj, this.defaultDebugTag);
 };
 prototype2["putAll"] = function putAll(arr) {
@@ -348,17 +323,15 @@ prototype2["putAll"] = function putAll(arr) {
     mapped = arr.map((key) => {
       let tmp2 = key;
       if (0 !== prefix.length) {
-        const obj = { key: null, data: null, generation: null };
-        obj[0] = prefix(closure_1_1[1]).combineKey(tmp, key.key);
-        ({ data: obj[1], generation: obj[2] } = key);
+        const obj = { key: Key.combineKey(tmp, key.key), data: null, generation: null };
+        ({ data: obj.data, generation: obj.generation } = key);
         tmp2 = obj;
-        const obj2 = prefix(closure_1_1[1]);
       }
       return tmp2;
     });
   }
-  obj[2] = mapped;
-  obj[3] = Replace === prefix(1993).ConflictOptions.Replace;
+  obj.cells = mapped;
+  obj.overwrite = Replace === prefix(1993).ConflictOptions.Replace;
   return database.execute(obj, this.defaultDebugTag);
 };
 prototype2["replaceAll"] = function replaceAll(arg0) {
@@ -373,24 +346,24 @@ prototype2["delete"] = function delete(items) {
     items = [];
   }
   const database = this.database;
-  const obj = { type: "kv.delete_many", table: this.tableId, key: combineKey.combineKeyPrefix(this.prefix, items) };
+  const obj = { type: "kv.delete_many", table: this.tableId, key: Key.combineKeyPrefix(this.prefix, items) };
   return database.execute(obj, this.defaultDebugTag);
 };
 prototype2["deleteRange"] = function deleteRange(key, key) {
-  let obj = combineKey;
+  let obj = Key;
   const combineKeyResult = obj.combineKey(this.prefix, key);
   const database = this.database;
   obj = { type: "kv.delete_range", table: this.tableId, range: null };
-  const items = [combineKeyResult, combineKey.combineKey(this.prefix, key)];
-  obj[2] = items;
+  const items = [combineKeyResult, Key.combineKey(this.prefix, key)];
+  obj.range = items;
   return database.execute(obj, this.defaultDebugTag);
 };
-prototype2["deleteGeneration"] = function deleteGeneration(items) {
+prototype2["deleteGeneration"] = function deleteGeneration(items, comparer, generation) {
   if (items === undefined) {
     items = [];
   }
   const database = this.database;
-  const obj = { type: "kv.delete_generation", table: this.tableId, key: combineKey.combineKeyPrefix(this.prefix, items), generation: arg2, comparer: arg1 };
+  const obj = { type: "kv.delete_generation", table: this.tableId, key: Key.combineKeyPrefix(this.prefix, items), generation, comparer };
   return database.execute(obj, this.defaultDebugTag);
 };
 prototype2["transaction"] = function transaction(arg0, arg1) {
@@ -398,146 +371,126 @@ prototype2["transaction"] = function transaction(arg0, arg1) {
   closure_0 = arg0;
   const database = this.database;
   return database.transaction((transaction) => {
-    ({ prefix, tableId } = self);
-    if (typeof closure_1_3 !== "function") {
-      HermesBuiltin.throwTypeError();
+    if (typeof TableTransaction === "function") {
+      Object.create(tmp2.prototype);
+      const messages = {
+        trimOrphans(arg0) {
+            if (1 === obj.prefix.length) {
+              if (1 === arg0.length) {
+                const transaction = tmp.transaction;
+                obj = { type: "messages.trim_orphans", table: tmp.tableId, channelKey: arg0[0], messageKey: tmp.prefix[0] };
+                transaction.add(obj);
+              }
+            }
+            const error = new Error("trimOrphans: only one prefix component is supported at this time");
+            throw error;
+          },
+        trimChannel(key, limit) {
+            const transaction = obj.transaction;
+            obj = { type: "messages.trim_channel", table: obj.tableId, key: messages(self[1]).combineKey(obj.prefix, key), limit };
+            transaction.add(obj);
+          },
+        trimChannelsIn(arg0, limit) {
+            if (1 === obj.prefix.length) {
+              if (1 === arg0.length) {
+                const transaction = tmp.transaction;
+                obj = { type: "messages.trim_channels_in", table: tmp.tableId, channelKey: arg0[0], messageKey: tmp.prefix[0], limit };
+                transaction.add(obj);
+              }
+            }
+            const error = new Error("trimChannelsIn: only one prefix component is supported at this time");
+            throw error;
+          },
+        trimChannelsNotIn(arg0, limit) {
+            if (1 === obj.prefix.length) {
+              if (1 === arg0.length) {
+                const transaction = tmp.transaction;
+                obj = { type: "messages.trim_channels_not_in", table: tmp.tableId, channelKey: arg0[0], messageKey: tmp.prefix[0], limit };
+                transaction.add(obj);
+              }
+            }
+            const error = new Error("trimChannelsNotIn: only one prefix component is supported at this time");
+            throw error;
+          }
+      };
+      messages.messages = messages;
+      messages.prefix = tmp3;
+      messages.tableId = tmp4;
+      messages.transaction = transaction;
+      return tmp(messages);
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    let obj = Object.create(closure_1_3.prototype);
-    obj.messages = {
-      trimOrphans(arg0) {
-        if (1 === obj.prefix.length) {
-          if (1 === arg0.length) {
-            const transaction = tmp.transaction;
-            obj = { type: "messages.trim_orphans", table: null, channelKey: null, messageKey: null };
-            obj[1] = tmp.tableId;
-            obj[2] = arg0[0];
-            obj[3] = tmp.prefix[0];
-            transaction.add(obj);
-          }
-        }
-        error = new Error("trimOrphans: only one prefix component is supported at this time");
-        throw error;
-      },
-      trimChannel(key) {
-        const transaction = obj.transaction;
-        obj = { type: "messages.trim_channel", table: obj.tableId, key: obj(closure_1_1[1]).combineKey(obj.prefix, key), limit: arg1 };
-        transaction.add(obj);
-      },
-      trimChannelsIn(arg0, arg1) {
-        if (1 === obj.prefix.length) {
-          if (1 === arg0.length) {
-            const transaction = tmp.transaction;
-            obj = { type: "messages.trim_channels_in", table: null, channelKey: null, messageKey: null, limit: null };
-            obj[1] = tmp.tableId;
-            obj[2] = arg0[0];
-            obj[3] = tmp.prefix[0];
-            obj[4] = arg1;
-            transaction.add(obj);
-          }
-        }
-        error = new Error("trimChannelsIn: only one prefix component is supported at this time");
-        throw error;
-      },
-      trimChannelsNotIn(arg0, arg1) {
-        if (1 === obj.prefix.length) {
-          if (1 === arg0.length) {
-            const transaction = tmp.transaction;
-            obj = { type: "messages.trim_channels_not_in", table: null, channelKey: null, messageKey: null, limit: null };
-            obj[1] = tmp.tableId;
-            obj[2] = arg0[0];
-            obj[3] = tmp.prefix[0];
-            obj[4] = arg1;
-            transaction.add(obj);
-          }
-        }
-        error = new Error("trimChannelsNotIn: only one prefix component is supported at this time");
-        throw error;
-      }
-    };
-    obj.prefix = prefix;
-    obj.tableId = tableId;
-    obj.transaction = transaction;
-    return obj(obj);
   }, arg1);
 };
 prototype2["upgradeTransaction"] = function upgradeTransaction(transaction) {
-  ({ prefix, tableId } = this);
-  if (typeof TableTransaction !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof TableTransaction === "function") {
+    Object.create(tmp.prototype);
+    const messages = {
+      trimOrphans(arg0) {
+          if (1 === obj.prefix.length) {
+            if (1 === arg0.length) {
+              const transaction = tmp.transaction;
+              obj = { type: "messages.trim_orphans", table: tmp.tableId, channelKey: arg0[0], messageKey: tmp.prefix[0] };
+              transaction.add(obj);
+            }
+          }
+          const error = new Error("trimOrphans: only one prefix component is supported at this time");
+          throw error;
+        },
+      trimChannel(key, limit) {
+          const transaction = obj.transaction;
+          obj = { type: "messages.trim_channel", table: obj.tableId, key: messages(self[1]).combineKey(obj.prefix, key), limit };
+          transaction.add(obj);
+        },
+      trimChannelsIn(arg0, limit) {
+          if (1 === obj.prefix.length) {
+            if (1 === arg0.length) {
+              const transaction = tmp.transaction;
+              obj = { type: "messages.trim_channels_in", table: tmp.tableId, channelKey: arg0[0], messageKey: tmp.prefix[0], limit };
+              transaction.add(obj);
+            }
+          }
+          const error = new Error("trimChannelsIn: only one prefix component is supported at this time");
+          throw error;
+        },
+      trimChannelsNotIn(arg0, limit) {
+          if (1 === obj.prefix.length) {
+            if (1 === arg0.length) {
+              const transaction = tmp.transaction;
+              obj = { type: "messages.trim_channels_not_in", table: tmp.tableId, channelKey: arg0[0], messageKey: tmp.prefix[0], limit };
+              transaction.add(obj);
+            }
+          }
+          const error = new Error("trimChannelsNotIn: only one prefix component is supported at this time");
+          throw error;
+        }
+    };
+    messages.messages = messages;
+    messages.prefix = tmp2;
+    messages.tableId = tmp3;
+    messages.transaction = transaction;
+    return messages;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const obj = Object.create(TableTransaction.prototype);
-  obj.messages = {
-    trimOrphans(arg0) {
-      if (1 === obj.prefix.length) {
-        if (1 === arg0.length) {
-          const transaction = tmp.transaction;
-          obj = { type: "messages.trim_orphans", table: null, channelKey: null, messageKey: null };
-          obj[1] = tmp.tableId;
-          obj[2] = arg0[0];
-          obj[3] = tmp.prefix[0];
-          transaction.add(obj);
-        }
-      }
-      error = new Error("trimOrphans: only one prefix component is supported at this time");
-      throw error;
-    },
-    trimChannel(key) {
-      const transaction = obj.transaction;
-      obj = { type: "messages.trim_channel", table: obj.tableId, key: obj(closure_1_1[1]).combineKey(obj.prefix, key), limit: arg1 };
-      transaction.add(obj);
-    },
-    trimChannelsIn(arg0, arg1) {
-      if (1 === obj.prefix.length) {
-        if (1 === arg0.length) {
-          const transaction = tmp.transaction;
-          obj = { type: "messages.trim_channels_in", table: null, channelKey: null, messageKey: null, limit: null };
-          obj[1] = tmp.tableId;
-          obj[2] = arg0[0];
-          obj[3] = tmp.prefix[0];
-          obj[4] = arg1;
-          transaction.add(obj);
-        }
-      }
-      error = new Error("trimChannelsIn: only one prefix component is supported at this time");
-      throw error;
-    },
-    trimChannelsNotIn(arg0, arg1) {
-      if (1 === obj.prefix.length) {
-        if (1 === arg0.length) {
-          const transaction = tmp.transaction;
-          obj = { type: "messages.trim_channels_not_in", table: null, channelKey: null, messageKey: null, limit: null };
-          obj[1] = tmp.tableId;
-          obj[2] = arg0[0];
-          obj[3] = tmp.prefix[0];
-          obj[4] = arg1;
-          transaction.add(obj);
-        }
-      }
-      error = new Error("trimChannelsNotIn: only one prefix component is supported at this time");
-      throw error;
-    }
-  };
-  obj.prefix = prefix;
-  obj.tableId = tableId;
-  obj.transaction = transaction;
-  return obj;
 };
 prototype2["getManySyncUnsafe"] = function getManySyncUnsafe(items, ordering) {
   if (items === undefined) {
     items = [];
   }
   const database = this.database;
-  const obj = { type: "kv.get_many", table: this.tableId, key: combineKey.combineKeyPrefix(this.prefix, items), ordering: null, limit: null };
+  const obj = { type: "kv.get_many", table: this.tableId, key: Key.combineKeyPrefix(this.prefix, items), ordering: null, limit: null };
   ordering = undefined;
   if (ordering != null) {
     ordering = ordering.ordering;
   }
-  obj[3] = ordering;
+  obj.ordering = ordering;
   let limit;
   if (ordering != null) {
     limit = ordering.limit;
   }
-  obj[4] = limit;
+  obj.limit = limit;
   return database.executeSync(obj);
 };
 prototype2["getMapEntriesSyncUnsafe"] = function getMapEntriesSyncUnsafe(items) {
@@ -545,7 +498,7 @@ prototype2["getMapEntriesSyncUnsafe"] = function getMapEntriesSyncUnsafe(items) 
     items = [];
   }
   const database = this.database;
-  const obj = { type: "kv.get_map_entries", table: this.tableId, key: combineKey.combineKeyPrefix(this.prefix, items) };
+  const obj = { type: "kv.get_map_entries", table: this.tableId, key: Key.combineKeyPrefix(this.prefix, items) };
   return database.executeSync(obj);
 };
 prototype2["deleteSyncUnsafe"] = function deleteSyncUnsafe(items) {
@@ -553,7 +506,7 @@ prototype2["deleteSyncUnsafe"] = function deleteSyncUnsafe(items) {
     items = [];
   }
   const database = this.database;
-  const obj = { type: "kv.delete_many", table: this.tableId, key: combineKey.combineKeyPrefix(this.prefix, items) };
+  const obj = { type: "kv.delete_many", table: this.tableId, key: Key.combineKeyPrefix(this.prefix, items) };
   database.executeSync(obj);
 };
 

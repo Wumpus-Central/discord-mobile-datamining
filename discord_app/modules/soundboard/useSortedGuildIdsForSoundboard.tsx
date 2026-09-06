@@ -1,19 +1,20 @@
 // discord_app/modules/soundboard/useSortedGuildIdsForSoundboard.tsx
-import closure_3 from "../../../_runtime/00019_noop.js";
-import closure_4 from "../../stores/PermissionStore.tsx";
-import closure_5 from "../../stores/SortedGuildStore.tsx";
-import closure_6 from "../../stores/UserStore.tsx";
-import { EMPTY_STRING_SNOWFLAKE_ID } from "../../Constants.tsx";
-import { Permissions } from "../../../discord_common/js/shared/Constants.tsx";
+import noop from "../../../_runtime/metro/00019__.js";
+import PermissionStore from "../../stores/PermissionStore.tsx";
+import SortedGuildStore from "../../stores/SortedGuildStore.tsx";
+import UserStore from "../../stores/UserStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/soundboard/useSortedGuildIdsForSoundboard.tsx");
+const require = fn;
+const EMPTY_STRING_SNOWFLAKE_ID = fn(1074).EMPTY_STRING_SNOWFLAKE_ID;
+const Permissions = fn(1085).Permissions;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/soundboard/useSortedGuildIdsForSoundboard.tsx");
 
 export const useSortedGuildIdsForSoundboard = function useSortedGuildIdsForSoundboard(guild_id, arg1) {
-  const _require = guild_id;
+  _require = guild_id;
   closure_1 = arg1;
-  let items = [closure_6];
-  stateFromStores = _require(stateFromStores[6]).useStateFromStores(items, () => currentUser.getCurrentUser());
+  let items = [UserStore];
+  stateFromStores = require("useStateFromStores").useStateFromStores(items, () => currentUser.getCurrentUser());
   guild_id = undefined;
   if (guild_id != null) {
     guild_id = guild_id.guild_id;
@@ -29,7 +30,7 @@ export const useSortedGuildIdsForSoundboard = function useSortedGuildIdsForSound
   stateFromStores2 = tmpResult.useStateFromStores(items2, () => {
     let canResult = null == closure_0 || null == tmp.guild_id;
     if (!canResult) {
-      canResult = stateFromStores1.can(closure_1_8.USE_EXTERNAL_SOUNDS, tmp);
+      canResult = PermissionStore.can(Permissions.USE_EXTERNAL_SOUNDS, tmp);
     }
     return canResult;
   });
@@ -38,7 +39,7 @@ export const useSortedGuildIdsForSoundboard = function useSortedGuildIdsForSound
     if (obj.canUseSoundboardEverywhere(stateFromStores)) {
       if (stateFromStores2) {
         if ("" !== guild_id) {
-          let found = arr2.filter((arg0) => arg0 !== closure_3);
+          let found = arr2.filter((item) => item !== guild_id);
         } else {
           found = arr2;
         }

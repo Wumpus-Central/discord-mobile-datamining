@@ -1,12 +1,12 @@
 // discord_app/modules/markup/PersonalWidgetMarkupUtils.native.tsx
-import MarkupTextDefault from "MarkupReactRules.native.tsx";
-import parseLinkDefault from "MarkupRules.tsx";
-import importDefaultResult from "combineMarkupRules.tsx";
-import importDefaultResult1 from "../../../_runtime/00012_apply.js";
-import importAllResult from "../../../discord_common/js/packages/markup/MarkupParser.tsx";
+import MarkupReactRulesDefault from "MarkupReactRules.native.tsx";
+import MarkupRulesDefault from "MarkupRules.tsx";
+import combineMarkupRules from "combineMarkupRules.tsx";
+import apply from "../../../_runtime/metro/00012__.js";
+import MarkupParser from "../../../discord_common/js/packages/markup/MarkupParser.tsx";
 
 const items = [
-  importDefaultResult1.pick(parseLinkDefault.RULES, [
+  apply.pick(MarkupRulesDefault.RULES, [
     "escape",
     "text",
     "strong",
@@ -17,11 +17,11 @@ const items = [
     "emoji",
     "invisibleUnicode",
   ]),
-  MarkupTextDefault(),
+  MarkupReactRulesDefault(),
 ];
-const importDefaultResultResult = importDefaultResult(items);
-const reactParserForResult = importAllResult.reactParserFor(importDefaultResultResult);
-const result = require("set").fileFinishedImporting("modules/markup/PersonalWidgetMarkupUtils.native.tsx");
+const reactParserForResult = MarkupParser.reactParserFor(combineMarkupRules(items));
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/markup/PersonalWidgetMarkupUtils.native.tsx");
 
 export const parsePersonalWidgetReact = reactParserForResult;
 export const parsePersonalWidgetEditingReact = reactParserForResult;

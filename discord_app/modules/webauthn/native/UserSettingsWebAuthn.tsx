@@ -1,10 +1,13 @@
 // discord_app/modules/webauthn/native/UserSettingsWebAuthn.tsx
-import closure_2 from "../../../../_runtime/00019_noop.js";
-import { WebAuthnScreens } from "../WebAuthnConstants.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import Navigator from "../../../design/components/Navigator/native/Navigator.native.tsx";
+import WebAuthnScreens2 from "WebAuthnScreens.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/webauthn/native/UserSettingsWebAuthn.tsx");
+require = fn;
+const WebAuthnScreens = fn(14657).WebAuthnScreens;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/webauthn/native/UserSettingsWebAuthn.tsx");
 
 export default function UserSettingsWebAuthn(showNav) {
   ({ navigation: require, initialRouteName } = showNav);
@@ -15,10 +18,13 @@ export default function UserSettingsWebAuthn(showNav) {
   if (flag === undefined) {
     flag = false;
   }
-  const screens = require(flag[3]).getScreens({ isModal: false });
-  const layoutEffect = React.useLayoutEffect(() => {
+  let obj = WebAuthnScreens2;
+  const screens = obj.getScreens({ isModal: false });
+  const layoutEffect = noop.useLayoutEffect(() => {
     options.setOptions({ headerShown: flag });
   });
-  const initialRouteStack = [{ name: initialRouteName }];
-  return jsx(require(flag[4]).Navigator, { screens, initialRouteName, initialRouteStack, useContainer: false });
+  obj = { screens, initialRouteName, initialRouteStack: null, useContainer: false };
+  const items = [{ name: initialRouteName }];
+  obj.initialRouteStack = items;
+  return jsx(Navigator.Navigator, { screens, initialRouteName, initialRouteStack: null, useContainer: false });
 }

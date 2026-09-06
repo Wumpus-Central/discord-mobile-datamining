@@ -1,7 +1,7 @@
 // discord_app/utils/CrossPlatformNativeUtils.native.tsx
-import set from "../../_runtime/00002_set.js";
+import size from "../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("utils/CrossPlatformNativeUtils.native.tsx");
+const result = size.fileFinishedImporting("utils/CrossPlatformNativeUtils.native.tsx");
 
 export default {
   clearNavigationHistory() {},

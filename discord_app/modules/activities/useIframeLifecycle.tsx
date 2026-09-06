@@ -1,12 +1,13 @@
 // discord_app/modules/activities/useIframeLifecycle.tsx
-import closure_2 from "../../../_runtime/00019_noop.js";
-import { ComponentActions } from "../../Constants.tsx";
+import ComponentDispatchUtils from "../../utils/ComponentDispatchUtils.tsx";
+import noop from "../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/activities/useIframeLifecycle.tsx");
+require = fn;
+const ComponentActions = fn(1074).ComponentActions;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/useIframeLifecycle.tsx");
 
-export default function useIframeLifecycle(arg0) {
-  closure_0 = arg0;
+export default function useIframeLifecycle(id) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -21,13 +22,9 @@ export default function useIframeLifecycle(arg0) {
   if (flag2 === undefined) {
     flag2 = true;
   }
-  closure_5 = undefined;
-  closure_6 = undefined;
-  closure_7 = undefined;
-  closure_8 = undefined;
-  closure_5 = onIframeUnmount.useRef(onIframeMount);
+  onIframeUnmount.useRef(onIframeMount);
   closure_6 = onIframeUnmount.useRef(onIframeUnmount);
-  closure_7 = onIframeUnmount.useRef(flag);
+  onIframeUnmount.useRef(flag);
   closure_8 = onIframeUnmount.useRef(flag2);
   const effect = onIframeUnmount.useEffect(() => {
     closure_5.current = onIframeMount;
@@ -35,30 +32,28 @@ export default function useIframeLifecycle(arg0) {
     closure_7.current = flag;
     closure_8.current = flag2;
   });
-  const items = [arg0];
+  const items = [id];
   const effect1 = onIframeUnmount.useEffect(() => {
     if (ref2.current) {
-      let ComponentDispatch = callback(onIframeMount[2]).ComponentDispatch;
-      let obj = { id: null };
-      obj[0] = callback;
-      ComponentDispatch.dispatch(flag.IFRAME_MOUNT, obj);
+      let ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
+      let obj = { id };
+      ComponentDispatch.dispatch(ComponentActions.IFRAME_MOUNT, obj);
       let current = ref.current;
       if (current != null) {
         current(tmp4);
       }
-      tmp4 = callback;
+      tmp4 = id;
     }
     return () => {
       if (ref2.current) {
-        const ComponentDispatch = closure_1_0(closure_1_1[2]).ComponentDispatch;
-        const obj = { id: null };
-        obj[0] = closure_0;
-        ComponentDispatch.dispatch(closure_1_3.IFRAME_UNMOUNT, obj);
+        const ComponentDispatch = id(onIframeMount[2]).ComponentDispatch;
+        const obj = { id };
+        ComponentDispatch.dispatch(flag.IFRAME_UNMOUNT, obj);
         const current = ref.current;
         if (current != null) {
           current(tmp4);
         }
-        tmp4 = closure_0;
+        tmp4 = id;
       }
     };
   }, items);

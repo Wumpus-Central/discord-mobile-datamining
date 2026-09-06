@@ -1,7 +1,7 @@
 // discord_app/design/utils/shared/getNodeText.tsx
-import set from "../../../../_runtime/00002_set.js";
-import getNodeText from "../../../../discord_common/js/packages/design/utils/getNodeText.tsx";
+import utils_getNodeText from "../../../../discord_common/js/packages/design/utils/getNodeText.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("design/utils/shared/getNodeText.tsx");
+const result = size.fileFinishedImporting("design/utils/shared/getNodeText.tsx");
 
-export const getNodeText = getNodeText.getNodeText;
+export const getNodeText = utils_getNodeText.getNodeText;

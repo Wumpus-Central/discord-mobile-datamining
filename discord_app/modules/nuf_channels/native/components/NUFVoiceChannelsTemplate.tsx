@@ -1,37 +1,30 @@
 // discord_app/modules/nuf_channels/native/components/NUFVoiceChannelsTemplate.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import NUFActionSheetTemplateDefault from "NUFTemplate.tsx";
-import registerAssetDefault from "../../../../../_runtime/13779_registerAsset.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import KeyboardManagerUtilsAll from "../../../../utils/native/KeyboardManagerUtils.tsx";
+import SelectedChannelActionCreatorsDefault from "../../../../actions/SelectedChannelActionCreators.tsx";
+import NUFChannelsManagerDefault from "../NUFChannelsManager.tsx";
+import NUFTemplateDefault from "NUFTemplate.tsx";
+import _modDef13779 from "../../../../../_runtime/metro/13779__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-noopAll;
-let result = require("set").fileFinishedImporting(
-  "modules/nuf_channels/native/components/NUFVoiceChannelsTemplate.tsx",
-);
+const require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/nuf_channels/native/components/NUFVoiceChannelsTemplate.tsx");
 
 export default function NUFVoiceChannelsTemplate(channel) {
   channel = channel.channel;
   let obj = { title: null, description: null, imageSrc: null, CTALabel: null, onCTAPress: null };
   const intl = channel(1114).intl;
-  obj[0] = intl.string(channel(1114).t.w5HAll);
+  obj.title = intl.string(channel(1114).t.w5HAll);
   const intl2 = channel(1114).intl;
-  obj[1] = intl2.string(channel(1114).t.Ww4hhq);
-  obj[2] = registerAssetDefault;
+  obj.description = intl2.string(channel(1114).t.Ww4hhq);
+  obj.imageSrc = _modDef13779;
   const intl3 = channel(1114).intl;
-  obj[3] = intl3.string(channel(1114).t.eIi3Om);
-  obj[4] = function onCTAPress() {
-    const result = closure_1_1(closure_1_3[5]).handleVoiceChannelsOnboard();
-    const obj = closure_1_1(closure_1_3[5]);
-    const result1 = closure_1_2(closure_1_3[6]).dismissGlobalKeyboard();
-    const obj2 = closure_1_2(closure_1_3[6]);
-    const voiceChannel = closure_1_1(closure_1_3[7]).selectVoiceChannel(channel.id);
+  obj.CTALabel = intl3.string(channel(1114).t.eIi3Om);
+  obj.onCTAPress = function onCTAPress() {
+    const result = NUFChannelsManagerDefault.handleVoiceChannelsOnboard();
+    const result1 = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
+    const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(channel.id);
   };
-  return jsx(NUFActionSheetTemplateDefault, {
-    title: null,
-    description: null,
-    imageSrc: null,
-    CTALabel: null,
-    onCTAPress: null,
-  });
+  return jsx(NUFTemplateDefault, { title: null, description: null, imageSrc: null, CTALabel: null, onCTAPress: null });
 }

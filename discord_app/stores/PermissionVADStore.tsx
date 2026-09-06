@@ -1,31 +1,30 @@
 // discord_app/stores/PermissionVADStore.tsx
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../Dispatcher.tsx";
-import closure_2 from "AuthenticationStore.tsx";
-import closure_3 from "ChannelStore.tsx";
-import closure_4 from "MediaEngineStore.tsx";
-import closure_5 from "PermissionStore.tsx";
-import closure_6 from "RTCConnectionStore.tsx";
-import closure_7 from "VoiceStateStore.tsx";
-import ME from "../Constants.tsx";
+import DispatcherDefault from "../Dispatcher.tsx";
+import AuthenticationStore from "AuthenticationStore.tsx";
+import ChannelStore from "ChannelStore.tsx";
+import MediaEngineStore from "MediaEngineStore.tsx";
+import PermissionStore from "PermissionStore.tsx";
+import RTCConnectionStore from "RTCConnectionStore.tsx";
+import VoiceStateStore from "VoiceStateStore.tsx";
 
 function handleUpdateVADPermission() {
-  channelId = channelId.getChannelId();
-  let flag = true;
+  const channelId = RTCConnectionStore.getChannelId();
+  flag = true;
   if (null != channelId) {
-    channel = channel.getChannel(channelId);
+    const channel = ChannelStore.getChannel(channelId);
     let guildId;
     if (channel != null) {
       guildId = channel.getGuildId();
     }
-    voiceState = voiceState.getVoiceState(guildId, id.getId());
+    const voiceState = VoiceStateStore.getVoiceState(guildId, AuthenticationStore.getId());
     let canResult =
-      mode.getMode() !== constants.VOICE_ACTIVITY ||
+      MediaEngineStore.getMode() !== constants.VOICE_ACTIVITY ||
       null == channel ||
       channel.isPrivate() ||
       channel.isGuildStageVoice();
     if (!canResult) {
-      canResult = closure_5.can(constants2.USE_VAD, channel);
+      canResult = PermissionStore.can(constants2.USE_VAD, channel);
     }
     if (!canResult) {
       canResult = null == voiceState || voiceState.suppress || null != voiceState.requestToSpeakTimestamp;
@@ -35,31 +34,37 @@ function handleUpdateVADPermission() {
   }
   let flag2 = flag !== flag;
   if (flag2) {
-    const obj = { type: "SET_VAD_PERMISSION", hasPermission: null };
-    obj[1] = flag;
-    dispatcherDefault.dispatch(obj);
+    c11 = flag;
+    const obj = { type: "SET_VAD_PERMISSION", hasPermission: flag };
+    DispatcherDefault.dispatch(obj);
     flag2 = true;
-    const obj2 = dispatcherDefault;
   }
   return flag2;
 }
-({ InputModes: closure_8, Permissions: c9 } = ME);
-let c10 = true;
+const Constants = fn(1074);
+({ InputModes: closure_8, Permissions: closure_9 } = Constants);
 let c11 = true;
 const Store = initializeDefault.Store;
 class PermissionVADStore extends Store {}
 const prototype = PermissionVADStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_2, closure_3, closure_4, closure_5, closure_6, closure_7);
+  this.waitFor(
+    AuthenticationStore,
+    ChannelStore,
+    MediaEngineStore,
+    PermissionStore,
+    RTCConnectionStore,
+    VoiceStateStore,
+  );
 };
 prototype["shouldShowWarning"] = function shouldShowWarning() {
   return !c11;
 };
 prototype["canUseVoiceActivity"] = function canUseVoiceActivity() {
-  return c10;
+  return flag;
 };
 PermissionVADStore.displayName = "PermissionVADStore";
-const permissionVADStore = new PermissionVADStore(dispatcherDefault, {
+const permissionVADStore = new PermissionVADStore(DispatcherDefault, {
   RTC_CONNECTION_STATE: handleUpdateVADPermission,
   MEDIA_ENGINE_SET_AUDIO_ENABLED: handleUpdateVADPermission,
   AUDIO_SET_MODE: handleUpdateVADPermission,
@@ -74,18 +79,19 @@ const permissionVADStore = new PermissionVADStore(dispatcherDefault, {
     return voiceStates.some((userId) => {
       let tmp = userId.userId === id.getId();
       if (tmp) {
-        tmp = callback();
+        tmp = handleUpdateVADPermission();
       }
       return tmp;
     });
   },
   AUDIO_TOGGLE_SELF_MUTE: function handleUnclearWarning() {
-    closure_11 = c10;
+    c11 = flag;
   },
   PERMISSION_CLEAR_VAD_WARNING: function handleClearWarning() {
     c11 = true;
   },
 });
-const result = require("set").fileFinishedImporting("stores/PermissionVADStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("stores/PermissionVADStore.tsx");
 
 export default permissionVADStore;

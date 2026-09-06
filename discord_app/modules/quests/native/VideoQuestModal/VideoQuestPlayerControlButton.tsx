@@ -1,27 +1,30 @@
 // discord_app/modules/quests/native/VideoQuestModal/VideoQuestPlayerControlButton.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import isBlurDisabledDefault from "../../../visual_effect_view/native/VisualEffectView.tsx";
-import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
-import importDefaultResult from "../../../../../_runtime/00672_n.js";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import VisualEffectViewDefault from "../../../visual_effect_view/native/VisualEffectView.tsx";
+import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import n from "../../../../../_runtime/metro/00672__.js";
 
-require = arg1;
+require = fn;
+const jsx = fn(21).jsx;
+fn(4560);
 let obj = { disabled: { opacity: 0.5 }, container: null, blur: null };
-obj = { borderRadius: ThemesDefault.radii.round, overflow: "hidden" };
-obj[1] = obj;
-createCacheKey = { backgroundColor: null, padding: null };
-const importDefaultResultResult = importDefaultResult(ThemesDefault.unsafe_rawColors.BLACK);
-createCacheKey[0] = importDefaultResult(ThemesDefault.unsafe_rawColors.BLACK).alpha(0.5).hex();
-createCacheKey[1] = ThemesDefault.space.PX_12;
-obj[2] = createCacheKey;
-let closure_4 = createCacheKey.createStyles(obj);
-const alphaResult = importDefaultResult(ThemesDefault.unsafe_rawColors.BLACK).alpha(0.5);
-const memoResult = importAllResult.memo((arg0) => {
+obj = { borderRadius: nativeDefault.radii.round, overflow: "hidden" };
+obj.container = obj;
+const createStyles = { backgroundColor: null, padding: null };
+const importDefaultResultResult = n(nativeDefault.unsafe_rawColors.BLACK);
+createStyles.backgroundColor = n(nativeDefault.unsafe_rawColors.BLACK).alpha(0.5).hex();
+createStyles.padding = nativeDefault.space.PX_12;
+obj.blur = createStyles;
+let closure_4 = createStyles.createStyles(obj);
+const alphaResult = n(nativeDefault.unsafe_rawColors.BLACK).alpha(0.5);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestPlayerControlButton.tsx");
+
+export const VideoQuestPlayerControlButton = noop.memo((arg0) => {
   ({ style, children } = arg0);
-  const merged = Object.assign(arg0, Object.create(null));
-  const tmp2 = callback();
+  const merged = Object.assign(arg0, Object.assign({ style: 0, children: 0 }));
+  const tmp2 = closure_4();
   const items = [tmp2.container, ,];
   let disabled = merged.disabled;
   if (disabled) {
@@ -32,14 +35,14 @@ const memoResult = importAllResult.memo((arg0) => {
   items[2] = style;
   const merged1 = Object.assign(merged);
   obj = { style: tmp2.blur, blurAmount: 0.2, blurStyle: "default", blurTheme: "dark", children };
-  obj.children = jsx(isBlurDisabledDefault, {
+  obj.children = jsx(VisualEffectViewDefault, {
     style: tmp2.blur,
     blurAmount: 0.2,
     blurStyle: "default",
     blurTheme: "dark",
     children,
   });
-  return jsx(PressableBase.PressableOpacity, {
+  return jsx(Pressables.PressableOpacity, {
     style: tmp2.blur,
     blurAmount: 0.2,
     blurStyle: "default",
@@ -47,8 +50,3 @@ const memoResult = importAllResult.memo((arg0) => {
     children,
   });
 });
-const result = require("set").fileFinishedImporting(
-  "modules/quests/native/VideoQuestModal/VideoQuestPlayerControlButton.tsx",
-);
-
-export const VideoQuestPlayerControlButton = memoResult;

@@ -1,24 +1,24 @@
 // discord_app/modules/user_settings/defs/native/AgeGroupResetSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import messagesProxyDefault from "../../../age_assurance/AgeAssurance.messages.js";
+import util from "../../../../intl/index.native.tsx";
+import _modDef2946 from "../../../age_assurance/AgeAssurance.messages.js";
 import useAlertStore from "../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
-import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
-import AGE_GROUP_CONFIRM_ROW_PROPS from "AgeGroupScreenRowProps.tsx";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
+import AgeGroupScreenRowProps from "AgeGroupScreenRowProps.tsx";
 import SettingsAgeGroupResetAlert from "../../age_group/native/SettingsAgeGroupResetAlert.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 const jsx = jsxProd.jsx;
-const pressable = createToggle.createPressable({
+const pressable = SettingBuilders.createPressable({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault["bD//cU"]);
+    const intl = util.intl;
+    return intl.string(_modDef2946["bD//cU"]);
   },
-  parent: MobileUserSettings.MobileUserSettings.ACCOUNT_AGE_GROUP_ASSIGNED_ADULT,
+  parent: SettingsConstants.MobileUserSettings.ACCOUNT_AGE_GROUP_ASSIGNED_ADULT,
   useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault.Gn0SAj);
+    const intl = util.intl;
+    return intl.string(_modDef2946.Gn0SAj);
   },
   onPress() {
     useAlertStore.openAlert(
@@ -27,27 +27,8 @@ const pressable = createToggle.createPressable({
     );
   },
   withArrow: true,
-  usePredicate: AGE_GROUP_CONFIRM_ROW_PROPS.useShowAssignedAdultAgeGroupRow,
+  usePredicate: AgeGroupScreenRowProps.useShowAssignedAdultAgeGroupRow,
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault["bD//cU"]);
-  },
-  parent: MobileUserSettings.MobileUserSettings.ACCOUNT_AGE_GROUP_ASSIGNED_ADULT,
-  useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault.Gn0SAj);
-  },
-  onPress() {
-    useAlertStore.openAlert(
-      SettingsAgeGroupResetAlert.SETTINGS_AGE_GROUP_RESET_ALERT_ID,
-      jsx(SettingsAgeGroupResetAlert.default, {}),
-    );
-  },
-  withArrow: true,
-  usePredicate: AGE_GROUP_CONFIRM_ROW_PROPS.useShowAssignedAdultAgeGroupRow,
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/AgeGroupResetSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AgeGroupResetSetting.tsx");
 
 export default pressable;

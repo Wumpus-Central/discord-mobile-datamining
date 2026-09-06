@@ -1,13 +1,13 @@
 // discord_app/modules/global_discovery_apps/stores/ApplicationDirectorySearchStore.tsx
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../../Dispatcher.tsx";
+import DispatcherDefault from "../../../Dispatcher.tsx";
 import privDefault from "../../../../_runtime/01437_priv.js";
 import SearchAppsRequestSource from "../../../../discord_common/js/shared/shared-constants/SearchAppsRequestSource.tsx";
 
-require = arg1;
+require = fn;
 let obj = { FETCHING: 0, [0]: "FETCHING", FETCHED: 1, [1]: "FETCHED", ERROR: 2, [2]: "ERROR" };
 let closure_3 = new privDefault({ max: 20 });
-let closure_4 = {};
+obj = {};
 const Store = initializeDefault.Store;
 class ApplicationDirectorySearchStore extends Store {}
 const prototype = ApplicationDirectorySearchStore.prototype;
@@ -28,7 +28,7 @@ prototype["getSearchResults"] = function getSearchResults(arg0) {
   if (source === undefined) {
     source = SearchAppsRequestSource.SearchAppsRequestSource.APP_DIRECTORY;
   }
-  return store.get(
+  return closure_3.get(
     "query:'" +
       query +
       "' guildId:" +
@@ -70,7 +70,7 @@ prototype["getFetchState"] = function getFetchState(arg0) {
   if (source === undefined) {
     source = SearchAppsRequestSource.SearchAppsRequestSource.APP_DIRECTORY;
   }
-  return table[
+  return obj[
     "query:'" +
       query +
       "' guildId:" +
@@ -184,7 +184,7 @@ obj = {
       source;
     obj = { lastFetchTimeMs: Date.now() };
     const merged = Object.assign(result);
-    result = store.set(combined, obj);
+    result = closure_3.set(combined, obj);
     obj = {};
     const merged1 = Object.assign(obj);
     obj[combined] = obj.FETCHED;
@@ -234,11 +234,9 @@ obj = {
     obj[combined] = obj.ERROR;
   },
 };
-const applicationDirectorySearchStore = new ApplicationDirectorySearchStore(dispatcherDefault, obj);
-const tmp2 = new privDefault({ max: 20 });
-const result = require("set").fileFinishedImporting(
-  "modules/global_discovery_apps/stores/ApplicationDirectorySearchStore.tsx",
-);
+const applicationDirectorySearchStore = new ApplicationDirectorySearchStore(DispatcherDefault, obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/global_discovery_apps/stores/ApplicationDirectorySearchStore.tsx");
 
 export default applicationDirectorySearchStore;
 export const FetchState = obj;

@@ -1,26 +1,25 @@
 // discord_app/modules/billing/experiments/BlockedPaymentsCountryExperiment.tsx
-import set from "../../../../_runtime/00002_set.js";
 import useGeoForUserDefault from "../../premium/hooks/useGeoForUser.native.tsx";
 import createExperiment from "../../experiments/index.tsx";
 import ApexExperiment from "../../experiments/apex/index.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const items = [{ id: 1, label: "Payments Blocked", config: { paymentsBlocked: true } }];
-let closure_2 = createExperiment.createExperiment({
+let obj = {
   kind: "user",
   id: "2022-03_block_russian_purchases",
   label: "Block purchases based on country",
   defaultConfig: { paymentsBlocked: false },
-  treatments: items,
-});
-const obj = { 1: null };
-obj[1] = { enabled: true };
-let closure_3 = ApexExperiment.createApexExperiment({
-  name: "2026-03-block-purchases",
-  kind: "user",
-  defaultConfig: { enabled: false },
-  variations: obj,
-});
-const result = set.fileFinishedImporting("modules/billing/experiments/BlockedPaymentsCountryExperiment.tsx");
+  treatments: null,
+};
+const items = [{ id: 1, label: "Payments Blocked", config: { paymentsBlocked: true } }];
+obj.treatments = items;
+let closure_2 = createExperiment.createExperiment(obj);
+obj = { name: "2026-03-block-purchases", kind: "user", defaultConfig: { enabled: false }, variations: null };
+const obj1 = { 1: null };
+obj1[1] = { enabled: true };
+obj.variations = obj1;
+let closure_3 = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/billing/experiments/BlockedPaymentsCountryExperiment.tsx");
 
 export const useBlockedPaymentsConfig = function useBlockedPaymentsConfig() {
   let enabled = closure_2.useExperiment({ location: "c519a9_1" }, { autoTrackExposure: false }).paymentsBlocked;

@@ -1,33 +1,33 @@
 // discord_app/modules/experiments/apex/ApexExperiment.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import extractId from "../../../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx";
-import isDiscordFrontendDevelopment from "../../../utils/GlobalUtils.tsx";
-import loggerDefault from "../../../../discord_common/js/packages/apex/ApexExperiment.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../stores/AuthenticationStore.tsx";
-import closure_5 from "ApexExperimentStore.tsx";
+import FingerprintUtils from "../../../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx";
+import GlobalUtils from "../../../utils/GlobalUtils.tsx";
+import discord_common_apex_ApexExperimentDefault from "../../../../discord_common/js/packages/apex/ApexExperiment.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
+import ApexExperimentStore from "ApexExperimentStore.tsx";
 
-require = arg1;
+require = fn;
 function getUnitId(arg0, guildId) {
   if ("guild" === arg0) {
     return guildId.guildId;
   } else if ("user" === arg0) {
-    return store.getId();
+    return AuthenticationStore.getId();
   } else if ("installation" === arg0) {
-    let str2 = extractId.maybeExtractId(store.getInstallationForTracking());
+    let str2 = FingerprintUtils.maybeExtractId(AuthenticationStore.getInstallationForTracking());
     if (str2 == null) {
       str2 = "";
     }
     return str2;
   } else {
-    isDiscordFrontendDevelopment.assertNever(arg0);
+    GlobalUtils.assertNever(arg0);
   }
 }
 function useUnitId(arg0, guildId) {
-  let items = [closure_4];
-  callback(
+  let items = [AuthenticationStore];
+  _slicedToArray(
     initialize.useStateFromStoresArray(items, () => {
-      const items = [store.getId(), store.getInstallationForTracking()];
+      const items = [AuthenticationStore.getId(), AuthenticationStore.getInstallationForTracking()];
       return items;
     }),
     2,
@@ -47,12 +47,12 @@ function useUnitId(arg0, guildId) {
     tmpResult = tmp(1369);
     tmpResult.assertNever(arg0);
   }
-  const obj = initialize;
 }
-const result = require("set").fileFinishedImporting("modules/experiments/apex/ApexExperiment.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/experiments/apex/ApexExperiment.tsx");
 
 export default function createApexExperiment(ApexExperiment) {
-  return loggerDefault(ApexExperiment, closure_5, getUnitId, useUnitId);
+  return discord_common_apex_ApexExperimentDefault(ApexExperiment, ApexExperimentStore, getUnitId, useUnitId);
 }
-export const ApexExperiment = require("logger").ApexExperiment;
+export const ApexExperiment = fn(1435).ApexExperiment;
 export { getUnitId };

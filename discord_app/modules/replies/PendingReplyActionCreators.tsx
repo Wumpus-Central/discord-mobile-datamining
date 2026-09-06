@@ -1,12 +1,12 @@
 // discord_app/modules/replies/PendingReplyActionCreators.tsx
-import set from "../../../_runtime/00002_set.js";
-import dispatcherDefault from "../../Dispatcher.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/replies/PendingReplyActionCreators.tsx");
+const result = size.fileFinishedImporting("modules/replies/PendingReplyActionCreators.tsx");
 
 export const createPendingReply = function createPendingReply(arg0) {
   ({ message, channel, shouldMention, showMentionToggle, source, mediaMention } = arg0);
-  dispatcherDefault.dispatch({
+  DispatcherDefault.dispatch({
     type: "CREATE_PENDING_REPLY",
     message,
     channel,
@@ -18,7 +18,7 @@ export const createPendingReply = function createPendingReply(arg0) {
 };
 export const createShallowPendingReply = function createShallowPendingReply(arg0) {
   ({ messageId, channel, shouldMention, showMentionToggle } = arg0);
-  return dispatcherDefault.dispatch({
+  return DispatcherDefault.dispatch({
     type: "CREATE_SHALLOW_PENDING_REPLY",
     messageId,
     channel,
@@ -27,12 +27,10 @@ export const createShallowPendingReply = function createShallowPendingReply(arg0
   });
 };
 export const setPendingReplyShouldMention = function setPendingReplyShouldMention(id, shouldMention) {
-  let obj = dispatcherDefault;
-  obj = { type: "SET_PENDING_REPLY_SHOULD_MENTION", channelId: id, shouldMention };
+  const obj = { type: "SET_PENDING_REPLY_SHOULD_MENTION", channelId: id, shouldMention };
   obj.dispatch(obj);
 };
 export const deletePendingReply = function deletePendingReply(id) {
-  let obj = dispatcherDefault;
-  obj = { type: "DELETE_PENDING_REPLY", channelId: id };
+  const obj = { type: "DELETE_PENDING_REPLY", channelId: id };
   obj.dispatch(obj);
 };

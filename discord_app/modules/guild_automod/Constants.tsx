@@ -1,8 +1,8 @@
 // discord_app/modules/guild_automod/Constants.tsx
-import set from "../../../_runtime/00002_set.js";
 import AutomodTriggerType from "../../../discord_common/js/shared/shared-constants/AutomodTriggerType.tsx";
 import AutomodEventType from "../../../discord_common/js/shared/shared-constants/AutomodEventType.tsx";
 import AutomodActionType from "../../../discord_common/js/shared/shared-constants/AutomodActionType.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const items = [
   AutomodTriggerType.AutomodTriggerType.USER_PROFILE,
@@ -12,7 +12,7 @@ const items = [
   AutomodTriggerType.AutomodTriggerType.DEFAULT_KEYWORD_LIST,
   AutomodTriggerType.AutomodTriggerType.KEYWORD,
 ];
-const result = set.fileFinishedImporting("modules/guild_automod/Constants.tsx");
+const result = size.fileFinishedImporting("modules/guild_automod/Constants.tsx");
 
 export const AutomodEventType = AutomodEventType.AutomodEventType;
 export const AutomodTriggerType = AutomodTriggerType.AutomodTriggerType;

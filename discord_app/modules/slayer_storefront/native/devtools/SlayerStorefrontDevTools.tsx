@@ -1,145 +1,130 @@
 // discord_app/modules/slayer_storefront/native/devtools/SlayerStorefrontDevTools.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_8 from "../../../../stores/UserStore.tsx";
-import closure_9 from "../../../../stores/game_store/SKUStore.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import UserStore from "../../../../stores/UserStore.tsx";
+import SKUStore from "../../../../stores/game_store/SKUStore.tsx";
 
-const require = arg1;
-({ ScrollView: closure_6, View: error } = get_ActivityIndicator);
-({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-createCacheKey = { wrap: null, inputRow: null, buttons: null };
-createCacheKey = {
-  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
-  paddingHorizontal: ThemesDefault.space.PX_16,
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+fn(4560);
+let createStyles = { wrap: null, inputRow: null, buttons: null };
+createStyles = {
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
+  paddingHorizontal: nativeDefault.space.PX_16,
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { padding: ThemesDefault.space.PX_12 };
-let obj1 = { padding: ThemesDefault.space.PX_12 };
-createCacheKey[2] = { padding: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_8 };
-let closure_12 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { padding: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_8 };
-let result = require("set").fileFinishedImporting(
-  "modules/slayer_storefront/native/devtools/SlayerStorefrontDevTools.tsx",
-);
+createStyles.wrap = createStyles;
+createStyles.inputRow = { padding: nativeDefault.space.PX_12 };
+let obj1 = { padding: nativeDefault.space.PX_12 };
+createStyles.buttons = { padding: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8 };
+let closure_12 = createStyles.createStyles(createStyles);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/slayer_storefront/native/devtools/SlayerStorefrontDevTools.tsx");
 
 export default function SlayerStorefrontDevTools() {
-  const tmp = callback2();
-  [str, tmp4] = callback(React.useState(""), 2);
+  const tmp = closure_12();
+  [str, tmp4] = callback(noop.useState(""), 2);
   const trimmed = str.trim();
-  let _require = trimmed;
-  let obj = initialize;
-  const items = [closure_9];
+  _require = trimmed;
+  let obj = require("initialize");
+  const items = [SKUStore];
   const stateFromStores = obj.useStateFromStores(items, () => {
-    let value;
+    value = undefined;
     if (length.length > 0) {
-      value = closure_1_9.get(tmp);
+      value = SKUStore.get(tmp);
     }
     return value;
   });
-  const tmp3 = callback(React.useState(""), 2);
-  [tmp8, importDefault] = callback(React.useState(false), 2);
-  const tmp7 = callback(React.useState(false), 2);
-  [tmp10, dependencyMap] = callback(React.useState(null), 2);
-  obj1 = initialize;
-  const items1 = [closure_8];
+  const tmp3 = callback(noop.useState(""), 2);
+  [tmp8, importDefault] = callback(noop.useState(false), 2);
+  const tmp7 = callback(noop.useState(false), 2);
+  [tmp10, dependencyMap] = callback(noop.useState(null), 2);
+  let obj1 = require("initialize");
+  const items1 = [UserStore];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => currentUser.getCurrentUser());
-  _require = undefined;
-  _require = stateFromStores1((arg0) => {
-    closure_0 = arg0;
-    c5 = 0;
-    c6 = 0;
-    c4 = 0;
-    return (function* (arg0) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp7 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+  _require = stateFromStores1(function* (arg0, value) {
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp7 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_2 = tmp3;
-              let lib2 = tmp5;
-              if (0 !== lib.length) {
-                closure_1_2(null);
-                lib2(true);
-                c4 = 1;
-                obj1 = lib(closure_2_2[11]);
-                c5 = 2;
-                c6 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = obj1.fetchSKU(lib);
-                return obj1;
-              } else {
-                c6 = 3;
-              }
-            }
-          } else if (1 === tmp8) {
-            c4 = 0;
-            lib2 = closure_3;
-            const _Error = Error;
-            if (lib2 instanceof Error) {
-              let message = lib2.message;
-            } else {
-              const _String = String;
-              message = String(lib2);
-            }
-            closure_1_2(message);
-            lib2(false);
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
             c6 = 3;
-            const tmp20 = closure_1_2;
-          } else if (arg0 === 1) {
+            throw value;
+          } else if (arg0 === 2) {
             c6 = 3;
-            throw arg1;
-          } else if (arg0 !== 2) {
-            c4 = 0;
-            lib2(false);
-            lib(lib);
-          }
-          c4 = 0;
-          c6 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } catch (tmp36) {
-          closure_3 = tmp36;
-          if (tmp4 === c4) {
-            c6 = tmp2;
-            throw tmp36;
+            obj = { value, done: true };
+            return obj;
           } else {
-            c5 = tmp;
+            closure_129_0 = length;
+            if (0 !== length.length) {
+              tmp3(null);
+              tmp5(true);
+              c4 = 1;
+              let obj1 = length(10816);
+              c5 = 2;
+              c6 = 1;
+              obj1 = { value: null, done: false };
+              obj1.value = obj1.fetchSKU(length);
+              return obj1;
+            } else {
+              c6 = 3;
+            }
           }
+        } else if (1 === tmp8) {
+          c4 = 0;
+          closure_129_1 = closure_3;
+          const _Error = Error;
+          if (closure_129_1 instanceof Error) {
+            let message = closure_129_1.message;
+          } else {
+            const _String = String;
+            message = String(closure_129_1);
+          }
+          tmp3(message);
+          tmp5(false);
+          c6 = 3;
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 !== 2) {
+          c4 = 0;
+          tmp5(false);
+          closure_129_0(length);
+        }
+        c4 = 0;
+        c6 = 3;
+        obj = { value, done: true };
+        return obj;
+      } catch (tmp36) {
+        closure_3 = tmp36;
+        if (tmp4 === c4) {
+          c6 = tmp2;
+          throw tmp36;
+        } else {
+          c5 = tmp;
         }
       }
-    })();
+    }
   });
   const items2 = [trimmed];
-  callback = React.useCallback(function () {
+  callback = noop.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -151,29 +136,29 @@ export default function SlayerStorefrontDevTools() {
   }, items2);
   const items3 = [callback];
   const items4 = [callback, stateFromStores1];
-  const callback1 = React.useCallback(() => {
+  const callback1 = noop.useCallback(() => {
     callback((skuId) => {
-      let obj = callback(table[12]);
-      obj = { skuId };
+      length(dependencyMap[12]);
+      const obj = { skuId };
       const result = obj.openSocialLayerStorefrontProductSelfPurchaseSuccessModal(obj);
     });
   }, items3);
   obj = { style: tmp.wrap, contentContainerStyle: null, children: null };
   obj = { paddingVertical: null, paddingBottom: null };
-  callback2 = React.useCallback(() => {
+  const callback2 = noop.useCallback(() => {
     callback((skuId) => {
-      let obj = closure_1_0(closure_1_2[12]);
-      obj = { skuId, recipient: closure_3 };
+      closure_0(10797);
+      const obj = { skuId, recipient: stateFromStores1 };
       const result = obj.openSocialLayerStorefrontProductGiftPurchaseSuccessModal(obj);
     });
   }, items4);
-  obj[0] = ThemesDefault.space.PX_16;
-  obj[1] =
-    ThemesDefault.space.PX_16 + useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets.bottom;
-  obj[1] = obj;
+  obj.paddingVertical = nativeDefault.space.PX_16;
+  obj.paddingBottom =
+    nativeDefault.space.PX_16 + useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets.bottom;
+  obj.contentContainerStyle = obj;
   obj1 = {
     style: tmp.inputRow,
-    children: callback(require("../../../../design/components/TextInput/native/TextInput.native.tsx").TextInput, {
+    children: closure_10(require("TextInput").TextInput, {
       label: "SKU ID",
       value: str,
       onChange: tmp4,
@@ -183,7 +168,7 @@ export default function SlayerStorefrontDevTools() {
       keyboardType: "number-pad",
     }),
   };
-  const items5 = [callback(closure_7, obj1), , ,];
+  const items5 = [closure_10(closure_7, obj1), , ,];
   let str2;
   if (stateFromStores != null) {
     str2 = stateFromStores.name;
@@ -193,10 +178,8 @@ export default function SlayerStorefrontDevTools() {
   }
   const tmp16 = closure_6;
   const tmp18 = closure_7;
-  const tmp9 = callback(React.useState(null), 2);
-  items5[1] = callback(require("../../../../design/components/TableRow/native/TableRow.native.tsx").TableRow, {
-    label: "Name: " + str2,
-  });
+  const tmp9 = callback(noop.useState(null), 2);
+  items5[1] = closure_10(require("TableRow").TableRow, { label: "Name: " + str2 });
   let str3;
   if (stateFromStores != null) {
     str3 = stateFromStores.applicationId;
@@ -205,33 +188,27 @@ export default function SlayerStorefrontDevTools() {
     str3 = "N/A";
   }
   const obj2 = { label: "Name: " + str2 };
-  items5[2] = callback(require("../../../../design/components/TableRow/native/TableRow.native.tsx").TableRow, {
-    label: "Application ID: " + str3,
-  });
+  items5[2] = closure_10(require("TableRow").TableRow, { label: "Application ID: " + str3 });
   let tmp15Result = null != tmp10;
   if (tmp15Result) {
     const obj4 = { label: null };
     const _HermesInternal = HermesInternal;
-    obj4[0] = "Fetch failed: " + tmp10;
+    obj4.label = "Fetch failed: " + tmp10;
     tmp15Result = tmp15(tmp5(5605).TableRow, obj4);
   }
   items5[3] = tmp15Result;
   const items6 = [
-    closure_11(require("../../../../design/components/TableRow/native/TableRowGroup.native.tsx").TableRowGroup, {
-      title: "SKU",
-      hasIcons: false,
-      children: items5,
-    }),
+    closure_11(require("TableRowGroup").TableRowGroup, { title: "SKU", hasIcons: false, children: items5 }),
   ];
   const obj5 = { style: tmp.buttons, children: null };
   const items7 = [
-    callback(require("../../../../design/components/Button/native/Button.native.tsx").Button, {
+    closure_10(require("components/Button/Button").Button, {
       text: "Open Self Purchase Success",
       onPress: callback1,
       disabled: 0 === trimmed.length,
       loading: tmp8,
     }),
-    callback(require("../../../../design/components/Button/native/Button.native.tsx").Button, {
+    closure_10(require("components/Button/Button").Button, {
       text: "Open Gift Purchase Success",
       onPress: callback2,
       disabled: 0 === trimmed.length,
@@ -239,7 +216,7 @@ export default function SlayerStorefrontDevTools() {
       variant: "secondary",
     }),
   ];
-  obj5[1] = items7;
+  obj5.children = items7;
   const items8 = [closure_11(tmp18, obj5)];
   let str5;
   if (stateFromStores1 != null) {
@@ -264,15 +241,10 @@ export default function SlayerStorefrontDevTools() {
     loading: tmp8,
     variant: "secondary",
   };
-  items8[1] = callback(require("../../../../design/components/TableRow/native/TableRow.native.tsx").TableRow, {
-    label: "Gift recipient: " + str5 + " (self)",
-  });
-  obj9[2] = items8;
-  items6[1] = closure_11(
-    require("../../../../design/components/TableRow/native/TableRowGroup.native.tsx").TableRowGroup,
-    obj9,
-  );
-  obj8[1] = items6;
-  obj[2] = closure_11(require("../../../../design/components/Stack/native/Stack.native.tsx").Stack, obj8);
-  return callback(tmp16, obj);
+  items8[1] = closure_10(require("TableRow").TableRow, { label: "Gift recipient: " + str5 + " (self)" });
+  obj9.children = items8;
+  items6[1] = closure_11(require("TableRowGroup").TableRowGroup, obj9);
+  obj8.children = items6;
+  obj.children = closure_11(require("Stack/Stack").Stack, obj8);
+  return closure_10(tmp16, obj);
 }

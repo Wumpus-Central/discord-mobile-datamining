@@ -1,9 +1,9 @@
 // discord_app/modules/favorites/utils/createFavoritesGuildChannelRecord.tsx
-import set from "../../../../_runtime/00002_set.js";
-import ME from "../../../Constants.tsx";
+import Constants from "../../../Constants.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const ChannelTypes = ME.ChannelTypes;
-const result = set.fileFinishedImporting("modules/favorites/utils/createFavoritesGuildChannelRecord.tsx");
+const ChannelTypes = Constants.ChannelTypes;
+const result = size.fileFinishedImporting("modules/favorites/utils/createFavoritesGuildChannelRecord.tsx");
 
 export const createFavoritesGuildChannelRecord = function createFavoritesGuildChannelRecord(arg0, order, toJS) {
   const constructor = new toJS.constructor(toJS.toJS());

@@ -1,17 +1,19 @@
 // discord_app/modules/wishlists/native/PremiumWishlistItemCard.tsx
-import SourceIconDefault from "WishlistItemCardBase.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import SKUPreview from "../../skus/native/SKUPreview.tsx";
+import WishlistItemCardBaseDefault from "WishlistItemCardBase.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/wishlists/native/PremiumWishlistItemCard.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/wishlists/native/PremiumWishlistItemCard.tsx");
 
 export default function PremiumWishlistItemCard(size) {
   size = size.size;
   ({ sku, source } = size);
-  const merged = Object.assign(size, Object.create(null));
+  const merged = Object.assign(size, Object.assign({ sku: 0, source: 0, size: 0 }));
   const items = [size];
-  const callback = React.useCallback(() => closure_1_4(size(closure_1_2[2]).PremiumSKUPreview, { size }), items);
+  const callback = noop.useCallback(() => jsx(SKUPreview.PremiumSKUPreview, { size }), items);
   const merged1 = Object.assign(merged);
-  return jsx(SourceIconDefault, { accessibilityLabel: sku.name, renderPreview: callback, source, size });
+  return jsx(WishlistItemCardBaseDefault, { accessibilityLabel: sku.name, renderPreview: callback, source, size });
 }

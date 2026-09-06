@@ -1,53 +1,54 @@
 // discord_app/modules/messages/native/RoleMembersActionSheet.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../a11y/AccessibilityStore.tsx";
-import { EVERYONE_CHANNEL_ID } from "../../../stores/ChannelMemberStore.tsx";
-import closure_7 from "../../../stores/GuildRoleStore.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import native from "../../../design/void/native.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import GuildRoleMemberActionCreators from "../../guild_settings/GuildRoleMemberActionCreators.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
+import GuildRoleStore from "../../../stores/GuildRoleStore.tsx";
 
-const require = arg1;
-({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { header: null, headerText: null, roleDot: null, memberCount: null };
-createCacheKey = {
+require = fn;
+const View = fn(17).View;
+const EVERYONE_CHANNEL_ID = fn(7279).EVERYONE_CHANNEL_ID;
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+fn(4560);
+let createStyles = { header: null, headerText: null, roleDot: null, memberCount: null };
+createStyles = {
   flexDirection: "row",
   alignItems: "center",
-  gap: ThemesDefault.space.PX_4,
-  paddingTop: ThemesDefault.space.PX_12,
-  paddingBottom: ThemesDefault.space.PX_4,
-  paddingHorizontal: ThemesDefault.space.PX_16,
+  gap: nativeDefault.space.PX_4,
+  paddingTop: nativeDefault.space.PX_12,
+  paddingBottom: nativeDefault.space.PX_4,
+  paddingHorizontal: nativeDefault.space.PX_16,
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flex: 1 };
-createCacheKey[2] = { paddingTop: 0 };
-createCacheKey[3] = { color: ThemesDefault.colors.TEXT_MUTED };
-let closure_10 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { color: ThemesDefault.colors.TEXT_MUTED };
-let result = require("set").fileFinishedImporting("modules/messages/native/RoleMembersActionSheet.tsx");
+createStyles.header = createStyles;
+createStyles.headerText = { flex: 1 };
+createStyles.roleDot = { paddingTop: 0 };
+createStyles.memberCount = { color: nativeDefault.colors.TEXT_MUTED };
+let closure_10 = createStyles.createStyles(createStyles);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/messages/native/RoleMembersActionSheet.tsx");
 
 export default function RoleMembersActionSheet(guildId) {
   guildId = guildId.guildId;
   const roleId = guildId.roleId;
   let channelId = guildId.channelId;
-  dependencyMap = undefined;
   let stateFromStores;
   closure_4 = undefined;
   c5 = undefined;
-  const tmp = callback();
+  const tmp = closure_10();
   dependencyMap = tmp;
   let items = [guildId, roleId];
   const effect = stateFromStores.useEffect(() => {
     if (roleId !== obj.castGuildIdAsEveryoneGuildRoleId(guildId)) {
-      const membersForRole = guildId(header[9]).requestMembersForRole(guildId, roleId);
-      const obj2 = guildId(header[9]);
+      const membersForRole = GuildRoleMemberActionCreators.requestMembersForRole(guildId, roleId);
     }
   }, items);
   let obj = guildId(504);
-  const items1 = [closure_7];
+  const items1 = [GuildRoleStore];
   const items2 = [guildId, roleId];
-  stateFromStores = obj.useStateFromStores(items1, () => closure_1_7.getRole(guildId, roleId), items2);
+  stateFromStores = obj.useStateFromStores(items1, () => GuildRoleStore.getRole(guildId, roleId), items2);
   const items3 = [c5];
   let tmp6 = "dot" === guildId(504).useStateFromStores(items3, () => _null.roleStyle);
   if (tmp6) {
@@ -78,10 +79,9 @@ export default function RoleMembersActionSheet(guildId) {
   const items4 = [tmp6, stateFromStores, tmp12, tmp];
   let tmp16Result = null;
   if (null != stateFromStores) {
-    obj = { scrollable: true, header: null, children: null };
-    obj[1] = tmp14;
+    obj = { scrollable: true, header: tmp14, children: null };
     obj = {
-      guildId: null,
+      guildId,
       channelId: null,
       roleId: null,
       headerShown: false,
@@ -89,13 +89,12 @@ export default function RoleMembersActionSheet(guildId) {
       disableStickySections: true,
       disableThemedGradient: true,
     };
-    obj[0] = guildId;
     if (channelId == null) {
       channelId = EVERYONE_CHANNEL_ID;
     }
-    obj[1] = channelId;
-    obj[2] = roleId;
-    obj[2] = closure_8(tmp9(11588), obj);
+    obj.channelId = channelId;
+    obj.roleId = roleId;
+    obj.children = closure_8(tmp9(11588), obj);
     tmp16Result = tmp16(tmp3(7150).BottomSheet, obj);
     let tmp9Result = tmp9(11588);
   }

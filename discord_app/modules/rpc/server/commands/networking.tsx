@@ -1,25 +1,25 @@
 // discord_app/modules/rpc/server/commands/networking.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import expandEventPropertiesDefault from "../../../../utils/AnalyticsUtils.tsx";
-import sendRequest from "../../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import RPC_SCOPE_CONFIG from "../../Constants.tsx";
-import ME from "../../../../Constants.tsx";
+import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
+import HTTPUtils from "../../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import Constants2 from "../../Constants.tsx";
+import Constants from "../../../../Constants.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const RPC_LOCAL_SCOPE = RPC_SCOPE_CONFIG.RPC_LOCAL_SCOPE;
-({ Endpoints: c3, AnalyticEvents: c4, RPCCommands } = ME);
+const RPC_LOCAL_SCOPE = Constants2.RPC_LOCAL_SCOPE;
+({ Endpoints: c3, AnalyticEvents: closure_4, RPCCommands } = Constants);
 let obj = {
   scope: RPC_LOCAL_SCOPE,
   handler() {
-    const HTTP = sendRequest.HTTP;
+    const HTTP = HTTPUtils.HTTP;
     let obj = { url: location.protocol + window.GLOBAL_ENV.NETWORKING_ENDPOINT, retries: 3, rejectWithError: false };
-    const value = HTTP.get(obj);
+    value = HTTP.get(obj);
     const items = [value.then((body) => body.body.address)];
-    const HTTP2 = sendRequest.HTTP;
+    const HTTP2 = HTTPUtils.HTTP;
     obj = { url: constants.NETWORKING_TOKEN, retries: 3, oldFormErrors: true, rejectWithError: false };
     items[1] = HTTP2.post(obj).then((body) => body.body.token);
     const postResult = HTTP2.post(obj);
-    return Promise.all(items).then((arg0) => {
-      [tmp, tmp2] = arg0;
+    return Promise.all(items).then((result) => {
+      [tmp, tmp2] = result;
       return { address, token };
     });
   },
@@ -29,7 +29,7 @@ obj = {
   handler(args) {
     args = args.args;
     args.application_id = args.socket.application.id;
-    expandEventPropertiesDefault.track(constants2.NETWORKING_SYSTEM_METRICS, args);
+    AnalyticsUtilsDefault.track(constants2.NETWORKING_SYSTEM_METRICS, args);
   },
 };
 obj = {
@@ -37,10 +37,10 @@ obj = {
   handler(args) {
     args = args.args;
     args.application_id = args.socket.application.id;
-    expandEventPropertiesDefault.track(constants2.NETWORKING_PEER_METRICS, args);
+    AnalyticsUtilsDefault.track(constants2.NETWORKING_PEER_METRICS, args);
   },
 };
-const result = set.fileFinishedImporting("modules/rpc/server/commands/networking.tsx");
+const result = size.fileFinishedImporting("modules/rpc/server/commands/networking.tsx");
 
 export default {
   [RPCCommands.GET_NETWORKING_CONFIG]: obj,
@@ -49,7 +49,7 @@ export default {
   [RPCCommands.NETWORKING_CREATE_TOKEN]: {
     scope: RPC_LOCAL_SCOPE,
     handler() {
-      const HTTP = sendRequest.HTTP;
+      const HTTP = HTTPUtils.HTTP;
       return HTTP.post({
         url: constants.NETWORKING_TOKEN,
         retries: 1,

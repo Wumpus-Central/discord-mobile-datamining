@@ -1,9 +1,9 @@
 // discord_app/modules/activities/utils/isOnPlayStation.tsx
-import set from "../../../../_runtime/00002_set.js";
-import ME from "../../../Constants.tsx";
+import Constants from "../../../Constants.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const ActivityGamePlatforms = ME.ActivityGamePlatforms;
-const result = set.fileFinishedImporting("modules/activities/utils/isOnPlayStation.tsx");
+const ActivityGamePlatforms = Constants.ActivityGamePlatforms;
+const result = size.fileFinishedImporting("modules/activities/utils/isOnPlayStation.tsx");
 
 export default function isOnPlayStation(platform) {
   platform = undefined;

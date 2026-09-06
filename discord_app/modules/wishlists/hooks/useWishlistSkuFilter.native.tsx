@@ -1,28 +1,28 @@
 // discord_app/modules/wishlists/hooks/useWishlistSkuFilter.native.tsx
-import closure_2 from "../../../../_runtime/00019_noop.js";
-import { WishlistRecommendationReason as closure_3 } from "../records/WishlistRecommendationRecord.tsx";
-import { SKUProductLines } from "../../../Constants.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/wishlists/hooks/useWishlistSkuFilter.native.tsx");
+const require = fn;
+let closure_3 = fn(7227).WishlistRecommendationReason;
+const SKUProductLines = fn(1074).SKUProductLines;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/wishlists/hooks/useWishlistSkuFilter.native.tsx");
 
 export const useWishlistSkuFilter = function useWishlistSkuFilter(wishlistAndRecommendations) {
   wishlistAndRecommendations = wishlistAndRecommendations.wishlistAndRecommendations;
   const skusToUserAndReason = wishlistAndRecommendations.skusToUserAndReason;
   const userId = wishlistAndRecommendations.userId;
   const numItems = wishlistAndRecommendations.numItems;
-  let memo;
   const items = [wishlistAndRecommendations];
-  memo = userId.useMemo(
+  const memo = userId.useMemo(
     () =>
       wishlistAndRecommendations.filter((productLine) => {
-        const GIFTABLE_PRODUCT_LINES = callback(table[3]).GIFTABLE_PRODUCT_LINES;
+        const GIFTABLE_PRODUCT_LINES = wishlistAndRecommendations(skusToUserAndReason[3]).GIFTABLE_PRODUCT_LINES;
         let hasItem = GIFTABLE_PRODUCT_LINES.has(productLine.productLine);
         if (hasItem) {
           let result = productLine.productLine !== constants.SOCIAL_LAYER_GAME_ITEM;
           if (!result) {
-            result = callback(table[4]).isSlayerSkuAvailableOnThisPlatform(productLine);
-            const tmpResult = callback(table[4]);
+            result = wishlistAndRecommendations(skusToUserAndReason[4]).isSlayerSkuAvailableOnThisPlatform(productLine);
+            const tmpResult = wishlistAndRecommendations(skusToUserAndReason[4]);
           }
           hasItem = result;
         }
@@ -30,20 +30,20 @@ export const useWishlistSkuFilter = function useWishlistSkuFilter(wishlistAndRec
       }),
     items,
   );
+  const obj = { totalUnownedWishlistItemCount: null, slicedWishlistAndRecommendations: null };
   const items1 = [memo, userId, skusToUserAndReason];
+  obj.totalUnownedWishlistItemCount = userId.useMemo(
+    () =>
+      memo.filter((item) => {
+        let tmp2 = null != skusToUserAndReason[item.id];
+        if (tmp2) {
+          tmp2 = tmp[item.id][userId] === numItems.WISHLIST;
+        }
+        return tmp2;
+      }).length,
+    items1,
+  );
   const items2 = [memo, numItems];
-  return {
-    totalUnownedWishlistItemCount: userId.useMemo(
-      () =>
-        memo.filter((arg0) => {
-          let tmp2 = null != table[arg0.id];
-          if (tmp2) {
-            tmp2 = tmp[arg0.id][closure_2] === closure_1_3.WISHLIST;
-          }
-          return tmp2;
-        }).length,
-      items1,
-    ),
-    slicedWishlistAndRecommendations: userId.useMemo(() => memo.slice(0, numItems), items2),
-  };
+  obj.slicedWishlistAndRecommendations = userId.useMemo(() => memo.slice(0, numItems), items2);
+  return obj;
 };

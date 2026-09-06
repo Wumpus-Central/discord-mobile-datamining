@@ -1,8 +1,8 @@
 // discord_app/modules/user_profile/UserProfileGameWidgetTypes.tsx
-import set from "../../../_runtime/00002_set.js";
-import GAME_WIDGET_LIMITS_BY_TYPE from "../../../discord_common/js/shared/shared-constants/GameWidgetLimits.tsx";
+import GameWidgetLimits from "../../../discord_common/js/shared/shared-constants/GameWidgetLimits.tsx";
 import WidgetType from "../../../discord_common/js/shared/shared-constants/WidgetType.tsx";
-import findGameWidget from "WidgetUtils.tsx";
+import WidgetUtils from "WidgetUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const items = [
   WidgetType.WidgetType.CURRENT_GAMES,
@@ -24,12 +24,10 @@ class BaseGameWidget {
 const prototype = BaseGameWidget.prototype;
 prototype["toSubmission"] = function toSubmission() {
   let obj = { id: this.id, data: null };
-  obj = {
-    type: this.type,
-    games: games.map((gameId) => ({ game_id: gameId.gameId, comment: gameId.comment, tags: gameId.tags })),
-  };
-  games = this.games;
-  obj[1] = obj;
+  obj = { type: this.type, games: null };
+  const games = this.games;
+  obj.games = games.map((gameId) => ({ game_id: gameId.gameId, comment: gameId.comment, tags: gameId.tags }));
+  obj.data = obj;
   return obj;
 };
 prototype["isUpdatable"] = function isUpdatable() {
@@ -42,7 +40,7 @@ prototype["isValid"] = function isValid() {
   const self = this;
   let tmp = this.games.length > 0;
   if (tmp) {
-    tmp = self.games.length <= GAME_WIDGET_LIMITS_BY_TYPE.GAME_WIDGET_LIMITS_BY_TYPE[self.type];
+    tmp = self.games.length <= GameWidgetLimits.GAME_WIDGET_LIMITS_BY_TYPE[self.type];
   }
   return tmp;
 };
@@ -52,8 +50,7 @@ prototype["isEqual"] = function isEqual(type) {
     const self = this;
     let areWidgetGamesEqualResult = type.type === this.type;
     if (areWidgetGamesEqualResult) {
-      areWidgetGamesEqualResult = findGameWidget.areWidgetGamesEqual(self.games, type.games, self.type);
-      const obj = findGameWidget;
+      areWidgetGamesEqualResult = WidgetUtils.areWidgetGamesEqual(self.games, type.games, self.type);
     }
     tmp = areWidgetGamesEqualResult;
   }
@@ -68,7 +65,7 @@ prototype["getProfileAnalyticsOptions"] = function getProfileAnalyticsOptions() 
 prototype["getProfileEditAnalyticsOptions"] = function getProfileEditAnalyticsOptions() {
   return { widgetEdited: this.type };
 };
-const result = set.fileFinishedImporting("modules/user_profile/UserProfileGameWidgetTypes.tsx");
+const result = size.fileFinishedImporting("modules/user_profile/UserProfileGameWidgetTypes.tsx");
 
 export const GAME_WIDGET_TYPES = items;
 export const isGameWidgetType = function isGameWidgetType(arg0) {

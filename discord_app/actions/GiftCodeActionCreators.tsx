@@ -1,17 +1,15 @@
 // discord_app/actions/GiftCodeActionCreators.tsx
-import prototypeDefault from "../errors/V6OrEarlierAPIError.tsx";
-import _modDef11431 from "../modules/coded_links/web/CodedLinkActionCreators.tsx";
-import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../modules/applications/ApplicationStore.tsx";
-import closure_5 from "../modules/collectibles/CollectiblesCategoryStore.tsx";
-import { isUnknownCollectiblesItemRecord as closure_6 } from "../modules/collectibles/records/UnknownCollectiblesItemRecord.tsx";
-import ME from "../Constants.tsx";
-import { PREMIUM_SUBSCRIPTION_APPLICATION as closure_10 } from "../modules/premium/PremiumConstants.tsx";
+import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import errors_V6OrEarlierAPIErrorDefault from "../errors/V6OrEarlierAPIError.tsx";
+import CodedLinkActionCreatorsDefault from "../modules/coded_links/web/CodedLinkActionCreators.tsx";
+import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
+import ApplicationStore from "../modules/applications/ApplicationStore.tsx";
+import CollectiblesCategoryStore from "../modules/collectibles/CollectiblesCategoryStore.tsx";
 
-const require = arg1;
+require = fn;
 function resolveGiftCode() {
   const self = this;
-  const apply = _resolveGiftCode.apply;
+  const apply = closure_11.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -19,201 +17,174 @@ function resolveGiftCode() {
   }
   return applyArgumentsResult;
 }
-function _resolveGiftCode() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    c7 = 0;
-    c8 = 0;
-    c6 = 0;
-    const iter = (function* (arg0) {
-      if (c8 === 2) {
-        c8 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp8 === 3) {
+let closure_11 = async function _resolveGiftCode(arg0, value) {
+  if (c8 === 2) {
+    c8 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp8 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c8 = 2;
+      if (0 === c7) {
         if (arg0 === 1) {
-          throw arg1;
+          c8 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c8 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_4 = tmp4;
+          closure_3 = tmp9;
+          closure_131_1 = undefined;
+          closure_131_2 = undefined;
+          closure_131_0 = closure_0;
+          let flag = closure_1;
+          if (closure_1 === undefined) {
+            flag = false;
+          }
+          closure_131_1 = flag;
+          let flag2 = closure_2;
+          if (closure_2 === undefined) {
+            flag2 = false;
+          }
+          closure_131_2 = flag2;
+          closure_131_3 = undefined;
+          let product;
+          c7 = 1;
+          c8 = 1;
+          return { value: "PX_16", done: true };
         }
+      } else if (1 === tmp9) {
+        if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c8 = 3;
+          const obj1 = { value, done: true };
+          return obj1;
+        } else {
+          let obj2 = { type: "GIFT_CODE_RESOLVE", code: closure_131_0 };
+          closure_132_1(closure_132_2[6]).dispatch(obj2);
+          c6 = 1;
+          const obj18 = closure_132_1(closure_132_2[6]);
+          c7 = 3;
+          c8 = 1;
+          const obj3 = {
+            value: closure_132_0(closure_132_2[7]).resolveGiftCode(closure_131_0, closure_131_1, closure_131_2),
+            done: false,
+          };
+          return obj3;
+        }
+      } else if (2 === tmp9) {
+        c6 = 0;
+        closure_131_5 = closure_5;
+        let obj11 = closure_132_1(closure_132_2[6]);
+        const obj4 = { type: "GIFT_CODE_RESOLVE_FAILURE", code: closure_131_0, error: closure_131_5 };
+        obj11.dispatch(obj4);
+        throw closure_131_5;
       } else {
-        try {
-          c8 = 2;
-          if (0 === c7) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c8 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let application = tmp4;
-              closure_3 = tmp9;
-              let flag;
-              let flag2;
-              if (flag === undefined) {
-                flag = false;
-              }
-              if (flag2 === undefined) {
-                flag2 = false;
-              }
-              closure_3 = undefined;
-              application = undefined;
-              c7 = 1;
-              c8 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp9) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c8 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              let obj2 = { type: "GIFT_CODE_RESOLVE", code: null };
-              obj2[1] = callback;
-              flag(flag2[6]).dispatch(obj2);
-              c6 = 1;
-              const obj18 = flag(flag2[6]);
-              c7 = 3;
-              c8 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = callback(flag2[7]).resolveGiftCode(callback, flag, flag2);
-              return obj3;
-            }
-          } else if (2 === tmp9) {
+        if (3 === tmp9) {
+          if (arg0 === 1) {
+            c8 = 3;
+            throw value;
+          } else if (arg0 === 2) {
             c6 = 0;
-            let obj11 = flag(flag2[6]);
-            const obj4 = { type: "GIFT_CODE_RESOLVE_FAILURE", code: null, error: null };
-            obj4[1] = callback;
-            obj4[2] = product;
-            obj11.dispatch(obj4);
-            throw product;
+            c8 = 3;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
-            if (3 === tmp9) {
-              if (arg0 === 1) {
-                c8 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c6 = 0;
-                c8 = 3;
-                const obj5 = { value: null, done: true };
-                obj5[0] = arg1;
-                return obj5;
-              } else {
-                closure_3 = arg1;
-                if (null != closure_3.application_id) {
-                  if (closure_3.application_id !== closure_10) {
-                    if (null == application.getApplication(closure_3.application_id)) {
-                      c6 = 2;
-                      let obj8 = flag(flag2[8]);
-                      c7 = 5;
-                      c8 = 1;
-                      let obj6 = { value: null, done: false };
-                      obj6[0] = obj8.fetchApplication(closure_3.application_id);
-                      return obj6;
-                    }
-                  }
+            closure_131_3 = value;
+            if (null != closure_131_3.application_id) {
+              if (closure_131_3.application_id !== closure_132_10) {
+                if (null == closure_132_4.getApplication(closure_131_3.application_id)) {
+                  c6 = 2;
+                  let obj8 = closure_132_1(closure_132_2[8]);
+                  c7 = 5;
+                  c8 = 1;
+                  let obj6 = { value: obj8.fetchApplication(closure_131_3.application_id), done: false };
+                  return obj6;
                 }
               }
-            } else if (4 === tmp9) {
-              c6 = 1;
-            } else {
-              if (5 === tmp9) {
-                if (arg0 === 1) {
-                  c8 = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  c6 = 0;
-                  c8 = 3;
-                  const obj7 = { value: null, done: true };
-                  obj7[0] = arg1;
-                  return obj7;
-                } else {
-                  c6 = 1;
-                }
-              } else if (arg0 === 1) {
-                c8 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c6 = 0;
-                c8 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                application = product.getProduct(closure_3.sku_id);
-                let someResult;
-                if (application != null) {
-                  const items = tmp67.items;
-                  someResult = items.some(c6);
-                }
-                if (true === someResult) {
-                  const clientOutdatedAcceptGiftError = new callback(flag2[10]).ClientOutdatedAcceptGiftError(
-                    "Client update required to redeem this gift",
-                  );
-                  throw clientOutdatedAcceptGiftError;
-                }
-              }
-              obj2 = flag(flag2[6]);
-              obj8 = { type: "GIFT_CODE_RESOLVE_SUCCESS", giftCode: null };
-              obj8[1] = closure_3;
-              obj2.dispatch(obj8);
-              const obj9 = { giftCode: null };
-              obj9[0] = closure_3;
+            }
+          }
+        } else if (4 === tmp9) {
+          c6 = 1;
+        } else {
+          if (5 === tmp9) {
+            if (arg0 === 1) {
+              c8 = 3;
+              throw value;
+            } else if (arg0 === 2) {
               c6 = 0;
               c8 = 3;
-              const obj10 = { value: null, done: true };
-              obj10[0] = obj9;
-              return obj10;
+              const obj7 = { value, done: true };
+              return obj7;
+            } else {
+              c6 = 1;
             }
-            if (closure_3.application_id === c7) {
-              obj6 = callback(flag2[9]);
-              c7 = 6;
-              c8 = 1;
-              obj11 = { value: null, done: false };
-              obj11[0] = obj6.fetchCollectiblesProduct(closure_3.sku_id);
-              return obj11;
-            }
-          }
-        } catch (tmp54) {
-          product = tmp54;
-          if (tmp5 === c6) {
-            c8 = tmp3;
-            throw tmp54;
-          } else if (tmp2 === tmp56) {
-            c7 = tmp;
+          } else if (arg0 === 1) {
+            c8 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 0;
+            c8 = 3;
+            obj = { value, done: true };
+            return obj;
           } else {
-            c7 = tmp6;
+            product = closure_132_5.getProduct(closure_131_3.sku_id);
+            let someResult;
+            if (product != null) {
+              const items = tmp66.items;
+              someResult = items.some(closure_132_6);
+            }
+            if (true === someResult) {
+              const clientOutdatedAcceptGiftError = new closure_132_0(closure_132_2[10]).ClientOutdatedAcceptGiftError(
+                "Client update required to redeem this gift",
+              );
+              throw clientOutdatedAcceptGiftError;
+            }
           }
+          obj2 = closure_132_1(closure_132_2[6]);
+          obj8 = { type: "GIFT_CODE_RESOLVE_SUCCESS", giftCode: closure_131_3 };
+          obj2.dispatch(obj8);
+          const obj9 = { giftCode: closure_131_3 };
+          c6 = 0;
+          c8 = 3;
+          const obj10 = { value: obj9, done: true };
+          return obj10;
+        }
+        if (closure_131_3.application_id === closure_132_7) {
+          obj6 = closure_132_0(closure_132_2[9]);
+          c7 = 6;
+          c8 = 1;
+          obj11 = { value: obj6.fetchCollectiblesProduct(closure_131_3.sku_id), done: false };
+          return obj11;
         }
       }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_11 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp54) {
+      closure_5 = tmp54;
+      if (tmp5 === c6) {
+        c8 = tmp3;
+        throw tmp54;
+      } else if (tmp2 === tmp56) {
+        c7 = tmp;
+      } else {
+        c7 = tmp6;
+      }
+    }
   }
-  return applyArgumentsResult;
-}
+};
 function reportUnexpectedGiftCodeError(status) {
-  if (status instanceof prototypeDefault) {
+  if (status instanceof errors_V6OrEarlierAPIErrorDefault) {
     if (404 !== status.status) {
       let tmpResult = tmp(1232);
       let str = status.status;
@@ -221,9 +192,8 @@ function reportUnexpectedGiftCodeError(status) {
         str = "unknown";
       }
       let obj = { tags: null };
-      obj = { gift_code_resolve_status: null };
-      obj[0] = String(str);
-      obj[0] = obj;
+      obj = { gift_code_resolve_status: String(str) };
+      obj.tags = obj;
       tmpResult.captureException(status.error, obj);
     }
   } else {
@@ -235,37 +205,28 @@ function reportUnexpectedGiftCodeError(status) {
   }
   return null;
 }
-function _deliverGiftCodes() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c3 = 0;
-    c2 = 0;
-    return (function* (arg0, body) {
-      const HTTP = callback(table[13]).HTTP;
-      obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: true };
-      obj1[0] = closure_1_8.USER_GIFT_CODE_DELIVERIES;
-      const obj2 = { checkout_session_id: null, recipient_ids: null };
-      obj2[0] = closure_1;
-      obj2[1] = callback;
-      obj1[1] = obj2;
-      yield HTTP.post(obj1);
-      return body.body;
-    })();
-  });
-  closure_12 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-({ COLLECTIBLES_APPLICATION_ID: error, Endpoints: closure_8, RPCCommands: c9 } = ME);
-const merged = Object.assign(require("redeemGiftCode").default);
-const result = require("set").fileFinishedImporting("actions/GiftCodeActionCreators.tsx");
+let closure_12 = async function _deliverGiftCodes(recipient_ids, checkout_session_id) {
+  c3 = 0;
+  c2 = 0;
+  return (async (arg0, value) => {
+    const HTTP = HTTPUtils.HTTP;
+    const request = {
+      url: constants.USER_GIFT_CODE_DELIVERIES,
+      body: { checkout_session_id, recipient_ids },
+      oldFormErrors: true,
+      rejectWithError: true,
+    };
+    await HTTP.post(request);
+    return value.body;
+  })();
+};
+let closure_6 = fn(7550).isUnknownCollectiblesItemRecord;
+const Constants = fn(1074);
+({ COLLECTIBLES_APPLICATION_ID: closure_7, Endpoints: closure_8, RPCCommands: closure_9 } = Constants);
+let closure_10 = fn(1373).PREMIUM_SUBSCRIPTION_APPLICATION;
+const merged = Object.assign(fn(11432).default);
+const size = fn(2);
+const result = size.fileFinishedImporting("actions/GiftCodeActionCreators.tsx");
 
 export default {
   resolveGiftCode,
@@ -277,43 +238,39 @@ export default {
       tmp = null;
     }
     c1 = tmp;
-    return callback(function* () {
-      closure_1 = tmp3;
-      obj1 = { type: "GIFT_CODES_FETCH", skuId: null, subscriptionPlanId: null };
-      obj1[1] = closure_1_0;
-      obj1[2] = closure_1_1;
-      closure_1_1(closure_1_2[6]).dispatch(obj1);
-      c3 = 1;
-      const HTTP = closure_1_0(closure_1_2[13]).HTTP;
-      const obj2 = { url: null, query: null, oldFormErrors: true, rejectWithError: true };
-      obj2[0] = closure_1_8.USER_GIFT_CODES;
-      let obj3 = { sku_id: null, subscription_plan_id: null };
-      obj3[0] = closure_1_0;
-      obj3[1] = closure_1_1;
-      obj2[1] = obj3;
-      yield HTTP.get(obj2);
+    return (async () => {
+      tmp3(tmp23[6]).dispatch({ type: "GIFT_CODES_FETCH", skuId: sku_id, subscriptionPlanId: tmp3 });
+      const HTTP = sku_id(tmp23[13]).HTTP;
+      const request = {
+        url: constants.USER_GIFT_CODES,
+        query: { sku_id, subscription_plan_id: tmp3 },
+        oldFormErrors: true,
+        rejectWithError: true,
+      };
+      await HTTP.get(request);
       if (1 === tmp7) {
         c3 = 0;
-        obj3 = closure_1_1(closure_1_2[6]);
-        const obj5 = { type: "GIFT_CODES_FETCH_FAILURE", skuId: null, subscriptionPlanId: null };
-        obj5[1] = body;
-        obj5[2] = closure_1;
-        obj3.dispatch(obj5);
+        tmp3(tmp23[6]).dispatch({
+          type: "GIFT_CODES_FETCH_FAILURE",
+          skuId: closure_129_0,
+          subscriptionPlanId: closure_129_1,
+        });
         c5 = 3;
+        tmp3(tmp23[6]);
       } else if (arg0 === 1) {
         c5 = 3;
         throw arg1;
       } else if (arg0 !== 2) {
-        body = arg1;
-        const obj = closure_1_1(closure_1_2[6]);
-        const obj6 = { type: "GIFT_CODES_FETCH_SUCCESS", giftCodes: null, skuId: null, subscriptionPlanId: null };
-        obj6[1] = body.body;
-        obj6[2] = body;
-        obj6[3] = closure_1;
-        obj.dispatch(obj6);
+        closure_128_0 = arg1;
+        tmp3(tmp23[6]).dispatch({
+          type: "GIFT_CODES_FETCH_SUCCESS",
+          giftCodes: closure_128_0.body,
+          skuId: closure_129_0,
+          subscriptionPlanId: closure_129_1,
+        });
         c3 = 0;
+        tmp3(tmp23[6]);
       }
-      c3 = 0;
       return arg1;
     })();
   },
@@ -329,79 +286,56 @@ export default {
       tmp2 = null;
     }
     c2 = tmp2;
-    return callback(function* () {
-      closure_1 = tmp3;
-      obj1 = { type: "GIFT_CODE_CREATE_START", skuId: null, subscriptionPlanId: null };
-      obj1[1] = closure_1_0;
-      obj1[2] = closure_1_1;
-      closure_1_1(closure_1_2[6]).dispatch(obj1);
-      c3 = 1;
-      const HTTP = closure_1_0(closure_1_2[13]).HTTP;
-      const obj2 = { url: null, body: null, oldFormErrors: true, rejectWithError: true };
-      obj2[0] = closure_1_8.USER_GIFT_CODE_CREATE;
-      const obj3 = { sku_id: null, subscription_plan_id: null, gift_style: null };
-      obj3[0] = closure_1_0;
-      obj3[1] = closure_1_1;
-      obj3[2] = closure_1_2;
-      obj2[1] = obj3;
-      yield HTTP.post(obj2);
-      c3 = 0;
-      const obj4 = closure_1_1(closure_1_2[6]);
-      const obj5 = { type: "GIFT_CODE_CREATE_FAILURE", skuId: null, subscriptionPlanId: null };
-      obj5[1] = closure_0;
-      obj5[2] = closure_1;
-      obj4.dispatch(obj5);
-      closure_0 = yield "HermesInternal";
-      const obj = closure_1_1(closure_1_2[6]);
-      const obj7 = { type: "GIFT_CODE_CREATE_SUCCESS", giftCode: null };
-      obj7[1] = closure_0.body;
-      obj.dispatch(obj7);
-      c3 = 0;
-      return closure_0.body;
+    return (async () => {
+      tmp3(gift_style[6]).dispatch({ type: "GIFT_CODE_CREATE_START", skuId: sku_id, subscriptionPlanId: tmp3 });
+      const HTTP = sku_id(gift_style[13]).HTTP;
+      const request = {
+        url: constants.USER_GIFT_CODE_CREATE,
+        body: { sku_id, subscription_plan_id: tmp3, gift_style },
+        oldFormErrors: true,
+        rejectWithError: true,
+      };
+      await HTTP.post(request);
+      tmp3(gift_style[6]);
+      const obj4 = { type: "GIFT_CODE_CREATE_FAILURE", skuId: closure_129_0, subscriptionPlanId: closure_129_1 };
+      obj4.dispatch(obj4);
+      closure_128_0 = await "HermesInternal";
+      tmp3(gift_style[6]).dispatch({ type: "GIFT_CODE_CREATE_SUCCESS", giftCode: closure_128_0.body });
+      return closure_128_0.body;
     })();
   },
   revokeGiftCode(code) {
     closure_0 = code;
-    return callback(function* () {
-      closure_0 = tmp3;
-      obj1 = { type: "GIFT_CODE_REVOKE", code: null };
-      obj1[1] = closure_1_0;
-      v0(closure_1_2[6]).dispatch(obj1);
-      c3 = 1;
-      const HTTP = closure_1_0(closure_1_2[13]).HTTP;
-      const obj2 = { url: null, oldFormErrors: true, rejectWithError: true };
-      obj2[0] = closure_1_8.USER_GIFT_CODE_REVOKE(closure_1_0);
-      yield HTTP.del(obj2);
+    return (async () => {
+      code = tmp3;
+      v2(tmp19[6]).dispatch({ type: "GIFT_CODE_REVOKE", code });
+      const HTTP = code(tmp19[13]).HTTP;
+      await HTTP.del({ url: closure_1_8.USER_GIFT_CODE_REVOKE(code), oldFormErrors: true, rejectWithError: true });
       if (1 === tmp7) {
         c3 = 0;
-        const obj3 = v0(closure_1_2[6]);
-        const obj4 = { type: "GIFT_CODE_REVOKE_FAILURE", code: null };
-        obj4[1] = closure_0;
-        obj3.dispatch(obj4);
+        v2(tmp19[6]).dispatch({ type: "GIFT_CODE_REVOKE_FAILURE", code: closure_128_0 });
         c4 = 3;
+        v2(tmp19[6]);
       } else if (arg0 === 1) {
         c4 = 3;
         throw arg1;
       } else if (arg0 !== 2) {
-        const obj = v0(closure_1_2[6]);
-        const obj5 = { type: "GIFT_CODE_REVOKE_SUCCESS", code: null };
-        obj5[1] = closure_0;
-        obj.dispatch(obj5);
+        v2(tmp19[6]).dispatch({ type: "GIFT_CODE_REVOKE_SUCCESS", code: closure_128_0 });
         c3 = 0;
+        v2(tmp19[6]);
       }
-      c3 = 0;
       return arg1;
     })();
   },
   openNativeGiftCodeModal(arg0) {
-    _modDef11431.openNativeAppModal(arg0, constants.GIFT_CODE_BROWSER);
+    CodedLinkActionCreatorsDefault.openNativeAppModal(arg0, constants.GIFT_CODE_BROWSER);
   },
 };
 export { resolveGiftCode };
 export { reportUnexpectedGiftCodeError };
 export const deliverGiftCodes = function deliverGiftCodes() {
   const self = this;
-  const apply = _deliverGiftCodes.apply;
+  const apply = closure_12.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

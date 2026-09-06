@@ -1,24 +1,22 @@
 // discord_app/modules/app_launcher/native/screens/command_view/hooks/useOptionAnimations.tsx
-import CONFIG_NEVER_ANIMATE_TIMING from "../../../../../../design/animation/reanimated/timing/timing.tsx";
-import closure_2 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../../../../../_runtime/00019_noop.js";
+import ReanimatedRexport from "../../../../../reanimated/ReanimatedRexport.tsx";
+import timing from "../../../../../../design/animation/reanimated/timing/timing.tsx";
+import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-let c4 = 300;
+require = fn;
+const React4 = 300;
 class LayoutAnimation {
   constructor(arg0) {
-    animations = { originY: null };
-    obj2 = require("CONFIG_NEVER_ANIMATE_TIMING");
+    obj = { originY: null };
+    obj2 = closure_0(closure_1[2]);
     obj = { duration: c4 };
-    animations[0] = obj2.withTiming(global.targetOriginY, obj);
-    obj1 = { originY: global.currentOriginY };
-    return { initialValues: obj1, animations };
+    obj.originY = obj2.withTiming(global.targetOriginY, obj);
+    obj1 = { initialValues: { originY: global.currentOriginY }, animations: obj };
+    return obj1;
   }
 }
-let obj = {
-  withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming,
-  OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION: 300,
-};
+let obj = { withTiming: fn(4561).withTiming, OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION: 300 };
 LayoutAnimation.__closure = obj;
 LayoutAnimation.__workletHash = 16804895997501;
 LayoutAnimation.__initData = {
@@ -26,19 +24,19 @@ LayoutAnimation.__initData = {
 };
 class ExitingAnimation {
   constructor(arg0) {
-    animations = { opacity: null, originX: null };
+    obj = { opacity: null, originX: null };
     bound = Math.min(global.currentOriginX - global.windowWidth, -global.windowWidth);
-    obj2 = require("CONFIG_NEVER_ANIMATE_TIMING");
+    obj2 = closure_0(closure_1[2]);
     obj = { duration: c4 };
-    animations[0] = require("../../../../../../index.native.tsx");
-    obj4 = require("CONFIG_NEVER_ANIMATE_TIMING");
+    obj.opacity = obj2.withTiming(0, obj);
+    obj4 = closure_0(closure_1[2]);
     obj1 = { duration: c4 };
-    animations[1] = obj4.withTiming(bound, obj1);
-    obj2 = { originX: global.currentOriginX, opacity: 1 };
-    return { initialValues: obj2, animations };
+    obj.originX = obj4.withTiming(bound, obj1);
+    obj2 = { initialValues: { originX: global.currentOriginX, opacity: 1 }, animations: obj };
+    return obj2;
   }
 }
-obj = { withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming, OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION: 300 };
+obj = { withTiming: fn(4561).withTiming, OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION: 300 };
 ExitingAnimation.__closure = obj;
 ExitingAnimation.__workletHash = 8977480282966;
 ExitingAnimation.__initData = {
@@ -47,7 +45,8 @@ ExitingAnimation.__initData = {
 let closure_5 = {
   code: "function useOptionAnimationsTsx3(){const{withTiming,Easing,OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION,withDelay,runOnJS,handleMountAnimationComplete}=this.__closure;const scaleAnimation=withTiming(1,{duration:250,easing:Easing.bezier(0.25,1.75,0.25,1.25)});const opacityAnimation=withTiming(1,{duration:200});const layoutShiftDelay=OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION-100;return{animations:{opacity:withDelay(layoutShiftDelay,opacityAnimation),transform:[{scale:withDelay(layoutShiftDelay,scaleAnimation)}]},initialValues:{opacity:0,transform:[{scale:0.92}]},callback:function(){runOnJS(handleMountAnimationComplete)();}};}",
 };
-let result = require("set").fileFinishedImporting(
+const size = fn(2);
+let result = size.fileFinishedImporting(
   "modules/app_launcher/native/screens/command_view/hooks/useOptionAnimations.tsx",
 );
 
@@ -57,62 +56,64 @@ export { ExitingAnimation };
 export const useOptionEnteringAnimation = function useOptionEnteringAnimation() {
   let obj = sharedValue(4296);
   sharedValue = obj.useSharedValue(false);
-  dependencyMap = React.useRef([]);
+  dependencyMap = noop.useRef([]);
   let items = [sharedValue];
-  const callback = React.useCallback(() => {
+  _slicedToArray = noop.useCallback(() => {
     const result = sharedValue.set(true);
     const current = closure_1.current;
-    const item = current.forEach((arg0) => arg0());
+    const item = current.forEach((fn) => fn());
     const current1 = closure_1.current;
     current1.splice(0, closure_1.current.length);
   }, items);
   obj = {
-    EnteringAnimation: callback(
-      React.useState(() => {
+    EnteringAnimation: _slicedToArray(
+      noop.useState(() => {
         const fn = function n() {
-          let obj = closure_1_0(closure_1_1[2]);
-          obj = { duration: 250, easing: null };
-          const Easing = closure_1_0(closure_1_1[3]).Easing;
-          obj[1] = Easing.bezier(0.25, 1.75, 0.25, 1.25);
-          let obj2 = closure_1_0(closure_1_1[2]);
+          sharedValue(4561);
+          let obj = { duration: 250, easing: null };
+          const Easing = sharedValue(4296).Easing;
+          obj.easing = Easing.bezier(0.25, 1.75, 0.25, 1.25);
+          let obj2 = sharedValue(4561);
           obj = { animations: null, initialValues: null, callback: null };
-          obj1 = { opacity: null, transform: null };
+          const obj1 = { opacity: null, transform: null };
           const withTimingResult = obj.withTiming(1, obj);
           const withTimingResult1 = obj2.withTiming(1, { duration: 200 });
-          obj1[0] = closure_1_0(closure_1_1[3]).withDelay(200, withTimingResult1);
+          obj1.opacity = sharedValue(4296).withDelay(200, withTimingResult1);
           obj2 = { scale: null };
-          const obj6 = closure_1_0(closure_1_1[3]);
-          obj2[0] = closure_1_0(closure_1_1[3]).withDelay(200, withTimingResult);
+          const obj6 = sharedValue(4296);
+          obj2.scale = sharedValue(4296).withDelay(200, withTimingResult);
           const items = [obj2];
-          obj1[1] = items;
-          obj[0] = obj1;
+          obj1.transform = items;
+          obj.animations = obj1;
+          const obj3 = { opacity: 0, transform: null };
           const items1 = [{ scale: 0.92 }];
-          obj[1] = { opacity: 0, transform: items1 };
-          obj[2] = function callback() {
-            closure_1_0(closure_1_1[3]).runOnJS(closure_2)();
+          obj3.transform = items1;
+          obj.initialValues = obj3;
+          obj.callback = function callback() {
+            sharedValue(4296).runOnJS(closure_1_2)();
           };
           return obj;
         };
         fn.__closure = {
-          withTiming: sharedValue(closure_1[2]).withTiming,
-          Easing: sharedValue(closure_1[3]).Easing,
-          OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION: closure_1_4,
-          withDelay: sharedValue(closure_1[3]).withDelay,
-          runOnJS: sharedValue(closure_1[3]).runOnJS,
-          handleMountAnimationComplete: closure_2,
+          withTiming: timing.withTiming,
+          Easing: ReanimatedRexport.Easing,
+          OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION,
+          withDelay: ReanimatedRexport.withDelay,
+          runOnJS: ReanimatedRexport.runOnJS,
+          handleMountAnimationComplete,
         };
         fn.__workletHash = 1048348699475;
-        fn.__initData = closure_1_5;
+        fn.__initData = __initData;
         return fn;
       }),
       1,
     )[0],
-    registerAnimationCompleteCallback(arg0) {
+    registerAnimationCompleteCallback(fn) {
       if (sharedValue.get()) {
-        arg0();
+        fn();
       } else {
         const current = closure_1.current;
-        current.push(arg0);
+        current.push(fn);
       }
     },
   };

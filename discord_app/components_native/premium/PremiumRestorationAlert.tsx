@@ -1,20 +1,18 @@
 // discord_app/components_native/premium/PremiumRestorationAlert.tsx
-import componentDidMountDefault from "../common/UntouchableAlert.tsx";
-import importDefaultResult from "../../stores/native/IAPStore.android.tsx";
-import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
-import importAllResult from "../../../_runtime/00019_noop.js";
-import importDefaultResult1 from "../../../discord_common/js/packages/flux/index.tsx";
+import UntouchableAlertDefault from "../common/UntouchableAlert.tsx";
+import noop from "../../../_runtime/metro/00019__.js";
+import IAPStore from "../../stores/native/IAPStore.android.tsx";
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 
-const PureComponent = importAllResult.PureComponent;
+const jsx = fn(21).jsx;
+const PureComponent = noop.PureComponent;
 class PremiumRestorationAlert extends PureComponent {}
 PremiumRestorationAlert.prototype["render"] = function render() {
   ({ isBusy, onClose } = this.props);
-  return jsx(componentDidMountDefault, { loading, onClose });
+  return jsx(UntouchableAlertDefault, { loading, onClose });
 };
-const items = [importDefaultResult];
-const tmp4 = importDefaultResult1.connectStores(items, () => ({ isBusy: importDefaultResult.isBusy() }))(
-  PremiumRestorationAlert,
-);
-const result = require("set").fileFinishedImporting("components_native/premium/PremiumRestorationAlert.tsx");
+const items = [IAPStore];
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/premium/PremiumRestorationAlert.tsx");
 
-export default tmp4;
+export default initialize.connectStores(items, () => ({ isBusy: IAPStore.isBusy() }))(PremiumRestorationAlert);

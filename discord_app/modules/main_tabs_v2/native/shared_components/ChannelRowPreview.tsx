@@ -1,63 +1,63 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/ChannelRowPreview.tsx
-import explicitContentFromProto from "../../../user_settings/UserSettings.tsx";
-import map from "../../../../design/tokens/native/useToken.tsx";
+import UserSettings from "../../../user_settings/UserSettings.tsx";
+import useToken from "../../../../design/tokens/native/useToken.tsx";
 import LinkIcon from "../../../../design/components/Icon/native/redesign/generated/LinkIcon.tsx";
-import Text from "../../../../design/components/Text/native/Text.tsx";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import getFontScale from "../../../screen/native/useFontScale.tsx";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import useFontScale from "../../../screen/native/useFontScale.tsx";
 import ImageIcon from "../../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
 import PhoneCallIcon from "../../../../design/components/Icon/native/redesign/generated/PhoneCallIcon.tsx";
 import PhoneHangUpIcon from "../../../../design/components/Icon/native/redesign/generated/PhoneHangUpIcon.tsx";
+import RowGeneratorDefault from "../../../messages/native/renderer/RowGenerator.tsx";
+import RowGeneratorStyleSheet from "../../../messages/native/renderer/RowGeneratorStyleSheet.tsx";
+import RowGeneratorTypes from "../../../messages/native/renderer/RowGeneratorTypes.tsx";
 import MusicIcon from "../../../../design/components/Icon/native/redesign/generated/MusicIcon.tsx";
-import formatMessagePreview from "../../../message_previews/useFormattedMessagePreview.tsx";
+import useFormattedMessagePreview from "../../../message_previews/useFormattedMessagePreview.tsx";
 import VideoIcon from "../../../../design/components/Icon/native/redesign/generated/VideoIcon.tsx";
 import AttachmentIcon from "../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
 import StickerIcon from "../../../../design/components/Icon/native/redesign/generated/StickerIcon.tsx";
-import getOrParseMessagePreviewMarkupAST from "../../../message_previews/native/MessagePreviewMarkup.tsx";
-import map2 from "../../../screen/native/useScaledTextLineHeight.android.tsx";
-import getLayoutStyles from "guild_channels/layouts/ChannelListLayout.tsx";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../../stores/RelationshipStore.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import MessagePreviewMarkup from "../../../message_previews/native/MessagePreviewMarkup.tsx";
+import useScaledTextLineHeight from "../../../screen/native/useScaledTextLineHeight.android.tsx";
+import ChannelListLayout from "guild_channels/layouts/ChannelListLayout.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import RelationshipStore from "../../../../stores/RelationshipStore.tsx";
 
-require = arg1;
+const Text_Text = tmp(4556);
+require = fn;
 function PreviewIcon(icon) {
   icon = icon.icon;
-  const merged = Object.assign(icon, Object.create(null));
+  const merged = Object.assign(icon, Object.assign({ icon: 0 }));
   if ("image" === icon) {
     let obj = {};
     const merged1 = Object.assign(merged);
-    return callback(ImageIcon.ImageIcon, obj);
+    return timestampProducer(ImageIcon.ImageIcon, obj);
   } else if ("video" === icon) {
     obj = {};
     const merged2 = Object.assign(merged);
-    return callback(VideoIcon.VideoIcon, obj);
+    return timestampProducer(VideoIcon.VideoIcon, obj);
   } else if ("audio" === icon) {
-    obj1 = {};
+    const obj1 = {};
     const merged3 = Object.assign(merged);
-    return callback(MusicIcon.MusicIcon, obj1);
+    return timestampProducer(MusicIcon.MusicIcon, obj1);
   } else if ("attachment" === icon) {
     const obj2 = {};
     const merged4 = Object.assign(merged);
-    return callback(AttachmentIcon.AttachmentIcon, obj2);
+    return timestampProducer(AttachmentIcon.AttachmentIcon, obj2);
   } else if ("link" === icon) {
     const obj3 = {};
     const merged5 = Object.assign(merged);
-    return callback(LinkIcon.LinkIcon, obj3);
+    return timestampProducer(LinkIcon.LinkIcon, obj3);
   } else if ("sticker" === icon) {
     const obj4 = {};
     const merged6 = Object.assign(merged);
-    return callback(StickerIcon.StickerIcon, obj4);
+    return timestampProducer(StickerIcon.StickerIcon, obj4);
   } else if ("call-active" === icon) {
     const obj5 = {};
     const merged7 = Object.assign(merged);
-    return callback(PhoneCallIcon.PhoneCallIcon, obj5);
+    return timestampProducer(PhoneCallIcon.PhoneCallIcon, obj5);
   } else if ("call-ended" === icon) {
     obj = {};
     const merged8 = Object.assign(merged);
-    return callback(PhoneHangUpIcon.PhoneHangUpIcon, obj);
+    return timestampProducer(PhoneHangUpIcon.PhoneHangUpIcon, obj);
   }
 }
 class ChannelRowPreview {
@@ -69,13 +69,13 @@ class ChannelRowPreview {
     ({ variant, color, muted } = global);
     tmp = closure_0;
     tmp2 = closure_2;
-    obj = require("getFontScale");
+    obj = closure_0(closure_2[12]);
     fontScale = obj.useFontScale();
-    obj2 = require("formatMessagePreview");
+    obj2 = closure_0(closure_2[14]);
     formattedMessagePreview = obj2.useFormattedMessagePreview(message, channel);
-    obj3 = require("getLayoutStyles");
+    obj3 = closure_0(closure_2[15]);
     layoutStyles = obj3.getLayoutStyles(layout);
-    tmp6 = require("map");
+    tmp6 = closure_0(closure_2[16]);
     if (null == formattedMessagePreview) {
       return null;
     } else {
@@ -98,12 +98,12 @@ class ChannelRowPreview {
             content = formattedMessagePreview.message.content;
           }
           obj = { markup: null, channelId: null, guildId: null, muted: null, layout: null, color: null };
-          obj[0] = content;
-          obj[1] = message.channel_id;
-          obj[2] = channel.guild_id;
-          obj[3] = muted;
-          obj[4] = layout;
-          obj[5] = color;
+          obj.markup = content;
+          obj.channelId = message.channel_id;
+          obj.guildId = channel.guild_id;
+          obj.muted = muted;
+          obj.layout = layout;
+          obj.color = color;
           text = tmp8(tmp9, obj);
         } else {
           str3 = "message";
@@ -112,17 +112,17 @@ class ChannelRowPreview {
       tmp10 = jsxs;
       obj1 = { style: null, children: null };
       obj2 = { flexDirection: "row", alignItems: "center", minHeight: null };
-      obj2[2] = tmp7;
-      obj1[0] = obj2;
+      obj2.minHeight = tmp7;
+      obj1.style = obj2;
       tmp11 = View;
       obj3 = { lineClamp: null, variant: null, maxFontSizeMultiplier: 1.75, color: null, style: null, children: null };
-      obj3[0] = lineClamp;
+      obj3.lineClamp = lineClamp;
       if (variant == null) {
         variant = "text-sm/normal";
       }
-      obj3[1] = variant;
-      obj3[3] = color;
-      obj3[4] = { paddingBottom: 2, flexShrink: 1 };
+      obj3.variant = variant;
+      obj3.color = color;
+      obj3.style = { paddingBottom: 2, flexShrink: 1 };
       combined = null != authorLabel;
       if (combined) {
         tmp13 = globalThis;
@@ -134,22 +134,22 @@ class ChannelRowPreview {
       items = [,];
       items[0] = combined;
       items[1] = text;
-      obj3[5] = items;
+      obj3.children = items;
       items1 = [,];
-      items1[0] = tmp10(require("Text").Text, obj3);
+      items1[0] = tmp10(tmp(tmp2[17]).Text, obj3);
       tmp14 = null != trailingIcon;
       if (tmp14) {
         tmp15 = jsx;
         tmp16 = PreviewIcon;
         obj4 = { icon: null, size: null, color: null, style: null };
-        obj4[0] = trailingIcon;
-        obj4[1] = layoutStyles.messagePreview.messageTypeIconSizeNew;
-        obj4[2] = color;
-        obj4[3] = { marginLeft: 4 };
+        obj4.icon = trailingIcon;
+        obj4.size = layoutStyles.messagePreview.messageTypeIconSizeNew;
+        obj4.color = color;
+        obj4.style = { marginLeft: 4 };
         tmp14 = jsx(PreviewIcon, obj4);
       }
       items1[1] = tmp14;
-      obj1[1] = items1;
+      obj1.children = items1;
       return tmp10(tmp11, obj1);
     }
   }
@@ -168,19 +168,19 @@ class NativeChannelRowPreview {
     closure_5 = undefined;
     closure_6 = undefined;
     ({ textColor, gradientStyles, gradientColors } = global);
-    tmp = require("useTheme")();
-    obj = require("createCacheKey");
-    obj = { seeMoreLabelColor: require("Themes").colors.TEXT_DEFAULT };
+    tmp = c1(closure_2[18])();
+    obj = lineClamp(closure_2[19]);
+    obj = { seeMoreLabelColor: c1(closure_2[20]).colors.TEXT_DEFAULT };
     closure_2 = obj.createNativeStyleProperties(obj)(tmp);
-    obj3 = require("map");
+    obj3 = lineClamp(closure_2[21]);
     closure_3 = obj3.useToken(textColor);
-    RenderEmbeds = require("explicitContentFromProto").RenderEmbeds;
+    RenderEmbeds = lineClamp(closure_2[22]).RenderEmbeds;
     setting = RenderEmbeds.getSetting();
     closure_4 = setting;
-    InlineEmbedMedia = require("explicitContentFromProto").InlineEmbedMedia;
+    InlineEmbedMedia = lineClamp(closure_2[22]).InlineEmbedMedia;
     setting1 = InlineEmbedMedia.getSetting();
     closure_5 = setting1;
-    InlineAttachmentMedia = require("explicitContentFromProto").InlineAttachmentMedia;
+    InlineAttachmentMedia = lineClamp(closure_2[22]).InlineAttachmentMedia;
     setting2 = InlineAttachmentMedia.getSetting();
     closure_6 = setting2;
     items = [, , ,];
@@ -189,8 +189,8 @@ class NativeChannelRowPreview {
     items[2] = setting2;
     items[3] = gifAutoPlay;
     memo = closure_3.useMemo(() => {
-      let obj = new gifAutoPlay(seeMoreLabelColor[23])();
-      obj = {
+      new RowGeneratorDefault();
+      const obj = {
         renderEmbeds: setting,
         inlineEmbedMedia: setting1,
         inlineAttachmentMedia: setting2,
@@ -216,23 +216,22 @@ class NativeChannelRowPreview {
       horizontalOffset: 0,
       modifyRow(message) {
         let processColorOrThrowResult;
-        message.contextType = closure_1_0(seeMoreLabelColor[25]).MessageContextType.SEARCH;
+        message.contextType = RowGeneratorTypes.MessageContextType.SEARCH;
         if (null != closure_3) {
           try {
-            processColorOrThrowResult = closure_1_0(seeMoreLabelColor[26]).processColorOrThrow(tmp4);
-            const tmp2Result = closure_1_0(seeMoreLabelColor[26]);
+            processColorOrThrowResult = RowGeneratorStyleSheet.processColorOrThrow(tmp4);
+            const tmp2Result = RowGeneratorStyleSheet;
           } catch (err) {}
         }
         if (null != processColorOrThrowResult) {
           message.message.textColor = processColorOrThrowResult;
         }
-        if (null != closure_0) {
-          const obj = { numberOfLines: null, expandable: false, seeMoreLabel: "...", seeMoreLabelColor: null };
-          obj[0] = tmp6;
+        if (null != _require) {
+          const obj = { numberOfLines: tmp6, expandable: false, seeMoreLabel: "...", seeMoreLabelColor: null };
           if (processColorOrThrowResult == null) {
             processColorOrThrowResult = seeMoreLabelColor.seeMoreLabelColor;
           }
-          obj[3] = processColorOrThrowResult;
+          obj.seeMoreLabelColor = processColorOrThrowResult;
           message.truncation = obj;
         }
       },
@@ -243,16 +242,16 @@ class NativeChannelRowPreview {
       gradientStyles,
       gradientColors,
     };
-    return closure_6(require("DCDChatItem"), obj1);
+    return closure_6(c1(closure_2[24]), obj1);
   }
 }
-let c3 = importAllResult;
-({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_9 = importAllResult.memo((arg0) => {
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+let closure_9 = noop.memo((arg0) => {
   ({ markup, channelId, guildId, muted, layout, color } = arg0);
-  const fontScale = getFontScale.useFontScale();
-  const obj = getFontScale;
-  return getOrParseMessagePreviewMarkupAST.renderMessagePreviewMarkup({
+  const fontScale = useFontScale.useFontScale();
+  return MessagePreviewMarkup.renderMessagePreviewMarkup({
     content,
     muted,
     guildId,
@@ -262,32 +261,30 @@ let closure_9 = importAllResult.memo((arg0) => {
     fontScale,
   });
 });
-const memoResult = importAllResult.memo((message) => {
-  const _require = message;
-  let obj = initialize;
-  const items = [closure_5];
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/ChannelRowPreview.tsx");
+
+export { ChannelRowPreview };
+export { NativeChannelRowPreview };
+export const NativeMessageChannelRowPreview = noop.memo((message) => {
+  _require = message;
+  let obj = require("initialize");
+  const items = [RelationshipStore];
   const items1 = [message.message.author.id];
   const stateFromStores = obj.useStateFromStores(
     items,
-    () => closure_1_5.isBlockedOrIgnored(message.message.author.id),
+    () => RelationshipStore.isBlockedOrIgnored(message.message.author.id),
     items1,
   );
   if (obj2.isMessageContentPreviewable(message.message)) {
     if (!stateFromStores) {
       obj = {};
       const merged = Object.assign(message);
-      let tmp7 = callback(NativeChannelRowPreview, obj);
+      let tmp7 = closure_6(NativeChannelRowPreview, obj);
     }
     return tmp7;
   }
   obj = {};
   const merged1 = Object.assign(message);
-  tmp7 = callback(ChannelRowPreview, obj);
+  tmp7 = closure_6(ChannelRowPreview, obj);
 });
-const result = require("set").fileFinishedImporting(
-  "modules/main_tabs_v2/native/shared_components/ChannelRowPreview.tsx",
-);
-
-export { ChannelRowPreview };
-export { NativeChannelRowPreview };
-export const NativeMessageChannelRowPreview = memoResult;

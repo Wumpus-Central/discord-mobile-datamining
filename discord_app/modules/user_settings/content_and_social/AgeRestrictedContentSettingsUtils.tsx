@@ -1,13 +1,14 @@
 // discord_app/modules/user_settings/content_and_social/AgeRestrictedContentSettingsUtils.tsx
-import explicitContentFromProto from "../UserSettings.tsx";
-import useAgeVerificationRunner from "../../age_assurance/AgeVerificationUtils.tsx";
-import isFeatureAgeGated from "../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
+import UserSettings from "../UserSettings.tsx";
+import AgeVerificationUtils from "../../age_assurance/AgeVerificationUtils.tsx";
+import RegionalFeatureConfigUtils from "../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import AgeGatedFeature from "../../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
 import useNSFWAllowed from "useNSFWAllowed.tsx";
-import closure_2 from "../../../stores/UserStore.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting(
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/user_settings/content_and_social/AgeRestrictedContentSettingsUtils.tsx",
 );
 
@@ -31,14 +32,12 @@ export const resolveNsfwTogglesWithDefaults = function resolveNsfwTogglesWithDef
   return tmp3;
 };
 export const useViewNsfwCommandsOrDefault = function useViewNsfwCommandsOrDefault() {
-  const ViewNsfwCommands = explicitContentFromProto.ViewNsfwCommands;
+  const ViewNsfwCommands = UserSettings.ViewNsfwCommands;
   let flag = ViewNsfwCommands.useSetting();
-  const isAgeVerified = useAgeVerificationRunner.useIsAgeVerified();
-  const obj = useAgeVerificationRunner;
+  const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
   const nSFWAllowed = useNSFWAllowed.useNSFWAllowed();
-  const obj2 = useNSFWAllowed;
   const tmp3 =
-    isFeatureAgeGated.useIsFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.COMMANDS_TOGGLE) && !isAgeVerified;
+    RegionalFeatureConfigUtils.useIsFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.COMMANDS_TOGGLE) && !isAgeVerified;
   let tmp4 = !tmp3;
   if (!tmp3) {
     let tmp5 = false !== nSFWAllowed;
@@ -53,14 +52,12 @@ export const useViewNsfwCommandsOrDefault = function useViewNsfwCommandsOrDefaul
   return tmp4;
 };
 export const useViewNsfwGuildsOrDefault = function useViewNsfwGuildsOrDefault() {
-  const ViewNsfwGuilds = explicitContentFromProto.ViewNsfwGuilds;
+  const ViewNsfwGuilds = UserSettings.ViewNsfwGuilds;
   let flag = ViewNsfwGuilds.useSetting();
-  const isAgeVerified = useAgeVerificationRunner.useIsAgeVerified();
-  const obj = useAgeVerificationRunner;
+  const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
   const nSFWAllowed = useNSFWAllowed.useNSFWAllowed();
-  const obj2 = useNSFWAllowed;
   const tmp3 =
-    isFeatureAgeGated.useIsFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.COMMANDS_TOGGLE) && !isAgeVerified;
+    RegionalFeatureConfigUtils.useIsFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.COMMANDS_TOGGLE) && !isAgeVerified;
   let tmp4 = !tmp3;
   if (!tmp3) {
     let tmp5 = false !== nSFWAllowed;
@@ -75,12 +72,13 @@ export const useViewNsfwGuildsOrDefault = function useViewNsfwGuildsOrDefault() 
   return tmp4;
 };
 export const getViewNsfwCommandsOrDefault = function getViewNsfwCommandsOrDefault() {
-  const ViewNsfwCommands = explicitContentFromProto.ViewNsfwCommands;
+  const ViewNsfwCommands = UserSettings.ViewNsfwCommands;
   let flag = ViewNsfwCommands.getSetting();
-  const obj = useAgeVerificationRunner;
-  const currentUser = authStore.getCurrentUser();
-  const isAgeVerifiedResult = useAgeVerificationRunner.isAgeVerified();
-  let isFeatureAgeGatedResult = isFeatureAgeGated.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.COMMANDS_TOGGLE);
+  const currentUser = UserStore.getCurrentUser();
+  const isAgeVerifiedResult = AgeVerificationUtils.isAgeVerified();
+  let isFeatureAgeGatedResult = RegionalFeatureConfigUtils.isFeatureAgeGated(
+    AgeGatedFeature.AgeGatedFeature.COMMANDS_TOGGLE,
+  );
   if (currentUser != null) {
     const nsfwAllowed = currentUser.nsfwAllowed;
   }
@@ -101,12 +99,13 @@ export const getViewNsfwCommandsOrDefault = function getViewNsfwCommandsOrDefaul
   return tmp4;
 };
 export const getViewNsfwGuildsOrDefault = function getViewNsfwGuildsOrDefault() {
-  const ViewNsfwGuilds = explicitContentFromProto.ViewNsfwGuilds;
+  const ViewNsfwGuilds = UserSettings.ViewNsfwGuilds;
   let flag = ViewNsfwGuilds.getSetting();
-  const obj = useAgeVerificationRunner;
-  const currentUser = authStore.getCurrentUser();
-  const isAgeVerifiedResult = useAgeVerificationRunner.isAgeVerified();
-  let isFeatureAgeGatedResult = isFeatureAgeGated.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.COMMANDS_TOGGLE);
+  const currentUser = UserStore.getCurrentUser();
+  const isAgeVerifiedResult = AgeVerificationUtils.isAgeVerified();
+  let isFeatureAgeGatedResult = RegionalFeatureConfigUtils.isFeatureAgeGated(
+    AgeGatedFeature.AgeGatedFeature.COMMANDS_TOGGLE,
+  );
   if (currentUser != null) {
     const nsfwAllowed = currentUser.nsfwAllowed;
   }

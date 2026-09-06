@@ -1,21 +1,21 @@
 // discord_app/utils/DateUtils.tsx
-import timestampDefault from "../modules/debug/Logger.tsx";
-import getSystemLocale from "../intl/index.native.tsx";
-import create from "../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import explicitContentFromProto from "../modules/user_settings/UserSettings.tsx";
-import hooksDefault from "../../_runtime/04153_hooks.js";
+import LoggerDefault from "../modules/debug/Logger.tsx";
+import util from "../intl/index.native.tsx";
+import preloaded_user_settings from "../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import UserSettings from "../modules/user_settings/UserSettings.tsx";
+import _modDef4153 from "../../_runtime/metro/04153__.js";
 import onTimezoneChangeDefault from "../modules/date/onTimezoneChange.android.tsx";
-import importDefaultResult from "../modules/user_settings/LocaleStore.tsx";
-import importDefaultResult1 from "../Dispatcher.tsx";
+import LocaleStore from "../modules/user_settings/LocaleStore.tsx";
+import Dispatcher from "../Dispatcher.tsx";
 
-require = arg1;
+require = fn;
 function resetCache() {
   closure_5 = Object.create(null);
 }
 function syncHourCycleToIntlConfig() {
-  const TimestampHourCycle = explicitContentFromProto.TimestampHourCycle;
+  const TimestampHourCycle = UserSettings.TimestampHourCycle;
   const setting = TimestampHourCycle.getSetting();
-  let result = setting !== create.TimestampHourCycle.AUTO;
+  let result = setting !== preloaded_user_settings.TimestampHourCycle.AUTO;
   if (result) {
     result = tmp4(4245).supportsSystemDateFormatter();
     const tmp4Result = tmp4(4245);
@@ -27,68 +27,54 @@ function syncHourCycleToIntlConfig() {
     let tmp13 = nextResult;
     let tmp14 = null != nextResult;
     if (tmp14) {
-      let tmp15 = nextResult;
       tmp14 = "hour" in tmp13;
     }
     if (tmp14) {
       if (result) {
-        let tmp16 = require;
-        let tmp17 = require;
-        let tmp18 = dependencyMap;
-        let tmp19 = dependencyMap;
-        if (setting === create.TimestampHourCycle.H12) {
-          let tmp26 = nextResult;
+        if (setting === preloaded_user_settings.TimestampHourCycle.H12) {
           tmp13.hourCycle = "h12";
         }
       }
       if (result) {
-        let tmp20 = require;
-        let tmp21 = require;
-        let tmp22 = dependencyMap;
-        let tmp23 = dependencyMap;
-        if (setting === create.TimestampHourCycle.H23) {
-          let tmp25 = nextResult;
+        if (setting === preloaded_user_settings.TimestampHourCycle.H23) {
           tmp13.hourCycle = "h23";
         }
       }
-      let tmp24 = nextResult;
       delete tmp2[tmp];
     }
     continue;
   }
 }
-function differenceInCalendarDays(str, str2) {
-  let tmp = typeof str === "string";
-  if (typeof str !== "string") {
-    tmp = typeof str === "number";
+function differenceInCalendarDays(d, d2) {
+  let tmp = typeof d === "string";
+  if (typeof d !== "string") {
+    tmp = typeof d === "number";
   }
   if (!tmp) {
     const _Date = Date;
-    tmp = str instanceof Date;
+    tmp = d instanceof Date;
   }
-  let date = str;
+  let date = d;
   if (!tmp) {
-    let obj = { d: null };
-    obj[0] = str;
+    let obj = { d };
     logger.error("Invalid date given to startOfDay", obj);
     const _Date2 = Date;
     date = new Date();
   }
   const date1 = new Date(date);
   const time = date1.getTime();
-  let tmp10 = typeof str2 === "string";
+  let tmp10 = typeof d2 === "string";
   const result = Math.floor((time - 60000 * date1.getTimezoneOffset()) / c4) * c4;
-  if (typeof str2 !== "string") {
-    tmp10 = typeof str2 === "number";
+  if (typeof d2 !== "string") {
+    tmp10 = typeof d2 === "number";
   }
   if (!tmp10) {
     const _Date3 = Date;
-    tmp10 = str2 instanceof Date;
+    tmp10 = d2 instanceof Date;
   }
-  let date2 = str2;
+  let date2 = d2;
   if (!tmp10) {
-    obj = { d: null };
-    obj[0] = str2;
+    obj = { d: d2 };
     logger.error("Invalid date given to startOfDay", obj);
     const _Date4 = Date;
     date2 = new Date();
@@ -102,16 +88,16 @@ function dateFormat(date, LL, setting) {
   if (!obj.isMoment(date)) {
     obj2 = tmp(4153)(date);
   }
-  obj = hooksDefault;
+  obj = _modDef4153;
   if (setting == null) {
-    const TimestampHourCycle = explicitContentFromProto.TimestampHourCycle;
+    const TimestampHourCycle = UserSettings.TimestampHourCycle;
     setting = TimestampHourCycle.getSetting();
   }
   const combined = "" + obj2.locale() + ":" + LL + ":" + setting;
-  let tmp7 = table[combined];
+  let tmp7 = closure_5[combined];
   if (null == tmp7) {
     const tmp9 = tmp(4247)(LL);
-    table[combined] = tmp9;
+    closure_5[combined] = tmp9;
     tmp7 = tmp9;
   }
   const localeResult = obj2.locale();
@@ -121,22 +107,21 @@ function dateFormat(date, LL, setting) {
   }
   return tmp7(toDateResult);
 }
-let closure_3 = new timestampDefault("DateUtils");
+const logger = new LoggerDefault("DateUtils");
 let c4 = 86400000;
 let closure_5 = Object.create(null);
-importDefaultResult.addChangeListener(resetCache);
+LocaleStore.addChangeListener(resetCache);
 onTimezoneChangeDefault(resetCache);
-let tmp2 = new timestampDefault("DateUtils");
-const subscription = importDefaultResult1.subscribe("USER_SETTINGS_PROTO_UPDATE", syncHourCycleToIntlConfig);
-const subscription1 = importDefaultResult1.subscribe("CONNECTION_OPEN", syncHourCycleToIntlConfig);
+const subscription = Dispatcher.subscribe("USER_SETTINGS_PROTO_UPDATE", syncHourCycleToIntlConfig);
+const subscription1 = Dispatcher.subscribe("CONNECTION_OPEN", syncHourCycleToIntlConfig);
 const items = [
   { key: "days", millisecondsInUnit: 86400000 },
   { key: "hours", millisecondsInUnit: 3600000 },
   { key: "minutes", millisecondsInUnit: 60000 },
   { key: "seconds", millisecondsInUnit: 1000 },
 ];
-const importDefaultResult2 = importDefaultResult1;
-let result = require("set").fileFinishedImporting("utils/DateUtils.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("utils/DateUtils.tsx");
 
 export { differenceInCalendarDays };
 export const differenceInDays = function differenceInDays(getTime, getTime2) {
@@ -170,9 +155,8 @@ export const calendarFormat = function calendarFormat(timestamp, arg1, setting) 
   if (arg1 === undefined) {
     flag = false;
   }
-  const obj = hooksDefault;
-  const obj3 = hooksDefault();
-  const localeDataResult = hooksDefault.localeData();
+  const obj3 = _modDef4153();
+  const localeDataResult = _modDef4153.localeData();
   const tmp3 = differenceInCalendarDays;
   let toDateResult = timestamp;
   if (obj4.isMoment(timestamp)) {
@@ -203,12 +187,11 @@ export const calendarFormat = function calendarFormat(timestamp, arg1, setting) 
     }
     return dateFormat(timestamp, localeDataResult.calendar(str2, tmp8, obj3), setting);
   }
-  obj4 = hooksDefault;
+  obj4 = _modDef4153;
 };
-export const calendarFormatCompact = function calendarFormatCompact(timestamp) {
-  const obj = hooksDefault;
-  const obj3 = hooksDefault();
-  const localeDataResult = hooksDefault.localeData();
+export const calendarFormatCompact = function calendarFormatCompact(timestamp, arg1) {
+  const obj3 = _modDef4153();
+  const localeDataResult = _modDef4153.localeData();
   const tmp2 = differenceInCalendarDays;
   let toDateResult = timestamp;
   if (obj4.isMoment(timestamp)) {
@@ -234,14 +217,13 @@ export const calendarFormatCompact = function calendarFormatCompact(timestamp) {
 export const dateStringToMoment = function dateStringToMoment(arg0) {
   if (arg0.length >= 200) {
     const _Error = Error;
-    error = new Error("Date string exceeds maximum length");
+    const error = new Error("Date string exceeds maximum length");
     throw error;
   } else {
-    return hooksDefault(arg0);
+    return _modDef4153(arg0);
   }
 };
 export const accessibilityLabelCalendarFormat = function accessibilityLabelCalendarFormat(timestamp) {
-  const obj = hooksDefault;
   const date = new Date();
   const tmp4 = differenceInCalendarDays(timestamp, date);
   let str = "sameElse";
@@ -267,57 +249,57 @@ export const accessibilityLabelCalendarFormat = function accessibilityLabelCalen
   }
   return dateFormat(timestamp, str5);
 };
-export const diffAsUnits = function diffAsUnits(date, closure_0) {
+export const diffAsUnits = function diffAsUnits(date, expiresAt) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = false;
   }
-  let obj;
+  let time;
   closure_1 = undefined;
   let num = 0;
   if (flag) {
     num = 1;
   }
-  obj = { days: 0, hours: 0, minutes: 0, seconds: num };
-  if (date > closure_0) {
-    return obj;
+  time = { days: 0, hours: 0, minutes: 0, seconds: num };
+  if (date > expiresAt) {
+    return time;
   } else {
     if (flag) {
       const _Number = Number;
       const _Number2 = Number;
       const sum = Number(date) + 1200;
-      if (sum > Number(closure_0)) {
-        return obj;
+      if (sum > Number(expiresAt)) {
+        return time;
       }
     }
     const _Number3 = Number;
     const _Number4 = Number;
-    closure_1 = Number(closure_0) - Number(date);
-    const item = items.forEach((arg0) => {
-      ({ key, millisecondsInUnit } = arg0);
-      obj[key] = Math.floor(closure_1 / millisecondsInUnit);
-      closure_1 = closure_1 - obj[key] * millisecondsInUnit;
+    closure_1 = Number(expiresAt) - Number(date);
+    const item = items.forEach((item) => {
+      ({ key, millisecondsInUnit } = item);
+      time[key] = Math.floor(closure_1 / millisecondsInUnit);
+      closure_1 = closure_1 - time[key] * millisecondsInUnit;
     });
-    return obj;
+    return time;
   }
 };
-export const unitsAsStrings = function unitsAsStrings(diffAsUnitsResult, days2) {
+export const unitsAsStrings = function unitsAsStrings(diffAsUnitsResult, time) {
   if (diffAsUnitsResult.days > 0) {
-    const intl3 = getSystemLocale.intl;
+    const intl3 = util.intl;
     let obj = { days: null, hours: null };
-    ({ days: obj3[0], hours: obj3[1] } = diffAsUnitsResult);
-    let formatToPlainStringResult = intl3.formatToPlainString(days2.days, obj);
+    ({ days: obj3.days, hours: obj3.hours } = diffAsUnitsResult);
+    let formatToPlainStringResult = intl3.formatToPlainString(time.days, obj);
   } else if (diffAsUnitsResult.hours > 0) {
-    const intl2 = getSystemLocale.intl;
-    obj = { hours: null, minutes: null };
-    ({ hours: obj2[0], minutes: obj2[1] } = diffAsUnitsResult);
-    formatToPlainStringResult = intl2.formatToPlainString(days2.hours, obj);
+    const intl2 = util.intl;
+    time = { hours: null, minutes: null };
+    ({ hours: obj2.hours, minutes: obj2.minutes } = diffAsUnitsResult);
+    formatToPlainStringResult = intl2.formatToPlainString(time.hours, time);
   } else {
-    const intl = getSystemLocale.intl;
+    const intl = util.intl;
     obj = { minutes: null };
     const _Math = Math;
-    obj[0] = Math.max(1, diffAsUnitsResult.minutes);
-    formatToPlainStringResult = intl.formatToPlainString(days2.minutes, obj);
+    obj.minutes = Math.max(1, diffAsUnitsResult.minutes);
+    formatToPlainStringResult = intl.formatToPlainString(time.minutes, obj);
   }
   return formatToPlainStringResult;
 };
@@ -344,11 +326,11 @@ export const formatDateForDatetimeLocal = function formatDateForDatetimeLocal(ar
   if (null != arg0) {
     if (arg0.length >= 200) {
       const _Error = Error;
-      error = new Error("Date string exceeds maximum length");
+      const error = new Error("Date string exceeds maximum length");
       throw error;
     } else {
-      str = hooksDefault(arg0).format("YYYY-MM-DDTHH:mm");
-      const obj = hooksDefault(arg0);
+      str = _modDef4153(arg0).format("YYYY-MM-DDTHH:mm");
+      const obj = _modDef4153(arg0);
     }
   }
   return str;

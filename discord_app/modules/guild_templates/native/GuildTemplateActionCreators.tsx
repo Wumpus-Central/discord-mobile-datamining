@@ -1,27 +1,25 @@
 // discord_app/modules/guild_templates/native/GuildTemplateActionCreators.tsx
-import dispatcherDefault from "../../../Dispatcher.tsx";
+import DispatcherDefault from "../../../Dispatcher.tsx";
 import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
-import _modDef4763 from "../../../actions/ModalActionCreators.tsx";
-import mapDefault from "../GuildTemplateActionCreators.tsx";
+import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
+import GuildTemplateActionCreatorsDefault from "../GuildTemplateActionCreators.tsx";
 
-require = arg1;
+require = fn;
 const GUILD_TEMPLATE_MODAL_KEY = "GUILD_TEMPLATE_MODAL_KEY";
 let obj = {};
-const merged = Object.assign(mapDefault);
+const GuildTemplateActionCreators = Object.assign(GuildTemplateActionCreatorsDefault);
 obj.showModal = function showModal(code) {
-  let obj = _modDef4763;
-  obj = { code };
+  let obj = { code };
   obj.pushLazy(asyncRequireImpl(11793, dependencyMap.paths), obj, GUILD_TEMPLATE_MODAL_KEY);
   obj = { type: "GUILD_TEMPLATE_MODAL_SHOW", code };
-  dispatcherDefault.dispatch(obj);
-  const obj3 = dispatcherDefault;
-  const guildTemplate = mapDefault.resolveGuildTemplate(code);
+  DispatcherDefault.dispatch(obj);
+  const guildTemplate = GuildTemplateActionCreatorsDefault.resolveGuildTemplate(code);
 };
 obj.hideModal = function hideModal() {
-  _modDef4763.popWithKey(GUILD_TEMPLATE_MODAL_KEY);
-  const obj = _modDef4763;
-  dispatcherDefault.dispatch({ type: "GUILD_TEMPLATE_MODAL_HIDE" });
+  ModalActionCreatorsDefault.popWithKey(GUILD_TEMPLATE_MODAL_KEY);
+  DispatcherDefault.dispatch({ type: "GUILD_TEMPLATE_MODAL_HIDE" });
 };
-const result = require("set").fileFinishedImporting("modules/guild_templates/native/GuildTemplateActionCreators.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_templates/native/GuildTemplateActionCreators.tsx");
 
 export default obj;

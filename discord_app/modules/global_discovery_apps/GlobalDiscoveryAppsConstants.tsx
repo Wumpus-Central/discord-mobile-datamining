@@ -1,7 +1,7 @@
 // discord_app/modules/global_discovery_apps/GlobalDiscoveryAppsConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/global_discovery_apps/GlobalDiscoveryAppsConstants.tsx");
+const result = size.fileFinishedImporting("modules/global_discovery_apps/GlobalDiscoveryAppsConstants.tsx");
 
 export const GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID = 0;
 export const EMPTY_QUERY = "";

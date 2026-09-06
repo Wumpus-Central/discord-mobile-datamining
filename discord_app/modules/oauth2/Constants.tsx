@@ -1,7 +1,7 @@
 // discord_app/modules/oauth2/Constants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/oauth2/Constants.tsx");
+const result = size.fileFinishedImporting("modules/oauth2/Constants.tsx");
 
 export const OAuth2Steps = {
   CONNECT_ACCOUNT: "CONNECT_ACCOUNT",

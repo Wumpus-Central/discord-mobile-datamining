@@ -1,21 +1,22 @@
 // discord_app/utils/GuildUtils.tsx
-import setDefault from "Durations.tsx";
-import getSystemLocale from "../intl/index.native.tsx";
-import nameFromUserAll from "UserUtils.tsx";
-import closure_5 from "../stores/GuildStore.tsx";
-import closure_6 from "../stores/UserStore.tsx";
-import importDefaultResult from "../../_runtime/01437_priv.js";
+import DurationsDefault from "Durations.tsx";
+import util from "../intl/index.native.tsx";
+import UserUtilsAll from "UserUtils.tsx";
+import GuildActionCreatorsDefault from "../actions/GuildActionCreators.tsx";
+import GuildStore from "../stores/GuildStore.tsx";
+import UserStore from "../stores/UserStore.tsx";
+import priv from "../../_runtime/01437_priv.js";
 
-require = arg1;
+require = fn;
 function getGuildNameSuggestion(truncateUsername) {
-  currentUser = currentUser.getCurrentUser();
-  let obj = nameFromUserAll;
+  const currentUser = UserStore.getCurrentUser();
+  let obj = UserUtilsAll;
   const name = obj.getName(currentUser);
   let str = "";
   if (null != name) {
     str = "";
     if (0 !== name.length) {
-      const intl = getSystemLocale.intl;
+      const intl = util.intl;
       truncateUsername = undefined;
       if (truncateUsername != null) {
         truncateUsername = truncateUsername.truncateUsername;
@@ -24,42 +25,38 @@ function getGuildNameSuggestion(truncateUsername) {
       if (truncateUsername) {
         substr = name.slice(0, 20);
       }
-      obj = { username: null };
-      obj[0] = substr;
-      str = intl.formatToPlainString(getSystemLocale.t.Y6Qfju, obj);
+      obj = { username: substr };
+      str = intl.formatToPlainString(util.t.Y6Qfju, obj);
     }
   }
   return str;
 }
 let obj = { maxAge: null };
-obj[0] = setDefault.Millis.MINUTE;
-importDefaultResult = new importDefaultResult(obj);
-const error = importDefaultResult;
+obj.maxAge = DurationsDefault.Millis.MINUTE;
+priv = new priv(obj);
 obj = {
   getGuildNameSuggestion,
-  requestMembers(arr) {
+  requestMembers(arr, arg1) {
     closure_0 = arg1;
     let num = arg2;
     if (arg2 === undefined) {
       num = 10;
     }
-    closure_1 = undefined;
     const isArray = Array.isArray(arr);
     let items = [];
-    closure_1 = items;
     if (isArray) {
-      let item = arr.forEach((arg0) => {
-        let str = arg0;
-        if (arg0 == null) {
+      let item = arr.forEach((item) => {
+        let str = item;
+        if (item == null) {
           str = "";
         }
         const combined = "" + str + ":" + closure_0;
-        const value = closure_1_7.get(combined);
+        value = priv.get(combined);
         if (null == value) {
-          const result = closure_1_7.set(combined, true);
+          const result = priv.set(combined, true);
         }
         if (null == value) {
-          arr = arr.push(arg0);
+          items.push(item);
         }
       });
       let flag2 = false;
@@ -70,7 +67,7 @@ obj = {
       }
       const _HermesInternal = HermesInternal;
       let combined = "" + str + ":" + arg1;
-      let value = importDefaultResult.get(combined);
+      value = priv.get(combined);
       if (null == value) {
         let result = obj.set(combined, true);
       }
@@ -78,87 +75,88 @@ obj = {
       if (null == value) {
         flag2 = true;
       }
-      obj = importDefaultResult;
+      obj = priv;
     }
     if (items.length > 0) {
       if (isArray) {
-        closure_0 = items;
-        closure_1 = arg1;
+        closure_130_0 = items;
+        closure_130_1 = arg1;
+        closure_130_2 = num;
         if (null != timeout) {
           const _clearTimeout2 = clearTimeout;
           clearTimeout(timeout);
         }
         const _setTimeout2 = setTimeout;
         timeout = setTimeout(() => {
-          const items = [];
-          if (null == items) {
+          items = [];
+          if (null == closure_0) {
             const push = items.push;
             const items1 = [];
-            HermesBuiltin.arraySpread(closure_1_5.getGuildIds(), 0);
+            HermesBuiltin.arraySpread(GuildStore.getGuildIds(), 0);
             HermesBuiltin.apply(items1, items);
           } else {
             const _Array = Array;
             if (Array.isArray(arr2)) {
-              const item = arr2.forEach((arg0) => {
-                const guild = closure_1_5.getGuild(arg0);
+              const item = arr2.forEach((item) => {
+                guild = guild.getGuild(item);
                 if (null != guild) {
                   items.push(guild.id);
                 }
               });
             } else {
-              let guild = closure_1_5.getGuild(arr2);
+              guild = GuildStore.getGuild(arr2);
               if (null != guild) {
-                arr = items.push(guild.id);
+                items.push(guild.id);
               }
             }
           }
           if (items.length > 0) {
-            const members = arr(closure_1_3[4]).requestMembers(items, arr.toLocaleLowerCase(), num);
-            const obj = arr(closure_1_3[4]);
+            const members = GuildActionCreatorsDefault.requestMembers(items, items.toLocaleLowerCase(), importAll);
           }
         }, 200);
       }
     }
     if (flag2) {
-      closure_0 = arr;
-      closure_1 = arg1;
+      closure_129_0 = arr;
+      closure_129_1 = arg1;
+      closure_129_2 = num;
       if (null != timeout) {
         const _clearTimeout = clearTimeout;
         clearTimeout(timeout);
       }
       const _setTimeout = setTimeout;
       timeout = setTimeout(() => {
-        const items = [];
-        if (null == items) {
+        items = [];
+        if (null == closure_0) {
           const push = items.push;
           const items1 = [];
-          HermesBuiltin.arraySpread(closure_1_5.getGuildIds(), 0);
+          HermesBuiltin.arraySpread(GuildStore.getGuildIds(), 0);
           HermesBuiltin.apply(items1, items);
         } else {
           const _Array = Array;
           if (Array.isArray(arr2)) {
-            const item = arr2.forEach((arg0) => {
-              const guild = closure_1_5.getGuild(arg0);
+            const item = arr2.forEach((item) => {
+              guild = guild.getGuild(item);
               if (null != guild) {
                 items.push(guild.id);
               }
             });
           } else {
-            let guild = closure_1_5.getGuild(arr2);
+            guild = GuildStore.getGuild(arr2);
             if (null != guild) {
-              arr = items.push(guild.id);
+              items.push(guild.id);
             }
           }
         }
         if (items.length > 0) {
-          const members = arr(closure_1_3[4]).requestMembers(items, arr.toLocaleLowerCase(), num);
-          const obj = arr(closure_1_3[4]);
+          const members = GuildActionCreatorsDefault.requestMembers(items, items.toLocaleLowerCase(), importAll);
         }
       }, 200);
     }
   },
 };
-let result = require("set").fileFinishedImporting("utils/GuildUtils.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("utils/GuildUtils.tsx");
 
 export default obj;
 export { getGuildNameSuggestion };

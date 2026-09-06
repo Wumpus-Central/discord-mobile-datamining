@@ -1,9 +1,9 @@
 // discord_app/modules/app_analytics/sampleWithUserId.tsx
-import set from "../../../_runtime/00002_set.js";
 import MurmurHashV3Default from "../../../_runtime/01241_MurmurHashV3.js";
+import size from "../../../_runtime/metro/00002__.js";
 
 let c2 = 2147483647;
-const result = set.fileFinishedImporting("modules/app_analytics/sampleWithUserId.tsx");
+const result = size.fileFinishedImporting("modules/app_analytics/sampleWithUserId.tsx");
 
 export const sampleWithUserId = function sampleWithUserId(id, arg1) {
   const v3Result = MurmurHashV3Default.v3(String(id));

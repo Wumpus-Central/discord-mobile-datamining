@@ -1,6 +1,6 @@
 // discord_app/utils/PremiumTypeUtils.tsx
-import set from "../../_runtime/00002_set.js";
-import GuildFeatures from "../modules/premium/PremiumConstants.tsx";
+import PremiumConstants from "../modules/premium/PremiumConstants.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
 function isPremiumAtLeast(premiumType, TIER_2) {
   let tmp = null == TIER_2;
@@ -13,7 +13,7 @@ function isPremiumAtLeast(premiumType, TIER_2) {
   }
   return tmp;
 }
-function isPremium(premiumType) {
+function isPremium(premiumType, arg1) {
   let tmp = null != premiumType && null != premiumType.premiumType;
   if (tmp) {
     premiumType = premiumType.premiumType;
@@ -36,8 +36,8 @@ function isPremiumExactly(currentUser, TIER_2) {
   }
   return tmp;
 }
-const PremiumTypeOrder = GuildFeatures.PremiumTypeOrder;
-const result = set.fileFinishedImporting("utils/PremiumTypeUtils.tsx");
+const PremiumTypeOrder = PremiumConstants.PremiumTypeOrder;
+const result = size.fileFinishedImporting("utils/PremiumTypeUtils.tsx");
 
 export default { isPremiumAtLeast, isPremium, isPremiumExactly };
 export { isPremiumAtLeast };

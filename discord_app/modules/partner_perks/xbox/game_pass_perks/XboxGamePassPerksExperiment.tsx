@@ -1,6 +1,6 @@
 // discord_app/modules/partner_perks/xbox/game_pass_perks/XboxGamePassPerksExperiment.tsx
-import set from "../../../../../_runtime/00002_set.js";
 import ApexExperiment from "../../../experiments/apex/index.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 const apexExperiment = ApexExperiment.createApexExperiment({
   name: "2026-03-crepe",
@@ -8,12 +8,12 @@ const apexExperiment = ApexExperiment.createApexExperiment({
   defaultConfig: { enabled: false },
   variations: { 0: { enabled: false }, 1: { enabled: true } },
 });
-const result = set.fileFinishedImporting("modules/partner_perks/xbox/game_pass_perks/XboxGamePassPerksExperiment.tsx");
+const result = size.fileFinishedImporting("modules/partner_perks/xbox/game_pass_perks/XboxGamePassPerksExperiment.tsx");
 
 export default apexExperiment;
-export const useIsXboxGamePassPerksEnabled = function useIsXboxGamePassPerksEnabled(location) {
-  return apexExperiment.useConfig({ location }).enabled;
+export const useIsXboxGamePassPerksEnabled = function useIsXboxGamePassPerksEnabled(ProgramRewardsUtils) {
+  return apexExperiment.useConfig({ location: ProgramRewardsUtils }).enabled;
 };
-export const getIsXboxGamePassPerksEnabled = function getIsXboxGamePassPerksEnabled(canUseMonthlyOrbs) {
-  return apexExperiment.getConfig({ location: canUseMonthlyOrbs }).enabled;
+export const getIsXboxGamePassPerksEnabled = function getIsXboxGamePassPerksEnabled(ProgramRewardsUtils) {
+  return apexExperiment.getConfig({ location: ProgramRewardsUtils }).enabled;
 };

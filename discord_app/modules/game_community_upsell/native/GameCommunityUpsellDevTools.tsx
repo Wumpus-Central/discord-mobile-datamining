@@ -1,44 +1,41 @@
 // discord_app/modules/game_community_upsell/native/GameCommunityUpsellDevTools.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_2 from "../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../local_app_detection/native/LocalAppDetectionStore.tsx";
-import closure_6 from "MobileGameCommunitiesStore.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import LocalAppDetectionStore from "../../local_app_detection/native/LocalAppDetectionStore.tsx";
+import MobileGameCommunitiesStore from "MobileGameCommunitiesStore.tsx";
 
-const require = arg1;
+const require = fn;
 function MultiGuildDevTools() {
-  const tmp = callback2();
-  let obj = _require(callback[7]);
-  const items = [closure_5];
-  _require = obj.useStateFromStores(items, () => closure_5.getUserAgnosticState());
-  obj1 = _require(callback[7]);
-  const items1 = [closure_6];
+  const tmp = closure_9();
+  let obj = require("initialize");
+  const items = [LocalAppDetectionStore];
+  _require = obj.useStateFromStores(items, () => LocalAppDetectionStore.getUserAgnosticState());
+  let obj1 = require("initialize");
+  const items1 = [MobileGameCommunitiesStore];
   const stateFromStoresObject = obj1.useStateFromStoresObject(items1, () => ({
-    guildsCount: store.getPresentableUpsellGuilds().length,
-    dismissedCount: store.getDismissedGuildIds().size,
-    lastFetchedAt: store.getLastFetchedAt(),
+    guildsCount: MobileGameCommunitiesStore.getPresentableUpsellGuilds().length,
+    dismissedCount: MobileGameCommunitiesStore.getDismissedGuildIds().size,
+    lastFetchedAt: MobileGameCommunitiesStore.getLastFetchedAt(),
   }));
   const lastFetchedAt = stateFromStoresObject.lastFetchedAt;
   ({ guildsCount, dismissedCount } = stateFromStoresObject);
-  const entries = Object.entries(_require(callback[8]).DETECTABLE_GAME_TO_APPLICATION_ID_MAP);
-  let mapped = entries.map((arg0) => {
-    [tmp, tmp2] = arg0;
+  const entries = Object.entries(require("GameCommunityConfig").DETECTABLE_GAME_TO_APPLICATION_ID_MAP);
+  let mapped = entries.map((item) => {
+    [tmp, tmp2] = item;
     const obj = { detectableAppName: tmp, gameId: tmp2, detected: null, lastScannedAt: null };
     let flag;
-    if (lib.apps[tmp] != null) {
+    if (closure_0.apps[tmp] != null) {
       flag = tmp3.detected;
     }
     if (flag == null) {
       flag = false;
     }
-    obj[2] = flag;
+    obj.detected = flag;
     let lastScannedAt;
-    if (lib.apps[tmp] != null) {
+    if (closure_0.apps[tmp] != null) {
       lastScannedAt = tmp3.lastScannedAt;
     }
-    obj[3] = lastScannedAt;
+    obj.lastScannedAt = lastScannedAt;
     return obj;
   });
   let str = "Never";
@@ -48,10 +45,10 @@ function MultiGuildDevTools() {
     let _HermesInternal = HermesInternal;
     str = "" + date.toLocaleTimeString();
   }
-  callback = React.useCallback(() => {
-    closure_5.DEV_resetState();
-    store.DEV_clearFetchCache();
-    lib(callback[9]).detectLocalApps(lib(callback[10]).ALL_DETECTABLE_APP_NAMES);
+  onPress = noop.useCallback(() => {
+    LocalAppDetectionStore.DEV_resetState();
+    MobileGameCommunitiesStore.DEV_clearFetchCache();
+    closure_0(callback[9]).detectLocalApps(closure_0(callback[10]).ALL_DETECTABLE_APP_NAMES);
   }, []);
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.scrollView, children: null };
@@ -76,11 +73,11 @@ function MultiGuildDevTools() {
         const _HermesInternal = HermesInternal;
         str2 = " (scanned " + date.toLocaleTimeString() + ")";
       }
-      obj[1] = "Game ID: " + detectableAppName.gameId + " \u2014 " + str + str2;
-      return closure_7(lib(callback[12]).TableRow, obj, detectableAppName.detectableAppName);
+      obj.subLabel = "Game ID: " + detectableAppName.gameId + " \u2014 " + str + str2;
+      return closure_1_7(closure_0(callback[12]).TableRow, obj, detectableAppName.detectableAppName);
     });
   }
-  obj1[1] = closure_7(_require(callback[11]).TableRowGroup, {
+  obj1.children = closure_7(require("TableRowGroup").TableRowGroup, {
     title: "Detected Apps",
     hasIcons: false,
     children: mapped,
@@ -89,7 +86,7 @@ function MultiGuildDevTools() {
   const obj2 = { style: tmp.section, children: null };
   const obj3 = { title: "Store State", hasIcons: false, children: null };
   const items3 = [
-    closure_7(_require(callback[12]).TableRow, {
+    closure_7(require("TableRow").TableRow, {
       label: "Presentable Guilds",
       subLabel: String(guildsCount),
       disabled: true,
@@ -98,25 +95,25 @@ function MultiGuildDevTools() {
   ];
   const obj4 = { label: "Presentable Guilds", subLabel: String(guildsCount), disabled: true };
   const tmp13 = closure_4;
-  items3[1] = closure_7(_require(callback[12]).TableRow, {
+  items3[1] = closure_7(require("TableRow").TableRow, {
     label: "Dismissed Guilds",
     subLabel: String(dismissedCount),
     disabled: true,
   });
-  items3[2] = closure_7(_require(callback[12]).TableRow, { label: "Last Fetched", subLabel: str, disabled: true });
-  obj3[2] = items3;
-  obj2[1] = closure_8(_require(callback[11]).TableRowGroup, obj3);
+  items3[2] = closure_7(require("TableRow").TableRow, { label: "Last Fetched", subLabel: str, disabled: true });
+  obj3.children = items3;
+  obj2.children = closure_8(require("TableRowGroup").TableRowGroup, obj3);
   items2[1] = closure_7(closure_3, obj2);
   const obj6 = { style: tmp.section, children: null };
   const obj7 = { title: "Actions", hasIcons: true, children: null };
   const obj5 = { label: "Dismissed Guilds", subLabel: String(dismissedCount), disabled: true };
   const items4 = [
-    closure_7(_require(callback[12]).TableRow, {
+    closure_7(require("TableRow").TableRow, {
       label: "Refresh Upsell Guilds",
       subLabel: "Redects games and suggested guilds",
-      onPress: callback,
-      icon: closure_7(_require(callback[13]).RefreshIcon, {}),
-      trailing: closure_7(_require(callback[14]).TableRowArrow, {}),
+      onPress,
+      icon: closure_7(require("RefreshIcon").RefreshIcon, {}),
+      trailing: closure_7(require("TableRowArrow").TableRowArrow, {}),
     }),
     ,
     ,
@@ -124,89 +121,86 @@ function MultiGuildDevTools() {
   const obj8 = {
     label: "Refresh Upsell Guilds",
     subLabel: "Redects games and suggested guilds",
-    onPress: callback,
-    icon: closure_7(_require(callback[13]).RefreshIcon, {}),
-    trailing: closure_7(_require(callback[14]).TableRowArrow, {}),
+    onPress,
+    icon: closure_7(require("RefreshIcon").RefreshIcon, {}),
+    trailing: closure_7(require("TableRowArrow").TableRowArrow, {}),
   };
-  items4[1] = closure_7(_require(callback[12]).TableRow, {
+  items4[1] = closure_7(require("TableRow").TableRow, {
     label: "Clear Dismissed Guilds",
     subLabel: "Reset dismissed guild IDs so all guilds show again",
     onPress() {
-      const result = closure_1_6.DEV_clearDismissedGuilds();
+      const result = MobileGameCommunitiesStore.DEV_clearDismissedGuilds();
       callback();
     },
-    icon: closure_7(_require(callback[13]).RefreshIcon, {}),
-    trailing: closure_7(_require(callback[14]).TableRowArrow, {}),
+    icon: closure_7(require("RefreshIcon").RefreshIcon, {}),
+    trailing: closure_7(require("TableRowArrow").TableRowArrow, {}),
   });
   const obj9 = {
     label: "Clear Dismissed Guilds",
     subLabel: "Reset dismissed guild IDs so all guilds show again",
     onPress() {
-      const result = closure_1_6.DEV_clearDismissedGuilds();
+      const result = MobileGameCommunitiesStore.DEV_clearDismissedGuilds();
       callback();
     },
-    icon: closure_7(_require(callback[13]).RefreshIcon, {}),
-    trailing: closure_7(_require(callback[14]).TableRowArrow, {}),
+    icon: closure_7(require("RefreshIcon").RefreshIcon, {}),
+    trailing: closure_7(require("TableRowArrow").TableRowArrow, {}),
   };
-  items4[2] = closure_7(_require(callback[12]).TableRow, {
+  items4[2] = closure_7(require("TableRow").TableRow, {
     label: "Clear All Store State",
     subLabel: "Reset all MobileGameCommunitiesStore state (guilds, dismissed, fetch cache)",
     onPress() {
-      store.DEV_clearState();
+      MobileGameCommunitiesStore.DEV_clearState();
     },
-    icon: closure_7(_require(callback[13]).RefreshIcon, {}),
-    trailing: closure_7(_require(callback[14]).TableRowArrow, {}),
+    icon: closure_7(require("RefreshIcon").RefreshIcon, {}),
+    trailing: closure_7(require("TableRowArrow").TableRowArrow, {}),
   });
   const obj10 = {
     label: "Clear All Store State",
     subLabel: "Reset all MobileGameCommunitiesStore state (guilds, dismissed, fetch cache)",
     onPress() {
-      store.DEV_clearState();
+      MobileGameCommunitiesStore.DEV_clearState();
     },
-    icon: closure_7(_require(callback[13]).RefreshIcon, {}),
-    trailing: closure_7(_require(callback[14]).TableRowArrow, {}),
+    icon: closure_7(require("RefreshIcon").RefreshIcon, {}),
+    trailing: closure_7(require("TableRowArrow").TableRowArrow, {}),
   };
-  items4[3] = closure_7(_require(callback[12]).TableRow, {
+  items4[3] = closure_7(require("TableRow").TableRow, {
     label: "Reset Upsell Animation",
     subLabel: "Clear the dismissed state for the create button NUX animation so it can replay",
     onPress() {
-      const result = lib(callback[15]).removeDismissedContent(
-        lib(callback[16]).DismissibleContent.MOBILE_MULTI_GUILD_CREATE_UPSELL_ANIMATION,
+      const result = closure_0(callback[15]).removeDismissedContent(
+        closure_0(callback[16]).DismissibleContent.MOBILE_MULTI_GUILD_CREATE_UPSELL_ANIMATION,
       );
-      const obj = lib(callback[15]);
-      const result1 = lib(callback[17]).resetDismissibleContentFrameworkStore();
+      const obj = closure_0(callback[15]);
+      const result1 = closure_0(callback[17]).resetDismissibleContentFrameworkStore();
     },
-    icon: closure_7(_require(callback[13]).RefreshIcon, {}),
-    trailing: closure_7(_require(callback[14]).TableRowArrow, {}),
+    icon: closure_7(require("RefreshIcon").RefreshIcon, {}),
+    trailing: closure_7(require("TableRowArrow").TableRowArrow, {}),
   });
-  obj7[2] = items4;
-  obj6[1] = closure_8(_require(callback[11]).TableRowGroup, obj7);
+  obj7.children = items4;
+  obj6.children = closure_8(require("TableRowGroup").TableRowGroup, obj7);
   items2[2] = closure_7(closure_3, obj6);
-  obj[1] = items2;
-  obj[1] = closure_8(tmp13, obj);
+  obj.children = items2;
+  obj.children = closure_8(tmp13, obj);
   return closure_7(closure_3, obj);
 }
-({ View: c3, ScrollView: c4 } = get_ActivityIndicator);
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { container: null, scrollView: null, section: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flex: 1 };
-createCacheKey[2] = {
-  paddingHorizontal: ThemesDefault.space.PX_16,
-  paddingTop: ThemesDefault.space.PX_16,
-  paddingBottom: ThemesDefault.space.PX_8,
+get_ActivityIndicator = fn(17);
+({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+fn(4560);
+let createStyles = { container: null, scrollView: null, section: null };
+createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
+createStyles.container = createStyles;
+createStyles.scrollView = { flex: 1 };
+createStyles.section = {
+  paddingHorizontal: nativeDefault.space.PX_16,
+  paddingTop: nativeDefault.space.PX_16,
+  paddingBottom: nativeDefault.space.PX_8,
 };
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj1 = {
-  paddingHorizontal: ThemesDefault.space.PX_16,
-  paddingTop: ThemesDefault.space.PX_16,
-  paddingBottom: ThemesDefault.space.PX_8,
-};
-let result = require("set").fileFinishedImporting(
-  "modules/game_community_upsell/native/GameCommunityUpsellDevTools.tsx",
-);
+let closure_9 = createStyles.createStyles(createStyles);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/game_community_upsell/native/GameCommunityUpsellDevTools.tsx");
 
 export default function GameCommunityUpsellDevTools() {
-  return callback(MultiGuildDevTools, {});
+  return React5(MultiGuildDevTools, {});
 }

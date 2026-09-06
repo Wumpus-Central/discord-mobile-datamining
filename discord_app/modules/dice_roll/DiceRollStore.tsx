@@ -1,10 +1,10 @@
 // discord_app/modules/dice_roll/DiceRollStore.tsx
-import set from "../../../_runtime/00002_set.js";
-import keys from "../../../_runtime/00560_keys.js";
+import 00560__ from "../../../_runtime/metro/00560__.js";
+import size from "../../../_runtime/metro/00002__.js";
 
 let obj = { channelId: null, rolling: false, dismissing: false, diceCount: 1, diceSides: 6, results: null };
-obj = keys.create(() => obj);
-const result = set.fileFinishedImporting("modules/dice_roll/DiceRollStore.tsx");
+obj = module_560.create(() => obj);
+const result = size.fileFinishedImporting("modules/dice_roll/DiceRollStore.tsx");
 
 export default obj;
 export const INITIAL_STATE = obj;

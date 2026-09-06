@@ -1,7 +1,7 @@
 // discord_app/modules/device/native/DCDPhotos.tsx
-import set from "../../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import _mod17 from "../../../../_runtime/metro/00017__.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/device/native/DCDPhotos.tsx");
+const result = size.fileFinishedImporting("modules/device/native/DCDPhotos.tsx");
 
-export default get_ActivityIndicator.NativeModules.DCDPhotos;
+export default _mod17.NativeModules.DCDPhotos;

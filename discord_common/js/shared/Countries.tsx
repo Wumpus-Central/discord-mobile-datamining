@@ -1,7 +1,7 @@
 // discord_common/js/shared/Countries.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/Countries.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/Countries.tsx");
 const items = [
   { name: "Afghanistan", alpha2: "AF", phoneCountryCode: "+93", phoneCountryCodes: ["+93"] },
   { name: "Aland Islands", alpha2: "AX", phoneCountryCode: "+358", phoneCountryCodes: ["+358"] },

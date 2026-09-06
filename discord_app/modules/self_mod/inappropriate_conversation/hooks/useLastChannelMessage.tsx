@@ -1,18 +1,19 @@
 // discord_app/modules/self_mod/inappropriate_conversation/hooks/useLastChannelMessage.tsx
-import closure_2 from "../../../../stores/MessageStore.tsx";
+import MessageStore from "../../../../stores/MessageStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/self_mod/inappropriate_conversation/hooks/useLastChannelMessage.tsx",
 );
 
 export const useLastChannelMessage = function useLastChannelMessage(channelId) {
-  const _require = channelId;
-  const items = [closure_2];
-  return require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    let lastNonCurrentUserMessage = closure_1_2.getLastNonCurrentUserMessage(closure_0);
+  _require = channelId;
+  const items = [MessageStore];
+  return require("initialize").useStateFromStores(items, () => {
+    let lastNonCurrentUserMessage = MessageStore.getLastNonCurrentUserMessage(closure_0);
     if (lastNonCurrentUserMessage == null) {
-      lastNonCurrentUserMessage = closure_1_2.getLastMessage(closure_0);
+      lastNonCurrentUserMessage = MessageStore.getLastMessage(closure_0);
     }
     return lastNonCurrentUserMessage;
   });

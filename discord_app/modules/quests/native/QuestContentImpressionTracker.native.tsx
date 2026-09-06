@@ -1,38 +1,31 @@
 // discord_app/modules/quests/native/QuestContentImpressionTracker.native.tsx
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
-import closure_5 from "../../../stores/native/AppStateStore.tsx";
-import { MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE as closure_6 } from "../lib/analytics/ContentImpressionTrackerConstants.tsx";
-import { AppStates } from "../../../Constants.tsx";
-import { createElement } from "../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
+import AppStateStore from "../../../stores/native/AppStateStore.tsx";
 
-const require = arg1;
+const require = fn;
 function AdContentImpressionTrackerBaseNative(skipRemountKey) {
   let obj = adContentIds2(504);
-  let items = [closure_5];
+  let items = [AppStateStore];
   let tmp3 = obj.useStateFromStores(items, () => state.getState()) === AppStates.ACTIVE;
-  const ref = React.useRef(null);
+  const ref = noop.useRef(null);
   const tmp5 = visibilityRef;
-  obj1 = adContentIds2(11486);
+  let obj1 = adContentIds2(11486);
   const adContentImpressionTrackerProps = obj1.useAdContentImpressionTrackerProps(skipRemountKey);
   const adContentIds = adContentImpressionTrackerProps.adContentIds;
   obj = {};
   let merged = Object.assign(skipRemountKey);
   obj.adContentIds = adContentIds;
-  adContentIds2 = undefined;
-  visibilityRef = undefined;
   adContentIds2 = obj.adContentIds;
   visibilityRef = obj.visibilityRef;
   let overrideVisibility = obj.overrideVisibility;
-  dependencyMap = undefined;
   const joined = adContentIds2.join("_");
   let tmp6 = visibilityRef(8272)(tmp3);
   let items1 = [joined];
-  const tmp10 = callback(adContentIds2(8874).useRecyclingState(false, items1), 2);
+  const tmp10 = _slicedToArray(adContentIds2(8874).useRecyclingState(false, items1), 2);
   dependencyMap = tmp11;
   let items2 = [adContentIds2, tmp10[1], visibilityRef];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     (function initHandlers(arg0) {
       ({ adContentIds, setVisible: children, visibilityRef } = arg0);
       if (null != visibilityRef) {
@@ -42,7 +35,7 @@ function AdContentImpressionTrackerBaseNative(skipRemountKey) {
           const merged = Object.assign(visibilityRef.current.children[iter]);
           obj.calculateVisibility = function calculateVisibility() {
             let tmp4;
-            if (closure_1_1 != null) {
+            if (visibilityRef != null) {
               const current = tmp2.current;
               if (current != null) {
                 children = current.children;
@@ -105,7 +98,7 @@ function AdContentImpressionTrackerBaseNative(skipRemountKey) {
                 }
               }
             }
-            closure_0(num >= closure_2_6);
+            closure_2_0(num >= closure_3_6);
           };
           visibilityRef.current.children[iter] = obj;
         }
@@ -115,7 +108,7 @@ function AdContentImpressionTrackerBaseNative(skipRemountKey) {
           continue;
         }
       }
-    })({ adContentIds: children, setVisible: closure_2, visibilityRef });
+    })({ adContentIds: children, setVisible, visibilityRef });
     children = undefined;
     if (visibilityRef != null) {
       let current = visibilityRef.current;
@@ -125,11 +118,9 @@ function AdContentImpressionTrackerBaseNative(skipRemountKey) {
     }
     return () => {
       if (null != children) {
-        for (const item10008 of children) {
-          let tmp3 = children;
+        for (const item10008 of adContentIds2) {
           let tmp4 = children[item10008];
           if (null != tmp4) {
-            let tmp6 = tmp4;
             tmp5.calculateVisibility = undefined;
           }
           continue;
@@ -165,7 +156,12 @@ function AdContentImpressionTrackerBaseNative(skipRemountKey) {
   }
   return createElement(adContentIds2(11487).QuestContentImpressionTracker, tmp19);
 }
-const result = require("set").fileFinishedImporting("modules/quests/native/QuestContentImpressionTracker.native.tsx");
+let closure_6 = fn(11196).MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE;
+const AppStates = fn(1074).AppStates;
+const createElement = fn(19).createElement;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/QuestContentImpressionTracker.native.tsx");
 
 export const QuestContentImpressionTrackerNative = function QuestContentImpressionTrackerNative(arg0) {
   const merged = Object.assign(arg0);

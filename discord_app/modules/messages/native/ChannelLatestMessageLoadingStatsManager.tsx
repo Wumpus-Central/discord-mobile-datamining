@@ -1,9 +1,9 @@
 // discord_app/modules/messages/native/ChannelLatestMessageLoadingStatsManager.tsx
-import ME from "../../../Constants.tsx";
-import isClickstreamEnabled from "../../app_analytics/clickstream/Clickstream.tsx";
-import set from "../../../../_runtime/00002_set.js";
+import Constants from "../../../Constants.tsx";
+import Clickstream from "../../app_analytics/clickstream/Clickstream.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const AnalyticEvents = ME.AnalyticEvents;
+const AnalyticEvents = Constants.AnalyticEvents;
 let ChannelLatestMessageLoadingStatsManager;
 class ChannelLatestMessageLoadingStatsManager {
   constructor(arg0) {
@@ -31,11 +31,11 @@ prototype["finish"] = function finish(channelId) {
         const seenChannelIds = tmp10.seenChannelIds;
         seenChannelIds.add(channelId.channelId);
       }
-      let obj = isClickstreamEnabled;
-      obj = { load_duration_ms: null, were_messages_cached: null, is_first_load: null };
-      obj[0] = diff;
-      obj[1] = channelId.areMessagesCached;
-      obj[2] = !hasItem;
+      const obj = {
+        load_duration_ms: diff,
+        were_messages_cached: channelId.areMessagesCached,
+        is_first_load: !hasItem,
+      };
       obj.trackClickstream(AnalyticEvents.CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM, obj);
       tmp.latestChannelMessagesLoad = undefined;
       tmp10 = ChannelLatestMessageLoadingStatsManager;
@@ -43,8 +43,7 @@ prototype["finish"] = function finish(channelId) {
     }
   }
 };
-let set = new Set();
-ChannelLatestMessageLoadingStatsManager.seenChannelIds = set;
-const result = set.fileFinishedImporting("modules/messages/native/ChannelLatestMessageLoadingStatsManager.tsx");
+ChannelLatestMessageLoadingStatsManager.seenChannelIds = new Set();
+const result = size.fileFinishedImporting("modules/messages/native/ChannelLatestMessageLoadingStatsManager.tsx");
 
 export default ChannelLatestMessageLoadingStatsManager;

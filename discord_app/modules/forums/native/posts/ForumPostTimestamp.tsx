@@ -1,30 +1,37 @@
 // discord_app/modules/forums/native/posts/ForumPostTimestamp.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import Text from "../../../../design/components/Text/native/Text.tsx";
-import useLoadForumUnreadCounts from "../../ForumHooks.tsx";
-import { useForumChannelStore } from "../../ForumChannelStore.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import ForumHooks from "../../ForumHooks.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-let closure_4 = createCacheKey.createStyles({ text: { lineHeight: 18, height: 18 } });
-const result = require("set").fileFinishedImporting("modules/forums/native/posts/ForumPostTimestamp.tsx");
+require = fn;
+const useForumChannelStore = fn(12001).useForumChannelStore;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_4 = createStyles.createStyles({ text: { lineHeight: 18, height: 18 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPostTimestamp.tsx");
 
 export default function ForumPostTimestamp(thread) {
   thread = thread.thread;
   ({ textStyle, hasUnreads, format } = thread);
-  const tmp = callback();
-  const tmp2 = require;
-  let color = "text-muted";
-  const children = useLoadForumUnreadCounts.useLastActiveTimestamp(
+  let obj = ForumHooks;
+  let str = "text-muted";
+  const lastActiveTimestamp = obj.useLastActiveTimestamp(
     thread,
     useForumChannelStore(thread.parent_id).sortOrder,
     format,
   );
   if (hasUnreads) {
-    color = "text-default";
+    str = "text-default";
   }
-  const style = [textStyle, tmp.text];
-  return jsx(Text.Text, { lineClamp: 1, variant: "text-xs/normal", color, style, children });
+  obj = { lineClamp: 1, variant: "text-xs/normal", color: str, style: null, children: lastActiveTimestamp };
+  const items = [textStyle, closure_4().text];
+  obj.style = items;
+  return jsx(Text_Text.Text, {
+    lineClamp: 1,
+    variant: "text-xs/normal",
+    color: str,
+    style: null,
+    children: lastActiveTimestamp,
+  });
 }

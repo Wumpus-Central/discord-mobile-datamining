@@ -1,11 +1,16 @@
 // discord_app/modules/guild_role_subscriptions/native/emoji_upsell/RoleSubscriptionEmojiUpsellAlert.tsx
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../../stores/GuildStore.tsx";
-import { StaticChannelRoute } from "../../../channel/ChannelConstants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import util from "../../../../intl/index.native.tsx";
+import GuildActionCreatorsDefault from "../../../../actions/GuildActionCreators.tsx";
+import _modDef9314 from "../../../../../_runtime/metro/09314__.js";
+import CreatorRevenueButton from "../components/CreatorRevenueButton.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import GuildStore from "../../../../stores/GuildStore.tsx";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting(
+require = fn;
+const StaticChannelRoute = fn(1964).StaticChannelRoute;
+const jsx = fn(21).jsx;
+let size = fn(2);
+let result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/native/emoji_upsell/RoleSubscriptionEmojiUpsellAlert.tsx",
 );
 
@@ -13,10 +18,10 @@ export default function RoleSubscriptionEmojiUpsellAlert(arg0) {
   ({ guildId: require, onClose } = arg0);
   let stateFromStores;
   function handleConfirm() {
-    const result = onClose(stateFromStores[8]).transitionToGuildSync(
-      closure_0,
+    const result = GuildActionCreatorsDefault.transitionToGuildSync(
+      require,
       undefined,
-      closure_1_5.ROLE_SUBSCRIPTIONS,
+      StaticChannelRoute.ROLE_SUBSCRIPTIONS,
     );
     if (onClose != null) {
       onClose();
@@ -24,12 +29,12 @@ export default function RoleSubscriptionEmojiUpsellAlert(arg0) {
   }
   const size = onClose(stateFromStores[6])();
   const diff = Math.min(0.9 * Math.min(size.width, size.height), 500) - 32;
-  let obj = require(stateFromStores[7]);
-  const items = [closure_4];
+  let obj = require("initialize");
+  const items = [GuildStore];
   stateFromStores = obj.useStateFromStores(items, () => {
     let guild = null;
-    if (null != closure_0) {
-      guild = closure_1_4.getGuild(tmp);
+    if (null != require) {
+      guild = GuildStore.getGuild(tmp);
     }
     return guild;
   });
@@ -43,24 +48,24 @@ export default function RoleSubscriptionEmojiUpsellAlert(arg0) {
     if (stateFromStores != null) {
       name = stateFromStores.name;
     }
-    const obj = { image: onClose(stateFromStores[4]), title: null, description: null };
-    const intl = closure_1_0(stateFromStores[5]).intl;
-    obj[1] = intl.string(closure_1_0(stateFromStores[5]).t.cBjkcx);
-    const intl2 = closure_1_0(stateFromStores[5]).intl;
-    obj[2] = intl2.formatToPlainString(closure_1_0(stateFromStores[5]).t["h0u/Hi"], { serverName: name });
+    const obj = { image: _modDef9314, title: null, description: null };
+    const intl = util.intl;
+    obj.title = intl.string(util.t.cBjkcx);
+    const intl2 = util.intl;
+    obj.description = intl2.formatToPlainString(util.t["h0u/Hi"], { serverName: name });
     return obj;
   }, items1);
   obj = { cancelText: null, onClose: null, renderConfirmButton: null, children: null };
   let intl = tmp4(tmp2[5]).intl;
-  obj[0] = intl.string(require(stateFromStores[5]).t.cpT0Cq);
-  obj[1] = onClose;
-  obj[2] = function renderConfirmButton() {
+  obj.cancelText = intl.string(require("util").t.cpT0Cq);
+  obj.onClose = onClose;
+  obj.renderConfirmButton = function renderConfirmButton() {
     const obj = { onPress: handleConfirm, text: null };
-    const intl = closure_1_0(stateFromStores[5]).intl;
-    obj[1] = intl.string(closure_1_0(stateFromStores[5]).t.p8FG1D);
-    return closure_1_6(closure_1_0(stateFromStores[10]).CreatorRevenueButton, obj);
+    const intl = util.intl;
+    obj.text = intl.string(util.t.p8FG1D);
+    return jsx(CreatorRevenueButton.CreatorRevenueButton, { onPress: handleConfirm, text: null });
   };
-  obj[3] = jsx(require(stateFromStores[11]).PremiumUpsellItem, { alertWidth: diff, upsellItem: memo });
+  obj.children = jsx(require("PremiumUpsellAlert").PremiumUpsellItem, { alertWidth: diff, upsellItem: memo });
   return jsx(onClose(stateFromStores[9]), {
     cancelText: null,
     onClose: null,

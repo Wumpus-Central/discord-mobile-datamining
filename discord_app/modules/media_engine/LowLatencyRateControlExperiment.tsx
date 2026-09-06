@@ -1,15 +1,18 @@
 // discord_app/modules/media_engine/LowLatencyRateControlExperiment.tsx
-import getUnitIdDefault from "../experiments/apex/ApexExperiment.tsx";
+import apex_ApexExperimentDefault from "../experiments/apex/ApexExperiment.tsx";
 
-let obj = { 1: null };
-obj[1] = { enabled: true };
-let closure_0 = getUnitIdDefault({
+let obj = {
   kind: "user",
   name: "2025-10-low-latency-rate-control",
   defaultConfig: { enabled: false },
-  variations: obj,
-});
-const result = require("set").fileFinishedImporting("modules/media_engine/LowLatencyRateControlExperiment.tsx");
+  variations: null,
+};
+obj = { 1: null };
+obj[1] = { enabled: true };
+obj.variations = obj;
+let closure_0 = apex_ApexExperimentDefault(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/media_engine/LowLatencyRateControlExperiment.tsx");
 
 export const getLowLatencyRateControlExperimentConfig = function getLowLatencyRateControlExperimentConfig(disable) {
   let flag = disable.disable;
@@ -20,8 +23,7 @@ export const getLowLatencyRateControlExperimentConfig = function getLowLatencyRa
   if (flag) {
     let defaultConfig = obj.definition.defaultConfig;
   } else {
-    obj = { location: null };
-    obj[0] = disable.location;
+    obj = { location: disable.location };
     defaultConfig = obj.getConfig(obj);
   }
   return defaultConfig;

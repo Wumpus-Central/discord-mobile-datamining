@@ -1,31 +1,31 @@
 // discord_app/modules/parental_consent/native/AgeUpdateFooter.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import messagesProxyDefault from "../../safety_flows/SafetyFlows.messages.js";
-import Text from "../../../design/components/Text/native/Text.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import util from "../../../intl/index.native.tsx";
+import _modDef2690 from "../../safety_flows/SafetyFlows.messages.js";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import AgeVerificationActionCreatorsDefault from "../../age_assurance/AgeVerificationActionCreators.native.tsx";
+import AgeVerificationAnalyticsUtils from "../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-let closure_4 = createCacheKey.createStyles({ text: { textAlign: "center" } });
-const result = require("set").fileFinishedImporting("modules/parental_consent/native/AgeUpdateFooter.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_4 = createStyles.createStyles({ text: { textAlign: "center" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parental_consent/native/AgeUpdateFooter.tsx");
 
 export default function AgeUpdateFooter() {
-  let obj = { variant: "text-md/medium", color: "text-muted", style: callback().text, children: null };
-  const intl = getSystemLocale.intl;
+  let obj = { variant: "text-md/medium", color: "text-muted", style: closure_4().text, children: null };
+  const intl = util.intl;
   obj = {
     handleAgeVerifyHook() {
-      let obj = callback2(8411);
-      obj = { entryPoint: callback(8413).AgeVerificationModalEntryPoint.PARENTAL_CONSENT_LOCKOUT };
+      const obj = { entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.PARENTAL_CONSENT_LOCKOUT };
       return obj.showAgeVerificationGetStartedModal(obj);
     },
   };
-  obj[3] = intl.format(messagesProxyDefault.ifObbX, obj);
-  return jsx(Text.Text, {
+  obj.children = intl.format(_modDef2690.ifObbX, obj);
+  return jsx(Text_Text.Text, {
     handleAgeVerifyHook() {
-      let obj = callback2(8411);
-      obj = { entryPoint: callback(8413).AgeVerificationModalEntryPoint.PARENTAL_CONSENT_LOCKOUT };
+      const obj = { entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.PARENTAL_CONSENT_LOCKOUT };
       return obj.showAgeVerificationGetStartedModal(obj);
     },
   });

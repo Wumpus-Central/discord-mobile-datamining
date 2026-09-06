@@ -1,15 +1,15 @@
 // discord_app/modules/messages/getHeaderTextForInvite.tsx
-import set from "../../../_runtime/00002_set.js";
-import getSystemLocale from "../../intl/index.native.tsx";
+import util from "../../intl/index.native.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/messages/getHeaderTextForInvite.tsx");
+const result = size.fileFinishedImporting("modules/messages/getHeaderTextForInvite.tsx");
 
 export const getHeaderTextForInvite = function getHeaderTextForInvite(arg0) {
   ({ isOwnInvite, isGuest, isStage, isStream } = arg0);
   ({ isVoiceChannel, isHubGuild } = arg0);
-  const intl = getSystemLocale.intl;
+  const intl = util.intl;
   const string = intl.string;
-  let N85DCl = getSystemLocale.t;
+  let N85DCl = util.t;
   if (isVoiceChannel) {
     if (!isOwnInvite) {
       if (isStream) {

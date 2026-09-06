@@ -1,10 +1,10 @@
 // discord_app/lib/native/Linking.tsx
-import set from "../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
-import sanitizeURLPart from "../../modules/links/native/handleURL.tsx";
+import _mod17 from "../../../_runtime/metro/00017__.js";
+import handleURL from "../../modules/links/native/handleURL.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const Linking = get_ActivityIndicator.Linking;
-const result = set.fileFinishedImporting("lib/native/Linking.tsx");
+const Linking = _mod17.Linking;
+const result = size.fileFinishedImporting("lib/native/Linking.tsx");
 
 export default {
   openURL(arg0, arg1) {
@@ -12,10 +12,10 @@ export default {
     if (arg2 === undefined) {
       flag = true;
     }
-    sanitizeURLPart.default(arg0, arg1, { allowExternal: flag });
+    handleURL.default(arg0, arg1, { allowExternal: flag });
   },
   openURLExternally(href, SAFARI) {
-    sanitizeURLPart.default(href, SAFARI, { forceExternalBrowser: true });
+    handleURL.default(href, SAFARI, { forceExternalBrowser: true });
   },
   performURLNavigation(href) {
     Linking.openURL(href).catch(() => {});

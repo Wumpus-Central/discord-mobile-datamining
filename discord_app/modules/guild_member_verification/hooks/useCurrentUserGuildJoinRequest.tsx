@@ -1,21 +1,20 @@
 // discord_app/modules/guild_member_verification/hooks/useCurrentUserGuildJoinRequest.tsx
-import closure_2 from "../UserGuildJoinRequestStore.tsx";
+import UserGuildJoinRequestStore from "../UserGuildJoinRequestStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
-  "modules/guild_member_verification/hooks/useCurrentUserGuildJoinRequest.tsx",
-);
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_member_verification/hooks/useCurrentUserGuildJoinRequest.tsx");
 
 export const useCurrentUserGuildJoinRequest = function useCurrentUserGuildJoinRequest(guildId) {
-  const _require = guildId;
-  const items = [closure_2];
+  _require = guildId;
+  const items = [UserGuildJoinRequestStore];
   const items1 = [guildId];
-  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+  return require("initialize").useStateFromStores(
     items,
     () => {
       let request = null;
       if (null != closure_0) {
-        request = closure_1_2.getRequest(tmp);
+        request = UserGuildJoinRequestStore.getRequest(tmp);
       }
       return request;
     },

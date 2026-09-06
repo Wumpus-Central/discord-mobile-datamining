@@ -1,70 +1,66 @@
 // discord_app/modules/user_settings/content_and_social/native/IgnoredUsersList.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import Button from "../../../../design/void/native.tsx";
-import Text from "../../../../design/components/Text/native/Text.tsx";
-import TableRowGroupTitle from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import SafeAreaPaddingView from "../../../../components_native/common/SafeAreaView.tsx";
-import context from "../../../app_analytics/useAnalyticsLocations.tsx";
-import contextDefault from "../../../app_analytics/useAnalyticsLocations.tsx";
-import getBlockedSource from "../../../../design/components/Illustration/native/redesign/generated/Blocked.tsx";
-import { ScrollView } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_4 from "../../../../stores/RelationshipStore.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
+import native from "../../../../design/void/native.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import common_SafeAreaView from "../../../../components_native/common/SafeAreaView.tsx";
+import useAnalyticsLocations from "../../../app_analytics/useAnalyticsLocations.tsx";
+import Blocked from "../../../../design/components/Illustration/native/redesign/generated/Blocked.tsx";
+import IgnoredUserRowDefault from "IgnoredUserRow.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import RelationshipStore from "../../../../stores/RelationshipStore.tsx";
 
-require = arg1;
+const useAnalyticsLocationsDefault = useAnalyticsLocations;
+
+require = fn;
 function IgnoredUsersList(userIds) {
   userIds = userIds.userIds;
-  const tmp = callback3();
-  contextDefault;
+  const tmp = closure_7();
+  useAnalyticsLocationsDefault;
   if (0 === userIds.length) {
-    let obj = { Illustration: null, body: null };
-    obj[0] = getBlockedSource.Blocked;
-    const intl = getSystemLocale.intl;
-    obj[1] = intl.string(getSystemLocale.t.PYrWFW);
-    let tmp7 = callback(Button.EmptyState, obj);
+    let obj = { Illustration: Blocked.Blocked, body: null };
+    const intl = util.intl;
+    obj.body = intl.string(util.t.PYrWFW);
+    let tmp7 = hasOwnProperty(native.EmptyState, obj);
   } else {
-    obj = { value: null, children: null };
-    obj[0] = tmp4;
-    obj = { bottom: true, style: null, children: null };
-    obj[1] = tmp.list;
-    obj1 = { children: null };
-    const obj2 = { style: null, variant: "text-sm/semibold", color: "text-default", children: null };
-    obj2[0] = tmp.sectionLabelStyle;
-    const intl2 = getSystemLocale.intl;
-    const obj3 = { numberOfIgnoredUsers: null };
-    obj3[0] = userIds.length;
-    obj2[3] = intl2.formatToPlainString(getSystemLocale.t.iNKUhU, obj3);
-    const items = [callback(Text.Text, obj2)];
-    const obj4 = { hasIcons: true, children: null };
-    obj4[1] = userIds.map((userId) => callback2(callback(table[14]), { userId }, userId));
-    const intl3 = getSystemLocale.intl;
-    items[1] = callback(TableRowGroupTitle.TableRowGroup, obj4, intl3.string(getSystemLocale.t["93ZDWE"]));
-    obj1[0] = items;
-    obj[2] = callback2(ScrollView, obj1);
-    obj[1] = callback(SafeAreaPaddingView.SafeAreaPaddingView, obj);
-    tmp7 = callback(context.AnalyticsLocationProvider, obj);
+    obj = { value: tmp4, children: null };
+    obj = { bottom: true, style: tmp.list, children: null };
+    const obj1 = { children: null };
+    const obj2 = { style: tmp.sectionLabelStyle, variant: "text-sm/semibold", color: "text-default", children: null };
+    const intl2 = util.intl;
+    const obj3 = { numberOfIgnoredUsers: userIds.length };
+    obj2.children = intl2.formatToPlainString(util.t.iNKUhU, obj3);
+    const items = [hasOwnProperty(Text_Text.Text, obj2)];
+    const obj4 = {
+      hasIcons: true,
+      children: userIds.map((userId) => closure_1_5(IgnoredUserRowDefault, { userId }, userId)),
+    };
+    const intl3 = util.intl;
+    items[1] = hasOwnProperty(TableRowGroup.TableRowGroup, obj4, intl3.string(util.t["93ZDWE"]));
+    obj1.children = items;
+    obj.children = timestampProducer(ScrollView, obj1);
+    obj.children = hasOwnProperty(common_SafeAreaView.SafeAreaPaddingView, obj);
+    tmp7 = hasOwnProperty(useAnalyticsLocations.AnalyticsLocationProvider, obj);
   }
   return tmp7;
 }
-noopAll;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { list: null, sectionLabelStyle: null };
-createCacheKey = { marginTop: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_8 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_8 };
-const result = require("set").fileFinishedImporting(
-  "modules/user_settings/content_and_social/native/IgnoredUsersList.tsx",
-);
+const ScrollView = fn(17).ScrollView;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+fn(4560);
+let createStyles = { list: null, sectionLabelStyle: null };
+createStyles = { marginTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16 };
+createStyles.list = createStyles;
+createStyles.sectionLabelStyle = { marginTop: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_8 };
+let closure_7 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/content_and_social/native/IgnoredUsersList.tsx");
 
 export default function ConnectedIgnoredUsersList() {
   let obj = initialize;
-  const items = [closure_4];
+  const items = [RelationshipStore];
   obj = { userIds: obj.useStateFromStoresArray(items, () => ignoredIDs.getIgnoredIDs()) };
-  return callback(IgnoredUsersList, obj);
+  return hasOwnProperty(IgnoredUsersList, obj);
 }

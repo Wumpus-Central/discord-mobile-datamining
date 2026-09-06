@@ -1,23 +1,23 @@
 // discord_app/modules/guild_rooms/GuildRoomStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import GuildRoomObjectTypes from "GuildRoomTypes.tsx";
-import closure_5 from "../../../_runtime/metro/00109__objectWithoutProperties.js";
-import closure_6 from "../../stores/AuthenticationStore.tsx";
-import closure_7 from "../../stores/RTCConnectionStore.tsx";
-import closure_8 from "../../stores/SelectedChannelStore.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import GuildRoomTypes from "GuildRoomTypes.tsx";
+import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
+import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
+import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
+import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
 
-require = arg1;
+require = fn;
 function resolveCreatingNotes(roomId, objects) {
   if (null != dependencyMap5[roomId]) {
     if (0 !== arr.length) {
-      const value = objects.get(_require(set[4]).GuildRoomObjectTypes.NOTE);
+      value = objects.get(GuildRoomTypes.GuildRoomObjectTypes.NOTE);
       if (null != value) {
         if (0 !== value.length) {
-          _require = store.getId();
+          const id = AuthenticationStore.getId();
           const _Set = Set;
           const found = value.filter((createdBy) => createdBy.createdBy === closure_0);
-          set = new Set(
+          const set = new Set(
             found.map((position) => {
               position = position.position;
               return "" + position.x + "," + position.y;
@@ -40,7 +40,7 @@ function resolveCreatingNotes(roomId, objects) {
   }
 }
 function handleSelectedChannelStoreChange() {
-  voiceChannelId = voiceChannelId.getVoiceChannelId();
+  const voiceChannelId = SelectedChannelStore.getVoiceChannelId();
   if (null != voiceChannelId) {
     map2.delete(voiceChannelId);
     let flag = dependencyMap3[voiceChannelId];
@@ -48,35 +48,34 @@ function handleSelectedChannelStoreChange() {
       flag = true;
     }
     dependencyMap3[voiceChannelId] = flag;
-    const tmp4 = dependencyMap3;
   }
 }
 let closure_2 = ["users", "objects"];
 let closure_3 = ["users", "objects"];
 let closure_4 = ["users"];
 let map = new Map();
-let obj = {};
+let DEFAULT_ROOM = {};
 let closure_11 = [];
 const map1 = new Map();
-let closure_13 = {};
-let closure_14 = {};
+const dependencyMap = {};
+const dependencyMap2 = {};
 let closure_15 = {};
 let c16 = null;
 let c17 = null;
-let closure_18 = {};
+const dependencyMap3 = {};
 const map2 = new Map();
 let c20 = false;
-let c21 = false;
+const rememberVideoOverlayVisibility = false;
 let c22 = false;
-let closure_23 = {};
-let closure_24 = {};
+const dependencyMap4 = {};
+const dependencyMap5 = {};
 let closure_25 = [];
 const PersistedStore = initializeDefault.PersistedStore;
 class GuildRoomStore extends PersistedStore {}
 const prototype = GuildRoomStore.prototype;
 prototype["initialize"] = function initialize(rememberVideoOverlayVisibility) {
-  this.waitFor(closure_6, closure_7, closure_8);
-  const items = [closure_8];
+  this.waitFor(AuthenticationStore, RTCConnectionStore, SelectedChannelStore);
+  const items = [SelectedChannelStore];
   this.syncWith(items, handleSelectedChannelStoreChange);
   let flag;
   if (rememberVideoOverlayVisibility != null) {
@@ -85,6 +84,7 @@ prototype["initialize"] = function initialize(rememberVideoOverlayVisibility) {
   if (flag == null) {
     flag = false;
   }
+  closure_21 = flag;
   if (flag) {
     let flag2;
     if (rememberVideoOverlayVisibility != null) {
@@ -95,9 +95,10 @@ prototype["initialize"] = function initialize(rememberVideoOverlayVisibility) {
     }
     flag = flag2;
   }
+  c20 = flag;
 };
 prototype["getState"] = function getState() {
-  return { videoOverlayVisibility: c20, rememberVideoOverlayVisibility: c21 };
+  return { videoOverlayVisibility, rememberVideoOverlayVisibility };
 };
 prototype["getRoom"] = function getRoom(channelId) {
   let tmp = dependencyMap[channelId];
@@ -113,8 +114,8 @@ prototype["getRoomUsers"] = function getRoomUsers(channelId) {
   }
   return tmp;
 };
-prototype["getRoomObjects"] = function getRoomObjects(closure_1) {
-  let tmp = table[closure_1];
+prototype["getRoomObjects"] = function getRoomObjects(arg0) {
+  let tmp = closure_15[arg0];
   if (tmp == null) {
     tmp = map1;
   }
@@ -150,9 +151,9 @@ prototype["getCreatingNotes"] = function getCreatingNotes(arg0) {
   }
   return tmp;
 };
-prototype["getNotes"] = function getNotes(closure_1) {
-  const roomObjects = this.getRoomObjects(closure_1);
-  let value = roomObjects.get(GuildRoomObjectTypes.GuildRoomObjectTypes.NOTE);
+prototype["getNotes"] = function getNotes(arg0) {
+  const roomObjects = this.getRoomObjects(arg0);
+  value = roomObjects.get(GuildRoomTypes.GuildRoomObjectTypes.NOTE);
   if (value == null) {
     value = closure_11;
   }
@@ -162,15 +163,15 @@ prototype["getVideoOverlayVisibility"] = function getVideoOverlayVisibility() {
   return c20;
 };
 prototype["getRememberVideoOverlayVisibility"] = function getRememberVideoOverlayVisibility() {
-  return c21;
+  return closure_21;
 };
 GuildRoomStore.displayName = "GuildRoomStore";
 GuildRoomStore.persistKey = "GuildRoomStore";
-obj = {
+DEFAULT_ROOM = {
   GUILD_ROOM_CONNECT: function handleConnect(room) {
     room = room.room;
     const objects = room.objects;
-    closure_13[room.roomId] = callback(room, closure_2);
+    closure_13[room.roomId] = _objectWithoutProperties(room, closure_2);
     closure_14[room.roomId] = room.users;
     closure_15[room.roomId] = objects;
     resolveCreatingNotes(room.roomId, objects);
@@ -189,7 +190,7 @@ obj = {
       return false;
     } else {
       const _Map = Map;
-      const id = store.getId();
+      const id = AuthenticationStore.getId();
       map = new Map(dependencyMap2[roomId]);
       map.delete(id);
       dependencyMap2[roomId] = map;
@@ -206,16 +207,16 @@ obj = {
       dependencyMap2[roomId] = map;
       let tmp4 = c22;
       if (c22) {
-        tmp4 = userId === store.getId();
+        tmp4 = userId === AuthenticationStore.getId();
       }
       if (tmp4) {
         closure_18[roomId] = true;
         c22 = false;
       }
-      if (userId === store.getId()) {
+      if (userId === AuthenticationStore.getId()) {
         delete tmp[tmp2];
         delete tmp[tmp2];
-        if (!c21) {
+        if (!closure_21) {
           c20 = false;
         }
       }
@@ -224,11 +225,11 @@ obj = {
   GUILD_ROOM_UPDATE: function handleUpdate(room) {
     room = room.room;
     const objects = room.objects;
-    closure_13[room.roomId] = callback(room, closure_3);
+    closure_13[room.roomId] = _objectWithoutProperties(room, closure_3);
     closure_15[room.roomId] = objects;
     resolveCreatingNotes(room.roomId, objects);
-    const id = store.getId();
-    let value;
+    const id = AuthenticationStore.getId();
+    value = undefined;
     if (dependencyMap2[room.roomId] != null) {
       value = obj.get(id);
     }
@@ -244,12 +245,12 @@ obj = {
     if (null == dependencyMap[originalRoom.roomId]) {
       return false;
     } else {
-      obj = {};
+      let obj = {};
       const merged = Object.assign(tmp2);
       obj.background = originalRoom.background;
       tmp[originalRoom.roomId] = obj;
-      const id = store.getId();
-      const value = originalRoomUsers.get(id);
+      const id = AuthenticationStore.getId();
+      value = originalRoomUsers.get(id);
       if (null == value) {
         const _Map = Map;
         map = new Map(dependencyMap2[originalRoom.roomId]);
@@ -265,7 +266,7 @@ obj = {
   },
   GUILD_ROOM_FETCH_SUCCESS: function handleFetchSuccess(room) {
     room = room.room;
-    closure_13[room.roomId] = callback(room, closure_4);
+    closure_13[room.roomId] = _objectWithoutProperties(room, closure_4);
     closure_14[room.roomId] = room.users;
   },
   GUILD_ROOM_LOCAL_POSITION_REQUESTED: function handleLocalPositionRequested(arg0) {
@@ -287,14 +288,14 @@ obj = {
     if (null == dependencyMap[roomId]) {
       return false;
     } else {
-      const id = store.getId();
+      const id = AuthenticationStore.getId();
       if (null != background) {
-        obj = {};
+        let obj = {};
         const merged = Object.assign(tmp[roomId]);
         obj.background = background;
         tmp[roomId] = obj;
       }
-      const value = dependencyMap2[roomId].get(id);
+      value = dependencyMap2[roomId].get(id);
       if (null != value) {
         const _Map = Map;
         map = new Map(tmp4[roomId]);
@@ -319,12 +320,11 @@ obj = {
         const result = map.set(id, obj);
         tmp4[roomId] = map;
       }
-      const obj2 = dependencyMap2[roomId];
     }
   },
   MEDIA_SESSION_JOINED: function handleMediaSessionJoined() {
-    const channelId = store2.getChannelId();
-    const mediaSessionId = store2.getMediaSessionId();
+    const channelId = RTCConnectionStore.getChannelId();
+    const mediaSessionId = RTCConnectionStore.getMediaSessionId();
     if (tmp3) {
       const result = map2.set(channelId, mediaSessionId);
     }
@@ -337,7 +337,7 @@ obj = {
     if (null == dependencyMap4[roomId]) {
       return false;
     } else {
-      obj = {};
+      const obj = {};
       const merged = Object.assign(tmp3);
       obj.position = tmp;
       tmp2[roomId] = obj;
@@ -362,7 +362,7 @@ obj = {
     if (null == dependencyMap5[roomId]) {
       return false;
     } else {
-      const found = arr.filter((localId) => localId.localId !== closure_0);
+      const found = arr.filter((localId) => localId.localId !== require);
       if (found.length === arr.length) {
         return false;
       } else if (0 === found.length) {
@@ -381,8 +381,9 @@ obj = {
     closure_21 = rememberVideoOverlayVisibility.rememberVideoOverlayVisibility;
   },
 };
-const guildRoomStore = new GuildRoomStore(dispatcherDefault, obj);
-let result = require("set").fileFinishedImporting("modules/guild_rooms/GuildRoomStore.tsx");
+const guildRoomStore = new GuildRoomStore(DispatcherDefault, DEFAULT_ROOM);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_rooms/GuildRoomStore.tsx");
 
 export default guildRoomStore;
-export const DEFAULT_ROOM = obj;
+export { DEFAULT_ROOM };

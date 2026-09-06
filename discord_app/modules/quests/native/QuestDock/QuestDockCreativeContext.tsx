@@ -1,23 +1,20 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockCreativeContext.tsx
 import AdCreativeType from "../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-let context = importAllResult.createContext(null);
-const result = require("set").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockCreativeContext.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const redux = noop.createContext(null);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockCreativeContext.tsx");
 
-export const getCreativeAnalyticsParams = function getCreativeAnalyticsParams(closure_0) {
-  const type = closure_0.type;
+export const getCreativeAnalyticsParams = function getCreativeAnalyticsParams(creative) {
+  const type = creative.type;
   if (AdCreativeType.AdCreativeType.QUEST === type) {
-    let obj = { adCreativeType: null, adCreativeId: null };
-    obj[0] = tmp(5451).AdCreativeType.QUEST;
-    obj[1] = closure_0.quest.id;
+    let obj = { adCreativeType: tmp(5451).AdCreativeType.QUEST, adCreativeId: creative.quest.id };
     return obj;
   } else if (tmp(5451).AdCreativeType.BOUNTY === type) {
-    obj = { adCreativeType: null, adCreativeId: null };
-    obj[0] = tmp(5451).AdCreativeType.BOUNTY;
-    obj[1] = closure_0.bounty.id;
+    obj = { adCreativeType: tmp(5451).AdCreativeType.BOUNTY, adCreativeId: creative.bounty.id };
     return obj;
   }
 };
@@ -42,9 +39,7 @@ export const QuestDockQuestProvider = function QuestDockQuestProvider(children) 
   const quest = children.quest;
   const items = [quest];
   return (
-    <redux.Provider
-      value={importAllResult.useMemo(() => ({ type: quest(closure_1_1[2]).AdCreativeType.QUEST, quest }), items)}
-    >
+    <redux.Provider value={noop.useMemo(() => ({ type: AdCreativeType.AdCreativeType.QUEST, quest }), items)}>
       {arg0.children}
     </redux.Provider>
   );
@@ -53,22 +48,20 @@ export const QuestDockBountyProvider = function QuestDockBountyProvider(bounty) 
   bounty = bounty.bounty;
   const items = [bounty];
   return (
-    <redux.Provider
-      value={importAllResult.useMemo(() => ({ type: bounty(closure_1_1[2]).AdCreativeType.BOUNTY, bounty }), items)}
-    >
+    <redux.Provider value={noop.useMemo(() => ({ type: AdCreativeType.AdCreativeType.BOUNTY, bounty }), items)}>
       {arg0.children}
     </redux.Provider>
   );
 };
 export const useQuestDockQuest = function useQuestDockQuest() {
-  const context = importAllResult.useContext(closure_4);
+  const context = noop.useContext(closure_4);
   let type;
   if (context != null) {
     type = context.type;
   }
   if (type !== AdCreativeType.AdCreativeType.QUEST) {
     const _Error = Error;
-    error = new Error("useQuestDockQuest requires a QuestDockQuestProvider ancestor");
+    const error = new Error("useQuestDockQuest requires a QuestDockQuestProvider ancestor");
     throw error;
   } else {
     return context.quest;
@@ -77,17 +70,17 @@ export const useQuestDockQuest = function useQuestDockQuest() {
 export const useQuestCreative = function useQuestCreative(quest) {
   closure_0 = quest;
   const items = [quest];
-  return importAllResult.useMemo(() => ({ type: quest(closure_1_1[2]).AdCreativeType.QUEST, quest }), items);
+  return noop.useMemo(() => ({ type: AdCreativeType.AdCreativeType.QUEST, quest }), items);
 };
 export const useQuestDockBounty = function useQuestDockBounty() {
-  const context = importAllResult.useContext(closure_4);
+  const context = noop.useContext(closure_4);
   let type;
   if (context != null) {
     type = context.type;
   }
   if (type !== AdCreativeType.AdCreativeType.BOUNTY) {
     const _Error = Error;
-    error = new Error("useQuestDockBounty requires a QuestDockBountyProvider ancestor");
+    const error = new Error("useQuestDockBounty requires a QuestDockBountyProvider ancestor");
     throw error;
   } else {
     return context.bounty;
@@ -96,13 +89,15 @@ export const useQuestDockBounty = function useQuestDockBounty() {
 export const useBountyCreative = function useBountyCreative(questDockBounty) {
   closure_0 = questDockBounty;
   const items = [questDockBounty];
-  return importAllResult.useMemo(() => ({ type: bounty(closure_1_1[2]).AdCreativeType.BOUNTY, bounty }), items);
+  return noop.useMemo(() => ({ type: AdCreativeType.AdCreativeType.BOUNTY, bounty }), items);
 };
 export const useQuestDockCreative = function useQuestDockCreative() {
-  const context = importAllResult.useContext(closure_4);
+  const context = noop.useContext(closure_4);
   if (null == context) {
     const _Error = Error;
-    error = new Error("useQuestDockCreative requires a QuestDockBountyProvider or QuestDockQuestProvider ancestor");
+    const error = new Error(
+      "useQuestDockCreative requires a QuestDockBountyProvider or QuestDockQuestProvider ancestor",
+    );
     throw error;
   } else {
     return context;

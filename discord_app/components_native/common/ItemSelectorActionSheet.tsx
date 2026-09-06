@@ -1,34 +1,33 @@
 // discord_app/components_native/common/ItemSelectorActionSheet.tsx
-import noopAll from "../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
+import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../modules/safe_area/useSafeAreaInsets.native.tsx";
-import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
+import noop from "../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-noopAll;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-const result = require("set").fileFinishedImporting("components_native/common/ItemSelectorActionSheet.tsx");
+const require = fn;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/common/ItemSelectorActionSheet.tsx");
 
 export default function ItemSelectorActionSheet(arg0) {
   ({ title, items } = arg0);
   ({ selectedItem: importDefault, onItemSelect: dependencyMap, onClose } = arg0);
   ({ body, hasIcons } = arg0);
   let obj = items(4262);
-  const token = obj.useToken(ThemesDefault.modules.mobile.TABLE_ROW_PADDING);
-  const findIndexResult = items.findIndex((value) => value.value === closure_1);
+  const token = obj.useToken(nativeDefault.modules.mobile.TABLE_ROW_PADDING);
+  const findIndexResult = items.findIndex((value) => value.value === importDefault);
   obj = { title, trailing: null };
   let tmp6Result = null;
   if (null != onClose) {
-    obj = { onPress: null };
-    obj[0] = onClose;
+    obj = { onPress: onClose };
     tmp6Result = tmp6(tmp(7199).ActionSheetCloseButton, obj);
   }
-  obj1 = { scrollable: true, header: closure_3(items(7149).BottomSheetTitleHeader, obj), children: null };
-  obj[1] = tmp6Result;
+  const obj1 = { scrollable: true, header: closure_3(items(7149).BottomSheetTitleHeader, obj), children: null };
+  obj.trailing = tmp6Result;
   const obj2 = {
     contentContainerStyle: {
       paddingHorizontal: token,
-      paddingBottom: useSafeAreaInsetsDefault().bottom + ThemesDefault.space.PX_16,
+      paddingBottom: useSafeAreaInsetsDefault().bottom + nativeDefault.space.PX_16,
     },
     children: null,
   };
@@ -39,9 +38,8 @@ export default function ItemSelectorActionSheet(arg0) {
   }
   const obj3 = {
     paddingHorizontal: token,
-    paddingBottom: useSafeAreaInsetsDefault().bottom + ThemesDefault.space.PX_16,
+    paddingBottom: useSafeAreaInsetsDefault().bottom + nativeDefault.space.PX_16,
   };
-  const tmp3 = importDefault;
   const tmp8 = closure_4;
   items[1] = closure_3(items(5685).TableRadioGroup, {
     value: num,
@@ -52,9 +50,9 @@ export default function ItemSelectorActionSheet(arg0) {
         dependencyMap(iter.value);
       }
     },
-    children: items.map((label, value) => callback(items(5688).TableRadioRow, { label: label.label, value }, value)),
+    children: items.map((label, value) => closure_1_3(items(5688).TableRadioRow, { label: label.label, value }, value)),
   });
-  obj2[1] = items;
-  obj1[2] = tmp8(items(6627).BottomSheetScrollView, obj2);
+  obj2.children = items;
+  obj1.children = tmp8(items(6627).BottomSheetScrollView, obj2);
   return closure_3(items(7150).BottomSheet, obj1);
 }

@@ -1,16 +1,17 @@
 // discord_app/modules/app_database/util/ExtendedMemoryLru.tsx
-import length from "Lru.tsx";
-import nextAll from "Iterable.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import Lru from "Lru.tsx";
+import IterableAll from "Iterable.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/app_database/util/ExtendedMemoryLru.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_database/util/ExtendedMemoryLru.tsx");
 class ExtendedMemoryLru {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
-    lru = new require("length").Lru(global);
+    lru = new closure_0(closure_2[1]).Lru(global);
     obj.primary = lru;
-    lru1 = new require("length").Lru(arg1);
+    lru1 = new closure_0(closure_2[1]).Lru(fn);
     obj.extended = lru1;
     return obj;
   }
@@ -82,8 +83,7 @@ prototype["upstreamItems"] = function upstreamItems() {
     const entries = extended.entries();
     const obj = entries[Symbol.iterator]();
     while (obj !== undefined) {
-      let tmp6 = callback;
-      let tmp7 = callback(tmp4, 2);
+      let tmp7 = _slicedToArray(tmp4, 2);
       let first = tmp7[0];
       let primary = self.primary;
       let putResult = primary.put(first, tmp7[1]);
@@ -92,7 +92,6 @@ prototype["upstreamItems"] = function upstreamItems() {
       if (self.canUpstreamItems()) {
         continue;
       } else {
-        let tmp11 = obj;
         obj.return();
         break;
       }
@@ -123,19 +122,19 @@ prototype["allEntries"] = function allEntries() {
   const extended = this.extended;
   const primary = this.primary;
   const entries = extended.entries();
-  return nextAll.chain(entries, primary.entries());
+  return IterableAll.chain(entries, primary.entries());
 };
 prototype["allKeys"] = function allKeys() {
   const extended = this.extended;
   const primary = this.primary;
   const keys = extended.keys();
-  return nextAll.chain(keys, primary.keys());
+  return IterableAll.chain(keys, primary.keys());
 };
 prototype["allValues"] = function allValues() {
   const extended = this.extended;
   const primary = this.primary;
   const values = extended.values();
-  return nextAll.chain(values, primary.values());
+  return IterableAll.chain(values, primary.values());
 };
 
 export { ExtendedMemoryLru };

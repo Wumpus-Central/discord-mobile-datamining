@@ -1,25 +1,31 @@
 // discord_app/modules/messages/native/renderer/system_messages/StageRaiseHandSystemMessage.tsx
-import DISCORD_EPOCHDefault from "../../../../../utils/SnowflakeUtils.tsx";
-import getSystemLocale from "../../../../../intl/index.native.tsx";
-import getMessageAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
-import closure_3 from "../../../../stage_channels/StageChannelParticipantStore.tsx";
-import closure_4 from "../../../../../stores/ChannelStore.tsx";
-import closure_5 from "../../../../../stores/PermissionStore.tsx";
-import ME from "../../../../../Constants.tsx";
+import SnowflakeUtilsDefault from "../../../../../utils/SnowflakeUtils.tsx";
+import util from "../../../../../intl/index.native.tsx";
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
+import StageChannelParticipantStore from "../../../../stage_channels/StageChannelParticipantStore.tsx";
+import ChannelStore from "../../../../../stores/ChannelStore.tsx";
+import PermissionStore from "../../../../../stores/PermissionStore.tsx";
 
-require = arg1;
-({ HelpdeskArticles: closure_6, MessageFlags: error, MessageTypes: closure_8, Permissions: c9 } = ME);
-const result = require("set").fileFinishedImporting(
+require = fn;
+const Constants = fn(1074);
+({
+  HelpdeskArticles: metroRequire,
+  MessageFlags: closure_7,
+  MessageTypes: closure_8,
+  Permissions: closure_9,
+} = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/StageRaiseHandSystemMessage.tsx",
 );
 
 export const createStageRaiseHandSystemMessage = function createStageRaiseHandSystemMessage(roleStyle) {
   const message = roleStyle.message;
-  let obj = getMessageAuthorWithProcessedColor;
+  let obj = useAuthorWithProcessedColor;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-  let canResult = closure_5.can(constants4.MUTE_MEMBERS, channel.getChannel(message.channel_id));
-  participant = participant.getParticipant(message.channel_id, message.author.id);
-  obj1 = DISCORD_EPOCHDefault;
+  let canResult = PermissionStore.can(constants4.MUTE_MEMBERS, ChannelStore.getChannel(message.channel_id));
+  const participant = StageChannelParticipantStore.getParticipant(message.channel_id, message.author.id);
+  let obj1 = SnowflakeUtilsDefault;
   let num;
   const date = new Date(obj1.extractTimestamp(message.id));
   if (participant != null) {
@@ -49,28 +55,27 @@ export const createStageRaiseHandSystemMessage = function createStageRaiseHandSy
     username: messageAuthorWithProcessedColor.nick,
     usernameOnClick: tmp6(7962)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }),
   };
-  obj[0] = intl.formatToParts(getSystemLocale.t.M87x7Y, obj);
-  obj[1] = canResult;
+  obj.content = intl.formatToParts(util.t.M87x7Y, obj);
+  obj.showInviteToSpeakButton = canResult;
   const intl2 = tmp(1114).intl;
-  obj[2] = intl2.string(getSystemLocale.t.f0T7hI);
+  obj.buttonLabel = intl2.string(util.t.f0T7hI);
   let tmp10;
   if (message.hasFlag(constants2.EPHEMERAL)) {
     if (message.type === constants3.STAGE_RAISE_HAND) {
       obj1 = { content: null, helpArticleLink: null, helpButtonAccessibilityLabel: null };
       const intl3 = tmp(1114).intl;
       const obj2 = { handleDelete: null };
-      const obj3 = { action: "bindDismissMessage", message: null };
-      obj3[1] = message;
-      obj2[0] = obj3;
-      obj1[0] = intl3.formatToParts(tmp(1114).t["qDAX++"], obj2);
-      obj1[1] = tmp6(2024).getArticleURL(constants.EPHEMERAL_MESSAGES);
+      const obj3 = { action: "bindDismissMessage", message };
+      obj2.handleDelete = obj3;
+      obj1.content = intl3.formatToParts(tmp(1114).t["qDAX++"], obj2);
+      obj1.helpArticleLink = tmp6(2024).getArticleURL(constants.EPHEMERAL_MESSAGES);
       const intl4 = tmp(1114).intl;
-      obj1[2] = intl4.string(tmp(1114).t.htHOrp);
+      obj1.helpButtonAccessibilityLabel = intl4.string(tmp(1114).t.htHOrp);
       tmp10 = obj1;
       const tmp6Result = tmp6(2024);
     }
   }
-  obj[3] = tmp10;
+  obj.ephemeralIndication = tmp10;
   const merged = Object.assign(tmp6(7964)(roleStyle));
   return obj;
 };

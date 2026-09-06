@@ -1,19 +1,21 @@
 // discord_app/modules/premium_marketing/native/hooks/useBuyNitroExperiment.tsx
 import useInitialValueDefault from "../../../../hooks/useInitialValue.tsx";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
-import { usePremiumPlanPurchasedStore as closure_5 } from "../../../premium/native/PremiumPlanPurchasedStore.tsx";
+import BuyNitroMarketingExperiment from "../BuyNitroMarketingExperiment.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium_marketing/native/hooks/useBuyNitroExperiment.tsx");
+require = fn;
+let closure_5 = fn(7421).usePremiumPlanPurchasedStore;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium_marketing/native/hooks/useBuyNitroExperiment.tsx");
 
 export const useBuyNitroExperiment = function useBuyNitroExperiment(isNitroHomeSurface) {
   isNitroHomeSurface = isNitroHomeSurface.isNitroHomeSurface;
   ({ userHasSubscription, isConfirmedNonSubscriber } = isNitroHomeSurface);
   let canRenderRedesignUpsellEarly = useInitialValueDefault(() =>
-    callback(table[4]).getMobileNitroMarketingRedesignExperiment({ location: "PremiumMarketingPage" }),
+    BuyNitroMarketingExperiment.getMobileNitroMarketingRedesignExperiment({ location: "PremiumMarketingPage" }),
   );
-  const tmp3 = callback(React.useState(false), 2);
+  const tmp3 = _slicedToArray(noop.useState(false), 2);
   const first = tmp3[0];
   let showRedesignUpsell = canRenderRedesignUpsellEarly;
   if (canRenderRedesignUpsellEarly) {

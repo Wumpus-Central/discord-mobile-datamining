@@ -1,61 +1,61 @@
 // discord_app/modules/quests/QuestConstants.tsx
-import setDefault from "../../utils/Durations.tsx";
+import DurationsDefault from "../../utils/Durations.tsx";
 import QuestVariants from "../../../discord_common/js/shared/shared-constants/QuestVariants.tsx";
 import Quests from "../../../discord_common/js/shared/shared-constants/Quests.tsx";
-import QuestsVisibleMessagesChangedSource from "QuestTypes.tsx";
+import QuestTypes from "QuestTypes.tsx";
 import AdCreativeType from "../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
-import set5 from "../../../discord_common/js/shared/shared-constants/FirstPartyQuestTaskTypes.tsx";
+import FirstPartyQuestTaskTypes from "../../../discord_common/js/shared/shared-constants/FirstPartyQuestTaskTypes.tsx";
 import DismissibleQuestContentFlags from "../../../discord_common/js/shared/shared-constants/DismissibleQuestContentFlags.tsx";
-import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import apply from "../../../_runtime/00012_apply.js";
-import set from "../../../_runtime/00002_set.js";
+import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import apply from "../../../_runtime/metro/00012__.js";
+import size from "../../../_runtime/metro/00002__.js";
 
 const items = [
   QuestVariants.QuestVariants.NITRO_2_POINT_0_CTA,
   QuestVariants.QuestVariants.ORBS_MULTIPLIER_QUEST,
   QuestVariants.QuestVariants.XBOX_GAME_PASS_QUEST,
 ];
-let set = new Set(items);
-const result = setDefault.Millis.MINUTE * Quests.Quests.ConsecutiveHeartbeatPeriodMinutes;
-sendRequest = sendRequest.getAPIBaseURL();
-if (-1 !== sendRequest.indexOf("localhost")) {
+const result = DurationsDefault.Millis.MINUTE * Quests.Quests.ConsecutiveHeartbeatPeriodMinutes;
+HTTPUtils = HTTPUtils.getAPIBaseURL();
+if (-1 !== HTTPUtils.indexOf("localhost")) {
   const _HermesInternal = HermesInternal;
-  let str2 = "" + sendRequest + "/_cdn_storage/";
+  let str2 = "" + HTTPUtils + "/_cdn_storage/";
 } else {
   str2 = "https://cdn.discordapp.com/";
 }
 const text = `${str2}quests/`;
 const items1 = [
-  QuestsVisibleMessagesChangedSource.AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA,
-  QuestsVisibleMessagesChangedSource.AdPlacement.MOBILE_HOME_DOCK_AREA,
-  QuestsVisibleMessagesChangedSource.AdPlacement.QUEST_HOME_BANNER_DESKTOP,
-  QuestsVisibleMessagesChangedSource.AdPlacement.QUEST_HOME_MOBILE_CAROUSEL,
-  QuestsVisibleMessagesChangedSource.AdPlacement.VIDEO_MODAL_MOBILE,
+  QuestTypes.AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA,
+  QuestTypes.AdPlacement.MOBILE_HOME_DOCK_AREA,
+  QuestTypes.AdPlacement.QUEST_HOME_BANNER_DESKTOP,
+  QuestTypes.AdPlacement.QUEST_HOME_MOBILE_CAROUSEL,
+  QuestTypes.AdPlacement.VIDEO_MODAL_MOBILE,
 ];
+const set = new Set(items);
 const items2 = [AdCreativeType.AdCreativeType.NO_FILL];
 const set1 = new Set(items1);
 const items3 = [
-  set5.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP,
-  set5.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP,
-  set5.FirstPartyQuestTaskTypes.PLAY_ON_XBOX,
-  set5.FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION,
-  set5.FirstPartyQuestTaskTypes.PLAY_ACTIVITY,
+  FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP,
+  FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP,
+  FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_XBOX,
+  FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION,
+  FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ACTIVITY,
 ];
 const set2 = new Set(items2);
 const items4 = [
-  set5.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP,
-  set5.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP,
-  set5.FirstPartyQuestTaskTypes.PLAY_ON_XBOX,
-  set5.FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION,
-  set5.FirstPartyQuestTaskTypes.PLAY_ACTIVITY,
+  FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP,
+  FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP,
+  FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_XBOX,
+  FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION,
+  FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ACTIVITY,
 ];
 const set3 = new Set(items3);
 const items5 = [
-  set5.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP,
-  set5.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP,
-  set5.FirstPartyQuestTaskTypes.PLAY_ON_XBOX,
-  set5.FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION,
-  set5.FirstPartyQuestTaskTypes.PLAY_ACTIVITY,
+  FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP,
+  FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP,
+  FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_XBOX,
+  FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION,
+  FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ACTIVITY,
 ];
 const set4 = new Set(items4);
 let obj = { VIDEO: "task_video", PLAY: "task_play" };
@@ -82,7 +82,7 @@ const sorted = entries.sort((arg0, arg1) => {
   }
   return num;
 });
-const result1 = set.fileFinishedImporting("modules/quests/QuestConstants.tsx");
+const result1 = size.fileFinishedImporting("modules/quests/QuestConstants.tsx");
 
 export const QuestsExperimentLocations = {
   ACTIVITY_PANEL: "quests_bar_activity_panel",
@@ -201,19 +201,17 @@ export const QuestHomeSortMethods = {
 };
 export const TaskFilterTypes = obj;
 export const RewardFilterTypes = obj;
-export const getQuestHomeFilterOptionItem = function getQuestHomeFilterOptionItem(arg0) {
+export const getQuestHomeFilterOptionItem = function getQuestHomeFilterOptionItem(filter) {
   let values = Object.values(obj);
-  if (values.includes(arg0)) {
-    obj = { group: "task", filter: null };
-    obj[1] = arg0;
+  if (values.includes(filter)) {
+    obj = { group: "task", filter };
     let tmp2 = obj;
   } else {
     const _Object = Object;
     values = Object.values(obj);
     tmp2 = null;
-    if (values.includes(arg0)) {
-      obj = { group: "reward", filter: null };
-      obj[1] = arg0;
+    if (values.includes(filter)) {
+      obj = { group: "reward", filter };
       tmp2 = obj;
     }
   }

@@ -1,25 +1,24 @@
 // discord_app/modules/guild_member/GuildMemberUtils.tsx
-import closure_3 from "../../stores/GuildMemberStore.tsx";
-import closure_4 from "../../stores/GuildStore.tsx";
-import closure_5 from "../../stores/PermissionStore.tsx";
-import closure_6 from "../../stores/UserStore.tsx";
-import { GuildMemberFlags } from "GuildMemberConstants.tsx";
-import { Permissions } from "../../Constants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
+import FlagUtils from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
+import GuildStore from "../../stores/GuildStore.tsx";
+import PermissionStore from "../../stores/PermissionStore.tsx";
+import UserStore from "../../stores/UserStore.tsx";
 
-const require = arg1;
+require = fn;
 function getGuildMemberAgeInRange(arg0, arg1, arg2) {
   ({ maxDaysOld, minDaysOld } = arg1);
   if (minDaysOld === undefined) {
     minDaysOld = 0;
   }
-  guild = guild.getGuild(arg0);
+  const guild = GuildStore.getGuild(arg0);
   let joinedAt;
   if (guild != null) {
     joinedAt = guild.joinedAt;
   }
   if (null != arg2) {
-    member = member.getMember(arg0, arg2);
+    const member = GuildMemberStore.getMember(arg0, arg2);
     let joinedAt1;
     if (member != null) {
       joinedAt1 = member.joinedAt;
@@ -47,20 +46,20 @@ function getGuildMemberAgeInRange(arg0, arg1, arg2) {
     return tmp13;
   }
 }
-function canKickMember(user, stateFromStores) {
-  let tmp = arg2;
-  if (arg2 === undefined) {
-    const items = [closure_5];
+function canKickMember(user, guild, items) {
+  let tmp = items;
+  if (items === undefined) {
+    items = [PermissionStore];
     tmp = items;
   }
   [tmp3] = tmp;
-  let tmp4 = null != stateFromStores;
+  let tmp4 = null != guild;
   if (tmp4) {
     const items1 = [tmp3];
     [obj] = items1;
-    let canManageUserResult = null != stateFromStores;
+    let canManageUserResult = null != guild;
     if (canManageUserResult) {
-      canManageUserResult = obj.canManageUser(Permissions.KICK_MEMBERS, user, stateFromStores);
+      canManageUserResult = obj.canManageUser(Permissions.KICK_MEMBERS, user, guild);
     }
     if (canManageUserResult) {
       canManageUserResult = !user.isNonUserBot();
@@ -72,20 +71,20 @@ function canKickMember(user, stateFromStores) {
   }
   return tmp4;
 }
-function canBanMember(user, stateFromStores) {
+function canBanMember(user, guild) {
   let tmp = arg2;
   if (arg2 === undefined) {
-    const items = [closure_5];
+    const items = [PermissionStore];
     tmp = items;
   }
   [tmp3] = tmp;
-  let tmp4 = null != stateFromStores;
+  let tmp4 = null != guild;
   if (tmp4) {
     const items1 = [tmp3];
     [obj] = items1;
-    let canManageUserResult = null != stateFromStores;
+    let canManageUserResult = null != guild;
     if (canManageUserResult) {
-      canManageUserResult = obj.canManageUser(Permissions.BAN_MEMBERS, user, stateFromStores);
+      canManageUserResult = obj.canManageUser(Permissions.BAN_MEMBERS, user, guild);
     }
     if (canManageUserResult) {
       canManageUserResult = !user.isNonUserBot();
@@ -100,29 +99,31 @@ function canBanMember(user, stateFromStores) {
   }
   return tmp4;
 }
+const GuildMemberFlags = fn(4187).GuildMemberFlags;
+const Permissions = fn(1074).Permissions;
 let c9 = 86400000;
-const result = require("set").fileFinishedImporting("modules/guild_member/GuildMemberUtils.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_member/GuildMemberUtils.tsx");
 
 export { getGuildMemberAgeInRange };
 export const useGuildMemberAgeInRange = function useGuildMemberAgeInRange(arg0, arg1, arg2) {
-  const _require = arg0;
+  _require = arg0;
   closure_1 = arg1;
   dependencyMap = arg2;
   const items = [arg1, arg0, arg2];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+  return require("initialize").useStateFromStores(
     [],
-    () => closure_1_10(closure_0, obj, closure_2),
+    () => getGuildMemberAgeInRange(closure_0, closure_1, dependencyMap),
     items,
   );
 };
 export const useNewMemberBadge = function useNewMemberBadge(arg0, arg1) {
-  let _require = arg0;
-  let obj = arg1;
-  obj = initialize;
-  const items = [closure_3];
+  _require = arg0;
+  closure_1 = arg1;
+  let obj = require("initialize");
+  const items = [GuildMemberStore];
   const stateFromStores = obj.useStateFromStores(items, () => {
-    obj = callback(1384);
-    const member = closure_1_3.getMember(callback, obj);
+    const member = GuildMemberStore.getMember(closure_0, closure_1);
     let num;
     if (member != null) {
       num = member.flags;
@@ -130,46 +131,40 @@ export const useNewMemberBadge = function useNewMemberBadge(arg0, arg1) {
     if (num == null) {
       num = 0;
     }
-    return obj.hasFlag(num, closure_1_7.DID_REJOIN);
+    return FlagUtils.hasFlag(num, GuildMemberFlags.DID_REJOIN);
   });
-  const items1 = [closure_4];
-  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
-    items1,
-    () => {
-      const guild = closure_1_4.getGuild(closure_0);
-      let tmp2 = null != guild;
-      if (tmp2) {
-        obj = obj(11);
-        const _Date = Date;
-        tmp2 = Date.now() - obj.extractTimestamp(guild.id) < 604800000;
-        const extractTimestampResult = obj.extractTimestamp(guild.id);
-      }
-      return tmp2;
-    },
-  );
-  const obj2 = initialize;
-  const items2 = [closure_6];
+  const items1 = [GuildStore];
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => {
+    const guild = GuildStore.getGuild(closure_0);
+    let tmp2 = null != guild;
+    if (tmp2) {
+      const _Date = Date;
+      tmp2 = Date.now() - SnowflakeUtilsDefault.extractTimestamp(guild.id) < 604800000;
+      const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(guild.id);
+    }
+    return tmp2;
+  });
+  const obj2 = require("initialize");
+  const items2 = [UserStore];
   obj = { maxDaysOld: 7 };
-  _require = arg0;
-  dependencyMap = arg1;
-  const stateFromStores2 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
-    items2,
-    () => {
-      const user = closure_1_6.getUser(obj);
-      let bot;
-      if (user != null) {
-        bot = user.bot;
-      }
-      return bot;
-    },
-  );
-  const obj3 = initialize;
+  closure_129_0 = arg0;
+  closure_129_1 = obj;
+  closure_129_2 = arg1;
+  const stateFromStores2 = require("initialize").useStateFromStores(items2, () => {
+    const user = UserStore.getUser(closure_1);
+    let bot;
+    if (user != null) {
+      bot = user.bot;
+    }
+    return bot;
+  });
+  const obj3 = require("initialize");
   const items3 = [obj, arg0, arg1];
-  const obj5 = initialize;
+  const obj5 = require("initialize");
   return (
-    require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+    require("initialize").useStateFromStores(
       [],
-      () => closure_1_10(closure_0, obj, closure_2),
+      () => getGuildMemberAgeInRange(closure_0, closure_1, dependencyMap),
       items3,
     ) &&
     !stateFromStores1 &&
@@ -178,25 +173,25 @@ export const useNewMemberBadge = function useNewMemberBadge(arg0, arg1) {
   );
 };
 export const useCanKickMember = function useCanKickMember(arg0, arg1) {
-  const _require = arg0;
+  _require = arg0;
   closure_1 = arg1;
-  let items = [closure_5];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    const items = [closure_1_5];
-    return closure_1_11(closure_0, closure_1, items);
+  let items = [PermissionStore];
+  return require("initialize").useStateFromStores(items, () => {
+    const items = [PermissionStore];
+    return canKickMember(closure_0, closure_1, items);
   });
 };
 export { canKickMember };
-export const hasKickMemberPerms = function hasKickMemberPerms(isNonUserBot, guild) {
+export const hasKickMemberPerms = function hasKickMemberPerms(isNonUserBot, stateFromStores) {
   let tmp = arg2;
   if (arg2 === undefined) {
-    const items = [closure_5];
+    const items = [PermissionStore];
     tmp = items;
   }
   [obj] = tmp;
-  let canManageUserResult = null != guild;
+  let canManageUserResult = null != stateFromStores;
   if (canManageUserResult) {
-    canManageUserResult = obj.canManageUser(Permissions.KICK_MEMBERS, isNonUserBot, guild);
+    canManageUserResult = obj.canManageUser(Permissions.KICK_MEMBERS, isNonUserBot, stateFromStores);
   }
   if (canManageUserResult) {
     canManageUserResult = !isNonUserBot.isNonUserBot();
@@ -204,23 +199,21 @@ export const hasKickMemberPerms = function hasKickMemberPerms(isNonUserBot, guil
   return canManageUserResult;
 };
 export const useCanBanMember = function useCanBanMember(arg0, arg1) {
-  const _require = arg0;
+  _require = arg0;
   closure_1 = arg1;
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores([], () =>
-    closure_1_12(closure_0, closure_1),
-  );
+  return require("initialize").useStateFromStores([], () => canBanMember(closure_0, closure_1));
 };
 export { canBanMember };
-export const hasBanMemberPerms = function hasBanMemberPerms(isNonUserBot, guild) {
+export const hasBanMemberPerms = function hasBanMemberPerms(isNonUserBot, stateFromStores) {
   let tmp = arg2;
   if (arg2 === undefined) {
-    const items = [closure_5];
+    const items = [PermissionStore];
     tmp = items;
   }
   [obj] = tmp;
-  let canManageUserResult = null != guild;
+  let canManageUserResult = null != stateFromStores;
   if (canManageUserResult) {
-    canManageUserResult = obj.canManageUser(Permissions.BAN_MEMBERS, isNonUserBot, guild);
+    canManageUserResult = obj.canManageUser(Permissions.BAN_MEMBERS, isNonUserBot, stateFromStores);
   }
   if (canManageUserResult) {
     canManageUserResult = !isNonUserBot.isNonUserBot();
@@ -231,15 +224,15 @@ export const hasBanMemberPerms = function hasBanMemberPerms(isNonUserBot, guild)
   return canManageUserResult;
 };
 export const useCanManageMessages = function useCanManageMessages(arg0, arg1) {
-  const _require = arg0;
+  _require = arg0;
   closure_1 = arg1;
-  let items = [closure_5];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    const items = [closure_1_5];
+  let items = [PermissionStore];
+  return require("initialize").useStateFromStores(items, () => {
+    const items = [PermissionStore];
     [obj2] = items;
     let canManageUserResult = null != obj && null != tmp;
     if (canManageUserResult) {
-      canManageUserResult = obj2.canManageUser(closure_1_8.MANAGE_MESSAGES, obj, tmp);
+      canManageUserResult = obj2.canManageUser(Permissions.MANAGE_MESSAGES, obj, tmp);
     }
     if (canManageUserResult) {
       canManageUserResult = !obj.isNonUserBot();
@@ -247,16 +240,16 @@ export const useCanManageMessages = function useCanManageMessages(arg0, arg1) {
     return canManageUserResult;
   });
 };
-export const canManageMessages = function canManageMessages(isNonUserBot, guild) {
+export const canManageMessages = function canManageMessages(isNonUserBot, stateFromStores) {
   let tmp = arg2;
   if (arg2 === undefined) {
-    const items = [closure_5];
+    const items = [PermissionStore];
     tmp = items;
   }
   [obj] = tmp;
-  let canManageUserResult = null != isNonUserBot && null != guild;
+  let canManageUserResult = null != isNonUserBot && null != stateFromStores;
   if (canManageUserResult) {
-    canManageUserResult = obj.canManageUser(Permissions.MANAGE_MESSAGES, isNonUserBot, guild);
+    canManageUserResult = obj.canManageUser(Permissions.MANAGE_MESSAGES, isNonUserBot, stateFromStores);
   }
   if (canManageUserResult) {
     canManageUserResult = !isNonUserBot.isNonUserBot();

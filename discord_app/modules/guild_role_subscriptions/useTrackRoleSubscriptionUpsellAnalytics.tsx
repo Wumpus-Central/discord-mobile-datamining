@@ -1,10 +1,13 @@
 // discord_app/modules/guild_role_subscriptions/useTrackRoleSubscriptionUpsellAnalytics.tsx
-import closure_3 from "../../../_runtime/00019_noop.js";
-import closure_4 from "GuildRoleSubscriptionsStore.tsx";
-import { AnalyticEvents } from "../../Constants.tsx";
+import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
+import AppAnalyticsUtils from "../app_analytics/AppAnalyticsUtils.tsx";
+import noop from "../../../_runtime/metro/00019__.js";
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
+require = fn;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/useTrackRoleSubscriptionUpsellAnalytics.tsx",
 );
 
@@ -13,28 +16,24 @@ export default function useTrackRoleSubscriptionUpsellAnalytics(guildId) {
   const groupListingId = guildId.groupListingId;
   const _location = guildId.location;
   const relevantSubscriptionListingIds = guildId.relevantSubscriptionListingIds;
-  let groupListingsFetchContext;
-  closure_5 = undefined;
-  let stateFromStoresArray;
   let analyticsLocations;
-  closure_8 = undefined;
-  groupListingsFetchContext = guildId(_location[3]).useGroupListingsFetchContext(
+  const groupListingsFetchContext = guildId(_location[3]).useGroupListingsFetchContext(
     "useTrackRoleSubscriptionUpsellAnalytics",
   );
   const tmp2 = null != groupListingId(_location[4])(groupListingId).activeSubscription;
-  closure_5 = tmp2;
+  const is_premium_member = tmp2;
   let obj = guildId(_location[3]);
   let items = [groupListingsFetchContext];
   const items1 = [relevantSubscriptionListingIds];
-  stateFromStoresArray = guildId(_location[5]).useStateFromStoresArray(
+  const stateFromStoresArray = guildId(_location[5]).useStateFromStoresArray(
     items,
     () => {
       let items = relevantSubscriptionListingIds;
       if (relevantSubscriptionListingIds == null) {
         items = [];
       }
-      return items.filter((editStateId) => {
-        subscriptionListing = subscriptionListing.getSubscriptionListing(editStateId);
+      return items.filter((item) => {
+        subscriptionListing = subscriptionListing.getSubscriptionListing(item);
         let published;
         if (subscriptionListing != null) {
           published = subscriptionListing.published;
@@ -51,7 +50,7 @@ export default function useTrackRoleSubscriptionUpsellAnalytics(guildId) {
     lastRouteChangeSourceLocationStack = [];
   }
   analyticsLocations = tmp4(lastRouteChangeSourceLocationStack).analyticsLocations;
-  closure_8 = relevantSubscriptionListingIds.useRef(false);
+  relevantSubscriptionListingIds.useRef(false);
   const items2 = [
     guildId,
     groupListingId,
@@ -74,22 +73,15 @@ export default function useTrackRoleSubscriptionUpsellAnalytics(guildId) {
     }
     if (tmp) {
       ref.current = true;
-      let obj = groupListingId(_location[8]);
-      obj = {
-        role_subscription_group_listing_id: null,
-        role_subscription_listing_ids: null,
-        is_premium_member: null,
-        location_stack: null,
-        location: null,
+      const obj = {
+        role_subscription_group_listing_id: groupListingId,
+        role_subscription_listing_ids: stateFromStoresArray,
+        is_premium_member,
+        location_stack: analyticsLocations,
+        location: _location,
       };
-      obj[0] = groupListingId;
-      obj[1] = stateFromStoresArray;
-      obj[2] = constants;
-      obj[3] = analyticsLocations;
-      obj[4] = _location;
-      const merged = Object.assign(guildId(_location[9]).collectGuildAnalyticsMetadata(guildId));
-      obj.track(constants.ROLE_SUBSCRIPTION_LISTING_UPSELL_PAGE_VIEWED, obj);
-      const obj3 = guildId(_location[9]);
+      const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guildId));
+      obj.track(AnalyticEvents.ROLE_SUBSCRIPTION_LISTING_UPSELL_PAGE_VIEWED, obj);
     }
   }, items2);
 }

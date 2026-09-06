@@ -1,11 +1,11 @@
 // discord_app/modules/channel_list_v2/native/ChannelListUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
-import ME from "../../../Constants.tsx";
-import collectGuildAnalyticsMetadataDefault from "../../app_analytics/AppAnalyticsUtils.tsx";
-import computeSubtitle from "../../guild_sidebar/ChannelListState.tsx";
+import Constants from "../../../Constants.tsx";
+import AppAnalyticsUtilsDefault from "../../app_analytics/AppAnalyticsUtils.tsx";
+import ChannelListState from "../../guild_sidebar/ChannelListState.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/channel_list_v2/native/ChannelListUtils.tsx");
+const AnalyticEvents = Constants.AnalyticEvents;
+const result = size.fileFinishedImporting("modules/channel_list_v2/native/ChannelListUtils.tsx");
 
 export const isFavoritesSection = function isFavoritesSection(arg0, favoritesSectionNumber) {
   return arg0 === favoritesSectionNumber.favoritesSectionNumber;
@@ -17,8 +17,8 @@ export const isVoiceChannelsSection = function isVoiceChannelsSection(section, g
   return section === guildChannels.voiceChannelsSectionNumber;
 };
 export const isNamedCategorySection = function isNamedCategorySection(section) {
-  return section >= computeSubtitle.SECTION_INDEX_FIRST_NAMED_CATEGORY;
+  return section >= ChannelListState.SECTION_INDEX_FIRST_NAMED_CATEGORY;
 };
 export const logChannelListEndReached = function logChannelListEndReached() {
-  collectGuildAnalyticsMetadataDefault.trackWithMetadata(AnalyticEvents.CHANNEL_LIST_END_REACHED);
+  AppAnalyticsUtilsDefault.trackWithMetadata(AnalyticEvents.CHANNEL_LIST_END_REACHED);
 };

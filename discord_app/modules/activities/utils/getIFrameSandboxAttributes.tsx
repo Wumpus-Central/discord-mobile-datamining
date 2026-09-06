@@ -1,8 +1,8 @@
 // discord_app/modules/activities/utils/getIFrameSandboxAttributes.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
 let closure_0 = ["allow-pointer-lock", "allow-scripts", "allow-same-origin", "allow-forms"];
-const result = set.fileFinishedImporting("modules/activities/utils/getIFrameSandboxAttributes.tsx");
+const result = size.fileFinishedImporting("modules/activities/utils/getIFrameSandboxAttributes.tsx");
 
 export default function getIFrameSandboxAttributes(allowPopups) {
   let obj = closure_0;

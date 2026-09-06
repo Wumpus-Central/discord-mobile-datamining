@@ -1,8 +1,10 @@
 // discord_app/modules/user_settings/content_and_social/useAllowFriendsFromMutualGuildsOnly.tsx
-import closure_2 from "../../../../_runtime/00019_noop.js";
+import UserSettingsUtils from "../../../utils/UserSettingsUtils.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/user_settings/content_and_social/useAllowFriendsFromMutualGuildsOnly.tsx",
 );
 
@@ -10,6 +12,6 @@ export const useAllowFriendsFromMutualGuildsOnly = function useAllowFriendsFromM
   const FriendSourceFlagsSetting = setting(1935).FriendSourceFlagsSetting;
   setting = FriendSourceFlagsSetting.useSetting();
   const items = [setting];
-  const memo = React.useMemo(() => setting(closure_1_1[2]).computeFlags(setting), items);
+  const memo = noop.useMemo(() => UserSettingsUtils.computeFlags(setting), items);
   return memo.mutualGuilds && !memo.all;
 };

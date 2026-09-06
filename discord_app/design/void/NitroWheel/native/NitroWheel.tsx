@@ -1,13 +1,13 @@
 // discord_app/design/void/NitroWheel/native/NitroWheel.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import preloadDefault from "../../../../components_native/common/FastImage.tsx";
-import registerAssetDefault from "../../../../../_runtime/09360_registerAsset.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
+import _modDef9360 from "../../../../../_runtime/metro/09360__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-noopAll;
-const result = require("set").fileFinishedImporting("design/void/NitroWheel/native/NitroWheel.tsx");
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/NitroWheel/native/NitroWheel.tsx");
 
 export default function NitroWheel(style) {
-  const obj = { source: registerAssetDefault, style: style.style, resizeMode: "contain" };
-  return jsx(preloadDefault, { source: registerAssetDefault, style: style.style, resizeMode: "contain" });
+  const obj = { source: _modDef9360, style: style.style, resizeMode: "contain" };
+  return jsx(FastImageDefault, { source: _modDef9360, style: style.style, resizeMode: "contain" });
 }

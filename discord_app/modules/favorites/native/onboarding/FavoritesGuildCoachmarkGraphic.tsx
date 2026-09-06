@@ -1,27 +1,27 @@
 // discord_app/modules/favorites/native/onboarding/FavoritesGuildCoachmarkGraphic.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import Button from "../../../../design/void/native.tsx";
-import AccountAgeTier10LargeBadge from "../../../../design/assets/native.tsx";
+import _mod17 from "../../../../../_runtime/metro/00017__.js";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import native from "../../../../design/void/native.tsx";
+import native2 from "../../../../design/assets/native.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const View = get_ActivityIndicator.View;
-({ jsx: c3, jsxs: c4 } = jsxProd);
+const View = _mod17.View;
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
 let obj = { container: null, betaTag: null };
-obj = { alignItems: "center", justifyContent: "center", gap: ThemesDefault.space.PX_12 };
-obj[0] = obj;
-obj[1] = { marginLeft: 0 };
-let closure_5 = createCacheKey.createStyles(obj);
-const result = set.fileFinishedImporting("modules/favorites/native/onboarding/FavoritesGuildCoachmarkGraphic.tsx");
+obj = { alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_12 };
+obj.container = obj;
+obj.betaTag = { marginLeft: 0 };
+let closure_5 = createStyles.createStyles(obj);
+const result = size.fileFinishedImporting("modules/favorites/native/onboarding/FavoritesGuildCoachmarkGraphic.tsx");
 
 export default function FavoritesGuildCoachmarkGraphic() {
-  const tmp = callback3();
+  const tmp = closure_5();
   let obj = { style: tmp.container, children: null };
-  const items = [callback(AccountAgeTier10LargeBadge.FavoritesSpotIllustration, { width: 160, height: 90 })];
+  const items = [React3(native2.FavoritesSpotIllustration, { width: 160, height: 90 })];
   obj = { style: tmp.betaTag };
-  items[1] = callback(Button.BetaTag, obj);
-  obj[1] = items;
-  return callback2(View, obj);
+  items[1] = React3(native.BetaTag, obj);
+  obj.children = items;
+  return React4(View, obj);
 }

@@ -1,8 +1,9 @@
 // discord_app/modules/premium/referral_program/native/ReferralProgramShareActionSheetUtils.tsx
-import closure_0 from "../../../../stores/RelationshipStore.tsx";
-import { UserRowModes } from "../../../main_tabs_v2/native/shared_components/user_list/UserRowConstants.tsx";
+import RelationshipStore from "../../../../stores/RelationshipStore.tsx";
 
-const result = require("set").fileFinishedImporting(
+const UserRowModes = fn(10860).UserRowModes;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/premium/referral_program/native/ReferralProgramShareActionSheetUtils.tsx",
 );
 
@@ -11,7 +12,7 @@ export const buildReferralUserRow = function buildReferralUserRow(selectedNotRes
   if (null != eligibleUsers[row]) {
     let tmp4 = selectedNotResendUsers.selectedNotResendUsers.length >= tmp;
     const hasItem = selectedUserIds.includes(tmp3.id);
-    let obj = {
+    const obj = {
       type: null,
       user: null,
       onPress: null,
@@ -22,22 +23,22 @@ export const buildReferralUserRow = function buildReferralUserRow(selectedNotRes
       end: null,
     };
     const hasItem1 = resendUsers.has(tmp3.id);
-    obj[0] = relationshipType.getRelationshipType(tmp3.id);
-    obj[1] = tmp3;
-    obj[2] = tmp2;
-    obj[3] = hasItem;
+    obj.type = RelationshipStore.getRelationshipType(tmp3.id);
+    obj.user = tmp3;
+    obj.onPress = tmp2;
+    obj.selected = hasItem;
     if (tmp4) {
       tmp4 = !hasItem;
     }
     if (tmp4) {
       tmp4 = !hasItem1;
     }
-    obj = { type: "user", props: null };
-    obj[4] = tmp4;
-    obj[5] = UserRowModes.TOGGLE;
-    obj[6] = 0 === row;
-    obj[7] = row === eligibleUsers.length - 1;
-    obj[1] = obj;
-    return obj;
+    const element = { type: "user", props: null };
+    obj.disabled = tmp4;
+    obj.mode = UserRowModes.TOGGLE;
+    obj.start = 0 === row;
+    obj.end = row === eligibleUsers.length - 1;
+    element.props = obj;
+    return element;
   }
 };

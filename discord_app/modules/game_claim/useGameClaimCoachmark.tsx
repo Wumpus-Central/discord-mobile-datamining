@@ -1,30 +1,28 @@
 // discord_app/modules/game_claim/useGameClaimCoachmark.tsx
-import closure_2 from "../../stores/PermissionStore.tsx";
-import { Permissions } from "../../Constants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { experiment } from "experiments/GameClaimCoachmarkExperiment.tsx";
+import PermissionStore from "../../stores/PermissionStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/game_claim/useGameClaimCoachmark.tsx");
+const require = fn;
+const Permissions = fn(1074).Permissions;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_claim/useGameClaimCoachmark.tsx");
 
 export const useCanShowGameClaimCoachmark = function useCanShowGameClaimCoachmark(id) {
-  const _require = id;
-  let gameClaimCoachmarkEnabled = require("experiments/GameClaimCoachmarkExperiment.tsx").useGameClaimCoachmarkEnabled(
+  _require = id;
+  let gameClaimCoachmarkEnabled = require("GameClaimCoachmarkExperiment").useGameClaimCoachmarkEnabled(
     id,
     "useCanShowGameClaimCoachmark",
   );
-  const obj = experiment;
-  const tmp = _require;
-  const items = [closure_2];
+  const obj = require("GameClaimCoachmarkExperiment");
+  const items = [PermissionStore];
   const items1 = [id];
   if (gameClaimCoachmarkEnabled) {
     gameClaimCoachmarkEnabled = obj2.useStateFromStores(
       items,
-      () => closure_1_2.canWithPartialContext(closure_1_3.ADMINISTRATOR, { guildId: closure_0 }),
+      () => PermissionStore.canWithPartialContext(Permissions.ADMINISTRATOR, { guildId }),
       items1,
     );
   }
-  obj2 = initialize;
+  obj2 = require("initialize");
   if (gameClaimCoachmarkEnabled) {
     gameClaimCoachmarkEnabled = tmpResult.useHasUnclaimedGames(id, gameClaimCoachmarkEnabled);
   }

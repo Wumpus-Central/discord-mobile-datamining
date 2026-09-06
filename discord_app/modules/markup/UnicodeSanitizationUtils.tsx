@@ -1,10 +1,10 @@
 // discord_app/modules/markup/UnicodeSanitizationUtils.tsx
-import set from "../../../_runtime/00002_set.js";
-import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
+import URLUtilsDefault from "../../utils/URLUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 function safelyPartiallyDecodeURIComponent(hash) {
   let substr;
-  const result = isDiscordProxiedAssetUrlDefault.safeDecodeURIComponent(hash);
+  const result = URLUtilsDefault.safeDecodeURIComponent(hash);
   if (null == result) {
     return hash;
   } else {
@@ -16,9 +16,6 @@ function safelyPartiallyDecodeURIComponent(hash) {
       do {
         let codePointAtResult = str2.codePointAt(0);
         let codePointAtResult1 = str.codePointAt(0);
-        let tmp4 = str;
-        let tmp5 = str2;
-        let tmp6 = str3;
         if (codePointAtResult !== codePointAtResult1) {
           let _String2 = String;
           let fromCodePointResult = String.fromCodePoint(codePointAtResult1);
@@ -30,8 +27,7 @@ function safelyPartiallyDecodeURIComponent(hash) {
           }
           if (codePointAtResult1 >= 0) {
             if (codePointAtResult1 < 128) {
-              let tmp19 = table;
-              let tmp10 = 1 !== table[codePointAtResult1];
+              let tmp10 = 1 !== closure_5[codePointAtResult1];
               let tmp20 = fromCodePointResult;
               if (tmp10) {
                 tmp20 = encodeURIComponentResult;
@@ -212,7 +208,6 @@ function safelyPartiallyDecodeURIComponent(hash) {
     }
     return str4;
   }
-  const obj = isDiscordProxiedAssetUrlDefault;
 }
 const items = ["\u034F", "\u17B4", "\u17B5", "\u1160", "\u3164", "\uFFA0"];
 const regExp = new RegExp(
@@ -253,7 +248,7 @@ const items1 = [
   "\uFF48",
 ];
 const regExp2 = new RegExp(items1.join("|"), "gu");
-obj[1] = regExp2;
+obj.matcher = regExp2;
 const items2 = [obj, , , , ,];
 obj = { character: "t", matcher: null };
 const items3 = [
@@ -273,7 +268,7 @@ const items3 = [
   "\u{1D69D}",
 ];
 const regExp3 = new RegExp(items3.join("|"), "gu");
-obj[1] = regExp3;
+obj.matcher = regExp3;
 items2[1] = obj;
 obj = { character: "p", matcher: null };
 const items4 = [
@@ -310,7 +305,7 @@ const items4 = [
   "\u048F",
 ];
 const regExp4 = new RegExp(items4.join("|"), "gu");
-obj[1] = regExp4;
+obj.matcher = regExp4;
 items2[2] = obj;
 const obj1 = { character: "s", matcher: null };
 const items5 = [
@@ -337,7 +332,7 @@ const items5 = [
   "\uFF53",
 ];
 const regExp5 = new RegExp(items5.join("|"), "gu");
-obj1[1] = regExp5;
+obj1.matcher = regExp5;
 items2[3] = obj1;
 const obj2 = { character: ":", matcher: null };
 const items6 = [
@@ -362,7 +357,7 @@ const items6 = [
   "\u037E",
 ];
 const regExp6 = new RegExp(items6.join("|"), "gu");
-obj2[1] = regExp6;
+obj2.matcher = regExp6;
 items2[4] = obj2;
 const obj3 = { character: "/", matcher: null };
 const items7 = [
@@ -382,7 +377,7 @@ const items7 = [
   "\u{1D23A}",
 ];
 const regExp7 = new RegExp(items7.join("|"), "gu");
-obj3[1] = regExp7;
+obj3.matcher = regExp7;
 items2[5] = obj3;
 let closure_5 = [
   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0,
@@ -390,7 +385,7 @@ let closure_5 = [
   1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
   1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0,
 ];
-let result = set.fileFinishedImporting("modules/markup/UnicodeSanitizationUtils.tsx");
+let result = size.fileFinishedImporting("modules/markup/UnicodeSanitizationUtils.tsx");
 
 export const BLANK_CHARACTERS_TO_SANITIZE_REGEX = regExp;
 export const BLANK_CHARACTERS_TO_SANITIZE_REGEX_EXCLUDING_TABS = regExp1;
@@ -403,7 +398,9 @@ export const sanitizeWhitespaceExcludingTabs = function sanitizeWhitespaceExclud
 export const UNICODE_CONFUSABLES_FOR_URL_DETECTION = items2;
 export const sanitizeUnicodeConfusables = function sanitizeUnicodeConfusables(sanitizeWhitespaceResult) {
   closure_0 = sanitizeWhitespaceResult;
-  const item = items2.forEach((matcher) => {});
+  const item = items2.forEach((matcher) => {
+    closure_0 = closure_0.replace(matcher.matcher, matcher.character);
+  });
   return closure_0;
 };
 export const safelyMakeUrlHumanReadable = function safelyMakeUrlHumanReadable(origin) {

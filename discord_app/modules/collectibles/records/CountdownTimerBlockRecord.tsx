@@ -1,9 +1,8 @@
 // discord_app/modules/collectibles/records/CountdownTimerBlockRecord.tsx
-import set from "../../../../_runtime/00002_set.js";
 import ShopBlockType from "../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-let prototype;
-prototype = function CountdownTimerBlockRecord(end_time) {
+const prototype = function CountdownTimerBlockRecord(end_time) {
   const obj = Object.create(new.target.prototype);
   obj.type = ShopBlockType.ShopBlockType.COUNTDOWN_TIMER;
   ({ title: tmp.title, body: tmp.body, banner_url: tmp.bannerUrl } = end_time);
@@ -12,16 +11,19 @@ prototype = function CountdownTimerBlockRecord(end_time) {
   return obj;
 }.prototype;
 prototype["fromServer"] = function fromServer(end_time) {
-  if (typeof prototype !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof prototype === "function") {
+    const obj = Object.create(tmp.prototype);
+    obj.type = ShopBlockType.ShopBlockType.COUNTDOWN_TIMER;
+    ({ title: tmp3.title, body: tmp3.body, banner_url: tmp3.bannerUrl } = end_time);
+    const _Date = Date;
+    const date = new Date(end_time.end_time);
+    obj.endTime = date;
+    obj.textColor = end_time.text_color;
+    return obj;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const obj = Object.create(prototype.prototype);
-  obj.type = ShopBlockType.ShopBlockType.COUNTDOWN_TIMER;
-  ({ title: tmp2.title, body: tmp2.body, banner_url: tmp2.bannerUrl } = end_time);
-  obj.endTime = new Date(end_time.end_time);
-  obj.textColor = end_time.text_color;
-  return obj;
 };
-const result = set.fileFinishedImporting("modules/collectibles/records/CountdownTimerBlockRecord.tsx");
+const result = size.fileFinishedImporting("modules/collectibles/records/CountdownTimerBlockRecord.tsx");
 
 export const CountdownTimerBlockRecord = prototype;

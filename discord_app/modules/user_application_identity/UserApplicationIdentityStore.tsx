@@ -1,15 +1,15 @@
 // discord_app/modules/user_application_identity/UserApplicationIdentityStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
 
-let obj = { NOT_FETCHED: "NOT_FETCHED", FETCHING: "FETCHING", FETCHED: "FETCHED" };
+let FetchState = { NOT_FETCHED: "NOT_FETCHED", FETCHING: "FETCHING", FETCHED: "FETCHED" };
 let map = new Map();
 const map1 = new Map();
 const Store = initializeDefault.Store;
 class UserApplicationIdentityStore extends Store {}
 const prototype = UserApplicationIdentityStore.prototype;
 prototype["getUserIdentities"] = function getUserIdentities(arg0) {
-  const value = map.get(arg0);
+  value = map.get(arg0);
   let identities;
   if (value != null) {
     identities = value.identities;
@@ -19,12 +19,12 @@ prototype["getUserIdentities"] = function getUserIdentities(arg0) {
   }
   return identities;
 };
-prototype["getUserIdentityByApplication"] = function getUserIdentityByApplication(closure_0, closure_1) {
-  let value = map.get(closure_0);
+prototype["getUserIdentityByApplication"] = function getUserIdentityByApplication(arg0, arg1) {
+  map.get(arg0);
   value = undefined;
   if (value != null) {
     const byApplication = value.byApplication;
-    value = byApplication.get(closure_1);
+    value = byApplication.get(arg1);
   }
   if (value == null) {
     value = null;
@@ -41,7 +41,7 @@ prototype["getFetchState"] = function getFetchState(arg0) {
 prototype["isFetchingUser"] = function isFetchingUser(arg0) {
   return this.getFetchState(arg0) === obj.FETCHING;
 };
-obj = {
+FetchState = {
   USER_APPLICATION_IDENTITY_FETCH_USER_START: function handleFetchUserStart(userId) {
     const result = map1.set(userId.userId, obj.FETCHING);
   },
@@ -61,9 +61,8 @@ obj = {
     const result = map1.set(userId.userId, obj.FETCHED);
   },
   USER_APPLICATION_IDENTITY_REMOVE: function handleRemoveIdentity(user_id) {
-    obj = user_id;
-    obj = map;
-    const value = map.get(user_id.user_id);
+    let obj = map;
+    value = map.get(user_id.user_id);
     if (null == value) {
       return false;
     } else {
@@ -77,16 +76,15 @@ obj = {
           return items;
         }),
       );
-      obj = { identities: null, byApplication: null };
-      obj[0] = found;
-      obj[1] = map;
+      obj = { identities: found, byApplication: map };
       const result = obj.set(user_id, obj);
       const result1 = map1.set(user_id, obj.FETCHED);
     }
   },
 };
-const userApplicationIdentityStore = new UserApplicationIdentityStore(dispatcherDefault, obj);
-let result = require("set").fileFinishedImporting("modules/user_application_identity/UserApplicationIdentityStore.tsx");
+const userApplicationIdentityStore = new UserApplicationIdentityStore(DispatcherDefault, FetchState);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_application_identity/UserApplicationIdentityStore.tsx");
 
 export default userApplicationIdentityStore;
-export const FetchState = obj;
+export { FetchState };

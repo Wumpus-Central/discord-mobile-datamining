@@ -1,13 +1,13 @@
 // discord_common/js/packages/protos/discord_protos/premium_marketing/v1/admin_editor_test_component.tsx
 import _mod1188 from "../../../../../../../_runtime/metro/01188__.js";
-import create from "../../common/v1/localized_string.tsx";
-import create2 from "help_article.tsx";
-import create3 from "cta_button.tsx";
-import create4 from "theme_aware_asset.tsx";
-import closure_2 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
-import { MessageType } from "../../../../../../../_runtime/metro/01188__.js";
+import localized_string from "../../common/v1/localized_string.tsx";
+import help_article from "help_article.tsx";
+import cta_button from "cta_button.tsx";
+import theme_aware_asset from "theme_aware_asset.tsx";
+import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
 
-require = arg1;
+require = fn;
+const MessageType = fn(1188).MessageType;
 class AdminEditorTestComponent$Type extends MessageType {
   constructor() {
     items = [, , , , , , , ,];
@@ -17,7 +17,7 @@ class AdminEditorTestComponent$Type extends MessageType {
       name: "localized_text_field",
       kind: "message",
       T() {
-        return callback(10670).LocalizedString;
+        return require("localized_string").LocalizedString;
       },
     };
     items[2] = { no: 3, name: "plain_text_field", kind: "scalar", T: 9 };
@@ -26,7 +26,7 @@ class AdminEditorTestComponent$Type extends MessageType {
       name: "textarea_field",
       kind: "message",
       T() {
-        return callback(10670).LocalizedString;
+        return require("localized_string").LocalizedString;
       },
     };
     items[4] = { no: 5, name: "checkbox_field", kind: "scalar", T: 8 };
@@ -36,27 +36,26 @@ class AdminEditorTestComponent$Type extends MessageType {
       name: "themed_asset_field",
       kind: "message",
       T() {
-        return callback(10680).ThemeAwareAsset;
+        return require("theme_aware_asset").ThemeAwareAsset;
       },
     };
     obj = { no: 8, name: "help_article_field", kind: "message", T: null };
     class T {
       constructor() {
-        return require("create").HelpArticle;
+        return closure_1_0(closure_1_1[4]).HelpArticle;
       }
     }
-    obj[3] = T;
+    obj.T = T;
     items[7] = obj;
     items[8] = {
       no: 9,
       name: "cta_field",
       kind: "message",
       T() {
-        return callback(10672).CTAButton;
+        return require("cta_button").CTAButton;
       },
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.AdminEditorTestComponent", items, T);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
@@ -72,7 +71,7 @@ prototype["create"] = function create(arr) {
   }
   return obj;
 };
-prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
   let obj = arg3;
   if (arg3 == null) {
@@ -81,18 +80,12 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         obj.deprecatedField = pos.string();
       } else if (2 === tmp5) {
-        let tmp42 = require;
-        let tmp43 = dependencyMap;
-        let LocalizedString2 = create.LocalizedString;
-        let tmp44 = LocalizedString2;
-        let tmp45 = pos;
-        let tmp46 = readUnknownField;
+        let LocalizedString2 = localized_string.LocalizedString;
         obj.localizedTextField = LocalizedString2.internalBinaryRead(
           pos,
           pos.uint32(),
@@ -102,24 +95,14 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (3 === tmp5) {
         obj.plainTextField = pos.string();
       } else if (4 === tmp5) {
-        let tmp37 = require;
-        let tmp38 = dependencyMap;
-        let LocalizedString = create.LocalizedString;
-        let tmp39 = LocalizedString;
-        let tmp40 = pos;
-        let tmp41 = readUnknownField;
+        let LocalizedString = localized_string.LocalizedString;
         obj.textareaField = LocalizedString.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.textareaField);
       } else if (5 === tmp5) {
         obj.checkboxField = pos.bool();
       } else if (6 === tmp5) {
         obj.assetField = pos.string();
       } else if (7 === tmp5) {
-        let tmp32 = require;
-        let tmp33 = dependencyMap;
-        let ThemeAwareAsset = create4.ThemeAwareAsset;
-        let tmp34 = ThemeAwareAsset;
-        let tmp35 = pos;
-        let tmp36 = readUnknownField;
+        let ThemeAwareAsset = theme_aware_asset.ThemeAwareAsset;
         obj.themedAssetField = ThemeAwareAsset.internalBinaryRead(
           pos,
           pos.uint32(),
@@ -127,12 +110,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
           obj.themedAssetField,
         );
       } else if (8 === tmp5) {
-        let tmp27 = require;
-        let tmp28 = dependencyMap;
-        let HelpArticle = create2.HelpArticle;
-        let tmp29 = HelpArticle;
-        let tmp30 = pos;
-        let tmp31 = readUnknownField;
+        let HelpArticle = help_article.HelpArticle;
         obj.helpArticleField = HelpArticle.internalBinaryRead(
           pos,
           pos.uint32(),
@@ -140,12 +118,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
           obj.helpArticleField,
         );
       } else if (9 === tmp5) {
-        let tmp22 = require;
-        let tmp23 = dependencyMap;
-        let CTAButton = create3.CTAButton;
-        let tmp24 = CTAButton;
-        let tmp25 = pos;
-        let tmp26 = readUnknownField;
+        let CTAButton = cta_button.CTAButton;
         obj.ctaField = CTAButton.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.ctaField);
       } else {
         let onRead = readUnknownField.readUnknownField;
@@ -156,25 +129,16 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -189,7 +153,7 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(deprecatedField,
     const tagResult = tag.tag(1, _mod1188.WireType.LengthDelimited);
   }
   if (deprecatedField.localizedTextField) {
-    const LocalizedString = create.LocalizedString;
+    const LocalizedString = localized_string.LocalizedString;
     const tagResult1 = tag.tag(2, _mod1188.WireType.LengthDelimited);
     const joined = LocalizedString.internalBinaryWrite(
       deprecatedField.localizedTextField,
@@ -207,7 +171,7 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(deprecatedField,
     const tagResult2 = tag.tag(3, _mod1188.WireType.LengthDelimited);
   }
   if (deprecatedField.textareaField) {
-    const LocalizedString2 = create.LocalizedString;
+    const LocalizedString2 = localized_string.LocalizedString;
     const tagResult3 = tag.tag(4, _mod1188.WireType.LengthDelimited);
     const joined1 = LocalizedString2.internalBinaryWrite(
       deprecatedField.textareaField,
@@ -229,7 +193,7 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(deprecatedField,
     const tagResult5 = tag.tag(6, _mod1188.WireType.LengthDelimited);
   }
   if (deprecatedField.themedAssetField) {
-    const ThemeAwareAsset = create4.ThemeAwareAsset;
+    const ThemeAwareAsset = theme_aware_asset.ThemeAwareAsset;
     const tagResult6 = tag.tag(7, _mod1188.WireType.LengthDelimited);
     const joined2 = ThemeAwareAsset.internalBinaryWrite(
       deprecatedField.themedAssetField,
@@ -243,7 +207,7 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(deprecatedField,
     );
   }
   if (deprecatedField.helpArticleField) {
-    const HelpArticle = create2.HelpArticle;
+    const HelpArticle = help_article.HelpArticle;
     const tagResult7 = tag.tag(8, _mod1188.WireType.LengthDelimited);
     const joined3 = HelpArticle.internalBinaryWrite(
       deprecatedField.helpArticleField,
@@ -257,7 +221,7 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(deprecatedField,
     );
   }
   if (deprecatedField.ctaField) {
-    const CTAButton = create3.CTAButton;
+    const CTAButton = cta_button.CTAButton;
     const tagResult8 = tag.tag(9, _mod1188.WireType.LengthDelimited);
     const joined4 = CTAButton.internalBinaryWrite(
       deprecatedField.ctaField,
@@ -287,7 +251,7 @@ let items = [
     name: "localized_text_field",
     kind: "message",
     T() {
-      return callback(10670).LocalizedString;
+      return require("localized_string").LocalizedString;
     },
   },
   { no: 3, name: "plain_text_field", kind: "scalar", T: 9 },
@@ -296,7 +260,7 @@ let items = [
     name: "textarea_field",
     kind: "message",
     T() {
-      return callback(10670).LocalizedString;
+      return require("localized_string").LocalizedString;
     },
   },
   { no: 5, name: "checkbox_field", kind: "scalar", T: 8 },
@@ -306,7 +270,7 @@ let items = [
     name: "themed_asset_field",
     kind: "message",
     T() {
-      return callback(10680).ThemeAwareAsset;
+      return require("theme_aware_asset").ThemeAwareAsset;
     },
   },
   ,
@@ -314,17 +278,17 @@ let items = [
 let obj = { no: 8, name: "help_article_field", kind: "message", T: null };
 class T {
   constructor() {
-    return require("create").HelpArticle;
+    return closure_1_0(closure_1_1[4]).HelpArticle;
   }
 }
-obj[3] = T;
+obj.T = T;
 items[7] = obj;
 items[8] = {
   no: 9,
   name: "cta_field",
   kind: "message",
   T() {
-    return callback(10672).CTAButton;
+    return require("cta_button").CTAButton;
   },
 };
 prototype = new prototype(
@@ -336,8 +300,8 @@ prototype = new prototype(
   prototype,
   items,
 );
-// ThrowIfThisInitialized (0x7c)
-let result = require("set").fileFinishedImporting(
+const size = fn(2);
+let result = size.fileFinishedImporting(
   "../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/admin_editor_test_component.tsx",
 );
 

@@ -1,9 +1,10 @@
 // discord_app/modules/forums/native/composer/hooks/useBackspaceHandler.tsx
-import closure_0 from "../../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const re1 =
   /((\ud83c[\udde6-\uddff]){2}|([#*0-9]\u20e3)|(\u00a9|\u00ae|[\u2000-\u3300]|[\ud83c-\ud83e][\ud000-\udfff])((\ud83c[\udffb-\udfff])?(\ud83e[\uddb0-\uddb3])?(\ufe0f?\u200d([\u2000-\u3300]|[\ud83c-\ud83e][\ud000-\udfff])\ufe0f?)?)*)/g;
-const result = require("set").fileFinishedImporting("modules/forums/native/composer/hooks/useBackspaceHandler.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/forums/native/composer/hooks/useBackspaceHandler.tsx");
 
 export const useBackspaceHandler = function useBackspaceHandler(selection) {
   selection = selection.selection;
@@ -23,11 +24,10 @@ export const useBackspaceHandler = function useBackspaceHandler(selection) {
         }
       }
       while (true) {
-        let tmp5 = num;
         if (start >= num) {
-          let obj = draftContent;
+          let obj = re1;
           let str = draftContent;
-          if (draftContent.test(draftContent.substring(start - num, start))) {
+          if (re1.test(draftContent.substring(start - num, start))) {
             let sum = num + 1;
             num2 = num;
             if (start < sum) {
@@ -38,7 +38,6 @@ export const useBackspaceHandler = function useBackspaceHandler(selection) {
               if (!obj.test(str.substring(start - num - 1, start))) {
                 break;
               } else {
-                let num3 = 8;
                 num = sum1;
                 num2 = 1;
                 if (sum1 > 8) {

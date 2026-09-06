@@ -1,8 +1,22 @@
 // discord_app/modules/quests/experiments/BountiesVerticalScrollExperiment.tsx
-import set from "../../../../_runtime/00002_set.js";
 import ApexExperiment from "../../experiments/apex/index.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const obj = {
+let obj = {
+  name: "2026-07-bounties-vertical-scroll",
+  kind: "user",
+  defaultConfig: {
+    enabled: false,
+    verticalScrollEnabled: false,
+    scrollAffordanceVariant: "none",
+    autoScrollLeadMs: 3000,
+    autoScrollEndCardMs: 3000,
+    peekFraction: 0,
+    ctaTimerMilliSeconds: 0,
+  },
+  variations: null,
+};
+obj = {
   1: null,
   2: {
     enabled: true,
@@ -50,21 +64,9 @@ obj[5] = {
   peekFraction: 0.12,
   ctaTimerMilliSeconds: 0,
 };
-const apexExperiment = ApexExperiment.createApexExperiment({
-  name: "2026-07-bounties-vertical-scroll",
-  kind: "user",
-  defaultConfig: {
-    enabled: false,
-    verticalScrollEnabled: false,
-    scrollAffordanceVariant: "none",
-    autoScrollLeadMs: 3000,
-    autoScrollEndCardMs: 3000,
-    peekFraction: 0,
-    ctaTimerMilliSeconds: 0,
-  },
-  variations: obj,
-});
-const result = set.fileFinishedImporting("modules/quests/experiments/BountiesVerticalScrollExperiment.tsx");
+obj.variations = obj;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/quests/experiments/BountiesVerticalScrollExperiment.tsx");
 
 export const BountiesVerticalScrollExperiment = apexExperiment;
 export const useIsBountiesVerticalScrollExperimentEnabled = function useIsBountiesVerticalScrollExperimentEnabled(

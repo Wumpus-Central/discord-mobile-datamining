@@ -1,16 +1,15 @@
 // discord_app/modules/guild_products/GuildProductLinkActionCreators.native.tsx
-import set from "../../../_runtime/00002_set.js";
-import getSystemLocale from "../../intl/index.native.tsx";
-import _modDef4905 from "../../actions/native/AlertActionCreators.tsx";
+import util from "../../intl/index.native.tsx";
+import actions_AlertActionCreatorsDefault from "../../actions/native/AlertActionCreators.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/guild_products/GuildProductLinkActionCreators.native.tsx");
+const result = size.fileFinishedImporting("modules/guild_products/GuildProductLinkActionCreators.native.tsx");
 
-export const openGuildProductLink = function openGuildProductLink(closure_0, closure_1) {
-  let obj = _modDef4905;
-  obj = { body: null, confirmText: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t["mYlo/T"]);
-  const intl2 = getSystemLocale.intl;
-  obj[1] = intl2.string(getSystemLocale.t.BddRzS);
+export const openGuildProductLink = function openGuildProductLink() {
+  const obj = { body: null, confirmText: null };
+  const intl = util.intl;
+  obj.body = intl.string(util.t["mYlo/T"]);
+  const intl2 = util.intl;
+  obj.confirmText = intl2.string(util.t.BddRzS);
   obj.show(obj);
 };

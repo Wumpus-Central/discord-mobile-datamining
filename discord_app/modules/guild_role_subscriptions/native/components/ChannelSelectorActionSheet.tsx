@@ -1,28 +1,28 @@
 // discord_app/modules/guild_role_subscriptions/native/components/ChannelSelectorActionSheet.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import registerAssetDefault from "../../../../../_runtime/13605_registerAsset.js";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../../../stores/ChannelStore.tsx";
-import closure_7 from "../../../../stores/GuildCategoryStore.tsx";
-import closure_8 from "../../../../stores/PermissionStore.tsx";
-import ME from "../../../../Constants.tsx";
-import { UnreadSetting } from "../../../read_states/ReadStateConstants.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import importDefaultResult from "../../../rebrand/native/TextStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js";
+import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
+import useCreateChannelSubmit from "../../../channel/useCreateChannelSubmit.tsx";
+import CreateChannelModalActionCreatorsDefault from "../../../../actions/native/CreateChannelModalActionCreators.tsx";
+import _modDef13605 from "../../../../../_runtime/metro/13605__.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import ChannelStore from "../../../../stores/ChannelStore.tsx";
+import GuildCategoryStore from "../../../../stores/GuildCategoryStore.tsx";
+import PermissionStore from "../../../../stores/PermissionStore.tsx";
+import TextStyles from "../../../rebrand/native/TextStyles.tsx";
 
-const require = arg1;
+require = fn;
 function ChannelRow(channel) {
   channel = channel.channel;
   const onChannelSelected = channel.onChannelSelected;
   let selected = channel.selected;
-  const tmp = callback();
+  const tmp = closure_14();
   const tmp4 = onChannelSelected(4713)(channel);
   const items = [onChannelSelected, channel];
-  callback = React.useCallback(() => {
-    onChannelSelected(closure_1_2[13]).hideActionSheet();
+  const callback = noop.useCallback(() => {
+    ActionSheetActionCreatorsDefault.hideActionSheet();
     onChannelSelected(channel);
   }, items);
   let obj = {
@@ -37,18 +37,21 @@ function ChannelRow(channel) {
   };
   const children = [closure_11(onChannelSelected(16116), obj)];
   if (selected) {
-    obj = { style: null, source: null };
-    obj[0] = tmp.selectedIcon;
-    obj[1] = tmp2(17692);
+    obj = { style: tmp.selectedIcon, source: tmp2(17692) };
     selected = tmp8(tmp2(5587), obj);
     const tmp2Result = tmp2(5587);
   }
   children[1] = selected;
   return closure_13(closure_12, { children });
 }
-({ Permissions: c9, Fonts } = ME);
-({ jsx: unpackModuleId, Fragment: closure_12, jsxs: map1 } = jsxProd);
-createCacheKey = {
+const View = fn(17).View;
+const Constants = fn(1074);
+({ Permissions: closure_9, Fonts } = Constants);
+const UnreadSetting = fn(4742).UnreadSetting;
+const jsxProd = fn(21);
+({ jsx: closure_11, Fragment: closure_12, jsxs: map1 } = jsxProd);
+fn(4560);
+let createStyles = {
   titleContainer: null,
   searchContainer: null,
   createChannelButton: null,
@@ -57,32 +60,36 @@ createCacheKey = {
   channelRow: null,
   selectedIcon: null,
 };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, padding: 16, width: "100%" };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 16, width: "100%" };
-let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 16, width: "100%" };
-createCacheKey[2] = {
+createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, padding: 16, width: "100%" };
+createStyles.titleContainer = createStyles;
+createStyles.searchContainer = {
+  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
+  padding: 16,
+  width: "100%",
+};
+let obj1 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 16, width: "100%" };
+createStyles.createChannelButton = {
   alignItems: "center",
-  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   flexDirection: "row",
   padding: 16,
 };
 let obj3 = {};
+const merged = Object.assign(TextStyles(Fonts.PRIMARY_MEDIUM, nativeDefault.colors.TEXT_LINK, 16));
+obj3.marginStart = 8;
+createStyles.createChannelLabel = obj3;
 let obj2 = {
   alignItems: "center",
-  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   flexDirection: "row",
   padding: 16,
 };
-const merged = Object.assign(importDefaultResult(Fonts.PRIMARY_MEDIUM, ThemesDefault.colors.TEXT_LINK, 16));
-obj3.marginStart = 8;
-createCacheKey[3] = obj3;
-createCacheKey[4] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-createCacheKey[5] = { paddingHorizontal: 8, paddingVertical: 4 };
-createCacheKey[6] = { end: 16, top: 10, position: "absolute" };
-let closure_14 = createCacheKey.createStyles(createCacheKey);
-let obj4 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-const result = require("set").fileFinishedImporting(
+createStyles.bodyContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+createStyles.channelRow = { paddingHorizontal: 8, paddingVertical: 4 };
+createStyles.selectedIcon = { end: 16, top: 10, position: "absolute" };
+let closure_14 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/native/components/ChannelSelectorActionSheet.tsx",
 );
 
@@ -94,39 +101,33 @@ export default function ChannelSelectorActionSheet(guildId) {
   }
   let first;
   let ref;
-  const tmp = callback();
+  const tmp = closure_14();
   let tmp2 = first(ref.useState(""), 2);
   first = tmp2[0];
   ref = ref.useRef(null);
   let obj = guildId(504);
-  let items = [closure_7, closure_8];
+  let items = [GuildCategoryStore, PermissionStore];
   const items1 = [guildId, first];
   const stateFromStoresArray = obj.useStateFromStoresArray(
     items,
     () => {
       const items = [];
-      const categories = closure_1_7.getCategories(guildId);
+      const categories = GuildCategoryStore.getCategories(guildId);
       const iter = categories._categories[Symbol.iterator]();
       while (iter !== undefined) {
         let tmp2 = categories[iter.next().channel.id];
-        let tmp3 = tmp2;
-        let tmp4 = tmp2;
         for (const item10020 of tmp2) {
           let tmp5 = item10020;
-          let tmp6 = closure_1_8;
-          let tmp7 = closure_1_9;
-          let canResult = closure_1_8.can(closure_1_9.VIEW_CHANNEL, item10020.channel);
+          let canResult = PermissionStore.can(constants.VIEW_CHANNEL, item10020.channel);
           if (canResult) {
             let hasItem = "" === first;
             if (!hasItem) {
-              let tmp11 = item10020;
               let name = tmp5.channel.name;
               hasItem = name.includes(tmp9);
             }
             canResult = hasItem;
           }
           if (canResult) {
-            let tmp12 = item10020;
             let arr = items.push(tmp5.channel);
           }
           continue;
@@ -143,19 +144,19 @@ export default function ChannelSelectorActionSheet(guildId) {
     const intl = tmp5(1114).intl;
     title = intl.string(tmp5(1114).t.PDn2fR);
   }
-  obj[1] = closure_11(guildId(4556).Text, {
+  obj.children = closure_11(guildId(4556).Text, {
     accessibilityRole: "header",
     variant: "text-md/bold",
     color: "mobile-text-heading-primary",
     children: title,
   });
   const items2 = [closure_11(View, obj), ,];
-  obj1 = { style: tmp.searchContainer, children: null };
+  const obj1 = { style: tmp.searchContainer, children: null };
   let obj2 = { size: "md", placeholder: null, onChange: null, onFocus: null };
   const intl2 = tmp5(1114).intl;
-  obj2[1] = intl2.string(guildId(1114).t.UTYBjS);
-  obj2[2] = tmp2[1];
-  obj2[3] = function onFocus() {
+  obj2.placeholder = intl2.string(guildId(1114).t.UTYBjS);
+  obj2.onChange = tmp2[1];
+  obj2.onFocus = function onFocus() {
     const current = ref.current;
     let expandActionSheetResult;
     if (current != null) {
@@ -163,51 +164,50 @@ export default function ChannelSelectorActionSheet(guildId) {
     }
     return expandActionSheetResult;
   };
-  obj1[1] = closure_11(guildId(7050).SearchField, obj2);
+  obj1.children = closure_11(guildId(7050).SearchField, obj2);
   items2[1] = closure_11(View, obj1);
   let tmp9Result = !hideCreateChannel;
   if (!hideCreateChannel) {
-    const obj3 = { style: null, accessibilityRole: "button", onPress: null, children: null };
-    obj3[0] = tmp.createChannelButton;
-    obj3[2] = function onPress() {
-      let obj = closure_1_1(closure_1_2[13]);
-      obj.hideActionSheet();
-      obj = { guildId, createMode: null, onChannelCreated: null };
-      const obj2 = closure_1_1(closure_1_2[23]);
-      obj[1] = guildId(closure_1_2[26]).CreateChannelMode.PREMIUM_CHANNEL;
-      obj[2] = function onChannelCreated(arg0) {
-        closure_1_1(closure_1_2[27]).close();
-        const channel = closure_1_6.getChannel(arg0);
-        if (null != channel) {
-          callback(channel);
-        }
-      };
-      obj2.pushLazy(
-        guildId(closure_1_2[25])(closure_1_2[24], closure_1_2.paths),
-        obj,
-        closure_1_1(closure_1_2[27]).CREATE_CHANNEL_MODAL_KEY,
-      );
+    const obj3 = {
+      style: tmp.createChannelButton,
+      accessibilityRole: "button",
+      onPress() {
+        let obj = ActionSheetActionCreatorsDefault;
+        obj.hideActionSheet();
+        obj = { guildId, createMode: null, onChannelCreated: null };
+        const obj2 = ModalActionCreatorsDefault;
+        obj.createMode = useCreateChannelSubmit.CreateChannelMode.PREMIUM_CHANNEL;
+        obj.onChannelCreated = function onChannelCreated(arg0) {
+          onChannelSelected(dependencyMap[27]).close();
+          channel = channel.getChannel(arg0);
+          if (null != channel) {
+            closure_1_1(channel);
+          }
+        };
+        obj2.pushLazy(
+          asyncRequireImpl(9732, dependencyMap.paths),
+          obj,
+          CreateChannelModalActionCreatorsDefault.CREATE_CHANNEL_MODAL_KEY,
+        );
+      },
+      children: null,
     };
-    let str = tmp.createChannelLabel.color;
-    str = undefined;
+    let str;
     if (str != null) {
       str = str.toString();
     }
-    const obj4 = { color: null, source: null };
-    obj4[0] = str;
-    obj4[1] = registerAssetDefault;
+    const obj4 = { color: str, source: _modDef13605 };
     const items3 = [tmp8(tmp5(1178).Icon, obj4)];
-    const obj5 = { style: null, variant: "text-md/medium", color: "text-link", children: null };
-    obj5[0] = tmp.createChannelLabel;
+    const obj5 = { style: tmp.createChannelLabel, variant: "text-md/medium", color: "text-link", children: null };
     const intl3 = tmp5(1114).intl;
-    obj5[3] = intl3.string(tmp5(1114).t.d7AN7W);
+    obj5.children = intl3.string(tmp5(1114).t.d7AN7W);
     items3[1] = tmp8(tmp5(4556).Text, obj5);
-    obj3[3] = items3;
+    obj3.children = items3;
     tmp9Result = tmp9(tmp5(5123).PressableOpacity, obj3);
   }
   items2[2] = tmp9Result;
-  obj[2] = closure_13(closure_12, { children: items2 });
-  obj[3] = closure_11(guildId(6627).BottomSheetFlatList, {
+  obj.header = closure_13(closure_12, { children: items2 });
+  obj.children = closure_11(guildId(6627).BottomSheetFlatList, {
     style: tmp.bodyContainer,
     data: stateFromStoresArray,
     keyExtractor(id) {
@@ -215,11 +215,7 @@ export default function ChannelSelectorActionSheet(guildId) {
     },
     renderItem(item) {
       item = item.item;
-      return closure_1_11(closure_1_15, {
-        channel: item,
-        onChannelSelected: closure_1,
-        selected: item.id === closure_2,
-      });
+      return closure_2_11(ChannelRow, { channel: item, onChannelSelected, selected: item.id === dependencyMap });
     },
   });
   return closure_11(guildId(7198).ActionSheet, obj);

@@ -1,45 +1,47 @@
 // discord_app/modules/messages/MessageViewTrackingManager.tsx
-import set2 from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
-import encodeProperties from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import isDiscordFrontendDevelopment from "../../utils/GlobalUtils.tsx";
+import Constants from "../../Constants.tsx";
+import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
+import discord_common_AnalyticsUtils from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import privDefault from "../../../_runtime/01437_priv.js";
-import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
-import QUICK_SWITCHERDefault from "../app_analytics/AnalyticsLocation.tsx";
+import AnalyticsLocationDefault from "../app_analytics/AnalyticsLocation.tsx";
+import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 function getAnalyticsConfig(type) {
   type = type.type;
-  if (obj.ANNOUNCEMENT === type) {
-    obj = { event: null, properties: null };
-    obj[0] = AnalyticEvents.ANNOUNCEMENT_MESSAGE_VIEWED;
-    obj = { message_id: null, channel_id: null, guild_id: null, source_channel_id: null, source_guild_id: null };
+  if (properties.ANNOUNCEMENT === type) {
+    properties = { event: AnalyticEvents.ANNOUNCEMENT_MESSAGE_VIEWED, properties: null };
+    properties = { message_id: null, channel_id: null, guild_id: null, source_channel_id: null, source_guild_id: null };
     ({
-      messageId: obj9[0],
-      channelId: obj9[1],
-      guildId: obj9[2],
-      sourceChannelId: obj9[3],
-      sourceGuildId: obj9[4],
+      messageId: obj9.message_id,
+      channelId: obj9.channel_id,
+      guildId: obj9.guild_id,
+      sourceChannelId: obj9.source_channel_id,
+      sourceGuildId: obj9.source_guild_id,
     } = type);
-    obj[1] = obj;
-    return obj;
+    properties.properties = properties;
+    return properties;
   } else if (tmp.APP_EMBED === type) {
-    obj1 = { event: null, properties: null };
-    obj1[0] = AnalyticEvents.APP_EMBED_VIEWED;
-    ({ applicationId: obj7[0], linkType: obj7[1], messageId: obj7[2], channelId: obj7[3], guildId: obj7[4] } = type);
-    obj1[1] = { application_id: null, link_type: null, message_id: null, channel_id: null, guild_id: null };
+    const obj1 = { event: AnalyticEvents.APP_EMBED_VIEWED, properties: null };
+    ({
+      applicationId: obj7.application_id,
+      linkType: obj7.link_type,
+      messageId: obj7.message_id,
+      channelId: obj7.channel_id,
+      guildId: obj7.guild_id,
+    } = type);
+    obj1.properties = { application_id: null, link_type: null, message_id: null, channel_id: null, guild_id: null };
     return obj1;
   } else if (tmp.OFFICIAL_MESSAGE === type) {
-    const obj3 = { event: null, properties: null };
-    obj3[0] = AnalyticEvents.OFFICIAL_MESSAGE_VIEWED;
-    ({ messageId: obj5[0], channelId: obj5[1], guildId: obj5[2] } = type);
-    obj3[1] = { message_id: null, channel_id: null, guild_id: null };
+    const obj3 = { event: AnalyticEvents.OFFICIAL_MESSAGE_VIEWED, properties: null };
+    ({ messageId: obj5.message_id, channelId: obj5.channel_id, guildId: obj5.guild_id } = type);
+    obj3.properties = { message_id: null, channel_id: null, guild_id: null };
     return obj3;
   } else if (tmp.VOICE_INVITE_EMBED === type) {
-    const obj5 = { event: null, properties: null };
-    obj5[0] = encodeProperties.ImpressionNames.VOICE_INVITE_EMBED;
+    const obj5 = { event: discord_common_AnalyticsUtils.ImpressionNames.VOICE_INVITE_EMBED, properties: null };
     const obj6 = {
-      impression_type: null,
+      impression_type: discord_common_AnalyticsUtils.ImpressionTypes.VIEW,
       invite_code: null,
       invite_guild_id: null,
       invite_channel_id: null,
@@ -47,28 +49,27 @@ function getAnalyticsConfig(type) {
       has_active_stream: null,
       location_stack: null,
     };
-    obj6[0] = encodeProperties.ImpressionTypes.VIEW;
     ({
-      inviteCode: obj3[1],
-      inviteGuildId: obj3[2],
-      inviteChannelId: obj3[3],
-      inviteInstanceId: obj3[4],
-      hasActiveStream: obj3[5],
+      inviteCode: obj3.invite_code,
+      inviteGuildId: obj3.invite_guild_id,
+      inviteChannelId: obj3.invite_channel_id,
+      inviteInstanceId: obj3.invite_instance_id,
+      hasActiveStream: obj3.has_active_stream,
       treatmentRendered,
     } = type);
-    const INVITE_EMBED = QUICK_SWITCHERDefault.INVITE_EMBED;
+    const INVITE_EMBED = AnalyticsLocationDefault.INVITE_EMBED;
     if (treatmentRendered) {
-      const items = [INVITE_EMBED, QUICK_SWITCHERDefault.VOICE_CHANNEL_LIST_INVITE_EMBED];
+      const items = [INVITE_EMBED, AnalyticsLocationDefault.VOICE_CHANNEL_LIST_INVITE_EMBED];
       let items1 = items;
     } else {
       items1 = [INVITE_EMBED];
     }
-    obj6[6] = items1;
-    obj5[1] = obj6;
+    obj6.location_stack = items1;
+    obj5.properties = obj6;
     return obj5;
   } else {
-    obj = isDiscordFrontendDevelopment;
-    return obj.assertNever(type);
+    properties = GlobalUtils;
+    return properties.assertNever(type);
   }
 }
 function getMessageViewKey(type) {
@@ -81,14 +82,13 @@ function getMessageViewKey(type) {
   }
   return combined;
 }
-const AnalyticEvents = ME.AnalyticEvents;
-let obj = {
+const AnalyticEvents = Constants.AnalyticEvents;
+const MessageViewTrackingType = {
   ANNOUNCEMENT: "announcement",
   APP_EMBED: "app_embed",
   OFFICIAL_MESSAGE: "official_message",
   VOICE_INVITE_EMBED: "voice_invite_embed",
 };
-initializeDefault;
 class MessageViewTrackingManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -96,7 +96,7 @@ class MessageViewTrackingManager extends tmp2 {
     applyArgumentsResult.currentlyVisibleMessageTimers = {};
     set = new Set();
     applyArgumentsResult.viewsInCurrentChannel = set;
-    tmp4 = new require("priv")({ max: 500, maxAge: 60000 });
+    tmp4 = new closure_1(closure_2[5])({ max: 500, maxAge: 60000 });
     applyArgumentsResult.recentViewTimes = tmp4;
     applyArgumentsResult.batchBuffer = [];
     applyArgumentsResult.batchTimerId = null;
@@ -110,8 +110,7 @@ class MessageViewTrackingManager extends tmp2 {
 }
 const prototype = MessageViewTrackingManager.prototype;
 prototype["handleMessageBecameVisible"] = function handleMessageBecameVisible(type) {
-  let self = this;
-  self = this;
+  const self = this;
   closure_1 = type;
   if (type.type === obj.VOICE_INVITE_EMBED) {
     const _HermesInternal2 = HermesInternal;
@@ -124,7 +123,7 @@ prototype["handleMessageBecameVisible"] = function handleMessageBecameVisible(ty
     let viewsInCurrentChannel = self.viewsInCurrentChannel;
     if (!viewsInCurrentChannel.has(combined)) {
       let recentViewTimes = self.recentViewTimes;
-      const value = recentViewTimes.get(combined);
+      value = recentViewTimes.get(combined);
       if (null == value) {
         const _setTimeout = setTimeout;
         self.currentlyVisibleMessageTimers[combined] = setTimeout(() => {
@@ -173,11 +172,9 @@ prototype["handleMessageListVisibilityChange"] = function handleMessageListVisib
       let _HermesInternal = HermesInternal;
       let endsWithResult = nextResult.endsWith("-" + ANNOUNCEMENT);
       if (endsWithResult) {
-        let tmp8 = nextResult;
         endsWithResult = !set.has(tmp6);
       }
       if (endsWithResult) {
-        let tmp9 = nextResult;
         let clearTimerResult = self.clearTimer(tmp6);
       }
       continue;
@@ -208,11 +205,8 @@ prototype["handleChannelSelect"] = function handleChannelSelect() {
 prototype["drainBuffer"] = function drainBuffer() {
   const self = this;
   while (tmp !== undefined) {
-    let tmp3 = getAnalyticsConfig;
     let tmp4 = getAnalyticsConfig(tmp2);
-    let tmp5 = importDefault;
-    let tmp6 = dependencyMap;
-    obj = expandEventPropertiesDefault;
+    obj = AnalyticsUtilsDefault;
     let trackResult = obj.track(tmp4.event, tmp4.properties);
     continue;
   }
@@ -223,21 +217,20 @@ prototype["drainBuffer"] = function drainBuffer() {
     self.batchTimerId = null;
   }
 };
-prototype["bufferViewTrack"] = function bufferViewTrack(closure_1) {
-  let self = this;
-  self = this;
+prototype["bufferViewTrack"] = function bufferViewTrack(arg0) {
+  const self = this;
   if (this.batchBuffer.length >= 10) {
     self.drainBuffer();
   }
   const batchBuffer = self.batchBuffer;
-  batchBuffer.push(closure_1);
+  batchBuffer.push(arg0);
   if (null == self.batchTimerId) {
     const _setTimeout = setTimeout;
     self.batchTimerId = setTimeout(() => self.drainBuffer(), 2000);
   }
 };
 const messageViewTrackingManager = new MessageViewTrackingManager();
-let result = set2.fileFinishedImporting("modules/messages/MessageViewTrackingManager.tsx");
+let result = size.fileFinishedImporting("modules/messages/MessageViewTrackingManager.tsx");
 
 export default messageViewTrackingManager;
-export const MessageViewTrackingType = obj;
+export { MessageViewTrackingType };

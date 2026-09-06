@@ -1,19 +1,19 @@
 // discord_app/modules/scheduled_messages/native/ScheduledMessagesIntro.tsx
-import set from "../../../../_runtime/00002_set.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import AttachmentIcon from "../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
 import PlusLargeIcon from "../../../design/components/Icon/native/redesign/generated/PlusLargeIcon.tsx";
 import CalendarPlusIcon from "../../../design/components/Icon/native/redesign/generated/CalendarPlusIcon.tsx";
-import registerAssetDefault from "../../../../_runtime/12220_registerAsset.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import _modDef12220 from "../../../../_runtime/metro/12220__.js";
+import get_ActivityIndicator from "../../../../_runtime/metro/00017__.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 function MenuRow(arg0) {
   ({ icon, label, highlighted } = arg0);
-  const tmp = callback3();
+  const tmp = closure_8();
   const items = [tmp.menuRow];
   let menuRowHighlighted = null;
   if (highlighted) {
@@ -21,16 +21,16 @@ function MenuRow(arg0) {
   }
   let obj = { style: items, children: null };
   items[1] = menuRowHighlighted;
-  obj = { size: "sm", color: ThemesDefault.colors.TEXT_STRONG };
+  obj = { size: "sm", color: nativeDefault.colors.TEXT_STRONG };
   const items1 = [
-    callback(icon, obj),
-    callback(Text.Text, { variant: "text-sm/medium", color: "text-default", children: label }),
+    timestampProducer(icon, obj),
+    timestampProducer(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: label }),
   ];
-  obj[1] = items1;
-  return closure_7(closure_5, obj);
+  obj.children = items1;
+  return React5(hasOwnProperty, obj);
 }
-({ Image: c3, ScrollView: c4, View: c5 } = get_ActivityIndicator);
-({ jsx: closure_6, jsxs: error } = jsxProd);
+({ Image: c3, ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let obj = {
   scrollView: { flex: 1 },
   pageContainer: null,
@@ -50,121 +50,105 @@ obj = {
   alignItems: "center",
   flexGrow: 1,
   justifyContent: "center",
-  paddingBottom: ThemesDefault.space.PX_32,
-  paddingHorizontal: ThemesDefault.space.PX_32,
+  paddingBottom: nativeDefault.space.PX_32,
+  paddingHorizontal: nativeDefault.space.PX_32,
 };
-obj[1] = obj;
-obj[2] = { alignItems: "center" };
-obj[3] = { height: 144, marginBottom: ThemesDefault.space.PX_16, width: 180 };
-let obj1 = { height: 144, marginBottom: ThemesDefault.space.PX_16, width: 180 };
-obj[4] = { gap: ThemesDefault.space.PX_8 };
-obj[5] = { textAlign: "center" };
-let obj2 = { gap: ThemesDefault.space.PX_8 };
-obj[6] = {
+obj.pageContainer = obj;
+obj.container = { alignItems: "center" };
+let size = { height: 144, marginBottom: nativeDefault.space.PX_16, width: 180 };
+obj.upsellImage = size;
+obj.textContainer = { gap: nativeDefault.space.PX_8 };
+obj.text = { textAlign: "center" };
+let obj1 = { gap: nativeDefault.space.PX_8 };
+obj.demo = {
   alignSelf: "stretch",
-  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
-  borderColor: ThemesDefault.colors.BORDER_NORMAL,
-  borderRadius: ThemesDefault.radii.md,
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderColor: nativeDefault.colors.BORDER_NORMAL,
+  borderRadius: nativeDefault.radii.md,
   borderWidth: 1,
-  gap: ThemesDefault.space.PX_8,
-  marginTop: ThemesDefault.space.PX_24,
+  gap: nativeDefault.space.PX_8,
+  marginTop: nativeDefault.space.PX_24,
   overflow: "hidden",
-  padding: ThemesDefault.space.PX_12,
+  padding: nativeDefault.space.PX_12,
+};
+let obj2 = {
+  alignSelf: "stretch",
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderColor: nativeDefault.colors.BORDER_NORMAL,
+  borderRadius: nativeDefault.radii.md,
+  borderWidth: 1,
+  gap: nativeDefault.space.PX_8,
+  marginTop: nativeDefault.space.PX_24,
+  overflow: "hidden",
+  padding: nativeDefault.space.PX_12,
+};
+obj.menu = {
+  alignSelf: "flex-start",
+  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST,
+  borderRadius: nativeDefault.radii.lg,
+  overflow: "hidden",
 };
 let obj3 = {
-  alignSelf: "stretch",
-  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
-  borderColor: ThemesDefault.colors.BORDER_NORMAL,
-  borderRadius: ThemesDefault.radii.md,
-  borderWidth: 1,
-  gap: ThemesDefault.space.PX_8,
-  marginTop: ThemesDefault.space.PX_24,
-  overflow: "hidden",
-  padding: ThemesDefault.space.PX_12,
-};
-obj[7] = {
   alignSelf: "flex-start",
-  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST,
-  borderRadius: ThemesDefault.radii.lg,
+  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST,
+  borderRadius: nativeDefault.radii.lg,
   overflow: "hidden",
+};
+obj.menuRow = {
+  alignItems: "center",
+  flexDirection: "row",
+  gap: nativeDefault.space.PX_8,
+  paddingHorizontal: nativeDefault.space.PX_12,
+  paddingVertical: nativeDefault.space.PX_8,
 };
 let obj4 = {
-  alignSelf: "flex-start",
-  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST,
-  borderRadius: ThemesDefault.radii.lg,
-  overflow: "hidden",
-};
-obj[8] = {
   alignItems: "center",
   flexDirection: "row",
-  gap: ThemesDefault.space.PX_8,
-  paddingHorizontal: ThemesDefault.space.PX_12,
-  paddingVertical: ThemesDefault.space.PX_8,
+  gap: nativeDefault.space.PX_8,
+  paddingHorizontal: nativeDefault.space.PX_12,
+  paddingVertical: nativeDefault.space.PX_8,
 };
-let obj5 = {
+obj.menuRowHighlighted = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
+let obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
+obj.menuDivider = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, height: 1 };
+let obj6 = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, height: 1 };
+obj.chatInput = {
   alignItems: "center",
+  backgroundColor: nativeDefault.colors.CHAT_INPUT_BACKGROUND,
+  borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_BORDER_RADIUS,
   flexDirection: "row",
-  gap: ThemesDefault.space.PX_8,
-  paddingHorizontal: ThemesDefault.space.PX_12,
-  paddingVertical: ThemesDefault.space.PX_8,
+  gap: nativeDefault.space.PX_8,
+  paddingHorizontal: nativeDefault.space.PX_8,
+  paddingVertical: nativeDefault.space.PX_8,
 };
-obj[9] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
-let obj6 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
-obj[10] = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, height: 1 };
-const obj7 = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, height: 1 };
-obj[11] = {
+const size1 = {
   alignItems: "center",
-  backgroundColor: ThemesDefault.colors.CHAT_INPUT_BACKGROUND,
-  borderRadius: ThemesDefault.modules.mobile.CHAT_INPUT_BORDER_RADIUS,
-  flexDirection: "row",
-  gap: ThemesDefault.space.PX_8,
-  paddingHorizontal: ThemesDefault.space.PX_8,
-  paddingVertical: ThemesDefault.space.PX_8,
-};
-let obj8 = {
-  alignItems: "center",
-  backgroundColor: ThemesDefault.colors.CHAT_INPUT_BACKGROUND,
-  borderRadius: ThemesDefault.modules.mobile.CHAT_INPUT_BORDER_RADIUS,
-  flexDirection: "row",
-  gap: ThemesDefault.space.PX_8,
-  paddingHorizontal: ThemesDefault.space.PX_8,
-  paddingVertical: ThemesDefault.space.PX_8,
-};
-obj[12] = {
-  alignItems: "center",
-  backgroundColor: ThemesDefault.colors.CHAT_INPUT_ACTION_BUTTON_BACKGROUND,
-  borderRadius: ThemesDefault.radii.round,
-  height: ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE,
+  backgroundColor: nativeDefault.colors.CHAT_INPUT_ACTION_BUTTON_BACKGROUND,
+  borderRadius: nativeDefault.radii.round,
+  height: nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE,
   justifyContent: "center",
-  width: ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE,
+  width: nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE,
 };
-let closure_8 = createCacheKey.createStyles(obj);
-let obj9 = {
-  alignItems: "center",
-  backgroundColor: ThemesDefault.colors.CHAT_INPUT_ACTION_BUTTON_BACKGROUND,
-  borderRadius: ThemesDefault.radii.round,
-  height: ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE,
-  justifyContent: "center",
-  width: ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE,
-};
-const result = set.fileFinishedImporting("modules/scheduled_messages/native/ScheduledMessagesIntro.tsx");
+obj.plusButton = size1;
+let closure_8 = createStyles.createStyles(obj);
+const result = size.fileFinishedImporting("modules/scheduled_messages/native/ScheduledMessagesIntro.tsx");
 
 export default function ScheduledMessagesIntro() {
-  const tmp = callback3();
+  const tmp = closure_8();
   let obj = { style: tmp.scrollView, contentContainerStyle: tmp.pageContainer, children: null };
   obj = { style: tmp.container, children: null };
-  obj = { source: registerAssetDefault, style: tmp.upsellImage };
-  const items = [callback(closure_3, obj), ,];
-  obj1 = { style: tmp.textContainer, children: null };
+  obj = { source: _modDef12220, style: tmp.upsellImage };
+  const items = [timestampProducer(React3, obj), ,];
+  const obj1 = { style: tmp.textContainer, children: null };
   const obj2 = {
     variant: "heading-xl/extrabold",
     color: "mobile-text-heading-primary",
     style: tmp.text,
     children: null,
   };
-  const intl = getSystemLocale.intl;
-  obj2[3] = intl.string(getSystemLocale.t["C/j9NE"]);
-  const items1 = [callback(Text.Heading, obj2)];
+  const intl = util.intl;
+  obj2.children = intl.string(util.t["C/j9NE"]);
+  const items1 = [timestampProducer(Text_Text.Heading, obj2)];
   const obj3 = {
     variant: "text-sm/medium",
     color: "text-default",
@@ -172,11 +156,11 @@ export default function ScheduledMessagesIntro() {
     includeFontPadding: true,
     children: null,
   };
-  const intl2 = getSystemLocale.intl;
-  obj3[4] = intl2.format(getSystemLocale.t.PqmI8J, {});
-  items1[1] = callback(Text.Text, obj3);
-  obj1[1] = items1;
-  items[1] = callback2(closure_5, obj1);
+  const intl2 = util.intl;
+  obj3.children = intl2.format(util.t.PqmI8J, {});
+  items1[1] = timestampProducer(Text_Text.Text, obj3);
+  obj1.children = items1;
+  items[1] = React5(hasOwnProperty, obj1);
   const obj4 = {
     style: tmp.demo,
     accessibilityElementsHidden: true,
@@ -185,33 +169,33 @@ export default function ScheduledMessagesIntro() {
   };
   const obj5 = { style: tmp.menu, children: null };
   const obj6 = { icon: AttachmentIcon.AttachmentIcon, label: null, highlighted: false };
-  const intl3 = getSystemLocale.intl;
-  obj6[1] = intl3.string(getSystemLocale.t["8Hvr3+"]);
-  const items2 = [callback(MenuRow, obj6), callback(closure_5, { style: tmp.menuDivider })];
+  const intl3 = util.intl;
+  obj6.label = intl3.string(util.t["8Hvr3+"]);
+  const items2 = [timestampProducer(MenuRow, obj6), timestampProducer(hasOwnProperty, { style: tmp.menuDivider })];
   const obj8 = { icon: CalendarPlusIcon.CalendarPlusIcon, label: null, highlighted: true };
-  const intl4 = getSystemLocale.intl;
-  obj8[1] = intl4.string(getSystemLocale.t["3+ii4F"]);
-  items2[2] = callback(MenuRow, obj8);
-  obj5[1] = items2;
-  const items3 = [callback2(closure_5, obj5)];
+  const intl4 = util.intl;
+  obj8.label = intl4.string(util.t["3+ii4F"]);
+  items2[2] = timestampProducer(MenuRow, obj8);
+  obj5.children = items2;
+  const items3 = [React5(hasOwnProperty, obj5)];
   const obj9 = { style: tmp.chatInput, children: null };
   const obj10 = {
     style: tmp.plusButton,
-    children: callback(PlusLargeIcon.PlusLargeIcon, {
+    children: timestampProducer(PlusLargeIcon.PlusLargeIcon, {
       size: "xs",
-      color: ThemesDefault.colors.CHAT_INPUT_ACTION_BUTTON_ICON_DEFAULT_TINT,
+      color: nativeDefault.colors.CHAT_INPUT_ACTION_BUTTON_ICON_DEFAULT_TINT,
     }),
   };
-  const items4 = [callback(closure_5, obj10)];
+  const items4 = [timestampProducer(hasOwnProperty, obj10)];
   const obj12 = { variant: "text-sm/normal", color: "text-muted", children: null };
-  const intl5 = getSystemLocale.intl;
-  obj12[2] = intl5.string(getSystemLocale.t.fxxYiB);
-  items4[1] = callback(Text.Text, obj12);
-  obj9[1] = items4;
-  items3[1] = callback2(closure_5, obj9);
-  obj4[3] = items3;
-  items[2] = callback2(closure_5, obj4);
-  obj[1] = items;
-  obj[2] = callback2(closure_5, obj);
-  return callback(closure_4, obj);
+  const intl5 = util.intl;
+  obj12.children = intl5.string(util.t.fxxYiB);
+  items4[1] = timestampProducer(Text_Text.Text, obj12);
+  obj9.children = items4;
+  items3[1] = React5(hasOwnProperty, obj9);
+  obj4.children = items3;
+  items[2] = React5(hasOwnProperty, obj4);
+  obj.children = items;
+  obj.children = React5(hasOwnProperty, obj);
+  return timestampProducer(React4, obj);
 }

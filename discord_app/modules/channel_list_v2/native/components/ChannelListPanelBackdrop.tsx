@@ -1,43 +1,43 @@
 // discord_app/modules/channel_list_v2/native/components/ChannelListPanelBackdrop.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { DM_WIDTH } from "../../../../Constants.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import QuestHooks from "../../../quests/native/QuestHooks.native.tsx";
+import useHomeDrawerGesture from "../../../home_drawer/native/useHomeDrawerGesture.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-({ View: c4, StyleSheet } = get_ActivityIndicator);
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = {
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, StyleSheet } = get_ActivityIndicator);
+const DM_WIDTH = fn(1074).DM_WIDTH;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+fn(4560);
+let createStyles = {
   container: { flex: 1, position: "relative", overflow: "hidden" },
   panelTint: null,
   listWrapper: null,
 };
-createCacheKey = {};
+createStyles = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-createCacheKey.backgroundColor = ThemesDefault.colors.PANEL_BG;
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { flex: 1 };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting(
-  "modules/channel_list_v2/native/components/ChannelListPanelBackdrop.tsx",
-);
+createStyles.backgroundColor = nativeDefault.colors.PANEL_BG;
+createStyles.panelTint = createStyles;
+createStyles.listWrapper = { flex: 1 };
+let closure_8 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/channel_list_v2/native/components/ChannelListPanelBackdrop.tsx");
 
 export default function ChannelListPanelBackdrop(children) {
   const style = children.style;
   const contentInset = children.contentInset;
-  dependencyMap = undefined;
-  let mobileQuestDockHeight;
-  const tmp = callback();
-  dependencyMap = tmp;
-  let obj = style(16022);
+  const tmp = closure_8();
+  const container = tmp;
+  let obj = useHomeDrawerGesture;
   const isHomeDrawerEnabled = obj.useIsHomeDrawerEnabled();
-  obj1 = style(15091);
-  mobileQuestDockHeight = obj1.useMobileQuestDockHeight();
+  let obj1 = QuestHooks;
+  const mobileQuestDockHeight = obj1.useMobileQuestDockHeight();
   let items = [tmp, contentInset, mobileQuestDockHeight, style];
   obj = {
-    style: mobileQuestDockHeight.useMemo(() => {
+    style: noop.useMemo(() => {
       const items = [container.container, ,];
       const rect = contentInset;
       let num;
@@ -55,7 +55,7 @@ export default function ChannelListPanelBackdrop(children) {
       if (num2 == null) {
         num2 = 0;
       }
-      obj[1] = num2 + mobileQuestDockHeight;
+      obj.paddingBottom = num2 + mobileQuestDockHeight;
       let num3;
       if (rect != null) {
         num3 = rect.left;
@@ -63,7 +63,7 @@ export default function ChannelListPanelBackdrop(children) {
       if (num3 == null) {
         num3 = 0;
       }
-      obj[2] = num3;
+      obj.marginLeft = num3;
       let num4;
       if (rect != null) {
         num4 = rect.right;
@@ -71,7 +71,7 @@ export default function ChannelListPanelBackdrop(children) {
       if (num4 == null) {
         num4 = 0;
       }
-      obj[3] = num4;
+      obj.marginRight = num4;
       items[1] = obj;
       items[2] = style;
       return items;
@@ -79,15 +79,15 @@ export default function ChannelListPanelBackdrop(children) {
     children: null,
   };
   if (isHomeDrawerEnabled) {
-    let ScreenAlignedThemedGradientSliding = style(tmp9).ScreenAlignedThemedGradientSliding;
+    let ScreenAlignedThemedGradientSliding = require(tmp9).ScreenAlignedThemedGradientSliding;
   } else {
-    ScreenAlignedThemedGradientSliding = contentInset(tmp9);
+    ScreenAlignedThemedGradientSliding = importDefault(tmp9);
   }
-  obj = { offsetX: DM_WIDTH, offsetY: contentInset(1611)().top };
-  const items1 = [closure_6(ScreenAlignedThemedGradientSliding, obj), ,];
+  obj = { offsetX: DM_WIDTH, offsetY: useSafeAreaInsetsDefault().top };
+  const items1 = [timestampProducer(ScreenAlignedThemedGradientSliding, obj), ,];
   obj1 = { pointerEvents: "none", style: tmp.panelTint };
-  items1[1] = closure_6(closure_4, obj1);
-  items1[2] = closure_6(closure_4, { style: tmp.listWrapper, children: children.children });
-  obj[1] = items1;
-  return closure_7(closure_4, obj);
+  items1[1] = timestampProducer(React4, obj1);
+  items1[2] = timestampProducer(React4, { style: tmp.listWrapper, children: children.children });
+  obj.children = items1;
+  return React5(React4, obj);
 }

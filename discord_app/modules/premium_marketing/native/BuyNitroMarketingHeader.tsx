@@ -1,17 +1,18 @@
 // discord_app/modules/premium_marketing/native/BuyNitroMarketingHeader.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import { Gradients } from "../../colors/native/ColorConstants.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import reanimated_AccessibilityPreferencesSharedValue from "../../../design/animation/reanimated/AccessibilityPreferencesSharedValue.native.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-({ Platform, StyleSheet: c4, View: c5 } = get_ActivityIndicator);
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-let PX_8 = ThemesDefault.space.PX_8;
-const PX_12 = ThemesDefault.space.PX_12;
-let closure_11 = createCacheKey.createStyles((arg0, arg1, arg2) => {
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Platform, StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const Gradients = fn(7432).Gradients;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+let PX_8 = nativeDefault.space.PX_8;
+const PX_12 = nativeDefault.space.PX_12;
+const createStyles = fn(4560);
+let closure_11 = createStyles.createStyles((arg0, arg1, arg2) => {
   let num = 0;
   if (arg1) {
     num = 0;
@@ -19,15 +20,15 @@ let closure_11 = createCacheKey.createStyles((arg0, arg1, arg2) => {
       num = tmp(576).space.PX_8;
     }
   }
-  let obj = { marginHorizontal: -ThemesDefault.space.PX_16 + num, marginTop: null, marginBottom: null, overflow: null };
+  let obj = { marginHorizontal: -nativeDefault.space.PX_16 + num, marginTop: null, marginBottom: null, overflow: null };
   PX_8 = undefined;
   if (arg1) {
     if (arg2) {
       PX_8 = tmp(576).space.PX_8;
     }
   }
-  obj[1] = PX_8;
-  obj[2] = ThemesDefault.space.PX_16;
+  obj.marginTop = PX_8;
+  obj.marginBottom = nativeDefault.space.PX_16;
   let str;
   if (arg1) {
     if (arg2) {
@@ -38,11 +39,12 @@ let closure_11 = createCacheKey.createStyles((arg0, arg1, arg2) => {
     banner: obj,
     background: null,
     clouds: null,
-    wumpus: str,
+    wumpus: null,
     wumpusImage: null,
     backButton: null,
     content: null,
     fade: null,
+    overflow: str,
   };
   obj = {};
   const merged = Object.assign(absoluteFillObject.absoluteFillObject);
@@ -52,7 +54,7 @@ let closure_11 = createCacheKey.createStyles((arg0, arg1, arg2) => {
     num2 = 0;
   }
   obj.top = num2;
-  obj.color = ThemesDefault.colors.BACKGROUND_BASE_LOWER;
+  obj.color = nativeDefault.colors.BACKGROUND_BASE_LOWER;
   let sm;
   if (arg1) {
     if (arg2) {
@@ -60,67 +62,62 @@ let closure_11 = createCacheKey.createStyles((arg0, arg1, arg2) => {
     }
   }
   obj.borderRadius = sm;
-  obj[1] = obj;
-  const tmp3 = -ThemesDefault.space.PX_16;
+  obj.background = obj;
+  const rect = {
+    position: "absolute",
+    top: -tmp(576).space.PX_16,
+    right: "call",
+    left: "st",
+    alignSelf: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009372008290128806,
+  };
+  obj.clouds = rect;
+  const rect1 = { position: "absolute", top: arg0 + tmp(576).space.PX_20, right: tmp(576).space.PX_4 };
+  obj.wumpus = rect1;
+  const tmp3 = -nativeDefault.space.PX_16;
   const tmp5 = absoluteFillObject;
-  obj[2] = {
-    position: "absolute",
-    top: -ThemesDefault.space.PX_16,
-    right: "call",
-    left: "st",
-    alignSelf: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009372008290128806,
-  };
-  obj1 = {
-    position: "absolute",
-    top: -ThemesDefault.space.PX_16,
-    right: "call",
-    left: "st",
-    alignSelf: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009372008290128806,
-  };
-  obj[3] = { position: "absolute", top: arg0 + ThemesDefault.space.PX_20, right: ThemesDefault.space.PX_4 };
-  const obj2 = { position: "absolute", top: arg0 + ThemesDefault.space.PX_20, right: ThemesDefault.space.PX_4 };
-  obj[4] = { height: ThemesDefault.space.PX_80 + ThemesDefault.space.PX_4 };
+  obj.wumpusImage = { height: nativeDefault.space.PX_80 + nativeDefault.space.PX_4 };
   let num4 = 0;
   if (arg1) {
     num4 = tmp(576).space.PX_8;
   }
-  const obj4 = { position: "absolute", top: arg0 - num4, left: null, transform: null };
+  const rect2 = { position: "absolute", top: arg0 - num4, left: null, transform: null };
   let num5 = 0;
   if (!arg1) {
     num5 = tmp(576).space.PX_8;
   }
-  obj4[2] = ThemesDefault.space.PX_8 + num5;
+  rect2.left = nativeDefault.space.PX_8 + num5;
   const items = [{ scaleX: -1 }];
-  obj4[3] = items;
-  obj[5] = obj4;
-  const obj5 = {
+  rect2.transform = items;
+  obj.backButton = rect2;
+  const obj2 = {
     alignItems: "center",
-    gap: ThemesDefault.space.PX_8,
+    gap: nativeDefault.space.PX_8,
     paddingTop: null,
     paddingHorizontal: null,
     paddingBottom: null,
   };
   const sum = arg0 + tmp(576).space.PX_80;
-  obj5[2] = sum + ThemesDefault.space.PX_4;
-  obj5[3] = ThemesDefault.space.PX_16;
+  obj2.paddingTop = sum + nativeDefault.space.PX_4;
+  obj2.paddingHorizontal = nativeDefault.space.PX_16;
   const space = tmp(576).space;
-  obj5[4] = arg1 ? space.PX_24 : space.PX_32;
-  obj[6] = obj5;
-  const obj6 = {};
+  obj2.paddingBottom = arg1 ? space.PX_24 : space.PX_32;
+  obj.content = obj2;
+  const obj3 = {};
   const merged1 = Object.assign(tmp5.absoluteFillObject);
-  obj6.height = ThemesDefault.space.PX_96;
-  obj6.position = "absolute";
-  obj6.top = undefined;
-  obj[7] = obj6;
+  obj3.height = nativeDefault.space.PX_96;
+  obj3.position = "absolute";
+  obj3.top = undefined;
+  obj.fade = obj3;
   return obj;
 });
-let closure_12 = {
+const __initData = {
   code: "function BuyNitroMarketingHeaderTsx1(){const{floatX,floatY}=this.__closure;return{transform:[{translateX:floatX.get()},{translateY:floatY.get()}]};}",
 };
-let closure_13 = {
+const __initData2 = {
   code: "function BuyNitroMarketingHeaderTsx2(){const{cloudsOpacity}=this.__closure;return{opacity:cloudsOpacity.get()};}",
 };
-let result = require("set").fileFinishedImporting("modules/premium_marketing/native/BuyNitroMarketingHeader.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/premium_marketing/native/BuyNitroMarketingHeader.tsx");
 
 export default function BuyNitroMarketingHeader(arg0) {
   ({ topInset, onBackPress, selectedTier } = arg0);
@@ -130,9 +127,8 @@ export default function BuyNitroMarketingHeader(arg0) {
     let tmp4Result = tmp4(tmp2[11]);
     tmp6 = !tmp4Result.isAndroid();
   }
-  const tmp7 = callback2(topInset, tmp5, tmp6);
+  const tmp7 = closure_11(topInset, tmp5, tmp6);
   const color = tmp7.background.color;
-  sharedValue = undefined;
   sharedValue1 = undefined;
   sharedValue2 = undefined;
   tmp4Result = tmp4(tmp2[6]);
@@ -142,24 +138,21 @@ export default function BuyNitroMarketingHeader(arg0) {
   const tmp4Result1 = sharedValue(sharedValue2[6]);
   sharedValue2 = sharedValue(sharedValue2[6]).useSharedValue(1);
   let items = [sharedValue, sharedValue1, sharedValue2];
-  const effect = React.useEffect(() => {
-    const accessibilityPreferencesSharedValue = sharedValue(sharedValue2[7]).accessibilityPreferencesSharedValue;
+  const effect = noop.useEffect(() => {
+    const accessibilityPreferencesSharedValue =
+      reanimated_AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue;
     if (!accessibilityPreferencesSharedValue.get().reduceMotion) {
-      let tmpResult = tmp(tmp2[6]);
-      tmpResult = tmp(tmp2[8]);
-      const result = sharedValue.set(
-        tmpResult.withRepeat(tmpResult.withTiming(closure_1_9, { duration: 3400 }), -1, true),
-      );
-      const tmpResult1 = tmp(tmp2[6]);
+      tmp(4296);
+      const tmpResult = tmp(4561);
+      const result = sharedValue.set(tmpResult.withRepeat(tmpResult.withTiming(PX_8, { duration: 3400 }), -1, true));
+      const tmpResult1 = tmp(4296);
       const result1 = sharedValue1.set(
-        tmpResult1.withRepeat(tmp(tmp2[8]).withTiming(-closure_1_10, { duration: 2600 }), -1, true),
+        tmpResult1.withRepeat(tmp(4561).withTiming(-PX_12, { duration: 2600 }), -1, true),
       );
-      const tmpResult2 = tmp(tmp2[8]);
-      const tmpResult3 = tmp(tmp2[6]);
-      const result2 = sharedValue2.set(
-        tmpResult3.withRepeat(tmp(tmp2[8]).withTiming(0.6, { duration: 2800 }), -1, true),
-      );
-      const tmpResult4 = tmp(tmp2[8]);
+      const tmpResult2 = tmp(4561);
+      const tmpResult3 = tmp(4296);
+      const result2 = sharedValue2.set(tmpResult3.withRepeat(tmp(4561).withTiming(0.6, { duration: 2800 }), -1, true));
+      const tmpResult4 = tmp(4561);
     }
   }, items);
   const tmp4Result2 = sharedValue(sharedValue2[6]);
@@ -169,12 +162,12 @@ export default function BuyNitroMarketingHeader(arg0) {
     const items = [obj];
     obj = { translateY: sharedValue1.get() };
     items[1] = obj;
-    obj[0] = items;
+    obj.transform = items;
     return obj;
   };
   fn.__closure = { floatX: sharedValue, floatY: sharedValue1 };
   fn.__workletHash = 17204816956621;
-  fn.__initData = closure_12;
+  fn.__initData = __initData;
   const animatedStyle = sharedValue(sharedValue2[6]).useAnimatedStyle(fn);
   const tmp4Result3 = sharedValue(sharedValue2[6]);
   const fn2 = function o() {
@@ -182,13 +175,13 @@ export default function BuyNitroMarketingHeader(arg0) {
   };
   fn2.__closure = { cloudsOpacity: sharedValue2 };
   fn2.__workletHash = 10630022886341;
-  fn2.__initData = closure_13;
+  fn2.__initData = __initData2;
   let obj = { style: tmp7.banner, children: null };
   const animatedStyle1 = sharedValue(sharedValue2[6]).useAnimatedStyle(fn2);
   const tmp4Result4 = sharedValue(sharedValue2[6]);
   let isAndroidResult = sharedValue(sharedValue2[11]).isAndroid();
   if (isAndroidResult) {
-    isAndroidResult = callback(tmp(tmp2[12]), { barStyle: "light-content" });
+    isAndroidResult = closure_7(tmp(tmp2[12]), { barStyle: "light-content" });
   }
   const items1 = [isAndroidResult, , , , , ,];
   obj = {
@@ -200,33 +193,34 @@ export default function BuyNitroMarketingHeader(arg0) {
     style: null,
   };
   let tmpResult = tmp(tmp2[13]);
-  obj[3] = sharedValue(sharedValue2[14]).HorizontalGradient.START;
-  obj[4] = sharedValue(sharedValue2[14]).HorizontalGradient.END;
-  obj[5] = tmp7.background;
-  items1[1] = callback(tmpResult, obj);
-  obj1 = { style: items2, children: null };
-  items2 = [tmp7.clouds, animatedStyle1];
+  obj.start = sharedValue(sharedValue2[14]).HorizontalGradient.START;
+  obj.end = sharedValue(sharedValue2[14]).HorizontalGradient.END;
+  obj.style = tmp7.background;
+  items1[1] = closure_7(tmpResult, obj);
+  const obj1 = { style: null, children: null };
+  const items2 = [tmp7.clouds, animatedStyle1];
+  obj1.style = items2;
   const obj2 = { source: null, resizeMode: "contain" };
   tmpResult = tmp(tmp2[15]);
-  obj2[0] = sharedValue1(sharedValue2[16]);
-  obj1[1] = callback(tmpResult, obj2);
-  items1[2] = callback(sharedValue1(sharedValue2[6]).View, obj1);
-  const obj3 = { style: items3, children: null };
-  items3 = [tmp7.wumpus, animatedStyle];
+  obj2.source = sharedValue1(sharedValue2[16]);
+  obj1.children = closure_7(tmpResult, obj2);
+  items1[2] = closure_7(sharedValue1(sharedValue2[6]).View, obj1);
+  const obj3 = { style: null, children: null };
+  const items3 = [tmp7.wumpus, animatedStyle];
+  obj3.style = items3;
   const obj4 = { style: tmp7.wumpusImage, source: null, resizeMode: "contain" };
   const tmp4Result5 = sharedValue(sharedValue2[11]);
-  obj4[1] = sharedValue1(sharedValue2[17]);
-  obj3[1] = callback(sharedValue1(sharedValue2[15]), obj4);
-  items1[3] = callback(sharedValue1(sharedValue2[6]).View, obj3);
+  obj4.source = sharedValue1(sharedValue2[17]);
+  obj3.children = closure_7(sharedValue1(sharedValue2[15]), obj4);
+  items1[3] = closure_7(sharedValue1(sharedValue2[6]).View, obj3);
   let tmp18Result = !tmp5;
   if (!tmp5) {
-    const obj5 = { style: null, colors: null, start: null, end: null };
-    obj5[0] = tmp7.fade;
+    const obj5 = { style: tmp7.fade, colors: null, start: null, end: null };
     const _HermesInternal = HermesInternal;
     const items4 = ["" + color + "00", color];
-    obj5[1] = items4;
-    obj5[2] = tmp4(tmp2[14]).VerticalGradient.START;
-    obj5[3] = tmp4(tmp2[14]).VerticalGradient.END;
+    obj5.colors = items4;
+    obj5.start = tmp4(tmp2[14]).VerticalGradient.START;
+    obj5.end = tmp4(tmp2[14]).VerticalGradient.END;
     tmp18Result = tmp18(tmp(tmp2[18]), obj5);
     let tmpResult2 = tmp(tmp2[18]);
   }
@@ -241,23 +235,23 @@ export default function BuyNitroMarketingHeader(arg0) {
   };
   let tmpResult1 = sharedValue1(sharedValue2[15]);
   const intl = tmp4(tmp2[19]).intl;
-  obj7[2] = intl.string(sharedValue(sharedValue2[19]).t.lpNrPu);
-  obj7[3] = sharedValue1(sharedValue2[20]);
-  const items5 = [callback(sharedValue1(sharedValue2[15]), obj7)];
+  obj7.accessibilityLabel = intl.string(sharedValue(sharedValue2[19]).t.lpNrPu);
+  obj7.source = sharedValue1(sharedValue2[20]);
+  const items5 = [closure_7(sharedValue1(sharedValue2[15]), obj7)];
   const obj8 = { variant: "text-md/medium", color: "text-overlay-light", children: null };
   const intl2 = tmp4(tmp2[19]).intl;
-  obj8[2] = intl2.string(sharedValue(sharedValue2[19]).t.SD5MJW);
-  items5[1] = callback(sharedValue(sharedValue2[21]).Text, obj8);
-  obj6[1] = items5;
+  obj8.children = intl2.string(sharedValue(sharedValue2[19]).t.SD5MJW);
+  items5[1] = closure_7(sharedValue(sharedValue2[21]).Text, obj8);
+  obj6.children = items5;
   items1[5] = closure_8(closure_5, obj6);
   const obj9 = { style: tmp7.backButton, children: null };
   const obj10 = { variant: "secondary-overlay", accessibilityLabel: null, icon: null, size: "md", onPress: null };
   const intl3 = tmp4(tmp2[19]).intl;
-  obj10[1] = intl3.string(sharedValue(sharedValue2[19]).t["13/7kX"]);
-  obj10[2] = sharedValue1(sharedValue2[23]);
-  obj10[4] = onBackPress;
-  obj9[1] = callback(sharedValue(sharedValue2[22]).IconButton, obj10);
-  items1[6] = callback(closure_5, obj9);
-  obj[1] = items1;
+  obj10.accessibilityLabel = intl3.string(sharedValue(sharedValue2[19]).t["13/7kX"]);
+  obj10.icon = sharedValue1(sharedValue2[23]);
+  obj10.onPress = onBackPress;
+  obj9.children = closure_7(sharedValue(sharedValue2[22]).IconButton, obj10);
+  items1[6] = closure_7(closure_5, obj9);
+  obj.children = items1;
   return closure_8(closure_5, obj);
 }

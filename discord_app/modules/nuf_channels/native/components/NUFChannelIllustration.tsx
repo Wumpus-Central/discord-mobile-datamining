@@ -1,16 +1,18 @@
 // discord_app/modules/nuf_channels/native/components/NUFChannelIllustration.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-({ View: c5, Image: closure_6 } = get_ActivityIndicator);
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = {
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+fn(4560);
+let createStyles = {
   container: {
     width: "100%",
     maxWidth: 275,
@@ -35,24 +37,25 @@ createCacheKey = {
   starPink: null,
   starPurple: null,
 };
-createCacheKey = {
+let size = {
   width: "90%",
   height: 12,
-  borderTopLeftRadius: ThemesDefault.radii.lg,
-  borderTopRightRadius: ThemesDefault.radii.lg,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderTopLeftRadius: nativeDefault.radii.lg,
+  borderTopRightRadius: nativeDefault.radii.lg,
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
 };
-createCacheKey[2] = createCacheKey;
-createCacheKey[3] = {
+createStyles.cardBackground = size;
+createStyles = {
   paddingVertical: 12,
   paddingHorizontal: 16,
   display: "flex",
   alignItems: "center",
   flexDirection: "row",
-  borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderBottomColor: nativeDefault.colors.BORDER_SUBTLE,
   borderBottomWidth: 1,
 };
-createCacheKey[4] = {
+createStyles.header = createStyles;
+createStyles.content = {
   height: 150,
   paddingVertical: 8,
   paddingHorizontal: 16,
@@ -60,51 +63,43 @@ createCacheKey[4] = {
   justifyContent: "flex-end",
   overflow: "hidden",
 };
-createCacheKey[5] = { display: "flex", paddingVertical: 8, flexDirection: "row" };
-createCacheKey[6] = { width: 40, height: 40, marginRight: 12 };
-createCacheKey[7] = { display: "flex", flex: 1 };
-createCacheKey[8] = { height: 25, width: 15 };
-createCacheKey[9] = { height: 15, width: 10 };
-createCacheKey[10] = { position: "absolute", top: 5, left: -28 };
-createCacheKey[11] = { position: "absolute", top: -15, left: -10 };
-createCacheKey[12] = { position: "absolute", bottom: -18, right: -22 };
-createCacheKey[13] = { position: "absolute", bottom: -30, right: -2 };
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-let closure_10 = {
+createStyles.message = { display: "flex", paddingVertical: 8, flexDirection: "row" };
+createStyles.messageAvatar = { width: 40, height: 40, marginRight: 12 };
+createStyles.messageContent = { display: "flex", flex: 1 };
+createStyles.starMedium = { height: 25, width: 15 };
+createStyles.starSmall = { height: 15, width: 10 };
+createStyles.starGreen = { position: "absolute", top: 5, left: -28 };
+createStyles.starBlue = { position: "absolute", top: -15, left: -10 };
+createStyles.starPink = { position: "absolute", bottom: -18, right: -22 };
+createStyles.starPurple = { position: "absolute", bottom: -30, right: -2 };
+let closure_9 = createStyles.createStyles(createStyles);
+const __initData = {
   code: "function NUFChannelIllustrationTsx1(){const{interpolate,messageListAnimation}=this.__closure;return{transform:[{translateY:interpolate(messageListAnimation.get(),[0,1],[50,0])}]};}",
 };
-let obj1 = {
-  paddingVertical: 12,
-  paddingHorizontal: 16,
-  display: "flex",
-  alignItems: "center",
-  flexDirection: "row",
-  borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE,
-  borderBottomWidth: 1,
-};
-let result = require("set").fileFinishedImporting("modules/nuf_channels/native/components/NUFChannelIllustration.tsx");
+size = fn(2);
+let result = size.fileFinishedImporting("modules/nuf_channels/native/components/NUFChannelIllustration.tsx");
 
 export default function NUFChannelIllustration() {
-  const tmp = callback3();
-  const _require = tmp;
+  const tmp = closure_9();
+  _require = tmp;
   const tmp2 = sharedValue(sharedValue1.useState([]), 2);
   const first = tmp2[0];
   dependencyMap = tmp2[1];
-  let obj = ReanimatedRexport;
+  let obj = require("ReanimatedRexport");
   sharedValue = obj.useSharedValue(0);
-  obj1 = ReanimatedRexport;
+  let obj1 = require("ReanimatedRexport");
   sharedValue1 = obj1.useSharedValue(0);
   const effect = sharedValue1.useEffect(() => {
     const timeout = setTimeout(
       () =>
-        callback((arg0) => {
+        closure_1_2((arg0) => {
           const items = [...arg0];
-          const intl = callback(1114).intl;
+          const intl = closure_1_0(1114).intl;
           const obj = { name: null, avatar: null, message: null };
-          const intl2 = callback(1114).intl;
-          obj[0] = intl2.string(callback(1114).t["9m/HsX"]);
-          obj[1] = callback2(13771);
-          obj[2] = intl.string(callback(1114).t["5alrl0"]);
+          const intl2 = closure_1_0(1114).intl;
+          obj.name = intl2.string(closure_1_0(1114).t["9m/HsX"]);
+          obj.avatar = closure_1_1(13771);
+          obj.message = intl.string(closure_1_0(1114).t["5alrl0"]);
           items[tmp] = obj;
           return items;
         }),
@@ -112,14 +107,14 @@ export default function NUFChannelIllustration() {
     );
     const timeout2 = setTimeout(
       () =>
-        callback((arg0) => {
+        closure_1_2((arg0) => {
           const items = [...arg0];
-          const intl = callback(1114).intl;
+          const intl = closure_1_0(1114).intl;
           const obj = { name: null, avatar: null, message: null };
-          const intl2 = callback(1114).intl;
-          obj[0] = intl2.string(callback(1114).t["AW1kM+"]);
-          obj[1] = callback2(13772);
-          obj[2] = intl.string(callback(1114).t["5Oo+vS"]);
+          const intl2 = closure_1_0(1114).intl;
+          obj.name = intl2.string(closure_1_0(1114).t["AW1kM+"]);
+          obj.avatar = closure_1_1(13772);
+          obj.message = intl.string(closure_1_0(1114).t["5Oo+vS"]);
           items[tmp] = obj;
           return items;
         }),
@@ -133,87 +128,83 @@ export default function NUFChannelIllustration() {
   let items = [sharedValue1, first];
   const effect1 = sharedValue1.useEffect(() => {
     if (first.length >= 2) {
-      const result = sharedValue1.set(lib(4561).withTiming(1, { duration: 250 }));
-      const obj = lib(4561);
+      const result = sharedValue1.set(timing.withTiming(1, { duration: 250 }));
     }
   }, items);
   let items1 = [sharedValue, first];
   const effect2 = sharedValue1.useEffect(() => {
     const result = sharedValue.set(0);
-    const result1 = sharedValue.set(lib(4561).withTiming(1, { duration: 200 }));
+    const result1 = sharedValue.set(timing.withTiming(1, { duration: 200 }));
   }, items1);
-  let obj2 = ReanimatedRexport;
+  let obj2 = require("ReanimatedRexport");
   const fn = function b() {
     let obj = { transform: null };
-    obj = { translateY: lib(4296).interpolate(sharedValue.get(), [0, 1], [50, 0]) };
+    obj = { translateY: ReanimatedRexport.interpolate(sharedValue.get(), [0, 1], [50, 0]) };
     const items = [obj];
-    obj[0] = items;
+    obj.transform = items;
     return obj;
   };
-  obj = {
-    interpolate: require("../../../reanimated/ReanimatedRexport.tsx").interpolate,
-    messageListAnimation: sharedValue,
-  };
+  obj = { interpolate: require("ReanimatedRexport").interpolate, messageListAnimation: sharedValue };
   fn.__closure = obj;
   fn.__workletHash = 1240710065054;
-  fn.__initData = closure_10;
+  fn.__initData = __initData;
   obj = { style: tmp.container, children: null };
   obj1 = { source: null, style: null };
   const animatedStyle = obj2.useAnimatedStyle(fn);
-  obj1[0] = first(13773);
+  obj1.source = first(13773);
   const items2 = [,];
   ({ starSmall: arr4[0], starBlue: arr4[1] } = tmp);
-  obj1[1] = items2;
-  const items3 = [callback(closure_6, obj1), , , , ,];
-  obj2 = { source: first(13774), style: items4 };
-  items4 = [,];
+  obj1.style = items2;
+  const items3 = [closure_7(closure_6, obj1), , , , ,];
+  obj2 = { source: first(13774), style: null };
+  const items4 = [,];
   ({ starMedium: arr6[0], starPink: arr6[1] } = tmp);
-  items3[1] = callback(closure_6, obj2);
+  obj2.style = items4;
+  items3[1] = closure_7(closure_6, obj2);
+  const obj3 = { source: first(13775), style: null };
   const items5 = [,];
   ({ starMedium: arr7[0], starGreen: arr7[1] } = tmp);
-  items3[2] = callback(closure_6, { source: first(13775), style: items5 });
-  const obj3 = { source: first(13775), style: items5 };
+  obj3.style = items5;
+  items3[2] = closure_7(closure_6, obj3);
+  const obj4 = { source: first(13776), style: null };
   const items6 = [,];
   ({ starSmall: arr8[0], starPurple: arr8[1] } = tmp);
-  items3[3] = callback(closure_6, { source: first(13776), style: items6 });
-  items3[4] = callback(closure_5, { style: tmp.cardBackground });
+  obj4.style = items6;
+  items3[3] = closure_7(closure_6, obj4);
+  items3[4] = closure_7(closure_5, { style: tmp.cardBackground });
   const obj6 = { style: tmp.card, shadow: "low", border: "subtle", children: null };
   const obj7 = { style: tmp.header, children: null };
-  const items7 = [
-    callback(require("../../../../design/components/Icon/native/redesign/generated/TextIcon.tsx").TextIcon, {
-      size: "sm",
-    }),
-  ];
+  const items7 = [closure_7(require("TextIcon").TextIcon, { size: "sm" })];
   const obj8 = { variant: "text-md/bold", allowFontScaling: false, children: null };
-  let intl = require("../../../../intl/index.native.tsx").intl;
-  const items8 = [" ", intl.string(require("../../../../intl/index.native.tsx").t.aLOLry)];
-  obj8[2] = items8;
-  items7[1] = callback2(require("../../../../design/components/Text/native/Text.tsx").Text, obj8);
-  obj7[1] = items7;
-  const items9 = [callback2(closure_5, obj7)];
-  const obj9 = { style: tmp.content, children: null };
-  const obj4 = { source: first(13776), style: items6 };
-  const obj5 = { style: tmp.cardBackground };
-  obj9[1] = callback(first(4296).View, {
-    style: animatedStyle,
-    children: first.map((children) => {
-      let obj = { style: lib.message, children: null };
-      obj = { source: children.avatar, style: lib.messageAvatar };
-      const items = [closure_1_7(closure_1_6, obj)];
-      obj = { style: lib.messageContent, children: null };
-      const items1 = [
-        closure_1_7(lib(4556).Text, { variant: "text-md/semibold", allowFontScaling: false, children: children.name }),
-        closure_1_7(lib(4556).Text, { variant: "text-md/medium", allowFontScaling: false, children: children.message }),
-      ];
-      obj[1] = items1;
-      items[1] = closure_1_8(closure_1_5, obj);
-      obj[1] = items;
-      return closure_1_8(closure_1_5, obj, children.message);
+  let intl = require("util").intl;
+  const items8 = [" ", intl.string(require("util").t.aLOLry)];
+  obj8.children = items8;
+  items7[1] = closure_8(require("Text/Text").Text, obj8);
+  obj7.children = items7;
+  const items9 = [closure_8(closure_5, obj7)];
+  const obj9 = {
+    style: tmp.content,
+    children: closure_7(first(4296).View, {
+      style: animatedStyle,
+      children: first.map((children) => {
+        let obj = { style: closure_0.message, children: null };
+        obj = { source: children.avatar, style: closure_0.messageAvatar };
+        const items = [React5(timestampProducer, obj)];
+        obj = { style: closure_0.messageContent, children: null };
+        const items1 = [
+          React5(Text_Text.Text, { variant: "text-md/semibold", allowFontScaling: false, children: children.name }),
+          React5(Text_Text.Text, { variant: "text-md/medium", allowFontScaling: false, children: children.message }),
+        ];
+        obj.children = items1;
+        items[1] = React6(hasOwnProperty, obj);
+        obj.children = items;
+        return React6(hasOwnProperty, obj, children.message);
+      }),
     }),
-  });
-  items9[1] = callback(closure_5, obj9);
-  obj6[3] = items9;
-  items3[5] = callback2(require("../../../../design/components/Card/native/Card.native.tsx").Card, obj6);
-  obj[1] = items3;
-  return callback2(closure_5, obj);
+  };
+  items9[1] = closure_7(closure_5, obj9);
+  obj6.children = items9;
+  items3[5] = closure_8(require("Card").Card, obj6);
+  obj.children = items3;
+  return closure_8(closure_5, obj);
 }

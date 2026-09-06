@@ -1,143 +1,77 @@
 // discord_app/modules/user_settings/defs/native/ProfilePrivacySetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import create from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import explicitContentFromProto from "../../UserSettings.tsx";
-import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
-import apexExperiment from "../../../user_profile/PrivateProfilesExperiment.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import util from "../../../../intl/index.native.tsx";
+import preloaded_user_settings from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import UserSettings from "../../UserSettings.tsx";
+import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
+import PrivateProfilesExperiment from "../../../user_profile/PrivateProfilesExperiment.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const radio = createToggle.createRadio({
+const radio = SettingBuilders.createRadio({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.Qnf32C);
+    const intl = util.intl;
+    return intl.string(util.t.Qnf32C);
   },
-  parent: MobileUserSettings.MobileUserSettings.DATA_AND_PRIVACY,
+  parent: SettingsConstants.MobileUserSettings.DATA_AND_PRIVACY,
   useValue() {
-    const ProfileVisibility = explicitContentFromProto.ProfileVisibility;
+    const ProfileVisibility = UserSettings.ProfileVisibility;
     return ProfileVisibility.useSetting();
   },
   onValueChange(arg0) {
     const NumberResult = Number(arg0);
-    const ProfileVisibility = explicitContentFromProto.ProfileVisibility;
+    const ProfileVisibility = UserSettings.ProfileVisibility;
     const setting = ProfileVisibility.getSetting();
-    const ProfileVisibility2 = explicitContentFromProto.ProfileVisibility;
+    const ProfileVisibility2 = UserSettings.ProfileVisibility;
     ProfileVisibility2.updateSetting(NumberResult);
-    let obj = apexExperiment;
+    let obj = PrivateProfilesExperiment;
     if (obj.getIsInPrivateProfilesExperiment("ProfilePrivacySetting")) {
       const profileToActivityUpsell = tmp2(14851).computeProfileToActivityUpsell(setting, NumberResult);
       if (null != profileToActivityUpsell) {
         obj = { direction: null, affectedGuildIds: null, settingName: null, mappedActivityValue: null };
         ({
-          direction: obj4[0],
-          affectedGuildIds: obj4[1],
-          settingName: obj4[2],
-          mappedActivityValue: obj4[3],
+          direction: obj4.direction,
+          affectedGuildIds: obj4.affectedGuildIds,
+          settingName: obj4.settingName,
+          mappedActivityValue: obj4.mappedActivityValue,
         } = profileToActivityUpsell);
-        ACTION_SHEET_HEIGHT_HALFDefault.openLazy(
+        ActionSheetActionCreatorsDefault.openLazy(
           tmp2(1896)(14852, dependencyMap.paths),
           "ProfileToActivityPrivacyUpsellActionSheet",
           obj,
         );
-        const obj3 = ACTION_SHEET_HEIGHT_HALFDefault;
       }
       const tmp2Result = tmp2(14851);
     }
   },
   useOptions() {
     let obj = { label: null, subLabel: null, value: null };
-    const intl = getSystemLocale.intl;
-    obj[0] = intl.string(getSystemLocale.t.Boxc8R);
-    const intl2 = getSystemLocale.intl;
-    obj[1] = intl2.string(getSystemLocale.t["nLj+nc"]);
-    obj[2] = create.ProfileVisibility.FRIENDS_AND_ALL_GUILDS;
+    const intl = util.intl;
+    obj.label = intl.string(util.t.Boxc8R);
+    const intl2 = util.intl;
+    obj.subLabel = intl2.string(util.t["nLj+nc"]);
+    obj.value = preloaded_user_settings.ProfileVisibility.FRIENDS_AND_ALL_GUILDS;
     const items = [obj, ,];
     obj = { label: null, subLabel: null, value: null };
-    const intl3 = getSystemLocale.intl;
-    obj[0] = intl3.string(getSystemLocale.t.YOIKBt);
-    const intl4 = getSystemLocale.intl;
-    obj[1] = intl4.string(getSystemLocale.t.y0JZ4s);
-    obj[2] = create.ProfileVisibility.FRIENDS_AND_SMALL_GUILDS;
+    const intl3 = util.intl;
+    obj.label = intl3.string(util.t.YOIKBt);
+    const intl4 = util.intl;
+    obj.subLabel = intl4.string(util.t.y0JZ4s);
+    obj.value = preloaded_user_settings.ProfileVisibility.FRIENDS_AND_SMALL_GUILDS;
     items[1] = obj;
     obj = { label: null, subLabel: null, value: null };
-    const intl5 = getSystemLocale.intl;
-    obj[0] = intl5.string(getSystemLocale.t.u0nlJv);
-    const intl6 = getSystemLocale.intl;
-    obj[1] = intl6.string(getSystemLocale.t["4jnKHu"]);
-    obj[2] = create.ProfileVisibility.FRIENDS_ONLY;
+    const intl5 = util.intl;
+    obj.label = intl5.string(util.t.u0nlJv);
+    const intl6 = util.intl;
+    obj.subLabel = intl6.string(util.t["4jnKHu"]);
+    obj.value = preloaded_user_settings.ProfileVisibility.FRIENDS_ONLY;
     items[2] = obj;
     return items;
   },
   usePredicate() {
-    return apexExperiment.useIsInPrivateProfilesExperiment("ProfilePrivacySetting");
+    return PrivateProfilesExperiment.useIsInPrivateProfilesExperiment("ProfilePrivacySetting");
   },
 });
-let obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.Qnf32C);
-  },
-  parent: MobileUserSettings.MobileUserSettings.DATA_AND_PRIVACY,
-  useValue() {
-    const ProfileVisibility = explicitContentFromProto.ProfileVisibility;
-    return ProfileVisibility.useSetting();
-  },
-  onValueChange(arg0) {
-    const NumberResult = Number(arg0);
-    const ProfileVisibility = explicitContentFromProto.ProfileVisibility;
-    const setting = ProfileVisibility.getSetting();
-    const ProfileVisibility2 = explicitContentFromProto.ProfileVisibility;
-    ProfileVisibility2.updateSetting(NumberResult);
-    let obj = apexExperiment;
-    if (obj.getIsInPrivateProfilesExperiment("ProfilePrivacySetting")) {
-      const profileToActivityUpsell = tmp2(14851).computeProfileToActivityUpsell(setting, NumberResult);
-      if (null != profileToActivityUpsell) {
-        obj = { direction: null, affectedGuildIds: null, settingName: null, mappedActivityValue: null };
-        ({
-          direction: obj4[0],
-          affectedGuildIds: obj4[1],
-          settingName: obj4[2],
-          mappedActivityValue: obj4[3],
-        } = profileToActivityUpsell);
-        ACTION_SHEET_HEIGHT_HALFDefault.openLazy(
-          tmp2(1896)(14852, dependencyMap.paths),
-          "ProfileToActivityPrivacyUpsellActionSheet",
-          obj,
-        );
-        const obj3 = ACTION_SHEET_HEIGHT_HALFDefault;
-      }
-      const tmp2Result = tmp2(14851);
-    }
-  },
-  useOptions() {
-    let obj = { label: null, subLabel: null, value: null };
-    const intl = getSystemLocale.intl;
-    obj[0] = intl.string(getSystemLocale.t.Boxc8R);
-    const intl2 = getSystemLocale.intl;
-    obj[1] = intl2.string(getSystemLocale.t["nLj+nc"]);
-    obj[2] = create.ProfileVisibility.FRIENDS_AND_ALL_GUILDS;
-    const items = [obj, ,];
-    obj = { label: null, subLabel: null, value: null };
-    const intl3 = getSystemLocale.intl;
-    obj[0] = intl3.string(getSystemLocale.t.YOIKBt);
-    const intl4 = getSystemLocale.intl;
-    obj[1] = intl4.string(getSystemLocale.t.y0JZ4s);
-    obj[2] = create.ProfileVisibility.FRIENDS_AND_SMALL_GUILDS;
-    items[1] = obj;
-    obj = { label: null, subLabel: null, value: null };
-    const intl5 = getSystemLocale.intl;
-    obj[0] = intl5.string(getSystemLocale.t.u0nlJv);
-    const intl6 = getSystemLocale.intl;
-    obj[1] = intl6.string(getSystemLocale.t["4jnKHu"]);
-    obj[2] = create.ProfileVisibility.FRIENDS_ONLY;
-    items[2] = obj;
-    return items;
-  },
-  usePredicate() {
-    return apexExperiment.useIsInPrivateProfilesExperiment("ProfilePrivacySetting");
-  },
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/ProfilePrivacySetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/ProfilePrivacySetting.tsx");
 
 export default radio;

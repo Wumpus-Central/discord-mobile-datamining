@@ -1,19 +1,18 @@
 // discord_app/modules/autocompleter/index.tsx
-import set from "../../../_runtime/00002_set.js";
-import sortByMatchScoreDefault from "sortByMatchScore.tsx";
-import getAutocompleterBoosterMapDefault from "Autocompleter.tsx";
-import HeaderRecord2 from "createAutocompleterResult.tsx";
+import autocompleter_sortByMatchScoreDefault from "sortByMatchScore.tsx";
+import AutocompleterDefault from "Autocompleter.tsx";
+import AutocompleterConstants2 from "createAutocompleterResult.tsx";
 import _modDef9843 from "findNextSelectedResult.tsx";
-import HeaderRecord from "AutocompleterConstants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
+import AutocompleterConstants from "AutocompleterConstants.tsx";
 
-const result = set.fileFinishedImporting("modules/autocompleter/index.tsx");
+const result = size.fileFinishedImporting("modules/autocompleter/index.tsx");
 for (const key10022 in _module1) {
-  let tmp4 = key10022;
-  arg5[key10022] = HeaderRecord[key10022];
+  arg5[key10022] = AutocompleterConstants[key10022];
   continue;
 }
 
-export default getAutocompleterBoosterMapDefault;
-export const createHeaderResult = HeaderRecord2.createHeaderResult;
+export default AutocompleterDefault;
+export const createHeaderResult = AutocompleterConstants2.createHeaderResult;
 export const findNextSelectedResult = _modDef9843;
-export const sortByMatchScore = sortByMatchScoreDefault;
+export const sortByMatchScore = autocompleter_sortByMatchScoreDefault;

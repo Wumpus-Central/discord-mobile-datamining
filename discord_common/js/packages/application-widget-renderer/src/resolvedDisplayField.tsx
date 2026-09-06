@@ -1,8 +1,8 @@
 // discord_common/js/packages/application-widget-renderer/src/resolvedDisplayField.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import resolveFieldValue2 from "resolvedValues.tsx";
+import resolvedValues from "resolvedValues.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-let result = set.fileFinishedImporting(
+let result = size.fileFinishedImporting(
   "../discord_common/js/packages/application-widget-renderer/src/resolvedDisplayField.tsx",
 );
 
@@ -23,7 +23,7 @@ export const resolveTextComponentValues = function resolveTextComponentValues(
   if (null == subtitle_1) {
     return flag ? { status: "skeleton" } : { status: "hidden" };
   } else {
-    const items = [resolveFieldValue2.ResolvedValueType.STRING, resolveFieldValue2.ResolvedValueType.NUMBER];
+    const items = [resolvedValues.ResolvedValueType.STRING, resolvedValues.ResolvedValueType.NUMBER];
     let iter = resolveFieldValue(subtitle_1.fields.text, items);
     let str = null;
     if (!flag2) {
@@ -35,7 +35,7 @@ export const resolveTextComponentValues = function resolveTextComponentValues(
         return { status: "skeleton" };
       }
     }
-    const items2 = [resolveFieldValue2.ResolvedValueType.MEDIA];
+    const items2 = [resolvedValues.ResolvedValueType.MEDIA];
     const tmp2 = resolveFieldValue(subtitle_1.fields.icon, items2);
     let str3 = "";
     if (null != str) {
@@ -65,7 +65,7 @@ export const resolveTextComponentValues = function resolveTextComponentValues(
     }
     const obj = { status: "value", text: null, icon: null };
     const _HermesInternal2 = HermesInternal;
-    obj[1] = "" + str3 + str5;
+    obj.text = "" + str3 + str5;
     let media;
     if (tmp2 != null) {
       media = tmp2.media;
@@ -73,14 +73,14 @@ export const resolveTextComponentValues = function resolveTextComponentValues(
     if (media == null) {
       media = null;
     }
-    obj[2] = media;
+    obj.icon = media;
     return obj;
   }
 };
 export const resolveStatComponentValues = function resolveStatComponentValues(
   fields,
-  closure_1,
-  closure_2,
+  fn,
+  format,
   formatDurationNarrow,
   arg4,
 ) {
@@ -91,19 +91,17 @@ export const resolveStatComponentValues = function resolveStatComponentValues(
   if (null == fields) {
     let tmp4 = null;
     if (flag) {
-      let obj = { value: null, label: null };
-      obj[0] = { status: "skeleton" };
-      obj[1] = { status: "skeleton" };
+      let obj = { value: { status: "skeleton" }, label: { status: "skeleton" } };
       tmp4 = obj;
     }
     return tmp4;
   } else {
-    const items = [resolveFieldValue2.ResolvedValueType.STRING, resolveFieldValue2.ResolvedValueType.NUMBER];
-    const iter = closure_1(fields.fields.value, items);
-    const items1 = [resolveFieldValue2.ResolvedValueType.STRING];
-    const iter2 = closure_1(fields.fields.label, items1);
-    const items2 = [resolveFieldValue2.ResolvedValueType.MEDIA];
-    const tmp8 = closure_1(fields.fields.icon, items2);
+    const items = [resolvedValues.ResolvedValueType.STRING, resolvedValues.ResolvedValueType.NUMBER];
+    const iter = fn(fields.fields.value, items);
+    const items1 = [resolvedValues.ResolvedValueType.STRING];
+    const iter2 = fn(fields.fields.label, items1);
+    const items2 = [resolvedValues.ResolvedValueType.MEDIA];
+    const tmp8 = fn(fields.fields.icon, items2);
     if (null == iter) {
       obj = { status: "skeleton" };
     } else {
@@ -112,10 +110,9 @@ export const resolveStatComponentValues = function resolveStatComponentValues(
       } else if (iter.presentationType === tmp6(8930).ApplicationWidgetFieldPresentationType.DURATION) {
         formatResult = formatDurationNarrow(iter.value);
       } else {
-        formatResult = closure_2.format(iter.value);
+        formatResult = format.format(iter.value);
       }
-      obj = { status: "value", text: null, icon: null };
-      obj[1] = formatResult;
+      obj = { status: "value", text: formatResult, icon: null };
       let media;
       if (tmp8 != null) {
         media = tmp8.media;
@@ -123,19 +120,18 @@ export const resolveStatComponentValues = function resolveStatComponentValues(
       if (media == null) {
         media = null;
       }
-      obj[2] = media;
+      obj.icon = media;
     }
     obj = { value: null, label: null };
-    obj[0] = obj;
+    obj.value = obj;
     if (null == fields.fields.label) {
-      obj1 = { status: "hidden" };
+      let obj1 = { status: "hidden" };
     } else if (null == iter2) {
       obj1 = { status: "skeleton" };
     } else {
-      obj1 = { status: "value", text: null };
-      obj1[1] = iter2.value;
+      obj1 = { status: "value", text: iter2.value };
     }
-    obj[1] = obj1;
+    obj.label = obj1;
     return obj;
   }
 };
@@ -148,13 +144,12 @@ export const resolveSingleStringOrSkeleton = function resolveSingleStringOrSkele
   if (componentConfig != null) {
     tmp = componentConfig.fields[description];
   }
-  const items = [resolveFieldValue2.ResolvedValueType.STRING];
+  const items = [resolvedValues.ResolvedValueType.STRING];
   const iter = resolveFieldValue(tmp, items);
   if (null == iter) {
     let obj = { status: "skeleton" };
   } else {
-    obj = { status: "value", text: null };
-    obj[1] = iter.value;
+    obj = { status: "value", text: iter.value };
   }
   return obj;
 };
@@ -173,7 +168,7 @@ export const resolveProgressPercentage = function resolveProgressPercentage(iter
   if (null == iter) {
     return 0;
   } else if (null == iter2) {
-    const value = num.value;
+    value = num.value;
     const _isNaN2 = isNaN;
     num = 0;
     if (!isNaN(value)) {
@@ -182,20 +177,14 @@ export const resolveProgressPercentage = function resolveProgressPercentage(iter
       const _Math6 = Math;
       num = Math.min(Math.max(Math.round(100 * value), 0), 100);
     }
-    let num2 = num;
-  } else {
-    num2 = 0;
-    if (0 !== iter2.value) {
-      const result = num.value / iter2.value;
-      const _isNaN = isNaN;
-      let num3 = 0;
-      if (!isNaN(result)) {
-        const _Math = Math;
-        const _Math2 = Math;
-        const _Math3 = Math;
-        num3 = Math.min(Math.max(Math.round(100 * result), 0), 100);
-      }
-      num2 = num3;
+  } else if (0 !== iter2.value) {
+    const result = num.value / iter2.value;
+    const _isNaN = isNaN;
+    if (!isNaN(result)) {
+      const _Math = Math;
+      const _Math2 = Math;
+      const _Math3 = Math;
+      const num3 = Math.min(Math.max(Math.round(100 * result), 0), 100);
     }
   }
 };

@@ -1,22 +1,22 @@
 // discord_app/modules/notifications/settings/native/MobileNotifSettingsRouteBuilders.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import messagesProxyDefault from "../../NotificationSettings.messages.js";
+import util from "../../../../intl/index.native.tsx";
+import _modDef2722 from "../../NotificationSettings.messages.js";
 import MobileNotifSettings from "../../../user_settings/notifications/native/codegen/MobileNotifSettings.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/notifications/settings/native/MobileNotifSettingsRouteBuilders.tsx");
+const result = size.fileFinishedImporting("modules/notifications/settings/native/MobileNotifSettingsRouteBuilders.tsx");
 
 export const buildOverviewCategoriesSection = function buildOverviewCategoriesSection() {
   const obj = { label: null, settings: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(messagesProxyDefault["/UdAvP"]);
+  const intl = util.intl;
+  obj.label = intl.string(_modDef2722["/UdAvP"]);
   const items = [
     MobileNotifSettings.MobileNotifSettings.NOTIF_REALTIME,
     MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_SOCIAL,
     MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_SERVER,
     MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_OTHER,
   ];
-  obj[1] = items;
+  obj.settings = items;
   return obj;
 };
 export function buildRealtimeSettingsSection() {
@@ -33,7 +33,7 @@ export const buildCategorySocialSettingsSection = function buildCategorySocialSe
     MobileNotifSettings.MobileNotifSettings.NOTIF_GAMING_LOW,
     MobileNotifSettings.MobileNotifSettings.NOTIF_GAMING_DEFAULT,
   ];
-  obj[0] = items;
+  obj.settings = items;
   return obj;
 };
 export function buildCategoryServerSettingsSection() {

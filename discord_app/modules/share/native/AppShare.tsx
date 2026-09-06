@@ -1,59 +1,64 @@
 // discord_app/modules/share/native/AppShare.tsx
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import result from "../../../stores/AnalyticsTrackingStore.tsx";
-import handleTokenUpdated from "../../../stores/native/ShareStore.tsx";
-import closure_7 from "../../../stores/AuthenticationStore.tsx";
-import { AnalyticEvents } from "../../../Constants.tsx";
-import { MultiAccountSwitchLocation as closure_9 } from "../../multi_account/Constants.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
+import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
+import useMountEffectDefault from "../../../hooks/useMountEffect.tsx";
+import AuthenticationActionCreatorsDefault from "../../../actions/AuthenticationActionCreators.tsx";
+import TTIAnalyticsUtils from "../../tti_analytics/native/TTIAnalyticsUtils.tsx";
+import AccessibilityManagerDefault from "../../a11y/native/AccessibilityManager.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
+import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 
-const require = arg1;
-({ BackHandler: c5, NativeModules: closure_6 } = get_ActivityIndicator);
-({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ BackHandler: hasOwnProperty, NativeModules: metroRequire } = get_ActivityIndicator);
+const AnalyticsTrackingStore = fn(7460);
+const ShareStore = fn(14395);
+const AnalyticEvents = fn(1074).AnalyticEvents;
+let closure_9 = fn(12414).MultiAccountSwitchLocation;
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const share = "share";
-result = require("set").fileFinishedImporting("modules/share/native/AppShare.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/share/native/AppShare.tsx");
 
 export default function AppShare(targetUserId) {
-  let stateFromStores = targetUserId;
+  _require = targetUserId;
   targetUserId = targetUserId.targetUserId;
-  stateFromStores = targetUserId;
-  let first;
-  dependencyMap = undefined;
-  let callback;
-  let obj = React;
-  let tmp2 = callback(React.useState(false), 2);
-  first = tmp2[0];
-  dependencyMap = tmp2[1];
+  closure_129_0 = targetUserId;
+  closure_129_3 = undefined;
+  let obj = noop;
+  let tmp2 = _slicedToArray(noop.useState(false), 2);
+  let first = tmp2[0];
+  closure_129_1 = first;
+  closure_129_2 = tmp2[1];
   let tmp4 = null == targetUserId;
   if (!tmp4) {
-    tmp4 = id.getId() === targetUserId;
+    tmp4 = AuthenticationStore.getId() === targetUserId;
   }
-  const tmpResult = callback(React.useState(tmp4), 2);
-  callback = tmpResult[1];
+  const tmpResult = _slicedToArray(noop.useState(tmp4), 2);
+  closure_129_3 = tmpResult[1];
   const items = [first];
   const effect = obj.useEffect(() => {
-    if (!first) {
-      first(14434).init();
+    if (!closure_1_1) {
+      AccessibilityManagerDefault.init();
       dependencyMap(true);
-      const obj = first(14434);
     }
   }, items);
   const items1 = [targetUserId];
   const effect1 = obj.useEffect(() => {
-    let tmp2 = null != stateFromStores;
+    let tmp2 = null != closure_0;
     if (tmp2) {
-      tmp2 = closure_1_7.getId() !== tmp;
+      tmp2 = AuthenticationStore.getId() !== tmp;
     }
     if (tmp2) {
       const _setTimeout = setTimeout;
       const timerId = setTimeout(() => {
-        const obj = closure_1_0(closure_1_2[13]);
-        closure_1_0(closure_1_2[13])
-          .switchAccount(closure_0, false, closure_1_9.SHARE_EXTENSION)
+        const obj = closure_0(12417);
+        closure_0(12417)
+          .switchAccount(targetUserId, false, constants.SHARE_EXTENSION)
           .then(() => {
-            callback(true);
+            closure_1_3(true);
           });
       }, 18);
     }
@@ -61,33 +66,33 @@ export default function AppShare(targetUserId) {
   if (first) {
     first = tmpResult[0];
   }
-  obj1 = stateFromStores(504);
-  const items2 = [id];
-  stateFromStores = obj1.useStateFromStores(items2, () => authenticated.isAuthenticated());
+  let obj1 = require("initialize");
+  const items2 = [AuthenticationStore];
+  const stateFromStores = obj1.useStateFromStores(items2, () => authenticated.isAuthenticated());
+  closure_130_0 = stateFromStores;
   const items3 = [stateFromStores];
   const effect2 = obj.useEffect(() => {
-    if (stateFromStores) {
-      first(6593).startSession(closure_1_7.getToken());
-      const obj = first(6593);
+    if (closure_0) {
+      AuthenticationActionCreatorsDefault.startSession(AuthenticationStore.getToken());
       if (obj2.isAndroid()) {
-        const NativePermissionManager = closure_1_6.NativePermissionManager;
+        const NativePermissionManager = timestampProducer.NativePermissionManager;
         const notificationAuthorization = NativePermissionManager.requestNotificationAuthorization();
       }
-      obj2 = stateFromStores(1115);
+      obj2 = PlatformUtils;
     }
   }, items3);
   const items4 = [targetUserId.attachments.length, targetUserId.text];
   const effect3 = obj.useEffect(() => {
-    let obj = first(1242);
-    let tmp2 = null != stateFromStores.text;
+    let obj = AnalyticsUtilsDefault;
+    let tmp2 = null != targetUserId.text;
     if (tmp2) {
       tmp2 = tmp.text.length > 0;
     }
     obj = { has_content: tmp2, has_attachment: tmp.attachments.length > 0 };
-    obj.track(closure_1_8.EXTERNAL_SHARE_OPENED, obj);
+    obj.track(AnalyticEvents.EXTERNAL_SHARE_OPENED, obj);
   }, items4);
-  first(4992)(() => {
-    const attachments = stateFromStores.attachments;
+  useMountEffectDefault(() => {
+    const attachments = targetUserId.attachments;
     const mapped = attachments.map((mimeType) => {
       let str = mimeType.mimeType;
       if (str == null) {
@@ -95,33 +100,30 @@ export default function AppShare(targetUserId) {
       }
       return str;
     });
-    stateFromStores(7475).trackAppUIViewed("share", {
-      share_num_attachments: stateFromStores.attachments.length,
+    TTIAnalyticsUtils.trackAppUIViewed("share", {
+      share_num_attachments: targetUserId.attachments.length,
       share_attachment_mimetypes: mapped,
     });
   });
   obj = { appEntryKey: share, children: null };
   if (first) {
-    obj = { appEntryKey: null, sharedContent: null, onClose: null };
-    obj[0] = tmp18;
-    obj[1] = targetUserId;
+    obj = { appEntryKey: tmp18, sharedContent: targetUserId, onClose: null };
     const tmp14Result = tmp14(13900);
     if (tmp9Result.isMetaQuest()) {
-      let exitApp = tmp14(8362).close;
+      exitApp = tmp14(8362).close;
     } else {
       exitApp = exitApp.exitApp;
     }
-    obj[2] = exitApp;
+    obj.onClose = exitApp;
     tmp19(tmp14Result, obj);
     tmp9Result = tmp9(1608);
   } else {
     const items5 = [tmp19(tmp9(7039).SceneLoadingIndicator, {}), , ,];
-    obj1 = { appEntryKey: null };
-    obj1[0] = tmp18;
+    obj1 = { appEntryKey: tmp18 };
     items5[1] = tmp19(tmp9(16908).ActionSheetContainer, obj1);
     items5[2] = tmp19(tmp14(16954), {});
     items5[3] = tmp19(tmp9(4910).AlertModalContainer, {});
-    obj[1] = items5;
+    obj.children = items5;
     return closure_11(tmp17, obj);
   }
 }

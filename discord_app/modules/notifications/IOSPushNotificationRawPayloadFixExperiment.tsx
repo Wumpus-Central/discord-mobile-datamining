@@ -1,17 +1,19 @@
 // discord_app/modules/notifications/IOSPushNotificationRawPayloadFixExperiment.tsx
-import set from "../../../_runtime/00002_set.js";
 import ApexExperiment from "../experiments/apex/index.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const obj = { 1: null };
-obj[1] = { enabled: true };
-let closure_0 = ApexExperiment.createApexExperiment({
+let obj = {
   name: "2026-01-ios-push-notif-json-fix",
   kind: "user",
   defaultConfig: { enabled: false },
-  variations: obj,
-});
-let c1 = null;
-const result = set.fileFinishedImporting("modules/notifications/IOSPushNotificationRawPayloadFixExperiment.tsx");
+  variations: null,
+};
+obj = { 1: null };
+obj[1] = { enabled: true };
+obj.variations = obj;
+const config = ApexExperiment.createApexExperiment(obj);
+let enabled = null;
+const result = size.fileFinishedImporting("modules/notifications/IOSPushNotificationRawPayloadFixExperiment.tsx");
 
 export const isIOSPushNotificationRawPayloadFixExperimentEnabled =
   function isIOSPushNotificationRawPayloadFixExperimentEnabled() {

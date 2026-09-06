@@ -1,54 +1,55 @@
 // discord_app/modules/bug_reporter/native/BugReporterNotification.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../BugReportStore.tsx";
-import { UserSettingsSections } from "../../../Constants.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
+import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
+import InAppNotificationUtils from "../../in_app_notifications/native/InAppNotificationUtils.tsx";
+import InAppNotificationActionCreatorsDefault from "../../../actions/native/InAppNotificationActionCreators.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import BugReportStore from "../BugReportStore.tsx";
 
-const require = arg1;
-({ Image: c4, View: c5 } = get_ActivityIndicator);
-createCacheKey = { preview: null, rightAccessoryContainer: null };
-createCacheKey = { height: 64, width: 32, borderRadius: ThemesDefault.radii.sm };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginLeft: ThemesDefault.space.PX_12 };
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { marginLeft: ThemesDefault.space.PX_12 };
-const result = require("set").fileFinishedImporting("modules/bug_reporter/native/BugReporterNotification.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const UserSettingsSections = fn(1074).UserSettingsSections;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { preview: null, rightAccessoryContainer: null };
+let size = { height: 64, width: 32, borderRadius: nativeDefault.radii.sm };
+createStyles.preview = size;
+createStyles = { marginLeft: nativeDefault.space.PX_12 };
+createStyles.rightAccessoryContainer = createStyles;
+let closure_9 = createStyles.createStyles(createStyles);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/bug_reporter/native/BugReporterNotification.tsx");
 
 export const BugReporterNotification = function BugReporterNotification(notification) {
   notification = notification.notification;
-  const tmp = callback();
+  const tmp = closure_9();
   let obj = { style: tmp.rightAccessoryContainer, children: null };
   obj = { source: { uri: notification.imageUri }, style: tmp.preview };
-  const memo = React.useMemo(() => ({ type: "simple", text: "Bug Catcher Clyde" }), []);
-  obj[1] = <closure_4 source={{ uri: notification.imageUri }} style={tmp.preview} />;
+  const memo = noop.useMemo(() => ({ type: "simple", text: "Bug Catcher Clyde" }), []);
+  obj.children = <closure_4 source={{ uri: notification.imageUri }} style={tmp.preview} />;
   obj = {
     header: memo,
     children: jsx(notification(10107).SystemMessageText, { text: "Bzzz! Found a bug? Tap to submit." }),
     rightAccessory: <closure_5 source={{ uri: notification.imageUri }} style={tmp.preview} />,
     onPress() {
-      let obj = closure_1_6;
-      if (!closure_1_6.getField("isReportOpen")) {
+      let obj = BugReportStore;
+      if (!BugReportStore.getField("isReportOpen")) {
         obj = { type: null, dismissReason: "notification_clicked", inAppNotificationId: null };
-        ({ type: obj3[0], inAppNotificationId: obj3[2] } = notification);
-        notification(closure_1_2[9]).trackDismissed(obj);
-        const obj2 = notification(closure_1_2[9]);
-        closure_1_1(closure_1_2[10]).popAll();
-        const obj4 = closure_1_1(closure_1_2[10]);
-        closure_1_1(closure_1_2[11]).clearNotification();
+        ({ type: obj3.type, inAppNotificationId: obj3.inAppNotificationId } = notification);
+        InAppNotificationUtils.trackDismissed(obj);
+        ModalActionCreatorsDefault.popAll();
+        InAppNotificationActionCreatorsDefault.clearNotification();
         obj.setState({ isReportOpen: true });
-        const obj5 = closure_1_1(closure_1_2[11]);
         obj = { screenshotUri: null, screenshot: null };
-        ({ imageUri: obj7[0], image: obj7[1] } = notification);
-        closure_1_1(closure_1_2[10]).pushLazy(notification(closure_1_2[13])(closure_1_2[12], closure_1_2.paths), obj);
-        const obj6 = closure_1_1(closure_1_2[10]);
+        ({ imageUri: obj7.screenshotUri, image: obj7.screenshot } = notification);
+        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10185, dependencyMap.paths), obj);
       }
     },
     onSettingsPress() {
-      let obj = notification(table[14]);
-      obj = { screen: constants.OVERVIEW };
+      notification(dependencyMap[14]);
+      const obj = { screen: constants.OVERVIEW };
       obj.openUserSettings(obj);
     },
     notification,
@@ -58,26 +59,22 @@ export const BugReporterNotification = function BugReporterNotification(notifica
     children: jsx(notification(10107).SystemMessageText, { text: "Bzzz! Found a bug? Tap to submit." }),
     rightAccessory: <closure_5 source={{ uri: notification.imageUri }} style={tmp.preview} />,
     onPress() {
-      let obj = closure_1_6;
-      if (!closure_1_6.getField("isReportOpen")) {
+      let obj = BugReportStore;
+      if (!BugReportStore.getField("isReportOpen")) {
         obj = { type: null, dismissReason: "notification_clicked", inAppNotificationId: null };
-        ({ type: obj3[0], inAppNotificationId: obj3[2] } = notification);
-        notification(closure_1_2[9]).trackDismissed(obj);
-        const obj2 = notification(closure_1_2[9]);
-        closure_1_1(closure_1_2[10]).popAll();
-        const obj4 = closure_1_1(closure_1_2[10]);
-        closure_1_1(closure_1_2[11]).clearNotification();
+        ({ type: obj3.type, inAppNotificationId: obj3.inAppNotificationId } = notification);
+        InAppNotificationUtils.trackDismissed(obj);
+        ModalActionCreatorsDefault.popAll();
+        InAppNotificationActionCreatorsDefault.clearNotification();
         obj.setState({ isReportOpen: true });
-        const obj5 = closure_1_1(closure_1_2[11]);
         obj = { screenshotUri: null, screenshot: null };
-        ({ imageUri: obj7[0], image: obj7[1] } = notification);
-        closure_1_1(closure_1_2[10]).pushLazy(notification(closure_1_2[13])(closure_1_2[12], closure_1_2.paths), obj);
-        const obj6 = closure_1_1(closure_1_2[10]);
+        ({ imageUri: obj7.screenshotUri, image: obj7.screenshot } = notification);
+        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10185, dependencyMap.paths), obj);
       }
     },
     onSettingsPress() {
-      let obj = notification(table[14]);
-      obj = { screen: constants.OVERVIEW };
+      notification(dependencyMap[14]);
+      const obj = { screen: constants.OVERVIEW };
       obj.openUserSettings(obj);
     },
     notification,

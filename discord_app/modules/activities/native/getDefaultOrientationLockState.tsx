@@ -1,12 +1,12 @@
 // discord_app/modules/activities/native/getDefaultOrientationLockState.tsx
-import set from "../../../../_runtime/00002_set.js";
-import dispatcherDefault from "../../../Dispatcher.tsx";
-import DCDDeviceManager from "../../../utils/native/DeviceUtils.tsx";
-import isMetaQuest from "../../device/MetaQuestUtils.android.tsx";
+import DispatcherDefault from "../../../Dispatcher.tsx";
+import DeviceUtils from "../../../utils/native/DeviceUtils.tsx";
+import MetaQuestUtils from "../../device/MetaQuestUtils.android.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-let closure_2 = DCDDeviceManager.isIpadOS();
-let closure_3 = isMetaQuest.isMetaQuest();
-const result = set.fileFinishedImporting("modules/activities/native/getDefaultOrientationLockState.tsx");
+let closure_2 = DeviceUtils.isIpadOS();
+let closure_3 = MetaQuestUtils.isMetaQuest();
+const result = size.fileFinishedImporting("modules/activities/native/getDefaultOrientationLockState.tsx");
 
 export function getIsTabletActivitySurface() {
   let tmp = closure_2;
@@ -15,7 +15,7 @@ export function getIsTabletActivitySurface() {
   }
   return tmp;
 }
-export const setOrientationLockState = function setOrientationLockState(embeddedActivityConfig) {
+export const setOrientationLockState = function setOrientationLockState(embeddedActivityConfig, arg1) {
   if (arg1 == null) {
     if (null != embeddedActivityConfig) {
       let tmp2 = closure_2;
@@ -35,10 +35,11 @@ export const setOrientationLockState = function setOrientationLockState(embedded
     }
   }
   if (null != arg1) {
-    let obj = dispatcherDefault;
-    obj = { type: "EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE", applicationId: null, lockState: null };
-    obj[1] = embeddedActivityConfig.id;
-    obj[2] = tmp;
+    const obj = {
+      type: "EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE",
+      applicationId: embeddedActivityConfig.id,
+      lockState: tmp,
+    };
     obj.dispatch(obj);
   }
 };

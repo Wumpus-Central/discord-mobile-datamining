@@ -1,12 +1,12 @@
 // discord_app/modules/screen_recording/native/StudyConfig.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const obj = {};
-const result = set.fileFinishedImporting("modules/screen_recording/native/StudyConfig.tsx");
+const SURVEY_CONFIGS = {};
+const result = size.fileFinishedImporting("modules/screen_recording/native/StudyConfig.tsx");
 
-export const SURVEY_CONFIGS = obj;
-export const getSurveyConfig = function getSurveyConfig(closure_0) {
-  let tmp = obj[closure_0];
+export { SURVEY_CONFIGS };
+export const getSurveyConfig = function getSurveyConfig(currentSurveyId) {
+  let tmp = obj[currentSurveyId];
   if (tmp == null) {
     tmp = null;
   }

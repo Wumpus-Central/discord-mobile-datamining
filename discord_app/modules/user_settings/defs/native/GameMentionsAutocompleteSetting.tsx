@@ -1,28 +1,19 @@
 // discord_app/modules/user_settings/defs/native/GameMentionsAutocompleteSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import explicitContentFromProto from "../../UserSettings.tsx";
-import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import util from "../../../../intl/index.native.tsx";
+import UserSettings from "../../UserSettings.tsx";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const toggle = createToggle.createToggle({
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.c0oFDw);
+    const intl = util.intl;
+    return intl.string(util.t.c0oFDw);
   },
-  parent: MobileUserSettings.MobileUserSettings.APPEARANCE,
-  useValue: explicitContentFromProto.IncludeGameMentionsInAutocomplete.useSetting,
-  onValueChange: explicitContentFromProto.IncludeGameMentionsInAutocomplete.updateSetting,
+  parent: SettingsConstants.MobileUserSettings.APPEARANCE,
+  useValue: UserSettings.IncludeGameMentionsInAutocomplete.useSetting,
+  onValueChange: UserSettings.IncludeGameMentionsInAutocomplete.updateSetting,
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.c0oFDw);
-  },
-  parent: MobileUserSettings.MobileUserSettings.APPEARANCE,
-  useValue: explicitContentFromProto.IncludeGameMentionsInAutocomplete.useSetting,
-  onValueChange: explicitContentFromProto.IncludeGameMentionsInAutocomplete.updateSetting,
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/GameMentionsAutocompleteSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/GameMentionsAutocompleteSetting.tsx");
 
 export default toggle;

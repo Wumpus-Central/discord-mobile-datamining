@@ -1,20 +1,19 @@
 // discord_app/modules/user_profile/native/BadgeCustomizationProfileCoachmark.tsx
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../stores/UserStore.tsx";
-import { ContentDismissActionType } from "../../dismissible_content/DismissibleContentConstants.tsx";
+import util from "../../../intl/index.native.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import UserStore from "../../../stores/UserStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
-  "modules/user_profile/native/BadgeCustomizationProfileCoachmark.tsx",
-);
+require = fn;
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/BadgeCustomizationProfileCoachmark.tsx");
 
 export default function BadgeCustomizationProfileCoachmark(visible) {
   visible = visible.visible;
   const markAsDismissed = visible.markAsDismissed;
   const onTryItOut = visible.onTryItOut;
-  let stateFromStores;
-  const items = [closure_4];
-  stateFromStores = visible(onTryItOut[3]).useStateFromStores(items, () =>
+  const items = [UserStore];
+  const stateFromStores = visible(onTryItOut[3]).useStateFromStores(items, () =>
     markAsDismissed(onTryItOut[4]).canUsePremiumProfileCustomization(currentUser.getCurrentUser()),
   );
   const items1 = [stateFromStores, visible, markAsDismissed, onTryItOut];
@@ -31,28 +30,24 @@ export default function BadgeCustomizationProfileCoachmark(visible) {
       buttonVariant: "primary",
       onButtonPress: null,
     };
-    const intl = visible(onTryItOut[5]).intl;
-    obj[0] = intl.string(visible(onTryItOut[5]).t["9JoKQb"]);
-    const intl2 = visible(onTryItOut[5]).intl;
-    const t = visible(onTryItOut[5]).t;
-    obj[1] = intl2.string(stateFromStores ? t.p82vky : t.IDh31t);
-    obj[2] = visible;
-    obj = {
-      type: "rive",
-      rive: tmp(tmp2[6]).BadgesCoachmarkRive,
-      aspectRatio: "16/9",
-      riveProps: { dataBinding: obj },
+    const intl = util.intl;
+    obj.title = intl.string(util.t["9JoKQb"]);
+    const intl2 = util.intl;
+    const t = util.t;
+    obj.description = intl2.string(stateFromStores ? t.p82vky : t.IDh31t);
+    obj.visible = visible;
+    obj = { type: "rive", rive: tmp(4271).BadgesCoachmarkRive, aspectRatio: "16/9", riveProps: null };
+    obj = { dataBinding: { on: visible } };
+    obj.riveProps = obj;
+    obj.graphic = obj;
+    obj.onDismiss = function onDismiss() {
+      return markAsDismissed(constants.USER_DISMISS);
     };
-    obj = { on: visible };
-    obj[5] = obj;
-    obj[6] = function onDismiss() {
-      return callback(closure_1_5.USER_DISMISS);
-    };
-    const intl3 = tmp(tmp2[5]).intl;
-    obj[7] = intl3.string(visible(onTryItOut[5]).t["4P5I8V"]);
-    obj[9] = function onButtonPress() {
-      callback(closure_1_5.TAKE_ACTION);
-      callback2();
+    const intl3 = tmp(1114).intl;
+    obj.buttonLabel = intl3.string(util.t["4P5I8V"]);
+    obj.onButtonPress = function onButtonPress() {
+      markAsDismissed(constants.TAKE_ACTION);
+      onTryItOut();
     };
     return obj;
   }, items1);

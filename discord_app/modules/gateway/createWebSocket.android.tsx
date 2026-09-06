@@ -1,11 +1,12 @@
 // discord_app/modules/gateway/createWebSocket.android.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/gateway/createWebSocket.android.tsx");
+const result = size.fileFinishedImporting("modules/gateway/createWebSocket.android.tsx");
 
-export default function createWebSocket(url) {
-  obj = { headers: obj };
+export default function createWebSocket(dependencyMap, arg1) {
+  let obj = { headers: null };
   obj = { Origin: window.GLOBAL_ENV.NATIVE_WEBSOCKET_ORIGIN };
-  const webSocket = new WebSocket(url, arg1, obj);
+  obj.headers = obj;
+  const webSocket = new WebSocket(dependencyMap, arg1, obj);
   return webSocket;
 }

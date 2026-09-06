@@ -1,7 +1,7 @@
 // discord_app/modules/search/native/components/tabs/pages/placeholders/PlaceholderUtils.tsx
-import set from "../../../../../../../../_runtime/00002_set.js";
+import size from "../../../../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting(
+const result = size.fileFinishedImporting(
   "modules/search/native/components/tabs/pages/placeholders/PlaceholderUtils.tsx",
 );
 

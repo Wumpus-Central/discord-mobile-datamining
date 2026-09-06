@@ -1,29 +1,30 @@
 // discord_app/modules/game_console/getXboxURIForChannel.tsx
-import computeChannelName from "../channel/useChannelName.tsx";
-import closure_2 from "../../stores/GuildStore.tsx";
-import closure_3 from "../../stores/MediaEngineStore.tsx";
-import closure_4 from "../../stores/RelationshipStore.tsx";
-import closure_5 from "../../stores/UserStore.tsx";
-import XBOX_URL_BASE from "GameConsoleConstants.tsx";
-import ME from "../../Constants.tsx";
+import useChannelName from "../channel/useChannelName.tsx";
+import GuildStore from "../../stores/GuildStore.tsx";
+import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
+import RelationshipStore from "../../stores/RelationshipStore.tsx";
+import UserStore from "../../stores/UserStore.tsx";
 
-require = arg1;
-({ XBOX_HANDOFF_SEARCH_PARAMS: closure_6, XBOX_URL_BASE: error } = XBOX_URL_BASE);
-({ Endpoints: closure_8, ZERO_STRING_GUILD_ID: c9 } = ME);
-const result = require("set").fileFinishedImporting("modules/game_console/getXboxURIForChannel.tsx");
+require = fn;
+const GameConsoleConstants = fn(9233);
+({ XBOX_HANDOFF_SEARCH_PARAMS: metroRequire, XBOX_URL_BASE: closure_7 } = GameConsoleConstants);
+const Constants = fn(1074);
+({ Endpoints: closure_8, ZERO_STRING_GUILD_ID: closure_9 } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_console/getXboxURIForChannel.tsx");
 
-export default function getXboxURIForChannel(channelId) {
+export default function getXboxURIForChannel(channelId, arg1) {
   ({ nonce, forQRCode } = arg1);
   const guildId = channelId.getGuildId();
-  guild = guild.getGuild(guildId);
+  const guild = GuildStore.getGuild(guildId);
   let tmp4 = guildId;
   if (guildId == null) {
-    tmp4 = closure_9;
+    tmp4 = React7;
   }
   const obj = {
     guildId: tmp4,
     channelId: channelId.id,
-    channelName: computeChannelName.computeChannelName(channelId, closure_5, closure_4),
+    channelName: useChannelName.computeChannelName(channelId, UserStore, RelationshipStore),
     guildName: null,
     muted: null,
     deafened: null,
@@ -37,11 +38,11 @@ export default function getXboxURIForChannel(channelId) {
     const intl = tmp5(1114).intl;
     name = intl.string(tmp5(1114).t.LJpTRF);
   }
-  obj[3] = name;
-  obj[4] = closure_3.isSelfMute();
-  obj[5] = closure_3.isSelfDeaf();
-  obj[6] = nonce;
-  const str = closure_6(obj);
+  obj.guildName = name;
+  obj.muted = MediaEngineStore.isSelfMute();
+  obj.deafened = MediaEngineStore.isSelfDeaf();
+  obj.nonce = nonce;
+  const str = timestampProducer(obj);
   if (forQRCode) {
     const aPIBaseURL = tmp5(1272).getAPIBaseURL();
     const _HermesInternal2 = HermesInternal;
@@ -49,7 +50,7 @@ export default function getXboxURIForChannel(channelId) {
     const tmp5Result = tmp5(1272);
   } else {
     const _HermesInternal = HermesInternal;
-    combined = "" + closure_7 + "?" + str.toString();
+    combined = "" + React5 + "?" + str.toString();
   }
   return combined;
 }

@@ -1,16 +1,18 @@
 // discord_app/modules/stickers/StickersStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../stores/GuildMembershipStore.tsx";
-import closure_5 from "../../stores/GuildStore.tsx";
-import closure_6 from "GuildStickersStore.tsx";
-import closure_7 from "StickersPackStore.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import DatabaseDaosDefault from "../app_database/DatabaseDaos.tsx";
+import TryLoad from "../app_database/app/TryLoad.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import GuildMembershipStore from "../../stores/GuildMembershipStore.tsx";
+import GuildStore from "../../stores/GuildStore.tsx";
+import GuildStickersStore from "GuildStickersStore.tsx";
+import StickersPackStore from "StickersPackStore.tsx";
 
-const require = arg1;
+require = fn;
 function loadSavedGuildStickers() {
   const self = this;
-  const apply = _loadSavedGuildStickers.apply;
+  const apply = closure_11.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -18,98 +20,85 @@ function loadSavedGuildStickers() {
   }
   return applyArgumentsResult;
 }
-function _loadSavedGuildStickers() {
-  const self = this;
-  const tmp = callback(function* () {
-    if (c3 === 2) {
-      c3 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
+let closure_11 = async function _loadSavedGuildStickers(arg0, value) {
+  if (c3 === 2) {
+    c3 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      obj = { value, done: true };
+      return obj;
     } else {
-      try {
-        c3 = 2;
-        if (0 === dependencyMap) {
-          if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let callback = tmp2;
-            c0 = tmp5;
-            c0 = undefined;
-            callback = undefined;
-            if (Loaded === closure_1_8.Unloaded) {
-              obj1 = closure_1_1(1986);
-              const databaseResult = obj1.database();
-              c0 = databaseResult;
-              if (null != databaseResult) {
-                Loaded = tmp28.Loaded;
-                let obj2 = closure_1_0(2006);
-                dependencyMap = 1;
-                c3 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = obj2.tryLoadOrResetCacheGatewayAsync("StickerStore.loadSavedGuildStickers", () =>
-                  callback(table[7]).timeAsync("\u{1F4BE}", "loadSavedGuildStickers", () =>
-                    closure_1_1(closure_1_2[8]).getAsync(closure_0),
-                  ),
-                );
-                return obj1;
-              }
-            }
-            c3 = 3;
-          }
-        } else if (arg0 === 1) {
-          c3 = 3;
-          throw arg1;
-        } else if (arg0 !== 2) {
-          callback = arg1;
-          if (null != callback) {
-            obj2 = { type: "CACHED_STICKERS_LOADED", stickers: null };
-            obj2[1] = callback;
-            callback(573).dispatch(obj2);
-            const obj7 = callback(573);
-          }
-        }
-        c3 = 3;
-        obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } catch (tmp15) {
-        c3 = tmp;
-        throw tmp15;
-      }
+      return { value: "HermesInternal", done: null };
     }
-  });
-  closure_11 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
-    applyArgumentsResult = apply(self, arguments);
+    try {
+      c3 = 2;
+      if (0 === c2) {
+        if (arg0 === 1) {
+          c3 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_1 = tmp2;
+          closure_0 = tmp5;
+          closure_128_0 = undefined;
+          closure_128_1 = undefined;
+          if (Loaded === Unloaded.Unloaded) {
+            let obj1 = DatabaseDaosDefault;
+            const databaseResult = obj1.database();
+            closure_128_0 = databaseResult;
+            if (null != databaseResult) {
+              Loaded = tmp27.Loaded;
+              let obj2 = TryLoad;
+              c2 = 1;
+              c3 = 1;
+              obj1 = {
+                value: obj2.tryLoadOrResetCacheGatewayAsync("StickerStore.loadSavedGuildStickers", async () =>
+                  closure_1(10).timeAsync("\u{1F4BE}", "loadSavedGuildStickers", async () =>
+                    closure_2_1(5505).getAsync(closure_1_0),
+                  ),
+                ),
+                done: false,
+              };
+              return obj1;
+            }
+          }
+          c3 = 3;
+        }
+      } else if (arg0 === 1) {
+        c3 = 3;
+        throw value;
+      } else if (arg0 !== 2) {
+        closure_128_1 = value;
+        if (null != closure_128_1) {
+          obj2 = { type: "CACHED_STICKERS_LOADED", stickers: closure_128_1 };
+          closure_129_1(closure_129_2[9]).dispatch(obj2);
+          const obj7 = closure_129_1(closure_129_2[9]);
+        }
+      }
+      c3 = 3;
+      obj = { value, done: true };
+      return obj;
+    } catch (tmp15) {
+      c3 = tmp;
+      throw tmp15;
+    }
   }
-  return applyArgumentsResult;
-}
+};
 let obj = { Unloaded: 0, [0]: "Unloaded", Loaded: 1, [1]: "Loaded" };
 let Unloaded = obj.Unloaded;
 const Store = initializeDefault.Store;
 class StickersStore extends Store {}
 const prototype = StickersStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_4, closure_6, closure_5, closure_7);
-  const items = [closure_6, closure_7];
+  this.waitFor(GuildMembershipStore, GuildStickersStore, GuildStore, StickersPackStore);
+  const items = [GuildStickersStore, StickersPackStore];
   this.syncWith(items, () => true);
 };
 Object.defineProperty(prototype, "isLoaded", {
@@ -126,51 +115,51 @@ Object.defineProperty(prototype, "loadState", {
 });
 prototype["getStickerMetadataArrays"] = function getStickerMetadataArrays() {
   loadSavedGuildStickers();
-  const items = [store.getStickerMetadataMap(), store2.getStickerMetadataMap()];
+  const items = [GuildStickersStore.getStickerMetadataMap(), StickersPackStore.getStickerMetadataMap()];
   return items;
 };
 Object.defineProperty(prototype, "hasLoadedStickerPacks", {
   get: function hasLoadedStickerPacks() {
-    return store2.hasLoadedStickerPacks;
+    return StickersPackStore.hasLoadedStickerPacks;
   },
   set: undefined,
 });
 Object.defineProperty(prototype, "isFetchingStickerPacks", {
   get: function isFetchingStickerPacks() {
-    return store2.isFetchingStickerPacks;
+    return StickersPackStore.isFetchingStickerPacks;
   },
   set: undefined,
 });
 prototype["getStickerById"] = function getStickerById(arg0) {
   loadSavedGuildStickers();
-  let stickerById = store.getStickerById(arg0);
+  let stickerById = GuildStickersStore.getStickerById(arg0);
   if (stickerById == null) {
-    stickerById = store2.getStickerById(arg0);
+    stickerById = StickersPackStore.getStickerById(arg0);
   }
   return stickerById;
 };
 prototype["getStickerPack"] = function getStickerPack(arg0) {
-  return store2.getStickerPack(arg0);
+  return StickersPackStore.getStickerPack(arg0);
 };
 prototype["getPremiumPacks"] = function getPremiumPacks() {
-  return store2.getPremiumPacks();
+  return StickersPackStore.getPremiumPacks();
 };
 prototype["isPremiumPack"] = function isPremiumPack(arg0) {
-  return store2.isPremiumPack(arg0);
+  return StickersPackStore.isPremiumPack(arg0);
 };
 prototype["getRawStickersByGuild"] = function getRawStickersByGuild() {
-  return store.getAllGuildStickers();
+  return GuildStickersStore.getAllGuildStickers();
 };
 prototype["getAllGuildStickers"] = function getAllGuildStickers() {
   loadSavedGuildStickers();
-  return store.getAllGuildStickers();
+  return GuildStickersStore.getAllGuildStickers();
 };
 prototype["getAllPackStickers"] = function getAllPackStickers() {
-  return store2.getAllPackStickers();
+  return StickersPackStore.getAllPackStickers();
 };
-prototype["getStickersByGuildId"] = function getStickersByGuildId(closure_0) {
+prototype["getStickersByGuildId"] = function getStickersByGuildId(guild_id) {
   loadSavedGuildStickers();
-  return store.getStickersByGuildId(closure_0);
+  return GuildStickersStore.getStickersByGuildId(guild_id);
 };
 StickersStore.displayName = "StickersStore";
 obj = {
@@ -190,7 +179,8 @@ obj = {
     Unloaded = obj.Unloaded;
   },
 };
-const stickersStore = new StickersStore(dispatcherDefault, obj);
-const result = require("set").fileFinishedImporting("modules/stickers/StickersStore.tsx");
+const stickersStore = new StickersStore(DispatcherDefault, obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stickers/StickersStore.tsx");
 
 export default stickersStore;

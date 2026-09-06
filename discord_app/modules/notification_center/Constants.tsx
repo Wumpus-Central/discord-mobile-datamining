@@ -1,7 +1,7 @@
 // discord_app/modules/notification_center/Constants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/notification_center/Constants.tsx");
+const result = size.fileFinishedImporting("modules/notification_center/Constants.tsx");
 
 export const PROFILE_BACKGROUND = "#83DDC5";
 export const FRIEND_BACKGROUND = "#F47FFF";

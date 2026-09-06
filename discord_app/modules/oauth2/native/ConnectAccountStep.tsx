@@ -1,22 +1,24 @@
 // discord_app/modules/oauth2/native/ConnectAccountStep.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import getAvatarURL from "../../../utils/AvatarUtils.tsx";
-import AccessibilityAnnouncer from "../../../design/shared.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
+import AvatarUtils from "../../../utils/AvatarUtils.tsx";
+import shared from "../../../design/shared.tsx";
 import CheckmarkLargeIcon from "../../../design/components/Icon/native/redesign/generated/CheckmarkLargeIcon.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
-import getPlatformUserUrlDefault from "../../../lib/Platforms.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../applications/ApplicationStore.tsx";
-import closure_6 from "../../../stores/AuthenticationStore.tsx";
-import closure_7 from "../../../stores/UserStore.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import PlatformsDefault from "../../../lib/Platforms.tsx";
+import ApplicationActionCreatorsDefault from "../../applications/ApplicationActionCreators.tsx";
+import authorizeConnectionDefault from "../../connections/authorizeConnection.native.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import ApplicationStore from "../../applications/ApplicationStore.tsx";
+import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
 
-require = arg1;
-({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = {
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+fn(4560);
+let createStyles = {
   container: { flexDirection: "column", gap: 16, width: "100%" },
   header: { flexDirection: "column", alignItems: "center", gap: 8, marginBottom: 8 },
   headerIcons: { flexDirection: "row", alignItems: "center", gap: 16, marginBottom: 8 },
@@ -29,75 +31,75 @@ createCacheKey = {
   infoText: null,
   divider: null,
 };
-createCacheKey = {
+createStyles = {
   flexDirection: "row",
   alignItems: "center",
   gap: 12,
   padding: 16,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
-  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderColor: nativeDefault.colors.BORDER_SUBTLE,
   borderWidth: 1,
-  borderRadius: ThemesDefault.radii.md,
+  borderRadius: nativeDefault.radii.md,
 };
-createCacheKey[3] = createCacheKey;
-createCacheKey[4] = { flex: 1, minWidth: 0 };
-createCacheKey[5] = { flex: 1, minWidth: 0, flexDirection: "column", gap: 2 };
-createCacheKey[6] = { width: 40, height: 40, borderRadius: ThemesDefault.radii.sm };
-let obj1 = { width: 40, height: 40, borderRadius: ThemesDefault.radii.sm };
-createCacheKey[7] = { width: 32, height: 32, borderRadius: ThemesDefault.radii.sm };
-let obj2 = { width: 32, height: 32, borderRadius: ThemesDefault.radii.sm };
-createCacheKey[8] = {
+createStyles.card = createStyles;
+createStyles.cardName = { flex: 1, minWidth: 0 };
+createStyles.cardInfo = { flex: 1, minWidth: 0, flexDirection: "column", gap: 2 };
+let size = { width: 40, height: 40, borderRadius: nativeDefault.radii.sm };
+createStyles.platformIcon = size;
+const size1 = { width: 32, height: 32, borderRadius: nativeDefault.radii.sm };
+createStyles.platformIconSmall = size1;
+createStyles.infoNotice = {
   flexDirection: "row",
   alignItems: "flex-start",
   gap: 8,
   padding: 12,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_INFO,
-  borderColor: ThemesDefault.colors.ICON_FEEDBACK_INFO,
+  backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO,
+  borderColor: nativeDefault.colors.ICON_FEEDBACK_INFO,
   borderWidth: 1,
-  borderRadius: ThemesDefault.radii.sm,
+  borderRadius: nativeDefault.radii.sm,
 };
-createCacheKey[9] = { flex: 1 };
-let obj3 = {
+createStyles.infoText = { flex: 1 };
+let obj1 = {
   flexDirection: "row",
   alignItems: "flex-start",
   gap: 8,
   padding: 12,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_INFO,
-  borderColor: ThemesDefault.colors.ICON_FEEDBACK_INFO,
+  backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO,
+  borderColor: nativeDefault.colors.ICON_FEEDBACK_INFO,
   borderWidth: 1,
-  borderRadius: ThemesDefault.radii.sm,
+  borderRadius: nativeDefault.radii.sm,
 };
-createCacheKey[10] = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginVertical: 8 };
-let closure_10 = createCacheKey.createStyles(createCacheKey);
-let obj4 = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginVertical: 8 };
-const result = require("set").fileFinishedImporting("modules/oauth2/native/ConnectAccountStep.tsx");
+createStyles.divider = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginVertical: 8 };
+let closure_10 = createStyles.createStyles(createStyles);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/oauth2/native/ConnectAccountStep.tsx");
 
 export default function ConnectAccountStep(clientId) {
   clientId = clientId.clientId;
   const platformType = clientId.platformType;
   const platformName = clientId.platformName;
-  const tmp = callback3();
+  const tmp = closure_10();
   let obj = clientId(504);
-  const items = [closure_5];
+  const items = [ApplicationStore];
   const items1 = [clientId];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getApplication(clientId), items1);
-  obj1 = clientId(504);
-  const items2 = [closure_6, closure_7];
+  const stateFromStores = obj.useStateFromStores(items, () => ApplicationStore.getApplication(clientId), items1);
+  let obj1 = clientId(504);
+  const items2 = [AuthenticationStore, UserStore];
   const stateFromStores1 = obj1.useStateFromStores(items2, () => {
-    let currentUser = null;
+    currentUser = null;
     if (null != id.getId()) {
       currentUser = currentUser.getCurrentUser();
     }
     return currentUser;
   });
   let obj2 = platformType(5283);
-  const value = obj2.get(platformType);
+  value = obj2.get(platformType);
   if (null == value) {
     let applicationIconSource;
     if (null != stateFromStores) {
       let tmp2Result = tmp2(1396);
       obj = { id: null, icon: null };
-      ({ id: obj7[0], icon: obj7[1] } = stateFromStores);
+      ({ id: obj7.id, icon: obj7.icon } = stateFromStores);
       applicationIconSource = tmp2Result.getApplicationIconSource(obj);
     }
     let userAvatarSource;
@@ -113,87 +115,70 @@ export default function ConnectAccountStep(clientId) {
       str = "";
     }
     const items3 = [clientId];
-    const effect = React.useEffect(() => {
-      const application = platformType(closure_1_2[13]).fetchApplication(clientId);
+    const effect = noop.useEffect(() => {
+      const application = ApplicationActionCreatorsDefault.fetchApplication(clientId);
     }, items3);
-    obj = { style: null, children: null };
-    obj[0] = tmp.container;
-    obj1 = { style: null, children: null };
-    obj1[0] = tmp.header;
-    obj2 = { style: null, children: null };
-    obj2[0] = tmp.headerIcons;
-    const obj3 = { source: null, size: null };
-    obj3[0] = applicationIconSource;
-    obj3[1] = tmp5(1178).AvatarSizes.XLARGE;
-    const items4 = [callback(tmp5(1178).Avatar, obj3), ,];
-    const obj4 = { color: null, size: "md" };
-    obj4[0] = tmp2(576).colors.INTERACTIVE_TEXT_DEFAULT;
-    items4[1] = callback(tmp5(8672).MoreHorizontalIcon, obj4);
-    const obj5 = { source: null, size: null };
-    obj5[0] = userAvatarSource;
-    obj5[1] = tmp5(1178).AvatarSizes.XLARGE;
-    items4[2] = callback(tmp5(1178).Avatar, obj5);
-    obj2[1] = items4;
-    const items5 = [callback2(View, obj2), ,];
+    obj = { style: tmp.container, children: null };
+    obj1 = { style: tmp.header, children: null };
+    obj2 = { style: tmp.headerIcons, children: null };
+    const obj3 = { source: applicationIconSource, size: tmp5(1178).AvatarSizes.XLARGE };
+    const items4 = [closure_8(tmp5(1178).Avatar, obj3), ,];
+    const obj4 = { color: tmp2(576).colors.INTERACTIVE_TEXT_DEFAULT, size: "md" };
+    items4[1] = closure_8(tmp5(8672).MoreHorizontalIcon, obj4);
+    const obj5 = { source: userAvatarSource, size: tmp5(1178).AvatarSizes.XLARGE };
+    items4[2] = closure_8(tmp5(1178).Avatar, obj5);
+    obj2.children = items4;
+    const items5 = [closure_9(View, obj2), ,];
     const obj6 = { variant: "text-lg/normal", color: "text-default", children: null };
     const intl = tmp5(1114).intl;
-    obj6[2] = intl.string(tmp5(1114).t.uT1CPa);
-    items5[1] = callback(tmp5(4556).Text, obj6);
-    const obj7 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
-    obj7[2] = str;
-    items5[2] = callback(tmp5(4556).Text, obj7);
-    obj1[1] = items5;
-    const items6 = [callback2(View, obj1), , ,];
+    obj6.children = intl.string(tmp5(1114).t.uT1CPa);
+    items5[1] = closure_8(tmp5(4556).Text, obj6);
+    const obj7 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: str };
+    items5[2] = closure_8(tmp5(4556).Text, obj7);
+    obj1.children = items5;
+    const items6 = [closure_9(View, obj1), , ,];
     const obj8 = { variant: "text-sm/normal", color: "text-default", children: null };
     const intl2 = tmp5(1114).intl;
-    const obj9 = { applicationName: null, platformName: null };
-    obj9[0] = str;
-    obj9[1] = platformName;
-    obj8[2] = intl2.format(tmp5(1114).t["aJRE/Q"], obj9);
-    items6[1] = callback(tmp5(4556).Text, obj8);
-    const obj10 = { style: null, children: null };
-    obj10[0] = tmp.card;
+    const obj9 = { applicationName: str, platformName };
+    obj8.children = intl2.format(tmp5(1114).t["aJRE/Q"], obj9);
+    items6[1] = closure_8(tmp5(4556).Text, obj8);
+    const obj10 = { style: tmp.card, children: null };
     let tmp16Result = null;
     if (null != null) {
-      const obj11 = { source: null, style: null, disableColor: true };
-      obj11[0] = null;
-      obj11[1] = tmp.platformIcon;
+      const obj11 = { source: null, style: tmp.platformIcon, disableColor: true };
       tmp16Result = tmp16(tmp5(1178).Icon, obj11);
     }
     const items7 = [tmp16Result, ,];
-    const obj12 = { variant: "text-md/medium", style: null, color: "text-default", children: null };
-    obj12[1] = tmp.cardName;
-    obj12[3] = platformName;
-    items7[1] = callback(tmp5(4556).Text, obj12);
-    const obj13 = { variant: "primary", size: "sm", onPress: null, text: null };
-    obj13[2] = function onPress() {
-      platformType(closure_1_2[19])({ platformType, location: "OAuth2 Connect Account Step" });
+    const obj12 = { variant: "text-md/medium", style: tmp.cardName, color: "text-default", children: platformName };
+    items7[1] = closure_8(tmp5(4556).Text, obj12);
+    const obj13 = {
+      variant: "primary",
+      size: "sm",
+      onPress() {
+        authorizeConnectionDefault({ platformType, location: "OAuth2 Connect Account Step" });
+      },
+      text: null,
     };
     const intl3 = tmp5(1114).intl;
-    obj13[3] = intl3.string(tmp5(1114).t.S0W8Z5);
-    items7[2] = callback(tmp5(4975).Button, obj13);
-    obj10[1] = items7;
-    items6[2] = callback2(View, obj10);
-    const obj14 = { style: null, children: null };
-    obj14[0] = tmp.infoNotice;
-    const obj15 = { color: null, size: "sm" };
-    obj15[0] = tmp2(576).colors.ICON_FEEDBACK_INFO;
-    const items8 = [callback(tmp5(4515).CircleInformationIcon, obj15)];
-    const obj16 = { variant: "text-sm/normal", color: "text-default", style: null, children: null };
-    obj16[2] = tmp.infoText;
+    obj13.text = intl3.string(tmp5(1114).t.S0W8Z5);
+    items7[2] = closure_8(tmp5(4975).Button, obj13);
+    obj10.children = items7;
+    items6[2] = closure_9(View, obj10);
+    const obj14 = { style: tmp.infoNotice, children: null };
+    const obj15 = { color: tmp2(576).colors.ICON_FEEDBACK_INFO, size: "sm" };
+    const items8 = [closure_8(tmp5(4515).CircleInformationIcon, obj15)];
+    const obj16 = { variant: "text-sm/normal", color: "text-default", style: tmp.infoText, children: null };
     const intl4 = tmp5(1114).intl;
-    const obj17 = { platformName: null, applicationName: null };
-    obj17[0] = platformName;
-    obj17[1] = str;
-    obj16[3] = intl4.format(tmp5(1114).t["8psEFX"], obj17);
-    items8[1] = callback(tmp5(4556).Text, obj16);
-    obj14[1] = items8;
-    items6[3] = callback2(View, obj14);
-    obj[1] = items6;
-    return callback2(View, obj);
+    const obj17 = { platformName, applicationName: str };
+    obj16.children = intl4.format(tmp5(1114).t["8psEFX"], obj17);
+    items8[1] = closure_8(tmp5(4556).Text, obj16);
+    obj14.children = items8;
+    items6[3] = closure_9(View, obj14);
+    obj.children = items6;
+    return closure_9(View, obj);
   } else {
-    let tmp5Result = tmp5(1396);
-    tmp5Result = tmp5(4411);
+    tmp5(1396);
+    const tmp5Result = tmp5(4411);
     const icon = value.icon;
     const source = tmp5Result.makeSource(tmp5Result.isThemeLight(tmp4) ? icon.lightPNG : icon.darkPNG);
   }
@@ -201,61 +186,49 @@ export default function ConnectAccountStep(clientId) {
 export const ConnectedAccountCard = function ConnectedAccountCard(arg0) {
   ({ platformName, connectedAccount } = arg0);
   ({ platformType, applicationName } = arg0);
-  const tmp = callback3();
-  let obj = getPlatformUserUrlDefault;
-  const value = obj.get(platformType);
+  const tmp = closure_10();
+  let obj = PlatformsDefault;
+  value = obj.get(platformType);
   if (null == value) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.container;
+    obj = { style: tmp.container, children: null };
     obj = { variant: "text-sm/normal", color: "text-default", children: null };
-    const intl = getSystemLocale.intl;
-    obj1 = { platformName: null };
-    obj1[0] = platformName;
-    obj[2] = intl.format(getSystemLocale.t["+oaRw3"], obj1);
-    const items = [callback(Text.Text, obj), , ,];
-    let obj2 = { style: null, children: null };
-    obj2[0] = tmp.card;
+    const intl = util.intl;
+    let obj1 = { platformName };
+    obj.children = intl.format(util.t["+oaRw3"], obj1);
+    const items = [React6(Text_Text.Text, obj), , ,];
+    let obj2 = { style: tmp.card, children: null };
     let tmp10Result = null;
     if (null != null) {
-      const obj3 = { source: null, style: null, disableColor: true };
-      obj3[0] = null;
-      obj3[1] = tmp.platformIconSmall;
+      const obj3 = { source: null, style: tmp.platformIconSmall, disableColor: true };
       tmp10Result = tmp10(tmp11(1178).Icon, obj3);
     }
     const items1 = [tmp10Result, ,];
-    const obj4 = { style: null, children: null };
-    obj4[0] = tmp.cardInfo;
-    const obj5 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
-    obj5[2] = connectedAccount.name;
-    const items2 = [callback(Text.Text, obj5)];
+    const obj4 = { style: tmp.cardInfo, children: null };
+    const obj5 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: connectedAccount.name };
+    const items2 = [React6(Text_Text.Text, obj5)];
     const obj6 = { variant: "text-xs/normal", color: "text-muted", children: null };
     const intl2 = tmp11(1114).intl;
-    const obj7 = { platformName: null, connectedAccountId: null };
-    obj7[0] = platformName;
-    obj7[1] = connectedAccount.id;
-    obj6[2] = intl2.format(getSystemLocale.t.Dkd7sE, obj7);
-    items2[1] = callback(Text.Text, obj6);
-    obj4[1] = items2;
-    items1[1] = closure_9(View, obj4);
-    const obj8 = { color: null, size: "sm" };
-    obj8[0] = ThemesDefault.colors.TEXT_FEEDBACK_POSITIVE;
-    items1[2] = callback(CheckmarkLargeIcon.CheckmarkLargeIcon, obj8);
-    obj2[1] = items1;
-    items[1] = closure_9(View, obj2);
+    const obj7 = { platformName, connectedAccountId: connectedAccount.id };
+    obj6.children = intl2.format(util.t.Dkd7sE, obj7);
+    items2[1] = React6(Text_Text.Text, obj6);
+    obj4.children = items2;
+    items1[1] = React7(View, obj4);
+    const obj8 = { color: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE, size: "sm" };
+    items1[2] = React6(CheckmarkLargeIcon.CheckmarkLargeIcon, obj8);
+    obj2.children = items1;
+    items[1] = React7(View, obj2);
     const obj9 = { variant: "text-sm/normal", color: "text-default", children: null };
     const intl3 = tmp11(1114).intl;
-    const obj10 = { applicationName: null };
-    obj10[0] = applicationName;
-    obj9[2] = intl3.format(getSystemLocale.t.pyRNXJ, obj10);
-    items[2] = callback(Text.Text, obj9);
-    const obj11 = { style: null };
-    obj11[0] = tmp.divider;
-    items[3] = callback(View, obj11);
-    obj[1] = items;
-    return closure_9(View, obj);
+    const obj10 = { applicationName };
+    obj9.children = intl3.format(util.t.pyRNXJ, obj10);
+    items[2] = React6(Text_Text.Text, obj9);
+    const obj11 = { style: tmp.divider };
+    items[3] = React6(View, obj11);
+    obj.children = items;
+    return React7(View, obj);
   } else {
-    obj1 = getAvatarURL;
-    obj2 = AccessibilityAnnouncer;
+    obj1 = AvatarUtils;
+    obj2 = shared;
     const icon = value.icon;
     const source = obj1.makeSource(obj2.isThemeLight(tmp4) ? icon.lightPNG : icon.darkPNG);
   }

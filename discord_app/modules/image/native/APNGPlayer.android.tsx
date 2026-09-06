@@ -1,94 +1,52 @@
 // discord_app/modules/image/native/APNGPlayer.android.tsx
-import importAllResult from "../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let c3 = importAllResult;
-const forwardRefResult = importAllResult.forwardRef((onLoad, ref) => {
-  onLoad = onLoad.onLoad;
-  const merged = Object.assign(onLoad, Object.create(null));
-  ref = undefined;
-  ref = importAllResult.useRef(null);
-  const items = [onLoad];
-  const callback = importAllResult.useCallback((nativeEvent) => {
-    if (onLoad != null) {
-      tmp(nativeEvent.nativeEvent.url);
-    }
-  }, items);
-  const imperativeHandle = importAllResult.useImperativeHandle(ref, () => ({
-    play() {
-      if (null != closure_1.current) {
-        const Commands = closure_1_0(closure_1_2[2]).Commands;
-        Commands.play(tmp.current);
-      }
-    },
-    pause() {
-      if (null != closure_1.current) {
-        const Commands = closure_1_0(closure_1_2[2]).Commands;
-        Commands.pause(tmp.current);
-      }
-    },
-    stop() {
-      if (null != closure_1.current) {
-        const Commands = closure_1_0(closure_1_2[2]).Commands;
-        Commands.seek(tmp.current, 0);
-        const Commands2 = closure_1_0(closure_1_2[2]).Commands;
-        Commands2.pause(tmp.current);
-      }
-    },
-    seek(arg0) {
-      if (null != closure_1.current) {
-        const Commands = closure_1_0(closure_1_2[2]).Commands;
-        Commands.seek(tmp.current, arg0);
-      }
-    },
-  }));
-  const merged1 = Object.assign(merged);
-  return jsx(ref(8809), { ref, onLoad: callback });
-});
-const result = require("set").fileFinishedImporting("modules/image/native/APNGPlayer.android.tsx");
+const require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/image/native/APNGPlayer.android.tsx");
 
 export const useAPNGPlayerControls = function useAPNGPlayerControls(ref) {
   closure_0 = ref;
-  closure_1 = importAllResult.useRef(false);
+  closure_1 = noop.useRef(false);
   const items = [ref];
-  return importAllResult.useMemo(
+  return noop.useMemo(
     () => ({
       play() {
-        let current = null == closure_0.current;
+        let current = null == closure_1_0.current;
         if (!current) {
           current = ref.current;
         }
         if (!current) {
-          const current2 = closure_0.current;
+          const current2 = closure_1_0.current;
           current2.play();
           ref.current = true;
         }
       },
       pause() {
-        let current = null != closure_0.current;
+        let current = null != closure_1_0.current;
         if (current) {
           current = ref.current;
         }
         if (current) {
-          const current2 = closure_0.current;
+          const current2 = closure_1_0.current;
           current2.pause();
           ref.current = false;
         }
       },
       stop() {
-        let current = null != closure_0.current;
+        let current = null != closure_1_0.current;
         if (current) {
           current = ref.current;
         }
         if (current) {
-          const current2 = closure_0.current;
+          const current2 = closure_1_0.current;
           current2.stop();
           ref.current = false;
         }
       },
       seek(arg0) {
-        if (null != closure_0.current) {
+        if (null != ref.current) {
           const current = tmp.current;
           current.seek(arg0);
         }
@@ -97,4 +55,44 @@ export const useAPNGPlayerControls = function useAPNGPlayerControls(ref) {
     items,
   );
 };
-export const APNGPlayer = forwardRefResult;
+export const APNGPlayer = noop.forwardRef((onLoad, ref) => {
+  onLoad = onLoad.onLoad;
+  const merged = Object.assign(onLoad, Object.assign({ onLoad: 0 }));
+  ref = noop.useRef(null);
+  const items = [onLoad];
+  const callback = noop.useCallback((nativeEvent) => {
+    if (onLoad != null) {
+      tmp(nativeEvent.nativeEvent.url);
+    }
+  }, items);
+  const imperativeHandle = noop.useImperativeHandle(ref, () => ({
+    play() {
+      if (null != ref.current) {
+        const Commands = onLoad(8809).Commands;
+        Commands.play(tmp.current);
+      }
+    },
+    pause() {
+      if (null != ref.current) {
+        const Commands = onLoad(8809).Commands;
+        Commands.pause(tmp.current);
+      }
+    },
+    stop() {
+      if (null != ref.current) {
+        const Commands = onLoad(8809).Commands;
+        Commands.seek(tmp.current, 0);
+        const Commands2 = onLoad(8809).Commands;
+        Commands2.pause(tmp.current);
+      }
+    },
+    seek(arg0) {
+      if (null != ref.current) {
+        const Commands = onLoad(8809).Commands;
+        Commands.seek(tmp.current, arg0);
+      }
+    },
+  }));
+  const merged1 = Object.assign(merged);
+  return jsx(ref(8809), { ref, onLoad: callback });
+});

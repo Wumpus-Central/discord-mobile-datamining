@@ -1,10 +1,8 @@
 // discord_common/js/shared/shared-constants/GuildProfileVisibility.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const obj = { VISIBLE: null };
-let set = new Set([1, 3]);
-obj[0] = set;
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/GuildProfileVisibility.tsx");
+const obj = { VISIBLE: new Set([1, 3]) };
+const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/GuildProfileVisibility.tsx");
 
 export const GuildProfileVisibility = {
   NOT_SPECIFIED: 0,

@@ -1,21 +1,23 @@
 // discord_app/modules/skus/SKURecord.tsx
-import toJSDefault from "../../lib/Record.tsx";
-import hooksDefault from "../../../_runtime/04153_hooks.js";
+import _modDef4153 from "../../../_runtime/metro/04153__.js";
 import getPricesFromServerDefault from "utils/getPricesFromServer.tsx";
-import transformProfileEffectKeyFrameFromServerDefault from "utils/transformSKUTenantMetadata.tsx";
-import closure_3 from "../../records/ApplicationRecord.tsx";
-import { THE_GAME_AWARD_WINNER_SKUS as closure_4 } from "SKUConstants.tsx";
-import ME from "../../Constants.tsx";
-import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import transformSKUTenantMetadataDefault from "utils/transformSKUTenantMetadata.tsx";
+import Record from "../../lib/Record.tsx";
+import ApplicationRecord from "../../records/ApplicationRecord.tsx";
 
-const require = arg1;
-toJSDefault;
-({ GIFTABLE_CURRENCIES: c5, OperatingSystems: closure_6, SKUFlags: error, SKUTypes: closure_8 } = ME);
+const require = fn;
+fn(5512).THE_GAME_AWARD_WINNER_SKUS;
+const Constants = fn(1074);
+({
+  GIFTABLE_CURRENCIES: hasOwnProperty,
+  OperatingSystems: metroRequire,
+  SKUFlags: closure_7,
+  SKUTypes: closure_8,
+} = Constants);
 let SKURecord;
 class SKURecord extends tmp2 {
   constructor(arg0) {
     tmp = new SKURecord(new.target, new.target, global);
-    // ThrowIfThisInitialized (0x7c)
     ({
       id: tmp.id,
       type: tmp.type,
@@ -116,95 +118,101 @@ SKURecord["createFromServer"] = function createFromServer(id) {
   };
   let fromServer = null;
   if (null != id.application) {
-    fromServer = closure_3.createFromServer(id.application);
+    fromServer = ApplicationRecord.createFromServer(id.application);
   }
-  obj[3] = fromServer;
+  obj.application = fromServer;
   let prop = id.eligible_payment_gateways;
   if (prop == null) {
     prop = null;
   }
-  obj[4] = prop;
+  obj.eligiblePaymentGateways = prop;
   let google_sku_ids = id.google_sku_ids;
   if (google_sku_ids == null) {
     google_sku_ids = null;
   }
-  obj[5] = google_sku_ids;
-  ({ product_line: obj[6], name } = id);
+  obj.googleSkuIds = google_sku_ids;
+  ({ product_line: obj.productLine, name } = id);
   if (name == null) {
     name = "";
   }
-  obj[7] = name;
+  obj.name = name;
   let tmp6 = null;
   if (null != id.release_date) {
-    tmp6 = hooksDefault(id.release_date);
+    tmp6 = _modDef4153(id.release_date);
   }
-  obj[8] = tmp6;
+  obj.releaseDate = tmp6;
   let tmp9 = null;
   if (null != id.preorder_release_at) {
-    tmp9 = hooksDefault(id.preorder_release_at);
+    tmp9 = _modDef4153(id.preorder_release_at);
   }
-  obj[9] = tmp9;
-  ({ preorder_approximate_release_date: obj[10], summary: obj[11] } = id);
-  obj[12] = new Set(id.features);
-  const set = new Set(id.features);
+  obj.preorderReleaseAt = tmp9;
+  ({ preorder_approximate_release_date: obj.preorderApproximateReleaseDate, summary: obj.summary } = id);
+  obj.features = new Set(id.features);
+  set = new Set(id.features);
   const tmp = SKURecord;
-  obj[13] = new Set(id.genres);
+  obj.genres = new Set(id.genres);
   ({
-    dependent_sku_id: obj[14],
-    manifests: obj[15],
-    available_regions: obj[16],
-    access_type: obj[17],
-    system_requirements: obj[18],
-    content_rating: obj[19],
-    content_rating_agency: obj[20],
-    legal_notice: obj[21],
+    dependent_sku_id: obj.dependentSkuId,
+    manifests: obj.manifests,
+    available_regions: obj.availableRegions,
+    access_type: obj.accessType,
+    system_requirements: obj.systemRequirements,
+    content_rating: obj.contentRating,
+    content_rating_agency: obj.contentRatingAgency,
+    legal_notice: obj.legalNotice,
   } = id);
   let tmp14 = null;
   if (null != price) {
     obj = { amount: null, currency: null, saleAmount: null, salePercentage: null, premium: null };
-    ({ amount: obj2[0], currency: obj2[1], sale_amount: obj2[2], sale_percentage: obj2[3], premium: obj2[4] } = price);
+    ({
+      amount: obj2.amount,
+      currency: obj2.currency,
+      sale_amount: obj2.saleAmount,
+      sale_percentage: obj2.salePercentage,
+      premium: obj2.premium,
+    } = price);
     tmp14 = obj;
   }
-  obj[22] = tmp14;
-  obj[23] = getPricesFromServerDefault(id.prices);
+  obj.price = tmp14;
+  obj.prices = getPricesFromServerDefault(id.prices);
   let flag = id.premium;
   if (flag == null) {
     flag = false;
   }
-  obj[24] = flag;
-  obj[25] = id.show_age_gate || false;
-  obj[26] = id.restricted || false;
+  obj.premium = flag;
+  obj.showAgeGate = id.show_age_gate || false;
+  obj.restricted = id.restricted || false;
   let str = id.slug;
   if (str == null) {
     str = "";
   }
-  obj[27] = str;
-  obj[28] = id.exclusive || false;
+  obj.slug = str;
+  obj.exclusive = id.exclusive || false;
   let locales = id.locales;
   if (locales == null) {
     locales = ["en-US"];
   }
-  obj[29] = locales;
-  ({ flags: obj[30], external_purchase_url: obj[31], deleted } = id);
+  obj.locales = locales;
+  ({ flags: obj.flags, external_purchase_url: obj.externalPurchaseUrl, deleted } = id);
   if (deleted == null) {
     deleted = false;
   }
-  obj[32] = deleted;
+  obj.deleted = deleted;
   let bundled_sku_ids = id.bundled_sku_ids;
   if (bundled_sku_ids == null) {
     bundled_sku_ids = [];
   }
-  obj[33] = bundled_sku_ids;
+  obj.bundledSkuIds = bundled_sku_ids;
   const bundled_skus = id.bundled_skus;
   let mapped;
   if (bundled_skus != null) {
-    mapped = bundled_skus.map((arg0) => closure_9.createFromServer(arg0));
+    mapped = bundled_skus.map((item) => SKURecord.createFromServer(item));
   }
   if (mapped == null) {
     mapped = [];
   }
-  obj[34] = mapped;
-  obj[35] = transformProfileEffectKeyFrameFromServerDefault(id.tenant_metadata);
+  obj.bundledSkus = mapped;
+  obj.tenantMetadata = transformSKUTenantMetadataDefault(id.tenant_metadata);
   const selected_options = id.selected_options;
   let mapped1;
   if (selected_options != null) {
@@ -216,28 +224,29 @@ SKURecord["createFromServer"] = function createFromServer(id) {
   if (mapped1 == null) {
     mapped1 = [];
   }
-  obj[36] = mapped1;
+  obj.selectedOptions = mapped1;
   ({
-    product_id: obj[37],
-    thumbnail_asset_id: obj[38],
-    description: obj[39],
-    orbs_reward: obj[40],
+    product_id: obj.productId,
+    thumbnail_asset_id: obj.thumbnailAssetId,
+    description: obj.description,
+    orbs_reward: obj.orbsReward,
     eligible_offers,
   } = id);
   if (eligible_offers == null) {
     eligible_offers = [];
   }
-  obj[41] = eligible_offers;
+  obj.eligibleOffers = eligible_offers;
   let tmp17 = null;
   if (null != id.preview_asset_paths) {
-    obj = { fgStatic: null, fgAnimated: null, bgStatic: null, bgAnimated: null };
-    obj[0] = id.preview_asset_paths.fg_static;
-    obj[1] = id.preview_asset_paths.fg_animated;
-    obj[2] = id.preview_asset_paths.bg_static;
-    obj[3] = id.preview_asset_paths.bg_animated;
+    obj = {
+      fgStatic: id.preview_asset_paths.fg_static,
+      fgAnimated: id.preview_asset_paths.fg_animated,
+      bgStatic: id.preview_asset_paths.bg_static,
+      bgAnimated: id.preview_asset_paths.bg_animated,
+    };
     tmp17 = obj;
   }
-  obj[42] = tmp17;
+  obj.previewAssetPaths = tmp17;
   return new tmp(obj);
 };
 Object.defineProperty(prototype, "supportedOperatingSystems", {
@@ -300,21 +309,19 @@ prototype["getPrice"] = function getPrice() {
         tmp2 = premium[tmp];
       }
       if (null != tmp2) {
-        let obj = { amount: null, currency: null };
-        obj[0] = tmp2.amount;
-        obj[1] = price.currency;
+        let obj = { amount: tmp2.amount, currency: price.currency };
         return obj;
       }
     }
     if (flag) {
       if (null != price.saleAmount) {
         obj = { amount: null, currency: null };
-        ({ saleAmount: obj2[0], currency: obj2[1] } = price);
+        ({ saleAmount: obj2.amount, currency: obj2.currency } = price);
       }
       return obj;
     }
     obj = { amount: null, currency: null };
-    ({ amount: obj[0], currency: obj[1] } = price);
+    ({ amount: obj.amount, currency: obj.currency } = price);
   }
 };
 prototype["getDisplaySalePercentage"] = function getDisplaySalePercentage() {
@@ -352,8 +359,7 @@ Object.defineProperty(prototype, "isTheGameAwardsWinner", {
 });
 Object.defineProperty(prototype, "available", {
   get: function available() {
-    let hasFlagResult = hasFlag /* hasFlag */
-      .hasFlag(this.flags, constants2.AVAILABLE);
+    let hasFlagResult = require("FlagUtils").hasFlag(this.flags, constants2.AVAILABLE);
     if (!hasFlagResult) {
       hasFlagResult = null != this.externalPurchaseUrl;
     }
@@ -374,30 +380,27 @@ prototype["isAvailableForDistribution"] = function isAvailableForDistribution() 
     const premium = self.premium;
     let hasFlagResult = !premium;
     if (premium) {
-      hasFlagResult = hasFlag /* hasFlag */
-        .hasFlag(self.flags, constants2.PREMIUM_AND_DISTRIBUTION);
-      const obj = hasFlag;
+      hasFlagResult = require("FlagUtils").hasFlag(self.flags, constants2.PREMIUM_AND_DISTRIBUTION);
+      const obj = require("FlagUtils");
     }
     available = hasFlagResult;
   }
   return available;
 };
 prototype["isAvailable"] = function isAvailable() {
-  return hasFlag /* hasFlag */
-    .hasFlag(this.flags, constants2.AVAILABLE);
+  return require("FlagUtils").hasFlag(this.flags, constants2.AVAILABLE);
 };
 prototype["isPremiumPerk"] = function isPremiumPerk() {
   const self = this;
   let premium = this.premium;
   if (premium) {
-    let hasFlagResult = hasFlag /* hasFlag */
-      .hasFlag(self.flags, constants2.PREMIUM_PURCHASE);
+    let hasFlagResult = require("FlagUtils").hasFlag(self.flags, constants2.PREMIUM_PURCHASE);
     if (!hasFlagResult) {
       hasFlagResult = tmp(1384).hasFlag(self.flags, tmp3.PREMIUM_AND_DISTRIBUTION);
       const tmpResult = tmp(1384);
     }
     premium = hasFlagResult;
-    const obj = hasFlag;
+    const obj = require("FlagUtils");
     tmp = require;
     tmp3 = constants2;
   }
@@ -410,6 +413,7 @@ prototype["hasFeature"] = function hasFeature(arg0) {
 prototype["isPreorder"] = function isPreorder() {
   return null != this.preorderReleaseAt || null != this.preorderApproximateReleaseDate;
 };
-const result = require("set").fileFinishedImporting("modules/skus/SKURecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/skus/SKURecord.tsx");
 
 export default SKURecord;

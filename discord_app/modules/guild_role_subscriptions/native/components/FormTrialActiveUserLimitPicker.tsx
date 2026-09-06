@@ -1,18 +1,20 @@
 // discord_app/modules/guild_role_subscriptions/native/components/FormTrialActiveUserLimitPicker.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import util from "../../../../intl/index.native.tsx";
+import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js";
+import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-noopAll;
+require = fn;
+const jsx = fn(21).jsx;
 let c4 = "GuildRoleSubscriptionTrialActiveUserLimitSelect";
-const result = require("set").fileFinishedImporting(
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/native/components/FormTrialActiveUserLimitPicker.tsx",
 );
 
 export default function FormTrialActiveUserLimitPicker(activeTrialUserlimit) {
   const str = activeTrialUserlimit.activeTrialUserlimit;
   const onChange = activeTrialUserlimit.onChange;
-  dependencyMap = undefined;
   dependencyMap = onChange(17749)();
   if (null == str) {
     let intl = str(1114).intl;
@@ -23,17 +25,16 @@ export default function FormTrialActiveUserLimitPicker(activeTrialUserlimit) {
   return jsx(onChange(13896), {
     label: stringResult,
     onPress() {
-      let obj = onChange(paths[5]);
-      obj = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
-      const intl = str(paths[4]).intl;
-      obj[0] = intl.string(str(paths[4]).t["/JD9oe"]);
-      obj[1] = paths;
-      obj[2] = function onItemSelect(arg0) {
-        callback(arg0);
-        closure_1_1(closure_1_2[5]).hideActionSheet(closure_1_4);
+      const obj = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
+      const intl = util.intl;
+      obj.title = intl.string(util.t["/JD9oe"]);
+      obj.items = items;
+      obj.onItemSelect = function onItemSelect(arg0) {
+        closure_1_1(arg0);
+        onChange(closure_2[5]).hideActionSheet(closure_2_4);
       };
-      obj[3] = str;
-      obj.openLazy(str(paths[7])(paths[6], paths.paths), closure_1_4, obj);
+      obj.selectedItem = str;
+      obj.openLazy(asyncRequireImpl(9426, dependencyMap.paths), c4, obj);
     },
     disabled: activeTrialUserlimit.disabled,
   });

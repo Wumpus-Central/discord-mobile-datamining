@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/appearance/native/SettingsAppearanceConstants.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceConstants.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceConstants.tsx");
 
 export default {
   THEME_ITEM_WIDTH: 56,

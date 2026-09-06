@@ -1,12 +1,13 @@
 // discord_app/modules/media_viewer/native/useMediaViewerSources.tsx
-import set2 from "../../../../_runtime/00002_set.js";
-import defaultStatesAreEqual from "../../../lib/ZustandStore.tsx";
+import ZustandStore from "../../../lib/ZustandStore.tsx";
+import MediaSourceUtil from "MediaSourceUtil.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const zustandStore = defaultStatesAreEqual.createZustandStore(() => {
+const zustandStore = ZustandStore.createZustandStore(() => {
   const obj = { sources: [], spoilerIndexes: new Set() };
   return obj;
 });
-const result = set2.fileFinishedImporting("modules/media_viewer/native/useMediaViewerSources.tsx");
+const result = size.fileFinishedImporting("modules/media_viewer/native/useMediaViewerSources.tsx");
 
 export const MediaViewerSourcesStore = zustandStore;
 export const setMediaViewerSources = function setMediaViewerSources(arg0) {
@@ -14,23 +15,22 @@ export const setMediaViewerSources = function setMediaViewerSources(arg0) {
   if (initialIndex === undefined) {
     initialIndex = null;
   }
-  let set;
   const items = [];
-  set = new Set();
-  const item = sources.forEach((closure_1) => {
-    const flattenSourceResult = initialIndex(items[1]).flattenSource(closure_1);
+  const set = new Set();
+  const item = sources.forEach((item, index) => {
+    const flattenSourceResult = MediaSourceUtil.flattenSource(item);
     let tmp2 = null != flattenSourceResult;
     if (tmp2) {
       tmp2 = flattenSourceResult.spoiler || flattenSourceResult.obscure;
       const tmp3 = flattenSourceResult.spoiler || flattenSourceResult.obscure;
     }
     if (tmp2) {
-      tmp2 = initialIndex !== arg1;
+      tmp2 = initialIndex !== index;
     }
     if (tmp2) {
-      set.add(arg1);
+      set.add(index);
     }
-    items.push(closure_1);
+    items.push(item);
   });
   set.setState({ sources: items, spoilerIndexes: set });
 };
@@ -41,8 +41,7 @@ export const removeSpoiler = function removeSpoiler(index) {
     const _Set = Set;
     const set = new Set(field);
     set.delete(index);
-    obj = { spoilerIndexes: null };
-    obj[0] = set;
+    obj = { spoilerIndexes: set };
     obj.setState(obj);
   }
 };

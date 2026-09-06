@@ -1,15 +1,15 @@
 // discord_app/modules/premium/roadblocks/native/utils/shouldOpenPremiumUpsellActionSheet.tsx
-import set from "../../../../../../_runtime/00002_set.js";
-import keys from "../../../../../ConstantsIOS.tsx";
+import ConstantsIOS from "../../../../../ConstantsIOS.tsx";
 import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting(
+const result = size.fileFinishedImporting(
   "modules/premium/roadblocks/native/utils/shouldOpenPremiumUpsellActionSheet.tsx",
 );
 
 export default function maybeOpenPremiumUpsellActionSheet(initialUpsellKey) {
   initialUpsellKey = initialUpsellKey.initialUpsellKey;
-  if (keys.UpsellTypes.UPLOAD === initialUpsellKey) {
+  if (ConstantsIOS.UpsellTypes.UPLOAD === initialUpsellKey) {
     openPremiumUpsellActionSheetDefault(tmp(7853).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE);
     return true;
   } else if (tmp(1093).UpsellTypes.GLOBAL_EMOJI === initialUpsellKey) {

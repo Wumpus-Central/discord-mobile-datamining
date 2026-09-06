@@ -1,28 +1,29 @@
 // discord_app/modules/chat_input/native/guard/ChatInputGuardReturnToGameProfile.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import getAvatarURL from "../../../../utils/AvatarUtils.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
+import AvatarUtils from "../../../../utils/AvatarUtils.tsx";
 import ArrowSmallLeftIcon from "../../../../design/components/Icon/native/redesign/generated/ArrowSmallLeftIcon.tsx";
 import ChatInputGuardDefault from "ChatInputGuard.tsx";
-import { Image } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+require = fn;
+const Image = fn(17).Image;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
 let obj = { icon: null };
-obj = { height: 40, width: 40, resizeMode: "contain", borderRadius: ThemesDefault.radii.md };
-obj[0] = obj;
-let closure_5 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(function ChatInputGuardReturnToGameProfile(pendingGameProfileReturn) {
+let size = { height: 40, width: 40, resizeMode: "contain", borderRadius: nativeDefault.radii.md };
+obj.icon = size;
+let closure_5 = createStyles.createStyles(obj);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardReturnToGameProfile.tsx");
+
+export default noop.memo(function ChatInputGuardReturnToGameProfile(pendingGameProfileReturn) {
   let tmp2Result;
-  const tmp = callback();
-  const tmp3 = importDefault;
+  const tmp = closure_5();
   if (null != pendingGameProfileReturn.pendingGameProfileReturn.gameIconUrl) {
-    let obj = { style: null, source: null };
-    obj[0] = tmp.icon;
-    obj1 = getAvatarURL;
-    obj[1] = obj1.makeSource(pendingGameProfileReturn.gameIconUrl);
+    let obj = { style: tmp.icon, source: null };
+    let obj1 = AvatarUtils;
+    obj.source = obj1.makeSource(pendingGameProfileReturn.gameIconUrl);
     tmp2Result = tmp2(Image, obj);
   }
   obj = {
@@ -33,18 +34,13 @@ const memoResult = importAllResult.memo(function ChatInputGuardReturnToGameProfi
     actionIcon: null,
     actionOnPress: null,
   };
-  const intl = getSystemLocale.intl;
+  const intl = util.intl;
   obj = { gameName: pendingGameProfileReturn.gameName };
-  obj[2] = intl.format(getSystemLocale.t.HRHaSF, obj);
-  const intl2 = getSystemLocale.intl;
-  obj[3] = intl2.string(getSystemLocale.t.DjifDP);
-  obj1 = { color: ThemesDefault.colors.WHITE };
-  obj[4] = jsx(ArrowSmallLeftIcon.ArrowSmallLeftIcon, { color: ThemesDefault.colors.WHITE });
-  obj[5] = pendingGameProfileReturn.pendingGameProfileReturn.onReturnToGameProfile;
+  obj.message = intl.format(util.t.HRHaSF, obj);
+  const intl2 = util.intl;
+  obj.actionLabel = intl2.string(util.t.DjifDP);
+  obj1 = { color: nativeDefault.colors.WHITE };
+  obj.actionIcon = jsx(ArrowSmallLeftIcon.ArrowSmallLeftIcon, { color: nativeDefault.colors.WHITE });
+  obj.actionOnPress = pendingGameProfileReturn.pendingGameProfileReturn.onReturnToGameProfile;
   return jsx(ChatInputGuardDefault, { gameName: pendingGameProfileReturn.gameName });
 });
-const result = require("set").fileFinishedImporting(
-  "modules/chat_input/native/guard/ChatInputGuardReturnToGameProfile.tsx",
-);
-
-export default memoResult;

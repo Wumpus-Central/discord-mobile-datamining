@@ -1,20 +1,19 @@
 // discord_app/modules/main_tabs_v2/native/you_bar/hooks/useConnectionBannerHeight.tsx
 import initialize from "../../../../../../discord_common/js/packages/flux/index.tsx";
-import apexExperimentDefault from "../../ConnectionIndicatorExperiment.tsx";
-import closure_3 from "../../../../connectivity/native/ConnectivityIndicatorStateStore.tsx";
-import { ConnectivityIndicatorState as closure_4 } from "../../../../connectivity/native/ConnectivityIndicatorStateStore.tsx";
-import { CONNECTION_BANNER_HEIGHT } from "../YouBarConstants.tsx";
+import ConnectionIndicatorExperimentDefault from "../../ConnectionIndicatorExperiment.tsx";
+import ConnectivityIndicatorStateStore from "../../../../connectivity/native/ConnectivityIndicatorStateStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting(
-  "modules/main_tabs_v2/native/you_bar/hooks/useConnectionBannerHeight.tsx",
-);
+require = fn;
+const constants = fn(13686).ConnectivityIndicatorState;
+const CONNECTION_BANNER_HEIGHT = fn(15098).CONNECTION_BANNER_HEIGHT;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useConnectionBannerHeight.tsx");
 
 export const useConnectionBannerHeight = function useConnectionBannerHeight() {
-  const config = apexExperimentDefault.useConfig({ location: "useConnectionBannerHeight" });
+  const config = ConnectionIndicatorExperimentDefault.useConfig({ location: "useConnectionBannerHeight" });
   ({ timeoutMs, hidden } = config);
   initialize;
-  [][0] = closure_3;
+  [][0] = ConnectivityIndicatorStateStore;
   let num = 0;
   if (null != timeoutMs) {
     num = 0;

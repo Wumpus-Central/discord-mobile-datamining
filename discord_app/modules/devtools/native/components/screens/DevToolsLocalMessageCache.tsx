@@ -1,15 +1,15 @@
 // discord_app/modules/devtools/native/components/screens/DevToolsLocalMessageCache.tsx
-import set from "../../../../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import Text from "../../../../../design/components/Text/native/Text.tsx";
-import Stack from "../../../../../design/components/Stack/native/Stack.native.tsx";
-import TableRowInner from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
-import TableRowGroupTitle from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import recordChannelFetchStartDefault from "../../../../local_message_caching/MessageCacheStats.tsx";
-import closure_4 from "../../../../../stores/ChannelStore.tsx";
+import _mod17 from "../../../../../../_runtime/metro/00017__.js";
+import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
+import Stack_Stack from "../../../../../design/components/Stack/native/Stack.native.tsx";
+import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import TableRowGroup from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import MessageCacheStatsDefault from "../../../../local_message_caching/MessageCacheStats.tsx";
+import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import createStyles from "../../../../../design/components/Styles/native/createStyles.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
 function CacheLogEntry(entry) {
   entry = entry.entry;
@@ -69,84 +69,79 @@ function CacheLogEntry(entry) {
       }
     }
   }
-  channel = channel.getChannel(entry.channelId);
+  const channel = ChannelStore.getChannel(entry.channelId);
   let name;
   if (channel != null) {
     name = channel.name;
   }
-  const date = new Date(entry.startTime);
-  const tmp4 = closure_5;
+  const obj = { label: "" + name, subLabel: null };
   const items = [combined, combined1, str3, str7, str11];
-  return tmp4(TableRowInner.TableRow, { label: "" + name, subLabel: items.join("\n") });
+  obj.subLabel = items.join("\n");
+  return hasOwnProperty(TableRow.TableRow, obj);
 }
-const ScrollView = get_ActivityIndicator.ScrollView;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
+const ScrollView = _mod17.ScrollView;
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let obj = { container: null, contentContainer: null };
-obj = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-obj[0] = obj;
-obj[1] = { padding: ThemesDefault.space.PX_16 };
-let closure_7 = createCacheKey.createStyles(obj);
-let obj1 = { padding: ThemesDefault.space.PX_16 };
-const result = set.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsLocalMessageCache.tsx");
+obj = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj.container = obj;
+obj.contentContainer = { padding: nativeDefault.space.PX_16 };
+let closure_7 = createStyles.createStyles(obj);
+const result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsLocalMessageCache.tsx");
 
 export default function DevToolsLocalMessageCache() {
-  const tmp = callback3();
+  const tmp = closure_7();
   let obj = { style: tmp.container, contentContainerStyle: tmp.contentContainer, children: null };
   obj = { spacing: 8, children: null };
   obj = { title: "Local Message Cache Stats", hasIcons: false, children: null };
   const items = [
-    callback(TableRowInner.TableRow, {
+    hasOwnProperty(TableRow.TableRow, {
       label: "Channels Fetched",
-      subLabel: recordChannelFetchStartDefault.channelsFetchStarted.size,
+      subLabel: MessageCacheStatsDefault.channelsFetchStarted.size,
     }),
     ,
     ,
   ];
-  obj1 = { label: "Channels Fetched", subLabel: recordChannelFetchStartDefault.channelsFetchStarted.size };
-  items[1] = callback(TableRowInner.TableRow, {
+  const obj1 = { label: "Channels Fetched", subLabel: MessageCacheStatsDefault.channelsFetchStarted.size };
+  items[1] = hasOwnProperty(TableRow.TableRow, {
     label: "Cache Hits",
-    subLabel: recordChannelFetchStartDefault.channelsFetchedWithLocalMessages.size,
+    subLabel: MessageCacheStatsDefault.channelsFetchedWithLocalMessages.size,
   });
-  const obj2 = { label: "Cache Hits", subLabel: recordChannelFetchStartDefault.channelsFetchedWithLocalMessages.size };
-  items[2] = callback(TableRowInner.TableRow, {
+  const obj2 = { label: "Cache Hits", subLabel: MessageCacheStatsDefault.channelsFetchedWithLocalMessages.size };
+  items[2] = hasOwnProperty(TableRow.TableRow, {
     label: "Cache Misses",
     subLabel:
-      recordChannelFetchStartDefault.channelsFetchedNetwork.size -
-      recordChannelFetchStartDefault.channelsFetchedWithLocalMessages.size,
+      MessageCacheStatsDefault.channelsFetchedNetwork.size -
+      MessageCacheStatsDefault.channelsFetchedWithLocalMessages.size,
   });
   const obj3 = {
     label: "Cache Misses",
     subLabel:
-      recordChannelFetchStartDefault.channelsFetchedNetwork.size -
-      recordChannelFetchStartDefault.channelsFetchedWithLocalMessages.size,
+      MessageCacheStatsDefault.channelsFetchedNetwork.size -
+      MessageCacheStatsDefault.channelsFetchedWithLocalMessages.size,
   };
-  items[3] = callback(TableRowInner.TableRow, {
+  items[3] = hasOwnProperty(TableRow.TableRow, {
     label: "Incomplete Fetches",
-    subLabel:
-      recordChannelFetchStartDefault.channelsFetchStarted.size -
-      recordChannelFetchStartDefault.channelsFetchedNetwork.size,
+    subLabel: MessageCacheStatsDefault.channelsFetchStarted.size - MessageCacheStatsDefault.channelsFetchedNetwork.size,
   });
-  obj[2] = items;
+  obj.children = items;
   const items1 = [
-    callback2(TableRowGroupTitle.TableRowGroup, obj),
-    callback(Text.Text, {
+    timestampProducer(TableRowGroup.TableRowGroup, obj),
+    hasOwnProperty(Text_Text.Text, {
       variant: "text-sm/normal",
       color: "text-muted",
       children: "Cumulative since app launch. Does not update dynamically.",
     }),
   ];
   const obj5 = { title: "Fetch Log (Reversed)", hasIcons: false, children: null };
-  const fetchLogs = recordChannelFetchStartDefault.fetchLogs;
+  const fetchLogs = MessageCacheStatsDefault.fetchLogs;
   const obj4 = {
     label: "Incomplete Fetches",
-    subLabel:
-      recordChannelFetchStartDefault.channelsFetchStarted.size -
-      recordChannelFetchStartDefault.channelsFetchedNetwork.size,
+    subLabel: MessageCacheStatsDefault.channelsFetchStarted.size - MessageCacheStatsDefault.channelsFetchedNetwork.size,
   };
   const reversed = Array.from(fetchLogs.values()).reverse();
-  obj5[2] = reversed.map((entry) => callback(closure_8, { entry }, arg1));
-  items1[2] = callback(TableRowGroupTitle.TableRowGroup, obj5);
-  obj[1] = items1;
-  obj[2] = callback2(Stack.Stack, obj);
-  return callback(ScrollView, obj);
+  obj5.children = reversed.map((entry, index) => closure_1_5(CacheLogEntry, { entry }, index));
+  items1[2] = hasOwnProperty(TableRowGroup.TableRowGroup, obj5);
+  obj.children = items1;
+  obj.children = timestampProducer(Stack_Stack.Stack, obj);
+  return hasOwnProperty(ScrollView, obj);
 }

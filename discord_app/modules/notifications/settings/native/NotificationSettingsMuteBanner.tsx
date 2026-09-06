@@ -1,51 +1,49 @@
 // discord_app/modules/notifications/settings/native/NotificationSettingsMuteBanner.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import Text from "../../../../design/components/Text/native/Text.tsx";
-import Button from "../../../../design/components/Button/native/Button.native.tsx";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-createCacheKey = { card: null };
-createCacheKey = {
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+fn(4560);
+let createStyles = { card: null };
+createStyles = {
   padding: 16,
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "space-between",
-  borderRadius: ThemesDefault.radii.lg + 8,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+  borderRadius: nativeDefault.radii.lg + 8,
+  backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
 };
-createCacheKey[0] = createCacheKey;
-let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting(
-  "modules/notifications/settings/native/NotificationSettingsMuteBanner.tsx",
-);
+createStyles.card = createStyles;
+let closure_5 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMuteBanner.tsx");
 
 export const NotificationSettingsMuteBanner = function NotificationSettingsMuteBanner(children) {
   let obj = { style: null, children: null };
-  const items = [children.style, callback3().card];
-  obj[0] = items;
+  const items = [children.style, closure_5().card];
+  obj.style = items;
   obj = { style: { flex: 1, marginRight: 8 }, children: null };
   obj = { variant: "text-md/semibold", color: "text-overlay-light", children: children.title };
   const items1 = [
-    callback(Text.Text, obj),
-    callback(Text.Text, { variant: "text-xs/medium", color: "text-overlay-light", children: children.subtitle }),
+    React3(Text_Text.Text, obj),
+    React3(Text_Text.Text, { variant: "text-xs/medium", color: "text-overlay-light", children: children.subtitle }),
   ];
-  obj[1] = items1;
-  const items2 = [callback2(View, obj)];
+  obj.children = items1;
+  const items2 = [React4(View, obj)];
   const obj2 = { text: null, onPress: null, variant: "primary-overlay" };
-  const intl = getSystemLocale.intl;
-  obj2[0] = intl.string(getSystemLocale.t.YqAjXy);
-  obj2[1] = children.onPressUnmute;
-  items2[1] = callback(Button.Button, obj2);
-  obj[1] = items2;
-  return callback2(View, obj);
+  const intl = util.intl;
+  obj2.text = intl.string(util.t.YqAjXy);
+  obj2.onPress = children.onPressUnmute;
+  items2[1] = React3(components_Button_Button.Button, obj2);
+  obj.children = items2;
+  return React4(View, obj);
 };
 export const getMuteBannerSubtitleFromConfig = function getMuteBannerSubtitleFromConfig(config) {
   let end_time;
@@ -53,20 +51,20 @@ export const getMuteBannerSubtitleFromConfig = function getMuteBannerSubtitleFro
     end_time = config.end_time;
   }
   if (null == end_time) {
-    const intl = getSystemLocale.intl;
-    let stringResult = intl.string(getSystemLocale.t["tFqP/P"]);
+    const intl = util.intl;
+    let stringResult = intl.string(util.t["tFqP/P"]);
   } else {
-    const intl2 = getSystemLocale.intl;
+    const intl2 = util.intl;
     const obj = { endTime: null };
     const _Date = Date;
     const date = new Date(config.end_time);
-    obj[0] = date.toLocaleString(getSystemLocale.intl.currentLocale, {
+    obj.endTime = date.toLocaleString(util.intl.currentLocale, {
       month: "numeric",
       day: "numeric",
       hour: "numeric",
       minute: "2-digit",
     });
-    stringResult = intl2.formatToPlainString(getSystemLocale.t.C7m4oh, obj);
+    stringResult = intl2.formatToPlainString(util.t.C7m4oh, obj);
   }
   return stringResult;
 };

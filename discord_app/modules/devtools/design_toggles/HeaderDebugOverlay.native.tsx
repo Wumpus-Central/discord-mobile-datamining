@@ -1,15 +1,13 @@
 // discord_app/modules/devtools/design_toggles/HeaderDebugOverlay.native.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useDesignToggleDefault from "useDesignToggle.tsx";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let closure_7 = {
   "os-drawn": "OS-Drawn",
   "custom-drawn": "Custom-Drawn",
@@ -17,7 +15,8 @@ let closure_7 = {
   sheet: "Sheet",
   bespoke: "Bespoke",
 };
-createCacheKey = {
+fn(4560);
+let createStyles = {
   tintWash: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, pointerEvents: "none", opacity: 0.15 },
   badgeContainer: { position: "absolute", bottom: 2, right: 4, pointerEvents: "none" },
   badge: null,
@@ -27,47 +26,45 @@ createCacheKey = {
   "color-sheet": null,
   "color-bespoke": null,
 };
-createCacheKey = { paddingHorizontal: 4, paddingVertical: 1, borderRadius: ThemesDefault.radii.xs };
-createCacheKey[2] = createCacheKey;
-createCacheKey[3] = { backgroundColor: ThemesDefault.colors.TEXT_LINK };
-let obj1 = { backgroundColor: ThemesDefault.colors.TEXT_LINK };
-createCacheKey[4] = { backgroundColor: ThemesDefault.colors.STATUS_DANGER };
-let obj2 = { backgroundColor: ThemesDefault.colors.STATUS_DANGER };
-createCacheKey[5] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
-const obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
-createCacheKey[6] = { backgroundColor: ThemesDefault.colors.STATUS_POSITIVE };
-const obj4 = { backgroundColor: ThemesDefault.colors.STATUS_POSITIVE };
-createCacheKey[7] = { backgroundColor: ThemesDefault.colors.STATUS_WARNING };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-const obj5 = { backgroundColor: ThemesDefault.colors.STATUS_WARNING };
-const result = require("set").fileFinishedImporting("modules/devtools/design_toggles/HeaderDebugOverlay.native.tsx");
+createStyles = { paddingHorizontal: 4, paddingVertical: 1, borderRadius: nativeDefault.radii.xs };
+createStyles.badge = createStyles;
+createStyles["color-os-drawn"] = { backgroundColor: nativeDefault.colors.TEXT_LINK };
+let obj1 = { backgroundColor: nativeDefault.colors.TEXT_LINK };
+createStyles["color-custom-drawn"] = { backgroundColor: nativeDefault.colors.STATUS_DANGER };
+let obj2 = { backgroundColor: nativeDefault.colors.STATUS_DANGER };
+createStyles["color-js-stack"] = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
+const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
+createStyles["color-sheet"] = { backgroundColor: nativeDefault.colors.STATUS_POSITIVE };
+const obj4 = { backgroundColor: nativeDefault.colors.STATUS_POSITIVE };
+createStyles["color-bespoke"] = { backgroundColor: nativeDefault.colors.STATUS_WARNING };
+let closure_8 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/devtools/design_toggles/HeaderDebugOverlay.native.tsx");
 
 export default function useHeaderDebugOverlay(arg0, arg1) {
-  const tmp3 = callback3();
+  const tmp3 = closure_8();
   if (tmp2) {
     let tmp6 = arg1;
     const _HermesInternal = HermesInternal;
     const tmp8 = tmp3["color-" + arg0];
     if (arg1 == null) {
-      tmp6 = table[arg0];
+      tmp6 = closure_7[arg0];
     }
     let obj = { children: null };
     obj = { style: null };
     const items = [tmp3.tintWash, tmp8];
-    obj[0] = items;
-    const items1 = [callback(View, obj)];
-    obj = { style: null, children: null };
-    obj[0] = tmp3.badgeContainer;
-    obj1 = { style: null, children: null };
+    obj.style = items;
+    const items1 = [React4(View, obj)];
+    obj = { style: tmp3.badgeContainer, children: null };
+    const obj1 = { style: null, children: null };
     const items2 = [tmp3.badge, tmp8];
-    obj1[0] = items2;
-    const obj2 = { variant: "text-xs/bold", color: "text-overlay-light", children: null };
-    obj2[2] = tmp6;
-    obj1[1] = callback(Text.Text, obj2);
-    obj[1] = callback(View, obj1);
-    items1[1] = callback(View, obj);
-    obj[0] = items1;
-    return callback2(closure_5, obj);
+    obj1.style = items2;
+    const obj2 = { variant: "text-xs/bold", color: "text-overlay-light", children: tmp6 };
+    obj1.children = React4(Text_Text.Text, obj2);
+    obj.children = React4(View, obj1);
+    items1[1] = React4(View, obj);
+    obj.children = items1;
+    return timestampProducer(hasOwnProperty, obj);
   } else {
     return null;
   }

@@ -1,18 +1,18 @@
 // discord_app/modules/guild_member_verification/MemberVerificationTypes.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const obj = {
+const VerificationFormFieldTypes = {
   TERMS: "TERMS",
   TEXT_INPUT: "TEXT_INPUT",
   PARAGRAPH: "PARAGRAPH",
   MULTIPLE_CHOICE: "MULTIPLE_CHOICE",
   VERIFICATION: "VERIFICATION",
 };
-const result = set.fileFinishedImporting("modules/guild_member_verification/MemberVerificationTypes.tsx");
+const result = size.fileFinishedImporting("modules/guild_member_verification/MemberVerificationTypes.tsx");
 
 export const MAX_RESULTS_PER_PAGE = 25;
 export const MAX_VISIBLE_PAGES = 4;
-export const VerificationFormFieldTypes = obj;
+export { VerificationFormFieldTypes };
 export const UserVerificationFieldPlatforms = { EMAIL: "email", PHONE: "phone" };
 export const GuildJoinRequestSortOrders = { TIMESTAMP_DESC: "NEWEST", TIMESTAMP_ASC: "OLDEST" };
 export const GuildJoinRequestApplicationStatuses = {

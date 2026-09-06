@@ -1,23 +1,22 @@
 // discord_app/actions/MentionActionCreators.tsx
-import set from "../../_runtime/00002_set.js";
-import dispatcherDefault from "../Dispatcher.tsx";
-import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import ME from "../Constants.tsx";
+import DispatcherDefault from "../Dispatcher.tsx";
+import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import Constants from "../Constants.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-({ Endpoints: c3, MAX_MENTIONS_PER_FETCH: c4 } = ME);
-const result = set.fileFinishedImporting("actions/MentionActionCreators.tsx");
+({ Endpoints: c3, MAX_MENTIONS_PER_FETCH: closure_4 } = Constants);
+const result = size.fileFinishedImporting("actions/MentionActionCreators.tsx");
 
 export default {
   setGuildFilter(arg0) {
     ({ guildFilter, roleFilter, everyoneFilter } = arg0);
-    dispatcherDefault.dispatch({ type: "SET_RECENT_MENTIONS_FILTER", guildFilter, roleFilter, everyoneFilter });
+    DispatcherDefault.dispatch({ type: "SET_RECENT_MENTIONS_FILTER", guildFilter, roleFilter, everyoneFilter });
   },
   clearMentions() {
-    dispatcherDefault.dispatch({ type: "CLEAR_MENTIONS" });
+    DispatcherDefault.dispatch({ type: "CLEAR_MENTIONS" });
   },
   truncateMentions(size) {
-    let obj = dispatcherDefault;
-    obj = { type: "TRUNCATE_MENTIONS", size };
+    const obj = { type: "TRUNCATE_MENTIONS", size };
     obj.dispatch(obj);
   },
   fetchRecentMentions(feature) {
@@ -38,42 +37,40 @@ export default {
     if (flag2 === undefined) {
       flag2 = true;
     }
-    let obj = dispatcherDefault;
-    obj.dispatch({ type: "LOAD_RECENT_MENTIONS", guildId });
+    DispatcherDefault.dispatch({ type: "LOAD_RECENT_MENTIONS", guildId });
     const HTTP = before(1272).HTTP;
-    obj = {
-      url: closure_3.MENTIONS,
+    const request = {
+      url: constants.MENTIONS,
       query: { before, limit, guild_id: guildId, roles: flag, everyone: flag2, feature: feature.feature },
       retries: 2,
       oldFormErrors: true,
       rejectWithError: true,
     };
-    const value = HTTP.get(obj);
+    value = HTTP.get(request);
     return value.then(
       (body) => {
         body = body.body;
-        let obj = closure_1_1(closure_1_2[1]);
-        obj = {
+        const obj = {
           type: "LOAD_RECENT_MENTIONS_SUCCESS",
           messages: body,
           isAfter: null != before,
-          hasMoreAfter: body.length >= closure_1_4,
+          hasMoreAfter: body.length >= React4,
         };
         obj.dispatch(obj);
       },
       () => {
-        callback(table[1]).dispatch({ type: "LOAD_RECENT_MENTIONS_FAILURE" });
+        DispatcherDefault.dispatch({ type: "LOAD_RECENT_MENTIONS_FAILURE" });
       },
     );
   },
   deleteRecentMention(id) {
-    const HTTP = sendRequest.HTTP;
-    let obj = { url: closure_3.MENTIONS_MESSAGE_ID(id), retries: 2, oldFormErrors: true, rejectWithError: true };
+    const HTTP = HTTPUtils.HTTP;
+    let obj = { url: React3.MENTIONS_MESSAGE_ID(id), retries: 2, oldFormErrors: true, rejectWithError: true };
     HTTP.del(obj);
     obj = { type: "RECENT_MENTION_DELETE", id };
-    dispatcherDefault.dispatch(obj);
+    DispatcherDefault.dispatch(obj);
   },
   setRecentMentionsStale() {
-    dispatcherDefault.dispatch({ type: "SET_RECENT_MENTIONS_STALE" });
+    DispatcherDefault.dispatch({ type: "SET_RECENT_MENTIONS_STALE" });
   },
 };

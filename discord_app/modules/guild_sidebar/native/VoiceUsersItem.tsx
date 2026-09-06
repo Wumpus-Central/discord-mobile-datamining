@@ -1,19 +1,19 @@
 // discord_app/modules/guild_sidebar/native/VoiceUsersItem.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-noopAll;
-let closure_2 = createCacheKey.createStyles({
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_2 = createStyles.createStyles({
   voiceStates: { paddingRight: 8 },
   voiceStatesCollapsed: { paddingRight: 0, flexDirection: "row", flexWrap: "wrap", alignItems: "center" },
 });
-const result = require("set").fileFinishedImporting("modules/guild_sidebar/native/VoiceUsersItem.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_sidebar/native/VoiceUsersItem.tsx");
 
 export default function VoiceUsersItem(children) {
   let voiceStatesCollapsed = children.collapsed;
-  const tmp = callback();
+  const tmp = closure_2();
   let voiceStates = !voiceStatesCollapsed;
   if (!voiceStatesCollapsed) {
     voiceStates = tmp.voiceStates;

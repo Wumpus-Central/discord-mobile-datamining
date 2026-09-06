@@ -1,11 +1,10 @@
 // discord_common/js/shared/shared-constants/ContentRatingPEGIRating.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const obj = { ALL: null, IS_ADULT_ONLY: null };
-let set = new Set([1, 2, 3, 4, 5]);
-obj[0] = set;
-obj[1] = new Set([]);
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/ContentRatingPEGIRating.tsx");
+const obj = { ALL: new Set([1, 2, 3, 4, 5]), IS_ADULT_ONLY: null };
+const set = new Set([1, 2, 3, 4, 5]);
+obj.IS_ADULT_ONLY = new Set([]);
+const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ContentRatingPEGIRating.tsx");
 
 export const ContentRatingPEGIRating = {
   UNKNOWN_RATING: 0,

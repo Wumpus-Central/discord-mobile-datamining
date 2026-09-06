@@ -1,19 +1,20 @@
 // discord_app/utils/native/DeviceUtils.tsx
-import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
-import enforcingDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceModule.tsx";
-import set from "../PlatformUtils.tsx";
+import _mod17 from "../../../_runtime/metro/00017__.js";
+import NativeDeviceModuleDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceModule.tsx";
+import PlatformUtils from "../PlatformUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-if (set.isAndroid()) {
-  const importDefaultResult = enforcingDefault;
+if (PlatformUtils.isAndroid()) {
+  const importDefaultResult = NativeDeviceModuleDefault;
   let constants;
   if (importDefaultResult != null) {
     constants = importDefaultResult.getConstants();
   }
   let DCDDeviceManager = constants;
 } else {
-  DCDDeviceManager = get_ActivityIndicator.NativeModules.DCDDeviceManager;
+  DCDDeviceManager = _mod17.NativeModules.DCDDeviceManager;
 }
-let c4 = null;
+let closure_4 = null;
 const mediaPerformanceClass = "mediaPerformanceClass";
 function getSystemVersion() {
   return DCDDeviceManager.systemVersion;
@@ -21,7 +22,7 @@ function getSystemVersion() {
 function getDevice() {
   return DCDDeviceManager.device;
 }
-let result = set.fileFinishedImporting("utils/native/DeviceUtils.tsx");
+let result = size.fileFinishedImporting("utils/native/DeviceUtils.tsx");
 
 export const isIpadOS = function isIpadOS() {
   return "iPad" === DCDDeviceManager.deviceModel;
@@ -44,7 +45,6 @@ export const getSystemVersionMajor = function getSystemVersionMajor() {
     }
     return num2;
   }
-  const str = DCDDeviceManager.systemVersion;
 };
 export const getSystemVersionMinor = function getSystemVersionMinor() {
   const match = DCDDeviceManager.systemVersion.match(/\d+/g);
@@ -78,15 +78,14 @@ export const getDeviceMediaPerformanceClass = function getDeviceMediaPerformance
     let tmp5 = null == mediaPerformanceClass2;
     if (tmp5) {
       const Storage = tmp(510).Storage;
-      const value = Storage.get(mediaPerformanceClass);
+      value = Storage.get(mediaPerformanceClass);
       mediaPerformanceClass2 = value;
       tmp5 = null == value;
     }
     if (tmp5) {
-      mediaPerformanceClass2 = enforcingDefault.getMediaPerformanceClass();
+      mediaPerformanceClass2 = NativeDeviceModuleDefault.getMediaPerformanceClass();
       const Storage2 = tmp(510).Storage;
       const result = Storage2.set(mediaPerformanceClass, mediaPerformanceClass2);
-      const obj2 = enforcingDefault;
     }
     tmp3 = mediaPerformanceClass2;
   }

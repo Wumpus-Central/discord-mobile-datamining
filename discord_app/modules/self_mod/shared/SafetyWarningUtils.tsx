@@ -1,23 +1,23 @@
 // discord_app/modules/self_mod/shared/SafetyWarningUtils.tsx
-import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
-import closure_2 from "../../../stores/UserStore.tsx";
-import { AnalyticEvents } from "../../../Constants.tsx";
+import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
 
-const result = require("set").fileFinishedImporting("modules/self_mod/shared/SafetyWarningUtils.tsx");
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/self_mod/shared/SafetyWarningUtils.tsx");
 
 export const trackViewedEvent = function trackViewedEvent(SAFETY_WARNING_VIEWED, warningId) {
   warningId = warningId.warningId;
   ({ channelId, senderId, warningType } = warningId);
-  let obj = expandEventPropertiesDefault;
-  obj = { channel_id: channelId, warning_id: null, warning_type: null, other_user_id: null };
+  const obj = { channel_id: channelId, warning_id: null, warning_type: null, other_user_id: null };
   let parsed;
   if (null != warningId) {
     const _parseInt = parseInt;
     parsed = parseInt(warningId);
   }
-  obj[1] = parsed;
-  obj[2] = warningType;
-  obj[3] = senderId;
+  obj.warning_id = parsed;
+  obj.warning_type = warningType;
+  obj.other_user_id = senderId;
   obj.track(SAFETY_WARNING_VIEWED, obj);
 };
 export const ViewNameTypes = {
@@ -29,8 +29,7 @@ export const ViewNameTypes = {
 export const trackNamedViewEvent = function trackNamedViewEvent(warningId) {
   warningId = warningId.warningId;
   ({ channelId, senderId, warningType, viewName, isNudgeWarning } = warningId);
-  let obj = expandEventPropertiesDefault;
-  obj = {
+  const obj = {
     channel_id: channelId,
     warning_id: null,
     warning_type: null,
@@ -43,11 +42,11 @@ export const trackNamedViewEvent = function trackNamedViewEvent(warningId) {
     const _parseInt = parseInt;
     parsed = parseInt(warningId);
   }
-  obj[1] = parsed;
-  obj[2] = warningType;
-  obj[3] = senderId;
-  obj[4] = viewName;
-  obj[5] = isNudgeWarning;
+  obj.warning_id = parsed;
+  obj.warning_type = warningType;
+  obj.other_user_id = senderId;
+  obj.view_name = viewName;
+  obj.is_nudge_warning = isNudgeWarning;
   obj.track(AnalyticEvents.SAFETY_WARNING_VIEWED, obj);
 };
 export const CtaEventTypes = {
@@ -101,8 +100,7 @@ export const CtaEventTypes = {
 export const trackCtaEvent = function trackCtaEvent(warningId) {
   warningId = warningId.warningId;
   ({ channelId, senderId, warningType, cta, isNudgeWarning } = warningId);
-  let obj = expandEventPropertiesDefault;
-  obj = {
+  const obj = {
     channel_id: channelId,
     warning_id: null,
     warning_type: null,
@@ -115,15 +113,15 @@ export const trackCtaEvent = function trackCtaEvent(warningId) {
     const _parseInt = parseInt;
     parsed = parseInt(warningId);
   }
-  obj[1] = parsed;
-  obj[2] = warningType;
-  obj[3] = senderId;
-  obj[4] = cta;
-  obj[5] = isNudgeWarning;
+  obj.warning_id = parsed;
+  obj.warning_type = warningType;
+  obj.other_user_id = senderId;
+  obj.cta = cta;
+  obj.is_nudge_warning = isNudgeWarning;
   obj.track(AnalyticEvents.SAFETY_WARNING_CTA_CLICKED, obj);
 };
 export const getUserIsTeen = function getUserIsTeen() {
-  currentUser = currentUser.getCurrentUser();
+  const currentUser = UserStore.getCurrentUser();
   let nsfwAllowed;
   if (currentUser != null) {
     nsfwAllowed = currentUser.nsfwAllowed;

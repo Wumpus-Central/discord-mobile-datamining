@@ -1,31 +1,30 @@
 // discord_app/utils/native/requireNativeComponentOrDefault.native.tsx
-import set from "../../../_runtime/00002_set.js";
-import timestampDefault from "../../modules/debug/Logger.tsx";
-import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
+import LoggerDefault from "../../modules/debug/Logger.tsx";
+import get_ActivityIndicator from "../../../_runtime/metro/00017__.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-({ requireNativeComponent: c0, UIManager: closure_1, View: obj1 } = get_ActivityIndicator);
-let closure_3 = new timestampDefault("RequireNativeComponentOrDefault");
+({ requireNativeComponent: closure_0, UIManager: closure_1, View: c2 } = get_ActivityIndicator);
+const logger = new LoggerDefault("RequireNativeComponentOrDefault");
 const map = new Map();
-const tmp3 = new timestampDefault("RequireNativeComponentOrDefault");
-let result = set.fileFinishedImporting("utils/native/requireNativeComponentOrDefault.native.tsx");
+let result = size.fileFinishedImporting("utils/native/requireNativeComponentOrDefault.native.tsx");
 
 export default function requireNativeComponentOrDefault(warnWhenMissing) {
   ({ componentName, componentFoundInstance, componentMissingFallbackInstance } = warnWhenMissing);
   if (componentMissingFallbackInstance === undefined) {
-    componentMissingFallbackInstance = closure_2;
+    componentMissingFallbackInstance = React2;
   }
   let flag = warnWhenMissing.warnWhenMissing;
   if (flag === undefined) {
     flag = true;
   }
-  if (closure_1.hasViewManagerConfig(componentName)) {
+  if (framebus.hasViewManagerConfig(componentName)) {
     if (!map.has(componentName)) {
       if (componentFoundInstance == null) {
-        componentFoundInstance = callback(componentName);
+        componentFoundInstance = React(componentName);
       }
       const result = obj.set(componentName, componentFoundInstance);
     }
-    let value = obj.get(componentName);
+    value = obj.get(componentName);
   } else {
     value = componentMissingFallbackInstance;
     if (flag) {

@@ -1,61 +1,37 @@
 // discord_app/modules/user_settings/defs/native/AndroidClassicChatFontScaleSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import set2 from "../../../../utils/PlatformUtils.tsx";
-import isIterable from "../../../../../_runtime/04184_isIterable.js";
-import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
-import DEFAULT_FONT_SCALE_STORE_STATE from "../../appearance/native/FontScaleStore.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import util from "../../../../intl/index.native.tsx";
+import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
+import _mod4184 from "../../../../../_runtime/metro/04184__.js";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
+import FontScaleStore from "../../appearance/native/FontScaleStore.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const useFontScaleStore = DEFAULT_FONT_SCALE_STORE_STATE.useFontScaleStore;
-const toggle = createToggle.createToggle({
+const useFontScaleStore = FontScaleStore.useFontScaleStore;
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.gFob3e);
+    const intl = util.intl;
+    return intl.string(util.t.gFob3e);
   },
-  parent: MobileUserSettings.MobileUserSettings.APPEARANCE,
+  parent: SettingsConstants.MobileUserSettings.APPEARANCE,
   useValue: function useClassicChatFontScaleValue() {
     return useFontScaleStore(
       (isClassicChatFontScaleEnabled) => isClassicChatFontScaleEnabled.isClassicChatFontScaleEnabled,
-      isIterable.shallow,
+      _mod4184.shallow,
     );
   },
-  onValueChange: function onClassicChatFontScaleChange(arg0) {
-    const _require = arg0;
-    return require("../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() =>
-      closure_1_2.setState({ isClassicChatFontScaleEnabled: closure_0 }),
+  onValueChange: function onClassicChatFontScaleChange(isClassicChatFontScaleEnabled) {
+    _require = isClassicChatFontScaleEnabled;
+    return require("ReactBatchUpdates").batchUpdates(() =>
+      useFontScaleStore.setState({ isClassicChatFontScaleEnabled }),
     );
   },
   useDescription: function useClassicChatFontScaleDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.OU3q8a);
+    const intl = util.intl;
+    return intl.string(util.t.OU3q8a);
   },
-  usePredicate: set2.isAndroid,
+  usePredicate: PlatformUtils.isAndroid,
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.gFob3e);
-  },
-  parent: MobileUserSettings.MobileUserSettings.APPEARANCE,
-  useValue: function useClassicChatFontScaleValue() {
-    return useFontScaleStore(
-      (isClassicChatFontScaleEnabled) => isClassicChatFontScaleEnabled.isClassicChatFontScaleEnabled,
-      isIterable.shallow,
-    );
-  },
-  onValueChange: function onClassicChatFontScaleChange(arg0) {
-    const _require = arg0;
-    return require("../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() =>
-      closure_1_2.setState({ isClassicChatFontScaleEnabled: closure_0 }),
-    );
-  },
-  useDescription: function useClassicChatFontScaleDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.OU3q8a);
-  },
-  usePredicate: set2.isAndroid,
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/AndroidClassicChatFontScaleSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AndroidClassicChatFontScaleSetting.tsx");
 
 export default toggle;

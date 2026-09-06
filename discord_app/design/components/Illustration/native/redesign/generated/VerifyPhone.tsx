@@ -1,61 +1,56 @@
 // discord_app/design/components/Illustration/native/redesign/generated/VerifyPhone.tsx
-import noopAll from "../../../../../../../_runtime/00019_noop.js";
-import AccessibilityAnnouncer from "../../../../../shared.tsx";
-import getIllustrationSource from "../../index.tsx";
-import { Image } from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
+import shared from "../../../../../shared.tsx";
+import _mod8233 from "../../index.tsx";
+import noop from "../../../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting(
-  "design/components/Illustration/native/redesign/generated/VerifyPhone.tsx",
-);
+require = fn;
+const Image = fn(17).Image;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/VerifyPhone.tsx");
 
 export const getVerifyPhoneSource = function getVerifyPhoneSource(theme) {
-  let obj = getIllustrationSource;
-  obj = {
+  const obj = {
     dark() {
-      return callback(17511);
+      return require("../../../../../../../_runtime/metro/17511__.js");
     },
     darker() {
-      return callback(17512);
+      return require("../../../../../../../_runtime/metro/17512__.js");
     },
     light() {
-      return callback(17513);
+      return require("../../../../../../../_runtime/metro/17513__.js");
     },
   };
   return obj.getIllustrationSource(theme, obj);
 };
 export const useVerifyPhoneSource = function useVerifyPhoneSource() {
-  let obj = AccessibilityAnnouncer;
-  obj = {
+  const obj = {
     dark() {
-      return callback(17511);
+      return require("../../../../../../../_runtime/metro/17511__.js");
     },
     darker() {
-      return callback(17512);
+      return require("../../../../../../../_runtime/metro/17512__.js");
     },
     light() {
-      return callback(17513);
+      return require("../../../../../../../_runtime/metro/17513__.js");
     },
   };
-  return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
+  return _mod8233.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
 export const VerifyPhone = function VerifyPhone(arg0) {
-  let obj = AccessibilityAnnouncer;
-  obj = {
+  let obj = {
     dark() {
-      return callback(17511);
+      return require("../../../../../../../_runtime/metro/17511__.js");
     },
     darker() {
-      return callback(17512);
+      return require("../../../../../../../_runtime/metro/17512__.js");
     },
     light() {
-      return callback(17513);
+      return require("../../../../../../../_runtime/metro/17513__.js");
     },
   };
   obj = {};
-  const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
+  const illustrationSource = _mod8233.getIllustrationSource(obj.useThemeContext().theme, obj);
   const merged = Object.assign(arg0);
   obj.source = illustrationSource;
   return <Image />;

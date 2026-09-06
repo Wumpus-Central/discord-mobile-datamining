@@ -1,22 +1,26 @@
 // discord_app/modules/media_keyboard/native/MediaKeyboardConstants.tsx
-import set from "../../../../_runtime/00002_set.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import isMetaQuest from "../../device/MetaQuestUtils.android.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import MetaQuestUtils from "../../device/MetaQuestUtils.android.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-if (isMetaQuest.isMetaQuest()) {
-  let obj = { slotHeight: 24, barColor: null, barWidth: null, barHeight: null, barMarginTop: null };
-  obj[1] = ThemesDefault.colors.BACKGROUND_MOD_STRONG;
-  obj[2] = ThemesDefault.space.PX_64;
-  obj[3] = ThemesDefault.space.PX_8;
-  obj[4] = ThemesDefault.space.PX_16;
+if (MetaQuestUtils.isMetaQuest()) {
+  let obj = {
+    slotHeight: 24,
+    barColor: nativeDefault.colors.BACKGROUND_MOD_STRONG,
+    barWidth: nativeDefault.space.PX_64,
+    barHeight: nativeDefault.space.PX_8,
+    barMarginTop: nativeDefault.space.PX_16,
+  };
 } else {
-  obj = { slotHeight: 16, barColor: null, barWidth: null, barHeight: null, barMarginTop: null };
-  obj[1] = ThemesDefault.colors.BACKGROUND_MOD_MUTED;
-  obj[2] = ThemesDefault.space.PX_32;
-  obj[3] = ThemesDefault.space.PX_4;
-  obj[4] = ThemesDefault.space.PX_4;
+  obj = {
+    slotHeight: 16,
+    barColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
+    barWidth: nativeDefault.space.PX_32,
+    barHeight: nativeDefault.space.PX_4,
+    barMarginTop: nativeDefault.space.PX_4,
+  };
 }
-const result = set.fileFinishedImporting("modules/media_keyboard/native/MediaKeyboardConstants.tsx");
+const result = size.fileFinishedImporting("modules/media_keyboard/native/MediaKeyboardConstants.tsx");
 
 export const DRAG_HANDLE = obj;
 export const HEADER_HANDLE_HEIGHT = obj.slotHeight;

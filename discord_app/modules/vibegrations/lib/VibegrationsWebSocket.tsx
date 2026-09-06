@@ -1,58 +1,57 @@
 // discord_app/modules/vibegrations/lib/VibegrationsWebSocket.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/vibegrations/lib/VibegrationsWebSocket.tsx");
-class VibegrationsWebSocket {}
+const result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsWebSocket.tsx");
+class VibegrationsWebSocket {
+  constructor() {
+    return Object.assign({ socket: null });
+  }
+}
 const prototype = VibegrationsWebSocket.prototype;
 prototype["open"] = function open(ticket) {
   const self = this;
   ({ url, onEvent: closure_1, onClose: closure_2, onError: closure_3 } = ticket);
-  let webSocket;
   this.close();
   const replaced = url.replace(/^https:/i, "wss:").replace(/^http:/i, "ws:");
-  webSocket = new WebSocket("" + replaced + "/agent/ws?ticket=" + encodeURIComponent(ticket.ticket));
+  const webSocket = new WebSocket("" + replaced + "/agent/ws?ticket=" + encodeURIComponent(ticket.ticket));
   this.socket = webSocket;
-  const listener = webSocket.addEventListener("message", (data) => {
+  const listener = webSocket.addEventListener("message", (event) => {
     if (self.socket === webSocket) {
       try {
         const _JSON = JSON;
-        callback(JSON.parse(data.data));
+        closure_1_1(JSON.parse(event.data));
       } catch (err) {
         return tmp;
       }
     }
   });
-  const listener1 = webSocket.addEventListener("error", (arg0) => {
+  const listener1 = webSocket.addEventListener("error", (event) => {
     if (self.socket === webSocket) {
-      if (closure_3 != null) {
-        tmp(arg0);
+      if (closure_1_3 != null) {
+        tmp(event);
       }
     }
   });
   const listener2 = webSocket.addEventListener("close", () => {
     if (self.socket === webSocket) {
-      if (closure_2 != null) {
+      if (closure_1_2 != null) {
         tmp();
       }
     }
   });
 };
-prototype["sendUserMessage"] = function sendUserMessage(arg0, arg1, arg2, arg3) {
+prototype["sendUserMessage"] = function sendUserMessage(content, nonce, attachment_ids, project_name) {
   const self = this;
   if (null != this.socket) {
     const _WebSocket = WebSocket;
     if (self.socket.readyState === WebSocket.OPEN) {
       const socket = self.socket;
       const _JSON = JSON;
-      const obj = { type: "user_message", content: null, nonce: null, attachment_ids: null, project_name: null };
-      obj[1] = arg0;
-      obj[2] = arg1;
-      obj[3] = arg2;
-      obj[4] = arg3;
+      const obj = { type: "user_message", content, nonce, attachment_ids, project_name };
       socket.send(JSON.stringify(obj));
     }
   }
-  error = new Error("WebSocket not open");
+  const error = new Error("WebSocket not open");
   throw error;
 };
 prototype["sendInterrupt"] = function sendInterrupt() {
@@ -65,7 +64,7 @@ prototype["sendInterrupt"] = function sendInterrupt() {
       socket.send(JSON.stringify({ type: "interrupt" }));
     }
   }
-  error = new Error("WebSocket not open");
+  const error = new Error("WebSocket not open");
   throw error;
 };
 prototype["sendPublish"] = function sendPublish() {
@@ -78,7 +77,7 @@ prototype["sendPublish"] = function sendPublish() {
       socket.send(JSON.stringify({ type: "publish" }));
     }
   }
-  error = new Error("WebSocket not open");
+  const error = new Error("WebSocket not open");
   throw error;
 };
 prototype["sendDraftPatchNotes"] = function sendDraftPatchNotes(combined) {
@@ -88,30 +87,28 @@ prototype["sendDraftPatchNotes"] = function sendDraftPatchNotes(combined) {
     if (self.socket.readyState === WebSocket.OPEN) {
       const socket = self.socket;
       const _JSON = JSON;
-      const obj = { type: "draft_patch_notes", nonce: null };
-      obj[1] = combined;
+      const obj = { type: "draft_patch_notes", nonce: combined };
       socket.send(JSON.stringify(obj));
     }
   }
-  error = new Error("WebSocket not open");
+  const error = new Error("WebSocket not open");
   throw error;
 };
-prototype["sendModelSettings"] = function sendModelSettings(arg0) {
+prototype["sendModelSettings"] = function sendModelSettings(settings) {
   const self = this;
   if (null != this.socket) {
     const _WebSocket = WebSocket;
     if (self.socket.readyState === WebSocket.OPEN) {
       const socket = self.socket;
       const _JSON = JSON;
-      const obj = { type: "set_model_settings", settings: null };
-      obj[1] = arg0;
+      const obj = { type: "set_model_settings", settings };
       socket.send(JSON.stringify(obj));
     }
   }
-  error = new Error("WebSocket not open");
+  const error = new Error("WebSocket not open");
   throw error;
 };
-prototype["sendLoadHistory"] = function sendLoadHistory(arg0) {
+prototype["sendLoadHistory"] = function sendLoadHistory(olderHistoryCursor) {
   const self = this;
   let tmp = null != this.socket;
   if (tmp) {
@@ -121,8 +118,7 @@ prototype["sendLoadHistory"] = function sendLoadHistory(arg0) {
   if (tmp) {
     const socket = self.socket;
     const _JSON = JSON;
-    const obj = { type: "load_history", cursor: null };
-    obj[1] = arg0;
+    const obj = { type: "load_history", cursor: olderHistoryCursor };
     socket.send(JSON.stringify(obj));
   }
 };
@@ -136,7 +132,7 @@ prototype["sendDebugStatusRequest"] = function sendDebugStatusRequest() {
       socket.send(JSON.stringify({ type: "debug_status_request" }));
     }
   }
-  error = new Error("WebSocket not open");
+  const error = new Error("WebSocket not open");
   throw error;
 };
 prototype["sendCaptureAck"] = function sendCaptureAck(id, accepted, code, message) {
@@ -147,11 +143,7 @@ prototype["sendCaptureAck"] = function sendCaptureAck(id, accepted, code, messag
       try {
         const socket = self.socket;
         const _JSON = JSON;
-        const obj = { type: "capture_ack", id: null, status: null, code: null, message: null };
-        obj[1] = id;
-        obj[2] = accepted;
-        obj[3] = code;
-        obj[4] = message;
+        const obj = { type: "capture_ack", id, status: accepted, code, message };
         socket.send(JSON.stringify(obj));
       } catch (err) {}
     }
@@ -165,17 +157,13 @@ prototype["sendControlAck"] = function sendControlAck(id, failed, response, mess
       try {
         const socket = self.socket;
         const _JSON = JSON;
-        const obj = { type: "control_ack", id: null, status: null, response: null, message: null };
-        obj[1] = id;
-        obj[2] = failed;
-        obj[3] = response;
-        obj[4] = message;
+        const obj = { type: "control_ack", id, status: failed, response, message };
         socket.send(JSON.stringify(obj));
       } catch (err) {}
     }
   }
 };
-prototype["sendAppIconAck"] = function sendAppIconAck(arg0, failed) {
+prototype["sendAppIconAck"] = function sendAppIconAck(attachment_id, applied) {
   const self = this;
   if (null != this.socket) {
     const _WebSocket = WebSocket;
@@ -183,9 +171,7 @@ prototype["sendAppIconAck"] = function sendAppIconAck(arg0, failed) {
       try {
         const socket = self.socket;
         const _JSON = JSON;
-        const obj = { type: "app_icon_ack", id: null, status: null };
-        obj[1] = arg0;
-        obj[2] = failed;
+        const obj = { type: "app_icon_ack", id: attachment_id, status: applied };
         socket.send(JSON.stringify(obj));
       } catch (err) {}
     }

@@ -1,8 +1,6 @@
 // discord_common/js/shared/lib/PlatformUtils.tsx
-import importDefaultResult1 from "../../../../_runtime/01341_format.js";
-import set from "../../../../_runtime/00002_set.js";
+import format from "../../../../_runtime/01341_format.js";
 
-let set = new Set(["iPad", "Kindle", "Kindle Fire", "Nook", "PlayBook"]);
 const set1 = new Set(["Android", "iOS", "Windows Phone"]);
 let platform;
 if (window != null) {
@@ -32,14 +30,14 @@ if (tmp3) {
   }
   tmp3 = maxTouchPoints > 1;
 }
-let str = importDefaultResult1.product;
+let str = format.product;
 if (str == null) {
   str = "";
 }
-const tmp6 = set.has(str) || tmp3;
+const tmp6 = new Set(["iPad", "Kindle", "Kindle Fire", "Nook", "PlayBook"]).has(str) || tmp3;
 let hasItem = !tmp6;
 if (!tmp6) {
-  const importDefaultResult = importDefaultResult1;
+  const importDefaultResult = format;
   let str2;
   if (importDefaultResult != null) {
     const os = importDefaultResult.os;
@@ -53,21 +51,21 @@ if (!tmp6) {
   hasItem = set1.has(str2);
 }
 let family;
-if (importDefaultResult1 != null) {
-  const os2 = importDefaultResult1.os;
+if (format != null) {
+  const os2 = format.os;
   if (os2 != null) {
     family = os2.family;
   }
 }
-const importDefaultResult2 = importDefaultResult1;
 let family1;
-if (importDefaultResult2 != null) {
-  const os3 = importDefaultResult2.os;
+if (format != null) {
+  const os3 = format.os;
   if (os3 != null) {
     family1 = os3.family;
   }
 }
-const result = set.fileFinishedImporting("../discord_common/js/shared/lib/PlatformUtils.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("../discord_common/js/shared/lib/PlatformUtils.tsx");
 
 export const isTablet = tmp6;
 export const isMobile = hasItem;

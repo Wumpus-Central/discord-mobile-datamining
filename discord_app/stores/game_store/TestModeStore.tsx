@@ -1,20 +1,19 @@
 // discord_app/stores/game_store/TestModeStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import explicitContentFromProto from "../../modules/user_settings/UserSettings.tsx";
-import closure_5 from "../../modules/user_settings/SelectivelySyncedUserSettingsStore.tsx";
-import closure_6 from "../../modules/user_settings/UserSettingsProtoStore.tsx";
-import closure_7 from "../LibraryApplicationStore.tsx";
-import set from "../../../_runtime/00002_set.js";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import UserSettings from "../../modules/user_settings/UserSettings.tsx";
+import SelectivelySyncedUserSettingsStore from "../../modules/user_settings/SelectivelySyncedUserSettingsStore.tsx";
+import UserSettingsProtoStore from "../../modules/user_settings/UserSettingsProtoStore.tsx";
+import LibraryApplicationStore from "../LibraryApplicationStore.tsx";
 
-require = arg1;
+require = fn;
 function reset() {
-  c2 = null;
-  c3 = null;
+  testModeApplicationId = null;
+  originURL = null;
   set = new Set();
   obj.applicationId = null;
   obj.originURL = null;
-  c4 = null;
+  error = null;
 }
 let obj = { applicationId: null, originURL: null };
 let set = new Set();
@@ -29,30 +28,30 @@ prototype["initialize"] = function initialize(arg0) {
   }
   obj = {};
   const merged = Object.assign(tmp);
-  const applicationId = obj.applicationId;
-  const originURL = obj.originURL;
-  this.waitFor(closure_7, closure_5, closure_6);
-  const items = [closure_6, closure_5];
+  testModeApplicationId = obj.applicationId;
+  originURL = obj.originURL;
+  this.waitFor(LibraryApplicationStore, SelectivelySyncedUserSettingsStore, UserSettingsProtoStore);
+  const items = [UserSettingsProtoStore, SelectivelySyncedUserSettingsStore];
   this.syncWith(items, () => true);
-  closure_7.whenInitialized(() => {
+  LibraryApplicationStore.whenInitialized(() => {
     c11 = true;
   });
 };
 prototype["getTestModeApplicationId"] = function getTestModeApplicationId() {
-  return closure_2;
+  return testModeApplicationId;
 };
 prototype["inTestModeForApplication"] = function inTestModeForApplication(applicationId) {
-  return closure_2 === applicationId;
+  return testModeApplicationId === applicationId;
 };
 prototype["inTestModeForEmbeddedApplication"] = function inTestModeForEmbeddedApplication(arg0) {
-  let tmp = closure_2 === arg0;
+  let tmp = testModeApplicationId === arg0;
   if (tmp) {
-    tmp = null != closure_3;
+    tmp = null != originURL;
   }
   return tmp;
 };
 prototype["shouldDisplayTestMode"] = function shouldDisplayTestMode(applicationId) {
-  const DeveloperMode = explicitContentFromProto.DeveloperMode;
+  const DeveloperMode = UserSettings.DeveloperMode;
   let setting = DeveloperMode.getSetting();
   if (setting) {
     const self = this;
@@ -65,7 +64,7 @@ prototype["getState"] = function getState() {
 };
 Object.defineProperty(prototype, "isTestMode", {
   get: function isTestMode() {
-    return null != closure_2;
+    return null != testModeApplicationId;
   },
   set: undefined,
 });
@@ -78,8 +77,8 @@ Object.defineProperty(prototype, "isFetchingAuthorization", {
 Object.defineProperty(prototype, "testModeEmbeddedApplicationId", {
   get: function testModeEmbeddedApplicationId() {
     let tmp = null;
-    if (null != closure_3) {
-      tmp = closure_2;
+    if (null != originURL) {
+      tmp = testModeApplicationId;
     }
     return tmp;
   },
@@ -87,26 +86,26 @@ Object.defineProperty(prototype, "testModeEmbeddedApplicationId", {
 });
 Object.defineProperty(prototype, "testModeApplicationId", {
   get: function testModeApplicationId() {
-    return closure_2;
+    return testModeApplicationId;
   },
   set: undefined,
 });
 Object.defineProperty(prototype, "testModeOriginURL", {
   get: function testModeOriginURL() {
-    return closure_3;
+    return originURL;
   },
   set: undefined,
 });
 Object.defineProperty(prototype, "error", {
   get: function error() {
-    return closure_4;
+    return error;
   },
   set: undefined,
 });
 prototype["whenInitialized"] = function whenInitialized(arg0) {
   closure_0 = arg0;
   const result = this.addConditionalChangeListener(() => {
-    if (closure_1_11) {
+    if (c11) {
       const _setImmediate = setImmediate;
       setImmediate(closure_0);
       return false;
@@ -118,12 +117,13 @@ TestModeStore.persistKey = "TestModeStore";
 obj = {
   DEVELOPER_TEST_MODE_AUTHORIZATION_START: function handleDeveloperTestModeAuthorizationStart(applicationId) {
     set.add(applicationId.applicationId);
-    c4 = null;
+    error = null;
   },
   DEVELOPER_TEST_MODE_AUTHORIZATION_SUCCESS: function handleDeveloperTestModeAuthorizationSuccess(arg0) {
     ({ applicationId, originURL } = arg0);
+    testModeApplicationId = applicationId;
     set.delete(applicationId);
-    c4 = null;
+    error = null;
     obj.applicationId = applicationId;
     obj.originURL = originURL;
   },
@@ -135,12 +135,13 @@ obj = {
     testModeApplicationId = testModeApplicationId.testModeApplicationId;
   },
   DEVELOPER_TEST_MODE_RESET_ERROR: function resetError() {
-    c4 = null;
+    error = null;
   },
   LOGOUT: reset,
   DEVELOPER_TEST_MODE_RESET: reset,
 };
-const testModeStore = new TestModeStore(dispatcherDefault, obj);
-let result = set.fileFinishedImporting("stores/game_store/TestModeStore.tsx");
+const testModeStore = new TestModeStore(DispatcherDefault, obj);
+const size = fn(2);
+let result = size.fileFinishedImporting("stores/game_store/TestModeStore.tsx");
 
 export default testModeStore;

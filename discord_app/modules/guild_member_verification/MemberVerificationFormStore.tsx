@@ -1,12 +1,12 @@
 // discord_app/modules/guild_member_verification/MemberVerificationFormStore.tsx
-import applyDefault from "../../../_runtime/00012_apply.js";
+import _modDef12 from "../../../_runtime/metro/00012__.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import MAX_RESULTS_PER_PAGE from "MemberVerificationTypes.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import MemberVerificationTypes from "MemberVerificationTypes.tsx";
 
-require = arg1;
-let obj = { version: "", description: "", formFields: [] };
-let closure_4 = {};
+require = fn;
+let NO_MEMBER_VERIFICATION_FORM = { version: "", description: "", formFields: [] };
+const dependencyMap = {};
 const Store = initializeDefault.Store;
 class MemberVerificationFormStore extends Store {}
 const prototype = MemberVerificationFormStore.prototype;
@@ -20,25 +20,24 @@ prototype["getRulesPrompt"] = function getRulesPrompt(guildId) {
   if (dependencyMap[guildId] != null) {
     formFields = tmp2.formFields;
   }
-  return applyDefault.find(formFields, MAX_RESULTS_PER_PAGE.isTermsFormField);
+  return _modDef12.find(formFields, MemberVerificationTypes.isTermsFormField);
 };
 MemberVerificationFormStore.displayName = "MemberVerificationFormStore";
-obj = {
+NO_MEMBER_VERIFICATION_FORM = {
   INVITE_ACCEPT_SUCCESS: function handleInviteData(invite) {
     ({ member_verification_form, guild } = invite.invite);
     let flag = null != guild && null != member_verification_form;
     if (flag) {
-      obj = { version: null, description: null, formFields: null, guild: null };
-      ({ version: obj[0], description } = member_verification_form);
+      const obj = { version: null, description: null, formFields: null, guild: null };
+      ({ version: obj.version, description } = member_verification_form);
       if (description == null) {
         description = "";
       }
-      obj[1] = description;
-      obj[2] = member_verification_form.form_fields;
-      obj[3] = guild;
+      obj.description = description;
+      obj.formFields = member_verification_form.form_fields;
+      obj.guild = guild;
       closure_4[guild.id] = obj;
       flag = true;
-      const tmp = closure_4;
     }
     return flag;
   },
@@ -55,7 +54,6 @@ obj = {
       const merged = Object.assign(tmp2);
       const merged1 = Object.assign(form);
       dependencyMap[guildId] = obj;
-      const tmp = dependencyMap;
     }
   },
   MEMBER_VERIFICATION_FORM_FETCH_FAIL: function handleVerificationFormFetchFail(guildId) {
@@ -74,10 +72,9 @@ obj = {
     delete tmp2[tmp];
   },
 };
-const memberVerificationFormStore = new MemberVerificationFormStore(dispatcherDefault, obj);
-const result = require("set").fileFinishedImporting(
-  "modules/guild_member_verification/MemberVerificationFormStore.tsx",
-);
+const memberVerificationFormStore = new MemberVerificationFormStore(DispatcherDefault, NO_MEMBER_VERIFICATION_FORM);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_member_verification/MemberVerificationFormStore.tsx");
 
 export default memberVerificationFormStore;
-export const NO_MEMBER_VERIFICATION_FORM = obj;
+export { NO_MEMBER_VERIFICATION_FORM };

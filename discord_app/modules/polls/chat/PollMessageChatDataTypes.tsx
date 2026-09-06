@@ -1,7 +1,7 @@
 // discord_app/modules/polls/chat/PollMessageChatDataTypes.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/polls/chat/PollMessageChatDataTypes.tsx");
+const result = size.fileFinishedImporting("modules/polls/chat/PollMessageChatDataTypes.tsx");
 
 export const NativeShadowType = { NONE: 0, [0]: "NONE", LOW: 1, [1]: "LOW", HIGH: 2, [2]: "HIGH" };
 export const PollRadioStyle = {

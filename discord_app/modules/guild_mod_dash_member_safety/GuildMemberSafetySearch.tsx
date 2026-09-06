@@ -1,12 +1,11 @@
 // discord_app/modules/guild_mod_dash_member_safety/GuildMemberSafetySearch.tsx
-import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
-import isEqualDefault from "../../../_runtime/04679_isEqual.js";
-import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
-import set from "../../../_runtime/00002_set.js";
-import { GuildMemberFlags } from "../guild_automod/AutomodPermissionUtils.tsx";
-import { isCommunicationDisabled } from "../guild_communication_disabled/CommunicationDisabledUtils.tsx";
+import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
+import CommunicationDisabledUtils from "../guild_communication_disabled/CommunicationDisabledUtils.tsx";
+import AutomodPermissionUtils from "../guild_automod/AutomodPermissionUtils.tsx";
+import _modDef4679 from "../../../_runtime/metro/04679__.js";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
-const require = arg1;
+require = fn;
 function hasStringMatch(str, str2) {
   let hasItem = null != str;
   if (hasItem) {
@@ -21,19 +20,16 @@ let obj = {
   requireCommunicationDisabled: false,
   requireUnusualAccountActivity: false,
   requireUsernameQuarantined: false,
-  selectedRoleIds: null,
-  selectedJoinDateOption: null,
-  selectedAccountAgeOption: null,
+  selectedRoleIds: new Set(),
+  selectedJoinDateOption: { optionId: 0, afterDate: null, beforeDate: null },
+  selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null },
   selectedJoinSourceType: "call",
   selectedSourceInviteCode: "user",
   selectedSort: "isArray",
 };
-let set = new Set();
-obj[5] = set;
-obj[6] = { optionId: 0, afterDate: null, beforeDate: null };
-obj[7] = { optionId: 0, afterDate: null, beforeDate: null };
 let closure_4 = Object.freeze(obj);
-const result = set.fileFinishedImporting("modules/guild_mod_dash_member_safety/GuildMemberSafetySearch.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_mod_dash_member_safety/GuildMemberSafetySearch.tsx");
 class GuildMemberSafetySearch {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
@@ -52,9 +48,9 @@ class GuildMemberSafetySearch {
       selectedSort: "isArray",
     };
     set = new Set();
-    obj[5] = set;
-    obj[6] = { optionId: 0, afterDate: null, beforeDate: null };
-    obj[7] = { optionId: 0, afterDate: null, beforeDate: null };
+    obj.selectedRoleIds = set;
+    obj.selectedJoinDateOption = { optionId: 0, afterDate: null, beforeDate: null };
+    obj.selectedAccountAgeOption = { optionId: 0, afterDate: null, beforeDate: null };
     obj._searchState = obj;
     obj.hasDefaultQuery = true;
     return obj;
@@ -88,7 +84,7 @@ prototype["updateSearchState"] = function updateSearchState(arg0) {
   const merged = Object.assign(this._searchState);
   const merged1 = Object.assign(arg0);
   this._searchState = {};
-  this.hasDefaultQuery = isEqualDefault(this._searchState, closure_4);
+  this.hasDefaultQuery = _modDef4679(this._searchState, closure_4);
   return true;
 };
 prototype["resetSearchState"] = function resetSearchState() {
@@ -111,9 +107,9 @@ prototype["resetSearchState"] = function resetSearchState() {
     };
     const _Set = Set;
     const set = new Set();
-    obj[5] = set;
-    obj[6] = { optionId: 0, afterDate: null, beforeDate: null };
-    obj[7] = { optionId: 0, afterDate: null, beforeDate: null };
+    obj.selectedRoleIds = set;
+    obj.selectedJoinDateOption = { optionId: 0, afterDate: null, beforeDate: null };
+    obj.selectedAccountAgeOption = { optionId: 0, afterDate: null, beforeDate: null };
     self._searchState = obj;
     self.hasDefaultQuery = true;
     flag = true;
@@ -142,11 +138,10 @@ prototype["isMemberIncludedInSearchResults"] = function isMemberIncludedInSearch
       if ("" === query.trim()) {
         return false;
       } else {
-        const obj3 = joinedAtTimestamp(table[1]);
-        [tmp21, tmp22] = callback(joinedAtTimestamp(table[1]).splitQuery(query), 2);
+        const obj3 = joinedAtTimestamp(dependencyMap[1]);
+        [tmp21, tmp22] = _slicedToArray(joinedAtTimestamp(dependencyMap[1]).splitQuery(query), 2);
         for (const item10006 of tmp22) {
           if (arg0.userId === item10006) {
-            let tmp2 = obj4;
             obj4.return();
             let flag = true;
             return true;
@@ -154,9 +149,7 @@ prototype["isMemberIncludedInSearchResults"] = function isMemberIncludedInSearch
         }
         const obj = tmp21[Symbol.iterator]();
         while (obj !== undefined) {
-          let tmp7 = callback2;
-          if (callback2(userId.nick, tmp5)) {
-            let tmp8 = obj;
+          if (hasStringMatch(userId.nick, tmp5)) {
             obj.return();
             let flag2 = true;
             return true;
@@ -166,18 +159,14 @@ prototype["isMemberIncludedInSearchResults"] = function isMemberIncludedInSearch
           return false;
         } else {
           for (const item10027 of tmp21) {
-            let tmp11 = callback2;
-            if (callback2(tmp25, item10027)) {
-              let tmp12 = obj5;
+            if (hasStringMatch(tmp25, item10027)) {
               obj5.return();
               let flag3 = true;
               return true;
             }
           }
           for (const item10037 of tmp21) {
-            let tmp15 = callback2;
-            if (callback2(tmp24, item10037)) {
-              let tmp16 = obj2;
+            if (hasStringMatch(tmp24, item10037)) {
               obj2.return();
               let flag4 = true;
               return true;
@@ -185,20 +174,19 @@ prototype["isMemberIncludedInSearchResults"] = function isMemberIncludedInSearch
           }
           return false;
         }
-        const tmp20 = callback(joinedAtTimestamp(table[1]).splitQuery(query), 2);
+        const tmp20 = _slicedToArray(joinedAtTimestamp(dependencyMap[1]).splitQuery(query), 2);
       }
     })(joinedAtTimestamp, query);
   let tmp2 = !tmp;
   if (!tmp) {
     let tmp3 = selectedRoleIds.size > 0;
     if (tmp3) {
-      const _require = joinedAtTimestamp;
       let everyResult = 0 !== selectedRoleIds.size;
       if (everyResult) {
         const _Array = Array;
-        everyResult = Array.from(selectedRoleIds).every((arg0) => {
+        everyResult = Array.from(selectedRoleIds).every((item) => {
           const roles = joinedAtTimestamp.roles;
-          return roles.includes(arg0);
+          return roles.includes(item);
         });
         const arr = Array.from(selectedRoleIds);
       }
@@ -223,16 +211,14 @@ prototype["isMemberIncludedInSearchResults"] = function isMemberIncludedInSearch
           let tmp12 = null != selectedAccountAgeOption.afterDate;
           if (tmp12) {
             tmp12 =
-              DISCORD_EPOCHDefault.extractTimestamp(joinedAtTimestamp.userId) < selectedAccountAgeOption.afterDate;
-            const obj2 = DISCORD_EPOCHDefault;
+              SnowflakeUtilsDefault.extractTimestamp(joinedAtTimestamp.userId) < selectedAccountAgeOption.afterDate;
           }
           let tmp15 = !tmp12;
           if (!tmp12) {
             let tmp16 = null != selectedAccountAgeOption.beforeDate;
             if (tmp16) {
               tmp16 =
-                DISCORD_EPOCHDefault.extractTimestamp(joinedAtTimestamp.userId) > selectedAccountAgeOption.beforeDate;
-              let obj3 = DISCORD_EPOCHDefault;
+                SnowflakeUtilsDefault.extractTimestamp(joinedAtTimestamp.userId) > selectedAccountAgeOption.beforeDate;
             }
             let tmp19 = !tmp16;
             if (!tmp16) {
@@ -262,11 +248,7 @@ prototype["isMemberIncludedInSearchResults"] = function isMemberIncludedInSearch
                     if (tmp24) {
                       let tmp26 = !requireCommunicationDisabled;
                       if (requireCommunicationDisabled) {
-                        tmp26 =
-                          !require("../guild_communication_disabled/CommunicationDisabledUtils.tsx").isMemberCommunicationDisabled(
-                            joinedAtTimestamp,
-                          );
-                        const obj4 = isCommunicationDisabled;
+                        tmp26 = !CommunicationDisabledUtils.isMemberCommunicationDisabled(joinedAtTimestamp);
                       }
                       let tmp29 = !tmp26;
                       if (tmp26) {
@@ -278,11 +260,7 @@ prototype["isMemberIncludedInSearchResults"] = function isMemberIncludedInSearch
                         if (tmp30) {
                           let tmp32 = !requireUsernameQuarantined;
                           if (requireUsernameQuarantined) {
-                            tmp32 =
-                              !require("../guild_automod/AutomodPermissionUtils.tsx").hasAutomodQuarantinedProfile(
-                                joinedAtTimestamp,
-                              );
-                            const obj5 = GuildMemberFlags;
+                            tmp32 = !AutomodPermissionUtils.hasAutomodQuarantinedProfile(joinedAtTimestamp);
                           }
                           tmp31 = !tmp32;
                         }

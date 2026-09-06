@@ -1,22 +1,22 @@
 // discord_app/modules/guild_role_subscriptions/native/components/GuildPremiumRoleSubscribeButton.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import getSystemLocale from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import CreatorRevenueButton from "CreatorRevenueButton.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-let closure_3 = createCacheKey.createStyles({ crButton: { marginVertical: 16 } });
-const result = require("set").fileFinishedImporting(
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_3 = createStyles.createStyles({ crButton: { marginVertical: 16 } });
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/native/components/GuildPremiumRoleSubscribeButton.tsx",
 );
 
 export const GuildPremiumRoleSubscribeButton = function GuildPremiumRoleSubscribeButton(onPress) {
   const obj = { text: null, onPress: null, style: null, disabled: true };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t.BEeXib);
-  obj[1] = onPress.onPress;
-  obj[2] = callback().crButton;
+  const intl = util.intl;
+  obj.text = intl.string(util.t.BEeXib);
+  obj.onPress = onPress.onPress;
+  obj.style = closure_3().crButton;
   return jsx(CreatorRevenueButton.CreatorRevenueButton, { text: null, onPress: null, style: null, disabled: true });
 };

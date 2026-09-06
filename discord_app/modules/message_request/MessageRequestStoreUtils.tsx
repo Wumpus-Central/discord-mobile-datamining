@@ -1,11 +1,12 @@
 // discord_app/modules/message_request/MessageRequestStoreUtils.tsx
-import set from "../../../_runtime/00002_set.js";
+import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/message_request/MessageRequestStoreUtils.tsx");
+const result = size.fileFinishedImporting("modules/message_request/MessageRequestStoreUtils.tsx");
 
 export const sortChannelIds = function sortChannelIds(found) {
   const sorted = found.sort((lastMessageId, lastMessageId2) =>
-    callback(table[0]).compare(lastMessageId.lastMessageId, lastMessageId2.lastMessageId),
+    SnowflakeUtilsDefault.compare(lastMessageId.lastMessageId, lastMessageId2.lastMessageId),
   );
   return sorted.reverse();
 };

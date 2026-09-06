@@ -1,19 +1,19 @@
 // discord_app/records/GuildRecord.tsx
-import DISCORD_EPOCHDefault from "../utils/SnowflakeUtils.tsx";
-import getAvatarURLDefault from "../utils/AvatarUtils.tsx";
-import isNullOrEmpty from "../utils/StringUtils.tsx";
-import apexExperiment from "../modules/age_gate/ServerNSFWLevelExperiment.tsx";
-import isValueEqual from "../lib/PlainRecord.tsx";
-import ME from "../Constants.tsx";
-import set from "../../_runtime/00002_set.js";
+import SnowflakeUtilsDefault from "../utils/SnowflakeUtils.tsx";
+import AvatarUtilsDefault from "../utils/AvatarUtils.tsx";
+import StringUtils from "../utils/StringUtils.tsx";
+import ServerNSFWLevelExperiment from "../modules/age_gate/ServerNSFWLevelExperiment.tsx";
+import PlainRecord from "../lib/PlainRecord.tsx";
+import Constants from "../Constants.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-({ set: c3, TypeTag } = isValueEqual);
-const GuildNSFWContentLevel = ME.GuildNSFWContentLevel;
-const MFALevels = ME.MFALevels;
+({ set: c3, TypeTag } = PlainRecord);
+const GuildNSFWContentLevel = Constants.GuildNSFWContentLevel;
+const MFALevels = Constants.MFALevels;
 const items = [,];
 ({ EXPLICIT: arr[0], AGE_RESTRICTED: arr[1] } = GuildNSFWContentLevel);
-({ BoostedGuildTiers, GuildExplicitContentFilterTypes, UserNotificationSettings, VerificationLevels } = ME);
-let set = new Set(items);
+({ BoostedGuildTiers, GuildExplicitContentFilterTypes, UserNotificationSettings, VerificationLevels } = Constants);
+const set = new Set(items);
 let obj = {
   mfaLevel: MFALevels.NONE,
   preferredLocale: "en-US",
@@ -60,7 +60,7 @@ let obj = {
   incidentsData: null,
 };
 const frozen = Object.freeze(obj);
-const result = set.fileFinishedImporting("records/GuildRecord.tsx");
+const result = size.fileFinishedImporting("records/GuildRecord.tsx");
 
 export const GuildRecordTypeTag = "Guild";
 export const RESTRICTED_CONTENT_LEVELS = set;
@@ -74,24 +74,22 @@ export const getGuildIconURL = function getGuildIconURL(id, size) {
   if (arg3 === undefined) {
     flag2 = false;
   }
-  let obj = getAvatarURLDefault;
-  obj = { id: id.id, size, icon: id.icon, canAnimate: flag, lossless: flag2 };
+  const obj = { id: id.id, size, icon: id.icon, canAnimate: flag, lossless: flag2 };
   return obj.getGuildIconURL(obj);
 };
-export const getGuildIconSource = function getGuildIconSource(arg0, arg1, flag) {
+export const getGuildIconSource = function getGuildIconSource(arg0, size, flag) {
   closure_0 = arg0;
-  importDefault = arg1;
+  importDefault = size;
   if (flag === undefined) {
     flag = false;
   }
-  return getAvatarURLDefault.getAnimatableSourceWithFallback(flag, (canAnimate) => {
-    let obj = callback(closure_1_2[2]);
-    obj = { id: closure_0.id, size: callback, icon: closure_0.icon, canAnimate };
+  return AvatarUtilsDefault.getAnimatableSourceWithFallback(flag, (canAnimate) => {
+    const obj = { id: closure_0.id, size, icon: closure_0.icon, canAnimate };
     return obj.getGuildIconSource(obj);
   });
 };
 export const getGuildAcronym = function getGuildAcronym(guild) {
-  return isNullOrEmpty.getAcronym(guild.name);
+  return StringUtils.getAcronym(guild.name);
 };
 export const isGuildOwner = function isGuildOwner(guild, currentUser) {
   let tmp = currentUser;
@@ -127,8 +125,8 @@ export const isGuildOwnerWithRequiredMfaLevel = function isGuildOwnerWithRequire
 export const isGuildLurker = function isGuildLurker(guild) {
   return null == guild.joinedAt;
 };
-export const getGuildEveryoneRoleId = function getGuildEveryoneRoleId(closure_7) {
-  return DISCORD_EPOCHDefault.castGuildIdAsEveryoneGuildRoleId(closure_7.id);
+export const getGuildEveryoneRoleId = function getGuildEveryoneRoleId(id) {
+  return SnowflakeUtilsDefault.castGuildIdAsEveryoneGuildRoleId(id.id);
 };
 export const updateJoinedAt = function updateJoinedAt(guild, joinedAt) {
   let date = joinedAt;
@@ -136,10 +134,10 @@ export const updateJoinedAt = function updateJoinedAt(guild, joinedAt) {
     const _Date = Date;
     date = new Date(joinedAt);
   }
-  return closure_3(guild, "joinedAt", date);
+  return React3(guild, "joinedAt", date);
 };
 export const updateGameApplications = function updateGameApplications(arg0, arg1) {
-  return callback(arg0, "gameApplicationIds", arg1);
+  return React3(arg0, "gameApplicationIds", arg1);
 };
 export const isGuildNSFW = function isGuildNSFW(guild) {
   let nsfwLevel = guild;
@@ -157,6 +155,6 @@ export const isGuildNSFW = function isGuildNSFW(guild) {
       }
       hasItem = has(DEFAULT);
     }
-    obj = apexExperiment;
+    obj = ServerNSFWLevelExperiment;
   }
 };

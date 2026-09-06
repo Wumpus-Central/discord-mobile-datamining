@@ -1,13 +1,13 @@
 // discord_app/modules/guilds_bar/native/utils/computeGuildsBarCutout.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import Button from "../../../../design/void/native.tsx";
-import SolidCutout from "../../../../design/components/Icon/native/ClipView.tsx";
-import GUILD_ITEM_SIZE2 from "../GuildsBarConstants.tsx";
+import _mod17 from "../../../../../_runtime/metro/00017__.js";
+import native from "../../../../design/void/native.tsx";
+import ClipView from "../../../../design/components/Icon/native/ClipView.tsx";
+import GuildsBarConstants from "../GuildsBarConstants.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const PixelRatio = get_ActivityIndicator.PixelRatio;
-const GUILD_ITEM_SIZE = GUILD_ITEM_SIZE2.GUILD_ITEM_SIZE;
-const result = set.fileFinishedImporting("modules/guilds_bar/native/utils/computeGuildsBarCutout.tsx");
+const PixelRatio = _mod17.PixelRatio;
+const GUILD_ITEM_SIZE = GuildsBarConstants.GUILD_ITEM_SIZE;
+const result = size.fileFinishedImporting("modules/guilds_bar/native/utils/computeGuildsBarCutout.tsx");
 
 export default function computeGuildsBarCutout(containerSize) {
   containerSize = containerSize.containerSize;
@@ -16,20 +16,20 @@ export default function computeGuildsBarCutout(containerSize) {
   }
   let BADGE_SIZE = containerSize.width;
   if (BADGE_SIZE === undefined) {
-    BADGE_SIZE = Button.BADGE_SIZE;
+    BADGE_SIZE = native.BADGE_SIZE;
   }
   let BADGE_SIZE2 = containerSize.height;
   if (BADGE_SIZE2 === undefined) {
-    BADGE_SIZE2 = Button.BADGE_SIZE;
+    BADGE_SIZE2 = native.BADGE_SIZE;
   }
   let BADGE_PADDING = containerSize.padding;
   if (BADGE_PADDING === undefined) {
-    BADGE_PADDING = Button.BADGE_PADDING;
+    BADGE_PADDING = native.BADGE_PADDING;
   }
   const roundToNearestPixelResult = PixelRatio.roundToNearestPixel(BADGE_SIZE + 2 * BADGE_PADDING);
   const roundToNearestPixelResult1 = PixelRatio.roundToNearestPixel(BADGE_SIZE2 + 2 * BADGE_PADDING);
-  const obj = {
-    shape: SolidCutout.CutoutShape.RoundedRect,
+  const size = {
+    shape: ClipView.CutoutShape.RoundedRect,
     x: 0,
     y: 0,
     width: roundToNearestPixelResult,
@@ -37,11 +37,11 @@ export default function computeGuildsBarCutout(containerSize) {
     cornerRadius: PixelRatio.roundToNearestPixel(Math.min(roundToNearestPixelResult, roundToNearestPixelResult1) / 2),
   };
   if ("top-right" === containerSize.position) {
-    obj.x = containerSize - roundToNearestPixelResult + BADGE_PADDING;
-    obj.y = -BADGE_PADDING;
+    size.x = containerSize - roundToNearestPixelResult + BADGE_PADDING;
+    size.y = -BADGE_PADDING;
   } else {
-    obj.x = containerSize - roundToNearestPixelResult + BADGE_PADDING;
-    obj.y = containerSize - roundToNearestPixelResult1 + BADGE_PADDING;
+    size.x = containerSize - roundToNearestPixelResult + BADGE_PADDING;
+    size.y = containerSize - roundToNearestPixelResult1 + BADGE_PADDING;
   }
-  return obj;
+  return size;
 }

@@ -1,7 +1,7 @@
 // discord_app/modules/voice_panel/native/pip/VoicePanelPIPConstants.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelPIPConstants.tsx");
+const result = size.fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelPIPConstants.tsx");
 
 export const VoicePanelPIPModes = { IN_APP: "IN_APP", IN_PANEL: "IN_PANEL" };
 export const PIP_OFFSET_BOTTOM = 44;

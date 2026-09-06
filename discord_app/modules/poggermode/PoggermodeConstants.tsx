@@ -1,7 +1,7 @@
 // discord_app/modules/poggermode/PoggermodeConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-let obj = {
+let ShakeLevel = {
   LEVEL_1: 0,
   [0]: "LEVEL_1",
   LEVEL_2: 1,
@@ -13,12 +13,12 @@ let obj = {
   LEVEL_5: 4,
   [4]: "LEVEL_5",
 };
-obj = {
-  [obj.LEVEL_1]: items,
-  [obj.LEVEL_2]: items1,
-  [obj.LEVEL_3]: items2,
-  [obj.LEVEL_4]: items3,
-  [obj.LEVEL_5]: items4,
+ShakeLevel = {
+  [ShakeLevel.LEVEL_1]: items,
+  [ShakeLevel.LEVEL_2]: items1,
+  [ShakeLevel.LEVEL_3]: items2,
+  [ShakeLevel.LEVEL_4]: items3,
+  [ShakeLevel.LEVEL_5]: items4,
 };
 items = [
   [1, 0.0001],
@@ -70,33 +70,45 @@ items4 = [
   [1000, 100],
   [9001, 10000],
 ];
-const keys = Object.keys(obj);
+const keys = Object.keys(ShakeLevel);
 const reduced = keys.reduce(
-  (arg0, arg1) => {
-    obj = {};
-    const merged = Object.assign(arg0);
-    obj[arg1] = obj[arg1].map((arg0) => {
-      [tmp] = arg0;
+  (acc, item) => {
+    const obj = {};
+    const merged = Object.assign(acc);
+    obj[item] = obj[item].map((item) => {
+      [tmp] = item;
       return tmp;
     });
     return obj;
   },
-  { [obj.LEVEL_1]: [], [obj.LEVEL_2]: [], [obj.LEVEL_3]: [], [obj.LEVEL_4]: [], [obj.LEVEL_5]: [] },
+  {
+    [ShakeLevel.LEVEL_1]: [],
+    [ShakeLevel.LEVEL_2]: [],
+    [ShakeLevel.LEVEL_3]: [],
+    [ShakeLevel.LEVEL_4]: [],
+    [ShakeLevel.LEVEL_5]: [],
+  },
 );
-const keys1 = Object.keys(obj);
+const keys1 = Object.keys(ShakeLevel);
 const reduced1 = keys1.reduce(
-  (arg0, arg1) => {
-    obj = {};
-    const merged = Object.assign(arg0);
-    obj[arg1] = obj[arg1].map((arg0) => {
-      [, tmp] = arg0;
+  (acc, item) => {
+    const obj = {};
+    const merged = Object.assign(acc);
+    obj[item] = obj[item].map((item) => {
+      [, tmp] = item;
       return tmp;
     });
     return obj;
   },
-  { [obj.LEVEL_1]: [], [obj.LEVEL_2]: [], [obj.LEVEL_3]: [], [obj.LEVEL_4]: [], [obj.LEVEL_5]: [] },
+  {
+    [ShakeLevel.LEVEL_1]: [],
+    [ShakeLevel.LEVEL_2]: [],
+    [ShakeLevel.LEVEL_3]: [],
+    [ShakeLevel.LEVEL_4]: [],
+    [ShakeLevel.LEVEL_5]: [],
+  },
 );
-const result = set.fileFinishedImporting("modules/poggermode/PoggermodeConstants.tsx");
+const result = size.fileFinishedImporting("modules/poggermode/PoggermodeConstants.tsx");
 
 export const ConfettiLocation = {
   CHAT_INPUT: 0,
@@ -116,6 +128,6 @@ export const ShakeLocation = {
   MENTION: 2,
   [2]: "MENTION",
 };
-export const ShakeLevel = obj;
+export { ShakeLevel };
 export const SHAKE_STEPS = reduced;
 export const SHAKE_STEP_DIVIDER = reduced1;

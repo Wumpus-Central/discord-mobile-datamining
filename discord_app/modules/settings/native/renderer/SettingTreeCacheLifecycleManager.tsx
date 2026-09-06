@@ -1,7 +1,6 @@
 // discord_app/modules/settings/native/renderer/SettingTreeCacheLifecycleManager.tsx
-import initializeDefault from "../../../../lib/AutomaticLifecycleManager.tsx";
+import AutomaticLifecycleManager from "../../../../lib/AutomaticLifecycleManager.tsx";
 
-initializeDefault;
 let prototype = function SettingTreeManagerLifecycleManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   importDefault = applyArgumentsResult;
@@ -11,14 +10,13 @@ let prototype = function SettingTreeManagerLifecycleManager() {
     },
   };
   applyArgumentsResult.handleConnectionOpen = function handleConnectionOpen() {
-    applyArgumentsResult(table[1]).clearCaches();
+    applyArgumentsResult(dependencyMap[1]).clearCaches();
   };
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp2 {}
 prototype = new prototype();
-const result = require("set").fileFinishedImporting(
-  "modules/settings/native/renderer/SettingTreeCacheLifecycleManager.tsx",
-);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/settings/native/renderer/SettingTreeCacheLifecycleManager.tsx");
 
 export default prototype;

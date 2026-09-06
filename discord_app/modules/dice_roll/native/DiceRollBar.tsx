@@ -1,53 +1,54 @@
 // discord_app/modules/dice_roll/native/DiceRollBar.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../a11y/AccessibilityStore.tsx";
-import { useDiceRollState } from "../DiceRollStore.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import native from "../../../design/void/native.tsx";
+import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
+import timing from "../../../design/animation/reanimated/timing/timing.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
-const require = arg1;
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { animatedContainer: { overflow: "hidden" }, container: null };
-createCacheKey = {
+require = fn;
+const View = fn(17).View;
+const useDiceRollState = fn(11959).useDiceRollState;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+fn(4560);
+let createStyles = { animatedContainer: { overflow: "hidden" }, container: null };
+createStyles = {
   flexDirection: "row",
   alignItems: "center",
   paddingHorizontal: 16,
   paddingVertical: 8,
   gap: 12,
   borderTopWidth: 1,
-  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderColor: nativeDefault.colors.BORDER_SUBTLE,
+  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
-createCacheKey[1] = createCacheKey;
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-let closure_10 = {
+createStyles.container = createStyles;
+let closure_9 = createStyles.createStyles(createStyles);
+const __initData = {
   code: "function DiceRollBarTsx1(){const{useReducedMotion,height,opacity,withTiming,ANIMATION_DURATION_MS,DECELERATED_EASING}=this.__closure;if(useReducedMotion){return{height:height.get(),opacity:opacity.get()};}return{height:withTiming(height.get(),{duration:ANIMATION_DURATION_MS,easing:DECELERATED_EASING}),opacity:withTiming(opacity.get(),{duration:ANIMATION_DURATION_MS,easing:DECELERATED_EASING})};}",
 };
-let closure_11 = {
+const __initData2 = {
   code: 'function DiceRollBarTsx2(){const{rotation}=this.__closure;return{transform:[{rotate:rotation.get()+"deg"}]};}',
 };
-let result = require("set").fileFinishedImporting("modules/dice_roll/native/DiceRollBar.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/dice_roll/native/DiceRollBar.tsx");
 
 export default function DiceRollBar(channelId) {
   let stateFromStores;
-  let sharedValue;
   let sharedValue1;
-  let sharedValue2;
-  closure_4 = undefined;
   let flag;
-  const tmp = callback3();
+  const tmp = closure_9();
   const tmp2 = useDiceRollState(channelId.channelId);
   let obj = stateFromStores(sharedValue1[7]);
   let items = [flag];
   stateFromStores = obj.useStateFromStores(items, () => flag.useReducedMotion);
-  obj1 = stateFromStores(sharedValue1[8]);
-  sharedValue = obj1.useSharedValue(0);
+  let obj1 = stateFromStores(sharedValue1[8]);
+  const sharedValue = obj1.useSharedValue(0);
   let obj2 = stateFromStores(sharedValue1[8]);
   sharedValue1 = obj2.useSharedValue(0);
   let obj3 = stateFromStores(sharedValue1[8]);
-  sharedValue2 = obj3.useSharedValue(0);
+  const sharedValue2 = obj3.useSharedValue(0);
   closure_4 = tmp9;
   flag = undefined;
   if (tmp2 != null) {
@@ -73,13 +74,8 @@ export default function DiceRollBar(channelId) {
   const effect1 = sharedValue2.useEffect(() => {
     if (flag) {
       if (!stateFromStores) {
-        let obj = stateFromStores(sharedValue1[8]);
-        obj = { duration: 800, easing: null };
-        obj[1] = stateFromStores(sharedValue1[8]).Easing.linear;
-        const result = sharedValue2.set(
-          obj.withRepeat(stateFromStores(sharedValue1[9]).withTiming(360, obj), -1, false),
-        );
-        const obj2 = stateFromStores(sharedValue1[9]);
+        const obj = { duration: 800, easing: ReanimatedRexport.Easing.linear };
+        const result = sharedValue2.set(obj.withRepeat(timing.withTiming(360, obj), -1, false));
       }
     }
     const result1 = sharedValue2.set(0);
@@ -88,21 +84,19 @@ export default function DiceRollBar(channelId) {
   const fn = function w() {
     let obj = { height: null, opacity: null };
     if (stateFromStores) {
-      obj[0] = sharedValue.get();
-      obj[1] = sharedValue1.get();
+      obj.height = sharedValue.get();
+      obj.opacity = sharedValue1.get();
       let tmp7 = obj;
     } else {
       obj = { duration: 300, easing: null };
-      let value = sharedValue.get();
-      obj[1] = stateFromStores(sharedValue1[10]).DECELERATED_EASING;
-      obj[0] = stateFromStores(sharedValue1[9]).withTiming(value, obj);
-      const obj2 = stateFromStores(sharedValue1[9]);
+      value = sharedValue.get();
+      obj.easing = native.DECELERATED_EASING;
+      obj.height = timing.withTiming(value, obj);
       obj = { duration: 300, easing: null };
       value = sharedValue1.get();
-      obj[1] = stateFromStores(sharedValue1[10]).DECELERATED_EASING;
-      obj[1] = stateFromStores(sharedValue1[9]).withTiming(value, obj);
+      obj.easing = native.DECELERATED_EASING;
+      obj.opacity = timing.withTiming(value, obj);
       tmp7 = obj;
-      const obj4 = stateFromStores(sharedValue1[9]);
     }
     return tmp7;
   };
@@ -116,37 +110,33 @@ export default function DiceRollBar(channelId) {
   };
   fn.__closure = obj;
   fn.__workletHash = 2405066513233;
-  fn.__initData = closure_10;
+  fn.__initData = __initData;
   const animatedStyle = tmp3Result.useAnimatedStyle(fn);
   tmp3Result = tmp3(tmp4[8]);
   const fn2 = function p() {
     let obj = { transform: null };
     obj = { rotate: "" + sharedValue2.get() + "deg" };
     const items = [obj];
-    obj[0] = items;
+    obj.transform = items;
     return obj;
   };
   fn2.__closure = { rotation: sharedValue2 };
   fn2.__workletHash = 12265072947874;
-  fn2.__initData = closure_11;
+  fn2.__initData = __initData2;
   if (null == tmp2) {
     return null;
   } else {
     const barText = tmp3(tmp4[11]).getBarText(flag, tmp2.results);
     obj = { style: null, children: null };
     const items3 = [animatedStyle, tmp.animatedContainer];
-    obj[0] = items3;
-    obj1 = { style: null, children: null };
-    obj1[0] = tmp.container;
-    obj2 = { style: null, children: null };
-    obj2[0] = tmp14;
-    obj2[1] = callback(tmp3(tmp4[12]).DiceIcon, { size: "md" });
-    const items4 = [callback(sharedValue(tmp4[8]).View, obj2)];
-    obj3 = { variant: "text-sm/normal", color: "text-default", children: null };
-    obj3[2] = barText;
-    items4[1] = callback(tmp3(tmp4[13]).Text, obj3);
-    obj1[1] = items4;
-    obj[1] = callback2(closure_4, obj1);
-    return callback(sharedValue(tmp4[8]).View, obj);
+    obj.style = items3;
+    obj1 = { style: tmp.container, children: null };
+    obj2 = { style: tmp14, children: closure_7(tmp3(tmp4[12]).DiceIcon, { size: "md" }) };
+    const items4 = [closure_7(sharedValue(tmp4[8]).View, obj2)];
+    obj3 = { variant: "text-sm/normal", color: "text-default", children: barText };
+    items4[1] = closure_7(tmp3(tmp4[13]).Text, obj3);
+    obj1.children = items4;
+    obj.children = closure_8(closure_4, obj1);
+    return closure_7(sharedValue(tmp4[8]).View, obj);
   }
 }

@@ -1,46 +1,42 @@
 // discord_app/modules/safety_flows/native/tasks/ResendVerificationCodeButton.tsx
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../../../_runtime/00019_noop.js";
-import { Pressable } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
-  "modules/safety_flows/native/tasks/ResendVerificationCodeButton.tsx",
-);
+const require = fn;
+const Pressable = fn(17).Pressable;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_flows/native/tasks/ResendVerificationCodeButton.tsx");
 
 export default function ResendVerificationCodeButton(flowId) {
   flowId = flowId.flowId;
   const setLoading = flowId.setLoading;
-  let first;
-  let callback;
-  const tmp = callback2(React.useState(0), 2);
-  first = tmp[0];
-  callback = tmp[1];
-  const items = [first];
-  const effect = React.useEffect(() => {
+  const tmp = _slicedToArray(noop.useState(0), 2);
+  const countdown = tmp[0];
+  asyncGeneratorStep = tmp[1];
+  const items = [countdown];
+  const effect = noop.useEffect(() => {
     if (first > 0) {
       const _setInterval = setInterval;
       const interval = setInterval(() => {
-        callback((arg0) => arg0 - 1);
+        closure_1_3((arg0) => arg0 - 1);
       }, 1000);
       return () => clearInterval(closure_0);
     }
   }, items);
-  const items1 = [setLoading, first, flowId];
+  const items1 = [setLoading, countdown, flowId];
   let obj = {
-    onPress: React.useCallback(
-      callback(function* () {
+    onPress: noop.useCallback(
+      asyncGeneratorStep(async (arg0, value) => {
         if (c4 === 2) {
           c4 = 3;
-          HermesBuiltin.throwTypeError();
+          throw new TypeError("Generator functions may not be called on executing generators");
         } else if (tmp7 === 3) {
           if (arg0 === 1) {
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
+            let obj = { value, done: true };
             return obj;
           } else {
             return { value: "HermesInternal", done: null };
@@ -48,33 +44,28 @@ export default function ResendVerificationCodeButton(flowId) {
         } else {
           try {
             c4 = 2;
-            if (0 === v0) {
+            if (0 === v3) {
               if (arg0 === 1) {
                 c4 = 3;
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
                 c4 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
+                obj = { value, done: true };
                 return obj;
+              } else if (first > 0) {
+                c4 = 3;
               } else {
-                closure_0 = tmp4;
-                if (closure_1_2 > 0) {
-                  c4 = 3;
-                } else {
-                  v0(true);
-                  let v02 = 2;
-                  v0 = 3;
-                  c4 = 1;
-                  obj1 = { value: null, done: false };
-                  obj1[0] = closure_1_0(closure_1_2[5]).resendVerificationCode(closure_1_0);
-                  return obj1;
-                }
+                setLoading(true);
+                c3 = 2;
+                v3 = 3;
+                c4 = 1;
+                const obj1 = { value: tmp4(tmp43[5]).resendVerificationCode(flowId), done: false };
+                return obj1;
               }
             } else if (1 !== tmp8) {
               if (2 === tmp8) {
-                v02 = 1;
-                let obj2 = v0(closure_1_2[7]);
+                c3 = 1;
+                let obj2 = v3(tmp43[7]);
                 obj2 = {
                   key: "SAFETY_FLOWS_VERIFY_EMAIL_ERROR",
                   content: null,
@@ -82,55 +73,53 @@ export default function ResendVerificationCodeButton(flowId) {
                   IconComponent: null,
                   iconColor: "icon-feedback-critical",
                 };
-                const intl = closure_1_0(closure_1_2[8]).intl;
-                obj2[1] = intl.string(v0(closure_1_2[9])["3AXMYu"]);
-                obj2[2] = v0(closure_1_2[10]);
-                obj2[3] = closure_1_0(closure_1_2[11]).XLargeIcon;
+                const intl = tmp4(tmp43[8]).intl;
+                obj2.content = intl.string(v3(tmp43[9])["3AXMYu"]);
+                obj2.icon = v3(tmp43[10]);
+                obj2.IconComponent = tmp4(tmp43[11]).XLargeIcon;
                 obj2.open(obj2);
               } else if (arg0 === 1) {
                 c4 = 3;
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
-                v02 = 0;
-                v0(false);
+                c3 = 0;
+                closure_128_1(false);
                 c4 = 3;
-                const obj3 = { value: null, done: true };
-                obj3[0] = arg1;
+                const obj3 = { value, done: true };
                 return obj3;
               } else {
-                obj = closure_1_0(closure_1_2[6]);
+                obj = tmp4(tmp43[6]);
                 obj.showVerificationSent();
-                v02(30);
-                v02 = 1;
+                closure_128_3(30);
+                c3 = 1;
               }
-              v02 = 0;
-              v0(false);
+              c3 = 0;
+              closure_128_1(false);
             }
-            v02 = 0;
-            v0(false);
-            throw closure_2;
+            c3 = 0;
+            closure_128_1(false);
+            throw tmp43;
           } catch (tmp43) {
-            closure_2 = tmp43;
-            if (tmp5 === v02) {
+            if (tmp5 === c3) {
               c4 = tmp3;
               throw tmp43;
             } else if (tmp2 === tmp45) {
-              v0 = tmp2;
+              v3 = tmp2;
             } else {
-              v0 = tmp;
+              v3 = tmp;
             }
           }
         }
       }),
       items1,
     ),
-    disabled: first > 0,
+    disabled: countdown > 0,
     accessibilityRole: "button",
     accessibilityLabel: null,
     children: null,
   };
-  let intl = flowId(first[8]).intl;
-  obj[3] = intl.string(setLoading(first[9]).ah0EUu);
+  let intl = flowId(countdown[8]).intl;
+  obj.accessibilityLabel = intl.string(setLoading(countdown[9]).ah0EUu);
   obj = {
     variant: "text-sm/medium",
     color: "text-link",
@@ -138,19 +127,18 @@ export default function ResendVerificationCodeButton(flowId) {
     importantForAccessibility: "no",
     children: null,
   };
-  const intl2 = flowId(first[8]).intl;
-  obj[2] = intl2.string(setLoading(first[9]).ah0EUu);
-  if (first > 0) {
+  const intl2 = flowId(countdown[8]).intl;
+  obj.accessibilityLabel = intl2.string(setLoading(countdown[9]).ah0EUu);
+  if (countdown > 0) {
     const intl4 = tmp6(tmp7[8]).intl;
-    obj = { countdown: null };
-    obj[0] = first;
+    obj = { countdown };
     let formatResult = intl4.format(tmp8(tmp7[9])["2+Lyn0"], obj);
   } else {
     const intl3 = tmp6(tmp7[8]).intl;
     formatResult = intl3.string(tmp8(tmp7[9]).ah0EUu);
   }
-  obj[4] = formatResult;
-  obj[4] = jsx(flowId(first[12]).Text, {
+  obj.children = formatResult;
+  obj.children = jsx(flowId(countdown[12]).Text, {
     variant: "text-sm/medium",
     color: "text-link",
     accessibilityLabel: null,

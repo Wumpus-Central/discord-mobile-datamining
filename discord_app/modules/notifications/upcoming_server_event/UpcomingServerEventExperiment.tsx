@@ -1,16 +1,18 @@
 // discord_app/modules/notifications/upcoming_server_event/UpcomingServerEventExperiment.tsx
-import set from "../../../../_runtime/00002_set.js";
 import ApexExperiment from "../../experiments/apex/index.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const obj = { 1: null, 2: { showSettingsToggle: true }, 3: { showSettingsToggle: true } };
-obj[3] = { showSettingsToggle: true };
-const apexExperiment = ApexExperiment.createApexExperiment({
+let obj = {
   kind: "user",
   name: "2026-04-upcoming-server-event",
   defaultConfig: { showSettingsToggle: false },
-  variations: obj,
-});
-const result = set.fileFinishedImporting(
+  variations: null,
+};
+obj = { 1: null, 2: { showSettingsToggle: true }, 3: { showSettingsToggle: true } };
+obj[3] = { showSettingsToggle: true };
+obj.variations = obj;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting(
   "modules/notifications/upcoming_server_event/UpcomingServerEventExperiment.tsx",
 );
 

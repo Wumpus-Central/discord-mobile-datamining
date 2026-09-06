@@ -1,8 +1,10 @@
 // discord_app/modules/search/native/components/layout/autocomplete/useSearchSuggestionsGesture.tsx
-import closure_3 from "../../../../../../../_runtime/00019_noop.js";
+import LegacyBaseButton from "../../../../../../../_runtime/06655_LegacyBaseButton.js";
+import SearchPlatformUtilsDefault from "../../../SearchPlatformUtils.tsx";
+import noop from "../../../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-function inBoundingBox(arg0, left) {
+require = fn;
+function inBoundingBox(arg0, left, arg2) {
   const first = arg0.allTouches[0];
   let tmp2 = null != first;
   if (tmp2) {
@@ -25,15 +27,16 @@ inBoundingBox.__initData = {
 let closure_5 = {
   code: "function useSearchSuggestionsGestureTsx2(e,manager){const{coordinates,inBoundingBox,safeAreaTop,dismissed}=this.__closure;manager.fail();const _coordinates=coordinates.get();if(_coordinates==null||inBoundingBox(e,_coordinates,safeAreaTop))return;dismissed.set(true);}",
 };
-let result = require("set").fileFinishedImporting(
+const size = fn(2);
+let result = size.fileFinishedImporting(
   "modules/search/native/components/layout/autocomplete/useSearchSuggestionsGesture.tsx",
 );
 
 export const useSearchSuggestionsGesture = function useSearchSuggestionsGesture(channelDetailsSearchContext) {
-  const _require = channelDetailsSearchContext;
-  const sharedValue = _require(sharedValue1[1]).useSharedValue(false);
-  const obj = _require(sharedValue1[1]);
-  sharedValue1 = _require(sharedValue1[1]).useSharedValue(null);
+  _require = channelDetailsSearchContext;
+  const sharedValue = require("ReanimatedRexport").useSharedValue(false);
+  const obj = require("ReanimatedRexport");
+  sharedValue1 = require("ReanimatedRexport").useSharedValue(null);
   const items = [sharedValue];
   callback = callback.useCallback((arg0, arg1) => {
     if (arg0 !== arg1) {
@@ -42,49 +45,50 @@ export const useSearchSuggestionsGesture = function useSearchSuggestionsGesture(
   }, items);
   const items1 = [sharedValue, channelDetailsSearchContext, callback];
   const effect = callback.useEffect(
-    () => sharedValue(sharedValue1[2]).subscribeTextInputValue(closure_0, callback),
+    () => SearchPlatformUtilsDefault.subscribeTextInputValue(closure_0, callback),
     items1,
   );
-  const obj2 = _require(sharedValue1[1]);
+  const obj2 = require("ReanimatedRexport");
   let num = 0;
   if (obj4.isAndroid()) {
     num = sharedValue(sharedValue1[3])().top;
   }
   const items2 = [sharedValue1, num, sharedValue];
   const memo = obj3.useMemo(() => {
-    const Gesture = channelDetailsSearchContext(sharedValue1[5]).Gesture;
+    const Gesture = LegacyBaseButton.Gesture;
     const ManualResult = Gesture.Manual();
     const fn = function e(arg0, fail) {
       fail.fail();
-      const rect = closure_2.get();
+      const rect = sharedValue1.get();
       let tmp2 = null == rect;
       if (!tmp2) {
-        if (typeof closure_1_4 !== "function") {
-          HermesBuiltin.throwTypeError();
+        if (typeof num === "function") {
+          const first = arg0.allTouches[0];
+          let tmp7 = null != first;
+          if (tmp7) {
+            tmp7 =
+              rect.left < first.absoluteX &&
+              first.absoluteX < rect.right &&
+              rect.top < first.absoluteY + tmp4 &&
+              first.absoluteY + tmp4 < rect.bottom;
+            const tmp8 =
+              rect.left < first.absoluteX &&
+              first.absoluteX < rect.right &&
+              rect.top < first.absoluteY + tmp4 &&
+              first.absoluteY + tmp4 < rect.bottom;
+          }
+          tmp2 = tmp7;
+        } else {
+          throw new TypeError("Trying to call a non-function");
         }
-        const first = arg0.allTouches[0];
-        let tmp7 = null != first;
-        if (tmp7) {
-          tmp7 =
-            rect.left < first.absoluteX &&
-            first.absoluteX < rect.right &&
-            rect.top < first.absoluteY + tmp4 &&
-            first.absoluteY + tmp4 < rect.bottom;
-          const tmp8 =
-            rect.left < first.absoluteX &&
-            first.absoluteX < rect.right &&
-            rect.top < first.absoluteY + tmp4 &&
-            first.absoluteY + tmp4 < rect.bottom;
-        }
-        tmp2 = tmp7;
       }
       if (!tmp2) {
-        const result = closure_1.set(true);
+        const result = sharedValue.set(true);
       }
     };
-    fn.__closure = { coordinates: sharedValue1, inBoundingBox: num, safeAreaTop: num, dismissed: sharedValue };
+    fn.__closure = { coordinates: sharedValue1, inBoundingBox, safeAreaTop: num, dismissed: sharedValue };
     fn.__workletHash = 2369649298113;
-    fn.__initData = memo;
+    fn.__initData = __initData;
     return Gesture.Manual().manualActivation(true).onTouchesDown(fn);
   }, items2);
   const items3 = [sharedValue1];

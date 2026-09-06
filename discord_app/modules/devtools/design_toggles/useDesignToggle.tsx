@@ -1,16 +1,13 @@
 // discord_app/modules/devtools/design_toggles/useDesignToggle.tsx
-import closure_2 from "DesignTogglesStore.tsx";
+import DesignTogglesStore from "DesignTogglesStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/devtools/design_toggles/useDesignToggle.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/devtools/design_toggles/useDesignToggle.tsx");
 
 export default function useDesignToggle(arg0) {
-  const _require = arg0;
-  const items = [closure_2];
+  _require = arg0;
+  const items = [DesignTogglesStore];
   const items1 = [arg0];
-  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
-    items,
-    () => closure_1_2.get(closure_0),
-    items1,
-  );
+  return require("initialize").useStateFromStores(items, () => DesignTogglesStore.get(closure_0), items1);
 }

@@ -1,11 +1,10 @@
 // discord_common/js/shared/shared-constants/EntitlementTenantFulfillmentStatus.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const obj = { ELIGIBLE_FOR_ATTEMPTS: null, ELIGIBLE_FOR_FULFILLMENT: null };
-let set = new Set([2, 5, 9]);
-obj[0] = set;
-obj[1] = new Set([2, 9]);
-const result = set.fileFinishedImporting(
+const obj = { ELIGIBLE_FOR_ATTEMPTS: new Set([2, 5, 9]), ELIGIBLE_FOR_FULFILLMENT: null };
+const set = new Set([2, 5, 9]);
+obj.ELIGIBLE_FOR_FULFILLMENT = new Set([2, 9]);
+const result = size.fileFinishedImporting(
   "../discord_common/js/shared/shared-constants/EntitlementTenantFulfillmentStatus.tsx",
 );
 

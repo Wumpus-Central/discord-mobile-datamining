@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/UserSettingsMigrationsByType.tsx
-import set from "../../../_runtime/00002_set.js";
-import MAX_FAVORITES from "UserSettingsConstants.tsx";
+import UserSettingsConstants from "UserSettingsConstants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const UserSettingsTypes = MAX_FAVORITES.UserSettingsTypes;
-const result = set.fileFinishedImporting("modules/user_settings/UserSettingsMigrationsByType.tsx");
+const UserSettingsTypes = UserSettingsConstants.UserSettingsTypes;
+const result = size.fileFinishedImporting("modules/user_settings/UserSettingsMigrationsByType.tsx");
 
 export default {
   [UserSettingsTypes.PRELOADED_USER_SETTINGS]: [],

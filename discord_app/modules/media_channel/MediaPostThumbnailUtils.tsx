@@ -1,8 +1,8 @@
 // discord_app/modules/media_channel/MediaPostThumbnailUtils.tsx
-import set from "../../../_runtime/00002_set.js";
-import urlMatchesFileExtension from "../messages/MediaFormatTesters.tsx";
+import MediaFormatTesters from "../messages/MediaFormatTesters.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/media_channel/MediaPostThumbnailUtils.tsx");
+const result = size.fileFinishedImporting("modules/media_channel/MediaPostThumbnailUtils.tsx");
 
 export const MAX_THUMBNAIL_COUNT = 4;
 export const getEmbedPreviewImageUrl = function getEmbedPreviewImageUrl(arg0) {
@@ -30,7 +30,7 @@ export const getBackgroundImageUrl = function getBackgroundImageUrl(coverImage) 
     let combined = "" + coverImage + "?format=webp";
   } else {
     combined = coverImage;
-    const tmpResult = urlMatchesFileExtension;
+    const tmpResult = MediaFormatTesters;
   }
   return combined;
 };
@@ -47,7 +47,7 @@ export const getThumbnailImage = function getThumbnailImage(thumbnail) {
           combined = "" + proxy_url + "?format=webp";
         }
         tmp = combined;
-        obj = urlMatchesFileExtension;
+        obj = MediaFormatTesters;
       }
     }
     return tmp;

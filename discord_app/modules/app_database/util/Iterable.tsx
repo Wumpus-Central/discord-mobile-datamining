@@ -1,5 +1,5 @@
 // discord_app/modules/app_database/util/Iterable.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
 class Chained {
   constructor(arg0) {
@@ -10,8 +10,7 @@ class Chained {
   }
 }
 const prototype = Chained.prototype;
-// ToPropertyKey (0xa4)
-prototype[prototype] = function () {
+prototype[Symbol.iterator] = function () {
   return this;
 };
 prototype["next"] = function next() {
@@ -25,15 +24,15 @@ prototype["next"] = function next() {
   }
   return { done: true, value: "a" };
 };
-const result = set.fileFinishedImporting("modules/app_database/util/Iterable.tsx");
+const result = size.fileFinishedImporting("modules/app_database/util/Iterable.tsx");
 
 export const chain = function chain() {
-  const items = [...arguments];
-  if (typeof Chained !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof Chained === "function") {
+    const obj = Object.create(Chained.prototype);
+    obj.index = 0;
+    obj.items = tmp;
+    return obj;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const obj = Object.create(Chained.prototype);
-  obj.index = 0;
-  obj.items = items;
-  return obj;
 };

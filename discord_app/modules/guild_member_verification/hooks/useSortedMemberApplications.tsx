@@ -1,11 +1,11 @@
 // discord_app/modules/guild_member_verification/hooks/useSortedMemberApplications.tsx
-import closure_2 from "../../../../_runtime/00019_noop.js";
-import closure_3 from "../GuildJoinRequestStore.tsx";
+import MemberVerificationTypes from "../MemberVerificationTypes.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import GuildJoinRequestStore from "../GuildJoinRequestStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
-  "modules/guild_member_verification/hooks/useSortedMemberApplications.tsx",
-);
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_member_verification/hooks/useSortedMemberApplications.tsx");
 
 export const useSortedMemberApplications = function useSortedMemberApplications(guildId) {
   guildId = guildId.guildId;
@@ -17,21 +17,20 @@ export const useSortedMemberApplications = function useSortedMemberApplications(
   const items1 = [applicationStatus, guildId];
   stateFromStores = obj.useStateFromStores(
     items,
-    () => stateFromStores.getRequests(guildId, applicationStatus),
+    () => GuildJoinRequestStore.getRequests(guildId, applicationStatus),
     items1,
   );
-  obj = {
-    guildJoinRequests: sortOrder.useMemo(() => {
-      if (sortOrder === guildId(applicationStatus[3]).GuildJoinRequestSortOrders.TIMESTAMP_DESC) {
-        const items = [];
-        HermesBuiltin.arraySpread(stateFromStores, 0);
-        let reversed = items.reverse();
-      } else {
-        reversed = stateFromStores;
-      }
-      return reversed;
-    }, items2),
-  };
-  items2 = [sortOrder, stateFromStores];
+  obj = { guildJoinRequests: null };
+  const items2 = [sortOrder, stateFromStores];
+  obj.guildJoinRequests = sortOrder.useMemo(() => {
+    if (sortOrder === MemberVerificationTypes.GuildJoinRequestSortOrders.TIMESTAMP_DESC) {
+      const items = [];
+      HermesBuiltin.arraySpread(stateFromStores, 0);
+      let reversed = items.reverse();
+    } else {
+      reversed = stateFromStores;
+    }
+    return reversed;
+  }, items2);
   return obj;
 };

@@ -1,21 +1,21 @@
 // discord_app/utils/URLUtils.tsx
-import applyDefault from "../../_runtime/00012_apply.js";
-import ME from "../Constants.tsx";
-import isDiscordProxiedAssetUrlDefault from "URLUtils.tsx";
-import ipDefault from "../../_runtime/01366_ip.js";
+import _modDef12 from "../../_runtime/metro/00012__.js";
+import Constants from "../Constants.tsx";
+import URLUtilsDefault from "URLUtils.tsx";
 import UrlAll from "../../_runtime/01367_Url.js";
-import isDiscordFrontendDevelopment from "GlobalUtils.tsx";
-import set from "../../_runtime/00002_set.js";
+import GlobalUtils from "GlobalUtils.tsx";
+import ip from "../../_runtime/01366_ip.js";
+import size from "../../_runtime/metro/00002__.js";
 
 function isDiscordProxiedAssetUrl(url, arg1, arg2) {
   if (tmp) {
     if (null == url) {
       return false;
     } else {
-      url = isDiscordProxiedAssetUrlDefault.toURLSafe(url);
+      url = URLUtilsDefault.toURLSafe(url);
       let tmp9 = null != url;
       if (tmp9) {
-        const result = isDiscordFrontendDevelopment.isDiscordBackendDevelopment();
+        const result = GlobalUtils.isDiscordBackendDevelopment();
         let tmp5 = !result;
         if (result) {
           let tmp6 = "localhost" !== url.hostname;
@@ -29,10 +29,9 @@ function isDiscordProxiedAssetUrl(url, arg1, arg2) {
         }
         let isMatch = !tmp5;
         if (tmp5) {
-          isMatch = regex3.test(url.hostname);
+          isMatch = re7.test(url.hostname);
         }
         tmp9 = isMatch;
-        const obj = isDiscordFrontendDevelopment;
       }
       return tmp9;
     }
@@ -41,11 +40,11 @@ function isDiscordProxiedAssetUrl(url, arg1, arg2) {
   }
   tmp = null != arg1 && null != arg2 && arg1 !== arg2;
 }
-const Routes = ME.Routes;
+const Routes = Constants.Routes;
 const re5 = /(?:^|\.)(?:discordapp|discord|discordmerch)\.com$/i;
 const re6 = /^.*\.discordapp\.net$/;
 const re7 = /^.*\.media\.discordapp\.net$/;
-let set = new Set([
+const set = new Set([
   "media.tenor.com",
   "media.tenor.co",
   "c.tenor.com",
@@ -55,7 +54,7 @@ let set = new Set([
 ]);
 const regExp = new RegExp(
   "(?:(?:(?:[a-z]+:)?//)|www\\.)(?:[^\\s:@]+(?::[^\\s@]*)?@)?(?:localhost|" +
-    ipDefault.v4().source +
+    ip.v4().source +
     '|(?:[a-z\\u00a1-\\uffff0-9-_]+\\.)+(?:(?:[a-z\\u00a1-\\uffff]{2,})))(?::\\d{2,5})?(?:[/?#][^\\s"]*)?',
   "ig",
 );
@@ -66,7 +65,7 @@ const items = [
   window.GLOBAL_ENV.GUILD_TEMPLATE_HOST,
 ];
 const set1 = new Set(items);
-let result = set.fileFinishedImporting("utils/URLUtils.tsx");
+let result = size.fileFinishedImporting("utils/URLUtils.tsx");
 
 export default {
   URL_REGEX: regExp,
@@ -92,7 +91,7 @@ export default {
     }
     let tmp = null != hostname;
     if (tmp) {
-      let isMatch = regex.test(hostname);
+      let isMatch = re5.test(hostname);
       if (!isMatch) {
         if (flag) {
           flag = set1.has(hostname.toLowerCase());
@@ -127,7 +126,7 @@ export default {
       flag = false;
     }
     if (null != ctaLink) {
-      const toURLSafeResult = isDiscordProxiedAssetUrlDefault.toURLSafe(ctaLink);
+      const toURLSafeResult = URLUtilsDefault.toURLSafe(ctaLink);
       let hostname;
       if (toURLSafeResult != null) {
         hostname = toURLSafeResult.hostname;
@@ -138,7 +137,7 @@ export default {
         }
         let tmp5 = null != hostname;
         if (tmp5) {
-          let isMatch = regex.test(hostname);
+          let isMatch = re5.test(hostname);
           if (!isMatch) {
             if (flag) {
               flag = set1.has(hostname.toLowerCase());
@@ -151,7 +150,6 @@ export default {
           return true;
         }
       }
-      const obj = isDiscordProxiedAssetUrlDefault;
     }
     return false;
   },
@@ -164,7 +162,6 @@ export default {
         tmp4 = "discord:" === protocol;
       }
       tmp = tmp4;
-      const obj = UrlAll;
     }
     return tmp;
   },
@@ -173,7 +170,6 @@ export default {
     if (tmp) {
       const _window = window;
       tmp = UrlAll.parse(src).hostname === window.GLOBAL_ENV.CDN_HOST;
-      const obj = UrlAll;
     }
     return tmp;
   },
@@ -181,10 +177,10 @@ export default {
     if (null == shareURI) {
       return false;
     } else {
-      const toURLSafeResult = isDiscordProxiedAssetUrlDefault.toURLSafe(shareURI);
+      const toURLSafeResult = URLUtilsDefault.toURLSafe(shareURI);
       let tmp9 = null != toURLSafeResult;
       if (tmp9) {
-        const result = isDiscordFrontendDevelopment.isDiscordBackendDevelopment();
+        const result = GlobalUtils.isDiscordBackendDevelopment();
         let tmp3 = !result;
         if (result) {
           let tmp4 = "localhost" !== toURLSafeResult.hostname;
@@ -198,12 +194,11 @@ export default {
           const _window = window;
           let isMatch = toURLSafeResult.hostname === window.GLOBAL_ENV.CDN_HOST;
           if (!isMatch) {
-            isMatch = regex2.test(toURLSafeResult.hostname);
+            isMatch = re6.test(toURLSafeResult.hostname);
           }
           tmp5 = isMatch;
         }
         tmp9 = tmp5;
-        const obj = isDiscordFrontendDevelopment;
       }
       return tmp9;
     }
@@ -213,7 +208,7 @@ export default {
     if (null == url) {
       return false;
     } else {
-      const toURLSafeResult = isDiscordProxiedAssetUrlDefault.toURLSafe(url);
+      const toURLSafeResult = URLUtilsDefault.toURLSafe(url);
       let hasItem = null != toURLSafeResult;
       if (hasItem) {
         hasItem = set.has(toURLSafeResult.hostname);
@@ -221,13 +216,13 @@ export default {
       return hasItem;
     }
   },
-  isDiscordAssetUrl(url) {
+  isDiscordAssetUrl(url, arg1, arg2) {
     let flag = false;
     if (null != url) {
-      const toURLSafeResult = isDiscordProxiedAssetUrlDefault.toURLSafe(url);
+      const toURLSafeResult = URLUtilsDefault.toURLSafe(url);
       let tmp4 = null != toURLSafeResult;
       if (tmp4) {
-        const result = isDiscordFrontendDevelopment.isDiscordBackendDevelopment();
+        const result = GlobalUtils.isDiscordBackendDevelopment();
         let tmp7 = !result;
         if (result) {
           let tmp8 = "localhost" !== toURLSafeResult.hostname;
@@ -241,15 +236,13 @@ export default {
           const _window = window;
           let isMatch = toURLSafeResult.hostname === window.GLOBAL_ENV.CDN_HOST;
           if (!isMatch) {
-            isMatch = regex2.test(toURLSafeResult.hostname);
+            isMatch = re6.test(toURLSafeResult.hostname);
           }
           tmp9 = isMatch;
         }
         tmp4 = tmp9;
-        const obj2 = isDiscordFrontendDevelopment;
       }
       flag = tmp4;
-      const obj = isDiscordProxiedAssetUrlDefault;
     }
     let tmp13 = flag;
     if (!tmp13) {
@@ -257,13 +250,12 @@ export default {
       if (!tmp17) {
         let flag2 = false;
         if (null != url) {
-          const toURLSafeResult1 = isDiscordProxiedAssetUrlDefault.toURLSafe(url);
+          const toURLSafeResult1 = URLUtilsDefault.toURLSafe(url);
           let hasItem = null != toURLSafeResult1;
           if (hasItem) {
             hasItem = set.has(toURLSafeResult1.hostname);
           }
           flag2 = hasItem;
-          const obj3 = isDiscordProxiedAssetUrlDefault;
         }
         tmp17 = flag2;
       }
@@ -274,7 +266,7 @@ export default {
   isDiscordUrlOrUri(url) {
     let flag = false;
     if (null != url) {
-      const toURLSafeResult = isDiscordProxiedAssetUrlDefault.toURLSafe(url);
+      const toURLSafeResult = URLUtilsDefault.toURLSafe(url);
       let hostname;
       if (toURLSafeResult != null) {
         hostname = toURLSafeResult.hostname;
@@ -283,15 +275,14 @@ export default {
       if (null != hostname) {
         let tmp5 = null != hostname;
         if (tmp5) {
-          tmp5 = regex.test(hostname) || false;
-          const tmp7 = regex.test(hostname) || false;
+          tmp5 = re5.test(hostname) || false;
+          const tmp7 = re5.test(hostname) || false;
         }
         flag = false;
         if (tmp5) {
           flag = true;
         }
       }
-      const obj = isDiscordProxiedAssetUrlDefault;
     }
     if (!flag) {
       let tmp8 = null != url;
@@ -302,7 +293,6 @@ export default {
           tmp11 = "discord:" === protocol;
         }
         tmp8 = tmp11;
-        const obj2 = UrlAll;
       }
       flag = tmp8;
     }
@@ -319,14 +309,12 @@ export default {
   format(arg0) {
     return UrlAll.format(arg0);
   },
-  formatPathWithQuery(pathname) {
-    let obj = UrlAll;
-    obj = { pathname, query: applyDefault.pickBy(arg1) };
+  formatPathWithQuery(pathname, arg1) {
+    const obj = { pathname, query: _modDef12.pickBy(arg1) };
     return obj.format(obj);
   },
   formatSearch(arg0) {
-    let obj = UrlAll;
-    obj = { query: applyDefault.pickBy(arg0) };
+    const obj = { query: _modDef12.pickBy(arg0) };
     return obj.format(obj);
   },
   safeParseWithQuery(target) {
@@ -345,10 +333,10 @@ export default {
       return null;
     }
   },
-  safeDecodeURIComponent(hash) {
+  safeDecodeURIComponent(parts) {
     try {
       const _decodeURIComponent = decodeURIComponent;
-      return decodeURIComponent(hash);
+      return decodeURIComponent(parts);
     } catch (err) {
       return null;
     }

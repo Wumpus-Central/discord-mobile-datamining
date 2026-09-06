@@ -1,15 +1,15 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemToast.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-noopAll;
-let closure_2 = createCacheKey.createStyles({ container: { padding: 16, flex: 1, alignItems: "center" } });
-const result = require("set").fileFinishedImporting(
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_2 = createStyles.createStyles({ container: { padding: 16, flex: 1, alignItems: "center" } });
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/user_settings/design_system/native/UserSettingsDesignSystemToast.tsx",
 );
 
 export default function UserSettingsDesignSystemToast() {
-  return <View style={callback().container} />;
+  return <View style={closure_2().container} />;
 }

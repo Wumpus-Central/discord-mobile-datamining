@@ -1,25 +1,25 @@
 // discord_app/modules/guild_scheduled_events/native/components/EditGuildEventStepHeader.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import Text from "../../../../design/components/Text/native/Text.tsx";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-let closure_5 = createCacheKey.createStyles({
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const createStyles = fn(4560);
+let closure_5 = createStyles.createStyles({
   header: { alignItems: "center", paddingBottom: 24 },
   headerTitle: { marginTop: 8, marginBottom: 8 },
   headerSubtitle: { textAlign: "center" },
 });
-const result = require("set").fileFinishedImporting(
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/guild_scheduled_events/native/components/EditGuildEventStepHeader.tsx",
 );
 
 export default function EditGuildEventStepHeader(children) {
   const subtitle = children.subtitle;
-  const tmp = callback2();
+  const tmp = closure_5();
   let obj = { style: tmp.header, children: null };
   obj = {
     style: tmp.headerTitle,
@@ -28,18 +28,16 @@ export default function EditGuildEventStepHeader(children) {
     color: "mobile-text-heading-primary",
     children: children.title,
   };
-  const items = [callback(Text.Text, obj)];
+  const items = [React3(Text_Text.Text, obj)];
   let tmp4Result = null;
   if (null != subtitle) {
     tmp4Result = null;
     if ("" !== subtitle) {
-      obj = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
-      obj[0] = tmp.headerSubtitle;
-      obj[3] = subtitle;
-      tmp4Result = callback(Text.Text, obj);
+      obj = { style: tmp.headerSubtitle, variant: "text-sm/medium", color: "text-default", children: subtitle };
+      tmp4Result = React3(Text_Text.Text, obj);
     }
   }
   items[1] = tmp4Result;
-  obj[1] = items;
-  return closure_4(View, obj);
+  obj.children = items;
+  return React4(View, obj);
 }

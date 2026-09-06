@@ -1,23 +1,21 @@
 // discord_app/modules/user_profile/hooks/native/useScrollToUserProfileEditFormSection.tsx
-import closure_2 from "../../../../../_runtime/00019_noop.js";
-import { findNodeHandle } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_4 from "../../../a11y/AccessibilityStore.tsx";
-import closure_5 from "../../../profile_customization/ProfileCustomizationNavigationStore.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
+import ProfileCustomizationNavigationStore from "../../../profile_customization/ProfileCustomizationNavigationStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
+const require = fn;
+const findNodeHandle = fn(17).findNodeHandle;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/user_profile/hooks/native/useScrollToUserProfileEditFormSection.tsx",
 );
 
 export default function useScrollToUserProfileEditFormSection(arg0, arg1) {
-  const _require = arg0;
+  _require = arg0;
   dependencyMap = arg1;
   ref = ref.useRef({});
-  const items = [closure_4];
-  closure_3 = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
-    items,
-    () => useReducedMotion.useReducedMotion,
-  );
+  const items = [AccessibilityStore];
+  closure_3 = require("initialize").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const effect = ref.useEffect(() => {
     let tmp2 = null != closure_1;
     if (tmp2) {
@@ -31,21 +29,18 @@ export default function useScrollToUserProfileEditFormSection(arg0, arg1) {
     if (tmp2) {
       const _setTimeout = setTimeout;
       const timerId = setTimeout(() => {
-        const tmp = closure_1_3(ref.current);
+        const tmp = closure_3(ref.current);
         if (null != tmp) {
           if (obj != null) {
-            obj.measureLayout(tmp, (arg0, arg1) => {
+            obj.measureLayout(tmp, (x, y) => {
               const current = ref.current;
               if (current != null) {
-                const obj = { x: null, y: null, animated: null };
-                obj[0] = arg0;
-                obj[1] = arg1;
-                obj[2] = !closure_3;
-                current.scrollTo(obj);
+                const point = { x, y, animated: !closure_1_3 };
+                current.scrollTo(point);
               }
             });
           }
-          closure_1_5.setState({ scrollPosition: null });
+          state.setState({ scrollPosition: null });
         }
       }, 0);
     }

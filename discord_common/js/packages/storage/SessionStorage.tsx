@@ -1,7 +1,7 @@
 // discord_common/js/packages/storage/SessionStorage.tsx
-import set from "../../../../_runtime/00002_set.js";
-import parseValue from "native/Storage.tsx";
+import storage_Storage from "native/Storage.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/storage/SessionStorage.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/storage/SessionStorage.tsx");
 
-export const SessionStorage = parseValue.impl;
+export const SessionStorage = storage_Storage.impl;

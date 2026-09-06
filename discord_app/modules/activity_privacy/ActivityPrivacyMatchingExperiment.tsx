@@ -1,7 +1,7 @@
 // discord_app/modules/activity_privacy/ActivityPrivacyMatchingExperiment.tsx
-import set from "../../../_runtime/00002_set.js";
-import apexExperiment from "../user_profile/PrivateProfilesExperiment.tsx";
+import PrivateProfilesExperiment from "../user_profile/PrivateProfilesExperiment.tsx";
 import ApexExperiment from "../experiments/apex/index.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 let closure_2 = ApexExperiment.createApexExperiment({
   name: "2026-02-activity-privacy-matching",
@@ -13,12 +13,12 @@ let closure_2 = ApexExperiment.createApexExperiment({
     2: { copyChanges: true, upsell: true },
   },
 });
-const result = set.fileFinishedImporting("modules/activity_privacy/ActivityPrivacyMatchingExperiment.tsx");
+const result = size.fileFinishedImporting("modules/activity_privacy/ActivityPrivacyMatchingExperiment.tsx");
 
 export const useIsInActivityPrivacyCopyExperiment = function useIsInActivityPrivacyCopyExperiment(
   ActivityPrivacyDefaultSharingSetting,
 ) {
-  let obj = apexExperiment;
+  let obj = PrivateProfilesExperiment;
   let copyChanges = obj.useIsInPrivateProfilesExperiment(ActivityPrivacyDefaultSharingSetting);
   obj = { location: ActivityPrivacyDefaultSharingSetting };
   if (!copyChanges) {
@@ -29,11 +29,10 @@ export const useIsInActivityPrivacyCopyExperiment = function useIsInActivityPriv
 export const getIsInActivityPrivacyUpsellExperiment = function getIsInActivityPrivacyUpsellExperiment(
   ActivityPrivacyDefaultSharingSetting,
 ) {
-  let obj = apexExperiment;
+  let obj = PrivateProfilesExperiment;
   let upsell = obj.getIsInPrivateProfilesExperiment(ActivityPrivacyDefaultSharingSetting);
   if (!upsell) {
-    obj = { location: null };
-    obj[0] = ActivityPrivacyDefaultSharingSetting;
+    obj = { location: ActivityPrivacyDefaultSharingSetting };
     upsell = closure_2.getConfig(obj).upsell;
   }
   return upsell;

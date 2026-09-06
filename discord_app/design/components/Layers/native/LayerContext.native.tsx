@@ -1,15 +1,15 @@
 // discord_app/design/components/Layers/native/LayerContext.native.tsx
-import importAllResult from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
 class LayerContextManager {
   constructor() {
-    obj = Object.create(new.target.prototype);
-    obj[0] = { current: null };
-    obj[1] = [];
-    obj[2] = function invalidate() {
+    merged = Object.assign({ surfaceRef: null, items: null, invalidate: null });
+    merged[0] = { current: null };
+    merged[1] = [];
+    merged[2] = function invalidate() {
       return null;
     };
-    return obj;
+    return merged;
   }
 }
 const prototype = LayerContextManager.prototype;
@@ -30,14 +30,15 @@ prototype["remove"] = function remove(arg0) {
 prototype["setSurfaceRef"] = function setSurfaceRef(current) {
   this.surfaceRef.current = current;
 };
-let obj = Object.create(LayerContextManager.prototype);
-obj[0] = { current: null };
-obj[1] = [];
-obj[2] = function invalidate() {
+let merged = Object.assign({ surfaceRef: null, items: null, invalidate: null });
+merged[0] = { current: null };
+merged[1] = [];
+merged[2] = function invalidate() {
   return null;
 };
-const context = importAllResult.createContext(obj);
-const result = require("set").fileFinishedImporting("design/components/Layers/native/LayerContext.native.tsx");
+const context = noop.createContext(merged);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Layers/native/LayerContext.native.tsx");
 
 export { LayerContextManager };
 export const LayerContext = context;

@@ -1,7 +1,7 @@
 // discord_app/modules/premium/roadblocks/native/utils/PremiumUpsellSubfeatureNames.tsx
-import set from "../../../../../../_runtime/00002_set.js";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/premium/roadblocks/native/utils/PremiumUpsellSubfeatureNames.tsx");
+const result = size.fileFinishedImporting("modules/premium/roadblocks/native/utils/PremiumUpsellSubfeatureNames.tsx");
 
 export const PremiumUpsellSubfeatureNames = {
   SAVED_MESSAGES_BOOKMARK_LIMIT: "savedMessagesBookmarkLimit",

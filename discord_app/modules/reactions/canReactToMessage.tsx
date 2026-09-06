@@ -1,14 +1,13 @@
 // discord_app/modules/reactions/canReactToMessage.tsx
-import hasFlag from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import isCommunicationDisabled from "../guild_communication_disabled/CommunicationDisabledUtils.tsx";
-import _modDef7971 from "canAddNewReactions.tsx";
-import closure_3 from "../../stores/GuildMemberStore.tsx";
-import closure_4 from "../../stores/GuildVerificationStore.tsx";
-import closure_5 from "../../stores/PermissionStore.tsx";
-import closure_6 from "../../stores/UserStore.tsx";
-import ME from "../../Constants.tsx";
+import FlagUtils from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import CommunicationDisabledUtils from "../guild_communication_disabled/CommunicationDisabledUtils.tsx";
+import canAddNewReactionsDefault from "canAddNewReactions.tsx";
+import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
+import GuildVerificationStore from "../../stores/GuildVerificationStore.tsx";
+import PermissionStore from "../../stores/PermissionStore.tsx";
+import UserStore from "../../stores/UserStore.tsx";
 
-require = arg1;
+require = fn;
 function canReactToMessageInternal(state, getGuildId, items) {
   [obj, obj2] = items;
   const guildId = getGuildId.getGuildId();
@@ -24,7 +23,7 @@ function canReactToMessageInternal(state, getGuildId, items) {
       member = obj2.getMember(guildId, currentUser.id);
     }
   }
-  let tmp6 = _modDef7971(getGuildId) && !getGuildId.isArchivedLockedThread();
+  let tmp6 = canAddNewReactionsDefault(getGuildId) && !getGuildId.isArchivedLockedThread();
   if (tmp6) {
     tmp6 = state.state !== constants.SEND_FAILED;
   }
@@ -32,28 +31,28 @@ function canReactToMessageInternal(state, getGuildId, items) {
     tmp6 = state.type !== constants2.THREAD_STARTER_MESSAGE;
   }
   if (tmp6) {
-    tmp6 = !hasFlag.hasFlag(state.flags, constants3.EPHEMERAL);
-    const obj3 = hasFlag;
+    tmp6 = !FlagUtils.hasFlag(state.flags, constants3.EPHEMERAL);
   }
   if (tmp6) {
-    tmp6 = !isCommunicationDisabled.isMemberCommunicationDisabled(member);
-    const obj4 = isCommunicationDisabled;
+    tmp6 = !CommunicationDisabledUtils.isMemberCommunicationDisabled(member);
   }
   return tmp6;
 }
-({ MessageStates: error, MessageTypes: closure_8, MessageFlags: c9 } = ME);
-const result = require("set").fileFinishedImporting("modules/reactions/canReactToMessage.tsx");
+const Constants = fn(1074);
+({ MessageStates: closure_7, MessageTypes: closure_8, MessageFlags: closure_9 } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/reactions/canReactToMessage.tsx");
 
 export const canReactToMessage = function canReactToMessage(message, channel) {
-  const items = [closure_6, closure_3, closure_4, closure_5];
+  const items = [UserStore, GuildMemberStore, GuildVerificationStore, PermissionStore];
   return canReactToMessageInternal(message, channel, items);
 };
 export const useCanReactToMessage = function useCanReactToMessage(arg0, arg1) {
-  const _require = arg0;
+  _require = arg0;
   closure_1 = arg1;
-  let items = [closure_6, closure_3, closure_4, closure_5];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    const items = [closure_1_6, closure_1_3, closure_1_4, closure_1_5];
-    return closure_1_10(closure_0, closure_1, items);
+  let items = [UserStore, GuildMemberStore, GuildVerificationStore, PermissionStore];
+  return require("initialize").useStateFromStores(items, () => {
+    const items = [UserStore, GuildMemberStore, GuildVerificationStore, PermissionStore];
+    return canReactToMessageInternal(closure_0, closure_1, items);
   });
 };

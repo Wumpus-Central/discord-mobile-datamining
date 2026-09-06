@@ -1,39 +1,35 @@
 // discord_app/design/components/TableRow/native/TableRowArrow.native.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import IconSizes from "../../../void/Icon/native/Icon.tsx";
-import IconSizesDefault from "../../../void/Icon/native/Icon.tsx";
-import registerAssetDefault from "../../../../../_runtime/05613_registerAsset.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Icon from "../../../void/Icon/native/Icon.tsx";
+import _modDef5613 from "../../../../../_runtime/metro/05613__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-createCacheKey = { icon: null, iconColor: null };
-createCacheKey = {
-  width: ThemesDefault.modules.mobile.TABLE_ROW_ARROW_WIDTH,
+const IconDefault = Icon;
+
+require = fn;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { icon: null, iconColor: null };
+let size = {
+  width: nativeDefault.modules.mobile.TABLE_ROW_ARROW_WIDTH,
   height: 24,
-  marginStart: ThemesDefault.modules.mobile.TABLE_ROW_ARROW_MARGIN_START,
-  marginEnd: ThemesDefault.modules.mobile.TABLE_ROW_ARROW_MARGIN_END,
+  marginStart: nativeDefault.modules.mobile.TABLE_ROW_ARROW_MARGIN_START,
+  marginEnd: nativeDefault.modules.mobile.TABLE_ROW_ARROW_MARGIN_END,
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-let closure_4 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-const result = require("set").fileFinishedImporting("design/components/TableRow/native/TableRowArrow.native.tsx");
+createStyles.icon = size;
+createStyles = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+createStyles.iconColor = createStyles;
+let closure_4 = createStyles.createStyles(createStyles);
+size = fn(2);
+const result = size.fileFinishedImporting("design/components/TableRow/native/TableRowArrow.native.tsx");
 
 export const TableRowArrow = function TableRowArrow() {
-  const tmp = callback();
-  const obj = {
+  const tmp = closure_4();
+  const obj = { style: tmp.icon, color: tmp.iconColor.color, source: _modDef5613, size: Icon.IconSizes.CUSTOM };
+  return jsx(IconDefault, {
     style: tmp.icon,
     color: tmp.iconColor.color,
-    source: registerAssetDefault,
-    size: IconSizes.IconSizes.CUSTOM,
-  };
-  return jsx(IconSizesDefault, {
-    style: tmp.icon,
-    color: tmp.iconColor.color,
-    source: registerAssetDefault,
-    size: IconSizes.IconSizes.CUSTOM,
+    source: _modDef5613,
+    size: Icon.IconSizes.CUSTOM,
   });
 };

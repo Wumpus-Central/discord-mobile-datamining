@@ -1,19 +1,21 @@
 // discord_app/modules/screen/useIsScreenLandscape.native.tsx
-import closure_2 from "../../../_runtime/00019_noop.js";
-import closure_3 from "native/DimensionsStore.android.tsx";
+import AppEntryKeyContext from "../window/native/AppEntryKeyContext.tsx";
+import noop from "../../../_runtime/metro/00019__.js";
+import DimensionsStore from "native/DimensionsStore.android.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/screen/useIsScreenLandscape.native.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/screen/useIsScreenLandscape.native.tsx");
 
 export const getIsScreenLandscape = function getIsScreenLandscape() {
   let str = arg0;
   if (arg0 === undefined) {
     str = "main";
   }
-  return state.getState().byAppEntry[str].screenIsLandscape;
+  return DimensionsStore.getState().byAppEntry[str].screenIsLandscape;
 };
 export const useIsScreenLandscape = function useIsScreenLandscape() {
-  appEntryKey = appEntryKey(1480).useAppEntryKey();
+  const appEntryKey = AppEntryKeyContext.useAppEntryKey();
   const items = [appEntryKey];
-  return state(React.useCallback((arg0) => arg0.byAppEntry[appEntryKey].screenIsLandscape, items));
+  return DimensionsStore(noop.useCallback((arg0) => arg0.byAppEntry[appEntryKey].screenIsLandscape, items));
 };

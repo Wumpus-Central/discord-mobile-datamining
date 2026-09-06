@@ -1,31 +1,22 @@
 // discord_app/modules/markup/combineMarkupRules.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/markup/combineMarkupRules.tsx");
+const result = size.fileFinishedImporting("modules/markup/combineMarkupRules.tsx");
 
-export default function combineMarkupRules(arg0) {
+export default function combineMarkupRules(items) {
   let obj = {};
-  const iter = arg0[Symbol.iterator]();
+  const iter = items[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp2 = nextResult;
-    let tmp3 = nextResult;
     for (const key10012 in nextResult) {
-      let tmp15 = key10012;
       let tmp16 = key10012;
       obj = {};
       if (key10012 in obj) {
-        let tmp9 = tmp15;
-        let tmp10 = obj;
         let merged = Object.assign(obj[tmp16]);
-        let tmp12 = nextResult;
-        let tmp13 = obj;
         let merged1 = Object.assign(tmp2[tmp16]);
         let tmp8 = obj;
       } else {
-        let tmp4 = nextResult;
-        let tmp5 = tmp15;
-        let tmp6 = obj;
         let merged2 = Object.assign(tmp2[tmp16]);
         tmp8 = obj;
       }

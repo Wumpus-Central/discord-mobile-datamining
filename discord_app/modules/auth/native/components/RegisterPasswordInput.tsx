@@ -1,27 +1,23 @@
 // discord_app/modules/auth/native/components/RegisterPasswordInput.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import Text from "../../../../design/components/Text/native/Text.tsx";
-import PasswordScore from "utils/usePasswordScore.tsx";
-import closure_4 from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import closure_5 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
-import closure_7 from "../../../phone/PhoneStore.tsx";
-import useRegistrationUIStore from "../RegistrationUIStore.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import { FadeIn, FadeOut, LinearTransition, Easing } from "../../../reanimated/ReanimatedRexport.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import usePasswordScore from "utils/usePasswordScore.tsx";
+import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import PhoneStore from "../../../phone/PhoneStore.tsx";
 
-require = arg1;
+require = fn;
 function PasswordStrength(passwordScore) {
   passwordScore = passwordScore.passwordScore;
   ({ password, isPasswordFocused, passwordError } = passwordScore);
-  const tmp = callback3();
+  const tmp = closure_13();
   if (null != passwordScore) {
     if (isPasswordFocused) {
       if (0 !== password.length) {
         if (null == passwordError) {
-          if (passwordScore <= PasswordScore.PasswordScore.WEAK) {
+          if (passwordScore <= usePasswordScore.PasswordScore.WEAK) {
             const intl2 = tmp9(1114).intl;
             let str = intl2.string(tmp9(1114).t["w/8TuV"]);
             let strong = tmp.weak;
@@ -45,9 +41,9 @@ function PasswordStrength(passwordScore) {
           obj.style = items;
           obj.animated = true;
           const intl3 = tmp9(1114).intl;
-          const items1 = [intl3.string(getSystemLocale.t["5gbdUX"]), ": ", str];
+          const items1 = [intl3.string(util.t["5gbdUX"]), ": ", str];
           obj.children = items1;
-          return callback2(Text.Text, obj);
+          return closure_1_10(Text_Text.Text, obj);
         }
       }
     }
@@ -55,59 +51,66 @@ function PasswordStrength(passwordScore) {
   return null;
 }
 let closure_3 = ["password"];
-({ setRegistrationErrors: closure_8, useRegistrationUIStore: c9 } = useRegistrationUIStore);
-({ jsxs: c10, jsx: unpackModuleId, Fragment: closure_12 } = jsxProd);
+const RegistrationUIStore = fn(15946);
+({ setRegistrationErrors: closure_8, useRegistrationUIStore: closure_9 } = RegistrationUIStore);
+const jsxProd = fn(21);
+({ jsxs: c10, jsx: closure_11, Fragment: closure_12 } = jsxProd);
+fn(4560);
 let obj = { weak: null, medium: null, strong: null, passwordStrength: null, inputHint: null };
-obj = { color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL };
-obj[0] = obj;
-createCacheKey = { color: ThemesDefault.colors.TEXT_FEEDBACK_WARNING };
-obj[1] = createCacheKey;
-obj[2] = { color: ThemesDefault.colors.TEXT_FEEDBACK_POSITIVE };
-obj[3] = { marginTop: 4, marginBottom: 4 };
-obj[4] = { width: "100%" };
-let closure_13 = createCacheKey.createStyles(obj);
+obj = { color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
+obj.weak = obj;
+const createStyles = { color: nativeDefault.colors.TEXT_FEEDBACK_WARNING };
+obj.medium = createStyles;
+obj.strong = { color: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE };
+obj.passwordStrength = { marginTop: 4, marginBottom: 4 };
+obj.inputHint = { width: "100%" };
+let closure_13 = createStyles.createStyles(obj);
 let obj3 = { entering: null, exiting: null };
-obj3[0] = require("../../../../../_runtime/00300_get_BatchedBridge.js");
-obj3[1] = require("../../../../../_runtime/00300_get_BatchedBridge.js");
+const FadeIn = fn(4296).FadeIn;
+obj3.entering = FadeIn.duration(300);
+const FadeOut = fn(4296).FadeOut;
+obj3.exiting = FadeOut.duration(300);
 const obj4 = { layout: null };
-const obj2 = { color: ThemesDefault.colors.TEXT_FEEDBACK_POSITIVE };
-obj4[0] = require("../../../../../_runtime/00300_get_BatchedBridge.js");
-const easingResult = LinearTransition.easing(
-  Easing.inOut(require("../../../reanimated/ReanimatedRexport.tsx").Easing.quad),
-);
-const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
+const LinearTransition = fn(4296).LinearTransition;
+const Easing = fn(4296).Easing;
+const obj2 = { color: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE };
+obj4.layout = LinearTransition.easing(Easing.inOut(fn(4296).Easing.quad)).duration(300);
+const easingResult = LinearTransition.easing(Easing.inOut(fn(4296).Easing.quad));
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/auth/native/components/RegisterPasswordInput.tsx");
+
+export const RegisterPasswordInput = noop.forwardRef((arg0, ref) => {
   ({ password, onPasswordChange } = arg0);
   ({ returnKeyType, autoFocus } = arg0);
-  let obj = importAllResult;
   ({ onSubmitEditing, passwordScore } = arg0);
-  ref = importAllResult.useRef(null);
-  obj = { inputRef: ref, enabled: null };
-  const tmp = callback3();
+  ref = noop.useRef(null);
+  let obj = { inputRef: ref, enabled: null };
+  const tmp = closure_13();
   const tmp3 = importDefault;
   if (autoFocus == null) {
     autoFocus = false;
   }
-  obj[1] = autoFocus;
-  importDefault(first[12])(obj);
-  const tmp5 = importDefault(first[12]);
+  obj.enabled = autoFocus;
+  require("useFocusRefOnNavigation")(obj);
+  const tmp5 = require("useFocusRefOnNavigation");
   [tmp8, tmp9] = stateFromStores(obj.useState(false), 2);
   importDefault = tmp9;
   const tmp10 = stateFromStores(obj.useState(false), 2);
-  first = tmp10[0];
+  isPasswordFocused = tmp10[0];
   closure_3 = tmp12;
-  const tmp13 = callback((errors) => errors.errors);
-  closure_4 = tmp13;
-  const tmp14 = tmp3(first[13])("password", tmp13);
+  const tmp13 = closure_9((errors) => errors.errors);
+  const user = tmp13;
+  const tmp14 = tmp3(isPasswordFocused[13])("password", tmp13);
   const items = [onPasswordChange, tmp13];
-  callback = obj.useCallback((arg0) => {
-    if (null != lib.password) {
+  const callback = obj.useCallback((arg0) => {
+    if (null != user.password) {
       const password = tmp.password;
-      closure_1_8(lib(tmp, closure_3));
+      React6(_objectWithoutProperties(tmp, closure_3));
     }
     onPasswordChange(arg0);
   }, items);
-  obj3 = onPasswordChange(first[14]);
-  const items1 = [closure_7];
+  obj3 = onPasswordChange(isPasswordFocused[14]);
+  const items1 = [PhoneStore];
   stateFromStores = obj3.useStateFromStores(items1, () => {
     const FRANCE_AND_FRENCH_REGION = onPasswordChange(first[15]).CountryCodesSets.FRANCE_AND_FRENCH_REGION;
     let num = 8;
@@ -116,25 +119,24 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
     }
     return num;
   });
-  const items2 = [first, stateFromStores];
+  const items2 = [isPasswordFocused, stateFromStores];
   const memo = obj.useMemo(() => {
     if (first) {
-      const intl = onPasswordChange(first[10]).intl;
-      const obj = { minimumLength: null };
-      obj[0] = stateFromStores;
-      return intl.format(onPasswordChange(first[10]).t.VUUJ6V, obj);
+      const intl = util.intl;
+      const obj = { minimumLength: stateFromStores };
+      return intl.format(util.t.VUUJ6V, obj);
     }
   }, items2);
   const items3 = [tmp10[1]];
   const items4 = [tmp10[1]];
   const callback1 = obj.useCallback(() => {
-    callback(true);
+    closure_3(true);
   }, items3);
   const items5 = [tmp9];
   const callback2 = obj.useCallback(() => {
-    callback(false);
+    closure_3(false);
   }, items4);
-  callback3 = obj.useCallback(() => {
+  const callback3 = obj.useCallback(() => {
     tmp9((arg0) => !arg0);
   }, items5);
   obj = {
@@ -159,27 +161,27 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   const tmp22 = closure_10;
   const tmp23 = closure_12;
   const tmp7 = stateFromStores(obj.useState(false), 2);
-  obj[0] = onPasswordChange(first[17]).mergeRefs(ref, ref);
-  obj[3] = callback;
-  obj[4] = password;
+  obj.ref = onPasswordChange(isPasswordFocused[17]).mergeRefs(ref, ref);
+  obj.onChange = callback;
+  obj.value = password;
   let intl = onPasswordChange(tmp4[10]).intl;
-  obj[5] = intl.string(onPasswordChange(first[10]).t["CIGa+7"]);
+  obj.label = intl.string(onPasswordChange(isPasswordFocused[10]).t["CIGa+7"]);
   const intl2 = onPasswordChange(tmp4[10]).intl;
-  obj[6] = intl2.string(onPasswordChange(first[10]).t.cUVsEG);
-  obj[7] = !tmp8;
+  obj.accessibilityHint = intl2.string(onPasswordChange(isPasswordFocused[10]).t.cUVsEG);
+  obj.secureTextEntry = !tmp8;
   if (returnKeyType == null) {
     returnKeyType = "next";
   }
-  obj[8] = returnKeyType;
-  obj[10] = onSubmitEditing;
-  obj[11] = callback1;
-  obj[12] = callback2;
+  obj.returnKeyType = returnKeyType;
+  obj.onSubmitEditing = onSubmitEditing;
+  obj.onFocus = callback1;
+  obj.onBlur = callback2;
   if (tmp8) {
     let EyeIcon = tmp16(tmp4[18]).EyeSlashIcon;
   } else {
     EyeIcon = tmp16(tmp4[19]).EyeIcon;
   }
-  obj[13] = EyeIcon;
+  obj.trailingIcon = EyeIcon;
   const intl3 = tmp16(tmp4[10]).intl;
   const string = intl3.string;
   const t = tmp16(tmp4[10]).t;
@@ -188,22 +190,22 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   } else {
     stringResult = string(t.nFzpM5);
   }
-  obj[14] = { accessibilityLabel: stringResult, onPress: callback3, hitSlop: { top: 8, bottom: 8 } };
-  obj[15] = tmp14;
+  obj.trailingPressableProps = { accessibilityLabel: stringResult, onPress: callback3, hitSlop: { top: 8, bottom: 8 } };
+  obj.errorMessage = tmp14;
   let str;
   if (null != tmp14) {
     str = "error";
   }
-  obj[16] = str;
+  obj.status = str;
   const children = [
-    closure_11(onPasswordChange(first[16]).TextInput, obj),
-    closure_11(PasswordStrength, { password, isPasswordFocused: first, passwordError: tmp14, passwordScore }),
+    closure_11(onPasswordChange(isPasswordFocused[16]).TextInput, obj),
+    closure_11(PasswordStrength, { password, isPasswordFocused, passwordError: tmp14, passwordScore }),
   ];
   let tmp24Result = null;
   if (null != memo) {
     tmp24Result = null;
     if (null == tmp14) {
-      obj1 = {};
+      const obj1 = {};
       const merged = Object.assign(obj3);
       const merged1 = Object.assign(obj4);
       obj1.style = tmp.inputHint;
@@ -217,6 +219,3 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   children[2] = tmp24Result;
   return tmp22(tmp23, { children });
 });
-const result = require("set").fileFinishedImporting("modules/auth/native/components/RegisterPasswordInput.tsx");
-
-export const RegisterPasswordInput = forwardRefResult;

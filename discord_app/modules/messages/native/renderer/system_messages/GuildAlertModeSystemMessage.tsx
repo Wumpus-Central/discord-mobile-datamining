@@ -1,29 +1,30 @@
 // discord_app/modules/messages/native/renderer/system_messages/GuildAlertModeSystemMessage.tsx
-import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../../../intl/index.native.tsx";
-import ensureAvatarSource from "../../../../../utils/native/AvatarUtils.tsx";
-import resultDefault from "../resolveMessageContentColors.tsx";
-import getMessageAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
+import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../../intl/index.native.tsx";
+import utils_AvatarUtils from "../../../../../utils/native/AvatarUtils.tsx";
+import resolveMessageContentColorsDefault from "../resolveMessageContentColors.tsx";
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
 import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
 import getTagPropertiesDefault from "../getTagProperties.tsx";
-import closure_3 from "../../../../../stores/ChannelStore.tsx";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 
-require = arg1;
-createCacheKey = { automodUsernameColor: ThemesDefault.colors.TEXT_BRAND };
-createCacheKey = createCacheKey.createNativeStyleProperties(createCacheKey);
-const result = require("set").fileFinishedImporting(
+require = fn;
+fn(4560);
+let createStyles = { automodUsernameColor: nativeDefault.colors.TEXT_BRAND };
+createStyles = createStyles.createNativeStyleProperties(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/GuildAlertModeSystemMessage.tsx",
 );
 
-export const resolveAlertModeColors = createCacheKey;
+export const resolveAlertModeColors = createStyles;
 export const createGuildAlertModeEnabledSystemMessage = function createGuildAlertModeEnabledSystemMessage(roleStyle) {
   ({ message, theme } = roleStyle);
-  channel = channel.getChannel(message.channel_id);
-  let obj = getMessageAuthorWithProcessedColor;
+  const channel = ChannelStore.getChannel(message.channel_id);
+  let obj = useAuthorWithProcessedColor;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-  let automodUsernameColor = createCacheKey(theme).automodUsernameColor;
+  let automodUsernameColor = createStyles(theme).automodUsernameColor;
   obj = {
     username: messageAuthorWithProcessedColor.nick,
     usernameOnClick: formatUsernameOnClickDefault({
@@ -39,29 +40,34 @@ export const createGuildAlertModeEnabledSystemMessage = function createGuildAler
     const date = new Date(message.content);
     str = date.toLocaleString(tmp5(1114).intl.currentLocale, { hour: "numeric", minute: "2-digit" });
   }
-  obj[2] = str;
-  const tmp3 = resultDefault(theme);
+  obj.time = str;
+  const tmp3 = resolveMessageContentColorsDefault(theme);
   obj = {};
   const merged = Object.assign(tmp(7964)(roleStyle));
   const intl = tmp5(1114).intl;
-  obj.content = intl.formatToParts(getSystemLocale.t.ig55n6, obj);
+  obj.content = intl.formatToParts(util.t.ig55n6, obj);
   const intl2 = tmp5(1114).intl;
-  obj.username = intl2.string(getSystemLocale.t.hG1StD);
+  obj.username = intl2.string(util.t.hG1StD);
   if (automodUsernameColor == null) {
     automodUsernameColor = null;
   }
   obj.usernameColor = automodUsernameColor;
-  let tmp5Result = tmp5(1399);
-  tmp5Result = tmp5(1396);
-  const tmp12 = getTagPropertiesDefault({ message, channel, isSystemDM: true, colors: resultDefault(theme) });
-  obj.avatarURL = tmp5Result.ensureAvatarSource(tmp5Result.makeSource(ensureAvatarSource.getAutomodAvatarURL())).uri;
+  tmp5(1399);
+  const tmp5Result = tmp5(1396);
+  const tmp12 = getTagPropertiesDefault({
+    message,
+    channel,
+    isSystemDM: true,
+    colors: resolveMessageContentColorsDefault(theme),
+  });
+  obj.avatarURL = tmp5Result.ensureAvatarSource(tmp5Result.makeSource(utils_AvatarUtils.getAutomodAvatarURL())).uri;
   const merged1 = Object.assign(tmp12);
   return obj;
 };
 export const createGuildAlertModeDisabledSystemMessage = function createGuildAlertModeDisabledSystemMessage(roleStyle) {
   ({ message, theme } = roleStyle);
-  let automodUsernameColor = createCacheKey(theme).automodUsernameColor;
-  let obj = getMessageAuthorWithProcessedColor;
+  let automodUsernameColor = createStyles(theme).automodUsernameColor;
+  let obj = useAuthorWithProcessedColor;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
   obj = {
     username: messageAuthorWithProcessedColor.nick,
@@ -71,23 +77,22 @@ export const createGuildAlertModeDisabledSystemMessage = function createGuildAle
       roleStyle: roleStyle.roleStyle,
     }),
   };
-  obj = { message, channel: "HermesInternal", isSystemDM: null, colors: "header" };
-  obj[3] = resultDefault(theme);
-  const tmp2 = resultDefault(theme);
-  obj1 = {};
+  obj = { message, channel: "HermesInternal", isSystemDM: null, colors: resolveMessageContentColorsDefault(theme) };
+  const tmp2 = resolveMessageContentColorsDefault(theme);
+  const obj1 = {};
   const merged = Object.assign(createCommonMessageDefault(roleStyle));
-  const intl = getSystemLocale.intl;
-  obj1.content = intl.formatToParts(getSystemLocale.t.cyq2WA, obj);
-  const intl2 = getSystemLocale.intl;
-  obj1.username = intl2.string(getSystemLocale.t.hG1StD);
+  const intl = util.intl;
+  obj1.content = intl.formatToParts(util.t.cyq2WA, obj);
+  const intl2 = util.intl;
+  obj1.username = intl2.string(util.t.hG1StD);
   if (automodUsernameColor == null) {
     automodUsernameColor = null;
   }
   obj1.usernameColor = automodUsernameColor;
-  let tmp4Result = tmp4(1399);
-  tmp4Result = tmp4(1396);
+  tmp4(1399);
+  const tmp4Result = tmp4(1396);
   const tmp6 = getTagPropertiesDefault(obj);
-  obj1.avatarURL = tmp4Result.ensureAvatarSource(tmp4Result.makeSource(ensureAvatarSource.getAutomodAvatarURL())).uri;
+  obj1.avatarURL = tmp4Result.ensureAvatarSource(tmp4Result.makeSource(utils_AvatarUtils.getAutomodAvatarURL())).uri;
   const merged1 = Object.assign(tmp6);
   return obj1;
 };

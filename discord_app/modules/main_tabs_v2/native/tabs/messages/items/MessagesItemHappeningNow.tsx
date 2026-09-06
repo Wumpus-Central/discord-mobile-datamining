@@ -1,18 +1,16 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/items/MessagesItemHappeningNow.tsx
-import ThemesDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import map from "../../../../../../design/tokens/native/useToken.tsx";
-import useCutoutBackgroundColor from "../../../../../../design/components/Icon/native/CutoutBackgroundContext.tsx";
-import useIsMobileVisualRefreshExperimentEnabled from "../../../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
-import renderCardDefault from "../../../shared_components/happening_now/HappeningNow.tsx";
-import { View } from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "../../../shared_components/happening_now/HappeningNowConstants.tsx";
-import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
-import importAllResult from "../../../../../../../_runtime/00019_noop.js";
-import set from "../../../../../../../_runtime/00002_set.js";
+import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import useToken from "../../../../../../design/tokens/native/useToken.tsx";
+import CutoutBackgroundContext from "../../../../../../design/components/Icon/native/CutoutBackgroundContext.tsx";
+import MobileVisualRefreshExperiment from "../../../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import HappeningNowDefault from "../../../shared_components/happening_now/HappeningNow.tsx";
+import noop from "../../../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-({ HAPPENING_NOW_CARD_HEIGHT: c4, HappeningNowItem } = HAPPENING_NOW_PANELS_CONTAINER_PADDING);
+require = fn;
+const View = fn(17).View;
+const HappeningNowConstants = fn(15294);
+({ HAPPENING_NOW_CARD_HEIGHT: closure_4, HappeningNowItem } = HappeningNowConstants);
+const jsx = fn(21).jsx;
 const items = [, , , , , ,];
 ({
   LIVE_GUILD_STAGE: arr[0],
@@ -23,48 +21,49 @@ const items = [, , , , , ,];
   USER_CUSTOM_STATUS: arr[5],
   USER: arr[6],
 } = HappeningNowItem);
-let set = new Set(items);
-let closure_7 = createCacheKey.createStyles((height) => {
+const set = new Set(items);
+const createStyles = fn(4560);
+let closure_7 = createStyles.createStyles((height) => {
   let obj = { container: null };
-  obj = { height, paddingStart: ThemesDefault.space.PX_8, overflow: "hidden" };
-  obj[0] = obj;
+  obj = { height, paddingStart: nativeDefault.space.PX_8, overflow: "hidden" };
+  obj.container = obj;
   return obj;
 });
-const result = set.fileFinishedImporting(
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/main_tabs_v2/native/tabs/messages/items/MessagesItemHappeningNow.tsx",
 );
 
-export default importAllResult.memo(function MessagesItemHappeningNow(listRef) {
-  let obj = map;
-  obj = { backgroundColor: null, children: null };
+export default noop.memo(function MessagesItemHappeningNow(listRef) {
+  let obj = { backgroundColor: null, children: null };
   obj = {
-    style: callback(closure_4 + obj.useToken(ThemesDefault.modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM))
+    style: closure_7(React4 + obj.useToken(nativeDefault.modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM))
       .container,
     collapsable: false,
-    children: jsx(renderCardDefault, obj1),
+    children: jsx(HappeningNowDefault, { cards: set, listRef: listRef.listRef }),
   };
-  obj[1] = (
+  obj.children = (
     <View
       style={
-        callback(closure_4 + obj.useToken(ThemesDefault.modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM))
+        closure_7(React4 + obj.useToken(nativeDefault.modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM))
           .container
       }
       collapsable={false}
     >
-      {jsx(renderCardDefault, obj1)}
+      {jsx(HappeningNowDefault, { cards: set, listRef: arg0.listRef })}
     </View>
   );
-  return jsx(useCutoutBackgroundColor.CutoutBackgroundProvider, {
-    style: callback(closure_4 + obj.useToken(ThemesDefault.modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM))
+  return jsx(CutoutBackgroundContext.CutoutBackgroundProvider, {
+    style: closure_7(React4 + obj.useToken(nativeDefault.modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM))
       .container,
     collapsable: false,
-    children: jsx(renderCardDefault, obj1),
+    children: jsx(HappeningNowDefault, { cards: set, listRef: listRef.listRef }),
   });
 });
 export const getMessagesItemHappeningNowHeight = function getMessagesItemHappeningNowHeight() {
   return (
-    useIsMobileVisualRefreshExperimentEnabled.resolveRefreshToken(
-      ThemesDefault.modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM,
-    ) + closure_4
+    MobileVisualRefreshExperiment.resolveRefreshToken(
+      nativeDefault.modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM,
+    ) + React4
   );
 };

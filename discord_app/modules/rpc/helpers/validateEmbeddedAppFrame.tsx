@@ -1,39 +1,33 @@
 // discord_app/modules/rpc/helpers/validateEmbeddedAppFrame.tsx
-import getApplicationFlags from "../../applications/utils/ApplicationFlagUtils.tsx";
-import prototypeDefault from "../RPCError.tsx";
-import recurseReplaceContentTree from "../RPCHelpers.tsx";
-import closure_3 from "../../frames/FramesStore.tsx";
-import closure_4 from "../../vibegrations/stores/VibegrationsBuilderPreviewStore.tsx";
-import { TransportTypes } from "../Constants.tsx";
-import ME from "../../../Constants.tsx";
-import FrameLayoutModes from "../../frames/FramesConstants.tsx";
+import ApplicationFlagUtils from "../../applications/utils/ApplicationFlagUtils.tsx";
+import RPCErrorDefault from "../RPCError.tsx";
+import RPCHelpers from "../RPCHelpers.tsx";
+import FramesStore from "../../frames/FramesStore.tsx";
+import VibegrationsBuilderPreviewStore from "../../vibegrations/stores/VibegrationsBuilderPreviewStore.tsx";
 
-require = arg1;
+require = fn;
 function validateEmbeddedAppFrame(transport) {
-  let obj = recurseReplaceContentTree;
+  let obj = RPCHelpers;
   const result = obj.validatePostMessageTransport(transport.transport);
-  obj1 = recurseReplaceContentTree;
-  let obj2 = getApplicationFlags;
+  let obj1 = RPCHelpers;
+  let obj2 = ApplicationFlagUtils;
   if (obj2.hasApplicationFlag(transport.application, constants.EMBEDDED)) {
     if (transport.source.type !== TransportTypes.POST_MESSAGE) {
-      obj = { errorCode: null };
-      obj[0] = constants2.INVALID_COMMAND;
-      const tmp31 = new prototypeDefault(obj, "command requires an embedded app frame");
+      obj = { errorCode: constants2.INVALID_COMMAND };
+      const tmp31 = new RPCErrorDefault(obj, "command requires an embedded app frame");
       throw tmp31;
     } else {
-      const tmp35 = callback(frameByIframeId.getFrameByIframeId(transport.source.iframeId));
+      const tmp35 = React6(FramesStore.getFrameByIframeId(transport.source.iframeId));
       let tmp13 = null;
       if (null != tmp35) {
         const type = tmp35.surface.type;
         if (constants3.APP_CHANNEL === type) {
-          obj = { channelId: null, guildId: null };
-          obj[0] = tmp35.surface.channelId;
-          obj[1] = tmp35.surface.guildId;
+          obj = { channelId: tmp35.surface.channelId, guildId: tmp35.surface.guildId };
           tmp13 = obj;
         } else {
           tmp13 = null;
           if (tmp12.MAIN === type) {
-            if (tmp35.applicationId === builderPreviewApplicationId.getBuilderPreviewApplicationId()) {
+            if (tmp35.applicationId === VibegrationsBuilderPreviewStore.getBuilderPreviewApplicationId()) {
               obj1 = { channelId: "hash", guildId: "call" };
             } else {
               obj1 = null;
@@ -43,36 +37,36 @@ function validateEmbeddedAppFrame(transport) {
         }
       }
       if (null == tmp13) {
-        obj2 = { errorCode: null };
-        obj2[0] = constants2.UNAUTHORIZED_FOR_APPLICATION;
-        const tmp24 = new prototypeDefault(obj2, "Command not available for this application");
+        obj2 = { errorCode: constants2.UNAUTHORIZED_FOR_APPLICATION };
+        const tmp24 = new RPCErrorDefault(obj2, "Command not available for this application");
         throw tmp24;
       } else {
-        const obj3 = { applicationId: null, iframeId: null };
-        obj3[0] = validateApplicationResult;
-        obj3[1] = transport.source.iframeId;
+        const obj3 = { applicationId: validateApplicationResult, iframeId: transport.source.iframeId };
         const merged = Object.assign(tmp13);
         return obj3;
       }
     }
   } else {
-    const obj4 = { errorCode: null };
-    obj4[0] = constants2.UNAUTHORIZED_FOR_APPLICATION;
-    const tmp9 = new prototypeDefault(obj4, "This application cannot access this API");
+    const obj4 = { errorCode: constants2.UNAUTHORIZED_FOR_APPLICATION };
+    const tmp9 = new RPCErrorDefault(obj4, "This application cannot access this API");
     throw tmp9;
   }
   validateApplicationResult = obj1.validateApplication(transport.application);
 }
-({ ApplicationFlags: closure_6, RPCErrors: error } = ME);
-({ asLaunched: closure_8, EmbeddedSurfaceType: c9 } = FrameLayoutModes);
-let result = require("set").fileFinishedImporting("modules/rpc/helpers/validateEmbeddedAppFrame.tsx");
+const TransportTypes = fn(4465).TransportTypes;
+const Constants = fn(1074);
+({ ApplicationFlags: metroRequire, RPCErrors: closure_7 } = Constants);
+const FramesConstants = fn(9511);
+({ asLaunched: closure_8, EmbeddedSurfaceType: closure_9 } = FramesConstants);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/rpc/helpers/validateEmbeddedAppFrame.tsx");
 
 export default validateEmbeddedAppFrame;
-export const tryValidateEmbeddedAppFrame = function tryValidateEmbeddedAppFrame(closure_1_0) {
+export const tryValidateEmbeddedAppFrame = function tryValidateEmbeddedAppFrame(socket) {
   try {
-    return validateEmbeddedAppFrame(closure_1_0);
+    return validateEmbeddedAppFrame(socket);
   } catch (tmp3) {
-    if (tmp3 instanceof prototypeDefault) {
+    if (tmp3 instanceof RPCErrorDefault) {
       return null;
     } else {
       throw tmp3;

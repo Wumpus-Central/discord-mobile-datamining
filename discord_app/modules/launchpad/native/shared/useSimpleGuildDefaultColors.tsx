@@ -1,16 +1,15 @@
 // discord_app/modules/launchpad/native/shared/useSimpleGuildDefaultColors.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 let obj = { iconBackground: null, iconBackgroundBrand: null, iconStroke: null };
-obj = { color: ThemesDefault.colors.BACKGROUND_MOD_STRONG };
-obj[0] = obj;
-obj[1] = { color: ThemesDefault.colors.BACKGROUND_BRAND };
-const obj1 = { color: ThemesDefault.colors.BACKGROUND_BRAND };
-obj[2] = { color: ThemesDefault.colors.BORDER_SUBTLE };
-const styles = createCacheKey.createStyles(obj);
-const obj2 = { color: ThemesDefault.colors.BORDER_SUBTLE };
-const result = set.fileFinishedImporting("modules/launchpad/native/shared/useSimpleGuildDefaultColors.tsx");
+obj = { color: nativeDefault.colors.BACKGROUND_MOD_STRONG };
+obj.iconBackground = obj;
+obj.iconBackgroundBrand = { color: nativeDefault.colors.BACKGROUND_BRAND };
+const obj1 = { color: nativeDefault.colors.BACKGROUND_BRAND };
+obj.iconStroke = { color: nativeDefault.colors.BORDER_SUBTLE };
+const styles = createStyles.createStyles(obj);
+const result = size.fileFinishedImporting("modules/launchpad/native/shared/useSimpleGuildDefaultColors.tsx");
 
 export default styles;

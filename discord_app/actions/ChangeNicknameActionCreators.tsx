@@ -1,53 +1,47 @@
 // discord_app/actions/ChangeNicknameActionCreators.tsx
-import set from "../../_runtime/00002_set.js";
-import ME from "../Constants.tsx";
-import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import Constants from "../Constants.tsx";
+import util from "../intl/index.native.tsx";
+import MessageActionCreatorsDefault from "MessageActionCreators.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-const Endpoints = ME.Endpoints;
-let result = set.fileFinishedImporting("actions/ChangeNicknameActionCreators.tsx");
+const Endpoints = Constants.Endpoints;
+let result = size.fileFinishedImporting("actions/ChangeNicknameActionCreators.tsx");
 
 export default {
-  changeNickname(guildId, arg1, closure_4) {
-    const _require = arg1;
-    closure_1 = arg3;
-    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
-    obj = {
-      url: Endpoints.GUILD_MEMBER_NICK(guildId, closure_4),
-      body: obj,
+  changeNickname(guildId, arg1, arg2, arg3) {
+    _require = arg1;
+    let nick = arg3;
+    const HTTP = require("HTTPUtils").HTTP;
+    const request = {
+      url: Endpoints.GUILD_MEMBER_NICK(guildId, arg2),
+      body: { nick },
       oldFormErrors: true,
-      rejectWithError: null,
+      rejectWithError: require("HTTPUtils").rejectWithMigratedError(),
     };
-    obj = { nick: closure_1 };
-    obj[3] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
-    const obj3 = sendRequest;
-    return HTTP.patch(obj).then(
+    let obj = { nick };
+    const obj3 = require("HTTPUtils");
+    return HTTP.patch(request).then(
       (body) => {
-        const nick = body.body.nick;
-        callback2(closure_1_2[2]);
+        nick = body.body.nick;
+        MessageActionCreatorsDefault;
         if (null != nick) {
           if ("" !== nick) {
-            const intl2 = callback(tmp[3]).intl;
-            const obj = { nick: null };
-            obj[0] = nick;
-            let result = intl2.formatToMarkdownString(callback(tmp[3]).t["gz+HRq"], obj);
+            const intl2 = util.intl;
+            const obj = { nick };
+            let result = intl2.formatToMarkdownString(util.t["gz+HRq"], obj);
           }
           tmp3(tmp4, result);
         }
-        const intl = callback(tmp[3]).intl;
-        result = intl.string(callback(tmp[3]).t.Vhpd9A);
+        const intl = util.intl;
+        result = intl.string(util.t.Vhpd9A);
       },
       (status) => {
         if (403 === status.status) {
-          const intl2 = callback(closure_1_2[3]).intl;
-          callback2(closure_1_2[2]).sendBotMessage(
-            callback,
-            intl2.formatToMarkdownString(callback(closure_1_2[3]).t.Izf9jO, {}),
-          );
-          const obj2 = callback2(closure_1_2[2]);
+          const intl2 = util.intl;
+          MessageActionCreatorsDefault.sendBotMessage(closure_0, intl2.formatToMarkdownString(util.t.Izf9jO, {}));
         } else {
-          const intl = callback(closure_1_2[3]).intl;
-          callback2(closure_1_2[2]).sendBotMessage(callback, intl.string(callback(closure_1_2[3]).t["5LO/Ss"]));
-          const obj = callback2(closure_1_2[2]);
+          const intl = util.intl;
+          MessageActionCreatorsDefault.sendBotMessage(closure_0, intl.string(util.t["5LO/Ss"]));
         }
       },
     );

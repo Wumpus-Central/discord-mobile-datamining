@@ -1,7 +1,7 @@
 // discord_app/modules/action_sheet/native/showSimpleActionSheet.tsx
-import set from "../../../../_runtime/00002_set.js";
-import showSimpleActionSheet from "../../../design/components/Sheet/native/showSimpleActionSheet.native.tsx";
+import Sheet_showSimpleActionSheet from "../../../design/components/Sheet/native/showSimpleActionSheet.native.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/action_sheet/native/showSimpleActionSheet.tsx");
+const result = size.fileFinishedImporting("modules/action_sheet/native/showSimpleActionSheet.tsx");
 
-export const showSimpleActionSheet = showSimpleActionSheet.showSimpleActionSheet;
+export const showSimpleActionSheet = Sheet_showSimpleActionSheet.showSimpleActionSheet;

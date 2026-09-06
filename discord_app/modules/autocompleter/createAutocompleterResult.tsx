@@ -1,11 +1,11 @@
 // discord_app/modules/autocompleter/createAutocompleterResult.tsx
-import set from "../../../_runtime/00002_set.js";
-import HeaderRecord from "AutocompleterConstants.tsx";
+import AutocompleterConstants from "AutocompleterConstants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-({ HeaderRecord: c0, AutocompleterResultTypes: closure_1 } = HeaderRecord);
-const result = set.fileFinishedImporting("modules/autocompleter/createAutocompleterResult.tsx");
+({ HeaderRecord: closure_0, AutocompleterResultTypes: closure_1 } = AutocompleterConstants);
+const result = size.fileFinishedImporting("modules/autocompleter/createAutocompleterResult.tsx");
 
 export const createHeaderResult = function createHeaderResult(intl) {
-  const obj = { type: constants.HEADER, record: new closure_0(intl), score: 0 };
+  const obj = { type: constants.HEADER, record: new React(intl), score: 0 };
   return obj;
 };

@@ -1,5 +1,5 @@
 // discord_app/modules/app_database/util/Lru.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
 class Lru {
   constructor(arg0) {
@@ -17,12 +17,13 @@ Object.defineProperty(prototype, "length", {
   },
   set: undefined
 });
-const get = function capacity() {
-  return this.limit;
-};
-Object.defineProperty(prototype, "capacity", { get, set: undefined });
-// ToPropertyKey (0xa4)
-prototype[get] = function() {
+Object.defineProperty(prototype, "capacity", {
+  get: function capacity() {
+    return this.limit;
+  },
+  set: undefined
+});
+prototype[Symbol.iterator] = function() {
   const items = this.items;
   return items.entries();
 };
@@ -64,7 +65,7 @@ prototype["put"] = function put(arg0, arg1) {
   if (this.items.size > this.limit) {
     const oldestKeyResult = self.oldestKey();
     ({ items: items3, items: items4 } = self);
-    const value = items3.get(oldestKeyResult);
+    value = items3.get(oldestKeyResult);
     items4.delete(oldestKeyResult);
     items = [oldestKeyResult, value];
     return items;
@@ -78,6 +79,6 @@ prototype["oldestKey"] = function oldestKey() {
   const items = this.items;
   return items.keys().next().value;
 };
-let result = set.fileFinishedImporting("modules/app_database/util/Lru.tsx");
+let result = size.fileFinishedImporting("modules/app_database/util/Lru.tsx");
 
 export { Lru };

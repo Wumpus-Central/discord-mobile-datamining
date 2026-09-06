@@ -1,12 +1,11 @@
 // discord_app/modules/auth/native/useWideAuthView.tsx
-import set from "../../../../_runtime/00002_set.js";
-import isMetaQuest from "../../device/MetaQuestUtils.android.tsx";
+import MetaQuestUtils from "../../device/MetaQuestUtils.android.tsx";
 import useIsWindowLargeDefault from "../../screen/native/useIsWindowLarge.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/auth/native/useWideAuthView.tsx");
+const result = size.fileFinishedImporting("modules/auth/native/useWideAuthView.tsx");
 
 export default function useWideAuthView() {
   const tmp = useIsWindowLargeDefault();
-  const obj = isMetaQuest;
-  return isMetaQuest.isMetaQuest() || tmp;
+  return MetaQuestUtils.isMetaQuest() || tmp;
 }

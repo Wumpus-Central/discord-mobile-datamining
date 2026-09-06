@@ -1,5 +1,5 @@
 // discord_app/modules/app_icons/AppIconTypes.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
 let obj = { DEFAULT: "AppIcon" };
 obj = {
@@ -32,7 +32,7 @@ obj = { DRIP: "DripIcon", SLIMY: "SlimyIcon", ZOMBIE: "ZombieIcon", CLYDE_STEIN:
 const merged = Object.assign(obj);
 const merged1 = Object.assign(obj);
 const merged2 = Object.assign(obj);
-const result = set.fileFinishedImporting("modules/app_icons/AppIconTypes.tsx");
+const result = size.fileFinishedImporting("modules/app_icons/AppIconTypes.tsx");
 
 export const FreemiumAppIconIds = obj;
 export const PremiumAppIconIds = obj;

@@ -1,209 +1,164 @@
 // discord_app/modules/game_server/mocks/GameServerMocks.tsx
-import set from "../../../../_runtime/00002_set.js";
 import GameServerProviderType from "../../../../discord_common/js/shared/shared-constants/GameServerProviderType.tsx";
 import GameServerStatus from "../../../../discord_common/js/shared/shared-constants/GameServerStatus.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
+let obj = { id: "1", name: "GameServer #1", cost: 3, specifications: null };
 const items = [
   { title: "2", description: "GB" },
   { title: "1", description: "vCPU" },
   { title: "25", description: "GB" },
 ];
-const items1 = [{ id: "1", name: "GameServer #1", cost: 3, specifications: items }, ,];
+obj.specifications = items;
+const items1 = [obj, ,];
+obj = { id: "2", name: "GameServer #2", cost: 6, specifications: null };
 const items2 = [
   { title: "2", description: "GB" },
   { title: "1", description: "vCPU" },
   { title: "25", description: "GB" },
 ];
-items1[1] = { id: "2", name: "GameServer #2", cost: 6, specifications: items2 };
+obj.specifications = items2;
+items1[1] = obj;
+obj = { id: "3", name: "GameServer #3", cost: 12, specifications: null };
 const items3 = [
   { title: "2", description: "GB" },
   { title: "1", description: "vCPU" },
   { title: "25", description: "GB" },
 ];
-items1[2] = { id: "3", name: "GameServer #3", cost: 12, specifications: items3 };
-let obj = {
+obj.specifications = items3;
+items1[2] = obj;
+const obj1 = {
   id: "1",
   name: "GameServer Test #1",
   provider: GameServerProviderType.GameServerProviderType.SHOCKBYTE,
   plans: items1,
-  baseCost: Math.min.apply(items4),
+  baseCost: null,
   gameId: "1",
 };
-items4 = [...items1.map((cost) => cost.cost)];
-const items5 = [obj, , , , , , , , , , ,];
-obj = {
+const items4 = [...items1.map((cost) => cost.cost)];
+obj1.baseCost = Math.min.apply(items4);
+const items5 = [obj1, , , , , , , , , , ,];
+const obj2 = {
   id: "2",
   name: "GameServer Test #2",
   provider: GameServerProviderType.GameServerProviderType.SHOCKBYTE,
   plans: items1,
-  baseCost: Math.min.apply(items6),
+  baseCost: null,
   gameId: "1",
 };
-items6 = [...items1.map((cost) => cost.cost)];
-items5[1] = obj;
-obj = {
+const items6 = [...items1.map((cost) => cost.cost)];
+obj2.baseCost = Math.min.apply(items6);
+items5[1] = obj2;
+const obj3 = {
   id: "3",
   name: "GameServer Test #3",
   provider: GameServerProviderType.GameServerProviderType.SHOCKBYTE,
   plans: items1,
-  baseCost: Math.min.apply(items7),
+  baseCost: null,
   gameId: "1",
 };
-items7 = [...items1.map((cost) => cost.cost)];
-items5[2] = obj;
+const items7 = [...items1.map((cost) => cost.cost)];
+obj3.baseCost = Math.min.apply(items7);
+items5[2] = obj3;
+const obj4 = {
+  id: "4",
+  name: "GameServer Test #4",
+  provider: GameServerProviderType.GameServerProviderType.SHOCKBYTE,
+  plans: items1,
+  baseCost: null,
+  gameId: "1",
+};
 const items8 = [...items1.map((cost) => cost.cost)];
-items5[3] = {
-  id: "4",
-  name: "GameServer Test #4",
+obj4.baseCost = Math.min.apply(items8);
+items5[3] = obj4;
+const obj5 = {
+  id: "5",
+  name: "GameServer Test #5",
   provider: GameServerProviderType.GameServerProviderType.SHOCKBYTE,
   plans: items1,
-  baseCost: Math.min.apply(items8),
-  gameId: "1",
-};
-const obj1 = {
-  id: "4",
-  name: "GameServer Test #4",
-  provider: GameServerProviderType.GameServerProviderType.SHOCKBYTE,
-  plans: items1,
-  baseCost: Math.min.apply(items8),
+  baseCost: null,
   gameId: "1",
 };
 const items9 = [...items1.map((cost) => cost.cost)];
-items5[4] = {
-  id: "5",
-  name: "GameServer Test #5",
+obj5.baseCost = Math.min.apply(items9);
+items5[4] = obj5;
+const obj6 = {
+  id: "6",
+  name: "GameServer Test #6",
   provider: GameServerProviderType.GameServerProviderType.SHOCKBYTE,
   plans: items1,
-  baseCost: Math.min.apply(items9),
-  gameId: "1",
-};
-const obj2 = {
-  id: "5",
-  name: "GameServer Test #5",
-  provider: GameServerProviderType.GameServerProviderType.SHOCKBYTE,
-  plans: items1,
-  baseCost: Math.min.apply(items9),
+  baseCost: null,
   gameId: "1",
 };
 const items10 = [...items1.map((cost) => cost.cost)];
-items5[5] = {
-  id: "6",
-  name: "GameServer Test #6",
+obj6.baseCost = Math.min.apply(items10);
+items5[5] = obj6;
+const obj7 = {
+  id: "7",
+  name: "GameServer Test #7",
   provider: GameServerProviderType.GameServerProviderType.SHOCKBYTE,
   plans: items1,
-  baseCost: Math.min.apply(items10),
-  gameId: "1",
-};
-const obj3 = {
-  id: "6",
-  name: "GameServer Test #6",
-  provider: GameServerProviderType.GameServerProviderType.SHOCKBYTE,
-  plans: items1,
-  baseCost: Math.min.apply(items10),
+  baseCost: null,
   gameId: "1",
 };
 const items11 = [...items1.map((cost) => cost.cost)];
-items5[6] = {
-  id: "7",
-  name: "GameServer Test #7",
+obj7.baseCost = Math.min.apply(items11);
+items5[6] = obj7;
+const obj8 = {
+  id: "8",
+  name: "GameServer Test #8",
   provider: GameServerProviderType.GameServerProviderType.SHOCKBYTE,
   plans: items1,
-  baseCost: Math.min.apply(items11),
-  gameId: "1",
-};
-const obj4 = {
-  id: "7",
-  name: "GameServer Test #7",
-  provider: GameServerProviderType.GameServerProviderType.SHOCKBYTE,
-  plans: items1,
-  baseCost: Math.min.apply(items11),
+  baseCost: null,
   gameId: "1",
 };
 const items12 = [...items1.map((cost) => cost.cost)];
-items5[7] = {
-  id: "8",
-  name: "GameServer Test #8",
+obj8.baseCost = Math.min.apply(items12);
+items5[7] = obj8;
+const obj9 = {
+  id: "9",
+  name: "GameServer Test #9",
   provider: GameServerProviderType.GameServerProviderType.SHOCKBYTE,
   plans: items1,
-  baseCost: Math.min.apply(items12),
-  gameId: "1",
-};
-const obj5 = {
-  id: "8",
-  name: "GameServer Test #8",
-  provider: GameServerProviderType.GameServerProviderType.SHOCKBYTE,
-  plans: items1,
-  baseCost: Math.min.apply(items12),
+  baseCost: null,
   gameId: "1",
 };
 const items13 = [...items1.map((cost) => cost.cost)];
-items5[8] = {
-  id: "9",
-  name: "GameServer Test #9",
+obj9.baseCost = Math.min.apply(items13);
+items5[8] = obj9;
+const obj10 = {
+  id: "10",
+  name: "GameServer Test #10",
   provider: GameServerProviderType.GameServerProviderType.SHOCKBYTE,
   plans: items1,
-  baseCost: Math.min.apply(items13),
-  gameId: "1",
-};
-const obj6 = {
-  id: "9",
-  name: "GameServer Test #9",
-  provider: GameServerProviderType.GameServerProviderType.SHOCKBYTE,
-  plans: items1,
-  baseCost: Math.min.apply(items13),
+  baseCost: null,
   gameId: "1",
 };
 const items14 = [...items1.map((cost) => cost.cost)];
-items5[9] = {
-  id: "10",
-  name: "GameServer Test #10",
+obj10.baseCost = Math.min.apply(items14);
+items5[9] = obj10;
+const obj11 = {
+  id: "11",
+  name: "GameServer Test #11",
   provider: GameServerProviderType.GameServerProviderType.SHOCKBYTE,
   plans: items1,
-  baseCost: Math.min.apply(items14),
-  gameId: "1",
-};
-const obj7 = {
-  id: "10",
-  name: "GameServer Test #10",
-  provider: GameServerProviderType.GameServerProviderType.SHOCKBYTE,
-  plans: items1,
-  baseCost: Math.min.apply(items14),
+  baseCost: null,
   gameId: "1",
 };
 const items15 = [...items1.map((cost) => cost.cost)];
-items5[10] = {
-  id: "11",
-  name: "GameServer Test #11",
+obj11.baseCost = Math.min.apply(items15);
+items5[10] = obj11;
+const obj12 = {
+  id: "12",
+  name: "GameServer Test #12",
   provider: GameServerProviderType.GameServerProviderType.SHOCKBYTE,
   plans: items1,
-  baseCost: Math.min.apply(items15),
-  gameId: "1",
-};
-const obj8 = {
-  id: "11",
-  name: "GameServer Test #11",
-  provider: GameServerProviderType.GameServerProviderType.SHOCKBYTE,
-  plans: items1,
-  baseCost: Math.min.apply(items15),
+  baseCost: null,
   gameId: "1",
 };
 const items16 = [...items1.map((cost) => cost.cost)];
-items5[11] = {
-  id: "12",
-  name: "GameServer Test #12",
-  provider: GameServerProviderType.GameServerProviderType.SHOCKBYTE,
-  plans: items1,
-  baseCost: Math.min.apply(items16),
-  gameId: "1",
-};
-const obj9 = {
-  id: "12",
-  name: "GameServer Test #12",
-  provider: GameServerProviderType.GameServerProviderType.SHOCKBYTE,
-  plans: items1,
-  baseCost: Math.min.apply(items16),
-  gameId: "1",
-};
+obj12.baseCost = Math.min.apply(items16);
+items5[11] = obj12;
 const items17 = [
   {
     id: "1",
@@ -226,7 +181,7 @@ const items17 = [
   ,
   ,
 ];
-const obj10 = {
+const obj13 = {
   id: "1",
   gameId: "1",
   name: "GameServer Test #1",
@@ -258,7 +213,7 @@ items17[1] = {
   gameServerPanelUrl: "https://google.com",
   entitlementId: "2",
 };
-const obj11 = {
+const obj14 = {
   id: "2",
   gameId: "2",
   name: "GameServer Test #2",
@@ -290,7 +245,7 @@ items17[2] = {
   gameServerPanelUrl: "https://google.com",
   entitlementId: "3",
 };
-const obj12 = {
+const obj15 = {
   id: "3",
   gameId: "3",
   name: "GameServer Test #3",
@@ -322,7 +277,7 @@ items17[3] = {
   gameServerPanelUrl: "https://google.com",
   entitlementId: "4",
 };
-const obj13 = {
+const obj16 = {
   id: "4",
   gameId: "4",
   name: "GameServer Test #4",
@@ -354,7 +309,7 @@ items17[4] = {
   gameServerPanelUrl: "https://google.com",
   entitlementId: "5",
 };
-const obj14 = {
+const obj17 = {
   id: "5",
   gameId: "5",
   name: "GameServer Test #5",
@@ -386,23 +341,7 @@ items17[5] = {
   gameServerPanelUrl: "https://google.com",
   entitlementId: "6",
 };
-const obj15 = {
-  id: "6",
-  gameId: "6",
-  name: "GameServer Test #6",
-  port: "25565",
-  regionId: "us-east",
-  regionName: "US East",
-  planId: items1[1].id,
-  planName: items1[1].name,
-  onlineConnectionsCount: 0,
-  maxConnectionsCount: 10,
-  status: GameServerStatus.GameServerStatus.ONLINE,
-  serverIP: "127.0.0.1",
-  gameServerPanelUrl: "https://google.com",
-  entitlementId: "6",
-};
-const result = set.fileFinishedImporting("modules/game_server/mocks/GameServerMocks.tsx");
+const result = size.fileFinishedImporting("modules/game_server/mocks/GameServerMocks.tsx");
 
 export const GAME_SERVER_GAME_MOCKS = items5;
 export const GAME_SERVER_INSTANCE_MOCKS = items17;

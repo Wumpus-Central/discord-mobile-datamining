@@ -1,19 +1,18 @@
 // discord_app/modules/frames/panel/native/FramePanelSystemUIManager.tsx
-import BaseActivityPanelSystemUIManager from "../../../activities/panel/native/ActivityPanelSystemUIManager.tsx";
-import contextDefault from "FramePanelStateContext.tsx";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import ActivityPanelSystemUIManager from "../../../activities/panel/native/ActivityPanelSystemUIManager.tsx";
+import FramePanelStateContextDefault from "FramePanelStateContext.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-let c3 = importAllResult;
-const memoResult = importAllResult.memo(() => {
-  const context = importAllResult.useContext(contextDefault);
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/frames/panel/native/FramePanelSystemUIManager.tsx");
+
+export default noop.memo(() => {
+  const context = noop.useContext(FramePanelStateContextDefault);
   ({ mode, wrapperDimensions } = context);
-  return jsx(BaseActivityPanelSystemUIManager.BaseActivityPanelSystemUIManager, {
+  return jsx(ActivityPanelSystemUIManager.BaseActivityPanelSystemUIManager, {
     mode,
     isWindowLandscape: wrapperDimensions.isWindowLandscape,
   });
 });
-const result = require("set").fileFinishedImporting("modules/frames/panel/native/FramePanelSystemUIManager.tsx");
-
-export default memoResult;

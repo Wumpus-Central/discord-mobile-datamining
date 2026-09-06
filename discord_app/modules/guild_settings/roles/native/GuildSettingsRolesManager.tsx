@@ -1,14 +1,15 @@
 // discord_app/modules/guild_settings/roles/native/GuildSettingsRolesManager.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import keys from "../../../../../_runtime/00560_keys.js";
+import 00560__ from "../../../../../_runtime/metro/00560__.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const obj = keys.create(() => ({ roleJustCreated: false }));
-const result = set.fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRolesManager.tsx");
+const useGuildSettingsRolesManagerState = module_560.create(() => ({ roleJustCreated: false }));
+const result = size.fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRolesManager.tsx");
 
-export const setRoleJustCreated = function setRoleJustCreated(arg0) {
-  const _require = arg0;
-  require("../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() =>
-    closure_1_2.setState({ roleJustCreated: closure_0 }),
-  );
+export const setRoleJustCreated = function setRoleJustCreated(roleJustCreated) {
+  _require = roleJustCreated;
+  require("ReactBatchUpdates").batchUpdates(() => {
+    const obj = { roleJustCreated };
+    return obj.setState(obj);
+  });
 };
-export const useGuildSettingsRolesManagerState = obj;
+export { useGuildSettingsRolesManagerState };

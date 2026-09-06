@@ -1,6 +1,6 @@
 // discord_app/modules/rtc/TransientKeyStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
 
 const map = new Map();
 const Store = initializeDefault.Store;
@@ -10,7 +10,7 @@ prototype["getUsers"] = function getUsers() {
   return map;
 };
 prototype["isKeyVerified"] = function isKeyVerified(arg0, arg1) {
-  const value = map.get(arg0);
+  value = map.get(arg0);
   if (null != arg1) {
     if (null != value) {
       if (value.length === arg1.length) {
@@ -28,7 +28,7 @@ prototype["isKeyVerified"] = function isKeyVerified(arg0, arg1) {
   return false;
 };
 TransientKeyStore.displayName = "TransientKeyStore";
-const transientKeyStore = new TransientKeyStore(dispatcherDefault, {
+const transientKeyStore = new TransientKeyStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     map.clear();
   },
@@ -40,6 +40,7 @@ const transientKeyStore = new TransientKeyStore(dispatcherDefault, {
     return map.delete(userId.userId);
   },
 });
-let result = require("set").fileFinishedImporting("modules/rtc/TransientKeyStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/rtc/TransientKeyStore.tsx");
 
 export default transientKeyStore;

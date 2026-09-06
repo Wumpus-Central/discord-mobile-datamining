@@ -1,11 +1,10 @@
 // discord_app/modules/tti_analytics/native/PerformanceAnalyticsActionCreators.tsx
-import set from "../../../../_runtime/00002_set.js";
-import dispatcherDefault from "../../../Dispatcher.tsx";
+import DispatcherDefault from "../../../Dispatcher.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/tti_analytics/native/PerformanceAnalyticsActionCreators.tsx");
+const result = size.fileFinishedImporting("modules/tti_analytics/native/PerformanceAnalyticsActionCreators.tsx");
 
-export const ttiRecorded = function ttiRecorded(closure_5) {
-  let obj = dispatcherDefault;
-  obj = { type: "TTI_RECORDED", tti: closure_5 };
+export const ttiRecorded = function ttiRecorded(tti) {
+  const obj = { type: "TTI_RECORDED", tti };
   obj.dispatch(obj);
 };

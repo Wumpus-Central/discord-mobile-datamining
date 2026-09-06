@@ -1,75 +1,73 @@
 // discord_app/modules/game_profile/native/components/GameProfileStoreLinks.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import LinkingDefault from "../../../../lib/native/Linking.tsx";
+import ActionSheetActionCreators from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
+import useOpenExternalUrlFromGameProfileDefault from "../../hooks/useOpenExternalUrlFromGameProfile.tsx";
+import GameProfileStoreLinksActionSheet from "GameProfileStoreLinksActionSheet.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
+const GameProfileStoreLinksActionSheetDefault = GameProfileStoreLinksActionSheet;
+
+require = fn;
 function WebsiteGameStoreLinkButton(data) {
   data = data.data;
   const trackAction = data.trackAction;
-  dependencyMap = undefined;
-  dependencyMap = trackAction(8683)(trackAction(4255).openURL);
-  return callback(data(4975).Button, {
+  closure_2 = useOpenExternalUrlFromGameProfileDefault(LinkingDefault.openURL);
+  return React4(components_Button_Button.Button, {
     variant: "secondary",
     size: "md",
     text: data.title,
     icon: data.icon,
     onPress() {
       trackAction(data.action);
-      callback(data.url);
+      closure_2(data.url);
     },
   });
 }
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: null };
-createCacheKey = { flexDirection: "column", gap: ThemesDefault.space.PX_8 };
-createCacheKey[0] = createCacheKey;
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameProfileStoreLinks.tsx");
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+fn(4560);
+let createStyles = { container: null };
+createStyles = { flexDirection: "column", gap: nativeDefault.space.PX_8 };
+createStyles.container = createStyles;
+let closure_6 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileStoreLinks.tsx");
 
 export default function GameProfileStoreLinks(websiteButtons) {
   ({ game, trackAction } = websiteButtons);
   websiteButtons = websiteButtons.websiteButtons;
+  const tmp = closure_6();
   let name;
-  const tmp = callback3();
-  name = undefined;
   if (game != null) {
     name = game.name;
   }
   if (0 !== websiteButtons.length) {
     if (null != name) {
       if (1 === websiteButtons.length) {
-        let obj = { data: null, trackAction: null };
-        obj[0] = websiteButtons[0];
-        obj[1] = trackAction;
-        return callback(WebsiteGameStoreLinkButton, obj);
+        let obj = { data: websiteButtons[0], trackAction };
+        return closure_4(WebsiteGameStoreLinkButton, obj);
       } else if (2 === websiteButtons.length) {
-        obj = { style: null, children: null };
-        obj[0] = tmp.container;
-        obj1 = { data: null, trackAction: null };
-        obj1[0] = websiteButtons[0];
-        obj1[1] = trackAction;
-        const items = [callback(WebsiteGameStoreLinkButton, obj1)];
-        const obj2 = { data: null, trackAction: null };
-        obj2[0] = websiteButtons[1];
-        obj2[1] = trackAction;
-        items[1] = callback(WebsiteGameStoreLinkButton, obj2);
-        obj[1] = items;
-        return callback2(View, obj);
+        obj = { style: tmp.container, children: null };
+        const obj1 = { data: websiteButtons[0], trackAction };
+        const items = [closure_4(WebsiteGameStoreLinkButton, obj1)];
+        const obj2 = { data: websiteButtons[1], trackAction };
+        items[1] = closure_4(WebsiteGameStoreLinkButton, obj2);
+        obj.children = items;
+        return closure_5(View, obj);
       } else {
         const obj3 = { variant: "secondary", size: "md", text: null, onPress: null };
         const intl = trackAction(name[8]).intl;
-        obj3[2] = intl.string(trackAction(name[8]).t["/hMurx"]);
-        obj3[3] = function onPress() {
-          let obj = trackAction(name[9]);
-          obj = { key: trackAction(name[10]).ACTION_SHEET_KEY, content: closure_1_4(websiteButtons(name[10]), obj) };
+        obj3.text = intl.string(trackAction(name[8]).t["/hMurx"]);
+        obj3.onPress = function onPress() {
+          let obj = { key: GameProfileStoreLinksActionSheet.ACTION_SHEET_KEY, content: null };
           obj = { gameName: name, websiteButtons, trackAction };
+          obj.content = React4(GameProfileStoreLinksActionSheetDefault, obj);
           return obj.showActionSheet(obj);
         };
-        const tmp17 = callback(trackAction(name[7]).Button, obj3);
+        const tmp17 = closure_4(trackAction(name[7]).Button, obj3);
         const first = websiteButtons[0];
         let action;
         if (first != null) {
@@ -77,14 +75,11 @@ export default function GameProfileStoreLinks(websiteButtons) {
         }
         let tmp4 = tmp17;
         if (action === trackAction(name[11]).GameProfileTrackActionActions.XboxGamePassStoreLink) {
-          obj = { style: null, children: null };
-          obj[0] = tmp.container;
-          const obj4 = { data: null, trackAction: null };
-          obj4[0] = websiteButtons[0];
-          obj4[1] = trackAction;
-          const items1 = [callback(WebsiteGameStoreLinkButton, obj4), tmp17];
-          obj[1] = items1;
-          tmp4 = callback2(View, obj);
+          obj = { style: tmp.container, children: null };
+          const obj4 = { data: websiteButtons[0], trackAction };
+          const items1 = [closure_4(WebsiteGameStoreLinkButton, obj4), tmp17];
+          obj.children = items1;
+          tmp4 = closure_5(View, obj);
         }
         return tmp4;
       }

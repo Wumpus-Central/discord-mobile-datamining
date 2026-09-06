@@ -1,12 +1,13 @@
 // discord_app/modules/activities/utils/getRemoteJoinableActivityPlatform.tsx
-import hasFlag from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import closure_2 from "../../../stores/ConnectedAppsStore.tsx";
-import closure_3 from "../../../stores/SessionsStore.tsx";
-import ME from "../../../Constants.tsx";
+import FlagUtils from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import ConnectedAppsStore from "../../../stores/ConnectedAppsStore.tsx";
+import SessionsStore from "../../../stores/SessionsStore.tsx";
 
-require = arg1;
-({ ActivityFlags: c4, ActivityGamePlatforms: c5 } = ME);
-const result = require("set").fileFinishedImporting("modules/activities/utils/getRemoteJoinableActivityPlatform.tsx");
+require = fn;
+const Constants = fn(1074);
+({ ActivityFlags: closure_4, ActivityGamePlatforms: hasOwnProperty } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/utils/getRemoteJoinableActivityPlatform.tsx");
 
 export const getRemoteJoinableActivityPlatform = function getRemoteJoinableActivityPlatform(presenceActivity) {
   if (null == presenceActivity) {
@@ -19,7 +20,7 @@ export const getRemoteJoinableActivityPlatform = function getRemoteJoinableActiv
         num = 0;
       }
       if (obj5.hasFlag(num, constants.SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN)) {
-        remoteApplicationActivity = remoteApplicationActivity.getRemoteApplicationActivity(application_id);
+        const remoteApplicationActivity = SessionsStore.getRemoteApplicationActivity(application_id);
         let tmp4 = null;
         if (null != remoteApplicationActivity) {
           let tmp11Result = tmp11(11462);
@@ -42,7 +43,7 @@ export const getRemoteJoinableActivityPlatform = function getRemoteJoinableActiv
               tmp4 = tmp9;
             } else {
               tmp4 = null;
-              if (!connected.isConnected(remoteApplicationActivity.application_id)) {
+              if (!ConnectedAppsStore.isConnected(remoteApplicationActivity.application_id)) {
                 platform = remoteApplicationActivity.platform;
                 if (tmp11Result1.isAndroid()) {
                   let isIOSResult = platform === constants2.ANDROID;
@@ -61,7 +62,7 @@ export const getRemoteJoinableActivityPlatform = function getRemoteJoinableActiv
         }
         return tmp4;
       }
-      obj5 = hasFlag;
+      obj5 = FlagUtils;
       tmp = constants;
     }
     return null;

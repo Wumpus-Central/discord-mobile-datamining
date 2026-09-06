@@ -1,9 +1,12 @@
 // discord_app/modules/errors/av_errors/definitions/AVErrorStreamFailedToStart.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import ME from "../../../../Constants.tsx";
+import Constants from "../../../../Constants.tsx";
+import StreamKeyUtils from "../../../go_live/utils/StreamKeyUtils.tsx";
+import AVError from "../AVError.tsx";
+import AVErrorContext from "../AVErrorContext.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const ApplicationStreamStates = ME.ApplicationStreamStates;
-const result = set.fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamFailedToStart.tsx");
+const ApplicationStreamStates = Constants.ApplicationStreamStates;
+const result = size.fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamFailedToStart.tsx");
 
 export const AVErrorStreamFailedToStartDefinition = {
   getActiveErrors(activeStreams) {
@@ -15,10 +18,10 @@ export const AVErrorStreamFailedToStartDefinition = {
       }
       return tmp;
     });
-    return found.map((currentUserActiveStream) => {
-      const obj = { type: callback(9110).AVError.STREAM_FAILED_TO_START };
-      const obj2 = callback(17834);
-      const merged = Object.assign(obj2.getStreamErrorContext(callback(4612).encodeStreamKey(currentUserActiveStream)));
+    return found.map((item) => {
+      const obj = { type: AVError.AVError.STREAM_FAILED_TO_START };
+      const obj2 = AVErrorContext;
+      const merged = Object.assign(obj2.getStreamErrorContext(StreamKeyUtils.encodeStreamKey(item)));
       return obj;
     });
   },

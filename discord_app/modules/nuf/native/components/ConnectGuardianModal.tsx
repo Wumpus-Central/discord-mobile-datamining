@@ -1,15 +1,16 @@
 // discord_app/modules/nuf/native/components/ConnectGuardianModal.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { AnalyticEvents } from "../../../../Constants.tsx";
-import { FamilyCenterAction } from "../../../parent_tools/FamilyCenterConstants.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = {
+const require = fn;
+const View = fn(17).View;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const FamilyCenterAction = fn(7538).FamilyCenterAction;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+fn(4560);
+let createStyles = {
   container: null,
   centered: null,
   header: null,
@@ -20,67 +21,62 @@ createCacheKey = {
   grow: null,
   footer: null,
 };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = {
+createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+createStyles.container = createStyles;
+createStyles.centered = {
   flex: 1,
   alignItems: "center",
   justifyContent: "center",
-  paddingHorizontal: ThemesDefault.space.PX_16,
+  paddingHorizontal: nativeDefault.space.PX_16,
 };
-let obj1 = { flex: 1, alignItems: "center", justifyContent: "center", paddingHorizontal: ThemesDefault.space.PX_16 };
-createCacheKey[2] = { marginBottom: ThemesDefault.space.PX_40 };
-let obj2 = { marginBottom: ThemesDefault.space.PX_40 };
-createCacheKey[3] = {
-  paddingHorizontal: ThemesDefault.space.PX_16,
-  marginBottom: ThemesDefault.space.PX_8,
+let obj1 = { flex: 1, alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16 };
+createStyles.header = { marginBottom: nativeDefault.space.PX_40 };
+let obj2 = { marginBottom: nativeDefault.space.PX_40 };
+createStyles.title = {
+  paddingHorizontal: nativeDefault.space.PX_16,
+  marginBottom: nativeDefault.space.PX_8,
   textAlign: "center",
 };
 let obj3 = {
-  paddingHorizontal: ThemesDefault.space.PX_16,
-  marginBottom: ThemesDefault.space.PX_8,
+  paddingHorizontal: nativeDefault.space.PX_16,
+  marginBottom: nativeDefault.space.PX_8,
   textAlign: "center",
 };
-createCacheKey[4] = { paddingHorizontal: ThemesDefault.space.PX_16, textAlign: "center" };
-createCacheKey[5] = { alignItems: "center" };
-let obj4 = { paddingHorizontal: ThemesDefault.space.PX_16, textAlign: "center" };
-createCacheKey[6] = {
-  paddingHorizontal: ThemesDefault.space.PX_16,
-  marginBottom: ThemesDefault.space.PX_24,
+createStyles.description = { paddingHorizontal: nativeDefault.space.PX_16, textAlign: "center" };
+createStyles.cardSection = { alignItems: "center" };
+let obj4 = { paddingHorizontal: nativeDefault.space.PX_16, textAlign: "center" };
+createStyles.scanPrompt = {
+  paddingHorizontal: nativeDefault.space.PX_16,
+  marginBottom: nativeDefault.space.PX_24,
   textAlign: "center",
 };
-createCacheKey[7] = { flexGrow: 1 };
+createStyles.grow = { flexGrow: 1 };
 let obj5 = {
-  paddingHorizontal: ThemesDefault.space.PX_16,
-  marginBottom: ThemesDefault.space.PX_24,
+  paddingHorizontal: nativeDefault.space.PX_16,
+  marginBottom: nativeDefault.space.PX_24,
   textAlign: "center",
 };
-createCacheKey[8] = { paddingHorizontal: ThemesDefault.space.PX_16 };
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj6 = { paddingHorizontal: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/nuf/native/components/ConnectGuardianModal.tsx");
+createStyles.footer = { paddingHorizontal: nativeDefault.space.PX_16 };
+let closure_9 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/nuf/native/components/ConnectGuardianModal.tsx");
 
 export default function ConnectGuardianModal(route) {
-  let onComplete;
-  let connectGuardianGate;
-  dependencyMap = undefined;
-  onComplete = route.route.params.onComplete;
-  const tmp = callback3();
+  const onComplete = route.route.params.onComplete;
+  const tmp = closure_9();
   let obj = onComplete(17455);
-  connectGuardianGate = obj.useConnectGuardianGate();
-  dependencyMap = React.useRef(false);
+  const connectGuardianGate = obj.useConnectGuardianGate();
+  dependencyMap = noop.useRef(false);
   const items = [connectGuardianGate.state, onComplete];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     let current = "error" !== connectGuardianGate.state;
     if (!current) {
       current = ref.current;
     }
     if (!current) {
       ref.current = true;
-      let obj = connectGuardianGate(ref[9]);
-      obj = { action: null, source: "NUF Connect Guardian" };
-      obj[0] = closure_1_6.NufConsentGateLinkCodeError;
-      obj.track(closure_1_5.FAMILY_CENTER_ACTION, obj);
+      const obj = { action: FamilyCenterAction.NufConsentGateLinkCodeError, source: "NUF Connect Guardian" };
+      obj.track(AnalyticEvents.FAMILY_CENTER_ACTION, obj);
       if (onComplete != null) {
         onComplete(true);
       }
@@ -90,65 +86,57 @@ export default function ConnectGuardianModal(route) {
     obj = { style: null, children: null };
     const items1 = [,];
     ({ container: arr2[0], centered: arr2[1] } = tmp);
-    obj[0] = items1;
-    obj[1] = callback(tmp4(5577).ActivityIndicator, {});
-    let tmp9 = callback(View, obj);
+    obj.style = items1;
+    obj.children = closure_7(tmp4(5577).ActivityIndicator, {});
+    let tmp9 = closure_7(View, obj);
   } else {
-    obj = { style: null, children: null };
-    obj[0] = tmp.container;
-    obj1 = { style: null, children: null };
-    obj1[0] = tmp.header;
-    const obj2 = { style: null, variant: "heading-xl/bold", color: "text-default", children: null };
-    obj2[0] = tmp.title;
+    obj = { style: tmp.container, children: null };
+    const obj1 = { style: tmp.header, children: null };
+    const obj2 = { style: tmp.title, variant: "heading-xl/bold", color: "text-default", children: null };
     const intl = tmp4(1114).intl;
-    obj2[3] = intl.string(tmp2(2396).ITlV6p);
-    const items2 = [callback(tmp4(4556).Text, obj2)];
-    const obj3 = { style: null, variant: "text-sm/medium", color: "text-muted", children: null };
-    obj3[0] = tmp.description;
+    obj2.children = intl.string(tmp2(2396).ITlV6p);
+    const items2 = [closure_7(tmp4(4556).Text, obj2)];
+    const obj3 = { style: tmp.description, variant: "text-sm/medium", color: "text-muted", children: null };
     const intl2 = tmp4(1114).intl;
-    obj3[3] = intl2.format(tmp2(2396).F4GT2S, { link: "https://support.discord.com/hc/articles/14155060633623" });
-    items2[1] = callback(tmp4(4556).Text, obj3);
-    obj1[1] = items2;
-    const items3 = [callback2(View, obj1), , ,];
-    const obj4 = { style: null, children: null };
-    obj4[0] = tmp.cardSection;
-    const obj5 = { style: null, variant: "text-md/semibold", color: "text-default", children: null };
-    obj5[0] = tmp.scanPrompt;
+    obj3.children = intl2.format(tmp2(2396).F4GT2S, { link: "https://support.discord.com/hc/articles/14155060633623" });
+    items2[1] = closure_7(tmp4(4556).Text, obj3);
+    obj1.children = items2;
+    const items3 = [closure_8(View, obj1), , ,];
+    const obj4 = { style: tmp.cardSection, children: null };
+    const obj5 = { style: tmp.scanPrompt, variant: "text-md/semibold", color: "text-default", children: null };
     const intl3 = tmp4(1114).intl;
-    obj5[3] = intl3.string(tmp2(2396).Mi60fm);
-    const items4 = [callback(tmp4(4556).Text, obj5)];
-    ({ linkCode: obj9[1], expiresAt: obj9[2], refresh: obj9[3] } = connectGuardianGate);
-    items4[1] = callback(tmp4(14881).ConnectGuardianCard, {
+    obj5.children = intl3.string(tmp2(2396).Mi60fm);
+    const items4 = [closure_7(tmp4(4556).Text, obj5)];
+    ({ linkCode: obj9.linkCode, expiresAt: obj9.expiresAt, refresh: obj9.onRefresh } = connectGuardianGate);
+    items4[1] = closure_7(tmp4(14881).ConnectGuardianCard, {
       shareActions: "compact",
       linkCode: null,
       expiresAt: null,
       onRefresh: null,
     });
-    obj4[1] = items4;
-    items3[1] = callback2(View, obj4);
-    const obj7 = { style: null };
-    obj7[0] = tmp.grow;
-    items3[2] = callback(View, obj7);
+    obj4.children = items4;
+    items3[1] = closure_8(View, obj4);
+    const obj7 = { style: tmp.grow };
+    items3[2] = closure_7(View, obj7);
     const obj8 = { style: null, children: null };
     const items5 = [tmp.footer];
-    const obj9 = { paddingBottom: null };
-    obj9[0] = connectGuardianGate(1611)().bottom + tmp2(576).space.PX_16;
+    const obj9 = { paddingBottom: connectGuardianGate(1611)().bottom + tmp2(576).space.PX_16 };
     items5[1] = obj9;
-    obj8[0] = items5;
+    obj8.style = items5;
     const obj10 = { variant: "primary", size: "lg", text: null, onPress: null };
     const intl4 = tmp4(1114).intl;
-    obj10[2] = intl4.string(tmp4(1114).t["3PatSz"]);
-    obj10[3] = function onPress() {
+    obj10.text = intl4.string(tmp4(1114).t["3PatSz"]);
+    obj10.onPress = function onPress() {
       let tmpResult;
       if (onComplete != null) {
         tmpResult = tmp(false);
       }
       return tmpResult;
     };
-    obj8[1] = callback(tmp4(4975).Button, obj10);
-    items3[3] = callback(View, obj8);
-    obj[1] = items3;
-    tmp9 = callback2(View, obj);
+    obj8.children = closure_7(tmp4(4975).Button, obj10);
+    items3[3] = closure_7(View, obj8);
+    obj.children = items3;
+    tmp9 = closure_8(View, obj);
     const obj6 = { shareActions: "compact", linkCode: null, expiresAt: null, onRefresh: null };
   }
   return tmp9;

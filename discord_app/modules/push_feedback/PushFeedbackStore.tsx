@@ -1,12 +1,12 @@
 // discord_app/modules/push_feedback/PushFeedbackStore.tsx
-import set from "../../../_runtime/00002_set.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import str2 from "../push_notifications/PushNotificationConstants.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import PushNotificationConstants from "../push_notifications/PushNotificationConstants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const NotificationTypes = str2.NotificationTypes;
+const NotificationTypes = PushNotificationConstants.NotificationTypes;
 let c1 = null;
-let closure_2 = {};
+let pushFeedbackMap = {};
 const PersistedStore = initializeDefault.PersistedStore;
 class PushFeedbackStore extends PersistedStore {}
 const prototype = PushFeedbackStore.prototype;
@@ -14,40 +14,40 @@ prototype["initialize"] = function initialize(pushFeedback) {
   if (null != pushFeedback) {
     pushFeedback = pushFeedback.pushFeedback;
     if (null != pushFeedback.pushFeedbackMap) {
-      const pushFeedbackMap = pushFeedback.pushFeedbackMap;
+      pushFeedbackMap = pushFeedback.pushFeedbackMap;
     }
   }
 };
 prototype["getState"] = function getState() {
-  return { pushFeedback: c1, pushFeedbackMap: closure_2 };
+  return { pushFeedback, pushFeedbackMap };
 };
 prototype["isEligible"] = function isEligible() {
   return null != c1;
 };
 prototype["isUserPushMessage"] = function isUserPushMessage(arg0) {
   let messageId;
-  if (_null != null) {
-    messageId = _null.messageId;
+  if (pushFeedback != null) {
+    messageId = pushFeedback.messageId;
   }
   return messageId === arg0;
 };
 prototype["getPushFeedback"] = function getPushFeedback(channel_id, id) {
   let messageId;
-  if (_null != null) {
-    messageId = _null.messageId;
+  if (pushFeedback != null) {
+    messageId = pushFeedback.messageId;
   }
   let tmp2 = null;
   if (messageId === id) {
     tmp2 = null;
-    if (_null.channelId === channel_id) {
-      tmp2 = _null;
+    if (pushFeedback.channelId === channel_id) {
+      tmp2 = pushFeedback;
     }
   }
   return tmp2;
 };
 PushFeedbackStore.displayName = "PushFeedbackStore";
 PushFeedbackStore.persistKey = "PushFeedbackPersistedStore";
-const pushFeedbackStore = new PushFeedbackStore(dispatcherDefault, {
+const pushFeedbackStore = new PushFeedbackStore(DispatcherDefault, {
   PUSH_FEEDBACK_RECEIVED_NOTIFICATION: function handleReceivedNotification(arg0) {
     ({ notificationType, messageId, channelId } = arg0);
     if (NotificationTypes.TOP_MESSAGE_PUSH === notificationType) {
@@ -56,12 +56,9 @@ const pushFeedbackStore = new PushFeedbackStore(dispatcherDefault, {
       flag = false;
     }
     if (flag) {
-      let tmp3 = table[notificationType];
+      let tmp3 = pushFeedbackMap[notificationType];
       if (tmp3 == null) {
-        let obj = { messageId: null, channelId: null, pushType: null };
-        obj[0] = messageId;
-        obj[1] = channelId;
-        obj[2] = notificationType;
+        let obj = { messageId, channelId, pushType: notificationType };
         tmp3 = obj;
       }
       let userViewInfo = tmp3.userViewInfo;
@@ -76,22 +73,16 @@ const pushFeedbackStore = new PushFeedbackStore(dispatcherDefault, {
         let num2 = 1;
       } else if (viewCount >= 10) {
         if (null != null) {
-          obj = { messageId: null, channelId: null, pushType: null, userViewInfo: null };
-          obj[0] = messageId;
-          obj[1] = channelId;
-          obj[2] = notificationType;
-          obj[3] = null;
+          obj = { messageId, channelId, pushType: notificationType, userViewInfo: null };
           c1 = obj;
-          table[notificationType] = obj;
+          pushFeedbackMap[notificationType] = obj;
         } else {
           c1 = null;
         }
       } else {
         num2 = viewCount + 1;
       }
-      timestamp = { eligibleAt: null, viewCount: null };
-      timestamp[0] = eligibleAt;
-      timestamp[1] = num2;
+      timestamp = { eligibleAt, viewCount: num2 };
     }
   },
   PUSH_FEEDBACK_CLEANUP: function handleCleanup() {
@@ -100,15 +91,15 @@ const pushFeedbackStore = new PushFeedbackStore(dispatcherDefault, {
   CHANNEL_SELECT: function handleChannelSelect(channelId) {
     channelId = channelId.channelId;
     if (null != channelId) {
-      if (null != _null) {
-        if (channelId !== _null.channelId) {
-          _null = null;
+      if (null != pushFeedback) {
+        if (channelId !== pushFeedback.channelId) {
+          pushFeedback = null;
         }
       }
     }
     return false;
   },
 });
-const result = set.fileFinishedImporting("modules/push_feedback/PushFeedbackStore.tsx");
+const result = size.fileFinishedImporting("modules/push_feedback/PushFeedbackStore.tsx");
 
 export default pushFeedbackStore;

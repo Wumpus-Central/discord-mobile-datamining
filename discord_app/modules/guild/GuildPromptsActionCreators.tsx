@@ -1,17 +1,16 @@
 // discord_app/modules/guild/GuildPromptsActionCreators.tsx
-import set from "../../../_runtime/00002_set.js";
-import dispatcherDefault from "../../Dispatcher.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-function viewPrompt(REAL_NAME_PROMPT, closure_0) {
+function viewPrompt(REAL_NAME_PROMPT, guildId) {
   importDefault = REAL_NAME_PROMPT;
-  dependencyMap = closure_0;
-  dispatcherDefault.wait(() => {
-    let obj = REAL_NAME_PROMPT(table[0]);
-    obj = { type: "GUILD_PROMPT_VIEWED", prompt: REAL_NAME_PROMPT, guildId: table };
+  dependencyMap = guildId;
+  DispatcherDefault.wait(() => {
+    const obj = { type: "GUILD_PROMPT_VIEWED", prompt: _prompt, guildId };
     obj.dispatch(obj);
   });
 }
-const result = set.fileFinishedImporting("modules/guild/GuildPromptsActionCreators.tsx");
+const result = size.fileFinishedImporting("modules/guild/GuildPromptsActionCreators.tsx");
 
 export default { viewPrompt };
 export { viewPrompt };

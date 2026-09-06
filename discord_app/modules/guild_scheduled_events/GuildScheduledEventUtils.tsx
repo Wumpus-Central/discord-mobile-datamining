@@ -1,15 +1,15 @@
 // discord_app/modules/guild_scheduled_events/GuildScheduledEventUtils.tsx
-import set from "../../../_runtime/00002_set.js";
-import hooksDefault from "../../../_runtime/04153_hooks.js";
-import GUILD_EVENT_MAX_NAME_LENGTH from "GuildScheduledEventsConstants.tsx";
+import _modDef4153 from "../../../_runtime/metro/04153__.js";
+import GuildScheduledEventsConstants from "GuildScheduledEventsConstants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 ({
-  UpcomingGuildEventNoticeTypes: obj1,
+  UpcomingGuildEventNoticeTypes: c2,
   NEW_EVENT_WINDOW_MILLISECONDS: c3,
-  EVENT_STARTING_SOON_WINDOW_MILLISECONDS: c4,
-  ACKED_RECENTLY_WINDOW_DAYS: c5,
-} = GUILD_EVENT_MAX_NAME_LENGTH);
-const result = set.fileFinishedImporting("modules/guild_scheduled_events/GuildScheduledEventUtils.tsx");
+  EVENT_STARTING_SOON_WINDOW_MILLISECONDS: closure_4,
+  ACKED_RECENTLY_WINDOW_DAYS: hasOwnProperty,
+} = GuildScheduledEventsConstants);
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/GuildScheduledEventUtils.tsx");
 
 export const getNextShownUpcomingEventNoticeType = function getNextShownUpcomingEventNoticeType(
   guildScheduledEvent,
@@ -17,16 +17,16 @@ export const getNextShownUpcomingEventNoticeType = function getNextShownUpcoming
   arg2,
   flag,
 ) {
-  const obj = hooksDefault();
+  const obj = _modDef4153();
   const time = new Date(guildScheduledEvent.scheduled_start_time).getTime();
-  const diff = time - closure_4;
+  const diff = time - React4;
   if (obj.isBetween(diff, time)) {
     if (null != arg1) {
       const obj4 = tmp(4153)(arg1);
       const isBetweenResult = obj4.isBetween(diff, time);
       let EVENT_STARTING_SOON;
       if (!isBetweenResult) {
-        if (!obj4.isBetween(obj5.subtract(closure_5, "days"), time)) {
+        if (!obj4.isBetween(obj5.subtract(hasOwnProperty, "days"), time)) {
           EVENT_STARTING_SOON = constants.EVENT_STARTING_SOON;
         }
       }
@@ -40,7 +40,7 @@ export const getNextShownUpcomingEventNoticeType = function getNextShownUpcoming
     if (arg2 == null) {
       tmp5 = extractTimestampResult;
     }
-    if (obj.isBetween(extractTimestampResult, Math.min(tmp5 + closure_3, time))) {
+    if (obj.isBetween(extractTimestampResult, Math.min(tmp5 + React3, time))) {
       if (null == arg1) {
         if (!flag) {
           return constants.NEW_EVENT;

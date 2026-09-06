@@ -1,20 +1,20 @@
 // discord_app/modules/rpc/native/server/commands/voiceSettings.tsx
-import set from "../../../../../../_runtime/00002_set.js";
-import ME from "../../../../../Constants.tsx";
-import RPC_SCOPE_CONFIG from "../../../Constants.tsx";
-import set2 from "../../../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
-import validateSocketClient from "../NativeRPCHelpers.tsx";
+import Constants from "../../../../../Constants.tsx";
+import Constants2 from "../../../Constants.tsx";
+import OAuth2Scopes from "../../../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
+import NativeRPCHelpers from "../NativeRPCHelpers.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
 let obj = {};
 obj = { scope: null, handler: null };
 obj = {};
-const items = [set2.OAuth2Scopes.RPC, set2.OAuth2Scopes.RPC_VOICE_READ];
-obj[RPC_SCOPE_CONFIG.RPC_SCOPE_CONFIG.ANY] = items;
-obj[0] = obj;
-obj[1] = function handler() {
-  return validateSocketClient.getDeprecatedVoiceSettings();
+const items = [OAuth2Scopes.OAuth2Scopes.RPC, OAuth2Scopes.OAuth2Scopes.RPC_VOICE_READ];
+obj[Constants2.RPC_SCOPE_CONFIG.ANY] = items;
+obj.scope = obj;
+obj.handler = function handler() {
+  return NativeRPCHelpers.getDeprecatedVoiceSettings();
 };
-obj[ME.RPCCommands.GET_VOICE_SETTINGS] = obj;
-const result = set.fileFinishedImporting("modules/rpc/native/server/commands/voiceSettings.tsx");
+obj[Constants.RPCCommands.GET_VOICE_SETTINGS] = obj;
+const result = size.fileFinishedImporting("modules/rpc/native/server/commands/voiceSettings.tsx");
 
 export default obj;

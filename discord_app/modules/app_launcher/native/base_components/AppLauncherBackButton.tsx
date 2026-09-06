@@ -1,17 +1,15 @@
 // discord_app/modules/app_launcher/native/base_components/AppLauncherBackButton.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import createStandardNavigationFactories from "../../../../../_runtime/01484_createStandardNavigationFactories.js";
+import Link from "../../../../../_runtime/01484_Link.js";
 import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting(
-  "modules/app_launcher/native/base_components/AppLauncherBackButton.tsx",
-);
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/base_components/AppLauncherBackButton.tsx");
 
 export default function AppLauncherBackButton(onPress) {
-  let obj = createStandardNavigationFactories;
+  let obj = Link;
   const navigation = obj.useNavigation();
   const canGoBackResult = navigation.canGoBack();
   obj = {
@@ -24,7 +22,7 @@ export default function AppLauncherBackButton(onPress) {
   };
   const intl = tmp(1114).intl;
   const t = tmp(1114).t;
-  obj[4] = intl.string(canGoBackResult ? t["13/7kX"] : t.cpT0Cq);
+  obj.accessibilityLabel = intl.string(canGoBackResult ? t["13/7kX"] : t.cpT0Cq);
   return jsx(IconButton.IconButton, {
     size: "sm",
     variant: "secondary-overlay",

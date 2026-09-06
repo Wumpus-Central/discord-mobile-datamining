@@ -1,26 +1,33 @@
 // discord_app/modules/favorites/FavoritesGuildSuggestionsLoader.tsx
-import getAffineChannelIdDefault from "hooks/useFavoritesGuildSuggestionCandidates.tsx";
-import importAllResult from "../../../_runtime/00019_noop.js";
-import items from "FavoritesGuildSuggestionsStore.tsx";
-import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
+import useFavoritesGuildSuggestionCandidatesDefault from "hooks/useFavoritesGuildSuggestionCandidates.tsx";
+import noop from "../../../_runtime/metro/00019__.js";
 
 function FavoritesGuildSuggestionsLoaderInner() {
-  const tmp = getAffineChannelIdDefault(4);
+  const tmp = useFavoritesGuildSuggestionCandidatesDefault(4);
   importDefault = tmp;
   const items = [tmp];
-  const layoutEffect = importAllResult.useLayoutEffect(() => {
-    closure_1_4(closure_0);
+  const layoutEffect = noop.useLayoutEffect(() => {
+    React4(closure_0);
   }, items);
   return null;
 }
-({ NO_SUGGESTIONS: c3, setFavoritesGuildSuggestions: c4, useFavoritesGuildSuggestionsVisibility: c5 } = items);
-const memoResult = importAllResult.memo(function FavoritesGuildSuggestionsLoader() {
-  const tmp = callback();
+const FavoritesGuildSuggestionsStore = fn(16202);
+({
+  NO_SUGGESTIONS: c3,
+  setFavoritesGuildSuggestions: closure_4,
+  useFavoritesGuildSuggestionsVisibility: hasOwnProperty,
+} = FavoritesGuildSuggestionsStore);
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/favorites/FavoritesGuildSuggestionsLoader.tsx");
+
+export default noop.memo(function FavoritesGuildSuggestionsLoader() {
+  const tmp = closure_5();
   const isEligible = tmp.isEligible;
   const isSelected = tmp.isSelected;
-  importAllResult = importAllResult.useRef(false);
+  noop = noop.useRef(false);
   const items = [isEligible, isSelected];
-  const layoutEffect = importAllResult.useLayoutEffect(() => {
+  const layoutEffect = noop.useLayoutEffect(() => {
     if (isSelected) {
       tmp.current = true;
     } else {
@@ -31,7 +38,7 @@ const memoResult = importAllResult.memo(function FavoritesGuildSuggestionsLoader
       }
       if (!tmp2) {
         tmp.current = false;
-        closure_1_4(closure_1_3);
+        React4(React3);
       }
     }
   }, items);
@@ -41,6 +48,3 @@ const memoResult = importAllResult.memo(function FavoritesGuildSuggestionsLoader
   }
   return tmp3;
 });
-const result = require("set").fileFinishedImporting("modules/favorites/FavoritesGuildSuggestionsLoader.tsx");
-
-export default memoResult;

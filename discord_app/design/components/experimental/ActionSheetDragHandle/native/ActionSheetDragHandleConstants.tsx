@@ -1,10 +1,11 @@
 // discord_app/design/components/experimental/ActionSheetDragHandle/native/ActionSheetDragHandleConstants.tsx
-import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 
-const PX_4 = ThemesDefault.space.PX_4;
-const PX_8 = ThemesDefault.space.PX_8;
+const PX_4 = nativeDefault.space.PX_4;
+const PX_8 = nativeDefault.space.PX_8;
 const sum = 2 * PX_8 + PX_4;
-const result = require("set").fileFinishedImporting(
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "design/components/experimental/ActionSheetDragHandle/native/ActionSheetDragHandleConstants.tsx",
 );
 

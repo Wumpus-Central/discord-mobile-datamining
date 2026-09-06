@@ -1,13 +1,11 @@
 // discord_app/records/InviteRecord.tsx
-import toJSDefault from "../lib/Record.tsx";
-import hooksDefault from "../../_runtime/04153_hooks.js";
+import _modDef4153 from "../../_runtime/metro/04153__.js";
+import Record from "../lib/Record.tsx";
 
-toJSDefault;
 let InviteRecord;
 class InviteRecord extends tmp2 {
   constructor(arg0) {
     tmp2 = new InviteRecord(tmp, new.target, new.target);
-    // ThrowIfThisInitialized (0x7c)
     tmp3 = global.code || "";
     tmp2.code = tmp3;
     tmp2.temporary = global.temporary || false;
@@ -41,7 +39,7 @@ InviteRecord["createFromServer"] = function createFromServer(created_at) {
   const merged = Object.assign(created_at);
   ({ max_uses: obj.maxUses, max_age: obj.maxAge } = created_at);
   created_at = created_at.created_at;
-  obj.createdAt = hooksDefault(created_at);
+  obj.createdAt = _modDef4153(created_at);
   ({
     target_type: obj.targetType,
     target_user: obj.targetUser,
@@ -52,12 +50,12 @@ InviteRecord["createFromServer"] = function createFromServer(created_at) {
 prototype["isExpired"] = function isExpired() {
   const maxAge = this.maxAge;
   if (maxAge > 0) {
-    const obj = hooksDefault(tmp.createdAt);
+    const obj = _modDef4153(tmp.createdAt);
     const _Date = Date;
     if (addResult.isBefore(Date.now())) {
       return true;
     }
-    addResult = hooksDefault(tmp.createdAt).add(maxAge, "seconds");
+    addResult = _modDef4153(tmp.createdAt).add(maxAge, "seconds");
   }
   return false;
 };
@@ -65,15 +63,16 @@ prototype["getExpiresAt"] = function getExpiresAt() {
   const self = this;
   let num = Infinity;
   if (this.maxAge > 0) {
-    const obj = hooksDefault(self.createdAt);
-    num = hooksDefault(self.createdAt).add(self.maxAge, "seconds").toDate();
-    const addResult = hooksDefault(self.createdAt).add(self.maxAge, "seconds");
+    const obj = _modDef4153(self.createdAt);
+    num = _modDef4153(self.createdAt).add(self.maxAge, "seconds").toDate();
+    const addResult = _modDef4153(self.createdAt).add(self.maxAge, "seconds");
   }
   return num;
 };
 prototype["toString"] = function toString() {
   return this.code;
 };
-const result = require("set").fileFinishedImporting("records/InviteRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("records/InviteRecord.tsx");
 
 export default InviteRecord;

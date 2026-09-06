@@ -1,19 +1,21 @@
 // discord_app/modules/webauthn/native/useAnnounceError.tsx
-import closure_2 from "../../../../_runtime/00019_noop.js";
+import AccessibilityAnnouncer2 from "../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/webauthn/native/useAnnounceError.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/webauthn/native/useAnnounceError.tsx");
 
 export const useAnnounceError = function useAnnounceError(arg0) {
   closure_0 = arg0;
   const items = [arg0];
-  const effect = React.useEffect(() => {
-    let tmp2 = null != callback;
+  const effect = noop.useEffect(() => {
+    let tmp2 = null != closure_0;
     if (tmp2) {
       tmp2 = "" !== tmp;
     }
     if (tmp2) {
-      const AccessibilityAnnouncer = callback(closure_1_1[1]).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
       AccessibilityAnnouncer.announce(tmp);
     }
   }, items);

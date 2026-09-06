@@ -1,26 +1,23 @@
 // discord_app/modules/frames/panel/native/FramePanelHeader.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import useGetOrFetchApplicationsDefault from "../../../applications/useGetOrFetchApplications.tsx";
-import useBaseActivityPanelHeaderContent from "../../../activities/panel/native/ActivityPanelHeader.tsx";
-import _modDef17026 from "../../../activities/panel/native/InviteActivityButton.tsx";
-import _modDef17030 from "../../../activities/panel/native/MinimizeActivityButton.tsx";
-import QuestActivityButtonInnerDefault from "QuestActivityButton.tsx";
-import contextDefault from "FramePanelStateContext.tsx";
-import _modDef17046 from "LeaveActivityButton.tsx";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../FramesStore.tsx";
-import { asLaunched } from "../../FramesConstants.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import ActivityPanelHeader from "../../../activities/panel/native/ActivityPanelHeader.tsx";
+import InviteActivityButtonDefault from "../../../activities/panel/native/InviteActivityButton.tsx";
+import MinimizeActivityButtonDefault from "../../../activities/panel/native/MinimizeActivityButton.tsx";
+import QuestActivityButtonDefault from "QuestActivityButton.tsx";
+import FramePanelStateContextDefault from "FramePanelStateContext.tsx";
+import panel_LeaveActivityButtonDefault from "LeaveActivityButton.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import FramesStore from "../../FramesStore.tsx";
 
-require = arg1;
+require = fn;
 function FramePanelHeaderContentInner(arg0) {
   ({ frame, landscape, setMode } = arg0);
   ({ pipState, wrapperOffset } = arg0);
   const items = [frame.applicationId];
-  const first = callback(useGetOrFetchApplicationsDefault(items), 1)[0];
-  let obj = useBaseActivityPanelHeaderContent;
+  const first = _slicedToArray(useGetOrFetchApplicationsDefault(items), 1)[0];
+  let obj = ActivityPanelHeader;
   const baseActivityPanelHeaderContent = obj.useBaseActivityPanelHeaderContent({
     landscape,
     setMode,
@@ -28,13 +25,13 @@ function FramePanelHeaderContentInner(arg0) {
     pipState,
   });
   ({ gesture, headerWrapperStyles, headerStyles } = baseActivityPanelHeaderContent);
-  obj1 = useBaseActivityPanelHeaderContent;
+  let obj1 = ActivityPanelHeader;
   const minimizeAndQuestButtonContainerStyles = obj1.useMinimizeAndQuestButtonContainerStyles();
   let id;
   if (first != null) {
     id = first.id;
   }
-  const tmp7Result = closure_7(_modDef17026, { applicationId: id });
+  const tmp7Result = React5(InviteActivityButtonDefault, { applicationId: id });
   obj = { hasConnectedActivity: true, gesture, headerWrapperStyles, headerStyles, landscape, children: null };
   const items1 = [minimizeAndQuestButtonContainerStyles.buttonContainer];
   let prop;
@@ -45,8 +42,6 @@ function FramePanelHeaderContentInner(arg0) {
   items1[1] = prop;
   let tmp15;
   const tmp12 = View;
-  const tmp4 = require;
-  const tmp8 = _modDef17026;
   if (!landscape) {
     let name;
     if (first != null) {
@@ -54,46 +49,55 @@ function FramePanelHeaderContentInner(arg0) {
     }
     tmp15 = name;
   }
-  const items2 = [closure_7(_modDef17030, { activityName: tmp15, setMode }), ,];
+  const items2 = [React5(MinimizeActivityButtonDefault, { activityName: tmp15, setMode }), ,];
   obj1 = { applicationId: frame.applicationId };
-  items2[1] = closure_7(QuestActivityButtonInnerDefault, obj1);
+  items2[1] = React5(QuestActivityButtonDefault, obj1);
   let tmp17 = null;
   if (landscape) {
     tmp17 = tmp7Result;
   }
   items2[2] = tmp17;
-  obj[1] = items2;
-  const items3 = [closure_8(tmp12, obj), ,];
+  obj.children = items2;
+  const items3 = [React6(tmp12, obj), ,];
   let tmp18 = null;
   if (!landscape) {
     tmp18 = tmp7Result;
   }
   items3[1] = tmp18;
-  items3[2] = closure_7(_modDef17046, { frame, setMode });
-  obj[5] = items3;
-  return closure_8(useBaseActivityPanelHeaderContent.BaseActivityPanelContent, obj);
+  items3[2] = React5(panel_LeaveActivityButtonDefault, { frame, setMode });
+  obj.children = items3;
+  return React6(ActivityPanelHeader.BaseActivityPanelContent, obj);
 }
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-let closure_10 = importAllResult.memo((arg0) => {
+const View = fn(17).View;
+const asLaunched = fn(9511).asLaunched;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+let closure_10 = noop.memo((arg0) => {
   let obj = initialize;
-  const items = [closure_5];
-  const stateFromStores = obj.useStateFromStores(items, () => callback(mainFrame.getMainFrame()));
+  const items = [FramesStore];
+  const stateFromStores = obj.useStateFromStores(items, () => asLaunched(mainFrame.getMainFrame()));
   let tmp2 = null;
   if (null != stateFromStores) {
-    obj = { frame: null };
-    obj[0] = stateFromStores;
+    obj = { frame: stateFromStores };
     const merged = Object.assign(arg0);
-    tmp2 = callback2(FramePanelHeaderContentInner, obj);
+    tmp2 = React5(FramePanelHeaderContentInner, obj);
   }
   return tmp2;
 });
-const memoResult = importAllResult.memo(() => {
-  let obj = useBaseActivityPanelHeaderContent;
-  obj = { context: contextDefault };
-  const baseActivityPanelHeader = obj.useBaseActivityPanelHeader(obj);
-  obj = { style: baseActivityPanelHeader.headerStyles, children: callback2(closure_10, obj1) };
-  return callback2(View, obj);
-});
-const result = require("set").fileFinishedImporting("modules/frames/panel/native/FramePanelHeader.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/frames/panel/native/FramePanelHeader.tsx");
 
-export default memoResult;
+export default noop.memo(() => {
+  let obj = { context: FramePanelStateContextDefault };
+  const baseActivityPanelHeader = obj.useBaseActivityPanelHeader(obj);
+  obj = {
+    style: baseActivityPanelHeader.headerStyles,
+    children: React5(closure_10, {
+      landscape: baseActivityPanelHeader.wrapperDimensions.isWindowLandscape,
+      setMode: baseActivityPanelHeader.setMode,
+      wrapperOffset: baseActivityPanelHeader.wrapperOffset,
+      pipState: baseActivityPanelHeader.pipState,
+    }),
+  };
+  return React5(View, obj);
+});

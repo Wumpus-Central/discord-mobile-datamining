@@ -1,18 +1,18 @@
 // discord_app/modules/messages/SendMessageOptionsStore.tsx
-import set from "../../../_runtime/00002_set.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import MESSAGE_GROUP_SPACING from "MessageConstants.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import MessageConstants from "MessageConstants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const MessageSendLocation = MESSAGE_GROUP_SPACING.MessageSendLocation;
+const MessageSendLocation = MessageConstants.MessageSendLocation;
 let closure_1 = {};
 const Store = initializeDefault.Store;
 class SendMessageOptionsStore extends Store {}
 SendMessageOptionsStore.prototype["getOptions"] = function getOptions(arg0) {
-  return table[arg0];
+  return closure_1[arg0];
 };
 SendMessageOptionsStore.displayName = "SendMessageOptionsStore";
-const sendMessageOptionsStore = new SendMessageOptionsStore(dispatcherDefault, {
+const sendMessageOptionsStore = new SendMessageOptionsStore(DispatcherDefault, {
   MESSAGE_CREATE: function handleMessageCreate(arg0) {
     ({ message, sendMessageOptions } = arg0);
     if (null != sendMessageOptions) {
@@ -24,7 +24,6 @@ const sendMessageOptionsStore = new SendMessageOptionsStore(dispatcherDefault, {
       }
       obj.location = OTHER;
       closure_1[message.id] = obj;
-      const tmp3 = closure_1;
     }
     let tmp8 = null != message.nonce && message.nonce !== message.id;
     if (tmp8) {
@@ -36,6 +35,6 @@ const sendMessageOptionsStore = new SendMessageOptionsStore(dispatcherDefault, {
     }
   },
 });
-const result = set.fileFinishedImporting("modules/messages/SendMessageOptionsStore.tsx");
+const result = size.fileFinishedImporting("modules/messages/SendMessageOptionsStore.tsx");
 
 export default sendMessageOptionsStore;

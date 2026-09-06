@@ -1,14 +1,16 @@
 // discord_app/modules/collectibles/native/useShopOrientationLock.tsx
-import closure_2 from "../../../../_runtime/00019_noop.js";
+import applyOrientationLock from "../../device/native/applyOrientationLock.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/collectibles/native/useShopOrientationLock.tsx");
+require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/collectibles/native/useShopOrientationLock.tsx");
 
 export const useShopOrientationLock = function useShopOrientationLock() {
-  const effect = React.useEffect(() => {
-    callback(table[1]).applyOrientationLock("PORTRAIT", true);
+  const effect = noop.useEffect(() => {
+    applyOrientationLock.applyOrientationLock("PORTRAIT", true);
     return () => {
-      const result = callback(table[1]).releaseOrientationLock({ unlockAfterRotatingToPreviousLock: false });
+      const result = closure_1_0(closure_1_1[1]).releaseOrientationLock({ unlockAfterRotatingToPreviousLock: false });
     };
   }, []);
 };

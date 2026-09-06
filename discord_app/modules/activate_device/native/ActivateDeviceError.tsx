@@ -1,51 +1,51 @@
 // discord_app/modules/activate_device/native/ActivateDeviceError.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
-import Button from "../../../design/components/Button/native/Button.native.tsx";
-import registerAssetDefault from "../../../../_runtime/09268_registerAsset.js";
-import innerContentDefault from "ActivateDeviceSharedStyles.tsx";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import util from "../../../intl/index.native.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
+import _modDef9268 from "../../../../_runtime/metro/09268__.js";
+import ActivateDeviceSharedStylesDefault from "ActivateDeviceSharedStyles.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-({ Image: c3, View: c4 } = get_ActivityIndicator);
-({ jsx: c5, jsxs: closure_6, Fragment: error } = jsxProd);
-let closure_8 = createCacheKey.createStyles({ image: { width: 254, height: 127, alignSelf: "center" } });
-const result = require("set").fileFinishedImporting("modules/activate_device/native/ActivateDeviceError.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Image: c3, View: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
+const createStyles = fn(4560);
+let closure_8 = createStyles.createStyles({ image: { width: 254, height: 127, alignSelf: "center" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activate_device/native/ActivateDeviceError.tsx");
 
 export const ActivateDeviceError = function ActivateDeviceError(onRetry) {
   let obj = { children: null };
-  obj = { source: registerAssetDefault, style: callback3().image };
-  const items = [callback(closure_3, obj), ,];
-  obj = { style: innerContentDefault.innerContent, children: null };
-  obj1 = {
+  obj = { source: _modDef9268, style: closure_8().image };
+  const items = [hasOwnProperty(React3, obj), ,];
+  obj = { style: ActivateDeviceSharedStylesDefault.innerContent, children: null };
+  const obj1 = {
     variant: "heading-lg/bold",
     color: "mobile-text-heading-primary",
-    style: innerContentDefault.centerText,
+    style: ActivateDeviceSharedStylesDefault.centerText,
     children: null,
   };
-  const intl = getSystemLocale.intl;
-  obj1[3] = intl.string(getSystemLocale.t["3dgwPD"]);
-  const items1 = [callback(Text.Text, obj1)];
+  const intl = util.intl;
+  obj1.children = intl.string(util.t["3dgwPD"]);
+  const items1 = [hasOwnProperty(Text_Text.Text, obj1)];
   const obj2 = {
     variant: "text-md/medium",
     color: "text-default",
-    style: innerContentDefault.centerText,
+    style: ActivateDeviceSharedStylesDefault.centerText,
     children: null,
   };
-  const intl2 = getSystemLocale.intl;
-  obj2[3] = intl2.string(getSystemLocale.t["/GAO1P"]);
-  items1[1] = callback(Text.Text, obj2);
-  obj[1] = items1;
-  items[1] = callback2(closure_4, obj);
+  const intl2 = util.intl;
+  obj2.children = intl2.string(util.t["/GAO1P"]);
+  items1[1] = hasOwnProperty(Text_Text.Text, obj2);
+  obj.children = items1;
+  items[1] = timestampProducer(React4, obj);
   const obj3 = { size: "lg", text: null, onPress: null, grow: true };
-  const intl3 = getSystemLocale.intl;
-  obj3[1] = intl3.string(getSystemLocale.t["5911Lb"]);
-  obj3[2] = onRetry.onRetry;
-  items[2] = callback(Button.Button, obj3);
-  obj[0] = items;
-  return callback2(closure_7, obj);
+  const intl3 = util.intl;
+  obj3.text = intl3.string(util.t["5911Lb"]);
+  obj3.onPress = onRetry.onRetry;
+  items[2] = hasOwnProperty(components_Button_Button.Button, obj3);
+  obj.children = items;
+  return timestampProducer(React5, obj);
 };

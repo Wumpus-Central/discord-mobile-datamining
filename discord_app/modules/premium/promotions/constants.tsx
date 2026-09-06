@@ -1,9 +1,8 @@
 // discord_app/modules/premium/promotions/constants.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const items = ["logitech", "call_of_duty"];
-let set = new Set(items);
-const result = set.fileFinishedImporting("modules/premium/promotions/constants.tsx");
+const result = size.fileFinishedImporting("modules/premium/promotions/constants.tsx");
 
 export const CountryListMode = { BLOCKLIST: "blocklist", ALLOWLIST: "allowlist" };
 export const PromotionTypes = {
@@ -35,4 +34,4 @@ export const LOGITECH_PARTNER_ID = "logitech";
 export const CALL_OF_DUTY_PARTNER_ID = "call_of_duty";
 export const XBOX_PARTNER_ID = "xbox";
 export const YOUTUBE_PARTNER_ID = "youtube";
-export const DEDICATED_SURFACE_PARTNER_IDS = set;
+export const DEDICATED_SURFACE_PARTNER_IDS = new Set(items);

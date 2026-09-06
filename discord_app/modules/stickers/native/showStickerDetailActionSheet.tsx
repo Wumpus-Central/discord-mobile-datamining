@@ -1,16 +1,16 @@
 // discord_app/modules/stickers/native/showStickerDetailActionSheet.tsx
-import set from "../../../../_runtime/00002_set.js";
 import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
-import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const sticker_detail_action_sheet = "sticker_detail_action_sheet";
-const result = set.fileFinishedImporting("modules/stickers/native/showStickerDetailActionSheet.tsx");
+const result = size.fileFinishedImporting("modules/stickers/native/showStickerDetailActionSheet.tsx");
 
 export const hideStickerDetailActionSheet = function hideStickerDetailActionSheet() {
-  ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet(sticker_detail_action_sheet);
+  ActionSheetActionCreatorsDefault.hideActionSheet(sticker_detail_action_sheet);
 };
 export const showStickerDetailActionSheet = function showStickerDetailActionSheet(arg0) {
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(
+  ActionSheetActionCreatorsDefault.openLazy(
     asyncRequireImpl(10404, dependencyMap.paths),
     sticker_detail_action_sheet,
     arg0,

@@ -1,16 +1,16 @@
 // discord_app/modules/gateway/RequestGatewaySocket.tsx
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import { AnalyticEvents } from "../../Constants.tsx";
+import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
-const require = arg1;
-function setRequestedBy(closure_0) {
+const require = fn;
+function setRequestedBy(arg0) {
   c6 = false;
-  let num = map.get(closure_0);
+  let num = map.get(arg0);
   if (num == null) {
     num = 0;
   }
-  const result = obj.set(closure_0, num + 1);
-  const combined = "BRIDGE:" + closure_0;
+  const result = obj.set(arg0, num + 1);
+  const combined = "BRIDGE:" + arg0;
   let num2 = obj.get(combined);
   if (num2 == null) {
     num2 = 0;
@@ -22,111 +22,91 @@ function setRequestedBy(closure_0) {
     const result1 = obj.set(combined, diff);
   }
 }
-function stopRequest(closure_0) {
+function stopRequest(arg0) {
   c6 = false;
-  let num = map.get(closure_0);
+  let num = map.get(arg0);
   if (num == null) {
     num = 0;
   }
   const diff = num - 1;
   if (diff <= 0) {
-    obj.delete(closure_0);
+    obj.delete(arg0);
   } else {
-    const result = obj.set(closure_0, diff);
+    const result = obj.set(arg0, diff);
   }
 }
-function _withRequest() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c6 = 0;
-    c7 = 0;
-    c5 = 0;
-    return (function* (arg0, arg1) {
-      if (c7 === 2) {
-        c7 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
+let closure_10 = async function _withRequest(arg0, value) {
+  if (c7 === 2) {
+    c7 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c7 = 2;
+      if (0 === c6) {
         if (arg0 === 1) {
-          throw arg1;
+          c7 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c7 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_3 = tmp3;
+          closure_2 = tmp7;
+          closure_130_0 = closure_0;
+          c5 = 1;
+          setRequestedBy(closure_0);
+          c6 = 2;
+          c7 = 1;
+          const obj1 = { value: importDefault(), done: false };
+          return obj1;
         }
+      } else if (1 === tmp7) {
+        c5 = 0;
+        closure_131_9(closure_130_0);
+        throw closure_4;
+      } else if (arg0 === 1) {
+        c7 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 0;
+        closure_131_9(closure_130_0);
+        c7 = 3;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        try {
-          c7 = 2;
-          if (0 === c6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_3 = tmp3;
-              closure_2 = tmp7;
-              c5 = 1;
-              closure_1_8(closure_0);
-              c6 = 2;
-              c7 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = callback();
-              return obj1;
-            }
-          } else if (1 === tmp7) {
-            c5 = 0;
-            callback2(closure_0);
-            throw closure_4;
-          } else if (arg0 === 1) {
-            c7 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 0;
-            callback2(closure_0);
-            c7 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          } else {
-            c5 = 0;
-            callback2(closure_0);
-            c7 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp29) {
-          closure_4 = tmp29;
-          if (tmp4 === c5) {
-            c7 = tmp2;
-            throw tmp29;
-          } else {
-            c6 = tmp;
-          }
-        }
+        c5 = 0;
+        closure_131_9(closure_130_0);
+        c7 = 3;
+        obj = { value, done: true };
+        return obj;
       }
-    })();
-  });
-  closure_10 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp29) {
+      closure_4 = tmp29;
+      if (tmp4 === c5) {
+        c7 = tmp2;
+        throw tmp29;
+      } else {
+        c6 = tmp;
+      }
+    }
   }
-  return applyArgumentsResult;
-}
+};
+const AnalyticEvents = fn(1074).AnalyticEvents;
 let closure_5 = ["COLD_START"];
 let c6 = true;
 const map = new Map();
-let result = require("set").fileFinishedImporting("modules/gateway/RequestGatewaySocket.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/gateway/RequestGatewaySocket.tsx");
 
 export const isRequested = function isRequested() {
   return map.size > 0 || c6;
@@ -155,14 +135,12 @@ export const startBridgeTo = function startBridgeTo(arg0) {
   let result = map.set(combined, num + 1);
   combined(7472).requestSafeIdleCallback(
     () => {
-      let obj = closure_1_7;
-      if (closure_1_7.has(combined)) {
-        obj = { bridge_token: null, cleared_after: null };
-        obj[0] = tmp;
+      let obj = map;
+      if (map.has(combined)) {
+        obj = { bridge_token: tmp, cleared_after: null };
         const _performance = performance;
-        obj[1] = performance.now() - callback;
-        callback(closure_1_2[3]).track(closure_1_4.GATEWAY_BRIDGE_TIMEOUT, obj);
-        const obj2 = callback(closure_1_2[3]);
+        obj.cleared_after = performance.now() - closure_1;
+        AnalyticsUtilsDefault.track(AnalyticEvents.GATEWAY_BRIDGE_TIMEOUT, obj);
       }
       c6 = false;
       let num = obj.get(tmp);
@@ -180,9 +158,9 @@ export const startBridgeTo = function startBridgeTo(arg0) {
   );
 };
 export { stopRequest };
-export const withRequest = function withRequest(combined, arg1) {
+export const withRequest = function withRequest() {
   const self = this;
-  const apply = _withRequest.apply;
+  const apply = closure_10.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

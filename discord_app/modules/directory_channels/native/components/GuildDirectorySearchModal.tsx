@@ -1,25 +1,24 @@
 // discord_app/modules/directory_channels/native/components/GuildDirectorySearchModal.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
 import useInitialValueDefault from "../../../../hooks/useInitialValue.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import GuildDirectorySearchDefault from "GuildDirectorySearch.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-noopAll;
+const require = fn;
+const jsx = fn(21).jsx;
 const SEARCH_SCREEN_KEY = "SEARCH_SCREEN_KEY";
-const result = require("set").fileFinishedImporting(
-  "modules/directory_channels/native/components/GuildDirectorySearchModal.tsx",
-);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/directory_channels/native/components/GuildDirectorySearchModal.tsx");
 
 export default function GuildDirectorySearchModal(arg0) {
-  const _require = arg0;
-  return jsx(require("../../../../design/components/Navigator/native/Navigator.native.tsx").Navigator, {
+  _require = arg0;
+  return jsx(require("Navigator").Navigator, {
     screens: useInitialValueDefault(() => ({
-      [closure_1_4]: {
+      [closure_2_4]: {
         fullscreen: true,
         headerShown: false,
         render() {
           const merged = Object.assign(closure_0);
-          return closure_1_3(closure_1_1(closure_1_2[2]), {});
+          return jsx(GuildDirectorySearchDefault, {});
         },
       },
     })),

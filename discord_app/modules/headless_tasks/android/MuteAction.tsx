@@ -1,34 +1,39 @@
 // discord_app/modules/headless_tasks/android/MuteAction.tsx
-import set from "../../../../_runtime/00002_set.js";
-import MAX_FAVORITES from "../../user_settings/UserSettingsConstants.tsx";
+import UserSettingsConstants from "../../user_settings/UserSettingsConstants.tsx";
+import _modDef4153 from "../../../../_runtime/metro/04153__.js";
+import NotificationSettingsUtils from "../../../utils/NotificationSettingsUtils.tsx";
+import NotificationSettingsModalActionCreatorsDefault from "../../../actions/NotificationSettingsModalActionCreators.tsx";
+import HeadlessTaskUtilsDefault from "../HeadlessTaskUtils.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const MuteUntilSeconds = MAX_FAVORITES.MuteUntilSeconds;
-let result = set.fileFinishedImporting("modules/headless_tasks/android/MuteAction.tsx");
+const MuteUntilSeconds = UserSettingsConstants.MuteUntilSeconds;
+let result = size.fileFinishedImporting("modules/headless_tasks/android/MuteAction.tsx");
 
 export default (arg0) => {
   closure_0 = arg0;
   return new Promise((arg0) => {
     closure_0 = arg0;
-    closure_1_1(closure_1_2[1]).awaitStorage(() => {
+    HeadlessTaskUtilsDefault.awaitStorage(() => {
       let toISOStringResult = null;
-      if (-1 !== lib.muteTime) {
-        let obj = closure_2_1(closure_2_2[2])();
+      if (-1 !== closure_0.muteTime) {
+        let obj = _modDef4153();
         let HOURS_1 = tmp.muteTime;
         if (HOURS_1 == null) {
-          HOURS_1 = closure_2_3.HOURS_1;
+          HOURS_1 = MuteUntilSeconds.HOURS_1;
         }
         toISOStringResult = obj.add(HOURS_1, "second").toISOString();
         const addResult = obj.add(HOURS_1, "second");
       }
-      obj = { muted: true, mute_config: obj };
-      obj = { selected_time_window: closure_2_3.HOURS_1, end_time: toISOStringResult };
-      const result = closure_2_1(closure_2_2[3]).updateChannelOverrideSettings(
+      obj = { muted: true, mute_config: null };
+      obj = { selected_time_window: MuteUntilSeconds.HOURS_1, end_time: toISOStringResult };
+      obj.mute_config = obj;
+      const result = NotificationSettingsModalActionCreatorsDefault.updateChannelOverrideSettings(
         tmp.guildId,
         tmp.channelId,
         obj,
-        lib(closure_2_2[4]).NotificationLabels.Muted,
+        NotificationSettingsUtils.NotificationLabels.Muted,
       );
-      lib(true);
+      closure_0(true);
     });
   });
 };

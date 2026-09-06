@@ -1,6 +1,6 @@
 // discord_app/modules/icymi/native/custom_scores/ICYMICustomScoreTypes.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/icymi/native/custom_scores/ICYMICustomScoreTypes.tsx");
+const result = size.fileFinishedImporting("modules/icymi/native/custom_scores/ICYMICustomScoreTypes.tsx");
 
 export const ICYMI_CUSTOM_SCORES_MODAL_KEY = "icymi-custom-scores-modal";

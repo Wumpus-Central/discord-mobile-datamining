@@ -1,46 +1,41 @@
 // discord_app/modules/slayer_storefront/native/headless_components/HeadlessSlayerStorefrontPurchaseRunner.tsx
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import { useNativeCheckoutStore } from "../../../checkout/native/NativeCheckoutStore.tsx";
-import { AnalyticEvents } from "../../../../Constants.tsx";
+import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
+const require = fn;
+let useNativeCheckoutStore = fn(7424).useNativeCheckoutStore;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/slayer_storefront/native/headless_components/HeadlessSlayerStorefrontPurchaseRunner.tsx",
 );
 
 export const HeadlessSlayerStorefrontPurchaseRunner = function HeadlessSlayerStorefrontPurchaseRunner(attempt) {
   attempt = attempt.attempt;
   ({ onPurchaseComplete: importDefault, onPurchaseError } = attempt);
-  let React;
   useNativeCheckoutStore = undefined;
-  closure_5 = undefined;
-  closure_6 = undefined;
-  closure_7 = undefined;
-  let callback;
+  onPurchaseError = undefined;
   closure_9 = undefined;
-  closure_10 = undefined;
   ({ skuId, sku, analyticsLocations } = attempt);
   const tmp = useNativeCheckoutStore((analyticsFields) => analyticsFields.analyticsFields);
-  React = tmp;
+  noop = tmp;
   const tmp2 = useNativeCheckoutStore((setCheckoutFailed) => setCheckoutFailed.setCheckoutFailed);
   useNativeCheckoutStore = tmp2;
   let tmp3 = useNativeCheckoutStore((orderRecord) => orderRecord.orderRecord);
   closure_5 = tmp3;
   const tmp4 = useNativeCheckoutStore((orderRequired) => orderRequired.orderRequired);
   closure_6 = tmp4;
-  let obj = React;
-  closure_7 = React.useRef(false);
+  noop.useRef(false);
   const items = [tmp, tmp2, onPurchaseError];
-  callback = React.useCallback(() => {
+  onPurchaseError = noop.useCallback(() => {
     if (!ref.current) {
       tmp.current = true;
-      closure_1_1(onPurchaseError[3]).track(constants.PAYMENT_FLOW_FAILED, closure_3);
-      callback2();
-      const obj = closure_1_1(onPurchaseError[3]);
+      AnalyticsUtilsDefault.track(AnalyticEvents.PAYMENT_FLOW_FAILED, closure_3);
+      closure_4();
     }
     onPurchaseError();
   }, items);
-  obj = {
+  let obj = {
     skuId,
     sku,
     analyticsLoadId: tmp.load_id,
@@ -55,22 +50,21 @@ export const HeadlessSlayerStorefrontPurchaseRunner = function HeadlessSlayerSto
   if (tmp3 != null) {
     id = tmp3.id;
   }
-  obj[4] = id;
-  obj[5] = tmp;
-  obj[6] = function onPurchaseComplete() {
+  obj.orderId = id;
+  obj.analyticsData = tmp;
+  obj.onPurchaseComplete = function onPurchaseComplete() {
     closure_7.current = true;
     if (obj.isIOS()) {
-      closure_1_1(onPurchaseError[3]).track(constants.PAYMENT_FLOW_SUCCEEDED, closure_3);
-      const obj2 = closure_1_1(onPurchaseError[3]);
+      AnalyticsUtilsDefault.track(AnalyticEvents.PAYMENT_FLOW_SUCCEEDED, closure_3);
     }
-    callback();
+    closure_1_1();
   };
-  obj[7] = callback;
-  obj[8] = function onPurchasePending() {};
-  const tmp6Result = importDefault(onPurchaseError[4])(obj);
+  obj.onPurchaseError = onPurchaseError;
+  obj.onPurchasePending = function onPurchasePending() {};
+  const tmp6Result = require("useMobileSocialLayerPurchaseSKU")(obj);
   closure_9 = tmp6Result;
-  closure_10 = obj.useRef(0);
-  const items1 = [attempt, tmp6Result, callback, tmp3, tmp4];
+  obj.useRef(0);
+  const items1 = [attempt, tmp6Result, onPurchaseError, tmp3, tmp4];
   const effect = obj.useEffect(() => {
     if (ref2.current !== attempt) {
       let tmp3 = closure_6;
@@ -80,8 +74,8 @@ export const HeadlessSlayerStorefrontPurchaseRunner = function HeadlessSlayerSto
       if (!tmp3) {
         tmp.current = tmp2;
         closure_7.current = false;
-        callback3().catch(callback);
-        const promise = callback3();
+        closure_9().catch(callback);
+        const promise = closure_9();
       }
     }
   }, items1);

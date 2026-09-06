@@ -2,10 +2,15 @@
 import getCachedUseAltGatewayDefault from "getCachedUseAltGateway.native.tsx";
 
 let closure_1 = getCachedUseAltGatewayDefault();
-const result = require("set").fileFinishedImporting("modules/gateway/AltGatewayTracker.tsx");
-class AltGatewayTracker {}
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/gateway/AltGatewayTracker.tsx");
+class AltGatewayTracker {
+  constructor() {
+    return Object.assign({ failures: 0, fallbackTripped: false });
+  }
+}
 const prototype = AltGatewayTracker.prototype;
-prototype["shouldUseAltGateway"] = function shouldUseAltGateway(arg0) {
+prototype["shouldUseAltGateway"] = function shouldUseAltGateway() {
   const fallbackTripped = this.fallbackTripped;
   let tmp = !fallbackTripped;
   if (!fallbackTripped) {

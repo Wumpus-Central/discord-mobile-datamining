@@ -1,10 +1,10 @@
 // discord_app/modules/collectibles/utils/CollectiblesPerfLogging.tsx
-import set from "../../../../_runtime/00002_set.js";
-import ME from "../../../Constants.tsx";
-import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import Constants from "../../../Constants.tsx";
+import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/collectibles/utils/CollectiblesPerfLogging.tsx");
+const AnalyticEvents = Constants.AnalyticEvents;
+const result = size.fileFinishedImporting("modules/collectibles/utils/CollectiblesPerfLogging.tsx");
 
 export const CollectiblesShopPerfCheckpoint = {
   SHOP_MOUNTED: "shop_mounted",
@@ -16,7 +16,7 @@ export const CollectiblesShopPerfCheckpoint = {
 };
 export const trackShopPerf = function trackShopPerf(arg0) {
   ({ sessionId, checkpoint, tab, unpublishedCategoriesShown, cacheDisabled } = arg0);
-  expandEventPropertiesDefault.track(AnalyticEvents.COLLECTIBLES_SHOP_PERF_TRACKED, {
+  AnalyticsUtilsDefault.track(AnalyticEvents.COLLECTIBLES_SHOP_PERF_TRACKED, {
     page_session_id: sessionId,
     checkpoint,
     tab,

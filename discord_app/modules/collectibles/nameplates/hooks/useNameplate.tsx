@@ -1,21 +1,22 @@
 // discord_app/modules/collectibles/nameplates/hooks/useNameplate.tsx
-import closure_2 from "../../../../../_runtime/00019_noop.js";
-import closure_3 from "../../../../stores/GuildMemberStore.tsx";
+import utils from "../utils.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import GuildMemberStore from "../../../../stores/GuildMemberStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/collectibles/nameplates/hooks/useNameplate.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/nameplates/hooks/useNameplate.tsx");
 
 export const useNameplate = function useNameplate(user) {
   user = user.user;
   const guildId = user.guildId;
-  let stateFromStores;
-  const items = [closure_3];
-  stateFromStores = user(guildId[2]).useStateFromStores(items, () => {
+  const items = [GuildMemberStore];
+  const stateFromStores = user(guildId[2]).useStateFromStores(items, () => {
     let member = null;
     if (null != guildId) {
       member = null;
       if (null != user) {
-        member = closure_1_3.getMember(tmp, tmp3.id);
+        member = GuildMemberStore.getMember(tmp, tmp3.id);
       }
     }
     return member;
@@ -30,7 +31,7 @@ export const useNameplate = function useNameplate(user) {
           nameplate = collectibles.nameplate;
         }
       }
-      nameplate = user(guildId[3]).getNameplateData(nameplate);
+      nameplate = utils.getNameplateData(nameplate);
       if (nameplate == null) {
         nameplate = tmp.nameplate;
       }

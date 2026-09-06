@@ -1,9 +1,9 @@
 // discord_common/js/shared/hooks/usePrevValue.tsx
-import set from "../../../../_runtime/00002_set.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import _mod19 from "../../../../_runtime/metro/00019__.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const useRef = noop.useRef;
-const result = set.fileFinishedImporting("../discord_common/js/shared/hooks/usePrevValue.tsx");
+const useRef = _mod19.useRef;
+const result = size.fileFinishedImporting("../discord_common/js/shared/hooks/usePrevValue.tsx");
 
 export default function usePrevValue(current) {
   const tmp = useRef(null);

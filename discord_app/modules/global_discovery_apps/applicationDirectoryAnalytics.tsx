@@ -1,18 +1,18 @@
 // discord_app/modules/global_discovery_apps/applicationDirectoryAnalytics.tsx
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
-import closure_2 from "../../stores/SelectedChannelStore.tsx";
-import closure_3 from "../../stores/SelectedGuildStore.tsx";
-import { AnalyticEvents } from "../../Constants.tsx";
+import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
+import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
+import SelectedGuildStore from "../../stores/SelectedGuildStore.tsx";
 
-const result = require("set").fileFinishedImporting("modules/global_discovery_apps/applicationDirectoryAnalytics.tsx");
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/global_discovery_apps/applicationDirectoryAnalytics.tsx");
 
 export const trackAppDirectoryProfileEmbed = function trackAppDirectoryProfileEmbed(applicationId, storefront) {
-  let obj = expandEventPropertiesDefault;
-  obj = {
+  const obj = {
     application_id: applicationId,
     device_platform: "mobile_native",
-    guild_id: guildId.getGuildId(),
-    channel_id: channelId.getChannelId(),
+    guild_id: SelectedGuildStore.getGuildId(),
+    channel_id: SelectedChannelStore.getChannelId(),
     section: storefront,
   };
   obj.track(AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_SENT, obj);

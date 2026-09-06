@@ -1,73 +1,66 @@
 // discord_app/modules/device/ThermalUtils.native.tsx
-import enforcingDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceThermalStateModule.tsx";
-import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
-import set from "../../utils/PlatformUtils.tsx";
-import keys from "../../../_runtime/00560_keys.js";
-import { DCDDeviceManager } from "../../utils/native/DeviceUtils.tsx";
+import NativeDeviceThermalStateModuleDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceThermalStateModule.tsx";
+import get_ActivityIndicator from "../../../_runtime/metro/00017__.js";
+import PlatformUtils from "../../utils/PlatformUtils.tsx";
+import 00560__ from "../../../_runtime/metro/00560__.js";
+import size from "../../../_runtime/metro/00002__.js";
 
 const NativeModules = get_ActivityIndicator.NativeModules;
-if (set.isAndroid()) {
-  let DCDDeviceThermalStateManager = enforcingDefault;
+if (PlatformUtils.isAndroid()) {
+  let DCDDeviceThermalStateManager = NativeDeviceThermalStateModuleDefault;
 } else {
   DCDDeviceThermalStateManager = NativeModules.DCDDeviceThermalStateManager;
 }
 const nativeEventEmitter = new get_ActivityIndicator.NativeEventEmitter(DCDDeviceThermalStateManager);
-let closure_5 = keys.create((arg0) => {
-  const _require = arg0;
+let closure_5 = module_560.create((arg0) => {
+  _require = arg0;
   let thermalState = dependencyMap;
   if (obj.isAndroid()) {
     if (tmpResult.getSystemVersionMajor() >= 29) {
-      thermalState = enforcingDefault.getThermalState();
+      thermalState = NativeDeviceThermalStateModuleDefault.getThermalState();
       let resolved = Promise.resolve(thermalState);
-      const obj3 = enforcingDefault;
     } else {
       resolved = Promise.resolve(undefined);
     }
-    tmpResult = DCDDeviceManager;
+    tmpResult = require("DeviceUtils");
   } else {
     const DCDDeviceThermalStateManager = NativeModules.DCDDeviceThermalStateManager;
     const thermalState1 = DCDDeviceThermalStateManager.getThermalState();
-    thermalState1.then(function updateThermalState(arg0) {
-      const callback = arg0;
-      callback(closure_1_2[5]).batchUpdates(() =>
-        state((rawThermalState) => {
-          let tmp = rawThermalState;
-          if (rawThermalState.rawThermalState !== closure_0) {
-            const obj = { rawThermalState: null };
-            obj[0] = tmp2;
-            tmp = obj;
-          }
-          return tmp;
-        }),
-      );
+    thermalState1.then(function updateThermalState(result) {
+      closure_0 = result;
+      closure_0(1249).batchUpdates(() => state((rawThermalState) => {
+        let tmp = rawThermalState;
+        if (rawThermalState.rawThermalState !== state) {
+          const obj = { rawThermalState: tmp2 };
+          tmp = obj;
+        }
+        return tmp;
+      }));
     });
     nativeEventEmitter.addListener("DeviceThermalStateDidChange", (state) => {
       state = state.state;
-      callback(closure_1_2[5]).batchUpdates(() =>
-        state((rawThermalState) => {
-          let tmp = rawThermalState;
-          if (rawThermalState.rawThermalState !== closure_0) {
-            const obj = { rawThermalState: null };
-            obj[0] = tmp2;
-            tmp = obj;
-          }
-          return tmp;
-        }),
-      );
+      state(1249).batchUpdates(() => state((rawThermalState) => {
+        let tmp = rawThermalState;
+        if (rawThermalState.rawThermalState !== state) {
+          const obj = { rawThermalState: tmp2 };
+          tmp = obj;
+        }
+        return tmp;
+      }));
     });
     return { rawThermalState: "Array" };
   }
 });
-const result = set.fileFinishedImporting("modules/device/ThermalUtils.native.tsx");
+const result = size.fileFinishedImporting("modules/device/ThermalUtils.native.tsx");
 
 export default {
   getRawThermalState() {
-    return lib.getState().rawThermalState;
+    return closure_5.getState().rawThermalState;
   },
   useRawThermalState() {
-    return lib((rawThermalState) => rawThermalState.rawThermalState);
+    return closure_5((rawThermalState) => rawThermalState.rawThermalState);
   },
   addListener(arg0) {
-    return { remove: lib.subscribe(arg0) };
-  },
+    return { remove: closure_5.subscribe(arg0) };
+  }
 };

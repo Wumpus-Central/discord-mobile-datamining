@@ -1,8 +1,8 @@
 // discord_app/modules/vibegrations/VibegrationsTypes.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
 const frozen = Object.freeze({ PUBLIC: 1, SHAREABLE: 2 });
-let set = new Set(["image/png", "image/jpeg", "image/gif", "image/webp"]);
+const set = new Set(["image/png", "image/jpeg", "image/gif", "image/webp"]);
 let c2 = 5242880;
 let c3 = 52428800;
 const items = [
@@ -24,7 +24,7 @@ const items1 = [
   { id: "workers-ai/@cf/zai-org/glm-4.7-flash", label: "GLM 4.7 Flash", provider: "workers-ai" },
 ];
 obj = { main: items1, subagent: items1, thinking: obj.thinking };
-const result = set.fileFinishedImporting("modules/vibegrations/VibegrationsTypes.tsx");
+const result = size.fileFinishedImporting("modules/vibegrations/VibegrationsTypes.tsx");
 
 export const UNNAMED_PROJECT_NAME = "Untitled App";
 export const MAX_PROJECT_COLLABORATOR_ROLES = 25;
@@ -94,8 +94,8 @@ export const VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE = 10;
 export const vibegrationsAttachmentLimit = function vibegrationsAttachmentLimit(contentType) {
   return set.has(contentType) ? c2 : c3;
 };
-export const isVibegrationsAttachmentWithinLimit = function isVibegrationsAttachmentWithinLimit(size, closure_2) {
-  return size <= (set.has(closure_2) ? c2 : c3);
+export const isVibegrationsAttachmentWithinLimit = function isVibegrationsAttachmentWithinLimit(size, contentType) {
+  return size <= (set.has(contentType) ? c2 : c3);
 };
 export const formatVibegrationsAttachmentLimit = function formatVibegrationsAttachmentLimit(arg0) {
   return "" + Math.round(arg0 / 1048576) + " MB";

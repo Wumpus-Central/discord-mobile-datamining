@@ -1,14 +1,14 @@
 // discord_app/modules/activities/utils/getChannelCopyForEmbeddedActivity.tsx
-import set from "../../../../_runtime/00002_set.js";
-import getSystemLocale from "../../../intl/index.native.tsx";
+import util from "../../../intl/index.native.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/activities/utils/getChannelCopyForEmbeddedActivity.tsx");
+const result = size.fileFinishedImporting("modules/activities/utils/getChannelCopyForEmbeddedActivity.tsx");
 
 export default function getChannelCopyForEmbeddedActivity(arg0) {
   let stringResult = arg0;
   if (null == arg0) {
-    const intl = getSystemLocale.intl;
-    stringResult = intl.string(getSystemLocale.t["2YCamo"]);
+    const intl = util.intl;
+    stringResult = intl.string(util.t["2YCamo"]);
   }
   return stringResult;
 }

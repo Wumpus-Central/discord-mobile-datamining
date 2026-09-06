@@ -1,27 +1,28 @@
 // discord_app/modules/user_profile/hooks/useUserProfileMutuals.tsx
+import _mod12 from "../../../../_runtime/metro/00012__.js";
 import usePrevValueDefault from "../../../../discord_common/js/shared/hooks/usePrevValue.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import { useMemo } from "../../../../_runtime/00019_noop.js";
-import closure_5 from "../../user_affinities/UserAffinitiesV2Store.tsx";
-import closure_6 from "../../../stores/SortedGuildStore.tsx";
-import closure_7 from "../UserProfileStore.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import UserAffinitiesV2Store from "../../user_affinities/UserAffinitiesV2Store.tsx";
+import SortedGuildStore from "../../../stores/SortedGuildStore.tsx";
+import UserProfileStore from "../UserProfileStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_profile/hooks/useUserProfileMutuals.tsx");
+require = fn;
+const useMemo = fn(19).useMemo;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/hooks/useUserProfileMutuals.tsx");
 
 export default function useUserProfileMutuals(arg0) {
-  const _require = arg0;
-  let obj = initialize;
-  let items = [closure_7];
+  _require = arg0;
+  let obj = require("initialize");
+  let items = [UserProfileStore];
   const tmp = stateFromStores(
     obj.useStateFromStoresArray(items, () => {
       const items = [
-        closure_1_7.getMutualFriendsCount(lib.id),
-        closure_1_7.getMutualFriends(lib.id),
-        closure_1_7.getMutualGuilds(lib.id),
-        closure_1_7.isFetchingProfile(lib.id),
-        closure_1_7.isFetchingFriends(lib.id),
+        UserProfileStore.getMutualFriendsCount(closure_0.id),
+        UserProfileStore.getMutualFriends(closure_0.id),
+        UserProfileStore.getMutualGuilds(closure_0.id),
+        UserProfileStore.isFetchingProfile(closure_0.id),
+        UserProfileStore.isFetchingFriends(closure_0.id),
       ];
       return items;
     }),
@@ -30,15 +31,12 @@ export default function useUserProfileMutuals(arg0) {
   [tmp2, tmp3] = tmp;
   importDefault = tmp3;
   dependencyMap = tmp4;
-  const items1 = [closure_5];
-  stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () =>
-    userAffinitiesMap.getUserAffinitiesMap(),
-  );
-  const obj2 = initialize;
-  const items2 = [closure_6];
-  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
-    items2,
-    () => flattenedGuildIds.getFlattenedGuildIds(),
+  const items1 = [UserAffinitiesV2Store];
+  stateFromStores = require("initialize").useStateFromStores(items1, () => userAffinitiesMap.getUserAffinitiesMap());
+  const obj2 = require("initialize");
+  const items2 = [SortedGuildStore];
+  const stateFromStores1 = require("initialize").useStateFromStores(items2, () =>
+    flattenedGuildIds.getFlattenedGuildIds(),
   );
   const items3 = [tmp3, stateFromStores];
   let tmp7 = stateFromStores1(() => {
@@ -46,8 +44,8 @@ export default function useUserProfileMutuals(arg0) {
     if (null != closure_1) {
       sortByResult = arr;
       if (arr.length >= 2) {
-        sortByResult = lib(12).sortBy(arr, (user) => {
-          const value = closure_3.get(user.user.id);
+        sortByResult = _mod12.sortBy(arr, (user) => {
+          value = stateFromStores.get(user.user.id);
           let num;
           if (value != null) {
             num = value.communicationProbability;
@@ -57,34 +55,33 @@ export default function useUserProfileMutuals(arg0) {
           }
           return -1 * num;
         });
-        const obj = lib(12);
       }
     }
     return sortByResult;
   }, items3);
   const items4 = [tmp[2], stateFromStores1];
   let tmp8 = stateFromStores1(() => {
-    if (null != dependencyMap) {
+    if (null != closure_2) {
       if (arr.length >= 2) {
         const _Object = Object;
-        const lib = Object.fromEntries(
-          stateFromStores1.map((arg0, arg1) => {
-            const items = [arg0, arg1];
+        closure_0 = Object.fromEntries(
+          stateFromStores1.map((item, index) => {
+            const items = [item, index];
             return items;
           }),
         );
-        return lib(12).sortBy(arr, (arg0) => {
-          let length = table[arg0.guild.id];
+        return closure_0(closure_2[6]).sortBy(arr, (arg0) => {
+          let length = closure_0[arg0.guild.id];
           if (length == null) {
-            length = closure_1_4.length;
+            length = stateFromStores1.length;
           }
           return length;
         });
       }
     }
-    return dependencyMap;
+    return closure_2;
   }, items4);
-  const obj3 = initialize;
+  const obj3 = require("initialize");
   const tmp9 = usePrevValueDefault(tmp2);
   const tmp10 = usePrevValueDefault(tmp7);
   obj = {
@@ -97,12 +94,12 @@ export default function useUserProfileMutuals(arg0) {
   if (tmp7 == null) {
     tmp7 = tmp10;
   }
-  obj[1] = tmp7;
+  obj.mutualFriends = tmp7;
   if (tmp8 == null) {
     tmp8 = tmp11;
   }
-  obj[2] = tmp8;
-  obj[3] = tmp[3];
-  obj[4] = tmp[4];
+  obj.mutualGuilds = tmp8;
+  obj.isFetching = tmp[3];
+  obj.isFetchingFriends = tmp[4];
   return obj;
 }

@@ -1,14 +1,12 @@
 // discord_app/modules/threads/native/navigateToThreadCreation.tsx
-import set from "../../../../_runtime/00002_set.js";
-import transitionToChannel from "../../routing/transitionToChannel.tsx";
-import patchThreadDefault from "../ThreadActionCreators.tsx";
+import ThreadActionCreatorsDefault from "../ThreadActionCreators.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-let result = set.fileFinishedImporting("modules/threads/native/navigateToThreadCreation.tsx");
+const transitionToChannel = tmp3(4571);
+let result = size.fileFinishedImporting("modules/threads/native/navigateToThreadCreation.tsx");
 
 export const navigateToThreadCreation = function navigateToThreadCreation(channel, Message) {
-  const result = patchThreadDefault.openThreadCreationForMobile(channel, undefined, Message);
-  const obj = patchThreadDefault;
-  const tmp3 = require;
+  const result = ThreadActionCreatorsDefault.openThreadCreationForMobile(channel, undefined, Message);
   if (!obj2.navigateToCreateThread(channel.guild_id, channel.id)) {
     transitionToChannel.transitionToChannel(channel.id);
     const tmp3Result = transitionToChannel;

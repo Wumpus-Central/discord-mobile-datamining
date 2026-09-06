@@ -1,149 +1,126 @@
 // discord_app/modules/in_app_reports/showReportModal.native.tsx
-import _modDef4763 from "../../actions/ModalActionCreators.tsx";
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import ModalActionCreatorsDefault from "../../actions/ModalActionCreators.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
-const require = arg1;
-function _showReportModal() {
-  const self = this;
-  const tmp = callback((arg0, arg1, arg2) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    c6 = 0;
-    c7 = 0;
-    c5 = 0;
-    const iter = (function* (arg0, arg1, arg2) {
-      if (c7 === 2) {
-        c7 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
+const require = fn;
+let closure_5 = async function _showReportModal(arg0, value) {
+  if (c7 === 2) {
+    c7 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c7 = 2;
+      if (0 === c6) {
         if (arg0 === 1) {
-          throw arg1;
+          c7 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c7 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_4 = tmp3;
+          closure_3 = tmp7;
+          closure_131_2 = undefined;
+          closure_131_3 = undefined;
+          closure_131_0 = closure_0;
+          closure_131_1 = closure_1;
+          ({ onSubmit: closure_131_2, isEligibleForFeedback } = closure_2);
+          if (isEligibleForFeedback === undefined) {
+            isEligibleForFeedback = true;
+          }
+          closure_131_3 = isEligibleForFeedback;
+          closure_131_4 = undefined;
+          c6 = 1;
+          c7 = 1;
+          return { value: "PX_16", done: true };
+        }
+      } else if (1 === tmp7) {
+        if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c7 = 3;
+          let obj1 = { value, done: true };
+          return obj1;
+        } else {
+          c5 = 1;
+          const REPORT_TO_MOD = closure_132_0(closure_132_2[1]).ReportMenuTypeSets.REPORT_TO_MOD;
+          const hasItem = REPORT_TO_MOD.has(closure_131_0.name);
+          const obj10 = closure_132_0(closure_132_2[2]);
+          if (hasItem) {
+            c6 = 4;
+            c7 = 1;
+            const obj2 = { value: obj10.getReportMenuForModeratorReport(closure_131_0, closure_131_1), done: false };
+            return obj2;
+          } else {
+            c6 = 3;
+            c7 = 1;
+            const obj3 = { value: obj10.getReportMenu(closure_131_0, closure_131_1), done: false };
+            return obj3;
+          }
         }
       } else {
-        try {
-          c7 = 2;
-          if (0 === c6) {
+        if (2 === tmp7) {
+          c5 = 0;
+          c7 = 3;
+        } else {
+          if (3 === tmp7) {
             if (arg0 === 1) {
               c7 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_4 = tmp3;
-              isEligibleForFeedback = tmp7;
-              let paths;
-              isEligibleForFeedback = undefined;
-              ({ onSubmit: c2, isEligibleForFeedback } = paths);
-              if (isEligibleForFeedback === undefined) {
-                isEligibleForFeedback = true;
-              }
-              closure_4 = undefined;
-              c6 = 1;
-              c7 = 1;
-              return { value: "PX_16", done: true };
+              throw value;
             }
-          } else if (1 === tmp7) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              c5 = 1;
-              const REPORT_TO_MOD = lib(paths[1]).ReportMenuTypeSets.REPORT_TO_MOD;
-              const hasItem = REPORT_TO_MOD.has(lib.name);
-              const obj10 = lib(paths[2]);
-              if (hasItem) {
-                c6 = 4;
-                c7 = 1;
-                const obj2 = { value: null, done: false };
-                obj2[0] = obj10.getReportMenuForModeratorReport(lib, callback);
-                return obj2;
-              } else {
-                c6 = 3;
-                c7 = 1;
-                const obj3 = { value: null, done: false };
-                obj3[0] = obj10.getReportMenu(lib, callback);
-                return obj3;
-              }
-            }
-          } else {
-            if (2 === tmp7) {
-              c5 = 0;
-              c7 = 3;
-            } else {
-              if (3 === tmp7) {
-                if (arg0 === 1) {
-                  c7 = 3;
-                  throw arg1;
-                }
-              } else if (arg0 === 1) {
-                c7 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c5 = 0;
-                c7 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              }
-              closure_4 = arg1;
-              obj1 = callback(paths[3]);
-              const obj4 = { menu: null, reportType: null, afterSubmit: null, isEligibleForFeedback: null };
-              obj4[0] = closure_4;
-              obj4[1] = lib;
-              obj4[2] = paths;
-              obj4[3] = isEligibleForFeedback;
-              obj1.pushLazy(lib(paths[5])(paths[4], paths.paths), obj4, closure_4);
-              c5 = 0;
-            }
+          } else if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
             c5 = 0;
             c7 = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = arg1;
-            return obj5;
+            obj = { value, done: true };
+            return obj;
           }
-        } catch (tmp29) {
-          if (tmp4 === c5) {
-            c7 = tmp2;
-            throw tmp29;
-          } else {
-            c6 = tmp;
-          }
+          closure_131_4 = value;
+          obj1 = closure_132_1(closure_132_2[3]);
+          const obj4 = {
+            menu: closure_131_4,
+            reportType: closure_131_0,
+            afterSubmit: closure_131_2,
+            isEligibleForFeedback: closure_131_3,
+          };
+          obj1.pushLazy(closure_132_0(closure_132_2[5])(closure_132_2[4], closure_132_2.paths), obj4, closure_132_4);
+          c5 = 0;
         }
+        c5 = 0;
+        c7 = 3;
+        const obj5 = { value, done: true };
+        return obj5;
       }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_5 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp29) {
+      if (tmp4 === c5) {
+        c7 = tmp2;
+        throw tmp29;
+      } else {
+        c6 = tmp;
+      }
+    }
   }
-  return applyArgumentsResult;
-}
+};
 const IN_APP_REPORT_MODAL_KEY = "IN_APP_REPORT_MODAL_KEY";
-const result = require("set").fileFinishedImporting("modules/in_app_reports/showReportModal.native.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/in_app_reports/showReportModal.native.tsx");
 
-export const showReportModal = function showReportModal(arg0, arg1, arg2) {
+export const showReportModal = function showReportModal() {
   const self = this;
-  const apply = _showReportModal.apply;
+  const apply = closure_5.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -152,5 +129,5 @@ export const showReportModal = function showReportModal(arg0, arg1, arg2) {
   return applyArgumentsResult;
 };
 export const hideReportModal = function hideReportModal() {
-  _modDef4763.popWithKey(IN_APP_REPORT_MODAL_KEY);
+  ModalActionCreatorsDefault.popWithKey(IN_APP_REPORT_MODAL_KEY);
 };

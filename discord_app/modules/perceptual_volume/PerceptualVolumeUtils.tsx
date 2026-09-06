@@ -1,7 +1,7 @@
 // discord_app/modules/perceptual_volume/PerceptualVolumeUtils.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-let result = set.fileFinishedImporting("modules/perceptual_volume/PerceptualVolumeUtils.tsx");
+let result = size.fileFinishedImporting("modules/perceptual_volume/PerceptualVolumeUtils.tsx");
 
 export const perceptualToAmplitude = function perceptualToAmplitude(arg0) {
   let num = arg1;

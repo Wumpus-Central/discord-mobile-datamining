@@ -1,22 +1,20 @@
 // discord_app/modules/autocompleter/native/UserSearch.worker.tsx
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import set from "../../../../_runtime/00002_set.js";
+import get_ActivityIndicator from "../../../../_runtime/metro/00017__.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const NativeEventEmitter = get_ActivityIndicator.NativeEventEmitter;
 const UserSearchWorkerManager = get_ActivityIndicator.NativeModules.UserSearchWorkerManager;
-let closure_0 = UserSearchWorkerManager;
 class UserSearchWorker extends NativeEventEmitter {
   constructor() {
-    tmp = new tmp(closure_0, new.target, tmp);
-    // ThrowIfThisInitialized (0x7c)
+    tmp = new tmp(UserSearchWorkerManager, new.target, tmp);
     closure_0 = tmp;
     set = new Set();
     tmp.handlers = set;
     tmp.subscription = null;
-    tmp.handleCallback = function handleCallback(arg0) {
-      let handlers = arg0;
+    tmp.handleCallback = function handleCallback(data) {
+      handlers = data;
       handlers = handlers.handlers;
-      const item = handlers.forEach((arg0) => arg0({ data: closure_0 }));
+      const item = handlers.forEach((fn) => fn({ data }));
     };
     return tmp;
   }
@@ -25,10 +23,10 @@ const prototype = UserSearchWorker.prototype;
 prototype["postMessage"] = function postMessage(arg0) {
   if (arg0) {
     const _JSON = JSON;
-    closure_0.onmessage(JSON.stringify(arg0));
+    UserSearchWorkerManager.onmessage(JSON.stringify(arg0));
   } else {
     const _Error = Error;
-    error = new Error("Invalid data");
+    const error = new Error("Invalid data");
     throw error;
   }
 };
@@ -57,19 +55,17 @@ prototype["removeEventListener"] = function removeEventListener(arg0, arg1) {
   }
 };
 prototype["terminate"] = function terminate() {
-  closure_0.terminate();
+  UserSearchWorkerManager.terminate();
 };
 tmp = new tmp(UserSearchWorkerManager, prototype, "terminate", UserSearchWorkerManager, UserSearchWorker);
-// ThrowIfThisInitialized (0x7c)
-closure_0 = tmp;
-let set = new Set();
-tmp.handlers = set;
+let closure_129_0 = tmp;
+tmp.handlers = new Set();
 tmp.subscription = null;
-tmp.handleCallback = function handleCallback(arg0) {
-  let handlers = arg0;
+tmp.handleCallback = function handleCallback(data) {
+  handlers = data;
   handlers = handlers.handlers;
-  const item = handlers.forEach((arg0) => arg0({ data: closure_0 }));
+  const item = handlers.forEach((fn) => fn({ data }));
 };
-const result = set.fileFinishedImporting("modules/autocompleter/native/UserSearch.worker.tsx");
+const result = size.fileFinishedImporting("modules/autocompleter/native/UserSearch.worker.tsx");
 
 export default tmp;

@@ -1,7 +1,7 @@
 // discord_app/modules/messages/native/getEmbeddedActivityKey.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/messages/native/getEmbeddedActivityKey.tsx");
+const result = size.fileFinishedImporting("modules/messages/native/getEmbeddedActivityKey.tsx");
 
 export default function getEmbeddedActivityKey(location) {
   return "" + location.location.id + ":" + location.applicationId + ":" + location.launchId;
@@ -11,7 +11,7 @@ export const parseEmbeddedActivityKey = function parseEmbeddedActivityKey(str) {
   let tmp = null;
   if (parts.length >= 3) {
     const obj = { channelId: null, applicationId: null, instanceId: null };
-    [obj[0], obj[1], obj[2]] = parts;
+    [obj.channelId, obj.applicationId, obj.instanceId] = parts;
     tmp = obj;
   }
   return tmp;

@@ -1,28 +1,27 @@
 // discord_app/modules/forwarding/canForwardMessage.tsx
-import hasFlag from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import closure_2 from "../channel/GatedChannelStore.tsx";
-import closure_3 from "../../stores/ChannelStore.tsx";
-import closure_4 from "../../stores/GuildStore.tsx";
-import closure_5 from "../../stores/PermissionStore.tsx";
-import ME from "../../Constants.tsx";
+import FlagUtils from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import GatedChannelStore from "../channel/GatedChannelStore.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
+import GuildStore from "../../stores/GuildStore.tsx";
+import PermissionStore from "../../stores/PermissionStore.tsx";
 
-require = arg1;
-function canForwardMessage(state) {
-  let obj = arg1;
-  if (arg1 === undefined) {
-    obj = closure_5;
+require = fn;
+function canForwardMessage(state, PermissionStore, GatedChannelStore, ChannelStore, GuildStore) {
+  let obj = PermissionStore;
+  if (PermissionStore === undefined) {
+    obj = PermissionStore;
   }
-  let obj2 = arg2;
-  if (arg2 === undefined) {
-    obj2 = closure_2;
+  let obj2 = GatedChannelStore;
+  if (GatedChannelStore === undefined) {
+    obj2 = GatedChannelStore;
   }
-  let obj3 = arg3;
-  if (arg3 === undefined) {
-    obj3 = closure_3;
+  let obj3 = ChannelStore;
+  if (ChannelStore === undefined) {
+    obj3 = ChannelStore;
   }
-  let obj4 = arg4;
-  if (arg4 === undefined) {
-    obj4 = closure_4;
+  let obj4 = GuildStore;
+  if (GuildStore === undefined) {
+    obj4 = GuildStore;
   }
   if (null == state) {
     return false;
@@ -48,8 +47,7 @@ function canForwardMessage(state) {
       hasItem = null == state.activityInstance;
     }
     if (hasItem) {
-      hasItem = 0 === hasFlag.removeFlag(state.flags, closure_10);
-      const obj5 = hasFlag;
+      hasItem = 0 === FlagUtils.removeFlag(state.flags, closure_10);
     }
     if (hasItem) {
       const channel = obj3.getChannel(state.channel_id);
@@ -94,7 +92,14 @@ function canForwardMessage(state) {
     }
   }
 }
-({ GuildFeatures: closure_6, MessageFlags, MessageStates: error, MessageTypesSets: closure_8, Permissions: c9 } = ME);
+const Constants = fn(1074);
+({
+  GuildFeatures: metroRequire,
+  MessageFlags,
+  MessageStates: closure_7,
+  MessageTypesSets: closure_8,
+  Permissions: closure_9,
+} = Constants);
 let closure_10 =
   MessageFlags.CROSSPOSTED |
   MessageFlags.FAILED_TO_MENTION_SOME_ROLES_IN_THREAD |
@@ -110,13 +115,14 @@ let closure_10 =
   MessageFlags.IS_COMPONENTS_V2 |
   MessageFlags.IS_GUILD_OFFICIAL |
   MessageFlags.IS_SCHEDULED;
-const result = require("set").fileFinishedImporting("modules/forwarding/canForwardMessage.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/forwarding/canForwardMessage.tsx");
 
 export { canForwardMessage };
 export const useCanForwardMessage = function useCanForwardMessage(message) {
-  const _require = message;
-  const items = [closure_5, closure_2, closure_3, closure_4];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
-    closure_1_11(closure_0, closure_1_5, closure_1_2, closure_1_3, closure_1_4),
+  _require = message;
+  const items = [PermissionStore, GatedChannelStore, ChannelStore, GuildStore];
+  return require("initialize").useStateFromStores(items, () =>
+    canForwardMessage(closure_0, PermissionStore, GatedChannelStore, ChannelStore, GuildStore),
   );
 };

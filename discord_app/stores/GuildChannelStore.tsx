@@ -1,23 +1,20 @@
 // discord_app/stores/GuildChannelStore.tsx
-import applyDefault from "../../_runtime/00012_apply.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../Dispatcher.tsx";
-import fromStringAll from "../../discord_common/js/shared/utils/BigFlagUtils.tsx";
-import applyOverwritesAll from "../utils/PermissionUtils.tsx";
-import closure_4 from "../modules/channel/GatedChannelStore.tsx";
-import closure_5 from "../modules/favorites/FavoriteStore.tsx";
-import { createFavoritesGuildChannelRecord as closure_6 } from "../modules/favorites/utils/createFavoritesGuildChannelRecord.tsx";
-import createChannelRecord from "../records/ChannelRecord.tsx";
-import closure_10 from "AuthenticationStore.tsx";
-import closure_11 from "ChannelStore.tsx";
-import closure_12 from "GuildMemberStore.tsx";
-import closure_13 from "GuildStore.tsx";
-import closure_14 from "PermissionStore.tsx";
-import closure_15 from "RelationshipStore.tsx";
-import closure_16 from "UserStore.tsx";
-import ME from "../Constants.tsx";
+import DispatcherDefault from "../Dispatcher.tsx";
+import BigFlagUtilsAll from "../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import PermissionUtilsAll from "../utils/PermissionUtils.tsx";
+import useChannelName from "../modules/channel/useChannelName.tsx";
+import GatedChannelStore from "../modules/channel/GatedChannelStore.tsx";
+import FavoriteStore from "../modules/favorites/FavoriteStore.tsx";
+import AuthenticationStore from "AuthenticationStore.tsx";
+import ChannelStore from "ChannelStore.tsx";
+import GuildMemberStore from "GuildMemberStore.tsx";
+import GuildStore from "GuildStore.tsx";
+import PermissionStore from "PermissionStore.tsx";
+import RelationshipStore from "RelationshipStore.tsx";
+import UserStore from "UserStore.tsx";
 
-const require = arg1;
+require = fn;
 function comparator(comparator, comparator2) {
   return comparator.comparator - comparator2.comparator;
 }
@@ -38,31 +35,23 @@ function rebuildGuildChannels(guildId) {
   obj[ChannelTypes.GUILD_CATEGORY] = items;
   obj.count = 0;
   closure_24[guildId] = obj;
-  closure_28[guildId] = [];
-  let obj2 = obj;
-  importDefault = undefined;
+  dependencyMap[guildId] = [];
   const id = obj.id;
-  importDefault = id;
-  obj1 = obj2(1982);
+  let obj1 = obj(1982);
   obj = {};
   if (obj1.isFavoritesGuildId(id)) {
-    favoriteChannels = favoriteChannels.getFavoriteChannels();
+    const favoriteChannels = FavoriteStore.getFavoriteChannels();
     let tmp7 = obj;
     const keys = Object.keys();
     if (keys !== undefined) {
       tmp7 = obj;
       while (keys[tmp] !== undefined) {
-        let tmp25 = tmp15;
-        let tmp26 = store;
-        let channel = store.getChannel(tmp15);
+        let channel = ChannelStore.getChannel(tmp15);
         if (null == channel) {
           continue;
         } else {
-          let tmp16 = callback;
-          let tmp17 = callback(favoriteChannels, favoriteChannels[tmp15], channel);
-          obj = { channel: null, comparator: null };
-          obj[0] = tmp17;
-          obj[1] = tmp17.position;
+          let tmp17 = closure_6(favoriteChannels, favoriteChannels[tmp15], channel);
+          obj = { channel: tmp17, comparator: tmp17.position };
           obj[tmp15] = obj;
           continue;
         }
@@ -70,56 +59,53 @@ function rebuildGuildChannels(guildId) {
       }
     }
   } else {
-    const mutableGuildChannelsForGuild = store.getMutableGuildChannelsForGuild(id);
+    const mutableGuildChannelsForGuild = ChannelStore.getMutableGuildChannelsForGuild(id);
     tmp7 = obj;
     const keys1 = Object.keys();
     if (keys1 !== undefined) {
       tmp7 = obj;
       while (keys1[tmp] !== undefined) {
-        let tmp24 = tmp9;
-        obj1 = { channel: null, comparator: null };
-        obj1[0] = mutableGuildChannelsForGuild[tmp9];
-        obj1[1] = mutableGuildChannelsForGuild[tmp9].position;
+        obj1 = { channel: mutableGuildChannelsForGuild[tmp9], comparator: mutableGuildChannelsForGuild[tmp9].position };
         obj[tmp9] = obj1;
         continue;
       }
     }
   }
-  const item = applyDefault.forEach(tmp7, (channel) => {
+  const item = id(12).forEach(tmp7, (channel) => {
     channel = channel.channel;
-    obj2.count = obj2.count + 1;
+    obj.count = obj.count + 1;
     let type = channel.type;
-    if (closure_1_7(type)) {
-      type = closure_1_21;
-    } else if (closure_1_9(type)) {
-      type = closure_1_22;
+    if (React5(type)) {
+      type = SELECTABLE;
+    } else if (React7(type)) {
+      type = VOCAL;
     }
-    if (channel.type === closure_1_18.GUILD_DIRECTORY) {
-      if (null == closure_1_28[closure_1]) {
-        closure_1_28[tmp8] = [];
+    if (channel.type === ChannelTypes.GUILD_DIRECTORY) {
+      if (null == dependencyMap[id]) {
+        dependencyMap[tmp8] = [];
       }
-      let arr = closure_1_28[tmp8];
+      let arr = dependencyMap[tmp8];
       arr = arr.push(channel);
     }
-    if (null != obj2[type]) {
+    if (null != obj[type]) {
       arr = tmp[type].push(channel);
-      const arr2 = tmp[type];
     }
   });
   const sorted = obj[SELECTABLE].sort(comparator);
   const sorted1 = obj[VOCAL].sort(comparator);
   const sorted2 = obj[ChannelTypes.GUILD_CATEGORY].sort(comparator);
-  obj2 = undefined;
-  importDefault = undefined;
-  obj2 = {};
+  const obj2 = {};
   closure_25[obj.id] = obj2;
-  importDefault = {};
+  closure_129_0 = obj2;
+  closure_129_1 = {};
   const item1 = obj[SELECTABLE].forEach((channel) => {
     channel = channel.channel;
-    const channelName = obj2(closure_1_3[14]).computeChannelName(channel, closure_1_16, closure_1_15);
+    obj = useChannelName;
+    const channelName = obj.computeChannelName(channel, UserStore, RelationshipStore);
+    hasOwnProperty = Object.prototype.hasOwnProperty;
     const call = hasOwnProperty.call;
     let tmp3 = null;
-    if (typeof call === "unknown" ? hasOwnProperty(channelName) : call(closure_1, channelName)) {
+    if (typeof call === "unknown" ? hasOwnProperty(channelName) : call(id, channelName)) {
       tmp3 = tmp2[channelName];
     }
     if (null == tmp3) {
@@ -130,41 +116,37 @@ function rebuildGuildChannels(guildId) {
       const _HermesInternal = HermesInternal;
       sum = channelName + "~" + tmp3;
     }
-    obj2[channel.id] = { id: channel.id, name: sum };
+    obj[channel.id] = { id: channel.id, name: sum };
   });
   if (
     (function calculateGuildHasElevatedPermissions(currentUser, guildId) {
       guild = guild.getGuild(guildId);
       if (null != guild) {
-        if (callback2(currentUser, guild)) {
+        if (hasElevatedPermissions(currentUser, guild)) {
           return true;
         }
       }
-      let tmp3 = table[guildId];
+      let tmp3 = dependencyMap[guildId];
       if (null == tmp3) {
-        tmp3 = callback(guildId);
+        tmp3 = rebuildGuildChannels(guildId);
       }
-      obj = tmp3[closure_21][Symbol.iterator]();
+      obj = tmp3[SELECTABLE][Symbol.iterator]();
       while (obj !== undefined) {
-        let tmp7 = callback2;
-        if (callback2(currentUser, tmp6.channel)) {
-          let tmp8 = obj;
+        if (hasElevatedPermissions(currentUser, tmp6.channel)) {
           obj.return();
           let flag = true;
           return true;
         }
       }
       for (const item10033 of tmp5) {
-        let tmp9 = callback2;
-        if (callback2(arg0, item10033.channel)) {
-          let tmp10 = obj2;
+        if (hasElevatedPermissions(arg0, item10033.channel)) {
           obj2.return();
           let flag2 = true;
           return true;
         }
       }
       return false;
-    })(currentUser.getCurrentUser(), guildId)
+    })(UserStore.getCurrentUser(), guildId)
   ) {
     tmp23[guildId] = true;
   } else {
@@ -202,32 +184,35 @@ function handleGuildRoleUpdate(guildId) {
   }
 }
 function hasElevatedPermissions(user, context) {
-  obj = fromStringAll;
   obj = { user, context, checkElevated: false };
-  return obj.hasAny(applyOverwritesAll.computePermissions(obj), closure_20);
+  return obj.hasAny(PermissionUtilsAll.computePermissions(obj), closure_1_20);
 }
 function handleFavoritesUpdate() {
-  rebuildGuildChannels(closure_17);
+  rebuildGuildChannels(closure_1_17);
 }
+let closure_6 = fn(4198).createFavoritesGuildChannelRecord;
+const ChannelRecord = fn(1961);
 ({
-  isGuildSelectableChannelType: error,
+  isGuildSelectableChannelType: closure_7,
   GUILD_NON_CATEGORY_CHANNEL_TYPES: closure_8,
-  isGuildVocalChannelType: c9,
+  isGuildVocalChannelType: closure_9,
   createChannelRecord,
-} = createChannelRecord);
-({ FAVORITES: closure_17, ChannelTypes } = ME);
-({ Permissions: closure_19, ElevatedPermissions: closure_20 } = ME);
+} = ChannelRecord);
+const Constants = fn(1074);
+({ FAVORITES: closure_17, ChannelTypes } = Constants);
+({ Permissions: closure_19, ElevatedPermissions: closure_20 } = Constants);
 const SELECTABLE = "SELECTABLE";
 const VOCAL = "VOCAL";
 let c23 = null;
-let closure_24 = {};
+const dependencyMap = {};
 let closure_25 = {};
 let closure_26 = {};
-let c27 = null;
+let channelId = null;
 let closure_28 = {};
-obj = { comparator: -1, channel: createChannelRecord(obj) };
-obj = { id: ME.NULL_STRING_CHANNEL_ID, type: ChannelTypes.GUILD_CATEGORY, name: "Uncategorized" };
-obj = { id: ME.NULL_STRING_GUILD_ID, SELECTABLE: [], VOCAL: [] };
+let obj = { comparator: -1, channel: null };
+obj = { id: Constants.NULL_STRING_CHANNEL_ID, type: ChannelTypes.GUILD_CATEGORY, name: "Uncategorized" };
+obj.channel = createChannelRecord(obj);
+obj = { id: Constants.NULL_STRING_GUILD_ID, SELECTABLE: [], VOCAL: [] };
 let items = [obj];
 obj[ChannelTypes.GUILD_CATEGORY] = items;
 obj.count = 0;
@@ -237,8 +222,17 @@ const Store = initializeDefault.Store;
 class GuildChannelStore extends Store {}
 const prototype = GuildChannelStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_10, closure_11, closure_5, closure_4, closure_12, closure_13, closure_14, closure_16);
-  const items = [closure_5];
+  this.waitFor(
+    AuthenticationStore,
+    ChannelStore,
+    FavoriteStore,
+    GatedChannelStore,
+    GuildMemberStore,
+    GuildStore,
+    PermissionStore,
+    UserStore,
+  );
+  const items = [FavoriteStore];
   this.syncWith(items, handleFavoritesUpdate);
 };
 prototype["getAllGuilds"] = function getAllGuilds() {
@@ -256,8 +250,8 @@ prototype["getChannels"] = function getChannels(guildId) {
   }
   return tmp;
 };
-prototype["getFirstChannelOfType"] = function getFirstChannelOfType(arg0, closure_4) {
-  const found = this.getChannels(arg0)[arg2].find(closure_4);
+prototype["getFirstChannelOfType"] = function getFirstChannelOfType(arg0, _messages, arg2) {
+  const found = this.getChannels(arg0)[arg2].find(_messages);
   let channel = null;
   if (null != found) {
     channel = found.channel;
@@ -287,7 +281,7 @@ prototype["getDefaultChannel"] = function getDefaultChannel(id, flag, CREATE_INS
   if (CREATE_INSTANT_INVITE === undefined) {
     VIEW_CHANNEL = constants.VIEW_CHANNEL;
   }
-  return this.getFirstChannel(id, (channel) => closure_1_14.can(VIEW_CHANNEL, channel.channel), flag);
+  return this.getFirstChannel(id, (channel) => PermissionStore.can(VIEW_CHANNEL, channel.channel), flag);
 };
 prototype["getSFWDefaultChannel"] = function getSFWDefaultChannel(id, flag) {
   if (flag === undefined) {
@@ -299,22 +293,22 @@ prototype["getSFWDefaultChannel"] = function getSFWDefaultChannel(id, flag) {
   }
   return this.getFirstChannel(
     id,
-    (channel) => closure_1_14.can(VIEW_CHANNEL, channel.channel) && !channel.channel.nsfw,
+    (channel) => PermissionStore.can(VIEW_CHANNEL, channel.channel) && !channel.channel.nsfw,
     flag,
   );
 };
-prototype["getSelectableChannelIds"] = function getSelectableChannelIds(closure_0) {
-  return this.getChannels(closure_0)[SELECTABLE].map((channel) => channel.channel.id);
+prototype["getSelectableChannelIds"] = function getSelectableChannelIds(guildId) {
+  return this.getChannels(guildId)[SELECTABLE].map((channel) => channel.channel.id);
 };
 prototype["getSelectableChannels"] = function getSelectableChannels(arg0) {
   return this.getChannels(arg0)[SELECTABLE];
 };
-prototype["getVocalChannelIds"] = function getVocalChannelIds(guildId) {
-  return this.getChannels(guildId)[VOCAL].map((channel) => channel.channel.id);
+prototype["getVocalChannelIds"] = function getVocalChannelIds(set) {
+  return this.getChannels(set)[VOCAL].map((channel) => channel.channel.id);
 };
 prototype["getDirectoryChannelIds"] = function getDirectoryChannelIds(guildId) {
   let mapped;
-  if (table3[guildId] != null) {
+  if (closure_28[guildId] != null) {
     mapped = arr.map((channel) => channel.channel.id);
   }
   if (mapped == null) {
@@ -322,12 +316,12 @@ prototype["getDirectoryChannelIds"] = function getDirectoryChannelIds(guildId) {
   }
   return mapped;
 };
-prototype["hasSelectableChannel"] = function hasSelectableChannel(closure_0) {
-  const selectableChannelIds = this.getSelectableChannelIds(closure_0);
+prototype["hasSelectableChannel"] = function hasSelectableChannel(guildId, arg1) {
+  const selectableChannelIds = this.getSelectableChannelIds(guildId);
   return selectableChannelIds.includes(arg1);
 };
 prototype["hasElevatedPermissions"] = function hasElevatedPermissions(arg0) {
-  return table2[arg0] || false;
+  return closure_26[arg0] || false;
 };
 prototype["hasChannels"] = function hasChannels(arg0) {
   return this.getChannels(arg0).count > 0;
@@ -337,7 +331,7 @@ prototype["hasCategories"] = function hasCategories(guild_id) {
 };
 prototype["getTextChannelNameDisambiguations"] = function getTextChannelNameDisambiguations(guildId) {
   if (null != guildId) {
-    let tmp3 = table[guildId];
+    let tmp3 = closure_25[guildId];
     if (tmp3 == null) {
       tmp3 = closure_32;
     }
@@ -348,7 +342,7 @@ prototype["getTextChannelNameDisambiguations"] = function getTextChannelNameDisa
   return tmp;
 };
 GuildChannelStore.displayName = "GuildChannelStore";
-const guildChannelStore = new GuildChannelStore(dispatcherDefault, {
+const guildChannelStore = new GuildChannelStore(DispatcherDefault, {
   BACKGROUND_SYNC: resetAllGuildChannels,
   CHANNEL_SELECT: function handleChannelSelect(guildId) {
     guildId = guildId.guildId;
@@ -380,7 +374,7 @@ const guildChannelStore = new GuildChannelStore(dispatcherDefault, {
   },
   GUILD_MEMBER_UPDATE: function handleGuildMemberUpdate(guildId) {
     guildId = guildId.guildId;
-    if (id.getId() !== guildId.user.id) {
+    if (AuthenticationStore.getId() !== guildId.user.id) {
       return false;
     } else {
       closure_24[guildId] = undefined;
@@ -398,14 +392,9 @@ const guildChannelStore = new GuildChannelStore(dispatcherDefault, {
       let guild_id = iter.next().guild_id;
       let tmp = guild_id;
       if (null != guild_id) {
-        let tmp2 = closure_24;
-        let tmp3 = guild_id;
         closure_24[tmp] = undefined;
         flag = true;
-        let tmp4 = c23;
         if (c23 === tmp) {
-          let tmp5 = rebuildGuildChannels;
-          let tmp6 = guild_id;
           let tmp7 = rebuildGuildChannels(tmp);
         }
       }
@@ -422,7 +411,7 @@ const guildChannelStore = new GuildChannelStore(dispatcherDefault, {
     channelId = channelId.channelId;
     if (null == channelId) {
       if (null != channelId) {
-        const channel = store.getChannel(channelId);
+        const channel = ChannelStore.getChannel(channelId);
         channelId = null;
         let guildId;
         if (channel != null) {
@@ -444,7 +433,7 @@ const guildChannelStore = new GuildChannelStore(dispatcherDefault, {
       }
       return flag;
     }
-    const channel1 = store.getChannel(channelId);
+    const channel1 = ChannelStore.getChannel(channelId);
     let guildId1;
     if (channel1 != null) {
       guildId1 = channel1.getGuildId();
@@ -463,16 +452,16 @@ const guildChannelStore = new GuildChannelStore(dispatcherDefault, {
     }
   },
   VOICE_CHANNEL_STATUS_UPDATE: function handleVoiceChannelStatusUpdate(id) {
-    const basicChannel = store.getBasicChannel(id.id);
+    const basicChannel = ChannelStore.getBasicChannel(id.id);
     if (tmp2) {
       rebuildGuildChannels(basicChannel.guild_id);
     }
   },
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
     voiceStates = voiceStates.voiceStates;
-    return voiceStates.reduce((arg0, channelId) => {
+    return voiceStates.reduce((acc, channelId) => {
       channelId = channelId.channelId;
-      let tmp = arg0;
+      let tmp = acc;
       if (sessionId.getSessionId() === channelId.sessionId) {
         channel = channel.getChannel(channelId);
         let guildId;
@@ -484,15 +473,15 @@ const guildChannelStore = new GuildChannelStore(dispatcherDefault, {
         }
         let flag = null != guildId;
         if (flag) {
-          closure_24[guildId] = undefined;
+          dependencyMap[guildId] = undefined;
           flag = true;
-          if (guildId === closure_23) {
-            callback(guildId);
+          if (guildId === closure_1_23) {
+            rebuildGuildChannels(guildId);
             flag = true;
           }
         }
         if (!flag) {
-          flag = arg0;
+          flag = acc;
         }
         tmp = flag;
       }
@@ -500,7 +489,8 @@ const guildChannelStore = new GuildChannelStore(dispatcherDefault, {
     }, false);
   },
 });
-const result = require("set").fileFinishedImporting("stores/GuildChannelStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("stores/GuildChannelStore.tsx");
 
 export default guildChannelStore;
 export const GUILD_SELECTABLE_CHANNELS_KEY = "SELECTABLE";

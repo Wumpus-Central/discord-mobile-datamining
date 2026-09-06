@@ -1,21 +1,24 @@
 // discord_app/modules/directory_channels/native/components/GuildDirectoryCategorySelector.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_7 from "../../GuildDirectoryStore.tsx";
-import DirectoryEntryTypes from "../../GuildDirectoryConstants.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
+import GuildDirectoryActionCreatorsAll from "../../GuildDirectoryActionCreators.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import GuildDirectoryStore from "../../GuildDirectoryStore.tsx";
 
-const require = arg1;
-({ DirectoryEntryCategories: closure_8, getHubCategories: c9 } = DirectoryEntryTypes);
-({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-createCacheKey = { categoriesListWrapper: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, paddingTop: 12 };
-createCacheKey[0] = createCacheKey;
-let closure_12 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting(
+require = fn;
+const View = fn(17).View;
+const GuildDirectoryConstants = fn(12305);
+({ DirectoryEntryCategories: closure_8, getHubCategories: closure_9 } = GuildDirectoryConstants);
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+fn(4560);
+let createStyles = { categoriesListWrapper: null };
+createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, paddingTop: 12 };
+createStyles.categoriesListWrapper = createStyles;
+let closure_12 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/directory_channels/native/components/GuildDirectoryCategorySelector.tsx",
 );
 
@@ -23,23 +26,22 @@ export default function GuildDirectoryCategorySelector(channel) {
   channel = channel.channel;
   ({ onCategorySelected: importDefault, categoryCounts } = channel);
   const allEntriesCount = channel.allEntriesCount;
-  let callback;
+  _slicedToArray = undefined;
   let stateFromStores;
-  let memo;
-  const tmp = callback4();
-  [tmp3, c4] = callback(stateFromStores.useState(0), 2);
-  callback = stateFromStores.useCallback((nativeEvent) => {
+  const tmp = closure_12();
+  [tmp3, c4] = _slicedToArray(stateFromStores.useState(0), 2);
+  const callback = stateFromStores.useCallback((nativeEvent) => {
     _undefined(nativeEvent.nativeEvent.layout.width);
   }, []);
   let obj = channel(allEntriesCount[11]);
-  let items = [closure_7];
-  stateFromStores = obj.useStateFromStores(items, () => closure_1_7.getCurrentCategoryId(channel.id));
+  let items = [GuildDirectoryStore];
+  stateFromStores = obj.useStateFromStores(items, () => GuildDirectoryStore.getCurrentCategoryId(channel.id));
   const items1 = [channel.id];
-  memo = stateFromStores.useMemo(() => {
-    const obj = { value: closure_1_8.ALL, label: null, idealSize: 70 };
-    const intl = channel(allEntriesCount[8]).intl;
-    obj[1] = intl.string(channel(allEntriesCount[8]).t.hEAa2a);
-    const items = [obj, ...closure_1_9(channel.id)];
+  const memo = stateFromStores.useMemo(() => {
+    const obj = { value: constants.ALL, label: null, idealSize: 70 };
+    const intl = util.intl;
+    obj.label = intl.string(util.t.hEAa2a);
+    const items = [obj, ...closure_2_9(channel.id)];
     return items;
   }, items1);
   const items2 = [memo, categoryCounts, allEntriesCount];
@@ -48,53 +50,52 @@ export default function GuildDirectoryCategorySelector(channel) {
     () =>
       memo.map((label) => {
         const obj = { label: label.label, id: String(label.value), count: null, page: null };
-        if (label.value === closure_1_8.ALL) {
-          let tmp3 = closure_3;
-        } else if (closure_2 != null) {
+        if (label.value === constants.ALL) {
+          let tmp3 = allEntriesCount;
+        } else if (categoryCounts != null) {
           tmp3 = tmp[label.value];
         }
-        obj[2] = tmp3;
+        obj.count = tmp3;
         return obj;
       }),
     items2,
   );
   const memo2 = stateFromStores.useMemo(() => {
-    const findIndexResult = memo.findIndex((value) => value.value === closure_5);
+    const findIndexResult = memo.findIndex((value) => value.value === stateFromStores);
     let num = 0;
     if (-1 !== findIndexResult) {
       num = findIndexResult;
     }
     return num;
   }, items3);
-  const tmp2 = callback(stateFromStores.useState(0), 2);
+  const tmp2 = _slicedToArray(stateFromStores.useState(0), 2);
   obj = {
     items: memo1,
     defaultIndex: memo2,
     onSetActiveIndex(arg0) {
-      let value;
+      value = undefined;
       if (memo[arg0] != null) {
         value = iter.value;
       }
       if (value !== stateFromStores) {
-        const directoryCategory = categoryCounts(allEntriesCount[13]).selectDirectoryCategory(channel.id, value);
-        callback();
-        const obj = categoryCounts(allEntriesCount[13]);
+        const directoryCategory = GuildDirectoryActionCreatorsAll.selectDirectoryCategory(channel.id, value);
+        importDefault();
       }
     },
     pageWidth: tmp3,
   };
   const segmentedControlState = channel(allEntriesCount[12]).useSegmentedControlState(obj);
   const obj2 = channel(allEntriesCount[12]);
-  const token = channel(allEntriesCount[9]).useToken(importDefault(allEntriesCount[7]).colors.BACKGROUND_BASE_LOW);
+  const token = channel(allEntriesCount[9]).useToken(require("native").colors.BACKGROUND_BASE_LOW);
   const items4 = [token];
   const obj4 = channel(allEntriesCount[9]);
-  const obj5 = importDefault(allEntriesCount[10])(token);
-  items4[1] = importDefault(allEntriesCount[10])(token).alpha(0).hex();
+  const obj5 = require("../../../../../_runtime/metro/00672__.js")(token);
+  items4[1] = require("../../../../../_runtime/metro/00672__.js")(token).alpha(0).hex();
   obj = { style: tmp.categoriesListWrapper, onLayout: callback, children: null };
   const items5 = [
-    callback2(channel(allEntriesCount[14]).Tabs, { state: segmentedControlState }),
-    callback2(importDefault(allEntriesCount[15]), { state: segmentedControlState, colors: items4 }),
+    closure_10(channel(allEntriesCount[14]).Tabs, { state: segmentedControlState }),
+    closure_10(require("TabsGradient"), { state: segmentedControlState, colors: items4 }),
   ];
-  obj[2] = items5;
-  return callback3(memo, obj);
+  obj.children = items5;
+  return closure_11(memo, obj);
 }

@@ -1,29 +1,29 @@
 // discord_app/modules/notification_center/NotificationCenterUtils.tsx
-import set from "../../../_runtime/00002_set.js";
-import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
-import explicitContentFromProto from "../user_settings/UserSettings.tsx";
-import NotificationCenterScenes from "NotificationCenterItemsTypes.tsx";
-import getDurationString from "getTimestampString.tsx";
-import getDurationStringDefault from "getTimestampString.tsx";
+import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
+import UserSettings from "../user_settings/UserSettings.tsx";
+import NotificationCenterItemsTypes from "NotificationCenterItemsTypes.tsx";
+import notification_center_getTimestampString from "getTimestampString.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/notification_center/NotificationCenterUtils.tsx");
+const notification_center_getTimestampStringDefault = notification_center_getTimestampString;
+
+const result = size.fileFinishedImporting("modules/notification_center/NotificationCenterUtils.tsx");
 
 export const getRelativeTimestamp = function getRelativeTimestamp(extractTimestampResult, flag) {
   if (flag === undefined) {
     flag = true;
   }
   const obj = { since: extractTimestampResult, getFormatter: null };
-  const tmp2 = getDurationString;
-  obj[1] = flag ? tmp2.getAbbreviatedFormatter : tmp2.getFullFormatter;
-  return getDurationStringDefault(obj);
+  const tmp2 = notification_center_getTimestampString;
+  obj.getFormatter = flag ? tmp2.getAbbreviatedFormatter : tmp2.getFullFormatter;
+  return notification_center_getTimestampStringDefault(obj);
 };
-export const isRemoteAcked = function isRemoteAcked(addResult, closure_1) {
+export const isRemoteAcked = function isRemoteAcked(addResult, setting) {
   let acked = addResult.acked;
   if (!acked) {
-    let tmp4 = closure_1 !== explicitContentFromProto.NOTIFICATION_CENTER_ACKED_BEFORE_ID_UNSET;
+    let tmp4 = setting !== UserSettings.NOTIFICATION_CENTER_ACKED_BEFORE_ID_UNSET;
     if (tmp4) {
-      tmp4 = DISCORD_EPOCHDefault.compare(closure_1, addResult.id) >= 0;
-      const obj = DISCORD_EPOCHDefault;
+      tmp4 = SnowflakeUtilsDefault.compare(setting, addResult.id) >= 0;
     }
     acked = tmp4;
   }
@@ -34,7 +34,7 @@ export const incomingFriendRequestLocalItem = function incomingFriendRequestLoca
   since,
   origin_application_id,
 ) {
-  let obj = DISCORD_EPOCHDefault;
+  let obj = SnowflakeUtilsDefault;
   const fromTimestampResult = obj.fromTimestamp(new Date(since).getTime());
   obj = {
     acked: false,
@@ -43,7 +43,7 @@ export const incomingFriendRequestLocalItem = function incomingFriendRequestLoca
     kind: "notification-center-item",
     local_id: "incoming_friend_requests_" + user.id + "_" + fromTimestampResult,
     deeplink: "https://discord.com/users/" + user.id,
-    type: NotificationCenterScenes.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS,
+    type: NotificationCenterItemsTypes.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS,
     id: fromTimestampResult,
     applicationId: origin_application_id,
   };
@@ -54,7 +54,7 @@ export const incomingGameFriendRequestLocalItem = function incomingGameFriendReq
   since,
   applicationId,
 ) {
-  let obj = DISCORD_EPOCHDefault;
+  let obj = SnowflakeUtilsDefault;
   const fromTimestampResult = obj.fromTimestamp(new Date(since).getTime());
   obj = {
     acked: false,
@@ -63,7 +63,7 @@ export const incomingGameFriendRequestLocalItem = function incomingGameFriendReq
     kind: "notification-center-item",
     local_id: "incoming_game_friend_requests_" + user.id + "_" + fromTimestampResult,
     deeplink: "https://discord.com/users/" + user.id,
-    type: NotificationCenterScenes.NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS,
+    type: NotificationCenterItemsTypes.NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS,
     id: fromTimestampResult,
     applicationId,
   };
@@ -79,17 +79,17 @@ export const mobileNativeUpdateAvailableLocalItem = function mobileNativeUpdateA
     type: null,
     deeplink: null,
   };
-  const obj2 = DISCORD_EPOCHDefault;
-  obj[2] = obj2.fromTimestamp(new Date().getTime());
-  obj[4] = "mobile_update_available_" + newBuild.build;
-  obj[5] = NotificationCenterScenes.NotificationCenterLocalItems.MOBILE_NATIVE_UPDATE_AVAILABLE;
-  obj[6] = newBuild.urls.install.toString();
+  const obj2 = SnowflakeUtilsDefault;
+  obj.id = obj2.fromTimestamp(new Date().getTime());
+  obj.local_id = "mobile_update_available_" + newBuild.build;
+  obj.type = NotificationCenterItemsTypes.NotificationCenterLocalItems.MOBILE_NATIVE_UPDATE_AVAILABLE;
+  obj.deeplink = newBuild.urls.install.toString();
   return obj;
 };
 export const isMentionItem = function isMentionItem(addResult) {
-  let tmp3 = addResult.type === NotificationCenterScenes.NotificationCenterItems.RECENT_MENTION;
+  let tmp3 = addResult.type === NotificationCenterItemsTypes.NotificationCenterItems.RECENT_MENTION;
   if (!tmp3) {
-    tmp3 = addResult.type === NotificationCenterScenes.NotificationCenterItems.REPLY_MENTION;
+    tmp3 = addResult.type === NotificationCenterItemsTypes.NotificationCenterItems.REPLY_MENTION;
   }
   return tmp3;
 };

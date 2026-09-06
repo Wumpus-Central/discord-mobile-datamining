@@ -1,138 +1,107 @@
 // discord_app/modules/auth_sessions/AuthSessionsActionCreators.tsx
-import dispatcherDefault from "../../Dispatcher.tsx";
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import { Endpoints } from "../../Constants.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
-const require = arg1;
-function _fetchAuthSessions() {
-  const self = this;
-  const tmp = callback(function* () {
-    const callback = tmp2;
-    closure_0 = tmp5;
-    const HTTP = closure_1_0(1272).HTTP;
-    obj1 = { url: null, rejectWithError: false };
-    obj1[0] = closure_1_4.AUTH_SESSIONS;
-    closure_0 = yield HTTP.get(obj1);
-    const body = closure_0.body;
-    if (body != null) {
-      const user_sessions = body.user_sessions;
-    }
-    if (null != user_sessions) {
-      const obj = callback(573);
-      const obj4 = { type: "FETCH_AUTH_SESSIONS_SUCCESS", sessions: null };
-      obj4[1] = closure_0.body.user_sessions;
-      obj.dispatch(obj4);
-    }
-    return closure_0;
-  });
-  closure_5 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+require = fn;
+let closure_5 = async function _fetchAuthSessions() {
+  closure_1 = tmp2;
+  closure_0 = tmp5;
+  const HTTP = HTTPUtils.HTTP;
+  closure_128_0 = await HTTP.get({ url: constants.AUTH_SESSIONS, rejectWithError: false });
+  const body = closure_128_0.body;
+  if (body != null) {
+    const user_sessions = body.user_sessions;
   }
-  return applyArgumentsResult;
-}
-function _logOutSessions() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c3 = 0;
-    c4 = 0;
-    return (function* (arg0) {
-      if (constants === 2) {
-        constants = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp5 === 3) {
+  if (null != user_sessions) {
+    closure_129_1(closure_129_2[3]).dispatch({
+      type: "FETCH_AUTH_SESSIONS_SUCCESS",
+      sessions: closure_128_0.body.user_sessions,
+    });
+    closure_129_1(closure_129_2[3]);
+  }
+  return closure_128_0;
+};
+let closure_6 = async function _logOutSessions(arg0, value) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp5 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      let num2 = 0;
+      if (0 === c3) {
         if (arg0 === 1) {
-          throw arg1;
+          c4 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c4 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          constants = 2;
-          let num2 = 0;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              constants = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              constants = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const table = tmp3;
-              let callback2 = tmp2;
-              let HTTP;
-              callback2 = undefined;
-              const _Array = Array;
-              if (Array.isArray(items)) {
-                items = arr2;
-                if (num2 === arr2.length) {
-                  constants = 3;
-                  return { value: "HermesInternal", done: null };
-                }
-              } else {
-                items = [arr2];
-              }
-              HTTP = callback(closure_1_2[2]).HTTP;
-              num2 = HTTP.post;
-              obj1 = { url: null, body: null, rejectWithError: false };
-              obj1[0] = constants.AUTH_SESSIONS_LOGOUT;
-              const obj2 = { session_id_hashes: null };
-              obj2[0] = items;
-              obj1[1] = obj2;
-              num2(obj1);
-              c3 = 1;
-              constants = 1;
+          closure_2 = tmp3;
+          closure_1 = tmp2;
+          closure_129_0 = closure_0;
+          let HTTP;
+          closure_129_1 = undefined;
+          const _Array = Array;
+          if (Array.isArray(closure_0)) {
+            let items = arr2;
+            if (num2 === arr2.length) {
+              c4 = 3;
+              return { value: "HermesInternal", done: null };
             }
-          } else if (arg0 === 1) {
-            constants = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            constants = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
           } else {
-            callback2 = arg1;
-            obj = callback2(table[3]);
-            const obj4 = { type: "LOGOUT_AUTH_SESSIONS_SUCCESS", sessionIdHashes: null };
-            obj4[1] = items;
-            obj.dispatch(obj4);
-            constants = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = callback2;
-            return obj5;
+            items = [arr2];
+            closure_129_0 = items;
           }
-        } catch (tmp18) {
-          constants = tmp;
-          throw tmp18;
+          HTTP = HTTPUtils.HTTP;
+          num2 = HTTP.post;
+          const request = { url: constants.AUTH_SESSIONS_LOGOUT, body: null, rejectWithError: false };
+          const obj1 = { session_id_hashes: items };
+          request.body = obj1;
+          num2(request);
+          c3 = 1;
+          c4 = 1;
         }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        closure_129_1 = value;
+        obj = closure_130_1(closure_130_2[3]);
+        const obj3 = { type: "LOGOUT_AUTH_SESSIONS_SUCCESS", sessionIdHashes: closure_129_0 };
+        obj.dispatch(obj3);
+        c4 = 3;
+        const obj4 = { value: closure_129_1, done: true };
+        return obj4;
       }
-    })();
-  });
-  closure_6 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp18) {
+      c4 = tmp;
+      throw tmp18;
+    }
   }
-  return applyArgumentsResult;
-}
-const result = require("set").fileFinishedImporting("modules/auth_sessions/AuthSessionsActionCreators.tsx");
+};
+const Endpoints = fn(1074).Endpoints;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/auth_sessions/AuthSessionsActionCreators.tsx");
 
 export const fetchAuthSessions = function fetchAuthSessions() {
   const self = this;
-  const apply = _fetchAuthSessions.apply;
+  const apply = closure_5.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -141,11 +110,11 @@ export const fetchAuthSessions = function fetchAuthSessions() {
   return applyArgumentsResult;
 };
 export const clearAuthSessions = function clearAuthSessions() {
-  dispatcherDefault.dispatch({ type: "FETCH_AUTH_SESSIONS_SUCCESS", sessions: [] });
+  DispatcherDefault.dispatch({ type: "FETCH_AUTH_SESSIONS_SUCCESS", sessions: [] });
 };
-export const logOutSessions = function logOutSessions(id_hash) {
+export const logOutSessions = function logOutSessions() {
   const self = this;
-  const apply = _logOutSessions.apply;
+  const apply = closure_6.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

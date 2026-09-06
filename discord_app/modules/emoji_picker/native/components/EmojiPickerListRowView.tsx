@@ -1,12 +1,13 @@
 // discord_app/modules/emoji_picker/native/components/EmojiPickerListRowView.tsx
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import __INTERNAL_VIEW_CONFIGDefault from "../../../../../discord_common/js/packages/rtn-codegen/js/EmojiPickerRowViewNativeComponent.tsx";
-import set from "../../../../utils/PlatformUtils.tsx";
+import _mod17 from "../../../../../_runtime/metro/00017__.js";
+import EmojiPickerRowViewNativeComponentDefault from "../../../../../discord_common/js/packages/rtn-codegen/js/EmojiPickerRowViewNativeComponent.tsx";
+import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-let View = get_ActivityIndicator.View;
-if (set.isAndroid()) {
-  View = __INTERNAL_VIEW_CONFIGDefault;
+let View = _mod17.View;
+if (PlatformUtils.isAndroid()) {
+  View = EmojiPickerRowViewNativeComponentDefault;
 }
-const result = set.fileFinishedImporting("modules/emoji_picker/native/components/EmojiPickerListRowView.tsx");
+const result = size.fileFinishedImporting("modules/emoji_picker/native/components/EmojiPickerListRowView.tsx");
 
 export default View;

@@ -1,58 +1,54 @@
 // discord_app/modules/search/native/components/tabs/pages/PeopleScreen.tsx
-import closure_3 from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
-import importAllResult from "../../../../../../../_runtime/00019_noop.js";
-import closure_5 from "../../../stores/SearchPeopleTabStore.tsx";
-import closure_6 from "../../../stores/SearchQueryStore.tsx";
-import MessageEmbedTypes from "../../../../SearchConstants.tsx";
-import { SearchResultContentEntityTypes as closure_9 } from "../../../tracking/TrackingConstants.tsx";
-import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
+import search_tracking_TrackingDefault from "../../../tracking/Tracking.tsx";
+import asyncGeneratorStep from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../../../../../_runtime/metro/00019__.js";
+import SearchPeopleTabStore from "../../../stores/SearchPeopleTabStore.tsx";
+import SearchQueryStore from "../../../stores/SearchQueryStore.tsx";
 
-const require = arg1;
-let c4 = importAllResult;
-({ SearchListItemTypes: error, USER_ESTIMATED_ITEM_SIZE: closure_8 } = MessageEmbedTypes);
-const memoResult = importAllResult.memo(function PeopleScreen(searchContext) {
+const require = fn;
+const SearchConstants = fn(7878);
+({ SearchListItemTypes: closure_7, USER_ESTIMATED_ITEM_SIZE: closure_8 } = SearchConstants);
+let closure_9 = fn(7877).SearchResultContentEntityTypes;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/PeopleScreen.tsx");
+
+export default noop.memo(function PeopleScreen(searchContext) {
   searchContext = searchContext.searchContext;
-  let _require = searchContext;
-  importDefault = undefined;
+  _require = searchContext;
   let stateFromStores;
-  let stateFromStores1;
-  let fullscreenPlaceholderCount;
   let onPressGroupDMItem;
   let onPressDMItem;
-  let callback;
   let callback1;
-  let obj = _require(stateFromStores[7]);
+  let obj = require("SearchUtils");
   importDefault = obj.getSearchContextId(searchContext);
-  obj1 = _require(stateFromStores[8]);
+  let obj1 = require("initialize");
   let items = [onPressGroupDMItem];
-  stateFromStores = obj1.useStateFromStores(items, () => onPressGroupDMItem.getResults(closure_1));
+  stateFromStores = obj1.useStateFromStores(items, () => SearchPeopleTabStore.getResults(closure_1));
   const items1 = [onPressDMItem];
-  stateFromStores1 = _require(stateFromStores[8]).useStateFromStores(items1, () =>
-    onPressDMItem.isInitialSearchQuery(closure_0),
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () =>
+    SearchQueryStore.isInitialSearchQuery(closure_0),
   );
-  const obj3 = _require(stateFromStores[8]);
+  const obj3 = require("initialize");
   obj = { placeholderHeight: callback1, numColumns: 1 };
-  fullscreenPlaceholderCount = _require(stateFromStores[9]).useFullscreenPlaceholderCount(obj);
-  const obj4 = _require(stateFromStores[9]);
-  onPressGroupDMItem = _require(stateFromStores[10]).useOnPressGroupDMItem({ searchContext });
-  const obj6 = _require(stateFromStores[10]);
-  onPressDMItem = _require(stateFromStores[10]).useOnPressDMItem({ searchContext });
-  _require = undefined;
-  _require = stateFromStores1((arg0, arg1) => {
-    closure_0 = arg0;
+  const fullscreenPlaceholderCount = require("usePlaceholderStyles").useFullscreenPlaceholderCount(obj);
+  const obj4 = require("usePlaceholderStyles");
+  onPressGroupDMItem = require("useOnPressSearchItem").useOnPressGroupDMItem({ searchContext });
+  const obj6 = require("useOnPressSearchItem");
+  onPressDMItem = require("useOnPressSearchItem").useOnPressDMItem({ searchContext });
+  _require = stateFromStores1((searchContext, arg1) => {
     closure_1 = arg1;
     c4 = 0;
     c5 = 0;
-    return (function* (arg0, arg1) {
+    return (function* (arg0, value) {
       if (c5 === 2) {
         c5 = 3;
-        HermesBuiltin.throwTypeError();
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp4 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          let obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
@@ -63,41 +59,42 @@ const memoResult = importAllResult.memo(function PeopleScreen(searchContext) {
           if (0 === c4) {
             if (arg0 === 1) {
               c5 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj = { value, done: true };
               return obj;
             } else {
               closure_3 = tmp5;
               closure_2 = tmp2;
-              closure_2 = undefined;
-              obj1 = callback(stateFromStores[11]);
+              closure_130_0 = searchContext;
+              closure_130_1 = closure_1;
+              closure_130_2 = undefined;
+              let obj1 = closure_1(stateFromStores[11]);
               c4 = 1;
               c5 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = obj1.getOrEnsurePrivateChannel(closure_0);
+              obj1.value = obj1.getOrEnsurePrivateChannel(searchContext);
               return obj1;
             }
           } else if (arg0 === 1) {
             c5 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
-            closure_2 = arg1;
-            const obj2 = { searchContext: null, userId: null, channelId: null, index: null, entityType: null };
-            obj2[0] = closure_0;
-            obj2[1] = closure_0;
-            obj2[2] = closure_2;
-            obj2[3] = callback;
-            obj2[4] = closure_2_9.CHANNEL;
-            const result = callback(stateFromStores[12]).trackSearchResultClicked(obj2);
-            closure_1_6(closure_0, closure_2);
+            closure_130_2 = value;
+            const obj2 = {
+              searchContext,
+              userId: closure_130_0,
+              channelId: closure_130_2,
+              index: closure_130_1,
+              entityType: constants.CHANNEL,
+            };
+            const result = closure_1(stateFromStores[12]).trackSearchResultClicked(obj2);
+            onPressDMItem(closure_130_0, closure_130_2);
             c5 = 3;
             return { value: "HermesInternal", done: null };
           }
@@ -109,7 +106,7 @@ const memoResult = importAllResult.memo(function PeopleScreen(searchContext) {
     })();
   });
   const items2 = [onPressDMItem, searchContext];
-  callback = fullscreenPlaceholderCount.useCallback(function () {
+  const callback = fullscreenPlaceholderCount.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -121,8 +118,7 @@ const memoResult = importAllResult.memo(function PeopleScreen(searchContext) {
   }, items2);
   const items3 = [onPressGroupDMItem, searchContext];
   callback1 = fullscreenPlaceholderCount.useCallback((channelId, index) => {
-    let obj = callback(stateFromStores[12]);
-    obj = { searchContext: closure_0, channelId, index, entityType: closure_1_9.CHANNEL };
+    const obj = { searchContext, channelId, index, entityType: constants.CHANNEL };
     const result = obj.trackSearchResultClicked(obj);
     onPressGroupDMItem(channelId);
   }, items3);
@@ -134,45 +130,38 @@ const memoResult = importAllResult.memo(function PeopleScreen(searchContext) {
       items = title.items;
       if (null != title) {
         if (items.length > 0) {
-          let obj = { type: null, props: null };
-          obj[0] = callback.SECTION;
-          obj = { title: null };
-          obj[0] = title;
-          obj[1] = obj;
-          title.push(obj);
+          let element = { type: callback.SECTION, props: null };
+          let obj = { title };
+          element.props = obj;
+          title.push(element);
         }
       }
-      const item = items.forEach((type) => {
-        closure_0 = arg1;
+      const item = items.forEach((type, index) => {
+        closure_0 = index;
         if ("user" in type) {
           ({ user, firstMatch } = type);
-          let obj = { type: null, section: null, props: null };
-          obj[0] = callback.DM;
-          obj[1] = closure_0;
-          obj = { type: null, user: null, nickname: null, onPress: null };
-          obj[0] = type.type;
-          obj[1] = user;
+          const element = { type: constants.DM, section: title, props: null };
+          let obj = { type: type.type, user, nickname: null, onPress: null };
           let tmp8;
           if (user.username !== firstMatch) {
             tmp8 = firstMatch;
           }
-          obj[2] = tmp8;
-          obj[3] = function onPress(arg0) {
-            return closure_1_7(arg0, closure_0);
+          obj.nickname = tmp8;
+          obj.onPress = function onPress(arg0) {
+            return closure_2_7(arg0, closure_0);
           };
-          obj[2] = obj;
-          title.push(obj);
+          element.props = obj;
+          items.push(element);
         } else {
-          obj = { type: null, section: null, props: null };
-          obj[0] = callback.GROUP_DM;
-          obj[1] = closure_0;
-          obj1 = { channel: null, onPress: null };
-          obj1[0] = type;
-          obj1[1] = function onPress(arg0) {
-            return closure_1_8(arg0, closure_0);
+          const element1 = { type: constants.GROUP_DM, section: title, props: null };
+          obj = {
+            channel: type,
+            onPress(arg0) {
+              return closure_2_8(arg0, closure_0);
+            },
           };
-          obj[2] = obj1;
-          title.push(obj);
+          element1.props = obj;
+          items.push(element1);
         }
       });
     });
@@ -182,32 +171,25 @@ const memoResult = importAllResult.memo(function PeopleScreen(searchContext) {
         if (0 < fullscreenPlaceholderCount) {
           do {
             let obj = { type: null, key: null };
-            let tmp4 = callback;
-            obj[0] = callback.MESSAGE_PLACEHOLDER;
+            obj.type = callback.MESSAGE_PLACEHOLDER;
             let _HermesInternal = HermesInternal;
-            obj[1] = "message-placeholder-" + num3;
+            obj.key = "message-placeholder-" + num3;
             let arr = items.push(obj);
             num3 = num3 + 1;
-            let tmp6 = fullscreenPlaceholderCount;
           } while (num3 < fullscreenPlaceholderCount);
         }
       }
     }
     return items;
   }, items4);
-  const obj7 = _require(stateFromStores[10]);
-  const messageTabCountsErrorText = _require(stateFromStores[13]).useMessageTabCountsErrorText({ searchContext });
+  const obj7 = require("useOnPressSearchItem");
+  const messageTabCountsErrorText = require("useSearchScreenError").useMessageTabCountsErrorText({ searchContext });
   if (null != messageTabCountsErrorText) {
-    obj = { text: null };
-    obj[0] = messageTabCountsErrorText;
-    let tmp13 = jsx(importDefault(tmp[14]), { text: null });
+    obj = { text: messageTabCountsErrorText };
+    let tmp13 = jsx(require("pages/ErrorScreen"), { text: messageTabCountsErrorText });
   } else {
-    obj1 = { data: null };
-    obj1[0] = memo;
-    tmp13 = jsx(importDefault(tmp[15]), { data: null });
+    obj1 = { data: memo };
+    tmp13 = jsx(require("SearchList"), { data: memo });
   }
   return tmp13;
 });
-let result = require("set").fileFinishedImporting("modules/search/native/components/tabs/pages/PeopleScreen.tsx");
-
-export default memoResult;

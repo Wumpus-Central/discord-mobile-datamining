@@ -1,11 +1,11 @@
 // discord_app/design/void/CloseIcon/native/CloseIcon.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
 import inlineStyles from "../../../../../_runtime/08453_inlineStyles.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/void/CloseIcon/native/CloseIcon.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/CloseIcon/native/CloseIcon.tsx");
 
 export default function Close(width) {
   let num = width.width;
@@ -20,7 +20,7 @@ export default function Close(width) {
   if (str === undefined) {
     str = "currentColor";
   }
-  const merged = Object.assign(width, Object.create(null));
+  const merged = Object.assign(width, Object.assign({ width: 0, height: 0, color: 0 }));
   const obj = {};
   const merged1 = Object.assign(merged);
   obj.width = num;

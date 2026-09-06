@@ -1,21 +1,23 @@
 // discord_app/modules/game_console/ConsoleVoiceUpsellStore.tsx
-import set from "../../../_runtime/00002_set.js";
-import keys from "../../../_runtime/00560_keys.js";
+import 00560__ from "../../../_runtime/metro/00560__.js";
+import size from "../../../_runtime/metro/00002__.js";
 
 let closure_2 = Object.freeze({ voiceUpsellDismissed: false, showSparkles: false });
-const obj = keys.create(() => closure_2);
-const result = set.fileFinishedImporting("modules/game_console/ConsoleVoiceUpsellStore.tsx");
+const useConsoleVoiceUpsellStore = module_560.create(() => closure_2);
+const result = size.fileFinishedImporting("modules/game_console/ConsoleVoiceUpsellStore.tsx");
 
-export const useConsoleVoiceUpsellStore = obj;
-export const setShowConsoleVoiceSparkles = function setShowConsoleVoiceSparkles(arg0) {
-  const _require = arg0;
-  require("../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
-    closure_1_3.setState({ showSparkles: closure_0 });
+export { useConsoleVoiceUpsellStore };
+export const setShowConsoleVoiceSparkles = function setShowConsoleVoiceSparkles(showSparkles) {
+  _require = showSparkles;
+  require("ReactBatchUpdates").batchUpdates(() => {
+    const obj = { showSparkles };
+    obj.setState(obj);
   });
 };
-export const setVoiceUpsellDismissed = function setVoiceUpsellDismissed(arg0) {
-  const _require = arg0;
-  require("../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
-    closure_1_3.setState({ voiceUpsellDismissed: closure_0 });
+export const setVoiceUpsellDismissed = function setVoiceUpsellDismissed(voiceUpsellDismissed) {
+  _require = voiceUpsellDismissed;
+  require("ReactBatchUpdates").batchUpdates(() => {
+    const obj = { voiceUpsellDismissed };
+    obj.setState(obj);
   });
 };

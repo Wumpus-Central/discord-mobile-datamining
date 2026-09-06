@@ -1,26 +1,26 @@
 // discord_app/modules/nuf/native/components/SkipHeaderButton.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import GenericHeaderTitle from "../../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
+import HeaderShared from "../../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-createCacheKey = { button: null, insideNavigatorButton: null };
-createCacheKey = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { paddingRight: 16 };
-let closure_3 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/nuf/native/components/SkipHeaderButton.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { button: null, insideNavigatorButton: null };
+createStyles = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+createStyles.button = createStyles;
+createStyles.insideNavigatorButton = { paddingRight: 16 };
+let closure_3 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/nuf/native/components/SkipHeaderButton.tsx");
 
 export default function SkipHeaderButton(label) {
-  const tmp = callback();
+  const tmp = closure_3();
   label = label.label;
   if (label == null) {
-    const intl = getSystemLocale.intl;
-    label = intl.string(getSystemLocale.t["5Wxrcd"]);
+    const intl = util.intl;
+    label = intl.string(util.t["5Wxrcd"]);
   }
   const obj = {};
   const merged = Object.assign(label);
@@ -33,5 +33,5 @@ export default function SkipHeaderButton(label) {
   obj.labelStyle = items;
   obj.label = label;
   obj.accessibilityLabel = label;
-  return jsx(GenericHeaderTitle.HeaderTextButton, {});
+  return jsx(HeaderShared.HeaderTextButton, {});
 }

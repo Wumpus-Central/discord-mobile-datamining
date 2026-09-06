@@ -1,13 +1,16 @@
 // discord_app/modules/debug/getPushNotificationLogs.android.tsx
-import enforcingDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativePushNotificationMonitorModule.tsx";
-import closure_2 from "../../stores/AuthenticationStore.tsx";
+import NativePushNotificationMonitorModuleDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativePushNotificationMonitorModule.tsx";
+import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 
-const result = require("set").fileFinishedImporting("modules/debug/getPushNotificationLogs.android.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/debug/getPushNotificationLogs.android.tsx");
 
-export default function getPushNotificationLogs(id) {
-  const pushNotificationLogs = enforcingDefault.getPushNotificationLogs(id.getId());
-  return pushNotificationLogs.then((arg0) => {
-    let pushNotifications = JSON.parse(arg0).pushNotifications;
+export default function getPushNotificationLogs() {
+  const pushNotificationLogs = NativePushNotificationMonitorModuleDefault.getPushNotificationLogs(
+    AuthenticationStore.getId(),
+  );
+  return pushNotificationLogs.then((result) => {
+    let pushNotifications = JSON.parse(result).pushNotifications;
     if (pushNotifications == null) {
       pushNotifications = [];
     }

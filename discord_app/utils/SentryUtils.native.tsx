@@ -1,43 +1,44 @@
 // discord_app/utils/SentryUtils.native.tsx
-import set from "../../_runtime/00002_set.js";
-import timestampDefault from "../modules/debug/Logger.tsx";
-import get_ActivityIndicator from "../../_runtime/00017_get_ActivityIndicator.js";
+import LoggerDefault from "../modules/debug/Logger.tsx";
+import _mod17 from "../../_runtime/metro/00017__.js";
 import addSentryBreadcrumbDefault from "../modules/sentry/addSentryBreadcrumb.native.tsx";
-import addBreadcrumbAll from "../../_runtime/00675_addBreadcrumb.js";
-import _maybeBackfillMissingBreadcrumbsFromTelemetryRing from "../modules/errors/native/SentryInitUtils.tsx";
-import { getUpdatedOptions } from "ErrorCommonUtils.tsx";
+import _modAll675 from "../../_runtime/metro/00675__.js";
+import SentryInitUtils from "../modules/errors/native/SentryInitUtils.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-const NativeModules = get_ActivityIndicator.NativeModules;
-let closure_5 = new timestampDefault("Sentry");
-_maybeBackfillMissingBreadcrumbsFromTelemetryRing = _maybeBackfillMissingBreadcrumbsFromTelemetryRing.initSentry();
-let obj = {
+const NativeModules = _mod17.NativeModules;
+let closure_5 = new LoggerDefault("Sentry");
+SentryInitUtils = SentryInitUtils.initSentry();
+let result = size.fileFinishedImporting("utils/SentryUtils.native.tsx");
+
+export default {
   setUser(id, username, email, staff) {
-    const obj = { id, username, email, staff };
-    const currentScope = addBreadcrumbAll.getCurrentScope();
-    currentScope.setUser(obj);
+    const user = { id, username, email, staff };
+    const currentScope = _modAll675.getCurrentScope();
+    currentScope.setUser(user);
     const CrashReportingManager = NativeModules.CrashReportingManager;
-    CrashReportingManager.setUser(obj);
+    CrashReportingManager.setUser(user);
   },
   clearUser() {
-    const currentScope = addBreadcrumbAll.getCurrentScope();
+    const currentScope = _modAll675.getCurrentScope();
     currentScope.setUser(null);
     const CrashReportingManager = NativeModules.CrashReportingManager;
     CrashReportingManager.setUser({ staff: false });
   },
   setTags(arg0) {
-    const currentScope = addBreadcrumbAll.getCurrentScope();
+    const currentScope = _modAll675.getCurrentScope();
     currentScope.setTags(arg0);
   },
   setExtra(arg0) {
-    const currentScope = addBreadcrumbAll.getCurrentScope();
+    const currentScope = _modAll675.getCurrentScope();
     currentScope.setExtras(arg0);
   },
   captureException(arg0, extra) {
-    const _require = arg0;
-    importAll = require("ErrorCommonUtils.tsx").getUpdatedOptions(extra);
-    const obj = getUpdatedOptions;
-    addBreadcrumbAll.withScope((setTags) => {
-      if (null != callback) {
+    _require = arg0;
+    importAll = require("ErrorCommonUtils").getUpdatedOptions(extra);
+    const obj = require("ErrorCommonUtils");
+    _modAll675.withScope((setTags) => {
+      if (null != closure_2) {
         if (null != tmp.tags) {
           setTags.setTags(tmp.tags);
         }
@@ -45,13 +46,13 @@ let obj = {
           setTags.setExtras(tmp.extra);
         }
       }
-      closure_1 = callback(closure_1_3[3]).captureException(closure_0);
+      closure_1 = _modAll675.captureException(closure_0);
     });
-    return importDefault;
+    return closure_1;
   },
   captureCrash(error, extra) {
-    const _require = error;
-    const updatedOptions = require("ErrorCommonUtils.tsx").getUpdatedOptions(extra);
+    _require = error;
+    const updatedOptions = require("ErrorCommonUtils").getUpdatedOptions(extra);
     let tags;
     if (updatedOptions != null) {
       tags = updatedOptions.tags;
@@ -63,12 +64,12 @@ let obj = {
       }
     }
     dependencyMap = Object.assign({ crash: "true" }, {});
-    let obj = getUpdatedOptions;
+    let obj = require("ErrorCommonUtils");
     updatedOptions(675).withScope((setExtras) => {
       if (tmp2) {
         setExtras.setExtras(tmp.extra);
       }
-      setExtras.setTags(table);
+      setExtras.setTags(closure_3);
       setExtras.setLevel("fatal");
       setExtras.addEventProcessor((exception) => {
         exception = exception.exception;
@@ -87,16 +88,16 @@ let obj = {
         }
         return exception;
       });
-      closure_1 = updatedOptions(table[3]).captureException(closure_0);
+      closure_1 = _modAll675.captureException(closure_0);
     });
-    return importDefault;
+    return closure_1;
   },
-  captureMessage(arg0, extra) {
-    const _require = arg0;
+  captureMessage(arg0, extra, arg2) {
+    _require = arg0;
     closure_1 = arg2;
-    importAll = require("ErrorCommonUtils.tsx").getUpdatedOptions(extra);
-    const obj = getUpdatedOptions;
-    addBreadcrumbAll.withScope((setExtras) => {
+    importAll = require("ErrorCommonUtils").getUpdatedOptions(extra);
+    const obj = require("ErrorCommonUtils");
+    _modAll675.withScope((setExtras) => {
       if (tmp2) {
         setExtras.setExtras(tmp.extra);
       }
@@ -110,11 +111,11 @@ let obj = {
           return arg0;
         });
       }
-      callback(closure_1_3[3]).captureMessage(closure_0, closure_1);
+      _modAll675.captureMessage(closure_0, closure_1);
     });
   },
   addFeatureFlag(arg0, arg1) {
-    const getClient = addBreadcrumbAll.getClient;
+    const getClient = _modAll675.getClient;
     let client;
     if (getClient != null) {
       client = getClient();
@@ -140,8 +141,8 @@ let obj = {
   profiledRootComponent(displayName) {
     let withProfilerResult = displayName;
     if ("canaryRelease" === obj.getConstants().ReleaseChannel) {
-      withProfilerResult = addBreadcrumbAll.withProfiler(displayName, { includeRender: true, includeUpdates: true });
-      const tmpResult = addBreadcrumbAll;
+      withProfilerResult = _modAll675.withProfiler(displayName, { includeRender: true, includeUpdates: true });
+      const tmpResult = _modAll675;
     }
     return withProfilerResult;
   },
@@ -166,11 +167,11 @@ let obj = {
       }
     }
   },
-  getLastCrashReport(arg0) {
-    return new Promise((arg0, arg1) => {
-      closure_0 = arg0;
+  getLastCrashReport() {
+    return new Promise((fn, arg1) => {
+      closure_0 = fn;
       closure_1 = arg1;
-      const CrashReportingManager = obj.CrashReportingManager;
+      const CrashReportingManager = NativeModules.CrashReportingManager;
       let getLastCrashReport;
       if (CrashReportingManager != null) {
         getLastCrashReport = CrashReportingManager.getLastCrashReport;
@@ -200,10 +201,13 @@ let obj = {
                 if (str != null) {
                   formatted = str.toLowerCase();
                 }
-                let obj = { type: "y", event_id: 4, timestamp: 2, level: 0, tags: "BULK_ACK" };
-                obj[1] = timestamp.event_id;
-                obj[2] = result;
-                obj[3] = formatted;
+                let obj = {
+                  type: "y",
+                  event_id: timestamp.event_id,
+                  timestamp: result,
+                  level: formatted,
+                  tags: "BULK_ACK",
+                };
                 const origin = timestamp.origin;
                 let tmp3 = typeof origin === "string";
                 if (typeof origin === "string") {
@@ -211,11 +215,10 @@ let obj = {
                 }
                 let tmp4;
                 if (tmp3) {
-                  obj = { "event.origin": null };
-                  obj[0] = timestamp.origin;
+                  obj = { "event.origin": timestamp.origin };
                   tmp4 = obj;
                 }
-                obj[4] = tmp4;
+                obj.tags = tmp4;
                 const error_message = timestamp.error_message;
                 let tmp5 = typeof error_message === "string";
                 if (typeof error_message === "string") {
@@ -302,16 +305,12 @@ let obj = {
             }
             closure_0(tmp3);
           } catch (tmp5) {
-            callback(tmp5);
+            closure_1(tmp5);
           }
         });
       } else {
-        arg0(null);
+        fn(null);
       }
     });
   },
 };
-const tmp2 = new timestampDefault("Sentry");
-let result = set.fileFinishedImporting("utils/SentryUtils.native.tsx");
-
-export default obj;

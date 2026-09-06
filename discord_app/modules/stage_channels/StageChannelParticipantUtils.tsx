@@ -1,10 +1,11 @@
 // discord_app/modules/stage_channels/StageChannelParticipantUtils.tsx
-import setDefault from "../../utils/Durations.tsx";
-import nameFromUser from "../../utils/UserUtils.tsx";
+import DurationsDefault from "../../utils/Durations.tsx";
+import UserUtils from "../../utils/UserUtils.tsx";
 
-require = arg1;
-const DAY = setDefault.Millis.DAY;
-const result = require("set").fileFinishedImporting("modules/stage_channels/StageChannelParticipantUtils.tsx");
+require = fn;
+const DAY = DurationsDefault.Millis.DAY;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/StageChannelParticipantUtils.tsx");
 
 export const participantMemberInfo = function participantMemberInfo(participant) {
   if (obj.isNewUser(participant.user)) {
@@ -48,5 +49,5 @@ export const participantMemberInfo = function participantMemberInfo(participant)
     }
     return stringResult;
   }
-  obj = nameFromUser;
+  obj = UserUtils;
 };

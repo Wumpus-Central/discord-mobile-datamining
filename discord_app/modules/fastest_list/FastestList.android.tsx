@@ -1,25 +1,25 @@
 // discord_app/modules/fastest_list/FastestList.android.tsx
-import _readOnlyErrorDefault from "../../../_runtime/metro/00377__readOnlyError.js";
-import __INTERNAL_VIEW_CONFIGDefault from "../../../discord_common/js/packages/rtn-codegen/js/FastestListNativeComponent.tsx";
-import importAllResult from "../../../_runtime/00019_noop.js";
-import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
-import importDefaultResult1 from "../reanimated/ReanimatedRexport.tsx";
-import BottomSheetModal from "../../../_runtime/06627_BottomSheetModal.js";
+import FastestListNativeComponentDefault from "../../../discord_common/js/packages/rtn-codegen/js/FastestListNativeComponent.tsx";
+import _readOnlyError from "../../../_runtime/metro/00377__readOnlyError.js";
+import noop from "../../../_runtime/metro/00019__.js";
+import ReanimatedRexport from "../reanimated/ReanimatedRexport.tsx";
 
-const require = arg1;
-_readOnlyErrorDefault;
-let c3 = importAllResult;
-({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
-const animatedComponent = importDefaultResult1.createAnimatedComponent(__INTERNAL_VIEW_CONFIGDefault);
-let closure_7 = importDefaultResult1.createAnimatedComponent(__INTERNAL_VIEW_CONFIGDefault);
+const require = fn;
+const jsxProd = fn(21);
+({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+ReanimatedRexport.createAnimatedComponent(FastestListNativeComponentDefault);
+const FastestListNativeComponent = ReanimatedRexport.createAnimatedComponent(FastestListNativeComponentDefault);
+const BottomSheetModal = fn(6627);
 let closure_8 = BottomSheetModal.createBottomSheetScrollableComponent(
-  require("BottomSheetModal").SCROLLABLE_TYPE.SCROLLVIEW,
-  animatedComponent,
+  fn(6627).SCROLLABLE_TYPE.SCROLLVIEW,
+  FastestListNativeComponent,
 );
-let c9 = 0;
-const importDefaultResult2 = importDefaultResult1;
-const forwardRefResult = importAllResult.forwardRef(function FastestList(estimatedListSize, ref) {
-  closure_0 = estimatedListSize;
+let closure_9 = 0;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/fastest_list/FastestList.android.tsx");
+
+export default noop.forwardRef(function FastestList(estimatedListSize, ref) {
+  let current = estimatedListSize;
   const enabled = estimatedListSize.enabled;
   let tmp = undefined === enabled;
   if (!tmp) {
@@ -80,7 +80,7 @@ const forwardRefResult = importAllResult.forwardRef(function FastestList(estimat
   const ref2 = listId.useRef(estimatedListSize);
   const items = [estimatedListSize];
   const effect = listId.useEffect(() => {
-    ref2.current = closure_0;
+    ref2.current = current;
   }, items);
   ({ style: style2, marginEnd, marginStart } = num(num2[6])({ style }));
   const imperativeHandle = listId.useImperativeHandle(ref, () => ({
@@ -90,7 +90,7 @@ const forwardRefResult = importAllResult.forwardRef(function FastestList(estimat
         flag = false;
       }
       if (null != ref.current) {
-        const Commands = closure_1_0(closure_1_2[4]).Commands;
+        const Commands = closure_0(num2[4]).Commands;
         Commands.scrollToTop(tmp.current, flag);
       }
     },
@@ -104,7 +104,7 @@ const forwardRefResult = importAllResult.forwardRef(function FastestList(estimat
         num = 0;
       }
       if (null != ref.current) {
-        const Commands = closure_1_0(closure_1_2[4]).Commands;
+        const Commands = closure_0(num2[4]).Commands;
         Commands.scrollToLocation(tmp.current, section, item, animated, num);
       }
     },
@@ -113,7 +113,7 @@ const forwardRefResult = importAllResult.forwardRef(function FastestList(estimat
   const tmp12 = num(num2[6])({ style });
   const tmp5 = undefined === showsVerticalScrollIndicator || showsVerticalScrollIndicator;
   const callback = listId.useCallback((nativeEvent) => {
-    const current = ref1.current;
+    current = ref1.current;
     if (current != null) {
       current.setVisibleItems(nativeEvent.nativeEvent);
     }
@@ -162,31 +162,31 @@ const forwardRefResult = importAllResult.forwardRef(function FastestList(estimat
         num = 0;
       }
       reduced = sections.reduce(
-        (arg0, arg1, arg2) => {
+        (acc, item, index) => {
           num = 0;
-          if (!closure_4) {
-            num = arg2;
+          if (!onContentLengthChange) {
+            num = index;
           }
-          num2 = closure_5[num];
+          num2 = ref[num];
           if (num2 == null) {
             num2 = 0;
           }
           let num3 = 0;
-          if (!closure_2) {
-            num3 = arg2;
+          if (!closure_1_2) {
+            num3 = index;
           }
-          let num4 = closure_3[num3];
+          let num4 = listId[num3];
           if (num4 == null) {
             num4 = 0;
           }
-          const sum = arg0 + num2;
-          if (closure_0) {
-            let num5 = arg1 * num;
+          const sum = acc + num2;
+          if (current) {
+            let num5 = item * num;
           } else {
             num5 = undefined;
-            if (itemSizes[arg2] != null) {
+            if (itemSizes[index] != null) {
               const sizes = tmp5.sizes;
-              num5 = sizes.reduce((arg0, arg1) => arg0 + arg1, 0);
+              num5 = sizes.reduce((acc, item) => acc + item, 0);
             }
             if (num5 == null) {
               num5 = 0;
@@ -194,22 +194,19 @@ const forwardRefResult = importAllResult.forwardRef(function FastestList(estimat
           }
           return sum + num5 + num4;
         },
-        itemSizes + listHeaderSize + listFooterSize + num2,
+        num + listHeaderSize + listFooterSize + num2,
       );
-      const tmp3 = itemSizes;
-      const tmp4 = num2;
     }
     return reduced;
   }, items3);
-  closure_9 = memo1;
   const items4 = [memo1, onContentLengthChange];
   const effect1 = listId.useEffect(() => {
-    let tmp2 = null != closure_9;
+    let tmp2 = null != memo1;
     if (tmp2) {
       tmp2 = null != onContentLengthChange;
     }
     if (tmp2) {
-      onContentLengthChange(closure_9);
+      onContentLengthChange(memo1);
     }
   }, items4);
   const tmp17 = num(num2[9])(placeholderConfig);
@@ -249,27 +246,27 @@ const forwardRefResult = importAllResult.forwardRef(function FastestList(estimat
   if (!tmp25) {
     tmp25 = "interactive" === keyboardDismissMode;
   }
-  obj[4] = tmp25;
-  obj[5] = tmp14;
-  obj[6] = onLayout;
-  obj[7] = onScroll;
-  obj[8] = onScrollBeginDrag;
-  obj[9] = onScrollEndDrag;
-  obj[10] = callback;
-  obj[11] = tmp17;
-  obj[12] = ref;
-  obj[13] = str;
-  obj[14] = num3;
-  obj[15] = tmp19;
-  obj[16] = tmp4;
-  obj[17] = tmp5;
-  obj[18] = style2;
+  obj.keyboardDismissOnDrag = tmp25;
+  obj.onUnexpectedItemSize = tmp14;
+  obj.onLayout = onLayout;
+  obj.onScroll = onScroll;
+  obj.onScrollBeginDrag = onScrollBeginDrag;
+  obj.onScrollEndDrag = onScrollEndDrag;
+  obj.onVisibleItemsChanged = callback;
+  obj.placeholderConfig = tmp17;
+  obj.ref = ref;
+  obj.renderAhead = str;
+  obj.scrollEventThrottle = num3;
+  obj.sectionsVersioned = tmp19;
+  obj.showsHorizontalScrollIndicator = tmp4;
+  obj.showsVerticalScrollIndicator = tmp5;
+  obj.style = style2;
   let tmp24Result = tmp24(tmp10Result, obj);
   if (tmp) {
     if (null != placeholderConfig) {
       obj = { children: null };
       const items5 = [tmp24Result, tmp27];
-      obj[0] = items5;
+      obj.children = items5;
       tmp24Result = ref1(ref, obj);
     }
     return tmp24Result;
@@ -279,6 +276,3 @@ const forwardRefResult = importAllResult.forwardRef(function FastestList(estimat
   const merged = Object.assign(estimatedListSize);
   tmp24Result = tmp24(tmp10Result, obj);
 });
-const result = require("set").fileFinishedImporting("modules/fastest_list/FastestList.android.tsx");
-
-export default forwardRefResult;

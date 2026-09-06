@@ -1,25 +1,22 @@
 // discord_app/modules/ads/ios_attribution/IosAttributionEligibility.tsx
-import set from "../../../../_runtime/00002_set.js";
-import set2 from "../../../utils/PlatformUtils.tsx";
-import getQuestDeliveryDataForPlacement from "../../quests/utils/QuestDataUtils.tsx";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
+import QuestDataUtils from "../../quests/utils/QuestDataUtils.tsx";
 import apexExperiment from "../../quests/experiments/index.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/ads/ios_attribution/IosAttributionEligibility.tsx");
+const result = size.fileFinishedImporting("modules/ads/ios_attribution/IosAttributionEligibility.tsx");
 
 export const isIosAttributionEligible = function isIosAttributionEligible() {
   const IosAttributionFeatureGate = apexExperiment.IosAttributionFeatureGate;
   let enabled = IosAttributionFeatureGate.getConfig({ location: "quest_ios_attribution" }).enabled;
   if (enabled) {
-    enabled = set2.isIOS();
-    const tmpResult = set2;
+    enabled = PlatformUtils.isIOS();
+    const tmpResult = PlatformUtils;
   }
   return enabled;
 };
-export const isCampaignIosAttributionEnabled = function isCampaignIosAttributionEnabled(
-  sourceQuestContent,
-  adContentId,
-) {
-  const adContext = getQuestDeliveryDataForPlacement.getAdContext(sourceQuestContent, adContentId);
+export const isCampaignIosAttributionEnabled = function isCampaignIosAttributionEnabled(sourceQuestContent, item) {
+  const adContext = QuestDataUtils.getAdContext(sourceQuestContent, item);
   let prop;
   if (adContext != null) {
     prop = adContext.is_campaign_ios_attribution_enabled;

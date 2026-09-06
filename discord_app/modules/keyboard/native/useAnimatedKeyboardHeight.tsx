@@ -1,9 +1,9 @@
 // discord_app/modules/keyboard/native/useAnimatedKeyboardHeight.tsx
-import set from "../../../../_runtime/00002_set.js";
-import _modDef14573 from "AnimatedKeyboardProvider.android.tsx";
+import AnimatedKeyboardProviderDefault from "AnimatedKeyboardProvider.android.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/keyboard/native/useAnimatedKeyboardHeight.tsx");
+const result = size.fileFinishedImporting("modules/keyboard/native/useAnimatedKeyboardHeight.tsx");
 
 export default function useAnimatedKeyboardHeight() {
-  return _modDef14573.animatedKeyboardHeight;
+  return AnimatedKeyboardProviderDefault.animatedKeyboardHeight;
 }

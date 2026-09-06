@@ -1,28 +1,27 @@
 // discord_app/modules/premium/tiered_tenure_badging/hooks/useMaybeFetchTieredTenureBadgeData.tsx
-import useMountLayoutEffectDefault from "../../../../hooks/useMountEffect.tsx";
-import closure_3 from "../../../../stores/UserStore.tsx";
-import { PremiumTypes } from "../../PremiumConstants.tsx";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import useMountEffectDefault from "../../../../hooks/useMountEffect.tsx";
+import maybeFetchUserProfileDefault from "../../../user_profile/maybeFetchUserProfile.tsx";
+import UserStore from "../../../../stores/UserStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
+const require = fn;
+const PremiumTypes = fn(1373).PremiumTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/premium/tiered_tenure_badging/hooks/useMaybeFetchTieredTenureBadgeData.tsx",
 );
 
 export const useMaybeFetchTieredTenureBadgeData = function useMaybeFetchTieredTenureBadgeData() {
-  const items = [closure_3];
-  _require = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
-    currentUser.getCurrentUser(),
-  );
-  const obj = initialize;
-  importDefault = require("../../useIsPremiumSubscriber.tsx").useIsPremiumSubscriber(PremiumTypes.TIER_2);
-  useMountLayoutEffectDefault(() => {
+  const items = [UserStore];
+  _require = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());
+  const obj = require("initialize");
+  importDefault = require("useIsPremiumSubscriber").useIsPremiumSubscriber(PremiumTypes.TIER_2);
+  useMountEffectDefault(() => {
     let id;
     if (closure_0 != null) {
       id = tmp.id;
     }
     if (tmp3) {
-      callback(closure_1_2[5])(tmp.id);
+      maybeFetchUserProfileDefault(tmp.id);
     }
   });
 };

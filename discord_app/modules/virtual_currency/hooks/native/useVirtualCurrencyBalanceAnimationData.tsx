@@ -1,10 +1,11 @@
 // discord_app/modules/virtual_currency/hooks/native/useVirtualCurrencyBalanceAnimationData.tsx
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
-import closure_5 from "../../../a11y/AccessibilityStore.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/virtual_currency/hooks/native/useVirtualCurrencyBalanceAnimationData.tsx",
 );
 
@@ -15,66 +16,61 @@ export const useVirtualCurrencyBalanceAnimationData = function useVirtualCurrenc
   const balance = initialRenderedBalance.balance;
   let stateFromStores;
   let currentAnimationType;
-  let React;
-  closure_5 = undefined;
-  let lottieRef;
+  noop = undefined;
+  let useReducedMotion;
   c7 = undefined;
-  let first1;
-  closure_9 = undefined;
-  closure_10 = undefined;
-  let callback2;
-  const items = [closure_5];
+  const items = [useReducedMotion];
   stateFromStores = initialRenderedBalance(stateFromStores[3]).useStateFromStores(
     items,
     () => useReducedMotion.useReducedMotion,
   );
-  let tmp2 = currentAnimationType(React.useState(null), 2);
+  let tmp2 = currentAnimationType(noop.useState(null), 2);
   currentAnimationType = tmp2[0];
-  React = tmp2[1];
-  closure_5 = React.useRef(null);
-  lottieRef = React.useRef(null);
+  noop = tmp2[1];
+  useReducedMotion = noop.useRef(null);
+  const lottieRef = noop.useRef(null);
   const obj = initialRenderedBalance(stateFromStores[3]);
-  [tmp6, c7] = currentAnimationType(React.useState(null != initialRenderedBalance), 2);
-  const tmp7 = currentAnimationType(React.useState(null == initialRenderedBalance), 2);
-  first1 = tmp7[0];
+  [tmp6, c7] = currentAnimationType(noop.useState(null != initialRenderedBalance), 2);
+  const tmp7 = currentAnimationType(noop.useState(null == initialRenderedBalance), 2);
+  const first1 = tmp7[0];
   closure_9 = tmp7[1];
   const tmp9 = balance(stateFromStores[4])(balance);
   closure_10 = tmp9;
-  const onValueChange = React.useCallback(() => {}, []);
+  const onValueChange = noop.useCallback(() => {}, []);
   const items1 = [currentAnimationType];
-  const onValueReached = React.useCallback(() => {
+  const onValueReached = noop.useCallback(() => {
     closure_5.current = null;
-    callback(null);
+    closure_4(null);
   }, []);
-  callback2 = React.useCallback((arg0) => {
+  const callback2 = noop.useCallback((arg0) => {
     if (0 !== arg0) {
       let str = "spend";
       if (arg0 > 0) {
         str = "earn";
       }
-      closure_5.current = str;
-      if (currentAnimationType === closure_5.current) {
+      useReducedMotion.current = str;
+      if (currentAnimationType === useReducedMotion.current) {
         const current = lottieRef.current;
         if (current != null) {
           current.play();
         }
       } else {
-        callback(tmp.current);
+        closure_4(tmp.current);
       }
     }
   }, items1);
   const items2 = [initialRenderedBalance, balance, first1, stateFromStores, callback2];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (null != timeout) {
       if (null !== balance) {
         if (!first1) {
           const _setTimeout = setTimeout;
           timeout = setTimeout(() => {
-            if (!closure_2) {
-              callback3(closure_1 - closure_0);
+            if (!stateFromStores) {
+              callback2(balance - closure_0);
             }
-            callback(false);
-            callback2(true);
+            closure_1_7(false);
+            closure_1_9(true);
           }, 1250);
           return () => clearTimeout(closure_0);
         }
@@ -82,7 +78,7 @@ export const useVirtualCurrencyBalanceAnimationData = function useVirtualCurrenc
     }
   }, items2);
   const items3 = [balance, tmp9, currentAnimationType, first1, stateFromStores, callback2];
-  const effect1 = React.useEffect(() => {
+  const effect1 = noop.useEffect(() => {
     let tmp2 = null !== balance;
     if (tmp2) {
       tmp2 = null !== closure_10;

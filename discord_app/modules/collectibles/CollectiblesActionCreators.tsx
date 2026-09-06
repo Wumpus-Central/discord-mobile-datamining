@@ -1,37 +1,31 @@
 // discord_app/modules/collectibles/CollectiblesActionCreators.tsx
-import dispatcherDefault from "../../Dispatcher.tsx";
-import getRootNavigationRef from "../main_tabs_v2/RootNavigationRef.native.tsx";
-import getItemRecordsFromPurchases from "CollectiblesUtils.tsx";
-import pushLayer from "../../actions/LayerActionCreators.tsx";
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../devtools/dev_settings/DevSettingsStore.tsx";
-import closure_5 from "../user_settings/LocaleStore.tsx";
-import closure_6 from "CollectiblesCategoryStore.tsx";
-import { addDebugLog } from "CollectiblesDebugStore.tsx";
-import closure_8 from "CollectiblesPurchaseStore.tsx";
-import closure_9 from "CollectiblesShopStore.tsx";
-import {
-  CollectiblesCategoriesRecord as closure_10,
-  CollectiblesMarketingsRecord as closure_11,
-  CollectiblesShopHomeRecord as closure_14,
-} from "records/CollectiblesCategoriesRecord.tsx";
-import closure_12 from "records/CollectiblesProductRecord.tsx";
-import closure_13 from "records/CollectiblesPurchaseRecord.tsx";
-import { CollectiblesMobileShopScreen as closure_15 } from "CollectiblesShopConstants.tsx";
-import ME from "../../Constants.tsx";
-import getMarketingBySurface from "CollectiblesMarketingsStore.tsx";
-import "map";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import RootNavigationRef from "../main_tabs_v2/RootNavigationRef.native.tsx";
+import CollectiblesUtils from "CollectiblesUtils.tsx";
+import LayerActionCreators from "../../actions/LayerActionCreators.tsx";
+import utils_CollectiblesUtils from "utils/CollectiblesUtils.tsx";
+import ShopVariantsReturnStyle from "../../../discord_common/js/shared/shared-constants/ShopVariantsReturnStyle.tsx";
+import CollectiblesPerfLogging from "utils/CollectiblesPerfLogging.tsx";
+import CollectiblesMarketingReleaseType from "../../../discord_common/js/shared/shared-constants/CollectiblesMarketingReleaseType.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import DevSettingsStore from "../devtools/dev_settings/DevSettingsStore.tsx";
+import LocaleStore from "../user_settings/LocaleStore.tsx";
+import CollectiblesCategoryStore from "CollectiblesCategoryStore.tsx";
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore.tsx";
+import CollectiblesShopStore from "CollectiblesShopStore.tsx";
+import CollectiblesProductRecord from "records/CollectiblesProductRecord.tsx";
+import CollectiblesPurchaseRecord from "records/CollectiblesPurchaseRecord.tsx";
 
-require = arg1;
+require = fn;
 function openCollectiblesShop(arg0) {
-  openCollectiblesShopMobile(Object.assign(arg0, Object.create(null)));
+  openCollectiblesShopMobile(Object.assign(arg0, Object.assign({ tab: 0 })));
 }
 function openCollectiblesShopMobile(screen) {
-  let obj = dispatcherDefault;
-  obj = { type: "COLLECTIBLES_SHOP_OPEN" };
+  let obj = { type: "COLLECTIBLES_SHOP_OPEN" };
   const merged = Object.assign(screen);
   obj.dispatch(obj);
-  const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
+  const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
       screen = screen.screen;
@@ -45,13 +39,9 @@ function openCollectiblesShopMobile(screen) {
           }
         }
         if (screen !== screen) {
-          obj = { screen: null, params: null };
-          obj[0] = constants2.COLLECTIBLES_SHOP;
-          obj1 = { analyticsSource: null, screen: null, onNavigateAway: null };
-          obj1[0] = screen.analyticsSource;
-          obj1[1] = screen;
-          obj1[2] = screen.onNavigateAway;
-          obj[1] = obj1;
+          obj = { screen: constants2.COLLECTIBLES_SHOP, params: null };
+          const obj1 = { analyticsSource: screen.analyticsSource, screen, onNavigateAway: screen.onNavigateAway };
+          obj.params = obj1;
           rootNavigationRef.navigate("settings", obj);
         }
       } else if (null != screen.initialProductSkuId) {
@@ -63,163 +53,139 @@ function openCollectiblesShopMobile(screen) {
   }
 }
 function closeCollectiblesShop() {
-  dispatcherDefault.dispatch({ type: "COLLECTIBLES_SHOP_CLOSE" });
-  const obj = dispatcherDefault;
-  pushLayer.popLayer();
+  DispatcherDefault.dispatch({ type: "COLLECTIBLES_SHOP_CLOSE" });
+  LayerActionCreators.popLayer();
 }
-function _fetchCollectiblesCategories() {
-  const self = this;
-  let tmp = callback((arg0, arg1, arg2) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    c8 = 0;
-    c9 = 0;
-    c7 = 0;
-    return (function* (arg0, arg1, arg2) {
-      let aPIError = tmp3;
-      closure_4 = tmp5;
-      let tmp = callback;
-      tmp = closure_2;
-      closure_3 = lib;
-      if (lib == null) {
-        closure_3 = {};
-      }
-      obj1 = { type: "COLLECTIBLES_CATEGORIES_FETCH", options: null };
-      obj1[1] = closure_3;
-      callback(closure_2[17]).dispatch(obj1);
-      const obj17 = callback(closure_2[17]);
-      const fetchCollectiblesOptionsQuery = lib(closure_2[19]).buildFetchCollectiblesOptionsQuery(tmp97);
-      const value = closure_1_4.get("shop_show_debug_overlay");
-      closure_3 = value;
-      if (lib != null) {
-        const logPerf = tmp97.logPerf;
-      }
-      if (logPerf) {
-        let sessionId;
-        if (tmp99 != null) {
-          sessionId = tmp99.sessionId;
-        }
-        let obj2 = {
-          sessionId: null,
-          checkpoint: null,
-          tab: null,
-          unpublishedCategoriesShown: null,
-          cacheDisabled: null,
-        };
-        obj2[0] = sessionId;
-        obj2[1] = lib(closure_2[20]).CollectiblesShopPerfCheckpoint.CATEGORIES_FETCH_STARTED;
-        let tab;
-        if (tmp99 != null) {
-          tab = tmp99.tab;
-        }
-        obj2[2] = tab;
-        let includeUnpublished;
-        if (tmp97 != null) {
-          includeUnpublished = tmp97.includeUnpublished;
-        }
-        obj2[3] = includeUnpublished;
-        let noCache;
-        if (tmp97 != null) {
-          noCache = tmp97.noCache;
-        }
-        obj2[4] = noCache;
-        lib(closure_2[20]).trackShopPerf(obj2);
-        const obj11 = lib(closure_2[20]);
-      }
-      if (value) {
-        const _JSON = JSON;
-        const _HermesInternal3 = HermesInternal;
-        v0("fetchCollectiblesCategories started: " + JSON.stringify(fetchCollectiblesOptionsQuery, null, 2));
-      }
-      v0 = 1;
-      const HTTP = lib(closure_2[21]).HTTP;
-      const obj3 = { url: null, query: null, rejectWithError: true };
-      obj3[0] = closure_1_16.COLLECTIBLES_CATEGORIES_V2;
-      obj3[1] = fetchCollectiblesOptionsQuery;
-      yield HTTP.get(obj3);
-      if (1 === tmp8) {
-        v0 = 0;
-        aPIError = new lib(closure_2[22]).APIError(closure_6);
-        let obj5 = lib(closure_2[23]);
-        const result = obj5.captureOrIgnoreApiError(aPIError);
-        let obj6 = callback(closure_2[17]);
-        obj5 = { type: "COLLECTIBLES_CATEGORIES_FETCH_FAILURE", error: null };
-        obj5[1] = aPIError;
-        obj6.dispatch(obj5);
-        if (closure_3) {
-          const _HermesInternal2 = HermesInternal;
-          v0("fetchCollectiblesCategories failed: " + aPIError.message);
-        }
-        c9 = 3;
-      } else if (arg0 === 1) {
-        c9 = 3;
-        throw arg1;
-      } else if (arg0 !== 2) {
-        closure_4 = arg1;
-        let logPerf1;
-        if (lib != null) {
-          logPerf1 = lib.logPerf;
-        }
-        if (logPerf1) {
-          const obj = lib(closure_2[20]);
-          let sessionId1;
-          if (closure_2 != null) {
-            sessionId1 = closure_2.sessionId;
-          }
-          obj6 = {
-            sessionId: null,
-            checkpoint: null,
-            tab: null,
-            unpublishedCategoriesShown: null,
-            cacheDisabled: null,
-          };
-          obj6[0] = sessionId1;
-          obj6[1] = lib(closure_2[20]).CollectiblesShopPerfCheckpoint.CATEGORIES_FETCH_COMPLETED;
-          let tab1;
-          if (closure_2 != null) {
-            tab1 = closure_2.tab;
-          }
-          obj6[2] = tab1;
-          let includeUnpublished1;
-          if (lib != null) {
-            includeUnpublished1 = lib.includeUnpublished;
-          }
-          obj6[3] = includeUnpublished1;
-          let noCache1;
-          if (lib != null) {
-            noCache1 = lib.noCache;
-          }
-          obj6[4] = noCache1;
-          obj.trackShopPerf(obj6);
-        }
-        if (closure_3) {
-          const _HermesInternal = HermesInternal;
-          v0("fetchCollectiblesCategories completed " + closure_4.body.categories.length + " categories");
-        }
-        obj2 = callback(closure_2[17]);
-        const obj7 = { type: "COLLECTIBLES_CATEGORIES_FETCH_SUCCESS", categories: null, noOp: null };
-        obj7[1] = closure_10.fromServer(closure_4.body);
-        obj7[2] = callback;
-        obj2.dispatch(obj7);
-        v0 = 0;
-      }
-      v0 = 0;
-      return arg1;
-    })();
-  });
-  closure_19 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+let closure_19 = async function _fetchCollectiblesCategories(arg0, arg1) {
+  closure_5 = tmp3;
+  closure_4 = tmp5;
+  closure_132_0 = closure_0;
+  closure_132_1 = closure_1;
+  closure_132_2 = closure_2;
+  let options = closure_0;
+  if (closure_0 == null) {
+    options = {};
   }
-  return applyArgumentsResult;
-}
+  DispatcherDefault.dispatch({ type: "COLLECTIBLES_CATEGORIES_FETCH", options });
+  const fetchCollectiblesOptionsQuery = utils_CollectiblesUtils.buildFetchCollectiblesOptionsQuery(tmp96);
+  value = DevSettingsStore.get("shop_show_debug_overlay");
+  closure_132_3 = value;
+  if (closure_0 != null) {
+    const logPerf = tmp96.logPerf;
+  }
+  if (logPerf) {
+    let sessionId;
+    if (tmp98 != null) {
+      sessionId = tmp98.sessionId;
+    }
+    let obj2 = {
+      sessionId,
+      checkpoint: CollectiblesPerfLogging.CollectiblesShopPerfCheckpoint.CATEGORIES_FETCH_STARTED,
+      tab: null,
+      unpublishedCategoriesShown: null,
+      cacheDisabled: null,
+    };
+    let tab;
+    if (tmp98 != null) {
+      tab = tmp98.tab;
+    }
+    obj2.tab = tab;
+    let includeUnpublished;
+    if (tmp96 != null) {
+      includeUnpublished = tmp96.includeUnpublished;
+    }
+    obj2.unpublishedCategoriesShown = includeUnpublished;
+    let noCache;
+    if (tmp96 != null) {
+      noCache = tmp96.noCache;
+    }
+    obj2.cacheDisabled = noCache;
+    CollectiblesPerfLogging.trackShopPerf(obj2);
+    CollectiblesPerfLogging;
+  }
+  if (value) {
+    const _JSON = JSON;
+    const _HermesInternal3 = HermesInternal;
+    addDebugLog("fetchCollectiblesCategories started: " + JSON.stringify(fetchCollectiblesOptionsQuery, null, 2));
+  }
+  const HTTP = HTTPUtils.HTTP;
+  const request = {
+    url: value2.COLLECTIBLES_CATEGORIES_V2,
+    query: fetchCollectiblesOptionsQuery,
+    rejectWithError: true,
+  };
+  await HTTP.get(request);
+  if (1 === tmp8) {
+    c7 = 0;
+    closure_132_6 = closure_6;
+    const aPIError = new closure_133_0(closure_133_2[22]).APIError(closure_132_6);
+    closure_132_5 = aPIError;
+    let obj5 = closure_133_0(closure_133_2[23]);
+    const result = obj5.captureOrIgnoreApiError(closure_132_5);
+    let obj6 = closure_133_1(closure_133_2[17]);
+    obj6.dispatch({ type: "COLLECTIBLES_CATEGORIES_FETCH_FAILURE", error: closure_132_5 });
+    if (closure_132_3) {
+      const _HermesInternal2 = HermesInternal;
+      closure_133_7("fetchCollectiblesCategories failed: " + closure_132_5.message);
+    }
+    c9 = 3;
+  } else if (arg0 === 1) {
+    c9 = 3;
+    throw arg1;
+  } else if (arg0 !== 2) {
+    closure_132_4 = arg1;
+    let logPerf1;
+    if (closure_132_0 != null) {
+      logPerf1 = closure_132_0.logPerf;
+    }
+    if (logPerf1) {
+      let sessionId1;
+      if (closure_132_2 != null) {
+        sessionId1 = closure_132_2.sessionId;
+      }
+      obj5 = {
+        sessionId: sessionId1,
+        checkpoint: closure_133_0(closure_133_2[20]).CollectiblesShopPerfCheckpoint.CATEGORIES_FETCH_COMPLETED,
+        tab: null,
+        unpublishedCategoriesShown: null,
+        cacheDisabled: null,
+      };
+      let tab1;
+      if (closure_132_2 != null) {
+        tab1 = closure_132_2.tab;
+      }
+      obj5.tab = tab1;
+      let includeUnpublished1;
+      if (closure_132_0 != null) {
+        includeUnpublished1 = closure_132_0.includeUnpublished;
+      }
+      obj5.unpublishedCategoriesShown = includeUnpublished1;
+      let noCache1;
+      if (closure_132_0 != null) {
+        noCache1 = closure_132_0.noCache;
+      }
+      obj5.cacheDisabled = noCache1;
+      closure_133_0(closure_133_2[20]).trackShopPerf(obj5);
+      closure_133_0(closure_133_2[20]);
+    }
+    if (closure_132_3) {
+      const _HermesInternal = HermesInternal;
+      closure_133_7("fetchCollectiblesCategories completed " + closure_132_4.body.categories.length + " categories");
+    }
+    obj2 = closure_133_1(closure_133_2[17]);
+    obj6 = {
+      type: "COLLECTIBLES_CATEGORIES_FETCH_SUCCESS",
+      categories: closure_133_10.fromServer(closure_132_4.body),
+      noOp: closure_132_1,
+    };
+    obj2.dispatch(obj6);
+    c7 = 0;
+  }
+  return arg1;
+};
 function fetchCollectiblesPurchases() {
   const self = this;
-  const apply = _fetchCollectiblesPurchases.apply;
+  const apply = closure_20.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -227,1128 +193,947 @@ function fetchCollectiblesPurchases() {
   }
   return applyArgumentsResult;
 }
-function _fetchCollectiblesPurchases() {
-  const self = this;
-  const tmp = callback(function* () {
-    if (c5 === 2) {
+let closure_20 = async function _fetchCollectiblesPurchases(arg0, value) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp7 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_1 = tmp3;
+          closure_0 = tmp5;
+          closure_128_0 = undefined;
+          closure_128_1 = undefined;
+          closure_128_2 = undefined;
+          if (isFetching.isFetching) {
+            c5 = 3;
+          } else {
+            DispatcherDefault.dispatch({ type: "COLLECTIBLES_PURCHASES_FETCH" });
+            value = DevSettingsStore.get("shop_show_debug_overlay");
+            closure_128_0 = value;
+            if (value) {
+              addDebugLog("fetchCollectiblesPurchases started");
+            }
+            c3 = 1;
+            const request = { url: constants.COLLECTIBLES_PURCHASES, rejectWithError: true, query: null };
+            const obj1 = { variants_return_style: ShopVariantsReturnStyle.ShopVariantsReturnStyle.VARIANTS_GROUP };
+            request.query = obj1;
+            if (value) {
+              const _JSON = JSON;
+              const _HermesInternal3 = HermesInternal;
+              addDebugLog("fetchCollectiblesPurchases request: " + JSON.stringify(request, null, 2));
+            }
+            const HTTP = HTTPUtils.HTTP;
+            c4 = 2;
+            c5 = 1;
+            const obj2 = { value: HTTP.get(request), done: false };
+            return obj2;
+          }
+        }
+      } else if (1 === tmp8) {
+        c3 = 0;
+        closure_128_3 = closure_2;
+        const aPIError = new closure_129_0(closure_129_2[22]).APIError(closure_128_3);
+        closure_128_2 = aPIError;
+        let obj3 = closure_129_0(closure_129_2[23]);
+        const result = obj3.captureOrIgnoreApiError(closure_128_2);
+        if (closure_128_0) {
+          const _HermesInternal2 = HermesInternal;
+          closure_129_7("fetchCollectiblesPurchases failed: " + closure_128_2.message);
+        }
+        let obj4 = closure_129_1(closure_129_2[17]);
+        obj3 = { type: "COLLECTIBLES_PURCHASES_FETCH_FAILURE", error: closure_128_2 };
+        obj4.dispatch(obj3);
+        throw closure_128_2;
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 !== 2) {
+        closure_128_1 = value;
+        if (closure_128_0) {
+          const _HermesInternal = HermesInternal;
+          closure_129_7("fetchCollectiblesPurchases completed with " + closure_128_1.body.length + " purchases");
+        }
+        obj = closure_129_1(closure_129_2[17]);
+        obj4 = { type: "COLLECTIBLES_PURCHASES_FETCH_SUCCESS", purchases: null };
+        const body = closure_128_1.body;
+        obj4.purchases = body.map(closure_129_13.fromServer);
+        obj.dispatch(obj4);
+        c3 = 0;
+      }
+      c3 = 0;
       c5 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp7 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
+      const obj5 = { value, done: true };
+      return obj5;
+    } catch (tmp62) {
+      closure_2 = tmp62;
+      if (tmp4 === c3) {
+        c5 = tmp2;
+        throw tmp62;
+      } else {
+        c4 = tmp;
+      }
+    }
+  }
+};
+function fetchCollectiblesProduct() {
+  const self = this;
+  const apply = closure_22.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+let closure_22 = async function _fetchCollectiblesProduct(skuId, arg1) {
+  closure_1 = arg1;
+  c6 = 0;
+  c7 = 0;
+  c5 = 0;
+  return (async (arg0, value) => {
+    closure_3 = tmp3;
+    closure_130_0 = skuId;
+    const _Date3 = Date;
+    DispatcherDefault.dispatch({ type: "COLLECTIBLES_PRODUCT_FETCH", skuId, startedAt: Date.now() });
+    const obj2 = { locale: locale.locale };
+    if (closure_1 != null) {
+      const countryCode = tmp55.countryCode;
+    }
+    if (null !== countryCode) {
+      let countryCode1;
+      if (tmp55 != null) {
+        countryCode1 = tmp55.countryCode;
+      }
+      obj2.country_code = countryCode1;
+    }
+    if (closure_1 != null) {
+      const paymentGateway = tmp55.paymentGateway;
+    }
+    if (null !== paymentGateway) {
+      let paymentGateway1;
+      if (tmp55 != null) {
+        paymentGateway1 = tmp55.paymentGateway;
+      }
+      obj2.payment_gateway = paymentGateway1;
+    }
+    if (closure_1 != null) {
+      const includeBundles = tmp55.includeBundles;
+    }
+    if (null !== includeBundles) {
+      let includeBundles1;
+      if (tmp55 != null) {
+        includeBundles1 = tmp55.includeBundles;
+      }
+      obj2.include_bundles = includeBundles1;
+    }
+    const HTTP = HTTPUtils.HTTP;
+    const request = { url: closure_2_16.COLLECTIBLES_PRODUCTS(skuId), rejectWithError: true, query: obj2 };
+    await HTTP.get(request);
+    if (1 === tmp7) {
+      c5 = 0;
+      closure_130_3 = closure_4;
+      const aPIError = new closure_131_0(closure_131_2[22]).APIError(closure_130_3);
+      closure_130_2 = aPIError;
+      const result = closure_131_0(closure_131_2[23]).captureOrIgnoreApiError(closure_130_2);
+      closure_131_1(closure_131_2[17]);
+      const obj4 = {
+        type: "COLLECTIBLES_PRODUCT_FETCH_FAILURE",
+        skuId: closure_130_0,
+        error: closure_130_2,
+        endedAt: null,
+      };
+      const _Date2 = Date;
+      obj4.endedAt = Date.now();
+      obj4.dispatch(obj4);
+      c7 = 3;
+      closure_131_0(closure_131_2[23]);
+    } else if (arg0 === 1) {
+      c7 = 3;
+      throw value;
+    } else if (arg0 !== 2) {
+      closure_130_1 = value;
+      const obj5 = {
+        type: "COLLECTIBLES_PRODUCT_FETCH_SUCCESS",
+        skuId: closure_130_0,
+        product: closure_131_12.fromServer(closure_130_1.body),
+        endedAt: null,
+      };
+      const _Date = Date;
+      obj5.endedAt = Date.now();
+      closure_131_1(closure_131_2[17]).dispatch(obj5);
+      c5 = 0;
+      closure_131_1(closure_131_2[17]);
+    }
+    return value;
+  })();
+};
+let closure_23 = async function _maybeFetchCollectiblesProduct(arg0, value) {
+  if (c2 === 2) {
+    c2 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c2 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c2 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c2 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          let obj1 = fetchingProduct;
+          let isFetchingProductResult = fetchingProduct.isFetchingProduct(closure_0);
+          if (!isFetchingProductResult) {
+            isFetchingProductResult = obj1.isProductFetchBackedOff(tmp5);
+          }
+          if (!isFetchingProductResult) {
+            c3 = 1;
+            c2 = 1;
+            obj1 = { value: fetchCollectiblesProduct(tmp5, tmp6), done: false };
+            return obj1;
+          }
+          tmp6 = closure_1;
+        }
+      } else if (arg0 === 1) {
+        c2 = 3;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        c2 = 3;
+        obj = { value, done: true };
+        return obj;
+      }
+      c2 = 3;
+      return { value: "HermesInternal", done: null };
+    } catch (tmp9) {
+      c2 = tmp;
+      throw tmp9;
+    }
+  }
+};
+function claimPremiumCollectiblesProduct() {
+  const self = this;
+  const apply = closure_24.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+let closure_24 = async function _claimPremiumCollectiblesProduct(arg0, value) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_2 = tmp3;
+          closure_1 = tmp7;
+          closure_129_0 = sku_id;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          let obj1 = { type: "COLLECTIBLES_CLAIM", skuId: sku_id };
+          DispatcherDefault.dispatch(obj1);
+          c4 = 1;
+          const HTTP = HTTPUtils.HTTP;
+          const request = { url: constants.COLLECTIBLES_CLAIM, body: null, rejectWithError: true };
+          const obj2 = { sku_id };
+          request.body = obj2;
+          c5 = 2;
+          c6 = 1;
+          const obj3 = { value: HTTP.put(request), done: false };
+          return obj3;
+        }
+      } else if (1 === tmp7) {
+        c4 = 0;
+        closure_129_3 = closure_3;
+        const aPIError = new closure_130_0(closure_130_2[22]).APIError(closure_129_3);
+        closure_129_2 = aPIError;
+        obj1 = closure_130_1(closure_130_2[17]);
+        const obj4 = { type: "COLLECTIBLES_CLAIM_FAILURE", skuId: closure_129_0, error: closure_129_2 };
+        obj1.dispatch(obj4);
+        throw closure_129_2;
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 0;
+        c6 = 3;
+        obj = { value, done: true };
+        return obj;
+      } else {
+        closure_129_1 = value;
+        const obj5 = { type: "COLLECTIBLES_CLAIM_SUCCESS", skuId: closure_129_0, purchases: null };
+        const body = closure_129_1.body;
+        let mapped;
+        if (body != null) {
+          mapped = body.map(closure_130_13.fromServer);
+        }
+        obj5.purchases = mapped;
+        closure_130_1(closure_130_2[17]).dispatch(obj5);
+        c4 = 0;
+        c6 = 3;
+        return { value: "HermesInternal", done: null };
+      }
+    } catch (tmp29) {
+      closure_3 = tmp29;
+      if (tmp4 === c4) {
+        c6 = tmp2;
+        throw tmp29;
+      } else {
+        c5 = tmp;
+      }
+    }
+  }
+};
+let closure_25 = async function _validateCollectiblesRecipient(recipient_id, sku_id) {
+  c6 = 0;
+  c7 = 0;
+  c5 = 0;
+  return (async (arg0, value) => {
+    if (c7 === 2) {
+      c7 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
       }
     } else {
       try {
-        c5 = 2;
-        if (0 === c4) {
+        c7 = 2;
+        if (0 === c6) {
           if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
+            c7 = 3;
+            throw value;
           } else if (arg0 === 2) {
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            c7 = 3;
+            obj = { value, done: true };
             return obj;
           } else {
-            let lib = tmp3;
-            let callback = tmp5;
-            callback = undefined;
-            lib = undefined;
-            let aPIError;
-            if (closure_1_8.isFetching) {
-              c5 = 3;
-            } else {
-              let obj6 = closure_1_1(closure_1_2[17]);
-              obj6.dispatch({ type: "COLLECTIBLES_PURCHASES_FETCH" });
-              const value = c4.get("shop_show_debug_overlay");
-              callback = value;
-              if (value) {
-                closure_1_7("fetchCollectiblesPurchases started");
-              }
-              c3 = 1;
-              obj1 = { url: null, rejectWithError: true, query: null };
-              obj1[0] = closure_1_16.COLLECTIBLES_PURCHASES;
-              const obj2 = { variants_return_style: null };
-              obj2[0] = closure_1_0(closure_1_2[24]).ShopVariantsReturnStyle.VARIANTS_GROUP;
-              obj1[2] = obj2;
-              if (value) {
-                const _JSON = JSON;
-                const _HermesInternal3 = HermesInternal;
-                closure_1_7("fetchCollectiblesPurchases request: " + JSON.stringify(obj1, null, 2));
-              }
-              const HTTP = closure_1_0(closure_1_2[21]).HTTP;
-              c4 = 2;
-              c5 = 1;
-              let obj3 = { value: null, done: false };
-              obj3[0] = HTTP.get(obj1);
-              return obj3;
-            }
+            closure_3 = tmp3;
+            closure_2 = tmp7;
+            c5 = 1;
+            const HTTP = HTTPUtils.HTTP;
+            const request = { url: constants.COLLECTIBLES_VALID_GIFT_RECIPIENT, query: null, rejectWithError: true };
+            const obj1 = { sku_id, recipient_id };
+            request.query = obj1;
+            c6 = 2;
+            c7 = 1;
+            let obj2 = { value: HTTP.get(request), done: false };
+            return obj2;
           }
-        } else if (1 === tmp8) {
-          c3 = 0;
-          c3 = aPIError;
-          aPIError = new callback(aPIError[22]).APIError(c3);
-          obj3 = callback(aPIError[23]);
-          const result = obj3.captureOrIgnoreApiError(aPIError);
-          if (callback) {
-            const _HermesInternal2 = HermesInternal;
-            callback2("fetchCollectiblesPurchases failed: " + aPIError.message);
-          }
-          let obj4 = lib(aPIError[17]);
-          obj4 = { type: "COLLECTIBLES_PURCHASES_FETCH_FAILURE", error: null };
-          obj4[1] = aPIError;
-          obj4.dispatch(obj4);
-          throw aPIError;
+        } else if (1 === tmp7) {
+          c5 = 0;
+          closure_130_0 = closure_4;
+          obj2 = closure_131_0(closure_131_2[23]);
+          const aPIError = new closure_131_0(closure_131_2[22]).APIError(closure_130_0);
+          const result = obj2.captureOrIgnoreApiError(aPIError);
+          c7 = 3;
+          return { value: false, done: true };
         } else if (arg0 === 1) {
-          c5 = 3;
-          throw arg1;
-        } else if (arg0 !== 2) {
-          lib = arg1;
-          if (callback) {
-            const _HermesInternal = HermesInternal;
-            callback2("fetchCollectiblesPurchases completed with " + lib.body.length + " purchases");
-          }
-          obj = lib(aPIError[17]);
-          const obj5 = { type: "COLLECTIBLES_PURCHASES_FETCH_SUCCESS", purchases: null };
-          const body = lib.body;
-          obj5[1] = body.map(fromServer.fromServer);
-          obj.dispatch(obj5);
-          c3 = 0;
-        }
-        c3 = 0;
-        c5 = 3;
-        obj6 = { value: null, done: true };
-        obj6[0] = arg1;
-        return obj6;
-      } catch (tmp62) {
-        aPIError = tmp62;
-        if (tmp4 === c3) {
-          c5 = tmp2;
-          throw tmp62;
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 0;
+          c7 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
-          c4 = tmp;
+          c5 = 0;
+          c7 = 3;
+          obj = { value: value.body.valid, done: true };
+          return obj;
+        }
+      } catch (tmp22) {
+        closure_4 = tmp22;
+        if (tmp4 === c5) {
+          c7 = tmp2;
+          throw tmp22;
+        } else {
+          c6 = tmp;
         }
       }
     }
-  });
-  closure_20 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function fetchCollectiblesProduct(closure_0, arg1) {
-  const self = this;
-  const apply = _fetchCollectiblesProduct.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _fetchCollectiblesProduct() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c6 = 0;
-    c7 = 0;
-    c5 = 0;
-    return (function* (arg0, arg1) {
-      closure_3 = tmp3;
-      obj1 = { type: "COLLECTIBLES_PRODUCT_FETCH", skuId: null, startedAt: null };
-      obj1[1] = callback;
-      const _Date3 = Date;
-      obj1[2] = Date.now();
-      lib(closure_1_2[17]).dispatch(obj1);
-      let locale = 1;
-      const obj2 = { locale: null };
-      obj2[0] = locale.locale;
-      if (lib != null) {
-        const countryCode = tmp56.countryCode;
-      }
-      if (null !== countryCode) {
-        let countryCode1;
-        if (tmp56 != null) {
-          countryCode1 = tmp56.countryCode;
-        }
-        obj2.country_code = countryCode1;
-      }
-      if (lib != null) {
-        const paymentGateway = tmp56.paymentGateway;
-      }
-      if (null !== paymentGateway) {
-        let paymentGateway1;
-        if (tmp56 != null) {
-          paymentGateway1 = tmp56.paymentGateway;
-        }
-        obj2.payment_gateway = paymentGateway1;
-      }
-      if (lib != null) {
-        const includeBundles = tmp56.includeBundles;
-      }
-      if (null !== includeBundles) {
-        let includeBundles1;
-        if (tmp56 != null) {
-          includeBundles1 = tmp56.includeBundles;
-        }
-        obj2.include_bundles = includeBundles1;
-      }
-      const HTTP = callback(closure_1_2[21]).HTTP;
-      let obj3 = { url: null, rejectWithError: true, query: null };
-      obj3[0] = closure_1_16.COLLECTIBLES_PRODUCTS(callback);
-      obj3[2] = obj2;
-      yield HTTP.get(obj3);
-      if (1 === tmp7) {
-        locale = 0;
-        closure_3 = closure_4;
-        aPIError = new callback(aPIError[22]).APIError(closure_3);
-        obj3 = callback(aPIError[23]);
-        const result = obj3.captureOrIgnoreApiError(aPIError);
-        const obj4 = lib(aPIError[17]);
-        const obj5 = { type: "COLLECTIBLES_PRODUCT_FETCH_FAILURE", skuId: null, error: null, endedAt: null };
-        obj5[1] = callback;
-        obj5[2] = aPIError;
-        const _Date2 = Date;
-        obj5[3] = Date.now();
-        obj4.dispatch(obj5);
-        c7 = 3;
-      } else if (arg0 === 1) {
-        c7 = 3;
-        throw arg1;
-      } else if (arg0 !== 2) {
-        lib = arg1;
-        const obj = lib(aPIError[17]);
-        const obj6 = { type: "COLLECTIBLES_PRODUCT_FETCH_SUCCESS", skuId: null, product: null, endedAt: null };
-        obj6[1] = callback;
-        obj6[2] = closure_12.fromServer(lib.body);
-        const _Date = Date;
-        obj6[3] = Date.now();
-        obj.dispatch(obj6);
-        locale = 0;
-      }
-      locale = 0;
-      return arg1;
-    })();
-  });
-  closure_22 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _maybeFetchCollectiblesProduct() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c3 = 0;
-    c2 = 0;
-    return (function* (arg0, arg1) {
-      if (c2 === 2) {
-        c2 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+  })();
+};
+let closure_26 = async function _validateCollectiblesRecipientsBatch(recipient_id, sku_ids) {
+  c6 = 0;
+  c7 = 0;
+  c5 = 0;
+  return (async (arg0, value) => {
+    if (c7 === 2) {
+      c7 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          c2 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c2 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c2 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              obj1 = closure_1_6;
-              let isFetchingProductResult = closure_1_6.isFetchingProduct(closure_0);
-              if (!isFetchingProductResult) {
-                isFetchingProductResult = obj1.isProductFetchBackedOff(tmp5);
-              }
-              if (!isFetchingProductResult) {
-                c3 = 1;
-                c2 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = closure_1_21(tmp5, tmp6);
-                return obj1;
-              }
-              tmp6 = closure_1;
-            }
-          } else if (arg0 === 1) {
-            c2 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c2 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-          c2 = 3;
-          return { value: "HermesInternal", done: null };
-        } catch (tmp9) {
-          c2 = tmp;
-          throw tmp9;
-        }
+        return { value: "HermesInternal", done: null };
       }
-    })();
-  });
-  closure_23 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function claimPremiumCollectiblesProduct(skuId) {
-  const self = this;
-  const apply = _claimPremiumCollectiblesProduct.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _claimPremiumCollectiblesProduct() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c5 = 0;
-    c6 = 0;
-    c4 = 0;
-    return (function* (arg0) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let aPIError = tmp3;
-              let lib = tmp7;
-              lib = undefined;
-              aPIError = undefined;
-              obj1 = { type: "COLLECTIBLES_CLAIM", skuId: null };
-              obj1[1] = callback;
-              closure_1_1(closure_1_2[17]).dispatch(obj1);
-              c4 = 1;
-              const HTTP = callback(closure_1_2[21]).HTTP;
-              const obj2 = { url: null, body: null, rejectWithError: true };
-              obj2[0] = closure_1_16.COLLECTIBLES_CLAIM;
-              const obj3 = { sku_id: null };
-              obj3[0] = callback;
-              obj2[1] = obj3;
-              c5 = 2;
-              c6 = 1;
-              const obj4 = { value: null, done: false };
-              obj4[0] = HTTP.put(obj2);
-              return obj4;
-            }
-          } else if (1 === tmp7) {
-            c4 = 0;
-            aPIError = new callback(aPIError[22]).APIError(closure_3);
-            obj1 = lib(aPIError[17]);
-            const obj5 = { type: "COLLECTIBLES_CLAIM_FAILURE", skuId: null, error: null };
-            obj5[1] = callback;
-            obj5[2] = aPIError;
-            obj1.dispatch(obj5);
-            throw aPIError;
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw arg1;
+    } else {
+      try {
+        c7 = 2;
+        if (0 === c6) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
           } else if (arg0 === 2) {
-            c4 = 0;
-            c6 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            c7 = 3;
+            obj = { value, done: true };
             return obj;
           } else {
-            lib = arg1;
-            let obj6 = lib(aPIError[17]);
-            obj6 = { type: "COLLECTIBLES_CLAIM_SUCCESS", skuId: null, purchases: null };
-            obj6[1] = callback;
-            const body = lib.body;
-            let mapped;
-            if (body != null) {
-              mapped = body.map(fromServer.fromServer);
-            }
-            obj6[2] = mapped;
-            obj6.dispatch(obj6);
-            c4 = 0;
+            closure_3 = tmp3;
+            closure_2 = tmp7;
+            c5 = 1;
+            const HTTP = HTTPUtils.HTTP;
+            const request = {
+              url: constants.COLLECTIBLES_VALID_GIFT_RECIPIENTS_BATCH,
+              query: null,
+              rejectWithError: true,
+            };
+            const obj1 = { sku_ids, recipient_id };
+            request.query = obj1;
+            c6 = 2;
+            c7 = 1;
+            let obj2 = { value: HTTP.get(request), done: false };
+            return obj2;
+          }
+        } else if (1 === tmp7) {
+          c5 = 0;
+          closure_130_0 = closure_4;
+          obj2 = closure_131_0(closure_131_2[23]);
+          const aPIError = new closure_131_0(closure_131_2[22]).APIError(closure_130_0);
+          const result = obj2.captureOrIgnoreApiError(aPIError);
+          c7 = 3;
+          const obj3 = { value: {}, done: true };
+          return obj3;
+        } else if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 0;
+          c7 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          c5 = 0;
+          c7 = 3;
+          obj = { value: value.body, done: true };
+          return obj;
+        }
+      } catch (tmp22) {
+        closure_4 = tmp22;
+        if (tmp4 === c5) {
+          c7 = tmp2;
+          throw tmp22;
+        } else {
+          c6 = tmp;
+        }
+      }
+    }
+  })();
+};
+let closure_27 = async function _fetchCollectiblesMarketings(arg0) {
+  let release = arg0;
+  c5 = 0;
+  c6 = 0;
+  c4 = 0;
+  let iter = (async (arg0, value) => {
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
             c6 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp29) {
-          closure_3 = tmp29;
-          if (tmp4 === c4) {
-            c6 = tmp2;
-            throw tmp29;
-          } else {
-            c5 = tmp;
-          }
-        }
-      }
-    })();
-  });
-  closure_24 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _validateCollectiblesRecipient() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c6 = 0;
-    c7 = 0;
-    c5 = 0;
-    return (function* (arg0, body) {
-      if (c7 === 2) {
-        c7 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw body;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c7 = 2;
-          if (0 === c6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              closure_3 = tmp3;
-              dependencyMap = tmp7;
-              c5 = 1;
-              const HTTP = callback(closure_1_2[21]).HTTP;
-              obj1 = { url: null, query: null, rejectWithError: true };
-              obj1[0] = closure_1_16.COLLECTIBLES_VALID_GIFT_RECIPIENT;
-              let obj2 = { sku_id: null, recipient_id: null };
-              obj2[0] = closure_1;
-              obj2[1] = callback;
-              obj1[1] = obj2;
-              c6 = 2;
-              c7 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = HTTP.get(obj1);
-              return obj3;
-            }
-          } else if (1 === tmp7) {
-            c5 = 0;
-            callback = closure_4;
-            obj2 = callback(7339);
-            const aPIError = new callback(4461).APIError(callback);
-            const result = obj2.captureOrIgnoreApiError(aPIError);
-            c7 = 3;
-            return { value: false, done: true };
-          } else if (arg0 === 1) {
-            c7 = 3;
-            throw body;
+            throw value;
           } else if (arg0 === 2) {
-            c5 = 0;
-            c7 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = body;
-            return obj4;
-          } else {
-            c5 = 0;
-            c7 = 3;
-            obj = { value: null, done: true };
-            obj[0] = body.body.valid;
-            return obj;
-          }
-        } catch (tmp22) {
-          closure_4 = tmp22;
-          if (tmp4 === c5) {
-            c7 = tmp2;
-            throw tmp22;
-          } else {
-            c6 = tmp;
-          }
-        }
-      }
-    })();
-  });
-  closure_25 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _validateCollectiblesRecipientsBatch() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c6 = 0;
-    c7 = 0;
-    c5 = 0;
-    return (function* (arg0, body) {
-      if (c7 === 2) {
-        c7 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw body;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c7 = 2;
-          if (0 === c6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              closure_3 = tmp3;
-              dependencyMap = tmp7;
-              c5 = 1;
-              const HTTP = callback(closure_1_2[21]).HTTP;
-              obj1 = { url: null, query: null, rejectWithError: true };
-              obj1[0] = closure_1_16.COLLECTIBLES_VALID_GIFT_RECIPIENTS_BATCH;
-              let obj2 = { sku_ids: null, recipient_id: null };
-              obj2[0] = closure_1;
-              obj2[1] = callback;
-              obj1[1] = obj2;
-              c6 = 2;
-              c7 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = HTTP.get(obj1);
-              return obj3;
-            }
-          } else if (1 === tmp7) {
-            c5 = 0;
-            callback = closure_4;
-            obj2 = callback(7339);
-            const aPIError = new callback(4461).APIError(callback);
-            const result = obj2.captureOrIgnoreApiError(aPIError);
-            c7 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = {};
-            return obj4;
-          } else if (arg0 === 1) {
-            c7 = 3;
-            throw body;
-          } else if (arg0 === 2) {
-            c5 = 0;
-            c7 = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = body;
-            return obj5;
-          } else {
-            c5 = 0;
-            c7 = 3;
-            obj = { value: null, done: true };
-            obj[0] = body.body;
-            return obj;
-          }
-        } catch (tmp22) {
-          closure_4 = tmp22;
-          if (tmp4 === c5) {
-            c7 = tmp2;
-            throw tmp22;
-          } else {
-            c6 = tmp;
-          }
-        }
-      }
-    })();
-  });
-  closure_26 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _fetchCollectiblesMarketings() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c5 = 0;
-    c6 = 0;
-    c4 = 0;
-    const iter = (function* (arg0) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let body = tmp3;
-              let obj2 = tmp7;
-              let PROD;
-              PROD = PROD.release;
-              if (PROD === undefined) {
-                PROD = callback(closure_1_2[26]).CollectiblesMarketingReleaseType.PROD;
-              }
-              obj2 = undefined;
-              body = undefined;
-              c5 = 1;
-              c6 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp7) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              obj2(body[17]).dispatch({ type: "COLLECTIBLES_MARKETING_FETCH" });
-              obj2 = { platform: null };
-              obj2[0] = PROD(body[27]).CollectiblesMarketingPlatform.MOBILE;
-              if (PROD !== PROD(body[26]).CollectiblesMarketingReleaseType.PROD) {
-                obj2.release = PROD;
-              }
-              c4 = 1;
-              const HTTP = PROD(body[21]).HTTP;
-              let obj3 = { url: null, query: null, rejectWithError: true };
-              obj3[0] = constants.COLLECTIBLES_MARKETING;
-              obj3[1] = obj2;
-              c5 = 3;
-              c6 = 1;
-              let obj4 = { value: null, done: false };
-              obj4[0] = HTTP.get(obj3);
-              return obj4;
-            }
-          } else {
-            if (2 === tmp7) {
-              c4 = 0;
-              obj3 = PROD(body[23]);
-              const aPIError = new PROD(body[22]).APIError(closure_3);
-              const result = obj3.captureOrIgnoreApiError(aPIError);
-              obj4 = obj2(body[17]);
-              obj4.dispatch({ type: "COLLECTIBLES_MARKETING_FETCH_FAILURE" });
-              c6 = 3;
-            } else if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              body = arg1;
-              obj = obj2(body[17]);
-              const obj5 = { type: "COLLECTIBLES_MARKETING_FETCH_SUCCESS", marketings: null };
-              obj5[1] = closure_11.fromServer(body.body);
-              obj.dispatch(obj5);
-              c4 = 0;
-            }
-            c4 = 0;
             c6 = 3;
-            const obj6 = { value: null, done: true };
-            obj6[0] = arg1;
-            return obj6;
-          }
-        } catch (tmp44) {
-          closure_3 = tmp44;
-          if (tmp4 === c4) {
-            c6 = tmp2;
-            throw tmp44;
+            obj = { value, done: true };
+            return obj;
           } else {
-            c5 = tmp;
+            closure_2 = tmp3;
+            closure_1 = tmp7;
+            closure_129_0 = undefined;
+            let PROD = release.release;
+            if (PROD === undefined) {
+              PROD = CollectiblesMarketingReleaseType.CollectiblesMarketingReleaseType.PROD;
+            }
+            closure_129_0 = PROD;
+            closure_129_1 = undefined;
+            closure_129_2 = undefined;
+            c5 = 1;
+            c6 = 1;
+            return { value: "PX_16", done: true };
           }
+        } else if (1 === tmp7) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj1 = { value, done: true };
+            return obj1;
+          } else {
+            closure_130_1(closure_130_2[17]).dispatch({ type: "COLLECTIBLES_MARKETING_FETCH" });
+            const obj2 = { platform: closure_130_0(closure_130_2[27]).CollectiblesMarketingPlatform.MOBILE };
+            closure_129_1 = obj2;
+            if (closure_129_0 !== closure_130_0(closure_130_2[26]).CollectiblesMarketingReleaseType.PROD) {
+              closure_129_1.release = closure_129_0;
+            }
+            c4 = 1;
+            const HTTP = closure_130_0(closure_130_2[21]).HTTP;
+            const request = { url: closure_130_16.COLLECTIBLES_MARKETING, query: closure_129_1, rejectWithError: true };
+            c5 = 3;
+            c6 = 1;
+            let obj3 = { value: HTTP.get(request), done: false };
+            return obj3;
+          }
+        } else {
+          if (2 === tmp7) {
+            c4 = 0;
+            closure_129_3 = closure_3;
+            obj3 = closure_130_0(closure_130_2[23]);
+            const aPIError = new closure_130_0(closure_130_2[22]).APIError(closure_129_3);
+            const result = obj3.captureOrIgnoreApiError(aPIError);
+            let obj4 = closure_130_1(closure_130_2[17]);
+            obj4.dispatch({ type: "COLLECTIBLES_MARKETING_FETCH_FAILURE" });
+            c6 = 3;
+          } else if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            closure_129_2 = value;
+            obj = closure_130_1(closure_130_2[17]);
+            obj4 = {
+              type: "COLLECTIBLES_MARKETING_FETCH_SUCCESS",
+              marketings: closure_130_11.fromServer(closure_129_2.body),
+            };
+            obj.dispatch(obj4);
+            c4 = 0;
+          }
+          c4 = 0;
+          c6 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
+        }
+      } catch (tmp44) {
+        closure_3 = tmp44;
+        if (tmp4 === c4) {
+          c6 = tmp2;
+          throw tmp44;
+        } else {
+          c5 = tmp;
         }
       }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_27 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _fetchCollectiblesShopHome() {
-  const self = this;
-  const tmp = callback((arg0, arg1, arg2) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    c8 = 0;
-    c9 = 0;
-    c7 = 0;
-    return (function* (arg0, arg1, arg2) {
-      closure_5 = tmp3;
-      obj1 = { type: "COLLECTIBLES_SHOP_HOME_FETCH", tab: null, options: null };
-      obj1[1] = callback;
-      let body = lib;
-      if (lib == null) {
-        body = {};
+    }
+  })();
+  iter.next();
+  return iter;
+};
+let closure_28 = async function _fetchCollectiblesShopHome(tab, arg1, arg2) {
+  closure_1 = arg1;
+  closure_2 = arg2;
+  c8 = 0;
+  c9 = 0;
+  c7 = 0;
+  return (async (arg0, value, arg2) => {
+    closure_5 = tmp3;
+    closure_132_0 = tab;
+    closure_132_1 = closure_1;
+    closure_132_2 = closure_2;
+    const obj1 = { type: "COLLECTIBLES_SHOP_HOME_FETCH", tab, options: null };
+    options = closure_1;
+    if (closure_1 == null) {
+      options = {};
+    }
+    obj1.options = options;
+    DispatcherDefault.dispatch(obj1);
+    const fetchCollectiblesOptionsQuery = utils_CollectiblesUtils.buildFetchCollectiblesOptionsQuery(tmp80, tab);
+    if (closure_1 != null) {
+      const logPerf = tmp80.logPerf;
+    }
+    if (logPerf) {
+      let sessionId;
+      if (tmp81 != null) {
+        sessionId = tmp81.sessionId;
       }
-      obj1[2] = body;
-      lib(closure_2[17]).dispatch(obj1);
-      const obj8 = callback(closure_2[19]);
-      const fetchCollectiblesOptionsQuery = obj8.buildFetchCollectiblesOptionsQuery(tmp81, callback);
-      if (lib != null) {
-        const logPerf = tmp81.logPerf;
+      let obj2 = {
+        sessionId,
+        checkpoint: CollectiblesPerfLogging.CollectiblesShopPerfCheckpoint.SHOP_HOME_FETCH_STARTED,
+        tab: null,
+        unpublishedCategoriesShown: null,
+        cacheDisabled: null,
+      };
+      tab = undefined;
+      if (tmp81 != null) {
+        tab = tmp81.tab;
       }
-      if (logPerf) {
-        let sessionId;
-        if (tmp82 != null) {
-          sessionId = tmp82.sessionId;
+      obj2.tab = tab;
+      let includeUnpublished;
+      if (tmp80 != null) {
+        includeUnpublished = tmp80.includeUnpublished;
+      }
+      obj2.unpublishedCategoriesShown = includeUnpublished;
+      let noCache;
+      if (tmp80 != null) {
+        noCache = tmp80.noCache;
+      }
+      obj2.cacheDisabled = noCache;
+      CollectiblesPerfLogging.trackShopPerf(obj2);
+      CollectiblesPerfLogging;
+    }
+    const HTTP = HTTPUtils.HTTP;
+    const request = { url: constants.COLLECTIBLES_SHOP, query: fetchCollectiblesOptionsQuery, rejectWithError: true };
+    await HTTP.get(request);
+    if (1 === tmp7) {
+      c7 = 0;
+      closure_132_5 = closure_6;
+      const aPIError = new closure_133_0(closure_133_2[22]).APIError(closure_132_5);
+      closure_132_4 = aPIError;
+      let obj5 = closure_133_0(closure_133_2[23]);
+      const result = obj5.captureOrIgnoreApiError(closure_132_4);
+      let obj6 = closure_133_1(closure_133_2[17]);
+      obj6.dispatch({ type: "COLLECTIBLES_SHOP_HOME_FETCH_FAILURE", tab: closure_132_0, error: closure_132_4 });
+      c9 = 3;
+    } else if (arg0 === 1) {
+      c9 = 3;
+      throw value;
+    } else if (arg0 !== 2) {
+      closure_132_3 = value;
+      let logPerf1;
+      if (closure_132_1 != null) {
+        logPerf1 = closure_132_1.logPerf;
+      }
+      if (logPerf1) {
+        let sessionId1;
+        if (closure_132_2 != null) {
+          sessionId1 = closure_132_2.sessionId;
         }
-        let obj2 = {
-          sessionId: null,
-          checkpoint: null,
+        obj5 = {
+          sessionId: sessionId1,
+          checkpoint: closure_133_0(closure_133_2[20]).CollectiblesShopPerfCheckpoint.SHOP_HOME_FETCH_COMPLETED,
           tab: null,
           unpublishedCategoriesShown: null,
           cacheDisabled: null,
         };
-        obj2[0] = sessionId;
-        obj2[1] = callback(closure_2[20]).CollectiblesShopPerfCheckpoint.SHOP_HOME_FETCH_STARTED;
-        let tab;
-        if (tmp82 != null) {
-          tab = tmp82.tab;
+        let tab1;
+        if (closure_132_2 != null) {
+          tab1 = closure_132_2.tab;
         }
-        obj2[2] = tab;
-        let includeUnpublished;
-        if (tmp81 != null) {
-          includeUnpublished = tmp81.includeUnpublished;
+        obj5.tab = tab1;
+        let includeUnpublished1;
+        if (closure_132_1 != null) {
+          includeUnpublished1 = closure_132_1.includeUnpublished;
         }
-        obj2[3] = includeUnpublished;
-        let noCache;
-        if (tmp81 != null) {
-          noCache = tmp81.noCache;
+        obj5.unpublishedCategoriesShown = includeUnpublished1;
+        let noCache1;
+        if (closure_132_1 != null) {
+          noCache1 = closure_132_1.noCache;
         }
-        obj2[4] = noCache;
-        callback(closure_2[20]).trackShopPerf(obj2);
-        const obj10 = callback(closure_2[20]);
+        obj5.cacheDisabled = noCache1;
+        closure_133_0(closure_133_2[20]).trackShopPerf(obj5);
+        closure_133_0(closure_133_2[20]);
       }
-      c7 = 1;
-      const HTTP = callback(closure_2[21]).HTTP;
-      const obj3 = { url: null, query: null, rejectWithError: true };
-      obj3[0] = closure_1_16.COLLECTIBLES_SHOP;
-      obj3[1] = fetchCollectiblesOptionsQuery;
-      yield HTTP.get(obj3);
-      if (1 === tmp7) {
-        c7 = 0;
-        closure_5 = closure_6;
-        const aPIError = new callback(closure_2[22]).APIError(closure_5);
-        let obj5 = callback(closure_2[23]);
-        const result = obj5.captureOrIgnoreApiError(aPIError);
-        let obj6 = lib(closure_2[17]);
-        obj5 = { type: "COLLECTIBLES_SHOP_HOME_FETCH_FAILURE", tab: null, error: null };
-        obj5[1] = callback;
-        obj5[2] = aPIError;
-        obj6.dispatch(obj5);
-        c9 = 3;
-      } else if (arg0 === 1) {
-        c9 = 3;
-        throw arg1;
-      } else if (arg0 !== 2) {
-        body = arg1;
-        let logPerf1;
-        if (lib != null) {
-          logPerf1 = lib.logPerf;
-        }
-        if (logPerf1) {
-          const obj = callback(closure_2[20]);
-          let sessionId1;
-          if (closure_2 != null) {
-            sessionId1 = closure_2.sessionId;
-          }
-          obj6 = {
-            sessionId: null,
-            checkpoint: null,
-            tab: null,
-            unpublishedCategoriesShown: null,
-            cacheDisabled: null,
-          };
-          obj6[0] = sessionId1;
-          obj6[1] = callback(closure_2[20]).CollectiblesShopPerfCheckpoint.SHOP_HOME_FETCH_COMPLETED;
-          let tab1;
-          if (closure_2 != null) {
-            tab1 = closure_2.tab;
-          }
-          obj6[2] = tab1;
-          let includeUnpublished1;
-          if (lib != null) {
-            includeUnpublished1 = lib.includeUnpublished;
-          }
-          obj6[3] = includeUnpublished1;
-          let noCache1;
-          if (lib != null) {
-            noCache1 = lib.noCache;
-          }
-          obj6[4] = noCache1;
-          obj.trackShopPerf(obj6);
-        }
-        obj2 = lib(closure_2[17]);
-        const obj7 = { type: "COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS", tab: null, shopHome: null };
-        obj7[1] = callback;
-        obj7[2] = closure_14.fromServer(body.body);
-        obj2.dispatch(obj7);
-        c7 = 0;
-      }
+      obj2 = closure_133_1(closure_133_2[17]);
+      obj6 = {
+        type: "COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS",
+        tab: closure_132_0,
+        shopHome: closure_133_14.fromServer(closure_132_3.body),
+      };
+      obj2.dispatch(obj6);
       c7 = 0;
-      return arg1;
-    })();
-  });
-  closure_28 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _claimCollectiblesCategoryReward() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c6 = 0;
-    c7 = 0;
-    c5 = 0;
-    return (function* (arg0, arg1) {
-      if (c7 === 2) {
-        c7 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+    }
+    return value;
+  })();
+};
+let closure_29 = async function _claimCollectiblesCategoryReward(category_id, skuId) {
+  c6 = 0;
+  c7 = 0;
+  c5 = 0;
+  return (async (arg0, value) => {
+    if (c7 === 2) {
+      c7 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          c7 = 2;
-          if (0 === c6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_3 = tmp3;
-              let aPIError = tmp7;
-              const callback = lib;
-              lib = undefined;
-              aPIError = undefined;
-              obj1 = { type: "COLLECTIBLES_CLAIM", skuId: null };
-              obj1[1] = lib;
-              lib(closure_1_2[17]).dispatch(obj1);
-              c5 = 1;
-              const HTTP = callback(closure_1_2[21]).HTTP;
-              const obj2 = { url: null, body: null, rejectWithError: true };
-              obj2[0] = closure_1_16.COLLECTIBLES_CLAIM_CATEGORY_REWARD;
-              const obj3 = { category_id: null };
-              obj3[0] = callback;
-              obj2[1] = obj3;
-              c6 = 2;
-              c7 = 1;
-              const obj4 = { value: null, done: false };
-              obj4[0] = HTTP.put(obj2);
-              return obj4;
-            }
-          } else if (1 === tmp7) {
-            c5 = 0;
-            closure_3 = closure_4;
-            aPIError = new callback(aPIError[22]).APIError(closure_3);
-            obj1 = lib(aPIError[17]);
-            const obj5 = { type: "COLLECTIBLES_CLAIM_FAILURE", skuId: null, error: null };
-            obj5[1] = callback;
-            obj5[2] = aPIError;
-            obj1.dispatch(obj5);
-            throw aPIError;
-          } else if (arg0 === 1) {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c7 = 2;
+        if (0 === c6) {
+          if (arg0 === 1) {
             c7 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
-            c5 = 0;
             c7 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
-            lib = arg1;
-            let obj6 = lib(aPIError[17]);
-            obj6 = { type: "COLLECTIBLES_CLAIM_SUCCESS", skuId: null, purchases: null };
-            obj6[1] = callback;
-            const body = lib.body;
-            let mapped;
-            if (body != null) {
-              mapped = body.map(fromServer.fromServer);
-            }
-            obj6[2] = mapped;
-            obj6.dispatch(obj6);
-            c5 = 0;
-            c7 = 3;
-            return { value: "HermesInternal", done: null };
+            closure_3 = tmp3;
+            closure_2 = tmp7;
+            closure_130_0 = skuId;
+            closure_130_1 = undefined;
+            closure_130_2 = undefined;
+            let obj1 = { type: "COLLECTIBLES_CLAIM", skuId };
+            DispatcherDefault.dispatch(obj1);
+            c5 = 1;
+            const HTTP = HTTPUtils.HTTP;
+            const request = { url: constants.COLLECTIBLES_CLAIM_CATEGORY_REWARD, body: null, rejectWithError: true };
+            const obj2 = { category_id };
+            request.body = obj2;
+            c6 = 2;
+            c7 = 1;
+            const obj3 = { value: HTTP.put(request), done: false };
+            return obj3;
           }
-        } catch (tmp29) {
-          closure_4 = tmp29;
-          if (tmp4 === c5) {
-            c7 = tmp2;
-            throw tmp29;
-          } else {
-            c6 = tmp;
-          }
-        }
-      }
-    })();
-  });
-  closure_29 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _maybeFetchCollectiblesShopTabLayout() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c5 = 0;
-    c6 = 0;
-    c4 = 0;
-    const iter = (function* (arg0) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
+        } else if (1 === tmp7) {
+          c5 = 0;
+          closure_130_3 = closure_4;
+          const aPIError = new closure_131_0(closure_131_2[22]).APIError(closure_130_3);
+          closure_130_2 = aPIError;
+          obj1 = closure_131_1(closure_131_2[17]);
+          const obj4 = { type: "COLLECTIBLES_CLAIM_FAILURE", skuId: closure_130_0, error: closure_130_2 };
+          obj1.dispatch(obj4);
+          throw closure_130_2;
+        } else if (arg0 === 1) {
+          c7 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c5 = 0;
+          c7 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
+          closure_130_1 = value;
+          const obj5 = { type: "COLLECTIBLES_CLAIM_SUCCESS", skuId: closure_130_0, purchases: null };
+          const body = closure_130_1.body;
+          let mapped;
+          if (body != null) {
+            mapped = body.map(closure_131_13.fromServer);
+          }
+          obj5.purchases = mapped;
+          closure_131_1(closure_131_2[17]).dispatch(obj5);
+          c5 = 0;
+          c7 = 3;
           return { value: "HermesInternal", done: null };
         }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let layoutFetchError = tmp3;
-              let callback2 = tmp7;
-              let callback;
-              callback2 = undefined;
-              ({ tab: c0, abortSignal: c1 } = callback);
-              layoutFetchError = undefined;
-              let body;
-              c4 = undefined;
-              c5 = 1;
-              c6 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else {
-            if (1 === tmp7) {
-              if (arg0 === 1) {
-                c6 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c6 = 3;
-                obj1 = { value: null, done: true };
-                obj1[0] = arg1;
-                return obj1;
-              } else {
-                if (!closure_9.isFetchingLayout(callback)) {
-                  layoutFetchError = closure_9.getLayoutFetchError(callback);
-                  let status;
-                  if (layoutFetchError != null) {
-                    status = layoutFetchError.status;
-                  }
-                  if (404 !== status) {
-                    let status1;
-                    if (layoutFetchError != null) {
-                      status1 = layoutFetchError.status;
-                    }
-                    if (429 !== status1) {
-                      c4 = 1;
-                      const obj2 = { type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH", tab: null };
-                      obj2[1] = callback;
-                      callback2(layoutFetchError[17]).dispatch(obj2);
-                      const HTTP = callback(layoutFetchError[21]).HTTP;
-                      let obj3 = { url: null, rejectWithError: true, signal: null };
-                      obj3[0] = closure_16.COLLECTIBLES_SHOP_TAB_LAYOUT(callback);
-                      obj3[2] = callback2;
-                      c5 = 3;
-                      c6 = 1;
-                      const obj4 = { value: null, done: false };
-                      obj4[0] = HTTP.get(obj3);
-                      return obj4;
-                    }
-                  }
-                }
-                c6 = 3;
-              }
-            } else if (2 === tmp7) {
-              c4 = 0;
-              c5 = body;
-              const aPIError = new callback(layoutFetchError[22]).APIError(c5);
-              c4 = aPIError;
-              obj3 = callback2(layoutFetchError[17]);
-              const obj5 = { type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_FAILURE", tab: null, apiError: null };
-              obj5[1] = callback;
-              obj5[2] = c4;
-              obj3.dispatch(obj5);
-              throw c4;
-            } else if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              body = arg1;
-              obj = callback2(layoutFetchError[17]);
-              const obj6 = { type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_SUCCESS", tab: null, layoutId: null };
-              obj6[1] = callback;
-              obj6[2] = body.body.layout_id;
-              obj.dispatch(obj6);
-              c4 = 0;
-            }
-            c4 = 0;
-            c6 = 3;
-            const obj7 = { value: null, done: true };
-            obj7[0] = arg1;
-            return obj7;
-          }
-        } catch (tmp39) {
-          body = tmp39;
-          if (tmp4 === c4) {
-            c6 = tmp2;
-            throw tmp39;
-          } else {
-            c5 = tmp;
-          }
+      } catch (tmp29) {
+        closure_4 = tmp29;
+        if (tmp4 === c5) {
+          c7 = tmp2;
+          throw tmp29;
+        } else {
+          c6 = tmp;
         }
       }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_30 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    }
+  })();
+};
+let closure_30 = async function _maybeFetchCollectiblesShopTabLayout(arg0, value) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
   } else {
-    applyArgumentsResult = apply(self, arguments);
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_2 = tmp3;
+          closure_1 = tmp7;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          ({ tab: closure_129_0, abortSignal: closure_129_1 } = closure_0);
+          let layoutFetchError;
+          closure_129_3 = undefined;
+          closure_129_4 = undefined;
+          c5 = 1;
+          c6 = 1;
+          return { value: "PX_16", done: true };
+        }
+      } else {
+        if (1 === tmp7) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj1 = { value, done: true };
+            return obj1;
+          } else {
+            if (!closure_130_9.isFetchingLayout(closure_129_0)) {
+              layoutFetchError = closure_130_9.getLayoutFetchError(closure_129_0);
+              let status;
+              if (layoutFetchError != null) {
+                status = layoutFetchError.status;
+              }
+              if (404 !== status) {
+                let status1;
+                if (layoutFetchError != null) {
+                  status1 = layoutFetchError.status;
+                }
+                if (429 !== status1) {
+                  c4 = 1;
+                  const obj2 = { type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH", tab: closure_129_0 };
+                  closure_130_1(closure_130_2[17]).dispatch(obj2);
+                  const HTTP = closure_130_0(closure_130_2[21]).HTTP;
+                  let obj3 = {
+                    url: closure_130_16.COLLECTIBLES_SHOP_TAB_LAYOUT(closure_129_0),
+                    rejectWithError: true,
+                    signal: closure_129_1,
+                  };
+                  c5 = 3;
+                  c6 = 1;
+                  const obj4 = { value: HTTP.get(obj3), done: false };
+                  return obj4;
+                }
+              }
+            }
+            c6 = 3;
+          }
+        } else if (2 === tmp7) {
+          c4 = 0;
+          closure_129_5 = closure_3;
+          const aPIError = new closure_130_0(closure_130_2[22]).APIError(closure_129_5);
+          closure_129_4 = aPIError;
+          obj3 = closure_130_1(closure_130_2[17]);
+          const obj5 = {
+            type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_FAILURE",
+            tab: closure_129_0,
+            apiError: closure_129_4,
+          };
+          obj3.dispatch(obj5);
+          throw closure_129_4;
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 !== 2) {
+          closure_129_3 = value;
+          obj = closure_130_1(closure_130_2[17]);
+          const obj6 = {
+            type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_SUCCESS",
+            tab: closure_129_0,
+            layoutId: closure_129_3.body.layout_id,
+          };
+          obj.dispatch(obj6);
+          c4 = 0;
+        }
+        c4 = 0;
+        c6 = 3;
+        const obj7 = { value, done: true };
+        return obj7;
+      }
+    } catch (tmp39) {
+      closure_3 = tmp39;
+      if (tmp4 === c4) {
+        c6 = tmp2;
+        throw tmp39;
+      } else {
+        c5 = tmp;
+      }
+    }
   }
-  return applyArgumentsResult;
-}
-({ Endpoints: closure_16, Routes, UserSettingsSections: closure_17 } = ME);
-let result = require("set").fileFinishedImporting("modules/collectibles/CollectiblesActionCreators.tsx");
+};
+const addDebugLog = fn(7557).addDebugLog;
+let closure_10 = fn(7560).CollectiblesCategoriesRecord;
+let closure_11 = fn(7564).CollectiblesMarketingsRecord;
+let closure_14 = fn(7571).CollectiblesShopHomeRecord;
+const constants = fn(1076).CollectiblesMobileShopScreen;
+const Constants = fn(1074);
+({ Endpoints: closure_16, Routes, UserSettingsSections: closure_17 } = Constants);
+const CollectiblesMarketingsStore = fn(7585);
+const CollectiblesShopHomeStore = fn(7586);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/collectibles/CollectiblesActionCreators.tsx");
 
 export default {
   openCollectiblesShop,
@@ -1364,10 +1149,10 @@ export const isCollectiblesShopOpen = function isCollectiblesShopOpen() {
   const tmp = null == rootNavigationRef || !rootNavigationRef.isReady();
   let tmp2 = !tmp;
   if (!tmp) {
-    isCollectiblesShopRoute = function isCollectiblesShopRoute(nextResult) {
-      let flag = "settings" !== nextResult.name;
+    isCollectiblesShopRoute = function isCollectiblesShopRoute(dependencyMap) {
+      let flag = "settings" !== dependencyMap.name;
       if (!flag) {
-        const params = nextResult.params;
+        const params = dependencyMap.params;
         let screen;
         if (params != null) {
           screen = params.screen;
@@ -1391,10 +1176,7 @@ export const isCollectiblesShopOpen = function isCollectiblesShopOpen() {
         const nextResult = iter.next();
         while (iter !== undefined) {
           let tmp2 = nextResult;
-          let tmp3 = isCollectiblesShopRoute;
-          let tmp4 = nextResult;
           if (isCollectiblesShopRoute(nextResult)) {
-            let tmp11 = iter;
             iter.return();
             return tmp2;
           } else {
@@ -1404,12 +1186,8 @@ export const isCollectiblesShopOpen = function isCollectiblesShopOpen() {
               routes = state.routes;
             }
             if (routes) {
-              let tmp6 = searchRoutes;
-              let tmp7 = nextResult;
               let tmp8 = searchRoutes(tmp2.state.routes);
-              let tmp9 = tmp8;
               if (tmp8) {
-                let tmp10 = iter;
                 iter.return();
                 return tmp8;
               }
@@ -1426,35 +1204,33 @@ export const isCollectiblesShopOpen = function isCollectiblesShopOpen() {
   return tmp2;
 };
 export const dispatchOpenCollectiblesShop = function dispatchOpenCollectiblesShop(arg0) {
-  let obj = dispatcherDefault;
-  obj = { type: "COLLECTIBLES_SHOP_OPEN" };
+  const obj = { type: "COLLECTIBLES_SHOP_OPEN" };
   const merged = Object.assign(arg0);
   obj.dispatch(obj);
 };
 export { closeCollectiblesShop };
 export const productDetailsOpened = function productDetailsOpened(skuId) {
-  let obj = dispatcherDefault;
-  obj = { type: "COLLECTIBLES_PRODUCT_DETAILS_OPEN", skuId };
+  const obj = { type: "COLLECTIBLES_PRODUCT_DETAILS_OPEN", skuId };
   obj.dispatch(obj);
 };
-export const areRequestOptionsEqual = function areRequestOptionsEqual(closure_5, closure_12) {
-  let noCache;
-  if (closure_5 != null) {
-    noCache = closure_5.noCache;
+export const areRequestOptionsEqual = function areRequestOptionsEqual(noCache, noCache2) {
+  noCache = undefined;
+  if (noCache != null) {
+    noCache = noCache.noCache;
   }
   let noCache1;
-  if (closure_12 != null) {
-    noCache1 = closure_12.noCache;
+  if (noCache2 != null) {
+    noCache1 = noCache2.noCache;
   }
   let tmp4 = Boolean(noCache) === Boolean(noCache1);
   if (tmp4) {
     let includeUnpublished;
-    if (closure_5 != null) {
-      includeUnpublished = closure_5.includeUnpublished;
+    if (noCache != null) {
+      includeUnpublished = noCache.includeUnpublished;
     }
     let includeUnpublished1;
-    if (closure_12 != null) {
-      includeUnpublished1 = closure_12.includeUnpublished;
+    if (noCache2 != null) {
+      includeUnpublished1 = noCache2.includeUnpublished;
     }
     const _Boolean = Boolean;
     const _Boolean2 = Boolean;
@@ -1463,12 +1239,12 @@ export const areRequestOptionsEqual = function areRequestOptionsEqual(closure_5,
   }
   if (tmp4) {
     let includeBundles;
-    if (closure_5 != null) {
-      includeBundles = closure_5.includeBundles;
+    if (noCache != null) {
+      includeBundles = noCache.includeBundles;
     }
     let includeBundles1;
-    if (closure_12 != null) {
-      includeBundles1 = closure_12.includeBundles;
+    if (noCache2 != null) {
+      includeBundles1 = noCache2.includeBundles;
     }
     const _Boolean3 = Boolean;
     const _Boolean4 = Boolean;
@@ -1477,12 +1253,12 @@ export const areRequestOptionsEqual = function areRequestOptionsEqual(closure_5,
   }
   if (tmp4) {
     let includeDynamicBlocks;
-    if (closure_5 != null) {
-      includeDynamicBlocks = closure_5.includeDynamicBlocks;
+    if (noCache != null) {
+      includeDynamicBlocks = noCache.includeDynamicBlocks;
     }
     let includeDynamicBlocks1;
-    if (closure_12 != null) {
-      includeDynamicBlocks1 = closure_12.includeDynamicBlocks;
+    if (noCache2 != null) {
+      includeDynamicBlocks1 = noCache2.includeDynamicBlocks;
     }
     const _Boolean5 = Boolean;
     const _Boolean6 = Boolean;
@@ -1491,53 +1267,53 @@ export const areRequestOptionsEqual = function areRequestOptionsEqual(closure_5,
   }
   if (tmp4) {
     let countryCode;
-    if (closure_5 != null) {
-      countryCode = closure_5.countryCode;
+    if (noCache != null) {
+      countryCode = noCache.countryCode;
     }
     let countryCode1;
-    if (closure_12 != null) {
-      countryCode1 = closure_12.countryCode;
+    if (noCache2 != null) {
+      countryCode1 = noCache2.countryCode;
     }
     tmp4 = countryCode === countryCode1;
   }
   if (tmp4) {
     let paymentGateway;
-    if (closure_5 != null) {
-      paymentGateway = closure_5.paymentGateway;
+    if (noCache != null) {
+      paymentGateway = noCache.paymentGateway;
     }
     let paymentGateway1;
-    if (closure_12 != null) {
-      paymentGateway1 = closure_12.paymentGateway;
+    if (noCache2 != null) {
+      paymentGateway1 = noCache2.paymentGateway;
     }
     tmp4 = paymentGateway === paymentGateway1;
   }
   if (tmp4) {
     let shopHomeConfig;
-    if (closure_5 != null) {
-      shopHomeConfig = closure_5.shopHomeConfig;
+    if (noCache != null) {
+      shopHomeConfig = noCache.shopHomeConfig;
     }
     let shopHomeConfig1;
-    if (closure_12 != null) {
-      shopHomeConfig1 = closure_12.shopHomeConfig;
+    if (noCache2 != null) {
+      shopHomeConfig1 = noCache2.shopHomeConfig;
     }
     tmp4 = shopHomeConfig === shopHomeConfig1;
   }
   if (tmp4) {
     let skipNumCategories;
-    if (closure_5 != null) {
-      skipNumCategories = closure_5.skipNumCategories;
+    if (noCache != null) {
+      skipNumCategories = noCache.skipNumCategories;
     }
     let skipNumCategories1;
-    if (closure_12 != null) {
-      skipNumCategories1 = closure_12.skipNumCategories;
+    if (noCache2 != null) {
+      skipNumCategories1 = noCache2.skipNumCategories;
     }
     tmp4 = skipNumCategories === skipNumCategories1;
   }
   return tmp4;
 };
-export const fetchCollectiblesCategories = function fetchCollectiblesCategories(arg0, closure_1, closure_2) {
+export const fetchCollectiblesCategories = function fetchCollectiblesCategories() {
   const self = this;
-  const apply = _fetchCollectiblesCategories.apply;
+  const apply = closure_19.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1547,9 +1323,9 @@ export const fetchCollectiblesCategories = function fetchCollectiblesCategories(
 };
 export { fetchCollectiblesPurchases };
 export { fetchCollectiblesProduct };
-export const maybeFetchCollectiblesProduct = function maybeFetchCollectiblesProduct(skuId) {
+export const maybeFetchCollectiblesProduct = function maybeFetchCollectiblesProduct() {
   const self = this;
-  const apply = _maybeFetchCollectiblesProduct.apply;
+  const apply = closure_23.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1559,32 +1335,28 @@ export const maybeFetchCollectiblesProduct = function maybeFetchCollectiblesProd
 };
 export const seedCollectiblesProductFromStandaloneLoad = function seedCollectiblesProductFromStandaloneLoad(memo) {
   const timestamp = Date.now();
-  let obj = getItemRecordsFromPurchases;
+  let obj = CollectiblesUtils;
   const items = [memo];
   const result = obj.extendVariantsProducts(items);
   const iter = result[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp4 = nextResult;
-    let tmp5 = product;
-    if (null == product.getProduct(nextResult.skuId)) {
-      let tmp6 = importDefault;
-      let tmp7 = dependencyMap;
-      let obj2 = dispatcherDefault;
+    if (null == CollectiblesCategoryStore.getProduct(nextResult.skuId)) {
+      let obj2 = DispatcherDefault;
       obj = { type: "COLLECTIBLES_PRODUCT_FETCH_SUCCESS", skuId: null, product: null, endedAt: null };
-      let tmp8 = nextResult;
-      obj[1] = tmp4.skuId;
-      obj[2] = tmp4;
-      obj[3] = timestamp;
+      obj.skuId = tmp4.skuId;
+      obj.product = tmp4;
+      obj.endedAt = timestamp;
       let dispatchResult = obj2.dispatch(obj);
     }
     continue;
   }
 };
 export { claimPremiumCollectiblesProduct };
-export const validateCollectiblesRecipient = function validateCollectiblesRecipient(arg0, arg1) {
+export const validateCollectiblesRecipient = function validateCollectiblesRecipient() {
   const self = this;
-  const apply = _validateCollectiblesRecipient.apply;
+  const apply = closure_25.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1594,7 +1366,7 @@ export const validateCollectiblesRecipient = function validateCollectiblesRecipi
 };
 export const validateCollectiblesRecipientsBatch = function validateCollectiblesRecipientsBatch() {
   const self = this;
-  const apply = _validateCollectiblesRecipientsBatch.apply;
+  const apply = closure_26.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1602,9 +1374,9 @@ export const validateCollectiblesRecipientsBatch = function validateCollectibles
   }
   return applyArgumentsResult;
 };
-export const fetchCollectiblesMarketings = function fetchCollectiblesMarketings(arg0) {
+export const fetchCollectiblesMarketings = function fetchCollectiblesMarketings() {
   const self = this;
-  const apply = _fetchCollectiblesMarketings.apply;
+  const apply = closure_27.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1612,9 +1384,9 @@ export const fetchCollectiblesMarketings = function fetchCollectiblesMarketings(
   }
   return applyArgumentsResult;
 };
-export const fetchCollectiblesShopHome = function fetchCollectiblesShopHome(closure_0, closure_12, closure_2) {
+export const fetchCollectiblesShopHome = function fetchCollectiblesShopHome() {
   const self = this;
-  const apply = _fetchCollectiblesShopHome.apply;
+  const apply = closure_28.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1623,23 +1395,20 @@ export const fetchCollectiblesShopHome = function fetchCollectiblesShopHome(clos
   return applyArgumentsResult;
 };
 export const setShopHomeConfigOverride = function setShopHomeConfigOverride(shopHomeConfigOverride) {
-  let obj = dispatcherDefault;
-  obj = { type: "COLLECTIBLES_SET_SHOP_HOME_CONFIG_OVERRIDE", shopHomeConfigOverride };
+  const obj = { type: "COLLECTIBLES_SET_SHOP_HOME_CONFIG_OVERRIDE", shopHomeConfigOverride };
   obj.dispatch(obj);
 };
 export const setShopLayoutUrlOverride = function setShopLayoutUrlOverride(shopLayoutUrlOverride) {
-  let obj = dispatcherDefault;
-  obj = { type: "COLLECTIBLES_SET_SHOP_LAYOUT_URL_OVERRIDE", shopLayoutUrlOverride };
+  const obj = { type: "COLLECTIBLES_SET_SHOP_LAYOUT_URL_OVERRIDE", shopLayoutUrlOverride };
   obj.dispatch(obj);
 };
 export const setSkipNumCategories = function setSkipNumCategories(skipNumCategories) {
-  let obj = dispatcherDefault;
-  obj = { type: "COLLECTIBLES_SKIP_NUM_CATEGORIES", skipNumCategories };
+  const obj = { type: "COLLECTIBLES_SKIP_NUM_CATEGORIES", skipNumCategories };
   obj.dispatch(obj);
 };
 export const claimCollectiblesCategoryReward = function claimCollectiblesCategoryReward() {
   const self = this;
-  const apply = _claimCollectiblesCategoryReward.apply;
+  const apply = closure_29.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1649,7 +1418,7 @@ export const claimCollectiblesCategoryReward = function claimCollectiblesCategor
 };
 export const maybeFetchCollectiblesShopTabLayout = function maybeFetchCollectiblesShopTabLayout() {
   const self = this;
-  const apply = _maybeFetchCollectiblesShopTabLayout.apply;
+  const apply = closure_30.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

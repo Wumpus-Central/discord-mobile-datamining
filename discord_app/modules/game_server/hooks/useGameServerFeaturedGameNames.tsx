@@ -1,15 +1,15 @@
 // discord_app/modules/game_server/hooks/useGameServerFeaturedGameNames.tsx
-import set from "../../../../_runtime/00002_set.js";
-import importDefaultResult1 from "../../games/hooks/useGame.tsx";
-import str11 from "../GameServerConstants.tsx";
+import useGame from "../../games/hooks/useGame.tsx";
+import GameServerConstants from "../GameServerConstants.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-({ MINECRAFT_GAME_ID: obj1, HYTALE_GAME_ID: c3 } = str11);
-const result = set.fileFinishedImporting("modules/game_server/hooks/useGameServerFeaturedGameNames.tsx");
+({ MINECRAFT_GAME_ID: c2, HYTALE_GAME_ID: c3 } = GameServerConstants);
+const result = size.fileFinishedImporting("modules/game_server/hooks/useGameServerFeaturedGameNames.tsx");
 
 export default function useGameServerFeaturedGameNames() {
-  let obj = importDefaultResult1;
-  const data = obj.useGame(closure_2).data;
-  const data2 = importDefaultResult1.useGame(closure_3).data;
+  let obj = useGame;
+  const data = obj.useGame(React2).data;
+  const data2 = useGame.useGame(React3).data;
   let str;
   if (data != null) {
     str = data.name;
@@ -25,6 +25,6 @@ export default function useGameServerFeaturedGameNames() {
   if (str2 == null) {
     str2 = "Hytale";
   }
-  obj[1] = str2;
+  obj.gameName2 = str2;
   return obj;
 }

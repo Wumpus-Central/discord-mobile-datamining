@@ -1,31 +1,26 @@
 // discord_app/modules/voice_panel/native/controls/VoicePanelFloatingCTAContainer.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import ManaContext from "../../../../../discord_common/js/packages/design/native.tsx";
-import Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
-import RowButtonWrapper from "../../../../design/components/TableRow/native/RowButton.native.tsx";
-import useIsMobileVisualRefreshExperimentEnabled from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
-import closure_5 from "../../../../stores/ChannelStore.tsx";
-import { UI_SHOW_HIDE_PHYSICS } from "../../VoicePanelConstants.tsx";
-import { CALL_TILE_GUTTER } from "../card/VoicePanelCardConstants.tsx";
-import { ThemeTypes } from "../../../../../discord_common/js/shared/Constants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import native from "../../../../../discord_common/js/packages/design/native.tsx";
+import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
+import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
+import RowButton from "../../../../design/components/TableRow/native/RowButton.native.tsx";
+import roundToNearestPixelDefault from "../utils/roundToNearestPixel.tsx";
+import MobileVisualRefreshExperiment from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import VoicePanelControlsUtils from "../utils/VoicePanelControlsUtils.tsx";
+import VoicePanelFloatingCTAUtils from "utils/VoicePanelFloatingCTAUtils.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
-require = arg1;
+require = fn;
 function FloatingCTA(trailing) {
   trailing = trailing.trailing;
-  const merged = Object.assign(trailing, Object.create(null));
+  const merged = Object.assign(trailing, Object.assign({ trailing: 0 }));
   let obj = { children: null };
   obj = { experimental_withBlurBackground: true, arrow: null == trailing, trailing };
   const merged1 = Object.assign(merged);
-  obj[0] = jsx(RowButtonWrapper.RowButton, {
-    experimental_withBlurBackground: true,
-    arrow: null == trailing,
-    trailing,
-  });
-  return jsx(Stack.Stack, { experimental_withBlurBackground: true, arrow: null == trailing, trailing });
+  obj.children = jsx(RowButton.RowButton, { experimental_withBlurBackground: true, arrow: null == trailing, trailing });
+  return jsx(Stack_Stack.Stack, { experimental_withBlurBackground: true, arrow: null == trailing, trailing });
 }
 class VoicePanelFloatingCTAContainer {
   constructor(arg0) {
@@ -43,35 +38,34 @@ class VoicePanelFloatingCTAContainer {
     tmp = closure_10();
     tmp2 = accessoryHeights;
     tmp3 = controlsSpecs;
-    context = windowDimensions.useContext(require("dismissPanel"));
+    context = windowDimensions.useContext(accessoryHeights(controlsSpecs[13]));
     windowDimensions = context.windowDimensions;
     channelId = context.channelId;
     safeArea = context.safeArea;
-    tmp5 = require("useChannelFloatingCTAContent")(channelId);
-    obj = require("useGetVisibleContent");
+    tmp5 = accessoryHeights(controlsSpecs[14])(channelId);
+    obj = wrapperSpecs(controlsSpecs[15]);
     first = gestureState(obj.useGetDismissibleContent(tmp5), 1)[0];
     closure_7 = first;
-    obj2 = require("defaultAreStatesEqual");
+    obj2 = wrapperSpecs(controlsSpecs[16]);
     items = [];
     items[0] = channelId;
-    stateFromStores = obj2.useStateFromStores(items, () => channelId.getChannel(channelId));
+    stateFromStores = obj2.useStateFromStores(items, () => ChannelStore.getChannel(channelId));
     closure_8 = stateFromStores;
     items1 = [,];
     items1[0] = first;
     items1[1] = stateFromStores;
     memo = windowDimensions.useMemo(() => {
-      let obj = wrapperSpecs(controlsSpecs[17]);
-      obj = { dismissableContent: first, channel: stateFromStores };
+      const obj = { dismissableContent, channel: stateFromStores };
       return obj.getDismissableCTAProps(obj);
     }, items1);
     closure_9 = memo;
-    obj3 = require("useFloatingCTAProps");
+    obj3 = wrapperSpecs(controlsSpecs[17]);
     floatingCTAProps = obj3.useFloatingCTAProps(stateFromStores);
-    tmp10 = require("useControlsHiddenPresentation")(context.mode, wrapperSpecs, { state, cleanUp });
+    tmp10 = accessoryHeights(controlsSpecs[18])(context.mode, wrapperSpecs, { state, cleanUp });
     ({ hiddenProps, hiddenStyles } = tmp10);
-    obj4 = require("../../../reanimated/ReanimatedRexport.tsx");
+    obj4 = wrapperSpecs(controlsSpecs[19]);
     fn = function f() {
-      let obj = wrapperSpecs(controlsSpecs[20]);
+      let obj = VoicePanelControlsUtils;
       const controlsDefaultWidth = obj.getControlsDefaultWidth(
         windowDimensions.get().width,
         safeArea.get().left,
@@ -80,32 +74,29 @@ class VoicePanelFloatingCTAContainer {
       obj = {
         bottom: controlsSpecs.get().height + 16,
         width: controlsDefaultWidth,
-        marginLeft: -1 * accessoryHeights(controlsSpecs[21])(controlsDefaultWidth / 2),
+        marginLeft: -1 * roundToNearestPixelDefault(controlsDefaultWidth / 2),
         transform: null,
       };
-      obj = { translateX: wrapperSpecs(controlsSpecs[22]).withSpring(wrapperSpecs.get().x, safeArea) };
+      obj = { translateX: spring.withSpring(wrapperSpecs.get().x, UI_SHOW_HIDE_PHYSICS) };
       const items = [obj];
-      const obj4 = wrapperSpecs(controlsSpecs[22]);
-      const tmp2 = safeArea;
+      const tmp2 = UI_SHOW_HIDE_PHYSICS;
       if (wrapperSpecs.get().hidden) {
-        const sum = obj5.get().height + first;
+        const sum = obj5.get().height + CALL_TILE_GUTTER;
         let y = sum + accessoryHeights.get();
       } else {
         y = obj5.get().y;
-        const obj7 = gestureState;
       }
-      const obj6 = wrapperSpecs(controlsSpecs[22]);
-      items[1] = { translateY: wrapperSpecs(controlsSpecs[22]).withSpring(y, tmp2) };
-      obj[3] = items;
+      items[1] = { translateY: spring.withSpring(y, tmp2) };
+      obj.transform = items;
       return obj;
     };
     obj = {
-      getControlsDefaultWidth: require("VOICE_PANEL_DRAWER_MAX_WIDTH").getControlsDefaultWidth,
+      getControlsDefaultWidth: wrapperSpecs(controlsSpecs[20]).getControlsDefaultWidth,
       windowDimensions,
       safeArea,
       controlsSpecs,
-      roundToNearestPixel: require("t"),
-      withSpring: require("CONFIG_NEVER_ANIMATE").withSpring,
+      roundToNearestPixel: accessoryHeights(controlsSpecs[21]),
+      withSpring: wrapperSpecs(controlsSpecs[22]).withSpring,
       wrapperSpecs,
       UI_SHOW_HIDE_PHYSICS: safeArea,
       gestureState,
@@ -117,20 +108,21 @@ class VoicePanelFloatingCTAContainer {
     fn.__initData = closure_12;
     tmp12 = closure_9;
     animatedStyle = obj4.useAnimatedStyle(fn);
-    obj1 = { style: items2, animatedProps: hiddenProps, children: null };
+    obj1 = { style: null, animatedProps: hiddenProps, children: null };
     items2 = [, ,];
     items2[0] = tmp.container;
     items2[1] = animatedStyle;
     items2[2] = hiddenStyles;
-    tmp13 = require("set");
+    obj1.style = items2;
+    tmp13 = accessoryHeights(controlsSpecs[23]);
     if (null != memo) {
       obj2 = { contentTypes: null, children: null };
-      obj2[0] = tmp5;
-      obj2[1] = function children() {
+      obj2.contentTypes = tmp5;
+      obj2.children = function children() {
         const merged = Object.assign(memo);
-        return memo(closure_1_11, {});
+        return <FloatingCTA />;
       };
-      tmp12Result = tmp12(require("SelectedDismissibleContent"), obj2);
+      tmp12Result = tmp12(tmp2(tmp3[24]), obj2);
     } else {
       tmp12Result = null;
       if (null != floatingCTAProps) {
@@ -142,34 +134,36 @@ class VoicePanelFloatingCTAContainer {
         tmp12Result = tmp12(FloatingCTA, obj3);
       }
     }
-    obj1[2] = tmp12Result;
+    obj1.children = tmp12Result;
     return tmp12(tmp13, obj1);
   }
 }
-createCacheKey = { container: null };
-createCacheKey = {
+const UI_SHOW_HIDE_PHYSICS = fn(12273).UI_SHOW_HIDE_PHYSICS;
+let CALL_TILE_GUTTER = fn(12276).CALL_TILE_GUTTER;
+const ThemeTypes = fn(1085).ThemeTypes;
+const jsx = fn(21).jsx;
+fn(4560);
+const createStyles = { container: null };
+const rect = {
   zIndex: 1,
   position: "absolute",
   bottom: 0,
   left: "50%",
   overflow: "hidden",
   alignItems: "center",
-  borderRadius: ThemesDefault.radii.lg,
+  borderRadius: nativeDefault.radii.lg,
 };
-createCacheKey[0] = createCacheKey;
-let closure_10 = createCacheKey.createStyles(createCacheKey);
-let closure_12 = {
+createStyles.container = rect;
+let closure_10 = createStyles.createStyles(createStyles);
+const __initData = {
   code: "function VoicePanelFloatingCTAContainerTsx1(){const{getControlsDefaultWidth,windowDimensions,safeArea,controlsSpecs,roundToNearestPixel,withSpring,wrapperSpecs,UI_SHOW_HIDE_PHYSICS,gestureState,CALL_TILE_GUTTER,accessoryHeights}=this.__closure;const width=getControlsDefaultWidth(windowDimensions.get().width,safeArea.get().left,safeArea.get().right);return{bottom:controlsSpecs.get().height+16,width:width,marginLeft:roundToNearestPixel(width/2)*-1,transform:[{translateX:withSpring(wrapperSpecs.get().x,UI_SHOW_HIDE_PHYSICS)},{translateY:withSpring(wrapperSpecs.get().hidden||gestureState.get().active&&!gestureState.get().requiresPop?wrapperSpecs.get().height+CALL_TILE_GUTTER+accessoryHeights.get():wrapperSpecs.get().y,UI_SHOW_HIDE_PHYSICS)}]};}",
 };
-const result = require("set").fileFinishedImporting(
-  "modules/voice_panel/native/controls/VoicePanelFloatingCTAContainer.tsx",
-);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelFloatingCTAContainer.tsx");
 
 export default VoicePanelFloatingCTAContainer;
 export const getFloatingCTATotalViewHeight = function getFloatingCTATotalViewHeight() {
-  return (
-    useIsMobileVisualRefreshExperimentEnabled.resolveRefreshToken(ThemesDefault.modules.mobile.TABLE_ROW_HEIGHT) + 16
-  );
+  return MobileVisualRefreshExperiment.resolveRefreshToken(nativeDefault.modules.mobile.TABLE_ROW_HEIGHT) + 16;
 };
 export const renderVoicePanelFloatingCTA = function renderVoicePanelFloatingCTA(arg0, arg1, state, cleanUp) {
   let obj = { theme: ThemeTypes.DARK, children: null };
@@ -177,6 +171,6 @@ export const renderVoicePanelFloatingCTA = function renderVoicePanelFloatingCTA(
   const merged = Object.assign(arg1);
   obj.state = state;
   obj.cleanUp = cleanUp;
-  obj[1] = <VoicePanelFloatingCTAContainer />;
-  return jsx(ManaContext.ThemeContextProvider, {}, arg0);
+  obj.children = <VoicePanelFloatingCTAContainer />;
+  return jsx(native.ThemeContextProvider, {}, arg0);
 };

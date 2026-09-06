@@ -1,11 +1,11 @@
 // discord_app/modules/forums/tracking/ForumPostAnalyticsManager.tsx
-import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
-import closure_3 from "../../threads/ActiveThreadsStore.tsx";
-import closure_4 from "../../../stores/AuthenticationStore.tsx";
-import closure_5 from "../../../stores/ChannelStore.tsx";
+import SnowflakeUtilsDefault from "../../../utils/SnowflakeUtils.tsx";
+import ActiveThreadsStore from "../../threads/ActiveThreadsStore.tsx";
+import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
+import ChannelStore from "../../../stores/ChannelStore.tsx";
+import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
-let require = arg1;
-initializeDefault;
+let require = fn;
 class ForumPostAnalyticsManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -22,7 +22,7 @@ class ForumPostAnalyticsManager extends tmp2 {
     applyArgumentsResult.handleChannelSelect = function handleChannelSelect(channelId) {
       channelId = channelId.channelId;
       if (null != channelId) {
-        const channel = closure_1_5.getChannel(channelId);
+        const channel = ChannelStore.getChannel(channelId);
         if (tmp2) {
           applyArgumentsResult.readStateSnapshots = {};
           applyArgumentsResult.processForumChannel(channel.guild_id, channelId);
@@ -31,12 +31,12 @@ class ForumPostAnalyticsManager extends tmp2 {
       }
     };
     applyArgumentsResult.processForumChannel = function processForumChannel(guild_id, channelId) {
-      const threadsForParent = closure_1_3.getThreadsForParent(guild_id, channelId);
-      const keys = closure_1_1(closure_1_2[4]).keys(threadsForParent);
-      const item = keys.forEach((arg0) => {
-        const forumPostReadStatesById = closure_1_0(closure_1_2[5]).getForumPostReadStatesById(arg0);
+      const threadsForParent = ActiveThreadsStore.getThreadsForParent(guild_id, channelId);
+      const keys = SnowflakeUtilsDefault.keys(threadsForParent);
+      const item = keys.forEach((item) => {
+        const forumPostReadStatesById = applyArgumentsResult(dependencyMap[5]).getForumPostReadStatesById(item);
         if (null != forumPostReadStatesById) {
-          readStateSnapshots.readStateSnapshots[arg0] = forumPostReadStatesById;
+          readStateSnapshots.readStateSnapshots[item] = forumPostReadStatesById;
         }
       });
     };
@@ -51,13 +51,14 @@ ForumPostAnalyticsManager.prototype["handleThreadCreate"] = function handleThrea
   if (channel.isForumPost()) {
     const self = this;
     const obj = { isNew: null, hasUnreads: null };
-    const tmp2 = channel.ownerId !== id.getId();
-    obj[0] = tmp2;
-    obj[1] = tmp2;
+    const tmp2 = channel.ownerId !== AuthenticationStore.getId();
+    obj.isNew = tmp2;
+    obj.hasUnreads = tmp2;
     this.readStateSnapshots[channel.id] = obj;
   }
 };
 const forumPostAnalyticsManager = new ForumPostAnalyticsManager();
-const result = require("set").fileFinishedImporting("modules/forums/tracking/ForumPostAnalyticsManager.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/forums/tracking/ForumPostAnalyticsManager.tsx");
 
 export default forumPostAnalyticsManager;

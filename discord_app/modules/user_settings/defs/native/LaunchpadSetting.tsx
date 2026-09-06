@@ -1,122 +1,68 @@
 // discord_app/modules/user_settings/defs/native/LaunchpadSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import create from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import explicitContentFromProto from "../../UserSettings.tsx";
-import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
-import LAUNCH_PAD_SPRING_CONFIG from "../../../launchpad/native/LaunchPadConstants.tsx";
+import util from "../../../../intl/index.native.tsx";
+import preloaded_user_settings from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import UserSettings from "../../UserSettings.tsx";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
+import LaunchPadConstants from "../../../launchpad/native/LaunchPadConstants.tsx";
 import useLaunchPadTypeDefault from "../../../launchpad/native/useLaunchPadType.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const LaunchPadTypes = LAUNCH_PAD_SPRING_CONFIG.LaunchPadTypes;
-const radio = createToggle.createRadio({
+const LaunchPadTypes = LaunchPadConstants.LaunchPadTypes;
+const radio = SettingBuilders.createRadio({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.JqV7IC);
+    const intl = util.intl;
+    return intl.string(util.t.JqV7IC);
   },
-  parent: MobileUserSettings.MobileUserSettings.ADVANCED,
+  parent: SettingsConstants.MobileUserSettings.ADVANCED,
   useValue: useLaunchPadTypeDefault,
   onValueChange: function onLaunchpadSettingValueChange(arg0) {
     if (LaunchPadTypes.GESTURE_FULL === arg0) {
-      const LaunchPadModeSetting3 = explicitContentFromProto.LaunchPadModeSetting;
-      LaunchPadModeSetting3.updateSetting(create.LaunchPadMode.LAUNCH_PAD_GESTURE_FULL_SCREEN);
+      const LaunchPadModeSetting3 = UserSettings.LaunchPadModeSetting;
+      LaunchPadModeSetting3.updateSetting(preloaded_user_settings.LaunchPadMode.LAUNCH_PAD_GESTURE_FULL_SCREEN);
     } else if (tmp.GESTURE_EDGE === arg0) {
-      const LaunchPadModeSetting2 = explicitContentFromProto.LaunchPadModeSetting;
-      LaunchPadModeSetting2.updateSetting(create.LaunchPadMode.LAUNCH_PAD_GESTURE_RIGHT_EDGE);
+      const LaunchPadModeSetting2 = UserSettings.LaunchPadModeSetting;
+      LaunchPadModeSetting2.updateSetting(preloaded_user_settings.LaunchPadMode.LAUNCH_PAD_GESTURE_RIGHT_EDGE);
     } else if (tmp.PULL_TAB === arg0) {
-      const LaunchPadModeSetting = explicitContentFromProto.LaunchPadModeSetting;
-      LaunchPadModeSetting.updateSetting(create.LaunchPadMode.LAUNCH_PAD_PULL_TAB);
+      const LaunchPadModeSetting = UserSettings.LaunchPadModeSetting;
+      LaunchPadModeSetting.updateSetting(preloaded_user_settings.LaunchPadMode.LAUNCH_PAD_PULL_TAB);
     } else if (tmp.DISABLED === arg0) {
-      const LaunchPadModeSetting4 = explicitContentFromProto.LaunchPadModeSetting;
-      LaunchPadModeSetting4.updateSetting(create.LaunchPadMode.LAUNCH_PAD_DISABLED);
+      const LaunchPadModeSetting4 = UserSettings.LaunchPadModeSetting;
+      LaunchPadModeSetting4.updateSetting(preloaded_user_settings.LaunchPadMode.LAUNCH_PAD_DISABLED);
     }
   },
   useOptions: function useLaunchpadSettingOptions() {
     let obj = { label: null, subLabel: null, value: null };
-    const intl = getSystemLocale.intl;
-    obj[0] = intl.string(getSystemLocale.t.Q3abNB);
-    const intl2 = getSystemLocale.intl;
-    obj[1] = intl2.string(getSystemLocale.t["/gdTGA"]);
-    obj[2] = LaunchPadTypes.GESTURE_FULL;
+    const intl = util.intl;
+    obj.label = intl.string(util.t.Q3abNB);
+    const intl2 = util.intl;
+    obj.subLabel = intl2.string(util.t["/gdTGA"]);
+    obj.value = LaunchPadTypes.GESTURE_FULL;
     const items = [obj, , ,];
     obj = { label: null, subLabel: null, value: null };
-    const intl3 = getSystemLocale.intl;
-    obj[0] = intl3.string(getSystemLocale.t.dQN6qS);
-    const intl4 = getSystemLocale.intl;
-    obj[1] = intl4.string(getSystemLocale.t["W+cPjG"]);
-    obj[2] = LaunchPadTypes.GESTURE_EDGE;
+    const intl3 = util.intl;
+    obj.label = intl3.string(util.t.dQN6qS);
+    const intl4 = util.intl;
+    obj.subLabel = intl4.string(util.t["W+cPjG"]);
+    obj.value = LaunchPadTypes.GESTURE_EDGE;
     items[1] = obj;
     obj = { label: null, subLabel: null, value: null };
-    const intl5 = getSystemLocale.intl;
-    obj[0] = intl5.string(getSystemLocale.t["PgDGl+"]);
-    const intl6 = getSystemLocale.intl;
-    obj[1] = intl6.string(getSystemLocale.t.uVc5MG);
-    obj[2] = LaunchPadTypes.PULL_TAB;
+    const intl5 = util.intl;
+    obj.label = intl5.string(util.t["PgDGl+"]);
+    const intl6 = util.intl;
+    obj.subLabel = intl6.string(util.t.uVc5MG);
+    obj.value = LaunchPadTypes.PULL_TAB;
     items[2] = obj;
-    obj1 = { label: null, subLabel: null, value: null };
-    const intl7 = getSystemLocale.intl;
-    obj1[0] = intl7.string(getSystemLocale.t.HnzBCZ);
-    const intl8 = getSystemLocale.intl;
-    obj1[1] = intl8.string(getSystemLocale.t.It18o2);
-    obj1[2] = LaunchPadTypes.DISABLED;
+    const obj1 = { label: null, subLabel: null, value: null };
+    const intl7 = util.intl;
+    obj1.label = intl7.string(util.t.HnzBCZ);
+    const intl8 = util.intl;
+    obj1.subLabel = intl8.string(util.t.It18o2);
+    obj1.value = LaunchPadTypes.DISABLED;
     items[3] = obj1;
     return items;
   },
 });
-let obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.JqV7IC);
-  },
-  parent: MobileUserSettings.MobileUserSettings.ADVANCED,
-  useValue: useLaunchPadTypeDefault,
-  onValueChange: function onLaunchpadSettingValueChange(arg0) {
-    if (LaunchPadTypes.GESTURE_FULL === arg0) {
-      const LaunchPadModeSetting3 = explicitContentFromProto.LaunchPadModeSetting;
-      LaunchPadModeSetting3.updateSetting(create.LaunchPadMode.LAUNCH_PAD_GESTURE_FULL_SCREEN);
-    } else if (tmp.GESTURE_EDGE === arg0) {
-      const LaunchPadModeSetting2 = explicitContentFromProto.LaunchPadModeSetting;
-      LaunchPadModeSetting2.updateSetting(create.LaunchPadMode.LAUNCH_PAD_GESTURE_RIGHT_EDGE);
-    } else if (tmp.PULL_TAB === arg0) {
-      const LaunchPadModeSetting = explicitContentFromProto.LaunchPadModeSetting;
-      LaunchPadModeSetting.updateSetting(create.LaunchPadMode.LAUNCH_PAD_PULL_TAB);
-    } else if (tmp.DISABLED === arg0) {
-      const LaunchPadModeSetting4 = explicitContentFromProto.LaunchPadModeSetting;
-      LaunchPadModeSetting4.updateSetting(create.LaunchPadMode.LAUNCH_PAD_DISABLED);
-    }
-  },
-  useOptions: function useLaunchpadSettingOptions() {
-    let obj = { label: null, subLabel: null, value: null };
-    const intl = getSystemLocale.intl;
-    obj[0] = intl.string(getSystemLocale.t.Q3abNB);
-    const intl2 = getSystemLocale.intl;
-    obj[1] = intl2.string(getSystemLocale.t["/gdTGA"]);
-    obj[2] = LaunchPadTypes.GESTURE_FULL;
-    const items = [obj, , ,];
-    obj = { label: null, subLabel: null, value: null };
-    const intl3 = getSystemLocale.intl;
-    obj[0] = intl3.string(getSystemLocale.t.dQN6qS);
-    const intl4 = getSystemLocale.intl;
-    obj[1] = intl4.string(getSystemLocale.t["W+cPjG"]);
-    obj[2] = LaunchPadTypes.GESTURE_EDGE;
-    items[1] = obj;
-    obj = { label: null, subLabel: null, value: null };
-    const intl5 = getSystemLocale.intl;
-    obj[0] = intl5.string(getSystemLocale.t["PgDGl+"]);
-    const intl6 = getSystemLocale.intl;
-    obj[1] = intl6.string(getSystemLocale.t.uVc5MG);
-    obj[2] = LaunchPadTypes.PULL_TAB;
-    items[2] = obj;
-    obj1 = { label: null, subLabel: null, value: null };
-    const intl7 = getSystemLocale.intl;
-    obj1[0] = intl7.string(getSystemLocale.t.HnzBCZ);
-    const intl8 = getSystemLocale.intl;
-    obj1[1] = intl8.string(getSystemLocale.t.It18o2);
-    obj1[2] = LaunchPadTypes.DISABLED;
-    items[3] = obj1;
-    return items;
-  },
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/LaunchpadSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/LaunchpadSetting.tsx");
 
 export default radio;

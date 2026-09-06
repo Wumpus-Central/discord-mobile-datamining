@@ -1,27 +1,27 @@
 // discord_app/modules/multi_account/native/AccountSwitchingSpinnerModal.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import ActivityIndicator from "../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import util from "../../../intl/index.native.tsx";
+import ActivityIndicator_ActivityIndicator from "../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+require = fn;
 class AccountSwitchingSpinnerModal {
   constructor() {
     obj = { style: closure_4().switchingSpinnerContainer, accessible: true, accessibilityLabel: null, children: null };
-    intl = require("getSystemLocale").intl;
-    obj[2] = intl.string(require("getSystemLocale").t.n8qMH0);
-    obj[3] = jsx(require("ActivityIndicator").ActivityIndicator, {});
+    intl = closure_0(closure_1[4]).intl;
+    obj.accessibilityLabel = intl.string(closure_0(closure_1[4]).t.n8qMH0);
+    obj.children = jsx(closure_0(closure_1[5]).ActivityIndicator, {});
     return jsx(View, obj);
   }
 }
-noopAll;
-let closure_4 = createCacheKey.createStyles({
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+let createStyles = fn(4560);
+const React4 = createStyles.createStyles({
   switchingSpinnerContainer: { flex: 1, alignItems: "center", justifyContent: "center" },
 });
-createCacheKey = { animation: require("keys").ModalAnimation.FADE, closable: false };
-AccountSwitchingSpinnerModal.modalConfig = createCacheKey;
-const result = require("set").fileFinishedImporting("modules/multi_account/native/AccountSwitchingSpinnerModal.tsx");
+createStyles = { animation: fn(1093).ModalAnimation.FADE, closable: false };
+AccountSwitchingSpinnerModal.modalConfig = createStyles;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/multi_account/native/AccountSwitchingSpinnerModal.tsx");
 
 export default AccountSwitchingSpinnerModal;

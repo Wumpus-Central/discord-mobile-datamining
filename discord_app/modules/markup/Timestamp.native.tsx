@@ -1,34 +1,34 @@
 // discord_app/modules/markup/Timestamp.native.tsx
-import noopAll from "../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
-import itemsDefault from "useFormattedTimestamp.tsx";
-import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
+import ToastActionCreatorsDefault from "../toast/native/ToastActionCreators.tsx";
+import useFormattedTimestampDefault from "useFormattedTimestamp.tsx";
+import noop from "../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-noopAll;
-createCacheKey = { timestamp: null };
-createCacheKey = { color: ThemesDefault.colors.TEXT_DEFAULT, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-createCacheKey[0] = createCacheKey;
-let closure_4 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/markup/Timestamp.native.tsx");
+const require = fn;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { timestamp: null };
+createStyles = { color: nativeDefault.colors.TEXT_DEFAULT, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+createStyles.timestamp = createStyles;
+let closure_4 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/markup/Timestamp.native.tsx");
 
 export default function Timestamp(node) {
   node = node.node;
-  const tmp = callback();
+  const tmp = closure_4();
   let style = tmp.timestamp;
   if (style == null) {
     style = node.style;
   }
-  const tmp2 = itemsDefault(node);
+  const tmp2 = useFormattedTimestampDefault(node);
   const tmp3 = jsx;
   return tmp3(node(1178).LegacyText, {
     style,
     onPress() {
-      let obj = closure_1_1(closure_1_2[6]);
-      obj = { key: "TIMESTAMP", content: node.full };
+      const obj = { key: "TIMESTAMP", content: node.full };
       obj.open(obj);
     },
-    children: itemsDefault(node),
+    children: useFormattedTimestampDefault(node),
   });
 }

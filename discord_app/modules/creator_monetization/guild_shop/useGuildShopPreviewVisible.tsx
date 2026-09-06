@@ -1,42 +1,36 @@
 // discord_app/modules/creator_monetization/guild_shop/useGuildShopPreviewVisible.tsx
-import closure_2 from "../../../stores/PermissionStore.tsx";
-import ME from "../../../Constants.tsx";
-import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { UNSAFE_isDismissibleContentDismissed } from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
+import PermissionStore from "../../../stores/PermissionStore.tsx";
 
-const require = arg1;
-({ Permissions: c3, GuildFeatures: c4 } = ME);
-let result = require("set").fileFinishedImporting(
-  "modules/creator_monetization/guild_shop/useGuildShopPreviewVisible.tsx",
-);
+const require = fn;
+const Constants = fn(1074);
+({ Permissions: c3, GuildFeatures: closure_4 } = Constants);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/creator_monetization/guild_shop/useGuildShopPreviewVisible.tsx");
 
 export const useGuildShopPreviewVisible = function useGuildShopPreviewVisible(features) {
-  const _require = features;
-  const result =
-    require("../../dismissible_content/DismissibleContentUnsafeUtils.tsx").useIsDismissibleContentDismissed_UNSAFE(
-      require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx")
-        .DismissibleContent.SERVER_SHOP_PHANTOM_PREVIEW,
-    );
-  const obj = UNSAFE_isDismissibleContentDismissed;
+  _require = features;
+  const result = require("DismissibleContentUnsafeUtils").useIsDismissibleContentDismissed_UNSAFE(
+    require("dismissible_content").DismissibleContent.SERVER_SHOP_PHANTOM_PREVIEW,
+  );
+  const obj = require("DismissibleContentUnsafeUtils");
   const tmp = _require;
-  const items = [closure_2];
+  const items = [PermissionStore];
   let flag;
-  const stateFromStores =
-    require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => {
-      let canResult = null != closure_0;
-      if (canResult) {
-        canResult = closure_1_2.can(closure_1_3.ADMINISTRATOR, tmp);
-      }
-      return canResult;
-    });
+  const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => {
+    let canResult = null != closure_0;
+    if (canResult) {
+      canResult = PermissionStore.can(constants.ADMINISTRATOR, tmp);
+    }
+    return canResult;
+  });
   if (features != null) {
     features = features.features;
-    flag = features.has(constants.PRODUCTS_AVAILABLE_FOR_PURCHASE);
+    flag = features.has(constants2.PRODUCTS_AVAILABLE_FOR_PURCHASE);
   }
   if (flag == null) {
     flag = false;
   }
-  const obj2 = defaultAreStatesEqual;
+  const obj2 = require("useStateFromStores");
   let id;
   if (features != null) {
     id = features.id;
@@ -46,7 +40,7 @@ export const useGuildShopPreviewVisible = function useGuildShopPreviewVisible(fe
     CREATOR_MONETIZABLE: arr2[0],
     CREATOR_MONETIZABLE_PROVISIONAL: arr2[1],
     ROLE_SUBSCRIPTIONS_ENABLED: arr2[2],
-  } = constants);
+  } = constants2);
   const guildEligibleForGuildProducts = tmp(7258).useGuildEligibleForGuildProducts(id);
   let tmp9 = null != features;
   const tmpResult = tmp(7258);

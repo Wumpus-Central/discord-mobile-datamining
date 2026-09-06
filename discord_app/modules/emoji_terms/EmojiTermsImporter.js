@@ -1,8 +1,8 @@
 // discord_app/modules/emoji_terms/EmojiTermsImporter.js
-import set from "../../../_runtime/00002_set.js";
 import asyncRequireImpl from "../../../_runtime/01896_asyncRequireImpl.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/emoji_terms/EmojiTermsImporter.js");
+const result = size.fileFinishedImporting("modules/emoji_terms/EmojiTermsImporter.js");
 
 export const emojiTermsImporter = {
   bg() {

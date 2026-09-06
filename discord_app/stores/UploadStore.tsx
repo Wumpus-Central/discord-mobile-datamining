@@ -1,21 +1,21 @@
 // discord_app/stores/UploadStore.tsx
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../Dispatcher.tsx";
-import closure_0 from "MessageStore.tsx";
+import DispatcherDefault from "../Dispatcher.tsx";
+import MessageStore from "MessageStore.tsx";
 
 const re1 = /^(assets-library|ph|file):\/\//;
 const re2 = /^content:\/\//;
 let closure_3 = Object.freeze([]);
-let closure_4 = {};
-let closure_5 = {};
-let closure_6 = {};
-let closure_7 = {};
+const dependencyMap = {};
+const dependencyMap2 = {};
+const dependencyMap3 = {};
+const dependencyMap4 = {};
 let closure_8 = {};
 const Store = initializeDefault.Store;
 class UploadStore extends Store {}
 const prototype = UploadStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_0);
+  this.waitFor(MessageStore);
 };
 prototype["getFiles"] = function getFiles(arg0) {
   let tmp = dependencyMap[arg0];
@@ -32,11 +32,11 @@ prototype["getUploaderFileForMessageId"] = function getUploaderFileForMessageId(
 };
 prototype["getUploadAttachments"] = function getUploadAttachments(nonce) {
   if (null != nonce) {
-    return table[nonce];
+    return closure_8[nonce];
   }
 };
 UploadStore.displayName = "UploadStore";
-const uploadStore = new UploadStore(dispatcherDefault, {
+const uploadStore = new UploadStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     closure_8 = {};
   },
@@ -77,33 +77,31 @@ const uploadStore = new UploadStore(dispatcherDefault, {
               if (num == null) {
                 num = 0;
               }
-              const obj = { width: num, height: null, localUri: null, uploaderId: null, uploaderItemId: null };
+              const size = { width: num, height: null, localUri: null, uploaderId: null, uploaderItemId: null };
               let num2 = item.height;
               if (num2 == null) {
                 num2 = 0;
               }
-              obj[1] = num2;
+              size.height = num2;
               let str = item.originalUri;
               if (str == null) {
                 str = "";
               }
-              obj[2] = str;
-              obj[3] = file.id;
+              size.localUri = str;
+              size.uploaderId = file.id;
               let str2 = item.id;
               if (str2 == null) {
                 str2 = "";
               }
-              obj[4] = str2;
-              return obj;
+              size.uploaderItemId = str2;
+              return size;
             });
           }
           if (mapped == null) {
             mapped = [];
           }
           closure_8[id] = mapped;
-          const tmp11 = closure_8;
         }
-        const tmp = dependencyMap;
       }
     }
   },
@@ -182,8 +180,7 @@ const uploadStore = new UploadStore(dispatcherDefault, {
     return tmp5;
   },
   UPLOAD_CANCEL_REQUEST: function handleUploadCancel(arg0) {
-    closure_0 = undefined;
-    closure_0 = tmp;
+    let cancel = tmp;
     if (null == dependencyMap2[arg0.file.id]) {
       return false;
     } else {
@@ -200,7 +197,6 @@ const uploadStore = new UploadStore(dispatcherDefault, {
   },
   UPLOAD_ITEM_CANCEL_REQUEST: function handleUploadItemCancel(itemId) {
     itemId = itemId.itemId;
-    closure_1 = undefined;
     closure_1 = tmp;
     if (null == dependencyMap2[itemId.file.id]) {
       return false;
@@ -225,31 +221,30 @@ const uploadStore = new UploadStore(dispatcherDefault, {
           if (num == null) {
             num = 0;
           }
-          const obj = { width: num, height: null, localUri: null, uploaderId: null, uploaderItemId: null };
+          const size = { width: num, height: null, localUri: null, uploaderId: null, uploaderItemId: null };
           let num2 = item.height;
           if (num2 == null) {
             num2 = 0;
           }
-          obj[1] = num2;
+          size.height = num2;
           let str = item.originalUri;
           if (str == null) {
             str = "";
           }
-          obj[2] = str;
-          obj[3] = file.id;
+          size.localUri = str;
+          size.uploaderId = file.id;
           let str2 = item.id;
           if (str2 == null) {
             str2 = "";
           }
-          obj[4] = str2;
-          return obj;
+          size.uploaderItemId = str2;
+          return size;
         });
       }
       if (mapped == null) {
         mapped = [];
       }
       closure_8[id] = mapped;
-      const tmp3 = closure_8;
     }
     if (null != dependencyMap[channelId]) {
       tmp4[channelId] = arr3.map((id) => {
@@ -278,6 +273,7 @@ const uploadStore = new UploadStore(dispatcherDefault, {
     closure_7[messageId.messageId] = messageId.file;
   },
 });
-const result = require("set").fileFinishedImporting("stores/UploadStore.tsx");
+let size = fn(2);
+const result = size.fileFinishedImporting("stores/UploadStore.tsx");
 
 export default uploadStore;

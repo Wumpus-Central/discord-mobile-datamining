@@ -1,22 +1,23 @@
 // discord_app/utils/HelpdeskUtils.tsx
-import set from "PlatformUtils.tsx";
+import PlatformUtils from "PlatformUtils.tsx";
 import getLocalizedLinkDefault from "../modules/links/getLocalizedLink.tsx";
-import closure_3 from "../modules/user_settings/LocaleStore.tsx";
-import ME from "../Constants.tsx";
+import LocaleStore from "../modules/user_settings/LocaleStore.tsx";
 
-require = arg1;
-const LocalizedLinks = ME.LocalizedLinks;
-let combined = "https://" + ME.SUPPORT_DOMAIN;
-let closure_6 = "https://" + ME.SUPPORT_DEV_DOMAIN;
-const result = require("set").fileFinishedImporting("utils/HelpdeskUtils.tsx");
+require = fn;
+const Constants = fn(1074);
+const LocalizedLinks = Constants.LocalizedLinks;
+let combined = "https://" + Constants.SUPPORT_DOMAIN;
+let closure_6 = "https://" + Constants.SUPPORT_DEV_DOMAIN;
+const size = fn(2);
+const result = size.fileFinishedImporting("utils/HelpdeskUtils.tsx");
 
 export default {
   getArticleURL(REFERRAL_PROGRAM) {
-    return combined + "/hc/" + closure_3.locale.toLowerCase() + "/articles/" + REFERRAL_PROGRAM;
+    return combined + "/hc/" + LocaleStore.locale.toLowerCase() + "/articles/" + REFERRAL_PROGRAM;
   },
   getDevArticleURL(arg0) {
     let tmp2 = closure_6;
-    combined = "/hc/" + closure_3.locale.toLowerCase() + "/articles/" + arg0;
+    combined = "/hc/" + LocaleStore.locale.toLowerCase() + "/articles/" + arg0;
     if (closure_6 === undefined) {
       tmp2 = combined;
     }
@@ -24,18 +25,19 @@ export default {
   },
   getCreatorSupportArticleURL(MEDIA_CHANNEL) {
     return (
-      "https://creator-support.discord.com" + "/hc/" + closure_3.locale.toLowerCase() + "/articles/" + MEDIA_CHANNEL
+      "https://creator-support.discord.com" + "/hc/" + LocaleStore.locale.toLowerCase() + "/articles/" + MEDIA_CHANNEL
     );
   },
   getTwitterURL() {
     return getLocalizedLinkDefault(LocalizedLinks.TWITTER);
   },
   getCommunityURL() {
-    return combined + "/hc/" + closure_3.locale.toLowerCase();
+    return combined + "/hc/" + LocaleStore.locale.toLowerCase();
   },
   getSubmitRequestURL(arg0) {
-    const formatted = closure_3.locale.toLowerCase();
-    const sum = combined + "/hc/" + formatted + "/requests/new?platform=" + encodeURIComponent(set.getPlatformName());
+    const formatted = LocaleStore.locale.toLowerCase();
+    const sum =
+      combined + "/hc/" + formatted + "/requests/new?platform=" + encodeURIComponent(PlatformUtils.getPlatformName());
     let sum1 = sum;
     if (null != arg0) {
       const _encodeURIComponent = encodeURIComponent;
@@ -48,7 +50,7 @@ export default {
     return (
       combined +
       "/hc/" +
-      closure_3.locale.toLowerCase() +
+      LocaleStore.locale.toLowerCase() +
       "/search?utf8=%E2%9C%93&query=" +
       encodeURIComponent(arg0) +
       "&commit=Search"
@@ -59,7 +61,7 @@ export default {
   },
   getAppsSupportURL(APPS_LEARN_MORE) {
     return (
-      "https://support-apps.discord.com" + "/hc/" + closure_3.locale.toLowerCase() + "/articles/" + APPS_LEARN_MORE
+      "https://support-apps.discord.com" + "/hc/" + LocaleStore.locale.toLowerCase() + "/articles/" + APPS_LEARN_MORE
     );
   },
 };

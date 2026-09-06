@@ -1,19 +1,18 @@
 // discord_app/modules/user_settings/defs/native/AccountDisplayNameSetting.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import closure_2 from "../../../../stores/UserStore.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
-import { ProfileCustomizationSubsection } from "../../profiles/native/ProfileCustomizationSettingScreen.tsx";
+import util from "../../../../intl/index.native.tsx";
+import UserStore from "../../../../stores/UserStore.tsx";
 
-require = arg1;
-createToggle = {
+require = fn;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["9AjdkD"]);
+    const intl = util.intl;
+    return intl.string(util.t["9AjdkD"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.ACCOUNT,
+  parent: fn(7975).MobileUserSettings.ACCOUNT,
   useTrailing: function useAccountDisplayNameSettingTrailing() {
-    const items = [closure_2];
+    const items = [UserStore];
     return initialize.useStateFromStores(items, () => {
       currentUser = currentUser.getCurrentUser();
       let globalName;
@@ -23,15 +22,15 @@ createToggle = {
       return globalName;
     });
   },
-  screen: createToggle,
-};
-createToggle = {
-  route: require("ME").UserSettingsSections.PROFILE_CUSTOMIZATION,
-  getComponent() {
-    return ProfileCustomizationSubsection /* ProfileCustomizationSubsection */.default;
+  screen: {
+    route: fn(1074).UserSettingsSections.PROFILE_CUSTOMIZATION,
+    getComponent() {
+      return require("ProfileCustomizationSettingScreen").default;
+    },
   },
 };
-createToggle = createToggle.createRoute(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AccountDisplayNameSetting.tsx");
+SettingBuilders = SettingBuilders.createRoute(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountDisplayNameSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

@@ -1,20 +1,20 @@
 // discord_app/modules/icymi/native/ICYMIMessageRow.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import set from "../../../utils/PlatformUtils.tsx";
-import importAllResult from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../stores/ChannelStore.tsx";
-import closure_6 from "../../../stores/GuildMemberStore.tsx";
-import closure_7 from "../../../stores/GuildStore.tsx";
-import closure_8 from "../../../stores/RelationshipStore.tsx";
-import closure_9 from "../../../stores/UserGuildSettingsStore.tsx";
-import closure_10 from "../../../stores/UserStore.tsx";
-import { ITEM_PADDING } from "DesignConstants.tsx";
-import ME from "../../../Constants.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createICYMIStyles from "createICYMIStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
+import GuildActionCreatorsDefault from "../../../actions/GuildActionCreators.tsx";
+import ICYMIActionCreatorsDefault from "../ICYMIActionCreators.tsx";
+import openChannelLongPressActionSheet from "../../channel/native/openChannelLongPressActionSheet.tsx";
+import showLongPressMessageActionSheet from "../../messages/native/long_press/showLongPressMessageActionSheet.tsx";
+import ICYMIShared from "ICYMIShared.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import ChannelStore from "../../../stores/ChannelStore.tsx";
+import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
+import GuildStore from "../../../stores/GuildStore.tsx";
+import RelationshipStore from "../../../stores/RelationshipStore.tsx";
+import UserGuildSettingsStore from "../../../stores/UserGuildSettingsStore.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
 
-require = arg1;
+require = fn;
 class MessageRowContent {
   constructor(arg0) {
     message = global.message;
@@ -34,19 +34,19 @@ class MessageRowContent {
     tmp = closure_18();
     tmp2 = message;
     tmp3 = closure_2;
-    context = closure_3.useContext(require("context").ICYMIContext);
-    obj = require("isValidImageAttachment");
+    context = closure_3.useContext(message(closure_2[14]).ICYMIContext);
+    obj = message(closure_2[15]);
     result = obj.extractMediaSourcesFromMessage(
       message,
       message,
       channel.guild_id,
-      require("MessageEmbedTypes").GRAVITY_VALID_EMBED_TYPES,
+      message(closure_2[16]).GRAVITY_VALID_EMBED_TYPES,
     );
-    obj2 = require("initialize");
+    obj2 = message(closure_2[17]);
     items = [];
     items[0] = closure_9;
     stateFromStores = obj2.useStateFromStores(items, () =>
-      closure_1_9.isChannelMuted(channel.getGuildId(), channel.id),
+      UserGuildSettingsStore.isChannelMuted(channel.getGuildId(), channel.id),
     );
     items1 = [, ,];
     items1[0] = message.attachments.length;
@@ -58,8 +58,8 @@ class MessageRowContent {
       }
       let tmp3 = !tmp2;
       if (!tmp2) {
-        tmp3 = tmp.embeds[0].type === closure_1_13.GIFV && tmp.embeds[0].url === tmp.content;
-        const tmp5 = tmp.embeds[0].type === closure_1_13.GIFV && tmp.embeds[0].url === tmp.content;
+        tmp3 = tmp.embeds[0].type === constants.GIFV && tmp.embeds[0].url === tmp.content;
+        const tmp5 = tmp.embeds[0].type === constants.GIFV && tmp.embeds[0].url === tmp.content;
       }
       return tmp3;
     }, items1);
@@ -79,7 +79,7 @@ class MessageRowContent {
     tmp8 = jsxs;
     if (!flag) {
       obj = { paddingLeft: null };
-      obj[0] = context.margin;
+      obj.paddingLeft = context.margin;
       tmp10 = obj;
     }
     obj1 = { style: items2, children: null };
@@ -88,9 +88,9 @@ class MessageRowContent {
     if (!memo) {
       tmp12 = jsx;
       obj2 = { message: null, muted: null, lineClamp: null, messageOptions: null, pointerEvents: null };
-      obj2[0] = message;
-      obj2[1] = stateFromStores;
-      obj2[2] = num;
+      obj2.message = message;
+      obj2.muted = stateFromStores;
+      obj2.lineClamp = num;
       num2 = 0;
       obj3 = undefined;
       if (0 === result.length) {
@@ -100,13 +100,13 @@ class MessageRowContent {
           }
         }
       }
-      obj2[3] = obj3;
+      obj2.messageOptions = obj3;
       str = "none";
       if (everyResult) {
         str = "auto";
       }
-      obj2[4] = str;
-      tmp12Result = tmp12(require("ICYMIMessageRowPreview").MessageRowPreview, obj2);
+      obj2.pointerEvents = str;
+      tmp12Result = tmp12(tmp2(tmp3[18]).MessageRowPreview, obj2);
     }
     items3 = [, ,];
     items3[0] = tmp12Result;
@@ -114,12 +114,12 @@ class MessageRowContent {
     if (tmp13) {
       tmp14 = jsx;
       obj4 = { style: null, children: null };
-      obj4[0] = tmp.media;
+      obj4.style = tmp.media;
       tmp15 = channel;
       obj5 = { message: null, visible: null, itemType: "message" };
-      obj5[0] = message;
-      obj5[1] = flag2;
-      obj4[1] = jsx(require("MediaMosaicVideo"), obj5);
+      obj5.message = message;
+      obj5.visible = flag2;
+      obj4.children = jsx(channel(tmp3[19]), obj5);
       tmp13 = jsx(tmp9, obj4);
     }
     items3[1] = tmp13;
@@ -127,30 +127,32 @@ class MessageRowContent {
     if (tmp16) {
       tmp17 = jsx;
       obj6 = { style: null, children: null };
-      obj6[0] = tmp.media;
+      obj6.style = tmp.media;
       obj7 = { message: null, muted: null, lineClamp: 3 };
-      obj7[0] = message;
-      obj7[1] = stateFromStores;
-      obj6[1] = jsx(require("ICYMIMessageRowPreview").NonMediaEmbedsRowPreview, obj7);
+      obj7.message = message;
+      obj7.muted = stateFromStores;
+      obj6.children = jsx(tmp2(tmp3[18]).NonMediaEmbedsRowPreview, obj7);
       tmp16 = jsx(tmp9, obj6);
     }
     items3[2] = tmp16;
-    obj1[1] = items3;
+    obj1.children = items3;
     return tmp8(tmp9, obj1);
   }
 }
 function ReplyMessageContent(message) {
   message = message.message;
   ({ channel, guild } = message);
-  const tmp = callback3();
-  let obj = importAllResult;
-  const context = importAllResult.useContext(message(16453).ICYMIContext);
-  obj1 = message(504);
-  const items = [closure_10];
-  const stateFromStores = obj1.useStateFromStores(items, () => closure_1_10.getUser(message.author.id));
+  const tmp = closure_18();
+  let obj = noop;
+  const context = noop.useContext(message(16453).ICYMIContext);
+  let obj1 = message(504);
+  const items = [UserStore];
+  const stateFromStores = obj1.useStateFromStores(items, () => UserStore.getUser(message.author.id));
   let obj2 = message(504);
-  const items1 = [closure_6];
-  const stateFromStores1 = obj2.useStateFromStores(items1, () => closure_1_6.getMember(guild.id, message.author.id));
+  const items1 = [GuildMemberStore];
+  const stateFromStores1 = obj2.useStateFromStores(items1, () =>
+    GuildMemberStore.getMember(guild.id, message.author.id),
+  );
   let colorString;
   if (stateFromStores1 != null) {
     colorString = stateFromStores1.colorString;
@@ -161,57 +163,49 @@ function ReplyMessageContent(message) {
   const width = obj.useContext(tmp2(16453).ICYMIContext).width;
   let tmp8 = null;
   if (null != stateFromStores) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.replyPreview;
-    obj = { variant: "text-sm/semibold", color: "text-muted", style: null, children: null };
-    obj[2] = { fontStyle: "italic" };
+    obj = { style: tmp.replyPreview, children: null };
+    obj = { variant: "text-sm/semibold", color: "text-muted", style: { fontStyle: "italic" }, children: null };
     const intl = tmp2(1114).intl;
-    obj[3] = intl.string(tmp2(1114).t.mPPcez);
-    const items2 = [callback(tmp2(4556).Text, obj)];
-    obj1 = { style: null, children: null };
-    obj1[0] = tmp.replyInner;
-    obj2 = { animate: false, guildId: null, user: null, size: null };
-    obj2[1] = guild.id;
-    obj2[2] = stateFromStores;
-    obj2[3] = tmp2(1178).AvatarSizes.SMALL;
-    const items3 = [callback(tmp2(1178).Avatar, obj2)];
+    obj.children = intl.string(tmp2(1114).t.mPPcez);
+    const items2 = [closure_14(tmp2(4556).Text, obj)];
+    obj1 = { style: tmp.replyInner, children: null };
+    obj2 = { animate: false, guildId: guild.id, user: stateFromStores, size: tmp2(1178).AvatarSizes.SMALL };
+    const items3 = [closure_14(tmp2(1178).Avatar, obj2)];
     const obj3 = { style: null, children: null };
-    const obj4 = { gap: 4, width: null };
-    obj4[1] = width - context.inset - 2 * ITEM_PADDING - 2 * PX_12 - 30 - PX_8 - 2;
-    obj3[0] = obj4;
+    const obj4 = { gap: 4, width: width - context.inset - 2 * ITEM_PADDING - 2 * PX_12 - 30 - PX_8 - 2 };
+    obj3.style = obj4;
     const obj5 = { variant: "text-md/semibold", style: null, lineClamp: 1, children: null };
-    const obj6 = { color: null };
-    obj6[0] = colorString;
-    obj5[1] = obj6;
-    obj5[3] = tmp2(4712).getName(guild.id, channel.id, stateFromStores);
-    const items4 = [callback(tmp2(4556).Text, obj5)];
+    const obj6 = { color: colorString };
+    obj5.style = obj6;
+    obj5.children = tmp2(4712).getName(guild.id, channel.id, stateFromStores);
+    const items4 = [closure_14(tmp2(4556).Text, obj5)];
     const obj7 = { value: null, children: null };
-    const obj8 = { width: null, margin: null, inset: null };
-    obj8[0] = width - 2 * PX_12 - 30 - PX_8 - 2;
-    ({ margin: obj14[1], inset: obj14[2] } = context);
-    obj7[0] = obj8;
-    const obj9 = { message: null, channel: null, guild: null, nested: true };
-    obj9[0] = message;
-    obj9[1] = channel;
-    obj9[2] = guild;
-    obj7[1] = callback(MessageRowContent, obj9);
-    items4[1] = callback(tmp2(16453).ICYMIContext.Provider, obj7);
-    obj3[1] = items4;
-    items3[1] = callback2(View, obj3);
-    obj1[1] = items3;
-    items2[1] = callback2(View, obj1);
-    obj[1] = items2;
-    tmp8 = callback2(View, obj);
+    const obj8 = { width: width - 2 * PX_12 - 30 - PX_8 - 2, margin: null, inset: null };
+    ({ margin: obj14.margin, inset: obj14.inset } = context);
+    obj7.value = obj8;
+    const obj9 = { message, channel, guild, nested: true };
+    obj7.children = closure_14(MessageRowContent, obj9);
+    items4[1] = closure_14(tmp2(16453).ICYMIContext.Provider, obj7);
+    obj3.children = items4;
+    items3[1] = closure_15(View, obj3);
+    obj1.children = items3;
+    items2[1] = closure_15(View, obj1);
+    obj.children = items2;
+    tmp8 = closure_15(View, obj);
     const tmp2Result = tmp2(4712);
   }
   return tmp8;
 }
-let c3 = importAllResult;
-({ DEFAULT_ROLE_COLOR_HEX: closure_12, MessageEmbedTypes: map1 } = ME);
+const View = fn(17).View;
+const ITEM_PADDING = fn(16490).ITEM_PADDING;
+const Constants = fn(1074);
+({ DEFAULT_ROLE_COLOR_HEX: closure_12, MessageEmbedTypes: map1 } = Constants);
+const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const PX_12 = ThemesDefault.space.PX_12;
-const PX_8 = ThemesDefault.space.PX_8;
-let closure_18 = createICYMIStyles.createICYMIStyles((paddingLeft) => {
+const PX_12 = nativeDefault.space.PX_12;
+const PX_8 = nativeDefault.space.PX_8;
+const createICYMIStyles = fn(16452);
+const collapsedCategories = createICYMIStyles.createICYMIStyles((paddingLeft) => {
   let obj = {
     pressable: null,
     messagePreview: null,
@@ -221,65 +215,65 @@ let closure_18 = createICYMIStyles.createICYMIStyles((paddingLeft) => {
     media: null,
     footer: null,
   };
-  obj = { flex: 1, paddingLeft: paddingLeft.inset, gap: ThemesDefault.space.PX_8 };
-  obj[0] = obj;
-  let obj2 = set;
+  obj = { flex: 1, paddingLeft: paddingLeft.inset, gap: nativeDefault.space.PX_8 };
+  obj.pressable = obj;
+  let obj2 = PlatformUtils;
   let num = 0;
   if (obj2.isAndroid()) {
     num = -2;
   }
   obj = { marginTop: num, borderRadius: tmp(576).radii.md, gap: 0 };
-  obj[1] = obj;
-  obj[2] = {
-    gap: ThemesDefault.space.PX_8,
+  obj.messagePreview = obj;
+  obj.replyPreview = {
+    gap: nativeDefault.space.PX_8,
     marginHorizontal: paddingLeft.margin,
     padding: PX_12,
     overflow: "hidden",
     borderWidth: 1,
-    borderColor: ThemesDefault.colors.BORDER_SUBTLE,
-    borderRadius: ThemesDefault.radii.lg,
+    borderColor: nativeDefault.colors.BORDER_SUBTLE,
+    borderRadius: nativeDefault.radii.lg,
     maxHeight: 132,
   };
   obj2 = { flexDirection: "row", gap: PX_8, overflow: "hidden" };
-  obj[3] = obj2;
-  obj[4] = { paddingLeft: paddingLeft.inset, paddingBottom: paddingLeft.margin };
-  obj[5] = { marginRight: paddingLeft.margin };
-  obj1 = {
-    gap: ThemesDefault.space.PX_8,
+  obj.replyInner = obj2;
+  obj.afterMessage = { paddingLeft: paddingLeft.inset, paddingBottom: paddingLeft.margin };
+  obj.media = { marginRight: paddingLeft.margin };
+  const obj1 = {
+    gap: nativeDefault.space.PX_8,
     marginHorizontal: paddingLeft.margin,
     padding: PX_12,
     overflow: "hidden",
     borderWidth: 1,
-    borderColor: ThemesDefault.colors.BORDER_SUBTLE,
-    borderRadius: ThemesDefault.radii.lg,
+    borderColor: nativeDefault.colors.BORDER_SUBTLE,
+    borderRadius: nativeDefault.radii.lg,
     maxHeight: 132,
   };
-  obj[6] = {
-    marginTop: ThemesDefault.space.PX_8,
+  obj.footer = {
+    marginTop: nativeDefault.space.PX_8,
     marginBottom: paddingLeft.margin,
-    gap: ThemesDefault.space.PX_8,
+    gap: nativeDefault.space.PX_8,
     paddingHorizontal: paddingLeft.margin,
     marginLeft: paddingLeft.inset,
   };
   return obj;
 });
-let closure_21 = importAllResult.memo((message) => {
+let closure_21 = noop.memo((message) => {
   message = message.message;
   const channel = message.channel;
   const guild = message.guild;
   ({ visible, messageContext } = message);
   let obj = message(guild[17]);
-  const items = [closure_9];
-  obj1 = importAllResult;
+  const items = [UserGuildSettingsStore];
+  let obj1 = noop;
   let id;
   const stateFromStores = obj.useStateFromStores(items, () =>
-    closure_1_9.isChannelMuted(channel.getGuildId(), channel.id),
+    UserGuildSettingsStore.isChannelMuted(channel.getGuildId(), channel.id),
   );
   if (guild != null) {
     id = guild.id;
   }
   const items1 = [id, message.author.id];
-  const effect = importAllResult.useEffect(() => {
+  const effect = noop.useEffect(() => {
     let id;
     if (guild != null) {
       id = tmp.id;
@@ -289,8 +283,7 @@ let closure_21 = importAllResult.memo((message) => {
       if (tmp != null) {
         id1 = tmp.id;
       }
-      const membersById = channel(guild[24]).requestMembersById(id1, message.author.id);
-      const obj = channel(guild[24]);
+      const membersById = GuildActionCreatorsDefault.requestMembersById(id1, message.author.id);
     }
   }, items1);
   let tmpResult = tmp(tmp2[25]);
@@ -305,11 +298,11 @@ let closure_21 = importAllResult.memo((message) => {
     before_message_id = messageContext.before_message_id;
   }
   const iCYMIMessage1 = tmpResult.useICYMIMessage(channel.id, before_message_id);
-  const tmp10 = callback3();
+  const tmp10 = closure_18();
   const items2 = [channel.id, message];
   const items3 = [channel, message];
   const callback = obj1.useCallback(() => {
-    let obj = channel(guild[26]);
+    let obj = ICYMIActionCreatorsDefault;
     obj.itemInteracted(message.id, "message", "long_press_channel");
     obj = {
       itemId: message.id,
@@ -321,13 +314,12 @@ let closure_21 = importAllResult.memo((message) => {
         actionDestinationType: null,
       },
     };
-    channel(guild[26]).feedItemActioned(obj);
-    const obj2 = channel(guild[26]);
-    const result = message(guild[27]).openChannelLongPressActionSheet(channel.id);
+    ICYMIActionCreatorsDefault.feedItemActioned(obj);
+    const result = openChannelLongPressActionSheet.openChannelLongPressActionSheet(channel.id);
   }, items2);
   const items4 = [channel.id, guild.id, message.id];
   const callback1 = obj1.useCallback(() => {
-    let obj = channel(guild[26]);
+    let obj = ICYMIActionCreatorsDefault;
     obj.itemInteracted(message.id, "message", "long_press_message");
     obj = {
       itemId: message.id,
@@ -339,13 +331,12 @@ let closure_21 = importAllResult.memo((message) => {
         actionDestinationType: null,
       },
     };
-    channel(guild[26]).feedItemActioned(obj);
-    const obj2 = channel(guild[26]);
-    obj = { channel, message, user: closure_1_10.getUser(message.author.id) };
-    const result = message(guild[28]).showLongPressMessageActionSheet(obj);
+    ICYMIActionCreatorsDefault.feedItemActioned(obj);
+    obj = { channel, message, user: UserStore.getUser(message.author.id) };
+    const result = showLongPressMessageActionSheet.showLongPressMessageActionSheet(obj);
   }, items3);
   const callback2 = obj1.useCallback(() => {
-    let obj = channel(guild[26]);
+    let obj = ICYMIActionCreatorsDefault;
     obj.itemInteracted(message.id, "message", "press_message");
     obj = {
       itemId: message.id,
@@ -357,9 +348,8 @@ let closure_21 = importAllResult.memo((message) => {
         actionDestinationType: "channel",
       },
     };
-    channel(guild[26]).feedItemActioned(obj);
-    const obj2 = channel(guild[26]);
-    message(guild[29]).navigateToPost(channel.id, guild.id, message.id);
+    ICYMIActionCreatorsDefault.feedItemActioned(obj);
+    ICYMIShared.navigateToPost(channel.id, guild.id, message.id);
   }, items4);
   obj = {
     actionLabel: null,
@@ -374,15 +364,15 @@ let closure_21 = importAllResult.memo((message) => {
     children: null,
   };
   const intl = tmp(tmp2[21]).intl;
-  obj[0] = intl.string(message(guild[21]).t.hMFMY9);
-  obj[1] = message.id;
-  obj[3] = channel.id;
+  obj.actionLabel = intl.string(message(guild[21]).t.hMFMY9);
+  obj.id = message.id;
+  obj.channelId = channel.id;
   const tmp15 = channel;
   const tmp16 = channel(guild[30]);
-  obj[4] = channel(guild[31]).extractTimestamp(message.id);
-  obj[5] = callback2;
-  obj[6] = callback;
-  obj[7] = message;
+  obj.timestamp = channel(guild[31]).extractTimestamp(message.id);
+  obj.onHeaderPress = callback2;
+  obj.onHeaderLongPress = callback;
+  obj.message = message;
   obj = {
     onPress: callback2,
     onLongPress: callback1,
@@ -394,70 +384,68 @@ let closure_21 = importAllResult.memo((message) => {
     children: null,
   };
   const obj6 = channel(guild[31]);
-  obj[5] = message(guild[33]).getChannelA11yHint({ channel, muted: stateFromStores });
-  obj[6] = tmp10.pressable;
+  obj.accessibilityHint = message(guild[33]).getChannelA11yHint({ channel, muted: stateFromStores });
+  obj.style = tmp10.pressable;
   let tmp17 = null;
   if (null != iCYMIMessage1) {
-    obj1 = { message: null, channel: null, guild: null, visible: null };
-    obj1[0] = iCYMIMessage1;
-    obj1[1] = channel;
-    obj1[2] = guild;
-    obj1[3] = visible;
-    tmp17 = callback(MessageRowContent, obj1);
+    obj1 = { message: iCYMIMessage1, channel, guild, visible };
+    tmp17 = closure_14(MessageRowContent, obj1);
   }
-  const items5 = [tmp17, callback(MessageRowContent, { message, channel, guild, visible })];
+  const items5 = [tmp17, closure_14(MessageRowContent, { message, channel, guild, visible })];
   let tmp20Result = null;
   if (null != iCYMIMessage) {
-    let obj2 = { message: null, channel: null, guild: null };
-    obj2[0] = iCYMIMessage;
-    obj2[1] = channel;
-    obj2[2] = guild;
+    let obj2 = { message: iCYMIMessage, channel, guild };
     tmp20Result = tmp20(ReplyMessageContent, obj2);
   }
   items5[2] = tmp20Result;
-  obj[7] = items5;
+  obj.children = items5;
   const items6 = [closure_15(message(guild[32]).PressableHighlight, obj)];
-  const tmpResult1 = message(guild[33]);
-  items6[1] = callback(View, { style: tmp10.footer, children: callback(tmp15(guild[34]), obj4) });
-  obj[9] = items6;
+  const obj3 = {
+    style: tmp10.footer,
+    children: closure_14(tmp15(guild[34]), {
+      message,
+      channel,
+      guild,
+      backgroundVariant: "base",
+      id: message.id,
+      itemType: "message",
+    }),
+  };
+  items6[1] = closure_14(View, obj3);
+  obj.children = items6;
   return closure_15(tmp16, obj);
 });
-let result = require("set").fileFinishedImporting("modules/icymi/native/ICYMIMessageRow.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/icymi/native/ICYMIMessageRow.tsx");
 
 export default function MessageRowWrapper(arg0) {
   let gravityMessage;
-  let stateFromStores;
   ({ message, messageContext, visible } = arg0);
   let obj = gravityMessage(8350);
   gravityMessage = obj.useGravityMessage(message);
-  const items = [closure_5];
-  stateFromStores = gravityMessage(504).useStateFromStores(items, () =>
-    closure_1_5.getChannel(gravityMessage.getChannelId()),
+  const items = [ChannelStore];
+  const stateFromStores = gravityMessage(504).useStateFromStores(items, () =>
+    ChannelStore.getChannel(gravityMessage.getChannelId()),
   );
   const obj2 = gravityMessage(504);
-  const items1 = [closure_7];
+  const items1 = [GuildStore];
   const stateFromStores1 = gravityMessage(504).useStateFromStores(items1, () => {
     let guild_id;
     if (stateFromStores != null) {
       guild_id = stateFromStores.guild_id;
     }
-    return closure_1_7.getGuild(guild_id);
+    return GuildStore.getGuild(guild_id);
   });
   gravityMessage(504);
-  [][0] = closure_8;
+  [][0] = RelationshipStore;
   let tmp6 = null;
   if (null != stateFromStores) {
     tmp6 = null;
     if (null != stateFromStores1) {
       tmp6 = null;
       if (!tmp5) {
-        obj = { message: null, channel: null, guild: null, messageContext: null, visible: null };
-        obj[0] = gravityMessage;
-        obj[1] = stateFromStores;
-        obj[2] = stateFromStores1;
-        obj[3] = messageContext;
-        obj[4] = visible;
-        tmp6 = callback(closure_21, obj);
+        obj = { message: gravityMessage, channel: stateFromStores, guild: stateFromStores1, messageContext, visible };
+        tmp6 = closure_14(closure_21, obj);
       }
     }
   }

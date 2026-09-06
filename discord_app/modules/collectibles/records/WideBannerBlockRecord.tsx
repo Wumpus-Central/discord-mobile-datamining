@@ -1,9 +1,8 @@
 // discord_app/modules/collectibles/records/WideBannerBlockRecord.tsx
-import set from "../../../../_runtime/00002_set.js";
 import ShopBlockType from "../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-let prototype;
-prototype = function WideBannerBlockRecord(arg0) {
+const prototype = function WideBannerBlockRecord(arg0) {
   const obj = Object.create(new.target.prototype);
   obj.type = ShopBlockType.ShopBlockType.WIDE_BANNER;
   ({
@@ -24,28 +23,29 @@ prototype = function WideBannerBlockRecord(arg0) {
   return obj;
 }.prototype;
 prototype["fromServer"] = function fromServer(arg0) {
-  if (typeof prototype !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof prototype === "function") {
+    const obj = Object.create(tmp.prototype);
+    obj.type = ShopBlockType.ShopBlockType.WIDE_BANNER;
+    ({
+      title: tmp3.title,
+      body: tmp3.body,
+      category_store_listing_id: tmp3.categoryStoreListingId,
+      banner_text_color: tmp3.bannerTextColor,
+      banner_body_text_color: tmp3.bannerBodyTextColor,
+      disable_cta: tmp3.disableCta,
+      wide_banner_url: tmp3.bannerURL,
+      wide_banner_animated_url: tmp3.bannerAnimatedURL,
+      logo_url: tmp3.logoURL,
+      cta_text: tmp3.ctaText,
+      cta_route: tmp3.ctaRoute,
+      is_dismissible: tmp3.isDismissible,
+      dismissible_content_version: tmp3.dismissibleContentVersion,
+    } = arg0);
+    return obj;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const obj = Object.create(prototype.prototype);
-  obj.type = ShopBlockType.ShopBlockType.WIDE_BANNER;
-  ({
-    title: tmp2.title,
-    body: tmp2.body,
-    category_store_listing_id: tmp2.categoryStoreListingId,
-    banner_text_color: tmp2.bannerTextColor,
-    banner_body_text_color: tmp2.bannerBodyTextColor,
-    disable_cta: tmp2.disableCta,
-    wide_banner_url: tmp2.bannerURL,
-    wide_banner_animated_url: tmp2.bannerAnimatedURL,
-    logo_url: tmp2.logoURL,
-    cta_text: tmp2.ctaText,
-    cta_route: tmp2.ctaRoute,
-    is_dismissible: tmp2.isDismissible,
-    dismissible_content_version: tmp2.dismissibleContentVersion,
-  } = arg0);
-  return obj;
 };
-const result = set.fileFinishedImporting("modules/collectibles/records/WideBannerBlockRecord.tsx");
+const result = size.fileFinishedImporting("modules/collectibles/records/WideBannerBlockRecord.tsx");
 
 export const WideBannerBlockRecord = prototype;

@@ -1,11 +1,10 @@
 // discord_app/modules/self_mod/SafetyToolsActionCreators.native.tsx
-import set from "../../../_runtime/00002_set.js";
-import ACTION_SHEET_HEIGHT_HALFDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
-import LOCATION_CONTEXT_MOBILE from "Constants.tsx";
-import { asyncRequireImpl } from "../../../_runtime/01896_asyncRequireImpl.js";
+import ActionSheetActionCreatorsDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
+import Constants from "Constants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-let closure_3 = LOCATION_CONTEXT_MOBILE.getSafetyToolsActionSheetKey;
-const result = set.fileFinishedImporting("modules/self_mod/SafetyToolsActionCreators.native.tsx");
+let closure_3 = Constants.getSafetyToolsActionSheetKey;
+const result = size.fileFinishedImporting("modules/self_mod/SafetyToolsActionCreators.native.tsx");
 
 export const openSafetyToolsActionSheet = function openSafetyToolsActionSheet(
   channelId,
@@ -13,17 +12,16 @@ export const openSafetyToolsActionSheet = function openSafetyToolsActionSheet(
   warningId,
   warningType,
 ) {
-  const tmp = callback(channelId);
-  const _require = tmp;
-  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj = {
+  const tmp = closure_3(channelId);
+  _require = tmp;
+  const obj = {
     channelId,
     warningId,
     warningType,
     recipientId,
     onClose() {
-      closure_1_1(closure_1_2[1]).hideActionSheet(closure_0);
+      ActionSheetActionCreatorsDefault.hideActionSheet(closure_0);
     },
   };
-  obj.openLazy(asyncRequireImpl(11392, dependencyMap.paths), tmp, obj);
+  obj.openLazy(require("asyncRequireImpl")(11392, dependencyMap.paths), tmp, obj);
 };

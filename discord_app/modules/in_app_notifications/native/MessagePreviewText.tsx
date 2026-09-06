@@ -1,27 +1,23 @@
 // discord_app/modules/in_app_notifications/native/MessagePreviewText.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
-import preloadDefault from "../../../components_native/common/FastImage.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import useMessageAuthor from "../../messages/useMessageAuthor.tsx";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import isForwardMessageDefault from "../../forwarding/isForwardMessage.tsx";
-import isReactionMilestoneNotification from "InAppNotificationUtils.tsx";
+import InAppNotificationUtils from "InAppNotificationUtils.tsx";
 import useTruncatedGradientColorsDefault from "hooks/useTruncatedGradientColors.tsx";
-import PreviewIcon from "../../main_tabs_v2/native/shared_components/ChannelRowPreview.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../stores/ChannelStore.tsx";
-import set from "InAppNotificationConstants.tsx";
-import { Fonts } from "../../../../discord_common/js/shared/Constants.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
-import PlatformTypes from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
+import ChannelRowPreview from "../../main_tabs_v2/native/shared_components/ChannelRowPreview.tsx";
+import usePreviewableMedia from "hooks/usePreviewableMedia.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import ChannelStore from "../../../stores/ChannelStore.tsx";
 
-require = arg1;
+require = fn;
 function NativeMessagePreviewContent(arg0) {
   ({ message, lineClamp, maxHeight } = arg0);
   const tmp = useTruncatedGradientColorsDefault();
   ({ gradientColors, gradientStyles } = tmp);
-  return callback(View, {
-    children: callback(PreviewIcon.NativeChannelRowPreview, {
+  return React6(View, {
+    children: React6(ChannelRowPreview.NativeChannelRowPreview, {
       message,
       lineClamp,
       maxHeight,
@@ -33,7 +29,7 @@ function NativeMessagePreviewContent(arg0) {
 class SystemMessageText {
   constructor(arg0) {
     tmp = closure_10();
-    obj = require("isReactionMilestoneNotification");
+    obj = closure_0(closure_2[11]);
     messagePreviewTextVariant = obj.getMessagePreviewTextVariant();
     obj = {
       variant: messagePreviewTextVariant,
@@ -42,12 +38,12 @@ class SystemMessageText {
       lineClamp: closure_7,
       children: global.text,
     };
-    return jsx(require("Text").Text, obj);
+    return jsx(closure_0(closure_2[12]).Text, obj);
   }
 }
 function EmbedMediaThumbnail(media) {
   media = media.media;
-  const tmp = callback4();
+  const tmp = closure_11();
   let url = media.proxyURL;
   if (url == null) {
     url = media.url;
@@ -60,14 +56,16 @@ function EmbedMediaThumbnail(media) {
       num = result;
     }
   }
-  obj = { style: items, children: callback(preloadDefault, obj) };
-  items = [tmp.embedMediaContainer, { aspectRatio: num }];
+  let obj = { style: null, children: null };
+  const items = [tmp.embedMediaContainer, { aspectRatio: num }];
+  obj.style = items;
   obj = { source: { uri: url }, style: tmp.embedMedia, resizeMode: "contain" };
-  return callback(View, obj);
+  obj.children = React6(FastImageDefault, obj);
+  return React6(View, obj);
 }
 function EmbedCard(embed) {
   embed = embed.embed;
-  const tmp = callback4();
+  const tmp = closure_11();
   const provider = embed.provider;
   let name;
   if (provider != null) {
@@ -94,26 +92,23 @@ function EmbedCard(embed) {
   if (tmp7) {
     obj = { style: null };
     const items = [tmp.embedAccentBar];
-    obj = { backgroundColor: null };
-    obj[0] = color;
+    obj = { backgroundColor: color };
     items[1] = obj;
-    obj[0] = items;
-    tmp7 = callback(tmp6, obj);
+    obj.style = items;
+    tmp7 = React6(tmp6, obj);
   }
   const items1 = [tmp7, ,];
-  obj1 = { style: tmp.embedTextContainer, children: null };
+  const obj1 = { style: tmp.embedTextContainer, children: null };
   let tmp9 = null != name;
   if (tmp9) {
-    const obj2 = { variant: "text-xxs/normal", color: "text-subtle", lineClamp: 1, children: null };
-    obj2[3] = name;
-    tmp9 = callback(Text.Text, obj2);
+    const obj2 = { variant: "text-xxs/normal", color: "text-subtle", lineClamp: 1, children: name };
+    tmp9 = React6(Text_Text.Text, obj2);
   }
   const items2 = [tmp9, , ,];
   let tmp13 = null != name1;
   if (tmp13) {
-    const obj3 = { variant: "text-xs/medium", color: "text-default", lineClamp: 1, children: null };
-    obj3[3] = name1;
-    tmp13 = callback(Text.Text, obj3);
+    const obj3 = { variant: "text-xs/medium", color: "text-default", lineClamp: 1, children: name1 };
+    tmp13 = React6(Text_Text.Text, obj3);
   }
   items2[1] = tmp13;
   let tmp18Result = null != rawTitle;
@@ -125,48 +120,51 @@ function EmbedCard(embed) {
         num2 = 3;
       }
     }
-    const obj4 = { variant: "text-xs/medium", color: "text-link", lineClamp: null, children: null };
-    obj4[2] = num2;
-    obj4[3] = rawTitle;
-    tmp18Result = callback(Text.Text, obj4);
-    const tmp18 = callback;
+    const obj4 = { variant: "text-xs/medium", color: "text-link", lineClamp: num2, children: rawTitle };
+    tmp18Result = React6(Text_Text.Text, obj4);
   }
   items2[2] = tmp18Result;
   let tmp21 = null != embed.rawDescription;
   if (tmp21) {
-    const obj5 = { variant: "text-xs/medium", color: "text-default", lineClamp: 3, children: null };
-    obj5[3] = embed.rawDescription;
-    tmp21 = callback(Text.Text, obj5);
+    const obj5 = { variant: "text-xs/medium", color: "text-default", lineClamp: 3, children: embed.rawDescription };
+    tmp21 = React6(Text_Text.Text, obj5);
   }
   items2[3] = tmp21;
-  obj1[1] = items2;
-  items1[1] = closure_9(View, obj1);
+  obj1.children = items2;
+  items1[1] = React7(View, obj1);
   let tmp25 = null != thumbnail;
   if (tmp25) {
-    const obj6 = { media: null };
-    obj6[0] = thumbnail;
-    tmp25 = callback(EmbedMediaThumbnail, obj6);
+    const obj6 = { media: thumbnail };
+    tmp25 = React6(EmbedMediaThumbnail, obj6);
   }
   items1[2] = tmp25;
-  obj[1] = items1;
-  return closure_9(View, obj);
+  obj.children = items1;
+  return React7(View, obj);
 }
-({ IN_APP_NOTIFICATION_MAX_HEIGHT: closure_6, NOTIFICATION_PREVIEW_LINE_CLAMP: error } = set);
-({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { italic: null };
-createCacheKey = {
+const View = fn(17).View;
+const InAppNotificationConstants = fn(10095);
+({ IN_APP_NOTIFICATION_MAX_HEIGHT: metroRequire, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_7 } =
+  InAppNotificationConstants);
+const Fonts = fn(1085).Fonts;
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+fn(4560);
+let PlatformUtils = fn(1116);
+let createStyles = { italic: null };
+createStyles = {
   fontStyle: "italic",
-  fontFamily: PlatformTypes.isIOS() ? Fonts.PRIMARY_NORMAL_ITALIC : Fonts.PRIMARY_MEDIUM_ITALIC,
+  fontFamily: PlatformUtils.isIOS() ? Fonts.PRIMARY_NORMAL_ITALIC : Fonts.PRIMARY_MEDIUM_ITALIC,
 };
-createCacheKey[0] = createCacheKey;
-let closure_10 = createCacheKey.createStyles(createCacheKey);
-PlatformTypes = {
+createStyles.italic = createStyles;
+let closure_10 = createStyles.createStyles(createStyles);
+fn(4560);
+PlatformUtils = {
   embedContainer: {
-    borderRadius: ThemesDefault.radii.sm,
-    paddingTop: ThemesDefault.space.PX_8,
-    paddingBottom: ThemesDefault.space.PX_8,
-    paddingRight: ThemesDefault.space.PX_8,
-    backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+    borderRadius: nativeDefault.radii.sm,
+    paddingTop: nativeDefault.space.PX_8,
+    paddingBottom: nativeDefault.space.PX_8,
+    paddingRight: nativeDefault.space.PX_8,
+    backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
     flexDirection: "row",
     overflow: "hidden",
   },
@@ -176,37 +174,33 @@ PlatformTypes = {
   embedMedia: null,
 };
 let obj2 = {
-  borderRadius: ThemesDefault.radii.sm,
-  paddingTop: ThemesDefault.space.PX_8,
-  paddingBottom: ThemesDefault.space.PX_8,
-  paddingRight: ThemesDefault.space.PX_8,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  borderRadius: nativeDefault.radii.sm,
+  paddingTop: nativeDefault.space.PX_8,
+  paddingBottom: nativeDefault.space.PX_8,
+  paddingRight: nativeDefault.space.PX_8,
+  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
   flexDirection: "row",
   overflow: "hidden",
 };
-PlatformTypes[1] = {
+PlatformUtils.embedAccentBar = {
   width: 4,
-  marginTop: -ThemesDefault.space.PX_8,
-  marginBottom: -ThemesDefault.space.PX_8,
+  marginTop: -nativeDefault.space.PX_8,
+  marginBottom: -nativeDefault.space.PX_8,
   alignSelf: "stretch",
 };
-createCacheKey = {
+createStyles = {
   flex: 1,
-  gap: ThemesDefault.space.PX_4,
-  paddingVertical: ThemesDefault.space.PX_4,
-  paddingHorizontal: ThemesDefault.space.PX_8,
+  gap: nativeDefault.space.PX_4,
+  paddingVertical: nativeDefault.space.PX_4,
+  paddingHorizontal: nativeDefault.space.PX_8,
 };
-PlatformTypes[2] = createCacheKey;
-let obj3 = {
-  width: 4,
-  marginTop: -ThemesDefault.space.PX_8,
-  marginBottom: -ThemesDefault.space.PX_8,
-  alignSelf: "stretch",
-};
-PlatformTypes[3] = { borderRadius: ThemesDefault.radii.xs, overflow: "hidden", height: 60, width: "WireType" };
-PlatformTypes[4] = { width: "100%", height: "100%" };
-let closure_11 = createCacheKey.createStyles(PlatformTypes);
-let result = set.fileFinishedImporting("modules/in_app_notifications/native/MessagePreviewText.tsx");
+PlatformUtils.embedTextContainer = createStyles;
+let size = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", height: 60, width: "WireType" };
+PlatformUtils.embedMediaContainer = size;
+PlatformUtils.embedMedia = { width: "100%", height: "100%" };
+let closure_11 = createStyles.createStyles(PlatformUtils);
+size = fn(2);
+let result = size.fileFinishedImporting("modules/in_app_notifications/native/MessagePreviewText.tsx");
 
 export default function MessagePreviewText(message) {
   message = message.message;
@@ -214,9 +208,9 @@ export default function MessagePreviewText(message) {
   if (showMessageAuthor === undefined) {
     showMessageAuthor = false;
   }
-  let obj = message(10131);
+  let obj = usePreviewableMedia;
   const previewableMedia = obj.usePreviewableMedia(message);
-  obj1 = message(4793);
+  let obj1 = useMessageAuthor;
   let tmp3 = null;
   if (showMessageAuthor) {
     tmp3 = message;
@@ -228,7 +222,7 @@ export default function MessagePreviewText(message) {
   tmpResult = tmp(10140);
   const getInitialMessagePreview = tmpResult.useGetInitialMessagePreview({ message });
   const items = [message.embeds];
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     const embeds = message.embeds;
     return embeds.filter((image) => null != image.image || null != image.thumbnail);
   }, items);
@@ -236,23 +230,18 @@ export default function MessagePreviewText(message) {
     const first = memo[0];
     if (first.type === tmp(1095).MessageEmbedTypes.GIFV) {
       if (null != text) {
-        obj = { text: null };
-        obj[0] = text;
-        let tmp43 = callback(SystemMessageText, obj);
+        obj = { text };
+        let tmp43 = React6(SystemMessageText, obj);
       }
       return tmp43;
     }
     obj = { children: null };
-    obj1 = { message: null, lineClamp: null, maxHeight: null };
-    obj1[0] = getInitialMessagePreview;
-    obj1[1] = closure_7;
-    obj1[2] = closure_6;
-    const items1 = [callback(NativeMessagePreviewContent, obj1)];
-    const obj2 = { embed: null };
-    obj2[0] = first;
-    items1[1] = callback(EmbedCard, obj2);
-    obj[0] = items1;
-    tmp43 = callback2(View, obj);
+    obj1 = { message: getInitialMessagePreview, lineClamp, maxHeight };
+    const items1 = [React6(NativeMessagePreviewContent, obj1)];
+    const obj2 = { embed: first };
+    items1[1] = React6(EmbedCard, obj2);
+    obj.children = items1;
+    tmp43 = React7(View, obj);
   } else if (isForwardMessageDefault(message)) {
     let tmp29 = previewableMedia.length > 0;
     if (tmp29) {
@@ -261,104 +250,81 @@ export default function MessagePreviewText(message) {
     if (previewableMedia.length > 0) {
       if (null != nullableMessageAuthor) {
         const intl4 = tmp(1114).intl;
-        const obj3 = { username: null };
-        obj3[0] = nullableMessageAuthor.nick;
+        const obj3 = { username: nullableMessageAuthor.nick };
         let formatResult = intl4.format(tmp(1114).t.sLDHDi, obj3);
       } else {
         const intl3 = tmp(1114).intl;
         formatResult = intl3.string(tmp(1114).t["9ddYKt"]);
       }
-      const obj4 = { text: null };
-      obj4[0] = formatResult;
-      return callback(SystemMessageText, obj4);
+      const obj4 = { text: formatResult };
+      return React6(SystemMessageText, obj4);
     }
-    const obj5 = { message: null, lineClamp: null, maxHeight: null };
-    obj5[0] = getInitialMessagePreview;
-    obj5[1] = lineClamp;
-    obj5[2] = maxHeight;
-    return callback(NativeMessagePreviewContent, obj5);
+    const obj5 = { message: getInitialMessagePreview, lineClamp, maxHeight };
+    return React6(NativeMessagePreviewContent, obj5);
   } else if (message.content.length > 0) {
     if (null != nullableMessageAuthor) {
-      channel = channel.getChannel(message.channel_id);
+      const channel = ChannelStore.getChannel(message.channel_id);
       tmp(10094);
       if (null != channel) {
         const obj6 = {
-          channel: null,
-          message: null,
+          channel,
+          message,
           color: "text-default",
-          layout: null,
-          variant: null,
+          layout: tmp(7879).ChannelListLayoutTypes.COZY,
+          variant: tmp24,
           muted: false,
-          lineClamp: null,
+          lineClamp,
         };
-        obj6[0] = channel;
-        obj6[1] = message;
-        obj6[3] = tmp(7879).ChannelListLayoutTypes.COZY;
-        obj6[4] = tmp24;
-        obj6[6] = lineClamp;
-        return callback(tmp(10109).ChannelRowPreview, obj6);
+        return React6(tmp(10109).ChannelRowPreview, obj6);
       }
     }
-    const obj7 = { message: null, lineClamp: null, maxHeight: null };
-    obj7[0] = getInitialMessagePreview;
-    obj7[1] = lineClamp;
-    obj7[2] = maxHeight;
-    return callback(NativeMessagePreviewContent, obj7);
+    const obj7 = { message: getInitialMessagePreview, lineClamp, maxHeight };
+    return React6(NativeMessagePreviewContent, obj7);
   } else {
     if (previewableMedia.length > 0) {
       if (null !== text) {
-        const obj8 = { text: null };
-        obj8[0] = text;
-        const items2 = [callback(SystemMessageText, obj8)];
+        const obj8 = { text };
+        const items2 = [React6(SystemMessageText, obj8)];
         let tmp17Result = null !== secondaryText;
         if (tmp17Result) {
           const obj9 = {
             variant: "redesign/message-preview/medium",
             color: "text-link",
-            lineClamp: null,
-            children: null,
+            lineClamp,
+            children: secondaryText,
           };
-          obj9[2] = closure_7;
-          obj9[3] = secondaryText;
-          tmp17Result = callback(tmp(4556).Text, obj9);
+          tmp17Result = React6(tmp(4556).Text, obj9);
         }
         const obj10 = { children: null };
         items2[1] = tmp17Result;
-        obj10[0] = items2;
-        return callback2(View, obj10);
+        obj10.children = items2;
+        return React7(View, obj10);
       }
     }
     if (null != message.poll) {
       if (null != nullableMessageAuthor) {
         const intl2 = tmp(1114).intl;
-        const obj11 = { username: null };
-        obj11[0] = nullableMessageAuthor.nick;
+        const obj11 = { username: nullableMessageAuthor.nick };
         let formatResult1 = intl2.format(tmp(1114).t["1wtRlq"], obj11);
       } else {
         const intl = tmp(1114).intl;
         formatResult1 = intl.string(tmp(1114).t.n3shVJ);
       }
       const obj12 = { children: null };
-      const obj13 = { text: null };
-      obj13[0] = formatResult1;
-      const items3 = [callback(SystemMessageText, obj13)];
+      const obj13 = { text: formatResult1 };
+      const items3 = [React6(SystemMessageText, obj13)];
       const obj14 = {
         variant: "redesign/message-preview/medium",
         color: "text-default",
-        lineClamp: null,
-        children: null,
+        lineClamp,
+        children: message.poll.question.text,
       };
-      obj14[2] = closure_7;
-      obj14[3] = message.poll.question.text;
-      items3[1] = callback(tmp(4556).Text, obj14);
-      obj12[0] = items3;
-      return callback2(View, obj12);
+      items3[1] = React6(tmp(4556).Text, obj14);
+      obj12.children = items3;
+      return React7(View, obj12);
     } else {
-      const obj15 = { message: null, lineClamp: null, maxHeight: null };
-      obj15[0] = message;
-      obj15[1] = lineClamp;
-      obj15[2] = maxHeight;
-      return callback(NativeMessagePreviewContent, obj15);
+      const obj15 = { message, lineClamp, maxHeight };
+      return React6(NativeMessagePreviewContent, obj15);
     }
   }
 }

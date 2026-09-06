@@ -1,7 +1,7 @@
 // discord_app/modules/errors/InteractionCallbackError.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/errors/InteractionCallbackError.tsx");
+const result = size.fileFinishedImporting("modules/errors/InteractionCallbackError.tsx");
 const prototype = function InteractionCallbackError(reason) {
   const obj = Object.create(new.target.prototype);
   obj.reason = reason;

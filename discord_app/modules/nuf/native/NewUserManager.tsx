@@ -1,18 +1,18 @@
 // discord_app/modules/nuf/native/NewUserManager.tsx
-import dispatcherDefault from "../../../Dispatcher.tsx";
-import keys from "../../../ConstantsIOS.tsx";
-import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
-import _startContactSyncForDiscoverability from "NUFActionCreators.tsx";
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../phone/PhoneStore.tsx";
-import closure_5 from "../../../stores/ConnectedAccountsStore.tsx";
-import closure_6 from "../../../stores/UserStore.tsx";
-import closure_7 from "../NewUserStore.tsx";
-import { NewUserTypes } from "../NUFConstants.tsx";
-import { PlatformTypes } from "../../../Constants.tsx";
-import { HUBS_IN_ONBOARDING_COUNTRIES as closure_10 } from "../../hub/HubConstants.tsx";
+import DispatcherDefault from "../../../Dispatcher.tsx";
+import ConstantsIOS from "../../../ConstantsIOS.tsx";
+import NUFActionCreators from "NUFActionCreators.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import PhoneStore from "../../phone/PhoneStore.tsx";
+import ConnectedAccountsStore from "../../../stores/ConnectedAccountsStore.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
+import NewUserStore from "../NewUserStore.tsx";
+import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
-require = arg1;
+require = fn;
+const NewUserTypes = fn(12705).NewUserTypes;
+const PlatformTypes = fn(1074).PlatformTypes;
+let closure_10 = fn(12719).HUBS_IN_ONBOARDING_COUNTRIES;
 let obj = {
   REGISTRATION: "Registration",
   ADD_AVATAR: "Add Avatar",
@@ -26,26 +26,26 @@ let obj = {
 obj = {
   key: obj.ADD_AVATAR,
   shouldShowStep() {
-    const currentUser = authStore.getCurrentUser();
+    const currentUser = UserStore.getCurrentUser();
     let avatar;
     if (currentUser != null) {
       avatar = currentUser.avatar;
     }
     return null == avatar;
   },
-  transitionToStep: require("handlePressNext").openAddAvatarModal,
+  transitionToStep: fn(17433).openAddAvatarModal,
 };
 obj = {
   key: obj.CONTACT_SYNC,
   shouldShowStep() {
-    const localAccount = store.getLocalAccount(PlatformTypes.CONTACTS);
+    const localAccount = ConnectedAccountsStore.getLocalAccount(PlatformTypes.CONTACTS);
     let friendSync;
     if (localAccount != null) {
       friendSync = localAccount.friendSync;
     }
     let tmp3 = !friendSync;
     if (!friendSync) {
-      const currentUser = authStore.getCurrentUser();
+      const currentUser = UserStore.getCurrentUser();
       let phone;
       if (currentUser != null) {
         phone = currentUser.phone;
@@ -54,25 +54,25 @@ obj = {
     }
     return tmp3;
   },
-  transitionToStep: require("handleNameInputScreenOrSuggestions").openContactSyncModalOnboarding,
+  transitionToStep: fn(12676).openContactSyncModalOnboarding,
 };
 const items = [
   obj,
   {
     key: obj.DISCOVERABILITY,
     shouldShowStep() {
-      return null == store.getLocalAccount(PlatformTypes.CONTACTS);
+      return null == ConnectedAccountsStore.getLocalAccount(PlatformTypes.CONTACTS);
     },
-    transitionToStep: require("_startContactSyncForDiscoverability").openDiscoverabilityModal,
+    transitionToStep: fn(12704).openDiscoverabilityModal,
   },
   obj,
   {
     key: obj.STUDENT_HUB,
     shouldShowStep() {
-      if (store2.getType() !== NewUserTypes.ORGANIC_REGISTERED) {
+      if (NewUserStore.getType() !== NewUserTypes.ORGANIC_REGISTERED) {
         return false;
       } else {
-        countryCode = countryCode.getCountryCode();
+        const countryCode = PhoneStore.getCountryCode();
         let alpha2;
         if (countryCode != null) {
           alpha2 = countryCode.alpha2;
@@ -81,212 +81,190 @@ const items = [
       }
     },
     transitionToStep() {
-      const result = _startContactSyncForDiscoverability.transitionToHubEmailConnectionModal(
-        keys.ModalAnimation.SLIDE_IN,
-        true,
-      );
+      const result = NUFActionCreators.transitionToHubEmailConnectionModal(ConstantsIOS.ModalAnimation.SLIDE_IN, true);
     },
   },
   {
     key: obj.GUILD_TEMPLATE,
     shouldShowStep() {
-      return store2.getType() === NewUserTypes.ORGANIC_REGISTERED;
+      return NewUserStore.getType() === NewUserTypes.ORGANIC_REGISTERED;
     },
     transitionToStep() {
-      return _startContactSyncForDiscoverability.transitionToNUFGuildTemplatesModal(keys.ModalAnimation.SLIDE_IN);
+      return NUFActionCreators.transitionToNUFGuildTemplatesModal(ConstantsIOS.ModalAnimation.SLIDE_IN);
     },
   },
 ];
 let obj1 = {
   key: obj.DISCOVERABILITY,
   shouldShowStep() {
-    return null == store.getLocalAccount(PlatformTypes.CONTACTS);
+    return null == ConnectedAccountsStore.getLocalAccount(PlatformTypes.CONTACTS);
   },
-  transitionToStep: require("_startContactSyncForDiscoverability").openDiscoverabilityModal,
+  transitionToStep: fn(12704).openDiscoverabilityModal,
 };
 items[5] = {
   key: obj.ACCEPT_INVITE,
-  shouldShowStep: require("showInstantInviteActionSheet").hasDeferredInvite,
+  shouldShowStep: fn(9820).hasDeferredInvite,
   transitionToStep() {
-    dispatcherDefault.dispatch({ type: "DEFERRED_INVITE_SHOW" });
+    DispatcherDefault.dispatch({ type: "DEFERRED_INVITE_SHOW" });
   },
 };
-initializeDefault;
 let prototype = function NewUserManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  closure_0 = applyArgumentsResult;
+  require = applyArgumentsResult;
   applyArgumentsResult._onboardingStepIndex = -1;
   applyArgumentsResult._lastStep = null;
   applyArgumentsResult.actions = {
     ONBOARDING_STEP(guildId) {
-      closure_0.handleOnboardingStep(guildId);
+      applyArgumentsResult.handleOnboardingStep(guildId);
     },
   };
-  closure_0 = undefined;
-  importDefault = applyArgumentsResult;
-  closure_0 = callback((arg0) => {
-    closure_0 = arg0;
-    let transitionToStep = 0;
-    const iter = (function* (arg0) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+  closure_129_1 = applyArgumentsResult;
+  closure_129_0 = asyncGeneratorStep(async (arg0, value) => {
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              c4 = 0;
-              let _onboardingStepIndex = tmp2;
-              let flag;
-              c1 = undefined;
-              c2 = undefined;
-              flag = flag.skip;
-              if (flag === undefined) {
-                flag = false;
-              }
-              let flag2 = tmp83.skipAttempt;
-              if (flag2 === undefined) {
-                flag2 = false;
-              }
-              c1 = flag2;
-              let flag3 = tmp83.back;
-              if (flag3 === undefined) {
-                flag3 = false;
-              }
-              c2 = flag3;
-              _onboardingStepIndex = undefined;
-              c4 = undefined;
-              c5 = undefined;
-              c6 = undefined;
-              c7 = undefined;
-              c8 = undefined;
-              c9 = undefined;
-              transitionToStep = undefined;
-              c5 = 1;
-              c6 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              _onboardingStepIndex = c1._onboardingStepIndex;
-              if (c2) {
-                key = undefined;
-                if (closure_1_11[closure_1_3] != null) {
-                  key = tmp53.key;
-                }
-                c1 = key;
-                if (key == null) {
-                  c1 = null;
-                }
-                c1._lastStep = c1;
-                closure_1_1._onboardingStepIndex = closure_1_1._onboardingStepIndex - 1;
-                closure_4 = closure_1_11[closure_1_1._onboardingStepIndex];
-                key = closure_4.key;
-                transitionToStep = closure_4.transitionToStep;
-                callback(closure_1_2[15]).trackNUFStep(closure_1_1._lastStep, key, { back: true });
-                transitionToStep();
-                c6 = 3;
-                const obj2 = { value: null, done: true };
-                obj2[0] = undefined;
-                return obj2;
-              } else {
-                c1._onboardingStepIndex = c1._onboardingStepIndex + 1;
-                if (c1._onboardingStepIndex >= closure_1_11.length) {
-                  let obj5 = callback(closure_1_2[15]);
-                  const obj3 = { skip_attempt: null };
-                  obj3[0] = c1;
-                  obj5.trackNUFStep(c1._lastStep, "NUF Complete", obj3);
-                  let obj7 = callback(closure_1_2[16]);
-                  const result = obj7.setNewUserFlowCompleted();
-                  c6 = 3;
-                  const obj4 = { value: null, done: true };
-                  obj4[0] = undefined;
-                  return obj4;
-                } else {
-                  closure_7 = closure_1_11[c1._onboardingStepIndex];
-                  key = closure_7.key;
-                  shouldShowStep = closure_7.shouldShowStep;
-                  transitionToStep = closure_7.transitionToStep;
-                  c5 = 2;
-                  c6 = 1;
-                  obj5 = { value: null, done: false };
-                  obj5[0] = shouldShowStep();
-                  return obj5;
-                }
-              }
-            }
-          } else if (arg0 === 1) {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
             c6 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            const obj6 = { value: null, done: true };
-            obj6[0] = arg1;
-            return obj6;
+            obj = { value, done: true };
+            return obj;
           } else {
-            if (arg1) {
-              obj1 = callback(closure_1_2[15]);
-              obj7 = { skip: null, skip_attempt: null };
-              obj7[0] = flag;
-              obj7[1] = c1;
-              obj1.trackNUFStep(c1._lastStep, c8, obj7);
-              let key1;
-              if (closure_1_11[_onboardingStepIndex] != null) {
-                key1 = tmp19.key;
-              }
-              c2 = key1;
-              if (key1 == null) {
-                c2 = null;
-              }
-              c1._lastStep = c2;
-              transitionToStep();
-              const tmp16 = c1;
-            } else {
-              obj = { skip: null };
-              obj[0] = flag;
-              c1.handleOnboardingStep(obj);
+            c4 = 0;
+            closure_3 = tmp2;
+            closure_131_0 = undefined;
+            closure_131_1 = undefined;
+            closure_131_2 = undefined;
+            let flag = applyArgumentsResult.skip;
+            if (flag === undefined) {
+              flag = false;
             }
-            c6 = 3;
+            closure_131_0 = flag;
+            let flag2 = tmp82.skipAttempt;
+            if (flag2 === undefined) {
+              flag2 = false;
+            }
+            closure_131_1 = flag2;
+            let flag3 = tmp82.back;
+            if (flag3 === undefined) {
+              flag3 = false;
+            }
+            closure_131_2 = flag3;
+            let _onboardingStepIndex;
+            closure_131_4 = undefined;
+            let key2;
+            let transitionToStep;
+            closure_131_7 = undefined;
+            let key3;
+            let shouldShowStep;
+            let transitionToStep2;
+            c5 = 1;
+            c6 = 1;
+            return { value: "PX_16", done: true };
           }
-        } catch (tmp71) {
-          c6 = tmp;
-          throw tmp71;
+        } else if (1 === tmp5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            let obj1 = { value, done: true };
+            return obj1;
+          } else {
+            _onboardingStepIndex = closure_132_1._onboardingStepIndex;
+            if (closure_131_2) {
+              let key;
+              if (length[_onboardingStepIndex] != null) {
+                key = tmp53.key;
+              }
+              let _lastStep = key;
+              if (key == null) {
+                _lastStep = null;
+              }
+              closure_132_1._lastStep = _lastStep;
+              closure_132_1._onboardingStepIndex = closure_132_1._onboardingStepIndex - 1;
+              closure_131_4 = length[closure_132_1._onboardingStepIndex];
+              key2 = closure_131_4.key;
+              transitionToStep = closure_131_4.transitionToStep;
+              applyArgumentsResult(_lastStep2[15]).trackNUFStep(closure_132_1._lastStep, key2, { back: true });
+              transitionToStep();
+              c6 = 3;
+              const obj2 = { value: undefined, done: true };
+              return obj2;
+            } else {
+              closure_132_1._onboardingStepIndex = closure_132_1._onboardingStepIndex + 1;
+              if (closure_132_1._onboardingStepIndex >= length.length) {
+                let obj5 = applyArgumentsResult(_lastStep2[15]);
+                const obj3 = { skip_attempt: closure_131_1 };
+                obj5.trackNUFStep(closure_132_1._lastStep, "NUF Complete", obj3);
+                let obj7 = applyArgumentsResult(_lastStep2[16]);
+                const result = obj7.setNewUserFlowCompleted();
+                c6 = 3;
+                const obj4 = { value: undefined, done: true };
+                return obj4;
+              } else {
+                closure_131_7 = length[closure_132_1._onboardingStepIndex];
+                key3 = closure_131_7.key;
+                shouldShowStep = closure_131_7.shouldShowStep;
+                transitionToStep2 = closure_131_7.transitionToStep;
+                c5 = 2;
+                c6 = 1;
+                obj5 = { value: shouldShowStep(), done: false };
+                return obj5;
+              }
+            }
+          }
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj6 = { value, done: true };
+          return obj6;
+        } else {
+          if (value) {
+            obj1 = applyArgumentsResult(_lastStep2[15]);
+            obj7 = { skip: closure_131_0, skip_attempt: closure_131_1 };
+            obj1.trackNUFStep(closure_132_1._lastStep, key3, obj7);
+            let key1;
+            if (length[_onboardingStepIndex] != null) {
+              key1 = tmp19.key;
+            }
+            _lastStep2 = key1;
+            if (key1 == null) {
+              _lastStep2 = null;
+            }
+            closure_132_1._lastStep = _lastStep2;
+            transitionToStep2();
+          } else {
+            obj = { skip: closure_131_0 };
+            closure_132_1.handleOnboardingStep(obj);
+          }
+          c6 = 3;
         }
+      } catch (tmp71) {
+        c6 = tmp;
+        throw tmp71;
       }
-    })();
-    iter.next();
-    return iter;
+    }
   });
   applyArgumentsResult.handleOnboardingStep = function () {
     const self = this;
-    const apply = closure_0.apply;
+    const apply = applyArgumentsResult.apply;
     if (typeof apply === "unknown") {
       applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -298,13 +276,7 @@ let prototype = function NewUserManager() {
 }.prototype;
 class prototype extends tmp2 {}
 prototype = new prototype();
-let obj2 = {
-  key: obj.ACCEPT_INVITE,
-  shouldShowStep: require("showInstantInviteActionSheet").hasDeferredInvite,
-  transitionToStep() {
-    dispatcherDefault.dispatch({ type: "DEFERRED_INVITE_SHOW" });
-  },
-};
-let result = require("set").fileFinishedImporting("modules/nuf/native/NewUserManager.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/nuf/native/NewUserManager.tsx");
 
 export default prototype;

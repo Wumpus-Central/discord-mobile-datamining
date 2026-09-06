@@ -1,15 +1,15 @@
 // discord_app/lib/hook/Hook.native.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("lib/hook/Hook.native.tsx");
+const result = size.fileFinishedImporting("lib/hook/Hook.native.tsx");
 
 export function isHookModuleTooOld() {
   return true;
 }
-export const attachToProcess = function attachToProcess(soundshareId, arg1) {
+export const attachToProcess = function attachToProcess() {
   return Promise.resolve();
 };
-export const cancelAttachToProcess = function cancelAttachToProcess(soundshareId) {
+export const cancelAttachToProcess = function cancelAttachToProcess() {
   return Promise.resolve();
 };
 export const findSteamProcess = function findSteamProcess() {

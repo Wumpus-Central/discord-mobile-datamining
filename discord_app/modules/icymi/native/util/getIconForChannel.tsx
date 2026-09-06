@@ -1,18 +1,18 @@
 // discord_app/modules/icymi/native/util/getIconForChannel.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import ME from "../../../../Constants.tsx";
+import Constants from "../../../../Constants.tsx";
 import TextIcon from "../../../../design/components/Icon/native/redesign/generated/TextIcon.tsx";
 import ImageIcon from "../../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
 import ForumIcon from "../../../../design/components/Icon/native/redesign/generated/ForumIcon.tsx";
 import AnnouncementsIcon from "../../../../design/components/Icon/native/redesign/generated/AnnouncementsIcon.tsx";
 import StageIcon from "../../../../design/components/Icon/native/redesign/generated/StageIcon.tsx";
 import VoiceNormalIcon from "../../../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const ChannelTypes = ME.ChannelTypes;
-const result = set.fileFinishedImporting("modules/icymi/native/util/getIconForChannel.tsx");
+const ChannelTypes = Constants.ChannelTypes;
+const result = size.fileFinishedImporting("modules/icymi/native/util/getIconForChannel.tsx");
 
-export const getIconForChannel = function getIconForChannel(type) {
-  type = type.type;
+export const getIconForChannel = function getIconForChannel(stateFromStores) {
+  const type = stateFromStores.type;
   if (ChannelTypes.GUILD_ANNOUNCEMENT === type) {
     return AnnouncementsIcon.AnnouncementsIcon;
   } else if (tmp.GUILD_VOICE === type) {

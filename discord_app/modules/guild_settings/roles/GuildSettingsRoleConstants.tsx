@@ -1,15 +1,16 @@
 // discord_app/modules/guild_settings/roles/GuildSettingsRoleConstants.tsx
-import set from "../../../../_runtime/00002_set.js";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import applyOverwritesAll from "../../../utils/PermissionUtils.tsx";
-import handleSetSection from "GuildSettingsRolesStore.tsx";
-import ME from "../../../Constants.tsx";
-import HOLOGRAPHIC_ROLE_COLORS from "../../premium/powerups/constants/EnhancedRoleColorConstants.tsx";
-import importAllResult from "../../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
-import unsafe_getRawColor from "../../../../discord_common/js/packages/tokens/shims.native.tsx";
+import util from "../../../intl/index.native.tsx";
+import PermissionUtilsAll from "../../../utils/PermissionUtils.tsx";
+import GuildSettingsRolesStore from "GuildSettingsRolesStore.tsx";
+import Constants from "../../../Constants.tsx";
+import EnhancedRoleColorConstants from "../../premium/powerups/constants/EnhancedRoleColorConstants.tsx";
+import "BigFlagUtils";
+import BigFlagUtils from "../../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import shims from "../../../../discord_common/js/packages/tokens/shims.native.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const RoleColorsStyle = handleSetSection.RoleColorsStyle;
-({ Permissions, DEFAULT_ROLE_COLOR } = ME);
+const RoleColorsStyle = GuildSettingsRolesStore.RoleColorsStyle;
+({ Permissions, DEFAULT_ROLE_COLOR } = Constants);
 let obj = {
   COSMETIC: 0,
   [0]: "COSMETIC",
@@ -20,10 +21,9 @@ let obj = {
   MANAGER: 3,
   [3]: "MANAGER",
 };
-({ DEFAULT_GRADIENT_ROLE_COLORS, HOLOGRAPHIC_ROLE_COLORS } = HOLOGRAPHIC_ROLE_COLORS);
-const removeResult = importAllResult.remove(applyOverwritesAll.DEFAULT, Permissions.MENTION_EVERYONE);
-const combineResult = importAllResult.combine(
-  applyOverwritesAll.DEFAULT,
+({ DEFAULT_GRADIENT_ROLE_COLORS, HOLOGRAPHIC_ROLE_COLORS } = EnhancedRoleColorConstants);
+const combineResult = BigFlagUtils.combine(
+  PermissionUtilsAll.DEFAULT,
   Permissions.VIEW_AUDIT_LOG,
   Permissions.MANAGE_NICKNAMES,
   Permissions.KICK_MEMBERS,
@@ -35,8 +35,7 @@ const combineResult = importAllResult.combine(
   Permissions.PRIORITY_SPEAKER,
   Permissions.MODERATE_MEMBERS,
 );
-const importAllResult1 = importAllResult;
-const combineResult1 = importAllResult.combine(
+const combineResult1 = BigFlagUtils.combine(
   combineResult,
   Permissions.MANAGE_CHANNELS,
   Permissions.MANAGE_THREADS,
@@ -46,7 +45,6 @@ const combineResult1 = importAllResult.combine(
   Permissions.MANAGE_WEBHOOKS,
   Permissions.SEND_TTS_MESSAGES,
 );
-const importAllResult2 = importAllResult;
 obj = {};
 obj = {
   key: "template_cosmetic",
@@ -57,25 +55,25 @@ obj = {
   contents: null,
   contentPreface: null,
 };
-const importAllResult3 = importAllResult;
-obj[1] = unsafe_getRawColor.unsafe_getRawColor("BRAND_500");
-obj[2] = applyOverwritesAll.NONE;
-obj[3] = function title() {
-  const intl = getSystemLocale.intl;
-  return intl.string(getSystemLocale.t.M8jQyg);
+const removeResult = BigFlagUtils.remove(PermissionUtilsAll.DEFAULT, Permissions.MENTION_EVERYONE);
+obj.color = shims.unsafe_getRawColor("BRAND_500");
+obj.permissions = PermissionUtilsAll.NONE;
+obj.title = function title() {
+  const intl = util.intl;
+  return intl.string(util.t.M8jQyg);
 };
-obj[4] = function description() {
-  const intl = getSystemLocale.intl;
-  return intl.string(getSystemLocale.t["7nF/S/"]);
+obj.description = function description() {
+  const intl = util.intl;
+  return intl.string(util.t["7nF/S/"]);
 };
-obj[5] = function contents() {
-  const intl = getSystemLocale.intl;
-  const items = [intl.string(getSystemLocale.t.uwLDAb)];
-  const intl2 = getSystemLocale.intl;
-  items[1] = intl2.string(getSystemLocale.t.gqngN7);
+obj.contents = function contents() {
+  const intl = util.intl;
+  const items = [intl.string(util.t.uwLDAb)];
+  const intl2 = util.intl;
+  items[1] = intl2.string(util.t.gqngN7);
   return items;
 };
-obj[6] = function contentPreface() {
+obj.contentPreface = function contentPreface() {
   return "";
 };
 obj[obj.COSMETIC] = obj;
@@ -89,27 +87,27 @@ const obj1 = {
   contents: null,
   contentPreface: null,
 };
-obj1[1] = unsafe_getRawColor.unsafe_getRawColor("GREEN_360");
-obj1[2] = applyOverwritesAll.DEFAULT;
-obj1[3] = removeResult;
-obj1[4] = function title() {
-  const intl = getSystemLocale.intl;
-  return intl.string(getSystemLocale.t["9BsHzh"]);
+obj1.color = shims.unsafe_getRawColor("GREEN_360");
+obj1.permissions = PermissionUtilsAll.DEFAULT;
+obj1.communityPermissions = removeResult;
+obj1.title = function title() {
+  const intl = util.intl;
+  return intl.string(util.t["9BsHzh"]);
 };
-obj1[5] = function description() {
-  const intl = getSystemLocale.intl;
-  return intl.string(getSystemLocale.t.ywKYtw);
+obj1.description = function description() {
+  const intl = util.intl;
+  return intl.string(util.t.ywKYtw);
 };
-obj1[6] = function contents() {
-  const intl = getSystemLocale.intl;
-  const items = [intl.string(getSystemLocale.t["9Vhbnl"]), ,];
-  const intl2 = getSystemLocale.intl;
-  items[1] = intl2.string(getSystemLocale.t["0xn+w1"]);
-  const intl3 = getSystemLocale.intl;
-  items[2] = intl3.string(getSystemLocale.t.ieWVpB);
+obj1.contents = function contents() {
+  const intl = util.intl;
+  const items = [intl.string(util.t["9Vhbnl"]), ,];
+  const intl2 = util.intl;
+  items[1] = intl2.string(util.t["0xn+w1"]);
+  const intl3 = util.intl;
+  items[2] = intl3.string(util.t.ieWVpB);
   return items;
 };
-obj1[7] = function contentPreface() {
+obj1.contentPreface = function contentPreface() {
   return "";
 };
 obj[obj.MEMBER] = obj1;
@@ -122,30 +120,30 @@ const obj2 = {
   contents: null,
   contentPreface: null,
 };
-obj2[1] = unsafe_getRawColor.unsafe_getRawColor("YELLOW_300");
-obj2[2] = combineResult;
-obj2[3] = function title() {
-  const intl = getSystemLocale.intl;
-  return intl.string(getSystemLocale.t["m/GC8z"]);
+obj2.color = shims.unsafe_getRawColor("YELLOW_300");
+obj2.permissions = combineResult;
+obj2.title = function title() {
+  const intl = util.intl;
+  return intl.string(util.t["m/GC8z"]);
 };
-obj2[4] = function description() {
-  const intl = getSystemLocale.intl;
-  return intl.string(getSystemLocale.t.ERrMJZ);
+obj2.description = function description() {
+  const intl = util.intl;
+  return intl.string(util.t.ERrMJZ);
 };
-obj2[5] = function contents() {
-  const intl = getSystemLocale.intl;
-  const items = [intl.string(getSystemLocale.t.YOSxcd), , ,];
-  const intl2 = getSystemLocale.intl;
-  items[1] = intl2.string(getSystemLocale.t.q9H4Fm);
-  const intl3 = getSystemLocale.intl;
-  items[2] = intl3.string(getSystemLocale.t["9nHnCj"]);
-  const intl4 = getSystemLocale.intl;
-  items[3] = intl4.string(getSystemLocale.t.iqwXvc);
+obj2.contents = function contents() {
+  const intl = util.intl;
+  const items = [intl.string(util.t.YOSxcd), , ,];
+  const intl2 = util.intl;
+  items[1] = intl2.string(util.t.q9H4Fm);
+  const intl3 = util.intl;
+  items[2] = intl3.string(util.t["9nHnCj"]);
+  const intl4 = util.intl;
+  items[3] = intl4.string(util.t.iqwXvc);
   return items;
 };
-obj2[6] = function contentPreface() {
-  const intl = getSystemLocale.intl;
-  return intl.string(getSystemLocale.t.amGM7K);
+obj2.contentPreface = function contentPreface() {
+  const intl = util.intl;
+  return intl.string(util.t.amGM7K);
 };
 obj[obj.MODERATOR] = obj2;
 const obj3 = {
@@ -158,64 +156,51 @@ const obj3 = {
   contents: null,
   contentPreface: null,
 };
-obj3[1] = unsafe_getRawColor.unsafe_getRawColor("RED_400");
-obj3[2] = combineResult1;
-obj3[3] = importAllResult.add(combineResult1, Permissions.VIEW_GUILD_ANALYTICS);
-obj3[4] = function title() {
-  const intl = getSystemLocale.intl;
-  return intl.string(getSystemLocale.t.qKmu3w);
+obj3.color = shims.unsafe_getRawColor("RED_400");
+obj3.permissions = combineResult1;
+obj3.communityPermissions = BigFlagUtils.add(combineResult1, Permissions.VIEW_GUILD_ANALYTICS);
+obj3.title = function title() {
+  const intl = util.intl;
+  return intl.string(util.t.qKmu3w);
 };
-obj3[5] = function description() {
-  const intl = getSystemLocale.intl;
-  return intl.string(getSystemLocale.t.WxWPYV);
+obj3.description = function description() {
+  const intl = util.intl;
+  return intl.string(util.t.WxWPYV);
 };
-obj3[6] = function contents() {
-  const intl = getSystemLocale.intl;
-  const items = [intl.string(getSystemLocale.t.Hx1Vox), , ,];
-  const intl2 = getSystemLocale.intl;
-  items[1] = intl2.string(getSystemLocale.t["aUZ/zD"]);
-  const intl3 = getSystemLocale.intl;
-  items[2] = intl3.string(getSystemLocale.t["8lQujv"]);
-  const intl4 = getSystemLocale.intl;
-  items[3] = intl4.string(getSystemLocale.t.cUP4pl);
+obj3.contents = function contents() {
+  const intl = util.intl;
+  const items = [intl.string(util.t.Hx1Vox), , ,];
+  const intl2 = util.intl;
+  items[1] = intl2.string(util.t["aUZ/zD"]);
+  const intl3 = util.intl;
+  items[2] = intl3.string(util.t["8lQujv"]);
+  const intl4 = util.intl;
+  items[3] = intl4.string(util.t.cUP4pl);
   return items;
 };
-obj3[7] = function contentPreface() {
-  const intl = getSystemLocale.intl;
-  return intl.string(getSystemLocale.t["7Dkb62"]);
+obj3.contentPreface = function contentPreface() {
+  const intl = util.intl;
+  return intl.string(util.t["7Dkb62"]);
 };
 obj[obj.MANAGER] = obj3;
-const addResult = importAllResult.add(combineResult1, Permissions.VIEW_GUILD_ANALYTICS);
+const addResult = BigFlagUtils.add(combineResult1, Permissions.VIEW_GUILD_ANALYTICS);
 let items = [
   {
     id: RoleColorsStyle.SOLID,
     colors: { primary_color: DEFAULT_ROLE_COLOR, secondary_color: null, tertiary_color: null },
-    labelString: getSystemLocale.t["8Qyahn"],
+    labelString: util.t["8Qyahn"],
   },
   ,
 ];
 const obj4 = {
   id: RoleColorsStyle.SOLID,
   colors: { primary_color: DEFAULT_ROLE_COLOR, secondary_color: null, tertiary_color: null },
-  labelString: getSystemLocale.t["8Qyahn"],
+  labelString: util.t["8Qyahn"],
 };
-items[1] = {
-  id: RoleColorsStyle.GRADIENT,
-  colors: DEFAULT_GRADIENT_ROLE_COLORS,
-  labelString: getSystemLocale.t.XpWmJz,
-};
-const obj5 = {
-  id: RoleColorsStyle.GRADIENT,
-  colors: DEFAULT_GRADIENT_ROLE_COLORS,
-  labelString: getSystemLocale.t.XpWmJz,
-};
-items[2] = { id: RoleColorsStyle.HOLOGRAPHIC, colors: HOLOGRAPHIC_ROLE_COLORS, labelString: getSystemLocale.t.QTKppe };
-const obj6 = {
-  id: RoleColorsStyle.HOLOGRAPHIC,
-  colors: HOLOGRAPHIC_ROLE_COLORS,
-  labelString: getSystemLocale.t.QTKppe,
-};
-const result = set.fileFinishedImporting("modules/guild_settings/roles/GuildSettingsRoleConstants.tsx");
+items[1] = { id: RoleColorsStyle.GRADIENT, colors: DEFAULT_GRADIENT_ROLE_COLORS, labelString: util.t.XpWmJz };
+const obj5 = { id: RoleColorsStyle.GRADIENT, colors: DEFAULT_GRADIENT_ROLE_COLORS, labelString: util.t.XpWmJz };
+items[2] = { id: RoleColorsStyle.HOLOGRAPHIC, colors: HOLOGRAPHIC_ROLE_COLORS, labelString: util.t.QTKppe };
+const result = size.fileFinishedImporting("modules/guild_settings/roles/GuildSettingsRoleConstants.tsx");
 
 export const CREATE_ROLE_DESKTOP_MODAL_WIDTH = 440;
 export const DEFAULT_HEADER_HEIGHT_PX = 371;

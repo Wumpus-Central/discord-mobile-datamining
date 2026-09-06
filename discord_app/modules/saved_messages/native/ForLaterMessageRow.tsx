@@ -1,50 +1,51 @@
 // discord_app/modules/saved_messages/native/ForLaterMessageRow.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
+import RowGeneratorDefault from "../../messages/native/renderer/RowGenerator.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = {
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+fn(4560);
+let createStyles = {
   preview: { marginHorizontal: -16, marginTop: -9, overflow: "hidden" },
   flushToCardBottom: null,
   footer: null,
 };
-createCacheKey = {
+createStyles = {
   marginBottom: -16,
-  borderBottomLeftRadius: ThemesDefault.modules.mobile.CARD_DEFAULT_RADIUS,
-  borderBottomRightRadius: ThemesDefault.modules.mobile.CARD_DEFAULT_RADIUS,
+  borderBottomLeftRadius: nativeDefault.modules.mobile.CARD_DEFAULT_RADIUS,
+  borderBottomRightRadius: nativeDefault.modules.mobile.CARD_DEFAULT_RADIUS,
 };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { paddingHorizontal: 16, paddingTop: 8 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/saved_messages/native/ForLaterMessageRow.tsx");
+createStyles.flushToCardBottom = createStyles;
+createStyles.footer = { paddingHorizontal: 16, paddingTop: 8 };
+let closure_7 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/saved_messages/native/ForLaterMessageRow.tsx");
 
 export const ForLaterMessageRow = function ForLaterMessageRow(arg0) {
   ({ lineClamp: require, footer } = arg0);
   importDefault = undefined;
   let setting;
-  let setting1;
-  let setting2;
   ({ message, maxHeight } = arg0);
-  const tmp = callback2();
-  let obj = require(setting[3]);
-  obj = { seeMoreLabelColor: importDefault(setting[4]).colors.TEXT_DEFAULT };
-  importDefault = obj.createNativeStyleProperties(obj)(importDefault(setting[5])());
-  const RenderEmbeds = require(setting[6]).RenderEmbeds;
+  const tmp = closure_7();
+  require("createStyles");
+  let obj = { seeMoreLabelColor: require("native").colors.TEXT_DEFAULT };
+  importDefault = obj.createNativeStyleProperties(obj)(require("useTheme")());
+  const RenderEmbeds = require("UserSettings").RenderEmbeds;
   setting = RenderEmbeds.getSetting();
-  const InlineEmbedMedia = require(setting[6]).InlineEmbedMedia;
-  setting1 = InlineEmbedMedia.getSetting();
-  const InlineAttachmentMedia = require(setting[6]).InlineAttachmentMedia;
-  setting2 = InlineAttachmentMedia.getSetting();
+  const InlineEmbedMedia = require("UserSettings").InlineEmbedMedia;
+  const setting1 = InlineEmbedMedia.getSetting();
+  const InlineAttachmentMedia = require("UserSettings").InlineAttachmentMedia;
+  const setting2 = InlineAttachmentMedia.getSetting();
   const items = [setting, setting1, setting2];
   const items1 = [tmp.preview];
   let flushToCardBottom = null;
   const memo = setting1.useMemo(() => {
-    let obj = new lib(setting[7])();
-    obj = {
+    new RowGeneratorDefault();
+    const obj = {
       renderEmbeds: setting,
       inlineEmbedMedia: setting1,
       inlineAttachmentMedia: setting2,
@@ -68,23 +69,25 @@ export const ForLaterMessageRow = function ForLaterMessageRow(arg0) {
   obj = { style: items1, children: null };
   items1[1] = flushToCardBottom;
   const items2 = [
-    callback(importDefault(setting[8]), {
+    closure_5(require("ChatItem"), {
       pointerEvents: "none",
       horizontalOffset: 0,
       modifyRow(arg0) {
-        if (null != closure_0) {
-          const obj = { numberOfLines: null, expandable: null, seeMoreLabel: null, seeMoreLabelColor: null };
-          obj[0] = tmp;
-          obj[1] = closure_1_0(setting[9]).isIOS();
-          const obj2 = closure_1_0(setting[9]);
+        if (null != closure_1_0) {
+          const obj = {
+            numberOfLines: tmp,
+            expandable: PlatformUtils.isIOS(),
+            seeMoreLabel: null,
+            seeMoreLabelColor: null,
+          };
           let str = "";
           if (obj3.isIOS()) {
             str = "...";
           }
-          obj[2] = str;
-          obj[3] = lib.seeMoreLabelColor;
+          obj.seeMoreLabel = str;
+          obj.seeMoreLabelColor = seeMoreLabelColor.seeMoreLabelColor;
           arg0.truncation = obj;
-          obj3 = closure_1_0(setting[9]);
+          obj3 = PlatformUtils;
         }
       },
       message,
@@ -94,12 +97,10 @@ export const ForLaterMessageRow = function ForLaterMessageRow(arg0) {
   ];
   let tmp12Result = null;
   if (null != footer) {
-    let obj2 = { style: null, children: null };
-    obj2[0] = tmp.footer;
-    obj2[1] = footer;
-    tmp12Result = callback(tmp10, obj2);
+    let obj2 = { style: tmp.footer, children: footer };
+    tmp12Result = closure_5(tmp10, obj2);
   }
   items2[1] = tmp12Result;
-  obj[1] = items2;
+  obj.children = items2;
   return closure_6(setting2, obj);
 };

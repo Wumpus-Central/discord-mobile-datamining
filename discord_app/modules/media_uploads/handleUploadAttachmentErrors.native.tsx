@@ -1,81 +1,77 @@
 // discord_app/modules/media_uploads/handleUploadAttachmentErrors.native.tsx
-import set from "../../../_runtime/00002_set.js";
-import getSystemLocale from "../../intl/index.native.tsx";
-import setDefault from "../../actions/AlertActionCreators.tsx";
-import getUploadFileSizeSum from "../../utils/FileUtils.tsx";
-import KESTREL_GA_UPLOAD_LIMIT_MB from "experiments/KestrelExperiment.tsx";
+import util from "../../intl/index.native.tsx";
+import AlertActionCreatorsDefault from "../../actions/AlertActionCreators.tsx";
+import FileUtils from "../../utils/FileUtils.tsx";
+import KestrelExperiment from "experiments/KestrelExperiment.tsx";
 import showUploadFileSizeErrorDefault from "native/showUploadFileSizeError.tsx";
-import getAttachmentUploadAbortAlertContent from "getAttachmentUploadAbortAlert.tsx";
-import ME from "../../Constants.tsx";
+import getAttachmentUploadAbortAlert from "getAttachmentUploadAbortAlert.tsx";
+import Constants from "../../Constants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-({ AbortCodes: c3, MAX_UPLOAD_COUNT: c4 } = ME);
-const result = set.fileFinishedImporting("modules/media_uploads/handleUploadAttachmentErrors.native.tsx");
+({ AbortCodes: c3, MAX_UPLOAD_COUNT: closure_4 } = Constants);
+const result = size.fileFinishedImporting("modules/media_uploads/handleUploadAttachmentErrors.native.tsx");
 
 export const handleUploadMessageAttachmentsErrors = function handleUploadMessageAttachmentsErrors(arg0) {
   ({ guildId, code, reason } = arg0);
   if (undefined === code) {
     return false;
   } else if (code === constants.ENTITY_TOO_LARGE) {
-    const kestrelConfig = KESTREL_GA_UPLOAD_LIMIT_MB.getKestrelConfig({
+    const kestrelConfig = KestrelExperiment.getKestrelConfig({
       location: "native.handleUploadMessageAttachmentsErrors",
     });
-    const obj10 = KESTREL_GA_UPLOAD_LIMIT_MB;
-    const maxFileSizeResult = getUploadFileSizeSum.maxFileSize(guildId);
+    const maxFileSizeResult = FileUtils.maxFileSize(guildId);
     let obj = {
-      file: null,
+      file: tmp,
       maxSize: null,
       baseMaxSize: null,
       guildId: null,
       analyticsLocations: null,
       errorReason: null,
     };
-    obj[0] = tmp;
-    const obj11 = getUploadFileSizeSum;
     const tmp27 = showUploadFileSizeErrorDefault;
-    obj[1] = KESTREL_GA_UPLOAD_LIMIT_MB.getEffectiveKestrelLimit(kestrelConfig, maxFileSizeResult);
-    obj[2] = maxFileSizeResult;
-    obj[3] = guildId;
-    obj[4] = tmp2;
+    obj.maxSize = KestrelExperiment.getEffectiveKestrelLimit(kestrelConfig, maxFileSizeResult);
+    obj.baseMaxSize = maxFileSizeResult;
+    obj.guildId = guildId;
+    obj.analyticsLocations = tmp2;
     let type;
     if (reason != null) {
       type = reason.type;
     }
-    obj[5] = type;
+    obj.errorReason = type;
     tmp27(obj);
     return true;
   } else if (code === tmp31.TOO_MANY_ATTACHMENTS) {
     obj = { title: null, body: null };
-    const intl5 = getSystemLocale.intl;
-    obj[0] = intl5.string(getSystemLocale.t.wOr6hB);
-    const intl6 = getSystemLocale.intl;
-    obj1 = { limit: null };
-    obj1[0] = closure_4;
-    obj[1] = intl6.formatToPlainString(getSystemLocale.t["qqyp/e"], obj1);
-    setDefault.show(obj);
+    const intl5 = util.intl;
+    obj.title = intl5.string(util.t.wOr6hB);
+    const intl6 = util.intl;
+    let obj1 = { limit };
+    obj.body = intl6.formatToPlainString(util.t["qqyp/e"], obj1);
+    AlertActionCreatorsDefault.show(obj);
     return true;
   } else if (code === tmp31.ENTITY_EMPTY) {
     let obj2 = { title: null, body: null };
-    const intl3 = getSystemLocale.intl;
-    obj2[0] = intl3.string(getSystemLocale.t.B3vFdU);
-    const intl4 = getSystemLocale.intl;
-    obj2[1] = intl4.string(getSystemLocale.t["9ZpT2C"]);
-    setDefault.show(obj2);
+    const intl3 = util.intl;
+    obj2.title = intl3.string(util.t.B3vFdU);
+    const intl4 = util.intl;
+    obj2.body = intl4.string(util.t["9ZpT2C"]);
+    AlertActionCreatorsDefault.show(obj2);
     return true;
   } else if (code === tmp31.INVALID_FILE_ASSET) {
-    obj2 = setDefault;
+    obj2 = AlertActionCreatorsDefault;
     const obj3 = { title: null, body: null };
-    const intl = getSystemLocale.intl;
-    obj3[0] = intl.string(getSystemLocale.t.B3vFdU);
-    const intl2 = getSystemLocale.intl;
-    obj3[1] = intl2.string(getSystemLocale.t.zMEjJg);
+    const intl = util.intl;
+    obj3.title = intl.string(util.t.B3vFdU);
+    const intl2 = util.intl;
+    obj3.body = intl2.string(util.t.zMEjJg);
     obj2.show(obj3);
     return true;
   } else {
-    obj = getAttachmentUploadAbortAlertContent;
+    obj = getAttachmentUploadAbortAlert;
     const attachmentUploadAbortAlertContent = obj.getAttachmentUploadAbortAlertContent(code);
     let flag = null != attachmentUploadAbortAlertContent;
     if (flag) {
-      obj1 = setDefault;
+      obj1 = AlertActionCreatorsDefault;
       obj1.show(attachmentUploadAbortAlertContent);
       flag = true;
     }

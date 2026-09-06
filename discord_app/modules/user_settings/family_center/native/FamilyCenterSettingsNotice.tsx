@@ -1,38 +1,38 @@
 // discord_app/modules/user_settings/family_center/native/FamilyCenterSettingsNotice.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import messagesProxyDefault from "../../../parent_tools/FamilyCenter.messages.js";
+import _modDef2396 from "../../../parent_tools/FamilyCenter.messages.js";
+import ChannelActionCreatorsDefault from "../../../../actions/ChannelActionCreators.tsx";
+import LayerActionCreators from "../../../../actions/LayerActionCreators.tsx";
 import SafetySettingsNoticeDefault from "../../../safety_common/native/SafetySettingsNotice.tsx";
-import { SafetySettingsNoticeType } from "../../../safety_common/Constants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting(
-  "modules/user_settings/family_center/native/FamilyCenterSettingsNotice.tsx",
-);
+require = fn;
+const SafetySettingsNoticeType = fn(8399).SafetySettingsNoticeType;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/family_center/native/FamilyCenterSettingsNotice.tsx");
 
 export default function FamilyCenterSettingsParentalControlsNotice() {
   let obj = activeLinkUserIds(8645);
   activeLinkUserIds = obj.useActiveLinkUserIds();
   obj = {
-    label: messagesProxyDefault.i284fU,
+    label: _modDef2396.i284fU,
     noticeType: SafetySettingsNoticeType.CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE,
     labelHook() {
-      let obj = activeLinkUserIds(closure_1_2[6]);
+      let obj = LayerActionCreators;
       obj.popLayer();
       obj = { recipientIds: activeLinkUserIds };
-      closure_1_1(closure_1_2[7]).openPrivateChannel(obj);
+      ChannelActionCreatorsDefault.openPrivateChannel(obj);
     },
     count: activeLinkUserIds.length,
   };
   return jsx(SafetySettingsNoticeDefault, {
-    label: messagesProxyDefault.i284fU,
+    label: _modDef2396.i284fU,
     noticeType: SafetySettingsNoticeType.CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE,
     labelHook() {
-      let obj = activeLinkUserIds(closure_1_2[6]);
+      let obj = LayerActionCreators;
       obj.popLayer();
       obj = { recipientIds: activeLinkUserIds };
-      closure_1_1(closure_1_2[7]).openPrivateChannel(obj);
+      ChannelActionCreatorsDefault.openPrivateChannel(obj);
     },
     count: activeLinkUserIds.length,
   });

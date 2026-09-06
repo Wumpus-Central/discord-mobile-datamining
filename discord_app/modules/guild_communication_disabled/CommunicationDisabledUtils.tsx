@@ -1,13 +1,13 @@
 // discord_app/modules/guild_communication_disabled/CommunicationDisabledUtils.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/guild_communication_disabled/CommunicationDisabledUtils.tsx");
+const result = size.fileFinishedImporting("modules/guild_communication_disabled/CommunicationDisabledUtils.tsx");
 
-export const isCommunicationDisabled = function isCommunicationDisabled(arg0) {
-  let tmp = null != arg0;
+export const isCommunicationDisabled = function isCommunicationDisabled(communicationDisabledUserMap) {
+  let tmp = null != communicationDisabledUserMap;
   if (tmp) {
     const _Date = Date;
-    const date = new Date(arg0);
+    const date = new Date(communicationDisabledUserMap);
     const _Date2 = Date;
     const date1 = new Date();
     tmp = date > date1;

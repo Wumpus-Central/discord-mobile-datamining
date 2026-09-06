@@ -1,12 +1,12 @@
 // discord_app/modules/go_live/utils/getReportedStreamResolution.tsx
-import set from "../../../../_runtime/00002_set.js";
-import DesktopSources from "../../../../discord_common/js/packages/media-engine/Constants.tsx";
+import Constants from "../../../../discord_common/js/packages/media-engine/Constants.tsx";
 import getReportedPresetResolutionDefault from "getReportedPresetResolution.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const ResolutionTypes = DesktopSources.ResolutionTypes;
-const result = set.fileFinishedImporting("modules/go_live/utils/getReportedStreamResolution.tsx");
+const ResolutionTypes = Constants.ResolutionTypes;
+const result = size.fileFinishedImporting("modules/go_live/utils/getReportedStreamResolution.tsx");
 
-export default function getReportedStreamResolution(arg0, arg1, type) {
+export default function getReportedStreamResolution(arg0, arg1, type, arg3) {
   if (type.type !== ResolutionTypes.FIXED) {
     return type;
   } else {

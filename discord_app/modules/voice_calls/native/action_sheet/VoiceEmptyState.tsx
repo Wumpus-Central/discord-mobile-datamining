@@ -1,49 +1,46 @@
 // discord_app/modules/voice_calls/native/action_sheet/VoiceEmptyState.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import Button from "../../../../design/void/native.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
+import native from "../../../../design/void/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import registerAssetDefault from "../../../../../_runtime/13782_registerAsset.js";
+import _modDef13782 from "../../../../../_runtime/metro/13782__.js";
 import JoinVoiceChannelButtonDefault from "JoinVoiceChannelButton.tsx";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { Fonts } from "../../../../Constants.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import importDefaultResult from "../../../rebrand/native/TextStyles.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import TextStyles from "../../../rebrand/native/TextStyles.tsx";
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = {
+require = fn;
+const View = fn(17).View;
+const Fonts = fn(1074).Fonts;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+fn(4560);
+let createStyles = {
   container: { justifyContent: "center" },
   button: { paddingHorizontal: 12, paddingTop: 16 },
   emptyTitle: null,
   emptyBody: null,
 };
-createCacheKey = {};
-const merged = Object.assign(
-  importDefaultResult(Fonts.DISPLAY_EXTRABOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 18),
-);
-createCacheKey.textTransform = "none";
-createCacheKey.lineHeight = 24;
-createCacheKey[2] = createCacheKey;
+createStyles = {};
+const merged = Object.assign(TextStyles(Fonts.DISPLAY_EXTRABOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 18));
+createStyles.textTransform = "none";
+createStyles.lineHeight = 24;
+createStyles.emptyTitle = createStyles;
 const obj1 = {};
-const merged1 = Object.assign(importDefaultResult(Fonts.PRIMARY_MEDIUM, ThemesDefault.colors.TEXT_SUBTLE, 16));
+const merged1 = Object.assign(TextStyles(Fonts.PRIMARY_MEDIUM, nativeDefault.colors.TEXT_SUBTLE, 16));
 obj1.lineHeight = 20;
 obj1.fontWeight = "600";
-createCacheKey[3] = obj1;
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const importDefaultResult1 = importDefaultResult;
-const result = require("set").fileFinishedImporting("modules/voice_calls/native/action_sheet/VoiceEmptyState.tsx");
+createStyles.emptyBody = obj1;
+let closure_6 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_calls/native/action_sheet/VoiceEmptyState.tsx");
 
 export default function VoiceEmptyState(channel) {
-  const tmp = callback3();
+  const tmp = closure_6();
   let obj = { style: null, children: null };
   const items = [tmp.container];
   obj = { paddingBottom: useSafeAreaInsetsDefault().bottom };
   items[1] = obj;
-  obj[0] = items;
+  obj.style = items;
   obj = {
     title: null,
     body: null,
@@ -53,18 +50,18 @@ export default function VoiceEmptyState(channel) {
     bodyStyle: null,
     imageStyle: null,
   };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t["/HABZo"]);
-  const intl2 = getSystemLocale.intl;
-  obj[1] = intl2.string(getSystemLocale.t["5Jy2FY"]);
-  obj[2] = registerAssetDefault;
-  obj[3] = registerAssetDefault;
-  ({ emptyTitle: obj3[4], emptyBody: obj3[5] } = tmp);
-  obj[6] = { marginBottom: 16, marginTop: 20 };
+  const intl = util.intl;
+  obj.title = intl.string(util.t["/HABZo"]);
+  const intl2 = util.intl;
+  obj.body = intl2.string(util.t["5Jy2FY"]);
+  obj.lightSource = _modDef13782;
+  obj.darkSource = _modDef13782;
+  ({ emptyTitle: obj3.titleStyle, emptyBody: obj3.bodyStyle } = tmp);
+  obj.imageStyle = { marginBottom: 16, marginTop: 20 };
   const items1 = [
-    callback(Button.ThemedEmptyState, obj),
-    callback(JoinVoiceChannelButtonDefault, { channel: channel.channel, style: tmp.button }),
+    React4(native.ThemedEmptyState, obj),
+    React4(JoinVoiceChannelButtonDefault, { channel: channel.channel, style: tmp.button }),
   ];
-  obj[1] = items1;
-  return callback2(View, obj);
+  obj.children = items1;
+  return hasOwnProperty(View, obj);
 }

@@ -1,22 +1,22 @@
 // discord_app/modules/chat/native/ChatViewWrapperBase.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import Layer from "../../../design/components/Layers/native/LayerScope.native.tsx";
-import useChatViewPointerEventsAndroidDefault from "useChatViewPointerEvents.android.tsx";
+import LayerScope from "../../../design/components/Layers/native/LayerScope.native.tsx";
+import useChatViewPointerEventsDefault from "useChatViewPointerEvents.android.tsx";
 import StickyWrapper from "../../../design/components/Sticky/native/StickyWrapper.native.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/chat/native/ChatViewWrapperBase.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/chat/native/ChatViewWrapperBase.tsx");
 
 export default function ChatViewWrapperBase(arg0) {
   ({ channelId, children, stickyHeader, style } = arg0);
-  const tmp = useChatViewPointerEventsAndroidDefault(channelId);
-  return jsx(Layer.LayerScope, {
+  const tmp = useChatViewPointerEventsDefault(channelId);
+  return jsx(LayerScope.LayerScope, {
     children: jsx(StickyWrapper.StickyWrapper, {
       header: stickyHeader,
       style,
-      pointerEvents: useChatViewPointerEventsAndroidDefault(channelId),
+      pointerEvents: useChatViewPointerEventsDefault(channelId),
       children,
     }),
   });

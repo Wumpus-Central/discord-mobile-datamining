@@ -1,18 +1,19 @@
 // discord_app/modules/guild_tag/useUserAvailableGuildsWithTags.tsx
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import closure_2 from "../../stores/GuildMemberStore.tsx";
-import closure_3 from "../../stores/GuildStore.tsx";
+import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
+import GuildStore from "../../stores/GuildStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_tag/useUserAvailableGuildsWithTags.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_tag/useUserAvailableGuildsWithTags.tsx");
 
 export const useUserAvailableGuildsWithTags = function useUserAvailableGuildsWithTags() {
-  const items = [closure_3, closure_2];
+  const items = [GuildStore, GuildMemberStore];
   return initialize.useStateFromStoresArray(items, () => {
     guildsArray = guildsArray.getGuildsArray();
     return guildsArray.filter((id) => {
       selfMember = selfMember.getSelfMember(id.id);
-      let guildSupportsTagsResult = callback(table[3]).guildSupportsTags(id);
+      let guildSupportsTagsResult = closure_1_0(closure_1_1[3]).guildSupportsTags(id);
       if (guildSupportsTagsResult) {
         let joinedAt;
         if (selfMember != null) {

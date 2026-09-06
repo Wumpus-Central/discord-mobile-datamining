@@ -1,87 +1,87 @@
 // discord_app/modules/user_settings/premium/native/PremiumPromotionCard.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../a11y/AccessibilityStore.tsx";
-import ME from "../../../../Constants.tsx";
-import { PremiumTypes } from "../../../premium/PremiumConstants.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import openPremiumPlanSelectionActionSheetDefault from "../../../premium/native/openPremiumPlanSelectionActionSheet.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
-const require = arg1;
-({ AnalyticsObjectTypes: closure_6, AnalyticsPages: error, AnalyticsSections: closure_8, HelpdeskArticles: c9 } = ME);
-({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-createCacheKey = { container: { width: "100%" }, card: null, image: null, nitroWheelIcon: null };
-createCacheKey = {
+const require = fn;
+const View = fn(17).View;
+const Constants = fn(1074);
+({
+  AnalyticsObjectTypes: metroRequire,
+  AnalyticsPages: closure_7,
+  AnalyticsSections: closure_8,
+  HelpdeskArticles: closure_9,
+} = Constants);
+const PremiumTypes = fn(1373).PremiumTypes;
+const jsxProd = fn(21);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+fn(4560);
+let createStyles = { container: { width: "100%" }, card: null, image: null, nitroWheelIcon: null };
+createStyles = {
   display: "flex",
   width: "100%",
   flexDirection: "column",
   justifyContent: "flex-start",
-  paddingBottom: ThemesDefault.space.PX_16,
-  paddingHorizontal: ThemesDefault.space.PX_16,
-  borderRadius: ThemesDefault.radii.lg,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_SECONDARY_ALT,
-  marginBottom: ThemesDefault.space.PX_24,
+  paddingBottom: nativeDefault.space.PX_16,
+  paddingHorizontal: nativeDefault.space.PX_16,
+  borderRadius: nativeDefault.radii.lg,
+  backgroundColor: nativeDefault.colors.BACKGROUND_SECONDARY_ALT,
+  marginBottom: nativeDefault.space.PX_24,
   overflow: "hidden",
 };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = {
+createStyles.card = createStyles;
+let size = {
   alignSelf: "center",
-  marginBottom: ThemesDefault.space.PX_24,
-  borderTopLeftRadius: ThemesDefault.radii.lg,
-  borderTopRightRadius: ThemesDefault.radii.lg,
-  borderBottomRightRadius: ThemesDefault.radii.none,
-  borderBottomLeftRadius: ThemesDefault.radii.none,
+  marginBottom: nativeDefault.space.PX_24,
+  borderTopLeftRadius: nativeDefault.radii.lg,
+  borderTopRightRadius: nativeDefault.radii.lg,
+  borderBottomRightRadius: nativeDefault.radii.none,
+  borderBottomLeftRadius: nativeDefault.radii.none,
   width: "110%",
   height: 95,
 };
-createCacheKey[3] = { bottom: -1, width: 22, height: 16 };
-let closure_13 = createCacheKey.createStyles(createCacheKey);
-let obj1 = {
-  alignSelf: "center",
-  marginBottom: ThemesDefault.space.PX_24,
-  borderTopLeftRadius: ThemesDefault.radii.lg,
-  borderTopRightRadius: ThemesDefault.radii.lg,
-  borderBottomRightRadius: ThemesDefault.radii.none,
-  borderBottomLeftRadius: ThemesDefault.radii.none,
-  width: "110%",
-  height: 95,
-};
-const result = require("set").fileFinishedImporting("modules/user_settings/premium/native/PremiumPromotionCard.tsx");
+createStyles.image = size;
+createStyles.nitroWheelIcon = { bottom: -1, width: 22, height: 16 };
+let closure_13 = createStyles.createStyles(createStyles);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/premium/native/PremiumPromotionCard.tsx");
 
 export default function PremiumPromotionCard(applicationId) {
   applicationId = applicationId.applicationId;
   const onPaymentSuccess = applicationId.onPaymentSuccess;
   const onPaymentDismiss = applicationId.onPaymentDismiss;
-  let analyticsLocations;
-  const tmp = callback3();
+  const tmp = closure_13();
   let obj = applicationId(onPaymentDismiss[8]);
-  const items = [closure_5];
+  const items = [AccessibilityStore];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  analyticsLocations = onPaymentSuccess(onPaymentDismiss[9])().analyticsLocations;
+  const analyticsLocations = onPaymentSuccess(onPaymentDismiss[9])().analyticsLocations;
   const items1 = [analyticsLocations, applicationId, onPaymentSuccess, onPaymentDismiss];
-  obj = { style: items2, children: null };
-  items2 = [tmp.container, applicationId.style];
-  obj = { style: items3, children: null };
-  items3 = [tmp.card];
+  obj = { style: null, children: null };
+  const items2 = [tmp.container, applicationId.style];
+  obj.style = items2;
+  obj = { style: null, children: null };
+  const items3 = [tmp.card];
+  obj.style = items3;
   const callback = analyticsLocations.useCallback(() => {
-    obj = {
-      analyticsLocation: obj,
+    let obj = {
+      analyticsLocation: null,
       analyticsLocations,
-      premiumType: closure_1_10.TIER_2,
+      premiumType: PremiumTypes.TIER_2,
       applicationId,
       onPaymentSuccess,
       onPaymentDismiss,
     };
     obj = {
-      page: closure_1_7.BOGO_PROMOTION_MARKETING_PAGE_BANNER,
-      section: closure_1_8.SETTINGS_PREMIUM,
-      objectType: closure_1_6.BUY,
+      page: constants2.BOGO_PROMOTION_MARKETING_PAGE_BANNER,
+      section: constants3.SETTINGS_PREMIUM,
+      objectType: constants.BUY,
     };
-    onPaymentSuccess(onPaymentDismiss[10])(obj);
+    obj.analyticsLocation = obj;
+    openPremiumPlanSelectionActionSheetDefault(obj);
   }, items1);
   const items4 = [
-    callback(onPaymentSuccess(onPaymentDismiss[11]), {
+    closure_11(onPaymentSuccess(onPaymentDismiss[11]), {
       source: {
         uri: "https://cdn.discordapp.com/assets/content/da4c50f6fba3cf58b484571ef1a57c355fbd31636683792858fa41d1ab027520.png",
       },
@@ -92,15 +92,15 @@ export default function PremiumPromotionCard(applicationId) {
   ];
   const obj2 = { color: "mobile-text-heading-primary", variant: "heading-md/extrabold", children: null };
   const intl = applicationId(onPaymentDismiss[13]).intl;
-  obj2[2] = intl.string(applicationId(onPaymentDismiss[13]).t["6Jjfk8"]);
-  items4[1] = callback(applicationId(onPaymentDismiss[12]).Text, obj2);
+  obj2.children = intl.string(applicationId(onPaymentDismiss[13]).t["6Jjfk8"]);
+  items4[1] = closure_11(applicationId(onPaymentDismiss[12]).Text, obj2);
   const obj3 = { color: "mobile-text-heading-primary", variant: "text-sm/normal", children: null };
   const intl2 = applicationId(onPaymentDismiss[13]).intl;
   const obj4 = { helpCenterLink: null };
   let obj7 = onPaymentSuccess(onPaymentDismiss[14]);
-  obj4[0] = obj7.getArticleURL(SUMMER_BOGO_2025.SUMMER_BOGO_2025);
-  obj3[2] = intl2.format(applicationId(onPaymentDismiss[13]).t["dE3+TP"], obj4);
-  items4[2] = callback(applicationId(onPaymentDismiss[12]).Text, obj3);
+  obj4.helpCenterLink = obj7.getArticleURL(SUMMER_BOGO_2025.SUMMER_BOGO_2025);
+  obj3.children = intl2.format(applicationId(onPaymentDismiss[13]).t["dE3+TP"], obj4);
+  items4[2] = closure_11(applicationId(onPaymentDismiss[12]).Text, obj3);
   const obj5 = { style: { marginTop: onPaymentSuccess(onPaymentDismiss[7]).space.PX_24 }, children: null };
   obj7 = {
     text: null,
@@ -112,25 +112,16 @@ export default function PremiumPromotionCard(applicationId) {
     shiny: null,
   };
   const intl3 = applicationId(onPaymentDismiss[13]).intl;
-  obj7[0] = intl3.string(applicationId(onPaymentDismiss[13]).t.J61px0);
-  obj7[2] = callback;
-  obj1 = {
-    source: {
-      uri: "https://cdn.discordapp.com/assets/content/da4c50f6fba3cf58b484571ef1a57c355fbd31636683792858fa41d1ab027520.png",
-    },
-    style: tmp.image,
-  };
-  const obj6 = { marginTop: onPaymentSuccess(onPaymentDismiss[7]).space.PX_24 };
+  obj7.text = intl3.string(applicationId(onPaymentDismiss[13]).t.J61px0);
+  obj7.onPress = callback;
+  const obj8 = { style: null, color: onPaymentSuccess(onPaymentDismiss[7]).colors.BACKGROUND_BRAND, size: "custom" };
   const items5 = [tmp.nitroWheelIcon];
-  obj7[3] = callback(applicationId(onPaymentDismiss[16]).NitroWheelIcon, {
-    style: items5,
-    color: onPaymentSuccess(onPaymentDismiss[7]).colors.BACKGROUND_BRAND,
-    size: "custom",
-  });
-  obj7[6] = !stateFromStores;
-  obj5[1] = callback(applicationId(onPaymentDismiss[15]).Button, obj7);
-  items4[3] = callback(View, obj5);
-  obj[1] = items4;
-  obj[1] = callback2(View, obj);
-  return callback(View, obj);
+  obj8.style = items5;
+  obj7.icon = closure_11(applicationId(onPaymentDismiss[16]).NitroWheelIcon, obj8);
+  obj7.shiny = !stateFromStores;
+  obj5.children = closure_11(applicationId(onPaymentDismiss[15]).Button, obj7);
+  items4[3] = closure_11(View, obj5);
+  obj.children = items4;
+  obj.children = closure_12(View, obj);
+  return closure_11(View, obj);
 }

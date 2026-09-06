@@ -1,43 +1,43 @@
 // discord_app/modules/messages/native/renderer/rows/BlockedGroup.tsx
-import set from "../../../../../../_runtime/00002_set.js";
-import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import sum from "../../../../../../discord_common/js/shared/Constants.tsx";
-import AccessibilityAnnouncer from "../../../../../design/shared.tsx";
-import Changeset from "../RowGeneratorConstants.tsx";
-import processColorOrThrow from "../RowGeneratorStyleSheet.tsx";
-import apply from "../../../../../../_runtime/00012_apply.js";
+import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import Constants from "../../../../../../discord_common/js/shared/Constants.tsx";
+import shared from "../../../../../design/shared.tsx";
+import RowGeneratorConstants from "../RowGeneratorConstants.tsx";
+import RowGeneratorStyleSheet from "../RowGeneratorStyleSheet.tsx";
+import apply from "../../../../../../_runtime/metro/00012__.js";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-const SeparatorAction = Changeset.SeparatorAction;
-const UNSAFE_Colors = sum.UNSAFE_Colors;
+const SeparatorAction = RowGeneratorConstants.SeparatorAction;
+const UNSAFE_Colors = Constants.UNSAFE_Colors;
 let closure_5 = apply.memoize((arg0) => {
-  let obj = AccessibilityAnnouncer;
+  let obj = shared;
   let str = "#DBE0E4";
   if (obj.isThemeDark(arg0)) {
-    str = ThemesDefault.unsafe_rawColors.PRIMARY_700;
+    str = nativeDefault.unsafe_rawColors.PRIMARY_700;
   }
   let tmpResult = tmp(4411);
   let str2 = "#FAFAFA";
   if (tmpResult.isThemeDark(arg0)) {
-    str2 = ThemesDefault.unsafe_rawColors.PRIMARY_630;
+    str2 = nativeDefault.unsafe_rawColors.PRIMARY_630;
   }
   tmpResult = tmp(4411);
   if (tmpResult.isThemeDark(arg0)) {
-    let GREY1 = tmp(4409).hexWithOpacity(ThemesDefault.unsafe_rawColors.PRIMARY_300, 0.6);
+    let GREY1 = tmp(4409).hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_300, 0.6);
     const tmpResult1 = tmp(4409);
   } else {
     GREY1 = UNSAFE_Colors.GREY1;
   }
-  obj = { borderColor: processColorOrThrow.processColorOrThrow(str), backgroundColor: null, color: null };
-  const tmpResult2 = processColorOrThrow;
-  obj[1] = processColorOrThrow.processColorOrThrow(str2);
-  const tmpResult3 = processColorOrThrow;
-  obj[2] = processColorOrThrow.processColorOrThrow(GREY1);
+  obj = { borderColor: RowGeneratorStyleSheet.processColorOrThrow(str), backgroundColor: null, color: null };
+  const tmpResult2 = RowGeneratorStyleSheet;
+  obj.backgroundColor = RowGeneratorStyleSheet.processColorOrThrow(str2);
+  const tmpResult3 = RowGeneratorStyleSheet;
+  obj.color = RowGeneratorStyleSheet.processColorOrThrow(GREY1);
   return obj;
 });
-const result = set.fileFinishedImporting("modules/messages/native/renderer/rows/BlockedGroup.tsx");
+const result = size.fileFinishedImporting("modules/messages/native/renderer/rows/BlockedGroup.tsx");
 
 export const generateBlockedGroupRowData = function generateBlockedGroupRowData(canUncollapse, theme, self) {
-  closure_0 = self;
+  const _self = self;
   ({ content, context } = canUncollapse);
   canUncollapse = !("canUncollapse" in canUncollapse);
   ({ changeType, message, text, revealed, rowType } = canUncollapse);
@@ -45,14 +45,14 @@ export const generateBlockedGroupRowData = function generateBlockedGroupRowData(
     canUncollapse = canUncollapse.canUncollapse;
   }
   let obj = {};
-  const merged = Object.assign(callback(theme));
+  const merged = Object.assign(closure_5(theme));
   obj.type = rowType;
-  obj.content = content.map((arg0) => _self.generate(arg0));
+  obj.content = content.map((item) => _self.generate(item));
   obj = { type: SeparatorAction.TOGGLE_BLOCKED_MESSAGES, context: null };
   if (context == null) {
     context = message.id;
   }
-  obj[1] = context;
+  obj.context = context;
   obj.button = { action: obj };
   obj.changeType = changeType;
   obj.text = text;

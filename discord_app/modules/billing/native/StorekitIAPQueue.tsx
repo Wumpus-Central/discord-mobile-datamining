@@ -1,10 +1,8 @@
 // discord_app/modules/billing/native/StorekitIAPQueue.tsx
-import CurrencyCodes from "../../../../discord_common/js/shared/utils/PriceUtils.tsx";
-import closure_2 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import { convertToAlpha2 } from "../../i18n/CountryCodeUtils.tsx";
-import set from "../../../../_runtime/00002_set.js";
+import utils_PriceUtils from "../../../../discord_common/js/shared/utils/PriceUtils.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
-require = arg1;
+require = fn;
 function productSK2ToIAPProduct(subscription) {
   let items = [];
   if (null != subscription.subscription.promotionalOffers) {
@@ -21,41 +19,34 @@ function productSK2ToIAPProduct(subscription) {
           str2 = "";
         }
       }
-      return { identifier: identifier.id, type: "SUBSCRIPTION", numberOfPeriods: str4.toString(), price: str5.toString(), localizedPrice: identifier.displayPrice, paymentMode: str2, subscriptionPeriod: str6.toUpperCase() };
+      const obj = { identifier: identifier.id, type: "SUBSCRIPTION", numberOfPeriods: identifier.period.value.toString(), price: identifier.price.toString(), localizedPrice: identifier.displayPrice, paymentMode: str2, subscriptionPeriod: identifier.period.unit.toUpperCase() };
+      return obj;
     });
   }
   if (null == subscription.subscription.introductoryOffer) {
     const _Number = Number;
     const price = subscription.price;
-    const NumberResult = Number(price.toFixed(CurrencyCodes.CurrencyExponents[subscription.currency.toLowerCase(subscription.currency)]));
+    const NumberResult = Number(price.toFixed(utils_PriceUtils.CurrencyExponents[subscription.currency.toLowerCase(subscription.currency)]));
     let obj = { identifier: null, price: null, currencySymbol: null, currencyCode: null, priceString: null, countryCode: "", downloadable: false, description: null, title: null, discounts: null };
     const _String = String;
-    obj[0] = String(subscription.id);
-    obj[1] = NumberResult;
-    obj[2] = subscription.displayPrice.split(/[0-9]/)[0];
-    obj[3] = subscription.currency.toLowerCase();
+    obj.identifier = String(subscription.id);
+    obj.price = NumberResult;
+    obj.currencySymbol = subscription.displayPrice.split(/[0-9]/)[0];
+    obj.currencyCode = subscription.currency.toLowerCase();
     const _String2 = String;
-    obj[4] = String(NumberResult);
-    ({ description: obj2[7], displayName: obj2[8] } = subscription);
-    obj[9] = items;
+    obj.priceString = String(NumberResult);
+    ({ description: obj2.description, displayName: obj2.title } = subscription);
+    obj.discounts = items;
     return obj;
   } else {
     let introductoryOffer = subscription.subscription.introductoryOffer;
     let paymentMode = introductoryOffer.paymentMode;
     if ("freeTrial" === paymentMode) {
       let str2 = "FREETRIAL";
-      obj = { identifier: null, type: "SUBSCRIPTION", numberOfPeriods: null, price: null, localizedPrice: null, paymentMode: null, subscriptionPeriod: null };
-      obj[0] = introductoryOffer.id;
-      obj[2] = introductoryOffer.period.value.toString();
-      obj[3] = introductoryOffer.price.toString();
-      obj[4] = introductoryOffer.displayPrice;
-      obj[5] = str2;
+      obj = { identifier: introductoryOffer.id, type: "SUBSCRIPTION", numberOfPeriods: introductoryOffer.period.value.toString(), price: introductoryOffer.price.toString(), localizedPrice: introductoryOffer.displayPrice, paymentMode: str2, subscriptionPeriod: null };
       introductoryOffer = introductoryOffer.period.unit.toUpperCase();
-      obj[6] = introductoryOffer;
+      obj.subscriptionPeriod = introductoryOffer;
       tmp6(obj);
-      const str4 = introductoryOffer.period.value;
-      const str5 = introductoryOffer.price;
-      const str6 = introductoryOffer.period.unit;
     } else if ("payAsYouGo" !== paymentMode) {
       str2 = "PAYUPFRONT";
       if ("payUpFront" !== paymentMode) {
@@ -65,12 +56,13 @@ function productSK2ToIAPProduct(subscription) {
     str2 = "PAYASYOUGO";
   }
 }
-const RNIapIosSk2 = require("get ActivityIndicator").NativeModules.RNIapIosSk2;
+const convertToAlpha2 = fn(4776).convertToAlpha2;
+const RNIapIosSk2 = fn(17).NativeModules.RNIapIosSk2;
 class StorekitIAPQueueClass {
   constructor() {
-    obj = Object.create(new.target.prototype);
-    obj[0] = [];
-    return obj;
+    merged = Object.assign({ _queue: null, _processingQueue: false });
+    merged[0] = [];
+    return merged;
   }
 }
 const prototype = StorekitIAPQueueClass.prototype;
@@ -80,26 +72,24 @@ prototype["fetchSubscriptions"] = function fetchSubscriptions(arg0) {
   this.processQueue();
   return new Promise((arg0, arg1) => {
     closure_0 = arg0;
-    const _self = arg1;
+    _self = arg1;
     const _queue = _self._queue;
-    _queue.push(closure_1_2(function*() {
-      const callback2 = tmp3;
-      c3 = 1;
-      yield closure_2_4.getItems(closure_1_0);
+    _queue.push(asyncGeneratorStep(async () => {
+      closure_1 = tmp3;
+      await items.getItems(closure_0);
       if (1 === tmp7) {
         c3 = 0;
-        callback2(closure_2);
+        closure_129_1(closure_2);
         c5 = 3;
       } else if (arg0 === 1) {
         c5 = 3;
         throw arg1;
       } else if (arg0 !== 2) {
         const found = arg1.filter((subscription) => null != subscription.subscription);
-        const callback = found.map(closure_2_5);
-        callback(callback);
+        closure_128_0 = found.map(productSK2ToIAPProduct);
+        closure_129_0(closure_128_0);
         c3 = 0;
       }
-      c3 = 0;
       return arg1;
     }));
   });
@@ -110,48 +100,43 @@ prototype["fetchProducts"] = function fetchProducts(arg0) {
   this.processQueue();
   return new Promise((arg0, arg1) => {
     closure_0 = arg0;
-    const _self = arg1;
+    _self = arg1;
     const _queue = _self._queue;
-    _queue.push(closure_1_2(function*() {
-      dependencyMap = tmp3;
-      c3 = 1;
-      obj1 = callback(11048);
-      obj1 = { skus: null };
-      obj1[0] = closure_1_0;
+    _queue.push(asyncGeneratorStep(async () => {
+      skus(tmp3[4]);
+      const obj1 = { skus };
       const products = obj1.getProducts(obj1);
-      yield products.then((arr) => {
+      await products.then((arr) => {
         const found = arr.filter((type) => "iap" === type.type);
-        return found.map((countryCode) => (function mapToIAPProduct() { ... })(countryCode));
+        return found.map((item) => (function mapToIAPProduct() { ... })(item));
       });
       if (1 === tmp7) {
         c3 = 0;
-        dependencyMap(closure_2);
+        closure_129_1(closure_2);
         c5 = 3;
       } else if (arg0 === 1) {
         c5 = 3;
         throw arg1;
       } else if (arg0 !== 2) {
-        callback = arg1;
-        callback(callback);
+        closure_128_0 = arg1;
+        closure_129_0(closure_128_0);
         c3 = 0;
       }
-      c3 = 0;
       return arg1;
     }));
   });
 };
 prototype["processQueue"] = function processQueue() {
   const self = this;
-  return callback(function*() {
+  return (async (arg0, value) => {
     if (c5 === 2) {
       c5 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp6 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
@@ -162,48 +147,45 @@ prototype["processQueue"] = function processQueue() {
         if (0 === c4) {
           if (arg0 === 1) {
             c5 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
             closure_1 = tmp3;
-            let lib = tmp7;
-            lib = undefined;
-            if (closure_1_0._processingQueue) {
+            closure_0 = tmp7;
+            closure_128_0 = undefined;
+            if (self._processingQueue) {
               c5 = 3;
             } else {
-              closure_1_0._processingQueue = true;
+              self._processingQueue = true;
               c3 = 1;
-              if (closure_1_0._queue.length <= 0) {
+              if (self._queue.length <= 0) {
                 c3 = 0;
-                lib._processingQueue = false;
+                closure_129_0._processingQueue = false;
               }
             }
           }
         } else if (1 === tmp7) {
           c3 = 0;
-          lib._processingQueue = false;
+          closure_129_0._processingQueue = false;
           throw closure_2;
         } else if (arg0 === 1) {
           c5 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c3 = 0;
-          lib._processingQueue = false;
+          closure_129_0._processingQueue = false;
           c5 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj = { value, done: true };
           return obj;
         }
-        const _queue = lib._queue;
-        lib = _queue.shift();
+        const _queue = closure_129_0._queue;
+        closure_128_0 = _queue.shift();
         c4 = 2;
         c5 = 1;
-        obj1 = { value: null, done: false };
-        obj1[0] = lib();
+        const obj1 = { value: closure_128_0(), done: false };
         return obj1;
       } catch (tmp24) {
         closure_2 = tmp24;
@@ -217,8 +199,9 @@ prototype["processQueue"] = function processQueue() {
     }
   })();
 };
-let set = Object.create(StorekitIAPQueueClass.prototype);
-set[0] = [];
-const result = set.fileFinishedImporting("modules/billing/native/StorekitIAPQueue.tsx");
+let merged = Object.assign({ _queue: null, _processingQueue: false });
+merged[0] = [];
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/billing/native/StorekitIAPQueue.tsx");
 
-export default set;
+export default merged;

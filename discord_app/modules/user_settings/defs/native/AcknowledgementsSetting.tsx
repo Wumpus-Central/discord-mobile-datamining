@@ -1,36 +1,24 @@
 // discord_app/modules/user_settings/defs/native/AcknowledgementsSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import ME from "../../../../Constants.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import _modDef4255 from "../../../../lib/native/Linking.tsx";
+import Constants from "../../../../Constants.tsx";
+import util from "../../../../intl/index.native.tsx";
+import LinkingDefault from "../../../../lib/native/Linking.tsx";
 import CircleInformationIcon from "../../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const MarketingURLs = ME.MarketingURLs;
-const pressable = createToggle.createPressable({
+const MarketingURLs = Constants.MarketingURLs;
+const pressable = SettingBuilders.createPressable({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["0nUKy3"]);
+    const intl = util.intl;
+    return intl.string(util.t["0nUKy3"]);
   },
   parent: null,
   IconComponent: CircleInformationIcon.CircleInformationIcon,
   onPress: function handleAcknowledgementsSettingPress() {
-    _modDef4255.openURL(MarketingURLs.ACKNOWLEDGEMENTS);
+    LinkingDefault.openURL(MarketingURLs.ACKNOWLEDGEMENTS);
   },
   withArrow: true,
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["0nUKy3"]);
-  },
-  parent: null,
-  IconComponent: CircleInformationIcon.CircleInformationIcon,
-  onPress: function handleAcknowledgementsSettingPress() {
-    _modDef4255.openURL(MarketingURLs.ACKNOWLEDGEMENTS);
-  },
-  withArrow: true,
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/AcknowledgementsSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AcknowledgementsSetting.tsx");
 
 export default pressable;

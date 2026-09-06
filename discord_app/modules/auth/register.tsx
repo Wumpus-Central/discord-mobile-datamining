@@ -1,224 +1,193 @@
 // discord_app/modules/auth/register.tsx
-import dispatcherDefault from "../../Dispatcher.tsx";
-import encodeProperties from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import _modDef4753 from "../../utils/TrackedHTTPUtils.tsx";
-import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import initialize from "../parent_tools/ParentalConsentStore.tsx";
-import closure_5 from "../../stores/AuthenticationStore.tsx";
-import ME from "../../Constants.tsx";
-import result from "../age_gate/AgeGateConstants.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
+import discord_common_AnalyticsUtils from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import APIErrorDefault from "../../errors/APIError.tsx";
+import TrackedHTTPUtilsDefault from "../../utils/TrackedHTTPUtils.tsx";
+import SharedCaptchaUtils from "../captcha/SharedCaptchaUtils.tsx";
+import AgeGateActionCreatorsAll from "../age_gate/AgeGateActionCreators.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 
-require = arg1;
-function _scorePassword() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c5 = 0;
-    c6 = 0;
-    c4 = 0;
-    return (function* (arg0, body) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw body;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+require = fn;
+let closure_11 = async function _scorePassword(password) {
+  c5 = 0;
+  c6 = 0;
+  c4 = 0;
+  return (async (arg0, value) => {
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              closure_2 = tmp3;
-              const callback2 = tmp7;
-              c4 = 1;
-              let obj5 = closure_1_1(closure_1_3[7]);
-              obj1 = { url: null, body: null, trackedActionData: null, rejectWithError: false };
-              obj1[0] = closure_1_8.SCORE_PASSWORD;
-              const obj2 = { password: null };
-              obj2[0] = callback;
-              obj1[1] = obj2;
-              const obj3 = { event: null };
-              obj3[0] = callback(closure_1_3[8]).NetworkActionNames.PASSWORD_VALIDATE;
-              obj1[2] = obj3;
-              c5 = 2;
-              c6 = 1;
-              const obj4 = { value: null, done: false };
-              obj4[0] = obj5.post(obj1);
-              return obj4;
-            }
-          } else if (1 === tmp7) {
-            c4 = 0;
-            callback = table;
-            const tmp17 = new callback2(table[9])(callback);
-            throw tmp17;
-          } else if (arg0 === 1) {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
             c6 = 3;
-            throw body;
+            throw value;
           } else if (arg0 === 2) {
-            c4 = 0;
             c6 = 3;
-            obj5 = { value: null, done: true };
-            obj5[0] = body;
-            return obj5;
-          } else {
-            c4 = 0;
-            c6 = 3;
-            obj = { value: null, done: true };
-            obj[0] = body.body;
+            obj = { value, done: true };
             return obj;
-          }
-        } catch (tmp19) {
-          table = tmp19;
-          if (tmp4 === c4) {
-            c6 = tmp2;
-            throw tmp19;
           } else {
-            c5 = tmp;
+            closure_2 = tmp3;
+            closure_1 = tmp7;
+            c4 = 1;
+            const request = {
+              url: constants.SCORE_PASSWORD,
+              body: null,
+              trackedActionData: null,
+              rejectWithError: false,
+            };
+            const obj1 = { password };
+            request.body = obj1;
+            const obj2 = { event: discord_common_AnalyticsUtils.NetworkActionNames.PASSWORD_VALIDATE };
+            request.trackedActionData = obj2;
+            c5 = 2;
+            c6 = 1;
+            const obj3 = { value: TrackedHTTPUtilsDefault.post(request), done: false };
+            return obj3;
           }
+        } else if (1 === tmp7) {
+          c4 = 0;
+          closure_129_0 = closure_3;
+          const tmp17 = new closure_130_1(closure_130_3[9])(closure_129_0);
+          throw tmp17;
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 0;
+          c6 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          c4 = 0;
+          c6 = 3;
+          obj = { value: value.body, done: true };
+          return obj;
+        }
+      } catch (tmp19) {
+        closure_3 = tmp19;
+        if (tmp4 === c4) {
+          c6 = tmp2;
+          throw tmp19;
+        } else {
+          c5 = tmp;
         }
       }
-    })();
-  });
-  closure_11 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _registerPhone() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c5 = 0;
-    c6 = 0;
-    c4 = 0;
-    const iter = (function* (arg0) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp7 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+    }
+  })();
+};
+let closure_12 = async function _registerPhone(arg0) {
+  let phone = arg0;
+  c5 = 0;
+  c6 = 0;
+  c4 = 0;
+  let iter = (async (arg0, value) => {
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp7 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_2 = tmp3;
-              let callback = tmp5;
-              let phone;
-              phone = phone.phone;
-              c5 = 1;
-              c6 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp8) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              c4 = 1;
-              let obj6 = callback(4753);
-              const obj2 = { url: null, body: null, trackedActionData: null, rejectWithError: false };
-              obj2[0] = constants.REGISTER_PHONE;
-              const obj3 = { phone: null };
-              obj3[0] = phone;
-              obj2[1] = obj3;
-              const obj4 = { event: null };
-              obj4[0] = phone(1250).NetworkActionNames.USER_REGISTER_PHONE;
-              obj2[2] = obj4;
-              c5 = 3;
-              c6 = 1;
-              const obj5 = { value: null, done: false };
-              obj5[0] = obj6.post(obj2);
-              return obj5;
-            }
-          } else if (2 === tmp8) {
-            c4 = 0;
-            callback = dependencyMap;
-            if (callback instanceof phone(11277).CaptchaCancelError) {
-              throw callback;
-            } else {
-              const tmp23 = new callback(4462)(callback);
-              throw tmp23;
-            }
-          } else if (arg0 === 1) {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
             c6 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
-            c4 = 0;
             c6 = 3;
-            obj6 = { value: null, done: true };
-            obj6[0] = arg1;
-            return obj6;
-          } else {
-            c4 = 0;
-            c6 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
-          }
-        } catch (tmp27) {
-          dependencyMap = tmp27;
-          if (tmp4 === c4) {
-            c6 = tmp2;
-            throw tmp27;
           } else {
-            c5 = tmp;
+            closure_2 = tmp3;
+            closure_1 = tmp5;
+            let phone2;
+            phone2 = phone.phone;
+            c5 = 1;
+            c6 = 1;
+            return { value: "PX_16", done: true };
           }
+        } else if (1 === tmp8) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj1 = { value, done: true };
+            return obj1;
+          } else {
+            c4 = 1;
+            const request = {
+              url: closure_130_8.REGISTER_PHONE,
+              body: null,
+              trackedActionData: null,
+              rejectWithError: false,
+            };
+            const obj2 = { phone: phone2 };
+            request.body = obj2;
+            const obj3 = { event: closure_130_0(closure_130_3[8]).NetworkActionNames.USER_REGISTER_PHONE };
+            request.trackedActionData = obj3;
+            c5 = 3;
+            c6 = 1;
+            const obj4 = { value: closure_130_1(closure_130_3[7]).post(request), done: false };
+            return obj4;
+          }
+        } else if (2 === tmp8) {
+          c4 = 0;
+          closure_129_1 = closure_3;
+          if (closure_129_1 instanceof closure_130_0(closure_130_3[10]).CaptchaCancelError) {
+            throw closure_129_1;
+          } else {
+            const tmp23 = new closure_130_1(closure_130_3[9])(closure_129_1);
+            throw tmp23;
+          }
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 0;
+          c6 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
+        } else {
+          c4 = 0;
+          c6 = 3;
+          obj = { value, done: true };
+          return obj;
+        }
+      } catch (tmp27) {
+        closure_3 = tmp27;
+        if (tmp4 === c4) {
+          c6 = tmp2;
+          throw tmp27;
+        } else {
+          c5 = tmp;
         }
       }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_12 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
+    }
+  })();
+  iter.next();
+  return iter;
+};
 function registerFull(giftCodeSKUId) {
   ({ birthday, invite } = giftCodeSKUId);
   ({ email, phoneToken, username, globalName, consent, password, guildTemplateCode } = giftCodeSKUId);
@@ -237,14 +206,12 @@ function registerFull(giftCodeSKUId) {
   if (prop === undefined) {
     prop = null;
   }
-  let obj = dispatcherDefault;
+  let obj = DispatcherDefault;
   obj.dispatch({ type: "REGISTER" });
   if (null != birthday) {
     tmp4(15959)(birthday, constants2.REGISTER);
     let tmp4Result = tmp4(1242);
-    obj = { source: null, action: null };
-    obj[0] = constants5.REGISTER;
-    obj[1] = constants4.AGE_GATE_SUBMITTED;
+    obj = { source: constants5.REGISTER, action: constants4.AGE_GATE_SUBMITTED };
     tmp4Result.track(constants.AGE_GATE_ACTION, obj);
     const diffResult = tmp4(4153)().diff(birthday, "years");
     if (diffResult >= 13) {
@@ -261,16 +228,15 @@ function registerFull(giftCodeSKUId) {
         str = "13-17";
       }
       tmp4Result = tmp4(1242);
-      obj = { age_bucket: null };
-      obj[0] = str;
+      obj = { age_bucket: str };
       tmp4Result.track(tmp14.USER_AGE_SUBMITTED, obj);
     }
     const obj11 = tmp4(4153)();
     tmp14 = constants;
   }
-  obj1 = { url: constants3.REGISTER, body: null, trackedActionData: null, rejectWithError: false };
-  let obj2 = {
-    fingerprint: fingerprint.getFingerprint(),
+  const request = { url: constants3.REGISTER, body: null, trackedActionData: null, rejectWithError: false };
+  const user = {
+    fingerprint: AuthenticationStore.getFingerprint(),
     email,
     username,
     global_name: globalName,
@@ -287,17 +253,17 @@ function registerFull(giftCodeSKUId) {
   if (birthday != null) {
     formatResult = birthday.format("YYYY-MM-DD");
   }
-  obj2[8] = formatResult;
-  obj2[9] = giftCodeSKUId;
-  obj2[10] = guildTemplateCode;
+  user.date_of_birth = formatResult;
+  user.gift_code_sku_id = giftCodeSKUId;
+  user.guild_template_code = guildTemplateCode;
   let checked;
   if (promoEmailConsent != null) {
     checked = promoEmailConsent.checked;
   }
-  obj2[11] = checked;
-  obj1[1] = obj2;
-  let obj3 = { event: encodeProperties.NetworkActionNames.USER_REGISTER, properties: null };
-  const obj4 = {
+  user.promotional_email_opt_in = checked;
+  request.body = user;
+  const obj1 = { event: discord_common_AnalyticsUtils.NetworkActionNames.USER_REGISTER, properties: null };
+  let obj2 = {
     invite_code: invite,
     used_username_suggestion: prop,
     promotional_email_opt_in: null,
@@ -308,36 +274,33 @@ function registerFull(giftCodeSKUId) {
   if (promoEmailConsent != null) {
     checked1 = promoEmailConsent.checked;
   }
-  obj4[2] = checked1;
+  obj2.promotional_email_opt_in = checked1;
   let preChecked;
   if (promoEmailConsent != null) {
     preChecked = promoEmailConsent.preChecked;
   }
-  obj4[3] = preChecked;
-  obj3[1] = obj4;
-  obj1[2] = obj3;
-  const tmp4Result1 = _modDef4753;
-  return _modDef4753.post(obj1).then(
+  obj2.promotional_email_pre_checked = preChecked;
+  obj1.properties = obj2;
+  request.trackedActionData = obj1;
+  const tmp4Result1 = TrackedHTTPUtilsDefault;
+  return TrackedHTTPUtilsDefault.post(request).then(
     (body) => {
-      let obj = callback2(573);
-      obj = { type: "REGISTER_SUCCESS", token: body.body.token };
+      let obj = { type: "REGISTER_SUCCESS", token: body.body.token };
       obj.dispatch(obj);
       obj = { type: "GUARDIAN_CONNECT_REQUIRED", shouldShowGuardianConnect: true === body.body.show_guardian_connect };
-      callback2(573).dispatch(obj);
-      const obj3 = callback2(573);
-      callback2(1242).track(constants.AGE_GATE_ACTION, {
+      DispatcherDefault.dispatch(obj);
+      AnalyticsUtilsDefault.track(constants.AGE_GATE_ACTION, {
         source: constants3.REGISTER,
         action: constants2.AGE_GATE_SUCCESS,
       });
     },
     (arg0) => {
-      if (arg0 instanceof callback(11277).CaptchaCancelError) {
+      if (arg0 instanceof SharedCaptchaUtils.CaptchaCancelError) {
         throw arg0;
       } else {
-        let obj = new callback2(4462)(arg0);
+        let obj = new APIErrorDefault(arg0);
         if (null != obj.getFieldErrors("date_of_birth")) {
-          const result = callback3(15960).preventUnderageRegistration(constants3.REGISTER);
-          const obj2 = callback3(15960);
+          const result = AgeGateActionCreatorsAll.preventUnderageRegistration(constants3.REGISTER);
         }
         obj = {
           is_unique_username_registration: true,
@@ -355,28 +318,32 @@ function registerFull(giftCodeSKUId) {
           consent_error_reason: null,
           generic_error_reason: null,
         };
-        obj[1] = obj.getFirstFieldErrorMessage("email");
-        obj[2] = obj.getFirstFieldErrorMessage("phone_token");
-        obj[3] = obj.getFirstFieldErrorMessage("password");
-        obj[4] = obj.getFirstFieldErrorMessage("username");
-        obj[5] = obj.getFirstFieldErrorMessage("global_name");
-        obj[6] = obj.getFirstFieldErrorMessage("date_of_birth");
-        obj[7] = obj.getFirstFieldErrorMessage("promotional_email_opt_in");
-        obj[8] = obj.getFirstFieldErrorMessage("fingerprint");
-        obj[9] = obj.getFirstFieldErrorMessage("invite");
-        obj[10] = obj.getFirstFieldErrorMessage("gift_code_sku_id");
-        obj[11] = obj.getFirstFieldErrorMessage("guild_template_code");
-        obj[12] = obj.getFirstFieldErrorMessage("consent");
-        obj[13] = obj.getAnyErrorMessage();
-        callback2(1242).track(constants.REGISTER_SUBMIT_ERRORED, obj);
+        obj.email_error_reason = obj.getFirstFieldErrorMessage("email");
+        obj.phone_error_reason = obj.getFirstFieldErrorMessage("phone_token");
+        obj.password_error_reason = obj.getFirstFieldErrorMessage("password");
+        obj.username_error_reason = obj.getFirstFieldErrorMessage("username");
+        obj.global_name_error_reason = obj.getFirstFieldErrorMessage("global_name");
+        obj.date_of_birth_error_reason = obj.getFirstFieldErrorMessage("date_of_birth");
+        obj.promotional_email_opt_in_error_reason = obj.getFirstFieldErrorMessage("promotional_email_opt_in");
+        obj.fingerprint_error_reason = obj.getFirstFieldErrorMessage("fingerprint");
+        obj.invite_error_reason = obj.getFirstFieldErrorMessage("invite");
+        obj.gift_code_sku_id_error_reason = obj.getFirstFieldErrorMessage("gift_code_sku_id");
+        obj.guild_template_code_error_reason = obj.getFirstFieldErrorMessage("guild_template_code");
+        obj.consent_error_reason = obj.getFirstFieldErrorMessage("consent");
+        obj.generic_error_reason = obj.getAnyErrorMessage();
+        AnalyticsUtilsDefault.track(constants.REGISTER_SUBMIT_ERRORED, obj);
         throw obj;
       }
     },
   );
 }
-({ AnalyticEvents: closure_6, AnalyticsSections: error, Endpoints: closure_8 } = ME);
-({ AgeGateAnalyticAction: c9, AgeGateSource: c10 } = result);
-result = require("set").fileFinishedImporting("modules/auth/register.tsx");
+const ParentalConsentStore = fn(15958);
+const Constants = fn(1074);
+({ AnalyticEvents: metroRequire, AnalyticsSections: closure_7, Endpoints: closure_8 } = Constants);
+const AgeGateConstants = fn(1098);
+({ AgeGateAnalyticAction: closure_9, AgeGateSource: c10 } = AgeGateConstants);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/auth/register.tsx");
 
 export default function register(invite) {
   invite = invite.invite;
@@ -388,14 +355,14 @@ export default function register(invite) {
     giftCodeSKUId = null;
   }
   const obj = {};
-  const merged = Object.assign(Object.assign(invite, Object.create(null)));
+  const merged = Object.assign(Object.assign(invite, Object.assign({ invite: 0, giftCodeSKUId: 0 })));
   obj.invite = invite;
   obj.giftCodeSKUId = giftCodeSKUId;
   return registerFull(obj);
 }
-export const scorePassword = function scorePassword(arr) {
+export const scorePassword = function scorePassword() {
   const self = this;
-  const apply = _scorePassword.apply;
+  const apply = closure_11.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -403,9 +370,9 @@ export const scorePassword = function scorePassword(arr) {
   }
   return applyArgumentsResult;
 };
-export const registerPhone = function registerPhone(arg0) {
+export const registerPhone = function registerPhone() {
   const self = this;
-  const apply = _registerPhone.apply;
+  const apply = closure_12.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

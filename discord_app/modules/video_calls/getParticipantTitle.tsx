@@ -1,11 +1,11 @@
 // discord_app/modules/video_calls/getParticipantTitle.tsx
-import set from "../../../_runtime/00002_set.js";
-import ParticipantTypes2 from "../calls/CallConstants.tsx";
-import getNicknameDefault from "../../utils/NicknameUtils.tsx";
+import CallConstants from "../calls/CallConstants.tsx";
+import NicknameUtilsDefault from "../../utils/NicknameUtils.tsx";
 import useIsGuestOrLurker from "../guild_member/useIsGuestOrLurker.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const ParticipantTypes = ParticipantTypes2.ParticipantTypes;
-let result = set.fileFinishedImporting("modules/video_calls/getParticipantTitle.tsx");
+const ParticipantTypes = CallConstants.ParticipantTypes;
+let result = size.fileFinishedImporting("modules/video_calls/getParticipantTitle.tsx");
 
 export default function getParticipantTitle(guild_id, type, name) {
   if (type.type === ParticipantTypes.ACTIVITY) {
@@ -24,9 +24,8 @@ export default function getParticipantTitle(guild_id, type, name) {
       id = user.id;
     }
     const result = useIsGuestOrLurker.isGuestOrLurkerInGuild(guild_id.guild_id, id);
-    const obj2 = useIsGuestOrLurker;
     let str = "";
-    const name1 = getNicknameDefault.getName(guild_id.getGuildId(), guild_id.id, type.user);
+    const name1 = NicknameUtilsDefault.getName(guild_id.getGuildId(), guild_id.id, type.user);
     if (result) {
       const intl = tmp10(1114).intl;
       const _HermesInternal = HermesInternal;

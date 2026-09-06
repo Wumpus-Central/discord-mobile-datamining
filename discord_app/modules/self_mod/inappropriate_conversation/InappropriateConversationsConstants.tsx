@@ -1,7 +1,7 @@
 // discord_app/modules/self_mod/inappropriate_conversation/InappropriateConversationsConstants.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting(
+const result = size.fileFinishedImporting(
   "modules/self_mod/inappropriate_conversation/InappropriateConversationsConstants.tsx",
 );
 

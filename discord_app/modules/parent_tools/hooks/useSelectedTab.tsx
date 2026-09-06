@@ -1,24 +1,28 @@
 // discord_app/modules/parent_tools/hooks/useSelectedTab.tsx
-import defaultAreStatesEqual from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import closure_3 from "../FamilyCenterStore.tsx";
-import items from "../FamilyCenterConstants.tsx";
-import { AnalyticEvents } from "../../../Constants.tsx";
+import useStateFromStores from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
+import FamilyCenterActionCreatorsDefault from "../FamilyCenterActionCreators.tsx";
+import FamilyCenterStore from "../FamilyCenterStore.tsx";
 
-require = arg1;
-({ FamilyCenterAction: c4, FamilyCenterSubPages } = items);
-const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useSelectedTab.tsx");
+require = fn;
+const FamilyCenterConstants = fn(7538);
+({ FamilyCenterAction: closure_4, FamilyCenterSubPages } = FamilyCenterConstants);
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/hooks/useSelectedTab.tsx");
 
 export default function useSelectedMyFamilyTab() {
   let obj = {
-    selectedTab: defaultAreStatesEqual.useStateFromStores(items, () => selectedTab.getSelectedTab()),
+    selectedTab: null,
     handleTabChange(tab) {
-      let obj = callback(7539);
+      let obj = FamilyCenterActionCreatorsDefault;
       tab = obj.selectTab(tab);
       obj = { action: TabChange.TabChange, tab };
-      callback(1242).track(constants.FAMILY_CENTER_ACTION, obj);
+      AnalyticsUtilsDefault.track(constants.FAMILY_CENTER_ACTION, obj);
     },
   };
-  items = [closure_3];
+  const items = [FamilyCenterStore];
+  obj.selectedTab = useStateFromStores.useStateFromStores(items, () => selectedTab.getSelectedTab());
   return obj;
 }
 export const FAMILY_CENTER_TAB_ANALYTICS_LABELS = {

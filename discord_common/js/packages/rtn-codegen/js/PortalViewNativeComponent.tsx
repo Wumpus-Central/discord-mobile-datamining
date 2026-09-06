@@ -1,18 +1,14 @@
 // discord_common/js/packages/rtn-codegen/js/PortalViewNativeComponent.tsx
-import set from "../../../../../_runtime/00002_set.js";
 import weakSet from "../../../../../_runtime/00106_weakSet.js";
-import setRuntimeConfigProvider from "../../../../../_runtime/00065_setRuntimeConfigProvider.js";
+import 00065__ from "../../../../../_runtime/metro/00065__.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-let obj = {
-  uiViewClassName: "DCDPortalView",
-  directEventTypes: { topPortalViewLoaded: { registrationName: "onPortalViewLoaded" } },
-  validAttributes: null,
-};
-obj = { portal: true };
+let __INTERNAL_VIEW_CONFIG = { uiViewClassName: "DCDPortalView", directEventTypes: { topPortalViewLoaded: { registrationName: "onPortalViewLoaded" } }, validAttributes: null };
+__INTERNAL_VIEW_CONFIG = { portal: true };
 const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onPortalViewLoaded: true }));
-obj[2] = obj;
-const value = setRuntimeConfigProvider.get("DCDPortalView", () => obj);
-const result = set.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/PortalViewNativeComponent.tsx");
+__INTERNAL_VIEW_CONFIG.validAttributes = __INTERNAL_VIEW_CONFIG;
+const value = module_65.get("DCDPortalView", () => obj);
+const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/PortalViewNativeComponent.tsx");
 
 export default value;
-export const __INTERNAL_VIEW_CONFIG = obj;
+export { __INTERNAL_VIEW_CONFIG };

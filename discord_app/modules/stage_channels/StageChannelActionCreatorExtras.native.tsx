@@ -1,62 +1,56 @@
 // discord_app/modules/stage_channels/StageChannelActionCreatorExtras.native.tsx
-import set from "../../../_runtime/00002_set.js";
 import asyncRequireImpl from "../../../_runtime/01896_asyncRequireImpl.js";
-import ACTION_SHEET_HEIGHT_HALFDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
-import _modDef4763 from "../../actions/ModalActionCreators.tsx";
-import useIsStageVoicePanelEnabled from "StageVoicePanelExperiment.tsx";
+import ActionSheetActionCreatorsDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
+import ModalActionCreatorsDefault from "../../actions/ModalActionCreators.tsx";
+import StageVoicePanelExperiment from "StageVoicePanelExperiment.tsx";
 import showUserProfileActionSheetDefault from "../user_profile/native/showUserProfileActionSheet.tsx";
-import setIsOnStartStageScreen2 from "useIsOnStartStageScreenStore.tsx";
+import useIsOnStartStageScreenStore from "useIsOnStartStageScreenStore.tsx";
 import useStageBlockedUsersCount from "useStageBlockedUsersCount.tsx";
-import MAX_STAGE_TOPIC_LENGTH from "StageChannelsConstants.tsx";
+import StageChannelsConstants from "StageChannelsConstants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const setIsOnStartStageScreen = setIsOnStartStageScreen2.setIsOnStartStageScreen;
+const setIsOnStartStageScreen = useIsOnStartStageScreenStore.setIsOnStartStageScreen;
 ({
-  STAGE_AUDIENCE_NOTICE_SHEET_KEY: c4,
-  START_STAGE_CHANNEL_EVENT_SHEET_KEY: c5,
-  STAGE_BLOCKED_USERS_SHEET_KEY: closure_6,
-  STAGE_SETTINGS_SHEET_KEY: error,
+  STAGE_AUDIENCE_NOTICE_SHEET_KEY: closure_4,
+  START_STAGE_CHANNEL_EVENT_SHEET_KEY: hasOwnProperty,
+  STAGE_BLOCKED_USERS_SHEET_KEY: metroRequire,
+  STAGE_SETTINGS_SHEET_KEY: closure_7,
   EXPLICIT_END_STAGE_SHEET_KEY: closure_8,
-} = MAX_STAGE_TOPIC_LENGTH);
-const result = set.fileFinishedImporting("modules/stage_channels/StageChannelActionCreatorExtras.native.tsx");
+} = StageChannelsConstants);
+const result = size.fileFinishedImporting("modules/stage_channels/StageChannelActionCreatorExtras.native.tsx");
 
-export const openStageChannelSettings = function openStageChannelSettings(closure_0) {
-  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj = { channel: closure_0 };
-  obj.openLazy(asyncRequireImpl(8397, dependencyMap.paths), closure_5, obj);
+export const openStageChannelSettings = function openStageChannelSettings(channel) {
+  const obj = { channel };
+  obj.openLazy(asyncRequireImpl(8397, dependencyMap.paths), hasOwnProperty, obj);
 };
 export function openEndGuildEventConfirmationModal() {}
 export const openStageChannelAudienceNoticeModal = function openStageChannelAudienceNoticeModal(channelId) {
-  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj = { channelId };
-  obj.openLazy(asyncRequireImpl(8590, dependencyMap.paths), closure_4, obj);
+  const obj = { channelId };
+  obj.openLazy(asyncRequireImpl(8590, dependencyMap.paths), React4, obj);
 };
 export const openStageBlockedUsersSheet = function openStageBlockedUsersSheet(channel, onAccept) {
-  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj = { channel, onAccept };
-  obj.openLazy(asyncRequireImpl(8618, dependencyMap.paths), closure_6, obj);
+  const obj = { channel, onAccept };
+  obj.openLazy(asyncRequireImpl(8618, dependencyMap.paths), timestampProducer, obj);
 };
-export const openStageSettingsSheet = function openStageSettingsSheet(closure_0, closure_1) {
-  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj = { channelId: closure_0, onOpenRTCDebugOverlay: closure_1 };
-  obj.openLazy(asyncRequireImpl(8621, dependencyMap.paths), closure_7, obj);
+export const openStageSettingsSheet = function openStageSettingsSheet(channelId, onOpenRTCDebugOverlay) {
+  const obj = { channelId, onOpenRTCDebugOverlay };
+  obj.openLazy(asyncRequireImpl(8621, dependencyMap.paths), React5, obj);
 };
-export const openEndStageModal = function openEndStageModal(closure_0) {
-  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj = { channel: closure_0 };
-  obj.openLazy(asyncRequireImpl(9081, dependencyMap.paths), closure_8, obj);
+export const openEndStageModal = function openEndStageModal(channel) {
+  const obj = { channel };
+  obj.openLazy(asyncRequireImpl(9081, dependencyMap.paths), React6, obj);
 };
-export const openStageChannel = function openStageChannel(closure_0) {
-  if (closure_0.isGuildStageVoice()) {
-    let obj = useIsStageVoicePanelEnabled;
+export const openStageChannel = function openStageChannel(isGuildStageVoice) {
+  if (isGuildStageVoice.isGuildStageVoice()) {
+    let obj = StageVoicePanelExperiment;
     if (obj.isStageVoicePanelEnabled("stage_channel_action_creator_extras")) {
       let tmpResult = tmp(4767);
-      tmpResult.openGuildVoiceModal(closure_0);
+      tmpResult.openGuildVoiceModal(isGuildStageVoice);
     } else {
-      obj = { channel: null };
-      obj[0] = closure_0;
-      const obj2 = _modDef4763;
+      obj = { channel: isGuildStageVoice };
+      const obj2 = ModalActionCreatorsDefault;
       tmpResult = tmp(4767);
-      obj2.pushLazy(tmp(1896)(9466, tmp2.paths), obj, tmpResult.getVoiceChannelKey(closure_0.id));
+      obj2.pushLazy(tmp(1896)(9466, tmp2.paths), obj, tmpResult.getVoiceChannelKey(isGuildStageVoice.id));
       const tmp4 = tmp(1896)(9466, tmp2.paths);
     }
     tmp2 = dependencyMap;
@@ -70,23 +64,20 @@ export const showPlatformUserProfile = function showPlatformUserProfile(arg0) {
 };
 export const shouldShowBlockedUsers = function shouldShowBlockedUsers(id) {
   const stageBlockedUsersCount = useStageBlockedUsersCount.getStageBlockedUsersCount(id);
-  const obj = useStageBlockedUsersCount;
-  const obj2 = useStageBlockedUsersCount;
   return stageBlockedUsersCount > 0 || useStageBlockedUsersCount.getStageIgnoredUsersCount(id) > 0;
 };
-export const navigateToStage = function navigateToStage(id) {
+export const navigateToStage = function navigateToStage(id, arg1) {
   if (arg1 !== id.id) {
     setIsOnStartStageScreen(true);
   }
   if (id.isGuildStageVoice()) {
-    let obj = useIsStageVoicePanelEnabled;
+    let obj = StageVoicePanelExperiment;
     if (obj.isStageVoicePanelEnabled("stage_channel_action_creator_extras")) {
       let tmp3Result = tmp3(4767);
       tmp3Result.openGuildVoiceModal(id);
     } else {
-      obj = { channel: null };
-      obj[0] = id;
-      const obj2 = _modDef4763;
+      obj = { channel: id };
+      const obj2 = ModalActionCreatorsDefault;
       tmp3Result = tmp3(4767);
       obj2.pushLazy(tmp3(1896)(9466, tmp4.paths), obj, tmp3Result.getVoiceChannelKey(id.id));
       const tmp6 = tmp3(1896)(9466, tmp4.paths);
@@ -94,6 +85,6 @@ export const navigateToStage = function navigateToStage(id) {
     tmp4 = dependencyMap;
   }
 };
-export function showChannelChangeConfirmationAlert(channel, arg1) {
+export function showChannelChangeConfirmationAlert() {
   return false;
 }

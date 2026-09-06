@@ -1,22 +1,22 @@
 // discord_app/modules/forums/native/posts/ForumPostTitle.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import Text from "../../../../design/components/Text/native/Text.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import PlatformTypes from "../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-createCacheKey = null;
-if (PlatformTypes.isIOS()) {
-  createCacheKey = { lineHeight: 22 };
+require = fn;
+const jsx = fn(21).jsx;
+fn(4560);
+let PlatformUtils = fn(1116);
+let createStyles = null;
+if (PlatformUtils.isIOS()) {
+  createStyles = { lineHeight: 22 };
 }
-createCacheKey = { title: null };
-PlatformTypes = { marginBottom: 6 };
-createCacheKey = Object.assign(createCacheKey);
-createCacheKey[0] = PlatformTypes;
-let closure_3 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/forums/native/posts/ForumPostTitle.tsx");
+createStyles = { title: null };
+PlatformUtils = { marginBottom: 6 };
+createStyles = Object.assign(createStyles);
+createStyles.title = PlatformUtils;
+let closure_3 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPostTitle.tsx");
 
 export default function ForumPostTitle(arg0) {
   ({ title, lineClamp, ellipsizeMode, hasUnreads, onTextLayout } = arg0);
@@ -24,13 +24,13 @@ export default function ForumPostTitle(arg0) {
   if (hasUnreads) {
     str = "mobile-text-heading-primary";
   }
-  const tmp = callback();
-  return jsx(Text.Text, {
+  const tmp = closure_3();
+  return jsx(Text_Text.Text, {
     variant: "text-md/semibold",
     color: str,
     lineClamp,
     ellipsizeMode,
-    style: callback().title,
+    style: closure_3().title,
     onTextLayout,
     children: title,
   });

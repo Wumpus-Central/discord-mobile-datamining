@@ -1,26 +1,32 @@
 // discord_app/modules/premium/powerups/native/hooks/usePowerupGroupConfig.tsx
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../../../stores/GuildStore.tsx";
+import util from "../../../../../intl/index.native.tsx";
+import GlobalUtils from "../../../../../utils/GlobalUtils.tsx";
+import _modDef2428 from "../../GuildPowerups.messages.js";
+import GuildTagUtils from "../../../../guild_tag/GuildTagUtils.tsx";
+import _modDef12550 from "../../../../../../discord_assets/assets/powerups/badge-packs/group-static.png.js";
+import _modDef12551 from "../../../../../../discord_assets/assets/powerups/badge-packs/group-animated.png.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
+import GuildStore from "../../../../../stores/GuildStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/powerups/native/hooks/usePowerupGroupConfig.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/native/hooks/usePowerupGroupConfig.tsx");
 
 export default function usePowerupGroupConfig(arg0, arg1) {
-  const _require = arg0;
-  closure_1 = arg1;
-  const items = [closure_4];
-  stateFromStores = _require(stateFromStores[2]).useStateFromStores(items, () => {
-    const guild = closure_1_4.getGuild(callback);
+  _require = arg0;
+  const group = arg1;
+  const items = [GuildStore];
+  stateFromStores = require("initialize").useStateFromStores(items, () => {
+    const guild = GuildStore.getGuild(closure_0);
     let guildSupportsTagsResult = null != guild;
     if (guildSupportsTagsResult) {
-      guildSupportsTagsResult = callback(stateFromStores[3]).guildSupportsTags(guild);
-      const obj = callback(stateFromStores[3]);
+      guildSupportsTagsResult = GuildTagUtils.guildSupportsTags(guild);
     }
     return guildSupportsTagsResult;
   });
   const items1 = [arg1, stateFromStores];
-  return React.useMemo(() => {
-    if ("guildTagsBadgePacks" === lib.group) {
+  return noop.useMemo(() => {
+    if ("guildTagsBadgePacks" === group.group) {
       let obj = {
         title: null,
         description: null,
@@ -29,23 +35,21 @@ export default function usePowerupGroupConfig(arg0, arg1) {
         badge: "HermesInternal",
         forceStaticImages: "HermesInternal",
       };
-      const intl = callback(stateFromStores[4]).intl;
-      obj[0] = intl.string(lib(stateFromStores[5]).KC9HRW);
-      const intl2 = callback(stateFromStores[4]).intl;
-      obj[1] = intl2.string(lib(stateFromStores[5]).GJiSmP);
-      obj = { staticUrl: null, animatedUrl: null };
-      obj[0] = lib(stateFromStores[6]);
-      obj[1] = lib(stateFromStores[7]);
-      obj[2] = obj;
+      const intl = util.intl;
+      obj.title = intl.string(_modDef2428.KC9HRW);
+      const intl2 = util.intl;
+      obj.description = intl2.string(_modDef2428.GJiSmP);
+      obj = { staticUrl: _modDef12550, animatedUrl: _modDef12551 };
+      obj.image = obj;
       let stringResult;
       if (!stateFromStores) {
-        const intl3 = callback(stateFromStores[4]).intl;
-        stringResult = intl3.string(lib(stateFromStores[5]).lvk1Gc);
+        const intl3 = util.intl;
+        stringResult = intl3.string(_modDef2428.lvk1Gc);
       }
-      obj[3] = stringResult;
+      obj.disabledReason = stringResult;
       return obj;
     } else {
-      obj = callback(stateFromStores[8]);
+      obj = GlobalUtils;
       obj.assertNever(tmp.group);
     }
   }, items1);

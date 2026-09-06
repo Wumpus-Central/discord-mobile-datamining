@@ -1,49 +1,52 @@
 // discord_app/modules/guild_sidebar/native/useChannelNoticeRows.tsx
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
-import closure_5 from "../../guild_progress/GuildProgressStore.tsx";
-import closure_6 from "../../../stores/GuildChannelStore.tsx";
-import closure_7 from "../../../stores/GuildStore.tsx";
-import closure_8 from "../../../stores/UserStore.tsx";
-import { ChannelListChannelNoticeRow as closure_9 } from "../GuildSidebarConstants.tsx";
-import { MFALevels } from "../../../Constants.tsx";
-import ContentDismissActionType from "../../dismissible_content/DismissibleContentConstants.tsx";
+import dismissible_content from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import DismissibleContentUnsafeUtils from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
+import GuildProgressStore from "../../guild_progress/GuildProgressStore.tsx";
+import GuildChannelStore from "../../../stores/GuildChannelStore.tsx";
+import GuildStore from "../../../stores/GuildStore.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
 
-const require = arg1;
-({ ContentDismissActionType: unpackModuleId, DismissibleContentGroupName: closure_12 } = ContentDismissActionType);
-let result = require("set").fileFinishedImporting("modules/guild_sidebar/native/useChannelNoticeRows.tsx");
+require = fn;
+let closure_9 = fn(7534).ChannelListChannelNoticeRow;
+const MFALevels = fn(1074).MFALevels;
+const DismissibleContentConstants = fn(1954);
+({ ContentDismissActionType: closure_11, DismissibleContentGroupName: closure_12 } = DismissibleContentConstants);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_sidebar/native/useChannelNoticeRows.tsx");
 
 export default function useChannelNoticeRows(id) {
+  _require = id;
   id = id.id;
-  hasAlreadyLinked = id;
-  let obj = id(stateFromStores[9]);
+  let obj = require("useStateFromStores");
   let items = [guildHasLiveChannelNotice];
-  stateFromStores = obj.useStateFromStores(items, () => guildHasLiveChannelNotice.hasProgress(hasAlreadyLinked));
-  currentUser = currentUser.getCurrentUser();
+  stateFromStores = obj.useStateFromStores(items, () => GuildProgressStore.hasProgress(id));
+  const currentUser = UserStore.getCurrentUser();
   const items1 = [closure_6];
   const items2 = [currentUser, id.mfaLevel, id];
-  const stateFromStores1 = id(stateFromStores[9]).useStateFromStores(
+  const stateFromStores1 = require("useStateFromStores").useStateFromStores(
     items1,
     () => {
       let result = null != currentUser;
       if (result) {
-        result = id.mfaLevel === closure_1_10.ELEVATED;
+        result = guildId.mfaLevel === MFALevels.ELEVATED;
       }
       if (result) {
         result = !currentUser.mfaEnabled;
       }
       if (result) {
-        result = closure_6.hasElevatedPermissions(hasAlreadyLinked);
+        result = GuildChannelStore.hasElevatedPermissions(id);
       }
       return result;
     },
     items2,
   );
-  const obj2 = id(stateFromStores[9]);
-  guildHasLiveChannelNotice = id(stateFromStores[16]).useGuildHasLiveChannelNotice(id);
-  const obj3 = id(stateFromStores[16]);
-  const canShowGameClaimCoachmark = id(stateFromStores[17]).useCanShowGameClaimCoachmark(id);
-  const obj4 = id(stateFromStores[17]);
+  const obj2 = require("useStateFromStores");
+  guildHasLiveChannelNotice = require("useGuildHasLiveChannelNotice").useGuildHasLiveChannelNotice(id);
+  const obj3 = require("useGuildHasLiveChannelNotice");
+  const canShowGameClaimCoachmark = require("useGameClaimCoachmark").useCanShowGameClaimCoachmark(id);
+  const obj4 = require("useGameClaimCoachmark");
   if (canShowGameClaimCoachmark) {
     const items3 = [tmp(tmp2[14]).DismissibleContent.GAME_CLAIM_COACHMARK];
     let items4 = items3;
@@ -51,18 +54,23 @@ export default function useChannelNoticeRows(id) {
     items4 = [];
   }
   const tmp10 = currentUser(
-    id(stateFromStores[13]).useSelectedSingleUseGuildDismissibleContent(items4, id, constants.CHANNEL_NOTICES, true),
+    require("useSelectedDismissibleContent").useSelectedSingleUseGuildDismissibleContent(
+      items4,
+      id,
+      constants2.CHANNEL_NOTICES,
+      true,
+    ),
     2,
   );
   closure_6 = tmp11;
-  hasAlreadyLinked = undefined;
-  let tmpResult = tmp(tmp2[9]);
+  closure_129_0 = id;
+  tmp(tmp2[9]);
   const items5 = [closure_7];
-  tmpResult = tmp(tmp2[10]);
-  const tmp12 = hasAlreadyLinked(stateFromStores[11])(
+  const tmpResult = tmp(tmp2[10]);
+  const tmp12 = id(stateFromStores[11])(
     tmpResult.useApplication(
       tmpResult.useStateFromStoresArray(items5, () => {
-        guild = guild.getGuild(id);
+        const guild = GuildStore.getGuild(closure_0);
         let gameApplicationIds;
         if (guild != null) {
           gameApplicationIds = guild.gameApplicationIds;
@@ -75,11 +83,12 @@ export default function useChannelNoticeRows(id) {
     ).data,
   );
   ({ fetched, hasAlreadyLinked } = tmp12);
+  closure_129_1 = hasAlreadyLinked;
   ({ connectionApp, canStartAuthorization, startAuthorization } = tmp12);
-  const obj5 = id(stateFromStores[13]);
-  const tmp8 = constants;
+  const obj5 = require("useSelectedDismissibleContent");
+  const tmp8 = constants2;
   const tmp9 = currentUser;
-  const defaultAuthorizationNotifiers = id(stateFromStores[12]).useDefaultAuthorizationNotifiers(
+  const defaultAuthorizationNotifiers = require("useDefaultAuthorizationNotifiers").useDefaultAuthorizationNotifiers(
     startAuthorization,
     hasAlreadyLinked,
   );
@@ -101,58 +110,60 @@ export default function useChannelNoticeRows(id) {
   if (fetched) {
     fetched = null != connectionApp.applicationAccountLinkBenefitConfig.reward_image;
   }
-  const tmpResult1 = id(stateFromStores[12]);
+  const tmpResult1 = require("useDefaultAuthorizationNotifiers");
   if (fetched) {
     const items6 = [tmp(tmp2[14]).DismissibleContent.MOBILE_ACCOUNT_LINKING_BANNER];
     let items7 = items6;
   } else {
     items7 = [];
   }
-  const tmpResult2 = id(stateFromStores[13]);
+  const tmpResult2 = require("useSelectedDismissibleContent");
   const items8 = [id, hasAlreadyLinked];
   [tmp15, tmp16] = tmp9(
-    id(stateFromStores[13]).useSelectedSingleUseGuildDismissibleContent(items7, id, tmp8.CHANNEL_NOTICES, true),
+    require("useSelectedDismissibleContent").useSelectedSingleUseGuildDismissibleContent(
+      items7,
+      id,
+      tmp8.CHANNEL_NOTICES,
+      true,
+    ),
     2,
   );
   const effect = stateFromStores1.useEffect(() => {
-    if (hasAlreadyLinked) {
-      let obj = id(stateFromStores[15]);
-      obj = { dismissAction: null, guildId: null, groupName: null };
-      obj[0] = closure_1_11.INDIRECT_ACTION;
-      obj[1] = id;
-      obj[2] = closure_1_12.CHANNEL_NOTICES;
+    if (id) {
+      const obj = { dismissAction: constants.INDIRECT_ACTION, guildId, groupName: constants2.CHANNEL_NOTICES };
       const result = obj.UNSAFE_markSingleUseGuildDismissibleContentAsDismissed(
-        id(stateFromStores[14]).DismissibleContent.MOBILE_ACCOUNT_LINKING_BANNER,
-        id,
+        dismissible_content.DismissibleContent.MOBILE_ACCOUNT_LINKING_BANNER,
+        guildId,
         obj,
       );
     }
   }, items8);
   closure_7 = tmp18;
   obj = {
-    rows: stateFromStores1.useMemo(() => {
-      const items = [closure_1_9.SPACER];
-      if (closure_6) {
-        items.push(tmp.GAME_CLAIM);
-      }
-      if (closure_7) {
-        items.push(tmp.APPLICATION_ACCOUNT_LINK);
-      }
-      if (stateFromStores) {
-        items.push(tmp.GUILD_PROGRESS);
-      } else if (stateFromStores1) {
-        items.push(tmp.MFA_WARNING);
-      }
-      if (guildHasLiveChannelNotice) {
-        items.push(tmp.LIVE_CHANNEL_NOTICE);
-      }
-      return items;
-    }, items9),
+    rows: null,
     gameClaimMarkAsDismissed: tmp10[1],
     applicationAccountLinkMarkAsDismissed: tmp16,
     startApplicationAccountLinkAuthorization: defaultAuthorizationNotifiers,
     accountLinkApplication: connectionApp,
   };
-  items9 = [stateFromStores, stateFromStores1, guildHasLiveChannelNotice, null != tmp10[0], null != tmp15];
+  const items9 = [stateFromStores, stateFromStores1, guildHasLiveChannelNotice, null != tmp10[0], null != tmp15];
+  obj.rows = stateFromStores1.useMemo(() => {
+    const items = [constants.SPACER];
+    if (closure_6) {
+      items.push(tmp.GAME_CLAIM);
+    }
+    if (closure_7) {
+      items.push(tmp.APPLICATION_ACCOUNT_LINK);
+    }
+    if (stateFromStores) {
+      items.push(tmp.GUILD_PROGRESS);
+    } else if (stateFromStores1) {
+      items.push(tmp.MFA_WARNING);
+    }
+    if (guildHasLiveChannelNotice) {
+      items.push(tmp.LIVE_CHANNEL_NOTICE);
+    }
+    return items;
+  }, items9);
   return obj;
 }

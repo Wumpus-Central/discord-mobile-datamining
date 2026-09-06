@@ -1,8 +1,12 @@
 // discord_app/lib/LifecycleManager.tsx
-import set from "../../_runtime/00002_set.js";
+import size from "../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("lib/LifecycleManager.tsx");
-class LifecycleManager {}
+const result = size.fileFinishedImporting("lib/LifecycleManager.tsx");
+class LifecycleManager {
+  constructor() {
+    return Object.assign({ isInitialized: false });
+  }
+}
 const prototype = LifecycleManager.prototype;
 prototype["initialize"] = function initialize() {
   const self = this;

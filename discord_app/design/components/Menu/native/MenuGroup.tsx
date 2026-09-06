@@ -1,49 +1,47 @@
 // discord_app/design/components/Menu/native/MenuGroup.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let c0 = importAllResult;
+get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_1 } = get_ActivityIndicator);
-({ jsx: obj1, jsxs: c3 } = jsxProd);
+const jsxProd = fn(21);
+({ jsx: c2, jsxs: c3 } = jsxProd);
+const createStyles = fn(4560);
 let obj = { divider: null };
 obj = {
   marginLeft: 0,
   height: StyleSheet.hairlineWidth,
-  backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+  backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
   marginTop: -1 * StyleSheet.hairlineWidth,
 };
-obj[0] = obj;
-let closure_4 = createCacheKey.createStyles(obj);
-const forwardRefResult = importAllResult.forwardRef((arg0, arg1) => {
+obj.divider = obj;
+let closure_4 = createStyles.createStyles(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Menu/native/MenuGroup.tsx");
+
+export const MenuGroup = noop.forwardRef((arg0, ref) => {
+  noop = ref;
   ({ style, children } = arg0);
   let obj = { style, children: null };
-  let tmp4 = null === arg1;
+  let tmp4 = null === ref;
   if (tmp4) {
-    obj = { style: null };
-    obj[0] = tmp.divider;
-    tmp4 = callback(tmp3, obj);
+    obj = { style: tmp.divider };
+    tmp4 = closure_2(tmp3, obj);
   }
   const items = [tmp4];
-  const Children = arg1.Children;
-  items[1] = Children.map(children, (icon) => {
+  const Children = noop.Children;
+  items[1] = Children.map(children, (icon, arg1) => {
     let cloneElementResult = icon;
     if (0 === arg1) {
-      let obj = validElement;
+      let obj = noop;
       cloneElementResult = icon;
-      if (validElement.isValidElement(icon)) {
-        obj = { ref: null };
-        obj[0] = validElement;
+      if (noop.isValidElement(icon)) {
+        obj = { ref };
         cloneElementResult = obj.cloneElement(icon, obj);
       }
     }
     return cloneElementResult;
   });
-  obj[1] = items;
+  obj.children = items;
   return closure_3(closure_1, obj);
 });
-const result = require("set").fileFinishedImporting("design/components/Menu/native/MenuGroup.tsx");
-
-export const MenuGroup = forwardRefResult;

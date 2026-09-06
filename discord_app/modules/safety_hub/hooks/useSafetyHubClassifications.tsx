@@ -1,46 +1,40 @@
 // discord_app/modules/safety_hub/hooks/useSafetyHubClassifications.tsx
+import SnowflakeUtilsDefault from "../../../utils/SnowflakeUtils.tsx";
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import closure_4 from "../../../../_runtime/00019_noop.js";
-import closure_5 from "../SafetyHubStore.tsx";
-import { ViolationType } from "../SafetyHubConstants.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import SafetyHubActionCreatorsAll from "../SafetyHubActionCreators.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import SafetyHubStore from "../SafetyHubStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/safety_hub/hooks/useSafetyHubClassifications.tsx");
+require = fn;
+const ViolationType = fn(8419).ViolationType;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_hub/hooks/useSafetyHubClassifications.tsx");
 
 export const useSafetyHubClassifications = function useSafetyHubClassifications() {
-  const items = [closure_5];
+  const items = [SafetyHubStore];
   const stateFromStoresArray = initialize.useStateFromStoresArray(items, () => classifications.getClassifications());
   return stateFromStoresArray.sort((id, id2) => {
-    const obj = callback(11);
-    const extractTimestampResult = callback(11).extractTimestamp(id2.id);
-    return extractTimestampResult - callback(11).extractTimestamp(id.id);
+    const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(id2.id);
+    return extractTimestampResult - SnowflakeUtilsDefault.extractTimestamp(id.id);
   });
 };
 export const useSafetyHubClassification = function useSafetyHubClassification(classificationId) {
-  const _require = classificationId;
-  let obj = initialize;
-  const items = [closure_5];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getClassification(closure_0));
-  const items1 = [closure_5];
-  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
-    items1,
-    () => closure_1_5.getClassificationRequestState(closure_0),
+  _require = classificationId;
+  let obj = require("initialize");
+  const items = [SafetyHubStore];
+  const stateFromStores = obj.useStateFromStores(items, () => SafetyHubStore.getClassification(closure_0));
+  const items1 = [SafetyHubStore];
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () =>
+    SafetyHubStore.getClassificationRequestState(closure_0),
   );
-  const obj2 = initialize;
+  const obj2 = require("initialize");
   let tmp = _require;
-  const items2 = [closure_5];
-  const stateFromStores2 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
-    items2,
-    () => store.getIsDsaEligible(),
-  );
-  const obj3 = initialize;
-  const items3 = [closure_5];
-  let stateFromStores3 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
-    items3,
-    () => store.getIsAppealEligible(),
-  );
-  const obj4 = initialize;
+  const items2 = [SafetyHubStore];
+  const stateFromStores2 = require("initialize").useStateFromStores(items2, () => SafetyHubStore.getIsDsaEligible());
+  const obj3 = require("initialize");
+  const items3 = [SafetyHubStore];
+  let stateFromStores3 = require("initialize").useStateFromStores(items3, () => SafetyHubStore.getIsAppealEligible());
+  const obj4 = require("initialize");
   if (obj5.isGuildClassification(stateFromStores)) {
     const guild_metadata = stateFromStores.guild_metadata;
     let member_type;
@@ -54,68 +48,60 @@ export const useSafetyHubClassification = function useSafetyHubClassification(cl
     }
   } else {
     const items4 = [classificationId, stateFromStores, stateFromStores1];
-    const effect = React.useEffect(() => {
+    const effect = noop.useEffect(() => {
       let tmp = undefined === stateFromStores;
       if (tmp) {
         tmp = null == stateFromStores1;
       }
       if (tmp) {
-        const safetyHubDataForClassification = stateFromStores1(closure_1_3[7]).getSafetyHubDataForClassification(
-          closure_0,
-        );
-        const obj = stateFromStores1(closure_1_3[7]);
+        const safetyHubDataForClassification = SafetyHubActionCreatorsAll.getSafetyHubDataForClassification(closure_0);
       }
     }, items4);
     obj = {
-      classification: null,
-      classificationRequestState: null,
-      isDsaEligible: null,
+      classification: stateFromStores,
+      classificationRequestState: stateFromStores1,
+      isDsaEligible: stateFromStores2,
       isAppealEligible: null,
       violationType: null,
     };
-    obj[0] = stateFromStores;
-    obj[1] = stateFromStores1;
-    obj[2] = stateFromStores2;
     if (stateFromStores3) {
       stateFromStores3 = null != stateFromStores;
     }
     if (stateFromStores3) {
       stateFromStores3 = null == stateFromStores.appeal_status;
     }
-    obj[3] = stateFromStores3;
-    obj[4] = ViolationType.USER;
+    obj.isAppealEligible = stateFromStores3;
+    obj.violationType = ViolationType.USER;
     return obj;
   }
 };
 export const useActiveSafetyHubClassifications = function useActiveSafetyHubClassifications() {
-  const items = [closure_5];
-  const stateFromStoresArray = date(504).useStateFromStoresArray(items, () => classifications.getClassifications());
+  const items = [SafetyHubStore];
+  const stateFromStoresArray = initialize.useStateFromStoresArray(items, () => classifications.getClassifications());
   const sorted = stateFromStoresArray.sort((id, id2) => {
-    const obj = callback(11);
-    const extractTimestampResult = callback(11).extractTimestamp(id2.id);
-    return extractTimestampResult - callback(11).extractTimestamp(id.id);
+    const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(id2.id);
+    return extractTimestampResult - SnowflakeUtilsDefault.extractTimestamp(id.id);
   });
-  date = new Date();
+  let date = new Date();
   return sorted.filter((max_expiration_time) => {
     date = new Date(max_expiration_time.max_expiration_time);
     return date > date;
   });
 };
 export const useExpiredSafetyHubClassifications = function useExpiredSafetyHubClassifications() {
-  const items = [closure_5];
-  const stateFromStoresArray = date(504).useStateFromStoresArray(items, () => classifications.getClassifications());
+  const items = [SafetyHubStore];
+  const stateFromStoresArray = initialize.useStateFromStoresArray(items, () => classifications.getClassifications());
   const sorted = stateFromStoresArray.sort((id, id2) => {
-    const obj = callback(11);
-    const extractTimestampResult = callback(11).extractTimestamp(id2.id);
-    return extractTimestampResult - callback(11).extractTimestamp(id.id);
+    const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(id2.id);
+    return extractTimestampResult - SnowflakeUtilsDefault.extractTimestamp(id.id);
   });
-  date = new Date();
+  let date = new Date();
   return sorted.filter((max_expiration_time) => {
     date = new Date(max_expiration_time.max_expiration_time);
     return date <= date;
   });
 };
 export const useSafetyHubAppealSignal = function useSafetyHubAppealSignal() {
-  const items = [closure_5];
+  const items = [SafetyHubStore];
   return initialize.useStateFromStores(items, () => appealSignal.getAppealSignal());
 };

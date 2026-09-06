@@ -1,13 +1,13 @@
 // discord_app/modules/app_launcher/native/base_components/UsernameText.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import Text from "../../../../design/components/Text/native/Text.tsx";
-import getNickname from "../../../../utils/NicknameUtils.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import NicknameUtils from "../../../../utils/NicknameUtils.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-({ jsxs: obj1, Fragment: c3, jsx: c4 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/base_components/UsernameText.tsx");
+require = fn;
+const jsxProd = fn(21);
+({ jsxs: c2, Fragment: c3, jsx: closure_4 } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/base_components/UsernameText.tsx");
 
 export default function UsernameText(color) {
   ({ user, variant } = color);
@@ -19,7 +19,7 @@ export default function UsernameText(color) {
     str = "text-default";
   }
   let obj = { variant, color: str };
-  obj1 = getNickname;
+  let obj1 = NicknameUtils;
   const name = obj1.getName(color.guildId, null, user);
   if (user.hasUniqueUsername()) {
     str = user.toString();
@@ -31,9 +31,9 @@ export default function UsernameText(color) {
     obj.color = "text-muted";
     const items1 = ["#", user.discriminator];
     obj.children = items1;
-    items[1] = callback(tmp(4556).Text, obj);
-    obj[0] = items;
-    str = callback(closure_3, obj);
+    items[1] = React2(tmp(4556).Text, obj);
+    obj.children = items;
+    str = React2(React3, obj);
   }
   obj1 = {};
   const merged1 = Object.assign(obj);
@@ -46,10 +46,10 @@ export default function UsernameText(color) {
     obj3.color = "text-muted";
     const items3 = ["(", str, ")"];
     obj3.children = items3;
-    items2[2] = callback(tmp(4556).Text, obj3);
-    obj2[0] = items2;
-    tmp13 = callback(closure_3, obj2);
+    items2[2] = React2(tmp(4556).Text, obj3);
+    obj2.children = items2;
+    tmp13 = React2(React3, obj2);
   }
   obj1.children = tmp13;
-  return closure_4(Text.Text, obj1);
+  return React4(Text_Text.Text, obj1);
 }

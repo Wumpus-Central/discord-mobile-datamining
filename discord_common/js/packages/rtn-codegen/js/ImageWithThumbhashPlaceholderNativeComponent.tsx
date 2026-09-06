@@ -1,15 +1,10 @@
 // discord_common/js/packages/rtn-codegen/js/ImageWithThumbhashPlaceholderNativeComponent.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import setRuntimeConfigProvider from "../../../../../_runtime/00065_setRuntimeConfigProvider.js";
+import 00065__ from "../../../../../_runtime/metro/00065__.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const obj = {
-  uiViewClassName: "DCDImageWithThumbhashPlaceholderView",
-  validAttributes: { uri: true, placeholder: true, placeholderVersion: true, alt: true },
-};
-const value = setRuntimeConfigProvider.get("DCDImageWithThumbhashPlaceholderView", () => obj);
-const result = set.fileFinishedImporting(
-  "../discord_common/js/packages/rtn-codegen/js/ImageWithThumbhashPlaceholderNativeComponent.tsx",
-);
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "DCDImageWithThumbhashPlaceholderView", validAttributes: { uri: true, placeholder: true, placeholderVersion: true, alt: true } };
+const value = module_65.get("DCDImageWithThumbhashPlaceholderView", () => obj);
+const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/ImageWithThumbhashPlaceholderNativeComponent.tsx");
 
 export default value;
-export const __INTERNAL_VIEW_CONFIG = obj;
+export { __INTERNAL_VIEW_CONFIG };

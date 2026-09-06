@@ -1,11 +1,11 @@
 // discord_app/modules/activity_status/shouldShowActivityStatus.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
-import sum from "../../../discord_common/js/shared/Constants.tsx";
+import Constants from "../../Constants.tsx";
+import Constants2 from "../../../discord_common/js/shared/Constants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const ActivityTypes = ME.ActivityTypes;
-const StatusTypes = sum.StatusTypes;
-const result = set.fileFinishedImporting("modules/activity_status/shouldShowActivityStatus.tsx");
+const ActivityTypes = Constants.ActivityTypes;
+const StatusTypes = Constants2.StatusTypes;
+const result = size.fileFinishedImporting("modules/activity_status/shouldShowActivityStatus.tsx");
 
 export default function shouldShowActivityStatus(arg0) {
   ({ activities, status } = arg0);

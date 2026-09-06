@@ -1,31 +1,33 @@
 // discord_app/modules/react_asset/native/reactAssetProvider.tsx
-import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeReactAssetModule.tsx";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import set from "../../../utils/PlatformUtils.tsx";
+import NativeReactAssetModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeReactAssetModule.tsx";
+import native_required_assets from "native_required_assets.tsx";
+import get_ActivityIndicator from "../../../../_runtime/metro/00017__.js";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-({ Image: obj1, NativeModules } = get_ActivityIndicator);
-if (set.isAndroid()) {
-  let NativeReactAssetModule = enforcingDefault;
+({ Image: c2, NativeModules } = get_ActivityIndicator);
+if (PlatformUtils.isAndroid()) {
+  let NativeReactAssetModule = NativeReactAssetModuleDefault;
 } else {
   NativeReactAssetModule = NativeModules.NativeReactAssetModule;
 }
-const result = set.fileFinishedImporting("modules/react_asset/native/reactAssetProvider.tsx");
+const result = size.fileFinishedImporting("modules/react_asset/native/reactAssetProvider.tsx");
 
 export default function reactAssetProvider() {
   return new Promise((arg0) => {
     closure_0 = arg0;
     closure_3.keysRequest((arr) => {
-      const NATIVE_REQUIRED_ASSETS = callback(closure_1_1[3]).NATIVE_REQUIRED_ASSETS;
-      closure_1_3.valuesResult(
-        arr.map((arg0) => {
+      const NATIVE_REQUIRED_ASSETS = native_required_assets.NATIVE_REQUIRED_ASSETS;
+      NativeReactAssetModule.valuesResult(
+        arr.map((item) => {
           let str = "";
-          if (null != NATIVE_REQUIRED_ASSETS[arg0]) {
-            str = closure_1_2.resolveAssetSource(tmp[arg0]).uri;
+          if (null != NATIVE_REQUIRED_ASSETS[item]) {
+            str = closure_2_2.resolveAssetSource(tmp[item]).uri;
           }
           return str;
         }),
       );
-      NATIVE_REQUIRED_ASSETS(true);
+      closure_0(true);
     });
   });
 }

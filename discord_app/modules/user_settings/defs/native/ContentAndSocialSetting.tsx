@@ -1,27 +1,24 @@
 // discord_app/modules/user_settings/defs/native/ContentAndSocialSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import ME from "../../../../Constants.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
+import Constants from "../../../../Constants.tsx";
+import util from "../../../../intl/index.native.tsx";
 import FriendsIcon from "../../../../design/components/Icon/native/redesign/generated/FriendsIcon.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
-import { ContentAndSocialSettings } from "../../content_and_social/native/ContentAndSocialScreen.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["+o1pDZ"]);
+    const intl = util.intl;
+    return intl.string(util.t["+o1pDZ"]);
   },
   parent: null,
   IconComponent: FriendsIcon.FriendsIcon,
-  screen: obj,
-};
-obj = {
-  route: ME.UserSettingsSections.CONTENT_AND_SOCIAL,
-  getComponent() {
-    return ContentAndSocialSettings /* ContentAndSocialSettings */.default;
+  screen: {
+    route: Constants.UserSettingsSections.CONTENT_AND_SOCIAL,
+    getComponent() {
+      return require("ContentAndSocialScreen").default;
+    },
   },
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/ContentAndSocialSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/ContentAndSocialSetting.tsx");
 
 export default route;

@@ -1,11 +1,10 @@
 // discord_app/modules/errors/av_errors/AVError.tsx
-import timestampDefault from "../../debug/Logger.tsx";
-import closure_3 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import LoggerDefault from "../../debug/Logger.tsx";
+import DispatcherDefault from "../../../Dispatcher.tsx";
+import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 
-let mapped = importDefault;
-let closure_1 = dependencyMap;
 let closure_2 = ["type"];
-let closure_4 = new timestampDefault("AVError");
+const logger = new LoggerDefault("AVError");
 let obj = {
   STREAM_FAILED_TO_START: "stream-failed-to-start",
   NO_INPUT_DEVICES: "no-input-devices",
@@ -60,10 +59,10 @@ const obj1 = {
   [obj.SCREENSHARE_OS_ERROR]: obj24,
   [obj.DEBUG_LOG_UPLOAD_FAILED]: obj25,
 };
-mapped = undefined;
-closure_1 = undefined;
+let closure_129_1;
 const values = Object.values(obj1);
-mapped = values.map((errorCode) => errorCode.errorCode);
+const mapped = values.map((errorCode) => errorCode.errorCode);
+let closure_129_0 = mapped;
 obj10 = { errorCode: 2006, severity: obj.Warning, category: obj.Video, isErrorOutbound: true };
 obj11 = { errorCode: 2007, severity: obj.Warning, category: obj.Video, isErrorOutbound: false };
 obj12 = { errorCode: 2008, severity: obj.Warning, category: obj.Video, isErrorOutbound: false };
@@ -88,17 +87,17 @@ obj6 = { errorCode: 2002, severity: obj.Warning, category: obj.Video, isErrorOut
 obj7 = { errorCode: 2003, severity: obj.Warning, category: obj.Video, isErrorOutbound: false };
 obj8 = { errorCode: 2004, severity: obj.Warning, category: obj.Video, isErrorOutbound: true };
 obj9 = { errorCode: 2005, severity: obj.Warning, category: obj.Video, isErrorOutbound: true };
-const tmp2 = new timestampDefault("AVError");
+const tmp2 = new LoggerDefault("AVError");
 if (mapped.length !== set.size) {
-  closure_1 = mapped.filter((arg0, arg1) => mapped.indexOf(arg0) !== arg1);
+  closure_129_1 = mapped.filter((item, index) => importDefault.indexOf(item) !== index);
   const _Object = Object;
   const entries = Object.entries(obj1);
-  const found = entries.filter((arg0) => {
-    [, tmp] = arg0;
-    return closure_1.includes(tmp.errorCode);
+  const found = entries.filter((item) => {
+    [, tmp] = item;
+    return dependencyMap.includes(tmp.errorCode);
   });
-  const mapped1 = found.map((arg0) => {
-    [tmp, tmp2] = arg0;
+  const mapped1 = found.map((item) => {
+    [tmp, tmp2] = item;
     return "" + tmp + ": " + tmp2.errorCode;
   });
   const _Error = Error;
@@ -106,7 +105,7 @@ if (mapped.length !== set.size) {
   const error = new Error("Duplicate AV error codes found:\n" + mapped1.join("\n"));
   throw error;
 } else {
-  const result = require("set").fileFinishedImporting("modules/errors/av_errors/AVError.tsx");
+  const result = fn(2).fileFinishedImporting("modules/errors/av_errors/AVError.tsx");
   exports.AVError = obj;
   exports.AVErrorCategory = obj;
   exports.AVErrorSeverity = obj;
@@ -135,9 +134,8 @@ if (mapped.length !== set.size) {
   };
   exports.reportAVError = function reportAVError(context) {
     const type = context.type;
-    logger.error("AV error reported: " + type + " " + JSON.stringify(callback(context, closure_2)));
-    let obj = mapped(closure_1[2]);
-    obj = {
+    logger.error("AV error reported: " + type + " " + JSON.stringify(_objectWithoutProperties(context, closure_2)));
+    const obj = {
       type: "REPORT_AV_ERROR",
       error: type,
       errorCode: tmp2.errorCode,

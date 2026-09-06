@@ -1,29 +1,30 @@
 // discord_app/modules/user_settings/defs/native/ScanQrCodeSetting.tsx
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import { NativePermissionTypes } from "../../../native_permissions/NativePermissionConstants.tsx";
-import apply from "../../../../../_runtime/00012_apply.js";
-import importDefaultResult from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import util from "../../../../intl/index.native.tsx";
+import MetaQuestUtils from "../../../device/MetaQuestUtils.android.tsx";
+import NativePermissionUtilsDefault from "../../../native_permissions/NativePermissionUtils.tsx";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
-require = arg1;
+require = fn;
+const NativePermissionTypes = fn(4770).NativePermissionTypes;
+let apply = fn(12);
+const SettingBuilders = fn(11468);
 apply = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.RC0kJz);
+    const intl = util.intl;
+    return intl.string(util.t.RC0kJz);
   },
   parent: null,
-  IconComponent: require("QrCodeIcon").QrCodeIcon,
+  IconComponent: fn(14882).QrCodeIcon,
   onPress: apply.debounce(
-    importDefaultResult(function* () {
+    asyncGeneratorStep(async (arg0, value) => {
       if (c3 === 2) {
         c3 = 3;
-        HermesBuiltin.throwTypeError();
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp6 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          let obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
@@ -31,57 +32,54 @@ apply = {
       } else {
         try {
           c3 = 2;
-          if (0 === v0) {
+          if (0 === c1) {
             if (arg0 === 1) {
               c3 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj = { value, done: true };
               return obj;
             } else {
-              const callback = tmp3;
-              let paths = 1;
-              let requestPermission = c3;
+              closure_0 = tmp3;
+              c2 = 1;
+              let requestPermission = NativePermissionTypes;
               if (obj3.isMetaQuest()) {
                 let CAMERA = requestPermission.HEADSET_CAMERA;
               } else {
                 CAMERA = requestPermission.CAMERA;
               }
-              obj3 = closure_1_0(paths[3]);
-              requestPermission = v0(paths[4]).requestPermission;
+              obj3 = MetaQuestUtils;
+              requestPermission = NativePermissionUtilsDefault.requestPermission;
               const permission = requestPermission(CAMERA);
-              v0 = 2;
+              c1 = 2;
               c3 = 1;
-              const tmp20 = v0(paths[4]);
             }
           } else {
             if (1 === tmp7) {
-              paths = 0;
+              c2 = 0;
               c3 = 3;
             } else if (arg0 === 1) {
               c3 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 !== 2) {
-              if (arg1) {
-                obj = v0(paths[5]);
-                obj.pushLazy(callback(paths[7])(paths[6], paths.paths));
+              if (value) {
+                obj = closure_128_1(closure_128_2[5]);
+                obj.pushLazy(closure_128_0(closure_128_2[7])(closure_128_2[6], closure_128_2.paths));
               }
-              paths = 0;
+              c2 = 0;
             }
-            paths = 0;
+            c2 = 0;
             c3 = 3;
-            obj1 = { value: null, done: true };
-            obj1[0] = arg1;
+            const obj1 = { value, done: true };
             return obj1;
           }
         } catch (tmp22) {
-          if (tmp4 === paths) {
+          if (tmp4 === c2) {
             c3 = tmp2;
             throw tmp22;
           } else {
-            v0 = tmp;
+            c1 = tmp;
           }
         }
       }
@@ -91,83 +89,8 @@ apply = {
   ),
   withArrow: true,
 };
-apply = createToggle.createPressable(apply);
-const debounceResult = apply.debounce(
-  importDefaultResult(function* () {
-    if (c3 === 2) {
-      c3 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c3 = 2;
-        if (0 === v0) {
-          if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            const callback = tmp3;
-            let paths = 1;
-            let requestPermission = c3;
-            if (obj3.isMetaQuest()) {
-              let CAMERA = requestPermission.HEADSET_CAMERA;
-            } else {
-              CAMERA = requestPermission.CAMERA;
-            }
-            obj3 = closure_1_0(paths[3]);
-            requestPermission = v0(paths[4]).requestPermission;
-            const permission = requestPermission(CAMERA);
-            v0 = 2;
-            c3 = 1;
-            const tmp20 = v0(paths[4]);
-          }
-        } else {
-          if (1 === tmp7) {
-            paths = 0;
-            c3 = 3;
-          } else if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 !== 2) {
-            if (arg1) {
-              obj = v0(paths[5]);
-              obj.pushLazy(callback(paths[7])(paths[6], paths.paths));
-            }
-            paths = 0;
-          }
-          paths = 0;
-          c3 = 3;
-          obj1 = { value: null, done: true };
-          obj1[0] = arg1;
-          return obj1;
-        }
-      } catch (tmp22) {
-        if (tmp4 === paths) {
-          c3 = tmp2;
-          throw tmp22;
-        } else {
-          v0 = tmp;
-        }
-      }
-    }
-  }),
-  1000,
-  { leading: true, trailing: false },
-);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ScanQrCodeSetting.tsx");
+apply = SettingBuilders.createPressable(apply);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/ScanQrCodeSetting.tsx");
 
 export default apply;

@@ -1,15 +1,13 @@
 // discord_app/modules/guild/native/GuildBadge.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import Button from "../../../design/void/native.tsx";
-import fromGuildPropertiesWithAdditionalFields from "../../../utils/GuildRecordUtils.tsx";
-import registerAssetDefault from "../../../../_runtime/05591_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/05592_registerAsset.js";
-import registerAssetDefault3 from "../../../../_runtime/05593_registerAsset.js";
-import registerAssetDefault4 from "../../../../_runtime/05594_registerAsset.js";
-import { GuildFeatures } from "../../../Constants.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import native from "../../../design/void/native.tsx";
+import GuildRecordUtils from "../../../utils/GuildRecordUtils.tsx";
+import _modDef5591 from "../../../../_runtime/metro/05591__.js";
+import _modDef5592 from "../../../../_runtime/metro/05592__.js";
+import _modDef5593 from "../../../../_runtime/metro/05593__.js";
+import _modDef5594 from "../../../../_runtime/metro/05594__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+require = fn;
 function getGuildBadgeSource(guild, flag) {
   let has = guild;
   let NONE = obj.NONE;
@@ -41,11 +39,11 @@ function getGuildBadgeSource(guild, flag) {
             hasItem = Boolean(hasItem1);
           }
         }
-        obj2 = fromGuildPropertiesWithAdditionalFields;
+        obj2 = GuildRecordUtils;
       }
     }
   } else {
-    obj = fromGuildPropertiesWithAdditionalFields;
+    obj = GuildRecordUtils;
     if (obj.isGuildRecord(has)) {
       const features3 = has.features;
       let hasItem2 = features3.has(VERIFIED);
@@ -77,7 +75,7 @@ class GuildBadge {
       MEDIUM = GuildBadge.Sizes.MEDIUM;
     }
     tmp2 = null;
-    merged = Object.assign(global, Object.create(null));
+    merged = Object.assign(global, Object.assign({ guild: 0, monocolored: 0, size: 0 }));
     tmp4 = getGuildBadgeSource(global.guild, flag);
     if (null != tmp4) {
       tmp5 = jsx;
@@ -89,12 +87,13 @@ class GuildBadge {
       merged1 = Object.assign(merged);
       obj.size = MEDIUM;
       obj.source = tmp4;
-      tmp2 = jsx(require("Button").Icon, obj);
+      tmp2 = jsx(closure_0(closure_1[8]).Icon, obj);
     }
     return tmp2;
   }
 }
-noopAll;
+const GuildFeatures = fn(1074).GuildFeatures;
+const jsx = fn(21).jsx;
 let obj = {
   PARTNERED: 0,
   [0]: "PARTNERED",
@@ -108,15 +107,16 @@ let obj = {
   [4]: "NONE",
 };
 obj = {
-  [VERIFIED]: registerAssetDefault,
-  [PARTNERED]: registerAssetDefault2,
-  [VERIFIED_BLACK]: registerAssetDefault3,
-  [PARTNERED_BLACK]: registerAssetDefault4,
+  [VERIFIED]: _modDef5591,
+  [PARTNERED]: _modDef5592,
+  [VERIFIED_BLACK]: _modDef5593,
+  [PARTNERED_BLACK]: _modDef5594,
   [obj.NONE]: null,
 };
 ({ VERIFIED, PARTNERED, VERIFIED_BLACK, PARTNERED_BLACK } = obj);
-GuildBadge.Sizes = require("Button").Icon.Sizes;
-const result = require("set").fileFinishedImporting("modules/guild/native/GuildBadge.tsx");
+GuildBadge.Sizes = fn(1178).Icon.Sizes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild/native/GuildBadge.tsx");
 
 export default GuildBadge;
 export { getGuildBadgeSource };

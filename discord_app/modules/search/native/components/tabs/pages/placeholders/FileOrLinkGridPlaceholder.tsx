@@ -1,33 +1,39 @@
 // discord_app/modules/search/native/components/tabs/pages/placeholders/FileOrLinkGridPlaceholder.tsx
-import _modDef4296 from "../../../../../../reanimated/ReanimatedRexport.tsx";
-import closure_3 from "../../../../../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../../../../../_runtime/react/00021_jsxProd.js";
+import ReanimatedRexportDefault from "../../../../../../reanimated/ReanimatedRexport.tsx";
+import useFontScale from "../../../../../../screen/native/useFontScale.tsx";
+import usePlaceholderStyles from "../../../../hooks/usePlaceholderStyles.tsx";
+import SearchListCard from "../../../list/SearchListCard.tsx";
+import noop from "../../../../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
+require = fn;
+const jsx = fn(21).jsx;
+let size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/search/native/components/tabs/pages/placeholders/FileOrLinkGridPlaceholder.tsx",
 );
 
 export default function FileOrLinkGridPlaceholderItem(imageStyle) {
   imageStyle = imageStyle.imageStyle;
-  let width;
-  importDefault = undefined;
-  let obj = width(16646);
+  let obj = usePlaceholderStyles;
   const placeholderAnimatedStyle = obj.usePlaceholderAnimatedStyle(true);
-  width = imageStyle.width;
-  const sum = imageStyle.height + 108 * width(4982).useFontScale();
-  importDefault = sum;
+  const width = imageStyle.width;
+  const sum = imageStyle.height + 108 * useFontScale.useFontScale();
+  c1 = sum;
   const items = [width, sum];
-  const memo = React.useMemo(() => ({ width, height: c1 }), items);
+  const memo = noop.useMemo(() => {
+    const size = { width, height };
+    return size;
+  }, items);
   obj = {
-    style: items1,
+    style: null,
     pointerEvents: "none",
-    children: jsx(width(16667).SearchListCardContainer, { containerStyle: memo }),
+    children: jsx(SearchListCard.SearchListCardContainer, { containerStyle: memo }),
   };
-  items1 = [imageStyle.containerStyle, placeholderAnimatedStyle];
-  return jsx(_modDef4296.View, {
-    style: items1,
+  const items1 = [imageStyle.containerStyle, placeholderAnimatedStyle];
+  obj.style = items1;
+  return jsx(ReanimatedRexportDefault.View, {
+    style: null,
     pointerEvents: "none",
-    children: jsx(width(16667).SearchListCardContainer, { containerStyle: memo }),
+    children: jsx(SearchListCard.SearchListCardContainer, { containerStyle: memo }),
   });
 }

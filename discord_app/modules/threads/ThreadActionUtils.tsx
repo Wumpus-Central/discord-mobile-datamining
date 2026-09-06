@@ -1,10 +1,11 @@
 // discord_app/modules/threads/ThreadActionUtils.tsx
-import closure_0 from "../../stores/AuthenticationStore.tsx";
+import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 
-const result = require("set").fileFinishedImporting("modules/threads/ThreadActionUtils.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/threads/ThreadActionUtils.tsx");
 
 export const doesThreadMembersActionAffectMe = function doesThreadMembersActionAffectMe(removedMemberIds) {
-  id = id.getId();
+  const id = AuthenticationStore.getId();
   let tmp2 = null != id;
   if (tmp2) {
     removedMemberIds = removedMemberIds.removedMemberIds;

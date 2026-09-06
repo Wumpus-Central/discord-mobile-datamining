@@ -1,39 +1,38 @@
 // discord_app/modules/user_settings/defs/native/EncryptionSetting.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import useSecureFramesVerifiedUserIds from "../../../rtc/hooks/useSecureFramesVerifiedUsers.tsx";
-import closure_2 from "../../../rtc/SecureFramesPersistedStore.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
-import { UserListItem } from "../../privacy_and_safety/native/SettingsSecureFramesScreen.tsx";
+import util from "../../../../intl/index.native.tsx";
+import useSecureFramesVerifiedUsers from "../../../rtc/hooks/useSecureFramesVerifiedUsers.tsx";
+import SecureFramesPersistedStore from "../../../rtc/SecureFramesPersistedStore.tsx";
 
-require = arg1;
-createToggle = {
+require = fn;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.x8U2eC);
+    const intl = util.intl;
+    return intl.string(util.t.x8U2eC);
   },
   useDescription: function useSecureFramesEncryptionDescription() {
-    let obj = useSecureFramesVerifiedUserIds;
+    let obj = useSecureFramesVerifiedUsers;
     const secureFramesVerifiedUserIds = obj.useSecureFramesVerifiedUserIds();
-    const intl = getSystemLocale.intl;
+    const intl = util.intl;
     obj = { count: secureFramesVerifiedUserIds.length };
-    return intl.formatToPlainString(getSystemLocale.t["6vrePS"], obj);
+    return intl.formatToPlainString(util.t["6vrePS"], obj);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.DATA_AND_PRIVACY,
+  parent: fn(7975).MobileUserSettings.DATA_AND_PRIVACY,
   usePredicate: function useSecureFramesPersistentCodesValue() {
-    const items = [closure_2];
+    const items = [SecureFramesPersistedStore];
     return initialize.useStateFromStores(items, () => persistentCodesEnabled.getPersistentCodesEnabled());
   },
-  screen: createToggle,
-};
-createToggle = {
-  route: require("ME").UserSettingsSections.SECURE_FRAMES,
-  getComponent() {
-    return UserListItem /* UserListItem */.default;
+  screen: {
+    route: fn(1074).UserSettingsSections.SECURE_FRAMES,
+    getComponent() {
+      return require("SettingsSecureFramesScreen").default;
+    },
   },
 };
-createToggle = createToggle.createRoute(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/EncryptionSetting.tsx");
+SettingBuilders = SettingBuilders.createRoute(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/EncryptionSetting.tsx");
 
-export default createToggle;
-export const SecureFramesEncryptionSetting = createToggle;
+export default SettingBuilders;
+export const SecureFramesEncryptionSetting = SettingBuilders;

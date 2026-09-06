@@ -1,83 +1,52 @@
 // discord_app/utils/native/AvatarUtils.tsx
-import registerAssetDefault from "../../../_runtime/01400_registerAsset.js";
-import registerAssetDefault2 from "../../../_runtime/01401_registerAsset.js";
-import registerAssetDefault3 from "../../../_runtime/01402_registerAsset.js";
-import registerAssetDefault4 from "../../../_runtime/01403_registerAsset.js";
-import registerAssetDefault5 from "../../../_runtime/01404_registerAsset.js";
-import registerAssetDefault6 from "../../../_runtime/01405_registerAsset.js";
-import registerAssetDefault7 from "../../../_runtime/01406_registerAsset.js";
-import registerAssetDefault8 from "../../../_runtime/01407_registerAsset.js";
-import registerAssetDefault9 from "../../../_runtime/01408_registerAsset.js";
-import registerAssetDefault10 from "../../../_runtime/01409_registerAsset.js";
-import registerAssetDefault11 from "../../../_runtime/01410_registerAsset.js";
-import registerAssetDefault12 from "../../../_runtime/01411_registerAsset.js";
-import registerAssetDefault13 from "../../../_runtime/01412_registerAsset.js";
-import registerAssetDefault14 from "../../../_runtime/01413_registerAsset.js";
-import registerAssetDefault15 from "../../../_runtime/01414_registerAsset.js";
-import registerAssetDefault16 from "../../../_runtime/01415_registerAsset.js";
-import registerAssetDefault17 from "../../../_runtime/01416_registerAsset.js";
-import registerAssetDefault18 from "../../../_runtime/01417_registerAsset.js";
-import registerAssetDefault19 from "../../../_runtime/01418_registerAsset.js";
-import registerAssetDefault20 from "../../../_runtime/01419_registerAsset.js";
-import registerAssetDefault21 from "../../../_runtime/01420_registerAsset.js";
-import registerAssetDefault22 from "../../../_runtime/01421_registerAsset.js";
-import registerAssetDefault23 from "../../../_runtime/01422_registerAsset.js";
-import registerAssetDefault24 from "../../../_runtime/01423_registerAsset.js";
-import registerAssetDefault25 from "../../../_runtime/01424_registerAsset.js";
-import registerAssetDefault26 from "../../../_runtime/01425_registerAsset.js";
-import registerAssetDefault27 from "../../../_runtime/01426_registerAsset.js";
-import registerAssetDefault28 from "../../../_runtime/01427_registerAsset.js";
-import registerAssetDefault29 from "../../../_runtime/01429_registerAsset.js";
-import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
-import set from "../../../_runtime/00002_set.js";
-import { registerAsset } from "../../../_runtime/01428_registerAsset.js";
+import _modDef1400 from "../../../_runtime/metro/01400__.js";
+import _modDef1401 from "../../../_runtime/metro/01401__.js";
+import _modDef1402 from "../../../_runtime/metro/01402__.js";
+import _modDef1403 from "../../../_runtime/metro/01403__.js";
+import _modDef1404 from "../../../_runtime/metro/01404__.js";
+import _modDef1405 from "../../../_runtime/metro/01405__.js";
+import _modDef1406 from "../../../_runtime/metro/01406__.js";
+import _modDef1407 from "../../../_runtime/metro/01407__.js";
+import _modDef1408 from "../../../_runtime/metro/01408__.js";
+import _modDef1409 from "../../../_runtime/metro/01409__.js";
+import _modDef1410 from "../../../_runtime/metro/01410__.js";
+import _modDef1411 from "../../../_runtime/metro/01411__.js";
+import _modDef1412 from "../../../_runtime/metro/01412__.js";
+import _modDef1413 from "../../../_runtime/metro/01413__.js";
+import _modDef1414 from "../../../_runtime/metro/01414__.js";
+import _modDef1415 from "../../../_runtime/metro/01415__.js";
+import _modDef1416 from "../../../_runtime/metro/01416__.js";
+import _modDef1417 from "../../../_runtime/metro/01417__.js";
+import _modDef1418 from "../../../_runtime/metro/01418__.js";
+import _modDef1419 from "../../../_runtime/metro/01419__.js";
+import _modDef1420 from "../../../_runtime/metro/01420__.js";
+import _modDef1421 from "../../../_runtime/metro/01421__.js";
+import _modDef1422 from "../../../_runtime/metro/01422__.js";
+import _modDef1423 from "../../../_runtime/metro/01423__.js";
+import _modDef1424 from "../../../_runtime/metro/01424__.js";
+import _modDef1425 from "../../../_runtime/metro/01425__.js";
+import _modDef1426 from "../../../_runtime/metro/01426__.js";
+import _modDef1427 from "../../../_runtime/metro/01427__.js";
+import _modDef1429 from "../../../_runtime/metro/01429__.js";
+import get_ActivityIndicator from "../../../_runtime/metro/00017__.js";
+import size from "../../../_runtime/metro/00002__.js";
 
 function ensureAvatarSource(source) {
   if (typeof source === "number") {
-    let assetSource = closure_2.resolveAssetSource(source);
+    let assetSource = React2.resolveAssetSource(source);
   } else {
     const _Array = Array;
     assetSource = source;
   }
   return assetSource;
 }
-({ Image: obj1, NativeModules } = get_ActivityIndicator);
-const items = [
-  registerAssetDefault,
-  registerAssetDefault2,
-  registerAssetDefault3,
-  registerAssetDefault4,
-  registerAssetDefault5,
-  registerAssetDefault6,
-];
-const items1 = [
-  registerAssetDefault7,
-  registerAssetDefault8,
-  registerAssetDefault9,
-  registerAssetDefault10,
-  registerAssetDefault11,
-  registerAssetDefault12,
-];
-const items2 = [
-  registerAssetDefault13,
-  registerAssetDefault14,
-  registerAssetDefault15,
-  registerAssetDefault16,
-  registerAssetDefault17,
-  registerAssetDefault18,
-];
-const items3 = [
-  registerAssetDefault19,
-  registerAssetDefault20,
-  registerAssetDefault21,
-  registerAssetDefault22,
-  registerAssetDefault23,
-  registerAssetDefault24,
-  registerAssetDefault25,
-  registerAssetDefault26,
-];
+({ Image: c2, NativeModules } = get_ActivityIndicator);
+const items = [_modDef1400, _modDef1401, _modDef1402, _modDef1403, _modDef1404, _modDef1405];
+const items1 = [_modDef1406, _modDef1407, _modDef1408, _modDef1409, _modDef1410, _modDef1411];
+const items2 = [_modDef1412, _modDef1413, _modDef1414, _modDef1415, _modDef1416, _modDef1417];
+const items3 = [_modDef1418, _modDef1419, _modDef1420, _modDef1421, _modDef1422, _modDef1423, _modDef1424, _modDef1425];
 const MediaManager = NativeModules.MediaManager;
-let set = new Set(MediaManager.getConstants().supportedExtensions);
+const set = new Set(MediaManager.getConstants().supportedExtensions);
 let obj = {
   DEFAULT_AVATARS: items,
   DEFAULT_AVATARS_SMALL: items1,
@@ -89,14 +58,14 @@ let obj = {
   ensureAvatarSource: null,
   canUseWebp: null,
 };
-obj = { clyde: registerAssetDefault27, nitro_wumpus: registerAssetDefault28 };
-obj[5] = obj;
-obj[6] = registerAssetDefault29;
-obj[7] = ensureAvatarSource;
-obj[8] = function canUseWebp() {
+obj = { clyde: _modDef1426, nitro_wumpus: _modDef1427 };
+obj.BOT_AVATARS = obj;
+obj.DEFAULT_CHANNEL_ICON = _modDef1429;
+obj.ensureAvatarSource = ensureAvatarSource;
+obj.canUseWebp = function canUseWebp() {
   return set.has("webp");
 };
-const result = set.fileFinishedImporting("utils/native/AvatarUtils.tsx");
+const result = size.fileFinishedImporting("utils/native/AvatarUtils.tsx");
 
 export default obj;
 export const DEFAULT_AVATARS = items;
@@ -105,5 +74,5 @@ export const DEFAULT_AVATARS_SMALL_MAX_SIZE = 24;
 export const DEFAULT_PROVISIONAL_AVATARS = items2;
 export { ensureAvatarSource };
 export const getAutomodAvatarURL = function getAutomodAvatarURL() {
-  return registerAsset;
+  return require("../../../_runtime/metro/01428__.js");
 };

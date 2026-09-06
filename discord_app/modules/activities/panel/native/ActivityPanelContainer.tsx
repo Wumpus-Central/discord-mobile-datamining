@@ -1,17 +1,21 @@
 // discord_app/modules/activities/panel/native/ActivityPanelContainer.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import BaseActivityPanelControllerDefault from "ActivityPanelController.tsx";
-import renderActivityOrPIPDefault from "ActivityPanelUI.tsx";
-import closure_3 from "../../../../stores/ChannelStore.tsx";
-import closure_4 from "../../../../stores/SelectedChannelStore.tsx";
-import closure_5 from "../../EmbeddedActivitiesStore.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
+import embeddedActivityLocationUtils from "../../utils/embeddedActivityLocationUtils.tsx";
+import ActivityPanelControllerDefault from "ActivityPanelController.tsx";
+import ActivityPanelUIDefault from "ActivityPanelUI.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import ChannelStore from "../../../../stores/ChannelStore.tsx";
+import SelectedChannelStore from "../../../../stores/SelectedChannelStore.tsx";
+import EmbeddedActivitiesStore from "../../EmbeddedActivitiesStore.tsx";
 
-require = arg1;
-const memoResult = importAllResult.memo(function ActivityPanelContainer() {
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/panel/native/ActivityPanelContainer.tsx");
+
+export default noop.memo(function ActivityPanelContainer() {
   let obj = initialize;
-  const items = [closure_5, closure_3, closure_4];
+  const items = [EmbeddedActivitiesStore, ChannelStore, SelectedChannelStore];
   let tmp2 = null;
   if (
     obj.useStateFromStores(items, () => {
@@ -19,9 +23,8 @@ const memoResult = importAllResult.memo(function ActivityPanelContainer() {
       if (null == connectedActivityLocation) {
         return false;
       } else {
-        const embeddedActivityLocationChannelId = callback(table[6]).getEmbeddedActivityLocationChannelId(
-          connectedActivityLocation,
-        );
+        const embeddedActivityLocationChannelId =
+          embeddedActivityLocationUtils.getEmbeddedActivityLocationChannelId(connectedActivityLocation);
         if (null == embeddedActivityLocationChannelId) {
           return false;
         } else {
@@ -44,19 +47,13 @@ const memoResult = importAllResult.memo(function ActivityPanelContainer() {
           }
           return tmp4;
         }
-        const obj2 = callback(table[6]);
-        tmp8 = callback;
-        tmp9 = table;
+        tmp8 = require;
+        tmp9 = dependencyMap;
       }
     }, [])
   ) {
-    obj = { children: null };
-    obj[0] = jsx(renderActivityOrPIPDefault, {});
-    tmp2 = jsx(BaseActivityPanelControllerDefault, { children: null });
-    const tmp5 = BaseActivityPanelControllerDefault;
+    obj = { children: jsx(ActivityPanelUIDefault, {}) };
+    tmp2 = jsx(ActivityPanelControllerDefault, { children: jsx(ActivityPanelUIDefault, {}) });
   }
   return tmp2;
 });
-const result = require("set").fileFinishedImporting("modules/activities/panel/native/ActivityPanelContainer.tsx");
-
-export default memoResult;

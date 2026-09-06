@@ -1,13 +1,13 @@
 // discord_app/modules/main_tabs_v2/native/sidebar/details/ChannelDetailsMoreButton.tsx
 import PressableNavigatorButtonWrapperDefault from "../../shared_components/navigator/PressableNavigatorButtonWrapper.tsx";
-import registerAssetDefault from "../../../../../../_runtime/09800_registerAsset.js";
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import _modDef9800 from "../../../../../../_runtime/metro/09800__.js";
+import openChannelLongPressActionSheet from "../../../../channel/native/openChannelLongPressActionSheet.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting(
-  "modules/main_tabs_v2/native/sidebar/details/ChannelDetailsMoreButton.tsx",
-);
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsMoreButton.tsx");
 
 export default function MoreButton(channel) {
   channel = channel.channel;
@@ -18,12 +18,11 @@ export default function MoreButton(channel) {
       let obj = { children: null };
       obj = { accessibilityLabel: null, source: null, onPress: null };
       const intl = channel(1114).intl;
-      obj[0] = intl.string(channel(1114).t["UKOtz+"]);
-      obj[1] = registerAssetDefault;
-      obj[2] = tmp;
-      obj[0] = jsx(channel(7863).HeaderIconButton, { accessibilityLabel: null, source: null, onPress: null });
+      obj.accessibilityLabel = intl.string(channel(1114).t["UKOtz+"]);
+      obj.source = _modDef9800;
+      obj.onPress = tmp;
+      obj.children = jsx(channel(7863).HeaderIconButton, { accessibilityLabel: null, source: null, onPress: null });
       tmp2 = jsx(PressableNavigatorButtonWrapperDefault, { accessibilityLabel: null, source: null, onPress: null });
-      const tmp6 = PressableNavigatorButtonWrapperDefault;
     } else {
       tmp2 = null;
     }

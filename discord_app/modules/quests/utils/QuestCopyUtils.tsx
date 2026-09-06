@@ -1,12 +1,12 @@
 // discord_app/modules/quests/utils/QuestCopyUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import _copy from "../../../utils/ClipboardUtils.native.tsx";
-import apexExperiment from "../experiments/AdAnalyticsInterfaceExperiment.tsx";
-import QuestsExperimentLocations from "../QuestConstants.tsx";
+import util from "../../../intl/index.native.tsx";
+import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
+import AdAnalyticsInterfaceExperiment from "../experiments/AdAnalyticsInterfaceExperiment.tsx";
+import QuestConstants from "../QuestConstants.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-({ QuestHomeSortMethods: obj1, RewardFilterTypes: c3, TaskFilterTypes: c4 } = QuestsExperimentLocations);
-let result = set.fileFinishedImporting("modules/quests/utils/QuestCopyUtils.tsx");
+({ QuestHomeSortMethods: c2, RewardFilterTypes: c3, TaskFilterTypes: closure_4 } = QuestConstants);
+let result = size.fileFinishedImporting("modules/quests/utils/QuestCopyUtils.tsx");
 
 export const getContextualEntrypointHeading = function getContextualEntrypointHeading(taskDetails) {
   ({ quest, thirdPartyTaskDetails } = taskDetails);
@@ -16,8 +16,8 @@ export const getContextualEntrypointHeading = function getContextualEntrypointHe
     completedAt = userStatus.completedAt;
   }
   if (null != completedAt) {
-    const intl6 = getSystemLocale.intl;
-    return intl6.string(getSystemLocale.t.BzFeTF);
+    const intl6 = util.intl;
+    return intl6.string(util.t.BzFeTF);
   } else {
     const userStatus2 = quest.userStatus;
     let enrolledAt;
@@ -30,29 +30,28 @@ export const getContextualEntrypointHeading = function getContextualEntrypointHe
         percentComplete = thirdPartyTaskDetails.percentComplete;
       }
       if (percentComplete >= 0.75) {
-        const intl5 = getSystemLocale.intl;
-        let stringResult = intl5.string(getSystemLocale.t.gvCR4H);
+        const intl5 = util.intl;
+        let stringResult = intl5.string(util.t.gvCR4H);
       } else {
         if (percentComplete >= 0.45) {
           if (percentComplete <= 0.55) {
-            const intl4 = getSystemLocale.intl;
-            stringResult = intl4.string(getSystemLocale.t.JNx8sG);
+            const intl4 = util.intl;
+            stringResult = intl4.string(util.t.JNx8sG);
           }
         }
         if (percentComplete > 0) {
-          const intl3 = getSystemLocale.intl;
-          stringResult = intl3.string(getSystemLocale.t.JMbfnc);
+          const intl3 = util.intl;
+          stringResult = intl3.string(util.t.JMbfnc);
         } else {
-          const intl2 = getSystemLocale.intl;
-          stringResult = intl2.string(getSystemLocale.t["7e5k7L"]);
+          const intl2 = util.intl;
+          stringResult = intl2.string(util.t["7e5k7L"]);
         }
       }
       return stringResult;
     } else {
-      const intl = getSystemLocale.intl;
-      const obj = { questName: null };
-      obj[0] = quest.config.messages.questName;
-      return intl.formatToPlainString(getSystemLocale.t.EQa7os, obj);
+      const intl = util.intl;
+      const obj = { questName: quest.config.messages.questName };
+      return intl.formatToPlainString(util.t.EQa7os, obj);
     }
   }
 };
@@ -60,8 +59,8 @@ export const getDisclosureText = function getDisclosureText(arg0) {
   ({ gamePublisher, gameTitle, cosponsorName } = arg0);
   let nPg6f1 = dependencyMap;
   ({ adCreativeType, isTargetedDisclosure, isContextualDisclosure, isVideoQuest } = arg0);
-  const intl = getSystemLocale.intl;
-  const stringResult = intl.string(getSystemLocale.t.fEbrT8);
+  const intl = util.intl;
+  const stringResult = intl.string(util.t.fEbrT8);
   if (isTargetedDisclosure) {
     if (isContextualDisclosure) {
       const intl5 = tmp(1114).intl;
@@ -70,14 +69,11 @@ export const getDisclosureText = function getDisclosureText(arg0) {
     } else {
       if (null == cosponsorName) {
         const intl4 = tmp(1114).intl;
-        let obj = { gamePublisher: null };
-        obj[0] = gamePublisher;
+        let obj = { gamePublisher };
         let formatToPlainStringResult = intl4.formatToPlainString(tmp(1114).t.Piihy1, obj);
       } else {
         const intl3 = tmp(1114).intl;
-        obj = { gamePublisher: null, cosponsorName: null };
-        obj[0] = gamePublisher;
-        obj[1] = cosponsorName;
+        obj = { gamePublisher, cosponsorName };
         formatToPlainStringResult = intl3.formatToPlainString(tmp(1114).t.DV47Gy, obj);
       }
       const _HermesInternal = HermesInternal;
@@ -90,16 +86,14 @@ export const getDisclosureText = function getDisclosureText(arg0) {
     const formatToPlainString = intl2.formatToPlainString;
     let t = tmp(1114).t;
     if (isVideoQuest) {
-      t = { gamePublisher: null };
-      t[0] = gamePublisher;
+      t = { gamePublisher };
       let formatToPlainStringResult1 = formatToPlainString(t.rctMRl, t);
     } else {
-      obj1 = { gamePublisher: null, gameTitle: null };
-      obj1[0] = gamePublisher;
+      const obj1 = { gamePublisher, gameTitle: null };
       if (gameTitle == null) {
         gameTitle = "";
       }
-      obj1[1] = gameTitle;
+      obj1.gameTitle = gameTitle;
       formatToPlainStringResult1 = formatToPlainString(t["5bQWNG"], obj1);
     }
   }
@@ -109,44 +103,44 @@ export const getExternalCtaLabel = function getExternalCtaLabel(quest) {
 };
 export const getSortMethodText = function getSortMethodText(arg0) {
   if (constants.SUGGESTED === arg0) {
-    const intl4 = getSystemLocale.intl;
-    return intl4.string(getSystemLocale.t.gBfXPZ);
+    const intl4 = util.intl;
+    return intl4.string(util.t.gBfXPZ);
   } else if (tmp.MOST_RECENT === arg0) {
-    const intl3 = getSystemLocale.intl;
-    return intl3.string(getSystemLocale.t.K6oEu2);
+    const intl3 = util.intl;
+    return intl3.string(util.t.K6oEu2);
   } else if (tmp.EXPIRING_SOON === arg0) {
-    const intl2 = getSystemLocale.intl;
-    return intl2.string(getSystemLocale.t.IB22n3);
+    const intl2 = util.intl;
+    return intl2.string(util.t.IB22n3);
   } else if (tmp.RECENTLY_ENROLLED === arg0) {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["BB+2tX"]);
+    const intl = util.intl;
+    return intl.string(util.t["BB+2tX"]);
   }
 };
 export const getFilterTypeText = function getFilterTypeText(filter) {
   if (constants2.VIRTUAL_CURRENCY === filter) {
-    const intl5 = getSystemLocale.intl;
-    return intl5.string(getSystemLocale.t.ElYQFS);
+    const intl5 = util.intl;
+    return intl5.string(util.t.ElYQFS);
   } else if (tmp.COLLECTIBLE === filter) {
-    const intl4 = getSystemLocale.intl;
-    return intl4.string(getSystemLocale.t.Jg17Ut);
+    const intl4 = util.intl;
+    return intl4.string(util.t.Jg17Ut);
   } else if (tmp.IN_GAME === filter) {
-    const intl3 = getSystemLocale.intl;
-    return intl3.string(getSystemLocale.t["O/J2kr"]);
+    const intl3 = util.intl;
+    return intl3.string(util.t["O/J2kr"]);
   } else if (constants3.VIDEO === filter) {
-    const intl2 = getSystemLocale.intl;
-    return intl2.string(getSystemLocale.t.e0iISA);
+    const intl2 = util.intl;
+    return intl2.string(util.t.e0iISA);
   } else if (tmp12.PLAY === filter) {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["1nJR4p"]);
+    const intl = util.intl;
+    return intl.string(util.t["1nJR4p"]);
   }
 };
 export const getFilterGroupHeadingText = function getFilterGroupHeadingText(arg0) {
   if ("reward" === arg0) {
-    const intl2 = getSystemLocale.intl;
-    return intl2.string(getSystemLocale.t.vjLqAU);
+    const intl2 = util.intl;
+    return intl2.string(util.t.vjLqAU);
   } else if ("task" === arg0) {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.Hufmss);
+    const intl = util.intl;
+    return intl.string(util.t.Hufmss);
   }
 };
 export const getQuestUrl = function getQuestUrl(id) {
@@ -157,53 +151,55 @@ export const getCtaLink = function getCtaLink(config) {
 };
 export const copyShareLink = function copyShareLink(id, ctaContent) {
   ctaContent = ctaContent.ctaContent;
-  let obj = apexExperiment;
+  let obj = AdAnalyticsInterfaceExperiment;
   if (
     obj.shouldMigrateToAdAnalyticsInterface(
-      apexExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL,
+      AdAnalyticsInterfaceExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL,
       "copy_share_link",
     )
   ) {
     let tmpResult = tmp(11193);
     obj = {
-      type: null,
-      adCreativeType: null,
-      adCreativeId: null,
-      questContentCTA: null,
+      type: tmp(11197).AdUserActionType.CLICK_INTERNAL,
+      adCreativeType: tmp(5451).AdCreativeType.QUEST,
+      adCreativeId: id,
+      questContentCTA: ctaContent,
       surfaceId: null,
       sourceQuestContent: null,
       questContentPosition: null,
       impressionId: null,
     };
-    obj[0] = tmp(11197).AdUserActionType.CLICK_INTERNAL;
-    obj[1] = tmp(5451).AdCreativeType.QUEST;
-    obj[2] = id;
-    obj[3] = ctaContent;
-    ({ content: obj5[4], sourceQuestContent: obj5[5], position: obj5[6], impressionId: obj5[7] } = ctaContent);
+    ({
+      content: obj5.surfaceId,
+      sourceQuestContent: obj5.sourceQuestContent,
+      position: obj5.questContentPosition,
+      impressionId: obj5.impressionId,
+    } = ctaContent);
     tmpResult.captureAdUserAction(obj);
   } else {
     tmpResult = tmp(7718);
     obj = {
-      questId: null,
-      questContent: null,
-      questContentCTA: null,
+      questId: id,
+      questContent: ctaContent.content,
+      questContentCTA: ctaContent,
       questContentPosition: null,
       impressionId: null,
       sourceQuestContent: null,
     };
-    obj[0] = id;
-    obj[1] = ctaContent.content;
-    obj[2] = ctaContent;
-    ({ position: obj3[3], impressionId: obj3[4], sourceQuestContent: obj3[5] } = ctaContent);
+    ({
+      position: obj3.questContentPosition,
+      impressionId: obj3.impressionId,
+      sourceQuestContent: obj3.sourceQuestContent,
+    } = ctaContent);
     const result = tmpResult.trackQuestContentClicked(obj);
   }
-  _copy.copy("" + location.protocol + "//" + location.host + "/quests/" + id);
+  ClipboardUtils.copy("" + location.protocol + "//" + location.host + "/quests/" + id);
 };
 export const getDefaultReward = function getDefaultReward(config) {
   if (0 === config.rewardsConfig.rewards.length) {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    error = new Error("Quest " + config.id + " has no rewards configured");
+    const error = new Error("Quest " + config.id + " has no rewards configured");
     throw error;
   } else {
     return config.rewardsConfig.rewards[0];

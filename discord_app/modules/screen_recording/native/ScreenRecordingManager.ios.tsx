@@ -1,9 +1,9 @@
 // discord_app/modules/screen_recording/native/ScreenRecordingManager.ios.tsx
-import set from "../../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import _mod17 from "../../../../_runtime/metro/00017__.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const DCDScreenRecordingManager = get_ActivityIndicator.NativeModules.DCDScreenRecordingManager;
-const result = set.fileFinishedImporting("modules/screen_recording/native/ScreenRecordingManager.ios.tsx");
+const DCDScreenRecordingManager = _mod17.NativeModules.DCDScreenRecordingManager;
+const result = size.fileFinishedImporting("modules/screen_recording/native/ScreenRecordingManager.ios.tsx");
 
 export default {
   requestPermissions() {
@@ -21,8 +21,8 @@ export default {
   getLatestRecording() {
     return DCDScreenRecordingManager.getLatestRecording();
   },
-  setRecordingQuality(arg0) {
-    return DCDScreenRecordingManager.setRecordingQuality(arg0);
+  setRecordingQuality(size) {
+    return DCDScreenRecordingManager.setRecordingQuality(size);
   },
   getRecordingQuality() {
     return DCDScreenRecordingManager.getRecordingQuality();

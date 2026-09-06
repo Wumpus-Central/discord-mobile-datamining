@@ -1,11 +1,11 @@
 // discord_app/modules/tiny_bronco/native/TinyBroncoSettingsPredicate.tsx
-import set from "../../../../_runtime/00002_set.js";
-import TINY_BRONCO_BLOG_URL from "../TinyBroncoConstants.tsx";
-import useIsTinyBroncoEnabled from "../TinyBroncoExperiment.tsx";
+import TinyBroncoConstants from "../TinyBroncoConstants.tsx";
+import TinyBroncoExperiment from "../TinyBroncoExperiment.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-let closure_2 = TINY_BRONCO_BLOG_URL.TINY_BRONCO_SETTINGS_LOCATION;
-const result = set.fileFinishedImporting("modules/tiny_bronco/native/TinyBroncoSettingsPredicate.tsx");
+let closure_2 = TinyBroncoConstants.TINY_BRONCO_SETTINGS_LOCATION;
+const result = size.fileFinishedImporting("modules/tiny_bronco/native/TinyBroncoSettingsPredicate.tsx");
 
 export const useIsTinyBroncoSettingsEnabled = function useIsTinyBroncoSettingsEnabled() {
-  return useIsTinyBroncoEnabled.useIsTinyBroncoEnabled(closure_2);
+  return TinyBroncoExperiment.useIsTinyBroncoEnabled(closure_2);
 };

@@ -1,23 +1,23 @@
 // discord_app/modules/user_settings/premium/native/PremiumFeaturesLogo.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import getPremiumPlanItem from "../../../../utils/PremiumUtils.tsx";
-import registerAssetDefault from "../../../../../_runtime/07437_registerAsset.js";
-import registerAssetDefault2 from "../../../../../_runtime/09383_registerAsset.js";
-import { PremiumTypes } from "../../../premium/PremiumConstants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import PremiumUtils from "../../../../utils/PremiumUtils.tsx";
+import _modDef7437 from "../../../../../_runtime/metro/07437__.js";
+import _modDef9383 from "../../../../../_runtime/metro/09383__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesLogo.tsx");
+require = fn;
+const PremiumTypes = fn(1373).PremiumTypes;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesLogo.tsx");
 
 export default function PremiumFeaturesLogo(premiumType) {
   premiumType = premiumType.premiumType;
   if (premiumType === PremiumTypes.TIER_0) {
-    let tmp3 = registerAssetDefault2;
+    let tmp3 = _modDef9383;
     let tmp = importDefault;
   } else {
     tmp = importDefault;
-    tmp3 = registerAssetDefault;
+    tmp3 = _modDef7437;
   }
   const obj = {
     accessible: true,
@@ -28,9 +28,9 @@ export default function PremiumFeaturesLogo(premiumType) {
     source: null,
   };
   const tmpResult = tmp(5587);
-  obj[1] = getPremiumPlanItem.getPremiumTypeDisplayName(premiumType);
-  obj[3] = premiumType.style;
-  obj[5] = tmp3;
+  obj.accessibilityLabel = PremiumUtils.getPremiumTypeDisplayName(premiumType);
+  obj.style = premiumType.style;
+  obj.source = tmp3;
   return (
     <tmpResult
       accessible

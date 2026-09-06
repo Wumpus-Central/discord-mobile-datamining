@@ -1,9 +1,9 @@
 // discord_app/modules/scheduled_messages/native/openScheduledMessagesLimitUpsell.tsx
-import set from "../../../../_runtime/00002_set.js";
 import openPremiumUpsellActionSheetDefault from "../../premium/roadblocks/native/utils/openPremiumUpsellActionSheet.tsx";
 import EntitlementFeatureNames from "../../../../discord_common/js/shared/shared-constants/EntitlementFeatureNames.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/scheduled_messages/native/openScheduledMessagesLimitUpsell.tsx");
+const result = size.fileFinishedImporting("modules/scheduled_messages/native/openScheduledMessagesLimitUpsell.tsx");
 
 export default function openScheduledMessagesLimitUpsell(arg0) {
   openPremiumUpsellActionSheetDefault(

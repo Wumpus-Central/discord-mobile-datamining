@@ -1,92 +1,66 @@
 // discord_app/actions/UserActivityActionCreators.tsx
-import dispatcherDefault from "../Dispatcher.tsx";
-import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../stores/PresenceStore.tsx";
-import { Endpoints } from "../Constants.tsx";
-import { asString } from "../modules/spotify/SpotifyUtils.tsx";
+import DispatcherDefault from "../Dispatcher.tsx";
+import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
+import PresenceStore from "../stores/PresenceStore.tsx";
 
-const require = arg1;
-function _getMetadata() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c4 = 0;
-    c5 = 0;
-    return (function* (arg0, body) {
-      closure_3 = tmp3;
-      const table = tmp2;
-      const lib = body;
-      const metadata = lib.metadata;
-      if (null != metadata) {
-        const _Object = Object;
-        if (Object.keys(metadata).length > 0) {
-          c5 = 3;
-          obj1 = { value: null, done: true };
-          obj1[0] = metadata;
-          return obj1;
-        }
+const require = fn;
+let closure_6 = async function _getMetadata(arg0, arg1) {
+  let metadata = arg0;
+  closure_1 = arg1;
+  c4 = 0;
+  c5 = 0;
+  return (async (arg0, value) => {
+    closure_3 = tmp3;
+    closure_2 = tmp2;
+    closure_130_0 = closure_1;
+    metadata = metadata.metadata;
+    if (null != metadata) {
+      const _Object = Object;
+      if (Object.keys(metadata).length > 0) {
+        c5 = 3;
+        return { value: metadata, done: true };
       }
-      if (null != activityMetadata) {
-        return activityMetadata;
-      }
-      if (null == tmp28.session_id) {
-        const _Error = Error;
-        error = new Error("null/undefined session_id");
-        throw error;
-      }
-      const HTTP = lib(closure_1_2[5]).HTTP;
-      const obj3 = { url: null, oldFormErrors: true, rejectWithError: null };
-      obj3[0] = c5.USER_ACTIVITY_METADATA(tmp29, tmp28.session_id, tmp28.application_id);
-      obj3[2] = lib(closure_1_2[5]).rejectWithMigratedError();
-      yield HTTP.get(obj3);
-      body = body.body;
-      const obj = body(table[3]);
-      const obj6 = { type: "ACTIVITY_METADATA_UPDATE", metadata: null, userId: null };
-      obj6[1] = body;
-      obj6[2] = lib;
-      obj.dispatch(obj6);
-      return body;
-    })();
-  });
-  closure_6 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-const result = require("set").fileFinishedImporting("actions/UserActivityActionCreators.tsx");
+    }
+    activityMetadata = activityMetadata.getActivityMetadata(tmp28);
+    if (null != activityMetadata) {
+      return activityMetadata;
+    }
+    if (null == tmp27.session_id) {
+      const _Error = Error;
+      const error = new Error("null/undefined session_id");
+      throw error;
+    }
+    const HTTP = require("HTTPUtils").HTTP;
+    await HTTP.get({ url: Endpoints.USER_ACTIVITY_METADATA(tmp28, tmp27.session_id, tmp27.application_id), oldFormErrors: true, rejectWithError: require("HTTPUtils").rejectWithMigratedError() });
+    const body = value.body;
+    { url: Endpoints.USER_ACTIVITY_METADATA(tmp28, tmp27.session_id, tmp27.application_id), oldFormErrors: true, rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
+    closure_131_1(closure_131_2[3]).dispatch({ type: "ACTIVITY_METADATA_UPDATE", metadata: body, userId: closure_130_0 });
+    return body;
+  })();
+};
+const Endpoints = fn(1074).Endpoints;
+const size = fn(2);
+const result = size.fileFinishedImporting("actions/UserActivityActionCreators.tsx");
 
 export const sync = function sync(activity, userId) {
-  let obj = dispatcherDefault;
-  obj = { type: "ACTIVITY_SYNC", activity, userId };
+  const obj = { type: "ACTIVITY_SYNC", activity, userId };
   obj.dispatch(obj);
 };
-export const play = function play(closure_0, closure_1) {
-  const _require = closure_0;
-  const spotifyMetadataFromActivity = require("../modules/spotify/SpotifyUtils.tsx").getSpotifyMetadataFromActivity(
-    closure_0,
-    closure_1,
-  );
-  let obj = asString;
-  spotifyMetadataFromActivity
-    .then((metadata) => {
-      let obj = callback(closure_1_2[3]);
-      obj = { type: "ACTIVITY_PLAY", activity: closure_0, userId: callback, metadata };
-      return obj.dispatch(obj);
-    })
-    .catch(() => {
-      let obj = callback(closure_1_2[3]);
-      obj = { type: "ACTIVITY_PLAY", activity: closure_0, userId: callback };
-      return obj.dispatch(obj);
-    });
+export const play = function play(result, userId) {
+  _require = result;
+  const spotifyMetadataFromActivity = require("SpotifyUtils").getSpotifyMetadataFromActivity(result, userId);
+  let obj = require("SpotifyUtils");
+  spotifyMetadataFromActivity.then((metadata) => {
+    const obj = { type: "ACTIVITY_PLAY", activity, userId, metadata };
+    return obj.dispatch(obj);
+  }).catch(() => {
+    const obj = { type: "ACTIVITY_PLAY", activity, userId };
+    return obj.dispatch(obj);
+  });
 };
 export const getMetadata = function getMetadata() {
   const self = this;
-  const apply = _getMetadata.apply;
+  const apply = closure_6.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

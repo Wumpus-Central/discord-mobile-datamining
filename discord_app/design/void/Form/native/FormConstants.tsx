@@ -1,31 +1,32 @@
 // discord_app/design/void/Form/native/FormConstants.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import set2 from "../../../../utils/PlatformUtils.tsx";
-import AccessibilityAnnouncer from "../../../shared.tsx";
-import closure_2 from "../../../../modules/user_settings/ThemeStore.tsx";
-import set from "../../../../utils/PlatformUtils.tsx";
-import DCDDeviceManager from "../../../../utils/native/DeviceUtils.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import PlatformUtils2 from "../../../../utils/PlatformUtils.tsx";
+import shared from "../../../shared.tsx";
+import ThemeStore from "../../../../modules/user_settings/ThemeStore.tsx";
 
-require = arg1;
+require = fn;
+const PlatformUtils = fn(1115);
 let num = 24;
-if (set.isAndroid()) {
+if (PlatformUtils.isAndroid()) {
   num = 32;
 }
-const internal = ThemesDefault.internal;
+const internal = nativeDefault.internal;
 const semanticColor = internal.resolveSemanticColor(
-  ThemesDefault.themes.DARK,
-  ThemesDefault.colors.MOBILE_ANDROID_BUTTON_BACKGROUND_RIPPLE,
+  nativeDefault.themes.DARK,
+  nativeDefault.colors.MOBILE_ANDROID_BUTTON_BACKGROUND_RIPPLE,
 );
-const internal2 = ThemesDefault.internal;
+const internal2 = nativeDefault.internal;
 const semanticColor1 = internal2.resolveSemanticColor(
-  ThemesDefault.themes.LIGHT,
-  ThemesDefault.colors.MOBILE_ANDROID_BUTTON_BACKGROUND_RIPPLE,
+  nativeDefault.themes.LIGHT,
+  nativeDefault.colors.MOBILE_ANDROID_BUTTON_BACKGROUND_RIPPLE,
 );
-const systemVersionMajor = DCDDeviceManager.getSystemVersionMajor();
+const DeviceUtils = fn(4539);
+const systemVersionMajor = DeviceUtils.getSystemVersionMajor();
 let frozen = Object.freeze({ foreground: true });
 let closure_6 = Object.freeze({});
 const map = new Map();
-let result = set.fileFinishedImporting("design/void/Form/native/FormConstants.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("design/void/Form/native/FormConstants.tsx");
 
 export const FORM_ROW_VERTICAL_PADDING = num;
 export const RIPPLE_DARK_COLOR = semanticColor;
@@ -39,29 +40,24 @@ export const TitleStyleType = {
 export const getThemedRippleConfig = function getThemedRippleConfig(arg0) {
   ({ radius, cornerRadius, color } = arg0);
   ({ foreground, borderless } = arg0);
-  let obj = set2;
+  let obj = PlatformUtils2;
   if (obj.isAndroid()) {
     if (null != color) {
       const sum = "" + color.toString() + cornerRadius + radius + tmp5;
-      const value = map.get(sum);
+      value = map.get(sum);
       if (null != value) {
         return value;
       } else {
         const _Object = Object;
-        obj = { color: null, radius: null, borderless: null, cornerRadius: null, foreground: null };
-        obj[0] = color;
-        obj[1] = radius;
-        obj[2] = borderless;
-        obj[3] = cornerRadius;
-        obj[4] = tmp5;
+        obj = { color, radius, borderless, cornerRadius, foreground: tmp5 };
         const frozen = Object.freeze(obj);
         const result = obj3.set(sum, frozen);
         return frozen;
       }
       obj3 = map;
     } else {
-      AccessibilityAnnouncer.isThemeLight(theme.theme) ? semanticColor1 : semanticColor;
-      const tmpResult = AccessibilityAnnouncer;
+      shared.isThemeLight(ThemeStore.theme) ? semanticColor1 : semanticColor;
+      const tmpResult = shared;
     }
   } else {
     return closure_6;

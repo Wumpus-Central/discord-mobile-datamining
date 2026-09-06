@@ -1,16 +1,17 @@
 // discord_app/modules/activities/useActivityShelfItemData.tsx
 import useActivityShelfItemsDefault from "useActivityShelfItems.tsx";
-import closure_2 from "../../../_runtime/00019_noop.js";
+import noop from "../../../_runtime/metro/00019__.js";
 
-const result = require("set").fileFinishedImporting("modules/activities/useActivityShelfItemData.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/useActivityShelfItemData.tsx");
 
 export const useActivityShelfItemData = function useActivityShelfItemData(guild_id1, applicationId) {
-  importDefault = applicationId;
+  closure_0 = applicationId;
   const tmp = useActivityShelfItemsDefault({ guildId: guild_id1 });
-  dependencyMap = tmp;
+  closure_1 = tmp;
   const items = [tmp, applicationId];
-  return React.useMemo(() => {
-    let found = closure_1.find((application) => application.application.id === closure_0);
+  return noop.useMemo(() => {
+    let found = closure_1.find((application) => application.application.id === applicationId);
     if (found == null) {
       found = null;
     }

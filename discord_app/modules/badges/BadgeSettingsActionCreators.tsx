@@ -1,151 +1,124 @@
 // discord_app/modules/badges/BadgeSettingsActionCreators.tsx
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import { Endpoints } from "../../Constants.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
-const require = arg1;
-function _updateBadgeSettings() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c5 = 0;
-    c6 = 0;
-    c4 = 0;
-    const iter = (function* (arg0) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
+const require = fn;
+let closure_5 = async function _updateBadgeSettings(arg0, value) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
         if (arg0 === 1) {
-          throw arg1;
+          c6 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c6 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_2 = tmp3;
+          closure_1 = tmp7;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          ({ displayOrder: closure_129_0, hiddenBadges: closure_129_1 } = closure_0);
+          closure_129_2 = undefined;
+          closure_129_3 = undefined;
+          c5 = 1;
+          c6 = 1;
+          return { value: "PX_16", done: true };
         }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let obj4 = tmp3;
-              let callback2 = tmp7;
-              let callback;
-              callback2 = undefined;
-              ({ displayOrder: c0, hiddenBadges: c1 } = callback);
-              obj4 = undefined;
-              let body;
-              c5 = 1;
-              c6 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp7) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              if (null != callback) {
-                const obj2 = { display_order: null };
-                obj2[0] = callback;
-                let obj3 = obj2;
-              } else {
-                obj3 = {};
-              }
-              obj4 = {};
-              const merged = Object.assign(obj3);
-              if (null != callback2) {
-                const obj5 = { hidden_badges: null };
-                obj5[0] = callback2;
-                let obj6 = obj5;
-              } else {
-                obj6 = {};
-              }
-              const merged1 = Object.assign(obj6);
-              const _Object = Object;
-              if (0 === Object.keys(obj4).length) {
-                c6 = 3;
-                return { value: true, done: true };
-              } else {
-                let constants = 1;
-                const HTTP = callback(obj4[2]).HTTP;
-                const obj7 = { url: null, body: null, rejectWithError: true };
-                obj7[0] = constants.USER_BADGE_SETTINGS;
-                obj7[1] = obj4;
-                c5 = 3;
-                c6 = 1;
-                const obj8 = { value: null, done: false };
-                obj8[0] = HTTP.patch(obj7);
-                return obj8;
-              }
-            }
-          } else if (2 === tmp7) {
-            constants = 0;
-            constants = body;
-            obj3 = callback2(obj4[4]);
-            obj3.captureException(constants);
-            c6 = 3;
-            return { value: false, done: true };
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            constants = 0;
-            c6 = 3;
-            const obj9 = { value: null, done: true };
-            obj9[0] = arg1;
-            return obj9;
+      } else if (1 === tmp7) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj1 = { value, done: true };
+          return obj1;
+        } else {
+          if (null != closure_129_0) {
+            const obj2 = { display_order: closure_129_0 };
+            let obj3 = obj2;
           } else {
-            body = arg1;
-            obj = callback2(obj4[3]);
-            const obj10 = { type: "BADGE_SETTINGS_UPDATE", settings: null };
-            obj10[1] = body.body;
-            obj.dispatch(obj10);
-            constants = 0;
+            obj3 = {};
+          }
+          const obj4 = {};
+          const merged = Object.assign(obj3);
+          if (null != closure_129_1) {
+            const obj5 = { hidden_badges: closure_129_1 };
+            let obj6 = obj5;
+          } else {
+            obj6 = {};
+          }
+          const merged1 = Object.assign(obj6);
+          closure_129_2 = obj4;
+          const _Object = Object;
+          if (0 === Object.keys(closure_129_2).length) {
             c6 = 3;
             return { value: true, done: true };
-          }
-        } catch (tmp43) {
-          body = tmp43;
-          if (tmp4 === constants) {
-            c6 = tmp2;
-            throw tmp43;
           } else {
-            c5 = tmp;
+            c4 = 1;
+            const HTTP = closure_130_0(closure_130_2[2]).HTTP;
+            const request = { url: closure_130_4.USER_BADGE_SETTINGS, body: closure_129_2, rejectWithError: true };
+            c5 = 3;
+            c6 = 1;
+            const obj7 = { value: HTTP.patch(request), done: false };
+            return obj7;
           }
         }
+      } else if (2 === tmp7) {
+        c4 = 0;
+        closure_129_4 = closure_3;
+        obj3 = closure_130_1(closure_130_2[4]);
+        obj3.captureException(closure_129_4);
+        c6 = 3;
+        return { value: false, done: true };
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 0;
+        c6 = 3;
+        const obj8 = { value, done: true };
+        return obj8;
+      } else {
+        closure_129_3 = value;
+        obj = closure_130_1(closure_130_2[3]);
+        const obj9 = { type: "BADGE_SETTINGS_UPDATE", settings: closure_129_3.body };
+        obj.dispatch(obj9);
+        c4 = 0;
+        c6 = 3;
+        return { value: true, done: true };
       }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_5 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp43) {
+      closure_3 = tmp43;
+      if (tmp4 === c4) {
+        c6 = tmp2;
+        throw tmp43;
+      } else {
+        c5 = tmp;
+      }
+    }
   }
-  return applyArgumentsResult;
-}
-const result = require("set").fileFinishedImporting("modules/badges/BadgeSettingsActionCreators.tsx");
+};
+const Endpoints = fn(1074).Endpoints;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/badges/BadgeSettingsActionCreators.tsx");
 
-export const updateBadgeSettings = function updateBadgeSettings(arg0) {
+export const updateBadgeSettings = function updateBadgeSettings() {
   const self = this;
-  const apply = _updateBadgeSettings.apply;
+  const apply = closure_5.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

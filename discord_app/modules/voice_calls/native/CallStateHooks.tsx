@@ -1,14 +1,13 @@
 // discord_app/modules/voice_calls/native/CallStateHooks.tsx
-import closure_3 from "../../calls/ChannelRTCStore.tsx";
-import closure_4 from "../../../stores/AuthenticationStore.tsx";
-import closure_5 from "../../../stores/CallStore.tsx";
-import closure_6 from "../../../stores/RTCConnectionStore.tsx";
-import ME from "../../../Constants.tsx";
-import { ParticipantTypes } from "../../calls/CallConstants.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import ChannelRTCStore from "../../calls/ChannelRTCStore.tsx";
+import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
+import CallStore from "../../../stores/CallStore.tsx";
+import RTCConnectionStore from "../../../stores/RTCConnectionStore.tsx";
 
-const require = arg1;
-({ EMPTY_STRING_SNOWFLAKE_ID: error, RTCConnectionStates: closure_8 } = ME);
+const require = fn;
+const Constants = fn(1074);
+({ EMPTY_STRING_SNOWFLAKE_ID: closure_7, RTCConnectionStates: closure_8 } = Constants);
+const ParticipantTypes = fn(4581).ParticipantTypes;
 let obj = {};
 const merged = Object.assign({ initialized: false, callId: "PX_16" });
 obj = {
@@ -18,14 +17,15 @@ obj = {
   RINGING: "ringing",
   CONNECTED: "connected",
 };
-const result = require("set").fileFinishedImporting("modules/voice_calls/native/CallStateHooks.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_calls/native/CallStateHooks.tsx");
 
 export default function _default() {
   let tmp = arg0;
   if (arg0 === undefined) {
     tmp = closure_7;
   }
-  const _require = tmp;
+  _require = tmp;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -34,35 +34,33 @@ export default function _default() {
   if (arg2 === undefined) {
     flag2 = false;
   }
-  let id;
-  dependencyMap = undefined;
   let stateFromStores;
-  id = id.getId();
-  obj = initialize;
-  const items = [closure_5];
+  const id = AuthenticationStore.getId();
+  obj = require("initialize");
+  const items = [CallStore];
   const items1 = [tmp, id];
   const stateFromStoresArray = obj.useStateFromStoresArray(
     items,
     () => {
-      const call = closure_1_5.getCall(closure_0);
+      const call = CallStore.getCall(closure_0);
       if (null != call) {
         const ringing = call.ringing;
-        let found = ringing.filter((arg0) => arg0 !== closure_1);
+        let found = ringing.filter((item) => item !== id);
       } else {
         found = [];
       }
-      let initialized = closure_1_10.initialized;
+      let initialized = obj.initialized;
       if (!initialized) {
         initialized = found.length > 0;
       }
-      closure_1_10.initialized = initialized;
+      obj.initialized = initialized;
       return found;
     },
     items1,
   );
   const participants = stateFromStores.getParticipants(tmp);
   let found = participants.filter((type) => {
-    let tmp = type.type !== closure_1_9.ACTIVITY;
+    let tmp = type.type !== ParticipantTypes.ACTIVITY;
     if (tmp) {
       tmp = type.user.id !== id;
     }
@@ -70,40 +68,36 @@ export default function _default() {
   });
   const tmp3 = id(9215)();
   dependencyMap = tmp3;
-  const items2 = [getRTCConnectionId];
-  stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
-    items2,
-    getRTCConnectionId.getRTCConnectionId,
-    [],
-  );
-  const obj2 = initialize;
-  const items3 = [getRTCConnectionId];
+  const items2 = [RTCConnectionStore];
+  stateFromStores = require("initialize").useStateFromStores(items2, RTCConnectionStore.getRTCConnectionId, []);
+  const obj2 = require("initialize");
+  const items3 = [RTCConnectionStore];
   const items4 = [stateFromStores, tmp3, tmp];
-  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+  const stateFromStores1 = require("initialize").useStateFromStores(
     items3,
     () => {
-      let channelId;
+      channelId = undefined;
       if (channelId != null) {
         channelId = channelId.channelId;
       }
       if (channelId === closure_0) {
-        closure_1_10.initialized = true;
-        return closure_1_8.RTC_CONNECTED;
+        obj.initialized = true;
+        return constants.RTC_CONNECTED;
       } else {
         if (!tmp2) {
-          closure_1_10.initialized = false;
+          obj.initialized = false;
         }
-        closure_1_10.callId = stateFromStores;
-        const state = closure_1_6.getState();
-        let initialized = closure_1_10.initialized;
+        obj.callId = stateFromStores;
+        const state = RTCConnectionStore.getState();
+        let initialized = obj.initialized;
         if (!initialized) {
-          let tmp10 = state !== closure_1_8.DISCONNECTED;
+          let tmp10 = state !== constants.DISCONNECTED;
           if (tmp10) {
-            tmp10 = state !== closure_1_8.RTC_DISCONNECTED;
+            tmp10 = state !== constants.RTC_DISCONNECTED;
           }
           initialized = tmp10;
         }
-        closure_1_10.initialized = initialized;
+        obj.initialized = initialized;
         return state;
       }
     },

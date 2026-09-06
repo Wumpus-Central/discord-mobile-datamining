@@ -1,12 +1,11 @@
 // discord_app/records/VoiceStateRecord.tsx
-import toJSDefault from "../lib/Record.tsx";
+import Record from "../lib/Record.tsx";
 
-toJSDefault;
-const result = require("set").fileFinishedImporting("records/VoiceStateRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("records/VoiceStateRecord.tsx");
 class VoiceStateRecord extends tmp2 {
   constructor(arg0) {
     tmp2 = new VoiceStateRecord(tmp, new.target);
-    // ThrowIfThisInitialized (0x7c)
     tmp3 = global.userId || "";
     tmp2.userId = tmp3;
     tmp2.channelId = global.channelId || null;

@@ -1,17 +1,16 @@
 // discord_app/modules/app_icons/native/AppIconPremiumManager.tsx
-import timestampDefault from "../../debug/Logger.tsx";
-import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../stores/UserStore.tsx";
-import { getIconById } from "AppIconConstants.tsx";
-import { AnalyticEvents } from "../../../Constants.tsx";
-import { fetchCurrentAppIcon } from "AppIconUtils.tsx";
+import LoggerDefault from "../../debug/Logger.tsx";
+import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import UserStore from "../../../stores/UserStore.tsx";
+import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
-let require = arg1;
-let closure_7 = new timestampDefault("AppIconPremiumManager");
-const DEFAULT = require("FreemiumAppIconIds").FreemiumAppIconIds.DEFAULT;
+let require = fn;
+const getIconById = fn(9323).getIconById;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+let closure_7 = new LoggerDefault("AppIconPremiumManager");
+const DEFAULT = fn(9324).FreemiumAppIconIds.DEFAULT;
 let closure_9 = { ORPHANED: "orphaned", PREMIUM_LOST: "premium_lost" };
-initializeDefault;
 class AppIconPremiumManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -39,124 +38,117 @@ prototype["handleAppStateUpdate"] = function handleAppStateUpdate(state) {
 };
 prototype["validateAndResetIfNeeded"] = function validateAndResetIfNeeded() {
   const self = this;
-  return callback(function* () {
-    if (v0 === 2) {
-      v0 = 3;
-      HermesBuiltin.throwTypeError();
+  return (async (arg0, value) => {
+    if (v3 === 2) {
+      v3 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp4 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
       }
     } else {
       try {
-        v0 = 2;
+        v3 = 2;
         if (0 === currentUser) {
           if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
+            v3 = 3;
+            throw value;
           } else if (arg0 === 2) {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            v3 = 3;
+            obj = { value, done: true };
             return obj;
           } else {
             closure_3 = tmp5;
-            let id = tmp2;
-            let premiumType;
-            c1 = undefined;
-            id = undefined;
-            premiumType = currentUser.getCurrentUser();
-            let obj2 = closure_1_0(closure_1_2[8]);
+            let currentUser2;
+            closure_130_1 = undefined;
+            closure_130_2 = undefined;
+            currentUser2 = currentUser.getCurrentUser();
+            let obj2 = _undefined(tmp2[8]);
             currentUser = 1;
-            v0 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = obj2.fetchCurrentAppIcon();
+            v3 = 1;
+            const obj1 = { value: obj2.fetchCurrentAppIcon(), done: false };
             return obj1;
           }
         } else if (arg0 === 1) {
-          v0 = 3;
-          throw arg1;
+          v3 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          v0 = 3;
-          obj2 = { value: null, done: true };
-          obj2[0] = arg1;
+          v3 = 3;
+          obj2 = { value, done: true };
           return obj2;
         } else {
-          c1 = arg1;
-          if (c1 !== closure_1_8) {
-            id = v0(c1);
-            if (c1 !== id.id) {
+          closure_130_1 = value;
+          if (closure_130_1 !== DEFAULT) {
+            closure_130_2 = v3(closure_130_1);
+            if (closure_130_1 !== closure_130_2.id) {
               const _HermesInternal2 = HermesInternal;
-              closure_1_7.info("Icon " + closure_1_1 + " is no longer available, resetting to default");
-              premiumType = undefined;
-              if (closure_1_0 != null) {
-                premiumType = closure_1_0.premiumType;
+              logger.info("Icon " + closure_130_1 + " is no longer available, resetting to default");
+              let premiumType;
+              if (currentUser2 != null) {
+                premiumType = currentUser2.premiumType;
               }
+              _undefined = premiumType;
               if (premiumType == null) {
-                premiumType = undefined;
+                _undefined = undefined;
               }
-              closure_1_0.resetIcon(closure_1_1, premiumType, closure_1_9.ORPHANED);
-              v0 = 3;
-              obj = { value: null, done: true };
-              obj[0] = undefined;
+              closure_131_0.resetIcon(closure_130_1, _undefined, constants.ORPHANED);
+              v3 = 3;
+              obj = { value: undefined, done: true };
               return obj;
             } else {
-              const result = closure_1_1(closure_1_2[9]).canUsePremiumAppIcons(premiumType);
+              const result = _undefined2(tmp2[9]).canUsePremiumAppIcons(currentUser2);
               let isPremium = !result;
               if (!result) {
-                isPremium = closure_1_2.isPremium;
+                isPremium = closure_130_2.isPremium;
               }
               if (isPremium) {
                 const _HermesInternal = HermesInternal;
-                closure_1_7.info("User is not premium, resetting icon " + c1 + " to default");
+                logger.info("User is not premium, resetting icon " + closure_130_1 + " to default");
                 let premiumType1;
-                if (premiumType != null) {
-                  premiumType1 = premiumType.premiumType;
+                if (currentUser2 != null) {
+                  premiumType1 = currentUser2.premiumType;
                 }
-                c1 = premiumType1;
+                _undefined2 = premiumType1;
                 if (premiumType1 == null) {
-                  c1 = undefined;
+                  _undefined2 = undefined;
                 }
-                closure_1_0.resetIcon(c1, c1, closure_1_9.PREMIUM_LOST);
-                const tmp15 = c1;
+                closure_131_0.resetIcon(closure_130_1, _undefined2, constants.PREMIUM_LOST);
               }
-              const obj7 = closure_1_1(closure_1_2[9]);
+              const obj7 = _undefined2(tmp2[9]);
             }
           }
-          v0 = 3;
+          v3 = 3;
           return { value: "HermesInternal", done: null };
         }
       } catch (tmp39) {
-        v0 = tmp;
+        v3 = tmp;
         throw tmp39;
       }
     }
   })();
 };
-prototype["resetIcon"] = function resetIcon(arg0, c0, ORPHANED) {
-  const _require = arg0;
-  closure_1 = ORPHANED;
-  let obj = fetchCurrentAppIcon;
-  const setAppIconResult = require("AppIconUtils.tsx").setAppIcon(DEFAULT, c0);
-  require("AppIconUtils.tsx")
+prototype["resetIcon"] = function resetIcon(previous_icon_id, c0, ORPHANED) {
+  _require = previous_icon_id;
+  const reset_reason = ORPHANED;
+  let obj = require("AppIconUtils");
+  const setAppIconResult = require("AppIconUtils").setAppIcon(DEFAULT, c0);
+  require("AppIconUtils")
     .setAppIcon(DEFAULT, c0)
     .then(() => {
-      let obj = ORPHANED(closure_1_2[10]);
-      obj = { previous_icon_id: closure_0, reset_to_icon_id: closure_1_8, reset_reason: ORPHANED };
-      obj.track(closure_1_6.APP_ICON_AUTO_RESET, obj);
+      const obj = { previous_icon_id, reset_to_icon_id: DEFAULT, reset_reason };
+      obj.track(AnalyticEvents.APP_ICON_AUTO_RESET, obj);
     })
-    .catch((arg0) => {
-      logger.error("Failed to reset app icon:", arg0);
+    .catch((error) => {
+      logger.error("Failed to reset app icon:", error);
     });
 };
 const appIconPremiumManager = new AppIconPremiumManager();
-const tmp2 = new timestampDefault("AppIconPremiumManager");
-let result = require("set").fileFinishedImporting("modules/app_icons/native/AppIconPremiumManager.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/app_icons/native/AppIconPremiumManager.tsx");
 
 export default appIconPremiumManager;

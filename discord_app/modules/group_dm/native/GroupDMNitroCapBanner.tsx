@@ -1,20 +1,19 @@
 // discord_app/modules/group_dm/native/GroupDMNitroCapBanner.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import map from "../../../design/tokens/native/useToken.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import useToken from "../../../design/tokens/native/useToken.tsx";
 import LinearGradientDefault from "../../../../_runtime/04987_LinearGradient.js";
 import NitroWheelIcon from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import usePremiumPrimaryGradientColorsDefault from "../../premium/native/usePremiumPrimaryGradientColors.tsx";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-({ StyleSheet: c3, View: c4 } = get_ActivityIndicator);
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = [0.0065, 0.5046, 0.9196];
-createCacheKey = {
+require = fn;
+get_ActivityIndicator = fn(17);
+({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const locations = [0.0065, 0.5046, 0.9196];
+fn(4560);
+let createStyles = {
   wrapper: null,
   pill: null,
   iconContainer: null,
@@ -23,47 +22,47 @@ createCacheKey = {
   border: null,
   text: null,
 };
-createCacheKey = {
-  backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
-  paddingHorizontal: ThemesDefault.space.PX_16,
-  paddingTop: ThemesDefault.space.PX_8,
-  paddingBottom: ThemesDefault.space.PX_16,
+createStyles = {
+  backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
+  paddingHorizontal: nativeDefault.space.PX_16,
+  paddingTop: nativeDefault.space.PX_8,
+  paddingBottom: nativeDefault.space.PX_16,
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = {
+createStyles.wrapper = createStyles;
+createStyles.pill = {
   flexDirection: "row",
   alignItems: "center",
-  paddingVertical: ThemesDefault.space.PX_12,
-  paddingHorizontal: ThemesDefault.space.PX_12,
-  backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
+  paddingVertical: nativeDefault.space.PX_12,
+  paddingHorizontal: nativeDefault.space.PX_12,
+  backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
 };
 let obj1 = {
   flexDirection: "row",
   alignItems: "center",
-  paddingVertical: ThemesDefault.space.PX_12,
-  paddingHorizontal: ThemesDefault.space.PX_12,
-  backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
+  paddingVertical: nativeDefault.space.PX_12,
+  paddingHorizontal: nativeDefault.space.PX_12,
+  backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
 };
-createCacheKey[2] = {
-  width: ThemesDefault.modules.mobile.TABLE_ROW_ICON_SIZE,
+createStyles.iconContainer = {
+  width: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE,
   alignItems: "center",
   justifyContent: "center",
-  marginEnd: ThemesDefault.modules.mobile.TABLE_ROW_PADDING,
+  marginEnd: nativeDefault.modules.mobile.TABLE_ROW_PADDING,
 };
-const obj2 = {
-  width: ThemesDefault.modules.mobile.TABLE_ROW_ICON_SIZE,
+let obj2 = {
+  width: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE,
   alignItems: "center",
   justifyContent: "center",
-  marginEnd: ThemesDefault.modules.mobile.TABLE_ROW_PADDING,
+  marginEnd: nativeDefault.modules.mobile.TABLE_ROW_PADDING,
 };
-createCacheKey[3] = { flexDirection: "row", alignItems: "center", marginStart: ThemesDefault.space.PX_8 };
-createCacheKey[4] = { overflow: "hidden" };
-let obj3 = { flexDirection: "row", alignItems: "center", marginStart: ThemesDefault.space.PX_8 };
-createCacheKey[5] = { borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
-createCacheKey[6] = { flex: 1 };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj4 = { borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
-const result = require("set").fileFinishedImporting("modules/group_dm/native/GroupDMNitroCapBanner.tsx");
+createStyles.trailing = { flexDirection: "row", alignItems: "center", marginStart: nativeDefault.space.PX_8 };
+createStyles.gradientClip = { overflow: "hidden" };
+let obj3 = { flexDirection: "row", alignItems: "center", marginStart: nativeDefault.space.PX_8 };
+createStyles.border = { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE };
+createStyles.text = { flex: 1 };
+let closure_8 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/group_dm/native/GroupDMNitroCapBanner.tsx");
 
 export default function GroupDMNitroCapBanner(showLeadingIcon) {
   let flag = showLeadingIcon.showLeadingIcon;
@@ -71,43 +70,43 @@ export default function GroupDMNitroCapBanner(showLeadingIcon) {
   if (flag === undefined) {
     flag = true;
   }
-  const tmp = callback2();
-  let obj = map;
-  const token = obj.useToken(ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS);
-  obj = { style: items, children: null };
-  items = [tmp.wrapper, showLeadingIcon.wrapperStyle];
-  obj = { style: items1, children: null };
-  items1 = [tmp.pill, { borderRadius: token }];
-  obj1 = { style: items2, children: null };
-  items2 = [closure_3.absoluteFill, tmp.gradientClip, { borderRadius: token }];
-  const tmp10 = closure_3;
-  const tmp2 = require;
-  const tmp4 = importDefault;
-  const tmp6 = usePremiumPrimaryGradientColorsDefault();
-  const tmp9 = closure_6;
-  const items3 = [closure_3.absoluteFill, { opacity: 0.2 }];
-  obj1[1] = callback(LinearGradientDefault, {
-    style: items3,
+  const tmp = closure_8();
+  let obj = useToken;
+  const token = obj.useToken(nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS);
+  obj = { style: null, children: null };
+  const items = [tmp.wrapper, showLeadingIcon.wrapperStyle];
+  obj.style = items;
+  obj = { style: null, children: null };
+  const items1 = [tmp.pill, { borderRadius: token }];
+  obj.style = items1;
+  const obj1 = { style: null, children: null };
+  const items2 = [React3.absoluteFill, tmp.gradientClip, { borderRadius: token }];
+  obj1.style = items2;
+  const obj2 = {
+    style: null,
     useAngle: true,
     angle: 110.47,
     colors: usePremiumPrimaryGradientColorsDefault(),
-    locations: closure_7,
-  });
-  const items4 = [callback(closure_4, obj1), , , ,];
+    locations,
+  };
+  const items3 = [React3.absoluteFill, { opacity: 0.2 }];
+  obj2.style = items3;
+  obj1.children = hasOwnProperty(LinearGradientDefault, obj2);
+  const items4 = [hasOwnProperty(React4, obj1), , , ,];
   if (flag) {
-    const obj3 = { style: null, children: null };
-    obj3[0] = tmp.iconContainer;
-    const obj4 = { size: "md", color: null };
-    obj4[1] = ThemesDefault.colors.WHITE;
-    obj3[1] = tmp7(NitroWheelIcon.NitroWheelIcon, obj4);
+    const obj3 = { style: tmp.iconContainer, children: null };
+    const obj4 = { size: "md", color: nativeDefault.colors.WHITE };
+    obj3.children = tmp7(NitroWheelIcon.NitroWheelIcon, obj4);
     flag = tmp7(tmp8, obj3);
   }
   items4[1] = flag;
-  items4[2] = callback(closure_4, { style: tmp.text, children });
-  items4[3] = callback(closure_4, { style: tmp.trailing, children: trailing });
-  const items5 = [tmp10.absoluteFill, tmp.border, { borderRadius: token }];
-  items4[4] = callback(closure_4, { style: items5, pointerEvents: "none" });
-  obj[1] = items4;
-  obj[1] = tmp9(closure_4, obj);
-  return callback(closure_4, obj);
+  items4[2] = hasOwnProperty(React4, { style: tmp.text, children });
+  items4[3] = hasOwnProperty(React4, { style: tmp.trailing, children: trailing });
+  const obj7 = { style: null, pointerEvents: "none" };
+  const items5 = [React3.absoluteFill, tmp.border, { borderRadius: token }];
+  obj7.style = items5;
+  items4[4] = hasOwnProperty(React4, obj7);
+  obj.children = items4;
+  obj.children = timestampProducer(React4, obj);
+  return hasOwnProperty(React4, obj);
 }

@@ -1,28 +1,25 @@
 // discord_app/modules/rpc/server/events/VoiceSettingsEventsFactory.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import ME from "../../../../Constants.tsx";
-import RPC_SCOPE_CONFIG from "../../Constants.tsx";
+import Constants2 from "../../../../Constants.tsx";
+import Constants from "../../Constants.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-({ RPC_SCOPE_CONFIG: c3, RPC_LOCAL_SCOPE: c4 } = RPC_SCOPE_CONFIG);
-const RPCEvents = ME.RPCEvents;
-const result = set.fileFinishedImporting("modules/rpc/server/events/VoiceSettingsEventsFactory.tsx");
+({ RPC_SCOPE_CONFIG: c3, RPC_LOCAL_SCOPE: closure_4 } = Constants);
+const RPCEvents = Constants2.RPCEvents;
+const result = size.fileFinishedImporting("modules/rpc/server/events/VoiceSettingsEventsFactory.tsx");
 
 export default function createVoiceSettingsEventHandlers(arg0, arg1) {
-  const _require = arg0;
+  _require = arg0;
   closure_1 = arg1;
   let obj = {};
   obj = { scope: null, handler: null };
   obj = {};
-  const items = [
-    require("../../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx").OAuth2Scopes.RPC,
-    require("../../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx").OAuth2Scopes.RPC_VOICE_READ,
-  ];
+  const items = [require("OAuth2Scopes").OAuth2Scopes.RPC, require("OAuth2Scopes").OAuth2Scopes.RPC_VOICE_READ];
   obj[constants.ANY] = items;
-  obj[0] = obj;
-  obj[1] = function handler() {
+  obj.scope = obj;
+  obj.handler = function handler() {
     return (arg0) => {
       ({ prevState, dispatch } = arg0);
-      const tmp = callback();
+      const tmp = closure_1_0();
       if (!obj.isEqual(tmp, prevState)) {
         dispatch(tmp);
       }
@@ -31,7 +28,7 @@ export default function createVoiceSettingsEventHandlers(arg0, arg1) {
   };
   obj[RPCEvents.VOICE_SETTINGS_UPDATE] = obj;
   obj[RPCEvents.VOICE_SETTINGS_UPDATE_2] = {
-    scope: closure_4,
+    scope,
     handler(socket) {
       socket = socket.socket;
       return (prevState) => {
@@ -39,7 +36,7 @@ export default function createVoiceSettingsEventHandlers(arg0, arg1) {
         if (null == socket.application.id) {
           return prevState;
         } else {
-          const tmp4 = closure_1_1(tmp2.application.id);
+          const tmp4 = closure_1(tmp2.application.id);
           if (!obj.isEqual(tmp4, prevState)) {
             tmp(tmp4);
           }

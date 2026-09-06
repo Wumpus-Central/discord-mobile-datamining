@@ -1,21 +1,22 @@
 // discord_app/modules/experiments/trigger_points/VoiceCallTriggerPoint.tsx
-import experimentDefault from "../../voice_calls/GuildVoiceRingingExperiment.tsx";
-import experimentDefault2 from "../../voice_calls/PastVcActivityMessagesExperiment.tsx";
-import experimentDefault3 from "../../voice_calls/VoiceCallTriggerPointExperiment.tsx";
+import GuildVoiceRingingExperimentDefault from "../../voice_calls/GuildVoiceRingingExperiment.tsx";
+import PastVcActivityMessagesExperimentDefault from "../../voice_calls/PastVcActivityMessagesExperiment.tsx";
+import VoiceCallTriggerPointExperimentDefault from "../../voice_calls/VoiceCallTriggerPointExperiment.tsx";
 
 const items = [
-  experimentDefault,
-  require("experiment").VoiceChannelHoistingExperiment,
-  require("experiment").HangoutWindowExperiment,
-  experimentDefault2,
-  experimentDefault3,
-  require("experiment").VoiceChannelBadgeExperiment,
+  GuildVoiceRingingExperimentDefault,
+  fn(17335).VoiceChannelHoistingExperiment,
+  fn(16832).HangoutWindowExperiment,
+  PastVcActivityMessagesExperimentDefault,
+  VoiceCallTriggerPointExperimentDefault,
+  fn(13183).VoiceChannelBadgeExperiment,
 ];
-const commonTriggerPointConfiguration = new require("registeredExperimentIds").CommonTriggerPointConfiguration(
+const commonTriggerPointConfiguration = new fn(10809).CommonTriggerPointConfiguration(
   items,
-  require("ExperimentBuckets").CommonTriggerPoints.VOICE_CALL,
+  fn(4477).CommonTriggerPoints.VOICE_CALL,
   { location: "voice call initiated" },
 );
-const result = require("set").fileFinishedImporting("modules/experiments/trigger_points/VoiceCallTriggerPoint.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/experiments/trigger_points/VoiceCallTriggerPoint.tsx");
 
 export const VoiceCallTriggerPoint = commonTriggerPointConfiguration;

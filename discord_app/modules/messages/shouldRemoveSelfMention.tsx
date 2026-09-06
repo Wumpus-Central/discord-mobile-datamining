@@ -1,11 +1,11 @@
 // discord_app/modules/messages/shouldRemoveSelfMention.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
+import Constants from "../../Constants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const MessageTypesSets = ME.MessageTypesSets;
-const result = set.fileFinishedImporting("modules/messages/shouldRemoveSelfMention.tsx");
+const MessageTypesSets = Constants.MessageTypesSets;
+const result = size.fileFinishedImporting("modules/messages/shouldRemoveSelfMention.tsx");
 
-export default function shouldRemoveSelfMention(type) {
+export default function shouldRemoveSelfMention(type, arg1) {
   const SELF_MENTIONABLE_SYSTEM = MessageTypesSets.SELF_MENTIONABLE_SYSTEM;
   const hasItem = SELF_MENTIONABLE_SYSTEM.has(type.type);
   let tmp2 = !hasItem;

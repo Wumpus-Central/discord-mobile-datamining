@@ -1,11 +1,11 @@
 // discord_app/modules/stage_channels/StageChannelsConstants.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
-import getSystemLocale from "../../intl/index.native.tsx";
-import combinedDefault from "../../utils/HelpdeskUtils.tsx";
+import Constants from "../../Constants.tsx";
+import util from "../../intl/index.native.tsx";
+import HelpdeskUtilsDefault from "../../utils/HelpdeskUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const HelpdeskArticles = ME.HelpdeskArticles;
-const result = set.fileFinishedImporting("modules/stage_channels/StageChannelsConstants.tsx");
+const HelpdeskArticles = Constants.HelpdeskArticles;
+const result = size.fileFinishedImporting("modules/stage_channels/StageChannelsConstants.tsx");
 
 export const MAX_STAGE_TOPIC_LENGTH = 240;
 export const MAX_AUDIENCE_ROW_LIMIT = 4;
@@ -30,14 +30,14 @@ export const RequestToSpeakPermissionStates = {
   [3]: "ROLES",
 };
 export const getStagePublicInfoText = function getStagePublicInfoText() {
-  const intl = getSystemLocale.intl;
-  const items = [intl.string(getSystemLocale.t["9XlQ9W"]), , ,];
-  const intl2 = getSystemLocale.intl;
-  items[1] = intl2.string(getSystemLocale.t.lF0IbB);
-  const intl3 = getSystemLocale.intl;
-  const obj = { articleURL: combinedDefault.getArticleURL(HelpdeskArticles.STAGE_CHANNEL_GUIDELINES) };
-  items[2] = intl3.format(getSystemLocale.t.q2jZ6N, obj);
-  const intl4 = getSystemLocale.intl;
-  items[3] = intl4.string(getSystemLocale.t.xfb7ZU);
+  const intl = util.intl;
+  const items = [intl.string(util.t["9XlQ9W"]), , ,];
+  const intl2 = util.intl;
+  items[1] = intl2.string(util.t.lF0IbB);
+  const intl3 = util.intl;
+  const obj = { articleURL: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.STAGE_CHANNEL_GUIDELINES) };
+  items[2] = intl3.format(util.t.q2jZ6N, obj);
+  const intl4 = util.intl;
+  items[3] = intl4.string(util.t.xfb7ZU);
   return items;
 };

@@ -1,14 +1,13 @@
 // discord_common/js/packages/transition-group/TransitionChildMapping.tsx
-import closure_0 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const result = require("set").fileFinishedImporting(
-  "../discord_common/js/packages/transition-group/TransitionChildMapping.tsx",
-);
+const size = fn(2);
+const result = size.fileFinishedImporting("../discord_common/js/packages/transition-group/TransitionChildMapping.tsx");
 
 export const getChildMapping = function getChildMapping(children) {
   const obj = {};
   if (children) {
-    const Children = obj.Children;
+    const Children = noop.Children;
     const mapped = Children.map(children, (arg0) => arg0);
     if (mapped != null) {
       const item = mapped.forEach((key) => {
@@ -36,7 +35,6 @@ export const mergeChildMappings = function mergeChildMappings(children, childMap
   if (keys !== undefined) {
     arr2 = items;
     while (keys[tmp] !== undefined) {
-      let tmp12 = tmp4;
       if (obj.hasOwnProperty(tmp4)) {
         if (items.length <= 0) {
           continue;
@@ -53,13 +51,11 @@ export const mergeChildMappings = function mergeChildMappings(children, childMap
       continue;
     }
   }
-  obj1 = {};
+  const obj1 = {};
   for (const key10018 in obj) {
-    let tmp13 = key10018;
     if (obj.hasOwnProperty(key10018)) {
       for (let num = 0; num < obj[key10018].length; num = num + 1) {
         let tmp6 = obj[key10018][num];
-        let tmp7 = num;
         if (obj.hasOwnProperty(tmp6)) {
           let tmp8 = obj[tmp6];
         } else {
@@ -78,7 +74,6 @@ export const mergeChildMappings = function mergeChildMappings(children, childMap
   }
   for (let num2 = 0; num2 < arr2.length; num2 = num2 + 1) {
     let tmp10 = arr2[num2];
-    let tmp11 = num2;
     obj1[arr2[num2]] = obj.hasOwnProperty(tmp10) ? obj[tmp10] : obj[tmp10];
   }
   return obj1;

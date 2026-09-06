@@ -1,69 +1,63 @@
 // discord_app/modules/guild_role_subscriptions/GuildRoleSubscriptionSystemMessageConstants.tsx
-import set from "../../../_runtime/00002_set.js";
-import getSystemLocale from "../../intl/index.native.tsx";
-import StickerFormat from "../stickers/StickersTypes.tsx";
+import util from "../../intl/index.native.tsx";
+import StickersTypes from "../stickers/StickersTypes.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 let obj = {
   id: "781323471249604648",
-  format_type: StickerFormat.StickerFormat.APNG,
+  format_type: StickersTypes.StickerFormat.APNG,
   description: "Cheerful Choco jumps out of gift box",
   name: "Surprise",
 };
 let items = [obj, , , ,];
 obj = {
   id: "781324642736144424",
-  format_type: StickerFormat.StickerFormat.APNG,
+  format_type: StickersTypes.StickerFormat.APNG,
   description: "Cheerful Choco preens against window",
   name: "Affection",
 };
 items[1] = obj;
 obj = {
   id: "781323769960202280",
-  format_type: StickerFormat.StickerFormat.APNG,
+  format_type: StickersTypes.StickerFormat.APNG,
   description: "Cheerful Choco sparkles",
   name: "OMG",
 };
 items[2] = obj;
 items[3] = {
   id: "781324722394103808",
-  format_type: StickerFormat.StickerFormat.APNG,
+  format_type: StickersTypes.StickerFormat.APNG,
   description: "Cheerful Choco cheers",
   name: "Cheer",
 };
 const obj1 = {
   id: "781324722394103808",
-  format_type: StickerFormat.StickerFormat.APNG,
+  format_type: StickersTypes.StickerFormat.APNG,
   description: "Cheerful Choco cheers",
   name: "Cheer",
 };
 items[4] = {
   id: "813951723822645278",
-  format_type: StickerFormat.StickerFormat.APNG,
+  format_type: StickersTypes.StickerFormat.APNG,
   description: "Cheerful Choco gives thumbs up",
   name: "Nice",
 };
-const obj2 = {
-  id: "813951723822645278",
-  format_type: StickerFormat.StickerFormat.APNG,
-  description: "Cheerful Choco gives thumbs up",
-  name: "Nice",
-};
-const result = set.fileFinishedImporting(
+const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/GuildRoleSubscriptionSystemMessageConstants.tsx",
 );
 
 export const getJoinButtonLabels = function getJoinButtonLabels() {
-  const intl = getSystemLocale.intl;
-  const items = [intl.string(getSystemLocale.t.b6wEe6)];
-  const intl2 = getSystemLocale.intl;
-  items[1] = intl2.string(getSystemLocale.t.i8o9hX);
+  const intl = util.intl;
+  const items = [intl.string(util.t.b6wEe6)];
+  const intl2 = util.intl;
+  items[1] = intl2.string(util.t.i8o9hX);
   return items;
 };
 export const getRenewButtonLabels = function getRenewButtonLabels() {
-  const intl = getSystemLocale.intl;
-  const items = [intl.string(getSystemLocale.t.vqnToc)];
-  const intl2 = getSystemLocale.intl;
-  items[1] = intl2.string(getSystemLocale.t["9yh+dM"]);
+  const intl = util.intl;
+  const items = [intl.string(util.t.vqnToc)];
+  const intl2 = util.intl;
+  items[1] = intl2.string(util.t["9yh+dM"]);
   return items;
 };
 export const STICKERS = items;

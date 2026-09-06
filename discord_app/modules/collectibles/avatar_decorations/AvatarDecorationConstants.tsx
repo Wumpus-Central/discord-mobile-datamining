@@ -1,9 +1,9 @@
 // discord_app/modules/collectibles/avatar_decorations/AvatarDecorationConstants.tsx
-import set from "../../../../_runtime/00002_set.js";
-import frozen from "../../../../discord_common/js/shared/constants/web/AvatarConstants.tsx";
+import AvatarConstants from "../../../../discord_common/js/shared/constants/web/AvatarConstants.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const AvatarSizes = frozen.AvatarSizes;
-const result = set.fileFinishedImporting("modules/collectibles/avatar_decorations/AvatarDecorationConstants.tsx");
+const AvatarSizes = AvatarConstants.AvatarSizes;
+const result = size.fileFinishedImporting("modules/collectibles/avatar_decorations/AvatarDecorationConstants.tsx");
 
 export const DECORATION_TO_AVATAR_RATIO = 1.2;
 export const AvatarDecorationBorderSizes = {

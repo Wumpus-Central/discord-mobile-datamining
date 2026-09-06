@@ -1,12 +1,13 @@
 // discord_app/modules/parent_tools/hooks/useUserIsConsideredAdult.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import closure_2 from "../../../stores/UserStore.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useUserIsConsideredAdult.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/hooks/useUserIsConsideredAdult.tsx");
 
 export default function useUserIsConsideredAdult() {
-  const items = [closure_2];
+  const items = [UserStore];
   return initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let nsfwAllowed;

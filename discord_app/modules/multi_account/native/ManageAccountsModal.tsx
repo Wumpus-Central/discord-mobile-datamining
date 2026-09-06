@@ -1,122 +1,103 @@
 // discord_app/modules/multi_account/native/ManageAccountsModal.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import importAllResult from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_8 from "../../../stores/AuthenticationStore.tsx";
-import closure_9 from "../../../stores/StreamerModeStore.tsx";
-import closure_10 from "../../../stores/UserStore.tsx";
-import { MultiAccountTokenStatus } from "../MultiAccountStore.tsx";
-import MAX_ACCOUNTS from "../Constants.tsx";
-import { ManageAccountsScreens } from "ManageAccountsConstants.tsx";
-import ME from "../../../Constants.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createNativeStackNavigator from "../../../../_runtime/07913_createNativeStackNavigator.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
-import { NavigationStack } from "../../../design/components/Navigator/native/Navigator.native.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
+import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
+import timing from "../../../design/animation/reanimated/timing/timing.tsx";
+import actions_AlertActionCreatorsDefault from "../../../actions/native/AlertActionCreators.tsx";
+import HeaderShared from "../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
+import getNavigationModalPresentationDefault from "../../main_tabs_v2/native/utils/getNavigationModalPresentation.tsx";
+import MultiAccountActionCreatorsAll from "../MultiAccountActionCreators.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../../_runtime/metro/00019__.js";
+import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
+import StreamerModeStore from "../../../stores/StreamerModeStore.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
 
-const require = arg1;
+require = fn;
 function RemoveMultiAccountUserButton(user) {
   user = user.user;
   importDefault = undefined;
-  function _handlePressRemove() {
-    const self = this;
-    const tmp = closure_1_5(function* () {
-      if (v02 === 2) {
-        v02 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
+  closure_2 = async function _handlePressRemove(arg0, value) {
+    if (v3 === 2) {
+      v3 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        v3 = 2;
+        if (0 === v1) {
+          if (arg0 === 1) {
+            v3 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            v3 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            const obj1 = {
+              title: null,
+              body: null,
+              confirmText: null,
+              confirmColor: null,
+              cancelText: null,
+              isDismissable: true,
+            };
+            const intl = tmp2(1114).intl;
+            obj1.title = intl.string(tmp2(1114).t.n0Fbg6);
+            const intl2 = tmp2(1114).intl;
+            const obj2 = { username };
+            obj1.body = intl2.formatToPlainString(tmp2(1114).t.phEQmS, obj2);
+            const intl3 = tmp2(1114).intl;
+            obj1.confirmText = intl3.string(tmp2(1114).t.N86XcP);
+            obj1.confirmColor = tmp2(1178).ButtonColors.RED;
+            const intl4 = tmp2(1114).intl;
+            obj1.cancelText = intl4.string(tmp2(1114).t["ETE/oC"]);
+            v1 = 1;
+            v3 = 1;
+            const obj3 = { value: v1(4905).confirm(obj1), done: false };
+            return obj3;
+          }
+        } else if (arg0 === 1) {
+          v3 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          v3 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
+          if (value) {
+            obj = v3(12417);
+            obj.removeAccount(closure_128_0.id);
+          }
+          v3 = 3;
           return { value: "HermesInternal", done: null };
         }
-      } else {
-        try {
-          v02 = 2;
-          if (0 === v0) {
-            if (arg0 === 1) {
-              v02 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              v02 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const id = tmp2;
-              obj1 = {
-                title: null,
-                body: null,
-                confirmText: null,
-                confirmColor: null,
-                cancelText: null,
-                isDismissable: true,
-              };
-              const intl = closure_1_0(closure_1_3[18]).intl;
-              obj1[0] = intl.string(closure_1_0(closure_1_3[18]).t.n0Fbg6);
-              const intl2 = closure_1_0(closure_1_3[18]).intl;
-              const obj2 = { username: null };
-              obj2[0] = v0;
-              obj1[1] = intl2.formatToPlainString(closure_1_0(closure_1_3[18]).t.phEQmS, obj2);
-              const intl3 = closure_1_0(closure_1_3[18]).intl;
-              obj1[2] = intl3.string(closure_1_0(closure_1_3[18]).t.N86XcP);
-              obj1[3] = closure_1_0(closure_1_3[16]).ButtonColors.RED;
-              const intl4 = closure_1_0(closure_1_3[18]).intl;
-              obj1[4] = intl4.string(closure_1_0(closure_1_3[18]).t["ETE/oC"]);
-              v0 = 1;
-              v02 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = v0(closure_1_3[17]).confirm(obj1);
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            v02 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            v02 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          } else {
-            if (arg1) {
-              obj = v02(closure_1_3[19]);
-              obj.removeAccount(id.id);
-            }
-            v02 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp11) {
-          v02 = tmp;
-          throw tmp11;
-        }
+      } catch (tmp11) {
+        v3 = tmp;
+        throw tmp11;
       }
-    });
-    closure_2 = tmp;
-    const apply = tmp.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
     }
-    return applyArgumentsResult;
-  }
+  };
   let obj = user(504);
-  const items = [closure_9];
-  let stateFromStores = obj.useStateFromStores(items, () => obj.hidePersonalInformation);
-  const items1 = [closure_10];
+  const items = [StreamerModeStore];
+  let stateFromStores = obj.useStateFromStores(items, () => StreamerModeStore.hidePersonalInformation);
+  const items1 = [UserStore];
   const stateFromStores1 = user(504).useStateFromStores(items1, () => currentUser.getCurrentUser());
   let id;
   if (stateFromStores1 != null) {
     id = stateFromStores1.id;
   }
   if (id === user.id) {
-    return callback2(tmp(1178).Spacer, { size: 21 });
+    return closure_18(tmp(1178).Spacer, { size: 21 });
   } else {
     const username = user.username;
     importDefault = username;
@@ -129,10 +110,10 @@ function RemoveMultiAccountUserButton(user) {
     }
     obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
     let intl = tmp(1114).intl;
-    obj[1] = intl.string(tmp(1114).t.lSLMaU);
-    obj[2] = function handlePressRemove() {
+    obj.accessibilityLabel = intl.string(tmp(1114).t.lSLMaU);
+    obj.onPress = function handlePressRemove() {
       const self = this;
-      const apply = _handlePressRemove.apply;
+      const apply = closure_2.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
@@ -140,49 +121,43 @@ function RemoveMultiAccountUserButton(user) {
       }
       return applyArgumentsResult;
     };
-    obj = { color: null };
-    obj[0] = ThemesDefault.colors.ICON_FEEDBACK_CRITICAL;
-    obj[3] = callback2(tmp(15312).CircleMinusIcon, obj);
-    return callback2(tmp(5123).PressableOpacity, obj);
+    obj = { color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
+    obj.children = closure_18(tmp(15312).CircleMinusIcon, obj);
+    return closure_18(tmp(5123).PressableOpacity, obj);
   }
   let obj2 = user(504);
 }
 function ManageAccounts(isEditing) {
   isEditing = isEditing.isEditing;
   const navigation = isEditing.navigation;
-  closure_2 = undefined;
   let multiAccountUsers;
-  let currentUserId;
-  let sharedValue;
-  importAllResult = undefined;
-  closure_7 = undefined;
-  const tmp = callback4();
+  const tmp = closure_21();
   closure_2 = tmp;
   let obj = isEditing(multiAccountUsers[22]);
   multiAccountUsers = obj.useMultiAccountUsers().multiAccountUsers;
-  obj1 = isEditing(multiAccountUsers[15]);
-  const items = [closure_8];
-  currentUserId = obj1.useStateFromStoresObject(items, () => ({ currentUserId: id.getId() })).currentUserId;
+  let obj1 = isEditing(multiAccountUsers[15]);
+  const items = [AuthenticationStore];
+  const currentUserId = obj1.useStateFromStoresObject(items, () => ({ currentUserId: id.getId() })).currentUserId;
   let obj2 = isEditing(multiAccountUsers[23]);
-  sharedValue = obj2.useSharedValue(0);
+  const sharedValue = obj2.useSharedValue(0);
   let obj3 = isEditing(multiAccountUsers[23]);
   let fn = function l() {
     let obj = { width: null };
-    obj = { duration: closure_1_12 };
-    obj[0] = isEditing(multiAccountUsers[24]).withTiming(sharedValue.get(), obj);
+    obj = { duration };
+    obj.width = timing.withTiming(sharedValue.get(), obj);
     return obj;
   };
   obj = {
     withTiming: isEditing(multiAccountUsers[24]).withTiming,
     leadingWidth: sharedValue,
-    MANAGE_EDIT_TRANSITION_DURATION: closure_12,
+    MANAGE_EDIT_TRANSITION_DURATION: duration,
   };
   fn.__closure = obj;
   fn.__workletHash = 3389178545077;
-  fn.__initData = closure_23;
-  importAllResult = obj3.useAnimatedStyle(fn);
-  closure_7 = navigation(multiAccountUsers[25])(isEditing);
-  const effect = importAllResult.useEffect(() => {
+  fn.__initData = __initData;
+  noop = obj3.useAnimatedStyle(fn);
+  component = navigation(multiAccountUsers[25])(isEditing);
+  const effect = noop.useEffect(() => {
     let tmp2 = null != closure_7;
     if (tmp2) {
       tmp2 = tmp !== isEditing;
@@ -200,11 +175,11 @@ function ManageAccounts(isEditing) {
     data: multiAccountUsers,
     onRowMoved: function handleUserMove(arg0) {
       ({ from, to } = arg0);
-      lib(multiAccountUsers[19]).moveAccount(from, to);
+      closure_2(multiAccountUsers[19]).moveAccount(from, to);
     },
     disableSorting: !isEditing,
     wrapperStyles: tmp.sortableListView,
-    renderRow(user) {
+    renderRow(user, arg1) {
       closure_0 = user;
       let obj = {
         user,
@@ -217,68 +192,55 @@ function ManageAccounts(isEditing) {
       let fn = null;
       if (!closure_0) {
         fn = () => {
-          if (!closure_0) {
-            if (tmp.id !== closure_1_4) {
-              if (tmp.tokenStatus === closure_2_11.INVALID) {
-                closure_1_1.push(closure_2_17.LOGIN);
-                navigation(multiAccountUsers[26]).track(closure_2_16.LOGIN_VIEWED, {
-                  source: "multi_account_invalid_user",
-                });
-                const obj2 = navigation(multiAccountUsers[26]);
+          if (!isEditing) {
+            if (tmp.id !== currentUserId) {
+              if (tmp.tokenStatus === MultiAccountTokenStatus.INVALID) {
+                navigation.push(constants3.LOGIN);
+                AnalyticsUtilsDefault.track(constants2.LOGIN_VIEWED, { source: "multi_account_invalid_user" });
               } else {
-                callback(multiAccountUsers[19]).switchAccount(tmp.id, undefined, closure_2_14.MANAGE_ACCOUNTS_MODAL);
-                const obj = callback(multiAccountUsers[19]);
+                MultiAccountActionCreatorsAll.switchAccount(tmp.id, undefined, constants.MANAGE_ACCOUNTS_MODAL);
               }
             }
           }
         };
       }
-      obj[1] = fn;
-      obj = {
-        component: tmp2(tmp3[23]).View,
-        transitionEnter: true,
-        transitionLeave: true,
-        style: closure_6,
-        children: null,
-      };
+      obj.onPressUser = fn;
+      obj = { component: tmp2(tmp3[23]).View, transitionEnter: true, transitionLeave: true, style, children: null };
       let tmpResult = tmp5;
       if (closure_0) {
-        obj = { duration: null, children: null };
-        obj[0] = closure_1_12;
-        obj1 = { user: null };
-        obj1[0] = user;
+        obj = { duration, children: null };
+        const obj1 = { user };
         let tmp2Result = tmp2(tmp3[31]);
-        obj[1] = tmp(closure_1_22, obj1);
+        obj.children = tmp(RemoveMultiAccountUserButton, obj1);
         tmpResult = tmp(tmp2Result, obj);
       }
-      obj[4] = tmpResult;
-      obj[3] = closure_1_18(isEditing(multiAccountUsers[30]).TransitionGroup, obj);
+      obj.children = tmpResult;
+      obj.leading = closure_1_18(isEditing(multiAccountUsers[30]).TransitionGroup, obj);
       let obj2 = {
-        component: closure_7,
+        component,
         transitionEnter: true,
         transitionLeave: true,
         transitionAppear: true,
-        style: lib.trailingIconContainer,
+        style: closure_2.trailingIconContainer,
         children: null,
       };
       tmp2Result = tmp2(tmp3[31]);
-      const obj3 = { duration: closure_1_12, style: lib.trailingIcon, children: null };
+      const obj3 = { duration, style: closure_2.trailingIcon, children: null };
       if (closure_0) {
-        obj3[2] = tmp(tmp6(tmp3[32]).DragIcon, {});
+        obj3.children = tmp(tmp6(tmp3[32]).DragIcon, {});
         tmpResult = tmp(tmp2Result, obj3, "drag");
       } else {
-        const obj4 = { user: null };
-        obj4[0] = user;
-        obj3[2] = tmp(tmp6(tmp3[29]).AccountStatusIcon, obj4);
+        const obj4 = { user };
+        obj3.children = tmp(tmp6(tmp3[29]).AccountStatusIcon, obj4);
         tmpResult = tmp(tmp2Result, obj3, "status");
       }
-      obj2[5] = tmpResult;
-      obj[4] = closure_1_18(isEditing(multiAccountUsers[30]).TransitionGroup, obj2);
+      obj2.children = tmpResult;
+      obj.trailing = closure_1_18(isEditing(multiAccountUsers[30]).TransitionGroup, obj2);
       let num;
       if (closure_0) {
         num = 100;
       }
-      obj[5] = num;
+      obj.delayLongPress = num;
       return closure_1_18(navigation(multiAccountUsers[29]), obj, arg1);
     },
     keyboardShouldPersistTaps: "handled",
@@ -286,54 +248,57 @@ function ManageAccounts(isEditing) {
     scrollEnabled: true,
     footer: null,
   };
-  obj2 = { component: closure_7, transitionEnter: true, transitionLeave: true, transitionAppear: true, children: null };
+  obj2 = { component, transitionEnter: true, transitionLeave: true, transitionAppear: true, children: null };
   let tmp8Result = !isEditing;
   if (!isEditing) {
-    obj3 = { duration: null, children: null };
-    obj3[0] = closure_12;
+    obj3 = { duration, children: null };
     let obj4 = { leading: null, label: null, onPress: null };
-    const obj5 = { color: null };
-    obj5[0] = tmp6(tmp3[14]).colors.TEXT_LINK;
-    obj4[0] = tmp8(tmp2(tmp3[34]).CirclePlusIcon, obj5);
-    const obj6 = { style: null, text: null };
-    obj6[0] = tmp.addAccountLabel;
+    const obj5 = { color: tmp6(tmp3[14]).colors.TEXT_LINK };
+    obj4.leading = tmp8(tmp2(tmp3[34]).CirclePlusIcon, obj5);
+    const obj6 = { style: tmp.addAccountLabel, text: null };
     let intl = tmp2(tmp3[18]).intl;
-    obj6[1] = intl.string(tmp2(tmp3[18]).t.bPP34Q);
-    obj4[1] = tmp8(tmp2(tmp3[33]).FormRow.Label, obj6);
-    obj4[2] = function handlePressAddAccount() {
-      if (multiAccountUsers.length >= closure_1_13) {
+    obj6.text = intl.string(tmp2(tmp3[18]).t.bPP34Q);
+    obj4.label = tmp8(tmp2(tmp3[33]).FormRow.Label, obj6);
+    obj4.onPress = function handlePressAddAccount() {
+      if (multiAccountUsers.length >= map1) {
         let obj = { title: null, body: null, isDismissable: true };
-        const intl = isEditing(multiAccountUsers[18]).intl;
-        obj[0] = intl.string(isEditing(multiAccountUsers[18]).t.w7wfXi);
-        const intl2 = isEditing(multiAccountUsers[18]).intl;
-        obj = { maxNumAccounts: null };
-        obj[0] = tmp;
-        obj[1] = intl2.formatToPlainString(isEditing(multiAccountUsers[18]).t.WOyelG, obj);
-        navigation(multiAccountUsers[17]).show(obj);
-        const obj2 = navigation(multiAccountUsers[17]);
+        const intl = util.intl;
+        obj.title = intl.string(util.t.w7wfXi);
+        const intl2 = util.intl;
+        obj = { maxNumAccounts: tmp };
+        obj.body = intl2.formatToPlainString(util.t.WOyelG, obj);
+        actions_AlertActionCreatorsDefault.show(obj);
       } else {
-        navigation.push(closure_1_17.LOGIN);
-        obj = navigation(multiAccountUsers[26]);
-        obj.track(closure_1_16.LOGIN_VIEWED, { source: "multi_account_add_account" });
+        navigation.push(constants3.LOGIN);
+        obj = AnalyticsUtilsDefault;
+        obj.track(constants2.LOGIN_VIEWED, { source: "multi_account_add_account" });
       }
     };
-    obj3[1] = tmp8(tmp2(tmp3[33]).FormRow, obj4);
+    obj3.children = tmp8(tmp2(tmp3[33]).FormRow, obj4);
     tmp8Result = tmp8(tmp6(tmp3[31]), obj3);
     const tmp6Result = tmp6(tmp3[31]);
   }
-  obj2[4] = tmp8Result;
-  obj1[8] = closure_18(isEditing(multiAccountUsers[30]).TransitionGroup, obj2);
-  obj[2] = closure_18(navigation(multiAccountUsers[28]), obj1);
+  obj2.children = tmp8Result;
+  obj1.footer = closure_18(isEditing(multiAccountUsers[30]).TransitionGroup, obj2);
+  obj.children = closure_18(navigation(multiAccountUsers[28]), obj1);
   return closure_18(isEditing(multiAccountUsers[27]).SafeAreaPaddingView, obj);
 }
+const View = fn(17).View;
+const MultiAccountTokenStatus = fn(12413).MultiAccountTokenStatus;
+let Constants = fn(12414);
 ({
   MANAGE_EDIT_TRANSITION_DURATION: closure_12,
   MAX_ACCOUNTS: map1,
   MultiAccountSwitchLocation: closure_14,
-} = MAX_ACCOUNTS);
-({ AnalyticEvents: closure_16, AuthStates: closure_17 } = ME);
+} = Constants);
+const ManageAccountsScreens = fn(16376).ManageAccountsScreens;
+Constants = fn(1074);
+({ AnalyticEvents: closure_16, AuthStates: closure_17 } = Constants);
+const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
-let closure_20 = createNativeStackNavigator.createNativeStackNavigator();
+let NativeStackNavigator = fn(7913);
+let closure_20 = NativeStackNavigator.createNativeStackNavigator();
+fn(4560);
 let obj = {
   container: null,
   sortableListView: null,
@@ -341,49 +306,51 @@ let obj = {
   trailingIconContainer: null,
   trailingIcon: null,
 };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1, paddingTop: 16 };
-obj[0] = obj;
-createNativeStackNavigator = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-obj[1] = createNativeStackNavigator;
-createCacheKey = { color: ThemesDefault.colors.TEXT_LINK };
-obj[2] = createCacheKey;
-obj[3] = { width: 24, height: 24 };
-obj[4] = { position: "absolute" };
-let closure_21 = createCacheKey.createStyles(obj);
-let closure_23 = {
+obj = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1, paddingTop: 16 };
+obj.container = obj;
+NativeStackNavigator = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj.sortableListView = NativeStackNavigator;
+const createStyles = { color: nativeDefault.colors.TEXT_LINK };
+obj.addAccountLabel = createStyles;
+obj.trailingIconContainer = { width: 24, height: 24 };
+obj.trailingIcon = { position: "absolute" };
+let closure_21 = createStyles.createStyles(obj);
+const __initData = {
   code: "function ManageAccountsModalTsx1(){const{withTiming,leadingWidth,MANAGE_EDIT_TRANSITION_DURATION}=this.__closure;return{width:withTiming(leadingWidth.get(),{duration:MANAGE_EDIT_TRANSITION_DURATION})};}",
 };
-const memoResult = importAllResult.memo(function ManageAccountsModal(initialRouteName) {
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/multi_account/native/ManageAccountsModal.tsx");
+
+export default noop.memo(function ManageAccountsModal(initialRouteName) {
   let MANAGE_ACCOUNTS = initialRouteName.initialRouteName;
   if (MANAGE_ACCOUNTS === undefined) {
     MANAGE_ACCOUNTS = ManageAccountsScreens.MANAGE_ACCOUNTS;
   }
-  let _require;
+  _require = undefined;
   c1 = undefined;
   c2 = undefined;
-  let obj = NavigationStack;
+  let obj = require("Navigator");
   _require = obj.useAccessibilityNativeStackOptions();
-  [c1, c2] = callback(importAllResult.useState(false), 2);
+  [c1, c2] = _slicedToArray(noop.useState(false), 2);
   obj = {
     initialRouteName: MANAGE_ACCOUNTS,
     screenOptions(arg0) {
       const obj = {
         headerTitle(children) {
-          const merged = Object.assign(children, Object.create(null));
+          const merged = Object.assign(children, Object.assign({ children: 0 }));
           const merged1 = Object.assign(merged);
-          return callback2(callback(table[36]).GenericHeaderTitle, { title: children.children });
+          return closure_1_18(closure_1_0(dependencyMap[36]).GenericHeaderTitle, { title: children.children });
         },
         headerLeft: null,
         headerTitleAlign: "center",
       };
       let renderModalCloseImage;
-      if (!_undefined) {
-        renderModalCloseImage = callback(closure_1_3[36]).getRenderModalCloseImage(tmp);
-        const obj2 = callback(closure_1_3[36]);
+      if (!c1) {
+        renderModalCloseImage = HeaderShared.getRenderModalCloseImage(tmp);
       }
-      obj[1] = renderModalCloseImage;
-      let merged = Object.assign(callback);
-      let merged1 = Object.assign(_undefined(closure_1_3[37])());
+      obj.headerLeft = renderModalCloseImage;
+      let merged = Object.assign(closure_0);
+      let merged1 = Object.assign(getNavigationModalPresentationDefault());
       return obj;
     },
     children: null,
@@ -392,69 +359,66 @@ const memoResult = importAllResult.memo(function ManageAccountsModal(initialRout
     name: ManageAccountsScreens.MANAGE_ACCOUNTS,
     options() {
       const obj = { title: null, headerRight: null };
-      const intl = callback(closure_1_3[18]).intl;
-      obj[0] = intl.string(callback(closure_1_3[18]).t.WbFpq4);
-      const getRenderHeaderTextButton = callback(closure_1_3[36]).getRenderHeaderTextButton;
-      const intl2 = callback(closure_1_3[18]).intl;
+      const intl = util.intl;
+      obj.title = intl.string(util.t.WbFpq4);
+      const getRenderHeaderTextButton = HeaderShared.getRenderHeaderTextButton;
+      const intl2 = util.intl;
       const string = intl2.string;
-      const t = callback(closure_1_3[18]).t;
+      const t = util.t;
       if (c1) {
-        let renderHeaderTextButton = getRenderHeaderTextButton(string(t.i4jeWR), () => callback(false));
+        let renderHeaderTextButton = getRenderHeaderTextButton(string(t.i4jeWR), () => closure_1_2(false));
       } else {
-        renderHeaderTextButton = getRenderHeaderTextButton(string(t.bt75uw), () => callback(true));
+        renderHeaderTextButton = getRenderHeaderTextButton(string(t.bt75uw), () => closure_1_2(true));
       }
-      obj[1] = renderHeaderTextButton;
+      obj.headerRight = renderHeaderTextButton;
       return obj;
     },
     children(navigation) {
-      return closure_1_18(closure_1_24, { isEditing: c1, navigation: navigation.navigation });
+      return collapsedCategories(ManageAccounts, { isEditing, navigation: navigation.navigation });
     },
   };
   const items = [
-    callback2(closure_20.Screen, obj),
-    callback2(closure_20.Screen, {
+    closure_18(closure_20.Screen, obj),
+    closure_18(closure_20.Screen, {
       name: ManageAccountsScreens.ACCOUNT_DISABLED_OR_DELETION_SCHEDULED,
       options() {
         const obj = { title: null };
-        const intl = callback(1114).intl;
-        obj[0] = intl.string(callback(1114).t.WbFpq4);
+        const intl = closure_0(1114).intl;
+        obj.title = intl.string(closure_0(1114).t.WbFpq4);
         return obj;
       },
       children() {
-        return callback2(_undefined(15977), {
+        return closure_1_18(isEditing(15977), {
           handleLogin(login, password, undelete) {
-            let obj = callback(6593);
-            obj = { login, password, undelete };
+            isEditing(6593);
+            const obj = { login, password, undelete };
             obj.login(obj);
           },
-          onReset(arg0, arg1, arg2) {
-            callback(6593).loginReset(true);
+          onReset() {
+            isEditing(6593).loginReset(true);
           },
         });
       },
     }),
-    callback2(closure_20.Screen, {
+    closure_18(closure_20.Screen, {
       name: ManageAccountsScreens.LOGIN,
       options() {
         return { headerShown: false };
       },
       children() {
-        return callback2(_undefined(6942), { isMultiAccount: true });
+        return closure_1_18(isEditing(6942), { isMultiAccount: true });
       },
     }),
-    callback2(closure_20.Screen, {
+    closure_18(closure_20.Screen, {
       name: ManageAccountsScreens.MFA,
       options() {
         return { headerShown: false };
       },
       children() {
-        return callback2(_undefined(15976), { isMultiAccount: true });
+        return closure_1_18(isEditing(15976), { isMultiAccount: true });
       },
     }),
   ];
-  obj[2] = items;
-  return callback3(closure_20.Navigator, obj);
+  obj.children = items;
+  return closure_19(closure_20.Navigator, obj);
 });
-let result = require("set").fileFinishedImporting("modules/multi_account/native/ManageAccountsModal.tsx");
-
-export default memoResult;

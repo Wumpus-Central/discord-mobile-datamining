@@ -1,18 +1,16 @@
 // discord_app/actions/TypingActionCreators.tsx
-import set from "../../_runtime/00002_set.js";
-import dispatcherDefault from "../Dispatcher.tsx";
+import DispatcherDefault from "../Dispatcher.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("actions/TypingActionCreators.tsx");
+const result = size.fileFinishedImporting("actions/TypingActionCreators.tsx");
 
 export default {
   startTyping(id) {
-    let obj = dispatcherDefault;
-    obj = { type: "TYPING_START_LOCAL", channelId: id };
+    const obj = { type: "TYPING_START_LOCAL", channelId: id };
     obj.dispatch(obj);
   },
   stopTyping(id) {
-    let obj = dispatcherDefault;
-    obj = { type: "TYPING_STOP_LOCAL", channelId: id };
+    const obj = { type: "TYPING_STOP_LOCAL", channelId: id };
     obj.dispatch(obj);
   },
 };

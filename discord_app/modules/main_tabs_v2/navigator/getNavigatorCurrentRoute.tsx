@@ -1,14 +1,13 @@
 // discord_app/modules/main_tabs_v2/navigator/getNavigatorCurrentRoute.tsx
-import set from "../../../../_runtime/00002_set.js";
-import getRootNavigationRef from "../RootNavigationRef.native.tsx";
+import RootNavigationRef from "../RootNavigationRef.native.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/main_tabs_v2/navigator/getNavigatorCurrentRoute.tsx");
+const result = size.fileFinishedImporting("modules/main_tabs_v2/navigator/getNavigatorCurrentRoute.tsx");
 
 export default function getNavigatorCurrentRoute() {
   let rootNavigationRef = arg0;
   if (arg0 === undefined) {
-    rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
-    const obj2 = getRootNavigationRef;
+    rootNavigationRef = RootNavigationRef.getRootNavigationRef();
   }
   let isReadyResult;
   if (rootNavigationRef != null) {

@@ -1,23 +1,25 @@
 // discord_app/modules/user_settings/authorized_apps/native/AuthorizedAppScreen.tsx
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import useNavigation from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
+import useSettingNavigationRoute from "../../core/native/useSettingNavigationRoute.tsx";
+import UserSettingsAuthedAppDefault from "UserSettingsAuthedApp.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
-  "modules/user_settings/authorized_apps/native/AuthorizedAppScreen.tsx",
-);
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/authorized_apps/native/AuthorizedAppScreen.tsx");
 
 export default function AuthorizedAppScreen() {
-  let obj = settingNavigationRoute(6994);
-  settingNavigationRoute = obj.useSettingNavigationRoute();
-  const stackNavigation = settingNavigationRoute(1483).useStackNavigation();
+  let obj = useSettingNavigationRoute;
+  const settingNavigationRoute = obj.useSettingNavigationRoute();
+  const stackNavigation = useNavigation.useStackNavigation();
   const items = [stackNavigation, settingNavigationRoute.params.oauth2Token.application.name];
-  const layoutEffect = React.useLayoutEffect(() => {
+  const layoutEffect = noop.useLayoutEffect(() => {
     stackNavigation.setOptions({
       title: settingNavigationRoute.params.oauth2Token.application.name,
       headerShown: true,
     });
   }, items);
   obj = { oauth2Token: settingNavigationRoute.params.oauth2Token };
-  return jsx(stackNavigation(14941), { oauth2Token: settingNavigationRoute.params.oauth2Token });
+  return jsx(UserSettingsAuthedAppDefault, { oauth2Token: settingNavigationRoute.params.oauth2Token });
 }

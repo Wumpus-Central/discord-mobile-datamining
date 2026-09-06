@@ -1,28 +1,29 @@
 // discord_app/modules/a11y/native/useAccessibilityPress.tsx
-import closure_0 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const result = require("set").fileFinishedImporting("modules/a11y/native/useAccessibilityPress.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/a11y/native/useAccessibilityPress.tsx");
 
-export default function useAccessibilityPress(first) {
-  const React = first;
-  closure_1 = arg1;
-  closure_2 = React.useRef(first);
-  let items = [first];
-  const effect = React.useEffect(() => {
-    closure_2.current = closure_0;
+export default function useAccessibilityPress(set, label) {
+  const current = set;
+  closure_2 = noop.useRef(set);
+  let items = [set];
+  const effect = noop.useEffect(() => {
+    closure_2.current = current;
   }, items);
-  const items1 = [arg1];
-  return React.useMemo(() => {
+  const items1 = [label];
+  return noop.useMemo(() => {
     let obj = {
       onAccessibilityAction(nativeEvent) {
         if ("activate" === nativeEvent.nativeEvent.actionName) {
           ref.current();
         }
       },
-      accessibilityActions: items,
+      accessibilityActions: null,
     };
-    obj = { name: "activate", label: closure_1 };
-    items = [obj];
+    obj = { name: "activate", label };
+    const items = [obj];
+    obj.accessibilityActions = items;
     return obj;
   }, items1);
 }

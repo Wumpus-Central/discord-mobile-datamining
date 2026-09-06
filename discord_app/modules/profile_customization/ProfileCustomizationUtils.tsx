@@ -1,25 +1,23 @@
 // discord_app/modules/profile_customization/ProfileCustomizationUtils.tsx
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import getSystemLocale from "../../intl/index.native.tsx";
-import AccessibilityAnnouncer4 from "../../design/shared.tsx";
-import closure_2 from "../../../_runtime/00019_noop.js";
-import closure_3 from "../user_profile/UserProfileSettingsStore.tsx";
-import closure_4 from "../user_profile/UserProfileStore.tsx";
-import closure_5 from "../../stores/GuildMemberStore.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import util from "../../intl/index.native.tsx";
+import shared from "../../design/shared.tsx";
+import noop from "../../../_runtime/metro/00019__.js";
+import UserProfileSettingsStore from "../user_profile/UserProfileSettingsStore.tsx";
+import UserProfileStore from "../user_profile/UserProfileStore.tsx";
+import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/profile_customization/ProfileCustomizationUtils.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/profile_customization/ProfileCustomizationUtils.tsx");
 
 export const useAvatarsWithGuilds = function useAvatarsWithGuilds(arg0) {
   closure_0 = arg0;
   const items = [arg0];
-  return React.useMemo(() => {
-    const mutableAllGuildsAndMembers = closure_1_5.getMutableAllGuildsAndMembers();
+  return noop.useMemo(() => {
+    const mutableAllGuildsAndMembers = GuildMemberStore.getMutableAllGuildsAndMembers();
     const obj = {};
     for (const key10008 in mutableAllGuildsAndMembers) {
-      let tmp4 = key10008;
-      let tmp5 = closure_0;
       let tmp6 = mutableAllGuildsAndMembers[key10008][closure_0];
       let avatar;
       if (tmp6 != null) {
@@ -38,29 +36,26 @@ export const useAvatarsWithGuilds = function useAvatarsWithGuilds(arg0) {
       continue;
     }
     const entries = Object.entries(obj);
-    return entries.map((arg0) => arg0[1][0]);
+    return entries.map((item) => item[1][0]);
   }, items);
 };
 export const useGuildMemberAndUserPendingNameplate = function useGuildMemberAndUserPendingNameplate(user, guildId) {
-  const _require = user;
+  _require = user;
   dependencyMap = guildId;
-  let obj = initialize;
-  const items = [closure_5];
+  let obj = require("initialize");
+  const items = [GuildMemberStore];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let member = null;
     if (undefined !== closure_1) {
-      member = closure_1_5.getMember(tmp, user.id);
+      member = GuildMemberStore.getMember(tmp, user.id);
     }
     return member;
   });
-  const items1 = [closure_3];
-  const stateFromStoresObject = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(
-    items1,
-    () => ({
-      pendingNameplate: closure_1_3.getPendingChanges(closure_1).pendingNameplate,
-      pendingErrors: closure_1_3.getErrors(closure_1).nameplate,
-    }),
-  );
+  const items1 = [UserProfileSettingsStore];
+  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items1, () => ({
+    pendingNameplate: UserProfileSettingsStore.getPendingChanges(closure_1).pendingNameplate,
+    pendingErrors: UserProfileSettingsStore.getErrors(closure_1).nameplate,
+  }));
   obj = { userNameplate: user.nameplate, guildNameplate: null, pendingNameplate: null, pendingErrors: null };
   let nameplate;
   ({ pendingNameplate, pendingErrors } = stateFromStoresObject);
@@ -70,38 +65,35 @@ export const useGuildMemberAndUserPendingNameplate = function useGuildMemberAndU
       nameplate = collectibles.nameplate;
     }
   }
-  obj[1] = nameplate;
-  obj[2] = pendingNameplate;
-  obj[3] = pendingErrors;
+  obj.guildNameplate = nameplate;
+  obj.pendingNameplate = pendingNameplate;
+  obj.pendingErrors = pendingErrors;
   return obj;
 };
 export const useGuildMemberOrUserPendingDisplayNameStyles = function useGuildMemberOrUserPendingDisplayNameStyles(
   stateFromStores,
   guildId,
 ) {
-  const _require = stateFromStores;
+  _require = stateFromStores;
   dependencyMap = guildId;
-  let obj = initialize;
-  const items = [closure_5];
+  let obj = require("initialize");
+  const items = [GuildMemberStore];
   stateFromStores = obj.useStateFromStores(items, () => {
     let member = null;
     if (undefined !== closure_1) {
       member = null;
       if (null != closure_0) {
-        member = closure_1_5.getMember(tmp, tmp3.id);
+        member = GuildMemberStore.getMember(tmp, tmp3.id);
       }
     }
     return member;
   });
-  const items1 = [closure_3];
-  const stateFromStoresObject = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(
-    items1,
-    () => ({
-      pendingDisplayNameStyles: closure_1_3.getPendingChanges(closure_1).pendingDisplayNameStyles,
-      tryItOutDisplayNameStyles: closure_1_3.getTryItOutChanges().tryItOutDisplayNameStyles,
-      pendingErrors: closure_1_3.getErrors(closure_1).displayNameStyles,
-    }),
-  );
+  const items1 = [UserProfileSettingsStore];
+  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items1, () => ({
+    pendingDisplayNameStyles: UserProfileSettingsStore.getPendingChanges(closure_1).pendingDisplayNameStyles,
+    tryItOutDisplayNameStyles: UserProfileSettingsStore.getTryItOutChanges().tryItOutDisplayNameStyles,
+    pendingErrors: UserProfileSettingsStore.getErrors(closure_1).displayNameStyles,
+  }));
   let displayNameStyles;
   ({ pendingDisplayNameStyles, tryItOutDisplayNameStyles, pendingErrors } = stateFromStoresObject);
   if (stateFromStores != null) {
@@ -118,20 +110,20 @@ export const useGuildMemberOrUserPendingDisplayNameStyles = function useGuildMem
   if (stateFromStores != null) {
     displayNameStyles1 = stateFromStores.displayNameStyles;
   }
-  obj[1] = displayNameStyles1;
-  obj[2] = pendingDisplayNameStyles;
-  obj[3] = tryItOutDisplayNameStyles;
-  obj[4] = pendingErrors;
+  obj.guildDisplayNameStyles = displayNameStyles1;
+  obj.pendingDisplayNameStyles = pendingDisplayNameStyles;
+  obj.tryItOutDisplayNameStyles = tryItOutDisplayNameStyles;
+  obj.pendingErrors = pendingErrors;
   return obj;
 };
 export const useUserAvatarDecoration = function useUserAvatarDecoration(user) {
   user = user.user;
   const guildId = user.guildId;
-  const items = [closure_5];
+  const items = [GuildMemberStore];
   const stateFromStores = user(guildId[4]).useStateFromStores(items, () => {
     let member = null;
     if (null != guildId) {
-      member = closure_1_5.getMember(tmp, user.id);
+      member = GuildMemberStore.getMember(tmp, user.id);
     }
     return member;
   });
@@ -147,16 +139,16 @@ export const useUserAvatarDecoration = function useUserAvatarDecoration(user) {
 };
 export const useUserProfileEffect = function useUserProfileEffect(arg0) {
   ({ user: require, guildId: dependencyMap } = arg0);
-  const items = [closure_4];
+  const items = [UserProfileStore];
   return initialize.useStateFromStores(items, () => {
-    if (null == closure_1) {
-      const userProfile = closure_1_4.getUserProfile(user.id);
+    if (null == dependencyMap) {
+      const userProfile = UserProfileStore.getUserProfile(user.id);
       let profileEffect;
       if (userProfile != null) {
         profileEffect = userProfile.profileEffect;
       }
     } else {
-      const guildMemberProfile = closure_1_4.getGuildMemberProfile(user.id, tmp);
+      const guildMemberProfile = UserProfileStore.getGuildMemberProfile(user.id, tmp);
       if (guildMemberProfile != null) {
         profileEffect = guildMemberProfile.profileEffect;
       }
@@ -166,16 +158,16 @@ export const useUserProfileEffect = function useUserProfileEffect(arg0) {
 };
 export const useUserProfileFrame = function useUserProfileFrame(arg0) {
   ({ user: require, guildId: dependencyMap } = arg0);
-  const items = [closure_4];
+  const items = [UserProfileStore];
   return initialize.useStateFromStores(items, () => {
-    if (null == closure_1) {
-      const userProfile = closure_1_4.getUserProfile(user.id);
+    if (null == dependencyMap) {
+      const userProfile = UserProfileStore.getUserProfile(user.id);
       let profileFrame;
       if (userProfile != null) {
         profileFrame = userProfile.profileFrame;
       }
     } else {
-      const guildMemberProfile = closure_1_4.getGuildMemberProfile(user.id, tmp);
+      const guildMemberProfile = UserProfileStore.getGuildMemberProfile(user.id, tmp);
       if (guildMemberProfile != null) {
         profileFrame = guildMemberProfile.profileFrame;
       }
@@ -184,27 +176,27 @@ export const useUserProfileFrame = function useUserProfileFrame(arg0) {
   });
 };
 export const useAvatarDecorationSettings = function useAvatarDecorationSettings(arg0) {
-  const _require = arg0;
-  const items = [closure_3];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => ({
-    pendingAvatarDecoration: closure_1_3.getPendingChanges(closure_0).pendingAvatarDecoration,
-    errors: closure_1_3.getErrors(closure_0).avatarDecoration,
+  _require = arg0;
+  const items = [UserProfileSettingsStore];
+  return require("initialize").useStateFromStoresObject(items, () => ({
+    pendingAvatarDecoration: UserProfileSettingsStore.getPendingChanges(closure_0).pendingAvatarDecoration,
+    errors: UserProfileSettingsStore.getErrors(closure_0).avatarDecoration,
   }));
 };
 export const useProfileEffectSettings = function useProfileEffectSettings(arg0) {
-  const _require = arg0;
-  const items = [closure_3];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => ({
-    pendingProfileEffect: closure_1_3.getPendingChanges(closure_0).pendingProfileEffect,
-    errors: closure_1_3.getErrors(closure_0).profileEffect,
+  _require = arg0;
+  const items = [UserProfileSettingsStore];
+  return require("initialize").useStateFromStoresObject(items, () => ({
+    pendingProfileEffect: UserProfileSettingsStore.getPendingChanges(closure_0).pendingProfileEffect,
+    errors: UserProfileSettingsStore.getErrors(closure_0).profileEffect,
   }));
 };
 export const useProfileFrameSettings = function useProfileFrameSettings(arg0) {
-  const _require = arg0;
-  const items = [closure_3];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => ({
-    pendingProfileFrame: closure_1_3.getPendingChanges(closure_0).pendingProfileFrame,
-    errors: closure_1_3.getErrors(closure_0).profileFrame,
+  _require = arg0;
+  const items = [UserProfileSettingsStore];
+  return require("initialize").useStateFromStoresObject(items, () => ({
+    pendingProfileFrame: UserProfileSettingsStore.getPendingChanges(closure_0).pendingProfileFrame,
+    errors: UserProfileSettingsStore.getErrors(closure_0).profileFrame,
   }));
 };
 export const getProfilePreviewValue = function getProfilePreviewValue(arg0) {
@@ -272,26 +264,26 @@ export const showRemoveAvatar = function showRemoveAvatar(pendingAvatar, avatar)
   }
   return tmp2;
 };
-export const showRemoveBanner = function showRemoveBanner(arg0, banner) {
-  if (undefined === arg0) {
+export const showRemoveBanner = function showRemoveBanner(pendingBanner, banner) {
+  if (undefined === pendingBanner) {
     let tmp2 = null != banner;
   } else {
-    tmp2 = null != arg0;
+    tmp2 = null != pendingBanner;
   }
   return tmp2;
 };
-export const announcePendingAvatarChange = function announcePendingAvatarChange(set) {
-  if ("set" === set) {
-    const AccessibilityAnnouncer3 = AccessibilityAnnouncer4.AccessibilityAnnouncer;
-    const intl3 = getSystemLocale.intl;
-    AccessibilityAnnouncer3.announce(intl3.string(getSystemLocale.t.dyU5c5));
-  } else if ("remove" === set) {
-    const AccessibilityAnnouncer2 = AccessibilityAnnouncer4.AccessibilityAnnouncer;
-    const intl2 = getSystemLocale.intl;
-    AccessibilityAnnouncer2.announce(intl2.string(getSystemLocale.t["f1+oNk"]));
+export const announcePendingAvatarChange = function announcePendingAvatarChange(remove) {
+  if ("set" === remove) {
+    const AccessibilityAnnouncer3 = shared.AccessibilityAnnouncer;
+    const intl3 = util.intl;
+    AccessibilityAnnouncer3.announce(intl3.string(util.t.dyU5c5));
+  } else if ("remove" === remove) {
+    const AccessibilityAnnouncer2 = shared.AccessibilityAnnouncer;
+    const intl2 = util.intl;
+    AccessibilityAnnouncer2.announce(intl2.string(util.t["f1+oNk"]));
   } else {
-    const AccessibilityAnnouncer = AccessibilityAnnouncer4.AccessibilityAnnouncer;
-    const intl = getSystemLocale.intl;
-    AccessibilityAnnouncer.announce(intl.string(getSystemLocale.t["/b5nqj"]));
+    const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
+    const intl = util.intl;
+    AccessibilityAnnouncer.announce(intl.string(util.t["/b5nqj"]));
   }
 };

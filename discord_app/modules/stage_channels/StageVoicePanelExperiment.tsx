@@ -1,6 +1,6 @@
 // discord_app/modules/stage_channels/StageVoicePanelExperiment.tsx
-import set from "../../../_runtime/00002_set.js";
 import ApexExperiment from "../experiments/apex/index.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 let closure_0 = ApexExperiment.createApexExperiment({
   kind: "user",
@@ -8,7 +8,7 @@ let closure_0 = ApexExperiment.createApexExperiment({
   defaultConfig: { enabled: false },
   variations: { 0: { enabled: false }, 1: { enabled: true } },
 });
-const result = set.fileFinishedImporting("modules/stage_channels/StageVoicePanelExperiment.tsx");
+const result = size.fileFinishedImporting("modules/stage_channels/StageVoicePanelExperiment.tsx");
 
 export const useIsStageVoicePanelEnabled = function useIsStageVoicePanelEnabled(location) {
   return closure_0.useConfig({ location }).enabled;

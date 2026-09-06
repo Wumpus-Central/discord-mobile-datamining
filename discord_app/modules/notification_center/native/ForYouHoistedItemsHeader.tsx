@@ -1,17 +1,17 @@
 // discord_app/modules/notification_center/native/ForYouHoistedItemsHeader.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-noopAll;
-createCacheKey = { container: null };
-createCacheKey = { marginTop: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-let closure_2 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/notification_center/native/ForYouHoistedItemsHeader.tsx");
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { container: null };
+createStyles = { marginTop: nativeDefault.space.PX_16 };
+createStyles.container = createStyles;
+let closure_2 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/notification_center/native/ForYouHoistedItemsHeader.tsx");
 
 export const ForYouHoistedItemsHeader = function ForYouHoistedItemsHeader() {
-  return <View style={callback().container} />;
+  return <View style={closure_2().container} />;
 };

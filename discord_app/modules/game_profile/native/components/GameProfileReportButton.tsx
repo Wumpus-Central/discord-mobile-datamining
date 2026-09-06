@@ -1,31 +1,31 @@
 // discord_app/modules/game_profile/native/components/GameProfileReportButton.tsx
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js";
+import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
+import GameProfileAnalyticUtils from "../../GameProfileAnalyticUtils.tsx";
+import GameDetectionReportModal from "GameDetectionReportModal.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
-  "modules/game_profile/native/components/GameProfileReportButton.tsx",
-);
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileReportButton.tsx");
 
 export default function GameProfileReportButton(applicationId) {
   applicationId = applicationId.applicationId;
   const trackAction = applicationId.trackAction;
   const items = [applicationId, trackAction];
-  const callback = React.useCallback(() => {
-    let obj = trackAction(closure_1_2[2]);
+  const callback = noop.useCallback(() => {
+    let obj = ActionSheetActionCreatorsDefault;
     obj.hideActionSheet();
-    trackAction(applicationId(closure_1_2[3]).GameProfileTrackActionActions.Feedback);
+    trackAction(GameProfileAnalyticUtils.GameProfileTrackActionActions.Feedback);
     obj = { applicationId };
-    const obj2 = trackAction(closure_1_2[4]);
-    obj2.pushLazy(
-      applicationId(closure_1_2[6])(closure_1_2[5], closure_1_2.paths),
-      obj,
-      applicationId(closure_1_2[7]).MODAL_KEY,
-    );
+    const obj2 = ModalActionCreatorsDefault;
+    obj2.pushLazy(asyncRequireImpl(8898, dependencyMap.paths), obj, GameDetectionReportModal.MODAL_KEY);
   }, items);
   let obj = { variant: "secondary", size: "md", text: null, onPress: null };
   const intl = applicationId(1114).intl;
-  obj[2] = intl.string(applicationId(1114).t.qP2cXd);
-  obj[3] = callback;
+  obj.text = intl.string(applicationId(1114).t.qP2cXd);
+  obj.onPress = callback;
   return jsx(applicationId(4975).Button, { variant: "secondary", size: "md", text: null, onPress: null });
 }

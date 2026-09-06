@@ -1,16 +1,20 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemsScreen.tsx
-import _modDef14689 from "../../../settings/native/renderer/SettingLayout.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import { MobileUserSettings } from "../../core/native/SettingsConstants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayout.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
+require = fn;
+const MobileUserSettings = fn(7975).MobileUserSettings;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/user_settings/design_system/native/UserSettingsDesignSystemsScreen.tsx",
 );
 
 export default function SettingsDesignSystemsScreen() {
-  const node = React.useMemo(() => {
+  const node = noop.useMemo(() => {
+    let obj = { sections: null };
+    obj = { label: "Components", settings: null };
     const items = [, , , , , , , , , , , , , , ,];
     ({
       DESIGN_SYSTEMS_TEXT: arr[0],
@@ -30,7 +34,9 @@ export default function SettingsDesignSystemsScreen() {
       DESIGN_SYSTEM_PILE: arr[14],
       DESIGN_SYSTEM_HAPTICS: arr[15],
     } = constants);
-    const sections = [{ label: "Components", settings: items }, , ,];
+    obj.settings = items;
+    const items1 = [obj, , ,];
+    const obj1 = { label: "In Progress", settings: null };
     const items2 = [, , , ,];
     ({
       DESIGN_SYSTEM_SHEETS: arr3[0],
@@ -39,13 +45,19 @@ export default function SettingsDesignSystemsScreen() {
       DESIGN_SYSTEMS_TOAST: arr3[3],
       DESIGN_SYSTEMS_MODAL: arr3[4],
     } = constants);
-    sections[1] = { label: "In Progress", settings: items2 };
+    obj1.settings = items2;
+    items1[1] = obj1;
+    const obj2 = { label: "Experimental", settings: null };
     const items3 = [,];
     ({ DESIGN_SYSTEMS_BACKGROUND_BLUR_VIEW: arr4[0], DESIGN_SYSTEMS_EXPERIMENTAL_BUTTONS: arr4[1] } = constants);
-    sections[2] = { label: "Experimental", settings: items3 };
+    obj2.settings = items3;
+    items1[2] = obj2;
+    const obj3 = { label: "Legacy Audit", settings: null };
     const items4 = [constants.DESIGN_SYSTEMS_LEGACY_BUTTON];
-    sections[3] = { label: "Legacy Audit", settings: items4 };
-    return callback(table[3]).createList({ sections });
+    obj3.settings = items4;
+    items1[3] = obj3;
+    obj.sections = items1;
+    return obj.createList(obj);
   }, []);
-  return jsx(_modDef14689, { node });
+  return jsx(SettingLayoutDefault, { node });
 }

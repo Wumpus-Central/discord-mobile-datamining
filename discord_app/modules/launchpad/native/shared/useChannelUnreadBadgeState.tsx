@@ -1,44 +1,44 @@
 // discord_app/modules/launchpad/native/shared/useChannelUnreadBadgeState.tsx
-import closure_2 from "../../../recent_channels/NewChannelsStore.tsx";
-import closure_3 from "../../../../stores/ReadStateStore.tsx";
-import closure_4 from "../../../../stores/UserGuildSettingsStore.tsx";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { useOptInEnabledForGuild } from "../../../opt_in_channels/isOptInEnabled.tsx";
+import NewChannelsStore from "../../../recent_channels/NewChannelsStore.tsx";
+import ReadStateStore from "../../../../stores/ReadStateStore.tsx";
+import UserGuildSettingsStore from "../../../../stores/UserGuildSettingsStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/launchpad/native/shared/useChannelUnreadBadgeState.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/launchpad/native/shared/useChannelUnreadBadgeState.tsx");
 
 export const useChannelUnreadBadgeState = function useChannelUnreadBadgeState(channel, flag) {
-  const _require = channel;
-  dependencyMap = flag;
-  let obj = initialize;
-  const items = [closure_3];
+  _require = channel;
+  closure_129_0 = channel;
+  closure_129_1 = flag;
+  let obj = require("initialize");
+  const items = [ReadStateStore];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     const obj = {
-      ackMessageId: closure_1_3.ackMessageId(user.id),
+      ackMessageId: ReadStateStore.ackMessageId(user.id),
       unread: null,
       mentionCount: null,
       isMentionLowImportance: null,
     };
-    let hasUnreadResult = !closure_1;
-    if (!closure_1) {
+    let hasUnreadResult = !dependencyMap;
+    if (!dependencyMap) {
       hasUnreadResult = obj2.hasUnread(tmp.id);
     }
-    obj[1] = hasUnreadResult;
-    obj[2] = closure_1_3.getMentionCount(user.id);
-    obj[3] = closure_1_3.getIsMentionLowImportance(user.id);
+    obj.unread = hasUnreadResult;
+    obj.mentionCount = ReadStateStore.getMentionCount(user.id);
+    obj.isMentionLowImportance = ReadStateStore.getIsMentionLowImportance(user.id);
     return obj;
   });
   ({ unread, mentionCount, isMentionLowImportance } = stateFromStoresObject);
-  const items1 = [closure_2];
+  const items1 = [NewChannelsStore];
   const items2 = [,];
   ({ guild_id: arr3[0], id: arr3[1] } = channel);
-  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+  const stateFromStores = require("initialize").useStateFromStores(
     items1,
-    () => closure_1_2.shouldIndicateNewChannel(user.guild_id, user.id),
+    () => NewChannelsStore.shouldIndicateNewChannel(user.guild_id, user.id),
     items2,
   );
-  const obj2 = initialize;
+  const obj2 = require("initialize");
   obj = {
     unread,
     resolvedUnreadSetting: null,
@@ -47,38 +47,36 @@ export const useChannelUnreadBadgeState = function useChannelUnreadBadgeState(ch
     mentionCount: null,
     isMentionLowImportance: null,
   };
-  const optInEnabledForGuild = require("../../../opt_in_channels/isOptInEnabled.tsx").useOptInEnabledForGuild(
-    channel.guild_id,
+  const optInEnabledForGuild = require("isOptInEnabled").useOptInEnabledForGuild(channel.guild_id);
+  const obj3 = require("isOptInEnabled");
+  const items3 = [UserGuildSettingsStore];
+  obj.resolvedUnreadSetting = require("initialize").useStateFromStores(items3, () =>
+    UserGuildSettingsStore.resolveUnreadSetting(closure_0),
   );
-  const obj3 = useOptInEnabledForGuild;
-  const items3 = [closure_4];
-  obj[1] = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items3, () =>
-    closure_1_4.resolveUnreadSetting(closure_0),
-  );
-  obj[2] = stateFromStores;
-  obj[3] = optInEnabledForGuild;
-  obj[4] = mentionCount;
-  obj[5] = isMentionLowImportance;
+  obj.newChannel = stateFromStores;
+  obj.optInEnabled = optInEnabledForGuild;
+  obj.mentionCount = mentionCount;
+  obj.isMentionLowImportance = isMentionLowImportance;
   return obj;
 };
 export const useBaseChannelUnreadBadgeState = function useBaseChannelUnreadBadgeState(channel, muted) {
-  const _require = channel;
+  _require = channel;
   dependencyMap = muted;
-  const items = [closure_3];
-  return require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => {
+  const items = [ReadStateStore];
+  return require("initialize").useStateFromStoresObject(items, () => {
     const obj = {
-      ackMessageId: closure_1_3.ackMessageId(user.id),
+      ackMessageId: ReadStateStore.ackMessageId(user.id),
       unread: null,
       mentionCount: null,
       isMentionLowImportance: null,
     };
-    let hasUnreadResult = !closure_1;
-    if (!closure_1) {
+    let hasUnreadResult = !dependencyMap;
+    if (!dependencyMap) {
       hasUnreadResult = obj2.hasUnread(tmp.id);
     }
-    obj[1] = hasUnreadResult;
-    obj[2] = closure_1_3.getMentionCount(user.id);
-    obj[3] = closure_1_3.getIsMentionLowImportance(user.id);
+    obj.unread = hasUnreadResult;
+    obj.mentionCount = ReadStateStore.getMentionCount(user.id);
+    obj.isMentionLowImportance = ReadStateStore.getIsMentionLowImportance(user.id);
     return obj;
   });
 };

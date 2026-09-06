@@ -1,16 +1,16 @@
 // discord_app/modules/activities/handlePressJoinActivity.tsx
-import setDefault from "../../actions/AlertActionCreators.tsx";
+import AlertActionCreatorsDefault from "../../actions/AlertActionCreators.tsx";
 import getEmbeddedActivityJoinability from "utils/getEmbeddedActivityJoinability.tsx";
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../records/ApplicationRecord.tsx";
-import closure_5 from "../../stores/ChannelStore.tsx";
-import closure_6 from "../../stores/GuildStore.tsx";
-import closure_7 from "../../stores/PermissionStore.tsx";
-import closure_8 from "../../stores/UserStore.tsx";
-import closure_9 from "../../stores/VoiceStateStore.tsx";
-import closure_10 from "EmbeddedActivitiesStore.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import ApplicationRecord from "../../records/ApplicationRecord.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
+import GuildStore from "../../stores/GuildStore.tsx";
+import PermissionStore from "../../stores/PermissionStore.tsx";
+import UserStore from "../../stores/UserStore.tsx";
+import VoiceStateStore from "../../stores/VoiceStateStore.tsx";
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore.tsx";
 
-require = arg1;
+require = fn;
 function handlePressJoinActivity(arg0) {
   ({ embeddedActivityJoinability, handleCanJoin } = arg0);
   if (getEmbeddedActivityJoinability.EmbeddedActivityJoinability.CAN_JOIN === embeddedActivityJoinability) {
@@ -27,289 +27,198 @@ function handlePressJoinActivity(arg0) {
   ) {
     let obj = { title: null, body: null, hideActionSheet: false };
     const intl7 = tmp(1114).intl;
-    obj[0] = intl7.string(tmp(1114).t.PtobXW);
+    obj.title = intl7.string(tmp(1114).t.PtobXW);
     const intl8 = tmp(1114).intl;
-    obj[1] = intl8.string(tmp(1114).t.UXoQTp);
-    setDefault.show(obj);
-    const obj7 = setDefault;
+    obj.body = intl8.string(tmp(1114).t.UXoQTp);
+    AlertActionCreatorsDefault.show(obj);
   } else if (tmp(9531).EmbeddedActivityJoinability.ACTIVITY_NOT_SUPPORTED_ON_OS === embeddedActivityJoinability) {
     obj = { title: null, body: null, hideActionSheet: false };
     const intl5 = tmp(1114).intl;
-    obj[0] = intl5.string(tmp(1114).t.PtobXW);
+    obj.title = intl5.string(tmp(1114).t.PtobXW);
     const intl6 = tmp(1114).intl;
-    obj[1] = intl6.string(tmp(1114).t.uGDCcw);
-    setDefault.show(obj);
-    const obj5 = setDefault;
+    obj.body = intl6.string(tmp(1114).t.uGDCcw);
+    AlertActionCreatorsDefault.show(obj);
   } else if (tmp(9531).EmbeddedActivityJoinability.ACTIVITY_AGE_GATED === embeddedActivityJoinability) {
-    let obj2 = setDefault;
-    obj1 = { title: null, body: null, hideActionSheet: false };
+    let obj2 = AlertActionCreatorsDefault;
+    const obj1 = { title: null, body: null, hideActionSheet: false };
     const intl3 = tmp(1114).intl;
-    obj1[0] = intl3.string(tmp(1114).t.PtobXW);
+    obj1.title = intl3.string(tmp(1114).t.PtobXW);
     const intl4 = tmp(1114).intl;
-    obj1[1] = intl4.string(tmp(1114).t["4WuFRE"]);
+    obj1.body = intl4.string(tmp(1114).t["4WuFRE"]);
     obj2.show(obj1);
   } else {
-    obj = setDefault;
+    obj = AlertActionCreatorsDefault;
     obj2 = { title: null, body: null, hideActionSheet: false };
     const intl = tmp(1114).intl;
-    obj2[0] = intl.string(tmp(1114).t.PtobXW);
+    obj2.title = intl.string(tmp(1114).t.PtobXW);
     const intl2 = tmp(1114).intl;
-    obj2[1] = intl2.string(tmp(1114).t.FUCQco);
+    obj2.body = intl2.string(tmp(1114).t.FUCQco);
     obj.show(obj2);
   }
 }
-function _maybeJoinEmbeddedActivity() {
-  let self = this;
-  let tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c3 = 0;
-    c4 = 0;
-    const iter = (function* (arg0) {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
+let closure_12 = async function _maybeJoinEmbeddedActivity(arg0, value) {
+  if (1 === tmp5) {
+    if (arg0 === 1) {
+      c4 = 3;
+      throw value;
+    } else if (arg0 === 2) {
+      c4 = 3;
+      return { value, done: true };
+    } else {
+      const embeddedActivitiesForChannel = closure_130_10.getEmbeddedActivitiesForChannel(closure_129_0);
+      closure_129_8 = embeddedActivitiesForChannel.find((applicationId) => {
+        let tmp = applicationId.applicationId === closure_1_1;
+        if (tmp) {
+          tmp = null == closure_1_2 || applicationId.launchId === tmp2;
+          const tmp4 = null == closure_1_2 || applicationId.launchId === tmp2;
+        }
+        return tmp;
+      });
+      closure_129_9 = closure_129_3;
+      if (null == closure_129_9) {
+        let obj4 = closure_130_1(closure_130_2[12]);
+        c3 = 2;
+        c4 = 1;
+        return { value: obj4.fetchApplication(closure_129_1), done: false };
+      }
+    }
+  } else if (arg0 === 1) {
+    c4 = 3;
+    throw value;
+  } else if (arg0 === 2) {
+    c4 = 3;
+    return { value, done: true };
+  } else {
+    closure_129_10 = value;
+    closure_129_9 = closure_130_4.createFromServer(closure_129_10);
+  }
+  if (null != closure_129_8) {
+    if (null != closure_129_9) {
+      const currentUser = closure_130_8.getCurrentUser();
+      let id;
+      if (currentUser != null) {
+        id = currentUser.id;
+      }
+      let obj3 = { embeddedActivityJoinability: null, handleCanJoin: null };
+      obj4 = {
+        userId: id,
+        application: closure_129_9,
+        channelId: closure_129_0,
+        currentUser,
+        isActivitiesEnabledForCurrentPlatform: null,
+        ChannelStore: null,
+        VoiceStateStore: null,
+        PermissionStore: null,
+        GuildStore: null,
+      };
+      obj3 = closure_130_0(closure_130_2[13]);
+      obj4.isActivitiesEnabledForCurrentPlatform = obj3.getIsActivitiesEnabledForCurrentPlatform();
+      obj4.ChannelStore = closure_130_5;
+      obj4.VoiceStateStore = closure_130_9;
+      obj4.PermissionStore = closure_130_7;
+      obj4.GuildStore = closure_130_6;
+      obj3.embeddedActivityJoinability = closure_130_1(closure_130_2[8])(obj4);
+      obj3.handleCanJoin = function handleCanJoin() {
+        const self = this;
+        const apply = closure_12.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      };
+      closure_130_11(obj3);
+      closure_130_1(closure_130_2[8]);
+    }
+  }
+  await "HermesInternal";
+  closure_1 = tmp2;
+  ({
+    channelId: closure_129_0,
+    applicationId: closure_129_1,
+    launchId: closure_129_2,
+    inputApplication: closure_129_3,
+    analyticsLocations: closure_129_4,
+    launchingComponentId: closure_129_5,
+    sectionName: closure_129_6,
+    inviterUserId: closure_129_7,
+  } = closure_0);
+  closure_129_12 = function _handleCanJoin() {
+    const self = this;
+    const tmp = c3(function* (arg0, value) {
+      if (c0 === 2) {
+        c0 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp3 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          let obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
         }
       } else {
         try {
-          c4 = 2;
-          if (0 === c3) {
+          c0 = 2;
+          if (0 === v1) {
             if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
+              c0 = 3;
+              throw value;
             } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              c0 = 3;
+              obj = { value, done: true };
               return obj;
-            } else {
-              dependencyMap = tmp5;
-              let callback2 = tmp2;
-              let callback;
-              callback2 = undefined;
-              dependencyMap = undefined;
-              c3 = undefined;
-              c4 = undefined;
-              c5 = undefined;
-              c6 = undefined;
-              c7 = undefined;
-              ({
-                channelId: c0,
-                applicationId: c1,
-                launchId: c2,
-                inputApplication: c3,
-                analyticsLocations: c4,
-                launchingComponentId: c5,
-                sectionName: c6,
-                inviterUserId: c7,
-              } = callback);
-              let currentUser;
-              closure_9 = undefined;
-              let embeddedActivitiesForChannel;
-              let id;
-              function _handleCanJoin() {
-                const self = this;
-                const tmp = v2(function* () {
-                  if (c0 === 2) {
-                    c0 = 3;
-                    HermesBuiltin.throwTypeError();
-                  } else if (tmp3 === 3) {
-                    if (arg0 === 1) {
-                      throw arg1;
-                    } else if (arg0 === 2) {
-                      let obj = { value: null, done: true };
-                      obj[0] = arg1;
-                      return obj;
-                    } else {
-                      return { value: "HermesInternal", done: null };
-                    }
-                  } else {
-                    try {
-                      c0 = 2;
-                      if (0 === v0) {
-                        if (arg0 === 1) {
-                          c0 = 3;
-                          throw arg1;
-                        } else if (arg0 === 2) {
-                          c0 = 3;
-                          obj = { value: null, done: true };
-                          obj[0] = arg1;
-                          return obj;
-                        } else if (null != closure_1_8) {
-                          obj1 = {
-                            applicationId: null,
-                            activityChannelId: null,
-                            locationObject: null,
-                            analyticsLocations: null,
-                            componentId: null,
-                            sectionName: null,
-                            inviterUserId: null,
-                          };
-                          obj1[0] = closure_1_8.applicationId;
-                          obj1[1] = c0;
-                          obj1[2] = {};
-                          obj1[3] = closure_1_4;
-                          obj1[4] = closure_1_5;
-                          obj1[5] = closure_1_6;
-                          obj1[6] = closure_1_7;
-                          v0 = 1;
-                          c0 = 1;
-                          const obj2 = { value: null, done: false };
-                          obj2[0] = v0(closure_1_2[14])(obj1);
-                          return obj2;
-                        }
-                      } else if (arg0 === 1) {
-                        c0 = 3;
-                        throw arg1;
-                      } else if (arg0 === 2) {
-                        c0 = 3;
-                        obj = { value: null, done: true };
-                        obj[0] = arg1;
-                        return obj;
-                      }
-                      c0 = 3;
-                      return { value: "HermesInternal", done: null };
-                    } catch (tmp13) {
-                      c0 = tmp;
-                      throw tmp13;
-                    }
-                  }
-                });
-                closure_12 = tmp;
-                const apply = tmp.apply;
-                if (typeof apply === "unknown") {
-                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                } else {
-                  applyArgumentsResult = apply(self, arguments);
-                }
-                return applyArgumentsResult;
-              }
-              c3 = 1;
-              c4 = 1;
-              return { value: "PX_16", done: true };
+            } else if (null != applicationId) {
+              const obj1 = {
+                applicationId: applicationId.applicationId,
+                activityChannelId,
+                locationObject: {},
+                analyticsLocations,
+                componentId,
+                sectionName,
+                inviterUserId,
+              };
+              v1 = 1;
+              c0 = 1;
+              const obj2 = { value: v1(closure_1_2[14])(obj1), done: false };
+              return obj2;
             }
-          } else {
-            if (1 === tmp5) {
-              if (arg0 === 1) {
-                c4 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c4 = 3;
-                obj1 = { value: null, done: true };
-                obj1[0] = arg1;
-                return obj1;
-              } else {
-                embeddedActivitiesForChannel = embeddedActivitiesForChannel.getEmbeddedActivitiesForChannel(callback);
-                currentUser = embeddedActivitiesForChannel.find((applicationId) => {
-                  let tmp = applicationId.applicationId === c1;
-                  if (tmp) {
-                    tmp = null == c2 || applicationId.launchId === tmp2;
-                    const tmp4 = null == c2 || applicationId.launchId === tmp2;
-                  }
-                  return tmp;
-                });
-                closure_9 = c3;
-                if (null == closure_9) {
-                  let obj4 = callback2(7163);
-                  c3 = 2;
-                  c4 = 1;
-                  let obj2 = { value: null, done: false };
-                  obj2[0] = obj4.fetchApplication(callback2);
-                  return obj2;
-                }
-              }
-            } else if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              embeddedActivitiesForChannel = arg1;
-              closure_9 = c4.createFromServer(embeddedActivitiesForChannel);
-            }
-            if (null != currentUser) {
-              if (null != closure_9) {
-                id = currentUser.getCurrentUser();
-                id = undefined;
-                if (id != null) {
-                  id = id.id;
-                }
-                let obj3 = { embeddedActivityJoinability: null, handleCanJoin: null };
-                obj4 = {
-                  userId: null,
-                  application: null,
-                  channelId: null,
-                  currentUser: null,
-                  isActivitiesEnabledForCurrentPlatform: null,
-                  ChannelStore: null,
-                  VoiceStateStore: null,
-                  PermissionStore: null,
-                  GuildStore: null,
-                };
-                obj4[0] = id;
-                obj4[1] = closure_9;
-                obj4[2] = callback;
-                obj4[3] = id;
-                obj3 = callback(9502);
-                obj4[4] = obj3.getIsActivitiesEnabledForCurrentPlatform();
-                obj4[5] = c5;
-                obj4[6] = closure_9;
-                obj4[7] = c7;
-                obj4[8] = c6;
-                obj3[0] = callback2(9531)(obj4);
-                obj3[1] = function handleCanJoin() {
-                  const self = this;
-                  const apply = _handleCanJoin.apply;
-                  if (typeof apply === "unknown") {
-                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                  } else {
-                    applyArgumentsResult = apply(self, arguments);
-                  }
-                  return applyArgumentsResult;
-                };
-                id(obj3);
-                const tmp49 = id;
-                const tmp52 = callback2(9531);
-              }
-            }
-            c4 = 3;
-            return { value: "HermesInternal", done: null };
+          } else if (arg0 === 1) {
+            c0 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c0 = 3;
+            obj = { value, done: true };
+            return obj;
           }
-        } catch (tmp31) {
-          c4 = tmp;
-          throw tmp31;
+          c0 = 3;
+          return { value: "HermesInternal", done: null };
+        } catch (tmp13) {
+          c0 = tmp;
+          throw tmp13;
         }
       }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_12 = tmp;
-  let apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-let result = require("set").fileFinishedImporting("modules/activities/handlePressJoinActivity.tsx");
+    });
+    closure_12 = tmp;
+    const apply = tmp.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
+  };
+  return "PX_16";
+};
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/activities/handlePressJoinActivity.tsx");
 
 export default handlePressJoinActivity;
-export const maybeJoinEmbeddedActivity = function maybeJoinEmbeddedActivity(arg0) {
+export const maybeJoinEmbeddedActivity = function maybeJoinEmbeddedActivity() {
   const self = this;
-  const apply = _maybeJoinEmbeddedActivity.apply;
+  const apply = closure_12.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

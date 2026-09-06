@@ -1,89 +1,86 @@
 // discord_app/modules/channel_following/native/components/ChannelFollowSuccessAlert.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import getSystemLocale from "../../../../intl/index.native.tsx";
+import _modDef12 from "../../../../../_runtime/metro/00012__.js";
+import util from "../../../../intl/index.native.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
-import componentDidMountDefault from "../../../../components_native/common/Alert.tsx";
-import { Image } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import { AccessibilityAnnouncer } from "../../../../design/shared.tsx";
+import common_AlertDefault from "../../../../components_native/common/Alert.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-let items = [require("registerAsset"), require("registerAsset"), require("registerAsset")];
-let items1 = [require("registerAsset"), require("registerAsset"), require("registerAsset")];
+require = fn;
+const Image = fn(17).Image;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+let items = [fn(11334), fn(11335), fn(11336)];
+let items1 = [fn(11337), fn(11338), fn(11339)];
 const items2 = [
   () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["w2o/60"]);
+    const intl = util.intl;
+    return intl.string(util.t["w2o/60"]);
   },
   () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.FiAvKg);
+    const intl = util.intl;
+    return intl.string(util.t.FiAvKg);
   },
   () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.vKUFek);
+    const intl = util.intl;
+    return intl.string(util.t.vKUFek);
   },
   () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.veQl5T);
+    const intl = util.intl;
+    return intl.string(util.t.veQl5T);
   },
   () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.Pxb7BR);
+    const intl = util.intl;
+    return intl.string(util.t.Pxb7BR);
   },
   () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["W03w++"]);
+    const intl = util.intl;
+    return intl.string(util.t["W03w++"]);
   },
   () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["95HTb5"]);
+    const intl = util.intl;
+    return intl.string(util.t["95HTb5"]);
   },
   () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["+XFelz"]);
+    const intl = util.intl;
+    return intl.string(util.t["+XFelz"]);
   },
   () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.hedHel);
+    const intl = util.intl;
+    return intl.string(util.t.hedHel);
   },
   () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.jgC65t);
+    const intl = util.intl;
+    return intl.string(util.t.jgC65t);
   },
 ];
-let closure_9 = createCacheKey.createStyles({
+const createStyles = fn(4560);
+let closure_9 = createStyles.createStyles({
   text: { marginTop: 16, lineHeight: 20, textAlign: "center" },
   header: { textAlign: "center" },
   image: { alignSelf: "center", marginTop: -72, marginBottom: 16, width: "100%", resizeMode: "contain" },
 });
-const result = require("set").fileFinishedImporting(
-  "modules/channel_following/native/components/ChannelFollowSuccessAlert.tsx",
-);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/channel_following/native/components/ChannelFollowSuccessAlert.tsx");
 
 export default function ChannelFollowSuccessAlert(arg0) {
-  const tmp = callback3();
-  let obj = AccessibilityAnnouncer;
+  const tmp = closure_9();
+  let obj = require("shared");
   const tmp6 = obj.isThemeDark(useThemeDefault()) ? items1 : items;
   _require = tmp6;
   let tmp5Result = tmp5(7440);
   items = [tmp6];
-  const stableMemo = tmp5Result.useStableMemo(() => closure_1_1(closure_1_2[14]).sample(closure_0), items);
+  const stableMemo = tmp5Result.useStableMemo(() => _modDef12.sample(closure_0), items);
   tmp5Result = tmp5(7440);
-  const stableMemo1 = tmp5Result.useStableMemo(() => callback(table[14]).sample(closure_8), []);
+  const stableMemo1 = tmp5Result.useStableMemo(() => _modDef12.sample(items2), []);
   obj = {};
-  const tmp2 = importDefault;
   const tmp4 = useThemeDefault();
   const merged = Object.assign(arg0);
   const intl = tmp5(1114).intl;
-  obj.confirmText = intl.string(require("../../../../intl/index.native.tsx").t["+IrDzN"]);
+  obj.confirmText = intl.string(require("util").t["+IrDzN"]);
   obj = { source: stableMemo, style: tmp.image };
-  items1 = [callback(Image, obj), ,];
-  const tmp2Result = componentDidMountDefault;
-  items1[1] = callback(require("../../../../design/components/Text/native/Text.tsx").Text, {
+  items1 = [closure_4(Image, obj), ,];
+  const tmp2Result = common_AlertDefault;
+  items1[1] = closure_4(require("Text/Text").Text, {
     style: tmp.header,
     variant: "heading-xl/extrabold",
     color: "mobile-text-heading-primary",
@@ -91,8 +88,8 @@ export default function ChannelFollowSuccessAlert(arg0) {
   });
   const obj2 = { style: tmp.text, variant: "text-md/medium", color: "text-muted", children: null };
   const intl2 = tmp5(1114).intl;
-  obj2[3] = intl2.string(require("../../../../intl/index.native.tsx").t["2QbSea"]);
-  items1[2] = callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj2);
+  obj2.children = intl2.string(require("util").t["2QbSea"]);
+  items1[2] = closure_4(require("Text/Text").Text, obj2);
   obj.children = items1;
-  return callback2(tmp2Result, obj);
+  return closure_5(tmp2Result, obj);
 }

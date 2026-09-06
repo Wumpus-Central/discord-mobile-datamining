@@ -1,20 +1,22 @@
 // discord_app/modules/search/native/components/list/rows/GuildTextChannelRow.tsx
-import importAllResult from "../../../../../../../_runtime/00019_noop.js";
-import { CHANNEL_LIST_SEARCH_LAYOUT as closure_4 } from "../../../../SearchConstants.tsx";
-import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
+import SearchUtils from "../../../../SearchUtils.tsx";
+import guild_channels_ChannelSubtitle from "../../../../../main_tabs_v2/native/shared_components/guild_channels/ChannelSubtitle.tsx";
+import noop from "../../../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let c3 = importAllResult;
-const memoResult = importAllResult.memo(function GuildTextChannelRow(channel) {
+require = fn;
+let closure_4 = fn(7878).CHANNEL_LIST_SEARCH_LAYOUT;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/search/native/components/list/rows/GuildTextChannelRow.tsx");
+
+export default noop.memo(function GuildTextChannelRow(channel) {
   channel = channel.channel;
   ({ lastMessageId, onPress } = channel);
   let extractTimestampResult = null;
-  const merged = Object.assign(channel, Object.create(null));
-  let id;
-  let guild_id;
+  const merged = Object.assign(channel, Object.assign({ channel: 0, trailing: 0, lastMessageId: 0, onPress: 0 }));
   c4 = undefined;
-  id = channel.id;
-  guild_id = channel.guild_id;
+  const id = channel.id;
+  const guild_id = channel.guild_id;
   if (null != lastMessageId) {
     let obj = onPress(id[3]);
     extractTimestampResult = obj.extractTimestamp(lastMessageId);
@@ -23,13 +25,13 @@ const memoResult = importAllResult.memo(function GuildTextChannelRow(channel) {
   const items = [id, guild_id, extractTimestampResult];
   const items1 = [channel.id, onPress];
   const memo = guild_id.useMemo(() => {
-    let obj = channel(id[4]);
+    let obj = guild_channels_ChannelSubtitle;
     let channelActiveAgoTimestamp = null;
     if (null != c4) {
-      channelActiveAgoTimestamp = channel(id[5]).getChannelActiveAgoTimestamp(tmp3);
-      const tmpResult = channel(id[5]);
+      channelActiveAgoTimestamp = SearchUtils.getChannelActiveAgoTimestamp(tmp3);
+      const tmpResult = SearchUtils;
     }
-    obj = { subtitle: channelActiveAgoTimestamp, layout: c4, channelId: id, guildId: guild_id };
+    obj = { subtitle: channelActiveAgoTimestamp, layout, channelId: id, guildId: guild_id };
     return obj.renderChannelSubtitle(obj);
   }, items);
   const callback = guild_id.useCallback(() => {
@@ -43,8 +45,3 @@ const memoResult = importAllResult.memo(function GuildTextChannelRow(channel) {
   obj.onPress = callback;
   return jsx(onPress(id[6]), {});
 });
-const result = require("set").fileFinishedImporting(
-  "modules/search/native/components/list/rows/GuildTextChannelRow.tsx",
-);
-
-export default memoResult;

@@ -1,80 +1,79 @@
 // discord_app/modules/user_settings/defs/native/PremiumRestoreSubscriptionSetting.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import set from "../../../../utils/PlatformUtils.tsx";
-import _modDef4905 from "../../../../actions/native/AlertActionCreators.tsx";
-import applyAppleReceiptDefault from "../../../../actions/native/BillingActionCreators.tsx";
-import closure_3 from "../../../../stores/UserStore.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import util from "../../../../intl/index.native.tsx";
+import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
+import actions_AlertActionCreatorsDefault from "../../../../actions/native/AlertActionCreators.tsx";
+import BillingActionCreatorsDefault from "../../../../actions/native/BillingActionCreators.tsx";
+import UserStore from "../../../../stores/UserStore.tsx";
 
-require = arg1;
-createToggle = {
+require = fn;
+const jsx = fn(21).jsx;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.s9h22P);
+    const intl = util.intl;
+    return intl.string(util.t.s9h22P);
   },
   parent: null,
-  IconComponent: require("NitroWheelIcon").NitroWheelIcon,
+  IconComponent: fn(8662).NitroWheelIcon,
   onPress: function handleNitroRestoreSettingPress() {
-    let obj = applyAppleReceiptDefault;
+    let obj = BillingActionCreatorsDefault;
     const result = obj.restoreAndApplyPurchases(true);
     result.then(
-      (arg0) => {
-        if (arg0.length > 0) {
-          let obj = callback2(paths[3]);
-          obj = { body: null };
-          const intl = callback(paths[4]).intl;
-          obj[0] = intl.string(callback(paths[4]).t.pnRpIb);
+      (result) => {
+        if (result.length > 0) {
+          require("actions/AlertActionCreators");
+          let obj = { body: null };
+          const intl = require("util").intl;
+          obj.body = intl.string(require("util").t.pnRpIb);
           obj.show(obj);
         } else {
           obj = { title: null, body: null };
-          const intl2 = callback(paths[4]).intl;
-          obj[0] = intl2.string(callback(paths[4]).t.WXkaoM);
-          const intl3 = callback(paths[4]).intl;
-          obj[1] = intl3.string(callback(paths[4]).t.YW7lqS);
-          callback2(paths[3]).show(obj);
-          const obj3 = callback2(paths[3]);
+          const intl2 = require("util").intl;
+          obj.title = intl2.string(require("util").t.WXkaoM);
+          const intl3 = require("util").intl;
+          obj.body = intl3.string(require("util").t.YW7lqS);
+          require("actions/AlertActionCreators").show(obj);
+          const obj3 = require("actions/AlertActionCreators");
         }
       },
       () => {
-        let obj = callback2(paths[3]);
-        obj = { title: null, body: null };
-        const intl = callback(paths[4]).intl;
-        obj[0] = intl.string(callback(paths[4]).t.POsVOt);
-        const intl2 = callback(paths[4]).intl;
-        obj[1] = intl2.string(callback(paths[4]).t["XbE/Ez"]);
+        require("actions/AlertActionCreators");
+        const obj = { title: null, body: null };
+        const intl = require("util").intl;
+        obj.title = intl.string(require("util").t.POsVOt);
+        const intl2 = require("util").intl;
+        obj.body = intl2.string(require("util").t["XbE/Ez"]);
         obj.show(obj);
       },
     );
     obj = {
       importer() {
-        return callback(paths[6])(paths[5], paths.paths).then((arg0) => {
-          closure_0 = arg0.default;
+        return require("asyncRequireImpl")(paths[5], paths.paths).then((result) => {
+          closure_0 = result.default;
           return (arg0) => {
             const merged = Object.assign(arg0);
-            return closure_1_4(closure_0, {});
+            return closure_2_4(closure_0, {});
           };
         });
       },
     };
-    _modDef4905.openLazy(obj);
+    actions_AlertActionCreatorsDefault.openLazy(obj);
   },
   withArrow: true,
   usePredicate: function useHasPremiumRestoreSubscriptionSetting() {
-    const items = [closure_3];
+    const items = [UserStore];
     const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
     let tmp4 = null != stateFromStores && stateFromStores.verified;
     if (tmp4) {
-      tmp4 = !set.isAndroid();
-      const tmpResult = set;
+      tmp4 = !PlatformUtils.isAndroid();
+      const tmpResult = PlatformUtils;
     }
     return tmp4;
   },
 };
-createToggle = createToggle.createPressable(createToggle);
-let result = require("set").fileFinishedImporting(
-  "modules/user_settings/defs/native/PremiumRestoreSubscriptionSetting.tsx",
-);
+SettingBuilders = SettingBuilders.createPressable(SettingBuilders);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/PremiumRestoreSubscriptionSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

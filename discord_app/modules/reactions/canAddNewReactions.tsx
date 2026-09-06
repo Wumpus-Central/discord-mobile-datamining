@@ -1,18 +1,19 @@
 // discord_app/modules/reactions/canAddNewReactions.tsx
-import closure_0 from "../../stores/GuildVerificationStore.tsx";
-import closure_1 from "../../stores/PermissionStore.tsx";
-import { Permissions } from "../../Constants.tsx";
+import GuildVerificationStore from "../../stores/GuildVerificationStore.tsx";
+import PermissionStore from "../../stores/PermissionStore.tsx";
 
-const result = require("set").fileFinishedImporting("modules/reactions/canAddNewReactions.tsx");
+const Permissions = fn(1074).Permissions;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/reactions/canAddNewReactions.tsx");
 
 export default (getGuildId) => {
   const guildId = getGuildId.getGuildId();
   let canChatInGuildResult = null != guildId;
   if (canChatInGuildResult) {
-    canChatInGuildResult = closure_0.canChatInGuild(guildId);
+    canChatInGuildResult = GuildVerificationStore.canChatInGuild(guildId);
   }
   if (canChatInGuildResult) {
-    canChatInGuildResult = closure_1.can(Permissions.ADD_REACTIONS, getGuildId);
+    canChatInGuildResult = PermissionStore.can(Permissions.ADD_REACTIONS, getGuildId);
   }
   if (!canChatInGuildResult) {
     canChatInGuildResult = getGuildId.isPrivate();

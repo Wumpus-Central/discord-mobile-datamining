@@ -1,9 +1,10 @@
 // discord_app/modules/video_calls/native/components/DCDVideoRenderer.tsx
-import __INTERNAL_VIEW_CONFIGDefault from "../../../../../discord_common/js/packages/rtn-codegen/js/VideoRendererNativeComponent.tsx";
-import importDefaultResult from "../../../../utils/native/requireNativeComponentOrDefault.native.tsx";
+import VideoRendererNativeComponentDefault from "../../../../../discord_common/js/packages/rtn-codegen/js/VideoRendererNativeComponent.tsx";
+import requireNativeComponentOrDefault from "../../../../utils/native/requireNativeComponentOrDefault.native.tsx";
 
-const obj = { componentName: "DCDVideoRenderer", componentFoundInstance: __INTERNAL_VIEW_CONFIGDefault };
-const importDefaultResultResult = importDefaultResult(obj);
-const result = require("set").fileFinishedImporting("modules/video_calls/native/components/DCDVideoRenderer.tsx");
+const obj = { componentName: "DCDVideoRenderer", componentFoundInstance: null };
+obj.componentFoundInstance = VideoRendererNativeComponentDefault;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/native/components/DCDVideoRenderer.tsx");
 
-export default importDefaultResultResult;
+export default requireNativeComponentOrDefault(obj);

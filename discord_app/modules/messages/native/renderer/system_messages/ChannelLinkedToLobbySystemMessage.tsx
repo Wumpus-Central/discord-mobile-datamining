@@ -1,53 +1,52 @@
 // discord_app/modules/messages/native/renderer/system_messages/ChannelLinkedToLobbySystemMessage.tsx
-import getSystemLocale from "../../../../../intl/index.native.tsx";
-import resultDefault from "../resolveMessageContentColors.tsx";
-import getMessageAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
-import closure_3 from "../../../../applications/ApplicationStore.tsx";
-import { HelpdeskArticles } from "../../../../../Constants.tsx";
+import util from "../../../../../intl/index.native.tsx";
+import resolveMessageContentColorsDefault from "../resolveMessageContentColors.tsx";
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
+import ApplicationStore from "../../../../applications/ApplicationStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting(
+require = fn;
+const HelpdeskArticles = fn(1074).HelpdeskArticles;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/ChannelLinkedToLobbySystemMessage.tsx",
 );
 
 export const createChannelLinkedToLobbySystemMessage = function createChannelLinkedToLobbySystemMessage(message) {
   message = message.message;
   ({ roleStyle, theme } = message);
-  const tmp3 = resultDefault(theme);
+  const tmp3 = resolveMessageContentColorsDefault(theme);
   let str = message.applicationId;
   if (str == null) {
     str = "";
   }
-  application = application.getApplication(str);
+  const application = ApplicationStore.getApplication(str);
   if (null == application) {
     return null;
   } else {
-    let obj = getMessageAuthorWithProcessedColor;
+    let obj = useAuthorWithProcessedColor;
     const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
     obj = {
-      username: null,
+      username: messageAuthorWithProcessedColor.nick,
       usernameOnClick: null,
       applicationName: null,
       applicationNameOnClick: null,
       urlOnClick: null,
     };
-    obj[0] = messageAuthorWithProcessedColor.nick;
-    obj = { message: null, author: null, roleStyle: null };
-    obj[0] = message;
-    obj[1] = messageAuthorWithProcessedColor;
-    obj[2] = roleStyle;
-    obj[1] = tmp(7962)(obj);
-    obj[2] = application.name;
-    obj1 = { linkColor: null, medium: true };
-    obj1[0] = tmp3.defaultUsernameColor;
-    obj[3] = obj1;
-    const obj2 = { action: "bindOpenUrl", url: null, linkColor: null, medium: true };
-    obj2[1] = tmp(2024).getArticleURL(HelpdeskArticles.LINKED_LOBBIES);
-    obj2[2] = tmp3.linkColor;
-    obj[4] = obj2;
+    obj = { message, author: messageAuthorWithProcessedColor, roleStyle };
+    obj.usernameOnClick = tmp(7962)(obj);
+    obj.applicationName = application.name;
+    const obj1 = { linkColor: tmp3.defaultUsernameColor, medium: true };
+    obj.applicationNameOnClick = obj1;
+    const obj2 = {
+      action: "bindOpenUrl",
+      url: tmp(2024).getArticleURL(HelpdeskArticles.LINKED_LOBBIES),
+      linkColor: tmp3.linkColor,
+      medium: true,
+    };
+    obj.urlOnClick = obj2;
     const obj3 = { content: null };
-    const intl = getSystemLocale.intl;
-    obj3[0] = intl.formatToParts(getSystemLocale.t.gZfhOw, obj);
+    const intl = util.intl;
+    obj3.content = intl.formatToParts(util.t.gZfhOw, obj);
     const merged = Object.assign(tmp(7964)(message));
     return obj3;
   }

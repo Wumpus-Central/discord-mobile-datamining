@@ -1,26 +1,24 @@
 // discord_app/modules/user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
-import ImageSkeleton from "UserProfileApplicationWidgetSkeletons.tsx";
-import items2 from "../../application_widget/ApplicationWidgetMarkupUtils.native.tsx";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons.tsx";
+import ApplicationWidgetMarkupUtils from "../../application_widget/ApplicationWidgetMarkupUtils.native.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-({ Image: obj1, View: c3 } = get_ActivityIndicator);
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { fieldTextRow: null, fieldIcon: null };
-createCacheKey = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { width: 16, height: 16 };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting(
-  "modules/user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx",
-);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Image: c2, View: c3 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+fn(4560);
+let createStyles = { fieldTextRow: null, fieldIcon: null };
+createStyles = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
+createStyles.fieldTextRow = createStyles;
+createStyles.fieldIcon = { width: 16, height: 16 };
+let closure_6 = createStyles.createStyles(createStyles);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx");
 
 export const formatDurationNarrow = function formatDurationNarrow(arg0) {
   let num = 0;
@@ -34,65 +32,52 @@ export const formatDurationNarrow = function formatDurationNarrow(arg0) {
   const result1 = Math.floor(num / 1000) % 60;
   const items = [];
   if (rounded > 0) {
-    const intl = getSystemLocale.intl;
-    let obj = { hours: null };
-    obj[0] = rounded;
-    items.push(intl.formatToPlainString(getSystemLocale.t.rhY1Rs, obj));
+    const intl = util.intl;
+    let obj = { hours: rounded };
+    items.push(intl.formatToPlainString(util.t.rhY1Rs, obj));
   }
   if (0 < result) {
-    const intl2 = getSystemLocale.intl;
-    obj = { minutes: null };
-    obj[0] = result;
-    items.push(intl2.formatToPlainString(getSystemLocale.t["XIGt+W"], obj));
+    const intl2 = util.intl;
+    obj = { minutes: result };
+    items.push(intl2.formatToPlainString(util.t["XIGt+W"], obj));
   }
   let tmp10 = result1 > 0;
   if (0 >= result1) {
     tmp10 = 0 === items.length;
   }
   if (tmp10) {
-    const intl3 = getSystemLocale.intl;
-    obj = { seconds: null };
-    obj[0] = result1;
-    items.push(intl3.formatToPlainString(getSystemLocale.t.pyvjRp, obj));
+    const intl3 = util.intl;
+    obj = { seconds: result1 };
+    items.push(intl3.formatToPlainString(util.t.pyvjRp, obj));
   }
   return items.join(" ");
 };
 export const FieldText = function FieldText(arg0) {
   ({ field, variant } = arg0);
   ({ color, skeletonWidthChars } = arg0);
-  const tmp = callback2();
+  const tmp = closure_6();
   if ("hidden" === field.status) {
     return null;
   } else if ("skeleton" === field.status) {
-    let obj = { variant: null, widthChars: null };
-    obj[0] = variant;
-    obj[1] = skeletonWidthChars;
-    let tmp9Result = callback(ImageSkeleton.TextSkeleton, obj);
+    let obj = { variant, widthChars: skeletonWidthChars };
+    let tmp9Result = React4(UserProfileApplicationWidgetSkeletons.TextSkeleton, obj);
   } else {
-    obj = { style: null, children: null };
-    obj[0] = tmp.fieldTextRow;
-    obj1 = { variant: null, color: null, lineClamp: 2, children: null };
-    obj1[0] = variant;
-    obj1[1] = color;
-    const obj2 = { linkVariant: null };
-    obj2[0] = variant;
-    obj1[3] = items2.parseApplicationWidgetText(field.text, obj2);
-    const items = [callback(Text.Text, obj1)];
+    obj = { style: tmp.fieldTextRow, children: null };
+    const obj1 = { variant, color, lineClamp: 2, children: null };
+    const obj2 = { linkVariant: variant };
+    obj1.children = ApplicationWidgetMarkupUtils.parseApplicationWidgetText(field.text, obj2);
+    const items = [React4(Text_Text.Text, obj1)];
     let tmp11Result = null != field.icon;
     if (tmp11Result) {
       obj = { source: null, style: null, resizeMode: "contain" };
-      const obj3 = { uri: null };
-      obj3[0] = field.icon.url;
-      obj[0] = obj3;
-      obj[1] = tmp.fieldIcon;
-      tmp11Result = tmp11(closure_2, obj);
+      const obj3 = { uri: field.icon.url };
+      obj.source = obj3;
+      obj.style = tmp.fieldIcon;
+      tmp11Result = tmp11(React2, obj);
     }
     items[1] = tmp11Result;
-    obj[1] = items;
-    tmp9Result = closure_5(closure_3, obj);
-    const obj6 = items2;
-    const tmp10 = closure_3;
-    tmp11 = callback;
-    const tmp9 = closure_5;
+    obj.children = items;
+    tmp9Result = hasOwnProperty(React3, obj);
+    tmp11 = React4;
   }
 };

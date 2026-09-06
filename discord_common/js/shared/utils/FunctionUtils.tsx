@@ -1,50 +1,27 @@
 // discord_common/js/shared/utils/FunctionUtils.tsx
-import closure_0 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_1 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
-let result = require("set").fileFinishedImporting("../discord_common/js/shared/utils/FunctionUtils.tsx");
-function promiseThrottle(arg0) {
-  closure_0 = arg0;
-  let num = arg1;
-  if (arg1 === undefined) {
-    num = 5000;
-  }
-  c2 = -1;
-  c3 = null;
-  return () => {
-    let tmp = null == closure_3;
-    if (!tmp) {
-      const _Date = Date;
-      tmp = Date.now() >= closure_2;
-    }
-    if (tmp) {
-      const _Date2 = Date;
-      closure_2 = Date.now() + num;
-      closure_3 = callback();
-    }
-    return closure_3;
-  };
-}
-// CreatePrivateName (0x9e)
+const size = fn(2);
+let result = size.fileFinishedImporting("../discord_common/js/shared/utils/FunctionUtils.tsx");
 class PromiseDeduper {
   constructor() {
     obj = Object.create(new.target.prototype);
-    // PrivateIsIn (0x32)
-    if (tmp) {
+    tmp2 = _r;
+    map = new Map();
+    if (_r in obj) {
       str = "Cannot initialize private field twice.";
-      throwTypeErrorResult = HermesBuiltin.throwTypeError();
-      return;
+      throw new TypeError("Cannot initialize private field twice.");
     } else {
-      tmp4 = tmp3;
-      // AddOwnPrivateBySym (0x64)
+      tmp4 = map;
+      obj[map] = tmp2;
       return obj;
     }
   }
 }
 const prototype = PromiseDeduper.prototype;
-prototype["one"] = function one(play, fn, arg2, arg3) {
-  let self = this;
-  self = this;
+prototype["one"] = function one(play, fn, arg2) {
+  const self = this;
   closure_1 = play;
   let obj = arg2;
   if (arg2 === undefined) {
@@ -55,25 +32,21 @@ prototype["one"] = function one(play, fn, arg2, arg3) {
     flag = false;
   }
   let cleanupPromise;
-  // GetOwnPrivateBySym (0x65)
-  const value = obj.get(play);
+  value = self[self].get(play);
   if (!flag) {
     if (null != value) {
       return value;
     }
   }
   cleanupPromise = fn().finally(() => {
-    // GetOwnPrivateBySym (0x65)
     if (obj.get(closure_1) === cleanupPromise) {
-      // GetOwnPrivateBySym (0x65)
-      self.delete(closure_1);
+      self[tmp2].delete(closure_1);
     }
   });
-  // GetOwnPrivateBySym (0x65)
-  const result = self.set(play, cleanupPromise);
+  const result = self[self].set(play, cleanupPromise);
   return cleanupPromise;
 };
-prototype["many"] = function many(items) {
+prototype["many"] = function many(items, fn) {
   let obj = arg2;
   if (arg2 === undefined) {
     obj = {};
@@ -82,48 +55,36 @@ prototype["many"] = function many(items) {
   if (flag === undefined) {
     flag = false;
   }
-  let map;
-  closure_2 = undefined;
+  let promise;
   let self = this;
   items = [...new Set(items)];
   const items1 = [];
-  map = new Map();
+  let map = new Map();
   const iter = items[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tmp4 = closure_2;
-    // GetOwnPrivateBySym (0x65)
     let tmp3 = nextResult;
-    let value = push.get(nextResult);
+    let obj3 = this[promise];
+    value = obj3.get(nextResult);
     if (!flag) {
-      let tmp6 = value;
       if (null != value) {
-        push = nextResult;
-        let tmp7 = value;
-        let result = map.set(nextResult, value);
+        let result = map.set(tmp3, value);
       }
       continue;
     }
-    push = items1.push;
-    let tmp9 = nextResult;
-    let arr = push(tmp3);
+    let arr = items1.push(tmp3);
   }
   if (items1.length <= 0) {
     Promise.all(
       items.map(
         (() => {
-          closure_0 = map((arg0) => {
-            closure_0 = arg0;
-            c2 = 0;
-            c3 = 0;
-            return (function* (arg0) {
-              const items = [closure_0];
-              items[1] = yield closure_1_1.get(closure_0);
-              return items;
-            })();
+          closure_0 = map(function* (arg0) {
+            const items = [closure_0];
+            items[1] = yield items.get(closure_0);
+            return items;
           });
           return function (arg0) {
-            self = this;
+            const self = this;
             const apply = closure_0.apply;
             if (typeof apply === "unknown") {
               let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -134,12 +95,11 @@ prototype["many"] = function many(items) {
           };
         })(),
       ),
-    ).then((arg0) => {
+    ).then((result) => {
       map = new Map();
       while (tmp !== undefined) {
-        let tmp3 = self;
         let tmp4 = self(tmp2, 2);
-        let result = map.set(tmp4[0], tmp4[1]);
+        result = map.set(tmp4[0], tmp4[1]);
         continue;
       }
       return map;
@@ -147,18 +107,13 @@ prototype["many"] = function many(items) {
     const allPromises = Promise.all(
       items.map(
         (() => {
-          closure_0 = map((arg0) => {
-            closure_0 = arg0;
-            c2 = 0;
-            c3 = 0;
-            return (function* (arg0) {
-              const items = [closure_0];
-              items[1] = yield closure_1_1.get(closure_0);
-              return items;
-            })();
+          closure_0 = map(function* (arg0) {
+            const items = [closure_0];
+            items[1] = yield items.get(closure_0);
+            return items;
           });
           return function (arg0) {
-            self = this;
+            const self = this;
             const apply = closure_0.apply;
             if (typeof apply === "unknown") {
               let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -172,9 +127,9 @@ prototype["many"] = function many(items) {
     );
   } else {
     try {
-      closure_2 = arg1(items1);
+      promise = fn(items1);
       function _loop(arg0) {
-        const _self = arg0;
+        _self = arg0;
         const cleanupPromise = promise
           .then((has) => {
             if (has.has(closure_0)) {
@@ -183,24 +138,21 @@ prototype["many"] = function many(items) {
               const _Error = Error;
               const _String = String;
               const _HermesInternal = HermesInternal;
-              error = new Error("Promise deduper result missing key: " + String(tmp));
+              const error = new Error("Promise deduper result missing key: " + String(tmp));
               throw error;
             }
           })
           .finally(() => {
-            // GetOwnPrivateBySym (0x65)
             if (obj.get(closure_0) === cleanupPromise) {
-              // GetOwnPrivateBySym (0x65)
-              closure_0.delete(closure_0);
+              self[tmp2].delete(closure_0);
             }
           });
-        // GetOwnPrivateBySym (0x65)
-        const result = _self.set(arg0, cleanupPromise);
+        const result = _self[promise].set(arg0, cleanupPromise);
         const result1 = cleanupPromise.set(arg0, cleanupPromise);
       }
       items1[Symbol.iterator]();
-    } catch (tmp12) {
-      closure_2 = Promise.reject(tmp12);
+    } catch (tmp13) {
+      promise = Promise.reject(tmp13);
     }
   }
 };
@@ -228,10 +180,10 @@ export const areArraysShallowlyEqual = function areArraysShallowlyEqual(arg0, ar
 };
 export function cachedFunction(arg0) {
   closure_0 = arg0;
-  c1 = null;
-  c2 = null;
+  let items = null;
+  closure_2 = null;
   return () => {
-    const items = [...arguments];
+    items = [...arguments];
     let flag = true;
     if (items !== items) {
       flag = false;
@@ -265,11 +217,27 @@ export function cachedFunction(arg0) {
     return closure_2;
   };
 }
-export { promiseThrottle };
+export function promiseThrottle(arg0) {
+  closure_0 = arg0;
+  closure_2 = -1;
+  closure_3 = null;
+  return () => {
+    let tmp = null == closure_3;
+    if (!tmp) {
+      const _Date = Date;
+      tmp = Date.now() >= closure_2;
+    }
+    if (tmp) {
+      const _Date2 = Date;
+      closure_2 = Date.now() + num;
+      closure_3 = closure_0();
+    }
+    return closure_3;
+  };
+}
 export { PromiseDeduper };
 export const clearObject = function clearObject(obj) {
   for (const key10003 in arg0) {
-    let tmp3 = key10003;
     if (!arg0.hasOwnProperty(key10003)) {
       continue;
     } else {

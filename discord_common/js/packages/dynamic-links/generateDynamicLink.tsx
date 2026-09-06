@@ -1,23 +1,21 @@
 // discord_common/js/packages/dynamic-links/generateDynamicLink.tsx
 import v1 from "../../../../_runtime/01256_v1.js";
 import formatDefault from "../../../../_runtime/01341_format.js";
-import setDefault from "getDescription.tsx";
-import closure_4 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import closure_5 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import getDescriptionDefault from "getDescription.tsx";
+import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
-require = arg1;
+require = fn;
 let closure_3 = ["utmSource", "androidFallbackLink", "iosFallbackLink"];
 let c6 = "https://discordapp.onelink.me";
-let result = require("set").fileFinishedImporting(
-  "../discord_common/js/packages/dynamic-links/generateDynamicLink.tsx",
-);
+const size = fn(2);
+let result = size.fileFinishedImporting("../discord_common/js/packages/dynamic-links/generateDynamicLink.tsx");
 
 export default function generateDynamicLink(arg0, arg1) {
   ({ utmSource, androidFallbackLink, iosFallbackLink } = arg1);
-  const tmp = callback(arg1, closure_3);
+  const tmp = _objectWithoutProperties(arg1, closure_3);
   const str = new URL(arg0);
   for (const key10018 in tmp) {
-    let tmp24 = key10018;
     let tmp25 = tmp[key10018];
     if (null == tmp25) {
       continue;
@@ -76,7 +74,7 @@ export default function generateDynamicLink(arg0, arg1) {
     "&af_force_deeplink=" +
     str3 +
     "&af_og_description=" +
-    encodeURIComponent(setDefault()) +
+    encodeURIComponent(getDescriptionDefault()) +
     "&af_dp=" +
     encodeURIComponentResult1;
   let sum = combined;
@@ -101,7 +99,7 @@ export const parseDynamicLink = function parseDynamicLink(str) {
       const uRL = new URL(str);
       const searchParams = uRL.searchParams;
       let obj = searchParams;
-      let value = searchParams.get("deep_link_value");
+      value = searchParams.get("deep_link_value");
       if (null == value) {
         return null;
       } else {
@@ -110,14 +108,11 @@ export const parseDynamicLink = function parseDynamicLink(str) {
         const uRL1 = new URL(decodeURIComponent(value));
         const searchParams2 = uRL1.searchParams;
         value = obj.get("pid");
-        obj = { utmSource: null };
-        obj[0] = value;
+        obj = { utmSource: value };
         const entries = searchParams2.entries();
         const tmp16 = entries[Symbol.iterator]();
         while (tmp16 !== undefined) {
-          let tmp20 = callback2;
-          let tmp21 = callback2(tmp18, 2);
-          let tmp22 = obj;
+          let tmp21 = _slicedToArray(tmp18, 2);
           obj[tmp21[0]] = tmp21[1];
           continue;
         }

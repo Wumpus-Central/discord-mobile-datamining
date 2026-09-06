@@ -1,13 +1,14 @@
 // discord_app/modules/libdiscore/LibdiscoreExperimentManager.tsx
-import shallowEqualDefault from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
-import isBlockedDomain from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
-import items2 from "libdiscoreExperiments.tsx";
-import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
-import closure_3 from "../experiments/apex/ApexExperimentStore.tsx";
+import discord_common_shallowEqualDefault from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import js_shim_shim from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
+import ApexExperiment from "../experiments/apex/index.tsx";
+import libdiscoreExperiments from "libdiscoreExperiments.tsx";
+import ApexExperimentStore from "../experiments/apex/ApexExperimentStore.tsx";
+import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
-require = arg1;
+require = fn;
 function experimentStoreUpdateHandler() {
-  let obj = isBlockedDomain;
+  obj = js_shim_shim;
   if (obj.isLibdiscoreInitialized()) {
     if (!tmpResult.isExperimentSyncDisabled()) {
       obj = {};
@@ -18,20 +19,17 @@ function experimentStoreUpdateHandler() {
       }
       let tmp7 = null != obj;
       if (tmp7) {
-        tmp7 = shallowEqualDefault(obj, obj);
+        tmp7 = discord_common_shallowEqualDefault(obj, obj);
       }
       if (!tmp7) {
-        const experimentCacher = isBlockedDomain.getExperimentCacher();
+        const experimentCacher = js_shim_shim.getExperimentCacher();
         const _JSON = JSON;
         experimentCacher.flushToCache(JSON.stringify(obj));
-        const obj4 = isBlockedDomain;
       }
     }
     tmpResult = tmp(1983);
   }
 }
-let c4 = null;
-initializeDefault;
 class LibdiscoreExperimentManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -43,12 +41,11 @@ class LibdiscoreExperimentManager extends tmp2 {
 }
 const prototype = LibdiscoreExperimentManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  const prop = items2.ALL_LIBDISCORE_EXPERIMENTS;
+  const prop = libdiscoreExperiments.ALL_LIBDISCORE_EXPERIMENTS;
   const item = prop.forEach((id) => {
-    let obj = callback(table[4]);
     obj = { kind: "user", name: id.id, defaultConfig: { treatmentId: -1 }, variations: null };
     const treatments = id.getTreatments();
-    obj[3] = Object.fromEntries(
+    obj.variations = Object.fromEntries(
       treatments.map((treatmentId) => {
         treatmentId = treatmentId.treatmentId;
         const items = [treatmentId, { treatmentId }];
@@ -60,6 +57,7 @@ prototype["_initialize"] = function _initialize() {
 };
 prototype["_terminate"] = function _terminate() {};
 const libdiscoreExperimentManager = new LibdiscoreExperimentManager();
-const result = require("set").fileFinishedImporting("modules/libdiscore/LibdiscoreExperimentManager.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/libdiscore/LibdiscoreExperimentManager.tsx");
 
 export default libdiscoreExperimentManager;

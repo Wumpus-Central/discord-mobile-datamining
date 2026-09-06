@@ -1,7 +1,7 @@
 // discord_common/js/shared/shared-constants/SteamReleaseStatus.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/SteamReleaseStatus.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/SteamReleaseStatus.tsx");
 
 export const SteamReleaseStatus = {
   PRE_RELEASE: 1,

@@ -1,8 +1,8 @@
 // discord_app/modules/guild_role_subscriptions/subscriptionUtils.tsx
-import set from "../../../_runtime/00002_set.js";
 import _modDef38 from "../../../_runtime/metro/00038__.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/guild_role_subscriptions/subscriptionUtils.tsx");
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/subscriptionUtils.tsx");
 
 export const getRoleSubscriptionPlanId = function getRoleSubscriptionPlanId(items) {
   items = items.items;

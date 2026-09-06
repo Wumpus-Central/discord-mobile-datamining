@@ -1,22 +1,21 @@
 // discord_app/actions/AuditLogActionCreators.tsx
-import dispatcherDefault from "../Dispatcher.tsx";
-import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import closure_3 from "../modules/guild_settings/audit_log/GuildSettingsAuditLogStore.tsx";
-import ME from "../Constants.tsx";
+import DispatcherDefault from "../Dispatcher.tsx";
+import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import GuildSettingsAuditLogStore from "../modules/guild_settings/audit_log/GuildSettingsAuditLogStore.tsx";
 
-require = arg1;
+require = fn;
 function makeRequest(arg0, arg1) {
   ({ before, userId, targetId, action } = arg1);
   if (userId == null) {
-    userId = closure_3.userIdFilter;
+    userId = GuildSettingsAuditLogStore.userIdFilter;
   }
   if (action == null) {
-    action = closure_3.actionFilter;
+    action = GuildSettingsAuditLogStore.actionFilter;
   }
   if (targetId == null) {
-    targetId = closure_3.targetIdFilter;
+    targetId = GuildSettingsAuditLogStore.targetIdFilter;
   }
-  let obj = { limit: closure_5 };
+  const obj = { limit };
   if (null != before) {
     obj.before = before;
   }
@@ -29,22 +28,21 @@ function makeRequest(arg0, arg1) {
   if (null != targetId) {
     obj.target_id = targetId;
   }
-  const HTTP = sendRequest.HTTP;
-  obj = { url: closure_4.GUILD_AUDIT_LOG(arg0), query: obj, oldFormErrors: true, rejectWithError: true };
-  return HTTP.get(obj);
+  const HTTP = HTTPUtils.HTTP;
+  const request = { url: React4.GUILD_AUDIT_LOG(arg0), query: obj, oldFormErrors: true, rejectWithError: true };
+  return HTTP.get(request);
 }
-({ Endpoints: c4, AUDIT_LOG_PAGE_LIMIT: c5 } = ME);
-const result = require("set").fileFinishedImporting("actions/AuditLogActionCreators.tsx");
+const Constants = fn(1074);
+({ Endpoints: closure_4, AUDIT_LOG_PAGE_LIMIT: hasOwnProperty } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("actions/AuditLogActionCreators.tsx");
 
-export const fetchLogs = function fetchLogs(guildId) {
+export const fetchLogs = function fetchLogs(guildId, userId, targetId, action) {
   if (!tmp) {
     if (null != guildId) {
-      let obj = dispatcherDefault;
+      let obj = DispatcherDefault;
       obj.dispatch({ type: "AUDIT_LOG_FETCH_START" });
-      obj = { userId: null, action: null, targetId: null };
-      obj[0] = arg1;
-      obj[1] = arg3;
-      obj[2] = arg2;
+      obj = { userId, action, targetId };
       return makeRequest(guildId, obj).then(
         (body) => {
           ({
@@ -57,7 +55,7 @@ export const fetchLogs = function fetchLogs(guildId) {
             threads,
             application_commands,
           } = body.body);
-          callback(573).dispatch({
+          DispatcherDefault.dispatch({
             type: "AUDIT_LOG_FETCH_SUCCESS",
             logs: audit_log_entries,
             integrations,
@@ -69,7 +67,7 @@ export const fetchLogs = function fetchLogs(guildId) {
             applicationCommands: application_commands,
           });
         },
-        () => callback(573).dispatch({ type: "AUDIT_LOG_FETCH_FAIL" }),
+        () => DispatcherDefault.dispatch({ type: "AUDIT_LOG_FETCH_FAIL" }),
       );
     }
   }
@@ -79,7 +77,7 @@ export const fetchNextLogPage = function fetchNextLogPage(guildId) {
   if (arg1 === undefined) {
     flag = false;
   }
-  if (closure_3.hasOlderLogs) {
+  if (GuildSettingsAuditLogStore.hasOlderLogs) {
     if (!tmp2) {
       if (null != guildId) {
         const logs = tmp.logs;
@@ -87,13 +85,9 @@ export const fetchNextLogPage = function fetchNextLogPage(guildId) {
         if (null != logs[logs.length - 1]) {
           id = tmp10.id;
         }
-        let obj = dispatcherDefault;
-        obj = { type: "AUDIT_LOG_FETCH_NEXT_PAGE_START", before: null, isGroupedFetch: null };
-        obj[1] = id;
-        obj[2] = flag;
+        let obj = { type: "AUDIT_LOG_FETCH_NEXT_PAGE_START", before: id, isGroupedFetch: flag };
         obj.dispatch(obj);
-        obj = { before: null };
-        obj[0] = id;
+        obj = { before: id };
         return makeRequest(guildId, obj).then(
           (body) => {
             ({
@@ -106,7 +100,7 @@ export const fetchNextLogPage = function fetchNextLogPage(guildId) {
               threads,
               application_commands,
             } = body.body);
-            callback(573).dispatch({
+            DispatcherDefault.dispatch({
               type: "AUDIT_LOG_FETCH_NEXT_PAGE_SUCCESS",
               logs: audit_log_entries,
               integrations,
@@ -118,26 +112,24 @@ export const fetchNextLogPage = function fetchNextLogPage(guildId) {
               applicationCommands: application_commands,
             });
           },
-          () => callback(573).dispatch({ type: "AUDIT_LOG_FETCH_NEXT_PAGE_FAIL" }),
+          () => DispatcherDefault.dispatch({ type: "AUDIT_LOG_FETCH_NEXT_PAGE_FAIL" }),
         );
       }
     }
     tmp2 = tmp.isLoading || tmp.isLoadingNextPage;
   }
 };
-export const filterByAction = function filterByAction(arg0, guildId) {
+export const filterByAction = function filterByAction(navigation, guildId) {
   if (!tmp2) {
     if (null != guildId) {
-      let obj = { type: "AUDIT_LOG_FILTER_BY_ACTION", action: null };
-      obj[1] = arg0;
-      dispatcherDefault.dispatch(obj);
+      let obj = { type: "AUDIT_LOG_FILTER_BY_ACTION", action: navigation };
+      DispatcherDefault.dispatch(obj);
       let nextPromise;
       if (!tmp5) {
         if (null != guildId) {
-          dispatcherDefault.dispatch({ type: "AUDIT_LOG_FETCH_START" });
-          obj = { userId: null, action: null, targetId: null };
-          obj[1] = arg0;
-          const tmp10Result = dispatcherDefault;
+          DispatcherDefault.dispatch({ type: "AUDIT_LOG_FETCH_START" });
+          obj = { userId: null, action: navigation, targetId: null };
+          const tmp10Result = DispatcherDefault;
           nextPromise = makeRequest(guildId, obj).then(
             (body) => {
               ({
@@ -150,7 +142,7 @@ export const filterByAction = function filterByAction(arg0, guildId) {
                 threads,
                 application_commands,
               } = body.body);
-              callback(573).dispatch({
+              DispatcherDefault.dispatch({
                 type: "AUDIT_LOG_FETCH_SUCCESS",
                 logs: audit_log_entries,
                 integrations,
@@ -162,7 +154,7 @@ export const filterByAction = function filterByAction(arg0, guildId) {
                 applicationCommands: application_commands,
               });
             },
-            () => callback(573).dispatch({ type: "AUDIT_LOG_FETCH_FAIL" }),
+            () => DispatcherDefault.dispatch({ type: "AUDIT_LOG_FETCH_FAIL" }),
           );
           const promise = makeRequest(guildId, obj);
         }
@@ -174,16 +166,14 @@ export const filterByAction = function filterByAction(arg0, guildId) {
 export const filterByUserId = function filterByUserId(id, guildId) {
   if (!tmp2) {
     if (null != guildId) {
-      let obj = { type: "AUDIT_LOG_FILTER_BY_USER", userId: null };
-      obj[1] = id;
-      dispatcherDefault.dispatch(obj);
+      let obj = { type: "AUDIT_LOG_FILTER_BY_USER", userId: id };
+      DispatcherDefault.dispatch(obj);
       let nextPromise;
       if (!tmp5) {
         if (null != guildId) {
-          dispatcherDefault.dispatch({ type: "AUDIT_LOG_FETCH_START" });
-          obj = { userId: null, action: "Array", targetId: "isArray" };
-          obj[0] = id;
-          const tmp10Result = dispatcherDefault;
+          DispatcherDefault.dispatch({ type: "AUDIT_LOG_FETCH_START" });
+          obj = { userId: id, action: "Array", targetId: "isArray" };
+          const tmp10Result = DispatcherDefault;
           nextPromise = makeRequest(guildId, obj).then(
             (body) => {
               ({
@@ -196,7 +186,7 @@ export const filterByUserId = function filterByUserId(id, guildId) {
                 threads,
                 application_commands,
               } = body.body);
-              callback(573).dispatch({
+              DispatcherDefault.dispatch({
                 type: "AUDIT_LOG_FETCH_SUCCESS",
                 logs: audit_log_entries,
                 integrations,
@@ -208,7 +198,7 @@ export const filterByUserId = function filterByUserId(id, guildId) {
                 applicationCommands: application_commands,
               });
             },
-            () => callback(573).dispatch({ type: "AUDIT_LOG_FETCH_FAIL" }),
+            () => DispatcherDefault.dispatch({ type: "AUDIT_LOG_FETCH_FAIL" }),
           );
           const promise = makeRequest(guildId, obj);
         }
@@ -217,19 +207,17 @@ export const filterByUserId = function filterByUserId(id, guildId) {
     }
   }
 };
-export const filterByTargetId = function filterByTargetId(arg0, arg1) {
+export const filterByTargetId = function filterByTargetId(targetId, arg1) {
   if (!tmp2) {
     if (null != arg1) {
-      let obj = { type: "AUDIT_LOG_FILTER_BY_TARGET", targetId: null };
-      obj[1] = arg0;
-      dispatcherDefault.dispatch(obj);
+      let obj = { type: "AUDIT_LOG_FILTER_BY_TARGET", targetId };
+      DispatcherDefault.dispatch(obj);
       let nextPromise;
       if (!tmp5) {
         if (null != arg1) {
-          dispatcherDefault.dispatch({ type: "AUDIT_LOG_FETCH_START" });
-          obj = { userId: null, action: "Array", targetId: -1 };
-          obj[2] = arg0;
-          const tmp10Result = dispatcherDefault;
+          DispatcherDefault.dispatch({ type: "AUDIT_LOG_FETCH_START" });
+          obj = { userId: null, action: "Array", targetId };
+          const tmp10Result = DispatcherDefault;
           nextPromise = makeRequest(arg1, obj).then(
             (body) => {
               ({
@@ -242,7 +230,7 @@ export const filterByTargetId = function filterByTargetId(arg0, arg1) {
                 threads,
                 application_commands,
               } = body.body);
-              callback(573).dispatch({
+              DispatcherDefault.dispatch({
                 type: "AUDIT_LOG_FETCH_SUCCESS",
                 logs: audit_log_entries,
                 integrations,
@@ -254,7 +242,7 @@ export const filterByTargetId = function filterByTargetId(arg0, arg1) {
                 applicationCommands: application_commands,
               });
             },
-            () => callback(573).dispatch({ type: "AUDIT_LOG_FETCH_FAIL" }),
+            () => DispatcherDefault.dispatch({ type: "AUDIT_LOG_FETCH_FAIL" }),
           );
           const promise = makeRequest(arg1, obj);
         }

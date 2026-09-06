@@ -1,20 +1,16 @@
 // discord_app/modules/voice_panel/native/controls/activities/ActivityShelfItemSummary.tsx
-import noopAll from "../../../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import Button from "../../../../../design/void/native.tsx";
-import _modDef4296 from "../../../../reanimated/ReanimatedRexport.tsx";
-import Text from "../../../../../design/components/Text/native/Text.tsx";
-import PillWrapper from "../../../../../design/components/Button/native/ButtonPill.native.tsx";
-import EllipsisCircle from "../../../../../design/components/Button/native/ButtonEllipsis.native.tsx";
+import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import native from "../../../../../design/void/native.tsx";
+import ReanimatedRexportDefault from "../../../../reanimated/ReanimatedRexport.tsx";
+import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
+import ButtonPill from "../../../../../design/components/Button/native/ButtonPill.native.tsx";
+import ButtonEllipsis from "../../../../../design/components/Button/native/ButtonEllipsis.native.tsx";
 import UserSummaryItemDefault from "../../../../../components_native/common/UserSummaryItem.tsx";
 import useActivityUsersDefault from "../../../../activities/useActivityUsers.tsx";
-import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
-import hexToRgba from "../../../../../utils/ColorUtils.tsx";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+require = fn;
 function ParticipantsSummary(arg0) {
   ({ applicationId, channelId } = arg0);
   const obj = {
@@ -26,14 +22,16 @@ function ParticipantsSummary(arg0) {
     cutout: null,
   };
   const tmp = useActivityUsersDefault(applicationId, channelId);
-  obj[2] = Button.AvatarSizes.REFRESH_MEDIUM_32;
-  obj[4] = { marginBottom: 8 };
-  obj[5] = { inset: -8 };
-  return callback2(UserSummaryItemDefault, obj);
+  obj.avatarSize = native.AvatarSizes.REFRESH_MEDIUM_32;
+  obj.style = { marginBottom: 8 };
+  obj.cutout = { inset: -8 };
+  return hasOwnProperty(UserSummaryItemDefault, obj);
 }
-noopAll;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = {
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+fn(4560);
+let createStyles = {
   ongoingActivityContainer: {
     position: "absolute",
     width: "100%",
@@ -47,21 +45,29 @@ createCacheKey = {
   loadingTextColor: null,
   ellipsis: null,
 };
-createCacheKey = {
+createStyles = {
   paddingHorizontal: 12,
   paddingVertical: 4,
-  borderRadius: ThemesDefault.radii.round,
+  borderRadius: nativeDefault.radii.round,
   backgroundColor: null,
   marginBottom: 8,
 };
-createCacheKey[3] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.BLACK, 0.64);
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-createCacheKey[3] = { color: "transparent" };
-createCacheKey[4] = { flex: 1, flexShrink: 1, flexGrow: 0, justifyContent: "center", alignItems: "center", top: -12 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-const result = require("set").fileFinishedImporting(
+const ColorUtils = fn(4409);
+createStyles.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.64);
+createStyles.overlayActivityName = createStyles;
+createStyles.overlayActivityNameText = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+createStyles.loadingTextColor = { color: "transparent" };
+createStyles.ellipsis = {
+  flex: 1,
+  flexShrink: 1,
+  flexGrow: 0,
+  justifyContent: "center",
+  alignItems: "center",
+  top: -12,
+};
+let closure_7 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/voice_panel/native/controls/activities/ActivityShelfItemSummary.tsx",
 );
 
@@ -71,28 +77,28 @@ export default function ActivityShelfItemSummary(submitting) {
   if (flag === undefined) {
     flag = false;
   }
-  const tmp = callback3();
-  let obj = PillWrapper;
-  obj = { style: tmp.ongoingActivityContainer, children: null };
+  const tmp = closure_7();
+  let obj = { style: tmp.ongoingActivityContainer, children: null };
   obj = { style: tmp.overlayActivityName, children: null };
   let tmp7Result = flag;
   const items = [
-    closure_5(Text.Text, {
+    hasOwnProperty(Text_Text.Text, {
       variant: "text-md/semibold",
       style: flag ? tmp.loadingTextColor : tmp.overlayActivityNameText,
       lineClamp: 2,
       children: applicationName,
     }),
   ];
-  const obj2 = { style: items1, children: null };
-  items1 = [tmp.ellipsis, callback(obj.useLoadingStyles(flag, "md"), 2)[1]];
+  const obj2 = { style: null, children: null };
+  const items1 = [tmp.ellipsis, _slicedToArray(obj.useLoadingStyles(flag, "md"), 2)[1]];
+  obj2.style = items1;
   if (tmp7Result) {
-    tmp7Result = tmp7(EllipsisCircle.Ellipsis, { variant: "active", size: "md" });
+    tmp7Result = tmp7(ButtonEllipsis.Ellipsis, { variant: "active", size: "md" });
   }
-  obj2[1] = tmp7Result;
-  items[1] = closure_5(_modDef4296.View, obj2);
-  obj[1] = items;
-  const items2 = [closure_6(View, obj), closure_5(ParticipantsSummary, { channelId, applicationId })];
-  obj[1] = items2;
-  return closure_6(View, obj);
+  obj2.children = tmp7Result;
+  items[1] = hasOwnProperty(ReanimatedRexportDefault.View, obj2);
+  obj.children = items;
+  const items2 = [timestampProducer(View, obj), hasOwnProperty(ParticipantsSummary, { channelId, applicationId })];
+  obj.children = items2;
+  return timestampProducer(View, obj);
 }

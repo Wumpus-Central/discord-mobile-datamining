@@ -1,7 +1,7 @@
 // discord_app/modules/haptics/HapticFeedbackTypes.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/haptics/HapticFeedbackTypes.tsx");
+const result = size.fileFinishedImporting("modules/haptics/HapticFeedbackTypes.tsx");
 
 export default {
   IMPACT_LIGHT: 0,

@@ -1,25 +1,27 @@
 // discord_app/design/components/AlertModal/native/AlertModal.native.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
+import KeyboardManagerUtils from "../../../../utils/native/KeyboardManagerUtils.tsx";
+import native from "../../../../../discord_common/js/packages/design/native.tsx";
+import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import useAlertStore2 from "useAlertStore.native.tsx";
-import Stack from "../../Stack/native/Stack.native.tsx";
-import CONFIG_NEVER_ANIMATE from "../../../animation/reanimated/spring/spring.tsx";
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../../../_runtime/00718__toArray.js";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../Styles/native/createStyles.tsx";
-import context3 from "../../../../index.native.tsx";
+import OverlayViewDefault from "../../../void/OverlayView/native/OverlayView.tsx";
+import Dialog from "../../Dialog/native/Dialog.native.tsx";
+import setAccessibilityFocus from "../../../../modules/a11y/native/setAccessibilityFocus.android.tsx";
+import Stack_Stack from "../../Stack/native/Stack.native.tsx";
+import spring from "../../../animation/reanimated/spring/spring.tsx";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import _toArray from "../../../../../_runtime/00718__toArray.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+require = fn;
 function getAlertModalItemKey(key) {
   return key.key;
 }
 function dismissTopAlert() {
-  const useAlertStore = require("useAlertStore.native.tsx").useAlertStore;
-  const arr = callback3(useAlertStore.getState().alerts);
+  const useAlertStore = require("useAlertStore").useAlertStore;
+  const arr = _toArray(useAlertStore.getState().alerts);
   const first = arr[0];
   _require = arr.slice(1);
   let tmp4 = null != first;
@@ -35,19 +37,19 @@ function dismissTopAlert() {
     tmpResult.dismissAlert(key);
     tmpResult = tmp(1249);
     tmpResult.batchUpdates(() => {
-      const useAlertStore = callback(closure_1_2[10]).useAlertStore;
-      return useAlertStore.setState({ alerts: callback });
+      const useAlertStore = context(context2[10]).useAlertStore;
+      return useAlertStore.setState({ alerts });
     });
   }
 }
 function AlertModalBackdrop() {
-  const context = importAllResult.useContext(closure_16);
-  const tmp2 = callback2(useSharedAnimationState(), 2);
-  let first = tmp2[0];
+  const context = noop.useContext(closure_16);
+  const tmp2 = _slicedToArray(useSharedAnimationState(), 2);
+  const sharedTransitionState = tmp2[0];
   dependencyMap = tmp4;
-  let obj = context(4906);
-  const alertStore = obj.useAlertStore((arg0) => {
-    first = arg0.alerts[0];
+  let __closure = context(4906);
+  const alertStore = __closure.useAlertStore((arg0) => {
+    const first = arg0.alerts[0];
     let dismissable;
     if (first != null) {
       dismissable = first.dismissable;
@@ -55,48 +57,51 @@ function AlertModalBackdrop() {
     return false !== dismissable;
   });
   let fn = function t() {
-    let value = closure_2.get();
-    if (typeof closure_1_26 !== "function") {
-      HermesBuiltin.throwTypeError();
+    value = closure_2.get();
+    if (typeof withAlertModalSpring === "function") {
+      obj = { opacity: null };
+      const fn = (arg0) => {
+        let tmp = true === arg0;
+        if (tmp) {
+          tmp = 0 === closure_1_2.get();
+        }
+        if (tmp) {
+          value = sharedTransitionState.get();
+          tmp = value === context(closure_2[9]).TransitionStates.YEETED;
+        }
+        if (tmp) {
+          context(closure_2[11]).runOnJS(closure_1_0)();
+          obj = context(closure_2[11]);
+        }
+      };
+      const obj2 = spring;
+      obj.opacity = obj2.withSpring(value, obj, "animate-always", fn);
+      return obj;
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    let obj = { opacity: context(closure_2[25]).withSpring(value, closure_1_14, "animate-always", fn) };
-    fn = (arg0) => {
-      let tmp = true === arg0;
-      if (tmp) {
-        tmp = 0 === closure_2.get();
-      }
-      if (tmp) {
-        const value = closure_1.get();
-        tmp = value === closure_1_0(closure_1_2[9]).TransitionStates.YEETED;
-      }
-      if (tmp) {
-        closure_1_0(closure_1_2[11]).runOnJS(closure_0)();
-        const obj = closure_1_0(closure_1_2[11]);
-      }
-    };
-    return obj;
   };
-  obj = {
+  __closure = {
     withAlertModalSpring,
     sharedVisible: tmp4,
-    sharedTransitionState: first,
+    sharedTransitionState,
     TransitionStates: context(4271).TransitionStates,
     runOnJS: context(4296).runOnJS,
     cleanUp: context,
   };
-  fn.__closure = obj;
+  fn.__closure = __closure;
   fn.__workletHash = 4470729133936;
-  fn.__initData = closure_22;
+  fn.__initData = __initData;
   const animatedStyle = context(4296).useAnimatedStyle(fn);
-  obj = { blur: "strong", style: animatedStyle, onDismiss: null, accessibilityLabel: null };
+  __closure = { blur: "strong", style: animatedStyle, onDismiss: null, accessibilityLabel: null };
   let tmp10 = null;
   if (alertStore) {
     tmp10 = dismissTopAlert;
   }
-  obj[2] = tmp10;
+  __closure.onDismiss = tmp10;
   const intl = tmp5(1114).intl;
-  obj[3] = intl.string(context(1114).t.Xkfav5);
-  return closure_10(context(4963).Backdrop, obj);
+  __closure.accessibilityLabel = intl.string(context(1114).t.Xkfav5);
+  return closure_10(context(4963).Backdrop, __closure);
 }
 class AlertModal {
   constructor(arg0) {
@@ -122,10 +127,10 @@ class AlertModal {
     closure_2 = context2;
     tmp5 = closure_0;
     tmp6 = closure_2;
-    enabled = closure_6.useContext(require("context").AccessibilityPreferencesContext).reducedMotion.enabled;
+    enabled = closure_6.useContext(closure_0(closure_2[18]).AccessibilityPreferencesContext).reducedMotion.enabled;
     ref = closure_6.useRef(null);
     closure_4 = ref;
-    obj = require("../../../../modules/reanimated/ReanimatedRexport.tsx");
+    obj = closure_0(closure_2[11]);
     sharedValue = obj.useSharedValue(context1);
     closure_5 = sharedValue;
     tmp9 = closure_4(useSharedAnimationState(), 2);
@@ -133,117 +138,126 @@ class AlertModal {
     closure_6 = first;
     tmp11 = tmp9[1];
     closure_7 = tmp11;
-    rect = require("useSafeAreaInsets")();
+    rect = closure_1(closure_2[19])();
     top = rect.top;
     bottom = rect.bottom;
     items = [];
     items[0] = context1;
     effect = closure_6.useEffect(() => {
       if (0 === context1) {
-        let obj = context(context2[20]);
-        obj = { ref: null, delay: 300 };
-        obj[0] = ref;
+        obj = { ref, delay: 300 };
         const result = obj.setAccessibilityFocus(obj);
       }
     }, items);
-    height = require("useWindowDimensions")().height;
-    obj2 = require("../../../../modules/reanimated/ReanimatedRexport.tsx");
+    height = closure_1(closure_2[21])().height;
+    obj2 = closure_0(closure_2[11]);
     class B {
       constructor() {
         diff = height - 32;
-        tmp3 = closure_1_26;
+        tmp3 = withAlertModalSpring;
         obj = closure_7;
         result = 2 * Math.max(top, bottom);
         value = closure_7.get();
-        if (typeof closure_1_26 !== "function") {
-          str4 = "Trying to call a non-function";
-          throwTypeErrorResult = HermesBuiltin.throwTypeError();
-        }
-        obj = { position: "absolute", opacity: null, zIndex: null, height: null, maxHeight: null, transform: null };
-        tmp5 = closure_0;
-        tmp6 = closure_2;
-        fn = (arg0) => {
-          let tmp = true === arg0;
-          if (tmp) {
-            tmp = 0 === closure_7.get();
-          }
-          if (tmp) {
-            const value = closure_6.get();
-            tmp = value === closure_1_0(closure_1_2[9]).TransitionStates.YEETED;
-          }
-          if (tmp) {
-            closure_1_0(closure_1_2[11]).runOnJS(closure_0)();
-            const obj = closure_1_0(closure_1_2[11]);
-          }
-        };
-        obj3 = require("CONFIG_NEVER_ANIMATE");
-        tmp7 = closure_1_14;
-        obj[1] = obj3.withSpring(value, closure_1_14, "animate-always", fn);
-        obj4 = closure_5;
-        obj[2] = 10 - closure_5.get();
-        str = "auto";
-        if (closure_5.get() > 0) {
-          tmp8 = closure_2;
-          str = closure_2.get();
-        }
-        obj[3] = str;
-        obj[4] = diff - result;
-        if (enabled) {
-          items = [];
-        } else {
-          num = 0.7;
-          num2 = 1;
-          if (1 === obj.get()) {
-            num3 = 0.1;
-            num = 1 - 0.1 * obj4.get();
-          }
-          if (typeof tmp3 !== "function") {
-            str5 = "Trying to call a non-function";
-            throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
-          }
-          obj1 = { scale: null };
-          tmp5Result = require("CONFIG_NEVER_ANIMATE");
-          tmp9 = tmp5Result;
-          tmp10 = num;
-          tmp11 = tmp7;
-          str2 = "animate-always";
-          obj1[0] = tmp5Result.withSpring(num, tmp7, "animate-always", undefined);
-          items = [,];
-          items[0] = obj1;
-          if (1 === obj.get()) {
-            result1 = [0, -20, -34][obj4.get(obj4)];
-            tmp14 = null;
-            if (result1 == null) {
-              num5 = -12;
-              result1 = -12 * obj.get();
+        if (typeof withAlertModalSpring === "function") {
+          obj = { position: "absolute", opacity: null, zIndex: null, height: null, maxHeight: null, transform: null };
+          tmp5 = closure_0;
+          tmp6 = closure_2;
+          fn = (arg0) => {
+            let tmp = true === arg0;
+            if (tmp) {
+              tmp = 0 === closure_1_7.get();
             }
-            diff1 = result1;
+            if (tmp) {
+              value = sharedTransitionState.get();
+              tmp = value === context(context2[9]).TransitionStates.YEETED;
+            }
+            if (tmp) {
+              context(context2[11]).runOnJS(closure_1_0)();
+              obj = context(context2[11]);
+            }
+          };
+          obj3 = closure_0(closure_2[25]);
+          tmp7 = closure_14;
+          str = "animate-always";
+          tmp8 = obj3;
+          tmp9 = value;
+          tmp10 = closure_14;
+          str2 = "animate-always";
+          obj.opacity = obj3.withSpring(value, closure_14, "animate-always", fn);
+          obj4 = closure_5;
+          num = 10;
+          obj.zIndex = 10 - closure_5.get();
+          num2 = 0;
+          str3 = "auto";
+          if (closure_5.get() > 0) {
+            tmp11 = closure_2;
+            str3 = closure_2.get();
+          }
+          obj.height = str3;
+          obj.maxHeight = diff - result;
+          tmp12 = enabled;
+          if (enabled) {
+            items = [];
           } else {
-            num4 = 50;
-            diff1 = 50 - 50 * obj4.get();
+            num3 = 0.7;
+            num4 = 1;
+            if (1 === obj.get()) {
+              num5 = 0.1;
+              num3 = 1 - 0.1 * obj4.get();
+            }
+            if (typeof tmp3 === "function") {
+              obj1 = { scale: null };
+              tmp5Result = tmp5(tmp6[25]);
+              tmp13 = tmp5Result;
+              tmp14 = num3;
+              tmp15 = tmp7;
+              str4 = "animate-always";
+              obj1.scale = tmp5Result.withSpring(num3, tmp7, "animate-always", undefined);
+              items = [,];
+              items[0] = obj1;
+              if (1 === obj.get()) {
+                result1 = [0, -20, -34][obj4.get(obj4)];
+                tmp18 = null;
+                if (result1 == null) {
+                  num7 = -12;
+                  result1 = -12 * obj.get();
+                }
+                diff1 = result1;
+              } else {
+                num6 = 50;
+                diff1 = 50 - 50 * obj4.get();
+              }
+              if (typeof tmp3 === "function") {
+                obj2 = { translateY: null };
+                tmp5Result1 = tmp5(tmp6[25]);
+                tmp19 = tmp5Result1;
+                tmp20 = diff1;
+                tmp21 = tmp7;
+                str5 = "animate-always";
+                obj2.translateY = tmp5Result1.withSpring(diff1, tmp7, "animate-always", undefined);
+                items[1] = obj2;
+              } else {
+                str8 = "Trying to call a non-function";
+                throw new TypeError("Trying to call a non-function");
+              }
+            } else {
+              str7 = "Trying to call a non-function";
+              throw new TypeError("Trying to call a non-function");
+            }
           }
-          if (typeof tmp3 !== "function") {
-            str6 = "Trying to call a non-function";
-            throwTypeErrorResult2 = HermesBuiltin.throwTypeError();
-          }
-          obj2 = { translateY: null };
-          tmp5Result1 = require("CONFIG_NEVER_ANIMATE");
-          tmp15 = tmp5Result1;
-          tmp16 = diff1;
-          tmp17 = tmp7;
-          str3 = "animate-always";
-          obj2[0] = tmp5Result1.withSpring(diff1, tmp7, "animate-always", undefined);
-          items[1] = obj2;
+          obj.transform = items;
+          return obj;
+        } else {
+          str6 = "Trying to call a non-function";
+          throw new TypeError("Trying to call a non-function");
         }
-        obj[5] = items;
-        return obj;
       }
     }
     obj = {
       sharedVisible: tmp11,
       sharedTransitionState: first,
-      TransitionStates: require("ManaContext").TransitionStates,
-      runOnJS: require("../../../../modules/reanimated/ReanimatedRexport.tsx").runOnJS,
+      TransitionStates: closure_0(closure_2[9]).TransitionStates,
+      runOnJS: closure_0(closure_2[11]).runOnJS,
       cleanUp: context,
       windowHeight: height,
       ALERT_MODAL_MARGIN: 16,
@@ -264,10 +278,10 @@ class AlertModal {
     layoutEffect = closure_6.useLayoutEffect(() => {
       const result = sharedValue.set(context1);
     }, items1);
-    tmp15 = require("useBackPressHandler")(() => {
+    tmp15 = closure_1(closure_2[22])(() => {
       let useAlertStore = context(context2[10]).useAlertStore;
       const arr = sharedValue(useAlertStore.getState().alerts);
-      first = arr[0];
+      const first = arr[0];
       context = arr.slice(1);
       let tmp4 = null != first;
       if (tmp4) {
@@ -282,8 +296,8 @@ class AlertModal {
         tmpResult.dismissAlert(key);
         tmpResult = tmp(tmp2[15]);
         tmpResult.batchUpdates(() => {
-          const useAlertStore = callback(closure_1_2[10]).useAlertStore;
-          return useAlertStore.setState({ alerts: callback });
+          const useAlertStore = context(context2[10]).useAlertStore;
+          return useAlertStore.setState({ alerts });
         });
       }
       return true;
@@ -296,7 +310,7 @@ class AlertModal {
     obj1 = {
       importantForAccessibility: str,
       accessibilityElementsHidden: 0 !== context1,
-      style: items2,
+      style: null,
       onLayout(nativeEvent) {
         const result = context2.set(nativeEvent.nativeEvent.layout.height);
       },
@@ -305,17 +319,19 @@ class AlertModal {
     items2 = [,];
     items2[0] = tmp3.content;
     items2[1] = animatedStyle;
+    obj1.style = items2;
     obj2 = { style: tmp3.overflow, children: null };
     tmp19 = jsxs;
     tmp17 = bottom;
     tmp18 = closure_7;
     items3 = [, , ,];
     items3[0] = header;
-    obj3 = { spacing: 8, style: items4, children: null };
+    obj3 = { spacing: 8, style: null, children: null };
     items4 = [];
     items4[0] = tmp3.body;
+    obj3.style = items4;
     items5 = [,];
-    items5[0] = tmp16(require("Text").Text, {
+    items5[0] = tmp16(tmp5(tmp6[24]).Text, {
       ref,
       variant: "heading-lg/bold",
       accessibilityRole: "header",
@@ -328,34 +344,34 @@ class AlertModal {
       tmp16Result = null;
       if ("" !== content) {
         obj4 = { variant: "text-md/medium", color: "text-default", style: null, children: null };
-        obj4[2] = tmp3.contentText;
-        obj4[3] = content;
-        tmp16Result = tmp16(require("Text").Text, obj4);
+        obj4.style = tmp3.contentText;
+        obj4.children = content;
+        tmp16Result = tmp16(tmp5(tmp6[24]).Text, obj4);
       }
     }
     items5[1] = tmp16Result;
-    obj3[2] = items5;
-    items3[1] = tmp19(require("Stack").Stack, obj3);
+    obj3.children = items5;
+    items3[1] = tmp19(tmp5(tmp6[23]).Stack, obj3);
     items3[2] = extraContent;
     tmp16Result1 = null;
     if (null != actions) {
       tmp22 = AlertActions;
       obj5 = { children: null };
-      obj5[0] = actions;
+      obj5.children = actions;
       tmp16Result1 = tmp16(AlertActions, obj5);
     }
     obj6 = { alwaysBounceVertical: false, children: null };
     items3[3] = tmp16Result1;
-    obj2[1] = tmp19(require("Stack").Stack, { spacing: 24, children: items3 });
-    obj6[1] = tmp16(tmp18, obj2);
-    obj1[4] = tmp16(tmp17, obj6);
-    return tmp16(require("../../../../modules/reanimated/ReanimatedRexport.tsx").View, obj1);
+    obj2.children = tmp19(tmp5(tmp6[23]).Stack, { spacing: 24, children: items3 });
+    obj6.children = tmp16(tmp18, obj2);
+    obj1.children = tmp16(tmp17, obj6);
+    return tmp16(closure_1(closure_2[11]).View, obj1);
   }
 }
 function useSharedAnimationState() {
-  let obj = importAllResult;
-  const context = importAllResult.useContext(closure_15);
-  const context1 = importAllResult.useContext(closure_16);
+  let __closure = noop;
+  const context = noop.useContext(closure_15);
+  const context1 = noop.useContext(closure_16);
   let num = 0;
   if (context === context(sharedValue[9]).TransitionStates.MOUNTED) {
     num = 1;
@@ -364,7 +380,7 @@ function useSharedAnimationState() {
   let tmp3Result = tmp3(tmp4[11]);
   const sharedValue1 = tmp3Result.useSharedValue(context);
   const items = [sharedValue, context, sharedValue1];
-  const layoutEffect = obj.useLayoutEffect(() => {
+  const layoutEffect = __closure.useLayoutEffect(() => {
     const result = sharedValue1.set(context);
   }, items);
   tmp3Result = tmp3(tmp4[11]);
@@ -373,42 +389,42 @@ function useSharedAnimationState() {
   };
   fn.__closure = { sharedTransitionState: sharedValue1 };
   fn.__workletHash = 14603144870585;
-  fn.__initData = closure_27;
+  fn.__initData = __initData3;
   const fn2 = function t(arg0) {
-    if (arg0 === context(sharedValue[9]).TransitionStates.YEETED) {
+    if (arg0 === native.TransitionStates.YEETED) {
       if (1 === sharedValue.get()) {
         const result = obj.set(0);
       } else {
-        context(sharedValue[11]).runOnJS(context1)();
-        const tmpResult = context(sharedValue[11]);
+        ReanimatedRexport.runOnJS(context1)();
+        const tmpResult = ReanimatedRexport;
       }
       obj = sharedValue;
     } else {
       const result1 = sharedValue.set(1);
     }
   };
-  obj = {
+  __closure = {
     TransitionStates: tmp3(tmp4[9]).TransitionStates,
     sharedVisible: sharedValue,
     runOnJS: tmp3(tmp4[11]).runOnJS,
     cleanUp: context1,
   };
-  fn2.__closure = obj;
+  fn2.__closure = __closure;
   fn2.__workletHash = 9486923983340;
-  fn2.__initData = closure_28;
+  fn2.__initData = __initData4;
   const animatedReaction = tmp3Result.useAnimatedReaction(fn, fn2);
   const items1 = [sharedValue1, sharedValue];
   return items1;
 }
 class AlertActions {
   constructor(arg0) {
-    return jsx(require("Stack").Stack, { spacing: 12, children: global.children });
+    return jsx(closure_0(closure_2[23]).Stack, { spacing: 12, children: global.children });
   }
 }
 class AlertActionButton {
   constructor(arg0) {
     ({ onPress: closure_0, loading } = global);
-    merged = Object.assign(global, Object.create(null));
+    merged = Object.assign(global, Object.assign({ onPress: 0, loading: 0 }));
     closure_1 = undefined;
     closure_2 = undefined;
     tmp2 = closure_4(closure_6.useState(false), 2);
@@ -423,86 +439,74 @@ class AlertActionButton {
     }
     obj.loading = loading;
     closure_0 = undefined;
-    closure_0 = closure_3((arg0) => {
-      closure_0 = arg0;
-      c2 = 0;
-      c4 = 0;
-      c3 = 0;
-      return (function* (arg0) {
-        if (c4 === 2) {
-          c4 = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp6 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            return { value: "HermesInternal", done: null };
-          }
+    closure_0 = closure_3(async (arg0, value) => {
+      if (c4 === 2) {
+        c4 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          obj = { value, done: true };
+          return obj;
         } else {
-          try {
-            c4 = 2;
-            if (0 === c2) {
-              if (arg0 === 1) {
-                c4 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c4 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                closure_1 = tmp3;
-                let tmp11;
-                if (callback != null) {
-                  tmp11 = callback(callback);
-                }
-                if (null != tmp11) {
-                  if (tmp11 instanceof Promise) {
-                    closure_1_1(true);
-                    c3 = 1;
-                    c2 = 2;
-                    c4 = 1;
-                    obj1 = { value: null, done: false };
-                    obj1[0] = tmp11;
-                    return obj1;
-                  }
-                }
-                let obj2 = callback(table[10]);
-                obj2.dismissAlert(c2);
-                c4 = 3;
-              }
-            } else if (1 === tmp7) {
-              c3 = 0;
-              closure_1_1(false);
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c4 = 2;
+          if (0 === c2) {
+            if (arg0 === 1) {
               c4 = 3;
-              obj2 = { value: null, done: true };
-              obj2[0] = undefined;
-              return obj2;
-            } else if (arg0 === 1) {
+              throw value;
+            } else if (arg0 === 2) {
               c4 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              c3 = 0;
-            }
-            c3 = 0;
-            c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } catch (tmp19) {
-            if (tmp4 === c3) {
-              c4 = tmp2;
-              throw tmp19;
+              obj = { value, done: true };
+              return obj;
             } else {
-              c2 = tmp;
+              let tmp11;
+              if (closure_0 != null) {
+                tmp11 = closure_0(closure_0);
+              }
+              if (null != tmp11) {
+                if (tmp11 instanceof Promise) {
+                  tmp3(true);
+                  c3 = 1;
+                  c2 = 2;
+                  c4 = 1;
+                  const obj1 = { value: tmp11, done: false };
+                  return obj1;
+                }
+              }
+              let obj2 = closure_0(closure_2[10]);
+              obj2.dismissAlert(c2);
+              c4 = 3;
             }
+          } else if (1 === tmp7) {
+            c3 = 0;
+            tmp3(false);
+            c4 = 3;
+            obj2 = { value: undefined, done: true };
+            return obj2;
+          } else if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            c3 = 0;
+          }
+          c3 = 0;
+          c4 = 3;
+          obj = { value, done: true };
+          return obj;
+        } catch (tmp19) {
+          if (tmp4 === c3) {
+            c4 = tmp2;
+            throw tmp19;
+          } else {
+            c2 = tmp;
           }
         }
-      })();
+      }
     });
     obj.onPress = function () {
       const self = this;
@@ -514,64 +518,72 @@ class AlertActionButton {
       }
       return applyArgumentsResult;
     };
-    return tmp3(require("Button").Button, obj);
+    return tmp3(closure_0(closure_2[26]).Button, obj);
   }
 }
-({ View: error, StyleSheet: closure_8, ScrollView: c9 } = get_ActivityIndicator);
-({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
-let obj = {
+get_ActivityIndicator = fn(17);
+({ View: closure_7, StyleSheet: closure_8, ScrollView: closure_9 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
+let createStyles = fn(4560);
+let MODAL_SPRING = {
   root: { flex: 1, position: "relative", justifyContent: "center", alignItems: "center", paddingHorizontal: 16 },
   content: null,
   overflow: null,
   body: null,
   contentText: null,
 };
-obj = {
-  backgroundColor: ThemesDefault.colors.MOBILE_ALERT_BACKGROUND_DEFAULT,
+let size = {
+  backgroundColor: nativeDefault.colors.MOBILE_ALERT_BACKGROUND_DEFAULT,
   margin: 16,
   width: "100%",
   maxWidth: 400,
   height: "100%",
-  borderRadius: ThemesDefault.radii.xl,
+  borderRadius: nativeDefault.radii.xl,
   borderWidth: 1,
-  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderColor: nativeDefault.colors.BORDER_SUBTLE,
 };
-let merged = Object.assign(ThemesDefault.shadows.SHADOW_TOP_HIGH);
-obj[1] = obj;
-obj[2] = { width: "100%", height: "100%", overflow: "hidden", padding: 24, position: "relative" };
-obj[3] = { alignItems: "center" };
-obj[4] = { textAlign: "center" };
-let closure_13 = createCacheKey.createStyles(obj);
-createCacheKey = { overshootClamping: true, damping: 35, stiffness: 450, mass: 0.5, restDisplacementThreshold: 0.001 };
-let context = importAllResult.createContext(require("ManaContext").TransitionStates.YEETED);
-let context2 = importAllResult.createContext(require("sum").NOOP);
-const context4 = importAllResult.createContext("");
-const context5 = importAllResult.createContext(null);
-let closure_22 = {
+let merged = Object.assign(nativeDefault.shadows.SHADOW_TOP_HIGH);
+MODAL_SPRING.content = size;
+MODAL_SPRING.overflow = { width: "100%", height: "100%", overflow: "hidden", padding: 24, position: "relative" };
+MODAL_SPRING.body = { alignItems: "center" };
+MODAL_SPRING.contentText = { textAlign: "center" };
+createStyles.createStyles(MODAL_SPRING);
+MODAL_SPRING = { overshootClamping: true, damping: 35, stiffness: 450, mass: 0.5, restDisplacementThreshold: 0.001 };
+let context = noop.createContext(fn(4271).TransitionStates.YEETED);
+let context2 = noop.createContext(fn(1085).NOOP);
+const context3 = noop.createContext(0);
+const context4 = noop.createContext("");
+const context5 = noop.createContext(null);
+const __initData = {
   code: "function AlertModalNativeTsx1(){const{withAlertModalSpring,sharedVisible,sharedTransitionState,TransitionStates,runOnJS,cleanUp}=this.__closure;return{opacity:withAlertModalSpring(sharedVisible.get(),function(finished){if(finished===true&&sharedVisible.get()===0&&sharedTransitionState.get()===TransitionStates.YEETED){runOnJS(cleanUp)();}})};}",
 };
-let closure_24 = {
+let __initData4 = {
   code: "function AlertModalNativeTsx2(){const{sharedVisible,sharedTransitionState,TransitionStates,runOnJS,cleanUp,windowHeight,ALERT_MODAL_MARGIN,safeAreaTop,safeAreaBottom,withAlertModalSpring,sharedIndex,sharedTopHeight,useReducedMotion}=this.__closure;var _CARD_OFFSETS$sharedI;function onComplete(finished){if(finished===true&&sharedVisible.get()===0&&sharedTransitionState.get()===TransitionStates.YEETED){runOnJS(cleanUp)();}}const CARD_OFFSETS=[0,-20,-34];const maxHeight=windowHeight-ALERT_MODAL_MARGIN*2-Math.max(safeAreaTop,safeAreaBottom)*2;return{position:'absolute',opacity:withAlertModalSpring(sharedVisible.get(),onComplete),zIndex:10-sharedIndex.get(),height:sharedIndex.get()>0?sharedTopHeight.get():'auto',maxHeight:maxHeight,transform:useReducedMotion?[]:[{scale:withAlertModalSpring(sharedVisible.get()===1?1-sharedIndex.get()*0.1:0.7)},{translateY:withAlertModalSpring(sharedVisible.get()===1?(_CARD_OFFSETS$sharedI=CARD_OFFSETS[sharedIndex.get()])!==null&&_CARD_OFFSETS$sharedI!==void 0?_CARD_OFFSETS$sharedI:sharedVisible.get()*-12:50-sharedIndex.get()*50)}]};}",
 };
 function withAlertModalSpring(value, fn2) {
-  return CONFIG_NEVER_ANIMATE.withSpring(value, createCacheKey, "animate-always", fn2);
+  obj = spring;
+  return obj.withSpring(value, obj, "animate-always", fn2);
 }
-let obj2 = { withSpring: require("CONFIG_NEVER_ANIMATE").withSpring, MODAL_SPRING: createCacheKey };
-withAlertModalSpring.__closure = obj2;
+createStyles = { withSpring: fn(4974).withSpring, MODAL_SPRING };
+withAlertModalSpring.__closure = createStyles;
 withAlertModalSpring.__workletHash = 15556562210180;
 withAlertModalSpring.__initData = {
   code: "function withAlertModalSpring_AlertModalNativeTsx3(value,callback){const{withSpring,MODAL_SPRING}=this.__closure;return withSpring(value,MODAL_SPRING,'animate-always',callback);}",
 };
-let closure_27 = {
+const __initData3 = {
   code: "function AlertModalNativeTsx4(){const{sharedTransitionState}=this.__closure;return sharedTransitionState.get();}",
 };
-let closure_28 = {
+__initData4 = {
   code: "function AlertModalNativeTsx5(transitionState){const{TransitionStates,sharedVisible,runOnJS,cleanUp}=this.__closure;if(transitionState===TransitionStates.YEETED){if(sharedVisible.get()===1){sharedVisible.set(0);}else{runOnJS(cleanUp)();}}else{sharedVisible.set(1);}}",
 };
-const memoResult = importAllResult.memo(() => {
-  const tmp = callback6();
+size = fn(2);
+let result = size.fileFinishedImporting("design/components/AlertModal/native/AlertModal.native.tsx");
+
+export const AlertModalContainer = noop.memo(() => {
+  const tmp = closure_13();
   let items = tmp;
-  let obj = items(items[10]);
+  obj = items(items[10]);
   const alertStore = obj.useAlertStore((alerts) => alerts.alerts);
   const sharedValue = items(items[11]).useSharedValue(0);
   items = undefined;
@@ -585,57 +597,53 @@ const memoResult = importAllResult.memo(() => {
     });
   }
   const items1 = [items];
-  const layoutEffect = importAllResult.useLayoutEffect(() => {
+  const layoutEffect = noop.useLayoutEffect(() => {
     if (items.length > 0) {
-      const result = items(items[12]).dismissGlobalKeyboard();
-      const obj = items(items[12]);
+      const result = KeyboardManagerUtils.dismissGlobalKeyboard();
     }
   }, items1);
   const items2 = [tmp];
   const items3 = [sharedValue];
-  const callback = importAllResult.useCallback((children) => {
-    let obj = { style: closure_1_8.absoluteFillObject, children: null };
-    obj = { onDismiss: closure_1_21, children: closure_1_10(closure_1_7, obj) };
+  const callback = noop.useCallback((children) => {
+    obj = { style: absoluteFillObject.absoluteFillObject, children: null };
+    obj = { onDismiss: dismissTopAlert, children: closure_2_10(Dialog.Dialog, obj) };
     obj = { style: items.root, pointerEvents: "box-none", children };
-    obj[1] = closure_1_10(items(items[14]).Dialog, obj);
-    return closure_1_10(sharedValue(items[13]), obj);
+    obj.children = closure_2_10(React5, obj);
+    return closure_2_10(OverlayViewDefault, obj);
   }, items2);
-  const callback1 = importAllResult.useCallback((value, type, value2, value3) => {
+  const callback1 = noop.useCallback((value, type, value2, value3) => {
     if ("alert" === type.type) {
       let node = type.alert.node;
     } else {
-      node = closure_1_10(closure_1_23, {});
+      node = closure_2_10(AlertModalBackdrop, {});
     }
     let num = -1;
     if ("alert" === type.type) {
       num = type.index;
     }
-    let obj = { value: sharedValue, children: null };
+    obj = { value: sharedValue, children: null };
     obj = { value: value3, children: null };
     obj = { value: value2, children: null };
-    obj1 = {
+    const obj1 = {
       value: num,
-      children: closure_1_10(closure_1_18.Provider, {
+      children: closure_2_10(redux4.Provider, {
         value,
-        children: closure_1_10(closure_1_6.Suspense, { fallback: null, children: node }),
+        children: closure_2_10(noop.Suspense, { fallback: null, children: node }),
       }),
     };
-    obj[1] = closure_1_10(closure_1_17.Provider, obj1);
-    obj[1] = closure_1_10(closure_1_15.Provider, obj);
-    obj[1] = closure_1_10(closure_1_16.Provider, obj);
-    return closure_1_10(closure_1_19.Provider, obj, value);
+    obj.children = closure_2_10(redux3.Provider, obj1);
+    obj.children = closure_2_10(redux.Provider, obj);
+    obj.children = closure_2_10(redux2.Provider, obj);
+    return closure_2_10(redux5.Provider, obj, value);
   }, items3);
   obj = { wrapChildren: callback, items, renderItem: callback1, getItemKey: getAlertModalItemKey };
-  return callback4(items(items[9]).TransitionGroup, obj);
+  return closure_10(items(items[9]).TransitionGroup, obj);
 });
-let result = require("set").fileFinishedImporting("design/components/AlertModal/native/AlertModal.native.tsx");
-
-export const AlertModalContainer = memoResult;
 export const useDismissModalCallback = function useDismissModalCallback() {
-  const context = importAllResult.useContext(closure_18);
+  const context = noop.useContext(closure_18);
   const items = [context];
-  return importAllResult.useCallback(() => {
-    context(closure_1_2[10]).dismissAlert(context);
+  return noop.useCallback(() => {
+    useAlertStore2.dismissAlert(context);
   }, items);
 };
 export { AlertModal };
@@ -645,22 +653,21 @@ export const showConfirmModal = function showConfirmModal(arg0) {
   ({ key, cancelText } = arg0);
   ({ title, content, confirmText } = arg0);
   if (cancelText === undefined) {
-    const intl = getSystemLocale.intl;
-    cancelText = intl.string(getSystemLocale.t["ETE/oC"]);
+    const intl = util.intl;
+    cancelText = intl.string(util.t["ETE/oC"]);
   }
   ({ variant, extraContent } = arg0);
   if (variant === undefined) {
     variant = "destructive";
   }
   ({ onConfirm, onCancel, onCloseCallback, dismissable } = arg0);
-  let obj = useAlertStore2;
   obj = { title, content, extraContent, actions: null };
   obj = { children: null };
   const items = [
-    callback4(AlertActionButton, { variant, text: confirmText, onPress: onConfirm }),
-    callback4(AlertActionButton, { variant: "secondary", text: cancelText, onPress: onCancel }),
+    closure_1_10(AlertActionButton, { variant, text: confirmText, onPress: onConfirm }),
+    closure_1_10(AlertActionButton, { variant: "secondary", text: cancelText, onPress: onCancel }),
   ];
-  obj[0] = items;
-  obj[3] = callback5(closure_12, obj);
-  obj.openAlert(key, callback4(AlertModal, obj), onCloseCallback, { dismissable });
+  obj.children = items;
+  obj.actions = closure_1_11(closure_1_12, obj);
+  obj.openAlert(key, closure_1_10(AlertModal, obj), onCloseCallback, { dismissable });
 };

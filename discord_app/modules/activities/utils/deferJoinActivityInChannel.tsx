@@ -1,12 +1,12 @@
 // discord_app/modules/activities/utils/deferJoinActivityInChannel.tsx
-import set from "../../../../_runtime/00002_set.js";
-import dispatcherDefault from "../../../Dispatcher.tsx";
+import DispatcherDefault from "../../../Dispatcher.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/activities/utils/deferJoinActivityInChannel.tsx");
+const result = size.fileFinishedImporting("modules/activities/utils/deferJoinActivityInChannel.tsx");
 
 export default function deferJoinActivityApplication(arg0) {
   ({ channelId, applicationId, intent, inviterUserId, analyticsLocations, commandOrigin } = arg0);
-  dispatcherDefault.dispatch({
+  DispatcherDefault.dispatch({
     type: "EMBEDDED_ACTIVITY_DEFERRED_OPEN",
     channelId,
     applicationId,

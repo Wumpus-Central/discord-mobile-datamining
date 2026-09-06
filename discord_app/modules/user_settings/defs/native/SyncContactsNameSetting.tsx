@@ -1,53 +1,33 @@
 // discord_app/modules/user_settings/defs/native/SyncContactsNameSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import ME from "../../../../Constants.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import expandEventPropertiesDefault from "../../../../utils/AnalyticsUtils.tsx";
+import Constants from "../../../../Constants.tsx";
+import util from "../../../../intl/index.native.tsx";
+import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js";
-import _modDef4763 from "../../../../actions/ModalActionCreators.tsx";
-import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
-import _uploadContacts from "../../../contact_sync/native/ContactSyncUtils.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
+import ContactSyncUtils from "../../../contact_sync/native/ContactSyncUtils.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const AnalyticEvents = ME.AnalyticEvents;
-const pressable = createToggle.createPressable({
+const AnalyticEvents = Constants.AnalyticEvents;
+const pressable = SettingBuilders.createPressable({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.nAsWKy);
+    const intl = util.intl;
+    return intl.string(util.t.nAsWKy);
   },
-  parent: MobileUserSettings.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: SettingsConstants.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   onPress: function onContactSyncNamePress() {
-    expandEventPropertiesDefault.track(AnalyticEvents.OPEN_MODAL, {
+    AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, {
       type: "Change Name",
       location: { page: "User Settings" },
     });
-    const obj = expandEventPropertiesDefault;
-    _modDef4763.pushLazy(asyncRequireImpl(14845, dependencyMap.paths), "Contact Sync Name Update Modal");
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14845, dependencyMap.paths), "Contact Sync Name Update Modal");
   },
   withArrow: true,
   usePredicate: function useHasContactSyncAccount() {
-    return null != _uploadContacts.useContactSyncAccount();
+    return null != ContactSyncUtils.useContactSyncAccount();
   },
 });
-let obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.nAsWKy);
-  },
-  parent: MobileUserSettings.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
-  onPress: function onContactSyncNamePress() {
-    expandEventPropertiesDefault.track(AnalyticEvents.OPEN_MODAL, {
-      type: "Change Name",
-      location: { page: "User Settings" },
-    });
-    const obj = expandEventPropertiesDefault;
-    _modDef4763.pushLazy(asyncRequireImpl(14845, dependencyMap.paths), "Contact Sync Name Update Modal");
-  },
-  withArrow: true,
-  usePredicate: function useHasContactSyncAccount() {
-    return null != _uploadContacts.useContactSyncAccount();
-  },
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/SyncContactsNameSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/SyncContactsNameSetting.tsx");
 
 export default pressable;

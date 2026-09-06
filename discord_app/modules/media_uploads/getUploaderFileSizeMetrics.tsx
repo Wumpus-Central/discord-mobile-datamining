@@ -1,7 +1,7 @@
 // discord_app/modules/media_uploads/getUploaderFileSizeMetrics.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/media_uploads/getUploaderFileSizeMetrics.tsx");
+const result = size.fileFinishedImporting("modules/media_uploads/getUploaderFileSizeMetrics.tsx");
 
 export const getUploaderChannelId = function getUploaderChannelId(file) {
   const items = file.items;
@@ -17,8 +17,8 @@ export const getUploaderChannelId = function getUploaderChannelId(file) {
   }
   return channelId;
 };
-export const getUploaderFileSizeMetrics = function getUploaderFileSizeMetrics(items) {
-  items = items.items;
+export const getUploaderFileSizeMetrics = function getUploaderFileSizeMetrics(totalPreCompressionSize) {
+  let items = totalPreCompressionSize.items;
   if (items == null) {
     items = [];
   }
@@ -37,19 +37,20 @@ export const getUploaderFileSizeMetrics = function getUploaderFileSizeMetrics(it
     postCompressionAggregateSize: null,
     numAttachments: null,
   };
-  if (items.totalPreCompressionSize > 0) {
-    let totalPreCompressionSize = items.totalPreCompressionSize;
+  if (totalPreCompressionSize.totalPreCompressionSize > 0) {
+    totalPreCompressionSize = totalPreCompressionSize.totalPreCompressionSize;
   } else {
-    totalPreCompressionSize = mapped.reduce((arg0, arg1) => arg0 + arg1, 0);
+    totalPreCompressionSize = mapped.reduce((acc, item) => acc + item, 0);
   }
-  obj[2] = totalPreCompressionSize;
-  if (null != items.totalPostCompressionSize) {
-    if (items.totalPostCompressionSize > 0) {
-      let totalPostCompressionSize = items.totalPostCompressionSize;
+  obj.preCompressionAggregateSize = totalPreCompressionSize;
+  if (null != totalPreCompressionSize.totalPostCompressionSize) {
+    if (totalPreCompressionSize.totalPostCompressionSize > 0) {
+      let totalPostCompressionSize = totalPreCompressionSize.totalPostCompressionSize;
     }
-    obj[3] = totalPostCompressionSize;
-    obj[4] = items.attachmentsCount > 0 ? items.attachmentsCount : items.length;
+    obj.postCompressionAggregateSize = totalPostCompressionSize;
+    obj.numAttachments =
+      totalPreCompressionSize.attachmentsCount > 0 ? totalPreCompressionSize.attachmentsCount : items.length;
     return obj;
   }
-  totalPostCompressionSize = mapped1.reduce((arg0, arg1) => arg0 + arg1, 0);
+  totalPostCompressionSize = mapped1.reduce((acc, item) => acc + item, 0);
 };

@@ -1,20 +1,23 @@
 // discord_app/modules/games/hooks/useResolveGame.tsx
-import closure_2 from "../../../../_runtime/00019_noop.js";
+import useGetOrFetchApplications from "../../applications/useGetOrFetchApplications.tsx";
+import useGame from "useGame.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/games/hooks/useResolveGame.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/games/hooks/useResolveGame.tsx");
 
 export default function useResolveGame(arg0) {
   ({ applicationId, gameId } = arg0);
   let getOrFetchApplication;
-  let obj = gameId(getOrFetchApplication[1]);
+  let obj = useGetOrFetchApplications;
   let tmp3;
   if (null == gameId) {
     tmp3 = applicationId;
   }
   getOrFetchApplication = obj.useGetOrFetchApplication(tmp3);
   const items = [gameId, getOrFetchApplication];
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     let tmp = gameId;
     if (null == gameId) {
       let canonicalGameId = null;
@@ -26,13 +29,13 @@ export default function useResolveGame(arg0) {
     }
     return tmp;
   }, items);
-  const game = gameId(getOrFetchApplication[2]).useGame(memo);
+  const game = useGame.useGame(memo);
   let data = game.data;
   obj = { gameId: memo, gameRecord: null, isLoading: null };
   if (data == null) {
     data = null;
   }
-  obj[1] = data;
-  obj[2] = (null == gameId && null != applicationId && null == getOrFetchApplication) || game.isLoading;
+  obj.gameRecord = data;
+  obj.isLoading = (null == gameId && null != applicationId && null == getOrFetchApplication) || game.isLoading;
   return obj;
 }

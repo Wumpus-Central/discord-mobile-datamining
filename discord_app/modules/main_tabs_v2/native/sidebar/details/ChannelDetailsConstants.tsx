@@ -1,9 +1,9 @@
 // discord_app/modules/main_tabs_v2/native/sidebar/details/ChannelDetailsConstants.tsx
-import set from "../../../../../../_runtime/00002_set.js";
-import MessageEmbedTypes from "../../../../search/SearchConstants.tsx";
+import SearchConstants from "../../../../search/SearchConstants.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-const sum = MessageEmbedTypes.SEARCH_BAR_HEIGHT + 40;
-const result = set.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsConstants.tsx");
+const sum = SearchConstants.SEARCH_BAR_HEIGHT + 40;
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsConstants.tsx");
 
 export const ChannelDetailsNavigatorScreens = {
   DETAILS: "root",

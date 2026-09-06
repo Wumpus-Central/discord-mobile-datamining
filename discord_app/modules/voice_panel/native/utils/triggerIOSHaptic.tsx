@@ -1,14 +1,13 @@
 // discord_app/modules/voice_panel/native/utils/triggerIOSHaptic.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import HapticFeedbackTypes from "../../../haptics/HapticUtils.native.tsx";
-import VoicePanelModes from "../../VoicePanelConstants.tsx";
+import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
+import VoicePanelConstants from "../../VoicePanelConstants.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const IS_IOS = VoicePanelModes.IS_IOS;
-let result = set.fileFinishedImporting("modules/voice_panel/native/utils/triggerIOSHaptic.tsx");
+const IS_IOS = VoicePanelConstants.IS_IOS;
+let result = size.fileFinishedImporting("modules/voice_panel/native/utils/triggerIOSHaptic.tsx");
 
 export default function triggerIOSHaptic() {
   if (IS_IOS) {
-    const result = HapticFeedbackTypes.triggerHapticFeedback(HapticFeedbackTypes.HapticFeedbackTypes.IMPACT_MEDIUM);
-    const obj = HapticFeedbackTypes;
+    const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
   }
 }

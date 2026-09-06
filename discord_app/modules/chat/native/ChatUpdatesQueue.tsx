@@ -1,10 +1,10 @@
 // discord_app/modules/chat/native/ChatUpdatesQueue.tsx
-import set2 from "../../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import get_ActivityIndicator from "../../../../_runtime/metro/00017__.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const NativeEventEmitter = get_ActivityIndicator.NativeEventEmitter;
 const DCDChatBlockerManager = get_ActivityIndicator.NativeModules.DCDChatBlockerManager;
-const result = set2.fileFinishedImporting("modules/chat/native/ChatUpdatesQueue.tsx");
+const result = size.fileFinishedImporting("modules/chat/native/ChatUpdatesQueue.tsx");
 class ChatUpdatesQueue {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
@@ -18,7 +18,7 @@ class ChatUpdatesQueue {
     };
     obj.getReactTag = global;
     obj.onFlushItem = require;
-    tmp3 = new closure_0(DCDChatBlockerManager);
+    tmp3 = new NativeEventEmitter(DCDChatBlockerManager);
     obj.eventEmitter = tmp3;
     eventEmitter = obj.eventEmitter;
     obj.addBlockerSubscription = eventEmitter.addListener("AddBlocker", (reactTag) => {
@@ -105,11 +105,11 @@ prototype["flush"] = function flush() {
   const self = this;
   this.queueStartTimestamp = null;
   const queue = this.queue;
-  const item = queue.forEach((arg0) => {
-    if (null != arg0) {
+  const item = queue.forEach((item) => {
+    if (null != item) {
       const onFlushItem = self.onFlushItem;
       if (onFlushItem != null) {
-        onFlushItem(arg0);
+        onFlushItem(item);
       }
     }
   });

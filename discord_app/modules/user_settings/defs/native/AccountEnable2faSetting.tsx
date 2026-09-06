@@ -1,43 +1,44 @@
 // discord_app/modules/user_settings/defs/native/AccountEnable2faSetting.tsx
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import setDefault from "../../../../actions/AlertActionCreators.tsx";
-import useIs2FAEnabled from "../../account/native/SettingsAccountUtils.tsx";
-import _modDef14781 from "../../account/native/mfa_modal_flow/TwoFASetupModalActionCreators.tsx";
-import closure_3 from "../../../../stores/UserStore.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import util from "../../../../intl/index.native.tsx";
+import AlertActionCreatorsDefault from "../../../../actions/AlertActionCreators.tsx";
+import SettingsAccountUtils from "../../account/native/SettingsAccountUtils.tsx";
+import TwoFASetupModalActionCreatorsDefault from "../../account/native/mfa_modal_flow/TwoFASetupModalActionCreators.tsx";
+import UserStore from "../../../../stores/UserStore.tsx";
 
-require = arg1;
-createToggle = {
+require = fn;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.cDgKte);
+    const intl = util.intl;
+    return intl.string(util.t.cDgKte);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.ACCOUNT,
+  parent: fn(7975).MobileUserSettings.ACCOUNT,
   onPress: function onAccountEnable2FASettingPress() {
-    currentUser = currentUser.getCurrentUser();
+    const currentUser = UserStore.getCurrentUser();
     let verified;
     if (currentUser != null) {
       verified = currentUser.verified;
     }
     if (verified != null) {
       if (verified) {
-        let obj = _modDef14781;
+        let obj = TwoFASetupModalActionCreatorsDefault;
         obj.open();
       }
     }
     obj = { title: null, body: null };
-    const intl = getSystemLocale.intl;
-    obj[0] = intl.string(getSystemLocale.t.v740sh);
-    const intl2 = getSystemLocale.intl;
-    obj[1] = intl2.string(getSystemLocale.t.uggF7o);
-    setDefault.show(obj);
+    const intl = util.intl;
+    obj.title = intl.string(util.t.v740sh);
+    const intl2 = util.intl;
+    obj.body = intl2.string(util.t.uggF7o);
+    AlertActionCreatorsDefault.show(obj);
   },
   withArrow: true,
   usePredicate: function useHasAccountEnable2FASetting() {
-    return !useIs2FAEnabled.useIsTOTPEnabled();
+    return !SettingsAccountUtils.useIsTOTPEnabled();
   },
 };
-createToggle = createToggle.createPressable(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AccountEnable2faSetting.tsx");
+SettingBuilders = SettingBuilders.createPressable(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountEnable2faSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

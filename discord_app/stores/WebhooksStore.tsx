@@ -1,7 +1,8 @@
 // discord_app/stores/WebhooksStore.tsx
-import applyDefault from "../../_runtime/00012_apply.js";
+import _modDef12 from "../../_runtime/metro/00012__.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../Dispatcher.tsx";
+import DispatcherDefault from "../Dispatcher.tsx";
+import WebhooksActionCreatorsDefault from "../actions/WebhooksActionCreators.tsx";
 
 function handleWebhookCreateUpdate(arg0) {
   ({ guildId, webhook } = arg0);
@@ -10,7 +11,7 @@ function handleWebhookCreateUpdate(arg0) {
   }
   dependencyMap[guildId][webhook.id] = webhook;
 }
-let closure_3 = {};
+const dependencyMap = {};
 let closure_4 = {};
 const Store = initializeDefault.Store;
 class WebhooksStore extends Store {}
@@ -22,30 +23,29 @@ prototype["isFetching"] = function isFetching(arg0, arg1) {
   }
   return null != closure_4["" + arg0 + ":" + str];
 };
-prototype["getWebhooksForGuild"] = function getWebhooksForGuild(arg0) {
-  if (null == dependencyMap[arg0]) {
-    tmp[arg0] = {};
+prototype["getWebhooksForGuild"] = function getWebhooksForGuild(id) {
+  if (null == dependencyMap[id]) {
+    tmp[id] = {};
   }
-  return applyDefault.values(dependencyMap[arg0]);
+  return _modDef12.values(dependencyMap[id]);
 };
-prototype["getWebhooksForChannel"] = function getWebhooksForChannel(arg0, arg1) {
-  importDefault = arg1;
-  if (null == dependencyMap[arg0]) {
-    tmp2[arg0] = {};
+prototype["getWebhooksForChannel"] = function getWebhooksForChannel(id, arg1) {
+  closure_0 = arg1;
+  if (null == dependencyMap[id]) {
+    tmp2[id] = {};
   }
-  const tmp = applyDefault;
-  const values = applyDefault(dependencyMap[arg0]).values();
-  const tmpResult = applyDefault(dependencyMap[arg0]);
+  const values = _modDef12(dependencyMap[id]).values();
+  const tmpResult = _modDef12(dependencyMap[id]);
   return values.filter((channel_id) => channel_id.channel_id === closure_0).value();
 };
 Object.defineProperty(prototype, "error", {
   get: function error() {
-    return closure_2;
+    return c2;
   },
   set: undefined,
 });
 WebhooksStore.displayName = "WebhooksStore";
-const webhooksStore = new WebhooksStore(dispatcherDefault, {
+const webhooksStore = new WebhooksStore(DispatcherDefault, {
   WEBHOOKS_UPDATE: function handleWebhooksUpdate(arg0) {
     ({ guildId, channelId } = arg0);
     ({ webhooks, error } = arg0);
@@ -57,9 +57,8 @@ const webhooksStore = new WebhooksStore(dispatcherDefault, {
         if (null == dependencyMap[guildId]) {
           tmp16[guildId] = {};
         }
-        const tmp15 = channelId(obj[1]);
-        const values = channelId(obj[1])(dependencyMap[guildId]).values();
-        const tmp15Result = channelId(obj[1])(dependencyMap[guildId]);
+        const values = _modDef12(dependencyMap[guildId]).values();
+        const tmp15Result = _modDef12(dependencyMap[guildId]);
         items = values.filter((channel_id) => channel_id.channel_id !== channelId).value();
         const iter = values.filter((channel_id) => channel_id.channel_id !== channelId);
       }
@@ -93,7 +92,7 @@ const webhooksStore = new WebhooksStore(dispatcherDefault, {
       }
       if (tmp5) {
         c2 = null;
-        obj = channelId(obj[0]);
+        obj = WebhooksActionCreatorsDefault;
         const forChannel = obj.fetchForChannel(guildId, channelId);
       }
     }
@@ -115,6 +114,7 @@ const webhooksStore = new WebhooksStore(dispatcherDefault, {
     delete tmp[tmp2];
   },
 });
-const result = require("set").fileFinishedImporting("stores/WebhooksStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("stores/WebhooksStore.tsx");
 
 export default webhooksStore;

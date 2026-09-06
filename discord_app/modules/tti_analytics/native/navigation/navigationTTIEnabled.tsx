@@ -1,7 +1,7 @@
 // discord_app/modules/tti_analytics/native/navigation/navigationTTIEnabled.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/tti_analytics/native/navigation/navigationTTIEnabled.tsx");
+const result = size.fileFinishedImporting("modules/tti_analytics/native/navigation/navigationTTIEnabled.tsx");
 
 export function isNavigationTTIEnabled() {
   return false;

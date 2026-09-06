@@ -1,8 +1,8 @@
 // discord_app/modules/suppress_notifications/parseContentForSuppressNotifications.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
 const regExp = new RegExp("^" + "@silent" + "(\\s|$)");
-const result = set.fileFinishedImporting("modules/suppress_notifications/parseContentForSuppressNotifications.tsx");
+const result = size.fileFinishedImporting("modules/suppress_notifications/parseContentForSuppressNotifications.tsx");
 
 export default function parseContentForSuppressNotifications(str) {
   if (null == str) {

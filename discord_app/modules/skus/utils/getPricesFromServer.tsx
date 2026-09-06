@@ -1,9 +1,9 @@
 // discord_app/modules/skus/utils/getPricesFromServer.tsx
-import set from "../../../../_runtime/00002_set.js";
-import createFromServer from "../../../records/SubscriptionPlanRecord.tsx";
+import SubscriptionPlanRecord from "../../../records/SubscriptionPlanRecord.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const getPriceFromServer = createFromServer.getPriceFromServer;
-const result = set.fileFinishedImporting("modules/skus/utils/getPricesFromServer.tsx");
+const getPriceFromServer = SubscriptionPlanRecord.getPriceFromServer;
+const result = size.fileFinishedImporting("modules/skus/utils/getPricesFromServer.tsx");
 
 export default function getPricesFromServer(arg0) {
   if (null == arg0) {
@@ -11,15 +11,16 @@ export default function getPricesFromServer(arg0) {
   } else {
     const _Object = Object;
     const entries = Object.entries(arg0);
-    reduced = entries.reduce((arg0, arg1) => {
-      [tmp, tmp2] = arg1;
+    reduced = entries.reduce((acc, item) => {
+      [tmp, tmp2] = item;
       let obj = { countryPrices: null, paymentSourcePrices: null };
-      obj = { countryCode: tmp2.country_prices.country_code, prices: prices.map((arg0) => callback(arg0, true)) };
-      prices = tmp2.country_prices.prices;
-      obj[0] = obj;
-      obj[1] = {};
-      arg0[tmp] = obj;
-      return arg0;
+      obj = { countryCode: tmp2.country_prices.country_code, prices: null };
+      const prices = tmp2.country_prices.prices;
+      obj.prices = prices.map((item) => closure_1_0(item, true));
+      obj.countryPrices = obj;
+      obj.paymentSourcePrices = {};
+      acc[tmp] = obj;
+      return acc;
     }, {});
   }
   return reduced;

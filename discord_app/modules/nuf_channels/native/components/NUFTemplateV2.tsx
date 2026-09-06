@@ -1,32 +1,32 @@
 // discord_app/modules/nuf_channels/native/components/NUFTemplateV2.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import Text from "../../../../design/components/Text/native/Text.tsx";
-import Button from "../../../../design/components/Button/native/Button.native.tsx";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-let closure_5 = createCacheKey.createStyles({
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const createStyles = fn(4560);
+let closure_5 = createStyles.createStyles({
   container: { padding: 16, alignItems: "center" },
   title: { textAlign: "center", marginBottom: 8 },
   description: { textAlign: "center", marginBottom: 46, paddingLeft: 18, paddingRight: 18 },
   illustration: { alignSelf: "stretch", alignItems: "center", marginBottom: 32 },
 });
-const result = require("set").fileFinishedImporting("modules/nuf_channels/native/components/NUFTemplateV2.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/nuf_channels/native/components/NUFTemplateV2.tsx");
 
 export default function NUFActionSheetTemplate(arg0) {
   ({ title, illustration, description, onCTAPress, CTALabel } = arg0);
-  const tmp = callback3();
+  const tmp = closure_5();
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.illustration, children: illustration };
-  const items = [callback(View, obj), , ,];
+  const items = [React3(View, obj), , ,];
   obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/bold", children: title };
-  items[1] = callback(Text.Text, obj);
-  items[2] = callback(Text.Text, { style: tmp.description, variant: "text-md/medium", children: description });
-  items[3] = callback(Button.Button, { text: CTALabel, onPress: onCTAPress, grow: true });
-  obj[1] = items;
-  return callback2(View, obj);
+  items[1] = React3(Text_Text.Text, obj);
+  items[2] = React3(Text_Text.Text, { style: tmp.description, variant: "text-md/medium", children: description });
+  items[3] = React3(components_Button_Button.Button, { text: CTALabel, onPress: onCTAPress, grow: true });
+  obj.children = items;
+  return React4(View, obj);
 }

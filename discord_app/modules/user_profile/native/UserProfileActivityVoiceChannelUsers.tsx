@@ -1,29 +1,29 @@
 // discord_app/modules/user_profile/native/UserProfileActivityVoiceChannelUsers.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import getNicknameDefault from "../../../utils/NicknameUtils.tsx";
+import util from "../../../intl/index.native.tsx";
+import NicknameUtilsDefault from "../../../utils/NicknameUtils.tsx";
 import UserProfileStackedActionSheet from "UserProfileStackedActionSheet.tsx";
-import UserProfileStackedActionSheetDefault from "UserProfileStackedActionSheet.tsx";
-import closure_3 from "../../../stores/PresenceStore.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import noop from "../../../../_runtime/metro/00019__.js";
+import PresenceStore from "../../../stores/PresenceStore.tsx";
 
-require = arg1;
+const UserProfileStackedActionSheetDefault = UserProfileStackedActionSheet;
+
+require = fn;
 function UserRow(user) {
   user = user.user;
   const channel = user.channel;
   ({ onPress, start, end } = user);
   let obj = user(8217);
   const avatarDecoration = obj.useAvatarDecoration(user, channel.guild_id);
-  const items = [closure_3];
+  const items = [PresenceStore];
   const stateFromStoresObject = user(504).useStateFromStoresObject(items, () => ({
-    status: closure_1_3.getStatus(user.id),
-    isMobileOnline: closure_1_3.isMobileOnline(user.id),
-    isVROnline: closure_1_3.isVROnline(user.id),
+    status: PresenceStore.getStatus(user.id),
+    isMobileOnline: PresenceStore.isMobileOnline(user.id),
+    isVROnline: PresenceStore.isVROnline(user.id),
   }));
   ({ status, isMobileOnline, isVROnline } = stateFromStoresObject);
   obj = { onPress, label: null, icon: null, start: null, end: null };
   const obj2 = user(504);
-  obj[1] = getNicknameDefault.getName(channel.guild_id, channel.id, user);
+  obj.label = NicknameUtilsDefault.getName(channel.guild_id, channel.id, user);
   obj = {
     user,
     avatarDecoration,
@@ -34,7 +34,7 @@ function UserRow(user) {
     isVROnline,
     autoStatusCutout: true,
   };
-  obj[2] = jsx(user(1178).Avatar, {
+  obj.icon = jsx(user(1178).Avatar, {
     user,
     avatarDecoration,
     size: user(1178).AvatarSizes.REFRESH_MEDIUM_32,
@@ -44,8 +44,8 @@ function UserRow(user) {
     isVROnline,
     autoStatusCutout: true,
   });
-  obj[3] = start;
-  obj[4] = end;
+  obj.start = start;
+  obj.end = end;
   return jsx(user(5605).TableRow, {
     user,
     avatarDecoration,
@@ -57,59 +57,56 @@ function UserRow(user) {
     autoStatusCutout: true,
   });
 }
-noopAll;
-const result = require("set").fileFinishedImporting(
-  "modules/user_profile/native/UserProfileActivityVoiceChannelUsers.tsx",
-);
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileActivityVoiceChannelUsers.tsx");
 
 export default function UserProfileActivityVoiceChannelUsers(arg0) {
   ({ channel: require, onPressUser: importDefault } = arg0);
   ({ users, onBack } = arg0);
   let obj = { title: null, onBack: null, scrollable: true, children: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t["3xHUJ+"]);
-  obj[1] = onBack;
+  const intl = util.intl;
+  obj.title = intl.string(util.t["3xHUJ+"]);
+  obj.onBack = onBack;
   obj = {
     data: users,
     keyExtractor(id) {
       return id.id;
     },
-    renderItem(item) {
-      item = item.item;
-      return closure_1_4(
-        closure_1_5,
-        {
-          user: item,
-          channel: item,
-          onPress() {
-            return closure_1_1(item.id);
-          },
-          start: item.start,
-          end: item.end,
-        },
-        item.id,
+    renderItem(start) {
+      const item = start.item;
+      return (
+        <UserRow
+          key={item.id}
+          user={item}
+          channel={item}
+          onPress={function onPress() {
+            return importDefault(item.id);
+          }}
+          start={arg0.start}
+          end={arg0.end}
+        />
       );
     },
   };
-  obj[3] = jsx(UserProfileStackedActionSheet.UserProfileStackedActionSheetList, {
+  obj.children = jsx(UserProfileStackedActionSheet.UserProfileStackedActionSheetList, {
     data: users,
     keyExtractor(id) {
       return id.id;
     },
-    renderItem(item) {
-      item = item.item;
-      return closure_1_4(
-        closure_1_5,
-        {
-          user: item,
-          channel: item,
-          onPress() {
-            return closure_1_1(item.id);
-          },
-          start: item.start,
-          end: item.end,
-        },
-        item.id,
+    renderItem(start) {
+      const item = start.item;
+      return (
+        <UserRow
+          key={item.id}
+          user={item}
+          channel={item}
+          onPress={function onPress() {
+            return importDefault(item.id);
+          }}
+          start={arg0.start}
+          end={arg0.end}
+        />
       );
     },
   });
@@ -118,20 +115,19 @@ export default function UserProfileActivityVoiceChannelUsers(arg0) {
     keyExtractor(id) {
       return id.id;
     },
-    renderItem(item) {
-      item = item.item;
-      return closure_1_4(
-        closure_1_5,
-        {
-          user: item,
-          channel: item,
-          onPress() {
-            return closure_1_1(item.id);
-          },
-          start: item.start,
-          end: item.end,
-        },
-        item.id,
+    renderItem(start) {
+      const item = start.item;
+      return (
+        <UserRow
+          key={item.id}
+          user={item}
+          channel={item}
+          onPress={function onPress() {
+            return importDefault(item.id);
+          }}
+          start={arg0.start}
+          end={arg0.end}
+        />
       );
     },
   });

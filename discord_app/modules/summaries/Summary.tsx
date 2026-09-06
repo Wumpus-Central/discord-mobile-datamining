@@ -1,7 +1,7 @@
 // discord_app/modules/summaries/Summary.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/summaries/Summary.tsx");
+const result = size.fileFinishedImporting("modules/summaries/Summary.tsx");
 
 export const SummarySources = { SOURCE_0: 0, [0]: "SOURCE_0", SOURCE_1: 1, [1]: "SOURCE_1" };
 export const SummaryType = { UNSET: 0, [0]: "UNSET", SOURCE_1: 1, [1]: "SOURCE_1", SOURCE_2: 2, [2]: "SOURCE_2" };
@@ -18,7 +18,7 @@ export const createSummaryFromServer = function createSummaryFromServer(summary,
     source: null,
     type: null,
   };
-  ({ start_id: obj[4], end_id: obj[5], count: obj[6] } = summary);
-  ({ source: obj[8], type: obj[9] } = summary);
+  ({ start_id: obj.startId, end_id: obj.endId, count: obj.count } = summary);
+  ({ source: obj.source, type: obj.type } = summary);
   return obj;
 };

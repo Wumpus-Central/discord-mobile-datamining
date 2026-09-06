@@ -1,35 +1,38 @@
 // discord_app/modules/user_settings/voice/native/KrispLogo.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import expandEventPropertiesDefault from "../../../../utils/AnalyticsUtils.tsx";
-import combinedDefault from "../../../../utils/HelpdeskUtils.tsx";
-import _modDef4255 from "../../../../lib/native/Linking.tsx";
-import AccessibilityAnnouncer from "../../../../design/shared.tsx";
-import Text from "../../../../design/components/Text/native/Text.tsx";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../ThemeStore.tsx";
-import ME from "../../../../Constants.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import util from "../../../../intl/index.native.tsx";
+import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
+import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
+import LinkingDefault from "../../../../lib/native/Linking.tsx";
+import shared from "../../../../design/shared.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import ThemeStore from "../../ThemeStore.tsx";
 
-require = arg1;
+require = fn;
 function handleKrispLinkPressed() {
-  let obj = combinedDefault;
+  let obj = HelpdeskUtilsDefault;
   const articleURL = obj.getArticleURL(constants4.NOISE_SUPPRESSION);
   obj = { text: null, href: null, location: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t.hvVgAZ);
-  obj[1] = articleURL;
+  const intl = util.intl;
+  obj.text = intl.string(util.t.hvVgAZ);
+  obj.href = articleURL;
   obj = { page: constants2.USER_SETTINGS, section: constants3.SETTINGS_VOICE_AND_VIDEO };
-  obj[2] = obj;
-  expandEventPropertiesDefault.track(constants.NOISE_CANCELLATION_LINK_CLICKED, obj);
-  const obj2 = expandEventPropertiesDefault;
-  _modDef4255.openURL(articleURL);
+  obj.location = obj;
+  AnalyticsUtilsDefault.track(constants.NOISE_CANCELLATION_LINK_CLICKED, obj);
+  LinkingDefault.openURL(articleURL);
 }
-noopAll;
-({ Image: c3, View: c4, Pressable: c5 } = get_ActivityIndicator);
-({ AnalyticEvents: error, AnalyticsPages: closure_8, AnalyticsSections: c9, HelpdeskArticles: c10 } = ME);
-({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
+get_ActivityIndicator = fn(17);
+({ Image: c3, View: closure_4, Pressable: hasOwnProperty } = get_ActivityIndicator);
+const Constants = fn(1074);
+({
+  AnalyticEvents: closure_7,
+  AnalyticsPages: closure_8,
+  AnalyticsSections: closure_9,
+  HelpdeskArticles: c10,
+} = Constants);
+const jsxProd = fn(21);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 let closure_13 = {
   logo: { marginLeft: 20, height: 30, width: 67 },
   detailsView: {
@@ -40,13 +43,14 @@ let closure_13 = {
     gap: 12,
   },
 };
-const result = require("set").fileFinishedImporting("modules/user_settings/voice/native/KrispLogo.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/voice/native/KrispLogo.tsx");
 
 export default function KrispLogo() {
   let obj = initialize;
-  const items = [closure_6];
+  const items = [ThemeStore];
   const stateFromStores = obj.useStateFromStores(items, () => theme.theme);
-  obj1 = AccessibilityAnnouncer;
+  let obj1 = shared;
   if (obj1.isThemeLight(stateFromStores)) {
     let tmp4Result = tmp4(9998);
   } else {
@@ -55,18 +59,18 @@ export default function KrispLogo() {
   obj = { style: closure_13.detailsView, children: null };
   obj = { style: closure_13.logo, source: tmp4Result, accessibilityLabel: null };
   const intl = tmp(1114).intl;
-  obj[2] = intl.string(getSystemLocale.t.vFiCSx);
-  const items1 = [callback(closure_3, obj)];
+  obj.accessibilityLabel = intl.string(util.t.vFiCSx);
+  const items1 = [closure_1_11(React3, obj)];
   obj1 = { accessibilityRole: "link", accessibilityLabel: null, onPress: null, children: null };
   const intl2 = tmp(1114).intl;
-  obj1[1] = intl2.string(getSystemLocale.t.hvVgAZ);
-  obj1[2] = handleKrispLinkPressed;
+  obj1.accessibilityLabel = intl2.string(util.t.hvVgAZ);
+  obj1.onPress = handleKrispLinkPressed;
   const obj2 = { variant: "text-sm/medium", color: "text-link", children: null };
   const intl3 = tmp(1114).intl;
-  obj2[2] = intl3.string(getSystemLocale.t.hvVgAZ);
-  obj1[3] = callback(Text.Text, obj2);
-  items1[1] = callback(closure_5, obj1);
-  obj[1] = items1;
-  return callback2(closure_4, obj);
+  obj2.children = intl3.string(util.t.hvVgAZ);
+  obj1.children = closure_1_11(Text_Text.Text, obj2);
+  items1[1] = closure_1_11(hasOwnProperty, obj1);
+  obj.children = items1;
+  return closure_1_12(React4, obj);
 }
 export { handleKrispLinkPressed };

@@ -1,11 +1,14 @@
 // discord_app/modules/game_profile/native/components/GameProfileHorizontalScrollView.tsx
 import LegacyBaseButton from "../../../../../_runtime/06655_LegacyBaseButton.js";
-import { ScrollView } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
+require = fn;
+const ScrollView = fn(17).ScrollView;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileHorizontalScrollView.tsx");
+
+export default noop.forwardRef((arg0, ref) => {
   let obj = LegacyBaseButton;
   const nativeGesture = obj.useNativeGesture({ disallowInterruption: true });
   obj = { gesture: nativeGesture, children: null };
@@ -13,11 +16,6 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   const merged = Object.assign(arg0);
   obj.horizontal = true;
   obj.nestedScrollEnabled = true;
-  obj[1] = <ScrollView ref={arg1} />;
+  obj.children = <ScrollView ref={arg1} />;
   return jsx(LegacyBaseButton.GestureDetector, { ref });
 });
-const result = require("set").fileFinishedImporting(
-  "modules/game_profile/native/components/GameProfileHorizontalScrollView.tsx",
-);
-
-export default forwardRefResult;

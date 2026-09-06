@@ -1,19 +1,17 @@
 // discord_app/modules/nuf/native/components/NUFGuildTemplates.tsx
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import NavigationStack from "../../../../design/components/Navigator/native/Navigator.native.tsx";
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
-import { Keyboard } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../../../stores/DefaultRouteStore.tsx";
-import ME from "../../../../Constants.tsx";
-import { GuildTemplateId } from "../../../create_guild/CreateGuildConstants.tsx";
-import NUXGuildTemplatesAnalytics from "../../../create_guild/native/CreateGuildConstants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import util from "../../../../intl/index.native.tsx";
+import discord_common_AnalyticsUtils from "../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import GuildActionCreatorsDefault from "../../../../actions/GuildActionCreators.tsx";
+import NavigatorHeader from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
+import Navigator from "../../../../design/components/Navigator/native/Navigator.native.tsx";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import DefaultRouteStore from "../../../../stores/DefaultRouteStore.tsx";
 
-require = arg1;
+require = fn;
 function onCreateGuild() {
   const self = this;
-  const apply = _onCreateGuild.apply;
+  const apply = closure_16.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -21,178 +19,152 @@ function onCreateGuild() {
   }
   return applyArgumentsResult;
 }
-function _onCreateGuild() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c3 = 0;
-    c4 = 0;
-    return (function* (arg0) {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
+let closure_16 = async function _onCreateGuild(arg0, value) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
         if (arg0 === 1) {
-          throw arg1;
+          c4 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          c4 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_2 = tmp5;
+          closure_1 = tmp2;
+          closure_129_0 = closure_0;
+          let obj1 = GuildActionCreatorsDefault;
+          c3 = 1;
+          c4 = 1;
+          obj1 = { value: null, done: false };
+          obj1.value = obj1.transitionToGuildSync(closure_0);
+          return obj1;
         }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              dependencyMap = tmp5;
-              const callback2 = tmp2;
-              obj1 = closure_1_1(closure_1_2[8]);
-              c3 = 1;
-              c4 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = obj1.transitionToGuildSync(callback);
-              return obj1;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
+        const guildProgress = closure_130_0(closure_130_2[9]).createGuildProgress(closure_129_0);
+        closure_130_1(closure_130_2[10])();
+        const obj6 = closure_130_0(closure_130_2[9]);
+        const result = closure_130_1(closure_130_2[11]).closeCreateGuildOnboardingModal();
+        const obj7 = closure_130_1(closure_130_2[11]);
+        const result1 = closure_130_0(closure_130_2[12]).showInstantInviteModal(closure_129_0);
+        const obj8 = closure_130_0(closure_130_2[12]);
+        const obj2 = {
+          flow_type: closure_130_8.GUILD_CREATE_MODAL,
+          from_step: closure_130_11.CREATE_SERVER,
+          to_step: "modal_closed",
+        };
+        closure_130_1(closure_130_2[13]).track(closure_130_7.USER_FLOW_TRANSITION, obj2);
+        c4 = 3;
+        return { value: "HermesInternal", done: null };
+      }
+    } catch (tmp9) {
+      c4 = tmp;
+      throw tmp9;
+    }
+  }
+};
+let closure_17 = async function _onCreateServer(arg0, arg1, arg2) {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  let id = arg2;
+  c4 = 0;
+  c3 = 0;
+  return (async (arg0, value, arg2) => {
+    if (c3 === 2) {
+      c3 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c3 = 2;
+        if (0 === c4) {
+          if (arg0 === 1) {
+            c3 = 3;
+            throw value;
           } else if (arg0 === 2) {
-            c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            c3 = 3;
+            obj = { value, done: true };
             return obj;
           } else {
-            const guildProgress = callback(12474).createGuildProgress(callback);
-            callback2(11217)();
-            const obj6 = callback(12474);
-            const result = callback2(12708).closeCreateGuildOnboardingModal();
-            const obj7 = callback2(12708);
-            const result1 = callback(12744).showInstantInviteModal(callback);
-            const obj8 = callback(12744);
-            const obj2 = { flow_type: null, from_step: null, to_step: "modal_closed" };
-            obj2[0] = constants2.GUILD_CREATE_MODAL;
-            obj2[1] = constants3.CREATE_SERVER;
-            callback2(1242).track(constants.USER_FLOW_TRANSITION, obj2);
-            c4 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp9) {
-          c4 = tmp;
-          throw tmp9;
-        }
-      }
-    })();
-  });
-  closure_16 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _onCreateServer() {
-  const self = this;
-  const tmp = callback((arg0, arg1, arg2) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    c4 = 0;
-    c3 = 0;
-    return (function* (arg0, arg1, arg2) {
-      if (c3 === 2) {
-        c3 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c3 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
+            let arr = closure_0;
+            if (id.id !== constants.CREATE) {
+              c4 = 1;
+              c3 = 1;
+              const obj1 = { value: onCreateGuild(tmp13), done: false };
+              return obj1;
             } else {
-              let arr = closure_0;
-              if (id.id !== closure_1_10.CREATE) {
-                c4 = 1;
-                c3 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = closure_1_15(tmp14);
-                return obj1;
-              } else {
-                const obj2 = { guildId: null };
-                obj2[0] = tmp14;
-                arr = arr.push(closure_1_11.CHANNEL_PROMPT, obj2);
-              }
+              const obj2 = { guildId: tmp13 };
+              arr = arr.push(constants2.CHANNEL_PROMPT, obj2);
             }
-          } else if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
           }
+        } else if (arg0 === 1) {
           c3 = 3;
-          return { value: "HermesInternal", done: null };
-        } catch (tmp8) {
-          c3 = tmp;
-          throw tmp8;
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 3;
+          obj = { value, done: true };
+          return obj;
         }
+        c3 = 3;
+        return { value: "HermesInternal", done: null };
+      } catch (tmp8) {
+        c3 = tmp;
+        throw tmp8;
       }
-    })();
-  });
-  closure_17 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-({ AnalyticEvents: error, AnalyticsSections: closure_8, NOOP: c9 } = ME);
+    }
+  })();
+};
+const Keyboard = fn(17).Keyboard;
+const Constants = fn(1074);
+({ AnalyticEvents: closure_7, AnalyticsSections: closure_8, NOOP: closure_9 } = Constants);
+const GuildTemplateId = fn(12707).GuildTemplateId;
+const CreateGuildConstants = fn(6980);
 ({
-  CreateGuildModalStates: unpackModuleId,
+  CreateGuildModalStates: closure_11,
   GuildTemplateTriggers: closure_12,
   NUXGuildTemplatesAnalytics: map1,
-} = NUXGuildTemplatesAnalytics);
-let obj = { impression_group: require("encodeProperties").ImpressionGroups.GUILD_ADD_FLOW };
-let result = require("set").fileFinishedImporting("modules/nuf/native/components/NUFGuildTemplates.tsx");
+} = CreateGuildConstants);
+const jsx = fn(21).jsx;
+let obj = { impression_group: fn(1250).ImpressionGroups.GUILD_ADD_FLOW };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/nuf/native/components/NUFGuildTemplates.tsx");
 
 export default function NUFGuildTemplates() {
   obj = {
-    screens: React.useMemo(() => {
+    screens: noop.useMemo(() => {
       obj = {};
       obj = {
-        impressionName: callback(1250).ImpressionNames.GUILD_ADD_LANDING,
-        impressionProperties: closure_18,
+        impressionName: discord_common_AnalyticsUtils.ImpressionNames.GUILD_ADD_LANDING,
+        impressionProperties,
         fullscreen: true,
         headerTitle() {
           return null;
@@ -200,46 +172,49 @@ export default function NUFGuildTemplates() {
         headerLeft: null,
         render: null,
       };
-      let obj2 = callback(5624);
-      obj[4] = obj2.getHeaderCloseButton(() => {
-        callback(12683).trackNUFStep(constants2.STEP_GUILD_TEMPLATE, constants2.STEP_FRIEND_LIST, { skip: true });
-        obj = callback(12683);
-        callback(1100).transitionTo(fallbackRoute.fallbackRoute);
-        const obj2 = callback(1100);
-        const result = callback2(12708).closeCreateGuildOnboardingModal();
+      let obj2 = NavigatorHeader;
+      obj.headerLeft = obj2.getHeaderCloseButton(() => {
+        closure_1_0(12683).trackNUFStep(constants2.STEP_GUILD_TEMPLATE, constants2.STEP_FRIEND_LIST, { skip: true });
+        obj = closure_1_0(12683);
+        closure_1_0(1100).transitionTo(fallbackRoute.fallbackRoute);
+        const obj2 = closure_1_0(1100);
+        const result = closure_1_1(12708).closeCreateGuildOnboardingModal();
       });
-      obj[5] = function render() {
-        return callback3(callback2(12710), { trigger: constants.NUF });
+      obj.render = function render() {
+        return closure_1_14(closure_1_1(12710), { trigger: constants.NUF });
       };
       obj[constants.GUILD_TEMPLATES] = obj;
       obj = {
-        impressionName: callback(1250).ImpressionNames.GUILD_ADD_INTENT_SELECTION,
-        impressionProperties: closure_18,
+        impressionName: discord_common_AnalyticsUtils.ImpressionNames.GUILD_ADD_INTENT_SELECTION,
+        impressionProperties,
         fullscreen: true,
         headerTitle() {
           return null;
         },
         render(guildTemplate) {
-          return callback3(callback2(12712), { guildTemplate: guildTemplate.guildTemplate, trigger: constants.NUF });
+          return closure_1_14(closure_1_1(12712), {
+            guildTemplate: guildTemplate.guildTemplate,
+            trigger: constants.NUF,
+          });
         },
       };
       obj[constants.CREATION_INTENT] = obj;
       obj[constants.CREATE_SERVER] = {
-        impressionName: callback(1250).ImpressionNames.GUILD_ADD_CUSTOMIZE,
-        impressionProperties: closure_18,
+        impressionName: discord_common_AnalyticsUtils.ImpressionNames.GUILD_ADD_CUSTOMIZE,
+        impressionProperties,
         fullscreen: true,
         headerTitle() {
           return null;
         },
         render(arg0, arg1) {
-          const callback = arg0;
-          const callback2 = arg1;
+          const guildTemplate = arg0;
+          closure_1 = arg1;
           obj = {};
           const merged = Object.assign(arg0);
           obj.onCreate = function onCreate(guild) {
-            return (function onCreateServer(closure_1, id, guildTemplate) {
+            return (function onCreateServer() {
               const self = this;
-              const apply = closure_17.apply;
+              const apply = closure_1_17.apply;
               if (typeof apply === "unknown") {
                 let applyArgumentsResult = HermesBuiltin.applyArguments(self);
               } else {
@@ -248,40 +223,40 @@ export default function NUFGuildTemplates() {
               return applyArgumentsResult;
             })(closure_1, guild.guild.id, guildTemplate.guildTemplate);
           };
-          const intl = callback(1114).intl;
-          obj.customTitle = intl.string(callback(1114).t["5HZu07"]);
-          return callback3(callback2(12333), obj);
+          const intl = guildTemplate(1114).intl;
+          obj.customTitle = intl.string(guildTemplate(1114).t["5HZu07"]);
+          return closure_14(closure_1(12333), obj);
         },
       };
       obj2 = {
-        impressionName: callback(1250).ImpressionNames.GUILD_ADD_JOIN,
-        impressionProperties: closure_18,
+        impressionName: discord_common_AnalyticsUtils.ImpressionNames.GUILD_ADD_JOIN,
+        impressionProperties,
         fullscreen: true,
         headerTitle() {
           return null;
         },
         render() {
-          obj = { location: "Onboarding Join Guild Modal", onClose: callback2(12708).closeCreateGuildModal };
-          return callback3(callback2(12715), obj);
+          obj = { location: "Onboarding Join Guild Modal", onClose: closure_1_1(12708).closeCreateGuildModal };
+          return closure_1_14(closure_1_1(12715), obj);
         },
       };
       obj[constants.JOIN_SERVER] = obj2;
-      obj1 = {
-        impressionName: callback(1250).ImpressionNames.GUILD_ADD_CUSTOMIZE,
-        impressionProperties: closure_18,
+      const obj1 = {
+        impressionName: discord_common_AnalyticsUtils.ImpressionNames.GUILD_ADD_CUSTOMIZE,
+        impressionProperties,
         fullscreen: true,
         headerTitle() {
           return null;
         },
         render(arg0, arg1) {
-          const callback = arg0;
-          const callback2 = arg1;
+          const guildTemplate = arg0;
+          closure_1 = arg1;
           obj = {};
           const merged = Object.assign(arg0);
           obj.onCreate = function onCreate(guild) {
-            return (function onCreateServer(closure_1, id, guildTemplate) {
+            return (function onCreateServer() {
               const self = this;
-              const apply = closure_17.apply;
+              const apply = closure_1_17.apply;
               if (typeof apply === "unknown") {
                 let applyArgumentsResult = HermesBuiltin.applyArguments(self);
               } else {
@@ -290,14 +265,14 @@ export default function NUFGuildTemplates() {
               return applyArgumentsResult;
             })(closure_1, guild.guild.id, guildTemplate.guildTemplate);
           };
-          const intl = callback(1114).intl;
-          obj.customTitle = intl.string(callback(1114).t["5HZu07"]);
-          return callback3(callback2(12333), obj);
+          const intl = guildTemplate(1114).intl;
+          obj.customTitle = intl.string(guildTemplate(1114).t["5HZu07"]);
+          return closure_14(closure_1(12333), obj);
         },
       };
       obj[constants.ACCEPT_INVITE] = {
-        impressionName: callback(1250).ImpressionNames.GUILD_ADD_ACCEPT_INVITE,
-        impressionProperties: closure_18,
+        impressionName: discord_common_AnalyticsUtils.ImpressionNames.GUILD_ADD_ACCEPT_INVITE,
+        impressionProperties,
         fullscreen: true,
         headerTitle() {
           return null;
@@ -306,13 +281,13 @@ export default function NUFGuildTemplates() {
           return null;
         },
         render(code) {
-          obj = { code: code.code, onPressClose: callback2(12708).closeCreateGuildModal };
-          return callback3(callback2(12716), obj);
+          obj = { code: code.code, onPressClose: closure_1_1(12708).closeCreateGuildModal };
+          return closure_1_14(closure_1_1(12716), obj);
         },
       };
       const obj3 = {
-        impressionName: callback(1250).ImpressionNames.GUILD_ADD_ACCEPT_INVITE,
-        impressionProperties: closure_18,
+        impressionName: discord_common_AnalyticsUtils.ImpressionNames.GUILD_ADD_ACCEPT_INVITE,
+        impressionProperties,
         fullscreen: true,
         headerTitle() {
           return null;
@@ -321,13 +296,13 @@ export default function NUFGuildTemplates() {
           return null;
         },
         render(code) {
-          obj = { code: code.code, onPressClose: callback2(12708).closeCreateGuildModal };
-          return callback3(callback2(12716), obj);
+          obj = { code: code.code, onPressClose: closure_1_1(12708).closeCreateGuildModal };
+          return closure_1_14(closure_1_1(12716), obj);
         },
       };
       obj[constants.CHANNEL_PROMPT] = {
-        impressionName: callback(1250).ImpressionNames.GUILD_ADD_CHANNEL_PROMPT,
-        impressionProperties: closure_18,
+        impressionName: discord_common_AnalyticsUtils.ImpressionNames.GUILD_ADD_CHANNEL_PROMPT,
+        impressionProperties,
         fullscreen: true,
         headerTitle() {
           return null;
@@ -337,36 +312,32 @@ export default function NUFGuildTemplates() {
           obj = {
             hasSkip: true,
             hasBack: false,
-            onCancel: closure_9,
+            onCancel,
             onSuccess() {
-              return closure_1_15(guildId);
+              return closure_2_15(guildId);
             },
             guildId,
             buttonText: null,
           };
           const intl = guildId(1114).intl;
-          obj[5] = intl.string(guildId(1114).t["uHXB+F"]);
-          return callback3(callback2(12745), obj);
+          obj.buttonText = intl.string(guildId(1114).t["uHXB+F"]);
+          return closure_14(closure_1(12745), obj);
         },
       };
       const obj5 = {
         impressionName: "Array",
-        impressionProperties: true,
+        impressionProperties,
         fullscreen: true,
         ignoreKeyboard: null,
-        headerTitle: null,
-        headerLeft: null,
-        render: true,
-      };
-      obj5[1] = closure_18;
-      obj5[4] = function headerTitle() {
-        return null;
-      };
-      obj5[5] = function headerLeft() {
-        return null;
-      };
-      obj5[6] = function render() {
-        return callback3(callback2(12727), { isNestedNavigator: true });
+        headerTitle() {
+          return null;
+        },
+        headerLeft() {
+          return null;
+        },
+        render() {
+          return closure_1_14(closure_1_1(12727), { isNestedNavigator: true });
+        },
       };
       obj[constants.JOIN_STUDENT_HUB] = obj5;
       return obj;
@@ -375,15 +346,15 @@ export default function NUFGuildTemplates() {
     headerBackTitle: null,
     initialRouteName: null,
   };
-  let intl = getSystemLocale.intl;
-  obj[2] = intl.string(getSystemLocale.t["13/7kX"]);
-  obj[3] = constants.GUILD_TEMPLATES;
-  return jsx(NavigationStack.Navigator, {
-    screens: React.useMemo(() => {
+  let intl = util.intl;
+  obj.headerBackTitle = intl.string(util.t["13/7kX"]);
+  obj.initialRouteName = constants.GUILD_TEMPLATES;
+  return jsx(Navigator.Navigator, {
+    screens: noop.useMemo(() => {
       obj = {};
       obj = {
-        impressionName: callback(1250).ImpressionNames.GUILD_ADD_LANDING,
-        impressionProperties: closure_18,
+        impressionName: discord_common_AnalyticsUtils.ImpressionNames.GUILD_ADD_LANDING,
+        impressionProperties,
         fullscreen: true,
         headerTitle() {
           return null;
@@ -391,46 +362,49 @@ export default function NUFGuildTemplates() {
         headerLeft: null,
         render: null,
       };
-      let obj2 = callback(5624);
-      obj[4] = obj2.getHeaderCloseButton(() => {
-        callback(12683).trackNUFStep(constants2.STEP_GUILD_TEMPLATE, constants2.STEP_FRIEND_LIST, { skip: true });
-        obj = callback(12683);
-        callback(1100).transitionTo(fallbackRoute.fallbackRoute);
-        const obj2 = callback(1100);
-        const result = callback2(12708).closeCreateGuildOnboardingModal();
+      let obj2 = NavigatorHeader;
+      obj.headerLeft = obj2.getHeaderCloseButton(() => {
+        closure_1_0(12683).trackNUFStep(constants2.STEP_GUILD_TEMPLATE, constants2.STEP_FRIEND_LIST, { skip: true });
+        obj = closure_1_0(12683);
+        closure_1_0(1100).transitionTo(fallbackRoute.fallbackRoute);
+        const obj2 = closure_1_0(1100);
+        const result = closure_1_1(12708).closeCreateGuildOnboardingModal();
       });
-      obj[5] = function render() {
-        return callback3(callback2(12710), { trigger: constants.NUF });
+      obj.render = function render() {
+        return closure_1_14(closure_1_1(12710), { trigger: constants.NUF });
       };
       obj[constants.GUILD_TEMPLATES] = obj;
       obj = {
-        impressionName: callback(1250).ImpressionNames.GUILD_ADD_INTENT_SELECTION,
-        impressionProperties: closure_18,
+        impressionName: discord_common_AnalyticsUtils.ImpressionNames.GUILD_ADD_INTENT_SELECTION,
+        impressionProperties,
         fullscreen: true,
         headerTitle() {
           return null;
         },
         render(guildTemplate) {
-          return callback3(callback2(12712), { guildTemplate: guildTemplate.guildTemplate, trigger: constants.NUF });
+          return closure_1_14(closure_1_1(12712), {
+            guildTemplate: guildTemplate.guildTemplate,
+            trigger: constants.NUF,
+          });
         },
       };
       obj[constants.CREATION_INTENT] = obj;
       obj[constants.CREATE_SERVER] = {
-        impressionName: callback(1250).ImpressionNames.GUILD_ADD_CUSTOMIZE,
-        impressionProperties: closure_18,
+        impressionName: discord_common_AnalyticsUtils.ImpressionNames.GUILD_ADD_CUSTOMIZE,
+        impressionProperties,
         fullscreen: true,
         headerTitle() {
           return null;
         },
         render(arg0, arg1) {
-          const callback = arg0;
-          const callback2 = arg1;
+          const guildTemplate = arg0;
+          closure_1 = arg1;
           obj = {};
           const merged = Object.assign(arg0);
           obj.onCreate = function onCreate(guild) {
-            return (function onCreateServer(closure_1, id, guildTemplate) {
+            return (function onCreateServer() {
               const self = this;
-              const apply = closure_17.apply;
+              const apply = closure_1_17.apply;
               if (typeof apply === "unknown") {
                 let applyArgumentsResult = HermesBuiltin.applyArguments(self);
               } else {
@@ -439,40 +413,40 @@ export default function NUFGuildTemplates() {
               return applyArgumentsResult;
             })(closure_1, guild.guild.id, guildTemplate.guildTemplate);
           };
-          const intl = callback(1114).intl;
-          obj.customTitle = intl.string(callback(1114).t["5HZu07"]);
-          return callback3(callback2(12333), obj);
+          const intl = guildTemplate(1114).intl;
+          obj.customTitle = intl.string(guildTemplate(1114).t["5HZu07"]);
+          return closure_14(closure_1(12333), obj);
         },
       };
       obj2 = {
-        impressionName: callback(1250).ImpressionNames.GUILD_ADD_JOIN,
-        impressionProperties: closure_18,
+        impressionName: discord_common_AnalyticsUtils.ImpressionNames.GUILD_ADD_JOIN,
+        impressionProperties,
         fullscreen: true,
         headerTitle() {
           return null;
         },
         render() {
-          obj = { location: "Onboarding Join Guild Modal", onClose: callback2(12708).closeCreateGuildModal };
-          return callback3(callback2(12715), obj);
+          obj = { location: "Onboarding Join Guild Modal", onClose: closure_1_1(12708).closeCreateGuildModal };
+          return closure_1_14(closure_1_1(12715), obj);
         },
       };
       obj[constants.JOIN_SERVER] = obj2;
-      obj1 = {
-        impressionName: callback(1250).ImpressionNames.GUILD_ADD_CUSTOMIZE,
-        impressionProperties: closure_18,
+      const obj1 = {
+        impressionName: discord_common_AnalyticsUtils.ImpressionNames.GUILD_ADD_CUSTOMIZE,
+        impressionProperties,
         fullscreen: true,
         headerTitle() {
           return null;
         },
         render(arg0, arg1) {
-          const callback = arg0;
-          const callback2 = arg1;
+          const guildTemplate = arg0;
+          closure_1 = arg1;
           obj = {};
           const merged = Object.assign(arg0);
           obj.onCreate = function onCreate(guild) {
-            return (function onCreateServer(closure_1, id, guildTemplate) {
+            return (function onCreateServer() {
               const self = this;
-              const apply = closure_17.apply;
+              const apply = closure_1_17.apply;
               if (typeof apply === "unknown") {
                 let applyArgumentsResult = HermesBuiltin.applyArguments(self);
               } else {
@@ -481,14 +455,14 @@ export default function NUFGuildTemplates() {
               return applyArgumentsResult;
             })(closure_1, guild.guild.id, guildTemplate.guildTemplate);
           };
-          const intl = callback(1114).intl;
-          obj.customTitle = intl.string(callback(1114).t["5HZu07"]);
-          return callback3(callback2(12333), obj);
+          const intl = guildTemplate(1114).intl;
+          obj.customTitle = intl.string(guildTemplate(1114).t["5HZu07"]);
+          return closure_14(closure_1(12333), obj);
         },
       };
       obj[constants.ACCEPT_INVITE] = {
-        impressionName: callback(1250).ImpressionNames.GUILD_ADD_ACCEPT_INVITE,
-        impressionProperties: closure_18,
+        impressionName: discord_common_AnalyticsUtils.ImpressionNames.GUILD_ADD_ACCEPT_INVITE,
+        impressionProperties,
         fullscreen: true,
         headerTitle() {
           return null;
@@ -497,13 +471,13 @@ export default function NUFGuildTemplates() {
           return null;
         },
         render(code) {
-          obj = { code: code.code, onPressClose: callback2(12708).closeCreateGuildModal };
-          return callback3(callback2(12716), obj);
+          obj = { code: code.code, onPressClose: closure_1_1(12708).closeCreateGuildModal };
+          return closure_1_14(closure_1_1(12716), obj);
         },
       };
       const obj3 = {
-        impressionName: callback(1250).ImpressionNames.GUILD_ADD_ACCEPT_INVITE,
-        impressionProperties: closure_18,
+        impressionName: discord_common_AnalyticsUtils.ImpressionNames.GUILD_ADD_ACCEPT_INVITE,
+        impressionProperties,
         fullscreen: true,
         headerTitle() {
           return null;
@@ -512,13 +486,13 @@ export default function NUFGuildTemplates() {
           return null;
         },
         render(code) {
-          obj = { code: code.code, onPressClose: callback2(12708).closeCreateGuildModal };
-          return callback3(callback2(12716), obj);
+          obj = { code: code.code, onPressClose: closure_1_1(12708).closeCreateGuildModal };
+          return closure_1_14(closure_1_1(12716), obj);
         },
       };
       obj[constants.CHANNEL_PROMPT] = {
-        impressionName: callback(1250).ImpressionNames.GUILD_ADD_CHANNEL_PROMPT,
-        impressionProperties: closure_18,
+        impressionName: discord_common_AnalyticsUtils.ImpressionNames.GUILD_ADD_CHANNEL_PROMPT,
+        impressionProperties,
         fullscreen: true,
         headerTitle() {
           return null;
@@ -528,36 +502,32 @@ export default function NUFGuildTemplates() {
           obj = {
             hasSkip: true,
             hasBack: false,
-            onCancel: closure_9,
+            onCancel,
             onSuccess() {
-              return closure_1_15(guildId);
+              return closure_2_15(guildId);
             },
             guildId,
             buttonText: null,
           };
           const intl = guildId(1114).intl;
-          obj[5] = intl.string(guildId(1114).t["uHXB+F"]);
-          return callback3(callback2(12745), obj);
+          obj.buttonText = intl.string(guildId(1114).t["uHXB+F"]);
+          return closure_14(closure_1(12745), obj);
         },
       };
       const obj5 = {
         impressionName: "Array",
-        impressionProperties: true,
+        impressionProperties,
         fullscreen: true,
         ignoreKeyboard: null,
-        headerTitle: null,
-        headerLeft: null,
-        render: true,
-      };
-      obj5[1] = closure_18;
-      obj5[4] = function headerTitle() {
-        return null;
-      };
-      obj5[5] = function headerLeft() {
-        return null;
-      };
-      obj5[6] = function render() {
-        return callback3(callback2(12727), { isNestedNavigator: true });
+        headerTitle() {
+          return null;
+        },
+        headerLeft() {
+          return null;
+        },
+        render() {
+          return closure_1_14(closure_1_1(12727), { isNestedNavigator: true });
+        },
       };
       obj[constants.JOIN_STUDENT_HUB] = obj5;
       return obj;

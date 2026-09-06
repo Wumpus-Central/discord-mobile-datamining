@@ -1,13 +1,13 @@
 // discord_app/modules/user_profile/utils/UserProfileStackedActivityCardUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
-import apply from "../../../../_runtime/00012_apply.js";
-import ME from "../../../Constants.tsx";
+import _mod12 from "../../../../_runtime/metro/00012__.js";
+import Constants from "../../../Constants.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const ActivityTypes = ME.ActivityTypes;
-const result = set.fileFinishedImporting("modules/user_profile/utils/UserProfileStackedActivityCardUtils.tsx");
+const ActivityTypes = Constants.ActivityTypes;
+const result = size.fileFinishedImporting("modules/user_profile/utils/UserProfileStackedActivityCardUtils.tsx");
 
 export const getUserProfileLiveActivities = function getUserProfileLiveActivities(stateFromStores1) {
-  return apply.uniqWith(
+  return _mod12.uniqWith(
     stateFromStores1.filter((type) => {
       type = type.type;
       return type !== constants.CUSTOM_STATUS && type !== constants.HANG_STATUS;
@@ -38,13 +38,11 @@ export const getUserProfileStackedActivityCards = function getUserProfileStacked
   }
   const items = [];
   if (null != stream) {
-    let obj = { type: "stream", stream: null };
-    obj[1] = stream;
+    let obj = { type: "stream", stream };
     items.push(obj);
   }
   for (const item10015 of live) {
-    obj = { type: "live", activity: null };
-    obj[1] = item10015;
+    obj = { type: "live", activity: item10015 };
     let arr = items.push(obj);
     continue;
   }
@@ -58,8 +56,7 @@ export const getUserProfileStackedActivityCards = function getUserProfileStacked
     isPrivate = null == voiceChannel;
   }
   if (!isPrivate) {
-    obj = { type: "voice", voiceChannel: null };
-    obj[1] = voiceChannel;
+    obj = { type: "voice", voiceChannel };
     items.push(obj);
   }
   return items;

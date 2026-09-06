@@ -1,15 +1,17 @@
 // discord_app/modules/message_request/MessageRequestPushNotificationExperiment.tsx
-import set from "../../../_runtime/00002_set.js";
 import ApexExperiment from "../experiments/apex/index.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const obj = { 1: null, 2: { enabled: true }, 3: { enabled: false } };
-obj[3] = { enabled: true };
-const apexExperiment = ApexExperiment.createApexExperiment({
+let obj = {
   name: "2026-07-message-request-push-notification",
   kind: "user",
   defaultConfig: { enabled: false },
-  variations: obj,
-});
-const result = set.fileFinishedImporting("modules/message_request/MessageRequestPushNotificationExperiment.tsx");
+  variations: null,
+};
+obj = { 1: null, 2: { enabled: true }, 3: { enabled: false } };
+obj[3] = { enabled: true };
+obj.variations = obj;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/message_request/MessageRequestPushNotificationExperiment.tsx");
 
 export default apexExperiment;

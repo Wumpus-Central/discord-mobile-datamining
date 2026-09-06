@@ -1,18 +1,18 @@
 // discord_app/lib/StateManager.tsx
-import set from "../../_runtime/00002_set.js";
-import isUndefinedOrNullDefault from "../../_runtime/01332_isUndefinedOrNull.js";
+import _modDef1332 from "../../_runtime/metro/01332__.js";
+import size from "../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("lib/StateManager.tsx");
+const result = size.fileFinishedImporting("lib/StateManager.tsx");
 class StateManager {
   constructor() {
     flag = global;
     if (global === undefined) {
       flag = true;
     }
-    obj = Object.create(new.target.prototype);
-    obj.state = obj.getInitialState();
-    obj.alwaysUpdateState = flag;
-    return obj;
+    merged = Object.assign({ dirty: false });
+    merged.state = merged.getInitialState();
+    merged.alwaysUpdateState = flag;
+    return merged;
   }
 }
 const prototype = StateManager.prototype;
@@ -46,8 +46,7 @@ prototype["update"] = function update() {
   const merged1 = Object.assign(obj);
   const nextState = this.getNextState(obj);
   if (flag) {
-    self.dirty = !isUndefinedOrNullDefault(nextState, self.getInitialState());
-    const tmp14 = isUndefinedOrNullDefault;
+    self.dirty = !_modDef1332(nextState, self.getInitialState());
   } else {
     const _Object = Object;
     const keys = Object.keys(nextState);
@@ -55,10 +54,7 @@ prototype["update"] = function update() {
       let tmp8 = item10021;
       let dirty = self.dirty;
       if (!dirty) {
-        let tmp9 = importDefault;
-        let tmp10 = dependencyMap;
-        let tmp11 = item10021;
-        dirty = !isUndefinedOrNullDefault(self.state[tmp8], nextState[tmp8]);
+        dirty = !_modDef1332(self.state[tmp8], nextState[tmp8]);
       }
       self.dirty = dirty;
       continue;

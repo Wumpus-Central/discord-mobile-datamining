@@ -1,9 +1,9 @@
 // discord_app/modules/guild_communication_disabled/useCommunicationDisabledCountdownCleanup.tsx
-import set from "../../../_runtime/00002_set.js";
-import noop from "../../../_runtime/00019_noop.js";
+import noop from "../../../_runtime/metro/00019__.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-({ useEffect: obj1, useRef: c3 } = noop);
-let result = set.fileFinishedImporting(
+({ useEffect: c2, useRef: c3 } = noop);
+let result = size.fileFinishedImporting(
   "modules/guild_communication_disabled/useCommunicationDisabledCountdownCleanup.tsx",
 );
 
@@ -22,9 +22,9 @@ export const useCommunicationDisabledCountdownCleanup = function useCommunicatio
     const _Date = Date;
     parsed = Date.now();
   }
-  const tmpResult = importDefault(userId[1])(parsed);
+  const tmpResult = require("useCountdown")(parsed);
   const seconds = tmpResult.seconds;
-  closure_4 = seconds(null);
+  seconds(null);
   const items = [guildId, userId, seconds, communicationDisabledUntil, guildMember];
   guildId(() => {
     if (null != closure_0) {
@@ -37,7 +37,7 @@ export const useCommunicationDisabledCountdownCleanup = function useCommunicatio
           if (tmp5) {
             const _setTimeout = setTimeout;
             ref.current = setTimeout(() => {
-              const result = closure_1_0(closure_1_1[2]).clearGuildMemberTimeout(closure_2, closure_1);
+              const result = closure_0(userId[2]).clearGuildMemberTimeout(guildId, closure_1_1);
             }, 1000);
           }
           return () => {

@@ -1,14 +1,14 @@
 // discord_app/modules/messages/EmbeddedApplicationInstanceUtils.tsx
-import getSystemLocale from "../../intl/index.native.tsx";
-import closure_2 from "../../../_runtime/00019_noop.js";
+import util from "../../intl/index.native.tsx";
+import noop from "../../../_runtime/metro/00019__.js";
 
-require = arg1;
+require = fn;
 function getJoinOrStartButtonState(channel) {
   ({ embeddedActivity, joinability, currentEmbeddedActivity } = channel);
   let obj = { disabled: false, isJoinAction: !tmp, text: null, tooltip: "Array" };
-  const intl = getSystemLocale.intl;
+  const intl = util.intl;
   const string = intl.string;
-  const t = getSystemLocale.t;
+  const t = util.t;
   if (null == embeddedActivity) {
     let stringResult = string(t.RscU7I);
     let tmp6 = tmp2;
@@ -16,7 +16,7 @@ function getJoinOrStartButtonState(channel) {
     stringResult = string(t.sqe0hj);
     tmp6 = tmp2;
   }
-  obj[2] = stringResult;
+  obj.text = stringResult;
   const result = tmp6(9546).isActivitiesInTextEnabled(channel.channel);
   if (null != embeddedActivity) {
     if (null != currentEmbeddedActivity) {
@@ -67,7 +67,7 @@ function getJoinOrStartButtonState(channel) {
           const intl2 = tmp6(1114).intl;
           stringResult2 = intl2.string(tmp6(1114).t.Etp6uI);
         }
-        obj1 = {};
+        const obj1 = {};
         const merged2 = Object.assign(obj);
         obj1.disabled = true;
         obj1.tooltip = stringResult2;
@@ -78,7 +78,8 @@ function getJoinOrStartButtonState(channel) {
   }
   const tmp6Result = tmp6(9546);
 }
-let result = require("set").fileFinishedImporting("modules/messages/EmbeddedApplicationInstanceUtils.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/messages/EmbeddedApplicationInstanceUtils.tsx");
 
 export const EmbedStates = { ACTIVE: 0, [0]: "ACTIVE", ENDED: 1, [1]: "ENDED" };
 export const useJoinOrStartButtonState = function useJoinOrStartButtonState(embeddedActivity) {
@@ -88,7 +89,7 @@ export const useJoinOrStartButtonState = function useJoinOrStartButtonState(embe
   const channel = embeddedActivity.channel;
   const items = [embeddedActivity, joinability, currentEmbeddedActivity, channel];
   return currentEmbeddedActivity.useMemo(
-    () => channel({ embeddedActivity, joinability, currentEmbeddedActivity, channel }),
+    () => getJoinOrStartButtonState({ embeddedActivity, joinability, currentEmbeddedActivity, channel }),
     items,
   );
 };

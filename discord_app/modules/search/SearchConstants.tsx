@@ -1,9 +1,9 @@
 // discord_app/modules/search/SearchConstants.tsx
 import ChannelListLayoutTypes from "../main_tabs_v2/ChannelListLayoutTypes.tsx";
-import ME from "../../Constants.tsx";
-import set from "../../../_runtime/00002_set.js";
+import Constants from "../../Constants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-({ MessageEmbedTypes, SearchTypes } = ME);
+({ MessageEmbedTypes, SearchTypes } = Constants);
 let obj = {
   Messages: 0,
   [0]: "Messages",
@@ -30,7 +30,6 @@ obj = {
 };
 const items = [, , , ,];
 ({ MESSAGES: arr[0], MEDIA: arr[1], PINS: arr[2], LINKS: arr[3], FILES: arr[4] } = obj);
-let set = new Set(items);
 const items1 = [, ,];
 ({ MEDIA: arr2[0], LINKS: arr2[1], FILES: arr2[2] } = obj);
 const items2 = [, , ,];
@@ -97,7 +96,8 @@ const items12 = [, , , , ,];
 ({ MEMBERS: arr13[0], MESSAGES: arr13[1], MEDIA: arr13[2], PINS: arr13[3], LINKS: arr13[4], FILES: arr13[5] } = obj);
 const items13 = [, ,];
 ({ IMAGE: arr14[0], VIDEO: arr14[1], GIFV: arr14[2] } = MessageEmbedTypes);
-const result = set.fileFinishedImporting("modules/search/SearchConstants.tsx");
+const set = new Set(items);
+const result = size.fileFinishedImporting("modules/search/SearchConstants.tsx");
 
 export const SearchAutocompleteSelectAnalyticsActions = { KEY_PRESS: "key_press", CLICK: "click" };
 export const WEB_SEARCH_HISTORY_STORAGE_KEY = "SearchStore";

@@ -1,15 +1,16 @@
 // discord_app/hooks/useGetIsMounted.tsx
-import closure_0 from "../../_runtime/00019_noop.js";
+import noop from "../../_runtime/metro/00019__.js";
 
-const result = require("set").fileFinishedImporting("hooks/useGetIsMounted.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("hooks/useGetIsMounted.tsx");
 
 export default function useGetIsMounted() {
-  React = React.useRef(true);
-  const effect = React.useEffect(
+  noop.useRef(true);
+  const effect = noop.useEffect(
     () => () => {
-      closure_0.current = false;
+      ref.current = false;
     },
     [],
   );
-  return React.useCallback(() => ref.current, []);
+  return noop.useCallback(() => ref.current, []);
 }

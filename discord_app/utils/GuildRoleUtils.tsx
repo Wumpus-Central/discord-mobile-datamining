@@ -1,17 +1,16 @@
 // discord_app/utils/GuildRoleUtils.tsx
-import set from "../../_runtime/00002_set.js";
-import DISCORD_EPOCHDefault from "SnowflakeUtils.tsx";
-import int2hslRaw from "../../discord_common/js/shared/utils/ColorUtils.tsx";
-import fromServerArrayAll from "GuildRoleRecordUtils.tsx";
-import extractColorStringsFromServerColors from "../modules/premium/enhanced_role_colors/EnhancedRoleColorUtils.tsx";
+import SnowflakeUtilsDefault from "SnowflakeUtils.tsx";
+import utils_ColorUtils from "../../discord_common/js/shared/utils/ColorUtils.tsx";
+import GuildRoleRecordUtilsAll from "GuildRoleRecordUtils.tsx";
+import EnhancedRoleColorUtils from "../modules/premium/enhanced_role_colors/EnhancedRoleColorUtils.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
 function compareGuildRoles(guildId, id) {
   guildId = guildId.guildId;
   if (guildId.id === guildId) {
     let num2 = 1;
     if (id.id === guildId) {
-      num2 = DISCORD_EPOCHDefault.compare(guildId.id, id.id);
-      const obj2 = DISCORD_EPOCHDefault;
+      num2 = SnowflakeUtilsDefault.compare(guildId.id, id.id);
     }
     let num = num2;
   } else {
@@ -20,14 +19,13 @@ function compareGuildRoles(guildId, id) {
       if (guildId.position !== id.position) {
         let diff = id.position - guildId.position;
       } else {
-        diff = DISCORD_EPOCHDefault.compare(guildId.id, id.id);
-        const obj = DISCORD_EPOCHDefault;
+        diff = SnowflakeUtilsDefault.compare(guildId.id, id.id);
       }
     }
   }
   return num;
 }
-let result = set.fileFinishedImporting("utils/GuildRoleUtils.tsx");
+let result = size.fileFinishedImporting("utils/GuildRoleUtils.tsx");
 
 export const sortGuildRoleRecords = function sortGuildRoleRecords(arr) {
   const sorted = arr.sort(compareGuildRoles);
@@ -39,8 +37,7 @@ export const doesRoleSortHigher = function doesRoleSortHigher(guildId, id) {
   if (guildId.id === guildId) {
     let num2 = 1;
     if (id.id === guildId) {
-      num2 = DISCORD_EPOCHDefault.compare(guildId.id, id.id);
-      const obj2 = DISCORD_EPOCHDefault;
+      num2 = SnowflakeUtilsDefault.compare(guildId.id, id.id);
     }
     let num = num2;
   } else {
@@ -49,8 +46,7 @@ export const doesRoleSortHigher = function doesRoleSortHigher(guildId, id) {
       if (guildId.position !== id.position) {
         let diff = id.position - guildId.position;
       } else {
-        diff = DISCORD_EPOCHDefault.compare(guildId.id, id.id);
-        const obj = DISCORD_EPOCHDefault;
+        diff = SnowflakeUtilsDefault.compare(guildId.id, id.id);
       }
     }
   }
@@ -60,8 +56,7 @@ export const sortInviteRoles = function sortInviteRoles(position, position2) {
   if (position.position !== position2.position) {
     let diff = position2.position - position.position;
   } else {
-    diff = DISCORD_EPOCHDefault.compare(position.id, position2.id);
-    const obj = DISCORD_EPOCHDefault;
+    diff = SnowflakeUtilsDefault.compare(position.id, position2.id);
   }
   return diff;
 };
@@ -77,26 +72,24 @@ export const inviteRoleToDisplayData = function inviteRoleToDisplayData(id, id) 
   };
   let int2hexResult = null;
   if (0 !== id.color) {
-    int2hexResult = int2hslRaw.int2hex(id.color);
-    const obj2 = int2hslRaw;
+    int2hexResult = utils_ColorUtils.int2hex(id.color);
   }
-  obj[3] = int2hexResult;
+  obj.colorString = int2hexResult;
   let result = null;
   if (null != id.colors) {
-    result = extractColorStringsFromServerColors.extractColorStringsFromServerColors(id.colors);
-    const obj3 = extractColorStringsFromServerColors;
+    result = EnhancedRoleColorUtils.extractColorStringsFromServerColors(id.colors);
   }
-  obj[4] = result;
+  obj.colorStrings = result;
   let icon = id.icon;
   if (icon == null) {
     icon = null;
   }
-  obj[5] = icon;
+  obj.icon = icon;
   let unicode_emoji = id.unicode_emoji;
   if (unicode_emoji == null) {
     unicode_emoji = null;
   }
-  obj[6] = unicode_emoji;
+  obj.unicodeEmoji = unicode_emoji;
   return obj;
 };
 export const filterRoleDeletes = function filterRoleDeletes(id, unsafeMutableRoles, roles, deleted_role_ids) {
@@ -120,9 +113,7 @@ export const filterRoleDeletes = function filterRoleDeletes(id, unsafeMutableRol
       }
     }
     for (const item10018 of items) {
-      let tmp7 = importAll;
-      let tmp8 = dependencyMap;
-      obj = fromServerArrayAll;
+      obj = GuildRoleRecordUtilsAll;
       obj[item10018.id] = obj.fromServer(arg0, item10018);
       continue;
     }

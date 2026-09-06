@@ -1,206 +1,180 @@
 // discord_app/modules/activities/native/openActivityDMLauncher.tsx
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import { AppLauncherRouteName } from "../../app_launcher/native/AppLauncherNativeConstants.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
-const require = arg1;
-function _openActivityDMLauncher() {
-  const self = this;
-  const tmp = callback((arg0, arg1, arg2, arg3) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    closure_3 = arg3;
-    closure_4 = arg4;
-    c7 = 0;
-    c8 = 0;
-    const iter = (function* (arg0, customId) {
-      if (customId === 2) {
-        customId = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
+const require = fn;
+let closure_5 = async function _openActivityDMLauncher(arg0, value) {
+  if (c8 === 2) {
+    c8 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c8 = 2;
+      if (0 === c7) {
         if (arg0 === 1) {
-          throw customId;
+          c8 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = customId;
+          c8 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_6 = tmp2;
+          closure_5 = tmp5;
+          closure_133_4 = undefined;
+          closure_133_0 = closure_0;
+          closure_133_1 = closure_1;
+          closure_133_2 = closure_2;
+          closure_133_3 = closure_3;
+          let flag = closure_4;
+          if (closure_4 === undefined) {
+            flag = false;
+          }
+          closure_133_4 = flag;
+          closure_133_5 = undefined;
+          closure_133_6 = undefined;
+          closure_133_7 = undefined;
+          let customId;
+          c7 = 1;
+          c8 = 1;
+          return { value: "PX_16", done: true };
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c8 = 3;
+          const obj1 = { value, done: true };
+          return obj1;
+        } else {
+          c7 = 2;
+          c8 = 1;
+          const obj2 = { value: closure_134_1(closure_134_2[2]).fetchApplication(closure_133_0), done: false };
+          return obj2;
         }
       } else {
-        try {
-          customId = 2;
-          if (0 === c7) {
-            if (arg0 === 1) {
-              customId = 3;
-              throw customId;
-            } else if (arg0 === 2) {
-              customId = 3;
-              obj = { value: null, done: true };
-              obj[0] = customId;
-              return obj;
-            } else {
-              let id = tmp2;
-              let bot = tmp5;
-              let flag;
-              if (flag === undefined) {
-                flag = false;
-              }
-              bot = undefined;
-              id = undefined;
-              c7 = undefined;
-              customId = undefined;
-              c7 = 1;
-              customId = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              customId = 3;
-              throw customId;
-            } else if (arg0 === 2) {
-              customId = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = customId;
-              return obj1;
-            } else {
-              c7 = 2;
-              customId = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = callback2(7163).fetchApplication(callback);
-              return obj2;
-            }
+        if (2 === tmp5) {
+          if (arg0 === 1) {
+            c8 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c8 = 3;
+            let obj3 = { value, done: true };
+            return obj3;
           } else {
-            if (2 === tmp5) {
-              if (arg0 === 1) {
-                customId = 3;
-                throw customId;
-              } else if (arg0 === 2) {
-                customId = 3;
-                let obj3 = { value: null, done: true };
-                obj3[0] = customId;
-                return obj3;
-              } else {
-                bot = customId;
-                bot = bot.bot;
-                id = undefined;
-                if (bot != null) {
-                  id = bot.id;
-                }
-                if (null != bot) {
-                  if (null != id) {
-                    let obj9 = callback2(4573);
-                    const obj4 = { recipientIds: null };
-                    obj4[0] = id;
-                    c7 = 3;
-                    customId = 1;
-                    const obj5 = { value: null, done: false };
-                    obj5[0] = obj9.openPrivateChannel(obj4);
-                    return obj5;
-                  }
-                }
-                customId = 3;
-              }
-            } else if (3 === tmp5) {
-              if (arg0 === 1) {
-                customId = 3;
-                throw customId;
-              } else if (arg0 === 2) {
-                customId = 3;
-                let obj6 = { value: null, done: true };
-                obj6[0] = customId;
-                return obj6;
-              } else {
-                c7 = customId;
-                obj6 = callback(12940);
-                c7 = 4;
-                customId = 1;
-                const obj7 = { value: null, done: false };
-                obj7[0] = obj6.getCustomActivityLinkParams(callback, closure_3, dependencyMap);
-                return obj7;
-              }
-            } else if (4 === tmp5) {
-              if (arg0 === 1) {
-                customId = 3;
-                throw customId;
-              } else if (arg0 !== 2) {
-                customId = customId.customId;
-                if (flag) {
-                  obj3 = callback(4425);
-                  const bestActiveInput = obj3.getBestActiveInput();
-                  if (bestActiveInput != null) {
-                    const obj8 = { type: null, context: null };
-                    obj8[0] = callback(1609).KeyboardTypes.APP_LAUNCHER;
-                    obj9 = { application: null, initialRouteName: null, customId: null, referrerId: null };
-                    obj9[0] = bot;
-                    obj9[1] = flag.APPLICATION_VIEW;
-                    obj9[2] = customId;
-                    obj9[3] = callback2;
-                    obj8[1] = obj9;
-                    bestActiveInput.openCustomKeyboard(obj8);
-                  }
-                } else {
-                  const obj10 = {
-                    targetApplicationId: null,
-                    locationObject: null,
-                    channelId: null,
-                    analyticsLocations: null,
-                    commandOrigin: null,
-                    referrerId: null,
-                    customId: null,
-                  };
-                  obj10[0] = callback;
-                  obj10[1] = {};
-                  obj10[2] = c7;
-                  const items = [callback2(7182).ACTIVITY_BOOKMARK];
-                  obj10[3] = items;
-                  obj10[4] = callback(7523).CommandOrigin.ACTIVITY_BOOKMARK_EMBED;
-                  obj10[5] = callback2;
-                  obj10[6] = customId;
-                  c7 = 5;
-                  customId = 1;
-                  const obj11 = { value: null, done: false };
-                  obj11[0] = callback2(9548)(obj10);
-                  return obj11;
-                }
-              }
-            } else if (arg0 === 1) {
-              customId = 3;
-              throw customId;
-            } else if (arg0 === 2) {
-              customId = 3;
-              obj = { value: null, done: true };
-              obj[0] = customId;
-              return obj;
+            closure_133_5 = value;
+            const bot = closure_133_5.bot;
+            let id;
+            if (bot != null) {
+              id = bot.id;
             }
-            customId = 3;
-            const obj12 = { value: null, done: true };
-            obj12[0] = customId;
-            return obj12;
+            closure_133_6 = id;
+            if (null != closure_133_5) {
+              if (null != closure_133_6) {
+                let obj9 = closure_134_1(closure_134_2[3]);
+                const obj4 = { recipientIds: closure_133_6 };
+                c7 = 3;
+                c8 = 1;
+                const obj5 = { value: obj9.openPrivateChannel(obj4), done: false };
+                return obj5;
+              }
+            }
+            c8 = 3;
           }
-        } catch (tmp49) {
-          customId = tmp;
-          throw tmp49;
+        } else if (3 === tmp5) {
+          if (arg0 === 1) {
+            c8 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c8 = 3;
+            let obj6 = { value, done: true };
+            return obj6;
+          } else {
+            closure_133_7 = value;
+            obj6 = closure_134_0(closure_134_2[4]);
+            c7 = 4;
+            c8 = 1;
+            const obj7 = {
+              value: obj6.getCustomActivityLinkParams(closure_133_0, closure_133_3, closure_133_2),
+              done: false,
+            };
+            return obj7;
+          }
+        } else if (4 === tmp5) {
+          if (arg0 === 1) {
+            c8 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            customId = value.customId;
+            if (closure_133_4) {
+              obj3 = closure_134_0(closure_134_2[8]);
+              const bestActiveInput = obj3.getBestActiveInput();
+              if (bestActiveInput != null) {
+                const obj8 = { type: closure_134_0(closure_134_2[9]).KeyboardTypes.APP_LAUNCHER, context: null };
+                obj9 = {
+                  application: closure_133_5,
+                  initialRouteName: closure_134_4.APPLICATION_VIEW,
+                  customId,
+                  referrerId: closure_133_1,
+                };
+                obj8.context = obj9;
+                bestActiveInput.openCustomKeyboard(obj8);
+              }
+            } else {
+              const obj10 = {
+                targetApplicationId: closure_133_0,
+                locationObject: {},
+                channelId: closure_133_7,
+                analyticsLocations: null,
+                commandOrigin: null,
+                referrerId: null,
+                customId: null,
+              };
+              const items = [closure_134_1(closure_134_2[6]).ACTIVITY_BOOKMARK];
+              obj10.analyticsLocations = items;
+              obj10.commandOrigin = closure_134_0(closure_134_2[7]).CommandOrigin.ACTIVITY_BOOKMARK_EMBED;
+              obj10.referrerId = closure_133_1;
+              obj10.customId = customId;
+              c7 = 5;
+              c8 = 1;
+              const obj11 = { value: closure_134_1(closure_134_2[5])(obj10), done: false };
+              return obj11;
+            }
+          }
+        } else if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c8 = 3;
+          obj = { value, done: true };
+          return obj;
         }
+        c8 = 3;
+        const obj12 = { value, done: true };
+        return obj12;
       }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_5 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp49) {
+      c8 = tmp;
+      throw tmp49;
+    }
   }
-  return applyArgumentsResult;
-}
-const result = require("set").fileFinishedImporting("modules/activities/native/openActivityDMLauncher.tsx");
+};
+const AppLauncherRouteName = fn(1482).AppLauncherRouteName;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/native/openActivityDMLauncher.tsx");
 
 export default function openActivityDMLauncher() {
   const self = this;
-  const apply = _openActivityDMLauncher.apply;
+  const apply = closure_5.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

@@ -1,8 +1,8 @@
 // discord_app/modules/rpc/helpers/transformGuildMember.tsx
-import set from "../../../../_runtime/00002_set.js";
-import parseAvatarDecorationData from "../../collectibles/avatar_decorations/AvatarDecorationUtils.tsx";
+import AvatarDecorationUtils from "../../collectibles/avatar_decorations/AvatarDecorationUtils.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/rpc/helpers/transformGuildMember.tsx");
+const result = size.fileFinishedImporting("modules/rpc/helpers/transformGuildMember.tsx");
 
 export default function transformGuildMember(userId) {
   const obj = {
@@ -10,7 +10,7 @@ export default function transformGuildMember(userId) {
     nick: userId.nick,
     guild_id: userId.guildId,
     avatar: userId.avatar,
-    avatar_decoration_data: parseAvatarDecorationData.parseAvatarDecorationData(avatarDecoration),
+    avatar_decoration_data: AvatarDecorationUtils.parseAvatarDecorationData(avatarDecoration),
     banner,
     bio,
     pronouns,

@@ -1,16 +1,19 @@
 // discord_app/design/components/TextField/native/SearchField.native.tsx
-import getSystemLocale from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import TextField from "TextField.native.tsx";
 import MagnifyingGlassIcon from "../../Icon/native/redesign/generated/MagnifyingGlassIcon.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-const forwardRefResult = importAllResult.forwardRef((arg0, arg1) => {
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/TextField/native/SearchField.native.tsx");
+
+export const SearchField = noop.forwardRef((arg0, ref) => {
   const obj = { placeholder: null, returnKeyType: "search", ref: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t["5h0QOP"]);
-  obj[2] = arg1;
+  const intl = util.intl;
+  obj.placeholder = intl.string(util.t["5h0QOP"]);
+  obj.ref = ref;
   const merged = Object.assign(arg0);
   obj.autoCorrect = false;
   obj.autoCapitalize = "none";
@@ -19,6 +22,3 @@ const forwardRefResult = importAllResult.forwardRef((arg0, arg1) => {
   obj.isClearable = true;
   return jsx(TextField.TextField, { placeholder: null, returnKeyType: "search", ref: null });
 });
-const result = require("set").fileFinishedImporting("design/components/TextField/native/SearchField.native.tsx");
-
-export const SearchField = forwardRefResult;

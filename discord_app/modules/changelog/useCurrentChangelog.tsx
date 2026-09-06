@@ -1,40 +1,40 @@
 // discord_app/modules/changelog/useCurrentChangelog.tsx
-import defaultAreStatesEqual from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import closure_3 from "../../../_runtime/00019_noop.js";
-import closure_4 from "../user_settings/LocaleStore.tsx";
-import closure_5 from "ChangelogStore.tsx";
-import { ChangelogLoadState } from "ChangelogConstants.tsx";
+import useStateFromStores from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import ChangeLogActionCreatorsDefault from "../../actions/ChangeLogActionCreators.tsx";
+import noop from "../../../_runtime/metro/00019__.js";
+import LocaleStore from "../user_settings/LocaleStore.tsx";
+import ChangelogStore from "ChangelogStore.tsx";
 
-require = arg1;
+require = fn;
 function useChangelog(changelogId, stateFromStores) {
-  const _require = changelogId;
+  _require = changelogId;
   closure_1 = stateFromStores;
-  let obj = _require(changelog[4]);
-  const items = [closure_5];
+  let obj = require("useStateFromStores");
+  const items = [ChangelogStore];
   const items1 = [changelogId, stateFromStores];
   const stateFromStoresObject = obj.useStateFromStoresObject(
     items,
     () => {
       changelog = null;
       if (null != closure_0) {
-        changelog = closure_1_5.getChangelog(tmp, closure_1);
+        changelog = ChangelogStore.getChangelog(tmp, closure_1);
       }
       let changelog1 = null;
       if (null != closure_0) {
-        changelog1 = closure_1_5.getChangelog(tmp, "en-US");
+        changelog1 = ChangelogStore.getChangelog(tmp, "en-US");
       }
       let changelogLoadStatus = null != tmp;
       if (changelogLoadStatus) {
-        changelogLoadStatus = closure_1_5.getChangelogLoadStatus(tmp, "en-US");
+        changelogLoadStatus = ChangelogStore.getChangelogLoadStatus(tmp, "en-US");
       }
       const obj = { changelog, loadState: null, defaultChangelog: null, defaultLoadState: null };
       let changelogLoadStatus1 = null != tmp;
       if (changelogLoadStatus1) {
-        changelogLoadStatus1 = closure_1_5.getChangelogLoadStatus(tmp, closure_1);
+        changelogLoadStatus1 = ChangelogStore.getChangelogLoadStatus(tmp, closure_1);
       }
-      obj[1] = changelogLoadStatus1;
-      obj[2] = changelog1;
-      obj[3] = changelogLoadStatus;
+      obj.loadState = changelogLoadStatus1;
+      obj.defaultChangelog = changelog1;
+      obj.defaultLoadState = changelogLoadStatus;
       return obj;
     },
     items1,
@@ -49,48 +49,40 @@ function useChangelog(changelogId, stateFromStores) {
       tmp2 = null == changelog;
     }
     if (tmp2) {
-      tmp2 = loadState === closure_1_6.NOT_LOADED;
+      tmp2 = loadState === ChangelogLoadState.NOT_LOADED;
     }
     if (tmp2) {
-      changelog = stateFromStores(changelog[5]).fetchChangelog(closure_0, stateFromStores);
-      const obj = stateFromStores(changelog[5]);
+      changelog = ChangeLogActionCreatorsDefault.fetchChangelog(closure_0, closure_1);
     }
   }, items2);
   if (null == changelogId) {
-    obj = { id: null, changelog: null, loaded: false };
-    obj[0] = changelogId;
-    obj1 = obj;
+    obj = { id: changelogId, changelog: null, loaded: false };
+    let obj1 = obj;
   } else {
     if (null == changelog) {
       if (loadState === ChangelogLoadState.LOADED_FAILURE) {
-        obj = { id: null, changelog: null, loaded: null };
-        obj[0] = changelogId;
-        obj[1] = defaultChangelog;
-        obj[2] = defaultLoadState !== tmp3.NOT_LOADED;
+        obj = { id: changelogId, changelog: defaultChangelog, loaded: defaultLoadState !== tmp3.NOT_LOADED };
         obj1 = obj;
       }
     }
-    obj1 = { id: null, changelog: null, loaded: null };
-    obj1[0] = changelogId;
-    obj1[1] = changelog;
-    obj1[2] = loadState !== ChangelogLoadState.NOT_LOADED;
+    obj1 = { id: changelogId, changelog, loaded: loadState !== ChangelogLoadState.NOT_LOADED };
   }
   return obj1;
 }
-const result = require("set").fileFinishedImporting("modules/changelog/useCurrentChangelog.tsx");
+const ChangelogLoadState = fn(2010).ChangelogLoadState;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/changelog/useCurrentChangelog.tsx");
 
 export { useChangelog };
 export const useCurrentChangelog = function useCurrentChangelog() {
-  let obj = defaultAreStatesEqual;
-  const items = [closure_4];
+  let obj = useStateFromStores;
+  const items = [LocaleStore];
   const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
-  const items1 = [closure_5];
-  const stateFromStores1 = defaultAreStatesEqual.useStateFromStores(items1, () => closure_5.latestChangelogId());
-  const obj2 = defaultAreStatesEqual;
-  const tmp = require;
-  const tmp4 = closure_5;
-  const items2 = [closure_5];
-  const stateFromStores2 = defaultAreStatesEqual.useStateFromStores(items2, () => closure_5.getConfig());
+  const items1 = [ChangelogStore];
+  const stateFromStores1 = useStateFromStores.useStateFromStores(items1, () => ChangelogStore.latestChangelogId());
+  const tmp4 = ChangelogStore;
+  const items2 = [ChangelogStore];
+  const stateFromStores2 = useStateFromStores.useStateFromStores(items2, () => ChangelogStore.getConfig());
   let tmp7 = null != stateFromStores2;
   if (tmp7) {
     const _Object = Object;
@@ -104,24 +96,16 @@ export const useCurrentChangelog = function useCurrentChangelog() {
   if (tmp9) {
     tmp9 = null == stateFromStores1;
   }
-  const obj3 = defaultAreStatesEqual;
   const items3 = [tmp4];
-  const stateFromStores3 = defaultAreStatesEqual.useStateFromStores(items3, () => closure_5.overrideId());
-  const tmpResult = defaultAreStatesEqual;
+  const stateFromStores3 = useStateFromStores.useStateFromStores(items3, () => ChangelogStore.overrideId());
+  const tmpResult = useStateFromStores;
   ({ changelog, loaded } = useChangelog(stateFromStores1, stateFromStores));
   const tmp12 = useChangelog(stateFromStores1, stateFromStores);
   ({ changelog: changelog2, loaded: loaded2 } = useChangelog(stateFromStores3, stateFromStores));
   if (null == stateFromStores3) {
-    obj = { id: null, changelog: null, loaded: null, clientTooOld: null };
-    obj[0] = stateFromStores1;
-    obj[1] = changelog;
-    obj[2] = tmp7 || loaded;
-    obj[3] = tmp9;
+    obj = { id: stateFromStores1, changelog, loaded: tmp7 || loaded, clientTooOld: tmp9 };
   } else {
-    obj = { id: null, changelog: null, loaded: null, clientTooOld: false };
-    obj[0] = stateFromStores3;
-    obj[1] = changelog2;
-    obj[2] = loaded2;
+    obj = { id: stateFromStores3, changelog: changelog2, loaded: loaded2, clientTooOld: false };
   }
   return obj;
 };

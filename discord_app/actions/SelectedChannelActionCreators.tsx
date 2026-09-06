@@ -1,29 +1,29 @@
 // discord_app/actions/SelectedChannelActionCreators.tsx
-import dispatcherDefault from "../Dispatcher.tsx";
-import transitionTo from "../modules/routing/router_utils.tsx";
-import getChannelSelectionOrigin from "SelectedChannelActionCreatorsAdditional.native.tsx";
-import disconnectRemoteAll from "../modules/game_console/GameConsoleActionCreators.tsx";
-import closure_4 from "../modules/game_console/GameConsoleStore.tsx";
-import closure_5 from "../stores/ChannelStore.tsx";
-import closure_6 from "../stores/MediaEngineStore.tsx";
-import ME from "../Constants.tsx";
+import DispatcherDefault from "../Dispatcher.tsx";
+import router_utils from "../modules/routing/router_utils.tsx";
+import SelectedChannelActionCreatorsAdditional from "SelectedChannelActionCreatorsAdditional.native.tsx";
+import GameConsoleActionCreatorsAll from "../modules/game_console/GameConsoleActionCreators.tsx";
+import GameConsoleStore from "../modules/game_console/GameConsoleStore.tsx";
+import ChannelStore from "../stores/ChannelStore.tsx";
+import MediaEngineStore from "../stores/MediaEngineStore.tsx";
 
-require = arg1;
-({ ME: error, PopoutWindowKeys, Routes: closure_8 } = ME);
-const result = require("set").fileFinishedImporting("actions/SelectedChannelActionCreators.tsx");
+require = fn;
+const Constants = fn(1074);
+({ ME: closure_7, PopoutWindowKeys, Routes: closure_8 } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("actions/SelectedChannelActionCreators.tsx");
 
 export default {
   selectChannel(guildId) {
     guildId = guildId.guildId;
     ({ channelId, messageId, jumpType, source, skipMessageFetch, opensChannel } = guildId);
-    const channelSelectionOrigin = getChannelSelectionOrigin.getChannelSelectionOrigin();
+    const channelSelectionOrigin = SelectedChannelActionCreatorsAdditional.getChannelSelectionOrigin();
     ({ fromGuildId, fromChannelId } = channelSelectionOrigin);
-    const obj = getChannelSelectionOrigin;
     let tmp2 = null;
-    if (guildId !== closure_7) {
+    if (guildId !== React5) {
       tmp2 = guildId;
     }
-    dispatcherDefault.dispatch({
+    DispatcherDefault.dispatch({
       type: "CHANNEL_SELECT",
       guildId: tmp2,
       channelId,
@@ -37,11 +37,11 @@ export default {
     });
   },
   selectPrivateChannel(id) {
-    transitionTo.transitionTo(closure_8.CHANNEL(closure_7, id));
+    router_utils.transitionTo(React6.CHANNEL(React5, id));
   },
-  selectVoiceChannel(id, c1, flag2) {
-    let flag = c1;
-    if (c1 === undefined) {
+  selectVoiceChannel(id, MediaEngineStore, flag2) {
+    let flag = MediaEngineStore;
+    if (MediaEngineStore === undefined) {
       flag = false;
     }
     if (flag2 === undefined) {
@@ -51,24 +51,23 @@ export default {
     if (arg3 === undefined) {
       obj = {};
     }
-    channel = channel.getChannel(id);
+    const channel = ChannelStore.getChannel(id);
     if (channel != null) {
       const guildId = channel.getGuildId();
     }
-    if (supported.isSupported()) {
+    if (MediaEngineStore.isSupported()) {
       if (null != id) {
-        const mediaEngine = supported.getMediaEngine();
+        const mediaEngine = MediaEngineStore.getMediaEngine();
         mediaEngine.interact();
       }
-      const obj5 = getChannelSelectionOrigin;
+      const obj5 = SelectedChannelActionCreatorsAdditional;
       const voiceChannelAdditional = obj5.selectVoiceChannelAdditional(id, guildId, flag, flag2, obj);
     }
   },
   disconnect() {
-    remoteSessionId = remoteSessionId.getRemoteSessionId();
+    const remoteSessionId = GameConsoleStore.getRemoteSessionId();
     if (null != remoteSessionId) {
-      disconnectRemoteAll.remoteDisconnect(remoteSessionId);
-      const obj = disconnectRemoteAll;
+      GameConsoleActionCreatorsAll.remoteDisconnect(remoteSessionId);
     }
     const voiceChannel = this.selectVoiceChannel(null);
   },

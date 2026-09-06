@@ -1,11 +1,11 @@
 // discord_app/modules/image_proxy/ImageProxyUtils.tsx
-import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
-import handleImageLoad from "../image_upload/ImageLoaderUtils.tsx";
-import getHostWithoutPort from "../core/UrlHostUtils.tsx";
-import set from "../../../_runtime/00002_set.js";
+import URLUtilsDefault from "../../utils/URLUtils.tsx";
+import ImageLoaderUtils from "../image_upload/ImageLoaderUtils.tsx";
+import UrlHostUtils from "../core/UrlHostUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 function getSizedImageProxyURL(value, size) {
-  const str = isDiscordProxiedAssetUrlDefault.toURLSafe(value);
+  const str = URLUtilsDefault.toURLSafe(value);
   if (null != str) {
     let startsWithResult = set.has(str.hostname);
     if (startsWithResult) {
@@ -15,13 +15,12 @@ function getSizedImageProxyURL(value, size) {
     if (startsWithResult) {
       if (null != size.size) {
         const _String = String;
-        const obj2 = handleImageLoad;
-        const StringResult = String(obj2.getBestMediaProxySize(size.size * handleImageLoad.getDevicePixelRatio()));
+        const obj2 = ImageLoaderUtils;
+        const StringResult = String(obj2.getBestMediaProxySize(size.size * ImageLoaderUtils.getDevicePixelRatio()));
         const searchParams = str.searchParams;
         const result = searchParams.set("width", StringResult);
         const searchParams2 = str.searchParams;
         const result1 = searchParams2.set("height", StringResult);
-        const obj3 = handleImageLoad;
       }
       ({ keepAspectRatio, format } = size);
       if (null != keepAspectRatio) {
@@ -53,15 +52,15 @@ function isImageProxyURL(hostname) {
   }
   return startsWithResult;
 }
-const mapped = parts.map((str) => str.substring(2));
-const mapped1 = mapped.map(getHostWithoutPort.getHostWithoutPort);
-let set = new Set(mapped1.filter(Boolean));
-let result = set.fileFinishedImporting("modules/image_proxy/ImageProxyUtils.tsx");
+const mapped = parts.map((item) => item.substring(2));
+const mapped1 = mapped.map(UrlHostUtils.getHostWithoutPort);
+const set = new Set(mapped1.filter(Boolean));
+let result = size.fileFinishedImporting("modules/image_proxy/ImageProxyUtils.tsx");
 
 export { isImageProxyURL };
 export { getSizedImageProxyURL };
 export const getSizedImageAssetURL = function getSizedImageAssetURL(value, size) {
-  let str = isDiscordProxiedAssetUrlDefault.toURLSafe(value);
+  let str = URLUtilsDefault.toURLSafe(value);
   if (null == str) {
     return value;
   } else {
@@ -78,16 +77,15 @@ export const getSizedImageAssetURL = function getSizedImageAssetURL(value, size)
         if (null != size.size) {
           const searchParams = str.searchParams;
           const _String = String;
-          const obj3 = handleImageLoad;
+          const obj3 = ImageLoaderUtils;
           const result = searchParams.set(
             "size",
-            String(obj3.getBestMediaProxySize(size.size * handleImageLoad.getDevicePixelRatio())),
+            String(obj3.getBestMediaProxySize(size.size * ImageLoaderUtils.getDevicePixelRatio())),
           );
-          const obj4 = handleImageLoad;
         }
         str = str.toString();
       }
-      tmpResult = isDiscordProxiedAssetUrlDefault;
+      tmpResult = URLUtilsDefault;
     }
   }
 };

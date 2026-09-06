@@ -1,14 +1,11 @@
 // discord_app/stores/billing/SubscriptionPlanStore.tsx
-import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import areArraysShallowlyEqual from "../../utils/FunctionUtils.tsx";
-import closure_3 from "../../records/SubscriptionPlanRecord.tsx";
-import ME from "../../Constants.tsx";
-import GuildFeatures from "../../modules/premium/PremiumConstants.tsx";
-import set from "../../../_runtime/00002_set.js";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import FunctionUtils from "../../utils/FunctionUtils.tsx";
+import SubscriptionPlanRecord from "../../records/SubscriptionPlanRecord.tsx";
 
-require = arg1;
+require = fn;
 function addSubscriptionPlan(fromServer) {
   const skuId = fromServer.skuId;
   closure_10[fromServer.id] = fromServer;
@@ -29,7 +26,6 @@ function addSubscriptionPlan(fromServer) {
     arraySpreadResult = HermesBuiltin.arraySpread(Array.from(set), arraySpreadResult);
     const set2 = new Set(items);
     dependencyMap2[fromServer.skuId] = set2;
-    const tmp28 = dependencyMap2;
   }
   if (null != dependencyMap[skuId]) {
     obj.add(fromServer.id);
@@ -41,18 +37,15 @@ function addSubscriptionPlan(fromServer) {
   }
 }
 function addSubscriptionPlanFromServer(subscription_plan) {
-  addSubscriptionPlan(closure_3.createFromServer(subscription_plan));
+  addSubscriptionPlan(SubscriptionPlanRecord.createFromServer(subscription_plan));
 }
 function reset() {
-  areArraysShallowlyEqual.clearObject(closure_10);
-  const obj = areArraysShallowlyEqual;
-  areArraysShallowlyEqual.clearObject(closure_11);
+  FunctionUtils.clearObject(closure_10);
+  FunctionUtils.clearObject(closure_11);
   set.clear();
   set1.clear();
-  const obj2 = areArraysShallowlyEqual;
-  areArraysShallowlyEqual.clearObject(closure_14);
-  const obj3 = areArraysShallowlyEqual;
-  areArraysShallowlyEqual.clearObject(closure_15);
+  FunctionUtils.clearObject(closure_14);
+  FunctionUtils.clearObject(closure_15);
   const items = [
     SubscriptionPlanInfo[SubscriptionPlans.NONE_MONTH],
     SubscriptionPlanInfo[SubscriptionPlans.NONE_YEAR],
@@ -60,8 +53,8 @@ function reset() {
     SubscriptionPlanInfo[SubscriptionPlans.NONE_6_MONTH],
   ];
   const item = items.forEach((id) => {
-    callback(
-      closure_3.createFromServer({
+    addSubscriptionPlan(
+      SubscriptionPlanRecord.createFromServer({
         id: id.id,
         name: id.name,
         interval: id.interval,
@@ -75,16 +68,18 @@ function reset() {
     );
   });
 }
-({ CurrencyCodes: c4, PriceSetAssignmentPurchaseTypes: c5 } = ME);
-({ SubscriptionIntervalTypes, SubscriptionPlanInfo } = GuildFeatures);
-const SubscriptionPlans = GuildFeatures.SubscriptionPlans;
-({ PremiumSubscriptionSKUs: closure_8, ACTIVE_PREMIUM_SKUS: c9 } = GuildFeatures);
+const Constants = fn(1074);
+({ CurrencyCodes: closure_4, PriceSetAssignmentPurchaseTypes: hasOwnProperty } = Constants);
+const PremiumConstants = fn(1373);
+({ SubscriptionIntervalTypes, SubscriptionPlanInfo } = PremiumConstants);
+const SubscriptionPlans = PremiumConstants.SubscriptionPlans;
+({ PremiumSubscriptionSKUs: closure_8, ACTIVE_PREMIUM_SKUS: closure_9 } = PremiumConstants);
 let closure_10 = {};
-let closure_11 = {};
+const dependencyMap = {};
 let set = new Set();
 let set1 = new Set();
 let closure_14 = {};
-let closure_15 = {};
+const dependencyMap2 = {};
 let items = [
   SubscriptionPlanInfo[SubscriptionPlans.NONE_MONTH],
   SubscriptionPlanInfo[SubscriptionPlans.NONE_YEAR],
@@ -92,8 +87,8 @@ let items = [
   SubscriptionPlanInfo[SubscriptionPlans.NONE_6_MONTH],
 ];
 let item = items.forEach((id) => {
-  callback(
-    closure_3.createFromServer({
+  addSubscriptionPlan(
+    SubscriptionPlanRecord.createFromServer({
       id: id.id,
       name: id.name,
       interval: id.interval,
@@ -114,7 +109,6 @@ const prototype = SubscriptionPlanStore.prototype;
 prototype["getPlanIdsForSkus"] = function getPlanIdsForSkus(items) {
   items = [];
   while (tmp !== undefined) {
-    let tmp3 = dependencyMap;
     set = dependencyMap[tmp2];
     if (set == null) {
       let _Set = Set;
@@ -124,45 +118,35 @@ prototype["getPlanIdsForSkus"] = function getPlanIdsForSkus(items) {
     }
     let arr = Array.from(set);
     let sorted = arr.sort((arg0, arg1) => {
-      const index = closure_18.indexOf(tmp.interval);
+      const index = items1.indexOf(tmp.interval);
       return (
-        index - closure_18.indexOf(dependencyMap[arg1].interval) ||
+        index - items1.indexOf(dependencyMap[arg1].interval) ||
         dependencyMap[arg0].intervalCount - dependencyMap[arg1].intervalCount
       );
     });
     let push = items.push;
     items1 = [];
-    let tmp8 = items1;
-    let tmp9 = arr;
-    let num = 0;
     let arraySpreadResult = HermesBuiltin.arraySpread(arr, 0);
-    let tmp11 = push;
-    let tmp12 = items1;
-    let tmp13 = items;
     let applyResult = HermesBuiltin.apply(items1, items);
     continue;
   }
   return items;
 };
 prototype["getFetchedSKUIDs"] = function getFetchedSKUIDs() {
-  return DISCORD_EPOCHDefault.keys(closure_11);
+  return SnowflakeUtilsDefault.keys(closure_11);
 };
 prototype["getForSKU"] = function getForSKU(arg0) {
   let items = dependencyMap[arg0];
   if (items == null) {
     items = [];
   }
-  return Array.from(items).map((arg0) => table[arg0]);
+  return Array.from(items).map((item) => closure_1_10[item]);
 };
 prototype["getForSkuAndInterval"] = function getForSkuAndInterval(GUILD, interval, intervalCount) {
   closure_0 = interval;
-  let num = intervalCount;
-  if (intervalCount === undefined) {
-    num = 1;
-  }
   const forSKU = this.getForSKU(GUILD);
   return forSKU.find((id) => {
-    let tmp = id.id !== closure_1_7.PREMIUM_GROUP_MONTH;
+    let tmp = id.id !== SubscriptionPlans.PREMIUM_GROUP_MONTH;
     if (tmp) {
       tmp = id.interval === closure_0;
     }
@@ -173,14 +157,14 @@ prototype["getForSkuAndInterval"] = function getForSkuAndInterval(GUILD, interva
   });
 };
 prototype["get"] = function get(arg0) {
-  return table[arg0];
+  return closure_10[arg0];
 };
 prototype["isFetchingForSKU"] = function isFetchingForSKU(arg0) {
   return set.has(arg0);
 };
 prototype["isFetchingForSKUs"] = function isFetchingForSKUs(skuIDs) {
   const self = this;
-  return skuIDs.some((arg0) => self.isFetchingForSKU(arg0));
+  return skuIDs.some((item) => self.isFetchingForSKU(item));
 };
 prototype["isLoadedForSKU"] = function isLoadedForSKU(TIER_2) {
   let hasItem = set1.has(TIER_2);
@@ -196,15 +180,15 @@ prototype["isLoadedForSKU"] = function isLoadedForSKU(TIER_2) {
 };
 prototype["isLoadedForSKUs"] = function isLoadedForSKUs(items) {
   const self = this;
-  return items.every((TIER_2) => self.isLoadedForSKU(TIER_2));
+  return items.every((item) => self.isLoadedForSKU(item));
 };
 prototype["isFetchingForPremiumSKUs"] = function isFetchingForPremiumSKUs() {
   const self = this;
-  return closure_9.some((arg0) => self.isFetchingForSKU(arg0));
+  return React7.some((item) => self.isFetchingForSKU(item));
 };
 prototype["isLoadedForPremiumSKUs"] = function isLoadedForPremiumSKUs() {
   const self = this;
-  return closure_9.every((TIER_2) => self.isLoadedForSKU(TIER_2));
+  return React7.every((item) => self.isLoadedForSKU(item));
 };
 prototype["ignoreSKUFetch"] = function ignoreSKUFetch(arg0) {
   set1.add(arg0);
@@ -219,28 +203,27 @@ prototype["getPaymentSourcesForPlanId"] = function getPaymentSourcesForPlanId(ke
 prototype["getPaymentSourceIds"] = function getPaymentSourceIds() {
   set = new Set();
   const values = Object.values(closure_14);
-  const item = values.forEach((arr) => arr.forEach((arg0) => set.add(arg0)));
+  const item = values.forEach((arr) => arr.forEach((item) => set.add(item)));
   return set;
 };
-prototype["hasPaymentSourceForSKUId"] = function hasPaymentSourceForSKUId(closure_0, arg1) {
-  let tmp = constants2.NONE === arg1;
+prototype["hasPaymentSourceForSKUId"] = function hasPaymentSourceForSKUId(arg0, item) {
+  let tmp = constants2.NONE === item;
   if (!tmp) {
-    let hasItem = null != dependencyMap2[arg1];
+    let hasItem = null != dependencyMap2[item];
     if (hasItem) {
-      hasItem = tmp2[arg1].has(closure_0);
-      const obj = tmp2[arg1];
+      hasItem = tmp2[item].has(arg0);
     }
     tmp = hasItem;
   }
   return tmp;
 };
-prototype["hasPaymentSourceForSKUIds"] = function hasPaymentSourceForSKUIds(defaultPaymentSourceId, arr) {
+prototype["hasPaymentSourceForSKUIds"] = function hasPaymentSourceForSKUIds(defaultPaymentSourceId, items) {
   const self = this;
   closure_0 = defaultPaymentSourceId;
-  return arr.every((arg0) => self.hasPaymentSourceForSKUId(closure_0, arg0));
+  return items.every((item) => self.hasPaymentSourceForSKUId(closure_0, item));
 };
 SubscriptionPlanStore.displayName = "SubscriptionPlanStore";
-const subscriptionPlanStore = new SubscriptionPlanStore(dispatcherDefault, {
+const subscriptionPlanStore = new SubscriptionPlanStore(DispatcherDefault, {
   SUBSCRIPTION_PLANS_FETCH: function handleSubscriptionPlansFetch(skuId) {
     set.add(skuId.skuId);
   },
@@ -263,7 +246,7 @@ const subscriptionPlanStore = new SubscriptionPlanStore(dispatcherDefault, {
   GIFT_CODE_RESOLVE_SUCCESS: function handleGiftCodeResolveSuccess(giftCode) {
     giftCode = giftCode.giftCode;
     if (null != giftCode.subscription_plan) {
-      addSubscriptionPlan(closure_3.createFromServer(giftCode.subscription_plan));
+      addSubscriptionPlan(SubscriptionPlanRecord.createFromServer(giftCode.subscription_plan));
     }
   },
   ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: function handleEntitlementGiftsFetchSuccess(arg0) {
@@ -271,8 +254,6 @@ const subscriptionPlanStore = new SubscriptionPlanStore(dispatcherDefault, {
     const nextResult = iter.next();
     while (iter !== undefined) {
       if (null != nextResult.subscription_plan) {
-        let tmp3 = addSubscriptionPlanFromServer;
-        let tmp4 = nextResult;
         let tmp5 = addSubscriptionPlanFromServer(tmp2.subscription_plan);
       }
       continue;
@@ -280,7 +261,8 @@ const subscriptionPlanStore = new SubscriptionPlanStore(dispatcherDefault, {
   },
   LOGOUT: reset,
 });
-const result = set.fileFinishedImporting("stores/billing/SubscriptionPlanStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("stores/billing/SubscriptionPlanStore.tsx");
 
 export default subscriptionPlanStore;
 export const subscriptionPlansFetchingForSKU = set;

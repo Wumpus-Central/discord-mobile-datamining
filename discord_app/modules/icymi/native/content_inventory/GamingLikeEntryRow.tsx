@@ -1,22 +1,24 @@
 // discord_app/modules/icymi/native/content_inventory/GamingLikeEntryRow.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import calculateTimestampDurations from "../../../content_inventory/utils.tsx";
-import ActiveTimestampAll from "Badges.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js";
+import ContentInventoryEntryType from "../../../../../discord_common/js/shared/shared-constants/ContentInventoryEntryType.tsx";
+import utils from "../../../content_inventory/utils.tsx";
+import ICYMIActionCreatorsDefault from "../../ICYMIActionCreators.tsx";
+import BadgesAll from "Badges.tsx";
 import TrendingType from "../../../../../discord_common/js/shared/shared-constants/TrendingType.tsx";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../../../stores/UserStore.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createICYMIStyles from "../createICYMIStyles.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import UserStore from "../../../../stores/UserStore.tsx";
 
-require = arg1;
-({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
-let obj = { Badge: ActiveTimestampAll.NewGameBadge, predicate: require("calculateTimestampDurations").isEntryNew };
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
+let obj = { Badge: BadgesAll.NewGameBadge, predicate: fn(8135).isEntryNew };
 let items = [obj, , , ,];
 obj = {
-  Badge: ActiveTimestampAll.StreakBadge,
+  Badge: BadgesAll.StreakBadge,
   predicate(entry) {
-    let num = calculateTimestampDurations.getStreakCount(entry);
+    let num = utils.getStreakCount(entry);
     if (num == null) {
       num = 0;
     }
@@ -25,33 +27,32 @@ obj = {
 };
 items[1] = obj;
 obj = {
-  Badge: ActiveTimestampAll.TrendingBadge,
+  Badge: BadgesAll.TrendingBadge,
   predicate(entry) {
-    const trendingType = calculateTimestampDurations.getTrendingType(entry);
-    const obj = calculateTimestampDurations;
-    const tmp = require;
+    const trendingType = utils.getTrendingType(entry);
     return null != trendingType && trendingType !== TrendingType.TrendingType.TRENDING_TYPE_UNSPECIFIED;
   },
 };
 items[2] = obj;
 items[3] = {
-  Badge: ActiveTimestampAll.ResurrectedBadge,
+  Badge: BadgesAll.ResurrectedBadge,
   predicate() {
     return true;
   },
 };
 let obj1 = {
-  Badge: ActiveTimestampAll.ResurrectedBadge,
+  Badge: BadgesAll.ResurrectedBadge,
   predicate() {
     return true;
   },
 };
 items[4] = {
-  Badge: ActiveTimestampAll.MarathonBadge,
+  Badge: BadgesAll.MarathonBadge,
   predicate(entry) {
-    return true === calculateTimestampDurations.isEntryMarathon(entry);
+    return true === utils.isEntryMarathon(entry);
   },
 };
+const createICYMIStyles = fn(16452);
 let closure_11 = createICYMIStyles.createICYMIStyles((gap) => {
   let obj = { card: null, cardInnerContainer: null, image: null, gameName: null, badges: null };
   obj = {
@@ -60,47 +61,41 @@ let closure_11 = createICYMIStyles.createICYMIStyles((gap) => {
     alignItems: "center",
     padding: gap.margin,
     marginLeft: gap.inset,
-    borderRadius: ThemesDefault.radii.lg,
-    backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+    borderRadius: nativeDefault.radii.lg,
+    backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   };
-  const merged = Object.assign(ThemesDefault.shadows.SHADOW_HIGH);
-  obj[0] = obj;
-  obj[1] = { overflow: "hidden", flex: 1 };
-  obj = { width: 72, height: 72, borderRadius: ThemesDefault.radii.sm };
-  obj[2] = obj;
-  obj[3] = { maxWidth: 275, color: ThemesDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_PRIMARY };
-  obj1 = { maxWidth: 275, color: ThemesDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_PRIMARY };
-  obj[4] = {
+  const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
+  obj.card = obj;
+  obj.cardInnerContainer = { overflow: "hidden", flex: 1 };
+  const size = { width: 72, height: 72, borderRadius: nativeDefault.radii.sm };
+  obj.image = size;
+  obj = { maxWidth: 275, color: nativeDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_PRIMARY };
+  obj.gameName = obj;
+  obj.badges = {
     display: "flex",
     flexDirection: "row",
-    gap: ThemesDefault.space.PX_8,
+    gap: nativeDefault.space.PX_8,
     flexWrap: "wrap",
     alignItems: "center",
     marginTop: 6,
   };
   return obj;
 });
-let obj2 = {
-  Badge: ActiveTimestampAll.MarathonBadge,
-  predicate(entry) {
-    return true === calculateTimestampDurations.isEntryMarathon(entry);
-  },
-};
-const result = require("set").fileFinishedImporting("modules/icymi/native/content_inventory/GamingLikeEntryRow.tsx");
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/icymi/native/content_inventory/GamingLikeEntryRow.tsx");
 
 export default function GamingLikeEntryRow(content) {
   content = content.content;
   const renderForScreenshot = content.renderForScreenshot;
-  let author_id;
   closure_2 = undefined;
   let openReplyActionSheet;
-  const tmp = callback();
+  const tmp = closure_11();
   const application_id = content.extra.application_id;
-  author_id = content.author_id;
+  const author_id = content.author_id;
   let obj = content(openReplyActionSheet[9]);
-  items = [closure_6];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getUser(author_id));
-  obj1 = content(openReplyActionSheet[11]);
+  items = [UserStore];
+  const stateFromStores = obj.useStateFromStores(items, () => UserStore.getUser(author_id));
+  let obj1 = content(openReplyActionSheet[11]);
   const displayNameStylesFont = obj1.useDisplayNameStylesFont({
     displayNameStyles: author_id(openReplyActionSheet[10])({ userId: author_id }),
   });
@@ -122,31 +117,29 @@ export default function GamingLikeEntryRow(content) {
     sourceUserId: null,
   };
   let tmp5Result = tmp5(tmp3[14]);
-  obj[2] = content(openReplyActionSheet[15]).GameProfileSources.ActivityCard;
-  obj[4] = author_id;
+  obj.source = content(openReplyActionSheet[15]).GameProfileSources.ActivityCard;
+  obj.sourceUserId = author_id;
   const tmp5ResultResult = tmp5Result(obj);
   closure_2 = tmp5ResultResult;
   const items1 = [tmp5ResultResult];
-  callback = React.useCallback(() => {
+  const callback = noop.useCallback(() => {
     if (null != closure_2) {
       tmp();
     }
   }, items1);
   const items2 = [content];
-  const memo = React.useMemo(() => {
-    if (content.content_type === content(openReplyActionSheet[16]).ContentInventoryEntryType.TOP_GAME) {
-      let obj = { entry: null };
-      obj[0] = content;
-      items = [closure_1_7(callback(openReplyActionSheet[4]).TopGameBadge, obj, "topgame")];
+  const memo = noop.useMemo(() => {
+    if (content.content_type === ContentInventoryEntryType.ContentInventoryEntryType.TOP_GAME) {
+      let obj = { entry: content };
+      items = [React5(BadgesAll.TopGameBadge, obj, "topgame")];
       let found = items;
     } else {
-      const mapped = closure_1_10.map((Badge) => {
+      const mapped = items.map((Badge) => {
         Badge = Badge.Badge;
         let tmp2 = null;
-        if (Badge.predicate(closure_0)) {
-          const obj = { entry: null };
-          obj[0] = closure_0;
-          tmp2 = closure_1_7(Badge, obj, Badge.name);
+        if (Badge.predicate(content)) {
+          const obj = { entry: content };
+          tmp2 = closure_2_7(Badge, obj, Badge.name);
         }
         return tmp2;
       });
@@ -156,26 +149,27 @@ export default function GamingLikeEntryRow(content) {
     return found;
   }, items2);
   const items3 = [content];
-  const callback1 = React.useCallback(() => {
-    content(openReplyActionSheet[18])(openReplyActionSheet[17], openReplyActionSheet.paths).then((GameShareModal) => {
+  const callback1 = noop.useCallback(() => {
+    asyncRequireImpl(16502, dependencyMap.paths).then((GameShareModal) => {
       GameShareModal = GameShareModal.GameShareModal;
       if (null != GameShareModal) {
-        let obj = closure_1_1(closure_1_3[19]);
-        obj.itemInteracted(GameShareModal.id, "hotwheels_gaming_activity", "press_forward");
-        obj = { itemId: null, itemType: "hotwheels_gaming_activity", actionParameters: null };
-        obj[0] = GameShareModal.id;
-        obj[2] = {
-          actionGestureType: "press",
-          actionTargetElement: "forward_button",
-          actionIntentType: "share",
-          actionDestinationType: null,
+        let obj = author_id(openReplyActionSheet[19]);
+        obj.itemInteracted(content.id, "hotwheels_gaming_activity", "press_forward");
+        obj = {
+          itemId: content.id,
+          itemType: "hotwheels_gaming_activity",
+          actionParameters: {
+            actionGestureType: "press",
+            actionTargetElement: "forward_button",
+            actionIntentType: "share",
+            actionDestinationType: null,
+          },
         };
-        closure_1_1(closure_1_3[19]).feedItemActioned(obj);
-        const obj4 = closure_1_1(closure_1_3[20]);
-        obj = { content: null };
-        obj[0] = GameShareModal;
+        author_id(openReplyActionSheet[19]).feedItemActioned(obj);
+        const obj4 = author_id(openReplyActionSheet[20]);
+        obj = { content };
         obj4.pushLazy(() => Promise.resolve(GameShareModal), obj, "GameShareModal", { presentation: "modal" });
-        const obj2 = closure_1_1(closure_1_3[19]);
+        const obj2 = author_id(openReplyActionSheet[19]);
       }
     });
   }, items3);
@@ -194,7 +188,7 @@ export default function GamingLikeEntryRow(content) {
         } else {
           stringResult = string(t.ktOTRQ);
         }
-        obj = {
+        const element = {
           contentId: null,
           userId: null,
           type: "hotwheels_gaming_activity",
@@ -204,123 +198,106 @@ export default function GamingLikeEntryRow(content) {
           subtitle: null,
           children: null,
         };
-        ({ id: obj7[0], author_id: obj7[1] } = content);
-        obj[3] = renderForScreenshot;
-        obj[4] = tmp14;
+        ({ id: obj7.contentId, author_id: obj7.userId } = content);
+        element.renderForScreenshot = renderForScreenshot;
+        element.onPress = tmp14;
         tmp5Result = tmp5(tmp3[23]);
         let tmp20;
         if (null != displayNameStylesFont) {
-          obj1 = { fontFamily: null };
-          obj1[0] = displayNameStylesFont;
-          tmp20 = obj1;
+          obj = { fontFamily: displayNameStylesFont };
+          tmp20 = obj;
         }
-        obj2 = { children: null };
-        const obj3 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", style: null, children: null };
-        obj3[2] = tmp20;
+        obj1 = { children: null };
+        obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", style: tmp20, children: null };
         isEntryActiveResult = tmp2Result.isEntryActive(content);
         const tmp19 = closure_8;
-        obj3[3] = tmp5(tmp3[25]).getName(stateFromStores);
-        const items5 = [closure_7(tmp2(tmp3[24]).Text, obj3)];
-        let obj4 = { lineClamp: 1, variant: "text-xs/normal", color: "text-muted", children: null };
+        obj2.children = tmp5(tmp3[25]).getName(stateFromStores);
+        const items5 = [closure_7(tmp2(tmp3[24]).Text, obj2)];
+        const obj3 = { lineClamp: 1, variant: "text-xs/normal", color: "text-muted", children: null };
         const tmp5Result1 = tmp5(tmp3[25]);
         const tmp2Result1 = tmp2(tmp3[26]);
-        obj4[3] = tmp2Result1.getRelativeTimestamp(tmp5(tmp3[27]).extractTimestamp(content.id));
-        items5[1] = closure_7(tmp2(tmp3[24]).Text, obj4);
-        obj2[0] = items5;
-        obj[5] = closure_9(tmp19, obj2);
+        obj3.children = tmp2Result1.getRelativeTimestamp(tmp5(tmp3[27]).extractTimestamp(content.id));
+        items5[1] = closure_7(tmp2(tmp3[24]).Text, obj3);
+        obj1.children = items5;
+        element.title = closure_9(tmp19, obj1);
         const tmp5Result2 = tmp5(tmp3[27]);
         let str = "text-default";
         if (tmp2Result2.isEntryActive(content)) {
           str = "status-positive";
         }
-        const obj5 = { variant: "text-sm/normal", lineClamp: 1, color: null, children: null };
-        obj5[2] = str;
-        obj5[3] = stringResult;
-        obj[6] = closure_7(tmp2(tmp3[24]).Text, obj5);
+        let obj4 = { variant: "text-sm/normal", lineClamp: 1, color: str, children: stringResult };
+        element.subtitle = closure_7(tmp2(tmp3[24]).Text, obj4);
         const items6 = [tmp.card];
         let tmp22 = null;
         if (null != primaryColor) {
-          const obj6 = { backgroundColor: null };
+          const obj5 = { backgroundColor: null };
           let obj17 = tmp5(tmp3[28])(primaryColor);
-          obj6[0] = obj17.alpha(0.5).hex();
-          tmp22 = obj6;
+          obj5.backgroundColor = obj17.alpha(0.5).hex();
+          tmp22 = obj5;
           const alphaResult = obj17.alpha(0.5);
         }
-        const obj7 = { style: null, children: null };
+        const obj6 = { style: null, children: null };
         items6[1] = tmp22;
-        obj7[0] = items6;
-        const obj8 = {
-          onPress: null,
-          disabled: null,
+        obj6.style = items6;
+        const obj7 = {
+          onPress: callback,
+          disabled: null == tmp5ResultResult,
           accessibilityRole: "button",
           accessibilityLabel: null,
           children: null,
         };
-        obj8[0] = callback;
-        obj8[1] = null == tmp5ResultResult;
         const intl = tmp2(tmp3[22]).intl;
-        const obj9 = { gameName: null };
-        obj9[0] = getOrFetchApplication.name;
-        obj8[3] = intl.formatToPlainString(tmp2(tmp3[22]).t["9sZWVp"], obj9);
-        const obj10 = { source: null, style: null };
-        const obj11 = { uri: null };
-        obj11[0] = iconURL1;
-        obj10[0] = obj11;
-        obj10[1] = tmp.image;
-        obj8[4] = closure_7(tmp5(tmp3[30]), obj10);
-        const items7 = [closure_7(tmp2(tmp3[29]).PressableOpacity, obj8)];
-        const obj12 = { style: null, children: null };
-        obj12[0] = tmp.cardInnerContainer;
-        const obj13 = {
-          onPress: null,
-          disabled: null,
+        const obj8 = { gameName: getOrFetchApplication.name };
+        obj7.accessibilityLabel = intl.formatToPlainString(tmp2(tmp3[22]).t["9sZWVp"], obj8);
+        const obj9 = { source: null, style: null };
+        const obj10 = { uri: iconURL1 };
+        obj9.source = obj10;
+        obj9.style = tmp.image;
+        obj7.children = closure_7(tmp5(tmp3[30]), obj9);
+        const items7 = [closure_7(tmp2(tmp3[29]).PressableOpacity, obj7)];
+        const obj11 = { style: tmp.cardInnerContainer, children: null };
+        const obj12 = {
+          onPress: callback,
+          disabled: null == tmp5ResultResult,
           accessibilityRole: "button",
           accessibilityLabel: null,
           children: null,
         };
-        obj13[0] = callback;
-        obj13[1] = null == tmp5ResultResult;
         const intl2 = tmp2(tmp3[22]).intl;
-        const obj14 = { gameName: null };
-        obj14[0] = getOrFetchApplication.name;
-        obj13[3] = intl2.formatToPlainString(tmp2(tmp3[22]).t["9sZWVp"], obj14);
-        const obj15 = { variant: "text-md/semibold", style: null, children: null };
-        obj15[1] = tmp.gameName;
-        obj15[2] = getOrFetchApplication.name;
-        obj13[4] = closure_7(tmp2(tmp3[24]).Text, obj15);
-        const items8 = [closure_7(tmp2(tmp3[29]).PressableOpacity, obj13)];
+        const obj13 = { gameName: getOrFetchApplication.name };
+        obj12.accessibilityLabel = intl2.formatToPlainString(tmp2(tmp3[22]).t["9sZWVp"], obj13);
+        const obj14 = { variant: "text-md/semibold", style: tmp.gameName, children: getOrFetchApplication.name };
+        obj12.children = closure_7(tmp2(tmp3[24]).Text, obj14);
+        const items8 = [closure_7(tmp2(tmp3[29]).PressableOpacity, obj12)];
         let tmp16Result = null != memo;
         if (tmp16Result) {
           tmp16Result = memo.length > 0;
         }
         if (tmp16Result) {
-          const obj16 = { style: null, children: null };
-          obj16[0] = tmp.badges;
-          obj16[1] = memo;
-          tmp16Result = tmp16(tmp21, obj16);
+          const obj15 = { style: tmp.badges, children: memo };
+          tmp16Result = tmp16(tmp21, obj15);
         }
         items8[1] = tmp16Result;
-        obj12[1] = items8;
-        items7[1] = closure_9(View, obj12);
-        obj7[1] = items7;
-        const items9 = [closure_9(View, obj7)];
+        obj11.children = items8;
+        items7[1] = closure_9(View, obj11);
+        obj6.children = items7;
+        const items9 = [closure_9(View, obj6)];
         tmp16Result = null;
         if (!renderForScreenshot) {
-          obj17 = { reactText: null, onReply: null, onForward: null };
+          const obj16 = { reactText: null, onReply: null, onForward: null };
           const intl3 = tmp2(tmp3[22]).intl;
-          const obj18 = { username: null };
-          obj18[0] = tmp5(tmp3[25]).getName(stateFromStores);
-          obj17[0] = intl3.formatToPlainString(tmp2(tmp3[22]).t.ghWi8V, obj18);
-          obj17[1] = openReplyActionSheet;
-          obj17[2] = callback1;
-          tmp16Result = tmp16(tmp2(tmp3[31]).ContentInventoryReplyRow, obj17);
+          obj17 = { username: tmp5(tmp3[25]).getName(stateFromStores) };
+          obj16.reactText = intl3.formatToPlainString(tmp2(tmp3[22]).t.ghWi8V, obj17);
+          obj16.onReply = openReplyActionSheet;
+          obj16.onForward = callback1;
+          tmp16Result = tmp16(tmp2(tmp3[31]).ContentInventoryReplyRow, obj16);
           const tmp5Result3 = tmp5(tmp3[25]);
         }
-        const obj19 = { children: null };
+        const obj18 = { children: null };
         items9[1] = tmp16Result;
-        obj19[0] = items9;
-        obj[7] = closure_9(View, obj19);
-        return closure_7(tmp5Result, obj);
+        obj18.children = items9;
+        element.children = closure_9(View, obj18);
+        return closure_7(tmp5Result, element);
       }
     }
   }

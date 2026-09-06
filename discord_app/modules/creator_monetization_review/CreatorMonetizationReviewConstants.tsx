@@ -1,5 +1,5 @@
 // discord_app/modules/creator_monetization_review/CreatorMonetizationReviewConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
 const obj = {
   NEW_PURCHASES_DISABLED: "NEW_PURCHASES_DISABLED",
@@ -10,7 +10,7 @@ const obj = {
 };
 const items = [, ,];
 ({ NEW_PURCHASES_DISABLED: arr[0], REAPPLICATION_DISABLED: arr[1], SETTINGS_READ_ONLY: arr[2] } = obj);
-const result = set.fileFinishedImporting("modules/creator_monetization_review/CreatorMonetizationReviewConstants.tsx");
+const result = size.fileFinishedImporting("modules/creator_monetization_review/CreatorMonetizationReviewConstants.tsx");
 
 export const CreatorMonetizationRestrictions = obj;
 export const DefaultCreatorMonetizationRestrictions = items;

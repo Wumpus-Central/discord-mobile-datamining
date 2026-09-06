@@ -1,50 +1,52 @@
 // discord_app/modules/voice_messages/native/useVoiceMessageTooltip.tsx
-import closure_2 from "../../../../_runtime/00019_noop.js";
-import closure_3 from "../../keyboard/native/subscribeToKeyboardUIStore.tsx";
-import VoiceMessageRecordingStatus from "VoiceMessagesUIStore.tsx";
-import { useTooltip } from "../../../design/components/Tooltip/native/useTooltip.native.tsx";
+import util from "../../../intl/index.native.tsx";
+import useKeyboardIsOpen from "../../keyboard/native/useKeyboardIsOpen.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import subscribeToKeyboardUIStore from "../../keyboard/native/subscribeToKeyboardUIStore.tsx";
 
-const require = arg1;
+require = fn;
+const VoiceMessagesUIStore = fn(11960);
 ({
-  hideVoiceMessagesTooltip: c4,
-  showVoiceMessagesTooltip: c5,
-  useVoiceMessagesUIStore: closure_6,
-} = VoiceMessageRecordingStatus);
-const result = require("set").fileFinishedImporting("modules/voice_messages/native/useVoiceMessageTooltip.tsx");
+  hideVoiceMessagesTooltip: closure_4,
+  showVoiceMessagesTooltip: hasOwnProperty,
+  useVoiceMessagesUIStore: metroRequire,
+} = VoiceMessagesUIStore);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_messages/native/useVoiceMessageTooltip.tsx");
 
 export default function useVoiceMessageTooltip() {
-  const ref = React.useRef(null);
-  const tmp2 = callback((showVoiceMessagesTooltip) => showVoiceMessagesTooltip.showVoiceMessagesTooltip);
-  const _require = tmp2;
+  const ref = noop.useRef(null);
+  const tmp2 = closure_6((showVoiceMessagesTooltip) => showVoiceMessagesTooltip.showVoiceMessagesTooltip);
+  _require = tmp2;
   const items = [tmp2];
   const items1 = [tmp2];
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     const obj = { position: "top", label: null, visible: null };
-    const intl = callback(closure_1_1[3]).intl;
-    obj[1] = intl.string(callback(closure_1_1[3]).t["hP6+07"]);
-    obj[2] = callback;
+    const intl = util.intl;
+    obj.label = intl.string(util.t["hP6+07"]);
+    obj.visible = visible;
     return obj;
   }, items);
-  const effect = React.useEffect(() => {
-    if (callback) {
-      callback = callback(closure_1_1[4]).getKeyboardIsOpen({ includeCustomKeyboard: true });
-      closure_1 = closure_1_3(() => {
-        if (callback !== obj.getKeyboardIsOpen({ includeCustomKeyboard: true })) {
-          closure_1_4();
+  const effect = noop.useEffect(() => {
+    if (keyboardIsOpen) {
+      keyboardIsOpen = useKeyboardIsOpen.getKeyboardIsOpen({ includeCustomKeyboard: true });
+      closure_1 = subscribeToKeyboardUIStore(() => {
+        if (closure_0 !== obj.getKeyboardIsOpen({ includeCustomKeyboard: true })) {
+          closure_2_4();
         }
       });
       const _setTimeout = setTimeout;
       const timeout = setTimeout(() => {
-        callback2();
+        closure_1_4();
       }, 2000);
       return () => {
         clearTimeout(closure_2);
-        dependencyMap();
+        closure_1();
       };
     }
   }, items1);
-  let obj = useTooltip;
+  let obj = require("useTooltip");
   const tooltip = obj.useTooltip(ref, memo);
-  obj = { tooltipTargetRef: ref, showVoiceMessagesTooltip: closure_5 };
+  obj = { tooltipTargetRef: ref, showVoiceMessagesTooltip };
   return obj;
 }

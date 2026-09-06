@@ -1,17 +1,17 @@
 // discord_app/utils/ImageUtils.tsx
 import _modDef38 from "../../_runtime/metro/00038__.js";
 import PQueueDefault from "../../_runtime/01475_PQueue.js";
-import getSrcWithWidthAndHeight from "native/ImageUtils.tsx";
-import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
-import importDefaultResult from "../../_runtime/00012_apply.js";
+import utils_ImageUtils from "native/ImageUtils.tsx";
+import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
+import apply from "../../_runtime/metro/00012__.js";
 
-require = arg1;
-function fit(minHeight) {
-  ({ width, height, maxWidth, maxHeight, minWidth } = minHeight);
+require = fn;
+function fit(size) {
+  ({ width, height, maxWidth, maxHeight, minWidth } = size);
   if (minWidth === undefined) {
     minWidth = 0;
   }
-  let num = minHeight.minHeight;
+  let num = size.minHeight;
   if (num === undefined) {
     num = 0;
   }
@@ -39,7 +39,7 @@ function fit(minHeight) {
   }
   return { width, height };
 }
-function getPalette(width) {
+function getPalette(width, arg1, arg2) {
   const element = <canvas />;
   const context = element.getContext("2d");
   if (null == context) {
@@ -68,7 +68,6 @@ function getPalette(width) {
         let tmp13 = data[result1 + 2];
         let tmp14 = data[result1 + 3];
         let tmp15 = undefined === tmp14;
-        let tmp16 = num12;
         if (!tmp15) {
           tmp15 = tmp14 >= 125;
         }
@@ -91,37 +90,16 @@ function getPalette(width) {
     return paletteResult;
   }
 }
-function _dataUrlToFile() {
-  const self = this;
-  const tmp = callback((arg0, arg1, arg2) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    c4 = 0;
-    c5 = 0;
-    return (function* (arg0, arg1, arg2) {
-      closure_3 = tmp4;
-      closure_0 = closure_1;
-      closure_1 = closure_2;
-      const obj3 = closure_1_10(closure_0);
-      closure_2 = yield obj3.arrayBuffer();
-      const _File = File;
-      items = [closure_2];
-      const obj = { type: null };
-      obj[0] = closure_1;
-      const file = new File(items, closure_0, obj);
-      return file;
-    })();
-  });
-  closure_9 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
+let closure_9 = async function _dataUrlToFile() {
+  closure_3 = tmp4;
+  closure_131_0 = closure_1;
+  closure_131_1 = closure_2;
+  closure_131_2 = await dataUrlToBlob(closure_0).arrayBuffer();
+  const _File = File;
+  items = [closure_131_2];
+  const file = new File(items, closure_131_0, { type: closure_131_1 });
+  return file;
+};
 function dataUrlToBlob(arg0) {
   let length;
   const first = arg0.split(",")[0];
@@ -147,122 +125,108 @@ function dataUrlToBlob(arg0) {
   const blob = new Blob(items, { type: arg0.split(",")[0].split(":")[1].split(";")[0] });
   return blob;
 }
-function _isPNGAnimated() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c2 = 0;
-    c3 = 0;
-    return (function* (arg0) {
-      if (c3 === 2) {
-        c3 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+let closure_11 = async function _isPNGAnimated(arg0) {
+  let type = arg0;
+  c2 = 0;
+  c3 = 0;
+  return (async (arg0, value) => {
+    if (c3 === 2) {
+      c3 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          c3 = 2;
-          if (0 === c2) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_1 = tmp2;
-              let first;
-              closure_0 = undefined;
-              closure_1 = undefined;
-              if (closure_0.type != null) {
-                first = str7.split(";")[0];
-              }
-              if ("image/png" !== first) {
-                const _Error = Error;
-                error = new Error("File is not a PNG");
-                throw error;
-              } else {
-                c2 = 1;
-                c3 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = obj6.text();
-                return obj1;
-              }
-              obj6 = closure_0;
-            }
-          } else if (arg0 === 1) {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c3 = 2;
+        if (0 === c2) {
+          if (arg0 === 1) {
             c3 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          } else {
-            closure_0 = arg1;
-            closure_1 = closure_0.indexOf("IDAT");
-            let tmp9 = closure_1 > 0;
-            if (tmp9) {
-              const substr = closure_0.substring(0, closure_1);
-              tmp9 = -1 !== substr.indexOf("acTL");
-            }
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = tmp9;
+            obj = { value, done: true };
             return obj;
+          } else {
+            closure_1 = tmp2;
+            let first;
+            closure_129_0 = undefined;
+            closure_129_1 = undefined;
+            if (type.type != null) {
+              first = str7.split(";")[0];
+            }
+            if ("image/png" !== first) {
+              const _Error = Error;
+              const error = new Error("File is not a PNG");
+              throw error;
+            } else {
+              c2 = 1;
+              c3 = 1;
+              const obj1 = { value: obj6.text(), done: false };
+              return obj1;
+            }
+            obj6 = type;
           }
-        } catch (tmp19) {
-          c3 = tmp;
-          throw tmp19;
+        } else if (arg0 === 1) {
+          c3 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 3;
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          closure_129_0 = value;
+          closure_129_1 = closure_129_0.indexOf("IDAT");
+          let tmp9 = closure_129_1 > 0;
+          if (tmp9) {
+            const substr = closure_129_0.substring(0, closure_129_1);
+            tmp9 = -1 !== substr.indexOf("acTL");
+          }
+          c3 = 3;
+          obj = { value: tmp9, done: true };
+          return obj;
         }
+      } catch (tmp19) {
+        c3 = tmp;
+        throw tmp19;
       }
-    })();
-  });
-  closure_11 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
+    }
+  })();
+};
 let c5 = 2000;
 let c6 = 1.6;
 let items = [[0, 0, 0]];
-importDefaultResult.memoize((arg0) => {
-  closure_0 = arg0;
-  return new Promise((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    const image = new globalThis.Image();
-    image.crossOrigin = "Anonymous";
-    image.onerror = (arg0) => {
-      callback2(arg0);
-      c2.onload = null;
-      c2.onerror = null;
-      c2 = null;
-    };
-    image.onload = () => {
-      callback(closure_1_8(c2, 5, 10));
-      c2.onload = null;
-      c2.onerror = null;
-      c2 = null;
-    };
-    image.src = closure_0;
-  });
-});
-let result = require("set").fileFinishedImporting("utils/ImageUtils.tsx");
+apply.memoize(
+  (src) =>
+    new Promise((arg0, arg1) => {
+      src = arg0;
+      closure_1 = arg1;
+      const image = new globalThis.Image();
+      c2 = image;
+      image.crossOrigin = "Anonymous";
+      c2.onerror = (arg0) => {
+        closure_1(arg0);
+        c2.onload = null;
+        c2.onerror = null;
+        c2 = null;
+      };
+      c2.onload = () => {
+        closure_0(getPalette(c2, 5, 10));
+        c2.onload = null;
+        c2.onerror = null;
+        c2 = null;
+      };
+      c2.src = src;
+    }),
+);
+let size = fn(2);
+let result = size.fileFinishedImporting("utils/ImageUtils.tsx");
 
 export { fit };
 export const IMAGE_MAX_ZOOM = 2000;
@@ -271,11 +235,11 @@ export const zoomFit = function zoomFit(width, height) {
   const bound = Math.min(rounded, Math.round(window.innerHeight));
   const rounded1 = Math.round(0.75 * window.innerWidth);
   const bound1 = Math.min(rounded1, Math.round(window.innerWidth));
-  const obj = { width, height, maxWidth: null, maxHeight: null };
+  const size = { width, height, maxWidth: null, maxHeight: null };
   const bound2 = Math.min(bound, c5);
-  obj[2] = Math.min(bound1, c5);
-  obj[3] = bound2;
-  return fit(obj);
+  size.maxWidth = Math.min(bound1, c5);
+  size.maxHeight = bound2;
+  return fit(size);
 };
 export const zoomScale = function zoomScale(arg0, arg1, arg2, arg3) {
   let num = 0;
@@ -365,20 +329,20 @@ export const makeCssUrlString = function makeCssUrlString(arg0) {
   return str;
 };
 export { getPalette };
-export const getPaletteForAvatar = function getPaletteForAvatar(closure_0) {
-  return getSrcWithWidthAndHeight.default.getPaletteForAvatarMobile(closure_0);
+export const getPaletteForAvatar = function getPaletteForAvatar(automodAvatarURL) {
+  return utils_ImageUtils.default.getPaletteForAvatarMobile(automodAvatarURL);
 };
-export const readFileAsBase64 = function readFileAsBase64(arg0) {
-  closure_0 = arg0;
-  return new Promise((closure_0) => {
+export const readFileAsBase64 = function readFileAsBase64(result) {
+  closure_0 = result;
+  return new Promise((data, arg1) => {
     closure_1 = arg1;
     const fileReader = new FileReader();
-    const asDataURL = fileReader.readAsDataURL(closure_0);
+    const asDataURL = fileReader.readAsDataURL(data);
     fileReader.onload = () => {
-      callback2(fileReader[4])(typeof fileReader.result === "string", "Result must be a string");
-      callback(fileReader.result);
+      _modDef38(typeof fileReader.result === "string", "Result must be a string");
+      data(fileReader.result);
     };
-    fileReader.onerror = (arg0) => callback2(arg0);
+    fileReader.onerror = (arg0) => closure_1(arg0);
   });
 };
 export const dataUriFileSize = function dataUriFileSize(str) {
@@ -388,7 +352,7 @@ export const dataUriFileSize = function dataUriFileSize(str) {
 };
 export const dataUrlToFile = function dataUrlToFile() {
   const self = this;
-  const apply = _dataUrlToFile.apply;
+  const apply = closure_9.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -399,7 +363,7 @@ export const dataUrlToFile = function dataUrlToFile() {
 export { dataUrlToBlob };
 export const isPNGAnimated = function isPNGAnimated() {
   const self = this;
-  const apply = _isPNGAnimated.apply;
+  const apply = closure_11.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -407,12 +371,11 @@ export const isPNGAnimated = function isPNGAnimated() {
   }
   return applyArgumentsResult;
 };
-export const preloadImage = function preloadImage(arg0) {
-  closure_0 = arg0;
+export const preloadImage = function preloadImage(src) {
   return new Promise((arg0, arg1) => {
     const image = new globalThis.Image();
     const listener = image.addEventListener("load", arg0);
     const listener1 = image.addEventListener("error", arg1);
-    image.src = closure_0;
+    image.src = src;
   });
 };

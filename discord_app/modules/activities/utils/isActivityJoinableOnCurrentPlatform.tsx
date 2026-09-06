@@ -1,11 +1,11 @@
 // discord_app/modules/activities/utils/isActivityJoinableOnCurrentPlatform.tsx
-import set from "../../../../_runtime/00002_set.js";
-import PlatformTypes from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
+import utils_PlatformUtils from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 import hasFlagDefault from "hasFlag.tsx";
-import ME from "../../../Constants.tsx";
+import Constants from "../../../Constants.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-({ ActivityFlags: c3, ActivityGamePlatforms: c4, ActivityTypes: c5 } = ME);
-const result = set.fileFinishedImporting("modules/activities/utils/isActivityJoinableOnCurrentPlatform.tsx");
+({ ActivityFlags: c3, ActivityGamePlatforms: closure_4, ActivityTypes: hasOwnProperty } = Constants);
+const result = size.fileFinishedImporting("modules/activities/utils/isActivityJoinableOnCurrentPlatform.tsx");
 
 export default function isActivityJoinableOnCurrentPlatform(type) {
   let tmp = null == type;
@@ -55,7 +55,7 @@ export default function isActivityJoinableOnCurrentPlatform(type) {
       }
       return hasItem;
     }
-    obj = PlatformTypes;
+    obj = utils_PlatformUtils;
   } else {
     return false;
   }

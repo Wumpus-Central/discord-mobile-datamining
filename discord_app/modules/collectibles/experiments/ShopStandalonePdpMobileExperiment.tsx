@@ -1,6 +1,6 @@
 // discord_app/modules/collectibles/experiments/ShopStandalonePdpMobileExperiment.tsx
-import set from "../../../../_runtime/00002_set.js";
 import ApexExperiment from "../../experiments/apex/index.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const apexExperiment = ApexExperiment.createApexExperiment({
   name: "2026-08-shop-standalone-pdp-mobile",
@@ -8,7 +8,7 @@ const apexExperiment = ApexExperiment.createApexExperiment({
   defaultConfig: { standalonePdpEnabled: false },
   variations: { 0: { standalonePdpEnabled: false }, 1: { standalonePdpEnabled: true } },
 });
-const result = set.fileFinishedImporting("modules/collectibles/experiments/ShopStandalonePdpMobileExperiment.tsx");
+const result = size.fileFinishedImporting("modules/collectibles/experiments/ShopStandalonePdpMobileExperiment.tsx");
 
 export default apexExperiment;
 export const useIsShopStandalonePdpMobileEnabled = function useIsShopStandalonePdpMobileEnabled(

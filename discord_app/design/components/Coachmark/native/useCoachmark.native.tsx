@@ -1,23 +1,25 @@
 // discord_app/design/components/Coachmark/native/useCoachmark.native.tsx
-import closure_2 from "../../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import AnimatedCoachmark from "AnimatedCoachmark.native.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("design/components/Coachmark/native/useCoachmark.native.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Coachmark/native/useCoachmark.native.tsx");
 
 export const useCoachmark = function useCoachmark(targetRef, memo) {
-  const _require = memo;
+  _require = memo;
   let context;
-  let obj = _require(context[2]);
-  context = React.useContext(_require(context[4]).LayerContext);
+  let obj = require("v1");
+  context = noop.useContext(require("LayerContext").LayerContext);
   const items = [context, memo];
-  const callback = React.useCallback((arg0, targetMeasurements, surfaceMeasurements) => {
+  const callback = noop.useCallback((arg0, targetMeasurements, surfaceMeasurements) => {
     const obj = {};
-    const merged = Object.assign(memo);
+    const merged = Object.assign(closure_0);
     obj.targetMeasurements = targetMeasurements;
     obj.surfaceMeasurements = surfaceMeasurements;
-    context.add(arg0, closure_1_3(memo(context[5]).AnimatedCoachmark, obj));
+    context.add(arg0, jsx(AnimatedCoachmark.AnimatedCoachmark, {}));
   }, items);
-  const ref = React.useRef(_require(context[2]).v4());
-  return _require(context[3]).useTooltipHelper(ref, targetRef, callback);
+  const ref = noop.useRef(require("v1").v4());
+  return require("useTooltip").useTooltipHelper(ref, targetRef, callback);
 };

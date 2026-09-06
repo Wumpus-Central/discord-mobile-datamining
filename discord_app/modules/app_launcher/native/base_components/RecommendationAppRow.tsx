@@ -1,14 +1,12 @@
 // discord_app/modules/app_launcher/native/base_components/RecommendationAppRow.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import getAvatarURLDefault from "../../../../utils/AvatarUtils.tsx";
-import AppRowLabel from "../screens/home/AppLauncherHomeScreen.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import AvatarUtilsDefault from "../../../../utils/AvatarUtils.tsx";
+import AppLauncherHomeScreen from "../screens/home/AppLauncherHomeScreen.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting(
-  "modules/app_launcher/native/base_components/RecommendationAppRow.tsx",
-);
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/base_components/RecommendationAppRow.tsx");
 
 export default function RecommendationAppRow(onPress) {
   ({ application, isFirstRow } = onPress);
@@ -23,10 +21,9 @@ export default function RecommendationAppRow(onPress) {
   if (showsPromoted === undefined) {
     showsPromoted = false;
   }
-  let obj = getAvatarURLDefault;
-  obj = { id: application.id, icon: application.icon, bot: application.bot, botIconFirst: true };
+  const obj = { id: application.id, icon: application.icon, bot: application.bot, botIconFirst: true };
   const iconSource = obj.getApplicationIconSource(obj);
-  return jsx(AppRowLabel.BaseAppRow, {
+  return jsx(AppLauncherHomeScreen.BaseAppRow, {
     application,
     iconSource,
     onPress: onPress.onPress,

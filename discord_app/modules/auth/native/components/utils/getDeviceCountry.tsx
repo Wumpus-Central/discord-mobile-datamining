@@ -1,15 +1,15 @@
 // discord_app/modules/auth/native/components/utils/getDeviceCountry.tsx
-import set from "../../../../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import set2 from "../../../../../utils/PlatformUtils.tsx";
-import enforcing from "../../../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceLocaleModule.tsx";
+import _mod17 from "../../../../../../_runtime/metro/00017__.js";
+import PlatformUtils from "../../../../../utils/PlatformUtils.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-const NativeModules = get_ActivityIndicator.NativeModules;
-const result = set.fileFinishedImporting("modules/auth/native/components/utils/getDeviceCountry.tsx");
+const NativeDeviceLocaleModule = tmp(1117);
+const NativeModules = _mod17.NativeModules;
+const result = size.fileFinishedImporting("modules/auth/native/components/utils/getDeviceCountry.tsx");
 
 export const getDeviceCountry = function getDeviceCountry() {
   if (obj.isAndroid()) {
-    let LocalizationManager = enforcing.default;
+    let LocalizationManager = NativeDeviceLocaleModule.default;
   } else {
     LocalizationManager = NativeModules.LocalizationManager;
   }
@@ -24,10 +24,8 @@ export const getDeviceCountry = function getDeviceCountry() {
     let formatted = null;
     if (parts.length >= 2) {
       formatted = parts[parts.length - 1].toUpperCase();
-      const str2 = parts[parts.length - 1];
     }
     return formatted;
   }
-  obj = set2;
-  const tmp = require;
+  obj = PlatformUtils;
 };

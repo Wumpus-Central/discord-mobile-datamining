@@ -1,30 +1,29 @@
 // discord_app/modules/ato_alerts/native/components/LikelyAtoMoreTipsModalActionItems.tsx
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../../stores/UserStore.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import UserUtilsDefault from "../../../../utils/UserUtils.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import UserStore from "../../../../stores/UserStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
-  "modules/ato_alerts/native/components/LikelyAtoMoreTipsModalActionItems.tsx",
-);
+const require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/ato_alerts/native/components/LikelyAtoMoreTipsModalActionItems.tsx");
 
 export default function LikelyAtoMoreTipsModalActionItems(senderId) {
   senderId = senderId.senderId;
-  let stateFromStores;
   let obj = senderId(504);
-  const items = [closure_4];
+  const items = [UserStore];
   const items1 = [senderId];
-  stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getUser(senderId), items1);
+  const stateFromStores = obj.useStateFromStores(items, () => UserStore.getUser(senderId), items1);
   const items2 = [stateFromStores];
-  const memo = React.useMemo(() => stateFromStores(closure_1_2[4]).getName(stateFromStores), items2);
+  const memo = noop.useMemo(() => UserUtilsDefault.getName(stateFromStores), items2);
   obj = { hasIcons: true, children: null };
   obj = { label: null, subLabel: null, onPress: null, icon: null };
   const intl = senderId(1114).intl;
-  obj[0] = intl.formatToPlainString(senderId(1114).t["F/ID+9"], { username: memo });
+  obj.label = intl.formatToPlainString(senderId(1114).t["F/ID+9"], { username: memo });
   const intl2 = senderId(1114).intl;
-  obj[1] = intl2.string(senderId(1114).t.w2ve0t);
-  obj[2] = senderId.handleMutePressed;
-  obj[3] = jsx(senderId(9059).BellSlashIcon, {});
-  obj[1] = jsx(senderId(5605).TableRow, { label: null, subLabel: null, onPress: null, icon: null });
+  obj.subLabel = intl2.string(senderId(1114).t.w2ve0t);
+  obj.onPress = senderId.handleMutePressed;
+  obj.icon = jsx(senderId(9059).BellSlashIcon, {});
+  obj.children = jsx(senderId(5605).TableRow, { label: null, subLabel: null, onPress: null, icon: null });
   return jsx(senderId(5687).TableRowGroup, { label: null, subLabel: null, onPress: null, icon: null });
 }

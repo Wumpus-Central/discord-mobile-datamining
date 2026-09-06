@@ -1,7 +1,7 @@
 // discord_app/modules/nuf/NUFConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/nuf/NUFConstants.tsx");
+const result = size.fileFinishedImporting("modules/nuf/NUFConstants.tsx");
 
 export const NewUserTypes = {
   MARKETING_UNCLAIMED: 0,

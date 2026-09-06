@@ -1,14 +1,12 @@
 // discord_app/records/GiftCodeRecord.tsx
-import toJSDefault from "../lib/Record.tsx";
-import hooksDefault from "../../_runtime/04153_hooks.js";
-import closure_3 from "../modules/billing/records/SubscriptionTrialRecord.tsx";
-import closure_4 from "PromotionRecord.tsx";
-import closure_5 from "SubscriptionPlanRecord.tsx";
-import { PremiumSubscriptionSKUToPremiumType as closure_6 } from "../modules/premium/PremiumConstants.tsx";
-import { hasFlag } from "../../discord_common/js/shared/utils/FlagUtils.tsx";
+import _modDef4153 from "../../_runtime/metro/04153__.js";
+import Record from "../lib/Record.tsx";
+import SubscriptionTrialRecord from "../modules/billing/records/SubscriptionTrialRecord.tsx";
+import PromotionRecord from "PromotionRecord.tsx";
+import SubscriptionPlanRecord from "SubscriptionPlanRecord.tsx";
 
-const require = arg1;
-toJSDefault;
+const require = fn;
+let closure_6 = fn(1373).PremiumSubscriptionSKUToPremiumType;
 const frozen = Object.freeze({
   PAYMENT_SOURCE_REQUIRED: 1,
   EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED: 2,
@@ -18,7 +16,6 @@ let GiftCodeRecord;
 class GiftCodeRecord extends tmp2 {
   constructor(arg0) {
     tmp = new GiftCodeRecord(new.target, new.target);
-    // ThrowIfThisInitialized (0x7c)
     ({
       userId: tmp.userId,
       code: tmp.code,
@@ -52,9 +49,9 @@ GiftCodeRecord["createFromServer"] = function createFromServer(user) {
   if (null != user.store_listing) {
     id1 = user.store_listing.id;
   }
-  let tmp4 = null;
+  let tmp5 = null;
   if (null != user.expires_at) {
-    tmp4 = hooksDefault(user.expires_at);
+    tmp5 = _modDef4153(user.expires_at);
   }
   const redeemed = user.redeemed;
   if (null != user.subscription_plan) {
@@ -64,7 +61,7 @@ GiftCodeRecord["createFromServer"] = function createFromServer(user) {
   }
   let fromServer = null;
   if (null != user.subscription_plan) {
-    fromServer = closure_5.createFromServer(user.subscription_plan);
+    fromServer = SubscriptionPlanRecord.createFromServer(user.subscription_plan);
   }
   let entitlement_branches = null;
   if (null != user.entitlement_branches) {
@@ -76,64 +73,64 @@ GiftCodeRecord["createFromServer"] = function createFromServer(user) {
   }
   let fromServer1 = null;
   if (null != user.subscription_trial) {
-    fromServer1 = closure_3.createFromServer(user.subscription_trial);
-    const tmp11 = closure_3;
+    fromServer1 = SubscriptionTrialRecord.createFromServer(user.subscription_trial);
+    const tmp12 = SubscriptionTrialRecord;
   }
   const promotion = user.promotion;
   let fromServer2 = null;
   if (null != promotion) {
-    fromServer2 = closure_4.createFromServer(user.promotion);
-    const tmp12 = closure_4;
+    fromServer2 = PromotionRecord.createFromServer(user.promotion);
+    const tmp13 = PromotionRecord;
   }
-  if (typeof GiftCodeRecord !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof GiftCodeRecord === "function") {
+    const tmp18 = new GiftCodeRecord(
+      tmp,
+      tmp12,
+      tmp13,
+      promotion,
+      tmp2,
+      new.target,
+      id,
+      code,
+      sku_id,
+      application_id,
+      uses,
+      max_uses,
+      tmp5,
+      redeemed,
+      id1,
+      subscription_plan_id,
+      fromServer,
+      entitlement_branches,
+    );
+    tmp18.userId = id;
+    tmp18.code = code;
+    tmp18.skuId = sku_id;
+    tmp18.applicationId = application_id;
+    tmp18.uses = uses;
+    tmp18.maxUses = max_uses;
+    tmp18.expiresAt = tmp5;
+    tmp18.redeemed = redeemed;
+    tmp18.storeListingId = id1;
+    tmp18.subscriptionPlanId = subscription_plan_id;
+    tmp18.subscriptionPlan = fromServer;
+    tmp18.revoked = false;
+    tmp18.entitlementBranches = entitlement_branches;
+    tmp18.flags = num;
+    tmp18.subscriptionTrial = fromServer1;
+    tmp18.promotion = fromServer2;
+    tmp18.giftStyle = user.gift_style;
+    return tmp18;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const tmp14 = new GiftCodeRecord(
-    "Trying to call a non-function",
-    tmp11,
-    tmp12,
-    promotion,
-    GiftCodeRecord,
-    new.target,
-    id,
-    code,
-    sku_id,
-    application_id,
-    uses,
-    max_uses,
-    tmp4,
-    redeemed,
-    id1,
-    subscription_plan_id,
-    fromServer,
-    entitlement_branches,
-  );
-  // ThrowIfThisInitialized (0x7c)
-  tmp14.userId = id;
-  tmp14.code = code;
-  tmp14.skuId = sku_id;
-  tmp14.applicationId = application_id;
-  tmp14.uses = uses;
-  tmp14.maxUses = max_uses;
-  tmp14.expiresAt = tmp4;
-  tmp14.redeemed = redeemed;
-  tmp14.storeListingId = id1;
-  tmp14.subscriptionPlanId = subscription_plan_id;
-  tmp14.subscriptionPlan = fromServer;
-  tmp14.revoked = false;
-  tmp14.entitlementBranches = entitlement_branches;
-  tmp14.flags = num;
-  tmp14.subscriptionTrial = fromServer1;
-  tmp14.promotion = fromServer2;
-  tmp14.giftStyle = user.gift_style;
-  return tmp14;
 };
 prototype["isExpired"] = function isExpired() {
   const expiresAt = this.expiresAt;
   let isAfterResult = null != expiresAt;
   if (isAfterResult) {
-    isAfterResult = hooksDefault().isAfter(expiresAt);
-    const obj = hooksDefault();
+    isAfterResult = _modDef4153().isAfter(expiresAt);
+    const obj = _modDef4153();
   }
   return isAfterResult;
 };
@@ -165,7 +162,7 @@ Object.defineProperty(prototype, "premiumSubscriptionType", {
   get: function premiumSubscriptionType() {
     let tmp2 = null;
     if (this.isSubscription) {
-      let tmp4 = table[tmp.skuId];
+      let tmp4 = closure_6[tmp.skuId];
       if (tmp4 == null) {
         tmp4 = null;
       }
@@ -177,20 +174,18 @@ Object.defineProperty(prototype, "premiumSubscriptionType", {
 });
 Object.defineProperty(prototype, "isSelfRedeemable", {
   get: function isSelfRedeemable() {
-    return !hasFlag /* hasFlag */
-      .hasFlag(this.flags, frozen.NOT_SELF_REDEEMABLE);
+    return !require("FlagUtils").hasFlag(this.flags, frozen.NOT_SELF_REDEEMABLE);
   },
   set: undefined,
 });
 Object.defineProperty(prototype, "isExistingPremiumSubscriptionDisallowed", {
   get: function isExistingPremiumSubscriptionDisallowed() {
-    return hasFlag /* hasFlag */
-      .hasFlag(this.flags, frozen.EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED);
+    return require("FlagUtils").hasFlag(this.flags, frozen.EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED);
   },
   set: undefined,
 });
 Object.defineProperty(prototype, "analyticsData", {
-  get: function analyticsData(arg0) {
+  get: function analyticsData() {
     return { gift_code: this.code, gift_code_max_uses: this.maxUses };
   },
   set: undefined,
@@ -198,7 +193,8 @@ Object.defineProperty(prototype, "analyticsData", {
 prototype["toString"] = function toString() {
   return this.code;
 };
-const result = require("set").fileFinishedImporting("records/GiftCodeRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("records/GiftCodeRecord.tsx");
 
 export default GiftCodeRecord;
 export const GiftCodeFlags = frozen;

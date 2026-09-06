@@ -1,18 +1,19 @@
 // discord_app/modules/guild_onboarding/useSortedOnboardingPrompts.tsx
-import closure_2 from "../../../_runtime/00019_noop.js";
-import closure_3 from "GuildOnboardingPromptsStore.tsx";
+import noop from "../../../_runtime/metro/00019__.js";
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_onboarding/useSortedOnboardingPrompts.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_onboarding/useSortedOnboardingPrompts.tsx");
 
 export default function useSortedOnboardingPrompts(arg0) {
-  const _require = arg0;
-  let items = [closure_3];
-  stateFromStoresArray = _require(stateFromStoresArray[2]).useStateFromStoresArray(items, () =>
-    closure_1_3.getEnabledOnboardingPrompts(closure_0),
+  _require = arg0;
+  let items = [GuildOnboardingPromptsStore];
+  stateFromStoresArray = require("useStateFromStores").useStateFromStoresArray(items, () =>
+    GuildOnboardingPromptsStore.getEnabledOnboardingPrompts(closure_0),
   );
   let items1 = [stateFromStoresArray];
-  return React.useMemo(() => {
+  return noop.useMemo(() => {
     let arr5;
     const items = [];
     const items1 = [];
@@ -26,8 +27,6 @@ export default function useSortedOnboardingPrompts(arg0) {
       do {
         arr5 = stateFromStoresArray;
         let tmp2 = stateFromStoresArray[num];
-        let tmp3 = num;
-        let tmp4 = num2;
         if (tmp2.isNew) {
           let arr = items.push(tmp2);
           let sum = num2;

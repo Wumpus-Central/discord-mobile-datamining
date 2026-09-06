@@ -1,9 +1,11 @@
 // discord_app/modules/video_calls/useVideoSpinnerTimer.tsx
-import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../_runtime/00019_noop.js";
+import VideoSpinnerTimer from "../../lib/VideoSpinnerTimer.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import noop from "../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/video_calls/useVideoSpinnerTimer.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/useVideoSpinnerTimer.tsx");
 
 export default function useVideoSpinnerTimer(userId) {
   ({ location: require, videoSpinnerContext } = userId);
@@ -14,10 +16,9 @@ export default function useVideoSpinnerTimer(userId) {
   if (flag === undefined) {
     flag = false;
   }
-  let first;
-  first = userId(
+  const first = userId(
     streamId.useState(() => {
-      const videoSpinnerTimer = new closure_1_0(videoSpinnerContext[2]).VideoSpinnerTimer(closure_0);
+      const videoSpinnerTimer = new VideoSpinnerTimer.VideoSpinnerTimer(closure_1_0);
       return videoSpinnerTimer;
     }),
     1,

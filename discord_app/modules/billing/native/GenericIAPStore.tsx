@@ -1,13 +1,13 @@
 // discord_app/modules/billing/native/GenericIAPStore.tsx
-import applyDefault from "../../../../_runtime/00012_apply.js";
+import _modDef12 from "../../../../_runtime/metro/00012__.js";
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../../Dispatcher.tsx";
-import SubscriptionPlans from "../../premium/native/ProductIds.android.tsx";
+import DispatcherDefault from "../../../Dispatcher.tsx";
+import ProductIds from "../../premium/native/ProductIds.android.tsx";
 
-require = arg1;
+require = fn;
 let c3 = null;
 let c4 = false;
-let c5 = null;
+let storeFront = null;
 const Store = initializeDefault.Store;
 class GenericIAPStore extends Store {}
 const prototype = GenericIAPStore.prototype;
@@ -18,11 +18,10 @@ prototype["genericProductsLoaded"] = function genericProductsLoaded() {
   let tmp = null != c3;
   if (tmp) {
     tmp =
-      applyDefault.filter(c3, (identifier) => {
-        const GenericProductIds = callback(table[2]).GenericProductIds;
+      _modDef12.filter(c3, (identifier) => {
+        const GenericProductIds = ProductIds.GenericProductIds;
         return GenericProductIds.includes(identifier.identifier);
-      }).length === SubscriptionPlans.GenericProductIds.length;
-    const arr = applyDefault;
+      }).length === ProductIds.GenericProductIds.length;
   }
   return tmp;
 };
@@ -30,12 +29,12 @@ prototype["getProducts"] = function getProducts() {
   return c3;
 };
 prototype["getStoreFront"] = function getStoreFront() {
-  return c5;
+  return storeFront;
 };
 GenericIAPStore.displayName = "GenericIAPStore";
-const genericIAPStore = new GenericIAPStore(dispatcherDefault, {
+const genericIAPStore = new GenericIAPStore(DispatcherDefault, {
   IAP_LOAD_GENERIC_PRODUCTS: function initGenericProducts(arg0) {
-    ({ products: c3, storeFront: c5 } = arg0);
+    ({ products: c3, storeFront } = arg0);
   },
   GENERIC_IAP_INIT_CONNECTION: function genericIapInitConnection(connected) {
     connected = connected.connected;
@@ -50,6 +49,7 @@ const genericIAPStore = new GenericIAPStore(dispatcherDefault, {
     storeFront = storeFront.storeFront;
   },
 });
-const result = require("set").fileFinishedImporting("modules/billing/native/GenericIAPStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/billing/native/GenericIAPStore.tsx");
 
 export default genericIAPStore;

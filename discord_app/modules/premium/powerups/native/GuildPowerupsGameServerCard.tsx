@@ -1,33 +1,32 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsGameServerCard.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import GuildPowerupsPerkCardDefault from "GuildPowerupsPerkCard.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useGameServerPerkDefault from "../../../game_server/hooks/useGameServerPerk.tsx";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_4 from "../../../a11y/AccessibilityStore.tsx";
-import closure_5 from "../../../game_server/GameServerStore.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
+import GameServerStore from "../../../game_server/GameServerStore.tsx";
 
-const require = arg1;
-noopAll;
-createCacheKey = { riveContainer: null };
-createCacheKey = { flex: 1, paddingVertical: ThemesDefault.space.PX_8 };
-createCacheKey[0] = createCacheKey;
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsGameServerCard.tsx");
+const GuildPowerupsPerkCardDefault = tmp5(12571);
+const require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { riveContainer: null };
+createStyles = { flex: 1, paddingVertical: nativeDefault.space.PX_8 };
+createStyles.riveContainer = createStyles;
+let closure_7 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsGameServerCard.tsx");
 
 export default function GuildPowerupsGameServerCard(guildId) {
   guildId = guildId.guildId;
   let obj = guildId(504);
-  const items = [closure_5];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getStateForGuild(guildId));
-  const tmp = callback();
+  const items = [GameServerStore];
+  const stateFromStores = obj.useStateFromStores(items, () => GameServerStore.getStateForGuild(guildId));
+  const tmp = closure_7();
   const tmp2 = guildId;
-  const tmp5 = importDefault;
   const tmp7 = useGameServerPerkDefault(guildId);
-  obj1 = guildId(504);
-  const items1 = [closure_4];
+  let obj1 = guildId(504);
+  const items1 = [AccessibilityStore];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
   let tmp10 = null;
   if (null != stateFromStores) {
@@ -43,18 +42,16 @@ export default function GuildPowerupsGameServerCard(guildId) {
         status: null,
         onPress: null,
       };
-      ({ title: obj3[0], description: obj3[1], cost: obj3[2] } = tmp7);
-      obj = { style: null, children: null };
-      obj[0] = tmp.riveContainer;
+      ({ title: obj3.title, description: obj3.description, cost: obj3.cost } = tmp7);
+      obj = { style: tmp.riveContainer, children: null };
       obj1 = { stateMachine: "SM_Auto", dataBinding: null };
-      const obj2 = { reducedMotion: null };
-      obj2[0] = stateFromStores1;
-      obj1[1] = obj2;
-      obj[1] = jsx(tmp2(4271).GameServerHostingRive, { stateMachine: "SM_Auto", dataBinding: null });
-      obj[4] = <View style={null}>{null}</View>;
-      obj[6] = tmp6;
-      obj[7] = tmp9;
-      tmp10 = jsx(GuildPowerupsPerkCardDefault, { style: null, children: null });
+      const obj2 = { reducedMotion: stateFromStores1 };
+      obj1.dataBinding = obj2;
+      obj.children = jsx(tmp2(4271).GameServerHostingRive, { stateMachine: "SM_Auto", dataBinding: null });
+      obj.riveComponent = <View style={tmp.riveContainer}>{null}</View>;
+      obj.status = tmp6;
+      obj.onPress = tmp9;
+      tmp10 = jsx(GuildPowerupsPerkCardDefault, { style: tmp.riveContainer, children: null });
       const tmp5Result = GuildPowerupsPerkCardDefault;
     }
   }

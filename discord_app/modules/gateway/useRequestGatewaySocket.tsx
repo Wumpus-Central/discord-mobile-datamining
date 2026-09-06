@@ -1,18 +1,20 @@
 // discord_app/modules/gateway/useRequestGatewaySocket.tsx
-import _modDef11300 from "../app_state/DiscordAppState.native.tsx";
-import closure_3 from "../../../_runtime/00019_noop.js";
+import RequestGatewaySocketAll from "RequestGatewaySocket.tsx";
+import DiscordAppStateDefault from "../app_state/DiscordAppState.native.tsx";
+import noop from "../../../_runtime/metro/00019__.js";
 
-const result = require("set").fileFinishedImporting("modules/gateway/useRequestGatewaySocket.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/gateway/useRequestGatewaySocket.tsx");
 
 export const useRequestGatewaySocket = function useRequestGatewaySocket(arg0) {
   importDefault = arg0;
-  const canUIRequestGatewaySocket = _modDef11300.useCanUIRequestGatewaySocket();
+  const canUIRequestGatewaySocket = DiscordAppStateDefault.useCanUIRequestGatewaySocket();
   const items = [arg0, canUIRequestGatewaySocket];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (canUIRequestGatewaySocket) {
-      canUIRequestGatewaySocket(closure_1_2[2]).setRequestedBy(closure_0);
+      RequestGatewaySocketAll.setRequestedBy(closure_0);
       return () => {
-        closure_1_1(closure_1_2[2]).stopRequest(closure_0);
+        canUIRequestGatewaySocket(dependencyMap[2]).stopRequest(closure_1_0);
       };
     }
   }, items);

@@ -1,21 +1,20 @@
 // discord_app/modules/fastest_list/props/useFastestListPropsEstimatedListSize.native.tsx
-import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import useWindowDimensions from "../../screen/useWindowDimensions.native.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
-  "modules/fastest_list/props/useFastestListPropsEstimatedListSize.native.tsx",
-);
+require = fn;
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/fastest_list/props/useFastestListPropsEstimatedListSize.native.tsx");
 
 export default function useFastestListPropsEstimatedListSize(arg0) {
   ({ estimatedListSize: require, horizontal: dependencyMap } = arg0);
-  return callback(
-    React.useState(() => {
-      if ("windowSize" !== closure_0) {
-        return closure_0;
+  return _slicedToArray(
+    noop.useState(() => {
+      if ("windowSize" !== closure_1_0) {
+        return closure_1_0;
       } else {
-        const size = closure_1_0(closure_1_1[2]).getWindowDimensions();
-        const obj = closure_1_0(closure_1_1[2]);
+        const size = useWindowDimensions.getWindowDimensions();
       }
     }),
     2,

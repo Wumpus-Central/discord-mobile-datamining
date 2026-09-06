@@ -1,33 +1,30 @@
 // discord_app/modules/gif_picker/native/GIFPickerHeader.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import GIF_PROVIDER from "../GifProvider.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import importAllResult from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import timing from "../../../design/animation/reanimated/timing/timing.tsx";
+import timingPresets from "../../../design/animation/reanimated/timing/timingPresets.tsx";
+import GifProvider from "../GifProvider.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+require = fn;
 function FavoritesSearch(columnWidth) {
   columnWidth = columnWidth.columnWidth;
   const onQueryChange = columnWidth.onQueryChange;
-  let ref;
-  let first;
-  importAllResult = undefined;
-  let sharedValue;
-  ref = importAllResult.useRef(null);
-  const tmp3 = first(importAllResult.useState(false), 2);
-  first = tmp3[0];
-  importAllResult = tmp3[1];
+  let accessibilityElementsHidden;
+  noop = undefined;
+  const ref = noop.useRef(null);
+  const tmp3 = accessibilityElementsHidden(noop.useState(false), 2);
+  accessibilityElementsHidden = tmp3[0];
+  noop = tmp3[1];
   let obj = columnWidth(ref[9]);
-  sharedValue = obj.useSharedValue(0);
-  const items = [first, sharedValue];
-  const effect = importAllResult.useEffect(() => {
+  const sharedValue = obj.useSharedValue(0);
+  const items = [accessibilityElementsHidden, sharedValue];
+  const effect = noop.useEffect(() => {
     let num = 0;
     if (first) {
       num = 1;
     }
-    const result = sharedValue.set(columnWidth(ref[10]).withTiming(num, columnWidth(ref[11]).timingFast));
+    const result = sharedValue.set(timing.withTiming(num, timingPresets.timingFast));
     if (first) {
       const current = ref.current;
       if (current != null) {
@@ -35,7 +32,7 @@ function FavoritesSearch(columnWidth) {
       }
     }
   }, items);
-  obj1 = columnWidth(ref[9]);
+  let obj1 = columnWidth(ref[9]);
   class S {
     constructor() {
       obj = { opacity: 1 - closure_5.get() };
@@ -44,7 +41,7 @@ function FavoritesSearch(columnWidth) {
   }
   S.__closure = { progress: sharedValue };
   S.__workletHash = 11452628946352;
-  S.__initData = closure_11;
+  S.__initData = __initData;
   const animatedStyle = obj1.useAnimatedStyle(S);
   let obj2 = columnWidth(ref[9]);
   const fn = function v() {
@@ -52,17 +49,17 @@ function FavoritesSearch(columnWidth) {
   };
   fn.__closure = { progress: sharedValue, columnWidth };
   fn.__workletHash = 12592656871997;
-  fn.__initData = closure_12;
+  fn.__initData = __initData2;
   const animatedStyle1 = obj2.useAnimatedStyle(fn);
-  const callback = importAllResult.useCallback(() => callback(true), []);
-  const callback1 = importAllResult.useCallback(() => {
+  const callback = noop.useCallback(() => closure_4(true), []);
+  const callback1 = noop.useCallback(() => {
     const current = ref.current;
     let text;
     if (current != null) {
       text = current.getText();
     }
     if ("" === text) {
-      callback(false);
+      closure_4(false);
     }
   }, []);
   obj = {
@@ -73,43 +70,44 @@ function FavoritesSearch(columnWidth) {
     children: null,
   };
   let str = "auto";
-  if (first) {
+  if (accessibilityElementsHidden) {
     str = "none";
   }
-  obj[1] = str;
-  obj[2] = first;
+  obj.pointerEvents = str;
+  obj.accessibilityElementsHidden = accessibilityElementsHidden;
   let str2 = "auto";
-  if (first) {
+  if (accessibilityElementsHidden) {
     str2 = "no-hide-descendants";
   }
-  obj[3] = str2;
+  obj.importantForAccessibility = str2;
   obj = { variant: "icon-only", size: "md", icon: tmp16(tmp6[13]), accessibilityLabel: null, onPress: null };
   const intl = tmp5(tmp6[14]).intl;
-  obj[3] = intl.string(columnWidth(ref[14]).t["+Kakw+"]);
-  obj[4] = callback;
-  obj[4] = closure_7(columnWidth(ref[12]).IconButton, obj);
+  obj.accessibilityLabel = intl.string(columnWidth(ref[14]).t["+Kakw+"]);
+  obj.onPress = callback;
+  obj.children = closure_7(columnWidth(ref[12]).IconButton, obj);
   const items1 = [closure_7(onQueryChange(ref[9]).View, obj)];
   obj1 = {
-    style: items2,
+    style: null,
     pointerEvents: null,
     accessibilityElementsHidden: null,
     importantForAccessibility: null,
     children: null,
   };
-  items2 = [callback().favoritesSearch, animatedStyle1];
+  const items2 = [closure_10().favoritesSearch, animatedStyle1];
+  obj1.style = items2;
   let str3 = "none";
-  if (first) {
+  if (accessibilityElementsHidden) {
     str3 = "auto";
   }
-  obj1[1] = str3;
-  obj1[2] = !first;
+  obj1.pointerEvents = str3;
+  obj1.accessibilityElementsHidden = !accessibilityElementsHidden;
   let str4 = "no-hide-descendants";
-  if (first) {
+  if (accessibilityElementsHidden) {
     str4 = "auto";
   }
   obj2 = { children: null };
-  obj1[3] = str4;
-  obj1[4] = closure_7(columnWidth(ref[15]).SearchField, {
+  obj1.importantForAccessibility = str4;
+  obj1.children = closure_7(columnWidth(ref[15]).SearchField, {
     ref,
     size: "md",
     onChange: onQueryChange,
@@ -123,73 +121,83 @@ function FavoritesSearch(columnWidth) {
     onBlur: callback1,
   });
   items1[1] = closure_7(onQueryChange(ref[9]).View, obj1);
-  obj2[0] = items1;
+  obj2.children = items1;
   return closure_9(closure_8, obj2);
 }
-let c4 = importAllResult;
-require("ME").GIFPickerResultTypes;
-({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
+const View = fn(17).View;
+fn(1074).GIFPickerResultTypes;
+const jsxProd = fn(21);
+({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
+fn(4560);
 let obj = { container: null, headerContainer: null, header: null, favoritesSearch: null };
-obj = { paddingVertical: ThemesDefault.space.PX_8 };
-obj[0] = obj;
-createCacheKey = {
+obj = { paddingVertical: nativeDefault.space.PX_8 };
+obj.container = obj;
+const createStyles = {
   flexDirection: "row",
   justifyContent: "space-between",
-  gap: require("transformFavoriteGifUrl").GIF_PICKER_GUTTER_SPACING,
+  gap: fn(10369).GIF_PICKER_GUTTER_SPACING,
 };
-obj[1] = createCacheKey;
-obj[2] = {
+obj.headerContainer = createStyles;
+obj.header = {
   borderWidth: 1,
   borderColor: "transparent",
-  paddingHorizontal: ThemesDefault.space.PX_8,
-  height: require("InputHeights").InputHeights.MD,
+  paddingHorizontal: nativeDefault.space.PX_8,
+  height: fn(6622).InputHeights.MD,
   flexDirection: "row",
   alignItems: "center",
-  gap: ThemesDefault.space.PX_8,
+  gap: nativeDefault.space.PX_8,
 };
-obj[3] = { position: "absolute", top: 0, end: 0, overflow: "hidden" };
-let closure_10 = createCacheKey.createStyles(obj);
-let closure_11 = {
+obj.favoritesSearch = { position: "absolute", top: 0, end: 0, overflow: "hidden" };
+let closure_10 = createStyles.createStyles(obj);
+const __initData = {
   code: "function GIFPickerHeaderTsx1(){const{progress}=this.__closure;return{opacity:1-progress.get()};}",
 };
-let closure_12 = {
+const __initData2 = {
   code: "function GIFPickerHeaderTsx2(){const{progress,columnWidth}=this.__closure;return{width:progress.get()*columnWidth,opacity:progress.get()};}",
 };
 let obj2 = {
   borderWidth: 1,
   borderColor: "transparent",
-  paddingHorizontal: ThemesDefault.space.PX_8,
-  height: require("InputHeights").InputHeights.MD,
+  paddingHorizontal: nativeDefault.space.PX_8,
+  height: fn(6622).InputHeights.MD,
   flexDirection: "row",
   alignItems: "center",
-  gap: ThemesDefault.space.PX_8,
+  gap: nativeDefault.space.PX_8,
 };
-const memoResult = importAllResult.memo(function GIFPickerHeader(arg0) {
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/gif_picker/native/GIFPickerHeader.tsx");
+
+export default noop.memo(function GIFPickerHeader(arg0) {
   ({ categoryType, onQueryClear } = arg0);
   ({ columnWidth, onQueryChange, onFavoritesQueryChange, searchInputRef } = arg0);
-  const tmp = callback();
-  GIF_PROVIDER;
+  const tmp = closure_10();
+  GifProvider;
   let obj = { style: tmp.container, children: null };
   if (categoryType === GIFPickerResultTypes.SEARCH) {
-    obj = { size: "md", onChange: null, placeholder: null, onClear: null, ref: null, isRound: true };
-    obj[1] = onQueryChange;
-    obj[2] = tmp5;
-    obj[3] = onQueryClear;
-    obj[4] = searchInputRef;
+    obj = {
+      size: "md",
+      onChange: onQueryChange,
+      placeholder: tmp5,
+      onClear: onQueryClear,
+      ref: searchInputRef,
+      isRound: true,
+    };
     let tmp13Result = tmp6(tmp2(7050).SearchField, obj);
   } else {
-    obj = { style: null, children: null };
-    obj[0] = tmp.headerContainer;
-    obj1 = { style: null, accessibilityRole: "button", onPress: null, accessibilityLabel: null, children: null };
-    obj1[0] = tmp.header;
-    obj1[2] = onQueryClear;
+    obj = { style: tmp.headerContainer, children: null };
+    const obj1 = {
+      style: tmp.header,
+      accessibilityRole: "button",
+      onPress: onQueryClear,
+      accessibilityLabel: null,
+      children: null,
+    };
     const intl4 = tmp2(1114).intl;
     const obj2 = { destination: null };
     const intl5 = tmp2(1114).intl;
-    obj2[0] = intl5.string(tmp2(1114).t.ffgJrs);
-    obj1[3] = intl4.formatToPlainString(tmp2(1114).t.UTypEu, obj2);
-    const obj3 = { color: null, size: "sm" };
-    obj3[0] = ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE;
+    obj2.destination = intl5.string(tmp2(1114).t.ffgJrs);
+    obj1.accessibilityLabel = intl4.formatToPlainString(tmp2(1114).t.UTypEu, obj2);
+    const obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, size: "sm" };
     const items = [tmp6(tmp2(10375).ChevronLargeLeftIcon, obj3)];
     if (categoryType === tmp8.TRENDING_GIFS) {
       const intl3 = tmp2(1114).intl;
@@ -201,25 +209,24 @@ const memoResult = importAllResult.memo(function GIFPickerHeader(arg0) {
       const intl = tmp2(1114).intl;
       stringResult = intl.string(tmp2(1114).t["5h0QOP"]);
     }
-    const obj4 = { variant: "text-sm/semibold", color: "text-default", maxFontSizeMultiplier: 2, children: null };
-    obj4[3] = stringResult;
+    const obj4 = {
+      variant: "text-sm/semibold",
+      color: "text-default",
+      maxFontSizeMultiplier: 2,
+      children: stringResult,
+    };
     items[1] = tmp6(tmp2(4556).Text, obj4);
-    obj1[4] = items;
-    const items1 = [closure_9(tmp2(5123).PressableOpacity, obj1)];
+    obj1.children = items;
+    const items1 = [React7(tmp2(5123).PressableOpacity, obj1)];
     let tmp6Result = categoryType === tmp8.FAVORITES;
     if (tmp6Result) {
-      const obj5 = { columnWidth: null, onQueryChange: null };
-      obj5[0] = columnWidth;
-      obj5[1] = onFavoritesQueryChange;
+      const obj5 = { columnWidth, onQueryChange: onFavoritesQueryChange };
       tmp6Result = tmp6(FavoritesSearch, obj5);
     }
     items1[1] = tmp6Result;
-    obj[1] = items1;
+    obj.children = items1;
     tmp13Result = tmp13(tmp7, obj);
   }
-  obj[1] = tmp13Result;
-  return closure_7(View, obj);
+  obj.children = tmp13Result;
+  return React5(View, obj);
 });
-let result = require("set").fileFinishedImporting("modules/gif_picker/native/GIFPickerHeader.tsx");
-
-export default memoResult;

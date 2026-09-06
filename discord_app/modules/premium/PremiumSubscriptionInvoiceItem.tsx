@@ -1,7 +1,8 @@
 // discord_app/modules/premium/PremiumSubscriptionInvoiceItem.tsx
-import set2 from "../../../_runtime/00002_set.js";
+import _modDef12 from "../../../_runtime/metro/00012__.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set2.fileFinishedImporting("modules/premium/PremiumSubscriptionInvoiceItem.tsx");
+const result = size.fileFinishedImporting("modules/premium/PremiumSubscriptionInvoiceItem.tsx");
 
 export const coalesceInvoiceItems = function coalesceInvoiceItems(arr) {
   const items = [];
@@ -9,26 +10,14 @@ export const coalesceInvoiceItems = function coalesceInvoiceItems(arr) {
   const mapped = arr.map((subscriptionPlanId) => {
     for (const item10009 of items) {
       let tmp = item10009;
-      let tmp2 = arg0;
       let tmp3 = item10009;
       if (item10009.subscriptionPlanId === arg0.subscriptionPlanId) {
-        let tmp4 = item10009;
-        let tmp5 = arg0;
         if (tmp3.subscriptionPlanPrice === arg0.subscriptionPlanPrice) {
-          let tmp6 = item10009;
-          let tmp7 = arg0;
           if (tmp3.amount === arg0.amount) {
-            let tmp8 = items;
-            let tmp9 = set;
-            let obj2 = items(set[0]);
-            let tmp10 = item10009;
-            let tmp11 = arg0;
+            let obj2 = _modDef12;
             if (obj2.isEqual(tmp3.discounts, arg0.discounts)) {
-              let tmp12 = set;
-              let tmp13 = item10009;
               let addResult = set.add(tmp.subscriptionPlanId);
               tmp.quantity = tmp.quantity + arg0.quantity;
-              let tmp15 = obj;
               obj.return();
             }
           }

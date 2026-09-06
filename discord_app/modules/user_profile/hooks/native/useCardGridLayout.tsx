@@ -1,10 +1,10 @@
 // discord_app/modules/user_profile/hooks/native/useCardGridLayout.tsx
-import set from "../../../../../_runtime/00002_set.js";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
-import ARBITRARY_LARGE_OFFSET from "../../native/Constants.tsx";
+import Constants from "../../native/Constants.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const PROFILE_SIDE_PADDING = ARBITRARY_LARGE_OFFSET.PROFILE_SIDE_PADDING;
-let result = set.fileFinishedImporting("modules/user_profile/hooks/native/useCardGridLayout.tsx");
+const PROFILE_SIDE_PADDING = Constants.PROFILE_SIDE_PADDING;
+let result = size.fileFinishedImporting("modules/user_profile/hooks/native/useCardGridLayout.tsx");
 
 export default function useCardGridLayout() {
   let obj = arg0;
@@ -60,14 +60,9 @@ export default function useCardGridLayout() {
   const bound1 = Math.min(Math.max(tmp4, num), num2);
   const diff2 = num4 - 1;
   if (diff < bound1 * num4 + num3 * diff2) {
-    obj = { columns: 1, cardWidth: "Array", rowWidth: "padding", gap: "unicodeVersion" };
-    obj[3] = num3;
+    obj = { columns: 1, cardWidth: "Array", rowWidth: "padding", gap: num3 };
   } else {
-    obj = { columns: null, cardWidth: null, rowWidth: null, gap: null };
-    obj[0] = num4;
-    obj[1] = bound1;
-    obj[2] = bound1 * num4 + num3 * diff2;
-    obj[3] = num3;
+    obj = { columns: num4, cardWidth: bound1, rowWidth: bound1 * num4 + num3 * diff2, gap: num3 };
   }
   return obj;
 }

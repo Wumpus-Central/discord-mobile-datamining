@@ -1,30 +1,28 @@
 // discord_app/modules/user_settings/defs/native/SaveCameraUploadsToDeviceSetting.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import saveGuildFoldersDefault from "../../../../actions/UserSettingsActionCreators.tsx";
-import closure_3 from "../../UnsyncedUserSettingsStore.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import util from "../../../../intl/index.native.tsx";
+import UserSettingsActionCreatorsDefault from "../../../../actions/UserSettingsActionCreators.tsx";
+import UnsyncedUserSettingsStore from "../../UnsyncedUserSettingsStore.tsx";
 
-require = arg1;
-createToggle = {
+require = fn;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["99tBAC"]);
+    const intl = util.intl;
+    return intl.string(util.t["99tBAC"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.CHAT,
+  parent: fn(7975).MobileUserSettings.CHAT,
   useValue: function useSaveCameraUploadsToDeviceValue() {
-    const items = [closure_3];
-    return initialize.useStateFromStores(items, () => obj.saveCameraUploadsToDevice);
+    const items = [UnsyncedUserSettingsStore];
+    return initialize.useStateFromStores(items, () => UnsyncedUserSettingsStore.saveCameraUploadsToDevice);
   },
   onValueChange: function onSaveCameraUploadsToDeviceValueChange(saveCameraUploadsToDevice) {
-    let obj = saveGuildFoldersDefault;
-    obj = { saveCameraUploadsToDevice };
+    const obj = { saveCameraUploadsToDevice };
     const result = obj.updatedUnsyncedSettings(obj);
   },
 };
-createToggle = createToggle.createToggle(createToggle);
-let result = require("set").fileFinishedImporting(
-  "modules/user_settings/defs/native/SaveCameraUploadsToDeviceSetting.tsx",
-);
+SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/SaveCameraUploadsToDeviceSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

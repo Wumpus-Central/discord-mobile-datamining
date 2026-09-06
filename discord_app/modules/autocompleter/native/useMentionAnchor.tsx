@@ -1,17 +1,16 @@
 // discord_app/modules/autocompleter/native/useMentionAnchor.tsx
-import AutocompleteFormDivider from "AutocompleteUtils.tsx";
-import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import { AutocompleteFormDivider } from "AutocompleteUtils.tsx";
+import autocompleter_AutocompleteUtils from "AutocompleteUtils.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-function isMentionAnchorValid(arr, arg1, anchor, arg3, arg4) {
+require = fn;
+function isMentionAnchorValid(seenText, arg1, anchor, arg3, arg4) {
   let startsWithResult = null != anchor;
   if (startsWithResult) {
     startsWithResult = anchor >= 0;
   }
   if (startsWithResult) {
-    startsWithResult = arr.startsWith(arg3, anchor);
+    startsWithResult = seenText.startsWith(arg3, anchor);
   }
   if (startsWithResult) {
     startsWithResult = arg1 >= anchor + arg3.length;
@@ -33,28 +32,27 @@ function isMentionAnchorValid(arr, arg1, anchor, arg3, arg4) {
       }
       isSingleLineRunResult = diff <= num2;
       if (isSingleLineRunResult) {
-        isSingleLineRunResult = AutocompleteFormDivider.isSingleLineRun(arr, sum, arg1);
-        const obj2 = AutocompleteFormDivider;
+        isSingleLineRunResult = autocompleter_AutocompleteUtils.isSingleLineRun(seenText, sum, arg1);
       }
       if (isSingleLineRunResult) {
-        isSingleLineRunResult = !regex.test(arr.slice(sum, arg1));
+        isSingleLineRunResult = !re4.test(seenText.slice(sum, arg1));
       }
       let isUnbrokenRunResult = isSingleLineRunResult;
     } else {
-      isUnbrokenRunResult = AutocompleteFormDivider.isUnbrokenRun(arr, sum, arg1);
-      const obj = AutocompleteFormDivider;
+      isUnbrokenRunResult = autocompleter_AutocompleteUtils.isUnbrokenRun(seenText, sum, arg1);
     }
   }
 }
 const re4 = /\s\s/;
 let closure_6 = { kind: "idle" };
-const result = require("set").fileFinishedImporting("modules/autocompleter/native/useMentionAnchor.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/autocompleter/native/useMentionAnchor.tsx");
 
-export default function useMentionAnchor(arr) {
-  const _require = arg2;
-  let obj = React;
+export default function useMentionAnchor(seenText, arg1, arg2, arg3, arg4) {
+  closure_0 = arg2;
+  let obj = noop;
   let tmp = closure_6;
-  [anchor, tmp3] = callback(React.useState(closure_6), 2);
+  [anchor, tmp3] = _slicedToArray(noop.useState(closure_6), 2);
   dependencyMap = tmp3;
   anchor = null;
   if ("idle" !== anchor.kind) {
@@ -62,7 +60,7 @@ export default function useMentionAnchor(arr) {
   }
   let tmp5 = arg2;
   if (arg2) {
-    tmp5 = isMentionAnchorValid(arr, arg1, anchor, arg3, arg4);
+    tmp5 = isMentionAnchorValid(seenText, arg1, anchor, arg3, arg4);
   }
   let tmp12 = null;
   if (tmp5) {
@@ -72,22 +70,21 @@ export default function useMentionAnchor(arr) {
   if (arg2) {
     const kind = anchor.kind;
     if ("idle" === kind) {
-      const lastIndexOfResult = arr.lastIndexOf(arg3, arg1);
+      const lastIndexOfResult = seenText.lastIndexOf(arg3, arg1);
       let tmp19 = null;
       if (-1 !== lastIndexOfResult) {
         let tmp22 = null;
-        if (obj5.isWhitespaceSeparatingBoundary(arr, lastIndexOfResult)) {
+        if (obj5.isWhitespaceSeparatingBoundary(seenText, lastIndexOfResult)) {
           tmp22 = null;
-          if (isMentionAnchorValid(arr, arg1, lastIndexOfResult, arg3, arg4)) {
+          if (isMentionAnchorValid(seenText, arg1, lastIndexOfResult, arg3, arg4)) {
             tmp22 = lastIndexOfResult;
           }
         }
         tmp19 = tmp22;
-        obj5 = AutocompleteFormDivider;
+        obj5 = autocompleter_AutocompleteUtils;
       }
       if (null != tmp19) {
-        obj = { kind: "pending", anchor: null, seenText: null };
-        obj[1] = tmp19;
+        obj = { kind: "pending", anchor: tmp19, seenText: null };
         tmp = obj;
       }
       tmp13 = tmp;
@@ -100,26 +97,16 @@ export default function useMentionAnchor(arr) {
     } else if ("pending" === kind) {
       ({ anchor: anchor2, seenText } = anchor);
       if (tmp5) {
-        obj = { kind: "active", anchor: null };
-        obj[1] = anchor2;
+        obj = { kind: "active", anchor: anchor2 };
         let tmp14 = obj;
-      } else if (arr.startsWith(arg3, anchor2)) {
-        obj1 = { kind: "pending", anchor: null, seenText: null };
-        obj1[1] = anchor2;
+      } else if (seenText.startsWith(arg3, anchor2)) {
+        const obj1 = { kind: "pending", anchor: anchor2, seenText: null };
         tmp14 = obj1;
       } else {
         tmp14 = tmp;
-        if (anchor2 <= arr.length) {
+        if (anchor2 <= seenText.length) {
           if (null == seenText) {
-            const obj2 = { kind: "pending", anchor: null, seenText: null };
-            obj2[1] = anchor2;
-            obj2[2] = arr;
-            let tmp15 = obj2;
-          } else {
-            tmp15 = anchor;
-            if (seenText !== arr) {
-              tmp15 = tmp;
-            }
+            const obj2 = { kind: "pending", anchor: anchor2, seenText };
           }
         }
       }
@@ -136,24 +123,20 @@ export default function useMentionAnchor(arr) {
         anchor = tmp13.anchor;
         tmp32 = anchor.anchor === anchor;
       }
-      let tmp31 = tmp32;
     } else {
-      tmp31 = "pending" === tmp13.kind && anchor.anchor === tmp13.anchor && anchor.seenText === tmp13.seenText;
+      const tmp31 = "pending" === tmp13.kind && anchor.anchor === tmp13.anchor && anchor.seenText === tmp13.seenText;
     }
   }
   if (!tmp29) {
     tmp3(tmp13);
   }
-  const tmp2 = callback(React.useState(closure_6), 2);
+  const obj3 = { anchor: tmp12, beginSearch: null };
   const items = [arg2];
-  return {
-    anchor: tmp12,
-    beginSearch: obj.useCallback((arg0) => {
-      if (closure_0) {
-        const obj = { kind: "pending", anchor: null, seenText: null };
-        obj[1] = arg0;
-        tmp3 = tmp3(obj);
-      }
-    }, items),
-  };
+  obj3.beginSearch = obj.useCallback((anchor) => {
+    if (closure_0) {
+      const obj = { kind: "pending", anchor, seenText: null };
+      tmp3 = tmp3(obj);
+    }
+  }, items);
+  return obj3;
 }

@@ -1,14 +1,16 @@
 // discord_app/modules/calls/MobileMuteIndicatorExperiment.tsx
-import getUnitIdDefault from "../experiments/apex/ApexExperiment.tsx";
+import apex_ApexExperimentDefault from "../experiments/apex/ApexExperiment.tsx";
 
-const obj = { 1: null };
-obj[1] = { enableMuteWarning: true };
-const tmp2 = getUnitIdDefault({
+let obj = {
   kind: "user",
   name: "2026-02-mobile-mute-indicator",
   defaultConfig: { enableMuteWarning: false },
-  variations: obj,
-});
-const result = require("set").fileFinishedImporting("modules/calls/MobileMuteIndicatorExperiment.tsx");
+  variations: null,
+};
+obj = { 1: null };
+obj[1] = { enableMuteWarning: true };
+obj.variations = obj;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/calls/MobileMuteIndicatorExperiment.tsx");
 
-export default tmp2;
+export default apex_ApexExperimentDefault(obj);

@@ -1,205 +1,194 @@
 // discord_app/modules/saved_messages/SavedMessageUtils.tsx
-import getSystemLocale from "../../intl/index.native.tsx";
-import hooksDefault from "../../../_runtime/04153_hooks.js";
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../_runtime/00019_noop.js";
-import { UnknownChannelRecord } from "../../records/ChannelRecord.tsx";
-import closure_6 from "../../stores/ChannelStore.tsx";
-import ME from "../../Constants.tsx";
+import util from "../../intl/index.native.tsx";
+import _modDef4153 from "../../../_runtime/metro/04153__.js";
+import ChannelActionCreatorsDefault from "../../actions/ChannelActionCreators.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../_runtime/metro/00019__.js";
+import ChannelStore from "../../stores/ChannelStore.tsx";
 
-require = arg1;
-function _savedMessageJumpToMessage() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c6 = 0;
-    c7 = 0;
-    c5 = 0;
-    return (function* (arg0, arg1) {
-      if (constants === 2) {
-        constants = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp7 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+require = fn;
+let closure_10 = async function _savedMessageJumpToMessage(arg0, arg1) {
+  closure_0 = arg0;
+  let type = arg1;
+  c6 = 0;
+  c7 = 0;
+  c5 = 0;
+  return (async (arg0, value) => {
+    if (c7 === 2) {
+      c7 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp7 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          constants = 2;
-          if (0 === c6) {
-            if (arg0 === 1) {
-              constants = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              constants = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_3 = tmp3;
-              closure_2 = tmp5;
-              closure_2 = undefined;
-              let type;
-              if (lib != null) {
-                type = lib.type;
-              }
-              if (type === constants.UNKNOWN) {
-                if (null == tmp43.saveData.guildId) {
-                  c5 = 1;
-                  c6 = 2;
-                  constants = 1;
-                  obj1 = { value: null, done: false };
-                  obj1[0] = lib(closure_1_2[8]).fetchChannel(tmp43.saveData.channelId);
-                  return obj1;
-                }
-              }
-            }
-          } else if (1 === tmp8) {
-            c5 = 0;
-          } else if (2 === tmp8) {
-            if (arg0 === 1) {
-              constants = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 0;
-              constants = 3;
-              const obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else {
-              closure_2 = arg1;
-              if (null == closure_2.recipients) {
-                c5 = 0;
-                constants = 3;
-                return { value: "HermesInternal", done: null };
-              } else if (closure_2.recipients.length > 1) {
-                c5 = 0;
-                constants = 3;
-                return { value: "HermesInternal", done: null };
-              } else {
-                obj1 = lib(closure_2[8]);
-                const recipients = closure_2.recipients;
-                c6 = 3;
-                constants = 1;
-                const obj3 = { value: null, done: false };
-                obj3[0] = obj1.ensurePrivateChannel(recipients.map((id) => id.id));
-                return obj3;
-              }
-            }
-          } else if (arg0 === 1) {
-            constants = 3;
-            throw arg1;
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c7 = 2;
+        if (0 === c6) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
           } else if (arg0 === 2) {
-            c5 = 0;
-            constants = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            c7 = 3;
+            obj = { value, done: true };
             return obj;
           } else {
+            closure_3 = tmp3;
+            closure_2 = tmp5;
+            closure_130_0 = closure_0;
+            closure_130_1 = type;
+            closure_130_2 = undefined;
+            type = undefined;
+            if (type != null) {
+              type = type.type;
+            }
+            if (type === constants.UNKNOWN) {
+              if (null == tmp42.saveData.guildId) {
+                c5 = 1;
+                c6 = 2;
+                c7 = 1;
+                let obj1 = { value: ChannelActionCreatorsDefault.fetchChannel(tmp42.saveData.channelId), done: false };
+                return obj1;
+              }
+            }
+          }
+        } else if (1 === tmp8) {
+          c5 = 0;
+        } else if (2 === tmp8) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
             c5 = 0;
-          }
-          let guildId;
-          if (lib != null) {
-            guildId = lib.getGuildId();
-          }
-          lib(closure_2[9])(closure_8.CHANNEL(guildId, closure_0.saveData.channelId, closure_0.saveData.messageId), {
-            openChannel: true,
-          });
-          constants = 3;
-          return { value: "HermesInternal", done: null };
-        } catch (tmp30) {
-          closure_4 = tmp30;
-          if (tmp4 === c5) {
-            constants = tmp2;
-            throw tmp30;
+            c7 = 3;
+            const obj2 = { value, done: true };
+            return obj2;
           } else {
-            c6 = tmp;
+            closure_130_2 = value;
+            if (null == closure_130_2.recipients) {
+              c5 = 0;
+              c7 = 3;
+              return { value: "HermesInternal", done: null };
+            } else if (closure_130_2.recipients.length > 1) {
+              c5 = 0;
+              c7 = 3;
+              return { value: "HermesInternal", done: null };
+            } else {
+              obj1 = closure_131_1(closure_131_2[8]);
+              const recipients = closure_130_2.recipients;
+              c6 = 3;
+              c7 = 1;
+              const obj3 = { value: obj1.ensurePrivateChannel(recipients.map((id) => id.id)), done: false };
+              return obj3;
+            }
           }
+        } else if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 0;
+          c7 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          c5 = 0;
+        }
+        let guildId;
+        if (closure_130_1 != null) {
+          guildId = closure_130_1.getGuildId();
+        }
+        closure_131_1(closure_131_2[9])(
+          closure_131_8.CHANNEL(guildId, closure_130_0.saveData.channelId, closure_130_0.saveData.messageId),
+          { openChannel: true },
+        );
+        c7 = 3;
+        return { value: "HermesInternal", done: null };
+      } catch (tmp30) {
+        closure_4 = tmp30;
+        if (tmp4 === c5) {
+          c7 = tmp2;
+          throw tmp30;
+        } else {
+          c6 = tmp;
         }
       }
-    })();
-  });
-  closure_10 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-({ ChannelTypes: error, Routes: closure_8 } = ME);
-let obj = { LONG: 0, [0]: "LONG", SHORT: 1, [1]: "SHORT" };
-const result = require("set").fileFinishedImporting("modules/saved_messages/SavedMessageUtils.tsx");
+    }
+  })();
+};
+const UnknownChannelRecord = fn(1961).UnknownChannelRecord;
+const Constants = fn(1074);
+({ ChannelTypes: closure_7, Routes: closure_8 } = Constants);
+const DueInStringTypes = { LONG: 0, [0]: "LONG", SHORT: 1, [1]: "SHORT" };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/saved_messages/SavedMessageUtils.tsx");
 
-export const DueInStringTypes = obj;
+export { DueInStringTypes };
 export const useDueInString = function useDueInString(arg0) {
   ({ dueAt, now, type } = arg0);
   if (null == dueAt) {
     return { string: "", isOverdue: false };
   } else {
     if (type === obj.LONG) {
-      let H4gnX9 = getSystemLocale.t.TjNWNF;
+      let H4gnX9 = util.t.TjNWNF;
       let tmp = require;
     } else {
       tmp = require;
-      H4gnX9 = getSystemLocale.t.H4gnX9;
+      H4gnX9 = util.t.H4gnX9;
     }
-    if (type === tmp8.LONG) {
-      Uq7Y_7 = tmp(1114).t.haia16;
+    if (type === tmp9.LONG) {
+      let haia16 = tmp(1114).t.haia16;
     } else {
-      Uq7Y_7 = tmp(1114).t["Uq7Y+7"];
+      haia16 = tmp(1114).t["Uq7Y+7"];
     }
     if (now > dueAt) {
-      H4gnX9 = Uq7Y_7;
+      H4gnX9 = haia16;
     }
     obj = { dueInText: null, isOverdue: null };
     const intl = tmp(1114).intl;
     obj = { duration: null };
     const time = dueAt.getTime();
-    const obj3 = hooksDefault;
-    tmp8 = obj;
-    obj[0] = hooksDefault.duration(time - now.getTime(), "millisecond").humanize();
-    obj[0] = intl.formatToPlainString(H4gnX9, obj);
-    obj[1] = now > dueAt;
+    tmp9 = obj;
+    obj.duration = _modDef4153.duration(time - now.getTime(), "millisecond").humanize();
+    obj.dueInText = intl.formatToPlainString(H4gnX9, obj);
+    obj.isOverdue = now > dueAt;
     return obj;
   }
 };
 export const useSavedMessageChannel = function useSavedMessageChannel(savedMessage) {
-  const _require = savedMessage;
-  const items = [closure_6];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
-    closure_1_6.getChannel(savedMessage.saveData.channelId),
+  _require = savedMessage;
+  const items = [ChannelStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () =>
+    ChannelStore.getChannel(savedMessage.saveData.channelId),
   );
   const items1 = [stateFromStores, savedMessage];
-  return React.useMemo(() => {
+  return noop.useMemo(() => {
     let tmp = stateFromStores;
     if (null == stateFromStores) {
       let tmp9;
       if (null != savedMessage.message) {
-        obj = { id: null, guild_id: null, type: null, name: null };
-        obj[0] = tmp10.saveData.channelId;
-        obj[1] = tmp10.saveData.guildId;
-        obj[2] = closure_1_7.UNKNOWN;
-        const intl = savedMessage(closure_1_2[5]).intl;
-        obj[3] = intl.string(savedMessage(closure_1_2[5]).t.J90oLW);
-        tmp9 = new closure_1_5(obj);
+        const obj = {
+          id: tmp10.saveData.channelId,
+          guild_id: tmp10.saveData.guildId,
+          type: constants.UNKNOWN,
+          name: null,
+        };
+        const intl = util.intl;
+        obj.name = intl.string(util.t.J90oLW);
+        tmp9 = new UnknownChannelRecord(obj);
       }
       tmp = tmp9;
     }
     return tmp;
   }, items1);
 };
-export const savedMessageJumpToMessage = function savedMessageJumpToMessage(closure_1_0, c1) {
+export const savedMessageJumpToMessage = function savedMessageJumpToMessage() {
   const self = this;
-  const apply = _savedMessageJumpToMessage.apply;
+  const apply = closure_10.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

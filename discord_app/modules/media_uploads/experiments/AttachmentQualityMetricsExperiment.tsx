@@ -1,6 +1,6 @@
 // discord_app/modules/media_uploads/experiments/AttachmentQualityMetricsExperiment.tsx
-import set from "../../../../_runtime/00002_set.js";
 import ApexExperiment from "../../experiments/apex/index.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const apexExperiment = ApexExperiment.createApexExperiment({
   name: "2026-04-attachment-quality-metrics",
@@ -11,6 +11,6 @@ const apexExperiment = ApexExperiment.createApexExperiment({
     1: { enableQualityMetrics: true, enableOriginDetection: true },
   },
 });
-const result = set.fileFinishedImporting("modules/media_uploads/experiments/AttachmentQualityMetricsExperiment.tsx");
+const result = size.fileFinishedImporting("modules/media_uploads/experiments/AttachmentQualityMetricsExperiment.tsx");
 
 export const AttachmentQualityMetricsExperiment = apexExperiment;

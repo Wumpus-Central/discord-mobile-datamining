@@ -1,13 +1,12 @@
 // discord_app/modules/application_account_linking/hooks/useAuthorizationApp.tsx
-import closure_2 from "../../../../_runtime/00019_noop.js";
-import closure_3 from "../../applications/ApplicationStore.tsx";
-import closure_4 from "../../../records/ApplicationRecord.tsx";
-import { ApplicationTypes } from "../../applications/ApplicationConstants.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import ApplicationStore from "../../applications/ApplicationStore.tsx";
+import ApplicationRecord from "../../../records/ApplicationRecord.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
-  "modules/application_account_linking/hooks/useAuthorizationApp.tsx",
-);
+const require = fn;
+const ApplicationTypes = fn(1350).ApplicationTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/application_account_linking/hooks/useAuthorizationApp.tsx");
 
 export const getAuthorizationApp = function getAuthorizationApp(type) {
   if (null == type) {
@@ -18,7 +17,9 @@ export const getAuthorizationApp = function getAuthorizationApp(type) {
     const linkedGames = type.linkedGames;
     let found;
     if (linkedGames != null) {
-      found = linkedGames.find((type) => type.type === callback(table[4]).GameLinkTypes.OFFICIAL);
+      found = linkedGames.find(
+        (type) => type.type === getOfficialApplicationId(getOrFetchApplication[4]).GameLinkTypes.OFFICIAL,
+      );
     }
     let application;
     if (found != null) {
@@ -29,7 +30,7 @@ export const getAuthorizationApp = function getAuthorizationApp(type) {
       if (found != null) {
         id = found.id;
       }
-      application = application.getApplication(id);
+      application = ApplicationStore.getApplication(id);
     }
     if (application == null) {
       application = null;
@@ -38,28 +39,28 @@ export const getAuthorizationApp = function getAuthorizationApp(type) {
   }
 };
 export const useAuthorizationApp = function useAuthorizationApp(getOfficialApplicationId) {
-  const _require = getOfficialApplicationId;
+  _require = getOfficialApplicationId;
   let officialApplicationId;
   if (null != getOfficialApplicationId) {
-    if (!(getOfficialApplicationId instanceof closure_4)) {
+    if (!(getOfficialApplicationId instanceof ApplicationRecord)) {
       officialApplicationId = getOfficialApplicationId.getOfficialApplicationId();
     }
   }
-  getOrFetchApplication = _require(getOrFetchApplication[5]).useGetOrFetchApplication(officialApplicationId);
+  getOrFetchApplication = require("useGetOrFetchApplications").useGetOrFetchApplication(officialApplicationId);
   const items = [getOfficialApplicationId, getOrFetchApplication];
-  return React.useMemo(() => {
+  return noop.useMemo(() => {
     let application = closure_0;
     if (null == closure_0) {
       return null;
-    } else if (application instanceof closure_1_4) {
-      let tmp4 = null;
+    } else if (application instanceof ApplicationRecord) {
       if (null != application) {
-        tmp4 = application;
-        if (application.type === closure_1_5.GAME) {
+        if (application.type === ApplicationTypes.GAME) {
           const linkedGames = application.linkedGames;
           let found;
           if (linkedGames != null) {
-            found = linkedGames.find((type) => type.type === callback(table[4]).GameLinkTypes.OFFICIAL);
+            found = linkedGames.find(
+              (type) => type.type === getOfficialApplicationId(getOrFetchApplication[4]).GameLinkTypes.OFFICIAL,
+            );
           }
           application = undefined;
           if (found != null) {
@@ -70,19 +71,12 @@ export const useAuthorizationApp = function useAuthorizationApp(getOfficialAppli
             if (found != null) {
               id = found.id;
             }
-            application = closure_1_3.getApplication(id);
+            application = ApplicationStore.getApplication(id);
           }
           if (application == null) {
             application = null;
           }
-          tmp4 = application;
         }
-      }
-      let tmp3 = tmp4;
-    } else {
-      tmp3 = getOrFetchApplication;
-      if (getOrFetchApplication == null) {
-        tmp3 = null;
       }
     }
   }, items);

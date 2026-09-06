@@ -1,7 +1,7 @@
 // discord_app/modules/welcome_cta/WelcomeCTAConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/welcome_cta/WelcomeCTAConstants.tsx");
+const result = size.fileFinishedImporting("modules/welcome_cta/WelcomeCTAConstants.tsx");
 const items = [
   { id: "749054660769218631", format_type: 3, description: "Wumpus waves hello", name: "Wave" },
   { id: "751606379340365864", format_type: 3, description: "Nelly peeks around a wall and waves hello", name: "Wave" },

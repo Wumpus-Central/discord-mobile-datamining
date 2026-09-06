@@ -1,21 +1,21 @@
 // discord_app/modules/guild_automod/AutomodActionUtils.tsx
-import set from "../../../_runtime/00002_set.js";
-import AutomodEventType from "Constants.tsx";
+import Constants from "Constants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-let AutomodActionType = AutomodEventType.AutomodActionType;
-const result = set.fileFinishedImporting("modules/guild_automod/AutomodActionUtils.tsx");
+const AutomodActionType = Constants.AutomodActionType;
+const result = size.fileFinishedImporting("modules/guild_automod/AutomodActionUtils.tsx");
 
 export const getRuleDefaultActionsFromConfig = function getRuleDefaultActionsFromConfig(defaultActionTypes) {
   let obj = { type: AutomodActionType.BLOCK_MESSAGE, metadata: { customMessage: "Array" } };
   obj = { type: AutomodActionType.FLAG_TO_CHANNEL, metadata: { channelId: "Array" } };
   obj = { type: AutomodActionType.USER_COMMUNICATION_DISABLED, metadata: { durationSeconds: 60 } };
-  AutomodActionType = {
-    [closure_0.BLOCK_MESSAGE]: obj,
-    [closure_0.FLAG_TO_CHANNEL]: obj,
-    [closure_0.USER_COMMUNICATION_DISABLED]: obj,
-    [closure_0.QUARANTINE_USER]: { type: AutomodActionType.QUARANTINE_USER, metadata: {} },
+  closure_0 = {
+    [closure_1_0.BLOCK_MESSAGE]: obj,
+    [closure_1_0.FLAG_TO_CHANNEL]: obj,
+    [closure_1_0.USER_COMMUNICATION_DISABLED]: obj,
+    [closure_1_0.QUARANTINE_USER]: { type: AutomodActionType.QUARANTINE_USER, metadata: {} },
   };
-  return Array.from(defaultActionTypes.defaultActionTypes).map((arg0) => table[arg0]);
+  return Array.from(defaultActionTypes.defaultActionTypes).map((item) => closure_0[item]);
 };
 export const isActionFlagToChannel = function isActionFlagToChannel(type) {
   return type.type === AutomodActionType.FLAG_TO_CHANNEL;
@@ -34,9 +34,9 @@ export const getDefaultActions = function getDefaultActions() {
   obj = { type: AutomodActionType.FLAG_TO_CHANNEL, metadata: { channelId: "Array" } };
   obj = { type: AutomodActionType.USER_COMMUNICATION_DISABLED, metadata: { durationSeconds: 60 } };
   return {
-    [closure_0.BLOCK_MESSAGE]: obj,
-    [closure_0.FLAG_TO_CHANNEL]: obj,
-    [closure_0.USER_COMMUNICATION_DISABLED]: obj,
-    [closure_0.QUARANTINE_USER]: { type: AutomodActionType.QUARANTINE_USER, metadata: {} },
+    [closure_1_0.BLOCK_MESSAGE]: obj,
+    [closure_1_0.FLAG_TO_CHANNEL]: obj,
+    [closure_1_0.USER_COMMUNICATION_DISABLED]: obj,
+    [closure_1_0.QUARANTINE_USER]: { type: AutomodActionType.QUARANTINE_USER, metadata: {} },
   };
 };

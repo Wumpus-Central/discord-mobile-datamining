@@ -1,20 +1,20 @@
 // discord_app/modules/private_channel_creation/maybeConvertPrivateChannel.tsx
-import _modDef4573 from "../../actions/ChannelActionCreators.tsx";
-import FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID from "../channel/FakePlaceholderPrivateChannel.tsx";
-import closure_3 from "../../stores/ChannelStore.tsx";
+import ChannelActionCreatorsDefault from "../../actions/ChannelActionCreators.tsx";
+import FakePlaceholderPrivateChannel from "../channel/FakePlaceholderPrivateChannel.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/private_channel_creation/maybeConvertPrivateChannel.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/private_channel_creation/maybeConvertPrivateChannel.tsx");
 
 export default function maybeConvertPrivateChannel(arg0) {
-  if (arg0 !== FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+  if (arg0 !== FakePlaceholderPrivateChannel.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
     return null;
   } else {
-    channel = channel.getChannel(arg0);
+    const channel = ChannelStore.getChannel(arg0);
     let ensurePrivateChannelResult = null;
     if (null != channel) {
-      ensurePrivateChannelResult = _modDef4573.ensurePrivateChannel(channel.recipients);
-      const obj = _modDef4573;
+      ensurePrivateChannelResult = ChannelActionCreatorsDefault.ensurePrivateChannel(channel.recipients);
     }
     return ensurePrivateChannelResult;
   }

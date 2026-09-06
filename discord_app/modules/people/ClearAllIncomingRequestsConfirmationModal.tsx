@@ -1,9 +1,9 @@
 // discord_app/modules/people/ClearAllIncomingRequestsConfirmationModal.tsx
-import set from "../../../_runtime/00002_set.js";
-import openClearAllIncomingRequestsConfirmationModal from "native/ClearAllIncomingRequestsConfirmationModal.tsx";
+import people_ClearAllIncomingRequestsConfirmationModal from "native/ClearAllIncomingRequestsConfirmationModal.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/people/ClearAllIncomingRequestsConfirmationModal.tsx");
+const result = size.fileFinishedImporting("modules/people/ClearAllIncomingRequestsConfirmationModal.tsx");
 
 export default function openClearAllIncomingRequestsConfirmationModal(arg0) {
-  openClearAllIncomingRequestsConfirmationModal.default(arg0);
+  people_ClearAllIncomingRequestsConfirmationModal.default(arg0);
 }

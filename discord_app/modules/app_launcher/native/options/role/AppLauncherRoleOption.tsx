@@ -1,29 +1,27 @@
 // discord_app/modules/app_launcher/native/options/role/AppLauncherRoleOption.tsx
-import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../../_runtime/00019_noop.js";
-import closure_5 from "../../../../../stores/GuildRoleStore.tsx";
-import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import asyncRequireImpl from "../../../../../../_runtime/01896_asyncRequireImpl.js";
+import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import AppLauncherRoleListActionSheet from "AppLauncherRoleListActionSheet.tsx";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
+import GuildRoleStore from "../../../../../stores/GuildRoleStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
-  "modules/app_launcher/native/options/role/AppLauncherRoleOption.tsx",
-);
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/options/role/AppLauncherRoleOption.tsx");
 
 export default function AppLauncherRoleOption(option) {
   option = option.option;
   ({ initialValue: importDefault, onRolePress } = option);
-  ({ onActionSheetDismiss: closure_3, channel } = option);
+  ({ onActionSheetDismiss: _slicedToArray, channel } = option);
   const onPress = option.onPress;
-  let guild_id;
-  let first;
-  closure_8 = undefined;
-  let stateFromStores;
-  guild_id = channel.guild_id;
+  const guild_id = channel.guild_id;
   ({ style, autoFocus, hasError } = option);
-  let tmp = callback(
+  let tmp = _slicedToArray(
     channel.useState(() => {
       let roleId = null;
-      if (null != closure_1) {
+      if (null != importDefault) {
         roleId = null;
         if ("roleMention" === tmp.type) {
           roleId = tmp.roleId;
@@ -33,15 +31,15 @@ export default function AppLauncherRoleOption(option) {
     }),
     2,
   );
-  first = tmp[0];
+  const first = tmp[0];
   closure_8 = tmp[1];
   let obj = option(onRolePress[4]);
   const items = [onPress];
-  stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = obj.useStateFromStores(items, () => {
     if (null != first) {
       let role;
       if (null != guild_id) {
-        role = onPress.getRole(tmp2, tmp);
+        role = GuildRoleStore.getRole(tmp2, tmp);
       }
       return role;
     }
@@ -70,29 +68,28 @@ export default function AppLauncherRoleOption(option) {
   if (null != stateFromStores) {
     name = stateFromStores.name;
   }
-  obj[4] = name;
-  obj[5] = function onPress() {
+  obj.selectedItemName = name;
+  obj.onPress = function onPress() {
     if (onPress != null) {
       tmp();
     }
-    let obj = closure_1_1(onRolePress[6]);
-    obj = {
+    const obj = {
       option,
       channel,
       onRolePress(role) {
         role = role.role;
-        callback2(role.id);
-        callback({ role });
+        closure_1_8(role.id);
+        onRolePress({ role });
       },
-      onActionSheetDismiss: closure_3,
+      onActionSheetDismiss,
     };
     obj.openLazy(
-      option(onRolePress[8])(onRolePress[7], onRolePress.paths),
-      option(onRolePress[9]).APP_LAUNCHER_ROLE_LIST_ACTION_SHEET_KEY,
+      asyncRequireImpl(12181, dependencyMap.paths),
+      AppLauncherRoleListActionSheet.APP_LAUNCHER_ROLE_LIST_ACTION_SHEET_KEY,
       obj,
     );
   };
-  obj[6] = guild_id(option(onRolePress[9]).RoleIcon, { role: stateFromStores });
-  obj[7] = autoFocus;
-  return guild_id(importDefault(onRolePress[5]), obj);
+  obj.leading = guild_id(option(onRolePress[9]).RoleIcon, { role: stateFromStores });
+  obj.autoFocus = autoFocus;
+  return guild_id(require("AppLauncherSelectOptionFormRow"), obj);
 }

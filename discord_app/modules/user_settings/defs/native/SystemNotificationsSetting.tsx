@@ -1,116 +1,100 @@
 // discord_app/modules/user_settings/defs/native/SystemNotificationsSetting.tsx
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import { NativeModules } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { AnalyticEvents } from "../../../../Constants.tsx";
-import { NotificationAuthorizationStatus as closure_6 } from "../../../native_permissions/NativePermissionConstants.tsx";
-import EventActionType from "../../../nuf/native/components/notification/NotificationPermissionConstants.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import util from "../../../../intl/index.native.tsx";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
-require = arg1;
-function _handleEnableSystemNotification() {
-  const self = this;
-  const tmp = callback(function* () {
-    if (c3 === 2) {
-      c3 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp5 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
+require = fn;
+let closure_9 = async function _handleEnableSystemNotification(arg0, value) {
+  if (c3 === 2) {
+    c3 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp5 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
     } else {
-      try {
-        c3 = 2;
-        if (0 === dependencyMap) {
-          if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            const callback = tmp2;
-            closure_0 = tmp3;
-            closure_0 = undefined;
-            const NativePermissionManager = closure_1_4.NativePermissionManager;
-            dependencyMap = 1;
-            c3 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = NativePermissionManager.getNotificationAuthorizationStatus();
-            return obj1;
-          }
-        } else if (arg0 === 1) {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c3 = 2;
+      if (0 === c2) {
+        if (arg0 === 1) {
           c3 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          let obj2 = { value: null, done: true };
-          obj2[0] = arg1;
-          return obj2;
+          obj = { value, done: true };
+          return obj;
         } else {
-          closure_0 = arg1;
-          if (closure_0 === constants2.UNDETERMINED) {
-            let obj3 = callback(12418);
-            const permission = obj3.requestPermission((permission_granted) => {
-              let obj = tmp2(table[7]);
-              obj = {
-                action_type: constants2.ALLOW_TO_REQUEST,
-                action_location: constants3.NOTIFICATION_SETTING,
-                permission_granted,
-              };
-              obj.track(constants.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, obj);
-              if (!permission_granted) {
-                const result = tmp2(tmp2[8]).openNotificationSettings();
-                const tmpResult = tmp2(tmp2[8]);
-              }
-            });
-          } else {
-            obj = callback(1242);
-            let num3 = 0;
-            if (closure_0 === constants2.AUTHORIZED) {
-              num3 = 1;
-            }
-            obj3 = { setting_type: "os", current_status: null };
-            obj3[1] = num3;
-            obj.track(constants.NOTIFICATION_SETTINGS_CLICKED, obj3);
-            obj2 = callback(9687);
-            let result = obj2.openNotificationSettings();
-          }
-          c3 = 3;
+          closure_1 = tmp2;
+          closure_0 = tmp3;
+          closure_128_0 = undefined;
+          const NativePermissionManager = NativeModules.NativePermissionManager;
+          c2 = 1;
+          c3 = 1;
+          const obj1 = { value: NativePermissionManager.getNotificationAuthorizationStatus(), done: false };
+          return obj1;
         }
-      } catch (tmp25) {
-        c3 = tmp;
-        throw tmp25;
+      } else if (arg0 === 1) {
+        c3 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c3 = 3;
+        let obj2 = { value, done: true };
+        return obj2;
+      } else {
+        closure_128_0 = value;
+        if (closure_128_0 === closure_129_6.UNDETERMINED) {
+          let obj3 = closure_129_1(closure_129_2[6]);
+          const permission = obj3.requestPermission((permission_granted) => {
+            closure_1_1(dependencyMap[7]);
+            const obj = {
+              action_type: constants2.ALLOW_TO_REQUEST,
+              action_location: constants3.NOTIFICATION_SETTING,
+              permission_granted,
+            };
+            obj.track(constants.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, obj);
+            if (!permission_granted) {
+              const result = closure_1_1(dependencyMap[8]).openNotificationSettings();
+              const tmpResult = closure_1_1(dependencyMap[8]);
+            }
+          });
+        } else {
+          obj = closure_129_1(closure_129_2[7]);
+          let num3 = 0;
+          if (closure_128_0 === closure_129_6.AUTHORIZED) {
+            num3 = 1;
+          }
+          obj3 = { setting_type: "os", current_status: num3 };
+          obj.track(closure_129_5.NOTIFICATION_SETTINGS_CLICKED, obj3);
+          obj2 = closure_129_1(closure_129_2[8]);
+          let result = obj2.openNotificationSettings();
+        }
+        c3 = 3;
       }
+    } catch (tmp25) {
+      c3 = tmp;
+      throw tmp25;
     }
-  });
-  closure_9 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
   }
-  return applyArgumentsResult;
-}
-({ EventActionType: error, EventActionLocation: closure_8 } = EventActionType);
-createToggle = {
+};
+const NativeModules = fn(17).NativeModules;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+let closure_6 = fn(4770).NotificationAuthorizationStatus;
+const NotificationPermissionConstants = fn(12410);
+({ EventActionType: closure_7, EventActionLocation: closure_8 } = NotificationPermissionConstants);
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.nl2Dqx);
+    const intl = util.intl;
+    return intl.string(util.t.nl2Dqx);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.NOTIFICATIONS,
+  parent: fn(7975).MobileUserSettings.NOTIFICATIONS,
   onPress: function handleEnableSystemNotification() {
     const self = this;
-    const apply = _handleEnableSystemNotification.apply;
+    const apply = closure_9.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -120,7 +104,8 @@ createToggle = {
   },
   withArrow: true,
 };
-createToggle = createToggle.createPressable(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/SystemNotificationsSetting.tsx");
+SettingBuilders = SettingBuilders.createPressable(SettingBuilders);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/SystemNotificationsSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

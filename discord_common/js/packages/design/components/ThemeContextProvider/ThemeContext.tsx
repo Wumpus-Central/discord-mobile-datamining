@@ -1,9 +1,8 @@
 // discord_common/js/packages/design/components/ThemeContextProvider/ThemeContext.tsx
-import importAllResult from "../../../../../../_runtime/00019_noop.js";
-import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-let c0 = importAllResult;
-({ Fragment: closure_1, jsx: obj1 } = jsxProd);
+const jsxProd = fn(21);
+({ Fragment: closure_1, jsx: c2 } = jsxProd);
 let obj = {
   theme: "light",
   primaryColor: null,
@@ -20,8 +19,9 @@ obj = {};
 let json = JSON.stringify(obj);
 let merged = Object.assign(obj);
 obj.key = json;
-let context = importAllResult.createContext(obj);
-const result = require("set").fileFinishedImporting(
+let context = noop.createContext(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "../discord_common/js/packages/design/components/ThemeContextProvider/ThemeContext.tsx",
 );
 
@@ -33,10 +33,10 @@ export const createThemedContext = function createThemedContext(arg0) {
   return obj;
 };
 export const useThemeContext = function useThemeContext() {
-  context = importAllResult.useContext(context);
+  context = noop.useContext(context);
   if (null == context) {
     const _Error = Error;
-    error = new Error("useThemeContext must be used within a ThemeContext.Provider");
+    const error = new Error("useThemeContext must be used within a ThemeContext.Provider");
     throw error;
   } else {
     return context;
@@ -45,14 +45,13 @@ export const useThemeContext = function useThemeContext() {
 export const FALLBACK_THEME_CONTEXT_VALUE = obj;
 export const ThemeContext = context;
 export const UseThemeContext = function UseThemeContext(children) {
-  context = importAllResult.useContext(context);
+  context = noop.useContext(context);
   if (null == context) {
     const _Error = Error;
-    error = new Error("useThemeContext must be used within a ThemeContext.Provider");
+    const error = new Error("useThemeContext must be used within a ThemeContext.Provider");
     throw error;
   } else {
-    const obj = { children: null };
-    obj[0] = children.children(context);
-    return callback(closure_1, obj);
+    const obj = { children: children.children(context) };
+    return React2(framebus, obj);
   }
 };

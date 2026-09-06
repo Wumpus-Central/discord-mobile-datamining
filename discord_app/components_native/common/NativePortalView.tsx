@@ -1,47 +1,48 @@
 // discord_app/components_native/common/NativePortalView.tsx
-import __INTERNAL_VIEW_CONFIGDefault from "../../../discord_common/js/packages/rtn-codegen/js/PortalViewNativeComponent.tsx";
-import importAllResult from "../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
-import set from "../../utils/PlatformUtils.tsx";
+import PortalViewNativeComponentDefault from "../../../discord_common/js/packages/rtn-codegen/js/PortalViewNativeComponent.tsx";
+import noop from "../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let c3 = importAllResult;
+const require = fn;
+get_ActivityIndicator = fn(17);
 ({ NativeModules, requireNativeComponent, NativeEventEmitter } = get_ActivityIndicator);
-let closure_5 = createCacheKey.createStyles({ base: { overflow: "hidden" } });
-if (set.isAndroid()) {
-  let importDefaultResult = __INTERNAL_VIEW_CONFIGDefault;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_5 = createStyles.createStyles({ base: { overflow: "hidden" } });
+const PlatformUtils = fn(1115);
+if (PlatformUtils.isAndroid()) {
+  let importDefaultResult = PortalViewNativeComponentDefault;
 } else {
   importDefaultResult = requireNativeComponent("DCDPortalView");
 }
+const metroRequire = importDefaultResult;
 const MediaPlayerManager = NativeModules.MediaPlayerManager;
 const DCDPortalViewManager = NativeModules.DCDPortalViewManager;
 const nativeEventEmitter = new NativeEventEmitter(MediaPlayerManager);
-set = new Set();
-const result = set.fileFinishedImporting("components_native/common/NativePortalView.tsx");
+const set = new Set();
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/common/NativePortalView.tsx");
 
-export default importAllResult.memo((paused) => {
+export default noop.memo((paused) => {
   paused = paused.paused;
   const muted = paused.muted;
   const onLoad = paused.onLoad;
   ({ style, children } = paused);
-  const merged = Object.assign(paused, Object.create(null));
+  const merged = Object.assign(paused, Object.assign({ style: 0, children: 0, paused: 0, muted: 0, onLoad: 0 }));
   if (null != children) {
     const _Error = Error;
-    error = new Error("The <NativePortalView> component cannot contain children.");
+    const error = new Error("The <NativePortalView> component cannot contain children.");
     throw error;
   } else {
     const items = [merged.portal, paused];
     const layoutEffect = merged.useLayoutEffect(() => {
       if (null != merged.portal) {
-        closure_1_7.toggle(tmp.portal, !paused);
+        MediaPlayerManager.toggle(tmp.portal, !paused);
       }
     }, items);
     const items1 = [merged.portal, muted];
     const layoutEffect1 = merged.useLayoutEffect(() => {
       if (null != merged.portal) {
-        closure_1_7.setMuted(tmp.portal, muted);
+        MediaPlayerManager.setMuted(tmp.portal, muted);
       }
     }, items1);
     const items2 = [onLoad, merged.portal];
@@ -51,16 +52,16 @@ export default importAllResult.memo((paused) => {
           onLoad();
         }
       }
-      closure_1_7.setLoopPlayback(merged.portal, true);
+      MediaPlayerManager.setLoopPlayback(merged.portal, true);
       return () => {
-        closure_1_7.setLoopPlayback(portal.portal, false);
+        loopPlayback.setLoopPlayback(portal.portal, false);
         if (obj.isAndroid()) {
-          closure_1_1(closure_1_2[6]).unregisterView(tmp.portal);
-          const obj2 = closure_1_1(closure_1_2[6]);
+          muted(onLoad[6]).unregisterView(tmp.portal);
+          const obj2 = muted(onLoad[6]);
         } else {
-          closure_1_8.unregisterView(tmp.portal);
+          DCDPortalViewManager.unregisterView(tmp.portal);
         }
-        closure_1_10.add(portal.portal);
+        set.add(portal.portal);
       };
     }, items2);
     const items3 = [onLoad, merged.portal];
@@ -71,8 +72,8 @@ export default importAllResult.memo((paused) => {
         }
       }
     }, items3);
-    let obj = paused(onLoad[4]);
-    obj = {};
+    paused(onLoad[4]);
+    const obj = {};
     const merged1 = Object.assign(merged);
     const items4 = [tmp2.base, style];
     obj.style = items4;
@@ -89,17 +90,17 @@ export function createPortalControls(portal) {
   closure_0 = portal;
   return {
     seek(arg0) {
-      closure_1_7.changeProgress(closure_0, arg0);
+      MediaPlayerManager.changeProgress(closure_0, arg0);
     },
     pause(arg0) {
-      closure_1_7.toggle(closure_0, !arg0);
+      MediaPlayerManager.toggle(closure_0, !arg0);
     },
     useSubscribe(arg0, arg1, arg2) {
       closure_1 = arg0;
       closure_2 = arg1;
       closure_3 = arg2;
       const items = [closure_0, arg1, arg0, arg2];
-      const effect = closure_1_3.useEffect(() => {
+      const effect = noop.useEffect(() => {
         closure_0 = closure_1_9.addListener("MediaPlayerProgress", (duration) => {
           duration = duration.duration;
           let tmp = duration.id === closure_0;
@@ -107,7 +108,7 @@ export function createPortalControls(portal) {
             tmp = duration > 0;
           }
           if (tmp) {
-            lib(duration.time, duration);
+            closure_1(duration.time, duration);
           }
         });
         closure_1 = closure_1_9.addListener("MediaPlayerDownloadProgress", (id) => {
@@ -116,21 +117,21 @@ export function createPortalControls(portal) {
             tmp2 = tmp > 0;
           }
           if (tmp2) {
-            tmp2 = null != callback;
+            tmp2 = null != closure_1_3;
           }
           if (tmp2) {
-            callback(id.progressPercent);
+            closure_1_3(id.progressPercent);
           }
         });
         closure_2 = closure_1_9.addListener("MediaPlayerPause", (id) => {
           if (id.id === closure_0) {
-            lib2(tmp);
+            closure_2(tmp);
           }
         });
         return () => {
           closure_0.remove();
-          lib.remove();
-          lib2.remove();
+          closure_1.remove();
+          closure_2.remove();
         };
       }, items);
     },

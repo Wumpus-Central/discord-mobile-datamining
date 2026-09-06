@@ -1,13 +1,11 @@
 // discord_app/modules/games/GameActionCreators.tsx
-import dispatcherDefault from "../../Dispatcher.tsx";
-import importDefaultResult from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "GameStore.tsx";
-import { Endpoints } from "../../Constants.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import GameStore from "GameStore.tsx";
 
-let closure_0 = arg1;
 function requestGames() {
   const self = this;
-  const apply = _requestGames.apply;
+  const apply = closure_7.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -15,181 +13,131 @@ function requestGames() {
   }
   return applyArgumentsResult;
 }
-function _requestGames() {
-  const self = this;
-  const tmp = importDefaultResult((arg0) => {
-    closure_0 = arg0;
-    c4 = 0;
-    c5 = 0;
-    c3 = 0;
-    return (function* (arg0, body) {
-      dependencyMap = tmp3;
-      c3 = 1;
-      const HTTP = callback(closure_1_2[3]).HTTP;
-      obj1 = { url: null, query: null, rejectWithError: true };
-      obj1[0] = constants.GAMES;
-      const obj2 = { game_ids: null };
-      obj2[0] = callback;
-      obj1[1] = obj2;
-      yield HTTP.get(obj1);
-      if (1 === tmp7) {
-        c3 = 0;
-        const obj3 = body(573);
-        const obj4 = { type: "GAME_FETCH_FAILURE", gameIds: null };
-        obj4[1] = callback;
-        obj3.dispatch(obj4);
-        constants = 3;
-      } else if (arg0 === 1) {
-        constants = 3;
-        throw body;
-      } else if (arg0 !== 2) {
-        body = body.body;
-        const obj = body(573);
-        const obj5 = { type: "GAME_FETCH_SUCCESS", gameIds: null, games: null };
-        obj5[1] = callback;
-        obj5[2] = body;
-        obj.dispatch(obj5);
-        c3 = 0;
-      }
+let closure_7 = async function _requestGames(game_ids) {
+  c4 = 0;
+  c5 = 0;
+  c3 = 0;
+  return (async (arg0, value) => {
+    closure_2 = tmp3;
+    closure_129_0 = game_ids;
+    const HTTP = closure_2_0(dependencyMap[3]).HTTP;
+    const request = { url: constants.GAMES, query: { game_ids }, rejectWithError: true };
+    await HTTP.get(request);
+    if (1 === tmp7) {
       c3 = 0;
-      return body;
-    })();
-  });
-  closure_7 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      closure_130_1(closure_130_2[4]);
+      const obj3 = { type: "GAME_FETCH_FAILURE", gameIds: closure_129_0 };
+      obj3.dispatch(obj3);
+      c5 = 3;
+    } else if (arg0 === 1) {
+      c5 = 3;
+      throw value;
+    } else if (arg0 !== 2) {
+      const body = value.body;
+      closure_130_1(closure_130_2[4]).dispatch({ type: "GAME_FETCH_SUCCESS", gameIds: closure_129_0, games: body });
+      c3 = 0;
+      closure_130_1(closure_130_2[4]);
+    }
+    return value;
+  })();
+};
+let closure_9 = async function _fetchGamesWithSupplementalData(arg0, value) {
+  if (c1 === 2) {
+    c1 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
   } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _fetchGamesWithSupplementalData() {
-  const self = this;
-  const tmp = importDefaultResult((arg0) => {
-    closure_0 = arg0;
-    c2 = 0;
-    c1 = 0;
-    return (function* (arg0) {
-      if (c1 === 2) {
-        c1 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
+    try {
+      c1 = 2;
+      if (0 === c2) {
         if (arg0 === 1) {
-          throw arg1;
+          c1 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c1 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else if (0 !== length.length) {
+          c2 = 1;
+          c1 = 1;
+          const obj1 = { value: batchInvocationManager.queue(tmp5), done: false };
+          return obj1;
+        }
+      } else if (arg0 === 1) {
+        c1 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c1 = 3;
+        obj = { value, done: true };
+        return obj;
+      }
+      c1 = 3;
+      return { value: "HermesInternal", done: null };
+    } catch (tmp7) {
+      c1 = tmp;
+      throw tmp7;
+    }
+  }
+};
+const Endpoints = fn(1074).Endpoints;
+let closure_0 = asyncGeneratorStep(async (arg0, value) => {
+  if (v3 === 2) {
+    v3 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      v3 = 2;
+      if (0 === dependencyMap) {
+        if (arg0 === 1) {
+          v3 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          v3 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          let obj1 = v3(dependencyMap[6]);
+          dependencyMap = 1;
+          v3 = 1;
+          obj1 = { value: null, done: false };
+          obj1.value = Promise.all(obj1.chunk(closure_0, 20).map(requestGames));
+          return obj1;
         }
-      } else {
-        try {
-          c1 = 2;
-          if (0 === c2) {
-            if (arg0 === 1) {
-              c1 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c1 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else if (0 !== length.length) {
-              c2 = 1;
-              c1 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = closure_1_8.queue(tmp5);
-              return obj1;
-            }
-          } else if (arg0 === 1) {
-            c1 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c1 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-          c1 = 3;
-          return { value: "HermesInternal", done: null };
-        } catch (tmp7) {
-          c1 = tmp;
-          throw tmp7;
-        }
-      }
-    })();
-  });
-  closure_9 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-let c3 = importDefaultResult;
-closure_0 = undefined;
-closure_0 = importDefaultResult((arg0) => {
-  closure_0 = arg0;
-  c2 = 0;
-  c1 = 0;
-  return (function* (arg0) {
-    if (v0 === 2) {
-      v0 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
+      } else if (arg0 === 1) {
+        v3 = 3;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        v3 = 3;
+        obj = { value, done: true };
         return obj;
       } else {
+        v3 = 3;
         return { value: "HermesInternal", done: null };
       }
-    } else {
-      try {
-        v0 = 2;
-        if (0 === table) {
-          if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            obj1 = v0(table[6]);
-            table = 1;
-            v0 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = Promise.all(obj1.chunk(closure_0, 20).map(closure_1_6));
-            return obj1;
-          }
-        } else if (arg0 === 1) {
-          v0 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          v0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          v0 = 3;
-          return { value: "HermesInternal", done: null };
-        }
-      } catch (tmp10) {
-        v0 = tmp;
-        throw tmp10;
-      }
+    } catch (tmp10) {
+      v3 = tmp;
+      throw tmp10;
     }
-  })();
+  }
 });
-const batchInvocationManager = new require("start").BatchInvocationManager(
+const batchInvocationManager = new fn(4447).BatchInvocationManager(
   function () {
     const self = this;
     const apply = closure_0.apply;
@@ -201,26 +149,25 @@ const batchInvocationManager = new require("start").BatchInvocationManager(
     return applyArgumentsResult;
   },
   {
-    predicate(closure_0) {
-      return !closure_4.hasNoData(closure_0);
+    predicate(item) {
+      return !GameStore.hasNoData(item);
     },
     onQueued(gameIds) {
-      let obj = dispatcherDefault;
-      obj = { type: "GAME_FETCH", gameIds };
+      const obj = { type: "GAME_FETCH", gameIds };
       return obj.dispatch(obj);
     },
     onCancelled(gameIds) {
-      let obj = dispatcherDefault;
-      obj = { type: "GAME_FETCH_CANCELLED", gameIds };
+      const obj = { type: "GAME_FETCH_CANCELLED", gameIds };
       return obj.dispatch(obj);
     },
   },
 );
-const result = require("set").fileFinishedImporting("modules/games/GameActionCreators.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/games/GameActionCreators.tsx");
 
-export const fetchGamesWithSupplementalData = function fetchGamesWithSupplementalData(items) {
+export const fetchGamesWithSupplementalData = function fetchGamesWithSupplementalData() {
   const self = this;
-  const apply = _fetchGamesWithSupplementalData.apply;
+  const apply = closure_9.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

@@ -1,27 +1,28 @@
 // discord_app/modules/routing/native/useBackPressHandler.tsx
-import closure_2 from "../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-({ BackHandler: c3, NativeModules: c4 } = get_ActivityIndicator);
-const result = require("set").fileFinishedImporting("modules/routing/native/useBackPressHandler.tsx");
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ BackHandler: c3, NativeModules: closure_4 } = get_ActivityIndicator);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/routing/native/useBackPressHandler.tsx");
 
-export default function useBackPressHandler(first) {
-  closure_0 = first;
+export default function useBackPressHandler(set) {
+  let current = set;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = true;
   }
-  let React;
-  React = React.useRef(first);
-  const layoutEffect = React.useLayoutEffect(() => {
-    closure_2.current = closure_0;
+  noop = undefined;
+  noop = noop.useRef(set);
+  const layoutEffect = noop.useLayoutEffect(() => {
+    closure_2.current = current;
   });
   const items = [flag];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (!obj.isIOS()) {
       if (flag) {
-        const callback = closure_1_3.addEventListener("hardwareBackPress", () => ref.current());
+        current = closure_1_3.addEventListener("hardwareBackPress", () => ref.current());
         return () => closure_0.remove();
       }
     }

@@ -1,25 +1,25 @@
 // discord_app/modules/auth/native/components/RegistrationBailoutButton.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import Button from "../../../../design/void/native.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import util from "../../../../intl/index.native.tsx";
+import native from "../../../../design/void/native.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-let closure_3 = createCacheKey.createStyles({ bail: { marginBottom: 16, marginLeft: "auto", marginRight: "auto" } });
-const result = require("set").fileFinishedImporting("modules/auth/native/components/RegistrationBailoutButton.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_3 = createStyles.createStyles({ bail: { marginBottom: 16, marginLeft: "auto", marginRight: "auto" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/auth/native/components/RegistrationBailoutButton.tsx");
 
 export default function RegistrationBailoutButton(onBail) {
   const obj = { shrink: true, text: null, size: null, look: null, color: null, style: null, onPress: null };
-  const intl = getSystemLocale.intl;
-  obj[1] = intl.string(getSystemLocale.t.CZ7wvG);
-  obj[2] = Button.Button.Sizes.MEDIUM;
-  obj[3] = Button.ButtonLooks.LINK;
-  obj[4] = Button.ButtonColors.LINK;
-  obj[5] = callback().bail;
-  obj[6] = onBail.onBail;
-  return jsx(Button.Button, {
+  const intl = util.intl;
+  obj.text = intl.string(util.t.CZ7wvG);
+  obj.size = native.Button.Sizes.MEDIUM;
+  obj.look = native.ButtonLooks.LINK;
+  obj.color = native.ButtonColors.LINK;
+  obj.style = closure_3().bail;
+  obj.onPress = onBail.onBail;
+  return jsx(native.Button, {
     shrink: true,
     text: null,
     size: null,

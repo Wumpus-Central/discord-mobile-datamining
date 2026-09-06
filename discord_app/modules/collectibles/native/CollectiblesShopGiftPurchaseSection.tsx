@@ -1,73 +1,75 @@
 // discord_app/modules/collectibles/native/CollectiblesShopGiftPurchaseSection.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_7 from "../../badges/BadgeDirectoryStore.tsx";
-import { useNativeCheckoutStore } from "../../checkout/native/NativeCheckoutStore.tsx";
-import ME from "../../../Constants.tsx";
-import GuildFeatures from "../../premium/PremiumConstants.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import DispatcherDefault from "../../../Dispatcher.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
+import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
+import actions_AlertActionCreatorsDefault from "../../../actions/native/AlertActionCreators.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
+import BadgeDirectoryStore from "../../badges/BadgeDirectoryStore.tsx";
 
-let require = arg1;
-({ AnalyticEvents: c9, MarketingURLs: c10 } = ME);
-({ GiftingOrigin: unpackModuleId, PremiumGiftStyles: closure_12 } = GuildFeatures);
+let require = fn;
+const View = fn(17).View;
+const useNativeCheckoutStore = fn(7424).useNativeCheckoutStore;
+const Constants = fn(1074);
+({ AnalyticEvents: closure_9, MarketingURLs: c10 } = Constants);
+const PremiumConstants = fn(1373);
+({ GiftingOrigin: closure_11, PremiumGiftStyles: closure_12 } = PremiumConstants);
+const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-let closure_15 = createCacheKey.createStyles((arg0) => {
+const createStyles = fn(4560);
+let closure_15 = createStyles.createStyles((arg0) => {
   let obj = { container: null, disclaimer: null };
   obj = {
-    paddingBottom: ThemesDefault.space.PX_12 + arg0,
-    paddingTop: ThemesDefault.space.PX_12,
-    paddingHorizontal: ThemesDefault.space.PX_16,
-    gap: ThemesDefault.space.PX_8,
-    backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+    paddingBottom: nativeDefault.space.PX_12 + arg0,
+    paddingTop: nativeDefault.space.PX_12,
+    paddingHorizontal: nativeDefault.space.PX_16,
+    gap: nativeDefault.space.PX_8,
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   };
-  const merged = Object.assign(ThemesDefault.shadows.SHADOW_TOP_HIGH);
-  obj[0] = obj;
-  obj[1] = { includeFontPadding: true };
+  const merged = Object.assign(nativeDefault.shadows.SHADOW_TOP_HIGH);
+  obj.container = obj;
+  obj.disclaimer = { includeFontPadding: true };
   return obj;
 });
-const result = require("set").fileFinishedImporting(
-  "modules/collectibles/native/CollectiblesShopGiftPurchaseSection.tsx",
-);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopGiftPurchaseSection.tsx");
 
 export default function CollectiblesShopGiftPurchaseSection(disabled) {
   const product = disabled.product;
   require = product;
   const giftOptions = disabled.giftOptions;
   const giftingOrigin = disabled.giftingOrigin;
-  let callback;
-  let callback2;
-  let React;
-  closure_6 = undefined;
+  asyncGeneratorStep = undefined;
+  _slicedToArray = undefined;
+  noop = undefined;
   closure_7 = undefined;
   let awaitSync;
-  callback = undefined;
   closure_10 = undefined;
-  const tmp3 = callback4(giftOptions(giftingOrigin[11])().insets.bottom);
-  const GiftingBadgeExperiment = require(giftingOrigin[12]).GiftingBadgeExperiment;
-  let obj = require(giftingOrigin[13]);
+  const tmp3 = closure_15(giftOptions(giftingOrigin[11])().insets.bottom);
+  const GiftingBadgeExperiment = require("GiftingBadgeExperiment").GiftingBadgeExperiment;
+  let obj = require("initialize");
   const items = [closure_7];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     const obj = {
-      nextTier: getNextTier(product(giftingOrigin[14]).BadgeId.GIFTING),
-      giftsToNextTier: getRemainingToNextTier(product(giftingOrigin[14]).BadgeId.GIFTING),
+      nextTier: closure_7.getNextTier(product(giftingOrigin[14]).BadgeId.GIFTING),
+      giftsToNextTier: closure_7.getRemainingToNextTier(product(giftingOrigin[14]).BadgeId.GIFTING),
       badgeProgress: null,
     };
-    ({ getNextTier, getRemainingToNextTier, getSingleRequirementProgress } = closure_7);
-    const singleRequirementProgress = getSingleRequirementProgress(product(giftingOrigin[14]).BadgeId.GIFTING);
+    const singleRequirementProgress = closure_7.getSingleRequirementProgress(
+      product(giftingOrigin[14]).BadgeId.GIFTING,
+    );
     let current;
     if (singleRequirementProgress != null) {
       current = singleRequirementProgress.current;
     }
-    obj[2] = current;
+    obj.badgeProgress = current;
     return obj;
   });
   ({ nextTier, badgeProgress: c3 } = stateFromStoresObject);
-  [tmp7, c4] = callback2(React.useState(false), 2);
-  React = React.useRef(false);
+  [tmp7, c4] = _slicedToArray(noop.useState(false), 2);
+  noop = noop.useRef(false);
   const tmp8 = awaitSync((analyticsFields) => analyticsFields.analyticsFields);
   closure_6 = tmp8;
   const tmp9 = awaitSync((orderRecord) => orderRecord.orderRecord);
@@ -75,12 +77,11 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
   closure_7 = tmp10;
   awaitSync = giftOptions(giftingOrigin[16])(tmp9, giftOptions).awaitSync;
   const items1 = [tmp8, tmp10];
-  callback = React.useCallback(() => {
+  const onPurchaseError = noop.useCallback(() => {
     if (ref.current) {
       tmp.current = false;
-      giftOptions(giftingOrigin[17]).track(callback.PAYMENT_FLOW_FAILED, closure_6);
-      callback();
-      const obj = giftOptions(giftingOrigin[17]);
+      AnalyticsUtilsDefault.track(constants.PAYMENT_FLOW_FAILED, closure_6);
+      closure_7();
     }
     _undefined(false);
   }, items1);
@@ -96,71 +97,64 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
   };
   let id;
   let tmp = giftOptions;
-  const tmp6 = callback2(React.useState(false), 2);
+  const tmp6 = _slicedToArray(noop.useState(false), 2);
   if (tmp9 != null) {
     id = tmp9.id;
   }
-  obj[2] = id;
-  obj[3] = tmp8;
-  obj[4] = function onPurchaseComplete() {
+  obj.orderId = id;
+  obj.analyticsData = tmp8;
+  obj.onPurchaseComplete = function onPurchaseComplete() {
     let tmp2 = null == giftOptions.recipient_id;
     if (!tmp2) {
-      tmp2 = giftingOrigin !== closure_1_11.USER_PROFILE_WISHLIST && tmp3 !== closure_1_11.DM_CHANNEL_WISHLIST;
-      const tmp4 = giftingOrigin !== closure_1_11.USER_PROFILE_WISHLIST && tmp3 !== closure_1_11.DM_CHANNEL_WISHLIST;
+      tmp2 = giftingOrigin !== constants2.USER_PROFILE_WISHLIST && tmp3 !== constants2.DM_CHANNEL_WISHLIST;
+      const tmp4 = giftingOrigin !== constants2.USER_PROFILE_WISHLIST && tmp3 !== constants2.DM_CHANNEL_WISHLIST;
     }
     if (!tmp2) {
-      let obj = giftOptions(giftingOrigin[19]);
-      obj = { type: "WISHLIST_GIFT_SENT", skuId: null, recipientId: null };
-      obj[1] = product.skuId;
-      obj[2] = tmp.recipient_id;
+      let obj = { type: "WISHLIST_GIFT_SENT", skuId: product.skuId, recipientId: tmp.recipient_id };
       obj.dispatch(obj);
     }
     closure_5.current = false;
     _undefined(false);
-    let arr = giftOptions(giftingOrigin[20]);
+    let arr = ModalActionCreatorsDefault;
     arr = arr.pop();
     obj = {
       importer() {
-        return closure_1_0(closure_1_2[23])(closure_1_2[22], closure_1_2.paths).then((arg0) => {
-          closure_0 = arg0.default;
+        return product(giftingOrigin[23])(giftingOrigin[22], giftingOrigin.paths).then((result) => {
+          closure_0 = result.default;
           return (arg0) => {
-            let STANDARD_BOX = closure_1_1.gift_style;
+            let STANDARD_BOX = gift_style.gift_style;
             if (STANDARD_BOX == null) {
-              STANDARD_BOX = closure_2_12.STANDARD_BOX;
+              STANDARD_BOX = constants.STANDARD_BOX;
             }
             const merged = Object.assign(arg0);
-            return closure_2_13(closure_0, { giftStyle: STANDARD_BOX, giftBadgeProgress: closure_1_3 });
+            return closure_3_13(closure_0, { giftStyle: STANDARD_BOX, giftBadgeProgress });
           };
         });
       },
     };
-    giftOptions(giftingOrigin[21]).openLazy(obj);
-    const obj3 = giftOptions(giftingOrigin[21]);
+    actions_AlertActionCreatorsDefault.openLazy(obj);
     tmp = giftOptions;
     if (obj5.isIOS()) {
-      giftOptions(giftingOrigin[17]).track(callback.PAYMENT_FLOW_SUCCEEDED, closure_6);
-      const obj6 = giftOptions(giftingOrigin[17]);
+      AnalyticsUtilsDefault.track(constants.PAYMENT_FLOW_SUCCEEDED, closure_6);
     }
   };
-  obj[5] = callback;
-  obj[6] = function onPurchasePending() {};
-  obj[7] = { isGift: true, options: giftOptions };
+  obj.onPurchaseError = onPurchaseError;
+  obj.onPurchasePending = function onPurchasePending() {};
+  obj.giftParams = { isGift: true, options: giftOptions };
   closure_10 = giftOptions(giftingOrigin[18])(obj);
   obj = { style: tmp3.container, children: null };
   let tmp17Result = null;
   if (GiftingBadgeExperiment.useConfig({ location: "CollectiblesShopGiftPurchaseSection" }).enabled) {
     tmp17Result = null;
     if (null != nextTier) {
-      obj1 = { giftsToNextTier: null, nextTierName: null, nextTierIcon: null };
-      obj1[0] = stateFromStoresObject.giftsToNextTier;
+      let obj1 = { giftsToNextTier: stateFromStoresObject.giftsToNextTier, nextTierName: null, nextTierIcon: null };
       let str = nextTier.name;
       if (str == null) {
         str = "";
       }
-      obj1[1] = str;
-      obj1[2] = nextTier.simple_icon_url;
-      tmp17Result = callback3(tmp(tmp2[25]), obj1);
-      const tmp17 = callback3;
+      obj1.nextTierName = str;
+      obj1.nextTierIcon = nextTier.simple_icon_url;
+      tmp17Result = closure_13(tmp(tmp2[25]), obj1);
       const tmpResult = tmp(tmp2[25]);
     }
   }
@@ -169,23 +163,22 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
   const intl = tmp4(tmp2[27]).intl;
   let obj3 = { buyButtonLabel: null, paidServiceTermURL: null, virtualGoodsURL: null };
   const intl2 = tmp4(tmp2[27]).intl;
-  obj3[0] = intl2.string(require(giftingOrigin[27]).t.ouo4FK);
-  ({ PAID_TERMS: obj6[1], PAID_TERMS_VIRTUAL_GOODS: obj6[2] } = closure_10);
-  obj2[2] = intl.format(require(giftingOrigin[27]).t.rsEdd2, obj3);
-  items2[1] = callback3(require(giftingOrigin[26]).Text, obj2);
+  obj3.buyButtonLabel = intl2.string(require("util").t.ouo4FK);
+  ({ PAID_TERMS: obj6.paidServiceTermURL, PAID_TERMS_VIRTUAL_GOODS: obj6.virtualGoodsURL } = closure_10);
+  obj2.children = intl.format(require("util").t.rsEdd2, obj3);
+  items2[1] = closure_13(require("Text/Text").Text, obj2);
   const obj4 = { disabled: disabled.isPurchaseDisabled, loading: tmp7, variant: "active", text: null, onPress: null };
   const intl3 = tmp4(tmp2[27]).intl;
-  obj4[3] = intl3.string(require(giftingOrigin[27]).t.ouo4FK);
-  obj4[4] = callback(function* () {
+  obj4.text = intl3.string(require("util").t.ouo4FK);
+  obj4.onPress = asyncGeneratorStep(async (arg0, value) => {
     if (c2 === 2) {
       c2 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp3 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
@@ -196,36 +189,33 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
         if (0 === c1) {
           if (arg0 === 1) {
             c2 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c2 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
             closure_0 = tmp4;
-            closure_1_5.current = true;
-            closure_1_4(true);
+            closure_5.current = true;
+            _undefined(true);
             c1 = 1;
             c2 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = closure_1_8();
+            const obj1 = { value: awaitSync(), done: false };
             return obj1;
           }
         } else if (arg0 === 1) {
           c2 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c2 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj = { value, done: true };
           return obj;
         } else {
-          if (arg1) {
-            callback2().catch(callback);
-            const promise = callback2();
+          if (value) {
+            closure_128_10().catch(closure_128_9);
+            const promise = closure_128_10();
           } else {
-            callback();
+            closure_128_9();
           }
           c2 = 3;
         }
@@ -235,7 +225,7 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
       }
     }
   });
-  items2[2] = callback3(require(giftingOrigin[28]).Button, obj4);
-  obj[1] = items2;
+  items2[2] = closure_13(require("components/Button/Button").Button, obj4);
+  obj.children = items2;
   return closure_14(closure_6, obj);
 }

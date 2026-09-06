@@ -1,18 +1,17 @@
 // discord_app/modules/custom_typing_indicator/native/openCustomTypingIndicatorAnnounceActionSheet.tsx
-import set from "../../../../_runtime/00002_set.js";
 import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
-import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const CustomTypingIndicatorAnnounceActionSheet = "CustomTypingIndicatorAnnounceActionSheet";
-const result = set.fileFinishedImporting(
+const result = size.fileFinishedImporting(
   "modules/custom_typing_indicator/native/openCustomTypingIndicatorAnnounceActionSheet.tsx",
 );
 
 export const openCustomTypingIndicatorAnnounceActionSheet = function openCustomTypingIndicatorAnnounceActionSheet() {
-  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj = {
+  const obj = {
     markAsDismissed() {
-      return callback(table[0]).hideActionSheet(closure_3);
+      return ActionSheetActionCreatorsDefault.hideActionSheet(CustomTypingIndicatorAnnounceActionSheet);
     },
   };
   obj.openLazy(asyncRequireImpl(11969, dependencyMap.paths), CustomTypingIndicatorAnnounceActionSheet, obj);

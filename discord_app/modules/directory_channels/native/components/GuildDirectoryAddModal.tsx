@@ -1,79 +1,80 @@
 // discord_app/modules/directory_channels/native/components/GuildDirectoryAddModal.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
+import discord_common_AnalyticsUtils from "../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import useInitialValueDefault from "../../../../hooks/useInitialValue.tsx";
-import SafeAreaPaddingView from "../../../../components_native/common/SafeAreaView.tsx";
-import { GuildDirectoryCreate } from "../GuildDirectoryConstants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import NavigatorHeader from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
+import common_SafeAreaView from "../../../../components_native/common/SafeAreaView.tsx";
+import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-createCacheKey = { safeArea: null };
-createCacheKey = { marginTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT, flex: 1 };
-createCacheKey[0] = createCacheKey;
-let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting(
-  "modules/directory_channels/native/components/GuildDirectoryAddModal.tsx",
-);
+require = fn;
+const GuildDirectoryCreate = fn(12310).GuildDirectoryCreate;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { safeArea: null };
+createStyles = { marginTop: fn(5682).NAV_BAR_HEIGHT, flex: 1 };
+createStyles.safeArea = createStyles;
+let closure_5 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryAddModal.tsx");
 
 export default function GuildDirectoryAddModal(arg0) {
-  const _require = arg0;
+  _require = arg0;
   ({ screens, initialStack } = useInitialValueDefault(() => {
-    let obj = { name: closure_1_3.CREATE_OR_ADD, params: null };
+    let obj = { name: GuildDirectoryCreate.CREATE_OR_ADD, params: null };
     obj = {};
-    let merged = Object.assign(callback);
-    obj[1] = obj;
+    let merged = Object.assign(closure_0);
+    obj.params = obj;
     const items = [obj];
     obj = { screens: null, initialStack: null };
-    obj1 = {};
+    const obj1 = {};
     const obj2 = {
       fullscreen: true,
-      impressionName: callback(closure_1_2[5]).ImpressionNames.HUB_EXISTING_GUILD_CHOOSE,
+      impressionName: discord_common_AnalyticsUtils.ImpressionNames.HUB_EXISTING_GUILD_CHOOSE,
       headerLeft: null,
       headerTitle: null,
       render: null,
     };
-    let obj5 = callback(closure_1_2[6]);
-    obj2[2] = obj5.getHeaderCloseButton(closure_1_1(closure_1_2[7]).close);
-    obj2[3] = function headerTitle() {
+    let obj5 = NavigatorHeader;
+    obj2.headerLeft = obj5.getHeaderCloseButton(GuildDirectoryAddModalActionCreatorsDefault.close);
+    obj2.headerTitle = function headerTitle() {
       return null;
     };
-    obj2[4] = function render(arg0) {
+    obj2.render = function render(arg0) {
       const merged = Object.assign(arg0);
-      return callback2(callback(12311), {});
+      return closure_1_4(closure_1_1(12311), {});
     };
-    obj1[closure_1_3.CREATE_OR_ADD] = obj2;
-    obj1[closure_1_3.DESCRIPTION] = {
+    obj1[GuildDirectoryCreate.CREATE_OR_ADD] = obj2;
+    obj1[GuildDirectoryCreate.DESCRIPTION] = {
       fullscreen: true,
-      impressionName: callback(closure_1_2[5]).ImpressionNames.HUB_CREATE_GUILD_CUSTOMIZE,
+      impressionName: discord_common_AnalyticsUtils.ImpressionNames.HUB_CREATE_GUILD_CUSTOMIZE,
       headerTitle() {
         return null;
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return callback2(callback(12319), {});
+        return closure_1_4(closure_1_1(12319), {});
       },
     };
     const obj3 = {
       fullscreen: true,
-      impressionName: callback(closure_1_2[5]).ImpressionNames.HUB_CREATE_GUILD_CUSTOMIZE,
+      impressionName: discord_common_AnalyticsUtils.ImpressionNames.HUB_CREATE_GUILD_CUSTOMIZE,
       headerTitle() {
         return null;
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return callback2(callback(12319), {});
+        return closure_1_4(closure_1_1(12319), {});
       },
     };
-    obj1[closure_1_3.TEMPLATES] = {
+    obj1[GuildDirectoryCreate.TEMPLATES] = {
       fullscreen: true,
-      impressionName: callback(closure_1_2[5]).ImpressionNames.HUB_CREATE_GUILD_TEMPLATE,
+      impressionName: discord_common_AnalyticsUtils.ImpressionNames.HUB_CREATE_GUILD_TEMPLATE,
       headerTitle() {
         return null;
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return callback2(callback(12323), {});
+        return closure_1_4(closure_1_1(12323), {});
       },
     };
     obj5 = {
@@ -81,31 +82,27 @@ export default function GuildDirectoryAddModal(arg0) {
         return null;
       },
       fullscreen: true,
-      impressionName: callback(closure_1_2[5]).ImpressionNames.HUB_CREATE_GUILD_CUSTOMIZE,
+      impressionName: discord_common_AnalyticsUtils.ImpressionNames.HUB_CREATE_GUILD_CUSTOMIZE,
       render(arg0) {
         const merged = Object.assign(arg0);
-        return callback2(callback(12333), {});
+        return closure_1_4(closure_1_1(12333), {});
       },
     };
-    obj1[closure_1_3.CREATE] = obj5;
-    obj[0] = obj1;
-    obj[1] = items;
+    obj1[GuildDirectoryCreate.CREATE] = obj5;
+    obj.screens = obj1;
+    obj.initialStack = items;
     return obj;
   }));
   let obj = { screens, initialRouteStack: initialStack, headerBackTitle: null };
-  const intl = require("../../../../intl/index.native.tsx").intl;
-  obj[2] = intl.string(require("../../../../intl/index.native.tsx").t["13/7kX"]);
-  return jsx(require("../../../../design/components/Navigator/native/Navigator.native.tsx").Navigator, {
-    screens,
-    initialRouteStack: initialStack,
-    headerBackTitle: null,
-  });
+  const intl = require("util").intl;
+  obj.headerBackTitle = intl.string(require("util").t["13/7kX"]);
+  return jsx(require("Navigator").Navigator, { screens, initialRouteStack: initialStack, headerBackTitle: null });
 }
 export const GuildDirectoryAddModalScreen = function GuildDirectoryAddModalScreen(children) {
-  const tmp = callback();
-  return jsx(SafeAreaPaddingView.SafeAreaPaddingView, {
+  const tmp = closure_5();
+  return jsx(common_SafeAreaView.SafeAreaPaddingView, {
     top: true,
-    style: callback().safeArea,
+    style: closure_5().safeArea,
     children: children.children,
   });
 };

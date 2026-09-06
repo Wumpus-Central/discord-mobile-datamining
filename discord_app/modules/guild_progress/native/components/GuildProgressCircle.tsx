@@ -1,20 +1,20 @@
 // discord_app/modules/guild_progress/native/components/GuildProgressCircle.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import useIOSCompletionStates from "../GuildProgressUtils.tsx";
-import renderCircleDefault from "../../../premium/native/components/ProgressCircle.tsx";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import GuildProgressUtils from "../GuildProgressUtils.tsx";
+import ProgressCircleDefault from "../../../premium/native/components/ProgressCircle.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { wrapper: { position: "relative" }, circle: { position: "absolute" }, progressCircle: null };
-createCacheKey = { color: ThemesDefault.colors.BACKGROUND_BRAND };
-createCacheKey[2] = createCacheKey;
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_progress/native/components/GuildProgressCircle.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+fn(4560);
+let createStyles = { wrapper: { position: "relative" }, circle: { position: "absolute" }, progressCircle: null };
+createStyles = { color: nativeDefault.colors.BACKGROUND_BRAND };
+createStyles.progressCircle = createStyles;
+let closure_6 = createStyles.createStyles(createStyles);
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_progress/native/components/GuildProgressCircle.tsx");
 
 export default function GuildProgressCircle(size) {
   let num = size.size;
@@ -22,22 +22,19 @@ export default function GuildProgressCircle(size) {
   if (num === undefined) {
     num = 32;
   }
-  const tmp = callback3();
-  let obj = { width: num, height: num, borderRadius: num / 2 };
-  obj = { style: items, children: null };
-  items = [tmp.wrapper, style, obj];
-  obj = { style: items1, size: num, strokeWidth: 4, percent: 100, color: null };
-  items1 = [tmp.circle, obj];
-  obj[4] = useIOSCompletionStates.PROGRESS_BACKGROUND_COLOR;
-  const items2 = [callback(renderCircleDefault, obj)];
-  const items3 = [tmp.circle, obj];
-  items2[1] = callback(renderCircleDefault, {
-    style: items3,
-    size: num,
-    strokeWidth: 4,
-    color: tmp.progressCircle.color,
-    percent,
-  });
-  obj[1] = items2;
-  return callback2(View, obj);
+  const tmp = closure_6();
+  size = { width: num, height: num, borderRadius: num / 2 };
+  let obj = { style: null, children: null };
+  const items = [tmp.wrapper, style, size];
+  obj.style = items;
+  obj = { style: null, size: num, strokeWidth: 4, percent: 100, color: GuildProgressUtils.PROGRESS_BACKGROUND_COLOR };
+  const items1 = [tmp.circle, size];
+  obj.style = items1;
+  const items2 = [React4(ProgressCircleDefault, obj)];
+  const obj1 = { style: null, size: num, strokeWidth: 4, color: tmp.progressCircle.color, percent };
+  const items3 = [tmp.circle, size];
+  obj1.style = items3;
+  items2[1] = React4(ProgressCircleDefault, obj1);
+  obj.children = items2;
+  return hasOwnProperty(View, obj);
 }

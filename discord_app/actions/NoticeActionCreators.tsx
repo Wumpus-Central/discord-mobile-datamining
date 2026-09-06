@@ -1,18 +1,18 @@
 // discord_app/actions/NoticeActionCreators.tsx
-import set from "../../_runtime/00002_set.js";
-import dispatcherDefault from "../Dispatcher.tsx";
+import DispatcherDefault from "../Dispatcher.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("actions/NoticeActionCreators.tsx");
+const result = size.fileFinishedImporting("actions/NoticeActionCreators.tsx");
 
 export default {
   show(type, message, buttonText, callback, id) {
-    let obj = dispatcherDefault;
+    let obj = { type: "NOTICE_SHOW", notice: null };
     obj = { id, type, message, buttonText, callback };
-    obj.dispatch({ type: "NOTICE_SHOW", notice: obj });
+    obj.notice = obj;
+    obj.dispatch(obj);
   },
   dismiss(arg0) {
-    let obj = dispatcherDefault;
-    obj = { type: "NOTICE_DISMISS" };
+    const obj = { type: "NOTICE_DISMISS" };
     const merged = Object.assign(arg0);
     obj.dispatch(obj);
   },

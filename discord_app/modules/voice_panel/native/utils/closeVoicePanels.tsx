@@ -1,12 +1,12 @@
 // discord_app/modules/voice_panel/native/utils/closeVoicePanels.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import ME from "../../../../Constants.tsx";
-import ComponentDispatcher from "../../../../utils/ComponentDispatchUtils.tsx";
+import Constants from "../../../../Constants.tsx";
+import ComponentDispatchUtils from "../../../../utils/ComponentDispatchUtils.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const ComponentActions = ME.ComponentActions;
-const result = set.fileFinishedImporting("modules/voice_panel/native/utils/closeVoicePanels.tsx");
+const ComponentActions = Constants.ComponentActions;
+const result = size.fileFinishedImporting("modules/voice_panel/native/utils/closeVoicePanels.tsx");
 
 export default function closeVoicePanels() {
-  const ComponentDispatch = ComponentDispatcher.ComponentDispatch;
+  const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
   ComponentDispatch.dispatch(ComponentActions.VOICE_PANEL_CLOSE);
 }

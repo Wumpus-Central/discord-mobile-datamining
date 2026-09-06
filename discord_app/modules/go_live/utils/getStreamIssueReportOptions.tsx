@@ -1,17 +1,17 @@
 // discord_app/modules/go_live/utils/getStreamIssueReportOptions.tsx
-import set from "../../../../_runtime/00002_set.js";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import StreamIssueReportReasons2 from "../Constants.tsx";
+import util from "../../../intl/index.native.tsx";
+import Constants from "../Constants.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const StreamIssueReportReasons = StreamIssueReportReasons2.StreamIssueReportReasons;
-const result = set.fileFinishedImporting("modules/go_live/utils/getStreamIssueReportOptions.tsx");
+const StreamIssueReportReasons = Constants.StreamIssueReportReasons;
+const result = size.fileFinishedImporting("modules/go_live/utils/getStreamIssueReportOptions.tsx");
 
 export default function getStreamIssueReportOptions(isEndStream) {
   isEndStream = isEndStream.isEndStream;
   let obj = { id: "black-screen", value: StreamIssueReportReasons.BLACK_SCREEN, label: null };
-  const intl = getSystemLocale.intl;
+  const intl = util.intl;
   const string = intl.string;
-  const t = getSystemLocale.t;
+  const t = util.t;
   if (isEndStream) {
     let stringResult = string(t["0X5Zbq"]);
     let tmp6 = tmp2;
@@ -19,7 +19,7 @@ export default function getStreamIssueReportOptions(isEndStream) {
     stringResult = string(t.fxiRNr);
     tmp6 = tmp2;
   }
-  obj[2] = stringResult;
+  obj.label = stringResult;
   const items = [obj, , , , , , , ,];
   obj = { id: "blurry", value: tmp.BLURRY, label: null };
   const intl2 = tmp6(1114).intl;
@@ -30,7 +30,7 @@ export default function getStreamIssueReportOptions(isEndStream) {
   } else {
     string2Result = string2(t2.E8jTMN);
   }
-  obj[2] = string2Result;
+  obj.label = string2Result;
   items[1] = obj;
   obj = { id: "lagging", value: tmp.LAGGING, label: null };
   const intl3 = tmp6(1114).intl;
@@ -41,9 +41,9 @@ export default function getStreamIssueReportOptions(isEndStream) {
   } else {
     string3Result = string3(t3.VoSJEQ);
   }
-  obj[2] = string3Result;
+  obj.label = string3Result;
   items[2] = obj;
-  obj1 = { id: "out-of-sync", value: StreamIssueReportReasons.OUT_OF_SYNC, label: null };
+  const obj1 = { id: "out-of-sync", value: StreamIssueReportReasons.OUT_OF_SYNC, label: null };
   const intl4 = tmp6(1114).intl;
   const string4 = intl4.string;
   const t4 = tmp6(1114).t;
@@ -52,7 +52,7 @@ export default function getStreamIssueReportOptions(isEndStream) {
   } else {
     string4Result = string4(t4["+NluQm"]);
   }
-  obj1[2] = string4Result;
+  obj1.label = string4Result;
   items[3] = obj1;
   const obj2 = { id: "audio-missing", value: StreamIssueReportReasons.AUDIO_MISSING, label: null };
   const intl5 = tmp6(1114).intl;
@@ -63,7 +63,7 @@ export default function getStreamIssueReportOptions(isEndStream) {
   } else {
     string5Result = string5(t5.G2egzT);
   }
-  obj2[2] = string5Result;
+  obj2.label = string5Result;
   items[4] = obj2;
   const obj3 = { id: "audio-poor", value: StreamIssueReportReasons.AUDIO_POOR, label: null };
   const intl6 = tmp6(1114).intl;
@@ -74,19 +74,19 @@ export default function getStreamIssueReportOptions(isEndStream) {
   } else {
     string6Result = string6(t6.aHOfIo);
   }
-  obj3[2] = string6Result;
+  obj3.label = string6Result;
   items[5] = obj3;
   const obj4 = { id: "stream-stopped", value: StreamIssueReportReasons.STREAM_STOPPED, label: null };
   const intl7 = tmp6(1114).intl;
-  obj4[2] = intl7.string(tmp6(1114).t.uEoqQp);
+  obj4.label = intl7.string(tmp6(1114).t.uEoqQp);
   items[6] = obj4;
   const obj5 = { id: "vibes-off", value: StreamIssueReportReasons.VIBES_OFF, label: null };
   const intl8 = tmp6(1114).intl;
-  obj5[2] = intl8.string(tmp6(1114).t["++JLL0"]);
+  obj5.label = intl8.string(tmp6(1114).t["++JLL0"]);
   items[7] = obj5;
   const obj6 = { id: "other", value: StreamIssueReportReasons.OTHER, label: null };
   const intl9 = tmp6(1114).intl;
-  obj6[2] = intl9.string(tmp6(1114).t.emlT91);
+  obj6.label = intl9.string(tmp6(1114).t.emlT91);
   items[8] = obj6;
   return items;
 }

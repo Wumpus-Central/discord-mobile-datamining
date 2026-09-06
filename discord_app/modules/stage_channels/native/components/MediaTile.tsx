@@ -1,32 +1,35 @@
 // discord_app/modules/stage_channels/native/components/MediaTile.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_4 from "../../../calls/ChannelRTCStore.tsx";
-import { ParticipantTypes } from "../../../calls/CallConstants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
 
-const require = arg1;
+const require = fn;
+const View = fn(17).View;
+const ParticipantTypes = fn(4581).ParticipantTypes;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
 let obj = { container: { flex: 1, marginHorizontal: 4, marginVertical: 4 }, media: null };
-obj = { flex: 1, borderRadius: ThemesDefault.radii.sm };
-obj[1] = obj;
-let closure_7 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo((channel) => {
+obj = { flex: 1, borderRadius: nativeDefault.radii.sm };
+obj.media = obj;
+let closure_7 = createStyles.createStyles(obj);
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/native/components/MediaTile.tsx");
+
+export default noop.memo((channel) => {
   channel = channel.channel;
   const participant = channel.participant;
   const size = channel.size;
-  const tmp = callback();
+  const tmp = closure_7();
   let obj = channel(10046);
   const speakerTileStyles = obj.useSpeakerTileStyles();
   const isScreenLandscape = channel(5126).useIsScreenLandscape();
   const obj2 = channel(5126);
   const tmp5 = participant;
-  const items = [closure_4];
+  const items = [ChannelRTCStore];
   const items1 = [channel.id, participant.id];
   const stateFromStores = channel(504).useStateFromStores(
     items,
-    () => closure_1_4.getParticipant(channel.id, participant.id),
+    () => ChannelRTCStore.getParticipant(channel.id, participant.id),
     items1,
   );
   let tmp8 = null;
@@ -39,32 +42,28 @@ const memoResult = importAllResult.memo((channel) => {
       items2[1] = tmp2Result.getSizeStyle(size, speakerTileStyles);
       tmp2Result = tmp2(10046);
       items2[2] = tmp2Result.getTileWidthStyle(size, participant(1477)().width, isScreenLandscape);
-      obj[0] = items2;
+      obj.style = items2;
       obj = {
         hasBottomSafeArea: false,
         hasLeftSafeArea: false,
         hasRightSafeArea: false,
         hasTopSafeArea: false,
-        participant: null,
-        avatarSize: null,
-        channel: null,
+        participant: stateFromStores,
+        avatarSize: tmp2(1178).AvatarSizes.XLARGE,
+        channel,
         shrinkStreamEmptyState: false,
-        contentStyle: null,
+        contentStyle: tmp.media,
       };
-      obj[4] = stateFromStores;
-      obj[5] = tmp2(1178).AvatarSizes.XLARGE;
-      obj[6] = channel;
-      obj[8] = tmp.media;
-      obj[1] = jsx(tmp5(10057), {
+      obj.children = jsx(tmp5(10057), {
         hasBottomSafeArea: false,
         hasLeftSafeArea: false,
         hasRightSafeArea: false,
         hasTopSafeArea: false,
-        participant: null,
-        avatarSize: null,
-        channel: null,
+        participant: stateFromStores,
+        avatarSize: tmp2(1178).AvatarSizes.XLARGE,
+        channel,
         shrinkStreamEmptyState: false,
-        contentStyle: null,
+        contentStyle: tmp.media,
       });
       tmp8 = (
         <View
@@ -72,11 +71,11 @@ const memoResult = importAllResult.memo((channel) => {
           hasLeftSafeArea={false}
           hasRightSafeArea={false}
           hasTopSafeArea={false}
-          participant={null}
-          avatarSize={null}
-          channel={null}
+          participant={stateFromStores}
+          avatarSize={tmp2(1178).AvatarSizes.XLARGE}
+          channel={channel}
           shrinkStreamEmptyState={false}
-          contentStyle={null}
+          contentStyle={tmp.media}
         />
       );
       const tmp5Result = tmp5(10057);
@@ -84,6 +83,3 @@ const memoResult = importAllResult.memo((channel) => {
   }
   return tmp8;
 });
-const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/MediaTile.tsx");
-
-export default memoResult;

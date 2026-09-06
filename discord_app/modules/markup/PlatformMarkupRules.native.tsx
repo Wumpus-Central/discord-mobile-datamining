@@ -1,19 +1,41 @@
 // discord_app/modules/markup/PlatformMarkupRules.native.tsx
-import set from "../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
-import getAvatarURLDefault from "../../utils/AvatarUtils.tsx";
+import _mod17 from "../../../_runtime/metro/00017__.js";
+import AvatarUtilsDefault from "../../utils/AvatarUtils.tsx";
 import getGameMediaRefURLDefault from "../games/getGameMediaRefURL.tsx";
-import parseRawEmojiObjectDefault from "../emojis/UnicodeEmojis.tsx";
-import tDefault from "../../../_runtime/04257_t.js";
-import textRegexpDefault from "MarkupTextRule.tsx";
-import getChannelDefault from "MarkupChannelMentionRule.tsx";
-import regExpDefault from "MarkupAttachmentLinkRule.tsx";
-import getGameMentionData from "../game_mentions/hooks/useGameMentionData.tsx";
-import INVISIBLE_CHAR_REGEX2 from "MarkupInvisibleUnicode.tsx";
+import UnicodeEmojisDefault from "../emojis/UnicodeEmojis.tsx";
+import _modDef4257 from "../../../_runtime/metro/04257__.js";
+import MarkupTextRuleDefault from "MarkupTextRule.tsx";
+import MarkupChannelMentionRuleDefault from "MarkupChannelMentionRule.tsx";
+import MarkupAttachmentLinkRuleDefault from "MarkupAttachmentLinkRule.tsx";
+import utils_ChannelUtils from "../../utils/native/ChannelUtils.tsx";
+import useGameMentionData from "../game_mentions/hooks/useGameMentionData.tsx";
+import MarkupInvisibleUnicode from "MarkupInvisibleUnicode.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const Image = get_ActivityIndicator.Image;
-obj = {
-  escape: obj,
+const Image = _mod17.Image;
+let obj = {
+  escape: {
+    requiredFirstCharacters: ["\\"],
+    match(arg0, allowEscape) {
+      if (false === allowEscape.allowEscape) {
+        return null;
+      } else {
+        const match = /^\\([^0-9A-Za-z\s])/.exec(arg0);
+        if (null == match) {
+          let tmp3 = match;
+        } else {
+          tmp3 = null;
+          if (!obj.hasSurrogates(match[0])) {
+            const _JSON = JSON;
+            const json = JSON.stringify(match[0]);
+            tmp3 = null;
+          }
+          obj = UnicodeEmojisDefault;
+        }
+        return tmp3;
+      }
+    },
+  },
   invisibleUnicode: null,
   text: null,
   emoji: null,
@@ -25,71 +47,47 @@ obj = {
   attachmentLink: null,
   silentPrefix: null,
 };
-obj = {
-  requiredFirstCharacters: ["\\"],
-  match(arg0, allowEscape) {
-    if (false === allowEscape.allowEscape) {
-      return null;
-    } else {
-      const match = /^\\([^0-9A-Za-z\s])/.exec(arg0);
-      if (null == match) {
-        let tmp3 = match;
-      } else {
-        tmp3 = null;
-        if (!obj.hasSurrogates(match[0])) {
-          const _JSON = JSON;
-          const json = JSON.stringify(match[0]);
-          tmp3 = null;
-        }
-        obj = parseRawEmojiObjectDefault;
-      }
-      return tmp3;
-    }
-  },
-};
 obj = {};
-let merged = Object.assign(tDefault.defaultRules.escape);
+let merged = Object.assign(_modDef4257.defaultRules.escape);
 obj.requiredFirstCharacters = undefined;
 obj.match = function match(arg0) {
-  const INVISIBLE_CHAR_REGEX = INVISIBLE_CHAR_REGEX2.INVISIBLE_CHAR_REGEX;
+  const INVISIBLE_CHAR_REGEX = MarkupInvisibleUnicode.INVISIBLE_CHAR_REGEX;
   return INVISIBLE_CHAR_REGEX.exec(arg0);
 };
 obj.parse = function parse() {
   return { type: "text", content: "" };
 };
-obj[1] = obj;
-obj[2] = {
-  parse(arg0, arg1, nested) {
+obj.invisibleUnicode = obj;
+obj.text = {
+  parse(arg0, fn, nested) {
     if (nested.nested) {
-      let obj = { content: null };
-      obj[0] = arg0[0];
+      let obj = { content: arg0[0] };
       return obj;
     } else {
-      obj = parseRawEmojiObjectDefault;
+      obj = UnicodeEmojisDefault;
       const result = obj.maybeTranslateSurrogatesToInlineEmoji(arg0[0]);
       if (null == result) {
-        obj = { content: null };
-        obj[0] = arg0[0];
+        obj = { content: arg0[0] };
         let tmp9 = obj;
       } else {
-        obj1 = {};
+        const obj1 = {};
         const merged = Object.assign(nested);
         obj1.nested = true;
-        tmp9 = arg1(result, obj1);
+        tmp9 = fn(result, obj1);
       }
       return tmp9;
     }
   },
 };
-obj[3] = {
+obj.emoji = {
   parse(content) {
-    let obj = parseRawEmojiObjectDefault;
+    let obj = UnicodeEmojisDefault;
     obj = { type: "emoji", content: content[0], surrogate: obj.convertNameToSurrogate(content[1]) };
     return obj;
   },
 };
-obj[4] = {
-  order: textRegexpDefault.order,
+obj = {
+  order: MarkupTextRuleDefault.order,
   requiredFirstCharacters: ["<"],
   match(arg0) {
     return /^<(a)?:(\w+):(\d+)>/.exec(arg0);
@@ -100,22 +98,22 @@ obj[4] = {
     if (flag === undefined) {
       flag = false;
     }
-    let obj = getAvatarURLDefault;
-    obj = { id: tmp3, animated: "a" === tmp, size: 48 };
+    let obj = { id: tmp3, animated: "a" === tmp, size: 48 };
     let emojiURL = obj.getEmojiURL(obj);
-    const emojiURL1 = getAvatarURLDefault.getEmojiURL({ id: tmp3, animated: false, size: 48 });
+    const emojiURL1 = AvatarUtilsDefault.getEmojiURL({ id: tmp3, animated: false, size: 48 });
     obj = { id: tmp3, alt: tmp2, src: null, frozenSrc: null };
     if (flag) {
       emojiURL = emojiURL1;
     }
-    obj[2] = emojiURL;
-    obj[3] = emojiURL1;
+    obj.src = emojiURL;
+    obj.frozenSrc = emojiURL1;
     return obj;
   },
 };
-obj[5] = {
+obj.customEmoji = obj;
+obj.channelMention = {
   parse(arg0, arg1, arg2) {
-    const channelMention = getChannelDefault.channelMention;
+    const channelMention = MarkupChannelMentionRuleDefault.channelMention;
     const parsed = channelMention.parse(arg0, arg1, arg2);
     const obj = {};
     const merged = Object.assign(parsed);
@@ -135,14 +133,13 @@ obj[5] = {
           if ("channel" === type.type) {
             const obj = {};
             const merged = Object.assign(type);
-            const assetSource = closure_3.resolveAssetSource(callback(table[1]).getChannelMentionIcon(type.iconType));
+            const assetSource = Image.resolveAssetSource(utils_ChannelUtils.getChannelMentionIcon(type.iconType));
             let uri;
             if (assetSource != null) {
               uri = assetSource.uri;
             }
             obj.icon = uri;
             tmp = obj;
-            const obj2 = callback(table[1]);
           }
           return tmp;
         });
@@ -165,14 +162,13 @@ obj[5] = {
           if ("channel" === type.type) {
             const obj = {};
             const merged = Object.assign(type);
-            const assetSource = closure_3.resolveAssetSource(callback(table[1]).getChannelMentionIcon(type.iconType));
+            const assetSource = Image.resolveAssetSource(utils_ChannelUtils.getChannelMentionIcon(type.iconType));
             let uri;
             if (assetSource != null) {
               uri = assetSource.uri;
             }
             obj.icon = uri;
             tmp = obj;
-            const obj2 = callback(table[1]);
           }
           return tmp;
         });
@@ -182,9 +178,9 @@ obj[5] = {
     return obj;
   },
 };
-obj[6] = {
+obj.gameMention = {
   parse(gameId, arg1, channelId) {
-    let obj = getGameMentionData;
+    let obj = useGameMentionData;
     const gameMentionData = obj.getGameMentionData(tmp);
     let gameIcon;
     if (gameMentionData != null) {
@@ -205,13 +201,13 @@ obj[6] = {
       const intl = tmp2(1114).intl;
       gameName = intl.string(tmp2(1114).t["11pdXZ"]);
     }
-    obj[4] = gameName;
+    obj.displayName = gameName;
     return obj;
   },
 };
-obj[7] = {
+obj.channelOrMessageUrl = {
   parse(arg0, arg1, arg2) {
-    const channelOrMessageUrl = getChannelDefault.channelOrMessageUrl;
+    const channelOrMessageUrl = MarkupChannelMentionRuleDefault.channelOrMessageUrl;
     const parsed = channelOrMessageUrl.parse(arg0, arg1, arg2);
     const obj = {};
     const merged = Object.assign(parsed);
@@ -231,14 +227,13 @@ obj[7] = {
           if ("channel" === type.type) {
             const obj = {};
             const merged = Object.assign(type);
-            const assetSource = closure_3.resolveAssetSource(callback(table[1]).getChannelMentionIcon(type.iconType));
+            const assetSource = Image.resolveAssetSource(utils_ChannelUtils.getChannelMentionIcon(type.iconType));
             let uri;
             if (assetSource != null) {
               uri = assetSource.uri;
             }
             obj.icon = uri;
             tmp = obj;
-            const obj2 = callback(table[1]);
           }
           return tmp;
         });
@@ -261,14 +256,13 @@ obj[7] = {
           if ("channel" === type.type) {
             const obj = {};
             const merged = Object.assign(type);
-            const assetSource = closure_3.resolveAssetSource(callback(table[1]).getChannelMentionIcon(type.iconType));
+            const assetSource = Image.resolveAssetSource(utils_ChannelUtils.getChannelMentionIcon(type.iconType));
             let uri;
             if (assetSource != null) {
               uri = assetSource.uri;
             }
             obj.icon = uri;
             tmp = obj;
-            const obj2 = callback(table[1]);
           }
           return tmp;
         });
@@ -278,9 +272,9 @@ obj[7] = {
     return obj;
   },
 };
-obj[8] = {
+obj.mediaPostLink = {
   parse(arg0, arg1, arg2) {
-    const mediaPostLink = getChannelDefault.mediaPostLink;
+    const mediaPostLink = MarkupChannelMentionRuleDefault.mediaPostLink;
     const parsed = mediaPostLink.parse(arg0, arg1, arg2);
     let obj = {};
     let merged = Object.assign(parsed);
@@ -300,14 +294,13 @@ obj[8] = {
           if ("channel" === type.type) {
             const obj = {};
             const merged = Object.assign(type);
-            const assetSource = closure_3.resolveAssetSource(callback(table[1]).getChannelMentionIcon(type.iconType));
+            const assetSource = Image.resolveAssetSource(utils_ChannelUtils.getChannelMentionIcon(type.iconType));
             let uri;
             if (assetSource != null) {
               uri = assetSource.uri;
             }
             obj.icon = uri;
             tmp = obj;
-            const obj2 = callback(table[1]);
           }
           return tmp;
         });
@@ -330,14 +323,13 @@ obj[8] = {
           if ("channel" === type.type) {
             const obj = {};
             const merged = Object.assign(type);
-            const assetSource = closure_3.resolveAssetSource(callback(table[1]).getChannelMentionIcon(type.iconType));
+            const assetSource = Image.resolveAssetSource(utils_ChannelUtils.getChannelMentionIcon(type.iconType));
             let uri;
             if (assetSource != null) {
               uri = assetSource.uri;
             }
             obj.icon = uri;
             tmp = obj;
-            const obj2 = callback(table[1]);
           }
           return tmp;
         });
@@ -347,39 +339,14 @@ obj[8] = {
     return obj;
   },
 };
-obj[9] = {
+obj.attachmentLink = {
   parse(arg0, arg1, arg2) {
-    const attachmentLink = regExpDefault.attachmentLink;
+    const attachmentLink = MarkupAttachmentLinkRuleDefault.attachmentLink;
     return attachmentLink.parse(arg0, arg1, arg2);
   },
 };
-let obj1 = {
-  order: textRegexpDefault.order,
-  requiredFirstCharacters: ["<"],
-  match(arg0) {
-    return /^<(a)?:(\w+):(\d+)>/.exec(arg0);
-  },
-  parse(arg0, arg1, disableAnimatedEmoji) {
-    [, tmp, tmp2, tmp3] = arg0;
-    let flag = disableAnimatedEmoji.disableAnimatedEmoji;
-    if (flag === undefined) {
-      flag = false;
-    }
-    let obj = getAvatarURLDefault;
-    obj = { id: tmp3, animated: "a" === tmp, size: 48 };
-    let emojiURL = obj.getEmojiURL(obj);
-    const emojiURL1 = getAvatarURLDefault.getEmojiURL({ id: tmp3, animated: false, size: 48 });
-    obj = { id: tmp3, alt: tmp2, src: null, frozenSrc: null };
-    if (flag) {
-      emojiURL = emojiURL1;
-    }
-    obj[2] = emojiURL;
-    obj[3] = emojiURL1;
-    return obj;
-  },
-};
-obj[10] = {
-  order: textRegexpDefault.order,
+obj.silentPrefix = {
+  order: MarkupTextRuleDefault.order,
   requiredFirstCharacters: ["@"],
   match(arg0) {
     return /^(@silent(?![^\s]))/.exec(arg0);
@@ -388,17 +355,7 @@ obj[10] = {
     return { type: "text", content: content[0] };
   },
 };
-let obj2 = {
-  order: textRegexpDefault.order,
-  requiredFirstCharacters: ["@"],
-  match(arg0) {
-    return /^(@silent(?![^\s]))/.exec(arg0);
-  },
-  parse(content) {
-    return { type: "text", content: content[0] };
-  },
-};
-let result = set.fileFinishedImporting("modules/markup/PlatformMarkupRules.native.tsx");
+let result = size.fileFinishedImporting("modules/markup/PlatformMarkupRules.native.tsx");
 
 export default obj;
 export const decorateWithIcon = function decorateWithIcon(str) {
@@ -417,14 +374,13 @@ export const decorateWithIcon = function decorateWithIcon(str) {
         if ("channel" === type.type) {
           const obj = {};
           const merged = Object.assign(type);
-          const assetSource = closure_3.resolveAssetSource(callback(table[1]).getChannelMentionIcon(type.iconType));
+          const assetSource = Image.resolveAssetSource(utils_ChannelUtils.getChannelMentionIcon(type.iconType));
           let uri;
           if (assetSource != null) {
             uri = assetSource.uri;
           }
           obj.icon = uri;
           tmp = obj;
-          const obj2 = callback(table[1]);
         }
         return tmp;
       });
@@ -433,7 +389,7 @@ export const decorateWithIcon = function decorateWithIcon(str) {
   return mapped;
 };
 export const hydrateGameMention = function hydrateGameMention(gameId, channelId) {
-  let obj = getGameMentionData;
+  let obj = useGameMentionData;
   const gameMentionData = obj.getGameMentionData(gameId);
   let gameIcon;
   if (gameMentionData != null) {
@@ -454,6 +410,6 @@ export const hydrateGameMention = function hydrateGameMention(gameId, channelId)
     const intl = tmp(1114).intl;
     gameName = intl.string(tmp(1114).t["11pdXZ"]);
   }
-  obj[4] = gameName;
+  obj.displayName = gameName;
   return obj;
 };

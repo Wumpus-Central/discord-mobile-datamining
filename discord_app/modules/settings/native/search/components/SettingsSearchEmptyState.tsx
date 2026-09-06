@@ -1,44 +1,43 @@
 // discord_app/modules/settings/native/search/components/SettingsSearchEmptyState.tsx
-import getSystemLocale from "../../../../../intl/index.native.tsx";
-import Text from "../../../../../design/components/Text/native/Text.tsx";
-import Stack from "../../../../../design/components/Stack/native/Stack.native.tsx";
-import getNoResultsAltSource from "../../../../../design/components/Illustration/native/redesign/generated/NoResultsAlt.tsx";
-import importAllResult from "../../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import util from "../../../../../intl/index.native.tsx";
+import AccessibilityAnnouncer2 from "../../../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
+import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
+import Stack_Stack from "../../../../../design/components/Stack/native/Stack.native.tsx";
+import NoResultsAlt from "../../../../../design/components/Illustration/native/redesign/generated/NoResultsAlt.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = createCacheKey.createStyles({
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4560);
+let closure_6 = createStyles.createStyles({
   container: { paddingTop: 24, justifyContent: "center", alignItems: "center" },
   textContainer: { marginTop: 24 },
 });
-const memoResult = importAllResult.memo(function SettingsSearchEmptyState() {
-  const tmp = callback3();
-  const effect = importAllResult.useEffect(() => {
-    const AccessibilityAnnouncer = callback(4272).AccessibilityAnnouncer;
-    const intl = callback(1114).intl;
-    AccessibilityAnnouncer.announce(intl.string(callback(1114).t.zihbmv), "polite");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/settings/native/search/components/SettingsSearchEmptyState.tsx");
+
+export default noop.memo(function SettingsSearchEmptyState() {
+  const tmp = closure_6();
+  const effect = noop.useEffect(() => {
+    const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
+    const intl = util.intl;
+    AccessibilityAnnouncer.announce(intl.string(util.t.zihbmv), "polite");
   }, []);
   let obj = { style: tmp.container, children: null };
-  const items = [callback(getNoResultsAltSource.NoResultsAlt, { resizeMode: "contain" })];
+  const items = [React4(NoResultsAlt.NoResultsAlt, { resizeMode: "contain" })];
   obj = { style: tmp.textContainer, align: "center", justify: "center", children: null };
   obj = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
-  let intl = getSystemLocale.intl;
-  obj[2] = intl.string(getSystemLocale.t.zihbmv);
-  const items1 = [callback(Text.Text, obj)];
-  obj1 = { variant: "text-xs/medium", color: "text-muted", children: null };
-  const intl2 = getSystemLocale.intl;
-  obj1[2] = intl2.string(getSystemLocale.t.XclvsB);
-  items1[1] = callback(Text.Text, obj1);
-  obj[3] = items1;
-  items[1] = callback2(Stack.Stack, obj);
-  obj[1] = items;
-  return callback2(View, obj);
+  let intl = util.intl;
+  obj.children = intl.string(util.t.zihbmv);
+  const items1 = [React4(Text_Text.Text, obj)];
+  const obj1 = { variant: "text-xs/medium", color: "text-muted", children: null };
+  const intl2 = util.intl;
+  obj1.children = intl2.string(util.t.XclvsB);
+  items1[1] = React4(Text_Text.Text, obj1);
+  obj.children = items1;
+  items[1] = hasOwnProperty(Stack_Stack.Stack, obj);
+  obj.children = items;
+  return hasOwnProperty(View, obj);
 });
-const result = require("set").fileFinishedImporting(
-  "modules/settings/native/search/components/SettingsSearchEmptyState.tsx",
-);
-
-export default memoResult;

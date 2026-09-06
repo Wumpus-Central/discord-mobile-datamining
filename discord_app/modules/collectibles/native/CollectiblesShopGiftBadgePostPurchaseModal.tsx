@@ -1,23 +1,26 @@
 // discord_app/modules/collectibles/native/CollectiblesShopGiftBadgePostPurchaseModal.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
-import messagesProxyDefault from "../../premium/gifting/GiftingBadge.messages.js";
-import Text from "../../../design/components/Text/native/Text.tsx";
+import _modDef2492 from "../../premium/gifting/GiftingBadge.messages.js";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import XSmallIcon from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
+import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
+import CollectiblesActionCreators from "../CollectiblesActionCreators.tsx";
 import ModalScreen from "../../../design/components/Modal/native/ModalScreen.native.tsx";
-import PostPurchaseFooterDefault from "../../premium/native/gifting/GiftBadgePostPurchase.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import GiftBadgePostPurchaseDefault from "../../premium/native/gifting/GiftBadgePostPurchase.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-({ Pressable: c4, View: c5 } = get_ActivityIndicator);
-({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_8 = createCacheKey.createStyles((paddingTop) => {
-  obj = { header: obj, closeButton: null, closeIcon: null };
-  obj = {
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4560);
+let closure_8 = createStyles.createStyles((paddingTop) => {
+  let obj = { header: null, closeButton: null, closeIcon: null };
+  const rect = {
     position: "absolute",
     top: 0,
     left: 0,
@@ -29,44 +32,44 @@ let closure_8 = createCacheKey.createStyles((paddingTop) => {
     alignItems: "center",
     justifyContent: "center",
   };
-  obj = {
+  obj.header = rect;
+  const rect1 = {
     position: "absolute",
     left: 0,
     top: paddingTop,
     bottom: 0,
-    paddingHorizontal: ThemesDefault.space.PX_16,
+    paddingHorizontal: nativeDefault.space.PX_16,
     justifyContent: "center",
   };
-  obj[1] = obj;
-  obj[2] = { tintColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+  obj.closeButton = rect1;
+  obj = { tintColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+  obj.closeIcon = obj;
   return obj;
 });
-let result = require("set").fileFinishedImporting(
-  "modules/collectibles/native/CollectiblesShopGiftBadgePostPurchaseModal.tsx",
-);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopGiftBadgePostPurchaseModal.tsx");
 
 export default function CollectiblesShopGiftBadgePostPurchaseModal(currentProgress) {
-  const tmp = callback3(useSafeAreaInsetsDefault().top);
-  const callback = React.useCallback(() => {
-    let arr = callback2(4763);
+  const tmp = closure_8(useSafeAreaInsetsDefault().top);
+  const callback = noop.useCallback(() => {
+    let arr = ModalActionCreatorsDefault;
     arr = arr.pop();
   }, []);
-  const callback1 = React.useCallback(() => {
-    let obj = callback(7541);
-    obj = { analyticsLocations: null, analyticsSource: null };
-    const items = [callback2(7182).GIFTING_BADGE_POST_PURCHASE];
-    obj[0] = items;
-    obj[1] = callback2(7182).GIFTING_BADGE_POST_PURCHASE;
+  const callback1 = noop.useCallback(() => {
+    const obj = { analyticsLocations: null, analyticsSource: null };
+    const items = [AnalyticsLocationDefault.GIFTING_BADGE_POST_PURCHASE];
+    obj.analyticsLocations = items;
+    obj.analyticsSource = AnalyticsLocationDefault.GIFTING_BADGE_POST_PURCHASE;
     const result = obj.openCollectiblesShopMobile(obj);
   }, []);
   let obj = { children: null };
   obj = { style: tmp.header, children: null };
   obj = { onPress: callback, accessibilityRole: "button", accessibilityLabel: null, style: null, children: null };
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.string(getSystemLocale.t.cpT0Cq);
-  obj[3] = tmp.closeButton;
-  obj[4] = callback(XSmallIcon.XSmallIcon, { size: "md", style: tmp.closeIcon });
-  let items = [callback(closure_4, obj)];
+  const intl = util.intl;
+  obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
+  obj.style = tmp.closeButton;
+  obj.children = timestampProducer(XSmallIcon.XSmallIcon, { size: "md", style: tmp.closeIcon });
+  let items = [timestampProducer(React4, obj)];
   const obj2 = {
     accessibilityRole: "header",
     "aria-level": "1",
@@ -75,14 +78,17 @@ export default function CollectiblesShopGiftBadgePostPurchaseModal(currentProgre
     color: "mobile-text-heading-primary",
     children: null,
   };
-  const intl2 = getSystemLocale.intl;
-  obj2[5] = intl2.string(messagesProxyDefault.roVAey);
-  items[1] = callback(Text.Text, obj2);
-  obj[1] = items;
+  const intl2 = util.intl;
+  obj2.children = intl2.string(_modDef2492.roVAey);
+  items[1] = timestampProducer(Text_Text.Text, obj2);
+  obj.children = items;
   const items1 = [
-    callback2(closure_5, obj),
-    callback(PostPurchaseFooterDefault, { currentProgress: currentProgress.giftBadgeProgress, onSendGift: callback1 }),
+    React5(hasOwnProperty, obj),
+    timestampProducer(GiftBadgePostPurchaseDefault, {
+      currentProgress: currentProgress.giftBadgeProgress,
+      onSendGift: callback1,
+    }),
   ];
-  obj[0] = items1;
-  return callback2(ModalScreen.ModalScreen, obj);
+  obj.children = items1;
+  return React5(ModalScreen.ModalScreen, obj);
 }

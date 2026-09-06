@@ -1,20 +1,20 @@
 // discord_app/modules/image_upload/ImageLoaderUtils.tsx
-import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
+import URLUtilsDefault from "../../utils/URLUtils.tsx";
+import AttachmentImageLadderExperiment from "AttachmentImageLadderExperiment.tsx";
 import privDefault from "../../../_runtime/01437_priv.js";
-import fit from "../../utils/ImageUtils.tsx";
+import ImageUtils from "../../utils/ImageUtils.tsx";
 import getDevicePixelRatioDefault from "../../utils/getDevicePixelRatio.native.tsx";
-import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import ME from "../../Constants.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
-require = arg1;
-function handleImageLoad(arg0, callbacks) {
+require = fn;
+function handleImageLoad(arg0, callbacks, arg2) {
   c0 = true;
   closure_1 = callbacks;
   callbacks = callbacks.callbacks;
-  store.del(callbacks.url);
+  closure_10.del(callbacks.url);
   if (null != callbacks) {
-    const item = callbacks.forEach((arg0) => arg0(c0, obj));
+    const item = callbacks.forEach((fn) => fn(c0, size));
   }
 }
 function getSrcWithWidthAndHeight(quality) {
@@ -36,14 +36,14 @@ function getSrcWithWidthAndHeight(quality) {
     flag2 = false;
   }
   if (!src.startsWith("data:image")) {
-    let obj = isDiscordProxiedAssetUrlDefault;
+    let obj = URLUtilsDefault;
     if (!obj.isDiscordCdnUrl(src)) {
       const items = [, ];
-      [arr[0], tmp6] = callback(src.split("?"), 2);
+      [arr[0], tmp6] = _slicedToArray(src.split("?"), 2);
       let tmp2Result = tmp2(1471);
       items[1] = tmp2Result.parse(tmp6);
-      let tmp5 = callback(src.split("?"), 2);
-      [tmp8, tmp9] = callback(items, 2);
+      let tmp5 = _slicedToArray(src.split("?"), 2);
+      [tmp8, tmp9] = _slicedToArray(items, 2);
       if (null != format) {
         tmp9.format = format;
       }
@@ -54,32 +54,26 @@ function getSrcWithWidthAndHeight(quality) {
         flag = flag2;
       }
       if (flag) {
-        let isMatch = regex.test(src);
+        let isMatch = re7.test(src);
         if (!isMatch) {
-          isMatch = regex2.test(src);
+          isMatch = re8.test(src);
         }
         flag = isMatch;
       }
       if (flag) {
         tmp9.animated = true;
       }
-      if (regex2.test(src)) {
+      if (re8.test(src)) {
         tmp9.format = "webp";
       }
-      const tmp7 = callback(items, 2);
-      obj = { width: null, height: null, maxWidth: null, maxHeight: null };
-      obj[0] = targetWidth;
-      obj[1] = targetHeight;
-      obj[2] = closure_6;
-      obj[3] = closure_6;
-      const obj3 = fit;
-      ({ width, height } = fit.fit(obj));
+      const tmp7 = _slicedToArray(items, 2);
+      let size = { width: targetWidth, height: targetHeight, maxWidth: maxHeight, maxHeight };
+      ({ width, height } = ImageUtils.fit(size));
       if (width !== sourceWidth) {
         const tmp18 = (function getAttachmentLadderConfig(arg0) {
           try {
-            const obj = { location: null };
-            obj[0] = "ImageLoaderUtils.getSrcWithWidthAndHeight";
-            const attachmentImageLadderConfig = callback(table[3]).getAttachmentImageLadderConfig(obj);
+            const obj = { location: "ImageLoaderUtils.getSrcWithWidthAndHeight" };
+            const attachmentImageLadderConfig = AttachmentImageLadderExperiment.getAttachmentImageLadderConfig(obj);
             let tmp5 = null;
             if (true === attachmentImageLadderConfig.enabled) {
               tmp5 = attachmentImageLadderConfig;
@@ -89,18 +83,12 @@ function getSrcWithWidthAndHeight(quality) {
             return null;
           }
         })("ImageLoaderUtils.getSrcWithWidthAndHeight");
-        let size = { width: null, height: null };
-        size[0] = width;
-        size[1] = height;
+        size = { width, height };
         if (null != tmp18) {
-          let tmp15Result = tmp15(1432);
-          obj = { targetWidth: null, targetHeight: null, sourceWidth: null, sourceHeight: null, maxUpscale: null };
-          obj[0] = width;
-          obj[1] = height;
-          obj[2] = sourceWidth;
-          obj[3] = sourceHeight;
-          tmp15Result = tmp15(1432);
-          obj[4] = tmp15Result.getSnapDownMaxUpscale(tmp18, tmp2(1878)());
+          tmp15(1432);
+          obj = { targetWidth: width, targetHeight: height, sourceWidth, sourceHeight, maxUpscale: null };
+          const tmp15Result = tmp15(1432);
+          obj.maxUpscale = tmp15Result.getSnapDownMaxUpscale(tmp18, tmp2(1878)());
           size = tmp15Result.snapAttachmentDimensions(obj);
         }
         if (!tmp19) {
@@ -120,71 +108,67 @@ function getSrcWithWidthAndHeight(quality) {
   }
   return src;
 }
-({ NOOP: c5, MEDIA_PROXY_MAX_TARGET_RESOLUTION: closure_6 } = ME);
+const Constants = fn(1074);
+({ NOOP: hasOwnProperty, MEDIA_PROXY_MAX_TARGET_RESOLUTION: metroRequire } = Constants);
 const re7 = /\.webp($|\?|#)/i;
 const re8 = /\.avif($|\?|#)/i;
 let closure_9 = [16, 20, 22, 24, 28, 32, 40, 44, 48, 56, 60, 64, 80, 96, 100, 128, 160, 240, 256, 300, 320, 480, 512, 600, 640, 1024, 1280, 1536, 2048, 3072, 4096];
 let closure_10 = new privDefault({ max: 1000 });
-const tmp3 = new privDefault({ max: 1000 });
-let result = require("set").fileFinishedImporting("modules/image_upload/ImageLoaderUtils.tsx");
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/image_upload/ImageLoaderUtils.tsx");
 
 export const getDevicePixelRatio = getDevicePixelRatioDefault;
 export const isImageLoaded = function isImageLoaded(arg0) {
-  const value = store.get(arg0);
+  value = closure_10.get(arg0);
   return null != value && value.loaded;
 };
-export const loadImage = function loadImage(arg0, bind) {
-  let obj = arg0;
-  obj = store;
-  let value = store.get(arg0);
-  let backoff = value;
+export const loadImage = function loadImage(url, bind) {
+  value = closure_10.get(url);
+  let obj = value;
   if (null != value) {
     if (value.loaded) {
       if (null != bind) {
-        const obj2 = image(backoff[6]);
-        image(backoff[6]).awaitOnline().then(() => {
+        const obj2 = image(obj[6]);
+        image(obj[6]).awaitOnline().then(() => {
           if (tmp2) {
             const callbacks = tmp.callbacks;
-            const item = callbacks.forEach((arg0) => {
-              if (null != closure_2) {
-                arg0(false, tmp);
+            const item = callbacks.forEach((fn) => {
+              if (null != closure_1_2) {
+                fn(false, tmp);
               } else {
-                obj = { url: null, loaded: true };
-                obj[0] = closure_0;
-                arg0(true, obj);
+                obj = { url, loaded: true };
+                fn(true, obj);
               }
             });
           }
         });
-        const awaitOnlineResult = image(backoff[6]).awaitOnline();
+        const awaitOnlineResult = image(obj[6]).awaitOnline();
       }
       let fn = closure_5;
     }
     return fn;
   }
   if (null == value) {
-    obj = { url: null, loaded: false };
-    obj[0] = arg0;
-    backoff = obj;
-    const result = obj.set(arg0, obj);
-    image = undefined;
+    obj = { url, loaded: false };
+    const result = obj.set(url, obj);
     image = new globalThis.Image();
-    backoff = undefined;
+    closure_129_0 = obj;
+    closure_129_1 = image;
+    let backoff;
     if (null == obj.backoff) {
-      const tmp6 = new image(backoff[5])();
+      const tmp6 = new image(obj[5])();
       obj.backoff = tmp6;
     }
     backoff = obj.backoff;
-    image.onerror = callback2(function*() {
+    image.onerror = asyncGeneratorStep(async (arg0, value) => {
       if (c3 === 2) {
         c3 = 3;
-        HermesBuiltin.throwTypeError();
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp4 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          let obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
@@ -192,53 +176,49 @@ export const loadImage = function loadImage(arg0, bind) {
       } else {
         try {
           c3 = 2;
-          if (0 === c2) {
+          if (0 === backoff) {
             if (arg0 === 1) {
               c3 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj = { value, done: true };
               return obj;
             } else {
-              closure_1 = tmp2;
-              closure_0 = tmp2;
-              let obj1 = closure_1_1(c2[6]);
-              c2 = 1;
+              backoff = tmp2;
+              let obj1 = tmp2(backoff[6]);
+              backoff = 1;
               c3 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = obj1.isOnline();
+              obj1.value = obj1.isOnline();
               return obj1;
             }
           } else if (arg0 === 1) {
             c3 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
-            if (c2.fails < 5) {
-              c2.fail(() => {
+            if (closure_129_2.fails < 5) {
+              closure_129_2.fail(() => {
                 image = new globalThis.Image();
                 backoff = undefined;
-                if (null == tmp2.backoff) {
-                  let tmp7 = new tmp22(table[5])();
+                if (null == backoff.backoff) {
+                  let tmp7 = new closure_1(c2[5])();
                   tmp.backoff = tmp7;
                 }
                 backoff = tmp.backoff;
-                image.onerror = closure_1_4(function*() {
+                image.onerror = closure_2_4(async (arg0, value) => {
                   if (c3 === 2) {
                     c3 = 3;
-                    HermesBuiltin.throwTypeError();
+                    throw new TypeError("Generator functions may not be called on executing generators");
                   } else if (tmp4 === 3) {
                     if (arg0 === 1) {
-                      throw arg1;
+                      throw value;
                     } else if (arg0 === 2) {
-                      let obj = { value: null, done: true };
-                      obj[0] = arg1;
+                      let obj = { value, done: true };
                       return obj;
                     } else {
                       return { value: "HermesInternal", done: null };
@@ -246,49 +226,46 @@ export const loadImage = function loadImage(arg0, bind) {
                   } else {
                     try {
                       c3 = 2;
-                      if (0 === c2) {
+                      if (0 === backoff) {
                         if (arg0 === 1) {
                           c3 = 3;
-                          throw arg1;
+                          throw value;
                         } else if (arg0 === 2) {
                           c3 = 3;
-                          obj = { value: null, done: true };
-                          obj[0] = arg1;
+                          obj = { value, done: true };
                           return obj;
                         } else {
-                          closure_1 = tmp2;
-                          closure_0 = tmp2;
-                          let obj1 = closure_1_1(c2[6]);
-                          c2 = 1;
+                          backoff = tmp2;
+                          let obj1 = tmp2(backoff[6]);
+                          backoff = 1;
                           c3 = 1;
                           obj1 = { value: null, done: false };
-                          obj1[0] = obj1.isOnline();
+                          obj1.value = obj1.isOnline();
                           return obj1;
                         }
                       } else if (arg0 === 1) {
                         c3 = 3;
-                        throw arg1;
+                        throw value;
                       } else if (arg0 === 2) {
                         c3 = 3;
-                        obj = { value: null, done: true };
-                        obj[0] = arg1;
+                        obj = { value, done: true };
                         return obj;
                       } else {
-                        if (c2.fails < 5) {
-                          c2.fail(() => {
+                        if (closure_129_2.fails < 5) {
+                          closure_129_2.fail(() => {
                             image = new globalThis.Image();
                             backoff = undefined;
-                            if (null == tmp2.backoff) {
-                              let tmp7 = new tmp22(table[5])();
+                            if (null == backoff.backoff) {
+                              let tmp7 = new closure_1(c2[5])();
                               tmp.backoff = tmp7;
                             }
                             backoff = tmp.backoff;
-                            image.onerror = closure_1_4(/* F108420 */ function() { ... });
+                            image.onerror = closure_2_4(/* F108420 */ function() { ... });
                             image.onload = function onload() { ... };
-                            image.src = tmp2.url;
+                            image.src = backoff.url;
                           });
                         } else {
-                          closure_1_11(true, closure_0, closure_1);
+                          closure_1_11(true, closure_129_0, closure_129_1);
                         }
                         c3 = 3;
                       }
@@ -303,19 +280,18 @@ export const loadImage = function loadImage(arg0, bind) {
                   if (null != backoff) {
                     backoff.succeed();
                   }
-                  backoff = false;
-                  let obj = tmp;
+                  c0 = false;
                   ({ callbacks, url } = backoff);
-                  obj = { url, loaded: true, width: obj.width, height: obj.height };
-                  const result = closure_1_10.set(url, obj);
+                  const size = { url, loaded: true, width: image.width, height: image.height };
+                  const result = closure_2_10.set(url, size);
                   if (null != callbacks) {
-                    const item = callbacks.forEach((arg0) => arg0(c0, obj));
+                    const item = callbacks.forEach((fn) => fn(c0, size));
                   }
                 };
-                image.src = tmp2.url;
+                image.src = backoff.url;
               });
             } else {
-              closure_1_11(true, closure_0, closure_1);
+              closure_1_11(true, closure_129_0, closure_129_1);
             }
             c3 = 3;
           }
@@ -330,13 +306,12 @@ export const loadImage = function loadImage(arg0, bind) {
       if (null != backoff) {
         backoff.succeed();
       }
-      backoff = false;
-      let obj = tmp;
+      c0 = false;
       ({ callbacks, url } = backoff);
-      obj = { url, loaded: true, width: obj.width, height: obj.height };
-      const result = closure_1_10.set(url, obj);
+      const size = { url, loaded: true, width: image.width, height: image.height };
+      const result = closure_2_10.set(url, size);
       if (null != callbacks) {
-        const item = callbacks.forEach((arg0) => arg0(c0, obj));
+        const item = callbacks.forEach((fn) => fn(c0, size));
       }
     };
     image.src = obj.url;
@@ -356,28 +331,28 @@ export const loadImage = function loadImage(arg0, bind) {
   fn = () => {
     let tmp2 = null != image;
     if (tmp2) {
-      tmp2 = null != backoff;
+      tmp2 = null != obj;
     }
     if (tmp2) {
-      if (null != backoff.callbacks) {
+      if (null != obj.callbacks) {
         const callbacks = tmp4.callbacks;
         callbacks.delete(image);
       }
-      if (null != backoff.backoff) {
-        backoff = tmp4.backoff;
+      if (null != obj.backoff) {
+        const backoff = tmp4.backoff;
         backoff.cancel();
       }
     }
   };
 };
-export const getBestMediaProxySize = function getBestMediaProxySize(size, closure_12) {
+export const getBestMediaProxySize = function getBestMediaProxySize(size, arg1) {
   closure_0 = size;
-  let flag = closure_12;
-  if (closure_12 === undefined) {
+  let flag = arg1;
+  if (arg1 === undefined) {
     flag = false;
   }
   if (flag) {
-    const found = closure_9.filter((arg0) => arg0 <= closure_0);
+    const found = closure_9.filter((item) => item <= closure_0);
     const arr = found.pop();
     if (null != arr) {
       if (size / arr <= 1.25) {
@@ -385,7 +360,7 @@ export const getBestMediaProxySize = function getBestMediaProxySize(size, closur
       }
     }
   }
-  let found1 = closure_9.find((arg0) => closure_0 <= arg0);
+  let found1 = closure_9.find((item) => closure_0 <= item);
   if (found1 == null) {
     found1 = arr2[arr2.length - 1];
   }

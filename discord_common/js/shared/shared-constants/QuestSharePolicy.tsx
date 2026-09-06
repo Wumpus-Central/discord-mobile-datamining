@@ -1,6 +1,6 @@
 // discord_common/js/shared/shared-constants/QuestSharePolicy.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/QuestSharePolicy.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/QuestSharePolicy.tsx");
 
 export const QuestSharePolicy = { SHAREABLE_EVERYWHERE: "shareable_everywhere", NOT_SHAREABLE: "not_shareable" };

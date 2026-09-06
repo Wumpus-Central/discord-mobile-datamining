@@ -1,15 +1,15 @@
 // discord_app/modules/applications/utils/ApplicationFlagUtils.tsx
-import fromStringAll from "../../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
-import closure_2 from "../../../records/ApplicationRecord.tsx";
+import BigFlagUtilsAll from "../../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import ApplicationRecord from "../../../records/ApplicationRecord.tsx";
 
 function getApplicationFlags(application) {
   if (null == application) {
-    let flags = fromStringAll.deserialize(0);
-    const obj2 = fromStringAll;
+    const deserializer2 = BigFlagUtilsAll;
+    let flags = deserializer2.deserialize(0);
   } else {
     let tmp5 = null != application;
     if (tmp5) {
-      let tmp2 = application instanceof closure_2;
+      let tmp2 = application instanceof ApplicationRecord;
       if (!tmp2) {
         tmp2 = "flags" in application && typeof application.flags === "bigint";
         const tmp3 = "flags" in application && typeof application.flags === "bigint";
@@ -26,6 +26,7 @@ function getApplicationFlags(application) {
     if (tmp5) {
       flags = application.flags;
     } else {
+      const deserializer = BigFlagUtilsAll;
       let num = application.flags_new;
       if (num == null) {
         num = application.flags;
@@ -33,15 +34,15 @@ function getApplicationFlags(application) {
       if (num == null) {
         num = 0;
       }
-      flags = fromStringAll.deserialize(num);
-      const obj = fromStringAll;
+      flags = deserializer.deserialize(num);
     }
   }
   return flags;
 }
-const result = require("set").fileFinishedImporting("modules/applications/utils/ApplicationFlagUtils.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/applications/utils/ApplicationFlagUtils.tsx");
 
 export { getApplicationFlags };
 export const hasApplicationFlag = function hasApplicationFlag(application, EMBEDDED) {
-  return fromStringAll.has(getApplicationFlags(application), EMBEDDED);
+  return BigFlagUtilsAll.has(getApplicationFlags(application), EMBEDDED);
 };

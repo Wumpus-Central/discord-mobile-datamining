@@ -1,13 +1,13 @@
 // discord_app/modules/routing/RouteUtils.tsx
-import set from "../../../_runtime/00002_set.js";
-import INVITE from "RouteConstants.tsx";
-import set2 from "../channel/ChannelConstants.tsx";
+import RouteConstants from "RouteConstants.tsx";
+import ChannelConstants from "../channel/ChannelConstants.tsx";
 import RouteParam from "RouteParam.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const PSEUDO_GUILD_IDS = INVITE.PSEUDO_GUILD_IDS;
-const isStaticChannelRoute = set2.isStaticChannelRoute;
+const PSEUDO_GUILD_IDS = RouteConstants.PSEUDO_GUILD_IDS;
+const isStaticChannelRoute = ChannelConstants.isStaticChannelRoute;
 const re2 = /^\d+$/;
-const result = set.fileFinishedImporting("modules/routing/RouteUtils.tsx");
+const result = size.fileFinishedImporting("modules/routing/RouteUtils.tsx");
 
 export const RouteParam = RouteParam.RouteParam;
 export const isPseudoGuildId = function isPseudoGuildId(guildId) {
@@ -18,7 +18,7 @@ export const isValidGuildId = function isValidGuildId(guildId) {
   if (tmp) {
     let hasItem = PSEUDO_GUILD_IDS.includes(guildId);
     if (!hasItem) {
-      hasItem = regex.test(guildId);
+      hasItem = re2.test(guildId);
     }
     tmp = hasItem;
   }
@@ -27,7 +27,7 @@ export const isValidGuildId = function isValidGuildId(guildId) {
 export const isValidChannelId = function isValidChannelId(channelId) {
   let tmp = null == channelId;
   if (!tmp) {
-    let isMatch = regex.test(channelId);
+    let isMatch = re2.test(channelId);
     if (!isMatch) {
       isMatch = isStaticChannelRoute(channelId);
     }

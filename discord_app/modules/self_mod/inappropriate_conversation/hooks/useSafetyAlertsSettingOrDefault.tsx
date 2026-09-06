@@ -1,17 +1,18 @@
 // discord_app/modules/self_mod/inappropriate_conversation/hooks/useSafetyAlertsSettingOrDefault.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import useUserIsTeen from "../../hooks/useUserIsTeen.tsx";
-import closure_2 from "../../../user_settings/UserSettingsProtoStore.tsx";
-import closure_3 from "../../../../stores/UserStore.tsx";
+import UserSettingsProtoStore from "../../../user_settings/UserSettingsProtoStore.tsx";
+import UserStore from "../../../../stores/UserStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting(
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/self_mod/inappropriate_conversation/hooks/useSafetyAlertsSettingOrDefault.tsx",
 );
 
 export const useSafetyAlertsSettingOrDefault = function useSafetyAlertsSettingOrDefault() {
-  currentUser = currentUser.getCurrentUser();
-  const items = [closure_2];
+  const currentUser = UserStore.getCurrentUser();
+  const items = [UserSettingsProtoStore];
   const stateFromStores = initialize.useStateFromStores(items, () => {
     const privacy = settings.settings.privacy;
     let flag;
@@ -25,9 +26,7 @@ export const useSafetyAlertsSettingOrDefault = function useSafetyAlertsSettingOr
     }
     return flag;
   });
-  const obj2 = initialize;
   let userIsTeen = useUserIsTeen.useUserIsTeen();
-  const obj3 = useUserIsTeen;
   let tmp3 = !userIsTeen;
   if (userIsTeen) {
     tmp3 = !obj4.useIsEligibleForInappropriateConversationDefaultOn({ location: "useSafetyAlertsSettingOrDefault" });

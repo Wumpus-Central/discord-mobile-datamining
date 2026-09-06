@@ -1,27 +1,27 @@
 // discord_app/modules/build_overrides/BuildOverrideUtils.tsx
-import ME from "../../Constants.tsx";
-import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import BUILD_OVERRIDE_TARGET_NAMES from "BuildOverrideConstants.tsx";
-import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
+import Constants from "../../Constants.tsx";
+import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import BuildOverrideConstants from "BuildOverrideConstants.tsx";
+import URLUtilsDefault from "../../utils/URLUtils.tsx";
 import UrlAll from "../../../_runtime/01367_Url.js";
-import parseDefault from "../../../_runtime/01370_parse.js";
-import getConstants from "../../utils/native/ClientInfoUtils.tsx";
-import set from "../../utils/PlatformUtils.tsx";
+import _modDef1370 from "../../../_runtime/metro/01370__.js";
+import ClientInfoUtils from "../../utils/native/ClientInfoUtils.tsx";
+import PlatformUtils from "../../utils/PlatformUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-let closure_4 = BUILD_OVERRIDE_TARGET_NAMES.BUILD_OVERRIDE_COOKIE_NAME;
-const PRIMARY_DOMAIN = ME.PRIMARY_DOMAIN;
-getConstants = getConstants.getConstants();
-if (set.isAndroid()) {
-  let Version = getConstants.Version.split(" - ")[0];
-  const str = getConstants.Version;
+let closure_4 = BuildOverrideConstants.BUILD_OVERRIDE_COOKIE_NAME;
+const PRIMARY_DOMAIN = Constants.PRIMARY_DOMAIN;
+ClientInfoUtils = ClientInfoUtils.getConstants();
+if (PlatformUtils.isAndroid()) {
+  let Version = ClientInfoUtils.Version.split(" - ")[0];
 } else {
-  const _module2 = set;
+  const _module2 = PlatformUtils;
   if (_module2.isIOS()) {
-    Version = getConstants.Version;
+    Version = ClientInfoUtils.Version;
   }
 }
-function getAPIEndpoint(c5) {
-  return "" + location.protocol + "//" + location.host + c5;
+function getAPIEndpoint(arg0) {
+  return "" + location.protocol + "//" + location.host + arg0;
 }
 function isManualBuildOverrideLink(iter) {
   let isMatch = null != iter;
@@ -34,15 +34,13 @@ function manualOverrideLinkMeta(str) {
   const match = str.match(regExp1);
   if (null != match) {
     if (2 === match.length) {
-      let obj = set;
-      obj = { targetBuildOverride: null, validForUserIds: null, expiresAt: "Mon, 1 Jan 2038 00:00:00 GMT" };
+      let obj = { targetBuildOverride: null, validForUserIds: null, expiresAt: "Mon, 1 Jan 2038 00:00:00 GMT" };
       obj = {};
       const _HermesInternal = HermesInternal;
-      obj1 = { type: "branch", id: null };
-      obj1[1] = match[1];
+      const obj1 = { type: "branch", id: match[1] };
       obj["discord_" + obj.getNativePlatform()] = obj1;
-      obj[0] = obj;
-      obj[1] = [];
+      obj.targetBuildOverride = obj;
+      obj.validForUserIds = [];
       return obj;
     }
   }
@@ -53,7 +51,7 @@ const regExp = new RegExp(
   "i",
 );
 const regExp1 = new RegExp("^dev://branch/([\\w-./]+)$", "i");
-set = new Set([
+const set = new Set([
   "canary.discord.com",
   "ptb.discord.com",
   "discord.com",
@@ -62,12 +60,12 @@ set = new Set([
   "discordapp.com",
 ]);
 const set1 = new Set(["/__development/link", "/__development/link/"]);
-const result = set.fileFinishedImporting("modules/build_overrides/BuildOverrideUtils.tsx");
+const result = size.fileFinishedImporting("modules/build_overrides/BuildOverrideUtils.tsx");
 
 export const APP_VERSION = Version;
 export { getAPIEndpoint };
 export const getBuildOverride = function getBuildOverride() {
-  let obj = isDiscordProxiedAssetUrlDefault;
+  let obj = URLUtilsDefault;
   const safeParseWithQueryResult = obj.safeParseWithQuery(
     "" + location.protocol + "//" + location.host + "/__development/build_overrides",
   );
@@ -78,15 +76,13 @@ export const getBuildOverride = function getBuildOverride() {
     if (Version) {
       safeParseWithQueryResult.query.version = tmp3;
     }
-    const HTTP = sendRequest.HTTP;
-    obj = { url: null, oldFormErrors: true, rejectWithError: false };
-    obj[0] = UrlAll.format(safeParseWithQueryResult);
-    const value = HTTP.get(obj);
+    const HTTP = HTTPUtils.HTTP;
+    obj = { url: UrlAll.format(safeParseWithQueryResult), oldFormErrors: true, rejectWithError: false };
+    value = HTTP.get(obj);
     resolved = value.then(
       (body) => body.body || null,
       () => null,
     );
-    const obj3 = UrlAll;
   }
   return resolved;
 };
@@ -104,18 +100,16 @@ export const getBuildOverrideMeta = function getBuildOverrideMeta(url) {
         let obj = { targetBuildOverride: null, validForUserIds: null, expiresAt: "Mon, 1 Jan 2038 00:00:00 GMT" };
         obj = {};
         const _HermesInternal = HermesInternal;
-        obj1 = { type: "branch", id: null };
-        obj1[1] = match[1];
-        obj["discord_" + set.getNativePlatform()] = obj1;
-        obj[0] = obj;
-        obj[1] = [];
+        const obj1 = { type: "branch", id: match[1] };
+        obj["discord_" + PlatformUtils.getNativePlatform()] = obj1;
+        obj.targetBuildOverride = obj;
+        obj.validForUserIds = [];
         tmp13 = obj;
-        const obj4 = set;
       }
     }
     return Promise.resolve(tmp13);
   } else {
-    obj = isDiscordProxiedAssetUrlDefault;
+    obj = URLUtilsDefault;
     const safeParseWithQueryResult = obj.safeParseWithQuery(url);
     if (null == safeParseWithQueryResult) {
       let resolved = Promise.resolve(null);
@@ -127,11 +121,11 @@ export const getBuildOverrideMeta = function getBuildOverrideMeta(url) {
       }
       const _window = window;
       safeParseWithQueryResult.host = window.location.host;
-      const HTTP = sendRequest.HTTP;
+      const HTTP = HTTPUtils.HTTP;
       let obj2 = { url: null, oldFormErrors: true, rejectWithError: false };
       obj2 = UrlAll;
-      obj2[0] = obj2.format(safeParseWithQueryResult);
-      const value = HTTP.get(obj2);
+      obj2.url = obj2.format(safeParseWithQueryResult);
+      value = HTTP.get(obj2);
       resolved = value.then(
         (body) => body.body || null,
         () => null,
@@ -145,7 +139,7 @@ export const probablyHasBuildOverride = function probablyHasBuildOverride() {
 };
 export const getBuildOverrideExperiments = function getBuildOverrideExperiments() {
   try {
-    let experiments = parseDefault;
+    let experiments = _modDef1370;
     const _window = window;
     const tmp5 = experiments.parse(window.document.cookie)[closure_4];
     if (null == tmp5) {
@@ -172,18 +166,17 @@ export const isBuildOverrideLink = function isBuildOverrideLink(target) {
 };
 export { isManualBuildOverrideLink };
 export { manualOverrideLinkMeta };
-export const validateURL = function validateURL(target) {
-  let isMatch = null != target;
+export const validateURL = function validateURL(url) {
+  let isMatch = null != url;
   if (isMatch) {
-    isMatch = regExp1.test(target);
+    isMatch = regExp1.test(url);
   }
   if (isMatch) {
-    let obj = { payload: null, url: null };
-    obj[1] = target;
+    let obj = { payload: null, url };
     return obj;
   } else {
-    obj = isDiscordProxiedAssetUrlDefault;
-    const url = obj.safeParseWithQuery(target);
+    obj = URLUtilsDefault;
+    url = obj.safeParseWithQuery(url);
     if (null == url) {
       return null;
     } else {
@@ -191,7 +184,6 @@ export const validateURL = function validateURL(target) {
         if ("s" in url.query) {
           if (set1.has(url.pathname)) {
             for (const key10021 in url.query) {
-              let tmp11 = key10021;
               if ("s" === key10021) {
                 continue;
               } else {
@@ -201,9 +193,7 @@ export const validateURL = function validateURL(target) {
               }
               continue;
             }
-            obj = { payload: null, url: null };
-            obj[0] = url.query.s;
-            obj[1] = UrlAll.format(url);
+            obj = { payload: url.query.s, url: UrlAll.format(url) };
             return obj;
           }
         }

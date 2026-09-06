@@ -1,7 +1,7 @@
 // discord_common/js/shared/shared-constants/NotifTypes.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/NotifTypes.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/NotifTypes.tsx");
 
 export const NotifTypes = {
   MESSAGE_CREATE: 1,

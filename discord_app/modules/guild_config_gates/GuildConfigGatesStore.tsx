@@ -1,8 +1,8 @@
 // discord_app/modules/guild_config_gates/GuildConfigGatesStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
 
-let closure_0 = {};
+const dependencyMap = {};
 const Store = initializeDefault.Store;
 class GuildConfigGatesStore extends Store {}
 const prototype = GuildConfigGatesStore.prototype;
@@ -17,7 +17,7 @@ prototype["getGates"] = function getGates(arg0) {
   return obj;
 };
 GuildConfigGatesStore.displayName = "GuildConfigGatesStore";
-const guildConfigGatesStore = new GuildConfigGatesStore(dispatcherDefault, {
+const guildConfigGatesStore = new GuildConfigGatesStore(DispatcherDefault, {
   GUILD_CONFIG_GATES_FETCH_SUCCESS: function handleFetchSuccess(guildId) {
     closure_0[guildId.guildId] = {
       guildVerificationRoleEnabled: guildId.guildVerificationRoleEnabled,
@@ -28,6 +28,7 @@ const guildConfigGatesStore = new GuildConfigGatesStore(dispatcherDefault, {
     closure_0 = {};
   },
 });
-const result = require("set").fileFinishedImporting("modules/guild_config_gates/GuildConfigGatesStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_config_gates/GuildConfigGatesStore.tsx");
 
 export default guildConfigGatesStore;

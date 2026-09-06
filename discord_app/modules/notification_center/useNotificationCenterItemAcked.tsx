@@ -1,22 +1,22 @@
 // discord_app/modules/notification_center/useNotificationCenterItemAcked.tsx
-import closure_2 from "NotificationCenterStore.tsx";
-import { getRelativeTimestamp } from "NotificationCenterUtils.tsx";
+import NotificationCenterStore from "NotificationCenterStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/notification_center/useNotificationCenterItemAcked.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/notification_center/useNotificationCenterItemAcked.tsx");
 
-export const useNotificationCenterItemAcked = function useNotificationCenterItemAcked(item, ackedBeforeId) {
-  const _require = item;
-  const items = [closure_2];
-  let stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
-    closure_1_2.isLocalItemAcked(closure_0),
+export const useNotificationCenterItemAcked = function useNotificationCenterItemAcked(forceUnacked, ackedBeforeId) {
+  _require = forceUnacked;
+  const items = [NotificationCenterStore];
+  let stateFromStores = require("initialize").useStateFromStores(items, () =>
+    NotificationCenterStore.isLocalItemAcked(closure_0),
   );
-  const forceUnacked = item.forceUnacked;
+  forceUnacked = forceUnacked.forceUnacked;
   let tmp4 = !forceUnacked;
   if (!forceUnacked) {
     if (!stateFromStores) {
-      stateFromStores = require("NotificationCenterUtils.tsx").isRemoteAcked(item, ackedBeforeId);
-      const tmpResult = getRelativeTimestamp;
+      stateFromStores = require("NotificationCenterUtils").isRemoteAcked(forceUnacked, ackedBeforeId);
+      const tmpResult = require("NotificationCenterUtils");
     }
     tmp4 = stateFromStores;
   }

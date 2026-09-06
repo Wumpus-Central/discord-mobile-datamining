@@ -1,11 +1,13 @@
 // discord_app/modules/wishlists/native/CollectiblesWishlistItemCard.tsx
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import { transformSKUToCollectiblesItem as closure_4 } from "../../collectibles/records/CollectiblesItemRecord.tsx";
-import closure_5 from "../SentGiftsStore.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import SKUPreview from "../../skus/native/SKUPreview.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import SentGiftsStore from "../SentGiftsStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/wishlists/native/CollectiblesWishlistItemCard.tsx");
+require = fn;
+let closure_4 = fn(7546).transformSKUToCollectiblesItem;
+const jsx = fn(21).jsx;
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/wishlists/native/CollectiblesWishlistItemCard.tsx");
 
 export default function CollectiblesWishlistItemCard(sku) {
   sku = sku.sku;
@@ -15,17 +17,17 @@ export default function CollectiblesWishlistItemCard(sku) {
   }
   const wishlistOwnerId = sku.wishlistOwnerId;
   const size = sku.size;
-  const merged = Object.assign(sku, Object.create(null));
+  const merged = Object.assign(sku, Object.assign({ sku: 0, isOwned: 0, source: 0, wishlistOwnerId: 0, size: 0 }));
   let memo;
   let obj = sku(size[4]);
-  const items = [closure_5];
+  const items = [SentGiftsStore];
   const items1 = [sku.id, wishlistOwnerId];
   const stateFromStores = obj.useStateFromStores(
     items,
     () => {
       let hasSentGiftResult = null != wishlistOwnerId;
       if (hasSentGiftResult) {
-        hasSentGiftResult = closure_1_5.hasSentGift(sku.id, tmp);
+        hasSentGiftResult = SentGiftsStore.hasSentGift(sku.id, tmp);
       }
       return hasSentGiftResult;
     },
@@ -33,15 +35,13 @@ export default function CollectiblesWishlistItemCard(sku) {
   );
   const items2 = [sku];
   const productNameAndTypeFromSku = sku(size[5]).getProductNameAndTypeFromSku(sku);
-  memo = memo.useMemo(() => closure_1_4(sku), items2);
+  memo = memo.useMemo(() => closure_4(sku), items2);
   const items3 = [memo, size];
   const callback = memo.useCallback(() => {
     let tmp2 = null;
     if (null != memo) {
-      const obj = { collectiblesItemData: null, size: null };
-      obj[0] = tmp;
-      obj[1] = size;
-      tmp2 = closure_1_6(sku(size[6]).CollectiblesPreview, obj);
+      const obj = { collectiblesItemData: tmp, size };
+      tmp2 = jsx(SKUPreview.CollectiblesPreview, { collectiblesItemData: tmp, size });
     }
     return tmp2;
   }, items3);

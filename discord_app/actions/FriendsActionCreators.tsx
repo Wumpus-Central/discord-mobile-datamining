@@ -1,12 +1,12 @@
 // discord_app/actions/FriendsActionCreators.tsx
-import set from "../../_runtime/00002_set.js";
-import dispatcherDefault from "../Dispatcher.tsx";
-import ME from "../Constants.tsx";
-import transitionTo from "../modules/routing/router_utils.tsx";
-import trackFriendsListClickedDefault from "../modules/app_analytics/track/friends_list_viewed/trackFriendListClicked.tsx";
+import DispatcherDefault from "../Dispatcher.tsx";
+import Constants from "../Constants.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-const Routes = ME.Routes;
-const result = set.fileFinishedImporting("actions/FriendsActionCreators.tsx");
+const router_utils = tmp(1100);
+const trackFriendListClickedDefault = tmp5(16752);
+const Routes = Constants.Routes;
+const result = size.fileFinishedImporting("actions/FriendsActionCreators.tsx");
 
 export default {
   transitionToSection(PENDING, arg1) {
@@ -19,28 +19,23 @@ export default {
       flag = false;
     }
     if (obj2.getHistory().location.pathname !== Routes.FRIENDS) {
-      transitionTo.transitionTo(tmp3.FRIENDS);
-      const tmpResult = transitionTo;
+      router_utils.transitionTo(tmp3.FRIENDS);
+      const tmpResult = router_utils;
     }
-    obj2 = transitionTo;
-    const tmp = require;
-    const tmp5 = importDefault;
+    obj2 = router_utils;
     obj = { type: "FRIENDS_SET_SECTION", section: PENDING };
-    dispatcherDefault.dispatch(obj);
+    DispatcherDefault.dispatch(obj);
     if (flag) {
-      obj = { tab_opened: null };
-      obj[0] = PENDING;
-      trackFriendsListClickedDefault(obj);
+      obj = { tab_opened: PENDING };
+      trackFriendListClickedDefault(obj);
     }
   },
   setSection(section) {
-    let obj = dispatcherDefault;
-    obj = { type: "FRIENDS_SET_SECTION", section };
+    const obj = { type: "FRIENDS_SET_SECTION", section };
     obj.dispatch(obj);
   },
   setInitialSection(section) {
-    let obj = dispatcherDefault;
-    obj = { type: "FRIENDS_SET_INITIAL_SECTION", section };
+    const obj = { type: "FRIENDS_SET_INITIAL_SECTION", section };
     obj.dispatch(obj);
   },
 };

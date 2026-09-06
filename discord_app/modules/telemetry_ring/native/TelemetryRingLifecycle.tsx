@@ -1,14 +1,13 @@
 // discord_app/modules/telemetry_ring/native/TelemetryRingLifecycle.tsx
-import dispatcherDefault from "../../../Dispatcher.tsx";
-import getHermesInstrumentedStatsSummaryDefault from "../../../utils/ProcessUtils.native.tsx";
-import initializeDefault from "../../../lib/LifecycleManager.tsx";
-import shouldRunDefault from "channels/ZoomedInTelemetry.tsx";
-import closure_2 from "../../experiments/apex/ApexExperimentStore.tsx";
-import closure_3 from "../../../stores/UserStore.tsx";
-import closure_4 from "../../../stores/native/AppStateStore.tsx";
-import { AppStates } from "../../../Constants.tsx";
+import DispatcherDefault from "../../../Dispatcher.tsx";
+import ProcessUtilsDefault from "../../../utils/ProcessUtils.native.tsx";
+import ZoomedInTelemetryDefault from "channels/ZoomedInTelemetry.tsx";
+import ApexExperimentStore from "../../experiments/apex/ApexExperimentStore.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
+import AppStateStore from "../../../stores/native/AppStateStore.tsx";
+import LifecycleManager from "../../../lib/LifecycleManager.tsx";
 
-initializeDefault;
+const AppStates = fn(1074).AppStates;
 class TelemetryRingLifecycleImpl extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -28,13 +27,12 @@ class TelemetryRingLifecycleImpl extends tmp2 {
 }
 const prototype = TelemetryRingLifecycleImpl.prototype;
 prototype["_updateZoomedInExport"] = function _updateZoomedInExport() {
-  const state = closure_4.getState();
+  const state = AppStateStore.getState();
   let shouldRunResult = state === AppStates.ACTIVE;
   if (shouldRunResult) {
-    shouldRunResult = shouldRunDefault.shouldRun();
-    const obj = shouldRunDefault;
+    shouldRunResult = ZoomedInTelemetryDefault.shouldRun();
   }
-  const result = getHermesInstrumentedStatsSummaryDefault.setShouldCollectHermesInstrumentedStats(shouldRunResult);
+  const result = ProcessUtilsDefault.setShouldCollectHermesInstrumentedStats(shouldRunResult);
   if (state === AppStates.ACTIVE) {
     let tmp6Result = tmp6(1899);
     tmp6Result.start();
@@ -44,16 +42,15 @@ prototype["_updateZoomedInExport"] = function _updateZoomedInExport() {
   }
 };
 prototype["_initialize"] = function _initialize() {
-  let self = this;
-  self = this;
+  const self = this;
   if (!this._initialized) {
     self._initialized = true;
     const subscription = self(573).subscribe("LOGOUT", self._handleLogout);
-    closure_4.addChangeListener(self._handleEligibilityChange);
-    closure_3.addChangeListener(self._handleEligibilityChange);
-    closure_2.addChangeListener(self._handleEligibilityChange);
+    AppStateStore.addChangeListener(self._handleEligibilityChange);
+    UserStore.addChangeListener(self._handleEligibilityChange);
+    ApexExperimentStore.addChangeListener(self._handleEligibilityChange);
     self._experimentUnsubscribe = () => {
-      closure_1_2.removeChangeListener(self._handleEligibilityChange);
+      ApexExperimentStore.removeChangeListener(self._handleEligibilityChange);
     };
     const obj = self(573);
     self(1899).initialize();
@@ -63,9 +60,9 @@ prototype["_initialize"] = function _initialize() {
 };
 prototype["_terminate"] = function _terminate() {
   const self = this;
-  dispatcherDefault.unsubscribe("LOGOUT", this._handleLogout);
-  closure_4.removeChangeListener(this._handleEligibilityChange);
-  closure_3.removeChangeListener(this._handleEligibilityChange);
+  DispatcherDefault.unsubscribe("LOGOUT", this._handleLogout);
+  AppStateStore.removeChangeListener(this._handleEligibilityChange);
+  UserStore.removeChangeListener(this._handleEligibilityChange);
   if (null != this._experimentUnsubscribe) {
     const result = self._experimentUnsubscribe();
     self._experimentUnsubscribe = null;
@@ -77,6 +74,7 @@ prototype["_terminate"] = function _terminate() {
   self._initialized = false;
 };
 const telemetryRingLifecycleImpl = new TelemetryRingLifecycleImpl();
-let result = require("set").fileFinishedImporting("modules/telemetry_ring/native/TelemetryRingLifecycle.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/telemetry_ring/native/TelemetryRingLifecycle.tsx");
 
 export default telemetryRingLifecycleImpl;

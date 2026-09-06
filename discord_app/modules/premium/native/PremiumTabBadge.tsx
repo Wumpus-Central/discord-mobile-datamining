@@ -1,31 +1,26 @@
 // discord_app/modules/premium/native/PremiumTabBadge.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import encodeProperties from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import DismissibleContent from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import getPremiumPlanItem from "../../../utils/PremiumUtils.tsx";
-import UNSAFE_isDismissibleContentDismissed from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
-import AccessibilityAnnouncer from "../../../design/shared.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import discord_common_AnalyticsUtils from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import dismissible_content from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import PremiumUtils from "../../../utils/PremiumUtils.tsx";
+import DismissibleContentUnsafeUtils from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
+import shared from "../../../design/shared.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import LinearGradientDefault from "../../../../_runtime/04987_LinearGradient.js";
 import usePremiumTrialOffer from "../hooks/usePremiumTrialOffer.android.tsx";
 import usePremiumDiscountOffer from "../hooks/usePremiumDiscountOffer.android.tsx";
-import trackImpressionDefault from "../../app_analytics/useTrackImpression.tsx";
+import useTrackImpressionDefault from "../../app_analytics/useTrackImpression.tsx";
 import MarketingComponentType from "../../../../discord_common/js/shared/shared-constants/MarketingComponentType.tsx";
-import registerAssetDefault from "../../../../_runtime/14982_registerAsset.js";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../stores/billing/SubscriptionStore.tsx";
-import { PREMIUM_TIER_2_REFERRAL_TRIAL_ID as closure_6 } from "../PremiumConstants.tsx";
-import { Gradients } from "../../colors/native/ColorConstants.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import _modDef14982 from "../../../../_runtime/metro/14982__.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
+import SubscriptionStore from "../../../stores/billing/SubscriptionStore.tsx";
 
-require = arg1;
+require = fn;
 function ThemedTabBadge(children) {
-  const tmp = callback4();
-  let obj = AccessibilityAnnouncer;
+  const tmp = closure_10();
+  let obj = shared;
   const isThemeDarkResult = obj.isThemeDark(useThemeDefault());
   const items = [tmp.badge];
   obj = { style: items, children: null };
@@ -34,18 +29,20 @@ function ThemedTabBadge(children) {
   if (isThemeDarkResult) {
     str = "text-overlay-dark";
   }
+  obj = { variant: "eyebrow", color: str, style: null, children: children.label };
   const items1 = [,];
   ({ uppercase: arr2[0], text: arr2[1] } = tmp);
-  obj[1] = closure_8(Text.Text, { variant: "eyebrow", color: str, style: items1, children: children.label });
-  return closure_8(View, obj);
+  obj.style = items1;
+  obj.children = React6(Text_Text.Text, obj);
+  return React6(View, obj);
 }
 function OfferBadge(componentId) {
   componentId = componentId.componentId;
   ({ acked, badgeCopy, ackedBadgeCopy, promotionId } = componentId);
-  const tmp = callback4();
+  const tmp = closure_10();
   let obj = {
-    type: encodeProperties.ImpressionTypes.VIEW,
-    name: encodeProperties.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
+    type: discord_common_AnalyticsUtils.ImpressionTypes.VIEW,
+    name: discord_common_AnalyticsUtils.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
     properties: null,
   };
   obj = {
@@ -53,36 +50,39 @@ function OfferBadge(componentId) {
     component_id: componentId,
     promotion_id: promotionId,
   };
-  obj[2] = obj;
+  obj.properties = obj;
   obj = { disableTrack: null == componentId };
-  trackImpressionDefault(obj, obj);
+  useTrackImpressionDefault(obj, obj);
   if (acked) {
-    obj1 = { style: null, children: null };
-    obj1[0] = tmp.acked;
-    const obj2 = { source: null, size: null, color: null, style: null };
-    obj2[0] = registerAssetDefault;
-    obj2[1] = tmp5(1178).Icon.Sizes.EXTRA_SMALL;
-    obj2[2] = tmp.icon.color;
-    obj2[3] = tmp.icon;
-    const items = [callback2(tmp5(1178).Icon, obj2)];
+    const obj1 = { style: tmp.acked, children: null };
+    const obj2 = {
+      source: _modDef14982,
+      size: tmp5(1178).Icon.Sizes.EXTRA_SMALL,
+      color: tmp.icon.color,
+      style: tmp.icon,
+    };
+    const items = [React6(tmp5(1178).Icon, obj2)];
     const obj3 = { variant: "eyebrow", color: "interactive-text-default", style: null, children: null };
     const items1 = [,];
     ({ uppercase: arr2[0], text: arr2[1] } = tmp);
-    obj3[2] = items1;
-    obj3[3] = ackedBadgeCopy;
-    items[1] = callback2(tmp5(4556).Text, obj3);
-    obj1[1] = items;
-    let tmp9 = callback3(View, obj1);
+    obj3.style = items1;
+    obj3.children = ackedBadgeCopy;
+    items[1] = React6(tmp5(4556).Text, obj3);
+    obj1.children = items;
+    let tmp9 = React7(View, obj1);
   } else {
-    const obj4 = { label: null };
-    obj4[0] = badgeCopy;
-    tmp9 = callback2(ThemedTabBadge, obj4);
+    const obj4 = { label: badgeCopy };
+    tmp9 = React6(ThemedTabBadge, obj4);
   }
   return tmp9;
 }
-noopAll;
-({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = {
+const View = fn(17).View;
+let closure_6 = fn(1373).PREMIUM_TIER_2_REFERRAL_TRIAL_ID;
+const Gradients = fn(7432).Gradients;
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+fn(4560);
+let createStyles = {
   tag: null,
   badge: null,
   badgeBackgroundLightTheme: null,
@@ -94,9 +94,9 @@ createCacheKey = {
   text: null,
   premiumDiscountBadge: null,
 };
-createCacheKey = { paddingVertical: 4, paddingHorizontal: 8, borderRadius: ThemesDefault.radii.round };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = {
+createStyles = { paddingVertical: 4, paddingHorizontal: 8, borderRadius: nativeDefault.radii.round };
+createStyles.tag = createStyles;
+createStyles.badge = {
   display: "flex",
   minWidth: 16,
   minHeight: 16,
@@ -104,7 +104,7 @@ createCacheKey[1] = {
   justifyContent: "center",
   alignItems: "center",
   gap: 4,
-  borderRadius: ThemesDefault.radii.round,
+  borderRadius: nativeDefault.radii.round,
 };
 let obj1 = {
   display: "flex",
@@ -114,17 +114,17 @@ let obj1 = {
   justifyContent: "center",
   alignItems: "center",
   gap: 4,
-  borderRadius: ThemesDefault.radii.round,
+  borderRadius: nativeDefault.radii.round,
 };
-createCacheKey[2] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
-let obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
-createCacheKey[3] = { backgroundColor: ThemesDefault.colors.WHITE };
-let obj3 = { backgroundColor: ThemesDefault.colors.WHITE };
-createCacheKey[4] = {
+createStyles.badgeBackgroundLightTheme = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
+let obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
+createStyles.badgeBackgroundDarkTheme = { backgroundColor: nativeDefault.colors.WHITE };
+let obj3 = { backgroundColor: nativeDefault.colors.WHITE };
+createStyles.acked = {
   paddingVertical: 2,
   paddingHorizontal: 12,
-  borderRadius: ThemesDefault.radii.round,
-  backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderRadius: nativeDefault.radii.round,
+  backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
@@ -133,58 +133,50 @@ createCacheKey[4] = {
 let obj4 = {
   paddingVertical: 2,
   paddingHorizontal: 12,
-  borderRadius: ThemesDefault.radii.round,
-  backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderRadius: nativeDefault.radii.round,
+  backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
   textAlignVertical: "center",
 };
-createCacheKey[5] = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-let obj5 = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-createCacheKey[6] = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginRight: 2 };
-createCacheKey[7] = { textTransform: "uppercase" };
-createCacheKey[8] = { paddingBottom: 2 };
-let obj6 = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginRight: 2 };
-createCacheKey[9] = {
+createStyles.ackedBadge = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+let obj5 = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+createStyles.icon = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginRight: 2 };
+createStyles.uppercase = { textTransform: "uppercase" };
+createStyles.text = { paddingBottom: 2 };
+let obj6 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginRight: 2 };
+createStyles.premiumDiscountBadge = {
   paddingVertical: 2,
   paddingHorizontal: 12,
-  borderRadius: ThemesDefault.radii.round,
+  borderRadius: nativeDefault.radii.round,
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
   textAlignVertical: "center",
 };
-let closure_10 = createCacheKey.createStyles(createCacheKey);
-let obj7 = {
-  paddingVertical: 2,
-  paddingHorizontal: 12,
-  borderRadius: ThemesDefault.radii.round,
-  display: "flex",
-  flexDirection: "row",
-  alignItems: "center",
-  textAlignVertical: "center",
-};
-let result = require("set").fileFinishedImporting("modules/premium/native/PremiumTabBadge.tsx");
+let closure_10 = createStyles.createStyles(createStyles);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/premium/native/PremiumTabBadge.tsx");
 
 export default function PremiumTabBadge() {
-  let tmp = callback4();
+  let tmp = closure_10();
   let obj = usePremiumTrialOffer;
   const premiumTrialOffer = obj.usePremiumTrialOffer();
-  obj1 = usePremiumDiscountOffer;
+  let obj1 = usePremiumDiscountOffer;
   const premiumDiscountOffer = obj1.usePremiumDiscountOffer();
-  let obj3 = getPremiumPlanItem;
+  let obj3 = PremiumUtils;
   const hasTier2Premium = obj3.useHasTier2Premium();
-  let obj4 = UNSAFE_isDismissibleContentDismissed;
+  let obj4 = DismissibleContentUnsafeUtils;
   const result = obj4.useIsDismissibleContentDismissed_UNSAFE(
-    DismissibleContent.DismissibleContent.MOBILE_NITRO_HOME_SETTINGS_BADGE,
+    dismissible_content.DismissibleContent.MOBILE_NITRO_HOME_SETTINGS_BADGE,
   );
   let tmp7 = !result;
   if (!result) {
     tmp7 = hasTier2Premium;
   }
   let tmp2Result = tmp2(504);
-  const items = [closure_5];
+  const items = [SubscriptionStore];
   const stateFromStores = tmp2Result.useStateFromStores(items, () =>
     premiumTypeSubscription.getPremiumTypeSubscription(),
   );
@@ -197,7 +189,7 @@ export default function PremiumTabBadge() {
     if (!tmp7) {
       let items1 = [tmp2(1943).DismissibleContent.REFERRAL_TRIAL_MOBILE_NITRO_HOME_BADGE];
     }
-    [tmp14, r10051] = callback(tmp11(items1, undefined, true), 2);
+    [tmp14, r10051] = _slicedToArray(tmp11(items1, undefined, true), 2);
     tmp2(7388);
     if (!tmp7) {
       if (hasTier2Premium) {
@@ -230,12 +222,15 @@ export default function PremiumTabBadge() {
       tmp12Result = tmp12(tmp2Result5.useSelectedSnowflakeBoundDismissibleContent(prop, str2, undefined, true), 2);
       if (null != promotionMarketingComponent) {
         if ("premiumTab" === promotionMarketingComponent.properties.properties.oneofKind) {
-          obj = { acked: null, badgeCopy: null, ackedBadgeCopy: null, componentId: null, promotionId: null };
-          obj[0] = tmp27 !== tmp2(1943).DismissibleContent.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE;
-          obj[1] = promotionMarketingComponent.properties.properties.premiumTab.badgeLabel;
-          obj[2] = promotionMarketingComponent.properties.properties.premiumTab.acknowledgedBadgeLabel;
-          ({ id: obj24[3], promotionId: obj24[4] } = promotionMarketingComponent);
-          return callback2(OfferBadge, obj);
+          obj = {
+            acked: tmp27 !== tmp2(1943).DismissibleContent.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE,
+            badgeCopy: promotionMarketingComponent.properties.properties.premiumTab.badgeLabel,
+            ackedBadgeCopy: promotionMarketingComponent.properties.properties.premiumTab.acknowledgedBadgeLabel,
+            componentId: null,
+            promotionId: null,
+          };
+          ({ id: obj24.componentId, promotionId: obj24.promotionId } = promotionMarketingComponent);
+          return React6(OfferBadge, obj);
         }
       }
       if (tmp14 === tmp2(1943).DismissibleContent.REFERRAL_TRIAL_MOBILE_NITRO_HOME_BADGE) {
@@ -252,16 +247,18 @@ export default function PremiumTabBadge() {
         if (!isReferralProgramEntrypointBadgeAcknowledged) {
           obj = { label: null };
           const intl3 = tmp2(1114).intl;
-          obj[0] = intl3.string(tmp2(1114).t.RDE0Sc);
-          return callback2(ThemedTabBadge, obj);
+          obj.label = intl3.string(tmp2(1114).t.RDE0Sc);
+          return React6(ThemedTabBadge, obj);
         }
       }
       if (tmp7) {
-        obj1 = { style: null, colors: null, start: null, end: null, children: null };
-        obj1[0] = tmp.tag;
-        obj1[1] = Gradients.PREMIUM_TIER_2;
-        obj1[2] = tmp2(1093).HorizontalGradient.START;
-        obj1[3] = tmp2(1093).HorizontalGradient.END;
+        obj1 = {
+          style: tmp.tag,
+          colors: Gradients.PREMIUM_TIER_2,
+          start: tmp2(1093).HorizontalGradient.START,
+          end: tmp2(1093).HorizontalGradient.END,
+          children: null,
+        };
         const items3 = [tmp.uppercase];
         const tmp52 = LinearGradientDefault;
         let text;
@@ -270,11 +267,11 @@ export default function PremiumTabBadge() {
         }
         const obj2 = { variant: "eyebrow", color: "text-overlay-light", style: null, children: null };
         items3[1] = text;
-        obj2[2] = items3;
+        obj2.style = items3;
         const intl8 = tmp2(1114).intl;
-        obj2[3] = intl8.string(tmp2(1114).t.y2b7CA);
+        obj2.children = intl8.string(tmp2(1114).t.y2b7CA);
         tmp = tmp50(tmp2(4556).Text, obj2);
-        obj1[4] = tmp;
+        obj1.children = tmp;
         let tmp47Result = tmp50(tmp52, obj1);
         tmp2Result6 = tmp2(1115);
       } else if (null != premiumTrialOffer) {
@@ -282,60 +279,61 @@ export default function PremiumTabBadge() {
         if (premiumTrialOffer != null) {
           hasAcknowledged = premiumTrialOffer.hasAcknowledged;
         }
-        obj3 = { acked: null, badgeCopy: null, ackedBadgeCopy: null };
-        obj3[0] = true === hasAcknowledged;
+        obj3 = { acked: true === hasAcknowledged, badgeCopy: null, ackedBadgeCopy: null };
         const intl6 = tmp2(1114).intl;
-        obj3[1] = intl6.string(tmp2(1114).t.OS9KPu);
+        obj3.badgeCopy = intl6.string(tmp2(1114).t.OS9KPu);
         const intl7 = tmp2(1114).intl;
-        obj3[2] = intl7.string(tmp2(1114).t.OS9KPu);
-        tmp47Result = callback2(OfferBadge, obj3);
-        const tmp47 = callback2;
-        const tmp48 = OfferBadge;
+        obj3.ackedBadgeCopy = intl7.string(tmp2(1114).t.OS9KPu);
+        tmp47Result = React6(OfferBadge, obj3);
       } else if (null != premiumDiscountOffer) {
         if (premiumDiscountOffer.hasAcknowledged()) {
           obj4 = { style: null, children: null };
           const items4 = [,];
           ({ premiumDiscountBadge: arr6[0], ackedBadge: arr6[1] } = tmp);
-          obj4[0] = items4;
-          const obj5 = { source: null, size: null, color: null, style: null };
-          obj5[0] = registerAssetDefault;
-          obj5[1] = tmp2(1178).Icon.Sizes.EXTRA_SMALL;
-          obj5[2] = tmp.icon.color;
-          obj5[3] = tmp.icon;
-          const items5 = [callback2(tmp2(1178).Icon, obj5)];
+          obj4.style = items4;
+          const obj5 = {
+            source: _modDef14982,
+            size: tmp2(1178).Icon.Sizes.EXTRA_SMALL,
+            color: tmp.icon.color,
+            style: tmp.icon,
+          };
+          const items5 = [React6(tmp2(1178).Icon, obj5)];
           const obj6 = { variant: "eyebrow", color: "interactive-text-default", style: null, children: null };
           const items6 = [,];
           ({ uppercase: arr8[0], text: arr8[1] } = tmp);
-          obj6[2] = items6;
+          obj6.style = items6;
           const intl5 = tmp2(1114).intl;
-          obj6[3] = intl5.string(tmp2(1114).t["/DTtr6"]);
-          items5[1] = callback2(tmp2(4556).Text, obj6);
-          obj4[1] = items5;
-          let tmp41 = callback3(View, obj4);
+          obj6.children = intl5.string(tmp2(1114).t["/DTtr6"]);
+          items5[1] = React6(tmp2(4556).Text, obj6);
+          obj4.children = items5;
+          let tmp41 = React7(View, obj4);
         } else {
-          const obj7 = { style: null, colors: null, start: null, end: null, children: null };
-          obj7[0] = tmp.premiumDiscountBadge;
-          obj7[1] = ["#db00a4", "#5968f0"];
-          obj7[2] = tmp2(1093).HorizontalGradient.START;
-          obj7[3] = tmp2(1093).HorizontalGradient.END;
+          const obj7 = {
+            style: tmp.premiumDiscountBadge,
+            colors: ["#db00a4", "#5968f0"],
+            start: tmp2(1093).HorizontalGradient.START,
+            end: tmp2(1093).HorizontalGradient.END,
+            children: null,
+          };
           const obj8 = { variant: "eyebrow", color: "text-overlay-light", style: null, children: null };
           const items7 = [,];
           ({ uppercase: arr5[0], text: arr5[1] } = tmp);
-          obj8[2] = items7;
+          obj8.style = items7;
           const intl4 = tmp2(1114).intl;
-          obj8[3] = intl4.string(tmp2(1114).t["/DTtr6"]);
-          obj7[4] = callback2(tmp2(4556).Text, obj8);
-          tmp41 = callback2(LinearGradientDefault, obj7);
-          const tmp40 = LinearGradientDefault;
+          obj8.children = intl4.string(tmp2(1114).t["/DTtr6"]);
+          obj7.children = React6(tmp2(4556).Text, obj8);
+          tmp41 = React6(LinearGradientDefault, obj7);
         }
       } else {
         tmp47Result = null;
         if (null != stringResult) {
-          const obj9 = { style: null, colors: null, start: null, end: null, children: null };
-          obj9[0] = tmp.tag;
-          obj9[1] = Gradients.PREMIUM_TIER_2;
-          obj9[2] = tmp2(1093).HorizontalGradient.START;
-          obj9[3] = tmp2(1093).HorizontalGradient.END;
+          const obj9 = {
+            style: tmp.tag,
+            colors: Gradients.PREMIUM_TIER_2,
+            start: tmp2(1093).HorizontalGradient.START,
+            end: tmp2(1093).HorizontalGradient.END,
+            children: null,
+          };
           const items8 = [tmp.uppercase];
           const tmp34 = LinearGradientDefault;
           let text1;
@@ -344,9 +342,9 @@ export default function PremiumTabBadge() {
           }
           const obj10 = { variant: "eyebrow", color: "text-overlay-light", style: null, children: null };
           items8[1] = text1;
-          obj10[2] = items8;
-          obj10[3] = stringResult;
-          obj9[4] = callback2(tmp2(4556).Text, obj10);
+          obj10.style = items8;
+          obj10.children = stringResult;
+          obj9.children = React6(tmp2(4556).Text, obj10);
           tmp47Result = tmp32(tmp34, obj9);
           tmp2Result7 = tmp2(1115);
         }
@@ -354,7 +352,7 @@ export default function PremiumTabBadge() {
       const tmp2Result4 = tmp2(13352);
     }
     items2 = [];
-    const tmp13 = callback(tmp11(items1, undefined, true), 2);
+    const tmp13 = _slicedToArray(tmp11(items1, undefined, true), 2);
   }
   items1 = [];
 }

@@ -1,15 +1,15 @@
 // discord_app/components_native/common/UntouchableAlert.tsx
-import ActivityIndicator from "../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
-import { View } from "../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
-import importAllResult from "../../../_runtime/00019_noop.js";
+import ActivityIndicator_ActivityIndicator from "../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
+import noop from "../../../_runtime/metro/00019__.js";
 
-require = arg1;
-let closure_4 = createCacheKey.createLegacyClassComponentStyles({
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_4 = createStyles.createLegacyClassComponentStyles({
   container: { flex: 1, alignItems: "center", justifyContent: "center" },
 });
-const PureComponent = importAllResult.PureComponent;
+const PureComponent = noop.PureComponent;
 class UntouchableAlert extends PureComponent {}
 const prototype = UntouchableAlert.prototype;
 prototype["componentDidMount"] = function componentDidMount() {
@@ -35,14 +35,13 @@ prototype["closeAlert"] = function closeAlert() {
 prototype["render"] = function render() {
   let tmp2 = null;
   if (this.props.loading) {
-    const obj = { style: null, children: null };
-    obj[0] = tmp.container;
-    obj[1] = jsx(ActivityIndicator.ActivityIndicator, {});
-    tmp2 = <View style={null}>{null}</View>;
+    const obj = { style: tmp.container, children: jsx(ActivityIndicator_ActivityIndicator.ActivityIndicator, {}) };
+    tmp2 = <View style={tmp.container}>{jsx(ActivityIndicator_ActivityIndicator.ActivityIndicator, {})}</View>;
   }
   return tmp2;
 };
-UntouchableAlert.contextType = require("ManaContext").ThemeContext;
-const result = require("set").fileFinishedImporting("components_native/common/UntouchableAlert.tsx");
+UntouchableAlert.contextType = fn(4271).ThemeContext;
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/common/UntouchableAlert.tsx");
 
 export default UntouchableAlert;

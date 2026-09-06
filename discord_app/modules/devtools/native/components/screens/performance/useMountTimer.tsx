@@ -1,27 +1,26 @@
 // discord_app/modules/devtools/native/components/screens/performance/useMountTimer.tsx
-import closure_0 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_1 from "../../../../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../../../_runtime/metro/00019__.js";
 
-const result = require("set").fileFinishedImporting(
-  "modules/devtools/native/components/screens/performance/useMountTimer.tsx",
-);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/devtools/native/components/screens/performance/useMountTimer.tsx");
 
 export default function useMountTimer() {
-  const tmp = callback(React.useState(null), 2);
-  callback = tmp[1];
-  React = React.useRef(0);
-  closure_2 = React.useRef(0);
-  closure_3 = React.useRef(null);
+  const tmp = _slicedToArray(noop.useState(null), 2);
+  closure_0 = tmp[1];
+  noop.useRef(0);
+  noop.useRef(0);
+  noop.useRef(null);
   return {
     run: tmp[0],
-    begin: React.useCallback((params) => {
+    begin: noop.useCallback((params) => {
       const sum = ref.current + 1;
       ref.current = sum;
       closure_3.current = sum;
       closure_2.current = performance.now();
-      callback({ batchKey: sum, params });
+      closure_0({ batchKey: sum, params });
     }, []),
-    measure: React.useCallback((arg0) => {
+    measure: noop.useCallback((arg0) => {
       let diff = null;
       if (arg0 === ref3.current) {
         ref3.current = null;
@@ -30,7 +29,7 @@ export default function useMountTimer() {
       }
       return diff;
     }, []),
-    cancel: React.useCallback((arg0) => {
+    cancel: noop.useCallback((arg0) => {
       if (arg0 === ref3.current) {
         tmp.current = null;
       }

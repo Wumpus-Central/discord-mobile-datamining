@@ -1,24 +1,29 @@
 // discord_app/modules/soundboard/native/utils/useSoundboardSoundLock.tsx
-import getPremiumPlanItemDefault from "../../../../utils/PremiumUtils.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../../stores/UserStore.tsx";
-import { DEFAULT_SOUND_GUILD_ID } from "../../SoundboardConstants.tsx";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { hasPermissionToPlaySound } from "../../SoundboardUtils.tsx";
+import util from "../../../../intl/index.native.tsx";
+import PremiumUtilsDefault from "../../../../utils/PremiumUtils.tsx";
+import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
+import openPremiumUpsellActionSheetDefault from "../../../premium/roadblocks/native/utils/openPremiumUpsellActionSheet.tsx";
+import EntitlementFeatureNames from "../../../../../discord_common/js/shared/shared-constants/EntitlementFeatureNames.tsx";
+import _modDef10070 from "../../../../../_runtime/metro/10070__.js";
+import SoundboardSoundPreviewMenuExperiment2 from "../../experiments/SoundboardSoundPreviewMenuExperiment.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import UserStore from "../../../../stores/UserStore.tsx";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/soundboard/native/utils/useSoundboardSoundLock.tsx");
+require = fn;
+const DEFAULT_SOUND_GUILD_ID = fn(5014).DEFAULT_SOUND_GUILD_ID;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/soundboard/native/utils/useSoundboardSoundLock.tsx");
 
 export const useSoundboardSoundLock = function useSoundboardSoundLock(sound, channel) {
-  const _require = sound;
+  _require = sound;
   let BARTXV = dependencyMap;
-  let obj = initialize;
-  const items = [closure_4];
+  let obj = require("initialize");
+  const items = [UserStore];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const result = require("../../SoundboardUtils.tsx").canUseSoundboardSound(stateFromStores, sound, channel);
-  const obj2 = hasPermissionToPlaySound;
+  const result = require("SoundboardUtils").canUseSoundboardSound(stateFromStores, sound, channel);
+  const obj2 = require("SoundboardUtils");
   const tmp4 = !result;
-  const result1 = getPremiumPlanItemDefault.canUseSoundboardEverywhere(stateFromStores);
+  const result1 = PremiumUtilsDefault.canUseSoundboardEverywhere(stateFromStores);
   let tmp6 = !result1;
   if (!result1) {
     tmp6 = sound.guildId !== channel.guild_id;
@@ -29,10 +34,7 @@ export const useSoundboardSoundLock = function useSoundboardSoundLock(sound, cha
   importDefault = tmp6;
   const items1 = [tmp6, sound.available];
   if (result) {
-    obj = { isLocked: null, lockedAccessibilityHint: null, onLockedPress: null };
-    obj[0] = tmp4;
-    obj[1] = undefined;
-    obj[2] = tmp8;
+    obj = { isLocked: tmp4, lockedAccessibilityHint: undefined, onLockedPress: tmp8 };
     return obj;
   } else if (tmp6) {
     const intl2 = tmp(1114).intl;

@@ -1,10 +1,11 @@
 // discord_app/modules/main_tabs_v2/native/utils/getNavigationModalPresentation.tsx
-import DCDDeviceManager from "../../../../utils/native/DeviceUtils.tsx";
+import DeviceUtils from "../../../../utils/native/DeviceUtils.tsx";
 import useIsWindowLarge from "../../../screen/native/useIsWindowLarge.tsx";
-import handleOrientationChange from "../../../device/native/DeviceOrientation.tsx";
-import set from "../../../../utils/PlatformUtils.tsx";
+import DeviceOrientation from "../../../device/native/DeviceOrientation.tsx";
+import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-if (set.isAndroid()) {
+if (PlatformUtils.isAndroid()) {
   const _module1 = useIsWindowLarge;
   let str2 = "modal";
   if (_module1.getIsWindowLarge()) {
@@ -12,15 +13,15 @@ if (set.isAndroid()) {
   }
   let str = str2;
 } else {
-  const _module2 = DCDDeviceManager;
+  const _module2 = DeviceUtils;
   str = "modal";
   if (_module2.isIpadOS()) {
     str = "fullScreenModal";
   }
 }
 let obj = { presentation: str, lockOrientation: null };
-obj[1] = !set.isAndroid();
-const result = set.fileFinishedImporting("modules/main_tabs_v2/native/utils/getNavigationModalPresentation.tsx");
+obj.lockOrientation = !PlatformUtils.isAndroid();
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/utils/getNavigationModalPresentation.tsx");
 
 export default function getNavigationModalPresentation() {
   let tmp = arg0;
@@ -42,7 +43,7 @@ export default function getNavigationModalPresentation() {
   obj = { presentation, orientation: null };
   let tmp4;
   if (lockOrientation) {
-    const orientationLock = handleOrientationChange.getOrientationLock();
+    const orientationLock = DeviceOrientation.getOrientationLock();
     let str2 = "landscape";
     let str4 = "landscape";
     if ("LANDSCAPE" !== orientationLock) {
@@ -55,8 +56,7 @@ export default function getNavigationModalPresentation() {
       str4 = str2;
     }
     tmp4 = str4;
-    const obj2 = handleOrientationChange;
   }
-  obj[1] = tmp4;
+  obj.orientation = tmp4;
   return obj;
 }

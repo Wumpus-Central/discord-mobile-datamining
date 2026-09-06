@@ -1,15 +1,13 @@
 // discord_app/modules/media_engine/GlobalFramePoolLockExperiment.tsx
-import getUnitIdDefault from "../experiments/apex/ApexExperiment.tsx";
+import apex_ApexExperimentDefault from "../experiments/apex/ApexExperiment.tsx";
 
-let obj = { 1: null };
+let obj = { kind: "user", name: "2025-11-global-frame-pool-lock", defaultConfig: { enabled: false }, variations: null };
+obj = { 1: null };
 obj[1] = { enabled: true };
-let closure_0 = getUnitIdDefault({
-  kind: "user",
-  name: "2025-11-global-frame-pool-lock",
-  defaultConfig: { enabled: false },
-  variations: obj,
-});
-const result = require("set").fileFinishedImporting("modules/media_engine/GlobalFramePoolLockExperiment.tsx");
+obj.variations = obj;
+let closure_0 = apex_ApexExperimentDefault(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/media_engine/GlobalFramePoolLockExperiment.tsx");
 
 export const getGlobalFramePoolLockExperimentConfig = function getGlobalFramePoolLockExperimentConfig(disable) {
   let flag = disable.disable;
@@ -20,8 +18,7 @@ export const getGlobalFramePoolLockExperimentConfig = function getGlobalFramePoo
   if (flag) {
     let defaultConfig = obj.definition.defaultConfig;
   } else {
-    obj = { location: null };
-    obj[0] = disable.location;
+    obj = { location: disable.location };
     defaultConfig = obj.getConfig(obj);
   }
   return defaultConfig;

@@ -1,28 +1,32 @@
 // discord_app/modules/chat/native/SlowModeIndicator.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import importAllResult from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../stores/SlowmodeStore.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
+import SlowmodeUtils from "../SlowmodeUtils.tsx";
+import TimerIcon from "../../../design/components/Icon/native/redesign/generated/TimerIcon.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import SlowmodeStore from "../../../stores/SlowmodeStore.tsx";
 
-const require = arg1;
-let c3 = importAllResult;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
+require = fn;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4560);
 let obj = { container: { alignItems: "center", flexDirection: "row" }, icon: null };
-obj = { marginLeft: ThemesDefault.space.PX_4 };
-obj[1] = obj;
-let closure_7 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(function SlowModeIndicator(channel) {
+obj = { marginLeft: nativeDefault.space.PX_4 };
+obj.icon = obj;
+let closure_7 = createStyles.createStyles(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/chat/native/SlowModeIndicator.tsx");
+
+export default noop.memo(function SlowModeIndicator(channel) {
   channel = channel.channel;
   const hasTypingText = channel.hasTypingText;
   const slowmodeType = channel.slowmodeType;
-  let stateFromStores;
   let canBypassSlowmode;
-  const tmp = callback3();
+  const tmp = closure_7();
   let obj = channel(slowmodeType[5]);
   const items = [canBypassSlowmode];
-  stateFromStores = obj.useStateFromStores(items, () =>
-    canBypassSlowmode.getSlowmodeCooldownGuess(channel.id, slowmodeType),
+  const stateFromStores = obj.useStateFromStores(items, () =>
+    SlowmodeStore.getSlowmodeCooldownGuess(channel.id, slowmodeType),
   );
   canBypassSlowmode = channel(slowmodeType[6]).useCanBypassSlowmode(channel);
   const items1 = [hasTypingText, canBypassSlowmode, stateFromStores];
@@ -34,20 +38,19 @@ const memoResult = importAllResult.memo(function SlowModeIndicator(channel) {
       }
       return slowmodeIndicatorText;
     }
-    slowmodeIndicatorText = channel(slowmodeType[6]).getSlowmodeIndicatorText(stateFromStores, canBypassSlowmode);
+    slowmodeIndicatorText = SlowmodeUtils.getSlowmodeIndicatorText(stateFromStores, canBypassSlowmode);
   }, items1);
   const callback = stateFromStores.useCallback(() => {
-    let obj = hasTypingText(slowmodeType[7]);
-    obj = {
+    const obj = {
       key: "CHANNEL_SLOWMODE_INFO",
-      IconComponent: channel(slowmodeType[8]).TimerIcon,
-      content: channel(slowmodeType[6]).getSlowmodeDescription(channel.rateLimitPerUser),
+      IconComponent: TimerIcon.TimerIcon,
+      content: SlowmodeUtils.getSlowmodeDescription(channel.rateLimitPerUser),
     };
     obj.open(obj);
   }, items2);
   obj = { onPress: callback, style: tmp.container, children: null };
   const items3 = [
-    callback(channel(slowmodeType[10]).Text, {
+    closure_5(channel(slowmodeType[10]).Text, {
       lineClamp: 1,
       allowFontScaling: false,
       variant: "text-xs/medium",
@@ -56,10 +59,7 @@ const memoResult = importAllResult.memo(function SlowModeIndicator(channel) {
     }),
   ];
   obj = { style: tmp.icon, size: "xxs" };
-  items3[1] = callback(channel(slowmodeType[8]).TimerIcon, obj);
-  obj[2] = items3;
-  return callback2(channel(slowmodeType[9]).PressableOpacity, obj);
+  items3[1] = closure_5(channel(slowmodeType[8]).TimerIcon, obj);
+  obj.children = items3;
+  return closure_6(channel(slowmodeType[9]).PressableOpacity, obj);
 });
-const result = require("set").fileFinishedImporting("modules/chat/native/SlowModeIndicator.tsx");
-
-export default memoResult;

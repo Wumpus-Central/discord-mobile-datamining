@@ -1,48 +1,51 @@
 // discord_app/modules/rpc/helpers/activityInstanceConnectedParticipants.tsx
-import closure_3 from "../../activities/EmbeddedActivitiesStore.tsx";
-import closure_4 from "../../../stores/UserStore.tsx";
-import RPC_SCOPE_CONFIG from "../Constants.tsx";
-import { getEmbeddedActivityLocationChannelId } from "../../activities/utils/embeddedActivityLocationUtils.tsx";
+import transformUserDefault from "transformUser.tsx";
+import EmbeddedActivitiesStore from "../../activities/EmbeddedActivitiesStore.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
 
-const require = arg1;
-let obj = { [RPC_SCOPE_CONFIG.RPC_SCOPE_CONFIG.ANY]: items };
-items = [RPC_SCOPE_CONFIG.RPC_AUTHENTICATED_SCOPE];
+const require = fn;
+const Constants = fn(4465);
+let obj = { [Constants.RPC_SCOPE_CONFIG.ANY]: items };
+items = [Constants.RPC_AUTHENTICATED_SCOPE];
 obj = {
   scope: obj,
   handler() {
     return (arg0) => {
-      let callback;
-      let callback2;
+      let embeddedActivityLocationGuildId;
+      let embeddedActivityLocationChannelId;
       ({ prevState, dispatch } = arg0);
       currentEmbeddedActivity = currentEmbeddedActivity.getCurrentEmbeddedActivity();
       if (null == currentEmbeddedActivity) {
-        let obj = { participants: null };
-        obj[0] = [];
+        let obj = { participants: [] };
       } else {
-        callback = callback(4189).getEmbeddedActivityLocationGuildId(currentEmbeddedActivity.location);
-        const obj4 = callback(4189);
-        callback2 = callback(4189).getEmbeddedActivityLocationChannelId(currentEmbeddedActivity.location);
+        embeddedActivityLocationGuildId = embeddedActivityLocationGuildId(4189).getEmbeddedActivityLocationGuildId(
+          currentEmbeddedActivity.location,
+        );
+        const obj4 = embeddedActivityLocationGuildId(4189);
+        embeddedActivityLocationChannelId = embeddedActivityLocationGuildId(4189).getEmbeddedActivityLocationChannelId(
+          currentEmbeddedActivity.location,
+        );
         obj = { participants: null };
         const _Array = Array;
-        const obj5 = callback(4189);
-        obj[0] = Array.from(currentEmbeddedActivity.userIds, (arg0) => {
-          const user = closure_1_4.getUser(arg0);
+        const obj5 = embeddedActivityLocationGuildId(4189);
+        obj.participants = Array.from(currentEmbeddedActivity.userIds, (arg0) => {
+          user = user.getUser(arg0);
           if (null != user) {
-            let obj = callback(closure_1_2[4]);
-            const nickname = obj.getNickname(callback, callback2, user);
+            let obj = require("NicknameUtils");
+            const nickname = obj.getNickname(closure_0, closure_1, user);
             obj = {};
-            const merged = Object.assign(callback2(closure_1_2[5])(user));
+            const merged = Object.assign(transformUserDefault(user));
             obj.nickname = nickname;
             return obj;
           }
-        }).filter(callback(1369).isNotNullish);
+        }).filter(embeddedActivityLocationGuildId(1369).isNotNullish);
         const arr = Array.from(currentEmbeddedActivity.userIds, (arg0) => {
-          const user = closure_1_4.getUser(arg0);
+          user = user.getUser(arg0);
           if (null != user) {
-            let obj = callback(closure_1_2[4]);
-            const nickname = obj.getNickname(callback, callback2, user);
+            let obj = require("NicknameUtils");
+            const nickname = obj.getNickname(closure_0, closure_1, user);
             obj = {};
-            const merged = Object.assign(callback2(closure_1_2[5])(user));
+            const merged = Object.assign(transformUserDefault(user));
             obj.nickname = nickname;
             return obj;
           }
@@ -55,37 +58,35 @@ obj = {
     };
   },
 };
-const result = require("set").fileFinishedImporting("modules/rpc/helpers/activityInstanceConnectedParticipants.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/rpc/helpers/activityInstanceConnectedParticipants.tsx");
 
 export const activityInstanceConnectedParticipants = function activityInstanceConnectedParticipants() {
-  currentEmbeddedActivity = currentEmbeddedActivity.getCurrentEmbeddedActivity();
+  const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
   if (null == currentEmbeddedActivity) {
-    let obj = { participants: null };
-    obj[0] = [];
+    let obj = { participants: [] };
     return obj;
   } else {
-    _require = require("../../activities/utils/embeddedActivityLocationUtils.tsx").getEmbeddedActivityLocationGuildId(
+    _require = require("embeddedActivityLocationUtils").getEmbeddedActivityLocationGuildId(
       currentEmbeddedActivity.location,
     );
-    const obj2 = getEmbeddedActivityLocationChannelId;
+    const obj2 = require("embeddedActivityLocationUtils");
     const embeddedActivityLocationChannelId =
-      require("../../activities/utils/embeddedActivityLocationUtils.tsx").getEmbeddedActivityLocationChannelId(
-        currentEmbeddedActivity.location,
-      );
+      require("embeddedActivityLocationUtils").getEmbeddedActivityLocationChannelId(currentEmbeddedActivity.location);
     obj = { participants: null };
     const _Array = Array;
-    const obj3 = getEmbeddedActivityLocationChannelId;
-    obj[0] = Array.from(currentEmbeddedActivity.userIds, (arg0) => {
-      const user = closure_1_4.getUser(arg0);
+    const obj3 = require("embeddedActivityLocationUtils");
+    obj.participants = Array.from(currentEmbeddedActivity.userIds, (arg0) => {
+      user = user.getUser(arg0);
       if (null != user) {
-        let obj = callback(closure_1_2[4]);
-        const nickname = obj.getNickname(callback, callback2, user);
+        let obj = require("NicknameUtils");
+        const nickname = obj.getNickname(closure_0, closure_1, user);
         obj = {};
-        const merged = Object.assign(callback2(closure_1_2[5])(user));
+        const merged = Object.assign(transformUserDefault(user));
         obj.nickname = nickname;
         return obj;
       }
-    }).filter(require("../../../utils/GlobalUtils.tsx").isNotNullish);
+    }).filter(require("GlobalUtils").isNotNullish);
     return obj;
   }
 };

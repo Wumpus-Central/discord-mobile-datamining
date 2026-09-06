@@ -1,8 +1,8 @@
 // discord_app/modules/rpc/helpers/transformUser.tsx
-import set from "../../../../_runtime/00002_set.js";
-import parseAvatarDecorationData from "../../collectibles/avatar_decorations/AvatarDecorationUtils.tsx";
+import AvatarDecorationUtils from "../../collectibles/avatar_decorations/AvatarDecorationUtils.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/rpc/helpers/transformUser.tsx");
+const result = size.fileFinishedImporting("modules/rpc/helpers/transformUser.tsx");
 
 export default function transformUser(id) {
   let num = id.premiumType;
@@ -12,7 +12,7 @@ export default function transformUser(id) {
     discriminator: id.discriminator,
     global_name: id.globalName,
     avatar: id.avatar,
-    avatar_decoration_data: parseAvatarDecorationData.parseAvatarDecorationData(avatarDecoration),
+    avatar_decoration_data: AvatarDecorationUtils.parseAvatarDecorationData(avatarDecoration),
     bot,
     flags,
     premium_type: null,
@@ -21,6 +21,6 @@ export default function transformUser(id) {
   if (num == null) {
     num = 0;
   }
-  obj[8] = num;
+  obj.premium_type = num;
   return obj;
 }

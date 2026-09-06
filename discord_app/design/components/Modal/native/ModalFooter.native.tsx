@@ -1,15 +1,15 @@
 // discord_app/design/components/Modal/native/ModalFooter.native.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../Styles/native/createStyles.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-noopAll;
-let closure_2 = createCacheKey.createStyles({
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_2 = createStyles.createStyles({
   footer: { flexDirection: "column", paddingVertical: 16, paddingHorizontal: 24 },
 });
-const result = require("set").fileFinishedImporting("design/components/Modal/native/ModalFooter.native.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Modal/native/ModalFooter.native.tsx");
 
 export const ModalFooter = function ModalFooter(children) {
-  return <View style={callback().footer}>{arg0.children}</View>;
+  return <View style={closure_2().footer}>{arg0.children}</View>;
 };

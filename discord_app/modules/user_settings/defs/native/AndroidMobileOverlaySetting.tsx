@@ -1,31 +1,30 @@
 // discord_app/modules/user_settings/defs/native/AndroidMobileOverlaySetting.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import dispatcherDefault from "../../../voice_overlay/native/MobileVoiceOverlayActionCreators.tsx";
-import closure_2 from "../../../../stores/native/MobileVoiceOverlayStore.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import util from "../../../../intl/index.native.tsx";
+import MobileVoiceOverlayActionCreatorsDefault from "../../../voice_overlay/native/MobileVoiceOverlayActionCreators.tsx";
+import MobileVoiceOverlayStore from "../../../../stores/native/MobileVoiceOverlayStore.tsx";
 
-require = arg1;
-createToggle = {
+require = fn;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["9CSZJm"]);
+    const intl = util.intl;
+    return intl.string(util.t["9CSZJm"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.VOICE,
+  parent: fn(7975).MobileUserSettings.VOICE,
   useValue: function useAndroidMobileOverlaySettingValue() {
-    const items = [closure_2];
+    const items = [MobileVoiceOverlayStore];
     return initialize.useStateFromStores(items, () => enabled.getEnabled());
   },
-  onValueChange: dispatcherDefault.setEnabled,
+  onValueChange: MobileVoiceOverlayActionCreatorsDefault.setEnabled,
   useDescription: function useAndroidMobileOverlaySettingDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.Wfoivk);
+    const intl = util.intl;
+    return intl.string(util.t.Wfoivk);
   },
-  usePredicate: require("getUserAgnosticState").isMobileOverlaySupported,
+  usePredicate: fn(9980).isMobileOverlaySupported,
 };
-createToggle = createToggle.createToggle(createToggle);
-const result = require("set").fileFinishedImporting(
-  "modules/user_settings/defs/native/AndroidMobileOverlaySetting.tsx",
-);
+SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AndroidMobileOverlaySetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

@@ -1,10 +1,9 @@
 // discord_app/modules/guild_scheduled_events/GuildScheduledEventStore.tsx
-import applyDefault from "../../../_runtime/00012_apply.js";
+import _modDef12 from "../../../_runtime/metro/00012__.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import closure_2 from "../../stores/AuthenticationStore.tsx";
-import closure_3 from "../../stores/GuildMemberStore.tsx";
-import GUILD_EVENT_MAX_NAME_LENGTH from "GuildScheduledEventsConstants.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
+import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 
 function scheduledEventSort(status) {
   ({ id, scheduled_start_time } = status);
@@ -101,7 +100,7 @@ function removeGuildEventUser(guild_scheduled_event_exception_id, arg1) {
   }
   let tmp7 = !tmp6;
   if (null == tmp4) {
-    tmp7 = guild_scheduled_event_exception_id.user_id === store.getId();
+    tmp7 = guild_scheduled_event_exception_id.user_id === AuthenticationStore.getId();
   }
   if (!tmp7) {
     if (dependencyMap[guild_scheduled_event_exception_id.guild_scheduled_event_id] != null) {
@@ -151,8 +150,8 @@ function handleGuildScheduledEventUpdateOrCreate(guildScheduledEvent) {
 }
 function handleGuildScheduledEventExceptionCreateOrUpdate(eventException) {
   eventException = eventException.eventException;
-  obj = secondaryIndexMap;
-  const value = secondaryIndexMap.get(eventException.event_id);
+  let obj = secondaryIndexMap;
+  value = secondaryIndexMap.get(eventException.event_id);
   if (null == value) {
     return false;
   } else {
@@ -175,23 +174,24 @@ function handleGuildScheduledEventExceptionCreateOrUpdate(eventException) {
     return true;
   }
 }
+const GuildScheduledEventsConstants = fn(1963);
 ({
-  GuildScheduledEventStatus: c4,
-  GuildScheduledEventStatusDone: c5,
-  GuildScheduledEventUserResponses: closure_6,
-} = GUILD_EVENT_MAX_NAME_LENGTH);
-let obj = {
+  GuildScheduledEventStatus: closure_4,
+  GuildScheduledEventStatusDone: hasOwnProperty,
+  GuildScheduledEventUserResponses: metroRequire,
+} = GuildScheduledEventsConstants);
+let StaticGuildEventIndexes = {
   EVENT: "event",
   EVENT_ACTIVE: "active",
   EVENT_UPCOMING: "event-upcoming",
   GUILD_EVENT(arg0) {
     return "" + arg0 + "-" + obj.EVENT;
   },
-  GUILD_EVENT_ACTIVE(closure_0) {
-    return "" + closure_0 + "-" + obj.EVENT_ACTIVE;
+  GUILD_EVENT_ACTIVE(guild_id) {
+    return "" + guild_id + "-" + obj.EVENT_ACTIVE;
   },
-  GUILD_EVENT_UPCOMING(closure_0) {
-    return "" + closure_0 + "-" + obj.EVENT_UPCOMING;
+  GUILD_EVENT_UPCOMING(guild_id) {
+    return "" + guild_id + "-" + obj.EVENT_UPCOMING;
   },
   CHANNEL_EVENT(channel_id) {
     return "" + channel_id + "-" + obj.EVENT;
@@ -203,7 +203,7 @@ let obj = {
     return "" + channel_id + "-" + obj.EVENT_UPCOMING;
   },
 };
-const secondaryIndexMap = new require("version").SecondaryIndexMap(function scheduledEventIndex(status) {
+const secondaryIndexMap = new fn(4195).SecondaryIndexMap(function scheduledEventIndex(status) {
   ({ guild_id, entity_id, channel_id } = status);
   const items = [guild_id];
   if (null != entity_id) {
@@ -238,21 +238,21 @@ const secondaryIndexMap = new require("version").SecondaryIndexMap(function sche
   }
   return items;
 }, scheduledEventSort);
-let c9 = 0;
+let closure_9 = 0;
 let closure_10 = [];
 const SERIES = "SERIES";
-let closure_12 = {};
-let closure_13 = {};
+const dependencyMap = {};
+const dependencyMap2 = {};
 const Store = initializeDefault.Store;
 class GuildScheduledEventStore extends Store {}
 const prototype = GuildScheduledEventStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_2, closure_3);
+  this.waitFor(AuthenticationStore, GuildMemberStore);
 };
-prototype["getGuildScheduledEvent"] = function getGuildScheduledEvent(closure_0) {
+prototype["getGuildScheduledEvent"] = function getGuildScheduledEvent(eventId) {
   let tmp = null;
-  if (null != closure_0) {
-    let value = secondaryIndexMap.get(closure_0);
+  if (null != eventId) {
+    value = secondaryIndexMap.get(eventId);
     if (value == null) {
       value = null;
     }
@@ -263,39 +263,39 @@ prototype["getGuildScheduledEvent"] = function getGuildScheduledEvent(closure_0)
 prototype["getGuildEventCountByIndex"] = function getGuildEventCountByIndex(arg0) {
   return secondaryIndexMap.size(arg0);
 };
-prototype["getGuildScheduledEventsForGuild"] = function getGuildScheduledEventsForGuild(closure_0) {
-  if (null == closure_0) {
+prototype["getGuildScheduledEventsForGuild"] = function getGuildScheduledEventsForGuild(guildId) {
+  if (null == guildId) {
     let items = [];
   } else {
-    items = secondaryIndexMap.values(closure_0);
+    items = secondaryIndexMap.values(guildId);
   }
   return items;
 };
-prototype["getGuildScheduledEventsByIndex"] = function getGuildScheduledEventsByIndex(closure_1_8) {
-  return secondaryIndexMap.values(closure_1_8);
+prototype["getGuildScheduledEventsByIndex"] = function getGuildScheduledEventsByIndex(GUILD_EVENT_UPCOMINGResult) {
+  return secondaryIndexMap.values(GUILD_EVENT_UPCOMINGResult);
 };
 prototype["getRsvpVersion"] = function getRsvpVersion() {
-  return c9;
+  return closure_9;
 };
-prototype["getRsvp"] = function getRsvp(closure_1_0, closure_1_1, id) {
-  if (null == closure_1_0) {
+prototype["getRsvp"] = function getRsvp(id, c1, id2) {
+  if (null == id) {
     return null;
   } else {
-    let tmp = closure_1_1;
-    if (closure_1_1 == null) {
+    let tmp = c1;
+    if (c1 == null) {
       tmp = SERIES;
     }
     let tmp4;
-    if (dependencyMap[closure_1_0] != null) {
+    if (dependencyMap[id] != null) {
       if (tmp3[tmp] != null) {
-        tmp4 = tmp5[id];
+        tmp4 = tmp5[id2];
       }
     }
     return tmp4;
   }
 };
 prototype["isInterestedInEventRecurrence"] = function isInterestedInEventRecurrence(id, c1) {
-  id = store.getId();
+  id = AuthenticationStore.getId();
   const rsvp = this.getRsvp(id, null, id);
   const rsvp1 = this.getRsvp(id, c1, id);
   let response;
@@ -353,7 +353,7 @@ prototype["hasUserCount"] = function hasUserCount(arg0, arg1) {
 prototype["isActive"] = function isActive(arg0) {
   let tmp = null != arg0;
   if (tmp) {
-    const value = secondaryIndexMap.get(arg0);
+    value = secondaryIndexMap.get(arg0);
     let tmp4 = null != value;
     if (tmp4) {
       let status;
@@ -372,16 +372,16 @@ prototype["getActiveEventByChannel"] = function getActiveEventByChannel(id) {
     return this.getGuildScheduledEventsByIndex(obj.CHANNEL_EVENT_ACTIVE(id))[0];
   }
 };
-prototype["getUsersForGuildEvent"] = function getUsersForGuildEvent(closure_0, closure_1) {
-  if (null == closure_0) {
+prototype["getUsersForGuildEvent"] = function getUsersForGuildEvent(arg0, arg1) {
+  if (null == arg0) {
     return {};
   } else {
-    let tmp = closure_1;
-    if (closure_1 == null) {
+    let tmp = arg1;
+    if (arg1 == null) {
       tmp = SERIES;
     }
-    obj = undefined;
-    if (dependencyMap[closure_0] != null) {
+    let obj;
+    if (dependencyMap[arg0] != null) {
       obj = tmp3[tmp];
     }
     if (obj == null) {
@@ -391,18 +391,18 @@ prototype["getUsersForGuildEvent"] = function getUsersForGuildEvent(closure_0, c
   }
 };
 GuildScheduledEventStore.displayName = "GuildScheduledEventStore";
-obj = {
+StaticGuildEventIndexes = {
   CONNECTION_OPEN: function handleConnectionOpen(guilds) {
     guilds = guilds.guilds;
     secondaryIndexMap.clear();
-    c9 = 0;
+    closure_9 = 0;
     closure_12 = {};
     closure_13 = {};
     const item = closure_10.forEach(saveEvent);
     const item1 = guilds.forEach((guild_scheduled_events) => {
       const prop = guild_scheduled_events.guild_scheduled_events;
       return prop.forEach((id) => {
-        const result = closure_8.set(id.id, id);
+        const result = closure_1_8.set(id.id, id);
         closure_9 = closure_9 + 1;
       });
     });
@@ -413,7 +413,7 @@ obj = {
     c0 = false;
     const values = secondaryIndexMap.values(obj.GUILD_EVENT(guild.id));
     const item = values.forEach((id) => {
-      closure_1_8.delete(id.id);
+      secondaryIndexMap.delete(id.id);
       delete tmp[tmp2];
       if (c0) {
         delete tmp[tmp2];
@@ -422,7 +422,7 @@ obj = {
     });
     const prop = guild.guild_scheduled_events;
     const item1 = prop.forEach((id) => {
-      const result = closure_8.set(id.id, id);
+      const result = secondaryIndexMap.set(id.id, id);
       closure_9 = closure_9 + 1;
     });
     return true;
@@ -431,7 +431,7 @@ obj = {
     c0 = true;
     const values = secondaryIndexMap.values(obj.GUILD_EVENT(guild.guild.id));
     const item = values.forEach((id) => {
-      closure_1_8.delete(id.id);
+      secondaryIndexMap.delete(id.id);
       delete tmp[tmp2];
       if (c0) {
         delete tmp[tmp2];
@@ -450,15 +450,14 @@ obj = {
     const values = secondaryIndexMap.values(obj.GUILD_EVENT(guildScheduledEvents.guildId), true);
     const mapped = values.map((id) => id.id);
     const mapped1 = guildScheduledEvents.map((id) => id.id);
-    obj = applyDefault;
-    const item = obj.difference(mapped, mapped1).forEach((arg0) => {
-      set.delete(arg0);
+    obj = _modDef12;
+    const item = obj.difference(mapped, mapped1).forEach((item) => {
+      set.delete(item);
       delete tmp[tmp2];
       delete tmp[tmp2];
       closure_9 = closure_9 + 1;
     });
     for (const item10029 of guildScheduledEvents) {
-      let tmp4 = saveEvent;
       let tmp5 = saveEvent(item10029);
       continue;
     }
@@ -489,17 +488,17 @@ obj = {
     if (null != tmp3) {
       removeGuildEventUser(tmp3, false);
     }
-    obj = {
+    const obj = {
       user_id: userId,
       guild_scheduled_event_id: guildEventId,
       member: null,
       guild_scheduled_event_exception_id: null,
       response: null,
     };
-    member = member.getMember(guildId, userId);
-    obj[2] = member;
-    obj[3] = guildEventExceptionId;
-    obj[4] = response;
+    const member = GuildMemberStore.getMember(guildId, userId);
+    obj.member = member;
+    obj.guild_scheduled_event_exception_id = guildEventExceptionId;
+    obj.response = response;
     addGuildEventUser(obj);
     return true;
   },
@@ -513,16 +512,16 @@ obj = {
   },
   GUILD_SCHEDULED_EVENT_RSVPS_FETCH_SUCESS: function handleFetchGuildEventsForUser(guildScheduledEventUsers) {
     const prop = guildScheduledEventUsers.guildScheduledEventUsers;
-    const item = prop.forEach((arg0) => {
-      callback(arg0, false, false);
+    const item = prop.forEach((item) => {
+      addGuildEventUser(item, false, false);
     });
     closure_9 = closure_9 + 1;
     return true;
   },
   GUILD_SCHEDULED_EVENT_USERS_FETCH_SUCCESS: function handleFetchUsersForGuildEventSuccess(guildScheduledEventUsers) {
     const prop = guildScheduledEventUsers.guildScheduledEventUsers;
-    const item = prop.forEach((arg0) => {
-      callback(arg0, false, false);
+    const item = prop.forEach((item) => {
+      addGuildEventUser(item, false, false);
     });
     closure_9 = closure_9 + 1;
     return true;
@@ -538,12 +537,12 @@ obj = {
       let tmp = arg0;
       const diff = counts.eventCount - counts.recurrenceCounts[arg0];
       if (arg0 == null) {
-        tmp = closure_1_11;
+        tmp = SERIES;
       }
-      if (null == closure_1_13[eventId]) {
-        closure_1_13[tmp2] = {};
+      if (null == dependencyMap[eventId]) {
+        dependencyMap[tmp2] = {};
       }
-      closure_1_13[eventId][tmp] = diff;
+      dependencyMap[eventId][tmp] = diff;
     });
   },
   INVITE_RESOLVE_SUCCESS: function handleInviteResolveSuccess(invite) {
@@ -560,8 +559,8 @@ obj = {
   GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE: handleGuildScheduledEventExceptionCreateOrUpdate,
   GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE: function handleGuildScheduledEventExceptionDelete(eventException) {
     eventException = eventException.eventException;
-    obj = secondaryIndexMap;
-    const value = secondaryIndexMap.get(eventException.event_id);
+    let obj = secondaryIndexMap;
+    value = secondaryIndexMap.get(eventException.event_id);
     if (null == value) {
       return false;
     } else {
@@ -578,8 +577,8 @@ obj = {
     }
   },
   GUILD_SCHEDULED_EVENT_EXCEPTIONS_DELETE: function handleGuildScheduledEventExceptionsDelete(eventId) {
-    obj = secondaryIndexMap;
-    const value = secondaryIndexMap.get(eventId.eventId);
+    let obj = secondaryIndexMap;
+    value = secondaryIndexMap.get(eventId.eventId);
     let flag = null != value;
     if (flag) {
       obj = {};
@@ -596,11 +595,12 @@ obj = {
     return true;
   },
 };
-const guildScheduledEventStore = new GuildScheduledEventStore(dispatcherDefault, obj);
-let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/GuildScheduledEventStore.tsx");
+const guildScheduledEventStore = new GuildScheduledEventStore(DispatcherDefault, StaticGuildEventIndexes);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_scheduled_events/GuildScheduledEventStore.tsx");
 
 export default guildScheduledEventStore;
-export const StaticGuildEventIndexes = obj;
+export { StaticGuildEventIndexes };
 export { scheduledEventSort };
 export const isGuildScheduledEventActive = function isGuildScheduledEventActive(status) {
   let tmp = null != status;
@@ -616,7 +616,7 @@ export const isGuildScheduledEventActive = function isGuildScheduledEventActive(
 export const isEventUpcoming = function isEventUpcoming(guild_scheduled_event) {
   return !set.has(guild_scheduled_event.status);
 };
-export const eventScheduledToStartWithin = function eventScheduledToStartWithin(scheduled_start_time) {
+export const eventScheduledToStartWithin = function eventScheduledToStartWithin(scheduled_start_time, arg1) {
   const time = new Date(scheduled_start_time.scheduled_start_time).getTime();
   return time < Date.now() + 1000 * arg1;
 };

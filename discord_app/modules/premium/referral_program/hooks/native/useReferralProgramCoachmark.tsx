@@ -1,60 +1,59 @@
 // discord_app/modules/premium/referral_program/hooks/native/useReferralProgramCoachmark.tsx
-import preloadDefault from "../../../../../components_native/common/FastImage.tsx";
-import registerAssetDefault from "../../../../../../_runtime/16787_registerAsset.js";
-import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { UserSettingsSections } from "../../../../../Constants.tsx";
-import { ContentDismissActionType } from "../../../../dismissible_content/DismissibleContentConstants.tsx";
-import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
-import { UNSAFE_isDismissibleContentDismissed } from "../../../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
-import { useSelectedDismissibleContent } from "../../../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
+import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../../intl/index.native.tsx";
+import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
+import _modDef16787 from "../../../../../../_runtime/metro/16787__.js";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
+require = fn;
 function ReferralProgramCoachmarkImg() {
-  const tmp = callback2();
+  const tmp = closure_9();
   let obj = { style: tmp.coachmarkImageContainer, children: null };
-  obj = { source: registerAssetDefault, style: tmp.coachmarkImage };
-  obj[1] = jsx(preloadDefault, { source: registerAssetDefault, style: tmp.coachmarkImage });
-  return <View source={registerAssetDefault} style={tmp.coachmarkImage} />;
+  obj = { source: _modDef16787, style: tmp.coachmarkImage };
+  obj.children = jsx(FastImageDefault, { source: _modDef16787, style: tmp.coachmarkImage });
+  return <View source={_modDef16787} style={tmp.coachmarkImage} />;
 }
-let closure_9 = createCacheKey.createStyles({
+const View = fn(17).View;
+const UserSettingsSections = fn(1074).UserSettingsSections;
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_9 = createStyles.createStyles({
   coachmarkImageContainer: { alignItems: "center", justifyContent: "center" },
   coachmarkImage: { width: 200, height: 112 },
 });
-let result = require("set").fileFinishedImporting(
+const size = fn(2);
+let result = size.fileFinishedImporting(
   "modules/premium/referral_program/hooks/native/useReferralProgramCoachmark.tsx",
 );
 
 export const useReferralProgramCoachmark = function useReferralProgramCoachmark(disabled) {
   disabled = disabled.disabled;
-  let _require;
-  closure_1 = undefined;
-  let obj = UNSAFE_isDismissibleContentDismissed;
+  _require = undefined;
+  let visible;
+  let obj = require("DismissibleContentUnsafeUtils");
   let result = obj.useIsDismissibleContentDismissed_UNSAFE(
-    require("../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx")
-      .DismissibleContent.REFERRAL_TRIAL_MOBILE_SENDER_COACHMARK,
+    require("dismissible_content").DismissibleContent.REFERRAL_TRIAL_MOBILE_SENDER_COACHMARK,
   );
   if (!result) {
     result = disabled;
   }
   const isEligibleSenderForReferralProgram =
-    require("../useIsEligibleSenderForReferralProgram.tsx").useIsEligibleSenderForReferralProgram(result);
-  useSelectedDismissibleContent;
+    require("useIsEligibleSenderForReferralProgram").useIsEligibleSenderForReferralProgram(result);
+  require("useSelectedDismissibleContent");
   if (isEligibleSenderForReferralProgram) {
     if (!disabled) {
       let items = [tmp(1943).DismissibleContent.REFERRAL_TRIAL_MOBILE_SENDER_COACHMARK];
     }
-    const tmp8 = callback(tmp6(items), 2);
+    const tmp8 = _slicedToArray(tmp6(items), 2);
     _require = tmp9;
     const tmp10 = tmp8[0] === tmp(1943).DismissibleContent.REFERRAL_TRIAL_MOBILE_SENDER_COACHMARK;
-    closure_1 = tmp10;
+    visible = tmp10;
     const items1 = [tmp10, tmp8[1]];
     let tmp13 = null;
     if (tmp10) {
-      obj = { props: null };
-      obj[0] = tmp12;
+      obj = { props: tmp12 };
       tmp13 = obj;
     }
     return tmp13;

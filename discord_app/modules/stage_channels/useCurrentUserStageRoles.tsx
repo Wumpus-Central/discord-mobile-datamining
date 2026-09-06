@@ -1,21 +1,22 @@
 // discord_app/modules/stage_channels/useCurrentUserStageRoles.tsx
-import closure_2 from "../../stores/AuthenticationStore.tsx";
-import closure_3 from "StageChannelRoleStore.tsx";
+import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
+import StageChannelRoleStore from "StageChannelRoleStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/stage_channels/useCurrentUserStageRoles.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/useCurrentUserStageRoles.tsx");
 
 export default function useCurrentUserStageRoles(arg0) {
-  const _require = arg0;
+  _require = arg0;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
   }
-  const items = [closure_3, closure_2];
+  const items = [StageChannelRoleStore, AuthenticationStore];
   const items1 = [arg0, flag];
-  return _require(flag[2]).useStateFromStoresObject(
+  return require("initialize").useStateFromStoresObject(
     items,
-    () => closure_1_3.getPermissionsForUser(closure_1_2.getId(), closure_0, flag),
+    () => StageChannelRoleStore.getPermissionsForUser(AuthenticationStore.getId(), closure_0, flag),
     items1,
   );
 }

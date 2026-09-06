@@ -1,7 +1,8 @@
 // discord_app/intl/locale-data/date-fns.tsx
-import importDefaultResult from "../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncRequireImpl from "../../../_runtime/01896_asyncRequireImpl.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
-const require = arg1;
+require = fn;
 const obj = {
   bg: null,
   cs: null,
@@ -35,11 +36,11 @@ const obj = {
   "zh-TW": null,
   hi: null,
 };
-let closure_32 = importDefaultResult(function* () {
-  yield v0(paths[2])(paths[1], paths.paths);
+let closure_32 = asyncGeneratorStep(async () => {
+  await asyncRequireImpl(3646, dependencyMap.paths);
   return arg1.default;
 });
-obj[0] = function () {
+obj.bg = function () {
   const self = this;
   const apply = closure_32.apply;
   if (typeof apply === "unknown") {
@@ -49,11 +50,11 @@ obj[0] = function () {
   }
   return applyArgumentsResult;
 };
-let closure_31 = importDefaultResult(function* () {
-  yield v0(paths[2])(paths[3], paths.paths);
+let closure_31 = asyncGeneratorStep(async () => {
+  await asyncRequireImpl(3658, dependencyMap.paths);
   return arg1.default;
 });
-obj[1] = function () {
+obj.cs = function () {
   const self = this;
   const apply = closure_31.apply;
   if (typeof apply === "unknown") {
@@ -63,11 +64,11 @@ obj[1] = function () {
   }
   return applyArgumentsResult;
 };
-let closure_30 = importDefaultResult(function* () {
-  yield v0(paths[2])(paths[4], paths.paths);
+let closure_30 = asyncGeneratorStep(async () => {
+  await asyncRequireImpl(3664, dependencyMap.paths);
   return arg1.default;
 });
-obj[2] = function () {
+obj.da = function () {
   const self = this;
   const apply = closure_30.apply;
   if (typeof apply === "unknown") {
@@ -77,11 +78,11 @@ obj[2] = function () {
   }
   return applyArgumentsResult;
 };
-let closure_29 = importDefaultResult(function* () {
-  yield v0(paths[2])(paths[5], paths.paths);
+let closure_29 = asyncGeneratorStep(async () => {
+  await asyncRequireImpl(3670, dependencyMap.paths);
   return arg1.default;
 });
-obj[3] = function () {
+obj.de = function () {
   const self = this;
   const apply = closure_29.apply;
   if (typeof apply === "unknown") {
@@ -91,11 +92,11 @@ obj[3] = function () {
   }
   return applyArgumentsResult;
 };
-let closure_28 = importDefaultResult(function* () {
-  yield v0(paths[2])(paths[6], paths.paths);
+let closure_28 = asyncGeneratorStep(async () => {
+  await asyncRequireImpl(3676, dependencyMap.paths);
   return arg1.default;
 });
-obj[4] = function () {
+obj.el = function () {
   const self = this;
   const apply = closure_28.apply;
   if (typeof apply === "unknown") {
@@ -105,11 +106,11 @@ obj[4] = function () {
   }
   return applyArgumentsResult;
 };
-let closure_27 = importDefaultResult(function* () {
-  yield v0(paths[2])(paths[7], paths.paths);
+let closure_27 = asyncGeneratorStep(async () => {
+  await asyncRequireImpl(3682, dependencyMap.paths);
   return arg1.default;
 });
-obj[5] = function () {
+obj["en-GB"] = function () {
   const self = this;
   const apply = closure_27.apply;
   if (typeof apply === "unknown") {
@@ -119,11 +120,11 @@ obj[5] = function () {
   }
   return applyArgumentsResult;
 };
-let closure_26 = importDefaultResult(function* () {
-  yield v0(paths[2])(paths[8], paths.paths);
+let closure_26 = asyncGeneratorStep(async () => {
+  await asyncRequireImpl(2027, dependencyMap.paths);
   return arg1.default;
 });
-obj[6] = function () {
+obj["en-US"] = function () {
   const self = this;
   const apply = closure_26.apply;
   if (typeof apply === "unknown") {
@@ -133,11 +134,11 @@ obj[6] = function () {
   }
   return applyArgumentsResult;
 };
-let closure_25 = importDefaultResult(function* () {
-  yield v0(paths[2])(paths[9], paths.paths);
+let closure_25 = asyncGeneratorStep(async () => {
+  await asyncRequireImpl(3684, dependencyMap.paths);
   return arg1.default;
 });
-obj[7] = function () {
+obj["es-ES"] = function () {
   const self = this;
   const apply = closure_25.apply;
   if (typeof apply === "unknown") {
@@ -147,11 +148,11 @@ obj[7] = function () {
   }
   return applyArgumentsResult;
 };
-let closure_24 = importDefaultResult(function* () {
-  yield v0(paths[2])(paths[9], paths.paths);
+let closure_24 = asyncGeneratorStep(async () => {
+  await asyncRequireImpl(3684, dependencyMap.paths);
   return arg1.default;
 });
-obj[8] = function () {
+obj["es-419"] = function () {
   const self = this;
   const apply = closure_24.apply;
   if (typeof apply === "unknown") {
@@ -161,11 +162,11 @@ obj[8] = function () {
   }
   return applyArgumentsResult;
 };
-let closure_23 = importDefaultResult(function* () {
-  yield v0(paths[2])(paths[10], paths.paths);
+let closure_23 = asyncGeneratorStep(async () => {
+  await asyncRequireImpl(3690, dependencyMap.paths);
   return arg1.default;
 });
-obj[9] = function () {
+obj.fi = function () {
   const self = this;
   const apply = closure_23.apply;
   if (typeof apply === "unknown") {
@@ -175,11 +176,11 @@ obj[9] = function () {
   }
   return applyArgumentsResult;
 };
-let closure_22 = importDefaultResult(function* () {
-  yield v0(paths[2])(paths[11], paths.paths);
+let closure_22 = asyncGeneratorStep(async () => {
+  await asyncRequireImpl(3696, dependencyMap.paths);
   return arg1.default;
 });
-obj[10] = function () {
+obj.fr = function () {
   const self = this;
   const apply = closure_22.apply;
   if (typeof apply === "unknown") {
@@ -189,11 +190,11 @@ obj[10] = function () {
   }
   return applyArgumentsResult;
 };
-let closure_21 = importDefaultResult(function* () {
-  yield v0(paths[2])(paths[12], paths.paths);
+let closure_21 = asyncGeneratorStep(async () => {
+  await asyncRequireImpl(3702, dependencyMap.paths);
   return arg1.default;
 });
-obj[11] = function () {
+obj.hr = function () {
   const self = this;
   const apply = closure_21.apply;
   if (typeof apply === "unknown") {
@@ -203,11 +204,11 @@ obj[11] = function () {
   }
   return applyArgumentsResult;
 };
-let closure_20 = importDefaultResult(function* () {
-  yield v0(paths[2])(paths[13], paths.paths);
+let closure_20 = asyncGeneratorStep(async () => {
+  await asyncRequireImpl(3708, dependencyMap.paths);
   return arg1.default;
 });
-obj[12] = function () {
+obj.hu = function () {
   const self = this;
   const apply = closure_20.apply;
   if (typeof apply === "unknown") {
@@ -217,11 +218,11 @@ obj[12] = function () {
   }
   return applyArgumentsResult;
 };
-let closure_19 = importDefaultResult(function* () {
-  yield v0(paths[2])(paths[14], paths.paths);
+let closure_19 = asyncGeneratorStep(async () => {
+  await asyncRequireImpl(3714, dependencyMap.paths);
   return arg1.default;
 });
-obj[13] = function () {
+obj.it = function () {
   const self = this;
   const apply = closure_19.apply;
   if (typeof apply === "unknown") {
@@ -231,11 +232,11 @@ obj[13] = function () {
   }
   return applyArgumentsResult;
 };
-let closure_18 = importDefaultResult(function* () {
-  yield v0(paths[2])(paths[15], paths.paths);
+let closure_18 = asyncGeneratorStep(async () => {
+  await asyncRequireImpl(3720, dependencyMap.paths);
   return arg1.default;
 });
-obj[14] = function () {
+obj.ja = function () {
   const self = this;
   const apply = closure_18.apply;
   if (typeof apply === "unknown") {
@@ -245,11 +246,11 @@ obj[14] = function () {
   }
   return applyArgumentsResult;
 };
-let closure_17 = importDefaultResult(function* () {
-  yield v0(paths[2])(paths[16], paths.paths);
+let closure_17 = asyncGeneratorStep(async () => {
+  await asyncRequireImpl(3726, dependencyMap.paths);
   return arg1.default;
 });
-obj[15] = function () {
+obj.ko = function () {
   const self = this;
   const apply = closure_17.apply;
   if (typeof apply === "unknown") {
@@ -259,11 +260,11 @@ obj[15] = function () {
   }
   return applyArgumentsResult;
 };
-let closure_16 = importDefaultResult(function* () {
-  yield v0(paths[2])(paths[17], paths.paths);
+let closure_16 = asyncGeneratorStep(async () => {
+  await asyncRequireImpl(3732, dependencyMap.paths);
   return arg1.default;
 });
-obj[16] = function () {
+obj.lt = function () {
   const self = this;
   const apply = closure_16.apply;
   if (typeof apply === "unknown") {
@@ -273,11 +274,11 @@ obj[16] = function () {
   }
   return applyArgumentsResult;
 };
-let closure_15 = importDefaultResult(function* () {
-  yield v0(paths[2])(paths[18], paths.paths);
+let closure_15 = asyncGeneratorStep(async () => {
+  await asyncRequireImpl(3738, dependencyMap.paths);
   return arg1.default;
 });
-obj[17] = function () {
+obj.nl = function () {
   const self = this;
   const apply = closure_15.apply;
   if (typeof apply === "unknown") {
@@ -287,11 +288,11 @@ obj[17] = function () {
   }
   return applyArgumentsResult;
 };
-let closure_14 = importDefaultResult(function* () {
-  yield v0(paths[2])(paths[19], paths.paths);
+let closure_14 = asyncGeneratorStep(async () => {
+  await asyncRequireImpl(3744, dependencyMap.paths);
   return arg1.default;
 });
-obj[18] = function () {
+obj.no = function () {
   const self = this;
   const apply = closure_14.apply;
   if (typeof apply === "unknown") {
@@ -301,11 +302,11 @@ obj[18] = function () {
   }
   return applyArgumentsResult;
 };
-let closure_13 = importDefaultResult(function* () {
-  yield v0(paths[2])(paths[20], paths.paths);
+let closure_13 = asyncGeneratorStep(async () => {
+  await asyncRequireImpl(3750, dependencyMap.paths);
   return arg1.default;
 });
-obj[19] = function () {
+obj.pl = function () {
   const self = this;
   const apply = closure_13.apply;
   if (typeof apply === "unknown") {
@@ -315,11 +316,11 @@ obj[19] = function () {
   }
   return applyArgumentsResult;
 };
-let closure_12 = importDefaultResult(function* () {
-  yield v0(paths[2])(paths[21], paths.paths);
+let closure_12 = asyncGeneratorStep(async () => {
+  await asyncRequireImpl(3756, dependencyMap.paths);
   return arg1.default;
 });
-obj[20] = function () {
+obj["pt-BR"] = function () {
   const self = this;
   const apply = closure_12.apply;
   if (typeof apply === "unknown") {
@@ -329,11 +330,11 @@ obj[20] = function () {
   }
   return applyArgumentsResult;
 };
-let closure_11 = importDefaultResult(function* () {
-  yield v0(paths[2])(paths[22], paths.paths);
+let closure_11 = asyncGeneratorStep(async () => {
+  await asyncRequireImpl(3762, dependencyMap.paths);
   return arg1.default;
 });
-obj[21] = function () {
+obj.ro = function () {
   const self = this;
   const apply = closure_11.apply;
   if (typeof apply === "unknown") {
@@ -343,11 +344,11 @@ obj[21] = function () {
   }
   return applyArgumentsResult;
 };
-let closure_10 = importDefaultResult(function* () {
-  yield v0(paths[2])(paths[23], paths.paths);
+let closure_10 = asyncGeneratorStep(async () => {
+  await asyncRequireImpl(3768, dependencyMap.paths);
   return arg1.default;
 });
-obj[22] = function () {
+obj.ru = function () {
   const self = this;
   const apply = closure_10.apply;
   if (typeof apply === "unknown") {
@@ -357,11 +358,11 @@ obj[22] = function () {
   }
   return applyArgumentsResult;
 };
-let closure_9 = importDefaultResult(function* () {
-  yield v0(paths[2])(paths[24], paths.paths);
+let closure_9 = asyncGeneratorStep(async () => {
+  await asyncRequireImpl(3774, dependencyMap.paths);
   return arg1.default;
 });
-obj[23] = function () {
+obj["sv-SE"] = function () {
   const self = this;
   const apply = closure_9.apply;
   if (typeof apply === "unknown") {
@@ -371,11 +372,11 @@ obj[23] = function () {
   }
   return applyArgumentsResult;
 };
-let closure_8 = importDefaultResult(function* () {
-  yield v0(paths[2])(paths[25], paths.paths);
+let closure_8 = asyncGeneratorStep(async () => {
+  await asyncRequireImpl(3780, dependencyMap.paths);
   return arg1.default;
 });
-obj[24] = function () {
+obj.th = function () {
   const self = this;
   const apply = closure_8.apply;
   if (typeof apply === "unknown") {
@@ -385,11 +386,11 @@ obj[24] = function () {
   }
   return applyArgumentsResult;
 };
-let closure_7 = importDefaultResult(function* () {
-  yield v0(paths[2])(paths[26], paths.paths);
+let closure_7 = asyncGeneratorStep(async () => {
+  await asyncRequireImpl(3786, dependencyMap.paths);
   return arg1.default;
 });
-obj[25] = function () {
+obj.tr = function () {
   const self = this;
   const apply = closure_7.apply;
   if (typeof apply === "unknown") {
@@ -399,11 +400,11 @@ obj[25] = function () {
   }
   return applyArgumentsResult;
 };
-let closure_6 = importDefaultResult(function* () {
-  yield v0(paths[2])(paths[27], paths.paths);
+let closure_6 = asyncGeneratorStep(async () => {
+  await asyncRequireImpl(3792, dependencyMap.paths);
   return arg1.default;
 });
-obj[26] = function () {
+obj.uk = function () {
   const self = this;
   const apply = closure_6.apply;
   if (typeof apply === "unknown") {
@@ -413,11 +414,11 @@ obj[26] = function () {
   }
   return applyArgumentsResult;
 };
-let closure_5 = importDefaultResult(function* () {
-  yield v0(paths[2])(paths[28], paths.paths);
+let closure_5 = asyncGeneratorStep(async () => {
+  await asyncRequireImpl(4096, dependencyMap.paths);
   return arg1.default;
 });
-obj[27] = function () {
+obj.vi = function () {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -427,11 +428,11 @@ obj[27] = function () {
   }
   return applyArgumentsResult;
 };
-let closure_4 = importDefaultResult(function* () {
-  yield v0(paths[2])(paths[29], paths.paths);
+let closure_4 = asyncGeneratorStep(async () => {
+  await asyncRequireImpl(4102, dependencyMap.paths);
   return arg1.default;
 });
-obj[28] = function () {
+obj["zh-CN"] = function () {
   const self = this;
   const apply = closure_4.apply;
   if (typeof apply === "unknown") {
@@ -441,11 +442,11 @@ obj[28] = function () {
   }
   return applyArgumentsResult;
 };
-let closure_3 = importDefaultResult(function* () {
-  yield v0(paths[2])(paths[30], paths.paths);
+let closure_3 = asyncGeneratorStep(async () => {
+  await asyncRequireImpl(4108, dependencyMap.paths);
   return arg1.default;
 });
-obj[29] = function () {
+obj["zh-TW"] = function () {
   const self = this;
   const apply = closure_3.apply;
   if (typeof apply === "unknown") {
@@ -455,11 +456,11 @@ obj[29] = function () {
   }
   return applyArgumentsResult;
 };
-let closure_2 = importDefaultResult(function* () {
-  yield v0(paths[2])(paths[31], paths.paths);
+let closure_2 = asyncGeneratorStep(async () => {
+  await asyncRequireImpl(4114, dependencyMap.paths);
   return arg1.default;
 });
-obj[30] = function () {
+obj.hi = function () {
   const self = this;
   const apply = closure_2.apply;
   if (typeof apply === "unknown") {
@@ -469,6 +470,7 @@ obj[30] = function () {
   }
   return applyArgumentsResult;
 };
-const result = require("set").fileFinishedImporting("intl/locale-data/date-fns.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("intl/locale-data/date-fns.tsx");
 
 export const dateFnsLocales = obj;

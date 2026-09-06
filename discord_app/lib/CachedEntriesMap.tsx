@@ -1,7 +1,8 @@
 // discord_app/lib/CachedEntriesMap.tsx
-import set from "../../_runtime/00002_set.js";
+import FunctionUtils from "../utils/FunctionUtils.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-let result = set.fileFinishedImporting("lib/CachedEntriesMap.tsx");
+let result = size.fileFinishedImporting("lib/CachedEntriesMap.tsx");
 class CachedEntriesMap {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -9,17 +10,17 @@ class CachedEntriesMap {
     obj.version = 0;
     map = new Map();
     obj.data = map;
-    obj = require("areArraysShallowlyEqual");
+    obj = closure_0(closure_1[0]);
     obj.cachedValues = obj.cachedFunction(() => {
       const data = obj.data;
       return Array.from(data.values());
     });
-    obj2 = require("areArraysShallowlyEqual");
+    obj2 = closure_0(closure_1[0]);
     obj.cachedKeys = obj2.cachedFunction(() => {
       const data = obj.data;
       return Array.from(data.keys());
     });
-    obj3 = require("areArraysShallowlyEqual");
+    obj3 = closure_0(closure_1[0]);
     obj.cachedEntries = obj3.cachedFunction(() => {
       const data = obj.data;
       return Array.from(data.entries());

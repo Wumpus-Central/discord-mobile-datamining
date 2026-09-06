@@ -1,37 +1,35 @@
 // discord_app/modules/user_settings/voice/native/UserSettingsVoiceUtils.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import trackDeviceChangedDefault from "../../../../actions/AudioActionCreators.tsx";
-import closure_3 from "../../../../stores/MediaEngineStore.tsx";
-import ME from "../../../../Constants.tsx";
+import AudioActionCreatorsDefault from "../../../../actions/AudioActionCreators.tsx";
+import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
-require = arg1;
-({ AnalyticsPages: c4, AnalyticsSections: c5 } = ME);
-let obj = { NONE: "NONE", STANDARD: "STANDARD", KRISP: "KRISP" };
-let result = require("set").fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceUtils.tsx");
+require = fn;
+const Constants = fn(1074);
+({ AnalyticsPages: closure_4, AnalyticsSections: hasOwnProperty } = Constants);
+const NoiseSuppressionOpt = { NONE: "NONE", STANDARD: "STANDARD", KRISP: "KRISP" };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceUtils.tsx");
 
 export const handleAutomaticGainControlChange = function handleAutomaticGainControlChange(arg0) {
-  obj = trackDeviceChangedDefault;
-  obj = { page: constants.USER_SETTINGS, section: constants2.SETTINGS_VOICE_AND_VIDEO };
+  const obj = { page: constants.USER_SETTINGS, section: constants2.SETTINGS_VOICE_AND_VIDEO };
   const result = obj.setAutomaticGainControl(arg0, obj);
 };
 export const handleEchoCancellationChange = function handleEchoCancellationChange(arg0) {
-  obj = trackDeviceChangedDefault;
-  obj = { page: constants.USER_SETTINGS, section: constants2.SETTINGS_VOICE_AND_VIDEO };
+  const obj = { page: constants.USER_SETTINGS, section: constants2.SETTINGS_VOICE_AND_VIDEO };
   obj.setEchoCancellation(arg0, obj);
 };
 export const handleNoiseSuppressionChange = function handleNoiseSuppressionChange(arg0) {
   ({ KRISP, STANDARD } = obj);
-  obj = trackDeviceChangedDefault;
   obj = { page: constants.USER_SETTINGS, section: constants2.SETTINGS_VOICE_AND_VIDEO };
   obj.setNoiseCancellation(arg0 === KRISP, obj);
   obj = { page: constants.USER_SETTINGS, section: constants2.SETTINGS_VOICE_AND_VIDEO };
-  trackDeviceChangedDefault.setNoiseSuppression(arg0 === STANDARD, obj);
+  AudioActionCreatorsDefault.setNoiseSuppression(arg0 === STANDARD, obj);
 };
-export const NoiseSuppressionOpt = obj;
-export const getSelectedNoiseSuppressionOption = function getSelectedNoiseSuppressionOption(closure_3) {
-  obj = closure_3;
-  if (closure_3 === undefined) {
-    obj = closure_3;
+export { NoiseSuppressionOpt };
+export const getSelectedNoiseSuppressionOption = function getSelectedNoiseSuppressionOption(MediaEngineStore) {
+  let obj = MediaEngineStore;
+  if (MediaEngineStore === undefined) {
+    obj = MediaEngineStore;
   }
   const noiseSuppression = obj.getNoiseSuppression();
   const noiseCancellation = obj.getNoiseCancellation();
@@ -42,12 +40,12 @@ export const getSelectedNoiseSuppressionOption = function getSelectedNoiseSuppre
   }
 };
 export const useSelectedNoiseSuppressionOption = function useSelectedNoiseSuppressionOption() {
-  const items = [closure_3];
+  const items = [MediaEngineStore];
   return initialize.useStateFromStores(items, () => {
-    const noiseSuppression = store.getNoiseSuppression();
-    const noiseCancellation = store.getNoiseCancellation();
+    const noiseSuppression = MediaEngineStore.getNoiseSuppression();
+    const noiseCancellation = MediaEngineStore.getNoiseCancellation();
     if (noiseCancellation) {
-      obj.getNoiseCancellationDeferredToSystem(store) ? tmp3.NONE : tmp3.KRISP;
+      obj.getNoiseCancellationDeferredToSystem(MediaEngineStore) ? tmp3.NONE : tmp3.KRISP;
     } else {
       return noiseSuppression ? tmp3.STANDARD : tmp3.NONE;
     }

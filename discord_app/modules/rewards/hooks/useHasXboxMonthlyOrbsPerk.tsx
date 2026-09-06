@@ -1,11 +1,12 @@
 // discord_app/modules/rewards/hooks/useHasXboxMonthlyOrbsPerk.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import getPremiumPlanItem from "../../../utils/PremiumUtils.tsx";
-import closure_3 from "../../../stores/UserStore.tsx";
-import { PremiumTypes } from "../../premium/PremiumConstants.tsx";
+import PremiumUtils from "../../../utils/PremiumUtils.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/rewards/hooks/useHasXboxMonthlyOrbsPerk.tsx");
+require = fn;
+const PremiumTypes = fn(1373).PremiumTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/rewards/hooks/useHasXboxMonthlyOrbsPerk.tsx");
 
 export const hasCrepeMonthlyOrbsPerk = function hasCrepeMonthlyOrbsPerk(currentUser) {
   if (obj.canUseMonthlyOrbs(currentUser)) {
@@ -21,14 +22,13 @@ export const hasCrepeMonthlyOrbsPerk = function hasCrepeMonthlyOrbsPerk(currentU
       }
       return hasItem;
     }
-    obj2 = getPremiumPlanItem;
+    obj2 = PremiumUtils;
   }
   return false;
 };
 export const useHasXboxMonthlyOrbsPerk = function useHasXboxMonthlyOrbsPerk() {
-  const items = [closure_3];
+  const items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const obj = initialize;
   let flag = false;
   if (obj2.canUseMonthlyOrbs(stateFromStores)) {
     let tmpResult = tmp(4218);

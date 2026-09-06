@@ -1,8 +1,7 @@
 // discord_app/stores/native/PushNotificationPermissionStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import NativeModulesDefault from "../../lib/pushnotification/PushNotification.tsx";
-import set from "../../../_runtime/00002_set.js";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import PushNotificationDefault from "../../lib/pushnotification/PushNotification.tsx";
 
 let obj = {
   INIT: 0,
@@ -44,11 +43,9 @@ obj = {
     [obj.GUILD_OPEN_BOTTOM_SHEET]: null,
     [obj.CALL_DISCONNECT_BOTTOM_SHEET]: null,
   },
-  eligiblePromptTypes: null,
+  eligiblePromptTypes: new Set([]),
 };
-let set = new Set([]);
-obj[2] = set;
-let c6 = null;
+let authorizationStatus = null;
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class PushNotificationPermissionStore extends DeviceSettingsStore {}
 const prototype = PushNotificationPermissionStore.prototype;
@@ -77,9 +74,9 @@ prototype["initialize"] = function initialize(promptLastSeen) {
     eligiblePromptTypes = [];
   }
   HermesBuiltin.arraySpread(eligiblePromptTypes, tmp8);
-  obj.eligiblePromptTypes = new Set(items.filter((arg0) => arg0 !== constants2.POST_REACTION_BANNER));
-  const set = new Set(items.filter((arg0) => arg0 !== constants2.POST_REACTION_BANNER));
-  NativeModulesDefault.checkPermissions((sound) => {
+  obj.eligiblePromptTypes = new Set(items.filter((item) => item !== constants2.POST_REACTION_BANNER));
+  const set = new Set(items.filter((item) => item !== constants2.POST_REACTION_BANNER));
+  PushNotificationDefault.checkPermissions((sound) => {
     ({ alert: _alert, badge } = sound);
     if (!_alert) {
       _alert = sound.sound;
@@ -111,7 +108,7 @@ Object.defineProperty(prototype, "promptSeen", {
 });
 Object.defineProperty(prototype, "authorizationStatus", {
   get: function authorizationStatus() {
-    return c6;
+    return authorizationStatus;
   },
   set: undefined,
 });
@@ -149,7 +146,7 @@ let items = [
   },
 ];
 PushNotificationPermissionStore.migrations = items;
-const pushNotificationPermissionStore = new PushNotificationPermissionStore(dispatcherDefault, {
+const pushNotificationPermissionStore = new PushNotificationPermissionStore(DispatcherDefault, {
   PUSH_NOTIFICATION_PERMISSION_SET_STATE: function setPushNotificationPermissionState(permissionState) {
     obj.permissionState = permissionState.permissionState;
   },
@@ -165,7 +162,8 @@ const pushNotificationPermissionStore = new PushNotificationPermissionStore(disp
     authorizationStatus = authorizationStatus.authorizationStatus;
   },
 });
-const result = set.fileFinishedImporting("stores/native/PushNotificationPermissionStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("stores/native/PushNotificationPermissionStore.tsx");
 
 export default pushNotificationPermissionStore;
 export const PermissionStateType = obj;

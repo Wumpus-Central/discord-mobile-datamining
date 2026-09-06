@@ -1,33 +1,34 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/invite/GroupDMInvite.tsx
-import getSystemLocale from "../../../../../../../../intl/index.native.tsx";
+import util from "../../../../../../../../intl/index.native.tsx";
 import getEmbedThemeColorsDefault from "../../getEmbedThemeColors.tsx";
 import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFromInvite.tsx";
-import closure_3 from "../../../../../../../../stores/ChannelStore.tsx";
-import closure_4 from "../../../../../../../../stores/RelationshipStore.tsx";
-import closure_5 from "../../../../../../../../stores/UserStore.tsx";
-import { InviteTypes } from "../../../../../../../instant_invite/Constants.tsx";
+import ChannelStore from "../../../../../../../../stores/ChannelStore.tsx";
+import RelationshipStore from "../../../../../../../../stores/RelationshipStore.tsx";
+import UserStore from "../../../../../../../../stores/UserStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting(
+require = fn;
+const InviteTypes = fn(7736).InviteTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/row_data/embeds/coded_links/invite/GroupDMInvite.tsx",
 );
 
-export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, closure_2) {
-  ({ colors, baseColors } = getEmbedThemeColorsDefault(closure_2));
-  const tmp2 = getEmbedThemeColorsDefault(closure_2);
+export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, theme) {
+  ({ colors, baseColors } = getEmbedThemeColorsDefault(theme));
+  const tmp2 = getEmbedThemeColorsDefault(theme);
   ({ channel, recipients_ } = getChannelAndRecipientsFromInviteDefault(invite));
   let id;
   if (channel != null) {
     id = channel.id;
   }
-  channel = channel.getChannel(id);
+  channel = ChannelStore.getChannel(id);
   let flag = false;
   if (null != channel) {
     flag = true;
   }
-  const intl = getSystemLocale.intl;
+  const intl = util.intl;
   const string = intl.string;
-  const t = getSystemLocale.t;
+  const t = util.t;
   if (arg1) {
     let str = string(t.qmtuXE);
     let tmp8 = tmp7;
@@ -46,8 +47,7 @@ export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, cl
   let formatToPlainStringResult;
   if (recipients_.length > 0) {
     const intl3 = tmp8(1114).intl;
-    let obj = { count: null };
-    obj[0] = recipients_.length;
+    let obj = { count: recipients_.length };
     formatToPlainStringResult = intl3.formatToPlainString(tmp8(1114).t.zRl6XR, obj);
   }
   let channelIconSource = null;
@@ -64,7 +64,7 @@ export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, cl
   if (flag) {
     channelName = null;
     if (null != channel) {
-      channelName = tmp8(4713).computeChannelName(channel, closure_5, closure_4);
+      channelName = tmp8(4713).computeChannelName(channel, UserStore, RelationshipStore);
       const tmp8Result1 = tmp8(4713);
     }
   }
@@ -127,7 +127,7 @@ export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, cl
   if (flag) {
     channelName1 = channelName;
     if (null != channel) {
-      channelName1 = tmp8(4713).computeChannelName(channel, closure_5, closure_4);
+      channelName1 = tmp8(4713).computeChannelName(channel, UserStore, RelationshipStore);
       const tmp8Result2 = tmp8(4713);
     }
   }

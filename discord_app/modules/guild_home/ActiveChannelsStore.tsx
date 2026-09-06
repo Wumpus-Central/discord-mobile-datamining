@@ -1,20 +1,18 @@
 // discord_app/modules/guild_home/ActiveChannelsStore.tsx
-import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
-import applyDefault from "../../../_runtime/00012_apply.js";
+import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
+import _modDef12 from "../../../_runtime/metro/00012__.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import closure_2 from "../../stores/ChannelStore.tsx";
-import closure_3 from "../../stores/SelectedGuildStore.tsx";
-import { isGuildHomeChannel } from "../channel/ChannelConstants.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
+import SelectedGuildStore from "../../stores/SelectedGuildStore.tsx";
 
 function truncateOldMessageData(channelId) {
   if (null != dependencyMap2[channelId]) {
     let nowResult = globalThis;
     const _Date2 = Date;
-    importDefault = DISCORD_EPOCHDefault.fromTimestamp(Date.now() - c5);
-    const obj = DISCORD_EPOCHDefault;
+    importDefault = SnowflakeUtilsDefault.fromTimestamp(Date.now() - c5);
     const tmp6 = importDefault;
-    const findIndexResult = applyDefault.findIndex(arr, (id) => callback(closure_1_1[3]).compare(id.id, callback) > 0);
+    const findIndexResult = _modDef12.findIndex(arr, (id) => SnowflakeUtilsDefault.compare(id.id, closure_0) > 0);
     if (-1 === findIndexResult) {
       dependencyMap2[channelId] = [];
     } else {
@@ -26,7 +24,6 @@ function truncateOldMessageData(channelId) {
     const _Date = nowResult.Date;
     nowResult = _Date.now();
     closure_8[channelId] = nowResult;
-    const obj2 = applyDefault;
   }
 }
 function handleChannelDelete(channel) {
@@ -34,19 +31,20 @@ function handleChannelDelete(channel) {
   delete tmp4[tmp3];
   delete tmp2[tmp];
 }
+const isGuildHomeChannel = fn(1964).isGuildHomeChannel;
 let c5 = 900000;
-let closure_6 = {};
-let closure_7 = {};
+let dependencyMap = {};
+const dependencyMap2 = {};
 let closure_8 = {};
-let closure_9 = {};
+let dependencyMap3 = {};
 const Store = initializeDefault.Store;
 class ActiveChannelsStore extends Store {}
 const prototype = ActiveChannelsStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_2, closure_3);
+  this.waitFor(ChannelStore, SelectedGuildStore);
 };
-prototype["getActiveChannelsFetchStatus"] = function getActiveChannelsFetchStatus(arg0) {
-  return dependencyMap3[arg0];
+prototype["getActiveChannelsFetchStatus"] = function getActiveChannelsFetchStatus(guildId) {
+  return dependencyMap3[guildId];
 };
 prototype["getActiveChannelIds"] = function getActiveChannelIds(guildId) {
   return dependencyMap[guildId];
@@ -66,7 +64,7 @@ prototype["shouldFetch"] = function shouldFetch(arg0) {
   return tmp;
 };
 ActiveChannelsStore.displayName = "ActiveChannelsStore";
-const activeChannelsStore = new ActiveChannelsStore(dispatcherDefault, {
+const activeChannelsStore = new ActiveChannelsStore(DispatcherDefault, {
   CHANNEL_SELECT: function handleRefreshChannels(guildId) {
     guildId = guildId.guildId;
     if (isGuildHomeChannel(guildId.channelId)) {
@@ -74,10 +72,10 @@ const activeChannelsStore = new ActiveChannelsStore(dispatcherDefault, {
         if (null == dependencyMap[guildId]) {
           return false;
         } else {
-          const item = arr.forEach((arg0) => {
-            callback(arg0);
+          const item = arr.forEach((item) => {
+            truncateOldMessageData(item);
             let length;
-            if (dependencyMap[arg0] != null) {
+            if (dependencyMap[item] != null) {
               length = arr.length;
             }
             if (0 === length) {
@@ -85,9 +83,8 @@ const activeChannelsStore = new ActiveChannelsStore(dispatcherDefault, {
             }
           });
           const _Array = Array;
-          const obj = applyDefault;
-          const found = applyDefault.chain(Array.from(arr)).filter((arg0) => arg0 in closure_7);
-          const chainResult = applyDefault.chain(Array.from(arr));
+          const found = _modDef12.chain(Array.from(arr)).filter((item) => item in dependencyMap);
+          const chainResult = _modDef12.chain(Array.from(arr));
           const _Set = Set;
           const set = new Set(
             found
@@ -113,7 +110,7 @@ const activeChannelsStore = new ActiveChannelsStore(dispatcherDefault, {
     ({ channelId, message } = optimistic);
     if (!optimistic.optimistic) {
       if (!optimistic.isPushNotification) {
-        channel = channel.getChannel(channelId);
+        const channel = ChannelStore.getChannel(channelId);
         if (null == channel) {
           return false;
         } else {
@@ -141,9 +138,7 @@ const activeChannelsStore = new ActiveChannelsStore(dispatcherDefault, {
                 dependencyMap2[channelId] = [];
               }
               let arr = dependencyMap2[channelId];
-              obj = { id: null, userId: null };
-              obj[0] = message.id;
-              obj[1] = id;
+              obj = { id: message.id, userId: id };
               arr = arr.push(obj);
             }
             tmp20 = tmp5;
@@ -168,11 +163,11 @@ const activeChannelsStore = new ActiveChannelsStore(dispatcherDefault, {
     closure_9[guildId] = { loading: false, error: null, fetchedAt: Date.now() };
     const obj = { loading: false, error: null, fetchedAt: Date.now() };
     closure_6[guildId] = new Set();
-    let item = channels.forEach((arg0) => {
-      ({ channel_id: guildId, messages } = arg0);
-      const item = messages.forEach((arg0) => {
-        ({ message_id, user_id } = arg0);
-        closure_2_6[closure_1_0].add(closure_0);
+    let item = channels.forEach((item) => {
+      ({ channel_id: guildId, messages } = item);
+      item = messages.forEach((item) => {
+        ({ message_id, user_id } = item);
+        closure_6[guildId].add(closure_1_0);
         let tmp4 = null == tmp3;
         if (!tmp4) {
           const _Date = Date;
@@ -180,12 +175,12 @@ const activeChannelsStore = new ActiveChannelsStore(dispatcherDefault, {
           tmp4 = sum > Date.now();
         }
         if (tmp4) {
-          closure_2_10(tmp);
+          truncateOldMessageData(tmp);
         }
-        if (null == closure_2_7[closure_0]) {
-          closure_2_7[tmp] = [];
+        if (null == dependencyMap[closure_1_0]) {
+          dependencyMap[tmp] = [];
         }
-        let arr = closure_2_7[tmp];
+        let arr = dependencyMap[tmp];
         arr = arr.push({ id: message_id, userId: user_id });
       });
     });
@@ -194,24 +189,24 @@ const activeChannelsStore = new ActiveChannelsStore(dispatcherDefault, {
     closure_9[error.guildId] = { loading: false, error: error.error, fetchedAt: null };
   },
   CONNECTION_OPEN: function handleConnectionOpen() {
-    guildId = guildId.getGuildId();
+    const guildId = SelectedGuildStore.getGuildId();
     if (null != guildId) {
       let items = tmp5;
       if (dependencyMap[guildId] == null) {
         items = [];
       }
-      const reduced = Array.from(items).reduce((arg0, arg1) => {
-        let items = table[arg1];
+      const reduced = Array.from(items).reduce((acc, item) => {
+        let items = dependencyMap2[item];
         if (items == null) {
           items = [];
         }
-        arg0[arg1] = items;
-        return arg0;
+        acc[item] = items;
+        return acc;
       }, {});
       dependencyMap = {};
       closure_7 = {};
       closure_8 = {};
-      let dependencyMap3 = {};
+      dependencyMap3 = {};
       const _Date = Date;
       let num;
       const timestamp = Date.now();
@@ -241,7 +236,8 @@ const activeChannelsStore = new ActiveChannelsStore(dispatcherDefault, {
     }
   },
 });
-const result = require("set").fileFinishedImporting("modules/guild_home/ActiveChannelsStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_home/ActiveChannelsStore.tsx");
 
 export default activeChannelsStore;
 export const MAX_STORED_MESSAGES = 26;

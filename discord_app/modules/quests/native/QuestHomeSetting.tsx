@@ -1,28 +1,30 @@
 // discord_app/modules/quests/native/QuestHomeSetting.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import QuestHomeHeaderTitleDefault from "useQuestHomeHeader.tsx";
-import EmptyStateNoQuestsAvailableDefault from "QuestHome.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
-import closure_5 from "../QuestHomeNavigationStore.tsx";
-import QuestsExperimentLocations from "../QuestConstants.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import _mod4184 from "../../../../_runtime/metro/04184__.js";
+import useQuestHomeHeaderDefault from "useQuestHomeHeader.tsx";
+import QuestHomeDefault from "QuestHome.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
+import QuestHomeNavigationStore from "../QuestHomeNavigationStore.tsx";
 
-const require = arg1;
-({ QuestHomeSortMethods: closure_6, getQuestHomeFilterOptionItem: error } = QuestsExperimentLocations);
-createCacheKey = { container: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
-createCacheKey[0] = createCacheKey;
-let closure_9 = createCacheKey.createStyles(createCacheKey);
+require = fn;
+const QuestConstants = fn(5444);
+({ QuestHomeSortMethods: metroRequire, getQuestHomeFilterOptionItem: closure_7 } = QuestConstants);
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { container: null };
+createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+createStyles.container = createStyles;
+let closure_9 = createStyles.createStyles(createStyles);
 let closure_10 = [];
-const result = require("set").fileFinishedImporting("modules/quests/native/QuestHomeSetting.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/QuestHomeSetting.tsx");
 
 export default function QuestHomeSetting() {
-  let tmp = callback2();
-  [tmp3, tmp4] = callback(
-    React.useState(() => {
-      let SUGGESTED = store.getField("sort");
+  let tmp = closure_9();
+  [tmp3, tmp4] = _slicedToArray(
+    noop.useState(() => {
+      let SUGGESTED = QuestHomeNavigationStore.getField("sort");
       if (null == SUGGESTED) {
         SUGGESTED = constants.SUGGESTED;
       } else {
@@ -33,10 +35,9 @@ export default function QuestHomeSetting() {
     }),
     2,
   );
-  let navigation = tmp4;
-  const tmp2 = callback(
-    React.useState(() => {
-      let SUGGESTED = store.getField("sort");
+  const tmp2 = _slicedToArray(
+    noop.useState(() => {
+      let SUGGESTED = QuestHomeNavigationStore.getField("sort");
       if (null == SUGGESTED) {
         SUGGESTED = constants.SUGGESTED;
       } else {
@@ -47,79 +48,75 @@ export default function QuestHomeSetting() {
     }),
     2,
   );
-  [tmp6, tmp7] = callback(
-    React.useState(() => {
-      const str = store.getField("filter");
+  [tmp6, tmp7] = _slicedToArray(
+    noop.useState(() => {
+      const str = QuestHomeNavigationStore.getField("filter");
       if (null == str) {
-        let found = closure_10;
+        let found = closure_1_10;
       } else {
         const parts = str.split(",");
-        const mapped = parts.map((arg0) => callback(arg0));
-        found = mapped.filter((arg0) => null != arg0);
+        const mapped = parts.map((item) => closure_1_7(item));
+        found = mapped.filter((item) => null != item);
         if (found.length <= 0) {
-          found = closure_10;
+          found = closure_1_10;
         }
       }
       return found;
     }),
     2,
   );
-  importDefault = tmp7;
-  const effect = React.useEffect(
+  const effect = noop.useEffect(
     () =>
-      closure_1_5.subscribe(
+      QuestHomeNavigationStore.subscribe(
         (self) => ({ sort: self.sort, filter: self.filter }),
         (self, self2) => {
           if (self.sort !== self2.sort) {
             let SUGGESTED = self.sort;
             if (null == SUGGESTED) {
-              SUGGESTED = closure_1_6.SUGGESTED;
+              SUGGESTED = constants.SUGGESTED;
             } else {
               const _Object = Object;
-              const values = Object.values(closure_1_6);
+              const values = Object.values(constants);
             }
-            closure_0(SUGGESTED);
-            const tmp = closure_0;
+            navigation(SUGGESTED);
           }
           if (self.filter !== self2.filter) {
             if (null == self.filter) {
-              let found = closure_1_10;
+              let found = closure_2_10;
             } else {
               const parts = str.split(",");
-              const mapped = parts.map((arg0) => callback(arg0));
-              found = mapped.filter((arg0) => null != arg0);
+              const mapped = parts.map((item) => closure_1_7(item));
+              found = mapped.filter((item) => null != item);
               if (found.length <= 0) {
-                found = closure_1_10;
+                found = closure_2_10;
               }
             }
-            closure_1(found);
-            const tmp7 = closure_1;
+            closure_1_1(found);
           }
         },
-        { equalityFn: navigation(closure_1_2[8]).shallow, fireImmediately: true },
+        { equalityFn: _mod4184.shallow, fireImmediately: true },
       ),
     [],
   );
-  navigation = undefined;
-  importDefault = undefined;
+  let navigation;
   let obj = navigation(1483);
   navigation = obj.useNavigation();
-  const tmp10 = callback(React.useState(false), 2);
+  const tmp10 = _slicedToArray(noop.useState(false), 2);
   importDefault = tmp10[1];
   const items = [navigation];
-  const effect1 = React.useEffect(() => navigation.addListener("transitionEnd", () => callback(true)), items);
-  callback = React.useCallback(() => {
-    callback(closure_1_10);
+  const effect1 = noop.useEffect(() => navigation.addListener("transitionEnd", () => closure_1_1(true)), items);
+  const callback = noop.useCallback(() => {
+    closure_1(closure_10);
   }, []);
-  const effect2 = React.useEffect(
+  const effect2 = noop.useEffect(
     () => () => {
-      callback(table[9]).close();
-      closure_5.resetState();
+      closure_1_1(closure_1_2[9]).close();
+      closure_1_5.resetState();
     },
     [],
   );
-  const field = closure_5.useField("scrollToQuestId");
-  QuestHomeHeaderTitleDefault({
+  const field = QuestHomeNavigationStore.useField("scrollToQuestId");
+  useQuestHomeHeaderDefault({
     setSelectedSortMethod: tmp4,
     setSelectedFilters: tmp7,
     selectedFilters: tmp6,
@@ -133,7 +130,7 @@ export default function QuestHomeSetting() {
     filters: tmp6,
     onClearFilters: callback,
   };
-  return jsx(EmptyStateNoQuestsAvailableDefault, {
+  return jsx(QuestHomeDefault, {
     containerStyle: tmp.container,
     isNavigationComplete: tmp10[0],
     scrollToQuestId: field,

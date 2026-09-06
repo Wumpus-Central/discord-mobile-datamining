@@ -1,12 +1,12 @@
 // discord_app/modules/links/LinkAnalyticsUtils.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
-import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
-import ME2 from "LinkUtils.tsx";
+import Constants from "../../Constants.tsx";
+import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
+import URLUtilsDefault from "../../utils/URLUtils.tsx";
+import LinkUtils from "LinkUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const AnalyticEvents = ME.AnalyticEvents;
-let closure_4 = {
+const AnalyticEvents = Constants.AnalyticEvents;
+const constants = {
   MESSAGE: "Discord Message Link",
   CHANNEL: "Discord Channel Link",
   SERVER_INVITE: "Discord Server Invite",
@@ -15,19 +15,19 @@ let closure_4 = {
   DISCOVERY: "Discord Discovery Link",
 };
 const items = [
-  (arr) => {
+  (substr) => {
     let SERVER_INVITE = null;
-    if (obj.isInvite(arr)) {
+    if (obj.isInvite(substr)) {
       SERVER_INVITE = constants.SERVER_INVITE;
     }
     return SERVER_INVITE;
   },
   (target) => {
-    const safeParseWithQueryResult = isDiscordProxiedAssetUrlDefault.safeParseWithQuery(target);
+    const safeParseWithQueryResult = URLUtilsDefault.safeParseWithQuery(target);
     if (null == safeParseWithQueryResult) {
       return null;
     } else {
-      const tryParseChannelPathResult = ME2.tryParseChannelPath(safeParseWithQueryResult.path);
+      const tryParseChannelPathResult = LinkUtils.tryParseChannelPath(safeParseWithQueryResult.path);
       if (null == tryParseChannelPathResult) {
         return null;
       } else {
@@ -44,7 +44,6 @@ const items = [
         }
         UNKNOWN = constants.UNKNOWN;
       }
-      const obj2 = ME2;
     }
   },
   (arg0) => {
@@ -55,18 +54,17 @@ const items = [
     return DISCOVERY;
   },
 ];
-const result = set.fileFinishedImporting("modules/links/LinkAnalyticsUtils.tsx");
+const result = size.fileFinishedImporting("modules/links/LinkAnalyticsUtils.tsx");
 
 export default {
   trackDiscordLinkClicked(guildId) {
-    expandEventPropertiesDefault;
+    AnalyticsUtilsDefault;
     if (null != guildId.guildId) {
       if (null != guildId.channelId) {
         if (null != guildId.messageId) {
           let UNKNOWN = constants.MESSAGE;
         }
-        const obj = { is_discord_link: true, discord_link_type: null };
-        obj[1] = UNKNOWN;
+        const obj = { is_discord_link: true, discord_link_type: UNKNOWN };
         tmp2(tmp3, obj);
       }
     }
@@ -77,32 +75,29 @@ export default {
     }
     UNKNOWN = constants.UNKNOWN;
   },
-  trackLinkClicked(closure_1) {
-    if (null != closure_1) {
-      let obj = isDiscordProxiedAssetUrlDefault;
-      let tmp3 = obj.isDiscordUrl(closure_1, true) || null != arg1;
-      expandEventPropertiesDefault;
-      obj = { is_discord_link: null, discord_link_type: null };
-      obj[0] = tmp3;
+  trackLinkClicked(ctaLink, arg1) {
+    if (null != ctaLink) {
+      let obj = URLUtilsDefault;
+      let tmp3 = obj.isDiscordUrl(ctaLink, true) || null != arg1;
+      AnalyticsUtilsDefault;
+      obj = { is_discord_link: tmp3, discord_link_type: null };
       if (!tmp3) {
-        obj[1] = null;
+        obj.discord_link_type = null;
         tmp5(tmp7, obj);
       } else {
         if (null != arg1) {
           if (null == arg1) {
-            let UNKNOWN = (function getDiscordLinkTypeFromUrl(closure_1) {
+            let UNKNOWN = (function getDiscordLinkTypeFromUrl(ctaLink) {
               const iter = dependencyMap[Symbol.iterator]();
               while (iter !== undefined) {
-                let tmp2 = iter.next()(closure_1);
-                let tmp3 = tmp2;
+                let tmp2 = iter.next()(ctaLink);
                 if (null != tmp2) {
-                  let tmp4 = iter;
                   iter.return();
                   return tmp2;
                 }
               }
               return constants.UNKNOWN;
-            })(closure_1);
+            })(ctaLink);
           } else {
             if (null != arg1.guildId) {
               if (null != arg1.channelId) {
@@ -121,12 +116,11 @@ export default {
         }
         UNKNOWN = constants.UNKNOWN;
       }
-      const tmp = importDefault;
     }
   },
   trackAnnouncementMessageLinkClicked(arg0) {
     ({ messageId, channelId, guildId, sourceChannelId, sourceGuildId } = arg0);
-    expandEventPropertiesDefault.track(AnalyticEvents.ANNOUNCEMENT_MESSAGE_LINK_CLICKED, {
+    AnalyticsUtilsDefault.track(AnalyticEvents.ANNOUNCEMENT_MESSAGE_LINK_CLICKED, {
       message_id: messageId,
       channel_id: channelId,
       guild_id: guildId,

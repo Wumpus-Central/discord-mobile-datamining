@@ -1,103 +1,90 @@
 // discord_app/modules/activities/utils/InviteEmbedTextUtils.tsx
-import getSystemLocale from "../../../intl/index.native.tsx";
-import messagesProxyDefault from "../../request_to_stream/RequestToStream.messages.js";
-import getNickname from "../../../utils/NicknameUtils.tsx";
-import closure_3 from "../../../stores/UserStore.tsx";
-import { ActivityActionTypes } from "../../../Constants.tsx";
+import util from "../../../intl/index.native.tsx";
+import _modDef2882 from "../../request_to_stream/RequestToStream.messages.js";
+import NicknameUtils from "../../../utils/NicknameUtils.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
 
-require = arg1;
-function getAskToJoinText(author, name_override, isPrivate, id1, arg4) {
+require = fn;
+function getAskToJoinText(author, appName, isPrivate, id1, arg4) {
   if (author.author.id === id1) {
     if (isPrivate.isPrivate()) {
-      user = user.getUser(isPrivate.getRecipientId());
+      const user = UserStore.getUser(isPrivate.getRecipientId());
       if (null != user) {
-        const intl2 = getSystemLocale.intl;
+        const intl2 = util.intl;
         const formatToPlainString2 = intl2.formatToPlainString;
-        const t2 = getSystemLocale.t;
+        const t2 = util.t;
         if (arg4) {
-          let obj = { username: null, appName: null };
-          obj[0] = user.globalName;
-          obj[1] = name_override;
+          let obj = { username: user.globalName, appName };
           let formatToPlainString2Result = formatToPlainString2(t2.JddpN2, obj);
         } else {
-          obj = { username: null, appName: null };
-          obj[0] = user.globalName;
-          obj[1] = name_override;
+          obj = { username: user.globalName, appName };
           formatToPlainString2Result = formatToPlainString2(t2.gYVkSW, obj);
         }
         return formatToPlainString2Result;
       }
     }
-    const intl = getSystemLocale.intl;
+    const intl = util.intl;
     const formatToPlainString = intl.formatToPlainString;
-    const t = getSystemLocale.t;
+    const t = util.t;
     if (arg4) {
-      obj1 = { appName: null };
-      obj1[0] = name_override;
+      const obj1 = { appName };
       let formatToPlainStringResult = formatToPlainString(t["2N1kNS"], obj1);
     } else {
-      const obj2 = { appName: null };
-      obj2[0] = name_override;
+      const obj2 = { appName };
       formatToPlainStringResult = formatToPlainString(t.IA6uDV, obj2);
     }
     return formatToPlainStringResult;
   } else {
-    const intl3 = getSystemLocale.intl;
+    const intl3 = util.intl;
     const formatToPlainString3 = intl3.formatToPlainString;
-    const t3 = getSystemLocale.t;
+    const t3 = util.t;
     if (arg4) {
-      const obj3 = { username: null, appName: null };
-      obj3[0] = author.author.globalName;
-      obj3[1] = name_override;
+      const obj3 = { username: author.author.globalName, appName };
       let formatToPlainString3Result = formatToPlainString3(t3.XE8axA, obj3);
     } else {
-      obj = { username: null, appName: null };
-      obj[0] = author.author.globalName;
-      obj[1] = name_override;
+      obj = { username: author.author.globalName, appName };
       formatToPlainString3Result = formatToPlainString3(t3.hgcjOn, obj);
     }
     return formatToPlainString3Result;
   }
 }
-const result = require("set").fileFinishedImporting("modules/activities/utils/InviteEmbedTextUtils.tsx");
+const ActivityActionTypes = fn(1074).ActivityActionTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/utils/InviteEmbedTextUtils.tsx");
 
-export const getHeaderText = function getHeaderText(arg0, arg1, arg2) {
+export const getHeaderText = function getHeaderText(name, arg1, arg2) {
   if (ActivityActionTypes.LISTEN === arg1) {
-    const intl5 = getSystemLocale.intl;
-    let obj = { name: null };
-    obj[0] = arg0;
-    return intl5.formatToPlainString(getSystemLocale.t["/8czH4"], obj);
+    const intl5 = util.intl;
+    let obj = { name };
+    return intl5.formatToPlainString(util.t["/8czH4"], obj);
   } else if (tmp.WATCH === arg1) {
-    const intl4 = getSystemLocale.intl;
-    obj = { name: null };
-    obj[0] = arg0;
-    return intl4.formatToPlainString(getSystemLocale.t.BBJXVk, obj);
+    const intl4 = util.intl;
+    obj = { name };
+    return intl4.formatToPlainString(util.t.BBJXVk, obj);
   } else if (tmp.JOIN === arg1) {
     let stringResult;
     if (!arg2) {
-      const intl3 = getSystemLocale.intl;
-      stringResult = intl3.string(getSystemLocale.t.pkq6Vq);
+      const intl3 = util.intl;
+      stringResult = intl3.string(util.t.pkq6Vq);
     }
     return stringResult;
   } else if (tmp.STREAM_REQUEST === arg1) {
-    const intl2 = getSystemLocale.intl;
-    return intl2.string(messagesProxyDefault.DKHhec);
+    const intl2 = util.intl;
+    return intl2.string(_modDef2882.DKHhec);
   } else {
     const JOIN_REQUEST = tmp.JOIN_REQUEST;
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.Ckxb6j);
+    const intl = util.intl;
+    return intl.string(util.t.Ckxb6j);
   }
 };
 export const getRequestToStreamText = function getRequestToStreamText(author, guild_id, id) {
   if (author.author.id === id) {
-    const intl2 = getSystemLocale.intl;
-    let stringResult = intl2.string(messagesProxyDefault["8B3U5O"]);
+    const intl2 = util.intl;
+    let stringResult = intl2.string(_modDef2882["8B3U5O"]);
   } else {
-    const intl = getSystemLocale.intl;
-    const obj = { username: null };
-    obj[0] = getNickname.getName(guild_id.guild_id, guild_id.id, author.author);
-    stringResult = intl.formatToPlainString(messagesProxyDefault["d/qbC0"], obj);
-    const obj2 = getNickname;
+    const intl = util.intl;
+    const obj = { username: NicknameUtils.getName(guild_id.guild_id, guild_id.id, author.author) };
+    stringResult = intl.formatToPlainString(_modDef2882["d/qbC0"], obj);
   }
   return stringResult;
 };
@@ -113,14 +100,12 @@ export const getDeadGameInviteText = function getDeadGameInviteText(activity, na
       if (tmp2.JOIN !== type) {
         if (tmp2.STREAM_REQUEST === type) {
           if (activity.author.id === id1) {
-            const intl2 = getSystemLocale.intl;
-            let stringResult = intl2.string(messagesProxyDefault["8B3U5O"]);
+            const intl2 = util.intl;
+            let stringResult = intl2.string(_modDef2882["8B3U5O"]);
           } else {
-            const intl = getSystemLocale.intl;
-            const obj = { username: null };
-            obj[0] = getNickname.getName(guild_id.guild_id, guild_id.id, activity.author);
-            stringResult = intl.formatToPlainString(messagesProxyDefault["d/qbC0"], obj);
-            const obj2 = getNickname;
+            const intl = util.intl;
+            const obj = { username: NicknameUtils.getName(guild_id.guild_id, guild_id.id, activity.author) };
+            stringResult = intl.formatToPlainString(_modDef2882["d/qbC0"], obj);
           }
           return stringResult;
         } else {
@@ -130,8 +115,8 @@ export const getDeadGameInviteText = function getDeadGameInviteText(activity, na
       }
     }
   }
-  const intl3 = getSystemLocale.intl;
-  const t = getSystemLocale.t;
+  const intl3 = util.intl;
+  const t = util.t;
   return intl3.string(arg4 ? t.x1UXGR : t["Ek+51n"]);
 };
 export const getPartyText = function getPartyText(arg0) {
@@ -141,29 +126,23 @@ export const getPartyText = function getPartyText(arg0) {
   } else {
     if (activityActionType !== tmp.LISTEN) {
       if (maxPartySize > 0) {
-        const intl2 = getSystemLocale.intl;
-        let obj = { partySize: null, maxPartySize: null };
-        obj[0] = partySize;
-        obj[1] = maxPartySize;
-        let formatToPlainStringResult = intl2.formatToPlainString(getSystemLocale.t.gLu7NU, obj);
+        const intl2 = util.intl;
+        let obj = { partySize, maxPartySize };
+        let formatToPlainStringResult = intl2.formatToPlainString(util.t.gLu7NU, obj);
       } else {
-        const intl = getSystemLocale.intl;
-        obj = { partySize: null };
-        obj[0] = partySize;
-        formatToPlainStringResult = intl.formatToPlainString(getSystemLocale.t["65JnWC"], obj);
+        const intl = util.intl;
+        obj = { partySize };
+        formatToPlainStringResult = intl.formatToPlainString(util.t["65JnWC"], obj);
       }
     }
     if (maxPartySize > 0) {
-      const intl4 = getSystemLocale.intl;
-      obj = { partySize: null, maxPartySize: null };
-      obj[0] = partySize;
-      obj[1] = maxPartySize;
-      let formatToPlainStringResult1 = intl4.formatToPlainString(getSystemLocale.t.Zogoou, obj);
+      const intl4 = util.intl;
+      obj = { partySize, maxPartySize };
+      let formatToPlainStringResult1 = intl4.formatToPlainString(util.t.Zogoou, obj);
     } else {
-      const intl3 = getSystemLocale.intl;
-      obj1 = { partySize: null };
-      obj1[0] = partySize;
-      formatToPlainStringResult1 = intl3.formatToPlainString(getSystemLocale.t.UGei0j, obj1);
+      const intl3 = util.intl;
+      const obj1 = { partySize };
+      formatToPlainStringResult1 = intl3.formatToPlainString(util.t.UGei0j, obj1);
     }
   }
 };

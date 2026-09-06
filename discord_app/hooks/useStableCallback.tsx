@@ -1,7 +1,7 @@
 // discord_app/hooks/useStableCallback.tsx
-import set from "../../_runtime/00002_set.js";
-import useStableCallbackDefault from "../../discord_common/js/shared/hooks/useStableCallback.tsx";
+import hooks_useStableCallbackDefault from "../../discord_common/js/shared/hooks/useStableCallback.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("hooks/useStableCallback.tsx");
+const result = size.fileFinishedImporting("hooks/useStableCallback.tsx");
 
-export default useStableCallbackDefault;
+export default hooks_useStableCallbackDefault;

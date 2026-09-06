@@ -1,71 +1,73 @@
 // discord_app/modules/favorites/native/FavoritesEmptyState.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import messagesProxyDefault from "../intl/FavoritesGuild.messages.js";
-import Text from "../../../design/components/Text/native/Text.tsx";
-import Stack from "../../../design/components/Stack/native/Stack.native.tsx";
-import Button from "../../../design/components/Button/native/Button.native.tsx";
-import AccountAgeTier10LargeBadge from "../../../design/assets/native.tsx";
-import useFavoritesAccess from "../FavoritesHooks.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
+import _modDef3225 from "../intl/FavoritesGuild.messages.js";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
+import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
+import native from "../../../design/assets/native.tsx";
+import FavoritesHooks from "../FavoritesHooks.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: null, text: null };
-createCacheKey = {
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+fn(4560);
+let createStyles = { container: null, text: null };
+createStyles = {
   flex: 1,
   alignItems: "center",
   justifyContent: "center",
-  gap: ThemesDefault.space.PX_16,
-  paddingHorizontal: ThemesDefault.space.PX_48,
+  gap: nativeDefault.space.PX_16,
+  paddingHorizontal: nativeDefault.space.PX_48,
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { textAlign: "center" };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/favorites/native/FavoritesEmptyState.tsx");
+createStyles.container = createStyles;
+createStyles.text = { textAlign: "center" };
+let closure_7 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/favorites/native/FavoritesEmptyState.tsx");
 
 export default function FavoritesEmptyState() {
-  const tmp = callback3();
-  let obj = useFavoritesAccess;
-  const callback = React.useCallback(() => {
-    callback2(paths[6])({ source: "favorites_empty_state" });
+  const tmp = closure_7();
+  const callback = noop.useCallback(() => {
+    require("openFavoritesGuildAddChannelModal")({ source: "favorites_empty_state" });
   }, []);
-  obj = { style: tmp.container, children: null };
-  const callback1 = React.useCallback(() => {
-    const obj = callback2(paths[7]);
-    obj.openLazy(callback(paths[9])(paths[8], paths.paths), callback(paths[10]).FAVORITES_UPSELL_SHEET_KEY, {
-      source: "favorites_empty_sidebar",
-    });
+  let obj = { style: tmp.container, children: null };
+  const callback1 = noop.useCallback(() => {
+    const obj = require("ActionSheetActionCreators");
+    obj.openLazy(
+      require("asyncRequireImpl")(paths[8], paths.paths),
+      require("openFavoritesGuildLimitUpsell").FAVORITES_UPSELL_SHEET_KEY,
+      { source: "favorites_empty_sidebar" },
+    );
   }, []);
-  const items = [callback(AccountAgeTier10LargeBadge.FavoritesSpotIllustration, { width: 192, height: 108 }), ,];
-  obj = { spacing: ThemesDefault.space.PX_8, align: "center", children: null };
-  obj1 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
-  const intl = getSystemLocale.intl;
-  obj1[3] = intl.string(messagesProxyDefault["wh+Rz1"]);
-  const items1 = [callback(Text.Heading, obj1)];
+  const items = [hasOwnProperty(native.FavoritesSpotIllustration, { width: 192, height: 108 }), ,];
+  obj = { spacing: nativeDefault.space.PX_8, align: "center", children: null };
+  const obj1 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
+  const intl = util.intl;
+  obj1.children = intl.string(_modDef3225["wh+Rz1"]);
+  const items1 = [hasOwnProperty(Text_Text.Heading, obj1)];
   const obj2 = { variant: "text-md/medium", color: "text-default", style: tmp.text, children: null };
-  const intl2 = getSystemLocale.intl;
-  obj2[3] = intl2.string(messagesProxyDefault["+SuGKb"]);
-  items1[1] = callback(Text.Text, obj2);
-  obj[2] = items1;
-  items[1] = callback2(Stack.Stack, obj);
+  const intl2 = util.intl;
+  obj2.children = intl2.string(_modDef3225["+SuGKb"]);
+  items1[1] = hasOwnProperty(Text_Text.Text, obj2);
+  obj.children = items1;
+  items[1] = timestampProducer(Stack_Stack.Stack, obj);
   if (obj.useFavoritesAccess("favorites_empty_state").hasAccess) {
     const obj3 = { variant: "primary", text: null, icon: null, onPress: null };
     const intl4 = tmp2(1114).intl;
-    obj3[1] = intl4.string(tmp9(3225)["6kk0gM"]);
-    obj3[2] = tmp8(tmp2(12753).PlusMediumIcon, {});
-    obj3[3] = callback;
+    obj3.text = intl4.string(tmp9(3225)["6kk0gM"]);
+    obj3.icon = tmp8(tmp2(12753).PlusMediumIcon, {});
+    obj3.onPress = callback;
     let obj4 = obj3;
   } else {
     obj4 = { variant: "primary", text: null, onPress: null };
     const intl3 = tmp2(1114).intl;
-    obj4[1] = intl3.string(tmp9(3225).yYVbdv);
-    obj4[2] = callback1;
+    obj4.text = intl3.string(tmp9(3225).yYVbdv);
+    obj4.onPress = callback1;
   }
-  items[2] = callback(Button.Button, obj4);
-  obj[1] = items;
-  return callback2(View, obj);
+  items[2] = hasOwnProperty(components_Button_Button.Button, obj4);
+  obj.children = items;
+  return timestampProducer(View, obj);
 }

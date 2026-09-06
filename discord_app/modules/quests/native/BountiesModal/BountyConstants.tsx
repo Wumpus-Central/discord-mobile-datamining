@@ -1,6 +1,6 @@
 // discord_app/modules/quests/native/BountiesModal/BountyConstants.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/quests/native/BountiesModal/BountyConstants.tsx");
+const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountyConstants.tsx");
 
 export const END_CARD_IMAGE_SIZE = 92;

@@ -1,7 +1,7 @@
 // discord_app/modules/app_database/system/AppDatabaseManager.Entry.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/app_database/system/AppDatabaseManager.Entry.tsx");
+const result = size.fileFinishedImporting("modules/app_database/system/AppDatabaseManager.Entry.tsx");
 class Entry {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);

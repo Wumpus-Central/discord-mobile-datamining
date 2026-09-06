@@ -1,16 +1,15 @@
 // discord_app/modules/favorites/utils/showFavoritesGuildAddedToast.native.tsx
-import set from "../../../../_runtime/00002_set.js";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import dispatcherDefault from "../../toast/native/ToastActionCreators.tsx";
+import util from "../../../intl/index.native.tsx";
+import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import StarIcon from "../../../design/components/Icon/native/redesign/generated/StarIcon.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/favorites/utils/showFavoritesGuildAddedToast.native.tsx");
+const result = size.fileFinishedImporting("modules/favorites/utils/showFavoritesGuildAddedToast.native.tsx");
 
 export default function showFavoritesGuildAddedToast() {
-  let obj = dispatcherDefault;
-  obj = { key: "FAVORITE_ADDED", content: null, IconComponent: null };
-  const intl = getSystemLocale.intl;
-  obj[1] = intl.string(getSystemLocale.t["4tSWQg"]);
-  obj[2] = StarIcon.StarIcon;
+  const obj = { key: "FAVORITE_ADDED", content: null, IconComponent: null };
+  const intl = util.intl;
+  obj.content = intl.string(util.t["4tSWQg"]);
+  obj.IconComponent = StarIcon.StarIcon;
   obj.open(obj);
 }

@@ -1,119 +1,126 @@
 // discord_app/actions/CallActionCreators.tsx
-import dispatcherDefault from "../Dispatcher.tsx";
-import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _modDef5411 from "SelectedChannelActionCreators.tsx";
-import useCanRingToGuildVoiceChannel from "../modules/calls/useCanRing.tsx";
-import closure_3 from "../stores/ChannelStore.tsx";
-import closure_4 from "../stores/RelationshipStore.tsx";
-import closure_5 from "../stores/UserStore.tsx";
-import ME from "../Constants.tsx";
+import DispatcherDefault from "../Dispatcher.tsx";
+import util from "../intl/index.native.tsx";
+import AnalyticsUtilsDefault from "../utils/AnalyticsUtils.tsx";
+import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import AlertActionCreatorsDefault from "AlertActionCreators.tsx";
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators.tsx";
+import useCanRing from "../modules/calls/useCanRing.tsx";
+import ChannelStore from "../stores/ChannelStore.tsx";
+import RelationshipStore from "../stores/RelationshipStore.tsx";
+import UserStore from "../stores/UserStore.tsx";
 
-require = arg1;
-({ Endpoints: closure_6, AnalyticEvents: error, ChannelTypesSets: closure_8, ChannelTypes: c9 } = ME);
-let result = require("set").fileFinishedImporting("actions/CallActionCreators.tsx");
+require = fn;
+const Constants = fn(1074);
+({
+  Endpoints: metroRequire,
+  AnalyticEvents: closure_7,
+  ChannelTypesSets: closure_8,
+  ChannelTypes: closure_9,
+} = Constants);
+const size = fn(2);
+let result = size.fileFinishedImporting("actions/CallActionCreators.tsx");
 
 export default {
-  call(id, c1) {
-    let self = this;
-    self = this;
+  call(id, MediaEngineStore, arg2, arg3, fn) {
+    const self = this;
     importDefault = id;
-    dependencyMap = c1;
+    dependencyMap = MediaEngineStore;
     closure_3 = arg2;
-    const blocked = arg3;
-    const user = arg4;
+    RelationshipStore = arg3;
+    UserStore = fn;
     if (null != arg3) {
-      if (!blocked.isBlocked(arg3)) {
-        const _require = user.getUser(arg3);
-        const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
-        let obj = { url: null, oldFormErrors: true, rejectWithError: true };
-        obj[0] = self.CALL(id);
-        const value = HTTP.get(obj);
+      if (!RelationshipStore.isBlocked(arg3)) {
+        _require = UserStore.getUser(arg3);
+        const HTTP = require("HTTPUtils").HTTP;
+        let obj = { url: self.CALL(id), oldFormErrors: true, rejectWithError: true };
+        value = HTTP.get(obj);
         value.then(
           (body) => {
             let ringable = closure_3;
             if (closure_3) {
               ringable = body.body.ringable;
             }
-            const voiceChannel = id(5411).selectVoiceChannel(id, dependencyMap);
+            const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(closure_1, closure_2);
             if (ringable) {
               self.ring(tmp2);
             }
-            if (callback != null) {
-              callback(tmp2);
+            if (closure_5 != null) {
+              closure_5(tmp2);
             }
           },
           () => {
-            let obj = id(1242);
-            obj.track(closure_1_7.OPEN_POPOUT, { type: "Not Friend", source: "Call" });
+            let obj = AnalyticsUtilsDefault;
+            obj.track(constants.OPEN_POPOUT, { type: "Not Friend", source: "Call" });
             obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
-            const intl = lib(1114).intl;
-            obj[0] = intl.string(lib(1114).t.My50nf);
-            const intl2 = lib(1114).intl;
+            const intl = util.intl;
+            obj.title = intl.string(util.t.My50nf);
+            const intl2 = util.intl;
             let str = "";
-            if (null != lib) {
-              str = lib.username;
+            if (null != user) {
+              str = user.username;
             }
-            obj[1] = intl2.format(lib(1114).t.IdKo2z, { username: str });
+            obj.body = intl2.format(util.t.IdKo2z, { username: str });
             const intl3 = tmp3(1114).intl;
-            obj[2] = intl3.string(lib(1114).t["PMsq/b"]);
+            obj.confirmText = intl3.string(util.t["PMsq/b"]);
             const intl4 = tmp3(1114).intl;
-            obj[3] = intl4.string(lib(1114).t.BddRzS);
-            obj[4] = function onConfirm() {
-              let obj = closure_1_1(closure_1_2[9]);
-              obj = { userId: closure_4, context: { location: "Call" } };
+            obj.cancelText = intl4.string(util.t.BddRzS);
+            obj.onConfirm = function onConfirm() {
+              closure_1(closure_2[9]);
+              const obj = { userId, context: { location: "Call" } };
               obj.addRelationship(obj);
             };
-            id(4904).show(obj);
+            AlertActionCreatorsDefault.show(obj);
           },
         );
       }
     } else {
-      obj = _modDef5411;
-      let voiceChannel = obj.selectVoiceChannel(id, c1);
+      obj = SelectedChannelActionCreatorsDefault;
+      let voiceChannel = obj.selectVoiceChannel(id, MediaEngineStore);
       if (arg2) {
         self.ring(id);
       }
-      if (arg4 != null) {
-        arg4(id);
+      if (fn != null) {
+        fn(id);
       }
     }
   },
   ring(channelId, items, gdm_invite) {
-    channel = channel.getChannel(channelId);
+    const channel = ChannelStore.getChannel(channelId);
     if (null != channel) {
-      let obj = useCanRingToGuildVoiceChannel;
-      const CALLABLE = constants.CALLABLE;
+      let obj = useCanRing;
+      const CALLABLE = constants2.CALLABLE;
       const result = obj.canRingUsersInChannel(channel);
       if (result) {
         const HTTP = tmp3(1272).HTTP;
-        obj = { url: null, body: null, oldFormErrors: true, rejectWithError: true };
-        obj[0] = closure_6.CALL_RING(channelId);
-        obj = { recipients: null, analytics_location: null };
-        obj[0] = items;
-        obj[1] = gdm_invite;
-        obj[1] = obj;
-        HTTP.post(obj);
+        const request = {
+          url: timestampProducer.CALL_RING(channelId),
+          body: null,
+          oldFormErrors: true,
+          rejectWithError: true,
+        };
+        obj = { recipients: items, analytics_location: gdm_invite };
+        request.body = obj;
+        HTTP.post(request);
         if (tmp14) {
-          obj1 = { type: "GUILD_LOCAL_RING_START", ringing: null, guildId: null };
-          obj1[1] = items;
-          obj1[2] = channel.guild_id;
-          dispatcherDefault.dispatch(obj1);
-          const obj6 = dispatcherDefault;
+          obj = { type: "GUILD_LOCAL_RING_START", ringing: items, guildId: channel.guild_id };
+          DispatcherDefault.dispatch(obj);
         }
       } else if (tmp7) {
-        obj1 = dispatcherDefault;
-        const obj2 = { type: "CALL_ENQUEUE_RING", channelId: null, recipients: null };
-        obj2[1] = channelId;
-        obj2[2] = items;
-        obj1.dispatch(obj2);
+        const obj1 = { type: "CALL_ENQUEUE_RING", channelId, recipients: items };
+        obj1.dispatch(obj1);
       }
       tmp3 = require;
     }
   },
   stopRinging(channelId, items) {
-    const HTTP = sendRequest.HTTP;
-    obj = { url: closure_6.CALL_STOP_RINGING(channelId), body: obj, oldFormErrors: true, rejectWithError: true };
-    obj = { recipients: items };
-    return HTTP.post(obj);
+    const HTTP = HTTPUtils.HTTP;
+    const request = {
+      url: timestampProducer.CALL_STOP_RINGING(channelId),
+      body: { recipients: items },
+      oldFormErrors: true,
+      rejectWithError: true,
+    };
+    return HTTP.post(request);
   },
 };

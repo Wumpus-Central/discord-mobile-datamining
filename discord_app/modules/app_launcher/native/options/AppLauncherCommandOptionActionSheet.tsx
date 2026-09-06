@@ -1,28 +1,33 @@
 // discord_app/modules/app_launcher/native/options/AppLauncherCommandOptionActionSheet.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { DEFAULT_CONTENT_PADDING } from "../AppLauncherNativeConstants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-noopAll;
-createCacheKey = {
+const require = fn;
+const View = fn(17).View;
+const DEFAULT_CONTENT_PADDING = fn(1482).DEFAULT_CONTENT_PADDING;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = {
   actionSheetBackground: null,
   titleContainer: null,
   titleWrapper: null,
   subtitleWrapper: null,
   contentContainer: null,
 };
-createCacheKey = { backgroundColor: ThemesDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { backgroundColor: "transparent" };
-createCacheKey[2] = { alignItems: "center" };
-createCacheKey[3] = { paddingHorizontal: 12, textAlign: "center" };
-createCacheKey[4] = { paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingTop: DEFAULT_CONTENT_PADDING, flex: 1 };
-let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting(
+createStyles = { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND };
+createStyles.actionSheetBackground = createStyles;
+createStyles.titleContainer = { backgroundColor: "transparent" };
+createStyles.titleWrapper = { alignItems: "center" };
+createStyles.subtitleWrapper = { paddingHorizontal: 12, textAlign: "center" };
+createStyles.contentContainer = {
+  paddingHorizontal: DEFAULT_CONTENT_PADDING,
+  paddingTop: DEFAULT_CONTENT_PADDING,
+  flex: 1,
+};
+let closure_5 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/app_launcher/native/options/AppLauncherCommandOptionActionSheet.tsx",
 );
 
@@ -36,8 +41,11 @@ export const AppLauncherCommandOptionActionSheet = function AppLauncherCommandOp
   if (flag === undefined) {
     flag = true;
   }
-  const merged = Object.assign(startExpanded, Object.create(null));
-  const tmp2 = callback();
+  const merged = Object.assign(
+    startExpanded,
+    Object.assign({ option: 0, children: 0, contentContainerStyles: 0, scrollable: 0, startExpanded: 0 }),
+  );
+  const tmp2 = closure_5();
   let obj = {};
   const merged1 = Object.assign(merged);
   obj.backgroundStyles = tmp2.actionSheetBackground;
@@ -52,19 +60,63 @@ export const AppLauncherCommandOptionActionSheet = function AppLauncherCommandOp
     subtitle: null,
     trailing: null,
   };
-  obj = { style: { alignSelf: "flex-start" }, children: jsx(merged(7199).ActionSheetCloseButton, obj1) };
-  obj[3] = <View style={{ alignSelf: "flex-start" }}>{jsx(merged(7199).ActionSheetCloseButton, obj1)}</View>;
-  ({ displayName: obj2[4], displayDescription: obj2[5] } = option);
-  obj[6] = jsx(merged(1178).Spacer, { size: 24 });
+  obj = {
+    style: { alignSelf: "flex-start" },
+    children: jsx(merged(7199).ActionSheetCloseButton, {
+      onPress() {
+        ActionSheetActionCreatorsDefault.hideActionSheet();
+        const onDismiss = merged.onDismiss;
+        if (onDismiss != null) {
+          onDismiss();
+        }
+      },
+    }),
+  };
+  obj.leading = (
+    <View style={{ alignSelf: "flex-start" }}>
+      {jsx(merged(7199).ActionSheetCloseButton, {
+        onPress() {
+          ActionSheetActionCreatorsDefault.hideActionSheet();
+          const onDismiss = merged.onDismiss;
+          if (onDismiss != null) {
+            onDismiss();
+          }
+        },
+      })}
+    </View>
+  );
+  ({ displayName: obj2.title, displayDescription: obj2.subtitle } = option);
+  obj.trailing = jsx(merged(1178).Spacer, { size: 24 });
   obj.header = jsx(merged(7149).BottomSheetTitleHeader, {
     style: { alignSelf: "flex-start" },
-    children: jsx(merged(7199).ActionSheetCloseButton, obj1),
+    children: jsx(merged(7199).ActionSheetCloseButton, {
+      onPress() {
+        ActionSheetActionCreatorsDefault.hideActionSheet();
+        const onDismiss = merged.onDismiss;
+        if (onDismiss != null) {
+          onDismiss();
+        }
+      },
+    }),
   });
+  const obj2 = { style: null, children };
   const items = [tmp2.contentContainer, contentContainerStyles];
-  obj.children = <View style={items}>{children}</View>;
+  obj2.style = items;
+  obj.children = <View style={null}>{children}</View>;
   return jsx(
     merged(7150).BottomSheet,
-    { style: { alignSelf: "flex-start" }, children: jsx(merged(7199).ActionSheetCloseButton, obj1) },
+    {
+      style: { alignSelf: "flex-start" },
+      children: jsx(merged(7199).ActionSheetCloseButton, {
+        onPress() {
+          ActionSheetActionCreatorsDefault.hideActionSheet();
+          const onDismiss = merged.onDismiss;
+          if (onDismiss != null) {
+            onDismiss();
+          }
+        },
+      }),
+    },
     option.name,
   );
 };

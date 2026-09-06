@@ -1,65 +1,61 @@
 // discord_app/modules/user_profile/native/UserProfileActivityTimebar.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useActivityTimer from "../hooks/useActivityTimer.tsx";
-import useActivityTimerDefault from "../hooks/useActivityTimer.tsx";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { bar: null, progress: null, textRow: null };
-createCacheKey = {
-  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
-  borderRadius: ThemesDefault.radii.xs,
+const useActivityTimerDefault = useActivityTimer;
+
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+fn(4560);
+let createStyles = { bar: null, progress: null, textRow: null };
+createStyles = {
+  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
+  borderRadius: nativeDefault.radii.xs,
   height: 4,
   marginBottom: 4,
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = {
-  backgroundColor: ThemesDefault.colors.ACTIVITY_TIMEBAR_PROGRESS_BACKGROUND,
-  borderRadius: ThemesDefault.radii.xs,
+createStyles.bar = createStyles;
+createStyles.progress = {
+  backgroundColor: nativeDefault.colors.ACTIVITY_TIMEBAR_PROGRESS_BACKGROUND,
+  borderRadius: nativeDefault.radii.xs,
   height: "100%",
   minWidth: 4,
 };
-createCacheKey[2] = { flexDirection: "row", justifyContent: "space-between" };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-let obj1 = {
-  backgroundColor: ThemesDefault.colors.ACTIVITY_TIMEBAR_PROGRESS_BACKGROUND,
-  borderRadius: ThemesDefault.radii.xs,
-  height: "100%",
-  minWidth: 4,
-};
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileActivityTimebar.tsx");
+createStyles.textRow = { flexDirection: "row", justifyContent: "space-between" };
+let closure_6 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileActivityTimebar.tsx");
 
 export default function UserProfileActivityTimebar(arg0) {
   ({ start, end, style } = arg0);
-  const tmp = callback3();
+  const tmp = closure_6();
   const tmp2 = useActivityTimerDefault({ start, end });
   let obj = { style, children: null };
-  obj = { style: tmp.bar, children: callback(View, { style: items }) };
-  items = [tmp.progress];
-  obj = { width: `${100 * tmp2.percentage}%` };
-  items[1] = obj;
+  obj = { style: tmp.bar, children: null };
+  obj = { style: null };
+  const items = [tmp.progress, { width: `${100 * tmp2.percentage}%` }];
+  obj.style = items;
   ({ elapsed, duration } = tmp2);
-  const items1 = [callback(View, obj)];
-  obj1 = { style: tmp.textRow, children: null };
-  const obj2 = {
+  obj.children = React4(View, obj);
+  const items1 = [React4(View, obj)];
+  const obj2 = { style: tmp.textRow, children: null };
+  const obj3 = {
     variant: "text-xs/normal",
     tabularNumbers: true,
     color: "text-subtle",
     children: useActivityTimer.formatTime(elapsed),
   };
-  const items2 = [callback(Text.Text, obj2)];
-  const obj3 = { variant: "text-xs/normal", tabularNumbers: true, color: "text-subtle", children: null };
-  const obj6 = useActivityTimer;
-  obj3[3] = useActivityTimer.formatTime(duration);
-  items2[1] = callback(Text.Text, obj3);
-  obj1[1] = items2;
-  items1[1] = callback2(View, obj1);
-  obj[1] = items1;
-  return callback2(View, obj);
+  const items2 = [React4(Text_Text.Text, obj3)];
+  const obj4 = { variant: "text-xs/normal", tabularNumbers: true, color: "text-subtle", children: null };
+  const obj1 = { width: `${100 * tmp2.percentage}%` };
+  obj4.children = useActivityTimer.formatTime(duration);
+  items2[1] = React4(Text_Text.Text, obj4);
+  obj2.children = items2;
+  items1[1] = hasOwnProperty(View, obj2);
+  obj.children = items1;
+  return hasOwnProperty(View, obj);
 }

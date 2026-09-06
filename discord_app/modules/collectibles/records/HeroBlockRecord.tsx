@@ -1,9 +1,8 @@
 // discord_app/modules/collectibles/records/HeroBlockRecord.tsx
-import set from "../../../../_runtime/00002_set.js";
 import ShopBlockType from "../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-let prototype;
-prototype = function HeroBlockRecord(unpublished_at) {
+const prototype = function HeroBlockRecord(unpublished_at) {
   const obj = Object.create(new.target.prototype);
   obj.type = ShopBlockType.ShopBlockType.HERO;
   ({ category_sku_id: tmp.categorySkuId, name: tmp.name, summary } = unpublished_at);
@@ -40,6 +39,6 @@ prototype = function HeroBlockRecord(unpublished_at) {
 prototype["fromServer"] = function fromServer(arg0) {
   return new prototype(arg0);
 };
-const result = set.fileFinishedImporting("modules/collectibles/records/HeroBlockRecord.tsx");
+const result = size.fileFinishedImporting("modules/collectibles/records/HeroBlockRecord.tsx");
 
 export const HeroBlockRecord = prototype;

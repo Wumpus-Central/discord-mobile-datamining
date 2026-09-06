@@ -1,28 +1,30 @@
 // discord_app/modules/user_profile/native/UserProfileMutuals.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import { UserProfileSections } from "../Constants.tsx";
-import { DIVIDER_DOT } from "Constants.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
+import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-noopAll;
-({ jsx: closure_6, jsxs: error } = jsxProd);
+require = fn;
+const View = fn(17).View;
+const UserProfileSections = fn(8183).UserProfileSections;
+const DIVIDER_DOT = fn(7208).DIVIDER_DOT;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let c8 = "text-sm/medium";
 let c9 = "text-default";
-let closure_10 = createCacheKey.createStyles({
+const createStyles = fn(4560);
+let closure_10 = createStyles.createStyles({
   container: { flexDirection: "row", columnGap: 4, flexWrap: "wrap" },
   section: { flexDirection: "row", alignItems: "center", columnGap: 6 },
 });
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileMutuals.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileMutuals.tsx");
 
 export default function UserProfileMutuals(user) {
   user = user.user;
   const guildId = user.guildId;
   dependencyMap = undefined;
   c3 = undefined;
-  const tmp = callback2();
+  const tmp = closure_10();
   let obj = user(8190);
   const userProfileAnalyticsContext = obj.useUserProfileAnalyticsContext();
   ({ context: c2, trackUserProfileAction: c3 } = userProfileAnalyticsContext);
@@ -41,61 +43,55 @@ export default function UserProfileMutuals(user) {
         return null;
       }
     }
-    obj = { style: null, children: null };
-    obj[0] = tmp.container;
+    obj = { style: tmp.container, children: null };
     let tmp9Result = null;
     if (tmp7) {
       const substr = mutualFriends.slice(0, 3);
       const mapped = substr.map((user) => user.user);
-      obj = { style: null, accessibilityRole: "button", onPress: null, children: null };
-      obj[0] = tmp.section;
-      obj[2] = function onPress() {
-        const MUTUAL_FRIENDS = closure_1_4.MUTUAL_FRIENDS;
-        _undefined2({ action: "PRESS_SECTION", section: MUTUAL_FRIENDS });
-        let obj = guildId(_undefined[9]);
-        obj = {
-          user,
-          section: MUTUAL_FRIENDS,
-          guildId,
-          onPressMutualFriend(userId) {
-            callback({ action: "PRESS_MUTUAL_FRIEND" });
-            const obj = {};
-            const merged = Object.assign(closure_2);
-            obj.userId = userId;
-            closure_1_1(closure_1_2[12])(obj);
-          },
-          onPressMutualGuild(arg0) {
-            callback({ action: "PRESS_MUTUAL_GUILD" });
-            closure_1_0(closure_1_2[13]).transitionToGuild(arg0);
-            const obj = closure_1_0(closure_1_2[13]);
-            closure_1_1(closure_1_2[9]).hideAllActionSheets();
-          },
-        };
-        obj.openLazy(
-          user(_undefined[11])(_undefined[10], _undefined.paths),
-          "UserProfileMutualsActionSheet",
-          obj,
-          "stack",
-        );
+      obj = {
+        style: tmp.section,
+        accessibilityRole: "button",
+        onPress() {
+          const MUTUAL_FRIENDS = UserProfileSections.MUTUAL_FRIENDS;
+          _undefined2({ action: "PRESS_SECTION", section: MUTUAL_FRIENDS });
+          const obj = {
+            user,
+            section: MUTUAL_FRIENDS,
+            guildId,
+            onPressMutualFriend(userId) {
+              _undefined2({ action: "PRESS_MUTUAL_FRIEND" });
+              const obj = {};
+              const merged = Object.assign(dependencyMap);
+              obj.userId = userId;
+              guildId(8179)(obj);
+            },
+            onPressMutualGuild(arg0) {
+              _undefined2({ action: "PRESS_MUTUAL_GUILD" });
+              user(7342).transitionToGuild(arg0);
+              const obj = user(7342);
+              guildId(4527).hideAllActionSheets();
+            },
+          };
+          obj.openLazy(asyncRequireImpl(12608, dependencyMap.paths), "UserProfileMutualsActionSheet", obj, "stack");
+        },
+        children: null,
       };
-      obj1 = { size: null, totalCount: null, names: null, children: null };
-      obj1[0] = tmp2(1178).AvatarSizes.SIZE_16;
-      obj1[1] = mapped.length;
-      obj1[2] = mapped.map((username) => username.username);
-      obj1[3] = mapped.map((id) =>
-        callback(
-          user(_undefined[16]).Avatar,
-          { user: id, size: user(_undefined[16]).AvatarSizes.SIZE_16, guildId: "Array" },
-          id.id,
+      const obj1 = {
+        size: tmp2(1178).AvatarSizes.SIZE_16,
+        totalCount: mapped.length,
+        names: mapped.map((username) => username.username),
+        children: mapped.map((user) =>
+          closure_1_6(
+            user(_undefined[16]).Avatar,
+            { user, size: user(_undefined[16]).AvatarSizes.SIZE_16, guildId: "Array" },
+            user.id,
+          ),
         ),
-      );
-      const items = [callback(tmp2(13027).AvatarPile, obj1)];
-      const obj2 = { variant: null, color: null, children: null };
-      obj2[0] = c8;
-      obj2[1] = c9;
-      obj2[2] = tmp5(12609)(mutualFriends.length);
-      items[1] = callback(tmp2(4556).Text, obj2);
-      obj[3] = items;
+      };
+      const items = [closure_6(tmp2(13027).AvatarPile, obj1)];
+      const obj2 = { variant, color, children: tmp5(12609)(mutualFriends.length) };
+      items[1] = closure_6(tmp2(4556).Text, obj2);
+      obj.children = items;
       tmp9Result = tmp9(tmp2(5123).PressableOpacity, obj);
     }
     const items1 = [tmp9Result, ,];
@@ -105,76 +101,68 @@ export default function UserProfileMutuals(user) {
     }
     if (tmp15) {
       const obj3 = {
-        variant: null,
-        color: null,
+        variant,
+        color,
         accessibilityElementsHidden: true,
         importantForAccessibility: "no-hide-descendants",
-        children: null,
+        children: DIVIDER_DOT,
       };
-      obj3[0] = c8;
-      obj3[1] = c9;
-      obj3[4] = DIVIDER_DOT;
-      tmp15 = callback(tmp2(4556).Text, obj3);
+      tmp15 = closure_6(tmp2(4556).Text, obj3);
     }
     items1[1] = tmp15;
     tmp9Result = null;
     if (tmp8) {
       const substr1 = mutualGuilds.slice(0, 3);
       const mapped1 = substr1.map((guild) => guild.guild);
-      const obj4 = { style: null, accessibilityRole: "button", onPress: null, children: null };
-      obj4[0] = tmp.section;
-      obj4[2] = function onPress() {
-        const MUTUAL_GUILDS = closure_1_4.MUTUAL_GUILDS;
-        _undefined2({ action: "PRESS_SECTION", section: MUTUAL_GUILDS });
-        let obj = guildId(_undefined[9]);
-        obj = {
-          user,
-          section: MUTUAL_GUILDS,
-          guildId,
-          onPressMutualFriend(userId) {
-            callback({ action: "PRESS_MUTUAL_FRIEND" });
-            const obj = {};
-            const merged = Object.assign(closure_2);
-            obj.userId = userId;
-            closure_1_1(closure_1_2[12])(obj);
-          },
-          onPressMutualGuild(arg0) {
-            callback({ action: "PRESS_MUTUAL_GUILD" });
-            closure_1_0(closure_1_2[13]).transitionToGuild(arg0);
-            const obj = closure_1_0(closure_1_2[13]);
-            closure_1_1(closure_1_2[9]).hideAllActionSheets();
-          },
-        };
-        obj.openLazy(
-          user(_undefined[11])(_undefined[10], _undefined.paths),
-          "UserProfileMutualsActionSheet",
-          obj,
-          "stack",
-        );
+      const obj4 = {
+        style: tmp.section,
+        accessibilityRole: "button",
+        onPress() {
+          const MUTUAL_GUILDS = UserProfileSections.MUTUAL_GUILDS;
+          _undefined2({ action: "PRESS_SECTION", section: MUTUAL_GUILDS });
+          let obj = {
+            user,
+            section: MUTUAL_GUILDS,
+            guildId,
+            onPressMutualFriend(userId) {
+              _undefined2({ action: "PRESS_MUTUAL_FRIEND" });
+              const obj = {};
+              const merged = Object.assign(dependencyMap);
+              obj.userId = userId;
+              guildId(8179)(obj);
+            },
+            onPressMutualGuild(arg0) {
+              _undefined2({ action: "PRESS_MUTUAL_GUILD" });
+              user(7342).transitionToGuild(arg0);
+              const obj = user(7342);
+              guildId(4527).hideAllActionSheets();
+            },
+          };
+          obj.openLazy(asyncRequireImpl(12608, dependencyMap.paths), "UserProfileMutualsActionSheet", obj, "stack");
+        },
+        children: null,
       };
       let tmp21 = !tmp7;
       if (!tmp7) {
-        const obj5 = { size: null, totalCount: null, names: null, children: null };
-        obj5[0] = tmp2(5584).GuildIconSizes.XXSMALL;
-        obj5[1] = mapped1.length;
-        obj5[2] = mapped1.map((name) => name.name);
-        obj5[3] = mapped1.map((guild) => {
-          const obj = { guild, size: user(_undefined[20]).GuildIconSizes.XXSMALL };
-          return callback(guildId(_undefined[20]), obj, guild.id);
-        });
-        tmp21 = callback(tmp2(12618).GuildIconPile, obj5);
+        const obj5 = {
+          size: tmp2(5584).GuildIconSizes.XXSMALL,
+          totalCount: mapped1.length,
+          names: mapped1.map((name) => name.name),
+          children: mapped1.map((guild) => {
+            const obj = { guild, size: user(_undefined[20]).GuildIconSizes.XXSMALL };
+            return closure_1_6(guildId(_undefined[20]), obj, guild.id);
+          }),
+        };
+        tmp21 = closure_6(tmp2(12618).GuildIconPile, obj5);
       }
       const items2 = [tmp21];
-      const obj6 = { variant: null, color: null, children: null };
-      obj6[0] = c8;
-      obj6[1] = c9;
-      obj6[2] = tmp5(12603)(mutualGuilds.length);
-      items2[1] = callback(tmp2(4556).Text, obj6);
-      obj4[3] = items2;
+      const obj6 = { variant, color, children: tmp5(12603)(mutualGuilds.length) };
+      items2[1] = closure_6(tmp2(4556).Text, obj6);
+      obj4.children = items2;
       tmp9Result = tmp9(tmp2(5123).PressableOpacity, obj4);
     }
     items1[2] = tmp9Result;
-    obj[1] = items1;
+    obj.children = items1;
     return closure_7(c3, obj);
   } else {
     return null;

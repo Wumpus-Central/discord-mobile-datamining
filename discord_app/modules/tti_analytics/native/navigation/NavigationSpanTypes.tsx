@@ -1,7 +1,7 @@
 // discord_app/modules/tti_analytics/native/navigation/NavigationSpanTypes.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/tti_analytics/native/navigation/NavigationSpanTypes.tsx");
+const result = size.fileFinishedImporting("modules/tti_analytics/native/navigation/NavigationSpanTypes.tsx");
 
 export const NavigationSpanStatus = {
   SETTLED: "settled",

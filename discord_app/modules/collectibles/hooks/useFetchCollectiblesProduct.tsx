@@ -1,23 +1,24 @@
 // discord_app/modules/collectibles/hooks/useFetchCollectiblesProduct.tsx
-import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import { useEffect } from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../stores/game_store/SKUStore.tsx";
-import closure_5 from "../CollectiblesCategoryStore.tsx";
-import { SKUProductLines } from "../../../Constants.tsx";
-import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import CollectiblesActionCreators from "../CollectiblesActionCreators.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import SKUStore from "../../../stores/game_store/SKUStore.tsx";
+import CollectiblesCategoryStore from "../CollectiblesCategoryStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useFetchCollectiblesProduct.tsx");
+require = fn;
+const useEffect = fn(19).useEffect;
+let SKUProductLines = fn(1074).SKUProductLines;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/hooks/useFetchCollectiblesProduct.tsx");
 
-export const useFetchCollectiblesProduct = function useFetchCollectiblesProduct(skuId, arg1) {
-  const _require = skuId;
-  dependencyMap = arg1;
-  let obj = defaultAreStatesEqual;
-  let items = [closure_4];
+export const useFetchCollectiblesProduct = function useFetchCollectiblesProduct(skuId, includeBundles) {
+  _require = skuId;
+  dependencyMap = includeBundles;
+  let obj = require("useStateFromStores");
+  let items = [state];
   const stateFromStores = obj.useStateFromStores(items, () => {
-    let value = null;
+    value = null;
     if (null != closure_0) {
-      value = closure_4.get(tmp);
+      value = SKUStore.get(tmp);
     }
     return value;
   });
@@ -25,36 +26,41 @@ export const useFetchCollectiblesProduct = function useFetchCollectiblesProduct(
   if (tmp4) {
     tmp4 = stateFromStores.productLine !== SKUProductLines.COLLECTIBLES;
   }
-  const callback = tmp4;
+  _slicedToArray = tmp4;
   let tmpResult = tmp(563);
   const items1 = [stateFromStores1];
-  const tmp6 = callback(
+  const tmp6 = _slicedToArray(
     tmpResult.useStateFromStoresArray(items1, () => {
-      const items = [stateFromStores1.getProduct(closure_0), stateFromStores1.getProductFetch(closure_0)];
+      const items = [
+        CollectiblesCategoryStore.getProduct(closure_0),
+        CollectiblesCategoryStore.getProductFetch(closure_0),
+      ];
       return items;
     }),
     2,
   );
-  const first = tmp6[0];
-  closure_4 = tmp8;
+  const product = tmp6[0];
+  state = tmp8;
   tmpResult = tmp(563);
   const items2 = [stateFromStores1];
-  stateFromStores1 = tmpResult.useStateFromStores(items2, () => stateFromStores1.isProductFetchBackedOff(closure_0));
-  let tmp10 = true === arg1;
+  stateFromStores1 = tmpResult.useStateFromStores(items2, () =>
+    CollectiblesCategoryStore.isProductFetchBackedOff(closure_0),
+  );
+  let tmp10 = true === includeBundles;
   if (tmp10) {
     let type;
-    if (first != null) {
-      type = first.type;
+    if (product != null) {
+      type = product.type;
     }
     tmp10 = type === tmp(1889).CollectiblesItemType.BUNDLE;
   }
   if (tmp10) {
-    tmp10 = 0 === first.items.length;
+    tmp10 = 0 === product.items.length;
   }
   SKUProductLines = tmp10;
-  const items3 = [skuId, first, tmp4, tmp6[1], arg1, tmp10, stateFromStores1];
-  first(() => {
-    let tmp2 = null == skuId;
+  const items3 = [skuId, product, tmp4, tmp6[1], includeBundles, tmp10, stateFromStores1];
+  product(() => {
+    let tmp2 = null == closure_0;
     if (!tmp2) {
       let tmp4 = null != first;
       if (tmp4) {
@@ -66,9 +72,9 @@ export const useFetchCollectiblesProduct = function useFetchCollectiblesProduct(
       tmp2 = closure_2;
     }
     if (!tmp2) {
-      let state;
-      if (closure_4 != null) {
-        state = closure_4.state;
+      state = undefined;
+      if (state != null) {
+        state = state.state;
       }
       tmp2 = "fetching" === state;
     }
@@ -76,17 +82,15 @@ export const useFetchCollectiblesProduct = function useFetchCollectiblesProduct(
       tmp2 = stateFromStores1;
     }
     if (!tmp2) {
-      let obj = skuId(table[7]);
-      obj = { includeBundles: null };
-      obj[0] = table;
-      const collectiblesProduct = obj.fetchCollectiblesProduct(skuId, obj);
+      const obj = { includeBundles };
+      const collectiblesProduct = obj.fetchCollectiblesProduct(closure_0, obj);
     }
   }, items3);
-  obj = { product: first, isFetching: null };
-  let state;
+  obj = { product, isFetching: null };
+  state = undefined;
   if (tmp6[1] != null) {
     state = tmp8.state;
   }
-  obj[1] = "fetching" === state;
+  obj.isFetching = "fetching" === state;
   return obj;
 };

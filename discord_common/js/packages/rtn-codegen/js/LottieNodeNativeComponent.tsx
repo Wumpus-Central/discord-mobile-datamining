@@ -1,18 +1,18 @@
 // discord_common/js/packages/rtn-codegen/js/LottieNodeNativeComponent.tsx
-import set from "../../../../../_runtime/00002_set.js";
 import renderElement from "../../../../../_runtime/00114_renderElement.js";
-import setRuntimeConfigProvider from "../../../../../_runtime/00065_setRuntimeConfigProvider.js";
+import 00065__ from "../../../../../_runtime/metro/00065__.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-let obj = { uiViewClassName: "NativeLottieNode", validAttributes: {} };
-obj = {
+let Commands = { uiViewClassName: "NativeLottieNode", validAttributes: {} };
+Commands = {
   setup(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) {
     const items = [arg1, arg2, arg3, arg4, arg5, arg6, arg7];
     renderElement.dispatchCommand(arg0, "setup", items);
-  },
+  }
 };
-const value = setRuntimeConfigProvider.get("NativeLottieNode", () => obj);
-const result = set.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/LottieNodeNativeComponent.tsx");
+const value = module_65.get("NativeLottieNode", () => obj);
+const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/LottieNodeNativeComponent.tsx");
 
 export default value;
-export const __INTERNAL_VIEW_CONFIG = obj;
-export const Commands = obj;
+export const __INTERNAL_VIEW_CONFIG = Commands;
+export { Commands };

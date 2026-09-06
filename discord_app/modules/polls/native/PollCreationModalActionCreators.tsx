@@ -1,14 +1,14 @@
 // discord_app/modules/polls/native/PollCreationModalActionCreators.tsx
-import set from "../../../../_runtime/00002_set.js";
 import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
-import _modDef4763 from "../../../actions/ModalActionCreators.tsx";
+import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 let c3 = "create-poll-modal";
-const result = set.fileFinishedImporting("modules/polls/native/PollCreationModalActionCreators.tsx");
+const result = size.fileFinishedImporting("modules/polls/native/PollCreationModalActionCreators.tsx");
 
-export const openCreatePollModal = function openCreatePollModal(closure_0) {
-  _modDef4763.pushLazy(asyncRequireImpl(12198, dependencyMap.paths), closure_0, c3);
+export const openCreatePollModal = function openCreatePollModal(merged) {
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12198, dependencyMap.paths), merged, c3);
 };
 export const closeCreatePollModal = function closeCreatePollModal() {
-  _modDef4763.popWithKey(c3);
+  ModalActionCreatorsDefault.popWithKey(c3);
 };

@@ -1,9 +1,13 @@
 // discord_app/modules/settings/tracking/SettingSearchSessionAnalyticsManager.tsx
-import set from "../../../../_runtime/00002_set.js";
 import v1 from "../../../../_runtime/01256_v1.js";
-import trackSettingSearchInputFocused from "Tracking.tsx";
+import Tracking from "Tracking.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-class SettingSearchSessionAnalyticsManager {}
+class SettingSearchSessionAnalyticsManager {
+  constructor() {
+    return Object.assign({ searchSessionId: null, searchSessionStartTime: null, isQueryEnteredTracked: false });
+  }
+}
 const prototype = SettingSearchSessionAnalyticsManager.prototype;
 prototype["getSearchSessionId"] = function getSearchSessionId() {
   return this.searchSessionId;
@@ -18,24 +22,22 @@ prototype["initialize"] = function initialize() {
 };
 prototype["maybeTrackQueryEntered"] = function maybeTrackQueryEntered() {
   if (!this.isQueryEnteredTracked) {
-    const result = trackSettingSearchInputFocused.trackSettingSearchQueryEntered();
+    const result = Tracking.trackSettingSearchQueryEntered();
     tmp.isQueryEnteredTracked = true;
-    const obj = trackSettingSearchInputFocused;
   }
 };
 prototype["terminate"] = function terminate() {
   const self = this;
   if (tmp) {
-    let obj = trackSettingSearchInputFocused;
-    obj = { searchSessionDuration: null };
+    const obj = { searchSessionDuration: null };
     const _Date = Date;
-    obj[0] = Date.now() - self.searchSessionStartTime;
+    obj.searchSessionDuration = Date.now() - self.searchSessionStartTime;
     const result = obj.trackSettingSearchClosed(obj);
     self.searchSessionId = null;
     self.searchSessionStartTime = null;
     self.isQueryEnteredTracked = false;
   }
 };
-let result = set.fileFinishedImporting("modules/settings/tracking/SettingSearchSessionAnalyticsManager.tsx");
+let result = size.fileFinishedImporting("modules/settings/tracking/SettingSearchSessionAnalyticsManager.tsx");
 
-export default Object.create(SettingSearchSessionAnalyticsManager.prototype);
+export default Object.assign({ searchSessionId: null, searchSessionStartTime: null, isQueryEnteredTracked: false });

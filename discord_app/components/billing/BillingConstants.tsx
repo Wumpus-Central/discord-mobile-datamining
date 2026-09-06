@@ -1,5 +1,5 @@
 // discord_app/components/billing/BillingConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
 let obj = {
   UNKNOWN: 0,
@@ -18,9 +18,8 @@ let obj = {
 obj = { CAN_MAKE_SUBSCRIPTION_UPDATES: null };
 const items = [,];
 ({ FRACTIONAL_PREMIUM: arr[0], DEFERRED_START: arr[1] } = obj);
-let set = new Set(items);
-obj[0] = set;
-const result = set.fileFinishedImporting("components/billing/BillingConstants.tsx");
+obj.CAN_MAKE_SUBSCRIPTION_UPDATES = new Set(items);
+const result = size.fileFinishedImporting("components/billing/BillingConstants.tsx");
 
 export const RefundReason = {
   OTHER: 0,

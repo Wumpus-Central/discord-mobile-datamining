@@ -1,55 +1,48 @@
 // discord_app/modules/soundboard/top_sounds/TopSoundboardSoundsActionCreators.tsx
-import dispatcherDefault from "../../../Dispatcher.tsx";
-import closure_3 from "../../../stores/UserStore.tsx";
-import closure_4 from "../SoundboardStore.tsx";
-import closure_5 from "TopSoundboardSoundStore.tsx";
-import { Endpoints } from "../../../Constants.tsx";
-import { RouteParam } from "../../routing/RouteUtils.tsx";
+import DispatcherDefault from "../../../Dispatcher.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
+import SoundboardStore from "../SoundboardStore.tsx";
+import TopSoundboardSoundStore from "TopSoundboardSoundStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
-  "modules/soundboard/top_sounds/TopSoundboardSoundsActionCreators.tsx",
-);
+const require = fn;
+const Endpoints = fn(1074).Endpoints;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/soundboard/top_sounds/TopSoundboardSoundsActionCreators.tsx");
 
 export const maybeFetchTopSoundboardSoundsByGuild = function maybeFetchTopSoundboardSoundsByGuild(id) {
   if (null != id) {
-    if (null != currentUser.getCurrentUser()) {
+    if (null != UserStore.getCurrentUser()) {
       const TopSoundboardSoundsMobileExperiment =
-        require("TopSoundboardSoundsExperiment.tsx").TopSoundboardSoundsMobileExperiment;
+        require("TopSoundboardSoundsExperiment").TopSoundboardSoundsMobileExperiment;
       if (TopSoundboardSoundsMobileExperiment.getConfig({ location: "maybeFetchTopSoundboardSoundsByGuild" }).enabled) {
-        topSoundboardSoundsMetadata = topSoundboardSoundsMetadata.getTopSoundboardSoundsMetadata(id);
+        const topSoundboardSoundsMetadata = SoundboardStore.getTopSoundboardSoundsMetadata(id);
         if (null != topSoundboardSoundsMetadata) {
           const topSoundsTTL = topSoundboardSoundsMetadata.topSoundsTTL;
           if (null != topSoundsTTL) {
             const _Date = Date;
           }
         }
-        if (!isFetching.getIsFetching(id)) {
+        if (!TopSoundboardSoundStore.getIsFetching(id)) {
           _require = id;
           if (!tmp9Result.isPseudoGuildId(id)) {
-            let obj = { type: "TOP_SOUNDBOARD_SOUNDS_FETCH", guildId: null };
-            obj[1] = id;
-            dispatcherDefault.dispatch(obj);
+            let obj = { type: "TOP_SOUNDBOARD_SOUNDS_FETCH", guildId: id };
+            DispatcherDefault.dispatch(obj);
             const HTTP = tmp9(1272).HTTP;
-            obj = { url: null, oldFormErrors: true, rejectWithError: true };
-            obj[0] = Endpoints.TOP_SOUNDBOARD_SOUNDS_FOR_GUILD(id);
-            const value = HTTP.get(obj);
+            obj = { url: Endpoints.TOP_SOUNDBOARD_SOUNDS_FOR_GUILD(id), oldFormErrors: true, rejectWithError: true };
+            value = HTTP.get(obj);
             value.then(
               (body) => {
-                let obj = closure_1_1(closure_1_2[6]);
-                obj = { type: "TOP_SOUNDBOARD_SOUNDS_FETCH_SUCCESS", guildId: closure_0, topSoundsMetadata: null };
+                const obj = { type: "TOP_SOUNDBOARD_SOUNDS_FETCH_SUCCESS", guildId, topSoundsMetadata: null };
                 const items = body.body.items;
                 const mapped = items.map((soundId) => ({ soundId: soundId.sound_id, rank: soundId.sound_rank }));
-                obj[2] = mapped.sort((rank, rank2) => rank.rank - rank2.rank);
+                obj.topSoundsMetadata = mapped.sort((rank, rank2) => rank.rank - rank2.rank);
                 return obj.dispatch(obj);
               },
               () => {
-                let obj = closure_1_1(closure_1_2[6]);
-                obj = { type: "TOP_SOUNDBOARD_SOUNDS_FETCH_FAILURE", guildId: closure_0 };
+                const obj = { type: "TOP_SOUNDBOARD_SOUNDS_FETCH_FAILURE", guildId };
                 return obj.dispatch(obj);
               },
             );
-            const obj2 = dispatcherDefault;
           }
           tmp9Result = tmp9(4399);
         }
@@ -57,32 +50,27 @@ export const maybeFetchTopSoundboardSoundsByGuild = function maybeFetchTopSoundb
     }
   }
 };
-export const fetchTopSoundboardSounds = function fetchTopSoundboardSounds(id) {
-  const _require = id;
-  let obj = RouteParam;
-  if (!obj.isPseudoGuildId(id)) {
-    obj = { type: "TOP_SOUNDBOARD_SOUNDS_FETCH", guildId: null };
-    obj[1] = id;
-    dispatcherDefault.dispatch(obj);
-    const HTTP = require("../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
-    obj = { url: null, oldFormErrors: true, rejectWithError: true };
-    obj[0] = Endpoints.TOP_SOUNDBOARD_SOUNDS_FOR_GUILD(id);
-    const value = HTTP.get(obj);
+export const fetchTopSoundboardSounds = function fetchTopSoundboardSounds(guildId) {
+  _require = guildId;
+  let obj = require("RouteUtils");
+  if (!obj.isPseudoGuildId(guildId)) {
+    obj = { type: "TOP_SOUNDBOARD_SOUNDS_FETCH", guildId };
+    DispatcherDefault.dispatch(obj);
+    const HTTP = require("HTTPUtils").HTTP;
+    obj = { url: Endpoints.TOP_SOUNDBOARD_SOUNDS_FOR_GUILD(guildId), oldFormErrors: true, rejectWithError: true };
+    value = HTTP.get(obj);
     value.then(
       (body) => {
-        let obj = closure_1_1(closure_1_2[6]);
-        obj = { type: "TOP_SOUNDBOARD_SOUNDS_FETCH_SUCCESS", guildId: closure_0, topSoundsMetadata: null };
+        const obj = { type: "TOP_SOUNDBOARD_SOUNDS_FETCH_SUCCESS", guildId, topSoundsMetadata: null };
         const items = body.body.items;
         const mapped = items.map((soundId) => ({ soundId: soundId.sound_id, rank: soundId.sound_rank }));
-        obj[2] = mapped.sort((rank, rank2) => rank.rank - rank2.rank);
+        obj.topSoundsMetadata = mapped.sort((rank, rank2) => rank.rank - rank2.rank);
         return obj.dispatch(obj);
       },
       () => {
-        let obj = closure_1_1(closure_1_2[6]);
-        obj = { type: "TOP_SOUNDBOARD_SOUNDS_FETCH_FAILURE", guildId: closure_0 };
+        const obj = { type: "TOP_SOUNDBOARD_SOUNDS_FETCH_FAILURE", guildId };
         return obj.dispatch(obj);
       },
     );
-    const obj2 = dispatcherDefault;
   }
 };

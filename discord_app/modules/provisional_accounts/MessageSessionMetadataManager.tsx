@@ -1,11 +1,10 @@
 // discord_app/modules/provisional_accounts/MessageSessionMetadataManager.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
-import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import Constants from "../../Constants.tsx";
+import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
+import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const AnalyticEvents = ME.AnalyticEvents;
-initializeDefault;
+const AnalyticEvents = Constants.AnalyticEvents;
 class MessageSessionMetadataManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -37,20 +36,19 @@ prototype["_getAuthorizedApplicationIds"] = function _getAuthorizedApplicationId
 };
 prototype["_trackIfSessionMetadataExists"] = function _trackIfSessionMetadataExists(message) {
   if (null != message.session_metadata) {
-    let obj = expandEventPropertiesDefault;
-    obj = { message_id: null, channel_id: null, author_id: null, authorized_application_ids: null };
-    ({ id: obj2[0], channel_id: obj2[1], author } = message);
+    const obj = { message_id: null, channel_id: null, author_id: null, authorized_application_ids: null };
+    ({ id: obj2.message_id, channel_id: obj2.channel_id, author } = message);
     let id;
     if (author != null) {
       id = author.id;
     }
     const self = this;
-    obj[2] = id;
-    obj[3] = this._getAuthorizedApplicationIds(message.session_metadata);
+    obj.author_id = id;
+    obj.authorized_application_ids = this._getAuthorizedApplicationIds(message.session_metadata);
     obj.track(AnalyticEvents.MESSAGE_DISPATCH_SESSION_METADATA_FOUND, obj);
   }
 };
 const messageSessionMetadataManager = new MessageSessionMetadataManager();
-let result = set.fileFinishedImporting("modules/provisional_accounts/MessageSessionMetadataManager.tsx");
+let result = size.fileFinishedImporting("modules/provisional_accounts/MessageSessionMetadataManager.tsx");
 
 export default messageSessionMetadataManager;

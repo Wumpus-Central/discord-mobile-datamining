@@ -1,16 +1,15 @@
 // discord_app/modules/favorites/native/openFavoritesGuildCategoryActionSheet.tsx
-import set from "../../../../_runtime/00002_set.js";
-import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/favorites/native/openFavoritesGuildCategoryActionSheet.tsx");
+const result = size.fileFinishedImporting("modules/favorites/native/openFavoritesGuildCategoryActionSheet.tsx");
 
 export default function openFavoritesGuildCategoryActionSheet(categoryId) {
   const combined = "FavoritesGuildCategoryLongPress-" + categoryId;
-  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj = {
+  const obj = {
     categoryId,
     onClose() {
-      closure_1_1(closure_1_2[0]).hideActionSheet(combined);
+      ActionSheetActionCreatorsDefault.hideActionSheet(combined);
     },
   };
   obj.openLazy(combined(1896)(16110, dependencyMap.paths), combined, obj);

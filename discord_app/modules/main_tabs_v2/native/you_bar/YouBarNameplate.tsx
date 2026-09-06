@@ -1,35 +1,37 @@
 // discord_app/modules/main_tabs_v2/native/you_bar/YouBarNameplate.tsx
-import closure_3 from "../../../a11y/AccessibilityStore.tsx";
-import { YOU_BAR_SPRING_CONFIG } from "YouBarConstants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
+import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
-const require = arg1;
-let closure_6 = {
+require = fn;
+const YOU_BAR_SPRING_CONFIG = fn(15098).YOU_BAR_SPRING_CONFIG;
+const jsx = fn(21).jsx;
+const __initData = {
   code: "function YouBarNameplateTsx1(){const{withSpring,isQuestRendered,questDockAnimatedBorderRadius,borderRadius,YOU_BAR_SPRING_CONFIG}=this.__closure;return{borderTopRightRadius:withSpring(isQuestRendered?questDockAnimatedBorderRadius.get():borderRadius,YOU_BAR_SPRING_CONFIG)};}",
 };
-const memoResult = importAllResult.memo(function YouBarNameplate(isQuestRendered) {
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarNameplate.tsx");
+
+export default noop.memo(function YouBarNameplate(isQuestRendered) {
   isQuestRendered = isQuestRendered.isQuestRendered;
   const avatarSize = isQuestRendered.avatarSize;
   let token;
-  dependencyMap = undefined;
   ({ nameplate, barWidth } = isQuestRendered);
   let obj = isQuestRendered(4262);
   token = obj.useToken(token(576).modules.mobile.YOU_BAR_BORDER_RADIUS);
   const tmp4 = token(15184)(token);
   dependencyMap = tmp4;
-  obj1 = isQuestRendered(504);
-  const items = [closure_3];
-  const stateFromStores = obj1.useStateFromStores(items, () => obj.animateYouBarNameplate);
-  let obj2 = isQuestRendered(4296);
+  let obj1 = isQuestRendered(504);
+  const items = [AccessibilityStore];
+  const stateFromStores = obj1.useStateFromStores(items, () => AccessibilityStore.animateYouBarNameplate);
   const fn = function p() {
-    let obj = isQuestRendered(closure_2[9]);
+    let obj = spring;
     if (isQuestRendered) {
-      let value = closure_2.get();
+      value = closure_2.get();
     } else {
       value = token;
     }
-    obj = { borderTopRightRadius: obj.withSpring(value, closure_1_4) };
+    obj = { borderTopRightRadius: obj.withSpring(value, YOU_BAR_SPRING_CONFIG) };
     return obj;
   };
   obj = {
@@ -41,9 +43,9 @@ const memoResult = importAllResult.memo(function YouBarNameplate(isQuestRendered
   };
   fn.__closure = obj;
   fn.__workletHash = 17156260157738;
-  fn.__initData = closure_6;
-  const animatedStyle = obj2.useAnimatedStyle(fn);
-  obj = {
+  fn.__initData = __initData;
+  const animatedStyle = isQuestRendered(4296).useAnimatedStyle(fn);
+  const rect = {
     position: "absolute",
     top: 0,
     left: avatarSize,
@@ -60,20 +62,19 @@ const memoResult = importAllResult.memo(function YouBarNameplate(isQuestRendered
   if (!isQuestRendered) {
     num = token;
   }
-  obj1 = { style: items1, pointerEvents: "none", children: null };
-  obj[5] = num;
-  obj[7] = token;
-  obj[10] = barWidth - avatarSize;
-  items1 = [obj, animatedStyle];
-  obj2 = { nameplate, isFocused: true, animate: null };
+  obj = { style: null, pointerEvents: "none", children: null };
+  rect.borderTopRightRadius = num;
+  rect.borderBottomRightRadius = token;
+  rect.width = barWidth - avatarSize;
+  const items1 = [rect, animatedStyle];
+  obj.style = items1;
+  obj1 = { nameplate, isFocused: true, animate: null };
   let str = stateFromStores;
+  const obj3 = isQuestRendered(4296);
   if (str) {
     str = "always";
   }
-  obj2[2] = str;
-  obj1[2] = jsx(token(8818), { nameplate, isFocused: true, animate: null });
-  return jsx(token(4296).View, { style: items1, pointerEvents: "none", children: null });
+  obj1.animate = str;
+  obj.children = jsx(token(8818), { nameplate, isFocused: true, animate: null });
+  return jsx(token(4296).View, { style: null, pointerEvents: "none", children: null });
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarNameplate.tsx");
-
-export default memoResult;

@@ -1,9 +1,9 @@
 // discord_app/modules/summaries/SummaryConstants.tsx
-import setDefault from "../../utils/Durations.tsx";
-import getSystemLocale from "../../intl/index.native.tsx";
+import DurationsDefault from "../../utils/Durations.tsx";
+import util from "../../intl/index.native.tsx";
 
-require = arg1;
-let obj = {
+require = fn;
+const SummaryFeedbackReasons = {
   DUPLICATED: "DUPLICATED",
   TOO_GENERIC: "TOO_GENERIC",
   TOO_MANY: "TOO_MANY",
@@ -11,8 +11,9 @@ let obj = {
   NOT_USEFUL: "NOT_USEFUL",
   OTHER: "OTHER",
 };
-const result = 5 * setDefault.Millis.SECOND;
-const result1 = require("set").fileFinishedImporting("modules/summaries/SummaryConstants.tsx");
+const result = 5 * DurationsDefault.Millis.SECOND;
+const size = fn(2);
+const result1 = size.fileFinishedImporting("modules/summaries/SummaryConstants.tsx");
 
 export const SUMMARY_POLL_INTERVAL = result;
 export const SummariesSidebarToggledSource = { TOOLBAR_BUTTON: "toolbar button", PILL: "pill" };
@@ -22,31 +23,31 @@ export const SummariesTopicClickedSource = {
   PILL_NEXT_ARROW: "pill next arrow",
   PILL_PREVIOUS_ARROW: "pill previous arrow",
 };
-export const SummaryFeedbackReasons = obj;
+export { SummaryFeedbackReasons };
 export const getSummaryFeedbackReasons = function getSummaryFeedbackReasons() {
   obj = { value: obj.DUPLICATED, label: null };
-  const intl = getSystemLocale.intl;
-  obj[1] = intl.string(getSystemLocale.t.wwXl5h);
+  const intl = util.intl;
+  obj.label = intl.string(util.t.wwXl5h);
   const items = [obj, , , , ,];
   obj = { value: obj.TOO_GENERIC, label: null };
-  const intl2 = getSystemLocale.intl;
-  obj[1] = intl2.string(getSystemLocale.t["t+6knu"]);
+  const intl2 = util.intl;
+  obj.label = intl2.string(util.t["t+6knu"]);
   items[1] = obj;
   obj = { value: obj.TOO_MANY, label: null };
-  const intl3 = getSystemLocale.intl;
-  obj[1] = intl3.string(getSystemLocale.t.xnKDnv);
+  const intl3 = util.intl;
+  obj.label = intl3.string(util.t.xnKDnv);
   items[2] = obj;
-  obj1 = { value: obj.INACCURATE, label: null };
-  const intl4 = getSystemLocale.intl;
-  obj1[1] = intl4.string(getSystemLocale.t.JW5VFj);
+  const obj1 = { value: obj.INACCURATE, label: null };
+  const intl4 = util.intl;
+  obj1.label = intl4.string(util.t.JW5VFj);
   items[3] = obj1;
   const obj2 = { value: obj.NOT_USEFUL, label: null };
-  const intl5 = getSystemLocale.intl;
-  obj2[1] = intl5.string(getSystemLocale.t.ZtCNiY);
+  const intl5 = util.intl;
+  obj2.label = intl5.string(util.t.ZtCNiY);
   items[4] = obj2;
   const obj3 = { value: obj.OTHER, label: null };
-  const intl6 = getSystemLocale.intl;
-  obj3[1] = intl6.string(getSystemLocale.t.BufsKk);
+  const intl6 = util.intl;
+  obj3.label = intl6.string(util.t.BufsKk);
   items[5] = obj3;
   return items;
 };

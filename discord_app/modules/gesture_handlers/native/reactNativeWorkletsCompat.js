@@ -1,12 +1,12 @@
 // discord_app/modules/gesture_handlers/native/reactNativeWorkletsCompat.js
-import set from "../../../../_runtime/00002_set.js";
-import _mod4296 from "../../reanimated/ReanimatedRexport.tsx";
+import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/gesture_handlers/native/reactNativeWorkletsCompat.js");
+const result = size.fileFinishedImporting("modules/gesture_handlers/native/reactNativeWorkletsCompat.js");
 
 export default {
   scheduleOnUI(fn) {
     const substr = [...arguments].slice();
-    return _mod4296.runOnUI(fn)(...substr);
+    return ReanimatedRexport.runOnUI(fn)(...substr);
   },
 };

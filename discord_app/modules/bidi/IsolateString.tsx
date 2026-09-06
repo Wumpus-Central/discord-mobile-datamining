@@ -1,7 +1,7 @@
 // discord_app/modules/bidi/IsolateString.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/bidi/IsolateString.tsx");
+const result = size.fileFinishedImporting("modules/bidi/IsolateString.tsx");
 
 export const FSI = "\u2068";
 export const PDI = "\u2069";

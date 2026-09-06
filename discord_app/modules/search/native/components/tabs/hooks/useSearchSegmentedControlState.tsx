@@ -1,7 +1,8 @@
 // discord_app/modules/search/native/components/tabs/hooks/useSearchSegmentedControlState.tsx
-import closure_2 from "../../../../../../../_runtime/00019_noop.js";
+import ReanimatedRexport from "../../../../../reanimated/ReanimatedRexport.tsx";
+import noop from "../../../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
+require = fn;
 let closure_3 = {
   code: "function useSearchSegmentedControlStateTsx1(){const{visibleTabsStateful}=this.__closure;return visibleTabsStateful;}",
 };
@@ -17,17 +18,17 @@ let closure_6 = {
 let closure_7 = {
   code: "function useSearchSegmentedControlStateTsx5(){const{selectedTab}=this.__closure;return selectedTab.get();}",
 };
-let closure_8 = {
+const __initData = {
   code: "function useSearchSegmentedControlStateTsx6(selectedTab){const{lastSelectedTab,runOnJS,onSelectedTabChange}=this.__closure;if(selectedTab==null)return;lastSelectedTab.set(selectedTab);runOnJS(onSelectedTabChange)(selectedTab);}",
 };
-let result = require("set").fileFinishedImporting(
+const size = fn(2);
+let result = size.fileFinishedImporting(
   "modules/search/native/components/tabs/hooks/useSearchSegmentedControlState.tsx",
 );
 
 export const useSearchSegmentedControlState = function useSearchSegmentedControlState(visibleTabs) {
   visibleTabs = visibleTabs.visibleTabs;
   const onSelectedTabChange = visibleTabs.onSelectedTabChange;
-  let sharedValue;
   let derivedValue;
   let segmentedControlState;
   let activeIndex;
@@ -35,7 +36,7 @@ export const useSearchSegmentedControlState = function useSearchSegmentedControl
   let derivedValue1;
   ({ items, width } = visibleTabs);
   let obj = visibleTabs(onSelectedTabChange[1]);
-  sharedValue = obj.useSharedValue(visibleTabs[0]);
+  const sharedValue = obj.useSharedValue(visibleTabs[0]);
   class T {
     constructor() {
       return visibleTabs;
@@ -55,7 +56,7 @@ export const useSearchSegmentedControlState = function useSearchSegmentedControl
   setActiveIndex = segmentedControlState.setActiveIndex;
   const obj3 = visibleTabs(onSelectedTabChange[2]);
   const fn = function x() {
-    const value = derivedValue.get();
+    value = derivedValue.get();
     return value[activeIndex.get(activeIndex)];
   };
   fn.__closure = { visibleTabs: derivedValue, activeIndex };
@@ -76,8 +77,7 @@ export const useSearchSegmentedControlState = function useSearchSegmentedControl
       const bound = Math.max(0, arr.indexOf(sharedValue.get()));
       const _Math3 = Math;
       const bound1 = Math.min(bound, Math.max(0, arr.length - 1));
-      visibleTabs(onSelectedTabChange[1]).runOnJS(setActiveIndex)(bound1, false);
-      const obj = visibleTabs(onSelectedTabChange[1]);
+      ReanimatedRexport.runOnJS(setActiveIndex)(bound1, false);
     }
   };
   obj = { lastSelectedTab: sharedValue, runOnJS: visibleTabs(onSelectedTabChange[1]).runOnJS, setActiveIndex };
@@ -99,9 +99,9 @@ export const useSearchSegmentedControlState = function useSearchSegmentedControl
       if (null != visibleTabs) {
         tmp = closure_2;
         result = closure_2.set(visibleTabs);
-        tmp3 = visibleTabs;
-        tmp4 = onSelectedTabChange;
-        obj = visibleTabs(onSelectedTabChange[1]);
+        tmp3 = closure_0;
+        tmp4 = closure_1;
+        obj = closure_0(closure_1[1]);
         tmp5 = onSelectedTabChange;
         tmp6 = obj.runOnJS(onSelectedTabChange)(visibleTabs);
       }
@@ -111,7 +111,7 @@ export const useSearchSegmentedControlState = function useSearchSegmentedControl
   obj = { lastSelectedTab: sharedValue, runOnJS: visibleTabs(onSelectedTabChange[1]).runOnJS, onSelectedTabChange };
   I.__closure = obj;
   I.__workletHash = 8452224388929;
-  I.__initData = closure_8;
+  I.__initData = __initData;
   const animatedReaction1 = visibleTabs(onSelectedTabChange[1]).useAnimatedReaction(C, I);
   items = [segmentedControlState, derivedValue1];
   return sharedValue.useMemo(() => ({ segmentedControlState, selectedTab: derivedValue1 }), items);

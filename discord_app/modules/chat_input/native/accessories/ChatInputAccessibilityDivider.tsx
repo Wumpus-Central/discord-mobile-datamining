@@ -1,13 +1,16 @@
 // discord_app/modules/chat_input/native/accessories/ChatInputAccessibilityDivider.tsx
-import SCREEN_READER_ENABLED_GETTER from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
+import useIsScreenReaderEnabled from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-({ StyleSheet: obj1, View: c3 } = get_ActivityIndicator);
-const memoResult = importAllResult.memo(() => {
-  let obj = SCREEN_READER_ENABLED_GETTER;
+require = fn;
+get_ActivityIndicator = fn(17);
+({ StyleSheet: c2, View: c3 } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/chat_input/native/accessories/ChatInputAccessibilityDivider.tsx");
+
+export const ChatInputAccessibilityDivider = noop.memo(() => {
+  let obj = useIsScreenReaderEnabled;
   let tmp3 = null;
   if (obj.useIsScreenReaderEnabled()) {
     tmp3 = null;
@@ -20,11 +23,11 @@ const memoResult = importAllResult.memo(() => {
         style: null,
       };
       const intl = tmp(1114).intl;
-      obj[2] = intl.string(tmp(1114).t["uKZtC/"]);
+      obj.accessibilityLabel = intl.string(tmp(1114).t["uKZtC/"]);
       const items = [absoluteFill.absoluteFill, { height: 1 }];
-      obj[4] = items;
+      obj.style = items;
       tmp3 = (
-        <closure_3
+        <React3
           nativeID="chat-input-accessibility-divider"
           accessible
           accessibilityLabel={null}
@@ -37,8 +40,3 @@ const memoResult = importAllResult.memo(() => {
   }
   return tmp3;
 });
-const result = require("set").fileFinishedImporting(
-  "modules/chat_input/native/accessories/ChatInputAccessibilityDivider.tsx",
-);
-
-export const ChatInputAccessibilityDivider = memoResult;

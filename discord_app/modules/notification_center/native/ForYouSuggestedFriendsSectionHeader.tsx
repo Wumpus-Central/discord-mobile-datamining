@@ -1,18 +1,17 @@
 // discord_app/modules/notification_center/native/ForYouSuggestedFriendsSectionHeader.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-createCacheKey = { container: null, noDivider: null, text: null };
-createCacheKey = {
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { container: null, noDivider: null, text: null };
+createStyles = {
   borderTopWidth: 1,
-  borderTopColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderTopColor: nativeDefault.colors.BORDER_SUBTLE,
   marginTop: 12,
   marginBottom: 8,
   paddingHorizontal: 24,
@@ -20,18 +19,16 @@ createCacheKey = {
   alignItems: "center",
   justifyContent: "space-between",
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { borderTopWidth: 0, marginTop: 0 };
-createCacheKey[2] = { marginTop: ThemesDefault.space.PX_16 };
-let closure_4 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { marginTop: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting(
-  "modules/notification_center/native/ForYouSuggestedFriendsSectionHeader.tsx",
-);
+createStyles.container = createStyles;
+createStyles.noDivider = { borderTopWidth: 0, marginTop: 0 };
+createStyles.text = { marginTop: nativeDefault.space.PX_16 };
+let closure_4 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/notification_center/native/ForYouSuggestedFriendsSectionHeader.tsx");
 
 export default function ForYouSuggestedFriendsSectionHeader(showDivider) {
   showDivider = showDivider.showDivider;
-  const tmp = callback();
+  const tmp = closure_4();
   const items = [tmp.container];
   let noDivider = !showDivider;
   if (!showDivider) {
@@ -40,9 +37,14 @@ export default function ForYouSuggestedFriendsSectionHeader(showDivider) {
   let obj = { style: items, children: null };
   items[1] = noDivider;
   obj = { style: tmp.text, color: "text-muted", variant: "text-sm/semibold", children: null };
-  const intl = getSystemLocale.intl;
-  obj[3] = intl.string(getSystemLocale.t["1uAmCw"]);
-  obj[1] = jsx(Text.Text, { style: tmp.text, color: "text-muted", variant: "text-sm/semibold", children: null });
+  const intl = util.intl;
+  obj.children = intl.string(util.t["1uAmCw"]);
+  obj.children = jsx(Text_Text.Text, {
+    style: tmp.text,
+    color: "text-muted",
+    variant: "text-sm/semibold",
+    children: null,
+  });
   return (
     <View style={tmp.text} color="text-muted" variant="text-sm/semibold">
       {null}

@@ -1,26 +1,27 @@
 // discord_app/modules/activities/panel/native/MinimizeActivityButton.tsx
-import registerAssetDefault from "../../../../../_runtime/11154_registerAsset.js";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { ActivityPanelModes } from "../ActivityPanelConstants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import _modDef11154 from "../../../../../_runtime/metro/11154__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let c3 = importAllResult;
-let closure_7 = createCacheKey.createStyles({ buttonParent: { flexShrink: 1 } });
-const memoResult = importAllResult.memo(function MinimizeActivityButton(arg0) {
+const require = fn;
+const View = fn(17).View;
+const ActivityPanelModes = fn(9505).ActivityPanelModes;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_7 = createStyles.createStyles({ buttonParent: { flexShrink: 1 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/panel/native/MinimizeActivityButton.tsx");
+
+export default noop.memo(function MinimizeActivityButton(arg0) {
   ({ activityName, setMode } = arg0);
   const items = [setMode];
-  const callback = importAllResult.useCallback(() => {
-    setMode(closure_1_5.PIP);
+  const callback = noop.useCallback(() => {
+    setMode(ActivityPanelModes.PIP);
   }, items);
   if (undefined !== activityName) {
     if ("" !== activityName) {
-      let obj = { style: null, children: null };
-      obj[0] = tmp2.buttonParent;
+      let obj = { style: tmp2.buttonParent, children: null };
       obj = {
-        icon: null,
+        icon: _modDef11154,
         accessibilityLabel: null,
         onPress: null,
         text: null,
@@ -29,13 +30,12 @@ const memoResult = importAllResult.memo(function MinimizeActivityButton(arg0) {
         maxFontSizeMultiplier: 1,
         shrink: true,
       };
-      obj[0] = registerAssetDefault;
       const intl2 = setMode(1114).intl;
-      obj[1] = intl2.string(setMode(1114).t.brPQ5U);
-      obj[2] = callback;
-      obj[3] = activityName;
-      obj[1] = jsx(setMode(4975).Button, {
-        icon: null,
+      obj.accessibilityLabel = intl2.string(setMode(1114).t.brPQ5U);
+      obj.onPress = callback;
+      obj.text = activityName;
+      obj.children = jsx(setMode(4975).Button, {
+        icon: _modDef11154,
         accessibilityLabel: null,
         onPress: null,
         text: null,
@@ -46,7 +46,7 @@ const memoResult = importAllResult.memo(function MinimizeActivityButton(arg0) {
       });
       let tmp3 = (
         <View
-          icon={null}
+          icon={_modDef11154}
           accessibilityLabel={null}
           onPress={null}
           text={null}
@@ -60,7 +60,7 @@ const memoResult = importAllResult.memo(function MinimizeActivityButton(arg0) {
     return tmp3;
   }
   obj = {
-    icon: registerAssetDefault,
+    icon: _modDef11154,
     accessibilityLabel: null,
     onPress: null,
     size: "sm",
@@ -68,10 +68,10 @@ const memoResult = importAllResult.memo(function MinimizeActivityButton(arg0) {
     maxFontSizeMultiplier: 1,
   };
   const intl = setMode(1114).intl;
-  obj[1] = intl.string(setMode(1114).t.brPQ5U);
-  obj[2] = callback;
+  obj.accessibilityLabel = intl.string(setMode(1114).t.brPQ5U);
+  obj.onPress = callback;
   tmp3 = jsx(setMode(8097).IconButton, {
-    icon: registerAssetDefault,
+    icon: _modDef11154,
     accessibilityLabel: null,
     onPress: null,
     size: "sm",
@@ -79,6 +79,3 @@ const memoResult = importAllResult.memo(function MinimizeActivityButton(arg0) {
     maxFontSizeMultiplier: 1,
   });
 });
-const result = require("set").fileFinishedImporting("modules/activities/panel/native/MinimizeActivityButton.tsx");
-
-export default memoResult;

@@ -1,9 +1,10 @@
 // discord_app/modules/activities/utils/isMostRecentDeadEndInvite.tsx
-import set from "../../../../_runtime/00002_set.js";
-import ME from "../../../Constants.tsx";
+import Constants from "../../../Constants.tsx";
+import isInviteActiveDefault from "isInviteActive.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const ActivityActionTypes = ME.ActivityActionTypes;
-const result = set.fileFinishedImporting("modules/activities/utils/isMostRecentDeadEndInvite.tsx");
+const ActivityActionTypes = Constants.ActivityActionTypes;
+const result = size.fileFinishedImporting("modules/activities/utils/isMostRecentDeadEndInvite.tsx");
 
 export const isMostRecentDeadEndInvite = function isMostRecentDeadEndInvite(id, messages, id2, findActivityResult) {
   closure_0 = id2;
@@ -18,13 +19,13 @@ export const isMostRecentDeadEndInvite = function isMostRecentDeadEndInvite(id, 
         if (application != null) {
           id = application.id;
         }
-        tmp = id === id2;
+        tmp = id === closure_0;
       }
       if (tmp) {
-        tmp = activity.activity.type === closure_1_2.JOIN;
+        tmp = activity.activity.type === ActivityActionTypes.JOIN;
       }
       if (tmp) {
-        tmp = !id2(table[1])(table, activity, id2);
+        tmp = !isInviteActiveDefault(closure_1, activity, closure_0);
       }
       return tmp;
     },

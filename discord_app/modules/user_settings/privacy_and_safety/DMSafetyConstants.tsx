@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/privacy_and_safety/DMSafetyConstants.tsx
-import set from "../../../../_runtime/00002_set.js";
-import create from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import preloaded_user_settings from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const obj = {
   DISABLED: 0,
@@ -10,14 +10,13 @@ const obj = {
   FRIENDS_AND_NON_FRIENDS: 2,
   [2]: "FRIENDS_AND_NON_FRIENDS",
 };
-const items = [obj.DISABLED, create.DmSpamFilterV2.DISABLED];
+const items = [obj.DISABLED, preloaded_user_settings.DmSpamFilterV2.DISABLED];
 const items1 = [items, ,];
-const items2 = [obj.NON_FRIENDS, create.DmSpamFilterV2.NON_FRIENDS];
+const items2 = [obj.NON_FRIENDS, preloaded_user_settings.DmSpamFilterV2.NON_FRIENDS];
 items1[1] = items2;
-const items3 = [obj.FRIENDS_AND_NON_FRIENDS, create.DmSpamFilterV2.FRIENDS_AND_NON_FRIENDS];
+const items3 = [obj.FRIENDS_AND_NON_FRIENDS, preloaded_user_settings.DmSpamFilterV2.FRIENDS_AND_NON_FRIENDS];
 items1[2] = items3;
-const map = new Map(items1);
-const result = set.fileFinishedImporting("modules/user_settings/privacy_and_safety/DMSafetyConstants.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/privacy_and_safety/DMSafetyConstants.tsx");
 
 export const DMSafetyCoachmarkActions = {
   VIEW: 0,
@@ -36,4 +35,4 @@ export const DmSpamFilterTypes = {
   [2]: "FRIENDS_AND_NON_FRIENDS",
 };
 export const ExplicitContentFilterTypes = obj;
-export const ExplicitContentFilterToDmSpamFilterV2 = map;
+export const ExplicitContentFilterToDmSpamFilterV2 = new Map(items1);

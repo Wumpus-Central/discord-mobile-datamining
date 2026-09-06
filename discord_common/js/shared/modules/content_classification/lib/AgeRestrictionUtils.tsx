@@ -1,8 +1,8 @@
 // discord_common/js/shared/modules/content_classification/lib/AgeRestrictionUtils.tsx
-import set from "../../../../../../_runtime/00002_set.js";
 import AgeRestrictionStatus from "../../../shared-constants/AgeRestrictionStatus.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting(
+const result = size.fileFinishedImporting(
   "../discord_common/js/shared/modules/content_classification/lib/AgeRestrictionUtils.tsx",
 );
 

@@ -1,29 +1,35 @@
 // discord_app/modules/user_profile/native/UserProfileAboutMeCardCommand.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { AnalyticEvents } from "../../../Constants.tsx";
-import { jsxs } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
-import importAllResult from "../../../../_runtime/00019_noop.js";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
+import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
+import MarkupReactCommandRule from "../../markup/native/MarkupReactCommandRule.tsx";
+import navigateToLastChannelDefault from "../../main_tabs_v2/native/navigateToLastChannel.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
+require = fn;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const jsxs = fn(21).jsxs;
+const createStyles = fn(4560);
 let obj = { commandClickable: null };
 obj = {
-  color: ThemesDefault.colors.MENTION_FOREGROUND,
-  backgroundColor: ThemesDefault.colors.MENTION_BACKGROUND,
-  marginEnd: ThemesDefault.space.PX_12,
-  marginBottom: ThemesDefault.space.PX_12,
+  color: nativeDefault.colors.MENTION_FOREGROUND,
+  backgroundColor: nativeDefault.colors.MENTION_BACKGROUND,
+  marginEnd: nativeDefault.space.PX_12,
+  marginBottom: nativeDefault.space.PX_12,
 };
-obj[0] = obj;
-let closure_5 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(function UserProfileAboutMeCardCommand(channel) {
+obj.commandClickable = obj;
+let closure_5 = createStyles.createStyles(obj);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileAboutMeCardCommand.tsx");
+
+export default noop.memo(function UserProfileAboutMeCardCommand(channel) {
   ({ application: require, command } = channel);
   channel = channel.channel;
-  const tmp = callback();
-  const items = ["/", command.displayName];
-  return jsxs(require(channel[5]).Text, {
+  let obj = {
     variant: "text-md/bold",
     onPress() {
-      let obj = closure_1_0(channel[6]);
+      let obj = require("ChatInputUtils");
       const bestActiveInput = obj.getBestActiveInput();
       obj = {
         channelId: channel.id,
@@ -40,58 +46,122 @@ const memoResult = importAllResult.memo(function UserProfileAboutMeCardCommand(c
       if (str == null) {
         str = "";
       }
-      obj[1] = str;
-      ({ id: obj4[2], displayName: obj4[3] } = command);
-      obj[4] = function onOpenCustomKeyboard(arg0) {
+      obj.currentText = str;
+      ({ id: obj4.commandId, displayName: obj4.commandName } = command);
+      obj.onOpenCustomKeyboard = function onOpenCustomKeyboard(arg0) {
         let openCustomKeyboardResult;
         if (bestActiveInput != null) {
           openCustomKeyboardResult = bestActiveInput.openCustomKeyboard(arg0);
         }
         return openCustomKeyboardResult;
       };
-      obj[5] = function onSetCommand() {
-        let obj = command(channel[8]);
+      obj.onSetCommand = function onSetCommand() {
+        let obj = AnalyticsUtilsDefault;
         let id;
-        if (bestActiveInput != null) {
+        if (closure_2_0 != null) {
           id = tmp3.id;
         }
-        obj = { application_id: id, command_id: closure_1_1.id, guild_id: closure_1_2.getGuildId() };
-        const merged = Object.assign(closure_2_0(channel[9]).collectChannelAnalyticsMetadata(closure_1_2));
-        obj.track(closure_2_3.POPULAR_APPLICATION_COMMAND_CLICKED, obj);
-        const obj3 = closure_2_0(channel[9]);
-        const tmp5 = closure_1_1;
-        const tmp6 = closure_1_2;
-        command(channel[10]).hideAllActionSheets();
-        command(channel[11])();
+        obj = { application_id: id, command_id: command.id, guild_id: channel.getGuildId() };
+        const merged = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadata(channel));
+        obj.track(AnalyticEvents.POPULAR_APPLICATION_COMMAND_CLICKED, obj);
+        const tmp5 = command;
+        const tmp6 = channel;
+        ActionSheetActionCreatorsDefault.hideAllActionSheets();
+        navigateToLastChannelDefault();
         if (bestActiveInput != null) {
           obj5.openSystemKeyboard();
         }
         if (bestActiveInput != null) {
           const applicationCommandManager = obj5.getApplicationCommandManager();
           if (applicationCommandManager != null) {
-            obj = { channelId: null, command: null, section: null, location: null };
-            obj[0] = tmp6.id;
-            obj[1] = tmp5;
+            obj = { channelId: tmp6.id, command: tmp5, section: null, location: null };
             let applicationCommandSection = null;
             if (null != tmp3) {
-              applicationCommandSection = tmp7(tmp2[12]).getApplicationCommandSection(tmp3);
-              const tmp7Result = tmp7(tmp2[12]);
+              applicationCommandSection = tmp7(7521).getApplicationCommandSection(tmp3);
+              const tmp7Result = tmp7(7521);
             }
-            obj[2] = applicationCommandSection;
-            obj[3] = tmp7(tmp2[13]).ApplicationCommandTriggerLocations.POPULAR_COMMANDS;
+            obj.section = applicationCommandSection;
+            obj.location = tmp7(7523).ApplicationCommandTriggerLocations.POPULAR_COMMANDS;
             applicationCommandManager.setCommand(obj);
           }
         }
       };
-      const result = closure_1_0(channel[7]).handleTapCommandMention(obj);
+      const result = require("MarkupReactCommandRule").handleTapCommandMention(obj);
     },
     onLongPress() {
-      return closure_1_0(channel[7]).handleLongPressCommandMention(command.displayName, command.id);
+      return MarkupReactCommandRule.handleLongPressCommandMention(command.displayName, command.id);
     },
-    style: callback().commandClickable,
-    children: items,
+    style: closure_5().commandClickable,
+    children: null,
+  };
+  const items = ["/", command.displayName];
+  obj.children = items;
+  return jsxs(require("Text/Text").Text, {
+    variant: "text-md/bold",
+    onPress() {
+      let obj = require("ChatInputUtils");
+      const bestActiveInput = obj.getBestActiveInput();
+      obj = {
+        channelId: channel.id,
+        currentText: null,
+        commandId: null,
+        commandName: null,
+        onOpenCustomKeyboard: null,
+        onSetCommand: null,
+      };
+      let str;
+      if (bestActiveInput != null) {
+        str = bestActiveInput.getText();
+      }
+      if (str == null) {
+        str = "";
+      }
+      obj.currentText = str;
+      ({ id: obj4.commandId, displayName: obj4.commandName } = command);
+      obj.onOpenCustomKeyboard = function onOpenCustomKeyboard(arg0) {
+        let openCustomKeyboardResult;
+        if (bestActiveInput != null) {
+          openCustomKeyboardResult = bestActiveInput.openCustomKeyboard(arg0);
+        }
+        return openCustomKeyboardResult;
+      };
+      obj.onSetCommand = function onSetCommand() {
+        let obj = AnalyticsUtilsDefault;
+        let id;
+        if (closure_2_0 != null) {
+          id = tmp3.id;
+        }
+        obj = { application_id: id, command_id: command.id, guild_id: channel.getGuildId() };
+        const merged = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadata(channel));
+        obj.track(AnalyticEvents.POPULAR_APPLICATION_COMMAND_CLICKED, obj);
+        const tmp5 = command;
+        const tmp6 = channel;
+        ActionSheetActionCreatorsDefault.hideAllActionSheets();
+        navigateToLastChannelDefault();
+        if (bestActiveInput != null) {
+          obj5.openSystemKeyboard();
+        }
+        if (bestActiveInput != null) {
+          const applicationCommandManager = obj5.getApplicationCommandManager();
+          if (applicationCommandManager != null) {
+            obj = { channelId: tmp6.id, command: tmp5, section: null, location: null };
+            let applicationCommandSection = null;
+            if (null != tmp3) {
+              applicationCommandSection = tmp7(7521).getApplicationCommandSection(tmp3);
+              const tmp7Result = tmp7(7521);
+            }
+            obj.section = applicationCommandSection;
+            obj.location = tmp7(7523).ApplicationCommandTriggerLocations.POPULAR_COMMANDS;
+            applicationCommandManager.setCommand(obj);
+          }
+        }
+      };
+      const result = require("MarkupReactCommandRule").handleTapCommandMention(obj);
+    },
+    onLongPress() {
+      return MarkupReactCommandRule.handleLongPressCommandMention(command.displayName, command.id);
+    },
+    style: closure_5().commandClickable,
+    children: null,
   });
 });
-let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileAboutMeCardCommand.tsx");
-
-export default memoResult;

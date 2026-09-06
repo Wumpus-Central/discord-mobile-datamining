@@ -1,15 +1,17 @@
 // discord_app/modules/messages/GuildOfficialMessagesExperiment.tsx
-import set from "../../../_runtime/00002_set.js";
 import createExperiment from "../experiments/index.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const items = [{ id: 1, label: "Enable official messages", config: { enabled: true } }];
-const experiment = createExperiment.createExperiment({
+const obj = {
   kind: "guild",
   id: "2026-03_guild_official_messages",
   label: "Guild Official Messages",
   defaultConfig: { enabled: false },
-  treatments: items,
-});
-const result = set.fileFinishedImporting("modules/messages/GuildOfficialMessagesExperiment.tsx");
+  treatments: null,
+};
+const items = [{ id: 1, label: "Enable official messages", config: { enabled: true } }];
+obj.treatments = items;
+const experiment = createExperiment.createExperiment(obj);
+const result = size.fileFinishedImporting("modules/messages/GuildOfficialMessagesExperiment.tsx");
 
 export default experiment;

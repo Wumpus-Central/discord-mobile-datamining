@@ -1,55 +1,56 @@
 // discord_app/modules/voice_channel_effects/native/AnimatedEffectEmoji.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import setDefault from "../../../utils/Durations.tsx";
-import Button from "../../../design/void/native.tsx";
-import preloadDefault from "../../../components_native/common/FastImage.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../a11y/AccessibilityStore.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import DurationsDefault from "../../../utils/Durations.tsx";
+import native from "../../../design/void/native.tsx";
+import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
+import timing from "../../../design/animation/reanimated/timing/timing.tsx";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
-require = arg1;
+require = fn;
 function Emoji(url) {
   url = url.url;
-  const tmp = callback();
+  const tmp = closure_9();
   if ("" !== url) {
     let obj = { resizeMode: "contain", style: null, source: null };
     const items = [tmp.imageEmoji];
-    obj[1] = items;
-    obj = { uri: null };
-    obj[0] = url;
-    obj[2] = obj;
-    let tmp5 = jsx(preloadDefault, { uri: null });
+    obj.style = items;
+    obj = { uri: url };
+    obj.source = obj;
+    let tmp5 = jsx(FastImageDefault, { uri: url });
   } else {
     obj = { style: null, allowFontScaling: false, children: null };
     const items1 = [tmp.textEmoji];
-    obj[0] = items1;
-    obj[2] = url.surrogates;
-    tmp5 = jsx(Button.LegacyText, { style: null, allowFontScaling: false, children: null });
+    obj.style = items1;
+    obj.children = url.surrogates;
+    tmp5 = jsx(native.LegacyText, { style: null, allowFontScaling: false, children: null });
   }
   return tmp5;
 }
-let closure_7 = 6 * setDefault.Millis.SECOND;
-let closure_8 = 2 * setDefault.Millis.SECOND;
-createCacheKey = {
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+let closure_7 = 6 * DurationsDefault.Millis.SECOND;
+let closure_8 = 2 * DurationsDefault.Millis.SECOND;
+fn(4560);
+const createStyles = {
   voiceChannelEffectEmojiContainer: null,
   voiceChannelEffectEmojiContainerTileNotch: null,
   voiceChannelEffectEmoji: null,
   textEmoji: null,
   imageEmoji: null,
 };
-createCacheKey = {
-  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
-  borderRadius: ThemesDefault.radii.round,
+const rect = {
+  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: nativeDefault.radii.round,
   position: "absolute",
   right: 16,
   top: 16,
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { right: "auto", left: 16 };
-createCacheKey[2] = { padding: 12 };
-createCacheKey[3] = {
+createStyles.voiceChannelEffectEmojiContainer = rect;
+createStyles.voiceChannelEffectEmojiContainerTileNotch = { right: "auto", left: 16 };
+createStyles.voiceChannelEffectEmoji = { padding: 12 };
+createStyles.textEmoji = {
   fontSize: 32,
   lineHeight: 38,
   alignContent: "center",
@@ -58,12 +59,13 @@ createCacheKey[3] = {
   width: 32,
   height: 32,
 };
-createCacheKey[4] = { width: 32, height: 32 };
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-let closure_11 = {
+createStyles.imageEmoji = { width: 32, height: 32 };
+let closure_9 = createStyles.createStyles(createStyles);
+const __initData = {
   code: "function AnimatedEffectEmojiTsx1(){const{withSequence,withTiming,ANIMATION_ROTATION_DEG,withDelay,useReducedMotion,STANDARD_EASING}=this.__closure;const rotate=withSequence(withTiming(ANIMATION_ROTATION_DEG+\"deg\",{duration:0}),withDelay(100,withTiming('0deg',{duration:useReducedMotion?0:300,easing:STANDARD_EASING})));const scale=withSequence(withTiming(0,{duration:0}),withDelay(100,withTiming(1,{duration:useReducedMotion?0:300,easing:STANDARD_EASING})));return{transform:[{scale:scale},{rotate:rotate}]};}",
 };
-const result = require("set").fileFinishedImporting("modules/voice_channel_effects/native/AnimatedEffectEmoji.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_channel_effects/native/AnimatedEffectEmoji.tsx");
 
 export default function AnimatedEffectEmoji(onComplete) {
   ({ voiceChannelEffect, hasNotch } = onComplete);
@@ -73,13 +75,13 @@ export default function AnimatedEffectEmoji(onComplete) {
   onComplete = onComplete.onComplete;
   sentAt = undefined;
   let stateFromStores;
-  const tmp = callback();
+  const tmp = closure_9();
   ({ emoji, sentAt } = voiceChannelEffect);
   let obj = onComplete(stateFromStores[9]);
-  let items = [closure_5];
+  let items = [AccessibilityStore];
   stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const items1 = [sentAt, onComplete.userId, onComplete];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (Date.now() - sentAt >= closure_1_8) {
       if (timeout != null) {
         tmp2();
@@ -102,13 +104,13 @@ export default function AnimatedEffectEmoji(onComplete) {
   onComplete(stateFromStores[10]);
   class N {
     constructor() {
-      tmp = onComplete;
+      tmp = closure_0;
       tmp2 = closure_2;
-      obj = onComplete(closure_2[10]);
-      obj2 = onComplete(closure_2[11]);
+      obj = closure_0(closure_2[10]);
+      obj2 = closure_0(closure_2[11]);
       withTimingResult = obj2.withTiming("-120deg", { duration: 0 });
-      obj3 = onComplete(closure_2[10]);
-      obj4 = onComplete(closure_2[11]);
+      obj3 = closure_0(closure_2[10]);
+      obj4 = closure_0(closure_2[11]);
       num = 300;
       num2 = 300;
       tmp4 = closure_2;
@@ -128,11 +130,11 @@ export default function AnimatedEffectEmoji(onComplete) {
       obj1 = { transform: null };
       obj2 = { scale: null };
       obj3 = { duration: num, easing: tmp(tmp2[8]).STANDARD_EASING };
-      obj2[0] = tmpResult.withSequence(withTimingResult1, tmpResult2.withDelay(100, tmpResult3.withTiming(1, obj3)));
+      obj2.scale = tmpResult.withSequence(withTimingResult1, tmpResult2.withDelay(100, tmpResult3.withTiming(1, obj3)));
       items = [,];
       items[0] = obj2;
       items[1] = { rotate: withSequenceResult };
-      obj1[0] = items;
+      obj1.transform = items;
       return obj1;
     }
   }
@@ -146,7 +148,7 @@ export default function AnimatedEffectEmoji(onComplete) {
   };
   N.__closure = obj;
   N.__workletHash = 75069010226;
-  N.__initData = closure_11;
+  N.__initData = __initData;
   let tmp9Result = null;
   if (null != emoji) {
     const items2 = [tmp.voiceChannelEffectEmojiContainer, , ,];
@@ -158,15 +160,14 @@ export default function AnimatedEffectEmoji(onComplete) {
     }
     obj = { style: null, children: null };
     items2[3] = hasNotch;
-    obj[0] = items2;
-    obj1 = { style: null, children: null };
-    obj1[0] = tmp.voiceChannelEffectEmoji;
+    obj.style = items2;
+    let obj1 = { style: tmp.voiceChannelEffectEmoji, children: null };
     let obj2 = { url: null, surrogates: null };
     tmp2Result = tmp2(tmp3[12]);
-    obj2[0] = tmp2Result.getEffectUrl(emoji);
-    obj2[1] = emoji.name;
-    obj1[1] = <Emoji url={null} surrogates={null} />;
-    obj[1] = <View style={null}>{null}</View>;
+    obj2.url = tmp2Result.getEffectUrl(emoji);
+    obj2.surrogates = emoji.name;
+    obj1.children = <Emoji url={null} surrogates={null} />;
+    obj.children = <View style={tmp.voiceChannelEffectEmoji}>{null}</View>;
     tmp9Result = tmp9(sentAt(tmp3[10]).View, obj);
   }
   return tmp9Result;

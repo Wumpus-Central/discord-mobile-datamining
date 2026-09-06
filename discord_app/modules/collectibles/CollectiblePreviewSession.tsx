@@ -1,11 +1,11 @@
 // discord_app/modules/collectibles/CollectiblePreviewSession.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-let c0 = 0;
-const result = set.fileFinishedImporting("modules/collectibles/CollectiblePreviewSession.tsx");
+let closure_0 = 0;
+const result = size.fileFinishedImporting("modules/collectibles/CollectiblePreviewSession.tsx");
 
 export function currentPreviewGeneration() {
-  return c0;
+  return closure_0;
 }
 export function commitCollectiblePreview() {
   closure_0 = closure_0 + 1;

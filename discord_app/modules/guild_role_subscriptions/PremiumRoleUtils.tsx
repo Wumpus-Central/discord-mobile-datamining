@@ -1,7 +1,7 @@
 // discord_app/modules/guild_role_subscriptions/PremiumRoleUtils.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/guild_role_subscriptions/PremiumRoleUtils.tsx");
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/PremiumRoleUtils.tsx");
 
 export const isSubscriptionRole = function isSubscriptionRole(role) {
   let prop;
@@ -13,10 +13,10 @@ export const isSubscriptionRole = function isSubscriptionRole(role) {
   }
   return null != prop;
 };
-export const isSubscriptionRoleAvailableForPurchase = function isSubscriptionRoleAvailableForPurchase(tags) {
+export const isSubscriptionRoleAvailableForPurchase = function isSubscriptionRoleAvailableForPurchase(role) {
   let prop;
-  if (tags != null) {
-    tags = tags.tags;
+  if (role != null) {
+    const tags = role.tags;
     if (tags != null) {
       prop = tags.available_for_purchase;
     }

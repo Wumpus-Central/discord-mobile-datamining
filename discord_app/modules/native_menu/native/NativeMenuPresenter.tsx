@@ -1,25 +1,26 @@
 // discord_app/modules/native_menu/native/NativeMenuPresenter.tsx
 import useBackPressHandlerDefault from "../../routing/native/useBackPressHandler.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import closure_4 from "NativeMenuStore.tsx";
+import NativeMenuActionCreatorsDefault from "NativeMenuActionCreators.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import NativeMenuStore from "NativeMenuStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/native_menu/native/NativeMenuPresenter.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/native_menu/native/NativeMenuPresenter.tsx");
 
 export default function MenuContainer() {
-  const items = [closure_4];
+  const items = [NativeMenuStore];
   const stateFromStoresObject = key(504).useStateFromStoresObject(
     items,
-    () => ({ key: store.getKey(), menu: store.getMenu() }),
+    () => ({ key: NativeMenuStore.getKey(), menu: NativeMenuStore.getMenu() }),
     [],
   );
   key = stateFromStoresObject.key;
   const menu = stateFromStoresObject.menu;
   const items1 = [key];
-  const callback = React.useCallback(() => {
+  const callback = noop.useCallback(() => {
     if (null != key) {
-      closure_1_1(closure_1_2[3]).hideNativeMenu(tmp);
-      const obj = closure_1_1(closure_1_2[3]);
+      NativeMenuActionCreatorsDefault.hideNativeMenu(tmp);
     }
     return null != key;
   }, items1);

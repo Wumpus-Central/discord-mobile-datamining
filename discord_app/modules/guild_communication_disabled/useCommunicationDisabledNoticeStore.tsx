@@ -1,16 +1,16 @@
 // discord_app/modules/guild_communication_disabled/useCommunicationDisabledNoticeStore.tsx
-import identity from "../../../_runtime/01244_identity.js";
-import isIterable from "../../../_runtime/04184_isIterable.js";
-import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
-import { DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY } from "GuildDisableCommunicationConstants.tsx";
-import keys from "../../../_runtime/00561_keys.js";
-import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
+import _mod1244 from "../../../_runtime/metro/01244__.js";
+import _mod4184 from "../../../_runtime/metro/04184__.js";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
-require = arg1;
-let closure_4 = keys.createStore((arg0, arg1) => {
-  const _require = arg0;
+require = fn;
+const DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY =
+  fn(2023).DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY;
+const module_561 = fn(561);
+let state = module_561.createStore((arg0, arg1) => {
+  _require = arg0;
   dependencyMap = arg1;
-  let Storage = require("../../../discord_common/js/packages/storage/Storage.tsx").Storage;
+  let Storage = require("Storage").Storage;
   let items = Storage.get(DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY);
   if (items == null) {
     items = [];
@@ -20,44 +20,54 @@ let closure_4 = keys.createStore((arg0, arg1) => {
     dismissNotification(arg0) {
       const notificationDismissedInGuilds = dependencyMap().notificationDismissedInGuilds;
       notificationDismissedInGuilds.add(arg0);
-      const Storage = callback(510).Storage;
-      const result = Storage.set(closure_1_3, notificationDismissedInGuilds);
-      callback(1249).batchUpdates(() => notificationDismissedInGuilds({ notificationDismissedInGuilds }));
+      const Storage = notificationDismissedInGuilds(510).Storage;
+      const result = Storage.set(
+        DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY,
+        notificationDismissedInGuilds,
+      );
+      notificationDismissedInGuilds(1249).batchUpdates(() =>
+        notificationDismissedInGuilds({ notificationDismissedInGuilds }),
+      );
     },
     resetNotification(arg0) {
       const notificationDismissedInGuilds = dependencyMap().notificationDismissedInGuilds;
       if (notificationDismissedInGuilds.has(arg0)) {
         notificationDismissedInGuilds.delete(arg0);
-        const Storage = callback(510).Storage;
-        const result = Storage.set(closure_1_3, notificationDismissedInGuilds);
-        callback(1249).batchUpdates(() => notificationDismissedInGuilds({ notificationDismissedInGuilds }));
-        const obj = callback(1249);
+        const Storage = notificationDismissedInGuilds(510).Storage;
+        const result = Storage.set(
+          DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY,
+          notificationDismissedInGuilds,
+        );
+        notificationDismissedInGuilds(1249).batchUpdates(() =>
+          notificationDismissedInGuilds({ notificationDismissedInGuilds }),
+        );
+        const obj = notificationDismissedInGuilds(1249);
       }
     },
   };
   return obj;
 });
-Storage.asyncGet(DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY, (arg0) => {
-  const _require = arg0;
-  require("../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
+let Storage = fn(510).Storage;
+Storage.asyncGet(DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY, async (arg0) => {
+  _require = arg0;
+  require("ReactBatchUpdates").batchUpdates(() => {
     const obj = { notificationDismissedInGuilds: new Set(closure_0) };
-    return closure_1_4.setState(obj);
+    return state.setState(obj);
   });
 });
-let result = require("set").fileFinishedImporting(
-  "modules/guild_communication_disabled/useCommunicationDisabledNoticeStore.tsx",
-);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_communication_disabled/useCommunicationDisabledNoticeStore.tsx");
 
 export const useCommunicationDisabledNoticeStore = function useCommunicationDisabledNoticeStore(arg0) {
-  const tmp = callback(
-    identity.useStoreWithEqualityFn(
+  const tmp = _slicedToArray(
+    _mod1244.useStoreWithEqualityFn(
       closure_4,
       (arg0) => {
         const items = [,];
         ({ notificationDismissedInGuilds: arr[0], dismissNotification: arr[1] } = arg0);
         return items;
       },
-      isIterable.shallow,
+      _mod4184.shallow,
     ),
     2,
   );

@@ -1,31 +1,27 @@
 // discord_app/modules/age_gate/useIsNsfwGated.tsx
-import closure_2 from "../../stores/GuildNSFWAgreeStore.tsx";
-import closure_3 from "../../stores/UserStore.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import GuildNSFWAgreeStore from "../../stores/GuildNSFWAgreeStore.tsx";
+import UserStore from "../../stores/UserStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/age_gate/useIsNsfwGated.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/age_gate/useIsNsfwGated.tsx");
 
 export default function useIsNsfwGated(nsfw) {
-  const _require = nsfw;
+  _require = nsfw;
   nsfw = nsfw.nsfw;
-  const items = [closure_3];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
-    items,
-    () => {
-      currentUser = currentUser.getCurrentUser();
-      let nsfwAllowed;
-      if (currentUser != null) {
-        nsfwAllowed = currentUser.nsfwAllowed;
-      }
-      return nsfwAllowed;
-    },
-  );
-  const obj = initialize;
-  const items1 = [closure_2];
-  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
-    items1,
-    () => closure_1_2.didAgree(nsfw.guild_id),
+  const items = [UserStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
+    currentUser = currentUser.getCurrentUser();
+    let nsfwAllowed;
+    if (currentUser != null) {
+      nsfwAllowed = currentUser.nsfwAllowed;
+    }
+    return nsfwAllowed;
+  });
+  const obj = require("initialize");
+  const items1 = [GuildNSFWAgreeStore];
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () =>
+    GuildNSFWAgreeStore.didAgree(nsfw.guild_id),
   );
   let tmp3 = !stateFromStores1;
   if (nsfw) {

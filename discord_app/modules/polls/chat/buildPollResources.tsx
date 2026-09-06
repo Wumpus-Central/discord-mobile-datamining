@@ -1,15 +1,14 @@
 // discord_app/modules/polls/chat/buildPollResources.tsx
-import set from "../../../../_runtime/00002_set.js";
 import buildPlatformPollResources from "buildPlatformPollResources.native.tsx";
-import apply from "../../../../_runtime/00012_apply.js";
+import apply from "../../../../_runtime/metro/00012__.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const memoizeResult = apply.memoize(
+const result = size.fileFinishedImporting("modules/polls/chat/buildPollResources.tsx");
+
+export default apply.memoize(
   function buildPollResources(arg0) {
     ({ theme, layoutType } = arg0);
     return buildPlatformPollResources.buildPlatformPollResources(theme, layoutType);
   },
   (theme) => "" + theme.theme + ":" + theme.layoutType,
 );
-const result = set.fileFinishedImporting("modules/polls/chat/buildPollResources.tsx");
-
-export default memoizeResult;

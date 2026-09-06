@@ -1,15 +1,14 @@
 // discord_app/modules/notification_center/native/ForYouLoadMore.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import defaultAreStatesEqual from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_4 from "../NotificationCenterItemsStore.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import useStateFromStores from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import NotificationCenterItemsStore from "../NotificationCenterItemsStore.tsx";
 
-require = arg1;
-noopAll;
-({ ActivityIndicator: obj1, View: c3 } = get_ActivityIndicator);
-let closure_6 = createCacheKey.createStyles({
+require = fn;
+get_ActivityIndicator = fn(17);
+({ ActivityIndicator: c2, View: c3 } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_6 = createStyles.createStyles({
   container: {
     alignItems: "center",
     flexDirection: "row",
@@ -20,21 +19,21 @@ let closure_6 = createCacheKey.createStyles({
     height: 42,
   },
 });
-const result = require("set").fileFinishedImporting("modules/notification_center/native/ForYouLoadMore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/notification_center/native/ForYouLoadMore.tsx");
 
 export const ForYouLoadMore = function ForYouLoadMore(onPressLoad) {
-  let obj = defaultAreStatesEqual;
-  const items = [closure_4];
-  obj = { style: callback().container, children: null };
+  const items = [NotificationCenterItemsStore];
+  let obj = { style: closure_6().container, children: null };
   if (obj.useStateFromStores(items, () => loading.loading)) {
-    let tmp4Result = tmp4(closure_2, {});
+    let tmp4Result = tmp4(React2, {});
   } else {
     obj = { variant: "secondary", grow: true, size: "md", text: null, onPress: null };
     const intl = tmp2(1114).intl;
-    obj[3] = intl.string(tmp2(1114).t["Q/LSXp"]);
-    obj[4] = onPressLoad.onPressLoad;
+    obj.text = intl.string(tmp2(1114).t["Q/LSXp"]);
+    obj.onPress = onPressLoad.onPressLoad;
     tmp4Result = tmp4(tmp2(4975).Button, obj);
   }
-  obj[1] = tmp4Result;
-  return <closure_3 style={callback().container}>{null}</closure_3>;
+  obj.children = tmp4Result;
+  return <React3 style={closure_6().container}>{null}</React3>;
 };

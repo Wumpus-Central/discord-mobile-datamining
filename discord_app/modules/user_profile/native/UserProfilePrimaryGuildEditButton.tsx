@@ -1,28 +1,28 @@
 // discord_app/modules/user_profile/native/UserProfilePrimaryGuildEditButton.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../stores/GuildStore.tsx";
-import { GuildTagBadgeSize } from "../../guild_tag/GuildTagConstants.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
+import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import GuildStore from "../../../stores/GuildStore.tsx";
 
-const require = arg1;
-noopAll;
-createCacheKey = { tag: null };
-createCacheKey = { paddingHorizontal: 6, paddingVertical: 2, columnGap: 4, borderRadius: ThemesDefault.radii.sm };
-createCacheKey[0] = createCacheKey;
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting(
-  "modules/user_profile/native/UserProfilePrimaryGuildEditButton.tsx",
-);
+require = fn;
+const GuildTagBadgeSize = fn(7944).GuildTagBadgeSize;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { tag: null };
+createStyles = { paddingHorizontal: 6, paddingVertical: 2, columnGap: 4, borderRadius: nativeDefault.radii.sm };
+createStyles.tag = createStyles;
+let closure_6 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfilePrimaryGuildEditButton.tsx");
 
 export default function UserProfilePrimaryGuildEditButton(arg0) {
   ({ user, pendingPrimaryGuildId } = arg0);
   pendingPrimaryGuildId = undefined;
   let userAvailableGuildsWithTags;
   function handleSelectPrimaryGuild(primaryGuildId) {
-    let obj = pendingPrimaryGuildId(handleSelectPrimaryGuild[9]);
-    obj = { primaryGuildId };
+    pendingPrimaryGuildId(handleSelectPrimaryGuild[9]);
+    const obj = { primaryGuildId };
     obj.setPendingChanges(obj);
   }
   ({ disabled, tagStyle } = arg0);
@@ -44,10 +44,10 @@ export default function UserProfilePrimaryGuildEditButton(arg0) {
     pendingPrimaryGuildId = tmp4;
   }
   let obj = pendingPrimaryGuildId(handleSelectPrimaryGuild[6]);
-  const items = [closure_3];
+  const items = [GuildStore];
   const items1 = [pendingPrimaryGuildId];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_3.getGuild(pendingPrimaryGuildId), items1);
-  obj1 = pendingPrimaryGuildId(handleSelectPrimaryGuild[7]);
+  const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(pendingPrimaryGuildId), items1);
+  let obj1 = pendingPrimaryGuildId(handleSelectPrimaryGuild[7]);
   userAvailableGuildsWithTags = obj1.useUserAvailableGuildsWithTags();
   let obj2 = pendingPrimaryGuildId(handleSelectPrimaryGuild[8]);
   const userPrimaryGuild = obj2.getUserPrimaryGuild(user.primaryGuild);
@@ -116,36 +116,25 @@ export default function UserProfilePrimaryGuildEditButton(arg0) {
       disabled: null,
     };
     const intl2 = tmp6(tmp7[10]).intl;
-    obj[0] = intl2.string(tmp6(tmp7[10]).t["DUD+5n"]);
-    obj[1] = name;
-    obj = { text: null };
-    obj[0] = combined;
-    obj[2] = obj;
-    obj[3] = function onPress() {
-      let obj = userAvailableGuildsWithTags(handleSelectPrimaryGuild[14]);
-      obj = {
+    obj.label = intl2.string(tmp6(tmp7[10]).t["DUD+5n"]);
+    obj.buttonText = name;
+    obj = { text: combined };
+    obj.accessibilityValue = obj;
+    obj.onPress = function onPress() {
+      const obj = {
         availableGuilds: userAvailableGuildsWithTags,
         selectedGuildId: pendingPrimaryGuildId,
         onSelectGuild: handleSelectPrimaryGuild,
       };
-      obj.openLazy(
-        pendingPrimaryGuildId(handleSelectPrimaryGuild[16])(
-          handleSelectPrimaryGuild[15],
-          handleSelectPrimaryGuild.paths,
-        ),
-        "UserPrimaryGuildListBottomSheet",
-        obj,
-      );
+      obj.openLazy(asyncRequireImpl(14642, dependencyMap.paths), "UserPrimaryGuildListBottomSheet", obj);
     };
     let tmp23Result = null;
     if (null != stateFromStores) {
-      obj1 = { guild: null, size: null };
-      obj1[0] = stateFromStores;
-      obj1[1] = tmp6(tmp7[17]).GuildIconSizes.LARGE;
+      obj1 = { guild: stateFromStores, size: tmp6(tmp7[17]).GuildIconSizes.LARGE };
       tmp23Result = tmp23(userAvailableGuildsWithTags(tmp7[17]), obj1);
       const tmp26 = userAvailableGuildsWithTags(tmp7[17]);
     }
-    obj[4] = tmp23Result;
+    obj.leading = tmp23Result;
     tmp23Result = null;
     if (null != tag) {
       obj2 = {
@@ -158,18 +147,17 @@ export default function UserProfilePrimaryGuildEditButton(arg0) {
         textColor: "text-default",
       };
       const items2 = [tmp.tag, tagStyle];
-      obj2[0] = items2;
-      const obj3 = { lineHeight: null };
-      obj3[0] = sum;
-      obj2[1] = obj3;
-      obj2[2] = tag;
-      obj2[3] = guildTagBadgeUrl;
-      obj2[4] = GuildTagBadgeSize.SIZE_16;
+      obj2.containerStyles = items2;
+      const obj3 = { lineHeight: sum };
+      obj2.textStyle = obj3;
+      obj2.guildTag = tag;
+      obj2.guildBadge = guildTagBadgeUrl;
+      obj2.badgeSize = GuildTagBadgeSize.SIZE_16;
       tmp23Result = tmp23(tmp6(tmp7[18]).BaseGuildTagChiplet, obj2);
     }
-    obj[5] = tmp23Result;
-    obj[6] = disabled;
-    return jsx(tmp6(tmp7[13]).UserProfileEditFormButton, { text: null });
+    obj.trailing = tmp23Result;
+    obj.disabled = disabled;
+    return jsx(tmp6(tmp7[13]).UserProfileEditFormButton, { text: combined });
   }
   return null;
 }

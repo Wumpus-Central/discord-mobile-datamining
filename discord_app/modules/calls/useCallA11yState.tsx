@@ -1,17 +1,18 @@
 // discord_app/modules/calls/useCallA11yState.tsx
-import closure_2 from "../../stores/AuthenticationStore.tsx";
-import closure_3 from "../../stores/CallStore.tsx";
+import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
+import CallStore from "../../stores/CallStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/calls/useCallA11yState.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/calls/useCallA11yState.tsx");
 
 export default function useCallA11yState(arg0) {
-  const _require = arg0;
-  const items = [closure_3, closure_2];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => {
-    let obj = closure_1_3;
-    const call = closure_1_3.getCall(closure_0);
-    const id = closure_1_2.getId();
+  _require = arg0;
+  const items = [CallStore, AuthenticationStore];
+  return require("initialize").useStateFromStoresObject(items, () => {
+    let obj = CallStore;
+    const call = CallStore.getCall(closure_0);
+    const id = AuthenticationStore.getId();
     let hasItem = null != call && null != id;
     if (hasItem) {
       const ringing = call.ringing;

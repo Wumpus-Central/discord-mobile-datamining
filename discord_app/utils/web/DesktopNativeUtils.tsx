@@ -1,39 +1,36 @@
 // discord_app/utils/web/DesktopNativeUtils.tsx
-import log from "../../../discord_common/js/packages/logger/Logger.tsx";
+import logger_Logger from "../../../discord_common/js/packages/logger/Logger.tsx";
 import Storage3 from "../../../discord_common/js/packages/storage/Storage.tsx";
-import GameTheme from "../../modules/game_detection/GameDetectionTypes.tsx";
-import GuildThemeSourcePreference from "../../flow/Client.tsx";
-import DomainMigrationEventType from "../../../discord_common/js/shared/domain-migration/DomainMigrationUtils.tsx";
+import GameDetectionTypes from "../../modules/game_detection/GameDetectionTypes.tsx";
+import Client from "../../flow/Client.tsx";
+import discord_common_DiscordNative from "../../../discord_common/js/packages/discord-native-types/DiscordNative.tsx";
+import DomainMigrationUtils from "../../../discord_common/js/shared/domain-migration/DomainMigrationUtils.tsx";
 import IPCEvents from "../../../discord_common/js/packages/discord-native-types/IPCEvents.tsx";
-import getExtensionFromContentType from "../../modules/media/FileExtensionUtils.tsx";
-import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import { NativeFeatures } from "../../Constants.tsx";
-import set from "../../../_runtime/00002_set.js";
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { set } from "../PlatformUtils.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
-require = arg1;
+const FileExtensionUtils = tmp2(5568);
+require = fn;
 function sanitizeFilename(arg0) {
   try {
     const _decodeURIComponent = decodeURIComponent;
     const str2 = decodeURIComponent(arg0);
-    const str4 = decodeURIComponent(arg0).replace(closure_20, "$1");
+    const str4 = decodeURIComponent(arg0).replace(re20, "$1");
     return decodeURIComponent(arg0)
-      .replace(closure_20, "$1")
+      .replace(re20, "$1")
       .replace(/(.+)@([a-zA-Z0-9]+)$/, "$1.$2")
-      .replace(closure_19, "_");
+      .replace(re19, "_");
   } catch (err) {
-    const str9 = str.replace(closure_21, "$1");
+    const str9 = str.replace(re21, "$1");
     return str
-      .replace(closure_21, "$1")
+      .replace(re21, "$1")
       .replace(/(.+)%40([a-zA-Z0-9]+)$/, "$1.$2")
-      .replace(closure_19, "_");
+      .replace(re19, "_");
   }
 }
 function getFileData() {
   const self = this;
-  const apply = _getFileData.apply;
+  const apply = closure_27.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -41,171 +38,134 @@ function getFileData() {
   }
   return applyArgumentsResult;
 }
-function _getFileData() {
-  const self = this;
-  const tmp = callback2((arg0) => {
-    closure_0 = arg0;
-    c3 = 0;
-    c4 = 0;
-    return (function* (arg0) {
-      const _fetch = fetch;
-      const _Request = Request;
-      const request = new Request(closure_0, { method: "GET", mode: "cors" });
-      closure_0 = yield fetch(request);
-      callback(38)(200 === closure_0.status, "Data fetch unsuccessful");
-      callback = yield closure_0.arrayBuffer();
-      callback(38)(null != callback, "Data is null");
-      return callback;
-    })();
-  });
-  closure_27 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function getImageData(arg0, arg1, width, height) {
+let closure_27 = async function _getFileData() {
+  const _fetch = fetch;
+  const _Request = Request;
+  const request = new Request(closure_0, { method: "GET", mode: "cors" });
+  closure_129_0 = await fetch(request);
+  closure_130_1(closure_130_2[3])(200 === closure_129_0.status, "Data fetch unsuccessful");
+  closure_129_1 = await closure_129_0.arrayBuffer();
+  closure_130_1(closure_130_2[3])(null != closure_129_1, "Data is null");
+  return closure_129_1;
+};
+function getImageData(arg0) {
   return getFileData(arg0);
 }
-function _transcodeImageToPng() {
-  const self = this;
-  const tmp = callback2((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c6 = 0;
-    c7 = 0;
-    c5 = 0;
-    return (function* (arg0, arg1) {
-      if (c7 === 2) {
-        c7 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp7 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+let closure_29 = async function _transcodeImageToPng(arg0, type) {
+  closure_0 = arg0;
+  c6 = 0;
+  c7 = 0;
+  c5 = 0;
+  return (async (arg0, value) => {
+    if (c7 === 2) {
+      c7 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp7 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          c7 = 2;
-          if (0 === c6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_3 = tmp3;
-              let context = tmp5;
-              closure_0 = undefined;
-              let offscreenCanvas;
-              context = undefined;
-              closure_3 = undefined;
-              const _Blob = Blob;
-              const items = [closure_0];
-              obj1 = { type: null };
-              obj1[0] = offscreenCanvas;
-              const blob = new Blob(items, obj1);
-              c6 = 1;
-              c7 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = globalThis.createImageBitmap(blob);
-              return obj2;
-            }
-          } else if (1 === tmp8) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              const obj3 = { value: null, done: true };
-              obj3[0] = arg1;
-              return obj3;
-            } else {
-              closure_0 = arg1;
-              c5 = 1;
-              offscreenCanvas = new globalThis.OffscreenCanvas(closure_0.width, closure_0.height);
-              context = offscreenCanvas.getContext("2d");
-              offscreenCanvas(context[3])(null != context, "Failed to acquire 2d context for image transcode");
-              context.drawImage(closure_0, 0, 0);
-              c6 = 3;
-              c7 = 1;
-              const obj4 = { value: null, done: false };
-              obj4[0] = offscreenCanvas.convertToBlob({ type: "image/png" });
-              return obj4;
-            }
-          } else if (2 === tmp8) {
-            c5 = 0;
-            closure_0.close();
-            throw closure_4;
-          } else if (3 === tmp8) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 0;
-              closure_0.close();
-              c7 = 3;
-              const obj5 = { value: null, done: true };
-              obj5[0] = arg1;
-              return obj5;
-            } else {
-              closure_3 = arg1;
-              c6 = 4;
-              c7 = 1;
-              const obj6 = { value: null, done: false };
-              obj6[0] = closure_3.arrayBuffer();
-              return obj6;
-            }
-          } else if (arg0 === 1) {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c7 = 2;
+        if (0 === c6) {
+          if (arg0 === 1) {
             c7 = 3;
-            throw arg1;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_3 = tmp3;
+            closure_2 = tmp5;
+            closure_130_0 = undefined;
+            closure_130_1 = undefined;
+            let context;
+            closure_130_3 = undefined;
+            const _Blob = Blob;
+            const items = [closure_0];
+            const obj1 = { type };
+            const blob = new Blob(items, obj1);
+            c6 = 1;
+            c7 = 1;
+            const obj2 = { value: globalThis.createImageBitmap(blob), done: false };
+            return obj2;
+          }
+        } else if (1 === tmp8) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            closure_130_0 = value;
+            c5 = 1;
+            const offscreenCanvas = new globalThis.OffscreenCanvas(closure_130_0.width, closure_130_0.height);
+            closure_130_1 = offscreenCanvas;
+            context = closure_130_1.getContext("2d");
+            closure_131_1(closure_131_2[3])(null != context, "Failed to acquire 2d context for image transcode");
+            context.drawImage(closure_130_0, 0, 0);
+            c6 = 3;
+            c7 = 1;
+            const obj4 = { value: closure_130_1.convertToBlob({ type: "image/png" }), done: false };
+            return obj4;
+          }
+        } else if (2 === tmp8) {
+          c5 = 0;
+          closure_130_0.close();
+          throw closure_4;
+        } else if (3 === tmp8) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
           } else if (arg0 === 2) {
             c5 = 0;
-            closure_0.close();
+            closure_130_0.close();
             c7 = 3;
-            const obj7 = { value: null, done: true };
-            obj7[0] = arg1;
-            return obj7;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
-            c5 = 0;
-            closure_0.close();
-            c7 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            closure_130_3 = value;
+            c6 = 4;
+            c7 = 1;
+            const obj6 = { value: closure_130_3.arrayBuffer(), done: false };
+            return obj6;
           }
-        } catch (tmp25) {
-          closure_4 = tmp25;
-          if (tmp4 === c5) {
-            c7 = tmp2;
-            throw tmp25;
-          } else {
-            c6 = tmp;
-          }
+        } else if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 0;
+          closure_130_0.close();
+          c7 = 3;
+          const obj7 = { value, done: true };
+          return obj7;
+        } else {
+          c5 = 0;
+          closure_130_0.close();
+          c7 = 3;
+          obj = { value, done: true };
+          return obj;
+        }
+      } catch (tmp25) {
+        closure_4 = tmp25;
+        if (tmp4 === c5) {
+          c7 = tmp2;
+          throw tmp25;
+        } else {
+          c6 = tmp;
         }
       }
-    })();
-  });
-  closure_29 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
+    }
+  })();
+};
 function normalizeRunningGame(id) {
   let tmp = arg1;
   if (arg1 === undefined) {
@@ -242,75 +202,76 @@ function normalizeRunningGame(id) {
   if (str2 == null) {
     str2 = "";
   }
-  obj[1] = parseInt(str2, 10);
+  obj.nativeProcessObserverId = parseInt(str2, 10);
   let name = id.gameName;
   if (name == null) {
     name = id.name;
   }
-  obj[2] = name;
-  ({ origGameName: obj[3], name: name2 } = id);
+  obj.name = name;
+  ({ origGameName: obj.origGameName, name: name2 } = id);
   if (name2 == null) {
     name2 = "";
   }
-  obj[4] = name2;
-  ({ hidden: obj[5], elevated: obj[6], sandboxed } = id);
+  obj.processName = name2;
+  ({ hidden: obj.hidden, elevated: obj.elevated, sandboxed } = id);
   if (sandboxed == null) {
     sandboxed = false;
   }
-  obj[7] = sandboxed;
+  obj.sandboxed = sandboxed;
   ({
-    lastFocused: obj[8],
-    exePath: obj[9],
-    exeName: obj[10],
-    cmdLine: obj[11],
-    distributor: obj[12],
-    sku: obj[13],
-    pid: obj[14],
+    lastFocused: obj.lastFocused,
+    exePath: obj.exePath,
+    exeName: obj.exeName,
+    cmdLine: obj.cmdLine,
+    distributor: obj.distributor,
+    sku: obj.sku,
+    pid: obj.pid,
     pidPath,
   } = id);
   if (pidPath == null) {
     pidPath = [];
   }
-  obj[15] = pidPath;
-  ({ gameMetadata: obj[16], windowHandle } = id);
+  obj.pidPath = pidPath;
+  ({ gameMetadata: obj.gameMetadata, windowHandle } = id);
   if (windowHandle == null) {
     windowHandle = null;
   }
-  obj[17] = windowHandle;
+  obj.windowHandle = windowHandle;
   let UNKNOWN = id.fullscreenType;
   if (UNKNOWN == null) {
-    UNKNOWN = GuildThemeSourcePreference.RunningProcessFullscreenType.UNKNOWN;
+    UNKNOWN = Client.RunningProcessFullscreenType.UNKNOWN;
   }
-  obj[18] = UNKNOWN;
+  obj.fullscreenType = UNKNOWN;
   let flag = id.isLauncher;
   if (flag == null) {
     flag = false;
   }
-  obj[19] = flag;
-  obj[20] = id.executableFingerprint;
+  obj.isLauncher = flag;
+  obj.executableFingerprint = id.executableFingerprint;
   return obj;
 }
 function backwardCompatSend(APP_ASYNC_INDEX_TSX_LOADED) {
-  obj = set;
+  obj = require("PlatformUtils");
   if (obj.isDesktop()) {
     try {
       obj.sendIPC(APP_ASYNC_INDEX_TSX_LOADED);
     } catch (err) {}
   }
 }
-let set = new Set(["jpg", "jpeg", "jfif", "png"]);
+const NativeFeatures = fn(1074).NativeFeatures;
+const set = new Set(["jpg", "jpeg", "jfif", "png"]);
 const set1 = new Set(["webp", "avif"]);
 const set2 = new Set(["jpg", "jpeg", "jfif", "png", "webp", "gif", "tiff", "bmp", "avif"]);
 let closure_10 = null;
 let buildNumber = null;
 let moduleVersions = null;
 let closure_13 = {};
-let c14 = false;
+let global = false;
 let closure_15 = {};
 if (null != DiscordNative) {
   let app = DiscordNative.app;
   let parts = app.getVersion().split(".");
-  closure_10 = parts.map((joined) => parseInt(joined));
+  closure_10 = parts.map((item) => parseInt(item));
   const app2 = DiscordNative.app;
   moduleVersions = app2.getModuleVersions();
   const app3 = DiscordNative.app;
@@ -326,7 +287,7 @@ new Set([
   "discord_voice",
 ]);
 let c16 = false;
-let c17 = null;
+let discordIsElevated = null;
 const lastImageSaveDirectory = "lastImageSaveDirectory";
 const re19 = /[<>:"/\\|?*@]/g;
 const re20 = /(\.[a-zA-Z0-9]+):[^.]*$/;
@@ -336,7 +297,7 @@ const re23 = /\.[^.]*$/;
 let obj = { SAVED: "saved", CANCELED: "canceled", ERRORED: "errored" };
 obj = {
   requireModule(discord_voice) {
-    if (c14) {
+    if (global) {
       if (closure_15.hasOwnProperty(discord_voice)) {
         if (null != tmp[discord_voice]) {
           return tmp[discord_voice];
@@ -345,18 +306,18 @@ obj = {
     }
     const nativeModules = DiscordNative.nativeModules;
     const requireModuleResult = nativeModules.requireModule(discord_voice);
-    if (c14) {
+    if (global) {
       closure_15[discord_voice] = requireModuleResult;
     }
     return requireModuleResult;
   },
   ensureModule(discord_voice) {
-    if (set /* set */.isPlatformEmbedded) {
+    if (require("PlatformUtils").isPlatformEmbedded) {
       const nativeModules = DiscordNative.nativeModules;
       let ensureModuleResult = nativeModules.ensureModule(discord_voice);
     } else {
       const _Error = Error;
-      error = new Error("not embedded");
+      const error = new Error("not embedded");
       ensureModuleResult = Promise.reject(error);
     }
     return ensureModuleResult;
@@ -373,9 +334,9 @@ obj.getCrashReporterMetadata = function getCrashReporterMetadata() {
 obj.getSetting = function getSetting(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
-  return callback2(function* () {
-    const settings = closure_1_6.settings;
-    yield settings.get(c0, c1);
+  return (async () => {
+    settings = settings.settings;
+    await settings.get(closure_0, closure_1);
     return arg1;
   })();
 };
@@ -408,7 +369,7 @@ obj.beforeUnload = function beforeUnload() {
     let supportsFeatureResult = window.location.origin === window.GLOBAL_ENV.MIGRATION_SOURCE_ORIGIN;
     if (supportsFeatureResult) {
       const Storage = Storage3.Storage;
-      supportsFeatureResult = true !== Storage.get(DomainMigrationEventType.DOMAIN_MIGRATION_SUCCESS_KEY);
+      supportsFeatureResult = true !== Storage.get(DomainMigrationUtils.DOMAIN_MIGRATION_SUCCESS_KEY);
     }
     if (supportsFeatureResult) {
       supportsFeatureResult = self.supportsFeature(NativeFeatures.USER_DATA_CACHE);
@@ -425,8 +386,8 @@ obj.inputEventRegister = function inputEventRegister(parsed, arr, arg2, arg3) {
   parsed = parseInt("" + parsed);
   discordUtils.inputEventRegister(
     parsed,
-    arr.map((arg0) => {
-      [tmp, tmp2, tmp3] = arg0;
+    arr.map((item) => {
+      [tmp, tmp2, tmp3] = item;
       if (typeof tmp3 === "string") {
         const items = [tmp, tmp2, tmp3];
         let items1 = items;
@@ -439,12 +400,12 @@ obj.inputEventRegister = function inputEventRegister(parsed, arr, arg2, arg3) {
     arg3,
   );
 };
-obj.inputEventUnregister = function inputEventUnregister(joined) {
+obj.inputEventUnregister = function inputEventUnregister(match) {
   const discordUtils = this.getDiscordUtils();
-  discordUtils.inputEventUnregister(parseInt(joined));
+  discordUtils.inputEventUnregister(parseInt(match));
 };
 obj.setOnInputEventCallback = function setOnInputEventCallback(arg0) {
-  if (set /* set */.isPlatformEmbedded) {
+  if (require("PlatformUtils").isPlatformEmbedded) {
     const self = this;
     const discordUtils = this.getDiscordUtils();
     discordUtils.inputWatchAll(arg0);
@@ -454,7 +415,7 @@ obj.setFocused = function setFocused(arg0) {
   const discordUtils = this.getDiscordUtils();
   discordUtils.inputSetFocused(arg0);
 };
-obj.setObservedGamesCallback = function setObservedGamesCallback(mapped, normalizeCallback) {
+obj.setObservedGamesCallback = function setObservedGamesCallback(mapped, normalizeCallback, arg2, arg3) {
   closure_0 = arg2;
   try {
     const self = this;
@@ -482,7 +443,7 @@ obj.setObservedGamesCallback = function setObservedGamesCallback(mapped, normali
       const result = discordUtils.setProcessObserverUserId(arg3);
     }
     normalizeCallback = function normalizeCallback(arr) {
-      return callback(arr.map((arg0) => closure_1_30(arg0, closure_2)));
+      return closure_0(arr.map((item) => normalizeRunningGame(item, closure_1_2)));
     };
     if (normalizeCallback) {
       if (null != discordUtils.setObservedGamesCallback2) {
@@ -502,8 +463,8 @@ obj.setProcessObserverCollectExecutableFingerprint = function setProcessObserver
 obj.getExecutableFingerprintForProcess = function getExecutableFingerprintForProcess(arg0) {
   const self = this;
   closure_0 = arg0;
-  return new Promise((arg0) => {
-    closure_0 = arg0;
+  return new Promise((fn) => {
+    closure_0 = fn;
     const discordUtils = self.getDiscordUtils();
     let prop;
     if (discordUtils != null) {
@@ -521,7 +482,7 @@ obj.getExecutableFingerprintForProcess = function getExecutableFingerprintForPro
         return closure_0(tmp2);
       });
     } else {
-      arg0(null);
+      fn(null);
     }
   });
 };
@@ -530,10 +491,10 @@ obj.setGameDetectionCallback = function setGameDetectionCallback(arg0) {
   const discordUtils = this.getDiscordUtils();
   if (discordUtils.setGameDetectionCallback != null) {
     const result = setGameDetectionCallback((arr, arr2) => {
-      const mapped = arr.map((arg0) => callback(arg0));
-      return callback(
+      const mapped = arr.map((item) => closure_1_30(item));
+      return closure_0(
         mapped,
-        arr2.map((arg0) => callback(arg0)),
+        arr2.map((item) => closure_1_30(item)),
       );
     });
   }
@@ -562,7 +523,7 @@ obj.setCandidateGamesCallback = function setCandidateGamesCallback(arg0) {
   closure_0 = arg0;
   const discordUtils = this.getDiscordUtils();
   const result = discordUtils.setCandidateGamesCallback((arr) => {
-    callback(arr.map((arg0) => callback(arg0)));
+    closure_0(arr.map((item) => closure_1_30(item)));
   });
 };
 obj.clearCandidateGamesCallback = function clearCandidateGamesCallback() {
@@ -572,10 +533,10 @@ obj.clearCandidateGamesCallback = function clearCandidateGamesCallback() {
 obj.setGameCandidateOverrides = function setGameCandidateOverrides(arr) {
   const discordUtils = this.getDiscordUtils();
   const result = discordUtils.setGameCandidateOverrides(
-    arr.map((arg0) => {
+    arr.map((item) => {
       obj = {};
-      const merged = Object.assign(arg0);
-      ({ id: obj.gameId, name: obj.gameName } = arg0);
+      const merged = Object.assign(item);
+      ({ id: obj.gameId, name: obj.gameName } = item);
       return obj;
     }),
   );
@@ -583,11 +544,11 @@ obj.setGameCandidateOverrides = function setGameCandidateOverrides(arr) {
 obj.setObserverDebugCallback = function setObserverDebugCallback(arg0, NONE, arg2) {
   closure_0 = arg0;
   const discordUtils = this.getDiscordUtils();
-  const result = discordUtils.setObserverDebugCallback((arg0) => callback(arg0), NONE, arg2);
+  const result = discordUtils.setObserverDebugCallback((arg0) => closure_0(arg0), NONE, arg2);
 };
 obj.clearObserverDebugCallback = function clearObserverDebugCallback() {
   const discordUtils = this.getDiscordUtils();
-  const result = discordUtils.setObserverDebugCallback(null, GameTheme.GameDetectionDebugLevel.NONE, 0);
+  const result = discordUtils.setObserverDebugCallback(null, GameDetectionTypes.GameDetectionDebugLevel.NONE, 0);
 };
 obj.shouldDisplayNotifications = function shouldDisplayNotifications() {
   const discordUtils = this.getDiscordUtils();
@@ -595,12 +556,11 @@ obj.shouldDisplayNotifications = function shouldDisplayNotifications() {
 };
 obj.getVoiceEngine = function getVoiceEngine() {
   const requireModuleResult = this.requireModule("discord_voice");
-  require = requireModuleResult;
+  const require = requireModuleResult;
   if (!c16) {
-    log.setNativeLogFn((arg0, arg1, arg2) => {
-      closure_0.consoleLog(arg1, "[" + arg0 + "] " + arg2);
+    logger_Logger.setNativeLogFn((arg0, arg1, arg2) => {
+      requireModuleResult.consoleLog(arg1, "[" + arg0 + "] " + arg2);
     });
-    obj = log;
   }
   c16 = true;
   return requireModuleResult;
@@ -615,9 +575,7 @@ obj.getDiscordUtils = function getDiscordUtils() {
   return self.requireModule("discord_utils");
 };
 obj.isSystemDarkMode = function isSystemDarkMode() {
-  let isWindowsResult =
-    set /* set */
-      .isWindows();
+  let isWindowsResult = require("PlatformUtils").isWindows();
   if (isWindowsResult) {
     const self = this;
     const discordUtils = this.getDiscordUtils();
@@ -690,13 +648,13 @@ obj.setBadge = function setBadge(arg0) {
   }
 };
 obj.setSystemTrayIcon = function setSystemTrayIcon(arg0) {
-  if (set /* set */.isPlatformEmbedded) {
+  if (require("PlatformUtils").isPlatformEmbedded) {
     const self = this;
     this.sendIPC(IPCEvents.IPCEvents.SYSTEM_TRAY_SET_ICON, arg0);
   }
 };
-obj.setThumbarButtons = function setThumbarButtons(arg0, arg1) {
-  if (set /* set */.isPlatformEmbedded) {
+obj.setThumbarButtons = function setThumbarButtons(arg0) {
+  if (require("PlatformUtils").isPlatformEmbedded) {
     const thumbar = DiscordNative.thumbar;
     if (thumbar != null) {
       const setThumbarButtons = thumbar.setThumbarButtons;
@@ -708,21 +666,20 @@ obj.setThumbarButtons = function setThumbarButtons(arg0, arg1) {
   }
 };
 obj.bounceDock = function bounceDock(arg0) {
-  if (app(1115).isPlatformEmbedded) {
-    app = DiscordNative.app;
+  if (require("PlatformUtils").isPlatformEmbedded) {
+    const app = DiscordNative.app;
     if (null != app.dock) {
       let dock = app.dock;
       closure_1 = dock.bounce(arg0);
-      return callback2(function* () {
+      return asyncGeneratorStep(async (arg0, value) => {
         if (c3 === 2) {
           c3 = 3;
-          HermesBuiltin.throwTypeError();
+          throw new TypeError("Generator functions may not be called on executing generators");
         } else if (tmp4 === 3) {
           if (arg0 === 1) {
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
             return { value: "HermesInternal", done: null };
@@ -733,34 +690,31 @@ obj.bounceDock = function bounceDock(arg0) {
             if (0 === c2) {
               if (arg0 === 1) {
                 c3 = 3;
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
                 c3 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
+                obj = { value, done: true };
                 return obj;
               } else {
-                closure_1 = tmp5;
-                let dock = tmp2;
-                dock = undefined;
+                value = tmp5;
+                closure_0 = tmp2;
+                closure_128_0 = undefined;
                 c2 = 1;
                 c3 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = closure_1_1;
+                const obj1 = { value, done: false };
                 return obj1;
               }
             } else if (arg0 === 1) {
               c3 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj = { value, done: true };
               return obj;
             } else {
-              dock = arg1;
-              dock = dock.dock;
-              dock.cancelBounce(dock);
+              closure_128_0 = value;
+              const dock = closure_129_0.dock;
+              dock.cancelBounce(closure_128_0);
               c3 = 3;
               return { value: "HermesInternal", done: null };
             }
@@ -774,7 +728,7 @@ obj.bounceDock = function bounceDock(arg0) {
   }
 };
 obj.setSystemTrayApplications = function setSystemTrayApplications(arg0) {
-  if (set /* set */.isPlatformEmbedded) {
+  if (require("PlatformUtils").isPlatformEmbedded) {
     const self = this;
     this.sendIPC(IPCEvents.IPCEvents.SYSTEM_TRAY_SET_APPLICATIONS, arg0);
   }
@@ -782,7 +736,7 @@ obj.setSystemTrayApplications = function setSystemTrayApplications(arg0) {
 Object.defineProperty(obj, "architecture", {
   get: () => {
     let str = "";
-    if (set /* set */.isPlatformEmbedded) {
+    if (require("PlatformUtils").isPlatformEmbedded) {
       str = DiscordNative.process.arch;
     }
     return str;
@@ -792,7 +746,7 @@ Object.defineProperty(obj, "architecture", {
 Object.defineProperty(obj, "releaseChannel", {
   get: () => {
     let str = "";
-    if (set /* set */.isPlatformEmbedded) {
+    if (require("PlatformUtils").isPlatformEmbedded) {
       const app = DiscordNative.app;
       str = app.getReleaseChannel();
     }
@@ -805,10 +759,9 @@ Object.defineProperty(obj, "buildNumber", { get: () => closure_11, set: undefine
 Object.defineProperty(obj, "moduleVersions", { get: () => closure_12, set: undefined });
 Object.defineProperty(obj, "parsedOSRelease", {
   get: () => {
-    if (set /* set */.isPlatformEmbedded) {
+    if (require("PlatformUtils").isPlatformEmbedded) {
       const parts = DiscordNative.os.release.split(".");
-      let mapped = parts.map((joined) => parseInt(joined, 10));
-      const str = DiscordNative.os.release;
+      let mapped = parts.map((item) => parseInt(item, 10));
     } else {
       mapped = [];
     }
@@ -817,23 +770,23 @@ Object.defineProperty(obj, "parsedOSRelease", {
   set: undefined,
 });
 obj.copy = function copy(arg0) {
-  if (set /* set */.isPlatformEmbedded) {
+  if (require("PlatformUtils").isPlatformEmbedded) {
     const clipboard = DiscordNative.clipboard;
     clipboard.copy(arg0);
   }
 };
-obj.copyImage = function copyImage(arg0, closure_1) {
+obj.copyImage = function copyImage(arg0, arg1) {
   closure_0 = arg0;
-  return callback2(function* () {
+  closure_1 = arg1;
+  return (async (arg0, value) => {
     if (c4 === 2) {
       c4 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp4 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        obj = { value: null, done: true };
-        obj[0] = arg1;
+        obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
@@ -844,94 +797,85 @@ obj.copyImage = function copyImage(arg0, closure_1) {
         if (0 === c3) {
           if (arg0 === 1) {
             c4 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
-            let combined = tmp5;
-            closure_1 = tmp2;
-            closure_0 = undefined;
-            closure_1 = undefined;
-            combined = undefined;
-            closure_1_1(closure_1_2[3])(
-              closure_1_0(closure_1_2[5]).isPlatformEmbedded,
-              "Copy image method called outside native app",
-            );
-            closure_1_1(closure_1_2[3])(
-              typeof closure_1_6.clipboard.copyImage === "function",
-              "Copy image not supported",
-            );
+            dependencyMap = tmp5;
+            closure_129_0 = undefined;
+            closure_129_1 = undefined;
+            closure_129_2 = undefined;
+            tmp2(38)(closure_0(1115).isPlatformEmbedded, "Copy image method called outside native app");
+            tmp2(38)(typeof DiscordNative.clipboard.copyImage === "function", "Copy image not supported");
             c3 = 1;
             c4 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = closure_1_28(closure_1_0);
+            const obj1 = { value: getImageData(closure_0), done: false };
             return obj1;
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {
             c4 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
+            const obj2 = { value, done: true };
             return obj2;
           } else {
-            closure_0 = arg1;
-            closure_1 = closure_1_0(closure_1_2[11]).decideFileExtension(closure_1_0, closure_1_1);
-            if (null != closure_1) {
-              if (closure_1_8.has(closure_1)) {
-                closure_0 = closure_1_1;
-                if (closure_1_1 == null) {
+            closure_129_0 = value;
+            closure_129_1 = closure_0(5568).decideFileExtension(closure_130_0, closure_130_1);
+            if (null != closure_129_1) {
+              if (set2.has(closure_129_1)) {
+                closure_0 = closure_130_1;
+                if (closure_130_1 == null) {
                   const _HermesInternal2 = HermesInternal;
-                  closure_0 = "image/" + closure_1_1;
+                  closure_0 = "image/" + closure_129_1;
                 }
                 c3 = 2;
                 c4 = 1;
-                const obj3 = { value: null, done: false };
-                obj3[0] = (function transcodeImageToPng(arg0, closure_0) {
-                  const self = this;
-                  const apply = closure_29.apply;
-                  if (typeof apply === "unknown") {
-                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                  } else {
-                    applyArgumentsResult = apply(self, arguments);
-                  }
-                  return applyArgumentsResult;
-                })(closure_0, closure_0);
+                const obj3 = {
+                  value: (function transcodeImageToPng() {
+                    const self = this;
+                    const apply = closure_1_29.apply;
+                    if (typeof apply === "unknown") {
+                      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                    } else {
+                      applyArgumentsResult = apply(self, arguments);
+                    }
+                    return applyArgumentsResult;
+                  })(closure_129_0, closure_0),
+                  done: false,
+                };
                 return obj3;
               }
             }
-            if (null == closure_1) {
-              combined = closure_0;
-              const clipboard2 = closure_1_6.clipboard;
+            if (null == closure_129_1) {
+              let combined = closure_130_0;
+              closure_129_2 = combined;
+              const clipboard2 = DiscordNative.clipboard;
               const _Buffer2 = Buffer;
-              clipboard2.copyImage(Buffer.from(closure_0), combined);
+              clipboard2.copyImage(Buffer.from(closure_129_0), closure_129_2);
               c4 = 3;
             }
             const _HermesInternal = HermesInternal;
-            combined = "image." + closure_1;
-            const obj8 = closure_1_0(closure_1_2[11]);
+            combined = "image." + closure_129_1;
+            const obj8 = closure_0(5568);
           }
         } else if (arg0 === 1) {
           c4 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          const obj4 = { value: null, done: true };
-          obj4[0] = arg1;
+          const obj4 = { value, done: true };
           return obj4;
         } else {
-          closure_0 = arg1;
-          const clipboard = closure_1_6.clipboard;
+          closure_129_0 = value;
+          const clipboard = DiscordNative.clipboard;
           const _Buffer = Buffer;
-          clipboard.copyImage(Buffer.from(closure_0), "image.png");
+          clipboard.copyImage(Buffer.from(closure_129_0), "image.png");
           c4 = 3;
-          obj = { value: null, done: true };
-          obj[0] = undefined;
+          obj = { value: undefined, done: true };
           return obj;
         }
       } catch (tmp42) {
@@ -944,16 +888,15 @@ obj.copyImage = function copyImage(arg0, closure_1) {
 obj.copyImageBlob = function copyImageBlob(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
-  return callback2(function* () {
+  return (async (arg0, value) => {
     if (c3 === 2) {
       c3 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp4 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        obj = { value: null, done: true };
-        obj[0] = arg1;
+        obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
@@ -964,35 +907,31 @@ obj.copyImageBlob = function copyImageBlob(arg0, arg1) {
         if (0 === c2) {
           if (arg0 === 1) {
             c3 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
             closure_1 = tmp5;
-            closure_0 = tmp2;
-            closure_0 = undefined;
+            closure_128_0 = undefined;
             c2 = 1;
             c3 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = closure_1_0.arrayBuffer();
+            const obj1 = { value: tmp2.arrayBuffer(), done: false };
             return obj1;
           }
         } else if (arg0 === 1) {
           c3 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj = { value, done: true };
           return obj;
         } else {
-          closure_0 = arg1;
-          const clipboard = closure_1_6.clipboard;
+          closure_128_0 = value;
+          clipboard = clipboard.clipboard;
           const _Buffer = Buffer;
-          clipboard.copyImage(Buffer.from(closure_0), closure_1);
+          clipboard.copyImage(Buffer.from(closure_128_0), closure_129_1);
           c3 = 3;
           return { value: "HermesInternal", done: null };
         }
@@ -1003,10 +942,10 @@ obj.copyImageBlob = function copyImageBlob(arg0, arg1) {
     }
   })();
 };
-obj.canSaveImage = function canSaveImage(closure_1_0, closure_1_1) {
-  if (null != closure_1_0) {
-    if (set /* set */.isPlatformEmbedded) {
-      const decideFileExtensionResult = tmp(5568).decideFileExtension(closure_1_0, closure_1_1);
+obj.canSaveImage = function canSaveImage(uri, contentType) {
+  if (null != uri) {
+    if (require("PlatformUtils").isPlatformEmbedded) {
+      const decideFileExtensionResult = tmp(5568).decideFileExtension(uri, contentType);
       let hasItem = null == decideFileExtensionResult;
       if (!hasItem) {
         hasItem = set2.has(decideFileExtensionResult);
@@ -1021,16 +960,15 @@ obj.saveImage = function saveImage(arg0, arg1, arg2) {
   closure_0 = arg0;
   closure_1 = arg1;
   closure_2 = arg2;
-  return callback2(function* () {
+  return (async (arg0, value) => {
     if (c10 === 2) {
       c10 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp7 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        obj = { value: null, done: true };
-        obj[0] = arg1;
+        obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
@@ -1041,169 +979,152 @@ obj.saveImage = function saveImage(arg0, arg1, arg2) {
         if (0 === c9) {
           if (arg0 === 1) {
             c10 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c10 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
-            closure_6 = tmp3;
-            c5 = tmp5;
-            closure_0 = undefined;
-            closure_1 = undefined;
+            closure_5 = tmp5;
+            closure_133_0 = undefined;
+            closure_133_1 = undefined;
             let directory;
-            c3 = undefined;
-            c4 = undefined;
-            c5 = undefined;
-            closure_1_1(closure_1_2[3])(
-              closure_1_0(closure_1_2[5]).isPlatformEmbedded,
-              "Save image method called outside native app",
-            );
-            const tmp85 = closure_1_1(closure_1_2[3]);
-            let tmp54 = closure_1_0;
-            const toURLSafeResult = closure_1_1(closure_1_2[12]).toURLSafe(closure_1_0);
+            closure_133_3 = undefined;
+            closure_133_4 = undefined;
+            closure_133_5 = undefined;
+            png(38)(unknown(1115).isPlatformEmbedded, "Save image method called outside native app");
+            const tmp84 = png(38);
+            let tmp54 = closure_0;
+            const toURLSafeResult = png(1365).toURLSafe(closure_0);
             if (null == toURLSafeResult) {
               c10 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = closure_1_24.ERRORED;
+              const obj1 = { value: constants.ERRORED, done: true };
               return obj1;
             } else {
               const parts = toURLSafeResult.pathname.split("/");
               const arr = parts.pop();
-              closure_0 = arr;
+              unknown = arr;
               if (arr == null) {
-                closure_0 = "unknown";
+                unknown = "unknown";
               }
-              const str = closure_1_25(closure_0);
-              closure_0 = str;
+              closure_133_0 = unknown;
+              const str = sanitizeFilename(unknown);
+              closure_133_0 = str;
               const searchParams = toURLSafeResult.searchParams;
               let str2 = searchParams.get("format");
               if (null != str2) {
                 str2 = str2.replace(closure_1_22, "").toLowerCase();
                 if (str2.length > 0) {
                   const _HermesInternal2 = HermesInternal;
-                  closure_0 = "" + str.replace(closure_1_23, "") + "." + str2;
+                  closure_133_0 = "" + str.replace(closure_1_23, "") + "." + str2;
                 }
                 const str3 = str2.replace(closure_1_22, "");
               } else if (!str.includes(".")) {
-                let obj8 = closure_1_0(closure_1_2[11]);
-                const decideFileExtensionResult = obj8.decideFileExtension(tmp54, closure_1_1);
-                directory = decideFileExtensionResult;
-                if (decideFileExtensionResult == null) {
-                  directory = closure_1_2;
-                }
-                closure_1 = directory;
-                if (directory == null) {
-                  closure_1 = "png";
+                let obj8 = unknown(5568);
+                const decideFileExtensionResult = obj8.decideFileExtension(tmp54, closure_1);
+                dependencyMap = decideFileExtensionResult;
+                png = dependencyMap;
+                if (dependencyMap == null) {
+                  png = "png";
                 }
                 const _HermesInternal = HermesInternal;
-                closure_0 = "" + str + "." + closure_1;
+                closure_133_0 = "" + str + "." + png;
               }
-              tmp54 = closure_1_28(tmp54);
+              tmp54 = getImageData(tmp54);
               c9 = 1;
               c10 = 1;
-              const str12 = toURLSafeResult.pathname;
             }
-            const obj13 = closure_1_1(closure_1_2[12]);
+            const obj13 = png(1365);
           }
         } else if (1 === tmp8) {
           if (arg0 === 1) {
             c10 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c10 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
+            const obj2 = { value, done: true };
             return obj2;
           } else {
-            closure_3 = arg1;
+            closure_133_3 = value;
             const _Buffer = Buffer;
-            closure_4 = Buffer.from(closure_3);
-            const Storage2 = closure_1_0(closure_1_2[6]).Storage;
-            c5 = Storage2.get(closure_1_18);
-            if (typeof c5 !== "string") {
-              c5 = undefined;
+            closure_133_4 = Buffer.from(closure_133_3);
+            const Storage2 = unknown(510).Storage;
+            closure_133_5 = Storage2.get(lastImageSaveDirectory);
+            if (typeof closure_133_5 !== "string") {
+              closure_133_5 = undefined;
             }
-            if (typeof closure_1_6.fileManager.saveWithDialog2 === "function") {
-              const fileManager = closure_1_6.fileManager;
-              c3 = c5;
-              if (c5 == null) {
+            if (typeof tmp3.fileManager.saveWithDialog2 === "function") {
+              const fileManager = tmp3.fileManager;
+              c3 = closure_133_5;
+              if (closure_133_5 == null) {
                 c3 = undefined;
               }
               c9 = 3;
               c10 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = fileManager.saveWithDialog2(closure_4, closure_1_0, c3);
+              const obj3 = { value: fileManager.saveWithDialog2(closure_133_4, closure_133_0, c3), done: false };
               return obj3;
             } else {
               c8 = 1;
-              const fileManager2 = closure_1_6.fileManager;
-              c4 = c5;
-              if (c5 == null) {
+              const fileManager2 = tmp3.fileManager;
+              c4 = closure_133_5;
+              if (closure_133_5 == null) {
                 c4 = undefined;
               }
               c9 = 4;
               c10 = 1;
-              const obj4 = { value: null, done: false };
-              obj4[0] = fileManager2.saveWithDialog(closure_4, closure_1_0, c4);
+              const obj4 = { value: fileManager2.saveWithDialog(closure_133_4, closure_133_0, c4), done: false };
               return obj4;
             }
           }
         } else if (2 === tmp8) {
           c8 = 0;
           c10 = 3;
-          const obj5 = { value: null, done: true };
-          obj5[0] = closure_1_24.ERRORED;
+          const obj5 = { value: constants.ERRORED, done: true };
           return obj5;
         } else {
           if (3 === tmp8) {
             if (arg0 === 1) {
               c10 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c10 = 3;
-              const obj6 = { value: null, done: true };
-              obj6[0] = arg1;
+              const obj6 = { value, done: true };
               return obj6;
             } else {
-              closure_1 = arg1;
-              if (null == arg1) {
+              closure_133_1 = value;
+              if (null == value) {
                 c10 = 3;
-                const obj7 = { value: null, done: true };
-                obj7[0] = closure_1_24.ERRORED;
+                const obj7 = { value: constants.ERRORED, done: true };
                 return obj7;
-              } else if (closure_1.canceledByUser) {
+              } else if (closure_133_1.canceledByUser) {
                 c10 = 3;
-                obj8 = { value: null, done: true };
-                obj8[0] = closure_1_24.CANCELED;
+                obj8 = { value: constants.CANCELED, done: true };
                 return obj8;
               } else {
-                directory = closure_1.directory;
+                directory = closure_133_1.directory;
               }
             }
           } else if (arg0 === 1) {
             c10 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c8 = 0;
             c10 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
-            directory = arg1;
+            directory = value;
             c8 = 0;
           }
           if (null != directory) {
             if ("" !== directory) {
-              const Storage = closure_1_0(closure_1_2[6]).Storage;
-              const result = Storage.set(closure_1_18, directory);
-              const SAVED = closure_1_24.SAVED;
+              const Storage = unknown(510).Storage;
+              const result = Storage.set(lastImageSaveDirectory, directory);
+              const SAVED = constants.SAVED;
             }
             c10 = 3;
           }
-          const ERRORED = closure_1_24.ERRORED;
+          const ERRORED = constants.ERRORED;
         }
       } catch (tmp56) {
         closure_7 = tmp56;
@@ -1220,16 +1141,15 @@ obj.saveImage = function saveImage(arg0, arg1, arg2) {
 obj.saveFile = function saveFile(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
-  return callback2(function* () {
+  return (async (arg0, value) => {
     if (c5 === 2) {
       c5 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp5 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        obj = { value: null, done: true };
-        obj[0] = arg1;
+        obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
@@ -1240,88 +1160,77 @@ obj.saveFile = function saveFile(arg0, arg1) {
         if (0 === c4) {
           if (arg0 === 1) {
             c5 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
             closure_3 = tmp2;
-            closure_2 = tmp3;
-            closure_0 = undefined;
-            closure_1 = undefined;
-            closure_2 = undefined;
-            closure_3 = undefined;
-            closure_1_1(closure_1_2[3])(
-              closure_1_0(closure_1_2[5]).isPlatformEmbedded,
-              "Save file method called outside native app",
-            );
-            const tmp30 = closure_1_1(closure_1_2[3]);
-            const toURLSafeResult = closure_1_1(closure_1_2[12]).toURLSafe(closure_1_0);
+            closure_130_0 = undefined;
+            closure_130_1 = undefined;
+            closure_130_2 = undefined;
+            closure_130_3 = undefined;
+            closure_1(tmp3[3])(unknown(tmp3[5]).isPlatformEmbedded, "Save file method called outside native app");
+            const tmp29 = closure_1(tmp3[3]);
+            const toURLSafeResult = closure_1(tmp3[12]).toURLSafe(closure_0);
             if (null == toURLSafeResult) {
               c5 = 3;
               return { value: null, done: true };
             } else {
-              closure_1 = closure_1_1;
-              if (closure_1_1 == null) {
+              if (closure_1 == null) {
                 const parts = toURLSafeResult.pathname.split("/");
                 closure_1 = parts.pop();
-                const str = toURLSafeResult.pathname;
               }
-              closure_0 = closure_1;
+              unknown = closure_1;
               if (closure_1 == null) {
-                closure_0 = "unknown";
+                unknown = "unknown";
               }
-              if (null == closure_1_1) {
-                closure_0 = closure_1_25(tmp19);
+              closure_130_0 = unknown;
+              if (null == closure_1) {
+                closure_130_0 = sanitizeFilename(tmp19);
               }
               c4 = 1;
               c5 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = closure_1_26(tmp33);
+              const obj1 = { value: getFileData(tmp32), done: false };
               return obj1;
             }
-            const obj8 = closure_1_1(closure_1_2[12]);
-            tmp33 = closure_1_0;
+            const obj8 = closure_1(tmp3[12]);
+            tmp32 = closure_0;
           }
         } else if (1 === tmp6) {
           if (arg0 === 1) {
             c5 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
+            const obj2 = { value, done: true };
             return obj2;
           } else {
-            closure_1 = arg1;
+            closure_130_1 = value;
             const _Buffer = Buffer;
-            closure_2 = Buffer.from(closure_1);
-            const fileManager = closure_1_6.fileManager;
+            closure_130_2 = Buffer.from(closure_130_1);
+            fileManager = fileManager.fileManager;
             c4 = 2;
             c5 = 1;
-            const obj3 = { value: null, done: false };
-            obj3[0] = fileManager.saveWithDialog(closure_2, closure_0, undefined);
+            const obj3 = { value: fileManager.saveWithDialog(closure_130_2, closure_130_0, undefined), done: false };
             return obj3;
           }
         } else if (arg0 === 1) {
           c5 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          const obj4 = { value: null, done: true };
-          obj4[0] = arg1;
+          const obj4 = { value, done: true };
           return obj4;
         } else {
-          closure_3 = arg1;
+          closure_130_3 = value;
           let tmp9 = null;
-          if (null != closure_3) {
-            tmp9 = closure_3;
+          if (null != closure_130_3) {
+            tmp9 = closure_130_3;
           }
           c5 = 3;
-          obj = { value: null, done: true };
-          obj[0] = tmp9;
+          obj = { value: tmp9, done: true };
           return obj;
         }
       } catch (tmp22) {
@@ -1335,19 +1244,11 @@ obj.downloadMLModelFile = function downloadMLModelFile(arg0, arg1, arg2) {
   closure_0 = arg0;
   closure_1 = arg1;
   closure_2 = arg2;
-  return callback2(function* () {
-    v02(closure_1_2[3])(
-      v0(closure_1_2[5]).isPlatformEmbedded,
-      "Download ML model file method called outside native app",
-    );
-    const tmp13 = v02(closure_1_2[3]);
-    const obj6 = v02(closure_1_2[12]);
-    v02(closure_1_2[3])(
-      null != v02(closure_1_2[12]).toURLSafe(v0),
-      "Could not download ML model, fileSrc was not a valid path",
-    );
-    const fileManager = closure_1_6.fileManager;
-    yield fileManager.maybeDownloadMLModelFile(v0, v02, closure_1_2);
+  return (async () => {
+    v1(38)(v3(1115).isPlatformEmbedded, "Download ML model file method called outside native app");
+    v1(38)(null != v1(1365).toURLSafe(closure_0), "Could not download ML model, fileSrc was not a valid path");
+    fileManager = fileManager.fileManager;
+    await fileManager.maybeDownloadMLModelFile(closure_0, closure_1, closure_2);
     return arg1;
   })();
 };
@@ -1358,19 +1259,19 @@ obj.stopMLModelDownloads = function stopMLModelDownloads() {
 obj.canCheckMLModelFilesExist = function canCheckMLModelFilesExist() {
   return typeof DiscordNative.fileManager.checkMLModelFilesExist === "function";
 };
-obj.checkMLModelFilesExist = function checkMLModelFilesExist(c0) {
-  closure_0 = c0;
-  return callback2(function* () {
-    const fileManager = closure_1_6.fileManager;
-    yield fileManager.checkMLModelFilesExist(c0);
+obj.checkMLModelFilesExist = function checkMLModelFilesExist(arg0) {
+  closure_0 = arg0;
+  return (async () => {
+    fileManager = fileManager.fileManager;
+    await fileManager.checkMLModelFilesExist(closure_0);
     return arg1;
   })();
 };
-obj.cleanupUnusedMLModelFiles = function cleanupUnusedMLModelFiles(c0) {
-  closure_0 = c0;
-  return callback2(function* () {
-    const fileManager = closure_1_6.fileManager;
-    yield fileManager.cleanupUnusedMLModelFiles(c0);
+obj.cleanupUnusedMLModelFiles = function cleanupUnusedMLModelFiles(arg0) {
+  closure_0 = arg0;
+  return (async () => {
+    fileManager = fileManager.fileManager;
+    await fileManager.cleanupUnusedMLModelFiles(closure_0);
     return arg1;
   })();
 };
@@ -1378,35 +1279,30 @@ obj.downloadClipsFile = function downloadClipsFile(arg0, arg1, arg2) {
   closure_0 = arg0;
   closure_1 = arg1;
   closure_2 = arg2;
-  return callback2(function* () {
-    v02(closure_1_2[3])(v0(closure_1_2[5]).isPlatformEmbedded, "Download clips file method called outside native app");
-    const tmp13 = v02(closure_1_2[3]);
-    const obj6 = v02(closure_1_2[12]);
-    v02(closure_1_2[3])(
-      null != v02(closure_1_2[12]).toURLSafe(v0),
-      "Could not download clips file, fileSrc was not a valid path",
-    );
-    const fileManager = closure_1_6.fileManager;
-    yield fileManager.maybeDownloadClipsFile(v0, v02, closure_1_2);
+  return (async () => {
+    v1(38)(v3(1115).isPlatformEmbedded, "Download clips file method called outside native app");
+    v1(38)(null != v1(1365).toURLSafe(closure_0), "Could not download clips file, fileSrc was not a valid path");
+    fileManager = fileManager.fileManager;
+    await fileManager.maybeDownloadClipsFile(closure_0, closure_1, closure_2);
     return arg1;
   })();
 };
 obj.canCheckClipsFilesExist = function canCheckClipsFilesExist() {
   return typeof DiscordNative.fileManager.checkClipsFilesExist === "function";
 };
-obj.checkClipsFilesExist = function checkClipsFilesExist(c0) {
-  closure_0 = c0;
-  return callback2(function* () {
-    const fileManager = closure_1_6.fileManager;
-    yield fileManager.checkClipsFilesExist(c0);
+obj.checkClipsFilesExist = function checkClipsFilesExist(arg0) {
+  closure_0 = arg0;
+  return (async () => {
+    fileManager = fileManager.fileManager;
+    await fileManager.checkClipsFilesExist(closure_0);
     return arg1;
   })();
 };
-obj.cleanupUnusedClipsFiles = function cleanupUnusedClipsFiles(c0) {
-  closure_0 = c0;
-  return callback2(function* () {
-    const fileManager = closure_1_6.fileManager;
-    yield fileManager.cleanupUnusedClipsFiles(c0);
+obj.cleanupUnusedClipsFiles = function cleanupUnusedClipsFiles(arg0) {
+  closure_0 = arg0;
+  return (async () => {
+    fileManager = fileManager.fileManager;
+    await fileManager.cleanupUnusedClipsFiles(closure_0);
     return arg1;
   })();
 };
@@ -1425,32 +1321,24 @@ obj.downloadOpenH264 = function downloadOpenH264(arg0, arg1, arg2, arg3) {
   closure_1 = arg1;
   closure_2 = arg2;
   closure_3 = arg3;
-  return callback2(function* () {
-    v02(closure_1_2[3])(
-      v0(closure_1_2[5]).isPlatformEmbedded,
-      "Download OpenH264 file method called outside native app",
-    );
-    const tmp13 = v02(closure_1_2[3]);
-    const obj6 = v02(closure_1_2[12]);
-    v02(closure_1_2[3])(
-      null != v02(closure_1_2[12]).toURLSafe(v0),
-      "Could not download OpenH264, fileSrc was not a valid path",
-    );
-    const fileManager = closure_1_6.fileManager;
-    yield fileManager.maybeDownloadOpenH264(v0, v02, closure_1_2, closure_1_3);
+  return (async () => {
+    v1(38)(v3(1115).isPlatformEmbedded, "Download OpenH264 file method called outside native app");
+    v1(38)(null != v1(1365).toURLSafe(closure_0), "Could not download OpenH264, fileSrc was not a valid path");
+    fileManager = fileManager.fileManager;
+    await fileManager.maybeDownloadOpenH264(closure_0, closure_1, closure_2, closure_3);
     return arg1;
   })();
 };
-obj.cleanupUnusedOpenH264Files = function cleanupUnusedOpenH264Files(c0) {
-  closure_0 = c0;
-  return callback2(function* () {
-    const fileManager = closure_1_6.fileManager;
-    yield fileManager.cleanupUnusedOpenH264Files(c0);
+obj.cleanupUnusedOpenH264Files = function cleanupUnusedOpenH264Files(items) {
+  closure_0 = items;
+  return (async () => {
+    fileManager = fileManager.fileManager;
+    await fileManager.cleanupUnusedOpenH264Files(closure_0);
     return arg1;
   })();
 };
 obj.getOpenH264LibraryPath = function getOpenH264LibraryPath() {
-  if (set /* set */.isPlatformEmbedded) {
+  if (require("PlatformUtils").isPlatformEmbedded) {
     const fileManager = DiscordNative.fileManager;
     const getOpenH264LibraryPathSync = fileManager.getOpenH264LibraryPathSync;
     let openH264LibraryPathSync;
@@ -1460,13 +1348,13 @@ obj.getOpenH264LibraryPath = function getOpenH264LibraryPath() {
     return openH264LibraryPathSync;
   }
 };
-obj.canCopyImage = function canCopyImage(closure_1_0) {
-  if (set /* set */.isPlatformEmbedded) {
+obj.canCopyImage = function canCopyImage() {
+  if (require("PlatformUtils").isPlatformEmbedded) {
     if (typeof DiscordNative.clipboard.copyImage !== "function") {
       return false;
     } else {
       if (null != tmp) {
-        const decideFileExtensionResult = getExtensionFromContentType.decideFileExtension(tmp, undefined);
+        const decideFileExtensionResult = FileExtensionUtils.decideFileExtension(tmp, undefined);
         if (null != decideFileExtensionResult) {
           if (!set.has(decideFileExtensionResult)) {
             if (!set1.has(decideFileExtensionResult)) {
@@ -1474,37 +1362,36 @@ obj.canCopyImage = function canCopyImage(closure_1_0) {
             }
           }
         }
-        const tmp2Result = getExtensionFromContentType;
+        const tmp2Result = FileExtensionUtils;
       }
       return true;
     }
   } else {
     return false;
   }
-  const tmp2 = require;
 };
 obj.cut = function cut() {
-  if (set /* set */.isPlatformEmbedded) {
+  if (require("PlatformUtils").isPlatformEmbedded) {
     const clipboard = DiscordNative.clipboard;
     clipboard.cut();
   }
 };
 obj.paste = function paste() {
-  if (set /* set */.isPlatformEmbedded) {
+  if (require("PlatformUtils").isPlatformEmbedded) {
     const clipboard = DiscordNative.clipboard;
     clipboard.paste();
   }
 };
 obj.readClipboard = function readClipboard() {
   let str = "";
-  if (set /* set */.isPlatformEmbedded) {
+  if (require("PlatformUtils").isPlatformEmbedded) {
     const clipboard = DiscordNative.clipboard;
     str = clipboard.read();
   }
   return str;
 };
 obj.clipboardHasMixedContent = function clipboardHasMixedContent() {
-  let isPlatformEmbedded = set /* set */.isPlatformEmbedded;
+  let isPlatformEmbedded = require("PlatformUtils").isPlatformEmbedded;
   if (isPlatformEmbedded) {
     const clipboard = DiscordNative.clipboard;
     const hasMixedContent = clipboard.hasMixedContent;
@@ -1542,13 +1429,13 @@ obj.send = function send(arg0) {
   const items = [arg0, ...HermesBuiltin.copyRestArgs()];
   ipc.send.apply(items);
 };
-obj.sendIPC = function sendIPC(APP_BADGE_SET, arg1) {
+obj.sendIPC = function sendIPC(APP_BADGE_SET) {
   const ipc = DiscordNative.ipc;
   const items = [APP_BADGE_SET, ...HermesBuiltin.copyRestArgs()];
   ipc.send.apply(items);
 };
 obj.isIPCReady = function isIPCReady() {
-  if (set /* set */.isPlatformEmbedded) {
+  if (require("PlatformUtils").isPlatformEmbedded) {
     try {
       let ipc;
       if (DiscordNative != null) {
@@ -1567,25 +1454,20 @@ obj.isIPCReady = function isIPCReady() {
   }
 };
 obj.waitForIPCReady = function waitForIPCReady() {
-  let num = arg0;
-  if (arg0 === undefined) {
-    num = 5000;
-  }
   let _window = arg1;
   if (arg1 === undefined) {
     _window = window;
   }
   const self = this;
-  return callback2(function* () {
+  return (async (arg0, value) => {
     if (c3 === 2) {
       c3 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp4 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        obj = { value: null, done: true };
-        obj[0] = arg1;
+        obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
@@ -1593,32 +1475,31 @@ obj.waitForIPCReady = function waitForIPCReady() {
     } else {
       try {
         c3 = 2;
-        if (0 === iPCReady) {
+        if (0 === c2) {
           if (arg0 === 1) {
             c3 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
             c1 = 1;
-            let timestamp = tmp2;
-            timestamp = undefined;
+            closure_0 = tmp2;
+            closure_128_0 = undefined;
             const _Date2 = Date;
-            timestamp = Date.now();
+            const timestamp = Date.now();
+            closure_128_0 = timestamp;
             const _Date3 = Date;
-            if (Date.now() - timestamp < closure_1_0) {
-              if (iPCReady.isIPCReady()) {
+            if (Date.now() - timestamp < num) {
+              if (closure_129_2.isIPCReady()) {
                 c3 = 3;
                 return { value: true, done: true };
               } else {
-                const promise = new Promise((scrollAnimation) => c1.requestAnimationFrame(scrollAnimation));
-                iPCReady = 1;
+                const promise = new Promise((scrollAnimation) => closure_1_1.requestAnimationFrame(scrollAnimation));
+                c2 = 1;
                 c3 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = promise;
+                const obj1 = { value: promise, done: false };
                 return obj1;
               }
             } else {
@@ -1627,13 +1508,12 @@ obj.waitForIPCReady = function waitForIPCReady() {
           }
         } else if (arg0 === 1) {
           c3 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 !== 2) {
           const _Date = Date;
         }
         c3 = 3;
-        obj = { value: null, done: true };
-        obj[0] = arg1;
+        obj = { value, done: true };
         return obj;
       } catch (tmp19) {
         c3 = tmp;
@@ -1646,21 +1526,23 @@ obj.flashFrame = function flashFrame(arg0) {
   const _window = DiscordNative.window;
   _window.flashFrame(arg0);
 };
-obj.webAuthnRegister = function webAuthnRegister(closure_0) {
-  return callback2(function* () {
-    const nativeModules = closure_1_6.nativeModules;
-    yield nativeModules.ensureModule("discord_webauthn");
-    const webAuthn = closure_1_6.webAuthn;
-    yield webAuthn.webAuthnRegister(closure_0);
+obj.webAuthnRegister = function webAuthnRegister(arg0) {
+  closure_0 = arg0;
+  return (async () => {
+    const nativeModules = DiscordNative.nativeModules;
+    await nativeModules.ensureModule("discord_webauthn");
+    const webAuthn = DiscordNative.webAuthn;
+    await webAuthn.webAuthnRegister(closure_128_0);
     return arg1;
   })();
 };
-obj.webAuthnAuthenticate = function webAuthnAuthenticate(closure_0) {
-  return callback2(function* () {
-    const nativeModules = closure_1_6.nativeModules;
-    yield nativeModules.ensureModule("discord_webauthn");
-    const webAuthn = closure_1_6.webAuthn;
-    yield webAuthn.webAuthnAuthenticate(closure_0);
+obj.webAuthnAuthenticate = function webAuthnAuthenticate(arg0) {
+  closure_0 = arg0;
+  return (async () => {
+    const nativeModules = DiscordNative.nativeModules;
+    await nativeModules.ensureModule("discord_webauthn");
+    const webAuthn = DiscordNative.webAuthn;
+    await webAuthn.webAuthnAuthenticate(closure_128_0);
     return arg1;
   })();
 };
@@ -1683,10 +1565,8 @@ obj.focus = function focus(arg0) {
   }
   let isWindowsResult = flag;
   if (flag) {
-    isWindowsResult =
-      set /* set */
-        .isWindows();
-    obj = set;
+    isWindowsResult = require("PlatformUtils").isWindows();
+    obj = require("PlatformUtils");
   }
   if (isWindowsResult) {
     const self = this;
@@ -1696,7 +1576,7 @@ obj.focus = function focus(arg0) {
   _window.focus(flag, arg0);
 };
 obj.blur = function blur() {
-  if (set /* set */.isPlatformEmbedded) {
+  if (require("PlatformUtils").isPlatformEmbedded) {
     if (null != DiscordNative.window.blur) {
       const _window = DiscordNative.window;
       _window.blur();
@@ -1721,18 +1601,17 @@ obj.setAlwaysOnTop = function setAlwaysOnTop(arg0, arg1) {
     _window.setAlwaysOnTop(arg0, arg1);
   }
 };
-obj.isAlwaysOnTop = function isAlwaysOnTop(closure_1_0) {
-  closure_0 = closure_1_0;
-  return callback2(function* () {
+obj.isAlwaysOnTop = function isAlwaysOnTop(arg0) {
+  closure_0 = arg0;
+  return (async (arg0, value) => {
     if (c2 === 2) {
       c2 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp4 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        obj = { value: null, done: true };
-        obj[0] = arg1;
+        obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
@@ -1743,21 +1622,19 @@ obj.isAlwaysOnTop = function isAlwaysOnTop(closure_1_0) {
         if (0 === c1) {
           if (arg0 === 1) {
             c2 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c2 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
             closure_0 = tmp2;
-            closure_0 = false;
-            if (typeof closure_1_6.window.isAlwaysOnTop === "function") {
-              const _window = closure_1_6.window;
+            closure_128_0 = false;
+            if (typeof DiscordNative.window.isAlwaysOnTop === "function") {
+              const _window = DiscordNative.window;
               c1 = 1;
               c2 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = _window.isAlwaysOnTop(closure_1_0);
+              const obj1 = { value: _window.isAlwaysOnTop(closure_0), done: false };
               return obj1;
             } else {
               c2 = 3;
@@ -1765,13 +1642,12 @@ obj.isAlwaysOnTop = function isAlwaysOnTop(closure_1_0) {
           }
         } else if (arg0 === 1) {
           c2 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 !== 2) {
-          closure_0 = arg1;
+          closure_128_0 = value;
         }
         c2 = 3;
-        obj = { value: null, done: true };
-        obj[0] = arg1;
+        obj = { value, done: true };
         return obj;
       } catch (tmp10) {
         c2 = tmp;
@@ -1805,7 +1681,7 @@ obj.setMinimumSize = function setMinimumSize(arg0, arg1) {
   }
 };
 obj.setTrafficLightPosition = function setTrafficLightPosition(arg0) {
-  if (set /* set */.isPlatformEmbedded) {
+  if (require("PlatformUtils").isPlatformEmbedded) {
     if ("darwin" === tmpResult.getPlatformName()) {
       try {
         const self = this;
@@ -1816,7 +1692,7 @@ obj.setTrafficLightPosition = function setTrafficLightPosition(arg0) {
   }
 };
 obj.purgeMemory = function purgeMemory() {
-  if (set /* set */.isPlatformEmbedded) {
+  if (require("PlatformUtils").isPlatformEmbedded) {
     const processUtils = DiscordNative.processUtils;
     processUtils.purgeMemory();
   }
@@ -1830,7 +1706,7 @@ obj.triggerJSException = function triggerJSException(arg0) {
   crashReporter.triggerJSException(arg0);
 };
 obj.flushDNSCache = function flushDNSCache() {
-  if (set /* set */.isPlatformEmbedded) {
+  if (require("PlatformUtils").isPlatformEmbedded) {
     const processUtils = DiscordNative.processUtils;
     processUtils.flushDNSCache();
   }
@@ -1840,7 +1716,7 @@ obj.supportsFeature = function supportsFeature(arg0) {
   return features.supports(arg0);
 };
 obj.getEnableHardwareAcceleration = function getEnableHardwareAcceleration() {
-  const isPlatformEmbedded = set /* set */.isPlatformEmbedded;
+  const isPlatformEmbedded = require("PlatformUtils").isPlatformEmbedded;
   let enableHardwareAcceleration = !isPlatformEmbedded;
   if (isPlatformEmbedded) {
     const gpuSettings = DiscordNative.gpuSettings;
@@ -1867,45 +1743,34 @@ obj.setChromiumSwitches = function setChromiumSwitches(arg0) {
   gpuSettings.setChromiumSwitches(arg0);
 };
 obj.getOpenOnStart = function getOpenOnStart() {
-  return callback2(function* () {
-    const app = closure_1_6.app;
+  return (async (arg0, value) => {
+    app = app.app;
     const getOpenOnStart = app.getOpenOnStart;
     if (getOpenOnStart != null) {
       const openOnStart = getOpenOnStart();
     }
-    yield openOnStart;
+    await openOnStart;
     if (1 === tmp4) {
       if (arg0 === 1) {
         c3 = 3;
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
         c3 = 3;
-        const obj2 = { value: null, done: true };
-        obj2[0] = arg1;
-        return obj2;
-      } else {
-        closure_0 = arg1;
+        return { value, done: true };
       }
     } else if (arg0 === 1) {
       c3 = 3;
-      throw arg1;
+      throw value;
     } else if (arg0 === 2) {
       c3 = 3;
-      const obj3 = { value: null, done: true };
-      obj3[0] = arg1;
-      return obj3;
-    } else {
-      closure_0 = arg1;
-      if (arg1 == null) {
-        settings = settings.settings;
-        c2 = 1;
-        c3 = 1;
-        obj = { value: null, done: false };
-        obj[0] = settings.get("OPEN_ON_STARTUP", true);
-        return obj;
-      }
+      return { value, done: true };
+    } else if (value == null) {
+      const settings = closure_129_6.settings;
+      c2 = 1;
+      c3 = 1;
+      return { value: settings.get("OPEN_ON_STARTUP", true), done: false };
     }
-    return closure_0;
+    return value;
   })();
 };
 obj.getGPUDriverVersions = function getGPUDriverVersions() {
@@ -1920,7 +1785,7 @@ obj.getGPUDriverVersions = function getGPUDriverVersions() {
   gPUDriverVersions = Promise.resolve(Object.freeze({}));
 };
 obj.setZoomFactor = function setZoomFactor(arg0) {
-  let flag = set /* set */.isPlatformEmbedded;
+  let flag = require("PlatformUtils").isPlatformEmbedded;
   if (flag) {
     const _window = DiscordNative.window;
     _window.setZoomFactor(arg0);
@@ -2149,16 +2014,15 @@ obj.startCPUProfiling = function startCPUProfiling(arg0) {
 };
 obj.stopCPUProfiling = function stopCPUProfiling() {
   const self = this;
-  return callback2(function* () {
+  return (async (arg0, value) => {
     if (c2 === 2) {
       c2 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp3 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        obj = { value: null, done: true };
-        obj[0] = arg1;
+        obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
@@ -2169,43 +2033,40 @@ obj.stopCPUProfiling = function stopCPUProfiling() {
         if (0 === c1) {
           if (arg0 === 1) {
             c2 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c2 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
             closure_0 = tmp4;
-            closure_0 = undefined;
-            const stopCPUProfiling = closure_1_0.getDiscordUtils().stopCPUProfiling;
+            closure_128_0 = undefined;
+            const stopCPUProfiling = self.getDiscordUtils().stopCPUProfiling;
             let stopCPUProfilingResult;
             if (stopCPUProfiling != null) {
               stopCPUProfilingResult = stopCPUProfiling();
             }
             c1 = 1;
             c2 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = stopCPUProfilingResult;
+            const obj1 = { value: stopCPUProfilingResult, done: false };
             return obj1;
           }
         } else if (arg0 === 1) {
           c2 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c2 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj = { value, done: true };
           return obj;
         } else {
-          closure_0 = arg1;
-          if (null == closure_0) {
+          closure_128_0 = value;
+          if (null == closure_128_0) {
             const _Error = Error;
-            error = new Error("Failed to stop CPU profiling");
+            const error = new Error("Failed to stop CPU profiling");
             Promise.reject(error);
           } else {
             const _JSON = JSON;
-            const parsed = JSON.parse(closure_0);
+            const parsed = JSON.parse(closure_128_0);
           }
           c2 = 3;
         }
@@ -2231,26 +2092,26 @@ obj.showOpenDialog = function showOpenDialog(properties) {
   const fileManager = DiscordNative.fileManager;
   return fileManager.showOpenDialog({ properties });
 };
-obj.flushStorageData = function flushStorageData(arg0) {
+obj.flushStorageData = function flushStorageData() {
   let _Promise = Promise;
-  if (set /* set */.isPlatformEmbedded) {
-    _Promise = new _Promise((arg0, arg1) => {
-      closure_0 = arg0;
+  if (require("PlatformUtils").isPlatformEmbedded) {
+    _Promise = new _Promise((fn, arg1) => {
+      closure_0 = fn;
       closure_1 = arg1;
-      if (null != closure_6.processUtils.flushStorageData) {
-        const processUtils = closure_6.processUtils;
+      if (null != DiscordNative.processUtils.flushStorageData) {
+        const processUtils = DiscordNative.processUtils;
         processUtils.flushStorageData((arg0) => {
           if (null != arg0) {
             const _Error = Error;
-            error = new Error(arg0);
-            let tmp2 = callback2(error);
+            const error = new Error(arg0);
+            let tmp2 = closure_1(error);
           } else {
-            tmp2 = callback();
+            tmp2 = closure_0();
           }
           return tmp2;
         });
       } else {
-        arg0();
+        fn();
       }
     });
   } else {
@@ -2260,24 +2121,24 @@ obj.flushStorageData = function flushStorageData(arg0) {
 };
 obj.flushCookies = function flushCookies() {
   let _Promise = Promise;
-  if (set /* set */.isPlatformEmbedded) {
-    _Promise = new _Promise((arg0, arg1) => {
-      closure_0 = arg0;
+  if (require("PlatformUtils").isPlatformEmbedded) {
+    _Promise = new _Promise((fn, arg1) => {
+      closure_0 = fn;
       closure_1 = arg1;
-      if (null != closure_6.processUtils.flushCookies) {
-        const processUtils = closure_6.processUtils;
+      if (null != DiscordNative.processUtils.flushCookies) {
+        const processUtils = DiscordNative.processUtils;
         processUtils.flushCookies((arg0) => {
           if (null != arg0) {
             const _Error = Error;
-            error = new Error(arg0);
-            let tmp2 = callback2(error);
+            const error = new Error(arg0);
+            let tmp2 = closure_1(error);
           } else {
-            tmp2 = callback();
+            tmp2 = closure_0();
           }
           return tmp2;
         });
       } else {
-        arg0();
+        fn();
       }
     });
   } else {
@@ -2286,7 +2147,7 @@ obj.flushCookies = function flushCookies() {
   return _Promise;
 };
 obj.setCrashInformation = function setCrashInformation(arg0, arg1) {
-  let isPlatformEmbedded = set /* set */.isPlatformEmbedded;
+  let isPlatformEmbedded = require("PlatformUtils").isPlatformEmbedded;
   if (isPlatformEmbedded) {
     let setCrashInformation;
     if (DiscordNative != null) {
@@ -2304,7 +2165,7 @@ obj.setCrashInformation = function setCrashInformation(arg0, arg1) {
 };
 obj.blockDisplaySleep = function blockDisplaySleep() {
   let blockDisplaySleepResult = null;
-  if (set /* set */.isPlatformEmbedded) {
+  if (require("PlatformUtils").isPlatformEmbedded) {
     blockDisplaySleepResult = null;
     if (null != DiscordNative.powerSaveBlocker) {
       const powerSaveBlocker = DiscordNative.powerSaveBlocker;
@@ -2314,7 +2175,7 @@ obj.blockDisplaySleep = function blockDisplaySleep() {
   return blockDisplaySleepResult;
 };
 obj.unblockDisplaySleep = function unblockDisplaySleep(arg0) {
-  let isPlatformEmbedded = set /* set */.isPlatformEmbedded;
+  let isPlatformEmbedded = require("PlatformUtils").isPlatformEmbedded;
   if (isPlatformEmbedded) {
     isPlatformEmbedded = null != DiscordNative.powerSaveBlocker;
   }
@@ -2324,7 +2185,7 @@ obj.unblockDisplaySleep = function unblockDisplaySleep(arg0) {
   }
 };
 obj.cleanupDisplaySleep = function cleanupDisplaySleep() {
-  let isPlatformEmbedded = set /* set */.isPlatformEmbedded;
+  let isPlatformEmbedded = require("PlatformUtils").isPlatformEmbedded;
   if (isPlatformEmbedded) {
     isPlatformEmbedded = null != DiscordNative.powerSaveBlocker;
   }
@@ -2334,18 +2195,18 @@ obj.cleanupDisplaySleep = function cleanupDisplaySleep() {
   }
 };
 obj.relaunch = function relaunch() {
-  if (set /* set */.isPlatformEmbedded) {
+  if (require("PlatformUtils").isPlatformEmbedded) {
     const app = DiscordNative.app;
     app.relaunch();
   }
 };
-obj.makeChunkedRequest = function makeChunkedRequest(closure_0, array, arg2, arg3) {
-  obj = sendRequest;
-  _require = "" + obj.getAPIBaseURL() + closure_0;
-  if (require("../PlatformUtils.tsx").isPlatformEmbedded) {
+obj.makeChunkedRequest = function makeChunkedRequest(arg0, array, arg2) {
+  obj = require("HTTPUtils");
+  _require = "" + obj.getAPIBaseURL() + arg0;
+  if (require("PlatformUtils").isPlatformEmbedded) {
     if (null == DiscordNative.http) {
       const _Error2 = Error;
-      error = new Error("HTTP module not available");
+      let error = new Error("HTTP module not available");
       return Promise.reject(error);
     } else {
       obj = { maxBps: 8000, chunkInterval: 50, contentType: "application/json" };
@@ -2366,24 +2227,21 @@ obj.makeChunkedRequest = function makeChunkedRequest(closure_0, array, arg2, arg
         let result1 = num2 * result;
         array[num2] = json.substring(result1, result1 + result);
       }
-      const promise = new Promise((closure_0) => {
+      const promise = new Promise((arg0, arg1) => {
+        closure_0 = arg0;
         closure_1 = arg1;
-        if (null != closure_1_6.http) {
-          const http = closure_1_6.http;
-          obj = { method: null, chunkInterval: null, contentType: null, token: null };
-          obj[0] = closure_1;
-          obj[1] = chunkInterval;
-          obj[2] = contentType;
-          obj[3] = closure_2;
+        if (null != DiscordNative.http) {
+          const http = DiscordNative.http;
+          obj = { method, chunkInterval, contentType, token };
           const chunkedRequest = http.makeChunkedRequest(closure_0, array, obj, (arg0, status) => {
             if (null != arg0) {
-              let tmp4 = callback2(arg0);
+              let tmp4 = closure_1(arg0);
             } else if (status.status >= 400) {
               const _Error = Error;
-              error = new Error(status.body);
-              tmp4 = callback2(error);
+              const error = new Error(status.body);
+              tmp4 = closure_1(error);
             } else {
-              callback(status);
+              closure_0(status);
             }
             return tmp4;
           });
@@ -2398,7 +2256,7 @@ obj.makeChunkedRequest = function makeChunkedRequest(closure_0, array, arg2, arg
   }
 };
 obj.submitLiveCrashReport = function submitLiveCrashReport(arg0) {
-  obj = set;
+  obj = require("PlatformUtils");
   if (obj.isWindows()) {
     const self = this;
     if (null != this.getDiscordUtils().submitLiveCrashReport) {
@@ -2451,7 +2309,7 @@ obj.pollQueueMetrics = function pollQueueMetrics(arg0) {
 obj.asyncify = function asyncify(arg0) {
   closure_0 = arg0;
   return new Promise((arg0) => {
-    callback(arg0);
+    closure_0(arg0);
   });
 };
 obj.IsGameDisplayModeUpdateSupported = function IsGameDisplayModeUpdateSupported() {
@@ -2492,7 +2350,7 @@ obj.GetWindowFullscreenTypeByPid = function GetWindowFullscreenTypeByPid(arg0, a
     windowFullscreenTypeByPid = arg2;
   }
   if (windowFullscreenTypeByPid == null) {
-    windowFullscreenTypeByPid = GuildThemeSourcePreference.RunningProcessFullscreenType.UNKNOWN;
+    windowFullscreenTypeByPid = Client.RunningProcessFullscreenType.UNKNOWN;
   }
   return windowFullscreenTypeByPid;
 };
@@ -2504,7 +2362,7 @@ obj.GetWindowFullscreenTypeExtraByPid = function GetWindowFullscreenTypeExtraByP
     }
     return windowFullscreenTypeExtraByPid;
   }
-  windowFullscreenTypeExtraByPid = { quns: GuildThemeSourcePreference.QueryUserNotificationState.QUNS_UNKNOWN };
+  windowFullscreenTypeExtraByPid = { quns: Client.QueryUserNotificationState.QUNS_UNKNOWN };
 };
 obj.SetGPUBoostEnabledByPid = function SetGPUBoostEnabledByPid(arg0, arg1) {
   const setGPUBoostEnabledByPid = this.getDiscordUtils().setGPUBoostEnabledByPid;
@@ -2523,29 +2381,27 @@ obj.SetSystemServicePerformanceMonitorEnabled = function SetSystemServicePerform
   return result;
 };
 obj.GetSystemServicePerformanceMonitorSnapshot = function GetSystemServicePerformanceMonitorSnapshot(arg0) {
-  const _require = arg0;
+  closure_0 = arg0;
   const getSystemServicePerformanceMonitorSnapshot = this.getDiscordUtils().getSystemServicePerformanceMonitorSnapshot;
   if (null == getSystemServicePerformanceMonitorSnapshot) {
-    const systemServiceNotAvailableError = new _require(
-      getSystemServicePerformanceMonitorSnapshot[14],
-    ).SystemServiceNotAvailableError();
+    const systemServiceNotAvailableError = new discord_common_DiscordNative.SystemServiceNotAvailableError();
     return Promise.reject(systemServiceNotAvailableError);
   } else {
-    let promise = new Promise((arg0, arg1) => {
+    new Promise((arg0, arg1) => {
       closure_0 = arg1;
       const timeout = setTimeout(() => {
-        error = new Error("Timed out waiting for performance snapshot");
-        return callback(error);
+        const error = new Error("Timed out waiting for performance snapshot");
+        return closure_0(error);
       }, 1000);
     });
-    promise = new Promise((arg0, arg1) => {
+    const promise = new Promise((arg0, arg1) => {
       closure_0 = arg0;
       closure_1 = arg1;
       getSystemServicePerformanceMonitorSnapshot(closure_0, (arg0) => {
         if ("null" !== arg0) {
           try {
             const _JSON = JSON;
-            callback(JSON.parse(arg0));
+            closure_0(JSON.parse(arg0));
           } catch (tmp11) {
             let tmp12Result = globalThis;
             const _Error2 = Error;
@@ -2555,14 +2411,13 @@ obj.GetSystemServicePerformanceMonitorSnapshot = function GetSystemServicePerfor
               const _String = String;
               message = String(tmp11);
             }
-            error = new Error("Invalid performance snapshot JSON: " + message);
-            tmp12Result = callback2(error);
-            const tmp12 = callback2;
+            const error = new Error("Invalid performance snapshot JSON: " + message);
+            tmp12Result = closure_1(error);
           }
         } else {
           const _Error = Error;
           const error1 = new Error("Performance snapshot not available");
-          callback2(error1);
+          closure_1(error1);
         }
       });
     });
@@ -2604,7 +2459,7 @@ obj.InstallSystemService = function InstallSystemService() {
     let installSystemServiceResult = installSystemService();
   } else {
     const _Error = Error;
-    error = new Error("System service native not available");
+    const error = new Error("System service native not available");
     installSystemServiceResult = Promise.reject(error);
   }
   return installSystemServiceResult;
@@ -2615,7 +2470,7 @@ obj.DoesSystemServiceHaveUpdate = function DoesSystemServiceHaveUpdate() {
     let result = doesSystemServiceHaveUpdate();
   } else {
     const _Error = Error;
-    error = new Error("System service native not available");
+    const error = new Error("System service native not available");
     result = Promise.reject(error);
   }
   return result;
@@ -2626,7 +2481,7 @@ obj.UpdateSystemService = function UpdateSystemService() {
     let updateSystemServiceResult = updateSystemService();
   } else {
     const _Error = Error;
-    error = new Error("System service native not available");
+    const error = new Error("System service native not available");
     updateSystemServiceResult = Promise.reject(error);
   }
   return updateSystemServiceResult;
@@ -2637,7 +2492,7 @@ obj.UninstallSystemService = function UninstallSystemService() {
     let result = uninstallSystemService();
   } else {
     const _Error = Error;
-    error = new Error("System service native not available");
+    const error = new Error("System service native not available");
     result = Promise.reject(error);
   }
   return result;
@@ -2688,23 +2543,16 @@ obj.isModuleVersionAtLeast = function isModuleVersionAtLeast(arg0, stable) {
   const entries = items1.entries();
   obj = entries[Symbol.iterator]();
   while (obj !== undefined) {
-    let tmp5 = callback;
-    let tmp6 = callback(tmp4, 2);
+    let tmp6 = _slicedToArray(tmp4, 2);
     [tmp7, tmp9] = tmp6;
     if (tmp9 > stable[tmp7]) {
-      let tmp14 = obj;
       obj.return();
       let flag2 = true;
       return true;
-    } else {
-      let tmp11 = tmp9;
-      let tmp12 = tmp7;
-      if (tmp10 < stable[tmp8]) {
-        let tmp13 = obj;
-        obj.return();
-        let flag = false;
-        return false;
-      }
+    } else if (tmp10 < stable[tmp8]) {
+      obj.return();
+      let flag = false;
+      return false;
     }
   }
   return true;
@@ -2714,10 +2562,10 @@ obj.fetchRiotGamesLiveClientData = function fetchRiotGamesLiveClientData(arg0) {
   if (arg1 === undefined) {
     obj = {};
   }
-  if (set /* set */.isPlatformEmbedded) {
+  if (require("PlatformUtils").isPlatformEmbedded) {
     if (null == DiscordNative.riotGames) {
       const _Error2 = Error;
-      error = new Error("Riot Games module not available");
+      const error = new Error("Riot Games module not available");
       let rejectResult = Promise.reject(error);
     } else {
       const riotGames = tmp6.riotGames;
@@ -2816,21 +2664,20 @@ obj.indexLoadedAsync = function indexLoadedAsync() {
   backwardCompatSend(IPCEvents.IPCEvents.APP_ASYNC_INDEX_TSX_LOADED);
 };
 obj.setUseRequireModuleCache = function setUseRequireModuleCache(arg0) {
-  closure_14 = arg0;
+  global = arg0;
 };
 obj.GetSystemGpuStats = function GetSystemGpuStats(arg0) {
   closure_0 = arg0;
   const self = this;
-  return callback2(function* () {
+  return (async (arg0, value) => {
     if (c3 === 2) {
       c3 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp4 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        obj = { value: null, done: true };
-        obj[0] = arg1;
+        obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
@@ -2838,50 +2685,45 @@ obj.GetSystemGpuStats = function GetSystemGpuStats(arg0) {
     } else {
       try {
         c3 = 2;
-        if (0 === table) {
+        if (0 === c2) {
           if (arg0 === 1) {
             c3 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
             closure_1 = tmp5;
-            let gpuStats = tmp2;
-            gpuStats = undefined;
-            if (closure_1_0(table[5]).isPlatformEmbedded) {
-              table = 1;
+            closure_128_0 = undefined;
+            if (tmp2(c2[5]).isPlatformEmbedded) {
+              c2 = 1;
               c3 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = closure_1_1.ensureModule("discord_media");
+              const obj1 = { value: self.ensureModule("discord_media"), done: false };
               return obj1;
             } else {
               c3 = 3;
-              const obj2 = { value: null, done: true };
-              obj2[0] = [];
+              const obj2 = { value: [], done: true };
               return obj2;
             }
           }
         } else if (arg0 === 1) {
           c3 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj = { value, done: true };
           return obj;
         } else {
-          gpuStats = closure_1.requireModule("discord_media");
+          closure_128_0 = closure_129_1.requireModule("discord_media");
           let getGpuStats;
-          if (gpuStats != null) {
-            getGpuStats = gpuStats.getGpuStats;
+          if (closure_128_0 != null) {
+            getGpuStats = closure_128_0.getGpuStats;
           }
           if (null == getGpuStats) {
             const items = [];
           } else {
-            gpuStats = gpuStats.getGpuStats(gpuStats);
+            const gpuStats = closure_128_0.getGpuStats(closure_129_0);
             gpuStats.catch(() => []);
           }
           c3 = 3;
@@ -2893,7 +2735,8 @@ obj.GetSystemGpuStats = function GetSystemGpuStats(arg0) {
     }
   })();
 };
-let result = set.fileFinishedImporting("utils/web/DesktopNativeUtils.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("utils/web/DesktopNativeUtils.tsx");
 
 export default obj;
 export const SaveImageResult = obj;

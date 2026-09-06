@@ -1,30 +1,30 @@
 // discord_app/modules/conversations/components/native/ConversationPreviewBlockedMessage.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import Text from "../../../../design/components/Text/native/Text.tsx";
-import Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-const result = require("set").fileFinishedImporting(
+require = fn;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/conversations/components/native/ConversationPreviewBlockedMessage.tsx",
 );
 
 export default function ConversationPreviewBlockedMessage(reason) {
-  let obj = { direction: "horizontal", spacing: ThemesDefault.space.PX_8, align: "center", children: null };
+  let obj = { direction: "horizontal", spacing: nativeDefault.space.PX_8, align: "center", children: null };
   if ("blocked" === reason.reason) {
     let EyeSlashIcon = tmp2(7929).DenyIcon;
   } else {
     EyeSlashIcon = tmp2(6968).EyeSlashIcon;
   }
-  obj = { size: "sm", color: ThemesDefault.colors.TEXT_MUTED };
-  const items = [closure_3(EyeSlashIcon, obj)];
+  obj = { size: "sm", color: nativeDefault.colors.TEXT_MUTED };
+  const items = [React3(EyeSlashIcon, obj)];
   const intl = tmp2(1114).intl;
   const t = tmp2(1114).t;
   obj = { variant: "text-md/normal", color: "text-muted", children: intl.string(tmp6 ? t["WPe+xL"] : t.uxrh1O) };
-  items[1] = closure_3(Text.Text, obj);
-  obj[3] = items;
-  return closure_4(Stack.Stack, obj);
+  items[1] = React3(Text_Text.Text, obj);
+  obj.children = items;
+  return React4(Stack_Stack.Stack, obj);
 }

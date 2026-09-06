@@ -1,46 +1,38 @@
 // discord_app/modules/contact_sync/native/ContactSyncPersistedStore.tsx
-import set from "../../../../_runtime/00002_set.js";
 import Storage4 from "../../../../discord_common/js/packages/storage/Storage.tsx";
-import dispatcherDefault from "../../../Dispatcher.tsx";
-import batchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import keys from "../../../../_runtime/00560_keys.js";
-import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
+import DispatcherDefault from "../../../Dispatcher.tsx";
+import ReactBatchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
+import 00560__ from "../../../../_runtime/metro/00560__.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const V2_DCD_CONTACTS_STORAGE_KEY = "V2_DCD_CONTACTS_STORAGE_KEY";
 const ContactSyncUpsellCTADismissed = "ContactSyncUpsellCTADismissed";
 const ContactSyncDMListCTADismissed = "ContactSyncDMListCTADismissed";
 const contact_sync_dm_list_cta_first_seen_date = "contact_sync_dm_list_cta_first_seen_date";
 let Storage = Storage4.Storage;
-Storage.asyncGet("V2_DCD_CONTACTS_STORAGE_KEY", (arg0) => {
-  const _require = arg0;
-  const Storage = require("../../../../discord_common/js/packages/storage/Storage.tsx").Storage;
+Storage.asyncGet("V2_DCD_CONTACTS_STORAGE_KEY", async (arg0) => {
+  _require = arg0;
+  const Storage = require("Storage").Storage;
   const result = Storage.set(V2_DCD_CONTACTS_STORAGE_KEY, arg0);
-  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
-    closure_1_7.setState((arg0) => {
-      obj = {};
+  require("ReactBatchUpdates").batchUpdates(() => {
+    obj.setState((arg0) => {
+      const obj = {};
       const merged = Object.assign(arg0);
-      obj.storedContacts = closure_0;
+      obj.storedContacts = storedContacts;
       return obj;
     });
   });
-  obj = batchUpdates;
-  dispatcherDefault.wait(() => {
-    obj = closure_1_1(closure_1_2[2]);
-    obj = { type: "CONTACT_SYNC_STORED_CONTACTS", empty: "" === closure_0 };
+  let obj = require("ReactBatchUpdates");
+  DispatcherDefault.wait(() => {
+    const obj = { type: "CONTACT_SYNC_STORED_CONTACTS", empty: "" === closure_0 };
     return obj.dispatch(obj);
   });
 });
-let obj = keys.create(() => ({
-  loadedPolicyNotice: false,
-  storedContacts: "",
-  upsellCTADismissed: false,
-  policyUpdateNoticeDismissed: false,
-  dmListCTADismissed: false,
-}));
+const useContactSyncStore = module_560.create(() => ({ loadedPolicyNotice: false, storedContacts: "", upsellCTADismissed: false, policyUpdateNoticeDismissed: false, dmListCTADismissed: false }));
 let Storage2 = Storage4.Storage;
-Storage2.asyncGet("ContactSyncDMListCTADismissed", (arg0) => {
-  let _require = Boolean(arg0);
-  const Storage = require("../../../../discord_common/js/packages/storage/Storage.tsx").Storage;
+Storage2.asyncGet("ContactSyncDMListCTADismissed", async (arg0) => {
+  _require = Boolean(arg0);
+  const Storage = require("Storage").Storage;
   let timestamp = Storage.get(contact_sync_dm_list_cta_first_seen_date);
   if (timestamp == null) {
     const _Date = Date;
@@ -49,35 +41,36 @@ Storage2.asyncGet("ContactSyncDMListCTADismissed", (arg0) => {
   if (Date.now() - timestamp > 5184000000) {
     _require = true;
   }
-  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() =>
-    closure_1_7.setState({ dmListCTADismissed: c0 }),
-  );
+  require("ReactBatchUpdates").batchUpdates(() => {
+    const obj = { dmListCTADismissed };
+    return obj.setState(obj);
+  });
 });
 const Storage3 = Storage4.Storage;
-Storage3.asyncGet("ContactSyncUpsellCTADismissed", (arg0) => {
-  const _require = arg0;
-  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() =>
-    closure_1_7.setState({ upsellCTADismissed: closure_0 }),
-  );
+Storage3.asyncGet("ContactSyncUpsellCTADismissed", async (upsellCTADismissed) => {
+  _require = upsellCTADismissed;
+  require("ReactBatchUpdates").batchUpdates(() => {
+    const obj = { upsellCTADismissed };
+    return obj.setState(obj);
+  });
 });
-let result = set.fileFinishedImporting("modules/contact_sync/native/ContactSyncPersistedStore.tsx");
+let result = size.fileFinishedImporting("modules/contact_sync/native/ContactSyncPersistedStore.tsx");
 
 export const setStoredContacts = function setStoredContacts(arg0) {
-  const _require = arg0;
-  const Storage = require("../../../../discord_common/js/packages/storage/Storage.tsx").Storage;
+  _require = arg0;
+  const Storage = require("Storage").Storage;
   const result = Storage.set(V2_DCD_CONTACTS_STORAGE_KEY, arg0);
-  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
-    closure_1_7.setState((arg0) => {
-      obj = {};
+  require("ReactBatchUpdates").batchUpdates(() => {
+    obj.setState((arg0) => {
+      const obj = {};
       const merged = Object.assign(arg0);
-      obj.storedContacts = closure_0;
+      obj.storedContacts = storedContacts;
       return obj;
     });
   });
-  obj = batchUpdates;
-  dispatcherDefault.wait(() => {
-    obj = closure_1_1(closure_1_2[2]);
-    obj = { type: "CONTACT_SYNC_STORED_CONTACTS", empty: "" === closure_0 };
+  const obj = require("ReactBatchUpdates");
+  DispatcherDefault.wait(() => {
+    const obj = { type: "CONTACT_SYNC_STORED_CONTACTS", empty: "" === closure_0 };
     return obj.dispatch(obj);
   });
 };
@@ -89,9 +82,9 @@ export const deleteStoredContacts = function deleteStoredContacts() {
   }
   const Storage2 = tmp(510).Storage;
   Storage2.remove(V2_DCD_CONTACTS_STORAGE_KEY);
-  batchUpdates.batchUpdates(() => {
+  ReactBatchUpdates.batchUpdates(() => {
     state.setState((arg0) => {
-      obj = {};
+      const obj = {};
       const merged = Object.assign(arg0);
       obj.storedContacts = "";
       return obj;
@@ -99,13 +92,13 @@ export const deleteStoredContacts = function deleteStoredContacts() {
   });
   return str;
 };
-export const useContactSyncStore = obj;
+export { useContactSyncStore };
 export const dismissUpsellCTA = function dismissUpsellCTA() {
   const Storage = Storage4.Storage;
   const result = Storage.set(ContactSyncUpsellCTADismissed, true);
-  batchUpdates.batchUpdates(() => {
+  ReactBatchUpdates.batchUpdates(() => {
     state.setState((arg0) => {
-      obj = {};
+      const obj = {};
       const merged = Object.assign(arg0);
       obj.upsellCTADismissed = true;
       return obj;
@@ -115,14 +108,12 @@ export const dismissUpsellCTA = function dismissUpsellCTA() {
 export const dismissDMListCTA = function dismissDMListCTA() {
   const Storage = Storage4.Storage;
   const result = Storage.set(ContactSyncDMListCTADismissed, true);
-  batchUpdates.batchUpdates(() =>
-    state.setState((arg0) => {
-      obj = {};
-      const merged = Object.assign(arg0);
-      obj.dmListCTADismissed = true;
-      return obj;
-    }),
-  );
+  ReactBatchUpdates.batchUpdates(() => state.setState((arg0) => {
+    const obj = {};
+    const merged = Object.assign(arg0);
+    obj.dmListCTADismissed = true;
+    return obj;
+  }));
 };
 export const setDMListCTAFirstSeenDate = function setDMListCTAFirstSeenDate() {
   const Storage = Storage4.Storage;
@@ -138,7 +129,7 @@ export const clearDismissState = function clearDismissState() {
   const Storage2 = Storage4.Storage;
   Storage2.remove(ContactSyncDMListCTADismissed);
   obj.setState((arg0) => {
-    obj = {};
+    const obj = {};
     const merged = Object.assign(arg0);
     obj.upsellCTADismissed = false;
     obj.dmListCTADismissed = false;

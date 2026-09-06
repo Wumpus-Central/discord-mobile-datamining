@@ -1,29 +1,27 @@
 // discord_app/modules/app_launcher/native/onboarding/banner/AppLauncherOnboardingBanner.tsx
-import noopAll from "../../../../../../_runtime/00019_noop.js";
-import DismissibleContent from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import dismissible_content from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import ActivitiesBannerDefault from "ActivitiesBanner.tsx";
-import AppsBanerDefault from "AppsBanner.tsx";
+import AppsBannerDefault from "AppsBanner.tsx";
 import BotsBannerDefault from "BotsBanner.tsx";
-import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting(
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/app_launcher/native/onboarding/banner/AppLauncherOnboardingBanner.tsx",
 );
 
 export default function AppLauncherOnboardingBanner(arg0) {
   ({ context, visibleContent } = arg0);
-  if (DismissibleContent.DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER === visibleContent) {
-    let obj = { context: null };
-    obj[0] = context;
-    return jsx(ActivitiesBannerDefault, { context: null });
+  if (dismissible_content.DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER === visibleContent) {
+    let obj = { context };
+    return jsx(ActivitiesBannerDefault, { context });
   } else if (tmp(1943).DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER === visibleContent) {
-    return jsx(AppsBanerDefault, {});
+    return jsx(AppsBannerDefault, {});
   } else if (tmp(1943).DismissibleContent.APP_LAUNCHER_ONBOARDING_BOTS_BANNER === visibleContent) {
-    obj = { context: null };
-    obj[0] = context;
-    return jsx(BotsBannerDefault, { context: null });
+    obj = { context };
+    return jsx(BotsBannerDefault, { context });
   } else {
     return null;
   }

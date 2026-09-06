@@ -1,24 +1,23 @@
 // discord_app/modules/display_name_styles/hooks/useColorPresetsWithA11yLabels.tsx
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import { getColorPresetsForEffect } from "../DisplayNameStylesConstants.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
-  "modules/display_name_styles/hooks/useColorPresetsWithA11yLabels.tsx",
-);
+const require = fn;
+const getColorPresetsForEffect = fn(1389).getColorPresetsForEffect;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/display_name_styles/hooks/useColorPresetsWithA11yLabels.tsx");
 
 export default function useColorPresetsWithA11yLabels(arg0) {
   closure_0 = arg0;
   const items = [arg0];
-  return React.useMemo(
+  return noop.useMemo(
     () =>
-      closure_1_4(closure_0).map((arr) => {
-        let obj = { colors: arr, a11yLabel: null };
-        const intl = callback(1114).intl;
-        obj = { number: arg1 + 1, hexList: null };
-        const mapped = arr.map(callback(1091).int2hex);
-        obj[1] = mapped.join(", ");
-        obj[1] = intl.formatToPlainString(callback2(2786).FHfTsV, obj);
+      getColorPresetsForEffect(closure_0).map((colors, index) => {
+        let obj = { colors, a11yLabel: null };
+        const intl = closure_1_0(1114).intl;
+        obj = { number: index + 1, hexList: null };
+        const mapped = colors.map(closure_1_0(1091).int2hex);
+        obj.hexList = mapped.join(", ");
+        obj.a11yLabel = intl.formatToPlainString(closure_1_1(2786).FHfTsV, obj);
         return obj;
       }),
     items,

@@ -1,29 +1,29 @@
 // discord_app/modules/favorites/native/action/useFavoritesGuildCategoryLongPress.tsx
-import getFavoritesAwareGuildName from "../../FavoritesUtils.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import { ChannelTypes } from "../../../../Constants.tsx";
+import util from "../../../../intl/index.native.tsx";
+import FavoritesUtils from "../../FavoritesUtils.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-const result = require("set").fileFinishedImporting(
-  "modules/favorites/native/action/useFavoritesGuildCategoryLongPress.tsx",
-);
+require = fn;
+const ChannelTypes = fn(1074).ChannelTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/favorites/native/action/useFavoritesGuildCategoryLongPress.tsx");
 
 export default function useFavoritesGuildCategoryLongPress(getGuildId) {
-  let isFavoritesGuildIdResult = getFavoritesAwareGuildName.isFavoritesGuildId(getGuildId.getGuildId());
+  let isFavoritesGuildIdResult = FavoritesUtils.isFavoritesGuildId(getGuildId.getGuildId());
   if (isFavoritesGuildIdResult) {
     isFavoritesGuildIdResult = getGuildId.type === ChannelTypes.GUILD_CATEGORY;
   }
   require = isFavoritesGuildIdResult;
   const id = getGuildId.id;
   const items = [isFavoritesGuildIdResult, id];
-  return React.useMemo(() => {
+  return noop.useMemo(() => {
     let tmp = null;
-    if (closure_0) {
+    if (isFavoritesGuildIdResult) {
       const obj = { label: null, perform: null };
-      const intl = isFavoritesGuildIdResult(closure_1_2[3]).intl;
-      obj[0] = intl.string(isFavoritesGuildIdResult(closure_1_2[3]).t.Xm41aV);
-      obj[1] = function perform() {
-        return closure_1_1(closure_1_2[4])(closure_1);
+      const intl = util.intl;
+      obj.label = intl.string(util.t.Xm41aV);
+      obj.perform = function perform() {
+        return id(dependencyMap[4])(closure_1_1);
       };
       tmp = obj;
     }

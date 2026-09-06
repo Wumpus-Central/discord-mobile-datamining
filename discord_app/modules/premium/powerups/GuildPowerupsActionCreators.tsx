@@ -1,34 +1,32 @@
 // discord_app/modules/premium/powerups/GuildPowerupsActionCreators.tsx
-import set from "../../../../_runtime/00002_set.js";
-import dispatcherDefault from "../../../Dispatcher.tsx";
-import ME from "../../../Constants.tsx";
-import sendRequest from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import BoostedGuildTiers from "constants/GuildPowerupsConstants.tsx";
-import { _httpGetWithCountryCodeQuery } from "../../../utils/StoreUtils.tsx";
+import DispatcherDefault from "../../../Dispatcher.tsx";
+import Constants from "../../../Constants.tsx";
+import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import GlobalUtils from "../../../utils/GlobalUtils.tsx";
+import storeListingToGuildPowerupDefault from "utils/storeListingToGuildPowerup.tsx";
+import GuildPowerupsConstants from "constants/GuildPowerupsConstants.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-({ GUILD_POWERUP_APPLICATION_ID: c3, GuildPowerupType: c4 } = BoostedGuildTiers);
-const Endpoints = ME.Endpoints;
-let result = set.fileFinishedImporting("modules/premium/powerups/GuildPowerupsActionCreators.tsx");
+({ GUILD_POWERUP_APPLICATION_ID: c3, GuildPowerupType: closure_4 } = GuildPowerupsConstants);
+const Endpoints = Constants.Endpoints;
+let result = size.fileFinishedImporting("modules/premium/powerups/GuildPowerupsActionCreators.tsx");
 
-export const guildPowerupsAckNotification = function guildPowerupsAckNotification(closure_0) {
-  let obj = dispatcherDefault;
-  obj = { type: "GUILD_POWERUPS_ACK_NOTIFICATION", guildId: closure_0 };
+export const guildPowerupsAckNotification = function guildPowerupsAckNotification(guildId) {
+  const obj = { type: "GUILD_POWERUPS_ACK_NOTIFICATION", guildId };
   obj.dispatch(obj);
 };
 export const guildPowerupsResetNotifications = function guildPowerupsResetNotifications() {
-  dispatcherDefault.dispatch({ type: "GUILD_POWERUPS_RESET_NOTIFICATIONS" });
+  DispatcherDefault.dispatch({ type: "GUILD_POWERUPS_RESET_NOTIFICATIONS" });
 };
-export const fetchPowerupCatalogForGuild = function fetchPowerupCatalogForGuild(closure_0) {
-  const _require = closure_0;
+export const fetchPowerupCatalogForGuild = function fetchPowerupCatalogForGuild(guildId, arg1) {
+  _require = guildId;
   if (true === arg1) {
-    const MOCK_LEVELS = require("mocks/GuildPowerupMocks.tsx").MOCK_LEVELS;
-    const combined = MOCK_LEVELS.concat(require("mocks/GuildPowerupMocks.tsx").MOCK_PERKS);
+    const MOCK_LEVELS = require("GuildPowerupMocks").MOCK_LEVELS;
+    const combined = MOCK_LEVELS.concat(require("GuildPowerupMocks").MOCK_PERKS);
     let obj = {};
-    obj[constants.LEVEL] = require("mocks/GuildPowerupMocks.tsx").MOCK_LEVELS;
-    obj[constants.PERK] = require("mocks/GuildPowerupMocks.tsx").MOCK_PERKS;
-    let obj2 = dispatcherDefault;
-    obj = { type: "GUILD_POWERUP_CATALOG_FETCH_SUCCESS", guildId: null, allPowerups: null, powerupCatalog: null };
-    obj[1] = closure_0;
+    obj[constants.LEVEL] = require("GuildPowerupMocks").MOCK_LEVELS;
+    obj[constants.PERK] = require("GuildPowerupMocks").MOCK_PERKS;
+    obj = { type: "GUILD_POWERUP_CATALOG_FETCH_SUCCESS", guildId, allPowerups: null, powerupCatalog: null };
     let sorted = combined.sort((skuId, skuId2) => {
       let num = -1;
       if (skuId.skuId >= skuId2.skuId) {
@@ -36,27 +34,29 @@ export const fetchPowerupCatalogForGuild = function fetchPowerupCatalogForGuild(
       }
       return num;
     });
-    obj[2] = sorted.reduce((arg0, skuId) => {
-      arg0[skuId.skuId] = skuId;
-      return arg0;
+    obj.allPowerups = sorted.reduce((acc, skuId) => {
+      acc[skuId.skuId] = skuId;
+      return acc;
     }, {});
-    obj[3] = obj;
-    obj2.dispatch(obj);
+    obj.powerupCatalog = obj;
+    DispatcherDefault.dispatch(obj);
   } else {
-    obj1 = { url: null, query: null, oldFormErrors: true, rejectWithError: null };
-    obj1[0] = Endpoints.STORE_PUBLISHED_LISTINGS_SKUS;
-    obj2 = { application_id: null, guild_id: null };
-    obj2[0] = closure_3;
-    obj2[1] = closure_0;
-    obj1[1] = obj2;
-    const obj5 = _httpGetWithCountryCodeQuery;
-    obj1[3] = require("../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
-    const result = obj5.httpGetWithCountryCodeQuery(obj1);
+    const request = {
+      url: Endpoints.STORE_PUBLISHED_LISTINGS_SKUS,
+      query: null,
+      oldFormErrors: true,
+      rejectWithError: null,
+    };
+    const obj1 = { application_id, guild_id: guildId };
+    request.query = obj1;
+    const obj5 = require("StoreUtils");
+    request.rejectWithError = require("HTTPUtils").rejectWithMigratedError();
+    const result = obj5.httpGetWithCountryCodeQuery(request);
     return result.then((body) => {
-      const callback = body;
+      guildId = body;
       body = body.body;
-      const mapped = body.map((arg0) => closure_1_1(closure_1_2[6])(body.body, arg0));
-      const found = mapped.filter(callback(closure_1_2[7]).isNotNullish);
+      const mapped = body.map((item) => storeListingToGuildPowerupDefault(body.body, item));
+      const found = mapped.filter(GlobalUtils.isNotNullish);
       const sorted = found.sort((skuId, skuId2) => {
         let num = -1;
         if (skuId.skuId >= skuId2.skuId) {
@@ -83,31 +83,26 @@ export const fetchPowerupCatalogForGuild = function fetchPowerupCatalogForGuild(
         { allPowerups: {}, powerupCatalog: {} },
       );
       ({ allPowerups, powerupCatalog } = reduced);
-      closure_1_1(closure_1_2[2]).dispatch({
-        type: "GUILD_POWERUP_CATALOG_FETCH_SUCCESS",
-        guildId: callback,
-        allPowerups,
-        powerupCatalog,
-      });
+      DispatcherDefault.dispatch({ type: "GUILD_POWERUP_CATALOG_FETCH_SUCCESS", guildId, allPowerups, powerupCatalog });
       return body.body;
     });
   }
 };
-export const fetchGuildBoostEntitlements = function fetchGuildBoostEntitlements(closure_0, arg1) {
-  const _require = closure_0;
+export const fetchGuildBoostEntitlements = function fetchGuildBoostEntitlements(guildId, arg1) {
+  _require = guildId;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = true;
   }
-  let obj = _httpGetWithCountryCodeQuery;
-  obj = {
-    url: Endpoints.GUILD_POWERUPS(closure_0),
+  const request = {
+    url: Endpoints.GUILD_POWERUPS(guildId),
     query: { include_ends_at: flag },
     oldFormErrors: true,
-    rejectWithError:
-      require("../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError(),
+    rejectWithError: null,
   };
-  const result = obj.httpGetWithCountryCodeQuery(obj);
+  let obj = require("StoreUtils");
+  request.rejectWithError = require("HTTPUtils").rejectWithMigratedError();
+  const result = obj.httpGetWithCountryCodeQuery(request);
   return result.then((body) => {
     let obj = {};
     obj = {};
@@ -151,20 +146,15 @@ export const fetchGuildBoostEntitlements = function fetchGuildBoostEntitlements(
       }
       obj[sku.sku_id] = sku;
     });
-    obj = {
-      type: "GUILD_BOOST_ENTITLEMENTS_FETCH_SUCCESS",
-      guildId: obj,
-      unlockedPowerups: obj,
-      unlockedGameServers: obj,
-    };
-    closure_1_1(closure_1_2[2]).dispatch(obj);
+    obj = { type: "GUILD_BOOST_ENTITLEMENTS_FETCH_SUCCESS", guildId, unlockedPowerups: obj, unlockedGameServers: obj };
+    DispatcherDefault.dispatch(obj);
   });
 };
 export const enablePowerupForGuild = function enablePowerupForGuild(arg0, arg1) {
-  const HTTP = sendRequest.HTTP;
+  const HTTP = HTTPUtils.HTTP;
   return HTTP.post({ url: Endpoints.GUILD_POWERUP_TOGGLE(arg0, arg1), rejectWithError: true });
 };
 export const disablePowerupForGuild = function disablePowerupForGuild(arg0, arg1) {
-  const HTTP = sendRequest.HTTP;
+  const HTTP = HTTPUtils.HTTP;
   return HTTP.del({ url: Endpoints.GUILD_POWERUP_TOGGLE(arg0, arg1), rejectWithError: true });
 };

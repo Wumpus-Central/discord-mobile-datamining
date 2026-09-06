@@ -1,28 +1,26 @@
 // discord_app/modules/blocked_domains/BlockedDomainStore.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
-import isBlockedDomain from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
+import Constants from "../../Constants.tsx";
+import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
+import js_shim_shim from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const AnalyticEvents = ME.AnalyticEvents;
+const AnalyticEvents = Constants.AnalyticEvents;
 const prototype = function BlockedDomainStore() {
   return Object.create(new.target.prototype);
 }.prototype;
 prototype["isBlockedDomain"] = function isBlockedDomain(arg0) {
-  let obj = isBlockedDomain;
+  let obj = js_shim_shim;
   let isBlockedDomainResult = null;
   if (obj.isLibdiscoreInitialized()) {
-    isBlockedDomainResult = isBlockedDomain.isBlockedDomain(arg0);
-    const tmpResult = isBlockedDomain;
+    isBlockedDomainResult = js_shim_shim.isBlockedDomain(arg0);
+    const tmpResult = js_shim_shim;
   }
   if (tmp5) {
-    obj = { blocked_domain: null };
-    obj[0] = isBlockedDomainResult;
-    expandEventPropertiesDefault.track(AnalyticEvents.LINK_SECURITY_CHECK_BLOCKED, obj);
-    const obj3 = expandEventPropertiesDefault;
+    obj = { blocked_domain: isBlockedDomainResult };
+    AnalyticsUtilsDefault.track(AnalyticEvents.LINK_SECURITY_CHECK_BLOCKED, obj);
   }
   return isBlockedDomainResult;
 };
-const result = set.fileFinishedImporting("modules/blocked_domains/BlockedDomainStore.tsx");
+const result = size.fileFinishedImporting("modules/blocked_domains/BlockedDomainStore.tsx");
 
 export default prototype;

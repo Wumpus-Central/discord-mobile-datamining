@@ -1,34 +1,34 @@
 // discord_app/lib/uploader/UploadTargets.tsx
-import items from "../../utils/UploadUtils.tsx";
-import getUploadFileSizeSumAll from "../../utils/FileUtils.tsx";
-import getCreateAttachmentURLDefault from "../../modules/guild_products/GuildProductAttachmentUploadTarget.tsx";
-import getCreateAttachmentURLDefault2 from "../../modules/icymi/ICYMIAttachmentUploadTarget.tsx";
-import closure_4 from "../../stores/ChannelStore.tsx";
-import ME from "../../Constants.tsx";
+import UploadUtils from "../../utils/UploadUtils.tsx";
+import FileUtilsAll from "../../utils/FileUtils.tsx";
+import GuildProductAttachmentUploadTargetDefault from "../../modules/guild_products/GuildProductAttachmentUploadTarget.tsx";
+import ICYMIAttachmentUploadTargetDefault from "../../modules/icymi/ICYMIAttachmentUploadTarget.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
 
-require = arg1;
-({ Endpoints: c5, MAX_UPLOAD_COUNT: closure_6 } = ME);
+require = fn;
+const Constants = fn(1074);
+({ Endpoints: hasOwnProperty, MAX_UPLOAD_COUNT: metroRequire } = Constants);
 class MessageAttachmentUploadTarget {}
 const prototype = MessageAttachmentUploadTarget.prototype;
 prototype["getCreateAttachmentURL"] = function getCreateAttachmentURL(arg0) {
-  return closure_5.MESSAGE_CREATE_ATTACHMENT_UPLOAD(arg0);
+  return hasOwnProperty.MESSAGE_CREATE_ATTACHMENT_UPLOAD(arg0);
 };
 prototype["getDeleteUploadURL"] = function getDeleteUploadURL(arg0) {
-  return closure_5.MESSAGE_DELETE_UPLOAD(arg0);
+  return hasOwnProperty.MESSAGE_DELETE_UPLOAD(arg0);
 };
 prototype["getMaxFileSize"] = function getMaxFileSize(arg0) {
-  basicChannel = basicChannel.getBasicChannel(arg0);
+  const basicChannel = ChannelStore.getBasicChannel(arg0);
   let guild_id;
   if (basicChannel != null) {
     guild_id = basicChannel.guild_id;
   }
-  return getUploadFileSizeSumAll.maxFileSize(guild_id);
+  return FileUtilsAll.maxFileSize(guild_id);
 };
 prototype["getMaxAttachmentsCount"] = function getMaxAttachmentsCount() {
-  return closure_6;
+  return timestampProducer;
 };
 prototype["getMaxTotalAttachmentSize"] = function getMaxTotalAttachmentSize() {
-  return items.getMaxTotalAttachmentSize({ location: "MessageAttachmentUploadTarget" });
+  return UploadUtils.getMaxTotalAttachmentSize({ location: "MessageAttachmentUploadTarget" });
 };
 Object.defineProperty(prototype, "shouldReactNativeCompressUploads", {
   get: function shouldReactNativeCompressUploads() {
@@ -36,7 +36,7 @@ Object.defineProperty(prototype, "shouldReactNativeCompressUploads", {
   },
   set: undefined,
 });
-const obj = {
+const UploadTargets = {
   MESSAGE_ATTACHMENT: 0,
   [0]: "MESSAGE_ATTACHMENT",
   GUILD_PRODUCT_ATTACHMENT: 1,
@@ -44,21 +44,23 @@ const obj = {
   GRAVITY_ATTACHMENT: 2,
   [2]: "GRAVITY_ATTACHMENT",
 };
-const result = require("set").fileFinishedImporting("lib/uploader/UploadTargets.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("lib/uploader/UploadTargets.tsx");
 
-export const UploadTargets = obj;
+export { UploadTargets };
 export const getUploadTarget = function getUploadTarget(target) {
   if (obj.GUILD_PRODUCT_ATTACHMENT === target) {
-    const tmp14 = new getCreateAttachmentURLDefault();
-    return tmp14;
+    const tmp13 = new GuildProductAttachmentUploadTargetDefault();
+    return tmp13;
   } else if (tmp.GRAVITY_ATTACHMENT === target) {
-    const tmp8 = new getCreateAttachmentURLDefault2();
-    return tmp8;
+    const tmp7 = new ICYMIAttachmentUploadTargetDefault();
+    return tmp7;
   } else {
     const MESSAGE_ATTACHMENT = tmp.MESSAGE_ATTACHMENT;
-    if (typeof MessageAttachmentUploadTarget !== "function") {
-      HermesBuiltin.throwTypeError();
+    if (typeof MessageAttachmentUploadTarget === "function") {
+      return Object.create(MessageAttachmentUploadTarget.prototype);
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    return Object.create(MessageAttachmentUploadTarget.prototype);
   }
 };

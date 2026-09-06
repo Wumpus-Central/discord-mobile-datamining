@@ -1,14 +1,14 @@
 // discord_app/design/void/ThumbnailImage/native/ThumbnailImage.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import { Image as _default } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import set from "../../../../utils/PlatformUtils.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-noopAll;
-if (set.isAndroid()) {
-  _default = require("__INTERNAL_VIEW_CONFIG").default;
+let _default = fn(17).Image;
+const jsx = fn(21).jsx;
+const PlatformUtils = fn(1115);
+if (PlatformUtils.isAndroid()) {
+  _default = fn(14100).default;
 }
-const result = set.fileFinishedImporting("design/void/ThumbnailImage/native/ThumbnailImage.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/ThumbnailImage/native/ThumbnailImage.tsx");
 
 export default function LocalImageThumbnail(arg0) {
   const merged = Object.assign(arg0);

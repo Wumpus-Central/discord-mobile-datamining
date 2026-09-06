@@ -1,53 +1,45 @@
 // discord_app/modules/emoji_picker/native/components/useEmojiPickerSearchState.tsx
-import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../emojis/EmojiStore.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import EmojiStore from "../../../emojis/EmojiStore.tsx";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting(
-  "modules/emoji_picker/native/components/useEmojiPickerSearchState.tsx",
-);
+const require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/emoji_picker/native/components/useEmojiPickerSearchState.tsx");
 
-export default function useEmojiPickerSearchState(arg0, arg1, arg2, arg3) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  let callback = arg2;
-  const React = arg3;
-  const ref = React.useRef("");
-  const tmp2 = callback(React.useState(null), 2);
+export default function useEmojiPickerSearchState(channel, arg1, intention, bypassPremiumEmojiEntitlement) {
+  dependencyMap = arg1;
+  _slicedToArray = intention;
+  noop = bypassPremiumEmojiEntitlement;
+  const ref = noop.useRef("");
+  const tmp2 = _slicedToArray(noop.useState(null), 2);
   closure_5 = tmp2[1];
-  const items = [arg1, arg0, arg2, arg3];
-  return {
-    handleTextChange: React.useCallback((arr) => {
-      const callback = arr;
-      if ("" !== arr) {
-        let substr = arr;
-        if (":" === arr[0]) {
-          substr = arr.slice(1);
-        }
-        const FrecencyUserSettingsActionCreators = callback(1940).FrecencyUserSettingsActionCreators;
-        const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
-        let obj = { channel: null, query: null, count: 0, intention: null, bypassPremiumEmojiEntitlement: null };
-        obj[0] = callback;
-        obj[1] = substr;
-        obj[3] = closure_2;
-        obj[4] = closure_3;
-        dependencyMap = ref.searchWithoutFetchingLatest(obj);
-        callback(1249).batchUpdates(() => {
-          closure_1_4.current = closure_0;
-          closure_1_5(closure_1);
-        });
-        const obj3 = callback(1249);
-      } else {
-        obj = callback(1249);
-        obj.batchUpdates(() => {
-          closure_4.current = "";
-          callback(null);
-          const result = closure_1.set(0);
-        });
+  let obj = { handleTextChange: null, searchQueryRef: ref, searchResults: tmp2[0] };
+  const items = [arg1, channel, intention, bypassPremiumEmojiEntitlement];
+  obj.handleTextChange = noop.useCallback((arr) => {
+    channel = arr;
+    if ("" !== arr) {
+      let substr = arr;
+      if (":" === arr[0]) {
+        substr = arr.slice(1);
       }
-    }, items),
-    searchQueryRef: ref,
-    searchResults: tmp2[0],
-  };
+      const FrecencyUserSettingsActionCreators = channel(1940).FrecencyUserSettingsActionCreators;
+      const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
+      let obj = { channel, query: substr, count: 0, intention, bypassPremiumEmojiEntitlement };
+      dependencyMap = ref.searchWithoutFetchingLatest(obj);
+      channel(1249).batchUpdates(() => {
+        ref.current = current;
+        closure_5(closure_1);
+      });
+      const obj3 = channel(1249);
+    } else {
+      obj = channel(1249);
+      obj.batchUpdates(() => {
+        ref.current = "";
+        closure_1_5(null);
+        const result = closure_1.set(0);
+      });
+    }
+  }, items);
+  return obj;
 }

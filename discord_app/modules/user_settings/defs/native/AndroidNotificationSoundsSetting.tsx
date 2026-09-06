@@ -1,22 +1,21 @@
 // discord_app/modules/user_settings/defs/native/AndroidNotificationSoundsSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import set2 from "../../../../utils/PlatformUtils.tsx";
-import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
-import hasAndroidNotificationChannels from "../../notifications/native/SettingsNotificationUtils.tsx";
-import _initializeAndroidNotificationSettingsStore from "../../notifications/native/stores/AndroidNotificationSettingsStore.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import util from "../../../../intl/index.native.tsx";
+import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
+import AndroidNotificationSettingsStore from "../../notifications/native/stores/AndroidNotificationSettingsStore.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-({ useAndroidNotificationSoundsEnabled: obj1, setAndroidNotificationSoundsEnabled } =
-  _initializeAndroidNotificationSettingsStore);
-const toggle = createToggle.createToggle({
+const SettingsNotificationUtils = tmp2(15482);
+({ useAndroidNotificationSoundsEnabled: c2, setAndroidNotificationSoundsEnabled } = AndroidNotificationSettingsStore);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["1CWknJ"]);
+    const intl = util.intl;
+    return intl.string(util.t["1CWknJ"]);
   },
-  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
+  parent: SettingsConstants.MobileUserSettings.NOTIFICATIONS,
   useValue: function useAndroidNotificationSoundsSettingValue() {
-    let flag = callback();
+    let flag = React2();
     if (flag == null) {
       flag = false;
     }
@@ -24,13 +23,12 @@ const toggle = createToggle.createToggle({
   },
   onValueChange: setAndroidNotificationSoundsEnabled,
   usePredicate: function useHasAndroidNotificationSoundsSetting() {
-    const tmp = callback();
-    const tmp2 = require;
-    const isIOSResult = set2.isIOS();
+    const tmp = React2();
+    const isIOSResult = PlatformUtils.isIOS();
     let tmp5 = !isIOSResult;
     if (!isIOSResult) {
-      tmp5 = !hasAndroidNotificationChannels.hasAndroidNotificationChannels();
-      const tmp2Result = hasAndroidNotificationChannels;
+      tmp5 = !SettingsNotificationUtils.hasAndroidNotificationChannels();
+      const tmp2Result = SettingsNotificationUtils;
     }
     if (tmp5) {
       tmp5 = null != tmp;
@@ -38,35 +36,6 @@ const toggle = createToggle.createToggle({
     return tmp5;
   },
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["1CWknJ"]);
-  },
-  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
-  useValue: function useAndroidNotificationSoundsSettingValue() {
-    let flag = callback();
-    if (flag == null) {
-      flag = false;
-    }
-    return flag;
-  },
-  onValueChange: setAndroidNotificationSoundsEnabled,
-  usePredicate: function useHasAndroidNotificationSoundsSetting() {
-    const tmp = callback();
-    const tmp2 = require;
-    const isIOSResult = set2.isIOS();
-    let tmp5 = !isIOSResult;
-    if (!isIOSResult) {
-      tmp5 = !hasAndroidNotificationChannels.hasAndroidNotificationChannels();
-      const tmp2Result = hasAndroidNotificationChannels;
-    }
-    if (tmp5) {
-      tmp5 = null != tmp;
-    }
-    return tmp5;
-  },
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/AndroidNotificationSoundsSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AndroidNotificationSoundsSetting.tsx");
 
 export default toggle;

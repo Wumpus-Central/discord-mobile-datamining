@@ -1,10 +1,10 @@
 // discord_app/modules/game_console/native/getConsoleConnectingText.tsx
-import set from "../../../../_runtime/00002_set.js";
-import ME from "../../../Constants.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
+import Constants from "../../../Constants.tsx";
+import util from "../../../intl/index.native.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const PlatformTypes = ME.PlatformTypes;
-const result = set.fileFinishedImporting("modules/game_console/native/getConsoleConnectingText.tsx");
+const PlatformTypes = Constants.PlatformTypes;
+const result = size.fileFinishedImporting("modules/game_console/native/getConsoleConnectingText.tsx");
 
 export const getConsoleConnectingText = function getConsoleConnectingText(stateFromStores1, stateFromStores, arg2) {
   let type;
@@ -20,23 +20,23 @@ export const getConsoleConnectingText = function getConsoleConnectingText(stateF
   }
   if (type === PlatformTypes.XBOX) {
     if (arg2) {
-      const intl4 = getSystemLocale.intl;
-      let str2 = intl4.format(getSystemLocale.t["ynEs/Y"], {});
+      const intl4 = util.intl;
+      let str2 = intl4.format(util.t["ynEs/Y"], {});
     } else {
       str2 = "Xbox";
       if (tmp4) {
-        const intl3 = getSystemLocale.intl;
-        str2 = intl3.string(getSystemLocale.t.UjA4HX);
+        const intl3 = util.intl;
+        str2 = intl3.string(util.t.UjA4HX);
       }
     }
   } else if (arg2) {
-    const intl2 = getSystemLocale.intl;
-    let str = intl2.format(getSystemLocale.t.TZ17Bg, {});
+    const intl2 = util.intl;
+    let str = intl2.format(util.t.TZ17Bg, {});
   } else {
     str = "PS5";
     if (tmp4) {
-      const intl = getSystemLocale.intl;
-      str = intl.string(getSystemLocale.t.QCw1oW);
+      const intl = util.intl;
+      str = intl.string(util.t.QCw1oW);
     }
   }
 };

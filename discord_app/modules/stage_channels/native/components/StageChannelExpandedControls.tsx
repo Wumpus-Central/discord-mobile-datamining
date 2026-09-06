@@ -1,44 +1,46 @@
 // discord_app/modules/stage_channels/native/components/StageChannelExpandedControls.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import useChannelVideoLimitDefault from "../../../video_calls/useChannelVideoLimit.tsx";
-import useCanCurrentUserSpeakInChannelDefault from "../../useCanSpeakInChannel.tsx";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_4 from "../../../../stores/ApplicationStreamingStore.tsx";
-import closure_5 from "../../../../stores/AuthenticationStore.tsx";
-import closure_6 from "../../../../stores/GuildStore.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import hexToRgba from "../../../../utils/ColorUtils.tsx";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useCanSpeakInChannelDefault from "../../useCanSpeakInChannel.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingStore.tsx";
+import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
+import GuildStore from "../../../../stores/GuildStore.tsx";
 
-const require = arg1;
+const useChannelVideoLimitDefault = tmp2(9088);
+const require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
 let obj = { container: null };
 obj = { backgroundColor: null, borderRadius: null, overflow: "hidden" };
-obj[0] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.WHITE, 0.24);
-obj[1] = ThemesDefault.radii.sm;
-obj[0] = obj;
-let closure_8 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo((channel) => {
+const ColorUtils = fn(4409);
+obj.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.24);
+obj.borderRadius = nativeDefault.radii.sm;
+obj.container = obj;
+let closure_8 = createStyles.createStyles(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/native/components/StageChannelExpandedControls.tsx");
+
+export default noop.memo((channel) => {
   channel = channel.channel;
   importDefault = undefined;
-  const tmp = callback();
-  const tmp2 = importDefault;
+  const tmp = closure_8();
   let obj = channel(9471);
   const isConnectedToVoiceChannel = obj.useIsConnectedToVoiceChannel(channel);
-  obj1 = channel(504);
-  const items = [closure_6];
+  let obj1 = channel(504);
+  const items = [GuildStore];
   const items1 = [channel.guild_id];
-  const stateFromStores = obj1.useStateFromStores(items, () => closure_1_6.getGuild(channel.guild_id), items1);
-  const tmp4 = useCanCurrentUserSpeakInChannelDefault(channel.id);
-  const items2 = [closure_4];
+  const stateFromStores = obj1.useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id), items1);
+  const tmp4 = useCanSpeakInChannelDefault(channel.id);
+  const items2 = [ApplicationStreamingStore];
   const items3 = [channel.id];
   const stateFromStoresArray = channel(504).useStateFromStoresArray(
     items2,
-    () => closure_1_4.getAllApplicationStreamsForChannel(channel.id),
+    () => ApplicationStreamingStore.getAllApplicationStreamsForChannel(channel.id),
     items3,
   );
   const obj3 = channel(504);
-  const items4 = [closure_5];
+  const items4 = [AuthenticationStore];
   importDefault = channel(504).useStateFromStores(items4, () => id.getId());
   let num;
   if (stateFromStores != null) {
@@ -52,8 +54,7 @@ const memoResult = importAllResult.memo((channel) => {
   const items5 = [];
   items5.push(jsx(channel(10014).StreamVolumeItem, {}));
   if (tmp11) {
-    obj = { channel: null, disabled: null };
-    obj[0] = channel;
+    obj = { channel, disabled: null };
     let tmp12 = stateFromStoresArray.length > 0;
     if (tmp12) {
       tmp12 = null == stateFromStoresArray.find((ownerId) => ownerId.ownerId === closure_1);
@@ -65,17 +66,18 @@ const memoResult = importAllResult.memo((channel) => {
       }
       tmp12 = reachedLimit;
     }
-    obj[1] = tmp12;
+    obj.disabled = tmp12;
     items5.push(tmp9(tmp5(10014).ScreenshareButton, obj));
   }
   obj = { channelId: channel.id, isConnectedToVoiceChannel };
   items5.push(jsx(channel(10014).AudioRouteButton, { channelId: channel.id, isConnectedToVoiceChannel }));
   items5.push(jsx(channel(10014).DeafenButton, { channel }));
-  obj1 = { style: tmp.container, children: items5.map((children) => callback(closure_3, { children }, arg1)) };
-  return <View style={tmp.container}>{items5.map((children) => callback(closure_3, { children }, arg1))}</View>;
+  obj1 = { style: tmp.container, children: items5.map((children, index) => <View key={arg1}>{arg0}</View>) };
+  return (
+    <View style={tmp.container}>
+      {items5.map((children, index) => (
+        <View key={arg1}>{arg0}</View>
+      ))}
+    </View>
+  );
 });
-const result = require("set").fileFinishedImporting(
-  "modules/stage_channels/native/components/StageChannelExpandedControls.tsx",
-);
-
-export default memoResult;

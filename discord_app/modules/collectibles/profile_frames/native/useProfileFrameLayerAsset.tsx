@@ -1,50 +1,52 @@
 // discord_app/modules/collectibles/profile_frames/native/useProfileFrameLayerAsset.tsx
-import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-({ Image: c4, PixelRatio: c5 } = get_ActivityIndicator);
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ Image: closure_4, PixelRatio: hasOwnProperty } = get_ActivityIndicator);
 const map = new Map();
-let result = require("set").fileFinishedImporting(
-  "modules/collectibles/profile_frames/native/useProfileFrameLayerAsset.tsx",
-);
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/collectibles/profile_frames/native/useProfileFrameLayerAsset.tsx");
 
 export default function useProfileFrameLayerAsset(width) {
   width = width.width;
   let collectiblesItemAssetUrl;
-  dependencyMap = undefined;
   ({ skuId, layer } = width);
-  let obj = collectiblesItemAssetUrl(1883);
-  obj = { skuId, assetFormat: collectiblesItemAssetUrl(1883).CollectiblesItemAssetFormat.STATIC, assetId: layer.id };
+  collectiblesItemAssetUrl(1883);
+  const obj = {
+    skuId,
+    assetFormat: collectiblesItemAssetUrl(1883).CollectiblesItemAssetFormat.STATIC,
+    assetId: layer.id,
+  };
   collectiblesItemAssetUrl = obj.getCollectiblesItemAssetUrl(obj);
-  dependencyMap = callback(
-    React.useReducer((arg0) => arg0 + 1, 0),
+  dependencyMap = _slicedToArray(
+    noop.useReducer((arg0) => arg0 + 1, 0),
     2,
   )[1];
   const items = [collectiblesItemAssetUrl];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     let hasItem = null == collectiblesItemAssetUrl;
     if (!hasItem) {
       hasItem = "" === tmp;
     }
     if (!hasItem) {
-      hasItem = closure_1_6.has(tmp);
+      hasItem = map.has(tmp);
     }
     if (!hasItem) {
-      const size = closure_1_4.getSize(
+      size = size.getSize(
         tmp,
         (arg0, arg1) => {
           if (arg0 > 0) {
-            const result = closure_1_6.set(closure_0, arg1 / arg0);
-            callback();
+            const result = map.set(collectiblesItemAssetUrl, arg1 / arg0);
+            closure_1_1();
           }
         },
         () => {},
       );
     }
   }, items);
-  let value;
+  value = undefined;
   if (null != collectiblesItemAssetUrl) {
     value = map.get(collectiblesItemAssetUrl);
   }

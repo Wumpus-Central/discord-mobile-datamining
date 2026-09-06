@@ -1,26 +1,29 @@
 // discord_app/modules/hub/HubUnreadUtils.tsx
-import closure_3 from "../directory_channels/GuildDirectoryStore.tsx";
-import closure_4 from "../../stores/ReadStateStore.tsx";
+import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
+import GuildDirectoryUtils from "../directory_channels/GuildDirectoryUtils.tsx";
+import GuildDirectoryStore from "../directory_channels/GuildDirectoryStore.tsx";
+import ReadStateStore from "../../stores/ReadStateStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/hub/HubUnreadUtils.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/hub/HubUnreadUtils.tsx");
 
 export const useHubUnreadCount = function useHubUnreadCount(arg0) {
-  const _require = arg0;
-  const items = [closure_3, closure_4];
+  _require = arg0;
+  const items = [GuildDirectoryStore, ReadStateStore];
   const items1 = [arg0];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+  return require("initialize").useStateFromStores(
     items,
     () => {
-      if (null == callback) {
+      if (null == closure_0) {
         return 0;
       } else {
-        const ackMessageIdResult = closure_1_4.ackMessageId(tmp.id);
-        callback = ackMessageIdResult;
+        const ackMessageIdResult = ReadStateStore.ackMessageId(tmp.id);
+        closure_0 = ackMessageIdResult;
         if (null == ackMessageIdResult) {
           return 0;
         } else {
-          let directoryEntries = closure_1_3.getDirectoryEntries(tmp.id);
+          let directoryEntries = GuildDirectoryStore.getDirectoryEntries(tmp.id);
           if (directoryEntries == null) {
             directoryEntries = {};
           }
@@ -29,9 +32,9 @@ export const useHubUnreadCount = function useHubUnreadCount(arg0) {
           const found = values.filter((createdAt) => {
             const time = new Date(createdAt.createdAt).getTime();
             const date = new Date(createdAt.createdAt);
-            return time > closure_1_1(closure_1_2[3]).extractTimestamp(closure_0);
+            return time > SnowflakeUtilsDefault.extractTimestamp(ackMessageIdResult);
           });
-          return Math.min(callback(closure_1_2[4]).MAX_CATEGORY_SERVERS, found.length);
+          return Math.min(GuildDirectoryUtils.MAX_CATEGORY_SERVERS, found.length);
         }
       }
     },

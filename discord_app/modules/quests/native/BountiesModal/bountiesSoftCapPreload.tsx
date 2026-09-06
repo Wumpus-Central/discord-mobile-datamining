@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/BountiesModal/bountiesSoftCapPreload.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/quests/native/BountiesModal/bountiesSoftCapPreload.tsx");
+const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/bountiesSoftCapPreload.tsx");
 
 export const SOFT_CAP_PRELOAD_MAX_BITRATE = 500000;
 export const SOFT_CAP_PRELOAD_BUFFER_CONFIG = {

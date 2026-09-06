@@ -1,7 +1,7 @@
 // discord_common/js/shared/utils/FlagUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/utils/FlagUtils.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/utils/FlagUtils.tsx");
 
 export const hasFlag = function hasFlag(arg0, arg1) {
   return (arg0 & arg1) === arg1;
@@ -15,9 +15,9 @@ export const addFlag = function addFlag(setting, SUPPRESS_NOTIFICATIONS) {
 export const removeFlag = function removeFlag(flags, OBFUSCATED) {
   return flags & ~OBFUSCATED;
 };
-export const removeFlags = function removeFlags(setting, UNREADS_ALL_MESSAGES, NO_RELATION) {
+export const removeFlags = function removeFlags(setting) {
   const substr = [...arguments].slice();
-  return substr.reduce((arg0, arg1) => arg0 & ~arg1, setting);
+  return substr.reduce((acc, item) => acc & ~item, setting);
 };
 export const setFlag = function setFlag(arg0, arg1, arg2) {
   if (arg2) {

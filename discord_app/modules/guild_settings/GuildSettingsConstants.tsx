@@ -1,26 +1,26 @@
 // discord_app/modules/guild_settings/GuildSettingsConstants.tsx
-import set from "../../../_runtime/00002_set.js";
-import getSystemLocale from "../../intl/index.native.tsx";
+import util from "../../intl/index.native.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const obj = {
+const ERROR_KEY_TO_LABEL_FUNC = {
   afk_channel_id() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.KuYcnU);
+    const intl = util.intl;
+    return intl.string(util.t.KuYcnU);
   },
   public_updates_channel_id() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.vAyDGU);
+    const intl = util.intl;
+    return intl.string(util.t.vAyDGU);
   },
   safety_alerts_channel_id() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.sMkYE8);
+    const intl = util.intl;
+    return intl.string(util.t.sMkYE8);
   },
   system_channel_id() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.NASFnq);
+    const intl = util.intl;
+    return intl.string(util.t.NASFnq);
   },
 };
-const result = set.fileFinishedImporting("modules/guild_settings/GuildSettingsConstants.tsx");
+const result = size.fileFinishedImporting("modules/guild_settings/GuildSettingsConstants.tsx");
 
 export const MAX_SUBCATEGORIES = 5;
 export const MAX_KEYWORDS = 10;
@@ -35,7 +35,7 @@ export const GuildSettingsRoleEditSections = {
   VERIFICATIONS: 3,
   [3]: "VERIFICATIONS",
 };
-export const ERROR_KEY_TO_LABEL_FUNC = obj;
+export { ERROR_KEY_TO_LABEL_FUNC };
 export const getSettingsErrorMessage = function getSettingsErrorMessage(arg0) {
   if (0 === Object.keys(arg0).length) {
     return null;

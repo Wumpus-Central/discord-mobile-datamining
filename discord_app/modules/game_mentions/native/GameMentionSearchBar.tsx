@@ -1,68 +1,65 @@
 // discord_app/modules/game_mentions/native/GameMentionSearchBar.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Form from "../../../design/void/Form/native/index.tsx";
 import GameControllerIcon from "../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
 import useGameMentionSearchBarHeight from "../hooks/native/useGameMentionSearchBarHeight.tsx";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
-import importAllResult from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-({ jsx: c3, jsxs: c4 } = jsxProd);
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+fn(4560);
 let obj = { container: null, headerRow: null, icon: null, description: null, divider: null };
-obj = { backgroundColor: ThemesDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND };
-obj[0] = obj;
-createCacheKey = {
+obj = { backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND };
+obj.container = obj;
+const createStyles = {
   flexDirection: "row",
   alignItems: "center",
   paddingHorizontal: 16,
-  paddingVertical: require("useGameMentionSearchBarHeight").GAME_MENTION_SEARCH_BAR_HEADER_PADDING_VERTICAL,
+  paddingVertical: fn(12388).GAME_MENTION_SEARCH_BAR_HEADER_PADDING_VERTICAL,
 };
-obj[1] = createCacheKey;
-obj[2] = { marginRight: 12 };
-obj[3] = {
+obj.headerRow = createStyles;
+obj.icon = { marginRight: 12 };
+obj.description = {
   paddingHorizontal: 16,
-  paddingBottom: require("useGameMentionSearchBarHeight").GAME_MENTION_SEARCH_BAR_DESCRIPTION_PADDING_BOTTOM,
+  paddingBottom: fn(12388).GAME_MENTION_SEARCH_BAR_DESCRIPTION_PADDING_BOTTOM,
 };
-const obj2 = {
-  paddingHorizontal: 16,
-  paddingBottom: require("useGameMentionSearchBarHeight").GAME_MENTION_SEARCH_BAR_DESCRIPTION_PADDING_BOTTOM,
-};
-obj[4] = { marginLeft: 0, backgroundColor: ThemesDefault.colors.MOBILE_COMMAND_BAR_DIVIDER };
-let closure_5 = createCacheKey.createStyles(obj);
-let obj3 = { marginLeft: 0, backgroundColor: ThemesDefault.colors.MOBILE_COMMAND_BAR_DIVIDER };
-const memoResult = importAllResult.memo(function GameMentionSearchBar() {
-  const tmp = callback3();
+const obj2 = { paddingHorizontal: 16, paddingBottom: fn(12388).GAME_MENTION_SEARCH_BAR_DESCRIPTION_PADDING_BOTTOM };
+obj.divider = { marginLeft: 0, backgroundColor: nativeDefault.colors.MOBILE_COMMAND_BAR_DIVIDER };
+let closure_5 = createStyles.createStyles(obj);
+let obj3 = { marginLeft: 0, backgroundColor: nativeDefault.colors.MOBILE_COMMAND_BAR_DIVIDER };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_mentions/native/GameMentionSearchBar.tsx");
+
+export default noop.memo(function GameMentionSearchBar() {
+  const tmp = closure_5();
   let obj = { style: tmp.container, children: null };
   obj = { accessible: true, accessibilityRole: "header", children: null };
   obj = { style: tmp.headerRow, children: null };
   const items = [
-    callback(GameControllerIcon.GameControllerIcon, { size: "sm", style: tmp.icon }),
-    callback(Text.Text, {
+    React3(GameControllerIcon.GameControllerIcon, { size: "sm", style: tmp.icon }),
+    React3(Text_Text.Text, {
       variant: useGameMentionSearchBarHeight.GAME_MENTION_SEARCH_BAR_TITLE_VARIANT,
       color: "mobile-text-heading-primary",
       children: "@game",
     }),
   ];
-  obj[1] = items;
-  const items1 = [callback2(View, obj)];
+  obj.children = items;
+  const items1 = [React4(View, obj)];
   const obj3 = {
     style: tmp.description,
     variant: useGameMentionSearchBarHeight.GAME_MENTION_SEARCH_BAR_DESCRIPTION_VARIANT,
     color: "text-muted",
     children: null,
   };
-  const intl = getSystemLocale.intl;
-  obj3[3] = intl.string(getSystemLocale.t["1kR88y"]);
-  items1[1] = callback(Text.Text, obj3);
-  obj[2] = items1;
-  const items2 = [callback2(View, obj), callback(Form.FormDivider, { style: tmp.divider })];
-  obj[1] = items2;
-  return callback2(View, obj);
+  const intl = util.intl;
+  obj3.children = intl.string(util.t["1kR88y"]);
+  items1[1] = React3(Text_Text.Text, obj3);
+  obj.children = items1;
+  const items2 = [React4(View, obj), React3(Form.FormDivider, { style: tmp.divider })];
+  obj.children = items2;
+  return React4(View, obj);
 });
-const result = require("set").fileFinishedImporting("modules/game_mentions/native/GameMentionSearchBar.tsx");
-
-export default memoResult;

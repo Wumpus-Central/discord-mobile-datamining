@@ -1,15 +1,15 @@
 // discord_app/modules/action_sheet/native/components/EmojiRowUtils.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import hasFlag from "../../../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import ME from "../../../../Constants.tsx";
+import FlagUtils from "../../../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import Constants from "../../../../Constants.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-({ MessageFlags: obj1, MessageStates: c3, MessageTypes: c4 } = ME);
-const result = set.fileFinishedImporting("modules/action_sheet/native/components/EmojiRowUtils.tsx");
+({ MessageFlags: c2, MessageStates: c3, MessageTypes: closure_4 } = Constants);
+const result = size.fileFinishedImporting("modules/action_sheet/native/components/EmojiRowUtils.tsx");
 
-export const shouldShowEmojiRow = function shouldShowEmojiRow(closure_8, message, closure_10) {
-  let tmp = closure_8;
-  if (closure_8) {
-    tmp = closure_10;
+export const shouldShowEmojiRow = function shouldShowEmojiRow(arg0, message, arg2) {
+  let tmp = arg0;
+  if (arg0) {
+    tmp = arg2;
   }
   if (tmp) {
     tmp = message.state !== constants2.SEND_FAILED;
@@ -21,8 +21,7 @@ export const shouldShowEmojiRow = function shouldShowEmojiRow(closure_8, message
     tmp = message.type !== constants3.THREAD_STARTER_MESSAGE;
   }
   if (tmp) {
-    tmp = !hasFlag.hasFlag(message.flags, constants.EPHEMERAL);
-    const obj = hasFlag;
+    tmp = !FlagUtils.hasFlag(message.flags, constants.EPHEMERAL);
   }
   return tmp;
 };

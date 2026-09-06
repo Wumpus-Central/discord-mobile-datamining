@@ -1,8 +1,8 @@
 // discord_common/js/shared/shared-constants/GameGenres.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const obj = {
-  ACTION_GENRES: null,
+  ACTION_GENRES: new Set([1, 2, 3, 4, 5, 6, 7]),
   ADVENTURE_GENRES: null,
   DRIVING_RACING_GENRES: null,
   MASSIVELY_MULTIPLAYER_GENRES: null,
@@ -14,32 +14,31 @@ const obj = {
   MISCELLANEOUS_GENRES: null,
   ALL: null,
 };
-let set = new Set([1, 2, 3, 4, 5, 6, 7]);
-obj[0] = set;
-obj[1] = new Set([8, 9, 10, 11, 12, 13, 14, 15]);
+const set = new Set([1, 2, 3, 4, 5, 6, 7]);
+obj.ADVENTURE_GENRES = new Set([8, 9, 10, 11, 12, 13, 14, 15]);
 const set1 = new Set([8, 9, 10, 11, 12, 13, 14, 15]);
-obj[2] = new Set([16, 17]);
+obj.DRIVING_RACING_GENRES = new Set([16, 17]);
 const set2 = new Set([16, 17]);
-obj[3] = new Set([18, 19, 55]);
+obj.MASSIVELY_MULTIPLAYER_GENRES = new Set([18, 19, 55]);
 const set3 = new Set([18, 19, 55]);
-obj[4] = new Set([20, 21, 22]);
+obj.ROLE_PLAYING_GENRES = new Set([20, 21, 22]);
 const set4 = new Set([20, 21, 22]);
-obj[5] = new Set([23, 24, 25, 26, 27]);
+obj.SHOOTER_GENRES = new Set([23, 24, 25, 26, 27]);
 const set5 = new Set([23, 24, 25, 26, 27]);
-obj[6] = new Set([28, 29, 30, 31, 32]);
+obj.SIMULATION_GENRES = new Set([28, 29, 30, 31, 32]);
 const set6 = new Set([28, 29, 30, 31, 32]);
-obj[7] = new Set([33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]);
+obj.SPORTS_GENRES = new Set([33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]);
 const set7 = new Set([33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]);
-obj[8] = new Set([48, 49, 50, 51, 52, 53, 54]);
+obj.STRATEGY_GENRES = new Set([48, 49, 50, 51, 52, 53, 54]);
 const set8 = new Set([48, 49, 50, 51, 52, 53, 54]);
-obj[9] = new Set([56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]);
+obj.MISCELLANEOUS_GENRES = new Set([56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]);
 const set9 = new Set([56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]);
-obj[10] = new Set([
+obj.ALL = new Set([
   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32,
   33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61,
   62, 63, 64, 65, 66, 67, 68, 69,
 ]);
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/GameGenres.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/GameGenres.tsx");
 
 export const GameGenres = {
   ACTION: 1,

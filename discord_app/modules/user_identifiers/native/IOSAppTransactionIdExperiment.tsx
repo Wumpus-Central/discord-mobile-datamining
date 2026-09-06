@@ -1,16 +1,18 @@
 // discord_app/modules/user_identifiers/native/IOSAppTransactionIdExperiment.tsx
-import set from "../../../../_runtime/00002_set.js";
 import ApexExperiment from "../../experiments/apex/index.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const obj = { 1: null };
-obj[1] = { enabled: true };
-let closure_0 = ApexExperiment.createApexExperiment({
+let obj = {
   kind: "user",
   name: "2026-01-ios-apptransactionid-tracking",
   defaultConfig: { enabled: false },
-  variations: obj,
-});
-const result = set.fileFinishedImporting("modules/user_identifiers/native/IOSAppTransactionIdExperiment.tsx");
+  variations: null,
+};
+obj = { 1: null };
+obj[1] = { enabled: true };
+obj.variations = obj;
+const config = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/user_identifiers/native/IOSAppTransactionIdExperiment.tsx");
 
 export const isIOSAppTransactionIdTrackingEnabled = function isIOSAppTransactionIdTrackingEnabled(
   IOSUserIdentifiersManager,

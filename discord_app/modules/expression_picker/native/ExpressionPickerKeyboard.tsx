@@ -1,47 +1,46 @@
 // discord_app/modules/expression_picker/native/ExpressionPickerKeyboard.tsx
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import importAllResult from "../../../../_runtime/00019_noop.js";
-import { KEYBOARD_ANIMATION_CONFIG } from "../../keyboard/native/PortalKeyboardConstants.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import KeyboardTypes from "../../keyboard/native/KeyboardTypes.tsx";
+import KeyboardManagerUtils from "../../../utils/native/KeyboardManagerUtils.tsx";
+import native from "../../../../discord_common/js/packages/design/native.tsx";
+import getEmojiTextDefault from "../../emojis/utils/getEmojiText.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let c4 = importAllResult;
-let closure_7 = {
+require = fn;
+const KEYBOARD_ANIMATION_CONFIG = fn(12036).KEYBOARD_ANIMATION_CONFIG;
+const jsx = fn(21).jsx;
+let __initData = {
   code: "function ExpressionPickerKeyboardTsx1(){const{bottomSheetIndex}=this.__closure;return Math.max(bottomSheetIndex.get(),0)>0;}",
 };
 let closure_8 = {
   code: "function ExpressionPickerKeyboardTsx2(){const{bottomSheetExpandingOrExpanded,maximum,minimum}=this.__closure;return{height:bottomSheetExpandingOrExpanded.get()?maximum:minimum};}",
 };
-const memoResult = importAllResult.memo(function ExpressionPickerKeyboard(channel) {
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/expression_picker/native/ExpressionPickerKeyboard.tsx");
+
+export default noop.memo(function ExpressionPickerKeyboard(channel) {
   const chatInputRef = channel.chatInputRef;
   const onClose = channel.onClose;
   const transitionState = channel.transitionState;
-  let sharedValue;
   let ref;
-  let isScreenReaderEnabled;
-  let first;
-  closure_7 = undefined;
-  let minimum;
-  let maximum;
-  let derivedValue;
   let obj = chatInputRef(transitionState[4]);
-  sharedValue = obj.useSharedValue(-1);
+  const sharedValue = obj.useSharedValue(-1);
   const sharedValue1 = chatInputRef(transitionState[4]).useSharedValue(0);
   ref = ref.useRef(null);
   const obj2 = chatInputRef(transitionState[4]);
-  isScreenReaderEnabled = chatInputRef(transitionState[5]).useIsScreenReaderEnabled();
+  const isScreenReaderEnabled = chatInputRef(transitionState[5]).useIsScreenReaderEnabled();
   const tmp5 = sharedValue(ref.useState(false), 2);
-  first = tmp5[0];
-  closure_7 = tmp5[1];
+  const first = tmp5[0];
+  __initData = tmp5[1];
   const items = [chatInputRef];
   const items1 = [chatInputRef];
   const callback = ref.useCallback((arg0) => {
     const current = chatInputRef.current;
-    current.insertText(onClose(transitionState[6])(arg0), null, true);
-    let obj = chatInputRef(transitionState[7]);
+    current.insertText(getEmojiTextDefault(arg0), null, true);
+    let obj = KeyboardManagerUtils;
     const result = obj.dismissGlobalKeyboard();
     const current2 = chatInputRef.current;
-    obj = { type: chatInputRef(transitionState[8]).KeyboardTypes.EXPRESSION };
+    obj = { type: KeyboardTypes.KeyboardTypes.EXPRESSION };
     current2.openCustomKeyboard(obj);
     const current3 = ref.current;
     if (current3 != null) {
@@ -73,16 +72,16 @@ const memoResult = importAllResult.memo(function ExpressionPickerKeyboard(channe
     chatInputRef(transitionState[8]).KeyboardTypes.EXPRESSION,
   );
   const tmp12 = onClose(transitionState[10])();
-  minimum = tmp12.minimum;
-  maximum = tmp12.maximum;
+  const minimum = tmp12.minimum;
+  const maximum = tmp12.maximum;
   const obj4 = chatInputRef(transitionState[9]);
   const fn = function b() {
     return Math.max(sharedValue.get(), 0) > 0;
   };
   fn.__closure = { bottomSheetIndex: sharedValue };
   fn.__workletHash = 1982988107352;
-  fn.__initData = closure_7;
-  derivedValue = chatInputRef(transitionState[4]).useDerivedValue(fn);
+  fn.__initData = __initData;
+  const derivedValue = chatInputRef(transitionState[4]).useDerivedValue(fn);
   const obj5 = chatInputRef(transitionState[4]);
   class S {
     constructor() {
@@ -97,7 +96,7 @@ const memoResult = importAllResult.memo(function ExpressionPickerKeyboard(channe
   const animatedStyle = chatInputRef(transitionState[4]).useAnimatedStyle(S);
   const items5 = [first, onClose, transitionState];
   const callback4 = ref.useCallback(() => {
-    callback(true);
+    closure_7(true);
     if (isScreenReaderEnabled) {
       const current = chatInputRef.current;
       current.openSystemKeyboard();
@@ -106,7 +105,7 @@ const memoResult = importAllResult.memo(function ExpressionPickerKeyboard(channe
   const effect = ref.useEffect(() => {
     let tmp = first;
     if (first) {
-      tmp = transitionState === chatInputRef(transitionState[11]).TransitionStates.YEETED;
+      tmp = transitionState === native.TransitionStates.YEETED;
     }
     if (tmp) {
       if (onClose != null) {
@@ -142,9 +141,6 @@ const memoResult = importAllResult.memo(function ExpressionPickerKeyboard(channe
       inPortalKeyboard: true,
     }),
   };
-  obj[9] = first(onClose(transitionState[4]).View, obj);
+  obj.children = first(onClose(transitionState[4]).View, obj);
   return first(onClose(transitionState[12]), obj, "expression-picker-" + isScreenReaderEnabled);
 });
-let result = require("set").fileFinishedImporting("modules/expression_picker/native/ExpressionPickerKeyboard.tsx");
-
-export default memoResult;

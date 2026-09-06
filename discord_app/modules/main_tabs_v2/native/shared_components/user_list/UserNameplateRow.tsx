@@ -1,17 +1,22 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/UserNameplateRow.tsx
-import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../../_runtime/00019_noop.js";
-import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import useToken from "../../../../../design/tokens/native/useToken.tsx";
+import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import TableRowGroupContext from "../../../../../design/components/TableRow/native/TableRowGroupContext.native.tsx";
+import NameplateDefault from "../../../../collectibles/nameplates/native/Nameplate.tsx";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-({ jsx: c5, jsxs: closure_6, Fragment: error } = jsxProd);
-createCacheKey = { card: null };
-createCacheKey = { padding: 0, paddingRight: ThemesDefault.space.PX_40, overflow: "hidden" };
-createCacheKey[0] = createCacheKey;
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting(
+require = fn;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
+fn(4560);
+let createStyles = { card: null };
+createStyles = { padding: 0, paddingRight: nativeDefault.space.PX_40, overflow: "hidden" };
+createStyles.card = createStyles;
+let closure_8 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/main_tabs_v2/native/shared_components/user_list/UserNameplateRow.tsx",
 );
 
@@ -31,32 +36,54 @@ export const UserNameplateRow = function UserNameplateRow(onPressOut) {
   if (isPreviewRow === undefined) {
     isPreviewRow = false;
   }
-  const merged = Object.assign(onPressOut, Object.create(null));
-  dependencyMap = undefined;
-  let obj = React;
-  const context = React.useContext(onPressIn(5606).TableRowGroupContext);
+  const merged = Object.assign(
+    onPressOut,
+    Object.assign({
+      label: 0,
+      subLabel: 0,
+      icon: 0,
+      trailing: 0,
+      arrow: 0,
+      onPress: 0,
+      onPressIn: 0,
+      onPressOut: 0,
+      disabled: 0,
+      start: 0,
+      end: 0,
+      labelLineClamp: 0,
+      subLabelLineClamp: 0,
+      variant: 0,
+      draggable: 0,
+      dragHandlePressableProps: 0,
+      nameplate: 0,
+      isPreviewRow: 0,
+    }),
+  );
+  closure_2 = undefined;
+  let obj = noop;
+  const context = noop.useContext(TableRowGroupContext.TableRowGroupContext);
   let tmp6 = !context;
   if (!context) {
     tmp6 = true === end;
   }
-  const tmp7 = callback(obj.useState(false), 2);
-  dependencyMap = tmp7[1];
+  const tmp7 = _slicedToArray(obj.useState(false), 2);
+  closure_2 = tmp7[1];
   const items = [onPressIn];
   const items1 = [onPressOut];
-  callback = obj.useCallback((arg0) => {
-    callback(true);
+  const callback = obj.useCallback((arg0) => {
+    closure_2(true);
     if (onPressIn != null) {
       tmp2(arg0);
     }
   }, items);
   const callback1 = obj.useCallback((arg0) => {
-    callback(false);
+    closure_2(false);
     if (onPressOut != null) {
       tmp2(arg0);
     }
   }, items1);
-  const tmp2 = callback3();
-  const token = onPressIn(4262).useToken(onPressOut(576).modules.mobile.TABLE_ROW_BORDER_RADIUS);
+  const tmp2 = closure_8();
+  const token = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS);
   obj = {
     shadow: "none",
     border: "none",
@@ -73,23 +100,23 @@ export const UserNameplateRow = function UserNameplateRow(onPressOut) {
   if (!context) {
     tmp13 = true === start;
   }
-  obj[3] = tmp13;
-  obj[4] = tmp6;
-  obj[5] = onPress;
-  obj[6] = callback;
-  obj[7] = callback1;
-  obj[8] = flag;
-  obj[9] = tmp2.card;
+  obj.start = tmp13;
+  obj.end = tmp6;
+  obj.onPress = onPress;
+  obj.onPressIn = callback;
+  obj.onPressOut = callback1;
+  obj.disabled = flag;
+  obj.style = tmp2.card;
   const merged1 = Object.assign(merged);
   const items2 = [
-    callback2(onPressOut(8818), {
+    hasOwnProperty(NameplateDefault, {
       nameplate,
       isPressed: tmp7[0],
       invertPressOpacity: true,
       fullOpacity: isPreviewRow,
       animate: isPreviewRow,
     }),
-    callback2(onPressIn(5605).TableRowInner, {
+    hasOwnProperty(TableRow.TableRowInner, {
       height: "100%",
       label,
       subLabel,
@@ -110,11 +137,10 @@ export const UserNameplateRow = function UserNameplateRow(onPressOut) {
     if (!tmp6) {
       obj = { children: null };
       const items3 = [tmp12Result];
-      obj1 = { adjustSpacingForIcon: null };
-      obj1[0] = null != icon;
+      const obj1 = { adjustSpacingForIcon: null != icon };
       items3[1] = tmp15(tmp3(5602).TableRowDivider, obj1);
-      obj[0] = items3;
-      tmp12Result = tmp12(closure_7, obj);
+      obj.children = items3;
+      tmp12Result = tmp12(React5, obj);
     }
   }
   return tmp12Result;

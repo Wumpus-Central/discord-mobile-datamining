@@ -1,35 +1,39 @@
 // discord_app/modules/notification_center/native/NotificationCenterActionButton.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import getSystemLocale from "../../../intl/index.native.tsx";
+import util from "../../../intl/index.native.tsx";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
-import registerAssetDefault from "../../../../_runtime/08673_registerAsset.js";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import _modDef8673 from "../../../../_runtime/metro/08673__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting(
-  "modules/notification_center/native/NotificationCenterActionButton.tsx",
-);
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/notification_center/native/NotificationCenterActionButton.tsx");
 
 export default function NotificationCenterActionButton() {
   const obj = {
     variant: "tertiary",
     size: "sm",
-    icon: registerAssetDefault,
+    icon: _modDef8673,
     onPress() {
-      return callback2(paths[4]).openLazy(callback(paths[6])(paths[5], paths.paths), "NotificationCenterActionSheet");
+      return require("ActionSheetActionCreators").openLazy(
+        require("asyncRequireImpl")(paths[5], paths.paths),
+        "NotificationCenterActionSheet",
+      );
     },
     accessibilityLabel: null,
     maxFontSizeMultiplier: 2,
   };
-  const intl = getSystemLocale.intl;
-  obj[4] = intl.string(getSystemLocale.t["UKOtz+"]);
+  const intl = util.intl;
+  obj.accessibilityLabel = intl.string(util.t["UKOtz+"]);
   return jsx(IconButton.IconButton, {
     variant: "tertiary",
     size: "sm",
-    icon: registerAssetDefault,
+    icon: _modDef8673,
     onPress() {
-      return callback2(paths[4]).openLazy(callback(paths[6])(paths[5], paths.paths), "NotificationCenterActionSheet");
+      return require("ActionSheetActionCreators").openLazy(
+        require("asyncRequireImpl")(paths[5], paths.paths),
+        "NotificationCenterActionSheet",
+      );
     },
     accessibilityLabel: null,
     maxFontSizeMultiplier: 2,

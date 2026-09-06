@@ -1,20 +1,19 @@
 // discord_app/modules/stickers/native/openStickerPackDetailActionSheet.tsx
-import set from "../../../../_runtime/00002_set.js";
-import ME from "../../../Constants.tsx";
-import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import Constants from "../../../Constants.tsx";
+import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
-import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/stickers/native/openStickerPackDetailActionSheet.tsx");
+const AnalyticEvents = Constants.AnalyticEvents;
+const result = size.fileFinishedImporting("modules/stickers/native/openStickerPackDetailActionSheet.tsx");
 
 export default function openStickerPackDetailActionSheet(stickerPack) {
   stickerPack = stickerPack.stickerPack;
   ({ analyticsLocation, analyticsPopoutType } = stickerPack);
-  let obj = expandEventPropertiesDefault;
-  obj = { location: analyticsLocation, sticker_pack_id: stickerPack.id };
+  const obj = { location: analyticsLocation, sticker_pack_id: stickerPack.id };
   obj.track(AnalyticEvents.STICKER_PACK_VIEW_ALL, obj);
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(
+  ActionSheetActionCreatorsDefault.openLazy(
     asyncRequireImpl(10395, dependencyMap.paths),
     "StickerPackDetailActionSheet",
     { stickerPack, analyticsPopoutType },

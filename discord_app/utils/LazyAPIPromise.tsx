@@ -1,113 +1,99 @@
 // discord_app/utils/LazyAPIPromise.tsx
-import closure_2 from "../../_runtime/00005_asyncGeneratorStep.js";
-import closure_3 from "../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../_runtime/00019_noop.js";
+import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../_runtime/metro/00032__.js";
+import noop from "../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("utils/LazyAPIPromise.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("utils/LazyAPIPromise.tsx");
 
 export default function useLazyAPIPromise(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
-  function _execFn() {
-    const self = this;
-    const tmp = callback(function* () {
-      if (c5 === 2) {
-        c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+  noop = async function _execFn(arg0, value) {
+    if (c5 === 2) {
+      c5 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let aPIError = tmp3;
-              closure_0 = tmp7;
-              closure_0 = undefined;
-              aPIError = undefined;
-              closure_1_2(true);
-              v0(null);
-              v0 = 1;
-              c4 = 2;
-              c5 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = closure_1_0();
-              return obj1;
-            }
-          } else if (1 === tmp7) {
-            v0 = 0;
-            aPIError = new closure_1_0(closure_1_1[3]).APIError(callback);
-            if (aPIError != null) {
-              tmp25(aPIError);
-            }
-            v0(closure_1_1);
-            callback(false);
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c5 = 2;
+        if (0 === c4) {
+          if (arg0 === 1) {
             c5 = 3;
-            return { value: null, done: true };
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
-            v0 = 0;
             c5 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          } else {
-            closure_0 = arg1;
-            callback(false);
-            v0(null);
-            v0 = 0;
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = closure_0;
+            obj = { value, done: true };
             return obj;
-          }
-        } catch (tmp41) {
-          callback = tmp41;
-          if (tmp4 === v0) {
-            c5 = tmp2;
-            throw tmp41;
           } else {
-            c4 = tmp;
+            closure_0 = tmp7;
+            closure_128_0 = undefined;
+            closure_128_1 = undefined;
+            asyncGeneratorStep(true);
+            _slicedToArray(null);
+            c3 = 1;
+            c4 = 2;
+            c5 = 1;
+            const obj1 = { value: _require(), done: false };
+            return obj1;
           }
+        } else if (1 === tmp7) {
+          c3 = 0;
+          closure_128_2 = closure_2;
+          const aPIError = new closure_0(tmp3[3]).APIError(closure_128_2);
+          closure_128_1 = aPIError;
+          if (closure_129_1 != null) {
+            tmp25(closure_128_1);
+          }
+          closure_129_3(closure_128_1);
+          closure_129_2(false);
+          c5 = 3;
+          return { value: null, done: true };
+        } else if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 0;
+          c5 = 3;
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          closure_128_0 = value;
+          closure_129_2(false);
+          closure_129_3(null);
+          c3 = 0;
+          c5 = 3;
+          obj = { value: closure_128_0, done: true };
+          return obj;
+        }
+      } catch (tmp41) {
+        closure_2 = tmp41;
+        if (tmp4 === c3) {
+          c5 = tmp2;
+          throw tmp41;
+        } else {
+          c4 = tmp;
         }
       }
-    });
-    closure_4 = tmp;
-    const apply = tmp.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
     }
-    return applyArgumentsResult;
-  }
-  let tmp = callback(_execFn.useState(false), 2);
+  };
+  const tmp = _slicedToArray(noop.useState(false), 2);
   closure_2 = tmp[1];
-  const tmp2 = callback(_execFn.useState(null), 2);
-  callback = tmp2[1];
+  const tmp2 = _slicedToArray(noop.useState(null), 2);
+  _slicedToArray = tmp2[1];
   const items = [
     function execFn() {
       const self = this;
-      const apply = _execFn.apply;
+      const apply = closure_4.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {

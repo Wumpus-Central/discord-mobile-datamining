@@ -1,35 +1,42 @@
 // discord_app/modules/voice_panel/native/utils/useIsVoicePanelParticipantFocusable.tsx
-import closure_2 from "../../../activities/EmbeddedActivitiesStore.tsx";
-import closure_3 from "../../../calls/ChannelRTCStore.tsx";
-import closure_4 from "../../../../stores/ApplicationStreamingStore.tsx";
-import closure_5 from "../../../../stores/MediaEngineStore.tsx";
-import ParticipantTypes from "../../../calls/CallConstants.tsx";
+import EmbeddedActivitiesStore from "../../../activities/EmbeddedActivitiesStore.tsx";
+import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
+import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingStore.tsx";
+import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
-const require = arg1;
-function isVoicePanelParticipantFocusable(sharedValue1, closure_1, id2, arg3, closure_1_4) {
-  let obj = arg3;
-  if (arg3 === undefined) {
-    obj = closure_3;
+const require = fn;
+function isVoicePanelParticipantFocusable(
+  channelId,
+  guildId,
+  id2,
+  ChannelRTCStore,
+  MediaEngineStore,
+  EmbeddedActivitiesStore,
+  ApplicationStreamingStore,
+) {
+  let obj = ChannelRTCStore;
+  if (ChannelRTCStore === undefined) {
+    obj = ChannelRTCStore;
   }
-  let tmp = closure_1_4;
-  if (closure_1_4 === undefined) {
-    tmp = closure_5;
+  let tmp = MediaEngineStore;
+  if (MediaEngineStore === undefined) {
+    tmp = MediaEngineStore;
   }
-  let obj2 = arg5;
-  if (arg5 === undefined) {
-    obj2 = closure_2;
+  let obj2 = EmbeddedActivitiesStore;
+  if (EmbeddedActivitiesStore === undefined) {
+    obj2 = EmbeddedActivitiesStore;
   }
-  let obj3 = arg6;
-  if (arg6 === undefined) {
-    obj3 = closure_4;
+  let obj3 = ApplicationStreamingStore;
+  if (ApplicationStreamingStore === undefined) {
+    obj3 = ApplicationStreamingStore;
   }
   if (null == id2) {
     return false;
   } else {
-    const participant = obj.getParticipant(closure_1, id2);
+    const participant = obj.getParticipant(guildId, id2);
     if (null == participant) {
       return false;
-    } else if (callback(participant)) {
+    } else if (timestampProducer(participant)) {
       const currentEmbeddedActivity = obj2.getCurrentEmbeddedActivity();
       let applicationId;
       if (currentEmbeddedActivity != null) {
@@ -37,9 +44,9 @@ function isVoicePanelParticipantFocusable(sharedValue1, closure_1, id2, arg3, cl
       }
       return null != applicationId && participant.applicationId === currentEmbeddedActivity.applicationId;
     } else {
-      if (callback2(participant)) {
-        let result = null != obj3.getActiveStreamForUser(participant.user.id, sharedValue1);
-      } else if (callback3(participant)) {
+      if (React5(participant)) {
+        let result = null != obj3.getActiveStreamForUser(participant.user.id, channelId);
+      } else if (React6(participant)) {
         let tmp4Result = tmp4(9622);
         result = tmp4Result.canRenderParticipantVideo(participant, tmp);
       } else {
@@ -50,18 +57,26 @@ function isVoicePanelParticipantFocusable(sharedValue1, closure_1, id2, arg3, cl
     }
   }
 }
-({ isActivityParticipant: closure_6, isStreamParticipant: error, isUserParticipant: closure_8 } = ParticipantTypes);
-let result = require("set").fileFinishedImporting(
-  "modules/voice_panel/native/utils/useIsVoicePanelParticipantFocusable.tsx",
-);
+const CallConstants = fn(4581);
+({ isActivityParticipant: metroRequire, isStreamParticipant: closure_7, isUserParticipant: closure_8 } = CallConstants);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/voice_panel/native/utils/useIsVoicePanelParticipantFocusable.tsx");
 
 export default function useIsVoicePanelParticipantFocusable(arg0, arg1, arg2) {
-  const _require = arg0;
+  _require = arg0;
   dependencyMap = arg1;
   closure_2 = arg2;
-  const items = [closure_3, closure_5, closure_2, closure_4];
-  return require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
-    closure_1_9(closure_0, closure_1, closure_2, closure_1_3, closure_1_5, closure_2, closure_1_4),
+  const items = [ChannelRTCStore, MediaEngineStore, closure_2, ApplicationStreamingStore];
+  return require("initialize").useStateFromStores(items, () =>
+    isVoicePanelParticipantFocusable(
+      closure_0,
+      closure_1,
+      closure_2,
+      ChannelRTCStore,
+      MediaEngineStore,
+      EmbeddedActivitiesStore,
+      ApplicationStreamingStore,
+    ),
   );
 }
 export { isVoicePanelParticipantFocusable };

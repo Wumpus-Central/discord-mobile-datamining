@@ -1,17 +1,21 @@
 // discord_app/modules/user_settings/clips/native/SettingsClipsScreen.tsx
-import _modDef14689 from "../../../settings/native/renderer/SettingLayout.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import { MobileUserSettings } from "../../core/native/SettingsConstants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayout.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_settings/clips/native/SettingsClipsScreen.tsx");
+require = fn;
+const MobileUserSettings = fn(7975).MobileUserSettings;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/clips/native/SettingsClipsScreen.tsx");
 
 export default function ClipsSettingsScreen() {
-  const node = React.useMemo(() => {
+  const node = noop.useMemo(() => {
+    const obj = { settings: null };
     const items = [constants.CLIPS_OPT_OUT_OF_VOICE_RECORDING];
-    const sections = [{ settings: items }];
-    return callback(table[3]).createList({ sections });
+    obj.settings = items;
+    const sections = [obj];
+    return SettingBuilders.createList({ sections });
   }, []);
-  return jsx(_modDef14689, { node });
+  return jsx(SettingLayoutDefault, { node });
 }

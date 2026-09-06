@@ -1,14 +1,14 @@
 // discord_app/modules/mobile_native_updater/MobileNativeUpdateStore.tsx
-import set from "../../../_runtime/00002_set.js";
-import timestampDefault from "../debug/Logger.tsx";
+import LoggerDefault from "../debug/Logger.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import _checkForNewerBuild from "MobileNativeUpdateUtils.tsx";
-import UPDATE_CHECK_INTERVAL from "MobileNativeUpdateConstants.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import MobileNativeUpdateUtils from "MobileNativeUpdateUtils.tsx";
+import MobileNativeUpdateConstants from "MobileNativeUpdateConstants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-({ UPDATE_CONFIG: c3, UPDATE_CHECK_INTERVAL: c4 } = UPDATE_CHECK_INTERVAL);
-let closure_5 = new timestampDefault("MobileNativeUpdateStore");
-let closure_6 = { lastCheck: null, checking: false, newBuild: null };
+({ UPDATE_CONFIG: c3, UPDATE_CHECK_INTERVAL: closure_4 } = MobileNativeUpdateConstants);
+let closure_5 = new LoggerDefault("MobileNativeUpdateStore");
+let obj = { lastCheck: null, checking: false, newBuild: null };
 let c7 = null;
 const Store = initializeDefault.Store;
 class MobileNativeUpdateStore extends Store {
@@ -20,21 +20,19 @@ class MobileNativeUpdateStore extends Store {
 }
 const prototype = MobileNativeUpdateStore.prototype;
 prototype["checkForNewerBuild"] = function checkForNewerBuild() {
-  if (true !== checking.checking) {
-    dispatcherDefault.dispatch({ type: "MOBILE_NATIVE_UPDATE_CHECK_STARTED" });
-    let obj = dispatcherDefault;
-    const obj2 = _checkForNewerBuild;
-    _checkForNewerBuild.checkForNewerBuild().then(
+  if (true !== obj.checking) {
+    obj = DispatcherDefault;
+    obj.dispatch({ type: "MOBILE_NATIVE_UPDATE_CHECK_STARTED" });
+    MobileNativeUpdateUtils.checkForNewerBuild().then(
       (newBuild) => {
-        let obj = callback(573);
         obj = { type: "MOBILE_NATIVE_UPDATE_CHECK_FINISHED", newBuild };
         obj.dispatch(obj);
       },
       () => {
-        callback(573).dispatch({ type: "MOBILE_NATIVE_UPDATE_CHECK_FAILED" });
+        DispatcherDefault.dispatch({ type: "MOBILE_NATIVE_UPDATE_CHECK_FAILED" });
       },
     );
-    const checkForNewerBuildResult = _checkForNewerBuild.checkForNewerBuild();
+    const checkForNewerBuildResult = MobileNativeUpdateUtils.checkForNewerBuild();
   }
 };
 prototype["ensureInitialized"] = function ensureInitialized() {
@@ -42,7 +40,7 @@ prototype["ensureInitialized"] = function ensureInitialized() {
   if (this.hasUpdatesConfigured) {
     if (null === interval) {
       function backgroundUpdateCheck() {
-        closure_1_5.info("Checking for new native builds in the background");
+        logger.info("Checking for new native builds in the background");
         self.checkForNewerBuild();
       }
       const _setInterval = setInterval;
@@ -54,40 +52,25 @@ prototype["ensureInitialized"] = function ensureInitialized() {
 };
 prototype["latestFetchedBuild"] = function latestFetchedBuild() {
   this.ensureInitialized();
-  return closure_6;
+  return obj;
 };
 MobileNativeUpdateStore.displayName = "MobileNativeUpdateStore";
-const mobileNativeUpdateStore = new MobileNativeUpdateStore(dispatcherDefault, {
+obj = {
   MOBILE_NATIVE_UPDATE_CHECK_STARTED: function handleCheckStarted() {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(obj);
     obj.checking = true;
   },
   MOBILE_NATIVE_UPDATE_CHECK_FAILED: function handleCheckFailed() {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(obj);
     obj.checking = false;
   },
   MOBILE_NATIVE_UPDATE_CHECK_FINISHED: function handleCheckFinished(newBuild) {
-    const obj = { lastCheck: new Date(), checking: false, newBuild: newBuild.newBuild };
-  },
-});
-let obj = {
-  MOBILE_NATIVE_UPDATE_CHECK_STARTED: function handleCheckStarted() {
-    const obj = {};
-    const merged = Object.assign(obj);
-    obj.checking = true;
-  },
-  MOBILE_NATIVE_UPDATE_CHECK_FAILED: function handleCheckFailed() {
-    const obj = {};
-    const merged = Object.assign(obj);
-    obj.checking = false;
-  },
-  MOBILE_NATIVE_UPDATE_CHECK_FINISHED: function handleCheckFinished(newBuild) {
-    const obj = { lastCheck: new Date(), checking: false, newBuild: newBuild.newBuild };
+    obj = { lastCheck: new Date(), checking: false, newBuild: newBuild.newBuild };
   },
 };
-const tmp3 = new timestampDefault("MobileNativeUpdateStore");
-const result = set.fileFinishedImporting("modules/mobile_native_updater/MobileNativeUpdateStore.tsx");
+const mobileNativeUpdateStore = new MobileNativeUpdateStore(DispatcherDefault, obj);
+const result = size.fileFinishedImporting("modules/mobile_native_updater/MobileNativeUpdateStore.tsx");
 
 export default mobileNativeUpdateStore;

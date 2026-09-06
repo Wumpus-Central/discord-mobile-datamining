@@ -1,13 +1,13 @@
 // discord_app/modules/messages/canEditMessage.tsx
-import set from "../../../_runtime/00002_set.js";
-import createMinimalMessageRecord from "MessageRecordUtils.tsx";
+import MessageRecordUtils from "MessageRecordUtils.tsx";
 import isSystemMessageDefault from "isSystemMessage.tsx";
-import ME from "../../Constants.tsx";
+import Constants from "../../Constants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-({ MessageFlags: c3, MessageStates: c4, MessageTypes: c5 } = ME);
-let result = set.fileFinishedImporting("modules/messages/canEditMessage.tsx");
+({ MessageFlags: c3, MessageStates: closure_4, MessageTypes: hasOwnProperty } = Constants);
+let result = size.fileFinishedImporting("modules/messages/canEditMessage.tsx");
 
-export default function canEditMessage(author) {
+export default function canEditMessage(author, arg1) {
   let tmp = null != arg1;
   if (tmp) {
     let tmp3 = author.author.id === arg1;
@@ -17,7 +17,7 @@ export default function canEditMessage(author) {
         const tmp8 = isSystemMessageDefault(author);
         let tmp9 = !tmp8;
         if (!tmp8) {
-          let result = createMinimalMessageRecord.canEditMessageWithStickers(author);
+          let result = MessageRecordUtils.canEditMessageWithStickers(author);
           if (result) {
             const hasFlagResult = author.hasFlag(constants.IS_VOICE_MESSAGE);
             let tmp14 = !hasFlagResult;
@@ -41,7 +41,6 @@ export default function canEditMessage(author) {
             result = tmp14;
           }
           tmp9 = result;
-          const obj = createMinimalMessageRecord;
         }
         tmp5 = tmp9;
         tmp6 = importDefault;

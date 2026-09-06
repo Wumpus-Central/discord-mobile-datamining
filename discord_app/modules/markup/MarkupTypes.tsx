@@ -1,7 +1,7 @@
 // discord_app/modules/markup/MarkupTypes.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/markup/MarkupTypes.tsx");
+const result = size.fileFinishedImporting("modules/markup/MarkupTypes.tsx");
 
 export const AST_KEY = {
   TEXT: "text",

@@ -1,23 +1,21 @@
 // discord_app/modules/video_calls/useIsStreamFocused.tsx
-import closure_2 from "../calls/ChannelRTCStore.tsx";
-import { isStreamParticipant } from "../calls/CallConstants.tsx";
+import ChannelRTCStore from "../calls/ChannelRTCStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/video_calls/useIsStreamFocused.tsx");
+const require = fn;
+const isStreamParticipant = fn(4581).isStreamParticipant;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/useIsStreamFocused.tsx");
 
 export const useIsStreamFocused = function useIsStreamFocused(id) {
-  const _require = id;
-  const items = [closure_2];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
-    items,
-    () => {
-      let selectedParticipant = null;
-      if (null != closure_0) {
-        selectedParticipant = closure_1_2.getSelectedParticipant(tmp);
-      }
-      return selectedParticipant;
-    },
-  );
+  _require = id;
+  const items = [ChannelRTCStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
+    let selectedParticipant = null;
+    if (null != closure_0) {
+      selectedParticipant = ChannelRTCStore.getSelectedParticipant(tmp);
+    }
+    return selectedParticipant;
+  });
   let tmp2 = null != stateFromStores;
   if (tmp2) {
     tmp2 = isStreamParticipant(stateFromStores);

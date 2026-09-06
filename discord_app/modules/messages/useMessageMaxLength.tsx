@@ -1,19 +1,20 @@
 // discord_app/modules/messages/useMessageMaxLength.tsx
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import getPremiumPlanItemDefault from "../../utils/PremiumUtils.tsx";
-import closure_3 from "../../stores/UserStore.tsx";
-import ME from "../../Constants.tsx";
+import PremiumUtilsDefault from "../../utils/PremiumUtils.tsx";
+import UserStore from "../../stores/UserStore.tsx";
 
-require = arg1;
-({ MAX_MESSAGE_LENGTH_PREMIUM: c4, MAX_MESSAGE_LENGTH: c5 } = ME);
-const result = require("set").fileFinishedImporting("modules/messages/useMessageMaxLength.tsx");
+require = fn;
+const Constants = fn(1074);
+({ MAX_MESSAGE_LENGTH_PREMIUM: closure_4, MAX_MESSAGE_LENGTH: hasOwnProperty } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/useMessageMaxLength.tsx");
 
 export default function useMessageMaxLength() {
-  const items = [closure_3];
+  const items = [UserStore];
   return initialize.useStateFromStores(items, () =>
-    callback(table[2]).canUseIncreasedMessageLength(currentUser.getCurrentUser()) ? closure_4 : closure_5,
+    PremiumUtilsDefault.canUseIncreasedMessageLength(currentUser.getCurrentUser()) ? closure_1_4 : closure_1_5,
   );
 }
 export const getMaxMessageLength = function getMaxMessageLength() {
-  return getPremiumPlanItemDefault.canUseIncreasedMessageLength(currentUser.getCurrentUser()) ? closure_4 : closure_5;
+  return PremiumUtilsDefault.canUseIncreasedMessageLength(UserStore.getCurrentUser()) ? React4 : hasOwnProperty;
 };

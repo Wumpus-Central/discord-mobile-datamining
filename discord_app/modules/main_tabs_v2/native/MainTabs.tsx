@@ -1,34 +1,35 @@
 // discord_app/modules/main_tabs_v2/native/MainTabs.tsx
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
-import ManaContext from "../../../../discord_common/js/packages/design/native.tsx";
-import getGuildThemeNameDefault from "../../client_themes/native/useColorThemeBackground.tsx";
-import getMixedGradientColorDefault from "../../client_themes/native/ThemedGradient.tsx";
-import useActiveThemeType from "../../client_themes/native/useActiveTheme.tsx";
-import _modDef16003 from "panels/MainTabsNavigatorPanel.tsx";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
-import importAllResult from "../../../../_runtime/00019_noop.js";
+import native from "../../../../discord_common/js/packages/design/native.tsx";
+import useColorThemeBackgroundDefault from "../../client_themes/native/useColorThemeBackground.tsx";
+import ThemedGradientDefault from "../../client_themes/native/ThemedGradient.tsx";
+import useActiveTheme from "../../client_themes/native/useActiveTheme.tsx";
+import MainTabsNavigatorPanelDefault from "panels/MainTabsNavigatorPanel.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = createCacheKey.createStyles({ container: { flex: 1 } });
-const memoResult = importAllResult.memo(function MainTabs() {
-  let obj = useActiveThemeType;
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4560);
+let closure_6 = createStyles.createStyles({ container: { flex: 1 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/MainTabs.tsx");
+
+export default noop.memo(function MainTabs() {
+  let obj = useActiveTheme;
   const isCustomThemeActive = obj.useIsCustomThemeActive();
-  const tmp = getGuildThemeNameDefault();
+  const tmp = useColorThemeBackgroundDefault();
   const rect = useSafeAreaInsetsDefault();
-  obj = { style: items, children: null };
-  items = [callback3().container, { marginLeft: rect.left, marginRight: rect.right }];
+  obj = { style: null, children: null };
+  const items = [closure_6().container, { marginLeft: rect.left, marginRight: rect.right }];
+  obj.style = items;
   obj = { gradient: tmp, children: null };
   const items1 = [
-    callback(getMixedGradientColorDefault, { absolute: true, mix: isCustomThemeActive }),
-    callback(_modDef16003, {}),
+    React4(ThemedGradientDefault, { absolute: true, mix: isCustomThemeActive }),
+    React4(MainTabsNavigatorPanelDefault, {}),
   ];
-  obj[1] = items1;
-  obj[1] = callback2(ManaContext.ThemeContextProvider, obj);
-  return callback(View, obj);
+  obj.children = items1;
+  obj.children = hasOwnProperty(native.ThemeContextProvider, obj);
+  return React4(View, obj);
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/MainTabs.tsx");
-
-export default memoResult;

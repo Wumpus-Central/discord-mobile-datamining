@@ -1,40 +1,44 @@
 // discord_app/modules/guild_scheduled_events/native/components/GuildEventVoiceBanner.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../../stores/SelectedChannelStore.tsx";
-import { isGuildScheduledEventActive as closure_6 } from "../../GuildScheduledEventStore.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import GuildScheduledEventModalActionCreators from "../GuildScheduledEventModalActionCreators.tsx";
+import guild_scheduled_events_GuildScheduledEventModalActionCreators from "../../GuildScheduledEventModalActionCreators.native.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import SelectedChannelStore from "../../../../stores/SelectedChannelStore.tsx";
 
-const require = arg1;
-let c3 = importAllResult;
-({ jsx: error, jsxs: closure_8 } = jsxProd);
+require = fn;
+const View = fn(17).View;
+let closure_6 = fn(7526).isGuildScheduledEventActive;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4560);
 let obj = { header: null, descriptionContainerStyle: null, buttonContainer: null };
 obj = {
   margin: 12,
   padding: 12,
-  borderRadius: ThemesDefault.radii.sm,
-  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderRadius: nativeDefault.radii.sm,
+  borderColor: nativeDefault.colors.BORDER_SUBTLE,
   borderWidth: 1,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
-obj[0] = obj;
-obj[1] = { paddingTop: 4 };
-obj[2] = { marginTop: 12 };
-let closure_9 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo((channel) => {
+obj.header = obj;
+obj.descriptionContainerStyle = { paddingTop: 4 };
+obj.buttonContainer = { marginTop: 12 };
+let closure_9 = createStyles.createStyles(obj);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventVoiceBanner.tsx");
+
+export default noop.memo((channel) => {
   channel = channel.channel;
-  let activeEvent;
   let first;
   let nextRecurrenceIdInEvent;
-  let tmp = callback3();
+  let tmp = closure_9();
   let obj = channel(first[7]);
-  activeEvent = obj.useActiveEvent(channel.id);
-  obj1 = channel(first[7]);
+  const activeEvent = obj.useActiveEvent(channel.id);
+  let obj1 = channel(first[7]);
   const imminentUpcomingGuildEvents = obj1.useImminentUpcomingGuildEvents(channel.id);
   let obj2 = channel(first[8]);
-  const items = [closure_5];
+  const items = [SelectedChannelStore];
   let tmp7 = activeEvent;
   const stateFromStores = obj2.useStateFromStores(items, () => voiceChannelId.getVoiceChannelId());
   if (activeEvent == null) {
@@ -45,8 +49,8 @@ const memoResult = importAllResult.memo((channel) => {
     tmp7 = first;
   }
   first = tmp7;
-  let tmp2Result = tmp2(tmp3[9]);
-  tmp2Result = tmp2(tmp3[10]);
+  tmp2(tmp3[9]);
+  const tmp2Result = tmp2(tmp3[10]);
   nextRecurrenceIdInEvent = tmp2Result.getNextRecurrenceIdInEvent(tmp7);
   const items1 = [tmp7, channel, activeEvent, nextRecurrenceIdInEvent];
   [][0] = tmp7;
@@ -56,29 +60,25 @@ const memoResult = importAllResult.memo((channel) => {
       tmp = null != first;
     }
     if (tmp) {
-      activeEvent(first[11]).hideActionSheet();
-      const obj = activeEvent(first[11]);
-      let result = channel(first[12]).openStartGuildEventModal(first, nextRecurrenceIdInEvent, () => {
-        const result = closure_1_0(closure_1_2[13]).openVoiceChannelActionSheet(closure_0);
-      });
-      const obj2 = channel(first[12]);
+      ActionSheetActionCreatorsDefault.hideActionSheet();
+      let result = GuildScheduledEventModalActionCreators.openStartGuildEventModal(
+        first,
+        nextRecurrenceIdInEvent,
+        () => {
+          const result = channel(first[13]).openVoiceChannelActionSheet(closure_1_0);
+        },
+      );
     }
   }, items1);
   if (null == tmp7) {
     return null;
   } else {
     let tmp18Result = stateFromStores === channel.id;
-    obj = { accessibilityRole: "button", onPress: null, style: null, children: null };
-    obj[1] = tmp12;
-    obj[2] = tmp.header;
-    obj = { event: null, showUserCount: false };
-    obj[0] = tmp7;
-    const items2 = [callback2(tmp2(tmp3[16]).GuildEventCardHeader, obj), ,];
-    obj1 = { event: null, descriptionContainerStyle: null, condensed: null };
-    obj1[0] = tmp7;
-    obj1[1] = tmp.descriptionContainerStyle;
-    obj1[2] = tmp18Result;
-    items2[1] = callback2(tmp2(tmp3[16]).GuildEventCardMetaInfo, obj1);
+    obj = { accessibilityRole: "button", onPress: tmp12, style: tmp.header, children: null };
+    obj = { event: tmp7, showUserCount: false };
+    const items2 = [closure_7(tmp2(tmp3[16]).GuildEventCardHeader, obj), ,];
+    obj1 = { event: tmp7, descriptionContainerStyle: tmp.descriptionContainerStyle, condensed: tmp18Result };
+    items2[1] = closure_7(tmp2(tmp3[16]).GuildEventCardMetaInfo, obj1);
     if (tmp18Result) {
       tmp18Result = canManageGuildEventResult;
     }
@@ -86,23 +86,17 @@ const memoResult = importAllResult.memo((channel) => {
       tmp18Result = !tmp16;
     }
     if (tmp18Result) {
-      obj2 = { style: null, children: null };
-      obj2[0] = tmp.buttonContainer;
+      obj2 = { style: tmp.buttonContainer, children: null };
       const obj3 = { text: null, onPress: null, variant: "active", size: "sm", grow: true };
       const intl = tmp2(tmp3[18]).intl;
-      obj3[0] = intl.string(tmp2(tmp3[18]).t.cK1GGY);
-      obj3[1] = callback;
-      obj2[1] = tmp18(tmp2(tmp3[17]).Button, obj3);
+      obj3.text = intl.string(tmp2(tmp3[18]).t.cK1GGY);
+      obj3.onPress = callback;
+      obj2.children = tmp18(tmp2(tmp3[17]).Button, obj3);
       tmp18Result = tmp18(View, obj2);
     }
     items2[2] = tmp18Result;
-    obj[3] = items2;
+    obj.children = items2;
     return closure_8(tmp2(tmp3[15]).PressableOpacity, obj);
   }
   canManageGuildEventResult = tmp2Result.useManageResourcePermissions(channel).canManageGuildEvent(tmp7);
 });
-let result = require("set").fileFinishedImporting(
-  "modules/guild_scheduled_events/native/components/GuildEventVoiceBanner.tsx",
-);
-
-export default memoResult;

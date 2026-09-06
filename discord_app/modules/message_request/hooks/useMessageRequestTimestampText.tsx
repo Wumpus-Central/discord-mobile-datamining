@@ -1,70 +1,59 @@
 // discord_app/modules/message_request/hooks/useMessageRequestTimestampText.tsx
-import DISCORD_EPOCHDefault from "../../../utils/SnowflakeUtils.tsx";
-import hooksDefault from "../../../../_runtime/04153_hooks.js";
-import closure_3 from "../../../stores/ReadStateStore.tsx";
-import { getAccessibilityLabelFormatter } from "../../threads/ThreadUtils.tsx";
-import { loadMessageRequestData } from "useMessageRequestPreview.tsx";
+import SnowflakeUtilsDefault from "../../../utils/SnowflakeUtils.tsx";
+import _modDef4153 from "../../../../_runtime/metro/04153__.js";
+import ReadStateStore from "../../../stores/ReadStateStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/message_request/hooks/useMessageRequestTimestampText.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/message_request/hooks/useMessageRequestTimestampText.tsx");
 
 export const useMessageRequestTimestampText = function useMessageRequestTimestampText(channel) {
-  const _require = channel;
-  let obj = loadMessageRequestData;
+  _require = channel;
+  let obj = require("useMessageRequestPreview");
   const messageRequestPreview = obj.useMessageRequestPreview(channel);
-  obj = {
-    lastMessageId: require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
-      closure_1_3.lastMessageId(id.id),
-    ),
-  };
-  items = [closure_3];
+  obj = { lastMessageId: null };
+  const items = [ReadStateStore];
+  obj.lastMessageId = require("initialize").useStateFromStores(items, () => ReadStateStore.lastMessageId(id.id));
   const merged = Object.assign(messageRequestPreview);
   ({ lastMessageId, message } = obj);
   if (obj.loaded) {
     if (null != message) {
-      let extractTimestampResult = DISCORD_EPOCHDefault.extractTimestamp(message.id);
-      const obj5 = DISCORD_EPOCHDefault;
+      let extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(message.id);
     }
     let str = "";
     if (null != extractTimestampResult) {
-      str = hooksDefault(extractTimestampResult).calendar();
-      const obj6 = hooksDefault(extractTimestampResult);
+      str = _modDef4153(extractTimestampResult).calendar();
+      const obj6 = _modDef4153(extractTimestampResult);
     }
     return str;
   }
   extractTimestampResult = null;
   if (null != lastMessageId) {
-    extractTimestampResult = DISCORD_EPOCHDefault.extractTimestamp(lastMessageId);
-    const obj4 = DISCORD_EPOCHDefault;
+    extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(lastMessageId);
   }
 };
 export const useMessageRequestRelativeTimestampText = function useMessageRequestRelativeTimestampText(channel) {
-  const _require = channel;
-  let obj = loadMessageRequestData;
+  _require = channel;
+  let obj = require("useMessageRequestPreview");
   const messageRequestPreview = obj.useMessageRequestPreview(channel);
-  obj = {
-    lastMessageId: require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
-      closure_1_3.lastMessageId(id.id),
-    ),
-  };
-  items = [closure_3];
+  obj = { lastMessageId: null };
+  const items = [ReadStateStore];
+  obj.lastMessageId = require("initialize").useStateFromStores(items, () => ReadStateStore.lastMessageId(id.id));
   const merged = Object.assign(messageRequestPreview);
   ({ lastMessageId, message } = obj);
   if (obj.loaded) {
     if (null != message) {
-      let extractTimestampResult = DISCORD_EPOCHDefault.extractTimestamp(message.id);
-      const obj5 = DISCORD_EPOCHDefault;
+      let extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(message.id);
     }
     let str = "";
     if (null != extractTimestampResult) {
-      str = require("../../threads/ThreadUtils.tsx").getTimestampString(extractTimestampResult);
-      const tmpResult = getAccessibilityLabelFormatter;
+      str = require("ThreadUtils").getTimestampString(extractTimestampResult);
+      const tmpResult = require("ThreadUtils");
     }
     return str;
   }
   extractTimestampResult = null;
   if (null != lastMessageId) {
-    extractTimestampResult = DISCORD_EPOCHDefault.extractTimestamp(lastMessageId);
-    const obj4 = DISCORD_EPOCHDefault;
+    extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(lastMessageId);
   }
 };

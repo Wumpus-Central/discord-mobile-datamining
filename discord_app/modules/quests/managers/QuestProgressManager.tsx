@@ -1,62 +1,57 @@
 // discord_app/modules/quests/managers/QuestProgressManager.tsx
-import _slicedToArrayDefault from "../../../../_runtime/metro/00032__slicedToArray.js";
-import setDefault from "../../../utils/Durations.tsx";
-import _openRobloxURLWithRootPlaceId from "../../roblox_subgame_detection/RobloxSubgameUtils.tsx";
+import DispatcherDefault from "../../../Dispatcher.tsx";
+import DurationsDefault from "../../../utils/Durations.tsx";
+import GameAnalyticsUtils from "../../game_detection/GameAnalyticsUtils.tsx";
+import RobloxSubgameUtils from "../../roblox_subgame_detection/RobloxSubgameUtils.tsx";
+import RobloxSubgameTypes from "../../roblox_subgame_detection/RobloxSubgameTypes.tsx";
 import QuestVariants from "../../../../discord_common/js/shared/shared-constants/QuestVariants.tsx";
-import set2 from "../../../../discord_common/js/shared/shared-constants/FirstPartyQuestTaskTypes.tsx";
-import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
-import getQuestDeliveryDataForPlacement from "../utils/QuestDataUtils.tsx";
-import isSponsoredPlayQuest from "../utils/QuestUtils.tsx";
-import getApplicationIdsByTaskTypes from "../utils/QuestTaskUtils.tsx";
-import questMatchesActivity from "../utils/QuestMatchingUtils.tsx";
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../activities/EmbeddedActivitiesStore.tsx";
-import closure_5 from "../../frames/FramesStore.tsx";
-import closure_6 from "../../game_detection/RunningGameStore.native.tsx";
-import closure_7 from "../../../stores/ApplicationStreamingStore.tsx";
-import closure_8 from "../../../stores/DetectableGameStore.tsx";
-import closure_9 from "../../../stores/views/SortedVoiceStateStore.tsx";
-import closure_10 from "../QuestStore.tsx";
-import closure_11 from "../UnenrolledActivityQuestStore.tsx";
-import QuestsExperimentLocations from "../QuestConstants.tsx";
-import { isLaunched } from "../../frames/FramesConstants.tsx";
-import getQuestLogger from "../lib/getQuestLogger.tsx";
+import FirstPartyQuestTaskTypes from "../../../../discord_common/js/shared/shared-constants/FirstPartyQuestTaskTypes.tsx";
+import QuestDataUtils from "../utils/QuestDataUtils.tsx";
+import utils_QuestUtils from "../utils/QuestUtils.tsx";
+import QuestTaskUtils from "../utils/QuestTaskUtils.tsx";
+import QuestActionCreators from "../QuestActionCreators.tsx";
+import QuestMatchingUtils from "../utils/QuestMatchingUtils.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import EmbeddedActivitiesStore from "../../activities/EmbeddedActivitiesStore.tsx";
+import FramesStore from "../../frames/FramesStore.tsx";
+import RunningGameStore from "../../game_detection/RunningGameStore.native.tsx";
+import ApplicationStreamingStore from "../../../stores/ApplicationStreamingStore.tsx";
+import DetectableGameStore from "../../../stores/DetectableGameStore.tsx";
+import SortedVoiceStateStore from "../../../stores/views/SortedVoiceStateStore.tsx";
+import QuestStore from "../QuestStore.tsx";
+import UnenrolledActivityQuestStore from "../UnenrolledActivityQuestStore.tsx";
+import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
-require = arg1;
-function isQuestProgressable(item10047) {
-  const isQuestExpiredResult = getQuestDeliveryDataForPlacement.isQuestExpired(item10047);
+require = fn;
+function isQuestProgressable(nextResult) {
+  const isQuestExpiredResult = QuestDataUtils.isQuestExpired(nextResult);
   let tmp2 = !isQuestExpiredResult;
   if (!isQuestExpiredResult) {
-    tmp2 = null != item10047.userStatus;
+    tmp2 = null != nextResult.userStatus;
   }
   if (tmp2) {
-    tmp2 = null != item10047.userStatus.enrolledAt;
+    tmp2 = null != nextResult.userStatus.enrolledAt;
   }
   if (tmp2) {
-    tmp2 = null == item10047.userStatus.completedAt;
+    tmp2 = null == nextResult.userStatus.completedAt;
   }
   return tmp2;
 }
 function handleEmbeddedActivityLaunchSuccess(applicationId) {
-  let obj = questMatchesActivity;
-  const eligibleQuestsForApplicationId = obj.getEligibleQuestsForApplicationId(closure_10.quests, applicationId);
+  let obj = QuestMatchingUtils;
+  const eligibleQuestsForApplicationId = obj.getEligibleQuestsForApplicationId(QuestStore.quests, applicationId);
   for (const item10020 of eligibleQuestsForApplicationId) {
     if (tmp) {
-      let tmp4 = item10020;
       let features = tmp3.config.features;
       let tmp6 = require;
-      let tmp8 = dependencyMap;
-      let tmp5 = require;
-      let tmp7 = dependencyMap;
       if (features.includes(QuestVariants.QuestVariants.MOBILE_ACTIVITY_QUEST)) {
-        let tmp9 = tmp5;
-        let tmp10 = tmp7;
         let tmp6Result = tmp6(11276);
-        obj = { questContent: null, questContentCTA: null, sourceQuestContent: null };
-        obj[0] = tmp6(5447).QuestContent.RUNNING_ACTIVITY;
-        obj[1] = tmp6(7728).QuestContentCTA.START_QUEST;
-        obj[2] = tmp6(5447).QuestContent.RUNNING_ACTIVITY;
-        let tmp12 = obj2;
+        obj = {
+          questContent: tmp6(5447).QuestContent.RUNNING_ACTIVITY,
+          questContentCTA: tmp6(7728).QuestContentCTA.START_QUEST,
+          sourceQuestContent: tmp6(5447).QuestContent.RUNNING_ACTIVITY,
+        };
         let enrollInQuestResult = tmp6Result.enrollInQuest(item10020.id, obj);
         obj2.return();
         return enrollInQuestResult;
@@ -65,75 +60,74 @@ function handleEmbeddedActivityLaunchSuccess(applicationId) {
     continue;
   }
 }
-function isQuestRobloxRelated(arr, distributor) {
+function isQuestRobloxRelated(desktopApplicationIds, distributor) {
   let tmp = null != distributor;
   if (tmp) {
-    let someResult = arr.some((arg0) => arg0 === callback(table[20]).ROBLOX_APPLICATION_ID);
+    let someResult = desktopApplicationIds.some((item) => item === RobloxSubgameTypes.ROBLOX_APPLICATION_ID);
     if (someResult) {
-      someResult = _openRobloxURLWithRootPlaceId.isRobloxSubgame(distributor);
-      const obj = _openRobloxURLWithRootPlaceId;
+      someResult = RobloxSubgameUtils.isRobloxSubgame(distributor);
     }
     tmp = someResult;
   }
   return tmp;
 }
-_slicedToArrayDefault;
-({ DISCORD_APPLICATION_ID: closure_12, QuestsExperimentLocations } = QuestsExperimentLocations);
-const MINUTE = setDefault.Millis.MINUTE;
-const SECOND = setDefault.Millis.SECOND;
-getQuestLogger = { location: QuestsExperimentLocations.QUESTS_MANAGER };
-const questLogger = getQuestLogger.getQuestLogger(getQuestLogger);
-initializeDefault;
+const QuestConstants = fn(5444);
+({ DISCORD_APPLICATION_ID: closure_12, QuestsExperimentLocations } = QuestConstants);
+const isLaunched = fn(9511).isLaunched;
+const MINUTE = DurationsDefault.Millis.MINUTE;
+const SECOND = DurationsDefault.Millis.SECOND;
+fn(7709);
+const getQuestLogger = { location: QuestsExperimentLocations.QUESTS_MANAGER };
+const logger = getQuestLogger.getQuestLogger(getQuestLogger);
 class QuestProgressManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     closure_0 = applyArgumentsResult;
     obj = {};
     map = new Map();
-    obj[require("set").FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP] = map;
+    obj[closure_0(closure_2[23]).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP] = map;
     map1 = new Map();
-    obj[require("set").FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP] = map1;
+    obj[closure_0(closure_2[23]).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP] = map1;
     map2 = new Map();
-    obj[require("set").FirstPartyQuestTaskTypes.PLAY_ACTIVITY] = map2;
+    obj[closure_0(closure_2[23]).FirstPartyQuestTaskTypes.PLAY_ACTIVITY] = map2;
     applyArgumentsResult.heartbeats = obj;
     applyArgumentsResult.calculateHeartbeatDurationMs = function calculateHeartbeatDurationMs(arg0) {
       quests = quests.quests;
-      const value = quests.get(arg0);
+      value = quests.get(arg0);
       if (null != value) {
         if (null != value.config) {
           if (null != value.userStatus) {
-            const questTaskDetails = lib(7724).getQuestTaskDetails(
+            const questTaskDetails = applyArgumentsResult(7724).getQuestTaskDetails(
               value,
-              lib(5452).FirstPartyQuestTaskTypesSets.DESKTOP,
+              applyArgumentsResult(5452).FirstPartyQuestTaskTypesSets.DESKTOP,
             );
             const _Math = Math;
             const diff = questTaskDetails.targetSeconds - questTaskDetails.progressSeconds;
-            const bound = Math.max(0, diff * applyArgumentsResult(1090).Millis.SECOND);
-            let sum = closure_14;
-            if (bound <= closure_14) {
-              sum = bound + closure_15;
+            const bound = Math.max(0, diff * DurationsDefault.Millis.SECOND);
+            let sum = MINUTE;
+            if (bound <= MINUTE) {
+              sum = bound + SECOND;
             }
             return sum;
           }
         }
       }
-      return closure_14;
+      return MINUTE;
     };
     applyArgumentsResult.initiateHeartbeat = function initiateHeartbeat(arg0, arg1, arg2) {
-      const lib = arg0;
       closure_1 = arg1;
       closure_2 = arg2;
-      let obj = lib.heartbeats[arg1];
+      let obj = arg0.heartbeats[arg1];
       if (obj.has(arg0)) {
         let _HermesInternal2 = HermesInternal;
-        closure_1_16.log("~ initiateHeartbeat -> Heartbeat already initiated for questId: " + arg0);
+        logger.log("~ initiateHeartbeat -> Heartbeat already initiated for questId: " + arg0);
       } else {
         function maybeSendHeartbeat() {
-          obj = activelyProgressingQuests;
-          activelyProgressingQuests = activelyProgressingQuests.getActivelyProgressingQuests(closure_1);
-          if (activelyProgressingQuests.has(activelyProgressingQuests)) {
-            const value = activelyProgressingQuests.get(tmp2);
-            let applicationId;
+          obj = applyArgumentsResult;
+          const activelyProgressingQuests = applyArgumentsResult.getActivelyProgressingQuests(closure_1);
+          if (activelyProgressingQuests.has(closure_0)) {
+            value = activelyProgressingQuests.get(tmp2);
+            applicationId = undefined;
             if (value != null) {
               applicationId = value.applicationId;
             }
@@ -159,80 +153,69 @@ class QuestProgressManager extends tmp4 {
               }
               executablePath = executablePath1;
             }
-            let timerId = activelyProgressingQuests;
-            let tmp15 = closure_2_2;
-            if (tmp === activelyProgressingQuests(closure_2_2[23]).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP) {
-              const currentUserActiveStream = closure_2_7.getCurrentUserActiveStream();
+            let timerId = require;
+            if (tmp === FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP) {
+              const currentUserActiveStream = ApplicationStreamingStore.getCurrentUserActiveStream();
               if (null == currentUserActiveStream) {
                 const _HermesInternal3 = HermesInternal;
-                closure_2_16.log(
+                logger.log(
                   "~ initiateHeartbeat -> Attempted to beat for stream quest but no active stream, terminating heartbeat for questId: " +
                     tmp2,
                 );
                 obj.terminateHeartbeat(tmp2, tmp);
               } else {
                 const _HermesInternal4 = HermesInternal;
-                const timerIdResult = timerId(tmp15[25]);
-                closure_2_16.log("~ initiateHeartbeat -> Sending heartbeat for questId: " + tmp2);
-                const encodeStreamKeyResult = timerId(tmp15[25]).encodeStreamKey(currentUserActiveStream);
+                const timerIdResult = timerId(4612);
+                logger.log("~ initiateHeartbeat -> Sending heartbeat for questId: " + tmp2);
+                const encodeStreamKeyResult = timerId(4612).encodeStreamKey(currentUserActiveStream);
                 obj = {
-                  questId: null,
-                  streamKey: null,
-                  applicationId: null,
-                  executablePath: null,
-                  executableFingerprint: null,
+                  questId: tmp2,
+                  streamKey: encodeStreamKeyResult,
+                  applicationId,
+                  executablePath,
+                  executableFingerprint: prop,
                 };
-                obj[0] = tmp2;
-                obj[1] = encodeStreamKeyResult;
-                obj[2] = applicationId;
-                obj[3] = executablePath;
-                obj[4] = prop;
-                timerId(tmp15[17]).sendHeartbeat(obj);
-                const timerIdResult1 = timerId(tmp15[17]);
+                timerId(11276).sendHeartbeat(obj);
+                const timerIdResult1 = timerId(11276);
               }
             } else {
               const _HermesInternal2 = HermesInternal;
-              closure_2_16.log("~ initiateHeartbeat -> Sending heartbeat for questId: " + tmp2);
-              obj = { questId: null, applicationId: null, executablePath: null, executableFingerprint: null };
-              obj[0] = tmp2;
-              obj[1] = applicationId;
-              obj[2] = executablePath;
-              obj[3] = prop;
-              timerId(tmp15[17]).sendHeartbeat(obj);
-              const timerIdResult2 = timerId(tmp15[17]);
+              logger.log("~ initiateHeartbeat -> Sending heartbeat for questId: " + tmp2);
+              obj = { questId: tmp2, applicationId, executablePath, executableFingerprint: prop };
+              timerId(11276).sendHeartbeat(obj);
+              const timerIdResult2 = timerId(11276);
             }
             prop = obj.calculateHeartbeatDurationMs(tmp2);
             const _window = window;
             timerId = window.setTimeout(maybeSendHeartbeat, prop);
-            tmp15 = obj;
             const result = obj.set(tmp2, timerId);
           } else {
             const _HermesInternal = HermesInternal;
-            closure_2_16.log(
+            logger.log(
               "~ initiateHeartbeat -> Quest " + tmp2 + " is no longer actively progressing, terminating heartbeat",
             );
             obj.terminateHeartbeat(tmp2, tmp);
           }
         }
         let _HermesInternal = HermesInternal;
-        closure_1_16.log("~ initiateHeartbeat -> Initiating heartbeat for Quest " + arg0);
+        logger.log("~ initiateHeartbeat -> Initiating heartbeat for Quest " + arg0);
         maybeSendHeartbeat();
       }
     };
     applyArgumentsResult.terminateHeartbeat = function terminateHeartbeat(questId, item10030) {
-      let obj = lib.heartbeats[item10030];
-      const quests = closure_1_10.quests;
-      let value = obj.get(questId);
+      let obj = applyArgumentsResult.heartbeats[item10030];
+      quests = QuestStore.quests;
+      value = obj.get(questId);
       if (null != value) {
         const _HermesInternal2 = HermesInternal;
-        closure_1_16.log("~ terminateHeartbeat -> Terminating heartbeat for questId: " + questId);
+        logger.log("~ terminateHeartbeat -> Terminating heartbeat for questId: " + questId);
         const _window = window;
         window.clearTimeout(value);
         obj.delete(questId);
         value = quests.get(questId);
         let tmp6 = null != value;
         if (tmp6) {
-          const isQuestExpiredResult = lib(closure_1_2[14]).isQuestExpired(value);
+          const isQuestExpiredResult = QuestDataUtils.isQuestExpired(value);
           let tmp5 = !isQuestExpiredResult;
           if (!isQuestExpiredResult) {
             tmp5 = null != value.userStatus;
@@ -244,32 +227,28 @@ class QuestProgressManager extends tmp4 {
             tmp5 = null == value.userStatus.completedAt;
           }
           tmp6 = tmp5;
-          const obj2 = lib(closure_1_2[14]);
         }
         if (tmp6) {
           const _HermesInternal = HermesInternal;
           obj5.log("~ terminateHeartbeat -> Sending terminal heartbeat for questId: " + questId);
-          obj = { questId: null, terminal: true };
-          obj[0] = questId;
-          lib(closure_1_2[17]).sendHeartbeat(obj);
-          const obj3 = lib(closure_1_2[17]);
+          obj = { questId, terminal: true };
+          QuestActionCreators.sendHeartbeat(obj);
         }
-        obj5 = closure_1_16;
+        obj5 = logger;
       }
     };
     applyArgumentsResult.handleSendHeartbeatSuccess = function handleSendHeartbeatSuccess(questId) {
       questId = questId.questId;
-      closure_1_16.log("~ handleSendHeartbeatSuccess -> Heartbeat succeeded for questId: " + questId + ")");
+      logger.log("~ handleSendHeartbeatSuccess -> Heartbeat succeeded for questId: " + questId + ")");
       if (null != questId.userStatus.completedAt) {
         const _HermesInternal = HermesInternal;
-        closure_1_16.log(
+        logger.log(
           "~ handleSendHeartbeatSuccess -> Quest " + questId + " completed, terminating any heartbeats for it",
         );
         const _Object = Object;
-        const keys = Object.keys(lib.heartbeats);
+        const keys = Object.keys(applyArgumentsResult.heartbeats);
         for (const item10030 of keys) {
-          let tmp7 = lib;
-          let terminateHeartbeatResult = lib.terminateHeartbeat(questId, item10030);
+          let terminateHeartbeatResult = applyArgumentsResult.terminateHeartbeat(questId, item10030);
           continue;
         }
       }
@@ -280,22 +259,22 @@ class QuestProgressManager extends tmp4 {
     obj = {
       QUESTS_FETCH_CURRENT_QUESTS_SUCCESS() {
         const items = [
-          lib(closure_1_2[23]).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP,
-          lib(closure_1_2[23]).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP,
+          FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP,
+          FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP,
         ];
-        return lib.syncHeartbeats(items, "QUESTS_FETCH_CURRENT_QUESTS_SUCCESS");
+        return applyArgumentsResult.syncHeartbeats(items, "QUESTS_FETCH_CURRENT_QUESTS_SUCCESS");
       },
       QUESTS_ENROLL_SUCCESS() {
         const items = [
-          lib(closure_1_2[23]).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP,
-          lib(closure_1_2[23]).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP,
-          lib(closure_1_2[23]).FirstPartyQuestTaskTypes.PLAY_ACTIVITY,
+          FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP,
+          FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP,
+          FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ACTIVITY,
         ];
-        return lib.syncHeartbeats(items, "QUESTS_ENROLL_SUCCESS", (config) => {
+        return applyArgumentsResult.syncHeartbeats(items, "QUESTS_ENROLL_SUCCESS", (config) => {
           let hasItem = null != config;
           if (hasItem) {
             const features = config.config.features;
-            hasItem = features.includes(callback(table[16]).QuestVariants.MANUAL_HEARTBEAT_INITIALIZATION);
+            hasItem = features.includes(closure_1_0(dependencyMap[16]).QuestVariants.MANUAL_HEARTBEAT_INITIALIZATION);
           }
           return !hasItem;
         });
@@ -304,162 +283,93 @@ class QuestProgressManager extends tmp4 {
       QUESTS_SEND_HEARTBEAT_FAILURE: applyArgumentsResult.handleSendHeartbeatFailure,
       QUESTS_PREVIEW_UPDATE_SUCCESS() {
         const items = [
-          lib(closure_1_2[23]).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP,
-          lib(closure_1_2[23]).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP,
-          lib(closure_1_2[23]).FirstPartyQuestTaskTypes.PLAY_ACTIVITY,
+          FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP,
+          FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP,
+          FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ACTIVITY,
         ];
-        return lib.syncHeartbeats(items, "QUESTS_PREVIEW_UPDATE_SUCCESS");
+        return applyArgumentsResult.syncHeartbeats(items, "QUESTS_PREVIEW_UPDATE_SUCCESS");
       },
       GAME_FETCH_SUCCESS() {
-        return applyArgumentsResult(closure_1_2[29]).wait(() => {
-          const items = [closure_1_0(closure_1_2[23]).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
-          closure_0.syncHeartbeats(items, "GAME_FETCH_SUCCESS");
+        return DispatcherDefault.wait(() => {
+          const items = [applyArgumentsResult(5452).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
+          closure_1_0.syncHeartbeats(items, "GAME_FETCH_SUCCESS");
         });
       },
       APPLICATIONS_FETCH_SUCCESS() {
-        return applyArgumentsResult(closure_1_2[29]).wait(() => {
-          const items = [closure_1_0(closure_1_2[23]).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
-          closure_0.syncHeartbeats(items, "APPLICATIONS_FETCH_SUCCESS");
+        return DispatcherDefault.wait(() => {
+          const items = [applyArgumentsResult(5452).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
+          closure_1_0.syncHeartbeats(items, "APPLICATIONS_FETCH_SUCCESS");
         });
       },
       RUNNING_GAMES_CHANGE() {
-        const items = [lib(closure_1_2[23]).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
-        return lib.syncHeartbeats(items, "RUNNING_GAMES_CHANGE");
+        const items = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
+        return applyArgumentsResult.syncHeartbeats(items, "RUNNING_GAMES_CHANGE");
       },
       RUNNING_NON_GAMES_CHANGE() {
-        const items = [lib(closure_1_2[23]).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
-        return lib.syncHeartbeats(items, "RUNNING_NON_GAMES_CHANGE");
+        const items = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
+        return applyArgumentsResult.syncHeartbeats(items, "RUNNING_NON_GAMES_CHANGE");
       },
       LOCAL_ACTIVITY_UPDATE() {
-        return applyArgumentsResult(closure_1_2[29]).wait(() => {
-          const items = [closure_1_0(closure_1_2[23]).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
-          closure_0.syncHeartbeats(items, "LOCAL_ACTIVITY_UPDATE");
+        return DispatcherDefault.wait(() => {
+          const items = [applyArgumentsResult(5452).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
+          closure_1_0.syncHeartbeats(items, "LOCAL_ACTIVITY_UPDATE");
         });
       },
       RPC_APP_DISCONNECTED() {
-        return applyArgumentsResult(closure_1_2[29]).wait(() => {
-          const items = [closure_1_0(closure_1_2[23]).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
-          closure_0.syncHeartbeats(items, "RPC_APP_DISCONNECTED");
+        return DispatcherDefault.wait(() => {
+          const items = [applyArgumentsResult(5452).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
+          closure_1_0.syncHeartbeats(items, "RPC_APP_DISCONNECTED");
         });
       },
       STREAM_START() {
-        const items = [lib(closure_1_2[23]).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP];
-        return lib.syncHeartbeats(items, "STREAM_START");
+        const items = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP];
+        return applyArgumentsResult.syncHeartbeats(items, "STREAM_START");
       },
       STREAM_CREATE() {
-        const items = [lib(closure_1_2[23]).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP];
-        return lib.syncHeartbeats(items, "STREAM_CREATE");
+        const items = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP];
+        return applyArgumentsResult.syncHeartbeats(items, "STREAM_CREATE");
       },
       STREAM_CLOSE() {
-        const items = [lib(closure_1_2[23]).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP];
-        return lib.syncHeartbeats(items, "STREAM_CLOSE");
+        const items = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP];
+        return applyArgumentsResult.syncHeartbeats(items, "STREAM_CLOSE");
       },
       PASSIVE_UPDATE_V2() {
-        const items = [lib(closure_1_2[23]).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP];
-        return lib.syncHeartbeats(items, "PASSIVE_UPDATE_V2");
+        const items = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP];
+        return applyArgumentsResult.syncHeartbeats(items, "PASSIVE_UPDATE_V2");
       },
       VOICE_STATE_UPDATES() {
-        const items = [lib(closure_1_2[23]).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP];
-        return lib.syncHeartbeats(items, "VOICE_STATE_UPDATES");
+        const items = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP];
+        return applyArgumentsResult.syncHeartbeats(items, "VOICE_STATE_UPDATES");
       },
       EMBEDDED_ACTIVITY_LAUNCH_SUCCESS(applicationId) {
-        callback(applicationId.applicationId);
+        handleEmbeddedActivityLaunchSuccess(applicationId.applicationId);
       },
       FRAME_LAUNCH: null,
       FRAME_STOP: null,
       EMBEDDED_ACTIVITY_UPDATE_V2: null,
       QUEST_APPLICATION_START_TIMER: null,
     };
-    closure_0 = undefined;
-    closure_1 = applyArgumentsResult;
-    closure_0 = closure_3((arg0) => {
-      closure_0 = arg0;
-      c3 = 0;
-      c4 = 0;
-      const iter = (function* (arg0) {
-        if (c4 === 2) {
-          c4 = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp4 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            return { value: "HermesInternal", done: null };
-          }
-        } else {
-          try {
-            c4 = 2;
-            if (0 === c3) {
-              if (arg0 === 1) {
-                c4 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c4 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                closure_2 = tmp5;
-                closure_1 = tmp2;
-                let applicationId;
-                applicationId = applicationId.applicationId;
-                c3 = 1;
-                c4 = 1;
-                return { value: "PX_16", done: true };
-              }
-            } else if (1 === tmp5) {
-              if (arg0 === 1) {
-                c4 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c4 = 3;
-                obj1 = { value: null, done: true };
-                obj1[0] = arg1;
-                return obj1;
-              } else {
-                c3 = 2;
-                c4 = 1;
-                const obj2 = { value: null, done: false };
-                obj2[0] = closure_1_18(callback);
-                return obj2;
-              }
-            } else if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const items = [callback(closure_1_2[23]).FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
-              closure_1.syncHeartbeats(items, "FRAME_LAUNCH", (config) => {
-                let hasItem = null != config;
-                if (hasItem) {
-                  const features = config.config.features;
-                  hasItem = features.includes(applicationId(table[16]).QuestVariants.MANUAL_HEARTBEAT_INITIALIZATION);
-                }
-                return !hasItem;
-              });
-              c4 = 3;
-              return { value: "HermesInternal", done: null };
-            }
-          } catch (tmp17) {
-            c4 = tmp;
-            throw tmp17;
-          }
+    closure_129_0 = undefined;
+    closure_129_1 = applyArgumentsResult;
+    closure_129_0 = closure_3(async (arg0) => {
+      await closure_1_18(applicationId);
+      const items = [applyArgumentsResult(dependencyMap[23]).FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
+      closure_130_1.syncHeartbeats(items, "FRAME_LAUNCH", (config) => {
+        let hasItem = null != config;
+        if (hasItem) {
+          const features = config.config.features;
+          hasItem = features.includes(closure_1_0(closure_1_2[16]).QuestVariants.MANUAL_HEARTBEAT_INITIALIZATION);
         }
-      })();
-      iter.next();
-      return iter;
+        return !hasItem;
+      });
+      await "HermesInternal";
+      closure_1 = tmp2;
+      applicationId = applyArgumentsResult.applicationId;
+      return "PX_16";
     });
-    obj[17] = function FRAME_LAUNCH(arg0) {
+    obj.FRAME_LAUNCH = function FRAME_LAUNCH(arg0) {
       const self = this;
-      const apply = closure_0.apply;
+      const apply = applyArgumentsResult.apply;
       if (typeof apply === "unknown") {
         applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
@@ -467,25 +377,25 @@ class QuestProgressManager extends tmp4 {
       }
       return applyArgumentsResult;
     };
-    obj[18] = function FRAME_STOP() {
-      const items = [lib(closure_1_2[23]).FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
-      lib.syncHeartbeats(items, "FRAME_STOP");
+    obj.FRAME_STOP = function FRAME_STOP() {
+      const items = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
+      applyArgumentsResult.syncHeartbeats(items, "FRAME_STOP");
     };
-    obj[19] = function EMBEDDED_ACTIVITY_UPDATE_V2() {
-      const items = [lib(closure_1_2[23]).FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
-      lib.syncHeartbeats(items, "EMBEDDED_ACTIVITY_UPDATE_V2", (config) => {
+    obj.EMBEDDED_ACTIVITY_UPDATE_V2 = function EMBEDDED_ACTIVITY_UPDATE_V2() {
+      const items = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
+      applyArgumentsResult.syncHeartbeats(items, "EMBEDDED_ACTIVITY_UPDATE_V2", (config) => {
         let hasItem = null != config;
         if (hasItem) {
           const features = config.config.features;
-          hasItem = features.includes(callback(table[16]).QuestVariants.MANUAL_HEARTBEAT_INITIALIZATION);
+          hasItem = features.includes(closure_1_0(dependencyMap[16]).QuestVariants.MANUAL_HEARTBEAT_INITIALIZATION);
         }
         return !hasItem;
       });
     };
-    obj[20] = function QUEST_APPLICATION_START_TIMER(questId) {
+    obj.QUEST_APPLICATION_START_TIMER = function QUEST_APPLICATION_START_TIMER(questId) {
       questId = questId.questId;
-      const items = [lib(closure_1_2[23]).FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
-      questId.syncHeartbeats(items, "QUEST_APPLICATION_START_TIMER", (id) => {
+      const items = [FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
+      applyArgumentsResult.syncHeartbeats(items, "QUEST_APPLICATION_START_TIMER", (id) => {
         let tmp = null != id;
         if (tmp) {
           tmp = id.id === questId;
@@ -494,7 +404,7 @@ class QuestProgressManager extends tmp4 {
           let hasItem = null != id;
           if (hasItem) {
             const features = id.config.features;
-            hasItem = features.includes(questId(closure_1_2[16]).QuestVariants.MANUAL_HEARTBEAT_INITIALIZATION);
+            hasItem = features.includes(applyArgumentsResult(5445).QuestVariants.MANUAL_HEARTBEAT_INITIALIZATION);
           }
           tmp = hasItem;
         }
@@ -507,23 +417,23 @@ class QuestProgressManager extends tmp4 {
 }
 const prototype = QuestProgressManager.prototype;
 prototype["syncHeartbeats"] = function syncHeartbeats(items, APPLICATIONS_FETCH_SUCCESS, arg2) {};
-prototype["getActivelyProgressingQuests"] = function getActivelyProgressingQuests(closure_1) {
+prototype["getActivelyProgressingQuests"] = function getActivelyProgressingQuests(arg0) {
   const self = this;
-  if (set2.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP === closure_1) {
+  if (FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP === arg0) {
     return self.getActivelyProgressingPlayOnDesktopQuests();
-  } else if (tmp(5452).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP === closure_1) {
+  } else if (tmp(5452).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP === arg0) {
     return self.getActivelyProgressingStreamOnDesktopQuests();
-  } else if (tmp(5452).FirstPartyQuestTaskTypes.PLAY_ACTIVITY === closure_1) {
+  } else if (tmp(5452).FirstPartyQuestTaskTypes.PLAY_ACTIVITY === arg0) {
     return self.getActivelyProgressingActivityQuests();
   } else {
-    tmp(1369).assertNever(closure_1);
+    tmp(1369).assertNever(arg0);
   }
 };
 prototype["getActivelyProgressingPlayOnDesktopQuests"] = function getActivelyProgressingPlayOnDesktopQuests() {
   const map = new Map();
-  const runningGames = store.getRunningGames();
-  const runningNonGames = store.getRunningNonGames();
-  const quests = closure_10.quests;
+  const runningGames = RunningGameStore.getRunningGames();
+  const runningNonGames = RunningGameStore.getRunningNonGames();
+  const quests = QuestStore.quests;
   logger.log(
     "~ getActivelyProgressingPlayOnDesktopQuestIds -> Running games: ",
     runningGames,
@@ -536,37 +446,21 @@ prototype["getActivelyProgressingPlayOnDesktopQuests"] = function getActivelyPro
   while (iter !== undefined) {
     let tmp5 = nextResult;
     if (!nextResult.isLauncher) {
-      let tmp6 = nextResult;
       let id = tmp5.id;
       let tmp7 = id;
       if (null == id) {
-        let tmp8 = store;
-        let tmp9 = nextResult;
-        let overrideForGame = store.getOverrideForGame(tmp5);
-        if (null == tmp5.distributor) {
-          let tmp11 = overrideForGame;
-        }
-        let tmp12 = closure_8;
-        let tmp13 = nextResult;
-        let findGameResult = closure_8.findGame(tmp5);
+        let overrideForGame = RunningGameStore.getOverrideForGame(tmp5);
+        let findGameResult = DetectableGameStore.findGame(tmp5);
         id = undefined;
         if (findGameResult != null) {
           id = findGameResult.id;
         }
         tmp7 = id;
       }
-      let tmp16 = tmp7;
       if (null != tmp7) {
-        let tmp17 = map;
-        let tmp18 = obj;
         let obj3 = map(obj[15]);
-        let tmp19 = nextResult;
-        let tmp20 = tmp7;
         let questApplicationIdsForRunningGame = obj3.getQuestApplicationIdsForRunningGame(tmp5, tmp7);
-        let tmp22 = questApplicationIdsForRunningGame;
-        let tmp23 = questApplicationIdsForRunningGame;
         for (const item10062 of questApplicationIdsForRunningGame) {
-          let tmp24 = nextResult;
           obj[item10062] = tmp5;
           continue;
         }
@@ -577,54 +471,37 @@ prototype["getActivelyProgressingPlayOnDesktopQuests"] = function getActivelyPro
   for (const item10070 of runningNonGames) {
     let tmp25 = item10070;
     if (null != item10070.id) {
-      let tmp26 = item10070;
       obj[tmp25.id] = tmp25;
     }
     continue;
   }
   function _loop(iter2) {
-    obj = map(obj[27]);
+    closure_0 = iter2;
+    obj = GameAnalyticsUtils;
     const result = obj.removeExecutablePathPrefix(tmp.exePath);
     const values = quests.values();
     const iter = values[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp5 = nextResult;
-      let tmp6 = map;
-      let tmp7 = map;
-      let tmp8 = obj;
-      let tmp9 = obj;
-      let obj2 = map(obj[24]);
+      let tmp7 = require;
+      let obj2 = QuestTaskUtils;
       let desktopApplicationIds = obj2.getDesktopApplicationIds(nextResult);
-      let tmp10 = closure_1_17;
-      if (closure_1_17(nextResult)) {
-        let tmp11 = desktopApplicationIds;
+      if (isQuestProgressable(nextResult)) {
         if (null != desktopApplicationIds) {
-          let tmp23 = desktopApplicationIds;
-          let found = desktopApplicationIds.find((arg0) => arg0 === closure_0);
+          let found = desktopApplicationIds.find((item) => item === closure_0);
           if (null != found) {
-            let tmp19 = map;
-            let tmp20 = nextResult;
             obj = { applicationId: null, executablePath: null, executableFingerprint: null };
-            let tmp21 = found;
-            obj[0] = tmp25;
-            obj[1] = result;
-            obj[2] = tmp.executableFingerprint;
+            obj.applicationId = tmp25;
+            obj.executablePath = result;
+            obj.executableFingerprint = tmp.executableFingerprint;
             let result1 = map.set(tmp5.id, obj);
-          } else {
-            let tmp12 = closure_1_19;
-            let tmp13 = desktopApplicationIds;
-            if (closure_1_19(desktopApplicationIds, tmp)) {
-              let tmp14 = map;
-              let tmp15 = nextResult;
-              obj = { applicationId: null, executablePath: null, executableFingerprint: null };
-              let tmp16 = tmp6;
-              let tmp17 = tmp8;
-              obj[0] = tmp7(tmp9[20]).ROBLOX_APPLICATION_ID;
-              obj[1] = result;
-              obj[2] = tmp.executableFingerprint;
-              let result2 = map.set(tmp5.id, obj);
-            }
+          } else if (isQuestRobloxRelated(desktopApplicationIds, tmp)) {
+            obj = { applicationId: null, executablePath: null, executableFingerprint: null };
+            obj.applicationId = tmp7(4691).ROBLOX_APPLICATION_ID;
+            obj.executablePath = result;
+            obj.executableFingerprint = tmp.executableFingerprint;
+            let result2 = map.set(tmp5.id, obj);
           }
         }
       }
@@ -645,10 +522,10 @@ prototype["getActivelyProgressingPlayOnDesktopQuests"] = function getActivelyPro
 };
 prototype["getActivelyProgressingStreamOnDesktopQuests"] = function getActivelyProgressingStreamOnDesktopQuests() {
   const map = new Map();
-  currentUserActiveStream = currentUserActiveStream.getCurrentUserActiveStream();
+  const currentUserActiveStream = ApplicationStreamingStore.getCurrentUserActiveStream();
   if (null == currentUserActiveStream) {
     return map;
-  } else if (closure_9.countVoiceStatesForChannel(currentUserActiveStream.channelId) < 2) {
+  } else if (SortedVoiceStateStore.countVoiceStatesForChannel(currentUserActiveStream.channelId) < 2) {
     return map;
   } else {
     const streamerActiveStreamMetadata = obj2.getStreamerActiveStreamMetadata();
@@ -663,28 +540,21 @@ prototype["getActivelyProgressingStreamOnDesktopQuests"] = function getActivelyP
       if (null == id) {
         return map;
       } else {
-        const quests = closure_10.quests;
+        const quests = QuestStore.quests;
         const values = quests.values();
         const iter = values[Symbol.iterator]();
         const nextResult = iter.next();
         while (iter !== undefined) {
-          let tmp6 = require;
-          let tmp7 = dependencyMap;
           let tmp5 = nextResult;
-          let obj3 = getApplicationIdsByTaskTypes;
+          let obj3 = QuestTaskUtils;
           let streamingApplicationId = obj3.getStreamingApplicationId(nextResult);
-          let tmp9 = isQuestProgressable;
           let tmp10 = isQuestProgressable(nextResult);
           if (tmp10) {
-            let tmp11 = streamingApplicationId;
             tmp10 = null != streamingApplicationId;
           }
           if (tmp10) {
-            let tmp12 = streamingApplicationId;
             if (streamingApplicationId === id) {
-              let tmp13 = nextResult;
-              let obj = { applicationId: null };
-              obj[0] = id;
+              let obj = { applicationId: id };
               let result = map.set(tmp5.id, obj);
             }
           }
@@ -699,12 +569,12 @@ prototype["getActivelyProgressingStreamOnDesktopQuests"] = function getActivelyP
       }
     }
   }
-  obj2 = currentUserActiveStream;
+  obj2 = ApplicationStreamingStore;
 };
 prototype["getActivelyProgressingActivityQuests"] = function getActivelyProgressingActivityQuests() {
   const map = new Map();
-  selfEmbeddedActivities = selfEmbeddedActivities.getSelfEmbeddedActivities();
-  mainFrame = mainFrame.getMainFrame();
+  const selfEmbeddedActivities = EmbeddedActivitiesStore.getSelfEmbeddedActivities();
+  const mainFrame = FramesStore.getMainFrame();
   const set = new Set(selfEmbeddedActivities.keys());
   if (isLaunched(mainFrame)) {
     set.add(mainFrame.applicationId);
@@ -713,34 +583,24 @@ prototype["getActivelyProgressingActivityQuests"] = function getActivelyProgress
   if (0 === set.size) {
     return map;
   } else {
-    const quests = closure_10.quests;
+    const quests = QuestStore.quests;
     const iter = tmp2[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp8 = nextResult;
       let values = quests.values();
-      let tmp10 = values;
-      let tmp11 = values;
       for (const item10047 of values) {
-        let tmp13 = require;
-        let tmp14 = dependencyMap;
         let tmp12 = item10047;
-        let obj4 = getApplicationIdsByTaskTypes;
+        let obj4 = QuestTaskUtils;
         let playActivityApplicationId = obj4.getPlayActivityApplicationId(item10047);
-        let tmp16 = isQuestProgressable;
         let tmp17 = isQuestProgressable(item10047);
         if (tmp17) {
-          let tmp18 = playActivityApplicationId;
           tmp17 = null != playActivityApplicationId;
         }
         if (tmp17) {
-          let tmp19 = playActivityApplicationId;
-          let tmp20 = nextResult;
           if (playActivityApplicationId === tmp8) {
-            let tmp21 = item10047;
             let obj = { applicationId: null };
-            let tmp22 = nextResult;
-            obj[0] = tmp8;
+            obj.applicationId = tmp8;
             let result = map.set(tmp12.id, obj);
           }
         }
@@ -751,20 +611,14 @@ prototype["getActivelyProgressingActivityQuests"] = function getActivelyProgress
     values = quests.values();
     for (const item10074 of values) {
       let tmp27 = item10074;
-      let tmp28 = isQuestProgressable;
       let result1 = isQuestProgressable(item10074);
       if (result1) {
-        let tmp30 = require;
-        let tmp31 = dependencyMap;
-        let obj6 = isSponsoredPlayQuest;
-        let tmp32 = item10074;
+        let obj6 = utils_QuestUtils;
         result1 = obj6.isPlayAnyActivityQuest(tmp27);
       }
       if (result1) {
-        let tmp33 = item10074;
         obj = { applicationId: null };
-        let tmp34 = closure_12;
-        obj[0] = closure_12;
+        obj.applicationId = applicationId;
         let result2 = map.set(tmp27.id, obj);
       }
       continue;
@@ -775,6 +629,7 @@ prototype["getActivelyProgressingActivityQuests"] = function getActivelyProgress
   }
 };
 const questProgressManager = new QuestProgressManager();
-let result = require("set").fileFinishedImporting("modules/quests/managers/QuestProgressManager.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/quests/managers/QuestProgressManager.tsx");
 
 export default questProgressManager;

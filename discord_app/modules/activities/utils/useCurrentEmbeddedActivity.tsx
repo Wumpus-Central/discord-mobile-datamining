@@ -1,11 +1,12 @@
 // discord_app/modules/activities/utils/useCurrentEmbeddedActivity.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import closure_2 from "../EmbeddedActivitiesStore.tsx";
+import EmbeddedActivitiesStore from "../EmbeddedActivitiesStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/activities/utils/useCurrentEmbeddedActivity.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/utils/useCurrentEmbeddedActivity.tsx");
 
 export default function useCurrentEmbeddedActivity() {
-  const items = [closure_2];
+  const items = [EmbeddedActivitiesStore];
   return initialize.useStateFromStores(items, () => currentEmbeddedActivity.getCurrentEmbeddedActivity());
 }

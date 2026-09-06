@@ -1,6 +1,6 @@
 // discord_app/modules/gateway/GatewayEncodingErlpackEncoding.native.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/gateway/GatewayEncodingErlpackEncoding.native.tsx");
+const result = size.fileFinishedImporting("modules/gateway/GatewayEncodingErlpackEncoding.native.tsx");
 
 export function getErlpackEncoding() {}

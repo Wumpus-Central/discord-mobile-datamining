@@ -11,12 +11,17 @@ import NatureIcon from "../../../../../design/components/Icon/native/redesign/ge
 import FoodIcon from "../../../../../design/components/Icon/native/redesign/generated/FoodIcon.tsx";
 import BicycleIcon from "../../../../../design/components/Icon/native/redesign/generated/BicycleIcon.tsx";
 import ObjectIcon from "../../../../../design/components/Icon/native/redesign/generated/ObjectIcon.tsx";
-import { EmojiCategories } from "../../../EmojiPickerConstants.tsx";
-import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
-import importAllResult from "../../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-const memoResult = importAllResult.memo(function EmojiPickerCategoryIcon(id) {
+require = fn;
+const EmojiCategories = fn(5463).EmojiCategories;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting(
+  "modules/emoji_picker/native/components/categories/EmojiPickerCategoryIcon.tsx",
+);
+
+export default noop.memo(function EmojiPickerCategoryIcon(id) {
   id = id.id;
   if (EmojiCategories.TOP_GUILD_EMOJI === id) {
     return jsx(TrophyIcon.TrophyIcon, {});
@@ -47,8 +52,3 @@ const memoResult = importAllResult.memo(function EmojiPickerCategoryIcon(id) {
     return jsx(NitroWheelIcon.NitroWheelIcon, {});
   }
 });
-const result = require("set").fileFinishedImporting(
-  "modules/emoji_picker/native/components/categories/EmojiPickerCategoryIcon.tsx",
-);
-
-export default memoResult;

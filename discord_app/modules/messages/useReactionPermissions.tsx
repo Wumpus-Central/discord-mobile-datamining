@@ -1,82 +1,82 @@
 // discord_app/modules/messages/useReactionPermissions.tsx
-import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../lurker_mode/LurkingStore.tsx";
-import closure_5 from "../../stores/GuildMemberStore.tsx";
-import closure_6 from "../../stores/GuildVerificationStore.tsx";
-import closure_7 from "../../stores/PermissionStore.tsx";
-import { Permissions } from "../../Constants.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import LurkingStore from "../lurker_mode/LurkingStore.tsx";
+import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
+import GuildVerificationStore from "../../stores/GuildVerificationStore.tsx";
+import PermissionStore from "../../stores/PermissionStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/messages/useReactionPermissions.tsx");
+const require = fn;
+const Permissions = fn(1074).Permissions;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/useReactionPermissions.tsx");
 
 export default function useReactionPermissions(guild_id) {
-  const _require = guild_id;
+  _require = guild_id;
   guild_id = undefined;
   if (guild_id != null) {
     guild_id = guild_id.guild_id;
   }
-  let obj = _require(stateFromStores[6]);
-  const items = [closure_6];
+  let obj = require("initialize");
+  const items = [GuildVerificationStore];
   const items1 = [guild_id];
   stateFromStores = obj.useStateFromStores(
     items,
     () => {
       let canChatInGuildResult = null == guild_id;
       if (!canChatInGuildResult) {
-        canChatInGuildResult = closure_1_6.canChatInGuild(tmp);
+        canChatInGuildResult = GuildVerificationStore.canChatInGuild(tmp);
       }
       return canChatInGuildResult;
     },
     items1,
   );
-  const items2 = [closure_4];
+  const items2 = [LurkingStore];
   const items3 = [guild_id];
-  const stateFromStores1 = _require(stateFromStores[6]).useStateFromStores(
+  const stateFromStores1 = require("initialize").useStateFromStores(
     items2,
     () => {
       let isLurkingResult = null != guild_id;
       if (isLurkingResult) {
-        isLurkingResult = closure_1_4.isLurking(tmp);
+        isLurkingResult = LurkingStore.isLurking(tmp);
       }
       return isLurkingResult;
     },
     items3,
   );
-  const obj2 = _require(stateFromStores[6]);
+  const obj2 = require("initialize");
   const tmp2 = stateFromStores;
-  const items4 = [closure_5];
+  const items4 = [GuildMemberStore];
   const items5 = [guild_id];
-  const stateFromStores2 = _require(stateFromStores[6]).useStateFromStores(
+  const stateFromStores2 = require("initialize").useStateFromStores(
     items4,
     () => {
       let isCurrentUserGuestResult = null != guild_id;
       if (isCurrentUserGuestResult) {
-        isCurrentUserGuestResult = closure_1_5.isCurrentUserGuest(tmp);
+        isCurrentUserGuestResult = GuildMemberStore.isCurrentUserGuest(tmp);
       }
       return isCurrentUserGuestResult;
     },
     items5,
   );
-  const obj3 = _require(stateFromStores[6]);
-  const items6 = [closure_7];
+  const obj3 = require("initialize");
+  const items6 = [PermissionStore];
   const items7 = [stateFromStores, guild_id];
-  const stateFromStores3 = _require(stateFromStores[6]).useStateFromStores(
+  const stateFromStores3 = require("initialize").useStateFromStores(
     items6,
     () => {
       let canResult = stateFromStores;
       if (stateFromStores) {
-        canResult = closure_1_7.can(closure_1_8.ADD_REACTIONS, closure_0);
+        canResult = PermissionStore.can(Permissions.ADD_REACTIONS, closure_0);
       }
       return canResult;
     },
     items7,
   );
-  const obj4 = _require(stateFromStores[6]);
-  const currentUserAutomodQuaratinedProfile = _require(stateFromStores[7]).useCurrentUserAutomodQuaratinedProfile(
-    guild_id,
-  );
-  const obj5 = _require(stateFromStores[7]);
-  _require(stateFromStores[9]);
+  const obj4 = require("initialize");
+  const currentUserAutomodQuaratinedProfile =
+    require("AutomodPermissionUtils").useCurrentUserAutomodQuaratinedProfile(guild_id);
+  const obj5 = require("AutomodPermissionUtils");
+  require("ThreadHooks");
   if (null == guild_id) {
     obj = {
       disableReactionReads: true,
@@ -89,22 +89,15 @@ export default function useReactionPermissions(guild_id) {
   } else {
     obj = {};
     obj = {
-      channel: null,
-      canChat: null,
+      channel: guild_id,
+      canChat: stateFromStores,
       renderReactions: true,
-      canAddNewReactions: null,
-      isLurking: null,
-      communicationDisabled: null,
-      isActiveChannelOrUnarchivableThread: null,
-      isAutomodQuarantined: null,
+      canAddNewReactions: stateFromStores3,
+      isLurking: stateFromStores1,
+      communicationDisabled: _slicedToArray(obj6.useCurrentUserCommunicationDisabled(guild_id), 2)[1],
+      isActiveChannelOrUnarchivableThread: tmp9,
+      isAutomodQuarantined: currentUserAutomodQuaratinedProfile,
     };
-    obj[0] = guild_id;
-    obj[1] = stateFromStores;
-    obj[3] = stateFromStores3;
-    obj[4] = stateFromStores1;
-    obj[5] = callback(obj6.useCurrentUserCommunicationDisabled(guild_id), 2)[1];
-    obj[6] = tmp9;
-    obj[7] = currentUserAutomodQuaratinedProfile;
     const merged = Object.assign(guild_id(tmp2[10])(obj));
     obj.isLurking = stateFromStores1;
     obj.isGuest = stateFromStores2;

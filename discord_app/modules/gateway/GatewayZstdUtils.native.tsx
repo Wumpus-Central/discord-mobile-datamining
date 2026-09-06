@@ -1,15 +1,14 @@
 // discord_app/modules/gateway/GatewayZstdUtils.native.tsx
-import set from "../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
-import enforcingDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeCompressionModule.tsx";
+import _mod17 from "../../../_runtime/metro/00017__.js";
+import NativeCompressionModuleDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeCompressionModule.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const NativeModules = get_ActivityIndicator.NativeModules;
-const result = set.fileFinishedImporting("modules/gateway/GatewayZstdUtils.native.tsx");
+const NativeModules = _mod17.NativeModules;
+const result = size.fileFinishedImporting("modules/gateway/GatewayZstdUtils.native.tsx");
 
 export const supportsZstd = function supportsZstd() {
   if (obj.isAndroid()) {
-    let flag = enforcingDefault.getConstants().supportsZstd;
-    const obj2 = enforcingDefault;
+    let flag = NativeCompressionModuleDefault.getConstants().supportsZstd;
   } else {
     const DCDCompressionManager = NativeModules.DCDCompressionManager;
     flag = undefined;
@@ -23,7 +22,7 @@ export const supportsZstd = function supportsZstd() {
   return flag;
 };
 export const createZstdContextWeb = function createZstdContextWeb() {
-  error = new Error(
+  const error = new Error(
     "Attempting to use createZstdContextWeb in a native context. Use MobileGatewayCompressionHandler instead.",
   );
   throw error;

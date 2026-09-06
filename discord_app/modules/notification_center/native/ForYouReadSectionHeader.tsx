@@ -1,38 +1,37 @@
 // discord_app/modules/notification_center/native/ForYouReadSectionHeader.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-({ View: obj1, StyleSheet } = get_ActivityIndicator);
-createCacheKey = { container: null, textHeader: null };
-createCacheKey = {
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: c2, StyleSheet } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { container: null, textHeader: null };
+createStyles = {
   borderTopWidth: StyleSheet.hairlineWidth,
-  borderTopColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderTopColor: nativeDefault.colors.BORDER_SUBTLE,
   marginVertical: 8,
   paddingHorizontal: 24,
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { color: ThemesDefault.colors.TEXT_SUBTLE, marginTop: 20 };
-let closure_4 = createCacheKey.createStyles(createCacheKey);
-obj1 = { color: ThemesDefault.colors.TEXT_SUBTLE, marginTop: 20 };
-const result = require("set").fileFinishedImporting("modules/notification_center/native/ForYouReadSectionHeader.tsx");
+createStyles.container = createStyles;
+createStyles.textHeader = { color: nativeDefault.colors.TEXT_SUBTLE, marginTop: 20 };
+let closure_4 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/notification_center/native/ForYouReadSectionHeader.tsx");
 
 export const ForYouReadSectionHeader = function ForYouReadSectionHeader() {
-  const tmp = callback();
+  const tmp = closure_4();
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.textHeader, variant: "text-sm/semibold", children: null };
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.string(getSystemLocale.t.hftC1K);
-  obj[1] = jsx(Text.Text, { style: tmp.textHeader, variant: "text-sm/semibold", children: null });
+  const intl = util.intl;
+  obj.children = intl.string(util.t.hftC1K);
+  obj.children = jsx(Text_Text.Text, { style: tmp.textHeader, variant: "text-sm/semibold", children: null });
   return (
-    <closure_2 style={tmp.textHeader} variant="text-sm/semibold">
+    <React2 style={tmp.textHeader} variant="text-sm/semibold">
       {null}
-    </closure_2>
+    </React2>
   );
 };

@@ -1,12 +1,12 @@
 // discord_app/modules/voice_panel/native/HomeIndicator.tsx
-import { NativeModules } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import keys from "../../../../_runtime/00560_keys.js";
-import importAllResult from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-keys = keys.create(() => ({ autoHideHomeIndicator: false }));
+const require = fn;
+const NativeModules = fn(17).NativeModules;
+let module_560 = fn(560);
+module_560 = module_560.create(() => ({ autoHideHomeIndicator: false }));
 let HomeIndicator;
-const Component = importAllResult.Component;
+const Component = noop.Component;
 class HomeIndicator extends Component {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -61,14 +61,14 @@ HomeIndicator["_updatePropsStack"] = function _updatePropsStack() {
       obj = {};
     }
     const prefersHidden = obj.prefersHidden;
-    const callback = tmp;
+    const autoHideHomeIndicator = tmp;
     const prefersDeferringSystemGestures = obj.prefersDeferringSystemGestures;
-    callback(1249).batchUpdates(() => closure_1_4.setState({ autoHideHomeIndicator: closure_0 }));
-    const obj2 = callback(1249);
+    autoHideHomeIndicator(1249).batchUpdates(() => state.setState({ autoHideHomeIndicator }));
+    const obj2 = autoHideHomeIndicator(1249);
     const tmp2 = undefined !== prefersDeferringSystemGestures && prefersDeferringSystemGestures;
     if (obj3.isAndroid()) {
-      const result = callback2(1623).setNavigationBarVisible(!tmp);
-      const obj4 = callback2(1623);
+      const result = closure_1(1623).setNavigationBarVisible(!tmp);
+      const obj4 = closure_1(1623);
     } else if (DCDHomeIndicator.DCDHomeIndicator) {
       DCDHomeIndicator = tmp5.DCDHomeIndicator;
       DCDHomeIndicator.setPrefersAutoHidden(tmp);
@@ -93,7 +93,8 @@ prototype["render"] = function render() {
 HomeIndicator.defaultProps = { prefersHidden: false, prefersDeferringSystemGestures: false };
 HomeIndicator._propsStack = [];
 HomeIndicator._updateImmediate = null;
-let result = require("set").fileFinishedImporting("modules/voice_panel/native/HomeIndicator.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/voice_panel/native/HomeIndicator.tsx");
 
 export default HomeIndicator;
-export const useHomeIndicatorStore = keys;
+export const useHomeIndicatorStore = module_560;

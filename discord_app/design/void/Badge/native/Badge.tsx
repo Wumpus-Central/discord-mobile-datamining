@@ -1,14 +1,9 @@
 // discord_app/design/void/Badge/native/Badge.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../../modules/user_settings/LocaleStore.tsx";
-import PX_16 from "../../BadgeConstants/native/BadgeConstants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
-import set from "../../../../utils/PlatformUtils.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import LocaleStore from "../../../../modules/user_settings/LocaleStore.tsx";
 
-let require = arg1;
+let require = fn;
 class Badge {
   constructor(arg0) {
     value = global.value;
@@ -51,7 +46,7 @@ class Badge {
     closure_5 = items2;
     tmp = closure_0;
     tmp2 = c2;
-    obj = require("AccessibilityAnnouncer");
+    obj = closure_0(c2[9]);
     themeContext = obj.useThemeContext();
     flag5 = undefined;
     if (themeContext != null) {
@@ -64,7 +59,7 @@ class Badge {
     if (flag5 == null) {
       flag5 = false;
     }
-    tmpResult = require("initialize");
+    tmpResult = tmp(tmp2[10]);
     items = [];
     items[0] = closure_5;
     stateFromStores = tmpResult.useStateFromStores(items, () => items2.locale);
@@ -87,15 +82,15 @@ class Badge {
         importantForAccessibility: null,
         children: null,
       };
-      obj[1] = tmp5;
-      obj[2] = accessible;
-      obj[3] = accessibilityLabel;
-      obj[4] = accessibilityElementsHidden;
-      obj[5] = str;
+      obj.style = tmp5;
+      obj.accessible = accessible;
+      obj.accessibilityLabel = accessibilityLabel;
+      obj.accessibilityElementsHidden = accessibilityElementsHidden;
+      obj.importantForAccessibility = str;
       if (flag2) {
         tmp9 = null;
         if (0 === value) {
-          obj[6] = null;
+          obj.children = null;
           tmp7Result = tmp7(tmp8, obj);
         }
       }
@@ -104,7 +99,7 @@ class Badge {
         items2 = [,];
         items2[0] = items2.noCount;
         items2[1] = dotStyle;
-        obj1[0] = items2;
+        obj1.style = items2;
         tmp7Result1 = tmp7(tmp8, obj1);
       } else if (flag5) {
         obj2 = {
@@ -118,24 +113,24 @@ class Badge {
         items3 = [,];
         items3[0] = items2.experimentalBadgeText;
         items3[1] = textStyle;
-        obj2[2] = items3;
-        tmpResult1 = require("shortenAndLocalizeNumber");
+        obj2.style = items3;
+        tmpResult1 = tmp(tmp2[12]);
         tmp14 = globalThis;
         _Math2 = Math;
-        obj2[5] = tmpResult1.humanizeValue(Math.min(value, num), stateFromStores);
-        tmp7Result1 = tmp7(require("Text").Text, obj2);
+        obj2.children = tmpResult1.humanizeValue(Math.min(value, num), stateFromStores);
+        tmp7Result1 = tmp7(tmp(tmp2[11]).Text, obj2);
       } else {
         tmp10 = style;
         obj3 = { style: null, numberOfLines: 1, allowFontScaling: false, children: null };
         items4 = [,];
         items4[0] = items2.badgeText;
         items4[1] = textStyle;
-        obj3[0] = items4;
-        tmp11 = require("../../LegacyText/native/LegacyText.tsx");
-        tmpResult2 = require("shortenAndLocalizeNumber");
+        obj3.style = items4;
+        tmp11 = style(tmp2[13]);
+        tmpResult2 = tmp(tmp2[12]);
         tmp12 = globalThis;
         _Math = Math;
-        obj3[3] = tmpResult2.humanizeValue(Math.min(value, num), stateFromStores);
+        obj3.children = tmpResult2.humanizeValue(Math.min(value, num), stateFromStores);
         tmp7Result1 = tmp7(tmp11, obj3);
       }
       tmp15 = tmp7Result1;
@@ -145,10 +140,14 @@ class Badge {
     return tmp7Result;
   }
 }
-({ BADGE_MASK_SIZE: closure_6, BADGE_MASK_UNREAD_SIZE: error, BADGE_PADDING, BADGE_SIZE } = PX_16);
-const BADGE_SIZE_UNREAD = PX_16.BADGE_SIZE_UNREAD;
-createCacheKey = {
-  badgeMask: createCacheKey,
+const View = fn(17).View;
+const BadgeConstants = fn(1180);
+({ BADGE_MASK_SIZE: metroRequire, BADGE_MASK_UNREAD_SIZE: closure_7, BADGE_PADDING, BADGE_SIZE } = BadgeConstants);
+const BADGE_SIZE_UNREAD = BadgeConstants.BADGE_SIZE_UNREAD;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = {
+  badgeMask: { position: "absolute", bottom: -BADGE_PADDING, right: -BADGE_PADDING, padding: BADGE_PADDING, zIndex: 1 },
   badge: null,
   badgeText: null,
   experimentalBadgeText: null,
@@ -158,75 +157,64 @@ createCacheKey = {
   lowImportanceMention: null,
   eventsMentionBadge: null,
 };
-createCacheKey = {
-  position: "absolute",
-  bottom: -BADGE_PADDING,
-  right: -BADGE_PADDING,
-  padding: BADGE_PADDING,
-  zIndex: 1,
-};
-createCacheKey[1] = {
+createStyles = {
   paddingLeft: BADGE_PADDING,
   paddingRight: BADGE_PADDING,
-  borderRadius: ThemesDefault.space.PX_8,
+  borderRadius: nativeDefault.space.PX_8,
   justifyContent: "center",
   alignItems: "center",
   overflow: "hidden",
 };
-let obj2 = {
+createStyles.badge = createStyles;
+let obj1 = {
   minWidth: BADGE_SIZE - 2 * BADGE_PADDING,
-  color: ThemesDefault.colors.WHITE,
+  color: nativeDefault.colors.WHITE,
   fontSize: 12,
   lineHeight: null,
   fontFamily: null,
   textAlign: "center",
   textAlignVertical: null,
 };
-set = set.isAndroid();
-const space = ThemesDefault.space;
-obj2[3] = set ? space.PX_12 : space.PX_16;
-obj2[4] = require("ME").Fonts.PRIMARY_BOLD;
+let PlatformUtils = fn(1115);
+PlatformUtils = PlatformUtils.isAndroid();
+const space = nativeDefault.space;
+obj1.lineHeight = PlatformUtils ? space.PX_12 : space.PX_16;
+obj1.fontFamily = fn(1074).Fonts.PRIMARY_BOLD;
+PlatformUtils = fn(1115);
 let str;
-if (set.isAndroid()) {
+if (PlatformUtils.isAndroid()) {
   str = "center";
 }
-obj2[6] = str;
-createCacheKey[2] = obj2;
-const obj3 = { minWidth: BADGE_SIZE - 2 * BADGE_PADDING, color: ThemesDefault.colors.WHITE };
-if (set.isAndroid()) {
-  const obj4 = { lineHeight: null, textAlignVertical: "center" };
-  obj4[0] = ThemesDefault.space.PX_12;
-  set = obj4;
+obj1.textAlignVertical = str;
+createStyles.badgeText = obj1;
+let obj2 = { minWidth: BADGE_SIZE - 2 * BADGE_PADDING, color: nativeDefault.colors.WHITE };
+PlatformUtils = fn(1115);
+if (PlatformUtils.isAndroid()) {
+  const obj3 = { lineHeight: nativeDefault.space.PX_12, textAlignVertical: "center" };
+  PlatformUtils = obj3;
 } else {
-  set = {};
+  PlatformUtils = {};
 }
-set = Object.assign(set);
-obj3.textAlign = "center";
-createCacheKey[3] = obj3;
-set = { width: 5, height: 5, borderRadius: 2.5, backgroundColor: ThemesDefault.colors.WHITE };
-createCacheKey[4] = set;
-let obj1 = {
-  paddingLeft: BADGE_PADDING,
-  paddingRight: BADGE_PADDING,
-  borderRadius: ThemesDefault.space.PX_8,
-  justifyContent: "center",
-  alignItems: "center",
-  overflow: "hidden",
-};
-createCacheKey[5] = { backgroundColor: ThemesDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT };
-set = { backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION };
-createCacheKey[6] = set;
-const obj7 = { backgroundColor: ThemesDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT };
-createCacheKey[7] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG };
-const obj9 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG };
-createCacheKey[8] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG };
-let closure_11 = createCacheKey.createStyles(createCacheKey);
-const result = set.fileFinishedImporting("design/void/Badge/native/Badge.tsx");
+Object.assign(PlatformUtils);
+obj2.textAlign = "center";
+createStyles.experimentalBadgeText = obj2;
+let size = { width: 5, height: 5, borderRadius: 2.5, backgroundColor: nativeDefault.colors.WHITE };
+createStyles.noCount = size;
+PlatformUtils = { backgroundColor: nativeDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT };
+createStyles.unread = PlatformUtils;
+createStyles.mention = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION };
+PlatformUtils = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
+createStyles.lowImportanceMention = PlatformUtils;
+const obj6 = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION };
+createStyles.eventsMentionBadge = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
+let closure_11 = createStyles.createStyles(createStyles);
+size = fn(2);
+const result = size.fileFinishedImporting("design/void/Badge/native/Badge.tsx");
 
 export default Badge;
 export const MaskedBadge = function MaskedBadge(maskStyle) {
   maskStyle = maskStyle.maskStyle;
-  const value = maskStyle.value;
+  value = maskStyle.value;
   importDefault = value;
   let flag = maskStyle.unreadIndicator;
   ({
@@ -243,66 +231,52 @@ export const MaskedBadge = function MaskedBadge(maskStyle) {
   if (flag === undefined) {
     flag = false;
   }
-  closure_3 = undefined;
-  const tmp = callback();
-  closure_3 = tmp;
+  const tmp = closure_11();
+  const badgeMask = tmp;
   let items = [tmp, maskStyle, flag, value];
   if (value > 0) {
-    let obj = { pointerEvents: "none", style: null, onLayout: null, children: null };
-    obj[1] = tmp2;
-    obj[2] = onLayout;
+    let obj = { pointerEvents: "none", style: tmp2, onLayout, children: null };
     obj = {
-      style: null,
-      textStyle: null,
-      dotStyle: null,
-      value: null,
-      maxValue: null,
-      hideCount: null,
-      unreadIndicator: null,
-      accessibilityLabel: null,
-      accessibilityElementsHidden: null,
-      importantForAccessibility: null,
-      isMentionLowImportance: null,
+      style,
+      textStyle,
+      dotStyle,
+      value,
+      maxValue,
+      hideCount,
+      unreadIndicator: flag,
+      accessibilityLabel,
+      accessibilityElementsHidden,
+      importantForAccessibility,
+      isMentionLowImportance: maskStyle.isMentionLowImportance,
     };
-    obj[0] = style;
-    obj[1] = textStyle;
-    obj[2] = dotStyle;
-    obj[3] = value;
-    obj[4] = maxValue;
-    obj[5] = hideCount;
-    obj[6] = flag;
-    obj[7] = accessibilityLabel;
-    obj[8] = accessibilityElementsHidden;
-    obj[9] = importantForAccessibility;
-    obj[10] = maskStyle.isMentionLowImportance;
-    obj[3] = (
+    obj.children = (
       <Badge
-        style={null}
-        textStyle={null}
-        dotStyle={null}
-        value={null}
-        maxValue={null}
-        hideCount={null}
-        unreadIndicator={null}
-        accessibilityLabel={null}
-        accessibilityElementsHidden={null}
-        importantForAccessibility={null}
-        isMentionLowImportance={null}
+        style={style}
+        textStyle={textStyle}
+        dotStyle={dotStyle}
+        value={value}
+        maxValue={maxValue}
+        hideCount={hideCount}
+        unreadIndicator={flag}
+        accessibilityLabel={accessibilityLabel}
+        accessibilityElementsHidden={accessibilityElementsHidden}
+        importantForAccessibility={importantForAccessibility}
+        isMentionLowImportance={arg0.isMentionLowImportance}
       />
     );
     let tmp3 = (
       <View
-        style={null}
-        textStyle={null}
-        dotStyle={null}
-        value={null}
-        maxValue={null}
-        hideCount={null}
-        unreadIndicator={null}
-        accessibilityLabel={null}
-        accessibilityElementsHidden={null}
-        importantForAccessibility={null}
-        isMentionLowImportance={null}
+        style={style}
+        textStyle={textStyle}
+        dotStyle={dotStyle}
+        value={value}
+        maxValue={maxValue}
+        hideCount={hideCount}
+        unreadIndicator={flag}
+        accessibilityLabel={accessibilityLabel}
+        accessibilityElementsHidden={accessibilityElementsHidden}
+        importantForAccessibility={importantForAccessibility}
+        isMentionLowImportance={arg0.isMentionLowImportance}
       />
     );
   } else {

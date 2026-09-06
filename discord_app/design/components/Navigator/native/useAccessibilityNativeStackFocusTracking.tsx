@@ -1,20 +1,23 @@
 // discord_app/design/components/Navigator/native/useAccessibilityNativeStackFocusTracking.tsx
-import closure_2 from "../../../../../_runtime/00019_noop.js";
+import setAccessibilityFocusPreviousDefault from "../../../../modules/a11y/native/setAccessibilityFocusPrevious.tsx";
+import markAccessibilityFocusDefault from "../../../../modules/a11y/native/markAccessibilityFocus.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const result = require("set").fileFinishedImporting(
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "design/components/Navigator/native/useAccessibilityNativeStackFocusTracking.tsx",
 );
 
 export const useAccessibilityNativeStackFocusTracking = function useAccessibilityNativeStackFocusTracking() {
-  return React.useMemo(() => {
+  return noop.useMemo(() => {
     c0 = false;
     return {
       transitionStart(data) {
         if (data.data.closing) {
-          callback(closure_1_1[1])();
-        } else if (callback) {
-          callback = false;
-          callback(closure_1_1[2])();
+          markAccessibilityFocusDefault();
+        } else if (c0) {
+          c0 = false;
+          setAccessibilityFocusPreviousDefault();
         }
       },
       beforeRemove() {

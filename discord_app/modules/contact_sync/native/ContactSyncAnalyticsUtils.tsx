@@ -1,14 +1,13 @@
 // discord_app/modules/contact_sync/native/ContactSyncAnalyticsUtils.tsx
-import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
-import trackNUFStep from "../../nuf/native/NewUserAnalyticsUtils.tsx";
-import closure_3 from "../../../stores/UserStore.tsx";
-import { getIsOnboarding } from "ContactSyncModalStore.tsx";
-import { ContactPermissions } from "ContactSyncConstants.tsx";
-import { AnalyticEvents } from "../../../Constants.tsx";
-import { _uploadContacts } from "ContactSyncUtils.tsx";
+import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
+import NewUserAnalyticsUtils from "../../nuf/native/NewUserAnalyticsUtils.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
 
-require = arg1;
-let obj = {
+require = fn;
+const getIsOnboarding = fn(12677).getIsOnboarding;
+const ContactPermissions = fn(12678).ContactPermissions;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const Steps = {
   INITIALIZED: "Flow Initialized",
   LANDING: "Landing",
   PERMISSION_REQUESTED: "Contacts Permission Requested",
@@ -21,52 +20,51 @@ let obj = {
   COMPLETE: "Complete",
 };
 let c8 = null;
-let c9 = 0;
+let timestamp = 0;
 const Onboarding = "Onboarding";
-let result = require("set").fileFinishedImporting("modules/contact_sync/native/ContactSyncAnalyticsUtils.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/contact_sync/native/ContactSyncAnalyticsUtils.tsx");
 
-export const Steps = obj;
+export { Steps };
 export const CONTACT_SYNC_ONBOARDING_LOCATION = "Onboarding";
 export const trackFlowStart = function trackFlowStart(arg0) {
-  const _require = arg0;
+  _require = arg0;
   const LANDING = obj.LANDING;
   closure_9 = Date.now();
-  currentUser = currentUser.getCurrentUser();
+  const currentUser = UserStore.getCurrentUser();
   let phone;
   if (currentUser != null) {
     phone = currentUser.phone;
   }
-  closure_1 = null != phone;
-  obj = _uploadContacts;
+  const has_phone_number = null != phone;
+  obj = require("ContactSyncUtils");
   const result = obj.checkContactPermissions();
-  result.then((arg0) => {
+  result.then((result) => {
     let tmp = null;
-    if (arg0 !== closure_1_5.NOT_DETERMINED) {
+    if (result !== ContactPermissions.NOT_DETERMINED) {
       let str = "denied";
-      if (arg0 === closure_1_5.AUTHORIZED) {
+      if (result === ContactPermissions.AUTHORIZED) {
         str = "accepted";
       }
       tmp = str;
     }
-    obj = callback(closure_1_2[5]);
-    obj = {};
+    const obj = {};
     const merged = Object.assign(closure_0);
     obj.flow_type = "Contact Sync";
-    ({ INITIALIZED: obj2.from_step, LANDING: obj2.to_step } = closure_1_7);
+    ({ INITIALIZED: obj2.from_step, LANDING: obj2.to_step } = obj);
     obj.skip = false;
     obj.back = false;
     obj.seconds_on_from_step = 0;
-    obj.has_phone_number = callback;
+    obj.has_phone_number = has_phone_number;
     obj.mobile_contacts_permission = tmp;
-    obj.track(closure_1_6.CONTACT_SYNC_FLOW_KEY, obj);
+    obj.track(AnalyticEvents.CONTACT_SYNC_FLOW_KEY, obj);
   });
 };
 export const trackFlowStep = function trackFlowStep(LANDING, skip, back, location) {
   const tmp = getIsOnboarding();
-  const timestamp = Date.now();
+  timestamp = Date.now();
   const result = (timestamp - timestamp) / 1000;
-  obj = expandEventPropertiesDefault;
-  obj = {};
+  let obj = {};
   const merged = Object.assign(location);
   if (tmp) {
     let _location = Onboarding;
@@ -75,24 +73,21 @@ export const trackFlowStep = function trackFlowStep(LANDING, skip, back, locatio
   }
   obj.location = _location;
   obj.flow_type = "Contact Sync";
-  obj.from_step = closure_8;
+  obj.from_step = from_step;
   obj.to_step = LANDING;
   obj.skip = skip;
   obj.back = back;
   obj.seconds_on_from_step = result;
   obj.track(AnalyticEvents.CONTACT_SYNC_FLOW_KEY, obj);
   if (tmp) {
-    obj = { skip: null };
-    obj[0] = skip;
-    trackNUFStep.trackNUFStep(closure_8, LANDING, obj);
-    const obj3 = trackNUFStep;
+    obj = { skip };
+    NewUserAnalyticsUtils.trackNUFStep(from_step, LANDING, obj);
   }
-  closure_8 = LANDING;
+  from_step = LANDING;
 };
 export const trackFlowEnd = function trackFlowEnd(flag, location) {
-  const timestamp = Date.now();
-  obj = expandEventPropertiesDefault;
-  obj = {};
+  timestamp = Date.now();
+  const obj = {};
   const merged = Object.assign(location);
   if (tmp) {
     let _location = Onboarding;
@@ -101,11 +96,11 @@ export const trackFlowEnd = function trackFlowEnd(flag, location) {
   }
   obj.location = _location;
   obj.flow_type = "Contact Sync";
-  obj.from_step = c8;
+  obj.from_step = from_step;
   obj.to_step = obj.COMPLETE;
   obj.skip = flag;
   obj.back = false;
-  obj.seconds_on_from_step = (timestamp - c9) / 1000;
+  obj.seconds_on_from_step = (timestamp - timestamp) / 1000;
   obj.track(AnalyticEvents.CONTACT_SYNC_FLOW_KEY, obj);
-  c8 = null;
+  from_step = null;
 };

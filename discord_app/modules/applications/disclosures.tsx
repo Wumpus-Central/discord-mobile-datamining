@@ -1,121 +1,86 @@
 // discord_app/modules/applications/disclosures.tsx
-import create from "../../../discord_common/js/packages/protos/discord_protos/discord_kkv_store_value_models/v1/applications.tsx";
-import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import { Endpoints } from "../../Constants.tsx";
+import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import applications from "../../../discord_common/js/packages/protos/discord_protos/discord_kkv_store_value_models/v1/applications.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
-require = arg1;
-function _getDisclosures() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c2 = 0;
-    c3 = 0;
-    return (function* (arg0) {
-      closure_1 = tmp2;
-      const result = c3.APPLICATION_DISCLOSURES(lib);
-      const HTTP = lib(closure_1_1[2]).HTTP;
-      obj1 = { url: null, retries: 3, rejectWithError: null };
-      obj1[0] = result;
-      obj1[2] = lib(closure_1_1[2]).rejectWithMigratedError();
-      lib = yield HTTP.get(obj1);
-      const obj = { disclosures: null, ackedDisclosures: null, allAcked: null };
-      obj[0] = lib.body.disclosures;
-      obj[1] = lib.body.acked_disclosures;
-      obj[2] = lib.body.all_acked;
-      return obj;
-    })();
-  });
-  closure_4 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _ackDisclosures() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c3 = 0;
-    c2 = 0;
-    return (function* (arg0, arg1) {
-      if (c2 === 2) {
-        c2 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+require = fn;
+let closure_4 = async function _getDisclosures() {
+  closure_1 = tmp2;
+  const result = Endpoints.APPLICATION_DISCLOSURES(closure_0);
+  const HTTP = HTTPUtils.HTTP;
+  closure_129_0 = await HTTP.get({ url: result, retries: 3, rejectWithError: HTTPUtils.rejectWithMigratedError() });
+  return {
+    disclosures: closure_129_0.body.disclosures,
+    ackedDisclosures: closure_129_0.body.acked_disclosures,
+    allAcked: closure_129_0.body.all_acked,
+  };
+};
+let closure_5 = async function _ackDisclosures(arg0, disclosures) {
+  closure_0 = arg0;
+  c3 = 0;
+  c2 = 0;
+  return (async (arg0, value) => {
+    if (c2 === 2) {
+      c2 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          c2 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c2 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c2 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const result = c3.APPLICATION_DISCLOSURES(callback);
-              const HTTP = callback(1272).HTTP;
-              obj1 = { url: null, body: null, rejectWithError: null };
-              obj1[0] = result;
-              const obj2 = { disclosures: null };
-              obj2[0] = dependencyMap;
-              obj1[1] = obj2;
-              obj1[2] = callback(1272).rejectWithMigratedError();
-              c3 = 1;
-              c2 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = HTTP.post(obj1);
-              return obj3;
-            }
-          } else if (arg0 === 1) {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c2 = 2;
+        if (0 === c3) {
+          if (arg0 === 1) {
             c2 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c2 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
-            c2 = 3;
-            return { value: "HermesInternal", done: null };
+            const result = Endpoints.APPLICATION_DISCLOSURES(closure_0);
+            const HTTP = HTTPUtils.HTTP;
+            const request = { url: result, body: null, rejectWithError: null };
+            const obj1 = { disclosures };
+            request.body = obj1;
+            request.rejectWithError = HTTPUtils.rejectWithMigratedError();
+            c3 = 1;
+            c2 = 1;
+            const obj2 = { value: HTTP.post(request), done: false };
+            return obj2;
           }
-        } catch (tmp5) {
-          c2 = tmp;
-          throw tmp5;
+        } else if (arg0 === 1) {
+          c2 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c2 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          c2 = 3;
+          return { value: "HermesInternal", done: null };
         }
+      } catch (tmp5) {
+        c2 = tmp;
+        throw tmp5;
       }
-    })();
-  });
-  closure_5 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-let result = require("set").fileFinishedImporting("modules/applications/disclosures.tsx");
+    }
+  })();
+};
+const Endpoints = fn(1074).Endpoints;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/applications/disclosures.tsx");
 
-export const ApplicationDisclosure = require("create").ApplicationDisclosureType;
-export const getDisclosures = function getDisclosures(closure_0) {
+export const ApplicationDisclosure = fn(9241).ApplicationDisclosureType;
+export const getDisclosures = function getDisclosures() {
   const self = this;
-  const apply = _getDisclosures.apply;
+  const apply = closure_4.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -123,9 +88,9 @@ export const getDisclosures = function getDisclosures(closure_0) {
   }
   return applyArgumentsResult;
 };
-export const ackDisclosures = function ackDisclosures(closure_0, closure_1_50) {
+export const ackDisclosures = function ackDisclosures() {
   const self = this;
-  const apply = _ackDisclosures.apply;
+  const apply = closure_5.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -133,11 +98,11 @@ export const ackDisclosures = function ackDisclosures(closure_0, closure_1_50) {
   }
   return applyArgumentsResult;
 };
-export const getTextForDisclosure = function getTextForDisclosure(toFixed) {
-  if (create.ApplicationDisclosureType.IP_LOCATION === toFixed) {
+export const getTextForDisclosure = function getTextForDisclosure(disclosure) {
+  if (applications.ApplicationDisclosureType.IP_LOCATION === disclosure) {
     const intl2 = tmp(1114).intl;
     return intl2.string(tmp(1114).t["6wPmjo"]);
-  } else if (tmp(9241).ApplicationDisclosureType.DISPLAYS_ADVERTISEMENTS === toFixed) {
+  } else if (tmp(9241).ApplicationDisclosureType.DISPLAYS_ADVERTISEMENTS === disclosure) {
     const intl = tmp(1114).intl;
     return intl.string(tmp(1114).t["/uOMKZ"]);
   } else {

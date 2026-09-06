@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowAnalytics.tsx
-import DISCORD_EPOCHDefault from "../../../../../utils/SnowflakeUtils.tsx";
-import closure_2 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../../../stores/AuthenticationStore.tsx";
+import SnowflakeUtilsDefault from "../../../../../utils/SnowflakeUtils.tsx";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
+import AuthenticationStore from "../../../../../stores/AuthenticationStore.tsx";
 
 function convertNullableArrayToItemAndItemIndex(arg0) {
   const items = [];
@@ -12,7 +12,6 @@ function convertNullableArrayToItemAndItemIndex(arg0) {
     if (null === nextResult) {
       let arr = items1.push(-1);
     } else {
-      let tmp3 = nextResult;
       arr = items.push(tmp2);
       let arr1 = items1.push(items.length - 1);
     }
@@ -67,24 +66,31 @@ function getItemChannelId(channelId) {
   }
   return channelId;
 }
-const result = require("set").fileFinishedImporting(
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowAnalytics.tsx",
 );
 
 export const getAffinityProperties = function getAffinityProperties(data) {
-  id = id.getId();
-  let obj = DISCORD_EPOCHDefault;
+  const id = AuthenticationStore.getId();
+  let obj = SnowflakeUtilsDefault;
   if (obj.extractTimestamp(id) % 25 === 0) {
     obj = {};
     obj = { destination_channel_ids: null, destination_channel_ids_index: null };
-    [obj4[0], obj4[1]] = callback(convertNullableArrayToItemAndItemIndex(data.map(getItemChannelId)), 2);
+    [obj4.destination_channel_ids, obj4.destination_channel_ids_index] = _slicedToArray(
+      convertNullableArrayToItemAndItemIndex(data.map(getItemChannelId)),
+      2,
+    );
     const merged = Object.assign(obj);
-    const tmp6 = callback(convertNullableArrayToItemAndItemIndex(data.map(getItemChannelId)), 2);
-    obj1 = { highlighted_user_ids: null, highlighted_user_ids_index: null };
-    [obj5[0], obj5[1]] = callback(convertNullableArrayToItemAndItemIndex(data.map(getItemUserId)), 2);
+    const tmp6 = _slicedToArray(convertNullableArrayToItemAndItemIndex(data.map(getItemChannelId)), 2);
+    const obj1 = { highlighted_user_ids: null, highlighted_user_ids_index: null };
+    [obj5.highlighted_user_ids, obj5.highlighted_user_ids_index] = _slicedToArray(
+      convertNullableArrayToItemAndItemIndex(data.map(getItemUserId)),
+      2,
+    );
     const merged1 = Object.assign(obj1);
     let obj2 = obj;
-    const tmp11 = callback(convertNullableArrayToItemAndItemIndex(data.map(getItemUserId)), 2);
+    const tmp11 = _slicedToArray(convertNullableArrayToItemAndItemIndex(data.map(getItemUserId)), 2);
   } else {
     obj2 = {};
   }

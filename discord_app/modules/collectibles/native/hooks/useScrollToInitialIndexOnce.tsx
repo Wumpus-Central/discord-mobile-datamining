@@ -1,9 +1,8 @@
 // discord_app/modules/collectibles/native/hooks/useScrollToInitialIndexOnce.tsx
-import closure_0 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const result = require("set").fileFinishedImporting(
-  "modules/collectibles/native/hooks/useScrollToInitialIndexOnce.tsx",
-);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/native/hooks/useScrollToInitialIndexOnce.tsx");
 
 export const INITIAL_SCROLL_DELAY_MS = 100;
 export const useScrollToInitialIndexOnce = function useScrollToInitialIndexOnce(initialScrollIndex) {
@@ -15,12 +14,10 @@ export const useScrollToInitialIndexOnce = function useScrollToInitialIndexOnce(
     num = 100;
   }
   const resetKey = initialScrollIndex.resetKey;
-  closure_5 = undefined;
-  closure_6 = undefined;
-  closure_5 = initialScrollIndex.useRef(false);
-  closure_6 = initialScrollIndex.useRef(resetKey);
+  noop.useRef(false);
+  noop.useRef(resetKey);
   const items = [shouldScroll, initialScrollIndex, num, flashListRef, resetKey];
-  const effect = initialScrollIndex.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (ref2.current !== resetKey) {
       ref2.current = resetKey;
       ref.current = false;
@@ -35,8 +32,7 @@ export const useScrollToInitialIndexOnce = function useScrollToInitialIndexOnce(
       const timerId = setTimeout(() => {
         const current = ref.current;
         if (current != null) {
-          const obj = { animated: true, index: null };
-          obj[1] = closure_0;
+          const obj = { animated: true, index };
           current.scrollToIndex(obj);
         }
       }, num);

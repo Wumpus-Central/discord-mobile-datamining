@@ -1,9 +1,11 @@
 // discord_app/modules/wishlists/hooks/useAddToWishlistGridItems.tsx
-import closure_2 from "../../../../_runtime/00019_noop.js";
-import { PremiumSubscriptionSKUs } from "../../premium/PremiumConstants.tsx";
+import WishlistUtils from "../WishlistUtils.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/wishlists/hooks/useAddToWishlistGridItems.tsx");
+require = fn;
+const PremiumSubscriptionSKUs = fn(1373).PremiumSubscriptionSKUs;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/wishlists/hooks/useAddToWishlistGridItems.tsx");
 
 export const useAddToWishlistGridItems = function useAddToWishlistGridItems(userId) {
   const wishlist = userId.wishlist;
@@ -11,8 +13,6 @@ export const useAddToWishlistGridItems = function useAddToWishlistGridItems(user
   if (maxWishlistItemsToShow === undefined) {
     maxWishlistItemsToShow = numWishlistItemsToRecommend;
   }
-  let recommendations;
-  let memo;
   closure_4 = undefined;
   let obj = wishlist(maxWishlistItemsToShow[2]);
   const recommendationsForSingleUser = obj.useRecommendationsForSingleUser({
@@ -20,10 +20,10 @@ export const useAddToWishlistGridItems = function useAddToWishlistGridItems(user
     numItems: numWishlistItemsToRecommend,
     source: userId.source,
   });
-  recommendations = recommendationsForSingleUser.recommendations;
+  const recommendations = recommendationsForSingleUser.recommendations;
   const status = recommendationsForSingleUser.status;
   let items = [wishlist];
-  memo = recommendations.useMemo(() => {
+  const memo = recommendations.useMemo(() => {
     let mapped;
     if (wishlist != null) {
       const items = wishlist.items;
@@ -39,20 +39,16 @@ export const useAddToWishlistGridItems = function useAddToWishlistGridItems(user
     tmp2 = !memo.has(memo.TIER_2);
   }
   closure_4 = tmp2;
-  obj = {
-    items: recommendations.useMemo(() => {
-      const found = recommendations.filter((id) => !set.has(id.id));
-      const mapped = found.map((sku) => ({ sku, itemSource: "recommendation" }));
-      if (closure_4) {
-        const obj = { sku: null, itemSource: "takeover" };
-        obj[0] = wishlist(maxWishlistItemsToShow[3]).createNitroSuggestedSku();
-        mapped.unshift(obj);
-        const obj2 = wishlist(maxWishlistItemsToShow[3]);
-      }
-      return mapped.slice(0, maxWishlistItemsToShow);
-    }, items1),
-    status,
-  };
-  items1 = [recommendations, memo, tmp2, maxWishlistItemsToShow];
+  obj = { items: null, status };
+  const items1 = [recommendations, memo, tmp2, maxWishlistItemsToShow];
+  obj.items = recommendations.useMemo(() => {
+    const found = recommendations.filter((id) => !set.has(id.id));
+    const mapped = found.map((sku) => ({ sku, itemSource: "recommendation" }));
+    if (closure_4) {
+      const obj = { sku: WishlistUtils.createNitroSuggestedSku(), itemSource: "takeover" };
+      mapped.unshift(obj);
+    }
+    return mapped.slice(0, maxWishlistItemsToShow);
+  }, items1);
   return obj;
 };

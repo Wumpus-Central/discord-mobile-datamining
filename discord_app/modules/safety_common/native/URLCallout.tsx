@@ -1,46 +1,47 @@
 // discord_app/modules/safety_common/native/URLCallout.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
-import useUrlParts from "../../masked_link/SharedStateUtils.tsx";
-import { ScrollView } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import SharedStateUtils from "../../masked_link/SharedStateUtils.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-({ jsxs: c3, jsx: c4 } = jsxProd);
-createCacheKey = { linkCalloutContainer: null, linkCalloutContainerText: null };
-createCacheKey = {
+require = fn;
+const ScrollView = fn(17).ScrollView;
+const jsxProd = fn(21);
+({ jsxs: c3, jsx: closure_4 } = jsxProd);
+fn(4560);
+let createStyles = { linkCalloutContainer: null, linkCalloutContainerText: null };
+createStyles = {
   maxHeight: 300,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   width: "100%",
-  borderRadius: ThemesDefault.radii.md,
+  borderRadius: nativeDefault.radii.md,
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = {
-  padding: ThemesDefault.space.PX_8,
-  paddingVertical: ThemesDefault.space.PX_12,
+createStyles.linkCalloutContainer = createStyles;
+createStyles.linkCalloutContainerText = {
+  padding: nativeDefault.space.PX_8,
+  paddingVertical: nativeDefault.space.PX_12,
   textAlign: "center",
 };
-let closure_5 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { padding: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_12, textAlign: "center" };
-const result = require("set").fileFinishedImporting("modules/safety_common/native/URLCallout.tsx");
+let closure_5 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_common/native/URLCallout.tsx");
 
 export const URLCallout = function URLCallout(url) {
-  const tmp = callback3();
-  let obj = useUrlParts;
+  const tmp = closure_5();
+  let obj = SharedStateUtils;
   const urlParts = obj.useUrlParts(url.url);
   obj = { style: tmp.linkCalloutContainer, children: null };
   ({ protocol, hostname, theRestOfTheUrl } = urlParts);
   obj = { style: tmp.linkCalloutContainerText, variant: "text-md/normal", children: null };
+  const obj1 = { variant: "text-md/normal", color: "text-muted", children: null };
   const items = [protocol, "//"];
+  obj1.children = items;
   const items1 = [
-    callback(Text.Text, { variant: "text-md/normal", color: "text-muted", children: items }),
-    callback2(Text.Text, { variant: "text-md/semibold", color: "text-default", children: hostname }),
-    callback2(Text.Text, { variant: "text-md/normal", color: "text-muted", children: theRestOfTheUrl }),
+    React3(Text_Text.Text, obj1),
+    React4(Text_Text.Text, { variant: "text-md/semibold", color: "text-default", children: hostname }),
+    React4(Text_Text.Text, { variant: "text-md/normal", color: "text-muted", children: theRestOfTheUrl }),
   ];
-  obj[2] = items1;
-  obj[1] = callback(Text.Text, obj);
-  return callback2(ScrollView, obj);
+  obj.children = items1;
+  obj.children = React3(Text_Text.Text, obj);
+  return React4(ScrollView, obj);
 };

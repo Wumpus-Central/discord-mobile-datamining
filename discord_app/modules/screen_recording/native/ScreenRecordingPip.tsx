@@ -1,16 +1,15 @@
 // discord_app/modules/screen_recording/native/ScreenRecordingPip.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import { useScreenRecordingStore } from "ScreenRecordingStore.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
+import spring from "../../../design/animation/reanimated/spring/spring.tsx";
+import springPresets from "../../../design/animation/reanimated/spring/springPresets.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
+require = fn;
 function DraggableContainer(children) {
   const x = children.x;
-  const _require = x;
+  _require = x;
   const y = children.y;
   importDefault = y;
   const contentWidth = children.contentWidth;
@@ -20,75 +19,74 @@ function DraggableContainer(children) {
     num = 0;
   }
   const onChangePosition = children.onChangePosition;
-  let sharedValue;
-  let sharedValue1;
-  closure_8 = undefined;
-  closure_9 = undefined;
-  let callback;
-  let obj = _require(contentWidth[7]);
-  sharedValue = obj.useSharedValue(x.get());
-  obj1 = _require(contentWidth[7]);
-  sharedValue1 = obj1.useSharedValue(y.get());
-  const tmp4 = importDefault(contentWidth[8])();
+  let getClampedPosition;
+  let obj = require("ReanimatedRexport");
+  const sharedValue = obj.useSharedValue(x.get());
+  let obj1 = require("ReanimatedRexport");
+  const sharedValue1 = obj1.useSharedValue(y.get());
+  const tmp4 = require("useSafeAreaInsetsSharedValue")();
   closure_8 = tmp4;
-  const tmp5 = importDefault(contentWidth[9])();
+  const tmp5 = require("useWindowDimensionsSharedValue")();
   closure_9 = tmp5;
   class C {
     constructor(arg0, arg1) {
       value = closure_9.get();
       ({ width, height } = value);
       rect = closure_8.get();
-      obj = { x: null, y: null };
-      obj2 = closure_0(contentWidth[7]);
-      obj[0] = obj2.clamp(children, rect.left + c4, width - rect.right - contentWidth - c4);
-      obj3 = closure_0(contentWidth[7]);
-      obj[1] = obj3.clamp(arg1, rect.top + c4, height - rect.bottom - contentHeight - c4);
-      return obj;
+      point = { x: null, y: null };
+      obj2 = closure_0(closure_2[7]);
+      point.x = obj2.clamp(children, rect.left + c4, width - rect.right - contentWidth - c4);
+      obj3 = closure_0(closure_2[7]);
+      point.y = obj3.clamp(arg1, rect.top + c4, height - rect.bottom - contentHeight - c4);
+      return point;
     }
   }
   obj = {
     windowDimensionsSharedValue: tmp5,
     insetsSharedValue: tmp4,
-    clamp: _require(contentWidth[7]).clamp,
+    clamp: require("ReanimatedRexport").clamp,
     dragBoundsPadding: num,
     contentWidth,
     contentHeight,
   };
   C.__closure = obj;
   C.__workletHash = 5314404716267;
-  C.__initData = closure_12;
+  C.__initData = __initData;
   let items = [contentHeight, contentWidth, num, tmp4, tmp5];
-  callback = num.useCallback(C, items);
-  let obj3 = _require(contentWidth[10]);
-  obj = { onActivate: fn, onUpdate: fn2, onDeactivate: null };
-  fn = function b() {
-    const result = sharedValue.set(store.get());
-    const result1 = sharedValue1.set(store2.get());
+  getClampedPosition = num.useCallback(C, items);
+  const tmp = closure_11();
+  obj = { onActivate: null, onUpdate: null, onDeactivate: null };
+  const fn = function b() {
+    const result = sharedValue.set(closure_0.get());
+    const result1 = sharedValue1.set(closure_1.get());
   };
   fn.__closure = { originalX: sharedValue, x, originalY: sharedValue1, y };
   fn.__workletHash = 13009482509687;
-  fn.__initData = closure_13;
-  fn2 = function v(translationX) {
+  fn.__initData = __initData2;
+  obj.onActivate = fn;
+  const fn2 = function v(translationX) {
     const sum = sharedValue.get() + translationX.translationX;
     const point = callback(sum, sharedValue1.get() + translationX.translationY);
-    const result = store.set(point.x);
-    const result1 = store2.set(point.y);
+    const result = closure_0.set(point.x);
+    const result1 = closure_1.set(point.y);
   };
-  fn2.__closure = { getClampedPosition: callback, originalX: sharedValue, originalY: sharedValue1, x, y };
+  fn2.__closure = { getClampedPosition, originalX: sharedValue, originalY: sharedValue1, x, y };
   fn2.__workletHash = 3428194988690;
-  fn2.__initData = closure_14;
+  fn2.__initData = __initData3;
+  obj.onUpdate = fn2;
   const fn3 = function f() {
-    let obj = store(contentWidth[7]);
-    obj = { x: store.get(), y: store2.get() };
-    obj.runOnJS(onChangePosition)(obj);
+    const point = { x: null, y: null };
+    point.x = closure_0.get();
+    point.y = closure_1.get();
+    ReanimatedRexport.runOnJS(onChangePosition)(point);
   };
-  obj1 = { runOnJS: _require(contentWidth[7]).runOnJS, onChangePosition, x, y };
-  fn3.__closure = obj1;
+  let point = { runOnJS: require("ReanimatedRexport").runOnJS, onChangePosition, x, y };
+  fn3.__closure = point;
   fn3.__workletHash = 15302036225057;
-  fn3.__initData = closure_15;
-  obj[2] = fn3;
-  const panGesture = obj3.usePanGesture(obj);
-  const tmp = callback2();
+  fn3.__initData = __initData4;
+  obj.onDeactivate = fn3;
+  const panGesture = require("LegacyBaseButton").usePanGesture(obj);
+  const obj4 = require("LegacyBaseButton");
   class X {
     constructor() {
       value = closure_0.get();
@@ -96,48 +94,47 @@ function DraggableContainer(children) {
       obj = { transform: null };
       obj = { translateX: null };
       ({ x, y } = tmp2);
-      obj3 = closure_0(contentWidth[11]);
-      obj[0] = obj3.withSpring(x, closure_0(contentWidth[12]).springUnclamped);
+      obj3 = closure_0(closure_2[11]);
+      obj.translateX = obj3.withSpring(x, closure_0(closure_2[12]).springUnclamped);
       items = [,];
       items[0] = obj;
       obj1 = { translateY: null };
-      obj5 = closure_0(contentWidth[11]);
-      obj1[0] = obj5.withSpring(y, closure_0(contentWidth[12]).springUnclamped);
+      obj5 = closure_0(closure_2[11]);
+      obj1.translateY = obj5.withSpring(y, closure_0(closure_2[12]).springUnclamped);
       items[1] = obj1;
-      obj[0] = items;
+      obj.transform = items;
       return obj;
     }
   }
-  const obj7 = _require(contentWidth[7]);
-  X.__closure = {
-    getClampedPosition: callback,
+  const point1 = {
+    getClampedPosition,
     x,
     y,
-    withSpring: _require(contentWidth[11]).withSpring,
-    springUnclamped: _require(contentWidth[12]).springUnclamped,
+    withSpring: require("spring").withSpring,
+    springUnclamped: require("springPresets").springUnclamped,
   };
+  X.__closure = point1;
   X.__workletHash = 5273315246744;
-  X.__initData = closure_16;
-  const animatedStyle = obj7.useAnimatedStyle(X);
-  obj3 = {
-    gesture: panGesture,
-    children: sharedValue1(importDefault(contentWidth[7]).View, { style: items1, children: children.children }),
-  };
-  items1 = [tmp.widgetContainer, animatedStyle];
-  return sharedValue1(_require(contentWidth[10]).GestureDetector, obj3);
+  X.__initData = __initData5;
+  const animatedStyle = require("ReanimatedRexport").useAnimatedStyle(X);
+  obj1 = { gesture: panGesture, children: null };
+  let obj2 = { style: null, children: children.children };
+  const items1 = [tmp.widgetContainer, animatedStyle];
+  obj2.style = items1;
+  obj1.children = sharedValue1(require("ReanimatedRexport").View, obj2);
+  return sharedValue1(require("LegacyBaseButton").GestureDetector, obj1);
 }
 function ScreenRecordingPip(surveyConfig) {
   surveyConfig = surveyConfig.surveyConfig;
-  let _require;
   importDefault = undefined;
   let point;
   let sharedValue;
   let sharedValue1;
-  const tmp = callback2();
-  let obj = point;
-  const tmp3 = importDefault(point[9])();
+  const tmp = closure_11();
+  let tmp14Result = point;
+  const tmp3 = require("useWindowDimensionsSharedValue")();
   _require = tmp3;
-  const tmp4 = importDefault(point[8])();
+  const tmp4 = require("useSafeAreaInsetsSharedValue")();
   importDefault = tmp4;
   const tmp6 = useScreenRecordingStore((currentStep) => currentStep.currentStep);
   const tmp7 = useScreenRecordingStore((isUploading) => isUploading.isUploading);
@@ -146,18 +143,21 @@ function ScreenRecordingPip(surveyConfig) {
   const tmp9 = sharedValue(
     sharedValue1.useState(
       sharedValue1.useCallback(() => {
-        const rect = lib2.get();
-        const diff = lib.get().width - rect.right - closure_1_10;
-        return { x: diff - lib2(point[6]).space.PX_16, y: rect.top + lib2(point[6]).space.PX_16 };
+        const rect = closure_1.get();
+        point = { x: null, y: null };
+        const diff = closure_0.get().width - rect.right - c10;
+        point.x = diff - nativeDefault.space.PX_16;
+        point.y = rect.top + nativeDefault.space.PX_16;
+        return point;
       }, items),
     ),
     2,
   );
   point = tmp9[0];
   let Button = _require;
-  obj1 = _require(point[7]);
+  let obj1 = require("ReanimatedRexport");
   sharedValue = obj1.useSharedValue(point.x);
-  let obj2 = _require(point[7]);
+  let obj2 = require("ReanimatedRexport");
   sharedValue1 = obj2.useSharedValue(point.y);
   const items1 = [, , ,];
   ({ x: arr2[0], y: arr2[1] } = point);
@@ -170,130 +170,123 @@ function ScreenRecordingPip(surveyConfig) {
   if (!tmp5) {
     return null;
   } else {
-    obj = { x: null, y: null };
-    obj[0] = sharedValue;
-    obj[1] = sharedValue1;
-    const items2 = [callback(tmp2(obj[16]), obj)];
-    obj = {
-      x: null,
-      y: null,
-      contentWidth: null,
-      contentHeight: null,
-      dragBoundsPadding: null,
-      onChangePosition: null,
+    point = { x: sharedValue, y: sharedValue1 };
+    const items2 = [closure_7(tmp2(tmp14Result[16]), point)];
+    let point1 = {
+      x: sharedValue,
+      y: sharedValue1,
+      contentWidth: v100,
+      contentHeight: v100,
+      dragBoundsPadding: tmp2(tmp14Result[6]).space.PX_4,
+      onChangePosition: tmp9[1],
       children: null,
     };
-    obj[0] = sharedValue;
-    obj[1] = sharedValue1;
-    obj[2] = c10;
-    obj[3] = c10;
-    obj[4] = tmp2(obj[6]).space.PX_4;
-    obj[5] = tmp9[1];
-    obj1 = { style: null, accessibilityRole: "button", onPress: null, activeOpacity: 0.5, children: null };
-    obj1[0] = tmp.widget;
-    obj1[2] = tmp13;
-    obj2 = { variant: "text-xs/semibold", color: "text-overlay-light", style: null, children: null };
-    obj2[2] = tmp.stepText;
+    tmp14Result = {
+      style: tmp.widget,
+      accessibilityRole: "button",
+      onPress: tmp13,
+      activeOpacity: 0.5,
+      children: null,
+    };
+    const obj = { variant: "text-xs/semibold", color: "text-overlay-light", style: tmp.stepText, children: null };
     let str = "Uploading...";
     if (!tmp7) {
       const _HermesInternal = HermesInternal;
       str = "Step " + tmp6 + 1;
     }
-    obj2[3] = str;
-    const items3 = [callback(Button(obj[18]).Text, obj2)];
+    obj.children = str;
+    const items3 = [closure_7(Button(tmp14Result[18]).Text, obj)];
     if (tmp7) {
-      Button = Button(obj[19]).Button;
-      const obj3 = { loading: true, text: "", onPress: null };
-      obj3[2] = function onPress() {};
-      let tmp16Result = tmp16(Button, obj3);
+      Button = Button(tmp14Result[19]).Button;
+      obj1 = {
+        loading: true,
+        text: "",
+        onPress() {},
+      };
+      let tmp16Result = tmp16(Button, obj1);
     } else {
-      const obj4 = { style: null, children: null };
+      obj2 = { style: null, children: null };
       if (isStepCompleted) {
-        obj4[0] = tmp.doneButton;
-        obj4[1] = tmp16(Button(obj[20]).CheckmarkLargeIcon, { size: "md", color: "status-positive" });
-        let tmp21 = obj4;
+        obj2.style = tmp.doneButton;
+        obj2.children = tmp16(Button(tmp14Result[20]).CheckmarkLargeIcon, { size: "md", color: "status-positive" });
+        let tmp21 = obj2;
       } else {
-        obj4[0] = tmp.stopButton;
-        obj4[1] = tmp16(Button(obj[21]).StopIcon, { size: "md", color: "text-feedback-critical" });
-        tmp21 = obj4;
+        obj2.style = tmp.stopButton;
+        obj2.children = tmp16(Button(tmp14Result[21]).StopIcon, { size: "md", color: "text-feedback-critical" });
+        tmp21 = obj2;
       }
       tmp16Result = tmp16(View, tmp21);
-      const tmp20 = View;
     }
-    obj = { children: null };
+    tmp14Result = { children: null };
     items3[1] = tmp16Result;
-    obj1[4] = items3;
-    obj1 = tmp14(Button(obj[17]).PressableOpacity, obj1);
-    obj[6] = obj1;
-    obj = tmp16(DraggableContainer, obj);
-    items2[1] = obj;
-    obj[0] = items2;
-    closure_8(closure_9, obj);
-    const tmp15 = closure_9;
-    const tmp17 = DraggableContainer;
+    tmp14Result.children = items3;
+    tmp14Result = tmp14(Button(tmp14Result[17]).PressableOpacity, tmp14Result);
+    point1.children = tmp14Result;
+    point1 = tmp16(DraggableContainer, point1);
+    items2[1] = point1;
+    tmp14Result.children = items2;
+    tmp14Result = tmp14(closure_9, tmp14Result);
   }
 }
-({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
+const View = fn(17).View;
+const useScreenRecordingStore = fn(15932).useScreenRecordingStore;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 let c10 = 100;
-createCacheKey = {
+fn(4560);
+let createStyles = {
   widgetContainer: { position: "absolute" },
   widget: null,
   stepText: null,
   stopButton: null,
   doneButton: null,
 };
-createCacheKey = {
-  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+let size = {
+  backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
   justifyContent: "center",
   alignItems: "center",
   height: 100,
   width: 100,
-  gap: ThemesDefault.space.PX_8,
-  padding: ThemesDefault.space.PX_8,
-  borderRadius: ThemesDefault.radii.xl,
+  gap: nativeDefault.space.PX_8,
+  padding: nativeDefault.space.PX_8,
+  borderRadius: nativeDefault.radii.xl,
 };
-const merged = Object.assign(ThemesDefault.shadows.SHADOW_MOBILE_NAVIGATOR_X);
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { textAlign: "center", maxWidth: 68 };
-createCacheKey[3] = {
-  padding: ThemesDefault.space.PX_8,
+const merged = Object.assign(nativeDefault.shadows.SHADOW_MOBILE_NAVIGATOR_X);
+createStyles.widget = size;
+createStyles.stepText = { textAlign: "center", maxWidth: 68 };
+createStyles = {
+  padding: nativeDefault.space.PX_8,
   borderWidth: 1,
-  borderColor: ThemesDefault.colors.WHITE,
-  borderRadius: ThemesDefault.radii.round,
+  borderColor: nativeDefault.colors.WHITE,
+  borderRadius: nativeDefault.radii.round,
 };
-let obj1 = {
-  padding: ThemesDefault.space.PX_8,
-  borderWidth: 1,
-  borderColor: ThemesDefault.colors.WHITE,
-  borderRadius: ThemesDefault.radii.round,
-};
-createCacheKey[4] = { padding: ThemesDefault.space.PX_8 };
-let closure_11 = createCacheKey.createStyles(createCacheKey);
-let closure_12 = {
+createStyles.stopButton = createStyles;
+createStyles.doneButton = { padding: nativeDefault.space.PX_8 };
+let closure_11 = createStyles.createStyles(createStyles);
+const __initData = {
   code: "function ScreenRecordingPipTsx1(x,y){const{windowDimensionsSharedValue,insetsSharedValue,clamp,dragBoundsPadding,contentWidth,contentHeight}=this.__closure;const{width:windowWidth,height:windowHeight}=windowDimensionsSharedValue.get();const insets=insetsSharedValue.get();return{x:clamp(x,insets.left+dragBoundsPadding,windowWidth-insets.right-contentWidth-dragBoundsPadding),y:clamp(y,insets.top+dragBoundsPadding,windowHeight-insets.bottom-contentHeight-dragBoundsPadding)};}",
 };
-let closure_13 = {
+const __initData2 = {
   code: "function ScreenRecordingPipTsx2(){const{originalX,x,originalY,y}=this.__closure;originalX.set(x.get());originalY.set(y.get());}",
 };
-let closure_14 = {
+const __initData3 = {
   code: "function ScreenRecordingPipTsx3(event){const{getClampedPosition,originalX,originalY,x,y}=this.__closure;const{x:xClamped,y:yClamped}=getClampedPosition(originalX.get()+event.translationX,originalY.get()+event.translationY);x.set(xClamped);y.set(yClamped);}",
 };
-let closure_15 = {
+const __initData4 = {
   code: "function ScreenRecordingPipTsx4(){const{runOnJS,onChangePosition,x,y}=this.__closure;runOnJS(onChangePosition)({x:x.get(),y:y.get()});}",
 };
-let closure_16 = {
+const __initData5 = {
   code: "function ScreenRecordingPipTsx5(){const{getClampedPosition,x,y,withSpring,springUnclamped}=this.__closure;const{x:translateX,y:translateY}=getClampedPosition(x.get(),y.get());return{transform:[{translateX:withSpring(translateX,springUnclamped)},{translateY:withSpring(translateY,springUnclamped)}]};}",
 };
-let obj2 = { padding: ThemesDefault.space.PX_8 };
-let result = require("set").fileFinishedImporting("modules/screen_recording/native/ScreenRecordingPip.tsx");
+size = fn(2);
+let result = size.fileFinishedImporting("modules/screen_recording/native/ScreenRecordingPip.tsx");
 
 export default function ScreenRecordingPipConnected() {
   const tmp = useScreenRecordingStore((currentSurveyConfig) => currentSurveyConfig.currentSurveyConfig);
   let tmp2 = null;
   if (null != tmp) {
-    const obj = { surveyConfig: null };
-    obj[0] = tmp;
-    tmp2 = callback(ScreenRecordingPip, obj);
+    const obj = { surveyConfig: tmp };
+    tmp2 = React5(ScreenRecordingPip, obj);
   }
   return tmp2;
 }

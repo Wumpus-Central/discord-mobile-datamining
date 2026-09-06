@@ -1,29 +1,23 @@
 // discord_app/modules/quests/QuestUtmStore.tsx
-import set from "../../../_runtime/00002_set.js";
-import keys from "../../../_runtime/00560_keys.js";
+import 00560__ from "../../../_runtime/metro/00560__.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-let obj = keys.create((arg0) => {
-  closure_0 = arg0;
+let obj = module_560.create((arg0) => {
+  const state = arg0;
   obj = {
     utmSourceCurrent: "r",
     utmMediumCurrent: "o",
     utmCampaignCurrent: "ip",
     utmContentCurrent: "count",
     setUtmCurrentContext(utmSourceCurrent) {
-      return state({
-        utmSourceCurrent: utmSourceCurrent.utmSourceCurrent,
-        utmMediumCurrent: utmSourceCurrent.utmMediumCurrent,
-        utmCampaignCurrent: utmSourceCurrent.utmCampaignCurrent,
-        utmContentCurrent: utmSourceCurrent.utmContentCurrent,
-      });
+      return state({ utmSourceCurrent: utmSourceCurrent.utmSourceCurrent, utmMediumCurrent: utmSourceCurrent.utmMediumCurrent, utmCampaignCurrent: utmSourceCurrent.utmCampaignCurrent, utmContentCurrent: utmSourceCurrent.utmContentCurrent });
     },
-    getUtmCurrentContext: "done",
-  };
-  obj[5] = function getUtmCurrentContext() {
-    return state.getState();
+    getUtmCurrentContext() {
+      return state.getState();
+    }
   };
   return obj;
 });
-const result = set.fileFinishedImporting("modules/quests/QuestUtmStore.tsx");
+const result = size.fileFinishedImporting("modules/quests/QuestUtmStore.tsx");
 
 export default obj;

@@ -1,30 +1,22 @@
 // discord_app/modules/fastest_list/utils/getFastestListVisibleItemsWithErrorChecking.native.tsx
-import set from "../../../../_runtime/00002_set.js";
-import logFastestListError from "FastestListLogger.native.tsx";
+import FastestListLogger from "FastestListLogger.native.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting(
+const result = size.fileFinishedImporting(
   "modules/fastest_list/utils/getFastestListVisibleItemsWithErrorChecking.native.tsx",
 );
 
-export default function getFastestListVisibleItemsWithErrorChecking(arg0, sectionStart) {
+export default function getFastestListVisibleItemsWithErrorChecking(listId, sectionStart, sections) {
   if (tmp) {
-    let obj = logFastestListError;
-    obj = { listId: null, sections: null, visibleItems: null };
-    obj[0] = arg0;
-    obj[1] = arg2;
-    obj[2] = sectionStart;
+    let obj = { listId, sections, visibleItems: sectionStart };
     obj.logFastestListError("Visible items `sectionStart/End` is greater than the number of sections", obj);
   }
   if (tmp5) {
-    obj = { listId: null, sections: null, visibleItems: null };
-    obj[0] = arg0;
-    obj[1] = arg2;
-    obj[2] = sectionStart;
-    logFastestListError.logFastestListError(
+    obj = { listId, sections, visibleItems: sectionStart };
+    FastestListLogger.logFastestListError(
       "Visible items `itemStart/End` is greater than the number of items in the first section",
       obj,
     );
-    const obj3 = logFastestListError;
   }
   return sectionStart;
 }

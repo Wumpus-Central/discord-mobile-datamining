@@ -1,11 +1,11 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/navigator/PressableNavigatorModalIcon.tsx
-import set from "../../../../../../_runtime/00002_set.js";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import GenericHeaderTitle from "../HeaderShared.tsx";
+import HeaderShared from "../HeaderShared.tsx";
 import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting(
+const result = size.fileFinishedImporting(
   "modules/main_tabs_v2/native/shared_components/navigator/PressableNavigatorModalIcon.tsx",
 );
 
@@ -27,10 +27,10 @@ export default function PressableNavigatorModalIcon(onPress) {
   } else {
     stringResult = string(t.cpT0Cq);
   }
-  obj = { isModal: true, children: tmp(GenericHeaderTitle.HeaderIconButton, obj) };
-  obj[2] = stringResult;
+  obj = { isModal: true, children: tmp(HeaderShared.HeaderIconButton, obj), accessibilityLabel: stringResult };
   return jsx(PressableNavigatorButtonWrapperDefault, {
     isModal: true,
-    children: tmp(GenericHeaderTitle.HeaderIconButton, obj),
+    children: tmp(HeaderShared.HeaderIconButton, obj),
+    accessibilityLabel: stringResult,
   });
 }

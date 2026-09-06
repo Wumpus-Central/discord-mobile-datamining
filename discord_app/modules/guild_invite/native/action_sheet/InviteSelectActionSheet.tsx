@@ -1,70 +1,70 @@
 // discord_app/modules/guild_invite/native/action_sheet/InviteSelectActionSheet.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import context from "../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
-import RedesignBottomSheetTitleHeaderBase from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
-import Background from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import TableRadioGroup from "../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
+import TableRadioRow from "../../../../design/components/TableRow/native/TableRadioRow.native.tsx";
+import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
+import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-createCacheKey = { content: null };
-createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-let closure_4 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting(
-  "modules/guild_invite/native/action_sheet/InviteSelectActionSheet.tsx",
-);
+require = fn;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { content: null };
+createStyles = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
+createStyles.content = createStyles;
+let closure_4 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_invite/native/action_sheet/InviteSelectActionSheet.tsx");
 
 export default function InviteSelectActionSheet(arg0) {
   ({ options, onChange: require } = arg0);
   ({ title, value } = arg0);
   let obj = {
-    contentStyles: callback().content,
-    header: jsx(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, { title }),
+    contentStyles: closure_4().content,
+    header: jsx(BottomSheetTitleHeader.BottomSheetTitleHeader, { title }),
     children: null,
   };
   obj = {
     value,
     onChange(arg0) {
-      callback(arg0);
-      closure_1_1(closure_1_2[7]).hideActionSheet();
+      require(arg0);
+      ActionSheetActionCreatorsDefault.hideActionSheet();
     },
     hasIcons: false,
     children: options.map((value) =>
-      callback2(
-        callback(table[8]).TableRadioRow,
+      jsx(
+        TableRadioRow.TableRadioRow,
         { value: value.value, label: value.label, accessibilityHint: value.descriptiveLabel },
         "" + value.value,
       ),
     ),
   };
-  obj[2] = jsx(context.TableRadioGroup, {
+  obj.children = jsx(TableRadioGroup.TableRadioGroup, {
     value,
     onChange(arg0) {
-      callback(arg0);
-      closure_1_1(closure_1_2[7]).hideActionSheet();
+      require(arg0);
+      ActionSheetActionCreatorsDefault.hideActionSheet();
     },
     hasIcons: false,
     children: options.map((value) =>
-      callback2(
-        callback(table[8]).TableRadioRow,
+      jsx(
+        TableRadioRow.TableRadioRow,
         { value: value.value, label: value.label, accessibilityHint: value.descriptiveLabel },
         "" + value.value,
       ),
     ),
   });
-  return jsx(Background.BottomSheet, {
+  return jsx(Sheet_BottomSheet.BottomSheet, {
     value,
     onChange(arg0) {
-      callback(arg0);
-      closure_1_1(closure_1_2[7]).hideActionSheet();
+      require(arg0);
+      ActionSheetActionCreatorsDefault.hideActionSheet();
     },
     hasIcons: false,
     children: options.map((value) =>
-      callback2(
-        callback(table[8]).TableRadioRow,
+      jsx(
+        TableRadioRow.TableRadioRow,
         { value: value.value, label: value.label, accessibilityHint: value.descriptiveLabel },
         "" + value.value,
       ),

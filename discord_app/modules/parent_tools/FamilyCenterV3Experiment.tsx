@@ -1,6 +1,6 @@
 // discord_app/modules/parent_tools/FamilyCenterV3Experiment.tsx
-import set from "../../../_runtime/00002_set.js";
 import ApexExperiment from "../experiments/apex/index.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const apexExperiment = ApexExperiment.createApexExperiment({
   kind: "user",
@@ -8,7 +8,7 @@ const apexExperiment = ApexExperiment.createApexExperiment({
   defaultConfig: { enabled: false },
   variations: { 0: { enabled: false }, 1: { enabled: true } },
 });
-const result = set.fileFinishedImporting("modules/parent_tools/FamilyCenterV3Experiment.tsx");
+const result = size.fileFinishedImporting("modules/parent_tools/FamilyCenterV3Experiment.tsx");
 
 export default apexExperiment;
 export const getIsFamilyCenterV3Enabled = function getIsFamilyCenterV3Enabled(location) {

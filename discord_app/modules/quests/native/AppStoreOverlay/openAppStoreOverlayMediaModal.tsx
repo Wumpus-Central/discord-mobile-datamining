@@ -1,188 +1,117 @@
 // discord_app/modules/quests/native/AppStoreOverlay/openAppStoreOverlayMediaModal.tsx
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_5 from "../../../action_sheet/native/ActionSheetStore.tsx";
-import { MEDIA_MODAL_KEY } from "../../../../Constants.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import ActionSheetStore from "../../../action_sheet/native/ActionSheetStore.tsx";
 
-const require = arg1;
-function _openAppStoreOverlayMediaModal() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c3 = 0;
-    c4 = 0;
-    const iter = (function*(arg0) {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === v0) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              c2 = tmp5;
-              initialIndex = tmp2;
-              let callback;
-              initialIndex = undefined;
-              c2 = undefined;
-              v0 = undefined;
-              c4 = undefined;
-              c5 = undefined;
-              c6 = undefined;
-              closure_7 = undefined;
-              ({ originViewOrOriginLayout: c0, initialIndex } = callback);
-              if (initialIndex === undefined) {
-                initialIndex = 0;
-              }
-              ({ initialSources: c2, analyticsSource: c3, channelId: c4, onGetGamePress: c5, onClose: c6 } = callback);
-              closure_7 = Object.assign(tmp44, Object.create(null));
-              closure_8 = undefined;
-              dependencyMap = undefined;
-              let setMediaViewerSources;
-              let MediaViewerAnalytics;
-              let initVideoStateStore;
-              v0 = 1;
-              c4 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              let obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else {
-              const items = [callback(c2[6])(c2[5], c2.paths), callback(c2[6])(c2[7], c2.paths), callback(c2[6])(c2[8], c2.paths)];
-              v0 = 2;
-              c4 = 1;
-              let obj3 = { value: null, done: false };
-              obj3[0] = Promise.all(items);
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            closure_8 = arg1;
-            dependencyMap = v0(closure_8, 3);
-            setMediaViewerSources = 32.setMediaViewerSources;
-            MediaViewerAnalytics = 5.MediaViewerAnalytics;
-            initVideoStateStore = 4251.initVideoStateStore;
-            const obj4 = { text: null, onPress: null };
-            const intl = callback(c2[10]).intl;
-            obj4[0] = intl.string(callback(c2[10]).t.lwQdjB);
-            obj4[1] = function onPress() {
-              if (_undefined3.isOpen()) {
-                let tmpResult = tmp(tmp2[11]);
-                tmpResult.hideActionSheet(c6);
-              } else {
-                tmpResult = tmp(tmp2[12]);
-                tmpResult.popWithKey(c6);
-              }
-              _undefined3();
-            };
-            const result = callback(c2[9]).setMediaModalFooterAction(obj4);
-            (function getMeasureInWindowFunction(c0) {
-              closure_0 = c0;
-              if (null != c0) {
-                if ("measureInWindow" in c0) {
-                  const measureInWindow = c0.measureInWindow;
-                  let fn = measureInWindow.bind(c0);
-                }
-                return fn;
-              }
-              fn = (arg0) => {
-                let size = c0;
-                if (c0 == null) {
-                  const obj = { x: 0, y: 0, width: null, height: null };
-                  obj[2] = c0(closure_1_2[4]).getWindowDimensions().width;
-                  const obj2 = c0(closure_1_2[4]);
-                  obj[3] = c0(closure_1_2[4]).getWindowDimensions().height;
-                  size = obj;
-                  const obj3 = c0(closure_1_2[4]);
-                }
-                arg0(size.x, size.y, size.width, size.height, size.resizeMode);
-              };
-            })(callback)((arg0, arg1, width, height) => {
-              let str = arg4;
-              let obj = {};
-              const merged = Object.assign(closure_7);
-              obj.initialIndex = initialIndex;
-              obj = { x: arg0, y: arg1, width, height, resizeMode: null };
-              if (arg4 == null) {
-                str = "cover";
-              }
-              obj[4] = str;
-              obj.originLayout = obj;
-              obj.onCloseCallback = c6;
-              obj.disableHapticOnOpen = true;
-              obj.disableMediaOverlayFooter = true;
-              obj.disableMediaOverlayButton = true;
-              obj.shareable = false;
-              if (_undefined3.isOpen()) {
-                let tmp3Result = tmp3(tmp4[11]);
-                tmp3Result.openLazy(_undefined(tmp4[6])(tmp4[13], tmp4.paths), c6, obj, "stack");
-              } else {
-                tmp3Result = tmp3(tmp4[12]);
-                tmp3Result.pushLazy(_undefined(tmp4[6])(tmp4[13], tmp4.paths), obj, c6, { animation: "none" });
-              }
-              obj = { sources: _undefined2, initialIndex };
-              setMediaViewerSources(obj);
-              MediaViewerAnalytics.markSessionStarted({ channelId: c4, numMediaItems: _undefined2.length, source: c3 });
-              initVideoStateStore();
-            });
-            c4 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp8) {
-          c4 = tmp;
-          throw tmp8;
-        }
+const require = fn;
+let closure_7 = async function _openAppStoreOverlayMediaModal() {
+  const items = [
+    closure_130_0(closure_130_2[6])(closure_130_2[5], closure_130_2.paths),
+    closure_130_0(closure_130_2[6])(closure_130_2[7], closure_130_2.paths),
+    closure_130_0(closure_130_2[6])(closure_130_2[8], closure_130_2.paths),
+  ];
+  closure_129_8 = await Promise.all(items);
+  closure_129_9 = closure_130_3(closure_129_8, 3);
+  closure_129_10 = closure_129_9[0].setMediaViewerSources;
+  const MediaViewerAnalytics = closure_129_9[1].MediaViewerAnalytics;
+  const initVideoStateStore = closure_129_9[2].initVideoStateStore;
+  const obj4 = { text: null, onPress: null };
+  const intl = closure_130_0(closure_130_2[10]).intl;
+  obj4.text = intl.string(closure_130_0(closure_130_2[10]).t.lwQdjB);
+  obj4.onPress = function onPress() {
+    if (closure_2_5.isOpen()) {
+      let tmpResult = tmp(tmp2[11]);
+      tmpResult.hideActionSheet(closure_2_6);
+    } else {
+      tmpResult = tmp(tmp2[12]);
+      tmpResult.popWithKey(closure_2_6);
+    }
+    closure_1_5();
+  };
+  const result = closure_130_0(closure_130_2[9]).setMediaModalFooterAction(obj4);
+  (function getMeasureInWindowFunction(measureInWindow) {
+    closure_0 = measureInWindow;
+    if (null != measureInWindow) {
+      if ("measureInWindow" in measureInWindow) {
+        measureInWindow = measureInWindow.measureInWindow;
+        let fn = measureInWindow.bind(measureInWindow);
       }
-    })();
-    iter.next();
-    return iter;
+      return fn;
+    }
+    fn = (fn) => {
+      let size = closure_0;
+      if (closure_0 == null) {
+        size = { x: 0, y: 0, width: closure_2_0(sources[4]).getWindowDimensions().width, height: null };
+        const obj2 = closure_2_0(sources[4]);
+        size.height = closure_2_0(sources[4]).getWindowDimensions().height;
+        const obj3 = closure_2_0(sources[4]);
+      }
+      fn(size.x, size.y, size.width, size.height, size.resizeMode);
+    };
+  })(closure_129_0)((x, y, width, height, arg4) => {
+    let str = arg4;
+    let obj = {};
+    const merged = Object.assign(closure_1_7);
+    obj.initialIndex = initialIndex;
+    const size = { x, y, width, height, resizeMode: null };
+    if (arg4 == null) {
+      str = "cover";
+    }
+    size.resizeMode = str;
+    obj.originLayout = size;
+    obj.onCloseCallback = onCloseCallback;
+    obj.disableHapticOnOpen = true;
+    obj.disableMediaOverlayFooter = true;
+    obj.disableMediaOverlayButton = true;
+    obj.shareable = false;
+    if (closure_2_5.isOpen()) {
+      let tmp3Result = tmp3(tmp4[11]);
+      tmp3Result.openLazy(closure_0(tmp4[6])(tmp4[13], tmp4.paths), closure_2_6, obj, "stack");
+    } else {
+      tmp3Result = tmp3(tmp4[12]);
+      tmp3Result.pushLazy(closure_0(tmp4[6])(tmp4[13], tmp4.paths), obj, closure_2_6, { animation: "none" });
+    }
+    obj = { sources, initialIndex };
+    closure_1_10(obj);
+    obj = { channelId, numMediaItems: sources.length, source };
+    closure_1_11.markSessionStarted(obj);
+    closure_1_12();
   });
-  closure_7 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+  await "HermesInternal";
+  initialIndex = tmp2;
+  ({ originViewOrOriginLayout: closure_129_0, initialIndex } = closure_0);
+  if (initialIndex === undefined) {
+    initialIndex = 0;
   }
-  return applyArgumentsResult;
-}
-let result = require("set").fileFinishedImporting("modules/quests/native/AppStoreOverlay/openAppStoreOverlayMediaModal.tsx");
+  closure_129_1 = initialIndex;
+  ({
+    initialSources: closure_129_2,
+    analyticsSource: closure_129_3,
+    channelId: closure_129_4,
+    onGetGamePress: closure_129_5,
+    onClose: closure_129_6,
+  } = closure_0);
+  closure_129_7 = Object.assign(
+    tmp43,
+    Object.assign({
+      originViewOrOriginLayout: 0,
+      initialIndex: 0,
+      initialSources: 0,
+      analyticsSource: 0,
+      channelId: 0,
+      onGetGamePress: 0,
+      onClose: 0,
+    }),
+  );
+  return "PX_16";
+};
+const MEDIA_MODAL_KEY = fn(1074).MEDIA_MODAL_KEY;
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/openAppStoreOverlayMediaModal.tsx");
 
-export const openAppStoreOverlayMediaModal = function openAppStoreOverlayMediaModal(arg0) {
+export const openAppStoreOverlayMediaModal = function openAppStoreOverlayMediaModal() {
   const self = this;
-  const apply = _openAppStoreOverlayMediaModal.apply;
+  const apply = closure_7.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

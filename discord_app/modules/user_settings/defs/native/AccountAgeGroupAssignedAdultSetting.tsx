@@ -1,34 +1,31 @@
 // discord_app/modules/user_settings/defs/native/AccountAgeGroupAssignedAdultSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import ME from "../../../../Constants.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import messagesProxyDefault from "../../../age_assurance/AgeAssurance.messages.js";
-import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
-import AGE_GROUP_CONFIRM_ROW_PROPS from "AgeGroupScreenRowProps.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
-import { SettingsAgeGroupHeader } from "../../age_group/native/SettingsAgeGroupScreen.tsx";
+import Constants from "../../../../Constants.tsx";
+import util from "../../../../intl/index.native.tsx";
+import _modDef2946 from "../../../age_assurance/AgeAssurance.messages.js";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
+import AgeGroupScreenRowProps from "AgeGroupScreenRowProps.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.piqs0o);
+    const intl = util.intl;
+    return intl.string(util.t.piqs0o);
   },
-  parent: MobileUserSettings.MobileUserSettings.ACCOUNT,
+  parent: SettingsConstants.MobileUserSettings.ACCOUNT,
   useTrailing() {
-    const intl = getSystemLocale.intl;
-    const intl2 = getSystemLocale.intl;
-    return "" + intl.string(getSystemLocale.t.XxRj7f) + " \u2022 " + intl2.string(messagesProxyDefault.FTawSP);
+    const intl = util.intl;
+    const intl2 = util.intl;
+    return "" + intl.string(util.t.XxRj7f) + " \u2022 " + intl2.string(_modDef2946.FTawSP);
   },
-  usePredicate: AGE_GROUP_CONFIRM_ROW_PROPS.useShowAssignedAdultAgeGroupRow,
-  screen: obj,
-};
-obj = {
-  route: ME.UserSettingsSections.AGE_GROUP,
-  getComponent() {
-    return SettingsAgeGroupHeader /* SettingsAgeGroupHeader */.default;
+  usePredicate: AgeGroupScreenRowProps.useShowAssignedAdultAgeGroupRow,
+  screen: {
+    route: Constants.UserSettingsSections.AGE_GROUP,
+    getComponent() {
+      return require("SettingsAgeGroupScreen").default;
+    },
   },
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/AccountAgeGroupAssignedAdultSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountAgeGroupAssignedAdultSetting.tsx");
 
 export default route;

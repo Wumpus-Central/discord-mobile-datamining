@@ -1,6 +1,6 @@
 // discord_app/modules/age_assurance/native/FakePlayAgeSignalsExperiment.tsx
-import set from "../../../../_runtime/00002_set.js";
 import ApexExperiment from "../../experiments/apex/index.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 let obj = {
   OFF: "off",
@@ -19,31 +19,32 @@ let obj = {
   SUPERVISED_APPROVED: "supervised_approved",
   CHECK_ERROR: "check_error",
 };
-obj = { enabled: false, scenario: obj.OFF };
-obj = { enabled: false, scenario: obj.OFF };
-const apexExperiment = ApexExperiment.createApexExperiment({
+obj = {
   kind: "user",
   name: "2026-08-fake-play-age-signals",
-  defaultConfig: obj,
-  variations: {
-    0: obj,
-    1: { enabled: true, scenario: obj.ADULT },
-    2: { enabled: true, scenario: obj.TEEN },
-    3: { enabled: true, scenario: obj.UNDER_13 },
-    4: { enabled: true, scenario: obj.SUPERVISED_PENDING },
-    5: { enabled: true, scenario: obj.SUPERVISED_DECLINED },
-    6: { enabled: true, scenario: obj.NOT_SHARED },
-    7: { enabled: true, scenario: obj.ADULT_SELF_DECLARED },
-    8: { enabled: true, scenario: obj.EMPTY },
-    9: { enabled: true, scenario: obj.ERROR },
-    10: { enabled: true, scenario: obj.VERIFICATION_REQUIRED },
-    11: { enabled: true, scenario: obj.ADULT_ASSESSED },
-    12: { enabled: true, scenario: obj.SUPERVISED_APPROVED },
-    13: { enabled: true, scenario: obj.CHECK_ERROR },
-    14: { enabled: true, scenario: obj.UNDER_13_DECLINED },
-  },
-});
-const result = set.fileFinishedImporting("modules/age_assurance/native/FakePlayAgeSignalsExperiment.tsx");
+  defaultConfig: { enabled: false, scenario: obj.OFF },
+  variations: null,
+};
+obj = {
+  0: { enabled: false, scenario: obj.OFF },
+  1: { enabled: true, scenario: obj.ADULT },
+  2: { enabled: true, scenario: obj.TEEN },
+  3: { enabled: true, scenario: obj.UNDER_13 },
+  4: { enabled: true, scenario: obj.SUPERVISED_PENDING },
+  5: { enabled: true, scenario: obj.SUPERVISED_DECLINED },
+  6: { enabled: true, scenario: obj.NOT_SHARED },
+  7: { enabled: true, scenario: obj.ADULT_SELF_DECLARED },
+  8: { enabled: true, scenario: obj.EMPTY },
+  9: { enabled: true, scenario: obj.ERROR },
+  10: { enabled: true, scenario: obj.VERIFICATION_REQUIRED },
+  11: { enabled: true, scenario: obj.ADULT_ASSESSED },
+  12: { enabled: true, scenario: obj.SUPERVISED_APPROVED },
+  13: { enabled: true, scenario: obj.CHECK_ERROR },
+  14: { enabled: true, scenario: obj.UNDER_13_DECLINED },
+};
+obj.variations = obj;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/age_assurance/native/FakePlayAgeSignalsExperiment.tsx");
 
 export default apexExperiment;
 export const FakePlayAgeSignalsScenario = obj;

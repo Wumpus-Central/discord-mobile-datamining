@@ -1,12 +1,12 @@
 // discord_app/modules/people/HideFriendRequestNotesUtils.tsx
-import set from "../../../_runtime/00002_set.js";
-import explicitContentFromProto from "../user_settings/UserSettings.tsx";
+import UserSettings from "../user_settings/UserSettings.tsx";
 import useUserIsTeen from "../self_mod/hooks/useUserIsTeen.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/people/HideFriendRequestNotesUtils.tsx");
+const result = size.fileFinishedImporting("modules/people/HideFriendRequestNotesUtils.tsx");
 
 export const useHideFriendRequestNotes = function useHideFriendRequestNotes() {
-  const HideFriendRequestNotes = explicitContentFromProto.HideFriendRequestNotes;
+  const HideFriendRequestNotes = UserSettings.HideFriendRequestNotes;
   const setting = HideFriendRequestNotes.useSetting();
   let userIsTeen = useUserIsTeen.useUserIsTeen();
   if (null != setting) {

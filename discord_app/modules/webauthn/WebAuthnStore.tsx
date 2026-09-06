@@ -1,8 +1,9 @@
 // discord_app/modules/webauthn/WebAuthnStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import Server from "../../flow/Server.tsx";
 
-const require = arg1;
+require = fn;
 let c2 = false;
 let closure_3 = [];
 let c4 = false;
@@ -25,7 +26,7 @@ prototype["hasPendingRegisterTrigger"] = function hasPendingRegisterTrigger() {
   return c4;
 };
 WebAuthnStore.displayName = "WebAuthnStore";
-const webAuthnStore = new WebAuthnStore(dispatcherDefault, {
+const webAuthnStore = new WebAuthnStore(DispatcherDefault, {
   LOGOUT: function handleReset() {
     closure_3 = [];
     c2 = false;
@@ -34,7 +35,8 @@ const webAuthnStore = new WebAuthnStore(dispatcherDefault, {
   MFA_WEBAUTHN_CREDENTIALS_LOADED: function handleWebAuthnCredentialsLoaded(credentials) {
     credentials = credentials.credentials;
     let flag = false;
-    if (credentials !== credentials) {
+    if (closure_3 !== credentials) {
+      closure_3 = credentials;
       flag = true;
     }
     if (!c2) {
@@ -45,11 +47,12 @@ const webAuthnStore = new WebAuthnStore(dispatcherDefault, {
   },
   AUTHENTICATOR_CREATE: function handleAuthenticatorCreate(credential) {
     credential = credential.credential;
-    if (credential.type === credential(1894).AuthenticatorType.WEBAUTHN) {
-      const tmp2 = undefined === items.find((id) => id.id === credential.id);
+    if (credential.type === Server.AuthenticatorType.WEBAUTHN) {
+      const tmp2 = undefined === closure_3.find((id) => id.id === credential.id);
       if (tmp2) {
-        items = [];
-        items[HermesBuiltin.arraySpread(items, 0)] = credential;
+        const items = [];
+        items[HermesBuiltin.arraySpread(closure_3, 0)] = credential;
+        closure_3 = items;
       }
       let flag = tmp2;
     } else {
@@ -60,7 +63,7 @@ const webAuthnStore = new WebAuthnStore(dispatcherDefault, {
   },
   AUTHENTICATOR_UPDATE: function handleAuthenticatorUpdate(credential) {
     credential = credential.credential;
-    if (credential.type !== credential(1894).AuthenticatorType.WEBAUTHN) {
+    if (credential.type !== Server.AuthenticatorType.WEBAUTHN) {
       const type = credential.type;
       return false;
     } else {
@@ -75,7 +78,7 @@ const webAuthnStore = new WebAuthnStore(dispatcherDefault, {
   },
   AUTHENTICATOR_DELETE: function handleAuthenticatorDelete(credential) {
     credential = credential.credential;
-    if (credential.type !== credential(1894).AuthenticatorType.WEBAUTHN) {
+    if (credential.type !== Server.AuthenticatorType.WEBAUTHN) {
       const type = credential.type;
       return false;
     } else {
@@ -97,6 +100,7 @@ const webAuthnStore = new WebAuthnStore(dispatcherDefault, {
     }
   },
 });
-const result = require("set").fileFinishedImporting("modules/webauthn/WebAuthnStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/webauthn/WebAuthnStore.tsx");
 
 export default webAuthnStore;

@@ -1,19 +1,18 @@
 // discord_app/modules/guild_onboarding_home/guildHasOnboardingHome.tsx
-import set from "../../../_runtime/00002_set.js";
-import getFavoritesAwareGuildName from "../favorites/FavoritesUtils.tsx";
-import ME from "../../Constants.tsx";
+import FavoritesUtils from "../favorites/FavoritesUtils.tsx";
+import Constants from "../../Constants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-({ GuildFeatures: obj1, ME: c3 } = ME);
-const result = set.fileFinishedImporting("modules/guild_onboarding_home/guildHasOnboardingHome.tsx");
+({ GuildFeatures: c2, ME: c3 } = Constants);
+const result = size.fileFinishedImporting("modules/guild_onboarding_home/guildHasOnboardingHome.tsx");
 
 export default function guildHasOnboardingHome(id) {
   let isFavoritesGuildIdResult = null == id;
   if (!isFavoritesGuildIdResult) {
-    isFavoritesGuildIdResult = id.id === closure_3;
+    isFavoritesGuildIdResult = id.id === React3;
   }
   if (!isFavoritesGuildIdResult) {
-    isFavoritesGuildIdResult = getFavoritesAwareGuildName.isFavoritesGuildId(id.id);
-    const obj = getFavoritesAwareGuildName;
+    isFavoritesGuildIdResult = FavoritesUtils.isFavoritesGuildId(id.id);
   }
   if (!isFavoritesGuildIdResult) {
     const features = id.features;

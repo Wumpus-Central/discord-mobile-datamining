@@ -1,29 +1,33 @@
 // discord_app/modules/guild_automod/GuildAutomodMessageStore.tsx
+import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import createMinimalMessageRecord from "../messages/MessageRecordUtils.tsx";
-import getDecisionOutcomeFromMessage from "AutomodMessageUtils.tsx";
-import items from "../../lib/MessageQueue.tsx";
-import getAutomodErrorMessageFromErrorResponse from "AutomodErrorUtils.tsx";
-import closure_3 from "../../stores/ChannelStore.tsx";
-import closure_4 from "../../stores/MessageStore.tsx";
-import ME from "../../Constants.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import MessageRecordUtils from "../messages/MessageRecordUtils.tsx";
+import AutomodMessageUtils from "AutomodMessageUtils.tsx";
+import MessageQueue from "../../lib/MessageQueue.tsx";
+import AutomodErrorUtils from "AutomodErrorUtils.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
+import MessageStore from "../../stores/MessageStore.tsx";
 
-require = arg1;
+require = fn;
 function handleMessageSendFailedAutomod(messageData) {
   messageData = messageData.messageData;
-  let obj = items;
+  let obj = MessageQueue;
   const failedMessageId = obj.getFailedMessageId(messageData);
-  obj = { id: failedMessageId, isBlockedEdit: items.isMessageDataEdit(messageData), messageData, errorMessage: null };
-  const obj3 = items;
-  obj[3] = getAutomodErrorMessageFromErrorResponse.getAutomodErrorMessage(messageData, messageData.errorResponseBody);
+  obj = {
+    id: failedMessageId,
+    isBlockedEdit: MessageQueue.isMessageDataEdit(messageData),
+    messageData,
+    errorMessage: null,
+  };
+  obj.errorMessage = AutomodErrorUtils.getAutomodErrorMessage(messageData, messageData.errorResponseBody);
   closure_8[failedMessageId] = obj;
   closure_9 = closure_9 + 1;
   return true;
 }
 function handleLoadMessages(messages) {
   messages = messages.messages;
-  channel = channel.getChannel(messages.channelId);
+  const channel = ChannelStore.getChannel(messages.channelId);
   let guildId;
   if (channel != null) {
     guildId = channel.getGuildId();
@@ -31,27 +35,25 @@ function handleLoadMessages(messages) {
   if (null == guildId) {
     return false;
   } else {
-    const reduced = messages.reduce((arg0, type) => {
+    const reduced = messages.reduce((acc, type) => {
       if (type.type === constants.AUTO_MODERATION_ACTION) {
         const embeds = type.embeds;
         let someResult;
         if (embeds != null) {
           someResult = embeds.some((type) => type.type === constants.AUTO_MODERATION_NOTIFICATION);
         }
-        let tmp3 = arg0;
+        let tmp3 = acc;
         if (someResult) {
-          if (null == arg0) {
+          if (null == acc) {
             const id = type.id;
-          } else {
-            const obj = callback(table[7]);
           }
           tmp3 = id;
         }
         return tmp3;
       } else {
-        return arg0;
+        return acc;
       }
-    }, dependencyMap2[guildId]);
+    }, lastIncidentAlertMessage[guildId]);
     let flag = null != reduced && tmp2[guildId] !== reduced;
     if (flag) {
       tmp2[guildId] = reduced;
@@ -60,31 +62,28 @@ function handleLoadMessages(messages) {
     return flag;
   }
 }
-({ AbortCodes: c5, MessageEmbedTypes: closure_6, MessageTypes: error } = ME);
-let closure_8 = {};
-let c9 = 0;
-let closure_10 = {};
-let closure_11 = {};
+const Constants = fn(1074);
+({ AbortCodes: hasOwnProperty, MessageEmbedTypes: metroRequire, MessageTypes: closure_7 } = Constants);
+const automodFailedMessages = {};
+let closure_9 = 0;
+const mentionRaidDetectionByGuild = {};
+const lastIncidentAlertMessage = {};
 const PersistedStore = initializeDefault.PersistedStore;
 class GuildAutomodMessageStore extends PersistedStore {}
 const prototype = GuildAutomodMessageStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
-  this.waitFor(closure_3, closure_4);
+  this.waitFor(ChannelStore, MessageStore);
   if (null != arg0) {
     ({ automodFailedMessages: closure_8, mentionRaidDetectionByGuild: closure_10 } = arg0);
   }
 };
 prototype["getState"] = function getState() {
-  return {
-    automodFailedMessages: closure_8,
-    mentionRaidDetectionByGuild: closure_10,
-    lastIncidentAlertMessage: closure_11,
-  };
+  return { automodFailedMessages, mentionRaidDetectionByGuild, lastIncidentAlertMessage };
 };
 prototype["getMessage"] = function getMessage(arg0) {
   let tmp = null;
   if (null != arg0) {
-    let tmp3 = dependencyMap[arg0];
+    let tmp3 = automodFailedMessages[arg0];
     if (tmp3 == null) {
       tmp3 = null;
     }
@@ -93,17 +92,17 @@ prototype["getMessage"] = function getMessage(arg0) {
   return tmp;
 };
 prototype["getMessagesVersion"] = function getMessagesVersion() {
-  return c9;
+  return closure_9;
 };
 prototype["getMentionRaidDetected"] = function getMentionRaidDetected(arg0) {
-  let tmp = table[arg0];
+  let tmp = mentionRaidDetectionByGuild[arg0];
   if (tmp == null) {
     tmp = null;
   }
   return tmp;
 };
 prototype["getLastIncidentAlertMessage"] = function getLastIncidentAlertMessage(arg0) {
-  let tmp = dependencyMap2[arg0];
+  let tmp = lastIncidentAlertMessage[arg0];
   if (tmp == null) {
     tmp = null;
   }
@@ -111,7 +110,7 @@ prototype["getLastIncidentAlertMessage"] = function getLastIncidentAlertMessage(
 };
 GuildAutomodMessageStore.displayName = "GuildAutomodMessageStore";
 GuildAutomodMessageStore.persistKey = "GuildAutomodMessages";
-const guildAutomodMessageStore = new GuildAutomodMessageStore(dispatcherDefault, {
+const guildAutomodMessageStore = new GuildAutomodMessageStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     let flag = 0 !== Object.keys(closure_8).length;
     if (flag) {
@@ -130,10 +129,9 @@ const guildAutomodMessageStore = new GuildAutomodMessageStore(dispatcherDefault,
     } else if (message.type !== constants2.AUTO_MODERATION_ACTION) {
       return false;
     } else {
-      const messageRecord = createMinimalMessageRecord.createMessageRecord(message);
-      const obj = createMinimalMessageRecord;
+      const messageRecord = MessageRecordUtils.createMessageRecord(message);
       const tmp = require;
-      let result = getDecisionOutcomeFromMessage.isAutomodMessageRecord(messageRecord);
+      let result = AutomodMessageUtils.isAutomodMessageRecord(messageRecord);
       if (result) {
         let flag = tmp(7508).isAutomodNotification(messageRecord);
         if (flag) {
@@ -149,7 +147,7 @@ const guildAutomodMessageStore = new GuildAutomodMessageStore(dispatcherDefault,
   MESSAGE_SEND_FAILED_AUTOMOD: handleMessageSendFailedAutomod,
   MESSAGE_EDIT_FAILED_AUTOMOD: handleMessageSendFailedAutomod,
   REMOVE_AUTOMOD_MESSAGE_NOTICE: function handleMessageNoticeRemove(arg0) {
-    if (null != dependencyMap[arg0.messageId]) {
+    if (null != automodFailedMessages[arg0.messageId]) {
       delete tmp[tmp2];
     }
     closure_9 = closure_9 + 1;
@@ -170,7 +168,7 @@ const guildAutomodMessageStore = new GuildAutomodMessageStore(dispatcherDefault,
       if (null == id) {
         return false;
       } else {
-        if (null != dependencyMap[id]) {
+        if (null != automodFailedMessages[id]) {
           delete tmp[tmp2];
         }
         closure_9 = closure_9 + 1;
@@ -191,6 +189,7 @@ const guildAutomodMessageStore = new GuildAutomodMessageStore(dispatcherDefault,
     return true;
   },
 });
-let result = require("set").fileFinishedImporting("modules/guild_automod/GuildAutomodMessageStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_automod/GuildAutomodMessageStore.tsx");
 
 export default guildAutomodMessageStore;

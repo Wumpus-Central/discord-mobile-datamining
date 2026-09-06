@@ -1,7 +1,7 @@
 // discord_app/modules/messages/parseReactionPermissions.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/messages/parseReactionPermissions.tsx");
+const result = size.fileFinishedImporting("modules/messages/parseReactionPermissions.tsx");
 
 export default function parseReactionPermissions(arg0) {
   ({
@@ -43,7 +43,7 @@ export default function parseReactionPermissions(arg0) {
       isActiveChannelOrUnarchivableThread &&
       !isMediaThreadResult;
   }
-  obj[1] = tmp4;
+  obj.disableReactionCreates = tmp4;
   if (!isLurking) {
     isLurking = !canChat;
   }
@@ -53,6 +53,6 @@ export default function parseReactionPermissions(arg0) {
   if (!isLurking) {
     isLurking = true === isAutomodQuarantined;
   }
-  obj[2] = isLurking;
+  obj.disableReactionUpdates = isLurking;
   return obj;
 }

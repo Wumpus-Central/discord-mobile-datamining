@@ -1,16 +1,17 @@
 // discord_app/modules/guild_role_subscriptions/native/components/FormRoleColorPicker.tsx
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import { DEFAULT_ROLE_COLOR } from "../../../../Constants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js";
+import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let closure_6 = createCacheKey.createStyles({
+require = fn;
+const DEFAULT_ROLE_COLOR = fn(1074).DEFAULT_ROLE_COLOR;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_6 = createStyles.createStyles({
   rowColorBlock: { marginHorizontal: 0, marginVertical: 0, marginRight: 8, minWidth: 24, height: 24, borderRadius: 3 },
 });
-const result = require("set").fileFinishedImporting(
-  "modules/guild_role_subscriptions/native/components/FormRoleColorPicker.tsx",
-);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormRoleColorPicker.tsx");
 
 export default function FormRoleColorPicker(color) {
   color = color.color;
@@ -23,18 +24,17 @@ export default function FormRoleColorPicker(color) {
   }
   const onChange = color.onChange;
   const items = [color, onChange];
-  const callback = React.useCallback(() => {
-    let obj = onChange(closure_1_2[4]);
-    obj = { color, onSelect: onChange };
-    obj.openLazy(color(closure_1_2[6])(closure_1_2[5], closure_1_2.paths), "RoleColorPicker", obj);
+  const callback = noop.useCallback(() => {
+    const obj = { color, onSelect: onChange };
+    obj.openLazy(asyncRequireImpl(16291, dependencyMap.paths), "RoleColorPicker", obj);
   }, items);
   let obj = { leading: null, label: null, disabled: null, onPress: null };
-  const tmp = callback();
+  const tmp = closure_6();
   obj = { color, style: tmp.rowColorBlock, onSelect: callback };
-  obj[0] = jsx(onChange(14597), { color, style: tmp.rowColorBlock, onSelect: callback });
+  obj.leading = jsx(onChange(14597), { color, style: tmp.rowColorBlock, onSelect: callback });
   const tmp3 = onChange(13896);
-  obj[1] = color(1091).int2hex(color);
-  obj[2] = flag;
-  obj[3] = callback;
+  obj.label = color(1091).int2hex(color);
+  obj.disabled = flag;
+  obj.onPress = callback;
   return <tmp3 color={color} style={tmp.rowColorBlock} onSelect={callback} />;
 }

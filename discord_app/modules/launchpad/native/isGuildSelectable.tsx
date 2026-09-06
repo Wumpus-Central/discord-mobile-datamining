@@ -1,22 +1,23 @@
 // discord_app/modules/launchpad/native/isGuildSelectable.tsx
-import closure_0 from "../../stage_channels/StageInstanceStore.tsx";
-import closure_1 from "../../../stores/ApplicationStreamingStore.tsx";
-import closure_2 from "../../../stores/GuildReadStateStore.tsx";
-import closure_3 from "../../../stores/UserGuildSettingsStore.tsx";
+import StageInstanceStore from "../../stage_channels/StageInstanceStore.tsx";
+import ApplicationStreamingStore from "../../../stores/ApplicationStreamingStore.tsx";
+import GuildReadStateStore from "../../../stores/GuildReadStateStore.tsx";
+import UserGuildSettingsStore from "../../../stores/UserGuildSettingsStore.tsx";
 
-const result = require("set").fileFinishedImporting("modules/launchpad/native/isGuildSelectable.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/launchpad/native/isGuildSelectable.tsx");
 
 export default function isGuildSelectable(id) {
-  const stageInstancesByGuild = id;
-  const isMutedResult = muted.isMuted(id);
+  closure_0 = id;
+  const isMutedResult = UserGuildSettingsStore.isMuted(id);
   let tmp2 = !isMutedResult;
   if (!isMutedResult) {
-    let hasUnreadResult = closure_2.hasUnread(id);
+    let hasUnreadResult = GuildReadStateStore.hasUnread(id);
     if (!hasUnreadResult) {
       const _Object = Object;
-      let someResult = Object.keys(stageInstancesByGuild.getStageInstancesByGuild(id)).length > 0;
+      let someResult = Object.keys(StageInstanceStore.getStageInstancesByGuild(id)).length > 0;
       if (!someResult) {
-        allApplicationStreams = allApplicationStreams.getAllApplicationStreams();
+        const allApplicationStreams = ApplicationStreamingStore.getAllApplicationStreams();
         someResult = allApplicationStreams.some((guildId) => guildId.guildId === closure_0);
       }
       hasUnreadResult = someResult;

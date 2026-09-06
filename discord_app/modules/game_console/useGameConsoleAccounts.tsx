@@ -1,19 +1,21 @@
 // discord_app/modules/game_console/useGameConsoleAccounts.tsx
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import closure_2 from "../../stores/ConnectedAccountsStore.tsx";
-import { PlatformTypes } from "../../Constants.tsx";
+import GlobalUtils from "../../utils/GlobalUtils.tsx";
+import ConnectedAccountsStore from "../../stores/ConnectedAccountsStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/game_console/useGameConsoleAccounts.tsx");
+require = fn;
+const PlatformTypes = fn(1074).PlatformTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_console/useGameConsoleAccounts.tsx");
 
 export default function useGameConsoleAccounts() {
-  let items = [closure_2];
+  let items = [ConnectedAccountsStore];
   return initialize.useStateFromStoresArray(items, () => {
     const items = [
-      store.getAccount(null, constants.XBOX),
-      store.getAccount(null, constants.PLAYSTATION),
-      store.getAccount(null, constants.PLAYSTATION_STAGING),
+      ConnectedAccountsStore.getAccount(null, constants.XBOX),
+      ConnectedAccountsStore.getAccount(null, constants.PLAYSTATION),
+      ConnectedAccountsStore.getAccount(null, constants.PLAYSTATION_STAGING),
     ];
-    return items.filter(callback(table[3]).isNotNullish);
+    return items.filter(GlobalUtils.isNotNullish);
   });
 }

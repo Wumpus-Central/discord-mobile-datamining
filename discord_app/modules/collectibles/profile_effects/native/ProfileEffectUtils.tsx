@@ -1,24 +1,24 @@
 // discord_app/modules/collectibles/profile_effects/native/ProfileEffectUtils.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import DEFAULT_PROFILE_EFFECT_WH_RATIO from "getAssetWHRatio.tsx";
+import getAssetWHRatio from "getAssetWHRatio.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/collectibles/profile_effects/native/ProfileEffectUtils.tsx");
+const result = size.fileFinishedImporting("modules/collectibles/profile_effects/native/ProfileEffectUtils.tsx");
 
-export const shouldAnimate = function shouldAnimate(start, current) {
-  if (current >= start.start) {
-    if (!start.loop) {
-      if (current > start.duration + start.start) {
+export const shouldAnimate = function shouldAnimate(entering, current) {
+  if (current >= entering.start) {
+    if (!entering.loop) {
+      if (current > entering.duration + entering.start) {
         return false;
       }
     }
-    if (start.loop) {
-      if (undefined !== start.loopDelay) {
-        if (start.loopDelay > 0) {
+    if (entering.loop) {
+      if (undefined !== entering.loopDelay) {
+        if (entering.loopDelay > 0) {
           let loopDelay;
-          if (start != null) {
-            loopDelay = start.loopDelay;
+          if (entering != null) {
+            loopDelay = entering.loopDelay;
           }
-          if ((current - start.start) % (start.duration + loopDelay) > start.duration) {
+          if ((current - entering.start) % (entering.duration + loopDelay) > entering.duration) {
             return false;
           }
         }
@@ -30,5 +30,5 @@ export const shouldAnimate = function shouldAnimate(start, current) {
   }
 };
 export const calculateProfileEffectHeight = function calculateProfileEffectHeight(layerConfig, width) {
-  return width / DEFAULT_PROFILE_EFFECT_WH_RATIO.getAssetWHRatio(layerConfig);
+  return width / getAssetWHRatio.getAssetWHRatio(layerConfig);
 };

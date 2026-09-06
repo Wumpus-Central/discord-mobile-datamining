@@ -1,16 +1,13 @@
 // discord_app/modules/collectibles/hooks/useDefaultVariantIndex.tsx
-import closure_2 from "../CollectiblesPurchaseStore.tsx";
-import { getProductOrbPrice } from "../utils/CollectiblesProductUtils.tsx";
+import CollectiblesPurchaseStore from "../CollectiblesPurchaseStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useDefaultVariantIndex.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/hooks/useDefaultVariantIndex.tsx");
 
 export const useDefaultVariantIndex = function useDefaultVariantIndex(product) {
-  const items = [closure_2];
-  _require = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
-    items,
-    () => purchases.purchases,
-  );
+  const items = [CollectiblesPurchaseStore];
+  _require = require("initialize").useStateFromStores(items, () => purchases.purchases);
   let num = 0;
   if (null != product) {
     num = 0;
@@ -22,7 +19,7 @@ export const useDefaultVariantIndex = function useDefaultVariantIndex(product) {
         variants.findIndex((skuId) => !set.has(skuId.skuId)),
       );
     }
-    tmpResult = getProductOrbPrice;
+    tmpResult = require("CollectiblesProductUtils");
   }
   return num;
 };

@@ -1,53 +1,52 @@
 // discord_app/modules/collectibles/avatar_decorations/native/AvatarDecorationUtils.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import Button from "../../../../design/void/native.tsx";
-import DECORATION_TO_AVATAR_RATIO from "../AvatarDecorationConstants.tsx";
+import native from "../../../../design/void/native.tsx";
+import AvatarDecorationConstants from "../AvatarDecorationConstants.tsx";
 import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js";
-import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-let closure_3 = DECORATION_TO_AVATAR_RATIO.DECORATION_TO_AVATAR_RATIO;
-let result = set.fileFinishedImporting("modules/collectibles/avatar_decorations/native/AvatarDecorationUtils.tsx");
+let closure_3 = AvatarDecorationConstants.DECORATION_TO_AVATAR_RATIO;
+let result = size.fileFinishedImporting("modules/collectibles/avatar_decorations/native/AvatarDecorationUtils.tsx");
 
 export const getDecorationSizeForAvatarSize = function getDecorationSizeForAvatarSize(NORMAL) {
   if (typeof NORMAL !== "number") {
-    let result = Button.AVATAR_SIZE_MAP[NORMAL] * closure_3;
+    let result = native.AVATAR_SIZE_MAP[NORMAL] * closure_3;
   } else {
     result = NORMAL * closure_3;
   }
   return result;
 };
-export const getDecorationCutoutForAvatarCutout = function getDecorationCutoutForAvatarCutout(memo, arg1) {
-  const _require = arg1;
-  let tmp = memo;
-  if (null != memo) {
+export const getDecorationCutoutForAvatarCutout = function getDecorationCutoutForAvatarCutout(cutout, arg1) {
+  closure_0 = arg1;
+  let tmp = cutout;
+  if (null != cutout) {
     let obj = { direction: null, radius: null, inset: null, imageType: null, nativeCutouts: null };
-    ({ direction: obj[0], radius: obj[1], inset } = memo);
+    ({ direction: obj.direction, radius: obj.radius, inset } = cutout);
     if (inset == null) {
       inset = 0;
     }
-    obj[2] = inset + arg1;
-    obj[3] = require("../../../../design/void/native.tsx").CutoutType.RECTANGULAR;
-    const nativeCutouts = memo.nativeCutouts;
+    obj.inset = inset + arg1;
+    obj.imageType = native.CutoutType.RECTANGULAR;
+    const nativeCutouts = cutout.nativeCutouts;
     let mapped;
     if (nativeCutouts != null) {
-      mapped = nativeCutouts.map((arg0) => {
+      mapped = nativeCutouts.map((item) => {
         const obj = {};
-        const merged = Object.assign(arg0);
-        obj.x = arg0.x + closure_0;
-        obj.y = arg0.y + closure_0;
+        const merged = Object.assign(item);
+        obj.x = item.x + closure_0;
+        obj.y = item.y + closure_0;
         return obj;
       });
     }
-    obj[4] = mapped;
+    obj.nativeCutouts = mapped;
     tmp = obj;
   }
   return tmp;
 };
 export const openAvatarDecorationActionSheet = function openAvatarDecorationActionSheet(arg0) {
   ({ user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations } = arg0);
-  ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
-  const obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(8158, dependencyMap.paths), "Edit Avatar Decoration", {
+  ActionSheetActionCreatorsDefault.hideActionSheet();
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8158, dependencyMap.paths), "Edit Avatar Decoration", {
     user,
     guildId,
     currentAvatarDecoration,

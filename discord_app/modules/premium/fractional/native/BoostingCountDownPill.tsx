@@ -1,23 +1,22 @@
 // discord_app/modules/premium/fractional/native/BoostingCountDownPill.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js";
-import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import Text from "../../../../design/components/Text/native/Text.tsx";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import get_ActivityIndicator from "../../../../../_runtime/metro/00017__.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 function handlePress() {
-  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj = { aboutText: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t["07lzz7"]);
+  const obj = { aboutText: null };
+  const intl = util.intl;
+  obj.aboutText = intl.string(util.t["07lzz7"]);
   obj.openLazy(asyncRequireImpl(13518, dependencyMap.paths), "NitroCreditEducationActionSheet", obj);
 }
-({ TouchableOpacity: c3, View: c4 } = get_ActivityIndicator);
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
+({ TouchableOpacity: c3, View: closure_4 } = get_ActivityIndicator);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let obj = {
   fractionalPremiumBanner: null,
   fpDurationPill: null,
@@ -26,57 +25,47 @@ let obj = {
   fpUnavailableTextNoCountdown: null,
 };
 obj = {
-  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   flexDirection: "row",
   gap: 12,
   padding: 12,
   justifyContent: "center",
-  borderColor: ThemesDefault.colors.STATUS_WARNING,
+  borderColor: nativeDefault.colors.STATUS_WARNING,
   borderWidth: 1,
-  borderRadius: ThemesDefault.radii.lg,
+  borderRadius: nativeDefault.radii.lg,
   marginBottom: 12,
 };
-obj[0] = obj;
-obj[1] = {
+obj.fractionalPremiumBanner = obj;
+obj.fpDurationPill = {
   flex: 1,
   paddingVertical: 12,
   paddingHorizontal: 27,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG,
-  borderRadius: ThemesDefault.radii.xxl,
+  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG,
+  borderRadius: nativeDefault.radii.xxl,
   justifyContent: "center",
 };
-obj[2] = { textAlign: "center", color: "#FFEAA0" };
-obj[3] = { flex: 1, justifyContent: "center" };
-obj[4] = { textAlign: "center" };
-let closure_7 = createCacheKey.createStyles(obj);
-let obj1 = {
-  flex: 1,
-  paddingVertical: 12,
-  paddingHorizontal: 27,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG,
-  borderRadius: ThemesDefault.radii.xxl,
-  justifyContent: "center",
-};
-const result = set.fileFinishedImporting("modules/premium/fractional/native/BoostingCountDownPill.tsx");
+obj.fpDurationText = { textAlign: "center", color: "#FFEAA0" };
+obj.fpUnavailable = { flex: 1, justifyContent: "center" };
+obj.fpUnavailableTextNoCountdown = { textAlign: "center" };
+let closure_7 = createStyles.createStyles(obj);
+const result = size.fileFinishedImporting("modules/premium/fractional/native/BoostingCountDownPill.tsx");
 
 export default function BoostingCountDownPill(style) {
   ({ fpDurationText, isInReverseTrial } = style);
-  const tmp = callback();
+  const tmp = closure_7();
   let tmp4;
   if (!isInReverseTrial) {
     tmp4 = handlePress;
   }
   let obj = { activeOpacity: 0.7, onPress: tmp4, children: null };
-  obj = { style: items, children: null };
-  items = [tmp.fractionalPremiumBanner, style.style];
+  obj = { style: null, children: null };
+  const items = [tmp.fractionalPremiumBanner, style.style];
+  obj.style = items;
   let tmp2Result = !isInReverseTrial;
   if (!isInReverseTrial) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.fpDurationPill;
-    obj1 = { variant: "text-sm/bold", style: null, children: null };
-    obj1[1] = tmp.fpDurationText;
-    obj1[2] = fpDurationText.toUpperCase();
-    obj[1] = tmp2(Text.Text, obj1);
+    obj = { style: tmp.fpDurationPill, children: null };
+    const obj1 = { variant: "text-sm/bold", style: tmp.fpDurationText, children: fpDurationText.toUpperCase() };
+    obj.children = tmp2(Text_Text.Text, obj1);
     tmp2Result = tmp2(tmp6, obj);
   }
   const items1 = [tmp2Result];
@@ -87,10 +76,10 @@ export default function BoostingCountDownPill(style) {
   }
   const obj3 = { variant: "text-md/normal", color: "interactive-text-active", style: prop, children: null };
   const intl = tmp10(1114).intl;
-  obj3[3] = intl.string(getSystemLocale.t["5nrJDO"]);
-  obj2[1] = closure_5(Text.Text, obj3);
-  items1[1] = closure_5(closure_4, obj2);
-  obj[1] = items1;
-  obj[2] = closure_6(closure_4, obj);
-  return closure_5(closure_3, obj);
+  obj3.children = intl.string(util.t["5nrJDO"]);
+  obj2.children = hasOwnProperty(Text_Text.Text, obj3);
+  items1[1] = hasOwnProperty(React4, obj2);
+  obj.children = items1;
+  obj.children = timestampProducer(React4, obj);
+  return hasOwnProperty(React3, obj);
 }

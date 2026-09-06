@@ -1,7 +1,7 @@
 // discord_app/modules/soundboard/native/SoundboardStyleConstants.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/soundboard/native/SoundboardStyleConstants.tsx");
+const result = size.fileFinishedImporting("modules/soundboard/native/SoundboardStyleConstants.tsx");
 
 export const SOUND_BUTTON_HEIGHT = 88;
 export const SOUND_ROW_HORIZONTAL_PADDING = 12;

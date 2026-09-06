@@ -1,7 +1,7 @@
 // discord_app/modules/storefront/StorefrontTypes.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/storefront/StorefrontTypes.tsx");
+const result = size.fileFinishedImporting("modules/storefront/StorefrontTypes.tsx");
 
 export const StorefrontPromotionRewardType = {
   DISCOUNT: 1,

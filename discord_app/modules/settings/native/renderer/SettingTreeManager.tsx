@@ -1,15 +1,15 @@
 // discord_app/modules/settings/native/renderer/SettingTreeManager.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "SettingRendererConstants.tsx";
-import map from "SettingHookHarness.tsx";
-import frozen from "../../../user_settings/core/native/SettingsRendererConfig.tsx";
+import SettingRendererConstants from "SettingRendererConstants.tsx";
+import SettingHookHarness from "SettingHookHarness.tsx";
+import SettingsRendererConfig from "../../../user_settings/core/native/SettingsRendererConfig.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const NodeType = GUILD_SELECT_ALL_SERVERS_OPTION_ID.NodeType;
+const NodeType = SettingRendererConstants.NodeType;
 class SettingTreeManagerCache {
   constructor() {
-    obj = Object.create(new.target.prototype);
-    obj[0] = {};
-    return obj;
+    merged = Object.assign({ cache: null });
+    merged[0] = {};
+    return merged;
   }
 }
 const prototype = SettingTreeManagerCache.prototype;
@@ -25,22 +25,25 @@ prototype["clear"] = function clear() {
 class SettingTreeManager {
   constructor() {
     tmp = SettingTreeManagerCache;
-    if (typeof SettingTreeManagerCache !== "function") {
+    if (typeof SettingTreeManagerCache === "function") {
+      merged = Object.assign({ highestAncestorCache: null, breadcrumbCache: null });
+      merged1 = Object.assign({ cache: null });
+      merged1[0] = {};
+      merged[0] = merged1;
+      tmp4 = new.target;
+      if (typeof tmp === "function") {
+        merged2 = Object.assign({ cache: null });
+        merged2[0] = {};
+        merged[1] = merged2;
+        return merged;
+      } else {
+        str2 = "Trying to call a non-function";
+        throw new TypeError("Trying to call a non-function");
+      }
+    } else {
       str = "Trying to call a non-function";
-      throwTypeErrorResult = HermesBuiltin.throwTypeError();
+      throw new TypeError("Trying to call a non-function");
     }
-    obj = Object.create(new.target.prototype);
-    obj1 = Object.create(tmp.prototype);
-    obj1[0] = {};
-    obj[0] = obj1;
-    if (typeof tmp !== "function") {
-      str2 = "Trying to call a non-function";
-      throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
-    }
-    obj2 = Object.create(tmp.prototype);
-    obj2[0] = {};
-    obj[1] = obj2;
-    return obj;
   }
 }
 const prototype2 = SettingTreeManager.prototype;
@@ -59,27 +62,26 @@ prototype2["validate"] = function validate() {};
 prototype2["getAncestors"] = function getAncestors(field) {
   const self = this;
   const items = [];
-  let transformParentResult = this.transformParent(frozen.SETTING_RENDERER_CONFIG[field].parent);
+  let transformParentResult = this.transformParent(SettingsRendererConfig.SETTING_RENDERER_CONFIG[field].parent);
   if (null != transformParentResult) {
     do {
       let arr = items.push(transformParentResult);
-      let tmp3 = require;
-      let tmp4 = dependencyMap;
-      transformParentResult = self.transformParent(frozen.SETTING_RENDERER_CONFIG[transformParentResult].parent);
+      transformParentResult = self.transformParent(
+        SettingsRendererConfig.SETTING_RENDERER_CONFIG[transformParentResult].parent,
+      );
     } while (null != transformParentResult);
   }
   return items;
 };
-prototype2["isBlocked"] = function isBlocked(field) {
-  closure_0 = arg1;
+prototype2["isBlocked"] = function isBlocked(field, arg1) {
   const ancestors = this.getAncestors(field);
   ancestors.push(field);
-  return ancestors.some((arg0) => set.has(arg0));
+  return ancestors.some((item) => set.has(item));
 };
 prototype2["getHighestLevelAncestor"] = function getHighestLevelAncestor(setting) {
   const self = this;
   const highestAncestorCache = this.highestAncestorCache;
-  const value = highestAncestorCache.get(setting);
+  value = highestAncestorCache.get(setting);
   if (null != value) {
     return value;
   } else {
@@ -94,46 +96,38 @@ prototype2["getHighestLevelAncestor"] = function getHighestLevelAncestor(setting
   }
 };
 prototype2["getNearestRouteAncestorDataOrSelf"] = function getNearestRouteAncestorDataOrSelf(setting) {
-  const tmp = frozen.SETTING_RENDERER_CONFIG[setting];
+  const tmp = SettingsRendererConfig.SETTING_RENDERER_CONFIG[setting];
   if (tmp.type === NodeType.ROUTE) {
     return tmp;
   } else {
     const self = this;
     const ancestors = this.getAncestors(setting);
     for (const item10013 of ancestors) {
-      let tmp3 = require;
-      let tmp4 = dependencyMap;
-      let tmp5 = frozen.SETTING_RENDERER_CONFIG[item10013];
-      let tmp6 = tmp5;
-      let tmp7 = NodeType;
+      let tmp5 = SettingsRendererConfig.SETTING_RENDERER_CONFIG[item10013];
       if (tmp5.type === NodeType.ROUTE) {
-        let tmp8 = obj;
         obj.return();
         return tmp5;
       }
     }
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    error = new Error("[SettingTree] No route ancestor found for setting: " + setting);
+    const error = new Error("[SettingTree] No route ancestor found for setting: " + setting);
     throw error;
   }
 };
 prototype2["getBreadcrumbs"] = function getBreadcrumbs(setting) {
   const self = this;
   const breadcrumbCache = this.breadcrumbCache;
-  const value = breadcrumbCache.get(setting);
+  value = breadcrumbCache.get(setting);
   if (null != value) {
     return value;
   } else {
     const items = [];
     const ancestors = self.getAncestors(setting);
     for (const item10009 of ancestors) {
-      let tmp3 = require;
-      let tmp4 = dependencyMap;
-      let obj = map;
+      let obj = SettingHookHarness;
       let cachedSettingTitle = obj.getCachedSettingTitle(item10009);
       if (null != cachedSettingTitle) {
-        let tmp7 = cachedSettingTitle;
         let arr = items.push(tmp6);
       }
       continue;
@@ -149,13 +143,13 @@ prototype2["clearCaches"] = function clearCaches() {
   const highestAncestorCache = this.highestAncestorCache;
   highestAncestorCache.clear();
 };
-let obj = Object.create(SettingTreeManager.prototype);
-obj = Object.create(SettingTreeManagerCache.prototype);
-obj[0] = {};
-obj[0] = obj;
-let obj1 = Object.create(SettingTreeManagerCache.prototype);
-obj1[0] = {};
-obj[1] = obj1;
-let result = set.fileFinishedImporting("modules/settings/native/renderer/SettingTreeManager.tsx");
+let merged = Object.assign({ highestAncestorCache: null, breadcrumbCache: null });
+let merged1 = Object.assign({ cache: null });
+merged1[0] = {};
+merged[0] = merged1;
+let merged2 = Object.assign({ cache: null });
+merged2[0] = {};
+merged[1] = merged2;
+let result = size.fileFinishedImporting("modules/settings/native/renderer/SettingTreeManager.tsx");
 
-export default obj;
+export default merged;

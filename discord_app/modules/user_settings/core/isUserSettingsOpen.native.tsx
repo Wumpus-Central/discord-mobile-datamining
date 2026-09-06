@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/core/isUserSettingsOpen.native.tsx
-import getRootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
-import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import RootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+require = fn;
 function isUserSettingsOpen() {
-  const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
+  const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
   const tmp = null == rootNavigationRef || !rootNavigationRef.isReady();
   let tmp2 = !tmp;
   if (!tmp) {
@@ -87,12 +87,13 @@ function isUserSettingsOpen() {
   }
   return tmp2;
 }
-const result = require("set").fileFinishedImporting("modules/user_settings/core/isUserSettingsOpen.native.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/core/isUserSettingsOpen.native.tsx");
 
 export { isUserSettingsOpen };
 export const useIsUserSettingsOpen = function useIsUserSettingsOpen() {
-  [tmp2, require] = callback(React.useState(isUserSettingsOpen), 2);
-  const effect = React.useEffect(() => {
+  [tmp2, require] = _slicedToArray(noop.useState(isUserSettingsOpen), 2);
+  const effect = noop.useEffect(() => {
     function handleStateChange() {
       if (null != rootNavigationRef) {
         const rootState = rootNavigationRef.getRootState();
@@ -137,17 +138,16 @@ export const useIsUserSettingsOpen = function useIsUserSettingsOpen() {
             return tmp;
           });
         }
-        rootNavigationRef(someResult);
+        require(someResult);
       }
     }
-    const rootNavigationRef = closure_1_0(closure_1_1[2]).getRootNavigationRef();
+    const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
     if (null != rootNavigationRef) {
       rootNavigationRef.addListener("state", handleStateChange);
       return () => {
         rootNavigationRef.removeListener("state", handleStateChange);
       };
     }
-    const obj = closure_1_0(closure_1_1[2]);
   }, []);
   return tmp2;
 };

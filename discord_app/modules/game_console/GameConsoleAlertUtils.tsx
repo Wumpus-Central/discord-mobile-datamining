@@ -1,7 +1,7 @@
 // discord_app/modules/game_console/GameConsoleAlertUtils.tsx
-import set from "../../../_runtime/00002_set.js";
-import _mod9452 from "native/GameConsoleAlertUtils.tsx";
+import game_console_GameConsoleAlertUtils from "native/GameConsoleAlertUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/game_console/GameConsoleAlertUtils.tsx");
+const result = size.fileFinishedImporting("modules/game_console/GameConsoleAlertUtils.tsx");
 
-export default _mod9452.default;
+export default game_console_GameConsoleAlertUtils.default;

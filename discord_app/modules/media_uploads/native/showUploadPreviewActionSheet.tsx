@@ -1,12 +1,12 @@
 // discord_app/modules/media_uploads/native/showUploadPreviewActionSheet.tsx
-import set from "../../../../_runtime/00002_set.js";
 import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
-import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/media_uploads/native/showUploadPreviewActionSheet.tsx");
+const result = size.fileFinishedImporting("modules/media_uploads/native/showUploadPreviewActionSheet.tsx");
 
 export default function showUploadPreviewActionSheet(arg0) {
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(
+  ActionSheetActionCreatorsDefault.openLazy(
     asyncRequireImpl(10634, dependencyMap.paths),
     "UploadPreviewActionSheet",
     arg0,

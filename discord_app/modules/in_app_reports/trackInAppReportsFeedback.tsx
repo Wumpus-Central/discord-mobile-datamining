@@ -1,10 +1,10 @@
 // discord_app/modules/in_app_reports/trackInAppReportsFeedback.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import Constants from "../../Constants.tsx";
+import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/in_app_reports/trackInAppReportsFeedback.tsx");
+const AnalyticEvents = Constants.AnalyticEvents;
+const result = size.fileFinishedImporting("modules/in_app_reports/trackInAppReportsFeedback.tsx");
 
 export default function trackInAppReportsFeedback(dont_show_again) {
   let reportId = dont_show_again.reportId;
@@ -16,7 +16,7 @@ export default function trackInAppReportsFeedback(dont_show_again) {
   if (rating === undefined) {
     rating = null;
   }
-  expandEventPropertiesDefault.track(AnalyticEvents.IAR_FEEDBACK_SUBMITTED, {
+  AnalyticsUtilsDefault.track(AnalyticEvents.IAR_FEEDBACK_SUBMITTED, {
     reason: problem,
     report_type: reportType,
     report_id: reportId,

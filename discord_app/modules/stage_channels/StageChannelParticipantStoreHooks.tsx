@@ -1,74 +1,76 @@
 // discord_app/modules/stage_channels/StageChannelParticipantStoreHooks.tsx
-import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "StageChannelParticipantStore.tsx";
+import StageChannelParticipants from "StageChannelParticipants.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import StageChannelParticipantStore from "StageChannelParticipantStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/stage_channels/StageChannelParticipantStoreHooks.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/StageChannelParticipantStoreHooks.tsx");
 
 export const useStageParticipants = function useStageParticipants(id, SPEAKER) {
-  const _require = id;
+  _require = id;
   dependencyMap = SPEAKER;
-  let items = [closure_3];
+  let items = [StageChannelParticipantStore];
   const items1 = [id, SPEAKER];
-  return callback(
-    require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+  return _slicedToArray(
+    require("initialize").useStateFromStores(
       items,
       () => {
         const items = [
-          closure_1_3.getMutableParticipants(closure_0, closure_1),
-          closure_1_3.getParticipantsVersion(closure_0),
+          StageChannelParticipantStore.getMutableParticipants(closure_0, closure_1),
+          StageChannelParticipantStore.getParticipantsVersion(closure_0),
         ];
         return items;
       },
       items1,
-      require("../../utils/SecondaryIndexMapUtils.tsx").isVersionEqual,
+      require("SecondaryIndexMapUtils").isVersionEqual,
     ),
     1,
   )[0];
 };
 export const useStageParticipantsCount = function useStageParticipantsCount(id, AUDIENCE) {
-  const _require = id;
+  _require = id;
   dependencyMap = AUDIENCE;
-  const items = [closure_3];
+  const items = [StageChannelParticipantStore];
   const items1 = [id, AUDIENCE];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+  return require("initialize").useStateFromStores(
     items,
-    () => closure_1_3.getParticipantCount(closure_0, closure_1),
+    () => StageChannelParticipantStore.getParticipantCount(closure_0, closure_1),
     items1,
   );
 };
 export const useSortedRequestToSpeakParticipants = function useSortedRequestToSpeakParticipants(id) {
-  const _require = id;
-  let items = [closure_3];
+  _require = id;
+  let items = [StageChannelParticipantStore];
   const items1 = [id];
-  return callback(
-    require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+  return _slicedToArray(
+    require("initialize").useStateFromStores(
       items,
       () => {
         const items = [
-          closure_1_3.getMutableRequestToSpeakParticipants(closure_0),
-          closure_1_3.getRequestToSpeakParticipantsVersion(closure_0),
+          StageChannelParticipantStore.getMutableRequestToSpeakParticipants(closure_0),
+          StageChannelParticipantStore.getRequestToSpeakParticipantsVersion(closure_0),
         ];
         return items;
       },
       items1,
-      require("../../utils/SecondaryIndexMapUtils.tsx").isVersionEqual,
+      require("SecondaryIndexMapUtils").isVersionEqual,
     ),
     1,
   )[0];
 };
 export const useActualStageSpeakerCount = function useActualStageSpeakerCount(id) {
-  const _require = id;
-  const items = [closure_3];
+  _require = id;
+  const items = [StageChannelParticipantStore];
   const items1 = [id];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+  return require("initialize").useStateFromStores(
     items,
     () => {
-      const mutableParticipants = closure_1_3.getMutableParticipants(
-        id,
-        id(closure_1_1[4]).StageChannelParticipantNamedIndex.SPEAKER,
+      const mutableParticipants = StageChannelParticipantStore.getMutableParticipants(
+        closure_0,
+        StageChannelParticipants.StageChannelParticipantNamedIndex.SPEAKER,
       );
-      return mutableParticipants.filter((type) => type.type === callback(table[4]).StageChannelParticipantTypes.VOICE)
+      return mutableParticipants.filter((type) => type.type === id(closure_1_1[4]).StageChannelParticipantTypes.VOICE)
         .length;
     },
     items1,

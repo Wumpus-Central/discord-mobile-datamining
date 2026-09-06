@@ -1,15 +1,14 @@
 // discord_app/modules/guild_settings/native/showEmojiOverflowActionSheet.tsx
-import set from "../../../../_runtime/00002_set.js";
 import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
-import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/guild_settings/native/showEmojiOverflowActionSheet.tsx");
+const result = size.fileFinishedImporting("modules/guild_settings/native/showEmojiOverflowActionSheet.tsx");
 
 export default function showEmojiOverflowActionSheet(arg0) {
-  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj = {
+  const obj = {
     onClose() {
-      return callback(table[0]).hideActionSheet("EmojiOverflowActionSheet");
+      return ActionSheetActionCreatorsDefault.hideActionSheet("EmojiOverflowActionSheet");
     },
   };
   const merged = Object.assign(arg0);

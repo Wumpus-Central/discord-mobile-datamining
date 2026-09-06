@@ -1,24 +1,22 @@
 // discord_app/modules/settings/native/renderer/SettingLayout.tsx
-import SearchListSectionLabel from "SettingListRenderer.tsx";
-import SettingSegmentedControlDefault from "SettingSegmentedControlRenderer.tsx";
-import { NodeType } from "SettingRendererConstants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
+import SettingListRenderer from "SettingListRenderer.tsx";
+import SettingSegmentedControlRendererDefault from "SettingSegmentedControlRenderer.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-const memoResult = importAllResult.memo(function SettingLayout(node) {
+require = fn;
+const NodeType = fn(11469).NodeType;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/settings/native/renderer/SettingLayout.tsx");
+
+export default noop.memo(function SettingLayout(node) {
   node = node.node;
   const type = node.type;
   if (NodeType.LIST === type) {
-    let obj = { node: null };
-    obj[0] = node;
-    return jsx(SearchListSectionLabel.SettingsList, { node: null });
+    let obj = { node };
+    return jsx(SettingListRenderer.SettingsList, { node });
   } else if (tmp.SEGMENTED_CONTROL === type) {
-    obj = { node: null };
-    obj[0] = node;
-    return jsx(SettingSegmentedControlDefault, { node: null });
+    obj = { node };
+    return jsx(SettingSegmentedControlRendererDefault, { node });
   }
 });
-const result = require("set").fileFinishedImporting("modules/settings/native/renderer/SettingLayout.tsx");
-
-export default memoResult;

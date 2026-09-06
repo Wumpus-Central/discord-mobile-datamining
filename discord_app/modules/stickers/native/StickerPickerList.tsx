@@ -1,88 +1,91 @@
 // discord_app/modules/stickers/native/StickerPickerList.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import Button from "../../../design/void/native.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
-import registerAssetDefault from "../../../../_runtime/10415_registerAsset.js";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import importAllResult from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../StickersStore.tsx";
-import { useStickerPickerStore } from "StickerPickerStore.tsx";
-import PADDING_HORIZONTAL from "StickerPickerConstants.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
+import native from "../../../design/void/native.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import FastestListPropsPlaceholder from "../../fastest_list/props/FastestListPropsPlaceholder.tsx";
+import StickerPickerListRowDefault from "StickerPickerListRow.tsx";
+import _modDef10415 from "../../../../_runtime/metro/10415__.js";
+import useStickerPickerListData from "useStickerPickerListData.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
+import StickersStore from "../StickersStore.tsx";
 
-require = arg1;
-let c4 = importAllResult;
+require = fn;
+const View = fn(17).View;
+const useStickerPickerStore = fn(10390).useStickerPickerStore;
+const StickerPickerConstants = fn(10273);
 ({
   STICKER_SCROLL_LOAD_DELAY_MS: closure_8,
-  STICKER_SCROLL_LOAD_DELAY_AFTER_HEIGHT_CHANGE_MS: c9,
+  STICKER_SCROLL_LOAD_DELAY_AFTER_HEIGHT_CHANGE_MS: closure_9,
   STICKER_SIZE: c10,
-} = PADDING_HORIZONTAL);
-({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
+} = StickerPickerConstants);
+const jsxProd = fn(21);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+fn(4560);
 let obj = { listPlaceholder: null, section: null, sectionSticker: null, nsfwContainer: null, nsfwText: null };
-obj = { color: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
-obj[0] = obj;
-createCacheKey = {
+obj = { color: nativeDefault.colors.BACKGROUND_MOD_MUTED };
+obj.listPlaceholder = obj;
+const createStyles = {
   justifyContent: "center",
   overflow: "hidden",
-  backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
+  backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
 };
-obj[1] = createCacheKey;
-obj[2] = { backgroundColor: ThemesDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT };
-const obj2 = { backgroundColor: ThemesDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT };
-obj[3] = {
+obj.section = createStyles;
+obj.sectionSticker = { backgroundColor: nativeDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT };
+const obj2 = { backgroundColor: nativeDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT };
+obj.nsfwContainer = {
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "center",
-  borderRadius: ThemesDefault.radii.sm,
+  borderRadius: nativeDefault.radii.sm,
   marginLeft: 12,
   marginRight: 12,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL,
+  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL,
 };
-obj[4] = { marginLeft: 4, textAlign: "center" };
-let closure_13 = createCacheKey.createStyles(obj);
-let closure_14 = importAllResult.memo((height) => {
-  const tmp = callback3();
-  let obj = { style: items, children: null };
-  items = [tmp.nsfwContainer, { height: height.height }];
-  obj = { source: registerAssetDefault, size: Button.Icon.Sizes.SMALL };
-  const items1 = [callback(Button.Icon, obj)];
+obj.nsfwText = { marginLeft: 4, textAlign: "center" };
+let closure_13 = createStyles.createStyles(obj);
+let closure_14 = noop.memo((height) => {
+  const tmp = closure_13();
+  let obj = { style: null, children: null };
+  const items = [tmp.nsfwContainer, { height: height.height }];
+  obj.style = items;
+  obj = { source: _modDef10415, size: native.Icon.Sizes.SMALL };
+  const items1 = [closure_1_11(native.Icon, obj)];
   obj = { style: tmp.nsfwText, variant: "text-sm/normal", color: "interactive-text-active", children: null };
-  const intl = getSystemLocale.intl;
-  obj[3] = intl.string(getSystemLocale.t.uy25Qz);
-  items1[1] = callback(Text.Text, obj);
-  obj[1] = items1;
-  return callback2(View, obj);
+  const intl = util.intl;
+  obj.children = intl.string(util.t.uy25Qz);
+  items1[1] = closure_1_11(Text_Text.Text, obj);
+  obj.children = items1;
+  return closure_1_12(View, obj);
 });
-let closure_15 = importAllResult.memo((arg0) => {
+let closure_15 = noop.memo((arg0) => {
   ({ height, label, sectionStyle } = arg0);
   const obj = { style: null, children: null };
-  const items = [callback3().section, sectionStyle, { height }];
-  obj[0] = items;
-  obj[1] = callback(Text.Text, {
+  const items = [closure_13().section, sectionStyle, { height }];
+  obj.style = items;
+  obj.children = closure_1_11(Text_Text.Text, {
     lineClamp: 1,
     color: "interactive-text-default",
     variant: "heading-sm/semibold",
     children: label,
   });
-  return callback(View, obj);
+  return closure_1_11(View, obj);
 });
-let closure_16 = importAllResult.memo((height) => {
-  const style = { height: height.height };
-  return callback(View, { style });
-});
+let closure_16 = noop.memo((height) => closure_1_11(View, { style: { height: height.height } }));
 const obj3 = {
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "center",
-  borderRadius: ThemesDefault.radii.sm,
+  borderRadius: nativeDefault.radii.sm,
   marginLeft: 12,
   marginRight: 12,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL,
+  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL,
 };
-const memoResult = importAllResult.memo((bottomSheetRef) => {
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/stickers/native/StickerPickerList.tsx");
+
+export default noop.memo((bottomSheetRef) => {
   bottomSheetRef = bottomSheetRef.bottomSheetRef;
   const bottomSheetIndex = bottomSheetRef.bottomSheetIndex;
   const setCategoryIndex = bottomSheetRef.setCategoryIndex;
@@ -111,64 +114,50 @@ const memoResult = importAllResult.memo((bottomSheetRef) => {
     ];
     stickerFormats = items;
   }
-  let ref;
-  closure_8 = undefined;
-  let first;
-  closure_10 = undefined;
-  let callback;
-  let stateFromStores;
-  let callback3;
-  let memo;
-  let sectionHeights;
-  let sectionSize;
-  let sectionFooterSize;
-  let sectionLabels;
-  let rowsBySection;
-  let rowHeight;
-  let rowSize;
-  let packToScrollToIndex;
-  let setCategory;
-  ref = onLongPressStickerDetail.useRef(null);
-  const tmp4 = callback3();
+  closure_13 = undefined;
+  const ref = onLongPressStickerDetail.useRef(null);
+  const tmp4 = closure_13();
   closure_8 = tmp4;
   const tmp5 = onPressSticker(onLongPressStickerDetail.useState(null), 2);
-  first = tmp5[0];
-  closure_10 = tmp5[1];
+  const focusedSticker = tmp5[0];
+  const setFocusedSticker = tmp5[1];
   let obj = bottomSheetRef(setCategoryIndex[14]);
   const isPortalKeyboardInModal = obj.useIsPortalKeyboardInModal();
   const tmp11 = bottomSheetIndex(setCategoryIndex[15])(flag);
-  callback = tmp11;
+  const containerWidth = tmp11;
   const items1 = [flag];
-  stateFromStores = bottomSheetRef(setCategoryIndex[16]).useStateFromStores(items1, () => flag.hasLoadedStickerPacks);
+  const stateFromStores = bottomSheetRef(setCategoryIndex[16]).useStateFromStores(
+    items1,
+    () => flag.hasLoadedStickerPacks,
+  );
   const tmp13 = ref((setPackToScrollTo) => setPackToScrollTo.setPackToScrollTo);
-  callback3 = tmp13;
+  closure_13 = tmp13;
   const items2 = [setCategoryIndex, tmp13, bottomSheetRef];
-  memo = onLongPressStickerDetail.useMemo(() => {
+  const memo = onLongPressStickerDetail.useMemo(() => {
     function scrollToCancel() {
-      return clearTimeout(ref.scrollTo);
+      return clearTimeout(closure_0.scrollTo);
     }
     closure_0 = { scrollTo: -1 };
     return {
-      scroll(index) {
-        index = index.index;
-        ({ delay, expand } = index);
-        clearTimeout(index.scrollTo);
+      scroll(layout) {
+        const index = layout.index;
+        ({ delay, expand } = layout);
+        clearTimeout(closure_0.scrollTo);
         if (expand) {
-          let current = ref.current;
+          let current = bottomSheetRef.current;
           if (current != null) {
             current.expandActionSheet();
           }
         }
-        index.scrollTo = setTimeout(() => {
-          const current = closure_1_7.current;
+        closure_0.scrollTo = setTimeout(() => {
+          const current = ref.current;
           if (current != null) {
-            const obj = { section: null, item: 0, animated: true };
-            obj[0] = index;
+            const obj = { section: index, item: 0, animated: true };
             current.scrollToLocation(obj);
           }
-          closure_1_13(null);
+          closure_2_13(null);
         }, delay);
-        closure_1_2(index);
+        setCategoryIndex(index);
       },
       cancel() {
         return scrollToCancel;
@@ -176,48 +165,53 @@ const memoResult = importAllResult.memo((bottomSheetRef) => {
     };
   }, items2);
   let tmp15 = bottomSheetIndex(setCategoryIndex[17])({ channel, containerWidth: tmp11, searchResults, stickerFormats });
-  sectionHeights = tmp15.sectionHeights;
-  sectionSize = tmp15.sectionSize;
-  sectionFooterSize = tmp15.sectionFooterSize;
-  sectionLabels = tmp15.sectionLabels;
-  rowsBySection = tmp15.rowsBySection;
-  rowHeight = tmp15.rowHeight;
-  rowSize = tmp15.rowSize;
-  packToScrollToIndex = tmp15.packToScrollToIndex;
+  const sectionHeights = tmp15.sectionHeights;
+  const sectionSize = tmp15.sectionSize;
+  const sectionFooterSize = tmp15.sectionFooterSize;
+  const sectionLabels = tmp15.sectionLabels;
+  const rowsBySection = tmp15.rowsBySection;
+  const rowHeight = tmp15.rowHeight;
+  const rowSize = tmp15.rowSize;
+  const packToScrollToIndex = tmp15.packToScrollToIndex;
   const items3 = [flag, bottomSheetIndex, stateFromStores, packToScrollToIndex, memo];
   const effect = onLongPressStickerDetail.useEffect(() => {
     if (tmp2) {
       if (flag) {
         if (bottomSheetIndex.get() < 1) {
-          let obj = { index: null, delay: null, expand: true };
-          obj[0] = tmp;
-          obj[1] = first;
+          let obj = { index: tmp, delay: delay2, expand: true };
           memo.scroll(obj);
         }
       }
-      obj = { index: null, delay: null };
-      obj[0] = tmp;
-      obj[1] = closure_8;
+      obj = { index: tmp, delay };
       memo.scroll(obj);
     }
     return () => {
-      closure_14.cancel();
+      memo.cancel();
     };
   }, items3);
   const items4 = [sectionLabels, sectionSize, tmp4.sectionSticker];
   const items5 = [sectionFooterSize];
-  callback = onLongPressStickerDetail.useCallback(
+  const callback = onLongPressStickerDetail.useCallback(
     (arg0) =>
-      callback(sectionHeights, {
+      closure_2_11(closure_15, {
         label: sectionLabels[arg0],
         sectionStyle: closure_8.sectionSticker,
         height: sectionSize,
       }),
     items4,
   );
-  const items6 = [channel, tmp11, first, onLongPressStickerDetail, onPressSticker, rowHeight, rowSize, rowsBySection];
+  const items6 = [
+    channel,
+    tmp11,
+    focusedSticker,
+    onLongPressStickerDetail,
+    onPressSticker,
+    rowHeight,
+    rowSize,
+    rowsBySection,
+  ];
   const callback1 = onLongPressStickerDetail.useCallback(
-    () => callback(sectionSize, { height: sectionFooterSize }),
+    () => closure_2_11(closure_16, { height: sectionFooterSize }),
     items5,
   );
   const items7 = [setCategoryIndex, sectionHeights];
@@ -226,41 +220,32 @@ const memoResult = importAllResult.memo((bottomSheetRef) => {
       return null;
     } else {
       const type = tmp.type;
-      if (bottomSheetRef(setCategoryIndex[17]).StickerPickerSectionType.STICKERS === type) {
+      if (useStickerPickerListData.StickerPickerSectionType.STICKERS === type) {
         let obj = {
-          containerWidth: null,
-          stickers: null,
-          rowSize: null,
-          onPressSticker: null,
-          onLongPressStickerDetail: null,
-          focusedSticker: null,
-          setFocusedSticker: null,
-          channel: null,
+          containerWidth,
+          stickers: tmp.stickersByRow[arg1],
+          rowSize,
+          onPressSticker,
+          onLongPressStickerDetail,
+          focusedSticker,
+          setFocusedSticker,
+          channel,
         };
-        obj[0] = callback;
-        obj[1] = tmp.stickersByRow[arg1];
-        obj[2] = rowSize;
-        obj[3] = onPressSticker;
-        obj[4] = onLongPressStickerDetail;
-        obj[5] = first;
-        obj[6] = closure_10;
-        obj[7] = channel;
-        return callback(bottomSheetIndex(tmp16[18]), obj);
-      } else if (tmp15(tmp16[17]).StickerPickerSectionType.NSFW === type) {
-        obj = { height: null };
-        obj[0] = rowHeight;
-        return callback(memo, obj);
+        return closure_2_11(StickerPickerListRowDefault, obj);
+      } else if (tmp15(10416).StickerPickerSectionType.NSFW === type) {
+        obj = { height: rowHeight };
+        return closure_2_11(closure_14, obj);
       } else {
         return null;
       }
-      tmp15 = bottomSheetRef;
+      tmp15 = require;
     }
   }, items6);
   const memo1 = onLongPressStickerDetail.useMemo(() => {
     let obj = bottomSheetIndex(setCategoryIndex[19]);
     const debounceResult = obj.debounce((arg0) => {
       let num = 0;
-      if (0 < closure_15.length) {
+      if (0 < sectionHeights.length) {
         let num3 = 0;
         let num4 = 0;
         num = 0;
@@ -268,17 +253,17 @@ const memoResult = importAllResult.memo((bottomSheetRef) => {
           const sum = num4 + 1;
           const sum1 = num3 + 1;
           num = sum;
-          while (sum1 < closure_15.length) {
+          while (sum1 < sectionHeights.length) {
             num3 = sum1;
             num4 = sum;
             num = sum;
-            if (arg0 < closure_15[sum1]) {
+            if (arg0 < sectionHeights[sum1]) {
               break;
             }
           }
         }
       }
-      callback(num);
+      setCategoryIndex(num);
     }, 100);
     bottomSheetRef = debounceResult;
     obj = {
@@ -289,35 +274,35 @@ const memoResult = importAllResult.memo((bottomSheetRef) => {
     };
     return obj;
   }, items7);
-  setCategory = memo1.setCategory;
+  const setCategory = memo1.setCategory;
   const items8 = [tmp4, rowSize];
   const items9 = [setCategory];
   const memo2 = onLongPressStickerDetail.useMemo(() => {
     let obj = { sectionHeader: null, sectionItem: null };
     obj = {
-      type: bottomSheetRef(setCategoryIndex[20]).FastestListPropsPlaceholderType.SHAPE,
+      type: FastestListPropsPlaceholder.FastestListPropsPlaceholderType.SHAPE,
       colorHex: closure_8.listPlaceholder.color,
       shape: "rect",
-      borderRadius: bottomSheetIndex(setCategoryIndex[8]).radii.md,
-      paddingVertical: bottomSheetIndex(setCategoryIndex[8]).space.PX_4,
+      borderRadius: nativeDefault.radii.md,
+      paddingVertical: nativeDefault.space.PX_4,
     };
-    obj[0] = obj;
-    obj = {
-      type: bottomSheetRef(setCategoryIndex[20]).FastestListPropsPlaceholderType.SHAPE,
+    obj.sectionHeader = obj;
+    const size = {
+      type: FastestListPropsPlaceholder.FastestListPropsPlaceholderType.SHAPE,
       colorHex: closure_8.listPlaceholder.color,
       shape: "circle",
       shapeCount: rowSize,
-      width: closure_10,
-      height: closure_10,
+      width: height,
+      height,
     };
-    obj[1] = obj;
+    obj.sectionItem = size;
     return obj;
   }, items8);
-  const effect1 = onLongPressStickerDetail.useEffect(() => () => closure_23.cancel(), items9);
+  const effect1 = onLongPressStickerDetail.useEffect(() => () => setCategory.cancel(), items9);
   const items10 = [memo];
   const effect2 = onLongPressStickerDetail.useEffect(
     () => () => {
-      closure_14.cancel();
+      memo.cancel();
     },
     items10,
   );
@@ -326,10 +311,8 @@ const memoResult = importAllResult.memo((bottomSheetRef) => {
     length = searchResults.length;
   }
   if (0 === length) {
-    obj = { inActionSheet: true, insetTop: null, insetBottom: null };
-    obj[1] = num2;
-    obj[2] = num;
-    let tmp26 = callback(tmp10(tmp8[21]), obj);
+    obj = { inActionSheet: true, insetTop: num2, insetBottom: num };
+    let tmp26 = containerWidth(tmp10(tmp8[21]), obj);
   } else {
     obj = {
       accessibilityLabel: null,
@@ -353,27 +336,24 @@ const memoResult = importAllResult.memo((bottomSheetRef) => {
       sectionFooterSize: null,
     };
     const intl = tmp7(tmp8[12]).intl;
-    obj[0] = intl.string(tmp7(tmp8[12]).t.nf1s3u);
+    obj.accessibilityLabel = intl.string(tmp7(tmp8[12]).t.nf1s3u);
     const tmp10Result = tmp10(tmp8[22]);
-    obj[1] = tmp7(tmp8[23]).getCustomKeyboardHeight();
-    obj[3] = isPortalKeyboardInModal;
-    obj[4] = num;
-    obj[5] = num2;
-    obj[6] = rowHeight;
-    obj[9] = memo1.onScroll;
-    obj[10] = memo2;
-    obj[11] = callback2;
-    obj[12] = callback;
-    obj[13] = callback1;
-    obj[14] = ref;
-    obj[16] = tmp15.sections;
-    obj[17] = sectionSize;
-    obj[18] = sectionFooterSize;
-    tmp26 = callback(tmp10Result, obj);
+    obj.estimatedListSize = tmp7(tmp8[23]).getCustomKeyboardHeight();
+    obj.preventNativeModalDismiss = isPortalKeyboardInModal;
+    obj.insetEnd = num;
+    obj.insetStart = num2;
+    obj.itemSize = rowHeight;
+    obj.onScroll = memo1.onScroll;
+    obj.placeholderConfig = memo2;
+    obj.renderItem = callback2;
+    obj.renderSectionHeader = callback;
+    obj.renderSectionFooter = callback1;
+    obj.ref = ref;
+    obj.sections = tmp15.sections;
+    obj.sectionHeaderSize = sectionSize;
+    obj.sectionFooterSize = sectionFooterSize;
+    tmp26 = containerWidth(tmp10Result, obj);
     const tmp7Result = tmp7(tmp8[23]);
   }
   return tmp26;
 });
-const result = require("set").fileFinishedImporting("modules/stickers/native/StickerPickerList.tsx");
-
-export default memoResult;

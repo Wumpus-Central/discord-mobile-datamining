@@ -1,10 +1,8 @@
 // discord_common/js/shared/shared-constants/IntegrationTypes.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const obj = { SYNCABLE: null };
-let set = new Set(["twitch", "youtube"]);
-obj[0] = set;
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/IntegrationTypes.tsx");
+const obj = { SYNCABLE: new Set(["twitch", "youtube"]) };
+const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/IntegrationTypes.tsx");
 
 export const IntegrationTypes = {
   DISCORD: "discord",

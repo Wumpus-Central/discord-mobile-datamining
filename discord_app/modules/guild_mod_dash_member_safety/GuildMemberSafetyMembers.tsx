@@ -1,14 +1,14 @@
 // discord_app/modules/guild_mod_dash_member_safety/GuildMemberSafetyMembers.tsx
-import version from "../../../discord_common/js/packages/secondary-index-map/SecondaryIndexMap.tsx";
-import isEqualDefault from "../../../_runtime/04679_isEqual.js";
-import result2 from "MemberSafetyElasticSearchQueryTypes.tsx";
-import getJoinedAtDateFormatter from "DateUtils.tsx";
-import getSortValueForMember from "SortUtils.tsx";
-import hasMemberSupplemental from "MemberSafetyStoreSupplemental.tsx";
-import isSpamSupported from "../messages/isSpam.tsx";
-import closure_3 from "../../stores/UserStore.tsx";
+import SecondaryIndexMap from "../../../discord_common/js/packages/secondary-index-map/SecondaryIndexMap.tsx";
+import _modDef4679 from "../../../_runtime/metro/04679__.js";
+import MemberSafetyElasticSearchQueryTypes from "MemberSafetyElasticSearchQueryTypes.tsx";
+import guild_mod_dash_member_safety_DateUtils from "DateUtils.tsx";
+import SortUtils from "SortUtils.tsx";
+import MemberSafetyStoreSupplemental from "MemberSafetyStoreSupplemental.tsx";
+import isSpam from "../messages/isSpam.tsx";
+import UserStore from "../../stores/UserStore.tsx";
 
-require = arg1;
+require = fn;
 function getGuildMemberSecondaryIndexes(isCurrentGuildMemberByTimestamp) {
   if (isCurrentGuildMemberByTimestamp.isCurrentGuildMemberByTimestamp) {
     let NEW_GUILD_MEMBER = tmp.CURRENT_GUILD_MEMBER;
@@ -27,30 +27,31 @@ function getGuildMemberSecondarySortBy(arg0) {
   return arg0.sort;
 }
 let closure_4 = Date.now();
-let obj = {
+const MemberSafetySecondaryIndex = {
   NEW_GUILD_MEMBER: "NEW_GUILD_MEMBER",
   CURRENT_GUILD_MEMBER: "CURRENT_GUILD_MEMBER",
   INCLUDED_IN_SEARCH_RESULTS: "INCLUDED_IN_SEARCH_RESULTS",
 };
-let result = require("set").fileFinishedImporting("modules/guild_mod_dash_member_safety/GuildMemberSafetyMembers.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_mod_dash_member_safety/GuildMemberSafetyMembers.tsx");
 class GuildMemberSafetyMembers {
   constructor(arg0) {
-    obj = Object.create(new.target.prototype);
-    obj[0] = Date.now();
-    obj.guildId = global;
-    secondaryIndexMap = new require("version").SecondaryIndexMap(
+    merged = Object.assign({ newMemberTimestamp: null });
+    merged[0] = Date.now();
+    merged.guildId = global;
+    secondaryIndexMap = new closure_0(closure_2[1]).SecondaryIndexMap(
       getGuildMemberSecondaryIndexes,
       getGuildMemberSecondarySortBy,
     );
-    obj._membersMap = secondaryIndexMap;
-    return obj;
+    merged._membersMap = secondaryIndexMap;
+    return merged;
   }
 }
 const prototype = GuildMemberSafetyMembers.prototype;
 prototype["reset"] = function reset() {
   const _membersMap = this._membersMap;
   _membersMap.clear();
-  const secondaryIndexMap = new version.SecondaryIndexMap(
+  const secondaryIndexMap = new SecondaryIndexMap.SecondaryIndexMap(
     getGuildMemberSecondaryIndexes,
     getGuildMemberSecondarySortBy,
   );
@@ -61,11 +62,11 @@ prototype["resetNewMemberTimestamp"] = function resetNewMemberTimestamp() {
   this.newMemberTimestamp = Date.now();
 };
 prototype["enhanceNewMember"] = function enhanceNewMember(trueMember, searchState, isIncludedInSearchResults) {
-  obj = isIncludedInSearchResults;
+  let obj = isIncludedInSearchResults;
   if (isIncludedInSearchResults === undefined) {
     obj = {};
   }
-  const joinedAtTimestamp = getJoinedAtDateFormatter.getJoinedAtTimestamp(trueMember.joinedAt);
+  const joinedAtTimestamp = guild_mod_dash_member_safety_DateUtils.getJoinedAtTimestamp(trueMember.joinedAt);
   const result = this._computeMemberSupplementals(trueMember.userId, trueMember.unusualDMActivityUntil);
   ({
     hasUnusualDmActivity,
@@ -87,24 +88,22 @@ prototype["enhanceNewMember"] = function enhanceNewMember(trueMember, searchStat
     joinSourceApplicationId,
     joinSourceChannelId,
   };
-  user = user.getUser(trueMember.userId);
+  const user = UserStore.getUser(trueMember.userId);
   const merged = Object.assign(trueMember);
   obj.isCurrentGuildMemberByTimestamp = joinedAtTimestamp <= this.newMemberTimestamp;
   obj.isIncludedInSearchResults = false;
   obj.user = user;
-  const obj2 = getJoinedAtDateFormatter;
-  const tmp = require;
   let ORDER_BY_UNSPECIFIED = searchState.selectedSort;
   if (ORDER_BY_UNSPECIFIED == null) {
-    ORDER_BY_UNSPECIFIED = result2.OrderBy.ORDER_BY_UNSPECIFIED;
+    ORDER_BY_UNSPECIFIED = MemberSafetyElasticSearchQueryTypes.OrderBy.ORDER_BY_UNSPECIFIED;
   }
-  obj.sort = getSortValueForMember.getSortValueForMember(trueMember, ORDER_BY_UNSPECIFIED);
+  obj.sort = SortUtils.getSortValueForMember(trueMember, ORDER_BY_UNSPECIFIED);
   obj.joinedAtTimestamp = joinedAtTimestamp;
   const merged1 = Object.assign(obj);
   return obj;
 };
 prototype["_computeMemberSupplementals"] = function _computeMemberSupplementals(userId, unusualDMActivityUntil) {
-  obj = hasMemberSupplemental;
+  let obj = MemberSafetyStoreSupplemental;
   obj = obj.getMemberSupplementalByGuildId(this.guildId)[userId];
   if (obj == null) {
     obj = {};
@@ -127,27 +126,27 @@ prototype["_computeMemberSupplementals"] = function _computeMemberSupplementals(
   if (joinSourceType == null) {
     joinSourceType = null;
   }
-  obj[1] = joinSourceType;
+  obj.joinSourceType = joinSourceType;
   let inviterId = obj.inviterId;
   if (inviterId == null) {
     inviterId = null;
   }
-  obj[2] = inviterId;
+  obj.inviterId = inviterId;
   let integrationType = obj.integrationType;
   if (integrationType == null) {
     integrationType = null;
   }
-  obj[3] = integrationType;
+  obj.integrationType = integrationType;
   let prop = obj.joinSourceApplicationId;
   if (prop == null) {
     prop = null;
   }
-  obj[4] = prop;
+  obj.joinSourceApplicationId = prop;
   let joinSourceChannelId = obj.joinSourceChannelId;
   if (joinSourceChannelId == null) {
     joinSourceChannelId = null;
   }
-  obj[5] = joinSourceChannelId;
+  obj.joinSourceChannelId = joinSourceChannelId;
   let tmp9 = null != unusualDMActivityUntil;
   if (tmp9) {
     const _Date = Date;
@@ -155,21 +154,21 @@ prototype["_computeMemberSupplementals"] = function _computeMemberSupplementals(
     const time = date.getTime();
     tmp9 = time >= closure_4 - tmp(7497).UNUSUAL_DM_COMPARISON_DELTA;
   }
-  obj[6] = tmp9;
-  obj[7] = isSpamSupported.isSpammer(userId);
+  obj.hasUnusualDmActivity = tmp9;
+  obj.hasUnusualAccountActivity = isSpam.isSpammer(userId);
   return obj;
 };
 prototype["createMember"] = function createMember(userId) {
   const _membersMap = this._membersMap;
   return _membersMap.set(userId.userId, userId);
 };
-prototype["updateMember"] = function updateMember(userId) {
+prototype["updateMember"] = function updateMember(userId, arg1) {
   const self = this;
   if (null == arg1) {
     const _membersMap2 = self._membersMap;
     return _membersMap2.set(userId.userId, userId);
   } else {
-    obj = {};
+    let obj = {};
     const merged = Object.assign(userId);
     obj = {};
     const merged1 = Object.assign(arg1);
@@ -218,11 +217,8 @@ prototype["updateMember"] = function updateMember(userId) {
     if (keys !== undefined) {
       flag2 = flag;
       while (keys[tmp] !== undefined) {
-        let tmp14 = tmp6;
         let tmp15 = obj[tmp6];
-        let tmp16 = importDefault;
-        let tmp17 = dependencyMap;
-        if (isEqualDefault(tmp15, obj[tmp6])) {
+        if (_modDef4679(tmp15, obj[tmp6])) {
           continue;
         } else {
           obj[tmp6] = tmp15;
@@ -259,14 +255,14 @@ Object.defineProperty(prototype, "version", {
   set: undefined,
 });
 
-export const MemberSafetySecondaryIndex = obj;
+export { MemberSafetySecondaryIndex };
 export const hasUnusualDmActivity = function hasUnusualDmActivity(arg0) {
   let tmp = null != arg0;
   if (tmp) {
     const _Date = Date;
     const date = new Date(arg0);
     const time = date.getTime();
-    tmp = time >= closure_4 - result2.UNUSUAL_DM_COMPARISON_DELTA;
+    tmp = time >= closure_4 - MemberSafetyElasticSearchQueryTypes.UNUSUAL_DM_COMPARISON_DELTA;
   }
   return tmp;
 };

@@ -1,18 +1,17 @@
 // discord_app/modules/app_database/modules/Guilds.tsx
-import timestampDefault from "../../debug/Logger.tsx";
-import fromGuildPropertiesWithAdditionalFieldsAll from "../../../utils/GuildRecordUtils.tsx";
-import fromServerArrayAll from "../../../utils/GuildRoleRecordUtils.tsx";
-import compareGuildRolesAll from "../../../utils/GuildRoleUtils.tsx";
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import { updateJoinedAt } from "../../../records/GuildRecord.tsx";
-import closure_5 from "../../../stores/AuthenticationStore.tsx";
-import closure_6 from "../../../stores/GuildMemberStore.tsx";
-import closure_7 from "../../../stores/GuildRoleStore.tsx";
-import closure_8 from "../../../stores/GuildStore.tsx";
-import set from "../../../../_runtime/00002_set.js";
+import LoggerDefault from "../../debug/Logger.tsx";
+import GuildRecordUtilsAll from "../../../utils/GuildRecordUtils.tsx";
+import DatabaseDaosDefault from "../DatabaseDaos.tsx";
+import GuildRoleRecordUtilsAll from "../../../utils/GuildRoleRecordUtils.tsx";
+import GuildRoleUtilsAll from "../../../utils/GuildRoleUtils.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
+import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
+import GuildRoleStore from "../../../stores/GuildRoleStore.tsx";
+import GuildStore from "../../../stores/GuildStore.tsx";
 
-let set = importDefault;
-let closure_9 = new timestampDefault("Guilds");
+const updateJoinedAt = fn(1975).updateJoinedAt;
+let closure_9 = new LoggerDefault("Guilds");
 class Guilds {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -55,24 +54,24 @@ class Guilds {
 const prototype = Guilds.prototype;
 prototype["getAsync"] = function getAsync(arg0) {
   closure_0 = arg0;
-  return callback(function*() {
-    let length = tmp5;
-    closure_0 = tmp2;
+  return (async () => {
+    closure_1 = tmp5;
     const _performance2 = performance;
-    closure_0 = performance.now();
-    const obj6 = closure_1_0(table[7]);
-    length = yield closure_1_0(table[7]).guilds(closure_1_0).getMany();
+    closure_128_0 = performance.now();
+    tmp2(dependencyMap[7]);
+    closure_128_1 = await tmp2(c2[7]).guilds(tmp2).getMany();
     const _performance = performance;
+    closure_128_2 = performance.now();
     const _HermesInternal = HermesInternal;
-    closure_1_9.verbose("loaded in " + closure_2 - closure_0 + "ms (guilds: " + length.length + ")");
-    return length;
+    closure_1_9.verbose("loaded in " + closure_128_2 - closure_128_0 + "ms (guilds: " + closure_128_1.length + ")");
+    return closure_128_1;
   })();
 };
-prototype["getOneAsync"] = function getOneAsync(closure_0, closure_2) {
-  closure_1 = closure_2;
-  return callback(function*() {
-    const obj2 = v0(closure_1_2[7]);
-    yield obj2.guilds(v0).get(c1);
+prototype["getOneAsync"] = function getOneAsync(arg0, arg1) {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  return (async () => {
+    await v3(closure_1_2[7]).guilds(closure_0).get(closure_1);
     return arg1;
   })();
 };
@@ -83,40 +82,24 @@ prototype["handleBackgroundSync"] = function handleBackgroundSync(arg0, arg1) {
   while (iter !== undefined) {
     let tmp2 = nextResult;
     if ("unavailable" !== nextResult.data_mode) {
-      let tmp19 = store4;
-      let tmp20 = nextResult;
-      let guild = store4.getGuild(tmp2.id);
+      let guild = GuildStore.getGuild(tmp2.id);
       if (null != guild) {
-        let tmp23 = store3;
-        let tmp24 = nextResult;
-        let unsafeMutableRoles = store3.getUnsafeMutableRoles(tmp2.id);
+        let unsafeMutableRoles = GuildRoleStore.getUnsafeMutableRoles(tmp2.id);
         if ("partial" === tmp2.data_mode) {
-          let tmp8 = importAll;
-          let tmp9 = dependencyMap;
-          let obj2 = compareGuildRolesAll;
-          let tmp10 = nextResult;
-          let tmp11 = unsafeMutableRoles;
-          let tmp12 = obj2;
+          let obj2 = GuildRoleUtilsAll;
           let filterRoleDeletesResult = obj2.filterRoleDeletes(tmp2.id, unsafeMutableRoles, tmp2.partial_updates.roles, tmp2.partial_updates.deleted_role_ids);
-          let tmp4 = dependencyMap;
           let tmp7 = importAll;
         } else {
-          let tmp3 = importAll;
-          tmp4 = dependencyMap;
-          let obj = fromServerArrayAll;
-          let tmp5 = nextResult;
+          let obj = GuildRoleRecordUtilsAll;
           filterRoleDeletesResult = obj.fromServerArray(tmp2.id, tmp2.roles);
           tmp7 = importAll;
         }
+        tmp7(1971);
         let tmp7Result = tmp7(1971);
-        tmp7Result = tmp7(1971);
-        let tmp13 = nextResult;
-        let tmp14 = guild;
         let fromBackgroundSyncResult = tmp7Result.fromBackgroundSync(tmp2, tmp22);
         let tmp7Result1 = tmp7(2017);
-        let tmp17 = store2;
         let result = tmp7Result1.toSerializedPartition(filterRoleDeletesResult);
-        let putResult = self.put(tmp7Result.attachSerializedData(fromBackgroundSyncResult, result, store2.getSelfMember(tmp2.id)), arg1);
+        let putResult = self.put(tmp7Result.attachSerializedData(fromBackgroundSyncResult, result, GuildMemberStore.getSelfMember(tmp2.id)), arg1);
       }
     }
     continue;
@@ -125,132 +108,116 @@ prototype["handleBackgroundSync"] = function handleBackgroundSync(arg0, arg1) {
 prototype["handleConnectionOpen"] = function handleConnectionOpen(unavailableGuilds, database) {
   const self = this;
   const items = [...unavailableGuilds.unavailableGuilds];
-  const obj = set(1986);
-  set(1986).guildsTransaction(database).deleteAllExcept(items);
+  DatabaseDaosDefault.guildsTransaction(database).deleteAllExcept(items);
   for (const item10027 of tmp2) {
     let putOneResult = self.putOne(item10027, arg1);
     continue;
   }
 };
-prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
+prototype["handleGuildCreate"] = function handleGuildCreate(guild, arg1) {
   this.putOne(guild.guild, arg1);
 };
-prototype["handleGuildUpdate"] = function handleGuildUpdate(guild) {
-  guild = store4.getGuild(guild.guild.id);
-  const obj = fromGuildPropertiesWithAdditionalFieldsAll;
-  const fromGuildResult = fromGuildPropertiesWithAdditionalFieldsAll.fromGuild(guild.guild, guild);
-  const obj2 = fromGuildPropertiesWithAdditionalFieldsAll;
-  const obj3 = fromServerArrayAll;
-  const result = obj3.toSerializedPartition(fromServerArrayAll.fromServerArray(guild.guild.id, guild.guild.roles));
-  this.put(obj2.attachSerializedData(fromGuildResult, result, store2.getSelfMember(guild.guild.id)), arg1);
+prototype["handleGuildUpdate"] = function handleGuildUpdate(guild, arg1) {
+  guild = GuildStore.getGuild(guild.guild.id);
+  const fromGuildResult = GuildRecordUtilsAll.fromGuild(guild.guild, guild);
+  const obj2 = GuildRecordUtilsAll;
+  const obj3 = GuildRoleRecordUtilsAll;
+  const result = obj3.toSerializedPartition(GuildRoleRecordUtilsAll.fromServerArray(guild.guild.id, guild.guild.roles));
+  this.put(obj2.attachSerializedData(fromGuildResult, result, GuildMemberStore.getSelfMember(guild.guild.id)), arg1);
 };
-prototype["handleGuildDelete"] = function handleGuildDelete(guild) {
+prototype["handleGuildDelete"] = function handleGuildDelete(guild, arg1) {
   this.delete(guild.guild.id, arg1);
 };
-prototype["handleGuildRoleChange"] = function handleGuildRoleChange(guildId) {
-  const guild = store4.getGuild(guildId.guildId);
-  const unsafeMutableRoles = store3.getUnsafeMutableRoles(guildId.guildId);
+prototype["handleGuildRoleChange"] = function handleGuildRoleChange(guildId, arg1) {
+  const guild = GuildStore.getGuild(guildId.guildId);
+  const unsafeMutableRoles = GuildRoleStore.getUnsafeMutableRoles(guildId.guildId);
   if (null != guild) {
     const self = this;
-    let obj = fromGuildPropertiesWithAdditionalFieldsAll;
-    obj = {};
+    const obj = {};
     const merged = Object.assign(unsafeMutableRoles);
-    const obj2 = fromServerArrayAll;
-    obj[guildId.role.id] = fromServerArrayAll.fromServer(guildId.guildId, guildId.role);
+    const obj2 = GuildRoleRecordUtilsAll;
+    obj[guildId.role.id] = GuildRoleRecordUtilsAll.fromServer(guildId.guildId, guildId.role);
     const result = obj2.toSerializedPartition(obj);
-    this.put(obj.attachSerializedData(guild, result, store2.getSelfMember(guildId.guildId)), arg1);
-    const obj4 = fromServerArrayAll;
+    this.put(obj.attachSerializedData(guild, result, GuildMemberStore.getSelfMember(guildId.guildId)), arg1);
   }
 };
-prototype["handleGuildRoleDelete"] = function handleGuildRoleDelete(guildId) {
-  closure_0 = guildId;
-  const guild = store4.getGuild(guildId.guildId);
+prototype["handleGuildRoleDelete"] = function handleGuildRoleDelete(guildId, arg1) {
+  const guild = GuildStore.getGuild(guildId.guildId);
   if (null != guild) {
     let obj = {};
-    const merged = Object.assign(store3.getUnsafeMutableRoles(guildId.guildId));
+    const merged = Object.assign(GuildRoleStore.getUnsafeMutableRoles(guildId.guildId));
     const roleId = guildId.roleId;
     delete tmp2[tmp];
-    const selfMember = store2.getSelfMember(guildId.guildId);
+    const selfMember = GuildMemberStore.getSelfMember(guildId.guildId);
     let tmp7 = selfMember;
     if (null != selfMember) {
       obj = {};
       const merged1 = Object.assign(selfMember);
       const roles = selfMember.roles;
-      obj.roles = roles.filter((arg0) => arg0 !== guildId.roleId);
+      obj.roles = roles.filter((item) => item !== guildId.roleId);
       tmp7 = obj;
     }
     const self = this;
-    const obj2 = fromGuildPropertiesWithAdditionalFieldsAll;
-    this.put(obj2.attachSerializedData(guild, fromServerArrayAll.toSerializedPartition(obj), tmp7), arg1);
-    const obj3 = fromServerArrayAll;
+    const obj2 = GuildRecordUtilsAll;
+    this.put(obj2.attachSerializedData(guild, GuildRoleRecordUtilsAll.toSerializedPartition(obj), tmp7), arg1);
   }
 };
-prototype["handleGuildMemberAdd"] = function handleGuildMemberAdd(joinedAt) {
+prototype["handleGuildMemberAdd"] = function handleGuildMemberAdd(joinedAt, arg1) {
   if (null != joinedAt.joinedAt) {
-    if (joinedAt.user.id === store.getId()) {
-      const guild = store4.getGuild(joinedAt.guildId);
+    if (joinedAt.user.id === AuthenticationStore.getId()) {
+      const guild = GuildStore.getGuild(joinedAt.guildId);
       if (null != guild) {
         const self = this;
-        const obj = fromGuildPropertiesWithAdditionalFieldsAll;
+        const obj = GuildRecordUtilsAll;
         const tmp8 = updateJoinedAt(guild, joinedAt.joinedAt);
-        const result = fromServerArrayAll.toSerializedPartition(store3.getUnsafeMutableRoles(guild.id));
-        this.put(obj.attachSerializedData(tmp8, result, store2.getSelfMember(guild.id)), arg1);
-        const obj2 = fromServerArrayAll;
+        const result = GuildRoleRecordUtilsAll.toSerializedPartition(GuildRoleStore.getUnsafeMutableRoles(guild.id));
+        this.put(obj.attachSerializedData(tmp8, result, GuildMemberStore.getSelfMember(guild.id)), arg1);
       }
     }
   }
 };
-prototype["handleGuildMemberUpdate"] = function handleGuildMemberUpdate(user) {
-  if (user.user.id === store.getId()) {
-    const guild = store4.getGuild(user.guildId);
+prototype["handleGuildMemberUpdate"] = function handleGuildMemberUpdate(user, arg1) {
+  if (user.user.id === AuthenticationStore.getId()) {
+    const guild = GuildStore.getGuild(user.guildId);
     if (null != guild) {
       const self = this;
-      let obj = fromGuildPropertiesWithAdditionalFieldsAll;
-      obj = { roles: null, userId: null };
-      obj[0] = user.roles;
-      obj[1] = user.user.id;
-      this.put(obj.attachSerializedData(guild, fromServerArrayAll.toSerializedPartition(store3.getUnsafeMutableRoles(guild.id)), obj), arg1);
-      const obj2 = fromServerArrayAll;
+      const obj = { roles: user.roles, userId: user.user.id };
+      this.put(obj.attachSerializedData(guild, GuildRoleRecordUtilsAll.toSerializedPartition(GuildRoleStore.getUnsafeMutableRoles(guild.id)), obj), arg1);
     }
   }
 };
 prototype["resetInMemoryState"] = function resetInMemoryState() {
 
 };
-prototype["putOne"] = function putOne(members) {
+prototype["putOne"] = function putOne(members, arg1) {
   members = members.members;
   const found = members.find((user) => user.user.id === id.getId());
-  const guild = store4.getGuild(members.id);
+  const guild = GuildStore.getGuild(members.id);
   if (null != members.properties) {
-    let obj = fromServerArrayAll;
+    let obj = GuildRoleRecordUtilsAll;
     ({ id, roles } = members);
-    const fromSyncOperationResult = obj.fromSyncOperation(id, roles, store3.getUnsafeMutableRoles(members.id));
-    const obj2 = fromGuildPropertiesWithAdditionalFieldsAll;
-    const obj3 = fromGuildPropertiesWithAdditionalFieldsAll;
-    const fromServerResult = fromGuildPropertiesWithAdditionalFieldsAll.fromServer(members, guild);
+    const fromSyncOperationResult = obj.fromSyncOperation(id, roles, GuildRoleStore.getUnsafeMutableRoles(members.id));
+    const obj2 = GuildRecordUtilsAll;
+    const fromServerResult = GuildRecordUtilsAll.fromServer(members, guild);
     let tmp9 = null;
-    const result = fromServerArrayAll.toSerializedPartition(fromSyncOperationResult);
+    const result = GuildRoleRecordUtilsAll.toSerializedPartition(fromSyncOperationResult);
     if (null != found) {
-      obj = { userId: null, roles: null };
-      obj[0] = found.user.id;
-      obj[1] = found.roles;
+      obj = { userId: found.user.id, roles: found.roles };
       tmp9 = obj;
     }
     const self = this;
     this.put(obj2.attachSerializedData(fromServerResult, result, tmp9), arg1);
-    const obj4 = fromServerArrayAll;
   }
 };
 prototype["put"] = function put(arg0, database) {
-  const obj = set(1986);
-  set(1986).guildsTransaction(database).put(arg0);
+  DatabaseDaosDefault.guildsTransaction(database).put(arg0);
 };
 prototype["delete"] = function delete(arg0, database) {
-  const obj = set(1986);
-  set(1986).guildsTransaction(database).delete(arg0);
+  DatabaseDaosDefault.guildsTransaction(database).delete(arg0);
 };
-set = Object.create(Guilds.prototype);
-set.actions = {
+let size = Object.create(Guilds.prototype);
+let closure_129_0 = size;
+size.actions = {
   BACKGROUND_SYNC(arg0, arg1) {
     return obj.handleBackgroundSync(arg0, arg1);
   },
@@ -282,6 +249,7 @@ set.actions = {
     return obj.handleGuildUpdate(arg0, arg1);
   }
 };
-let result = set.fileFinishedImporting("modules/app_database/modules/Guilds.tsx");
+size = fn(2);
+let result = size.fileFinishedImporting("modules/app_database/modules/Guilds.tsx");
 
-export default set;
+export default size;

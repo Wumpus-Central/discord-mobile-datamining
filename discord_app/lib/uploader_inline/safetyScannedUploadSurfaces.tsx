@@ -1,9 +1,9 @@
 // discord_app/lib/uploader_inline/safetyScannedUploadSurfaces.tsx
-import set from "../../../_runtime/00002_set.js";
-import UploadTypes2 from "../../modules/image_cropping/web/ImageCroppingConstants.tsx";
+import ImageCroppingConstants from "../../modules/image_cropping/web/ImageCroppingConstants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const UploadTypes = UploadTypes2.UploadTypes;
-const obj = {
+const UploadTypes = ImageCroppingConstants.UploadTypes;
+const SafetyScannedUploadSurface = {
   USER_DEFAULT_PROFILE_AVATAR: "USER_DEFAULT_PROFILE_AVATAR",
   USER_DEFAULT_PROFILE_BANNER: "USER_DEFAULT_PROFILE_BANNER",
   USER_GUILD_PROFILE_AVATAR: "USER_GUILD_PROFILE_AVATAR",
@@ -15,9 +15,9 @@ const obj = {
   EMOJI: "EMOJI",
   STICKER: "STICKER",
 };
-const result = set.fileFinishedImporting("lib/uploader_inline/safetyScannedUploadSurfaces.tsx");
+const result = size.fileFinishedImporting("lib/uploader_inline/safetyScannedUploadSurfaces.tsx");
 
-export const SafetyScannedUploadSurface = obj;
+export { SafetyScannedUploadSurface };
 export const getSafetyScannedUploadSurfaceForProfileCustomization =
   function getSafetyScannedUploadSurfaceForProfileCustomization(arg0, arg1) {
     if (UploadTypes.AVATAR === arg0) {

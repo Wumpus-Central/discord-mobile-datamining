@@ -1,10 +1,12 @@
 // discord_app/modules/guild_mod_dash_member_safety/MemberSafetyConstants.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
-import importAllResult from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import Constants from "../../Constants.tsx";
+import BigFlagUtils from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const Permissions = ME.Permissions;
-const combineResult = importAllResult.combine(
+const Permissions = Constants.Permissions;
+const result = size.fileFinishedImporting("modules/guild_mod_dash_member_safety/MemberSafetyConstants.tsx");
+
+export const MemberSafetyPagePermissions = BigFlagUtils.combine(
   Permissions.ADMINISTRATOR,
   Permissions.MANAGE_GUILD,
   Permissions.BAN_MEMBERS,
@@ -13,6 +15,3 @@ const combineResult = importAllResult.combine(
   Permissions.MANAGE_ROLES,
   Permissions.MANAGE_NICKNAMES,
 );
-const result = set.fileFinishedImporting("modules/guild_mod_dash_member_safety/MemberSafetyConstants.tsx");
-
-export const MemberSafetyPagePermissions = combineResult;

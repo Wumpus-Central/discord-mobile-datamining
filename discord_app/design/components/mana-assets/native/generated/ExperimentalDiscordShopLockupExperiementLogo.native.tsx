@@ -1,14 +1,14 @@
 // discord_app/design/components/mana-assets/native/generated/ExperimentalDiscordShopLockupExperiementLogo.native.tsx
-import set from "../../../../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import _mod17 from "../../../../../../_runtime/metro/00017__.js";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import map from "../../../../tokens/native/useToken.tsx";
-import metadataDefault from "../../../../../../discord_assets/assets/mana/asset-library/generated/ExperimentalDiscordShopLockupExperiementLogo-2x.png.js";
+import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import useToken from "../../../../tokens/native/useToken.tsx";
+import _modDef5974 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ExperimentalDiscordShopLockupExperiementLogo-2x.png.js";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-const Image = get_ActivityIndicator.Image;
+const Image = _mod17.Image;
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting(
+const result = size.fileFinishedImporting(
   "design/components/mana-assets/native/generated/ExperimentalDiscordShopLockupExperiementLogo.native.tsx",
 );
 
@@ -18,7 +18,7 @@ export const ExperimentalDiscordShopLockupExperiementLogo = function Experimenta
   let ICON_STRONG = color.color;
   ({ accessible, accessibilityLabel, resizeMode } = color);
   if (ICON_STRONG === undefined) {
-    ICON_STRONG = ThemesDefault.colors.ICON_STRONG;
+    ICON_STRONG = nativeDefault.colors.ICON_STRONG;
   }
   let num = color.width;
   if (num === undefined) {
@@ -32,34 +32,34 @@ export const ExperimentalDiscordShopLockupExperiementLogo = function Experimenta
   if (num3 === undefined) {
     num3 = 1;
   }
-  let obj = map;
+  let obj = useToken;
   const token = obj.useToken(ICON_STRONG);
   if (null != token) {
-    obj = { tintColor: null };
-    obj[0] = token;
+    obj = { tintColor: token };
     let tmp6 = obj;
   } else {
     if (tmp5) {
-      obj = { tintColor: null };
-      obj[0] = ICON_STRONG;
+      obj = { tintColor: ICON_STRONG };
       tmp6 = obj;
     }
     tmp5 = null != ICON_STRONG && typeof ICON_STRONG === "string";
   }
-  obj1 = {
+  const obj1 = {
     fadeDuration: 0,
-    source: { uri: metadataDefault },
-    style: items,
+    source: { uri: _modDef5974 },
+    style: null,
     accessible,
     accessibilityLabel,
     resizeMode,
   };
-  items = [{ width: num * num3, height: num2 * num3 }, tmp6];
+  const size = { width: num * num3, height: num2 * num3 };
+  const items = [size, tmp6];
+  obj1.style = items;
   return (
     <Image
       fadeDuration={0}
-      source={{ uri: metadataDefault }}
-      style={items}
+      source={{ uri: _modDef5974 }}
+      style={null}
       accessible={accessible}
       accessibilityLabel={accessibilityLabel}
       resizeMode={resizeMode}

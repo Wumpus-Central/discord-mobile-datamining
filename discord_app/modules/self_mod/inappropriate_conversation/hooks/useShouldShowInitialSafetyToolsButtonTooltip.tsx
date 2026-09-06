@@ -1,28 +1,27 @@
 // discord_app/modules/self_mod/inappropriate_conversation/hooks/useShouldShowInitialSafetyToolsButtonTooltip.tsx
-import closure_2 from "../../ChannelSafetyWarningsStore.tsx";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { useInappropriateConversationSafetyToolsWarningForChannel } from "useInappropriateConversationSafetyToolsWarningForChannel.tsx";
+import ChannelSafetyWarningsStore from "../../ChannelSafetyWarningsStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/self_mod/inappropriate_conversation/hooks/useShouldShowInitialSafetyToolsButtonTooltip.tsx",
 );
 
 export const useShouldShowInitialSafetyToolsButtonTooltip = function useShouldShowInitialSafetyToolsButtonTooltip(
   channelId,
 ) {
-  const _require = channelId;
+  _require = channelId;
   const inappropriateConversationSafetyToolsWarningForChannel =
-    require("useInappropriateConversationSafetyToolsWarningForChannel.tsx").useInappropriateConversationSafetyToolsWarningForChannel(
+    require("useInappropriateConversationSafetyToolsWarningForChannel").useInappropriateConversationSafetyToolsWarningForChannel(
       channelId,
     );
-  const obj = useInappropriateConversationSafetyToolsWarningForChannel;
-  const items = [closure_2];
-  const obj2 = initialize;
+  const obj = require("useInappropriateConversationSafetyToolsWarningForChannel");
+  const items = [ChannelSafetyWarningsStore];
+  const obj2 = require("initialize");
   return (
     null != inappropriateConversationSafetyToolsWarningForChannel &&
-    !require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
-      closure_1_2.hasShownInitialTooltipForChannel(closure_0),
+    !require("initialize").useStateFromStores(items, () =>
+      ChannelSafetyWarningsStore.hasShownInitialTooltipForChannel(closure_0),
     )
   );
 };

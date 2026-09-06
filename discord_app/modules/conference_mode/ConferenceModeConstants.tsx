@@ -1,7 +1,7 @@
 // discord_app/modules/conference_mode/ConferenceModeConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/conference_mode/ConferenceModeConstants.tsx");
+const result = size.fileFinishedImporting("modules/conference_mode/ConferenceModeConstants.tsx");
 
 export const CONFERENCE_MODE_ENABLED = false;
 export const DEFAULT_INVITE_CODE = null;

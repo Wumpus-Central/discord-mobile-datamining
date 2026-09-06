@@ -1,27 +1,28 @@
 // discord_app/modules/user_settings/defs/native/BuildOverrideActiveSetting.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import navigateToDevTools from "../../../devtools/native/components/DevToolsNavigator.tsx";
-import useStaffOrDeveloperSettingPredicate from "../../dev_tools/native/useIsStaffOrDeveloperSettingPredicate.tsx";
-import DevToolsContentSortButtons from "../../../devtools/native/components/DevToolsContent.tsx";
-import closure_2 from "../../../build_overrides/BuildOverrideStore.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import build_overrides_BuildOverrideUtils from "../../../build_overrides/native/BuildOverrideUtils.tsx";
+import DevToolsNavigator from "../../../devtools/native/components/DevToolsNavigator.tsx";
+import useIsStaffOrDeveloperSettingPredicate from "../../dev_tools/native/useIsStaffOrDeveloperSettingPredicate.tsx";
+import DevToolsContent from "../../../devtools/native/components/DevToolsContent.tsx";
+import BuildOverrideStore from "../../../build_overrides/BuildOverrideStore.tsx";
 
-require = arg1;
-createToggle = {
+require = fn;
+const jsx = fn(21).jsx;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
     return "Build Override Active";
   },
   parent: null,
-  IconComponent: require("RefreshIcon").RefreshIcon,
+  IconComponent: fn(15158).RefreshIcon,
   useDescription: function useBuildOverrideActiveDescription() {
     let obj = initialize;
-    const items = [closure_2];
+    const items = [BuildOverrideStore];
     const stateFromStores = obj.useStateFromStores(items, () => {
       const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
       let id;
       if (overrides != null) {
-        const tmp4 = overrides[callback(undefined, table[4]).DEVICE_FIELD];
+        const tmp4 = overrides[build_overrides_BuildOverrideUtils.DEVICE_FIELD];
         if (tmp4 != null) {
           id = tmp4.id;
         }
@@ -30,24 +31,22 @@ createToggle = {
     });
     let tmp4;
     if (null != stateFromStores) {
-      obj = { label: "Build override: ", value: null };
-      obj[1] = stateFromStores;
-      tmp4 = jsx(DevToolsContentSortButtons.DevToolsContentSubLabel, { label: "Build override: ", value: null });
+      obj = { label: "Build override: ", value: stateFromStores };
+      tmp4 = jsx(DevToolsContent.DevToolsContentSubLabel, { label: "Build override: ", value: stateFromStores });
     }
     return tmp4;
   },
   usePredicate: function useHasBuildOverrideActive() {
-    const staffOrDeveloperSettingPredicate = useStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
-    const obj = useStaffOrDeveloperSettingPredicate;
-    const items = [closure_2];
-    const obj2 = initialize;
+    const staffOrDeveloperSettingPredicate =
+      useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
+    const items = [BuildOverrideStore];
     return (
       null !=
         initialize.useStateFromStores(items, () => {
           const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
           let id;
           if (overrides != null) {
-            const tmp4 = overrides[callback(undefined, table[4]).DEVICE_FIELD];
+            const tmp4 = overrides[build_overrides_BuildOverrideUtils.DEVICE_FIELD];
             if (tmp4 != null) {
               id = tmp4.id;
             }
@@ -57,11 +56,12 @@ createToggle = {
     );
   },
   onPress: function handleBuildOverrideActivePress() {
-    navigateToDevTools.navigateToDevTools({ screenKey: "buildOverride" });
+    DevToolsNavigator.navigateToDevTools({ screenKey: "buildOverride" });
   },
   withArrow: true,
 };
-createToggle = createToggle.createPressable(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/BuildOverrideActiveSetting.tsx");
+SettingBuilders = SettingBuilders.createPressable(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/BuildOverrideActiveSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

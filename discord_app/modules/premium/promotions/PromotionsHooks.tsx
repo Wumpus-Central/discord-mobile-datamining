@@ -1,11 +1,12 @@
 // discord_app/modules/premium/promotions/PromotionsHooks.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../stores/UserStore.tsx";
-import closure_5 from "PromotionsStore.tsx";
-import { PremiumTypes } from "../PremiumConstants.tsx";
+import DispatcherDefault from "../../../Dispatcher.tsx";
+import PromotionUtils from "PromotionUtils.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import UserStore from "../../../stores/UserStore.tsx";
+import PromotionsStore from "PromotionsStore.tsx";
 
-require = arg1;
+require = fn;
 function useEligibleActiveOutboundPromotions(arg0) {
   let obj = arg0;
   if (arg0 === undefined) {
@@ -15,17 +16,24 @@ function useEligibleActiveOutboundPromotions(arg0) {
   if (flag === undefined) {
     flag = false;
   }
-  let stateFromStoresArray;
   let stateFromStores;
-  let stateFromStores1;
-  const items = [closure_5];
-  stateFromStoresArray = flag(stateFromStores[4]).useStateFromStoresArray(items, () => closure_5.outboundPromotions);
+  const items = [PromotionsStore];
+  const stateFromStoresArray = flag(stateFromStores[4]).useStateFromStoresArray(
+    items,
+    () => PromotionsStore.outboundPromotions,
+  );
   const obj2 = flag(stateFromStores[4]);
-  const items1 = [closure_5];
-  stateFromStores = flag(stateFromStores[4]).useStateFromStores(items1, () => closure_5.consumedInboundPromotionId);
+  const items1 = [PromotionsStore];
+  stateFromStores = flag(stateFromStores[4]).useStateFromStores(
+    items1,
+    () => PromotionsStore.consumedInboundPromotionId,
+  );
   let obj3 = flag(stateFromStores[4]);
-  const items2 = [closure_5];
-  stateFromStores1 = flag(stateFromStores[4]).useStateFromStores(items2, () => closure_5.claimedOutboundPromotionCodes);
+  const items2 = [PromotionsStore];
+  const stateFromStores1 = flag(stateFromStores[4]).useStateFromStores(
+    items2,
+    () => PromotionsStore.claimedOutboundPromotionCodes,
+  );
   const items3 = [stateFromStoresArray, stateFromStores, stateFromStores1, flag];
   return stateFromStores1.useMemo(() => {
     let set = null;
@@ -34,11 +42,11 @@ function useEligibleActiveOutboundPromotions(arg0) {
       set = new Set(stateFromStores1.map((promotion) => promotion.promotion.id));
     }
     return stateFromStoresArray.filter((id) => {
-      let tmp = id.id !== closure_1_2;
+      let tmp = id.id !== stateFromStores;
       if (tmp) {
-        let result = flag(stateFromStores[5]).shouldShowOutboundPromotionOnPlatform(id);
+        let result = PromotionUtils.shouldShowOutboundPromotionOnPlatform(id);
         if (result) {
-          result = tmp2(tmp3[5]).isDedicatedSurfacePromotion(id);
+          result = tmp2(13355).isDedicatedSurfacePromotion(id);
           flag = !result;
           if (!result) {
             flag = true;
@@ -49,77 +57,76 @@ function useEligibleActiveOutboundPromotions(arg0) {
             obj3 = set;
           }
           result = flag;
-          const tmp2Result = tmp2(tmp3[5]);
+          const tmp2Result = tmp2(13355);
         }
         tmp = result;
-        const obj = flag(stateFromStores[5]);
-        tmp2 = flag;
-        tmp3 = stateFromStores;
+        tmp2 = require;
       }
       return tmp;
     });
   }, items3);
 }
-let result = require("set").fileFinishedImporting("modules/premium/promotions/PromotionsHooks.tsx");
+const PremiumTypes = fn(1373).PremiumTypes;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/premium/promotions/PromotionsHooks.tsx");
 
 export { useEligibleActiveOutboundPromotions };
 export const useOutboundPromotions = function useOutboundPromotions() {
-  const items = [closure_5];
+  const items = [PromotionsStore];
   stateFromStores = stateFromStores(stateFromStores2[4]).useStateFromStores(
     items,
-    () => closure_5.lastFetchedActivePromotions,
+    () => PromotionsStore.lastFetchedActivePromotions,
   );
   let obj = stateFromStores(stateFromStores2[4]);
-  const items1 = [closure_4];
+  const items1 = [UserStore];
   const stateFromStores1 = stateFromStores(stateFromStores2[4]).useStateFromStores(items1, () =>
     currentUser.getCurrentUser(),
   );
   const obj2 = stateFromStores(stateFromStores2[4]);
-  let obj3 = importDefault(stateFromStores2[6]);
-  const isPremiumExactlyResult = importDefault(stateFromStores2[6]).isPremiumExactly(
-    stateFromStores1,
-    PremiumTypes.TIER_2,
-  );
-  const isPremiumResult = importDefault(stateFromStores2[6]).isPremium(stateFromStores1);
+  let obj3 = require("PremiumUtils");
+  const isPremiumExactlyResult = require("PremiumUtils").isPremiumExactly(stateFromStores1, PremiumTypes.TIER_2);
+  const isPremiumResult = require("PremiumUtils").isPremium(stateFromStores1);
   let tmp8 = !isPremiumResult;
   if (isPremiumResult) {
     tmp8 = isPremiumExactlyResult;
   }
   importDefault = tmp8;
   let tmpResult = tmp(tmp2[4]);
-  const items2 = [closure_5];
-  stateFromStores2 = tmpResult.useStateFromStores(items2, () => closure_5.claimedOutboundPromotionCodes);
+  const items2 = [PromotionsStore];
+  stateFromStores2 = tmpResult.useStateFromStores(items2, () => PromotionsStore.claimedOutboundPromotionCodes);
   tmpResult = tmp(tmp2[4]);
-  const items3 = [closure_5];
-  let promotionsLoaded = tmpResult.useStateFromStores(items3, () => closure_5.claimedOutboundPromotionCodesLoaded);
+  const items3 = [PromotionsStore];
+  let promotionsLoaded = tmpResult.useStateFromStores(
+    items3,
+    () => PromotionsStore.claimedOutboundPromotionCodesLoaded,
+  );
   const items4 = [stateFromStores];
   const effect = activeOutboundPromotions.useEffect(() => {
     if (null != stateFromStores) {
-      isPremiumExactlyResult(stateFromStores2[7]).wait(() => callback(table[8]).markOutboundPromotionsSeen());
-      const obj = isPremiumExactlyResult(stateFromStores2[7]);
+      DispatcherDefault.wait(() => closure_1_1(stateFromStores2[8]).markOutboundPromotionsSeen());
     }
   }, items4);
   const items5 = [stateFromStores, tmp8];
   const effect1 = activeOutboundPromotions.useEffect(() => {
-    isPremiumExactlyResult(stateFromStores2[7]).wait(() => {
-      let tmp = closure_1;
-      if (closure_1) {
-        tmp = null == closure_0;
+    DispatcherDefault.wait(() => {
+      let tmp = closure_1_1;
+      if (closure_1_1) {
+        tmp = null == stateFromStores;
       }
       if (tmp) {
-        const activePromotions = closure_1_1(closure_1_2[8]).fetchActivePromotions();
-        const obj = closure_1_1(closure_1_2[8]);
+        const activePromotions = isPremiumExactlyResult(stateFromStores2[8]).fetchActivePromotions();
+        const obj = isPremiumExactlyResult(stateFromStores2[8]);
       }
     });
   }, items5);
   const effect2 = activeOutboundPromotions.useEffect(() => {
     isPremiumExactlyResult(stateFromStores2[7]).wait(() => {
-      const claimedOutboundPromotionCodes = callback(table[8]).fetchClaimedOutboundPromotionCodes();
+      const claimedOutboundPromotionCodes = closure_1_1(stateFromStores2[8]).fetchClaimedOutboundPromotionCodes();
     });
   }, []);
   const items6 = [stateFromStores2];
   const claimedOutboundPromotionCodeMap = activeOutboundPromotions.useMemo(
-    () => stateFromStores(stateFromStores2[5]).getClaimedOutboundPromotionCodeMap(stateFromStores2),
+    () => PromotionUtils.getClaimedOutboundPromotionCodeMap(stateFromStores2),
     items6,
   );
   activeOutboundPromotions = useEligibleActiveOutboundPromotions({ includeClaimedPromotions: true });
@@ -131,18 +138,17 @@ export const useOutboundPromotions = function useOutboundPromotions() {
       const hasItem = set.has(promotion.id);
       let result = !hasItem;
       if (!hasItem) {
-        let obj = set(closure_1_2[5]);
-        obj = { promotionType: null };
-        obj[0] = promotion.promotionType;
+        stateFromStores(stateFromStores2[5]);
+        const obj = { promotionType: promotion.promotionType };
         result = false === obj.isRecurringPromotion(obj);
       }
       if (result) {
-        result = !set(closure_1_2[5]).isDedicatedSurfacePromotion(promotion);
-        const obj3 = set(closure_1_2[5]);
+        result = !stateFromStores(stateFromStores2[5]).isDedicatedSurfacePromotion(promotion);
+        const obj3 = stateFromStores(stateFromStores2[5]);
       }
       if (result) {
-        result = set(closure_1_2[5]).shouldShowOutboundPromotionOnPlatform(promotion);
-        const obj4 = set(closure_1_2[5]);
+        result = stateFromStores(stateFromStores2[5]).shouldShowOutboundPromotionOnPlatform(promotion);
+        const obj4 = stateFromStores(stateFromStores2[5]);
       }
       return result;
     });
@@ -162,40 +168,42 @@ export const useOutboundPromotions = function useOutboundPromotions() {
   };
 };
 export const useUnseenOutboundPromotions = function useUnseenOutboundPromotions() {
-  const items = [closure_5];
-  stateFromStores = stateFromStores(504).useStateFromStores(items, () => obj.lastSeenOutboundPromotionStartDate);
+  const items = [PromotionsStore];
+  stateFromStores = stateFromStores(504).useStateFromStores(
+    items,
+    () => PromotionsStore.lastSeenOutboundPromotionStartDate,
+  );
   const tmp2 = useEligibleActiveOutboundPromotions();
   closure_1 = tmp2;
   const items1 = [tmp2, stateFromStores];
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     if (null == stateFromStores) {
       let found = closure_1;
     } else {
       found = closure_1.filter((startDate) => {
         const date = new Date(startDate.startDate);
-        return date > new Date(closure_0);
+        return date > new Date(stateFromStores);
       });
     }
     return found;
   }, items1);
-  return memo.filter((promotion) => stateFromStores(table[5]).shouldShowOutboundPromotionOnPlatform(promotion));
+  return memo.filter((item) => stateFromStores(dependencyMap[5]).shouldShowOutboundPromotionOnPlatform(item));
 };
 export const useBogoPromotion = function useBogoPromotion() {
-  const obj = { promotion: initialize.useStateFromStores(items, () => bogoPromotion.bogoPromotion) };
-  items = [closure_5];
+  const obj = { promotion: null };
+  const items = [PromotionsStore];
+  obj.promotion = initialize.useStateFromStores(items, () => bogoPromotion.bogoPromotion);
   return obj;
 };
 export const useIsInPromotion = function useIsInPromotion(arg0) {
-  const _require = arg0;
-  const items = [closure_5];
-  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
-    closure_1_5.hasPromotion(closure_0),
-  );
+  _require = arg0;
+  const items = [PromotionsStore];
+  return require("initialize").useStateFromStores(items, () => PromotionsStore.hasPromotion(closure_0));
 };
 export const useHasActiveBogoPromotion = function useHasActiveBogoPromotion() {
-  const effect = React.useEffect(() => {
-    const result = callback(table[8]).maybeFetchActivePromotions();
+  const effect = noop.useEffect(() => {
+    const result = require("PromotionsActionCreators").maybeFetchActivePromotions();
   }, []);
-  const items = [closure_5];
+  const items = [PromotionsStore];
   return initialize.useStateFromStores(items, () => null != activeBogoRewardPromotion.getActiveBogoRewardPromotion());
 };

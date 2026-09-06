@@ -1,19 +1,23 @@
 // discord_app/modules/game_server/hooks/useGameServerPerk.tsx
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../GameServerStore.tsx";
-import { GAME_SERVER_POWERUP_SKU_ID as closure_5 } from "../GameServerConstants.tsx";
-import { GuildPowerupType } from "../../premium/powerups/constants/GuildPowerupsConstants.tsx";
+import util from "../../../intl/index.native.tsx";
+import _modDef2850 from "../GameServer.messages.js";
+import _modDef12578 from "../../../../discord_assets/assets/premium/game_servers/game_server_tile.png.js";
+import noop from "../../../../_runtime/metro/00019__.js";
+import GameServerStore from "../GameServerStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/game_server/hooks/useGameServerPerk.tsx");
+require = fn;
+let closure_5 = fn(4451).GAME_SERVER_POWERUP_SKU_ID;
+const GuildPowerupType = fn(4450).GuildPowerupType;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_server/hooks/useGameServerPerk.tsx");
 
 export default function useGameServerPerk(guildId) {
-  const _require = guildId;
-  const gameServerEnabled = _require(stateFromStores[4]).useGameServerEnabled(guildId, "useGameServerPerk");
-  let obj = _require(stateFromStores[4]);
+  _require = guildId;
+  const gameServerEnabled = require("GameServerExperiment").useGameServerEnabled(guildId, "useGameServerPerk");
+  let obj = require("GameServerExperiment");
   const items = [gameName2];
-  stateFromStores = _require(stateFromStores[5]).useStateFromStores(items, () =>
-    gameName2.getLowestGameCostForGuild(closure_0),
+  stateFromStores = require("initialize").useStateFromStores(items, () =>
+    GameServerStore.getLowestGameCostForGuild(closure_0),
   );
   const tmp3 = gameServerEnabled(stateFromStores[6])();
   const gameName = tmp3.gameName;
@@ -25,7 +29,7 @@ export default function useGameServerPerk(guildId) {
       tmp = null;
       if (null != stateFromStores) {
         let obj = {
-          skuId: null,
+          skuId,
           title: null,
           description: null,
           cost: null,
@@ -34,19 +38,16 @@ export default function useGameServerPerk(guildId) {
           animatedImageUrl: null,
           staticImageUrl: null,
         };
-        obj[0] = closure_1_5;
-        const intl = guildId(stateFromStores[7]).intl;
-        obj[1] = intl.string(gameServerEnabled(stateFromStores[8])["B3OfL/"]);
-        const intl2 = guildId(stateFromStores[7]).intl;
-        obj = { gameName: null, gameName2: null };
-        obj[0] = gameName;
-        obj[1] = gameName2;
-        obj[2] = intl2.format(gameServerEnabled(stateFromStores[8])["+UqyGU"], obj);
-        obj[3] = tmp2;
-        obj[4] = [];
-        obj[5] = closure_1_6.PERK;
-        obj[6] = gameServerEnabled(stateFromStores[9]);
-        obj[7] = gameServerEnabled(stateFromStores[9]);
+        const intl = util.intl;
+        obj.title = intl.string(_modDef2850["B3OfL/"]);
+        const intl2 = util.intl;
+        obj = { gameName, gameName2 };
+        obj.description = intl2.format(_modDef2850["+UqyGU"], obj);
+        obj.cost = tmp2;
+        obj.dependencies = [];
+        obj.type = GuildPowerupType.PERK;
+        obj.animatedImageUrl = _modDef12578;
+        obj.staticImageUrl = _modDef12578;
         tmp = obj;
       }
     }

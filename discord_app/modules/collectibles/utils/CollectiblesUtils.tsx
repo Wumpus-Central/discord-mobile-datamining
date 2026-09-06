@@ -1,27 +1,28 @@
 // discord_app/modules/collectibles/utils/CollectiblesUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
-import resetCache from "../../../utils/DateUtils.tsx";
-import RESOLUTION_720 from "../../go_live/StreamSettingsConstants.tsx";
+import DateUtils from "../../../utils/DateUtils.tsx";
+import StreamSettingsConstants from "../../go_live/StreamSettingsConstants.tsx";
 import BaseConnectionEvent from "../../../../discord_common/js/packages/media-engine/index.tsx";
-import calculateFractionalPremiumInfoDefault from "../../billing/hooks/useFractionalPremiumInfo.tsx";
+import useFractionalPremiumInfoDefault from "../../billing/hooks/useFractionalPremiumInfo.tsx";
 import ShopVariantsReturnStyle from "../../../../discord_common/js/shared/shared-constants/ShopVariantsReturnStyle.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const ApplicationStreamPresets = RESOLUTION_720.ApplicationStreamPresets;
-const result = set.fileFinishedImporting("modules/collectibles/utils/CollectiblesUtils.tsx");
+const ApplicationStreamPresets = StreamSettingsConstants.ApplicationStreamPresets;
+const result = size.fileFinishedImporting("modules/collectibles/utils/CollectiblesUtils.tsx");
 
 export const constructGoLiveSource = function constructGoLiveSource(resolution, frameRate, desktopSource) {
-  obj = { qualityOptions: obj, context: BaseConnectionEvent.MediaEngineContextTypes.STREAM };
+  let obj = { qualityOptions: null, context: BaseConnectionEvent.MediaEngineContextTypes.STREAM };
   obj = { preset: ApplicationStreamPresets.PRESET_CUSTOM, resolution, frameRate };
+  obj.qualityOptions = obj;
   if (null != desktopSource) {
     if (null != desktopSource.desktopSource) {
-      obj = { sourceId: null, sound: true };
-      obj[0] = desktopSource.desktopSource.id;
+      obj = { sourceId: desktopSource.desktopSource.id, sound: true };
       obj.desktopSettings = obj;
     }
     if (null != desktopSource.cameraSource) {
-      obj1 = { videoDeviceGuid: null, audioDeviceGuid: null };
-      obj1[0] = desktopSource.cameraSource.videoDeviceGuid;
-      obj1[1] = desktopSource.cameraSource.audioDeviceGuid;
+      const obj1 = {
+        videoDeviceGuid: desktopSource.cameraSource.videoDeviceGuid,
+        audioDeviceGuid: desktopSource.cameraSource.audioDeviceGuid,
+      };
       obj.cameraSettings = obj1;
     }
   }
@@ -75,8 +76,8 @@ export const getOptimizedProfileEffectThumbnailUrl = function getOptimizedProfil
   }
 };
 export const useFetchFractionalPremiumInfo = function useFetchFractionalPremiumInfo() {
-  const tmp = calculateFractionalPremiumInfoDefault({ forceFetch: true });
-  let obj = resetCache;
+  const tmp = useFractionalPremiumInfoDefault({ forceFetch: true });
+  let obj = DateUtils;
   obj = {
     isLoading: !tmp.fetched,
     isFractionalPremiumActive: tmp.isFractionalPremiumActive,

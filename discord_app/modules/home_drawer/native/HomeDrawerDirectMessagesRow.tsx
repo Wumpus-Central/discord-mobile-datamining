@@ -1,71 +1,68 @@
 // discord_app/modules/home_drawer/native/HomeDrawerDirectMessagesRow.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import MobileHomeDrawerExperiment2 from "HomeDrawerExperiment.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
-import HomeDrawerSharedItem from "HomeDrawerShared.tsx";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_4 from "../../../stores/PresenceStore.tsx";
-import closure_5 from "../../../stores/RelationshipStore.tsx";
-import { StatusTypes } from "../../../Constants.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
+import HomeDrawerExperiment from "HomeDrawerExperiment.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import HomeDrawerShared from "HomeDrawerShared.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import PresenceStore from "../../../stores/PresenceStore.tsx";
+import RelationshipStore from "../../../stores/RelationshipStore.tsx";
 
-require = arg1;
+require = fn;
 function HomeDrawerDMsRow() {
-  const tmp = callback3();
+  const tmp = closure_9();
   let obj = initialize;
-  const items = [closure_5, closure_4];
+  const items = [RelationshipStore, PresenceStore];
   const stateFromStores = obj.useStateFromStores(items, () => {
     friendIDs = friendIDs.getFriendIDs();
-    return friendIDs.filter((arg0) => status.getStatus(arg0) !== constants.OFFLINE).length;
+    return friendIDs.filter((item) => status.getStatus(item) !== constants.OFFLINE).length;
   });
   let tmp5 = null;
   if (stateFromStores > 0) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.subtitle;
-    obj = { style: null };
-    obj[0] = tmp.onlineDot;
-    const items1 = [callback(View, obj)];
-    obj1 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: null };
+    obj = { style: tmp.subtitle, children: null };
+    obj = { style: tmp.onlineDot };
+    const items1 = [React5(View, obj)];
+    const obj1 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: null };
     const intl = tmp2(1114).intl;
-    const obj2 = { numFriends: null };
-    obj2[0] = stateFromStores;
-    obj1[3] = intl.format(tmp2(1114).t.N5UIKr, obj2);
-    items1[1] = callback(tmp2(4556).Text, obj1);
-    obj[1] = items1;
-    tmp5 = callback2(View, obj);
+    const obj2 = { numFriends: stateFromStores };
+    obj1.children = intl.format(tmp2(1114).t.N5UIKr, obj2);
+    items1[1] = React5(tmp2(4556).Text, obj1);
+    obj.children = items1;
+    tmp5 = React6(View, obj);
   }
   const obj3 = { title: null, subtitle: null };
   const obj4 = { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null };
   const intl2 = tmp2(1114).intl;
-  obj4[3] = intl2.string(getSystemLocale.t.YUU0RF);
-  obj3[0] = callback(Text.Text, obj4);
-  obj3[1] = tmp5;
-  return callback(HomeDrawerSharedItem.HomeDrawerSharedItem, obj3);
+  obj4.children = intl2.string(util.t.YUU0RF);
+  obj3.title = React5(Text_Text.Text, obj4);
+  obj3.subtitle = tmp5;
+  return React5(HomeDrawerShared.HomeDrawerSharedItem, obj3);
 }
-noopAll;
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { subtitle: { flexDirection: "row", alignItems: "center", gap: 4 }, onlineDot: null };
-createCacheKey = {
+const View = fn(17).View;
+const StatusTypes = fn(1074).StatusTypes;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+fn(4560);
+const createStyles = { subtitle: { flexDirection: "row", alignItems: "center", gap: 4 }, onlineDot: null };
+let size = {
   width: 8,
   height: 8,
-  borderRadius: ThemesDefault.radii.round,
-  backgroundColor: ThemesDefault.colors.TEXT_STATUS_ONLINE,
+  borderRadius: nativeDefault.radii.round,
+  backgroundColor: nativeDefault.colors.TEXT_STATUS_ONLINE,
 };
-createCacheKey[1] = createCacheKey;
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/home_drawer/native/HomeDrawerDirectMessagesRow.tsx");
+createStyles.onlineDot = size;
+let closure_9 = createStyles.createStyles(createStyles);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawerDirectMessagesRow.tsx");
 
 export default function HomeDrawerDMsRowWrapper() {
-  const MobileHomeDrawerExperiment = MobileHomeDrawerExperiment2.MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = HomeDrawerExperiment.MobileHomeDrawerExperiment;
   let tmp2 = null;
   if (MobileHomeDrawerExperiment.useConfig({ location: "dm-expanded-children" }).enableHome) {
     tmp2 = null;
     if (!tmp) {
-      tmp2 = callback(HomeDrawerDMsRow, {});
+      tmp2 = React5(HomeDrawerDMsRow, {});
     }
   }
   return tmp2;

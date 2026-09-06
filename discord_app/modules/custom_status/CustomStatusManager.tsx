@@ -1,14 +1,14 @@
 // discord_app/modules/custom_status/CustomStatusManager.tsx
-import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
-import closure_3 from "../../stores/SelfPresenceStore.tsx";
-import ME from "../../Constants.tsx";
+import setUserStatusDefault from "../multi_account/setUserStatus.tsx";
+import SelfPresenceStore from "../../stores/SelfPresenceStore.tsx";
+import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
-let require = arg1;
-({ AnalyticsObjects: c4, StatusTypes: c5 } = ME);
-const timeout = new require("start").Timeout();
-const timeout1 = new require("start").Timeout();
-const timeout2 = new require("start").Timeout();
-initializeDefault;
+let require = fn;
+const Constants = fn(1074);
+({ AnalyticsObjects: closure_4, StatusTypes: hasOwnProperty } = Constants);
+const timeout = new fn(4447).Timeout();
+const timeout1 = new fn(4447).Timeout();
+const timeout2 = new fn(4447).Timeout();
 let prototype = function CustomStatusManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
@@ -36,7 +36,7 @@ let prototype = function CustomStatusManager() {
     let CustomStatusSetting = applyArgumentsResult(1935).CustomStatusSetting;
     const setting = CustomStatusSetting.getSetting();
     if (null == setting) {
-      closure_8.stop();
+      timeout2.stop();
     } else {
       if (null != setting.expiresAtMs) {
         if ("0" !== setting.expiresAtMs) {
@@ -48,10 +48,10 @@ let prototype = function CustomStatusManager() {
           const date1 = new Date();
           const diff = time - date1.getTime();
           if (diff > 0) {
-            closure_8.start(
+            timeout2.start(
               diff,
               () => {
-                const CustomStatusSetting = callback(table[4]).CustomStatusSetting;
+                const CustomStatusSetting = closure_1_0(dependencyMap[4]).CustomStatusSetting;
                 CustomStatusSetting.updateSetting(undefined);
               },
               true,
@@ -59,14 +59,14 @@ let prototype = function CustomStatusManager() {
           } else {
             const CustomStatusSetting2 = applyArgumentsResult(1935).CustomStatusSetting;
             CustomStatusSetting2.updateSetting(undefined);
-            closure_8.stop();
+            timeout2.stop();
           }
         }
       }
-      if (null != closure_8) {
+      if (null != timeout2) {
         obj.stop();
       }
-      obj = closure_8;
+      obj = timeout2;
     }
   };
   applyArgumentsResult.manageExpiringStatus = function manageExpiringStatus() {
@@ -74,7 +74,7 @@ let prototype = function CustomStatusManager() {
     const setting = StatusExpiresAtSetting.getSetting();
     if (null != setting) {
       if ("0" !== setting) {
-        if (store.getStatus() !== constants2.ONLINE) {
+        if (SelfPresenceStore.getStatus() !== constants2.ONLINE) {
           const _Date = Date;
           const _Number = Number;
           const date = new Date(Number(setting));
@@ -83,36 +83,37 @@ let prototype = function CustomStatusManager() {
           const date1 = new Date();
           const diff = time - date1.getTime();
           if (diff > 0) {
-            closure_6.start(
+            timeout.start(
               diff,
               () => {
-                obj = { nextStatus: constants2.ONLINE, analyticsContext: { location: obj } };
+                let obj = { nextStatus: constants2.ONLINE, analyticsContext: null };
+                obj = { location: null };
                 obj = { object: constants.CUSTOM_STATUS_MANAGER };
-                callback(table[5])(obj);
+                obj.location = obj;
+                obj.analyticsContext = obj;
+                closure_1_1(dependencyMap[5])(obj);
               },
               true,
             );
           } else {
-            let obj = { nextStatus: null, analyticsContext: null };
-            obj[0] = tmp4.ONLINE;
+            let obj = { nextStatus: tmp4.ONLINE, analyticsContext: null };
             obj = { location: null };
-            obj1 = { object: null };
-            obj1[0] = constants.CUSTOM_STATUS_MANAGER;
-            obj[0] = obj1;
-            obj[1] = obj;
-            callback(10091)(obj);
-            closure_6.stop();
+            const obj1 = { object: constants.CUSTOM_STATUS_MANAGER };
+            obj.location = obj1;
+            obj.analyticsContext = obj;
+            setUserStatusDefault(obj);
+            timeout.stop();
           }
         }
       }
     }
-    obj = closure_6;
-    if (null != closure_6) {
+    obj = timeout;
+    if (null != timeout) {
       obj.stop();
     }
   };
   applyArgumentsResult.lazilyMigrateStatusCreatedAt = function lazilyMigrateStatusCreatedAt() {
-    let tmp = store.getStatus() !== constants2.ONLINE;
+    let tmp = SelfPresenceStore.getStatus() !== constants2.ONLINE;
     if (tmp) {
       const StatusCreatedAtSetting = applyArgumentsResult(1935).StatusCreatedAtSetting;
       tmp = null == StatusCreatedAtSetting.getSetting();
@@ -121,8 +122,8 @@ let prototype = function CustomStatusManager() {
       const PreloadedUserSettingsActionCreators = applyArgumentsResult(1940).PreloadedUserSettingsActionCreators;
       PreloadedUserSettingsActionCreators.updateAsync(
         "status",
-        (arg0) => {
-          const UInt64Value = callback(table[7]).UInt64Value;
+        async (arg0) => {
+          const UInt64Value = closure_1_0(dependencyMap[7]).UInt64Value;
           arg0.statusCreatedAtMs = UInt64Value.create({ value: "" + Date.now() });
         },
         applyArgumentsResult(1940).UserSettingsDelay.INFREQUENT_USER_ACTION,
@@ -142,28 +143,29 @@ let prototype = function CustomStatusManager() {
         const date1 = new Date();
         const diff = time - date1.getTime();
         if (diff > 0) {
-          closure_7.start(
+          timeout1.start(
             diff,
             () => {
-              callback(table[8]).setFocusMode(false);
+              closure_1_0(dependencyMap[8]).setFocusMode(false);
             },
             true,
           );
         } else {
           applyArgumentsResult(10090).setFocusMode(false);
-          closure_7.stop();
+          timeout1.stop();
           const tmpResult = applyArgumentsResult(10090);
         }
       }
     }
-    if (null != closure_7) {
-      closure_7.stop();
+    if (null != timeout1) {
+      timeout1.stop();
     }
   };
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp6 {}
 prototype = new prototype();
-let result = require("set").fileFinishedImporting("modules/custom_status/CustomStatusManager.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/custom_status/CustomStatusManager.tsx");
 
 export default prototype;

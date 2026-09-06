@@ -1,32 +1,32 @@
 // discord_app/modules/user_profile/native/UserProfileStackedActionSheet.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
-import Background from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import Sheet_BottomSheet from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import Form from "../../../design/void/Form/native/index.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { header: null, headerSpacer: null, list: null, contentContainer: null, divider: null };
-createCacheKey = { flexDirection: "row", marginHorizontal: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { width: ThemesDefault.space.PX_24, height: ThemesDefault.space.PX_24 };
-createCacheKey[2] = { flex: 1 };
-let obj1 = { width: ThemesDefault.space.PX_24, height: ThemesDefault.space.PX_24 };
-createCacheKey[3] = { marginHorizontal: ThemesDefault.space.PX_16 };
-createCacheKey[4] = { marginLeft: 64 };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const obj2 = { marginHorizontal: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileStackedActionSheet.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+fn(4560);
+let createStyles = { header: null, headerSpacer: null, list: null, contentContainer: null, divider: null };
+createStyles = { flexDirection: "row", marginHorizontal: nativeDefault.space.PX_16 };
+createStyles.header = createStyles;
+let size = { width: nativeDefault.space.PX_24, height: nativeDefault.space.PX_24 };
+createStyles.headerSpacer = size;
+createStyles.list = { flex: 1 };
+createStyles.contentContainer = { marginHorizontal: nativeDefault.space.PX_16 };
+createStyles.divider = { marginLeft: 64 };
+let closure_6 = createStyles.createStyles(createStyles);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileStackedActionSheet.tsx");
 
 export default function UserProfileStackedActionSheet(onBack) {
   onBack = onBack.onBack;
   ({ title, children } = onBack);
-  const merged = Object.assign(onBack, Object.create(null));
-  const tmp2 = callback2();
+  const merged = Object.assign(onBack, Object.assign({ title: 0, children: 0, onBack: 0 }));
+  const tmp2 = closure_6();
   let tmp4Result = null != onBack;
   let obj = {};
   const merged1 = Object.assign(merged);
@@ -40,14 +40,14 @@ export default function UserProfileStackedActionSheet(onBack) {
   if (tmp4Result) {
     obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
     const intl = tmp5(1114).intl;
-    obj[1] = intl.string(tmp5(1114).t["13/7kX"]);
-    obj[2] = onBack;
-    obj[3] = tmp4(tmp5(5628).ArrowLargeLeftIcon, { size: "md" });
+    obj.accessibilityLabel = intl.string(tmp5(1114).t["13/7kX"]);
+    obj.onPress = onBack;
+    obj.children = tmp4(tmp5(5628).ArrowLargeLeftIcon, { size: "md" });
     tmp4Result = tmp4(tmp5(5123).PressableOpacity, obj);
   }
   const items1 = [
     tmp4Result,
-    closure_4(Text.Text, {
+    React4(Text_Text.Text, {
       variant: "redesign/heading-18/bold",
       color: "mobile-text-heading-primary",
       accessibilityRole: "header",
@@ -55,29 +55,27 @@ export default function UserProfileStackedActionSheet(onBack) {
     }),
   ];
   if (tmp4Result) {
-    obj1 = { style: null };
-    obj1[0] = tmp2.headerSpacer;
+    const obj1 = { style: tmp2.headerSpacer };
     tmp4Result = tmp4(tmp9, obj1);
   }
   items1[2] = tmp4Result;
-  obj[1] = items1;
-  obj.header = closure_5(View, obj);
+  obj.children = items1;
+  obj.header = hasOwnProperty(View, obj);
   obj.children = children;
-  return closure_4(Background.BottomSheet, obj);
+  return React4(Sheet_BottomSheet.BottomSheet, obj);
 }
 export const UserProfileStackedActionSheetList = function UserProfileStackedActionSheetList(data) {
   data = data.data;
   const renderItem = data.renderItem;
-  dependencyMap = undefined;
-  const merged = Object.assign(data, Object.create(null));
-  const tmp2 = callback2();
+  const merged = Object.assign(data, Object.assign({ data: 0, contentContainerStyle: 0, renderItem: 0 }));
+  const tmp2 = closure_6();
   dependencyMap = tmp2;
   const obj = {};
   const merged1 = Object.assign(merged);
   obj.data = data;
   obj.style = tmp2.list;
   obj.ItemSeparatorComponent = function ItemSeparatorComponent() {
-    return closure_1_4(data(divider[7]).FormDivider, { style: divider.divider });
+    return React4(Form.FormDivider, { style: divider.divider });
   };
   const items = [tmp2.contentContainer, ,];
   let num = 0;
@@ -95,9 +93,8 @@ export const UserProfileStackedActionSheetList = function UserProfileStackedActi
 };
 export const UserProfileStackedActionSheetSectionList = function UserProfileStackedActionSheetSectionList(renderItem) {
   renderItem = renderItem.renderItem;
-  closure_1 = undefined;
-  const merged = Object.assign(renderItem, Object.create(null));
-  closure_1 = callback2();
+  const merged = Object.assign(renderItem, Object.assign({ contentContainerStyle: 0, renderItem: 0 }));
+  const divider = closure_6();
   const obj = {};
   const merged1 = Object.assign(merged);
   obj.contentContainerStyle = renderItem.contentContainerStyle;
@@ -106,7 +103,7 @@ export const UserProfileStackedActionSheetSectionList = function UserProfileStac
     return renderItem({ item: index.item, start: 0 === index, end: index === index.section.data.length - 1 });
   };
   obj.ItemSeparatorComponent = function ItemSeparatorComponent() {
-    return closure_1_4(renderItem(closure_1_2[7]).FormDivider, { style: divider.divider });
+    return React4(Form.FormDivider, { style: divider.divider });
   };
-  return callback(renderItem(6627).BottomSheetSectionList, obj);
+  return closure_4(renderItem(6627).BottomSheetSectionList, obj);
 };

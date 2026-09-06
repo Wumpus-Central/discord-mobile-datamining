@@ -1,14 +1,12 @@
 // discord_app/components_native/channel_settings/ChannelSettingsChangeDefaultForumLayout.tsx
-import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
-import preloadDefault from "../common/FastImage.tsx";
-import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../_runtime/00019_noop.js";
-import { View } from "../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../stores/ChannelStore.tsx";
-import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
+import FastImageDefault from "../common/FastImage.tsx";
+import ChannelSettingsActionCreatorsDefault from "../../actions/ChannelSettingsActionCreators.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import noop from "../../../_runtime/metro/00019__.js";
+import ChannelStore from "../../stores/ChannelStore.tsx";
 
-const require = arg1;
+const require = fn;
 class ChannelSettingsChangeDefaultForumLayout {
   constructor(arg0) {
     channel = global.channel;
@@ -24,86 +22,87 @@ class ChannelSettingsChangeDefaultForumLayout {
     tmp8 = closure_2;
     callback = closure_4.useCallback((defaultForumLayout) => {
       _undefined(defaultForumLayout);
-      let obj = _undefined(closure_1_2[7]);
-      obj = { defaultForumLayout };
+      let obj = { defaultForumLayout };
       obj.updateChannel(obj);
       obj = { defaultForumLayout };
-      _undefined(closure_1_2[7]).saveChannel(channel.id, obj);
+      ChannelSettingsActionCreatorsDefault.saveChannel(channel.id, obj);
     }, items);
     tmp6 = View;
     obj = { title: null, defaultValue: null, onChange: null, hasIcons: true, children: null };
-    intl = require("getSystemLocale").intl;
-    obj[0] = intl.string(require("getSystemLocale").t.mFMDSq);
+    intl = channel(closure_2[9]).intl;
+    obj.title = intl.string(channel(closure_2[9]).t.mFMDSq);
     LIST = tmp3;
     if (tmp3 == null) {
-      LIST = require("set").ForumLayout.LIST;
+      LIST = tmp7(tmp8[10]).ForumLayout.LIST;
     }
-    obj[1] = LIST;
-    obj[2] = callback;
+    obj.defaultValue = LIST;
+    obj.onChange = callback;
     tmp9 = jsx;
-    obj1 = { icon: jsx(require("GridSquareIcon").GridSquareIcon, {}), label: null, value: null };
-    intl2 = require("getSystemLocale").intl;
-    obj1[1] = intl2.string(require("getSystemLocale").t["U+rQfW"]);
-    obj1[2] = require("set").ForumLayout.GRID;
+    obj1 = { icon: jsx(tmp7(tmp8[12]).GridSquareIcon, {}), label: null, value: null };
+    intl2 = tmp7(tmp8[9]).intl;
+    obj1.label = intl2.string(tmp7(tmp8[9]).t["U+rQfW"]);
+    obj1.value = tmp7(tmp8[10]).ForumLayout.GRID;
     items1 = [,];
-    items1[0] = jsx(require("TableRadioRow").TableRadioRow, obj1);
-    obj2 = { icon: jsx(require("ListViewIcon").ListViewIcon, {}), label: null, value: null };
-    intl3 = require("getSystemLocale").intl;
-    obj2[1] = intl3.string(require("getSystemLocale").t.tuHPRX);
-    obj2[2] = require("set").ForumLayout.LIST;
-    items1[1] = jsx(require("TableRadioRow").TableRadioRow, obj2);
-    obj[4] = items1;
+    items1[0] = jsx(tmp7(tmp8[11]).TableRadioRow, obj1);
+    obj2 = { icon: jsx(tmp7(tmp8[13]).ListViewIcon, {}), label: null, value: null };
+    intl3 = tmp7(tmp8[9]).intl;
+    obj2.label = intl3.string(tmp7(tmp8[9]).t.tuHPRX);
+    obj2.value = tmp7(tmp8[10]).ForumLayout.LIST;
+    items1[1] = jsx(tmp7(tmp8[11]).TableRadioRow, obj2);
+    obj.children = items1;
     items2 = [, , ,];
-    items2[0] = tmp5(require("context").TableRadioGroup, obj);
+    items2[0] = tmp5(channel(closure_2[8]).TableRadioGroup, obj);
     obj3 = { style: tmp.description, variant: "text-sm/medium", color: "text-muted", children: null };
-    intl4 = require("getSystemLocale").intl;
-    obj3[3] = intl4.string(require("getSystemLocale").t.MbX5Hu);
-    items2[1] = jsx(require("Text").Text, obj3);
+    intl4 = tmp7(tmp8[9]).intl;
+    obj3.children = intl4.string(tmp7(tmp8[9]).t.MbX5Hu);
+    items2[1] = jsx(tmp7(tmp8[14]).Text, obj3);
     obj4 = { title: null };
-    intl5 = require("getSystemLocale").intl;
-    obj4[0] = intl5.string(require("getSystemLocale").t.e4oMl4);
-    items2[2] = jsx(require("TableRowGroupTitle").TableRowGroupTitle, obj4);
+    intl5 = tmp7(tmp8[9]).intl;
+    obj4.title = intl5.string(tmp7(tmp8[9]).t.e4oMl4);
+    items2[2] = jsx(tmp7(tmp8[15]).TableRowGroupTitle, obj4);
     tmp10 = closure_1;
     obj5 = { style: tmp.thumbnailImagePortrait, source: null };
-    tmp11 = require("preload");
-    if (tmp3 === require("set").ForumLayout.GRID) {
-      tmp10Result = require("registerAsset");
+    tmp11 = closure_1(tmp8[16]);
+    if (tmp3 === tmp7(tmp8[10]).ForumLayout.GRID) {
+      tmp10Result = tmp10(tmp8[17]);
     } else {
-      tmp10Result = require("registerAsset");
+      tmp10Result = tmp10(tmp8[18]);
     }
-    obj5[1] = tmp10Result;
+    obj5.source = tmp10Result;
     items2[3] = tmp9(tmp11, obj5);
-    obj[1] = items2;
+    obj.children = items2;
     return tmp5(tmp6, obj);
   }
 }
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { container: null, description: null, thumbnailImagePortrait: null };
-createCacheKey = {
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+fn(4560);
+let createStyles = { container: null, description: null, thumbnailImagePortrait: null };
+createStyles = {
   flex: 1,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER,
-  paddingHorizontal: ThemesDefault.space.PX_16,
-  paddingTop: ThemesDefault.space.PX_16,
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
+  paddingHorizontal: nativeDefault.space.PX_16,
+  paddingTop: nativeDefault.space.PX_16,
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { paddingTop: ThemesDefault.space.PX_8, paddingBottom: ThemesDefault.space.PX_16 };
-createCacheKey[2] = { alignSelf: "center" };
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { paddingTop: ThemesDefault.space.PX_8, paddingBottom: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting(
+createStyles.container = createStyles;
+createStyles.description = { paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_16 };
+createStyles.thumbnailImagePortrait = { alignSelf: "center" };
+const React7 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "components_native/channel_settings/ChannelSettingsChangeDefaultForumLayout.tsx",
 );
 
 export default function ConnectedChannelSettingsChangeDefaultForumLayout(channelId) {
   channelId = channelId.channelId;
   let obj = channelId(504);
-  const items = [closure_6];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getChannel(channelId));
+  const items = [ChannelStore];
+  const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   let tmp2 = null;
   if (null != stateFromStores) {
-    obj = { channel: null };
-    obj[0] = stateFromStores;
-    tmp2 = callback2(ChannelSettingsChangeDefaultForumLayout, obj);
+    obj = { channel: stateFromStores };
+    tmp2 = closure_7(ChannelSettingsChangeDefaultForumLayout, obj);
   }
   return tmp2;
 }

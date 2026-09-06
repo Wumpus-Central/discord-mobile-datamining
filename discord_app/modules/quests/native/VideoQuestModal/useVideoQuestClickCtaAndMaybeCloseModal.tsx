@@ -1,8 +1,12 @@
 // discord_app/modules/quests/native/VideoQuestModal/useVideoQuestClickCtaAndMaybeCloseModal.tsx
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import URLUtilsDefault from "../../../../utils/URLUtils.tsx";
+import QuestCopyUtils from "../../utils/QuestCopyUtils.tsx";
+import QuestPlatformUtils from "../../utils/QuestPlatformUtils.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/quests/native/VideoQuestModal/useVideoQuestClickCtaAndMaybeCloseModal.tsx",
 );
 
@@ -10,22 +14,21 @@ export const useVideoQuestClickCtaAndMaybeCloseModal = function useVideoQuestCli
   quest = quest.quest;
   const onClose = quest.onClose;
   const sourceQuestContent = quest.sourceQuestContent;
-  let getQuestImpressionId;
-  getQuestImpressionId = quest(sourceQuestContent[1]).useGetQuestImpressionId();
+  const getQuestImpressionId = quest(sourceQuestContent[1]).useGetQuestImpressionId();
   const items = [quest, getQuestImpressionId, sourceQuestContent, onClose];
   return getQuestImpressionId.useCallback((content) => {
-    let obj = onClose(sourceQuestContent[2]);
+    let obj = URLUtilsDefault;
     if (obj.isDiscordUrl(obj2.getCtaLink(quest.config), true)) {
       onClose();
     }
-    obj2 = quest(sourceQuestContent[3]);
+    obj2 = QuestCopyUtils;
     const tmp3 = quest;
     obj = {
       content,
-      ctaContent: tmp2(tmp[5]).QuestContentCTA.OPEN_GAME_LINK,
+      ctaContent: tmp2(7728).QuestContentCTA.OPEN_GAME_LINK,
       impressionId: getQuestImpressionId(),
       sourceQuestContent,
     };
-    quest(sourceQuestContent[4]).openGameLinkDirectly(tmp3, obj);
+    QuestPlatformUtils.openGameLinkDirectly(tmp3, obj);
   }, items);
 };

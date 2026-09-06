@@ -1,29 +1,29 @@
 // discord_app/modules/chat_input/native/ChatInputNativeComponent.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import set from "../../../utils/PlatformUtils.tsx";
-import hexToRgba from "../../../utils/ColorUtils.tsx";
-import AccessibilityAnnouncer from "../../../design/shared.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
+import ColorUtils from "../../../utils/ColorUtils.tsx";
+import shared from "../../../design/shared.tsx";
 import useTheme from "../../../hooks/useTheme.tsx";
-import __INTERNAL_VIEW_CONFIG from "../../../../discord_common/js/packages/rtn-codegen/js/ChatInputNativeComponent.tsx";
-import closure_3 from "../../client_themes/ClientThemesBackgroundStore.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
-import importAllResult from "../../../../_runtime/00019_noop.js";
+import ChatInputNativeComponent from "../../../../discord_common/js/packages/rtn-codegen/js/ChatInputNativeComponent.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import ClientThemesBackgroundStore from "../../client_themes/ClientThemesBackgroundStore.tsx";
 
-require = arg1;
+require = fn;
+const jsx = fn(21).jsx;
+fn(4560);
 let obj = { style: { flex: 1 }, textColor: null, placeholderColor: null };
-obj = { color: ThemesDefault.colors.TEXT_DEFAULT };
-obj[1] = obj;
-createCacheKey = { color: ThemesDefault.colors.TEXT_MUTED };
-obj[2] = createCacheKey;
-let closure_5 = createCacheKey.createStyles(obj);
-const forwardRefResult = importAllResult.forwardRef((markAsSpoilerTitle, ref) => {
+obj = { color: nativeDefault.colors.TEXT_DEFAULT };
+obj.textColor = obj;
+const createStyles = { color: nativeDefault.colors.TEXT_MUTED };
+obj.placeholderColor = createStyles;
+let closure_5 = createStyles.createStyles(obj);
+const forwardRefResult = noop.forwardRef((markAsSpoilerTitle, ref) => {
   markAsSpoilerTitle = markAsSpoilerTitle.markAsSpoilerTitle;
   ({ accessible, accessibilityLabel, customKeyboard, placeholder, editable } = markAsSpoilerTitle);
   if (markAsSpoilerTitle === undefined) {
-    const intl = getSystemLocale.intl;
-    markAsSpoilerTitle = intl.string(getSystemLocale.t["gsI+xC"]);
+    const intl = util.intl;
+    markAsSpoilerTitle = intl.string(util.t["gsI+xC"]);
   }
   ({
     setNoExtractUI,
@@ -40,12 +40,11 @@ const forwardRefResult = importAllResult.forwardRef((markAsSpoilerTitle, ref) =>
     onRequestSend,
     verticalInset,
   } = markAsSpoilerTitle);
-  const tmp3 = callback();
+  const tmp3 = closure_5();
   let obj = useTheme;
   const theme = obj.useTheme();
-  const isThemeDarkResult = AccessibilityAnnouncer.isThemeDark(theme);
-  const obj2 = AccessibilityAnnouncer;
-  const unsafe_rawColors = ThemesDefault.unsafe_rawColors;
+  const isThemeDarkResult = shared.isThemeDark(theme);
+  const unsafe_rawColors = nativeDefault.unsafe_rawColors;
   if (isThemeDarkResult) {
     let PRIMARY_500 = unsafe_rawColors.WHITE;
     let tmp9 = tmp8;
@@ -54,10 +53,9 @@ const forwardRefResult = importAllResult.forwardRef((markAsSpoilerTitle, ref) =>
     tmp9 = tmp8;
   }
   let num = 0.6;
-  if (null != gradientPreset.gradientPreset) {
+  if (null != ClientThemesBackgroundStore.gradientPreset) {
     num = 0.8;
   }
-  const obj3 = hexToRgba;
   let tmp4Result = tmp4(1115);
   let tmp11;
   if (!tmp4Result.isAndroid()) {
@@ -68,12 +66,12 @@ const forwardRefResult = importAllResult.forwardRef((markAsSpoilerTitle, ref) =>
   if (!tmp4Result.isAndroid()) {
     tmp12 = customKeyboard;
   }
-  const hexWithOpacityResult = hexToRgba.hexWithOpacity(PRIMARY_500, num);
+  const hexWithOpacityResult = ColorUtils.hexWithOpacity(PRIMARY_500, num);
   let num2 = 2;
   if (isThemeDarkResult) {
     num2 = 1;
   }
-  const tmp4Result1 = set;
+  const tmp4Result1 = PlatformUtils;
   obj = {
     accessible,
     accessibilityLabel: tmp11,
@@ -102,7 +100,7 @@ const forwardRefResult = importAllResult.forwardRef((markAsSpoilerTitle, ref) =>
     textColor: tmp3.textColor.color,
     verticalInset,
   };
-  return jsx(__INTERNAL_VIEW_CONFIG.default, {
+  return jsx(ChatInputNativeComponent.default, {
     accessible,
     accessibilityLabel: tmp11,
     children: tmp12,
@@ -132,6 +130,7 @@ const forwardRefResult = importAllResult.forwardRef((markAsSpoilerTitle, ref) =>
   });
 });
 forwardRefResult.displayName = "ChatInputNativeComponent";
-const result = require("set").fileFinishedImporting("modules/chat_input/native/ChatInputNativeComponent.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/chat_input/native/ChatInputNativeComponent.tsx");
 
 export default forwardRefResult;

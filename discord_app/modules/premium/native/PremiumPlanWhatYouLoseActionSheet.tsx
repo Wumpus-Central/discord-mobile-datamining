@@ -1,26 +1,34 @@
 // discord_app/modules/premium/native/PremiumPlanWhatYouLoseActionSheet.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
-import preloadDefault from "../../../components_native/common/FastImage.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import { PremiumTypes } from "../PremiumConstants.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
+import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
+import PremiumAnalyticsUtils from "PremiumAnalyticsUtils.tsx";
+import _modDef13295 from "../../../../_runtime/metro/13295__.js";
+import _modDef13339 from "../../../../_runtime/metro/13339__.js";
+import _modDef13340 from "../../../../_runtime/metro/13340__.js";
+import _modDef13341 from "../../../../_runtime/metro/13341__.js";
+import _modDef13342 from "../../../../_runtime/metro/13342__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+require = fn;
 function WhatYouLoseItem(arg0) {
   ({ imageSource, text } = arg0);
-  const tmp = callback3();
+  const tmp = closure_8();
   let obj = { style: tmp.item, children: null };
-  const items = [callback(preloadDefault, { source: imageSource })];
+  const items = [timestampProducer(FastImageDefault, { source: imageSource })];
   obj = { variant: "text-md/medium", style: tmp.itemLabel, children: text };
-  items[1] = callback(Text.Text, obj);
-  obj[1] = items;
-  return callback2(View, obj);
+  items[1] = timestampProducer(Text_Text.Text, obj);
+  obj.children = items;
+  return React5(View, obj);
 }
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = {
+const View = fn(17).View;
+const PremiumTypes = fn(1373).PremiumTypes;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+fn(4560);
+let createStyles = {
   body: { paddingTop: 24, paddingHorizontal: 24 },
   title: null,
   subtitle: null,
@@ -30,97 +38,87 @@ createCacheKey = {
   button: null,
   keepText: null,
 };
-createCacheKey = { marginBottom: 8, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { marginBottom: 16, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-let obj1 = { marginBottom: 16, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-createCacheKey[3] = {
+createStyles = { marginBottom: 8, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+createStyles.title = createStyles;
+createStyles.subtitle = { marginBottom: 16, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+let obj1 = { marginBottom: 16, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+createStyles.item = {
   marginBottom: 16,
-  borderRadius: ThemesDefault.radii.sm,
+  borderRadius: nativeDefault.radii.sm,
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
-  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
   padding: 16,
 };
-createCacheKey[4] = { marginTop: 8 };
-createCacheKey[5] = { paddingHorizontal: 16 };
-createCacheKey[6] = { marginBottom: 8 };
+createStyles.itemLabel = { marginTop: 8 };
+createStyles.footer = { paddingHorizontal: 16 };
+createStyles.button = { marginBottom: 8 };
 let obj2 = {
   marginBottom: 16,
-  borderRadius: ThemesDefault.radii.sm,
+  borderRadius: nativeDefault.radii.sm,
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
-  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
   padding: 16,
 };
-createCacheKey[7] = { textAlign: "center", paddingVertical: 8, color: ThemesDefault.colors.TEXT_SUBTLE };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
+createStyles.keepText = { textAlign: "center", paddingVertical: 8, color: nativeDefault.colors.TEXT_SUBTLE };
+let closure_8 = createStyles.createStyles(createStyles);
 let obj4 = { DOWNGRADE: 0, [0]: "DOWNGRADE", CANCEL: 1, [1]: "CANCEL" };
-let obj3 = { textAlign: "center", paddingVertical: 8, color: ThemesDefault.colors.TEXT_SUBTLE };
-let result = require("set").fileFinishedImporting("modules/premium/native/PremiumPlanWhatYouLoseActionSheet.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/premium/native/PremiumPlanWhatYouLoseActionSheet.tsx");
 
 export default function PremiumPlanWhatYouLoseActionSheet(arg0) {
   ({ mode, onContinue: require, subscription } = arg0);
   let premiumTypeFromSubscription;
-  let analyticsLocations;
-  let whatYouLoseProfileTier1Source;
-  const tmp = callback3();
-  let obj = require(premiumTypeFromSubscription[8]);
+  const tmp = closure_8();
+  let obj = require("PremiumUtils");
   premiumTypeFromSubscription = obj.getPremiumTypeFromSubscription(subscription);
-  analyticsLocations = subscription(premiumTypeFromSubscription[9])().analyticsLocations;
-  obj1 = require(premiumTypeFromSubscription[10]);
-  whatYouLoseProfileTier1Source = obj1.useWhatYouLoseProfileTier1Source();
+  const analyticsLocations = subscription(premiumTypeFromSubscription[9])().analyticsLocations;
+  let obj1 = require("WhatYouLoseProfileTier1");
+  const whatYouLoseProfileTier1Source = obj1.useWhatYouLoseProfileTier1Source();
   subscription(premiumTypeFromSubscription[11])(null != premiumTypeFromSubscription, "Expected premium type");
   let items = [premiumTypeFromSubscription, whatYouLoseProfileTier1Source];
   const memo = analyticsLocations.useMemo(() => {
-    if (closure_1_5.TIER_0 === premiumTypeFromSubscription) {
-      let obj = { imageSource: null, text: null };
-      obj[0] = subscription(premiumTypeFromSubscription[12]);
-      const intl7 = closure_1_0(premiumTypeFromSubscription[13]).intl;
-      obj[1] = intl7.format(closure_1_0(premiumTypeFromSubscription[13]).t["0hUHi6"], {});
+    if (PremiumTypes.TIER_0 === premiumTypeFromSubscription) {
+      let obj = { imageSource: _modDef13339, text: null };
+      const intl7 = util.intl;
+      obj.text = intl7.format(util.t["0hUHi6"], {});
       const items = [obj];
-      obj = { imageSource: null, text: null };
-      obj[0] = subscription(premiumTypeFromSubscription[14]);
-      const intl8 = closure_1_0(premiumTypeFromSubscription[13]).intl;
-      obj[1] = intl8.format(closure_1_0(premiumTypeFromSubscription[13]).t.wFWO6D, {});
+      obj = { imageSource: _modDef13340, text: null };
+      const intl8 = util.intl;
+      obj.text = intl8.format(util.t.wFWO6D, {});
       items[1] = obj;
       return items;
     } else if (tmp2.TIER_1 === tmp) {
-      obj1 = { imageSource: null, text: null };
-      obj1[0] = whatYouLoseProfileTier1Source;
-      const intl4 = closure_1_0(premiumTypeFromSubscription[13]).intl;
-      obj1[1] = intl4.format(closure_1_0(premiumTypeFromSubscription[13]).t.xCaYwE, {});
+      const obj1 = { imageSource: whatYouLoseProfileTier1Source, text: null };
+      const intl4 = util.intl;
+      obj1.text = intl4.format(util.t.xCaYwE, {});
       const items1 = [obj1, ,];
-      const obj2 = { imageSource: null, text: null };
-      obj2[0] = subscription(premiumTypeFromSubscription[15]);
-      const intl5 = closure_1_0(premiumTypeFromSubscription[13]).intl;
-      obj2[1] = intl5.format(closure_1_0(premiumTypeFromSubscription[13]).t.wK04T1, {});
+      const obj2 = { imageSource: _modDef13295, text: null };
+      const intl5 = util.intl;
+      obj2.text = intl5.format(util.t.wK04T1, {});
       items1[1] = obj2;
-      const obj3 = { imageSource: null, text: null };
-      obj3[0] = subscription(premiumTypeFromSubscription[16]);
-      const intl6 = closure_1_0(premiumTypeFromSubscription[13]).intl;
-      obj3[1] = intl6.format(closure_1_0(premiumTypeFromSubscription[13]).t.K4Hv69, {});
+      const obj3 = { imageSource: _modDef13341, text: null };
+      const intl6 = util.intl;
+      obj3.text = intl6.format(util.t.K4Hv69, {});
       items1[2] = obj3;
       return items1;
     } else if (tmp2.TIER_2 === tmp) {
-      obj = { imageSource: null, text: null };
-      obj[0] = subscription(premiumTypeFromSubscription[17]);
-      const intl = closure_1_0(premiumTypeFromSubscription[13]).intl;
-      obj[1] = intl.format(closure_1_0(premiumTypeFromSubscription[13]).t["gpqr+n"], {});
+      obj = { imageSource: _modDef13342, text: null };
+      const intl = util.intl;
+      obj.text = intl.format(util.t["gpqr+n"], {});
       const items2 = [obj, ,];
-      obj4 = { imageSource: null, text: null };
-      obj4[0] = subscription(premiumTypeFromSubscription[16]);
-      const intl2 = closure_1_0(premiumTypeFromSubscription[13]).intl;
-      obj4[1] = intl2.format(closure_1_0(premiumTypeFromSubscription[13]).t.wRxEDW, {});
+      obj4 = { imageSource: _modDef13341, text: null };
+      const intl2 = util.intl;
+      obj4.text = intl2.format(util.t.wRxEDW, {});
       items2[1] = obj4;
-      const obj5 = { imageSource: null, text: null };
-      obj5[0] = subscription(premiumTypeFromSubscription[15]);
-      const intl3 = closure_1_0(premiumTypeFromSubscription[13]).intl;
-      obj5[1] = intl3.format(closure_1_0(premiumTypeFromSubscription[13]).t["4WZ7T2"], {});
+      const obj5 = { imageSource: _modDef13295, text: null };
+      const intl3 = util.intl;
+      obj5.text = intl3.format(util.t["4WZ7T2"], {});
       items2[2] = obj5;
       return items2;
     } else {
@@ -128,7 +126,7 @@ export default function PremiumPlanWhatYouLoseActionSheet(arg0) {
     }
   }, items);
   let items1 = [
-    callback(subscription(premiumTypeFromSubscription[20]), { premiumType: premiumTypeFromSubscription }),
+    closure_6(subscription(premiumTypeFromSubscription[20]), { premiumType: premiumTypeFromSubscription }),
     ,
   ];
   obj = { style: tmp.body, children: null };
@@ -140,70 +138,63 @@ export default function PremiumPlanWhatYouLoseActionSheet(arg0) {
     let intl = tmp2(tmp3[13]).intl;
     stringResult = intl.string(tmp2(tmp3[13]).t["7VcWW0"]);
   }
-  obj[2] = stringResult;
-  let items2 = [callback(require(premiumTypeFromSubscription[7]).Text, obj), ,];
+  obj.children = stringResult;
+  let items2 = [closure_6(require("Text/Text").Text, obj), ,];
   obj1 = { variant: "text-md/medium", style: tmp.subtitle, children: null };
   if (mode === obj4.CANCEL) {
     let intl4 = tmp2(tmp3[13]).intl;
     let obj2 = { subscriptionName: null };
     let tmp2Result = tmp2(tmp3[8]);
-    obj2[0] = tmp2Result.getPremiumTypeDisplayName(premiumTypeFromSubscription, true);
+    obj2.subscriptionName = tmp2Result.getPremiumTypeDisplayName(premiumTypeFromSubscription, true);
     let formatResult = intl4.format(tmp2(tmp3[13]).t.jh5mUz, obj2);
   } else {
     let intl3 = tmp2(tmp3[13]).intl;
     let obj3 = { subscriptionName: null };
     tmp2Result = tmp2(tmp3[8]);
-    obj3[0] = tmp2Result.getPremiumTypeDisplayName(premiumTypeFromSubscription, true);
+    obj3.subscriptionName = tmp2Result.getPremiumTypeDisplayName(premiumTypeFromSubscription, true);
     formatResult = intl3.format(tmp2(tmp3[13]).t.Qk34Ik, obj3);
   }
   obj4 = { children: null };
-  obj1[2] = formatResult;
-  items2[1] = callback(require(premiumTypeFromSubscription[7]).Text, obj1);
-  items2[2] = memo.map((arg0, arg1) => {
-    const merged = Object.assign(arg0);
-    return callback2(closure_9, {}, arg1);
+  obj1.children = formatResult;
+  items2[1] = closure_6(require("Text/Text").Text, obj1);
+  items2[2] = memo.map((item, index) => {
+    const merged = Object.assign(item);
+    return closure_1_6(WhatYouLoseItem, {}, index);
   });
-  obj[1] = items2;
+  obj.children = items2;
   items1[1] = closure_7(whatYouLoseProfileTier1Source, obj);
   let obj5 = { style: tmp.footer, children: null };
   const obj6 = { style: tmp.button, children: null };
   const obj7 = { text: null, grow: true, onPress: null };
   let intl5 = tmp2(tmp3[13]).intl;
-  obj7[0] = intl5.string(require(premiumTypeFromSubscription[13]).t["3PatSz"]);
-  obj7[2] = function onPress() {
-    callback(
-      closure_1_0(premiumTypeFromSubscription[22]).STEP_ANALYTICS_NAMES[
-        closure_1_0(undefined, premiumTypeFromSubscription[22]).CancellationFlowSteps.WHAT_YOU_LOSE
-      ],
-    );
-    subscription(premiumTypeFromSubscription[18]).hideActionSheet();
+  obj7.text = intl5.string(require("util").t["3PatSz"]);
+  obj7.onPress = function onPress() {
+    closure_1_0(PremiumAnalyticsUtils.STEP_ANALYTICS_NAMES[PremiumAnalyticsUtils.CancellationFlowSteps.WHAT_YOU_LOSE]);
+    ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  obj6[1] = callback(require(premiumTypeFromSubscription[21]).Button, obj7);
-  const items3 = [callback(whatYouLoseProfileTier1Source, obj6)];
+  obj6.children = closure_6(require("components/Button/Button").Button, obj7);
+  const items3 = [closure_6(whatYouLoseProfileTier1Source, obj6)];
   const obj8 = {
     variant: "text-sm/medium",
     style: tmp.keepText,
     onPress() {
-      let obj = closure_1_0(premiumTypeFromSubscription[22]);
-      obj = {
+      const obj = {
         subscription,
         analyticsLocations,
-        fromStep: closure_1_0(premiumTypeFromSubscription[22]).STEP_ANALYTICS_NAMES[
-          closure_1_0(undefined, premiumTypeFromSubscription[22]).CancellationFlowSteps.WHAT_YOU_LOSE
-        ],
+        fromStep: PremiumAnalyticsUtils.STEP_ANALYTICS_NAMES[PremiumAnalyticsUtils.CancellationFlowSteps.WHAT_YOU_LOSE],
         toStep: null,
       };
       const result = obj.trackPremiumSubscriptionCancellationFlowStep(obj);
-      subscription(premiumTypeFromSubscription[18]).hideActionSheet();
+      ActionSheetActionCreatorsDefault.hideActionSheet();
     },
     children: null,
   };
   let intl6 = tmp2(tmp3[13]).intl;
-  obj8[3] = intl6.string(require(premiumTypeFromSubscription[13]).t.rzVN6j);
-  items3[1] = callback(require(premiumTypeFromSubscription[7]).Text, obj8);
-  obj5[1] = items3;
+  obj8.children = intl6.string(require("util").t.rzVN6j);
+  items3[1] = closure_6(require("Text/Text").Text, obj8);
+  obj5.children = items3;
   items1[2] = closure_7(whatYouLoseProfileTier1Source, obj5);
-  obj4[0] = items1;
-  return closure_7(require(premiumTypeFromSubscription[19]).BottomSheet, obj4);
+  obj4.children = items1;
+  return closure_7(require("Sheet/BottomSheet").BottomSheet, obj4);
 }
 export const WhatYouLoseMode = obj4;

@@ -1,12 +1,12 @@
 // discord_app/modules/chat_input/native/getChatInputPositionStyle.tsx
-import set from "../../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import set2 from "../../../utils/PlatformUtils.tsx";
+import _mod17 from "../../../../_runtime/metro/00017__.js";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 let obj = {};
-const merged = Object.assign(get_ActivityIndicator.StyleSheet.absoluteFillObject);
+const merged = Object.assign(_mod17.StyleSheet.absoluteFillObject);
 obj.top = undefined;
-const result = set.fileFinishedImporting("modules/chat_input/native/getChatInputPositionStyle.tsx");
+const result = size.fileFinishedImporting("modules/chat_input/native/getChatInputPositionStyle.tsx");
 
 export default function getChatInputPositionStyle() {
   obj = arg0;
@@ -18,7 +18,7 @@ export default function getChatInputPositionStyle() {
     if (obj2.isIOS()) {
       tmp = obj;
     }
-    obj2 = set2;
+    obj2 = PlatformUtils;
   }
   return tmp;
 }

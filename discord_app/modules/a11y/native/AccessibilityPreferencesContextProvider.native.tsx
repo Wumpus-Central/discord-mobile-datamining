@@ -1,20 +1,16 @@
 // discord_app/modules/a11y/native/AccessibilityPreferencesContextProvider.native.tsx
-import closure_2 from "../../../../_runtime/00019_noop.js";
-import closure_3 from "../AccessibilityStore.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import noop from "../../../../_runtime/metro/00019__.js";
+import AccessibilityStore from "../AccessibilityStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
-  "modules/a11y/native/AccessibilityPreferencesContextProvider.native.tsx",
-);
+const require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/a11y/native/AccessibilityPreferencesContextProvider.native.tsx");
 
 export default function AccessibilityPreferencesContextProvider(children) {
   let stateFromStoresObject;
   let stateFromStores;
-  let stateFromStoresObject1;
   let stateFromStores1;
-  let stateFromStores2;
-  let stateFromStores3;
   const items = [stateFromStores1];
   stateFromStoresObject = stateFromStoresObject(stateFromStores[3]).useStateFromStoresObject(items, () => ({
     enabled: stateFromStores1.useReducedMotion,
@@ -28,7 +24,7 @@ export default function AccessibilityPreferencesContextProvider(children) {
   );
   const obj2 = stateFromStoresObject(stateFromStores[3]);
   const items2 = [stateFromStores1];
-  stateFromStoresObject1 = stateFromStoresObject(stateFromStores[3]).useStateFromStoresObject(items2, () => ({
+  const stateFromStoresObject1 = stateFromStoresObject(stateFromStores[3]).useStateFromStoresObject(items2, () => ({
     enabled: stateFromStores1.useForcedColors,
     rawValue: stateFromStores1.systemForcedColors,
   }));
@@ -40,13 +36,13 @@ export default function AccessibilityPreferencesContextProvider(children) {
   );
   const obj4 = stateFromStoresObject(stateFromStores[3]);
   const items4 = [stateFromStores1];
-  stateFromStores2 = stateFromStoresObject(stateFromStores[3]).useStateFromStores(
+  const stateFromStores2 = stateFromStoresObject(stateFromStores[3]).useStateFromStores(
     items4,
     () => stateFromStores1.keyboardModeEnabled,
   );
   const obj5 = stateFromStoresObject(stateFromStores[3]);
   const items5 = [stateFromStores1];
-  stateFromStores3 = stateFromStoresObject(stateFromStores[3]).useStateFromStores(
+  const stateFromStores3 = stateFromStoresObject(stateFromStores[3]).useStateFromStores(
     items5,
     () => stateFromStores1.isSwitchIconsEnabled,
   );
@@ -58,7 +54,7 @@ export default function AccessibilityPreferencesContextProvider(children) {
     stateFromStores2,
     stateFromStores3,
   ];
-  const value = stateFromStoresObject1.useMemo(
+  value = stateFromStoresObject1.useMemo(
     () => ({
       reducedMotion: stateFromStoresObject,
       prefersCrossfades: stateFromStores,

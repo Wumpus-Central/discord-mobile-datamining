@@ -1,14 +1,14 @@
 // discord_app/design/components/Text/native/PlainTextExperimentContext.tsx
-import importAllResult from "../../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let c0 = importAllResult;
-const context = importAllResult.createContext(false);
-const result = require("set").fileFinishedImporting("design/components/Text/native/PlainTextExperimentContext.tsx");
+const jsx = fn(21).jsx;
+const context = noop.createContext(false);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Text/native/PlainTextExperimentContext.tsx");
 
 export const PlainTextExperimentProvider = function PlainTextExperimentProvider(enabled) {
   return <closure_2 value={arg0.enabled}>{arg0.children}</closure_2>;
 };
 export const usePlainTextExperimentEnabled = function usePlainTextExperimentEnabled() {
-  return importAllResult.useContext(closure_2);
+  return noop.useContext(closure_2);
 };

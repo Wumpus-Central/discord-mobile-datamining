@@ -1,67 +1,67 @@
 // discord_app/modules/guild_themes/native/GuildThemeNuxActionSheet.tsx
-import timestampDefault from "../../debug/Logger.tsx";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_7 from "../../../stores/SelectedGuildStore.tsx";
-import closure_8 from "../GuildThemeRuntimeStore.tsx";
-import { ContentDismissActionType } from "../../dismissible_content/DismissibleContentConstants.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import LoggerDefault from "../../debug/Logger.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
+import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
+import GuildThemeRuntimeStore from "../GuildThemeRuntimeStore.tsx";
 
-const require = arg1;
-({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
+const require = fn;
+const View = fn(17).View;
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const GuildThemeNuxActionSheet = "GuildThemeNuxActionSheet";
-let closure_13 = new timestampDefault("GuildThemeNuxActionSheet");
-createCacheKey = { container: null, title: null, description: null, options: null, warning: null, footer: null };
-createCacheKey = { padding: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_8, paddingBottom: 0 };
-createCacheKey[0] = createCacheKey;
-const tmp3 = new timestampDefault("GuildThemeNuxActionSheet");
-createCacheKey[1] = { textAlign: "center", marginBottom: ThemesDefault.space.PX_8 };
-let obj1 = { textAlign: "center", marginBottom: ThemesDefault.space.PX_8 };
-createCacheKey[2] = { textAlign: "center", marginBottom: ThemesDefault.space.PX_24 };
-let obj2 = { textAlign: "center", marginBottom: ThemesDefault.space.PX_24 };
-createCacheKey[3] = { marginBottom: ThemesDefault.space.PX_12 };
-let obj3 = { marginBottom: ThemesDefault.space.PX_12 };
-createCacheKey[4] = { marginBottom: ThemesDefault.space.PX_12 };
-let obj4 = { marginBottom: ThemesDefault.space.PX_12 };
-createCacheKey[5] = { gap: ThemesDefault.space.PX_8 };
-let closure_14 = createCacheKey.createStyles(createCacheKey);
-let obj5 = { gap: ThemesDefault.space.PX_8 };
-const result = require("set").fileFinishedImporting("modules/guild_themes/native/GuildThemeNuxActionSheet.tsx");
+let closure_13 = new LoggerDefault("GuildThemeNuxActionSheet");
+fn(4560);
+let createStyles = { container: null, title: null, description: null, options: null, warning: null, footer: null };
+createStyles = { padding: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8, paddingBottom: 0 };
+createStyles.container = createStyles;
+const tmp3 = new LoggerDefault("GuildThemeNuxActionSheet");
+createStyles.title = { textAlign: "center", marginBottom: nativeDefault.space.PX_8 };
+let obj1 = { textAlign: "center", marginBottom: nativeDefault.space.PX_8 };
+createStyles.description = { textAlign: "center", marginBottom: nativeDefault.space.PX_24 };
+let obj2 = { textAlign: "center", marginBottom: nativeDefault.space.PX_24 };
+createStyles.options = { marginBottom: nativeDefault.space.PX_12 };
+let obj3 = { marginBottom: nativeDefault.space.PX_12 };
+createStyles.warning = { marginBottom: nativeDefault.space.PX_12 };
+let obj4 = { marginBottom: nativeDefault.space.PX_12 };
+createStyles.footer = { gap: nativeDefault.space.PX_8 };
+let closure_14 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_themes/native/GuildThemeNuxActionSheet.tsx");
 
 export default function GuildThemeNuxActionSheet(guildId) {
   guildId = guildId.guildId;
   const markAsDismissed = guildId.markAsDismissed;
   dependencyMap = undefined;
-  let callback;
-  let callback2;
-  let React;
-  closure_6 = undefined;
+  asyncGeneratorStep = undefined;
+  _slicedToArray = undefined;
+  noop = undefined;
   let stateFromStores;
   let callback1;
-  const tmp = callback5();
-  [tmp5, c2] = callback2(React.useState(guildId(16162).getInitialGuildThemeNuxSelection), 2);
-  const tmp4 = callback2(React.useState(guildId(16162).getInitialGuildThemeNuxSelection), 2);
-  [tmp7, c3] = callback2(React.useState(null), 2);
-  const tmp6 = callback2(React.useState(null), 2);
-  [tmp9, c4] = callback2(React.useState(false), 2);
-  React = React.useRef(false);
+  const tmp = closure_14();
+  [tmp5, c2] = _slicedToArray(noop.useState(guildId(16162).getInitialGuildThemeNuxSelection), 2);
+  const tmp4 = _slicedToArray(noop.useState(guildId(16162).getInitialGuildThemeNuxSelection), 2);
+  [tmp7, c3] = _slicedToArray(noop.useState(null), 2);
+  const tmp6 = _slicedToArray(noop.useState(null), 2);
+  [tmp9, c4] = _slicedToArray(noop.useState(false), 2);
+  noop = noop.useRef(false);
   const tmp10 = tmp5 === guildId(4491).GuildThemeSourcePreference.PERSONAL;
   closure_6 = tmp10;
   let obj = guildId(504);
   const items = [stateFromStores];
   stateFromStores = obj.useStateFromStores(items, () => stateFromStores.getGuildId());
-  obj1 = guildId(504);
+  let obj1 = guildId(504);
   const items1 = [callback1];
   const items2 = [guildId];
   const items3 = [guildId, stateFromStores];
   const stateFromStores1 = obj1.useStateFromStores(
     items1,
     () => {
-      const guildThemeSnapshot = callback1.getGuildThemeSnapshot(guildId);
+      const guildThemeSnapshot = GuildThemeRuntimeStore.getGuildThemeSnapshot(guildId);
       let tmp2 = null;
       if (null != guildThemeSnapshot) {
         tmp2 = null;
@@ -77,18 +77,17 @@ export default function GuildThemeNuxActionSheet(guildId) {
     },
     items2,
   );
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (stateFromStores !== guildId) {
-      markAsDismissed(_undefined[14]).hideActionSheet(closure_1_12);
-      const obj = markAsDismissed(_undefined[14]);
+      ActionSheetActionCreatorsDefault.hideActionSheet(GuildThemeNuxActionSheet);
     }
   }, items3);
   const items4 = [markAsDismissed];
-  callback = React.useCallback((arg0) => {
+  const callback = noop.useCallback((arg0) => {
     _undefined2(null);
     _undefined(arg0);
   }, []);
-  callback1 = React.useCallback((arg0) => {
+  callback1 = noop.useCallback((arg0) => {
     if (!ref.current) {
       tmp.current = true;
       markAsDismissed(arg0);
@@ -96,17 +95,16 @@ export default function GuildThemeNuxActionSheet(guildId) {
   }, items4);
   const items5 = [guildId, tmp10, markAsDismissed, stateFromStores];
   const items6 = [callback1];
-  callback2 = React.useCallback(
-    callback(function* () {
+  const callback2 = noop.useCallback(
+    asyncGeneratorStep(async (arg0, value) => {
       if (c5 === 2) {
         c5 = 3;
-        HermesBuiltin.throwTypeError();
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp6 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          let obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
@@ -114,27 +112,24 @@ export default function GuildThemeNuxActionSheet(guildId) {
       } else {
         try {
           c5 = 2;
-          if (0 === v02) {
+          if (0 === v2) {
             if (arg0 === 1) {
               c5 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj = { value, done: true };
               return obj;
             } else {
-              const callback = tmp3;
-              closure_0 = tmp7;
-              if (closure_1_7 === closure_1_0) {
-                v02(true);
+              guildId = tmp7;
+              if (stateFromStores === guildId) {
+                v2(true);
                 v0(null);
                 v0 = 1;
-                let obj3 = closure_1_0(closure_1_2[11]);
-                v02 = 2;
+                let obj3 = guildId(tmp39[11]);
+                v2 = 2;
                 c5 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = obj3.saveGuildThemeNuxPreference(tmp49, closure_1_6);
+                const obj1 = { value: obj3.saveGuildThemeNuxPreference(tmp48, closure_6), done: false };
                 return obj1;
               } else {
                 c5 = 3;
@@ -142,45 +137,42 @@ export default function GuildThemeNuxActionSheet(guildId) {
             }
           } else if (1 === tmp7) {
             v0 = 0;
-            closure_0 = closure_2;
-            closure_1_13.error("Failed to save guild theme NUX preference", closure_0);
-            const intl = closure_1_0(closure_1_2[15]).intl;
-            v0(intl.string(closure_1_0(closure_1_2[15]).t.fEptJP));
-            v02(false);
+            closure_128_0 = tmp39;
+            logger.error("Failed to save guild theme NUX preference", closure_128_0);
+            const intl = guildId(tmp39[15]).intl;
+            closure_129_3(intl.string(guildId(tmp39[15]).t.fEptJP));
+            closure_129_4(false);
             c5 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = undefined;
+            const obj2 = { value: undefined, done: true };
             return obj2;
           } else if (arg0 === 1) {
             c5 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 !== 2) {
             v0 = 0;
-            c5.current = true;
-            callback(closure_1_9.TAKE_ACTION);
-            obj = closure_1_1(closure_1_2[14]);
-            obj.hideActionSheet(closure_1_12);
+            closure_129_5.current = true;
+            closure_129_1(constants.TAKE_ACTION);
+            obj = tmp3(tmp39[14]);
+            obj.hideActionSheet(GuildThemeNuxActionSheet);
           }
           v0 = 0;
           c5 = 3;
-          obj3 = { value: null, done: true };
-          obj3[0] = arg1;
+          obj3 = { value, done: true };
           return obj3;
         } catch (tmp39) {
-          closure_2 = tmp39;
           if (tmp4 === v0) {
             c5 = tmp2;
             throw tmp39;
           } else {
-            v02 = tmp;
+            v2 = tmp;
           }
         }
       }
     }),
     items5,
   );
-  const callback3 = React.useCallback(() => {
-    callback1(closure_1_9.USER_DISMISS);
+  const callback3 = noop.useCallback(() => {
+    callback1(ContentDismissActionType.USER_DISMISS);
   }, items6);
   let intl = guildId(1114).intl;
   const string = intl.string;
@@ -192,10 +184,17 @@ export default function GuildThemeNuxActionSheet(guildId) {
   }
   obj = { startExpanded: true, dismissAccessibilityLabel: null, onDismiss: null, contentStyles: null, children: null };
   const intl2 = tmp2(1114).intl;
-  obj[1] = intl2.string(guildId(1114).t.cpT0Cq);
-  obj[2] = callback3;
-  obj[3] = tmp.container;
-  const items7 = [callback3(markAsDismissed(16163), { themeSettings: stateFromStores1, isPersonal: tmp10 }), , , , , ,];
+  obj.dismissAccessibilityLabel = intl2.string(guildId(1114).t.cpT0Cq);
+  obj.onDismiss = callback3;
+  obj.contentStyles = tmp.container;
+  const items7 = [
+    closure_10(markAsDismissed(16163), { themeSettings: stateFromStores1, isPersonal: tmp10 }),
+    ,
+    ,
+    ,
+    ,
+    ,
+  ];
   obj = {
     accessibilityRole: "header",
     variant: "heading-xl/semibold",
@@ -204,49 +203,46 @@ export default function GuildThemeNuxActionSheet(guildId) {
     children: null,
   };
   const intl3 = tmp2(1114).intl;
-  obj[4] = intl3.string(guildId(1114).t.Q9zFy9);
-  items7[1] = callback3(guildId(4556).Text, obj);
+  obj.children = intl3.string(guildId(1114).t.Q9zFy9);
+  items7[1] = closure_10(guildId(4556).Text, obj);
   obj1 = { variant: "text-md/normal", color: "text-default", style: tmp.description, children: null };
   const intl4 = tmp2(1114).intl;
-  obj1[3] = intl4.string(guildId(1114).t.XLpBLj);
-  items7[2] = callback3(guildId(4556).Text, obj1);
+  obj1.children = intl4.string(guildId(1114).t.XLpBLj);
+  items7[2] = closure_10(guildId(4556).Text, obj1);
   let obj2 = { style: tmp.options, children: null };
   let obj3 = { hasIcons: false, value: tmp5, onChange: callback, children: null };
   const obj4 = { label: null, value: null };
   const intl5 = tmp2(1114).intl;
-  obj4[0] = intl5.string(guildId(1114).t.aN3RNQ);
-  obj4[1] = guildId(4491).GuildThemeSourcePreference.GUILD;
-  const items8 = [callback3(guildId(5688).TableRadioRow, obj4)];
+  obj4.label = intl5.string(guildId(1114).t.aN3RNQ);
+  obj4.value = guildId(4491).GuildThemeSourcePreference.GUILD;
+  const items8 = [closure_10(guildId(5688).TableRadioRow, obj4)];
   const obj5 = { label: null, value: null };
   const intl6 = tmp2(1114).intl;
-  obj5[0] = intl6.string(guildId(1114).t.js8y7t);
-  obj5[1] = guildId(4491).GuildThemeSourcePreference.PERSONAL;
-  items8[1] = callback3(guildId(5688).TableRadioRow, obj5);
-  obj3[3] = items8;
-  obj2[1] = callback4(guildId(5685).TableRadioGroup, obj3);
-  items7[3] = callback3(closure_6, obj2);
+  obj5.label = intl6.string(guildId(1114).t.js8y7t);
+  obj5.value = guildId(4491).GuildThemeSourcePreference.PERSONAL;
+  items8[1] = closure_10(guildId(5688).TableRadioRow, obj5);
+  obj3.children = items8;
+  obj2.children = closure_11(guildId(5685).TableRadioGroup, obj3);
+  items7[3] = closure_10(closure_6, obj2);
   let tmp20Result = null;
   if (tmp10) {
-    const obj6 = { style: null, children: null };
-    obj6[0] = tmp.warning;
-    const obj7 = { messageType: null, borderRadius: null, children: null };
-    obj7[0] = tmp2(1178).HelpMessageTypes.WARNING;
-    obj7[1] = tmp21(576).radii.md;
+    const obj6 = { style: tmp.warning, children: null };
+    const obj7 = {
+      messageType: tmp2(1178).HelpMessageTypes.WARNING,
+      borderRadius: tmp21(576).radii.md,
+      children: null,
+    };
     const intl7 = tmp2(1114).intl;
-    obj7[2] = intl7.string(tmp2(1114).t.tTHQAy);
-    obj6[1] = tmp20(tmp2(1178).HelpMessage, obj7);
+    obj7.children = intl7.string(tmp2(1114).t.tTHQAy);
+    obj6.children = tmp20(tmp2(1178).HelpMessage, obj7);
     tmp20Result = tmp20(tmp22, obj6);
   }
   items7[4] = tmp20Result;
   tmp20Result = null;
   if (null != tmp7) {
-    const obj8 = { style: null, children: null };
-    obj8[0] = tmp.warning;
-    const obj9 = { messageType: null, borderRadius: null, children: null };
-    obj9[0] = tmp2(1178).HelpMessageTypes.ERROR;
-    obj9[1] = tmp21(576).radii.md;
-    obj9[2] = tmp7;
-    obj8[1] = tmp20(tmp2(1178).HelpMessage, obj9);
+    const obj8 = { style: tmp.warning, children: null };
+    const obj9 = { messageType: tmp2(1178).HelpMessageTypes.ERROR, borderRadius: tmp21(576).radii.md, children: tmp7 };
+    obj8.children = tmp20(tmp2(1178).HelpMessage, obj9);
     tmp20Result = tmp20(tmp22, obj8);
   }
   items7[5] = tmp20Result;
@@ -256,13 +252,13 @@ export default function GuildThemeNuxActionSheet(guildId) {
   if (tmp10) {
     str = "secondary";
   }
-  obj11[1] = str;
-  obj11[2] = tmp9;
-  obj11[3] = tmp9;
-  obj11[4] = callback2;
-  obj10[1] = callback3(guildId(4975).Button, obj11);
-  items7[6] = callback3(closure_6, obj10);
-  obj[4] = items7;
-  return callback4(guildId(7150).BottomSheet, obj);
+  obj11.variant = str;
+  obj11.loading = tmp9;
+  obj11.disabled = tmp9;
+  obj11.onPress = callback2;
+  obj10.children = closure_10(guildId(4975).Button, obj11);
+  items7[6] = closure_10(closure_6, obj10);
+  obj.children = items7;
+  return closure_11(guildId(7150).BottomSheet, obj);
 }
 export const GUILD_THEME_NUX_ACTION_SHEET_KEY = "GuildThemeNuxActionSheet";

@@ -1,35 +1,34 @@
 // discord_app/design/void/RoleLabel/native/RoleLabel.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import Form from "../../Form/native/index.tsx";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_3 from "../../../../modules/a11y/AccessibilityStore.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import AccessibilityStore from "../../../../modules/a11y/AccessibilityStore.tsx";
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = createCacheKey.createStyles({
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4560);
+let closure_6 = createStyles.createStyles({
   container: { display: "flex", flexDirection: "row" },
   roleDot: { marginRight: 4 },
 });
-const result = require("set").fileFinishedImporting("design/void/RoleLabel/native/RoleLabel.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/RoleLabel/native/RoleLabel.tsx");
 
 export const RoleLabel = function RoleLabel(color) {
   color = color.color;
   ({ name, colors } = color);
-  const tmp = callback2();
+  const tmp = closure_6();
   let obj = initialize;
-  const items = [closure_3];
+  const items = [AccessibilityStore];
   const stateFromStores = obj.useStateFromStores(items, () => roleStyle.roleStyle);
   let tmp5 = "username" === stateFromStores;
   if (tmp5) {
     tmp5 = null != color;
   }
   if (tmp5) {
-    obj = { color: null };
-    obj[0] = color;
+    obj = { color };
   }
   obj = { style: tmp.container, children: null };
   let tmp10 = "dot" === stateFromStores;
@@ -37,13 +36,10 @@ export const RoleLabel = function RoleLabel(color) {
     tmp10 = null != color;
   }
   if (tmp10) {
-    obj1 = { color: null, colors: null, containerStyles: null };
-    obj1[0] = color;
-    obj1[1] = colors;
-    obj1[2] = tmp.roleDot;
-    tmp10 = callback(tmp2(1178).RoleDot, obj1);
+    const obj1 = { color, colors, containerStyles: tmp.roleDot };
+    tmp10 = React4(tmp2(1178).RoleDot, obj1);
   }
-  const items1 = [tmp10, callback(Form.FormLabel, { style: {}, text: name })];
-  obj[1] = items1;
-  return closure_5(View, obj);
+  const items1 = [tmp10, React4(Form.FormLabel, { style: {}, text: name })];
+  obj.children = items1;
+  return hasOwnProperty(View, obj);
 };

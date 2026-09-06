@@ -1,23 +1,22 @@
 // discord_app/stores/views/PrivateChannelSortStore.tsx
-import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import hooksDefault from "../../../_runtime/04153_hooks.js";
-import FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID from "../../modules/channel/FakePlaceholderPrivateChannel.tsx";
-import closure_3 from "../../modules/message_request/MessageRequestStore.tsx";
-import closure_4 from "../../modules/message_request/SpamMessageRequestStore.tsx";
-import { isPrivate } from "../../records/ChannelRecord.tsx";
-import closure_6 from "../ChannelStore.tsx";
-import closure_7 from "../GuildStore.tsx";
-import closure_8 from "../ReadStateStore.tsx";
-import closure_9 from "../UserGuildSettingsStore.tsx";
-import closure_10 from "../UserStore.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import _modDef4153 from "../../../_runtime/metro/04153__.js";
+import FakePlaceholderPrivateChannel from "../../modules/channel/FakePlaceholderPrivateChannel.tsx";
+import MessageRequestStore from "../../modules/message_request/MessageRequestStore.tsx";
+import SpamMessageRequestStore from "../../modules/message_request/SpamMessageRequestStore.tsx";
+import ChannelStore from "../ChannelStore.tsx";
+import GuildStore from "../GuildStore.tsx";
+import ReadStateStore from "../ReadStateStore.tsx";
+import UserGuildSettingsStore from "../UserGuildSettingsStore.tsx";
+import UserStore from "../UserStore.tsx";
 
-require = arg1;
+require = fn;
 function makeSortedChannel(channel, id) {
   let tmp = id;
   if (id === undefined) {
-    id = closure_8.lastMessageId(channel.id);
+    id = ReadStateStore.lastMessageId(channel.id);
     if (id == null) {
       id = channel.lastMessageId;
     }
@@ -27,90 +26,96 @@ function makeSortedChannel(channel, id) {
     const isMessageRequestTimestamp = channel.isMessageRequestTimestamp;
     let tmp2 = id;
     if (null != isMessageRequestTimestamp) {
-      let obj = hooksDefault(isMessageRequestTimestamp);
+      let obj = _modDef4153(isMessageRequestTimestamp);
       const valueOfResult = obj.valueOf();
-      let fromTimestampResult = DISCORD_EPOCHDefault.fromTimestamp(valueOfResult);
-      const obj2 = DISCORD_EPOCHDefault;
+      let fromTimestampResult = SnowflakeUtilsDefault.fromTimestamp(valueOfResult);
       if (obj3.compare(id, fromTimestampResult) > 0) {
         fromTimestampResult = id;
       }
       tmp2 = fromTimestampResult;
-      obj3 = DISCORD_EPOCHDefault;
+      obj3 = SnowflakeUtilsDefault;
     }
     tmp = tmp2;
   }
   obj = {
     channelId: channel.id,
     lastMessageId: tmp,
-    isFavorite: messagesFavorite.isMessagesFavorite(channel.id),
+    isFavorite: UserGuildSettingsStore.isMessagesFavorite(channel.id),
     isRequest: null,
   };
-  let isMessageRequestResult = messageRequest.isMessageRequest(channel.id);
+  let isMessageRequestResult = MessageRequestStore.isMessageRequest(channel.id);
   if (!isMessageRequestResult) {
-    isMessageRequestResult = spam.isSpam(channel.id);
+    isMessageRequestResult = SpamMessageRequestStore.isSpam(channel.id);
   }
-  obj[3] = isMessageRequestResult;
+  obj.isRequest = isMessageRequestResult;
   return obj;
 }
 function handleConnectionOpen() {
   secondaryIndexMap.clear();
-  const values = Object.values(store.getMutablePrivateChannels());
+  values = Object.values(ChannelStore.getMutablePrivateChannels());
   const item = values.forEach((id) => {
-    const result = closure_12.set(id.id, callback(id));
+    const result = secondaryIndexMap.set(id.id, makeSortedChannel(id));
   });
 }
 function handleCacheLoaded() {
-  const mutablePrivateChannels = store.getMutablePrivateChannels();
+  const mutablePrivateChannels = ChannelStore.getMutablePrivateChannels();
   for (const key10006 in mutablePrivateChannels) {
-    let tmp2 = key10006;
-    let tmp3 = secondaryIndexMap;
-    let tmp4 = makeSortedChannel;
     let result = secondaryIndexMap.set(key10006, makeSortedChannel(mutablePrivateChannels[key10006]));
     continue;
   }
 }
-let closure_11 = { DEFAULT: "DEFAULT", FAVORITE: "FAVORITE" };
-const secondaryIndexMap = new require("version").SecondaryIndexMap(
+const isPrivate = fn(1961).isPrivate;
+const constants = { DEFAULT: "DEFAULT", FAVORITE: "FAVORITE" };
+const secondaryIndexMap = new fn(4195).SecondaryIndexMap(
   function indexBy(value) {
     if (value.isRequest) {
       let items = [];
     } else {
-      items = [tmp ? closure_11.FAVORITE : closure_11.DEFAULT];
+      items = [tmp ? constants.FAVORITE : constants.DEFAULT];
     }
     return items;
   },
-  function sortBy(arr, items, arg2) {
-    return -DISCORD_EPOCHDefault.extractTimestamp(arr.lastMessageId);
+  function sortBy(arr) {
+    return -SnowflakeUtilsDefault.extractTimestamp(arr.lastMessageId);
   },
 );
-let closure_15 = [];
-let closure_16 = [];
+let values = [];
+values = [];
 let closure_17 = [];
 const f38615 = () => {};
 const Store = initializeDefault.Store;
 class PrivateChannelSortStore extends Store {}
 const prototype = PrivateChannelSortStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_6, closure_7, closure_3, closure_8, closure_4, closure_9, closure_10);
-  const items = [closure_9, closure_3];
+  this.waitFor(
+    ChannelStore,
+    GuildStore,
+    MessageRequestStore,
+    ReadStateStore,
+    SpamMessageRequestStore,
+    UserGuildSettingsStore,
+    UserStore,
+  );
+  const items = [UserGuildSettingsStore, MessageRequestStore];
   this.syncWith(items, handleConnectionOpen);
 };
 prototype["getPrivateChannelIds"] = function getPrivateChannelIds() {
-  if (typeof f38615 !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof f38615 === "function") {
+    secondaryIndexMap.values(constants.FAVORITE);
+    values = secondaryIndexMap.values(constants.DEFAULT);
+    let tmp4 = values === values;
+    if (tmp4) {
+      tmp4 = values === values;
+    }
+    if (!tmp4) {
+      closure_17 = [];
+      const item = values.forEach((channelId) => closure_1_17.push(channelId.channelId));
+      const item1 = values.forEach((channelId) => closure_1_17.push(channelId.channelId));
+    }
+    return closure_17;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  let values = secondaryIndexMap.values(constants.FAVORITE);
-  values = secondaryIndexMap.values(constants.DEFAULT);
-  let tmp = values === values;
-  if (tmp) {
-    tmp = values === values;
-  }
-  if (!tmp) {
-    closure_17 = [];
-    const item = values.forEach((channelId) => arr.push(channelId.channelId));
-    const item1 = values.forEach((channelId) => arr.push(channelId.channelId));
-  }
-  return closure_17;
 };
 prototype["getSortedChannels"] = function getSortedChannels() {
   const items = [secondaryIndexMap.values(constants.FAVORITE), secondaryIndexMap.values(constants.DEFAULT)];
@@ -118,14 +123,14 @@ prototype["getSortedChannels"] = function getSortedChannels() {
 };
 prototype["serializeForOverlay"] = function serializeForOverlay() {
   const obj = {};
-  const values = secondaryIndexMap.values();
+  values = secondaryIndexMap.values();
   const item = values.forEach((channelId) => {
     obj[channelId.channelId] = channelId.lastMessageId;
   });
   return obj;
 };
 PrivateChannelSortStore.displayName = "PrivateChannelSortStore";
-const privateChannelSortStore = new PrivateChannelSortStore(dispatcherDefault, {
+const privateChannelSortStore = new PrivateChannelSortStore(DispatcherDefault, {
   CONNECTION_OPEN: handleConnectionOpen,
   CONNECTION_OPEN_SUPPLEMENTAL: handleConnectionOpen,
   OVERLAY_INITIALIZE: handleConnectionOpen,
@@ -134,12 +139,12 @@ const privateChannelSortStore = new PrivateChannelSortStore(dispatcherDefault, {
   CHANNEL_UPDATES: function handleChannelUpdates(channels) {
     channels = channels.channels;
     const item = channels.forEach((type) => {
-      let hasItem = callback(type.type);
+      let hasItem = isPrivate(type.type);
       if (!hasItem) {
         hasItem = map.has(type.id);
       }
       if (hasItem) {
-        const result = map.set(type.id, callback2(type));
+        const result = map.set(type.id, makeSortedChannel(type));
       }
     });
   },
@@ -147,7 +152,7 @@ const privateChannelSortStore = new PrivateChannelSortStore(dispatcherDefault, {
     channel = channel.channel;
     let tmp = isPrivate(channel.type);
     if (tmp) {
-      const tmp4 = channel.id !== FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
+      const tmp4 = channel.id !== FakePlaceholderPrivateChannel.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
       if (tmp4) {
         const result = secondaryIndexMap.set(channel.id, makeSortedChannel(channel));
       }
@@ -161,7 +166,7 @@ const privateChannelSortStore = new PrivateChannelSortStore(dispatcherDefault, {
   MESSAGE_CREATE: function handleMessageCreate(channelId) {
     channelId = channelId.channelId;
     if (secondaryIndexMap.has(channelId)) {
-      const channel = store.getChannel(channelId);
+      const channel = ChannelStore.getChannel(channelId);
       let result = null != channel;
       if (result) {
         result = obj.set(channelId, makeSortedChannel(channel, channelId.message.id));
@@ -179,6 +184,7 @@ const privateChannelSortStore = new PrivateChannelSortStore(dispatcherDefault, {
     secondaryIndexMap.clear();
   },
 });
-let result = require("set").fileFinishedImporting("stores/views/PrivateChannelSortStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("stores/views/PrivateChannelSortStore.tsx");
 
 export default privateChannelSortStore;

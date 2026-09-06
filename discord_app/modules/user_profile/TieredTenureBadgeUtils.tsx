@@ -1,10 +1,10 @@
 // discord_app/modules/user_profile/TieredTenureBadgeUtils.tsx
-import set from "../../../_runtime/00002_set.js";
-import hooksDefault from "../../../_runtime/04153_hooks.js";
-import GuildFeatures from "../premium/PremiumConstants.tsx";
+import _modDef4153 from "../../../_runtime/metro/04153__.js";
+import PremiumConstants from "../premium/PremiumConstants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-({ TENURE_BADGES: obj1, TIERED_TENURE_BADGE_ORDER: c3 } = GuildFeatures);
-const result = set.fileFinishedImporting("modules/user_profile/TieredTenureBadgeUtils.tsx");
+({ TENURE_BADGES: c2, TIERED_TENURE_BADGE_ORDER: c3 } = PremiumConstants);
+const result = size.fileFinishedImporting("modules/user_profile/TieredTenureBadgeUtils.tsx");
 
 export const getTieredTenureBadgeData = function getTieredTenureBadgeData(tieredTenureBadge) {
   return dependencyMap[tieredTenureBadge];
@@ -22,7 +22,7 @@ export const getEarnedOnDate = function getEarnedOnDate(earnedTenureBadge, premi
   } else if (null == dependencyMap[earnedTenureBadge]) {
     return null;
   } else {
-    const obj = hooksDefault(premiumSince);
+    const obj = _modDef4153(premiumSince);
     obj.add(tmp3.tenureReqNumMonths, "months");
     obj.add(1, "days");
     return obj.toDate();
@@ -36,17 +36,12 @@ export const getEarnedTenureBadge = function getEarnedTenureBadge(premiumSince) 
     let diff = length.length - 1;
     if (0 <= diff) {
       while (true) {
-        let tmp = length;
-        let tmp3 = diff;
         let toDateResult = null;
         if (null != premiumSince) {
-          let tmp5 = dependencyMap;
           let tmp6 = dependencyMap[length[diff]];
           toDateResult = null;
           if (null != tmp6) {
-            let tmp7 = importDefault;
-            let tmp8 = dependencyMap;
-            let obj = hooksDefault(premiumSince);
+            let obj = _modDef4153(premiumSince);
             let addResult = obj.add(tmp6.tenureReqNumMonths, "months");
             let addResult1 = obj.add(1, "days");
             toDateResult = obj.toDate();

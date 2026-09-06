@@ -1,15 +1,14 @@
 // discord_common/js/packages/discord-native-types/DiscordNative.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
 class SystemServiceNotAvailableError extends Error {
   constructor() {
     tmp = new tmp("System service not available", new.target);
-    // ThrowIfThisInitialized (0x7c)
     tmp.name = "SystemServiceNotAvailableError";
     return tmp;
   }
 }
-const result = set.fileFinishedImporting("../discord_common/js/packages/discord-native-types/DiscordNative.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/discord-native-types/DiscordNative.tsx");
 
 export { SystemServiceNotAvailableError };
 export const StoredCrashInformation = {

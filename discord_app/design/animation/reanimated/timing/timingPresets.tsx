@@ -1,7 +1,7 @@
 // discord_app/design/animation/reanimated/timing/timingPresets.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("design/animation/reanimated/timing/timingPresets.tsx");
+const result = size.fileFinishedImporting("design/animation/reanimated/timing/timingPresets.tsx");
 
 export const timingNone = { duration: 0 };
 export const timingInstant = { duration: 1 };

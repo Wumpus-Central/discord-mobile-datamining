@@ -1,7 +1,7 @@
 // discord_app/modules/connections/DomainVerifyUtils.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/connections/DomainVerifyUtils.tsx");
+const result = size.fileFinishedImporting("modules/connections/DomainVerifyUtils.tsx");
 
 export const EXAMPLE_DOMAIN = "example.com";
 export const getDnsName = function getDnsName(domain) {

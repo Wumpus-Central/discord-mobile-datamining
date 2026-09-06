@@ -1,25 +1,25 @@
 // discord_app/modules/guild_tag/native/badges/GuildBadgeFrog.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
 import inlineStyles from "../../../../../_runtime/08453_inlineStyles.js";
-import getTransformedBadgeColors from "GuildBadgeUtils.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import GuildBadgeUtils from "GuildBadgeUtils.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-({ jsx: obj1, jsxs: c3 } = jsxProd);
-let closure_4 = ["#008456", "#6BE473"];
-let closure_5 = [0.2, 0.5];
+require = fn;
+const jsxProd = fn(21);
+({ jsx: c2, jsxs: c3 } = jsxProd);
+const primaryBaseColors = ["#008456", "#6BE473"];
+const primaryTintLuminances = [0.2, 0.5];
 let items = [
   { base: 5, tint: 1 },
   { base: 3, tint: 1 },
 ];
-let closure_7 = ["#FFB84B", "#FFE361"];
-let closure_8 = [0.4, 0.8];
+const secondaryBaseColors = ["#FFB84B", "#FFE361"];
+const secondaryTintLuminances = [0.4, 0.8];
 const items1 = [
   { base: 5, tint: 1 },
   { base: 3, tint: 1 },
 ];
-const result = require("set").fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgeFrog.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgeFrog.tsx");
 
 export const GuildBadgeFrog = function GuildBadgeFrog(width) {
   let num = width.width;
@@ -31,16 +31,18 @@ export const GuildBadgeFrog = function GuildBadgeFrog(width) {
     num2 = 24;
   }
   ({ primaryTintColor, secondaryTintColor } = width);
-  const merged = Object.assign(width, Object.create(null));
-  let obj = getTransformedBadgeColors;
-  obj = {
-    primaryBaseColors: closure_4,
+  const merged = Object.assign(
+    width,
+    Object.assign({ width: 0, height: 0, primaryTintColor: 0, secondaryTintColor: 0 }),
+  );
+  let obj = {
+    primaryBaseColors,
     primaryTintColor,
-    primaryTintLuminances: closure_5,
+    primaryTintLuminances,
     primaryLuminanceWeights: items,
-    secondaryBaseColors: closure_7,
+    secondaryBaseColors,
     secondaryTintColor,
-    secondaryTintLuminances: closure_8,
+    secondaryTintLuminances,
     secondaryLuminanceWeights: items1,
   };
   const transformedBadgeColors = obj.getTransformedBadgeColors(obj);
@@ -52,51 +54,51 @@ export const GuildBadgeFrog = function GuildBadgeFrog(width) {
   obj.viewBox = "0 0 16 16";
   obj.fill = "none";
   items = [
-    callback(inlineStyles.Path, {
+    React2(inlineStyles.Path, {
       d: "M9 2V3H7V2H3V3H2V7H1V12H2V13H4V14H12V13H14V12H15V7H14V3H13V2H9Z",
       fill: primaryColorsTransformed[1],
     }),
-    callback(inlineStyles.Path, { d: "M13 3V2H10V3H13Z", fill: "white" }),
-    callback(inlineStyles.Path, { d: "M13 7V6H10V7H13Z", fill: "white" }),
-    callback(inlineStyles.Path, { d: "M14 6V3H13V6H14Z", fill: "white" }),
-    callback(inlineStyles.Path, { d: "M10 6V3H9V6H10Z", fill: "white" }),
-    callback(inlineStyles.Path, { d: "M6 3V2H3V3H6Z", fill: "white" }),
-    callback(inlineStyles.Path, { d: "M6 7V6H3V7H6Z", fill: "white" }),
-    callback(inlineStyles.Path, { d: "M7 6V3H6V6H7Z", fill: "white" }),
-    callback(inlineStyles.Path, { d: "M3 6V3H2V6H3Z", fill: "white" }),
-    callback(inlineStyles.Path, {
+    React2(inlineStyles.Path, { d: "M13 3V2H10V3H13Z", fill: "white" }),
+    React2(inlineStyles.Path, { d: "M13 7V6H10V7H13Z", fill: "white" }),
+    React2(inlineStyles.Path, { d: "M14 6V3H13V6H14Z", fill: "white" }),
+    React2(inlineStyles.Path, { d: "M10 6V3H9V6H10Z", fill: "white" }),
+    React2(inlineStyles.Path, { d: "M6 3V2H3V3H6Z", fill: "white" }),
+    React2(inlineStyles.Path, { d: "M6 7V6H3V7H6Z", fill: "white" }),
+    React2(inlineStyles.Path, { d: "M7 6V3H6V6H7Z", fill: "white" }),
+    React2(inlineStyles.Path, { d: "M3 6V3H2V6H3Z", fill: "white" }),
+    React2(inlineStyles.Path, {
       d: "M3.00002 10V12H4.00002V13H12V12H13V10H3.00002Z",
       fill: secondaryColorsTransformed[1],
     }),
-    callback(inlineStyles.Path, { d: "M12 13H4V14H12V13Z", fill: secondaryColorsTransformed[0] }),
-    callback(inlineStyles.Path, { d: "M13 13V12H12V13H13Z", fill: secondaryColorsTransformed[0] }),
-    callback(inlineStyles.Path, { d: "M4 13V12H3.00001V13H4Z", fill: secondaryColorsTransformed[0] }),
-    callback(inlineStyles.Path, { d: "M14 13V12H13V13H14Z", fill: primaryColorsTransformed[0] }),
-    callback(inlineStyles.Path, { d: "M3.00002 13V12H2.00001V13H3.00002Z", fill: primaryColorsTransformed[0] }),
-    callback(inlineStyles.Path, { d: "M15 11H14V12H15V11Z", fill: primaryColorsTransformed[0] }),
-    callback(inlineStyles.Path, { d: "M2 11H1V12H2V11Z", fill: primaryColorsTransformed[0] }),
-    callback(inlineStyles.Path, { d: "M14 14V13H12V14H14Z", fill: "black" }),
-    callback(inlineStyles.Path, { d: "M9 3V2H7V3H9Z", fill: "black" }),
-    callback(inlineStyles.Path, { d: "M13 2V1L9 1V2H13Z", fill: "black" }),
-    callback(inlineStyles.Path, { d: "M7 2V1L3 1V2H7Z", fill: "black" }),
-    callback(inlineStyles.Path, { d: "M4 14V13H2V14H4Z", fill: "black" }),
-    callback(inlineStyles.Path, { d: "M15 12H14V13H15V12Z", fill: "black" }),
-    callback(inlineStyles.Path, { d: "M14 2H13V3H14V2Z", fill: "black" }),
-    callback(inlineStyles.Path, { d: "M3 2H2V3H3V2Z", fill: "black" }),
-    callback(inlineStyles.Path, { d: "M2 12H1V13H2V12Z", fill: "black" }),
-    callback(inlineStyles.Path, { d: "M12 14H4V15H12V14Z", fill: "black" }),
-    callback(inlineStyles.Path, { d: "M16 12V6.99998H15V12H16Z", fill: "black" }),
-    callback(inlineStyles.Path, { d: "M15 7V3H14V7H15Z", fill: "black" }),
-    callback(inlineStyles.Path, { d: "M2 7L2 3H1L1 7H2Z", fill: "black" }),
-    callback(inlineStyles.Path, { d: "M1 12L1 6.99998H0L0 12H1Z", fill: "black" }),
-    callback(inlineStyles.Path, { d: "M13 6V3H10V6H13Z", fill: "black" }),
-    callback(inlineStyles.Path, { d: "M6 6V3H3V6H6Z", fill: "black" }),
-    callback(inlineStyles.Path, { d: "M13 9H3V10H13V9Z", fill: "black" }),
-    callback(inlineStyles.Path, { d: "M14 8H13V9H14V8Z", fill: "black" }),
-    callback(inlineStyles.Path, { d: "M7 7H6V8H7V7Z", fill: "black" }),
-    callback(inlineStyles.Path, { d: "M10 7H9V8H10V7Z", fill: "black" }),
-    callback(inlineStyles.Path, { d: "M3 8H2V9H3V8Z", fill: "black" }),
+    React2(inlineStyles.Path, { d: "M12 13H4V14H12V13Z", fill: secondaryColorsTransformed[0] }),
+    React2(inlineStyles.Path, { d: "M13 13V12H12V13H13Z", fill: secondaryColorsTransformed[0] }),
+    React2(inlineStyles.Path, { d: "M4 13V12H3.00001V13H4Z", fill: secondaryColorsTransformed[0] }),
+    React2(inlineStyles.Path, { d: "M14 13V12H13V13H14Z", fill: primaryColorsTransformed[0] }),
+    React2(inlineStyles.Path, { d: "M3.00002 13V12H2.00001V13H3.00002Z", fill: primaryColorsTransformed[0] }),
+    React2(inlineStyles.Path, { d: "M15 11H14V12H15V11Z", fill: primaryColorsTransformed[0] }),
+    React2(inlineStyles.Path, { d: "M2 11H1V12H2V11Z", fill: primaryColorsTransformed[0] }),
+    React2(inlineStyles.Path, { d: "M14 14V13H12V14H14Z", fill: "black" }),
+    React2(inlineStyles.Path, { d: "M9 3V2H7V3H9Z", fill: "black" }),
+    React2(inlineStyles.Path, { d: "M13 2V1L9 1V2H13Z", fill: "black" }),
+    React2(inlineStyles.Path, { d: "M7 2V1L3 1V2H7Z", fill: "black" }),
+    React2(inlineStyles.Path, { d: "M4 14V13H2V14H4Z", fill: "black" }),
+    React2(inlineStyles.Path, { d: "M15 12H14V13H15V12Z", fill: "black" }),
+    React2(inlineStyles.Path, { d: "M14 2H13V3H14V2Z", fill: "black" }),
+    React2(inlineStyles.Path, { d: "M3 2H2V3H3V2Z", fill: "black" }),
+    React2(inlineStyles.Path, { d: "M2 12H1V13H2V12Z", fill: "black" }),
+    React2(inlineStyles.Path, { d: "M12 14H4V15H12V14Z", fill: "black" }),
+    React2(inlineStyles.Path, { d: "M16 12V6.99998H15V12H16Z", fill: "black" }),
+    React2(inlineStyles.Path, { d: "M15 7V3H14V7H15Z", fill: "black" }),
+    React2(inlineStyles.Path, { d: "M2 7L2 3H1L1 7H2Z", fill: "black" }),
+    React2(inlineStyles.Path, { d: "M1 12L1 6.99998H0L0 12H1Z", fill: "black" }),
+    React2(inlineStyles.Path, { d: "M13 6V3H10V6H13Z", fill: "black" }),
+    React2(inlineStyles.Path, { d: "M6 6V3H3V6H6Z", fill: "black" }),
+    React2(inlineStyles.Path, { d: "M13 9H3V10H13V9Z", fill: "black" }),
+    React2(inlineStyles.Path, { d: "M14 8H13V9H14V8Z", fill: "black" }),
+    React2(inlineStyles.Path, { d: "M7 7H6V8H7V7Z", fill: "black" }),
+    React2(inlineStyles.Path, { d: "M10 7H9V8H10V7Z", fill: "black" }),
+    React2(inlineStyles.Path, { d: "M3 8H2V9H3V8Z", fill: "black" }),
   ];
   obj.children = items;
-  return callback2(inlineStyles.Svg, obj);
+  return React3(inlineStyles.Svg, obj);
 };

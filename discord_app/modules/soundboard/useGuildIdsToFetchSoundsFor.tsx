@@ -1,28 +1,28 @@
 // discord_app/modules/soundboard/useGuildIdsToFetchSoundsFor.tsx
-import set from "../../../_runtime/00002_set.js";
-import noop from "../../../_runtime/00019_noop.js";
-import closure_3 from "../../stores/GuildStore.tsx";
-import closure_4 from "SoundboardStore.tsx";
+import _mod19 from "../../../_runtime/metro/00019__.js";
+import GuildStore from "../../stores/GuildStore.tsx";
+import SoundboardStore from "SoundboardStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const useMemo = noop.useMemo;
-const result = set.fileFinishedImporting("modules/soundboard/useGuildIdsToFetchSoundsFor.tsx");
+const useMemo = _mod19.useMemo;
+const result = size.fileFinishedImporting("modules/soundboard/useGuildIdsToFetchSoundsFor.tsx");
 
 export const useGuildIdsToFetchSoundsFor = function useGuildIdsToFetchSoundsFor() {
-  const items = [closure_3];
+  const items = [GuildStore];
   stateFromStoresArray = stateFromStoresArray(stateFromStores[3]).useStateFromStoresArray(items, () =>
     guildIds.getGuildIds(),
   );
   const obj = stateFromStoresArray(stateFromStores[3]);
-  const items1 = [closure_4];
+  const items1 = [SoundboardStore];
   stateFromStores = stateFromStoresArray(stateFromStores[3]).useStateFromStores(items1, () => sounds.getSounds());
   const items2 = [stateFromStoresArray, stateFromStores];
   return useMemo(() => {
-    stateFromStoresArray = stateFromStores;
-    return stateFromStoresArray.filter((arg0) => null == closure_0.get(arg0));
+    closure_0 = stateFromStores;
+    return stateFromStoresArray.filter((item) => null == closure_0.get(item));
   }, items2);
 };
 export const getGuildIdsToFetchSoundsFor = function getGuildIdsToFetchSoundsFor() {
-  guildIds = guildIds.getGuildIds();
-  const sounds2 = sounds.getSounds();
-  return guildIds.filter((arg0) => null == closure_0.get(arg0));
+  const guildIds = GuildStore.getGuildIds();
+  const sounds = SoundboardStore.getSounds();
+  return guildIds.filter((item) => null == closure_0.get(item));
 };

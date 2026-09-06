@@ -1,43 +1,42 @@
 // discord_app/modules/virtual_currency/native/OrbCheckoutAmountTag.tsx
-import set from "../../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
+import _mod17 from "../../../../_runtime/metro/00017__.js";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import OrbsIcon from "../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const View = get_ActivityIndicator.View;
-({ jsx: c3, jsxs: c4 } = jsxProd);
+const View = _mod17.View;
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
 let obj = { orbAmountTag: null, orbsIcon: null };
-obj = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
-obj[0] = obj;
-obj[1] = { width: 14, height: 14 };
-let closure_5 = createCacheKey.createStyles(obj);
-const result = set.fileFinishedImporting("modules/virtual_currency/native/OrbCheckoutAmountTag.tsx");
+obj = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
+obj.orbAmountTag = obj;
+obj.orbsIcon = { width: 14, height: 14 };
+let closure_5 = createStyles.createStyles(obj);
+const result = size.fileFinishedImporting("modules/virtual_currency/native/OrbCheckoutAmountTag.tsx");
 
 export default function OrbCheckoutAmountTag(orbAmount) {
   orbAmount = orbAmount.orbAmount;
-  const tmp = callback2();
+  const tmp = closure_5();
   let obj = { style: tmp.orbAmountTag, children: null };
   obj = { size: "custom", color: "icon-strong", style: tmp.orbsIcon };
-  const items = [callback(OrbsIcon.OrbsIcon, obj)];
+  const items = [React3(OrbsIcon.OrbsIcon, obj)];
   if (null == orbAmount) {
     const intl2 = tmp5(1114).intl;
     let stringResult = intl2.string(tmp5(1114).t.pfChQr);
   } else {
     const intl = tmp5(1114).intl;
-    obj = { orbAmount: null };
-    obj[0] = orbAmount;
+    obj = { orbAmount };
     stringResult = intl.formatToPlainString(tmp5(1114).t.W4DfeF, obj);
   }
-  obj1 = { variant: "text-md/semibold", accessibilityLabel: stringResult, children: null };
+  const obj1 = { variant: "text-md/semibold", accessibilityLabel: stringResult, children: null };
   let str = "--";
   if (null != orbAmount) {
     str = orbAmount;
   }
-  obj1[2] = str;
-  items[1] = callback(Text.Text, obj1);
-  obj[1] = items;
-  return closure_4(View, obj);
+  obj1.children = str;
+  items[1] = React3(Text_Text.Text, obj1);
+  obj.children = items;
+  return React4(View, obj);
 }

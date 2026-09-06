@@ -1,16 +1,17 @@
 // discord_app/modules/chat_input/native/ChatInputAppCommandManager.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import importAllResult from "../../../../_runtime/00019_noop.js";
-import closure_6 from "../../application_commands/ApplicationCommandAutocompleteStore.tsx";
-import closure_7 from "../../application_commands/ApplicationCommandStore.tsx";
-import closure_8 from "../../games/GameStore.tsx";
-import closure_9 from "../../games/autocomplete/GameAutocompleteStore.tsx";
-import closure_10 from "../../../stores/UserStore.tsx";
-import regExp from "../../channel_autocomplete/ChannelAutocompleteConstants.tsx";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import useGameProfileObscured from "../../game_profile/hooks/useGameProfileObscured.tsx";
+import ChatInputCommandOptionParser from "ChatInputCommandOptionParser.tsx";
+import ApplicationCommandManagerDefault from "../../application_commands/native/ApplicationCommandManager.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
+import ApplicationCommandAutocompleteStore from "../../application_commands/ApplicationCommandAutocompleteStore.tsx";
+import ApplicationCommandStore from "../../application_commands/ApplicationCommandStore.tsx";
+import GameStore from "../../games/GameStore.tsx";
+import GameAutocompleteStore from "../../games/autocomplete/GameAutocompleteStore.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
 
-const require = arg1;
+require = fn;
 function areResolvedGamesEqual(size, size2) {
   if (size === size2) {
     return true;
@@ -23,7 +24,6 @@ function areResolvedGamesEqual(size, size2) {
             if (arg1.has(item10011)) {
               continue;
             } else {
-              let tmp5 = obj;
               obj.return();
               let flag = false;
               return false;
@@ -36,12 +36,13 @@ function areResolvedGamesEqual(size, size2) {
     return false;
   }
 }
-let c5 = importAllResult;
+const ChannelAutocompleteConstants = fn(5000);
 ({
-  extractGameMentionIds: unpackModuleId,
+  extractGameMentionIds: closure_11,
   GAME_MENTION_RAW_RE_GLOBAL: closure_12,
   GAME_MENTION_SENTINEL: map1,
-} = regExp);
+} = ChannelAutocompleteConstants);
+fn(4560);
 let obj = {
   commandOption: null,
   commandErrorOption: null,
@@ -50,102 +51,92 @@ let obj = {
   autocomplete: null,
 };
 obj = {
-  backgroundColor: ThemesDefault.colors.KEYWORD_HIGHLIGHT_BACKGROUND,
-  color: ThemesDefault.colors.TEXT_DEFAULT,
-  borderRadius: ThemesDefault.radii.xs,
+  backgroundColor: nativeDefault.colors.KEYWORD_HIGHLIGHT_BACKGROUND,
+  color: nativeDefault.colors.TEXT_DEFAULT,
+  borderRadius: nativeDefault.radii.xs,
   fontSize: 14,
 };
-obj[0] = obj;
-createCacheKey = {
-  backgroundColor: ThemesDefault.colors.KEYWORD_HIGHLIGHT_BACKGROUND,
-  color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL,
-  borderRadius: ThemesDefault.radii.xs,
+obj.commandOption = obj;
+const createStyles = {
+  backgroundColor: nativeDefault.colors.KEYWORD_HIGHLIGHT_BACKGROUND,
+  color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL,
+  borderRadius: nativeDefault.radii.xs,
   fontSize: 14,
 };
-obj[1] = createCacheKey;
-obj[2] = {
-  backgroundColor: ThemesDefault.colors.MENTION_BACKGROUND,
-  color: ThemesDefault.colors.MENTION_FOREGROUND,
-  borderRadius: ThemesDefault.radii.xs,
+obj.commandErrorOption = createStyles;
+obj.gameMention = {
+  backgroundColor: nativeDefault.colors.MENTION_BACKGROUND,
+  color: nativeDefault.colors.MENTION_FOREGROUND,
+  borderRadius: nativeDefault.radii.xs,
   fontSize: 14,
   fontWeight: "bold",
 };
 let obj2 = {
-  backgroundColor: ThemesDefault.colors.MENTION_BACKGROUND,
-  color: ThemesDefault.colors.MENTION_FOREGROUND,
-  borderRadius: ThemesDefault.radii.xs,
+  backgroundColor: nativeDefault.colors.MENTION_BACKGROUND,
+  color: nativeDefault.colors.MENTION_FOREGROUND,
+  borderRadius: nativeDefault.radii.xs,
   fontSize: 14,
   fontWeight: "bold",
 };
-obj[3] = {
-  backgroundColor: ThemesDefault.colors.MENTION_BACKGROUND,
-  color: ThemesDefault.colors.MENTION_FOREGROUND,
-  borderRadius: ThemesDefault.radii.xs,
+obj.timestampMention = {
+  backgroundColor: nativeDefault.colors.MENTION_BACKGROUND,
+  color: nativeDefault.colors.MENTION_FOREGROUND,
+  borderRadius: nativeDefault.radii.xs,
   fontSize: 14,
   fontWeight: "bold",
 };
 let obj3 = {
-  backgroundColor: ThemesDefault.colors.MENTION_BACKGROUND,
-  color: ThemesDefault.colors.MENTION_FOREGROUND,
-  borderRadius: ThemesDefault.radii.xs,
+  backgroundColor: nativeDefault.colors.MENTION_BACKGROUND,
+  color: nativeDefault.colors.MENTION_FOREGROUND,
+  borderRadius: nativeDefault.radii.xs,
   fontSize: 14,
   fontWeight: "bold",
 };
-obj[4] = { color: ThemesDefault.colors.TEXT_BRAND, fontWeight: "bold" };
-let closure_14 = createCacheKey.createStyles(obj);
-const forwardRefResult = importAllResult.forwardRef((chatInputRef, ref) => {
+obj.autocomplete = { color: nativeDefault.colors.TEXT_BRAND, fontWeight: "bold" };
+let closure_14 = createStyles.createStyles(obj);
+const forwardRefResult = noop.forwardRef((chatInputRef, ref) => {
   chatInputRef = chatInputRef.chatInputRef;
-  let first = chatInputRef;
   const chatInputStateRef = chatInputRef.chatInputStateRef;
-  closure_1 = chatInputStateRef;
   const channel = chatInputRef.channel;
   const commandsDisabled = chatInputRef.commandsDisabled;
-  let callback;
-  let applicationCommandOptionValueParser;
-  let stateFromStores;
   let stateFromStores1;
-  ref = undefined;
-  closure_9 = undefined;
-  let commands;
-  closure_11 = undefined;
-  callback = undefined;
-  first = undefined;
   let stateFromStores2;
   let callback1;
   let tmp = stateFromStores2();
-  callback = tmp;
-  applicationCommandOptionValueParser = first(commandsDisabled[15]).useApplicationCommandOptionValueParser({ channel });
-  let obj = first(commandsDisabled[15]);
+  _slicedToArray = tmp;
+  const applicationCommandOptionValueParser = chatInputRef(commandsDisabled[15]).useApplicationCommandOptionValueParser(
+    { channel },
+  );
+  let obj = chatInputRef(commandsDisabled[15]);
   const items = [stateFromStores1];
-  stateFromStores = first(commandsDisabled[13]).useStateFromStores(items, () =>
-    stateFromStores1.getActiveCommand(channel.id),
+  const stateFromStores = chatInputRef(commandsDisabled[13]).useStateFromStores(items, () =>
+    ApplicationCommandStore.getActiveCommand(channel.id),
   );
-  let obj2 = first(commandsDisabled[13]);
+  let obj2 = chatInputRef(commandsDisabled[13]);
   const items1 = [stateFromStores];
-  stateFromStores1 = first(commandsDisabled[13]).useStateFromStores(items1, () =>
-    stateFromStores.getLastResponseNonce(channel.id),
+  stateFromStores1 = chatInputRef(commandsDisabled[13]).useStateFromStores(items1, () =>
+    ApplicationCommandAutocompleteStore.getLastResponseNonce(channel.id),
   );
-  const obj3 = first(commandsDisabled[13]);
-  let text = first(commandsDisabled[16]).getTextBeforeFirstOption(chatInputStateRef.current.text).text;
+  const obj3 = chatInputRef(commandsDisabled[13]);
+  let text = chatInputRef(commandsDisabled[16]).getTextBeforeFirstOption(chatInputStateRef.current.text).text;
   let substr = text.slice(1);
   ref = applicationCommandOptionValueParser.useRef(substr.trimEnd());
-  const tmp6 = callback(applicationCommandOptionValueParser.useState(ref.current), 2);
+  const tmp6 = _slicedToArray(applicationCommandOptionValueParser.useState(ref.current), 2);
   closure_9 = tmp6[1];
-  const obj4 = first(commandsDisabled[16]);
-  commands = channel(commandsDisabled[17]).useCachedResults(
+  const obj4 = chatInputRef(commandsDisabled[16]);
+  const commands = channel(commandsDisabled[17]).useCachedResults(
     { type: "channel", channel },
-    first(commandsDisabled[18]).ApplicationCommandType.CHAT,
+    chatInputRef(commandsDisabled[18]).ApplicationCommandType.CHAT,
     tmp6[0],
   ).commands;
-  closure_11 = applicationCommandOptionValueParser.useRef(undefined);
-  first = undefined;
-  closure_1 = undefined;
-  const tmp7 = callback(applicationCommandOptionValueParser.useState([]), 2);
-  first = tmp7[0];
-  closure_1 = tmp7[1];
-  callback = applicationCommandOptionValueParser.useCallback((arg0) => {
-    closure_0 = ref(arg0);
-    lib((arg0) => {
+  ref = applicationCommandOptionValueParser.useRef(undefined);
+  const tmp7 = _slicedToArray(applicationCommandOptionValueParser.useState([]), 2);
+  const first = tmp7[0];
+  closure_129_0 = first;
+  closure_129_1 = tmp7[1];
+  const callback = applicationCommandOptionValueParser.useCallback((arg0) => {
+    closure_0 = closure_2_11(arg0);
+    chatInputStateRef((arg0) => {
       let tmp = closure_0;
       if (obj.isEqual(arg0, closure_0)) {
         tmp = arg0;
@@ -155,21 +146,21 @@ const forwardRefResult = importAllResult.forwardRef((chatInputRef, ref) => {
   }, []);
   const items2 = [first];
   const memo = applicationCommandOptionValueParser.useMemo(
-    () => first.filter((closure_0) => null == gameById.getGameById(closure_0)),
+    () => chatInputRef.filter((item) => null == gameById.getGameById(item)),
     items2,
   );
   const obj6 = channel(commandsDisabled[17]);
-  const games = first(commandsDisabled[12]).useGames(memo);
-  const obj7 = first(commandsDisabled[12]);
+  const games = chatInputRef(commandsDisabled[12]).useGames(memo);
+  const obj7 = chatInputRef(commandsDisabled[12]);
   const items3 = [ref, commands, closure_9];
   const items4 = [first];
-  stateFromStores2 = first(commandsDisabled[13]).useStateFromStores(
+  stateFromStores2 = chatInputRef(commandsDisabled[13]).useStateFromStores(
     items3,
     () => {
-      if (0 === first.length) {
+      if (0 === chatInputRef.length) {
         return null;
       } else {
-        const currentUser = commands.getCurrentUser();
+        const currentUser = UserStore.getCurrentUser();
         if (currentUser != null) {
           const nsfwAllowed = currentUser.nsfwAllowed;
         }
@@ -177,29 +168,18 @@ const forwardRefResult = importAllResult.forwardRef((chatInputRef, ref) => {
         const map = new Map();
         for (const item10017 of tmp) {
           let tmp8 = item10017;
-          let tmp9 = ref;
-          let game = ref.getGame(item10017);
+          let game = GameStore.getGame(item10017);
           let tmp11 = game;
           if (null == game) {
-            let tmp19 = gameById;
-            let tmp20 = item10017;
-            let gameById = gameById.getGameById(tmp8);
+            let gameById = GameAutocompleteStore.getGameById(tmp8);
             if (null != gameById) {
-              let tmp23 = item10017;
-              let tmp24 = gameById;
               let result = map.set(tmp8, tmp22);
             }
           } else {
-            let tmp12 = first;
-            let tmp13 = commandsDisabled;
-            let obj2 = first(commandsDisabled[14]);
-            let tmp14 = game;
+            let obj2 = useGameProfileObscured;
             if (!obj2.isGameProfileObscured(tmp11, nsfwAllowed)) {
-              let tmp15 = item10017;
-              let obj = { id: null, name: null, icon: null };
-              obj[0] = tmp8;
-              let tmp16 = game;
-              ({ name: obj3[1], media } = tmp11);
+              let obj = { id: tmp8, name: null, icon: null };
+              ({ name: obj3.name, media } = tmp11);
               let icon;
               if (media != null) {
                 icon = media.icon;
@@ -207,7 +187,7 @@ const forwardRefResult = importAllResult.forwardRef((chatInputRef, ref) => {
               if (icon == null) {
                 icon = null;
               }
-              obj[2] = icon;
+              obj.icon = icon;
               let result1 = map.set(tmp8, obj);
             }
           }
@@ -236,7 +216,7 @@ const forwardRefResult = importAllResult.forwardRef((chatInputRef, ref) => {
     callback,
   ];
   callback1 = applicationCommandOptionValueParser.useCallback(() => {
-    const current = lib.current;
+    const current = chatInputStateRef.current;
     let text = current.text;
     ({ editId, focused, selectionStart, selectionEnd } = current);
     callback(text);
@@ -254,53 +234,47 @@ const forwardRefResult = importAllResult.forwardRef((chatInputRef, ref) => {
     };
     if (null == ref.current) {
       obj = { props: null, ref: null, optionValueParser: null, styles: null };
-      obj[0] = obj;
-      obj[1] = closure_0;
-      obj[2] = applicationCommandOptionValueParser;
+      obj.props = obj;
+      obj.ref = chatInputRef;
+      obj.optionValueParser = applicationCommandOptionValueParser;
       closure_0 = closure_4;
       obj = {
-        commandOption: null,
-        commandErrorOption: null,
-        gameMention: null,
-        timestampMention: null,
-        autocomplete: null,
+        commandOption() {
+          return chatInputRef(commandsDisabled[10]).convertToNativeStyle(closure_0.commandOption);
+        },
+        commandErrorOption() {
+          return chatInputRef(commandsDisabled[10]).convertToNativeStyle(closure_0.commandErrorOption);
+        },
+        gameMention() {
+          return chatInputRef(commandsDisabled[10]).convertToNativeStyle(closure_0.gameMention);
+        },
+        timestampMention() {
+          return chatInputRef(commandsDisabled[10]).convertToNativeStyle(closure_0.timestampMention);
+        },
+        autocomplete(color) {
+          if (null == color) {
+            let autocomplete = closure_0.autocomplete;
+          } else {
+            autocomplete = {};
+            const merged = Object.assign(closure_0.autocomplete);
+            autocomplete.color = color;
+          }
+          return chatInputRef(commandsDisabled[10]).convertToNativeStyle(autocomplete);
+        },
       };
-      obj[0] = function commandOption() {
-        return lib(closure_1_3[10]).convertToNativeStyle(lib.commandOption);
-      };
-      obj[1] = function commandErrorOption() {
-        return lib(closure_1_3[10]).convertToNativeStyle(lib.commandErrorOption);
-      };
-      obj[2] = function gameMention() {
-        return lib(closure_1_3[10]).convertToNativeStyle(lib.gameMention);
-      };
-      obj[3] = function timestampMention() {
-        return lib(closure_1_3[10]).convertToNativeStyle(lib.timestampMention);
-      };
-      obj[4] = function autocomplete(color) {
-        if (null == color) {
-          let autocomplete = lib.autocomplete;
-        } else {
-          autocomplete = {};
-          const merged = Object.assign(lib.autocomplete);
-          autocomplete.color = color;
-        }
-        return lib(closure_1_3[10]).convertToNativeStyle(autocomplete);
-      };
-      obj[3] = obj;
-      const tmp12 = new lib(commandsDisabled[19])(obj);
+      obj.styles = obj;
+      const tmp12 = new ApplicationCommandManagerDefault(obj);
       tmp2.current = tmp12;
     } else {
       const current2 = tmp2.current;
-      obj1 = { newState: null };
-      obj1[0] = obj;
+      const obj1 = { newState: obj };
       const result = current2.updateApplicationCommandManagerState(obj1);
     }
-    text = first(commandsDisabled[16]).getTextBeforeFirstOption(text).text;
+    text = ChatInputCommandOptionParser.getTextBeforeFirstOption(text).text;
     const substr = text.slice(1);
     const trimEndResult = substr.trimEnd();
     if (ref.current !== trimEndResult) {
-      gameById(trimEndResult);
+      closure_9(trimEndResult);
       tmp15.current = trimEndResult;
     }
   }, items5);
@@ -314,33 +288,28 @@ const forwardRefResult = importAllResult.forwardRef((chatInputRef, ref) => {
     if (current != null) {
       closure_0 = closure_4;
       const obj = {
-        commandOption: null,
-        commandErrorOption: null,
-        gameMention: null,
-        timestampMention: null,
-        autocomplete: null,
-      };
-      obj[0] = function commandOption() {
-        return lib(closure_1_3[10]).convertToNativeStyle(lib.commandOption);
-      };
-      obj[1] = function commandErrorOption() {
-        return lib(closure_1_3[10]).convertToNativeStyle(lib.commandErrorOption);
-      };
-      obj[2] = function gameMention() {
-        return lib(closure_1_3[10]).convertToNativeStyle(lib.gameMention);
-      };
-      obj[3] = function timestampMention() {
-        return lib(closure_1_3[10]).convertToNativeStyle(lib.timestampMention);
-      };
-      obj[4] = function autocomplete(color) {
-        if (null == color) {
-          let autocomplete = lib.autocomplete;
-        } else {
-          autocomplete = {};
-          const merged = Object.assign(lib.autocomplete);
-          autocomplete.color = color;
-        }
-        return lib(closure_1_3[10]).convertToNativeStyle(autocomplete);
+        commandOption() {
+          return chatInputRef(commandsDisabled[10]).convertToNativeStyle(closure_0.commandOption);
+        },
+        commandErrorOption() {
+          return chatInputRef(commandsDisabled[10]).convertToNativeStyle(closure_0.commandErrorOption);
+        },
+        gameMention() {
+          return chatInputRef(commandsDisabled[10]).convertToNativeStyle(closure_0.gameMention);
+        },
+        timestampMention() {
+          return chatInputRef(commandsDisabled[10]).convertToNativeStyle(closure_0.timestampMention);
+        },
+        autocomplete(color) {
+          if (null == color) {
+            let autocomplete = closure_0.autocomplete;
+          } else {
+            autocomplete = {};
+            const merged = Object.assign(closure_0.autocomplete);
+            autocomplete.color = color;
+          }
+          return chatInputRef(commandsDisabled[10]).convertToNativeStyle(autocomplete);
+        },
       };
       current.updateStyles(obj);
     }
@@ -351,15 +320,15 @@ const forwardRefResult = importAllResult.forwardRef((chatInputRef, ref) => {
     if (null != stateFromStores2) {
       if (0 !== first.length) {
         if (null != current) {
-          const mapped = ref(lib.current.text).map((arg0) => store.get(arg0));
-          const found = mapped.filter((arg0) => null != arg0);
+          const mapped = closure_2_11(chatInputStateRef.current.text).map((item) => stateFromStores2.get(item));
+          const found = mapped.filter((item) => null != item);
           if (0 !== found.length) {
-            const replaced = str.replace(callback, (arg0, arg1) => {
+            const replaced = str.replace(closure_2_12, (arg0, arg1) => {
               let combined = arg0;
-              const value = store.get(arg1);
+              value = stateFromStores2.get(arg1);
               if (null != value) {
                 const _HermesInternal = HermesInternal;
-                combined = "" + closure_1_13 + value.name;
+                combined = "" + first + value.name;
               }
               return combined;
             });
@@ -367,13 +336,13 @@ const forwardRefResult = importAllResult.forwardRef((chatInputRef, ref) => {
               let addGameMentionResult = current.addGameMention(item10011);
               continue;
             }
-            const current2 = first.current;
+            const current2 = chatInputRef.current;
             current2.setText(replaced);
-            lib.current.textPrev = str;
-            lib.current.text = replaced;
+            chatInputStateRef.current.textPrev = str;
+            chatInputStateRef.current.text = replaced;
             callback1();
           }
-          const arr = ref(lib.current.text);
+          const arr = closure_2_11(chatInputStateRef.current.text);
         }
       }
     }
@@ -383,14 +352,14 @@ const forwardRefResult = importAllResult.forwardRef((chatInputRef, ref) => {
       return ref.current;
     },
     updateState() {
-      return callback();
+      return callback1();
     },
   }));
   return null;
 });
 forwardRefResult.displayName = "ChatInputAppCommandManager";
-let obj4 = { color: ThemesDefault.colors.TEXT_BRAND, fontWeight: "bold" };
-const memoResult = importAllResult.memo(forwardRefResult);
-let result = require("set").fileFinishedImporting("modules/chat_input/native/ChatInputAppCommandManager.tsx");
+let obj4 = { color: nativeDefault.colors.TEXT_BRAND, fontWeight: "bold" };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/chat_input/native/ChatInputAppCommandManager.tsx");
 
-export default memoResult;
+export default noop.memo(forwardRefResult);

@@ -1,35 +1,35 @@
 // discord_app/modules/premium/roadblocks/native/views/PremiumEmojiFeatureUpsell.tsx
-import noopAll from "../../../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
+import useKeyboardIsOpenDefault from "../../../../keyboard/native/useKeyboardIsOpen.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-noopAll;
-let closure_5 = createCacheKey.createStyles((arg0) => {
-  let obj = { container: null };
-  obj = { position: "absolute", bottom: arg0 + ThemesDefault.space.PX_12, left: 0, right: 0 };
-  obj[0] = obj;
+const EntitlementFeatureNames = tmp4(7853);
+const PremiumFeatureUpsellDefault = tmp(9964);
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_5 = createStyles.createStyles((arg0) => {
+  const obj = { container: null };
+  const rect = { position: "absolute", bottom: arg0 + nativeDefault.space.PX_12, left: 0, right: 0 };
+  obj.container = rect;
   return obj;
 });
-let closure_6 = {
+const __initData = {
   code: "function PremiumEmojiFeatureUpsellTsx1(){const{shouldShow,inPortalKeyboard,bottomSheetIndex}=this.__closure;if(!shouldShow.get()){return false;}return inPortalKeyboard?bottomSheetIndex.get()===1:bottomSheetIndex.get()===0;}",
 };
-const result = require("set").fileFinishedImporting(
-  "modules/premium/roadblocks/native/views/PremiumEmojiFeatureUpsell.tsx",
-);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/roadblocks/native/views/PremiumEmojiFeatureUpsell.tsx");
 
 export default function PremiumEmojiFeatureUpsell(bottomSheetIndex) {
   bottomSheetIndex = bottomSheetIndex.bottomSheetIndex;
   const inPortalKeyboard = bottomSheetIndex.inPortalKeyboard;
   const shouldShow = bottomSheetIndex.shouldShow;
-  const tmp = inPortalKeyboard;
-  const tmp3 = inPortalKeyboard(shouldShow[6])();
-  const tmp4 = bottomSheetIndex;
-  bottomSheetIndex(shouldShow[8]);
+  const tmp3 = useKeyboardIsOpenDefault();
+  ReanimatedRexport;
   const fn = function c() {
-    let value = shouldShow.get();
+    value = shouldShow.get();
     if (!value) {
       return value;
     } else {
@@ -43,17 +43,17 @@ export default function PremiumEmojiFeatureUpsell(bottomSheetIndex) {
   };
   fn.__closure = { shouldShow, inPortalKeyboard, bottomSheetIndex };
   fn.__workletHash = 10168295304319;
-  fn.__initData = closure_6;
+  fn.__initData = __initData;
   let tmp8 = null;
   if (!tmp3) {
-    let obj = { style: null, children: null };
-    obj[0] = tmp5.container;
-    obj = { shouldShow: null, featureName: null };
-    obj[0] = tmp7;
-    obj[1] = tmp4(tmp2[10]).EntitlementFeatureNames.EMOJIS_EVERYWHERE;
-    obj[1] = jsx(tmp(tmp2[9]), { shouldShow: null, featureName: null });
-    tmp8 = <View shouldShow={null} featureName={null} />;
-    const tmpResult = tmp(tmp2[9]);
+    let obj = { style: tmp5.container, children: null };
+    obj = { shouldShow: tmp7, featureName: EntitlementFeatureNames.EntitlementFeatureNames.EMOJIS_EVERYWHERE };
+    obj.children = jsx(PremiumFeatureUpsellDefault, {
+      shouldShow: tmp7,
+      featureName: EntitlementFeatureNames.EntitlementFeatureNames.EMOJIS_EVERYWHERE,
+    });
+    tmp8 = <View shouldShow={tmp7} featureName={EntitlementFeatureNames.EntitlementFeatureNames.EMOJIS_EVERYWHERE} />;
+    const tmpResult = PremiumFeatureUpsellDefault;
   }
   return tmp8;
 }

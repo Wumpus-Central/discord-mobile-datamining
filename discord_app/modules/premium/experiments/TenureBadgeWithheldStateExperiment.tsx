@@ -1,6 +1,6 @@
 // discord_app/modules/premium/experiments/TenureBadgeWithheldStateExperiment.tsx
-import set from "../../../../_runtime/00002_set.js";
 import ApexExperiment from "../../experiments/apex/index.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const apexExperiment = ApexExperiment.createApexExperiment({
   kind: "user",
@@ -8,7 +8,7 @@ const apexExperiment = ApexExperiment.createApexExperiment({
   defaultConfig: { showWithheldBadge: false },
   variations: { 0: { showWithheldBadge: false }, 1: { showWithheldBadge: true } },
 });
-const result = set.fileFinishedImporting("modules/premium/experiments/TenureBadgeWithheldStateExperiment.tsx");
+const result = size.fileFinishedImporting("modules/premium/experiments/TenureBadgeWithheldStateExperiment.tsx");
 
 export default apexExperiment;
 export const shouldShowWithheldTenureBadge = function shouldShowWithheldTenureBadge(useTieredTenureBadgeData) {

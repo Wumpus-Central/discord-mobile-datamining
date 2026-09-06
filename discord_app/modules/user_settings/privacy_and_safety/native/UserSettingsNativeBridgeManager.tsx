@@ -1,15 +1,14 @@
 // discord_app/modules/user_settings/privacy_and_safety/native/UserSettingsNativeBridgeManager.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import set2 from "../../../../utils/PlatformUtils.tsx";
-import initializeDefault from "../../../../lib/AutomaticLifecycleManager.tsx";
-import closure_3 from "../../UserSettingsProtoStore.tsx";
+import _mod17 from "../../../../../_runtime/metro/00017__.js";
+import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
+import UserSettingsProtoStore from "../../UserSettingsProtoStore.tsx";
+import AutomaticLifecycleManager from "../../../../lib/AutomaticLifecycleManager.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const NativeModules = get_ActivityIndicator.NativeModules;
-initializeDefault;
+const NativeModules = _mod17.NativeModules;
 let prototype = function UserSettingsNativeBridgeManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  applyArgumentsResult.saveExplicitContentSettingsToDisk = set2.isIOS()
+  applyArgumentsResult.saveExplicitContentSettingsToDisk = PlatformUtils.isIOS()
     ? () => {
         settings = settings.settings;
         if (settings != null) {
@@ -35,7 +34,7 @@ let prototype = function UserSettingsNativeBridgeManager() {
 }.prototype;
 class prototype extends tmp2 {}
 prototype = new prototype();
-let result = set.fileFinishedImporting(
+let result = size.fileFinishedImporting(
   "modules/user_settings/privacy_and_safety/native/UserSettingsNativeBridgeManager.tsx",
 );
 

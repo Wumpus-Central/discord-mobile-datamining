@@ -1,10 +1,10 @@
 // discord_app/modules/guild_tag/GuildTagConstants.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
-import VANITY_URL_POWERUP_SKU_ID from "../../../discord_common/js/shared/shared-constants/Powerups.tsx";
+import Constants from "../../Constants.tsx";
+import Powerups from "../../../discord_common/js/shared/shared-constants/Powerups.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const GuildFeatures = ME.GuildFeatures;
-let obj = {
+const GuildFeatures = Constants.GuildFeatures;
+let GuildTagPalettePresetColor = {
   SWORD: 0,
   [0]: "SWORD",
   WATER_DROP: 1,
@@ -88,7 +88,7 @@ let obj = {
   BEE: 40,
   [40]: "BEE",
 };
-obj = {
+GuildTagPalettePresetColor = {
   HOT_PINK: "#ff1c90",
   LIGHT_PINK: "#ff7fc0",
   ORANGE: "#ff8f1c",
@@ -116,21 +116,24 @@ obj = {
   DARK_GRAY: "#222222",
   LIGHT_GRAY: "#cccccc",
 };
-obj = { primary: obj.HOT_PINK, secondary: obj.LIGHT_PINK };
+GuildTagPalettePresetColor = {
+  primary: GuildTagPalettePresetColor.HOT_PINK,
+  secondary: GuildTagPalettePresetColor.LIGHT_PINK,
+};
 const items = [
-  obj,
-  { primary: obj.ORANGE, secondary: obj.PEACH },
-  { primary: obj.GOLD, secondary: obj.LIGHT_YELLOW },
-  { primary: obj.TEAL, secondary: obj.MINT_GREEN },
-  { primary: obj.BLUE_TEAL, secondary: obj.LIGHT_BLUE },
-  { primary: obj.PURPLE, secondary: obj.LAVENDER },
-  { primary: obj.VIOLET, secondary: obj.MAUVE },
-  { primary: obj.DEEP_PURPLE, secondary: obj.ORCHID },
-  { primary: obj.RED, secondary: obj.SALMON },
-  { primary: obj.BROWN, secondary: obj.TAN },
-  { primary: obj.OLIVE, secondary: obj.GRAY },
-  { primary: obj.BURGUNDY, secondary: obj.ROSE },
-  { primary: obj.DARK_GRAY, secondary: obj.LIGHT_GRAY },
+  GuildTagPalettePresetColor,
+  { primary: GuildTagPalettePresetColor.ORANGE, secondary: GuildTagPalettePresetColor.PEACH },
+  { primary: GuildTagPalettePresetColor.GOLD, secondary: GuildTagPalettePresetColor.LIGHT_YELLOW },
+  { primary: GuildTagPalettePresetColor.TEAL, secondary: GuildTagPalettePresetColor.MINT_GREEN },
+  { primary: GuildTagPalettePresetColor.BLUE_TEAL, secondary: GuildTagPalettePresetColor.LIGHT_BLUE },
+  { primary: GuildTagPalettePresetColor.PURPLE, secondary: GuildTagPalettePresetColor.LAVENDER },
+  { primary: GuildTagPalettePresetColor.VIOLET, secondary: GuildTagPalettePresetColor.MAUVE },
+  { primary: GuildTagPalettePresetColor.DEEP_PURPLE, secondary: GuildTagPalettePresetColor.ORCHID },
+  { primary: GuildTagPalettePresetColor.RED, secondary: GuildTagPalettePresetColor.SALMON },
+  { primary: GuildTagPalettePresetColor.BROWN, secondary: GuildTagPalettePresetColor.TAN },
+  { primary: GuildTagPalettePresetColor.OLIVE, secondary: GuildTagPalettePresetColor.GRAY },
+  { primary: GuildTagPalettePresetColor.BURGUNDY, secondary: GuildTagPalettePresetColor.ROSE },
+  { primary: GuildTagPalettePresetColor.DARK_GRAY, secondary: GuildTagPalettePresetColor.LIGHT_GRAY },
 ];
 const obj1 = {
   SIZE_12: 12,
@@ -158,32 +161,43 @@ const items1 = [, , , , , , , , ,];
   LIGHTNING: arr2[7],
   COMPASS: arr2[8],
   TOADSTOOL: arr2[9],
-} = obj);
+} = GuildTagPalettePresetColor);
 const items2 = [, , , ,];
-({ BUNNY: arr3[0], DOG: arr3[1], FROG: arr3[2], GOAT: arr3[3], CAT: arr3[4] } = obj);
+({ BUNNY: arr3[0], DOG: arr3[1], FROG: arr3[2], GOAT: arr3[3], CAT: arr3[4] } = GuildTagPalettePresetColor);
 const items3 = [, , , ,];
-({ DIAMOND: arr4[0], CROWN: arr4[1], TROPHY: arr4[2], MONEY_BAG: arr4[3], DOLLAR_SIGN: arr4[4] } = obj);
+({
+  DIAMOND: arr4[0],
+  CROWN: arr4[1],
+  TROPHY: arr4[2],
+  MONEY_BAG: arr4[3],
+  DOLLAR_SIGN: arr4[4],
+} = GuildTagPalettePresetColor);
 const items4 = [, , , ,];
-({ CLOVER: arr5[0], BLOSSOM: arr5[1], POTTED_PLANT: arr5[2], MAPLE: arr5[3], WILTED_FLOWER: arr5[4] } = obj);
+({
+  CLOVER: arr5[0],
+  BLOSSOM: arr5[1],
+  POTTED_PLANT: arr5[2],
+  MAPLE: arr5[3],
+  WILTED_FLOWER: arr5[4],
+} = GuildTagPalettePresetColor);
 const items5 = [, , , ,];
-({ BUTTERFLY: arr6[0], SNAIL: arr6[1], CATERPILLAR: arr6[2], SPIDER: arr6[3], BEE: arr6[4] } = obj);
+({
+  BUTTERFLY: arr6[0],
+  SNAIL: arr6[1],
+  CATERPILLAR: arr6[2],
+  SPIDER: arr6[3],
+  BEE: arr6[4],
+} = GuildTagPalettePresetColor);
 ({
   GUILD_TAGS_BADGE_PACK_PETS,
   GUILD_TAGS_BADGE_PACK_FLEX,
   GUILD_TAGS_BADGE_PACK_PLANT,
   GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES,
 } = GuildFeatures);
-const obj2 = {
-  [GUILD_TAGS_BADGE_PACK_PETS]: VANITY_URL_POWERUP_SKU_ID.GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID,
-  [GUILD_TAGS_BADGE_PACK_FLEX]: VANITY_URL_POWERUP_SKU_ID.GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID,
-  [GUILD_TAGS_BADGE_PACK_PLANT]: VANITY_URL_POWERUP_SKU_ID.GUILD_TAGS_BADGE_PACK_PLANT_POWERUP_SKU_ID,
-  [GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES]:
-    VANITY_URL_POWERUP_SKU_ID.GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES_POWERUP_SKU_ID,
-};
-const result = set.fileFinishedImporting("modules/guild_tag/GuildTagConstants.tsx");
+const result = size.fileFinishedImporting("modules/guild_tag/GuildTagConstants.tsx");
 
-export const GuildTagBadgeKind = obj;
-export const GuildTagPalettePresetColor = obj;
+export const GuildTagBadgeKind = GuildTagPalettePresetColor;
+export { GuildTagPalettePresetColor };
 export const GUILD_TAG_BADGE_PALETTE_PRESETS = items;
 export const GUILD_TAG_BADGE_PRIMARY_DEFAULT = items[0].primary;
 export const GUILD_TAG_BADGE_SECONDARY_DEFAULT = items[0].secondary;
@@ -191,51 +205,51 @@ export const getRandomGuildTagBadgePreset = function getRandomGuildTagBadgePrese
   return items[Math.floor(Math, Math.random(Math) * items.length)];
 };
 export const GUILD_TAG_BADGE_NUM_CUSTOMIZABLE_COLORS = {
-  [obj.SWORD]: 2,
-  [obj.WATER_DROP]: 1,
-  [obj.SKULL]: 1,
-  [obj.TOADSTOOL]: 2,
-  [obj.MOON]: 1,
-  [obj.LIGHTNING]: 1,
-  [obj.LEAF]: 1,
-  [obj.HEART]: 1,
-  [obj.FIRE]: 1,
-  [obj.COMPASS]: 2,
-  [obj.CROSSHAIRS]: 2,
-  [obj.FLOWER]: 2,
-  [obj.FORCE]: 2,
-  [obj.GEM]: 2,
-  [obj.LAVA]: 2,
-  [obj.PSYCHIC]: 2,
-  [obj.SMOKE]: 2,
-  [obj.SNOW]: 2,
-  [obj.SOUND]: 2,
-  [obj.SUN]: 2,
-  [obj.WIND]: 2,
-  [obj.BUNNY]: 1,
-  [obj.DOG]: 2,
-  [obj.FROG]: 2,
-  [obj.GOAT]: 1,
-  [obj.CAT]: 1,
-  [obj.DIAMOND]: 1,
-  [obj.CROWN]: 2,
-  [obj.TROPHY]: 1,
-  [obj.MONEY_BAG]: 1,
-  [obj.DOLLAR_SIGN]: 1,
-  [obj.BEE]: 1,
-  [obj.SPIDER]: 2,
-  [obj.CATERPILLAR]: 2,
-  [obj.SNAIL]: 2,
-  [obj.BUTTERFLY]: 2,
-  [obj.WILTED_FLOWER]: 2,
-  [obj.BLOSSOM]: 1,
-  [obj.POTTED_PLANT]: 2,
-  [obj.CLOVER]: 1,
-  [obj.MAPLE]: 1,
+  [GuildTagPalettePresetColor.SWORD]: 2,
+  [GuildTagPalettePresetColor.WATER_DROP]: 1,
+  [GuildTagPalettePresetColor.SKULL]: 1,
+  [GuildTagPalettePresetColor.TOADSTOOL]: 2,
+  [GuildTagPalettePresetColor.MOON]: 1,
+  [GuildTagPalettePresetColor.LIGHTNING]: 1,
+  [GuildTagPalettePresetColor.LEAF]: 1,
+  [GuildTagPalettePresetColor.HEART]: 1,
+  [GuildTagPalettePresetColor.FIRE]: 1,
+  [GuildTagPalettePresetColor.COMPASS]: 2,
+  [GuildTagPalettePresetColor.CROSSHAIRS]: 2,
+  [GuildTagPalettePresetColor.FLOWER]: 2,
+  [GuildTagPalettePresetColor.FORCE]: 2,
+  [GuildTagPalettePresetColor.GEM]: 2,
+  [GuildTagPalettePresetColor.LAVA]: 2,
+  [GuildTagPalettePresetColor.PSYCHIC]: 2,
+  [GuildTagPalettePresetColor.SMOKE]: 2,
+  [GuildTagPalettePresetColor.SNOW]: 2,
+  [GuildTagPalettePresetColor.SOUND]: 2,
+  [GuildTagPalettePresetColor.SUN]: 2,
+  [GuildTagPalettePresetColor.WIND]: 2,
+  [GuildTagPalettePresetColor.BUNNY]: 1,
+  [GuildTagPalettePresetColor.DOG]: 2,
+  [GuildTagPalettePresetColor.FROG]: 2,
+  [GuildTagPalettePresetColor.GOAT]: 1,
+  [GuildTagPalettePresetColor.CAT]: 1,
+  [GuildTagPalettePresetColor.DIAMOND]: 1,
+  [GuildTagPalettePresetColor.CROWN]: 2,
+  [GuildTagPalettePresetColor.TROPHY]: 1,
+  [GuildTagPalettePresetColor.MONEY_BAG]: 1,
+  [GuildTagPalettePresetColor.DOLLAR_SIGN]: 1,
+  [GuildTagPalettePresetColor.BEE]: 1,
+  [GuildTagPalettePresetColor.SPIDER]: 2,
+  [GuildTagPalettePresetColor.CATERPILLAR]: 2,
+  [GuildTagPalettePresetColor.SNAIL]: 2,
+  [GuildTagPalettePresetColor.BUTTERFLY]: 2,
+  [GuildTagPalettePresetColor.WILTED_FLOWER]: 2,
+  [GuildTagPalettePresetColor.BLOSSOM]: 1,
+  [GuildTagPalettePresetColor.POTTED_PLANT]: 2,
+  [GuildTagPalettePresetColor.CLOVER]: 1,
+  [GuildTagPalettePresetColor.MAPLE]: 1,
 };
 export const getRandomGuildTagBadgeKind = function getRandomGuildTagBadgeKind() {
   const keys = Object.keys(obj);
-  const found = keys.filter((arg0) => isNaN(Number(arg0)));
+  const found = keys.filter((item) => isNaN(Number(item)));
   return obj[found[Math.floor(Math, Math.random(Math) * found.length)]];
 };
 export const GuildTagBadgeSize = obj1;
@@ -262,4 +276,9 @@ export const BADGE_PACKS = {
   [GuildFeatures.GUILD_TAGS_BADGE_PACK_PLANT]: items4,
   [GuildFeatures.GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES]: items5,
 };
-export const BADGE_PACK_TO_SKU_ID = obj2;
+export const BADGE_PACK_TO_SKU_ID = {
+  [GUILD_TAGS_BADGE_PACK_PETS]: Powerups.GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID,
+  [GUILD_TAGS_BADGE_PACK_FLEX]: Powerups.GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID,
+  [GUILD_TAGS_BADGE_PACK_PLANT]: Powerups.GUILD_TAGS_BADGE_PACK_PLANT_POWERUP_SKU_ID,
+  [GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES]: Powerups.GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES_POWERUP_SKU_ID,
+};

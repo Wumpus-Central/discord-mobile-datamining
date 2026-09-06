@@ -1,11 +1,11 @@
 // discord_app/modules/application_assets_v2/ApplicationAssetV2Utils.tsx
-import set from "../../../_runtime/00002_set.js";
-import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import handleImageLoad from "../image_upload/ImageLoaderUtils.tsx";
+import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import ImageLoaderUtils from "../image_upload/ImageLoaderUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-let result = set.fileFinishedImporting("modules/application_assets_v2/ApplicationAssetV2Utils.tsx");
+let result = size.fileFinishedImporting("modules/application_assets_v2/ApplicationAssetV2Utils.tsx");
 
-export const getApplicationAssetUrl = function getApplicationAssetUrl(closure_1, asset_id, width) {
+export const getApplicationAssetUrl = function getApplicationAssetUrl(arg0, asset_id, width) {
   if (null != window.GLOBAL_ENV.CDN_HOST) {
     const _URL2 = URL;
     const _location = location;
@@ -17,7 +17,7 @@ export const getApplicationAssetUrl = function getApplicationAssetUrl(closure_1,
         "//" +
         window.GLOBAL_ENV.CDN_HOST +
         "/app-assets/" +
-        closure_1 +
+        arg0 +
         "/" +
         asset_id.asset_id +
         ".webp",
@@ -26,15 +26,13 @@ export const getApplicationAssetUrl = function getApplicationAssetUrl(closure_1,
     const _URL = URL;
     const _HermesInternal = HermesInternal;
     str5 = new URL(
-      "" + sendRequest.getAPIBaseURL() + "/applications/" + closure_1 + "/app-assets/" + asset_id.asset_id + ".webp",
+      "" + HTTPUtils.getAPIBaseURL() + "/applications/" + arg0 + "/app-assets/" + asset_id.asset_id + ".webp",
     );
-    const obj = sendRequest;
   }
   if (null != width) {
     const searchParams = str5.searchParams;
-    const obj2 = handleImageLoad;
-    const result = searchParams.set("size", handleImageLoad.getBestMediaProxySize(width).toString());
-    const str11 = handleImageLoad.getBestMediaProxySize(width);
+    const result = searchParams.set("size", ImageLoaderUtils.getBestMediaProxySize(width).toString());
+    const str11 = ImageLoaderUtils.getBestMediaProxySize(width);
   }
   if (asset_id.metadata.is_animated) {
     const searchParams2 = str5.searchParams;

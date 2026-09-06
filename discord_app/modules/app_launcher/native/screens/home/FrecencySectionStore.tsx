@@ -1,23 +1,19 @@
 // discord_app/modules/app_launcher/native/screens/home/FrecencySectionStore.tsx
 import initializeDefault from "../../../../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../../../../Dispatcher.tsx";
+import DispatcherDefault from "../../../../../Dispatcher.tsx";
 
 let obj = { APPS: "apps", COMMANDS: "commands" };
-let closure_1 = { selection: null };
+obj = { selection: null };
 const PersistedStore = initializeDefault.PersistedStore;
 class FrecencySectionStore extends PersistedStore {}
 const prototype = FrecencySectionStore.prototype;
-prototype["initialize"] = function initialize(arg0) {
-  if (null != arg0) {
-    closure_1 = arg0;
-  }
-};
+prototype["initialize"] = function initialize(arg0) {};
 prototype["getState"] = function getState() {
-  return closure_1;
+  return obj;
 };
 prototype["getSelection"] = function getSelection() {
-  if (null != closure_1.selection) {
-    let COMMANDS = closure_1.selection;
+  if (null != obj.selection) {
+    let COMMANDS = obj.selection;
   } else {
     COMMANDS = obj.COMMANDS;
   }
@@ -32,10 +28,9 @@ obj = {
     obj.selection = selection.selection;
   },
 };
-const frecencySectionStore = new FrecencySectionStore(dispatcherDefault, obj);
-const result = require("set").fileFinishedImporting(
-  "modules/app_launcher/native/screens/home/FrecencySectionStore.tsx",
-);
+const frecencySectionStore = new FrecencySectionStore(DispatcherDefault, obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/screens/home/FrecencySectionStore.tsx");
 
 export default frecencySectionStore;
 export const FrecencySectionSelection = obj;

@@ -1,7 +1,7 @@
 // discord_app/modules/coded_links/CodedLink.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/coded_links/CodedLink.tsx");
+const result = size.fileFinishedImporting("modules/coded_links/CodedLink.tsx");
 
 export const CodedLinkType = {
   INVITE: "INVITE",

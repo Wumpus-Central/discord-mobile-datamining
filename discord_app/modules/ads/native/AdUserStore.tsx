@@ -1,11 +1,11 @@
 // discord_app/modules/ads/native/AdUserStore.tsx
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../../Dispatcher.tsx";
+import DispatcherDefault from "../../../Dispatcher.tsx";
 
 let c1 = false;
 let c2 = false;
 let c3 = null;
-let c4 = null;
+let closure_4 = null;
 const Store = initializeDefault.Store;
 class AdUserStore extends Store {}
 const prototype = AdUserStore.prototype;
@@ -35,26 +35,26 @@ Object.defineProperty(prototype, "fetchPromise", {
 });
 Object.defineProperty(prototype, "lastFetchedAt", {
   get: function lastFetchedAt() {
-    return c4;
+    return closure_4;
   },
   set: undefined,
 });
 Object.defineProperty(prototype, "hasFetchedRecently", {
   get: function hasFetchedRecently() {
-    let tmp = null != c4;
+    let tmp = null != closure_4;
     if (tmp) {
       const _Date = Date;
-      tmp = Date.now() - c4 < 21600000;
+      tmp = Date.now() - closure_4 < 21600000;
     }
     return tmp;
   },
   set: undefined,
 });
 prototype["setFetchPromise"] = function setFetchPromise(arg0) {
-  closure_3 = arg0;
+  c3 = arg0;
 };
 AdUserStore.displayName = "AdUserStore";
-const adUserStore = new AdUserStore(dispatcherDefault, {
+const adUserStore = new AdUserStore(DispatcherDefault, {
   POST_CONNECTION_OPEN: function handlePostConnectionOpen() {},
   FETCH_AD_USER_START: function handleFetchAdUserStart() {
     c1 = true;
@@ -75,6 +75,7 @@ const adUserStore = new AdUserStore(dispatcherDefault, {
     c3 = null;
   },
 });
-const result = require("set").fileFinishedImporting("modules/ads/native/AdUserStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/ads/native/AdUserStore.tsx");
 
 export default adUserStore;

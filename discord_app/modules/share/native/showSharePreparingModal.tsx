@@ -1,47 +1,46 @@
 // discord_app/modules/share/native/showSharePreparingModal.tsx
-import set from "../../../../_runtime/00002_set.js";
-import SHARE_PREPARING_MODAL_KEY2 from "SharePreparingModalConstants.tsx";
+import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
+import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
+import SharePreparingModalConstants from "SharePreparingModalConstants.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const SHARE_PREPARING_MODAL_KEY = SHARE_PREPARING_MODAL_KEY2.SHARE_PREPARING_MODAL_KEY;
-const result = set.fileFinishedImporting("modules/share/native/showSharePreparingModal.tsx");
+const SHARE_PREPARING_MODAL_KEY = SharePreparingModalConstants.SHARE_PREPARING_MODAL_KEY;
+const result = size.fileFinishedImporting("modules/share/native/showSharePreparingModal.tsx");
 
 export const showSharePreparingModal = function showSharePreparingModal(onCancel) {
   onCancel = onCancel.onCancel;
-  let timeout;
   c1 = false;
-  timeout = setTimeout(() => {
-    let obj = callback(paths[1]);
-    obj = {
+  const timeout = setTimeout(() => {
+    let obj = {
       onCancel() {
-        if (!c1) {
-          c1 = true;
+        if (!_true) {
+          _true = true;
           const _clearTimeout = clearTimeout;
-          clearTimeout(closure_2);
-          closure_1_1(closure_1_2[1]).popWithKey(closure_1_3);
-          callback();
-          const obj = closure_1_1(closure_1_2[1]);
+          clearTimeout(dependencyMap);
+          _true(4763).popWithKey(SHARE_PREPARING_MODAL_KEY);
+          onCancel();
+          const obj = _true(4763);
         }
       },
     };
     obj
-      .pushLazy(onCancel(paths[3])(paths[2], paths.paths), obj, closure_1_3, {
+      .pushLazy(asyncRequireImpl(8367, dependencyMap.paths), obj, SHARE_PREPARING_MODAL_KEY, {
         animation: "fade",
         presentation: "transparentModal",
       })
       .then(() => {
-        if (closure_1) {
-          closure_1_1(closure_1_2[1]).popWithKey(closure_1_3);
-          const obj = closure_1_1(closure_1_2[1]);
+        if (_true) {
+          _true(4763).popWithKey(SHARE_PREPARING_MODAL_KEY);
+          const obj = _true(4763);
         }
       });
   }, 1000);
   return () => {
-    if (!callback) {
-      callback = true;
+    if (!c1) {
+      c1 = true;
       const _clearTimeout = clearTimeout;
-      clearTimeout(paths);
-      callback(paths[1]).popWithKey(closure_1_3);
-      const obj = callback(paths[1]);
+      clearTimeout(closure_2);
+      ModalActionCreatorsDefault.popWithKey(SHARE_PREPARING_MODAL_KEY);
     }
   };
 };

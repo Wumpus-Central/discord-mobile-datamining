@@ -1,15 +1,15 @@
 // discord_app/modules/self_mod/stranger_danger/native/components/more_tips_modal/MoreYouCanDoRow.tsx
-import noopAll from "../../../../../../../_runtime/00019_noop.js";
-import TableRowInner from "../../../../../../design/components/TableRow/native/TableRow.native.tsx";
-import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
+import TableRow from "../../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import noop from "../../../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting(
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/self_mod/stranger_danger/native/components/more_tips_modal/MoreYouCanDoRow.tsx",
 );
 
 export default function MoreYouCanDoRow(arg0) {
   ({ title, description, variant, onClick, icon, disabled } = arg0);
-  return jsx(TableRowInner.TableRow, { label, subLabel, onPress, icon, variant, disabled });
+  return jsx(TableRow.TableRow, { label, subLabel, onPress, icon, variant, disabled });
 }

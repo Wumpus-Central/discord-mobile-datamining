@@ -1,34 +1,45 @@
 // discord_app/modules/user_profile/native/UserProfileDismissibleUpsells.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../stores/UserStore.tsx";
-import { TrackUserProfileActions } from "../Constants.tsx";
-import { ContentDismissActionType } from "../../dismissible_content/DismissibleContentConstants.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import dismissible_content from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import UserStore from "../../../stores/UserStore.tsx";
 
-const require = arg1;
-({ jsx: closure_8, jsxs: c9 } = jsxProd);
-let items = [...require("items").Gradients.PREMIUM_GUILD];
+const util = ShopIcon(1114);
+const native = ShopIcon(1178);
+const Text_Text = ShopIcon(4556);
+const components_Button_Button = ShopIcon(4975);
+const Pressables = ShopIcon(5123);
+const XSmallIcon = ShopIcon(5680);
+const NitroWheelIcon = ShopIcon(8662);
+const ShopIcon2 = ShopIcon(12138);
+require = fn;
+const View = fn(17).View;
+const TrackUserProfileActions = fn(8183).TrackUserProfileActions;
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+let items = [...fn(7432).Gradients.PREMIUM_GUILD];
 let closure_10 = items.reverse();
-createCacheKey = {
+fn(4560);
+let createStyles = {
   upsellContainer: null,
   customProfileThemeUpsellContainer: null,
   header: null,
   upsellButtonsContainer: null,
   upsellButton: null,
 };
-createCacheKey = {
+createStyles = {
   paddingVertical: 16,
   paddingHorizontal: 12,
-  borderRadius: ThemesDefault.radii.lg,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: nativeDefault.radii.lg,
+  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { backgroundColor: ThemesDefault.colors.PROFILE_GRADIENT_OVERLAY_SYNCED_WITH_USER_THEME };
-createCacheKey[2] = { display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center" };
-createCacheKey[3] = {
+createStyles.upsellContainer = createStyles;
+createStyles.customProfileThemeUpsellContainer = {
+  backgroundColor: nativeDefault.colors.PROFILE_GRADIENT_OVERLAY_SYNCED_WITH_USER_THEME,
+};
+createStyles.header = { display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center" };
+createStyles.upsellButtonsContainer = {
   display: "flex",
   flexDirection: "row",
   justifyContent: "space-between",
@@ -36,47 +47,42 @@ createCacheKey[3] = {
   gap: 10,
   marginTop: 12,
 };
-createCacheKey[4] = { flex: 1 };
-let closure_11 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { backgroundColor: ThemesDefault.colors.PROFILE_GRADIENT_OVERLAY_SYNCED_WITH_USER_THEME };
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileDismissibleUpsells.tsx");
+createStyles.upsellButton = { flex: 1 };
+let closure_11 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileDismissibleUpsells.tsx");
 
 export default function UserProfileDismissibleUpsells(navigateToShop) {
   navigateToShop = navigateToShop.navigateToShop;
   const navigateToPremium = navigateToShop.navigateToPremium;
   const hasCustomProfileTheme = navigateToShop.hasCustomProfileTheme;
-  let React;
-  let trackUserProfileAction;
-  closure_5 = undefined;
-  closure_6 = undefined;
-  closure_7 = undefined;
-  closure_8 = undefined;
-  React = callback();
+  let currentUser;
+  noop = closure_11();
   let obj = navigateToShop(hasCustomProfileTheme[9]);
   const isPrivacyNoticeVisible = obj.useIsPrivacyNoticeVisible();
-  trackUserProfileAction = navigateToShop(hasCustomProfileTheme[10]).useUserProfileAnalyticsContext()
+  const trackUserProfileAction = navigateToShop(hasCustomProfileTheme[10]).useUserProfileAnalyticsContext()
     .trackUserProfileAction;
   let obj2 = navigateToShop(hasCustomProfileTheme[10]);
   let tmp = navigateToShop;
-  let items = [closure_5];
+  let items = [currentUser];
   const stateFromStores = navigateToShop(hasCustomProfileTheme[11]).useStateFromStores(items, () =>
     currentUser.getCurrentUser(),
   );
   let obj3 = navigateToShop(hasCustomProfileTheme[11]);
-  closure_5 = navigateToShop(hasCustomProfileTheme[12]).isPremium(stateFromStores);
+  currentUser = navigateToShop(hasCustomProfileTheme[12]).isPremium(stateFromStores);
   let items1 = [navigateToShop, trackUserProfileAction];
-  closure_6 = React.useCallback(() => {
-    trackUserProfileAction({ action: constants.VISIT_SHOP });
+  const onPress = noop.useCallback(() => {
+    trackUserProfileAction({ action: TrackUserProfileActions.VISIT_SHOP });
     navigateToShop();
   }, items1);
   const items2 = [navigateToPremium, trackUserProfileAction];
-  closure_7 = React.useCallback(() => {
-    trackUserProfileAction({ action: constants.GET_PREMIUM });
+  closure_7 = noop.useCallback(() => {
+    trackUserProfileAction({ action: TrackUserProfileActions.GET_PREMIUM });
     navigateToPremium();
   }, items2);
   const items3 = [navigateToPremium, trackUserProfileAction];
-  closure_8 = React.useCallback(() => {
-    trackUserProfileAction({ action: constants.VIEW_PREMIUM_PERKS });
+  closure_8 = noop.useCallback(() => {
+    trackUserProfileAction({ action: TrackUserProfileActions.VIEW_PREMIUM_PERKS });
     navigateToPremium();
   }, items3);
   if (isPrivacyNoticeVisible) {
@@ -84,86 +90,88 @@ export default function UserProfileDismissibleUpsells(navigateToShop) {
   } else {
     obj = { contentTypes: null, children: null };
     const items4 = [tmp(tmp2[14]).DismissibleContent.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS];
-    obj[0] = items4;
-    obj[1] = function children(markAsDismissed) {
+    obj.contentTypes = items4;
+    obj.children = function children(markAsDismissed) {
       markAsDismissed = markAsDismissed.markAsDismissed;
-      let ShopIcon = navigateToShop;
-      let tmp = hasCustomProfileTheme;
+      let ShopIcon = require;
+      let tmp = dependencyMap;
       if (
         markAsDismissed.visibleContent !==
-        navigateToShop(hasCustomProfileTheme[14]).DismissibleContent.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS
+        dismissible_content.DismissibleContent.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS
       ) {
         return null;
       } else {
-        let obj = { borderWidth: 2, direction: null, colors: null, borderRadius: null, children: null };
-        obj[1] = ShopIcon(tmp[15]).GradientBorder.Direction.VERTICAL;
-        obj[2] = closure_1_10;
-        obj[3] = navigateToPremium(tmp[8]).radii.lg;
+        let obj = {
+          borderWidth: 2,
+          direction: native.GradientBorder.Direction.VERTICAL,
+          colors,
+          borderRadius: nativeDefault.radii.lg,
+          children: null,
+        };
         obj = {};
         let tmp12Result = upsellContainer;
         const merged = Object.assign(upsellContainer.upsellContainer);
         const tmp2 = hasCustomProfileTheme ? tmp12Result.customProfileThemeUpsellContainer : {};
-        obj1 = { style: null, children: null };
+        let obj1 = { style: null, children: null };
         const merged1 = Object.assign(tmp2);
-        obj1[0] = obj;
-        const obj2 = { style: null, children: null };
-        obj2[0] = tmp12Result.header;
+        obj1.style = obj;
+        const obj2 = { style: tmp12Result.header, children: null };
         const obj3 = { accessibilityRole: "header", variant: "text-sm/semibold", children: null };
-        const intl = ShopIcon(tmp[17]).intl;
-        obj3[2] = intl.string(ShopIcon(tmp[17]).t.EIYbj6);
-        const items = [closure_8(ShopIcon(tmp[16]).Text, obj3)];
+        const intl = util.intl;
+        obj3.children = intl.string(util.t.EIYbj6);
+        const items = [React6(Text_Text.Text, obj3)];
         const obj4 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
-        const intl2 = ShopIcon(tmp[17]).intl;
-        obj4[1] = intl2.string(ShopIcon(tmp[17]).t["6Xcq+Y"]);
-        obj4[2] = function onPress() {
-          return markAsDismissed(closure_1_7.USER_DISMISS);
+        const intl2 = util.intl;
+        obj4.accessibilityLabel = intl2.string(util.t["6Xcq+Y"]);
+        obj4.onPress = function onPress() {
+          return markAsDismissed(constants.USER_DISMISS);
         };
-        obj4[3] = closure_8(ShopIcon(tmp[19]).XSmallIcon, { size: "sm" });
-        items[1] = closure_8(ShopIcon(tmp[18]).PressableOpacity, obj4);
-        obj2[1] = items;
-        const items1 = [closure_1_9(trackUserProfileAction, obj2)];
-        let obj5 = { style: null, children: null };
-        obj5[0] = tmp12Result.upsellButtonsContainer;
-        let obj6 = { style: null, children: null };
-        obj6[0] = tmp12Result.upsellButton;
-        let Button = ShopIcon(tmp[20]).Button;
-        const intl3 = ShopIcon(tmp[17]).intl;
+        obj4.children = React6(XSmallIcon.XSmallIcon, { size: "sm" });
+        items[1] = React6(Pressables.PressableOpacity, obj4);
+        obj2.children = items;
+        const items1 = [React7(View, obj2)];
+        let obj5 = { style: tmp12Result.upsellButtonsContainer, children: null };
+        let obj6 = { style: tmp12Result.upsellButton, children: null };
+        let Button = components_Button_Button.Button;
+        const intl3 = util.intl;
         const string = intl3.string;
-        const t = ShopIcon(tmp[17]).t;
+        const t = util.t;
         if (closure_5) {
           let stringResult = string(t["0Q61kF"]);
         } else {
           stringResult = string(t.x6rkDp);
         }
-        let obj7 = { text: null, onPress: null, icon: null, iconPosition: "start", variant: "secondary", shiny: true };
-        obj7[0] = stringResult;
-        obj7[1] = closure_5 ? closure_8 : closure_7;
-        obj7[2] = closure_8(ShopIcon(tmp[21]).NitroWheelIcon, { size: "sm" });
-        obj6[1] = closure_8(Button, obj7);
+        let obj7 = {
+          text: stringResult,
+          onPress: closure_5 ? closure_8 : constants,
+          icon: React6(NitroWheelIcon.NitroWheelIcon, { size: "sm" }),
+          iconPosition: "start",
+          variant: "secondary",
+          shiny: true,
+        };
+        obj6.children = React6(Button, obj7);
         tmp12Result = tmp12(tmp16, obj6);
         obj6 = [tmp12Result];
-        const obj8 = { style: null, children: null };
-        obj8[0] = tmp12Result.upsellButton;
-        Button = ShopIcon(tmp[20]).Button;
+        const obj8 = { style: tmp12Result.upsellButton, children: null };
+        Button = components_Button_Button.Button;
         const obj9 = { text: null, onPress: null, icon: null, iconPosition: "start", variant: "secondary" };
-        const intl4 = ShopIcon(tmp[17]).intl;
-        obj9[0] = intl4.string(ShopIcon(tmp[17]).t.pWG4ze);
-        obj9[1] = closure_6;
-        ShopIcon = ShopIcon(tmp[22]).ShopIcon;
+        const intl4 = util.intl;
+        obj9.text = intl4.string(util.t.pWG4ze);
+        obj9.onPress = onPress;
+        ShopIcon = ShopIcon2.ShopIcon;
         tmp = tmp12(ShopIcon, { size: "sm" });
-        obj9[2] = tmp;
+        obj9.icon = tmp;
         tmp12Result = tmp12(Button, obj9);
-        obj8[1] = tmp12Result;
+        obj8.children = tmp12Result;
         obj7 = tmp12(tmp16, obj8);
         obj6[1] = obj7;
-        obj5[1] = obj6;
+        obj5.children = obj6;
         obj5 = tmp15(tmp16, obj5);
         items1[1] = obj5;
-        obj1[1] = items1;
+        obj1.children = items1;
         obj1 = tmp15(tmp16, obj1);
-        obj[4] = obj1;
-        closure_8(ShopIcon(tmp[15]).GradientBorder, obj);
-        const tmp6 = closure_5;
+        obj.children = obj1;
+        React6(native.GradientBorder, obj);
       }
     };
     tmp5Result = tmp5(tmp6(tmp2[13]), obj);

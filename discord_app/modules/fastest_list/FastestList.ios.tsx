@@ -1,12 +1,16 @@
 // discord_app/modules/fastest_list/FastestList.ios.tsx
-import importAllResult from "../../../_runtime/00019_noop.js";
-import { RefreshControl } from "../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
+import FastestListItemTypeDefault from "FastestListItemType.tsx";
+import FastList from "../../lib/native/FastList.tsx";
+import noop from "../../../_runtime/metro/00019__.js";
 
-const require = arg1;
+require = fn;
 function noop() {}
-let c3 = importAllResult;
-const forwardRefResult = importAllResult.forwardRef((inActionSheet) => {
+const RefreshControl = fn(17).RefreshControl;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/fastest_list/FastestList.ios.tsx");
+
+export default noop.forwardRef((inActionSheet, ref) => {
   ({ enabled, horizontal } = inActionSheet);
   ({ accessibilityLabel, estimatedListSize } = inActionSheet);
   if (horizontal === undefined) {
@@ -53,7 +57,45 @@ const forwardRefResult = importAllResult.forwardRef((inActionSheet) => {
   }
   ({ sectionFooterSize, sections, showsHorizontalScrollIndicator, showsVerticalScrollIndicator, style } =
     inActionSheet);
-  const merged = Object.assign(inActionSheet, Object.create(null));
+  const merged = Object.assign(
+    inActionSheet,
+    Object.assign({
+      accessibilityLabel: 0,
+      enabled: 0,
+      estimatedListSize: 0,
+      horizontal: 0,
+      inActionSheet: 0,
+      insetStart: 0,
+      insetEnd: 0,
+      itemSize: 0,
+      keyboardDismissMode: 0,
+      keyboardShouldPersistTaps: 0,
+      keyExtractor: 0,
+      listFooterSize: 0,
+      listFooterAlwaysMounted: 0,
+      listHeaderSize: 0,
+      listHeaderAlwaysMounted: 0,
+      onContentLengthChange: 0,
+      onLayout: 0,
+      preventNativeModalDismiss: 0,
+      renderAhead: 0,
+      renderItem: 0,
+      renderListFooter: 0,
+      renderListHeader: 0,
+      renderSectionHeader: 0,
+      renderSectionFooter: 0,
+      scrollEventThrottle: 0,
+      scrollIndicatorInsetEnd: 0,
+      scrollIndicatorInsetStart: 0,
+      sectionHeaderSize: 0,
+      sectionHeaderIsSticky: 0,
+      sectionFooterSize: 0,
+      sections: 0,
+      showsHorizontalScrollIndicator: 0,
+      showsVerticalScrollIndicator: 0,
+      style: 0,
+    }),
+  );
   ({ onScroll, onScrollBeginDrag, onScrollEndDrag } = inActionSheet(keyExtractor[3])(merged, horizontal));
   let obj = onContentLengthChange;
   const items = [keyExtractor];
@@ -61,39 +103,36 @@ const forwardRefResult = importAllResult.forwardRef((inActionSheet) => {
   const tmp4 = inActionSheet(keyExtractor[3])(merged, horizontal);
   const items1 = [horizontal, scrollIndicatorInsetEnd, scrollIndicatorInsetStart];
   const callback = onContentLengthChange.useCallback((arg0, arg1, arg2) => {
-    if (horizontal(keyExtractor[5]).FastListItemTypes.ITEM === arg0) {
+    if (FastList.FastListItemTypes.ITEM === arg0) {
       let tmp11Result;
       if (keyExtractor != null) {
         let num3 = arg2;
         if (arg2 == null) {
           num3 = -1;
         }
-        tmp11Result = tmp11(inActionSheet(tmp2[6]).ITEM, arg1, num3);
+        tmp11Result = tmp11(FastestListItemTypeDefault.ITEM, arg1, num3);
       }
       return tmp11Result;
-    } else if (tmp(tmp2[5]).FastListItemTypes.SECTION === arg0) {
+    } else if (tmp(7072).FastListItemTypes.SECTION === arg0) {
       let tmp7Result;
       if (keyExtractor != null) {
-        tmp7Result = tmp7(inActionSheet(tmp2[6]).SECTION_HEADER, arg1, -1);
+        tmp7Result = tmp7(FastestListItemTypeDefault.SECTION_HEADER, arg1, -1);
       }
       return tmp7Result;
-    } else if (tmp(tmp2[5]).FastListItemTypes.SECTION_FOOTER === arg0) {
+    } else if (tmp(7072).FastListItemTypes.SECTION_FOOTER === arg0) {
       let tmp3Result;
       if (keyExtractor != null) {
-        tmp3Result = tmp3(inActionSheet(tmp2[6]).SECTION_FOOTER, arg1, -1);
+        tmp3Result = tmp3(FastestListItemTypeDefault.SECTION_FOOTER, arg1, -1);
       }
       return tmp3Result;
     }
   }, items);
   const memo = onContentLengthChange.useMemo(() => {
     if (horizontal) {
-      let obj = { left: null, right: null };
-      obj[0] = tmp;
-      obj[1] = scrollIndicatorInsetEnd;
+      const rect = { left: tmp, right: scrollIndicatorInsetEnd };
+      let rect1 = rect;
     } else {
-      obj = { top: null, bottom: null };
-      obj[0] = tmp;
-      obj[1] = scrollIndicatorInsetEnd;
+      rect1 = { top: tmp, bottom: scrollIndicatorInsetEnd };
     }
   }, items1);
   const items2 = [preventNativeModalDismiss, inActionSheet];
@@ -101,9 +140,8 @@ const forwardRefResult = importAllResult.forwardRef((inActionSheet) => {
     let tmp;
     if (true === preventNativeModalDismiss) {
       if (true === inActionSheet) {
-        const obj = { refreshing: false, onRefresh: null, tintColor: "transparent" };
-        obj[1] = scrollIndicatorInsetStart;
-        tmp = scrollIndicatorInsetEnd(preventNativeModalDismiss, obj);
+        const obj = { refreshing: false, onRefresh: noop, tintColor: "transparent" };
+        tmp = <RefreshControl refreshing={false} onRefresh={noop} tintColor="transparent" />;
       }
     }
     return tmp;
@@ -170,62 +208,59 @@ const forwardRefResult = importAllResult.forwardRef((inActionSheet) => {
       num = 16;
     }
   }
-  obj[2] = num;
-  obj[3] = memo1;
-  obj[4] = inActionSheet(keyExtractor[4])({ estimatedListSize, horizontal });
+  obj.batchesToRender = num;
+  obj.refreshControl = memo1;
+  obj.chunkBase = inActionSheet(keyExtractor[4])({ estimatedListSize, horizontal });
   let str3 = "disabled";
   if (sectionHeaderIsSticky) {
     str3 = "default";
   }
-  obj[5] = str3;
-  obj[6] = listFooterSize;
-  obj[7] = callback;
-  obj[8] = listHeaderSize;
-  obj[9] = horizontal;
-  obj[10] = inActionSheet;
-  obj[11] = insetStart;
-  obj[12] = insetEnd;
-  obj[13] = itemSize;
-  obj[14] = keyboardDismissMode;
-  obj[15] = keyboardShouldPersistTaps;
+  obj.stickySectionsVariant = str3;
+  obj.footerSize = listFooterSize;
+  obj.getRecyclerKey = callback;
+  obj.headerSize = listHeaderSize;
+  obj.horizontal = horizontal;
+  obj.inActionSheet = inActionSheet;
+  obj.insetStart = insetStart;
+  obj.insetEnd = insetEnd;
+  obj.itemSize = itemSize;
+  obj.keyboardDismissMode = keyboardDismissMode;
+  obj.keyboardShouldPersistTaps = keyboardShouldPersistTaps;
   let tmp12;
   if (null != onContentLengthChange) {
     tmp12 = callback1;
   }
-  obj[16] = tmp12;
-  obj[17] = onLayout;
+  obj.onContentSizeChange = tmp12;
+  obj.onLayout = onLayout;
   let tmp13;
   if ("animatedScrollPosition" !== merged.scrollReporting) {
     tmp13 = onScroll;
   }
-  obj[18] = tmp13;
-  obj[19] = onScrollBeginDrag;
-  obj[20] = onScrollEndDrag;
-  obj[22] = arg1;
-  obj[23] = renderItem;
-  obj[24] = renderListFooter;
-  obj[25] = renderListHeader;
-  obj[26] = renderSectionHeader;
-  obj[27] = renderSectionFooter;
-  obj[28] = scrollEventThrottle;
-  obj[29] = memo;
+  obj.onScroll = tmp13;
+  obj.onScrollBeginDrag = onScrollBeginDrag;
+  obj.onScrollEndDrag = onScrollEndDrag;
+  obj.ref = ref;
+  obj.renderItem = renderItem;
+  obj.renderFooter = renderListFooter;
+  obj.renderHeader = renderListHeader;
+  obj.renderSection = renderSectionHeader;
+  obj.renderSectionFooter = renderSectionFooter;
+  obj.scrollEventThrottle = scrollEventThrottle;
+  obj.scrollIndicatorInsets = memo;
   let scrollPosition;
   if ("animatedScrollPosition" === merged.scrollReporting) {
     scrollPosition = merged.scrollPosition;
   }
-  obj[30] = scrollPosition;
-  obj[31] = sections;
-  obj[32] = sectionHeaderSize;
-  obj[33] = sectionFooterSize;
-  obj[34] = showsHorizontalScrollIndicator;
-  obj[35] = showsVerticalScrollIndicator;
+  obj.scrollPosValue = scrollPosition;
+  obj.sections = sections;
+  obj.sectionSize = sectionHeaderSize;
+  obj.sectionFooterSize = sectionFooterSize;
+  obj.showsHorizontalScrollIndicator = showsHorizontalScrollIndicator;
+  obj.showsVerticalScrollIndicator = showsVerticalScrollIndicator;
   if (!listHeaderAlwaysMounted) {
     listHeaderAlwaysMounted = listFooterAlwaysMounted;
   }
-  obj[36] = listHeaderAlwaysMounted;
-  obj[37] = style;
+  obj.stickyHeaderFooter = listHeaderAlwaysMounted;
+  obj.style = style;
   return scrollIndicatorInsetEnd(AnimatedFastList, obj);
 });
-const result = require("set").fileFinishedImporting("modules/fastest_list/FastestList.ios.tsx");
-
-export default forwardRefResult;

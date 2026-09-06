@@ -1,13 +1,15 @@
 // discord_app/modules/status_bar/native/components/StatusBarManager.android.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import _modDef12 from "../../../../../_runtime/metro/00012__.js";
+import _mod17 from "../../../../../_runtime/metro/00017__.js";
+import NativeSafeAreaInsetsModuleDefault from "../../../../../discord_common/js/packages/rtn-codegen/js/NativeSafeAreaInsetsModule.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const StatusBar = get_ActivityIndicator.StatusBar;
+const StatusBar = _mod17.StatusBar;
 class StatusBarManager {
   constructor() {
-    obj = Object.create(new.target.prototype);
-    obj[0] = [];
-    return obj;
+    merged = Object.assign({ propsStack: null, updateImmediate: null });
+    merged[0] = [];
+    return merged;
   }
 }
 const prototype = StatusBarManager.prototype;
@@ -50,14 +52,13 @@ prototype["updatePropsStack"] = function updatePropsStack() {
   clearImmediate(this.updateImmediate);
   this.updateImmediate = setImmediate(() => {
     const items = [{ hidden: false, barStyle: "default" }, ...self.propsStack];
-    const applyResult = self(closure_1_1[1]).merge.apply(items);
-    closure_1_2.setBarStyle(applyResult.barStyle);
-    const tmp = self(closure_1_1[1]);
-    self(closure_1_1[2]).setStatusBarVisible(!applyResult.hidden);
+    const applyResult = _modDef12.merge.apply(items);
+    StatusBar.setBarStyle(applyResult.barStyle);
+    NativeSafeAreaInsetsModuleDefault.setStatusBarVisible(!applyResult.hidden);
   });
 };
-let obj = Object.create(StatusBarManager.prototype);
-obj[0] = [];
-const result = set.fileFinishedImporting("modules/status_bar/native/components/StatusBarManager.android.tsx");
+let merged = Object.assign({ propsStack: null, updateImmediate: null });
+merged[0] = [];
+const result = size.fileFinishedImporting("modules/status_bar/native/components/StatusBarManager.android.tsx");
 
-export default obj;
+export default merged;

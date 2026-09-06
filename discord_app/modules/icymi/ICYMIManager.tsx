@@ -1,69 +1,67 @@
 // discord_app/modules/icymi/ICYMIManager.tsx
-import dispatcherDefault from "../../Dispatcher.tsx";
-import initializeDefault from "../../lib/LifecycleManager.tsx";
-import _modDef8351 from "ICYMIActionCreators.tsx";
-import apexExperiment from "ICYMIExperiment.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators.tsx";
+import ICYMIExperiment from "ICYMIExperiment.tsx";
+import LifecycleManager from "../../lib/LifecycleManager.tsx";
 
-require = arg1;
-let c3 = null;
-initializeDefault;
+require = fn;
+let closure_3 = null;
 class ICYMIManager extends tmp2 {
 }
 const prototype = ICYMIManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  const subscription = dispatcherDefault.subscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
+  const subscription = DispatcherDefault.subscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
 };
 prototype["_terminate"] = function _terminate() {
-  dispatcherDefault.unsubscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
+  DispatcherDefault.unsubscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
 };
 prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
-  let obj = apexExperiment;
+  let obj = ICYMIExperiment;
   if (obj.getICYMIEnabled("ICYMIManager")) {
-    obj = { isInitialLoad: null };
-    obj[0] = true;
-    const dehydrated = _modDef8351.fetchDehydrated(obj);
+    obj = { isInitialLoad: true };
+    const dehydrated = ICYMIActionCreatorsDefault.fetchDehydrated(obj);
     if (null != timeout) {
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
     }
     const _setTimeout = setTimeout;
     timeout = setTimeout(() => {
-      let dehydrated = callback(table[0]).fetchDehydrated({ isInitialLoad: false });
+      let dehydrated = closure_1_1(closure_1_2[0]).fetchDehydrated({ isInitialLoad: false });
       if (null != timeout) {
         let _clearTimeout = clearTimeout;
         clearTimeout(timeout);
       }
       timeout = setTimeout(() => {
-        let dehydrated = callback(table[0]).fetchDehydrated({ isInitialLoad: false });
+        let dehydrated = closure_1_1(closure_1_2[0]).fetchDehydrated({ isInitialLoad: false });
         if (null != timeout) {
           let _clearTimeout = clearTimeout;
           clearTimeout(timeout);
         }
         timeout = setTimeout(() => {
-          let dehydrated = callback(table[0]).fetchDehydrated({ isInitialLoad: false });
+          let dehydrated = closure_1_1(closure_1_2[0]).fetchDehydrated({ isInitialLoad: false });
           if (null != timeout) {
             let _clearTimeout = clearTimeout;
             clearTimeout(timeout);
           }
           timeout = setTimeout(() => {
-            let dehydrated = callback(table[0]).fetchDehydrated({ isInitialLoad: false });
+            let dehydrated = closure_1_1(closure_1_2[0]).fetchDehydrated({ isInitialLoad: false });
             if (null != timeout) {
               let _clearTimeout = clearTimeout;
               clearTimeout(timeout);
             }
-            timeout = setTimeout(() => { ... }, 15 * callback(table[1]).Millis.MINUTE);
-          }, 15 * callback(table[1]).Millis.MINUTE);
-        }, 15 * callback(table[1]).Millis.MINUTE);
-      }, 15 * callback(table[1]).Millis.MINUTE);
+            timeout = setTimeout(() => { ... }, 15 * closure_1_1(closure_1_2[1]).Millis.MINUTE);
+          }, 15 * closure_1_1(closure_1_2[1]).Millis.MINUTE);
+        }, 15 * closure_1_1(closure_1_2[1]).Millis.MINUTE);
+      }, 15 * closure_1_1(closure_1_2[1]).Millis.MINUTE);
     }, 15 * tmp2(1090).Millis.MINUTE);
     let tmp2Result = tmp2(8351);
     const guildChannelScores = tmp2Result.getGuildChannelScores();
     tmp2Result = tmp2(8351);
     const recommendedGuilds = tmp2Result.getRecommendedGuilds();
-    const obj2 = _modDef8351;
   }
 };
 const iCYMIManager = new ICYMIManager();
-const result = require("set").fileFinishedImporting("modules/icymi/ICYMIManager.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/icymi/ICYMIManager.tsx");
 
 export default iCYMIManager;

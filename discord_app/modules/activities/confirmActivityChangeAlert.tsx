@@ -1,29 +1,30 @@
 // discord_app/modules/activities/confirmActivityChangeAlert.tsx
-import getSystemLocale from "../../intl/index.native.tsx";
-import computeChannelName from "../channel/useChannelName.tsx";
-import setDefault from "../../actions/AlertActionCreators.tsx";
-import closure_3 from "../../stores/RelationshipStore.tsx";
-import closure_4 from "../../stores/UserStore.tsx";
+import util from "../../intl/index.native.tsx";
+import useChannelName from "../channel/useChannelName.tsx";
+import AlertActionCreatorsDefault from "../../actions/AlertActionCreators.tsx";
+import RelationshipStore from "../../stores/RelationshipStore.tsx";
+import UserStore from "../../stores/UserStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/activities/confirmActivityChangeAlert.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/confirmActivityChangeAlert.tsx");
 
-export default function confirmActivityChangeModal(name, channel) {
+export default function confirmActivityChangeModal(name, channel, onConfirm, onCancel) {
   let str = "";
   if (null != channel) {
-    let obj = computeChannelName;
-    str = obj.computeChannelName(channel, closure_4, closure_3);
+    let obj = useChannelName;
+    str = obj.computeChannelName(channel, UserStore, RelationshipStore);
   }
   obj = { title: null, cancelText: null, confirmText: null, onConfirm: null, onCancel: null, body: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t.XkIWkk);
-  const intl2 = getSystemLocale.intl;
-  obj[1] = intl2.string(getSystemLocale.t["ETE/oC"]);
-  const intl3 = getSystemLocale.intl;
-  obj[2] = intl3.string(getSystemLocale.t["cY+Oob"]);
-  obj[3] = arg2;
-  obj[4] = arg3;
-  const intl4 = getSystemLocale.intl;
+  const intl = util.intl;
+  obj.title = intl.string(util.t.XkIWkk);
+  const intl2 = util.intl;
+  obj.cancelText = intl2.string(util.t["ETE/oC"]);
+  const intl3 = util.intl;
+  obj.confirmText = intl3.string(util.t["cY+Oob"]);
+  obj.onConfirm = onConfirm;
+  obj.onCancel = onCancel;
+  const intl4 = util.intl;
   name = undefined;
   if (name != null) {
     name = name.name;
@@ -33,12 +34,12 @@ export default function confirmActivityChangeModal(name, channel) {
     name = intl5.string(tmp6(1114).t.G99XFs);
   }
   obj = { currentApplicationName: name, currentApplicationChannelName: null };
-  const obj2 = setDefault;
+  const obj2 = AlertActionCreatorsDefault;
   if (tmp6Result.isNullOrEmpty(str)) {
     const intl6 = tmp6(1114).intl;
     str = intl6.string(tmp6(1114).t.OGUjmt);
   }
-  obj[1] = str;
-  obj[5] = intl4.format(getSystemLocale.t["5/Xort"], obj);
+  obj.currentApplicationChannelName = str;
+  obj.body = intl4.format(util.t["5/Xort"], obj);
   obj2.show(obj);
 }

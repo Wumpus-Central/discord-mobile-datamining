@@ -1,21 +1,20 @@
 // discord_app/hooks/useTimeout.tsx
-import set from "../../_runtime/00002_set.js";
-import noop from "../../_runtime/00019_noop.js";
+import noop from "../../_runtime/metro/00019__.js";
+import size from "../../_runtime/metro/00002__.js";
 
-({ useEffect: c0, useRef: closure_1 } = noop);
-const result = set.fileFinishedImporting("hooks/useTimeout.tsx");
+({ useEffect: closure_0, useRef: closure_1 } = noop);
+const result = size.fileFinishedImporting("hooks/useTimeout.tsx");
 
-export default function useTimeout(arg0, arg1) {
-  const callback = arg0;
-  const callback2 = arg1;
-  const tmp = callback2(arg0);
+export default function useTimeout(current, arg1) {
+  closure_1 = arg1;
+  const tmp = framebus(current);
   closure_2 = tmp;
-  const items = [arg0];
-  callback(() => {
-    closure_2.current = closure_0;
+  const items = [current];
+  React(() => {
+    closure_2.current = current;
   }, items);
   const items1 = [arg1, tmp];
-  callback(() => {
+  React(() => {
     if (null !== closure_1) {
       const _setTimeout = setTimeout;
       const timeout = setTimeout(() => ref.current(), tmp);

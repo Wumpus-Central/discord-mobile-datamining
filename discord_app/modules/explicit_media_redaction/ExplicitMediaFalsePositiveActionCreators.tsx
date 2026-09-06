@@ -1,13 +1,12 @@
 // discord_app/modules/explicit_media_redaction/ExplicitMediaFalsePositiveActionCreators.tsx
-import set from "../../../_runtime/00002_set.js";
-import dispatcherDefault from "../../Dispatcher.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 function disableFalsePositiveButton(channelId, messageId) {
-  let obj = dispatcherDefault;
-  obj = { type: "MESSAGE_EXPLICIT_CONTENT_FP_SUBMIT", messageId, channelId };
+  const obj = { type: "MESSAGE_EXPLICIT_CONTENT_FP_SUBMIT", messageId, channelId };
   obj.dispatch(obj);
 }
-const result = set.fileFinishedImporting(
+const result = size.fileFinishedImporting(
   "modules/explicit_media_redaction/ExplicitMediaFalsePositiveActionCreators.tsx",
 );
 

@@ -1,6 +1,7 @@
 // discord_app/modules/experiments/index.tsx
-import importDefaultResult from "createExperiment.tsx";
+import createExperiment from "createExperiment.tsx";
 
-const result = require("set").fileFinishedImporting("modules/experiments/index.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/experiments/index.tsx");
 
-export const createExperiment = importDefaultResult;
+export { createExperiment };

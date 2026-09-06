@@ -1,7 +1,7 @@
 // discord_app/modules/messages/isMessageMentioned.tsx
-import closure_0 from "../../stores/ChannelStore.tsx";
-import closure_1 from "../../stores/GuildMemberStore.tsx";
-import closure_2 from "../../stores/GuildStore.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
+import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
+import GuildStore from "../../stores/GuildStore.tsx";
 
 function isMentioned(suppressRoles) {
   ({ userId, mentionUsers, mentionRoles, suppressEveryone } = suppressRoles);
@@ -25,22 +25,22 @@ function isMentioned(suppressRoles) {
     if (!flag) {
       if (null != mentionRoles) {
         if (0 !== mentionRoles.length) {
-          const channel = member.getChannel(channelId);
+          const channel = ChannelStore.getChannel(channelId);
           if (null == channel) {
             return false;
           } else {
             const guildId = channel.getGuildId();
             if (null == guildId) {
               return false;
-            } else if (null == guild.getGuild(guildId)) {
+            } else if (null == GuildStore.getGuild(guildId)) {
               return false;
             } else {
-              member = member.getMember(guildId, userId);
+              member = GuildMemberStore.getMember(guildId, userId);
               return (
                 null != member &&
-                mentionRoles.some((arg0) => {
+                mentionRoles.some((item) => {
                   const roles = member.roles;
-                  return roles.includes(arg0);
+                  return roles.includes(item);
                 })
               );
             }
@@ -51,7 +51,8 @@ function isMentioned(suppressRoles) {
     return false;
   }
 }
-const result = require("set").fileFinishedImporting("modules/messages/isMessageMentioned.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/isMessageMentioned.tsx");
 
 export default function isMessageMentioned(suppressRoles) {
   ({ message, suppressEveryone } = suppressRoles);
@@ -94,7 +95,7 @@ export const isRawMessageMentioned = function isRawMessageMentioned(suppressRole
   if (flag2 == null) {
     flag2 = false;
   }
-  obj[2] = flag2;
+  obj.mentionEveryone = flag2;
   const mentions = rawMessage.mentions;
   let mapped;
   if (mentions != null) {
@@ -103,14 +104,14 @@ export const isRawMessageMentioned = function isRawMessageMentioned(suppressRole
   if (mapped == null) {
     mapped = [];
   }
-  obj[3] = mapped;
+  obj.mentionUsers = mapped;
   let mention_roles = rawMessage.mention_roles;
   if (mention_roles == null) {
     mention_roles = [];
   }
-  obj[4] = mention_roles;
-  obj[5] = suppressEveryone;
-  obj[6] = flag;
+  obj.mentionRoles = mention_roles;
+  obj.suppressEveryone = suppressEveryone;
+  obj.suppressRoles = flag;
   return isMentioned(obj);
 };
 export { isMentioned };

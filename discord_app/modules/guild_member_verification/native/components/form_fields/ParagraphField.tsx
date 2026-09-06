@@ -1,31 +1,31 @@
 // discord_app/modules/guild_member_verification/native/components/form_fields/ParagraphField.tsx
-import noopAll from "../../../../../../_runtime/00019_noop.js";
-import getSystemLocale from "../../../../../intl/index.native.tsx";
-import Text from "../../../../../design/components/Text/native/Text.tsx";
+import util from "../../../../../intl/index.native.tsx";
+import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import TextArea from "../../../../../design/components/TextInput/native/TextArea.native.tsx";
-import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { MAX_PARAGRAPH_RESPONSE_LENGTH as closure_3 } from "../../../MemberVerificationConstants.tsx";
-import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-let closure_5 = createCacheKey.createStyles({ container: { marginVertical: 12, flexDirection: "column" } });
-const result = require("set").fileFinishedImporting(
+require = fn;
+const View = fn(17).View;
+const maxLength = fn(5059).MAX_PARAGRAPH_RESPONSE_LENGTH;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_5 = createStyles.createStyles({ container: { marginVertical: 12, flexDirection: "column" } });
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/guild_member_verification/native/components/form_fields/ParagraphField.tsx",
 );
 
 export default function ParagraphField(field) {
   field = field.field;
   let str = field.response;
-  let obj = { style: callback().container, children: null };
+  let obj = { style: closure_5().container, children: null };
   obj = {
-    label: jsx(Text.Text, {
+    label: jsx(Text_Text.Text, {
       variant: "heading-md/semibold",
       color: "mobile-text-heading-primary",
       children: field.label,
     }),
-    maxLength: closure_3,
+    maxLength,
     value: null,
     placeholder: null,
     onChange: null,
@@ -33,29 +33,29 @@ export default function ParagraphField(field) {
   if (str == null) {
     str = "";
   }
-  obj[2] = str;
+  obj.value = str;
   const intl = tmp3(1114).intl;
-  obj[3] = intl.string(getSystemLocale.t["Sqn+Wh"]);
-  obj[4] = field.onChange;
-  obj[1] = jsx(TextArea.TextArea, {
-    label: jsx(Text.Text, {
+  obj.placeholder = intl.string(util.t["Sqn+Wh"]);
+  obj.onChange = field.onChange;
+  obj.children = jsx(TextArea.TextArea, {
+    label: jsx(Text_Text.Text, {
       variant: "heading-md/semibold",
       color: "mobile-text-heading-primary",
       children: field.label,
     }),
-    maxLength: closure_3,
+    maxLength,
     value: null,
     placeholder: null,
     onChange: null,
   });
   return (
     <View
-      label={jsx(Text.Text, {
+      label={jsx(Text_Text.Text, {
         variant: "heading-md/semibold",
         color: "mobile-text-heading-primary",
         children: field.label,
       })}
-      maxLength={closure_3}
+      maxLength={maxLength}
       value={null}
       placeholder={null}
       onChange={null}

@@ -1,7 +1,7 @@
 // discord_app/modules/app_launcher/AppLauncherConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/app_launcher/AppLauncherConstants.tsx");
+const result = size.fileFinishedImporting("modules/app_launcher/AppLauncherConstants.tsx");
 
 export const CommandListSortOrder = { POPULAR: 0, [0]: "POPULAR", ALPHABETICAL: 1, [1]: "ALPHABETICAL" };
 export const APP_LAUNCHER_ELEMENT_CLASSNAME = "app-launcher-element";

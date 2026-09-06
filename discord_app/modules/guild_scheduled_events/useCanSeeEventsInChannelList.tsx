@@ -1,9 +1,9 @@
 // discord_app/modules/guild_scheduled_events/useCanSeeEventsInChannelList.tsx
-import set from "../../../_runtime/00002_set.js";
 import useCanCreateAnEventDefault from "useCanCreateAnEvent.tsx";
 import useIsHubForGuildDefault from "../hub/useIsHubForGuild.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/guild_scheduled_events/useCanSeeEventsInChannelList.tsx");
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/useCanSeeEventsInChannelList.tsx");
 
 export default function useCanSeeEventsInChannelList(arg0) {
   let tmp = useCanCreateAnEventDefault(arg0);

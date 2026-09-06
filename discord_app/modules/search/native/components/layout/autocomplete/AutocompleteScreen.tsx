@@ -1,149 +1,133 @@
 // discord_app/modules/search/native/components/layout/autocomplete/AutocompleteScreen.tsx
-import closure_3 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
-import importAllResult from "../../../../../../../_runtime/00019_noop.js";
-import closure_5 from "../../../../../../stores/ChannelStore.tsx";
-import closure_6 from "../../../../../../stores/RelationshipStore.tsx";
-import closure_7 from "../../../../../../stores/UserStore.tsx";
-import closure_8 from "../../../../SearchAutocompleteStore.tsx";
-import closure_9 from "../../../stores/SearchQueryStore.tsx";
-import MessageEmbedTypes from "../../../../SearchConstants.tsx";
-import ME from "../../../../../../Constants.tsx";
-import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
+import UserUtilsDefault from "../../../../../../utils/UserUtils.tsx";
+import useChannelName from "../../../../../channel/useChannelName.tsx";
+import SearchPlatformUtilsDefault from "../../../SearchPlatformUtils.tsx";
+import search_tracking_TrackingDefault from "../../../tracking/Tracking.tsx";
+import SearchPlatformActionCreatorsDefault from "../../../SearchPlatformActionCreators.tsx";
+import AutocompleteScreenUtils from "AutocompleteScreenUtils.tsx";
+import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../../../_runtime/metro/00019__.js";
+import ChannelStore from "../../../../../../stores/ChannelStore.tsx";
+import RelationshipStore from "../../../../../../stores/RelationshipStore.tsx";
+import UserStore from "../../../../../../stores/UserStore.tsx";
+import SearchAutocompleteStore from "../../../../SearchAutocompleteStore.tsx";
+import SearchQueryStore from "../../../stores/SearchQueryStore.tsx";
 
-const require = arg1;
-let c4 = importAllResult;
-({
-  SearchListItemTypes: c10,
-  SearchQueryTagTypes: unpackModuleId,
-  USER_ESTIMATED_ITEM_SIZE: closure_12,
-} = MessageEmbedTypes);
-({ SearchPopoutModes: map1, SearchTokenTypes: closure_14 } = ME);
+require = fn;
+const SearchConstants = fn(7878);
+({ SearchListItemTypes: c10, SearchQueryTagTypes: closure_11, USER_ESTIMATED_ITEM_SIZE: closure_12 } = SearchConstants);
+const Constants = fn(1074);
+({ SearchPopoutModes: map1, SearchTokenTypes: closure_14 } = Constants);
+const jsx = fn(21).jsx;
 let closure_16 = [];
-const memoResult = importAllResult.memo(function AutocompleteScreen(searchContext) {
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/search/native/components/layout/autocomplete/AutocompleteScreen.tsx");
+
+export default noop.memo(function AutocompleteScreen(searchContext) {
   searchContext = searchContext.searchContext;
-  let stateFromStores;
   let first;
-  let callback;
+  _slicedToArray = undefined;
   let fullscreenPlaceholderCount;
-  callback = undefined;
-  let callback1;
-  let callback2;
   let callback3;
   let obj = searchContext(first[10]);
   let items = [callback3];
   const items1 = [searchContext];
-  stateFromStores = obj.useStateFromStores(
+  const stateFromStores = obj.useStateFromStores(
     items,
-    () => callback3.getState(searchContext),
+    () => SearchAutocompleteStore.getState(searchContext),
     items1,
     searchContext(first[10]).statesWillNeverBeEqual,
   );
-  const tmp4 = callback(fullscreenPlaceholderCount.useState(false), 2);
+  const tmp4 = _slicedToArray(fullscreenPlaceholderCount.useState(false), 2);
   first = tmp4[0];
-  callback = tmp4[1];
-  obj1 = searchContext(first[10]);
-  const items2 = [closure_9];
+  _slicedToArray = tmp4[1];
+  let obj1 = searchContext(first[10]);
+  const items2 = [SearchQueryStore];
   const items3 = [searchContext];
   const stateFromStores1 = obj1.useStateFromStores(
     items2,
-    () => closure_1_9.isTextInputValueEmpty(searchContext),
+    () => SearchQueryStore.isTextInputValueEmpty(searchContext),
     items3,
   );
   let obj2 = searchContext(first[11]);
-  obj = { placeholderHeight: closure_12, numColumns: 1 };
+  obj = { placeholderHeight, numColumns: 1 };
   fullscreenPlaceholderCount = obj2.useFullscreenPlaceholderCount(obj);
   const items4 = [searchContext];
-  callback = fullscreenPlaceholderCount.useCallback(() => {
-    stateFromStores(first[12]).syncAutocomplete(searchContext);
-    const obj = stateFromStores(first[12]);
-    const initialMessages = stateFromStores(first[12]).fetchInitialMessages(searchContext);
+  const callback = fullscreenPlaceholderCount.useCallback(() => {
+    SearchPlatformUtilsDefault.syncAutocomplete(searchContext);
+    const initialMessages = SearchPlatformUtilsDefault.fetchInitialMessages(searchContext);
   }, items4);
   const items5 = [callback, searchContext];
-  callback1 = fullscreenPlaceholderCount.useCallback((arg0) => {
-    closure_0 = arg0;
-    const prefixTag = closure_1_9.getPrefixTag(closure_0);
+  const callback1 = fullscreenPlaceholderCount.useCallback((text) => {
+    const prefixTag = SearchQueryStore.getPrefixTag(searchContext);
     if (null != prefixTag) {
-      let obj = stateFromStores(first[13]);
+      let obj = SearchPlatformActionCreatorsDefault;
       obj.updateSearchQuery(tmp, (setTextInputValue) => {
         setTextInputValue.setTextInputValue("");
-        setTextInputValue.addTag({ type: closure_1_11.ANSWER, text: closure_0 });
+        setTextInputValue.addTag({ type: constants2.ANSWER, text });
         const result = setTextInputValue.restoreDraftTextInputValue();
       });
-      obj = { searchContext: null, searchTokenType: null, location: null };
-      obj[0] = tmp;
-      ({ searchTokenType: obj3[1], location: obj3[2] } = prefixTag);
-      stateFromStores(first[14]).trackSearchFilterAdd(obj);
+      obj = { searchContext: tmp, searchTokenType: null, location: null };
+      ({ searchTokenType: obj3.searchTokenType, location: obj3.location } = prefixTag);
+      search_tracking_TrackingDefault.trackSearchFilterAdd(obj);
       callback();
-      const obj2 = stateFromStores(first[14]);
     }
   }, items5);
   const items6 = [callback, searchContext];
-  callback2 = fullscreenPlaceholderCount.useCallback((arg0) => {
-    const user = callback2.getUser(arg0);
+  const callback2 = fullscreenPlaceholderCount.useCallback((arg0) => {
+    const user = UserStore.getUser(arg0);
     if (null != user) {
-      const prefixTag = closure_1_9.getPrefixTag(user);
+      const prefixTag = SearchQueryStore.getPrefixTag(searchContext);
       if (null != prefixTag) {
-        let obj = stateFromStores(first[13]);
+        let obj = SearchPlatformActionCreatorsDefault;
         obj.updateSearchQuery(tmp9, (setTextInputValue) => {
           setTextInputValue.setTextInputValue("");
-          const obj = {
-            type: closure_1_11.ANSWER,
-            text: closure_1_1(closure_1_2[15]).getUserTag(user),
-            userId: user.id,
-          };
+          const obj = { type: constants2.ANSWER, text: stateFromStores(first[15]).getUserTag(user), userId: user.id };
           setTextInputValue.addTag(obj);
           const result = setTextInputValue.restoreDraftTextInputValue();
         });
-        obj = { searchContext: null, searchTokenType: null, location: null };
-        obj[0] = tmp9;
-        ({ searchTokenType: obj3[1], location: obj3[2] } = prefixTag);
-        stateFromStores(first[14]).trackSearchFilterAdd(obj);
+        obj = { searchContext: tmp9, searchTokenType: null, location: null };
+        ({ searchTokenType: obj3.searchTokenType, location: obj3.location } = prefixTag);
+        search_tracking_TrackingDefault.trackSearchFilterAdd(obj);
         callback();
-        const obj2 = stateFromStores(first[14]);
       }
     }
   }, items6);
   const items7 = [callback, searchContext];
-  callback3 = fullscreenPlaceholderCount.useCallback((arg0) => {
-    closure_0 = arg0;
-    const channel = callback.getChannel(arg0);
+  callback3 = fullscreenPlaceholderCount.useCallback((channelId) => {
+    const channel = ChannelStore.getChannel(channelId);
     if (null != channel) {
-      const prefixTag = closure_1_9.getPrefixTag(closure_0);
+      const prefixTag = SearchQueryStore.getPrefixTag(searchContext);
       if (null != prefixTag) {
-        let userTag = searchContext(first[16]).computeChannelName(channel, callback2, callback1);
+        let userTag = useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
         if (channel.isDM()) {
           const user = obj6.getUser(channel.getRecipientId());
           if (null != user) {
-            userTag = stateFromStores(tmp11[15]).getUserTag(user);
-            const obj7 = stateFromStores(tmp11[15]);
+            userTag = UserUtilsDefault.getUserTag(user);
           }
         }
-        const obj5 = searchContext(first[16]);
-        obj6 = callback2;
-        stateFromStores(first[13]).updateSearchQuery(tmp8, (setTextInputValue) => {
+        obj6 = UserStore;
+        SearchPlatformActionCreatorsDefault.updateSearchQuery(tmp8, (setTextInputValue) => {
           setTextInputValue.setTextInputValue("");
           const obj = {
-            type: closure_1_11.ANSWER,
-            text: callback(closure_1_2[17]).quoteChannelName(closure_1),
-            channelId: callback,
+            type: constants2.ANSWER,
+            text: searchContext(first[17]).quoteChannelName(closure_1),
+            channelId,
           };
           setTextInputValue.addTag(obj);
           const result = setTextInputValue.restoreDraftTextInputValue();
         });
-        const obj2 = stateFromStores(first[13]);
-        let obj = { searchContext: null, searchTokenType: null, location: null };
-        obj[0] = tmp8;
-        ({ searchTokenType: obj4[1], location: obj4[2] } = prefixTag);
-        stateFromStores(first[14]).trackSearchFilterAdd(obj);
+        let obj = { searchContext: tmp8, searchTokenType: null, location: null };
+        ({ searchTokenType: obj4.searchTokenType, location: obj4.location } = prefixTag);
+        search_tracking_TrackingDefault.trackSearchFilterAdd(obj);
         callback();
-        const obj3 = stateFromStores(first[14]);
       }
     }
   }, items7);
   const items8 = [searchContext];
   const effect = fullscreenPlaceholderCount.useEffect(
     () =>
-      stateFromStores(first[12]).subscribeSearchQueryState(
+      SearchPlatformUtilsDefault.subscribeSearchQueryState(
         searchContext,
         (isAutocompleteVisible) => {
           const obj = {
@@ -155,7 +139,7 @@ const memoResult = importAllResult.memo(function AutocompleteScreen(searchContex
           if (prefixTag == null) {
             prefixTag = null;
           }
-          obj[2] = prefixTag;
+          obj.prefixTag = prefixTag;
           return obj;
         },
         (isAutocompleteVisible, textInputValue) => {
@@ -173,7 +157,7 @@ const memoResult = importAllResult.memo(function AutocompleteScreen(searchContex
               tmp6 = tmp2 === prefixTag;
             }
             if (!tmp6) {
-              callback(true);
+              closure_1_3(true);
             }
           }
         },
@@ -183,7 +167,7 @@ const memoResult = importAllResult.memo(function AutocompleteScreen(searchContex
   );
   const items9 = [stateFromStores.autocompletes];
   const effect1 = fullscreenPlaceholderCount.useEffect(() => {
-    callback(false);
+    closure_3(false);
   }, items9);
   const items10 = [first, searchContext, fullscreenPlaceholderCount, stateFromStores, callback2, callback3, callback1];
   const memo = fullscreenPlaceholderCount.useMemo(() => {
@@ -193,13 +177,11 @@ const memoResult = importAllResult.memo(function AutocompleteScreen(searchContex
       if (0 < fullscreenPlaceholderCount) {
         do {
           let obj = { type: null, key: null };
-          let tmp28 = closure_1_10;
-          obj[0] = closure_1_10.MESSAGE_PLACEHOLDER;
+          obj.type = constants.MESSAGE_PLACEHOLDER;
           let _HermesInternal = HermesInternal;
-          obj[1] = "message-placeholder-" + num2;
+          obj.key = "message-placeholder-" + num2;
           let arr = items.push(obj);
           num2 = num2 + 1;
-          let tmp30 = fullscreenPlaceholderCount;
         } while (num2 < fullscreenPlaceholderCount);
       }
       return items;
@@ -210,78 +192,72 @@ const memoResult = importAllResult.memo(function AutocompleteScreen(searchContex
       const _Set2 = Set;
       set1 = new Set(searchContext(first[18]).getSearchQueryChannelIds(items));
       ({ autocompletes, tokens, mode } = set);
-      let item = autocompletes.forEach((arg0) => {
-        if (mode.type === closure_2_13.FILTER) {
-          ({ results, group: items } = arg0);
+      let item = autocompletes.forEach((item) => {
+        if (mode.type === constants3.FILTER) {
+          ({ results, group: items } = item);
           if (0 !== results.length) {
-            const item = results.forEach((arg0) => {
-              ({ user, channel, text } = arg0);
-              let obj = searchContext(first[18]);
-              const toSearchListUserItemResult = obj.toSearchListUserItem(items, user, closure_2_7);
+            item = results.forEach((item) => {
+              ({ user, channel, text } = item);
+              let obj = AutocompleteScreenUtils;
+              const toSearchListUserItemResult = obj.toSearchListUserItem(searchContext, user, callback2);
               let id;
               if (user != null) {
                 id = user.id;
               }
               let hasItem = null == toSearchListUserItemResult || null == id;
               if (!hasItem) {
-                hasItem = closure_1_1.has(id);
+                hasItem = set.has(id);
               }
               if (!hasItem) {
-                hasItem = closure_2_6.isBlockedOrIgnored(id);
+                hasItem = blockedOrIgnored.isBlockedOrIgnored(id);
               }
               if (!hasItem) {
-                closure_1_1.add(id);
-                closure_1_0.push(toSearchListUserItemResult);
+                set.add(id);
+                items.push(toSearchListUserItemResult);
               }
-              let tmpResult = tmp(tmp2[18]);
-              const result = tmpResult.toSearchListChannelItem(channel, closure_2_8);
+              let tmpResult = tmp(16725);
+              const result = tmpResult.toSearchListChannelItem(channel, callback3);
               let id1;
               if (channel != null) {
                 id1 = channel.id;
               }
               let hasItem1 = null == result || null == id1;
               if (!hasItem1) {
-                hasItem1 = closure_1_2.has(id1);
+                hasItem1 = set1.has(id1);
               }
               if (!hasItem1) {
-                closure_1_2.add(id1);
-                closure_1_0.push(result);
+                set1.add(id1);
+                items.push(result);
               }
-              let tmp22 = closure_0 === closure_3_14.FILTER_HAS;
+              let tmp22 = closure_1_0 === constants2.FILTER_HAS;
               if (tmp22) {
                 tmp22 = null != text;
               }
               if (tmp22) {
-                obj = { type: null, props: null };
-                obj[0] = closure_3_10.GENERIC;
-                obj = { text: null, icon: null, onPress: null };
-                obj[0] = text;
-                tmpResult = tmp(tmp2[18]);
-                obj[1] = tmpResult.getSearchFilterHasIcon(text);
-                obj[2] = closure_2_6;
-                obj[1] = obj;
-                closure_1_0.push(obj);
+                const element = { type: constants.GENERIC, props: null };
+                obj = { text, icon: null, onPress: null };
+                tmpResult = tmp(16725);
+                obj.icon = tmpResult.getSearchFilterHasIcon(text);
+                obj.onPress = callback1;
+                element.props = obj;
+                items.push(element);
               }
               if (tmp27) {
-                obj1 = { type: null, props: null };
-                obj1[0] = closure_3_10.GENERIC;
-                const obj2 = { text: null, icon: null, onPress: null };
-                obj2[0] = text;
-                obj2[1] = tmp(tmp2[18]).getSearchFilterAuthorTypeIcon(text);
-                obj2[2] = closure_2_6;
-                obj1[1] = obj2;
-                closure_1_0.push(obj1);
-                const tmpResult1 = tmp(tmp2[18]);
+                const element1 = { type: constants.GENERIC, props: null };
+                obj = { text, icon: tmp(16725).getSearchFilterAuthorTypeIcon(text), onPress: callback1 };
+                element1.props = obj;
+                items.push(element1);
+                const tmpResult1 = tmp(16725);
               }
             });
           }
         }
       });
       if (0 === items.length) {
-        if (mode.type !== closure_1_13.FILTER) {
+        if (mode.type !== constants3.FILTER) {
           if (null != tokens[tokens.length - 1]) {
             const token = new tmp2(tmp3[19]).Token(tmp32);
-            if (token.type === closure_1_14.ANSWER_USERNAME_FROM) {
+            if (token.type === constants4.ANSWER_USERNAME_FROM) {
               let tmp2Result = tmp2(tmp3[20]);
               if (tmp2Result.isValidUserAutocomplete(token)) {
                 const data = token.getData("userId");
@@ -304,13 +280,13 @@ const memoResult = importAllResult.memo(function AutocompleteScreen(searchContex
                 }
               }
             }
-            if (token.type === closure_1_14.ANSWER_IN) {
+            if (token.type === constants4.ANSWER_IN) {
               if (tmp2Result1.isValidChannelAutocomplete(token, tmp4)) {
                 const data1 = token.getData("channelIds");
                 if (null != data1) {
-                  const item1 = data1.forEach((arg0) => {
-                    const channel = callback.getChannel(arg0);
-                    const result = searchContext(first[18]).toSearchListChannelItem(channel, closure_1_8);
+                  const item1 = data1.forEach((item) => {
+                    const channel = ChannelStore.getChannel(item);
+                    const result = AutocompleteScreenUtils.toSearchListChannelItem(channel, callback3);
                     let id;
                     if (channel != null) {
                       id = channel.id;
@@ -340,15 +316,14 @@ const memoResult = importAllResult.memo(function AutocompleteScreen(searchContex
   }, items10);
   const messageTabCountsErrorText = searchContext(first[21]).useMessageTabCountsErrorText({ searchContext });
   if (null != messageTabCountsErrorText) {
-    obj = { text: null };
-    obj[0] = messageTabCountsErrorText;
-    let tmp18 = jsx(stateFromStores(tmp2[22]), { text: null });
+    obj = { text: messageTabCountsErrorText };
+    let tmp18 = jsx(stateFromStores(tmp2[22]), { text: messageTabCountsErrorText });
   } else {
     if (stateFromStores1) {
       if (0 === memo.length) {
         obj1 = { text: null };
         const intl2 = tmp(tmp2[23]).intl;
-        obj1[0] = intl2.string(tmp(tmp2[23]).t["E4HqQ+"]);
+        obj1.text = intl2.string(tmp(tmp2[23]).t["E4HqQ+"]);
         tmp18 = jsx(stateFromStores(tmp2[22]), { text: null });
         const tmp23 = stateFromStores(tmp2[22]);
       }
@@ -358,20 +333,14 @@ const memoResult = importAllResult.memo(function AutocompleteScreen(searchContex
         if (!first) {
           obj2 = { text: null };
           const intl = tmp(tmp2[23]).intl;
-          obj2[0] = intl.string(tmp(tmp2[23]).t.Dr1vko);
+          obj2.text = intl.string(tmp(tmp2[23]).t.Dr1vko);
           tmp18 = jsx(stateFromStores(tmp2[22]), { text: null });
           const tmp17 = stateFromStores(tmp2[22]);
         }
       }
     }
-    let obj3 = { data: null };
-    obj3[0] = memo;
-    tmp18 = jsx(stateFromStores(tmp2[24]), { data: null });
+    let obj3 = { data: memo };
+    tmp18 = jsx(stateFromStores(tmp2[24]), { data: memo });
   }
   return tmp18;
 });
-let result = require("set").fileFinishedImporting(
-  "modules/search/native/components/layout/autocomplete/AutocompleteScreen.tsx",
-);
-
-export default memoResult;

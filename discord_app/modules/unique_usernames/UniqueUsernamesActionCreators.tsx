@@ -1,52 +1,48 @@
 // discord_app/modules/unique_usernames/UniqueUsernamesActionCreators.tsx
-import dispatcherDefault from "../../Dispatcher.tsx";
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import ME from "../../Constants.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
-const require = arg1;
-({ AnalyticEvents: c4, Endpoints: c5 } = ME);
-const result = require("set").fileFinishedImporting("modules/unique_usernames/UniqueUsernamesActionCreators.tsx");
+const require = fn;
+const Constants = fn(1074);
+({ AnalyticEvents: closure_4, Endpoints: hasOwnProperty } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/unique_usernames/UniqueUsernamesActionCreators.tsx");
 
 export default {
   resetSuggestions() {
-    return dispatcherDefault.dispatch({ type: "UNIQUE_USERNAME_SUGGESTIONS_RESET" });
+    return DispatcherDefault.dispatch({ type: "UNIQUE_USERNAME_SUGGESTIONS_RESET" });
   },
   fetchSuggestionsRegistration(arg0) {
     closure_0 = arg0;
-    let num = arg1;
-    if (arg1 === undefined) {
-      num = 1500;
-    }
-    return callback(function* () {
-      closure_1 = tmp3;
-      closure_1_1(closure_1_2[3]).dispatch({ type: "UNIQUE_USERNAME_SUGGESTIONS_RESET" });
-      c3 = 1;
-      const HTTP = closure_1_0(closure_1_2[4]).HTTP;
-      obj1 = { url: null, query: null, timeout: null, rejectWithError: true, failImmediatelyWhenRateLimited: true };
-      obj1[0] = constants.POMELO_SUGGESTIONS_UNAUTHED;
-      if (null != closure_1_0) {
-        const obj2 = { global_name: null };
-        obj2[0] = closure_1_0;
-        const tmp17 = obj2;
+    return (async (arg0, value) => {
+      tmp3(tmp19[3]).dispatch({ type: "UNIQUE_USERNAME_SUGGESTIONS_RESET" });
+      const HTTP = global_name(tmp19[4]).HTTP;
+      const request = {
+        url: constants.POMELO_SUGGESTIONS_UNAUTHED,
+        query: null,
+        timeout: null,
+        rejectWithError: true,
+        failImmediatelyWhenRateLimited: true,
+      };
+      if (null != global_name) {
+        const tmp17 = { global_name };
       }
-      obj1[1] = tmp17;
-      obj1[2] = closure_1_1;
-      yield HTTP.get(obj1);
+      request.query = tmp17;
+      request.timeout = num;
+      await HTTP.get(request);
       if (1 === tmp7) {
         c3 = 0;
         constants = 3;
       } else if (arg0 === 1) {
         constants = 3;
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
         c3 = 0;
         constants = 3;
-        const obj4 = { value: null, done: true };
-        obj4[0] = arg1;
-        return obj4;
+        return { value, done: true };
       } else {
-        closure_0 = arg1;
-        const body = closure_0.body;
+        closure_128_0 = value;
+        const body = closure_128_0.body;
         let username;
         if (body != null) {
           username = body.username;
@@ -55,38 +51,35 @@ export default {
           c3 = 0;
         }
       }
-      const obj = closure_1_1(closure_1_2[3]);
-      const obj5 = { type: "UNIQUE_USERNAME_REGISTRATION_SUGGESTIONS_SUCCESS", suggestion: null, source: null };
-      obj5[1] = closure_0.body;
-      obj5[2] = closure_0;
-      c3 = 0;
-      return obj.dispatch(obj5);
+      return tmp3(tmp19[3]).dispatch({
+        type: "UNIQUE_USERNAME_REGISTRATION_SUGGESTIONS_SUCCESS",
+        suggestion: closure_128_0.body,
+        source: closure_129_0,
+      });
     })();
   },
-  attemptUsername(arg0, arg1, arg2, closure_3) {
+  attemptUsername(arg0, registration, arg2, arg3) {
     closure_0 = arg0;
-    let str = arg1;
-    if (arg1 === undefined) {
-      str = "modal";
+    if (registration === undefined) {
+      let str = "modal";
     }
     let flag = arg2;
     if (arg2 === undefined) {
       flag = false;
     }
-    let flag2 = closure_3;
-    if (closure_3 === undefined) {
+    let flag2 = arg3;
+    if (arg3 === undefined) {
       flag2 = false;
     }
-    return flag2(function* () {
+    return flag2(function* (arg0, value) {
       if (c6 === 2) {
         c6 = 3;
-        HermesBuiltin.throwTypeError();
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp6 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          let obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
@@ -97,133 +90,128 @@ export default {
           if (0 === c5) {
             if (arg0 === 1) {
               c6 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj = { value, done: true };
               return obj;
             } else {
-              closure_2 = tmp3;
-              let aPIError = tmp7;
-              closure_0 = undefined;
-              aPIError = undefined;
-              closure_2 = undefined;
-              const tmp84 = (function validate(closure_1_0) {
-                if (false === obj.test(closure_1_0)) {
-                  const intl3 = callback(1114).intl;
-                  let stringResult = intl3.string(callback(1114).t.z7c4bP);
-                } else if (closure_1_0.includes("..")) {
-                  const intl2 = callback(1114).intl;
-                  stringResult = intl2.string(callback(1114).t["C7G+gr"]);
-                } else if (closure_1_0.length < 2) {
-                  const intl = callback(1114).intl;
-                  stringResult = intl.formatToPlainString(callback(1114).t.IpijXA, { maxNum: 32, minNum: 2 });
+              str = tmp7;
+              closure_129_0 = undefined;
+              closure_129_1 = undefined;
+              closure_129_2 = undefined;
+              const tmp83 = (function validate(arr) {
+                if (false === obj.test(arr)) {
+                  const intl3 = _undefined(1114).intl;
+                  let stringResult = intl3.string(_undefined(1114).t.z7c4bP);
+                } else if (arr.includes("..")) {
+                  const intl2 = _undefined(1114).intl;
+                  stringResult = intl2.string(_undefined(1114).t["C7G+gr"]);
+                } else if (arr.length < 2) {
+                  const intl = _undefined(1114).intl;
+                  stringResult = intl.formatToPlainString(_undefined(1114).t.IpijXA, { maxNum: 32, minNum: 2 });
                 }
                 return stringResult;
-              })(closure_1_0);
-              if (null != tmp84) {
-                obj1 = { reason: null, username_error: true, location: null, one_click_flow: null };
-                obj1[0] = tmp84;
-                obj1[2] = aPIError;
-                obj1[3] = closure_3;
-                aPIError(closure_1_2[5]).track(constants.POMELO_ERRORS, obj1);
-                const obj14 = aPIError(closure_1_2[5]);
-                let obj2 = { type: "UNIQUE_USERNAME_ATTEMPT_FAILURE", username: null, error: null };
-                obj2[1] = closure_1_0;
-                obj2[2] = tmp84;
+              })(_undefined);
+              if (null != tmp83) {
+                const obj1 = { reason: tmp83, username_error: true, location: str, one_click_flow: flag2 };
+                str(tmp3[5]).track(constants.POMELO_ERRORS, obj1);
+                const obj14 = str(tmp3[5]);
+                let obj2 = { type: "UNIQUE_USERNAME_ATTEMPT_FAILURE", username: _undefined, error: tmp83 };
                 c6 = 3;
-                const obj3 = { value: null, done: true };
-                obj3[0] = aPIError(closure_1_2[3]).dispatch(obj2);
+                const obj3 = { value: str(tmp3[3]).dispatch(obj2), done: true };
                 return obj3;
               } else {
                 constants = 1;
-                let post = aPIError(closure_1_2[6]).post;
-                let obj4 = c5;
-                if (closure_1_2) {
-                  let POMELO_ATTEMPT = obj4.POMELO_ATTEMPT_UNAUTHED;
+                let post = str(tmp3[6]).post;
+                let request = c5;
+                if (flag) {
+                  let POMELO_ATTEMPT = request.POMELO_ATTEMPT_UNAUTHED;
                 } else {
-                  POMELO_ATTEMPT = obj4.POMELO_ATTEMPT;
+                  POMELO_ATTEMPT = request.POMELO_ATTEMPT;
                 }
-                obj4 = { url: null, body: null, trackedActionData: null, rejectWithError: false };
-                obj4[0] = POMELO_ATTEMPT;
-                let obj5 = { username: null };
-                obj5[0] = closure_1_0;
-                obj4[1] = obj5;
-                const obj6 = { event: null, properties: null };
-                obj6[0] = closure_1_0(closure_1_2[7]).NetworkActionNames.POMELO_ATTEMPT;
-                let obj7 = { requested_username: null };
-                obj7[0] = closure_1_0;
-                obj6[1] = obj7;
-                obj4[2] = obj6;
-                post = post(obj4);
+                request = { url: POMELO_ATTEMPT, body: null, trackedActionData: null, rejectWithError: false };
+                const obj4 = { username: _undefined };
+                request.body = obj4;
+                let obj5 = { event: _undefined(tmp3[7]).NetworkActionNames.POMELO_ATTEMPT, properties: null };
+                const obj6 = { requested_username: _undefined };
+                obj5.properties = obj6;
+                request.trackedActionData = obj5;
+                post = post(request);
                 c5 = 2;
                 c6 = 1;
-                const tmp87 = aPIError(closure_1_2[6]);
+                const tmp86 = str(tmp3[6]);
               }
             }
           } else {
             if (1 === tmp7) {
               constants = 0;
-              aPIError = new closure_1_0(closure_1_2[8]).APIError(closure_3);
-              const anyErrorMessage = aPIError.getAnyErrorMessage();
-              closure_0 = anyErrorMessage;
+              closure_129_3 = closure_3;
+              const aPIError = new _undefined(tmp3[8]).APIError(closure_129_3);
+              closure_129_1 = aPIError;
+              const anyErrorMessage = closure_129_1.getAnyErrorMessage();
+              _undefined = anyErrorMessage;
               if (anyErrorMessage == null) {
-                closure_0 = undefined;
+                _undefined = undefined;
               }
-              closure_2 = closure_0;
-              obj5 = aPIError(closure_1_2[5]);
-              const obj8 = { reason: null, username_error: true, location: null, one_click_flow: null };
-              obj8[0] = closure_2;
-              obj8[2] = aPIError;
-              obj8[3] = closure_3;
-              obj5.track(constants.POMELO_ERRORS, obj8);
-              obj7 = aPIError(closure_1_2[3]);
-              const obj9 = {
-                username: null,
+              closure_129_2 = _undefined;
+              obj5 = str(tmp3[5]);
+              let obj7 = {
+                reason: closure_129_2,
+                username_error: true,
+                location: closure_130_1,
+                one_click_flow: closure_130_3,
+              };
+              obj5.track(constants.POMELO_ERRORS, obj7);
+              obj7 = str(tmp3[3]);
+              const obj8 = {
+                username: closure_130_0,
                 type: "UNIQUE_USERNAME_ATTEMPT_FAILURE",
                 error: null,
                 statusCode: null,
                 retryAfter: null,
               };
-              obj9[0] = closure_0;
               let tmp49;
-              if (null != aPIError.status) {
-                if (aPIError.status < 500) {
-                  if (401 !== aPIError.status) {
-                    tmp49 = closure_2;
+              if (null != closure_129_1.status) {
+                if (closure_129_1.status < 500) {
+                  if (401 !== closure_129_1.status) {
+                    tmp49 = closure_129_2;
                   }
                 }
               }
-              obj9[2] = tmp49;
-              obj9[3] = aPIError.status;
-              obj9[4] = aPIError.retryAfter;
-              obj7.dispatch(obj9);
+              obj8.error = tmp49;
+              obj8.statusCode = closure_129_1.status;
+              obj8.retryAfter = closure_129_1.retryAfter;
+              obj7.dispatch(obj8);
               c6 = 3;
             } else if (arg0 === 1) {
               c6 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 !== 2) {
-              closure_0 = arg1;
-              if (closure_0.body.taken) {
-                obj = aPIError(closure_1_2[5]);
-                const obj10 = { reason: "already_taken", username_error: true, location: null, one_click_flow: null };
-                obj10[2] = aPIError;
-                obj10[3] = closure_3;
-                obj.track(constants.POMELO_ERRORS, obj10);
+              closure_129_0 = value;
+              if (closure_129_0.body.taken) {
+                obj = str(tmp3[5]);
+                const obj9 = {
+                  reason: "already_taken",
+                  username_error: true,
+                  location: closure_130_1,
+                  one_click_flow: closure_130_3,
+                };
+                obj.track(constants.POMELO_ERRORS, obj9);
               }
-              obj2 = aPIError(closure_1_2[3]);
-              const obj11 = { type: "UNIQUE_USERNAME_ATTEMPT_SUCCESS", username: null, taken: null };
-              obj11[1] = closure_0;
-              obj11[2] = closure_0.body.taken;
-              obj2.dispatch(obj11);
+              obj2 = str(tmp3[3]);
+              const obj10 = {
+                type: "UNIQUE_USERNAME_ATTEMPT_SUCCESS",
+                username: closure_130_0,
+                taken: closure_129_0.body.taken,
+              };
+              obj2.dispatch(obj10);
               constants = 0;
             }
             constants = 0;
             c6 = 3;
-            const obj12 = { value: null, done: true };
-            obj12[0] = arg1;
-            return obj12;
+            const obj11 = { value, done: true };
+            return obj11;
           }
         } catch (tmp72) {
           closure_3 = tmp72;

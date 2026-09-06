@@ -1,8 +1,10 @@
 // discord_app/modules/premium/hooks/useScheduledForcedUpdate.tsx
-import closure_2 from "../../../../_runtime/00019_noop.js";
+import areHookInputsEqual from "../../../../_runtime/07440_areHookInputsEqual.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/hooks/useScheduledForcedUpdate.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/hooks/useScheduledForcedUpdate.tsx");
 
 export default function useScheduledForcedUpdate(delay) {
   delay = delay.delay;
@@ -10,15 +12,14 @@ export default function useScheduledForcedUpdate(delay) {
   if (flag === undefined) {
     flag = false;
   }
-  let forceUpdate;
-  forceUpdate = delay(flag[1]).useForceUpdate();
+  const forceUpdate = areHookInputsEqual.useForceUpdate();
   const items = [delay, flag, forceUpdate];
-  const effect = forceUpdate.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (timeout > 0) {
       if (!flag) {
         const _setTimeout = setTimeout;
         timeout = setTimeout(() => {
-          callback();
+          forceUpdate();
         }, tmp);
         return () => clearTimeout(closure_0);
       }

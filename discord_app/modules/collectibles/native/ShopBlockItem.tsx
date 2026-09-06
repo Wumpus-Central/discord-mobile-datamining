@@ -1,36 +1,37 @@
 // discord_app/modules/collectibles/native/ShopBlockItem.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../CollectiblesCategoryStore.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import ShopBlockType from "../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import CollectiblesCategoryStore from "../CollectiblesCategoryStore.tsx";
 
-const require = arg1;
-createCacheKey = { shopBlockSpacing: null };
-createCacheKey = { marginTop: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/collectibles/native/ShopBlockItem.tsx");
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { shopBlockSpacing: null };
+createStyles = { marginTop: nativeDefault.space.PX_16 };
+createStyles.shopBlockSpacing = createStyles;
+let closure_7 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/native/ShopBlockItem.tsx");
 
 export default function _default(block) {
   block = block.block;
   ({ screen, preferVCPrice } = block);
-  let stateFromStores;
   let stateFromStores1;
-  const tmp = callback();
+  const tmp = closure_7();
   let obj = block(stateFromStores1[6]);
-  const items = [closure_5];
-  stateFromStores = obj.useStateFromStores(items, () => closure_5.categories);
-  obj1 = block(stateFromStores1[6]);
-  const items1 = [closure_5];
-  stateFromStores1 = obj1.useStateFromStores(items1, () => closure_5.products);
+  const items = [CollectiblesCategoryStore];
+  const stateFromStores = obj.useStateFromStores(items, () => CollectiblesCategoryStore.categories);
+  let obj1 = block(stateFromStores1[6]);
+  const items1 = [CollectiblesCategoryStore];
+  stateFromStores1 = obj1.useStateFromStores(items1, () => CollectiblesCategoryStore.products);
   const items2 = [block, stateFromStores.size, stateFromStores1.size];
-  const memo = React.useMemo(() => {
-    if (block.type === block(stateFromStores1[7]).ShopBlockType.HERO) {
+  const memo = noop.useMemo(() => {
+    if (block.type === ShopBlockType.ShopBlockType.HERO) {
       const _HermesInternal3 = HermesInternal;
       let combined = "hero-" + tmp.categoryStoreListingId;
-    } else if (tmp.type === block(stateFromStores1[7]).ShopBlockType.REWARD_HERO) {
+    } else if (tmp.type === ShopBlockType.ShopBlockType.REWARD_HERO) {
       const _HermesInternal2 = HermesInternal;
       combined = "reward-hero-" + tmp.categoryStoreListingId;
     } else {
@@ -41,56 +42,46 @@ export default function _default(block) {
   }, items2);
   const type = block.type;
   if (block(stateFromStores1[7]).ShopBlockType.HERO === type) {
-    obj = { newValue: null, children: null };
-    obj[0] = { pageSection: "top 4" };
-    obj = { heroBlock: null, preferVCPrice: null, screen: null };
-    obj[0] = block;
-    obj[1] = preferVCPrice;
-    obj[2] = screen;
-    obj[1] = jsx(stateFromStores(tmp3[9]), { heroBlock: null, preferVCPrice: null, screen: null }, memo);
-    return jsx(tmp2(tmp3[8]).CollectiblesAnalyticsProvider, { heroBlock: null, preferVCPrice: null, screen: null });
+    obj = { newValue: { pageSection: "top 4" }, children: null };
+    obj = { heroBlock: block, preferVCPrice, screen };
+    obj.children = jsx(stateFromStores(tmp3[9]), { heroBlock: block, preferVCPrice, screen }, memo);
+    return jsx(tmp2(tmp3[8]).CollectiblesAnalyticsProvider, { heroBlock: block, preferVCPrice, screen });
   } else if (tmp2(tmp3[7]).ShopBlockType.FEATURED === type) {
-    obj1 = { newValue: null, children: null };
-    obj1[0] = { pageSection: "featured_block" };
-    const obj2 = { style: null, children: null };
-    obj2[0] = tmp.shopBlockSpacing;
-    const obj3 = { featuredBlock: null };
-    obj3[0] = block;
-    obj2[1] = jsx(stateFromStores(tmp3[10]), { featuredBlock: null });
-    obj1[1] = (
-      <View key={memo} style={null}>
+    obj1 = { newValue: { pageSection: "featured_block" }, children: null };
+    const obj2 = { style: tmp.shopBlockSpacing, children: null };
+    const obj3 = { featuredBlock: block };
+    obj2.children = jsx(stateFromStores(tmp3[10]), { featuredBlock: block });
+    obj1.children = (
+      <View key={memo} style={tmp.shopBlockSpacing}>
         {null}
       </View>
     );
-    return jsx(tmp2(tmp3[8]).CollectiblesAnalyticsProvider, { newValue: null, children: null });
+    return jsx(tmp2(tmp3[8]).CollectiblesAnalyticsProvider, {
+      newValue: { pageSection: "featured_block" },
+      children: null,
+    });
   } else if (tmp2(tmp3[7]).ShopBlockType.FEED === type) {
-    const obj4 = { newValue: null, children: null };
-    obj4[0] = { pageSection: "popular picks" };
-    const obj5 = { style: null, children: null };
-    obj5[0] = tmp.shopBlockSpacing;
-    const obj6 = { feedBlock: null, screen: null, preferVCPrice: null, disableBundleStaticBackground: true };
-    obj6[0] = block;
-    obj6[1] = screen;
-    obj6[2] = preferVCPrice;
-    obj5[1] = jsx(
+    const obj4 = { newValue: { pageSection: "popular picks" }, children: null };
+    const obj5 = { style: tmp.shopBlockSpacing, children: null };
+    const obj6 = { feedBlock: block, screen, preferVCPrice, disableBundleStaticBackground: true };
+    obj5.children = jsx(
       stateFromStores(tmp3[11]),
-      { feedBlock: null, screen: null, preferVCPrice: null, disableBundleStaticBackground: true },
+      { feedBlock: block, screen, preferVCPrice, disableBundleStaticBackground: true },
       memo,
     );
-    obj4[1] = <View style={null}>{null}</View>;
-    return jsx(tmp2(tmp3[8]).CollectiblesAnalyticsProvider, { newValue: null, children: null });
+    obj4.children = <View style={tmp.shopBlockSpacing}>{null}</View>;
+    return jsx(tmp2(tmp3[8]).CollectiblesAnalyticsProvider, {
+      newValue: { pageSection: "popular picks" },
+      children: null,
+    });
   } else if (tmp2(tmp3[7]).ShopBlockType.SHELF === type) {
     const obj7 = { newValue: null, children: null };
-    const obj8 = { pageSection: null };
-    obj8[0] = block.name;
-    obj7[0] = obj8;
-    const obj9 = { style: null, children: null };
-    obj9[0] = tmp.shopBlockSpacing;
-    const obj10 = { block: null, preferVCPrice: null };
-    obj10[0] = block;
-    obj10[1] = preferVCPrice;
-    obj9[1] = jsx(stateFromStores(tmp3[12]), { block: null, preferVCPrice: null }, memo);
-    obj7[1] = <View style={null}>{null}</View>;
+    const obj8 = { pageSection: block.name };
+    obj7.newValue = obj8;
+    const obj9 = { style: tmp.shopBlockSpacing, children: null };
+    const obj10 = { block, preferVCPrice };
+    obj9.children = jsx(stateFromStores(tmp3[12]), { block, preferVCPrice }, memo);
+    obj7.children = <View style={tmp.shopBlockSpacing}>{null}</View>;
     return jsx(tmp2(tmp3[8]).CollectiblesAnalyticsProvider, { newValue: null, children: null });
   } else {
     const WIDE_BANNER = tmp2(tmp3[7]).ShopBlockType.WIDE_BANNER;

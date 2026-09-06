@@ -1,30 +1,28 @@
 // discord_app/modules/device/native/applyOrientationLock.tsx
-import set from "../../../../_runtime/00002_set.js";
-import handleOrientationChange from "DeviceOrientation.tsx";
+import DeviceOrientation from "DeviceOrientation.tsx";
 import isOrientationLockSupportedDefault from "isOrientationLockSupported.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-let result = set.fileFinishedImporting("modules/device/native/applyOrientationLock.tsx");
+let result = size.fileFinishedImporting("modules/device/native/applyOrientationLock.tsx");
 
 export const applyOrientationLock = function applyOrientationLock(PORTRAIT, flag) {
   if (flag === undefined) {
     flag = true;
   }
   if (isOrientationLockSupportedDefault()) {
-    handleOrientationChange.lockOrientation(PORTRAIT, flag);
-    const obj = handleOrientationChange;
+    DeviceOrientation.lockOrientation(PORTRAIT, flag);
   }
 };
 export const releaseOrientationLock = function releaseOrientationLock(unlockAfterRotatingToPreviousLock) {
   if (isOrientationLockSupportedDefault()) {
-    let obj = handleOrientationChange;
-    obj = { unlockAfterRotatingToPreviousLock: null };
-    obj[0] = unlockAfterRotatingToPreviousLock.unlockAfterRotatingToPreviousLock;
+    const obj = {
+      unlockAfterRotatingToPreviousLock: unlockAfterRotatingToPreviousLock.unlockAfterRotatingToPreviousLock,
+    };
     obj.unlockOrientation(obj);
   }
 };
 export const restoreDefaultOrientationLock = function restoreDefaultOrientationLock() {
   if (isOrientationLockSupportedDefault()) {
-    const result = handleOrientationChange.restoreDefaultOrientation();
-    const obj = handleOrientationChange;
+    const result = DeviceOrientation.restoreDefaultOrientation();
   }
 };

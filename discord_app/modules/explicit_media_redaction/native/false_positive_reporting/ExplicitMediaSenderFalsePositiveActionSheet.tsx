@@ -1,38 +1,44 @@
 // discord_app/modules/explicit_media_redaction/native/false_positive_reporting/ExplicitMediaSenderFalsePositiveActionSheet.tsx
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../ExplicitMediaStore.tsx";
-import { EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_ACTION_SHEET_KEY as closure_5 } from "../../ExplicitMediaRedactionConstants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import ExplicitMediaRedactionActionCreators from "../../ExplicitMediaRedactionActionCreators.tsx";
+import ExplicitMediaFalsePositiveActionCreatorsDefault from "../../ExplicitMediaFalsePositiveActionCreators.tsx";
+import ExplicitMediaFalsePositiveActionSheet from "ExplicitMediaFalsePositiveActionSheet.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import ExplicitMediaStore from "../../ExplicitMediaStore.tsx";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting(
+require = fn;
+let closure_5 = fn(7601).EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_ACTION_SHEET_KEY;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting(
   "modules/explicit_media_redaction/native/false_positive_reporting/ExplicitMediaSenderFalsePositiveActionSheet.tsx",
 );
 
 export default function ExplicitMediaObscuredFalsePositiveActionSheet(channelId) {
   channelId = channelId.channelId;
   const messageId = channelId.messageId;
-  dependencyMap = undefined;
-  let React;
   let reportFalsePositive;
   let obj = channelId(563);
   const items = [reportFalsePositive];
-  const stateFromStores = obj.useStateFromStores(items, () => reportFalsePositive.getFpMessageInfo(messageId));
+  const stateFromStores = obj.useStateFromStores(items, () => ExplicitMediaStore.getFpMessageInfo(messageId));
   const attachments = stateFromStores.attachments;
   dependencyMap = attachments.map((id) => id.id);
   const attachments1 = stateFromStores.attachments;
-  React = attachments1.map((filename) => filename.filename);
+  noop = attachments1.map((filename) => filename.filename);
   obj = {
     onSuccess() {
-      channelId(9400).handleSuccess(closure_1_5);
-      const obj = channelId(9400);
-      const result = messageId(9397).disableFalsePositiveButton(channelId, messageId);
+      ExplicitMediaFalsePositiveActionSheet.handleSuccess(closure_5);
+      const result = ExplicitMediaFalsePositiveActionCreatorsDefault.disableFalsePositiveButton(channelId, messageId);
     },
     onError() {
-      return channelId(9400).handleError();
+      return channelId(closure_2[6]).handleError();
     },
     report() {
-      return channelId(7610).reportFailedSendFalsePositive(channelId, messageId, dependencyMap, closure_3);
+      return ExplicitMediaRedactionActionCreators.reportFailedSendFalsePositive(
+        channelId,
+        messageId,
+        closure_2,
+        closure_3,
+      );
     },
   };
   const explicitMediaActions = channelId(9399).useExplicitMediaActions(obj);
@@ -42,7 +48,7 @@ export default function ExplicitMediaObscuredFalsePositiveActionSheet(channelId)
     const obj4 = messageId(4527);
   }
   const items1 = [reportFalsePositive];
-  const callback = React.useCallback(() => {
+  const callback = noop.useCallback(() => {
     reportFalsePositive();
   }, items1);
   obj = {

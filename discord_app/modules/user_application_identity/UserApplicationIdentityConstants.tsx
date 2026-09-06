@@ -1,6 +1,6 @@
 // discord_app/modules/user_application_identity/UserApplicationIdentityConstants.tsx
-import set from "../../../_runtime/00002_set.js";
-import apexExperiment from "../application_account_linking/experiments/socialSDKMigration.tsx";
+import socialSDKMigration from "../application_account_linking/experiments/socialSDKMigration.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 let obj = {
   RIOT_GAMES: "1443033465766281327",
@@ -25,7 +25,7 @@ obj = {
 };
 const items = [obj[obj.RIOT_GAMES], obj[obj.BATTLENET]];
 const items1 = [obj[obj.RIOT_GAMES], obj[obj.BATTLENET]];
-const result = set.fileFinishedImporting("modules/user_application_identity/UserApplicationIdentityConstants.tsx");
+const result = size.fileFinishedImporting("modules/user_application_identity/UserApplicationIdentityConstants.tsx");
 
 export const ApplicationIdentityAppIds = obj;
 export const APPLICATION_IDENTITY_CONNECTIONS_ALLOWED_APPLICATIONS = items;

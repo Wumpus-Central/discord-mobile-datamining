@@ -1,9 +1,11 @@
 // discord_app/modules/notification_center/useRelativeTimestamp.tsx
-import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../_runtime/00019_noop.js";
+import NotificationCenterUtils from "NotificationCenterUtils.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import noop from "../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/notification_center/useRelativeTimestamp.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/notification_center/useRelativeTimestamp.tsx");
 
 export const useRelativeTimestamp = function useRelativeTimestamp(timestamp) {
   timestamp = timestamp.timestamp;
@@ -11,14 +13,13 @@ export const useRelativeTimestamp = function useRelativeTimestamp(timestamp) {
   if (flag === undefined) {
     flag = true;
   }
-  closure_2 = undefined;
-  const tmp = callback(
-    React.useState(() => timestamp(7641).getRelativeTimestamp(timestamp, flag)),
+  const tmp = _slicedToArray(
+    noop.useState(() => NotificationCenterUtils.getRelativeTimestamp(timestamp, flag)),
     2,
   );
-  closure_2 = tmp[1];
+  dependencyMap = tmp[1];
   const items = [timestamp, flag];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     dependencyMap(timestamp(7641).getRelativeTimestamp(interval, flag));
     const diff = Date.now() - interval;
     if (diff <= flag(1090).Millis.DAY) {
@@ -30,7 +31,7 @@ export const useRelativeTimestamp = function useRelativeTimestamp(timestamp) {
       const _setInterval = setInterval;
       interval = setInterval(
         () => {
-          callback2(callback(closure_1_2[2]).getRelativeTimestamp(callback, closure_1));
+          dependencyMap(timestamp(7641).getRelativeTimestamp(closure_0, flag));
         },
         MINUTE,
         MINUTE - (diff % MINUTE),

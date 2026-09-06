@@ -1,12 +1,12 @@
 // discord_app/modules/messages/native/renderer/system_messages/PrivateChannelIntegrationSystemMessage.tsx
-import set from "../../../../../../_runtime/00002_set.js";
-import ME from "../../../../../Constants.tsx";
-import getMessageAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
+import Constants from "../../../../../Constants.tsx";
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
 import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-const MessageTypes = ME.MessageTypes;
-const result = set.fileFinishedImporting(
+const MessageTypes = Constants.MessageTypes;
+const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/PrivateChannelIntegrationSystemMessage.tsx",
 );
 
@@ -15,7 +15,7 @@ export const createPrivateChannelIntegrationSystemMessage = function createPriva
   type,
 ) {
   const message = roleStyle.message;
-  let obj = getMessageAuthorWithProcessedColor;
+  let obj = useAuthorWithProcessedColor;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
   const tmp5 = formatUsernameOnClickDefault({
     message,
@@ -28,26 +28,26 @@ export const createPrivateChannelIntegrationSystemMessage = function createPriva
     bot = application.bot;
   }
   if (null != bot) {
-    obj = { action: "bindUserMenu", userId: null, messageChannelId: null, medium: true };
-    obj[1] = application.bot.id;
-    obj[2] = message.channel_id;
+    obj = { action: "bindUserMenu", userId: application.bot.id, messageChannelId: message.channel_id, medium: true };
   }
   if (type === MessageTypes.PRIVATE_CHANNEL_INTEGRATION_ADDED) {
     let tmpResult = tmp(7996);
-    obj = { application: null, username: null, usernameOnClick: null, applicationNameOnClick: null };
-    obj[0] = application;
-    obj[1] = messageAuthorWithProcessedColor.nick;
-    obj[2] = tmp5;
-    obj[3] = tmp7;
+    obj = {
+      application,
+      username: messageAuthorWithProcessedColor.nick,
+      usernameOnClick: tmp5,
+      applicationNameOnClick: tmp7,
+    };
     let privateChannelIntegrationAddedSystemMessageASTContent =
       tmpResult.getPrivateChannelIntegrationAddedSystemMessageASTContent(obj);
   } else {
     tmpResult = tmp(7996);
-    obj1 = { application: null, username: null, usernameOnClick: null, applicationNameOnClick: null };
-    obj1[0] = application;
-    obj1[1] = messageAuthorWithProcessedColor.nick;
-    obj1[2] = tmp5;
-    obj1[3] = tmp7;
+    const obj1 = {
+      application,
+      username: messageAuthorWithProcessedColor.nick,
+      usernameOnClick: tmp5,
+      applicationNameOnClick: tmp7,
+    };
     privateChannelIntegrationAddedSystemMessageASTContent =
       tmpResult.getPrivateChannelIntegrationRemovedSystemMessageASTContent(obj1);
   }

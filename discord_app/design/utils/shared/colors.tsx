@@ -1,17 +1,16 @@
 // discord_app/design/utils/shared/colors.tsx
-import set from "../../../../_runtime/00002_set.js";
-import nDefault from "../../../../_runtime/00672_n.js";
+import _modDef672 from "../../../../_runtime/metro/00672__.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("design/utils/shared/colors.tsx");
+const result = size.fileFinishedImporting("design/utils/shared/colors.tsx");
 
 export const flattenColorOverOpaqueBackground = function flattenColorOverOpaqueBackground(token, context) {
-  const obj = nDefault(token);
-  const tmp = importDefault;
+  const obj = _modDef672(token);
   const rgbaResult = obj.rgba();
-  const rgbaResult1 = nDefault(context).rgba();
+  const rgbaResult1 = _modDef672(context).rgba();
   if (1 !== rgbaResult1[3]) {
     const _Error = Error;
-    error = new Error("Expected solid cutout background color to be opaque");
+    const error = new Error("Expected solid cutout background color to be opaque");
     throw error;
   } else {
     const diff = 1 - tmp10;
@@ -21,8 +20,8 @@ export const flattenColorOverOpaqueBackground = function flattenColorOverOpaqueB
     const _Math3 = Math;
     const rounded1 = Math.round(rgbaResult[1] * tmp10 + rgbaResult1[1] * diff);
     const rounded2 = Math.round(rgbaResult[2] * tmp10 + rgbaResult1[2] * diff);
-    const tmpResult = nDefault;
-    return nDefault.rgb(rounded, rounded1, rounded2).hex();
+    const tmpResult = _modDef672;
+    return _modDef672.rgb(rounded, rounded1, rounded2).hex();
   }
-  const obj2 = nDefault(context);
+  const obj2 = _modDef672(context);
 };

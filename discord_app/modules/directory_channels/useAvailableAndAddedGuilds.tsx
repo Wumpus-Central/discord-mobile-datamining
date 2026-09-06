@@ -1,39 +1,40 @@
 // discord_app/modules/directory_channels/useAvailableAndAddedGuilds.tsx
-import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_5 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_6 from "../../../_runtime/00019_noop.js";
-import closure_7 from "../../stores/GuildStore.tsx";
-import closure_8 from "../../stores/PermissionStore.tsx";
-import closure_9 from "../../stores/SortedGuildStore.tsx";
-import closure_10 from "GuildDirectoryStore.tsx";
-import { Permissions } from "../../Constants.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import noop from "../../../_runtime/metro/00019__.js";
+import GuildStore from "../../stores/GuildStore.tsx";
+import PermissionStore from "../../stores/PermissionStore.tsx";
+import SortedGuildStore from "../../stores/SortedGuildStore.tsx";
+import GuildDirectoryStore from "GuildDirectoryStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/directory_channels/useAvailableAndAddedGuilds.tsx");
+const require = fn;
+const Permissions = fn(1074).Permissions;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/directory_channels/useAvailableAndAddedGuilds.tsx");
 
 export default function useAvailableAndAddedGuilds(arg0, arg1) {
-  const _require = arg0;
+  _require = arg0;
   importDefault = arg1;
-  const tmp = callback(React.useState(false), 2);
+  const tmp = _slicedToArray(noop.useState(false), 2);
   closure_2 = tmp[1];
-  let obj = _require(stateFromStores[8]);
-  let items = [closure_10];
-  stateFromStores = obj.useStateFromStores(items, () => closure_1_10.getAdminGuildEntryIds(closure_1));
-  const items1 = [closure_9, closure_7, closure_8];
+  let obj = require("initialize");
+  let items = [GuildDirectoryStore];
+  stateFromStores = obj.useStateFromStores(items, () => GuildDirectoryStore.getAdminGuildEntryIds(closure_1));
+  const items1 = [SortedGuildStore, GuildStore, PermissionStore];
   const items2 = [arg0];
-  const stateFromStoresArray = _require(stateFromStores[8]).useStateFromStoresArray(
+  const stateFromStoresArray = require("initialize").useStateFromStoresArray(
     items1,
     () => {
-      const flattenedGuildIds = closure_1_9.getFlattenedGuildIds();
+      flattenedGuildIds = flattenedGuildIds.getFlattenedGuildIds();
       const items = [];
-      const item = flattenedGuildIds.forEach((arg0) => {
-        const guild = closure_2_7.getGuild(arg0);
+      const item = flattenedGuildIds.forEach((item) => {
+        const guild = GuildStore.getGuild(item);
         let canResult = null != guild;
         if (canResult) {
-          canResult = closure_2_8.can(closure_2_11.ADMINISTRATOR, guild);
+          canResult = PermissionStore.can(Permissions.ADMINISTRATOR, guild);
         }
         if (canResult) {
-          canResult = guild.id !== items;
+          canResult = guild.id !== closure_0;
         }
         if (canResult) {
           items.push(guild);
@@ -43,92 +44,87 @@ export default function useAvailableAndAddedGuilds(arg0, arg1) {
     },
     items2,
   );
-  importDefault(stateFromStores[9])(() => {
-    stateFromStoresArray(function* () {
-      if (v0 === 2) {
-        v0 = 3;
-        HermesBuiltin.throwTypeError();
+  require("useMountEffect")(() => {
+    (async (arg0, value) => {
+      if (v3 === 2) {
+        v3 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp4 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          let obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
         }
       } else {
         try {
-          v0 = 2;
+          v3 = 2;
           if (0 === c1) {
             if (arg0 === 1) {
-              v0 = 3;
-              throw arg1;
+              v3 = 3;
+              throw value;
             } else if (arg0 === 2) {
-              v0 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              v3 = 3;
+              obj = { value, done: true };
               return obj;
             } else {
               closure_0 = tmp2;
-              v0(true);
-              obj1 = v0(closure_1_3[10]);
+              closure_2_2(true);
+              let obj1 = v3(stateFromStores[10]);
               c1 = 1;
-              v0 = 1;
+              v3 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = obj1.fetchGuildEntriesForIds(
-                c1,
-                closure_1_4.map((id) => id.id),
+              obj1.value = obj1.fetchGuildEntriesForIds(
+                closure_2_1,
+                stateFromStoresArray.map((id) => id.id),
               );
               return obj1;
             }
           } else if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
+            v3 = 3;
+            throw value;
           } else if (arg0 === 2) {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            v3 = 3;
+            obj = { value, done: true };
             return obj;
           } else {
-            v0(false);
-            v0 = 3;
+            closure_128_2(false);
+            v3 = 3;
             return { value: "HermesInternal", done: null };
           }
         } catch (tmp15) {
-          v0 = tmp;
+          v3 = tmp;
           throw tmp15;
         }
       }
     })();
   });
-  obj = {
-    availableGuilds: React.useMemo(
-      () =>
-        stateFromStoresArray.filter((id) => {
-          let hasItem;
-          if (closure_3 != null) {
-            hasItem = closure_3.has(id.id);
-          }
-          return !hasItem;
-        }),
-      items3,
-    ),
-    addedGuilds: React.useMemo(
-      () =>
-        stateFromStoresArray.filter((id) => {
-          let hasItem;
-          if (closure_3 != null) {
-            hasItem = closure_3.has(id.id);
-          }
-          return hasItem;
-        }),
-      items4,
-    ),
-    loading: tmp[0],
-  };
-  items3 = [stateFromStoresArray, stateFromStores];
-  items4 = [stateFromStoresArray, stateFromStores];
+  obj = { availableGuilds: null, addedGuilds: null, loading: tmp[0] };
+  const items3 = [stateFromStoresArray, stateFromStores];
+  obj.availableGuilds = noop.useMemo(
+    () =>
+      stateFromStoresArray.filter((id) => {
+        let hasItem;
+        if (stateFromStores != null) {
+          hasItem = stateFromStores.has(id.id);
+        }
+        return !hasItem;
+      }),
+    items3,
+  );
+  const items4 = [stateFromStoresArray, stateFromStores];
+  obj.addedGuilds = noop.useMemo(
+    () =>
+      stateFromStoresArray.filter((id) => {
+        let hasItem;
+        if (stateFromStores != null) {
+          hasItem = stateFromStores.has(id.id);
+        }
+        return hasItem;
+      }),
+    items4,
+  );
   return obj;
 }

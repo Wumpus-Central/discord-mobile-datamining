@@ -1,64 +1,66 @@
 // discord_app/modules/user_settings/account/native/SettingsAccountHeader.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import handleOpenEmailVerification from "UserSettingsAccountUnverifiedHeader.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
+import EmailVerificationModalActionCreatorsDefault from "../../../../actions/native/EmailVerificationModalActionCreators.tsx";
+import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader.tsx";
+import openUserSettings from "../../core/native/openUserSettings.tsx";
 import SafetySettingsNoticeDefault from "../../../safety_common/native/SafetySettingsNotice.tsx";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../../stores/RelationshipStore.tsx";
-import closure_6 from "../../../../stores/UserStore.tsx";
-import { AnalyticsSections } from "../../../../Constants.tsx";
-import { SafetySettingsNoticeType } from "../../../safety_common/Constants.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import RelationshipStore from "../../../../stores/RelationshipStore.tsx";
+import UserStore from "../../../../stores/UserStore.tsx";
 
-require = arg1;
+require = fn;
 function RestrictedAccountRedirect() {
   let obj = {
-    label: getSystemLocale.t.zqv4nV,
+    label: util.t.zqv4nV,
     labelHook() {
-      let obj = callback(table[11]);
-      obj = { screen: constants.SETTINGS_CONTENT_AND_SOCIAL };
+      const obj = { screen: constants.SETTINGS_CONTENT_AND_SOCIAL };
       obj.openUserSettings(obj);
     },
     noticeType: SafetySettingsNoticeType.RESTRICTED_ACCOUNTS_SETTING_NOTICE,
   };
-  return callback(SafetySettingsNoticeDefault, obj);
+  return React7(SafetySettingsNoticeDefault, obj);
 }
-let c3 = importAllResult;
-({ jsx: c9, jsxs: c10 } = jsxProd);
+const View = fn(17).View;
+const AnalyticsSections = fn(1074).AnalyticsSections;
+const SafetySettingsNoticeType = fn(8399).SafetySettingsNoticeType;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const createStyles = fn(4560);
 let obj = { header: null };
-obj = { paddingTop: ThemesDefault.space.PX_24, gap: ThemesDefault.space.PX_24 };
-obj[0] = obj;
-let closure_11 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(() => {
+obj = { paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24 };
+obj.header = obj;
+let closure_11 = createStyles.createStyles(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/account/native/SettingsAccountHeader.tsx");
+
+export default noop.memo(() => {
   let obj = initialize;
-  const items = [closure_6];
+  const items = [UserStore];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  obj1 = handleOpenEmailVerification;
+  let obj1 = UserSettingsAccountUnverifiedHeader;
   const bannerText = obj1.getBannerText(stateFromStores);
-  const tmp = callback2();
-  const items1 = [closure_5];
+  const tmp = closure_11();
+  const items1 = [RelationshipStore];
   const stateFromStores1 = initialize.useStateFromStores(
     items1,
     () => blockedOrIgnoredIDs.getBlockedOrIgnoredIDs().size > 0,
   );
-  const callback = importAllResult.useCallback(() => {
-    callback(table[14]).open();
+  const callback = noop.useCallback(() => {
+    EmailVerificationModalActionCreatorsDefault.open();
   }, []);
   if (null != bannerText) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.header;
+    obj = { style: tmp.header, children: null };
     let tmp11 = null;
     if (stateFromStores1) {
-      tmp11 = callback(RestrictedAccountRedirect, {});
+      tmp11 = React7(RestrictedAccountRedirect, {});
     }
     const items2 = [tmp11];
     let tmp14 = null;
     if (null != bannerText) {
       obj = {
-        onPress: null,
+        onPress: callback,
         variant: "danger",
         label: null,
         accessibilityLabel: null,
@@ -66,24 +68,18 @@ const memoResult = importAllResult.memo(() => {
         start: true,
         end: true,
       };
-      obj[0] = callback;
-      ({ title: obj5[2], title: obj5[3] } = bannerText);
+      ({ title: obj5.label, title: obj5.accessibilityLabel } = bannerText);
       obj1 = { text: null, accessibilityLabel: null, onPress: null };
-      ({ button: obj6[0], button: obj6[1] } = bannerText);
-      obj1[2] = callback;
-      obj[4] = callback(tmp2(4975).Button, obj1);
-      tmp14 = callback(tmp2(5605).TableRow, obj);
+      ({ button: obj6.text, button: obj6.accessibilityLabel } = bannerText);
+      obj1.onPress = callback;
+      obj.trailing = React7(tmp2(4975).Button, obj1);
+      tmp14 = React7(tmp2(5605).TableRow, obj);
     }
     items2[1] = tmp14;
-    obj[1] = items2;
-    let tmp9Result = closure_10(View, obj);
-    const tmp10 = View;
-    const tmp9 = closure_10;
+    obj.children = items2;
+    let tmp9Result = closure_1_10(View, obj);
   } else {
     tmp9Result = null;
   }
   return tmp9Result;
 });
-const result = require("set").fileFinishedImporting("modules/user_settings/account/native/SettingsAccountHeader.tsx");
-
-export default memoResult;

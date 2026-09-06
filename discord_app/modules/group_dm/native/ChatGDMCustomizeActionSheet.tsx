@@ -1,12 +1,13 @@
 // discord_app/modules/group_dm/native/ChatGDMCustomizeActionSheet.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
 import useNavigatorConfirmChangesOnBackDefault from "../../main_tabs_v2/native/utils/useNavigatorConfirmChangesOnBack.tsx";
-import _modDef10924 from "../../main_tabs_v2/native/utils/ModalStackNavigator.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import ModalStackNavigatorDefault from "../../main_tabs_v2/native/utils/ModalStackNavigator.tsx";
+import ChatGDMCustomizeDefault from "ChatGDMCustomize.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/group_dm/native/ChatGDMCustomizeActionSheet.tsx");
+const require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/group_dm/native/ChatGDMCustomizeActionSheet.tsx");
 
 export default function ChatGDMCustomizeActionSheet(channelId) {
   channelId = channelId.channelId;
@@ -16,9 +17,9 @@ export default function ChatGDMCustomizeActionSheet(channelId) {
   const obj = { screenKey: "kick", title: null, render: null };
   const tmp = useNavigatorConfirmChangesOnBackDefault();
   const intl = channelId(1114).intl;
-  obj[1] = intl.string(channelId(1114).t["1r5E+m"]);
-  obj[2] = function render() {
-    return closure_1_3(_undefined(_undefined2[5]), { ref: _undefined2, onFinish: _undefined, channelId });
+  obj.title = intl.string(channelId(1114).t["1r5E+m"]);
+  obj.render = function render() {
+    return jsx(ChatGDMCustomizeDefault, { ref, onFinish, channelId });
   };
-  return jsx(_modDef10924, { screenKey: "kick", title: null, render: null });
+  return jsx(ModalStackNavigatorDefault, { screenKey: "kick", title: null, render: null });
 }

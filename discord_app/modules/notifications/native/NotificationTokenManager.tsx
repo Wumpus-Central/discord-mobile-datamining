@@ -1,26 +1,27 @@
 // discord_app/modules/notifications/native/NotificationTokenManager.tsx
-import set2 from "../../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import dispatcherDefault from "../../../Dispatcher.tsx";
-import ME from "../../../Constants.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import _modDef1232 from "../../../utils/SentryUtils.native.tsx";
-import initializeDefault from "../../../lib/LifecycleManager.tsx";
-import messagesProxyDefault from "../NotificationSettings.messages.js";
-import NativeModulesDefault from "../../../lib/pushnotification/PushNotification.tsx";
-import items2 from "../NotificationSettingsConstants.tsx";
-import apexExperiment from "NotifSettingsExperiments.tsx";
-import inferImportanceFromBehaviorDefault from "NotifSettingsUtils.android.tsx";
+import _mod17 from "../../../../_runtime/metro/00017__.js";
+import DispatcherDefault from "../../../Dispatcher.tsx";
+import Constants from "../../../Constants.tsx";
+import util from "../../../intl/index.native.tsx";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
+import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
+import _modDef2722 from "../NotificationSettings.messages.js";
+import PushNotificationDefault from "../../../lib/pushnotification/PushNotification.tsx";
+import PushNotificationActionCreatorsDefault from "../../../actions/native/PushNotificationActionCreators.tsx";
+import NotificationSettingsConstants from "../NotificationSettingsConstants.tsx";
+import NotifSettingsExperiments from "NotifSettingsExperiments.tsx";
+import NotifSettingsUtilsDefault from "NotifSettingsUtils.android.tsx";
 import NativeNotifSettingsModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeNotifSettingsModule.tsx";
-import closure_4 from "../../experiments/apex/ApexExperimentStore.tsx";
-import closure_5 from "../../multi_account/MultiAccountStore.tsx";
-import closure_6 from "../../multi_account/MultiAccountSwitchStore.tsx";
-import closure_7 from "../../../stores/AuthenticationStore.tsx";
+import ApexExperimentStore from "../../experiments/apex/ApexExperimentStore.tsx";
+import MultiAccountStore from "../../multi_account/MultiAccountStore.tsx";
+import MultiAccountSwitchStore from "../../multi_account/MultiAccountSwitchStore.tsx";
+import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
+import LifecycleManager from "../../../lib/LifecycleManager.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const NativeModules = get_ActivityIndicator.NativeModules;
-const NOTIF_SETTINGS = items2.NOTIF_SETTINGS;
-const AnalyticEvents = ME.AnalyticEvents;
-initializeDefault;
+const NativeModules = _mod17.NativeModules;
+const NOTIF_SETTINGS = NotificationSettingsConstants.NOTIF_SETTINGS;
+const AnalyticEvents = Constants.AnalyticEvents;
 class NotificationTokenManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -41,26 +42,24 @@ class NotificationTokenManager extends tmp2 {
     };
     applyArgumentsResult.registerToken = function registerToken() {
       if (null != applyArgumentsResult.token) {
-        const DCDNotificationCategoryUtils = closure_1_3.DCDNotificationCategoryUtils;
-        const intl = applyArgumentsResult(closure_1_2[13]).intl;
-        const stringResult = intl.string(applyArgumentsResult(closure_1_2[13]).t.TBA5Xg);
-        const intl2 = applyArgumentsResult(closure_1_2[13]).intl;
-        const intl3 = applyArgumentsResult(closure_1_2[13]).intl;
+        const DCDNotificationCategoryUtils = NativeModules.DCDNotificationCategoryUtils;
+        const intl = util.intl;
+        const stringResult = intl.string(util.t.TBA5Xg);
+        const intl2 = util.intl;
+        const intl3 = util.intl;
         const result = DCDNotificationCategoryUtils.registerNotificationReplyCategories(
           stringResult,
-          intl2.string(applyArgumentsResult(closure_1_2[13]).t.TXNS7S),
-          intl3.string(applyArgumentsResult(closure_1_2[13]).t.TBA5Xg),
+          intl2.string(util.t.TXNS7S),
+          intl3.string(util.t.TBA5Xg),
           () => {},
         );
-        if (closure_1_3.PushNotificationAndroid) {
+        if (NativeModules.PushNotificationAndroid) {
           const PushNotificationAndroid = tmp5.PushNotificationAndroid;
           const result1 = PushNotificationAndroid.onRegisterNotificationToken();
         }
-        const stringResult1 = intl2.string(applyArgumentsResult(closure_1_2[13]).t.TXNS7S);
-        tmp5 = closure_1_3;
-        const tmp7 = closure_1_2;
-        closure_1_1(closure_1_2[18]).registerDevice(tmp.token);
-        const obj = closure_1_1(closure_1_2[18]);
+        const stringResult1 = intl2.string(util.t.TXNS7S);
+        tmp5 = NativeModules;
+        PushNotificationActionCreatorsDefault.registerDevice(tmp.token);
       }
     };
     applyArgumentsResult.handleSyncNoMultiAccountOnLoginSuccess = function handleSyncNoMultiAccountOnLoginSuccess() {
@@ -85,7 +84,7 @@ class NotificationTokenManager extends tmp2 {
     applyArgumentsResult.handleSyncNoMultiAccount = function handleSyncNoMultiAccount() {
       let canSync = applyArgumentsResult.canSync;
       if (canSync) {
-        canSync = !closure_1_5.canUseMultiAccountNotifications;
+        canSync = !MultiAccountStore.canUseMultiAccountNotifications;
       }
       if (canSync) {
         applyArgumentsResult.registerToken();
@@ -94,7 +93,7 @@ class NotificationTokenManager extends tmp2 {
     applyArgumentsResult.handleSyncWithMultiAccount = function handleSyncWithMultiAccount() {
       let canUseMultiAccountNotifications = applyArgumentsResult.canSync;
       if (canUseMultiAccountNotifications) {
-        canUseMultiAccountNotifications = closure_1_5.canUseMultiAccountNotifications;
+        canUseMultiAccountNotifications = MultiAccountStore.canUseMultiAccountNotifications;
       }
       if (canUseMultiAccountNotifications) {
         applyArgumentsResult.registerToken();
@@ -105,39 +104,30 @@ class NotificationTokenManager extends tmp2 {
 }
 const prototype = NotificationTokenManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  let self = this;
-  self = this;
+  const self = this;
   if (null != this.token) {
     self.handleToken(self.token);
   }
-  closure_4.addChangeListener(self._handleExperimentsUpdated);
+  ApexExperimentStore.addChangeListener(self._handleExperimentsUpdated);
   self._experimentUnsubscribe = () => {
-    closure_1_4.removeChangeListener(self._handleExperimentsUpdated);
+    ApexExperimentStore.removeChangeListener(self._handleExperimentsUpdated);
   };
-  const subscription = dispatcherDefault.subscribe("LOGIN_SUCCESS", self.handleSyncNoMultiAccountOnLoginSuccess);
-  const obj = dispatcherDefault;
-  const subscription1 = dispatcherDefault.subscribe("REGISTER_SUCCESS", self.handleSyncNoMultiAccountOnRegisterSuccess);
-  const obj2 = dispatcherDefault;
-  const subscription2 = dispatcherDefault.subscribe(
+  const subscription = DispatcherDefault.subscribe("LOGIN_SUCCESS", self.handleSyncNoMultiAccountOnLoginSuccess);
+  const subscription1 = DispatcherDefault.subscribe("REGISTER_SUCCESS", self.handleSyncNoMultiAccountOnRegisterSuccess);
+  const subscription2 = DispatcherDefault.subscribe(
     "POST_CONNECTION_OPEN",
     self.handleSyncNoMultiAccountOnPostConnectionOpen,
   );
-  const obj3 = dispatcherDefault;
-  const subscription3 = dispatcherDefault.subscribe("POST_CONNECTION_OPEN", self.handleSyncWithMultiAccount);
-  const obj4 = dispatcherDefault;
-  const subscription4 = dispatcherDefault.subscribe("MULTI_ACCOUNT_REMOVE_ACCOUNT", self.handleSyncWithMultiAccount);
+  const subscription3 = DispatcherDefault.subscribe("POST_CONNECTION_OPEN", self.handleSyncWithMultiAccount);
+  const subscription4 = DispatcherDefault.subscribe("MULTI_ACCOUNT_REMOVE_ACCOUNT", self.handleSyncWithMultiAccount);
 };
 prototype["_terminate"] = function _terminate() {
   const self = this;
-  dispatcherDefault.unsubscribe("LOGIN_SUCCESS", this.handleSyncNoMultiAccountOnLoginSuccess);
-  const obj = dispatcherDefault;
-  dispatcherDefault.unsubscribe("REGISTER_SUCCESS", this.handleSyncNoMultiAccountOnRegisterSuccess);
-  const obj2 = dispatcherDefault;
-  dispatcherDefault.unsubscribe("POST_CONNECTION_OPEN", this.handleSyncNoMultiAccountOnPostConnectionOpen);
-  const obj3 = dispatcherDefault;
-  dispatcherDefault.unsubscribe("POST_CONNECTION_OPEN", this.handleSyncWithMultiAccount);
-  const obj4 = dispatcherDefault;
-  dispatcherDefault.unsubscribe("MULTI_ACCOUNT_REMOVE_ACCOUNT", this.handleSyncWithMultiAccount);
+  DispatcherDefault.unsubscribe("LOGIN_SUCCESS", this.handleSyncNoMultiAccountOnLoginSuccess);
+  DispatcherDefault.unsubscribe("REGISTER_SUCCESS", this.handleSyncNoMultiAccountOnRegisterSuccess);
+  DispatcherDefault.unsubscribe("POST_CONNECTION_OPEN", this.handleSyncNoMultiAccountOnPostConnectionOpen);
+  DispatcherDefault.unsubscribe("POST_CONNECTION_OPEN", this.handleSyncWithMultiAccount);
+  DispatcherDefault.unsubscribe("MULTI_ACCOUNT_REMOVE_ACCOUNT", this.handleSyncWithMultiAccount);
   if (null != this._experimentUnsubscribe) {
     const result = self._experimentUnsubscribe();
     self._experimentUnsubscribe = null;
@@ -147,21 +137,20 @@ prototype["registerListener"] = function registerListener() {
   const self = this;
   if (this.hasRegisterEventListener) {
     const _Error = Error;
-    error = new Error("Device token listener already registered.");
+    const error = new Error("Device token listener already registered.");
     throw error;
   } else {
     self.hasRegisterEventListener = true;
-    const result = NativeModulesDefault.addRegisterEventListener(self.handleToken);
+    const result = PushNotificationDefault.addRegisterEventListener(self.handleToken);
   }
 };
-prototype["registerNotificationCategories"] = function registerNotificationCategories(arg0) {
-  const declarativeNotifSettingsExperiment = apexExperiment.declarativeNotifSettingsExperiment;
+prototype["registerNotificationCategories"] = function registerNotificationCategories() {
+  const declarativeNotifSettingsExperiment = NotifSettingsExperiments.declarativeNotifSettingsExperiment;
   const config = declarativeNotifSettingsExperiment.getConfig({ location: "registerNotificationCategories" });
   let flag = false;
   try {
     if (config.enabled) {
-      flag = inferImportanceFromBehaviorDefault.registerDeclarativeNotificationCategories();
-      const obj = inferImportanceFromBehaviorDefault;
+      flag = NotifSettingsUtilsDefault.registerDeclarativeNotificationCategories();
     }
     const self = this;
     if (flag) {
@@ -169,20 +158,18 @@ prototype["registerNotificationCategories"] = function registerNotificationCateg
     } else {
       try {
         if (config.clearDeclarative) {
-          _modDef1232.addBreadcrumb({ message: "Clearing declarative notification categories" });
-          const obj3 = _modDef1232;
-          inferImportanceFromBehaviorDefault.clear();
-          const obj4 = inferImportanceFromBehaviorDefault;
+          SentryUtilsDefault.addBreadcrumb({ message: "Clearing declarative notification categories" });
+          NotifSettingsUtilsDefault.clear();
         }
         const result1 = self.registerLegacyNotificationCategories();
       } catch (tmp12) {
-        importDefault(result1[12]).captureException(tmp12);
-        const obj5 = importDefault(result1[12]);
+        require("SentryUtils").captureException(tmp12);
+        const obj5 = require("SentryUtils");
       }
     }
   } catch (tmp6) {
-    importDefault(tmp2[12]).captureException(tmp6);
-    const obj2 = importDefault(tmp2[12]);
+    require("SentryUtils").captureException(tmp6);
+    const obj2 = require("SentryUtils");
   }
 };
 prototype["registerLegacyNotificationCategories"] = function registerLegacyNotificationCategories() {
@@ -207,45 +194,45 @@ prototype["registerLegacyNotificationCategories"] = function registerLegacyNotif
       default: null,
       reactions: null,
     };
-    const intl = getSystemLocale.intl;
-    obj[0] = intl.string(messagesProxyDefault["IUH/Oe"]);
-    const intl2 = getSystemLocale.intl;
-    obj[1] = intl2.string(messagesProxyDefault.VeBD1N);
-    const intl3 = getSystemLocale.intl;
-    obj[2] = intl3.string(messagesProxyDefault["4qWUAO"]);
-    const intl4 = getSystemLocale.intl;
-    obj[3] = intl4.string(messagesProxyDefault.NGdNZb);
-    const intl5 = getSystemLocale.intl;
-    obj[4] = intl5.string(messagesProxyDefault.NxgGZA);
-    const intl6 = getSystemLocale.intl;
-    obj[5] = intl6.string(messagesProxyDefault.MOjygY);
-    const intl7 = getSystemLocale.intl;
-    obj[6] = intl7.string(messagesProxyDefault["UzRF+8"]);
-    const intl8 = getSystemLocale.intl;
-    obj[7] = intl8.string(messagesProxyDefault["4n388K"]);
-    const intl9 = getSystemLocale.intl;
-    obj[8] = intl9.string(messagesProxyDefault["40TIqW"]);
-    const intl10 = getSystemLocale.intl;
-    obj[9] = intl10.string(getSystemLocale.t.p5jg9S);
-    const intl11 = getSystemLocale.intl;
-    obj[10] = intl11.string(messagesProxyDefault.HibKoy);
-    const intl12 = getSystemLocale.intl;
-    obj[11] = intl12.string(messagesProxyDefault.zJlwvV);
-    const intl13 = getSystemLocale.intl;
-    obj[12] = intl13.string(messagesProxyDefault.kIrLfg);
-    const intl14 = getSystemLocale.intl;
-    obj[13] = intl14.string(messagesProxyDefault["T+79Eo"]);
-    const intl15 = getSystemLocale.intl;
-    obj[14] = intl15.string(getSystemLocale.t.gHp0C4);
+    const intl = util.intl;
+    obj.calls = intl.string(_modDef2722["IUH/Oe"]);
+    const intl2 = util.intl;
+    obj.mediaConnections = intl2.string(_modDef2722.VeBD1N);
+    const intl3 = util.intl;
+    obj.messages = intl3.string(_modDef2722["4qWUAO"]);
+    const intl4 = util.intl;
+    obj.directMessages = intl4.string(_modDef2722.NGdNZb);
+    const intl5 = util.intl;
+    obj.friendRequests = intl5.string(_modDef2722.NxgGZA);
+    const intl6 = util.intl;
+    obj.polls = intl6.string(_modDef2722.MOjygY);
+    const intl7 = util.intl;
+    obj.social = intl7.string(_modDef2722["UzRF+8"]);
+    const intl8 = util.intl;
+    obj.stageLive = intl8.string(_modDef2722["4n388K"]);
+    const intl9 = util.intl;
+    obj.guildEventLive = intl9.string(_modDef2722["40TIqW"]);
+    const intl10 = util.intl;
+    obj.guildHighlights = intl10.string(util.t.p5jg9S);
+    const intl11 = util.intl;
+    obj.forumThreadCreated = intl11.string(_modDef2722.HibKoy);
+    const intl12 = util.intl;
+    obj.systemMessages = intl12.string(_modDef2722.zJlwvV);
+    const intl13 = util.intl;
+    obj.other = intl13.string(_modDef2722.kIrLfg);
+    const intl14 = util.intl;
+    obj.default = intl14.string(_modDef2722["T+79Eo"]);
+    const intl15 = util.intl;
+    obj.reactions = intl15.string(util.t.gHp0C4);
     obj = { realtime: null, social: null, server: null, other: null };
-    const intl16 = getSystemLocale.intl;
-    obj[0] = intl16.string(messagesProxyDefault.S5cB9e);
-    const intl17 = getSystemLocale.intl;
-    obj[1] = intl17.string(messagesProxyDefault["UzRF+8"]);
-    const intl18 = getSystemLocale.intl;
-    obj[2] = intl18.string(messagesProxyDefault.zRKbpz);
-    const intl19 = getSystemLocale.intl;
-    obj[3] = intl19.string(messagesProxyDefault.q5M7HV);
+    const intl16 = util.intl;
+    obj.realtime = intl16.string(_modDef2722.S5cB9e);
+    const intl17 = util.intl;
+    obj.social = intl17.string(_modDef2722["UzRF+8"]);
+    const intl18 = util.intl;
+    obj.server = intl18.string(_modDef2722.zRKbpz);
+    const intl19 = util.intl;
+    obj.other = intl19.string(_modDef2722.q5M7HV);
     const result = registerNotificationCategoriesAndGroups(obj, obj);
   } else if (null != registerNotificationCategories) {
     obj = {
@@ -262,37 +249,37 @@ prototype["registerLegacyNotificationCategories"] = function registerLegacyNotif
       other: null,
       otherHighPriority: null,
     };
-    const intl20 = getSystemLocale.intl;
-    obj[0] = intl20.string(getSystemLocale.t.JJogjm);
-    const intl21 = getSystemLocale.intl;
-    obj[1] = intl21.string(getSystemLocale.t.K3lovD);
-    const intl22 = getSystemLocale.intl;
-    obj[2] = intl22.string(getSystemLocale.t.OIgYlQ);
-    const intl23 = getSystemLocale.intl;
-    obj[3] = intl23.string(getSystemLocale.t.YUU0RF);
-    const intl24 = getSystemLocale.intl;
-    obj[4] = intl24.string(getSystemLocale.t.TdEu5X);
-    const intl25 = getSystemLocale.intl;
-    obj[5] = intl25.string(getSystemLocale.t["A/4saf"]);
-    const intl26 = getSystemLocale.intl;
-    obj[6] = intl26.string(getSystemLocale.t.qGRagm);
-    const intl27 = getSystemLocale.intl;
-    obj[7] = intl27.string(getSystemLocale.t.MfGr0a);
-    const intl28 = getSystemLocale.intl;
-    obj[8] = intl28.string(getSystemLocale.t.p5jg9S);
-    const intl29 = getSystemLocale.intl;
-    obj[9] = intl29.string(getSystemLocale.t.dl57ho);
-    const intl30 = getSystemLocale.intl;
-    obj[10] = intl30.string(getSystemLocale.t.BcZTKu);
-    const intl31 = getSystemLocale.intl;
-    obj[11] = intl31.string(getSystemLocale.t.bcv3rp);
+    const intl20 = util.intl;
+    obj.calls = intl20.string(util.t.JJogjm);
+    const intl21 = util.intl;
+    obj.mediaConnections = intl21.string(util.t.K3lovD);
+    const intl22 = util.intl;
+    obj.messages = intl22.string(util.t.OIgYlQ);
+    const intl23 = util.intl;
+    obj.directMessages = intl23.string(util.t.YUU0RF);
+    const intl24 = util.intl;
+    obj.social = intl24.string(util.t.TdEu5X);
+    const intl25 = util.intl;
+    obj.gameDetection = intl25.string(util.t["A/4saf"]);
+    const intl26 = util.intl;
+    obj.stageLive = intl26.string(util.t.qGRagm);
+    const intl27 = util.intl;
+    obj.guildEventLive = intl27.string(util.t.MfGr0a);
+    const intl28 = util.intl;
+    obj.guildHighlights = intl28.string(util.t.p5jg9S);
+    const intl29 = util.intl;
+    obj.forumThreadCreated = intl29.string(util.t.dl57ho);
+    const intl30 = util.intl;
+    obj.other = intl30.string(util.t.BcZTKu);
+    const intl31 = util.intl;
+    obj.otherHighPriority = intl31.string(util.t.bcv3rp);
     const result1 = registerNotificationCategories(obj);
   }
 };
 prototype["trackDisabledAndroidNotifChannels"] = function trackDisabledAndroidNotifChannels() {
   if (!this.hasTrackedDisabledAndroidNotifChannels) {
     tmp.hasTrackedDisabledAndroidNotifChannels = true;
-    let obj = set(1115);
+    let obj = PlatformUtils;
     if (obj.isAndroid()) {
       const tmp5 = NativeNotifSettingsModuleDefault;
       let prop;
@@ -301,7 +288,7 @@ prototype["trackDisabledAndroidNotifChannels"] = function trackDisabledAndroidNo
       }
       if (null != prop) {
         const _Set = Set;
-        set = new Set(NOTIF_SETTINGS.map((string_id) => string_id.string_id));
+        const set = new Set(NOTIF_SETTINGS.map((string_id) => string_id.string_id));
         const found = prop().filter((importance) => {
           let hasItem = 0 === importance.importance;
           if (hasItem) {
@@ -310,8 +297,7 @@ prototype["trackDisabledAndroidNotifChannels"] = function trackDisabledAndroidNo
           return hasItem;
         });
         const propResult = prop();
-        obj = { disabled_channels: null };
-        obj[0] = found.map((channelId) => channelId.channelId);
+        obj = { disabled_channels: found.map((channelId) => channelId.channelId) };
         tmp4(1242).track(AnalyticEvents.ANDROID_NOTIFICATION_CHANNELS_SYNCED, obj);
         const tmp4Result = tmp4(1242);
       }
@@ -326,16 +312,16 @@ Object.defineProperty(prototype, "canSync", {
   get: function canSync() {
     let isInitialized = this.isInitialized;
     if (isInitialized) {
-      isInitialized = authenticated.isAuthenticated();
+      isInitialized = AuthenticationStore.isAuthenticated();
     }
     if (isInitialized) {
-      isInitialized = !isSwitchingAccount.getIsSwitchingAccount();
+      isInitialized = !MultiAccountSwitchStore.getIsSwitchingAccount();
     }
     return isInitialized;
   },
   set: undefined,
 });
 const notificationTokenManager = new NotificationTokenManager();
-let result = set2.fileFinishedImporting("modules/notifications/native/NotificationTokenManager.tsx");
+let result = size.fileFinishedImporting("modules/notifications/native/NotificationTokenManager.tsx");
 
 export default notificationTokenManager;

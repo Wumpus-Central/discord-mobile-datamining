@@ -1,37 +1,36 @@
 // discord_app/design/components/Navigator/native/PostponeRender.native.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import useMountLayoutEffectDefault from "../../../../hooks/useMountEffect.tsx";
-import _modDef5578 from "../../../../modules/keyboard/native/KeyboardAwareView.tsx";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useMountEffectDefault from "../../../../hooks/useMountEffect.tsx";
+import KeyboardAwareViewDefault from "../../../../modules/keyboard/native/KeyboardAwareView.tsx";
+import RunAfterInteractionsUtils from "../../../../utils/native/RunAfterInteractionsUtils.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-({ View: c5, StyleSheet } = get_ActivityIndicator);
-createCacheKey = { view: null };
-createCacheKey = {};
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { view: null };
+createStyles = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-createCacheKey.backgroundColor = ThemesDefault.colors.BACKGROUND_BASE_LOWER;
-createCacheKey[0] = createCacheKey;
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("design/components/Navigator/native/PostponeRender.native.tsx");
+createStyles.backgroundColor = nativeDefault.colors.BACKGROUND_BASE_LOWER;
+createStyles.view = createStyles;
+let closure_7 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Navigator/native/PostponeRender.native.tsx");
 
 export const PostponeRender = function PostponeRender(children) {
   children = children.children;
-  let first;
-  importDefault = undefined;
-  dependencyMap = undefined;
   ({ postpone, ignoreKeyboard, viewStyle } = children);
-  const tmp2 = callback(React.useState(postpone), 2);
-  first = tmp2[0];
+  const tmp2 = _slicedToArray(noop.useState(postpone), 2);
+  const first = tmp2[0];
   importDefault = tmp2[1];
-  dependencyMap = React.useRef(undefined);
-  useMountLayoutEffectDefault(() => {
+  dependencyMap = noop.useRef(undefined);
+  useMountEffectDefault(() => {
     if (first) {
-      table.current = first(table[7]).runAfterInteractions(() => {
-        callback(false);
+      ref.current = RunAfterInteractionsUtils.runAfterInteractions(() => {
+        closure_1_1(false);
       });
       return () => {
         const current = ref.current;
@@ -47,8 +46,10 @@ export const PostponeRender = function PostponeRender(children) {
   if (ignoreKeyboard) {
     let tmp4Result = closure_5;
   } else {
-    tmp4Result = _modDef5578;
+    tmp4Result = KeyboardAwareViewDefault;
   }
-  const style = [callback2().view, viewStyle];
-  return <tmp4Result style={style}>{children}</tmp4Result>;
+  const obj = { style: null, children };
+  const items = [closure_7().view, viewStyle];
+  obj.style = items;
+  return <tmp4Result style={null}>{children}</tmp4Result>;
 };

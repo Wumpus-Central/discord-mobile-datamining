@@ -1,9 +1,9 @@
 // discord_app/modules/a11y/native/markAccessibilityFocus.tsx
-import set from "../../../../_runtime/00002_set.js";
-import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceAccessibilityModule.tsx";
+import NativeDeviceAccessibilityModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceAccessibilityModule.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/a11y/native/markAccessibilityFocus.tsx");
+const result = size.fileFinishedImporting("modules/a11y/native/markAccessibilityFocus.tsx");
 
 export default function markAccessibilityFocus() {
-  enforcingDefault.markCurrentFocus();
+  NativeDeviceAccessibilityModuleDefault.markCurrentFocus();
 }

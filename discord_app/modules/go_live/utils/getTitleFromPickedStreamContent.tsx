@@ -1,8 +1,8 @@
 // discord_app/modules/go_live/utils/getTitleFromPickedStreamContent.tsx
-import set from "../../../../_runtime/00002_set.js";
-import getSystemLocale from "../../../intl/index.native.tsx";
+import util from "../../../intl/index.native.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/go_live/utils/getTitleFromPickedStreamContent.tsx");
+const result = size.fileFinishedImporting("modules/go_live/utils/getTitleFromPickedStreamContent.tsx");
 
 export default function getTitleFromPickedStreamContent(windows) {
   if (windows.windows.length > 0) {
@@ -16,8 +16,8 @@ export default function getTitleFromPickedStreamContent(windows) {
   } else {
     joined = null;
     if (windows.displays.length > 0) {
-      const intl = getSystemLocale.intl;
-      joined = intl.string(getSystemLocale.t.R4wpLN);
+      const intl = util.intl;
+      joined = intl.string(util.t.R4wpLN);
     }
   }
   return joined;

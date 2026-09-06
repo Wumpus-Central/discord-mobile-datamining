@@ -1,10 +1,11 @@
 // discord_app/modules/guild_communication_disabled/native/GuildDisableCommunicationModal.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import GuildDisableCommunicationDefault from "GuildDisableCommunication.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting(
+const require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/guild_communication_disabled/native/GuildDisableCommunicationModal.tsx",
 );
 
@@ -17,10 +18,10 @@ export default function GuildDisableCommunicationModal(onBeforeGoBack) {
   const intl = guildId(onGoBack[4]).intl;
   obj = { user: null };
   const tmp = user(onGoBack[3]);
-  obj[0] = user(onGoBack[5]).getName(guildId, null, user);
-  obj[1] = intl.formatToPlainString(guildId(onGoBack[4]).t.FN7NIS, obj);
-  obj[2] = function render() {
-    return closure_1_3(user(onGoBack[6]), { user, guildId, onClose: onGoBack });
+  obj.user = user(onGoBack[5]).getName(guildId, null, user);
+  obj.title = intl.formatToPlainString(guildId(onGoBack[4]).t.FN7NIS, obj);
+  obj.render = function render() {
+    return jsx(GuildDisableCommunicationDefault, { user, guildId, onClose: onGoBack });
   };
   return <tmp user={null} />;
 }

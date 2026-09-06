@@ -1,9 +1,9 @@
 // discord_app/modules/poggermode/PoggermodeUtils.tsx
-import set from "../../../_runtime/00002_set.js";
-import unsafe_getRawColor from "../../../discord_common/js/packages/tokens/shims.native.tsx";
-import ConfettiLocation from "PoggermodeConstants.tsx";
+import shims from "../../../discord_common/js/packages/tokens/shims.native.tsx";
+import PoggermodeConstants from "PoggermodeConstants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-({ ShakeLevel: obj1, SHAKE_STEPS: c3, SHAKE_STEP_DIVIDER: c4 } = ConfettiLocation);
+({ ShakeLevel: c2, SHAKE_STEPS: c3, SHAKE_STEP_DIVIDER: closure_4 } = PoggermodeConstants);
 let items = [
   [1, 0.001],
   [25, 0.3],
@@ -13,44 +13,43 @@ let items = [
   [2500, 0.95],
   [9001, 1],
 ];
-let closure_5 = items.map((arg0) => {
-  [tmp] = arg0;
+let closure_5 = items.map((item) => {
+  [tmp] = item;
   return tmp;
 });
-let closure_6 = items.map((arg0) => {
-  [, tmp] = arg0;
+let closure_6 = items.map((item) => {
+  [, tmp] = item;
   return tmp;
 });
-let result = set.fileFinishedImporting("modules/poggermode/PoggermodeUtils.tsx");
+let result = size.fileFinishedImporting("modules/poggermode/PoggermodeUtils.tsx");
 
 export const getComboShakeIntensity = function getComboShakeIntensity(userCombo, LEVEL_4) {
-  let LEVEL_3 = LEVEL_4;
+  LEVEL_3 = LEVEL_4;
   if (LEVEL_4 === undefined) {
     LEVEL_3 = LEVEL_3.LEVEL_3;
   }
-  const items = [table[LEVEL_3], table2[LEVEL_3]];
+  const items = [React3[LEVEL_3], React4[LEVEL_3]];
   c0 = undefined;
   c1 = undefined;
   [arr2] = items;
-  LEVEL_3 = undefined;
   const result = userCombo.value * userCombo.multiplier;
-  LEVEL_3 = result;
+  c2 = result;
   let num = 0;
   if (result > 0) {
     const _Math = Math;
     num = Math.min(
       100000,
-      arr2.reduce((arg0, arg1, arg2) => {
-        if (c2 > arg1) {
-          if (arg2 + 1 === length.length) {
-            return tmp4[arg2];
+      arr2.reduce((acc, item, index) => {
+        if (c2 > item) {
+          if (index + 1 === length.length) {
+            return tmp4[index];
           } else {
-            return ((tmp - arg1) / (tmp6[arg2 + 1] - arg1)) * (tmp4[arg2 + 1] - tmp5) + tmp5;
+            return ((tmp - item) / (tmp6[index + 1] - item)) * (tmp4[index + 1] - tmp5) + tmp5;
           }
         } else {
-          let tmp2 = arg0;
-          if (tmp === arg1) {
-            tmp2 = dependencyMap[arg2];
+          let tmp2 = acc;
+          if (tmp === item) {
+            tmp2 = dependencyMap[index];
           }
           return tmp2;
         }
@@ -62,7 +61,6 @@ export const getComboShakeIntensity = function getComboShakeIntensity(userCombo,
 export const getComboPercentage = function getComboPercentage(value) {
   const items = [closure_5, closure_6];
   [arr2] = items;
-  c2 = undefined;
   const result = value.value * value.multiplier;
   c2 = result;
   let num = 0;
@@ -70,17 +68,17 @@ export const getComboPercentage = function getComboPercentage(value) {
     const _Math = Math;
     num = Math.min(
       1,
-      arr2.reduce((arg0, arg1, arg2) => {
-        if (c2 > arg1) {
-          if (arg2 + 1 === length.length) {
-            return tmp4[arg2];
+      arr2.reduce((acc, item, index) => {
+        if (c2 > item) {
+          if (index + 1 === length.length) {
+            return tmp4[index];
           } else {
-            return ((tmp - arg1) / (tmp6[arg2 + 1] - arg1)) * (tmp4[arg2 + 1] - tmp5) + tmp5;
+            return ((tmp - item) / (tmp6[index + 1] - item)) * (tmp4[index + 1] - tmp5) + tmp5;
           }
         } else {
-          let tmp2 = arg0;
-          if (tmp === arg1) {
-            tmp2 = dependencyMap[arg2];
+          let tmp2 = acc;
+          if (tmp === item) {
+            tmp2 = dependencyMap[index];
           }
           return tmp2;
         }
@@ -91,35 +89,27 @@ export const getComboPercentage = function getComboPercentage(value) {
 };
 export const getComboStyles = function getComboStyles(arg0) {
   if (1 === arg0) {
-    let obj = { color: null };
-    obj[0] = unsafe_getRawColor.unsafe_getRawColor("BRAND_500");
-    const obj10 = unsafe_getRawColor;
+    let obj = { color: shims.unsafe_getRawColor("BRAND_500") };
   } else {
     if (2 !== arg0) {
       if (3 !== arg0) {
         if (4 !== arg0) {
           if (5 !== arg0) {
             if (6 === arg0) {
-              obj = { color: null, square: true };
-              obj[0] = unsafe_getRawColor.unsafe_getRawColor("RED_400");
-              const obj4 = unsafe_getRawColor;
+              obj = { color: shims.unsafe_getRawColor("RED_400"), square: true };
             } else {
               obj = { color: null, flair: true };
-              obj1 = unsafe_getRawColor;
-              obj[0] = obj1.unsafe_getRawColor("ORANGE_345");
+              let obj1 = shims;
+              obj.color = obj1.unsafe_getRawColor("ORANGE_345");
             }
           }
         }
-        obj1 = { color: null, square: true };
-        obj1[0] = unsafe_getRawColor.unsafe_getRawColor("YELLOW_300");
+        obj1 = { color: shims.unsafe_getRawColor("YELLOW_300"), square: true };
         obj = obj1;
-        const obj6 = unsafe_getRawColor;
       }
     }
-    const obj2 = { color: null };
-    obj2[0] = unsafe_getRawColor.unsafe_getRawColor("GREEN_360");
+    const obj2 = { color: shims.unsafe_getRawColor("GREEN_360") };
     obj = obj2;
-    const obj8 = unsafe_getRawColor;
   }
   return obj;
 };

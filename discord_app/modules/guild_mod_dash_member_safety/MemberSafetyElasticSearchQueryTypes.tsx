@@ -1,8 +1,9 @@
 // discord_app/modules/guild_mod_dash_member_safety/MemberSafetyElasticSearchQueryTypes.tsx
-import setDefault from "../../utils/Durations.tsx";
+import DurationsDefault from "../../utils/Durations.tsx";
 
-const result = 2 * setDefault.Millis.DAY;
-const result1 = require("set").fileFinishedImporting(
+const result = 2 * DurationsDefault.Millis.DAY;
+const size = fn(2);
+const result1 = size.fileFinishedImporting(
   "modules/guild_mod_dash_member_safety/MemberSafetyElasticSearchQueryTypes.tsx",
 );
 
@@ -14,8 +15,8 @@ export const createMemberSearchCursor = function createMemberSearchCursor(joined
     const obj = { guild_joined_at: null, user_id: null };
     const _Date = Date;
     const date = new Date(joinedAt);
-    obj[0] = date.getTime();
-    obj[1] = tmp;
+    obj.guild_joined_at = date.getTime();
+    obj.user_id = tmp;
     tmp2 = obj;
   }
   return tmp2;

@@ -1,16 +1,13 @@
 // discord_app/modules/premium/powerups/experiments/ServerThemeUserExperiment.tsx
-import set from "../../../../../_runtime/00002_set.js";
 import ApexExperiment from "../../../experiments/apex/index.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const obj = { 1: null };
+let obj = { kind: "user", name: "2026-05-server-theme-user", defaultConfig: { enabled: false }, variations: null };
+obj = { 1: null };
 obj[1] = { enabled: true };
-const apexExperiment = ApexExperiment.createApexExperiment({
-  kind: "user",
-  name: "2026-05-server-theme-user",
-  defaultConfig: { enabled: false },
-  variations: obj,
-});
-const result = set.fileFinishedImporting("modules/premium/powerups/experiments/ServerThemeUserExperiment.tsx");
+obj.variations = obj;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/premium/powerups/experiments/ServerThemeUserExperiment.tsx");
 
 export const ServerThemeUserExperiment = apexExperiment;
 export const getServerThemeUserEnabled = function getServerThemeUserEnabled(GuildPowerupsConstants) {

@@ -1,9 +1,9 @@
 // discord_app/utils/native/AppInfoUtils.tsx
-import set from "../../../_runtime/00002_set.js";
-import getConstants from "ClientInfoUtils.tsx";
+import ClientInfoUtils from "ClientInfoUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const constants = getConstants.getConstants();
-const result = set.fileFinishedImporting("utils/native/AppInfoUtils.tsx");
+const constants = ClientInfoUtils.getConstants();
+const result = size.fileFinishedImporting("utils/native/AppInfoUtils.tsx");
 
 export const getAppMajorVersion = function getAppMajorVersion() {
   if (undefined === closure_0) {

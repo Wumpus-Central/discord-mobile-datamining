@@ -1,7 +1,7 @@
 // discord_app/modules/notification_center/NotificationCenterItemsTypes.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/notification_center/NotificationCenterItemsTypes.tsx");
+const result = size.fileFinishedImporting("modules/notification_center/NotificationCenterItemsTypes.tsx");
 
 export const NotificationCenterScenes = { LANDING: "notification_center_landing" };
 export const ItemEnum = {

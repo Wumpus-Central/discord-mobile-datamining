@@ -1,11 +1,10 @@
 // discord_app/modules/polls/PollsConstants.tsx
-import ExpressionPickerViewType from "../expression_picker/ExpressionPickerConstants.tsx";
-import set from "../../../_runtime/00002_set.js";
+import ExpressionPickerConstants from "../expression_picker/ExpressionPickerConstants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const items = [,];
-({ GIF: arr[0], EMOJI: arr[1] } = ExpressionPickerViewType.ExpressionPickerViewType);
-let set = new Set(items);
-const result = set.fileFinishedImporting("modules/polls/PollsConstants.tsx");
+({ GIF: arr[0], EMOJI: arr[1] } = ExpressionPickerConstants.ExpressionPickerViewType);
+const result = size.fileFinishedImporting("modules/polls/PollsConstants.tsx");
 
 export const POLL_ATTACHMENT_FOLDER = "polls";
 export const POLL_CREATION_MODAL_KEY = "POLL_CREATION_MODAL_KEY";
@@ -33,4 +32,4 @@ export const PollDurations = {
   FOURTEEN_DAYS: 336,
   [336]: "FOURTEEN_DAYS",
 };
-export const POLLS_SUPPORTED_EXPRESSION_PICKER_VIEW_TYPES = set;
+export const POLLS_SUPPORTED_EXPRESSION_PICKER_VIEW_TYPES = new Set(items);

@@ -1,35 +1,35 @@
 // discord_app/modules/safety_hub/native/AppealIngestionThanks.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import Button from "../../../design/void/native.tsx";
-import SafeAreaPaddingView from "../../../components_native/common/SafeAreaView.tsx";
+import native from "../../../design/void/native.tsx";
+import common_SafeAreaView from "../../../components_native/common/SafeAreaView.tsx";
 import AppealIngestionModal from "AppealIngestionModal.tsx";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-let closure_4 = createCacheKey.createStyles({ container: { flex: 1, alignItems: "center", justifyContent: "center" } });
-const result = require("set").fileFinishedImporting("modules/safety_hub/native/AppealIngestionThanks.tsx");
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_4 = createStyles.createStyles({ container: { flex: 1, alignItems: "center", justifyContent: "center" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_hub/native/AppealIngestionThanks.tsx");
 
 export default function AppealIngestionThanks() {
-  const tmp = callback();
+  const tmp = closure_4();
   let obj = { children: null };
   obj = { style: tmp.container, children: null };
-  obj = { bottom: true, style: tmp.container, children: jsx(Button.LegacyText, { children: "TODO - Thanks" }) };
-  obj[1] = jsx(SafeAreaPaddingView.SafeAreaPaddingView, {
+  obj = { bottom: true, style: tmp.container, children: jsx(native.LegacyText, { children: "TODO - Thanks" }) };
+  obj.children = jsx(common_SafeAreaView.SafeAreaPaddingView, {
     bottom: true,
     style: tmp.container,
-    children: jsx(Button.LegacyText, { children: "TODO - Thanks" }),
+    children: jsx(native.LegacyText, { children: "TODO - Thanks" }),
   });
-  obj[0] = (
+  obj.children = (
     <View bottom style={tmp.container}>
-      {jsx(Button.LegacyText, { children: "TODO - Thanks" })}
+      {jsx(native.LegacyText, { children: "TODO - Thanks" })}
     </View>
   );
   return jsx(AppealIngestionModal.AppealIngestionModalScreen, {
     bottom: true,
     style: tmp.container,
-    children: jsx(Button.LegacyText, { children: "TODO - Thanks" }),
+    children: jsx(native.LegacyText, { children: "TODO - Thanks" }),
   });
 }

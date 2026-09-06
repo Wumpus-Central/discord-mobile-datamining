@@ -1,37 +1,26 @@
 // discord_app/modules/user_settings/defs/native/ActivityPrivacyShareMyActivitySetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import explicitContentFromProto from "../../UserSettings.tsx";
-import messagesProxyDefault from "../../../activity_privacy/ActivityPrivacy.messages.js";
-import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import util from "../../../../intl/index.native.tsx";
+import UserSettings from "../../UserSettings.tsx";
+import _modDef2562 from "../../../activity_privacy/ActivityPrivacy.messages.js";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const toggle = createToggle.createToggle({
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault.WhdCGP);
+    const intl = util.intl;
+    return intl.string(_modDef2562.WhdCGP);
   },
   useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault.UQ9RHJ);
+    const intl = util.intl;
+    return intl.string(_modDef2562.UQ9RHJ);
   },
-  parent: MobileUserSettings.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
-  useValue: explicitContentFromProto.ShowCurrentGame.useSetting,
-  onValueChange: explicitContentFromProto.ShowCurrentGame.updateSetting,
+  parent: SettingsConstants.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  useValue: UserSettings.ShowCurrentGame.useSetting,
+  onValueChange: UserSettings.ShowCurrentGame.updateSetting,
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault.WhdCGP);
-  },
-  useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault.UQ9RHJ);
-  },
-  parent: MobileUserSettings.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
-  useValue: explicitContentFromProto.ShowCurrentGame.useSetting,
-  onValueChange: explicitContentFromProto.ShowCurrentGame.updateSetting,
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/ActivityPrivacyShareMyActivitySetting.tsx");
+const result = size.fileFinishedImporting(
+  "modules/user_settings/defs/native/ActivityPrivacyShareMyActivitySetting.tsx",
+);
 
 export default toggle;

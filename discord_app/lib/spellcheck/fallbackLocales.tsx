@@ -1,7 +1,7 @@
 // discord_app/lib/spellcheck/fallbackLocales.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("lib/spellcheck/fallbackLocales.tsx");
+const result = size.fileFinishedImporting("lib/spellcheck/fallbackLocales.tsx");
 
 export default {
   aa: "aa-ET",

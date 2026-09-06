@@ -1,101 +1,94 @@
 // discord_app/modules/mobile_native_updater/MobileNativeUpdateUtils.tsx
-import timestampDefault from "../debug/Logger.tsx";
-import keys from "../../ConstantsIOS.tsx";
-import _mod4255 from "../../lib/native/Linking.tsx";
-import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import { UPDATE_CONFIG } from "MobileNativeUpdateConstants.tsx";
+import LoggerDefault from "../debug/Logger.tsx";
+import ConstantsIOS from "../../ConstantsIOS.tsx";
+import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import Linking from "../../lib/native/Linking.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
-require = arg1;
-function _checkForNewerBuild() {
-  const self = this;
-  const tmp = callback(function* () {
-    if (c3 === 2) {
-      c3 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
+require = fn;
+let closure_5 = async function _checkForNewerBuild(arg0, value) {
+  if (c3 === 2) {
+    c3 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
     } else {
-      try {
-        c3 = 2;
-        if (0 === c2) {
-          if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let obj3 = tmp2;
-            closure_0 = tmp5;
-            closure_0 = undefined;
-            obj3 = undefined;
-            if (null === c3) {
-              c3 = 3;
-              return { value: null, done: true };
-            } else {
-              const _HermesInternal2 = HermesInternal;
-              closure_1_4.info("Checking " + c3.url + " for updates");
-              const HTTP = closure_1_0(closure_1_1[3]).HTTP;
-              obj1 = { url: null, headers: null, rejectWithError: false };
-              obj1[0] = c3.url.toString();
-              obj1[1] = { Accept: "application/json" };
-              c2 = 1;
-              c3 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.get(obj1);
-              return obj2;
-            }
-          }
-        } else if (arg0 === 1) {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c3 = 2;
+      if (0 === c2) {
+        if (arg0 === 1) {
           c3 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj = { value, done: true };
           return obj;
         } else {
-          closure_0 = arg1;
-          obj3 = { build: null, version: null, buildTimestamp: null, urls: null };
-          obj3[0] = closure_0.body.build;
-          obj3[1] = closure_0.body.version;
-          let infoResult2 = globalThis;
-          const _Date = Date;
-          const date = new Date(closure_0.body.build_timestamp);
-          obj3[2] = date;
-          obj3[3] = closure_0.body.urls;
-          if (obj3.build <= c3.currentBuild) {
-            const _HermesInternal = HermesInternal;
-            logger.info("Update build " + obj3.build + " is older than " + c3.currentBuild);
+          closure_1 = tmp2;
+          closure_0 = tmp5;
+          closure_128_0 = undefined;
+          closure_128_1 = undefined;
+          if (null === UPDATE_CONFIG) {
             c3 = 3;
+            return { value: null, done: true };
+          } else {
+            const _HermesInternal2 = HermesInternal;
+            logger.info("Checking " + UPDATE_CONFIG.url + " for updates");
+            const HTTP = HTTPUtils.HTTP;
+            const obj1 = {
+              url: UPDATE_CONFIG.url.toString(),
+              headers: { Accept: "application/json" },
+              rejectWithError: false,
+            };
+            c2 = 1;
+            c3 = 1;
+            const obj2 = { value: HTTP.get(obj1), done: false };
+            return obj2;
           }
-          infoResult2 = logger.info("Update build " + obj3.build + " is newer than " + c3.currentBuild);
         }
-      } catch (tmp24) {
-        c3 = tmp;
-        throw tmp24;
+      } else if (arg0 === 1) {
+        c3 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c3 = 3;
+        obj = { value, done: true };
+        return obj;
+      } else {
+        closure_128_0 = value;
+        const obj3 = {
+          build: closure_128_0.body.build,
+          version: closure_128_0.body.version,
+          buildTimestamp: null,
+          urls: null,
+        };
+        let infoResult2 = globalThis;
+        const _Date = Date;
+        const date = new Date(closure_128_0.body.build_timestamp);
+        obj3.buildTimestamp = date;
+        obj3.urls = closure_128_0.body.urls;
+        closure_128_1 = obj3;
+        if (closure_128_1.build <= closure_129_3.currentBuild) {
+          const _HermesInternal = HermesInternal;
+          closure_129_4.info("Update build " + closure_128_1.build + " is older than " + closure_129_3.currentBuild);
+          c3 = 3;
+        }
+        infoResult2 = closure_129_4.info(
+          "Update build " + closure_128_1.build + " is newer than " + closure_129_3.currentBuild,
+        );
       }
+    } catch (tmp24) {
+      c3 = tmp;
+      throw tmp24;
     }
-  });
-  closure_5 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
   }
-  return applyArgumentsResult;
-}
+};
 function openBuildInstallerUrl(install) {
   try {
     const _URL = URL;
@@ -108,22 +101,23 @@ function openBuildInstallerUrl(install) {
       const _HermesInternal = HermesInternal;
       logger.error("Attempted to follow invalid install URL " + str);
     } else {
-      const openURLExternally = _mod4255.default.openURLExternally;
+      const openURLExternally = Linking.default.openURLExternally;
       if (obj.isIOS()) {
-        openURLExternally(str.toString(), keys.WebBrowserType.SAFARI);
+        openURLExternally(str.toString(), ConstantsIOS.WebBrowserType.SAFARI);
       } else {
         openURLExternally(str.toString());
       }
     }
   } catch (err) {}
 }
-let closure_4 = new timestampDefault("MobileNativeUpdateUtils");
-const tmp2 = new timestampDefault("MobileNativeUpdateUtils");
-const result = require("set").fileFinishedImporting("modules/mobile_native_updater/MobileNativeUpdateUtils.tsx");
+const UPDATE_CONFIG = fn(4541).UPDATE_CONFIG;
+const logger = new LoggerDefault("MobileNativeUpdateUtils");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/mobile_native_updater/MobileNativeUpdateUtils.tsx");
 
 export const checkForNewerBuild = function checkForNewerBuild() {
   const self = this;
-  const apply = _checkForNewerBuild.apply;
+  const apply = closure_5.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

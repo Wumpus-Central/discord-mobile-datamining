@@ -1,8 +1,8 @@
 // discord_app/modules/experiments/trigger_points/validateTriggerPoint.tsx
-import getHashDefault from "../ExperimentStore.tsx";
+import ExperimentStore from "../ExperimentStore.tsx";
 
-getHashDefault;
-const result = require("set").fileFinishedImporting("modules/experiments/trigger_points/validateTriggerPoint.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/experiments/trigger_points/validateTriggerPoint.tsx");
 
 export function validateAllExperiments() {}
-export function validateOneExperiment(id, label, commonTriggerPoint) {}
+export function validateOneExperiment() {}

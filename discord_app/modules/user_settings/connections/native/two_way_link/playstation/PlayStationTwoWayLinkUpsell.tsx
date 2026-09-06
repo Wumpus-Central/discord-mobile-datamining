@@ -1,42 +1,43 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/playstation/PlayStationTwoWayLinkUpsell.tsx
-import noopAll from "../../../../../../../_runtime/00019_noop.js";
-import getSystemLocale from "../../../../../../intl/index.native.tsx";
-import DismissibleContent from "../../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import combinedDefault from "../../../../../../utils/HelpdeskUtils.tsx";
-import preloadDefault from "../../../../../../components_native/common/FastImage.tsx";
-import OneWayToTwoWayNewTag from "../OneWayToTwoWayLinkUpsell.tsx";
-import registerAssetDefault from "../../../../../../../_runtime/14969_registerAsset.js";
-import ME from "../../../../../../Constants.tsx";
-import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
+import util from "../../../../../../intl/index.native.tsx";
+import dismissible_content from "../../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import HelpdeskUtilsDefault from "../../../../../../utils/HelpdeskUtils.tsx";
+import FastImageDefault from "../../../../../../components_native/common/FastImage.tsx";
+import PlayStationLinkModalActionCreatorsDefault from "PlayStationLinkModalActionCreators.tsx";
+import OneWayToTwoWayLinkUpsell from "../OneWayToTwoWayLinkUpsell.tsx";
+import _modDef14969 from "../../../../../../../_runtime/metro/14969__.js";
+import noop from "../../../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-({ HelpdeskArticles: c3, AnalyticsLocations: c4, PlatformTypes: c5 } = ME);
-let closure_7 = createCacheKey.createStyles({ upsellImage: { alignSelf: "center", width: 84, marginLeft: 16 } });
-const result = require("set").fileFinishedImporting(
+require = fn;
+const Constants = fn(1074);
+({ HelpdeskArticles: c3, AnalyticsLocations: closure_4, PlatformTypes: hasOwnProperty } = Constants);
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_7 = createStyles.createStyles({ upsellImage: { alignSelf: "center", width: 84, marginLeft: 16 } });
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/user_settings/connections/native/two_way_link/playstation/PlayStationTwoWayLinkUpsell.tsx",
 );
 
 export const PlayStationTwoWayLinkUpsell = function PlayStationTwoWayLinkUpsell() {
-  let obj = combinedDefault;
+  let obj = HelpdeskUtilsDefault;
   const articleURL = obj.getArticleURL(constants.PS_CONNECTION);
   obj = { title: null, body: null, img: null, newIndicatorDismissibleContent: null, onPress: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t.v20wwm);
-  const intl2 = getSystemLocale.intl;
-  obj[1] = intl2.format(getSystemLocale.t.lTZBit, { help_article: articleURL });
-  obj = { style: callback().upsellImage, source: null, resizeMode: "contain" };
-  const tmp = callback();
-  obj[1] = registerAssetDefault;
-  obj[2] = jsx(preloadDefault, { style: callback().upsellImage, source: null, resizeMode: "contain" });
-  obj[3] = DismissibleContent.DismissibleContent.PS_ONE_WAY_RECONNECT;
-  obj[4] = function onPress() {
+  const intl = util.intl;
+  obj.title = intl.string(util.t.v20wwm);
+  const intl2 = util.intl;
+  obj.body = intl2.format(util.t.lTZBit, { help_article: articleURL });
+  obj = { style: closure_7().upsellImage, source: null, resizeMode: "contain" };
+  const tmp = closure_7();
+  obj.source = _modDef14969;
+  obj.img = jsx(FastImageDefault, { style: closure_7().upsellImage, source: null, resizeMode: "contain" });
+  obj.newIndicatorDismissibleContent = dismissible_content.DismissibleContent.PS_ONE_WAY_RECONNECT;
+  obj.onPress = function onPress() {
     const items = [constants.RELINK_UPSELL];
-    return callback(table[10]).showModal(items, constants2.PLAYSTATION);
+    return PlayStationLinkModalActionCreatorsDefault.showModal(items, constants2.PLAYSTATION);
   };
-  return jsx(OneWayToTwoWayNewTag.OneWayToTwoWayLinkUpsell, {
-    style: callback().upsellImage,
+  return jsx(OneWayToTwoWayLinkUpsell.OneWayToTwoWayLinkUpsell, {
+    style: closure_7().upsellImage,
     source: null,
     resizeMode: "contain",
   });

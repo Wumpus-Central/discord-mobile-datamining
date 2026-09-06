@@ -1,16 +1,19 @@
 // discord_app/modules/group_dm/native/ChatGDMUpsellActionSheet.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
-import preloadDefault from "../../../components_native/common/FastImage.tsx";
-import registerAssetDefault from "../../../../_runtime/11604_registerAsset.js";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import dismissible_content from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import DismissibleContentUnsafeUtils from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
+import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
+import _modDef11604 from "../../../../_runtime/metro/11604__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = {
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+fn(4560);
+let createStyles = {
   title: null,
   footer: null,
   body: null,
@@ -22,116 +25,107 @@ createCacheKey = {
   item: null,
   button: null,
 };
-createCacheKey = { marginBottom: ThemesDefault.space.PX_4, textAlign: "center" };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: ThemesDefault.space.PX_16 };
-createCacheKey[2] = { textAlign: "center" };
-let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: ThemesDefault.space.PX_16 };
-createCacheKey[3] = {
-  borderRadius: ThemesDefault.radii.sm,
-  marginVertical: ThemesDefault.space.PX_16,
-  padding: ThemesDefault.space.PX_16,
+createStyles = { marginBottom: nativeDefault.space.PX_4, textAlign: "center" };
+createStyles.title = createStyles;
+createStyles.footer = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: nativeDefault.space.PX_16 };
+createStyles.body = { textAlign: "center" };
+let obj1 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: nativeDefault.space.PX_16 };
+createStyles.noticeContainer = {
+  borderRadius: nativeDefault.radii.sm,
+  marginVertical: nativeDefault.space.PX_16,
+  padding: nativeDefault.space.PX_16,
 };
-createCacheKey[4] = { flexDirection: "row", alignItems: "center", paddingBottom: 16 };
-createCacheKey[5] = { flexDirection: "row", alignItems: "center" };
-createCacheKey[6] = { flex: 1 };
-createCacheKey[7] = { padding: 16, justifyContent: "center", alignItems: "center" };
+createStyles.innerContainer = { flexDirection: "row", alignItems: "center", paddingBottom: 16 };
+createStyles.secondInnerContainer = { flexDirection: "row", alignItems: "center" };
+createStyles.text = { flex: 1 };
+createStyles.titleImage = { padding: 16, justifyContent: "center", alignItems: "center" };
+let size = {
+  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG,
+  marginRight: 16,
+  height: 40,
+  width: 40,
+  borderRadius: 20,
+  alignItems: "center",
+  justifyContent: "center",
+};
+createStyles.item = size;
 let obj2 = {
-  borderRadius: ThemesDefault.radii.sm,
-  marginVertical: ThemesDefault.space.PX_16,
-  padding: ThemesDefault.space.PX_16,
+  borderRadius: nativeDefault.radii.sm,
+  marginVertical: nativeDefault.space.PX_16,
+  padding: nativeDefault.space.PX_16,
 };
-createCacheKey[8] = {
-  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG,
-  marginRight: 16,
-  height: 40,
-  width: 40,
-  borderRadius: 20,
-  alignItems: "center",
-  justifyContent: "center",
-};
-let obj3 = {
-  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG,
-  marginRight: 16,
-  height: 40,
-  width: 40,
-  borderRadius: 20,
-  alignItems: "center",
-  justifyContent: "center",
-};
-createCacheKey[9] = { paddingTop: ThemesDefault.space.PX_16 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj4 = { paddingTop: ThemesDefault.space.PX_16 };
-let result = require("set").fileFinishedImporting("modules/group_dm/native/ChatGDMUpsellActionSheet.tsx");
+createStyles.button = { paddingTop: nativeDefault.space.PX_16 };
+let closure_7 = createStyles.createStyles(createStyles);
+size = fn(2);
+let result = size.fileFinishedImporting("modules/group_dm/native/ChatGDMUpsellActionSheet.tsx");
 
 export default function ChatGDMUpsellActionSheet(onClick) {
   onClick = onClick.onClick;
-  const tmp = callback3();
+  const tmp = closure_7();
   const items = [onClick];
-  const callback = React.useCallback(() => {
-    const result = onClick(closure_1_2[6]).UNSAFE_markDismissibleContentAsDismissed(
-      onClick(closure_1_2[7]).DismissibleContent.GDM_INVITE_REMINDER,
+  const callback = noop.useCallback(() => {
+    const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(
+      dismissible_content.DismissibleContent.GDM_INVITE_REMINDER,
     );
-    const obj = onClick(closure_1_2[6]);
-    closure_1_1(closure_1_2[8]).hideActionSheet();
+    ActionSheetActionCreatorsDefault.hideActionSheet();
     onClick();
   }, items);
   let obj = { showGradient: true, scrollable: true, startExpanded: true, header: null, footer: null, children: null };
   obj = { style: tmp.titleImage, children: null };
-  obj = { source: registerAssetDefault, resizeMode: "contain" };
-  obj[1] = callback(preloadDefault, obj);
-  obj[3] = callback(View, obj);
-  obj1 = { style: items1, children: null };
-  items1 = [tmp.footer];
-  const tmp3 = preloadDefault;
+  obj = { source: _modDef11604, resizeMode: "contain" };
+  obj.children = closure_5(FastImageDefault, obj);
+  obj.header = closure_5(View, obj);
+  const obj1 = { style: null, children: null };
+  const items1 = [tmp.footer];
   items1[1] = { padding: 16, paddingBottom: useSafeAreaInsetsDefault().bottom + 16 };
+  obj1.style = items1;
   const obj3 = { text: null, onPress: null };
   const intl = onClick(1114).intl;
-  obj3[0] = intl.string(onClick(1114).t["3PatSz"]);
-  obj3[1] = callback;
-  const items2 = [callback(onClick(4975).Button, obj3)];
+  obj3.text = intl.string(onClick(1114).t["3PatSz"]);
+  obj3.onPress = callback;
+  const items2 = [closure_5(onClick(4975).Button, obj3)];
   const obj4 = { style: tmp.button, children: null };
   const obj5 = { text: null, onPress: null, variant: "tertiary" };
   const intl2 = onClick(1114).intl;
-  obj5[0] = intl2.string(onClick(1114).t["ETE/oC"]);
-  obj5[1] = function onPress() {
-    callback(table[8]).hideActionSheet();
+  obj5.text = intl2.string(onClick(1114).t["ETE/oC"]);
+  obj5.onPress = function onPress() {
+    ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  obj4[1] = callback(onClick(4975).Button, obj5);
-  items2[1] = callback(View, obj4);
-  obj1[1] = items2;
-  obj[4] = callback2(View, obj1);
+  obj4.children = closure_5(onClick(4975).Button, obj5);
+  items2[1] = closure_5(View, obj4);
+  obj1.children = items2;
+  obj.footer = closure_6(View, obj1);
   const obj6 = { children: null };
   const obj7 = { style: tmp.title, variant: "heading-lg/extrabold", accessibilityRole: "header", children: null };
   const intl3 = onClick(1114).intl;
-  obj7[3] = intl3.string(onClick(1114).t["bkqux/"]);
-  const items3 = [callback(onClick(4556).Text, obj7), ,];
+  obj7.children = intl3.string(onClick(1114).t["bkqux/"]);
+  const items3 = [closure_5(onClick(4556).Text, obj7), ,];
   const obj8 = { style: tmp.body, variant: "text-md/medium", color: "text-muted", children: null };
   const intl4 = onClick(1114).intl;
-  obj8[3] = intl4.string(onClick(1114).t.N6TdqN);
-  items3[1] = callback(onClick(4556).Text, obj8);
+  obj8.children = intl4.string(onClick(1114).t.N6TdqN);
+  items3[1] = closure_5(onClick(4556).Text, obj8);
   const obj9 = { style: tmp.noticeContainer, children: null };
   const obj10 = { style: tmp.innerContainer, children: null };
   const obj2 = { padding: 16, paddingBottom: useSafeAreaInsetsDefault().bottom + 16 };
-  const items4 = [callback(View, { style: tmp.item, children: callback(onClick(11605).TimerIcon, { size: "sm" }) })];
+  const items4 = [closure_5(View, { style: tmp.item, children: closure_5(onClick(11605).TimerIcon, { size: "sm" }) })];
   const obj12 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
   const intl5 = onClick(1114).intl;
-  obj12[3] = intl5.string(onClick(1114).t.Fq3DJb);
-  items4[1] = callback(onClick(4556).Text, obj12);
-  obj10[1] = items4;
-  const items5 = [callback2(View, obj10)];
+  obj12.children = intl5.string(onClick(1114).t.Fq3DJb);
+  items4[1] = closure_5(onClick(4556).Text, obj12);
+  obj10.children = items4;
+  const items5 = [closure_6(View, obj10)];
   const obj13 = { style: tmp.secondInnerContainer, children: null };
-  const obj11 = { style: tmp.item, children: callback(onClick(11605).TimerIcon, { size: "sm" }) };
-  const items6 = [callback(View, { style: tmp.item, children: callback(onClick(4503).LinkIcon, { size: "sm" }) })];
+  const obj11 = { style: tmp.item, children: closure_5(onClick(11605).TimerIcon, { size: "sm" }) };
+  const items6 = [closure_5(View, { style: tmp.item, children: closure_5(onClick(4503).LinkIcon, { size: "sm" }) })];
   const obj15 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
   const intl6 = onClick(1114).intl;
-  obj15[3] = intl6.string(onClick(1114).t.XKbf2G);
-  items6[1] = callback(onClick(4556).Text, obj15);
-  obj13[1] = items6;
-  items5[1] = callback2(View, obj13);
-  obj9[1] = items5;
-  items3[2] = callback2(View, obj9);
-  obj6[0] = items3;
-  obj[5] = callback2(onClick(6627).BottomSheetScrollView, obj6);
-  return callback(onClick(7150).BottomSheet, obj);
+  obj15.children = intl6.string(onClick(1114).t.XKbf2G);
+  items6[1] = closure_5(onClick(4556).Text, obj15);
+  obj13.children = items6;
+  items5[1] = closure_6(View, obj13);
+  obj9.children = items5;
+  items3[2] = closure_6(View, obj9);
+  obj6.children = items3;
+  obj.children = closure_6(onClick(6627).BottomSheetScrollView, obj6);
+  return closure_5(onClick(7150).BottomSheet, obj);
 }

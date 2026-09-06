@@ -1,10 +1,10 @@
 // discord_app/modules/age_assurance/native/AppStoreAgeSignalSupport.tsx
-import set from "../../../../_runtime/00002_set.js";
-import isMetaQuest from "../../device/MetaQuestUtils.android.tsx";
+import MetaQuestUtils from "../../device/MetaQuestUtils.android.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 let c2 = 26;
 let c3 = 2;
-const result = set.fileFinishedImporting("modules/age_assurance/native/AppStoreAgeSignalSupport.tsx");
+const result = size.fileFinishedImporting("modules/age_assurance/native/AppStoreAgeSignalSupport.tsx");
 
 export const MIN_AGE_GATE = 13;
 export const ADULT_AGE_GATE = 18;
@@ -42,5 +42,5 @@ export const isAppStoreAgeSignalSupported = function isAppStoreAgeSignalSupporte
       return tmp8;
     }
   }
-  obj = isMetaQuest;
+  obj = MetaQuestUtils;
 };

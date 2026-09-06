@@ -1,11 +1,12 @@
 // discord_app/modules/messages/isSpam.tsx
-import getDecisionOutcomeFromMessage from "../guild_automod/AutomodMessageUtils.tsx";
-import closure_2 from "../../stores/UserStore.tsx";
-import ME from "../../Constants.tsx";
+import AutomodMessageUtils from "../guild_automod/AutomodMessageUtils.tsx";
+import UserStore from "../../stores/UserStore.tsx";
 
-require = arg1;
-({ UserFlags: c3, ChannelTypes: c4 } = ME);
-const result = require("set").fileFinishedImporting("modules/messages/isSpam.tsx");
+require = fn;
+const Constants = fn(1074);
+({ UserFlags: c3, ChannelTypes: closure_4 } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/isSpam.tsx");
 
 export const isSpamSupported = function isSpamSupported(type) {
   let tmp = undefined !== type;
@@ -15,7 +16,7 @@ export const isSpamSupported = function isSpamSupported(type) {
   return tmp;
 };
 export const isSpammer = function isSpammer(userId) {
-  const user = authStore.getUser(userId);
+  const user = UserStore.getUser(userId);
   let flag;
   if (user != null) {
     flag = user.hasFlag(constants.SPAMMER);
@@ -26,7 +27,7 @@ export const isSpammer = function isSpammer(userId) {
   return flag;
 };
 export const isSpam = function isSpam(author) {
-  const user = authStore.getUser(author.author.id);
+  const user = UserStore.getUser(author.author.id);
   let flag;
   if (user != null) {
     flag = user.hasFlag(constants.SPAMMER);
@@ -35,8 +36,7 @@ export const isSpam = function isSpam(author) {
     flag = false;
   }
   if (flag) {
-    flag = !getDecisionOutcomeFromMessage.isAutomodMessageRecord(author);
-    const obj2 = getDecisionOutcomeFromMessage;
+    flag = !AutomodMessageUtils.isAutomodMessageRecord(author);
   }
   return flag;
 };

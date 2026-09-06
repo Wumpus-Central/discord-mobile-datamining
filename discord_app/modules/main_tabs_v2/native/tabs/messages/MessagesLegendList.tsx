@@ -1,11 +1,25 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/MessagesLegendList.tsx
-import importAllResult from "../../../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import MessagesItemChannel from "items/MessagesItemChannel.tsx";
+import MessagesItemPlaceholderDefault from "items/MessagesItemPlaceholder.tsx";
+import MessagesItemSuggestedFriend from "items/MessagesItemSuggestedFriend.tsx";
+import useMessagesData from "useMessagesData.tsx";
+import MessagesItemHappeningNowDefault from "items/MessagesItemHappeningNow.tsx";
+import MessagesItemEmptyStateDefault from "items/MessagesItemEmptyState.tsx";
+import MessagesItemSeparator from "items/MessagesItemSeparator.tsx";
+import MessagesItemSuggestedFriendsHeader from "items/MessagesItemSuggestedFriendsHeader.tsx";
+import MessagesItemAddFriendsWidgetDefault from "items/MessagesItemAddFriendsWidget.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let c3 = importAllResult;
-const memoResult = importAllResult.memo(
-  importAllResult.forwardRef(function MessagesLegendList(listItemHeight, ref) {
+const MessagesItemSeparatorDefault = MessagesItemSeparator;
+const MessagesItemSuggestedFriendsHeaderDefault = MessagesItemSuggestedFriendsHeader;
+
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesLegendList.tsx");
+
+export default noop.memo(
+  noop.forwardRef(function MessagesLegendList(listItemHeight, ref) {
     ({ data, insetEnd } = listItemHeight);
     const estimatedItemSize = listItemHeight.listItemHeight;
     const listItemSuggestedFriendHeight = listItemHeight.listItemSuggestedFriendHeight;
@@ -14,24 +28,16 @@ const memoResult = importAllResult.memo(
     const listTop = listItemHeight.listTop;
     const scrollIndicatorInsetBottom = listItemHeight.scrollIndicatorInsetBottom;
     const scrollPosition = listItemHeight.scrollPosition;
-    let friendSuggestions;
-    let renderHeader;
-    let renderFooter;
-    let setAddedFriendSuggestions;
-    ref = undefined;
-    let friendsHeaderIndex;
-    let friendsHeaderOffset;
-    let estimatedHeaderSize;
-    friendSuggestions = data.friendSuggestions;
-    renderHeader = data.renderHeader;
-    renderFooter = data.renderFooter;
-    setAddedFriendSuggestions = data.setAddedFriendSuggestions;
+    const friendSuggestions = data.friendSuggestions;
+    const renderHeader = data.renderHeader;
+    const renderFooter = data.renderFooter;
+    const setAddedFriendSuggestions = data.setAddedFriendSuggestions;
     ({ accessibilityLabel, handleScrollAnimated, recycleItems } = listItemHeight);
     ref = listLeft.useRef(null);
     data = estimatedItemSize(listItemSuggestedFriendHeight[2])(data, { listItemHeight: estimatedItemSize });
-    friendsHeaderIndex = data.friendsHeaderIndex;
-    friendsHeaderOffset = data.friendsHeaderOffset;
-    estimatedHeaderSize = data.listHeaderHeight;
+    const friendsHeaderIndex = data.friendsHeaderIndex;
+    const friendsHeaderOffset = data.friendsHeaderOffset;
+    const estimatedHeaderSize = data.listHeaderHeight;
     let items = [estimatedHeaderSize];
     const imperativeHandle = listLeft.useImperativeHandle(
       ref,
@@ -43,9 +49,7 @@ const memoResult = importAllResult.memo(
           }
           const current = ref.current;
           if (current != null) {
-            const obj = { offset: null, animated: null };
-            obj[0] = closure_15;
-            obj[1] = flag;
+            const obj = { offset, animated: flag };
             current.scrollToOffset(obj);
           }
         },
@@ -68,32 +72,33 @@ const memoResult = importAllResult.memo(
       if ("favorite" !== kind) {
         if ("channel" !== kind) {
           if ("separator" === kind) {
-            return listRefHappeningNow(estimatedItemSize(listItemSuggestedFriendHeight[4]), {});
+            return jsx(MessagesItemSeparatorDefault, {});
           } else if ("friendsHeader" === kind) {
-            let obj = { scrollPosition: null, stickyAt: null, stickyTop: null, stickyLeft: null };
-            obj[0] = scrollPosition;
-            obj[1] = friendsHeaderOffset;
-            obj[2] = listTop;
-            obj[3] = listLeft;
-            return listRefHappeningNow(estimatedItemSize(listItemSuggestedFriendHeight[5]), obj);
+            let obj = { scrollPosition, stickyAt: friendsHeaderOffset, stickyTop: listTop, stickyLeft: listLeft };
+            return jsx(MessagesItemSuggestedFriendsHeaderDefault, {
+              scrollPosition,
+              stickyAt: friendsHeaderOffset,
+              stickyTop: listTop,
+              stickyLeft: listLeft,
+            });
           } else if ("suggestedFriend" === kind) {
-            obj = { height: null, suggestedFriend: null, onAddFriendSuggestions: null };
-            obj[0] = listItemSuggestedFriendHeight;
-            obj[1] = friendSuggestions[item.row];
-            obj[2] = setAddedFriendSuggestions;
-            return listRefHappeningNow(
-              insetEnd(listItemSuggestedFriendHeight[6]).MessagesItemSuggestedFriendLegend,
-              obj,
-            );
+            obj = {
+              height: listItemSuggestedFriendHeight,
+              suggestedFriend: friendSuggestions[item.row],
+              onAddFriendSuggestions: setAddedFriendSuggestions,
+            };
+            return jsx(MessagesItemSuggestedFriend.MessagesItemSuggestedFriendLegend, {
+              height: listItemSuggestedFriendHeight,
+              suggestedFriend: friendSuggestions[item.row],
+              onAddFriendSuggestions: setAddedFriendSuggestions,
+            });
           } else if ("placeholder" === kind) {
-            obj = { row: null, height: null };
-            obj[0] = item.row;
-            obj[1] = estimatedItemSize;
-            return listRefHappeningNow(estimatedItemSize(listItemSuggestedFriendHeight[7]), obj);
+            obj = { row: item.row, height: estimatedItemSize };
+            return jsx(MessagesItemPlaceholderDefault, { row: item.row, height: estimatedItemSize });
           }
         }
       }
-      return listRefHappeningNow(insetEnd(listItemSuggestedFriendHeight[3]).MessagesItemChannelLegend, {
+      return jsx(MessagesItemChannel.MessagesItemChannelLegend, {
         channelId: item.channelId,
         placeholderHeight: estimatedItemSize,
         row: item.row,
@@ -108,9 +113,9 @@ const memoResult = importAllResult.memo(
         if ("channel" !== kind) {
           if ("placeholder" !== kind) {
             if ("separator" === kind) {
-              return insetEnd(listItemSuggestedFriendHeight[4]).MESSAGES_ITEM_SEPERATOR_HEIGHT;
+              return MessagesItemSeparator.MESSAGES_ITEM_SEPERATOR_HEIGHT;
             } else if ("friendsHeader" === kind) {
-              return insetEnd(listItemSuggestedFriendHeight[5]).MESSAGES_ITEM_SUGGESTED_FRIENDS_HEADER_HEIGHT;
+              return MessagesItemSuggestedFriendsHeader.MESSAGES_ITEM_SUGGESTED_FRIENDS_HEADER_HEIGHT;
             } else if ("suggestedFriend" === kind) {
               return listItemSuggestedFriendHeight;
             }
@@ -149,23 +154,21 @@ const memoResult = importAllResult.memo(
     }, items3);
     const items5 = [renderFooter];
     const ListHeaderComponent = listLeft.useMemo(() => {
-      if (insetEnd(listItemSuggestedFriendHeight[8]).MessagesDataHeader.HappeningNow === renderHeader) {
-        const obj = { listRef: null };
-        obj[0] = listRefHappeningNow;
-        return listRefHappeningNow(estimatedItemSize(tmp3[9]), obj);
-      } else if (tmp2(tmp3[8]).MessagesDataHeader.EmptyState === tmp) {
-        return listRefHappeningNow(estimatedItemSize(tmp3[10]), {});
+      if (useMessagesData.MessagesDataHeader.HappeningNow === renderHeader) {
+        const obj = { listRef: listRefHappeningNow };
+        return jsx(MessagesItemHappeningNowDefault, { listRef: listRefHappeningNow });
+      } else if (useMessagesData.MessagesDataHeader.EmptyState === tmp) {
+        return jsx(MessagesItemEmptyStateDefault, {});
       } else {
         return null;
       }
       tmp = renderHeader;
-      tmp2 = insetEnd;
     }, items4);
     const items6 = [friendsHeaderIndex];
     const ListFooterComponent = listLeft.useMemo(() => {
       let tmp = null;
       if (renderFooter) {
-        tmp = listRefHappeningNow(estimatedItemSize(listItemSuggestedFriendHeight[11]), {});
+        tmp = jsx(MessagesItemAddFriendsWidgetDefault, {});
       }
       return tmp;
     }, items5);
@@ -201,6 +204,3 @@ const memoResult = importAllResult.memo(
     });
   }),
 );
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesLegendList.tsx");
-
-export default memoResult;

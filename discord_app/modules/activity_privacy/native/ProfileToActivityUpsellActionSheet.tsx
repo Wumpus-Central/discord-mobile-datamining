@@ -1,11 +1,12 @@
 // discord_app/modules/activity_privacy/native/ProfileToActivityUpsellActionSheet.tsx
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import UserSettings from "../../user_settings/UserSettings.tsx";
+import ActivityPrivacyUpsellUtils from "../ActivityPrivacyUpsellUtils.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting(
-  "modules/activity_privacy/native/ProfileToActivityUpsellActionSheet.tsx",
-);
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/activity_privacy/native/ProfileToActivityUpsellActionSheet.tsx");
 
 export default function ProfileToActivityUpsellActionSheet(direction) {
   direction = direction.direction;
@@ -17,12 +18,12 @@ export default function ProfileToActivityUpsellActionSheet(direction) {
   );
   const items = [mappedActivityValue, direction, affectedGuildIds];
   ({ title, subtitle, confirmText, toastContent } = profileToActivityUpsellStrings);
-  const onConfirm = React.useCallback(() => {
-    const DefaultGuildsActivityRestrictedV2 = direction(mappedActivityValue[3]).DefaultGuildsActivityRestrictedV2;
+  const onConfirm = noop.useCallback(() => {
+    const DefaultGuildsActivityRestrictedV2 = UserSettings.DefaultGuildsActivityRestrictedV2;
     DefaultGuildsActivityRestrictedV2.updateSetting(mappedActivityValue);
-    const result = direction(mappedActivityValue[2]).applyBulkGuildRestrictionChange(direction, affectedGuildIds);
+    const result = ActivityPrivacyUpsellUtils.applyBulkGuildRestrictionChange(direction, affectedGuildIds);
   }, items);
-  const onCardPress = React.useCallback(() => {
+  const onCardPress = noop.useCallback(() => {
     affectedGuildIds(mappedActivityValue[4]).hideActionSheet();
   }, []);
   return jsx(affectedGuildIds(mappedActivityValue[5]), {

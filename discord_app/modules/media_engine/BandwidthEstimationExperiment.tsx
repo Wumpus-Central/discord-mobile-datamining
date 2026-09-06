@@ -1,7 +1,18 @@
 // discord_app/modules/media_engine/BandwidthEstimationExperiment.tsx
-import set from "../../../_runtime/00002_set.js";
 import createExperiment from "../experiments/index.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
+let obj = {
+  kind: "user",
+  id: "2024-06_rtc_pacer__simulcast",
+  label: "RTC Pacer & Golive Simulcast",
+  defaultConfig: {
+    enabled: true,
+    fullname: "bandwidth_estimation/trendline-window-duration-3750,robust-estimator/",
+    simulcastEnabled: false,
+  },
+  treatments: null,
+};
 const items = [
   {
     id: 1,
@@ -60,20 +71,9 @@ const items = [
     },
   },
 ];
-let closure_0 = createExperiment.createExperiment({
-  kind: "user",
-  id: "2024-06_rtc_pacer__simulcast",
-  label: "RTC Pacer & Golive Simulcast",
-  defaultConfig: {
-    enabled: true,
-    fullname: "bandwidth_estimation/trendline-window-duration-3750,robust-estimator/",
-    simulcastEnabled: false,
-  },
-  treatments: items,
-});
-const result = set.fileFinishedImporting("modules/media_engine/BandwidthEstimationExperiment.tsx");
-
-export default {
+obj.treatments = items;
+let currentConfig = createExperiment.createExperiment(obj);
+obj = {
   getConfig(autoTrackExposure, arr) {
     currentConfig = currentConfig.getCurrentConfig({ location: "e1c55b_1" }, { autoTrackExposure });
     if (!this.supportsBandwidthEstimationExperimentFullname(currentConfig.fullname, arr)) {
@@ -90,7 +90,6 @@ export default {
         if (arg1.includes(item10010)) {
           continue;
         } else {
-          let tmp4 = obj;
           obj.return();
           let flag = false;
           return false;
@@ -106,10 +105,12 @@ export default {
       found = null;
       if ("bandwidth_estimation" === parts[0]) {
         const parts1 = parts[1].split(",");
-        found = parts1.filter((arg0) => 0 !== arg0.length);
-        const str2 = parts[1];
+        found = parts1.filter((item) => 0 !== item.length);
       }
     }
     return found;
   },
 };
+const result = size.fileFinishedImporting("modules/media_engine/BandwidthEstimationExperiment.tsx");
+
+export default obj;

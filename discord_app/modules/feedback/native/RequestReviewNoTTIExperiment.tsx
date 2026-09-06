@@ -1,6 +1,6 @@
 // discord_app/modules/feedback/native/RequestReviewNoTTIExperiment.tsx
-import set from "../../../../_runtime/00002_set.js";
 import ApexExperiment from "../../experiments/apex/index.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const apexExperiment = ApexExperiment.createApexExperiment({
   name: "2026-05-mobile-request-review-no-tti",
@@ -8,6 +8,6 @@ const apexExperiment = ApexExperiment.createApexExperiment({
   defaultConfig: { skipTTICheck: false },
   variations: { 0: { skipTTICheck: false }, 1: { skipTTICheck: true } },
 });
-const result = set.fileFinishedImporting("modules/feedback/native/RequestReviewNoTTIExperiment.tsx");
+const result = size.fileFinishedImporting("modules/feedback/native/RequestReviewNoTTIExperiment.tsx");
 
 export const RequestReviewNoTTIExperiment = apexExperiment;

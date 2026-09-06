@@ -1,7 +1,7 @@
 // discord_app/modules/native_permissions/NativePermissionConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/native_permissions/NativePermissionConstants.tsx");
+const result = size.fileFinishedImporting("modules/native_permissions/NativePermissionConstants.tsx");
 
 export const NativePermissionStatus = {
   AUTHORIZED: "authorized",

@@ -1,23 +1,22 @@
 // discord_app/modules/messages/native/renderer/system_messages/GiftIntentSystemMessage.tsx
-import set from "../../../../../../_runtime/00002_set.js";
-import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import registerAssetDefault from "../../../../../../_runtime/07949_registerAsset.js";
+import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import _modDef7949 from "../../../../../../_runtime/metro/07949__.js";
 import createCommonMessageDefault from "createCommonMessage.tsx";
-import createGiftIntentEmbed from "../row_data/embeds/GiftIntentEmbed.tsx";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import GiftIntentEmbed from "../row_data/embeds/GiftIntentEmbed.tsx";
+import createStyles from "../../../../../design/components/Styles/native/createStyles.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-let closure_3 = createCacheKey.createNativeStyleProperties({
-  iconTintColor: ThemesDefault.colors.BACKGROUND_BRAND,
-  iconDividerColor: ThemesDefault.colors.ICON_STRONG,
+let closure_3 = createStyles.createNativeStyleProperties({
+  iconTintColor: nativeDefault.colors.BACKGROUND_BRAND,
+  iconDividerColor: nativeDefault.colors.ICON_STRONG,
 });
-let obj = { iconTintColor: ThemesDefault.colors.BACKGROUND_BRAND, iconDividerColor: ThemesDefault.colors.ICON_STRONG };
-const result = set.fileFinishedImporting(
+const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/GiftIntentSystemMessage.tsx",
 );
 
 export const createGiftIntentSystemMessage = function createGiftIntentSystemMessage(message) {
   ({ message, theme } = message);
-  let obj = createGiftIntentEmbed;
+  let obj = GiftIntentEmbed;
   const giftIntentEmbed = obj.createGiftIntentEmbed(message, theme);
   if (null == giftIntentEmbed) {
     return null;
@@ -28,8 +27,8 @@ export const createGiftIntentSystemMessage = function createGiftIntentSystemMess
     let tmpResult = tmp(8085);
     obj.ephemeralIndication = tmpResult.createEphemeralIndication(message);
     tmpResult = tmp(7946);
-    obj.iconUrl = tmpResult.getAssetUriForEmbed(registerAssetDefault);
-    ({ iconTintColor: obj2.iconTintColor, iconDividerColor: obj2.iconDividerColor } = callback(theme));
+    obj.iconUrl = tmpResult.getAssetUriForEmbed(_modDef7949);
+    ({ iconTintColor: obj2.iconTintColor, iconDividerColor: obj2.iconDividerColor } = closure_3(theme));
     return obj;
   }
 };

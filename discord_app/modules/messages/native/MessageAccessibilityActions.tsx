@@ -1,10 +1,10 @@
 // discord_app/modules/messages/native/MessageAccessibilityActions.tsx
-import set from "../../../../_runtime/00002_set.js";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import explicitContentFromProto from "../../user_settings/UserSettings.tsx";
-import _modDef7971 from "../../reactions/canAddNewReactions.tsx";
+import util from "../../../intl/index.native.tsx";
+import UserSettings from "../../user_settings/UserSettings.tsx";
+import canAddNewReactionsDefault from "../../reactions/canAddNewReactions.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-let obj = {
+const MessageAccessibilityAction = {
   VIEW_PROFILE: "view_profile",
   ADD_REACTION: "add_reaction",
   ADD_QUICK_REACTION: "add_quick_reaction",
@@ -14,26 +14,26 @@ let obj = {
   OPEN_PINS: "open_pins",
   JUMP_TO_MESSAGE: "jump_to_message",
 };
-let result = set.fileFinishedImporting("modules/messages/native/MessageAccessibilityActions.tsx");
+let result = size.fileFinishedImporting("modules/messages/native/MessageAccessibilityActions.tsx");
 
-export const MessageAccessibilityAction = obj;
+export { MessageAccessibilityAction };
 export const getMessageAccessibilityActionFromLabel = function getMessageAccessibilityActionFromLabel(action) {
-  obj = {};
-  const intl = getSystemLocale.intl;
-  obj[intl.string(getSystemLocale.t.iXAna6)] = obj.VIEW_PROFILE;
-  const intl2 = getSystemLocale.intl;
-  obj[intl2.string(getSystemLocale.t.lfIHs4)] = obj.ADD_REACTION;
-  const intl3 = getSystemLocale.intl;
-  obj[intl3.string(getSystemLocale.t["5IEsGx"])] = obj.REPLY;
-  const intl4 = getSystemLocale.intl;
-  obj[intl4.string(getSystemLocale.t.ChPNkN)] = obj.MESSAGE_ACTIONS_MENU;
-  const intl5 = getSystemLocale.intl;
-  obj[intl5.string(getSystemLocale.t["5Q9+/L"])] = obj.EDIT_GDM;
-  const intl6 = getSystemLocale.intl;
-  obj[intl6.string(getSystemLocale.t["mp1N/2"])] = obj.OPEN_PINS;
-  const intl7 = getSystemLocale.intl;
-  obj[intl7.string(getSystemLocale.t["+TSRGD"])] = obj.JUMP_TO_MESSAGE;
-  const DoubleTapReactionEmoji = explicitContentFromProto.DoubleTapReactionEmoji;
+  let obj = {};
+  const intl = util.intl;
+  obj[intl.string(util.t.iXAna6)] = obj.VIEW_PROFILE;
+  const intl2 = util.intl;
+  obj[intl2.string(util.t.lfIHs4)] = obj.ADD_REACTION;
+  const intl3 = util.intl;
+  obj[intl3.string(util.t["5IEsGx"])] = obj.REPLY;
+  const intl4 = util.intl;
+  obj[intl4.string(util.t.ChPNkN)] = obj.MESSAGE_ACTIONS_MENU;
+  const intl5 = util.intl;
+  obj[intl5.string(util.t["5Q9+/L"])] = obj.EDIT_GDM;
+  const intl6 = util.intl;
+  obj[intl6.string(util.t["mp1N/2"])] = obj.OPEN_PINS;
+  const intl7 = util.intl;
+  obj[intl7.string(util.t["+TSRGD"])] = obj.JUMP_TO_MESSAGE;
+  const DoubleTapReactionEmoji = UserSettings.DoubleTapReactionEmoji;
   const setting = DoubleTapReactionEmoji.getSetting();
   let disableDoubleTap;
   if (setting != null) {
@@ -45,8 +45,7 @@ export const getMessageAccessibilityActionFromLabel = function getMessageAccessi
       const result = tmp(7968).disambiguatedEmojiFromSettingsValue(setting);
       if (null != result) {
         const intl9 = tmp(1114).intl;
-        obj = { emojiName: null };
-        obj[0] = result.name;
+        obj = { emojiName: result.name };
         formatToPlainStringResult = intl9.formatToPlainString(tmp(1114).t.eQIttH, obj);
       }
       const tmpResult = tmp(7968);
@@ -63,16 +62,16 @@ export const createMessageAccessibilityActions = function createMessageAccessibi
   if (null == channel) {
     return [];
   } else {
-    obj = { label: null, name: null };
-    const intl6 = getSystemLocale.intl;
-    obj[0] = intl6.string(getSystemLocale.t.iXAna6);
-    obj[1] = obj.VIEW_PROFILE;
+    let obj = { label: null, name: null };
+    const intl6 = util.intl;
+    obj.label = intl6.string(util.t.iXAna6);
+    obj.name = obj.VIEW_PROFILE;
     const items = [obj];
-    if (_modDef7971(channel)) {
+    if (canAddNewReactionsDefault(channel)) {
       obj = { label: null, name: null };
       const intl = tmp10(1114).intl;
-      obj[0] = intl.string(tmp10(1114).t.lfIHs4);
-      obj[1] = tmp12.ADD_REACTION;
+      obj.label = intl.string(tmp10(1114).t.lfIHs4);
+      obj.name = tmp12.ADD_REACTION;
       items.push(obj);
       const DoubleTapReactionEmoji = tmp10(1935).DoubleTapReactionEmoji;
       const setting = DoubleTapReactionEmoji.getSetting();
@@ -87,8 +86,7 @@ export const createMessageAccessibilityActions = function createMessageAccessibi
           const result = tmp10Result.disambiguatedEmojiFromSettingsValue(setting);
           if (null != result) {
             const intl3 = tmp10(1114).intl;
-            obj = { emojiName: null };
-            obj[0] = result.name;
+            obj = { emojiName: result.name };
             formatToPlainStringResult = intl3.formatToPlainString(tmp10(1114).t.eQIttH, obj);
           }
         }
@@ -96,9 +94,7 @@ export const createMessageAccessibilityActions = function createMessageAccessibi
         formatToPlainStringResult = intl2.formatToPlainString(tmp10(1114).t.eQIttH, { emojiName: "heart" });
       }
       if (null != formatToPlainStringResult) {
-        obj1 = { label: null, name: null };
-        obj1[0] = formatToPlainStringResult;
-        obj1[1] = tmp12.ADD_QUICK_REACTION;
+        const obj1 = { label: formatToPlainStringResult, name: tmp12.ADD_QUICK_REACTION };
         items.push(obj1);
       }
     }
@@ -106,14 +102,14 @@ export const createMessageAccessibilityActions = function createMessageAccessibi
     if (tmp10Result.canReplyToMessage(channel, message)) {
       const obj2 = { label: null, name: null };
       const intl4 = tmp10(1114).intl;
-      obj2[0] = intl4.string(tmp10(1114).t["5IEsGx"]);
-      obj2[1] = tmp12.REPLY;
+      obj2.label = intl4.string(tmp10(1114).t["5IEsGx"]);
+      obj2.name = tmp12.REPLY;
       items.push(obj2);
     }
     const obj3 = { label: null, name: null };
     const intl5 = tmp10(1114).intl;
-    obj3[0] = intl5.string(getSystemLocale.t.ChPNkN);
-    obj3[1] = obj.MESSAGE_ACTIONS_MENU;
+    obj3.label = intl5.string(util.t.ChPNkN);
+    obj3.name = obj.MESSAGE_ACTIONS_MENU;
     items.push(obj3);
     return items;
   }

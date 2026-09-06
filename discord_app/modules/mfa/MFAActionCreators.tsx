@@ -1,17 +1,14 @@
 // discord_app/modules/mfa/MFAActionCreators.tsx
-import set from "../../../_runtime/00002_set.js";
-import get_webauthn from "MFAConstants.tsx";
+import MFAConstants from "MFAConstants.tsx";
+import MFA from "../../../discord_common/js/shared/MFA.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const SELECT_NAMES = get_webauthn.SELECT_NAMES;
-const result = set.fileFinishedImporting("modules/mfa/MFAActionCreators.tsx");
+const SELECT_NAMES = MFAConstants.SELECT_NAMES;
+const result = size.fileFinishedImporting("modules/mfa/MFAActionCreators.tsx");
 
-export const openMFAModal = function openMFAModal(methods) {
-  const _require = arg1;
+export const openMFAModal = function openMFAModal(methods, arg1, arg2) {
+  _require = arg1;
   methods = methods.methods;
-  methods.methods = methods.filter((type) => Object.hasOwn(closure_2, type.type));
-  require("native/MFAModal.tsx").openMFAModal(
-    methods,
-    (arg0) => callback(closure_1_1[2]).trySubmit(arg0, callback),
-    arg2,
-  );
+  methods.methods = methods.filter((type) => Object.hasOwn(SELECT_NAMES, type.type));
+  require("MFAModal").openMFAModal(methods, (arg0) => MFA.trySubmit(arg0, closure_0), arg2);
 };

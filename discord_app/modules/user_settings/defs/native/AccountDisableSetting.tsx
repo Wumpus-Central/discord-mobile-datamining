@@ -1,30 +1,20 @@
 // discord_app/modules/user_settings/defs/native/AccountDisableSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
+import util from "../../../../intl/index.native.tsx";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import handleDisableAccountDefault from "../../account/native/handleDisableAccount.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const pressable = createToggle.createPressable({
+const pressable = SettingBuilders.createPressable({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.jf5GGb);
+    const intl = util.intl;
+    return intl.string(util.t.jf5GGb);
   },
-  parent: MobileUserSettings.MobileUserSettings.ACCOUNT,
+  parent: SettingsConstants.MobileUserSettings.ACCOUNT,
   onPress: function onAccountDisablePress() {
     handleDisableAccountDefault(false);
   },
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.jf5GGb);
-  },
-  parent: MobileUserSettings.MobileUserSettings.ACCOUNT,
-  onPress: function onAccountDisablePress() {
-    handleDisableAccountDefault(false);
-  },
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/AccountDisableSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountDisableSetting.tsx");
 
 export default pressable;

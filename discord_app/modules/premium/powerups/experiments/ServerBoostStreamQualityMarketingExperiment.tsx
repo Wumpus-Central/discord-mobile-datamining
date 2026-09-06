@@ -1,16 +1,19 @@
 // discord_app/modules/premium/powerups/experiments/ServerBoostStreamQualityMarketingExperiment.tsx
-import getUnitIdDefault from "../../../experiments/apex/ApexExperiment.tsx";
+import apex_ApexExperimentDefault from "../../../experiments/apex/ApexExperiment.tsx";
 
-const obj = { 1: null };
-obj[1] = { streamQualityMarketingResolution: "1440p" };
-const tmp2 = getUnitIdDefault({
+let obj = {
   name: "2026-04-server-boost-copy-1440p",
   kind: "user",
   defaultConfig: { streamQualityMarketingResolution: "1080p" },
-  variations: obj,
-});
-let closure_0 = tmp2;
-const result = require("set").fileFinishedImporting(
+  variations: null,
+};
+obj = { 1: null };
+obj[1] = { streamQualityMarketingResolution: "1440p" };
+obj.variations = obj;
+const tmp2 = apex_ApexExperimentDefault(obj);
+const config = tmp2;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/premium/powerups/experiments/ServerBoostStreamQualityMarketingExperiment.tsx",
 );
 

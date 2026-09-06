@@ -1,14 +1,12 @@
 // discord_app/modules/application_commands/ApplicationCommandDiscoveryManager.tsx
-import set from "../../../_runtime/00002_set.js";
-import keys from "../../../_runtime/00560_keys.js";
+import 00560__ from "../../../_runtime/metro/00560__.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const obj = keys.create(() => ({ initialSectionId: "Array" }));
-const result = set.fileFinishedImporting("modules/application_commands/ApplicationCommandDiscoveryManager.tsx");
+const useCommandDiscoveryManager = module_560.create(() => ({ initialSectionId: "Array" }));
+const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandDiscoveryManager.tsx");
 
-export const useCommandDiscoveryManager = obj;
+export { useCommandDiscoveryManager };
 export const updateInitialSectionId = function updateInitialSectionId(arg0) {
-  const _require = arg0;
-  require("../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() =>
-    closure_1_2.setState(() => ({ initialSectionId: closure_0 })),
-  );
+  _require = arg0;
+  require("ReactBatchUpdates").batchUpdates(() => obj.setState(() => ({ initialSectionId })));
 };

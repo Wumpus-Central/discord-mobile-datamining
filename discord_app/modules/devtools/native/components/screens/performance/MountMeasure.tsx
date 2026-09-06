@@ -1,24 +1,22 @@
 // discord_app/modules/devtools/native/components/screens/performance/MountMeasure.tsx
-import noopAll from "../../../../../../../_runtime/00019_noop.js";
-import useMountLayoutEffect from "../../../../../../hooks/useMountEffect.tsx";
-import { View } from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
+import useMountEffect from "../../../../../../hooks/useMountEffect.tsx";
+import noop from "../../../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting(
-  "modules/devtools/native/components/screens/performance/MountMeasure.tsx",
-);
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/devtools/native/components/screens/performance/MountMeasure.tsx");
 
 export default function MountMeasure(arg0) {
   ({ batchKey: require, onMeasure: dependencyMap, onCancel: View } = arg0);
   ({ style, children } = arg0);
-  let obj = useMountLayoutEffect;
-  const unmountEffect = obj.useUnmountEffect(() => callback2(closure_0));
+  let obj = useMountEffect;
+  const unmountEffect = obj.useUnmountEffect(() => View(require));
   obj = {
     style,
     onLayout() {
-      return callback(closure_0);
+      return dependencyMap(require);
     },
     children,
   };
@@ -26,7 +24,7 @@ export default function MountMeasure(arg0) {
     <View
       style={style}
       onLayout={function onLayout() {
-        return callback(closure_0);
+        return dependencyMap(require);
       }}
     >
       {children}

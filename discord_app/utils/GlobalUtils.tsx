@@ -1,8 +1,8 @@
 // discord_app/utils/GlobalUtils.tsx
-import set2 from "../../_runtime/00002_set.js";
+import size from "../../_runtime/metro/00002__.js";
 
 let closure_0 = "development" === window.GLOBAL_ENV.PROJECT_ENV;
-const result = set2.fileFinishedImporting("utils/GlobalUtils.tsx");
+const result = size.fileFinishedImporting("utils/GlobalUtils.tsx");
 
 export function isDiscordFrontendDevelopment() {
   return false;
@@ -11,7 +11,7 @@ export function isDiscordBackendDevelopment() {
   return closure_0;
 }
 export const assertNever = function assertNever(arg0) {
-  error = new Error("Unhandled value: " + arg0);
+  const error = new Error("Unhandled value: " + arg0);
   throw error;
 };
 export const isNotNullish = function isNotNullish(channel) {

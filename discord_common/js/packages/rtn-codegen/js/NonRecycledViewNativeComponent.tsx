@@ -1,12 +1,10 @@
 // discord_common/js/packages/rtn-codegen/js/NonRecycledViewNativeComponent.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import setRuntimeConfigProvider from "../../../../../_runtime/00065_setRuntimeConfigProvider.js";
+import 00065__ from "../../../../../_runtime/metro/00065__.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const obj = { uiViewClassName: "DCDNonRecycledView", validAttributes: {} };
-const value = setRuntimeConfigProvider.get("DCDNonRecycledView", () => obj);
-const result = set.fileFinishedImporting(
-  "../discord_common/js/packages/rtn-codegen/js/NonRecycledViewNativeComponent.tsx",
-);
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "DCDNonRecycledView", validAttributes: {} };
+const value = module_65.get("DCDNonRecycledView", () => obj);
+const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NonRecycledViewNativeComponent.tsx");
 
 export default value;
-export const __INTERNAL_VIEW_CONFIG = obj;
+export { __INTERNAL_VIEW_CONFIG };

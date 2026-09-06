@@ -1,6 +1,6 @@
 // discord_app/modules/game_profile/GameProfileStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
 
 let closure_0 = {};
 let closure_1 = {};
@@ -14,37 +14,37 @@ const Store = initializeDefault.Store;
 class GameProfileStore extends Store {}
 const prototype = GameProfileStore.prototype;
 prototype["getSimilarGames"] = function getSimilarGames(arg0) {
-  return table[arg0];
+  return closure_0[arg0];
 };
 prototype["getShopCollectionSkuIds"] = function getShopCollectionSkuIds(arg0) {
-  return table2[arg0];
+  return closure_1[arg0];
 };
 prototype["hasShopCollectionBeenFetched"] = function hasShopCollectionBeenFetched(arg0) {
-  let flag = table3[arg0];
+  let flag = closure_2[arg0];
   if (flag == null) {
     flag = false;
   }
   return flag;
 };
 prototype["isShopCollectionFetching"] = function isShopCollectionFetching(arg0) {
-  let flag = table4[arg0];
+  let flag = closure_3[arg0];
   if (flag == null) {
     flag = false;
   }
   return flag;
 };
 prototype["getAnnouncements"] = function getAnnouncements(arg0) {
-  return table5[arg0];
+  return closure_4[arg0];
 };
 prototype["hasAnnouncementsBeenFetched"] = function hasAnnouncementsBeenFetched(arg0) {
-  let flag = table6[arg0];
+  let flag = closure_5[arg0];
   if (flag == null) {
     flag = false;
   }
   return flag;
 };
 prototype["isAnnouncementsFetching"] = function isAnnouncementsFetching(arg0) {
-  let flag = table7[arg0];
+  let flag = closure_6[arg0];
   if (flag == null) {
     flag = false;
   }
@@ -54,7 +54,7 @@ prototype["getPendingReturn"] = function getPendingReturn() {
   return c7;
 };
 GameProfileStore.displayName = "GameProfileStore";
-const gameProfileStore = new GameProfileStore(dispatcherDefault, {
+const gameProfileStore = new GameProfileStore(DispatcherDefault, {
   GAME_PROFILE_GET_SIMILAR_GAMES_SUCCESS: function handleGetSimilarGamesSuccess(gameId) {
     closure_0[gameId.gameId] = gameId.games;
   },
@@ -118,6 +118,7 @@ const gameProfileStore = new GameProfileStore(dispatcherDefault, {
     return false;
   },
 });
-const result = require("set").fileFinishedImporting("modules/game_profile/GameProfileStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_profile/GameProfileStore.tsx");
 
 export default gameProfileStore;

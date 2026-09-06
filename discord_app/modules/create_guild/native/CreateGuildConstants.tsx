@@ -1,7 +1,7 @@
 // discord_app/modules/create_guild/native/CreateGuildConstants.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/create_guild/native/CreateGuildConstants.tsx");
+const result = size.fileFinishedImporting("modules/create_guild/native/CreateGuildConstants.tsx");
 
 export const NUXGuildTemplatesAnalytics = {
   FLOW_TYPE: "Mobile NUX Post Reg",

@@ -1,24 +1,24 @@
 // discord_app/modules/main_tabs_v2/UserSearchUtils.tsx
-import isNullOrEmpty from "../../utils/StringUtils.tsx";
-import nameFromUserDefault from "../../utils/UserUtils.tsx";
-import closure_3 from "../friend_suggestions/FriendSuggestionStore.tsx";
-import closure_4 from "../../stores/GuildMemberStore.tsx";
-import closure_5 from "../../stores/RelationshipStore.tsx";
-import { RelationshipTypes } from "../../Constants.tsx";
+import StringUtils from "../../utils/StringUtils.tsx";
+import UserUtilsDefault from "../../utils/UserUtils.tsx";
+import FriendSuggestionStore from "../friend_suggestions/FriendSuggestionStore.tsx";
+import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
+import RelationshipStore from "../../stores/RelationshipStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/UserSearchUtils.tsx");
+require = fn;
+const RelationshipTypes = fn(1074).RelationshipTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/UserSearchUtils.tsx");
 
 export const cleanString = function cleanString(toLocaleLowerCase) {
-  const obj = isNullOrEmpty;
-  return isNullOrEmpty.stripDiacritics(toLocaleLowerCase.toLocaleLowerCase()).trim();
+  return StringUtils.stripDiacritics(toLocaleLowerCase.toLocaleLowerCase()).trim();
 };
 export const getRelationshipType = function getRelationshipType(id) {
-  const relationshipType = store.getRelationshipType(id);
+  const relationshipType = RelationshipStore.getRelationshipType(id);
   let SUGGESTION = relationshipType;
   if (relationshipType === RelationshipTypes.NONE) {
     SUGGESTION = relationshipType;
-    if (null != suggestion.getSuggestion(id)) {
+    if (null != FriendSuggestionStore.getSuggestion(id)) {
       SUGGESTION = tmp2.SUGGESTION;
     }
   }
@@ -26,14 +26,14 @@ export const getRelationshipType = function getRelationshipType(id) {
 };
 export const getNames = function getNames(user) {
   const names = {};
-  const nick = store.getNickname(user.id);
+  const nick = RelationshipStore.getNickname(user.id);
   if (null != nick) {
     const obj3 = names(1925);
     let str = names(1925).stripDiacritics(nick.toLocaleLowerCase());
     names[nick] = names(1925).stripDiacritics(nick.toLocaleLowerCase()).trim().split(" ");
     let str2 = names(1925).stripDiacritics(nick.toLocaleLowerCase()).trim();
   }
-  const globalName = nameFromUserDefault.getGlobalName(user);
+  const globalName = UserUtilsDefault.getGlobalName(user);
   if (tmp4) {
     const obj6 = names(1925);
     const str4 = names(1925).stripDiacritics(globalName.toLocaleLowerCase());
@@ -41,21 +41,16 @@ export const getNames = function getNames(user) {
     const str5 = names(1925).stripDiacritics(globalName.toLocaleLowerCase()).trim();
   }
   const username = user.username;
-  const obj4 = nameFromUserDefault;
   tmp4 = null != globalName && null == names[globalName];
   const obj7 = names(1925);
   const str7 = names(1925).stripDiacritics(username.toLocaleLowerCase());
   names[user.username] = names(1925).stripDiacritics(username.toLocaleLowerCase()).trim().split(" ");
-  nicknames = nicknames.getNicknames(user.id);
+  const nicknames = GuildMemberStore.getNicknames(user.id);
   const item = nicknames.forEach((toLocaleLowerCase) => {
     if (null == names[toLocaleLowerCase]) {
-      const obj = names(closure_1_2[4]);
-      const str = names(closure_1_2[4]).stripDiacritics(toLocaleLowerCase.toLocaleLowerCase());
-      tmp[toLocaleLowerCase] = names(closure_1_2[4])
-        .stripDiacritics(toLocaleLowerCase.toLocaleLowerCase())
-        .trim()
-        .split(" ");
-      const str2 = names(closure_1_2[4]).stripDiacritics(toLocaleLowerCase.toLocaleLowerCase()).trim();
+      const str = StringUtils.stripDiacritics(toLocaleLowerCase.toLocaleLowerCase());
+      tmp[toLocaleLowerCase] = StringUtils.stripDiacritics(toLocaleLowerCase.toLocaleLowerCase()).trim().split(" ");
+      const str2 = StringUtils.stripDiacritics(toLocaleLowerCase.toLocaleLowerCase()).trim();
     }
   });
   return { names, nick };

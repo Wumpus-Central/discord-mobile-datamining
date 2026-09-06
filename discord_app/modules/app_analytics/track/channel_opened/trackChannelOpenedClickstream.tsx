@@ -1,12 +1,13 @@
 // discord_app/modules/app_analytics/track/channel_opened/trackChannelOpenedClickstream.tsx
-import isClickstreamEnabled from "../../clickstream/Clickstream.tsx";
-import closure_2 from "../../../../stores/ChannelStore.tsx";
-import ME from "../../../../Constants.tsx";
-import { StaticChannelRoute } from "../../../channel/ChannelConstants.tsx";
+import Clickstream from "../../clickstream/Clickstream.tsx";
+import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
-require = arg1;
-({ ChannelTypes: c3, AnalyticEvents: c4 } = ME);
-const result = require("set").fileFinishedImporting(
+require = fn;
+const Constants = fn(1074);
+({ ChannelTypes: c3, AnalyticEvents: closure_4 } = Constants);
+const StaticChannelRoute = fn(1964).StaticChannelRoute;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/app_analytics/track/channel_opened/trackChannelOpenedClickstream.tsx",
 );
 
@@ -23,10 +24,8 @@ export default function trackChannelOpenedClickstream(channelId) {
                   if (tmp.MEMBER_SAFETY !== channelId) {
                     if (tmp.GUILD_ONBOARDING !== channelId) {
                       if (tmp.GUILD_BOOSTS !== channelId) {
-                        let obj = isClickstreamEnabled;
-                        obj = { channel_id: null, channel_type: null };
-                        obj[0] = channelId;
-                        channel = channel.getChannel(channelId);
+                        const obj = { channel_id: channelId, channel_type: null };
+                        const channel = ChannelStore.getChannel(channelId);
                         let type;
                         if (channel != null) {
                           type = channel.type;
@@ -34,7 +33,7 @@ export default function trackChannelOpenedClickstream(channelId) {
                         if (type == null) {
                           type = constants.UNKNOWN;
                         }
-                        obj[1] = type;
+                        obj.channel_type = type;
                         obj.trackClickstream(constants2.CHANNEL_OPENED_CLICKSTREAM, obj);
                       }
                     }

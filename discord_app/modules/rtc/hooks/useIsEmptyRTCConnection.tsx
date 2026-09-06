@@ -1,20 +1,21 @@
 // discord_app/modules/rtc/hooks/useIsEmptyRTCConnection.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import closure_2 from "../../../stores/AuthenticationStore.tsx";
-import closure_3 from "../../../stores/RTCConnectionStore.tsx";
-import closure_4 from "../../../stores/StreamRTCConnectionStore.tsx";
+import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
+import RTCConnectionStore from "../../../stores/RTCConnectionStore.tsx";
+import StreamRTCConnectionStore from "../../../stores/StreamRTCConnectionStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/rtc/hooks/useIsEmptyRTCConnection.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/rtc/hooks/useIsEmptyRTCConnection.tsx");
 
 export const useIsStreamRTCConnectionEmpty = function useIsStreamRTCConnectionEmpty(stateFromStores4) {
-  const _require = stateFromStores4;
-  const items = [closure_4, closure_2];
-  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  _require = stateFromStores4;
+  const items = [StreamRTCConnectionStore, AuthenticationStore];
+  return require("initialize").useStateFromStores(items, () => {
     if (null == closure_0) {
       return true;
     } else {
-      const userIds = closure_1_4.getUserIds(tmp);
+      const userIds = StreamRTCConnectionStore.getUserIds(tmp);
       let tmp3 = null == userIds;
       if (!tmp3) {
         let tmp6 = 0 === userIds.size;
@@ -29,7 +30,7 @@ export const useIsStreamRTCConnectionEmpty = function useIsStreamRTCConnectionEm
   });
 };
 export const useIsCallRTCConnectionEmpty = function useIsCallRTCConnectionEmpty() {
-  const items = [closure_3, closure_2];
+  const items = [RTCConnectionStore, AuthenticationStore];
   return initialize.useStateFromStores(items, () => {
     userIds = userIds.getUserIds();
     let tmp = null == userIds;

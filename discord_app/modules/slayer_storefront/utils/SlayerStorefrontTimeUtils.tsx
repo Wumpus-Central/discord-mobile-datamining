@@ -1,30 +1,30 @@
 // discord_app/modules/slayer_storefront/utils/SlayerStorefrontTimeUtils.tsx
-import getSystemLocale from "../../../intl/index.native.tsx";
-import messagesProxyDefault from "../intl/SlayerStorefront.messages.js";
-import hooksDefault from "../../../../_runtime/04153_hooks.js";
+import util from "../../../intl/index.native.tsx";
+import _modDef3417 from "../intl/SlayerStorefront.messages.js";
+import _modDef4153 from "../../../../_runtime/metro/04153__.js";
 import useIntervalDefault from "../../../hooks/useInterval.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+require = fn;
 function getLimitedOfferTimeLeft(arg0) {
   if (null == arg0) {
     return null;
   } else {
-    const diffResult = hooksDefault(arg0).diff(hooksDefault(), "seconds");
+    const diffResult = _modDef4153(arg0).diff(_modDef4153(), "seconds");
     let tmp4 = null;
     if (diffResult > 0) {
-      const obj = { days: null, hours: null, minutes: null, seconds: null };
+      const time = { days: null, hours: null, minutes: null, seconds: null };
       const _Math = Math;
-      obj[0] = Math.floor(diffResult / tmp5(1090).Seconds.DAY);
+      time.days = Math.floor(diffResult / tmp5(1090).Seconds.DAY);
       const _Math2 = Math;
       const result = diffResult % tmp5(1090).Seconds.DAY;
-      obj[1] = Math.floor(result / tmp5(1090).Seconds.HOUR);
+      time.hours = Math.floor(result / tmp5(1090).Seconds.HOUR);
       const _Math3 = Math;
       const result1 = diffResult % tmp5(1090).Seconds.HOUR;
-      obj[2] = Math.floor(result1 / tmp5(1090).Seconds.MINUTE);
-      obj[3] = diffResult % tmp5(1090).Seconds.MINUTE;
-      tmp4 = obj;
+      time.minutes = Math.floor(result1 / tmp5(1090).Seconds.MINUTE);
+      time.seconds = diffResult % tmp5(1090).Seconds.MINUTE;
+      tmp4 = time;
     }
     return tmp4;
   }
@@ -36,38 +36,37 @@ function formatLimitedOfferTimeLeft(arg0) {
   } else {
     ({ days, hours } = tmp);
     if (days > 0) {
-      const intl3 = getSystemLocale.intl;
-      let obj = { days: null };
-      obj[0] = days;
-      let formatToPlainStringResult = intl3.formatToPlainString(getSystemLocale.t.BXpdIg, obj);
+      const intl3 = util.intl;
+      let obj = { days };
+      let formatToPlainStringResult = intl3.formatToPlainString(util.t.BXpdIg, obj);
     } else if (hours > 0) {
-      const intl2 = getSystemLocale.intl;
-      obj = { hours: null };
-      obj[0] = hours;
-      formatToPlainStringResult = intl2.formatToPlainString(messagesProxyDefault.PPaJSw, obj);
+      const intl2 = util.intl;
+      obj = { hours };
+      formatToPlainStringResult = intl2.formatToPlainString(_modDef3417.PPaJSw, obj);
     } else {
-      const intl = getSystemLocale.intl;
+      const intl = util.intl;
       obj = { minutes: null };
       const _Math = Math;
-      obj[0] = Math.max(tmp12, 1);
-      formatToPlainStringResult = intl.formatToPlainString(messagesProxyDefault["7Z+aIf"], obj);
+      obj.minutes = Math.max(tmp12, 1);
+      formatToPlainStringResult = intl.formatToPlainString(_modDef3417["7Z+aIf"], obj);
     }
     return formatToPlainStringResult;
   }
 }
-let result = require("set").fileFinishedImporting("modules/slayer_storefront/utils/SlayerStorefrontTimeUtils.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/slayer_storefront/utils/SlayerStorefrontTimeUtils.tsx");
 
 export { getLimitedOfferTimeLeft };
 export { formatLimitedOfferTimeLeft };
 export const useTickingFormattedLimitedOfferTimeLeft = function useTickingFormattedLimitedOfferTimeLeft(endDate) {
   closure_0 = endDate;
-  const tmp = callback(
-    React.useState(() => closure_1_6(closure_0)),
+  const tmp = _slicedToArray(
+    noop.useState(() => formatLimitedOfferTimeLeft(closure_0)),
     2,
   );
   importDefault = tmp[1];
   useIntervalDefault(() => {
-    callback(closure_1_6(closure_0));
+    closure_1(formatLimitedOfferTimeLeft(closure_0));
   }, 1000);
   return tmp[0];
 };

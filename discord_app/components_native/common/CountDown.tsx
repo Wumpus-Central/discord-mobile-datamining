@@ -1,12 +1,12 @@
 // discord_app/components_native/common/CountDown.tsx
-import setDefault from "../../utils/Durations.tsx";
-import getSystemLocale from "../../intl/index.native.tsx";
-import Text from "../../design/components/Text/native/Text.tsx";
-import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
-import importAllResult from "../../../_runtime/00019_noop.js";
+import DurationsDefault from "../../utils/Durations.tsx";
+import util from "../../intl/index.native.tsx";
+import Text_Text from "../../design/components/Text/native/Text.tsx";
+import noop from "../../../_runtime/metro/00019__.js";
 
-require = arg1;
-const Component = importAllResult.Component;
+require = fn;
+const jsx = fn(21).jsx;
+const Component = noop.Component;
 class CountDown extends Component {}
 const prototype = CountDown.prototype;
 prototype["componentDidMount"] = function componentDidMount() {
@@ -27,8 +27,8 @@ prototype["render"] = function render() {
   const style = this.props;
   ({ postDeadlineText, deadline, freezeAtRemainingSeconds } = style);
   if (deadline === Infinity) {
-    const intl5 = getSystemLocale.intl;
-    let children = intl5.string(getSystemLocale.t.PqEzn8);
+    const intl5 = util.intl;
+    let children = intl5.string(util.t.PqEzn8);
   } else {
     const _Math5 = Math;
     const _Number = Number;
@@ -40,39 +40,39 @@ prototype["render"] = function render() {
     }
     if (result < 0) {
       const _Math = Math;
-      const items = [Math.floor(result / setDefault.Seconds.DAY), , ,];
+      const items = [Math.floor(result / DurationsDefault.Seconds.DAY), , ,];
       const _Math2 = Math;
-      const result1 = result % setDefault.Seconds.DAY;
-      items[1] = Math.floor(result1 / setDefault.Seconds.HOUR);
+      const result1 = result % DurationsDefault.Seconds.DAY;
+      items[1] = Math.floor(result1 / DurationsDefault.Seconds.HOUR);
       const _Math3 = Math;
-      const result2 = result1 % setDefault.Seconds.HOUR;
-      items[2] = Math.floor(result2 / setDefault.Seconds.MINUTE);
+      const result2 = result1 % DurationsDefault.Seconds.HOUR;
+      items[2] = Math.floor(result2 / DurationsDefault.Seconds.MINUTE);
       const _Math4 = Math;
-      items[3] = Math.floor(result2 % setDefault.Seconds.MINUTE);
+      items[3] = Math.floor(result2 % DurationsDefault.Seconds.MINUTE);
       let num = 0;
       if (0 === items[0]) {
         items.shift();
         num = 1;
       }
-      const mapped = items.map((arg0) => {
-        let combined = arg0;
-        if (arg0 < 10) {
+      const mapped = items.map((item) => {
+        let combined = item;
+        if (item < 10) {
           const _HermesInternal = HermesInternal;
-          combined = "0" + arg0;
+          combined = "0" + item;
         }
         return combined;
       });
       const joined = mapped.join(":");
       children = joined;
       if (tmp) {
-        const intl = getSystemLocale.intl;
-        const items1 = [intl.string(getSystemLocale.t.QJyuxY), , ,];
-        const intl2 = getSystemLocale.intl;
-        items1[1] = intl2.string(getSystemLocale.t["1LyF1h"]);
-        const intl3 = getSystemLocale.intl;
-        items1[2] = intl3.string(getSystemLocale.t.n7dksO);
-        const intl4 = getSystemLocale.intl;
-        items1[3] = intl4.string(getSystemLocale.t["6m/6nM"]);
+        const intl = util.intl;
+        const items1 = [intl.string(util.t.QJyuxY), , ,];
+        const intl2 = util.intl;
+        items1[1] = intl2.string(util.t["1LyF1h"]);
+        const intl3 = util.intl;
+        items1[2] = intl3.string(util.t.n7dksO);
+        const intl4 = util.intl;
+        items1[3] = intl4.string(util.t["6m/6nM"]);
         let tmp11 = num;
         let tmp12 = joined;
         if (-1 !== joined.indexOf(":")) {
@@ -104,8 +104,9 @@ prototype["render"] = function render() {
     const NumberResult = Number(deadline);
     tmp2 = null != freezeAtRemainingSeconds && result <= freezeAtRemainingSeconds;
   }
-  return jsx(Text.Text, { tabularNumbers: true, variant: "text-md/semibold", style: style.style, children });
+  return jsx(Text_Text.Text, { tabularNumbers: true, variant: "text-md/semibold", style: style.style, children });
 };
-let result = require("set").fileFinishedImporting("components_native/common/CountDown.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("components_native/common/CountDown.tsx");
 
 export default CountDown;

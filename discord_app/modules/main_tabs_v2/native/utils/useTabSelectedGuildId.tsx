@@ -1,16 +1,17 @@
 // discord_app/modules/main_tabs_v2/native/utils/useTabSelectedGuildId.tsx
-import defaultAreStatesEqual from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import closure_2 from "../../../../stores/SelectedGuildStore.tsx";
-import closure_3 from "../../../../stores/SortedGuildStore.tsx";
+import useStateFromStores from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import SelectedGuildStore from "../../../../stores/SelectedGuildStore.tsx";
+import SortedGuildStore from "../../../../stores/SortedGuildStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/utils/useTabSelectedGuildId.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/utils/useTabSelectedGuildId.tsx");
 
 export default function useTabSelectedGuildId() {
-  const items = [closure_2, closure_3];
-  return defaultAreStatesEqual.useStateFromStores(items, () => {
-    let guildId = store.getGuildId();
-    const lastSelectedGuildId = store.getLastSelectedGuildId();
+  const items = [SelectedGuildStore, SortedGuildStore];
+  return useStateFromStores.useStateFromStores(items, () => {
+    let guildId = SelectedGuildStore.getGuildId();
+    const lastSelectedGuildId = SelectedGuildStore.getLastSelectedGuildId();
     if (guildId == null) {
       guildId = lastSelectedGuildId;
     }

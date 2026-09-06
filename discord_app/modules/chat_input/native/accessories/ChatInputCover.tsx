@@ -1,46 +1,44 @@
 // discord_app/modules/chat_input/native/accessories/ChatInputCover.tsx
-import importAllResult from "../../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-({ StyleSheet: c3, TouchableWithoutFeedback: c4, View: c5 } = get_ActivityIndicator);
-const forwardRefResult = importAllResult.forwardRef((enabled, ref) => {
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ StyleSheet: c3, TouchableWithoutFeedback: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const forwardRefResult = noop.forwardRef((enabled, ref) => {
   let flag = enabled.enabled;
   if (flag === undefined) {
     flag = true;
   }
   const keyboardType = enabled.keyboardType;
   const onSelectKeyboard = enabled.onSelectKeyboard;
-  let isScreenReaderEnabled;
   let obj = flag(keyboardType[3]);
-  isScreenReaderEnabled = obj.useIsScreenReaderEnabled();
+  const isScreenReaderEnabled = obj.useIsScreenReaderEnabled();
   const items = [flag, isScreenReaderEnabled, keyboardType, onSelectKeyboard];
   const memo = onSelectKeyboard.useMemo(
     () => ({
       imperativeHandle() {
         return {
-          focused(controlsSpecs, arg1) {
-            let tmp = closure_0;
-            if (closure_0) {
+          focused(controlsSpecs) {
+            let tmp = closure_1_0;
+            if (closure_1_0) {
               tmp = controlsSpecs;
             }
             if (tmp) {
-              tmp = closure_1 !== closure_1_0(closure_1_1[4]).KeyboardTypes.SYSTEM;
+              tmp = dependencyMap !== flag(1609).KeyboardTypes.SYSTEM;
             }
             if (tmp) {
-              tmp = closure_3;
+              tmp = closure_1_3;
             }
             if (tmp) {
-              const obj = { type: null };
-              obj[0] = closure_1_0(closure_1_1[4]).KeyboardTypes.SYSTEM;
-              callback(obj);
+              const obj = { type: flag(1609).KeyboardTypes.SYSTEM };
+              closure_1_2(obj);
             }
           },
         };
       },
       openSystemKeyboard() {
-        callback({ type: closure_1_0(closure_1_1[4]).KeyboardTypes.SYSTEM });
+        onSelectKeyboard({ type: flag(keyboardType[4]).KeyboardTypes.SYSTEM });
       },
     }),
     items,
@@ -52,19 +50,17 @@ const forwardRefResult = importAllResult.forwardRef((enabled, ref) => {
     if (keyboardType !== flag(keyboardType[4]).KeyboardTypes.SYSTEM) {
       tmp6 = null;
       if (!isScreenReaderEnabled) {
-        obj = { accessible: false, accessibilityRole: "none", onPress: null, children: null };
-        obj[2] = memo.openSystemKeyboard;
-        obj = { style: null };
-        obj[0] = isScreenReaderEnabled.absoluteFill;
-        obj[3] = <closure_5 style={null} />;
-        tmp6 = <closure_4 style={null} />;
+        obj = { accessible: false, accessibilityRole: "none", onPress: memo.openSystemKeyboard, children: null };
+        obj = { style: isScreenReaderEnabled.absoluteFill };
+        obj.children = <closure_5 style={isScreenReaderEnabled.absoluteFill} />;
+        tmp6 = <closure_4 style={isScreenReaderEnabled.absoluteFill} />;
       }
     }
   }
   return tmp6;
 });
 forwardRefResult.displayName = "ChatInputCover";
-const memoResult = importAllResult.memo(forwardRefResult);
-const result = require("set").fileFinishedImporting("modules/chat_input/native/accessories/ChatInputCover.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/chat_input/native/accessories/ChatInputCover.tsx");
 
-export default memoResult;
+export default noop.memo(forwardRefResult);

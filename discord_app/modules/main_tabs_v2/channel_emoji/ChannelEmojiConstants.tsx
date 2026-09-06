@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/channel_emoji/ChannelEmojiConstants.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/main_tabs_v2/channel_emoji/ChannelEmojiConstants.tsx");
+const result = size.fileFinishedImporting("modules/main_tabs_v2/channel_emoji/ChannelEmojiConstants.tsx");
 
 export const CHANNEL_THEME_COLOR_PALETTE = [
   "#5865F2",

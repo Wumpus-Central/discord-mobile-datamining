@@ -1,14 +1,17 @@
 // discord_app/modules/keyboard/native/KeyboardAwareView.tsx
-import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import importAllResult from "../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "subscribeToKeyboardUIStore.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import useKeyboardDuration from "useKeyboardDuration.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
+import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore.tsx";
 
-const require = arg1;
-let c3 = importAllResult;
-({ View: c4, StyleSheet: c5 } = get_ActivityIndicator);
-const memoResult = importAllResult.memo(function KeyboardAwareView(style) {
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/keyboard/native/KeyboardAwareView.tsx");
+
+export default noop.memo(function KeyboardAwareView(style) {
   style = style.style;
   let flag = style.animated;
   ({ children, pointerEvents } = style);
@@ -19,10 +22,9 @@ const memoResult = importAllResult.memo(function KeyboardAwareView(style) {
   if (num === undefined) {
     num = 0;
   }
-  let ref;
-  let first;
+  let marginBottom;
   closure_5 = undefined;
-  closure_6 = undefined;
+  let ref;
   let obj = ref;
   let systemKeyboardHeight = style(flag[5]).getSystemKeyboardHeight();
   if (0 === systemKeyboardHeight) {
@@ -37,13 +39,13 @@ const memoResult = importAllResult.memo(function KeyboardAwareView(style) {
   }
   ref = ref.useRef(Math.max(0, systemKeyboardHeight + num));
   const tmp6 = num(obj.useState(ref.current), 2);
-  first = tmp6[0];
+  marginBottom = tmp6[0];
   closure_5 = tmp6[1];
   const items = [num];
   const effect = obj.useEffect(
     () =>
-      ref(() => {
-        let systemKeyboardHeight = closure_1_0(closure_1_1[5]).getSystemKeyboardHeight();
+      subscribeToKeyboardUIStore(() => {
+        let systemKeyboardHeight = style(flag[5]).getSystemKeyboardHeight();
         if (0 === systemKeyboardHeight) {
           let tmp2Result = tmp2(tmp3[6]);
           const keyboardType = tmp2Result.getKeyboardType();
@@ -54,51 +56,48 @@ const memoResult = importAllResult.memo(function KeyboardAwareView(style) {
           }
           systemKeyboardHeight = num;
         }
-        const bound = Math.max(0, systemKeyboardHeight + closure_2);
+        const bound = Math.max(0, systemKeyboardHeight + closure_1_2);
         if (ref.current !== bound) {
           ref.current = bound;
-          callback(bound);
+          closure_1_5(bound);
         }
       }),
     items,
   );
-  closure_6 = obj.useRef(false);
-  const items1 = [flag, first];
+  ref = obj.useRef(false);
+  const items1 = [flag, marginBottom];
   const effect1 = obj.useEffect(() => {
     if (ref.current) {
-      const keyboardDuration = style(flag[9]).getKeyboardDuration();
+      const keyboardDuration = useKeyboardDuration.getKeyboardDuration();
       let tmp5 = flag;
       if (flag) {
         tmp5 = keyboardDuration > 0;
       }
       if (tmp5) {
-        const result = tmp2(tmp3[10]).DeprecatedLayoutAnimationKeyboard(keyboardDuration);
-        const tmp2Result = tmp2(tmp3[10]);
+        const result = tmp2(5581).DeprecatedLayoutAnimationKeyboard(keyboardDuration);
+        const tmp2Result = tmp2(5581);
       }
-      const obj = style(flag[9]);
-      tmp2 = style;
-      tmp3 = flag;
+      tmp2 = require;
     } else {
       tmp.current = true;
     }
   }, items1);
-  const items2 = [first, style];
+  const items2 = [marginBottom, style];
   obj = {
     style: obj.useMemo(() => {
       if (null == style) {
-        let obj = { marginBottom: null };
-        obj[0] = first;
+        let obj = { marginBottom };
         return obj;
       } else {
-        const flattenResult = closure_5.flatten(tmp);
+        const flattenResult = hasOwnProperty.flatten(tmp);
         if (typeof flattenResult.marginBottom === "number") {
           obj = {};
           const merged = Object.assign(flattenResult);
-          obj.marginBottom = flattenResult.marginBottom + first;
+          obj.marginBottom = flattenResult.marginBottom + marginBottom;
         } else {
           obj = {};
           const merged1 = Object.assign(flattenResult);
-          obj.marginBottom = first;
+          obj.marginBottom = marginBottom;
         }
         return obj;
       }
@@ -107,22 +106,21 @@ const memoResult = importAllResult.memo(function KeyboardAwareView(style) {
     children,
   };
   return (
-    <first
+    <marginBottom
       style={obj.useMemo(() => {
         if (null == style) {
-          let obj = { marginBottom: null };
-          obj[0] = first;
+          let obj = { marginBottom };
           return obj;
         } else {
-          const flattenResult = closure_5.flatten(tmp);
+          const flattenResult = hasOwnProperty.flatten(tmp);
           if (typeof flattenResult.marginBottom === "number") {
             obj = {};
             const merged = Object.assign(flattenResult);
-            obj.marginBottom = flattenResult.marginBottom + first;
+            obj.marginBottom = flattenResult.marginBottom + marginBottom;
           } else {
             obj = {};
             const merged1 = Object.assign(flattenResult);
-            obj.marginBottom = first;
+            obj.marginBottom = marginBottom;
           }
           return obj;
         }
@@ -130,9 +128,6 @@ const memoResult = importAllResult.memo(function KeyboardAwareView(style) {
       pointerEvents={pointerEvents}
     >
       {children}
-    </first>
+    </marginBottom>
   );
 });
-let result = require("set").fileFinishedImporting("modules/keyboard/native/KeyboardAwareView.tsx");
-
-export default memoResult;

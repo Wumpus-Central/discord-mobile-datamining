@@ -1,22 +1,20 @@
 // discord_app/modules/video_calls/native/components/RevealProvider.tsx
-import areParticipantStatesEqualDefault from "../useIsPrivateAudioOnlyCall.tsx";
+import useIsPrivateAudioOnlyCallDefault from "../useIsPrivateAudioOnlyCall.tsx";
 import useIsActivityFocusedDefault from "../../../activities/useIsActivityFocused.tsx";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../action_sheet/native/ActionSheetStore.tsx";
-import closure_5 from "../../../game_console/GameConsoleStore.tsx";
-import VoiceChatDrawerState from "../ChannelCallStore.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import ActionSheetStore from "../../../action_sheet/native/ActionSheetStore.tsx";
+import GameConsoleStore from "../../../game_console/GameConsoleStore.tsx";
 
-const require = arg1;
+const require = fn;
 function useRevealProviderValue(arg0, channel) {
   let tmp = arg0;
-  const items = [closure_4];
+  const items = [ActionSheetStore];
   const stateFromStores = stateFromStores1(504).useStateFromStores(items, () => null != key.getKey());
   const obj = stateFromStores1(504);
   const tmp2 = stateFromStores1;
-  const tmp5 = areParticipantStatesEqualDefault(channel);
-  const tmp6 = callback2();
-  const items1 = [closure_5];
+  const tmp5 = useIsPrivateAudioOnlyCallDefault(channel);
+  const tmp6 = closure_9();
+  const items1 = [GameConsoleStore];
   stateFromStores1 = stateFromStores1(504).useStateFromStores(
     items1,
     () => null != awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo(),
@@ -42,21 +40,20 @@ function useRevealProviderValue(arg0, channel) {
   const tmp10 = tmp2(1115).isIOS() && tmp8;
   importDefault = tmp10;
   const items2 = [tmp, tmp10];
-  return importAllResult.useMemo(
-    () => ({ reveal: stateFromStores1, prefersDeferringSystemGestures: closure_1 }),
-    items2,
-  );
+  return noop.useMemo(() => ({ reveal: stateFromStores1, prefersDeferringSystemGestures }), items2);
 }
-let c3 = importAllResult;
+const ChannelCallStore = fn(9467);
 ({
-  useChannelCallStore: closure_6,
-  focusTimeout: error,
+  useChannelCallStore: metroRequire,
+  focusTimeout: closure_7,
   resetFocusTimer: closure_8,
-  useIsVoiceChatFocused: c9,
-} = VoiceChatDrawerState);
-({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-const context = importAllResult.createContext({ reveal: true });
-const result = require("set").fileFinishedImporting("modules/video_calls/native/components/RevealProvider.tsx");
+  useIsVoiceChatFocused: closure_9,
+} = ChannelCallStore);
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+const context = noop.createContext({ reveal: true });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/native/components/RevealProvider.tsx");
 
 export default function RevealProvider(showStatus) {
   let flag = showStatus.showStatus;
@@ -68,17 +65,16 @@ export default function RevealProvider(showStatus) {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  closure_0 = undefined;
-  const tmp = callback((focus) => focus.focus);
+  const tmp = closure_6((focus) => focus.focus);
   closure_0 = tmp;
   const tmp2 = useRevealProviderValue(tmp, channel);
   ({ reveal, prefersDeferringSystemGestures } = tmp2);
   const items = [tmp];
-  const effect = importAllResult.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (closure_0) {
-      closure_1_8();
+      React6();
     } else {
-      closure_1_7.stop();
+      React5.stop();
     }
   }, items);
   let str = "light-content";
@@ -101,7 +97,7 @@ export default function RevealProvider(showStatus) {
     tmp12 = !prefersDeferringSystemGestures;
   }
   items1[2] = closure_10(tmp4Result, { prefersHidden: tmp12, prefersDeferringSystemGestures });
-  obj[1] = items1;
+  obj.children = items1;
   return closure_11(context.Provider, obj);
 }
 export const RevealContext = context;

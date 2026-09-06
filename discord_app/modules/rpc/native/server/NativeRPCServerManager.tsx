@@ -1,8 +1,9 @@
 // discord_app/modules/rpc/native/server/NativeRPCServerManager.tsx
-import importDefaultResult1Default from "../NativeRPCImplementation.tsx";
-import importDefaultResult from "../../server/RPCServerManager.tsx";
+import NativeRPCImplementationDefault from "../NativeRPCImplementation.tsx";
+import RPCServerManager from "../../server/RPCServerManager.tsx";
 
-importDefaultResult = new importDefaultResult(importDefaultResult1Default);
-const result = require("set").fileFinishedImporting("modules/rpc/native/server/NativeRPCServerManager.tsx");
+RPCServerManager = new RPCServerManager(NativeRPCImplementationDefault);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/rpc/native/server/NativeRPCServerManager.tsx");
 
-export default importDefaultResult;
+export default RPCServerManager;

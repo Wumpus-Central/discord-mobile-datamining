@@ -1,8 +1,8 @@
 // discord_app/modules/channel/native/getChannelSubtitleData.tsx
-import set from "../../../../_runtime/00002_set.js";
-import getSystemLocale from "../../../intl/index.native.tsx";
+import util from "../../../intl/index.native.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/channel/native/getChannelSubtitleData.tsx");
+const result = size.fileFinishedImporting("modules/channel/native/getChannelSubtitleData.tsx");
 
 export const getChannelSubtitleData = function getChannelSubtitleData(subtitle) {
   if (null == subtitle) {
@@ -13,19 +13,19 @@ export const getChannelSubtitleData = function getChannelSubtitleData(subtitle) 
       if ("event" !== type) {
         if ("go-live" === type) {
           let obj = { subtitle: null, type: null };
-          const intl = getSystemLocale.intl;
-          obj[0] = intl.string(getSystemLocale.t.Pa817q);
-          obj[1] = subtitle.type;
+          const intl = util.intl;
+          obj.subtitle = intl.string(util.t.Pa817q);
+          obj.type = subtitle.type;
           return obj;
         } else if ("voice" === type) {
           obj = { subtitle: null, type: null };
-          ({ text: obj[0], type: obj[1] } = subtitle);
+          ({ text: obj.subtitle, type: obj.type } = subtitle);
           return obj;
         }
       }
     }
     obj = { subtitle: null, type: null };
-    ({ name: obj3[0], type: obj3[1] } = subtitle);
+    ({ name: obj3.subtitle, type: obj3.type } = subtitle);
     return obj;
   }
 };

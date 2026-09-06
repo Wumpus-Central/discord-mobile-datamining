@@ -1,22 +1,16 @@
 // discord_app/design/components/Text/native/Text.tsx
-import applyDefault from "../../../../../_runtime/00012_apply.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import _modDef12 from "../../../../../_runtime/metro/00012__.js";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useManaTextMigrationHighlight2 from "useManaTextMigrationHighlight.tsx";
-import PlainTextExperimentProvider from "PlainTextExperimentContext.tsx";
+import PlainTextExperimentContext from "PlainTextExperimentContext.tsx";
 import useTypographyVariantRemap from "../../../../../discord_common/js/packages/design/components/Text/useTypographyVariantRemap.native.tsx";
-import set from "PlainTextEligibility.tsx";
-import __INTERNAL_VIEW_CONFIGDefault from "../../../../../_runtime/metro/04570___INTERNAL_VIEW_CONFIG.js";
-import closure_4 from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { Fonts } from "../../../../../discord_common/js/shared/Constants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import { TextVariantsFlat } from "../../../../../discord_common/js/packages/tokens/typography/generated/TextVariants.tsx";
-import useManaTextMigrationHighlight from "useManaTextMigrationHighlight.tsx";
-import createCacheKey from "../../Styles/native/createStyles.tsx";
-import importDefaultResult from "../../../../modules/reanimated/ReanimatedRexport.tsx";
+import PlainTextEligibility from "PlainTextEligibility.tsx";
+import _modDef4570 from "../../../../../_runtime/metro/04570__.js";
+import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 
-require = arg1;
+require = fn;
 let closure_3 = [
   "color",
   "fontSize",
@@ -30,16 +24,18 @@ let closure_3 = [
   "lineHeight",
   "letterSpacing",
 ];
-let c5 = importAllResult;
+get_ActivityIndicator = fn(17);
 const Text = get_ActivityIndicator.Text;
 let closure_7 = get_ActivityIndicator.unstable_TextAncestorContext;
-let closure_9 = importDefaultResult.createAnimatedComponent(Text);
+const Fonts = fn(1085).Fonts;
+const jsx = fn(21).jsx;
+let closure_9 = ReanimatedRexport.createAnimatedComponent(Text);
 let items = [{ includeFontPadding: true }];
 let closure_11 = [];
-const keys = Object.keys(ThemesDefault.colors);
+const keys = Object.keys(nativeDefault.colors);
 let closure_12 = Object.fromEntries(
-  keys.map((arg0) => {
-    items = [applyDefault.kebabCase(arg0), arg0];
+  keys.map((item) => {
+    items = [_modDef12.kebabCase(item), item];
     return items;
   }),
 );
@@ -59,37 +55,34 @@ obj1[700] = Fonts.GINTO_DISCORD_NORD_BOLD;
 let obj3 = { 800: null };
 obj3[800] = Fonts.GINTO_NORD_EXTRA_BOLD_ITALIC;
 ({ GINTO_DISCORD_NORD_BOLD_ITALIC: obj8[700], GINTO_DISCORD_NORD_BLACK_ITALIC: obj8[900] } = Fonts);
-let closure_13 = { headline: obj, nitro: obj1, primary: obj, code: { 400: null, 700: null } };
+const dependencyMap = { headline: obj, nitro: obj1, primary: obj, code: { 400: null, 700: null } };
 let closure_14 = { headline: obj3, nitro: { 700: null, 900: null } };
+const TextVariantsFlat = fn(4557).TextVariantsFlat;
 const mapped = TextVariantsFlat.map((name) => {
   let tmp = null;
   if ("code" !== name.name) {
     items = [name.name];
     let obj = { fontSize: null, lineHeight: null, textTransform: null };
-    ({ size: obj4[0], lineHeight: obj4[1] } = name);
+    ({ size: obj4.fontSize, lineHeight: obj4.lineHeight } = name);
     let str = "none";
     if (name.uppercase) {
       str = "uppercase";
     }
-    obj[2] = str;
+    obj.textTransform = str;
     ({ fontStack, weight } = name);
     str = weight.toString();
     if (name.italic) {
       let tmp6;
-      if (table2[fontStack] != null) {
+      if (closure_14[fontStack] != null) {
         tmp6 = tmp5[str];
       }
       if (null != tmp6) {
-        obj = { fontFamily: null, fontStyle: "normal" };
-        obj[0] = tmp6;
-        obj1 = obj;
+        obj = { fontFamily: tmp6, fontStyle: "normal" };
       } else {
-        obj1 = { fontFamily: null, fontStyle: "italic" };
-        obj1[0] = dependencyMap[fontStack][str];
+        const obj1 = { fontFamily: dependencyMap[fontStack][str], fontStyle: "italic" };
       }
     } else {
-      obj = { fontFamily: null };
-      obj[0] = dependencyMap[fontStack][str];
+      obj = { fontFamily: dependencyMap[fontStack][str] };
       const merged = Object.assign(obj);
       obj.includeFontPadding = false;
       let result;
@@ -104,21 +97,23 @@ const mapped = TextVariantsFlat.map((name) => {
   return tmp;
 });
 const fromEntriesResult = Object.fromEntries(mapped.filter(Boolean));
+const useManaTextMigrationHighlight = fn(4558);
 let result = useManaTextMigrationHighlight.withManaTextMigrationHighlight(fromEntriesResult);
-let closure_16 = createCacheKey.createStyles((arg0, arg1) => {
+const createStyles = fn(4560);
+let closure_16 = createStyles.createStyles((arg0, arg1) => {
   let tmp;
   if ("none" !== arg0) {
-    tmp = ThemesDefault.colors[table[arg0]];
+    tmp = nativeDefault.colors[closure_12[arg0]];
   }
   const text = { color: tmp, fontVariant: null };
   items = undefined;
   if (arg1) {
     items = ["tabular-nums"];
   }
-  text[1] = items;
+  text.fontVariant = items;
   return { text };
 });
-const forwardRefResult = importAllResult.forwardRef((animated) => {
+const forwardRefResult = noop.forwardRef((animated, ref) => {
   ({ color, style, children, lineClamp, includeFontPadding } = animated);
   if (includeFontPadding === undefined) {
     includeFontPadding = false;
@@ -135,43 +130,54 @@ const forwardRefResult = importAllResult.forwardRef((animated) => {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  const merged = Object.assign(animated, Object.create(null));
+  const merged = Object.assign(
+    animated,
+    Object.assign({
+      variant: 0,
+      color: 0,
+      style: 0,
+      children: 0,
+      lineClamp: 0,
+      includeFontPadding: 0,
+      ellipsizeMode: 0,
+      tabularNumbers: 0,
+      animated: 0,
+      experimental_useNativeText: 0,
+    }),
+  );
   if (color == null) {
     color = "text-default";
   }
-  let obj = PlainTextExperimentProvider;
+  let obj = PlainTextExperimentContext;
   const plainTextExperimentEnabled = obj.usePlainTextExperimentEnabled();
-  const context = importAllResult.useContext(closure_7);
-  obj1 = useTypographyVariantRemap;
-  const typographyVariantRemap = obj1.useTypographyVariantRemap(animated.variant, false);
-  const tmp2 = closure_16;
+  const context = noop.useContext(closure_7);
   const tmp2Result = closure_16(color, tabularNumbers);
-  items = [dependencyMap2[typographyVariantRemap], tmp2Result.text, ,];
+  const typographyVariantRemap = useTypographyVariantRemap.useTypographyVariantRemap(animated.variant, false);
+  items = [fromEntriesResult[typographyVariantRemap], tmp2Result.text, ,];
   const manaTextMigrationHighlight = useManaTextMigrationHighlight2.useManaTextMigrationHighlight(
-    dependencyMap2[typographyVariantRemap],
+    fromEntriesResult[typographyVariantRemap],
     style,
   );
   const arraySpreadResult = HermesBuiltin.arraySpread(includeFontPadding ? items : closure_11, 2);
   items[arraySpreadResult] = style;
   items[arraySpreadResult + 1] = manaTextMigrationHighlight;
-  let tmp4Result = tmp4(4569);
-  obj = {
+  tmp4(4569);
+  const element = {
     animated: flag,
     children,
     enabled: plainTextExperimentEnabled,
     experimentalUseNativeText: flag2,
-    hasRef: null != arg1,
+    hasRef: null != ref,
     hasTextAncestor: context,
     isIOS: null,
     props: null,
     style: null,
   };
-  tmp4Result = tmp4(1116);
-  obj[6] = tmp4Result.isIOS();
-  obj[7] = merged;
-  obj[8] = items;
-  const plainTextEligibility = tmp4Result.getPlainTextEligibility(obj);
-  const obj3 = useManaTextMigrationHighlight2;
+  const tmp4Result = tmp4(1116);
+  element.isIOS = tmp4Result.isIOS();
+  element.props = merged;
+  element.style = items;
+  const plainTextEligibility = tmp4Result.getPlainTextEligibility(element);
   const tmp10 = includeFontPadding ? items : closure_11;
   if (tmp4Result1.isPlainTextEligible(plainTextEligibility)) {
     ({ fontWeight, textAlignVertical, verticalAlign, letterSpacing } = plainTextEligibility);
@@ -185,10 +191,10 @@ const forwardRefResult = importAllResult.forwardRef((animated) => {
       lineHeight,
     } = plainTextEligibility);
     obj = {
-      text: null,
-      color: null,
-      fontSize: null,
-      fontFamily: null,
+      text: children,
+      color: color2,
+      fontSize,
+      fontFamily,
       fontWeight: null,
       fontStyle: null,
       textAlign: null,
@@ -202,20 +208,16 @@ const forwardRefResult = importAllResult.forwardRef((animated) => {
       ellipsizeMode: null,
       allowFontScaling: true,
     };
-    obj[0] = children;
-    obj[1] = color2;
-    obj[2] = fontSize;
-    obj[3] = fontFamily;
     let StringResult;
-    const tmp19 = callback(plainTextEligibility, closure_3);
+    const tmp19 = _objectWithoutProperties(plainTextEligibility, closure_3);
     const tmp20 = jsx;
     if (null != fontWeight) {
       const _String = String;
       StringResult = String(fontWeight);
     }
-    obj[4] = StringResult;
-    obj[5] = fontStyle;
-    obj[6] = textAlign;
+    obj.fontWeight = StringResult;
+    obj.fontStyle = fontStyle;
+    obj.textAlign = textAlign;
     if (null != verticalAlign) {
       let str2 = "center";
       if ("middle" !== verticalAlign) {
@@ -223,53 +225,48 @@ const forwardRefResult = importAllResult.forwardRef((animated) => {
       }
       textAlignVertical = str2;
     }
-    obj[7] = textAlignVertical;
-    obj[8] = textDecorationLine;
-    obj[9] = lineHeight;
-    obj[10] = letterSpacing;
-    obj[11] = undefined !== letterSpacing;
-    obj[12] = tmp19;
-    obj[13] = lineClamp;
+    obj.textAlignVertical = textAlignVertical;
+    obj.textDecorationLine = textDecorationLine;
+    obj.lineHeight = lineHeight;
+    obj.letterSpacing = letterSpacing;
+    obj.hasLetterSpacing = undefined !== letterSpacing;
+    obj.style = tmp19;
+    obj.numberOfLines = lineClamp;
     if (ellipsizeMode == null) {
       ellipsizeMode = "tail";
     }
-    obj[14] = ellipsizeMode;
+    obj.ellipsizeMode = ellipsizeMode;
     const merged1 = Object.assign(merged);
-    return tmp20(__INTERNAL_VIEW_CONFIGDefault, obj);
+    return tmp20(_modDef4570, obj);
   } else {
     if (flag2) {
       let NativeText = tmp4(299).NativeText;
     } else {
       NativeText = flag ? closure_9 : Text;
     }
-    obj1 = { style: null, numberOfLines: null, ellipsizeMode: null, allowFontScaling: true, ref: null };
-    obj1[0] = items;
-    obj1[1] = lineClamp;
+    obj = { style: items, numberOfLines: lineClamp, ellipsizeMode: null, allowFontScaling: true, ref: null };
     let str = ellipsizeMode;
     if (ellipsizeMode == null) {
       str = "tail";
     }
-    obj1[2] = str;
-    obj1[4] = arg1;
+    obj.ellipsizeMode = str;
+    obj.ref = ref;
     const merged2 = Object.assign(merged);
-    obj1.children = children;
-    return <NativeText style={null} numberOfLines={null} ellipsizeMode={null} allowFontScaling ref={null} />;
+    obj.children = children;
+    return <NativeText style={items} numberOfLines={lineClamp} ellipsizeMode={null} allowFontScaling ref={null} />;
   }
-  tmp4Result1 = set;
+  tmp4Result1 = PlainTextEligibility;
 });
-const obj2 = { 400: null, 700: null };
-const obj4 = { 700: null, 900: null };
-const forwardRefResult1 = importAllResult.forwardRef((variant, ref) => {
-  let obj = useTypographyVariantRemap;
-  obj = { ref };
+const size = fn(2);
+const result1 = size.fileFinishedImporting("design/components/Text/native/Text.tsx");
+
+export const TextStyleSheet = result;
+export const Text = forwardRefResult;
+export const Heading = noop.forwardRef((variant, ref) => {
+  const obj = { ref };
   const typographyVariantRemap = obj.useTypographyVariantRemap(variant.variant, true);
   const merged = Object.assign(variant);
   obj.accessibilityRole = "header";
   obj.variant = typographyVariantRemap;
-  return <closure_17 ref={arg1} />;
+  return <forwardRefResult ref={arg1} />;
 });
-const result1 = require("set").fileFinishedImporting("design/components/Text/native/Text.tsx");
-
-export const TextStyleSheet = result;
-export const Text = forwardRefResult;
-export const Heading = forwardRefResult1;

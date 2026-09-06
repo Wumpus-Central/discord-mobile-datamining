@@ -1,33 +1,32 @@
 // discord_app/modules/premium/premium_group/PremiumGroupUtils.shared.tsx
-import getPremiumPlanItem from "../../../utils/PremiumUtils.tsx";
-import formatSingleCurrencyPrice from "../../../utils/PriceUtils.tsx";
-import closure_2 from "../../../stores/billing/SubscriptionPlanStore.tsx";
+import PremiumUtils from "../../../utils/PremiumUtils.tsx";
+import PriceUtils from "../../../utils/PriceUtils.tsx";
+import SubscriptionPlanStore from "../../../stores/billing/SubscriptionPlanStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/premium_group/PremiumGroupUtils.shared.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/premium_group/PremiumGroupUtils.shared.tsx");
 
-export const getPriceString = function getPriceString(hasAnyPremiumGroup) {
+export const getPriceString = function getPriceString(hasAnyPremiumGroup, arg1) {
   if (null != hasAnyPremiumGroup) {
     if (hasAnyPremiumGroup.hasAnyPremiumGroup) {
       const planIdFromItems = hasAnyPremiumGroup.planIdFromItems;
       if (null == planIdFromItems) {
         return null;
       } else {
-        const value = closure_2.get(planIdFromItems);
+        value = SubscriptionPlanStore.get(planIdFromItems);
         if (null == value) {
           return null;
         } else {
-          const price = getPremiumPlanItem.getPrice(planIdFromItems);
-          const obj2 = getPremiumPlanItem;
+          const price = PremiumUtils.getPrice(planIdFromItems);
           const tmp2 = require;
-          const formatPriceResult = formatSingleCurrencyPrice.formatPrice(price.amount, price.currency);
+          const formatPriceResult = PriceUtils.formatPrice(price.amount, price.currency);
           if (tmp) {
             ({ interval, intervalCount } = value);
             return tmp2(7234).formatRate(formatPriceResult, interval, intervalCount);
           } else {
             return formatPriceResult;
           }
-          const obj3 = formatSingleCurrencyPrice;
         }
       }
     }

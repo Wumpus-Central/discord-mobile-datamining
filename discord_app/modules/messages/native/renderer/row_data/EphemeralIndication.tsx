@@ -1,15 +1,14 @@
 // discord_app/modules/messages/native/renderer/row_data/EphemeralIndication.tsx
-import getSystemLocale from "../../../../../intl/index.native.tsx";
-import combinedDefault from "../../../../../utils/HelpdeskUtils.tsx";
-import getEphemeralReasonMessage from "../../../../application_commands/ApplicationCommandUserAppUtils.tsx";
-import closure_3 from "../../../../guild_automod/GuildAutomodMessageStore.tsx";
-import ME from "../../../../../Constants.tsx";
+import util from "../../../../../intl/index.native.tsx";
+import HelpdeskUtilsDefault from "../../../../../utils/HelpdeskUtils.tsx";
+import ApplicationCommandUserAppUtils from "../../../../application_commands/ApplicationCommandUserAppUtils.tsx";
+import GuildAutomodMessageStore from "../../../../guild_automod/GuildAutomodMessageStore.tsx";
 
-require = arg1;
-({ HelpdeskArticles: c4, MessageFlags: c5 } = ME);
-const result = require("set").fileFinishedImporting(
-  "modules/messages/native/renderer/row_data/EphemeralIndication.tsx",
-);
+require = fn;
+const Constants = fn(1074);
+({ HelpdeskArticles: closure_4, MessageFlags: hasOwnProperty } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/EphemeralIndication.tsx");
 
 export const createEphemeralIndication = function createEphemeralIndication(message) {
   if (message.hasFlag(constants2.EPHEMERAL)) {
@@ -19,7 +18,7 @@ export const createEphemeralIndication = function createEphemeralIndication(mess
       ephemerality_reason = interactionMetadata.ephemerality_reason;
     }
     if (null != ephemerality_reason) {
-      obj1 = getEphemeralReasonMessage;
+      let obj1 = ApplicationCommandUserAppUtils;
       const interactionMetadata2 = message.interactionMetadata;
       let ephemerality_reason1;
       if (interactionMetadata2 != null) {
@@ -29,31 +28,29 @@ export const createEphemeralIndication = function createEphemeralIndication(mess
       const ephemeralReasonMessage = obj1.getEphemeralReasonMessage(ephemerality_reason1);
       const intl2 = tmp3(1114).intl;
       obj = { handleDelete: null, reason: null };
-      obj1 = { action: "bindDismissMessage", message: null };
-      obj1[1] = message;
-      obj[0] = obj1;
-      obj[1] = ephemeralReasonMessage;
-      obj[0] = intl2.formatToParts(getSystemLocale.t.xgCMRQ, obj);
-      obj[1] = combinedDefault.getArticleURL(constants.USING_APPS_FAQ);
+      obj1 = { action: "bindDismissMessage", message };
+      obj.handleDelete = obj1;
+      obj.reason = ephemeralReasonMessage;
+      obj.content = intl2.formatToParts(util.t.xgCMRQ, obj);
+      obj.helpArticleLink = HelpdeskUtilsDefault.getArticleURL(constants.USING_APPS_FAQ);
       const intl3 = tmp3(1114).intl;
-      obj[2] = intl3.string(getSystemLocale.t.OIWSJe);
+      obj.helpButtonAccessibilityLabel = intl3.string(util.t.OIWSJe);
       return obj;
     } else {
       const obj2 = { content: null, helpArticleLink: null, helpButtonAccessibilityLabel: null };
-      const intl4 = getSystemLocale.intl;
+      const intl4 = util.intl;
       const obj3 = { count: 1, countMessages: 1, handleDelete: null };
-      const obj4 = { action: "bindDismissMessage", message: null };
-      obj4[1] = message;
-      obj3[2] = obj4;
-      obj2[0] = intl4.formatToParts(getSystemLocale.t.uX3ecL, obj3);
-      obj2[1] = combinedDefault.getAppsSupportURL(constants.EPHEMERAL_MESSAGES);
-      const intl5 = getSystemLocale.intl;
-      obj2[2] = intl5.string(getSystemLocale.t.htHOrp);
-      if (null != message.getMessage(message.id)) {
-        obj2.helpArticleLink = combinedDefault.getArticleURL(constants.GUILD_AUTOMOD_BLOCKED_MESSAGE);
+      const obj4 = { action: "bindDismissMessage", message };
+      obj3.handleDelete = obj4;
+      obj2.content = intl4.formatToParts(util.t.uX3ecL, obj3);
+      obj2.helpArticleLink = HelpdeskUtilsDefault.getAppsSupportURL(constants.EPHEMERAL_MESSAGES);
+      const intl5 = util.intl;
+      obj2.helpButtonAccessibilityLabel = intl5.string(util.t.htHOrp);
+      if (null != GuildAutomodMessageStore.getMessage(message.id)) {
+        obj2.helpArticleLink = HelpdeskUtilsDefault.getArticleURL(constants.GUILD_AUTOMOD_BLOCKED_MESSAGE);
         const intl = tmp9(1114).intl;
         obj2.helpButtonAccessibilityLabel = intl.string(tmp9(1114).t.OiCBhP);
-        const tmp11Result = combinedDefault;
+        const tmp11Result = HelpdeskUtilsDefault;
       }
       return obj2;
     }

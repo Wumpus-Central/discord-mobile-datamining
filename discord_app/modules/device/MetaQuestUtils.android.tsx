@@ -1,15 +1,16 @@
 // discord_app/modules/device/MetaQuestUtils.android.tsx
-import getConstantsAll from "../../utils/native/ClientInfoUtils.tsx";
-import importDefaultResult from "../../../discord_common/js/packages/rtn-codegen/js/NativeMetaQuestModule.tsx";
+import ClientInfoUtilsAll from "../../utils/native/ClientInfoUtils.tsx";
+import NativeMetaQuestModule from "../../../discord_common/js/packages/rtn-codegen/js/NativeMetaQuestModule.tsx";
 
-const isMetaQuestResult = importDefaultResult.isMetaQuest();
-const result = require("set").fileFinishedImporting("modules/device/MetaQuestUtils.android.tsx");
+NativeMetaQuestModule = NativeMetaQuestModule.isMetaQuest();
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/device/MetaQuestUtils.android.tsx");
 
 export const isMetaQuest = function isMetaQuest() {
-  return importDefaultResult.isMetaQuest();
+  return NativeMetaQuestModule.isMetaQuest();
 };
 export const isQuestRelease = function isQuestRelease() {
-  const constants = getConstantsAll.getConstants();
+  constants = ClientInfoUtilsAll.getConstants();
   let flag;
   if (constants != null) {
     const ReleaseChannel = constants.ReleaseChannel;
@@ -22,4 +23,4 @@ export const isQuestRelease = function isQuestRelease() {
   }
   return flag;
 };
-export const isThumbstickScrollDevice = isMetaQuestResult;
+export const isThumbstickScrollDevice = NativeMetaQuestModule;

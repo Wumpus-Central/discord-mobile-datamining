@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/billing/native/GuildRoleSubscriptionCancelSettingScreen.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
 import useSettingNavigationRoute from "../../core/native/useSettingNavigationRoute.tsx";
-import WhatYouLoseDefault from "../../../guild_role_subscriptions/native/manage_subscriptions/UserSettingsGuildRoleSubscriptionsCancel.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import UserSettingsGuildRoleSubscriptionsCancelDefault from "../../../guild_role_subscriptions/native/manage_subscriptions/UserSettingsGuildRoleSubscriptionsCancel.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting(
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/user_settings/billing/native/GuildRoleSubscriptionCancelSettingScreen.tsx",
 );
 
@@ -15,5 +15,5 @@ export default function GuildRoleSubscriptionCancelSettingScreen() {
   const settingNavigationRoute = obj.useSettingNavigationRoute();
   obj = {};
   const merged = Object.assign(settingNavigationRoute.params);
-  return jsx(WhatYouLoseDefault, {});
+  return jsx(UserSettingsGuildRoleSubscriptionsCancelDefault, {});
 }

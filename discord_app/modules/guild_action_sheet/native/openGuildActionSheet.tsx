@@ -1,28 +1,26 @@
 // discord_app/modules/guild_action_sheet/native/openGuildActionSheet.tsx
-import set from "../../../../_runtime/00002_set.js";
-import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
-import getFavoritesAwareGuildName from "../../favorites/FavoritesUtils.tsx";
-import ME from "../../../Constants.tsx";
+import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
+import FavoritesUtils from "../../favorites/FavoritesUtils.tsx";
+import Constants from "../../../Constants.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-({ AnalyticEvents: c3, GuildFeatures: c4 } = ME);
-const result = set.fileFinishedImporting("modules/guild_action_sheet/native/openGuildActionSheet.tsx");
+({ AnalyticEvents: c3, GuildFeatures: closure_4 } = Constants);
+const result = size.fileFinishedImporting("modules/guild_action_sheet/native/openGuildActionSheet.tsx");
 
 export default function openGuildActionSheet(id) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = true;
   }
-  let obj = getFavoritesAwareGuildName;
+  let obj = FavoritesUtils;
   if (!obj.isFavoritesGuildId(id.id)) {
-    obj1 = expandEventPropertiesDefault;
-    obj = { type: "Guild Profile", guild_id: null };
-    obj[1] = id.id;
+    let obj1 = AnalyticsUtilsDefault;
+    obj = { type: "Guild Profile", guild_id: id.id };
     obj1.track(constants.OPEN_POPOUT, obj);
     let tmpResult = tmp(10294);
     if (tmpResult.shouldNSFWGateGuild(id.id)) {
       let tmp3Result = tmp3(4527);
-      obj = { guild: null };
-      obj[0] = id;
+      obj = { guild: id };
       tmp3Result.openLazy(tmp(1896)(13908, tmp2.paths), "NsfwGateGuildSettingsActionSheet", obj);
     } else {
       const features = id.features;
@@ -32,16 +30,12 @@ export default function openGuildActionSheet(id) {
       tmpResult = tmp(1896);
       if (hasItem) {
         const _HermesInternal2 = HermesInternal;
-        obj1 = { guild: null, expanded: null };
-        obj1[0] = id;
-        obj1[1] = flag;
+        obj1 = { guild: id, expanded: flag };
         openLazy(tmpResult(13966, tmp2.paths), "GuildActionSheet:" + id.id, obj1);
         const tmpResult1Result = tmpResult(13966, tmp2.paths);
       } else {
         const _HermesInternal = HermesInternal;
-        const obj2 = { guild: null, expanded: null };
-        obj2[0] = id;
-        obj2[1] = flag;
+        const obj2 = { guild: id, expanded: flag };
         openLazy(tmpResult(13972, tmp2.paths), "GuildActionSheet:" + id.id, obj2);
         const tmpResult1Result1 = tmpResult(13972, tmp2.paths);
       }

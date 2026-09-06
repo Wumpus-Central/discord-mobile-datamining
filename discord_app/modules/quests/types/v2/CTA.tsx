@@ -1,23 +1,21 @@
 // discord_app/modules/quests/types/v2/CTA.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/quests/types/v2/CTA.tsx");
+const result = size.fileFinishedImporting("modules/quests/types/v2/CTA.tsx");
 
 export const questCtaConfigFromServer = function questCtaConfigFromServer(cta_config) {
   let tmp;
   if (null != cta_config.android) {
-    let obj = { androidAppId: null };
-    obj[0] = cta_config.android.android_app_id;
+    let obj = { androidAppId: cta_config.android.android_app_id };
     tmp = obj;
   }
   obj = { android: tmp, ios: null, link: null, buttonLabel: null, subtitle: null };
   let tmp2;
   if (null != cta_config.ios) {
-    obj = { iosAppId: null };
-    obj[0] = cta_config.ios.ios_app_id;
+    obj = { iosAppId: cta_config.ios.ios_app_id };
     tmp2 = obj;
   }
-  obj[1] = tmp2;
-  ({ link: obj2[2], button_label: obj2[3], subtitle: obj2[4] } = cta_config);
+  obj.ios = tmp2;
+  ({ link: obj2.link, button_label: obj2.buttonLabel, subtitle: obj2.subtitle } = cta_config);
   return obj;
 };

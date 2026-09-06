@@ -1,28 +1,24 @@
 // discord_app/modules/guild_mod_dash_member_safety/DateUtils.tsx
-import set from "../../../_runtime/00002_set.js";
-import getSystemLocale from "../../intl/index.native.tsx";
+import util from "../../intl/index.native.tsx";
 import getTimestampStringDefault from "../threads/getTimestampString.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 function getJoinedAtDateFormatter() {
-  return {
-    seconds: getSystemLocale.t["FsBhl/"],
-    minutes: getSystemLocale.t["4d1mgT"],
-    hours: getSystemLocale.t["2wkczD"],
-    days: getSystemLocale.t["ocdS+f"],
-    months: getSystemLocale.t["az14+h"],
-    years: getSystemLocale.t["5Gk1ns"],
+  const time = {
+    seconds: util.t["FsBhl/"],
+    minutes: util.t["4d1mgT"],
+    hours: util.t["2wkczD"],
+    days: util.t["ocdS+f"],
+    months: util.t["az14+h"],
+    years: util.t["5Gk1ns"],
   };
+  return time;
 }
 function getAccountAgeDateFormatter() {
-  return {
-    hours: getSystemLocale.t.JZP2Rs,
-    days: getSystemLocale.t["3moSHc"],
-    months: getSystemLocale.t["0Ddwr1"],
-    years: getSystemLocale.t.cR7lcs,
-  };
+  return { hours: util.t.JZP2Rs, days: util.t["3moSHc"], months: util.t["0Ddwr1"], years: util.t.cR7lcs };
 }
-const obj = { JOINED_AT: 0, [0]: "JOINED_AT", ACCOUNT_AGE: 1, [1]: "ACCOUNT_AGE" };
-const result = set.fileFinishedImporting("modules/guild_mod_dash_member_safety/DateUtils.tsx");
+const MembersTableDateFormats = { JOINED_AT: 0, [0]: "JOINED_AT", ACCOUNT_AGE: 1, [1]: "ACCOUNT_AGE" };
+const result = size.fileFinishedImporting("modules/guild_mod_dash_member_safety/DateUtils.tsx");
 
 export const ACCOUNT_AGE_DATE_TOOLTIP_CONFIG = {
   month: "short",
@@ -38,7 +34,7 @@ export const MEMBER_JOIN_DATE_TOOLTIP_CONFIG = {
   hour: "numeric",
   minute: "2-digit",
 };
-export const MembersTableDateFormats = obj;
+export { MembersTableDateFormats };
 export const getMembersTableTimestampFormatter = function getMembersTableTimestampFormatter(arg0) {
   if (arg0 === obj.JOINED_AT) {
     let tmp2 = getJoinedAtDateFormatter;

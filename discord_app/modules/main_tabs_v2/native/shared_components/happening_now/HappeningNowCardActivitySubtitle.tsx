@@ -1,45 +1,43 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActivitySubtitle.tsx
-import noopAll from "../../../../../../_runtime/00019_noop.js";
-import getSystemLocale from "../../../../../intl/index.native.tsx";
-import computeChannelNameDefault from "../../../../channel/useChannelName.tsx";
-import _isStreamingDefault from "../../../../activities/utils/isStreaming.tsx";
-import getChannelA11yLabelDefault from "../../../../channel/getChannelA11yLabel.tsx";
-import HAPPENING_NOW_CARD_MARGIN_RIGHT from "HappeningNowCard.tsx";
-import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_4 from "../../../../../stores/ChannelStore.tsx";
-import { ActivityTypes } from "../../../../../Constants.tsx";
-import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import util from "../../../../../intl/index.native.tsx";
+import useChannelNameDefault from "../../../../channel/useChannelName.tsx";
+import isStreamingDefault from "../../../../activities/utils/isStreaming.tsx";
+import HappeningNowCard from "HappeningNowCard.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
+import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 
-require = arg1;
-noopAll;
-let closure_7 = createCacheKey.createStyles({
+const getChannelA11yLabelDefault = tmp4(9770);
+require = fn;
+const View = fn(17).View;
+const ActivityTypes = fn(1074).ActivityTypes;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_7 = createStyles.createStyles({
   cardDetails: { marginTop: 2, flexDirection: "row", alignItems: "center" },
 });
-const result = require("set").fileFinishedImporting(
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActivitySubtitle.tsx",
 );
 
 export const HappeningNowVoiceCardSubtitle = function HappeningNowVoiceCardSubtitle(voiceState) {
   voiceState = voiceState.voiceState;
   let obj = voiceState(504);
-  const items = [closure_4];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getChannel(voiceState.channelId));
-  obj = { style: callback().cardDetails, children: null };
-  const tmp = callback();
-  const tmp4 = importDefault;
+  const items = [ChannelStore];
+  const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(voiceState.channelId));
+  obj = { style: closure_7().cardDetails, children: null };
+  const tmp = closure_7();
   let tmp8;
   if (null != stateFromStores) {
-    obj = { channel: null };
-    obj[0] = stateFromStores;
+    obj = { channel: stateFromStores };
     tmp8 = getChannelA11yLabelDefault(obj);
   }
-  obj[1] = jsx(voiceState(15295).HappeningNowCardSubtitle, {
+  obj.children = jsx(voiceState(15295).HappeningNowCardSubtitle, {
     lineClamp: 1,
     accessibilityLabel: tmp8,
-    children: computeChannelNameDefault(stateFromStores),
+    children: useChannelNameDefault(stateFromStores),
   });
-  return <View style={callback().cardDetails}>{null}</View>;
+  return <View style={closure_7().cardDetails}>{null}</View>;
 };
 export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCardSubtitle(activity) {
   activity = activity.activity;
@@ -48,13 +46,11 @@ export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCar
       let trimmed = null;
       if (null != activity.state) {
         trimmed = activity.state.trim();
-        const str4 = activity.state;
       }
       let tmp3 = trimmed;
     }
-    const obj = { lineClamp: 1, children: null };
-    obj[1] = tmp3;
-    return jsx(HAPPENING_NOW_CARD_MARGIN_RIGHT.HappeningNowCardSubtitle, { lineClamp: 1, children: null });
+    const obj = { lineClamp: 1, children: tmp3 };
+    return jsx(HappeningNowCard.HappeningNowCardSubtitle, { lineClamp: 1, children: tmp3 });
   }
   if (null != activity.stream) {
     if (null != activity) {
@@ -62,8 +58,8 @@ export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCar
         let name3 = activity.name;
       }
     }
-    const intl = getSystemLocale.intl;
-    name3 = intl.string(getSystemLocale.t.eXan7B);
+    const intl = util.intl;
+    name3 = intl.string(util.t.eXan7B);
   } else {
     let name;
     if (activity != null) {
@@ -71,7 +67,7 @@ export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCar
     }
     tmp3 = null;
     if (null != name) {
-      if (!_isStreamingDefault(activity)) {
+      if (!isStreamingDefault(activity)) {
         if (tmp4(10891)(activity)) {
           if (null != activity.details) {
             if (null != activity.state) {

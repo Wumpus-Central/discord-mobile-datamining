@@ -1,13 +1,13 @@
 // discord_app/modules/profile_customization/ProfileCustomizationNavigationStore.tsx
-import set from "../../../_runtime/00002_set.js";
-import MAX_FAVORITES from "../user_settings/UserSettingsConstants.tsx";
-import defaultStatesAreEqual from "../../lib/ZustandStore.tsx";
+import UserSettingsConstants from "../user_settings/UserSettingsConstants.tsx";
+import ZustandStore from "../../lib/ZustandStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-let closure_0 = MAX_FAVORITES.ProfileCustomizationSubsection;
-const zustandStore = defaultStatesAreEqual.createZustandStore(() => ({
+const constants = UserSettingsConstants.ProfileCustomizationSubsection;
+const zustandStore = ZustandStore.createZustandStore(() => ({
   subsection: constants.USER_PROFILE,
   scrollPosition: null,
 }));
-const result = set.fileFinishedImporting("modules/profile_customization/ProfileCustomizationNavigationStore.tsx");
+const result = size.fileFinishedImporting("modules/profile_customization/ProfileCustomizationNavigationStore.tsx");
 
 export default zustandStore;

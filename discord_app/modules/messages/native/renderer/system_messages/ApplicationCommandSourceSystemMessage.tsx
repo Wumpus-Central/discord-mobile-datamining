@@ -1,14 +1,14 @@
 // discord_app/modules/messages/native/renderer/system_messages/ApplicationCommandSourceSystemMessage.tsx
-import set from "../../../../../../_runtime/00002_set.js";
-import ME from "../../../../../Constants.tsx";
-import regExp from "../../../../channel_autocomplete/ChannelAutocompleteConstants.tsx";
+import Constants from "../../../../../Constants.tsx";
+import ChannelAutocompleteConstants from "../../../../channel_autocomplete/ChannelAutocompleteConstants.tsx";
 import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
-import getApplicationCommand from "../../../ApplicationCommands.tsx";
+import ApplicationCommands from "../../../ApplicationCommands.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-const MessageTypes = ME.MessageTypes;
-const COMMAND_SENTINEL = regExp.COMMAND_SENTINEL;
-const result = set.fileFinishedImporting(
+const MessageTypes = Constants.MessageTypes;
+const COMMAND_SENTINEL = ChannelAutocompleteConstants.COMMAND_SENTINEL;
+const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/ApplicationCommandSourceSystemMessage.tsx",
 );
 
@@ -16,7 +16,7 @@ export const createApplicationCommandSourceSystemMessage = function createApplic
   message,
 ) {
   message = message.message;
-  let obj = getApplicationCommand;
+  let obj = ApplicationCommands;
   const applicationCommand = obj.getApplicationCommand(message.content);
   const application = message.application;
   if (application != null) {
@@ -26,23 +26,24 @@ export const createApplicationCommandSourceSystemMessage = function createApplic
     if (null != name) {
       const messageAuthorWithProcessedColor = tmp(7960).getMessageAuthorWithProcessedColor(message);
       const intl = tmp(1114).intl;
-      obj = { username: null, usernameOnClick: null, commandName: null, applicationName: null };
-      obj[0] = messageAuthorWithProcessedColor.nick;
-      obj = { message: null, author: null, roleStyle: null };
-      obj[0] = message;
-      obj[1] = messageAuthorWithProcessedColor;
-      obj[2] = message.roleStyle;
-      obj[1] = formatUsernameOnClickDefault(obj);
+      obj = {
+        username: messageAuthorWithProcessedColor.nick,
+        usernameOnClick: null,
+        commandName: null,
+        applicationName: null,
+      };
+      obj = { message, author: messageAuthorWithProcessedColor, roleStyle: message.roleStyle };
+      obj.usernameOnClick = formatUsernameOnClickDefault(obj);
       if (message.type === MessageTypes.CHAT_INPUT_COMMAND) {
         const _HermesInternal = HermesInternal;
         let name2 = "" + COMMAND_SENTINEL + applicationCommand.name;
       } else {
         name2 = applicationCommand.name;
       }
-      obj1 = { content: null };
-      obj[2] = name2;
-      obj[3] = name;
-      obj1[0] = intl.formatToParts(tmp(1114).t["1Zm+zw"], obj);
+      const obj1 = { content: null };
+      obj.commandName = name2;
+      obj.applicationName = name;
+      obj1.content = intl.formatToParts(tmp(1114).t["1Zm+zw"], obj);
       const merged = Object.assign(createCommonMessageDefault(message));
       return obj1;
     }

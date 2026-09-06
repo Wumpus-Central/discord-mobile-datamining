@@ -1,7 +1,7 @@
 // discord_app/modules/forums/native/posts/AnimatedCounterUtils.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/forums/native/posts/AnimatedCounterUtils.tsx");
+const result = size.fileFinishedImporting("modules/forums/native/posts/AnimatedCounterUtils.tsx");
 
 export const defaultFormatter = function defaultFormatter(arg0) {
   return "" + arg0;

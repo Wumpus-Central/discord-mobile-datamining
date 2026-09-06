@@ -1,18 +1,18 @@
 // discord_app/hooks/useTheme.tsx
-import set from "../../_runtime/00002_set.js";
-import ME from "../Constants.tsx";
-import AccessibilityAnnouncer from "../design/shared.tsx";
+import Constants from "../Constants.tsx";
+import shared from "../design/shared.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
 function useTheme() {
-  return AccessibilityAnnouncer.useThemeContext().theme;
+  return shared.useThemeContext().theme;
 }
-const ThemeTypes = ME.ThemeTypes;
-const result = set.fileFinishedImporting("hooks/useTheme.tsx");
+const ThemeTypes = Constants.ThemeTypes;
+const result = size.fileFinishedImporting("hooks/useTheme.tsx");
 
 export default useTheme;
 export { useTheme };
 export const useThemeIndex = function useThemeIndex() {
-  const theme = AccessibilityAnnouncer.useThemeContext().theme;
+  const theme = shared.useThemeContext().theme;
   let num = 0;
   if (ThemeTypes.DARK !== theme) {
     if (ThemeTypes.LIGHT === theme) {

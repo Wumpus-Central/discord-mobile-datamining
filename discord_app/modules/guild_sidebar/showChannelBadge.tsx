@@ -1,7 +1,7 @@
 // discord_app/modules/guild_sidebar/showChannelBadge.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/guild_sidebar/showChannelBadge.tsx");
+const result = size.fileFinishedImporting("modules/guild_sidebar/showChannelBadge.tsx");
 
 export default function showChannelBadge(isNewChannel) {
   ({ mentionsCount, postsWithUnreadsCount, muted } = isNewChannel);

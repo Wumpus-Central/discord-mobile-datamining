@@ -1,7 +1,7 @@
 // discord_app/modules/message_request/MessageRequestConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/message_request/MessageRequestConstants.tsx");
+const result = size.fileFinishedImporting("modules/message_request/MessageRequestConstants.tsx");
 
 export const MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL = "Message Request Accept Confirmation";
 export const MessageRequestAnalyticsAction = {

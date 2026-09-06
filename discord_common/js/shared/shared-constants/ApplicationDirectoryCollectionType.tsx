@@ -1,15 +1,19 @@
 // discord_common/js/shared/shared-constants/ApplicationDirectoryCollectionType.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const obj = { ALL: null, APPLICATION_DIRECTORY: null, APP_LAUNCHER_IN_TEXT: null, APP_LAUNCHER_IN_VOICE_BANNER: null };
-let set = new Set([1, 2, 3, 4, 5, 6, 7]);
-obj[0] = set;
-obj[1] = new Set([1, 2, 3]);
+const obj = {
+  ALL: new Set([1, 2, 3, 4, 5, 6, 7]),
+  APPLICATION_DIRECTORY: null,
+  APP_LAUNCHER_IN_TEXT: null,
+  APP_LAUNCHER_IN_VOICE_BANNER: null,
+};
+const set = new Set([1, 2, 3, 4, 5, 6, 7]);
+obj.APPLICATION_DIRECTORY = new Set([1, 2, 3]);
 const set1 = new Set([1, 2, 3]);
-obj[2] = new Set([4, 5, 6]);
+obj.APP_LAUNCHER_IN_TEXT = new Set([4, 5, 6]);
 const set2 = new Set([4, 5, 6]);
-obj[3] = new Set([7]);
-const result = set.fileFinishedImporting(
+obj.APP_LAUNCHER_IN_VOICE_BANNER = new Set([7]);
+const result = size.fileFinishedImporting(
   "../discord_common/js/shared/shared-constants/ApplicationDirectoryCollectionType.tsx",
 );
 

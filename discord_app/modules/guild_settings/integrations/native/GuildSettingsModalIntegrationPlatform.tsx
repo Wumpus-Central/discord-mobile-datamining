@@ -1,24 +1,37 @@
 // discord_app/modules/guild_settings/integrations/native/GuildSettingsModalIntegrationPlatform.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import getPlatformUserUrlDefault from "../../../../lib/Platforms.tsx";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../GuildSettingsStore.tsx";
-import ME from "../../../../Constants.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
+import actions_AlertActionCreatorsDefault from "../../../../actions/native/AlertActionCreators.tsx";
+import common_AlertDefault from "../../../../components_native/common/Alert.tsx";
+import PlatformsDefault from "../../../../lib/Platforms.tsx";
+import NavigatorHeader from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
+import HeaderActionButton from "../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
+import openUserSettings from "../../../user_settings/core/native/openUserSettings.tsx";
+import GuildSettingsActionCreatorsDefault from "../../GuildSettingsActionCreators.tsx";
+import GuildSettingsModalIntegrations from "GuildSettingsModalIntegrations.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import GuildSettingsStore from "../../GuildSettingsStore.tsx";
 
-let require = arg1;
-({ ActivityIndicator: c3, Image: c4, View: c5 } = get_ActivityIndicator);
-({ GuildSettingsSections: error, HelpdeskArticles: closure_8, PlatformTypes: c9, UserSettingsSections: c10 } = ME);
-({ jsx: unpackModuleId, jsxs: closure_12, Fragment: map1 } = jsxProd);
-createCacheKey = { form: null, trailingWrapper: null, platformIcon: null };
-createCacheKey = { paddingTop: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexDirection: "row", alignItems: "center" };
-createCacheKey[2] = { width: 24, height: 24 };
-let closure_14 = createCacheKey.createStyles(createCacheKey);
-const Component = importAllResult.Component;
+require = fn;
+get_ActivityIndicator = fn(17);
+({ ActivityIndicator: c3, Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const Constants = fn(1074);
+({
+  GuildSettingsSections: closure_7,
+  HelpdeskArticles: closure_8,
+  PlatformTypes: closure_9,
+  UserSettingsSections: c10,
+} = Constants);
+const jsxProd = fn(21);
+({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
+fn(4560);
+let createStyles = { form: null, trailingWrapper: null, platformIcon: null };
+createStyles = { paddingTop: nativeDefault.space.PX_16 };
+createStyles.form = createStyles;
+createStyles.trailingWrapper = { flexDirection: "row", alignItems: "center" };
+createStyles.platformIcon = { width: 24, height: 24 };
+let closure_14 = createStyles.createStyles(createStyles);
+const Component = noop.Component;
 class IntegrationItem extends Component {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -41,32 +54,31 @@ class IntegrationItem extends Component {
             onCancel: null,
             confirmColor: null,
           };
-          const intl = applyArgumentsResult(closure_1_2[15]).intl;
-          showResult[0] = intl.string(applyArgumentsResult(closure_1_2[15]).t.emx3lN);
+          const intl = applyArgumentsResult(1114).intl;
+          showResult.title = intl.string(applyArgumentsResult(1114).t.emx3lN);
           if ("youtube" === integration.type) {
-            const intl3 = tmp9(closure_1_2[15]).intl;
-            let stringResult = intl3.string(tmp9(closure_1_2[15]).t.anKQWU);
+            const intl3 = tmp9(1114).intl;
+            let stringResult = intl3.string(tmp9(1114).t.anKQWU);
           } else {
-            const intl2 = tmp9(closure_1_2[15]).intl;
-            stringResult = intl2.string(tmp9(closure_1_2[15]).t["BW/xtn"]);
+            const intl2 = tmp9(1114).intl;
+            stringResult = intl2.string(tmp9(1114).t["BW/xtn"]);
           }
-          showResult[1] = stringResult;
-          const intl4 = tmp9(closure_1_2[15]).intl;
-          showResult[2] = intl4.string(applyArgumentsResult(closure_1_2[15]).t.R9GHya);
-          const intl5 = tmp9(closure_1_2[15]).intl;
-          showResult[3] = intl5.string(applyArgumentsResult(closure_1_2[15]).t["ETE/oC"]);
-          showResult[4] = function onConfirm() {
-            return closure_2_1(closure_2_2[16]).disableIntegration(guild.id, integration.id);
+          showResult.body = stringResult;
+          const intl4 = tmp9(1114).intl;
+          showResult.confirmText = intl4.string(applyArgumentsResult(1114).t.R9GHya);
+          const intl5 = tmp9(1114).intl;
+          showResult.cancelText = intl5.string(applyArgumentsResult(1114).t["ETE/oC"]);
+          showResult.onConfirm = function onConfirm() {
+            return GuildSettingsActionCreatorsDefault.disableIntegration(guild.id, integration.id);
           };
-          showResult[5] = function onCancel() {
+          showResult.onCancel = function onCancel() {
             return guild.setState({ enabled: true });
           };
-          showResult[6] = closure_1_1(closure_1_2[18]).Colors.RED;
-          showResult = closure_1_1(closure_1_2[17]).show(showResult);
-          const obj2 = closure_1_1(closure_1_2[17]);
+          showResult.confirmColor = common_AlertDefault.Colors.RED;
+          showResult = actions_AlertActionCreatorsDefault.show(showResult);
         } else {
           setState({ enabled: true });
-          showResult = closure_1_1(closure_1_2[16]);
+          showResult = GuildSettingsActionCreatorsDefault;
           showResult.enableIntegration(guild.id, integration.type, integration.id);
         }
       }
@@ -83,8 +95,7 @@ IntegrationItem["getDerivedStateFromProps"] = function getDerivedStateFromProps(
     if (false === integration.syncing) {
       tmp = null;
       if (integration.enabled !== enabled) {
-        const obj = { enabled: null };
-        obj[0] = integration.enabled;
+        const obj = { enabled: integration.enabled };
         tmp = obj;
       }
     }
@@ -96,7 +107,8 @@ IntegrationItem.prototype["render"] = function render() {
   const props = this.props;
   const integration = props.integration;
   ({ onPress: importDefault, styles } = props);
-  const SUPPORTED_SETTINGS_INTEGRATION_PLATFORMS = integration(17560).SUPPORTED_SETTINGS_INTEGRATION_PLATFORMS;
+  const SUPPORTED_SETTINGS_INTEGRATION_PLATFORMS =
+    GuildSettingsModalIntegrations.SUPPORTED_SETTINGS_INTEGRATION_PLATFORMS;
   if (SUPPORTED_SETTINGS_INTEGRATION_PLATFORMS.includes(integration.type)) {
     const type = integration.type;
     if (tmp(17600).IntegrationTypes.YOUTUBE === type) {
@@ -111,94 +123,83 @@ IntegrationItem.prototype["render"] = function render() {
       let str = "twitch.tv/";
       combined = "twitch.tv/" + integration.name;
     }
-    let obj = getPlatformUserUrlDefault;
-    const value = obj.get(integration.type);
+    let obj = PlatformsDefault;
+    value = obj.get(integration.type);
     if (null == value) {
       str = undefined;
       if (integration.user != null) {
         str = str2.toString();
       }
-      obj = { label: null, subLabel: null, trailing: null, arrow: null, icon: null, disabled: null, onPress: null };
-      obj[0] = str;
-      obj[1] = combined;
-      obj = { style: null, children: null };
-      obj[0] = styles.trailingWrapper;
+      obj = { label: str, subLabel: combined, trailing: null, arrow: null, icon: null, disabled: null, onPress: null };
+      obj = { style: styles.trailingWrapper, children: null };
       let syncing = integration.syncing;
       if (syncing) {
-        syncing = tmp17(closure_3, { animating: true, size: "small" });
+        syncing = tmp17(React3, { animating: true, size: "small" });
       }
-      obj[1] = syncing;
-      obj[2] = closure_11(closure_5, obj);
-      obj[3] = integration.enabled && !integration.syncing;
-      obj[4] = null;
+      obj.children = syncing;
+      obj.trailing = closure_1_11(hasOwnProperty, obj);
+      obj.arrow = integration.enabled && !integration.syncing;
+      obj.icon = null;
       let enabled = integration.enabled;
       let syncing2 = !enabled;
       if (enabled) {
         syncing2 = integration.syncing;
       }
-      obj1 = { hasIcons: true, children: null };
-      obj[5] = syncing2;
-      obj[6] = function onPress() {
+      const obj1 = { hasIcons: true, children: null };
+      obj.disabled = syncing2;
+      obj.onPress = function onPress() {
         let enabled = integration.enabled;
         if (enabled) {
-          enabled = callback(tmp);
+          enabled = importDefault(tmp);
         }
         return enabled;
       };
-      const items = [closure_11(tmp(5605).TableRow, obj)];
+      const items = [closure_1_11(tmp(5605).TableRow, obj)];
       const obj2 = { value: null, disabled: null, onValueChange: null, label: null };
       const _Boolean = Boolean;
-      obj2[0] = Boolean(self.state.enabled);
-      obj2[1] = true === integration.syncing;
-      obj2[2] = self.handleToggleEnabled;
+      obj2.value = Boolean(self.state.enabled);
+      obj2.disabled = true === integration.syncing;
+      obj2.onValueChange = self.handleToggleEnabled;
       const intl = tmp(1114).intl;
-      obj2[3] = intl.string(tmp(1114).t.vQC6vR);
-      items[1] = closure_11(tmp(7201).TableSwitchRow, obj2);
-      obj1[1] = items;
-      return closure_12(tmp(5687).TableRowGroup, obj1);
+      obj2.label = intl.string(tmp(1114).t.vQC6vR);
+      items[1] = closure_1_11(tmp(7201).TableSwitchRow, obj2);
+      obj1.children = items;
+      return closure_1_12(tmp(5687).TableRowGroup, obj1);
     } else {
-      let tmpResult = tmp(1396);
-      tmpResult = tmp(4411);
-      let icon = value.icon;
-      icon = { source: null, style: null };
-      icon[0] = tmpResult.makeSource(tmpResult.isThemeDark(props.theme) ? icon.darkPNG : icon.lightPNG);
-      icon[1] = styles.platformIcon;
-      closure_11(closure_4, icon);
-      const tmp12 = closure_11;
-      const tmp13 = closure_4;
+      tmp(1396);
+      const tmpResult = tmp(4411);
+      const icon = { source: null, style: null };
+      icon.source = tmpResult.makeSource(tmpResult.isThemeDark(props.theme) ? icon.darkPNG : icon.lightPNG);
+      icon.style = styles.platformIcon;
+      closure_1_11(React4, icon);
       const tmp14 = tmpResult.isThemeDark(props.theme) ? icon.darkPNG : icon.lightPNG;
     }
   } else {
     return null;
   }
 };
-const result = require("set").fileFinishedImporting(
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/guild_settings/integrations/native/GuildSettingsModalIntegrationPlatform.tsx",
 );
 
 export default function GuildSettingsModalIntegrationPlatform(platformType) {
   platformType = platformType.platformType;
   const closeGuildSettings = platformType.closeGuildSettings;
-  dependencyMap = undefined;
-  let navigation;
-  let submitting;
   c5 = undefined;
   guild = undefined;
-  closure_7 = undefined;
   function onSave() {
     if (null != guild) {
-      let obj = closeGuildSettings(9063);
-      obj = { features: null };
-      obj[0] = tmp.features;
+      const obj = { features: tmp.features };
       obj.saveGuild(tmp.id, obj);
     }
   }
   let obj = platformType(4262);
   const token = obj.useToken(closeGuildSettings(576).modules.mobile.TABLE_ROW_PADDING);
-  const tmp5 = callback();
+  const tmp5 = closure_14();
   dependencyMap = tmp5;
-  obj1 = platformType(1483);
-  navigation = obj1.useNavigation();
+  let obj1 = platformType(1483);
+  const navigation = obj1.useNavigation();
   let obj3 = platformType(504);
   const items = [guild];
   const stateFromStoresObject = obj3.useStateFromStoresObject(items, () => ({
@@ -206,9 +207,9 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
     submitting: guild.isSubmitting(),
     hasChanges: guild.hasChanges(),
   }));
-  submitting = stateFromStoresObject.submitting;
+  const submitting = stateFromStoresObject.submitting;
   ({ hasChanges: c5, guild } = stateFromStoresObject);
-  closure_7 = closeGuildSettings(4495)();
+  const theme = closeGuildSettings(4495)();
   let obj4 = platformType(504);
   const items1 = [guild];
   const stateFromStores = obj4.useStateFromStores(items1, () => guild.getProps().integrations);
@@ -222,88 +223,79 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
     if (submitting) {
       fn = () => null;
     }
-    obj = { headerLeft: null, title: null, headerRight: null };
-    obj[0] = fn;
+    obj = { headerLeft: fn, title: null, headerRight: null };
     let tmp3Result = tmp3(5283);
-    const value = tmp3Result.get(platformType);
+    value = tmp3Result.get(platformType);
     let name;
     if (value != null) {
       name = value.name;
     }
     function onConectTap() {
       closeGuildSettings();
-      let obj = platformType(7382);
-      obj = { screen: closure_1_10.CONNECTIONS, isRootScreen: true };
+      const obj = { screen: constants3.CONNECTIONS, isRootScreen: true };
       obj.openUserSettings(obj);
     }
-    obj[1] = name;
-    obj[2] = function headerRight() {
+    obj.title = name;
+    obj.headerRight = function headerRight() {
       if (submitting) {
-        let tmp2 = closure_1_11(platformType(5624).HeaderSubmittingIndicator, {});
+        let tmp2 = closure_2_11(NavigatorHeader.HeaderSubmittingIndicator, {});
       } else {
         tmp2 = null;
         if (c5) {
           const obj = { text: null, onPress: null };
-          const intl = platformType(1114).intl;
-          obj[0] = intl.string(platformType(1114).t["R3BPH+"]);
-          obj[1] = onSave;
-          tmp2 = closure_1_11(platformType(7377).HeaderActionButton, obj);
+          const intl = util.intl;
+          obj.text = intl.string(util.t["R3BPH+"]);
+          obj.onPress = onSave;
+          tmp2 = closure_2_11(HeaderActionButton.HeaderActionButton, obj);
         }
       }
       return tmp2;
     };
     navigation.setOptions(obj);
-    if (constants.YOUTUBE === platformType) {
+    if (constants2.YOUTUBE === platformType) {
       let intl = tmp(1114).intl;
-      obj = { connectAction: null, helpdeskArticle: null };
-      obj[0] = onConectTap;
+      obj = { connectAction: onConectTap, helpdeskArticle: null };
       tmp3Result = tmp3(2024);
-      obj[1] = tmp3Result.getArticleURL(onSave.YOUTUBE_INTEGRATION);
+      obj.helpdeskArticle = tmp3Result.getArticleURL(onSave.YOUTUBE_INTEGRATION);
       let formatResult = intl.format(tmp(1114).t["4OSAQ9"], obj);
     } else if (tmp10.TWITCH === platformType) {
       const intl2 = tmp(1114).intl;
-      obj1 = { connectAction: null, helpdeskArticle: null };
-      obj1[0] = onConectTap;
-      obj1[1] = tmp3(2024).getArticleURL(onSave.TWITCH_INTEGRATION);
+      obj1 = { connectAction: onConectTap, helpdeskArticle: tmp3(2024).getArticleURL(onSave.TWITCH_INTEGRATION) };
       formatResult = intl2.format(tmp(1114).t.ro1jEN, obj1);
       const tmp3Result1 = tmp3(2024);
     }
-    const obj2 = { style: null, contentContainerStyle: null, children: null };
-    obj2[0] = tmp5.form;
-    obj2[1] = platformType.contentContainerStyle;
+    const obj2 = { style: tmp5.form, contentContainerStyle: platformType.contentContainerStyle, children: null };
     obj3 = { style: null, spacing: null, children: null };
-    obj4 = { paddingHorizontal: null };
-    obj4[0] = token;
-    obj3[0] = obj4;
-    obj3[1] = tmp3(576).space.PX_24;
+    obj4 = { paddingHorizontal: token };
+    obj3.style = obj4;
+    obj3.spacing = tmp3(576).space.PX_24;
     let mapped;
     if (found != null) {
-      mapped = found.map((id) => {
-        closure_0 = arg1;
+      mapped = found.map((integration, index) => {
+        const integrationId = index;
         return closure_1_11(
-          closure_1_15,
+          IntegrationItem,
           {
             guild,
-            theme: closure_7,
-            integration: id,
-            styles: closure_2,
+            theme,
+            integration,
+            styles,
             onPress() {
-              closure_1_3.push(constants.INTEGRATION_SETTINGS, { integrationId: closure_0 });
+              navigation.push(constants.INTEGRATION_SETTINGS, { integrationId });
             },
           },
-          id.id,
+          integration.id,
         );
       });
     }
     const obj5 = { children: null };
     const items2 = [mapped];
-    const obj6 = { variant: "text-sm/medium", color: "text-muted", children: null };
-    obj6[2] = formatResult;
+    const obj6 = { variant: "text-sm/medium", color: "text-muted", children: formatResult };
     items2[1] = closure_11(tmp(4556).Text, obj6);
-    obj3[2] = items2;
-    obj2[2] = closure_12(tmp(4973).Stack, obj3);
+    obj3.children = items2;
+    obj2.children = closure_12(tmp(4973).Stack, obj3);
     const items3 = [closure_11(tmp(8593).Form, obj2), closure_11(tmp(7040).NavScrim, {})];
-    obj5[0] = items3;
+    obj5.children = items3;
     return closure_12(closure_13, obj5);
   }
 }

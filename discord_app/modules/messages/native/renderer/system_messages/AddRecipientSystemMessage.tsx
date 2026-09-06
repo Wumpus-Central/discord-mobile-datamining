@@ -1,33 +1,30 @@
 // discord_app/modules/messages/native/renderer/system_messages/AddRecipientSystemMessage.tsx
-import set from "../../../../../../_runtime/00002_set.js";
-import getSystemLocale from "../../../../../intl/index.native.tsx";
-import createChannelRecord from "../../../../../records/ChannelRecord.tsx";
-import getMessageAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
+import util from "../../../../../intl/index.native.tsx";
+import ChannelRecord from "../../../../../records/ChannelRecord.tsx";
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
 import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
-import closure_4 from "../../../../../stores/ChannelStore.tsx";
-import closure_5 from "../../../../../stores/UserStore.tsx";
+import ChannelStore from "../../../../../stores/ChannelStore.tsx";
+import UserStore from "../../../../../stores/UserStore.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-const THREAD_CHANNEL_TYPES = createChannelRecord.THREAD_CHANNEL_TYPES;
-const result = set.fileFinishedImporting(
+const THREAD_CHANNEL_TYPES = ChannelRecord.THREAD_CHANNEL_TYPES;
+const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/AddRecipientSystemMessage.tsx",
 );
 
 export const createAddRecipientSystemMessage = function createAddRecipientSystemMessage(message) {
   ({ message, roleStyle } = message);
   const first = message.mentions[0];
-  user = user.getUser(first);
-  channel = channel.getChannel(message.channel_id);
+  const user = UserStore.getUser(first);
+  const channel = ChannelStore.getChannel(message.channel_id);
   let hasItem = null != channel;
   if (hasItem) {
     hasItem = THREAD_CHANNEL_TYPES.has(channel.type);
   }
-  let obj = getMessageAuthorWithProcessedColor;
+  let obj = useAuthorWithProcessedColor;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-  const userAuthorWithProcessedColor = getMessageAuthorWithProcessedColor.getUserAuthorWithProcessedColor(
-    user,
-    channel,
-  );
+  const userAuthorWithProcessedColor = useAuthorWithProcessedColor.getUserAuthorWithProcessedColor(user, channel);
   obj = {
     username: messageAuthorWithProcessedColor.nick,
     usernameOnClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle }),
@@ -39,9 +36,9 @@ export const createAddRecipientSystemMessage = function createAddRecipientSystem
       roleStyle,
     }),
   };
-  const intl = getSystemLocale.intl;
+  const intl = util.intl;
   const formatToParts = intl.formatToParts;
-  const t = getSystemLocale.t;
+  const t = util.t;
   if (hasItem) {
     let formatToPartsResult = formatToParts(t.Vej1Nw, obj);
   } else {

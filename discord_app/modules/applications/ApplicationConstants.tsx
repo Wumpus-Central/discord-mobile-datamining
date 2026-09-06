@@ -1,5 +1,5 @@
 // discord_app/modules/applications/ApplicationConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
 const items = [
   "1102741339122188349",
@@ -14,8 +14,7 @@ const items = [
   "1098316259562635386",
 ];
 const items1 = ["1211781489931452447", "1211780388607885393", "1166579889915310151"];
-let set = new Set(items1);
-const result = set.fileFinishedImporting("modules/applications/ApplicationConstants.tsx");
+const result = size.fileFinishedImporting("modules/applications/ApplicationConstants.tsx");
 
 export const ApplicationTypes = {
   DEPRECATED_GAME: 1,
@@ -52,4 +51,4 @@ export const DISCORD_WAGONS_APPLICATION_ID = "1211781489931452447";
 export const DISCORD_WAGONS_QA_APPLICATION_ID = "1211780388607885393";
 export const DISCORD_WAGONS_DEV_APPLICATION_ID = "1166579889915310151";
 export const INSTALL_LESS_APP_IDS = items;
-export const OBEY_SILENT_HARDWARE_SWITCH_APP_IDS = set;
+export const OBEY_SILENT_HARDWARE_SWITCH_APP_IDS = new Set(items1);

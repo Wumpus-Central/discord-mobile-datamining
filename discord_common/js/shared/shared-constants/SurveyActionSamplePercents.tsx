@@ -1,7 +1,9 @@
 // discord_common/js/shared/shared-constants/SurveyActionSamplePercents.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/SurveyActionSamplePercents.tsx");
+const result = size.fileFinishedImporting(
+  "../discord_common/js/shared/shared-constants/SurveyActionSamplePercents.tsx",
+);
 
 export const SURVEY_ACTION_SAMPLE_PERCENTS = {
   nitro_unsubbed: 100,

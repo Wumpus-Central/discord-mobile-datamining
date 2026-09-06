@@ -1,16 +1,18 @@
 // discord_app/modules/search/native/components/layout/SearchScreenSearchBar.tsx
-import _modDef16628 from "SearchBar.tsx";
-import SearchFilterPrefixRowDefault from "autocomplete/SearchFilterSuggestions.tsx";
-import _modDef16635 from "autocomplete/SearchFilterButton.tsx";
-import importAllResult from "../../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import KeyboardManagerUtils from "../../../../../utils/native/KeyboardManagerUtils.tsx";
+import mergeProps from "../../../../../design/utils/native/mergeProps.native.tsx";
+import useKeyboardIsOpen from "../../../../keyboard/native/useKeyboardIsOpen.tsx";
+import SearchBarDefault from "SearchBar.tsx";
+import SearchFilterSuggestionsDefault from "autocomplete/SearchFilterSuggestions.tsx";
+import SearchFilterButtonDefault from "autocomplete/SearchFilterButton.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let c3 = importAllResult;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles({
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4560);
+let closure_7 = createStyles.createStyles({
   header: { flexDirection: "row", alignItems: "center", paddingLeft: 16, zIndex: 10 },
   headerWithBackButton: { paddingLeft: 0 },
   headerSearch: { flex: 1, flexGrow: 1 },
@@ -19,26 +21,26 @@ let closure_7 = createCacheKey.createStyles({
   suggestions: { position: "absolute", left: 0, right: -50, top: 8 },
   suggestionsWithBackButton: { left: -28 },
 });
-const memoResult = importAllResult.memo(
-  importAllResult.forwardRef((arg0, arg1) => {
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/search/native/components/layout/SearchScreenSearchBar.tsx");
+
+export default noop.memo(
+  noop.forwardRef((arg0, arg1) => {
     ({ searchContext, backButton } = arg0);
     closure_0 = arg1;
-    importDefault = undefined;
-    dependencyMap = undefined;
     ({ onSuggestionsLayoutMesure, suggestionsDismissed, setSuggestionsDismissed } = arg0);
-    const tmp = callback2();
-    importDefault = importAllResult.useRef(null);
+    const tmp = closure_7();
+    importDefault = noop.useRef(null);
     const items = [arg1];
-    const memo = importAllResult.useMemo(() => callback(ref[4]).mergeRefs(callback, closure_1), items);
-    dependencyMap = importAllResult.useRef(false);
-    const callback = importAllResult.useCallback(() => {
-      ref.current = callback(ref[5]).getKeyboardIsOpen();
-      const obj = callback(ref[5]);
-      const result = callback(ref[6]).dismissGlobalKeyboard();
+    const memo = noop.useMemo(() => mergeProps.mergeRefs(closure_0, closure_1), items);
+    dependencyMap = noop.useRef(false);
+    const callback = noop.useCallback(() => {
+      closure_2.current = useKeyboardIsOpen.getKeyboardIsOpen();
+      const result = KeyboardManagerUtils.dismissGlobalKeyboard();
     }, []);
     const items1 = [tmp.header];
     let headerWithBackButton = null != backButton;
-    const callback1 = importAllResult.useCallback((arg0) => {
+    const callback1 = noop.useCallback((arg0) => {
       let current = arg0;
       if (arg0) {
         current = ref.current;
@@ -60,9 +62,9 @@ const memoResult = importAllResult.memo(
     items1[1] = headerWithBackButton;
     const items2 = [backButton, ,];
     obj = { style: tmp.headerSearch, children: null };
-    const items3 = [callback(_modDef16628, { ref: memo, searchContext, setSuggestionsDismissed })];
+    const items3 = [closure_5(SearchBarDefault, { ref: memo, searchContext, setSuggestionsDismissed })];
     obj = { style: tmp.suggestionsAnchor, children: null };
-    obj1 = {
+    const obj1 = {
       searchContext,
       onLayoutMeasure: onSuggestionsLayoutMesure,
       dismissed: suggestionsDismissed,
@@ -74,21 +76,16 @@ const memoResult = importAllResult.memo(
       suggestionsWithBackButton = tmp.suggestionsWithBackButton;
     }
     items4[1] = suggestionsWithBackButton;
-    obj1[3] = items4;
-    obj[1] = callback(SearchFilterPrefixRowDefault, obj1);
-    items3[1] = callback(View, obj);
-    obj[1] = items3;
+    obj1.containerStyle = items4;
+    obj.children = closure_5(SearchFilterSuggestionsDefault, obj1);
+    items3[1] = closure_5(View, obj);
+    obj.children = items3;
     items2[1] = closure_6(View, obj);
-    const tmp10 = SearchFilterPrefixRowDefault;
-    const tmp8 = importDefault;
-    items2[2] = callback(View, {
+    items2[2] = closure_5(View, {
       style: tmp.headerControlsRight,
-      children: callback(_modDef16635, { searchContext, onOpen: callback, onClose: callback1 }),
+      children: closure_5(SearchFilterButtonDefault, { searchContext, onOpen: callback, onClose: callback1 }),
     });
-    obj[1] = items2;
+    obj.children = items2;
     return closure_6(View, obj);
   }),
 );
-let result = require("set").fileFinishedImporting("modules/search/native/components/layout/SearchScreenSearchBar.tsx");
-
-export default memoResult;

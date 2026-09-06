@@ -1,11 +1,11 @@
 // discord_app/modules/telemetry_ring/trackHttpRequest.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import Constants from "../../Constants.tsx";
+import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import trackZoomedInHttpRequestDefault from "trackZoomedInHttpRequest.android.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/telemetry_ring/trackHttpRequest.tsx");
+const AnalyticEvents = Constants.AnalyticEvents;
+const result = size.fileFinishedImporting("modules/telemetry_ring/trackHttpRequest.tsx");
 
 export default function trackHttpRequest(url) {
   let obj = {};
@@ -22,7 +22,7 @@ export default function trackHttpRequest(url) {
     obj = {};
     const merged1 = Object.assign(obj);
     obj.source = "sample";
-    expandEventPropertiesDefault.track(AnalyticEvents.HTTP_REQUEST, obj);
-    const tmp3Result = expandEventPropertiesDefault;
+    AnalyticsUtilsDefault.track(AnalyticEvents.HTTP_REQUEST, obj);
+    const tmp3Result = AnalyticsUtilsDefault;
   }
 }

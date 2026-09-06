@@ -1,20 +1,21 @@
 // discord_app/modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingWave.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import map from "../../../../design/tokens/native/useToken.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useToken from "../../../../design/tokens/native/useToken.tsx";
 import inlineStyles from "../../../../../_runtime/08453_inlineStyles.js";
-import inlineStylesDefault from "../../../../../_runtime/08453_inlineStyles.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting(
+const inlineStylesDefault = inlineStyles;
+
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingWave.tsx",
 );
 
 export default function GuildBoostingMarketingWave(arg0) {
-  let obj = map;
-  const token = obj.useToken(ThemesDefault.colors.BACKGROUND_BASE_LOW);
+  let obj = useToken;
+  const token = obj.useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
   obj = { fill: "none", viewBox: "0 0 1512 510", preserveAspectRatio: "none" };
   const merged = Object.assign(arg0);
   obj.children = jsx(inlineStyles.Path, {

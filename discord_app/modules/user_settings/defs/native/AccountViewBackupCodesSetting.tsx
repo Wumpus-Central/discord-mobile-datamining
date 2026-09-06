@@ -1,29 +1,29 @@
 // discord_app/modules/user_settings/defs/native/AccountViewBackupCodesSetting.tsx
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import ME from "../../../../Constants.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
-import { CodeRow } from "../../account/native/UserSettingsAccountBackupCodes.tsx";
+import util from "../../../../intl/index.native.tsx";
+import MFAActionCreatorsDefault from "../../../../actions/MFAActionCreators.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-({ NOOP_NULL: c4, UserSettingsSections } = ME);
-createToggle = {
+require = fn;
+const Constants = fn(1074);
+({ NOOP_NULL: closure_4, UserSettingsSections } = Constants);
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.xZEzbu);
+    const intl = util.intl;
+    return intl.string(util.t.xZEzbu);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.ACCOUNT,
-  usePredicate: require("useIs2FAEnabled").useIs2FAEnabled,
+  parent: fn(7975).MobileUserSettings.ACCOUNT,
+  usePredicate: fn(14681).useIs2FAEnabled,
   usePreNavigationAction: function useOnViewBackups() {
-    return React.useCallback((arg0) => {
-      const callback = arg0;
+    return noop.useCallback((arg0) => {
+      closure_0 = arg0;
       let obj = {
         onSubmit(password) {
-          const result = closure_1_1(closure_1_2[3]).sendMFABackupCodesVerificationKeyEmail(password);
+          const result = MFAActionCreatorsDefault.sendMFABackupCodesVerificationKeyEmail(password);
           return result.then(() => {
             const obj = {
               onSubmit(verificationKey) {
-                return callback(table[3]).confirmViewBackupCodes(verificationKey, false);
+                return closure_1_1(closure_1_2[3]).confirmViewBackupCodes(verificationKey, false);
               },
               title: null,
               helpText: null,
@@ -35,20 +35,20 @@ createToggle = {
               confirmColor: null,
               useKeyboardAwareWrapper: true,
             };
-            const intl = closure_1_0(closure_1_2[4]).intl;
-            obj[1] = intl.string(closure_1_0(closure_1_2[4]).t["mGppp/"]);
-            const intl2 = closure_1_0(closure_1_2[4]).intl;
-            obj[2] = intl2.string(closure_1_0(closure_1_2[4]).t["37S9yU"]);
-            const intl3 = closure_1_0(closure_1_2[4]).intl;
-            obj[3] = intl3.string(closure_1_0(closure_1_2[4]).t.TjGb4Q);
-            obj[5] = closure_0;
-            const intl4 = closure_1_0(closure_1_2[4]).intl;
-            obj[7] = intl4.string(closure_1_0(closure_1_2[4]).t.geKm7t);
-            obj[8] = closure_1_0(closure_1_2[5]).ButtonColors.BRAND;
-            closure_1_1(closure_1_2[6])(obj);
+            const intl = onSuccess(1114).intl;
+            obj.title = intl.string(onSuccess(1114).t["mGppp/"]);
+            const intl2 = onSuccess(1114).intl;
+            obj.helpText = intl2.string(onSuccess(1114).t["37S9yU"]);
+            const intl3 = onSuccess(1114).intl;
+            obj.inputLabel = intl3.string(onSuccess(1114).t.TjGb4Q);
+            obj.onSuccess = onSuccess;
+            const intl4 = onSuccess(1114).intl;
+            obj.actionText = intl4.string(onSuccess(1114).t.geKm7t);
+            obj.confirmColor = onSuccess(1178).ButtonColors.BRAND;
+            closure_2_1(14796)(obj);
           });
         },
-        onSuccess: closure_4,
+        onSuccess,
         title: null,
         inputLabel: null,
         closeOnSuccess: false,
@@ -56,28 +56,26 @@ createToggle = {
         confirmColor: null,
         useKeyboardAwareWrapper: true,
       };
-      let intl = callback(1114).intl;
-      obj[2] = intl.string(callback(1114).t.PsQmzU);
-      let intl2 = callback(1114).intl;
-      obj[3] = intl2.string(callback(1114).t["CIGa+7"]);
-      let intl3 = callback(1114).intl;
-      obj[5] = intl3.string(callback(1114).t.PDTjLN);
-      obj[6] = callback(1178).ButtonColors.BRAND;
-      callback2(14796)(obj);
+      let intl = closure_0(1114).intl;
+      obj.title = intl.string(closure_0(1114).t.PsQmzU);
+      let intl2 = closure_0(1114).intl;
+      obj.inputLabel = intl2.string(closure_0(1114).t["CIGa+7"]);
+      let intl3 = closure_0(1114).intl;
+      obj.actionText = intl3.string(closure_0(1114).t.PDTjLN);
+      obj.confirmColor = closure_0(1178).ButtonColors.BRAND;
+      closure_1(14796)(obj);
       return false;
     }, []);
   },
-  screen: createToggle,
-};
-createToggle = {
-  route: UserSettingsSections.ACCOUNT_CONFIRM_VIEW_BACKUP_CODES,
-  getComponent() {
-    return CodeRow /* CodeRow */.default;
+  screen: {
+    route: UserSettingsSections.ACCOUNT_CONFIRM_VIEW_BACKUP_CODES,
+    getComponent() {
+      return require("UserSettingsAccountBackupCodes").default;
+    },
   },
 };
-createToggle = createToggle.createRoute(createToggle);
-let result = require("set").fileFinishedImporting(
-  "modules/user_settings/defs/native/AccountViewBackupCodesSetting.tsx",
-);
+SettingBuilders = SettingBuilders.createRoute(SettingBuilders);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountViewBackupCodesSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

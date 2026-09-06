@@ -1,31 +1,30 @@
 // discord_app/stores/AppliedGuildBoostStore.tsx
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../Dispatcher.tsx";
+import DispatcherDefault from "../Dispatcher.tsx";
 
 function handleModifyingAppliedBoostStart() {
   c4 = true;
 }
-let closure_0 = {};
-let c1 = null;
+const dependencyMap = {};
+let endsAt = null;
 let closure_2 = [];
 let c3 = false;
 let c4 = false;
-let c5 = null;
-let c6 = null;
+let error = null;
 const Store = initializeDefault.Store;
 class AppliedGuildBoostStore extends Store {}
 const prototype = AppliedGuildBoostStore.prototype;
-prototype["getAppliedGuildBoostsForGuild"] = function getAppliedGuildBoostsForGuild(closure_0) {
+prototype["getAppliedGuildBoostsForGuild"] = function getAppliedGuildBoostsForGuild(arg0) {
   let subscriptions = null;
-  if (null != dependencyMap[closure_0]) {
-    subscriptions = dependencyMap[closure_0].subscriptions;
+  if (null != dependencyMap[arg0]) {
+    subscriptions = dependencyMap[arg0].subscriptions;
   }
   return subscriptions;
 };
-prototype["getLastFetchedAtForGuild"] = function getLastFetchedAtForGuild(closure_0) {
+prototype["getLastFetchedAtForGuild"] = function getLastFetchedAtForGuild(arg0) {
   let lastFetchedAt = null;
-  if (null != dependencyMap[closure_0]) {
-    lastFetchedAt = dependencyMap[closure_0].lastFetchedAt;
+  if (null != dependencyMap[arg0]) {
+    lastFetchedAt = dependencyMap[arg0].lastFetchedAt;
   }
   return lastFetchedAt;
 };
@@ -44,19 +43,19 @@ Object.defineProperty(prototype, "isModifyingAppliedBoost", {
 });
 Object.defineProperty(prototype, "applyBoostError", {
   get: function applyBoostError() {
-    return c5;
+    return error;
   },
   set: undefined,
 });
 Object.defineProperty(prototype, "unapplyBoostError", {
   get: function unapplyBoostError() {
-    return c6;
+    return error;
   },
   set: undefined,
 });
 Object.defineProperty(prototype, "cooldownEndsAt", {
-  get: function cooldownEndsAt(arg0) {
-    return c1;
+  get: function cooldownEndsAt() {
+    return endsAt;
   },
   set: undefined,
 });
@@ -67,7 +66,7 @@ Object.defineProperty(prototype, "isFetchingCurrentUserAppliedBoosts", {
   set: undefined,
 });
 AppliedGuildBoostStore.displayName = "AppliedGuildBoostStore";
-const appliedGuildBoostStore = new AppliedGuildBoostStore(dispatcherDefault, {
+const appliedGuildBoostStore = new AppliedGuildBoostStore(DispatcherDefault, {
   GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: function handleAppliedBoostsForGuildFetchSuccess(appliedBoosts) {
     closure_0[appliedBoosts.guildId] = { subscriptions: appliedBoosts.appliedBoosts, lastFetchedAt: Date.now() };
   },
@@ -82,10 +81,10 @@ const appliedGuildBoostStore = new AppliedGuildBoostStore(dispatcherDefault, {
   GUILD_APPLY_BOOST_START: handleModifyingAppliedBoostStart,
   GUILD_APPLY_BOOST_SUCCESS: function handleApplyBoostSuccess(appliedGuildBoost) {
     appliedGuildBoost = appliedGuildBoost.appliedGuildBoost;
-    let set;
-    set = new Set(appliedGuildBoost.map((id) => id.id));
-    items = [...appliedGuildBoost, ...items.filter((id) => !set.has(id.id))];
-    c5 = null;
+    const set = new Set(appliedGuildBoost.map((id) => id.id));
+    const items = [...appliedGuildBoost, ...closure_2.filter((id) => !set.has(id.id))];
+    closure_2 = items;
+    error = null;
     c4 = false;
   },
   GUILD_APPLY_BOOST_FAIL: function handleApplyBoostFail(error) {
@@ -105,6 +104,7 @@ const appliedGuildBoostStore = new AppliedGuildBoostStore(dispatcherDefault, {
     c3 = true;
   },
 });
-const result = require("set").fileFinishedImporting("stores/AppliedGuildBoostStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("stores/AppliedGuildBoostStore.tsx");
 
 export default appliedGuildBoostStore;

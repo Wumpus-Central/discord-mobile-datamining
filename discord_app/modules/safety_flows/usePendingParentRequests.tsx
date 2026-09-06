@@ -1,24 +1,24 @@
 // discord_app/modules/safety_flows/usePendingParentRequests.tsx
-import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../_runtime/00019_noop.js";
-import closure_4 from "../parent_tools/FamilyCenterStore.tsx";
-import closure_5 from "../../stores/UserStore.tsx";
-import { UserLinkStatus } from "../parent_tools/FamilyCenterConstants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import useUserLinks from "../parent_tools/hooks/useUserLinks.tsx";
+import useFamilyCenterActions from "../parent_tools/hooks/useFamilyCenterActions.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import noop from "../../../_runtime/metro/00019__.js";
+import FamilyCenterStore from "../parent_tools/FamilyCenterStore.tsx";
+import UserStore from "../../stores/UserStore.tsx";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/safety_flows/usePendingParentRequests.tsx");
+require = fn;
+const UserLinkStatus = fn(7538).UserLinkStatus;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/safety_flows/usePendingParentRequests.tsx");
 
 export const useDerivedPendingRequests = function useDerivedPendingRequests(arr, stateFromStores1) {
-  const _require = arr;
+  _require = arr;
   dependencyMap = stateFromStores1;
-  let items = [closure_4];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
-    linkedUsers.getLinkedUsers(),
-  );
-  let obj = initialize;
-  const items1 = [closure_5];
-  stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
+  let items = [FamilyCenterStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => linkedUsers.getLinkedUsers());
+  let obj = require("initialize");
+  const items1 = [UserStore];
+  stateFromStores1 = require("initialize").useStateFromStores(items1, () => {
     currentUser = currentUser.getCurrentUser();
     let id;
     if (currentUser != null) {
@@ -31,7 +31,7 @@ export const useDerivedPendingRequests = function useDerivedPendingRequests(arr,
     if (closure_1) {
       const _Map = Map;
       const map = new Map(
-        arr.map((parent_id) => {
+        closure_0.map((parent_id) => {
           const items = [parent_id.parent_id, parent_id];
           return items;
         }),
@@ -44,25 +44,17 @@ export const useDerivedPendingRequests = function useDerivedPendingRequests(arr,
       while (iter !== undefined) {
         let tmp14 = nextResult;
         if (null != nextResult) {
-          let tmp25 = nextResult;
-          let tmp26 = closure_1_6;
-          if (tmp14.link_status === closure_1_6.PENDING) {
-            let tmp27 = nextResult;
-            let tmp28 = stateFromStores1;
+          if (tmp14.link_status === UserLinkStatus.PENDING) {
             if (tmp14.requestor_id !== stateFromStores1) {
-              let tmp29 = closure_1_5;
-              let tmp30 = nextResult;
-              let user = closure_1_5.getUser(tmp14.user_id);
+              let user = UserStore.getUser(tmp14.user_id);
               let tmp32 = user;
-              let value = map.get(tmp14.user_id);
-              let obj = { parent_id: null, parent_username: null, parent_avatar: null, created_at: null };
-              obj[0] = tmp14.user_id;
+              value = map.get(tmp14.user_id);
+              let obj = { parent_id: tmp14.user_id, parent_username: null, parent_avatar: null, created_at: null };
               let username;
               if (user != null) {
                 username = user.username;
               }
               if (username == null) {
-                let tmp16 = value;
                 let parent_username;
                 if (value != null) {
                   parent_username = value.parent_username;
@@ -70,17 +62,14 @@ export const useDerivedPendingRequests = function useDerivedPendingRequests(arr,
                 username = parent_username;
               }
               if (username == null) {
-                let tmp18 = nextResult;
                 username = tmp14.user_id;
               }
-              obj[1] = username;
-              let tmp19 = user;
+              obj.parent_username = username;
               let avatar;
               if (tmp32 != null) {
                 avatar = tmp32.avatar;
               }
               if (avatar == null) {
-                let tmp21 = value;
                 let parent_avatar;
                 if (value != null) {
                   parent_avatar = value.parent_avatar;
@@ -90,9 +79,8 @@ export const useDerivedPendingRequests = function useDerivedPendingRequests(arr,
               if (avatar == null) {
                 avatar = null;
               }
-              obj[2] = avatar;
-              let tmp23 = nextResult;
-              obj[3] = tmp14.created_at;
+              obj.parent_avatar = avatar;
+              obj.created_at = tmp14.created_at;
               arr = items.push(obj);
             }
           }
@@ -101,36 +89,34 @@ export const useDerivedPendingRequests = function useDerivedPendingRequests(arr,
       }
       return items;
     } else {
-      return arr;
+      return closure_0;
     }
   }, items2);
 };
 export const usePendingRequestListController = function usePendingRequestListController(pendingRequests) {
   pendingRequests = pendingRequests.pendingRequests;
   ({ linkedUsersProcessed, onActionError: dependencyMap } = pendingRequests);
-  let callback;
-  let acceptLinkRequest;
-  let declineLinkRequest;
+  c2 = undefined;
   isDeclineLoading = undefined;
   c6 = undefined;
   c7 = undefined;
-  callback = undefined;
-  let obj = pendingRequests(8645);
+  let callback;
+  let obj = useUserLinks;
   const hasMaxConnections = obj.useHasMaxConnections();
-  [tmp4, c2] = callback(acceptLinkRequest.useState(null), 2);
-  let tmp3 = callback(acceptLinkRequest.useState(null), 2);
+  [tmp4, c2] = _slicedToArray(noop.useState(null), 2);
+  let tmp3 = _slicedToArray(noop.useState(null), 2);
   obj = {
     onSuccess() {
       return _undefined(null);
     },
     onError() {
       _undefined(null);
-      callback();
+      dependencyMap();
     },
   };
-  const familyCenterActions = pendingRequests(11916).useFamilyCenterActions(obj);
-  acceptLinkRequest = familyCenterActions.acceptLinkRequest;
-  declineLinkRequest = familyCenterActions.declineLinkRequest;
+  const familyCenterActions = useFamilyCenterActions.useFamilyCenterActions(obj);
+  const acceptLinkRequest = familyCenterActions.acceptLinkRequest;
+  const declineLinkRequest = familyCenterActions.declineLinkRequest;
   ({ isAcceptLoading, isDeclineLoading } = familyCenterActions);
   let tmp6 = isAcceptLoading;
   if (!isAcceptLoading) {
@@ -174,9 +160,8 @@ export const usePendingRequestListController = function usePendingRequestListCon
   }, items1);
   tmp2Result = tmp2(obj2.useState(pendingRequests), 2);
   [tmp12, tmp13] = tmp2Result;
-  const obj3 = pendingRequests(11916);
-  [tmp15, tmp16] = callback(acceptLinkRequest.useState(pendingRequests), 2);
-  const tmp2Result1 = callback(acceptLinkRequest.useState(pendingRequests), 2);
+  [tmp15, tmp16] = _slicedToArray(noop.useState(pendingRequests), 2);
+  const tmp2Result1 = _slicedToArray(noop.useState(pendingRequests), 2);
   if (linkedUsersProcessed) {
     if (!tmp2Result2[0]) {
       tmp18(true);
@@ -187,9 +172,7 @@ export const usePendingRequestListController = function usePendingRequestListCon
         const nextResult = iter.next();
         while (iter !== undefined) {
           let tmp2 = nextResult;
-          let tmp3 = _undefined2;
           if (_undefined2.has(nextResult.parent_id)) {
-            let tmp4 = nextResult;
             let result = map.set(tmp2.parent_id, tmp2);
           }
           continue;
@@ -202,23 +185,15 @@ export const usePendingRequestListController = function usePendingRequestListCon
       });
     }
     obj = {
-      seenRequests: null,
-      hasMaxConnections: null,
-      actioningUserId: null,
-      isAcceptLoading: null,
-      isDeclineLoading: null,
-      actionsDisabled: null,
-      handleAccept: null,
-      handleDecline: null,
+      seenRequests: tmp12,
+      hasMaxConnections,
+      actioningUserId: tmp4,
+      isAcceptLoading,
+      isDeclineLoading,
+      actionsDisabled: tmp6,
+      handleAccept: callback1,
+      handleDecline: callback2,
     };
-    obj[0] = tmp12;
-    obj[1] = hasMaxConnections;
-    obj[2] = tmp4;
-    obj[3] = isAcceptLoading;
-    obj[4] = isDeclineLoading;
-    obj[5] = tmp6;
-    obj[6] = callback1;
-    obj[7] = callback2;
     return obj;
   }
   if (pendingRequests !== tmp15) {
@@ -239,21 +214,21 @@ export const usePendingRequestListController = function usePendingRequestListCon
   }
 };
 export const usePendingRequestResolution = function usePendingRequestResolution(parent_id) {
-  const _require = parent_id;
-  let obj = _require(stateFromStores[5]);
-  const items = [closure_4];
+  _require = parent_id;
+  let obj = require("initialize");
+  const items = [FamilyCenterStore];
   stateFromStores = obj.useStateFromStores(items, () => {
-    const tmp = closure_1_4.getLinkedUsers()[closure_0];
+    const tmp = FamilyCenterStore.getLinkedUsers()[closure_0];
     let link_status;
     if (tmp != null) {
       link_status = tmp.link_status;
     }
     return link_status;
   });
-  [tmp3, tmp4] = callback(
-    React.useState(() => {
+  [tmp3, tmp4] = _slicedToArray(
+    noop.useState(() => {
       let str = "connected";
-      if (stateFromStores !== closure_1_6.ACTIVE) {
+      if (stateFromStores !== UserLinkStatus.ACTIVE) {
         if (null == tmp) {
           let str2 = null;
         } else {
@@ -265,7 +240,7 @@ export const usePendingRequestResolution = function usePendingRequestResolution(
     }),
     2,
   );
-  const tmp5 = callback(React.useState(stateFromStores), 2);
+  const tmp5 = _slicedToArray(noop.useState(stateFromStores), 2);
   const first = tmp5[0];
   if (stateFromStores !== first) {
     tmp5[1](stateFromStores);
@@ -289,6 +264,6 @@ export const usePendingRequestResolution = function usePendingRequestResolution(
   if (!tmp16) {
     tmp16 = tmp17;
   }
-  obj[2] = tmp16;
+  obj.isResolved = tmp16;
   return obj;
 };

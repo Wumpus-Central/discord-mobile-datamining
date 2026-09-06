@@ -1,42 +1,47 @@
 // discord_app/modules/activate_device/native/UserCodeInput.tsx
-import innerContentDefault from "ActivateDeviceSharedStyles.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import { OAuthConstants } from "../../../../discord_common/js/shared/shared-constants/OAuthConstants.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
-import { useUserCodeSubmit } from "../useUserCodeSubmit.tsx";
+import util from "../../../intl/index.native.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
+import TextInput from "../../../design/components/TextInput/native/TextInput.native.tsx";
+import useUserCodeSubmit from "../useUserCodeSubmit.tsx";
+import ActivateDeviceSharedStylesDefault from "ActivateDeviceSharedStyles.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
-let closure_10 = createCacheKey.createStyles({ text: { textAlign: "center" } });
-const result = require("set").fileFinishedImporting("modules/activate_device/native/UserCodeInput.tsx");
+require = fn;
+const View = fn(17).View;
+const OAuthConstants = fn(13882).OAuthConstants;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
+const createStyles = fn(4560);
+let closure_10 = createStyles.createStyles({ text: { textAlign: "center" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activate_device/native/UserCodeInput.tsx");
 
 export const UserCodeInput = function UserCodeInput(prefilledUserCode) {
   let str = prefilledUserCode.prefilledUserCode;
-  let _require;
+  c0 = undefined;
   ({ onClose, onUserCodeAccepted } = prefilledUserCode);
-  const tmp = callback4();
+  const tmp = closure_10();
   if (str == null) {
     str = "";
   }
-  [arr, c0] = callback(React.useState(str), 2);
+  [arr, c0] = _slicedToArray(noop.useState(str), 2);
   let obj = useUserCodeSubmit;
   const userCodeSubmit = obj.useUserCodeSubmit(arr, onUserCodeAccepted, onClose);
   obj = { children: null };
-  obj = { style: innerContentDefault.innerContent, children: null };
+  obj = { style: ActivateDeviceSharedStylesDefault.innerContent, children: null };
   ({ manualSubmit, error, submitting } = userCodeSubmit);
-  obj1 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
-  const intl = require("../../../intl/index.native.tsx").intl;
-  obj1[3] = intl.string(require("../../../intl/index.native.tsx").t.KYPNUv);
-  const items = [callback2(require("../../../design/components/Text/native/Text.tsx").Text, obj1)];
+  const obj1 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
+  const intl = util.intl;
+  obj1.children = intl.string(util.t.KYPNUv);
+  const items = [React5(Text_Text.Text, obj1)];
   const obj2 = { variant: "text-md/medium", color: "text-default", style: tmp.text, children: null };
-  const intl2 = require("../../../intl/index.native.tsx").intl;
-  obj2[3] = intl2.string(require("../../../intl/index.native.tsx").t.xRHk7f);
-  items[1] = callback2(require("../../../design/components/Text/native/Text.tsx").Text, obj2);
-  obj[1] = items;
-  const items1 = [callback3(View, obj), ,];
+  const intl2 = util.intl;
+  obj2.children = intl2.string(util.t.xRHk7f);
+  items[1] = React5(Text_Text.Text, obj2);
+  obj.children = items;
+  const items1 = [React6(View, obj), ,];
   const obj3 = {
     onChange(arg0) {
       return _undefined(arg0);
@@ -48,19 +53,17 @@ export const UserCodeInput = function UserCodeInput(prefilledUserCode) {
     placeholder: null,
     errorMessage: null,
   };
-  const intl3 = require("../../../intl/index.native.tsx").intl;
-  obj3[5] = intl3.formatToPlainString(require("../../../intl/index.native.tsx").t["0tbz6x"], {
-    number: OAuthConstants.USER_CODE_LENGTH,
-  });
-  obj3[6] = error;
-  items1[1] = callback2(require("../../../design/components/TextInput/native/TextInput.native.tsx").TextInput, obj3);
+  const intl3 = util.intl;
+  obj3.placeholder = intl3.formatToPlainString(util.t["0tbz6x"], { number: OAuthConstants.USER_CODE_LENGTH });
+  obj3.errorMessage = error;
+  items1[1] = React5(TextInput.TextInput, obj3);
   const obj5 = { size: "lg", text: null, onPress: null, loading: null, disabled: null, grow: true };
-  const intl4 = require("../../../intl/index.native.tsx").intl;
-  obj5[1] = intl4.string(require("../../../intl/index.native.tsx").t["3PatSz"]);
-  obj5[2] = manualSubmit;
-  obj5[3] = submitting;
-  obj5[4] = arr.length !== OAuthConstants.USER_CODE_LENGTH;
-  items1[2] = callback2(require("../../../design/components/Button/native/Button.native.tsx").Button, obj5);
-  obj[0] = items1;
-  return callback3(closure_9, obj);
+  const intl4 = util.intl;
+  obj5.text = intl4.string(util.t["3PatSz"]);
+  obj5.onPress = manualSubmit;
+  obj5.loading = submitting;
+  obj5.disabled = arr.length !== OAuthConstants.USER_CODE_LENGTH;
+  items1[2] = React5(components_Button_Button.Button, obj5);
+  obj.children = items1;
+  return React6(React7, obj);
 };

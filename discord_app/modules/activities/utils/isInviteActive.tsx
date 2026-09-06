@@ -1,11 +1,13 @@
 // discord_app/modules/activities/utils/isInviteActive.tsx
-import DISCORD_EPOCHDefault from "../../../utils/SnowflakeUtils.tsx";
-import setDefault from "../../../utils/Durations.tsx";
+import SnowflakeUtilsDefault from "../../../utils/SnowflakeUtils.tsx";
+import DurationsDefault from "../../../utils/Durations.tsx";
 
-const result = 2 * setDefault.Millis.HOUR;
-const result1 = require("set").fileFinishedImporting("modules/activities/utils/isInviteActive.tsx");
+const result = 2 * DurationsDefault.Millis.HOUR;
+let c2 = result;
+const size = fn(2);
+const result1 = size.fileFinishedImporting("modules/activities/utils/isInviteActive.tsx");
 
-export default function isInviteActive(party, activity) {
+export default function isInviteActive(party, activity, arg2) {
   if (null == party) {
     return false;
   } else {
@@ -23,9 +25,8 @@ export default function isInviteActive(party, activity) {
       tmp2 = id !== party_id;
     }
     const _Date = Date;
-    const sum = DISCORD_EPOCHDefault.extractTimestamp(activity.id) + closure_2;
+    const sum = SnowflakeUtilsDefault.extractTimestamp(activity.id) + result;
     let tmp10 = null != party.application_id;
-    const obj = DISCORD_EPOCHDefault;
     if (tmp10) {
       tmp10 = party.application_id !== arg2;
     }

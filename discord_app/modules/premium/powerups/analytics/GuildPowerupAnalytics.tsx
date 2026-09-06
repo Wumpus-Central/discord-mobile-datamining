@@ -1,18 +1,18 @@
 // discord_app/modules/premium/powerups/analytics/GuildPowerupAnalytics.tsx
-import closure_2 from "../../../../../_runtime/00019_noop.js";
-import { AnalyticEvents } from "../../../../Constants.tsx";
+import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const result = require("set").fileFinishedImporting("modules/premium/powerups/analytics/GuildPowerupAnalytics.tsx");
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/analytics/GuildPowerupAnalytics.tsx");
 
 export const ModalType = { DETAIL: "Boost Perk Shop Details", DEACTIVATE: "Boost Perk Shop Disable" };
 export const useLogPowerupModalOpened = function useLogPowerupModalOpened(guildId, powerup, DEACTIVATE) {
-  closure_0 = guildId;
-  closure_1 = powerup;
-  const React = DEACTIVATE;
+  const guild_id = guildId;
+  noop = DEACTIVATE;
   const items = [DEACTIVATE, guildId, powerup.skuId];
-  const effect = React.useEffect(() => {
-    let obj = guildId(powerup[2]);
-    obj = { type: closure_2, sku_id: powerup.skuId, guild_id: guildId };
-    obj.track(closure_1_3.OPEN_MODAL, obj);
+  const effect = noop.useEffect(() => {
+    const obj = { type, sku_id: powerup.skuId, guild_id };
+    obj.track(AnalyticEvents.OPEN_MODAL, obj);
   }, items);
 };

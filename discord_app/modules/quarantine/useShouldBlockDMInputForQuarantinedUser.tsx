@@ -1,15 +1,15 @@
 // discord_app/modules/quarantine/useShouldBlockDMInputForQuarantinedUser.tsx
-import closure_2 from "../../stores/MessageStore.tsx";
-import { UserFlags } from "../../Constants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import MessageStore from "../../stores/MessageStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/quarantine/useShouldBlockDMInputForQuarantinedUser.tsx");
+const require = fn;
+const UserFlags = fn(1074).UserFlags;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quarantine/useShouldBlockDMInputForQuarantinedUser.tsx");
 
 export default function useShouldBlockDMInputForQuarantinedUser(hasFlag, channel) {
-  const _require = channel;
-  const showConvoStarterInDM = require("../messages/useShowConvoStarterInDM.tsx").useShowConvoStarterInDM(channel);
-  initialize;
+  _require = channel;
+  const showConvoStarterInDM = require("useShowConvoStarterInDM").useShowConvoStarterInDM(channel);
+  require("initialize");
   [][0] = channel;
   let tmp4 = null != hasFlag;
   if (tmp4) {

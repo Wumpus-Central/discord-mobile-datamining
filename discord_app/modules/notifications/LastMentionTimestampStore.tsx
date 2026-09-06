@@ -1,27 +1,24 @@
 // discord_app/modules/notifications/LastMentionTimestampStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import closure_2 from "../../stores/GuildMemberStore.tsx";
-import closure_3 from "../../stores/UserGuildSettingsStore.tsx";
-import closure_4 from "../../stores/UserStore.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
+import UserGuildSettingsStore from "../../stores/UserGuildSettingsStore.tsx";
+import UserStore from "../../stores/UserStore.tsx";
 
-let c5 = null;
-let c6 = null;
-let c7 = null;
-let c8 = null;
-let closure_9 = {};
-let closure_10 = {};
-let closure_11 = {};
-let closure_12 = {};
+let timestamp = null;
+const dependencyMap = {};
+const dependencyMap2 = {};
+const dependencyMap3 = {};
+const dependencyMap4 = {};
 const Store = initializeDefault.Store;
 class LastMentionTimestampStore extends Store {}
 const prototype = LastMentionTimestampStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_2, closure_3, closure_4);
+  this.waitFor(GuildMemberStore, UserGuildSettingsStore, UserStore);
 };
 prototype["getGlobalStats"] = function getGlobalStats() {
   let rounded = null;
-  if (null != c5) {
+  if (null != timestamp) {
     const _Math = Math;
     const _Date = Date;
     rounded = Math.floor((Date.now() - tmp) / 1000);
@@ -33,31 +30,31 @@ prototype["getGlobalStats"] = function getGlobalStats() {
     approx_seconds_since_last_everyone_mention: null,
   };
   let rounded1 = null;
-  if (null != c6) {
+  if (null != timestamp) {
     const _Math2 = Math;
     const _Date2 = Date;
     rounded1 = Math.floor((Date.now() - tmp4) / 1000);
   }
-  obj[1] = rounded1;
+  obj.approx_seconds_since_last_mention = rounded1;
   let rounded2 = null;
-  if (null != c7) {
+  if (null != timestamp) {
     const _Math3 = Math;
     const _Date3 = Date;
     rounded2 = Math.floor((Date.now() - tmp7) / 1000);
   }
-  obj[2] = rounded2;
+  obj.approx_seconds_since_last_role_mention = rounded2;
   let rounded3 = null;
-  if (null != c8) {
+  if (null != timestamp) {
     const _Math4 = Math;
     const _Date4 = Date;
     rounded3 = Math.floor((Date.now() - tmp10) / 1000);
   }
-  obj[3] = rounded3;
+  obj.approx_seconds_since_last_everyone_mention = rounded3;
   return obj;
 };
 prototype["getStats"] = function getStats(arg0) {
   let rounded = null;
-  if (null != c5) {
+  if (null != timestamp) {
     const _Math = Math;
     const _Date = Date;
     rounded = Math.floor((Date.now() - tmp) / 1000);
@@ -73,26 +70,26 @@ prototype["getStats"] = function getStats(arg0) {
     approx_seconds_since_last_guild_everyone_mention: null,
   };
   let rounded1 = null;
-  if (null != c6) {
+  if (null != timestamp) {
     const _Math2 = Math;
     const _Date2 = Date;
     rounded1 = Math.floor((Date.now() - tmp4) / 1000);
   }
-  obj[1] = rounded1;
+  obj.approx_seconds_since_last_mention = rounded1;
   let rounded2 = null;
-  if (null != c7) {
+  if (null != timestamp) {
     const _Math3 = Math;
     const _Date3 = Date;
     rounded2 = Math.floor((Date.now() - tmp7) / 1000);
   }
-  obj[2] = rounded2;
+  obj.approx_seconds_since_last_role_mention = rounded2;
   let rounded3 = null;
-  if (null != c8) {
+  if (null != timestamp) {
     const _Math4 = Math;
     const _Date4 = Date;
     rounded3 = Math.floor((Date.now() - tmp10) / 1000);
   }
-  obj[3] = rounded3;
+  obj.approx_seconds_since_last_everyone_mention = rounded3;
   let tmp13 = null;
   if (null != arg0) {
     let rounded4 = null;
@@ -103,7 +100,7 @@ prototype["getStats"] = function getStats(arg0) {
     }
     tmp13 = rounded4;
   }
-  obj[4] = tmp13;
+  obj.approx_seconds_since_last_guild_notification = tmp13;
   let tmp18 = null;
   if (null != arg0) {
     let rounded5 = null;
@@ -114,7 +111,7 @@ prototype["getStats"] = function getStats(arg0) {
     }
     tmp18 = rounded5;
   }
-  obj[5] = tmp18;
+  obj.approx_seconds_since_last_guild_mention = tmp18;
   let tmp23 = null;
   if (null != arg0) {
     let rounded6 = null;
@@ -125,7 +122,7 @@ prototype["getStats"] = function getStats(arg0) {
     }
     tmp23 = rounded6;
   }
-  obj[6] = tmp23;
+  obj.approx_seconds_since_last_guild_role_mention = tmp23;
   let tmp28 = null;
   if (null != arg0) {
     let rounded7 = null;
@@ -136,46 +133,44 @@ prototype["getStats"] = function getStats(arg0) {
     }
     tmp28 = rounded7;
   }
-  obj[7] = tmp28;
+  obj.approx_seconds_since_last_guild_everyone_mention = tmp28;
   return obj;
 };
-const lastMentionTimestampStore = new LastMentionTimestampStore(dispatcherDefault, {
+const lastMentionTimestampStore = new LastMentionTimestampStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
-    let tmp4 = null != c5;
+    let tmp4 = null != timestamp;
     if (tmp4) {
       const _Date = Date;
       tmp4 = Date.now() - tmp3 < 60000;
     }
     if (!tmp4) {
-      c5 = null;
+      timestamp = null;
     }
-    let tmp7 = null != c6;
+    let tmp7 = null != timestamp;
     if (tmp7) {
       const _Date2 = Date;
       tmp7 = Date.now() - tmp6 < 60000;
     }
     if (!tmp7) {
-      c6 = null;
+      timestamp = null;
     }
-    let tmp10 = null != c7;
+    let tmp10 = null != timestamp;
     if (tmp10) {
       const _Date3 = Date;
       tmp10 = Date.now() - tmp9 < 60000;
     }
     if (!tmp10) {
-      c7 = null;
+      timestamp = null;
     }
-    let tmp13 = null != c8;
+    let tmp13 = null != timestamp;
     if (tmp13) {
       const _Date4 = Date;
       tmp13 = Date.now() - tmp12 < 60000;
     }
     if (!tmp13) {
-      c8 = null;
+      timestamp = null;
     }
     for (const key10037 in closure_9) {
-      let tmp19 = key10037;
-      let tmp20 = dependencyMap;
       let tmp21 = dependencyMap[key10037];
       let tmp15 = null != tmp21;
       if (tmp15) {
@@ -191,8 +186,6 @@ const lastMentionTimestampStore = new LastMentionTimestampStore(dispatcherDefaul
       continue;
     }
     for (const key10045 in closure_10) {
-      let tmp22 = key10045;
-      let tmp23 = dependencyMap2;
       let tmp24 = dependencyMap2[key10045];
       let tmp16 = null != tmp24;
       if (tmp16) {
@@ -208,8 +201,6 @@ const lastMentionTimestampStore = new LastMentionTimestampStore(dispatcherDefaul
       continue;
     }
     for (const key10053 in closure_12) {
-      let tmp25 = key10053;
-      let tmp26 = dependencyMap4;
       let tmp27 = dependencyMap4[key10053];
       let tmp17 = null != tmp27;
       if (tmp17) {
@@ -225,8 +216,6 @@ const lastMentionTimestampStore = new LastMentionTimestampStore(dispatcherDefaul
       continue;
     }
     for (const key10061 in closure_11) {
-      let tmp28 = key10061;
-      let tmp29 = dependencyMap3;
       let tmp30 = dependencyMap3[key10061];
       let tmp18 = null != tmp30;
       if (tmp18) {
@@ -245,7 +234,7 @@ const lastMentionTimestampStore = new LastMentionTimestampStore(dispatcherDefaul
   MESSAGE_NOTIFICATION_SHOWN: function handleMessageNotificationShown(guildId) {
     guildId = guildId.guildId;
     ({ mentioned, roleMentioned, everyoneMentioned } = guildId);
-    const timestamp = Date.now();
+    timestamp = Date.now();
     if (null != guildId) {
       closure_9[guildId] = timestamp;
     }
@@ -266,18 +255,19 @@ const lastMentionTimestampStore = new LastMentionTimestampStore(dispatcherDefaul
     }
   },
 });
-let result = require("set").fileFinishedImporting("modules/notifications/LastMentionTimestampStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/notifications/LastMentionTimestampStore.tsx");
 
 export default lastMentionTimestampStore;
 export const trackMessageNotificationTimestamps = function trackMessageNotificationTimestamps(mentions, guildId) {
-  currentUser = currentUser.getCurrentUser();
+  const currentUser = UserStore.getCurrentUser();
   let id;
   if (currentUser != null) {
     id = currentUser.id;
   }
-  const result = closure_3.isSuppressEveryoneEnabled(guildId);
+  const result = UserGuildSettingsStore.isSuppressEveryoneEnabled(guildId);
   let someResult = null != mentions.mentions;
-  const result1 = closure_3.isSuppressRolesEnabled(guildId);
+  const result1 = UserGuildSettingsStore.isSuppressRolesEnabled(guildId);
   if (someResult) {
     mentions = mentions.mentions;
     someResult = mentions.some((id) => id.id === id);
@@ -286,19 +276,18 @@ export const trackMessageNotificationTimestamps = function trackMessageNotificat
   if (null != guildId) {
     member = null;
     if (null != id) {
-      member = member.getMember(guildId, id);
+      member = GuildMemberStore.getMember(guildId, id);
     }
   }
   let someResult1 = null != mentions.mention_roles && null != member && null != member.roles;
   if (someResult1) {
     const mention_roles = mentions.mention_roles;
-    someResult1 = mention_roles.some((arg0) => {
+    someResult1 = mention_roles.some((item) => {
       const roles = member.roles;
-      return roles.includes(arg0);
+      return roles.includes(item);
     });
   }
-  let obj = id(member[3]);
-  obj = {
+  const obj = {
     type: "MESSAGE_NOTIFICATION_SHOWN",
     guildId,
     mentioned: someResult,
@@ -308,7 +297,7 @@ export const trackMessageNotificationTimestamps = function trackMessageNotificat
   if (someResult1) {
     someResult1 = !result1;
   }
-  obj[3] = someResult1;
-  obj[4] = true === mentions.mention_everyone && !result;
+  obj.roleMentioned = someResult1;
+  obj.everyoneMentioned = true === mentions.mention_everyone && !result;
   obj.dispatch(obj);
 };

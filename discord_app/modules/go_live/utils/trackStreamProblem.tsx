@@ -1,10 +1,10 @@
 // discord_app/modules/go_live/utils/trackStreamProblem.tsx
-import set from "../../../../_runtime/00002_set.js";
-import ME from "../../../Constants.tsx";
-import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import Constants from "../../../Constants.tsx";
+import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/go_live/utils/trackStreamProblem.tsx");
+const AnalyticEvents = Constants.AnalyticEvents;
+const result = size.fileFinishedImporting("modules/go_live/utils/trackStreamProblem.tsx");
 
 export default function trackStreamProblem(arg0) {
   ({ stream, streamApplication, analyticsData, rating } = arg0);
@@ -13,8 +13,7 @@ export default function trackStreamProblem(arg0) {
     rating = null;
   }
   ({ category, variant } = arg0);
-  let obj = expandEventPropertiesDefault;
-  obj = {
+  const obj = {
     reason: problem,
     category,
     reason_variant: variant,
@@ -31,15 +30,15 @@ export default function trackStreamProblem(arg0) {
   if (null != streamApplication) {
     id = streamApplication.id;
   }
-  obj[6] = id;
+  obj.application_id = id;
   let name = null;
   if (null != streamApplication) {
     name = streamApplication.name;
   }
-  obj[7] = name;
-  obj[8] = _location;
-  obj[9] = rating;
-  obj[10] = feedback;
+  obj.application_name = name;
+  obj.location = _location;
+  obj.rating = rating;
+  obj.feedback = feedback;
   const merged = Object.assign(analyticsData);
   obj.track(AnalyticEvents.STREAM_REPORT_PROBLEM, obj);
 }

@@ -1,12 +1,12 @@
 // discord_app/modules/app_launcher/native/AppLauncherNativeConstants.tsx
-import set from "../../../../_runtime/00002_set.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import useNavigation from "../../../design/components/Navigator/native/useNavigation.native.tsx";
-import registerAssetDefault from "../../../../_runtime/01606_registerAsset.js";
+import _modDef1606 from "../../../../_runtime/metro/01606__.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/app_launcher/native/AppLauncherNativeConstants.tsx");
+const result = size.fileFinishedImporting("modules/app_launcher/native/AppLauncherNativeConstants.tsx");
 
-export const APP_LAUNCHER_BUILT_IN_SECTION_ICON = registerAssetDefault;
+export const APP_LAUNCHER_BUILT_IN_SECTION_ICON = _modDef1606;
 export const AppLauncherRouteName = {
   HOME: "home",
   APPLICATION_VIEW: "application_view",
@@ -24,6 +24,6 @@ export const AppLauncherOptionAutoFocusType = {
   OPTIONAL_OPTION_ADDED: 2,
   [2]: "OPTIONAL_OPTION_ADDED",
 };
-export const DEFAULT_CONTENT_PADDING = ThemesDefault.space.PX_16;
-export const SCREEN_BACKGROUND_COLOR = ThemesDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND;
+export const DEFAULT_CONTENT_PADDING = nativeDefault.space.PX_16;
+export const SCREEN_BACKGROUND_COLOR = nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND;
 export const FLASH_LIST_ITEM_IMPRESSION_VIEWABILITY_CONFIG = { itemVisiblePercentThreshold: 50, minimumViewTime: 1000 };

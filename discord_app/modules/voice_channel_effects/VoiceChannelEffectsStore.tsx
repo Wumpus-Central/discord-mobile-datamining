@@ -1,41 +1,41 @@
 // discord_app/modules/voice_channel_effects/VoiceChannelEffectsStore.tsx
-import set from "../../../_runtime/00002_set.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import setDefault from "../../utils/Durations.tsx";
-import AccessibilityAnnouncer2 from "../../design/shared.tsx";
-import ParticipantTypes from "../calls/CallConstants.tsx";
-import VoiceChannelEffectAnimationType from "VoiceChannelEffectsUtils.tsx";
-import apply from "../../../_runtime/00012_apply.js";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import DurationsDefault from "../../utils/Durations.tsx";
+import shared from "../../design/shared.tsx";
+import CallConstants from "../calls/CallConstants.tsx";
+import VoiceChannelEffectsUtils from "VoiceChannelEffectsUtils.tsx";
+import apply from "../../../_runtime/metro/00012__.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-let closure_4 = ParticipantTypes.EMOJI_PICKER_EMOJI_TO_SHOW_COUNT;
-let closure_5 = [];
-let closure_6 = {};
-let closure_7 = [];
-let closure_8 = [];
-let closure_9 = 10 * setDefault.Millis.SECOND;
+let closure_4 = CallConstants.EMOJI_PICKER_EMOJI_TO_SHOW_COUNT;
+const hasOwnProperty = [];
+const dependencyMap = {};
+let items = [];
+let substr = [];
+let closure_9 = 10 * DurationsDefault.Millis.SECOND;
 let closure_10 = apply.debounce(() => {
-  const effectAnnouncement = VoiceChannelEffectAnimationType.getEffectAnnouncement(closure_7);
-  const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
+  const effectAnnouncement = VoiceChannelEffectsUtils.getEffectAnnouncement(items);
+  const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
   AccessibilityAnnouncer.announce(effectAnnouncement, "polite");
-  closure_7 = [];
+  items = [];
 }, 500);
 const Store = initializeDefault.Store;
 class VoiceChannelEffectsStore extends Store {}
 const prototype = VoiceChannelEffectsStore.prototype;
 Object.defineProperty(prototype, "recentlyUsedEmojis", {
   get: function recentlyUsedEmojis() {
-    return closure_5;
+    return uniqByResult;
   },
   set: undefined,
 });
 Object.defineProperty(prototype, "isOnCooldown", {
   get: function isOnCooldown() {
-    let tmp = null != closure_3;
+    let tmp = null != date;
     if (tmp) {
       const _Date = Date;
-      const date = new Date();
-      tmp = date < closure_3;
+      date = new Date();
+      tmp = date < date;
     }
     return tmp;
   },
@@ -43,7 +43,7 @@ Object.defineProperty(prototype, "isOnCooldown", {
 });
 Object.defineProperty(prototype, "effectCooldownEndTime", {
   get: function effectCooldownEndTime() {
-    return closure_3;
+    return date;
   },
   set: undefined,
 });
@@ -51,7 +51,7 @@ prototype["getEffectForUserId"] = function getEffectForUserId(arg0) {
   return dependencyMap[arg0];
 };
 VoiceChannelEffectsStore.displayName = "VoiceChannelEffectsStore";
-const voiceChannelEffectsStore = new VoiceChannelEffectsStore(dispatcherDefault, {
+const voiceChannelEffectsStore = new VoiceChannelEffectsStore(DispatcherDefault, {
   VOICE_CHANNEL_EFFECT_CLEAR: function handleClearVoiceChannelEffect(arg0) {
     if (null != dependencyMap[arg0.userId]) {
       delete tmp[tmp2];
@@ -60,35 +60,30 @@ const voiceChannelEffectsStore = new VoiceChannelEffectsStore(dispatcherDefault,
   VOICE_CHANNEL_EFFECT_RECENT_EMOJI: function handleAddRecentlyUsedEmojis(emoji) {
     emoji = emoji.emoji;
     if (null != emoji) {
-      arr = arr.unshift(emoji);
-      const uniqByResult = apply.uniqBy(arr, "name");
-      arr = uniqByResult;
+      uniqByResult.unshift(emoji);
+      uniqByResult = apply.uniqBy(uniqByResult, "name");
       if (uniqByResult.length > closure_4 + 1) {
-        arr = arr.pop();
+        uniqByResult.pop();
       }
-      const obj = apply;
     }
   },
   VOICE_CHANNEL_EFFECT_SEND: function handleReceivedVoiceChannelEffect(arg0) {
     ({ emoji, userId, animationType } = arg0);
     if (tmp) {
-      let obj = { emoji: null, sentAt: null, animationType: null };
-      obj[0] = emoji;
+      let obj = { emoji, sentAt: null, animationType: null };
       const _Date = Date;
-      obj[1] = Date.now();
-      obj[2] = animationType;
+      obj.sentAt = Date.now();
+      obj.animationType = animationType;
       closure_6[userId] = obj;
-      const items = [];
-      obj = { emojiName: null, userId: null };
-      obj[0] = emoji.name;
-      obj[1] = userId;
+      items = [];
+      obj = { emojiName: emoji.name, userId };
       items[HermesBuiltin.arraySpread(items, 0)] = obj;
-      callback();
+      closure_10();
     }
   },
   VOICE_CHANNEL_EFFECT_SENT_LOCAL: function handleVoiceChannelEffectSentLocal() {
-    const date = new Date();
-    const items = [date, ...substr];
+    date = new Date();
+    items = [date, ...substr];
     substr = items.slice(0, 20);
     if (substr.length >= 20) {
       const time = date.getTime();
@@ -96,22 +91,20 @@ const voiceChannelEffectsStore = new VoiceChannelEffectsStore(dispatcherDefault,
       if (diff < closure_9) {
         const _Date = Date;
         const date1 = new Date(date.getTime() + tmp4 - diff);
+        date = date1;
       }
-      const obj2 = substr[substr.length - 1];
     }
   },
   VOICE_CHANNEL_EFFECT_UPDATE_TIME_STAMP: function handleTimestampUpdate(cooldownEndsAtMs) {
-    const date = new Date(Date.now() + cooldownEndsAtMs.cooldownEndsAtMs);
+    date = new Date(Date.now() + cooldownEndsAtMs.cooldownEndsAtMs);
   },
 });
-const result = set.fileFinishedImporting("modules/voice_channel_effects/VoiceChannelEffectsStore.tsx");
+const result = size.fileFinishedImporting("modules/voice_channel_effects/VoiceChannelEffectsStore.tsx");
 
 export default voiceChannelEffectsStore;
-export const clearVoiceChannelEffectForUser = function clearVoiceChannelEffectForUser(arg0) {
-  if (null != arg0) {
-    let obj = dispatcherDefault;
-    obj = { type: "VOICE_CHANNEL_EFFECT_CLEAR", userId: null };
-    obj[1] = arg0;
+export const clearVoiceChannelEffectForUser = function clearVoiceChannelEffectForUser(userId) {
+  if (null != userId) {
+    const obj = { type: "VOICE_CHANNEL_EFFECT_CLEAR", userId };
     obj.dispatch(obj);
   }
 };

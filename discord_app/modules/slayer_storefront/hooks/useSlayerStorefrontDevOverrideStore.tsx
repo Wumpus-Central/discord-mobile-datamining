@@ -1,17 +1,19 @@
 // discord_app/modules/slayer_storefront/hooks/useSlayerStorefrontDevOverrideStore.tsx
-import set from "../../../../_runtime/00002_set.js";
-import keys from "../../../../_runtime/00560_keys.js";
+import 00560__ from "../../../../_runtime/metro/00560__.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const tmp2 = keys.create()((arg0) => {
+const result = size.fileFinishedImporting("modules/slayer_storefront/hooks/useSlayerStorefrontDevOverrideStore.tsx");
+
+export const useSlayerStorefrontDevOverrideStore = module_560.create()((arg0) => {
   closure_0 = arg0;
   return {
     overrideApplicationId: null,
     setOverrideApplicationId(overrideApplicationId) {
-      return callback({ overrideApplicationId });
+      return closure_0({ overrideApplicationId });
     },
     showSelfActivity: false,
     setShowSelfActivity(showSelfActivity) {
-      return callback({ showSelfActivity });
+      return closure_0({ showSelfActivity });
     },
     recommendationApplicationIds: null,
     setRecommendationApplicationIds(str) {
@@ -23,22 +25,19 @@ const tmp2 = keys.create()((arg0) => {
     },
     overrideNitroEligibilityForSocialLayerStorefront: false,
     setOverrideNitroEligibilityForSocialLayerStorefront(overrideNitroEligibilityForSocialLayerStorefront) {
-      return callback({ overrideNitroEligibilityForSocialLayerStorefront });
+      return closure_0({ overrideNitroEligibilityForSocialLayerStorefront });
     },
     isNitroEligibleForSocialLayerStorefront: false,
     setIsNitroEligibleForSocialLayerStorefront(isNitroEligibleForSocialLayerStorefront) {
-      return callback({ isNitroEligibleForSocialLayerStorefront });
+      return closure_0({ isNitroEligibleForSocialLayerStorefront });
     },
     overrideCurrentPremiumPlanId: false,
     setOverrideCurrentPremiumPlanId(overrideCurrentPremiumPlanId) {
-      return callback({ overrideCurrentPremiumPlanId });
+      return closure_0({ overrideCurrentPremiumPlanId });
     },
     currentPremiumPlanId: null,
     setCurrentPremiumPlanId(currentPremiumPlanId) {
-      return callback({ currentPremiumPlanId });
-    },
+      return closure_0({ currentPremiumPlanId });
+    }
   };
 });
-const result = set.fileFinishedImporting("modules/slayer_storefront/hooks/useSlayerStorefrontDevOverrideStore.tsx");
-
-export const useSlayerStorefrontDevOverrideStore = tmp2;

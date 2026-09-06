@@ -1,47 +1,47 @@
 // discord_app/modules/messages/native/hooks/useChannelLoading.tsx
-import useMountEffectDefault from "../../../../../discord_common/js/shared/hooks/useMountEffect.tsx";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
+import hooks_useMountEffectDefault from "../../../../../discord_common/js/shared/hooks/useMountEffect.tsx";
+import messages_MessagesUtils from "../MessagesUtils.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/messages/native/hooks/useChannelLoading.tsx");
+require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/messages/native/hooks/useChannelLoading.tsx");
 
 export default function useChannelLoading(arg0) {
   ({
     channelId: require,
     jumpTargetId: importDefault,
     oldestUnreadMessageId: dependencyMap,
-    shouldJumpToOriginalPost: closure_3,
+    shouldJumpToOriginalPost: _slicedToArray,
   } = arg0);
-  let first;
-  first = callback(
-    first.useState(() => new callback(table[2])("Messages")),
+  let channelLatestMessageLoadingStatsManager;
+  channelLatestMessageLoadingStatsManager = _slicedToArray(
+    channelLatestMessageLoadingStatsManager.useState(() => new jumpTargetId(oldestUnreadMessageId[2])("Messages")),
     1,
   )[0];
-  useMountEffectDefault(() => {
-    let obj = closure_1_0(closure_1_2[3]);
-    obj = {
-      jumpTargetId: closure_1,
-      oldestUnreadMessageId: closure_2,
-      shouldJumpToOriginalPost: callback2(false),
-      channelId: closure_0,
-      tracker: first,
+  hooks_useMountEffectDefault(() => {
+    const obj = {
+      jumpTargetId,
+      oldestUnreadMessageId,
+      shouldJumpToOriginalPost: _slicedToArray(false),
+      channelId,
+      tracker,
     };
     const result = obj.startOrCancelChannelLatestMessagesLoad(obj);
     return () => {
-      closure_4.cancel();
+      first.cancel();
     };
   });
   return {
-    channelLatestMessageLoadingStatsManager: first,
+    channelLatestMessageLoadingStatsManager,
     startOrCancelLatestMessagesLoad(arg0) {
-      let obj = closure_1_0(closure_1_2[3]);
-      obj = {
-        jumpTargetId: closure_1,
-        oldestUnreadMessageId: closure_2,
-        shouldJumpToOriginalPost: callback2(arg0),
-        channelId: closure_0,
-        tracker: first,
+      const obj = {
+        jumpTargetId,
+        oldestUnreadMessageId,
+        shouldJumpToOriginalPost: _slicedToArray(arg0),
+        channelId,
+        tracker,
       };
       const result = obj.startOrCancelChannelLatestMessagesLoad(obj);
     },

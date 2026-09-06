@@ -1,7 +1,8 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockVisibilityContext.tsx
-import importAllResult from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const context = importAllResult.createContext({ isRendered: false, isVisibleToUser: false });
-const result = require("set").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockVisibilityContext.tsx");
+const context = noop.createContext({ isRendered: false, isVisibleToUser: false });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockVisibilityContext.tsx");
 
 export default context;

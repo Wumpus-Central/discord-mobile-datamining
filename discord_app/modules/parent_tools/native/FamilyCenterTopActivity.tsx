@@ -1,15 +1,20 @@
 // discord_app/modules/parent_tools/native/FamilyCenterTopActivity.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../stores/UserStore.tsx";
-import closure_6 from "../FamilyCenterStore.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
+import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import GuildIcon from "../../guild/native/GuildIcon.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import UserStore from "../../../stores/UserStore.tsx";
+import FamilyCenterStore from "../FamilyCenterStore.tsx";
 
-const require = arg1;
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = {
+const GuildIconDefault = GuildIcon;
+
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+fn(4560);
+let createStyles = {
   container: null,
   section: null,
   avatarList: null,
@@ -17,138 +22,127 @@ createCacheKey = {
   guildAvatar: null,
   guildAvatarText: null,
 };
-createCacheKey = { display: "flex", flexDirection: "row", flexWrap: "wrap", gap: ThemesDefault.space.PX_8 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flex: 1 };
-createCacheKey[2] = {
+createStyles = { display: "flex", flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_8 };
+createStyles.container = createStyles;
+createStyles.section = { flex: 1 };
+createStyles.avatarList = {
   display: "flex",
   flexDirection: "row",
-  gap: ThemesDefault.space.PX_4,
+  gap: nativeDefault.space.PX_4,
   flexWrap: "wrap",
-  paddingTop: ThemesDefault.space.PX_12,
-  paddingBottom: ThemesDefault.space.PX_12,
+  paddingTop: nativeDefault.space.PX_12,
+  paddingBottom: nativeDefault.space.PX_12,
 };
-createCacheKey[3] = { width: "100%", alignItems: "flex-start" };
+createStyles.touchableHitBox = { width: "100%", alignItems: "flex-start" };
 let obj1 = {
   display: "flex",
   flexDirection: "row",
-  gap: ThemesDefault.space.PX_4,
+  gap: nativeDefault.space.PX_4,
   flexWrap: "wrap",
-  paddingTop: ThemesDefault.space.PX_12,
-  paddingBottom: ThemesDefault.space.PX_12,
+  paddingTop: nativeDefault.space.PX_12,
+  paddingBottom: nativeDefault.space.PX_12,
 };
-createCacheKey[4] = {
-  borderRadius: ThemesDefault.radii.md,
-  borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST,
+createStyles.guildAvatar = {
+  borderRadius: nativeDefault.radii.md,
+  borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
+  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST,
 };
-createCacheKey[5] = { fontSize: 12 };
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj2 = {
-  borderRadius: ThemesDefault.radii.md,
-  borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST,
-};
-const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterTopActivity.tsx");
+createStyles.guildAvatarText = { fontSize: 12 };
+let closure_9 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterTopActivity.tsx");
 
 export default function FamilyCenterTopActivity() {
-  const tmp = callback2();
-  const _require = tmp;
-  let obj = _require(stateFromStores1[7]);
-  const items = [closure_6];
+  const tmp = closure_9();
+  _require = tmp;
+  let obj = require("useStateFromStores");
+  const items = [FamilyCenterStore];
   const stateFromStores = obj.useStateFromStores(items, () => authStore.getTopUserActivities());
-  obj1 = _require(stateFromStores1[7]);
-  const items1 = [closure_6];
+  let obj1 = require("useStateFromStores");
+  const items1 = [FamilyCenterStore];
   stateFromStores1 = obj1.useStateFromStores(items1, () => authStore.getTopGuildActivities());
   const items2 = [stateFromStores];
   [][0] = stateFromStores1;
-  const callback = React.useCallback(() => {
-    let obj = stateFromStores(stateFromStores1[8]);
-    obj = { topUserActivities: stateFromStores };
-    obj.openLazy(
-      callback(stateFromStores1[10])(stateFromStores1[9], stateFromStores1.paths),
-      "FamilyCenterTopUsers",
-      obj,
-    );
+  const callback = noop.useCallback(() => {
+    const obj = { topUserActivities: stateFromStores };
+    obj.openLazy(asyncRequireImpl(14897, dependencyMap.paths), "FamilyCenterTopUsers", obj);
   }, items2);
   if (0 !== stateFromStores.length) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.container;
+    obj = { style: tmp.container, children: null };
     let tmp9 = stateFromStores.length > 0;
     if (tmp9) {
-      obj = { style: null, children: null };
-      obj[0] = tmp.section;
-      obj1 = { style: null, onPress: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
-      obj1[0] = tmp.touchableHitBox;
-      obj1[1] = callback;
+      obj = { style: tmp.section, children: null };
+      obj1 = {
+        style: tmp.touchableHitBox,
+        onPress: callback,
+        accessibilityRole: "button",
+        accessibilityLabel: null,
+        children: null,
+      };
       const intl = tmp2(tmp3[13]).intl;
-      obj1[3] = intl.string(stateFromStores(tmp3[14]).BxbvS7);
+      obj1.accessibilityLabel = intl.string(stateFromStores(tmp3[14]).BxbvS7);
       const obj2 = { variant: "text-sm/semibold", children: null };
       const intl2 = tmp2(tmp3[13]).intl;
-      obj2[1] = intl2.string(stateFromStores(tmp3[14]).BxbvS7);
-      const items3 = [callback(tmp2(tmp3[15]).Text, obj2)];
-      const obj3 = { style: null, children: null };
-      obj3[0] = tmp.avatarList;
-      obj3[1] = stateFromStores.map((user_id) => {
-        user = user.getUser(user_id.user_id);
-        let tmp2 = null;
-        if (null != user) {
-          const obj = { user: null, size: null, guildId: "Array" };
-          obj[0] = user;
-          obj[1] = callback(stateFromStores1[16]).AvatarSizes.SMALL;
-          tmp2 = callback2(callback(stateFromStores1[16]).Avatar, obj, user.id);
-        }
-        return tmp2;
-      });
-      items3[1] = callback(tmp8, obj3);
-      obj1[4] = items3;
-      obj[1] = tmp7(stateFromStores(tmp3[12]), obj1);
-      tmp9 = callback(tmp8, obj);
+      obj2.children = intl2.string(stateFromStores(tmp3[14]).BxbvS7);
+      const items3 = [closure_7(tmp2(tmp3[15]).Text, obj2)];
+      const obj3 = {
+        style: tmp.avatarList,
+        children: stateFromStores.map((user_id) => {
+          user = user.getUser(user_id.user_id);
+          let tmp2 = null;
+          if (null != user) {
+            const obj = { user, size: closure_0(stateFromStores1[16]).AvatarSizes.SMALL, guildId: "Array" };
+            tmp2 = closure_1_7(closure_0(stateFromStores1[16]).Avatar, obj, user.id);
+          }
+          return tmp2;
+        }),
+      };
+      items3[1] = closure_7(tmp8, obj3);
+      obj1.children = items3;
+      obj.children = tmp7(stateFromStores(tmp3[12]), obj1);
+      tmp9 = closure_7(tmp8, obj);
       const tmp12 = stateFromStores(tmp3[12]);
     }
     const items4 = [tmp9];
     let tmp13 = stateFromStores1.length > 0;
     if (tmp13) {
-      const obj4 = { style: null, children: null };
-      obj4[0] = tmp.section;
+      const obj4 = { style: tmp.section, children: null };
       const obj5 = {
-        style: null,
-        onPress: null,
+        style: tmp.touchableHitBox,
+        onPress: tmp5,
         accessibilityRole: "button",
         accessibilityLabel: null,
         children: null,
       };
-      obj5[0] = tmp.touchableHitBox;
-      obj5[1] = tmp5;
       const intl3 = tmp2(tmp3[13]).intl;
-      obj5[3] = intl3.string(stateFromStores(tmp3[14]).Lq9Set);
+      obj5.accessibilityLabel = intl3.string(stateFromStores(tmp3[14]).Lq9Set);
       const obj6 = { variant: "text-sm/semibold", children: null };
       const intl4 = tmp2(tmp3[13]).intl;
-      obj6[1] = intl4.string(stateFromStores(tmp3[14]).Lq9Set);
-      const items5 = [callback(tmp2(tmp3[15]).Text, obj6)];
-      const obj7 = { style: null, children: null };
-      obj7[0] = tmp.avatarList;
-      obj7[1] = stateFromStores1.map((guild_id) => {
-        const guild = closure_1_6.getGuild(guild_id.guild_id);
-        let tmp2 = null;
-        if (null != guild) {
-          const obj = { style: null, textStyle: null, guild: null, size: null };
-          ({ guildAvatar: obj[0], guildAvatarText: obj[1] } = callback);
-          obj[2] = guild;
-          obj[3] = callback(stateFromStores1[17]).GuildIconSizes.SMALL;
-          tmp2 = closure_1_7(stateFromStores(stateFromStores1[17]), obj, guild.id);
-          const tmp6 = stateFromStores(stateFromStores1[17]);
-        }
-        return tmp2;
-      });
-      items5[1] = callback(tmp8, obj7);
-      obj5[4] = items5;
-      obj4[1] = tmp7(stateFromStores(tmp3[12]), obj5);
-      tmp13 = callback(tmp8, obj4);
+      obj6.children = intl4.string(stateFromStores(tmp3[14]).Lq9Set);
+      const items5 = [closure_7(tmp2(tmp3[15]).Text, obj6)];
+      const obj7 = {
+        style: tmp.avatarList,
+        children: stateFromStores1.map((guild_id) => {
+          const guild = FamilyCenterStore.getGuild(guild_id.guild_id);
+          let tmp2 = null;
+          if (null != guild) {
+            const obj = { style: null, textStyle: null, guild: null, size: null };
+            ({ guildAvatar: obj.style, guildAvatarText: obj.textStyle } = closure_0);
+            obj.guild = guild;
+            obj.size = GuildIcon.GuildIconSizes.SMALL;
+            tmp2 = React5(GuildIconDefault, obj, guild.id);
+          }
+          return tmp2;
+        }),
+      };
+      items5[1] = closure_7(tmp8, obj7);
+      obj5.children = items5;
+      obj4.children = tmp7(stateFromStores(tmp3[12]), obj5);
+      tmp13 = closure_7(tmp8, obj4);
       const tmp16 = stateFromStores(tmp3[12]);
     }
     items4[1] = tmp13;
-    obj[1] = items4;
+    obj.children = items4;
     let tmp7Result = tmp7(tmp8, obj);
   } else {
     tmp7Result = null;

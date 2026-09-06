@@ -1,53 +1,54 @@
 // discord_app/modules/main_tabs_v2/native/panels/SidebarCoachmarkOverlay.native.tsx
 import useInitialValueDefault from "../../../../hooks/useInitialValue.tsx";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { NOOP } from "../../../../Constants.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import LayerContext from "../../../../design/components/Layers/native/LayerContext.native.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
+require = fn;
 function SidebarCoachmarkOverlayLayer(manager) {
   manager = manager.manager;
-  closure_1 = undefined;
-  closure_1 = callback(importAllResult.useState({}), 2)[1];
+  closure_1 = _slicedToArray(noop.useState({}), 2)[1];
   const items = [manager];
-  const effect = importAllResult.useEffect(() => {
-    closure_0.invalidate = () => callback({});
+  const effect = noop.useEffect(() => {
+    closure_0 = manager;
+    manager.invalidate = () => closure_1_1({});
     return () => {
       closure_0.invalidate = () => null;
     };
   }, items);
-  const items1 = manager.items;
-  return callback2(closure_5, {
+  const obj = {
     style: overlay.overlay,
     ref(current) {
       return manager.setSurfaceRef(current);
     },
     onLayout: NOOP,
     pointerEvents: "box-none",
-    children: items1.map((children) => callback(React.Fragment, { children: children.component }, children.key)),
-  });
+    children: null,
+  };
+  const items1 = manager.items;
+  obj.children = items1.map((children) => closure_1_7(React.Fragment, { children: children.component }, children.key));
+  return closure_7(closure_5, obj);
 }
-let c4 = importAllResult;
-({ StyleSheet, View: c5 } = get_ActivityIndicator);
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-const context = importAllResult.createContext(null);
+get_ActivityIndicator = fn(17);
+({ StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
+const NOOP = fn(1074).NOOP;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const context = noop.createContext(null);
 let obj = { overlay: null };
 obj = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.zIndex = 1;
-obj[0] = obj;
-const styles = StyleSheet.create(obj);
-const result = require("set").fileFinishedImporting(
-  "modules/main_tabs_v2/native/panels/SidebarCoachmarkOverlay.native.tsx",
-);
+obj.overlay = obj;
+const overlay = StyleSheet.create(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/SidebarCoachmarkOverlay.native.tsx");
 
 export const SidebarCoachmarkOverlayContext = context;
 export const SidebarCoachmarkOverlay = function SidebarCoachmarkOverlay(enabled) {
   enabled = enabled.enabled;
   const tmp = useInitialValueDefault(() => {
-    const layerContextManager = new callback(table[6]).LayerContextManager();
+    const layerContextManager = new LayerContext.LayerContextManager();
     return layerContextManager;
   });
   let tmp3 = null;
@@ -58,11 +59,10 @@ export const SidebarCoachmarkOverlay = function SidebarCoachmarkOverlay(enabled)
   const items = [enabled.children];
   let tmp4 = null;
   if (enabled) {
-    obj = { manager: null };
-    obj[0] = tmp;
-    tmp4 = callback2(SidebarCoachmarkOverlayLayer, obj);
+    obj = { manager: tmp };
+    tmp4 = React5(SidebarCoachmarkOverlayLayer, obj);
   }
   items[1] = tmp4;
-  obj[1] = items;
-  return closure_8(context.Provider, obj);
+  obj.children = items;
+  return React6(context.Provider, obj);
 };

@@ -1,23 +1,31 @@
 // discord_app/modules/global_discovery_servers/GlobalDiscoveryServersSearchResultsStore.tsx
-import set2 from "../../../_runtime/00002_set.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
 import V6OrEarlierAPIError from "../../errors/index.tsx";
-import DEFAULT_DISCOVERY_CATEGORY_ID from "GlobalDiscoveryServersConstants.tsx";
+import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 ({
-  SEARCH_RESULTS_QUERY_PREFIX: obj1,
+  SEARCH_RESULTS_QUERY_PREFIX: c2,
   SEARCH_RESULTS_CATEGORY_PREFIX: c3,
-  SEARCH_RESULTS_LANGUAGE_CODE_PREFIX: c4,
-} = DEFAULT_DISCOVERY_CATEGORY_ID);
+  SEARCH_RESULTS_LANGUAGE_CODE_PREFIX: closure_4,
+} = GlobalDiscoveryServersConstants);
 const map = new Map();
 const map1 = new Map();
 class SearchState {
   constructor(arg0) {
-    obj = Object.create(new.target.prototype);
-    obj[0] = [];
-    obj.query = global.query;
-    return obj;
+    merged = Object.assign({
+      guildIds: null,
+      error: null,
+      offset: null,
+      total: null,
+      isFetching: false,
+      isInitialFetchComplete: false,
+      lastFetchTimestamp: null,
+    });
+    merged[0] = [];
+    merged.query = global.query;
+    return merged;
   }
 }
 const prototype = SearchState.prototype;
@@ -54,8 +62,8 @@ prototype2["getGuild"] = function getGuild(arg0) {
   return map1.get(arg0);
 };
 prototype2["getGuildIds"] = function getGuildIds(query) {
-  const items = [closure_2, query.query, closure_3, query.categoryId, closure_4, query.languageCode];
-  const value = map.get(items.join("-"));
+  const items = [React2, query.query, React3, query.categoryId, React4, query.languageCode];
+  value = map.get(items.join("-"));
   let guildIds = null;
   if (null != value) {
     guildIds = value.guildIds;
@@ -63,8 +71,8 @@ prototype2["getGuildIds"] = function getGuildIds(query) {
   return guildIds;
 };
 prototype2["getIsFetching"] = function getIsFetching(query) {
-  const items = [closure_2, query.query, closure_3, query.categoryId, closure_4, query.languageCode];
-  const value = map.get(items.join("-"));
+  const items = [React2, query.query, React3, query.categoryId, React4, query.languageCode];
+  value = map.get(items.join("-"));
   let isFetching = null;
   if (null != value) {
     isFetching = value.isFetching;
@@ -72,8 +80,8 @@ prototype2["getIsFetching"] = function getIsFetching(query) {
   return isFetching;
 };
 prototype2["getIsInitialFetchComplete"] = function getIsInitialFetchComplete(query) {
-  const items = [closure_2, query.query, closure_3, query.categoryId, closure_4, query.languageCode];
-  const value = map.get(items.join("-"));
+  const items = [React2, query.query, React3, query.categoryId, React4, query.languageCode];
+  value = map.get(items.join("-"));
   let prop = null;
   if (null != value) {
     prop = value.isInitialFetchComplete;
@@ -82,14 +90,14 @@ prototype2["getIsInitialFetchComplete"] = function getIsInitialFetchComplete(que
 };
 prototype2["getOffset"] = function getOffset(nativeElementReference) {
   const items = [
-    closure_2,
+    React2,
     nativeElementReference.query,
-    closure_3,
+    React3,
     nativeElementReference.categoryId,
-    closure_4,
+    React4,
     nativeElementReference.languageCode,
   ];
-  const value = map.get(items.join("-"));
+  value = map.get(items.join("-"));
   let offset = null;
   if (null != value) {
     offset = value.offset;
@@ -97,8 +105,8 @@ prototype2["getOffset"] = function getOffset(nativeElementReference) {
   return offset;
 };
 prototype2["getTotal"] = function getTotal(query) {
-  const items = [closure_2, query.query, closure_3, query.categoryId, closure_4, query.languageCode];
-  const value = map.get(items.join("-"));
+  const items = [React2, query.query, React3, query.categoryId, React4, query.languageCode];
+  value = map.get(items.join("-"));
   let total = null;
   if (null != value) {
     total = value.total;
@@ -106,8 +114,8 @@ prototype2["getTotal"] = function getTotal(query) {
   return total;
 };
 prototype2["getLastFetchTimestamp"] = function getLastFetchTimestamp(query) {
-  const items = [closure_2, query.query, closure_3, query.categoryId, closure_4, query.languageCode];
-  const value = map.get(items.join("-"));
+  const items = [React2, query.query, React3, query.categoryId, React4, query.languageCode];
+  value = map.get(items.join("-"));
   let lastFetchTimestamp = null;
   if (null != value) {
     lastFetchTimestamp = value.lastFetchTimestamp;
@@ -115,20 +123,20 @@ prototype2["getLastFetchTimestamp"] = function getLastFetchTimestamp(query) {
   return lastFetchTimestamp;
 };
 prototype2["getError"] = function getError(query) {
-  const items = [closure_2, query.query, closure_3, query.categoryId, closure_4, query.languageCode];
-  const value = map.get(items.join("-"));
-  error = null;
+  const items = [React2, query.query, React3, query.categoryId, React4, query.languageCode];
+  value = map.get(items.join("-"));
+  let error = null;
   if (null != value) {
     error = value.error;
   }
   return error;
 };
 prototype2["getErrorMessage"] = function getErrorMessage(query) {
-  const items = [closure_2, query.query, closure_3, query.categoryId, closure_4, query.languageCode];
-  const value = map.get(items.join("-"));
+  const items = [React2, query.query, React3, query.categoryId, React4, query.languageCode];
+  value = map.get(items.join("-"));
   let tmp2 = null;
   if (null != value) {
-    error = value.error;
+    const error = value.error;
     let anyErrorMessage;
     if (error != null) {
       anyErrorMessage = error.getAnyErrorMessage();
@@ -138,82 +146,106 @@ prototype2["getErrorMessage"] = function getErrorMessage(query) {
   return tmp2;
 };
 GlobalDiscoveryServersSearchResultsStore.displayName = "GlobalDiscoveryServersSearchResultsStore";
-const globalDiscoveryServersSearchResultsStore = new GlobalDiscoveryServersSearchResultsStore(dispatcherDefault, {
+let result = size.fileFinishedImporting(
+  "modules/global_discovery_servers/GlobalDiscoveryServersSearchResultsStore.tsx",
+);
+
+export default new GlobalDiscoveryServersSearchResultsStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     map.clear();
     map1.clear();
   },
   GLOBAL_DISCOVERY_SERVERS_SEARCH_START: function handleGlobalDiscoveryServersSearchStart(reset) {
     ({ query, categoryId, languageCode } = reset);
-    const items = [closure_2, query, closure_3, categoryId, closure_4, languageCode];
+    const items = [React2, query, React3, categoryId, React4, languageCode];
     if (reset.reset) {
       map.delete(tmp4);
     }
-    const items1 = [closure_2, query, closure_3, categoryId, closure_4, languageCode];
+    const items1 = [React2, query, React3, categoryId, React4, languageCode];
     const joined = items1.join("-");
-    let obj = map;
-    let value = map.get(joined);
+    value = map.get(joined);
     if (value == null) {
-      if (typeof SearchState !== "function") {
-        HermesBuiltin.throwTypeError();
+      if (typeof SearchState === "function") {
+        const merged = Object.assign({
+          guildIds: null,
+          error: null,
+          offset: null,
+          total: null,
+          isFetching: false,
+          isInitialFetchComplete: false,
+          lastFetchTimestamp: null,
+        });
+        merged[0] = [];
+        merged.query = query;
+        value = merged;
+      } else {
+        throw new TypeError("Trying to call a non-function");
       }
-      obj = Object.create(SearchState.prototype);
-      obj[0] = [];
-      obj.query = query;
-      value = obj;
-      const tmp8 = SearchState;
     }
-    const result = obj.set(joined, value);
+    const result = map.set(joined, value);
     value.handleSearchStart();
   },
   GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS: function handleGlobalDiscoveryServersSearchSuccess(total) {
     ({ query, guilds } = total);
-    const items = [closure_2, query, closure_3, total.categoryId, closure_4, total.languageCode];
+    const items = [React2, query, React3, total.categoryId, React4, total.languageCode];
     const joined = items.join("-");
-    let obj = map;
-    let value = map.get(joined);
+    value = map.get(joined);
     if (value == null) {
-      if (typeof SearchState !== "function") {
-        HermesBuiltin.throwTypeError();
+      if (typeof SearchState === "function") {
+        const merged = Object.assign({
+          guildIds: null,
+          error: null,
+          offset: null,
+          total: null,
+          isFetching: false,
+          isInitialFetchComplete: false,
+          lastFetchTimestamp: null,
+        });
+        merged[0] = [];
+        merged.query = query;
+        value = merged;
+      } else {
+        throw new TypeError("Trying to call a non-function");
       }
-      obj = Object.create(SearchState.prototype);
-      obj[0] = [];
-      obj.query = query;
-      value = obj;
-      const tmp2 = SearchState;
     }
-    let result = obj.set(joined, value);
+    let result = map.set(joined, value);
     value.handleSearchSuccess({ total: total.total, guilds });
     const item = guilds.forEach((id) => {
-      const result = closure_6.set(id.id, id);
+      const result = map1.set(id.id, id);
     });
   },
   GLOBAL_DISCOVERY_SERVERS_SEARCH_FAILURE: function handleGlobalDiscoveryServersSearchFailure(query) {
     query = query.query;
-    const items = [closure_2, query, closure_3, query.categoryId, closure_4, query.languageCode];
+    const items = [React2, query, React3, query.categoryId, React4, query.languageCode];
     const joined = items.join("-");
-    let obj = map;
-    let value = map.get(joined);
+    value = map.get(joined);
     if (value == null) {
-      if (typeof SearchState !== "function") {
-        HermesBuiltin.throwTypeError();
+      if (typeof SearchState === "function") {
+        const merged = Object.assign({
+          guildIds: null,
+          error: null,
+          offset: null,
+          total: null,
+          isFetching: false,
+          isInitialFetchComplete: false,
+          lastFetchTimestamp: null,
+        });
+        merged[0] = [];
+        merged.query = query;
+        value = merged;
+      } else {
+        throw new TypeError("Trying to call a non-function");
       }
-      obj = Object.create(SearchState.prototype);
-      obj[0] = [];
-      obj.query = query;
-      value = obj;
-      const tmp2 = SearchState;
     }
-    const result = obj.set(joined, value);
+    const result = map.set(joined, value);
     value.handleSearchFailure(query.error);
   },
   GLOBAL_DISCOVERY_SERVERS_SEARCH_CLEAR: function handleGlobalDiscoveryServersSearchClear(ignoreQueries) {
-    let set;
-    set = new Set(ignoreQueries.ignoreQueries);
-    const item = map.forEach((query) => {
+    const set = new Set(ignoreQueries.ignoreQueries);
+    const item = map.forEach((query, index) => {
       if (null != query.query) {
         if (!set.has(query.query)) {
-          closure_1_5.delete(arg1);
+          map.delete(index);
         }
       }
     });
@@ -221,7 +253,7 @@ const globalDiscoveryServersSearchResultsStore = new GlobalDiscoveryServersSearc
   GUILD_PROFILE_FETCH_SUCCESS: function handleGuildProfileFetchSuccess(arg0) {
     ({ guildId, profile } = arg0);
     let obj = map1;
-    const value = map1.get(guildId);
+    value = map1.get(guildId);
     if (null == value) {
       return false;
     } else {
@@ -241,111 +273,3 @@ const globalDiscoveryServersSearchResultsStore = new GlobalDiscoveryServersSearc
     }
   },
 });
-let obj = {
-  CONNECTION_OPEN: function handleConnectionOpen() {
-    map.clear();
-    map1.clear();
-  },
-  GLOBAL_DISCOVERY_SERVERS_SEARCH_START: function handleGlobalDiscoveryServersSearchStart(reset) {
-    ({ query, categoryId, languageCode } = reset);
-    const items = [closure_2, query, closure_3, categoryId, closure_4, languageCode];
-    if (reset.reset) {
-      map.delete(tmp4);
-    }
-    const items1 = [closure_2, query, closure_3, categoryId, closure_4, languageCode];
-    const joined = items1.join("-");
-    let obj = map;
-    let value = map.get(joined);
-    if (value == null) {
-      if (typeof SearchState !== "function") {
-        HermesBuiltin.throwTypeError();
-      }
-      obj = Object.create(SearchState.prototype);
-      obj[0] = [];
-      obj.query = query;
-      value = obj;
-      const tmp8 = SearchState;
-    }
-    const result = obj.set(joined, value);
-    value.handleSearchStart();
-  },
-  GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS: function handleGlobalDiscoveryServersSearchSuccess(total) {
-    ({ query, guilds } = total);
-    const items = [closure_2, query, closure_3, total.categoryId, closure_4, total.languageCode];
-    const joined = items.join("-");
-    let obj = map;
-    let value = map.get(joined);
-    if (value == null) {
-      if (typeof SearchState !== "function") {
-        HermesBuiltin.throwTypeError();
-      }
-      obj = Object.create(SearchState.prototype);
-      obj[0] = [];
-      obj.query = query;
-      value = obj;
-      const tmp2 = SearchState;
-    }
-    let result = obj.set(joined, value);
-    value.handleSearchSuccess({ total: total.total, guilds });
-    const item = guilds.forEach((id) => {
-      const result = closure_6.set(id.id, id);
-    });
-  },
-  GLOBAL_DISCOVERY_SERVERS_SEARCH_FAILURE: function handleGlobalDiscoveryServersSearchFailure(query) {
-    query = query.query;
-    const items = [closure_2, query, closure_3, query.categoryId, closure_4, query.languageCode];
-    const joined = items.join("-");
-    let obj = map;
-    let value = map.get(joined);
-    if (value == null) {
-      if (typeof SearchState !== "function") {
-        HermesBuiltin.throwTypeError();
-      }
-      obj = Object.create(SearchState.prototype);
-      obj[0] = [];
-      obj.query = query;
-      value = obj;
-      const tmp2 = SearchState;
-    }
-    const result = obj.set(joined, value);
-    value.handleSearchFailure(query.error);
-  },
-  GLOBAL_DISCOVERY_SERVERS_SEARCH_CLEAR: function handleGlobalDiscoveryServersSearchClear(ignoreQueries) {
-    let set;
-    set = new Set(ignoreQueries.ignoreQueries);
-    const item = map.forEach((query) => {
-      if (null != query.query) {
-        if (!set.has(query.query)) {
-          closure_1_5.delete(arg1);
-        }
-      }
-    });
-  },
-  GUILD_PROFILE_FETCH_SUCCESS: function handleGuildProfileFetchSuccess(arg0) {
-    ({ guildId, profile } = arg0);
-    let obj = map1;
-    const value = map1.get(guildId);
-    if (null == value) {
-      return false;
-    } else {
-      obj = {};
-      const merged = Object.assign(value);
-      let memberCount = profile.memberCount;
-      if (memberCount == null) {
-        memberCount = value.memberCount;
-      }
-      obj.memberCount = memberCount;
-      let presenceCount = profile.onlineCount;
-      if (presenceCount == null) {
-        presenceCount = value.presenceCount;
-      }
-      obj.presenceCount = presenceCount;
-      const result = obj.set(guildId, obj);
-    }
-  },
-};
-let result = set2.fileFinishedImporting(
-  "modules/global_discovery_servers/GlobalDiscoveryServersSearchResultsStore.tsx",
-);
-
-export default globalDiscoveryServersSearchResultsStore;

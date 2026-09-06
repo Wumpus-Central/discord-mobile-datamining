@@ -1,17 +1,18 @@
 // discord_app/modules/collectibles/native/UnlockWithNitroButton.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import CollapsingText from "../../../design/components/Button/native/BaseTextButton.native.tsx";
+import BaseTextButton from "../../../design/components/Button/native/BaseTextButton.native.tsx";
+import ProductIds from "../../premium/native/ProductIds.android.tsx";
 import NitroWheelIcon from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet.tsx";
-import closure_3 from "../../../stores/native/IAPStore.android.tsx";
-import closure_4 from "../CollectiblesPurchaseStore.tsx";
-import { ShopCtaEnum } from "../CollectiblesShopConstants.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import noop from "../../../../_runtime/metro/00019__.js";
+import IAPStore from "../../../stores/native/IAPStore.android.tsx";
+import CollectiblesPurchaseStore from "../CollectiblesPurchaseStore.tsx";
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/collectibles/native/UnlockWithNitroButton.tsx");
+require = fn;
+const ShopCtaEnum = fn(1076).ShopCtaEnum;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/native/UnlockWithNitroButton.tsx");
 
 export const UnlockWithNitroButton = function UnlockWithNitroButton(shouldShrink) {
   let flag = shouldShrink.shouldShrink;
@@ -19,15 +20,12 @@ export const UnlockWithNitroButton = function UnlockWithNitroButton(shouldShrink
     flag = false;
   }
   ({ onTrackPress: require, text } = shouldShrink);
-  importDefault = undefined;
   let obj = initialize;
-  const items = [closure_4, closure_3];
+  const items = [CollectiblesPurchaseStore, IAPStore];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let isPurchasingProductResult = null != isClaiming.isClaiming;
     if (!isPurchasingProductResult) {
-      isPurchasingProductResult = purchasingProduct.isPurchasingProduct(
-        callback(table[6]).ProductIds.GENERIC_CONSUMABLE,
-      );
+      isPurchasingProductResult = purchasingProduct.isPurchasingProduct(ProductIds.ProductIds.GENERIC_CONSUMABLE);
     }
     return isPurchasingProductResult;
   });
@@ -38,8 +36,7 @@ export const UnlockWithNitroButton = function UnlockWithNitroButton(shouldShrink
   }
   let tmp4Result;
   if (flag) {
-    obj = { variant: "text-xs/semibold", color: "text-overlay-light", allowFontScaling: false, children: null };
-    obj[3] = text;
+    obj = { variant: "text-xs/semibold", color: "text-overlay-light", allowFontScaling: false, children: text };
     tmp4Result = tmp4(tmp(4556).Text, obj);
   }
   obj = {
@@ -57,22 +54,22 @@ export const UnlockWithNitroButton = function UnlockWithNitroButton(shouldShrink
   if (!flag) {
     tmp6 = text;
   }
-  obj[1] = tmp6;
-  obj[2] = text;
+  obj.text = tmp6;
+  obj.accessibilityLabel = text;
   let str = "md";
   if (flag) {
     str = "sm";
   }
-  obj[4] = str;
-  obj[6] = jsx(NitroWheelIcon.NitroWheelIcon, { size: "sm", color: "white" });
-  obj[7] = function onPress() {
-    if (closure_0 != null) {
-      tmp(closure_1_5.UNLOCK_WITH_NITRO);
+  obj.size = str;
+  obj.icon = jsx(NitroWheelIcon.NitroWheelIcon, { size: "sm", color: "white" });
+  obj.onPress = function onPress() {
+    if (require != null) {
+      tmp(ShopCtaEnum.UNLOCK_WITH_NITRO);
     }
-    callback2();
+    closure_1();
   };
-  obj[8] = stateFromStores;
-  return jsx(CollapsingText.BaseTextButton, {
+  obj.disabled = stateFromStores;
+  return jsx(BaseTextButton.BaseTextButton, {
     textElement: tmp4Result,
     text: null,
     accessibilityLabel: null,

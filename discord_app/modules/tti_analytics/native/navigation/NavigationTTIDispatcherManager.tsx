@@ -1,16 +1,16 @@
 // discord_app/modules/tti_analytics/native/navigation/NavigationTTIDispatcherManager.tsx
-import encodeProperties from "../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import initializeDefault from "../../../../lib/AutomaticLifecycleManager.tsx";
-import isNavigationTTIEnabled from "navigationTTIEnabled.tsx";
-import getLastBundleDefault from "NavigationSpanTracker.tsx";
-import closure_3 from "../../../../stores/ChannelStore.tsx";
-import closure_4 from "../../../../stores/MessageStore.tsx";
-import closure_5 from "../../../../stores/SelectedChannelStore.tsx";
+import discord_common_AnalyticsUtils from "../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import navigationTTIEnabled from "navigationTTIEnabled.tsx";
+import NavigationSpanTrackerDefault from "NavigationSpanTracker.tsx";
+import ChannelStore from "../../../../stores/ChannelStore.tsx";
+import MessageStore from "../../../../stores/MessageStore.tsx";
+import SelectedChannelStore from "../../../../stores/SelectedChannelStore.tsx";
+import AutomaticLifecycleManager from "../../../../lib/AutomaticLifecycleManager.tsx";
 
-require = arg1;
+require = fn;
 function handleChannelSelect(opensChannel) {
   ({ guildId, channelId, fromGuildId, fromChannelId } = opensChannel);
-  let obj = isNavigationTTIEnabled;
+  let obj = navigationTTIEnabled;
   if (obj.isNavigationTTIEnabled()) {
     if (null != channelId) {
       if (false !== opensChannel.opensChannel) {
@@ -18,14 +18,14 @@ function handleChannelSelect(opensChannel) {
           guildId = null;
         }
         if (undefined === fromChannelId) {
-          lastSelectedChannelId = lastSelectedChannelId.getLastSelectedChannelId();
+          let lastSelectedChannelId = SelectedChannelStore.getLastSelectedChannelId();
           if (lastSelectedChannelId == null) {
             lastSelectedChannelId = null;
           }
           fromChannelId = lastSelectedChannelId;
         }
         if (undefined === fromGuildId) {
-          const channel = store.getChannel(fromChannelId);
+          const channel = ChannelStore.getChannel(fromChannelId);
           guildId = undefined;
           if (channel != null) {
             guildId = channel.getGuildId();
@@ -35,24 +35,22 @@ function handleChannelSelect(opensChannel) {
           }
           fromGuildId = guildId;
         }
-        obj = { spanTtiName: null, destinationKey: null, properties: null };
-        obj[0] = encodeProperties.SpanTtiNames.CHANNEL;
-        obj[1] = channelId;
+        obj = {
+          spanTtiName: discord_common_AnalyticsUtils.SpanTtiNames.CHANNEL,
+          destinationKey: channelId,
+          properties: null,
+        };
         obj = {
           trigger: "navigation",
-          from_guild_id: null,
-          to_guild_id: null,
-          from_channel_id: null,
-          to_channel_id: null,
+          from_guild_id: fromGuildId,
+          to_guild_id: guildId,
+          from_channel_id: fromChannelId,
+          to_channel_id: channelId,
           channel_type: null,
           changed_guild: null,
           warm_message_cache: null,
         };
-        obj[1] = fromGuildId;
-        obj[2] = guildId;
-        obj[3] = fromChannelId;
-        obj[4] = channelId;
-        const channel1 = store.getChannel(channelId);
+        const channel1 = ChannelStore.getChannel(channelId);
         let type;
         if (channel1 != null) {
           type = channel1.type;
@@ -60,17 +58,15 @@ function handleChannelSelect(opensChannel) {
         if (type == null) {
           type = null;
         }
-        obj[5] = type;
-        obj[6] = fromGuildId !== guildId;
-        obj[7] = closure_4.hasPresent(channelId);
-        obj[2] = obj;
-        getLastBundleDefault.beginNavigation(obj);
-        const obj3 = getLastBundleDefault;
+        obj.channel_type = type;
+        obj.changed_guild = fromGuildId !== guildId;
+        obj.warm_message_cache = MessageStore.hasPresent(channelId);
+        obj.properties = obj;
+        NavigationSpanTrackerDefault.beginNavigation(obj);
       }
     }
   }
 }
-initializeDefault;
 let prototype = function NavigationTTIDispatcherManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { CHANNEL_SELECT: handleChannelSelect };
@@ -78,8 +74,7 @@ let prototype = function NavigationTTIDispatcherManager() {
 }.prototype;
 class prototype extends tmp2 {}
 prototype = new prototype();
-const result = require("set").fileFinishedImporting(
-  "modules/tti_analytics/native/navigation/NavigationTTIDispatcherManager.tsx",
-);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/tti_analytics/native/navigation/NavigationTTIDispatcherManager.tsx");
 
 export default prototype;

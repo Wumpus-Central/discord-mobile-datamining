@@ -1,38 +1,37 @@
 // discord_app/modules/errors/hooks/useVideoStreamError.tsx
-import closure_2 from "../../../stores/AuthenticationStore.tsx";
-import closure_3 from "../av_errors/AVErrorStore.tsx";
-import { MediaEngineContextTypes } from "../../../../discord_common/js/packages/media-engine/Constants.tsx";
+import AVError from "../av_errors/AVError.tsx";
+import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
+import AVErrorStore from "../av_errors/AVErrorStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/errors/hooks/useVideoStreamError.tsx");
+require = fn;
+const MediaEngineContextTypes = fn(4585).MediaEngineContextTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/errors/hooks/useVideoStreamError.tsx");
 
 export default function useVideoStreamError(arg0, arg1) {
-  const _require = arg0;
+  _require = arg0;
   dependencyMap = arg1;
-  let items = [closure_3, closure_2];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
-    items,
-    () => {
-      if (closure_1_2.getId() !== dependencyMap) {
-        const items = [];
-        let arraySpreadResult = HermesBuiltin.arraySpread(
-          closure_1_3.getActiveErrorsOfType(callback(9110).AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT),
-          0,
-        );
-        arraySpreadResult = HermesBuiltin.arraySpread(
-          closure_1_3.getActiveErrorsOfType(callback(9110).AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT_NO_STREAM),
-          arraySpreadResult,
-        );
-        items[Symbol.iterator]();
-      }
-      if (callback === closure_1_4.STREAM) {
-        let activeErrorsOfType = closure_1_3.getActiveErrorsOfType(callback(9110).AVError.SCREENSHARE_OS_ERROR);
-      } else {
-        activeErrorsOfType = [];
-      }
-      ({ getActiveErrorsOfType, getActiveErrorsOfType: getActiveErrorsOfType2 } = closure_1_3);
-    },
-  );
+  let items = [AVErrorStore, AuthenticationStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
+    if (AuthenticationStore.getId() !== closure_1) {
+      const items = [];
+      let arraySpreadResult = HermesBuiltin.arraySpread(
+        AVErrorStore.getActiveErrorsOfType(AVError.AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT),
+        0,
+      );
+      arraySpreadResult = HermesBuiltin.arraySpread(
+        AVErrorStore.getActiveErrorsOfType(AVError.AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT_NO_STREAM),
+        arraySpreadResult,
+      );
+      items[Symbol.iterator]();
+    }
+    if (closure_0 === MediaEngineContextTypes.STREAM) {
+      let activeErrorsOfType = AVErrorStore.getActiveErrorsOfType(AVError.AVError.SCREENSHARE_OS_ERROR);
+    } else {
+      activeErrorsOfType = [];
+    }
+    ({ getActiveErrorsOfType, getActiveErrorsOfType: getActiveErrorsOfType2 } = AVErrorStore);
+  });
   let type;
   if (stateFromStores != null) {
     type = stateFromStores.type;
@@ -40,27 +39,27 @@ export default function useVideoStreamError(arg0, arg1) {
   return type;
 }
 export const useVideoStreamErrorContext = function useVideoStreamErrorContext(arg0, arg1) {
-  const _require = arg0;
+  _require = arg0;
   dependencyMap = arg1;
-  const items = [closure_3, closure_2];
-  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    if (closure_1_2.getId() !== dependencyMap) {
+  const items = [AVErrorStore, AuthenticationStore];
+  return require("initialize").useStateFromStores(items, () => {
+    if (AuthenticationStore.getId() !== closure_1) {
       const items = [];
       let arraySpreadResult = HermesBuiltin.arraySpread(
-        closure_1_3.getActiveErrorsOfType(callback(9110).AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT),
+        AVErrorStore.getActiveErrorsOfType(AVError.AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT),
         0,
       );
       arraySpreadResult = HermesBuiltin.arraySpread(
-        closure_1_3.getActiveErrorsOfType(callback(9110).AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT_NO_STREAM),
+        AVErrorStore.getActiveErrorsOfType(AVError.AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT_NO_STREAM),
         arraySpreadResult,
       );
       items[Symbol.iterator]();
     }
-    if (callback === closure_1_4.STREAM) {
-      let activeErrorsOfType = closure_1_3.getActiveErrorsOfType(callback(9110).AVError.SCREENSHARE_OS_ERROR);
+    if (closure_0 === MediaEngineContextTypes.STREAM) {
+      let activeErrorsOfType = AVErrorStore.getActiveErrorsOfType(AVError.AVError.SCREENSHARE_OS_ERROR);
     } else {
       activeErrorsOfType = [];
     }
-    ({ getActiveErrorsOfType, getActiveErrorsOfType: getActiveErrorsOfType2 } = closure_1_3);
+    ({ getActiveErrorsOfType, getActiveErrorsOfType: getActiveErrorsOfType2 } = AVErrorStore);
   });
 };

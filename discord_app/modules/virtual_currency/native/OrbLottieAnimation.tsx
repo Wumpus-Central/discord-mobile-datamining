@@ -1,20 +1,18 @@
 // discord_app/modules/virtual_currency/native/OrbLottieAnimation.tsx
-import closure_2 from "../../../../_runtime/00019_noop.js";
-import noop from "../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import shared from "../../../design/shared.tsx";
+import useTheme from "../../../hooks/useTheme.tsx";
+import "module_19";
 
-const require = arg1;
-({ useRef: c3, useEffect: c4, forwardRef } = noop);
+require = fn;
+const noop = fn(19);
+({ useRef: c3, useEffect: closure_4, forwardRef } = noop);
+const jsx = fn(21).jsx;
 const forwardRefResult = forwardRef((animationType, ref) => {
   animationType = animationType.animationType;
-  dependencyMap = undefined;
-  let obj = animationType(4495);
-  const theme = obj.useTheme();
-  const obj2 = animationType(4411);
-  const tmp5 = callback(null);
-  dependencyMap = tmp5;
+  const theme = useTheme.useTheme();
+  const tmp5 = React3(null);
   const items = [animationType];
-  callback2(() => {
+  React4(() => {
     if (null !== animationType) {
       const current = ref.current;
       if (current != null) {
@@ -22,7 +20,7 @@ const forwardRefResult = forwardRef((animationType, ref) => {
       }
     }
   }, items);
-  const imperativeHandle = React.useImperativeHandle(ref, () => ({
+  const imperativeHandle = noop.useImperativeHandle(ref, () => ({
     play() {
       const current = ref.current;
       let playResult;
@@ -37,7 +35,7 @@ const forwardRefResult = forwardRef((animationType, ref) => {
   } else {
     SpendEarnOrbsLottie = tmp(11096).SpendEarnOrbsLottie;
   }
-  obj = {
+  const size = {
     ref: tmp5,
     size: "custom",
     width: 60,
@@ -50,7 +48,7 @@ const forwardRefResult = forwardRef((animationType, ref) => {
   if (null != animationType) {
     str = animationType;
   }
-  obj[5] = str;
+  size.animation = str;
   return (
     <SpendEarnOrbsLottie
       ref={tmp5}
@@ -64,7 +62,8 @@ const forwardRefResult = forwardRef((animationType, ref) => {
   );
 });
 forwardRefResult.displayName = "OrbsLottieAnimation";
-const result = require("set").fileFinishedImporting("modules/virtual_currency/native/OrbLottieAnimation.tsx");
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/virtual_currency/native/OrbLottieAnimation.tsx");
 
 export default forwardRefResult;
 export const OrbLottieAnimation = forwardRefResult;

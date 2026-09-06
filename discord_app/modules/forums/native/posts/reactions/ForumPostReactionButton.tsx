@@ -1,23 +1,22 @@
 // discord_app/modules/forums/native/posts/reactions/ForumPostReactionButton.tsx
-import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import int2hslRaw from "../../../../../../discord_common/js/shared/utils/ColorUtils.tsx";
-import getSystemLocale from "../../../../../intl/index.native.tsx";
-import getAvatarURLDefault from "../../../../../utils/AvatarUtils.tsx";
-import MAX_REACTIONS from "../../../../reactions/ReactionUtils.tsx";
-import Text from "../../../../../design/components/Text/native/Text.tsx";
-import PressableBase from "../../../../../design/void/Pressables/native/Pressables.tsx";
+import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import utils_ColorUtils from "../../../../../../discord_common/js/shared/utils/ColorUtils.tsx";
+import util from "../../../../../intl/index.native.tsx";
+import AvatarUtilsDefault from "../../../../../utils/AvatarUtils.tsx";
+import UserSettings from "../../../../user_settings/UserSettings.tsx";
+import ReactionUtils from "../../../../reactions/ReactionUtils.tsx";
+import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
+import Pressables from "../../../../../design/void/Pressables/native/Pressables.tsx";
 import EmojiDefault from "../../../../emojis/native/Emoji.tsx";
-import ReactionTypes from "../../../../messages/MessageReactionsTypes.tsx";
+import MessageReactionsTypes from "../../../../messages/MessageReactionsTypes.tsx";
 import useNativeForumPostHandlersDefault from "../hooks/useNativeForumPostHandlers.tsx";
-import handleOutOfSuperReactions from "../../../../reactions/native/ReactionUtils.tsx";
+import reactions_ReactionUtils from "../../../../reactions/native/ReactionUtils.tsx";
 import useEmojiColorPalette from "../../../../emojis/hooks/useEmojiColorPalette.tsx";
-import AnimatedCountDefault from "../AnimatedCounter.tsx";
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import useReactionPermissionsDefault from "../../../../messages/useReactionPermissions.tsx";
+import AnimatedCounterDefault from "../AnimatedCounter.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+require = fn;
 class BurstReactionButton {
   constructor(arg0) {
     ({
@@ -35,11 +34,11 @@ class BurstReactionButton {
     } = global);
     tmp = closure_0;
     tmp2 = closure_2;
-    obj = require("useEmojiColorPalette");
+    obj = closure_0(closure_2[13]);
     emojiColorPalette = obj.useEmojiColorPalette(colors);
     str = "";
     if (null != emojiColorPalette) {
-      tmpResult = require("int2hslRaw");
+      tmpResult = tmp(tmp2[14]);
       backgroundColor = undefined;
       if (emojiColorPalette != null) {
         backgroundColor = emojiColorPalette.backgroundColor;
@@ -66,7 +65,7 @@ class BurstReactionButton {
     if (emojiColorPalette != null) {
       backgroundColor1 = emojiColorPalette.backgroundColor;
     }
-    obj[1] = backgroundColor1;
+    obj.borderColor = backgroundColor1;
     num2 = 0;
     if (selected) {
       num2 = 1;
@@ -84,21 +83,21 @@ class BurstReactionButton {
       animateCount: null,
       accessible: null,
     };
-    obj[2] = num2;
+    obj.borderWidth = num2;
     items[1] = obj;
     accentColor = undefined;
     if (emojiColorPalette != null) {
       accentColor = emojiColorPalette.accentColor;
     }
-    obj1[1] = { color: accentColor };
-    obj1[3] = emoji;
-    obj1[4] = count;
-    obj1[5] = animate;
-    obj1[6] = onPress;
-    obj1[7] = onLongPress;
-    obj1[8] = emojiSize;
-    obj1[9] = animateCount;
-    obj1[10] = accessible;
+    obj1.textStyle = { color: accentColor };
+    obj1.emoji = emoji;
+    obj1.count = count;
+    obj1.animate = animate;
+    obj1.onPress = onPress;
+    obj1.onLongPress = onLongPress;
+    obj1.emojiSize = emojiSize;
+    obj1.animateCount = animateCount;
+    obj1.accessible = accessible;
     return tmp5(tmp6, obj1);
   }
 }
@@ -114,14 +113,14 @@ class ReactionButton {
     if (null != emoji.id) {
       tmp3 = closure_1;
       tmp4 = closure_2;
-      obj = require("getAvatarURL");
+      obj = closure_1(closure_2[15]);
       obj = { id: null, animated: null, size: null };
-      obj[0] = emoji.id;
+      obj.id = emoji.id;
       if (animate) {
         animate = emoji.animated;
       }
-      obj[1] = animate;
-      obj[2] = emojiSize;
+      obj.animated = animate;
+      obj.size = emojiSize;
       emojiURL = obj.getEmojiURL(obj);
     }
     selected = undefined;
@@ -131,7 +130,7 @@ class ReactionButton {
     tmp6 = jsxs;
     tmp7 = closure_2;
     obj1 = {
-      style: items,
+      style: null,
       accessible,
       accessibilityLabel: null,
       onPress: null,
@@ -143,16 +142,17 @@ class ReactionButton {
     items[0] = tmp.container;
     items[1] = containerStyle;
     items[2] = selected;
-    obj4 = require("MAX_REACTIONS");
-    obj1[2] = obj4.getAccessibleEmojiDisplayName(selected, count, emoji, false);
-    obj1[3] = onPress;
-    obj1[4] = onLongPress;
-    obj1[5] = disabled;
+    obj1.style = items;
+    obj4 = closure_0(closure_2[16]);
+    obj1.accessibilityLabel = obj4.getAccessibleEmojiDisplayName(selected, count, emoji, false);
+    obj1.onPress = onPress;
+    obj1.onLongPress = onLongPress;
+    obj1.disabled = disabled;
     tmp8 = jsx;
     tmp9 = closure_1;
     obj2 = { textEmojiStyle: tmp.textEmoji, fastImageStyle: tmp.imageEmoji, src: emojiURL, name: emoji.name };
     items1 = [,];
-    items1[0] = jsx(require("Emoji"), obj2);
+    items1[0] = jsx(closure_1(closure_2[17]), obj2);
     tmp8Result = null != count;
     if (tmp8Result) {
       num = 0;
@@ -161,78 +161,82 @@ class ReactionButton {
     if (tmp8Result) {
       tmp11 = View;
       obj3 = { style: null, children: null };
-      obj3[0] = tmp.countContainer;
+      obj3.style = tmp.countContainer;
       obj4 = { textStyle: null, count: null, animate: null };
-      obj4[0] = textStyle;
-      obj4[1] = count;
-      obj4[2] = animateCount;
-      obj3[1] = tmp8(require("AnimatedCount"), obj4);
+      obj4.textStyle = textStyle;
+      obj4.count = count;
+      obj4.animate = animateCount;
+      obj3.children = tmp8(tmp9(tmp7[18]), obj4);
       tmp8Result = tmp8(View, obj3);
     }
     items1[1] = tmp8Result;
-    obj1[6] = items1;
-    return tmp6(require("PressableBase").PressableOpacity, obj1);
+    obj1.children = items1;
+    return tmp6(closure_0(closure_2[6]).PressableOpacity, obj1);
   }
 }
-({ jsxs: c5, jsx: closure_6 } = jsxProd);
-createCacheKey = { container: null, selected: null, textEmoji: null, imageEmoji: null, countContainer: null };
-createCacheKey = {
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsxs: hasOwnProperty, jsx: metroRequire } = jsxProd);
+fn(4560);
+let createStyles = { container: null, selected: null, textEmoji: null, imageEmoji: null, countContainer: null };
+createStyles = {
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "center",
   paddingHorizontal: 8,
-  borderRadius: ThemesDefault.radii.sm,
+  borderRadius: nativeDefault.radii.sm,
   borderWidth: 1,
-  borderColor: ThemesDefault.colors.REACTION_BORDER_DEFAULT,
-  backgroundColor: ThemesDefault.colors.REACTION_BACKGROUND_DEFAULT,
+  borderColor: nativeDefault.colors.REACTION_BORDER_DEFAULT,
+  backgroundColor: nativeDefault.colors.REACTION_BACKGROUND_DEFAULT,
   minWidth: 32,
   minHeight: 26,
   maxHeight: 26,
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = {
-  borderColor: ThemesDefault.colors.REACTION_BORDER_REACTED_DEFAULT,
-  backgroundColor: ThemesDefault.colors.REACTION_BACKGROUND_REACTED_DEFAULT,
+createStyles.container = createStyles;
+createStyles.selected = {
+  borderColor: nativeDefault.colors.REACTION_BORDER_REACTED_DEFAULT,
+  backgroundColor: nativeDefault.colors.REACTION_BACKGROUND_REACTED_DEFAULT,
 };
-createCacheKey[2] = { fontSize: 12 };
-createCacheKey[3] = { height: 16, width: 16 };
-createCacheKey[4] = { paddingStart: 4 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const obj1 = {
-  borderColor: ThemesDefault.colors.REACTION_BORDER_REACTED_DEFAULT,
-  backgroundColor: ThemesDefault.colors.REACTION_BACKGROUND_REACTED_DEFAULT,
-};
-const result = require("set").fileFinishedImporting(
-  "modules/forums/native/posts/reactions/ForumPostReactionButton.tsx",
-);
+createStyles.textEmoji = { fontSize: 12 };
+createStyles.imageEmoji = { height: 16, width: 16 };
+createStyles.countContainer = { paddingStart: 4 };
+const React5 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/forums/native/posts/reactions/ForumPostReactionButton.tsx");
 
 export const DEFAULT_EMOJI_SIZE = 14;
 export const AdditionalReactionCount = function AdditionalReactionCount(arg0) {
   ({ count, threadId, containerStyle } = arg0);
-  const obj = { accessible: true, accessibilityLabel: null, style: null, onPress: null, children: null };
-  const intl = getSystemLocale.intl;
-  obj[1] = intl.string(getSystemLocale.t.N8hbZB);
-  const items = [callback3().container, containerStyle];
-  obj[2] = items;
-  obj[3] = useNativeForumPostHandlersDefault({ threadId }).onTapReactionCount;
+  let obj = { accessible: true, accessibilityLabel: null, style: null, onPress: null, children: null };
+  const intl = util.intl;
+  obj.accessibilityLabel = intl.string(util.t.N8hbZB);
+  const items = [closure_7().container, containerStyle];
+  obj.style = items;
+  obj.onPress = useNativeForumPostHandlersDefault({ threadId }).onTapReactionCount;
+  obj = {
+    variant: "heading-sm/medium",
+    color: "interactive-text-default",
+    children: hasOwnProperty(Text_Text.Text, obj),
+  };
   const items1 = ["+", count];
-  obj[4] = callback(Text.Text, { variant: "heading-sm/medium", color: "interactive-text-default", children: items1 });
-  return callback2(PressableBase.PressableOpacity, obj);
+  obj.children = items1;
+  return timestampProducer(Pressables.PressableOpacity, obj);
 };
 export const AddReactionButton = function AddReactionButton(reactionType) {
   let NORMAL = reactionType.reactionType;
   ({ threadId, containerStyle } = reactionType);
   if (NORMAL === undefined) {
-    NORMAL = ReactionTypes.ReactionTypes.NORMAL;
+    NORMAL = MessageReactionsTypes.ReactionTypes.NORMAL;
   }
-  const obj = { style: items, accessible: true, accessibilityLabel: null, onPress: null, children: null };
-  items = [callback3().container, containerStyle];
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.string(getSystemLocale.t.lfIHs4);
-  obj[3] = useNativeForumPostHandlersDefault({ threadId, reactionType: NORMAL }).onTapAddReaction;
-  obj[4] = callback2(handleOutOfSuperReactions.ADD_REACTION_ICON_COMPONENTS[NORMAL], { size: "xs" });
-  return callback2(PressableBase.PressableOpacity, obj);
+  const obj = { style: null, accessible: true, accessibilityLabel: null, onPress: null, children: null };
+  const items = [closure_7().container, containerStyle];
+  obj.style = items;
+  const intl = util.intl;
+  obj.accessibilityLabel = intl.string(util.t.lfIHs4);
+  obj.onPress = useNativeForumPostHandlersDefault({ threadId, reactionType: NORMAL }).onTapAddReaction;
+  obj.children = timestampProducer(reactions_ReactionUtils.ADD_REACTION_ICON_COMPONENTS[NORMAL], { size: "xs" });
+  return timestampProducer(Pressables.PressableOpacity, obj);
 };
 export const ForumPostReactionButton = function ForumPostReactionButton(emojiSize) {
   ({ thread, reaction } = emojiSize);
@@ -241,25 +245,21 @@ export const ForumPostReactionButton = function ForumPostReactionButton(emojiSiz
   if (num === undefined) {
     num = 14;
   }
-  let disableReactionCreates;
-  let disableReactionUpdates;
-  let onTapReaction;
-  let onLongTapReaction;
-  const tmp = locationAnalyticsObject(disableReactionCreates[11])(thread);
-  disableReactionCreates = tmp.disableReactionCreates;
-  disableReactionUpdates = tmp.disableReactionUpdates;
+  const tmp = useReactionPermissionsDefault(thread);
+  const disableReactionCreates = tmp.disableReactionCreates;
+  const disableReactionUpdates = tmp.disableReactionUpdates;
   let obj = { threadId: thread.id };
-  const tmp2 = locationAnalyticsObject(disableReactionCreates[5])(obj);
-  onTapReaction = tmp2.onTapReaction;
-  onLongTapReaction = tmp2.onLongTapReaction;
-  const AnimateEmoji = reaction(disableReactionCreates[12]).AnimateEmoji;
+  const tmp2 = useNativeForumPostHandlersDefault(obj);
+  const onTapReaction = tmp2.onTapReaction;
+  const onLongTapReaction = tmp2.onLongTapReaction;
+  const AnimateEmoji = UserSettings.AnimateEmoji;
   const setting = AnimateEmoji.useSetting();
   const items = [disableReactionCreates, disableReactionUpdates, locationAnalyticsObject, onTapReaction, reaction];
-  const callback = disableReactionUpdates.useCallback(() => {
+  const callback = noop.useCallback(() => {
     onTapReaction({ reaction, disableReactionCreates, disableReactionUpdates, locationAnalyticsObject });
   }, items);
   const items1 = [onLongTapReaction, reaction];
-  const callback1 = disableReactionUpdates.useCallback(() => {
+  const callback1 = noop.useCallback(() => {
     onLongTapReaction(reaction);
   }, items1);
   let tmp6 = !disableReactionCreates;
@@ -268,7 +268,7 @@ export const ForumPostReactionButton = function ForumPostReactionButton(emojiSiz
   }
   if (reaction.burst_count > 0) {
     obj = {
-      accessible: null,
+      accessible: tmp6,
       emoji: null,
       selected: null,
       colors: null,
@@ -281,26 +281,23 @@ export const ForumPostReactionButton = function ForumPostReactionButton(emojiSiz
       animate: null,
       animateCount: null,
     };
-    obj[0] = tmp6;
-    ({ emoji: obj3[1], me_burst: obj3[2], burst_colors } = reaction);
+    ({ emoji: obj3.emoji, me_burst: obj3.selected, burst_colors } = reaction);
     if (burst_colors == null) {
       burst_colors = [];
     }
-    obj[3] = burst_colors;
-    obj[4] = reaction.burst_count;
-    obj[5] = callback;
-    obj[6] = callback1;
-    obj[7] = containerStyle;
-    obj[8] = textStyle;
-    obj[9] = num;
-    obj[10] = setting;
-    obj[11] = animateCount;
-    let tmp10Result = callback2(BurstReactionButton, obj);
-    const tmp10 = callback2;
-    const tmp11 = BurstReactionButton;
+    obj.colors = burst_colors;
+    obj.count = reaction.burst_count;
+    obj.onPress = callback;
+    obj.onLongPress = callback1;
+    obj.containerStyle = containerStyle;
+    obj.textStyle = textStyle;
+    obj.emojiSize = num;
+    obj.animate = setting;
+    obj.animateCount = animateCount;
+    let tmp10Result = timestampProducer(BurstReactionButton, obj);
   } else {
     obj = {
-      accessible: null,
+      accessible: tmp6,
       emoji: null,
       selected: null,
       count: null,
@@ -312,16 +309,15 @@ export const ForumPostReactionButton = function ForumPostReactionButton(emojiSiz
       animate: null,
       animateCount: null,
     };
-    obj[0] = tmp6;
-    ({ emoji: obj2[1], me: obj2[2], count: obj2[3] } = reaction);
-    obj[4] = callback;
-    obj[5] = callback1;
-    obj[6] = containerStyle;
-    obj[7] = textStyle;
-    obj[8] = num;
-    obj[9] = setting;
-    obj[10] = animateCount;
-    tmp10Result = callback2(ReactionButton, obj);
+    ({ emoji: obj2.emoji, me: obj2.selected, count: obj2.count } = reaction);
+    obj.onPress = callback;
+    obj.onLongPress = callback1;
+    obj.containerStyle = containerStyle;
+    obj.textStyle = textStyle;
+    obj.emojiSize = num;
+    obj.animate = setting;
+    obj.animateCount = animateCount;
+    tmp10Result = timestampProducer(ReactionButton, obj);
   }
   return tmp10Result;
 };

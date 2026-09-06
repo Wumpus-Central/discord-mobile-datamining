@@ -1,14 +1,14 @@
 // discord_app/modules/urgent_system_dm/navigateToSystemDM.tsx
-import _modDef5411 from "../../actions/SelectedChannelActionCreators.tsx";
-import closure_2 from "../../stores/ChannelStore.tsx";
-import { SYSTEM_USER } from "Constants.tsx";
+import SelectedChannelActionCreatorsDefault from "../../actions/SelectedChannelActionCreators.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
 
-const result = require("set").fileFinishedImporting("modules/urgent_system_dm/navigateToSystemDM.tsx");
+const SYSTEM_USER = fn(17497).SYSTEM_USER;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/urgent_system_dm/navigateToSystemDM.tsx");
 
 export default function navigateToSystemDM() {
-  dMFromUserId = dMFromUserId.getDMFromUserId(SYSTEM_USER);
+  const dMFromUserId = ChannelStore.getDMFromUserId(SYSTEM_USER);
   if (null != dMFromUserId) {
-    const privateChannel = _modDef5411.selectPrivateChannel(dMFromUserId);
-    const obj = _modDef5411;
+    const privateChannel = SelectedChannelActionCreatorsDefault.selectPrivateChannel(dMFromUserId);
   }
 }

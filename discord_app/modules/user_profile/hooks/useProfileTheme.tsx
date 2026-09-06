@@ -1,13 +1,14 @@
 // discord_app/modules/user_profile/hooks/useProfileTheme.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../a11y/AccessibilityStore.tsx";
-import { useEffectiveThemeOverride } from "useProfileThemeOverrideStore.tsx";
-import { ThemeTypes } from "../../../Constants.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
-require = arg1;
-let result = require("set").fileFinishedImporting("modules/user_profile/hooks/useProfileTheme.tsx");
+require = fn;
+const useEffectiveThemeOverride = fn(8228).useEffectiveThemeOverride;
+const ThemeTypes = fn(1074).ThemeTypes;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_profile/hooks/useProfileTheme.tsx");
 
 export default function useProfileTheme(arg0) {
   ({ user, displayProfile, pendingAvatarSrc } = arg0);
@@ -15,8 +16,8 @@ export default function useProfileTheme(arg0) {
   const tmp2 = useThemeDefault();
   const tmp3 = useEffectiveThemeOverride();
   let obj = initialize;
-  const items = [closure_4];
-  const stateFromStores = obj.useStateFromStores(items, () => obj.syncProfileThemeWithUserTheme);
+  const items = [AccessibilityStore];
+  const stateFromStores = obj.useStateFromStores(items, () => AccessibilityStore.syncProfileThemeWithUserTheme);
   if (pendingAvatarSrc == null) {
     let avatarURL;
     if (user != null) {
@@ -31,7 +32,7 @@ export default function useProfileTheme(arg0) {
   let tmp4Result = tmp4(575);
   const result = tmp4Result.unsafe_getResolvedRawColor("PRIMARY_530", { saturation: 1 });
   tmp4Result = tmp4(8132);
-  callback(tmp4Result.useAvatarColors(pendingAvatarSrc, result, false), 2);
+  _slicedToArray(tmp4Result.useAvatarColors(pendingAvatarSrc, result, false), 2);
   if (null != tmp3) {
     return tmp3;
   } else {
@@ -41,8 +42,7 @@ export default function useProfileTheme(arg0) {
     }
     if (!canEditThemes) {
       if (!isPreview) {
-        obj = { theme: null, primaryColor: null, secondaryColor: null };
-        obj[0] = tmp2;
+        obj = { theme: tmp2, primaryColor: null, secondaryColor: null };
         return obj;
       }
     }
@@ -92,10 +92,7 @@ export default function useProfileTheme(arg0) {
       DARKER = tmp2;
       const tmp4Result5 = tmp4(4411);
     }
-    obj = { theme: null, primaryColor: null, secondaryColor: null };
-    obj[0] = DARKER;
-    obj[1] = first;
-    obj[2] = hex2intResult;
+    obj = { theme: DARKER, primaryColor: first, secondaryColor: hex2intResult };
     return obj;
   }
 }

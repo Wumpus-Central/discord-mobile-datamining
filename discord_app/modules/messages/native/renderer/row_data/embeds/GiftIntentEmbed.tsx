@@ -1,25 +1,24 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/GiftIntentEmbed.tsx
-import ThemesDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../../../../intl/index.native.tsx";
-import nameFromUserDefault from "../../../../../../utils/UserUtils.tsx";
-import frozen from "../../EmbedUtils.tsx";
-import _sendGiftMessage from "../../../../../premium/PremiumGiftingUtils.tsx";
-import closure_3 from "../../../../../premium/gifting/PremiumGiftingIntentStore.tsx";
-import closure_4 from "../../../../../../stores/UserStore.tsx";
-import { GiftIntentType } from "../../../../../premium/PremiumConstants.tsx";
-import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../../../intl/index.native.tsx";
+import UserUtilsDefault from "../../../../../../utils/UserUtils.tsx";
+import renderer_EmbedUtils from "../../EmbedUtils.tsx";
+import PremiumGiftingUtils from "../../../../../premium/PremiumGiftingUtils.tsx";
+import PremiumGiftingIntentStore from "../../../../../premium/gifting/PremiumGiftingIntentStore.tsx";
+import UserStore from "../../../../../../stores/UserStore.tsx";
 
-require = arg1;
-createCacheKey = {
-  headerTextColor: ThemesDefault.colors.TEXT_STRONG,
-  subHeaderTextColor: ThemesDefault.colors.TEXT_SUBTLE,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
-  borderColor: ThemesDefault.colors.BORDER_MUTED,
+require = fn;
+const GiftIntentType = fn(1373).GiftIntentType;
+fn(4560);
+const createStyles = {
+  headerTextColor: nativeDefault.colors.TEXT_STRONG,
+  subHeaderTextColor: nativeDefault.colors.TEXT_SUBTLE,
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderColor: nativeDefault.colors.BORDER_MUTED,
 };
-let closure_6 = createCacheKey.createNativeStyleProperties(createCacheKey);
-const result = require("set").fileFinishedImporting(
-  "modules/messages/native/renderer/row_data/embeds/GiftIntentEmbed.tsx",
-);
+let closure_6 = createStyles.createNativeStyleProperties(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/GiftIntentEmbed.tsx");
 
 export const createGiftIntentEmbed = function createGiftIntentEmbed(message, theme) {
   const giftingPrompt = message.giftingPrompt;
@@ -27,29 +26,27 @@ export const createGiftIntentEmbed = function createGiftIntentEmbed(message, the
     return null;
   } else {
     ({ giftIntentType, recipientUserId } = giftingPrompt);
-    user = user.getUser(recipientUserId);
+    const user = UserStore.getUser(recipientUserId);
     if (null == user) {
       return null;
     } else {
-      const name = nameFromUserDefault.getName(user);
+      const name = UserUtilsDefault.getName(user);
       if (GiftIntentType.FRIEND_ANNIVERSARY === giftIntentType) {
         let obj = { headerText: null, subHeaderParts: null };
-        const intl = getSystemLocale.intl;
-        obj[0] = intl.string(getSystemLocale.t.CeQIwZ);
+        const intl = util.intl;
+        obj.headerText = intl.string(util.t.CeQIwZ);
         obj = { text: null };
-        const intl2 = getSystemLocale.intl;
-        obj = { numberOfYears: null };
-        obj[0] = tmp12;
-        obj[0] = intl2.formatToPlainString(getSystemLocale.t.PpG27s, obj);
+        const intl2 = util.intl;
+        obj = { numberOfYears: tmp12 };
+        obj.text = intl2.formatToPlainString(util.t.PpG27s, obj);
         const items = [obj];
-        obj[1] = items;
+        obj.subHeaderParts = items;
         let tmp = obj;
       } else {
         tmp = null;
         if (tmp13.UNSPECIFIED !== giftIntentType) {
-          _sendGiftMessage.unhandledGiftIntent(giftIntentType);
+          PremiumGiftingUtils.unhandledGiftIntent(giftIntentType);
           tmp = null;
-          const obj11 = _sendGiftMessage;
         }
       }
       if (null == tmp) {
@@ -63,10 +60,10 @@ export const createGiftIntentEmbed = function createGiftIntentEmbed(message, the
           const _HermesInternal = HermesInternal;
           combined1 = "" + currentUser.getAvatarURL(undefined, 40);
         }
-        obj1 = {
-          recipientAvatarUrl: null,
-          currentUserAvatarUrl: null,
-          recipientName: null,
+        const obj1 = {
+          recipientAvatarUrl: combined,
+          currentUserAvatarUrl: combined1,
+          recipientName: name,
           headerText: null,
           subHeaderParts: null,
           recipientUserId: null,
@@ -81,32 +78,26 @@ export const createGiftIntentEmbed = function createGiftIntentEmbed(message, the
           secondaryCtaIconUrl: null,
           secondaryCtaAccessibilityLabel: null,
         };
-        obj1[0] = combined;
-        obj1[1] = combined1;
-        obj1[2] = name;
-        ({ headerText: obj4[3], subHeaderParts: obj4[4] } = tmp);
-        obj1[5] = recipientUserId;
-        obj1[6] = giftIntentType;
+        ({ headerText: obj4.headerText, subHeaderParts: obj4.subHeaderParts } = tmp);
+        obj1.recipientUserId = recipientUserId;
+        obj1.giftIntentType = giftIntentType;
         ({
-          headerTextColor: obj4[7],
-          subHeaderTextColor: obj4[8],
-          backgroundColor: obj4[9],
-          borderColor: obj4[10],
-        } = callback(theme));
-        const tmp6 = callback(theme);
-        obj1[11] = frozen.getAssetUriForEmbed(tmp8(4496));
-        const intl3 = getSystemLocale.intl;
-        obj1[12] = intl3.string(getSystemLocale.t.ilhtIa);
-        const obj5 = frozen;
-        obj1[13] = frozen.getAssetUriForEmbed(tmp8(8083));
-        const obj6 = frozen;
-        obj1[14] = frozen.getAssetUriForEmbed(tmp8(8084));
-        const intl4 = getSystemLocale.intl;
-        obj1[15] = intl4.string(getSystemLocale.t.I5gL2H);
+          headerTextColor: obj4.headerTextColor,
+          subHeaderTextColor: obj4.subHeaderTextColor,
+          backgroundColor: obj4.backgroundColor,
+          borderColor: obj4.borderColor,
+        } = closure_6(theme));
+        const tmp6 = closure_6(theme);
+        obj1.subHeaderIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(tmp8(4496));
+        const intl3 = util.intl;
+        obj1.primaryCtaLabel = intl3.string(util.t.ilhtIa);
+        obj1.primaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(tmp8(8083));
+        obj1.secondaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(tmp8(8084));
+        const intl4 = util.intl;
+        obj1.secondaryCtaAccessibilityLabel = intl4.string(util.t.I5gL2H);
         return obj1;
       }
-      const obj10 = nameFromUserDefault;
     }
-    obj8 = user;
+    obj8 = UserStore;
   }
 };

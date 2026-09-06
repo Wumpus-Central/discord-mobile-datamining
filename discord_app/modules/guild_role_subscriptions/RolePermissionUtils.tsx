@@ -1,12 +1,12 @@
 // discord_app/modules/guild_role_subscriptions/RolePermissionUtils.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
-import fromStringAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
-import GuildRoleRecordTypeTag from "../../records/GuildRoleRecord.tsx";
+import Constants from "../../Constants.tsx";
+import BigFlagUtilsAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import GuildRoleRecord from "../../records/GuildRoleRecord.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const hasPermission = GuildRoleRecordTypeTag.hasPermission;
-const Permissions = ME.Permissions;
-const result = set.fileFinishedImporting("modules/guild_role_subscriptions/RolePermissionUtils.tsx");
+const hasPermission = GuildRoleRecord.hasPermission;
+const Permissions = Constants.Permissions;
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/RolePermissionUtils.tsx");
 
 export const hasViewChannelPermission = function hasViewChannelPermission(arg0) {
   return hasPermission(arg0, Permissions.VIEW_CHANNEL);
@@ -14,7 +14,7 @@ export const hasViewChannelPermission = function hasViewChannelPermission(arg0) 
 export const isChannelAccessDeniedBy = function isChannelAccessDeniedBy(isGuildVocal, deny) {
   let tmp = null != deny;
   if (tmp) {
-    let hasItem = fromStringAll.has(deny.deny, Permissions.VIEW_CHANNEL);
+    let hasItem = BigFlagUtilsAll.has(deny.deny, Permissions.VIEW_CHANNEL);
     if (!hasItem) {
       let isGuildVocalResult = isGuildVocal.isGuildVocal();
       if (isGuildVocalResult) {
@@ -24,7 +24,6 @@ export const isChannelAccessDeniedBy = function isChannelAccessDeniedBy(isGuildV
       hasItem = isGuildVocalResult;
     }
     tmp = hasItem;
-    const obj = fromStringAll;
     tmp2 = importAll;
     tmp4 = Permissions;
   }
@@ -35,7 +34,7 @@ export const isChannelAccessGrantedBy = function isChannelAccessGrantedBy(isGuil
   if (tmp) {
     let tmp3 = null != deny;
     if (tmp3) {
-      let hasItem = fromStringAll.has(deny.deny, Permissions.VIEW_CHANNEL);
+      let hasItem = BigFlagUtilsAll.has(deny.deny, Permissions.VIEW_CHANNEL);
       if (!hasItem) {
         let isGuildVocalResult = isGuildVocal.isGuildVocal();
         if (isGuildVocalResult) {
@@ -45,13 +44,12 @@ export const isChannelAccessGrantedBy = function isChannelAccessGrantedBy(isGuil
         hasItem = isGuildVocalResult;
       }
       tmp3 = hasItem;
-      const obj = fromStringAll;
       tmp4 = importAll;
       tmp6 = Permissions;
     }
     let tmp9 = !tmp3;
     if (!tmp3) {
-      let hasItem1 = fromStringAll.has(deny.allow, Permissions.VIEW_CHANNEL);
+      let hasItem1 = BigFlagUtilsAll.has(deny.allow, Permissions.VIEW_CHANNEL);
       if (hasItem1) {
         const isGuildVocalResult1 = isGuildVocal.isGuildVocal();
         hasItem = !isGuildVocalResult1;
@@ -62,7 +60,6 @@ export const isChannelAccessGrantedBy = function isChannelAccessGrantedBy(isGuil
         hasItem1 = hasItem;
       }
       tmp9 = hasItem1;
-      const obj3 = fromStringAll;
       tmp10 = importAll;
       tmp12 = Permissions;
     }

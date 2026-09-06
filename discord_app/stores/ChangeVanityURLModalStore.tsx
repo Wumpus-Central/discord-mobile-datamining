@@ -1,11 +1,11 @@
 // discord_app/stores/ChangeVanityURLModalStore.tsx
-import set from "../../_runtime/00002_set.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../Dispatcher.tsx";
-import ME from "../Constants.tsx";
+import DispatcherDefault from "../Dispatcher.tsx";
+import Constants from "../Constants.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-const FormStates = ME.FormStates;
-let closure_3 = {};
+const FormStates = Constants.FormStates;
+const errors = {};
 let CLOSED = FormStates.CLOSED;
 let c5 = null;
 const Store = initializeDefault.Store;
@@ -15,26 +15,20 @@ prototype["isOpen"] = function isOpen() {
   return CLOSED !== FormStates.CLOSED;
 };
 prototype["getProps"] = function getProps() {
-  return {
-    submitting: CLOSED === FormStates.SUBMITTING,
-    errorDetails: c5,
-    errors: closure_3,
-    guildId: closure_0,
-    code: closure_1,
-  };
+  return { submitting: CLOSED === FormStates.SUBMITTING, errorDetails, errors, guildId, code };
 };
 ChangeVanityURLModalStore.displayName = "ChangeVanityURLModalStore";
-const changeVanityURLModalStore = new ChangeVanityURLModalStore(dispatcherDefault, {
+const changeVanityURLModalStore = new ChangeVanityURLModalStore(DispatcherDefault, {
   CHANGE_VANITY_URL_MODAL_OPEN: function handleOpen(arg0) {
-    const OPEN = FormStates.OPEN;
-    ({ guildId: closure_0, code: closure_1 } = arg0);
+    CLOSED = FormStates.OPEN;
+    ({ guildId: c0, code: c1 } = arg0);
     c5 = null;
   },
   CHANGE_VANITY_URL_MODAL_SUBMIT: function handleSubmit() {
-    const SUBMITTING = FormStates.SUBMITTING;
+    CLOSED = FormStates.SUBMITTING;
   },
   CHANGE_VANITY_URL_MODAL_SUBMIT_FAILURE: function handleSubmitFailure(error) {
-    const OPEN = FormStates.OPEN;
+    CLOSED = FormStates.OPEN;
     error = error.error;
   },
   CHANGE_VANITY_URL_MODAL_CLOSE: function handleClose() {
@@ -44,6 +38,6 @@ const changeVanityURLModalStore = new ChangeVanityURLModalStore(dispatcherDefaul
     c5 = null;
   },
 });
-const result = set.fileFinishedImporting("stores/ChangeVanityURLModalStore.tsx");
+const result = size.fileFinishedImporting("stores/ChangeVanityURLModalStore.tsx");
 
 export default changeVanityURLModalStore;

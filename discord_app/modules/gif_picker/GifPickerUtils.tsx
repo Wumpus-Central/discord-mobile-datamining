@@ -1,7 +1,7 @@
 // discord_app/modules/gif_picker/GifPickerUtils.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/gif_picker/GifPickerUtils.tsx");
+const result = size.fileFinishedImporting("modules/gif_picker/GifPickerUtils.tsx");
 
 export const filterFavoriteGIFsByQuery = function filterFavoriteGIFsByQuery(favorites, first2) {
   if ("" === first2) {

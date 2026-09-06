@@ -1,7 +1,7 @@
 // discord_app/modules/errors/CommonSentryInitUtils.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/errors/CommonSentryInitUtils.tsx");
+const result = size.fileFinishedImporting("modules/errors/CommonSentryInitUtils.tsx");
 
 export const IGNORE_ANALYTICS_BREADCRUMB_EVENTS = [
   "notification_clicked",
@@ -20,7 +20,7 @@ export const IGNORE_ANALYTICS_BREADCRUMB_EVENTS = [
 ];
 export const filterThrottle = function filterThrottle(arg0) {
   ({ maxBudgetMinute: closure_0, maxBudgetHour: closure_1 } = arg0);
-  closure_2 = { minute: { slot: 0, budgetUsed: 0 }, hour: { slot: 0, budgetUsed: 0 } };
+  let minute = { minute: { slot: 0, budgetUsed: 0 }, hour: { slot: 0, budgetUsed: 0 } };
   return () => {
     const timestamp = Date.now();
     const rounded = Math.round(timestamp / 1000 / 60);
@@ -33,11 +33,11 @@ export const filterThrottle = function filterThrottle(arg0) {
       tmp4.hour.slot = rounded1;
       tmp4.hour.budgetUsed = 0;
     }
-    let flag = tmp4.minute.budgetUsed < closure_0;
+    let flag = tmp4.minute.budgetUsed < closure_1_0;
     if (flag) {
       minute = tmp4.minute;
       minute.budgetUsed = minute.budgetUsed + 1;
-      flag = tmp4.hour.budgetUsed < closure_1;
+      flag = tmp4.hour.budgetUsed < closure_1_1;
     }
     if (flag) {
       const hour = tmp4.hour;

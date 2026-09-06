@@ -1,6 +1,6 @@
 // discord_app/utils/ErrorUtils.tsx
-import set from "../../_runtime/00002_set.js";
-import BAGGAGE_HEADER_NAME from "../../_runtime/13302_BAGGAGE_HEADER_NAME.js";
+import _mod13302 from "../../_runtime/metro/13302__.js";
+import size from "../../_runtime/metro/00002__.js";
 
 function getUnderlyingIOSExceptionRecursively(NSUnderlyingError) {
   if (null != NSUnderlyingError.userInfo.NSUnderlyingError) {
@@ -11,11 +11,11 @@ function getUnderlyingIOSExceptionRecursively(NSUnderlyingError) {
   }
   return NSUnderlyingError.userInfo.NSLocalizedDescription;
 }
-const result = set.fileFinishedImporting("utils/ErrorUtils.tsx");
+const result = size.fileFinishedImporting("utils/ErrorUtils.tsx");
 
-export const getUnderlyingIOSError = function getUnderlyingIOSError(closure_8) {
+export const getUnderlyingIOSError = function getUnderlyingIOSError(message) {
   try {
-    let tmp3 = getUnderlyingIOSExceptionRecursively(closure_8);
+    let tmp3 = getUnderlyingIOSExceptionRecursively(message);
     if (tmp3 == null) {
       tmp3 = null;
     }
@@ -25,7 +25,7 @@ export const getUnderlyingIOSError = function getUnderlyingIOSError(closure_8) {
   }
 };
 export const serializeError = function serializeError(arg0) {
-  error = arg0;
+  let error = arg0;
   if (!Boolean(arg0)) {
     const _Error = Error;
     error = new Error("unknown error");
@@ -36,5 +36,5 @@ export const serializeError = function serializeError(arg0) {
     const _String = String;
     error1 = new Error(String(error));
   }
-  return JSON.stringify(BAGGAGE_HEADER_NAME.normalizeToSize(error1));
+  return JSON.stringify(_mod13302.normalizeToSize(error1));
 };

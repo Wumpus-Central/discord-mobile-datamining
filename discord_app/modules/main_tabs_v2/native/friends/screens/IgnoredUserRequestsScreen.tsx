@@ -1,27 +1,26 @@
 // discord_app/modules/main_tabs_v2/native/friends/screens/IgnoredUserRequestsScreen.tsx
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../../../stores/RelationshipStore.tsx";
-import closure_5 from "../../../../../stores/UserStore.tsx";
-import { UserRowModes } from "../../shared_components/user_list/UserRowConstants.tsx";
-import { RelationshipTypes } from "../../../../../Constants.tsx";
-import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import showUserProfileActionSheetDefault from "../../../../user_profile/native/showUserProfileActionSheet.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
+import RelationshipStore from "../../../../../stores/RelationshipStore.tsx";
+import UserStore from "../../../../../stores/UserStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
-  "modules/main_tabs_v2/native/friends/screens/IgnoredUserRequestsScreen.tsx",
-);
+const require = fn;
+const UserRowModes = fn(10860).UserRowModes;
+const RelationshipTypes = fn(1074).RelationshipTypes;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/IgnoredUserRequestsScreen.tsx");
 
 export default function IgnoredUserRequestsScreen(navigation) {
   navigation = navigation.navigation;
-  let analyticsLocations;
   let stateFromStoresArray;
   let stateFromStores;
-  let callback;
-  analyticsLocations = stateFromStoresArray(stateFromStores[6])(
+  let onPress;
+  const analyticsLocations = stateFromStoresArray(stateFromStores[6])(
     stateFromStoresArray(stateFromStores[7]).FRIEND_REQUESTS,
   ).analyticsLocations;
   let obj = analyticsLocations(stateFromStores[8]);
-  const items = [closure_4];
+  const items = [RelationshipStore];
   stateFromStoresArray = obj.useStateFromStoresArray(
     items,
     () =>
@@ -31,33 +30,27 @@ export default function IgnoredUserRequestsScreen(navigation) {
   const tmp = stateFromStores;
   const tmp2 = stateFromStoresArray(stateFromStores[6]);
   const tmp3 = analyticsLocations;
-  const items1 = [closure_5];
+  const items1 = [UserStore];
   const items2 = [stateFromStoresArray];
   stateFromStores = analyticsLocations(stateFromStores[8]).useStateFromStores(
     items1,
     () => {
-      const mapped = stateFromStoresArray.map((arg0) => user.getUser(arg0));
-      return mapped.filter((arg0) => null != arg0);
+      const mapped = stateFromStoresArray.map((item) => user.getUser(item));
+      return mapped.filter((item) => null != item);
     },
     items2,
   );
   const items3 = [analyticsLocations];
-  callback = callback.useCallback((id) => {
-    stateFromStoresArray(stateFromStores[10])({
-      userId: id.id,
-      localUser: id,
-      sourceAnalyticsLocations: analyticsLocations,
-    });
+  onPress = onPress.useCallback((id) => {
+    showUserProfileActionSheetDefault({ userId: id.id, localUser: id, sourceAnalyticsLocations: analyticsLocations });
   }, items3);
-  const items4 = [callback, stateFromStores];
-  const callback1 = callback.useCallback(() => {}, []);
+  const items4 = [onPress, stateFromStores];
+  const callback1 = onPress.useCallback(() => {}, []);
   if (0 !== stateFromStores.length) {
-    obj = { getItemProps: null, getSectionProps: null, sections: null };
-    obj[0] = tmp7;
-    obj[1] = callback1;
+    obj = { getItemProps: tmp7, getSectionProps: callback1, sections: null };
     const items5 = [stateFromStores.length];
-    obj[2] = items5;
-    return jsx(tmp3(tmp[11]).UsersFastList, { getItemProps: null, getSectionProps: null, sections: null });
+    obj.sections = items5;
+    return jsx(tmp3(tmp[11]).UsersFastList, { getItemProps: tmp7, getSectionProps: callback1, sections: null });
   } else {
     navigation.goBack();
   }

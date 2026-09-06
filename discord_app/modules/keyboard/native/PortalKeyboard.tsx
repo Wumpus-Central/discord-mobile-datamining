@@ -1,14 +1,14 @@
 // discord_app/modules/keyboard/native/PortalKeyboard.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import coerceMainRoute from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import NavigationRouteUtils from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import Portal from "../../../../_runtime/04432_Portal.js";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
+require = fn;
+const jsx = fn(21).jsx;
 let c3 = "default";
 const modal = "modal";
-const result = require("set").fileFinishedImporting("modules/keyboard/native/PortalKeyboard.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/keyboard/native/PortalKeyboard.tsx");
 
 export const PortalKeyboardState = {
   EMPTY: "empty",
@@ -22,15 +22,13 @@ export const PortalKeyboardState = {
 export const PORTAL_HOST_NAME_DEFAULT = "default";
 export const PORTAL_HOST_NAME_MODAL = "modal";
 export const PortalKeyboard = function PortalKeyboard(children) {
-  let obj = coerceMainRoute;
+  let obj = NavigationRouteUtils;
   if (obj.useIsModalOpen()) {
     if (tmpResult.isIOS()) {
       let tmp3 = modal;
     }
-    obj = { hostName: null, children: null };
-    obj[0] = tmp3;
-    obj[1] = children.children;
-    return jsx(tmp(4432).Portal, { hostName: null, children: null });
+    obj = { hostName: tmp3, children: children.children };
+    return jsx(tmp(4432).Portal, { hostName: tmp3, children: children.children });
   }
   tmp3 = c3;
 };

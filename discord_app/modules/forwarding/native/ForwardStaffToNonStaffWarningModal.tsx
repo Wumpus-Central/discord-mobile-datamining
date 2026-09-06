@@ -1,31 +1,31 @@
 // discord_app/modules/forwarding/native/ForwardStaffToNonStaffWarningModal.tsx
-import set from "../../../../_runtime/00002_set.js";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import getAlertModalItemKey from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
+import util from "../../../intl/index.native.tsx";
+import AlertModal from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-({ jsx: obj1, Fragment: c3, jsxs: c4 } = jsxProd);
-const result = set.fileFinishedImporting("modules/forwarding/native/ForwardStaffToNonStaffWarningModal.tsx");
+({ jsx: c2, Fragment: c3, jsxs: closure_4 } = jsxProd);
+const result = size.fileFinishedImporting("modules/forwarding/native/ForwardStaffToNonStaffWarningModal.tsx");
 
 export default function ForwardStaffToNonStaffWarningModal(arg0) {
   ({ onConfirm, onBack } = arg0);
   let obj = { title: null, content: null, actions: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t.YrV3I9);
-  const intl2 = getSystemLocale.intl;
-  obj[1] = intl2.string(getSystemLocale.t.MXSMtl);
+  const intl = util.intl;
+  obj.title = intl.string(util.t.YrV3I9);
+  const intl2 = util.intl;
+  obj.content = intl2.string(util.t.MXSMtl);
   obj = { children: null };
   obj = { text: null, onPress: null };
-  const intl3 = getSystemLocale.intl;
-  obj[0] = intl3.string(getSystemLocale.t.X7eUJq);
-  obj[1] = onConfirm;
-  const items = [callback(getAlertModalItemKey.AlertActionButton, obj, "confirm")];
-  obj1 = { variant: "secondary", text: null, onPress: null };
-  const intl4 = getSystemLocale.intl;
-  obj1[1] = intl4.string(getSystemLocale.t["13/7kX"]);
-  obj1[2] = onBack;
-  items[1] = callback(getAlertModalItemKey.AlertActionButton, obj1, "back");
-  obj[0] = items;
-  obj[2] = callback2(closure_3, obj);
-  return callback(getAlertModalItemKey.AlertModal, obj);
+  const intl3 = util.intl;
+  obj.text = intl3.string(util.t.X7eUJq);
+  obj.onPress = onConfirm;
+  const items = [React2(AlertModal.AlertActionButton, obj, "confirm")];
+  const obj1 = { variant: "secondary", text: null, onPress: null };
+  const intl4 = util.intl;
+  obj1.text = intl4.string(util.t["13/7kX"]);
+  obj1.onPress = onBack;
+  items[1] = React2(AlertModal.AlertActionButton, obj1, "back");
+  obj.children = items;
+  obj.actions = React4(React3, obj);
+  return React2(AlertModal.AlertModal, obj);
 }

@@ -1,16 +1,18 @@
 // discord_app/modules/age_assurance/ManualAgeAssuranceFallbackExperiment.tsx
-import set from "../../../_runtime/00002_set.js";
 import ApexExperiment from "../experiments/apex/index.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const obj = { 1: null };
-obj[1] = { enabled: true };
-let closure_0 = ApexExperiment.createApexExperiment({
+let obj = {
   kind: "user",
   name: "2026-07-manual-age-assurance-fallback",
   defaultConfig: { enabled: false },
-  variations: obj,
-});
-const result = set.fileFinishedImporting("modules/age_assurance/ManualAgeAssuranceFallbackExperiment.tsx");
+  variations: null,
+};
+obj = { 1: null };
+obj[1] = { enabled: true };
+obj.variations = obj;
+const config = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/age_assurance/ManualAgeAssuranceFallbackExperiment.tsx");
 
 export const isManualAgeAssuranceFallbackEnabled = function isManualAgeAssuranceFallbackEnabled(
   isAgeVerificationMessageWithManualReviewCta,

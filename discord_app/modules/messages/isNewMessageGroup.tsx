@@ -1,9 +1,9 @@
 // discord_app/modules/messages/isNewMessageGroup.tsx
-import set from "../../../_runtime/00002_set.js";
-import setDefault from "../../utils/Durations.tsx";
-import resetCache from "../../utils/DateUtils.tsx";
+import DurationsDefault from "../../utils/Durations.tsx";
+import DateUtils from "../../utils/DateUtils.tsx";
 import isSystemMessageDefault from "isSystemMessage.tsx";
-import ME from "../../Constants.tsx";
+import Constants from "../../Constants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 function isNewMessageGroup(isForumPost, content, hasFlag) {
   let type = hasFlag;
@@ -49,7 +49,7 @@ function isNewMessageGroup(isForumPost, content, hasFlag) {
                   }
                   let tmp17 = !tmp16;
                   if (tmp16) {
-                    const isSameDayResult = resetCache.isSameDay(content.timestamp, type.timestamp);
+                    const isSameDayResult = DateUtils.isSameDay(content.timestamp, type.timestamp);
                     let tmp20 = !isSameDayResult;
                     if (isSameDayResult) {
                       const isWithinIntervalResult = tmp18(4242).isWithinInterval(
@@ -112,7 +112,6 @@ function isNewMessageGroup(isForumPost, content, hasFlag) {
                       const tmp18Result = tmp18(4242);
                     }
                     tmp17 = tmp20;
-                    const obj2 = resetCache;
                     tmp18 = require;
                   }
                   tmp13 = tmp17;
@@ -133,9 +132,9 @@ function isNewMessageGroup(isForumPost, content, hasFlag) {
   }
   return tmp4;
 }
-({ MessageTypes: c3, ChannelStreamTypes: c4, MessageFlags: c5 } = ME);
-let closure_6 = 7 * setDefault.Millis.MINUTE;
-const result = set.fileFinishedImporting("modules/messages/isNewMessageGroup.tsx");
+({ MessageTypes: c3, ChannelStreamTypes: closure_4, MessageFlags: hasOwnProperty } = Constants);
+let closure_6 = 7 * DurationsDefault.Millis.MINUTE;
+const result = size.fileFinishedImporting("modules/messages/isNewMessageGroup.tsx");
 
 export default isNewMessageGroup;
 export const isNewGroupItem = function isNewGroupItem(isForumPost, type, hasFlag) {

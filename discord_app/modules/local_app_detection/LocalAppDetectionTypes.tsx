@@ -1,5 +1,5 @@
 // discord_app/modules/local_app_detection/LocalAppDetectionTypes.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
 const obj = {
   ROBLOX: "roblox",
@@ -21,7 +21,7 @@ const obj = {
   WUTHERING_WAVES: "wuthering_waves",
 };
 const values = Object.values(obj);
-const result = set.fileFinishedImporting("modules/local_app_detection/LocalAppDetectionTypes.tsx");
+const result = size.fileFinishedImporting("modules/local_app_detection/LocalAppDetectionTypes.tsx");
 
 export const DetectableAppNames = obj;
 export const ALL_DETECTABLE_APP_NAMES = values;

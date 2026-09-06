@@ -1,18 +1,18 @@
 // discord_app/modules/media_viewer/native/components/overlay/MediaModalOverlayHeader.tsx
-import noopAll from "../../../../../../_runtime/00019_noop.js";
-import _modDef4296 from "../../../../reanimated/ReanimatedRexport.tsx";
-import _modDef8369 from "MediaViewerOverlayButton.tsx";
+import ReanimatedRexportDefault from "../../../../reanimated/ReanimatedRexport.tsx";
+import timing from "../../../../../design/animation/reanimated/timing/timing.tsx";
+import MediaViewerOverlayButtonDefault from "MediaViewerOverlayButton.tsx";
 import useShouldHideMediaOptionsDefault from "../../../../media_channel/useShouldHideMediaOptions.tsx";
-import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { SHARE_PREPARING_MODAL_KEY } from "../../../../share/native/SharePreparingModalConstants.tsx";
-import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-noopAll;
-({ StyleSheet: c3, View: c4 } = get_ActivityIndicator);
-({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_8 = createCacheKey.createStyles({
+require = fn;
+get_ActivityIndicator = fn(17);
+({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
+const SHARE_PREPARING_MODAL_KEY = fn(8364).SHARE_PREPARING_MODAL_KEY;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4560);
+let closure_8 = createStyles.createStyles({
   navbarInner: { flex: 1, justifyContent: "space-between" },
   navbarLeft: { flexShrink: 1, flexDirection: "row", marginRight: 8 },
   navbarRight: { flexShrink: 0, justifyContent: "flex-end", flexDirection: "row", gap: 8 },
@@ -29,28 +29,27 @@ let closure_8 = createCacheKey.createStyles({
   navbarNameShrinkWrapper: { flexShrink: 1 },
   contextIcon: { width: 18, height: 18, marginRight: 6 },
 });
-let closure_9 = {
+const __initData = {
   code: "function MediaModalOverlayHeaderTsx1(){const{withTiming,isPreparing}=this.__closure;return{opacity:withTiming(isPreparing?0:1)};}",
 };
-const result = require("set").fileFinishedImporting(
-  "modules/media_viewer/native/components/overlay/MediaModalOverlayHeader.tsx",
-);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaModalOverlayHeader.tsx");
 
 export const MediaModalOverlayHeader = function MediaModalOverlayHeader(arg0) {
   ({ source, contextName, contextIcon } = arg0);
   let isModalOpen;
   ({ onClose, disableDownload, disableMediaOverlayButton, shareable, animationDriver, channelId } = arg0);
-  const tmp = callback();
+  const tmp = closure_8();
   let obj = isModalOpen(12962);
   const headerLayoutAnimation = obj.useHeaderLayoutAnimation(animationDriver);
-  obj1 = isModalOpen(8334);
+  let obj1 = isModalOpen(8334);
   const mediaShareActions = obj1.useMediaShareActions({ source, disableDownload, shareable });
   const tmp7 = useShouldHideMediaOptionsDefault(channelId);
   let obj2 = isModalOpen(4417);
   isModalOpen = obj2.useIsModalOpen(SHARE_PREPARING_MODAL_KEY);
   let obj3 = isModalOpen(4296);
   const fn = function w() {
-    let obj = isModalOpen(closure_1_2[10]);
+    let obj = timing;
     let num = 1;
     if (isModalOpen) {
       num = 0;
@@ -61,100 +60,96 @@ export const MediaModalOverlayHeader = function MediaModalOverlayHeader(arg0) {
   obj = { withTiming: isModalOpen(4561).withTiming, isPreparing: isModalOpen };
   fn.__closure = obj;
   fn.__workletHash = 13276839935975;
-  fn.__initData = closure_9;
+  fn.__initData = __initData;
   const animatedStyle = obj3.useAnimatedStyle(fn);
   obj = { style: null, children: null };
   obj1 = {};
   let merged = Object.assign(absoluteFillObject.absoluteFillObject);
   obj1.bottom = undefined;
   const items = [obj1, headerLayoutAnimation];
-  obj[0] = items;
+  obj.style = items;
   obj2 = { style: animatedStyle, pointerEvents: null, children: null };
   let str = "box-none";
   if (isModalOpen) {
     str = "none";
   }
-  obj2[1] = str;
+  obj2.pointerEvents = str;
   obj3 = { style: tmp.navbarInner, children: null };
   const obj4 = { style: tmp.navbarLeft, children: null };
   const obj5 = { accessibilityLabel: null, icon: null, onPress: null };
   let intl = tmp2(1114).intl;
-  obj5[0] = intl.string(isModalOpen(1114).t.cpT0Cq);
-  obj5[1] = closure_6(isModalOpen(5680).XSmallIcon, { size: "md", color: "interactive-text-active" });
-  obj5[2] = onClose;
-  const items1 = [closure_6(_modDef8369, obj5)];
+  obj5.accessibilityLabel = intl.string(isModalOpen(1114).t.cpT0Cq);
+  obj5.icon = closure_6(isModalOpen(5680).XSmallIcon, { size: "md", color: "interactive-text-active" });
+  obj5.onPress = onClose;
+  const items1 = [closure_6(MediaViewerOverlayButtonDefault, obj5)];
   let tmp10Result = null != contextName;
   if (tmp10Result) {
-    const obj6 = { style: null, children: null };
-    obj6[0] = tmp.navbarName;
-    const obj7 = { style: null, children: null };
-    obj7[0] = tmp.navbarNameInner;
+    const obj6 = { style: tmp.navbarName, children: null };
+    const obj7 = { style: tmp.navbarNameInner, children: null };
     tmp10Result = null != contextIcon;
     if (tmp10Result) {
-      const obj8 = { source: null, color: null, size: null, style: null };
-      obj8[0] = contextIcon;
-      obj8[1] = tmp6(576).unsafe_rawColors.PRIMARY_345;
-      obj8[2] = tmp2(1178).Icon.Sizes.CUSTOM;
-      obj8[3] = tmp.contextIcon;
+      const obj8 = {
+        source: contextIcon,
+        color: tmp6(576).unsafe_rawColors.PRIMARY_345,
+        size: tmp2(1178).Icon.Sizes.CUSTOM,
+        style: tmp.contextIcon,
+      };
       tmp10Result = tmp10(tmp2(1178).Icon, obj8);
     }
     const items2 = [tmp10Result];
-    const obj9 = { style: null, children: null };
-    obj9[0] = tmp.navbarNameShrinkWrapper;
+    const obj9 = { style: tmp.navbarNameShrinkWrapper, children: null };
     const obj10 = {
       accessibilityRole: "header",
       variant: "heading-md/medium",
       lineClamp: 1,
       ellipsizeMode: "tail",
       color: "text-overlay-light",
-      children: null,
+      children: contextName,
     };
-    obj10[5] = contextName;
-    obj9[1] = tmp10(tmp2(4556).Text, obj10);
+    obj9.children = tmp10(tmp2(4556).Text, obj10);
     items2[1] = tmp10(tmp13, obj9);
-    obj7[1] = items2;
-    obj6[1] = tmp12(tmp13, obj7);
+    obj7.children = items2;
+    obj6.children = tmp12(tmp13, obj7);
     tmp10Result = tmp10(tmp13, obj6);
   }
   items1[1] = tmp10Result;
-  obj4[1] = items1;
+  obj4.children = items1;
   const items3 = [closure_7(closure_4, obj4)];
   let tmp12Result = !tmp7;
   if (!tmp7) {
-    const obj11 = { style: null, children: null };
-    obj11[0] = tmp.navbarRight;
-    const obj12 = { source: null };
-    obj12[0] = source;
+    const obj11 = { style: tmp.navbarRight, children: null };
+    const obj12 = { source };
     const items4 = [tmp10(tmp6(12966), obj12)];
     let tmp10Result1 = null;
     if (!disableMediaOverlayButton) {
-      const obj13 = { items: null, children: null };
-      obj13[0] = mediaShareActions;
-      obj13[1] = function children(ref) {
-        const merged = Object.assign(ref, Object.create(null));
-        const obj = { accessibilityLabel: null, icon: null, ref: null };
-        const intl = isModalOpen(1114).intl;
-        obj[0] = intl.string(isModalOpen(1114).t.PdRCRg);
-        const tmp4 = callback(8369);
-        if (obj2.isAndroid()) {
-          let tmp2Result = tmp2(tmp5(12967).MoreVerticalIcon, { size: "md", color: "interactive-text-active" });
-        } else {
-          tmp2Result = tmp2(tmp5(8672).MoreHorizontalIcon, { size: "md", color: "interactive-text-active" });
-        }
-        obj[1] = tmp2Result;
-        obj[2] = ref.ref;
-        const merged1 = Object.assign(merged);
-        return closure_6(tmp4, obj);
+      const obj13 = {
+        items: mediaShareActions,
+        children(ref) {
+          const merged = Object.assign(ref, Object.assign({ ref: 0 }));
+          const obj = { accessibilityLabel: null, icon: null, ref: null };
+          const intl = isModalOpen(1114).intl;
+          obj.accessibilityLabel = intl.string(isModalOpen(1114).t.PdRCRg);
+          const tmp4 = MediaViewerOverlayButtonDefault;
+          if (obj2.isAndroid()) {
+            let tmp2Result = tmp2(tmp5(12967).MoreVerticalIcon, { size: "md", color: "interactive-text-active" });
+          } else {
+            tmp2Result = tmp2(tmp5(8672).MoreHorizontalIcon, { size: "md", color: "interactive-text-active" });
+          }
+          obj.icon = tmp2Result;
+          obj.ref = ref.ref;
+          const merged1 = Object.assign(merged);
+          return closure_1_6(tmp4, obj);
+        },
       };
       tmp10Result1 = tmp10(tmp2(8666).ContextMenu, obj13);
     }
     items4[1] = tmp10Result1;
-    obj11[1] = items4;
+    obj11.children = items4;
     tmp12Result = tmp12(tmp13, obj11);
   }
   items3[1] = tmp12Result;
-  obj3[1] = items3;
-  obj2[2] = closure_7(isModalOpen(8368).MediaModalOverlayHeaderWrapper, obj3);
-  obj[1] = closure_6(_modDef4296.View, obj2);
-  return closure_6(_modDef4296.View, obj);
+  obj3.children = items3;
+  obj2.children = closure_7(isModalOpen(8368).MediaModalOverlayHeaderWrapper, obj3);
+  obj.children = closure_6(ReanimatedRexportDefault.View, obj2);
+  return closure_6(ReanimatedRexportDefault.View, obj);
 };

@@ -1,37 +1,28 @@
 // discord_app/modules/stage_channels/StageChannelRichPresenceUtils.tsx
-import closure_0 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_1 from "../../stores/AuthenticationStore.tsx";
-import closure_2 from "../../stores/ChannelStore.tsx";
-import closure_3 from "../../stores/GuildStore.tsx";
-import closure_4 from "StageChannelRoleStore.tsx";
-import { STAGE_APPLICATION_ID } from "StageChannelsConstants.tsx";
-import { GuildFeatures } from "../../Constants.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
+import GuildStore from "../../stores/GuildStore.tsx";
+import StageChannelRoleStore from "StageChannelRoleStore.tsx";
 
-function unpackStageChannelParty(c17) {
-  if (null != c17) {
-    if (null != c17.party) {
+function unpackStageChannelParty(party) {
+  if (null != party) {
+    if (null != party.party) {
       try {
         if (null != str) {
           if (str.startsWith(c7)) {
-            const tmp4 = callback(str.split(":"), 5);
+            const tmp4 = _slicedToArray(str.split(":"), 5);
             const _parseInt = parseInt;
             const parsed = parseInt(tmp4[3], 16);
             const obj = {
-              guildId: null,
-              channelId: null,
-              size: null,
-              userIsSpeaker: null,
-              guildIsPartnered: null,
-              guildIsVerified: null,
-              stageInstanceId: null,
+              guildId: tmp4[1],
+              channelId: tmp4[2],
+              size: tmp2,
+              userIsSpeaker: 1 & parsed,
+              guildIsPartnered: 2 & parsed,
+              guildIsVerified: 4 & parsed,
+              stageInstanceId: tmp4[4],
             };
-            obj[0] = tmp4[1];
-            obj[1] = tmp4[2];
-            obj[2] = tmp2;
-            obj[3] = 1 & parsed;
-            obj[4] = 2 & parsed;
-            obj[5] = 4 & parsed;
-            obj[6] = tmp4[4];
             return obj;
           }
         }
@@ -41,15 +32,18 @@ function unpackStageChannelParty(c17) {
     }
   }
 }
+const STAGE_APPLICATION_ID = fn(5414).STAGE_APPLICATION_ID;
+const GuildFeatures = fn(1074).GuildFeatures;
 let c7 = "stage:";
-const result = require("set").fileFinishedImporting("modules/stage_channels/StageChannelRichPresenceUtils.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/StageChannelRichPresenceUtils.tsx");
 
 export const packStageChannelPartyId = function packStageChannelPartyId(channel, stageInstanceByChannel) {
   let num = 0;
-  if (speaker.isSpeaker(id.getId(), channel.id)) {
+  if (StageChannelRoleStore.isSpeaker(AuthenticationStore.getId(), channel.id)) {
     num = 1;
   }
-  guild = guild.getGuild(channel.getGuildId());
+  const guild = GuildStore.getGuild(channel.getGuildId());
   let str = num;
   if (null != guild) {
     const features = guild.features;
@@ -75,11 +69,11 @@ export const isStageActivity = function isStageActivity(application_id) {
   }
   return application_id === STAGE_APPLICATION_ID;
 };
-export const shouldShowActivity = function shouldShowActivity(c17) {
-  const tmp = unpackStageChannelParty(c17);
+export const shouldShowActivity = function shouldShowActivity(party) {
+  const tmp = unpackStageChannelParty(party);
   if (null == tmp) {
     return false;
   } else {
-    return null != channel.getChannel(tmp.channelId);
+    return null != ChannelStore.getChannel(tmp.channelId);
   }
 };

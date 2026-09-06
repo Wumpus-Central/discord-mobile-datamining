@@ -1,18 +1,18 @@
 // discord_app/modules/age_assurance/useAgeGroupPresentation.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
-import combinedDefault from "../../utils/HelpdeskUtils.tsx";
-import useAgeVerificationRunner from "AgeVerificationUtils.tsx";
-import openIncodeAgeVerificationModalDefault from "AgeVerificationActionCreators.native.tsx";
-import AgeVerificationModalEntryPoint from "AgeVerificationAnalyticsUtils.tsx";
+import Constants from "../../Constants.tsx";
+import HelpdeskUtilsDefault from "../../utils/HelpdeskUtils.tsx";
+import AgeVerificationUtils from "AgeVerificationUtils.tsx";
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators.native.tsx";
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const HelpdeskArticles = ME.HelpdeskArticles;
-let obj = { ADULT: "adult", TEEN: "teen", UNVERIFIED: "unverified" };
-let result = set.fileFinishedImporting("modules/age_assurance/useAgeGroupPresentation.tsx");
+const HelpdeskArticles = Constants.HelpdeskArticles;
+const AgeGroupState = { ADULT: "adult", TEEN: "teen", UNVERIFIED: "unverified" };
+let result = size.fileFinishedImporting("modules/age_assurance/useAgeGroupPresentation.tsx");
 
-export const AgeGroupState = obj;
+export { AgeGroupState };
 export const useAgeGroupState = function useAgeGroupState() {
-  obj = useAgeVerificationRunner;
+  const obj = AgeVerificationUtils;
   const isAgeVerified = obj.useIsAgeVerified();
   if (obj2.useIsVerifiedTeen()) {
     let TEEN = tmp2.TEEN;
@@ -22,16 +22,15 @@ export const useAgeGroupState = function useAgeGroupState() {
   return TEEN;
 };
 export const handleOpenAgeGatedContentArticle = function handleOpenAgeGatedContentArticle() {
-  obj = openIncodeAgeVerificationModalDefault;
-  obj.openUrl(combinedDefault.getArticleURL(HelpdeskArticles.TIGGER_PAWTECT_LEARN_MORE));
+  const obj = AgeVerificationActionCreatorsDefault;
+  obj.openUrl(HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.TIGGER_PAWTECT_LEARN_MORE));
 };
 export const handleShowAgeVerification = function handleShowAgeVerification() {
-  obj = openIncodeAgeVerificationModalDefault;
-  obj = { entryPoint: AgeVerificationModalEntryPoint.AgeVerificationModalEntryPoint.ACCOUNT_AGE_GROUP };
+  const obj = { entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.ACCOUNT_AGE_GROUP };
   const result = obj.showAgeVerificationGetStartedModal(obj);
 };
 export const useAgeGroupValueLabel = function useAgeGroupValueLabel() {
-  obj = useAgeVerificationRunner;
+  const obj = AgeVerificationUtils;
   const isAgeVerified = obj.useIsAgeVerified();
   if (obj2.useIsVerifiedTeen()) {
     let UNVERIFIED = tmp4.TEEN;
@@ -53,5 +52,5 @@ export const useAgeGroupValueLabel = function useAgeGroupValueLabel() {
     const intl = tmp(1114).intl;
     return intl.string(tmp(1114).t.lKDPGA);
   }
-  obj2 = useAgeVerificationRunner;
+  obj2 = AgeVerificationUtils;
 };

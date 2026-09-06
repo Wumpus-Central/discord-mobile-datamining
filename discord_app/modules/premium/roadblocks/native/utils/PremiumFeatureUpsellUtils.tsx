@@ -1,13 +1,13 @@
 // discord_app/modules/premium/roadblocks/native/utils/PremiumFeatureUpsellUtils.tsx
-import set from "../../../../../../_runtime/00002_set.js";
 import _modDef38 from "../../../../../../_runtime/metro/00038__.js";
-import SoundButtonOverlay from "../../../../soundboard/SoundboardTypes.tsx";
+import SoundboardTypes from "../../../../soundboard/SoundboardTypes.tsx";
 import EntitlementFeatureNames from "../../../../../../discord_common/js/shared/shared-constants/EntitlementFeatureNames.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/premium/roadblocks/native/utils/PremiumFeatureUpsellUtils.tsx");
+const result = size.fileFinishedImporting("modules/premium/roadblocks/native/utils/PremiumFeatureUpsellUtils.tsx");
 
 export const isSoundboardSectionNitroLocked = function isSoundboardSectionNitroLocked(guild_id, categoryInfo) {
-  let tmp = categoryInfo.type === SoundButtonOverlay.SoundboardSoundGridSectionType.GUILD;
+  let tmp = categoryInfo.type === SoundboardTypes.SoundboardSoundGridSectionType.GUILD;
   if (tmp) {
     tmp = categoryInfo.guild.id !== guild_id;
   }

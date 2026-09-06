@@ -1,15 +1,15 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkError.tsx
-import noopAll from "../../../../../../../_runtime/00019_noop.js";
-import getSystemLocale from "../../../../../../intl/index.native.tsx";
+import util from "../../../../../../intl/index.native.tsx";
 import useNavigation from "../../../../../../design/components/Navigator/native/useNavigation.native.tsx";
 import useConnectRetry from "../useConnectRetry.tsx";
 import TwoWayLinkError from "../TwoWayLinkError.tsx";
-import { CrunchyrollLinkModalScenes as closure_2 } from "CrunchyrollLinkConstants.tsx";
-import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
+import noop from "../../../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting(
+require = fn;
+const constants = fn(9272).CrunchyrollLinkModalScenes;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkError.tsx",
 );
 
@@ -18,11 +18,11 @@ export default function CrunchyrollLinkDiscordError(onClose) {
   const navigation = obj.useNavigation();
   const connectRetry = useConnectRetry.useConnectRetry(navigation, constants.PRE_CONNECT);
   obj = { title: null, body: null, onClose: null, onRetry: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t["8YK70c"]);
-  const intl2 = getSystemLocale.intl;
-  obj[1] = intl2.string(getSystemLocale.t.moyYLf);
-  obj[2] = onClose.onClose;
-  obj[3] = connectRetry;
+  const intl = util.intl;
+  obj.title = intl.string(util.t["8YK70c"]);
+  const intl2 = util.intl;
+  obj.body = intl2.string(util.t.moyYLf);
+  obj.onClose = onClose.onClose;
+  obj.onRetry = connectRetry;
   return jsx(TwoWayLinkError.TwoWayLinkError, { title: null, body: null, onClose: null, onRetry: null });
 }

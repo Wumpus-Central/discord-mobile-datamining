@@ -1,31 +1,31 @@
 // discord_app/modules/notifications/settings_unread_notice/utils/updateChannelUnreadSettings.tsx
-import UserNotificationSettings from "../../../../utils/NotificationSettingsUtils.tsx";
-import _modDef7119 from "../../../../actions/NotificationSettingsModalActionCreators.tsx";
-import resetGuildUnreadFlags from "../../settings/utils/notificationSettingsFlagUtils.tsx";
-import closure_3 from "../../../../stores/UserGuildSettingsStore.tsx";
-import { AnalyticsObjects } from "../../../../Constants.tsx";
-import { UnreadSetting } from "../../../read_states/ReadStateConstants.tsx";
-import { ChannelNotificationSettingsFlags as closure_6 } from "../../../user_settings/UserSettingsConstants.tsx";
+import NotificationSettingsUtils from "../../../../utils/NotificationSettingsUtils.tsx";
+import NotificationSettingsModalActionCreatorsDefault from "../../../../actions/NotificationSettingsModalActionCreators.tsx";
+import notificationSettingsFlagUtils from "../../settings/utils/notificationSettingsFlagUtils.tsx";
+import UserGuildSettingsStore from "../../../../stores/UserGuildSettingsStore.tsx";
 
-require = arg1;
-let result = require("set").fileFinishedImporting(
+require = fn;
+const AnalyticsObjects = fn(1074).AnalyticsObjects;
+const UnreadSetting = fn(4742).UnreadSetting;
+const constants = fn(1084).ChannelNotificationSettingsFlags;
+const size = fn(2);
+let result = size.fileFinishedImporting(
   "modules/notifications/settings_unread_notice/utils/updateChannelUnreadSettings.tsx",
 );
 
-export default function updateChannelUnreadSettings(closure_0, id, UNREADS_ONLY_MENTIONS) {
-  let obj = _modDef7119;
-  obj = {
-    flags: resetGuildUnreadFlags.withChannelUnreadFlags(
-      channelIdFlags.getChannelIdFlags(closure_0, id),
+export default function updateChannelUnreadSettings(guild_id, id, UNREADS_ONLY_MENTIONS) {
+  let obj = {
+    flags: notificationSettingsFlagUtils.withChannelUnreadFlags(
+      UserGuildSettingsStore.getChannelIdFlags(guild_id, id),
       UNREADS_ONLY_MENTIONS,
     ),
   };
-  const NotificationLabel = UserNotificationSettings.NotificationLabel;
+  const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
   if (UNREADS_ONLY_MENTIONS === constants.UNREADS_ALL_MESSAGES) {
     let ONLY_MENTIONS = UnreadSetting.ALL_MESSAGES;
   } else {
     ONLY_MENTIONS = UnreadSetting.ONLY_MENTIONS;
   }
   obj = { object: AnalyticsObjects.NOTIFICATION_SETTING_UNREAD_NOTICE };
-  const result = obj.updateChannelOverrideSettings(closure_0, id, obj, NotificationLabel.unreads(ONLY_MENTIONS), obj);
+  const result = obj.updateChannelOverrideSettings(guild_id, id, obj, NotificationLabel.unreads(ONLY_MENTIONS), obj);
 }

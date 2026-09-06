@@ -1,7 +1,7 @@
 // discord_app/modules/application_commands/ApplicationCommandQueryTypes.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/application_commands/ApplicationCommandQueryTypes.tsx");
+const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandQueryTypes.tsx");
 
 export const ScoreMethod = {
   NONE: "none",

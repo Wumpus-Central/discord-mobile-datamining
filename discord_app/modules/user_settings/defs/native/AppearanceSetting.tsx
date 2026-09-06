@@ -1,27 +1,22 @@
 // discord_app/modules/user_settings/defs/native/AppearanceSetting.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import getThemeForColor from "../../../client_themes/ClientThemesUtils.tsx";
-import messagesProxyDefault from "../../../client_themes/intl/ClientThemes.messages.js";
+import util from "../../../../intl/index.native.tsx";
+import ClientThemesUtils from "../../../client_themes/ClientThemesUtils.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
-import useActiveThemeType from "../../../client_themes/native/useActiveTheme.tsx";
-import closure_3 from "../../../client_themes/ClientThemesBackgroundStore.tsx";
-import { ActiveThemeType } from "../../ThemeConstants.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import useActiveTheme from "../../../client_themes/native/useActiveTheme.tsx";
+import ClientThemesBackgroundStore from "../../../client_themes/ClientThemesBackgroundStore.tsx";
 
-require = arg1;
+const _modDef2626 = tmp(2626);
+require = fn;
 function useAppearanceSettingTrailing() {
-  const tmp = importDefault;
   const tmp3 = useThemeDefault();
-  const items = [closure_3];
+  const items = [ClientThemesBackgroundStore];
   const stateFromStores = initialize.useStateFromStores(items, () => gradientPreset.gradientPreset);
-  const obj = initialize;
-  const themeName = getThemeForColor.getThemeName(tmp3);
-  const obj2 = getThemeForColor;
-  const activeThemeType = useActiveThemeType.useActiveThemeType();
+  const themeName = ClientThemesUtils.getThemeName(tmp3);
+  const activeThemeType = useActiveTheme.useActiveThemeType();
   if (ActiveThemeType.CUSTOM === activeThemeType) {
     const intl2 = tmp4(1114).intl;
-    return intl2.string(messagesProxyDefault.KSBBpC);
+    return intl2.string(_modDef2626.KSBBpC);
   } else if (tmp8.CLIENT === activeThemeType) {
     let name;
     if (stateFromStores != null) {
@@ -40,26 +35,27 @@ function useAppearanceSettingTrailing() {
   } else {
     return tmp8.DEFAULT === activeThemeType ? themeName : undefined;
   }
-  const obj3 = useActiveThemeType;
 }
-createToggle = {
+const ActiveThemeType = fn(1186).ActiveThemeType;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["iHH+ky"]);
+    const intl = util.intl;
+    return intl.string(util.t["iHH+ky"]);
   },
   parent: null,
-  IconComponent: require("PaintPaletteIcon").PaintPaletteIcon,
+  IconComponent: fn(13378).PaintPaletteIcon,
   useTrailing: useAppearanceSettingTrailing,
-  screen: createToggle,
-};
-createToggle = {
-  route: require("ME").UserSettingsSections.APPEARANCE,
-  getComponent() {
-    return require("../../appearance/native/SettingsAppearanceScreen.tsx").default;
+  screen: {
+    route: fn(1074).UserSettingsSections.APPEARANCE,
+    getComponent() {
+      return require("SettingsAppearanceScreen").default;
+    },
   },
 };
-createToggle = createToggle.createRoute(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AppearanceSetting.tsx");
+SettingBuilders = SettingBuilders.createRoute(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AppearanceSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;
 export { useAppearanceSettingTrailing };

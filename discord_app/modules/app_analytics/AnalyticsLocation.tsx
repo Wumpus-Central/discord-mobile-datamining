@@ -1,7 +1,7 @@
 // discord_app/modules/app_analytics/AnalyticsLocation.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/app_analytics/AnalyticsLocation.tsx");
+const result = size.fileFinishedImporting("modules/app_analytics/AnalyticsLocation.tsx");
 
 export default {
   QUICK_SWITCHER: "quick switcher",

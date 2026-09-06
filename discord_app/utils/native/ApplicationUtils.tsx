@@ -1,21 +1,21 @@
 // discord_app/utils/native/ApplicationUtils.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
-import fromStringAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
-import expandEventPropertiesDefault from "../AnalyticsUtils.tsx";
+import Constants from "../../Constants.tsx";
+import BigFlagUtilsAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import AnalyticsUtilsDefault from "../AnalyticsUtils.tsx";
 import asyncRequireImpl from "../../../_runtime/01896_asyncRequireImpl.js";
-import _modDef4763 from "../../actions/ModalActionCreators.tsx";
-import set2 from "../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
-import OAUTH2_AUTHORIZE_MODAL_KEY from "../../modules/oauth2/native/Constants.tsx";
-import { asyncRequireImpl } from "../../../_runtime/01896_asyncRequireImpl.js";
+import LinkingDefault from "../../lib/native/Linking.tsx";
+import ModalActionCreatorsDefault from "../../actions/ModalActionCreators.tsx";
+import OAuth2Scopes from "../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
+import Constants2 from "../../modules/oauth2/native/Constants.tsx";
+import authorizeCallbackDefault from "../../modules/oauth2/native/authorizeCallback.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const AnalyticEvents = ME.AnalyticEvents;
-let closure_5 = OAUTH2_AUTHORIZE_MODAL_KEY.OAUTH2_AUTHORIZE_MODAL_KEY;
-const result = set.fileFinishedImporting("utils/native/ApplicationUtils.tsx");
+const AnalyticEvents = Constants.AnalyticEvents;
+let closure_5 = Constants2.OAUTH2_AUTHORIZE_MODAL_KEY;
+const result = size.fileFinishedImporting("utils/native/ApplicationUtils.tsx");
 
 export const installApplication = function installApplication(arg0) {
   ({ applicationId, customInstallUrl } = arg0);
-  let obj5 = customInstallUrl;
   ({
     installParams,
     integrationTypesConfig,
@@ -26,17 +26,15 @@ export const installApplication = function installApplication(arg0) {
     oauth2Callback: importDefault,
   } = arg0);
   if (null != customInstallUrl) {
-    let obj = { application_id: null, auth_type: "custom_url", source: null, device_platform: "mobile_native" };
-    obj[0] = applicationId;
-    obj[2] = source;
-    expandEventPropertiesDefault.track(AnalyticEvents.APPLICATION_ADD_TO_SERVER_CLICKED, obj);
-    const obj12 = expandEventPropertiesDefault;
-    obj = { href: null, onConfirm: null };
-    obj[0] = customInstallUrl;
-    obj[1] = function onConfirm() {
-      closure_1_1(closure_1_3[4]).openURL(obj5);
+    let obj = { application_id: applicationId, auth_type: "custom_url", source, device_platform: "mobile_native" };
+    AnalyticsUtilsDefault.track(AnalyticEvents.APPLICATION_ADD_TO_SERVER_CLICKED, obj);
+    obj = {
+      href: customInstallUrl,
+      onConfirm() {
+        LinkingDefault.openURL(customInstallUrl);
+      },
     };
-    return obj5(8370).handleClick(obj);
+    return customInstallUrl(8370).handleClick(obj);
   } else {
     if (null != integrationTypesConfig) {
       const _Object = Object;
@@ -58,120 +56,110 @@ export const installApplication = function installApplication(arg0) {
           return tmp2;
         })
       ) {
-        obj5 = expandEventPropertiesDefault;
-        obj1 = { application_id: null, auth_type: "in_app", source: null, device_platform: "mobile_native" };
-        obj1[0] = applicationId;
-        obj1[2] = source;
-        obj5.track(AnalyticEvents.APPLICATION_ADD_TO_SERVER_CLICKED, obj1);
-        const obj2 = { clientId: null, guildId: null, channelId: null, disableGuildSelect: null, callback: null };
-        obj2[0] = applicationId;
-        obj2[1] = guildId;
-        obj2[2] = channelId;
-        obj2[3] = disableGuildSelect;
-        obj2[4] = function callback(arg0) {
-          closure_1_1(closure_1_3[5])(arg0);
-          if (null != callback) {
-            callback(arg0);
-          }
+        let obj4 = AnalyticsUtilsDefault;
+        const obj1 = { application_id: applicationId, auth_type: "in_app", source, device_platform: "mobile_native" };
+        obj4.track(AnalyticEvents.APPLICATION_ADD_TO_SERVER_CLICKED, obj1);
+        const obj2 = {
+          clientId: applicationId,
+          guildId,
+          channelId,
+          disableGuildSelect,
+          callback(arg0) {
+            authorizeCallbackDefault(arg0);
+            if (null != closure_1_1) {
+              closure_1_1(arg0);
+            }
+          },
         };
-        obj5 = obj2;
-        _modDef4763.popWithKey(closure_5);
-        const obj9 = _modDef4763;
+        closure_130_0 = obj2;
+        ModalActionCreatorsDefault.popWithKey(closure_5);
         const obj3 = {};
-        const obj10 = _modDef4763;
+        const obj9 = ModalActionCreatorsDefault;
         const merged = Object.assign(obj2);
         obj3.dismissOAuthModal = function dismissOAuthModal() {
-          const dismissOAuthModal = obj5.dismissOAuthModal;
+          const dismissOAuthModal = customInstallUrl.dismissOAuthModal;
           if (dismissOAuthModal != null) {
             dismissOAuthModal();
           }
-          closure_1_1(closure_1_3[7]).popWithKey(closure_1_5);
+          ModalActionCreatorsDefault.popWithKey(closure_5);
         };
-        obj10.pushLazy(obj5(1896)(9578, dependencyMap.paths), obj3, closure_5);
+        obj9.pushLazy(customInstallUrl(1896)(9578, dependencyMap.paths), obj3, closure_5);
       }
     }
     if (null != installParams) {
-      const obj4 = { application_id: null, auth_type: "in_app", source: null, device_platform: "mobile_native" };
-      obj4[0] = applicationId;
-      obj4[2] = source;
-      expandEventPropertiesDefault.track(AnalyticEvents.APPLICATION_ADD_TO_SERVER_CLICKED, obj4);
-      obj5 = {
-        clientId: null,
-        guildId: null,
-        channelId: null,
-        disableGuildSelect: null,
+      obj4 = { application_id: applicationId, auth_type: "in_app", source, device_platform: "mobile_native" };
+      AnalyticsUtilsDefault.track(AnalyticEvents.APPLICATION_ADD_TO_SERVER_CLICKED, obj4);
+      const obj5 = {
+        clientId: applicationId,
+        guildId,
+        channelId,
+        disableGuildSelect,
         scopes: null,
         permissions: null,
         callback: null,
       };
-      obj5[0] = applicationId;
-      obj5[1] = guildId;
-      obj5[2] = channelId;
-      obj5[3] = disableGuildSelect;
       let scopes;
       if (installParams != null) {
         scopes = installParams.scopes;
       }
-      obj5[4] = scopes;
+      obj5.scopes = scopes;
       let permissions;
       if (installParams != null) {
         permissions = installParams.permissions;
       }
       let deserializeResult;
       if (null != permissions) {
-        obj1 = fromStringAll;
+        const deserializer = BigFlagUtilsAll;
         let permissions1;
         if (installParams != null) {
           permissions1 = installParams.permissions;
         }
-        deserializeResult = obj1.deserialize(permissions1);
+        deserializeResult = deserializer.deserialize(permissions1);
       }
-      obj5[5] = deserializeResult;
-      obj5[6] = function callback(arg0) {
-        closure_1_1(closure_1_3[5])(arg0);
-        if (null != callback) {
-          callback(arg0);
+      obj5.permissions = deserializeResult;
+      obj5.callback = function callback(arg0) {
+        authorizeCallbackDefault(arg0);
+        if (null != closure_1_1) {
+          closure_1_1(arg0);
         }
       };
+      closure_129_0 = obj5;
       let tmp32Result = tmp32(4763);
       tmp32Result.popWithKey(closure_5);
       tmp32Result = tmp32(4763);
       const obj6 = {};
-      const obj16 = expandEventPropertiesDefault;
-      const tmp33 = dependencyMap;
       const merged1 = Object.assign(obj5);
       obj6.dismissOAuthModal = function dismissOAuthModal() {
-        const dismissOAuthModal = obj5.dismissOAuthModal;
+        const dismissOAuthModal = customInstallUrl.dismissOAuthModal;
         if (dismissOAuthModal != null) {
           dismissOAuthModal();
         }
-        closure_1_1(closure_1_3[7]).popWithKey(closure_1_5);
+        ModalActionCreatorsDefault.popWithKey(closure_5);
       };
-      tmp32Result.pushLazy(obj5(1896)(9578, dependencyMap.paths), obj6, closure_5);
-      const tmp10 = obj5(1896)(9578, dependencyMap.paths);
+      tmp32Result.pushLazy(customInstallUrl(1896)(9578, dependencyMap.paths), obj6, closure_5);
+      const tmp10 = customInstallUrl(1896)(9578, dependencyMap.paths);
     }
   }
 };
 export const openOAuth2Modal = function openOAuth2Modal(arg0) {
-  const _require = arg0;
-  let obj = _modDef4763;
+  _require = arg0;
+  let obj = ModalActionCreatorsDefault;
   obj.popWithKey(closure_5);
   obj = {};
-  const obj2 = _modDef4763;
+  const obj2 = ModalActionCreatorsDefault;
   const merged = Object.assign(arg0);
   obj.dismissOAuthModal = function dismissOAuthModal() {
-    const dismissOAuthModal = obj5.dismissOAuthModal;
+    const dismissOAuthModal = customInstallUrl.dismissOAuthModal;
     if (dismissOAuthModal != null) {
       dismissOAuthModal();
     }
-    closure_1_1(closure_1_3[7]).popWithKey(closure_1_5);
+    ModalActionCreatorsDefault.popWithKey(closure_5);
   };
-  obj2.pushLazy(asyncRequireImpl(9578, dependencyMap.paths), obj, closure_5);
+  obj2.pushLazy(require("asyncRequireImpl")(9578, dependencyMap.paths), obj, closure_5);
 };
 export const installPrivateChannelIntegration = function installPrivateChannelIntegration(arg0) {
   ({ applicationId, channelId, callback } = arg0);
-  let obj = _modDef4763;
-  obj = {
+  const obj = {
     clientId: applicationId,
     scopes: null,
     channelId: null,
@@ -179,12 +167,12 @@ export const installPrivateChannelIntegration = function installPrivateChannelIn
     disableGuildSelect: true,
     callback: null,
   };
-  const items = [set2.OAuth2Scopes.APPLICATIONS_COMMANDS];
-  obj[1] = items;
-  obj[2] = channelId;
-  obj[3] = function dismissOAuthModal() {
-    return callback(table[7]).popWithKey(closure_5);
+  const items = [OAuth2Scopes.OAuth2Scopes.APPLICATIONS_COMMANDS];
+  obj.scopes = items;
+  obj.channelId = channelId;
+  obj.dismissOAuthModal = function dismissOAuthModal() {
+    return ModalActionCreatorsDefault.popWithKey(closure_1_5);
   };
-  obj[5] = callback;
+  obj.callback = callback;
   obj.pushLazy(asyncRequireImpl(9578, dependencyMap.paths), obj, closure_5);
 };

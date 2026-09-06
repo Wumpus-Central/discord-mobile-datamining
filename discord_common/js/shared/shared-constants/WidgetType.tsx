@@ -1,7 +1,7 @@
 // discord_common/js/shared/shared-constants/WidgetType.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/WidgetType.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/WidgetType.tsx");
 
 export const WidgetType = {
   CURRENT_GAMES: "current_games",

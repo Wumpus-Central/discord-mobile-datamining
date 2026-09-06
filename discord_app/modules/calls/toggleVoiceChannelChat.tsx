@@ -1,29 +1,28 @@
 // discord_app/modules/calls/toggleVoiceChannelChat.tsx
-import _modDef4761 from "../../actions/ChannelRTCActionCreators.tsx";
-import closure_2 from "../../stores/ChannelStore.tsx";
-import closure_3 from "../../stores/RTCConnectionStore.tsx";
-import closure_4 from "ChannelRTCStore.tsx";
+import ChannelRTCActionCreatorsDefault from "../../actions/ChannelRTCActionCreators.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
+import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
+import ChannelRTCStore from "ChannelRTCStore.tsx";
 
-const result = require("set").fileFinishedImporting("modules/calls/toggleVoiceChannelChat.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/calls/toggleVoiceChannelChat.tsx");
 
 export const toggleVoiceChannelChat = function toggleVoiceChannelChat(open) {
-  let obj = connected;
-  if (connected.isConnected()) {
+  let obj = RTCConnectionStore;
+  if (RTCConnectionStore.isConnected()) {
     const channelId = obj.getChannelId();
     if (null == channelId) {
       return null;
     } else {
-      channel = channel.getChannel(channelId);
+      const channel = ChannelStore.getChannel(channelId);
       if (null != channel) {
         if (channel.isGuildVoice()) {
           let tmp3 = open;
           if (open == null) {
-            tmp3 = !chatOpen.getChatOpen(channelId);
+            tmp3 = !ChannelRTCStore.getChatOpen(channelId);
           }
-          _modDef4761.updateChatOpen(channelId, tmp3);
-          obj = { channelId: null, chatOpen: null };
-          obj[0] = channelId;
-          obj[1] = tmp3;
+          ChannelRTCActionCreatorsDefault.updateChatOpen(channelId, tmp3);
+          obj = { channelId, chatOpen: tmp3 };
           return obj;
         }
       }

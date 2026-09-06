@@ -1,12 +1,15 @@
 // discord_app/modules/auth/native/components/RegisterPhoneOrEmailInput.tsx
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../phone/PhoneStore.tsx";
-import useRegistrationUIStore from "../RegistrationUIStore.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import ConstantsIOS from "../../../../ConstantsIOS.tsx";
+import PhoneOrEmailUtils from "../../../phone/PhoneOrEmailUtils.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import PhoneStore from "../../../phone/PhoneStore.tsx";
 
-const require = arg1;
-({ setRegistrationErrors: c5, useRegistrationUIStore: closure_6 } = useRegistrationUIStore);
-const result = require("set").fileFinishedImporting("modules/auth/native/components/RegisterPhoneOrEmailInput.tsx");
+require = fn;
+const RegistrationUIStore = fn(15946);
+({ setRegistrationErrors: hasOwnProperty, useRegistrationUIStore: metroRequire } = RegistrationUIStore);
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/auth/native/components/RegisterPhoneOrEmailInput.tsx");
 
 export const RegisterPhoneOrEmailInput = function RegisterPhoneOrEmailInput(loginPhone) {
   loginPhone = loginPhone.loginPhone;
@@ -15,20 +18,17 @@ export const RegisterPhoneOrEmailInput = function RegisterPhoneOrEmailInput(logi
   const setLoginEmail = loginPhone.setLoginEmail;
   const inputMode = loginPhone.inputMode;
   ({ inputError, autoFocus } = loginPhone);
-  let navigation;
-  let ref;
   closure_7 = undefined;
   let callback;
-  closure_9 = undefined;
   ({ onSubmit, submitBehavior } = loginPhone);
   let obj = loginPhone(setLoginPhone[4]);
-  navigation = obj.useNavigation();
-  ref = setLoginEmail.useRef(null);
+  const navigation = obj.useNavigation();
+  let ref = setLoginEmail.useRef(null);
   obj = { inputRef: ref, enabled: null };
   if (autoFocus == null) {
     autoFocus = false;
   }
-  obj[1] = autoFocus;
+  obj.enabled = autoFocus;
   loginEmail(setLoginPhone[5])(obj);
   const tmp5 = loginEmail;
   const tmp6 = loginEmail(setLoginPhone[5]);
@@ -38,17 +38,17 @@ export const RegisterPhoneOrEmailInput = function RegisterPhoneOrEmailInput(logi
   closure_7 = tmp9;
   const items1 = [tmp9];
   callback = obj2.useCallback((arg0) => {
-    if (null != table[arg0]) {
+    if (null != closure_7[arg0]) {
       const obj = {};
       const merged = Object.assign(tmp3);
       delete tmp2[tmp];
-      navigation(obj);
+      hasOwnProperty(obj);
     }
   }, items1);
   const items2 = [inputMode, callback, setLoginPhone, setLoginEmail];
   const items3 = [navigation];
   const callback1 = obj2.useCallback((arg0, arg1) => {
-    if (inputMode === loginPhone(setLoginPhone[7]).PhoneOrEmailSelectorForceMode.PHONE) {
+    if (inputMode === PhoneOrEmailUtils.PhoneOrEmailSelectorForceMode.PHONE) {
       callback("phone");
       setLoginPhone(arg0, arg1);
     } else {
@@ -57,14 +57,14 @@ export const RegisterPhoneOrEmailInput = function RegisterPhoneOrEmailInput(logi
     }
   }, items2);
   const callback2 = obj2.useCallback(() => {
-    navigation.push(loginPhone(setLoginPhone[8]).AuthStates.COUNTRY_SELECT);
+    navigation.push(ConstantsIOS.AuthStates.COUNTRY_SELECT);
   }, items3);
-  closure_9 = obj2.useRef(inputMode);
+  ref = obj2.useRef(inputMode);
   const items4 = [inputMode, loginEmail, loginPhone];
   const layoutEffect = obj2.useLayoutEffect(() => {
     if (ref.current !== inputMode) {
       ref.current = tmp;
-      if (tmp === loginPhone(setLoginPhone[7]).PhoneOrEmailSelectorForceMode.PHONE) {
+      if (tmp === PhoneOrEmailUtils.PhoneOrEmailSelectorForceMode.PHONE) {
         const current2 = ref.current;
         if (current2 != null) {
           current2.setText(loginPhone);
@@ -117,16 +117,16 @@ export const RegisterPhoneOrEmailInput = function RegisterPhoneOrEmailInput(logi
   if (inputMode === loginPhone(setLoginPhone[7]).PhoneOrEmailSelectorForceMode.PHONE) {
     str = "tel";
   }
-  obj[14] = str;
+  obj.autoComplete = str;
   let str2 = "email-address";
   if (inputMode === loginPhone(setLoginPhone[7]).PhoneOrEmailSelectorForceMode.PHONE) {
     str2 = "number-pad";
   }
-  obj[15] = str2;
+  obj.keyboardType = str2;
   let str3;
   if (null != inputError) {
     str3 = "error";
   }
-  obj[17] = str3;
+  obj.status = str3;
   return tmp16(tmp5(setLoginPhone[10]), obj);
 };

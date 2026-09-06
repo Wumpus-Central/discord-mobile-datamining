@@ -1,19 +1,19 @@
 // discord_app/modules/action_sheet/native/ShowShareActionSheetUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
-import ME from "../../../Constants.tsx";
-import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
-import isDiscordProxiedAssetUrlDefault from "../../../utils/URLUtils.tsx";
-import getExtensionFromContentType from "../../media/FileExtensionUtils.tsx";
-import SHARE_PREPARING_MODAL_KEY from "../../share/native/SharePreparingModalConstants.tsx";
-import apexExperiment from "../../media_viewer/native/MobileMediaViewerShareExperiment.tsx";
+import Constants from "../../../Constants.tsx";
+import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
+import URLUtilsDefault from "../../../utils/URLUtils.tsx";
+import FileExtensionUtils from "../../media/FileExtensionUtils.tsx";
+import SharePreparingModalConstants from "../../share/native/SharePreparingModalConstants.tsx";
+import MobileMediaViewerShareExperiment from "../../media_viewer/native/MobileMediaViewerShareExperiment.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const AnalyticEvents = ME.AnalyticEvents;
-let closure_4 = SHARE_PREPARING_MODAL_KEY.SHARE_SHEET_PRESENT_DELAY_MS;
-const result = set.fileFinishedImporting("modules/action_sheet/native/ShowShareActionSheetUtils.tsx");
+const AnalyticEvents = Constants.AnalyticEvents;
+const presentDelayMs = SharePreparingModalConstants.SHARE_SHEET_PRESENT_DELAY_MS;
+const result = size.fileFinishedImporting("modules/action_sheet/native/ShowShareActionSheetUtils.tsx");
 
 export const trackAppClickInNativeShareSheet = function trackAppClickInNativeShareSheet(app, _location) {
   let str = app;
-  let obj = expandEventPropertiesDefault;
+  let obj = AnalyticsUtilsDefault;
   if (app == null) {
     str = "";
   }
@@ -21,53 +21,45 @@ export const trackAppClickInNativeShareSheet = function trackAppClickInNativeSha
   obj.track(AnalyticEvents.NATIVE_SHARE_SHEET_APP_CLICKED, obj);
 };
 export const getMediaShareParams = function getMediaShareParams(source) {
-  let obj = apexExperiment;
+  let obj = MobileMediaViewerShareExperiment;
   if (obj.getMobileMediaViewerShareExperimentEnabled("shareMediaSource")) {
     if (true !== source.disableDownload) {
       if (null != source.shareURI) {
         if (obj11.isDiscordDirectAssetUrl(source.shareURI)) {
           let tmpResult = tmp(1115);
           if (tmpResult.isAndroid()) {
-            obj = { presentDelayMs: null };
-            obj[0] = closure_4;
+            obj = { presentDelayMs };
           }
           ({ videoURI, contentType } = source);
           if (null != videoURI) {
             tmpResult = tmp(5568);
             const decideFileExtensionResult = tmpResult.decideFileExtension(videoURI, contentType, true);
-            obj = { mediaFallbackUrl: null, mediaStagingOptions: null };
-            obj[0] = videoURI;
+            obj = { mediaFallbackUrl: videoURI, mediaStagingOptions: null };
             let tmp11;
             if (null != decideFileExtensionResult) {
-              obj1 = { url: null, fileExtension: null, mediaType: "video" };
-              obj1[0] = videoURI;
-              obj1[1] = decideFileExtensionResult;
+              const obj1 = { url: videoURI, fileExtension: decideFileExtensionResult, mediaType: "video" };
               const merged = Object.assign(tmp3);
               tmp11 = obj1;
             }
-            obj[1] = tmp11;
+            obj.mediaStagingOptions = tmp11;
             return obj;
           } else {
             const decideFileExtensionResult1 = tmp(5568).decideFileExtension(source.uri, contentType, true);
-            const obj2 = { mediaFallbackUrl: null, mediaStagingOptions: null };
-            obj2[0] = source.shareURI;
+            const obj2 = { mediaFallbackUrl: source.shareURI, mediaStagingOptions: null };
             let tmp6;
             if (null != decideFileExtensionResult1) {
-              const obj3 = { url: null, fileExtension: null, mediaType: "image" };
-              obj3[0] = source.uri;
-              obj3[1] = decideFileExtensionResult1;
+              const obj3 = { url: source.uri, fileExtension: decideFileExtensionResult1, mediaType: "image" };
               const merged1 = Object.assign(tmp3);
               tmp6 = obj3;
             }
-            obj2[1] = tmp6;
+            obj2.mediaStagingOptions = tmp6;
             return obj2;
           }
         } else {
-          const obj4 = { mediaFallbackUrl: null };
-          obj4[0] = source.shareURI;
+          const obj4 = { mediaFallbackUrl: source.shareURI };
           return obj4;
         }
-        obj11 = isDiscordProxiedAssetUrlDefault;
+        obj11 = URLUtilsDefault;
       }
     }
   }
@@ -80,6 +72,6 @@ export const getMediaShareParams = function getMediaShareParams(source) {
   }
   return { mediaFallbackUrl };
 };
-export const resolveShareFileExtension = function resolveShareFileExtension(closure_1_0, closure_1_1) {
-  return getExtensionFromContentType.decideFileExtension(closure_1_0, closure_1_1, true);
+export const resolveShareFileExtension = function resolveShareFileExtension(uri, contentType) {
+  return FileExtensionUtils.decideFileExtension(uri, contentType, true);
 };

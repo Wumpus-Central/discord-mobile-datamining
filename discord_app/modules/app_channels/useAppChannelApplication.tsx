@@ -1,10 +1,10 @@
 // discord_app/modules/app_channels/useAppChannelApplication.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
-import fetchApplication from "../applications/ApplicationActionCreators.tsx";
+import Constants from "../../Constants.tsx";
+import ApplicationActionCreators from "../applications/ApplicationActionCreators.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const ChannelTypes = ME.ChannelTypes;
-const result = set.fileFinishedImporting("modules/app_channels/useAppChannelApplication.tsx");
+const ChannelTypes = Constants.ChannelTypes;
+const result = size.fileFinishedImporting("modules/app_channels/useAppChannelApplication.tsx");
 
 export const useAppChannelApplication = function useAppChannelApplication(stateFromStores) {
   let type;
@@ -15,5 +15,5 @@ export const useAppChannelApplication = function useAppChannelApplication(stateF
   if (type === ChannelTypes.GUILD_APP) {
     application_id = stateFromStores.application_id;
   }
-  return fetchApplication.useApplication(application_id).data;
+  return ApplicationActionCreators.useApplication(application_id).data;
 };

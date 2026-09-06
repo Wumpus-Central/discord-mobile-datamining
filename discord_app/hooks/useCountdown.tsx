@@ -1,12 +1,13 @@
 // discord_app/hooks/useCountdown.tsx
-import set from "../../_runtime/00002_set.js";
-import noop from "../../_runtime/00019_noop.js";
+import _mod19 from "../../_runtime/metro/00019__.js";
+import DateUtils from "../utils/DateUtils.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-noop.useCallback;
-const result = set.fileFinishedImporting("hooks/useCountdown.tsx");
+_mod19.useCallback;
+const result = size.fileFinishedImporting("hooks/useCountdown.tsx");
 
-export default function useCountdown(closure_0) {
-  const _require = closure_0;
+export default function useCountdown(expiresAt) {
+  _require = expiresAt;
   let num = arg1;
   if (arg1 === undefined) {
     num = 1000;
@@ -16,25 +17,24 @@ export default function useCountdown(closure_0) {
   if (arg3 === undefined) {
     flag = false;
   }
-  let forceUpdate;
-  const obj = _require(flag[1]);
-  let diffAsUnitsResult = _require(flag[1]).diffAsUnits(Date.now(), closure_0);
-  forceUpdate = _require(flag[2]).useForceUpdate();
-  const items = [closure_0, flag, forceUpdate, arg2];
-  const obj2 = _require(flag[2]);
+  const obj = require("DateUtils");
+  const diffAsUnitsResult = require("DateUtils").diffAsUnits(Date.now(), expiresAt);
+  const forceUpdate = require("areHookInputsEqual").useForceUpdate();
+  const items = [expiresAt, flag, forceUpdate, arg2];
+  const obj2 = require("areHookInputsEqual");
   let tmp5 = null;
   const tmp3 = forceUpdate(() => {
-    const diffAsUnitsResult = callback(flag[1]).diffAsUnits(Date.now(), callback);
-    if (!tmp2) {
+    const time = DateUtils.diffAsUnits(Date.now(), closure_0);
+    if (!tmp) {
       forceUpdate();
-      if (callback2 != null) {
-        callback2();
+      if (closure_1 != null) {
+        closure_1();
       }
     }
   }, items);
   if (!flag) {
     tmp5 = num;
   }
-  importDefault(flag[3])(tmp3, tmp5);
+  require("useInterval")(tmp3, tmp5);
   return diffAsUnitsResult;
 }

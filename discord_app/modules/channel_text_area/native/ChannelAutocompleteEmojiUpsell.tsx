@@ -1,74 +1,76 @@
 // discord_app/modules/channel_text_area/native/ChannelAutocompleteEmojiUpsell.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import { EMOJI_URL_BASE_SIZE } from "../../emojis/EmojiConstants.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-noopAll;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = {
+const require = fn;
+const View = fn(17).View;
+const EMOJI_URL_BASE_SIZE = fn(1374).EMOJI_URL_BASE_SIZE;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+fn(4560);
+const createStyles = {
   upsell: { flexDirection: "row", alignItems: "center", justifyContent: "space-between" },
   title: { lineHeight: 16, flex: 1 },
   emojis: { height: 28 },
   emojiWrapper: null,
   emoji: null,
 };
-createCacheKey = {
+let size = {
   position: "absolute",
   width: 28,
   height: 28,
   padding: 2,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
   borderWidth: 2,
   borderRadius: 14,
-  borderColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   alignItems: "center",
   justifyContent: "center",
 };
-createCacheKey[3] = createCacheKey;
-createCacheKey[4] = { width: 16, height: 16 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting(
-  "modules/channel_text_area/native/ChannelAutocompleteEmojiUpsell.tsx",
-);
+createStyles.emojiWrapper = size;
+createStyles.emoji = { width: 16, height: 16 };
+let closure_7 = createStyles.createStyles(createStyles);
+size = fn(2);
+let result = size.fileFinishedImporting("modules/channel_text_area/native/ChannelAutocompleteEmojiUpsell.tsx");
 
 export default function ChannelAutocompleteEmojiUpsell(results) {
   results = results.results;
-  let _require;
-  const tmp = callback3();
+  const tmp = closure_7();
   _require = tmp;
   const substr = results.slice(0, 3);
   let obj = { style: tmp.upsell, children: null };
-  const mapped = substr.map((id) => {
-    let obj = { style: items, children: null };
-    items = [closure_0.emojiWrapper];
-    obj = { left: 24 * arg1 };
+  const mapped = substr.map((id, index) => {
+    let obj = { style: null, children: null };
+    const items = [closure_0.emojiWrapper];
+    obj = { left: 24 * index };
     items[1] = obj;
+    obj.style = items;
     obj = { style: closure_0.emoji, source: null };
     if (null != id.id) {
-      obj1 = { id: null, animated: null, size: null };
-      ({ id: obj5[0], animated: obj5[1] } = id);
-      obj1[2] = closure_1_4;
-      let url = closure_1_1(closure_1_2[7]).getEmojiURL(obj1);
-      const tmp3Result = closure_1_1(closure_1_2[7]);
+      const obj1 = { id: null, animated: null, size: null };
+      ({ id: obj5.id, animated: obj5.animated } = id);
+      obj1.size = EMOJI_URL_BASE_SIZE;
+      let url = AvatarUtilsDefault.getEmojiURL(obj1);
+      const tmp3Result = AvatarUtilsDefault;
     } else {
       url = id.url;
     }
-    obj[1] = { uri: url };
-    obj[1] = closure_1_5(closure_1_1(closure_1_2[6]), obj);
-    return closure_1_5(closure_1_3, obj, id.id);
+    obj.source = { uri: url };
+    obj.children = hasOwnProperty(FastImageDefault, obj);
+    return hasOwnProperty(View, obj, id.id);
   });
   const result = 24 * substr.length;
   obj = { style: tmp.title, accessibilityRole: "header", variant: "text-sm/medium", children: null };
-  const intl = require("../../../intl/index.native.tsx").intl;
+  const intl = require("util").intl;
   obj = { count: results.length };
-  obj[3] = intl.format(require("../../../intl/index.native.tsx").t.uEky42, obj);
-  let items = [callback(require("../../../design/components/Text/native/Text.tsx").Text, obj)];
+  obj.children = intl.format(require("util").t.uEky42, obj);
+  let items = [closure_5(require("Text/Text").Text, obj)];
+  let obj1 = { style: null, children: mapped };
   const items1 = [tmp.emojis, { width: result + 16 }];
-  items[1] = callback(View, { style: items1, children: mapped });
-  obj[1] = items;
-  return callback2(View, obj);
+  obj1.style = items1;
+  items[1] = closure_5(View, obj1);
+  obj.children = items;
+  return closure_6(View, obj);
 }

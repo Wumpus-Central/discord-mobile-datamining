@@ -1,64 +1,62 @@
 // discord_app/modules/user_settings/voice/native/UserSettingsVoiceInputOptions.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import getSystemLocale from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import showSimpleActionSheet from "../../../action_sheet/native/showSimpleActionSheet.tsx";
+import AudioActionCreatorsDefault from "../../../../actions/AudioActionCreators.tsx";
 import VoiceSensitivityDefault from "../../../../components_native/common/VoiceSensitivity.tsx";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_4 from "../../../../stores/MediaEngineStore.tsx";
-import { InputModes } from "../../../../Constants.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
-require = arg1;
+require = fn;
 function handleInputModePress() {
-  let obj = showSimpleActionSheet;
-  obj = { key: "InputMode", header: null, options: null, hasIcons: false };
+  let obj = { key: "InputMode", header: null, options: null, hasIcons: false };
   obj = { title: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t["pS+K2L"]);
-  obj[1] = obj;
-  obj1 = { label: null, onPress: null };
-  const intl2 = getSystemLocale.intl;
-  obj1[0] = intl2.string(getSystemLocale.t.Q8gkVL);
-  obj1[1] = function onPress() {
-    callback(9089).setMode(constants.PUSH_TO_TALK);
+  const intl = util.intl;
+  obj.title = intl.string(util.t["pS+K2L"]);
+  obj.header = obj;
+  const obj1 = { label: null, onPress: null };
+  const intl2 = util.intl;
+  obj1.label = intl2.string(util.t.Q8gkVL);
+  obj1.onPress = function onPress() {
+    AudioActionCreatorsDefault.setMode(constants.PUSH_TO_TALK);
   };
   const items = [obj1];
   const obj2 = { label: null, onPress: null };
-  const intl3 = getSystemLocale.intl;
-  obj2[0] = intl3.string(getSystemLocale.t.cHCEOJ);
-  obj2[1] = function onPress() {
-    callback(9089).setMode(constants.VOICE_ACTIVITY);
+  const intl3 = util.intl;
+  obj2.label = intl3.string(util.t.cHCEOJ);
+  obj2.onPress = function onPress() {
+    AudioActionCreatorsDefault.setMode(constants.VOICE_ACTIVITY);
   };
   items[1] = obj2;
-  obj[2] = items;
+  obj.options = items;
   const result = obj.showSimpleActionSheet(obj);
 }
-noopAll;
-({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);
-let closure_9 = createCacheKey.createStyles({ value: { textAlign: "right" }, slider: { marginTop: 4 } });
-let result = require("set").fileFinishedImporting(
-  "modules/user_settings/voice/native/UserSettingsVoiceInputOptions.tsx",
-);
+const View = fn(17).View;
+const InputModes = fn(1074).InputModes;
+const jsxProd = fn(21);
+({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4560);
+let closure_9 = createStyles.createStyles({ value: { textAlign: "right" }, slider: { marginTop: 4 } });
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceInputOptions.tsx");
 
 export default function UserSettingsVoiceInputOptions() {
-  const iter = callback();
+  const iter = closure_9();
   let obj = inputMode(504);
-  const items = [closure_4];
+  const items = [MediaEngineStore];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({
-    inputMode: store.getMode(),
-    vadThreshold: store.getModeOptions().threshold,
-    vadAutoThreshold: store.getModeOptions().autoThreshold,
+    inputMode: MediaEngineStore.getMode(),
+    vadThreshold: MediaEngineStore.getModeOptions().threshold,
+    vadAutoThreshold: MediaEngineStore.getModeOptions().autoThreshold,
   }));
   inputMode = stateFromStoresObject.inputMode;
   const vadAutoThreshold = stateFromStoresObject.vadAutoThreshold;
   obj = { title: null, hasIcons: false, children: null };
   const intl = inputMode(1114).intl;
-  obj[0] = intl.string(inputMode(1114).t.LKCupB);
+  obj.title = intl.string(inputMode(1114).t.LKCupB);
   obj = { label: null, trailing: null, onPress: null };
   const intl2 = inputMode(1114).intl;
-  obj[0] = intl2.string(inputMode(1114).t["pS+K2L"]);
-  obj1 = { style: iter.value, variant: "text-md/medium", color: "text-muted", children: null };
+  obj.label = intl2.string(inputMode(1114).t["pS+K2L"]);
+  const obj1 = { style: iter.value, variant: "text-md/medium", color: "text-muted", children: null };
   if (inputMode === InputModes.PUSH_TO_TALK) {
     const intl4 = tmp(1114).intl;
     let stringResult = intl4.string(tmp(1114).t.Q8gkVL);
@@ -66,44 +64,42 @@ export default function UserSettingsVoiceInputOptions() {
     const intl3 = tmp(1114).intl;
     stringResult = intl3.string(tmp(1114).t.cHCEOJ);
   }
-  obj1[3] = stringResult;
-  obj[1] = closure_6(inputMode(4556).Text, obj1);
-  obj[2] = handleInputModePress;
+  obj1.children = stringResult;
+  obj.trailing = closure_6(inputMode(4556).Text, obj1);
+  obj.onPress = handleInputModePress;
   const items1 = [closure_6(inputMode(5605).TableRow, obj)];
   let tmp4Result = null;
   if (inputMode !== InputModes.PUSH_TO_TALK) {
     const obj2 = { children: null };
     const obj3 = { label: null, value: null, onValueChange: null };
     const intl5 = tmp(1114).intl;
-    obj3[0] = intl5.string(tmp(1114).t.Z4oaN0);
-    obj3[1] = vadAutoThreshold;
-    obj3[2] = function onValueChange(autoThreshold) {
-      let obj = closure_1_1(closure_1_2[8]);
-      obj = { autoThreshold };
+    obj3.label = intl5.string(tmp(1114).t.Z4oaN0);
+    obj3.value = vadAutoThreshold;
+    obj3.onValueChange = function onValueChange(autoThreshold) {
+      const obj = { autoThreshold };
       return obj.setMode(inputMode, obj);
     };
     const items2 = [tmp5(tmp(7201).TableSwitchRow, obj3)];
     const obj4 = { label: null, subLabel: null };
     const intl6 = tmp(1114).intl;
-    obj4[0] = intl6.string(tmp(1114).t["o+2oMK"]);
-    const obj5 = { style: null, children: null };
-    obj5[0] = iter.slider;
-    const obj6 = { auto: null, threshold: null, onThresholdChange: null };
-    obj6[0] = vadAutoThreshold;
-    obj6[1] = stateFromStoresObject.vadThreshold;
-    obj6[2] = function onThresholdChange(threshold) {
-      let obj = closure_1_1(closure_1_2[8]);
-      obj = { threshold };
-      return obj.setMode(inputMode, obj);
+    obj4.label = intl6.string(tmp(1114).t["o+2oMK"]);
+    const obj5 = { style: iter.slider, children: null };
+    const obj6 = {
+      auto: vadAutoThreshold,
+      threshold: stateFromStoresObject.vadThreshold,
+      onThresholdChange(threshold) {
+        const obj = { threshold };
+        return obj.setMode(inputMode, obj);
+      },
     };
-    obj5[1] = tmp5(VoiceSensitivityDefault, obj6);
-    obj4[1] = tmp5(View, obj5);
+    obj5.children = tmp5(VoiceSensitivityDefault, obj6);
+    obj4.subLabel = tmp5(View, obj5);
     items2[1] = tmp5(tmp(5605).TableRow, obj4);
-    obj2[0] = items2;
+    obj2.children = items2;
     tmp4Result = tmp4(closure_7, obj2);
   }
   items1[1] = tmp4Result;
-  obj[2] = items1;
+  obj.children = items1;
   return closure_8(inputMode(9979).UserSettingsTableRowGroup, obj);
 }
 export { handleInputModePress };

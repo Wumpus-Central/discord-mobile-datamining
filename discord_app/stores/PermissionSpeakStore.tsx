@@ -1,11 +1,11 @@
 // discord_app/stores/PermissionSpeakStore.tsx
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import Storage2 from "../../discord_common/js/packages/storage/Storage.tsx";
-import dispatcherDefault from "../Dispatcher.tsx";
-import closure_4 from "ChannelStore.tsx";
-import closure_5 from "GuildStore.tsx";
+import DispatcherDefault from "../Dispatcher.tsx";
+import ChannelStore from "ChannelStore.tsx";
+import GuildStore from "GuildStore.tsx";
 
-require = arg1;
+require = fn;
 const hideSuppressWarning = "hideSuppressWarning";
 let c7 = false;
 let c8 = true;
@@ -14,21 +14,21 @@ const Store = initializeDefault.Store;
 class PermissionSpeakStore extends Store {}
 const prototype = PermissionSpeakStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_4, closure_5);
+  this.waitFor(ChannelStore, GuildStore);
   const Storage = Storage2.Storage;
-  closure_9 = Storage.get(hideSuppressWarning) || closure_9;
+  c9 = Storage.get(hideSuppressWarning) || c9;
 };
 prototype["isAFKChannel"] = function isAFKChannel() {
-  const channel = store.getChannel(closure_3);
+  const channel = ChannelStore.getChannel(c3);
   if (null == channel) {
     return false;
   } else {
-    guild = guild.getGuild(channel.getGuildId());
+    const guild = GuildStore.getGuild(channel.getGuildId());
     return null != guild && channel.id === guild.afkChannelId;
   }
 };
 prototype["shouldShowWarning"] = function shouldShowWarning() {
-  const channel = store.getChannel(closure_3);
+  const channel = ChannelStore.getChannel(c3);
   let isGuildStageVoiceResult;
   if (channel != null) {
     isGuildStageVoiceResult = channel.isGuildStageVoice();
@@ -40,7 +40,7 @@ prototype["shouldShowWarning"] = function shouldShowWarning() {
   return tmp2;
 };
 PermissionSpeakStore.displayName = "PermissionSpeakStore";
-const permissionSpeakStore = new PermissionSpeakStore(dispatcherDefault, {
+const permissionSpeakStore = new PermissionSpeakStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(sessionId) {
     sessionId = sessionId.sessionId;
     c7 = false;
@@ -52,9 +52,9 @@ const permissionSpeakStore = new PermissionSpeakStore(dispatcherDefault, {
   },
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
     voiceStates = voiceStates.voiceStates;
-    return voiceStates.reduce((arg0, sessionId) => {
-      let flag = arg0;
-      if (closure_2 === sessionId.sessionId) {
+    return voiceStates.reduce((acc, sessionId) => {
+      let flag = acc;
+      if (closure_1_2 === sessionId.sessionId) {
         if (suppress !== sessionId.suppress) {
           suppress = sessionId.suppress;
           c8 = !suppress;
@@ -63,8 +63,8 @@ const permissionSpeakStore = new PermissionSpeakStore(dispatcherDefault, {
           channelId = sessionId.channelId;
           c8 = !suppress;
         }
-        let tmp4 = closure_9;
-        if (!closure_9) {
+        let tmp4 = closure_1_9;
+        if (!closure_1_9) {
           tmp4 = null == sessionId.channelId;
         }
         flag = true;
@@ -85,6 +85,7 @@ const permissionSpeakStore = new PermissionSpeakStore(dispatcherDefault, {
     }
   },
 });
-let result = require("set").fileFinishedImporting("stores/PermissionSpeakStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("stores/PermissionSpeakStore.tsx");
 
 export default permissionSpeakStore;

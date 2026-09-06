@@ -1,14 +1,14 @@
 // discord_app/modules/safety_hub/SafetyHubAccountStandingLabels.tsx
-import set from "../../../_runtime/00002_set.js";
-import getSystemLocale from "../../intl/index.native.tsx";
-import ContentIdType from "SafetyHubModels.tsx";
+import util from "../../intl/index.native.tsx";
+import SafetyHubModels from "SafetyHubModels.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const obj = {};
-obj[ContentIdType.AccountStandingState.ALL_GOOD] = getSystemLocale.t["/Idfao"];
-obj[ContentIdType.AccountStandingState.LIMITED] = getSystemLocale.t.umleq4;
-obj[ContentIdType.AccountStandingState.VERY_LIMITED] = getSystemLocale.t.WBtMHf;
-obj[ContentIdType.AccountStandingState.AT_RISK] = getSystemLocale.t["7f+4Lg"];
-obj[ContentIdType.AccountStandingState.SUSPENDED] = getSystemLocale.t["0OONGB"];
-const result = set.fileFinishedImporting("modules/safety_hub/SafetyHubAccountStandingLabels.tsx");
+obj[SafetyHubModels.AccountStandingState.ALL_GOOD] = util.t["/Idfao"];
+obj[SafetyHubModels.AccountStandingState.LIMITED] = util.t.umleq4;
+obj[SafetyHubModels.AccountStandingState.VERY_LIMITED] = util.t.WBtMHf;
+obj[SafetyHubModels.AccountStandingState.AT_RISK] = util.t["7f+4Lg"];
+obj[SafetyHubModels.AccountStandingState.SUSPENDED] = util.t["0OONGB"];
+const result = size.fileFinishedImporting("modules/safety_hub/SafetyHubAccountStandingLabels.tsx");
 
 export const ACCOUNT_STANDING_SHORT_STATUS = obj;

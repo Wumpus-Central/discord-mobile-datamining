@@ -1,10 +1,10 @@
 // discord_app/modules/guests/GuestUtils.tsx
-import set from "../../../_runtime/00002_set.js";
-import hasFlag from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import GuildMemberFlags2 from "../guild_member/GuildMemberConstants.tsx";
+import FlagUtils from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import GuildMemberConstants from "../guild_member/GuildMemberConstants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const GuildMemberFlags = GuildMemberFlags2.GuildMemberFlags;
-const result = set.fileFinishedImporting("modules/guests/GuestUtils.tsx");
+const GuildMemberFlags = GuildMemberConstants.GuildMemberFlags;
+const result = size.fileFinishedImporting("modules/guests/GuestUtils.tsx");
 
 export default {
   canAcceptInvite(items, guild) {
@@ -20,7 +20,7 @@ export default {
       if (num == null) {
         num = 0;
       }
-      const hasFlagResult = hasFlag.hasFlag(num, GuildMemberFlags.IS_GUEST);
+      const hasFlagResult = FlagUtils.hasFlag(num, GuildMemberFlags.IS_GUEST);
       let hasFlagResult1 = !hasFlagResult;
       if (hasFlagResult) {
         let num2 = guild.flags;
@@ -31,7 +31,6 @@ export default {
         const tmp2Result = tmp2(1384);
       }
       tmp = hasFlagResult1;
-      const obj2 = hasFlag;
     }
     return tmp;
   },

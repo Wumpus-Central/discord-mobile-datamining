@@ -1,10 +1,9 @@
 // discord_app/modules/experiments/trigger_points/CommonTriggerPointManager.tsx
-import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
-import commonTriggerPointConfiguration from "OpenUserSettingsTriggerPoint.tsx";
-import commonTriggerPointConfiguration2 from "VoiceCallTriggerPoint.tsx";
+import OpenUserSettingsTriggerPoint2 from "OpenUserSettingsTriggerPoint.tsx";
+import VoiceCallTriggerPoint2 from "VoiceCallTriggerPoint.tsx";
+import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
-require = arg1;
-initializeDefault;
+require = fn;
 class CommonTriggerPointManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -20,21 +19,21 @@ const prototype = CommonTriggerPointManager.prototype;
 prototype["handleVoiceChannelSelect"] = function handleVoiceChannelSelect(guildId) {
   guildId = guildId.guildId;
   if (null != guildId.channelId) {
-    const VoiceCallTriggerPoint = commonTriggerPointConfiguration2.VoiceCallTriggerPoint;
-    const obj = { guildId: null };
-    obj[0] = guildId;
+    const VoiceCallTriggerPoint = VoiceCallTriggerPoint2.VoiceCallTriggerPoint;
+    const obj = { guildId };
     VoiceCallTriggerPoint.trigger(obj);
   }
 };
 prototype["handleCallCreate"] = function handleCallCreate() {
-  const VoiceCallTriggerPoint = commonTriggerPointConfiguration2.VoiceCallTriggerPoint;
+  const VoiceCallTriggerPoint = VoiceCallTriggerPoint2.VoiceCallTriggerPoint;
   VoiceCallTriggerPoint.trigger();
 };
 prototype["handleUserSettingsModalOpen"] = function handleUserSettingsModalOpen() {
-  const OpenUserSettingsTriggerPoint = commonTriggerPointConfiguration.OpenUserSettingsTriggerPoint;
+  const OpenUserSettingsTriggerPoint = OpenUserSettingsTriggerPoint2.OpenUserSettingsTriggerPoint;
   OpenUserSettingsTriggerPoint.trigger();
 };
 const commonTriggerPointManager = new CommonTriggerPointManager();
-const result = require("set").fileFinishedImporting("modules/experiments/trigger_points/CommonTriggerPointManager.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/experiments/trigger_points/CommonTriggerPointManager.tsx");
 
 export default commonTriggerPointManager;

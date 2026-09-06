@@ -1,14 +1,10 @@
 // discord_app/modules/game_detection/native/GameIcon.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import registerAssetDefault from "../../../../_runtime/07173_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/07174_registerAsset.js";
-import registerAssetDefault3 from "../../../../_runtime/07175_registerAsset.js";
-import registerAssetDefault4 from "../../../../_runtime/07176_registerAsset.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import { PremiumSubscriptionSKUs } from "../../premium/PremiumConstants.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import _modDef7173 from "../../../../_runtime/metro/07173__.js";
+import _modDef7174 from "../../../../_runtime/metro/07174__.js";
+import _modDef7175 from "../../../../_runtime/metro/07175__.js";
+import _modDef7176 from "../../../../_runtime/metro/07176__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
 class GameIcon {
   constructor(arg0) {
@@ -19,10 +15,10 @@ class GameIcon {
     }
     tmp2 = closure_8();
     obj = {
-      [closure_6.NORMAL]: tmp2.normal,
-      [closure_6.SMALL]: tmp2.small,
-      [closure_6.SIZE_24]: tmp2.size24,
-      [closure_6.LARGE]: tmp2.large,
+      [closure_1_6.NORMAL]: tmp2.normal,
+      [closure_1_6.SMALL]: tmp2.small,
+      [closure_1_6.SIZE_24]: tmp2.size24,
+      [closure_1_6.LARGE]: tmp2.large,
     };
     items = [, ,];
     items[0] = tmp2.gameIcon;
@@ -36,7 +32,7 @@ class GameIcon {
           iconURL = game.getIconURL(closure_7[size]);
           if (null != iconURL) {
             obj = { uri: null };
-            obj[0] = iconURL;
+            obj.uri = iconURL;
             tmp12 = obj;
           }
         }
@@ -44,7 +40,7 @@ class GameIcon {
       if (null == tmp12) {
         tmp15 = closure_0;
         tmp16 = closure_1;
-        tmp12 = require("registerAsset");
+        tmp12 = closure_0(closure_1[9]);
         arr = items.push(tmp2.placeholder);
       }
       tmp18 = jsx;
@@ -53,63 +49,67 @@ class GameIcon {
       items1 = [,];
       items1[0] = items;
       items1[1] = tmp2.entityWrapper;
-      obj1[0] = items1;
+      obj1.style = items1;
       tmp20 = Image;
       obj2 = { style: null, source: null };
-      obj2[0] = obj[size];
-      obj2[1] = tmp12;
-      obj1[1] = jsx(Image, obj2);
+      obj2.style = obj[size];
+      obj2.source = tmp12;
+      obj1.children = jsx(Image, obj2);
       return jsx(View, obj1);
     } else {
       tmp3 = PremiumSubscriptionSKUs;
       if (PremiumSubscriptionSKUs.TIER_0 === skuId) {
         tmp9 = closure_0;
         tmp10 = closure_1;
-        tmp4 = require("registerAsset");
+        tmp4 = closure_0(closure_1[6]);
         tmp11 = tmp4;
       } else if (tmp3.TIER_1 !== skuId) {
         if (tmp3.TIER_2 === skuId) {
           tmp5 = closure_0;
           tmp6 = closure_1;
-          tmp4 = require("registerAsset");
+          tmp4 = closure_0(closure_1[8]);
         } else {
           tmp4 = null;
         }
       }
       tmp7 = closure_0;
       tmp8 = closure_1;
-      tmp4 = require("registerAsset");
+      tmp4 = closure_0(closure_1[7]);
     }
     return;
   }
 }
-noopAll;
-({ Image: obj1, View: c3 } = get_ActivityIndicator);
+get_ActivityIndicator = fn(17);
+({ Image: c2, View: c3 } = get_ActivityIndicator);
+const PremiumSubscriptionSKUs = fn(1373).PremiumSubscriptionSKUs;
+const jsx = fn(21).jsx;
 let obj = { SIZE_24: "size_24", SMALL: "small", NORMAL: "normal", LARGE: "large" };
 obj = { [obj.SIZE_24]: 24, [obj.SMALL]: 32, [obj.NORMAL]: 48, [obj.LARGE]: 80 };
+fn(4560);
 obj = {
   gameIcon: { justifyContent: "center", alignItems: "center" },
-  size24: { width: obj.size_24, height: obj.size_24, borderRadius: ThemesDefault.radii.sm },
+  size24: null,
   small: null,
   normal: null,
   large: null,
   placeholder: null,
   entityWrapper: null,
 };
-createCacheKey = { width: obj.small, height: obj.small, borderRadius: ThemesDefault.radii.sm };
-obj[2] = createCacheKey;
-obj1 = { width: obj.size_24, height: obj.size_24, borderRadius: ThemesDefault.radii.sm };
-obj[3] = { width: obj.normal, height: obj.normal, borderRadius: ThemesDefault.radii.lg };
-const obj3 = { width: obj.normal, height: obj.normal, borderRadius: ThemesDefault.radii.lg };
-obj[4] = { width: obj.large, height: obj.large, borderRadius: ThemesDefault.radii.sm };
-const obj4 = { width: obj.large, height: obj.large, borderRadius: ThemesDefault.radii.sm };
-obj[5] = { borderRadius: ThemesDefault.radii.none, tintColor: ThemesDefault.colors.ICON_MUTED };
-const obj5 = { borderRadius: ThemesDefault.radii.none, tintColor: ThemesDefault.colors.ICON_MUTED };
-obj[6] = { borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, overflow: "hidden" };
-let closure_8 = createCacheKey.createStyles(obj);
+let size = { width: obj.size_24, height: obj.size_24, borderRadius: nativeDefault.radii.sm };
+obj.size24 = size;
+const size1 = { width: obj.small, height: obj.small, borderRadius: nativeDefault.radii.sm };
+obj.small = size1;
+const size2 = { width: obj.normal, height: obj.normal, borderRadius: nativeDefault.radii.lg };
+obj.normal = size2;
+const size3 = { width: obj.large, height: obj.large, borderRadius: nativeDefault.radii.sm };
+obj.large = size3;
+obj.placeholder = { borderRadius: nativeDefault.radii.none, tintColor: nativeDefault.colors.ICON_MUTED };
+const createStyles = { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, overflow: "hidden" };
+obj.entityWrapper = createStyles;
+const React6 = createStyles.createStyles(obj);
 GameIcon.Sizes = obj;
-const obj6 = { borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, overflow: "hidden" };
-const result = require("set").fileFinishedImporting("modules/game_detection/native/GameIcon.tsx");
+size = fn(2);
+const result = size.fileFinishedImporting("modules/game_detection/native/GameIcon.tsx");
 
 export default GameIcon;
 export const GameIconSizes = obj;

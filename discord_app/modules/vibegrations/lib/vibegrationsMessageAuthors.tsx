@@ -1,14 +1,14 @@
 // discord_app/modules/vibegrations/lib/vibegrationsMessageAuthors.tsx
-import _fetchProfileAll from "../../../actions/UserActionCreators.tsx";
-import closure_2 from "../../../stores/UserStore.tsx";
-import set from "../../../../_runtime/00002_set.js";
+import UserActionCreatorsAll from "../../../actions/UserActionCreators.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
 
-let set = new Set();
+const set = new Set();
 const map = new Map();
-let result = set.fileFinishedImporting("modules/vibegrations/lib/vibegrationsMessageAuthors.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/vibegrations/lib/vibegrationsMessageAuthors.tsx");
 
-export const resolveMessageAuthor = function resolveMessageAuthor(arg0, user, currentUser) {
-  if (null == arg0) {
+export const resolveMessageAuthor = function resolveMessageAuthor(userId, user, currentUser) {
+  if (null == userId) {
     let tmp2 = currentUser;
     if (currentUser == null) {
       tmp2 = null;
@@ -26,7 +26,7 @@ export const requestMessageAuthor = function requestMessageAuthor(userId) {
   importAll = userId;
   if (null != userId) {
     if (!set.has(userId)) {
-      if (null == user.getUser(userId)) {
+      if (null == UserStore.getUser(userId)) {
         let num = map.get(userId);
         if (num == null) {
           num = 0;
@@ -34,10 +34,9 @@ export const requestMessageAuthor = function requestMessageAuthor(userId) {
         if (num < 3) {
           const result = obj3.set(userId, num + 1);
           obj2.add(userId);
-          user = _fetchProfileAll.getUser(userId);
-          const obj = _fetchProfileAll;
-          user.finally(() => closure_1_3.delete(closure_0)).catch(() => {});
-          const cleanupPromise = user.finally(() => closure_1_3.delete(closure_0));
+          const user = UserActionCreatorsAll.getUser(userId);
+          user.finally(() => set.delete(closure_0)).catch(() => {});
+          const cleanupPromise = user.finally(() => set.delete(closure_0));
         }
         obj3 = map;
       }

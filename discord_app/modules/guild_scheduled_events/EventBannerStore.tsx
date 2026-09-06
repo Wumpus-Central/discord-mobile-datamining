@@ -1,11 +1,11 @@
 // discord_app/modules/guild_scheduled_events/EventBannerStore.tsx
-import set from "../../../_runtime/00002_set.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import GUILD_EVENT_MAX_NAME_LENGTH from "GuildScheduledEventsConstants.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import GuildScheduledEventsConstants from "GuildScheduledEventsConstants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const GuildScheduledEventStatus = GUILD_EVENT_MAX_NAME_LENGTH.GuildScheduledEventStatus;
-let closure_1 = {};
+const GuildScheduledEventStatus = GuildScheduledEventsConstants.GuildScheduledEventStatus;
+let dismissedEventIds = {};
 const PersistedStore = initializeDefault.PersistedStore;
 class EventBannerStore extends PersistedStore {}
 const prototype = EventBannerStore.prototype;
@@ -18,14 +18,15 @@ prototype["initialize"] = function initialize(dismissedEventIds) {
   }
 };
 prototype["isEventDismissed"] = function isEventDismissed(id) {
-  return null != table[id];
+  return null != obj[id];
 };
 prototype["getState"] = function getState() {
-  return { dismissedEventIds: closure_1 };
+  dismissedEventIds = { dismissedEventIds };
+  return dismissedEventIds;
 };
 EventBannerStore.displayName = "EventBannerStore";
 EventBannerStore.persistKey = "EventBanner";
-const eventBannerStore = new EventBannerStore(dispatcherDefault, {
+dismissedEventIds = {
   EVENT_BANNER_DISMISS: function handleDismiss(eventId) {
     const obj = {};
     const merged = Object.assign(obj);
@@ -58,7 +59,8 @@ const eventBannerStore = new EventBannerStore(dispatcherDefault, {
       delete tmp[tmp2];
     }
   },
-});
-const result = set.fileFinishedImporting("modules/guild_scheduled_events/EventBannerStore.tsx");
+};
+const eventBannerStore = new EventBannerStore(DispatcherDefault, dismissedEventIds);
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/EventBannerStore.tsx");
 
 export default eventBannerStore;

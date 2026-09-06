@@ -1,28 +1,29 @@
 // discord_app/modules/game_relationships/hooks/useIsGameFriends.tsx
-import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../GameRelationshipStore.tsx";
-import { RelationshipTypes } from "../../../Constants.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import GameRelationshipStore from "../GameRelationshipStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/game_relationships/hooks/useIsGameFriends.tsx");
+const require = fn;
+const RelationshipTypes = fn(1074).RelationshipTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_relationships/hooks/useIsGameFriends.tsx");
 
 export const useIsGameFriends = function useIsGameFriends(id) {
-  const _require = id;
-  let items = [closure_3];
+  _require = id;
+  let items = [GameRelationshipStore];
   const items1 = [id];
-  return callback(
-    require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+  return _slicedToArray(
+    require("initialize").useStateFromStores(
       items,
       () => {
-        const gameRelationshipsForUserByType = closure_1_3.getGameRelationshipsForUserByType(
+        const gameRelationshipsForUserByType = GameRelationshipStore.getGameRelationshipsForUserByType(
           closure_0,
-          closure_1_4.FRIEND,
+          RelationshipTypes.FRIEND,
         );
-        const items = [gameRelationshipsForUserByType.length > 0, closure_1_3.getGameRelationshipsVersion()];
+        const items = [gameRelationshipsForUserByType.length > 0, GameRelationshipStore.getGameRelationshipsVersion()];
         return items;
       },
       items1,
-      require("../../../utils/SecondaryIndexMapUtils.tsx").isVersionEqual,
+      require("SecondaryIndexMapUtils").isVersionEqual,
     ),
     1,
   )[0];

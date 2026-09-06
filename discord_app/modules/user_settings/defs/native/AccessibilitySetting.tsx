@@ -1,25 +1,24 @@
 // discord_app/modules/user_settings/defs/native/AccessibilitySetting.tsx
-import getSystemLocale from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import useSelectedDismissibleContent from "../../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
-import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import { ContentDismissActionType } from "../../../dismissible_content/DismissibleContentConstants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
-import { SettingsAccessibilityScreen } from "../../accessibility/native/SettingsAccessibilityScreen.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-let items = [require("DismissibleContent").DismissibleContent.MOBILE_ACCESSIBILITY_COLOR_SETTINGS];
-createToggle = {
+require = fn;
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const jsx = fn(21).jsx;
+let items = [fn(1943).DismissibleContent.MOBILE_ACCESSIBILITY_COLOR_SETTINGS];
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.G0neg7);
+    const intl = util.intl;
+    return intl.string(util.t.G0neg7);
   },
   parent: null,
-  IconComponent: require("AccessibilityIcon").AccessibilityIcon,
+  IconComponent: fn(15327).AccessibilityIcon,
   useTrailing() {
     let obj = useSelectedDismissibleContent;
-    [tmp4, r10012] = callback(obj.useSelectedDismissibleContent(items), 2);
+    [tmp4, r10012] = _slicedToArray(obj.useSelectedDismissibleContent(items), 2);
     let tmp5 = null;
     if (null != tmp4) {
       let hasItem;
@@ -30,42 +29,42 @@ createToggle = {
       if (hasItem) {
         obj = { text: null };
         const intl = tmp(1114).intl;
-        obj[0] = intl.string(tmp(1114).t.y2b7CA);
+        obj.text = intl.string(tmp(1114).t.y2b7CA);
         tmp5 = jsx(tmp(1178).TextBadge, { text: null });
       }
     }
     return tmp5;
   },
   usePreNavigationAction() {
-    const tmp = callback(first(7388).useSelectedDismissibleContent(items), 2);
+    const tmp = _slicedToArray(first(7388).useSelectedDismissibleContent(items), 2);
     first = tmp[0];
     dependencyMap = tmp3;
     items = [tmp[1], first];
-    return React.useCallback(() => {
+    return noop.useCallback(() => {
       let tmp2 = null != first;
       if (tmp2) {
         let hasItem;
-        if (closure_1_6 != null) {
+        if (items != null) {
           hasItem = obj.includes(tmp);
         }
         tmp2 = hasItem;
-        obj = closure_1_6;
+        obj = items;
       }
       if (tmp2) {
-        callback(closure_1_4.TAKE_ACTION);
+        closure_1(ContentDismissActionType.TAKE_ACTION);
       }
       return true;
     }, items);
   },
-  screen: createToggle,
-};
-createToggle = {
-  route: require("ME").UserSettingsSections.ACCESSIBILITY,
-  getComponent() {
-    return SettingsAccessibilityScreen /* SettingsAccessibilityScreen */.default;
+  screen: {
+    route: fn(1074).UserSettingsSections.ACCESSIBILITY,
+    getComponent() {
+      return require("SettingsAccessibilityScreen").default;
+    },
   },
 };
-createToggle = createToggle.createRoute(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AccessibilitySetting.tsx");
+SettingBuilders = SettingBuilders.createRoute(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccessibilitySetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

@@ -1,14 +1,12 @@
 // discord_app/records/SubscriptionPlanRecord.tsx
-import toJSDefault from "../lib/Record.tsx";
-import GuildFeatures from "../modules/premium/PremiumConstants.tsx";
+import Record from "../lib/Record.tsx";
 
-toJSDefault;
-({ PremiumSubscriptionSKUs: c0, PremiumTypes: closure_1, SubscriptionPlans: obj1 } = GuildFeatures);
+const PremiumConstants = fn(1373);
+({ PremiumSubscriptionSKUs: closure_0, PremiumTypes: closure_1, SubscriptionPlans: c2 } = PremiumConstants);
 let SubscriptionPlanRecord;
 class SubscriptionPlanRecord extends tmp2 {
   constructor(arg0) {
     tmp = new SubscriptionPlanRecord(new.target, new.target);
-    // ThrowIfThisInitialized (0x7c)
     ({
       id: tmp.id,
       name: tmp.name,
@@ -25,70 +23,68 @@ class SubscriptionPlanRecord extends tmp2 {
 }
 const prototype = SubscriptionPlanRecord.prototype;
 SubscriptionPlanRecord["createFromServer"] = function createFromServer(prices) {
-  closure_0 = prices;
   if (null != prices.prices) {
     let _Object = Object;
     const keys = Object.keys(prices.prices);
-    const reduced = keys.reduce((arg0, arg1) => {
+    const reduced = keys.reduce((acc, item) => {
       if (null == prices.prices) {
-        return arg0;
+        return acc;
       } else {
         let obj = { countryPrices: null, paymentSourcePrices: null };
-        obj = { countryCode: null, prices: null };
-        obj[0] = tmp.prices[arg1].country_prices.country_code;
+        obj = { countryCode: tmp.prices[item].country_prices.country_code, prices: null };
         prices = tmp3.country_prices.prices;
-        obj[1] = prices.map((amount) => ({
+        obj.prices = prices.map((amount) => ({
           amount: amount.amount,
           currency: amount.currency,
           tax: 0,
           taxInclusive: tax_inclusive.tax_inclusive,
         }));
-        obj[0] = obj;
+        obj.countryPrices = obj;
         const _Object = Object;
         const entries = Object.entries(tmp3.payment_source_prices);
-        obj[1] = entries.reduce((arg0, arg1) => {
-          [tmp, arr] = arg1;
-          arg0[tmp] = arr.map((amount) => ({
+        obj.paymentSourcePrices = entries.reduce((acc, item) => {
+          [tmp, arr] = item;
+          acc[tmp] = arr.map((amount) => ({
             amount: amount.amount,
             currency: amount.currency,
             tax: 0,
             taxInclusive: tax_inclusive.tax_inclusive,
           }));
-          return arg0;
+          return acc;
         }, {});
-        arg0[arg1] = obj;
-        return arg0;
+        acc[item] = obj;
+        return acc;
       }
     }, {});
   }
   ({ id, name, interval, interval_count, tax_inclusive, sku_id, currency } = prices);
-  if (typeof SubscriptionPlanRecord !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof SubscriptionPlanRecord === "function") {
+    const tmp10 = new SubscriptionPlanRecord(
+      tmp2,
+      tmp,
+      tmp6,
+      new.target,
+      id,
+      name,
+      interval,
+      interval_count,
+      tax_inclusive,
+      sku_id,
+      currency,
+    );
+    tmp10.id = id;
+    tmp10.name = name;
+    tmp10.interval = interval;
+    tmp10.intervalCount = interval_count;
+    tmp10.taxInclusive = tax_inclusive;
+    tmp10.skuId = sku_id;
+    tmp10.currency = currency;
+    tmp10.price = tmp5;
+    tmp10.prices = {};
+    return tmp10;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const tmp5 = new SubscriptionPlanRecord(
-    "Trying to call a non-function",
-    tmp,
-    SubscriptionPlanRecord,
-    new.target,
-    id,
-    name,
-    interval,
-    interval_count,
-    tax_inclusive,
-    sku_id,
-    currency,
-  );
-  // ThrowIfThisInitialized (0x7c)
-  tmp5.id = id;
-  tmp5.name = name;
-  tmp5.interval = interval;
-  tmp5.intervalCount = interval_count;
-  tmp5.taxInclusive = tax_inclusive;
-  tmp5.skuId = sku_id;
-  tmp5.currency = currency;
-  tmp5.price = prices.price;
-  tmp5.prices = {};
-  return tmp5;
 };
 Object.defineProperty(prototype, "premiumSubscriptionType", {
   get: function premiumSubscriptionType() {
@@ -96,28 +92,33 @@ Object.defineProperty(prototype, "premiumSubscriptionType", {
     if (constants.LEGACY !== skuId) {
       if (tmp.TIER_2 !== skuId) {
         if (tmp.TIER_1 === skuId) {
-          return closure_1.TIER_1;
+          return framebus.TIER_1;
         } else if (tmp.TIER_0 === skuId) {
-          return closure_1.TIER_0;
+          return framebus.TIER_0;
         } else {
           return null;
         }
       }
     }
-    return closure_1.TIER_2;
+    return framebus.TIER_2;
   },
   set: undefined,
 });
 prototype["toServerData"] = function toServerData() {
   const self = this;
-  let obj = {};
+  let prices = {};
   const keys = Object.keys(this.prices);
-  const item = keys.forEach((arg0) => {
-    obj = { country_prices: obj, payment_source_prices: tmp.paymentSourcePrices };
-    obj = { country_code: tmp.countryPrices.countryCode, prices: tmp.countryPrices.prices };
-    obj[arg0] = obj;
+  const item = keys.forEach((item) => {
+    const obj = {
+      country_prices: {
+        country_code: self.prices[item].countryPrices.countryCode,
+        prices: self.prices[item].countryPrices.prices,
+      },
+      payment_source_prices: self.prices[item].paymentSourcePrices,
+    };
+    obj[item] = obj;
   });
-  obj = {
+  prices = {
     id: this.id,
     name: this.name,
     sku_id: this.skuId,
@@ -126,12 +127,13 @@ prototype["toServerData"] = function toServerData() {
     tax_inclusive: this.taxInclusive,
     currency: this.currency,
     price: this.price,
-    prices: obj,
+    prices,
     price_tier: this.price,
   };
-  return obj;
+  return prices;
 };
-const result = require("set").fileFinishedImporting("records/SubscriptionPlanRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("records/SubscriptionPlanRecord.tsx");
 
 export default SubscriptionPlanRecord;
 export const getPriceFromServer = function getPriceFromServer(amount, taxInclusive) {
@@ -139,6 +141,6 @@ export const getPriceFromServer = function getPriceFromServer(amount, taxInclusi
 };
 export const isNoneSubscription = function isNoneSubscription(planId) {
   const items = [, , ,];
-  ({ NONE_MONTH: arr[0], NONE_3_MONTH: arr[1], NONE_6_MONTH: arr[2], NONE_YEAR: arr[3] } = closure_2);
+  ({ NONE_MONTH: arr[0], NONE_3_MONTH: arr[1], NONE_6_MONTH: arr[2], NONE_YEAR: arr[3] } = React2);
   return items.includes(planId);
 };

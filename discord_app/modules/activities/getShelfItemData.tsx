@@ -1,7 +1,8 @@
 // discord_app/modules/activities/getShelfItemData.tsx
-import closure_0 from "../applications/ApplicationStore.tsx";
+import ApplicationStore from "../applications/ApplicationStore.tsx";
 
-const result = require("set").fileFinishedImporting("modules/activities/getShelfItemData.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/getShelfItemData.tsx");
 
 export default function getShelfItemData(applicationId) {
   applicationId = applicationId.applicationId;
@@ -11,16 +12,14 @@ export default function getShelfItemData(applicationId) {
     found = applications.find((id) => id.id === applicationId);
   }
   if (found == null) {
-    found = applicationId.getApplication(applicationId);
+    found = ApplicationStore.getApplication(applicationId);
   }
   const found1 = activityConfigs.find((application_id) => application_id.application_id === applicationId);
   let tmp4 = null;
   if (null != found1) {
     tmp4 = null;
     if (null != found) {
-      const obj = { activity: null, application: null };
-      obj[0] = found1;
-      obj[1] = found;
+      const obj = { activity: found1, application: found };
       tmp4 = obj;
     }
   }

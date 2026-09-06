@@ -1,7 +1,7 @@
 // discord_app/modules/overlay/OverlayTypes.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/overlay/OverlayTypes.tsx");
+const result = size.fileFinishedImporting("modules/overlay/OverlayTypes.tsx");
 
 export const DevToolsFocusedPidsTrackMode = { TRACK_FOCUS: "track_focus", UNTRACK_FOCUS: "untrack_focus" };
 export const OverlayForcedRenderMode = {

@@ -1,176 +1,161 @@
 // discord_app/modules/game_profile/navigateToGameAnnouncement.tsx
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../stores/GuildStore.tsx";
-import ME from "../../Constants.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import GuildStore from "../../stores/GuildStore.tsx";
 
-const require = arg1;
-function _navigateToGameAnnouncement() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c3 = 0;
-    c4 = 0;
-    const iter = (function* (arg0) {
-      if (guild === 2) {
-        guild = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
+const require = fn;
+let closure_8 = async function _navigateToGameAnnouncement(arg0, value) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
         if (arg0 === 1) {
-          throw arg1;
+          c4 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c4 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_2 = tmp5;
+          closure_1 = tmp2;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          closure_129_3 = undefined;
+          closure_129_4 = undefined;
+          ({
+            invite: closure_129_0,
+            guildId: closure_129_1,
+            channelId: closure_129_2,
+            messageId: closure_129_3,
+            analyticsLocationStack: closure_129_4,
+          } = closure_0);
+          closure_129_5 = undefined;
+          closure_129_6 = undefined;
+          let guild3;
+          c3 = 1;
+          c4 = 1;
+          return { value: "PX_16", done: true };
         }
       } else {
-        try {
-          guild = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              guild = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              guild = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              dependencyMap = tmp5;
-              id = tmp2;
-              let lib;
-              id = undefined;
-              dependencyMap = undefined;
-              c3 = undefined;
-              guild = undefined;
-              ({ invite: c0, guildId: id, channelId: c2, messageId: c3, analyticsLocationStack: c4 } = lib);
-              let constants;
-              let set;
-              let guild3;
-              c3 = 1;
-              guild = 1;
-              return { value: "PX_16", done: true };
-            }
+        if (1 === tmp5) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj1 = { value, done: true };
+            return obj1;
           } else {
-            if (1 === tmp5) {
-              if (arg0 === 1) {
-                guild = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                guild = 3;
-                obj1 = { value: null, done: true };
-                obj1[0] = arg1;
-                return obj1;
-              } else {
-                id(38)(guild.length > 0, "analyticsLocationStack must have at least one location");
-                constants = guild[guild.length - 1];
-                set = null;
-                if (null != lib) {
-                  guild = lib.guild;
-                  id = undefined;
-                  if (guild != null) {
-                    id = guild.id;
-                  }
-                  const guild2 = lib.guild;
-                  let features;
-                  if (guild2 != null) {
-                    features = guild2.features;
-                  }
-                  set = new Set(features);
-                }
-                if (null != id) {
-                  guild3 = guild.getGuild(id);
-                  let joinedAt;
-                  if (guild3 != null) {
-                    joinedAt = guild3.joinedAt;
-                  }
-                  if (null == joinedAt) {
-                    if (null != set) {
-                      if (!set.has(constants.PREVIEW_ENABLED)) {
-                        if (null != lib) {
-                          let obj5 = id(8378);
-                          const obj2 = { inviteKey: null, context: null, skipOnboarding: true };
-                          obj2[0] = lib.code;
-                          let obj3 = { location: null };
-                          obj3[0] = constants;
-                          obj2[1] = obj3;
-                          c3 = 3;
-                          guild = 1;
-                          const obj4 = { value: null, done: false };
-                          obj4[0] = obj5.acceptInvite(obj2);
-                          return obj4;
-                        }
-                      }
-                    }
-                    let obj9 = lib(7341);
-                    obj5 = { shouldNavigate: true, channelId: null, messageId: null, joinSource: null };
-                    obj5[1] = dependencyMap;
-                    obj5[2] = c3;
-                    obj5[3] = set.GAME_PROFILE_ANNOUNCEMENTS;
-                    c3 = 2;
-                    guild = 1;
-                    const obj6 = { value: null, done: false };
-                    obj6[0] = obj9.startLurking(id, {}, obj5, guild);
-                    return obj6;
-                  }
-                }
-                guild = 3;
-                return { value: "HermesInternal", done: null };
+            closure_130_1(closure_130_2[3])(
+              closure_129_4.length > 0,
+              "analyticsLocationStack must have at least one location",
+            );
+            closure_129_5 = closure_129_4[closure_129_4.length - 1];
+            closure_129_6 = null;
+            if (null != closure_129_0) {
+              const guild = closure_129_0.guild;
+              let id;
+              if (guild != null) {
+                id = guild.id;
               }
-            } else if (2 === tmp5) {
-              if (arg0 === 1) {
-                guild = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                guild = 3;
-                const obj7 = { value: null, done: true };
-                obj7[0] = arg1;
-                return obj7;
-              } else {
-                guild = 3;
-                const obj8 = { value: null, done: true };
-                obj8[0] = undefined;
-                return obj8;
+              closure_129_1 = id;
+              const guild2 = closure_129_0.guild;
+              let features;
+              if (guild2 != null) {
+                features = guild2.features;
               }
-            } else if (arg0 === 1) {
-              guild = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              guild = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
+              const set = new Set(features);
+              closure_129_6 = set;
             }
-            obj3 = lib(1100);
-            obj9 = { sourceLocationStack: null };
-            obj9[0] = guild;
-            obj3.transitionTo(guild3.CHANNEL(id, dependencyMap, c3), obj9);
+            if (null != closure_129_1) {
+              guild3 = closure_130_4.getGuild(closure_129_1);
+              let joinedAt;
+              if (guild3 != null) {
+                joinedAt = guild3.joinedAt;
+              }
+              if (null == joinedAt) {
+                if (null != closure_129_6) {
+                  if (!closure_129_6.has(closure_130_5.PREVIEW_ENABLED)) {
+                    if (null != closure_129_0) {
+                      let obj5 = closure_130_1(closure_130_2[5]);
+                      const obj2 = { inviteKey: closure_129_0.code, context: null, skipOnboarding: true };
+                      let obj3 = { location: closure_129_5 };
+                      obj2.context = obj3;
+                      c3 = 3;
+                      c4 = 1;
+                      const obj4 = { value: obj5.acceptInvite(obj2), done: false };
+                      return obj4;
+                    }
+                  }
+                }
+                let obj9 = closure_130_0(closure_130_2[4]);
+                obj5 = {
+                  shouldNavigate: true,
+                  channelId: closure_129_2,
+                  messageId: closure_129_3,
+                  joinSource: closure_130_6.GAME_PROFILE_ANNOUNCEMENTS,
+                };
+                c3 = 2;
+                c4 = 1;
+                const obj6 = { value: obj9.startLurking(closure_129_1, {}, obj5, closure_129_4), done: false };
+                return obj6;
+              }
+            }
+            c4 = 3;
+            return { value: "HermesInternal", done: null };
           }
-        } catch (tmp53) {
-          guild = tmp;
-          throw tmp53;
+        } else if (2 === tmp5) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj7 = { value, done: true };
+            return obj7;
+          } else {
+            c4 = 3;
+            const obj8 = { value: undefined, done: true };
+            return obj8;
+          }
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          obj = { value, done: true };
+          return obj;
         }
+        obj3 = closure_130_0(closure_130_2[6]);
+        obj9 = { sourceLocationStack: closure_129_4 };
+        obj3.transitionTo(closure_130_7.CHANNEL(closure_129_1, closure_129_2, closure_129_3), obj9);
       }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_8 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp53) {
+      c4 = tmp;
+      throw tmp53;
+    }
   }
-  return applyArgumentsResult;
-}
-({ GuildFeatures: c5, JoinGuildSources: closure_6, Routes: error } = ME);
-const result = require("set").fileFinishedImporting("modules/game_profile/navigateToGameAnnouncement.tsx");
+};
+const Constants = fn(1074);
+({ GuildFeatures: hasOwnProperty, JoinGuildSources: metroRequire, Routes: closure_7 } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_profile/navigateToGameAnnouncement.tsx");
 
 export default function navigateToGameAnnouncement() {
   const self = this;
-  const apply = _navigateToGameAnnouncement.apply;
+  const apply = closure_8.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

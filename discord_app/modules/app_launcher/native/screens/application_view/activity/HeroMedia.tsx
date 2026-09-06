@@ -1,24 +1,24 @@
 // discord_app/modules/app_launcher/native/screens/application_view/activity/HeroMedia.tsx
-import noopAll from "../../../../../../../_runtime/00019_noop.js";
 import useEmbeddedActivityBackgroundDefault from "../../../../../activities/utils/useEmbeddedActivityBackground.tsx";
 import useDefaultAppLauncherWidth from "../../../hooks/useDefaultAppLauncherWidth.tsx";
 import getPreviewVideoAssetUrlDefault from "../../../../../activities/utils/getPreviewVideoAssetUrl.tsx";
-import closure_3 from "../../../../../a11y/AccessibilityStore.tsx";
-import { DEFAULT_CONTENT_PADDING } from "../../../AppLauncherNativeConstants.tsx";
-import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../../../../../_runtime/metro/00019__.js";
+import AccessibilityStore from "../../../../../a11y/AccessibilityStore.tsx";
 
-require = arg1;
-noopAll;
-let closure_6 = createCacheKey.createStyles({ mediaBackground: { backgroundColor: "black" } });
-const result = require("set").fileFinishedImporting(
+require = fn;
+const DEFAULT_CONTENT_PADDING = fn(1482).DEFAULT_CONTENT_PADDING;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_6 = createStyles.createStyles({ mediaBackground: { backgroundColor: "black" } });
+let size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/app_launcher/native/screens/application_view/activity/HeroMedia.tsx",
 );
 
 export default function HeroMedia(arg0) {
   ({ applicationId, containerHeight } = arg0);
   ({ width, contentWidth } = arg0);
-  const tmp = callback();
+  const tmp = closure_6();
   ({ width: width2, contentWidth: contentWidth2 } = { width, contentWidth });
   let obj = useDefaultAppLauncherWidth;
   if (contentWidth2 == null) {
@@ -30,7 +30,7 @@ export default function HeroMedia(arg0) {
   const rounded = Math.floor((9 * contentWidth2) / 16);
   const tmp7 = useEmbeddedActivityBackgroundDefault({ applicationId, size: contentWidth2, names: ["embedded_cover"] });
   let tmp2Result = tmp2(504);
-  const items = [closure_3];
+  const items = [AccessibilityStore];
   const stateFromStores = tmp2Result.useStateFromStores(items, () => useReducedMotion.useReducedMotion, []);
   tmp2Result = tmp2(7168);
   const getOrFetchApplication = tmp2Result.useGetOrFetchApplication(applicationId);
@@ -50,9 +50,9 @@ export default function HeroMedia(arg0) {
   if (null != tmp12) {
     tmp15Result = null;
     if ("" !== tmp12) {
-      obj = {
+      const size = {
         muted: true,
-        paused: null,
+        paused: stateFromStores,
         src: null,
         height: null,
         width: null,
@@ -63,17 +63,15 @@ export default function HeroMedia(arg0) {
         videoStyle: null,
         postponeRender: false,
       };
-      obj[1] = stateFromStores;
       if (null != tmp12) {
         if ("" !== tmp12) {
-          obj = { videoURI: null };
-          obj[0] = tmp12;
-          let obj5 = obj;
+          obj = { videoURI: tmp12 };
+          let obj4 = obj;
         }
-        obj[2] = obj5;
-        obj[3] = rounded;
-        obj[4] = contentWidth2;
-        obj[5] = tmp7.url;
+        size.src = obj4;
+        size.height = rounded;
+        size.width = contentWidth2;
+        size.poster = tmp7.url;
         const intl = tmp2(1114).intl;
         let str3;
         if (getOrFetchApplication != null) {
@@ -82,33 +80,29 @@ export default function HeroMedia(arg0) {
         if (str3 == null) {
           str3 = "";
         }
-        obj1 = { applicationName: null };
-        obj1[0] = str3;
-        obj[7] = intl.formatToPlainString(tmp2(1114).t["Af+EQD"], obj1);
+        obj = { applicationName: str3 };
+        size.accessibilityLabel = intl.formatToPlainString(tmp2(1114).t["Af+EQD"], obj);
         const items1 = [tmp.mediaBackground, ,];
-        const obj2 = { maxHeight: null };
-        obj2[0] = rounded;
-        items1[1] = obj2;
+        const obj1 = { maxHeight: rounded };
+        items1[1] = obj1;
         let tmp14 = null != containerHeight;
         if (tmp14) {
-          const obj3 = { transform: null };
-          const obj4 = { translateY: null };
-          obj4[0] = (containerHeight - rounded) / 2;
-          const items2 = [obj4];
-          obj3[0] = items2;
-          tmp14 = obj3;
+          const obj2 = { transform: null };
+          const obj3 = { translateY: (containerHeight - rounded) / 2 };
+          const items2 = [obj3];
+          obj2.transform = items2;
+          tmp14 = obj2;
         }
         items1[2] = tmp14;
-        obj[8] = items1;
-        obj[9] = tmp.mediaBackground;
-        tmp15Result = tmp15(tmp16, obj);
+        size.style = items1;
+        size.videoStyle = tmp.mediaBackground;
+        tmp15Result = tmp15(tmp16, size);
       }
       let str2 = tmp7.url;
       if (str2 == null) {
         str2 = "";
       }
-      obj5 = { uri: null };
-      obj5[0] = str2;
+      obj4 = { uri: str2 };
       tmp15 = jsx;
     }
   }
@@ -126,6 +120,6 @@ export const useHeroMediaDimensions = function useHeroMediaDimensions(arg0) {
     }
     contentWidth = width - 2 * DEFAULT_CONTENT_PADDING;
   }
-  obj = { width: contentWidth, height: Math.floor((9 * contentWidth) / 16) };
-  return obj;
+  const size = { width: contentWidth, height: Math.floor((9 * contentWidth) / 16) };
+  return size;
 };

@@ -1,37 +1,36 @@
 // discord_app/modules/guild_sidebar/native/DirectoryChannel.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import importAllResult from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../stores/ChannelStore.tsx";
-import closure_5 from "../../../stores/GuildChannelStore.tsx";
-import { UnreadSetting } from "../../read_states/ReadStateConstants.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import router_utils from "../../routing/router_utils.tsx";
+import openChannelLongPressActionSheet from "../../channel/native/openChannelLongPressActionSheet.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import ChannelStore from "../../../stores/ChannelStore.tsx";
+import GuildChannelStore from "../../../stores/GuildChannelStore.tsx";
 
-const require = arg1;
-let c3 = importAllResult;
+require = fn;
+const UnreadSetting = fn(4742).UnreadSetting;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
 let obj = { container: null };
-obj = {
-  marginVertical: require("hairlineWidth").CHANNEL_MARGIN_VERTICAL,
-  marginHorizontal: 8,
-  borderRadius: ThemesDefault.radii.md,
-};
-obj[0] = obj;
-let closure_8 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo((guildId) => {
+obj = { marginVertical: fn(10118).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
+obj.container = obj;
+let closure_8 = createStyles.createStyles(obj);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_sidebar/native/DirectoryChannel.tsx");
+
+export default noop.memo((guildId) => {
   guildId = guildId.guildId;
   let selected = guildId.selected;
-  let id;
   let obj = guildId(563);
-  const items = [closure_4, closure_5];
+  const items = [ChannelStore, GuildChannelStore];
   const stateFromStores = obj.useStateFromStores(items, () => {
-    const directoryChannelIds = closure_1_5.getDirectoryChannelIds(guildId);
+    const directoryChannelIds = GuildChannelStore.getDirectoryChannelIds(guildId);
     let channel = null;
     if (0 !== directoryChannelIds.length) {
-      channel = closure_1_4.getChannel(directoryChannelIds[0]);
+      channel = ChannelStore.getChannel(directoryChannelIds[0]);
     }
     return channel;
   });
-  id = undefined;
+  let id;
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
@@ -40,15 +39,15 @@ const memoResult = importAllResult.memo((guildId) => {
   }
   const items1 = [guildId, id];
   [][0] = id;
-  const callback = importAllResult.useCallback(() => {
-    guildId(closure_1_2[9]).transitionToGuild(guildId, id);
+  const callback = noop.useCallback(() => {
+    router_utils.transitionToGuild(guildId, id);
   }, items1);
   let tmp7 = null;
   if (null != stateFromStores) {
     obj = {
-      onPress: null,
-      onLongPress: null,
-      style: null,
+      onPress: callback,
+      onLongPress: tmp6,
+      style: tmp.container,
       accessible: true,
       accessibilityRole: "button",
       accessibilityLabel: null,
@@ -57,23 +56,15 @@ const memoResult = importAllResult.memo((guildId) => {
       selected: null,
       resolvedUnreadSetting: null,
     };
-    obj[0] = callback;
-    obj[1] = tmp6;
-    obj[2] = tmp.container;
-    obj = { channel: null };
-    obj[0] = stateFromStores;
-    obj[5] = id(9770)(obj);
-    obj1 = { selected: null };
-    obj1[0] = selected;
-    obj[6] = obj1;
-    obj[7] = stateFromStores;
-    obj[8] = selected;
-    obj[9] = UnreadSetting.ONLY_MENTIONS;
-    tmp7 = jsx(id(16116), { channel: null });
+    obj = { channel: stateFromStores };
+    obj.accessibilityLabel = id(9770)(obj);
+    const obj1 = { selected };
+    obj.accessibilityState = obj1;
+    obj.channel = stateFromStores;
+    obj.selected = selected;
+    obj.resolvedUnreadSetting = UnreadSetting.ONLY_MENTIONS;
+    tmp7 = jsx(id(16116), { channel: stateFromStores });
     const tmp10 = id(16116);
   }
   return tmp7;
 });
-let result = require("set").fileFinishedImporting("modules/guild_sidebar/native/DirectoryChannel.tsx");
-
-export default memoResult;

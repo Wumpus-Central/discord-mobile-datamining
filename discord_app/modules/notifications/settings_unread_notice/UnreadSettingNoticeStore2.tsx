@@ -1,42 +1,38 @@
 // discord_app/modules/notifications/settings_unread_notice/UnreadSettingNoticeStore2.tsx
-import DISCORD_EPOCHDefault from "../../../utils/SnowflakeUtils.tsx";
+import SnowflakeUtilsDefault from "../../../utils/SnowflakeUtils.tsx";
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../../Dispatcher.tsx";
-import setDefault from "../../../utils/Durations.tsx";
-import hasFlag from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import useChannelPresetSettings from "../settings/utils/notficationSettingsChannelFlagUtils.tsx";
-import closure_3 from "../../../stores/AuthenticationStore.tsx";
-import closure_4 from "../../../stores/ChannelStore.tsx";
-import closure_5 from "../../../stores/GuildStore.tsx";
-import closure_6 from "../../../stores/SelectedChannelStore.tsx";
-import closure_7 from "../../../stores/UserGuildSettingsStore.tsx";
-import { UserNotificationSettings } from "../../../Constants.tsx";
-import { UnreadSetting } from "../../read_states/ReadStateConstants.tsx";
-import { ChannelNotificationSettingsFlags as closure_10 } from "../../user_settings/UserSettingsConstants.tsx";
-import set from "../../../../_runtime/00002_set.js";
+import DispatcherDefault from "../../../Dispatcher.tsx";
+import DurationsDefault from "../../../utils/Durations.tsx";
+import FlagUtils from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import notficationSettingsChannelFlagUtils from "../settings/utils/notficationSettingsChannelFlagUtils.tsx";
+import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
+import ChannelStore from "../../../stores/ChannelStore.tsx";
+import GuildStore from "../../../stores/GuildStore.tsx";
+import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
+import UserGuildSettingsStore from "../../../stores/UserGuildSettingsStore.tsx";
 
-require = arg1;
+require = fn;
 function startInterval() {
   if (0 !== interval) {
     const _clearInterval = clearInterval;
     clearInterval(interval);
     interval = 0;
   }
-  if (closure_7.useNewNotifications) {
+  if (UserGuildSettingsStore.useNewNotifications) {
     const _setInterval = setInterval;
     interval = setInterval(() => {
       let flag = false;
       if (null != closure_16) {
         flag = false;
-        if (callback2(closure_16)) {
-          if (!(closure_16 in channels.channels)) {
+        if (shouldTrackChannel(closure_16)) {
+          if (!(closure_16 in closure_1_14.channels)) {
             tmp4.channels[tmp3] = { lastActionTime: 0, viewDuration: 0, numSends: 0 };
           }
           const _Date = Date;
           const timestamp = Date.now();
-          if (channels.channels[closure_16].lastActionTime <= timestamp - callback(table[8]).Millis.DAY) {
+          if (closure_1_14.channels[closure_16].lastActionTime <= timestamp - DurationsDefault.Millis.DAY) {
             const _Date2 = Date;
-            const timestamp1 = Date.now();
+            timestamp1 = Date.now();
             tmp5.lastActionTime = timestamp1;
             tmp5.viewDuration = tmp5.viewDuration + (timestamp1 - timestamp1);
             flag = true;
@@ -46,18 +42,18 @@ function startInterval() {
         }
       }
       if (flag) {
-        closure_21.emitChange();
+        unreadSettingNoticeStore2Class.emitChange();
       }
-    }, 15 * setDefault.Millis.SECOND);
+    }, 15 * DurationsDefault.Millis.SECOND);
   }
   return false;
 }
 function shouldTrackChannel(channelId) {
-  if (closure_7.useNewNotifications) {
+  if (UserGuildSettingsStore.useNewNotifications) {
     if (set.has(channelId)) {
       return false;
     } else {
-      const basicChannel = store.getBasicChannel(channelId);
+      const basicChannel = ChannelStore.getBasicChannel(channelId);
       if (null != basicChannel) {
         if (null != basicChannel.guild_id) {
           if (obj.isGuildOrCategoryOrChannelMuted(basicChannel.guild_id, basicChannel.id)) {
@@ -76,11 +72,10 @@ function shouldTrackChannel(channelId) {
                 if (!tmp9) {
                   let tmp11 = null == tmp7.flags;
                   if (!tmp11) {
-                    tmp11 = !hasFlag.hasAnyFlag(
+                    tmp11 = !FlagUtils.hasAnyFlag(
                       tmp7.flags,
                       constants.UNREADS_ALL_MESSAGES | constants.UNREADS_ONLY_MENTIONS,
                     );
-                    const obj2 = hasFlag;
                   }
                   tmp9 = !tmp11;
                 }
@@ -104,11 +99,10 @@ function shouldTrackChannel(channelId) {
                   if (!tmp18) {
                     let tmp20 = null == tmp16.flags;
                     if (!tmp20) {
-                      tmp20 = !hasFlag.hasAnyFlag(
+                      tmp20 = !FlagUtils.hasAnyFlag(
                         tmp16.flags,
                         constants.UNREADS_ALL_MESSAGES | constants.UNREADS_ONLY_MENTIONS,
                       );
-                      const obj3 = hasFlag;
                     }
                     tmp18 = !tmp20;
                   }
@@ -135,20 +129,23 @@ function shouldTrackChannel(channelId) {
     return false;
   }
 }
-let obj = { timeSinceJoin: setDefault.Millis.HOUR, sends: 1, viewTime: setDefault.Millis.MINUTE };
+const UserNotificationSettings = fn(1074).UserNotificationSettings;
+const UnreadSetting = fn(4742).UnreadSetting;
+const constants = fn(1084).ChannelNotificationSettingsFlags;
+let obj = { timeSinceJoin: DurationsDefault.Millis.HOUR, sends: 1, viewTime: DurationsDefault.Millis.MINUTE };
 let items = [obj, , ,];
-obj = { timeSinceJoin: setDefault.Millis.DAY, sends: 2, viewTime: 2 * setDefault.Millis.MINUTE };
+obj = { timeSinceJoin: DurationsDefault.Millis.DAY, sends: 2, viewTime: 2 * DurationsDefault.Millis.MINUTE };
 items[1] = obj;
-obj = { timeSinceJoin: setDefault.Millis.WEEK, sends: 5, viewTime: 5 * setDefault.Millis.MINUTE };
+obj = { timeSinceJoin: DurationsDefault.Millis.WEEK, sends: 5, viewTime: 5 * DurationsDefault.Millis.MINUTE };
 items[2] = obj;
-items[3] = { timeSinceJoin: setDefault.Millis.DAYS_30, sends: 10, viewTime: 30 * setDefault.Millis.MINUTE };
+items[3] = { timeSinceJoin: DurationsDefault.Millis.DAYS_30, sends: 10, viewTime: 30 * DurationsDefault.Millis.MINUTE };
 let closure_12 = 5 * items[items.length - 1].viewTime;
-const WEEK = setDefault.Millis.WEEK;
+const WEEK = DurationsDefault.Millis.WEEK;
 let closure_14 = { channels: {} };
-let set = new Set();
-let c16 = null;
-let c17 = 0;
-let c18 = 0;
+const set = new Set();
+let closure_16 = null;
+let closure_17 = 0;
+let closure_18 = 0;
 const PersistedStore = initializeDefault.PersistedStore;
 class UnreadSettingNoticeStore2Class extends PersistedStore {}
 const prototype = UnreadSettingNoticeStore2Class.prototype;
@@ -156,9 +153,9 @@ prototype["initialize"] = function initialize(channels) {
   if (null != channels) {
     closure_14.channels = channels.channels;
   }
-  items = [closure_7];
+  items = [UserGuildSettingsStore];
   this.syncWith(items, startInterval);
-  this.waitFor(closure_3, closure_4, closure_5, closure_6, closure_7);
+  this.waitFor(AuthenticationStore, ChannelStore, GuildStore, SelectedChannelStore, UserGuildSettingsStore);
 };
 prototype["getState"] = function getState() {
   return closure_14;
@@ -175,7 +172,7 @@ prototype["getLastActionTime"] = function getLastActionTime(id) {
 };
 prototype["maybeAutoUpgradeChannel"] = function maybeAutoUpgradeChannel(id) {
   if (shouldTrackChannel(id)) {
-    const basicChannel = store.getBasicChannel(id);
+    const basicChannel = ChannelStore.getBasicChannel(id);
     let tmp6 = null != basicChannel && null != basicChannel.guild_id;
     if (tmp6) {
       let flag2 = (function isChannelNewEnough(basicChannel) {
@@ -188,23 +185,18 @@ prototype["maybeAutoUpgradeChannel"] = function maybeAutoUpgradeChannel(id) {
           const _Date = Date;
           joinedAt = new Date();
         }
-        callback(table[9]).age(basicChannel.id);
+        SnowflakeUtilsDefault.age(basicChannel.id);
         const timestamp = Date.now();
         if (null == channels.channels[basicChannel.id]) {
           return false;
         } else {
           const _Date2 = Date;
-          if (tmp9.lastActionTime < Date.now() - closure_13) {
+          if (tmp9.lastActionTime < Date.now() - WEEK) {
             return false;
           } else {
-            for (const item10040 of closure_11) {
+            for (const item10040 of closure_1_11) {
               let tmp12 = item10040;
               if (tmp8 < item10040.timeSinceJoin) {
-                let tmp13 = item10040;
-                if (tmp9.numSends < tmp12.sends) {
-                  let tmp14 = item10040;
-                }
-                let tmp15 = obj2;
                 obj2.return();
                 let flag = true;
                 return true;
@@ -214,19 +206,17 @@ prototype["maybeAutoUpgradeChannel"] = function maybeAutoUpgradeChannel(id) {
             return false;
           }
         }
-        const obj = callback(table[9]);
       })(basicChannel);
       if (flag2) {
-        const channels = closure_14.channels;
+        channels = channels.channels;
         delete tmp[tmp2];
         set.add(id);
-        const result = useChannelPresetSettings.updateChannelUnreadSetting(
+        const result = notficationSettingsChannelFlagUtils.updateChannelUnreadSetting(
           basicChannel.guild_id,
           basicChannel.id,
           UnreadSetting.ALL_MESSAGES,
         );
         flag2 = true;
-        let obj = useChannelPresetSettings;
       }
       tmp6 = flag2;
     }
@@ -237,7 +227,7 @@ prototype["maybeAutoUpgradeChannel"] = function maybeAutoUpgradeChannel(id) {
 };
 UnreadSettingNoticeStore2Class.displayName = "UnreadSettingNoticeStore2";
 UnreadSettingNoticeStore2Class.persistKey = "UnreadSettingNoticeStore2";
-const unreadSettingNoticeStore2Class = new UnreadSettingNoticeStore2Class(dispatcherDefault, {
+const unreadSettingNoticeStore2Class = new UnreadSettingNoticeStore2Class(DispatcherDefault, {
   CHANNEL_SELECT: function handleChannelSelect() {
     let flag = false;
     if (null != channelId) {
@@ -248,7 +238,7 @@ const unreadSettingNoticeStore2Class = new UnreadSettingNoticeStore2Class(dispat
         }
         const _Date = Date;
         const timestamp = Date.now();
-        if (closure_14.channels[channelId].lastActionTime <= timestamp - setDefault.Millis.DAY) {
+        if (closure_14.channels[channelId].lastActionTime <= timestamp - DurationsDefault.Millis.DAY) {
           const _Date2 = Date;
           const timestamp1 = Date.now();
           tmp5.lastActionTime = timestamp1;
@@ -260,33 +250,33 @@ const unreadSettingNoticeStore2Class = new UnreadSettingNoticeStore2Class(dispat
         }
       }
     }
-    channelId = store2.getChannelId();
+    channelId = SelectedChannelStore.getChannelId();
     closure_17 = Date.now();
     return flag;
   },
   CONNECTION_OPEN: function handleConnectionOpen() {
-    const channelId = store2.getChannelId();
-    closure_17 = Date.now();
+    const channelId = SelectedChannelStore.getChannelId();
+    let timestamp1 = Date.now();
     if (0 !== interval) {
       const _clearInterval = clearInterval;
       clearInterval(interval);
       interval = 0;
     }
-    if (closure_7.useNewNotifications) {
+    if (UserGuildSettingsStore.useNewNotifications) {
       const _setInterval = setInterval;
       interval = setInterval(() => {
         let flag = false;
         if (null != closure_16) {
           flag = false;
-          if (callback2(closure_16)) {
-            if (!(closure_16 in channels.channels)) {
+          if (shouldTrackChannel(closure_16)) {
+            if (!(closure_16 in closure_1_14.channels)) {
               tmp4.channels[tmp3] = { lastActionTime: 0, viewDuration: 0, numSends: 0 };
             }
             const _Date = Date;
             const timestamp = Date.now();
-            if (channels.channels[closure_16].lastActionTime <= timestamp - callback(table[8]).Millis.DAY) {
+            if (closure_1_14.channels[closure_16].lastActionTime <= timestamp - DurationsDefault.Millis.DAY) {
               const _Date2 = Date;
-              const timestamp1 = Date.now();
+              timestamp1 = Date.now();
               tmp5.lastActionTime = timestamp1;
               tmp5.viewDuration = tmp5.viewDuration + (timestamp1 - timestamp1);
               flag = true;
@@ -296,14 +286,14 @@ const unreadSettingNoticeStore2Class = new UnreadSettingNoticeStore2Class(dispat
           }
         }
         if (flag) {
-          closure_21.emitChange();
+          unreadSettingNoticeStore2Class.emitChange();
         }
-      }, 15 * setDefault.Millis.SECOND);
+      }, 15 * DurationsDefault.Millis.SECOND);
     }
     closure_0 = Date.now() - WEEK;
-    const item = DISCORD_EPOCHDefault.forEach(closure_14.channels, (lastActionTime) => {
+    const item = SnowflakeUtilsDefault.forEach(closure_14.channels, (lastActionTime, arg1) => {
       if (lastActionTime.lastActionTime < closure_0) {
-        const channels = closure_1_14.channels;
+        const channels = closure_14.channels;
         delete tmp[tmp2];
       }
     });
@@ -316,7 +306,7 @@ const unreadSettingNoticeStore2Class = new UnreadSettingNoticeStore2Class(dispat
         if (author != null) {
           id = author.id;
         }
-        if (id !== id.getId()) {
+        if (id !== AuthenticationStore.getId()) {
           return false;
         } else if (shouldTrackChannel(optimistic.channelId)) {
           const channelId = optimistic.channelId;
@@ -334,6 +324,7 @@ const unreadSettingNoticeStore2Class = new UnreadSettingNoticeStore2Class(dispat
     return false;
   },
 });
-let result = set.fileFinishedImporting("modules/notifications/settings_unread_notice/UnreadSettingNoticeStore2.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/notifications/settings_unread_notice/UnreadSettingNoticeStore2.tsx");
 
 export default unreadSettingNoticeStore2Class;

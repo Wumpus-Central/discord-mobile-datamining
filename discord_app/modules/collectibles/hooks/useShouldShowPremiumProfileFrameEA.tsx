@@ -1,16 +1,18 @@
 // discord_app/modules/collectibles/hooks/useShouldShowPremiumProfileFrameEA.tsx
-import set from "../../../../_runtime/00002_set.js";
-import apexExperiment from "../experiments/CollectiblesProfileFramesExperiment.tsx";
-import apexExperiment2 from "../experiments/CollectiblesProfileFramesPurchaseExperiment.tsx";
-import apexExperimentDefault from "../experiments/CollectiblesProfileFramesPurchaseExperiment.tsx";
+import CollectiblesProfileFramesExperiment from "../experiments/CollectiblesProfileFramesExperiment.tsx";
+import CollectiblesProfileFramesPurchaseExperiment from "../experiments/CollectiblesProfileFramesPurchaseExperiment.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/collectibles/hooks/useShouldShowPremiumProfileFrameEA.tsx");
+const CollectiblesProfileFramesPurchaseExperimentDefault = CollectiblesProfileFramesPurchaseExperiment;
+
+const result = size.fileFinishedImporting("modules/collectibles/hooks/useShouldShowPremiumProfileFrameEA.tsx");
 
 export default function useShouldShowPremiumProfileFrameEA(location) {
-  let isProfileFramesEnabled = apexExperiment.useIsProfileFramesEnabled(location);
-  apexExperimentDefault;
+  let isProfileFramesEnabled = CollectiblesProfileFramesExperiment.useIsProfileFramesEnabled(location);
+  CollectiblesProfileFramesPurchaseExperimentDefault;
   if (isProfileFramesEnabled) {
-    isProfileFramesEnabled = tmp5 === apexExperiment2.ProfileFramesPurchaseBucket.PAID_PREMIUM_SUBSCRIBERS_ONLY;
+    isProfileFramesEnabled =
+      tmp5 === CollectiblesProfileFramesPurchaseExperiment.ProfileFramesPurchaseBucket.PAID_PREMIUM_SUBSCRIBERS_ONLY;
   }
   return isProfileFramesEnabled;
 }

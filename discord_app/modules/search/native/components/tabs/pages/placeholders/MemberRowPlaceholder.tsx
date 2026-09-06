@@ -1,16 +1,16 @@
 // discord_app/modules/search/native/components/tabs/pages/placeholders/MemberRowPlaceholder.tsx
-import noopAll from "../../../../../../../../_runtime/00019_noop.js";
-import FormRowPlaceholderItemDefault from "FormRowPlaceholder.tsx";
-import { jsx } from "../../../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../../../design/components/Styles/native/createStyles.tsx";
+import FormRowPlaceholderDefault from "FormRowPlaceholder.tsx";
+import noop from "../../../../../../../../_runtime/metro/00019__.js";
 
-noopAll;
-let closure_3 = createCacheKey.createStyles({ container: { paddingHorizontal: 0 } });
-const result = require("set").fileFinishedImporting(
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_3 = createStyles.createStyles({ container: { paddingHorizontal: 0 } });
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/search/native/components/tabs/pages/placeholders/MemberRowPlaceholder.tsx",
 );
 
 export default function MemberRowPlaceholderItem() {
-  const tmp = callback();
-  return jsx(FormRowPlaceholderItemDefault, { style: callback().container });
+  const tmp = closure_3();
+  return jsx(FormRowPlaceholderDefault, { style: closure_3().container });
 }

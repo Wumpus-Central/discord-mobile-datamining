@@ -1,85 +1,83 @@
 // discord_app/modules/chat_input/native/guard/ChatInputGuardLurking.tsx
-import importAllResult from "../../../../../_runtime/00019_noop.js";
-import closure_5 from "../../../lurker_mode/LurkingStore.tsx";
-import closure_6 from "../../../../stores/ChannelStore.tsx";
-import { TextAreaCta } from "../ChatInputConstants.tsx";
-import ME from "../../../../Constants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import preloaded_user_settings from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import AppAnalyticsUtilsDefault from "../../../app_analytics/AppAnalyticsUtils.tsx";
+import GuildActionCreatorsDefault from "../../../../actions/GuildActionCreators.tsx";
+import GuildDiscoveryUtilsAll from "../../../../utils/GuildDiscoveryUtils.tsx";
+import HubProgressActionCreators from "../../../hub/HubProgressActionCreators.tsx";
+import showChannelFollowingActionSheet from "../../../channel_following/native/showChannelFollowingActionSheet.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import LurkingStore from "../../../lurker_mode/LurkingStore.tsx";
+import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
-const require = arg1;
-let c4 = importAllResult;
-({ AnalyticEvents: closure_8, JoinGuildSources: c9 } = ME);
-const memoResult = importAllResult.memo(function ChatInputGuardLurking(channel) {
+require = fn;
+const TextAreaCta = fn(11962).TextAreaCta;
+const Constants = fn(1074);
+({ AnalyticEvents: closure_8, JoinGuildSources: closure_9 } = Constants);
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardLurking.tsx");
+
+export default noop.memo(function ChatInputGuardLurking(channel) {
   channel = channel.channel;
-  let guildId;
-  guildId = channel.getGuildId();
+  let guildId = channel.getGuildId();
   let obj = channel(504);
-  const items = [closure_5];
+  const items = [LurkingStore];
   const items1 = [guildId];
   const stateFromStoresObject = obj.useStateFromStoresObject(
     items,
     () => {
       let isLurkingResult = null != guildId;
       if (isLurkingResult) {
-        isLurkingResult = closure_1_5.isLurking(tmp);
+        isLurkingResult = LurkingStore.isLurking(tmp);
       }
-      return { isLurking: isLurkingResult, lurkingSource: closure_1_5.getLurkingSourceForGuild(guildId) };
+      return { isLurking: isLurkingResult, lurkingSource: LurkingStore.getLurkingSourceForGuild(guildId) };
     },
     items1,
   );
   ({ isLurking, lurkingSource } = stateFromStoresObject);
   const items2 = [guildId, channel.id];
-  const callback = importAllResult.useCallback(() => {
-    const history = channel(table[7]).getHistory();
+  const callback = noop.useCallback(() => {
+    const history = channel(dependencyMap[7]).getHistory();
     history.goBack();
   }, []);
   const items3 = [guildId];
-  const callback1 = importAllResult.useCallback(() => {
+  const callback1 = noop.useCallback(() => {
     if (null != guildId) {
-      let obj = guildId(closure_1_3[8]);
-      obj = { cta_type: null };
-      obj[0] = closure_1_7.FOLLOW_ANNOUNCEMENT;
-      obj.trackWithMetadata(closure_1_8.TEXT_AREA_CTA_CLICKED, obj);
-      const result = channel(closure_1_3[9]).showChannelFollowingActionSheet(channel.id, tmp);
-      const obj3 = channel(closure_1_3[9]);
+      const obj = { cta_type: TextAreaCta.FOLLOW_ANNOUNCEMENT };
+      obj.trackWithMetadata(constants.TEXT_AREA_CTA_CLICKED, obj);
+      const result = showChannelFollowingActionSheet.showChannelFollowingActionSheet(channel.id, tmp);
     }
   }, items2);
-  const callback2 = importAllResult.useCallback(() => {
+  const callback2 = noop.useCallback(() => {
     if (null != guildId) {
-      const lurkingSourceForGuild = closure_1_5.getLurkingSourceForGuild(tmp);
+      const lurkingSourceForGuild = LurkingStore.getLurkingSourceForGuild(tmp);
       let type;
       if (lurkingSourceForGuild != null) {
         type = lurkingSourceForGuild.type;
       }
-      if (type === closure_1_9.DIRECTORY_ENTRY) {
-        channel = closure_1_6.getChannel(lurkingSourceForGuild.directoryChannelId);
+      if (type === constants2.DIRECTORY_ENTRY) {
+        channel = ChannelStore.getChannel(lurkingSourceForGuild.directoryChannelId);
         if (null != channel) {
           guildId = channel.getGuildId();
-          const result = channel(closure_1_3[10]).setHubProgressActionComplete(
+          const result = HubProgressActionCreators.setHubProgressActionComplete(
             guildId,
-            channel(closure_1_3[11]).HubProgressStep.JOIN_GUILD,
+            preloaded_user_settings.HubProgressStep.JOIN_GUILD,
           );
-          const obj2 = channel(closure_1_3[10]);
         }
       }
-      const result1 = closure_1_2(closure_1_3[12]).trackGuildJoinClicked(tmp);
-      const obj3 = closure_1_2(closure_1_3[12]);
-      const tmp3 = closure_1_9;
-      let obj = { cta_type: null };
-      obj[0] = closure_1_7.JOIN_GUILD;
-      guildId(closure_1_3[8]).trackWithMetadata(closure_1_8.TEXT_AREA_CTA_CLICKED, obj);
-      const obj4 = guildId(closure_1_3[8]);
-      obj = { source: null };
-      obj[0] = tmp3.CHAT_INPUT_BLOCKER;
-      guildId(closure_1_3[13]).joinGuild(tmp, obj);
-      const obj6 = guildId(closure_1_3[13]);
+      const result1 = GuildDiscoveryUtilsAll.trackGuildJoinClicked(tmp);
+      const tmp3 = constants2;
+      let obj = { cta_type: TextAreaCta.JOIN_GUILD };
+      AppAnalyticsUtilsDefault.trackWithMetadata(constants.TEXT_AREA_CTA_CLICKED, obj);
+      obj = { source: tmp3.CHAT_INPUT_BLOCKER };
+      GuildActionCreatorsDefault.joinGuild(tmp, obj);
     }
   }, items3);
   let type;
   if (lurkingSource != null) {
     type = lurkingSource.type;
   }
-  if (type === constants.DIRECTORY_ENTRY) {
+  if (type === constants2.DIRECTORY_ENTRY) {
     obj = {
       type: "button-action",
       message: null,
@@ -89,13 +87,13 @@ const memoResult = importAllResult.memo(function ChatInputGuardLurking(channel) 
       buttonPrimaryOnPress: null,
     };
     const intl6 = tmp2(1114).intl;
-    obj[1] = intl6.string(tmp2(1114).t.G42YmG);
+    obj.message = intl6.string(tmp2(1114).t.G42YmG);
     const intl7 = tmp2(1114).intl;
-    obj[2] = intl7.string(tmp2(1114).t.GlKb5i);
-    obj[3] = callback;
+    obj.buttonSecondaryText = intl7.string(tmp2(1114).t.GlKb5i);
+    obj.buttonSecondaryOnPress = callback;
     const intl8 = tmp2(1114).intl;
-    obj[4] = intl8.string(tmp2(1114).t.RLch70);
-    obj[5] = callback2;
+    obj.buttonPrimaryText = intl8.string(tmp2(1114).t.RLch70);
+    obj.buttonPrimaryOnPress = callback2;
     let tmp15Result = jsx(guildId(12448), {
       type: "button-action",
       message: null,
@@ -116,36 +114,32 @@ const memoResult = importAllResult.memo(function ChatInputGuardLurking(channel) 
         buttonPrimaryOnPress: null,
       };
       const intl3 = tmp2(1114).intl;
-      obj[1] = intl3.string(tmp2(1114).t.Hl0Mqh);
+      obj.message = intl3.string(tmp2(1114).t.Hl0Mqh);
       let stringResult;
       if (isLurking) {
         const intl4 = tmp2(1114).intl;
         stringResult = intl4.string(tmp2(1114).t.VJlc0S);
       }
-      obj[2] = stringResult;
+      obj.buttonSecondaryText = stringResult;
       let tmp10;
       if (isLurking) {
         tmp10 = callback2;
       }
-      obj[3] = tmp10;
+      obj.buttonSecondaryOnPress = tmp10;
       const intl5 = tmp2(1114).intl;
-      obj[4] = intl5.string(tmp2(1114).t["3aOv+h"]);
-      obj[5] = callback1;
-      obj1 = obj;
+      obj.buttonPrimaryText = intl5.string(tmp2(1114).t["3aOv+h"]);
+      obj.buttonPrimaryOnPress = callback1;
+      let obj1 = obj;
     } else {
       obj1 = { type: "button-action", message: null, buttonPrimaryText: null, buttonPrimaryOnPress: null };
       const intl = tmp2(1114).intl;
-      obj1[1] = intl.string(tmp2(1114).t.G42YmG);
+      obj1.message = intl.string(tmp2(1114).t.G42YmG);
       const intl2 = tmp2(1114).intl;
-      obj1[2] = intl2.string(tmp2(1114).t.RLch70);
-      obj1[3] = callback2;
+      obj1.buttonPrimaryText = intl2.string(tmp2(1114).t.RLch70);
+      obj1.buttonPrimaryOnPress = callback2;
     }
     tmp15Result = jsx(guildId(12448), obj1);
-    const tmp15 = jsx;
     const tmp17 = guildId(12448);
   }
   return tmp15Result;
 });
-let result = require("set").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardLurking.tsx");
-
-export default memoResult;

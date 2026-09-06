@@ -1,5 +1,5 @@
 // discord_app/modules/voice_panel/native/utils/fitCardsInGrid.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 function isNewLayoutBetter(unusedSpace, unusedSpace2) {
   if (0 !== unusedSpace2.unusedSpace) {
@@ -43,7 +43,7 @@ function isNewLayoutBetter(unusedSpace, unusedSpace2) {
   }
   return false;
 }
-let result = set.fileFinishedImporting("modules/voice_panel/native/utils/fitCardsInGrid.tsx");
+let result = size.fileFinishedImporting("modules/voice_panel/native/utils/fitCardsInGrid.tsx");
 
 export default function fitCardsInGrid(arg0) {
   ({ cardCount, gutterSize, availableWidth, availableHeight } = arg0);
@@ -56,8 +56,6 @@ export default function fitCardsInGrid(arg0) {
       let _Math = Math;
       let diff1 = availableWidth - diff * gutterSize;
       let result = cardCount % num;
-      let tmp6 = num;
-      let tmp7 = obj;
       let num2 = 0;
       let rounded = Math.floor(cardCount / num);
       if (0 < result) {
@@ -67,11 +65,11 @@ export default function fitCardsInGrid(arg0) {
       let sum = rounded + num2;
       obj = { unusedSpace: null, columns: null, overscroll: null, rows: null, cardSize: null };
       let sum1 = result1 * sum + (sum - 1) * gutterSize;
-      obj[0] = availableWidth * availableHeight - (result1 * num + diff * gutterSize) * sum1;
-      obj[1] = num;
-      obj[2] = availableHeight - sum1;
-      obj[3] = sum;
-      obj[4] = result1;
+      obj.unusedSpace = availableWidth * availableHeight - (result1 * num + diff * gutterSize) * sum1;
+      obj.columns = num;
+      obj.overscroll = availableHeight - sum1;
+      obj.rows = sum;
+      obj.cardSize = result1;
       let tmp11 = isNewLayoutBetter;
       let tmp12 = obj;
       if (isNewLayoutBetter(obj, obj)) {
@@ -82,8 +80,6 @@ export default function fitCardsInGrid(arg0) {
         let result2 = (availableHeight - (obj.rows - 1) * gutterSize) / obj.rows;
         let sum2 = result2 * obj.rows + (obj.rows - 1) * gutterSize;
         obj = {};
-        let tmp16 = obj;
-        let tmp17 = obj;
         let merged = Object.assign(obj);
         obj.unusedSpace =
           availableWidth * availableHeight - (result2 * obj.columns + (obj.columns - 1) * gutterSize) * sum2;

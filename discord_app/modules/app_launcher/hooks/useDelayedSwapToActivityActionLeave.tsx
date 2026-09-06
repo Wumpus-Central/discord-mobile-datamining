@@ -1,21 +1,19 @@
 // discord_app/modules/app_launcher/hooks/useDelayedSwapToActivityActionLeave.tsx
-import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
-  "modules/app_launcher/hooks/useDelayedSwapToActivityActionLeave.tsx",
-);
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/hooks/useDelayedSwapToActivityActionLeave.tsx");
 
 export const useDelayedSwapToActivityActionLeave = function useDelayedSwapToActivityActionLeave(activityAction) {
-  closure_0 = activityAction;
-  let tmp = callback(React.useState(activityAction), 2);
-  closure_1 = tmp[1];
+  let tmp = _slicedToArray(noop.useState(activityAction), 2);
+  dependencyMap = tmp[1];
   const items = [activityAction];
-  const layoutEffect = React.useLayoutEffect(() => {
+  const layoutEffect = noop.useLayoutEffect(() => {
     if (activityAction === activityAction(12057).ActivityAction.LEAVE) {
       const _setTimeout = setTimeout;
-      activityAction = setTimeout(() => callback(closure_0), 100);
+      activityAction = setTimeout(() => dependencyMap(closure_0), 100);
       return () => clearTimeout(closure_0);
     } else {
       dependencyMap(tmp);

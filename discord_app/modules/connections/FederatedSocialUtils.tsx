@@ -1,16 +1,16 @@
 // discord_app/modules/connections/FederatedSocialUtils.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
+import Constants from "../../Constants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const PlatformTypes = ME.PlatformTypes;
-const result = set.fileFinishedImporting("modules/connections/FederatedSocialUtils.tsx");
+const PlatformTypes = Constants.PlatformTypes;
+const result = size.fileFinishedImporting("modules/connections/FederatedSocialUtils.tsx");
 
-export const validateHandle = function validateHandle(first, platformType) {
+export const validateHandle = function validateHandle(arg0, platformType) {
   if (platformType === PlatformTypes.MASTODON) {
-    const isMatch = /^@?[a-z0-9_]+([.-]+[a-z0-9_]+)*@[^@]+\.[^.@]{2,}$/i.test(first);
+    const isMatch = /^@?[a-z0-9_]+([.-]+[a-z0-9_]+)*@[^@]+\.[^.@]{2,}$/i.test(arg0);
     const obj = /^@?[a-z0-9_]+([.-]+[a-z0-9_]+)*@[^@]+\.[^.@]{2,}$/i;
   }
-  return /^.+\.[^.@]{2,}$/.test(first);
+  return /^.+\.[^.@]{2,}$/.test(arg0);
 };
 export const getExampleHandle = function getExampleHandle(platformType) {
   let str = "@example@mastodon.social";

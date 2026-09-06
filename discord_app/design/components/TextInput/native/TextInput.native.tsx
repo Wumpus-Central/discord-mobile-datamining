@@ -3,13 +3,16 @@ import useFieldLabelA11yNative from "../../../../../discord_common/js/packages/d
 import Input from "../../Input/native/Input.native.tsx";
 import getRequiredFieldA11yName from "../../Input/native/getRequiredFieldA11yName.native.tsx";
 import TextField from "../../TextField/native/TextField.native.tsx";
-import closure_3 from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
+import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+require = fn;
 let closure_2 = ["labelId", "accessibilityLabel"];
-const forwardRefResult = importAllResult.forwardRef((status, ref) => {
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/TextInput/native/TextInput.native.tsx");
+
+export const TextInput = noop.forwardRef((status, ref) => {
   status = status.status;
   ({ errorMessage, required } = status);
   let obj = useFieldLabelA11yNative;
@@ -28,8 +31,8 @@ const forwardRefResult = importAllResult.forwardRef((status, ref) => {
   obj = { ref };
   const merged1 = Object.assign(status);
   obj.status = status;
-  const merged2 = Object.assign(callback(fieldLabelA11yNative, closure_2));
-  const tmp4 = callback(fieldLabelA11yNative, closure_2);
+  const merged2 = Object.assign(_objectWithoutProperties(fieldLabelA11yNative, closure_2));
+  const tmp4 = _objectWithoutProperties(fieldLabelA11yNative, closure_2);
   let requiredFieldA11yName = getRequiredFieldA11yName.getRequiredFieldA11yName(accessibilityLabel, required);
   if (requiredFieldA11yName == null) {
     requiredFieldA11yName = accessibilityLabel;
@@ -38,6 +41,3 @@ const forwardRefResult = importAllResult.forwardRef((status, ref) => {
   obj.children = jsx(TextField.TextField, { ref });
   return jsx(Input.Input, { ref });
 });
-const result = require("set").fileFinishedImporting("design/components/TextInput/native/TextInput.native.tsx");
-
-export const TextInput = forwardRefResult;

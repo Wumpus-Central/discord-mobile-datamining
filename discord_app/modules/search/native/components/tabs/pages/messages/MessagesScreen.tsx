@@ -1,87 +1,87 @@
 // discord_app/modules/search/native/components/tabs/pages/messages/MessagesScreen.tsx
-import importAllResult from "../../../../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../../stores/SearchQueryStore.tsx";
-import MessageEmbedTypes from "../../../../../SearchConstants.tsx";
-import { jsx } from "../../../../../../../../_runtime/react/00021_jsxProd.js";
+import BaseMessagesScreen from "BaseMessagesScreen.tsx";
+import MessageSearchResultParserDefault from "../../../../message_parsers/MessageSearchResultParser.tsx";
+import noop from "../../../../../../../../_runtime/metro/00019__.js";
+import SearchQueryStore from "../../../../stores/SearchQueryStore.tsx";
 
-const require = arg1;
-let c3 = importAllResult;
+require = fn;
+const SearchConstants = fn(7878);
 ({
-  SEARCH_FILTERS_BY_TAB: c5,
-  SearchFilter: closure_6,
-  SEARCH_PINNED_MESSAGES_LINE_CLAMP: error,
+  SEARCH_FILTERS_BY_TAB: hasOwnProperty,
+  SearchFilter: metroRequire,
+  SEARCH_PINNED_MESSAGES_LINE_CLAMP: closure_7,
   SEARCH_MESSAGES_DEFAULT_LINE_CLAMP: closure_8,
-  MESSAGE_PLACEHOLDER_ITEM_SIZE: c9,
+  MESSAGE_PLACEHOLDER_ITEM_SIZE: closure_9,
   SearchListItemTypes: c10,
-} = MessageEmbedTypes);
-const memoResult = importAllResult.memo(function MessagesScreen(isFocused) {
+} = SearchConstants);
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/messages/MessagesScreen.tsx");
+
+export default noop.memo(function MessagesScreen(isFocused) {
   const searchContext = isFocused.searchContext;
   const tab = isFocused.tab;
-  let searchMessages;
   let stateFromStores;
-  let onPressMessageItem;
   let callback;
-  let table;
-  let Pins;
+  Pins = undefined;
   let memo;
   let placeholderCount;
   let obj = searchContext(stateFromStores[4]);
-  searchMessages = obj.useSearchMessages(searchContext, tab);
+  const searchMessages = obj.useSearchMessages(searchContext, tab);
   let items = [callback];
   const items1 = [searchContext];
   stateFromStores = searchContext(stateFromStores[5]).useStateFromStores(
     items,
-    () => callback.getSearchResultsQuery(searchContext),
+    () => SearchQueryStore.getSearchResultsQuery(searchContext),
     items1,
   );
   const obj2 = searchContext(stateFromStores[5]);
-  onPressMessageItem = searchContext(stateFromStores[6]).useOnPressMessageItem({ searchContext });
+  const onPressMessageItem = searchContext(stateFromStores[6]).useOnPressMessageItem({ searchContext });
   const items2 = [onPressMessageItem, searchContext];
   callback = onPressMessageItem.useCallback((arg0, index) => {
     ({ channelId, messageId } = arg0);
-    let obj = searchContext(stateFromStores[7]);
-    obj = { searchContext, channelId, messageId, index };
+    const obj = { searchContext, channelId, messageId, index };
     const result = obj.trackMessageItemPress(obj);
     onPressMessageItem(channelId, messageId);
   }, items2);
-  table = onPressMessageItem.useRef({});
-  const tmp7 = table[tab] === Pins.Pins ? memo : placeholderCount;
+  closure_5 = onPressMessageItem.useRef({});
+  const tmp7 = closure_5[tab] === Pins.Pins ? memo : placeholderCount;
   Pins = tmp7;
   const items3 = [tmp7, stateFromStores];
-  memo = obj4.useMemo(() => new searchMessages(stateFromStores[8])(stateFromStores, closure_6), items3);
+  memo = obj4.useMemo(() => new MessageSearchResultParserDefault(stateFromStores, closure_6), items3);
   let tmpResult = tmp(tmp2[9]);
-  obj = { searchContext, tab, placeholderHeight: closure_9, numColumns: 1 };
+  obj = { searchContext, tab, placeholderHeight, numColumns: 1 };
   const searchMessagesLoadingState = tmpResult.useSearchMessagesLoadingState(obj);
   placeholderCount = searchMessagesLoadingState.placeholderCount;
   const items4 = [callback, tmp7, searchMessages, memo, placeholderCount];
   ({ isFirstPageLoading, isNextPageLoading } = searchMessagesLoadingState);
   const memo1 = obj4.useMemo(() => {
-    let items = [];
+    const items = [];
     if (searchMessages != null) {
-      const item = searchMessages.forEach((arg0, arg1) => {
-        items = arg1;
-        let obj = { type: closure_2_10.MESSAGE, props: null };
-        obj = {
-          message: closure_1_7.parse(arg0),
-          onPress(arg0) {
-            return closure_1_4(arg0, closure_0);
+      const item = searchMessages.forEach((item, index) => {
+        closure_0 = index;
+        const element = {
+          type: constants.MESSAGE,
+          props: {
+            message: memo.parse(item),
+            onPress(arg0) {
+              return callback(arg0, closure_0);
+            },
+            lineClamp,
+            messageSizeCacheRef,
           },
-          lineClamp: closure_1_6,
-          messageSizeCacheRef: closure_1_5,
         };
-        obj[1] = obj;
-        items.push(obj);
+        items.push(element);
       });
     }
-    let obj = searchContext(stateFromStores[10]);
-    obj = { numColumns: 1, numResults: items.length, placeholderCount };
+    searchContext(stateFromStores[10]);
+    let obj = { numColumns: 1, numResults: items.length, placeholderCount };
     const adjustedPlaceholderCount = obj.getAdjustedPlaceholderCount(obj);
     for (let num = 0; num < adjustedPlaceholderCount; num = num + 1) {
       obj = { type: null, key: null };
-      let tmp3 = closure_1_10;
-      obj[0] = closure_1_10.MESSAGE_PLACEHOLDER;
+      obj.type = constants.MESSAGE_PLACEHOLDER;
       let _HermesInternal = HermesInternal;
-      obj[1] = "message-placeholder-" + num;
+      obj.key = "message-placeholder-" + num;
       let arr = items.push(obj);
     }
     return items;
@@ -99,9 +99,9 @@ const memoResult = importAllResult.memo(function MessagesScreen(isFocused) {
     isNextPageLoading: null,
   };
   const obj3 = searchContext(stateFromStores[6]);
-  obj[5] = searchContext(stateFromStores[12]).MessageVerticalSeparator;
-  obj[6] = isFirstPageLoading;
-  obj[7] = isNextPageLoading;
+  obj.ItemSeparatorComponent = searchContext(stateFromStores[12]).MessageVerticalSeparator;
+  obj.isFirstPageLoading = isFirstPageLoading;
+  obj.isNextPageLoading = isNextPageLoading;
   return jsx(searchMessages(stateFromStores[7]), {
     data: memo1,
     searchContext,
@@ -113,8 +113,3 @@ const memoResult = importAllResult.memo(function MessagesScreen(isFocused) {
     isNextPageLoading: null,
   });
 });
-let result = require("set").fileFinishedImporting(
-  "modules/search/native/components/tabs/pages/messages/MessagesScreen.tsx",
-);
-
-export default memoResult;

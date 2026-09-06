@@ -1,13 +1,11 @@
 // discord_app/modules/user_offers/records/UserDiscountOfferRecord.tsx
-import toJSDefault from "../../../lib/Record.tsx";
-import closure_0 from "../../billing/records/DiscountRecord.tsx";
+import Record from "../../../lib/Record.tsx";
+import DiscountRecord from "../../billing/records/DiscountRecord.tsx";
 
-toJSDefault;
 let UserDiscountOfferRecord;
 class UserDiscountOfferRecord extends tmp2 {
   constructor(arg0) {
     tmp = new UserDiscountOfferRecord(new.target, new.target, global);
-    // ThrowIfThisInitialized (0x7c)
     ({ id: tmp.id, discountId: tmp.discountId, discount: tmp.discount, userId: tmp.userId, appliedAt } = global);
     if (appliedAt == null) {
       appliedAt = null;
@@ -29,7 +27,7 @@ class UserDiscountOfferRecord extends tmp2 {
 const prototype = UserDiscountOfferRecord.prototype;
 UserDiscountOfferRecord["createFromServer"] = function createFromServer(discount) {
   ({ id, discount_id } = discount);
-  const fromServer = closure_0.createFromServer(discount.discount);
+  const fromServer = DiscountRecord.createFromServer(discount.discount);
   const user_id = discount.user_id;
   let date = null;
   if (null != discount.applied_at) {
@@ -48,39 +46,39 @@ UserDiscountOfferRecord["createFromServer"] = function createFromServer(discount
     _Date = new.target;
     date2 = new Date(discount.expires_at);
   }
-  if (typeof UserDiscountOfferRecord !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof UserDiscountOfferRecord === "function") {
+    const tmp17 = new UserDiscountOfferRecord(
+      tmp5,
+      _Date2,
+      _Date,
+      tmp,
+      new.target,
+      id,
+      discount_id,
+      fromServer,
+      user_id,
+      date,
+    );
+    tmp17.id = id;
+    tmp17.discountId = discount_id;
+    tmp17.discount = fromServer;
+    tmp17.userId = user_id;
+    if (date == null) {
+      date = null;
+    }
+    tmp17.appliedAt = date;
+    if (date1 == null) {
+      date1 = null;
+    }
+    tmp17.deletedAt = date1;
+    if (date2 == null) {
+      date2 = null;
+    }
+    tmp17.expiresAt = date2;
+    return tmp17;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const tmp13 = new UserDiscountOfferRecord(
-    str,
-    _Date2,
-    _Date,
-    UserDiscountOfferRecord,
-    new.target,
-    id,
-    discount_id,
-    fromServer,
-    user_id,
-    date,
-  );
-  // ThrowIfThisInitialized (0x7c)
-  tmp13.id = id;
-  tmp13.discountId = discount_id;
-  tmp13.discount = fromServer;
-  tmp13.userId = user_id;
-  if (date == null) {
-    date = null;
-  }
-  tmp13.appliedAt = date;
-  if (date1 == null) {
-    date1 = null;
-  }
-  tmp13.deletedAt = date1;
-  if (date2 == null) {
-    date2 = null;
-  }
-  tmp13.expiresAt = date2;
-  return tmp13;
 };
 prototype["hasExpired"] = function hasExpired() {
   let tmp2 = null != this.expiresAt;
@@ -101,6 +99,7 @@ prototype["isDeleted"] = function isDeleted() {
 prototype["hasAcknowledged"] = function hasAcknowledged() {
   return null != this.expiresAt;
 };
-const result = require("set").fileFinishedImporting("modules/user_offers/records/UserDiscountOfferRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_offers/records/UserDiscountOfferRecord.tsx");
 
 export default UserDiscountOfferRecord;

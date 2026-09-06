@@ -1,7 +1,7 @@
 // discord_app/modules/conversations/ConversationConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/conversations/ConversationConstants.tsx");
+const result = size.fileFinishedImporting("modules/conversations/ConversationConstants.tsx");
 
 export const CONVERSATION_COLORS = [
   "rgba(237, 66, 69, 0.12)",

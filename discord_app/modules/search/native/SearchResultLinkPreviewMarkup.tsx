@@ -1,13 +1,12 @@
 // discord_app/modules/search/native/SearchResultLinkPreviewMarkup.tsx
-import parseLinkDefault from "../../markup/MarkupRules.tsx";
-import importDefaultResult from "../../markup/combineMarkupRules.tsx";
-import createSearchResultLinkPreviewReactRules from "../../markup/native/MarkupSearchResultLinkPreviewReactRules.tsx";
-import importAllResult from "../../../../discord_common/js/packages/markup/MarkupParser.tsx";
+import MarkupRulesDefault from "../../markup/MarkupRules.tsx";
+import combineMarkupRules from "../../markup/combineMarkupRules.tsx";
+import MarkupParser from "../../../../discord_common/js/packages/markup/MarkupParser.tsx";
 
-const items = [parseLinkDefault.NATIVE_SEARCH_RESULT_LINK_RULES];
-items[1] = require("createSearchResultLinkPreviewReactRules").createSearchResultLinkPreviewReactRules();
-const importDefaultResultResult = importDefaultResult(items);
-const reactParserForResult = importAllResult.reactParserFor(importDefaultResultResult);
-const result = require("set").fileFinishedImporting("modules/search/native/SearchResultLinkPreviewMarkup.tsx");
+const items = [MarkupRulesDefault.NATIVE_SEARCH_RESULT_LINK_RULES, fn(16676).createSearchResultLinkPreviewReactRules()];
+const MarkupSearchResultLinkPreviewReactRules = fn(16676);
+const importDefaultResultResult = combineMarkupRules(items);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/search/native/SearchResultLinkPreviewMarkup.tsx");
 
-export const NativeSearchResultLinkPreviewParser = reactParserForResult;
+export const NativeSearchResultLinkPreviewParser = MarkupParser.reactParserFor(combineMarkupRules(items));

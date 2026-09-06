@@ -1,7 +1,7 @@
 // discord_app/modules/ads/analytics/captureAdUserActionTypes.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/ads/analytics/captureAdUserActionTypes.tsx");
+const result = size.fileFinishedImporting("modules/ads/analytics/captureAdUserActionTypes.tsx");
 
 export const AdUserActionType = {
   END_CONTENT_LOAD: "end_content_load",

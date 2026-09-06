@@ -1,14 +1,13 @@
 // discord_app/modules/collectibles/records/CollectiblesCategoryRecord.tsx
-import fromServerDefault from "CollectiblesStoreListingRecord.tsx";
-import getItemRecordsFromPurchases from "../CollectiblesUtils.tsx";
-import closure_2 from "CollectiblesProductRecord.tsx";
+import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import CollectiblesProductUtils from "../utils/CollectiblesProductUtils.tsx";
+import CollectiblesUtils from "../CollectiblesUtils.tsx";
+import CollectiblesProductRecord from "CollectiblesProductRecord.tsx";
+import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord.tsx";
 
-require = arg1;
-fromServerDefault;
-let prototype;
-prototype = function CollectiblesCategoryRecord(products) {
+require = fn;
+const prototype = function CollectiblesCategoryRecord(products) {
   const tmp4 = new prototype(products, tmp3, tmp2, tmp);
-  // ThrowIfThisInitialized (0x7c)
   ({
     products: tmp4.products,
     heroRanking: tmp4.heroRanking,
@@ -23,7 +22,7 @@ prototype = function CollectiblesCategoryRecord(products) {
     }
     if (isArray) {
       products = products.products;
-      isArray = undefined === products.find((product) => !callback(table[3]).isOrbsExclusiveProduct(product));
+      isArray = undefined === products.find((item) => !CollectiblesProductUtils.isOrbsExclusiveProduct(item));
     }
     isOrbsExclusive = isArray;
   }
@@ -68,9 +67,34 @@ prototype["fromServer"] = function fromServer(arg0) {
     mobile_bg_url,
   } = arg0);
   const obj = {};
-  const merged = Object.assign(super.fromServer(Object.assign(arg0, Object.create(null))));
-  obj.products = products.reduce((arr) => {
-    const fromServerResult = closure_2.fromServer(arg1);
+  const merged = Object.assign(
+    super.fromServer(
+      Object.assign(
+        arg0,
+        Object.assign({
+          products: 0,
+          unpublished_at: 0,
+          hero_ranking: 0,
+          hero_logo_display_config: 0,
+          hero_banner_display_config: 0,
+          hero_banner_url: 0,
+          hero_banner_animated_url: 0,
+          hero_rive_url: 0,
+          hero_logo_url: 0,
+          catalog_banner_url: 0,
+          catalog_banner_animated_url: 0,
+          catalog_banner_rive_url: 0,
+          featured_block_url: 0,
+          logo_url: 0,
+          pdp_bg_url: 0,
+          mobile_banner_url: 0,
+          mobile_bg_url: 0,
+        }),
+      ),
+    ),
+  );
+  obj.products = products.reduce((arr, item) => {
+    const fromServerResult = CollectiblesProductRecord.fromServer(item);
     const type = fromServerResult.type;
     if (tmp4) {
       arr.push(fromServerResult);
@@ -95,15 +119,13 @@ prototype["fromServer"] = function fromServer(arg0) {
   obj.pdpBgUrl = pdp_bg_url;
   obj.mobileBannerUrl = mobile_banner_url;
   obj.mobileBgUrl = mobile_bg_url;
-  obj.heroLogoDisplayConfig = getItemRecordsFromPurchases.getAssetDisplayConfig(hero_logo_display_config);
-  const obj2 = getItemRecordsFromPurchases;
+  obj.heroLogoDisplayConfig = CollectiblesUtils.getAssetDisplayConfig(hero_logo_display_config);
   const tmp2 = prototype;
-  obj.heroBannerDisplayConfig = getItemRecordsFromPurchases.getAssetDisplayConfig(hero_banner_display_config);
+  obj.heroBannerDisplayConfig = CollectiblesUtils.getAssetDisplayConfig(hero_banner_display_config);
   return new tmp2(obj);
 };
 prototype["fromStorefrontCollectionRecord"] = function fromStorefrontCollectionRecord(id) {
-  const products = id.products;
-  return new prototype({
+  const obj = {
     storeListingId: id.id,
     skuId: id.id,
     name: id.name,
@@ -111,21 +133,7 @@ prototype["fromStorefrontCollectionRecord"] = function fromStorefrontCollectionR
     unpublishedAt: id.unpublishedAt,
     isOrbsExclusive: id.isOrbsExclusive,
     styles: id.styles,
-    products: products.reduce((arr, skus) => {
-      const result = closure_2.fromStorefrontProductRecord(skus);
-      if (null != result) {
-        const type = result.type;
-        if (tmp4) {
-          arr.push(result);
-        }
-        const tmp2 = callback;
-        const tmp3 = table;
-        tmp4 =
-          type === callback(table[2]).CollectiblesItemType.VARIANTS_GROUP ||
-          type === callback(table[2]).CollectiblesItemType.EXTERNAL_SKU;
-      }
-      return arr;
-    }, []),
+    products: null,
     heroRanking: id.heroRanking,
     heroBannerUrl: id.heroBannerUrl,
     heroBannerAnimatedUrl: id.heroBannerAnimatedUrl,
@@ -141,8 +149,24 @@ prototype["fromStorefrontCollectionRecord"] = function fromStorefrontCollectionR
     mobileBgUrl: id.mobileBgUrl,
     heroLogoDisplayConfig: id.heroLogoDisplayConfig,
     heroBannerDisplayConfig: id.heroDisplayConfig,
-  });
+  };
+  const products = id.products;
+  obj.products = products.reduce((arr, item) => {
+    const result = CollectiblesProductRecord.fromStorefrontProductRecord(item);
+    if (null != result) {
+      const type = result.type;
+      if (tmp4) {
+        arr.push(result);
+      }
+      tmp4 =
+        type === CollectiblesItemType.CollectiblesItemType.VARIANTS_GROUP ||
+        type === CollectiblesItemType.CollectiblesItemType.EXTERNAL_SKU;
+    }
+    return arr;
+  }, []);
+  return new prototype(obj);
 };
-let result = require("set").fileFinishedImporting("modules/collectibles/records/CollectiblesCategoryRecord.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/collectibles/records/CollectiblesCategoryRecord.tsx");
 
 export default prototype;

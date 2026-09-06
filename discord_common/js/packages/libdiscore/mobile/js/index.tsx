@@ -1,24 +1,25 @@
 // discord_common/js/packages/libdiscore/mobile/js/index.tsx
-import set from "../../../../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import typedGlobal from "global_types.tsx";
-import monotonicNowMs from "clock.tsx";
+import _mod17 from "../../../../../../_runtime/metro/00017__.js";
+import global_types from "global_types.tsx";
+import clock from "clock.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-const NativeModules = get_ActivityIndicator.NativeModules;
+const NativeModules = _mod17.NativeModules;
 if (NativeModules.LibDiscoreModule) {
   let LibDiscoreModule = NativeModules.LibDiscoreModule;
 } else {
   const _Proxy = Proxy;
-  const obj = { get: null };
-  obj[0] = function get() {
-    error = new Error("The package 'react-native-libdiscore-jsi-module' doesn't seem to be linked");
-    throw error;
+  const obj = {
+    get() {
+      const error = new Error("The package 'react-native-libdiscore-jsi-module' doesn't seem to be linked");
+      throw error;
+    },
   };
   LibDiscoreModule = new Proxy({}, obj);
 }
 LibDiscoreModule.bridgeJSIFunctions();
-const LIBDISCORE_JSI = typedGlobal.typedGlobal.LIBDISCORE_JSI;
-let result = set.fileFinishedImporting("../discord_common/js/packages/libdiscore/mobile/js/index.tsx");
+const LIBDISCORE_JSI = global_types.typedGlobal.LIBDISCORE_JSI;
+let result = size.fileFinishedImporting("../discord_common/js/packages/libdiscore/mobile/js/index.tsx");
 const prototype = function BlockedDomainsStore() {
   return Object.create(new.target.prototype);
 }.prototype;
@@ -36,7 +37,7 @@ export const rustMultiply = function rustMultiply(arg0, arg1) {
 export const consumeLogs = function consumeLogs() {
   return LIBDISCORE_JSI.consumeLogs();
 };
-export const monotonicNowMs = monotonicNowMs.monotonicNowMs;
+export const monotonicNowMs = clock.monotonicNowMs;
 export const BlockedDomainsStore = prototype;
 export const getFluxApi = function getFluxApi() {
   return LIBDISCORE_JSI.fluxApi;

@@ -1,7 +1,7 @@
 // discord_app/polyfills.android.tsx
-import set from "../_runtime/00002_set.js";
-import addLikelySubtags from "../_runtime/14197_addLikelySubtags.js";
+import 14197__ from "../_runtime/metro/14197__.js";
 import polyfillsNative from "polyfillsNative.tsx";
+import size from "../_runtime/metro/00002__.js";
 
 String.prototype.toLocaleLowerCase = function toLocaleLowerCase() {
   const self = this;
@@ -10,7 +10,6 @@ String.prototype.toLocaleLowerCase = function toLocaleLowerCase() {
   } else {
     const call = toLocaleLowerCase.call;
     typeof call === "unknown" ? toLocaleLowerCase() : call(self);
-    const tmp = toLocaleLowerCase;
   }
 };
-const result = set.fileFinishedImporting("polyfills.android.tsx");
+const result = size.fileFinishedImporting("polyfills.android.tsx");

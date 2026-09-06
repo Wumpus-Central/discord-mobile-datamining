@@ -1,6 +1,6 @@
 // discord_app/modules/guild/Constants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/guild/Constants.tsx");
+const result = size.fileFinishedImporting("modules/guild/Constants.tsx");
 
 export const GuildPrompts = { REAL_NAME_PROMPT: "REAL_NAME_PROMPT" };

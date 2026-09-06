@@ -1,48 +1,42 @@
 // discord_app/modules/collectibles/native/ProfileEffectSampleV2.tsx
-import set from "../../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import preloadDefault from "../../../components_native/common/FastImage.tsx";
-import SAMPLE_PROFILE_ASPECT_RATIO from "CollectiblesPreviewConstants.tsx";
-import metadataDefault from "../../../../discord_assets/assets/collectibles/previews/sample_profile.png.js";
-import StaticEffectDefault from "../profile_effects/native/ProfileEffect.tsx";
+import _mod17 from "../../../../_runtime/metro/00017__.js";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
+import CollectiblesPreviewConstants from "CollectiblesPreviewConstants.tsx";
+import _modDef8800 from "../../../../discord_assets/assets/collectibles/previews/sample_profile.png.js";
+import ProfileEffectDefault from "../profile_effects/native/ProfileEffect.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const View = get_ActivityIndicator.View;
-({ jsx: c3, jsxs: c4 } = jsxProd);
+const View = _mod17.View;
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
 let obj = {
   profileContainer: { position: "absolute", display: "flex", height: "100%", width: "100%" },
   profileBackground: null,
   sampleProfileImage: null,
   profileBorder: null,
 };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
-obj[1] = obj;
-obj[2] = { aspectRatio: SAMPLE_PROFILE_ASPECT_RATIO.SAMPLE_PROFILE_ASPECT_RATIO };
-obj[3] = {
+obj = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
+obj.profileBackground = obj;
+obj.sampleProfileImage = { aspectRatio: CollectiblesPreviewConstants.SAMPLE_PROFILE_ASPECT_RATIO };
+let size = {
   position: "absolute",
   height: "100%",
   width: "100%",
   borderWidth: 1,
-  borderColor: ThemesDefault.colors.BORDER_MUTED,
+  borderColor: nativeDefault.colors.BORDER_MUTED,
 };
-let closure_5 = createCacheKey.createStyles(obj);
-let obj1 = {
-  position: "absolute",
-  height: "100%",
-  width: "100%",
-  borderWidth: 1,
-  borderColor: ThemesDefault.colors.BORDER_MUTED,
-};
-const result = set.fileFinishedImporting("modules/collectibles/native/ProfileEffectSampleV2.tsx");
+obj.profileBorder = size;
+let closure_5 = createStyles.createStyles(obj);
+const result = size.fileFinishedImporting("modules/collectibles/native/ProfileEffectSampleV2.tsx");
 
 export default function ProfileEffectSample(hideBackground) {
   let flag = hideBackground.hideBackground;
   if (flag === undefined) {
     flag = false;
   }
-  const tmp = callback2();
+  const tmp = closure_5();
   const items = [tmp.profileContainer];
   let profileBackground = !flag;
   if (!flag) {
@@ -50,23 +44,23 @@ export default function ProfileEffectSample(hideBackground) {
   }
   let obj = { style: items, children: null };
   items[1] = profileBackground;
-  obj = { style: items1, source: null, accessible: false, resizeMode: "cover" };
-  items1 = [tmp.sampleProfileImage];
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
-  const items2 = [callback(preloadDefault, obj), ,];
+  obj = { style: null, source: null, accessible: false, resizeMode: "cover" };
+  const items1 = [tmp.sampleProfileImage];
+  obj.style = items1;
+  obj = { uri: _modDef8800 };
+  obj.source = obj;
+  const items2 = [React3(FastImageDefault, obj), ,];
   let tmp4Result = !flag;
   if (!flag) {
-    obj1 = { style: null };
-    obj1[0] = tmp.profileBorder;
+    const obj1 = { style: tmp.profileBorder };
     tmp4Result = tmp4(tmp3, obj1);
   }
   items2[1] = tmp4Result;
-  items2[2] = callback(StaticEffectDefault, {
+  items2[2] = React3(ProfileEffectDefault, {
     skuId: hideBackground.item.skuId,
     bannerAdjustment: 0,
     useThumbnail: true,
   });
-  obj[1] = items2;
-  return closure_4(View, obj);
+  obj.children = items2;
+  return React4(View, obj);
 }

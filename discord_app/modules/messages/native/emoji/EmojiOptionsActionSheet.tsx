@@ -1,27 +1,33 @@
 // discord_app/modules/messages/native/emoji/EmojiOptionsActionSheet.tsx
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import ToastUtils from "../../../toast/native/ToastUtils.tsx";
+import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import ClipboardUtils from "../../../../utils/ClipboardUtils.native.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/messages/native/emoji/EmojiOptionsActionSheet.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/messages/native/emoji/EmojiOptionsActionSheet.tsx");
 
 export default function EmojiOptionsActionSheet(emojiSrc) {
   emojiSrc = emojiSrc.emojiSrc;
   const items = [emojiSrc];
-  const callback = React.useCallback(() => {
-    emojiSrc(closure_1_2[2]).copy(emojiSrc);
-    const obj = emojiSrc(closure_1_2[2]);
-    const result = emojiSrc(closure_1_2[3]).presentCopiedToClipboard();
-    const obj2 = emojiSrc(closure_1_2[3]);
-    closure_1_1(closure_1_2[4]).hideActionSheet();
+  const callback = noop.useCallback(() => {
+    ClipboardUtils.copy(emojiSrc);
+    const result = ToastUtils.presentCopiedToClipboard();
+    ActionSheetActionCreatorsDefault.hideActionSheet();
   }, items);
   let obj = { children: null };
   obj = { hasIcons: true, children: null };
   obj = { icon: jsx(emojiSrc(4503).LinkIcon, {}), label: null, onPress: null };
   const intl = emojiSrc(1114).intl;
-  obj[1] = intl.string(emojiSrc(1114).t.cIoudn);
-  obj[2] = callback;
-  obj[1] = jsx(emojiSrc(5605).TableRow, { icon: jsx(emojiSrc(4503).LinkIcon, {}), label: null, onPress: null });
-  obj[0] = jsx(emojiSrc(5687).TableRowGroup, { icon: jsx(emojiSrc(4503).LinkIcon, {}), label: null, onPress: null });
+  obj.label = intl.string(emojiSrc(1114).t.cIoudn);
+  obj.onPress = callback;
+  obj.children = jsx(emojiSrc(5605).TableRow, { icon: jsx(emojiSrc(4503).LinkIcon, {}), label: null, onPress: null });
+  obj.children = jsx(emojiSrc(5687).TableRowGroup, {
+    icon: jsx(emojiSrc(4503).LinkIcon, {}),
+    label: null,
+    onPress: null,
+  });
   return jsx(emojiSrc(7198).ActionSheet, { icon: jsx(emojiSrc(4503).LinkIcon, {}), label: null, onPress: null });
 }

@@ -1,27 +1,28 @@
 // discord_app/modules/app_launcher/native/onboarding/banner/AppsBanner.tsx
-import noopAll from "../../../../../../_runtime/00019_noop.js";
-import getSystemLocale from "../../../../../intl/index.native.tsx";
+import util from "../../../../../intl/index.native.tsx";
 import BannerBaseDefault from "BannerBase.tsx";
-import SvgComponentDefault from "../../images/OnboardingAppsRocket.tsx";
-import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import OnboardingAppsRocketDefault from "../../images/OnboardingAppsRocket.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-let closure_5 = createCacheKey.createStyles({
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_5 = createStyles.createStyles({
   rocketIconContainer: { position: "absolute", top: -20 },
   rocketIcon: { width: 90, height: 90 },
 });
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/onboarding/banner/AppsBanner.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/onboarding/banner/AppsBanner.tsx");
 
 export default function AppsBaner() {
-  const tmp = callback();
-  obj = { style: tmp.rocketIconContainer, children: jsx(SvgComponentDefault, obj) };
+  const tmp = closure_5();
+  let obj = { style: tmp.rocketIconContainer, children: null };
   obj = { style: tmp.rocketIcon };
+  obj.children = jsx(OnboardingAppsRocketDefault, { style: tmp.rocketIcon });
   obj = { image: <View style={tmp.rocketIcon} />, text: null };
   const tmp2 = <View image={<View style={tmp.rocketIcon} />} text={null} />;
-  const intl = getSystemLocale.intl;
-  obj[1] = intl.string(getSystemLocale.t.sjRwMJ);
+  const intl = util.intl;
+  obj.text = intl.string(util.t.sjRwMJ);
   return jsx(BannerBaseDefault, { image: <View style={tmp.rocketIcon} />, text: null });
 }

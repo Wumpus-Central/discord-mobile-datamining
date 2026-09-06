@@ -1,10 +1,10 @@
 // discord_app/modules/channel_affinities_v2/ChannelAffinitiesV2Store.tsx
-import set from "../../../_runtime/00002_set.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import result2 from "ChannelAffinitiesV2Constants.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import ChannelAffinitiesV2Constants from "ChannelAffinitiesV2Constants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const CHANNEL_AFFINITY_V2_TTL = result2.CHANNEL_AFFINITY_V2_TTL;
+const CHANNEL_AFFINITY_V2_TTL = ChannelAffinitiesV2Constants.CHANNEL_AFFINITY_V2_TTL;
 let map = new Map();
 let c2 = false;
 const frozen = Object.freeze({ channelAffinities: [], lastFetched: 0 });
@@ -46,7 +46,7 @@ prototype["getChannelAffinity"] = function getChannelAffinity(arg0) {
   return map.get(arg0);
 };
 prototype["compare"] = function compare(arg0, arg1) {
-  let value = map.get(arg1);
+  value = map.get(arg1);
   let num;
   if (value != null) {
     num = value.score;
@@ -95,7 +95,7 @@ obj = {
     c2 = false;
   },
 };
-const channelAffinitiesV2Store = new ChannelAffinitiesV2Store(dispatcherDefault, obj);
-const result = set.fileFinishedImporting("modules/channel_affinities_v2/ChannelAffinitiesV2Store.tsx");
+const channelAffinitiesV2Store = new ChannelAffinitiesV2Store(DispatcherDefault, obj);
+const result = size.fileFinishedImporting("modules/channel_affinities_v2/ChannelAffinitiesV2Store.tsx");
 
 export default channelAffinitiesV2Store;

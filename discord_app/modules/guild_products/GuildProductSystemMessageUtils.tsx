@@ -1,10 +1,10 @@
 // discord_app/modules/guild_products/GuildProductSystemMessageUtils.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
-import getSystemLocale from "../../intl/index.native.tsx";
+import Constants from "../../Constants.tsx";
+import util from "../../intl/index.native.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const NOOP = ME.NOOP;
-const result = set.fileFinishedImporting("modules/guild_products/GuildProductSystemMessageUtils.tsx");
+const NOOP = Constants.NOOP;
+const result = size.fileFinishedImporting("modules/guild_products/GuildProductSystemMessageUtils.tsx");
 
 export const getGuildProductPurchaseSystemMessageContentMobile =
   function getGuildProductPurchaseSystemMessageContentMobile(username) {
@@ -12,8 +12,8 @@ export const getGuildProductPurchaseSystemMessageContentMobile =
     if (usernameHook === undefined) {
       usernameHook = NOOP;
     }
-    const intl = getSystemLocale.intl;
-    return intl.formatToParts(getSystemLocale.t["w4iXs+"], {
+    const intl = util.intl;
+    return intl.formatToParts(util.t["w4iXs+"], {
       username: username.username,
       usernameHook,
       productName: username.productName,

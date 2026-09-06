@@ -1,11 +1,10 @@
 // discord_app/modules/app_database/background_sync/native/BackgroundSyncManager.tsx
-import initializeDefault from "../../../../lib/AutomaticLifecycleManager.tsx";
-import _backgroundSync from "BackgroundSync.tsx";
-import closure_2 from "../../../../stores/AuthenticationStore.tsx";
-import closure_3 from "../../../../stores/UserStore.tsx";
+import background_sync_BackgroundSync from "BackgroundSync.tsx";
+import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
+import UserStore from "../../../../stores/UserStore.tsx";
+import AutomaticLifecycleManager from "../../../../lib/AutomaticLifecycleManager.tsx";
 
-require = arg1;
-initializeDefault;
+require = fn;
 class BackgroundSyncManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -22,10 +21,10 @@ prototype["handleMessageCreate"] = function handleMessageCreate(message) {
   if (!message.optimistic) {
     let tmp2 = null != message.author;
     if (tmp2) {
-      tmp2 = message.author.id === id.getId();
+      tmp2 = message.author.id === AuthenticationStore.getId();
     }
     if (tmp2) {
-      currentUser = currentUser.getCurrentUser();
+      const currentUser = UserStore.getCurrentUser();
       let isStaffResult;
       if (currentUser != null) {
         isStaffResult = currentUser.isStaff();
@@ -36,17 +35,15 @@ prototype["handleMessageCreate"] = function handleMessageCreate(message) {
       tmp2 = "run bg sync" === message.content;
     }
     if (tmp2) {
-      _backgroundSync.backgroundSync({ force: true });
-      const obj2 = _backgroundSync;
+      background_sync_BackgroundSync.backgroundSync({ force: true });
     }
   }
 };
 prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
-  _backgroundSync.backgroundSync({ force: false, messagesOnly: true, checkLastMessageId: true });
+  background_sync_BackgroundSync.backgroundSync({ force: false, messagesOnly: true, checkLastMessageId: true });
 };
 const backgroundSyncManager = new BackgroundSyncManager();
-const result = require("set").fileFinishedImporting(
-  "modules/app_database/background_sync/native/BackgroundSyncManager.tsx",
-);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_database/background_sync/native/BackgroundSyncManager.tsx");
 
 export default backgroundSyncManager;

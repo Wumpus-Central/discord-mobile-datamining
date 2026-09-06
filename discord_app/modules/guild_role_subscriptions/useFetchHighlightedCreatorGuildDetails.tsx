@@ -1,104 +1,92 @@
 // discord_app/modules/guild_role_subscriptions/useFetchHighlightedCreatorGuildDetails.tsx
-import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../_runtime/00019_noop.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import noop from "../../../_runtime/metro/00019__.js";
 
-const result = require("set").fileFinishedImporting(
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/useFetchHighlightedCreatorGuildDetails.tsx",
 );
 
 export default function useFetchHighlightedCreatorGuildDetails(arg0) {
-  closure_0 = arg0;
-  [tmp2, dependencyMap] = callback2(callback.useState(true), 2);
-  const tmp = callback2(callback.useState(true), 2);
-  [tmp4, closure_2] = callback2(callback.useState(), 2);
-  const highlightedCreatorDetails = callback2(callback.useState(), 2);
-  callback2 = highlightedCreatorDetails[1];
-  closure_0 = undefined;
-  closure_0 = callback((arg0) => {
-    closure_0 = arg0;
-    c5 = 0;
-    c6 = 0;
-    c4 = 0;
-    return (function* (arg0) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp7 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+  [tmp2, dependencyMap] = _slicedToArray(callback.useState(true), 2);
+  const tmp = _slicedToArray(callback.useState(true), 2);
+  [tmp4, asyncGeneratorStep] = _slicedToArray(callback.useState(), 2);
+  const highlightedCreatorDetails = _slicedToArray(callback.useState(), 2);
+  _slicedToArray = highlightedCreatorDetails[1];
+  closure_0 = asyncGeneratorStep(async (arg0, value) => {
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp7 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_2 = tmp4;
-              closure_1 = tmp8;
-              callback = undefined;
-              closure_1_1(true);
-              closure_1_2(undefined);
-              c4 = 2;
-              obj1 = callback(closure_2_1[3]);
-              c5 = 3;
-              c6 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = obj1.fetchHighlightedCreatorGuildDetails(callback);
-              return obj1;
-            }
-          } else if (1 === tmp8) {
-            c4 = 0;
-            closure_1_1(false);
-            throw closure_3;
-          } else {
-            if (2 === tmp8) {
-              c4 = 1;
-              closure_1_2(closure_3);
-              c4 = 0;
-              closure_1_1(false);
-              c6 = 3;
-            } else if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              callback = arg1;
-              closure_1_3(callback);
-              c4 = 1;
-            }
-            c4 = 0;
-            closure_1_1(false);
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
             c6 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            obj = { value, done: true };
             return obj;
-          }
-        } catch (tmp37) {
-          closure_3 = tmp37;
-          if (tmp5 === c4) {
-            c6 = tmp3;
-            throw tmp37;
-          } else if (tmp2 === tmp39) {
-            c5 = tmp2;
           } else {
-            c5 = tmp;
+            closure_1 = tmp8;
+            closure_129_0 = undefined;
+            closure_1(true);
+            tmp4(undefined);
+            c4 = 2;
+            let obj1 = closure_0(dependencyMap[3]);
+            c5 = 3;
+            c6 = 1;
+            obj1 = { value: null, done: false };
+            obj1.value = obj1.fetchHighlightedCreatorGuildDetails(closure_0);
+            return obj1;
           }
+        } else if (1 === tmp8) {
+          c4 = 0;
+          closure_1(false);
+          throw tmp37;
+        } else {
+          if (2 === tmp8) {
+            c4 = 1;
+            tmp4(tmp37);
+            c4 = 0;
+            closure_1(false);
+            c6 = 3;
+          } else if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            closure_129_0 = value;
+            tmp37(closure_129_0);
+            c4 = 1;
+          }
+          c4 = 0;
+          closure_1(false);
+          c6 = 3;
+          obj = { value, done: true };
+          return obj;
+        }
+      } catch (tmp37) {
+        if (tmp5 === c4) {
+          c6 = tmp3;
+          throw tmp37;
+        } else if (tmp2 === tmp39) {
+          c5 = tmp2;
+        } else {
+          c5 = tmp;
         }
       }
-    })();
+    }
   });
   callback = callback.useCallback(function () {
     const self = this;

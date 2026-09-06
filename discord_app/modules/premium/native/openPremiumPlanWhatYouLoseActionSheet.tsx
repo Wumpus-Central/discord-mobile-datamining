@@ -1,14 +1,13 @@
 // discord_app/modules/premium/native/openPremiumPlanWhatYouLoseActionSheet.tsx
-import set from "../../../../_runtime/00002_set.js";
 import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
-import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/premium/native/openPremiumPlanWhatYouLoseActionSheet.tsx");
+const result = size.fileFinishedImporting("modules/premium/native/openPremiumPlanWhatYouLoseActionSheet.tsx");
 
 export default function openPremiumPlanWhatYouLoseActionSheet(arg0) {
-  ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
-  const obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(
+  ActionSheetActionCreatorsDefault.hideActionSheet();
+  ActionSheetActionCreatorsDefault.openLazy(
     asyncRequireImpl(13334, dependencyMap.paths),
     "PremiumPlanWhatYouLoseActionSheet",
     arg0,

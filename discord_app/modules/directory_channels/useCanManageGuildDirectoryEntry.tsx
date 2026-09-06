@@ -1,49 +1,46 @@
 // discord_app/modules/directory_channels/useCanManageGuildDirectoryEntry.tsx
-import closure_2 from "../../stores/ChannelStore.tsx";
-import closure_3 from "../../stores/GuildStore.tsx";
-import closure_4 from "../../stores/PermissionStore.tsx";
-import { Permissions } from "../../Constants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
+import GuildStore from "../../stores/GuildStore.tsx";
+import PermissionStore from "../../stores/PermissionStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/directory_channels/useCanManageGuildDirectoryEntry.tsx");
+const require = fn;
+const Permissions = fn(1074).Permissions;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/directory_channels/useCanManageGuildDirectoryEntry.tsx");
 
 export default function useCanManageGuildDirectoryEntry(arg0) {
-  const _require = arg0;
-  let obj = initialize;
-  const items = [closure_3];
-  dependencyMap = obj.useStateFromStores(items, () => closure_1_3.getGuild(closure_0.guildId));
+  _require = arg0;
+  let obj = require("initialize");
+  const items = [GuildStore];
+  dependencyMap = obj.useStateFromStores(items, () => GuildStore.getGuild(closure_0.guildId));
   const items1 = [closure_2];
-  closure_2 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () =>
-    channel.getChannel(closure_0.channelId),
+  closure_2 = require("initialize").useStateFromStores(items1, () => ChannelStore.getChannel(closure_0.channelId));
+  const obj2 = require("initialize");
+  const items2 = [PermissionStore];
+  let stateFromStores = require("initialize").useStateFromStores(items2, () =>
+    PermissionStore.can(Permissions.ADMINISTRATOR, closure_1),
   );
-  const obj2 = initialize;
-  const items2 = [closure_4];
-  let stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () =>
-    closure_1_4.can(closure_1_5.ADMINISTRATOR, closure_1),
-  );
-  const obj3 = initialize;
-  const items3 = [closure_4];
-  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
-    items3,
-    () => closure_1_4.can(closure_1_5.MANAGE_MESSAGES, closure_2),
+  const obj3 = require("initialize");
+  const items3 = [PermissionStore];
+  const stateFromStores1 = require("initialize").useStateFromStores(items3, () =>
+    PermissionStore.can(Permissions.MANAGE_MESSAGES, closure_2),
   );
   obj = { isEntryAdmin: stateFromStores, canEdit: null, canRemove: null };
   let tmp3 = stateFromStores;
   if (!stateFromStores) {
     tmp3 = stateFromStores1;
   }
-  obj[1] = tmp3;
+  obj.canEdit = tmp3;
   if (!stateFromStores) {
     stateFromStores = stateFromStores1;
   }
-  obj[2] = stateFromStores;
+  obj.canRemove = stateFromStores;
   return obj;
 }
 export const useCanCreateOrAddGuildInDirectory = function useCanCreateOrAddGuildInDirectory(channel) {
-  const _require = channel;
-  const items = [closure_4];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
-    closure_1_4.can(closure_1_5.SEND_MESSAGES, closure_0),
+  _require = channel;
+  const items = [PermissionStore];
+  return require("initialize").useStateFromStores(items, () =>
+    PermissionStore.can(Permissions.SEND_MESSAGES, closure_0),
   );
 };

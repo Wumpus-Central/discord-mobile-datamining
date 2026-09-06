@@ -1,28 +1,31 @@
 // discord_app/modules/guild_onboarding/native/ApplicationConnectionCard.tsx
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../../applications/ApplicationStore.tsx";
-import { AnalyticEvents } from "../../../Constants.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
+import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
+import ApplicationActionCreators from "../../applications/ApplicationActionCreators.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import ApplicationStore from "../../applications/ApplicationStore.tsx";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/guild_onboarding/native/ApplicationConnectionCard.tsx");
+require = fn;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_onboarding/native/ApplicationConnectionCard.tsx");
 
 export default function ApplicationConnectionCard(connection) {
   connection = connection.connection;
   const guildId = connection.guildId;
   const _location = connection.location;
-  let stateFromStores;
   let analyticsLocations;
   let startAuthorization;
   let obj = connection(_location[4]);
   const items = [analyticsLocations];
   const items1 = [connection.application_id];
-  stateFromStores = obj.useStateFromStores(
+  const stateFromStores = obj.useStateFromStores(
     items,
     () => {
       let application = null;
       if (null != connection.application_id) {
-        application = analyticsLocations.getApplication(tmp.application_id);
+        application = ApplicationStore.getApplication(tmp.application_id);
       }
       return application;
     },
@@ -36,15 +39,14 @@ export default function ApplicationConnectionCard(connection) {
       result = null == connection.application_id;
     }
     if (!result) {
-      result = analyticsLocations.isFetchingApplication(connection.application_id);
+      result = ApplicationStore.isFetchingApplication(connection.application_id);
     }
     if (!result) {
-      result = analyticsLocations.didFetchingApplicationFail(connection.application_id);
+      result = ApplicationStore.didFetchingApplicationFail(connection.application_id);
     }
     if (!result) {
-      const application = connection(_location[6]).fetchApplication(connection.application_id);
+      const application = ApplicationActionCreators.fetchApplication(connection.application_id);
       application.catch(() => {});
-      const obj = connection(_location[6]);
     }
   }, items2);
   let name;
@@ -63,14 +65,13 @@ export default function ApplicationConnectionCard(connection) {
   const obj2 = stateFromStores;
   const tmp4Result = guildId(_location[9]);
   const callback = obj2.useCallback(() => {
-    let obj = guildId(_location[10]);
-    obj = {};
-    const merged = Object.assign(connection(_location[11]).collectGuildAnalyticsMetadata(guildId));
+    let obj = {};
+    const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guildId));
     obj.connection_type = "application";
     const application_id = connection.application_id;
     obj.application_id = application_id;
     obj.location = _location;
-    obj.track(startAuthorization.GUILD_ONBOARDING_CONNECTION_CLICKED, obj);
+    obj.track(AnalyticEvents.GUILD_ONBOARDING_CONNECTION_CLICKED, obj);
     obj = { analyticsLocations };
     startAuthorization(obj);
   }, items3);

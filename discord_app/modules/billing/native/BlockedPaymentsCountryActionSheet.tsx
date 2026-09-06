@@ -1,13 +1,13 @@
 // discord_app/modules/billing/native/BlockedPaymentsCountryActionSheet.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import Background from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import Sheet_BottomSheet from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import BlockedPaymentsCountryDisplayDefault from "BlockedPaymentsCountryDisplay.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/billing/native/BlockedPaymentsCountryActionSheet.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/billing/native/BlockedPaymentsCountryActionSheet.tsx");
 
 export default function BlockedPaymentsCountryActionSheet() {
-  return jsx(Background.BottomSheet, { children: jsx(BlockedPaymentsCountryDisplayDefault, {}) });
+  return jsx(Sheet_BottomSheet.BottomSheet, { children: jsx(BlockedPaymentsCountryDisplayDefault, {}) });
 }

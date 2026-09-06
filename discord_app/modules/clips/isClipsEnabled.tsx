@@ -1,21 +1,21 @@
 // discord_app/modules/clips/isClipsEnabled.tsx
-import apexExperiment from "ClipsExperiment.tsx";
-import closure_2 from "ClipsStore.tsx";
+import ClipsExperiment from "ClipsExperiment.tsx";
+import ClipsStore from "ClipsStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/clips/isClipsEnabled.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/clips/isClipsEnabled.tsx");
 
 export const isClipsEnabled = function isClipsEnabled() {
-  let clipsEnabled = apexExperiment.areClipsAvailable();
+  let clipsEnabled = ClipsExperiment.areClipsAvailable();
   if (clipsEnabled) {
-    clipsEnabled = state.getState().clipsSettings.clipsEnabled;
+    clipsEnabled = ClipsStore.getState().clipsSettings.clipsEnabled;
   }
   return clipsEnabled;
 };
 export const useIsClipsEnabled = function useIsClipsEnabled() {
-  let isClipsAvailable = apexExperiment.useIsClipsAvailable();
-  const obj = apexExperiment;
-  const items = [closure_2];
+  let isClipsAvailable = ClipsExperiment.useIsClipsAvailable();
+  const items = [ClipsStore];
   if (isClipsAvailable) {
     isClipsAvailable = obj2.useStateFromStores(items, () => state.getState().clipsSettings.clipsEnabled);
   }

@@ -1,40 +1,42 @@
 // discord_app/components_native/InAppNotificationSettingsModal.tsx
-import getSystemLocale from "../intl/index.native.tsx";
-import computeChannelName from "../modules/channel/useChannelName.tsx";
+import util from "../intl/index.native.tsx";
+import useChannelName from "../modules/channel/useChannelName.tsx";
+import NavigatorHeader from "../design/components/Navigator/native/NavigatorHeader.native.tsx";
+import NotificationSettingsUtils from "../utils/NotificationSettingsUtils.tsx";
+import NotificationSettingsModalActionCreatorsDefault from "../actions/NotificationSettingsModalActionCreators.tsx";
 import Form from "../design/void/Form/native/index.tsx";
-import ChannelSettingsNotificationsGuardDefault from "channel_settings/ChannelSettingsNotifications.tsx";
-import importAllResult from "../../_runtime/00019_noop.js";
-import { isMultiUserDM } from "../records/ChannelRecord.tsx";
-import closure_5 from "../stores/ChannelStore.tsx";
-import closure_6 from "../stores/RelationshipStore.tsx";
-import closure_7 from "../stores/UserGuildSettingsStore.tsx";
-import closure_8 from "../stores/UserStore.tsx";
-import ME from "../Constants.tsx";
-import jsxProd from "../../_runtime/react/00021_jsxProd.js";
+import ChannelSettingsNotificationsDefault from "channel_settings/ChannelSettingsNotifications.tsx";
+import noop from "../../_runtime/metro/00019__.js";
+import ChannelStore from "../stores/ChannelStore.tsx";
+import RelationshipStore from "../stores/RelationshipStore.tsx";
+import UserGuildSettingsStore from "../stores/UserGuildSettingsStore.tsx";
+import UserStore from "../stores/UserStore.tsx";
 
-require = arg1;
+require = fn;
 function ConnectedInAppNotificationSettingsScreen(channel) {
   channel = channel.channel;
   let obj = channel(504);
-  const items = [closure_7];
+  const items = [UserGuildSettingsStore];
   obj = {
     channel,
     isMuted: obj.useStateFromStores(items, () => {
       let isChannelMutedResult;
       if (null != channel) {
-        if (closure_1_4(obj.type)) {
-          isChannelMutedResult = closure_1_7.isChannelMuted(obj.getGuildId(), obj.id);
+        if (isMultiUserDM(obj.type)) {
+          isChannelMutedResult = UserGuildSettingsStore.isChannelMuted(obj.getGuildId(), obj.id);
         }
       }
       return isChannelMutedResult;
     }),
   };
-  return callback(InAppNotificationSettingsScreen, obj);
+  return closure_11(InAppNotificationSettingsScreen, obj);
 }
-let c3 = importAllResult;
-({ ChannelTypes: c9, UserSettingsSections: c10 } = ME);
-({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-const PureComponent = importAllResult.PureComponent;
+const isMultiUserDM = fn(1961).isMultiUserDM;
+const Constants = fn(1074);
+({ ChannelTypes: closure_9, UserSettingsSections: c10 } = Constants);
+const jsxProd = fn(21);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+const PureComponent = noop.PureComponent;
 class InAppNotificationSettingsScreen extends PureComponent {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -42,17 +44,15 @@ class InAppNotificationSettingsScreen extends PureComponent {
     applyArgumentsResult.handleGroupDMMute = function handleGroupDMMute() {
       ({ channel, isMuted } = applyArgumentsResult.props);
       if (null != channel) {
-        let obj = closure_1_1(closure_1_2[8]);
         const guildId = channel.getGuildId();
-        obj = { muted: null };
-        obj[0] = !isMuted;
-        const NotificationLabel = applyArgumentsResult(closure_1_2[9]).NotificationLabel;
+        const obj = { muted: !isMuted };
+        const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
         const result = obj.updateChannelOverrideSettings(guildId, channel.id, obj, NotificationLabel.muted(!isMuted));
       }
     };
     applyArgumentsResult.handleOpenUserSettings = function handleOpenUserSettings() {
-      let obj = applyArgumentsResult(table[14]);
-      obj = { screen: constants.NOTIFICATIONS };
+      applyArgumentsResult(dependencyMap[14]);
+      const obj = { screen: constants.NOTIFICATIONS };
       obj.openUserSettings(obj);
     };
     return applyArgumentsResult;
@@ -64,27 +64,25 @@ prototype["renderGroupDMNotificationSettings"] = function renderGroupDMNotificat
   if (null == channel) {
     return null;
   } else {
-    let obj = computeChannelName;
-    const channelName = obj.computeChannelName(channel, closure_8, closure_6);
+    let obj = useChannelName;
+    const channelName = obj.computeChannelName(channel, UserStore, RelationshipStore);
     obj = { children: null };
     obj = { label: null, value: null, onValueChange: null };
-    const intl = getSystemLocale.intl;
-    obj1 = { name: null };
-    obj1[0] = channelName;
-    obj[0] = intl.format(getSystemLocale.t["u/rEuc"], obj1);
-    obj[1] = tmp2;
-    obj[2] = tmp.handleGroupDMMute;
-    obj[0] = callback(Form.FormSwitchRow, obj);
-    return callback(Form.FormSection, obj);
+    const intl = util.intl;
+    const obj1 = { name: channelName };
+    obj.label = intl.format(util.t["u/rEuc"], obj1);
+    obj.value = tmp2;
+    obj.onValueChange = tmp.handleGroupDMMute;
+    obj.children = closure_1_11(Form.FormSwitchRow, obj);
+    return closure_1_11(Form.FormSection, obj);
   }
 };
 prototype["renderTextChannelNotificationSettings"] = function renderTextChannelNotificationSettings() {
   const channel = this.props.channel;
   let tmp = null;
   if (null != channel) {
-    const obj = { channelId: null };
-    obj[0] = channel.id;
-    tmp = callback(ChannelSettingsNotificationsGuardDefault, obj);
+    const obj = { channelId: channel.id };
+    tmp = closure_1_11(ChannelSettingsNotificationsDefault, obj);
   }
   return tmp;
 };
@@ -113,52 +111,52 @@ prototype["render"] = function render() {
   let obj = { children: null };
   const items = [this.renderChannelNotificationSettings(), ,];
   obj = { title: null, children: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t.clE4PU);
+  const intl = util.intl;
+  obj.title = intl.string(util.t.clE4PU);
   obj = { label: null, onPress: null, trailing: null };
-  const intl2 = getSystemLocale.intl;
-  obj[0] = intl2.string(getSystemLocale.t.cHMaba);
-  obj[1] = this.handleOpenUserSettings;
-  obj[2] = callback(Form.FormRow.Arrow, {});
-  obj[1] = callback(Form.FormRow, obj);
-  items[1] = callback(Form.FormSection, obj);
-  obj1 = { children: null };
-  const intl3 = getSystemLocale.intl;
-  obj1[0] = intl3.string(getSystemLocale.t.avgbp1);
-  items[2] = callback(Form.FormHint, obj1);
-  obj[0] = items;
-  return callback2(Form.Form, obj);
+  const intl2 = util.intl;
+  obj.label = intl2.string(util.t.cHMaba);
+  obj.onPress = this.handleOpenUserSettings;
+  obj.trailing = closure_1_11(Form.FormRow.Arrow, {});
+  obj.children = closure_1_11(Form.FormRow, obj);
+  items[1] = closure_1_11(Form.FormSection, obj);
+  const obj1 = { children: null };
+  const intl3 = util.intl;
+  obj1.children = intl3.string(util.t.avgbp1);
+  items[2] = closure_1_11(Form.FormHint, obj1);
+  obj.children = items;
+  return closure_1_12(Form.Form, obj);
 };
-const memoResult = importAllResult.memo((channelId) => {
+const size = fn(2);
+let result = size.fileFinishedImporting("components_native/InAppNotificationSettingsModal.tsx");
+
+export default noop.memo((channelId) => {
   channelId = channelId.channelId;
   const onClose = channelId.onClose;
   const items = [channelId, onClose];
-  const screens = importAllResult.useMemo(() => {
-    channel = closure_1_5.getChannel(channel);
+  const screens = noop.useMemo(() => {
+    const channel = ChannelStore.getChannel(channelId);
     let obj = { IN_APP_NOTIFICATION_SETTINGS: null };
     obj = {
       headerTitle() {
         const obj = { title: null, subtitle: null };
-        const intl = callback(closure_1_2[12]).intl;
-        obj[0] = intl.string(callback(closure_1_2[12]).t.h850Ss);
+        const intl = channelId(1114).intl;
+        obj.title = intl.string(channelId(1114).t.h850Ss);
         let channelName = null;
-        if (null != callback) {
-          const tmp3Result = callback(closure_1_2[10]);
-          channelName = tmp3Result.computeChannelName(tmp, closure_1_8, closure_1_6, true);
+        if (null != closure_0) {
+          const tmp3Result = channelId(4713);
+          channelName = tmp3Result.computeChannelName(tmp, UserStore, RelationshipStore, true);
         }
-        obj[1] = channelName;
-        return closure_1_11(callback(closure_1_2[16]).NavigatorHeader, obj);
+        obj.subtitle = channelName;
+        return closure_2_11(channelId(5624).NavigatorHeader, obj);
       },
-      headerLeft: channelId(closure_1_2[16]).getHeaderCloseButton(onClose),
+      headerLeft: NavigatorHeader.getHeaderCloseButton(onClose),
       render() {
-        return closure_1_11(closure_1_14, { channel: closure_0 });
+        return closure_2_11(ConnectedInAppNotificationSettingsScreen, { channel });
       },
     };
-    obj[0] = obj;
+    obj.IN_APP_NOTIFICATION_SETTINGS = obj;
     return obj;
   }, items);
-  return callback(channelId(7000).Navigator, { screens, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" });
+  return closure_11(channelId(7000).Navigator, { screens, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" });
 });
-let result = require("set").fileFinishedImporting("components_native/InAppNotificationSettingsModal.tsx");
-
-export default memoResult;

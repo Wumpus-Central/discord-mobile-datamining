@@ -1,6 +1,6 @@
 // discord_app/modules/custom_typing_indicator/CustomTypingIndicatorExperiment.tsx
-import set from "../../../_runtime/00002_set.js";
 import ApexExperiment from "../experiments/apex/index.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const apexExperiment = ApexExperiment.createApexExperiment({
   kind: "user",
@@ -13,7 +13,7 @@ const apexExperiment = ApexExperiment.createApexExperiment({
     3: { canSet: false, canView: true, entryPoint: null },
   },
 });
-const result = set.fileFinishedImporting("modules/custom_typing_indicator/CustomTypingIndicatorExperiment.tsx");
+const result = size.fileFinishedImporting("modules/custom_typing_indicator/CustomTypingIndicatorExperiment.tsx");
 
 export const CustomTypingIndicatorExperiment = apexExperiment;
 export const useCustomTypingIndicatorConfig = function useCustomTypingIndicatorConfig(TypingIndicatorInner) {

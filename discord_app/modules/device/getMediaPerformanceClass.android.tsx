@@ -1,9 +1,9 @@
 // discord_app/modules/device/getMediaPerformanceClass.android.tsx
-import set from "../../../_runtime/00002_set.js";
-import DCDDeviceManager from "../../utils/native/DeviceUtils.tsx";
+import DeviceUtils from "../../utils/native/DeviceUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/device/getMediaPerformanceClass.android.tsx");
+const result = size.fileFinishedImporting("modules/device/getMediaPerformanceClass.android.tsx");
 
 export default function getMediaPerformanceClass() {
-  return DCDDeviceManager.getDeviceMediaPerformanceClass();
+  return DeviceUtils.getDeviceMediaPerformanceClass();
 }

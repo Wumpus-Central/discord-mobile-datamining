@@ -1,52 +1,49 @@
 // discord_app/modules/app_database/modules/channels/ChannelReader.tsx
-import timestampDefault from "../../../debug/Logger.tsx";
-import itemsDefault from "../../DatabaseDaos.tsx";
-import closure_2 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import LoggerDefault from "../../../debug/Logger.tsx";
+import DatabaseDaosDefault from "../../DatabaseDaos.tsx";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
-let closure_3 = new timestampDefault("ChannelReader");
-const tmp2 = new timestampDefault("ChannelReader");
-const result = require("set").fileFinishedImporting("modules/app_database/modules/channels/ChannelReader.tsx");
+const logger = new LoggerDefault("ChannelReader");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_database/modules/channels/ChannelReader.tsx");
 const prototype = function ChannelReader() {
   return Object.create(new.target.prototype);
 }.prototype;
-prototype["getSync"] = function getSync(closure_1, closure_0) {
+prototype["getSync"] = function getSync(databaseResult, arg1) {
   const nowResult = performance.now();
-  const obj = itemsDefault;
-  const manySyncUnsafe = itemsDefault.channels(closure_1).getManySyncUnsafe(closure_0);
+  const manySyncUnsafe = DatabaseDaosDefault.channels(databaseResult).getManySyncUnsafe(arg1);
   const diff = performance.now() - nowResult;
-  logger.log(
-    "synchronously loaded in " + diff + "ms (guild: " + closure_0 + ", channels: " + manySyncUnsafe.length + ")",
-  );
+  logger.log("synchronously loaded in " + diff + "ms (guild: " + arg1 + ", channels: " + manySyncUnsafe.length + ")");
   const items = [manySyncUnsafe, diff];
   return items;
 };
 prototype["getAsync"] = function getAsync(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
-  return callback(function* () {
-    let length = tmp5;
-    closure_0 = tmp2;
+  return (async () => {
     const _performance2 = performance;
-    closure_0 = performance.now();
-    const obj6 = closure_1_0(closure_1_1[2]);
-    length = yield closure_1_0(closure_1_1[2]).channels(closure_1_0).getMany(closure_1_1);
+    closure_128_0 = performance.now();
+    tmp2(tmp5[2]);
+    closure_128_1 = await tmp2(tmp5[2]).channels(tmp2).getMany(tmp5);
     const _performance = performance;
+    closure_128_2 = performance.now() - closure_128_0;
     const _HermesInternal = HermesInternal;
-    c3.verbose("loaded in " + closure_2 + "ms (guild: " + length + ", channels: " + length.length + ")");
-    return length;
+    c3.verbose(
+      "loaded in " + closure_128_2 + "ms (guild: " + closure_129_1 + ", channels: " + closure_128_1.length + ")",
+    );
+    return closure_128_1;
   })();
 };
 prototype["getGuildIds"] = function getGuildIds() {
-  return callback(function* () {
+  return (async (arg0, value) => {
     if (c6 === 2) {
       c6 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp6 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
@@ -57,70 +54,63 @@ prototype["getGuildIds"] = function getGuildIds() {
         if (0 === c5) {
           if (arg0 === 1) {
             c6 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
             closure_2 = tmp3;
             closure_1 = tmp7;
-            closure_0 = undefined;
+            closure_129_0 = undefined;
             c4 = 1;
-            const channelsResult = closure_1_0(closure_1_1[2]).channels();
+            const channelsResult = DatabaseDaosDefault.channels();
             if (null == channelsResult) {
               const _Set3 = Set;
               const set = new Set();
               c4 = 0;
               c6 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = set;
+              const obj1 = { value: set, done: true };
               return obj1;
             } else {
               c5 = 2;
               c6 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = channelsResult.getGuildIds();
+              const obj2 = { value: channelsResult.getGuildIds(), done: false };
               return obj2;
             }
-            const obj8 = closure_1_0(closure_1_1[2]);
           }
         } else if (1 === tmp7) {
           c4 = 0;
-          closure_1 = logger;
-          logger.warn("couldn't get guild ids", closure_1);
+          closure_129_1 = closure_3;
+          closure_130_3.warn("couldn't get guild ids", closure_129_1);
           const _Set2 = Set;
           const set1 = new Set();
           c6 = 3;
-          const obj3 = { value: null, done: true };
-          obj3[0] = set1;
+          const obj3 = { value: set1, done: true };
           return obj3;
         } else if (arg0 === 1) {
           c6 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c4 = 0;
           c6 = 3;
-          const obj4 = { value: null, done: true };
-          obj4[0] = arg1;
+          const obj4 = { value, done: true };
           return obj4;
         } else {
-          closure_0 = arg1;
-          if (arg1 == null) {
+          closure_0 = value;
+          if (value == null) {
             closure_0 = [];
           }
-          closure_0 = closure_0.filter((str) => null !== str && typeof str === "string");
+          closure_129_0 = closure_0.filter((item) => null !== item && typeof item === "string");
           const _Set = Set;
-          const set2 = new Set(closure_0);
+          const set2 = new Set(closure_129_0);
           c4 = 0;
           c6 = 3;
-          obj = { value: null, done: true };
-          obj[0] = set2;
+          obj = { value: set2, done: true };
           return obj;
         }
       } catch (tmp30) {
-        logger = tmp30;
+        closure_3 = tmp30;
         if (tmp4 === c4) {
           c6 = tmp2;
           throw tmp30;

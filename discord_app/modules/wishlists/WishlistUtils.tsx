@@ -1,18 +1,17 @@
 // discord_app/modules/wishlists/WishlistUtils.tsx
-import getSystemLocale from "../../intl/index.native.tsx";
-import useSKUPrice from "../storefront/StorefrontUtils.tsx";
-import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../skus/SKURecord.tsx";
-import { isCollectiblesWishlistItemRecord as closure_4 } from "records/CollectiblesWishlistItemRecord.tsx";
-import {
-  isPremiumWishlistItemRecord as closure_5,
-  isSKUWishlistItemRecord,
-} from "records/PremiumWishlistItemRecord.tsx";
-import { SKUProductLines } from "../../Constants.tsx";
-import { PremiumSubscriptionSKUs } from "../premium/PremiumConstants.tsx";
+import util from "../../intl/index.native.tsx";
+import StorefrontUtils from "../storefront/StorefrontUtils.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import SKURecord from "../skus/SKURecord.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/wishlists/WishlistUtils.tsx");
+require = fn;
+let closure_4 = fn(8780).isCollectiblesWishlistItemRecord;
+let closure_5 = fn(8781).isPremiumWishlistItemRecord;
+const isSKUWishlistItemRecord = fn(8782).isSKUWishlistItemRecord;
+const SKUProductLines = fn(1074).SKUProductLines;
+const PremiumSubscriptionSKUs = fn(1373).PremiumSubscriptionSKUs;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/wishlists/WishlistUtils.tsx");
 
 export const createNitroSuggestedSku = function createNitroSuggestedSku() {
   const obj = {
@@ -29,39 +28,38 @@ export const createNitroSuggestedSku = function createNitroSuggestedSku() {
     eligibleOffers: null,
     prices: null,
   };
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.string(getSystemLocale.t.lG6a5x);
-  obj[3] = new Set();
+  const intl = util.intl;
+  obj.name = intl.string(util.t.lG6a5x);
+  obj.features = new Set();
   const set = new Set();
-  obj[4] = new Set();
-  obj[5] = [];
-  obj[6] = [];
-  obj[7] = [];
-  obj[8] = [];
-  obj[9] = [];
-  obj[10] = [];
-  obj[11] = {};
+  obj.genres = new Set();
+  obj.manifests = [];
+  obj.availableRegions = [];
+  obj.locales = [];
+  obj.bundledSkuIds = [];
+  obj.selectedOptions = [];
+  obj.eligibleOffers = [];
+  obj.prices = {};
   const set1 = new Set();
-  return new closure_3(obj);
+  return new SKURecord(obj);
 };
 export const isEligibleWishlistItemOnMobile = function isEligibleWishlistItemOnMobile(sku, isWishlistOwner) {
   isWishlistOwner = isWishlistOwner.isWishlistOwner;
   if (isSKUWishlistItemRecord(sku)) {
     if (sku.sku.productLine === SKUProductLines.SOCIAL_LAYER_GAME_ITEM) {
       if (!isWishlistOwner) {
-        isWishlistOwner = useSKUPrice.isSlayerSkuAvailableOnThisPlatform(sku.sku);
-        const obj = useSKUPrice;
+        isWishlistOwner = StorefrontUtils.isSlayerSkuAvailableOnThisPlatform(sku.sku);
       }
       let tmp2 = isWishlistOwner;
     }
     return tmp2;
   }
-  tmp2 = callback2(sku);
+  tmp2 = closure_4(sku);
   if (!tmp2) {
-    tmp2 = callback3(sku);
+    tmp2 = closure_5(sku);
   }
 };
-export const buildReorderedWishlistData = function buildReorderedWishlistData(set) {
+export const buildReorderedWishlistData = function buildReorderedWishlistData(set, arg1, arg2, arg3) {
   if (arg2 < arg3) {
     let skuId;
     if (arg1[arg3] != null) {
@@ -96,10 +94,10 @@ export const buildReorderedWishlistData = function buildReorderedWishlistData(se
     }
   }
   const items = [...arg1];
-  items.splice(arg3, 0, callback(items.splice(arg2, 1), 1)[0]);
+  items.splice(arg3, 0, _slicedToArray(items.splice(arg2, 1), 1)[0]);
   return { newWishlistData: set.set("items", items), previousSkuId: skuId2, nextSkuId: skuId3 };
 };
-export const buildReorderedOwnedItemsLastWishlistItems = function buildReorderedOwnedItemsLastWishlistItems(items) {
+export const buildReorderedOwnedItemsLastWishlistItems = function buildReorderedOwnedItemsLastWishlistItems(items, fn) {
   let tmp = items;
   items = [];
   const items1 = [];
@@ -109,7 +107,6 @@ export const buildReorderedOwnedItemsLastWishlistItems = function buildReordered
     if (arg1(item10009)) {
       arr3 = items1;
     }
-    let tmp3 = item10009;
     let arr = arr3.push(tmp2);
     continue;
   }

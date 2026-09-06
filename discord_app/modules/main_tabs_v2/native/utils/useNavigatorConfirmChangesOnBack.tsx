@@ -1,19 +1,18 @@
 // discord_app/modules/main_tabs_v2/native/utils/useNavigatorConfirmChangesOnBack.tsx
-import closure_2 from "../../../../../_runtime/00019_noop.js";
-import { Keyboard } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { NOOP } from "../../../../Constants.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const result = require("set").fileFinishedImporting(
-  "modules/main_tabs_v2/native/utils/useNavigatorConfirmChangesOnBack.tsx",
-);
+const Keyboard = fn(17).Keyboard;
+const NOOP = fn(1074).NOOP;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/utils/useNavigatorConfirmChangesOnBack.tsx");
 
 export default function useNavigatorConfirmChangesOnBack() {
-  const ref = React.useRef(null);
-  dependencyMap = React.useRef(false);
-  obj = { onGoBack: ref(10922)(obj).onGoBack, ref };
+  const ref = noop.useRef(null);
+  dependencyMap = noop.useRef(false);
+  let obj = { onGoBack: null, ref };
   obj = {
-    onBeforeGoBack(preventable) {
-      if (preventable.preventable) {
+    onBeforeGoBack(navigation) {
+      if (navigation.preventable) {
         let current = ref2.current;
         if (!current) {
           const current2 = ref.current;
@@ -24,18 +23,21 @@ export default function useNavigatorConfirmChangesOnBack() {
           current = true !== hasUnsavedChangesResult;
         }
         if (!current) {
-          preventable.preventDefault();
-          closure_1_3.dismiss();
-          const obj = { hasEdits: true, resetPending: null, onConfirm: null };
-          obj[1] = closure_1_4;
-          obj[2] = function onConfirm() {
-            closure_1_1.current = true;
-            preventable.goBack();
+          navigation.preventDefault();
+          Keyboard.dismiss();
+          const obj = {
+            hasEdits: true,
+            resetPending,
+            onConfirm() {
+              closure_1.current = true;
+              navigation.goBack();
+            },
           };
           ref(ref2[4])(obj);
         }
       }
     },
   };
+  obj.onGoBack = ref(10922)(obj).onGoBack;
   return obj;
 }

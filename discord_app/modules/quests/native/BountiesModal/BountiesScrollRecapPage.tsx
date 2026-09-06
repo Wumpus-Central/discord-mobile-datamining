@@ -1,43 +1,36 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesScrollRecapPage.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import set from "../../../../utils/PlatformUtils.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
+import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import Text from "../../../../design/components/Text/native/Text.tsx";
-import Button from "../../../../design/components/Button/native/Button.native.tsx";
-import VideoComponent from "../../../../components_native/common/Video.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
+import common_Video from "../../../../components_native/common/Video.tsx";
 import OrbsIcon from "../../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx";
-import metadataDefault from "../../../../../discord_assets/assets/quests/bounties/_3d_orbs.png.js";
-import metadataDefault2 from "../../../../../discord_assets/assets/quests/bounties/_3d_orbs.mov.js";
-import metadataDefault3 from "../../../../../discord_assets/assets/quests/bounties/starfield_bg.mp4.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../a11y/AccessibilityStore.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import _modDef15050 from "../../../../../discord_assets/assets/quests/bounties/_3d_orbs.png.js";
+import _modDef15051 from "../../../../../discord_assets/assets/quests/bounties/_3d_orbs.mov.js";
+import _modDef15052 from "../../../../../discord_assets/assets/quests/bounties/starfield_bg.mp4.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
-require = arg1;
+require = fn;
 function BountiesRecapOrbsBackground(arg0) {
   ({ style, reducedMotion } = arg0);
-  let obj = set;
+  let obj = PlatformUtils;
   if (obj.isAndroid()) {
     obj = {
-      style: null,
+      style,
       needsOffscreenAlphaCompositing: true,
       renderToHardwareTextureAndroid: true,
       pointerEvents: "none",
       children: null,
     };
-    obj[0] = style;
-    obj = { url: null, style: null, autoplay: null };
-    obj[0] = metadataDefault;
-    obj[1] = closure_3.absoluteFillObject;
-    obj[2] = !reducedMotion;
-    obj[4] = tmp3(tmp(8808).APNGPlayer, obj);
-    let tmp3Result = tmp3(closure_4, obj);
+    obj = { url: _modDef15050, style: React3.absoluteFillObject, autoplay: !reducedMotion };
+    obj.children = tmp3(tmp(8808).APNGPlayer, obj);
+    let tmp3Result = tmp3(React4, obj);
   } else {
-    obj1 = {
+    const obj1 = {
       source: null,
       style: null,
       resizeMode: "contain",
@@ -46,20 +39,21 @@ function BountiesRecapOrbsBackground(arg0) {
       preventsDisplaySleepDuringVideoPlayback: false,
       importantForAccessibility: "no-hide-descendants",
     };
-    const obj2 = { uri: null };
-    obj2[0] = metadataDefault2;
-    obj1[0] = obj2;
-    obj1[1] = style;
-    obj1[3] = reducedMotion;
+    const obj2 = { uri: _modDef15051 };
+    obj1.source = obj2;
+    obj1.style = style;
+    obj1.paused = reducedMotion;
     tmp3Result = tmp3(tmp(8307).VideoComponent, obj1);
   }
   return tmp3Result;
 }
-noopAll;
-({ StyleSheet: c3, View: c4 } = get_ActivityIndicator);
-({ jsx: closure_6, jsxs: error } = jsxProd);
-const lg = ThemesDefault.radii.lg;
-let closure_9 = createCacheKey.createStyles(() => {
+get_ActivityIndicator = fn(17);
+({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const lg = nativeDefault.radii.lg;
+const createStyles = fn(4560);
+let closure_9 = createStyles.createStyles(() => {
   let obj = {
     root: null,
     content: null,
@@ -70,60 +64,57 @@ let closure_9 = createCacheKey.createStyles(() => {
     actions: null,
     orbAmount: null,
   };
-  obj = { overflow: "hidden", borderRadius: lg, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-  obj[0] = obj;
-  obj = { flex: 1, paddingHorizontal: ThemesDefault.space.PX_24, justifyContent: "center", alignItems: "center" };
-  obj[1] = obj;
-  obj[2] = { alignItems: "center", width: "100%" };
-  obj[3] = { position: "absolute", top: 0, left: 0, right: 0, height: "40%", zIndex: 1 };
-  obj[4] = { paddingBottom: ThemesDefault.space.PX_4, textTransform: "uppercase" };
-  obj1 = { paddingBottom: ThemesDefault.space.PX_4, textTransform: "uppercase" };
-  obj[5] = {
+  obj = { overflow: "hidden", borderRadius: lg, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+  obj.root = obj;
+  obj = { flex: 1, paddingHorizontal: nativeDefault.space.PX_24, justifyContent: "center", alignItems: "center" };
+  obj.content = obj;
+  obj.centeredCopy = { alignItems: "center", width: "100%" };
+  obj.orbsBackground = { position: "absolute", top: 0, left: 0, right: 0, height: "40%", zIndex: 1 };
+  obj.headerLabel = { paddingBottom: nativeDefault.space.PX_4, textTransform: "uppercase" };
+  const obj1 = { paddingBottom: nativeDefault.space.PX_4, textTransform: "uppercase" };
+  obj.titleRow = {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    paddingBottom: ThemesDefault.space.PX_24,
-    gap: ThemesDefault.space.PX_8,
+    paddingBottom: nativeDefault.space.PX_24,
+    gap: nativeDefault.space.PX_8,
   };
+  const rect = {
+    position: "absolute",
+    left: nativeDefault.space.PX_24,
+    right: nativeDefault.space.PX_24,
+    gap: nativeDefault.space.PX_12,
+  };
+  obj.actions = rect;
   const obj2 = {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    paddingBottom: ThemesDefault.space.PX_24,
-    gap: ThemesDefault.space.PX_8,
-  };
-  obj[6] = {
-    position: "absolute",
-    left: ThemesDefault.space.PX_24,
-    right: ThemesDefault.space.PX_24,
-    gap: ThemesDefault.space.PX_12,
-  };
-  const obj3 = {
-    position: "absolute",
-    left: ThemesDefault.space.PX_24,
-    right: ThemesDefault.space.PX_24,
-    gap: ThemesDefault.space.PX_12,
+    paddingBottom: nativeDefault.space.PX_24,
+    gap: nativeDefault.space.PX_8,
   };
   let num = 0;
   if (obj7.isIOS()) {
     num = 6;
   }
-  obj[7] = { marginTop: num, lineHeight: 46 };
+  obj.orbAmount = { marginTop: num, lineHeight: 46 };
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesScrollRecapPage.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesScrollRecapPage.tsx");
 
 export const BountiesScrollRecapPage = function BountiesScrollRecapPage(orbAmount) {
   orbAmount = orbAmount.orbAmount;
   ({ onClose, style } = orbAmount);
-  const tmp = callback3();
+  const tmp = closure_9();
   let obj = initialize;
-  const items = [closure_5];
+  const items = [AccessibilityStore];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  obj = { style: items1, pointerEvents: "box-none", children: null };
-  items1 = [tmp.root, style];
-  obj = { style: closure_3.absoluteFillObject, pointerEvents: "none", children: null };
-  obj1 = {
+  obj = { style: null, pointerEvents: "box-none", children: null };
+  const items1 = [tmp.root, style];
+  obj.style = items1;
+  obj = { style: React3.absoluteFillObject, pointerEvents: "none", children: null };
+  const obj1 = {
     source: null,
     style: null,
     resizeMode: "cover",
@@ -133,42 +124,42 @@ export const BountiesScrollRecapPage = function BountiesScrollRecapPage(orbAmoun
     importantForAccessibility: "no-hide-descendants",
   };
   const tmp2 = useSafeAreaInsetsDefault();
-  obj1[0] = { uri: metadataDefault3 };
-  obj1[1] = closure_3.absoluteFillObject;
-  obj1[3] = stateFromStores;
+  obj1.source = { uri: _modDef15052 };
+  obj1.style = React3.absoluteFillObject;
+  obj1.paused = stateFromStores;
   const items2 = [
-    callback(VideoComponent.VideoComponent, obj1),
-    callback(BountiesRecapOrbsBackground, { style: tmp.orbsBackground, reducedMotion: stateFromStores }),
+    timestampProducer(common_Video.VideoComponent, obj1),
+    timestampProducer(BountiesRecapOrbsBackground, { style: tmp.orbsBackground, reducedMotion: stateFromStores }),
   ];
-  obj[2] = items2;
-  const items3 = [callback2(closure_4, obj)];
+  obj.children = items2;
+  const items3 = [React5(React4, obj)];
   const obj4 = { style: tmp.content, pointerEvents: "box-none", children: null };
   const obj5 = { style: tmp.centeredCopy, pointerEvents: "none", children: null };
   const obj6 = { variant: "text-xs/bold", color: "text-brand", style: tmp.headerLabel, children: null };
-  const intl = getSystemLocale.intl;
-  obj6[3] = intl.string(getSystemLocale.t.d6Rrn6);
-  const items4 = [callback(Text.Text, obj6), ,];
+  const intl = util.intl;
+  obj6.children = intl.string(util.t.d6Rrn6);
+  const items4 = [timestampProducer(Text_Text.Text, obj6), ,];
   const obj7 = { accessible: true, accessibilityRole: "text", accessibilityLabel: "+" + orbAmount, children: null };
   const obj8 = { style: tmp.titleRow, children: null };
-  const items5 = [callback(OrbsIcon.OrbsIcon, { size: "lg", color: "icon-strong", accessible: false })];
-  const obj2 = { uri: metadataDefault3 };
+  const items5 = [timestampProducer(OrbsIcon.OrbsIcon, { size: "lg", color: "icon-strong", accessible: false })];
+  const obj2 = { uri: _modDef15052 };
   const obj3 = { style: tmp.orbsBackground, reducedMotion: stateFromStores };
-  items5[1] = callback(Text.Text, {
+  items5[1] = timestampProducer(Text_Text.Text, {
     variant: "display-lg",
     color: "text-strong",
     accessible: false,
     style: tmp.orbAmount,
     children: "+" + orbAmount,
   });
-  obj8[1] = items5;
-  obj7[3] = callback2(closure_4, obj8);
-  items4[1] = callback(closure_4, obj7);
+  obj8.children = items5;
+  obj7.children = React5(React4, obj8);
+  items4[1] = timestampProducer(React4, obj7);
   const obj10 = { variant: "text-md/medium", color: "text-muted", style: { textAlign: "center" }, children: null };
-  const intl2 = getSystemLocale.intl;
-  obj10[3] = intl2.string(getSystemLocale.t.x0Ffz3);
-  items4[2] = callback(Text.Text, obj10);
-  obj5[2] = items4;
-  const items6 = [callback2(closure_4, obj5)];
+  const intl2 = util.intl;
+  obj10.children = intl2.string(util.t.x0Ffz3);
+  items4[2] = timestampProducer(Text_Text.Text, obj10);
+  obj5.children = items4;
+  const items6 = [React5(React4, obj5)];
   const obj11 = { style: null, children: null };
   const items7 = [tmp.actions];
   const obj9 = {
@@ -178,16 +169,16 @@ export const BountiesScrollRecapPage = function BountiesScrollRecapPage(orbAmoun
     style: tmp.orbAmount,
     children: "+" + orbAmount,
   };
-  items7[1] = { bottom: tmp2.bottom + ThemesDefault.space.PX_8 };
-  obj11[0] = items7;
+  items7[1] = { bottom: tmp2.bottom + nativeDefault.space.PX_8 };
+  obj11.style = items7;
   const obj13 = { grow: true, variant: "primary", text: null, size: "lg", onPress: null };
-  const intl3 = getSystemLocale.intl;
-  obj13[2] = intl3.string(getSystemLocale.t.i4jeWR);
-  obj13[4] = onClose;
-  obj11[1] = callback(Button.Button, obj13);
-  items6[1] = callback(closure_4, obj11);
-  obj4[2] = items6;
-  items3[1] = callback2(closure_4, obj4);
-  obj[2] = items3;
-  return callback2(closure_4, obj);
+  const intl3 = util.intl;
+  obj13.text = intl3.string(util.t.i4jeWR);
+  obj13.onPress = onClose;
+  obj11.children = timestampProducer(components_Button_Button.Button, obj13);
+  items6[1] = timestampProducer(React4, obj11);
+  obj4.children = items6;
+  items3[1] = React5(React4, obj4);
+  obj.children = items3;
+  return React5(React4, obj);
 };

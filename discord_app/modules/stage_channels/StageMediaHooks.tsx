@@ -1,84 +1,89 @@
 // discord_app/modules/stage_channels/StageMediaHooks.tsx
-import sortKey from "StageChannelParticipants.tsx";
-import closure_2 from "../../stores/GuildStore.tsx";
-import closure_3 from "../../stores/VoiceStateStore.tsx";
-import closure_4 from "StageChannelParticipantStore.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import StageChannelParticipants from "StageChannelParticipants.tsx";
+import GuildStore from "../../stores/GuildStore.tsx";
+import VoiceStateStore from "../../stores/VoiceStateStore.tsx";
+import StageChannelParticipantStore from "StageChannelParticipantStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/stage_channels/StageMediaHooks.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/StageMediaHooks.tsx");
 
 export const useStageHasMedia = function useStageHasMedia(id) {
-  const _require = id;
-  const items = [closure_4];
+  _require = id;
+  closure_129_0 = id;
+  const items = [StageChannelParticipantStore];
   const items1 = [id];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+  const stateFromStores = require("initialize").useStateFromStores(
     items,
     () => {
-      const mutableParticipants = closure_1_4.getMutableParticipants(
-        id,
-        id(closure_1_1[4]).StageChannelParticipantNamedIndex.SPEAKER,
+      const mutableParticipants = StageChannelParticipantStore.getMutableParticipants(
+        closure_0,
+        StageChannelParticipants.StageChannelParticipantNamedIndex.SPEAKER,
       );
       return (
-        null != mutableParticipants.find((type) => type.type === callback(table[4]).StageChannelParticipantTypes.STREAM)
+        null != mutableParticipants.find((type) => type.type === id(closure_1_1[4]).StageChannelParticipantTypes.STREAM)
       );
     },
     items1,
   );
-  const obj = initialize;
-  const items2 = [closure_3];
+  const obj = require("initialize");
+  const items2 = [VoiceStateStore];
   const items3 = [id];
-  const obj2 = initialize;
+  const obj2 = require("initialize");
   return (
-    require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
-      items2,
-      () => closure_1_3.hasVideo(closure_0),
-      items3,
-    ) || stateFromStores
+    require("initialize").useStateFromStores(items2, () => VoiceStateStore.hasVideo(closure_0), items3) ||
+    stateFromStores
   );
 };
 export const useStageHasStream = function useStageHasStream(id) {
-  const _require = id;
-  const items = [closure_4];
+  _require = id;
+  const items = [StageChannelParticipantStore];
   const items1 = [id];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+  return require("initialize").useStateFromStores(
     items,
     () => {
-      const mutableParticipants = closure_1_4.getMutableParticipants(
-        id,
-        id(closure_1_1[4]).StageChannelParticipantNamedIndex.SPEAKER,
+      const mutableParticipants = StageChannelParticipantStore.getMutableParticipants(
+        closure_0,
+        StageChannelParticipants.StageChannelParticipantNamedIndex.SPEAKER,
       );
       return (
-        null != mutableParticipants.find((type) => type.type === callback(table[4]).StageChannelParticipantTypes.STREAM)
+        null != mutableParticipants.find((type) => type.type === id(closure_1_1[4]).StageChannelParticipantTypes.STREAM)
       );
     },
     items1,
   );
 };
 export const getStageHasMedia = function getStageHasMedia(id) {
-  const mutableParticipants = store.getMutableParticipants(id, sortKey.StageChannelParticipantNamedIndex.SPEAKER);
+  const mutableParticipants = StageChannelParticipantStore.getMutableParticipants(
+    id,
+    StageChannelParticipants.StageChannelParticipantNamedIndex.SPEAKER,
+  );
   let hasVideoResult =
-    null != mutableParticipants.find((type) => type.type === callback(table[4]).StageChannelParticipantTypes.STREAM);
+    null !=
+    mutableParticipants.find(
+      (type) => type.type === require("StageChannelParticipants").StageChannelParticipantTypes.STREAM,
+    );
   if (!hasVideoResult) {
-    hasVideoResult = closure_3.hasVideo(id);
+    hasVideoResult = VoiceStateStore.hasVideo(id);
   }
   return hasVideoResult;
 };
-export const getStageHasStream = function getStageHasStream(closure_0) {
-  const mutableParticipants = store.getMutableParticipants(
-    closure_0,
-    sortKey.StageChannelParticipantNamedIndex.SPEAKER,
+export const getStageHasStream = function getStageHasStream(id) {
+  const mutableParticipants = StageChannelParticipantStore.getMutableParticipants(
+    id,
+    StageChannelParticipants.StageChannelParticipantNamedIndex.SPEAKER,
   );
   return (
-    null != mutableParticipants.find((type) => type.type === callback(table[4]).StageChannelParticipantTypes.STREAM)
+    null !=
+    mutableParticipants.find(
+      (type) => type.type === require("StageChannelParticipants").StageChannelParticipantTypes.STREAM,
+    )
   );
 };
 export const useIsStageVideoEnabled = function useIsStageVideoEnabled(arg0) {
-  const _require = arg0;
-  const items = [closure_2];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
-    closure_1_2.getGuild(closure_0),
-  );
+  _require = arg0;
+  const items = [GuildStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0));
   let tmp2 = null != stateFromStores;
   if (tmp2) {
     let num;
@@ -93,7 +98,7 @@ export const useIsStageVideoEnabled = function useIsStageVideoEnabled(arg0) {
   return tmp2;
 };
 export const isStageVideoEnabled = function isStageVideoEnabled(guild_id) {
-  guild = guild.getGuild(guild_id);
+  const guild = GuildStore.getGuild(guild_id);
   let tmp2 = null != guild;
   if (tmp2) {
     let num;

@@ -1,8 +1,8 @@
 // discord_app/modules/game_detection/calculateSteamReviewScoreDescription.tsx
-import set from "../../../_runtime/00002_set.js";
-import GameTheme from "GameDetectionTypes.tsx";
+import GameDetectionTypes from "GameDetectionTypes.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/game_detection/calculateSteamReviewScoreDescription.tsx");
+const result = size.fileFinishedImporting("modules/game_detection/calculateSteamReviewScoreDescription.tsx");
 
 export const calculateSteamReviewScoreDescription = function calculateSteamReviewScoreDescription(
   rating,
@@ -30,31 +30,31 @@ export const calculateSteamReviewScoreDescription = function calculateSteamRevie
       if (ratingCount >= 10) {
         if (rating >= 80) {
           if (ratingCount < num2) {
-            let VERY_POSITIVE = GameTheme.SteamReviewScoreDescription.POSITIVE;
+            let VERY_POSITIVE = GameDetectionTypes.SteamReviewScoreDescription.POSITIVE;
           } else {
             if (ratingCount >= num4) {
               if (rating >= 95) {
-                VERY_POSITIVE = GameTheme.SteamReviewScoreDescription.OVERWHELMINGLY_POSITIVE;
+                VERY_POSITIVE = GameDetectionTypes.SteamReviewScoreDescription.OVERWHELMINGLY_POSITIVE;
               }
             }
-            VERY_POSITIVE = GameTheme.SteamReviewScoreDescription.VERY_POSITIVE;
+            VERY_POSITIVE = GameDetectionTypes.SteamReviewScoreDescription.VERY_POSITIVE;
           }
         } else if (rating >= 70) {
-          let NO_USER_REVIEWS = GameTheme.SteamReviewScoreDescription.MOSTLY_POSITIVE;
+          let NO_USER_REVIEWS = GameDetectionTypes.SteamReviewScoreDescription.MOSTLY_POSITIVE;
         } else if (rating >= 40) {
-          NO_USER_REVIEWS = GameTheme.SteamReviewScoreDescription.MIXED;
+          NO_USER_REVIEWS = GameDetectionTypes.SteamReviewScoreDescription.MIXED;
         } else if (rating >= 20) {
-          NO_USER_REVIEWS = GameTheme.SteamReviewScoreDescription.MOSTLY_NEGATIVE;
+          NO_USER_REVIEWS = GameDetectionTypes.SteamReviewScoreDescription.MOSTLY_NEGATIVE;
         } else if (ratingCount < num) {
-          NO_USER_REVIEWS = GameTheme.SteamReviewScoreDescription.NEGATIVE;
+          NO_USER_REVIEWS = GameDetectionTypes.SteamReviewScoreDescription.NEGATIVE;
         } else if (ratingCount < num3) {
-          NO_USER_REVIEWS = GameTheme.SteamReviewScoreDescription.VERY_NEGATIVE;
+          NO_USER_REVIEWS = GameDetectionTypes.SteamReviewScoreDescription.VERY_NEGATIVE;
         } else {
-          NO_USER_REVIEWS = GameTheme.SteamReviewScoreDescription.OVERWHELMINGLY_NEGATIVE;
+          NO_USER_REVIEWS = GameDetectionTypes.SteamReviewScoreDescription.OVERWHELMINGLY_NEGATIVE;
         }
       }
       return NO_USER_REVIEWS;
     }
   }
-  NO_USER_REVIEWS = GameTheme.SteamReviewScoreDescription.NO_USER_REVIEWS;
+  NO_USER_REVIEWS = GameDetectionTypes.SteamReviewScoreDescription.NO_USER_REVIEWS;
 };

@@ -1,45 +1,56 @@
 // discord_app/lib/VideoHealthManager.tsx
-import set2 from "../../_runtime/00002_set.js";
-import timestampDefault from "../modules/debug/Logger.tsx";
-import ME from "../Constants.tsx";
-import sleep from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
-import isTablet from "../../discord_common/js/shared/lib/PlatformUtils.tsx";
+import LoggerDefault from "../modules/debug/Logger.tsx";
+import Constants from "../Constants.tsx";
+import DurationsDefault from "../utils/Durations.tsx";
+import TimeUtils from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
+import shared_PlatformUtils from "../../discord_common/js/shared/lib/PlatformUtils.tsx";
 import dispatchAutoDisableVideoDefault from "../modules/media_engine/dispatchAutoDisableVideo.tsx";
-import { sleep } from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-const VideoToggleState = ME.VideoToggleState;
+const VideoToggleState = Constants.VideoToggleState;
 class VideoHealthManager {
   constructor(arg0, arg1, arg2, arg3) {
-    obj = Object.create(new.target.prototype);
-    tmp2 = new require("timestamp")("VideoHealthManager");
-    obj[0] = tmp2;
-    obj[2] = {};
-    obj[3] = {};
-    obj[4] = {};
+    merged = Object.assign({
+      logger: null,
+      disabled: false,
+      perUserFpsWindow: null,
+      prevFramesCodec: null,
+      prevTimestamp: null,
+      streamDisabledUsers: null,
+      retryBackoffCache: null,
+      timeoutIdCache: null,
+      currentVideoAutoToggleState: null,
+      enableQueue: null,
+    });
+    tmp2 = new closure_1(closure_2[1])("VideoHealthManager");
+    merged[0] = tmp2;
+    merged[2] = {};
+    merged[3] = {};
+    merged[4] = {};
     set = new Set();
-    obj[5] = set;
-    obj[6] = {};
-    obj[7] = {};
-    obj[8] = {};
-    obj[9] = [];
-    obj.windowLength = global;
-    obj.fpsThreshold = importDefault;
-    obj.fpsWindowBorderlineCount = Math.ceil(global * require);
-    obj.backoffTimeSec = importAll;
-    logger = obj.logger;
+    merged[5] = set;
+    merged[6] = {};
+    merged[7] = {};
+    merged[8] = {};
+    merged[9] = [];
+    merged.windowLength = global;
+    merged.fpsThreshold = importDefault;
+    merged.fpsWindowBorderlineCount = Math.ceil(global * require);
+    merged.backoffTimeSec = importAll;
+    logger = merged.logger;
     enableNativeLoggerResult = logger.enableNativeLogger(true);
-    logger2 = obj.logger;
+    logger2 = merged.logger;
     infoResult = logger2.info(
       "constructor with windowLength = " +
-        obj.windowLength +
+        merged.windowLength +
         ",\n      fpsWindowBorderlineCount = " +
-        obj.fpsWindowBorderlineCount +
+        merged.fpsWindowBorderlineCount +
         ",\n      fpsThreshold = " +
-        obj.fpsThreshold +
+        merged.fpsThreshold +
         ",\n      backoffTimeSec = " +
         importAll,
     );
-    return obj;
+    return merged;
   }
 }
 const prototype = VideoHealthManager.prototype;
@@ -66,8 +77,7 @@ prototype["calculateFps"] = function calculateFps(arg0, arg1, arg2) {
   return NaN;
 };
 prototype["updateFps"] = function updateFps(arg0, arg1, arg2) {
-  let self = this;
-  self = this;
+  const self = this;
   if (!this.disabled) {
     const streamDisabledUsers = self.streamDisabledUsers;
     if (!streamDisabledUsers.has(arg0)) {
@@ -80,9 +90,8 @@ prototype["updateFps"] = function updateFps(arg0, arg1, arg2) {
           if (self.perUserFpsWindow[arg0].length >= self.windowLength) {
             if (self.perUserFpsWindow[arg0].length > self.windowLength) {
               arr = self.perUserFpsWindow[arg0].shift();
-              const arr2 = self.perUserFpsWindow[arg0];
             }
-            if (arr3.filter((arg0) => arg0 < self.fpsThreshold).length >= self.fpsWindowBorderlineCount) {
+            if (arr3.filter((item) => item < self.fpsThreshold).length >= self.fpsWindowBorderlineCount) {
               const logger = self.logger;
               const _HermesInternal = HermesInternal;
               logger.info("" + arg0 + ": detected poor network quality, turning off video");
@@ -110,9 +119,8 @@ prototype["updateFps"] = function updateFps(arg0, arg1, arg2) {
   }
 };
 prototype["startReenableBackoffTimer"] = function startReenableBackoffTimer(arg0) {
-  let self = this;
-  self = this;
-  const _require = arg0;
+  const self = this;
+  closure_0 = arg0;
   if (!this.disabled) {
     const logger = self.logger;
     const _HermesInternal = HermesInternal;
@@ -122,19 +130,17 @@ prototype["startReenableBackoffTimer"] = function startReenableBackoffTimer(arg0
     if (null !== lastBackoffTime) {
       num2 = 1;
       if (expBackoffFactor <= 16) {
-        let obj = sleep;
+        let obj = TimeUtils;
         num2 = 1;
         if (self.elapsedSeconds(obj.now(), lastBackoffTime) <= 600) {
           num2 = expBackoffFactor * 2;
         }
       }
     }
-    obj = { lastBackoffTime: null, expBackoffFactor: null };
-    obj[0] = require("../../discord_common/js/packages/time-utils/TimeUtils.tsx").now();
-    obj[1] = num2;
+    obj = { lastBackoffTime: TimeUtils.now(), expBackoffFactor: num2 };
     self.retryBackoffCache[arg0] = obj;
     const result = num2 * self.backoffTimeSec;
-    const result1 = result * self(1090).Millis.SECOND;
+    const result1 = result * DurationsDefault.Millis.SECOND;
     const logger2 = self.logger;
     const _HermesInternal2 = HermesInternal;
     logger2.info("starting backoff timer with time = " + result1 + " milliseconds");
@@ -142,12 +148,11 @@ prototype["startReenableBackoffTimer"] = function startReenableBackoffTimer(arg0
     self.timeoutIdCache[arg0] = setTimeout(() => {
       self.queueReenable(closure_0);
     }, result1);
-    const obj3 = sleep;
   }
 };
-prototype["queueReenable"] = function queueReenable(closure_0) {
+prototype["queueReenable"] = function queueReenable(arg0) {
   const enableQueue = this.enableQueue;
-  enableQueue.push(closure_0);
+  enableQueue.push(arg0);
   this.tryReenableQueue();
 };
 prototype["tryReenableQueue"] = function tryReenableQueue() {
@@ -176,13 +181,12 @@ prototype["reenableVideo"] = function reenableVideo(arr) {
   if (flag) {
     const logger = self.logger;
     const _HermesInternal = HermesInternal;
-    logger.info("reenableVideo called for user " + arr + " - time = " + sleep.now());
+    logger.info("reenableVideo called for user " + arr + " - time = " + TimeUtils.now());
     const result = self.stateCleanupBeforeEnable(arr);
     self.currentVideoAutoToggleState[arr] = VideoToggleState.AUTO_PROBING;
     self.probingUserId = arr;
     dispatchAutoDisableVideoDefault(arr, VideoToggleState.AUTO_PROBING);
     flag = true;
-    const obj = sleep;
   }
   return flag;
 };
@@ -232,25 +236,17 @@ prototype["disable"] = function disable() {
   const self = this;
   this.disabled = true;
   for (const key10004 in this.perUserFpsWindow) {
-    let tmp = key10004;
     let deleteUserResult = self.deleteUser(key10004);
     continue;
   }
 };
 VideoHealthManager.defaultConfig = {
-  featureEnabled: isTablet.isMobile,
+  featureEnabled: shared_PlatformUtils.isMobile,
   windowLength: 5,
   allowedPoorFpsRatio: 1,
   fpsThreshold: 5,
   backoffTimeSec: 15,
 };
-let obj = {
-  featureEnabled: isTablet.isMobile,
-  windowLength: 5,
-  allowedPoorFpsRatio: 1,
-  fpsThreshold: 5,
-  backoffTimeSec: 15,
-};
-let result = set2.fileFinishedImporting("lib/VideoHealthManager.tsx");
+let result = size.fileFinishedImporting("lib/VideoHealthManager.tsx");
 
 export { VideoHealthManager };

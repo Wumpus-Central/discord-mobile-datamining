@@ -1,7 +1,7 @@
 // discord_app/modules/local_push_notification/native/Constants.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/local_push_notification/native/Constants.tsx");
+const result = size.fileFinishedImporting("modules/local_push_notification/native/Constants.tsx");
 
 export const LocalNotificationTypes = {
   GUILD_VERIFICATION: "GUILD_VERIFICATION",

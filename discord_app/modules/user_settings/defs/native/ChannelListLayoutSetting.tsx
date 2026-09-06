@@ -1,67 +1,41 @@
 // discord_app/modules/user_settings/defs/native/ChannelListLayoutSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import explicitContentFromProto from "../../UserSettings.tsx";
+import util from "../../../../intl/index.native.tsx";
+import UserSettings from "../../UserSettings.tsx";
 import ChannelListLayoutTypes from "../../../main_tabs_v2/ChannelListLayoutTypes.tsx";
-import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 function useChannelListLayoutPredicate() {
   return false;
 }
-const radio = createToggle.createRadio({
+const radio = SettingBuilders.createRadio({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.eY1X1e);
+    const intl = util.intl;
+    return intl.string(util.t.eY1X1e);
   },
-  parent: MobileUserSettings.MobileUserSettings.ADVANCED,
-  useValue: explicitContentFromProto.ChannelListLayoutSetting.useSetting,
+  parent: SettingsConstants.MobileUserSettings.ADVANCED,
+  useValue: UserSettings.ChannelListLayoutSetting.useSetting,
   onValueChange: function onChannelListLayoutValueChange(arg0) {
-    const ChannelListLayoutSetting = explicitContentFromProto.ChannelListLayoutSetting;
+    const ChannelListLayoutSetting = UserSettings.ChannelListLayoutSetting;
     ChannelListLayoutSetting.updateSetting(arg0);
   },
   useOptions: function useChannelListLayoutOptions() {
     let obj = { label: null, value: null };
-    const intl = getSystemLocale.intl;
-    obj[0] = intl.string(getSystemLocale.t.T7G4Y0);
-    obj[1] = ChannelListLayoutTypes.ChannelListLayoutTypes.COZY;
+    const intl = util.intl;
+    obj.label = intl.string(util.t.T7G4Y0);
+    obj.value = ChannelListLayoutTypes.ChannelListLayoutTypes.COZY;
     const items = [obj];
     obj = { label: null, value: null };
-    const intl2 = getSystemLocale.intl;
-    obj[0] = intl2.string(getSystemLocale.t["7iegX4"]);
-    obj[1] = ChannelListLayoutTypes.ChannelListLayoutTypes.COMPACT;
+    const intl2 = util.intl;
+    obj.label = intl2.string(util.t["7iegX4"]);
+    obj.value = ChannelListLayoutTypes.ChannelListLayoutTypes.COMPACT;
     items[1] = obj;
     return items;
   },
   usePredicate: useChannelListLayoutPredicate,
 });
-let obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.eY1X1e);
-  },
-  parent: MobileUserSettings.MobileUserSettings.ADVANCED,
-  useValue: explicitContentFromProto.ChannelListLayoutSetting.useSetting,
-  onValueChange: function onChannelListLayoutValueChange(arg0) {
-    const ChannelListLayoutSetting = explicitContentFromProto.ChannelListLayoutSetting;
-    ChannelListLayoutSetting.updateSetting(arg0);
-  },
-  useOptions: function useChannelListLayoutOptions() {
-    let obj = { label: null, value: null };
-    const intl = getSystemLocale.intl;
-    obj[0] = intl.string(getSystemLocale.t.T7G4Y0);
-    obj[1] = ChannelListLayoutTypes.ChannelListLayoutTypes.COZY;
-    const items = [obj];
-    obj = { label: null, value: null };
-    const intl2 = getSystemLocale.intl;
-    obj[0] = intl2.string(getSystemLocale.t["7iegX4"]);
-    obj[1] = ChannelListLayoutTypes.ChannelListLayoutTypes.COMPACT;
-    items[1] = obj;
-    return items;
-  },
-  usePredicate: useChannelListLayoutPredicate,
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/ChannelListLayoutSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/ChannelListLayoutSetting.tsx");
 
 export default radio;
 export { useChannelListLayoutPredicate };

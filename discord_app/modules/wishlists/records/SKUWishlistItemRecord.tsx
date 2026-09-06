@@ -1,56 +1,52 @@
 // discord_app/modules/wishlists/records/SKUWishlistItemRecord.tsx
-import fromServerDefault from "BaseWishlistItemRecord.tsx";
-import closure_0 from "../../skus/SKURecord.tsx";
+import SKURecord from "../../skus/SKURecord.tsx";
+import BaseWishlistItemRecord from "BaseWishlistItemRecord.tsx";
 
-fromServerDefault;
-let prototype;
-prototype = function SKUWishlistItemRecord(sku) {
+const prototype = function SKUWishlistItemRecord(sku) {
   const tmp = new prototype(sku, new.target);
-  // ThrowIfThisInitialized (0x7c)
   tmp.skuProductLine = sku.sku.productLine;
   tmp.sku = sku.sku;
   return tmp;
 }.prototype;
 class prototype extends tmp2 {}
 prototype["fromServer"] = function fromServer(sku) {
-  const fromServer = closure_0.createFromServer(sku.sku);
+  const fromServer = SKURecord.createFromServer(sku.sku);
   if (null == fromServer) {
     const _Error = Error;
-    error = new Error("SKU not found");
+    const error = new Error("SKU not found");
     throw error;
   } else {
     const obj = { sku: fromServer };
-    const merged = Object.assign(sku);
-    if (typeof prototype !== "function") {
-      HermesBuiltin.throwTypeError();
+    if (typeof prototype === "function") {
+      const tmp11 = new prototype(obj, sku, tmp5);
+      tmp11.skuProductLine = obj.sku.productLine;
+      tmp11.sku = obj.sku;
+      return tmp11;
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    const tmp11 = new prototype(obj, sku, merged);
-    // ThrowIfThisInitialized (0x7c)
-    tmp11.skuProductLine = obj.sku.productLine;
-    tmp11.sku = obj.sku;
-    return tmp11;
   }
 };
-prototype["fromSKU"] = function fromSKU(arg0) {
+prototype["fromSKU"] = function fromSKU(sku) {
   let tmp = null;
-  if (null != arg0) {
+  if (null != sku) {
     const obj = { sku_id: null, sku_product_line: null, sku_name: null, sku: null };
-    ({ id: obj[0], productLine: obj[1], name } = arg0);
-    obj[2] = name;
-    obj[3] = arg0;
-    if (typeof prototype !== "function") {
-      HermesBuiltin.throwTypeError();
+    ({ id: obj.sku_id, productLine: obj.sku_product_line, name } = sku);
+    obj.sku_name = name;
+    obj.sku = sku;
+    if (typeof prototype === "function") {
+      const tmp8 = new prototype(obj, name, tmp2, new.target);
+      tmp8.skuProductLine = obj.sku.productLine;
+      tmp8.sku = obj.sku;
+      tmp = tmp8;
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    const tmp8 = new prototype(obj, name, prototype, new.target);
-    // ThrowIfThisInitialized (0x7c)
-    tmp8.skuProductLine = obj.sku.productLine;
-    tmp8.sku = obj.sku;
-    tmp = tmp8;
-    const tmp2 = prototype;
   }
   return tmp;
 };
-const result = require("set").fileFinishedImporting("modules/wishlists/records/SKUWishlistItemRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/wishlists/records/SKUWishlistItemRecord.tsx");
 
 export default prototype;
 export const isSKUWishlistItemRecord = function isSKUWishlistItemRecord(sku) {

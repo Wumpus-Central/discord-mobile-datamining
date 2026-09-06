@@ -1,28 +1,32 @@
 // discord_app/modules/media_keyboard/native/components/MediaKeyboardLimitedPickerNotice.tsx
-import closure_2 from "../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import util from "../../../../intl/index.native.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = createCacheKey.createStyles({
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4560);
+let closure_6 = createStyles.createStyles({
   container: { flexDirection: "row", paddingHorizontal: 16, paddingVertical: 16, alignItems: "center" },
   absoluteContainer: { position: "absolute" },
   text: { flex: 1 },
   button: { marginLeft: 16 },
 });
-const result = require("set").fileFinishedImporting(
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/media_keyboard/native/components/MediaKeyboardLimitedPickerNotice.tsx",
 );
 
 export default function MediaKeyboardLimitedPickerNotice(onHeightChange) {
   onHeightChange = onHeightChange.onHeightChange;
-  const tmp = callback2();
+  const tmp = closure_6();
   const items = [onHeightChange];
   const items1 = [tmp.container];
   let absoluteContainer;
-  const callback = React.useCallback((nativeEvent) => {
+  const callback = noop.useCallback((nativeEvent) => {
     if (onHeightChange != null) {
       tmp(nativeEvent.nativeEvent.layout.height);
     }
@@ -33,16 +37,16 @@ export default function MediaKeyboardLimitedPickerNotice(onHeightChange) {
   let obj = { style: items1, onLayout: callback, children: null };
   items1[1] = absoluteContainer;
   obj = { style: tmp.text, variant: "text-sm/normal", children: null };
-  const intl = onHeightChange(1114).intl;
-  obj[2] = intl.string(onHeightChange(1114).t["5g7NcN"]);
-  const items2 = [callback(onHeightChange(4556).Text, obj)];
+  const intl = util.intl;
+  obj.children = intl.string(util.t["5g7NcN"]);
+  const items2 = [React4(Text_Text.Text, obj)];
   obj = { style: tmp.button, children: null };
-  obj1 = { size: "sm", variant: "tertiary", text: null, onPress: null };
-  const intl2 = onHeightChange(1114).intl;
-  obj1[2] = intl2.string(onHeightChange(1114).t.JuXTi6);
-  obj1[3] = onHeightChange.onPress;
-  obj[1] = callback(onHeightChange(4975).Button, obj1);
-  items2[1] = callback(View, obj);
-  obj[2] = items2;
-  return closure_5(View, obj);
+  const obj1 = { size: "sm", variant: "tertiary", text: null, onPress: null };
+  const intl2 = util.intl;
+  obj1.text = intl2.string(util.t.JuXTi6);
+  obj1.onPress = onHeightChange.onPress;
+  obj.children = React4(components_Button_Button.Button, obj1);
+  items2[1] = React4(View, obj);
+  obj.children = items2;
+  return hasOwnProperty(View, obj);
 }

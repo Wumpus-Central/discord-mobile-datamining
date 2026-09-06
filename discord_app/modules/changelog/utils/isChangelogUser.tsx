@@ -1,9 +1,9 @@
 // discord_app/modules/changelog/utils/isChangelogUser.tsx
-import set from "../../../../_runtime/00002_set.js";
-import CHANGELOG_MODAL_KEY from "../ChangelogConstants.tsx";
+import ChangelogConstants from "../ChangelogConstants.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const SYSTEM_UPDATES_USER_ID = CHANGELOG_MODAL_KEY.SYSTEM_UPDATES_USER_ID;
-const result = set.fileFinishedImporting("modules/changelog/utils/isChangelogUser.tsx");
+const SYSTEM_UPDATES_USER_ID = ChangelogConstants.SYSTEM_UPDATES_USER_ID;
+const result = size.fileFinishedImporting("modules/changelog/utils/isChangelogUser.tsx");
 
 export default function isChangelogUser(arg0) {
   let tmp = null != arg0;

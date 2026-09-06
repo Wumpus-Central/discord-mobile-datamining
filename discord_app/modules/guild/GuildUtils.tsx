@@ -1,16 +1,15 @@
 // discord_app/modules/guild/GuildUtils.tsx
-import set from "../../../_runtime/00002_set.js";
-import showTooManyUserGuildsAlertDefault from "../../actions/GuildActionCreators.tsx";
+import GuildActionCreatorsDefault from "../../actions/GuildActionCreators.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-let result = set.fileFinishedImporting("modules/guild/GuildUtils.tsx");
+let result = size.fileFinishedImporting("modules/guild/GuildUtils.tsx");
 
-export const handleJoinGuild = function handleJoinGuild(closure_0) {
-  importDefault = closure_0;
-  if (null != closure_0) {
-    const obj = showTooManyUserGuildsAlertDefault;
-    showTooManyUserGuildsAlertDefault.joinGuild(closure_0).then(() => {
-      const result = callback(closure_1_1[0]).transitionToGuildSync(callback);
+export const handleJoinGuild = function handleJoinGuild(guildId) {
+  importDefault = guildId;
+  if (null != guildId) {
+    GuildActionCreatorsDefault.joinGuild(guildId).then(() => {
+      const result = GuildActionCreatorsDefault.transitionToGuildSync(closure_0);
     });
-    const joinGuildResult = showTooManyUserGuildsAlertDefault.joinGuild(closure_0);
+    const joinGuildResult = GuildActionCreatorsDefault.joinGuild(guildId);
   }
 };

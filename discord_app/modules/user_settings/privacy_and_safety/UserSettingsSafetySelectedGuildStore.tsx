@@ -1,28 +1,26 @@
 // discord_app/modules/user_settings/privacy_and_safety/UserSettingsSafetySelectedGuildStore.tsx
-import set from "../../../../_runtime/00002_set.js";
-import keys from "../../../../_runtime/00560_keys.js";
+import 00560__ from "../../../../_runtime/metro/00560__.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
 let closure_0 = { selectedGuildId: "0" };
-let obj = keys.create((arg0) => {
+const useUserSafetySettingsSelectedGuildStore = module_560.create((arg0) => {
   closure_0 = arg0;
-  obj = {};
+  const obj = {};
   const merged = Object.assign(closure_0);
   obj.setSelectedGuildId = function setSelectedGuildId(selectedGuildId) {
-    callback({ selectedGuildId });
+    closure_0({ selectedGuildId });
   };
   obj.reset = function reset() {
-    callback(callback);
+    closure_0(closure_0);
   };
   return obj;
 });
-const result = set.fileFinishedImporting(
-  "modules/user_settings/privacy_and_safety/UserSettingsSafetySelectedGuildStore.tsx",
-);
+const result = size.fileFinishedImporting("modules/user_settings/privacy_and_safety/UserSettingsSafetySelectedGuildStore.tsx");
 
 export const GUILD_SELECT_ALL_SERVERS_OPTION_ID = "0";
-export const useUserSafetySettingsSelectedGuildStore = obj;
+export { useUserSafetySettingsSelectedGuildStore };
 export const setSelectedGuildId = function setSelectedGuildId(selectedGuildId) {
-  obj = { selectedGuildId };
+  const obj = { selectedGuildId };
   return obj.setState(obj);
 };
 export const getSelectedGuildId = function getSelectedGuildId() {

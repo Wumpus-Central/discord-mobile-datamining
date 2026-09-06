@@ -1,31 +1,27 @@
 // discord_app/modules/guilds_bar/native/GuildsBarFolderMenuItems.tsx
-import closure_2 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_3 from "../../../stores/SortedGuildStore.tsx";
-import { AnalyticsSections } from "../../../Constants.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import SortedGuildStore from "../../../stores/SortedGuildStore.tsx";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarFolderMenuItems.tsx");
+const require = fn;
+const AnalyticsSections = fn(1074).AnalyticsSections;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarFolderMenuItems.tsx");
 
-export const getGuildFolderMenuItems = function getGuildFolderMenuItems(guildFolderMenuItems) {
-  const _require = guildFolderMenuItems;
-  let obj = {
-    IconComponent: require("../../../design/components/Icon/native/redesign/generated/EnvelopeIcon.tsx").EnvelopeIcon,
-    label: null,
-    action: null,
-  };
-  const intl = require("../../../intl/index.native.tsx").intl;
-  obj[1] = intl.string(require("../../../intl/index.native.tsx").t.e6RscS);
-  obj[2] = function action() {
-    return closure_1_2(function* () {
+export const getGuildFolderMenuItems = function getGuildFolderMenuItems(id) {
+  _require = id;
+  let obj = { IconComponent: require("EnvelopeIcon").EnvelopeIcon, label: null, action: null };
+  const intl = require("util").intl;
+  obj.label = intl.string(require("util").t.e6RscS);
+  obj.action = function action() {
+    return (async (arg0, value) => {
       if (guildFolderById === 2) {
         guildFolderById = 3;
-        HermesBuiltin.throwTypeError();
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp5 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          let obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
@@ -36,22 +32,19 @@ export const getGuildFolderMenuItems = function getGuildFolderMenuItems(guildFol
           if (0 === c2) {
             if (arg0 === 1) {
               guildFolderById = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               guildFolderById = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj = { value, done: true };
               return obj;
             } else {
-              closure_1 = tmp3;
-              guildFolderById = tmp2;
-              guildFolderById = undefined;
-              guildFolderById = guildFolderById.getGuildFolderById(closure_1_0);
+              closure_128_0 = undefined;
+              guildFolderById = guildFolderById.getGuildFolderById(id);
+              closure_128_0 = guildFolderById;
               if (null != guildFolderById) {
                 c2 = 1;
                 guildFolderById = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = closure_1_0(closure_1_1[6])(closure_1_1[5], closure_1_1.paths);
+                const obj1 = { value: tmp2(tmp3[6])(tmp3[5], tmp3.paths), done: false };
                 return obj1;
               } else {
                 guildFolderById = 3;
@@ -59,13 +52,12 @@ export const getGuildFolderMenuItems = function getGuildFolderMenuItems(guildFol
             }
           } else if (arg0 === 1) {
             guildFolderById = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 !== 2) {
-            arg1.default(guildFolderById.guildIds, closure_1_4.GUILD_LIST);
+            value.default(closure_128_0.guildIds, constants.GUILD_LIST);
           }
           guildFolderById = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj = { value, done: true };
           return obj;
         } catch (tmp14) {
           guildFolderById = tmp;
@@ -75,24 +67,19 @@ export const getGuildFolderMenuItems = function getGuildFolderMenuItems(guildFol
     })();
   };
   const items = [obj];
-  obj = {
-    IconComponent: require("../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx").SettingsIcon,
-    label: null,
-    action: null,
-  };
-  const intl2 = require("../../../intl/index.native.tsx").intl;
-  obj[1] = intl2.string(require("../../../intl/index.native.tsx").t.Dx7im5);
-  obj[2] = function action() {
-    return closure_1_2(function* () {
+  obj = { IconComponent: require("SettingsIcon").SettingsIcon, label: null, action: null };
+  const intl2 = require("util").intl;
+  obj.label = intl2.string(require("util").t.Dx7im5);
+  obj.action = function action() {
+    return (async (arg0, value) => {
       if (c2 === 2) {
         c2 = 3;
-        HermesBuiltin.throwTypeError();
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp3 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          let obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
@@ -103,30 +90,26 @@ export const getGuildFolderMenuItems = function getGuildFolderMenuItems(guildFol
           if (0 === paths) {
             if (arg0 === 1) {
               c2 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c2 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj = { value, done: true };
               return obj;
             } else {
-              closure_0 = tmp4;
               paths = 1;
               c2 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = closure_1_0(paths[6])(paths[8], paths.paths);
+              const obj1 = { value: tmp4(paths[6])(paths[8], paths.paths), done: false };
               return obj1;
             }
           } else if (arg0 === 1) {
             c2 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c2 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
-            const result = arg1.showGuildsBarFolderModal(closure_0);
+            const result = value.showGuildsBarFolderModal(closure_128_0);
             c2 = 3;
             return { value: "HermesInternal", done: null };
           }

@@ -1,20 +1,25 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelWave.tsx
-import getSystemLocale from "../../../../../../../intl/index.native.tsx";
-import Text from "../../../../../../../design/components/Text/native/Text.tsx";
-import Button from "../../../../../../../design/components/Button/native/Button.native.tsx";
-import { jsx } from "../../../../../../../../_runtime/react/00021_jsxProd.js";
-import importAllResult from "../../../../../../../../_runtime/00019_noop.js";
+import util from "../../../../../../../intl/index.native.tsx";
+import Text_Text from "../../../../../../../design/components/Text/native/Text.tsx";
+import components_Button_Button from "../../../../../../../design/components/Button/native/Button.native.tsx";
+import noop from "../../../../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-const memoResult = importAllResult.memo(function MessagesItemChannelWave(hasNameplate) {
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting(
+  "modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelWave.tsx",
+);
+
+export default noop.memo(function MessagesItemChannelWave(hasNameplate) {
   let flag = hasNameplate.hasNameplate;
   if (flag === undefined) {
     flag = false;
   }
   const obj = { text: null, icon: null, variant: null, size: "sm", onPress: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t.n8nU4W);
-  obj[1] = jsx(Text.Text, {
+  const intl = util.intl;
+  obj.text = intl.string(util.t.n8nU4W);
+  obj.icon = jsx(Text_Text.Text, {
     style: { marginTop: 3 },
     variant: "text-sm/semibold",
     "aria-hidden": true,
@@ -24,12 +29,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelWave(hasName
   if (flag) {
     str = "secondary-overlay";
   }
-  obj[2] = str;
-  obj[4] = hasNameplate.wavePressed;
-  return jsx(Button.Button, { text: null, icon: null, variant: null, size: "sm", onPress: null });
+  obj.variant = str;
+  obj.onPress = hasNameplate.wavePressed;
+  return jsx(components_Button_Button.Button, { text: null, icon: null, variant: null, size: "sm", onPress: null });
 });
-const result = require("set").fileFinishedImporting(
-  "modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelWave.tsx",
-);
-
-export default memoResult;

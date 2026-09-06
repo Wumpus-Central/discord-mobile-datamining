@@ -1,30 +1,30 @@
 // discord_app/modules/collectibles/CollectiblesDebugStore.tsx
-import set from "../../../_runtime/00002_set.js";
-import keys from "../../../_runtime/00560_keys.js";
+import 00560__ from "../../../_runtime/metro/00560__.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-let obj = keys.create((arg0) => {
+const useCollectiblesDebugStore = module_560.create((arg0) => {
   closure_0 = arg0;
   return {
     logs: [],
     addLog(arg0) {
-      const callback = arg0;
-      return callback((logs) => {
-        obj = { logs: null };
+      closure_0 = arg0;
+      return closure_0((logs) => {
+        const obj = { logs: null };
         const items = [...logs.logs];
         const date = new Date();
         items[tmp] = "[" + new Date().toISOString().split("T")[0] + "] " + closure_0;
-        obj[0] = items;
+        obj.logs = items;
         return obj;
       });
     },
     clearLogs() {
-      return callback({ logs: [] });
-    },
+      return closure_0({ logs: [] });
+    }
   };
 });
-const result = set.fileFinishedImporting("modules/collectibles/CollectiblesDebugStore.tsx");
+const result = size.fileFinishedImporting("modules/collectibles/CollectiblesDebugStore.tsx");
 
-export const useCollectiblesDebugStore = obj;
+export { useCollectiblesDebugStore };
 export const addDebugLog = function addDebugLog(arg0) {
   const date = new Date();
   const state = obj.getState();

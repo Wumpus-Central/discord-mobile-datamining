@@ -1,8 +1,22 @@
 // discord_common/js/shared/shared-constants/FirstPartyQuestTaskTypes.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const obj = { ALL: null, DESKTOP: null, CONSOLE: null, IN_GAME: null, VIDEO: null };
-let set = new Set([
+const obj = {
+  ALL: new Set([
+    "PLAY_ACTIVITY",
+    "PLAY_ON_DESKTOP",
+    "PLAY_ON_PLAYSTATION",
+    "PLAY_ON_XBOX",
+    "STREAM_ON_DESKTOP",
+    "WATCH_VIDEO",
+    "WATCH_VIDEO_ON_MOBILE",
+  ]),
+  DESKTOP: null,
+  CONSOLE: null,
+  IN_GAME: null,
+  VIDEO: null,
+};
+const set = new Set([
   "PLAY_ACTIVITY",
   "PLAY_ON_DESKTOP",
   "PLAY_ON_PLAYSTATION",
@@ -11,15 +25,14 @@ let set = new Set([
   "WATCH_VIDEO",
   "WATCH_VIDEO_ON_MOBILE",
 ]);
-obj[0] = set;
-obj[1] = new Set(["PLAY_ACTIVITY", "PLAY_ON_DESKTOP", "STREAM_ON_DESKTOP"]);
+obj.DESKTOP = new Set(["PLAY_ACTIVITY", "PLAY_ON_DESKTOP", "STREAM_ON_DESKTOP"]);
 const set1 = new Set(["PLAY_ACTIVITY", "PLAY_ON_DESKTOP", "STREAM_ON_DESKTOP"]);
-obj[2] = new Set(["PLAY_ON_PLAYSTATION", "PLAY_ON_XBOX"]);
+obj.CONSOLE = new Set(["PLAY_ON_PLAYSTATION", "PLAY_ON_XBOX"]);
 const set2 = new Set(["PLAY_ON_PLAYSTATION", "PLAY_ON_XBOX"]);
-obj[3] = new Set(["ACHIEVEMENT_IN_ACTIVITY", "ACHIEVEMENT_IN_GAME"]);
+obj.IN_GAME = new Set(["ACHIEVEMENT_IN_ACTIVITY", "ACHIEVEMENT_IN_GAME"]);
 const set3 = new Set(["ACHIEVEMENT_IN_ACTIVITY", "ACHIEVEMENT_IN_GAME"]);
-obj[4] = new Set(["WATCH_VIDEO", "WATCH_VIDEO_ON_MOBILE"]);
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/FirstPartyQuestTaskTypes.tsx");
+obj.VIDEO = new Set(["WATCH_VIDEO", "WATCH_VIDEO_ON_MOBILE"]);
+const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/FirstPartyQuestTaskTypes.tsx");
 
 export const FirstPartyQuestTaskTypes = {
   STREAM_ON_DESKTOP: "STREAM_ON_DESKTOP",

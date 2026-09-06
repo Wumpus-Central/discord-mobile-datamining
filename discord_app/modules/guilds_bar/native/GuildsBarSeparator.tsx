@@ -1,66 +1,67 @@
 // discord_app/modules/guilds_bar/native/GuildsBarSeparator.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import map from "../../../design/tokens/native/useToken.tsx";
-import setDefault from "../../core/native/NativeView.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
-import importAllResult from "../../../../_runtime/00019_noop.js";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import useToken from "../../../design/tokens/native/useToken.tsx";
+import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
+import ReanimatedNativeViewDefault from "../../core/native/ReanimatedNativeView.tsx";
+import useHomeDrawerGesture from "../../home_drawer/native/useHomeDrawerGesture.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+const NativeViewDefault = tmp2(5589);
+require = fn;
 function GuildsBarHomeDrawerSeparator(guildItemSize) {
   guildItemSize = guildItemSize.guildItemSize;
-  let panelTranslateX;
-  const tmp = callback(guildItemSize);
-  panelTranslateX = guildItemSize(16022).useHomeDrawerState().panelTranslateX;
-  let obj = guildItemSize(16022);
+  let obj = useHomeDrawerGesture;
+  const panelTranslateX = obj.useHomeDrawerState().panelTranslateX;
+  const tmp = closure_4(guildItemSize);
   const fn = function n() {
     let obj = { transform: null };
     obj = { scaleX: Math.max(1, (panelTranslateX.get() + guildItemSize) / guildItemSize) };
     const items = [obj];
-    obj[0] = items;
+    obj.transform = items;
     return obj;
   };
   fn.__closure = { panelTranslateX, guildItemSize };
   fn.__workletHash = 7666765056610;
-  fn.__initData = closure_5;
-  const animatedStyle = guildItemSize(4296).useAnimatedStyle(fn);
-  const style = [tmp.separator, animatedStyle];
-  return jsx(panelTranslateX(7073), { style });
+  fn.__initData = __initData;
+  const animatedStyle = ReanimatedRexport.useAnimatedStyle(fn);
+  obj = { style: null };
+  let items = [tmp.separator, animatedStyle];
+  obj.style = items;
+  return jsx(ReanimatedNativeViewDefault, { style: null });
 }
-let closure_4 = createCacheKey.createStyles((width) => {
-  let obj = { separator: null };
-  obj = {
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_4 = createStyles.createStyles((width) => {
+  const obj = { separator: null };
+  const size = {
     height: 1,
     width,
-    marginTop: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN,
-    marginBottom: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN,
+    marginTop: nativeDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN,
+    marginBottom: nativeDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN,
     marginLeft: 12,
     marginRight: 12,
-    backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+    backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
     transformOrigin: "0% 50%",
   };
-  obj[0] = obj;
+  obj.separator = size;
   return obj;
 });
-let closure_5 = {
+const __initData = {
   code: "function GuildsBarSeparatorTsx1(){const{panelTranslateX,guildItemSize}=this.__closure;return{transform:[{scaleX:Math.max(1,(panelTranslateX.get()+guildItemSize)/guildItemSize)}]};}",
 };
-const memoResult = importAllResult.memo(function GuildsBarSeparator() {
-  let obj = map;
-  const token = obj.useToken(ThemesDefault.modules.mobile.GUILD_BAR_ITEM_SIZE);
-  const tmp2 = importDefault;
-  const tmp4 = callback(token);
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarSeparator.tsx");
+
+export default noop.memo(function GuildsBarSeparator() {
+  let obj = useToken;
+  const token = obj.useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE);
+  const tmp4 = closure_4(token);
   if (obj2.useIsHomeDrawerEnabled()) {
-    obj = { guildItemSize: null };
-    obj[0] = token;
+    obj = { guildItemSize: token };
     let tmp5Result = tmp5(GuildsBarHomeDrawerSeparator, obj);
   } else {
-    obj = { style: null };
-    obj[0] = tmp4.separator;
-    tmp5Result = tmp5(setDefault, obj);
+    obj = { style: tmp4.separator };
+    tmp5Result = tmp5(NativeViewDefault, obj);
   }
   return tmp5Result;
 });
-const result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarSeparator.tsx");
-
-export default memoResult;

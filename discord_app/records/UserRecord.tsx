@@ -1,25 +1,27 @@
 // discord_app/records/UserRecord.tsx
-import hasFlag from "../../discord_common/js/shared/utils/FlagUtils.tsx";
-import toJSDefault from "../lib/Record.tsx";
-import getAvatarURL from "../utils/AvatarUtils.tsx";
-import getAvatarURLDefault from "../utils/AvatarUtils.tsx";
-import parseAvatarDecorationData from "../modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx";
-import isPremiumAtLeast from "../utils/PremiumTypeUtils.tsx";
-import ME from "../Constants.tsx";
-import GuildFeatures from "../modules/premium/PremiumConstants.tsx";
-import { create } from "../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
-import { getNameplateData } from "../modules/collectibles/nameplates/utils.tsx";
-import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
+import BigFlagUtilsAll from "../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import FlagUtils from "../../discord_common/js/shared/utils/FlagUtils.tsx";
+import AvatarUtils from "../utils/AvatarUtils.tsx";
+import AvatarDecorationUtils from "../modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx";
+import PremiumTypeUtils from "../utils/PremiumTypeUtils.tsx";
+import Record from "../lib/Record.tsx";
 
-require = arg1;
-toJSDefault;
-({ LOCAL_BOT_ID: c4, NON_USER_BOT_DISCRIMINATOR: c5, PREMIUM_TYPE_NONE: closure_6, UserFlags: error } = ME);
-({ SKU_ID_PURCHASED_FLAGS: closure_8, PremiumTypes: c9, PurchasedFlags: c10 } = GuildFeatures);
+const AvatarUtilsDefault = AvatarUtils;
+
+require = fn;
+const Constants = fn(1074);
+({
+  LOCAL_BOT_ID: closure_4,
+  NON_USER_BOT_DISCRIMINATOR: hasOwnProperty,
+  PREMIUM_TYPE_NONE: metroRequire,
+  UserFlags: closure_7,
+} = Constants);
+const PremiumConstants = fn(1373);
+({ SKU_ID_PURCHASED_FLAGS: closure_8, PremiumTypes: closure_9, PurchasedFlags: c10 } = PremiumConstants);
 class UserRecord extends tmp2 {
   constructor(arg0) {
     closure_0 = undefined;
     tmp6 = new UserRecord(tmp5, tmp4, tmp3, tmp2, new.target, tmp, global, new.target, undefined);
-    // ThrowIfThisInitialized (0x7c)
     closure_0 = tmp6;
     tmp6.hasFlag = function hasFlag() {
       return false;
@@ -173,7 +175,7 @@ class UserRecord extends tmp2 {
     tmp6.banner = global.banner;
     tmp12 = closure_0;
     tmp13 = closure_3;
-    obj2 = require("isUserPrimaryGuildEqual");
+    obj2 = closure_0(closure_3[3]);
     primary_guild = global.primary_guild;
     if (primary_guild == null) {
       primary_guild = global.primaryGuild;
@@ -184,19 +186,19 @@ class UserRecord extends tmp2 {
     tmp6.primaryGuild = obj2.ensureUserPrimaryGuild(primary_guild);
     ({ collectibles: tmp6.collectibles, displayNameStyles } = global);
     if (displayNameStyles == null) {
-      tmp12Result = require("set");
+      tmp12Result = tmp12(tmp13[4]);
       displayNameStyles = tmp12Result.parseServerDisplayNameStyles(global.display_name_styles);
     }
     tmp6.displayNameStyles = displayNameStyles;
     typingIndicatorStyle = global.typingIndicatorStyle;
     if (typingIndicatorStyle == null) {
-      tmp12Result1 = require("CUSTOM_TYPING_INDICATOR_EMOJI_COUNT");
+      tmp12Result1 = tmp12(tmp13[5]);
       typingIndicatorStyle = tmp12Result1.parseServerTypingIndicatorStyle(global.typing_indicator_style);
     }
     tmp6.typingIndicatorStyle = typingIndicatorStyle;
     premiumState = global.premiumState;
     if (premiumState == null) {
-      tmp12Result2 = require("parseServerPremiumState");
+      tmp12Result2 = tmp12(tmp13[6]);
       premiumState = tmp12Result2.parseServerPremiumState(global.premium_state);
     }
     tmp6.premiumState = premiumState;
@@ -208,11 +210,11 @@ class UserRecord extends tmp2 {
     if (null != activePerksBitmask) {
       perks2 = global.perks;
     } else {
-      tmp12Result3 = require("parseServerPerkConfigKind");
+      tmp12Result3 = tmp12(tmp13[7]);
       perks2 = tmp12Result3.parseServerPerks(global.perks);
     }
     tmp6.perks = perks2;
-    tmp12Result4 = require("frozen");
+    tmp12Result4 = tmp12(tmp13[8]);
     restrictedSchedule = global.restricted_schedule;
     if (restrictedSchedule == null) {
       restrictedSchedule = global.restrictedSchedule;
@@ -226,72 +228,70 @@ class UserRecord extends tmp2 {
       appTransactionIds = null;
     }
     tmp6.appTransactionIds = appTransactionIds;
-    tmp12Result5 = require("parseStoreCountry");
+    tmp12Result5 = tmp12(tmp13[9]);
     storeCountry = global.store_country;
     if (storeCountry == null) {
       storeCountry = global.storeCountry;
     }
     tmp6.storeCountry = tmp12Result5.parseStoreCountry(storeCountry);
     obj = {
-      writable: false,
-      configurable: false,
-      enumerable: false,
-      value(arg0) {
-        if (arg0 <= 1073741824) {
-          return ((tmp3.flags | tmp2.publicFlags) & arg0) === arg0;
-        } else {
-          let tmp7Result = tmp7(tmp3[10]);
-          const tmp6Result = tmp6(tmp5.flags);
-          tmp7Result = tmp7(tmp3[10]);
-          const deserializeResult = tmp7Result.deserialize(tmp4.publicFlags);
-          const deserializeResult1 = tmp7Result.deserialize(arg0);
-          const tmp7Result1 = tmp7(tmp3[10]);
-          return tmp7Result1.has(tmp7(tmp3[10]).combine(tmp6Result, deserializeResult), deserializeResult1);
-        }
+      hasFlag: {
+        writable: false,
+        configurable: false,
+        enumerable: false,
+        value(arg0) {
+          if (arg0 <= 1073741824) {
+            return ((closure_0.flags | closure_0.publicFlags) & arg0) === arg0;
+          } else {
+            const deserializer = BigFlagUtilsAll;
+            const deserializer2 = BigFlagUtilsAll;
+            const deserializeResult = deserializer.deserialize(closure_0.flags);
+            const deserializer3 = BigFlagUtilsAll;
+            const deserializeResult1 = deserializer2.deserialize(closure_0.publicFlags);
+            const deserializeResult2 = deserializer3.deserialize(arg0);
+            const obj = BigFlagUtilsAll;
+            return obj.has(BigFlagUtilsAll.combine(deserializeResult, deserializeResult1), deserializeResult2);
+          }
+        },
+      },
+      isStaff: {
+        writable: false,
+        configurable: false,
+        enumerable: false,
+        value() {
+          return closure_0.hasFlag(constants.STAFF);
+        },
+      },
+      isStaffPersonal: {
+        writable: false,
+        configurable: false,
+        enumerable: false,
+        value() {
+          const hasFlagResult = closure_0.hasFlag(constants.STAFF);
+          let tmp3 = !hasFlagResult;
+          if (!hasFlagResult) {
+            tmp3 = null != closure_0.personalConnectionId;
+          }
+          return tmp3;
+        },
+      },
+      hasAnyStaffLevel: {
+        writable: false,
+        configurable: false,
+        enumerable: false,
+        value() {
+          let hasFlagResult = closure_0.hasFlag(constants.STAFF);
+          if (!hasFlagResult) {
+            hasFlagResult = obj.hasFlag(tmp.COLLABORATOR);
+          }
+          if (!hasFlagResult) {
+            hasFlagResult = obj.hasFlag(tmp.RESTRICTED_COLLABORATOR);
+          }
+          return hasFlagResult;
+        },
       },
     };
-    obj1 = {
-      writable: false,
-      configurable: false,
-      enumerable: false,
-      value() {
-        return obj.hasFlag(closure_1_7.STAFF);
-      },
-    };
-    obj2 = {
-      writable: false,
-      configurable: false,
-      enumerable: false,
-      value() {
-        const hasFlagResult = obj.hasFlag(closure_1_7.STAFF);
-        let tmp3 = !hasFlagResult;
-        if (!hasFlagResult) {
-          tmp3 = null != tmp.personalConnectionId;
-        }
-        return tmp3;
-      },
-    };
-    obj3 = {
-      writable: false,
-      configurable: false,
-      enumerable: false,
-      value() {
-        let hasFlagResult = obj2.hasFlag(closure_1_7.STAFF);
-        if (!hasFlagResult) {
-          hasFlagResult = obj.hasFlag(tmp.COLLABORATOR);
-        }
-        if (!hasFlagResult) {
-          hasFlagResult = obj.hasFlag(tmp.RESTRICTED_COLLABORATOR);
-        }
-        return hasFlagResult;
-      },
-    };
-    definePropertiesResult = Object.defineProperties(tmp6, {
-      hasFlag: obj,
-      isStaff: obj1,
-      isStaffPersonal: obj2,
-      hasAnyStaffLevel: obj3,
-    });
+    definePropertiesResult = Object.defineProperties(tmp6, obj);
     globalName = tmp6.globalName;
     length = undefined;
     if (globalName != null) {
@@ -306,8 +306,8 @@ class UserRecord extends tmp2 {
 const prototype = UserRecord.prototype;
 Object.defineProperty(prototype, "createdAt", {
   get: function createdAt() {
-    const obj = DISCORD_EPOCH;
-    return new Date(require("../utils/SnowflakeUtils.tsx").extractTimestamp(this.id));
+    const obj = require("SnowflakeUtils");
+    return new Date(require("SnowflakeUtils").extractTimestamp(this.id));
   },
   set: undefined,
 });
@@ -318,34 +318,27 @@ prototype["hasVerifiedEmailOrPhone"] = function hasVerifiedEmailOrPhone() {
   }
   return tmp;
 };
-prototype["getAvatarURL"] = function getAvatarURL(arg0, closure_2, flag, SUPPORTS_WEBP) {
+prototype["getAvatarURL"] = function getAvatarURL(guildId, size, flag, SUPPORTS_WEBP) {
   if (flag === undefined) {
     flag = false;
   }
   if (SUPPORTS_WEBP === undefined) {
-    SUPPORTS_WEBP = getAvatarURL.SUPPORTS_WEBP;
+    SUPPORTS_WEBP = AvatarUtils.SUPPORTS_WEBP;
   }
   const self = this;
   let tmp3;
-  if (null != arg0) {
-    tmp3 = self.guildMemberAvatars[arg0];
+  if (null != guildId) {
+    tmp3 = self.guildMemberAvatars[guildId];
   }
   if (null != tmp3) {
-    if (null != arg0) {
-      let obj = { guildId: null, avatar: null, userId: null, canAnimate: null, size: null, canWebP: null };
-      obj[0] = arg0;
-      obj[1] = tmp3;
-      obj[2] = self.id;
-      obj[3] = flag;
-      obj[4] = closure_2;
-      obj[5] = SUPPORTS_WEBP;
-      let guildMemberAvatarURLSimple = getAvatarURLDefault.getGuildMemberAvatarURLSimple(obj);
-      const obj2 = getAvatarURLDefault;
+    if (null != guildId) {
+      let obj = { guildId, avatar: tmp3, userId: self.id, canAnimate: flag, size, canWebP: SUPPORTS_WEBP };
+      let guildMemberAvatarURLSimple = AvatarUtilsDefault.getGuildMemberAvatarURLSimple(obj);
     }
     return guildMemberAvatarURLSimple;
   }
-  obj = getAvatarURLDefault;
-  guildMemberAvatarURLSimple = obj.getUserAvatarURL(self, flag, closure_2, null, SUPPORTS_WEBP);
+  obj = AvatarUtilsDefault;
+  guildMemberAvatarURLSimple = obj.getUserAvatarURL(self, flag, size, null, SUPPORTS_WEBP);
 };
 prototype["addGuildAvatarHash"] = function addGuildAvatarHash(guildId, avatar) {
   const self = this;
@@ -356,7 +349,7 @@ prototype["addGuildAvatarHash"] = function addGuildAvatarHash(guildId, avatar) {
     const merged = Object.assign(self.guildMemberAvatars);
     obj[guildId] = avatar;
     obj = { guildMemberAvatars: null };
-    obj[0] = obj;
+    obj.guildMemberAvatars = obj;
     return self.merge(obj);
   }
 };
@@ -369,30 +362,28 @@ prototype["removeGuildAvatarHash"] = function removeGuildAvatarHash(guildId) {
     const merged = Object.assign(self.guildMemberAvatars);
     obj[guildId] = undefined;
     obj = { guildMemberAvatars: null };
-    obj[0] = obj;
+    obj.guildMemberAvatars = obj;
     return self.merge(obj);
   }
 };
-prototype["getAvatarSource"] = function getAvatarSource(arg0, flag) {
+prototype["getAvatarSource"] = function getAvatarSource(guildId, flag, size) {
   const self = this;
-  importDefault = arg0;
+  importDefault = guildId;
   if (flag === undefined) {
     flag = false;
   }
-  closure_2 = arg2;
-  closure_0 = undefined;
-  if (null != arg0) {
-    closure_0 = tmp;
-    if (null != this.guildMemberAvatars[arg0]) {
-      return importDefault(self[12]).getAnimatableSourceWithFallback(flag, (canAnimate) => {
-        let obj = callback(self[12]);
-        obj = { guildId: callback, avatar: closure_0, userId: self.id, canAnimate, size: closure_2 };
-        return obj.makeSource(callback(self[12]).getGuildMemberAvatarURLSimple(obj));
+  let avatar;
+  if (null != guildId) {
+    avatar = tmp;
+    if (null != this.guildMemberAvatars[guildId]) {
+      return require("AvatarUtils").getAnimatableSourceWithFallback(flag, (canAnimate) => {
+        const obj = { guildId, avatar, userId: self.id, canAnimate, size };
+        return obj.makeSource(AvatarUtilsDefault.getGuildMemberAvatarURLSimple(obj));
       });
     }
   }
-  return importDefault(self[12]).getAnimatableSourceWithFallback(flag, (flag) =>
-    callback(self[12]).getUserAvatarSource(self, flag, closure_2),
+  return require("AvatarUtils").getAnimatableSourceWithFallback(flag, (flag) =>
+    AvatarUtilsDefault.getUserAvatarSource(self, flag, closure_2),
   );
 };
 prototype["isClaimed"] = function isClaimed() {
@@ -416,10 +407,10 @@ Object.defineProperty(prototype, "tag", {
   set: undefined,
 });
 prototype["hasPurchasedFlag"] = function hasPurchasedFlag(PREMIUM_TIER_2) {
-  return hasFlag.hasFlag(this.purchasedFlags, PREMIUM_TIER_2);
+  return FlagUtils.hasFlag(this.purchasedFlags, PREMIUM_TIER_2);
 };
 prototype["hasPremiumUsageFlag"] = function hasPremiumUsageFlag(arg0) {
-  return hasFlag.hasFlag(this.premiumUsageFlags, arg0);
+  return FlagUtils.hasFlag(this.premiumUsageFlags, arg0);
 };
 prototype["hasHadSKU"] = function hasHadSKU(arg0) {
   let hasPurchasedFlagResult = null != tmp;
@@ -434,10 +425,10 @@ prototype["hasHadPremium"] = function hasHadPremium(arg0) {
   if (arg0 === undefined) {
     tmp = null;
   }
-  const hasPurchasedFlagResult = this.hasPurchasedFlag(closure_10.PREMIUM_TIER_0);
-  const hasPurchasedFlagResult1 = this.hasPurchasedFlag(closure_10.PREMIUM_TIER_1);
-  const hasPurchasedFlagResult2 = this.hasPurchasedFlag(closure_10.PREMIUM_TIER_2);
-  if (closure_9.TIER_0 === tmp) {
+  const hasPurchasedFlagResult = this.hasPurchasedFlag(closure_1_10.PREMIUM_TIER_0);
+  const hasPurchasedFlagResult1 = this.hasPurchasedFlag(closure_1_10.PREMIUM_TIER_1);
+  const hasPurchasedFlagResult2 = this.hasPurchasedFlag(closure_1_10.PREMIUM_TIER_2);
+  if (React7.TIER_0 === tmp) {
     return hasPurchasedFlagResult;
   } else if (tmp5.TIER_1 === tmp) {
     return hasPurchasedFlagResult1;
@@ -460,7 +451,7 @@ prototype["hadPremiumSubscription"] = function hadPremiumSubscription() {
     tmp = null;
   }
   const self = this;
-  const isPremiumResult = isPremiumAtLeast.isPremium(this);
+  const isPremiumResult = PremiumTypeUtils.isPremium(this);
   let hasHadPremiumResult = !isPremiumResult;
   if (!isPremiumResult) {
     hasHadPremiumResult = self.hasHadPremium(tmp);
@@ -479,44 +470,44 @@ prototype["hasFreePremium"] = function hasFreePremium() {
   return isStaffResult;
 };
 prototype["isOnReverseTrial"] = function isOnReverseTrial() {
-  let isPremiumResult = isPremiumAtLeast.isPremium(this);
+  let isPremiumResult = PremiumTypeUtils.isPremium(this);
   if (isPremiumResult) {
     const premiumState = this.premiumState;
     let premiumSource;
     if (premiumState != null) {
       premiumSource = premiumState.premiumSource;
     }
-    isPremiumResult = premiumSource === create /* create */.PremiumSource.REVERSE_TRIAL;
+    isPremiumResult = premiumSource === require("user").PremiumSource.REVERSE_TRIAL;
   }
   return isPremiumResult;
 };
 prototype["isPremiumWithPremiumGroup"] = function isPremiumWithPremiumGroup() {
-  let isPremiumResult = isPremiumAtLeast.isPremium(this, closure_9.TIER_2);
+  let isPremiumResult = PremiumTypeUtils.isPremium(this, React7.TIER_2);
   if (isPremiumResult) {
     const premiumState = this.premiumState;
     let premiumSource;
     if (premiumState != null) {
       premiumSource = premiumState.premiumSource;
     }
-    isPremiumResult = premiumSource === create /* create */.PremiumSource.SUBSCRIPTION_GROUP;
+    isPremiumResult = premiumSource === require("user").PremiumSource.SUBSCRIPTION_GROUP;
   }
   return isPremiumResult;
 };
 prototype["hasPaidTier2Subscription"] = function hasPaidTier2Subscription() {
-  let isPremiumResult = isPremiumAtLeast.isPremium(this, closure_9.TIER_2);
+  let isPremiumResult = PremiumTypeUtils.isPremium(this, React7.TIER_2);
   if (isPremiumResult) {
     const premiumState = this.premiumState;
     let prop;
     if (premiumState != null) {
       prop = premiumState.premiumSubscriptionType;
     }
-    isPremiumResult = prop === create /* create */.PremiumSubscriptionType.TIER_2;
+    isPremiumResult = prop === require("user").PremiumSubscriptionType.TIER_2;
   }
   return isPremiumResult;
 };
 prototype["isPremiumWithFractionalPremiumOnly"] = function isPremiumWithFractionalPremiumOnly() {
   const self = this;
-  let isPremiumResult = isPremiumAtLeast.isPremium(this, closure_9.TIER_2);
+  let isPremiumResult = PremiumTypeUtils.isPremium(this, React7.TIER_2);
   if (isPremiumResult) {
     const premiumState = self.premiumState;
     let prop;
@@ -546,7 +537,7 @@ prototype["isPremiumWithFractionalPremiumOnly"] = function isPremiumWithFraction
 };
 prototype["isFractionalPremiumWithNoStandardSub"] = function isFractionalPremiumWithNoStandardSub() {
   const self = this;
-  let isPremiumResult = isPremiumAtLeast.isPremium(this, closure_9.TIER_2);
+  let isPremiumResult = PremiumTypeUtils.isPremium(this, React7.TIER_2);
   if (isPremiumResult) {
     const premiumState = self.premiumState;
     let premiumSource;
@@ -561,14 +552,14 @@ prototype["isFractionalPremiumWithNoStandardSub"] = function isFractionalPremium
   return isPremiumResult;
 };
 prototype["isFractionalPremium"] = function isFractionalPremium() {
-  let isPremiumResult = isPremiumAtLeast.isPremium(this, closure_9.TIER_2);
+  let isPremiumResult = PremiumTypeUtils.isPremium(this, React7.TIER_2);
   if (isPremiumResult) {
     const premiumState = this.premiumState;
     let premiumSource;
     if (premiumState != null) {
       premiumSource = premiumState.premiumSource;
     }
-    isPremiumResult = premiumSource === create /* create */.PremiumSource.FRACTIONAL_NITRO;
+    isPremiumResult = premiumSource === require("user").PremiumSource.FRACTIONAL_NITRO;
   }
   return isPremiumResult;
 };
@@ -581,7 +572,7 @@ prototype["isNonUserBot"] = function isNonUserBot() {
   if (!isSystemUserResult) {
     let bot = self.bot;
     if (bot) {
-      bot = self.discriminator === closure_5;
+      bot = self.discriminator === hasOwnProperty;
     }
     isSystemUserResult = bot;
   }
@@ -590,7 +581,7 @@ prototype["isNonUserBot"] = function isNonUserBot() {
 prototype["isLocalBot"] = function isLocalBot() {
   let bot = this.bot;
   if (bot) {
-    bot = this.id === closure_4;
+    bot = this.id === React4;
   }
   return bot;
 };
@@ -619,14 +610,14 @@ prototype["hasUniqueUsername"] = function hasUniqueUsername() {
 prototype["isPremiumGroupMember"] = function isPremiumGroupMember() {
   let result = this.isPremiumWithPremiumGroup();
   if (result) {
-    result = this.premiumGroupRole === create /* create */.PremiumSubscriptionGroupRole.MEMBER;
+    result = this.premiumGroupRole === require("user").PremiumSubscriptionGroupRole.MEMBER;
   }
   return result;
 };
 prototype["isPremiumGroupPrimary"] = function isPremiumGroupPrimary() {
   let result = this.isPremiumWithPremiumGroup();
   if (result) {
-    result = this.premiumGroupRole === create /* create */.PremiumSubscriptionGroupRole.PRIMARY;
+    result = this.premiumGroupRole === require("user").PremiumSubscriptionGroupRole.PRIMARY;
   }
   return result;
 };
@@ -645,18 +636,17 @@ Object.defineProperty(prototype, "avatarDecoration", {
 Object.defineProperty(prototype, "avatarDecoration", {
   get: undefined,
   set: function avatarDecoration(avatar_decoration_data) {
-    this.avatarDecorationData = parseAvatarDecorationData.parseAvatarDecorationData(avatar_decoration_data);
+    this.avatarDecorationData = AvatarDecorationUtils.parseAvatarDecorationData(avatar_decoration_data);
   },
 });
 Object.defineProperty(prototype, "nameplate", {
-  get: function nameplate(arg0) {
+  get: function nameplate() {
     const collectibles = this.collectibles;
     let nameplate;
     if (collectibles != null) {
       nameplate = collectibles.nameplate;
     }
-    return getNameplateData /* getNameplateData */
-      .getNameplateData(nameplate);
+    return require("utils").getNameplateData(nameplate);
   },
   set: undefined,
 });
@@ -668,14 +658,15 @@ Object.defineProperty(prototype, "premiumGroupRole", {
       prop = premiumState.premiumSubscriptionGroupRole;
     }
     if (prop == null) {
-      prop = create /* create */.PremiumSubscriptionGroupRole.UNSPECIFIED;
+      prop = require("user").PremiumSubscriptionGroupRole.UNSPECIFIED;
     }
     return prop;
   },
   set: undefined,
 });
 const userRecord = new UserRecord({ id: "0" });
-let result = require("set").fileFinishedImporting("records/UserRecord.tsx");
+let size = fn(2);
+let result = size.fileFinishedImporting("records/UserRecord.tsx");
 
 export default UserRecord;
 export const PLACEHOLDER_USER_RECORD = userRecord;

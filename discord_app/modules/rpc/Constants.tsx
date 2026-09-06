@@ -1,5 +1,5 @@
 // discord_app/modules/rpc/Constants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
 let obj = {
   USER_SETTINGS: "USER_SETTINGS",
@@ -35,7 +35,7 @@ obj = {
   QUEST_PREVIEW_TOOL: "quest_preview_tool",
   PLAYGROUND: "playground",
 };
-const result = set.fileFinishedImporting("modules/rpc/Constants.tsx");
+const result = size.fileFinishedImporting("modules/rpc/Constants.tsx");
 
 export const RPC_SCOPE_CONFIG = { ANY: "$any", ALL: "$all" };
 export const RPC_PRIVATE_SCOPE = "RPC_PRIVATE_SCOPE";

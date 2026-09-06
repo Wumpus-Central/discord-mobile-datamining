@@ -1,5 +1,5 @@
 // discord_app/modules/guild_profile/GuildProfileConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
 let obj = {
   BOULDER: "Boulder",
@@ -128,16 +128,15 @@ const items1 = [
   "1272842103910699040",
   "1276737795012165766",
 ];
-const map = new Map(
-  items1.map((arg0, arg1, arg2) => {
-    const items = [arg0, arg2.length - arg1];
-    return items;
-  }),
-);
-const result = set.fileFinishedImporting("modules/guild_profile/GuildProfileConstants.tsx");
+const result = size.fileFinishedImporting("modules/guild_profile/GuildProfileConstants.tsx");
 
 export const BannerPalettePresets = obj;
 export const BANNER_PALETTE_PRESETS = items;
 export const INVALID_ACCESS_ERROR_CODE = 50001;
 export const HOISTED_SEARCH_GAME_IDS = items1;
-export const HOISTED_SEARCH_GAME_IDS_BY_PRIORITY = map;
+export const HOISTED_SEARCH_GAME_IDS_BY_PRIORITY = new Map(
+  items1.map((item, index, arg2) => {
+    const items = [item, arg2.length - index];
+    return items;
+  }),
+);

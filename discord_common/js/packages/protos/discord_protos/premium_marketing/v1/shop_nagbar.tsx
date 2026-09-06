@@ -1,12 +1,12 @@
 // discord_common/js/packages/protos/discord_protos/premium_marketing/v1/shop_nagbar.tsx
 import _mod1188 from "../../../../../../../_runtime/metro/01188__.js";
-import defineProperty from "../../../google/protobuf/wrappers.tsx";
-import create from "../../common/v1/localized_string.tsx";
-import create2 from "help_article.tsx";
-import closure_2 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
-import { MessageType } from "../../../../../../../_runtime/metro/01188__.js";
+import wrappers from "../../../google/protobuf/wrappers.tsx";
+import localized_string from "../../common/v1/localized_string.tsx";
+import help_article from "help_article.tsx";
+import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
 
-require = arg1;
+require = fn;
+const MessageType = fn(1188).MessageType;
 class ShopNagbar$Type extends MessageType {
   constructor() {
     items = [, , , , , , ,];
@@ -19,7 +19,7 @@ class ShopNagbar$Type extends MessageType {
       T() {
         const items = [
           "discord_protos.premium_marketing.v1.ButtonAction",
-          callback(10672).ButtonAction,
+          require("cta_button").ButtonAction,
           "BUTTON_ACTION_",
         ];
         return items;
@@ -31,7 +31,7 @@ class ShopNagbar$Type extends MessageType {
       name: "help_article",
       kind: "message",
       T() {
-        return callback(10671).HelpArticle;
+        return require("help_article").HelpArticle;
       },
     };
     items[5] = {
@@ -39,27 +39,26 @@ class ShopNagbar$Type extends MessageType {
       name: "body_localized",
       kind: "message",
       T() {
-        return callback(10670).LocalizedString;
+        return require("localized_string").LocalizedString;
       },
     };
     obj = { no: 7, name: "cta_label_localized", kind: "message", T: null };
     class T {
       constructor() {
-        return require("create").LocalizedString;
+        return closure_1_0(closure_1_1[4]).LocalizedString;
       }
     }
-    obj[3] = T;
+    obj.T = T;
     items[6] = obj;
     items[7] = {
       no: 8,
       name: "navigable_storefront_application_id",
       kind: "message",
       T() {
-        return callback(1218).UInt64Value;
+        return require("wrappers").UInt64Value;
       },
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.ShopNagbar", items, T);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
@@ -75,7 +74,7 @@ prototype["create"] = function create(arr) {
   }
   return obj;
 };
-prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
   let obj = arg3;
   if (arg3 == null) {
@@ -84,8 +83,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         obj.body = pos.string();
@@ -96,28 +94,13 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (4 === tmp5) {
         obj.deeplinkSection = pos.string();
       } else if (5 === tmp5) {
-        let tmp37 = require;
-        let tmp38 = dependencyMap;
-        let HelpArticle = create2.HelpArticle;
-        let tmp39 = HelpArticle;
-        let tmp40 = pos;
-        let tmp41 = readUnknownField;
+        let HelpArticle = help_article.HelpArticle;
         obj.helpArticle = HelpArticle.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.helpArticle);
       } else if (6 === tmp5) {
-        let tmp32 = require;
-        let tmp33 = dependencyMap;
-        let LocalizedString2 = create.LocalizedString;
-        let tmp34 = LocalizedString2;
-        let tmp35 = pos;
-        let tmp36 = readUnknownField;
+        let LocalizedString2 = localized_string.LocalizedString;
         obj.bodyLocalized = LocalizedString2.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.bodyLocalized);
       } else if (7 === tmp5) {
-        let tmp27 = require;
-        let tmp28 = dependencyMap;
-        let LocalizedString = create.LocalizedString;
-        let tmp29 = LocalizedString;
-        let tmp30 = pos;
-        let tmp31 = readUnknownField;
+        let LocalizedString = localized_string.LocalizedString;
         obj.ctaLabelLocalized = LocalizedString.internalBinaryRead(
           pos,
           pos.uint32(),
@@ -125,12 +108,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
           obj.ctaLabelLocalized,
         );
       } else if (8 === tmp5) {
-        let tmp22 = require;
-        let tmp23 = dependencyMap;
-        let UInt64Value = defineProperty.UInt64Value;
-        let tmp24 = UInt64Value;
-        let tmp25 = pos;
-        let tmp26 = readUnknownField;
+        let UInt64Value = wrappers.UInt64Value;
         obj.navigableStorefrontApplicationId = UInt64Value.internalBinaryRead(
           pos,
           pos.uint32(),
@@ -146,25 +124,16 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -191,7 +160,7 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(body, tag, write
     const tagResult3 = tag.tag(4, _mod1188.WireType.LengthDelimited);
   }
   if (body.helpArticle) {
-    const HelpArticle = create2.HelpArticle;
+    const HelpArticle = help_article.HelpArticle;
     const tagResult4 = tag.tag(5, _mod1188.WireType.LengthDelimited);
     const joined = HelpArticle.internalBinaryWrite(
       body.helpArticle,
@@ -205,7 +174,7 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(body, tag, write
     );
   }
   if (body.bodyLocalized) {
-    const LocalizedString = create.LocalizedString;
+    const LocalizedString = localized_string.LocalizedString;
     const tagResult5 = tag.tag(6, _mod1188.WireType.LengthDelimited);
     const joined1 = LocalizedString.internalBinaryWrite(
       body.bodyLocalized,
@@ -219,7 +188,7 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(body, tag, write
     );
   }
   if (body.ctaLabelLocalized) {
-    const LocalizedString2 = create.LocalizedString;
+    const LocalizedString2 = localized_string.LocalizedString;
     const tagResult6 = tag.tag(7, _mod1188.WireType.LengthDelimited);
     const joined2 = LocalizedString2.internalBinaryWrite(
       body.ctaLabelLocalized,
@@ -233,7 +202,7 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(body, tag, write
     );
   }
   if (body.navigableStorefrontApplicationId) {
-    const UInt64Value = defineProperty.UInt64Value;
+    const UInt64Value = wrappers.UInt64Value;
     const tagResult7 = tag.tag(8, _mod1188.WireType.LengthDelimited);
     const joined3 = UInt64Value.internalBinaryWrite(
       body.navigableStorefrontApplicationId,
@@ -266,7 +235,7 @@ let items = [
     T() {
       const items = [
         "discord_protos.premium_marketing.v1.ButtonAction",
-        callback(10672).ButtonAction,
+        require("cta_button").ButtonAction,
         "BUTTON_ACTION_",
       ];
       return items;
@@ -278,7 +247,7 @@ let items = [
     name: "help_article",
     kind: "message",
     T() {
-      return callback(10671).HelpArticle;
+      return require("help_article").HelpArticle;
     },
   },
   {
@@ -286,7 +255,7 @@ let items = [
     name: "body_localized",
     kind: "message",
     T() {
-      return callback(10670).LocalizedString;
+      return require("localized_string").LocalizedString;
     },
   },
   ,
@@ -294,17 +263,17 @@ let items = [
 let obj = { no: 7, name: "cta_label_localized", kind: "message", T: null };
 class T {
   constructor() {
-    return require("create").LocalizedString;
+    return closure_1_0(closure_1_1[4]).LocalizedString;
   }
 }
-obj[3] = T;
+obj.T = T;
 items[6] = obj;
 items[7] = {
   no: 8,
   name: "navigable_storefront_application_id",
   kind: "message",
   T() {
-    return callback(1218).UInt64Value;
+    return require("wrappers").UInt64Value;
   },
 };
 prototype = new prototype(
@@ -316,8 +285,8 @@ prototype = new prototype(
   prototype,
   items,
 );
-// ThrowIfThisInitialized (0x7c)
-let result = require("set").fileFinishedImporting(
+const size = fn(2);
+let result = size.fileFinishedImporting(
   "../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/shop_nagbar.tsx",
 );
 

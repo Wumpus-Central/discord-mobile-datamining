@@ -1,20 +1,24 @@
 // discord_app/modules/stage_channels/native/components/StageGridRow.tsx
-import getIsScreenLandscape from "../../../screen/useIsScreenLandscape.native.tsx";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
+import useIsScreenLandscape from "../../../screen/useIsScreenLandscape.native.tsx";
+import StageChannelParticipants from "../../StageChannelParticipants.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-let closure_5 = createCacheKey.createStyles({
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_5 = createStyles.createStyles({
   container: { flexDirection: "row", alignItems: "center" },
   containerLandscape: { justifyContent: "center" },
 });
-const memoResult = importAllResult.memo((row) => {
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/native/components/StageGridRow.tsx");
+
+export default noop.memo((row) => {
   ({ channel: require, participants } = row);
   let THIRD;
-  const tmp = callback();
-  let obj = getIsScreenLandscape;
+  const tmp = closure_5();
+  let obj = useIsScreenLandscape;
   let containerLandscape = obj.useIsScreenLandscape();
   let num = 3;
   if (0 === row.row) {
@@ -36,9 +40,9 @@ const memoResult = importAllResult.memo((row) => {
     children: participants.map((type) => {
       type = type.type;
       let flag = true;
-      if (closure_1_0(closure_1_2[5]).StageChannelParticipantTypes.STREAM !== type) {
+      if (StageChannelParticipants.StageChannelParticipantTypes.STREAM !== type) {
         flag = false;
-        if (closure_1_0(tmp2[5]).StageChannelParticipantTypes.VOICE === type) {
+        if (StageChannelParticipants.StageChannelParticipantTypes.VOICE === type) {
           const voiceState = type.voiceState;
           let selfVideo;
           if (voiceState != null) {
@@ -48,20 +52,14 @@ const memoResult = importAllResult.memo((row) => {
         }
       }
       if (flag) {
-        let obj = { participant: null, size: null, channel: null };
-        obj[0] = type;
-        obj[1] = THIRD;
-        obj[2] = closure_0;
+        let obj = { participant: type, size: THIRD, channel };
         const _HermesInternal2 = HermesInternal;
-        let tmp6Result = tmp6(tmp2[7]);
+        let tmp6Result = tmp6(10056);
         let tmp5Result = tmp5(tmp6Result, obj, "stage-media-participant-" + type.id);
       } else {
-        obj = { channel: null, participant: null, size: null };
-        obj[0] = closure_0;
-        obj[1] = type;
-        obj[2] = THIRD;
+        obj = { channel, participant: type, size: THIRD };
         const _HermesInternal = HermesInternal;
-        tmp6Result = tmp6(tmp2[8]);
+        tmp6Result = tmp6(10046);
         tmp5Result = tmp5(tmp6Result, obj, "stage-user-participant-" + type.id);
       }
       return tmp5Result;
@@ -73,9 +71,9 @@ const memoResult = importAllResult.memo((row) => {
       {participants.map((type) => {
         type = type.type;
         let flag = true;
-        if (closure_1_0(closure_1_2[5]).StageChannelParticipantTypes.STREAM !== type) {
+        if (StageChannelParticipants.StageChannelParticipantTypes.STREAM !== type) {
           flag = false;
-          if (closure_1_0(tmp2[5]).StageChannelParticipantTypes.VOICE === type) {
+          if (StageChannelParticipants.StageChannelParticipantTypes.VOICE === type) {
             const voiceState = type.voiceState;
             let selfVideo;
             if (voiceState != null) {
@@ -85,20 +83,14 @@ const memoResult = importAllResult.memo((row) => {
           }
         }
         if (flag) {
-          let obj = { participant: null, size: null, channel: null };
-          obj[0] = type;
-          obj[1] = THIRD;
-          obj[2] = closure_0;
+          let obj = { participant: type, size: THIRD, channel };
           const _HermesInternal2 = HermesInternal;
-          let tmp6Result = tmp6(tmp2[7]);
+          let tmp6Result = tmp6(10056);
           let tmp5Result = tmp5(tmp6Result, obj, "stage-media-participant-" + type.id);
         } else {
-          obj = { channel: null, participant: null, size: null };
-          obj[0] = closure_0;
-          obj[1] = type;
-          obj[2] = THIRD;
+          obj = { channel, participant: type, size: THIRD };
           const _HermesInternal = HermesInternal;
-          tmp6Result = tmp6(tmp2[8]);
+          tmp6Result = tmp6(10046);
           tmp5Result = tmp5(tmp6Result, obj, "stage-user-participant-" + type.id);
         }
         return tmp5Result;
@@ -106,6 +98,3 @@ const memoResult = importAllResult.memo((row) => {
     </View>
   );
 });
-const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/StageGridRow.tsx");
-
-export default memoResult;

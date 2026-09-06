@@ -1,29 +1,27 @@
 // discord_app/modules/notifications/friend_online/FriendOnlineNotificationUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
-import ME from "../../../Constants.tsx";
-import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
-import explicitContentFromProto from "../../user_settings/UserSettings.tsx";
-import AccountNotificationFlags from "../NotificationConstants.tsx";
+import Constants from "../../../Constants.tsx";
+import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
+import UserSettings from "../../user_settings/UserSettings.tsx";
+import NotificationConstants from "../NotificationConstants.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-let closure_3 = AccountNotificationFlags.NotificationSettingsUpdateType;
-const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/notifications/friend_online/FriendOnlineNotificationUtils.tsx");
+const constants = NotificationConstants.NotificationSettingsUpdateType;
+const AnalyticEvents = Constants.AnalyticEvents;
+const result = size.fileFinishedImporting("modules/notifications/friend_online/FriendOnlineNotificationUtils.tsx");
 
 export const onFriendOnlineNotificationSettingsChanged = function onFriendOnlineNotificationSettingsChanged(
   friend_online_notifications,
 ) {
-  const EnableFriendOnlineNotifications = explicitContentFromProto.EnableFriendOnlineNotifications;
+  const EnableFriendOnlineNotifications = UserSettings.EnableFriendOnlineNotifications;
   EnableFriendOnlineNotifications.updateSetting(friend_online_notifications);
-  let obj = expandEventPropertiesDefault;
-  obj = { update_type: constants.ACCOUNT, friend_online_notifications };
+  const obj = { update_type: constants.ACCOUNT, friend_online_notifications };
   obj.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, obj);
 };
 export const onNotifyFriendsOnComeOnlineSettingsChanged = function onNotifyFriendsOnComeOnlineSettingsChanged(
   notify_friends_on_come_online,
 ) {
-  const NotifyFriendsOnComeOnline = explicitContentFromProto.NotifyFriendsOnComeOnline;
+  const NotifyFriendsOnComeOnline = UserSettings.NotifyFriendsOnComeOnline;
   NotifyFriendsOnComeOnline.updateSetting(notify_friends_on_come_online);
-  let obj = expandEventPropertiesDefault;
-  obj = { update_type: constants.ACCOUNT, notify_friends_on_come_online };
+  const obj = { update_type: constants.ACCOUNT, notify_friends_on_come_online };
   obj.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, obj);
 };

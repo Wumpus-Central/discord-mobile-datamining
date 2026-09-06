@@ -1,49 +1,49 @@
 // discord_app/modules/forums/native/ForumOriginalPoster.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+require = fn;
 class ForumOriginalPoster {
   constructor() {
     tmp = closure_5();
     obj = { style: tmp.container, children: null };
-    obj = { style: items, children: null };
+    obj = { style: null, children: null };
     items = [,];
     ({ opIcon: arr[0], opIconBackground: arr[1] } = tmp);
+    obj.style = items;
     obj1 = { variant: "text-xs/semibold", color: "text-brand", children: null };
-    intl = require("getSystemLocale").intl;
-    obj1[2] = intl.string(require("getSystemLocale").t.fyE8sH);
-    obj[1] = jsx(require("Text").Text, obj1);
+    intl = closure_0(closure_1[7]).intl;
+    obj1.children = intl.string(closure_0(closure_1[7]).t.fyE8sH);
+    obj.children = jsx(closure_0(closure_1[6]).Text, obj1);
     items1 = [,];
     items1[0] = jsx(View, obj);
     obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
-    intl2 = require("getSystemLocale").intl;
-    obj2[2] = intl2.string(require("getSystemLocale").t.uN6Emt);
-    items1[1] = jsx(require("Text").Text, obj2);
-    obj[1] = items1;
+    intl2 = closure_0(closure_1[7]).intl;
+    obj2.children = intl2.string(closure_0(closure_1[7]).t.uN6Emt);
+    items1[1] = jsx(closure_0(closure_1[6]).Text, obj2);
+    obj.children = items1;
     return jsxs(View, obj);
   }
 }
-noopAll;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-createCacheKey = {
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+fn(4560);
+let createStyles = {
   container: { flexDirection: "row", alignItems: "center", justifyContent: "center" },
   opIcon: null,
   opIconBackground: null,
 };
-createCacheKey = { borderRadius: ThemesDefault.radii.sm, marginEnd: 8, paddingHorizontal: 4 };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { backgroundColor: require("result").DARK_BRAND_260_LIGHT_BRAND_200 };
-let closure_5 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { backgroundColor: require("result").DARK_BRAND_260_LIGHT_BRAND_200 };
-const result = require("set").fileFinishedImporting("modules/forums/native/ForumOriginalPoster.tsx");
+createStyles = { borderRadius: nativeDefault.radii.sm, marginEnd: 8, paddingHorizontal: 4 };
+createStyles.opIcon = createStyles;
+createStyles.opIconBackground = { backgroundColor: fn(5441).DARK_BRAND_260_LIGHT_BRAND_200 };
+const hasOwnProperty = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/forums/native/ForumOriginalPoster.tsx");
 
 export default ForumOriginalPoster;
 export const getForumOriginalPoster = function getForumOriginalPoster() {
-  return callback(ForumOriginalPoster, {});
+  return React3(ForumOriginalPoster, {});
 };

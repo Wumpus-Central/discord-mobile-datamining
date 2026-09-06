@@ -1,6 +1,6 @@
 // discord_app/modules/upsell_tooltip/experiments/MainViewTooltipActionSheetsDisabledExperiment.tsx
-import set from "../../../../_runtime/00002_set.js";
 import ApexExperiment from "../../experiments/apex/index.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const apexExperiment = ApexExperiment.createApexExperiment({
   kind: "user",
@@ -8,7 +8,7 @@ const apexExperiment = ApexExperiment.createApexExperiment({
   defaultConfig: { disabled: false },
   variations: { 0: { disabled: false }, 1: { disabled: true } },
 });
-const result = set.fileFinishedImporting(
+const result = size.fileFinishedImporting(
   "modules/upsell_tooltip/experiments/MainViewTooltipActionSheetsDisabledExperiment.tsx",
 );
 

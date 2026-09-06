@@ -1,10 +1,10 @@
 // discord_app/modules/activities/trackActivityProblem.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import Constants from "../../Constants.tsx";
+import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/activities/trackActivityProblem.tsx");
+const AnalyticEvents = Constants.AnalyticEvents;
+const result = size.fileFinishedImporting("modules/activities/trackActivityProblem.tsx");
 
 export default function trackActivityProblem(arg0) {
   ({ channel, activityApplication, analyticsData } = arg0);
@@ -16,8 +16,7 @@ export default function trackActivityProblem(arg0) {
   if (rating === undefined) {
     rating = null;
   }
-  let obj = expandEventPropertiesDefault;
-  obj = {
+  const obj = {
     reason: problem,
     guild_id: null,
     channel_id: null,
@@ -34,26 +33,26 @@ export default function trackActivityProblem(arg0) {
   if (channel != null) {
     guildId = channel.getGuildId();
   }
-  obj[1] = guildId;
+  obj.guild_id = guildId;
   let id;
   if (channel != null) {
     id = channel.id;
   }
-  obj[2] = id;
+  obj.channel_id = id;
   let id1;
   if (activityApplication != null) {
     id1 = activityApplication.id;
   }
-  obj[3] = id1;
+  obj.application_id = id1;
   let name;
   if (activityApplication != null) {
     name = activityApplication.name;
   }
-  obj[4] = name;
-  obj[5] = _location;
-  obj[6] = rating;
-  obj[7] = feedback;
-  obj[8] = embeddedActivityLocation.kind;
-  ({ rtc_connection_id: obj2[9], media_session_id: obj2[10] } = analyticsData);
+  obj.application_name = name;
+  obj.location = _location;
+  obj.rating = rating;
+  obj.feedback = feedback;
+  obj.embedded_activity_location_kind = embeddedActivityLocation.kind;
+  ({ rtc_connection_id: obj2.rtc_connection_id, media_session_id: obj2.media_session_id } = analyticsData);
   obj.track(AnalyticEvents.ACTIVITY_REPORT_PROBLEM, obj);
 }

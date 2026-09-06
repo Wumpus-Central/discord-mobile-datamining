@@ -1,17 +1,17 @@
 // discord_app/modules/main_tabs_v2/native/sidebar/details/ChannelDetailsUtils.tsx
-import set from "../../../../../../_runtime/00002_set.js";
-import set2 from "../../../../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
-import ChannelDetailsNavigatorScreens from "ChannelDetailsConstants.tsx";
+import ChannelTypes from "../../../../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
+import ChannelDetailsConstants from "ChannelDetailsConstants.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-const ChannelDetailsButtonTypes = ChannelDetailsNavigatorScreens.ChannelDetailsButtonTypes;
-const result = set.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsUtils.tsx");
+const ChannelDetailsButtonTypes = ChannelDetailsConstants.ChannelDetailsButtonTypes;
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsUtils.tsx");
 
 export const getChannelDetailsButtons = function getChannelDetailsButtons(channel, stateFromStores) {
   let flag = stateFromStores;
   if (stateFromStores === undefined) {
     flag = false;
   }
-  if (channel.type === set2.ChannelTypes.GUILD_DIRECTORY) {
+  if (channel.type === ChannelTypes.ChannelTypes.GUILD_DIRECTORY) {
     let items = [];
   } else {
     items = [, ,];
@@ -19,15 +19,15 @@ export const getChannelDetailsButtons = function getChannelDetailsButtons(channe
   }
   let found = items;
   if (flag) {
-    found = items.filter((arg0) => arg0 !== constants.MUTE);
+    found = items.filter((item) => item !== constants.MUTE);
   }
   return found;
 };
 export const navigateToChannelDetailsScreen = function navigateToChannelDetailsScreen(
-  closure_4,
+  navigate,
   PERMISSIONS,
-  closure_0,
+  channelId,
   source,
 ) {
-  closure_4.navigate("sidebar", { screen: PERMISSIONS, channelId: closure_0, source });
+  navigate.navigate("sidebar", { screen: PERMISSIONS, channelId, source });
 };

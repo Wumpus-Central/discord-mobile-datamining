@@ -1,7 +1,7 @@
 // discord_app/modules/media_uploads/buildFileSizeLimitEventProperties.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/media_uploads/buildFileSizeLimitEventProperties.tsx");
+const result = size.fileFinishedImporting("modules/media_uploads/buildFileSizeLimitEventProperties.tsx");
 
 export const buildFileSizeLimitEventProperties = function buildFileSizeLimitEventProperties(arg0) {
   ({ guildId, channelId } = arg0);
@@ -17,16 +17,14 @@ export const buildFileSizeLimitEventProperties = function buildFileSizeLimitEven
     kestrelVariant,
   } = arg0);
   if (undefined !== channelId) {
-    let obj = { channel_id: null };
-    obj[0] = channelId;
+    let obj = { channel_id: channelId };
   } else {
     obj = {};
   }
   obj = {};
   const merged = Object.assign(obj);
   if (undefined !== guildId) {
-    obj1 = { guild_id: null };
-    obj1[0] = guildId;
+    const obj1 = { guild_id: guildId };
     let obj2 = obj1;
   } else {
     obj2 = {};

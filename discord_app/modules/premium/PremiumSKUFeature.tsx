@@ -1,14 +1,14 @@
 // discord_app/modules/premium/PremiumSKUFeature.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/premium/PremiumSKUFeature.tsx");
+const result = size.fileFinishedImporting("modules/premium/PremiumSKUFeature.tsx");
 
-export default function PremiumSKUFeature(name, getFeatureValue, description) {
+export default function PremiumSKUFeature(INCREASED_FILE_UPLOAD_SIZE, getUserMaxFileSize, description) {
   let obj = Object.create(new.target.prototype);
-  obj.name = name;
+  obj.name = INCREASED_FILE_UPLOAD_SIZE;
   obj.description = description;
-  obj.getFeatureValue = getFeatureValue;
-  obj = { value: getFeatureValue, configurable: false, writable: false };
+  obj.getFeatureValue = getUserMaxFileSize;
+  obj = { value: getUserMaxFileSize, configurable: false, writable: false };
   Object.defineProperty(obj, "getFeatureValue", obj);
   return obj;
 }.prototype;

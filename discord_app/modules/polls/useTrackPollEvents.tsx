@@ -1,41 +1,42 @@
 // discord_app/modules/polls/useTrackPollEvents.tsx
-import closure_3 from "../../../_runtime/00019_noop.js";
-import { AnalyticEvents } from "../../Constants.tsx";
+import AppAnalyticsUtilsDefault from "../app_analytics/AppAnalyticsUtils.tsx";
+import PollLayoutTypes from "../../../discord_common/js/shared/shared-constants/PollLayoutTypes.tsx";
+import noop from "../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/polls/useTrackPollEvents.tsx");
+require = fn;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/polls/useTrackPollEvents.tsx");
 
 export const useTrackPollCreationEvents = function useTrackPollCreationEvents(answers, allowMultiSelect) {
-  closure_0 = answers;
-  closure_1 = allowMultiSelect;
+  let attachments_count = answers;
+  let obj = { trackPollCreationCancelled: null };
   const items = [answers, allowMultiSelect];
-  return {
-    trackPollCreationCancelled: React.useCallback(() => {
-      answers = 0;
-      c1 = 0;
-      c2 = 0;
-      const item = answers.forEach((image) => {
-        image = image.image;
-        if (null != image) {
-          if (null != image.emoji) {
-            closure_1 = closure_1 + 1;
-          } else if (null != image.stickerId) {
-            closure_2 = closure_2 + 1;
-          } else if (null != image.mediaAttachmentState) {
-            closure_0 = closure_0 + 1;
-          }
+  obj.trackPollCreationCancelled = noop.useCallback(() => {
+    attachments_count = 0;
+    allowMultiSelect = 0;
+    stickers_count = 0;
+    const item = attachments_count.forEach((image) => {
+      image = image.image;
+      if (null != image) {
+        if (null != image.emoji) {
+          closure_1 = closure_1 + 1;
+        } else if (null != image.stickerId) {
+          closure_2 = closure_2 + 1;
+        } else if (null != image.mediaAttachmentState) {
+          closure_0 = closure_0 + 1;
         }
-      });
-      let obj = allowMultiSelect(closure_1_2[2]);
-      obj = {
-        answers_count: answers.length,
-        attachments_count: answers,
-        emojis_count: c1,
-        stickers_count: c2,
-        allow_multiselect: c1,
-        layout_type: answers(closure_1_2[3]).PollLayoutTypes.DEFAULT,
-      };
-      obj.trackWithMetadata(closure_1_4.POLL_CREATION_CANCELLED, obj);
-    }, items),
-  };
+      }
+    });
+    const obj = {
+      answers_count: attachments_count.length,
+      attachments_count,
+      emojis_count: allowMultiSelect,
+      stickers_count,
+      allow_multiselect: allowMultiSelect,
+      layout_type: PollLayoutTypes.PollLayoutTypes.DEFAULT,
+    };
+    obj.trackWithMetadata(AnalyticEvents.POLL_CREATION_CANCELLED, obj);
+  }, items);
+  return obj;
 };

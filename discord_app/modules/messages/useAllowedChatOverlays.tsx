@@ -1,17 +1,18 @@
 // discord_app/modules/messages/useAllowedChatOverlays.tsx
-import defaultAreStatesEqual from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import getEmbeddedActivityLocationChannelId from "../activities/utils/embeddedActivityLocationUtils.tsx";
+import useStateFromStores from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import embeddedActivityLocationUtils from "../activities/utils/embeddedActivityLocationUtils.tsx";
 import isVoiceEmbeddedActivityDefault from "../activities/utils/isVoiceEmbeddedActivity.tsx";
-import closure_3 from "../activities/EmbeddedActivitiesStore.tsx";
-import closure_4 from "../../stores/ChannelStore.tsx";
-import { ChatOverlays } from "ChatOverlayConstants.tsx";
-import { ActivityPanelModes } from "../activities/panel/ActivityPanelConstants.tsx";
+import EmbeddedActivitiesStore from "../activities/EmbeddedActivitiesStore.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
 
-require = arg1;
+require = fn;
+const ChatOverlays = fn(11421).ChatOverlays;
+const ActivityPanelModes = fn(9505).ActivityPanelModes;
 const no_text_activity = "no_text_activity";
-let obj = { no_text_activity: items };
-items = [, ,];
+let obj = { no_text_activity: null };
+let items = [, ,];
 ({ NEW_MESSAGES: arr[0], OPT_IN_CHANNEL: arr[1], SUMMARIES: arr[2] } = ChatOverlays);
+obj.no_text_activity = items;
 let items1 = [, ,];
 ({ NEW_MESSAGES: arr2[0], OPT_IN_CHANNEL: arr2[1], SUMMARIES: arr2[2] } = ChatOverlays);
 obj[ActivityPanelModes.DISCONNECTED] = items1;
@@ -25,20 +26,23 @@ obj[ActivityPanelModes.PIP] = items3;
 const items4 = [, ,];
 ({ NEW_MESSAGES: arr5[0], OPT_IN_CHANNEL: arr5[1], SUMMARIES: arr5[2] } = ChatOverlays);
 obj[ActivityPanelModes.ACTIVITY_POPOUT_WINDOW] = items4;
-const result = require("set").fileFinishedImporting("modules/messages/useAllowedChatOverlays.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/useAllowedChatOverlays.tsx");
 
 export default function useAllowedChatOverlays() {
-  obj = defaultAreStatesEqual;
-  const items = [closure_3];
-  const stateFromStores = obj.useStateFromStores(items, () => store.getCurrentEmbeddedActivity());
-  const items1 = [closure_3];
-  const stateFromStores1 = defaultAreStatesEqual.useStateFromStores(items1, () => store.getActivityPanelMode());
-  getEmbeddedActivityLocationChannelId;
+  obj = useStateFromStores;
+  const items = [EmbeddedActivitiesStore];
+  const stateFromStores = obj.useStateFromStores(items, () => EmbeddedActivitiesStore.getCurrentEmbeddedActivity());
+  const items1 = [EmbeddedActivitiesStore];
+  const stateFromStores1 = useStateFromStores.useStateFromStores(items1, () =>
+    EmbeddedActivitiesStore.getActivityPanelMode(),
+  );
+  embeddedActivityLocationUtils;
   if (stateFromStores != null) {
     const _location = stateFromStores.location;
   }
   if (undefined !== stateFromStores) {
-    if (!isVoiceEmbeddedActivityDefault(tmp5, closure_4)) {
+    if (!isVoiceEmbeddedActivityDefault(tmp5, ChannelStore)) {
       let tmp9 = obj[stateFromStores1];
     }
     return tmp9;

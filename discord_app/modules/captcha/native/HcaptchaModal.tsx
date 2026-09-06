@@ -1,13 +1,11 @@
 // discord_app/modules/captcha/native/HcaptchaModal.tsx
-import closure_4 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import closure_5 from "../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_9 from "../../user_settings/LocaleStore.tsx";
-import closure_10 from "../../../stores/UserStore.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import SharedCaptchaUtils from "../SharedCaptchaUtils.tsx";
+import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import noop from "../../../../_runtime/metro/00019__.js";
+import LocaleStore from "../../user_settings/LocaleStore.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
 
-const require = arg1;
+require = fn;
 class HcaptchaModal {
   constructor(arg0) {
     onMessage = global.onMessage;
@@ -15,11 +13,11 @@ class HcaptchaModal {
     tmp2 = closure_13();
     tmp3 = onMessage;
     tmp4 = closure_2;
-    obj = require("initialize");
+    obj = onMessage(closure_2[8]);
     items = [];
     items[0] = closure_10;
     stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-    obj2 = require("useNavigation");
+    obj2 = onMessage(closure_2[9]);
     navigation = obj2.useNavigation();
     routes = navigation.getState().routes;
     tmp6 = routes.length > 0;
@@ -33,36 +31,35 @@ class HcaptchaModal {
       if (stateFromStores != null) {
         prop = stateFromStores.ageVerificationStatus;
       }
-      tmp6 = prop === require("PermissionOverwriteType").AgeVerificationStatusUkAndAusOnly.CLIENT_ONLY_PENDING;
+      tmp6 = prop === tmp3(tmp4[10]).AgeVerificationStatusUkAndAusOnly.CLIENT_ONLY_PENDING;
     }
     tmp9 = closure_1;
-    tmp10 = require("useSafeAreaInsets")();
-    intl = require("getSystemLocale").intl;
+    rect = closure_1(tmp4[11])();
+    intl = tmp3(tmp4[12]).intl;
     items1 = [];
     items1[0] = onMessage;
-    stringResult = intl.string(require("getSystemLocale").t.wsoPhr);
+    stringResult = intl.string(tmp3(tmp4[12]).t.wsoPhr);
     callback = closure_5.useCallback(() => {
       if (onMessage != null) {
         let obj = { nativeEvent: null };
-        obj = { data: null };
-        obj[0] = onMessage(closure_1_2[13]).CaptchaError.CANCEL;
-        obj[0] = obj;
+        obj = { data: SharedCaptchaUtils.CaptchaError.CANCEL };
+        obj.nativeEvent = obj;
         tmp(obj);
       }
     }, items1);
     closure_1 = callback;
-    tmp13 = require("useBackPressHandler")(() => {
+    tmp12 = closure_1(tmp4[14])(() => {
       callback();
       return true;
     });
-    tmp14 = jsxs;
-    tmp15 = View;
+    tmp13 = jsxs;
+    tmp14 = View;
     obj = { style: tmp2.container, children: null };
-    tmp14Result = !tmp6;
+    tmp13Result = !tmp6;
     if (!tmp6) {
       obj1 = { spacing: null, align: "center", children: null };
-      obj1[0] = require("Themes").space.PX_16;
-      tmp17 = jsx;
+      obj1.spacing = tmp9(tmp4[16]).space.PX_16;
+      tmp16 = jsx;
       obj2 = {
         accessibilityRole: "header",
         variant: "heading-lg/bold",
@@ -70,62 +67,65 @@ class HcaptchaModal {
         style: null,
         children: null,
       };
-      obj2[3] = tmp2.title;
-      obj2[4] = stringResult;
+      obj2.style = tmp2.title;
+      obj2.children = stringResult;
       items2 = [,];
-      items2[0] = jsx(require("Text").Text, obj2);
-      tmp18 = ActivityIndicator;
-      tmp3Result = require("set");
+      items2[0] = jsx(tmp3(tmp4[17]).Text, obj2);
+      tmp17 = ActivityIndicator;
+      tmp3Result = tmp3(tmp4[18]);
       WHITE = undefined;
       if (tmp3Result.isAndroid()) {
-        WHITE = require("Themes").unsafe_rawColors.WHITE;
+        WHITE = tmp9(tmp4[16]).unsafe_rawColors.WHITE;
       }
       obj3 = { size: "small", color: null };
-      obj3[1] = WHITE;
-      items2[1] = tmp17(tmp18, obj3);
-      obj1[2] = items2;
-      tmp14Result = tmp14(require("Stack").Stack, obj1);
+      obj3.color = WHITE;
+      items2[1] = tmp16(tmp17, obj3);
+      obj1.children = items2;
+      tmp13Result = tmp13(tmp3(tmp4[15]).Stack, obj1);
     }
     items3 = [, ,];
-    items3[0] = tmp14Result;
+    items3[0] = tmp13Result;
     obj4 = { style: StyleSheet.absoluteFillObject, children: null };
     obj5 = {};
-    tmp9Result = require("siteKey");
+    tmp9Result = tmp9(tmp4[19]);
     merged = Object.assign(tmp);
     obj5.languageCode = closure_9.locale;
     obj5.onMessage = onMessage;
-    obj4[1] = jsx(tmp9Result, obj5);
-    items3[1] = jsx(tmp15, obj4);
+    obj4.children = jsx(tmp9Result, obj5);
+    items3[1] = jsx(tmp14, obj4);
     obj6 = { style: null, pointerEvents: "box-none", children: null };
     items4 = [,];
     items4[0] = tmp2.closeButtonContainer;
-    obj7 = { paddingTop: top + require("Themes").space.PX_8, paddingLeft: left + require("Themes").space.PX_16 };
-    ({ top, left } = tmp10);
+    obj7 = { paddingTop: rect.top + tmp9(tmp4[16]).space.PX_8, paddingLeft: rect.left + tmp9(tmp4[16]).space.PX_16 };
     items4[1] = obj7;
-    obj6[0] = items4;
+    obj6.style = items4;
     obj8 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
-    intl2 = require("getSystemLocale").intl;
-    obj8[1] = intl2.string(require("getSystemLocale").t.cpT0Cq);
-    obj8[2] = callback;
-    obj8[3] = tmp2.closeButtonHitArea;
-    obj9 = { color: require("Themes").colors.INTERACTIVE_ICON_DEFAULT };
-    obj8[4] = jsx(require("XLargeIcon").XLargeIcon, obj9);
-    obj6[2] = jsx(require("PressableBase").PressableOpacity, obj8);
-    items3[2] = jsx(tmp15, obj6);
-    obj[1] = items3;
-    return tmp14(tmp15, obj);
+    intl2 = tmp3(tmp4[12]).intl;
+    obj8.accessibilityLabel = intl2.string(tmp3(tmp4[12]).t.cpT0Cq);
+    obj8.onPress = callback;
+    obj8.style = tmp2.closeButtonHitArea;
+    obj9 = { color: tmp9(tmp4[16]).colors.INTERACTIVE_ICON_DEFAULT };
+    obj8.children = jsx(tmp3(tmp4[21]).XLargeIcon, obj9);
+    obj6.children = jsx(tmp3(tmp4[20]).PressableOpacity, obj8);
+    items3[2] = jsx(tmp14, obj6);
+    obj.children = items3;
+    return tmp13(tmp14, obj);
   }
 }
 let closure_3 = ["onMessage", "onClose"];
-({ ActivityIndicator: closure_6, View: error, StyleSheet: closure_8 } = get_ActivityIndicator);
-({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-let closure_13 = createCacheKey.createStyles({
+get_ActivityIndicator = fn(17);
+({ ActivityIndicator: metroRequire, View: closure_7, StyleSheet: closure_8 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(4560);
+createStyles.createStyles({
   container: { flex: 1, justifyContent: "center", alignItems: "center" },
   title: { textAlign: "center" },
   closeButtonContainer: { position: "absolute", top: 0, left: 0, zIndex: 2 },
   closeButtonHitArea: { minWidth: 44, minHeight: 44, justifyContent: "center", alignItems: "center" },
 });
-HcaptchaModal.modalConfig = { animation: require("ME").ModalAnimation.FADE };
-const result = require("set").fileFinishedImporting("modules/captcha/native/HcaptchaModal.tsx");
+HcaptchaModal.modalConfig = { animation: fn(1074).ModalAnimation.FADE };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/captcha/native/HcaptchaModal.tsx");
 
 export default HcaptchaModal;

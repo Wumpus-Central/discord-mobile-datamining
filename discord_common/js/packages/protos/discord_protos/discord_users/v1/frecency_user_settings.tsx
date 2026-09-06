@@ -1,26 +1,11 @@
 // discord_common/js/packages/protos/discord_protos/discord_users/v1/frecency_user_settings.tsx
 import _mod1188 from "../../../../../../../_runtime/metro/01188__.js";
-import create2 from "user_settings_shared.tsx";
-import closure_2 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
-import {
-  MessageType,
-  MessageType as MessageType2,
-  MessageType as MessageType3,
-  MessageType as MessageType4,
-  MessageType as MessageType5,
-  MessageType as MessageType6,
-  MessageType as MessageType7,
-  MessageType as MessageType8,
-  MessageType as MessageType9,
-  MessageType as MessageType10,
-  MessageType as MessageType11,
-  MessageType as MessageType12,
-  MessageType as MessageType13,
-  MessageType as MessageType14,
-} from "../../../../../../../_runtime/metro/01188__.js";
+import user_settings_shared from "user_settings_shared.tsx";
+import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
 
-require = arg1;
-let obj = { NONE: 0, [0]: "NONE", IMAGE: 1, [1]: "IMAGE", VIDEO: 2, [2]: "VIDEO" };
+require = fn;
+let GIFType = { NONE: 0, [0]: "NONE", IMAGE: 1, [1]: "IMAGE", VIDEO: 2, [2]: "VIDEO" };
+const MessageType = fn(1188).MessageType;
 class FrecencyUserSettings$Type extends MessageType {
   constructor() {
     obj = {
@@ -28,7 +13,7 @@ class FrecencyUserSettings$Type extends MessageType {
       name: "versions",
       kind: "message",
       T() {
-        return callback(table[2]).Versions;
+        return user_settings_shared.Versions;
       },
     };
     items = [, , , , , , , , , , , ,];
@@ -38,7 +23,7 @@ class FrecencyUserSettings$Type extends MessageType {
       name: "favorite_gifs",
       kind: "message",
       T() {
-        return closure_4;
+        return object;
       },
     };
     items[2] = {
@@ -46,7 +31,7 @@ class FrecencyUserSettings$Type extends MessageType {
       name: "favorite_stickers",
       kind: "message",
       T() {
-        return closure_6;
+        return object1;
       },
     };
     items[3] = {
@@ -54,7 +39,7 @@ class FrecencyUserSettings$Type extends MessageType {
       name: "sticker_frecency",
       kind: "message",
       T() {
-        return closure_7;
+        return object2;
       },
     };
     items[4] = {
@@ -62,7 +47,7 @@ class FrecencyUserSettings$Type extends MessageType {
       name: "favorite_emojis",
       kind: "message",
       T() {
-        return closure_8;
+        return object3;
       },
     };
     items[5] = {
@@ -70,7 +55,7 @@ class FrecencyUserSettings$Type extends MessageType {
       name: "emoji_frecency",
       kind: "message",
       T() {
-        return closure_9;
+        return object4;
       },
     };
     items[6] = {
@@ -78,7 +63,7 @@ class FrecencyUserSettings$Type extends MessageType {
       name: "application_command_frecency",
       kind: "message",
       T() {
-        return closure_10;
+        return object5;
       },
     };
     items[7] = {
@@ -86,7 +71,7 @@ class FrecencyUserSettings$Type extends MessageType {
       name: "favorite_soundboard_sounds",
       kind: "message",
       T() {
-        return closure_12;
+        return object7;
       },
     };
     items[8] = {
@@ -94,7 +79,7 @@ class FrecencyUserSettings$Type extends MessageType {
       name: "application_frecency",
       kind: "message",
       T() {
-        return closure_15;
+        return playedSoundFrecencyType;
       },
     };
     items[9] = {
@@ -102,7 +87,7 @@ class FrecencyUserSettings$Type extends MessageType {
       name: "heard_sound_frecency",
       kind: "message",
       T() {
-        return closure_13;
+        return object8;
       },
     };
     items[10] = {
@@ -110,33 +95,32 @@ class FrecencyUserSettings$Type extends MessageType {
       name: "played_sound_frecency",
       kind: "message",
       T() {
-        return closure_14;
+        return heardSoundFrecencyType;
       },
     };
     obj = { no: 12, name: "guild_and_channel_frecency", kind: "message", T: null };
     class T {
       constructor() {
-        return closure_16;
+        return closure_1_16;
       }
     }
-    obj[3] = T;
+    obj.T = T;
     items[11] = obj;
     items[12] = {
       no: 13,
       name: "emoji_reaction_frecency",
       kind: "message",
       T() {
-        return closure_9;
+        return object4;
       },
     };
     tmp = new tmp("discord_protos.discord_users.v1.FrecencyUserSettings", items, T);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
 const prototype = FrecencyUserSettings$Type.prototype;
 prototype["create"] = function create(arr) {
-  obj = {};
+  let obj = {};
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
@@ -146,21 +130,21 @@ prototype["create"] = function create(arr) {
   }
   return obj;
 };
-prototype["internalBinaryRead"] = function internalBinaryRead(pos) {
+prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, arg2, arg3) {
   const self = this;
-  obj = arg3;
+  let obj = arg3;
   if (arg3 == null) {
     obj = self.create();
   }
-  const sum = pos.pos + arg1;
-  if (pos.pos < sum) {
-    obj.emojiReactionFrecency = object4.internalBinaryRead(pos, pos.uint32(), arg2, obj.emojiReactionFrecency);
+  if (pos.pos < pos.pos + arg1) {
+    [r10019, r10020] = _slicedToArray(pos.tag(), 2);
+    const tmp3 = _slicedToArray(pos.tag(), 2);
   }
   return obj;
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(versions, tag, writeUnknownFields) {
   if (versions.versions) {
-    const Versions = create2.Versions;
+    const Versions = user_settings_shared.Versions;
     const tagResult = tag.tag(1, _mod1188.WireType.LengthDelimited);
     const joined = Versions.internalBinaryWrite(
       versions.versions,
@@ -364,25 +348,31 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(versions, tag, w
   return tag;
 };
 const frecencyUserSettingsType = new FrecencyUserSettings$Type();
+const MessageType2 = fn(1188).MessageType;
 class FavoriteGIFs$Type extends MessageType2 {
   constructor() {
     obj = {
-      kind: "message",
-      T() {
-        return closure_5;
+      no: 1,
+      name: "gifs",
+      kind: "map",
+      K: 9,
+      V: {
+        kind: "message",
+        T() {
+          return object;
+        },
       },
     };
     items = [,];
-    items[0] = { no: 1, name: "gifs", kind: "map", K: 9, V: obj };
+    items[0] = obj;
     items[1] = { no: 2, name: "hide_tooltip", kind: "scalar", T: 8 };
     tmp = new tmp("discord_protos.discord_users.v1.FavoriteGIFs", items, new.target);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
 const prototype2 = FavoriteGIFs$Type.prototype;
 prototype2["create"] = function create(arr) {
-  obj = { gifs: {}, hideTooltip: false };
+  let obj = { gifs: {}, hideTooltip: false };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
@@ -392,17 +382,16 @@ prototype2["create"] = function create(arr) {
   }
   return obj;
 };
-prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
-  obj = arg3;
+  let obj = arg3;
   if (arg3 == null) {
     obj = self.create();
   }
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         let binaryReadMap1Result = self.binaryReadMap1(obj.gifs, pos, readUnknownField);
@@ -417,25 +406,16 @@ prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -444,16 +424,14 @@ prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   }
   return obj;
 };
-prototype2["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
+prototype2["binaryReadMap1"] = function binaryReadMap1(arg0, pos, arg2) {
   const sum = pos.pos + pos.uint32();
-  obj = undefined;
+  let obj;
   let str;
   if (pos.pos < sum) {
     while (true) {
-      let tmp5 = callback;
-      let tmp6 = callback(pos.tag(), 2);
+      let tmp6 = _slicedToArray(pos.tag(), 2);
       [tmp7, r10020] = tmp6;
-      let tmp8 = tmp2;
       let stringResult = tmp3;
       if (1 === tmp7) {
         stringResult = pos.string();
@@ -461,7 +439,6 @@ prototype2["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
       } else if (2 !== tmp7) {
         break;
       } else {
-        let tmp15 = object;
         internalBinaryReadResult = object.internalBinaryRead(pos, pos.uint32(), arg2);
       }
       tmp2 = internalBinaryReadResult;
@@ -470,7 +447,7 @@ prototype2["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
       str = stringResult;
     }
     const _globalThis = globalThis;
-    error = new Error("unknown map entry field for field discord_protos.discord_users.v1.FavoriteGIFs.gifs");
+    const error = new Error("unknown map entry field for field discord_protos.discord_users.v1.FavoriteGIFs.gifs");
     throw error;
   }
   if (str == null) {
@@ -486,15 +463,12 @@ prototype2["internalBinaryWrite"] = function internalBinaryWrite(gifs, tag, writ
   const iter = keys[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tmp3 = require;
-    let tmp4 = dependencyMap;
     let tagResult = tag.tag(1, _mod1188.WireType.LengthDelimited);
     let forkResult = tagResult.fork();
     let tagResult1 = forkResult.tag(1, _mod1188.WireType.LengthDelimited);
     let stringResult = tagResult1.string(nextResult);
     let tagResult2 = tag.tag(2, _mod1188.WireType.LengthDelimited);
     let forkResult1 = tagResult2.fork();
-    let tmp7 = object;
     let internalBinaryWriteResult = object.internalBinaryWrite(gifs.gifs[nextResult], tag, writeUnknownFields);
     let joined = tag.join();
     let joined1 = joined.join();
@@ -514,16 +488,19 @@ prototype2["internalBinaryWrite"] = function internalBinaryWrite(gifs, tag, writ
   }
   return tag;
 };
-obj = {
-  kind: "message",
-  T() {
-    return closure_5;
+GIFType = {
+  no: 1,
+  name: "gifs",
+  kind: "map",
+  K: 9,
+  V: {
+    kind: "message",
+    T() {
+      return object;
+    },
   },
 };
-let items = [
-  { no: 1, name: "gifs", kind: "map", K: 9, V: obj },
-  { no: 2, name: "hide_tooltip", kind: "scalar", T: 8 },
-];
+let items = [GIFType, { no: 2, name: "hide_tooltip", kind: "scalar", T: 8 }];
 let object = new Object(
   "discord_protos.discord_users.v1.FavoriteGIFs",
   items,
@@ -532,7 +509,7 @@ let object = new Object(
   "create",
   "internalBinaryRead",
 );
-// ThrowIfThisInitialized (0x7c)
+const MessageType3 = fn(1188).MessageType;
 class FavoriteGIF$Type extends MessageType3 {
   constructor() {
     obj = {
@@ -540,7 +517,7 @@ class FavoriteGIF$Type extends MessageType3 {
       name: "format",
       kind: "enum",
       T() {
-        const items = ["discord_protos.discord_users.v1.GIFType", closure_3];
+        const items = ["discord_protos.discord_users.v1.GIFType", GIFType];
         return items;
       },
     };
@@ -551,33 +528,30 @@ class FavoriteGIF$Type extends MessageType3 {
     items[3] = { no: 4, name: "height", kind: "scalar", T: 13 };
     items[4] = { no: 5, name: "order", kind: "scalar", T: 13 };
     tmp = new tmp("discord_protos.discord_users.v1.FavoriteGIF", items, new.target);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
 const prototype3 = FavoriteGIF$Type.prototype;
 prototype3["create"] = function create(arr) {
-  obj = { format: 0, src: "", width: 0, height: 0, order: 0 };
+  const size = { format: 0, src: "", width: 0, height: 0, order: 0 };
   const _Object = Object;
-  obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
+  _Object.defineProperty(size, _mod1188.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1188.reflectionMergePartial(this, obj, arr);
+    const result = _mod1188.reflectionMergePartial(this, size, arr);
     const tmpResult = _mod1188;
   }
-  return obj;
+  return size;
 };
-prototype3["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype3["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
-  obj = arg3;
+  let obj = arg3;
   if (arg3 == null) {
     obj = self.create();
   }
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         obj.format = pos.int32();
@@ -598,25 +572,16 @@ prototype3["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -656,36 +621,35 @@ prototype3["internalBinaryWrite"] = function internalBinaryWrite(format, tag, wr
   }
   return tag;
 };
-obj = {
+GIFType = {
   no: 1,
   name: "format",
   kind: "enum",
   T() {
-    const items = ["discord_protos.discord_users.v1.GIFType", closure_3];
+    const items = ["discord_protos.discord_users.v1.GIFType", GIFType];
     return items;
   },
 };
 const items1 = [
-  obj,
+  GIFType,
   { no: 2, name: "src", kind: "scalar", T: 9 },
   { no: 3, name: "width", kind: "scalar", T: 13 },
   { no: 4, name: "height", kind: "scalar", T: 13 },
   { no: 5, name: "order", kind: "scalar", T: 13 },
 ];
 object = new Object("discord_protos.discord_users.v1.FavoriteGIF", items1, tmp4, tmp3, "create", "internalBinaryRead");
-// ThrowIfThisInitialized (0x7c)
+const MessageType4 = fn(1188).MessageType;
 class FavoriteStickers$Type extends MessageType4 {
   constructor() {
     items = [];
     items[0] = { no: 1, name: "sticker_ids", kind: "scalar", repeat: 1, T: 6 };
     tmp = new tmp("discord_protos.discord_users.v1.FavoriteStickers", items, new.target);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
 const prototype4 = FavoriteStickers$Type.prototype;
 prototype4["create"] = function create(arr) {
-  obj = { stickerIds: [] };
+  let obj = { stickerIds: [] };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
@@ -695,21 +659,18 @@ prototype4["create"] = function create(arr) {
   }
   return obj;
 };
-prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
-  obj = arg3;
+  let obj = arg3;
   if (arg3 == null) {
     obj = self.create();
   }
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
-        let tmp22 = require;
-        let tmp23 = dependencyMap;
         if (tmp6 === _mod1188.WireType.LengthDelimited) {
           let sum1 = pos.int32() + pos.pos;
           if (pos.pos < sum1) {
@@ -734,25 +695,16 @@ prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -795,25 +747,30 @@ const object1 = new Object(
   "create",
   "internalBinaryRead",
 );
-// ThrowIfThisInitialized (0x7c)
+const MessageType5 = fn(1188).MessageType;
 class StickerFrecency$Type extends MessageType5 {
   constructor() {
     obj = {
-      kind: "message",
-      T() {
-        return closure_11;
+      no: 1,
+      name: "stickers",
+      kind: "map",
+      K: 6,
+      V: {
+        kind: "message",
+        T() {
+          return object6;
+        },
       },
     };
     items = [];
-    items[0] = { no: 1, name: "stickers", kind: "map", K: 6, V: obj };
+    items[0] = obj;
     tmp = new tmp("discord_protos.discord_users.v1.StickerFrecency", items, new.target);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
 const prototype5 = StickerFrecency$Type.prototype;
 prototype5["create"] = function create(arr) {
-  obj = { stickers: {} };
+  let obj = { stickers: {} };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
@@ -823,17 +780,16 @@ prototype5["create"] = function create(arr) {
   }
   return obj;
 };
-prototype5["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype5["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
-  obj = arg3;
+  let obj = arg3;
   if (arg3 == null) {
     obj = self.create();
   }
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         let binaryReadMap1Result = self.binaryReadMap1(obj.stickers, pos, readUnknownField);
@@ -846,25 +802,16 @@ prototype5["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -873,16 +820,14 @@ prototype5["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   }
   return obj;
 };
-prototype5["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
+prototype5["binaryReadMap1"] = function binaryReadMap1(arg0, pos, arg2) {
   const sum = pos.pos + pos.uint32();
-  obj = undefined;
+  let obj;
   let str;
   if (pos.pos < sum) {
     while (true) {
-      let tmp5 = callback;
-      let tmp6 = callback(pos.tag(), 2);
+      let tmp6 = _slicedToArray(pos.tag(), 2);
       [tmp7, r10020] = tmp6;
-      let tmp8 = tmp2;
       str = tmp3;
       if (1 === tmp7) {
         let str3 = pos.fixed64();
@@ -891,7 +836,6 @@ prototype5["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
       } else if (2 !== tmp7) {
         break;
       } else {
-        let tmp15 = object6;
         internalBinaryReadResult = object6.internalBinaryRead(pos, pos.uint32(), arg2);
       }
       tmp2 = internalBinaryReadResult;
@@ -899,7 +843,9 @@ prototype5["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
       obj = internalBinaryReadResult;
     }
     const _globalThis = globalThis;
-    error = new Error("unknown map entry field for field discord_protos.discord_users.v1.StickerFrecency.stickers");
+    const error = new Error(
+      "unknown map entry field for field discord_protos.discord_users.v1.StickerFrecency.stickers",
+    );
     throw error;
   }
   if (str == null) {
@@ -915,15 +861,12 @@ prototype5["internalBinaryWrite"] = function internalBinaryWrite(stickers, tag, 
   const iter = keys[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tmp3 = require;
-    let tmp4 = dependencyMap;
     let tagResult = tag.tag(1, _mod1188.WireType.LengthDelimited);
     let forkResult = tagResult.fork();
     let tagResult1 = forkResult.tag(1, _mod1188.WireType.Bit64);
     let fixed64Result = tagResult1.fixed64(nextResult);
     let tagResult2 = tag.tag(2, _mod1188.WireType.LengthDelimited);
     let forkResult1 = tagResult2.fork();
-    let tmp7 = object6;
     let internalBinaryWriteResult = object6.internalBinaryWrite(stickers.stickers[nextResult], tag, writeUnknownFields);
     let joined = tag.join();
     let joined1 = joined.join();
@@ -948,7 +891,7 @@ const items3 = [
     V: {
       kind: "message",
       T() {
-        return closure_11;
+        return object6;
       },
     },
   },
@@ -961,19 +904,18 @@ const object2 = new Object(
   "create",
   "internalBinaryRead",
 );
-// ThrowIfThisInitialized (0x7c)
+const MessageType6 = fn(1188).MessageType;
 class FavoriteEmojis$Type extends MessageType6 {
   constructor() {
     items = [];
     items[0] = { no: 1, name: "emojis", kind: "scalar", repeat: 2, T: 9 };
     tmp = new tmp("discord_protos.discord_users.v1.FavoriteEmojis", items, new.target);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
 const prototype6 = FavoriteEmojis$Type.prototype;
 prototype6["create"] = function create(arr) {
-  obj = { emojis: [] };
+  let obj = { emojis: [] };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
@@ -983,17 +925,16 @@ prototype6["create"] = function create(arr) {
   }
   return obj;
 };
-prototype6["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype6["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
-  obj = arg3;
+  let obj = arg3;
   if (arg3 == null) {
     obj = self.create();
   }
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         let emojis = obj.emojis;
@@ -1007,25 +948,16 @@ prototype6["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -1039,8 +971,6 @@ prototype6["internalBinaryWrite"] = function internalBinaryWrite(emojis, tag, wr
   let num = 0;
   if (0 < emojis.emojis.length) {
     do {
-      let tmp = require;
-      let tmp2 = dependencyMap;
       let tagResult = tag.tag(1, _mod1188.WireType.LengthDelimited);
       let stringResult = tagResult.string(emojis.emojis[num]);
       num = num + 1;
@@ -1066,25 +996,30 @@ const object3 = new Object(
   "create",
   "internalBinaryRead",
 );
-// ThrowIfThisInitialized (0x7c)
+const MessageType7 = fn(1188).MessageType;
 class EmojiFrecency$Type extends MessageType7 {
   constructor() {
     obj = {
-      kind: "message",
-      T() {
-        return closure_11;
+      no: 1,
+      name: "emojis",
+      kind: "map",
+      K: 9,
+      V: {
+        kind: "message",
+        T() {
+          return object6;
+        },
       },
     };
     items = [];
-    items[0] = { no: 1, name: "emojis", kind: "map", K: 9, V: obj };
+    items[0] = obj;
     tmp = new tmp("discord_protos.discord_users.v1.EmojiFrecency", items, new.target);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
 const prototype7 = EmojiFrecency$Type.prototype;
 prototype7["create"] = function create(arr) {
-  obj = { emojis: {} };
+  let obj = { emojis: {} };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
@@ -1094,17 +1029,16 @@ prototype7["create"] = function create(arr) {
   }
   return obj;
 };
-prototype7["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype7["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
-  obj = arg3;
+  let obj = arg3;
   if (arg3 == null) {
     obj = self.create();
   }
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         let binaryReadMap1Result = self.binaryReadMap1(obj.emojis, pos, readUnknownField);
@@ -1117,25 +1051,16 @@ prototype7["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -1144,16 +1069,14 @@ prototype7["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   }
   return obj;
 };
-prototype7["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
+prototype7["binaryReadMap1"] = function binaryReadMap1(arg0, pos, arg2) {
   const sum = pos.pos + pos.uint32();
-  obj = undefined;
+  let obj;
   let str;
   if (pos.pos < sum) {
     while (true) {
-      let tmp5 = callback;
-      let tmp6 = callback(pos.tag(), 2);
+      let tmp6 = _slicedToArray(pos.tag(), 2);
       [tmp7, r10020] = tmp6;
-      let tmp8 = tmp2;
       let stringResult = tmp3;
       if (1 === tmp7) {
         stringResult = pos.string();
@@ -1161,7 +1084,6 @@ prototype7["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
       } else if (2 !== tmp7) {
         break;
       } else {
-        let tmp15 = object6;
         internalBinaryReadResult = object6.internalBinaryRead(pos, pos.uint32(), arg2);
       }
       tmp2 = internalBinaryReadResult;
@@ -1170,7 +1092,7 @@ prototype7["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
       str = stringResult;
     }
     const _globalThis = globalThis;
-    error = new Error("unknown map entry field for field discord_protos.discord_users.v1.EmojiFrecency.emojis");
+    const error = new Error("unknown map entry field for field discord_protos.discord_users.v1.EmojiFrecency.emojis");
     throw error;
   }
   if (str == null) {
@@ -1186,15 +1108,12 @@ prototype7["internalBinaryWrite"] = function internalBinaryWrite(emojis, tag, wr
   const iter = keys[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tmp3 = require;
-    let tmp4 = dependencyMap;
     let tagResult = tag.tag(1, _mod1188.WireType.LengthDelimited);
     let forkResult = tagResult.fork();
     let tagResult1 = forkResult.tag(1, _mod1188.WireType.LengthDelimited);
     let stringResult = tagResult1.string(nextResult);
     let tagResult2 = tag.tag(2, _mod1188.WireType.LengthDelimited);
     let forkResult1 = tagResult2.fork();
-    let tmp7 = object6;
     let internalBinaryWriteResult = object6.internalBinaryWrite(emojis.emojis[nextResult], tag, writeUnknownFields);
     let joined = tag.join();
     let joined1 = joined.join();
@@ -1219,7 +1138,7 @@ const items5 = [
     V: {
       kind: "message",
       T() {
-        return closure_11;
+        return object6;
       },
     },
   },
@@ -1232,25 +1151,30 @@ const object4 = new Object(
   "create",
   "internalBinaryRead",
 );
-// ThrowIfThisInitialized (0x7c)
+const MessageType8 = fn(1188).MessageType;
 class ApplicationCommandFrecency$Type extends MessageType8 {
   constructor() {
     obj = {
-      kind: "message",
-      T() {
-        return closure_11;
+      no: 1,
+      name: "application_commands",
+      kind: "map",
+      K: 9,
+      V: {
+        kind: "message",
+        T() {
+          return object6;
+        },
       },
     };
     items = [];
-    items[0] = { no: 1, name: "application_commands", kind: "map", K: 9, V: obj };
+    items[0] = obj;
     tmp = new tmp("discord_protos.discord_users.v1.ApplicationCommandFrecency", items, new.target);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
 const prototype8 = ApplicationCommandFrecency$Type.prototype;
 prototype8["create"] = function create(arr) {
-  obj = { applicationCommands: {} };
+  let obj = { applicationCommands: {} };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
@@ -1260,17 +1184,16 @@ prototype8["create"] = function create(arr) {
   }
   return obj;
 };
-prototype8["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype8["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
-  obj = arg3;
+  let obj = arg3;
   if (arg3 == null) {
     obj = self.create();
   }
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         let binaryReadMap1Result = self.binaryReadMap1(obj.applicationCommands, pos, readUnknownField);
@@ -1283,25 +1206,16 @@ prototype8["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -1310,16 +1224,14 @@ prototype8["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   }
   return obj;
 };
-prototype8["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
+prototype8["binaryReadMap1"] = function binaryReadMap1(arg0, pos, arg2) {
   const sum = pos.pos + pos.uint32();
-  obj = undefined;
+  let obj;
   let str;
   if (pos.pos < sum) {
     while (true) {
-      let tmp5 = callback;
-      let tmp6 = callback(pos.tag(), 2);
+      let tmp6 = _slicedToArray(pos.tag(), 2);
       [tmp7, r10020] = tmp6;
-      let tmp8 = tmp2;
       let stringResult = tmp3;
       if (1 === tmp7) {
         stringResult = pos.string();
@@ -1327,7 +1239,6 @@ prototype8["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
       } else if (2 !== tmp7) {
         break;
       } else {
-        let tmp15 = object6;
         internalBinaryReadResult = object6.internalBinaryRead(pos, pos.uint32(), arg2);
       }
       tmp2 = internalBinaryReadResult;
@@ -1336,7 +1247,7 @@ prototype8["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
       str = stringResult;
     }
     const _globalThis = globalThis;
-    error = new Error(
+    const error = new Error(
       "unknown map entry field for field discord_protos.discord_users.v1.ApplicationCommandFrecency.application_commands",
     );
     throw error;
@@ -1354,15 +1265,12 @@ prototype8["internalBinaryWrite"] = function internalBinaryWrite(applicationComm
   const iter = keys[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tmp3 = require;
-    let tmp4 = dependencyMap;
     let tagResult = tag.tag(1, _mod1188.WireType.LengthDelimited);
     let forkResult = tagResult.fork();
     let tagResult1 = forkResult.tag(1, _mod1188.WireType.LengthDelimited);
     let stringResult = tagResult1.string(nextResult);
     let tagResult2 = tag.tag(2, _mod1188.WireType.LengthDelimited);
     let forkResult1 = tagResult2.fork();
-    let tmp7 = object6;
     let internalBinaryWriteResult = object6.internalBinaryWrite(
       applicationCommands.applicationCommands[nextResult],
       tag,
@@ -1391,7 +1299,7 @@ const items6 = [
     V: {
       kind: "message",
       T() {
-        return closure_11;
+        return object6;
       },
     },
   },
@@ -1404,7 +1312,7 @@ const object5 = new Object(
   "create",
   "internalBinaryRead",
 );
-// ThrowIfThisInitialized (0x7c)
+const MessageType9 = fn(1188).MessageType;
 class FrecencyItem$Type extends MessageType9 {
   constructor() {
     items = [, , ,];
@@ -1413,13 +1321,12 @@ class FrecencyItem$Type extends MessageType9 {
     items[2] = { no: 3, name: "frecency", kind: "scalar", T: 5 };
     items[3] = { no: 4, name: "score", kind: "scalar", T: 5 };
     tmp = new tmp("discord_protos.discord_users.v1.FrecencyItem", items, new.target);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
 const prototype9 = FrecencyItem$Type.prototype;
 prototype9["create"] = function create(arr) {
-  obj = { totalUses: 0, recentUses: [], frecency: 0, score: 0 };
+  let obj = { totalUses: 0, recentUses: [], frecency: 0, score: 0 };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
@@ -1429,23 +1336,20 @@ prototype9["create"] = function create(arr) {
   }
   return obj;
 };
-prototype9["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype9["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
-  obj = arg3;
+  let obj = arg3;
   if (arg3 == null) {
     obj = self.create();
   }
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         obj.totalUses = pos.uint32();
       } else if (2 === tmp5) {
-        let tmp22 = require;
-        let tmp23 = dependencyMap;
         if (tmp6 === _mod1188.WireType.LengthDelimited) {
           let sum1 = pos.int32() + pos.pos;
           if (pos.pos < sum1) {
@@ -1474,25 +1378,16 @@ prototype9["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -1552,19 +1447,18 @@ const object6 = new Object(
   "create",
   "internalBinaryRead",
 );
-// ThrowIfThisInitialized (0x7c)
+const MessageType10 = fn(1188).MessageType;
 class FavoriteSoundboardSounds$Type extends MessageType10 {
   constructor() {
     items = [];
     items[0] = { no: 1, name: "sound_ids", kind: "scalar", repeat: 1, T: 6 };
     tmp = new tmp("discord_protos.discord_users.v1.FavoriteSoundboardSounds", items, new.target);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
 const prototype10 = FavoriteSoundboardSounds$Type.prototype;
 prototype10["create"] = function create(arr) {
-  obj = { soundIds: [] };
+  let obj = { soundIds: [] };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
@@ -1574,21 +1468,18 @@ prototype10["create"] = function create(arr) {
   }
   return obj;
 };
-prototype10["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype10["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
-  obj = arg3;
+  let obj = arg3;
   if (arg3 == null) {
     obj = self.create();
   }
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
-        let tmp22 = require;
-        let tmp23 = dependencyMap;
         if (tmp6 === _mod1188.WireType.LengthDelimited) {
           let sum1 = pos.int32() + pos.pos;
           if (pos.pos < sum1) {
@@ -1613,25 +1504,16 @@ prototype10["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -1674,25 +1556,30 @@ const object7 = new Object(
   "create",
   "internalBinaryRead",
 );
-// ThrowIfThisInitialized (0x7c)
+const MessageType11 = fn(1188).MessageType;
 class HeardSoundFrecency$Type extends MessageType11 {
   constructor() {
     obj = {
-      kind: "message",
-      T() {
-        return closure_11;
+      no: 1,
+      name: "heard_sounds",
+      kind: "map",
+      K: 9,
+      V: {
+        kind: "message",
+        T() {
+          return object6;
+        },
       },
     };
     items = [];
-    items[0] = { no: 1, name: "heard_sounds", kind: "map", K: 9, V: obj };
+    items[0] = obj;
     tmp = new tmp("discord_protos.discord_users.v1.HeardSoundFrecency", items, new.target);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
 const prototype11 = HeardSoundFrecency$Type.prototype;
 prototype11["create"] = function create(arr) {
-  obj = { heardSounds: {} };
+  let obj = { heardSounds: {} };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
@@ -1702,17 +1589,16 @@ prototype11["create"] = function create(arr) {
   }
   return obj;
 };
-prototype11["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype11["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
-  obj = arg3;
+  let obj = arg3;
   if (arg3 == null) {
     obj = self.create();
   }
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         let binaryReadMap1Result = self.binaryReadMap1(obj.heardSounds, pos, readUnknownField);
@@ -1725,25 +1611,16 @@ prototype11["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -1752,16 +1629,14 @@ prototype11["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   }
   return obj;
 };
-prototype11["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
+prototype11["binaryReadMap1"] = function binaryReadMap1(arg0, pos, arg2) {
   const sum = pos.pos + pos.uint32();
-  obj = undefined;
+  let obj;
   let str;
   if (pos.pos < sum) {
     while (true) {
-      let tmp5 = callback;
-      let tmp6 = callback(pos.tag(), 2);
+      let tmp6 = _slicedToArray(pos.tag(), 2);
       [tmp7, r10020] = tmp6;
-      let tmp8 = tmp2;
       let stringResult = tmp3;
       if (1 === tmp7) {
         stringResult = pos.string();
@@ -1769,7 +1644,6 @@ prototype11["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
       } else if (2 !== tmp7) {
         break;
       } else {
-        let tmp15 = object6;
         internalBinaryReadResult = object6.internalBinaryRead(pos, pos.uint32(), arg2);
       }
       tmp2 = internalBinaryReadResult;
@@ -1778,7 +1652,7 @@ prototype11["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
       str = stringResult;
     }
     const _globalThis = globalThis;
-    error = new Error(
+    const error = new Error(
       "unknown map entry field for field discord_protos.discord_users.v1.HeardSoundFrecency.heard_sounds",
     );
     throw error;
@@ -1796,15 +1670,12 @@ prototype11["internalBinaryWrite"] = function internalBinaryWrite(heardSounds, t
   const iter = keys[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tmp3 = require;
-    let tmp4 = dependencyMap;
     let tagResult = tag.tag(1, _mod1188.WireType.LengthDelimited);
     let forkResult = tagResult.fork();
     let tagResult1 = forkResult.tag(1, _mod1188.WireType.LengthDelimited);
     let stringResult = tagResult1.string(nextResult);
     let tagResult2 = tag.tag(2, _mod1188.WireType.LengthDelimited);
     let forkResult1 = tagResult2.fork();
-    let tmp7 = object6;
     let internalBinaryWriteResult = object6.internalBinaryWrite(
       heardSounds.heardSounds[nextResult],
       tag,
@@ -1833,7 +1704,7 @@ const items9 = [
     V: {
       kind: "message",
       T() {
-        return closure_11;
+        return object6;
       },
     },
   },
@@ -1851,9 +1722,9 @@ const object8 = new Object(
   HeardSoundFrecency$Type,
   undefined,
   tmp,
-  arg1,
+  fn,
   dependencyMap,
-  obj,
+  GIFType,
   frecencyUserSettingsType,
   object,
   object,
@@ -1861,25 +1732,30 @@ const object8 = new Object(
   object2,
   object3,
 );
-// ThrowIfThisInitialized (0x7c)
+const MessageType12 = fn(1188).MessageType;
 class PlayedSoundFrecency$Type extends MessageType12 {
   constructor() {
     obj = {
-      kind: "message",
-      T() {
-        return closure_11;
+      no: 1,
+      name: "played_sounds",
+      kind: "map",
+      K: 9,
+      V: {
+        kind: "message",
+        T() {
+          return object6;
+        },
       },
     };
     items = [];
-    items[0] = { no: 1, name: "played_sounds", kind: "map", K: 9, V: obj };
+    items[0] = obj;
     tmp = new tmp("discord_protos.discord_users.v1.PlayedSoundFrecency", items, new.target);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
 const prototype12 = PlayedSoundFrecency$Type.prototype;
 prototype12["create"] = function create(arr) {
-  obj = { playedSounds: {} };
+  let obj = { playedSounds: {} };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
@@ -1889,17 +1765,16 @@ prototype12["create"] = function create(arr) {
   }
   return obj;
 };
-prototype12["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype12["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
-  obj = arg3;
+  let obj = arg3;
   if (arg3 == null) {
     obj = self.create();
   }
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         let binaryReadMap1Result = self.binaryReadMap1(obj.playedSounds, pos, readUnknownField);
@@ -1912,25 +1787,16 @@ prototype12["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -1939,16 +1805,14 @@ prototype12["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   }
   return obj;
 };
-prototype12["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
+prototype12["binaryReadMap1"] = function binaryReadMap1(arg0, pos, arg2) {
   const sum = pos.pos + pos.uint32();
-  obj = undefined;
+  let obj;
   let str;
   if (pos.pos < sum) {
     while (true) {
-      let tmp5 = callback;
-      let tmp6 = callback(pos.tag(), 2);
+      let tmp6 = _slicedToArray(pos.tag(), 2);
       [tmp7, r10020] = tmp6;
-      let tmp8 = tmp2;
       let stringResult = tmp3;
       if (1 === tmp7) {
         stringResult = pos.string();
@@ -1956,7 +1820,6 @@ prototype12["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
       } else if (2 !== tmp7) {
         break;
       } else {
-        let tmp15 = object6;
         internalBinaryReadResult = object6.internalBinaryRead(pos, pos.uint32(), arg2);
       }
       tmp2 = internalBinaryReadResult;
@@ -1965,7 +1828,7 @@ prototype12["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
       str = stringResult;
     }
     const _globalThis = globalThis;
-    error = new Error(
+    const error = new Error(
       "unknown map entry field for field discord_protos.discord_users.v1.PlayedSoundFrecency.played_sounds",
     );
     throw error;
@@ -1983,15 +1846,12 @@ prototype12["internalBinaryWrite"] = function internalBinaryWrite(playedSounds, 
   const iter = keys[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tmp3 = require;
-    let tmp4 = dependencyMap;
     let tagResult = tag.tag(1, _mod1188.WireType.LengthDelimited);
     let forkResult = tagResult.fork();
     let tagResult1 = forkResult.tag(1, _mod1188.WireType.LengthDelimited);
     let stringResult = tagResult1.string(nextResult);
     let tagResult2 = tag.tag(2, _mod1188.WireType.LengthDelimited);
     let forkResult1 = tagResult2.fork();
-    let tmp7 = object6;
     let internalBinaryWriteResult = object6.internalBinaryWrite(
       playedSounds.playedSounds[nextResult],
       tag,
@@ -2020,7 +1880,7 @@ const items10 = [
     V: {
       kind: "message",
       T() {
-        return closure_11;
+        return object6;
       },
     },
   },
@@ -2038,9 +1898,9 @@ const heardSoundFrecencyType = new HeardSoundFrecency$Type(
   HeardSoundFrecency$Type,
   undefined,
   tmp,
-  arg1,
+  fn,
   dependencyMap,
-  obj,
+  GIFType,
   frecencyUserSettingsType,
   object,
   object,
@@ -2051,25 +1911,30 @@ const heardSoundFrecencyType = new HeardSoundFrecency$Type(
   object5,
   object6,
 );
-// ThrowIfThisInitialized (0x7c)
+const MessageType13 = fn(1188).MessageType;
 class ApplicationFrecency$Type extends MessageType13 {
   constructor() {
     obj = {
-      kind: "message",
-      T() {
-        return closure_11;
+      no: 1,
+      name: "applications",
+      kind: "map",
+      K: 9,
+      V: {
+        kind: "message",
+        T() {
+          return object6;
+        },
       },
     };
     items = [];
-    items[0] = { no: 1, name: "applications", kind: "map", K: 9, V: obj };
+    items[0] = obj;
     tmp = new tmp("discord_protos.discord_users.v1.ApplicationFrecency", items, new.target);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
 const prototype13 = ApplicationFrecency$Type.prototype;
 prototype13["create"] = function create(arr) {
-  obj = { applications: {} };
+  let obj = { applications: {} };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
@@ -2079,17 +1944,16 @@ prototype13["create"] = function create(arr) {
   }
   return obj;
 };
-prototype13["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype13["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
-  obj = arg3;
+  let obj = arg3;
   if (arg3 == null) {
     obj = self.create();
   }
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         let binaryReadMap1Result = self.binaryReadMap1(obj.applications, pos, readUnknownField);
@@ -2102,25 +1966,16 @@ prototype13["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -2129,16 +1984,14 @@ prototype13["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   }
   return obj;
 };
-prototype13["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
+prototype13["binaryReadMap1"] = function binaryReadMap1(arg0, pos, arg2) {
   const sum = pos.pos + pos.uint32();
-  obj = undefined;
+  let obj;
   let str;
   if (pos.pos < sum) {
     while (true) {
-      let tmp5 = callback;
-      let tmp6 = callback(pos.tag(), 2);
+      let tmp6 = _slicedToArray(pos.tag(), 2);
       [tmp7, r10020] = tmp6;
-      let tmp8 = tmp2;
       let stringResult = tmp3;
       if (1 === tmp7) {
         stringResult = pos.string();
@@ -2146,7 +1999,6 @@ prototype13["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
       } else if (2 !== tmp7) {
         break;
       } else {
-        let tmp15 = object6;
         internalBinaryReadResult = object6.internalBinaryRead(pos, pos.uint32(), arg2);
       }
       tmp2 = internalBinaryReadResult;
@@ -2155,7 +2007,7 @@ prototype13["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
       str = stringResult;
     }
     const _globalThis = globalThis;
-    error = new Error(
+    const error = new Error(
       "unknown map entry field for field discord_protos.discord_users.v1.ApplicationFrecency.applications",
     );
     throw error;
@@ -2173,15 +2025,12 @@ prototype13["internalBinaryWrite"] = function internalBinaryWrite(applications, 
   const iter = keys[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tmp3 = require;
-    let tmp4 = dependencyMap;
     let tagResult = tag.tag(1, _mod1188.WireType.LengthDelimited);
     let forkResult = tagResult.fork();
     let tagResult1 = forkResult.tag(1, _mod1188.WireType.LengthDelimited);
     let stringResult = tagResult1.string(nextResult);
     let tagResult2 = tag.tag(2, _mod1188.WireType.LengthDelimited);
     let forkResult1 = tagResult2.fork();
-    let tmp7 = object6;
     let internalBinaryWriteResult = object6.internalBinaryWrite(
       applications.applications[nextResult],
       tag,
@@ -2210,7 +2059,7 @@ const items11 = [
     V: {
       kind: "message",
       T() {
-        return closure_11;
+        return object6;
       },
     },
   },
@@ -2228,9 +2077,9 @@ const playedSoundFrecencyType = new PlayedSoundFrecency$Type(
   items11,
   undefined,
   tmp,
-  arg1,
+  fn,
   dependencyMap,
-  obj,
+  GIFType,
   frecencyUserSettingsType,
   object,
   object,
@@ -2244,25 +2093,30 @@ const playedSoundFrecencyType = new PlayedSoundFrecency$Type(
   object8,
   heardSoundFrecencyType,
 );
-// ThrowIfThisInitialized (0x7c)
+const MessageType14 = fn(1188).MessageType;
 class GuildAndChannelFrecency$Type extends MessageType14 {
   constructor() {
     obj = {
-      kind: "message",
-      T() {
-        return closure_11;
+      no: 1,
+      name: "guild_and_channels",
+      kind: "map",
+      K: 6,
+      V: {
+        kind: "message",
+        T() {
+          return object6;
+        },
       },
     };
     items = [];
-    items[0] = { no: 1, name: "guild_and_channels", kind: "map", K: 6, V: obj };
+    items[0] = obj;
     tmp = new tmp("discord_protos.discord_users.v1.GuildAndChannelFrecency", items, new.target);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
 const prototype14 = GuildAndChannelFrecency$Type.prototype;
 prototype14["create"] = function create(arr) {
-  obj = { guildAndChannels: {} };
+  let obj = { guildAndChannels: {} };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
@@ -2272,17 +2126,16 @@ prototype14["create"] = function create(arr) {
   }
   return obj;
 };
-prototype14["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype14["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
-  obj = arg3;
+  let obj = arg3;
   if (arg3 == null) {
     obj = self.create();
   }
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         let binaryReadMap1Result = self.binaryReadMap1(obj.guildAndChannels, pos, readUnknownField);
@@ -2295,25 +2148,16 @@ prototype14["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -2322,16 +2166,14 @@ prototype14["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   }
   return obj;
 };
-prototype14["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
+prototype14["binaryReadMap1"] = function binaryReadMap1(arg0, pos, arg2) {
   const sum = pos.pos + pos.uint32();
-  obj = undefined;
+  let obj;
   let str;
   if (pos.pos < sum) {
     while (true) {
-      let tmp5 = callback;
-      let tmp6 = callback(pos.tag(), 2);
+      let tmp6 = _slicedToArray(pos.tag(), 2);
       [tmp7, r10020] = tmp6;
-      let tmp8 = tmp2;
       str = tmp3;
       if (1 === tmp7) {
         let str3 = pos.fixed64();
@@ -2340,7 +2182,6 @@ prototype14["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
       } else if (2 !== tmp7) {
         break;
       } else {
-        let tmp15 = object6;
         internalBinaryReadResult = object6.internalBinaryRead(pos, pos.uint32(), arg2);
       }
       tmp2 = internalBinaryReadResult;
@@ -2348,7 +2189,7 @@ prototype14["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
       obj = internalBinaryReadResult;
     }
     const _globalThis = globalThis;
-    error = new Error(
+    const error = new Error(
       "unknown map entry field for field discord_protos.discord_users.v1.GuildAndChannelFrecency.guild_and_channels",
     );
     throw error;
@@ -2366,15 +2207,12 @@ prototype14["internalBinaryWrite"] = function internalBinaryWrite(guildAndChanne
   const iter = keys[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tmp3 = require;
-    let tmp4 = dependencyMap;
     let tagResult = tag.tag(1, _mod1188.WireType.LengthDelimited);
     let forkResult = tagResult.fork();
     let tagResult1 = forkResult.tag(1, _mod1188.WireType.Bit64);
     let fixed64Result = tagResult1.fixed64(nextResult);
     let tagResult2 = tag.tag(2, _mod1188.WireType.LengthDelimited);
     let forkResult1 = tagResult2.fork();
-    let tmp7 = object6;
     let internalBinaryWriteResult = object6.internalBinaryWrite(
       guildAndChannels.guildAndChannels[nextResult],
       tag,
@@ -2403,7 +2241,7 @@ const items12 = [
     V: {
       kind: "message",
       T() {
-        return closure_11;
+        return object6;
       },
     },
   },
@@ -2421,9 +2259,9 @@ let tmp19 = new "binaryReadMap1"(
   new.target,
   undefined,
   tmp,
-  arg1,
+  fn,
   dependencyMap,
-  obj,
+  GIFType,
   frecencyUserSettingsType,
   object,
   object,
@@ -2434,13 +2272,13 @@ let tmp19 = new "binaryReadMap1"(
   object5,
   object6,
 );
-// ThrowIfThisInitialized (0x7c)
 let closure_16 = tmp19;
-let result = require("set").fileFinishedImporting(
+let size = fn(2);
+let result = size.fileFinishedImporting(
   "../discord_common/js/packages/protos/discord_protos/discord_users/v1/frecency_user_settings.tsx",
 );
 
-export const GIFType = obj;
+export { GIFType };
 export const FrecencyUserSettings = frecencyUserSettingsType;
 export const FavoriteGIFs = object;
 export const FavoriteGIF = object;

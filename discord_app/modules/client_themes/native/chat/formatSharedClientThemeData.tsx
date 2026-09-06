@@ -1,12 +1,12 @@
 // discord_app/modules/client_themes/native/chat/formatSharedClientThemeData.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import messagesProxyDefault from "../../intl/ClientThemes.messages.js";
-import registerAssetDefault from "../../../../../_runtime/08051_registerAsset.js";
+import _mod17 from "../../../../../_runtime/metro/00017__.js";
+import util from "../../../../intl/index.native.tsx";
+import _modDef2626 from "../../intl/ClientThemes.messages.js";
+import _modDef8051 from "../../../../../_runtime/metro/08051__.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const Image = get_ActivityIndicator.Image;
-const result = set.fileFinishedImporting("modules/client_themes/native/chat/formatSharedClientThemeData.tsx");
+const Image = _mod17.Image;
+const result = size.fileFinishedImporting("modules/client_themes/native/chat/formatSharedClientThemeData.tsx");
 
 export const formatSharedClientThemeData = function formatSharedClientThemeData(
   message,
@@ -25,21 +25,21 @@ export const formatSharedClientThemeData = function formatSharedClientThemeData(
       previewHeading: null,
       createdByLabel: null,
     };
-    ({ colors: obj[0], gradient_angle: obj[1] } = sharedClientTheme);
-    obj[2] = nick;
+    ({ colors: obj.colors, gradient_angle: obj.gradientAngle } = sharedClientTheme);
+    obj.createdBy = nick;
     let str2 = "";
     if (undefined !== ensureAvatarSourceResult.uri) {
       str2 = ensureAvatarSourceResult.uri;
     }
-    obj[3] = str2;
-    obj[4] = Image.resolveAssetSource(registerAssetDefault).uri;
-    const intl = getSystemLocale.intl;
-    obj[5] = intl.string(getSystemLocale.t.SKNnqq);
-    const intl2 = getSystemLocale.intl;
-    obj[6] = intl2.string(messagesProxyDefault.yl1iMm);
-    const intl3 = getSystemLocale.intl;
+    obj.createdByAvatarUrl = str2;
+    obj.nitroWheelIconUrl = Image.resolveAssetSource(_modDef8051).uri;
+    const intl = util.intl;
+    obj.previewLabel = intl.string(util.t.SKNnqq);
+    const intl2 = util.intl;
+    obj.previewHeading = intl2.string(_modDef2626.yl1iMm);
+    const intl3 = util.intl;
     const _HermesInternal = HermesInternal;
-    obj[7] = "" + intl3.format(messagesProxyDefault.fQPSEf, { username: "__USERNAME__" });
+    obj.createdByLabel = "" + intl3.format(_modDef2626.fQPSEf, { username: "__USERNAME__" });
     return obj;
   }
 };

@@ -1,38 +1,38 @@
 // discord_app/modules/game_profile/hooks/useGameProfileShopCollection.tsx
-import set from "../../../../_runtime/00002_set.js";
-import noop from "../../../../_runtime/00019_noop.js";
-import closure_3 from "../GameProfileStore.tsx";
+import _mod19 from "../../../../_runtime/metro/00019__.js";
+import GameProfileHttpUtils from "../GameProfileHttpUtils.tsx";
+import GameProfileStore from "../GameProfileStore.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const useEffect = noop.useEffect;
-let result = set.fileFinishedImporting("modules/game_profile/hooks/useGameProfileShopCollection.tsx");
+const useEffect = _mod19.useEffect;
+let result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileShopCollection.tsx");
 
 export const useGameProfileShopCollection = function useGameProfileShopCollection(collectionId) {
-  const _require = collectionId;
-  const items = [closure_3];
-  const stateFromStoresObject = _require(hasFetched[2]).useStateFromStoresObject(items, () => {
+  _require = collectionId;
+  const items = [GameProfileStore];
+  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
     let result = null != closure_0;
     if (result) {
-      result = closure_1_3.hasShopCollectionBeenFetched(tmp);
+      result = GameProfileStore.hasShopCollectionBeenFetched(tmp);
     }
     const obj = { hasFetched: result, skuIds: null };
     let shopCollectionSkuIds;
     if (null != closure_0) {
-      shopCollectionSkuIds = closure_1_3.getShopCollectionSkuIds(tmp);
+      shopCollectionSkuIds = GameProfileStore.getShopCollectionSkuIds(tmp);
     }
-    obj[1] = shopCollectionSkuIds;
+    obj.skuIds = shopCollectionSkuIds;
     return obj;
   });
   hasFetched = stateFromStoresObject.hasFetched;
   let skuIds = stateFromStoresObject.skuIds;
   const items1 = [collectionId, hasFetched];
   useEffect(() => {
-    let result = null == collectionId || hasFetched;
+    let result = null == closure_0 || hasFetched;
     if (!result) {
-      result = closure_1_3.isShopCollectionFetching(tmp);
+      result = GameProfileStore.isShopCollectionFetching(tmp);
     }
     if (!result) {
-      const shopCollection = collectionId(hasFetched[3]).getShopCollection(tmp);
-      const obj = collectionId(hasFetched[3]);
+      const shopCollection = GameProfileHttpUtils.getShopCollection(tmp);
     }
   }, items1);
   if (skuIds == null) {

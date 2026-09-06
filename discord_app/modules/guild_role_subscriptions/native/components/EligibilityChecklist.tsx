@@ -1,15 +1,12 @@
 // discord_app/modules/guild_role_subscriptions/native/components/EligibilityChecklist.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import Text from "../../../../design/components/Text/native/Text.tsx";
-import preloadDefault from "../../../../components_native/common/FastImage.tsx";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+require = fn;
 function EligibilityChecklistRow(item) {
   item = item.item;
-  const tmp = callback2();
+  const tmp = closure_7();
   const items = [tmp.row];
   let eligibleRow = item.checked;
   if (eligibleRow) {
@@ -23,45 +20,49 @@ function EligibilityChecklistRow(item) {
   } else {
     tmp6Result = tmp6(17693);
   }
-  obj[1] = tmp6Result;
-  const items1 = [closure_4(preloadDefault, obj)];
+  obj.source = tmp6Result;
+  const items1 = [React4(FastImageDefault, obj)];
   obj = { style: tmp.rowTextColumn, children: null };
   const items2 = [
-    closure_4(Text.Text, {
+    React4(Text_Text.Text, {
       style: tmp.rowLabel,
       variant: "text-md/semibold",
       color: "mobile-text-heading-primary",
       children: item.checked ? item.checkedLabel : item.uncheckedLabel,
     }),
-    closure_4(Text.Text, { variant: "text-sm/normal", color: "interactive-text-default", children: item.description }),
+    React4(Text_Text.Text, {
+      variant: "text-sm/normal",
+      color: "interactive-text-default",
+      children: item.description,
+    }),
   ];
   let tmp5Result = null != item.actionHandler && null != item.actionLabel;
   if (tmp5Result) {
-    const obj3 = { style: null, children: null };
-    obj3[0] = tmp.actionButtonWrapper;
-    ({ actionLabel: obj7[0], actionHandler: obj7[1] } = item);
-    obj3[1] = tmp5(tmp10(4975).Button, { text: null, onPress: null, grow: true });
+    const obj3 = { style: tmp.actionButtonWrapper, children: null };
+    ({ actionLabel: obj7.text, actionHandler: obj7.onPress } = item);
+    obj3.children = tmp5(tmp10(4975).Button, { text: null, onPress: null, grow: true });
     tmp5Result = tmp5(tmp4, obj3);
     const obj4 = { text: null, onPress: null, grow: true };
   }
   items2[2] = tmp5Result;
-  obj[1] = items2;
-  items1[1] = closure_5(View, obj);
-  obj[1] = items1;
-  const children = [closure_5(View, obj)];
+  obj.children = items2;
+  items1[1] = hasOwnProperty(View, obj);
+  obj.children = items1;
+  const children = [hasOwnProperty(View, obj)];
   if (item.isLast) {
     tmp5Result = tmp5(tmp10(1178).Spacer, { size: 16 });
   } else {
-    const obj5 = { style: null };
-    obj5[0] = tmp.divider;
+    const obj5 = { style: tmp.divider };
     tmp5Result = tmp5(tmp6(15217), obj5);
   }
   children[1] = tmp5Result;
-  return closure_5(closure_6, { children });
+  return hasOwnProperty(timestampProducer, { children });
 }
-noopAll;
-({ jsx: c4, jsxs: c5, Fragment: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles({
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
+const createStyles = fn(4560);
+let closure_7 = createStyles.createStyles({
   row: { paddingHorizontal: 24, paddingTop: 16, flex: 0, flexDirection: "row" },
   eligibleRow: { opacity: 0.8 },
   rowStatusIcon: { height: 20, width: 20, marginRight: 16 },
@@ -70,7 +71,8 @@ let closure_7 = createCacheKey.createStyles({
   actionButtonWrapper: { marginTop: 12 },
   divider: { marginHorizontal: 24 },
 });
-const result = require("set").fileFinishedImporting(
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/native/components/EligibilityChecklist.tsx",
 );
 
@@ -79,11 +81,12 @@ export default function EligibilityChecklist(items) {
   if (0 === items.length) {
     return null;
   } else {
-    const obj = { style: null, children: null };
-    obj[0] = tmp;
-    obj[1] = items.map((checkedLabel) =>
-      closure_1_4(closure_1_8, { item: checkedLabel, isLast: arg1 === items.length - 1 }, checkedLabel.checkedLabel),
-    );
-    return callback(View, obj);
+    const obj = {
+      style: tmp,
+      children: items.map((item, index) =>
+        React4(EligibilityChecklistRow, { item, isLast: index === items.length - 1 }, item.checkedLabel),
+      ),
+    };
+    return closure_4(View, obj);
   }
 }

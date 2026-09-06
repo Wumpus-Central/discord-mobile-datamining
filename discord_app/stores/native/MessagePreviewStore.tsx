@@ -1,9 +1,10 @@
 // discord_app/stores/native/MessagePreviewStore.tsx
-import applyDefault from "../../../_runtime/00012_apply.js";
+import _modDef12 from "../../../_runtime/metro/00012__.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import MessageRecordUtils from "../../modules/messages/MessageRecordUtils.tsx";
 
-const require = arg1;
+require = fn;
 let c3 = null;
 let c4 = null;
 const Store = initializeDefault.Store;
@@ -23,17 +24,16 @@ Object.defineProperty(prototype, "jumpTargetId", {
 });
 prototype["getMessage"] = function getMessage(arg0) {
   closure_0 = arg0;
-  return applyDefault.find(c3, (id) => id.id === closure_0 || id.nonce === closure_0);
+  return _modDef12.find(c3, (id) => id.id === closure_0 || id.nonce === closure_0);
 };
 MessagePreviewStore.displayName = "MessagePreviewStore";
-const messagePreviewStore = new MessagePreviewStore(dispatcherDefault, {
+const messagePreviewStore = new MessagePreviewStore(DispatcherDefault, {
   LOAD_MESSAGES_AROUND_SUCCESS: function handleLoadMessagesAroundSuccess(messages) {
     messages = messages.messages;
-    closure_3 = [];
-    const item = messages.forEach((message) => {
-      if (null != arr) {
-        arr = arr.unshift(callback(table[0]).createMessageRecord(message));
-        const obj = callback(table[0]);
+    c3 = [];
+    const item = messages.forEach((item) => {
+      if (null != closure_1_3) {
+        closure_1_3.unshift(MessageRecordUtils.createMessageRecord(item));
       }
     });
     const around = messages.around;
@@ -43,6 +43,7 @@ const messagePreviewStore = new MessagePreviewStore(dispatcherDefault, {
     c4 = null;
   },
 });
-const result = require("set").fileFinishedImporting("stores/native/MessagePreviewStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("stores/native/MessagePreviewStore.tsx");
 
 export default messagePreviewStore;

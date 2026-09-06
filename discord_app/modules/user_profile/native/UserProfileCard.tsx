@@ -1,18 +1,18 @@
 // discord_app/modules/user_profile/native/UserProfileCard.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
-import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import ChevronSmallRightIcon from "../../../design/components/Icon/native/redesign/generated/ChevronSmallRightIcon.tsx";
-import closure_2 from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import ARBITRARY_LARGE_OFFSET from "Constants.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-({ CARD_ROWS_COLUMN_GAP, CARD_ROWS_ICON_SIZE, CARD_ROWS_ICON_SIZE_VARIANT: c4 } = ARBITRARY_LARGE_OFFSET);
-({ jsx: c5, jsxs: closure_6, Fragment: error } = jsxProd);
-createCacheKey = {
+require = fn;
+const View = fn(17).View;
+const Constants = fn(7208);
+({ CARD_ROWS_COLUMN_GAP, CARD_ROWS_ICON_SIZE, CARD_ROWS_ICON_SIZE_VARIANT: closure_4 } = Constants);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
+fn(4560);
+let createStyles = {
   title: null,
   titleContent: null,
   text: null,
@@ -21,62 +21,70 @@ createCacheKey = {
   rowLabelText: null,
   rowSublabel: null,
 };
-createCacheKey = {
-  marginBottom: ThemesDefault.space.PX_12,
+createStyles = {
+  marginBottom: nativeDefault.space.PX_12,
   flexDirection: "row",
   alignItems: "center",
-  gap: ThemesDefault.space.PX_4,
+  gap: nativeDefault.space.PX_4,
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flex: 1, flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
-createCacheKey[2] = { flexShrink: 1 };
-createCacheKey[3] = { flexDirection: "column", paddingVertical: 20 };
-createCacheKey[4] = { flexDirection: "row", alignItems: "center", columnGap: CARD_ROWS_COLUMN_GAP };
-createCacheKey[5] = { flex: 1, lineHeight: CARD_ROWS_ICON_SIZE };
-createCacheKey[6] = { marginHorizontal: CARD_ROWS_ICON_SIZE + CARD_ROWS_COLUMN_GAP };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { flex: 1, flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileCard.tsx");
+createStyles.title = createStyles;
+createStyles.titleContent = { flex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
+createStyles.text = { flexShrink: 1 };
+createStyles.row = { flexDirection: "column", paddingVertical: 20 };
+createStyles.rowLabel = { flexDirection: "row", alignItems: "center", columnGap: CARD_ROWS_COLUMN_GAP };
+createStyles.rowLabelText = { flex: 1, lineHeight: CARD_ROWS_ICON_SIZE };
+createStyles.rowSublabel = { marginHorizontal: CARD_ROWS_ICON_SIZE + CARD_ROWS_COLUMN_GAP };
+let closure_8 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileCard.tsx");
 
 export default function UserProfileCard(arg0) {
   ({ title, trailingAction } = arg0);
   ({ titleLeadingIcon, titleIcon, titleStyle, children, style } = arg0);
-  const merged = Object.assign(arg0, Object.create(null));
-  const tmp2 = callback2();
+  const merged = Object.assign(
+    arg0,
+    Object.assign({
+      title: 0,
+      titleLeadingIcon: 0,
+      titleIcon: 0,
+      titleStyle: 0,
+      trailingAction: 0,
+      children: 0,
+      style: 0,
+    }),
+  );
+  const tmp2 = closure_8();
   let obj = { style };
   const merged1 = Object.assign(merged);
   let tmp3Result = null != title || null != trailingAction;
   if (tmp3Result) {
     obj = { style: null, children: null };
     const items = [tmp2.title, titleStyle];
-    obj[0] = items;
+    obj.style = items;
     tmp3Result = null != title;
     if (tmp3Result) {
-      obj = { style: null, children: null };
-      obj[0] = tmp2.titleContent;
+      obj = { style: tmp2.titleContent, children: null };
       const items1 = [titleLeadingIcon, ,];
-      obj1 = {
-        style: null,
+      const obj1 = {
+        style: tmp2.text,
         accessibilityRole: "header",
         variant: "text-sm/medium",
         color: "text-strong",
         lineClamp: 1,
-        children: null,
+        children: title,
       };
-      obj1[0] = tmp2.text;
-      obj1[5] = title;
-      items1[1] = callback(Text.Text, obj1);
+      items1[1] = hasOwnProperty(Text_Text.Text, obj1);
       items1[2] = titleIcon;
-      obj[1] = items1;
+      obj.children = items1;
       tmp3Result = tmp3(tmp4, obj);
     }
     const items2 = [tmp3Result, trailingAction];
-    obj[1] = items2;
+    obj.children = items2;
     tmp3Result = tmp3(tmp4, obj);
   }
   const items3 = [tmp3Result, children];
   obj.children = items3;
-  return closure_6(View, obj);
+  return timestampProducer(View, obj);
 }
 export const UserProfileFormRow = function UserProfileFormRow(arg0) {
   ({ label, sublabel, hint, isDestructive, labelColor, arrow } = arg0);
@@ -84,7 +92,7 @@ export const UserProfileFormRow = function UserProfileFormRow(arg0) {
   if (tmp6Result === undefined) {
     tmp6Result = false;
   }
-  const tmp = callback2();
+  const tmp = closure_8();
   let str;
   if (isDestructive) {
     str = "text-feedback-critical";
@@ -102,12 +110,12 @@ export const UserProfileFormRow = function UserProfileFormRow(arg0) {
     children: null,
   };
   obj = { style: tmp.rowLabel, children: null };
-  obj = { size: closure_4, color: str };
-  const items = [callback(icon, obj), , ,];
+  obj = { size, color: str };
+  const items = [hasOwnProperty(icon, obj), , ,];
   if (labelColor == null) {
     labelColor = str2;
   }
-  items[1] = callback(Text.Text, {
+  items[1] = hasOwnProperty(Text_Text.Text, {
     variant: "text-md/semibold",
     color: labelColor,
     style: tmp.rowLabelText,
@@ -115,9 +123,7 @@ export const UserProfileFormRow = function UserProfileFormRow(arg0) {
   });
   tmp6Result = null != hint;
   if (tmp6Result) {
-    const obj2 = { size: null, color: null };
-    obj2[0] = closure_4;
-    obj2[1] = str;
+    const obj2 = { size, color: str };
     tmp6Result = tmp6(hint, obj2);
   }
   items[2] = tmp6Result;
@@ -125,22 +131,20 @@ export const UserProfileFormRow = function UserProfileFormRow(arg0) {
     tmp6Result = tmp6(ChevronSmallRightIcon.ChevronSmallRightIcon, { size: "sm" });
   }
   items[3] = tmp6Result;
-  obj[1] = items;
-  const items1 = [closure_6(View, obj)];
+  obj.children = items;
+  const items1 = [timestampProducer(View, obj)];
   let tmp6Result1 = null != sublabel;
   if (tmp6Result1) {
-    const obj3 = { style: null, children: null };
-    obj3[0] = tmp.rowSublabel;
-    obj3[1] = sublabel;
+    const obj3 = { style: tmp.rowSublabel, children: sublabel };
     tmp6Result1 = tmp6(tmp5, obj3);
   }
   items1[1] = tmp6Result1;
-  obj[5] = items1;
-  return closure_6(PressableBase.PressableOpacity, obj);
+  obj.children = items1;
+  return timestampProducer(Pressables.PressableOpacity, obj);
 };
 export const UserProfileCardRows = function UserProfileCardRows(children) {
-  const Children = React.Children;
-  return callback(closure_7, {
-    children: Children.map(children.children, (children) => callback(React.Fragment, { children }, arg1)),
-  });
+  const obj = { children: null };
+  const Children = noop.Children;
+  obj.children = Children.map(children.children, (children, arg1) => closure_1_5(React.Fragment, { children }, arg1));
+  return hasOwnProperty(React5, obj);
 };

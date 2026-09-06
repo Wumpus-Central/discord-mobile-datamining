@@ -1,16 +1,18 @@
 // discord_app/modules/media_engine/IOSAudioInterruptExperiment.tsx
-import set from "../../../_runtime/00002_set.js";
 import ApexExperiment from "../experiments/apex/index.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const obj = { 1: null };
-obj[1] = { enabled: true };
-let closure_0 = ApexExperiment.createApexExperiment({
+let obj = {
   name: "2026-03-ios-audio-interrupt-handling",
   kind: "user",
   defaultConfig: { enabled: false },
-  variations: obj,
-});
-const result = set.fileFinishedImporting("modules/media_engine/IOSAudioInterruptExperiment.tsx");
+  variations: null,
+};
+obj = { 1: null };
+obj[1] = { enabled: true };
+obj.variations = obj;
+const config = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/media_engine/IOSAudioInterruptExperiment.tsx");
 
 export const getIOSAudioInterruptExperimentConfig = function getIOSAudioInterruptExperimentConfig(
   handleConnectionOpen,

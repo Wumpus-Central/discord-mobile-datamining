@@ -1,14 +1,21 @@
 // discord_app/modules/user_profile/native/EditCollectiblesCTAButton.tsx
-import importAllResult from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../../a11y/AccessibilityStore.tsx";
-import { CollectiblesMobileShopScreen as closure_5 } from "../../collectibles/CollectiblesShopConstants.tsx";
-import { MEDIA_PICKER_SEND_BUTTON_SPRING as closure_6 } from "../../media_keyboard/native/MediaKeyboardConstants.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import util from "../../../intl/index.native.tsx";
+import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
+import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import HapticUtils from "../../haptics/HapticUtils.native.tsx";
+import spring from "../../../design/animation/reanimated/spring/spring.tsx";
+import CollectiblesActionCreators from "../../collectibles/CollectiblesActionCreators.tsx";
+import EditCollectiblesActionCreators from "EditCollectiblesActionCreators.tsx";
+import openProductDetailsActionSheet from "../../collectibles/native/openProductDetailsActionSheet.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
-const require = arg1;
-let c3 = importAllResult;
-let closure_8 = createCacheKey.createStyles({
+require = fn;
+let closure_5 = fn(1076).CollectiblesMobileShopScreen;
+let closure_6 = fn(1607).MEDIA_PICKER_SEND_BUTTON_SPRING;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_8 = createStyles.createStyles({
   buttonRowContainer: {
     flexGrow: 0,
     flexDirection: "row",
@@ -27,34 +34,35 @@ let closure_8 = createCacheKey.createStyles({
     justifyContent: "flex-end",
   },
 });
-let closure_9 = {
+let __initData = {
   code: "function EditCollectiblesCTAButtonTsx1(){const{shouldShowButton,APPLY_BUTTON_BOUNCE_DISTANCE,APPLY_BUTTON_SCALE_TRANSITION,reducedMotion,withSpring,MEDIA_PICKER_SEND_BUTTON_SPRING}=this.__closure;const targetTranslateY=shouldShowButton.get()?0:APPLY_BUTTON_BOUNCE_DISTANCE;const targetScale=shouldShowButton.get()?1:APPLY_BUTTON_SCALE_TRANSITION;return{transform:[{translateY:reducedMotion?targetTranslateY:withSpring(targetTranslateY,MEDIA_PICKER_SEND_BUTTON_SPRING)},{scale:reducedMotion?targetScale:withSpring(targetScale,MEDIA_PICKER_SEND_BUTTON_SPRING)}]};}",
 };
 let closure_10 = {
   code: "function EditCollectiblesCTAButtonTsx2(){const{shouldShowButton}=this.__closure;return{pointerEvents:shouldShowButton.get()?'box-none':'none'};}",
 };
-let closure_11 = {
+const __initData2 = {
   code: "function EditCollectiblesCTAButtonTsx3(){const{shouldShowButton,reducedMotion,withSpring,MEDIA_PICKER_SEND_BUTTON_SPRING}=this.__closure;const targetOpacity=shouldShowButton.get()?1:0;return{opacity:reducedMotion?targetOpacity:withSpring(targetOpacity,{...MEDIA_PICKER_SEND_BUTTON_SPRING,overshootClamping:true})};}",
 };
-const memoResult = importAllResult.memo((user) => {
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_profile/native/EditCollectiblesCTAButton.tsx");
+
+export default noop.memo((user) => {
   user = user.user;
   const currentSkuId = user.currentSkuId;
   const selectedSkuId = user.selectedSkuId;
   ({ isTryItOut, onApply } = user);
   const analyticsLocations = user.analyticsLocations;
   const analyticsSource = user.analyticsSource;
-  let stateFromStores;
-  let sharedValue;
   isTryItOut = undefined;
-  c9 = undefined;
+  __initData = undefined;
   let isShopStandalonePdpMobileEnabled;
   const tmp = isTryItOut();
   let obj = user(selectedSkuId[7]);
   const items = [analyticsLocations];
-  stateFromStores = obj.useStateFromStores(items, () => analyticsLocations.useReducedMotion);
+  const stateFromStores = obj.useStateFromStores(items, () => analyticsLocations.useReducedMotion);
   ({ purchase, product } = currentSkuId(selectedSkuId[8])(selectedSkuId));
-  obj1 = user(selectedSkuId[9]);
-  sharedValue = obj1.useSharedValue(false);
+  let obj1 = user(selectedSkuId[9]);
+  const sharedValue = obj1.useSharedValue(false);
   let obj2 = onApply;
   const items1 = [selectedSkuId, currentSkuId, sharedValue];
   const effect = onApply.useEffect(() => {
@@ -75,9 +83,9 @@ const memoResult = importAllResult.memo((user) => {
       withSpringResult = num;
       tmp = closure_6;
       if (!closure_6) {
-        tmp3 = user;
-        tmp4 = selectedSkuId;
-        obj2 = user(selectedSkuId[10]);
+        tmp3 = closure_0;
+        tmp4 = closure_2;
+        obj2 = closure_0(closure_2[10]);
         tmp5 = closure_6;
         withSpringResult = obj2.withSpring(num, closure_6);
       }
@@ -85,9 +93,9 @@ const memoResult = importAllResult.memo((user) => {
       items[0] = { translateY: withSpringResult };
       withSpringResult1 = num2;
       if (!tmp) {
-        tmp7 = user;
-        tmp8 = selectedSkuId;
-        obj3 = user(selectedSkuId[10]);
+        tmp7 = closure_0;
+        tmp8 = closure_2;
+        obj3 = closure_0(closure_2[10]);
         tmp9 = closure_6;
         withSpringResult1 = obj3.withSpring(num2, closure_6);
       }
@@ -105,7 +113,7 @@ const memoResult = importAllResult.memo((user) => {
   };
   O.__closure = obj;
   O.__workletHash = 15594859424201;
-  O.__initData = c9;
+  O.__initData = __initData;
   const animatedStyle = user(selectedSkuId[9]).useAnimatedStyle(O);
   const obj4 = user(selectedSkuId[9]);
   class M {
@@ -130,9 +138,9 @@ const memoResult = importAllResult.memo((user) => {
       }
       withSpringResult = num;
       if (!closure_6) {
-        tmp2 = user;
-        tmp3 = selectedSkuId;
-        obj = user(selectedSkuId[10]);
+        tmp2 = closure_0;
+        tmp3 = closure_2;
+        obj = closure_0(closure_2[10]);
         obj = {};
         tmp4 = closure_6;
         tmp5 = obj;
@@ -152,7 +160,7 @@ const memoResult = importAllResult.memo((user) => {
   };
   R.__closure = obj;
   R.__workletHash = 13351061137085;
-  R.__initData = closure_11;
+  R.__initData = __initData2;
   const animatedStyle1 = user(selectedSkuId[9]).useAnimatedStyle(R);
   const obj7 = user(selectedSkuId[9]);
   const canUseCollectiblesResult = currentSkuId(selectedSkuId[11]).canUseCollectibles(user);
@@ -186,7 +194,7 @@ const memoResult = importAllResult.memo((user) => {
   if (result) {
     result = !isTryItOut;
   }
-  c9 = result;
+  __initData = result;
   const obj10 = user(selectedSkuId[12]);
   isShopStandalonePdpMobileEnabled = user(selectedSkuId[13]).useIsShopStandalonePdpMobileEnabled(
     "edit_collectibles_cta_button",
@@ -203,74 +211,65 @@ const memoResult = importAllResult.memo((user) => {
   ];
   const memo = obj2.useMemo(() => {
     if (isTryItOut) {
-      const intl3 = user(selectedSkuId[14]).intl;
-      let stringResult = intl3.string(user(selectedSkuId[14]).t.Jh8fJz);
+      const intl3 = util.intl;
+      let stringResult = intl3.string(util.t.Jh8fJz);
     } else if (c9) {
-      const obj = currentSkuId(selectedSkuId[11]);
-      const intl2 = user(selectedSkuId[14]).intl;
+      const intl2 = util.intl;
       const string = intl2.string;
-      let KXLX7l = user(selectedSkuId[14]).t;
+      let KXLX7l = util.t;
       if (isPremiumResult) {
         KXLX7l = KXLX7l.KXLX7l;
         let stringResult1 = string(KXLX7l);
       } else {
         stringResult1 = string(KXLX7l.mr4K7D);
       }
-      isPremiumResult = currentSkuId(selectedSkuId[11]).isPremium(user);
+      isPremiumResult = PremiumUtilsDefault.isPremium(user);
     } else {
-      const intl = user(selectedSkuId[14]).intl;
-      stringResult = intl.string(user(selectedSkuId[14]).t.fYfGgK);
+      const intl = util.intl;
+      stringResult = intl.string(util.t.fYfGgK);
     }
     return stringResult;
   }, items2);
   const callback = obj2.useCallback(() => {
     if (isTryItOut) {
-      const result = user(selectedSkuId[15]).triggerHapticFeedback(
-        user(selectedSkuId[15]).HapticFeedbackTypes.IMPACT_MEDIUM,
-      );
+      const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
       onApply();
-      const obj6 = user(selectedSkuId[15]);
     } else if (c9) {
-      const result1 = user(selectedSkuId[16]).navigateToNitroManagement();
-      const obj5 = user(selectedSkuId[16]);
+      const result1 = EditCollectiblesActionCreators.navigateToNitroManagement();
     } else {
       if (isShopStandalonePdpMobileEnabled) {
         if (null != selectedSkuId) {
-          let obj = { skuId: null, analyticsLocations: null, stageCollectibleChangeForEditProfile: null };
-          obj[0] = tmp3;
-          obj[1] = analyticsLocations;
-          obj[2] = onApply;
-          const result2 = user(selectedSkuId[17]).openProductDetailsActionSheetForSku(obj, "stack");
+          let obj = { skuId: tmp3, analyticsLocations, stageCollectibleChangeForEditProfile: onApply };
+          const result2 = openProductDetailsActionSheet.openProductDetailsActionSheetForSku(obj, "stack");
         }
       }
-      obj = user(selectedSkuId[18]);
-      obj = { analyticsLocations: null, analyticsSource: null, initialProductSkuId: null, screen: null };
-      obj[0] = analyticsLocations;
-      obj[1] = analyticsSource;
-      obj[2] = selectedSkuId;
-      obj[3] = analyticsSource.SHOP_ALL;
+      obj = {
+        analyticsLocations,
+        analyticsSource,
+        initialProductSkuId: selectedSkuId,
+        screen: analyticsSource.SHOP_ALL,
+      };
       const result3 = obj.openCollectiblesShopMobile(obj);
     }
-    currentSkuId(selectedSkuId[19]).hideActionSheet();
+    ActionSheetActionCreatorsDefault.hideActionSheet();
   }, items3);
-  obj1 = { style: items4, animatedProps, children: null };
-  items4 = [tmp.buttonContainer, animatedStyle1];
-  obj2 = { style: items5, pointerEvents: "box-none", children: null };
-  items5 = [tmp.buttonRowContainer, animatedStyle, { marginBottom: currentSkuId(selectedSkuId[6])().bottom }];
+  obj1 = { style: null, animatedProps, children: null };
+  const items4 = [tmp.buttonContainer, animatedStyle1];
+  obj1.style = items4;
+  obj2 = { style: null, pointerEvents: "box-none", children: null };
+  const items5 = [tmp.buttonRowContainer, animatedStyle, { marginBottom: currentSkuId(selectedSkuId[6])().bottom }];
+  obj2.style = items5;
   let str = "primary";
   if (result) {
     str = "active";
   }
-  obj2[2] = sharedValue(user(selectedSkuId[20]).Button, {
+  obj2.children = sharedValue(user(selectedSkuId[20]).Button, {
     variant: str,
     onPress: callback,
     size: "md",
     text: memo,
     grow: true,
   });
-  obj1[2] = sharedValue(currentSkuId(selectedSkuId[9]).View, obj2);
+  obj1.children = sharedValue(currentSkuId(selectedSkuId[9]).View, obj2);
   return sharedValue(currentSkuId(selectedSkuId[9]).View, obj1);
 });
-let result = require("set").fileFinishedImporting("modules/user_profile/native/EditCollectiblesCTAButton.tsx");
-
-export default memoResult;

@@ -1,9 +1,9 @@
 // discord_app/modules/rpc/native/NativeRPCServer.tsx
 import root from "../../../../_runtime/09556_root.js";
-import registerTransportDefault from "../RPCServer.tsx";
+import RPCServerDefault from "../RPCServer.tsx";
 
-require = arg1;
-const tmp2 = new registerTransportDefault(() => Promise.resolve(root));
-const result = require("set").fileFinishedImporting("modules/rpc/native/NativeRPCServer.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/rpc/native/NativeRPCServer.tsx");
 
-export default tmp2;
+export default new RPCServerDefault(() => Promise.resolve(root));

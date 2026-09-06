@@ -1,21 +1,23 @@
 // discord_app/modules/game_server/GameServerExperiment.tsx
-import set from "../../../_runtime/00002_set.js";
 import createExperiment from "../experiments/index.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const items = [{ id: 1, label: "Enable GameServer", config: { enabled: true } }];
-const experiment = createExperiment.createExperiment({
+const obj = {
   kind: "guild",
   id: "2025-08_portkey_enabled",
   label: "GameServer Enabled",
   defaultConfig: { enabled: false },
-  treatments: items,
-});
-const result = set.fileFinishedImporting("modules/game_server/GameServerExperiment.tsx");
+  treatments: null,
+};
+const items = [{ id: 1, label: "Enable GameServer", config: { enabled: true } }];
+obj.treatments = items;
+const experiment = createExperiment.createExperiment(obj);
+const result = size.fileFinishedImporting("modules/game_server/GameServerExperiment.tsx");
 
 export const GameServerExperiment = experiment;
-export const getGameServerEnabled = function getGameServerEnabled(c0, maybeGetGameServerHostingGuildEligiblePopoutDCF) {
+export const getGameServerEnabled = function getGameServerEnabled(id, maybeGetGameServerHostingGuildEligiblePopoutDCF) {
   return experiment.getCurrentConfig(
-    { guildId: c0, location: maybeGetGameServerHostingGuildEligiblePopoutDCF },
+    { guildId: id, location: maybeGetGameServerHostingGuildEligiblePopoutDCF },
     { autoTrackExposure: false },
   ).enabled;
 };

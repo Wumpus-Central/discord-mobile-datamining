@@ -1,7 +1,7 @@
 // discord_app/components_native/channel_settings/ChannelSettingsUtils.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("components_native/channel_settings/ChannelSettingsUtils.tsx");
+const result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsUtils.tsx");
 
 export const getIsChannelNameSettingEditable = function getIsChannelNameSettingEditable(arg0) {
   ({ canManageThread, canSendMessages, isForumPost, isChannelOwner } = arg0);

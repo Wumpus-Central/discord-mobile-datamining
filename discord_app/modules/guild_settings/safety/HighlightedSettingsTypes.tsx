@@ -1,7 +1,7 @@
 // discord_app/modules/guild_settings/safety/HighlightedSettingsTypes.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/guild_settings/safety/HighlightedSettingsTypes.tsx");
+const result = size.fileFinishedImporting("modules/guild_settings/safety/HighlightedSettingsTypes.tsx");
 
 export const HighlightColors = {
   ACCENT: "accent",

@@ -1,21 +1,20 @@
 // discord_app/modules/premium/native/hooks/useIsEligibleForBogoOffer.android.tsx
-import closure_2 from "../../../../../_runtime/00019_noop.js";
-import closure_3 from "../../../../stores/billing/SubscriptionStore.tsx";
-import closure_4 from "../../promotions/PromotionsStore.tsx";
-import { PremiumTypes } from "../../PremiumConstants.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import SubscriptionStore from "../../../../stores/billing/SubscriptionStore.tsx";
+import PromotionsStore from "../../promotions/PromotionsStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
-  "modules/premium/native/hooks/useIsEligibleForBogoOffer.android.tsx",
-);
+const require = fn;
+const PremiumTypes = fn(1373).PremiumTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/native/hooks/useIsEligibleForBogoOffer.android.tsx");
 
 export const useIsEligibleForBogoOffer = function useIsEligibleForBogoOffer() {
-  const items = [closure_4];
+  const items = [PromotionsStore];
   const stateFromStores = forceUpdate(504).useStateFromStores(items, () =>
     activeBogoRewardPromotion.getActiveBogoRewardPromotion(),
   );
   const obj = forceUpdate(504);
-  const items1 = [closure_3];
+  const items1 = [SubscriptionStore];
   const stateFromStores1 = forceUpdate(504).useStateFromStores(items1, () =>
     premiumTypeSubscription.getPremiumTypeSubscription(),
   );
@@ -34,13 +33,13 @@ export const useIsEligibleForBogoOffer = function useIsEligibleForBogoOffer() {
   }
   dependencyMap = valueOfResult;
   const items2 = [valueOfResult, forceUpdate];
-  const effect = React.useEffect(() => {
-    if (null != closure_1) {
+  const effect = noop.useEffect(() => {
+    if (null != valueOfResult) {
       const _Date = Date;
       const diff = tmp - Date.now();
       if (diff > 0) {
         const _setTimeout = setTimeout;
-        timeout = setTimeout(timeout, diff);
+        const timeout = setTimeout(forceUpdate, diff);
         return () => clearTimeout(closure_0);
       }
     }

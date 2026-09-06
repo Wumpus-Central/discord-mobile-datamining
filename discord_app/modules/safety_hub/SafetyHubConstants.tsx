@@ -1,9 +1,9 @@
 // discord_app/modules/safety_hub/SafetyHubConstants.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
-import encodeProperties from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import Constants from "../../Constants.tsx";
+import discord_common_AnalyticsUtils from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const AnalyticsSections = ME.AnalyticsSections;
+const AnalyticsSections = Constants.AnalyticsSections;
 let obj = {
   SETTINGS: "SETTINGS",
   ACCOUNT_STANDING: "ACCOUNT_STANDING",
@@ -41,7 +41,7 @@ const items1 = [, , ,];
 } = obj);
 const obj1 = { impression_group: null };
 const frozen = Object.freeze(obj);
-obj1[0] = encodeProperties.ImpressionGroups.APPEAL_INGESTION;
+obj1.impression_group = discord_common_AnalyticsUtils.ImpressionGroups.APPEAL_INGESTION;
 const obj2 = {
   SPEED_BUMP: "speed-bump",
   COLLECT_SIGNAL: "collect-signal",
@@ -49,7 +49,7 @@ const obj2 = {
   REQUEST_SENT: "request-sent",
   THANKS: "thanks",
 };
-const result = set.fileFinishedImporting("modules/safety_hub/SafetyHubConstants.tsx");
+const result = size.fileFinishedImporting("modules/safety_hub/SafetyHubConstants.tsx");
 const prototype = function SafetyHubLinks() {
   return Object.create(new.target.prototype);
 }.prototype;

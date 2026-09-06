@@ -1,16 +1,14 @@
 // discord_app/modules/payments/records/CheckoutContextRecord.tsx
-import toJSDefault from "../../../lib/Record.tsx";
-import formatSingleCurrencyPrice from "../../../utils/PriceUtils.tsx";
+import PriceUtils from "../../../utils/PriceUtils.tsx";
 import addDefault from "../../../../_runtime/07236_add.js";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import Record from "../../../lib/Record.tsx";
 
-require = arg1;
-toJSDefault;
+require = fn;
 let AvailablePlanRecord;
 class AvailablePlanRecord extends tmp2 {
   constructor(arg0) {
     tmp = new AvailablePlanRecord(new.target, new.target, global);
-    // ThrowIfThisInitialized (0x7c)
     ({ id: tmp.id, quantity: tmp.quantity, price: tmp.price, total: tmp.total, addOnPlans } = global);
     if (addOnPlans == null) {
       addOnPlans = [];
@@ -34,33 +32,24 @@ AvailablePlanRecord["createFromServer"] = function createFromServer(discount) {
   if (discount == null) {
     discount = null;
   }
-  if (typeof AvailablePlanRecord !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof AvailablePlanRecord === "function") {
+    const tmp7 = new AvailablePlanRecord(tmp, tmp2, new.target, id, quantity, price, total, add_on_plans);
+    tmp7.id = id;
+    tmp7.quantity = quantity;
+    tmp7.price = price;
+    tmp7.total = total;
+    if (add_on_plans == null) {
+      add_on_plans = [];
+    }
+    tmp7.addOnPlans = add_on_plans;
+    if (discount == null) {
+      discount = null;
+    }
+    tmp7.discount = discount;
+    return tmp7;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const tmp3 = new AvailablePlanRecord(
-    "Trying to call a non-function",
-    AvailablePlanRecord,
-    new.target,
-    id,
-    quantity,
-    price,
-    total,
-    add_on_plans,
-  );
-  // ThrowIfThisInitialized (0x7c)
-  tmp3.id = id;
-  tmp3.quantity = quantity;
-  tmp3.price = price;
-  tmp3.total = total;
-  if (add_on_plans == null) {
-    add_on_plans = [];
-  }
-  tmp3.addOnPlans = add_on_plans;
-  if (discount == null) {
-    discount = null;
-  }
-  tmp3.discount = discount;
-  return tmp3;
 };
 prototype["getPlanQuantities"] = function getPlanQuantities() {
   const items = [,];
@@ -75,13 +64,12 @@ prototype["getPlanQuantities"] = function getPlanQuantities() {
     if (num == null) {
       num = 0;
     }
-    let tmp3 = nextResult;
     let result = map.set(nextResult.id, num + tmp2.quantity);
     continue;
   }
   return map;
 };
-prototype["matchesItems"] = function matchesItems(closure_0) {
+prototype["matchesItems"] = function matchesItems(arg0) {
   const planQuantities = this.getPlanQuantities();
   return (function quantitiesEqual(planQuantities, size2) {
     if (planQuantities.size !== size2.size) {
@@ -89,10 +77,8 @@ prototype["matchesItems"] = function matchesItems(closure_0) {
     } else {
       const obj = planQuantities[Symbol.iterator]();
       while (obj !== undefined) {
-        let tmp5 = callback;
-        let tmp6 = callback(tmp3, 2);
+        let tmp6 = _slicedToArray(tmp3, 2);
         if (size2.get(tmp6[0]) !== tmp6[1]) {
-          let tmp7 = obj;
           obj.return();
           let flag = false;
           return false;
@@ -102,26 +88,25 @@ prototype["matchesItems"] = function matchesItems(closure_0) {
     }
   })(
     planQuantities,
-    (function toQuantitiesByPlanId(closure_0) {
+    (function toQuantitiesByPlanId(arg0) {
       const map = new Map();
-      const iter = closure_0[Symbol.iterator]();
+      const iter = arg0[Symbol.iterator]();
       while (iter !== undefined) {
         ({ planId, quantity } = nextResult);
         let num = map.get(planId);
         if (num == null) {
           num = 0;
         }
-        let tmp2 = quantity;
         let result = map.set(planId, num + quantity);
         continue;
       }
       return map;
-    })(closure_0),
+    })(arg0),
   );
 };
 prototype["getPriceString"] = function getPriceString() {
   const total = this.total;
-  const obj = formatSingleCurrencyPrice;
+  const obj = PriceUtils;
   const obj2 = new addDefault(total.amount);
   return obj.formatPrice(new addDefault(total.amount).dividedBy(10 ** total.exponent).toNumber(), total.currency, {
     convertToMajorUnits: false,
@@ -129,7 +114,7 @@ prototype["getPriceString"] = function getPriceString() {
 };
 prototype["getRegularPriceString"] = function getRegularPriceString() {
   const price = this.price;
-  const obj = formatSingleCurrencyPrice;
+  const obj = PriceUtils;
   const obj2 = new addDefault(price.amount);
   return obj.formatPrice(new addDefault(price.amount).dividedBy(10 ** price.exponent).toNumber(), price.currency, {
     convertToMajorUnits: false,
@@ -140,7 +125,7 @@ prototype["getDiscountedPriceString"] = function getDiscountedPriceString() {
   if (null != this.discount) {
     const discounted_price = this.discount.discounted_price;
     const obj2 = new addDefault(discounted_price.amount);
-    const obj = formatSingleCurrencyPrice;
+    const obj = PriceUtils;
     formatPriceResult = obj.formatPrice(
       obj2.dividedBy(10 ** discounted_price.exponent).toNumber(),
       discounted_price.currency,
@@ -159,10 +144,10 @@ prototype["getAddOnPrice"] = function getAddOnPrice() {
     const obj = { majorUnits: null, currency: null };
     const exponent = price.exponent;
     const addOnPlans = self.addOnPlans;
-    const reduced = addOnPlans.reduce((arg0, price) => arg0 + price.price.amount * price.quantity, 0);
+    const reduced = addOnPlans.reduce((acc, price) => acc + price.price.amount * price.quantity, 0);
     const obj2 = new addDefault(reduced);
-    obj[0] = obj2.dividedBy(10 ** exponent).toNumber();
-    obj[1] = price.currency;
+    obj.majorUnits = obj2.dividedBy(10 ** exponent).toNumber();
+    obj.currency = price.currency;
     return obj;
   }
 };
@@ -170,7 +155,6 @@ let CheckoutContextRecord;
 class CheckoutContextRecord extends tmp2 {
   constructor(arg0) {
     tmp2 = new CheckoutContextRecord(tmp, new.target);
-    // ThrowIfThisInitialized (0x7c)
     paymentSources = global.paymentSources;
     if (paymentSources == null) {
       paymentSources = [];
@@ -199,7 +183,7 @@ CheckoutContextRecord["createFromOrder"] = function createFromOrder(checkout_con
   if (checkout_context != null) {
     checkout_context = checkout_context.checkout_context;
   }
-  let tmp2 = null;
+  let tmp3 = null;
   if (null != checkout_context) {
     let payment_sources = checkout_context.payment_sources;
     if (payment_sources == null) {
@@ -218,39 +202,39 @@ CheckoutContextRecord["createFromOrder"] = function createFromOrder(checkout_con
       available_plans = [];
     }
     let mapped = available_plans.map(AvailablePlanRecord.createFromServer);
-    if (typeof CheckoutContextRecord !== "function") {
-      HermesBuiltin.throwTypeError();
+    if (typeof CheckoutContextRecord === "function") {
+      const tmp11 = new CheckoutContextRecord(
+        tmp,
+        available_plans,
+        tmp4,
+        new.target,
+        payment_sources,
+        country,
+        allowed_currencies,
+        mapped,
+      );
+      if (payment_sources == null) {
+        payment_sources = [];
+      }
+      tmp11.paymentSources = payment_sources;
+      if (country == null) {
+        country = null;
+      }
+      tmp11.storeCountry = country;
+      if (allowed_currencies == null) {
+        allowed_currencies = [];
+      }
+      tmp11.allowedCurrencies = allowed_currencies;
+      if (mapped == null) {
+        mapped = [];
+      }
+      tmp11.availablePlans = mapped;
+      tmp3 = tmp11;
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    const tmp10 = new CheckoutContextRecord(
-      "Trying to call a non-function",
-      available_plans,
-      CheckoutContextRecord,
-      new.target,
-      payment_sources,
-      country,
-      allowed_currencies,
-      mapped,
-    );
-    // ThrowIfThisInitialized (0x7c)
-    if (payment_sources == null) {
-      payment_sources = [];
-    }
-    tmp10.paymentSources = payment_sources;
-    if (country == null) {
-      country = null;
-    }
-    tmp10.storeCountry = country;
-    if (allowed_currencies == null) {
-      allowed_currencies = [];
-    }
-    tmp10.allowedCurrencies = allowed_currencies;
-    if (mapped == null) {
-      mapped = [];
-    }
-    tmp10.availablePlans = mapped;
-    tmp2 = tmp10;
   }
-  return tmp2;
+  return tmp3;
 };
 CheckoutContextRecord.prototype["getAvailablePlanForItems"] = function getAvailablePlanForItems(
   subscriptionItemsForProduct,
@@ -263,7 +247,8 @@ CheckoutContextRecord.prototype["getAvailablePlanForItems"] = function getAvaila
   }
   return found;
 };
-let result = require("set").fileFinishedImporting("modules/payments/records/CheckoutContextRecord.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/payments/records/CheckoutContextRecord.tsx");
 
 export default CheckoutContextRecord;
 export { AvailablePlanRecord };

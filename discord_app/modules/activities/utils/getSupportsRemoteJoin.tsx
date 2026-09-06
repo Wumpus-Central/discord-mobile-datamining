@@ -1,10 +1,10 @@
 // discord_app/modules/activities/utils/getSupportsRemoteJoin.tsx
-import set from "../../../../_runtime/00002_set.js";
-import ME from "../../../Constants.tsx";
+import Constants from "../../../Constants.tsx";
 import hasFlagDefault from "hasFlag.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const ActivityFlags = ME.ActivityFlags;
-const result = set.fileFinishedImporting("modules/activities/utils/getSupportsRemoteJoin.tsx");
+const ActivityFlags = Constants.ActivityFlags;
+const result = size.fileFinishedImporting("modules/activities/utils/getSupportsRemoteJoin.tsx");
 
 export const getSupportsRemoteJoin = function getSupportsRemoteJoin(applicationActivity) {
   let tmp = null != applicationActivity;

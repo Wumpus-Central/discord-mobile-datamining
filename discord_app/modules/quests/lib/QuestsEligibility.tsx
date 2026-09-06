@@ -1,9 +1,9 @@
 // discord_app/modules/quests/lib/QuestsEligibility.tsx
-import set from "../../../../_runtime/00002_set.js";
-import isMetaQuest from "../../device/MetaQuestUtils.android.tsx";
+import MetaQuestUtils from "../../device/MetaQuestUtils.android.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/quests/lib/QuestsEligibility.tsx");
+const result = size.fileFinishedImporting("modules/quests/lib/QuestsEligibility.tsx");
 
 export const getIsEligibleForQuests = function getIsEligibleForQuests() {
-  return !isMetaQuest.isMetaQuest();
+  return !MetaQuestUtils.isMetaQuest();
 };

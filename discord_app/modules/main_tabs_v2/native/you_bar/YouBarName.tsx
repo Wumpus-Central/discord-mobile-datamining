@@ -1,29 +1,28 @@
 // discord_app/modules/main_tabs_v2/native/you_bar/YouBarName.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import memoResult1Default from "../../../guild_tag/native/GuildTag.tsx";
-import AVERAGE_FONT_WIDTH_RATIODefault from "../../../display_name_styles/native/UsernameWithEffects.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import GuildTagDefault from "../../../guild_tag/native/GuildTag.tsx";
+import useDiscoverableApplicationStream from "../../../blocking/useDiscoverableApplicationStream.tsx";
+import useUserVoiceActivity from "../../../activity_status/useUserVoiceActivity.tsx";
+import UsernameWithEffectsDefault from "../../../display_name_styles/native/UsernameWithEffects.tsx";
 import ChevronSmallDownIcon from "../../../../design/components/Icon/native/redesign/generated/ChevronSmallDownIcon.tsx";
-import apexExperiment from "YouBarGuildTagExperiment.tsx";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_4 from "../../../../stores/ApplicationStreamingStore.tsx";
-import closure_5 from "../../../../stores/ChannelStore.tsx";
-import closure_6 from "../../../../stores/PermissionStore.tsx";
-import closure_7 from "../../../../stores/PresenceStore.tsx";
-import closure_8 from "../../../../stores/RelationshipStore.tsx";
-import closure_9 from "../../../../stores/SelfPresenceStore.tsx";
-import closure_10 from "../../../../stores/VoiceStateStore.tsx";
-import { ActivityTypes } from "../../../../Constants.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
+import YouBarGuildTagExperiment from "YouBarGuildTagExperiment.tsx";
+import shouldShowActivityStatusDefault from "../../../activity_status/shouldShowActivityStatus.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingStore.tsx";
+import ChannelStore from "../../../../stores/ChannelStore.tsx";
+import PermissionStore from "../../../../stores/PermissionStore.tsx";
+import PresenceStore from "../../../../stores/PresenceStore.tsx";
+import RelationshipStore from "../../../../stores/RelationshipStore.tsx";
+import SelfPresenceStore from "../../../../stores/SelfPresenceStore.tsx";
+import VoiceStateStore from "../../../../stores/VoiceStateStore.tsx";
 
-require = arg1;
+require = fn;
 function Username(userId) {
   userId = userId.userId;
-  const tmp = callback2();
-  let obj = apexExperiment;
-  obj = { style: items, children: null };
-  items = [tmp.usernameRow];
+  const tmp = closure_15();
+  let obj = { style: null, children: null };
+  const items = [tmp.usernameRow];
+  obj.style = items;
   const isYouBarGuildTagEnabled = obj.useIsYouBarGuildTagEnabled("YouBarName");
   obj = {
     userId,
@@ -36,20 +35,25 @@ function Username(userId) {
     containerStyle: tmp.username,
     style: tmp.username,
   };
-  const items1 = [callback(AVERAGE_FONT_WIDTH_RATIODefault, obj), ,];
+  const items1 = [closure_1_12(UsernameWithEffectsDefault, obj), ,];
   let tmp7Result = null;
   if (isYouBarGuildTagEnabled) {
-    obj1 = { userId: null, disabledTooltip: true, containerStyles: null };
-    obj1[0] = userId;
-    obj1[2] = tmp.guildTag;
-    tmp7Result = tmp7(memoResult1Default, obj1);
+    const obj1 = { userId, disabledTooltip: true, containerStyles: tmp.guildTag };
+    tmp7Result = tmp7(GuildTagDefault, obj1);
   }
   items1[1] = tmp7Result;
-  items1[2] = callback(ChevronSmallDownIcon.ChevronSmallDownIcon, { size: "xs", color: "mobile-text-heading-primary" });
-  obj[1] = items1;
-  return closure_13(View, obj);
+  items1[2] = closure_1_12(ChevronSmallDownIcon.ChevronSmallDownIcon, {
+    size: "xs",
+    color: "mobile-text-heading-primary",
+  });
+  obj.children = items1;
+  return map1(View, obj);
 }
+const View = fn(17).View;
+const ActivityTypes = fn(1074).ActivityTypes;
+const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
+const createStyles = fn(4560);
 let obj = {
   userText: { flexDirection: "column", justifyContent: "center", height: "100%", gap: 1 },
   statusRow: null,
@@ -59,23 +63,25 @@ let obj = {
   guildTag: null,
   statusText: null,
 };
-obj = { flexDirection: "row", gap: ThemesDefault.space.PX_4 };
-obj[1] = obj;
-obj[2] = { width: 16, height: 16 };
-obj[3] = { flexDirection: "row", alignItems: "center", overflow: "visible", gap: 2 };
-obj[4] = { flexShrink: 1 };
-obj[5] = { marginLeft: 2, flexShrink: 0 };
-obj[6] = { flexShrink: 1 };
-let closure_15 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(function YouName(username) {
+obj = { flexDirection: "row", gap: nativeDefault.space.PX_4 };
+obj.statusRow = obj;
+obj.statusEmoji = { width: 16, height: 16 };
+obj.usernameRow = { flexDirection: "row", alignItems: "center", overflow: "visible", gap: 2 };
+obj.username = { flexShrink: 1 };
+obj.guildTag = { marginLeft: 2, flexShrink: 0 };
+obj.statusText = { flexShrink: 1 };
+let closure_15 = createStyles.createStyles(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarName.tsx");
+
+export default noop.memo(function YouName(username) {
   const userId = username.userId;
-  importDefault = undefined;
   let stateFromStores;
-  const tmp = callback2();
+  const tmp = closure_15();
   let obj = userId(stateFromStores[17]);
   importDefault = obj.useYouBarActivityStatusEnabled("YouBar");
-  obj1 = userId(stateFromStores[18]);
-  let items = [closure_9];
+  let obj1 = userId(stateFromStores[18]);
+  let items = [SelfPresenceStore];
   stateFromStores = obj1.useStateFromStores(items, () => status.getStatus());
   let obj2 = userId(stateFromStores[19]);
   const customStatusActivity = obj2.useCustomStatusActivity();
@@ -86,32 +92,39 @@ const memoResult = importAllResult.memo(function YouName(username) {
   }
   const gameMentionsAsPlainText = obj3.useGameMentionsAsPlainText(state);
   let tmp2Result = tmp2(tmp3[18]);
-  const items1 = [closure_7, closure_4, closure_8, closure_5, closure_6, closure_10];
+  const items1 = [
+    PresenceStore,
+    ApplicationStreamingStore,
+    RelationshipStore,
+    ChannelStore,
+    PermissionStore,
+    VoiceStateStore,
+  ];
   obj = { style: tmp.userText, children: null };
   const stateFromStores1 = tmp2Result.useStateFromStores(items1, () => {
-    const activities = closure_1_7.getActivities(userId);
+    const activities = PresenceStore.getActivities(userId);
     const found = activities.filter((type) => type.type !== constants.CUSTOM_STATUS);
-    let obj = userId(stateFromStores[21]);
-    const items = [closure_1_4, closure_1_8];
+    let obj = useDiscoverableApplicationStream;
+    const items = [ApplicationStreamingStore, RelationshipStore];
     const discoverableApplicationStream = obj.getDiscoverableApplicationStream(userId, items);
-    userId(stateFromStores[22]);
-    let tmp6 = callback;
-    if (callback) {
-      obj = { activities: null, status: null, applicationStream: null, voiceChannel: null };
-      obj[0] = found;
-      obj[1] = stateFromStores;
-      obj[2] = discoverableApplicationStream;
-      obj[3] = tmp5;
-      tmp6 = callback(stateFromStores[23])(obj);
+    useUserVoiceActivity;
+    let tmp6 = closure_1;
+    if (closure_1) {
+      obj = {
+        activities: found,
+        status: stateFromStores,
+        applicationStream: discoverableApplicationStream,
+        voiceChannel: tmp5,
+      };
+      tmp6 = shouldShowActivityStatusDefault(obj);
     }
     return tmp6;
   });
-  const items2 = [callback(Username, { username: username.username, userId })];
+  const items2 = [closure_12(Username, { username: username.username, userId })];
   obj = { style: tmp.statusRow, children: null };
   if (stateFromStores1) {
-    obj1 = { userId: null, emojiSize: 16, maxFontSizeMultiplier: 1.75 };
-    obj1[0] = userId;
-    let tmp9Result = tmp11(importDefault(tmp3[24]), obj1);
+    obj1 = { userId, emojiSize: 16, maxFontSizeMultiplier: 1.75 };
+    let tmp9Result = tmp11(require("ActivityStatus"), obj1);
   } else {
     let emoji;
     if (customStatusActivity != null) {
@@ -119,10 +132,8 @@ const memoResult = importAllResult.memo(function YouName(username) {
     }
     let tmp11Result = null;
     if (null != emoji) {
-      obj2 = { size: 16, style: null, emoji: null };
-      obj2[1] = tmp.statusEmoji;
-      obj2[2] = customStatusActivity.emoji;
-      tmp11Result = tmp11(importDefault(tmp3[25]), obj2);
+      obj2 = { size: 16, style: tmp.statusEmoji, emoji: customStatusActivity.emoji };
+      tmp11Result = tmp11(require("ActivityEmoji"), obj2);
     }
     const items3 = [tmp11Result];
     obj3 = {
@@ -131,27 +142,22 @@ const memoResult = importAllResult.memo(function YouName(username) {
       lineClamp: 1,
       ellipsizeMode: "tail",
       maxFontSizeMultiplier: 1.75,
-      style: null,
+      style: tmp.statusText,
       children: null,
     };
-    obj3[5] = tmp.statusText;
     let humanizeStatusResult = gameMentionsAsPlainText;
     if (gameMentionsAsPlainText == null) {
       tmp2Result = tmp2(tmp3[27]);
       humanizeStatusResult = tmp2Result.humanizeStatus(stateFromStores);
     }
     const obj4 = { children: null };
-    obj3[6] = humanizeStatusResult;
+    obj3.children = humanizeStatusResult;
     items3[1] = tmp11(tmp2(tmp3[26]).Text, obj3);
-    obj4[0] = items3;
+    obj4.children = items3;
     tmp9Result = tmp9(closure_14, obj4);
-    const tmp12 = closure_14;
   }
-  obj[1] = tmp9Result;
-  items2[1] = callback(View, obj);
-  obj[1] = items2;
+  obj.children = tmp9Result;
+  items2[1] = closure_12(View, obj);
+  obj.children = items2;
   return closure_13(View, obj);
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarName.tsx");
-
-export default memoResult;

@@ -1,13 +1,13 @@
 // discord_app/modules/search/native/components/list/SearchListSection.tsx
-import Text from "../../../../../design/components/Text/native/Text.tsx";
-import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
-import importAllResult from "../../../../../../_runtime/00019_noop.js";
+import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-let closure_5 = createCacheKey.createStyles({
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const createStyles = fn(4560);
+let closure_5 = createStyles.createStyles({
   section: {
     flex: 1,
     display: "flex",
@@ -15,16 +15,32 @@ let closure_5 = createCacheKey.createStyles({
     alignItems: "center",
     justifyContent: "space-between",
     textTransform: "none",
-    paddingTop: require("MessageEmbedTypes").SEARCH_LIST_SECTION_TOP_PADDING,
+    paddingTop: fn(7878).SEARCH_LIST_SECTION_TOP_PADDING,
     paddingHorizontal: 16,
     paddingBottom: 8,
   },
 });
-const memoResult = importAllResult.memo((arg0) => {
+let obj = {
+  section: {
+    flex: 1,
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    textTransform: "none",
+    paddingTop: fn(7878).SEARCH_LIST_SECTION_TOP_PADDING,
+    paddingHorizontal: 16,
+    paddingBottom: 8,
+  },
+};
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/search/native/components/list/SearchListSection.tsx");
+
+export default noop.memo((arg0) => {
   ({ title, trailing } = arg0);
-  const obj = { style: callback3().section, children: null };
+  const obj = { style: closure_5().section, children: null };
   const items = [
-    callback(Text.Text, {
+    React3(Text_Text.Text, {
       maxFontSizeMultiplier: 2,
       accessibilityRole: "header",
       variant: "text-sm/semibold",
@@ -33,9 +49,6 @@ const memoResult = importAllResult.memo((arg0) => {
     }),
     trailing,
   ];
-  obj[1] = items;
-  return callback2(View, obj);
+  obj.children = items;
+  return React4(View, obj);
 });
-const result = require("set").fileFinishedImporting("modules/search/native/components/list/SearchListSection.tsx");
-
-export default memoResult;

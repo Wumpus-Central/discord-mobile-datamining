@@ -1,42 +1,39 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/layouts/utils/deepmerge.tsx
-import set2 from "../../../../../../../../_runtime/00002_set.js";
+import size from "../../../../../../../../_runtime/metro/00002__.js";
 
 function merge() {
   let items = [...arguments];
-  return items.reduce((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    if (Array.isArray(arg1)) {
+  return items.reduce((acc, item) => {
+    if (Array.isArray(item)) {
       const _TypeError = TypeError;
       const typeError = new TypeError("Arguments provided to ts-deepmerge must be objects, not arrays.");
       throw typeError;
     } else {
       let _Object = Object;
-      const keys = Object.keys(arg1);
-      const item = keys.forEach((arg0) => {
+      const keys = Object.keys(item);
+      item = keys.forEach((item) => {
         const items = ["__proto__", "constructor", "prototype"];
-        if (!items.includes(arg0)) {
+        if (!items.includes(item)) {
           let tmp = globalThis;
           const _Array = Array;
-          if (Array.isArray(lib[arg0])) {
+          if (Array.isArray(acc[item])) {
             const _Array2 = Array;
-            let tmp3 = dependencyMap;
-            if (Array.isArray(dependencyMap[arg0])) {
-              if (lib.options.mergeArrays) {
+            let tmp3 = item;
+            if (Array.isArray(item[item])) {
+              if (merge.options.mergeArrays) {
                 const _Array3 = tmp.Array;
                 tmp = new.target;
-                const set = new tmp.Set(tmp2[arg0].concat(tmp3[arg0]));
+                const set = new tmp.Set(tmp2[item].concat(tmp3[item]));
                 tmp3 = set;
                 let fromResult = _Array3.from(set);
-                obj = tmp2[arg0];
               } else {
-                fromResult = tmp3[arg0];
+                fromResult = tmp3[item];
               }
-              tmp2[arg0] = fromResult;
+              tmp2[item] = fromResult;
             }
           }
           let flag = false;
-          if (typeof lib[arg0] === "object") {
+          if (typeof acc[item] === "object") {
             flag = false;
             if (null !== tmp4) {
               const _Object = Object;
@@ -55,7 +52,7 @@ function merge() {
           }
           if (flag) {
             let flag2 = false;
-            if (typeof dependencyMap[arg0] === "object") {
+            if (typeof item[item] === "object") {
               flag2 = false;
               if (null !== tmp8) {
                 const _Object4 = Object;
@@ -73,28 +70,28 @@ function merge() {
               }
             }
             if (flag2) {
-              tmp2[arg0] = lib(tmp2[arg0], tmp7[arg0]);
+              tmp2[item] = merge(tmp2[item], tmp7[item]);
             }
-            tmp7 = dependencyMap;
+            tmp7 = item;
           }
-          lib[arg0] = dependencyMap[arg0];
+          acc[item] = item[item];
         }
       });
-      return arg0;
+      return acc;
     }
   }, {});
 }
-let obj = { mergeArrays: true };
-merge.options = obj;
+let options = { mergeArrays: true };
+merge.options = options;
 merge.withOptions = (arg0) => {
   const substr = [...arguments].slice();
-  obj = { mergeArrays: true };
+  options = { mergeArrays: true };
   const merged = Object.assign(arg0);
-  merge.options = obj;
-  merge.options = obj;
+  merge.options = options;
+  merge.options = options;
   return merge(...substr);
 };
-const result = set2.fileFinishedImporting(
+const result = size.fileFinishedImporting(
   "modules/main_tabs_v2/native/shared_components/guild_channels/layouts/utils/deepmerge.tsx",
 );
 

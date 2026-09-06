@@ -1,7 +1,7 @@
 // discord_app/modules/dismissible_content/DismissibleContentConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/dismissible_content/DismissibleContentConstants.tsx");
+const result = size.fileFinishedImporting("modules/dismissible_content/DismissibleContentConstants.tsx");
 
 export const ContentDismissActionType = {
   PRIMARY: "primary",

@@ -1,7 +1,7 @@
 // discord_app/modules/age_gate/native/ExistingUserAgeGateConstants.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/age_gate/native/ExistingUserAgeGateConstants.tsx");
+const result = size.fileFinishedImporting("modules/age_gate/native/ExistingUserAgeGateConstants.tsx");
 
 export const ExistingUserAgeGateScreens = {
   AgeGate: "AgeGate",

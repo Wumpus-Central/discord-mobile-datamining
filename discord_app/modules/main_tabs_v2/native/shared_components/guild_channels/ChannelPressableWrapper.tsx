@@ -1,12 +1,12 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/ChannelPressableWrapper.tsx
-import noopAll from "../../../../../../_runtime/00019_noop.js";
-import getLayoutStyles from "layouts/ChannelListLayout.tsx";
-import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import ChannelListLayout from "layouts/ChannelListLayout.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting(
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/main_tabs_v2/native/shared_components/guild_channels/ChannelPressableWrapper.tsx",
 );
 
@@ -16,14 +16,15 @@ export const renderChannelPressableWrapper = function renderChannelPressableWrap
   if (flag === undefined) {
     flag = false;
   }
-  let obj = getLayoutStyles;
+  let obj = ChannelListLayout;
   const layout2 = obj.getLayoutStyles(layout, launchpad).layout;
   if (isThread) {
     let marginThread = layout2.marginThread;
   } else {
     marginThread = flag ? layout2.marginPanels : layout2.margin;
   }
-  obj = { style: items, children };
-  items = [marginThread, { flex: 1, flexDirection: "row", alignItems: "center" }];
-  return <View style={items}>{arg0}</View>;
+  obj = { style: null, children };
+  const items = [marginThread, { flex: 1, flexDirection: "row", alignItems: "center" }];
+  obj.style = items;
+  return <View style={null}>{arg0}</View>;
 };

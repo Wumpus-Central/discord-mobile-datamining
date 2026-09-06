@@ -1,16 +1,15 @@
 // discord_app/actions/NoteActionCreators.tsx
-import set from "../../_runtime/00002_set.js";
-import ME from "../Constants.tsx";
-import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import Constants from "../Constants.tsx";
+import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-const Endpoints = ME.Endpoints;
-const result = set.fileFinishedImporting("actions/NoteActionCreators.tsx");
+const Endpoints = Constants.Endpoints;
+const result = size.fileFinishedImporting("actions/NoteActionCreators.tsx");
 
 export default {
-  updateNote(closure_0, closure_6) {
-    const HTTP = sendRequest.HTTP;
-    obj = { url: Endpoints.NOTE(closure_0), body: obj, oldFormErrors: true, rejectWithError: true };
-    obj = { note: closure_6 };
-    return HTTP.put(obj);
+  updateNote(arg0, note) {
+    const HTTP = HTTPUtils.HTTP;
+    const request = { url: Endpoints.NOTE(arg0), body: { note }, oldFormErrors: true, rejectWithError: true };
+    return HTTP.put(request);
   },
 };

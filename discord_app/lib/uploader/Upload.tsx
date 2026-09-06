@@ -1,17 +1,16 @@
 // discord_app/lib/uploader/Upload.tsx
-import set from "../../../_runtime/00002_set.js";
-import applyDefault from "../../../_runtime/00012_apply.js";
-import EventEmitter2 from "../../../_runtime/00568_EventEmitter.js";
+import _modDef12 from "../../../_runtime/metro/00012__.js";
+import _mod568 from "../../../_runtime/metro/00568__.js";
 import v1 from "../../../_runtime/01256_v1.js";
-import items from "../../utils/UploadUtils.tsx";
-import getUploadFileSizeSumAll from "../../utils/FileUtils.tsx";
+import UploadUtils from "../../utils/UploadUtils.tsx";
+import FileUtilsAll from "../../utils/FileUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-let obj = { REACT_NATIVE: 0, [0]: "REACT_NATIVE", WEB: 1, [1]: "WEB" };
-const EventEmitter = EventEmitter2.EventEmitter;
+const UploadPlatform = { REACT_NATIVE: 0, [0]: "REACT_NATIVE", WEB: 1, [1]: "WEB" };
+const EventEmitter = _mod568.EventEmitter;
 class Upload extends EventEmitter {
   constructor(arg0) {
     tmp5 = new Upload(tmp4, tmp3, tmp2, tmp);
-    // ThrowIfThisInitialized (0x7c)
     tmp5.allowOptimization = true;
     tmp5.item = global;
     if (global.platform === closure_4.REACT_NATIVE) {
@@ -23,9 +22,9 @@ class Upload extends EventEmitter {
       tmp5.id = uri;
       tmp11 = closure_0;
       tmp12 = closure_3;
-      obj3 = require("items");
+      obj3 = closure_0(closure_3[1]);
       obj = { uri: null, overrideFilename: null, overrideType: null };
-      ({ uri: obj4[0], filename: obj4[1], mimeType: obj4[2] } = global);
+      ({ uri: obj4.uri, filename: obj4.overrideFilename, mimeType: obj4.overrideType } = global);
       file = obj3.getFile(obj);
       ({ filename: tmp5.filename, isImage: tmp5.isImage, isVideo: tmp5.isVideo, type: tmp5.mimeType } = file);
       ({ origin: tmp5.origin, durationSecs: tmp5.durationSecs, waveform: tmp5.waveform } = global);
@@ -36,14 +35,14 @@ class Upload extends EventEmitter {
       if (id == null) {
         tmp6 = closure_1;
         tmp7 = closure_3;
-        obj = require("apply");
+        obj = closure_1(closure_3[2]);
         str = "upload";
         id = obj.uniqueId("upload");
       }
       tmp5.id = id;
       tmp8 = closure_2;
       tmp9 = closure_3;
-      obj2 = require("getUploadFileSizeSum");
+      obj2 = closure_2(closure_3[3]);
       tmp5.classification = obj2.classifyFile(global.file);
       str2 = "image";
       tmp5.isImage = "image" === tmp5.classification;
@@ -54,7 +53,7 @@ class Upload extends EventEmitter {
       tmp5.origin = global.origin;
     }
     ({ isThumbnail: tmp5.isThumbnail, clip: tmp5.clip } = global);
-    obj5 = require("v1");
+    obj5 = closure_0(tmp9[4]);
     tmp5.uniqueId = obj5.v4();
     tmp5.spoiler = false;
     tmp5.description = null;
@@ -66,10 +65,10 @@ prototype["cancel"] = function cancel() {};
 prototype["resetState"] = function resetState() {
   return this;
 };
-const result = set.fileFinishedImporting("lib/uploader/Upload.tsx");
+const result = size.fileFinishedImporting("lib/uploader/Upload.tsx");
 
 export default Upload;
-export const UploadPlatform = obj;
+export { UploadPlatform };
 export const isResolvedUpload = function isResolvedUpload(file) {
   return undefined !== file.isVideo && undefined !== file.isImage;
 };

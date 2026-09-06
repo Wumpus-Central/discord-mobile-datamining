@@ -1,14 +1,15 @@
 // discord_app/modules/native_permissions/NativePermissionUtils.tsx
-import { ProcessArgs } from "../../utils/ProcessArgs.tsx";
-import importDefaultResult from "NativePermissionManager.tsx";
+import NativePermissionManager from "NativePermissionManager.tsx";
 
-importDefaultResult.initialize();
+NativePermissionManager = NativePermissionManager.initialize();
+const ProcessArgs = fn(5141).ProcessArgs;
 if (ProcessArgs.isDiscordTestSet()) {
-  let _default = require("requestPermissionCore").default;
+  let _default = fn(5142).default;
 } else {
-  _default = require("combineStatuses").default;
+  _default = fn(5146).default;
 }
-const result = require("set").fileFinishedImporting("modules/native_permissions/NativePermissionUtils.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/native_permissions/NativePermissionUtils.tsx");
 
 export default _default;
-export const NativePermissionsRequestOptions = require("requestAuthorization").NativePermissionsRequestOptions;
+export const NativePermissionsRequestOptions = fn(5143).NativePermissionsRequestOptions;

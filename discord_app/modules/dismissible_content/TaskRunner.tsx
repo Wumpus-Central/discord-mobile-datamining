@@ -1,8 +1,12 @@
 // discord_app/modules/dismissible_content/TaskRunner.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/dismissible_content/TaskRunner.tsx");
-class TaskRunner {}
+const result = size.fileFinishedImporting("modules/dismissible_content/TaskRunner.tsx");
+class TaskRunner {
+  constructor() {
+    return Object.assign({ timeoutId: null });
+  }
+}
 const prototype = TaskRunner.prototype;
 prototype["schedule"] = function schedule(arg0, arg1) {
   const self = this;
@@ -10,7 +14,7 @@ prototype["schedule"] = function schedule(arg0, arg1) {
   this.unschedule();
   this.timeoutId = setTimeout(() => {
     self.timeoutId = null;
-    callback();
+    closure_0();
   }, arg1);
 };
 prototype["unschedule"] = function unschedule() {

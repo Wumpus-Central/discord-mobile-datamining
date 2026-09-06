@@ -1,13 +1,13 @@
 // discord_app/stores/ConnectedAccountsStore.tsx
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../Dispatcher.tsx";
-import callbackDefault from "../actions/ConnectedAccountsActionCreators.tsx";
-import closure_3 from "../records/ConnectedAccountRecord.tsx";
-import set from "../../_runtime/00002_set.js";
+import DispatcherDefault from "../Dispatcher.tsx";
+import PlatformsDefault from "../lib/Platforms.tsx";
+import ConnectedAccountsActionCreatorsDefault from "../actions/ConnectedAccountsActionCreators.tsx";
+import ConnectedAccountRecord from "../records/ConnectedAccountRecord.tsx";
 
-const require = arg1;
-const items = [require("ME").PlatformTypes.CONTACTS];
-let set = new Set(items);
+const require = fn;
+const items = [fn(1074).PlatformTypes.CONTACTS];
+const set = new Set(items);
 let c5 = true;
 let closure_6 = [];
 let closure_7 = [];
@@ -19,10 +19,10 @@ const Store = initializeDefault.Store;
 class ConnectedAccountsStore extends Store {}
 const prototype = ConnectedAccountsStore.prototype;
 prototype["isJoining"] = function isJoining(id) {
-  return table[id] || false;
+  return closure_8[id] || false;
 };
 prototype["joinErrorMessage"] = function joinErrorMessage(arg0) {
-  return table3[arg0];
+  return closure_11[arg0];
 };
 prototype["isFetching"] = function isFetching() {
   return c5;
@@ -49,10 +49,10 @@ prototype["getLocalAccount"] = function getLocalAccount(CONTACTS) {
   return closure_7.find((type) => type.type === closure_0);
 };
 prototype["isSuggestedAccountType"] = function isSuggestedAccountType(arg0) {
-  return table2[arg0] || false;
+  return closure_10[arg0] || false;
 };
-prototype["addPendingAuthorizedState"] = function addPendingAuthorizedState(state) {
-  set1.add(state);
+prototype["addPendingAuthorizedState"] = function addPendingAuthorizedState(arg0) {
+  set1.add(arg0);
 };
 prototype["deletePendingAuthorizedState"] = function deletePendingAuthorizedState(arg0) {
   set1.delete(arg0);
@@ -61,16 +61,15 @@ prototype["hasPendingAuthorizedState"] = function hasPendingAuthorizedState(arg0
   return set1.has(arg0);
 };
 ConnectedAccountsStore.displayName = "ConnectedAccountsStore";
-const connectedAccountsStore = new ConnectedAccountsStore(dispatcherDefault, {
+const connectedAccountsStore = new ConnectedAccountsStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(connectedAccounts) {
     connectedAccounts = connectedAccounts.connectedAccounts;
-    const mapped = connectedAccounts.map((arg0) => new closure_3(arg0));
+    const mapped = connectedAccounts.map((item) => new ConnectedAccountRecord(item));
     closure_6 = mapped.filter((type) => {
       const hasItem = set.has(type.type);
       let isSupportedResult = !hasItem;
       if (!hasItem) {
-        isSupportedResult = callback(table[2]).isSupported(type.type);
-        const obj = callback(table[2]);
+        isSupportedResult = PlatformsDefault.isSupported(type.type);
       }
       return isSupportedResult;
     });
@@ -91,17 +90,16 @@ const connectedAccountsStore = new ConnectedAccountsStore(dispatcherDefault, {
             obj = {};
             const merged1 = Object.assign(guild.guild);
             obj.features = [];
-            obj.guild = callback(table[3]).fromGuildBasic(obj);
+            obj.guild = closure_1_0(closure_1_2[3]).fromGuildBasic(obj);
             return obj;
           });
-          return new closure_3(obj);
+          return new ConnectedAccountRecord(obj);
         });
         closure_6 = mapped.filter((type) => {
           const hasItem = set.has(type.type);
           let isSupportedResult = !hasItem;
           if (!hasItem) {
-            isSupportedResult = callback(table[2]).isSupported(type.type);
-            const obj = callback(table[2]);
+            isSupportedResult = PlatformsDefault.isSupported(type.type);
           }
           return isSupportedResult;
         });
@@ -109,7 +107,7 @@ const connectedAccountsStore = new ConnectedAccountsStore(dispatcherDefault, {
         c5 = false;
       }
     }
-    const response = callbackDefault.fetch();
+    const response = ConnectedAccountsActionCreatorsDefault.fetch();
   },
   USER_CONNECTIONS_INTEGRATION_JOINING: function handleJoining(integrationId) {
     closure_8[integrationId.integrationId] = integrationId.joining;
@@ -117,9 +115,9 @@ const connectedAccountsStore = new ConnectedAccountsStore(dispatcherDefault, {
   USER_CONNECTION_UPDATE: function handleUserConnectionUpdate(arg0) {
     ({ platformType: require, id: importDefault, revoked, accessToken } = arg0);
     const found = closure_6.find((id) => {
-      let tmp = id.id === closure_1;
+      let tmp = id.id === importDefault;
       if (tmp) {
-        tmp = id.type === closure_0;
+        tmp = id.type === require;
       }
       return tmp;
     });
@@ -143,9 +141,10 @@ const connectedAccountsStore = new ConnectedAccountsStore(dispatcherDefault, {
   },
   USER_CONNECTIONS_CALLBACK: function handleUserConnectionsCallback(arg0) {
     ({ code, state, openid_params, provider } = arg0);
-    callbackDefault.callback(provider, { code, state, openid_params });
+    ConnectedAccountsActionCreatorsDefault.callback(provider, { code, state, openid_params });
   },
 });
-const result = set.fileFinishedImporting("stores/ConnectedAccountsStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("stores/ConnectedAccountsStore.tsx");
 
 export default connectedAccountsStore;

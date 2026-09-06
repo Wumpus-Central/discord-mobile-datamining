@@ -1,23 +1,24 @@
 // discord_app/modules/premium/powerups/hooks/useLoadGuildPowerups.tsx
-import closure_2 from "../../../../../_runtime/00019_noop.js";
+import GameServerActionCreators from "../../../game_server/GameServerActionCreators.tsx";
+import GuildPowerupsActionCreators from "../GuildPowerupsActionCreators.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useLoadGuildPowerups.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useLoadGuildPowerups.tsx");
 
 export default function useLoadGuildPowerups(guildId) {
-  const _require = guildId;
-  gameServerEnabled = _require(gameServerEnabled[1]).useGameServerEnabled(guildId, "useLoadGuildPowerups");
+  _require = guildId;
+  gameServerEnabled = require("GameServerExperiment").useGameServerEnabled(guildId, "useLoadGuildPowerups");
   const items = [guildId, gameServerEnabled];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (gameServerEnabled) {
-      const gameServerCatalog = guildId(gameServerEnabled[2]).fetchGameServerCatalog(guildId);
-      const obj = guildId(gameServerEnabled[2]);
+      const gameServerCatalog = GameServerActionCreators.fetchGameServerCatalog(closure_0);
     }
   }, items);
   const items1 = [guildId];
-  const effect1 = React.useEffect(() => {
-    const powerupCatalogForGuild = guildId(gameServerEnabled[3]).fetchPowerupCatalogForGuild(guildId);
-    const obj = guildId(gameServerEnabled[3]);
-    const guildBoostEntitlements = guildId(gameServerEnabled[3]).fetchGuildBoostEntitlements(guildId);
+  const effect1 = noop.useEffect(() => {
+    const powerupCatalogForGuild = GuildPowerupsActionCreators.fetchPowerupCatalogForGuild(closure_0);
+    const guildBoostEntitlements = GuildPowerupsActionCreators.fetchGuildBoostEntitlements(closure_0);
   }, items1);
 }

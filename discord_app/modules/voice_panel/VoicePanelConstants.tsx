@@ -1,25 +1,25 @@
 // discord_app/modules/voice_panel/VoicePanelConstants.tsx
-import set from "../../utils/PlatformUtils.tsx";
+import PlatformUtils from "../../utils/PlatformUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-let obj = { DISMISSED: "dismissed", PIP: "pip", PANEL: "panel" };
-obj = { mass: 0.5, damping: 80, stiffness: 200 };
-obj = {};
-const merged = Object.assign(obj);
-obj.overshootClamping = true;
+let MODE_CHANGE_PHYSICS_CLAMPED = { DISMISSED: "dismissed", PIP: "pip", PANEL: "panel" };
+MODE_CHANGE_PHYSICS_CLAMPED = { mass: 0.5, damping: 80, stiffness: 200 };
+MODE_CHANGE_PHYSICS_CLAMPED = {};
+const merged = Object.assign(MODE_CHANGE_PHYSICS_CLAMPED);
+MODE_CHANGE_PHYSICS_CLAMPED.overshootClamping = true;
 const obj1 = {};
-const merged1 = Object.assign(obj);
+const merged1 = Object.assign(MODE_CHANGE_PHYSICS_CLAMPED);
 obj1.overshootClamping = true;
 const obj2 = {};
-const merged2 = Object.assign(obj);
+const merged2 = Object.assign(MODE_CHANGE_PHYSICS_CLAMPED);
 obj2.mass = 0.3;
 const obj3 = { NO_VIDEO_PARTICIPANTS: "no_video_participants", CALLER_DISCONNECTED: "caller_disconnected" };
 const obj4 = { [obj3.NO_VIDEO_PARTICIPANTS]: { width: 2, height: 1 } };
-let set = new Set(Object.keys(obj4));
-set = set.isAndroid();
-set = set.isIOS();
-const result = set.fileFinishedImporting("modules/voice_panel/VoicePanelConstants.tsx");
+PlatformUtils.isAndroid();
+PlatformUtils = PlatformUtils.isIOS();
+const result = size.fileFinishedImporting("modules/voice_panel/VoicePanelConstants.tsx");
 
-export const VoicePanelModes = obj;
+export const VoicePanelModes = MODE_CHANGE_PHYSICS_CLAMPED;
 export const getAnalyticsNameForVoicePanelMode = function getAnalyticsNameForVoicePanelMode(arg0) {
   if (obj.DISMISSED === arg0) {
     return "dismissed";
@@ -35,8 +35,8 @@ export const DEFAULT_BORDER_RADIUS_PIP = 24;
 export const DRAWER_SPRING_PHYSICS = { mass: 0.2, damping: 10, stiffness: 200 };
 export const LAYOUT_PHYSICS = { mass: 0.3, damping: 25, stiffness: 150 };
 export const UI_SHOW_HIDE_PHYSICS = { mass: 0.4, damping: 60, stiffness: 150 };
-export const MODE_CHANGE_PHYSICS = obj;
-export const MODE_CHANGE_PHYSICS_CLAMPED = obj;
+export const MODE_CHANGE_PHYSICS = MODE_CHANGE_PHYSICS_CLAMPED;
+export { MODE_CHANGE_PHYSICS_CLAMPED };
 export const BORDER_RADIUS_PHYSICS = obj1;
 export const PANEL_CONTROLS_HEIGHT_PHYSICS = obj2;
 export const SPEAKING_PHYSICS = {
@@ -53,9 +53,9 @@ export const GridItemTypes = { USER: "USER", STREAM: "STREAM", ACTIVITY: "ACTIVI
 export const BASE_TARGET_CARD_SIZE = 165;
 export const VoicePanelCTACard = obj3;
 export const VoicePanelCTACardDimensions = obj4;
-export const VoicePanelCTACardDimensionKeys = set;
+export const VoicePanelCTACardDimensionKeys = new Set(Object.keys(obj4));
 export const VoicePanelCardItemType = { PARTICIPANT: "participant", CTA: "cta" };
-export const IS_ANDROID = set;
-export const IS_IOS = set;
+export const IS_ANDROID = PlatformUtils;
+export const IS_IOS = PlatformUtils;
 export const SECONDARY_PIP_TOP_MARGIN = 8;
 export const VOICE_PANEL_DRAWER_MAX_WIDTH = 540;

@@ -1,34 +1,33 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupsNewBadge.tsx
+import DismissibleContentUtils from "../../../dismissible_content/DismissibleContentUtils.tsx";
 import useGuildPowerupNewPerkMarketingVersionDefault from "useGuildPowerupNewPerkMarketingVersion.tsx";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
-import closure_5 from "../GuildPowerupsStore.tsx";
-import { GuildPowerupNewPerkMarketingVersion as closure_6 } from "../constants/GuildPowerupsConstants.tsx";
-import { ContentDismissActionType } from "../../../dismissible_content/DismissibleContentConstants.tsx";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
 
-const require = arg1;
-let closure_8 = require("DismissibleContent").DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_BADGE;
-let result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupsNewBadge.tsx");
+require = fn;
+const constants = fn(4450).GuildPowerupNewPerkMarketingVersion;
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+let closure_8 = fn(1943).DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_BADGE;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupsNewBadge.tsx");
 
 export default function useGuildPowerupsNewBadge(arg0) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
   }
-  let _require;
+  _require = undefined;
   importDefault = undefined;
-  _require = arg0;
-  let obj = initialize;
-  const items = [closure_5];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getStateForGuild(closure_0));
+  closure_129_0 = arg0;
+  let obj = require("initialize");
+  const items = [GuildPowerupsStore];
+  const stateFromStores = obj.useStateFromStores(items, () => GuildPowerupsStore.getStateForGuild(closure_0));
   const tmp4Result = useGuildPowerupNewPerkMarketingVersionDefault(arg0, stateFromStores);
   let num = 0;
   if (tmp4Result >= constants.GUILD_THEME) {
     num = tmp4Result;
   }
-  const tmp = _require;
-  const tmp4 = useGuildPowerupNewPerkMarketingVersionDefault;
   let tmp6 = null;
   if (num > 0) {
     tmp6 = null;
@@ -36,11 +35,8 @@ export default function useGuildPowerupsNewBadge(arg0) {
       tmp6 = closure_8;
     }
   }
-  const tmp7 = callback(
-    require("../../../dismissible_content/hooks/useSelectedDismissibleContent.tsx").useSelectedVersionedDismissibleContent(
-      tmp6,
-      num,
-    ),
+  const tmp7 = _slicedToArray(
+    require("useSelectedDismissibleContent").useSelectedVersionedDismissibleContent(tmp6, num),
     2,
   );
   _require = tmp8;
@@ -48,39 +44,36 @@ export default function useGuildPowerupsNewBadge(arg0) {
   const items1 = [tmp7[0] === closure_8, tmp7[1]];
   obj = {
     showNewBadgeOnRow: tmp9,
-    dismissNewBadgeIfShown: React.useCallback(() => {
+    dismissNewBadgeIfShown: noop.useCallback(() => {
       let TAKE_ACTION = arg0;
       if (arg0 === undefined) {
-        TAKE_ACTION = closure_1_7.TAKE_ACTION;
+        TAKE_ACTION = ContentDismissActionType.TAKE_ACTION;
       }
       if (closure_1) {
-        callback(TAKE_ACTION);
+        closure_0(TAKE_ACTION);
       }
     }, items1),
   };
   return obj;
 }
 export const useAutoDismissGuildPowerupsNewBadge = function useAutoDismissGuildPowerupsNewBadge(guildId) {
-  const _require = guildId;
-  const items = [closure_5];
-  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
-    items,
-    () => closure_1_5.getStateForGuild(closure_0),
+  _require = guildId;
+  closure_129_0 = guildId;
+  const items = [GuildPowerupsStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () =>
+    GuildPowerupsStore.getStateForGuild(closure_0),
   );
-  let obj = initialize;
+  let obj = require("initialize");
   const tmp2Result = num(12503)(guildId, stateFromStores);
   num = 0;
   if (tmp2Result >= constants.GUILD_THEME) {
     num = tmp2Result;
   }
   const items1 = [num, guildId];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (num > 0) {
-      let obj = guildId(closure_1_2[9]);
-      obj = { dismissAction: null, guildId: null };
-      obj[0] = closure_1_7.AUTO_DISMISS;
-      obj[1] = guildId;
-      const result = obj.markVersionedDismissibleContentAsDismissed(closure_1_8, tmp, obj);
+      const obj = { dismissAction: ContentDismissActionType.AUTO_DISMISS, guildId };
+      const result = obj.markVersionedDismissibleContentAsDismissed(closure_8, tmp, obj);
     }
   }, items1);
 };

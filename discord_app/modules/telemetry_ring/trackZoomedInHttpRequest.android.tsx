@@ -1,14 +1,14 @@
 // discord_app/modules/telemetry_ring/trackZoomedInHttpRequest.android.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
-import shouldRunDefault from "native/channels/ZoomedInTelemetry.tsx";
+import Constants from "../../Constants.tsx";
+import ZoomedInTelemetryDefault from "native/channels/ZoomedInTelemetry.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/telemetry_ring/trackZoomedInHttpRequest.android.tsx");
+const AnalyticEvents = Constants.AnalyticEvents;
+const result = size.fileFinishedImporting("modules/telemetry_ring/trackZoomedInHttpRequest.android.tsx");
 
 export default function trackZoomedInHttpRequest(arg0) {
   try {
-    let obj = shouldRunDefault;
+    let obj = ZoomedInTelemetryDefault;
     obj = {};
     const merged = Object.assign(arg0);
     obj.source = "zoomed_in";

@@ -1,29 +1,29 @@
 // discord_app/modules/parent_tools/native/FamilyCenterEmpty.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import Text from "../../../design/components/Text/native/Text.tsx";
-import registerAssetDefault from "../../../../_runtime/14917_registerAsset.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import _modDef14917 from "../../../../_runtime/metro/14917__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-({ View: c3, Image: c4 } = get_ActivityIndicator);
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles({
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: c3, Image: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4560);
+let closure_7 = createStyles.createStyles({
   art: { marginBottom: 10, width: 243 },
   empty: { display: "flex", alignItems: "center" },
 });
-const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterEmpty.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterEmpty.tsx");
 
 export default function FamilyCenterEmpty(children) {
-  const tmp = callback3();
+  const tmp = closure_7();
   let obj = { style: tmp.empty, children: null };
-  obj = { source: registerAssetDefault, style: tmp.art, resizeMethod: "scale" };
+  obj = { source: _modDef14917, style: tmp.art, resizeMethod: "scale" };
   const items = [
-    callback(closure_4, obj),
-    callback(Text.Text, { variant: "text-sm/medium", color: "text-muted", children: children.text }),
+    hasOwnProperty(React4, obj),
+    hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", children: children.text }),
   ];
-  obj[1] = items;
-  return callback2(closure_3, obj);
+  obj.children = items;
+  return timestampProducer(React3, obj);
 }

@@ -1,8 +1,8 @@
 // discord_app/modules/stage_channels/useAudienceRequestToSpeakState.tsx
-import closure_2 from "../../stores/VoiceStateStore.tsx";
+import VoiceStateStore from "../../stores/VoiceStateStore.tsx";
 
-const require = arg1;
-const obj = {
+const require = fn;
+const RequestToSpeakStates = {
   NONE: 0,
   [0]: "NONE",
   REQUESTED_TO_SPEAK: 1,
@@ -12,48 +12,49 @@ const obj = {
   ON_STAGE: 3,
   [3]: "ON_STAGE",
 };
-const result = require("set").fileFinishedImporting("modules/stage_channels/useAudienceRequestToSpeakState.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/useAudienceRequestToSpeakState.tsx");
 
 export default function useAudienceRequestToSpeakState(arg0, arg1) {
-  const _require = arg0;
+  _require = arg0;
   dependencyMap = arg1;
-  const items = [closure_2];
+  const items = [VoiceStateStore];
   const items1 = [arg0, arg1];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+  return require("initialize").useStateFromStores(
     items,
     () => {
       if (null != closure_0) {
         if (null != closure_1) {
-          const voiceStateForChannel = closure_1_2.getVoiceStateForChannel(tmp8, tmp);
+          const voiceStateForChannel = VoiceStateStore.getVoiceStateForChannel(tmp8, tmp);
           if (null == voiceStateForChannel) {
-            let NONE = closure_1_3.NONE;
+            let NONE = obj.NONE;
           } else {
             if (voiceStateForChannel.suppress) {
               if (null != voiceStateForChannel.requestToSpeakTimestamp) {
-                NONE = closure_1_3.REQUESTED_TO_SPEAK;
+                NONE = obj.REQUESTED_TO_SPEAK;
               }
             }
             if (!voiceStateForChannel.suppress) {
               if (null != voiceStateForChannel.requestToSpeakTimestamp) {
-                NONE = closure_1_3.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+                NONE = obj.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
               }
             }
             if (!voiceStateForChannel.suppress) {
               if (null == voiceStateForChannel.requestToSpeakTimestamp) {
-                let NONE2 = closure_1_3.ON_STAGE;
+                let NONE2 = obj.ON_STAGE;
               }
             }
-            NONE2 = closure_1_3.NONE;
+            NONE2 = obj.NONE;
           }
         }
         return NONE;
       }
-      NONE = closure_1_3.NONE;
+      NONE = obj.NONE;
     },
     items1,
   );
 }
-export const RequestToSpeakStates = obj;
+export { RequestToSpeakStates };
 export const getAudienceRequestToSpeakState = function getAudienceRequestToSpeakState(voiceStateForChannel) {
   if (null == voiceStateForChannel) {
     let REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK = obj.NONE;

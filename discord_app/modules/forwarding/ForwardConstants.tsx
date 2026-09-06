@@ -1,6 +1,6 @@
 // discord_app/modules/forwarding/ForwardConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/forwarding/ForwardConstants.tsx");
+const result = size.fileFinishedImporting("modules/forwarding/ForwardConstants.tsx");
 
 export const MAX_DESTINATION_COUNT = 5;

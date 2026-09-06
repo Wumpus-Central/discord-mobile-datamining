@@ -1,22 +1,20 @@
 // discord_app/modules/captcha/SharedCaptchaUtils.tsx
-import set from "../../../_runtime/00002_set.js";
-import CAPTCHA_SERVE_VOLUME_DISTRIBUTION_AGGREGATION_WINDOW_MS from "CaptchaConstants.tsx";
-import useCaptchaStore from "CaptchaStore.tsx";
+import CaptchaConstants from "CaptchaConstants.tsx";
+import CaptchaStore from "CaptchaStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 ({
-  incrementCaptchaServeVolume: c0,
+  incrementCaptchaServeVolume: closure_0,
   flushCaptchaServeVolume: closure_1,
-  isCaptchaStoreVolumeEmpty: obj1,
-} = useCaptchaStore);
-let closure_3 =
-  CAPTCHA_SERVE_VOLUME_DISTRIBUTION_AGGREGATION_WINDOW_MS.CAPTCHA_SERVE_VOLUME_DISTRIBUTION_AGGREGATION_WINDOW_MS;
+  isCaptchaStoreVolumeEmpty: c2,
+} = CaptchaStore);
+let closure_3 = CaptchaConstants.CAPTCHA_SERVE_VOLUME_DISTRIBUTION_AGGREGATION_WINDOW_MS;
 const prototype = function CaptchaCancelError() {
   tmp = new tmp("Captcha cancelled", new.target);
-  // ThrowIfThisInitialized (0x7c)
   return tmp;
 }.prototype;
 class prototype extends Error {}
-const result = set.fileFinishedImporting("modules/captcha/SharedCaptchaUtils.tsx");
+const result = size.fileFinishedImporting("modules/captcha/SharedCaptchaUtils.tsx");
 
 export const CaptchaError = { CANCEL: "cancel", ERROR: "error", EXPIRED: "expired" };
 export const extractCaptchaPropsFromResponse = function extractCaptchaPropsFromResponse(body) {
@@ -31,16 +29,16 @@ export const extractCaptchaPropsFromResponse = function extractCaptchaPropsFromR
   if (flag == null) {
     flag = false;
   }
-  obj[2] = flag;
-  obj[3] = body.user_flow;
-  obj[3] = obj;
+  obj.serveInvisible = flag;
+  obj.userflow = body.user_flow;
+  obj.options = obj;
   return obj;
 };
-export const emitCaptchaDistributionMetric = function emitCaptchaDistributionMetric(closure_7) {
-  if (callback2()) {
+export const emitCaptchaDistributionMetric = function emitCaptchaDistributionMetric(arg0) {
+  if (React2()) {
     const _setTimeout = setTimeout;
-    const timerId = setTimeout(() => callback(), closure_3);
+    const timerId = setTimeout(() => closure_1_1(), closure_3);
   }
-  callback(closure_7);
+  React(arg0);
 };
 export const CaptchaCancelError = prototype;

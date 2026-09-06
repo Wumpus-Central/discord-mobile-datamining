@@ -1,46 +1,48 @@
 // discord_app/modules/user_settings/defs/native/DmsMessagePreviewsSetting.tsx
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import explicitContentFromProto from "../../UserSettings.tsx";
-import useMessagePreview from "../../../main_tabs_v2/useMessagePreviews.tsx";
-import closure_2 from "../../../../../_runtime/00019_noop.js";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import util from "../../../../intl/index.native.tsx";
+import UserSettings from "../../UserSettings.tsx";
+import ChannelListLayoutTypes from "../../../main_tabs_v2/ChannelListLayoutTypes.tsx";
+import useMessagePreviews from "../../../main_tabs_v2/useMessagePreviews.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-createToggle = {
+require = fn;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.OAOUoQ);
+    const intl = util.intl;
+    return intl.string(util.t.OAOUoQ);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.APPEARANCE,
+  parent: fn(7975).MobileUserSettings.APPEARANCE,
   useValue: function useDMsMessagePreviewsValue() {
-    return useMessagePreview.useMessagePreviewSetting();
+    return useMessagePreviews.useMessagePreviewSetting();
   },
   onValueChange: function onDMsMessagePreviewsValueChange(arg0) {
-    const MessagePreviewSetting = explicitContentFromProto.MessagePreviewSetting;
+    const MessagePreviewSetting = UserSettings.MessagePreviewSetting;
     MessagePreviewSetting.updateSetting(arg0);
   },
   useOptions: function useDMsMessagePreviewsOptions() {
-    return React.useMemo(() => {
+    return noop.useMemo(() => {
       let obj = { label: null, value: null };
-      const intl = callback(1114).intl;
-      obj[0] = intl.string(callback(1114).t["8K53DF"]);
-      obj[1] = callback(7879).MessagePreviewTypes.ALL;
+      const intl = util.intl;
+      obj.label = intl.string(util.t["8K53DF"]);
+      obj.value = ChannelListLayoutTypes.MessagePreviewTypes.ALL;
       const items = [obj, ,];
       obj = { label: null, value: null };
-      const intl2 = callback(1114).intl;
-      obj[0] = intl2.string(callback(1114).t.Gw11zg);
-      obj[1] = callback(7879).MessagePreviewTypes.UNREADS;
+      const intl2 = util.intl;
+      obj.label = intl2.string(util.t.Gw11zg);
+      obj.value = ChannelListLayoutTypes.MessagePreviewTypes.UNREADS;
       items[1] = obj;
       obj = { label: null, value: null };
-      const intl3 = callback(1114).intl;
-      obj[0] = intl3.string(callback(1114).t.R2Ok7F);
-      obj[1] = callback(7879).MessagePreviewTypes.NONE;
+      const intl3 = util.intl;
+      obj.label = intl3.string(util.t.R2Ok7F);
+      obj.value = ChannelListLayoutTypes.MessagePreviewTypes.NONE;
       items[2] = obj;
       return items;
     }, []);
   },
 };
-createToggle = createToggle.createRadio(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/DmsMessagePreviewsSetting.tsx");
+SettingBuilders = SettingBuilders.createRadio(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/DmsMessagePreviewsSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

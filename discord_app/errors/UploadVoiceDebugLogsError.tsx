@@ -1,8 +1,7 @@
 // discord_app/errors/UploadVoiceDebugLogsError.tsx
-import set from "../../_runtime/00002_set.js";
-import { getSystemLocale } from "../intl/index.native.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-let obj = {
+const UploadErrorCodes = {
   GENERAL: 0,
   [0]: "GENERAL",
   NO_FILE: 1,
@@ -25,26 +24,26 @@ Object.defineProperty(UploadVoiceDebugLogsError.prototype, "displayMessage", {
   get: function displayMessage() {
     const code = this.code;
     if (obj.NO_FILE === code) {
-      const intl5 = getSystemLocale /* getSystemLocale */.intl;
-      return intl5.string(getSystemLocale /* getSystemLocale */.t.dDMp2Z);
+      const intl5 = require("util").intl;
+      return intl5.string(require("util").t.dDMp2Z);
     } else if (tmp.PROGRESS === code) {
-      const intl4 = getSystemLocale /* getSystemLocale */.intl;
-      return intl4.string(getSystemLocale /* getSystemLocale */.t.XBxyvo);
+      const intl4 = require("util").intl;
+      return intl4.string(require("util").t.XBxyvo);
     } else if (tmp.UPLOAD === code) {
-      const intl3 = getSystemLocale /* getSystemLocale */.intl;
-      return intl3.string(getSystemLocale /* getSystemLocale */.t["6b6rwk"]);
+      const intl3 = require("util").intl;
+      return intl3.string(require("util").t["6b6rwk"]);
     } else if (tmp.READ === code) {
-      const intl2 = getSystemLocale /* getSystemLocale */.intl;
-      return intl2.string(getSystemLocale /* getSystemLocale */.t.VUc3ti);
+      const intl2 = require("util").intl;
+      return intl2.string(require("util").t.VUc3ti);
     } else {
       const GENERAL = tmp.GENERAL;
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.string(getSystemLocale /* getSystemLocale */.t.VzHcSm);
+      const intl = require("util").intl;
+      return intl.string(require("util").t.VzHcSm);
     }
   },
   set: undefined,
 });
-const result = set.fileFinishedImporting("errors/UploadVoiceDebugLogsError.tsx");
+const result = size.fileFinishedImporting("errors/UploadVoiceDebugLogsError.tsx");
 
 export default UploadVoiceDebugLogsError;
-export const UploadErrorCodes = obj;
+export { UploadErrorCodes };

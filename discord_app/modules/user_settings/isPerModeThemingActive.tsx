@@ -1,14 +1,15 @@
 // discord_app/modules/user_settings/isPerModeThemingActive.tsx
-import closure_0 from "ThemeStore.tsx";
-import closure_1 from "UnsyncedUserSettingsStore.tsx";
-import { SystemThemeState } from "ThemeConstants.tsx";
+import ThemeStore from "ThemeStore.tsx";
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore.tsx";
 
-let result = require("set").fileFinishedImporting("modules/user_settings/isPerModeThemingActive.tsx");
+const SystemThemeState = fn(1186).SystemThemeState;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/isPerModeThemingActive.tsx");
 
 export const isPerModeThemingActive = function isPerModeThemingActive() {
-  let result = useSystemTheme.useSystemTheme === SystemThemeState.ON;
+  let result = UnsyncedUserSettingsStore.useSystemTheme === SystemThemeState.ON;
   if (result) {
-    result = sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled();
+    result = ThemeStore.isSameAsDeviceThemeEnabled();
   }
   return result;
 };

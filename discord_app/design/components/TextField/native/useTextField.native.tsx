@@ -1,14 +1,16 @@
 // discord_app/design/components/TextField/native/useTextField.native.tsx
-import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import setAccessibilityFocus from "../../../../modules/a11y/native/setAccessibilityFocus.android.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("design/components/TextField/native/useTextField.native.tsx");
+require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting("design/components/TextField/native/useTextField.native.tsx");
 
 export const useTextFieldState = function useTextFieldState(onClear) {
   ({ value, onChange } = onClear);
   onClear = onClear.onClear;
-  let obj = callback;
+  let obj = noop;
   let str = first;
   if (first == null) {
     str = onClear.defaultValue;
@@ -16,22 +18,22 @@ export const useTextFieldState = function useTextFieldState(onClear) {
   if (str == null) {
     str = "";
   }
-  const tmp = callback(callback.useState(str), 2);
-  callback = tmp[1];
+  const tmp = _slicedToArray(noop.useState(str), 2);
+  closure_2 = tmp[1];
   if (first == null) {
     first = tmp[0];
   }
   const items = [onChange];
-  callback = obj.useCallback((arg0) => {
+  const setTextValue = obj.useCallback((arg0) => {
     obj(arg0);
     if (onChange != null) {
       onChange(arg0);
     }
   }, items);
-  const items1 = [callback, onClear];
+  const items1 = [setTextValue, onClear];
   obj = {
     value: first,
-    setTextValue: callback,
+    setTextValue,
     clear: obj.useCallback(() => {
       callback1("");
       if (onClear != null) {
@@ -43,12 +45,10 @@ export const useTextFieldState = function useTextFieldState(onClear) {
   return obj;
 };
 export const useTextField = function useTextField(onClear, ref) {
-  onChange = onClear;
-  let obj = callback1;
   ref = callback1.useRef(null);
   onClear = ref;
   const items = [ref, onClear.onClear];
-  obj = {};
+  let state = {};
   const callback = callback1.useCallback(() => {
     const current = onClear.current;
     if (current != null) {
@@ -58,40 +58,39 @@ export const useTextField = function useTextField(onClear, ref) {
     if (onClear != null) {
       onClear();
     }
-    const result = onChange(onClear[2]).setAccessibilityFocus({ ref: onClear });
+    const result = setAccessibilityFocus.setAccessibilityFocus({ ref: onClear });
   }, items);
   const merged = Object.assign(onClear);
-  obj.onClear = callback;
+  state.onClear = callback;
   onChange = undefined;
-  onClear = undefined;
-  obj = undefined;
+  state = undefined;
   callback1 = undefined;
-  ({ value, onChange } = obj);
-  onClear = obj.onClear;
+  ({ value, onChange } = state);
+  onClear = state.onClear;
   let str = first;
   if (first == null) {
-    str = obj.defaultValue;
+    str = state.defaultValue;
   }
   if (str == null) {
     str = "";
   }
-  const tmp4 = obj(callback1.useState(str), 2);
-  obj = tmp4[1];
+  const tmp4 = state(callback1.useState(str), 2);
+  state = tmp4[1];
   if (first == null) {
     first = tmp4[0];
   }
   const items1 = [onChange];
-  callback1 = obj.useCallback((arg0) => {
+  callback1 = state.useCallback((arg0) => {
     obj(arg0);
     if (onChange != null) {
       onChange(arg0);
     }
   }, items1);
   const items2 = [callback1, onClear];
-  obj = {
+  state = {
     value: first,
     setTextValue: callback1,
-    clear: obj.useCallback(() => {
+    clear: state.useCallback(() => {
       callback1("");
       if (onClear != null) {
         onClear();
@@ -99,24 +98,24 @@ export const useTextField = function useTextField(onClear, ref) {
     }, items2),
     hasValue: first.length > 0,
   };
-  const items3 = [ref, obj];
-  const imperativeHandle = obj.useImperativeHandle(
+  const items3 = [ref, state];
+  const imperativeHandle = state.useImperativeHandle(
     ref,
     () => ({
       blur() {
-        const current = closure_1.current;
+        const current = onClear.current;
         if (current != null) {
           current.blur();
         }
       },
       focus() {
-        const current = closure_1.current;
+        const current = onClear.current;
         if (current != null) {
           current.focus();
         }
       },
       isFocused() {
-        const current = closure_1.current;
+        const current = onClear.current;
         let isFocusedResult;
         if (current != null) {
           isFocusedResult = current.isFocused();
@@ -124,35 +123,34 @@ export const useTextField = function useTextField(onClear, ref) {
         return true === isFocusedResult;
       },
       getText() {
-        return closure_2.value;
+        return state.value;
       },
-      setText(arg0) {
-        if ("" === arg0) {
-          closure_2.clear();
+      setText(text) {
+        if ("" === text) {
+          state.clear();
         } else {
-          const current = closure_1.current;
+          const current = onClear.current;
           if (current != null) {
-            obj = { text: null };
-            obj[0] = arg0;
+            const obj = { text };
             current.setNativeProps(obj);
           }
-          closure_2.setTextValue(arg0);
+          state.setTextValue(text);
         }
       },
       measure(arg0) {
-        const current = closure_1.current;
+        const current = onClear.current;
         if (current != null) {
           current.measure(arg0);
         }
       },
       measureInWindow(arg0) {
-        const current = closure_1.current;
+        const current = onClear.current;
         if (current != null) {
           current.measureInWindow(arg0);
         }
       },
       measureLayout(arg0, arg1, arg2) {
-        const current = closure_1.current;
+        const current = onClear.current;
         if (current != null) {
           current.measureLayout(arg0, arg1, arg2);
         }
@@ -160,11 +158,11 @@ export const useTextField = function useTextField(onClear, ref) {
     }),
     items3,
   );
-  obj1 = { innerRef: ref, state: obj, inputProps: null };
+  const obj1 = { innerRef: ref, state, inputProps: null };
   const obj2 = {};
   const merged1 = Object.assign(onClear);
   obj2.onChange = undefined;
-  obj2.onChangeText = obj.setTextValue;
+  obj2.onChangeText = state.setTextValue;
   obj2.editable = !onClear.isDisabled;
   const isDisabled = onClear.isDisabled;
   let focusable = !isDisabled;
@@ -173,6 +171,6 @@ export const useTextField = function useTextField(onClear, ref) {
   }
   obj2.focusable = focusable;
   obj2["aria-disabled"] = onClear.isDisabled;
-  obj1[2] = obj2;
+  obj1.inputProps = obj2;
   return obj1;
 };

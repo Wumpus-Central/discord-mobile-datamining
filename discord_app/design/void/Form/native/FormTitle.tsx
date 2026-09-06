@@ -1,37 +1,38 @@
 // discord_app/design/void/Form/native/FormTitle.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import Button from "../../native.tsx";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import set from "../../../../utils/PlatformUtils.tsx";
-import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import native from "../../native.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-({ View: obj1, Platform } = get_ActivityIndicator);
-({ jsx: c3, jsxs: c4 } = jsxProd);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: c2, Platform } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+let PlatformUtils = fn(1115);
 let num = 58;
-if (set.isAndroid()) {
+if (PlatformUtils.isAndroid()) {
   num = 48;
 }
+PlatformUtils = fn(1115);
 let num2 = 48;
-if (set.isAndroid()) {
+if (PlatformUtils.isAndroid()) {
   num2 = 56;
 }
-set = {
+const createStyles = fn(4560);
+PlatformUtils = {
   titleWrapper: { flexDirection: "row", justifyContent: "space-between", paddingTop: 16, paddingBottom: 16 },
   horizontalPadding: { paddingHorizontal: 16 },
   thinTitle: { paddingTop: 26 },
   titleText: null,
   error: null,
 };
-set = { fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, fontSize: 13, color: ThemesDefault.colors.TEXT_SUBTLE };
-set[3] = set;
-set = { color: ThemesDefault.unsafe_rawColors.RED_400 };
-set[4] = set;
-let closure_5 = createCacheKey.createStyles(set);
-const result = set.fileFinishedImporting("design/void/Form/native/FormTitle.tsx");
+PlatformUtils = { fontFamily: fn(1074).Fonts.PRIMARY_SEMIBOLD, fontSize: 13, color: nativeDefault.colors.TEXT_SUBTLE };
+PlatformUtils.titleText = PlatformUtils;
+PlatformUtils = { color: nativeDefault.unsafe_rawColors.RED_400 };
+PlatformUtils.error = PlatformUtils;
+let closure_5 = createStyles.createStyles(PlatformUtils);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/Form/native/FormTitle.tsx");
 
 export default function FormTitle(thinTitle) {
   ({ title, uppercaseTitle } = thinTitle);
@@ -52,7 +53,7 @@ export default function FormTitle(thinTitle) {
     flag3 = false;
   }
   ({ viewStyle, textStyle } = thinTitle);
-  const tmp = callback();
+  const tmp = closure_5();
   const items = [tmp.titleWrapper, , ,];
   if (flag) {
     flag = tmp.thinTitle;
@@ -75,10 +76,10 @@ export default function FormTitle(thinTitle) {
   if (uppercaseTitle) {
     formatted = title.toUpperCase();
   }
-  obj[3] = formatted;
-  const items2 = [closure_3(Button.LegacyText, obj), icon];
-  obj[1] = items2;
-  return closure_4(closure_2, obj);
+  obj.children = formatted;
+  const items2 = [React3(native.LegacyText, obj), icon];
+  obj.children = items2;
+  return React4(React2, obj);
 }
 export const FORM_TITLE_HEIGHT = num;
 export const THIN_FORM_TITLE_HEIGHT = num2;

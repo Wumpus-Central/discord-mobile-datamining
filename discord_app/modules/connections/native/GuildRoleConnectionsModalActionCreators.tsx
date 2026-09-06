@@ -1,19 +1,18 @@
 // discord_app/modules/connections/native/GuildRoleConnectionsModalActionCreators.tsx
-import set from "../../../../_runtime/00002_set.js";
 import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
-import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import _modDef4763 from "../../../actions/ModalActionCreators.tsx";
+import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const ROLE_CONNECTIONS_MODAL_KEY = "ROLE_CONNECTIONS_MODAL_KEY";
-const result = set.fileFinishedImporting("modules/connections/native/GuildRoleConnectionsModalActionCreators.tsx");
+const result = size.fileFinishedImporting("modules/connections/native/GuildRoleConnectionsModalActionCreators.tsx");
 
 export const openGuildRoleConnectionsModal = function openGuildRoleConnectionsModal(guildId) {
   const onClose = guildId.onClose;
-  let obj = _modDef4763;
-  obj = {
+  const obj = {
     guildId: guildId.guildId,
     onClose() {
-      closure_1_1(closure_1_2[0]).popWithKey(closure_1_3);
+      ModalActionCreatorsDefault.popWithKey(ROLE_CONNECTIONS_MODAL_KEY);
       if (onClose != null) {
         onClose();
       }
@@ -26,14 +25,13 @@ export const makeGuildRoleConnectionsConnectAccountsActionSheetKey =
     return "GuildRoleConnectionsConnectAccountsActionSheet-" + id;
   };
 export const openGuildRoleConnectionsConnectAccountModal = function openGuildRoleConnectionsConnectAccountModal(
-  id,
+  verificationRole,
   guildId,
 ) {
-  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj = { role: id, guildId };
+  const obj = { role: verificationRole, guildId };
   obj.openLazy(
     asyncRequireImpl(11562, dependencyMap.paths),
-    "GuildRoleConnectionsConnectAccountsActionSheet-" + id.id,
+    "GuildRoleConnectionsConnectAccountsActionSheet-" + verificationRole.id,
     obj,
   );
 };

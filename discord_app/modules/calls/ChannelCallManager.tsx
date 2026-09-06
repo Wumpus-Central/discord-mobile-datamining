@@ -1,37 +1,35 @@
 // discord_app/modules/calls/ChannelCallManager.tsx
-import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
-import importDefaultResult from "../soundpacks/SoundpackStore.tsx";
-import closure_3 from "../../stores/CallStore.tsx";
-import closure_4 from "../../stores/ChannelStore.tsx";
-import closure_5 from "../../stores/NotificationSettingsStore.tsx";
-import closure_6 from "../../stores/SelectedChannelStore.tsx";
-import closure_7 from "../../stores/StreamerModeStore.tsx";
-import closure_8 from "../../stores/VoiceStateStore.tsx";
-import closure_9 from "../../stores/views/SortedVoiceStateStore.tsx";
-import closure_10 from "ChannelRTCStore.tsx";
-import createSoundForPack from "../sound_playback/SoundUtils.tsx";
+import SoundpackStore from "../soundpacks/SoundpackStore.tsx";
+import CallStore from "../../stores/CallStore.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
+import NotificationSettingsStore from "../../stores/NotificationSettingsStore.tsx";
+import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
+import StreamerModeStore from "../../stores/StreamerModeStore.tsx";
+import VoiceStateStore from "../../stores/VoiceStateStore.tsx";
+import SortedVoiceStateStore from "../../stores/views/SortedVoiceStateStore.tsx";
+import ChannelRTCStore from "ChannelRTCStore.tsx";
+import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
-let require = arg1;
-let closure_11 = createSoundForPack.createSoundForPack("call_calling", importDefaultResult.getSoundpack());
-initializeDefault;
-// CreatePrivateName (0x9e)
+let require = fn;
+const SoundUtils = fn(9902);
+let closure_11 = SoundUtils.createSoundForPack("call_calling", SoundpackStore.getSoundpack());
 class ChannelCallManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     closure_0 = applyArgumentsResult;
-    // PrivateIsIn (0x32)
-    if (tmp) {
+    tmp3 = _n;
+    set = new Set();
+    if (_n in applyArgumentsResult) {
       str = "Cannot initialize private field twice.";
-      throwTypeErrorResult = HermesBuiltin.throwTypeError();
-      return;
+      throw new TypeError("Cannot initialize private field twice.");
     } else {
-      tmp5 = tmp4;
-      // AddOwnPrivateBySym (0x64)
+      tmp5 = set;
+      applyArgumentsResult[set] = tmp3;
       obj = { GUILD_LOCAL_RING_START: null, GUILD_RING_STOP: null };
-      obj[0] = function GUILD_LOCAL_RING_START(arg0) {
+      obj.GUILD_LOCAL_RING_START = function GUILD_LOCAL_RING_START(arg0) {
         return applyArgumentsResult.handleGuildRingStart(arg0);
       };
-      obj[1] = function GUILD_RING_STOP(arg0) {
+      obj.GUILD_RING_STOP = function GUILD_RING_STOP(arg0) {
         return applyArgumentsResult.handleGuildRingStop(arg0);
       };
       applyArgumentsResult.actions = obj;
@@ -39,7 +37,7 @@ class ChannelCallManager extends tmp2 {
         currentClientVoiceChannelId = currentClientVoiceChannelId.getCurrentClientVoiceChannelId(guildId);
         let tmp2 = null != currentClientVoiceChannelId;
         if (tmp2) {
-          tmp2 = closure_9.countVoiceStatesForChannel(currentClientVoiceChannelId) >= 2;
+          tmp2 = SortedVoiceStateStore.countVoiceStatesForChannel(currentClientVoiceChannelId) >= 2;
         }
         if (null != currentClientVoiceChannelId) {
           if (!tmp2) {
@@ -56,10 +54,13 @@ class ChannelCallManager extends tmp2 {
       };
       applyArgumentsResult.handleSoundpackUpdate = function handleSoundpackUpdate() {
         closure_11.stop();
-        closure_11 = applyArgumentsResult(table[9]).createSoundForPack("call_calling", soundpack.getSoundpack());
+        closure_11 = applyArgumentsResult(dependencyMap[9]).createSoundForPack(
+          "call_calling",
+          soundpack.getSoundpack(),
+        );
       };
       applyArgumentsResult.handleRingUpdate = function handleRingUpdate() {
-        const channel = closure_1_4.getChannel(closure_1_6.getVoiceChannelId());
+        const channel = ChannelStore.getChannel(SelectedChannelStore.getVoiceChannelId());
         let guild_id;
         if (channel != null) {
           guild_id = channel.guild_id;
@@ -67,7 +68,7 @@ class ChannelCallManager extends tmp2 {
         if (guild_id == null) {
           guild_id = null;
         }
-        const calls = closure_1_3.getCalls();
+        const calls = CallStore.getCalls();
         let someResult = calls.some((ringing) => {
           let tmp = ringing.ringing.length > 0;
           if (tmp) {
@@ -76,54 +77,43 @@ class ChannelCallManager extends tmp2 {
           return tmp;
         });
         if (!someResult) {
-          // GetOwnPrivateBySym (0x65)
-          someResult = closure_1_12.size > 0;
+          someResult = applyArgumentsResult.#n.size > 0;
         }
         applyArgumentsResult._handleRing(someResult, guild_id);
       };
       applyArgumentsResult.handleGuildRingStart = function handleGuildRingStart(arg0) {
         ({ ringing, guildId } = arg0);
-        const item = ringing.forEach((arg0) => {
-          // GetOwnPrivateBySym (0x65)
-          obj.add(arg0);
+        const item = ringing.forEach((item) => {
+          closure_1_0[closure_2_12].add(item);
         });
-        // GetOwnPrivateBySym (0x65)
-        applyArgumentsResult._handleRing(closure_1_12.size > 0, guildId);
+        applyArgumentsResult._handleRing(applyArgumentsResult.#n.size > 0, guildId);
       };
       applyArgumentsResult.handleGuildRingStop = function handleGuildRingStop(arg0) {
         ({ ringing, guildId } = arg0);
-        const item = ringing.forEach((arg0) => {
-          // GetOwnPrivateBySym (0x65)
-          obj.delete(arg0);
+        const item = ringing.forEach((item) => {
+          closure_1_0[closure_2_12].delete(item);
         });
-        // GetOwnPrivateBySym (0x65)
-        applyArgumentsResult._handleRing(closure_1_12.size > 0, guildId);
+        applyArgumentsResult._handleRing(applyArgumentsResult.#n.size > 0, guildId);
       };
       applyArgumentsResult.handleChannelRTCStoreChange = function handleChannelRTCStoreChange() {
-        const voiceChannelId = closure_1_6.getVoiceChannelId();
-        // GetOwnPrivateBySym (0x65)
-        if (tmp.size > 0) {
+        voiceChannelId = voiceChannelId.getVoiceChannelId();
+        if (applyArgumentsResult[closure_1_12].size > 0) {
           if (null == voiceChannelId) {
             const _Set = Set;
-            new Set();
-            // PutOwnPrivateBySym (0x66)
-            // GetOwnPrivateBySym (0x65)
-            obj._handleRing(tmp4.size > 0, null);
+            const set = new Set();
+            obj[tmp2] = set;
+            obj._handleRing(obj[tmp2].size > 0, null);
           } else if (null != voiceChannelId) {
-            const guildRingingUsers = closure_1_10.getGuildRingingUsers(voiceChannelId);
+            applyArgumentsResult = guildRingingUsers.getGuildRingingUsers(voiceChannelId);
             const _Set2 = Set;
-            // GetOwnPrivateBySym (0x65)
             const items = [];
-            HermesBuiltin.arraySpread(tmp2, 0);
-            const set1 = new Set(items.filter((arg0) => !set.has(arg0)));
+            HermesBuiltin.arraySpread(obj[tmp2], 0);
+            const set1 = new Set(items.filter((item) => !set.has(item)));
             if (set1.size > 0) {
-              const forEach = set1.forEach;
-              const item = forEach((arg0) => {
-                // GetOwnPrivateBySym (0x65)
-                obj.delete(arg0);
+              const item = set1.forEach((item) => {
+                set[closure_2_12].delete(item);
               });
-              // GetOwnPrivateBySym (0x65)
-              obj._handleRing(forEach.size > 0, null);
+              obj._handleRing(obj[tmp2].size > 0, null);
             }
           }
         }
@@ -133,14 +123,15 @@ class ChannelCallManager extends tmp2 {
   }
 }
 ChannelCallManager.prototype["_initialize"] = function _initialize() {
-  const result = new Map().set(closure_3, this.handleRingUpdate);
-  const result1 = result.set(closure_5, this.handleRingUpdate);
-  const result2 = result1.set(closure_7, this.handleRingUpdate);
-  const result3 = result2.set(closure_8, this.handleRingUpdate);
-  const result4 = result3.set(closure_10, this.handleChannelRTCStoreChange);
-  this.stores = result4.set(closure_2, this.handleSoundpackUpdate);
+  const result = new Map().set(CallStore, this.handleRingUpdate);
+  const result1 = result.set(NotificationSettingsStore, this.handleRingUpdate);
+  const result2 = result1.set(StreamerModeStore, this.handleRingUpdate);
+  const result3 = result2.set(VoiceStateStore, this.handleRingUpdate);
+  const result4 = result3.set(ChannelRTCStore, this.handleChannelRTCStoreChange);
+  this.stores = result4.set(SoundpackStore, this.handleSoundpackUpdate);
 };
 const channelCallManager = new ChannelCallManager();
-let result = require("set").fileFinishedImporting("modules/calls/ChannelCallManager.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/calls/ChannelCallManager.tsx");
 
 export default channelCallManager;

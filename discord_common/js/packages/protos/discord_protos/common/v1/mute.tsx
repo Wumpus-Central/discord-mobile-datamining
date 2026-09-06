@@ -1,11 +1,11 @@
 // discord_common/js/packages/protos/discord_protos/common/v1/mute.tsx
 import _mod1188 from "../../../../../../../_runtime/metro/01188__.js";
-import now from "../../../google/protobuf/timestamp.tsx";
-import defineProperty from "../../../google/protobuf/wrappers.tsx";
-import closure_2 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
-import { MessageType } from "../../../../../../../_runtime/metro/01188__.js";
+import timestamp from "../../../google/protobuf/timestamp.tsx";
+import wrappers from "../../../google/protobuf/wrappers.tsx";
+import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
 
-require = arg1;
+require = fn;
+const MessageType = fn(1188).MessageType;
 class MuteNotificationSettings$Type extends MessageType {
   constructor() {
     obj = {
@@ -13,7 +13,7 @@ class MuteNotificationSettings$Type extends MessageType {
       name: "end_time",
       kind: "message",
       T() {
-        return callback(1217).Timestamp;
+        return timestamp.Timestamp;
       },
     };
     items = [,];
@@ -23,11 +23,10 @@ class MuteNotificationSettings$Type extends MessageType {
       name: "selected_time_window",
       kind: "message",
       T() {
-        return callback(1218).Int32Value;
+        return wrappers.Int32Value;
       },
     };
     tmp = new tmp("discord_protos.common.v1.MuteNotificationSettings", items, new.target);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
@@ -43,7 +42,7 @@ prototype["create"] = function create(arr) {
   }
   return obj;
 };
-prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
   let obj = arg3;
   if (arg3 == null) {
@@ -52,24 +51,13 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
-        let tmp27 = require;
-        let tmp28 = dependencyMap;
-        let Timestamp = now.Timestamp;
-        let tmp29 = Timestamp;
-        let tmp30 = pos;
-        let tmp31 = readUnknownField;
+        let Timestamp = timestamp.Timestamp;
         obj.endTime = Timestamp.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.endTime);
       } else if (2 === tmp5) {
-        let tmp22 = require;
-        let tmp23 = dependencyMap;
-        let Int32Value = defineProperty.Int32Value;
-        let tmp24 = Int32Value;
-        let tmp25 = pos;
-        let tmp26 = readUnknownField;
+        let Int32Value = wrappers.Int32Value;
         obj.selectedTimeWindow = Int32Value.internalBinaryRead(
           pos,
           pos.uint32(),
@@ -85,25 +73,16 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -114,7 +93,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(endTime, tag, writeUnknownFields) {
   if (endTime.endTime) {
-    const Timestamp = now.Timestamp;
+    const Timestamp = timestamp.Timestamp;
     const tagResult = tag.tag(1, _mod1188.WireType.LengthDelimited);
     const joined = Timestamp.internalBinaryWrite(
       endTime.endTime,
@@ -128,7 +107,7 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(endTime, tag, wr
     );
   }
   if (endTime.selectedTimeWindow) {
-    const Int32Value = defineProperty.Int32Value;
+    const Int32Value = wrappers.Int32Value;
     const tagResult1 = tag.tag(2, _mod1188.WireType.LengthDelimited);
     const joined1 = Int32Value.internalBinaryWrite(
       endTime.selectedTimeWindow,
@@ -157,7 +136,7 @@ let items = [
     name: "end_time",
     kind: "message",
     T() {
-      return callback(1217).Timestamp;
+      return timestamp.Timestamp;
     },
   },
   {
@@ -165,7 +144,7 @@ let items = [
     name: "selected_time_window",
     kind: "message",
     T() {
-      return callback(1218).Int32Value;
+      return wrappers.Int32Value;
     },
   },
 ];
@@ -176,11 +155,9 @@ prototype = new prototype(
   MuteNotificationSettings$Type,
   prototype,
   items,
-  arg1,
+  fn,
 );
-// ThrowIfThisInitialized (0x7c)
-let result = require("set").fileFinishedImporting(
-  "../discord_common/js/packages/protos/discord_protos/common/v1/mute.tsx",
-);
+const size = fn(2);
+let result = size.fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/common/v1/mute.tsx");
 
 export const MuteNotificationSettings = prototype;

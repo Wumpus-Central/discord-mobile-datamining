@@ -1,26 +1,24 @@
 // discord_app/modules/guild_scheduled_events/useEventException.tsx
-import closure_2 from "GuildScheduledEventStore.tsx";
+import GuildScheduledEventStore from "GuildScheduledEventStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/useEventException.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/useEventException.tsx");
 
 export default function useEventException(arg0, arg1) {
-  let _require = arg1;
-  const items = [closure_2];
-  const stateFromStoresArray = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(
-    items,
-    () => {
-      const guildScheduledEvent = closure_1_2.getGuildScheduledEvent(closure_0);
-      let prop;
-      if (guildScheduledEvent != null) {
-        prop = guildScheduledEvent.guild_scheduled_event_exceptions;
-      }
-      if (prop == null) {
-        prop = [];
-      }
-      return prop;
-    },
-  );
+  _require = arg1;
+  const items = [GuildScheduledEventStore];
+  const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {
+    const guildScheduledEvent = GuildScheduledEventStore.getGuildScheduledEvent(closure_0);
+    let prop;
+    if (guildScheduledEvent != null) {
+      prop = guildScheduledEvent.guild_scheduled_event_exceptions;
+    }
+    if (prop == null) {
+      prop = [];
+    }
+    return prop;
+  });
   _require = arg0;
   let found;
   if (stateFromStoresArray != null) {
@@ -29,7 +27,7 @@ export default function useEventException(arg0, arg1) {
   return found;
 }
 export const getEventException = function getEventException(recurrenceId, eventId) {
-  guildScheduledEvent = guildScheduledEvent.getGuildScheduledEvent(eventId);
+  const guildScheduledEvent = GuildScheduledEventStore.getGuildScheduledEvent(eventId);
   let prop;
   if (guildScheduledEvent != null) {
     prop = guildScheduledEvent.guild_scheduled_event_exceptions;

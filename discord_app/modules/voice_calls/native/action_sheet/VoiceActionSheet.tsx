@@ -1,78 +1,76 @@
 // discord_app/modules/voice_calls/native/action_sheet/VoiceActionSheet.tsx
-import contextDefault from "../../../app_analytics/useAnalyticsLocations.tsx";
-import QUICK_SWITCHERDefault from "../../../app_analytics/AnalyticsLocation.tsx";
-import _initializeDefault from "../../../nuf_channels/native/NUFChannelsManager.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../../stores/views/SortedVoiceStateStore.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import NavigationRouteUtils from "../../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import useAnalyticsLocationsDefault from "../../../app_analytics/useAnalyticsLocations.tsx";
+import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
+import VoiceActionSheetManagerDefault from "../VoiceActionSheetManager.tsx";
+import NUFChannelsManagerDefault from "../../../nuf_channels/native/NUFChannelsManager.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import SortedVoiceStateStore from "../../../../stores/views/SortedVoiceStateStore.tsx";
 
-const require = arg1;
-({ View: c4, StyleSheet } = get_ActivityIndicator);
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: { flex: 1 }, visualEffectView: null };
-createCacheKey = {};
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, StyleSheet } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+fn(4560);
+let createStyles = { container: { flex: 1 }, visualEffectView: null };
+createStyles = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-createCacheKey.overflow = "hidden";
-createCacheKey[1] = createCacheKey;
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/voice_calls/native/action_sheet/VoiceActionSheet.tsx");
+createStyles.overflow = "hidden";
+createStyles.visualEffectView = createStyles;
+let closure_8 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_calls/native/action_sheet/VoiceActionSheet.tsx");
 
 export default function VoiceActionSheet(channel) {
   channel = channel.channel;
-  let tmp = callback3();
+  const tmp = closure_8();
   let obj = channel(504);
-  const items = [closure_5];
+  const items = [SortedVoiceStateStore];
   const items1 = [channel];
-  const stateFromStores = obj.useStateFromStores(items, () => 0 === closure_1_5.countVoiceStatesForChannel(channel.id));
-  const effect = React.useEffect(() => {
-    const obj = channel(closure_1_2[8]);
-    const tmp = closure_1_2;
+  const stateFromStores = obj.useStateFromStores(
+    items,
+    () => 0 === SortedVoiceStateStore.countVoiceStatesForChannel(channel.id),
+  );
+  const effect = noop.useEffect(() => {
+    const obj = NavigationRouteUtils;
     if (!obj.isModalOpen(obj2.getVoiceChannelKey(channel.id))) {
-      closure_1_1(tmp[10]).initialize(channel);
-      const obj3 = closure_1_1(tmp[10]);
+      VoiceActionSheetManagerDefault.initialize(channel);
     }
     return () => {
-      callback(table[10]).terminate();
+      closure_1_1(closure_1_2[10]).terminate();
     };
   }, items1);
-  obj1 = _initializeDefault;
+  let obj1 = NUFChannelsManagerDefault;
   if (obj1.requiresVoiceChannelsOnboard()) {
     obj = { children: null };
-    obj = { channel: null };
-    obj[0] = channel;
-    obj[0] = callback(tmp2(13777), obj);
-    let children = callback(tmp5(7198).ActionSheet, obj);
-    let tmp8 = callback;
+    obj = { channel };
+    obj.children = closure_6(tmp2(13777), obj);
+    let children = closure_6(tmp5(7198).ActionSheet, obj);
+    let tmp8 = closure_6;
   } else if (stateFromStores) {
     obj1 = { children: null };
-    const obj2 = { channel: null };
-    obj2[0] = channel;
-    const items2 = [callback(tmp2(13780), obj2)];
-    let obj3 = { channel: null };
-    obj3[0] = channel;
-    items2[1] = callback(tmp2(13781), obj3);
-    obj1[0] = items2;
-    children = callback2(tmp5(7198).ActionSheet, obj1);
-    tmp8 = callback;
+    const obj2 = { channel };
+    const items2 = [closure_6(tmp2(13780), obj2)];
+    let obj3 = { channel };
+    items2[1] = closure_6(tmp2(13781), obj3);
+    obj1.children = items2;
+    children = closure_7(tmp5(7198).ActionSheet, obj1);
+    tmp8 = closure_6;
   } else {
-    tmp8 = callback;
+    tmp8 = closure_6;
     const obj4 = { scrollable: true, startExpanded: true, children: null };
-    const obj5 = { style: null, children: null };
-    obj5[0] = tmp.container;
-    const obj6 = { blurTheme: "dark", style: null };
-    obj6[1] = tmp.visualEffectView;
-    const items3 = [callback(tmp2(4965), obj6)];
-    const obj7 = { channel: null };
-    obj7[0] = channel;
-    items3[1] = callback(tmp2(13784), obj7);
-    obj5[1] = items3;
-    obj4[2] = callback2(closure_4, obj5);
-    children = callback(tmp5(7198).ActionSheet, obj4);
+    const obj5 = { style: tmp.container, children: null };
+    const obj6 = { blurTheme: "dark", style: tmp.visualEffectView };
+    const items3 = [closure_6(tmp2(4965), obj6)];
+    const obj7 = { channel };
+    items3[1] = closure_6(tmp2(13784), obj7);
+    obj5.children = items3;
+    obj4.children = closure_7(closure_4, obj5);
+    children = closure_6(tmp5(7198).ActionSheet, obj4);
   }
   return tmp8(channel(7162).AnalyticsLocationProvider, {
-    value: contextDefault(QUICK_SWITCHERDefault.VOICE_ACTION_SHEET).analyticsLocations,
+    value: useAnalyticsLocationsDefault(AnalyticsLocationDefault.VOICE_ACTION_SHEET).analyticsLocations,
     children,
   });
 }

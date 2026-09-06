@@ -1,21 +1,23 @@
 // discord_app/design/components/Button/native/BaseButton.native.tsx
-import closure_3 from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { IOS_POINTER_STYLE } from "../../Styles/native/styleConstants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../Styles/native/createStyles.tsx";
-import importDefaultResult from "../../../../modules/reanimated/ReanimatedRexport.tsx";
+import ButtonHooks from "ButtonHooks.native.tsx";
+import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 
-const require = arg1;
+require = fn;
 let closure_2 = ["style"];
-let c4 = importAllResult;
+get_ActivityIndicator = fn(17);
 ({ Pressable, TouchableOpacity } = get_ActivityIndicator);
-let closure_7 = createCacheKey.createStyles({ disabled: { opacity: 0.5 } });
-let closure_8 = importDefaultResult.createAnimatedComponent(Pressable);
-let closure_9 = importDefaultResult.createAnimatedComponent(TouchableOpacity);
-const importDefaultResult1 = importDefaultResult;
-const forwardRefResult = importAllResult.forwardRef((disabled, ref) => {
+const IOS_POINTER_STYLE = fn(4984).IOS_POINTER_STYLE;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_7 = createStyles.createStyles({ disabled: { opacity: 0.5 } });
+let closure_8 = ReanimatedRexport.createAnimatedComponent(Pressable);
+let closure_9 = ReanimatedRexport.createAnimatedComponent(TouchableOpacity);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Button/native/BaseButton.native.tsx");
+
+export const BaseButton = noop.forwardRef((disabled, ref) => {
   ({ children, variant } = disabled);
   if (variant === undefined) {
     variant = "primary";
@@ -42,18 +44,18 @@ const forwardRefResult = importAllResult.forwardRef((disabled, ref) => {
     accessibilityState,
   } = disabled);
   ({ accessibilityElementsHidden, importantForAccessibility, hitSlop, scaleAmountInPx } = disabled);
-  closure_2 = undefined;
+  disabled = undefined;
   let buttonAnimationProps;
   ({ onLongPress, accessibilityValue, accessibilityActions, onAccessibilityAction, pointerEvents } = disabled);
   let tmp2 = flag;
   if (flag) {
     tmp2 = null == onPressDisabled;
   }
-  closure_2 = tmp2;
+  disabled = tmp2;
   if (flag) {
     onPress = onPressDisabled;
   }
-  let obj = flag2(accessibilityState[7]);
+  let obj = ButtonHooks;
   const buttonPressAnimationProps = obj.useButtonPressAnimationProps(
     pressed,
     scaleAmountInPx,
@@ -63,27 +65,22 @@ const forwardRefResult = importAllResult.forwardRef((disabled, ref) => {
   );
   if (null == pressed) {
     obj = { animatedScaleStyles: "Array", buttonAnimationProps: 0 };
-    obj = { onLayout: null, onPressIn: null, onPressOut: null };
-    obj[0] = onLayout;
-    obj[1] = onPressIn;
-    obj[2] = onPressOut;
-    obj[1] = obj;
-    obj1 = obj;
+    obj = { onLayout, onPressIn, onPressOut };
+    obj.buttonAnimationProps = obj;
+    let obj1 = obj;
   } else {
-    obj1 = { animatedScaleStyles: null, buttonAnimationProps: null };
-    obj1[0] = buttonPressAnimationProps.style;
-    obj1[1] = tmp7;
+    obj1 = { animatedScaleStyles: buttonPressAnimationProps.style, buttonAnimationProps: tmp7 };
   }
   buttonAnimationProps = obj1.buttonAnimationProps;
   const items = [accessibilityState, tmp2, flag2];
-  const memo = importAllResult.useMemo(() => {
+  const memo = noop.useMemo(() => {
     const obj = {};
     const merged = Object.assign(accessibilityState);
-    obj.disabled = closure_2;
+    obj.disabled = disabled;
     obj.busy = flag2;
     return obj;
   }, items);
-  let tmp4Result = tmp4(tmp5[5]);
+  let tmp4Result = tmp4(4271);
   let str = "light";
   if ("primary-overlay" !== variant) {
     let str3;
@@ -96,10 +93,8 @@ const forwardRefResult = importAllResult.forwardRef((disabled, ref) => {
   }
   let tmp11 = children;
   if (null != str) {
-    const obj2 = { theme: null, children: null };
-    obj2[0] = str;
-    obj2[1] = children;
-    tmp11 = jsx(tmp4(tmp5[5]).ThemeContextProvider, { theme: null, children: null });
+    const obj2 = { theme: str, children };
+    tmp11 = jsx(tmp4(4271).ThemeContextProvider, { theme: str, children });
   }
   const items1 = [disabled.style, , ,];
   if (flag) {
@@ -137,7 +132,7 @@ const forwardRefResult = importAllResult.forwardRef((disabled, ref) => {
     let str5 = "";
     if (!accessibilityElementsHidden) {
       const items2 = [accessibilityLabel, accessibilityHint];
-      const found = items2.filter(tmp4(tmp5[9]).isNotNullish);
+      const found = items2.filter(tmp4(1369).isNotNullish);
       str5 = found.join(", ");
     }
     const obj4 = {};
@@ -145,7 +140,7 @@ const forwardRefResult = importAllResult.forwardRef((disabled, ref) => {
     obj4.ref = ref;
     let isAndroidResult = accessible;
     if (accessible == null) {
-      tmp4Result = tmp4(tmp5[10]);
+      tmp4Result = tmp4(1115);
       isAndroidResult = tmp4Result.isAndroid();
     }
     obj4.accessible = !isAndroidResult;
@@ -172,8 +167,5 @@ const forwardRefResult = importAllResult.forwardRef((disabled, ref) => {
     obj4.children = tmp11;
     return <closure_9 />;
   }
-  tmp = callback();
+  tmp = closure_7();
 });
-const result = require("set").fileFinishedImporting("design/components/Button/native/BaseButton.native.tsx");
-
-export const BaseButton = forwardRefResult;

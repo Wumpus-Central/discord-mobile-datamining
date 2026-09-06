@@ -1,18 +1,16 @@
 // discord_app/records/EntitlementRecord.tsx
-import toJSDefault from "../lib/Record.tsx";
-import getPremiumPlanItemDefault from "../utils/PremiumUtils.tsx";
-import set from "../../discord_common/js/shared/shared-constants/EntitlementTenantFulfillmentStatus.tsx";
-import closure_3 from "../modules/skus/SKURecord.tsx";
-import closure_4 from "UserRecord.tsx";
-import { EntitlementTypes } from "../Constants.tsx";
+import PremiumUtilsDefault from "../utils/PremiumUtils.tsx";
+import EntitlementTenantFulfillmentStatus from "../../discord_common/js/shared/shared-constants/EntitlementTenantFulfillmentStatus.tsx";
+import Record from "../lib/Record.tsx";
+import SKURecord from "../modules/skus/SKURecord.tsx";
+import UserRecord from "UserRecord.tsx";
 
-require = arg1;
-toJSDefault;
+require = fn;
+const EntitlementTypes = fn(1074).EntitlementTypes;
 let EntitlementRecord;
 class EntitlementRecord extends tmp2 {
   constructor(arg0) {
     tmp = new EntitlementRecord(new.target, new.target);
-    // ThrowIfThisInitialized (0x7c)
     ({
       id: tmp.id,
       skuId: tmp.skuId,
@@ -43,7 +41,7 @@ EntitlementRecord["createFromServer"] = function createFromServer(user) {
   ({ id, sku_id, application_id } = user);
   let tmp2 = null;
   if (null != user.user) {
-    tmp2 = new closure_4(user.user);
+    tmp2 = new UserRecord(user.user);
   }
   ({ user_id, gifter_user_id, type, branches } = user);
   if (branches == null) {
@@ -78,8 +76,8 @@ EntitlementRecord["createFromServer"] = function createFromServer(user) {
   }
   ({ gift_style, guild_id, deleted } = user);
   if (null != user.sku) {
-    const fromServer = closure_3.createFromServer(user.sku);
-    const tmp18 = closure_3;
+    const fromServer = SKURecord.createFromServer(user.sku);
+    const tmp19 = SKURecord;
   }
   let source_type = user.source_type;
   if (source_type == null) {
@@ -89,56 +87,56 @@ EntitlementRecord["createFromServer"] = function createFromServer(user) {
   if (fulfillment_status == null) {
     fulfillment_status = null;
   }
-  if (typeof EntitlementRecord !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof EntitlementRecord === "function") {
+    const tmp26 = new EntitlementRecord(
+      tmp4,
+      tmp19,
+      tmp,
+      new.target,
+      id,
+      sku_id,
+      application_id,
+      tmp2,
+      user_id,
+      gifter_user_id,
+      type,
+      branches,
+      date,
+      date1,
+      subscription_id,
+      id,
+      parent_id,
+      consumed,
+      gift_code_batch_id,
+      gift_style,
+      guild_id,
+      deleted,
+      source_type,
+    );
+    tmp26.id = id;
+    tmp26.skuId = sku_id;
+    tmp26.applicationId = application_id;
+    tmp26.user = tmp2;
+    tmp26.userId = user_id;
+    tmp26.gifterId = gifter_user_id;
+    tmp26.type = type;
+    tmp26.branches = branches;
+    tmp26.startsAt = date;
+    tmp26.endsAt = date1;
+    tmp26.subscriptionId = subscription_id;
+    tmp26.subscriptionPlanId = id;
+    tmp26.parentId = parent_id;
+    tmp26.consumed = consumed;
+    tmp26.giftCodeBatchId = gift_code_batch_id;
+    tmp26.giftStyle = gift_style;
+    tmp26.guildId = guild_id;
+    tmp26.deleted = deleted;
+    tmp26.sourceType = source_type;
+    tmp26.fulfillmentStatus = fulfillment_status;
+    return tmp26;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const tmp22 = new EntitlementRecord(
-    str,
-    tmp18,
-    EntitlementRecord,
-    new.target,
-    id,
-    sku_id,
-    application_id,
-    tmp2,
-    user_id,
-    gifter_user_id,
-    type,
-    branches,
-    date,
-    date1,
-    subscription_id,
-    id,
-    parent_id,
-    consumed,
-    gift_code_batch_id,
-    gift_style,
-    guild_id,
-    deleted,
-    source_type,
-  );
-  // ThrowIfThisInitialized (0x7c)
-  tmp22.id = id;
-  tmp22.skuId = sku_id;
-  tmp22.applicationId = application_id;
-  tmp22.user = tmp2;
-  tmp22.userId = user_id;
-  tmp22.gifterId = gifter_user_id;
-  tmp22.type = type;
-  tmp22.branches = branches;
-  tmp22.startsAt = date;
-  tmp22.endsAt = date1;
-  tmp22.subscriptionId = subscription_id;
-  tmp22.subscriptionPlanId = id;
-  tmp22.parentId = parent_id;
-  tmp22.consumed = consumed;
-  tmp22.giftCodeBatchId = gift_code_batch_id;
-  tmp22.giftStyle = gift_style;
-  tmp22.guildId = guild_id;
-  tmp22.deleted = deleted;
-  tmp22.sourceType = source_type;
-  tmp22.fulfillmentStatus = fulfillment_status;
-  return tmp22;
 };
 Object.defineProperty(prototype, "isGiftable", {
   get: function isGiftable() {
@@ -159,7 +157,7 @@ prototype["isValid"] = function isValid(isPremiumWithFractionalPremiumOnly, get)
   if (!this.isGiftable) {
     if (!self.deleted) {
       if (self.type === EntitlementTypes.PREMIUM_SUBSCRIPTION) {
-        const value = get.get(self.skuId);
+        value = get.get(self.skuId);
         if (null != value) {
           if (!value.premium) {
             return false;
@@ -168,7 +166,7 @@ prototype["isValid"] = function isValid(isPremiumWithFractionalPremiumOnly, get)
         if (!obj.canInstallPremiumApplications(isPremiumWithFractionalPremiumOnly)) {
           return false;
         }
-        obj = getPremiumPlanItemDefault;
+        obj = PremiumUtilsDefault;
       }
       const _Date = Date;
       const date = new Date();
@@ -200,11 +198,14 @@ prototype["isValid"] = function isValid(isPremiumWithFractionalPremiumOnly, get)
   return false;
 };
 prototype["isFulfilled"] = function isFulfilled() {
-  return this.fulfillmentStatus === set.EntitlementTenantFulfillmentStatus.FULFILLED;
+  return this.fulfillmentStatus === EntitlementTenantFulfillmentStatus.EntitlementTenantFulfillmentStatus.FULFILLED;
 };
 prototype["isFulfillmentFailed"] = function isFulfillmentFailed() {
-  return this.fulfillmentStatus === set.EntitlementTenantFulfillmentStatus.FULFILLMENT_FAILED;
+  return (
+    this.fulfillmentStatus === EntitlementTenantFulfillmentStatus.EntitlementTenantFulfillmentStatus.FULFILLMENT_FAILED
+  );
 };
-const result = require("set").fileFinishedImporting("records/EntitlementRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("records/EntitlementRecord.tsx");
 
 export default EntitlementRecord;

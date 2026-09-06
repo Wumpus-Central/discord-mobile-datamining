@@ -1,9 +1,10 @@
 // discord_app/modules/app_database/modules/messages/isLimitedChannel.tsx
-import closure_0 from "../../../../stores/ChannelStore.tsx";
-import closure_1 from "../../../../stores/GuildMemberCountStore.tsx";
-import { ChannelTypes } from "../../../../Constants.tsx";
+import ChannelStore from "../../../../stores/ChannelStore.tsx";
+import GuildMemberCountStore from "../../../../stores/GuildMemberCountStore.tsx";
 
-const result = require("set").fileFinishedImporting("modules/app_database/modules/messages/isLimitedChannel.tsx");
+const ChannelTypes = fn(1074).ChannelTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_database/modules/messages/isLimitedChannel.tsx");
 
 export const LIMITED_GUILD_MEMBER_THRESHOLD = 10000;
 export const isLimitedChannel = function isLimitedChannel(basicChannel) {
@@ -11,7 +12,7 @@ export const isLimitedChannel = function isLimitedChannel(basicChannel) {
   if (basicChannel != null) {
     guild_id = basicChannel.guild_id;
   }
-  let num = store.getMemberCount(guild_id);
+  let num = GuildMemberCountStore.getMemberCount(guild_id);
   if (num == null) {
     num = 0;
   }
@@ -32,12 +33,12 @@ export const isLimitedChannelId = function isLimitedChannelId(arg0) {
   if (arg0 == null) {
     str = "_";
   }
-  basicChannel = basicChannel.getBasicChannel(str);
+  const basicChannel = ChannelStore.getBasicChannel(str);
   let guild_id;
   if (basicChannel != null) {
     guild_id = basicChannel.guild_id;
   }
-  let num = store.getMemberCount(guild_id);
+  let num = GuildMemberCountStore.getMemberCount(guild_id);
   if (num == null) {
     num = 0;
   }

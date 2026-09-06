@@ -1,26 +1,26 @@
 // discord_app/modules/experiments/native/ExperimentEmbedPlatformUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
-import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import { asyncRequireImpl } from "../../../../_runtime/01896_asyncRequireImpl.js";
-import { makeClientVariant } from "../client_override_hooks/useApexExperiments.tsx";
-import { parseRegisteredExperiments } from "../client_override_hooks/useLegacyExperiments.tsx";
+import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
+import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import useLegacyExperiments from "../client_override_hooks/useLegacyExperiments.tsx";
+import useApexExperiments from "../client_override_hooks/useApexExperiments.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const regExp = new RegExp("^dev://experiment/([-\\w._0-9]+)(?:/([0-9]+))?$", "i");
-const result = set.fileFinishedImporting("modules/experiments/native/ExperimentEmbedPlatformUtils.tsx");
+const result = size.fileFinishedImporting("modules/experiments/native/ExperimentEmbedPlatformUtils.tsx");
 
 export const EXPERIMENT_EMBED_URL_REGEX = regExp;
 export const handleCodedLinkExperimentEmbedTap = function handleCodedLinkExperimentEmbedTap(
   experimentFromEmbedURL,
   experimentTreatmentFromEmbedURL,
 ) {
-  const _require = experimentTreatmentFromEmbedURL;
+  closure_0 = experimentTreatmentFromEmbedURL;
   if (null != experimentTreatmentFromEmbedURL) {
     const _Number = Number;
     if (!Number.isNaN(experimentTreatmentFromEmbedURL)) {
-      let obj = parseRegisteredExperiments;
+      let obj = useLegacyExperiments;
       const legacyExperiments = obj.getLegacyExperiments();
       ({ experiments, overridesInfo } = legacyExperiments);
-      const apexExperiments = require("../client_override_hooks/useApexExperiments.tsx").getApexExperiments();
+      const apexExperiments = useApexExperiments.getApexExperiments();
       let tmp5 = experiments[experimentFromEmbedURL];
       if (tmp5 == null) {
         tmp5 = apexExperiments.experiments[experimentFromEmbedURL];
@@ -47,11 +47,10 @@ export const handleCodedLinkExperimentEmbedTap = function handleCodedLinkExperim
           const tmpResult1 = tmp(4481);
         }
       }
-      const obj2 = makeClientVariant;
     }
   }
   obj = { id: experimentFromEmbedURL };
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(
+  ActionSheetActionCreatorsDefault.openLazy(
     asyncRequireImpl(11807, dependencyMap.paths),
     "ExperimentOverrideSheet",
     obj,

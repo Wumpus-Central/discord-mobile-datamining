@@ -1,21 +1,19 @@
 // discord_app/modules/app_launcher/native/onboarding/hooks/useActivityApplications.tsx
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import EmbeddedActivitiesActionCreators from "../../../../activities/EmbeddedActivitiesActionCreators.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
-  "modules/app_launcher/native/onboarding/hooks/useActivityApplications.tsx",
-);
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/onboarding/hooks/useActivityApplications.tsx");
 
 export const useActivityApplications = function useActivityApplications(guildId) {
   guildId = guildId.guildId;
   const fetchesShelf = guildId.fetchesShelf;
   const items = [fetchesShelf, guildId];
   const mapped = fetchesShelf(12039)({ guildId }).map((application) => application.application);
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (fetchesShelf) {
-      let obj = guildId(closure_1_2[2]);
-      obj = { guildId: null };
-      obj[0] = guildId;
+      const obj = { guildId };
       const shelf = obj.fetchShelf(obj);
     }
   }, items);

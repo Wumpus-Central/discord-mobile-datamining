@@ -1,15 +1,15 @@
 // discord_app/modules/experiments/trigger_points/ConnectionOpenTriggerPoint.tsx
-import set from "../../../../_runtime/00002_set.js";
-import ExperimentBuckets from "../ExperimentConstants.tsx";
-import registeredExperimentIds from "Helpers.tsx";
-import apexExperiment from "../../content_inventory/ContentInventoryExperiments.tsx";
+import ExperimentConstants from "../ExperimentConstants.tsx";
+import Helpers from "Helpers.tsx";
+import ContentInventoryExperiments from "../../content_inventory/ContentInventoryExperiments.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const items = [apexExperiment.HotwheelsActivityFeedNvidiaExperiment];
-const commonTriggerPointConfiguration = new registeredExperimentIds.CommonTriggerPointConfiguration(
+const items = [ContentInventoryExperiments.HotwheelsActivityFeedNvidiaExperiment];
+const commonTriggerPointConfiguration = new Helpers.CommonTriggerPointConfiguration(
   items,
-  ExperimentBuckets.CommonTriggerPoints.CONNECTION_OPEN,
+  ExperimentConstants.CommonTriggerPoints.CONNECTION_OPEN,
   { location: "app open" },
 );
-const result = set.fileFinishedImporting("modules/experiments/trigger_points/ConnectionOpenTriggerPoint.tsx");
+const result = size.fileFinishedImporting("modules/experiments/trigger_points/ConnectionOpenTriggerPoint.tsx");
 
 export const ConnectionOpenTriggerPoint = commonTriggerPointConfiguration;

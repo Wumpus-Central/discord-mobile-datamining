@@ -1,13 +1,13 @@
 // discord_app/modules/cache/ClientStateStoreStorage.native.tsx
-import set from "../../../_runtime/00002_set.js";
-import enforcingDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeFastConnectModule.tsx";
+import NativeFastConnectModuleDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeFastConnectModule.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/cache/ClientStateStoreStorage.native.tsx");
+const result = size.fileFinishedImporting("modules/cache/ClientStateStoreStorage.native.tsx");
 
-export const setClientState = function setClientState(closure_17, arg1) {
+export const setClientState = function setClientState(arg0) {
   let str;
-  if (closure_17 != null) {
-    str = closure_17.toString();
+  if (arg0 != null) {
+    str = arg0.toString();
   }
-  enforcingDefault.setClientState(str, undefined);
+  NativeFastConnectModuleDefault.setClientState(str, undefined);
 };

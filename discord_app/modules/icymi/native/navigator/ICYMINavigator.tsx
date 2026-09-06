@@ -1,15 +1,14 @@
 // discord_app/modules/icymi/native/navigator/ICYMINavigator.tsx
-import set from "../../../../../_runtime/00002_set.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createNativeStackNavigator from "../../../../../_runtime/07913_createNativeStackNavigator.js";
-import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
+import NativeStackNavigator from "../../../../../_runtime/07913_NativeStackNavigator.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-({ jsx: obj1, jsxs: c3 } = jsxProd);
-let closure_4 = createNativeStackNavigator.createNativeStackNavigator();
-const result = set.fileFinishedImporting("modules/icymi/native/navigator/ICYMINavigator.tsx");
+({ jsx: c2, jsxs: c3 } = jsxProd);
+let closure_4 = NativeStackNavigator.createNativeStackNavigator();
+const result = size.fileFinishedImporting("modules/icymi/native/navigator/ICYMINavigator.tsx");
 
 export default function ICYMINavigator() {
-  let obj = NavigationStack;
+  let obj = require("Navigator");
   _require = obj.useAccessibilityNativeStackOptions();
   obj = {
     screenOptions() {
@@ -22,18 +21,18 @@ export default function ICYMINavigator() {
   obj = {
     name: "icymi-screen",
     getComponent() {
-      return callback(16450).ICYMITab;
+      return closure_0(16450).ICYMITab;
     },
   };
   const items = [
-    callback(closure_4.Screen, obj),
-    callback(closure_4.Screen, {
+    closure_2(closure_4.Screen, obj),
+    closure_2(closure_4.Screen, {
       name: "notifications-screen",
       getComponent() {
-        return callback(16401).ThemedNotificationsModal;
+        return closure_0(16401).ThemedNotificationsModal;
       },
     }),
   ];
-  obj[2] = items;
-  return callback2(closure_4.Navigator, obj);
+  obj.children = items;
+  return closure_3(closure_4.Navigator, obj);
 }

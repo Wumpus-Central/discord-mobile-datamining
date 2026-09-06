@@ -1,9 +1,11 @@
 // discord_app/modules/home_drawer/native/useDrawerState.tsx
-import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import NavigationRouteUtils from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/home_drawer/native/useDrawerState.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/home_drawer/native/useDrawerState.tsx");
 
 export const useDrawerOpen = function useDrawerOpen(enableHome) {
   let flag = enableHome;
@@ -11,10 +13,10 @@ export const useDrawerOpen = function useDrawerOpen(enableHome) {
     flag = true;
   }
   let navigation;
-  let callback;
+  _slicedToArray = undefined;
   navigation = flag(navigation[2]).useNavigation();
-  const tmp2 = callback(
-    React.useState(() => {
+  const tmp2 = _slicedToArray(
+    noop.useState(() => {
       if (flag) {
         const state = navigation.getState();
         let tmp6;
@@ -31,7 +33,7 @@ export const useDrawerOpen = function useDrawerOpen(enableHome) {
             tmp6 = routes[num];
           }
         }
-        const coerceGuildsRouteResult = flag(navigation[3]).coerceGuildsRoute(tmp6);
+        const coerceGuildsRouteResult = NavigationRouteUtils.coerceGuildsRoute(tmp6);
         let drawerOpen;
         if (coerceGuildsRouteResult != null) {
           const params = coerceGuildsRouteResult.params;
@@ -46,9 +48,9 @@ export const useDrawerOpen = function useDrawerOpen(enableHome) {
     }),
     2,
   );
-  callback = tmp2[1];
+  _slicedToArray = tmp2[1];
   const items = [navigation, flag];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     function handleStateChange(data) {
       const state = data.data.state;
       let tmp;
@@ -65,20 +67,20 @@ export const useDrawerOpen = function useDrawerOpen(enableHome) {
           tmp = routes[num];
         }
       }
-      const coerceGuildsRouteResult = handleStateChange(closure_1_1[3]).coerceGuildsRoute(tmp);
+      const coerceGuildsRouteResult = flag(navigation[3]).coerceGuildsRoute(tmp);
       if (null != coerceGuildsRouteResult) {
         const params = coerceGuildsRouteResult.params;
         let drawerOpen;
         if (params != null) {
           drawerOpen = params.drawerOpen;
         }
-        callback(true === drawerOpen);
+        closure_1_2(true === drawerOpen);
       }
     }
     if (handleStateChange) {
       navigation.addListener("state", handleStateChange);
       return () => {
-        closure_1_1.removeListener("state", handleStateChange);
+        navigation.removeListener("state", handleStateChange);
       };
     }
   }, items);

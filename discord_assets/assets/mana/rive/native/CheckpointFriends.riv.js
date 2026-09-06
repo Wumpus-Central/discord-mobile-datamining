@@ -1,7 +1,7 @@
 // discord_assets/assets/mana/rive/native/CheckpointFriends.riv.js
-import set from "../../../../../_runtime/00002_set.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("../discord_assets/assets/mana/rive/native/CheckpointFriends.riv.js");
+const result = size.fileFinishedImporting("../discord_assets/assets/mana/rive/native/CheckpointFriends.riv.js");
 
 export default "https://cdn.discordapp.com/assets/content/954efaa61076f0455bdcb033ad6b06abe7b30d052eb006df9f8bcbae98ad74f9.riv";
 export const metadata = { fileBytes: 5436678 };

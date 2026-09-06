@@ -1,17 +1,19 @@
 // discord_app/modules/guild_identity/native/EditGuildIdentityAvatar.tsx
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../stores/GuildMemberStore.tsx";
-import closure_5 from "../../../stores/UserStore.tsx";
-import ME from "../../../Constants.tsx";
-import { PremiumUpsellTypes } from "../../premium/PremiumConstants.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
+import noop from "../../../../_runtime/metro/00019__.js";
+import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
 
-const require = arg1;
-({ AnalyticsSections: closure_6, AnalyticsObjects: error, UpsellTypes: closure_8 } = ME);
-({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-let closure_12 = createCacheKey.createStyles({ editAvatarIcon: { position: "absolute", right: 0 } });
-let result = require("set").fileFinishedImporting("modules/guild_identity/native/EditGuildIdentityAvatar.tsx");
+require = fn;
+const Constants = fn(1074);
+({ AnalyticsSections: metroRequire, AnalyticsObjects: closure_7, UpsellTypes: closure_8 } = Constants);
+const PremiumUpsellTypes = fn(1373).PremiumUpsellTypes;
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(4560);
+let closure_12 = createStyles.createStyles({ editAvatarIcon: { position: "absolute", right: 0 } });
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_identity/native/EditGuildIdentityAvatar.tsx");
 
 export default function EditGuildIdentityAvatar(userId) {
   const guildId = userId.guildId;
@@ -19,20 +21,16 @@ export default function EditGuildIdentityAvatar(userId) {
   if (disableStatus === undefined) {
     disableStatus = true;
   }
-  let stateFromStores;
   let stateFromStores1;
-  let analyticsLocations;
   setPendingAvatar = undefined;
-  closure_5 = undefined;
-  c6 = undefined;
-  closure_7 = undefined;
+  let handleUploadAvatarSelect;
   c8 = undefined;
   let avatarDecoration;
   ({ style, statusStyle, avatarStyle } = userId);
   let obj = guildId(stateFromStores1[7]);
-  const items = [closure_5];
-  stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  obj1 = guildId(stateFromStores1[7]);
+  const items = [handleUploadAvatarSelect];
+  const stateFromStores = obj.useStateFromStores(items, () => handleUploadAvatarSelect.getCurrentUser());
+  let obj1 = guildId(stateFromStores1[7]);
   const items1 = [setPendingAvatar];
   stateFromStores1 = obj1.useStateFromStores(items1, () => {
     let member = null;
@@ -41,13 +39,12 @@ export default function EditGuildIdentityAvatar(userId) {
       if (tmp != null) {
         id = tmp.id;
       }
-      member = setPendingAvatar.getMember(guildId, id);
-      const tmp4 = guildId;
+      member = GuildMemberStore.getMember(guildId, id);
     }
     return member;
   });
-  let tmp = callback();
-  analyticsLocations = stateFromStores(stateFromStores1[8])(
+  let tmp = closure_12();
+  const analyticsLocations = stateFromStores(stateFromStores1[8])(
     stateFromStores(stateFromStores1[9]).EDIT_AVATAR,
   ).analyticsLocations;
   const tmp7 = stateFromStores(stateFromStores1[8]);
@@ -56,7 +53,7 @@ export default function EditGuildIdentityAvatar(userId) {
     analyticsLocations,
   }));
   const tmp9 = stateFromStores(stateFromStores1[11])({ guildId, analyticsLocations });
-  closure_5 = tmp9;
+  handleUploadAvatarSelect = tmp9;
   const tmp8 = stateFromStores(stateFromStores1[10])({ guildId, analyticsLocations });
   const pendingAvatarSrc = guildId(stateFromStores1[12]).getPendingAvatarSrc({
     userId: userId.userId,
@@ -67,7 +64,7 @@ export default function EditGuildIdentityAvatar(userId) {
   c6 = result;
   const obj4 = stateFromStores(stateFromStores1[13]);
   const tmp12 = !stateFromStores(stateFromStores1[13]).canUseAnimatedAvatar(stateFromStores);
-  closure_7 = tmp12;
+  const showAnimatedAvatarUpsell = tmp12;
   const obj5 = stateFromStores(stateFromStores1[13]);
   let avatar;
   if (stateFromStores1 != null) {
@@ -98,21 +95,11 @@ export default function EditGuildIdentityAvatar(userId) {
   ];
   let tmp19Result = null;
   if (null != stateFromStores) {
-    obj = {
-      style: null,
-      disabled: null,
-      onPress: null,
-      accessibilityRole: "button",
-      accessibilityLabel: null,
-      children: null,
-    };
-    obj[0] = style;
-    obj[1] = disabled;
-    obj[2] = tmp17;
+    obj = { style, disabled, onPress: tmp17, accessibilityRole: "button", accessibilityLabel: null, children: null };
     const intl = tmp2(tmp3[23]).intl;
-    obj[4] = intl.string(tmp2(tmp3[23]).t["70lEQe"]);
+    obj.accessibilityLabel = intl.string(tmp2(tmp3[23]).t["70lEQe"]);
     obj = {
-      user: null,
+      user: stateFromStores,
       guildId: null,
       pendingAvatarSrc: null,
       pendingAvatarDecoration: null,
@@ -120,32 +107,29 @@ export default function EditGuildIdentityAvatar(userId) {
       disableStatus: null,
       style: null,
     };
-    obj[0] = stateFromStores;
     let tmp23;
     if (null !== pendingAvatar) {
       tmp23 = guildId;
     }
-    obj[1] = tmp23;
+    obj.guildId = tmp23;
     let tmp24;
     if (null !== pendingAvatar) {
       tmp24 = pendingAvatarSrc;
     }
-    obj[2] = tmp24;
-    obj[3] = pendingAvatarDecoration;
-    obj[4] = statusStyle;
-    obj[5] = disableStatus;
-    obj[6] = avatarStyle;
+    obj.pendingAvatarSrc = tmp24;
+    obj.pendingAvatarDecoration = pendingAvatarDecoration;
+    obj.statusStyle = statusStyle;
+    obj.disableStatus = disableStatus;
+    obj.style = avatarStyle;
     const items3 = [closure_10(tmp6(tmp3[24]), obj)];
     let tmp20Result = !disabled;
     if (!disabled) {
-      obj1 = { style: null };
-      obj1[0] = tmp.editAvatarIcon;
+      obj1 = { style: tmp.editAvatarIcon };
       tmp20Result = tmp20(tmp6(tmp3[25]), obj1);
     }
     items3[1] = tmp20Result;
-    obj[5] = items3;
+    obj.children = items3;
     tmp19Result = closure_11(tmp2(tmp3[22]).PressableOpacity, obj);
-    const tmp19 = closure_11;
     const tmp6Result = tmp6(tmp3[24]);
   }
   return tmp19Result;

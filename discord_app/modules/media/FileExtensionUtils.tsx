@@ -1,8 +1,8 @@
 // discord_app/modules/media/FileExtensionUtils.tsx
-import set from "../../../_runtime/00002_set.js";
-import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
+import URLUtilsDefault from "../../utils/URLUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-let closure_2 = {
+const dependencyMap = {
   "image/avif": "avif",
   "image/gif": "gif",
   "image/heic": "heic",
@@ -13,7 +13,7 @@ let closure_2 = {
   "video/quicktime": "mov",
   "video/webm": "webm",
 };
-const result = set.fileFinishedImporting("modules/media/FileExtensionUtils.tsx");
+const result = size.fileFinishedImporting("modules/media/FileExtensionUtils.tsx");
 
 export const getExtensionFromContentType = function getExtensionFromContentType(str) {
   if (null != str) {
@@ -37,14 +37,14 @@ export const getExtensionFromContentType = function getExtensionFromContentType(
     obj = /^(image|video)\//;
   }
 };
-export const decideFileExtension = function decideFileExtension(closure_1_0, closure_1_1, arg2) {
+export const decideFileExtension = function decideFileExtension(uri, contentType, arg2) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = false;
   }
   let tmp;
   if (flag) {
-    const toURLSafeResult = isDiscordProxiedAssetUrlDefault.toURLSafe(closure_1_0);
+    const toURLSafeResult = URLUtilsDefault.toURLSafe(uri);
     let formatted;
     if (toURLSafeResult != null) {
       const searchParams = toURLSafeResult.searchParams;
@@ -64,12 +64,11 @@ export const decideFileExtension = function decideFileExtension(closure_1_0, clo
       }
     }
     tmp = tmp7;
-    const obj = isDiscordProxiedAssetUrlDefault;
   }
   if (tmp == null) {
     let tmp9;
-    if (null != closure_1_1) {
-      const str6 = closure_1_1.toLowerCase();
+    if (null != contentType) {
+      const str6 = contentType.toLowerCase();
       if (obj2.test(str6)) {
         tmp9 = dependencyMap[str6];
         if (null == tmp9) {
@@ -90,7 +89,7 @@ export const decideFileExtension = function decideFileExtension(closure_1_0, clo
     tmp = tmp9;
   }
   if (tmp == null) {
-    const toURLSafeResult1 = isDiscordProxiedAssetUrlDefault.toURLSafe(closure_1_0);
+    const toURLSafeResult1 = URLUtilsDefault.toURLSafe(uri);
     let tmp15;
     if (null != toURLSafeResult1) {
       let formatted1;
@@ -112,7 +111,6 @@ export const decideFileExtension = function decideFileExtension(closure_1_0, clo
       tmp15 = tmp14;
     }
     tmp = tmp15;
-    const obj3 = isDiscordProxiedAssetUrlDefault;
   }
   return tmp;
 };

@@ -1,25 +1,24 @@
 // discord_app/utils/native/openChannelCallModalForChannelId.tsx
-import openChannelCallModal from "PrivateChannelCallUtils.tsx";
-import connectToStage from "../../modules/stage_channels/StageChannelModalActionCreators.tsx";
-import closure_2 from "../../stores/ChannelStore.tsx";
+import PrivateChannelCallUtils from "PrivateChannelCallUtils.tsx";
+import StageChannelModalActionCreators from "../../modules/stage_channels/StageChannelModalActionCreators.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("utils/native/openChannelCallModalForChannelId.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("utils/native/openChannelCallModalForChannelId.tsx");
 
 export default function openChannelCallModalForChannelId(arg0, arg1) {
-  channel = channel.getChannel(arg0);
+  const channel = ChannelStore.getChannel(arg0);
   if (null != channel) {
     let isGuildStageVoiceResult = arg1;
     if (arg1) {
       isGuildStageVoiceResult = channel.isGuildStageVoice();
     }
     if (isGuildStageVoiceResult) {
-      isGuildStageVoiceResult = false === connectToStage.connectToStage(channel);
-      const obj2 = connectToStage;
+      isGuildStageVoiceResult = false === StageChannelModalActionCreators.connectToStage(channel);
     }
     if (!isGuildStageVoiceResult) {
-      openChannelCallModal.openChannelCallModal(channel);
-      const obj3 = openChannelCallModal;
+      PrivateChannelCallUtils.openChannelCallModal(channel);
     }
   }
 }

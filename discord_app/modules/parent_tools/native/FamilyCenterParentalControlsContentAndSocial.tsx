@@ -1,52 +1,52 @@
 // discord_app/modules/parent_tools/native/FamilyCenterParentalControlsContentAndSocial.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import combinedDefault from "../../../utils/HelpdeskUtils.tsx";
-import createToggle from "../../settings/native/renderer/SettingBuilders.tsx";
-import _modDef14689 from "../../settings/native/renderer/SettingLayout.tsx";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import { HelpdeskArticles } from "../../../Constants.tsx";
-import { MobileUserSettings } from "../../user_settings/core/native/SettingsConstants.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import util from "../../../intl/index.native.tsx";
+import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
+import SettingBuilders from "../../settings/native/renderer/SettingBuilders.tsx";
+import SettingLayoutDefault from "../../settings/native/renderer/SettingLayout.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting(
+require = fn;
+const View = fn(17).View;
+const HelpdeskArticles = fn(1074).HelpdeskArticles;
+const MobileUserSettings = fn(7975).MobileUserSettings;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/parent_tools/native/FamilyCenterParentalControlsContentAndSocial.tsx",
 );
 
 export default function FamilyCenterParentalControlsContentAndSocial() {
-  let obj = createToggle;
-  obj = { sections: null };
-  obj = { settings: items, subLabel: null };
-  items = [MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS];
-  const intl = getSystemLocale.intl;
-  obj1 = { learnMoreLink: null };
-  let obj4 = combinedDefault;
-  obj1[0] = obj4.getArticleURL(HelpdeskArticles.EXPLICIT_MEDIA_REDACTION);
-  obj[1] = intl.format(getSystemLocale.t.dliU4j, obj1);
+  let obj = { sections: null };
+  obj = { settings: null, subLabel: null };
+  const items = [MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS];
+  obj.settings = items;
+  const intl = util.intl;
+  const obj1 = { learnMoreLink: null };
+  let obj4 = HelpdeskUtilsDefault;
+  obj1.learnMoreLink = obj4.getArticleURL(HelpdeskArticles.EXPLICIT_MEDIA_REDACTION);
+  obj.subLabel = intl.format(util.t.dliU4j, obj1);
   const items1 = [obj, ,];
   const obj2 = { label: null, settings: null };
-  const intl2 = getSystemLocale.intl;
-  obj2[0] = intl2.string(getSystemLocale.t.MeYuqs);
+  const intl2 = util.intl;
+  obj2.label = intl2.string(util.t.MeYuqs);
   const items2 = [,];
   ({ PARENTAL_CONTROLS_DIRECT_MESSAGES: arr3[0], PARENTAL_CONTROLS_MESSAGE_REQUESTS: arr3[1] } = MobileUserSettings);
-  obj2[1] = items2;
+  obj2.settings = items2;
   items1[1] = obj2;
   const obj3 = { label: null, settings: null };
-  const intl3 = getSystemLocale.intl;
-  obj3[0] = intl3.string(getSystemLocale.t.XlGG9c);
+  const intl3 = util.intl;
+  obj3.label = intl3.string(util.t.XlGG9c);
   const items3 = [, ,];
   ({
     PARENTAL_CONTROLS_FRIEND_REQUESTS_EVERYONE: arr4[0],
     PARENTAL_CONTROLS_FRIEND_REQUESTS_MUTUAL_FRIENDS: arr4[1],
     PARENTAL_CONTROLS_FRIEND_REQUESTS_MUTUAL_GUILDS: arr4[2],
   } = MobileUserSettings);
-  obj3[1] = items3;
+  obj3.settings = items3;
   items1[2] = obj3;
-  obj[0] = items1;
+  obj.sections = items1;
   obj4 = { children: null };
   const list = obj.createList(obj);
-  obj4[0] = jsx(_modDef14689, { node: list });
+  obj4.children = jsx(SettingLayoutDefault, { node: list });
   return <View>{null}</View>;
 }

@@ -1,25 +1,24 @@
 // discord_app/modules/go_live/utils/getFrontierTuningConfigIfEligible.tsx
-import getPremiumPlanItemDefault from "../../../utils/PremiumUtils.tsx";
-import closure_3 from "../../../stores/GuildStore.tsx";
-import { BoostedGuildTiers } from "../../../Constants.tsx";
+import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
+import GuildStore from "../../../stores/GuildStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/go_live/utils/getFrontierTuningConfigIfEligible.tsx");
+const require = fn;
+const BoostedGuildTiers = fn(1074).BoostedGuildTiers;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/go_live/utils/getFrontierTuningConfigIfEligible.tsx");
 
-export default function getFrontierTuningConfigIfEligible(arg0, currentUser) {
-  if (null != arg2) {
-    guild = guild.getGuild(arg2);
+export default function getFrontierTuningConfigIfEligible(location, currentUser, guildId) {
+  if (null != guildId) {
+    const guild = GuildStore.getGuild(guildId);
     let premiumTier;
     if (guild != null) {
       premiumTier = guild.premiumTier;
     }
     if (premiumTier === BoostedGuildTiers.NONE) {
       if (!obj4.isPremium(currentUser)) {
-        let obj = getPremiumPlanItemDefault;
-        if (!obj.canStreamQuality(getPremiumPlanItemDefault.StreamQuality.MID, currentUser)) {
-          obj = { location: null, guildId: null };
-          obj[0] = arg0;
-          obj[1] = arg2;
+        let obj = PremiumUtilsDefault;
+        if (!obj.canStreamQuality(PremiumUtilsDefault.StreamQuality.MID, currentUser)) {
+          obj = { location, guildId };
           const config = tmp3(4699).getConfig(obj);
           let tmp6 = null;
           if (null != config.maxBitrate) {

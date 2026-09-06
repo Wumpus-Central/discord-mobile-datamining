@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/premium/native/utils/PremiumNitroHomeUtils.tsx
-import set from "../../../../../../_runtime/00002_set.js";
-import ME from "../../../../../Constants.tsx";
-import expandEventPropertiesDefault from "../../../../../utils/AnalyticsUtils.tsx";
+import Constants from "../../../../../Constants.tsx";
+import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/user_settings/premium/native/utils/PremiumNitroHomeUtils.tsx");
+const AnalyticEvents = Constants.AnalyticEvents;
+const result = size.fileFinishedImporting("modules/user_settings/premium/native/utils/PremiumNitroHomeUtils.tsx");
 
 export const trackIfScrolledToBottom = function trackIfScrolledToBottom(trackedType) {
   ({ nativeEvent, hasTrackedScrolledToBottom } = trackedType);
@@ -18,9 +18,7 @@ export const trackIfScrolledToBottom = function trackIfScrolledToBottom(trackedT
     current = sum < Math.floor(tmp3.height);
   }
   if (!current) {
-    let obj = expandEventPropertiesDefault;
-    obj = { type: null };
-    obj[0] = trackedType.trackedType;
+    const obj = { type: trackedType.trackedType };
     obj.track(AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, obj);
     hasTrackedScrolledToBottom.current = true;
   }

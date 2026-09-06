@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/UserProfileApplicationWidgetTypes.tsx
-import set from "../../../_runtime/00002_set.js";
 import WidgetType from "../../../discord_common/js/shared/shared-constants/WidgetType.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 let ApplicationWidget;
 class ApplicationWidget {
@@ -8,16 +8,14 @@ class ApplicationWidget {
     ({ id, applicationId } = global);
     obj = Object.create(new.target.prototype);
     obj.id = id;
-    obj.type = require("WidgetType").WidgetType.APPLICATION;
+    obj.type = closure_0(closure_1[0]).WidgetType.APPLICATION;
     obj.applicationId = applicationId;
     return obj;
   }
 }
 const prototype = ApplicationWidget.prototype;
 prototype["toSubmission"] = function toSubmission() {
-  obj = { id: this.id, data: obj };
-  obj = { type: this.type, application_id: this.applicationId };
-  return obj;
+  return { id: this.id, data: { type: this.type, application_id: this.applicationId } };
 };
 prototype["isUpdatable"] = function isUpdatable() {
   return true;
@@ -45,10 +43,10 @@ prototype["getProfileAnalyticsOptions"] = function getProfileAnalyticsOptions() 
 prototype["getProfileEditAnalyticsOptions"] = function getProfileEditAnalyticsOptions() {
   return { widgetEdited: this.type, applicationId: this.applicationId };
 };
-const result = set.fileFinishedImporting("modules/user_profile/UserProfileApplicationWidgetTypes.tsx");
+const result = size.fileFinishedImporting("modules/user_profile/UserProfileApplicationWidgetTypes.tsx");
 
 export { ApplicationWidget };
-export const isApplicationWidgetWithId = function isApplicationWidgetWithId(applicationId) {
+export const isApplicationWidgetWithId = function isApplicationWidgetWithId(applicationId, arg1) {
   let tmp = null != arg1;
   if (tmp) {
     tmp = applicationId instanceof ApplicationWidget;

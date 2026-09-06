@@ -1,16 +1,17 @@
 // discord_app/modules/app_dms/getAppDMApplication.tsx
-import closure_0 from "../applications/ApplicationStore.tsx";
-import closure_1 from "../user_profile/UserProfileStore.tsx";
-import closure_2 from "../../stores/UserStore.tsx";
+import ApplicationStore from "../applications/ApplicationStore.tsx";
+import UserProfileStore from "../user_profile/UserProfileStore.tsx";
+import UserStore from "../../stores/UserStore.tsx";
 
-const result = require("set").fileFinishedImporting("modules/app_dms/getAppDMApplication.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_dms/getAppDMApplication.tsx");
 
 export const getAppDMApplication = function getAppDMApplication(channel) {
   let recipientId;
   if (channel.isPrivate()) {
     recipientId = channel.getRecipientId();
   }
-  user = user.getUser(recipientId);
+  const user = UserStore.getUser(recipientId);
   let bot;
   if (user != null) {
     bot = user.bot;
@@ -19,9 +20,9 @@ export const getAppDMApplication = function getAppDMApplication(channel) {
   if (true === bot) {
     tmp4 = recipientId;
   }
-  appIdForBotUserId = appIdForBotUserId.getAppIdForBotUserId(tmp4);
+  let appIdForBotUserId = ApplicationStore.getAppIdForBotUserId(tmp4);
   if (null != tmp4) {
-    userProfile = userProfile.getUserProfile(tmp4);
+    const userProfile = UserProfileStore.getUserProfile(tmp4);
     let id;
     if (userProfile != null) {
       const application = userProfile.application;
@@ -34,5 +35,5 @@ export const getAppDMApplication = function getAppDMApplication(channel) {
   if (appIdForBotUserId == null) {
     appIdForBotUserId = tmp6;
   }
-  return appIdForBotUserId.getApplication(appIdForBotUserId);
+  return ApplicationStore.getApplication(appIdForBotUserId);
 };

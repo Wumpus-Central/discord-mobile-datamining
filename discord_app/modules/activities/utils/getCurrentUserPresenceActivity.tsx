@@ -1,9 +1,9 @@
 // discord_app/modules/activities/utils/getCurrentUserPresenceActivity.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/activities/utils/getCurrentUserPresenceActivity.tsx");
+const result = size.fileFinishedImporting("modules/activities/utils/getCurrentUserPresenceActivity.tsx");
 
-export default function getCurrentUserPresenceActivity(getApplicationActivity, getApplicationActivity2) {
+export default function getCurrentUserPresenceActivity(getApplicationActivity, getApplicationActivity2, arg2) {
   closure_0 = arg2;
   let tmp = null;
   if (null != arg2) {

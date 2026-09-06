@@ -1,8 +1,7 @@
 // discord_app/modules/messages/MessageQueueManager.tsx
-import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
-import itemsDefault from "../../lib/MessageQueue.tsx";
+import MessageQueueDefault from "../../lib/MessageQueue.tsx";
+import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
-initializeDefault;
 class MessageQueueManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -11,9 +10,10 @@ class MessageQueueManager extends tmp2 {
   }
 }
 MessageQueueManager.prototype["handleLogout"] = function handleLogout() {
-  itemsDefault.clear();
+  MessageQueueDefault.clear();
 };
 const messageQueueManager = new MessageQueueManager();
-const result = require("set").fileFinishedImporting("modules/messages/MessageQueueManager.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/MessageQueueManager.tsx");
 
 export default messageQueueManager;

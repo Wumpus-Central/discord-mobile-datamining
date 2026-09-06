@@ -1,30 +1,32 @@
 // discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
-import logger from "AnalyticsTrackingStore.tsx";
-import ImpressionGroups from "StandardAnalyticsConstants.tsx";
-import queueTrackingEventMaker from "AnalyticsTrackingActionCreators.tsx";
+import _modDef38 from "../../../../_runtime/metro/00038__.js";
+import AnalyticsTrackingStore from "AnalyticsTrackingStore.tsx";
+import StandardAnalyticsConstants from "StandardAnalyticsConstants.tsx";
+import AnalyticsTrackingActionCreators from "AnalyticsTrackingActionCreators.tsx";
+import _modDef1332 from "../../../../_runtime/metro/01332__.js";
 import encodeProperties from "encodeProperties.tsx";
-import ImpressionNames from "AnalyticsSchema.tsx";
-import getOS from "getSuperProperties.tsx";
+import AnalyticsSchema from "AnalyticsSchema.tsx";
+import getSuperProperties from "getSuperProperties.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-let closure_4 = {};
+const dependencyMap = {};
 let closure_5 = {};
-const result = set.fileFinishedImporting("../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx");
 
 export const encodeProperties = encodeProperties.encodeProperties;
-export const analyticsTrackingStoreMaker = logger.analyticsTrackingStoreMaker;
-export const AnalyticsActionHandlers = logger.AnalyticsActionHandlers;
-export const ImpressionTypes = ImpressionGroups.ImpressionTypes;
-export const ImpressionGroups = ImpressionGroups.ImpressionGroups;
-export const ImpressionNames = ImpressionNames.ImpressionNames;
-export const NetworkActionNames = ImpressionNames.NetworkActionNames;
-export const SpanTtiNames = ImpressionNames.SpanTtiNames;
-export const getSuperProperties = getOS.getSuperProperties;
-export const getSuperPropertiesBase64 = getOS.getSuperPropertiesBase64;
-export const extendSuperProperties = getOS.extendSuperProperties;
-export const getOS = getOS.getOS;
-export const getDevice = getOS.getDevice;
-export const getCampaignParams = getOS.getCampaignParams;
+export const analyticsTrackingStoreMaker = AnalyticsTrackingStore.analyticsTrackingStoreMaker;
+export const AnalyticsActionHandlers = AnalyticsTrackingStore.AnalyticsActionHandlers;
+export const ImpressionTypes = StandardAnalyticsConstants.ImpressionTypes;
+export const ImpressionGroups = StandardAnalyticsConstants.ImpressionGroups;
+export const ImpressionNames = AnalyticsSchema.ImpressionNames;
+export const NetworkActionNames = AnalyticsSchema.NetworkActionNames;
+export const SpanTtiNames = AnalyticsSchema.SpanTtiNames;
+export const getSuperProperties = getSuperProperties.getSuperProperties;
+export const getSuperPropertiesBase64 = getSuperProperties.getSuperPropertiesBase64;
+export const extendSuperProperties = getSuperProperties.extendSuperProperties;
+export const getOS = getSuperProperties.getOS;
+export const getDevice = getSuperProperties.getDevice;
+export const getCampaignParams = getSuperProperties.getCampaignParams;
 export const isThrottled = function isThrottled(CHANNEL_OPENED) {
   let tmp = null != dependencyMap[CHANNEL_OPENED];
   if (tmp) {
@@ -35,16 +37,15 @@ export const isThrottled = function isThrottled(CHANNEL_OPENED) {
 };
 export const trackMaker = (arg0) => {
   ({ addBreadcrumb: global, analyticEventConfigs: require } = arg0);
-  closure_2 = undefined;
   ({ dispatcher, TRACK_ACTION_NAME } = arg0);
-  closure_2 = queueTrackingEventMaker.queueTrackingEventMaker(dispatcher, TRACK_ACTION_NAME);
+  closure_2 = AnalyticsTrackingActionCreators.queueTrackingEventMaker(dispatcher, TRACK_ACTION_NAME);
   return function track(arg0, arg1) {
     let obj = arg2;
     if (arg2 === undefined) {
       obj = {};
     }
-    if (null != closure_1_0.isServerRendering) {
-      if (true === closure_1_0.isServerRendering) {
+    if (null != global.isServerRendering) {
+      if (true === global.isServerRendering) {
         return Promise.resolve();
       }
     }
@@ -53,7 +54,7 @@ export const trackMaker = (arg0) => {
       obj = {};
     }
     let obj3 = tmp;
-    if (typeof table[arg0] === "function") {
+    if (typeof require[arg0] === "function") {
       let tmpResult = tmp(obj);
       if (tmpResult == null) {
         tmpResult = null;
@@ -65,7 +66,7 @@ export const trackMaker = (arg0) => {
         const items = [arg0];
         HermesBuiltin.arraySpread(obj3.throttleKeys(obj), 1);
         const joined = items.join("_");
-        let tmp13 = null != closure_1_4[joined];
+        let tmp13 = null != closure_4[joined];
         if (tmp13) {
           const _Date = Date;
           tmp13 = tmp12[joined] > Date.now();
@@ -80,12 +81,12 @@ export const trackMaker = (arg0) => {
             }
           }
           if (obj3.deduplicate) {
-            if (callback2(closure_1_3[3])(closure_1_5[joined], obj)) {
+            if (_modDef1332(closure_5[joined], obj)) {
               return Promise.resolve();
             } else {
               tmp15[joined] = obj;
             }
-            tmp15 = closure_1_5;
+            tmp15 = closure_5;
           }
           const _Date2 = Date;
           tmp12[joined] = Date.now() + obj3.throttlePeriod;
@@ -97,13 +98,12 @@ export const trackMaker = (arg0) => {
         }
       } else {
         const _HermesInternal = HermesInternal;
-        callback2(closure_1_3[4])(false, "Unsupported analytics event config: " + obj3);
-        const tmp5 = callback2(closure_1_3[4]);
+        _modDef38(false, "Unsupported analytics event config: " + obj3);
       }
     }
-    if (callback != null) {
-      callback(arg0);
+    if (closure_1_0 != null) {
+      closure_1_0(arg0);
     }
-    return callback2(arg0, arg1, obj);
+    return closure_2(arg0, arg1, obj);
   };
 };

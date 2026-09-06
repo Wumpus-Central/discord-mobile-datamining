@@ -1,40 +1,40 @@
 // discord_app/modules/game_profile/native/components/GameProfileSummary.tsx
-import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import GameProfileAnalyticUtils from "../../GameProfileAnalyticUtils.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-({ View: c4, Pressable: c5 } = get_ActivityIndicator);
-({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_8 = createCacheKey.createStyles({ container: { flexDirection: "column" } });
-const result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameProfileSummary.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, Pressable: hasOwnProperty } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4560);
+let closure_8 = createStyles.createStyles({ container: { flexDirection: "column" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileSummary.tsx");
 
 export default function GameProfileSummary(arg0) {
   ({ game, trackAction } = arg0);
-  let first;
-  let callback;
+  _slicedToArray = undefined;
   let first1;
-  closure_4 = undefined;
-  const tmp2 = callback(first1.useState(false), 2);
-  first = tmp2[0];
-  callback = tmp2[1];
-  const tmp4 = callback(first1.useState(null), 2);
+  const tmp2 = _slicedToArray(first1.useState(false), 2);
+  const first = tmp2[0];
+  _slicedToArray = tmp2[1];
+  const tmp4 = _slicedToArray(first1.useState(null), 2);
   first1 = tmp4[0];
   closure_4 = tmp4[1];
   const items = [first1];
   const items1 = [first, trackAction];
-  callback = first1.useCallback((nativeEvent) => {
+  const callback = first1.useCallback((nativeEvent) => {
     if (null == first1) {
-      callback2(nativeEvent.nativeEvent.lines.length > 3);
+      closure_4(nativeEvent.nativeEvent.lines.length > 3);
     }
   }, items);
   let summaryLocalized;
   const callback1 = first1.useCallback(() => {
-    const GameProfileTrackActionActions = trackAction(first[5]).GameProfileTrackActionActions;
+    const GameProfileTrackActionActions = GameProfileAnalyticUtils.GameProfileTrackActionActions;
     trackAction(first ? GameProfileTrackActionActions.ShowLess : GameProfileTrackActionActions.ShowMore);
-    callback(!first);
+    closure_2(!first);
   }, items1);
   if (game != null) {
     summaryLocalized = game.summaryLocalized;
@@ -52,32 +52,25 @@ export default function GameProfileSummary(arg0) {
     const intl = trackAction(first[6]).intl;
     const t = trackAction(first[6]).t;
     const stringResult = intl.string(first ? t["6MwJo/"] : t.lBeKY2);
-    let obj = { style: null, children: null };
-    obj[0] = tmp.container;
+    let obj = { style: tmp.container, children: null };
     obj = {
       variant: "text-md/normal",
       color: "interactive-text-active",
-      lineClamp: null,
-      onTextLayout: null,
-      children: null,
+      lineClamp: num,
+      onTextLayout: callback,
+      children: summaryLocalized,
     };
-    obj[2] = num;
-    obj[3] = callback;
-    obj[4] = summaryLocalized;
     const items2 = [closure_6(trackAction(first[7]).Text, obj)];
     let tmp13Result = null;
     if (first1) {
-      obj = { onPress: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
-      obj[0] = callback1;
-      obj[2] = stringResult;
-      obj1 = { variant: "text-md/medium", color: "text-brand", children: null };
-      obj1[2] = stringResult;
-      obj[3] = tmp13(tmp16(tmp17[7]).Text, obj1);
+      obj = { onPress: callback1, accessibilityRole: "button", accessibilityLabel: stringResult, children: null };
+      const obj1 = { variant: "text-md/medium", color: "text-brand", children: stringResult };
+      obj.children = tmp13(tmp16(tmp17[7]).Text, obj1);
       tmp13Result = tmp13(closure_5, obj);
     }
     items2[1] = tmp13Result;
-    obj[1] = items2;
+    obj.children = items2;
     return closure_7(closure_4, obj);
   }
-  tmp = callback2();
+  tmp = closure_8();
 }

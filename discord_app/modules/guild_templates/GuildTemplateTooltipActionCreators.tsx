@@ -1,76 +1,72 @@
 // discord_app/modules/guild_templates/GuildTemplateTooltipActionCreators.tsx
-import dispatcherDefault from "../../Dispatcher.tsx";
-import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_3 from "../../stores/PermissionStore.tsx";
-import { Permissions } from "../../Constants.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import PermissionStore from "../../stores/PermissionStore.tsx";
 
-const result = require("set").fileFinishedImporting("modules/guild_templates/GuildTemplateTooltipActionCreators.tsx");
+const Permissions = fn(1074).Permissions;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_templates/GuildTemplateTooltipActionCreators.tsx");
 
 export default {
-  checkGuildTemplateDirty(closure_0) {
-    return callback(function* () {
-      if (v0 === 2) {
-        v0 = 3;
-        HermesBuiltin.throwTypeError();
+  checkGuildTemplateDirty(guildId) {
+    closure_0 = guildId;
+    return (async (arg0, value) => {
+      if (guildId === 2) {
+        guildId = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp3 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          let obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
         }
       } else {
         try {
-          v0 = 2;
-          if (0 === table) {
+          guildId = 2;
+          if (0 === c1) {
             if (arg0 === 1) {
-              v0 = 3;
-              throw arg1;
+              guildId = 3;
+              throw value;
             } else if (arg0 === 2) {
-              v0 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              guildId = 3;
+              obj = { value, done: true };
               return obj;
             } else {
-              obj1 = { guildId: null };
-              obj1[0] = v0;
-              if (closure_1_3.canWithPartialContext(closure_1_4.MANAGE_GUILD, obj1)) {
-                obj1 = v0(table[3]);
-                table = 1;
-                v0 = 1;
-                const obj2 = { value: null, done: false };
-                obj2[0] = obj1.loadTemplatesForGuild(tmp15);
+              let obj1 = { guildId };
+              if (PermissionStore.canWithPartialContext(constants.MANAGE_GUILD, obj1)) {
+                obj1 = guildId(c1[3]);
+                c1 = 1;
+                guildId = 1;
+                const obj2 = { value: obj1.loadTemplatesForGuild(tmp14), done: false };
                 return obj2;
               }
-              tmp15 = v0;
+              tmp14 = guildId;
             }
           } else if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
+            guildId = 3;
+            throw value;
           } else if (arg0 === 2) {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            guildId = 3;
+            obj = { value, done: true };
             return obj;
           }
-          v0 = 3;
+          guildId = 3;
           return { value: "HermesInternal", done: null };
         } catch (tmp7) {
-          v0 = tmp;
+          guildId = tmp;
           throw tmp7;
         }
       }
     })();
   },
   hideGuildTemplateDirtyTooltip(guildId) {
-    let obj = dispatcherDefault;
-    obj = { type: "GUILD_TEMPLATE_DIRTY_TOOLTIP_HIDE", guildId };
+    const obj = { type: "GUILD_TEMPLATE_DIRTY_TOOLTIP_HIDE", guildId };
     obj.dispatch(obj);
   },
   hideGuildTemplatePromotionTooltip() {
-    dispatcherDefault.dispatch({ type: "GUILD_TEMPLATE_PROMOTION_TOOLTIP_HIDE" });
+    DispatcherDefault.dispatch({ type: "GUILD_TEMPLATE_PROMOTION_TOOLTIP_HIDE" });
   },
 };

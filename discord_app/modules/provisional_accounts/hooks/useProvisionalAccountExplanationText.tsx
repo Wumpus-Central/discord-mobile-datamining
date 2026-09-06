@@ -1,10 +1,13 @@
 // discord_app/modules/provisional_accounts/hooks/useProvisionalAccountExplanationText.tsx
+import util from "../../../intl/index.native.tsx";
+import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
 import useProvisionalAccountApplicationDefault from "useProvisionalAccountApplication.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import { HelpdeskArticles } from "../../../Constants.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
+require = fn;
+const HelpdeskArticles = fn(1074).HelpdeskArticles;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/provisional_accounts/hooks/useProvisionalAccountExplanationText.tsx",
 );
 
@@ -12,26 +15,23 @@ export const useProvisionalAccountExplanationText = function useProvisionalAccou
   renderApplicationName,
 ) {
   renderApplicationName = renderApplicationName.renderApplicationName;
-  importDefault = undefined;
   const tmp = useProvisionalAccountApplicationDefault(renderApplicationName.userId);
   importDefault = tmp;
   const items = [tmp, renderApplicationName];
-  return React.useMemo(() => {
-    if (null != callback) {
-      const intl = renderApplicationName(closure_1_2[3]).intl;
-      let obj = { helpdeskArticle: null, applicationName: null };
-      obj[0] = callback(closure_1_2[4]).getArticleURL(closure_1_4.SLAYER_PROVISIONAL_ACCOUNTS);
-      obj[1] = function applicationName() {
-        return callback(closure_1);
+  return noop.useMemo(() => {
+    if (null != closure_1) {
+      const intl = util.intl;
+      let obj = {
+        helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SLAYER_PROVISIONAL_ACCOUNTS),
+        applicationName() {
+          return renderApplicationName(closure_1_1);
+        },
       };
-      let formatResult = intl.format(renderApplicationName(closure_1_2[3]).t.rSUACb, obj);
-      const obj2 = callback(closure_1_2[4]);
+      let formatResult = intl.format(util.t.rSUACb, obj);
     } else {
-      const intl2 = renderApplicationName(closure_1_2[3]).intl;
-      obj = { helpdeskArticle: null };
-      obj[0] = callback(closure_1_2[4]).getArticleURL(closure_1_4.SLAYER_PROVISIONAL_ACCOUNTS);
-      formatResult = intl2.format(renderApplicationName(closure_1_2[3]).t["q+N8L6"], obj);
-      const obj4 = callback(closure_1_2[4]);
+      const intl2 = util.intl;
+      obj = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SLAYER_PROVISIONAL_ACCOUNTS) };
+      formatResult = intl2.format(util.t["q+N8L6"], obj);
     }
     return formatResult;
   }, items);

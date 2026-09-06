@@ -1,19 +1,20 @@
 // discord_app/modules/debug/serializePushNotifcationLogs.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
+import Storage3 from "../../../discord_common/js/packages/storage/Storage.tsx";
+import Constants from "../../Constants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-({ DEVICE_TOKEN: obj1, DEVICE_VOIP_TOKEN: c3 } = ME);
-const result = set.fileFinishedImporting("modules/debug/serializePushNotifcationLogs.tsx");
+({ DEVICE_TOKEN: c2, DEVICE_VOIP_TOKEN: c3 } = Constants);
+const result = size.fileFinishedImporting("modules/debug/serializePushNotifcationLogs.tsx");
 
-export default function serializePushNotificationLogs(arr) {
-  const _require = arg1;
+export default function serializePushNotificationLogs(arr, arg1) {
+  closure_0 = arg1;
   if (0 === arr.length) {
     return "No logs";
   } else {
-    const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx").Storage;
-    let value = Storage.get(closure_2);
-    const Storage2 = require("../../../discord_common/js/packages/storage/Storage.tsx").Storage;
-    value = Storage2.get(closure_3);
+    const Storage = Storage3.Storage;
+    Storage.get(React2);
+    const Storage2 = Storage3.Storage;
+    value = Storage2.get(React3);
     let str2 = "";
     if (null != value) {
       let _HermesInternal = HermesInternal;

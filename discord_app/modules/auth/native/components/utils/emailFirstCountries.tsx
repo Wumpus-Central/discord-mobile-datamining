@@ -1,7 +1,9 @@
 // discord_app/modules/auth/native/components/utils/emailFirstCountries.tsx
-import set from "../../../../../../_runtime/00002_set.js";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-let set = new Set([
+const result = size.fileFinishedImporting("modules/auth/native/components/utils/emailFirstCountries.tsx");
+
+export const EMAIL_FIRST_COUNTRIES = new Set([
   "FI",
   "ID",
   "NG",
@@ -211,6 +213,3 @@ let set = new Set([
   "SX",
   "TL",
 ]);
-const result = set.fileFinishedImporting("modules/auth/native/components/utils/emailFirstCountries.tsx");
-
-export const EMAIL_FIRST_COUNTRIES = set;

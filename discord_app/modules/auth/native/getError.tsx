@@ -1,7 +1,7 @@
 // discord_app/modules/auth/native/getError.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/auth/native/getError.tsx");
+const result = size.fileFinishedImporting("modules/auth/native/getError.tsx");
 
 export default function getError(arg0, arg1) {
   let tmp2 = null;

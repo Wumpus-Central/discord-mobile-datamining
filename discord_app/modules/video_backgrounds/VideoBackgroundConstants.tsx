@@ -1,5 +1,5 @@
 // discord_app/modules/video_backgrounds/VideoBackgroundConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
 let obj = {
   OPTION_1: 0,
@@ -32,13 +32,13 @@ const items1 = [, , , , , , ,];
   OPTION_3: arr2[6],
   OPTION_4: arr2[7],
 } = obj);
-const reduced = items1.reduce((arg0, arg1, arg2) => {
+const reduced = items1.reduce((acc, item, index) => {
   const obj = {};
-  const merged = Object.assign(arg0);
-  obj[arg1] = arg2;
+  const merged = Object.assign(acc);
+  obj[item] = index;
   return obj;
 }, {});
-const result = set.fileFinishedImporting("modules/video_backgrounds/VideoBackgroundConstants.tsx");
+const result = size.fileFinishedImporting("modules/video_backgrounds/VideoBackgroundConstants.tsx");
 
 export const VideoFilterType = { BACKGROUND: 0, [0]: "BACKGROUND" };
 export const DefaultVideoBackground = obj;

@@ -1,14 +1,14 @@
 // discord_app/modules/markup/ChannelUtils.tsx
-import set from "../../../_runtime/00002_set.js";
-import createChannelRecord from "../../records/ChannelRecord.tsx";
+import ChannelRecord from "../../records/ChannelRecord.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-({ isGuildSelectableChannelType: c0, isGuildVocalChannelType: closure_1 } = createChannelRecord);
-const result = set.fileFinishedImporting("modules/markup/ChannelUtils.tsx");
+({ isGuildSelectableChannelType: closure_0, isGuildVocalChannelType: closure_1 } = ChannelRecord);
+const result = size.fileFinishedImporting("modules/markup/ChannelUtils.tsx");
 
 export const isChannelTypeMentionable = function isChannelTypeMentionable(type) {
-  let tmp = callback(type);
+  let tmp = React(type);
   if (!tmp) {
-    tmp = callback2(type);
+    tmp = framebus(type);
   }
   return tmp;
 };

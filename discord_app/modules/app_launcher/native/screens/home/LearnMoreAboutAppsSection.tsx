@@ -1,84 +1,81 @@
 // discord_app/modules/app_launcher/native/screens/home/LearnMoreAboutAppsSection.tsx
-import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../../../intl/index.native.tsx";
-import Text from "../../../../../design/components/Text/native/Text.tsx";
-import PressableBase from "../../../../../design/void/Pressables/native/Pressables.tsx";
-import AppLauncherEntrypoint from "../../../AppLauncherTypes.tsx";
+import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../../intl/index.native.tsx";
+import HelpdeskUtilsDefault from "../../../../../utils/HelpdeskUtils.tsx";
+import LinkingDefault from "../../../../../lib/native/Linking.tsx";
+import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
+import Pressables from "../../../../../design/void/Pressables/native/Pressables.tsx";
+import AppLauncherTypes from "../../../AppLauncherTypes.tsx";
 import TrackSectionHeaderDefault from "TrackSectionHeader.tsx";
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { HelpdeskArticles } from "../../../../../Constants.tsx";
-import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: null, body: null, divider: null, linkButton: null };
-createCacheKey = {
-  marginTop: ThemesDefault.space.PX_32,
-  borderRadius: ThemesDefault.radii.lg,
+require = fn;
+const View = fn(17).View;
+const HelpdeskArticles = fn(1074).HelpdeskArticles;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+fn(4560);
+let createStyles = { container: null, body: null, divider: null, linkButton: null };
+createStyles = {
+  marginTop: nativeDefault.space.PX_32,
+  borderRadius: nativeDefault.radii.lg,
   alignItems: "center",
-  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
-  paddingHorizontal: ThemesDefault.space.PX_64,
+  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
+  paddingHorizontal: nativeDefault.space.PX_64,
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { textAlign: "center" };
-createCacheKey[2] = { height: ThemesDefault.space.PX_16 };
-const obj1 = { height: ThemesDefault.space.PX_16 };
-const merged = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
-createCacheKey[3] = {
-  borderRadius: ThemesDefault.radii.round,
-  backgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT,
+createStyles.container = createStyles;
+createStyles.body = { textAlign: "center" };
+createStyles.divider = { height: nativeDefault.space.PX_16 };
+const obj1 = { height: nativeDefault.space.PX_16 };
+const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
+createStyles.linkButton = {
+  borderRadius: nativeDefault.radii.round,
+  backgroundColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT,
   paddingVertical: 12,
   paddingHorizontal: 16,
   minHeight: 48,
   justifyContent: "center",
   alignItems: "center",
 };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-const obj2 = {
-  borderRadius: ThemesDefault.radii.round,
-  backgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT,
-  paddingVertical: 12,
-  paddingHorizontal: 16,
-  minHeight: 48,
-  justifyContent: "center",
-  alignItems: "center",
-};
-const result = require("set").fileFinishedImporting(
-  "modules/app_launcher/native/screens/home/LearnMoreAboutAppsSection.tsx",
-);
+let closure_8 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/screens/home/LearnMoreAboutAppsSection.tsx");
 
 export default function LearnMoreAboutAppsSection(visible) {
-  const tmp = callback3();
-  const callback = React.useCallback(() => {
-    const obj = callback(4255);
-    obj.openURL(callback(2024).getAppsSupportURL(constants.APPS_LEARN_MORE));
+  const tmp = closure_8();
+  const callback = noop.useCallback(() => {
+    const obj = LinkingDefault;
+    obj.openURL(HelpdeskUtilsDefault.getAppsSupportURL(constants.APPS_LEARN_MORE));
   }, []);
-  const intl = getSystemLocale.intl;
-  const stringResult = intl.string(getSystemLocale.t["kw8/Ec"]);
-  const intl2 = getSystemLocale.intl;
-  const stringResult1 = intl2.string(getSystemLocale.t.GZoV1O);
-  const intl3 = getSystemLocale.intl;
+  const intl = util.intl;
+  const stringResult = intl.string(util.t["kw8/Ec"]);
+  const intl2 = util.intl;
+  const stringResult1 = intl2.string(util.t.GZoV1O);
+  const intl3 = util.intl;
   let obj = { sectionName: null, numItems: 1, numVisibleItems: 1, viewed: null, children: null };
-  const formatToPlainStringResult = intl3.formatToPlainString(getSystemLocale.t.xx5Sug, {
+  const formatToPlainStringResult = intl3.formatToPlainString(util.t.xx5Sug, {
     sectionTitle: stringResult,
     sectionBody: stringResult1,
   });
-  obj[0] = AppLauncherEntrypoint.AppLauncherSectionName.NEW_TO_APPS;
-  obj[3] = visible.visible;
+  obj.sectionName = AppLauncherTypes.AppLauncherSectionName.NEW_TO_APPS;
+  obj.viewed = visible.visible;
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.divider };
   const items = [
-    callback(View, obj),
-    callback(Text.Text, {
+    timestampProducer(View, obj),
+    timestampProducer(Text_Text.Text, {
       accessibilityRole: "header",
       variant: "heading-lg/bold",
       color: "mobile-text-heading-primary",
       children: stringResult,
     }),
-    callback(Text.Text, { variant: "text-xs/normal", color: "text-default", style: tmp.body, children: stringResult1 }),
-    callback(View, { style: tmp.divider }),
+    timestampProducer(Text_Text.Text, {
+      variant: "text-xs/normal",
+      color: "text-default",
+      style: tmp.body,
+      children: stringResult1,
+    }),
+    timestampProducer(View, { style: tmp.divider }),
     ,
   ];
   const obj3 = {
@@ -89,12 +86,12 @@ export default function LearnMoreAboutAppsSection(visible) {
     children: null,
   };
   const obj4 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl4 = getSystemLocale.intl;
-  obj4[2] = intl4.string(getSystemLocale.t.Ye51oT);
-  obj3[4] = callback(Text.Text, obj4);
-  items[4] = callback(PressableBase.PressableHighlight, obj3);
-  items[5] = callback(View, { style: tmp.divider });
-  obj[1] = items;
-  obj[4] = callback2(View, obj);
-  return callback(TrackSectionHeaderDefault, obj);
+  const intl4 = util.intl;
+  obj4.children = intl4.string(util.t.Ye51oT);
+  obj3.children = timestampProducer(Text_Text.Text, obj4);
+  items[4] = timestampProducer(Pressables.PressableHighlight, obj3);
+  items[5] = timestampProducer(View, { style: tmp.divider });
+  obj.children = items;
+  obj.children = React5(View, obj);
+  return timestampProducer(TrackSectionHeaderDefault, obj);
 }

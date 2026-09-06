@@ -1,7 +1,7 @@
 // discord_app/modules/premium/powerups/constants/GuildPowerupsNotification.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/premium/powerups/constants/GuildPowerupsNotification.tsx");
+const result = size.fileFinishedImporting("modules/premium/powerups/constants/GuildPowerupsNotification.tsx");
 
 export const GUILD_POWERUP_NOTIFICATION_COOLDOWN = 21600000;
 export const BOOST_TO_UNLOCK_COACHMARK_COOLDOWN = 2592000000;

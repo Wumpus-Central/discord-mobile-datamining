@@ -1,12 +1,12 @@
 // discord_app/modules/guild_scheduled_events/native/components/GuildEventSchedule.tsx
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import _modDef4153 from "../../../../../_runtime/metro/04153__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
-const result = require("set").fileFinishedImporting(
-  "modules/guild_scheduled_events/native/components/GuildEventSchedule.tsx",
-);
+const require = fn;
+const jsxProd = fn(21);
+({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventSchedule.tsx");
 
 export default function GuildEventSchedule(schedule) {
   schedule = schedule.schedule;
@@ -15,7 +15,7 @@ export default function GuildEventSchedule(schedule) {
   let obj = onChange(4153)();
   const addResult = obj.add(schedule(9665).MAX_DAYS_AHEAD_AN_EVENT_CAN_START, "days");
   const items = [schedule.startDate];
-  const memo = React.useMemo(() => onChange(closure_1_2[2])(schedule.startDate).add(15, "minutes"), items);
+  const memo = noop.useMemo(() => _modDef4153(schedule.startDate).add(15, "minutes"), items);
   const tmp2 = onChange(4153)();
   const addResult1 = onChange(4153)().add(schedule(9665).MAX_DAYS_AHEAD_AN_EVENT_CAN_END, "days");
   if (null != recurrenceId) {
@@ -36,27 +36,30 @@ export default function GuildEventSchedule(schedule) {
     timeLabel: null,
   };
   const intl = tmp3(1114).intl;
-  obj[4] = intl.string(schedule(1114).t.kKOIwJ);
+  obj.dateLabel = intl.string(schedule(1114).t.kKOIwJ);
   const intl2 = tmp3(1114).intl;
-  obj[5] = intl2.string(schedule(1114).t["6dGmCD"]);
-  const children = [callback(schedule(9710).GuildEventDatetime, obj)];
+  obj.timeLabel = intl2.string(schedule(1114).t["6dGmCD"]);
+  const children = [closure_4(schedule(9710).GuildEventDatetime, obj)];
   let tmp9Result = null != guildEvent.scheduled_end_time;
   if (tmp9Result) {
-    obj = { date: null, onChange: null, minimumDate: null, maximumDate: null, dateLabel: null, timeLabel: null };
-    obj[0] = schedule.endDate;
-    obj[1] = function onChange(endDate) {
-      const obj = {};
-      const merged = Object.assign(schedule);
-      obj.endDate = endDate;
-      onChange(obj);
+    obj = {
+      date: schedule.endDate,
+      onChange(endDate) {
+        const obj = {};
+        const merged = Object.assign(schedule);
+        obj.endDate = endDate;
+        onChange(obj);
+      },
+      minimumDate: memo,
+      maximumDate: addResult1,
+      dateLabel: null,
+      timeLabel: null,
     };
-    obj[2] = memo;
-    obj[3] = addResult1;
     const intl3 = tmp3(1114).intl;
-    obj[4] = intl3.string(tmp3(1114).t.CTLgZJ);
+    obj.dateLabel = intl3.string(tmp3(1114).t.CTLgZJ);
     const intl4 = tmp3(1114).intl;
-    obj[5] = intl4.string(tmp3(1114).t.j2RuXF);
-    tmp9Result = callback(tmp3(9710).GuildEventDatetime, obj);
+    obj.timeLabel = intl4.string(tmp3(1114).t.j2RuXF);
+    tmp9Result = closure_4(tmp3(9710).GuildEventDatetime, obj);
   }
   children[1] = tmp9Result;
   return closure_6(closure_5, { children });

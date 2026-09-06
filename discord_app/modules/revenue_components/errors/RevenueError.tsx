@@ -1,5 +1,5 @@
 // discord_app/modules/revenue_components/errors/RevenueError.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const prototype = function RevenueError(errorHandlingBehavior) {
   ({ message, extraSentryInformation } = errorHandlingBehavior);
@@ -15,7 +15,6 @@ const prototype = function RevenueError(errorHandlingBehavior) {
     flag = false;
   }
   const tmp = new prototype(message, message, new.target, new.target, extraSentryInformation);
-  // ThrowIfThisInitialized (0x7c)
   tmp.name = new.target.name;
   tmp.extraSentryInformation = extraSentryInformation;
   tmp.errorHandlingBehavior = str;
@@ -23,6 +22,6 @@ const prototype = function RevenueError(errorHandlingBehavior) {
   return tmp;
 }.prototype;
 class prototype extends Error {}
-const result = set.fileFinishedImporting("modules/revenue_components/errors/RevenueError.tsx");
+const result = size.fileFinishedImporting("modules/revenue_components/errors/RevenueError.tsx");
 
 export const RevenueError = prototype;

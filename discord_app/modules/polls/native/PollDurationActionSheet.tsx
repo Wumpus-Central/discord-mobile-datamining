@@ -1,31 +1,31 @@
 // discord_app/modules/polls/native/PollDurationActionSheet.tsx
+import AccessibilityAnnouncer2 from "../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
+import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ActionSheet from "../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import usePollDurationOptionsDefault from "../usePollDurationOptions.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+require = fn;
 function PollDurationRadioGroup(onChange) {
   onChange = onChange.onChange;
-  importDefault = undefined;
   const tmp = usePollDurationOptionsDefault();
   importDefault = tmp;
   const items = [tmp, onChange];
-  const callback = React.useCallback((arg0) => {
+  const callback = noop.useCallback((arg0) => {
     onChange(arg0);
-    const AccessibilityAnnouncer = onChange(closure_1_2[3]).AccessibilityAnnouncer;
-    AccessibilityAnnouncer.announce(dependencyMap[arg0]);
-    dependencyMap(closure_1_2[4]).hideActionSheet();
+    const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
+    AccessibilityAnnouncer.announce(closure_1[arg0]);
+    ActionSheetActionCreatorsDefault.hideActionSheet();
   }, items);
   const obj = { title: null, hasIcons: false, onChange: null, defaultValue: null, children: null };
   const intl = onChange(1114).intl;
-  obj[0] = intl.string(onChange(1114).t["0ZStp9"]);
-  obj[2] = callback;
-  obj[3] = onChange.selectedDuration;
+  obj.title = intl.string(onChange(1114).t["0ZStp9"]);
+  obj.onChange = callback;
+  obj.defaultValue = onChange.selectedDuration;
   const entries = Object.entries(tmp);
-  obj[4] = entries.map((arg0) => {
-    [tmp, tmp2] = arg0;
-    return callback(onChange(table[7]).TableRadioRow, { value: parseInt(tmp), label: tmp2 }, tmp);
+  obj.children = entries.map((item) => {
+    [tmp, tmp2] = item;
+    return jsx(onChange(dependencyMap[7]).TableRadioRow, { value: parseInt(tmp), label: tmp2 }, tmp);
   });
   return jsx(onChange(5685).TableRadioGroup, {
     title: null,
@@ -35,7 +35,9 @@ function PollDurationRadioGroup(onChange) {
     children: null,
   });
 }
-const result = require("set").fileFinishedImporting("modules/polls/native/PollDurationActionSheet.tsx");
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/polls/native/PollDurationActionSheet.tsx");
 
 export default function PollDurationActionSheet(arg0) {
   ({ selectedDuration, onChange } = arg0);

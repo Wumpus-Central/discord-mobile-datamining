@@ -1,296 +1,242 @@
 // discord_app/modules/video_backgrounds/VideoBackgroundActionCreators.tsx
-import dispatcherDefault from "../../Dispatcher.tsx";
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../stores/MediaEngineStore.tsx";
-import closure_5 from "../../stores/UserStore.tsx";
-import { Endpoints } from "../../Constants.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import UserSettingsProtoActionCreators from "../user_settings/UserSettingsProtoActionCreators.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
+import UserStore from "../../stores/UserStore.tsx";
 
-const require = arg1;
-function _fetchVideoFilterAssets() {
-  const self = this;
-  const tmp = callback(function* () {
-    if (c5 === 2) {
-      c5 = 3;
-      HermesBuiltin.throwTypeError();
+require = fn;
+let closure_7 = async function _fetchVideoFilterAssets(arg0, value) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_1 = tmp3;
+          closure_0 = tmp7;
+          closure_128_0 = undefined;
+          c3 = 1;
+          const HTTP = HTTPUtils.HTTP;
+          const obj1 = { url: constants.VIDEO_FILTER_ASSETS, rejectWithError: false };
+          c4 = 2;
+          c5 = 1;
+          const obj2 = { value: HTTP.get(obj1), done: false };
+          return obj2;
+        }
+      } else if (1 === tmp7) {
+        c3 = 0;
+        closure_128_1 = closure_2;
+        let obj4 = closure_129_1(closure_129_2[5]);
+        const obj3 = { type: "VIDEO_FILTER_ASSETS_FETCH_FAILURE", error: closure_128_1 };
+        obj4.dispatch(obj3);
+        throw closure_128_1;
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c3 = 0;
+        c5 = 3;
+        obj4 = { value, done: true };
+        return obj4;
+      } else {
+        closure_128_0 = value;
+        obj = closure_129_1(closure_129_2[5]);
+        const obj5 = { type: "VIDEO_FILTER_ASSETS_FETCH_SUCCESS", assets: closure_128_0.body };
+        obj.dispatch(obj5);
+        c3 = 0;
+        c5 = 3;
+        const obj6 = { value: closure_128_0, done: true };
+        return obj6;
+      }
+    } catch (tmp26) {
+      closure_2 = tmp26;
+      if (tmp4 === c3) {
+        c5 = tmp2;
+        throw tmp26;
+      } else {
+        c4 = tmp;
+      }
+    }
+  }
+};
+let closure_8 = async function _uploadVideoFilterAsset(asset, type, arg2) {
+  closure_2 = arg2;
+  c7 = 0;
+  c8 = 0;
+  c6 = 0;
+  return (async (arg0, value, arg2) => {
+    if (c8 === 2) {
+      c8 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp6 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
       }
     } else {
       try {
-        c5 = 2;
-        if (0 === c4) {
+        c8 = 2;
+        if (0 === c7) {
           if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
+            c8 = 3;
+            throw value;
           } else if (arg0 === 2) {
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            c8 = 3;
+            obj = { value, done: true };
             return obj;
           } else {
-            let callback = tmp3;
-            let body = tmp7;
-            body = undefined;
-            c3 = 1;
-            const HTTP = closure_1_0(closure_1_2[4]).HTTP;
-            obj1 = { url: null, rejectWithError: false };
-            obj1[0] = closure_1_6.VIDEO_FILTER_ASSETS;
-            c4 = 2;
-            c5 = 1;
-            const obj2 = { value: null, done: false };
-            obj2[0] = HTTP.get(obj1);
+            closure_4 = tmp3;
+            closure_3 = tmp7;
+            closure_131_0 = undefined;
+            c6 = 1;
+            const HTTP = HTTPUtils.HTTP;
+            const request = { url: constants.VIDEO_FILTER_ASSETS, body: null, rejectWithError: false };
+            const obj1 = { type, asset, last_used: null };
+            let toISOStringResult;
+            if (closure_2 != null) {
+              toISOStringResult = closure_2.toISOString();
+            }
+            obj1.last_used = toISOStringResult;
+            request.body = obj1;
+            c7 = 2;
+            c8 = 1;
+            const obj2 = { value: HTTP.post(request), done: false };
             return obj2;
           }
         } else if (1 === tmp7) {
-          c3 = 0;
-          callback = dependencyMap;
-          let obj4 = callback(573);
-          const obj3 = { type: "VIDEO_FILTER_ASSETS_FETCH_FAILURE", error: null };
-          obj3[1] = callback;
-          obj4.dispatch(obj3);
-          throw callback;
+          c6 = 0;
+          closure_131_1 = closure_5;
+          const tmp24 = new closure_132_1(closure_132_2[6])(closure_131_1);
+          throw tmp24;
         } else if (arg0 === 1) {
-          c5 = 3;
-          throw arg1;
+          c8 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          c3 = 0;
-          c5 = 3;
-          obj4 = { value: null, done: true };
-          obj4[0] = arg1;
-          return obj4;
+          c6 = 0;
+          c8 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
-          body = arg1;
-          obj = callback(573);
-          const obj5 = { type: "VIDEO_FILTER_ASSETS_FETCH_SUCCESS", assets: null };
-          obj5[1] = body.body;
-          obj.dispatch(obj5);
-          c3 = 0;
-          c5 = 3;
-          const obj6 = { value: null, done: true };
-          obj6[0] = body;
-          return obj6;
+          closure_131_0 = value;
+          obj = closure_132_1(closure_132_2[5]);
+          const obj4 = { type: "VIDEO_FILTER_ASSET_UPLOAD_SUCCESS", videoFilterAsset: closure_131_0.body };
+          obj.dispatch(obj4);
+          c6 = 0;
+          c8 = 3;
+          const obj5 = { value: closure_131_0.body, done: true };
+          return obj5;
         }
-      } catch (tmp26) {
-        dependencyMap = tmp26;
-        if (tmp4 === c3) {
-          c5 = tmp2;
-          throw tmp26;
+      } catch (tmp27) {
+        closure_5 = tmp27;
+        if (tmp4 === c6) {
+          c8 = tmp2;
+          throw tmp27;
         } else {
-          c4 = tmp;
+          c7 = tmp;
         }
       }
     }
-  });
-  closure_7 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _uploadVideoFilterAsset() {
-  const self = this;
-  const tmp = callback((arg0, arg1, arg2) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    c7 = 0;
-    c8 = 0;
-    c6 = 0;
-    return (function* (arg0, arg1, arg2) {
-      if (c8 === 2) {
-        c8 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+  })();
+};
+let closure_9 = async function _deleteVideoFilterAsset(arg0) {
+  let id = arg0;
+  c3 = 0;
+  c4 = 0;
+  return (async (arg0, value) => {
+    if (c4 === 2) {
+      c4 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          c8 = 2;
-          if (0 === c7) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c8 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_4 = tmp3;
-              closure_3 = tmp7;
-              let lib;
-              let constants = 1;
-              const HTTP = lib(1272).HTTP;
-              obj1 = { url: null, body: null, rejectWithError: false };
-              obj1[0] = constants.VIDEO_FILTER_ASSETS;
-              const obj2 = { type: null, asset: null, last_used: null };
-              obj2[0] = callback;
-              obj2[1] = lib;
-              let toISOStringResult;
-              if (dependencyMap != null) {
-                toISOStringResult = dependencyMap.toISOString();
-              }
-              obj2[2] = toISOStringResult;
-              obj1[1] = obj2;
-              c7 = 2;
-              c8 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = HTTP.post(obj1);
-              return obj3;
-            }
-          } else if (1 === tmp7) {
-            constants = 0;
-            callback = closure_5;
-            const tmp24 = new callback(9099)(callback);
-            throw tmp24;
-          } else if (arg0 === 1) {
-            c8 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            constants = 0;
-            c8 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          } else {
-            lib = arg1;
-            obj = callback(573);
-            const obj5 = { type: "VIDEO_FILTER_ASSET_UPLOAD_SUCCESS", videoFilterAsset: null };
-            obj5[1] = lib.body;
-            obj.dispatch(obj5);
-            constants = 0;
-            c8 = 3;
-            const obj6 = { value: null, done: true };
-            obj6[0] = lib.body;
-            return obj6;
-          }
-        } catch (tmp27) {
-          closure_5 = tmp27;
-          if (tmp4 === constants) {
-            c8 = tmp2;
-            throw tmp27;
-          } else {
-            c7 = tmp;
-          }
-        }
+        return { value: "HermesInternal", done: null };
       }
-    })();
-  });
-  closure_8 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _deleteVideoFilterAsset() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c3 = 0;
-    c4 = 0;
-    return (function* (arg0) {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              dependencyMap = tmp2;
-              let lib2 = tmp5;
-              lib2 = undefined;
-              const HTTP = lib(closure_1_2[4]).HTTP;
-              obj1 = { url: null, rejectWithError: false };
-              obj1[0] = closure_1_6.VIDEO_FILTER_ASSET(lib.id);
-              c3 = 1;
-              c4 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.del(obj1);
-              return obj2;
-            }
-          } else if (arg0 === 1) {
+    } else {
+      try {
+        c4 = 2;
+        if (0 === c3) {
+          if (arg0 === 1) {
             c4 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
+            obj = { value, done: true };
+            return obj;
           } else {
-            lib2 = lib(9100).getLastUsedVideoBackgroundOption(currentUser.getCurrentUser());
-            const obj7 = lib(9100);
-            let result = lib(9097).isCustomBackgroundOption(lib2);
-            if (result) {
-              result = lib2.id === lib.id;
-            }
-            if (result) {
-              callback(null);
-            }
-            obj = lib2(573);
-            const obj4 = { type: "VIDEO_FILTER_ASSET_DELETE_SUCCESS", videoFilterAsset: null };
-            obj4[1] = lib;
-            obj.dispatch(obj4);
-            c4 = 3;
-            return { value: "HermesInternal", done: null };
+            closure_2 = tmp2;
+            closure_1 = tmp5;
+            closure_129_0 = id;
+            let lastUsedVideoBackgroundOption;
+            const HTTP = HTTPUtils.HTTP;
+            const obj1 = { url: Endpoints.VIDEO_FILTER_ASSET(id.id), rejectWithError: false };
+            c3 = 1;
+            c4 = 1;
+            const obj2 = { value: HTTP.del(obj1), done: false };
+            return obj2;
           }
-        } catch (tmp20) {
-          c4 = tmp;
-          throw tmp20;
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          lastUsedVideoBackgroundOption = closure_130_0(closure_130_2[7]).getLastUsedVideoBackgroundOption(
+            closure_130_5.getCurrentUser(),
+          );
+          const obj7 = closure_130_0(closure_130_2[7]);
+          let result = closure_130_0(closure_130_2[8]).isCustomBackgroundOption(lastUsedVideoBackgroundOption);
+          if (result) {
+            result = lastUsedVideoBackgroundOption.id === closure_129_0.id;
+          }
+          if (result) {
+            closure_130_10(null);
+          }
+          obj = closure_130_1(closure_130_2[5]);
+          const obj4 = { type: "VIDEO_FILTER_ASSET_DELETE_SUCCESS", videoFilterAsset: closure_129_0 };
+          obj.dispatch(obj4);
+          c4 = 3;
+          return { value: "HermesInternal", done: null };
         }
+      } catch (tmp20) {
+        c4 = tmp;
+        throw tmp20;
       }
-    })();
-  });
-  closure_9 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
+    }
+  })();
+};
 function saveLastUsedBackgroundOption() {
   const self = this;
-  const apply = _saveLastUsedBackgroundOption.apply;
+  const apply = closure_11.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -298,77 +244,58 @@ function saveLastUsedBackgroundOption() {
   }
   return applyArgumentsResult;
 }
-function _saveLastUsedBackgroundOption() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c3 = 0;
-    c4 = 0;
-    return (function* (arg0) {
-      dependencyMap = tmp2;
-      const PreloadedUserSettingsActionCreators = lib(closure_1_2[9]).PreloadedUserSettingsActionCreators;
-      yield PreloadedUserSettingsActionCreators.updateAsync(
-        "voiceAndVideo",
-        (arg0) => {
-          arg0.videoBackgroundFilterDesktop = callback(tmp2[8]).getVideoBackgroundProtoFromOption(callback);
-        },
-        lib(closure_1_2[9]).UserSettingsDelay.FREQUENT_USER_ACTION,
-      );
-      if (1 === tmp5) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = arg1;
-          return obj2;
-        } else {
-          if (obj12.isCustomBackgroundOption(lib)) {
-            const HTTP = lib(1272).HTTP;
-            let obj3 = { url: null, rejectWithError: false };
-            obj3[0] = closure_6.VIDEO_FILTER_ASSET_LAST_USED(lib.id);
-            c3 = 2;
-            c4 = 1;
-            const obj4 = { value: null, done: false };
-            obj4[0] = HTTP.post(obj3);
-            return obj4;
-          } else {
-            obj3 = lib2(573);
-            const obj5 = { type: "VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION", backgroundOption: null };
-            obj5[1] = lib;
-            obj3.dispatch(obj5);
-            c4 = 3;
-          }
-          obj12 = lib(9097);
-        }
-      } else if (arg0 === 1) {
+let closure_11 = async function _saveLastUsedBackgroundOption(arg0, value) {
+  closure_2 = tmp2;
+  closure_129_0 = closure_0;
+  const PreloadedUserSettingsActionCreators = UserSettingsProtoActionCreators.PreloadedUserSettingsActionCreators;
+  await PreloadedUserSettingsActionCreators.updateAsync(
+    "voiceAndVideo",
+    async (arg0) => {
+      arg0.videoBackgroundFilterDesktop = closure_0(closure_2[8]).getVideoBackgroundProtoFromOption(closure_1_0);
+    },
+    UserSettingsProtoActionCreators.UserSettingsDelay.FREQUENT_USER_ACTION,
+  );
+  if (1 === tmp5) {
+    if (arg0 === 1) {
+      c4 = 3;
+      throw value;
+    } else if (arg0 === 2) {
+      c4 = 3;
+      return { value, done: true };
+    } else {
+      if (obj12.isCustomBackgroundOption(closure_129_0)) {
+        const HTTP = closure_130_0(closure_130_2[4]).HTTP;
+        let obj3 = { url: closure_130_6.VIDEO_FILTER_ASSET_LAST_USED(closure_129_0.id), rejectWithError: false };
+        c3 = 2;
+        c4 = 1;
+        return { value: HTTP.post(obj3), done: false };
+      } else {
+        obj3 = closure_130_1(closure_130_2[5]);
+        obj3.dispatch({ type: "VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION", backgroundOption: closure_129_0 });
         c4 = 3;
-        throw arg1;
-      } else if (arg0 !== 2) {
-        lib2 = arg1;
-        const obj = lib2(573);
-        const obj6 = { type: "VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION", backgroundOption: null };
-        obj6[1] = lib2.body;
-        obj.dispatch(obj6);
       }
-      return arg1;
-    })();
-  });
-  closure_11 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+      obj12 = closure_130_0(closure_130_2[8]);
+    }
+  } else if (arg0 === 1) {
+    c4 = 3;
+    throw value;
+  } else if (arg0 !== 2) {
+    closure_129_1 = value;
+    closure_130_1(closure_130_2[5]).dispatch({
+      type: "VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION",
+      backgroundOption: closure_129_1.body,
+    });
+    closure_130_1(closure_130_2[5]);
   }
-  return applyArgumentsResult;
-}
-let result = require("set").fileFinishedImporting("modules/video_backgrounds/VideoBackgroundActionCreators.tsx");
+  return value;
+};
+const Endpoints = fn(1074).Endpoints;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/video_backgrounds/VideoBackgroundActionCreators.tsx");
 
 export const fetchVideoFilterAssets = function fetchVideoFilterAssets() {
   const self = this;
-  const apply = _fetchVideoFilterAssets.apply;
+  const apply = closure_7.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -378,7 +305,7 @@ export const fetchVideoFilterAssets = function fetchVideoFilterAssets() {
 };
 export const uploadVideoFilterAsset = function uploadVideoFilterAsset() {
   const self = this;
-  const apply = _uploadVideoFilterAsset.apply;
+  const apply = closure_8.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -388,7 +315,7 @@ export const uploadVideoFilterAsset = function uploadVideoFilterAsset() {
 };
 export const deleteVideoFilterAsset = function deleteVideoFilterAsset() {
   const self = this;
-  const apply = _deleteVideoFilterAsset.apply;
+  const apply = closure_9.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -397,20 +324,17 @@ export const deleteVideoFilterAsset = function deleteVideoFilterAsset() {
   return applyArgumentsResult;
 };
 export { saveLastUsedBackgroundOption };
-export const applyMediaFilterSettings = function applyMediaFilterSettings(arg0) {
-  if (closure_4.isSupported()) {
-    let obj = dispatcherDefault;
-    obj = { type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS", settings: null };
-    obj[1] = arg0;
+export const applyMediaFilterSettings = function applyMediaFilterSettings(settings) {
+  if (MediaEngineStore.isSupported()) {
+    const obj = { type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS", settings };
     obj.dispatch(obj);
   }
 };
 export const startApplyMediaFilterSettings = function startApplyMediaFilterSettings() {
-  if (closure_4.isSupported()) {
-    dispatcherDefault.dispatch({ type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_START" });
-    const obj = dispatcherDefault;
+  if (MediaEngineStore.isSupported()) {
+    DispatcherDefault.dispatch({ type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_START" });
   }
 };
 export const errorApplyingMediaFilterSettings = function errorApplyingMediaFilterSettings() {
-  dispatcherDefault.dispatch({ type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_ERROR" });
+  DispatcherDefault.dispatch({ type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_ERROR" });
 };

@@ -1,24 +1,24 @@
 // discord_app/stores/BitRateStore.tsx
-import set from "../../_runtime/00002_set.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../Dispatcher.tsx";
-import DesktopSources from "../../discord_common/js/packages/media-engine/Constants.tsx";
+import DispatcherDefault from "../Dispatcher.tsx";
+import Constants from "../../discord_common/js/packages/media-engine/Constants.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-const DEFAULT_VOICE_BITRATE = DesktopSources.DEFAULT_VOICE_BITRATE;
+let bitrate = Constants.DEFAULT_VOICE_BITRATE;
 const Store = initializeDefault.Store;
 class BitRateStore extends Store {}
 Object.defineProperty(BitRateStore.prototype, "bitrate", {
   get: function bitrate() {
-    return DEFAULT_VOICE_BITRATE;
+    return bitrate;
   },
   set: undefined,
 });
 BitRateStore.displayName = "BitRateStore";
-const bitRateStore = new BitRateStore(dispatcherDefault, {
+const bitRateStore = new BitRateStore(DispatcherDefault, {
   SET_CHANNEL_BITRATE: function handleSetChannelBitrate(bitrate) {
     bitrate = bitrate.bitrate;
   },
 });
-const result = set.fileFinishedImporting("stores/BitRateStore.tsx");
+const result = size.fileFinishedImporting("stores/BitRateStore.tsx");
 
 export default bitRateStore;

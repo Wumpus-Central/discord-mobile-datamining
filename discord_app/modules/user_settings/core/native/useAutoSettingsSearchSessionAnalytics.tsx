@@ -1,59 +1,57 @@
 // discord_app/modules/user_settings/core/native/useAutoSettingsSearchSessionAnalytics.tsx
-import useMountLayoutEffectDefault from "../../../../hooks/useMountEffect.tsx";
+import useMountEffectDefault from "../../../../hooks/useMountEffect.tsx";
+import SettingSearchSessionAnalyticsManagerDefault from "../../../settings/tracking/SettingSearchSessionAnalyticsManager.tsx";
 import usePreviousDefault from "../../../../hooks/usePrevious.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../../stores/native/AppStateStore.tsx";
-import closure_5 from "../../UserSettingSearchStore.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import AppStateStore from "../../../../stores/native/AppStateStore.tsx";
+import UserSettingSearchStore from "../../UserSettingSearchStore.tsx";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting(
-  "modules/user_settings/core/native/useAutoSettingsSearchSessionAnalytics.tsx",
-);
+const require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/core/native/useAutoSettingsSearchSessionAnalytics.tsx");
 
 export const useAutoSettingsSearchSessionAnalytics = function useAutoSettingsSearchSessionAnalytics() {
-  const items = [closure_4];
+  const items = [AppStateStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => {
     state = state.getState();
-    return state === stateFromStores(table[4]).AppStates.ACTIVE;
+    return state === stateFromStores(dependencyMap[4]).AppStates.ACTIVE;
   });
   const tmp2 = usePreviousDefault(stateFromStores);
   importDefault = tmp2;
-  useMountLayoutEffectDefault(() => () => {
-    callback(table[7]).terminate();
+  useMountEffectDefault(() => () => {
+    closure_1_1(closure_1_2[7]).terminate();
   });
   const items1 = [stateFromStores, tmp2];
-  const effect = React.useEffect(() => {
-    let field = closure_1_5.getField("isFocused");
+  const effect = noop.useEffect(() => {
+    let field = UserSettingSearchStore.getField("isFocused");
     if (!field) {
-      field = closure_1_5.getField("query").length > 0;
+      field = UserSettingSearchStore.getField("query").length > 0;
     }
     let tmp3 = stateFromStores;
     if (stateFromStores) {
-      tmp3 = !callback;
+      tmp3 = !closure_1;
     }
     if (tmp3) {
       tmp3 = field;
     }
     if (tmp3) {
-      callback(closure_1_2[7]).initialize();
-      const obj = callback(closure_1_2[7]);
+      SettingSearchSessionAnalyticsManagerDefault.initialize();
     }
     let tmp8 = !tmp2;
     if (!stateFromStores) {
-      tmp8 = callback;
+      tmp8 = closure_1;
     }
     if (tmp8) {
       tmp8 = field;
     }
     if (tmp8) {
-      callback(closure_1_2[7]).terminate();
-      const obj2 = callback(closure_1_2[7]);
+      SettingSearchSessionAnalyticsManagerDefault.terminate();
     }
   }, items1);
   const items2 = [stateFromStores];
-  const effect1 = React.useEffect(
+  const effect1 = noop.useEffect(
     () =>
-      closure_5.subscribe(
+      UserSettingSearchStore.subscribe(
         (isFocused) => {
           isFocused = isFocused.isFocused;
           if (!isFocused) {
@@ -62,7 +60,7 @@ export const useAutoSettingsSearchSessionAnalytics = function useAutoSettingsSea
           return isFocused;
         },
         (arg0) => {
-          const obj = callback(table[7]);
+          const obj = closure_1_1(closure_1_2[7]);
           if (arg0) {
             obj.initialize();
           } else {
@@ -78,9 +76,9 @@ export const useAutoSettingsSearchSessionAnalytics = function useAutoSettingsSea
     items2,
   );
   const items3 = [stateFromStores];
-  const effect2 = React.useEffect(
+  const effect2 = noop.useEffect(
     () =>
-      closure_5.subscribe(
+      UserSettingSearchStore.subscribe(
         (isFocused) => {
           isFocused = isFocused.isFocused;
           if (isFocused) {
@@ -90,8 +88,8 @@ export const useAutoSettingsSearchSessionAnalytics = function useAutoSettingsSea
         },
         (arg0) => {
           if (arg0) {
-            const result = callback(table[7]).maybeTrackQueryEntered();
-            const obj = callback(table[7]);
+            const result = closure_1_1(dependencyMap[7]).maybeTrackQueryEntered();
+            const obj = closure_1_1(dependencyMap[7]);
           }
         },
         {

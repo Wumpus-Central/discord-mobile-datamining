@@ -1,26 +1,27 @@
 // discord_app/modules/application_account_linking/hooks/useAuthorizedAppsToken.tsx
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../../oauth2/AuthorizedAppsStore.tsx";
-import { FetchState } from "../../oauth2/AuthorizedAppsStore.tsx";
+import GlobalUtils from "../../../utils/GlobalUtils.tsx";
+import AuthorizedAppsActionCreatorsDefault from "../../oauth2/AuthorizedAppsActionCreators.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import AuthorizedAppsStore from "../../oauth2/AuthorizedAppsStore.tsx";
 
-const require = arg1;
-function useAuthorizedAppsTokens(closure_3, arg1) {
-  const _require = closure_3;
+require = fn;
+function useAuthorizedAppsTokens(noop, arg1) {
+  _require = noop;
   let obj = arg1;
   if (arg1 == null) {
     obj = {};
   }
   const disableFetch = obj.disableFetch;
   closure_1 = tmp;
-  const items = [closure_4];
-  const items1 = [closure_3];
-  const tokens = _require(stateFromStoresArray1[2]).useStateFromStoresArray(
+  const items = [AuthorizedAppsStore];
+  const items1 = [noop];
+  const tokens = require("initialize").useStateFromStoresArray(
     items,
     () => {
       let found;
-      if (callback != null) {
-        const mapped = callback.map((id) => newestTokenForApplication.getNewestTokenForApplication(id));
-        found = mapped.filter(callback(stateFromStoresArray1[3]).isNotNullish);
+      if (noop != null) {
+        const mapped = noop.map((item) => newestTokenForApplication.getNewestTokenForApplication(item));
+        found = mapped.filter(GlobalUtils.isNotNullish);
       }
       if (found == null) {
         found = [];
@@ -29,17 +30,15 @@ function useAuthorizedAppsTokens(closure_3, arg1) {
     },
     items1,
   );
-  const obj2 = _require(stateFromStoresArray1[2]);
-  const items2 = [closure_4];
-  const items3 = [closure_3];
-  const fetched = _require(stateFromStoresArray1[2]).useStateFromStores(
+  const obj2 = require("initialize");
+  const items2 = [AuthorizedAppsStore];
+  const items3 = [noop];
+  const fetched = require("initialize").useStateFromStores(
     items2,
     () => {
       let flag;
-      if (closure_0 != null) {
-        flag = closure_0.every(
-          (arg0) => fetchStateForApplication.getFetchStateForApplication(arg0) === constants.FETCHED,
-        );
+      if (noop != null) {
+        flag = noop.every((item) => fetchStateForApplication.getFetchStateForApplication(item) === constants.FETCHED);
       }
       if (flag == null) {
         flag = false;
@@ -48,16 +47,16 @@ function useAuthorizedAppsTokens(closure_3, arg1) {
     },
     items3,
   );
-  const obj3 = _require(stateFromStoresArray1[2]);
-  const items4 = [closure_4];
-  const items5 = [closure_3];
-  stateFromStoresArray1 = _require(stateFromStoresArray1[2]).useStateFromStoresArray(
+  const obj3 = require("initialize");
+  const items4 = [AuthorizedAppsStore];
+  const items5 = [noop];
+  stateFromStoresArray1 = require("initialize").useStateFromStoresArray(
     items4,
     () => {
       let found;
-      if (closure_0 != null) {
-        found = closure_0.filter(
-          (arg0) => fetchStateForApplication.getFetchStateForApplication(arg0) === constants.NOT_FETCHED,
+      if (noop != null) {
+        found = noop.filter(
+          (item) => fetchStateForApplication.getFetchStateForApplication(item) === constants.NOT_FETCHED,
         );
       }
       if (found == null) {
@@ -68,28 +67,27 @@ function useAuthorizedAppsTokens(closure_3, arg1) {
     items5,
   );
   const items6 = [undefined !== disableFetch && disableFetch, stateFromStoresArray1];
-  const effect = React.useEffect(() => {
-    let tmp = callback2;
-    if (!callback2) {
+  const effect = noop.useEffect(() => {
+    let tmp = closure_1;
+    if (!closure_1) {
       tmp = 0 === stateFromStoresArray1.length;
     }
     if (!tmp) {
-      const response = callback2(stateFromStoresArray1[4]).fetch(stateFromStoresArray1);
-      const obj = callback2(stateFromStoresArray1[4]);
+      const response = AuthorizedAppsActionCreatorsDefault.fetch(stateFromStoresArray1);
     }
   }, items6);
   return { tokens, fetched };
 }
-const result = require("set").fileFinishedImporting(
-  "modules/application_account_linking/hooks/useAuthorizedAppsToken.tsx",
-);
+const FetchState = fn(7107).FetchState;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/application_account_linking/hooks/useAuthorizedAppsToken.tsx");
 
 export { useAuthorizedAppsTokens };
-export const useAuthorizedAppsToken = function useAuthorizedAppsToken(parentId) {
+export const useAuthorizedAppsToken = function useAuthorizedAppsToken(parentId, arg1) {
   closure_0 = parentId;
   let items = [parentId];
   const fetched = useAuthorizedAppsTokens(
-    React.useMemo(() => {
+    noop.useMemo(() => {
       let tmp2 = null;
       if (null != closure_0) {
         const items = [tmp];

@@ -1,16 +1,13 @@
 // discord_app/modules/experiments/apex/DebugExperiment.tsx
-import set from "../../../../_runtime/00002_set.js";
 import ApexExperiment from "index.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const obj = { 1: null, 2: {} };
+let obj = { name: "2026-03-debug-experiment", kind: "user", defaultConfig: {}, variations: null };
+obj = { 1: null, 2: {} };
 obj[2] = {};
-const apexExperiment = ApexExperiment.createApexExperiment({
-  name: "2026-03-debug-experiment",
-  kind: "user",
-  defaultConfig: {},
-  variations: obj,
-});
-const result = set.fileFinishedImporting("modules/experiments/apex/DebugExperiment.tsx");
+obj.variations = obj;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/experiments/apex/DebugExperiment.tsx");
 
 export default apexExperiment;
 export const DebugExperiment = apexExperiment;

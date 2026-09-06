@@ -1,16 +1,14 @@
 // discord_app/modules/threads/native/components/redesign/ThreadListLoadingIndicator.tsx
-import resultDefault from "../../../../../components_native/common/MessageLoadingSpinner.tsx";
-import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
-import importAllResult from "../../../../../../_runtime/00019_noop.js";
+import MessageLoadingSpinnerDefault from "../../../../../components_native/common/MessageLoadingSpinner.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-let closure_3 = createCacheKey.createStyles({ spinner: { width: 32, height: 32 } });
-const memoResult = importAllResult.memo(() => {
-  const tmp = callback();
-  return jsx(resultDefault, { style: callback().spinner, animate: true });
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_3 = createStyles.createStyles({ spinner: { width: 32, height: 32 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/threads/native/components/redesign/ThreadListLoadingIndicator.tsx");
+
+export default noop.memo(() => {
+  const tmp = closure_3();
+  return jsx(MessageLoadingSpinnerDefault, { style: closure_3().spinner, animate: true });
 });
-const result = require("set").fileFinishedImporting(
-  "modules/threads/native/components/redesign/ThreadListLoadingIndicator.tsx",
-);
-
-export default memoResult;

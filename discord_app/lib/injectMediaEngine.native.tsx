@@ -1,7 +1,6 @@
 // discord_app/lib/injectMediaEngine.native.tsx
-import set from "../../_runtime/00002_set.js";
 import inject from "../../discord_common/js/packages/media-engine/native/inject.tsx";
-import { logger } from "../../discord_common/js/packages/media-engine/native/ios/VoiceEngine.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
 inject.inject({
   supported() {
@@ -13,8 +12,8 @@ inject.inject({
   },
   setProcessPriority() {},
   getVoiceEngine() {
-    return logger /* logger */.default;
+    return require("VoiceEngine").default;
   },
   getOpenH264LibraryPath() {},
 });
-const result = set.fileFinishedImporting("lib/injectMediaEngine.native.tsx");
+const result = size.fileFinishedImporting("lib/injectMediaEngine.native.tsx");

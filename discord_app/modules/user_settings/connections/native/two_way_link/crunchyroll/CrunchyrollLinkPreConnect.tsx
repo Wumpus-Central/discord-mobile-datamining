@@ -1,15 +1,16 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkPreConnect.tsx
-import registerAssetDefault from "../../../../../../../_runtime/09276_registerAsset.js";
-import closure_3 from "../../../../../../../_runtime/00019_noop.js";
-import { CrunchyrollLinkModalScenes as closure_4 } from "CrunchyrollLinkConstants.tsx";
-import { PlatformTypes } from "../../../../../../Constants.tsx";
-import { CRUNCHYROLL_LINK_DEST_ORIGIN as closure_6 } from "../../../../../connections/CrunchyrollConnectionConstants.tsx";
-import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
+import _modDef9276 from "../../../../../../../_runtime/metro/09276__.js";
+import noop from "../../../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let closure_8 = createCacheKey.createStyles({ image: { width: 152, height: 123 } });
-const result = require("set").fileFinishedImporting(
+const require = fn;
+let closure_4 = fn(9272).CrunchyrollLinkModalScenes;
+const PlatformTypes = fn(1074).PlatformTypes;
+const redirectDestination = fn(8338).CRUNCHYROLL_LINK_DEST_ORIGIN;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_8 = createStyles.createStyles({ image: { width: 152, height: 123 } });
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkPreConnect.tsx",
 );
 
@@ -18,33 +19,33 @@ export default function CrunchyrollLinkPreConnect() {
   navigation = obj.useNavigation();
   const items = [navigation];
   const items1 = [navigation];
-  const callback = React.useCallback((arg0) => {
-    navigation.push(closure_1_4.DISCORD_CONSENT, arg0);
+  const callback = noop.useCallback((arg0) => {
+    navigation.push(constants.DISCORD_CONSENT, arg0);
   }, items);
-  const callback1 = React.useCallback(() => {
-    navigation.push(closure_1_4.ERROR);
+  const callback1 = noop.useCallback(() => {
+    navigation.push(constants.ERROR);
   }, items1);
   obj = {
     platformType: PlatformTypes.CRUNCHYROLL,
     onError: callback1,
     onNext: callback,
-    img: registerAssetDefault,
-    imgStyle: callback().image,
+    img: _modDef9276,
+    imgStyle: closure_8().image,
     title: null,
     body: null,
     redirectDestination: null,
   };
   const intl = navigation(1114).intl;
-  obj[5] = intl.string(navigation(1114).t.siPkNp);
+  obj.title = intl.string(navigation(1114).t.siPkNp);
   const intl2 = navigation(1114).intl;
-  obj[6] = intl2.string(navigation(1114).t.oS4NEH);
-  obj[7] = closure_6;
+  obj.body = intl2.string(navigation(1114).t.oS4NEH);
+  obj.redirectDestination = redirectDestination;
   return jsx(navigation(9230).TwoWayLinkPreConnect, {
     platformType: PlatformTypes.CRUNCHYROLL,
     onError: callback1,
     onNext: callback,
-    img: registerAssetDefault,
-    imgStyle: callback().image,
+    img: _modDef9276,
+    imgStyle: closure_8().image,
     title: null,
     body: null,
     redirectDestination: null,

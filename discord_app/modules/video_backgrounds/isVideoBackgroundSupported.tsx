@@ -1,15 +1,16 @@
 // discord_app/modules/video_backgrounds/isVideoBackgroundSupported.tsx
-import apexExperimentDefault from "VirtualBackgroundsIosExperiment.tsx";
-import closure_3 from "../../stores/MediaEngineStore.tsx";
-import { Features } from "../../../discord_common/js/packages/media-engine/Constants.tsx";
+import VirtualBackgroundsIosExperimentDefault from "VirtualBackgroundsIosExperiment.tsx";
+import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/video_backgrounds/isVideoBackgroundSupported.tsx");
+const require = fn;
+const Features = fn(4585).Features;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/video_backgrounds/isVideoBackgroundSupported.tsx");
 
 export default function isVideoBackgroundSupported() {
   let obj = arg0;
   if (arg0 === undefined) {
-    obj = closure_3;
+    obj = MediaEngineStore;
   }
   let supportsResult = obj.supports(Features.VIDEO_BACKGROUND_FILTER);
   if (supportsResult) {
@@ -18,9 +19,12 @@ export default function isVideoBackgroundSupported() {
   }
   let tmp4 = supportsResult;
   if (obj2.isIOS()) {
-    const obj3 = apexExperimentDefault;
-    tmp4 = apexExperimentDefault.getConfig({ location: "isVideoBackgroundSupported" }).enabled && supportsResult;
-    const tmp6 = apexExperimentDefault.getConfig({ location: "isVideoBackgroundSupported" }).enabled && supportsResult;
+    tmp4 =
+      VirtualBackgroundsIosExperimentDefault.getConfig({ location: "isVideoBackgroundSupported" }).enabled &&
+      supportsResult;
+    const tmp6 =
+      VirtualBackgroundsIosExperimentDefault.getConfig({ location: "isVideoBackgroundSupported" }).enabled &&
+      supportsResult;
   }
   return tmp4;
 }

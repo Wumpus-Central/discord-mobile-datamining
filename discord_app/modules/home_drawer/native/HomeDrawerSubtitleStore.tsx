@@ -1,10 +1,12 @@
 // discord_app/modules/home_drawer/native/HomeDrawerSubtitleStore.tsx
-import set from "../../../../_runtime/00002_set.js";
-import keys from "../../../../_runtime/00560_keys.js";
+import 00560__ from "../../../../_runtime/metro/00560__.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
 let c0 = null;
-const obj = keys.create((arg0, arg1) => {
-  c0 = arg0;
+const result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawerSubtitleStore.tsx");
+
+export default module_560.create((arg0, arg1) => {
+  closure_0 = arg0;
   closure_1 = arg1;
   return {
     currentType: "voice",
@@ -15,22 +17,19 @@ const obj = keys.create((arg0, arg1) => {
       }
       interval = setInterval(() => {
         let str = "voice";
-        if ("voice" === callback().currentType) {
+        if ("voice" === closure_1_1().currentType) {
           str = "activity";
         }
-        closure_0({ currentType: str });
+        closure_1_0({ currentType: str });
       }, 3500);
     },
     stopTimer() {
-      if (null != _null) {
+      if (null != c0) {
         const _clearInterval = clearInterval;
-        clearInterval(_null);
-        _null = null;
+        clearInterval(c0);
+        c0 = null;
       }
-      _null({ currentType: "voice" });
-    },
+      closure_0({ currentType: "voice" });
+    }
   };
 });
-const result = set.fileFinishedImporting("modules/home_drawer/native/HomeDrawerSubtitleStore.tsx");
-
-export default obj;

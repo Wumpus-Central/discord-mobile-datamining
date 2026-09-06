@@ -1,37 +1,38 @@
 // discord_app/modules/forums/native/posts/ForumPostPinIcon.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import Button from "../../../../design/void/native.tsx";
-import registerAssetDefault from "../../../../../_runtime/12004_registerAsset.js";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import native from "../../../../design/void/native.tsx";
+import _modDef12004 from "../../../../../_runtime/metro/12004__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-createCacheKey = { pin: null, pinIcon: null };
-createCacheKey = {
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+fn(4560);
+const createStyles = { pin: null, pinIcon: null };
+let size = {
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "center",
-  borderRadius: ThemesDefault.radii.round,
+  borderRadius: nativeDefault.radii.round,
   width: 23,
   height: 23,
   marginEnd: 4,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+  backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { height: 14, width: 14, tintColor: ThemesDefault.colors.WHITE };
-let closure_5 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { height: 14, width: 14, tintColor: ThemesDefault.colors.WHITE };
-const result = require("set").fileFinishedImporting("modules/forums/native/posts/ForumPostPinIcon.tsx");
+createStyles.pin = size;
+const size1 = { height: 14, width: 14, tintColor: nativeDefault.colors.WHITE };
+createStyles.pinIcon = size1;
+let closure_5 = createStyles.createStyles(createStyles);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPostPinIcon.tsx");
 
 export default function ForumPostPinIcon(containerStyle) {
-  const tmp = callback();
-  let obj = { style: items, children: null };
-  items = [tmp.pin, containerStyle.containerStyle];
-  obj = { source: registerAssetDefault, style: tmp.pinIcon };
-  obj[1] = jsx(Button.Icon, { source: registerAssetDefault, style: tmp.pinIcon });
-  return <View source={registerAssetDefault} style={tmp.pinIcon} />;
+  const tmp = closure_5();
+  let obj = { style: null, children: null };
+  const items = [tmp.pin, containerStyle.containerStyle];
+  obj.style = items;
+  obj = { source: _modDef12004, style: tmp.pinIcon };
+  obj.children = jsx(native.Icon, { source: _modDef12004, style: tmp.pinIcon });
+  return <View source={_modDef12004} style={tmp.pinIcon} />;
 }

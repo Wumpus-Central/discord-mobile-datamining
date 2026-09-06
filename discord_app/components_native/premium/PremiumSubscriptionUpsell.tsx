@@ -1,23 +1,22 @@
 // discord_app/components_native/premium/PremiumSubscriptionUpsell.tsx
-import noopAll from "../../../_runtime/00019_noop.js";
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
-import getPremiumPlanItemDefault from "../../utils/PremiumUtils.tsx";
-import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../modules/user_settings/LocaleStore.tsx";
-import closure_6 from "../../stores/UserStore.tsx";
-import { Gradients } from "../../modules/colors/native/ColorConstants.tsx";
-import GuildFeatures from "../../modules/premium/PremiumConstants.tsx";
-import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
+import PremiumUtilsDefault from "../../utils/PremiumUtils.tsx";
+import noop from "../../../_runtime/metro/00019__.js";
+import LocaleStore from "../../modules/user_settings/LocaleStore.tsx";
+import UserStore from "../../stores/UserStore.tsx";
 
-require = arg1;
-noopAll;
-({ View: c3, Image: c4, StyleSheet } = get_ActivityIndicator);
-({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_8, GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: c9 } =
-  GuildFeatures);
-({ jsx: c10, Fragment: unpackModuleId, jsxs: closure_12 } = jsxProd);
-createCacheKey = {
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: c3, Image: closure_4, StyleSheet } = get_ActivityIndicator);
+const Gradients = fn(7432).Gradients;
+const PremiumConstants = fn(1373);
+({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_8, GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_9 } =
+  PremiumConstants);
+const jsxProd = fn(21);
+({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
+fn(4560);
+let createStyles = {
   title: { textAlign: "center" },
   subtitle: { lineHeight: 20, marginTop: 8, textAlign: "center" },
   upsell: null,
@@ -30,153 +29,138 @@ createCacheKey = {
   upsellLabel: null,
   upsellRow: null,
 };
-createCacheKey = {
+createStyles = {
   paddingTop: 32,
   borderTopWidth: 2 * StyleSheet.hairlineWidth,
-  borderTopColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderTopColor: nativeDefault.colors.BORDER_SUBTLE,
 };
-createCacheKey[2] = createCacheKey;
-createCacheKey[3] = { borderRadius: ThemesDefault.radii.xs, padding: 16, alignItems: "center" };
-let obj1 = { borderRadius: ThemesDefault.radii.xs, padding: 16, alignItems: "center" };
-createCacheKey[4] = {
-  borderRadius: ThemesDefault.radii.sm,
+createStyles.upsell = createStyles;
+createStyles.upsellCard = { borderRadius: nativeDefault.radii.xs, padding: 16, alignItems: "center" };
+let obj1 = { borderRadius: nativeDefault.radii.xs, padding: 16, alignItems: "center" };
+createStyles.upsellFeatures = {
+  borderRadius: nativeDefault.radii.sm,
   padding: 16,
   marginTop: 12,
   alignSelf: "stretch",
-  backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+  backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
 };
-createCacheKey[5] = { alignSelf: "center", height: 10, width: 54 };
-createCacheKey[6] = { marginTop: 8 };
-createCacheKey[7] = { marginTop: 16 };
-createCacheKey[8] = { alignSelf: "center", height: 20, marginTop: 6, width: 84 };
+createStyles.upsellFeatureSubLogo = { alignSelf: "center", height: 10, width: 54 };
+createStyles.upsellFeatureList = { marginTop: 8 };
+createStyles.upsellButton = { marginTop: 16 };
+createStyles.upsellFeatureLogoTier2 = { alignSelf: "center", height: 20, marginTop: 6, width: 84 };
 let obj2 = {
-  borderRadius: ThemesDefault.radii.sm,
+  borderRadius: nativeDefault.radii.sm,
   padding: 16,
   marginTop: 12,
   alignSelf: "stretch",
-  backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+  backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
 };
-createCacheKey[9] = {
-  color: ThemesDefault.unsafe_rawColors.WHITE,
-  fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD,
+createStyles.upsellLabel = {
+  color: nativeDefault.unsafe_rawColors.WHITE,
+  fontFamily: fn(1074).Fonts.PRIMARY_SEMIBOLD,
   fontSize: 16,
   lineHeight: 20,
 };
 let obj3 = {
-  color: ThemesDefault.unsafe_rawColors.WHITE,
-  fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD,
+  color: nativeDefault.unsafe_rawColors.WHITE,
+  fontFamily: fn(1074).Fonts.PRIMARY_SEMIBOLD,
   fontSize: 16,
   lineHeight: 20,
 };
-createCacheKey[10] = { paddingVertical: 0, marginTop: 8, color: ThemesDefault.unsafe_rawColors.WHITE };
-let closure_13 = createCacheKey.createStyles(createCacheKey);
-let obj4 = { paddingVertical: 0, marginTop: 8, color: ThemesDefault.unsafe_rawColors.WHITE };
-const result = require("set").fileFinishedImporting("components_native/premium/PremiumSubscriptionUpsell.tsx");
+createStyles.upsellRow = { paddingVertical: 0, marginTop: 8, color: nativeDefault.unsafe_rawColors.WHITE };
+let closure_13 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/premium/PremiumSubscriptionUpsell.tsx");
 
 export default function PremiumSubscriptionUpsell(arg0) {
   ({ onLearnMorePremium, style } = arg0);
-  let tmp = callback();
+  let tmp = closure_13();
   let stringResult = dependencyMap;
   let obj = initialize;
-  const items = [closure_6];
+  const items = [UserStore];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  obj1 = getPremiumPlanItemDefault;
+  let obj1 = PremiumUtilsDefault;
   if (obj1.canUsePremiumGuildMemberProfile(stateFromStores)) {
     return null;
   } else {
     obj = { style: null, children: null };
     const items1 = [tmp.upsell, style];
-    obj[0] = items1;
-    obj = { style: null, start: null, end: null, colors: null, children: null };
-    obj[0] = tmp.upsellCard;
-    let tmp5Result = tmp5(4987);
-    obj[1] = tmp2(1093).HorizontalGradient.START;
-    obj[2] = tmp2(1093).HorizontalGradient.END;
-    obj[3] = Gradients.PREMIUM_GUILD;
-    tmp5Result = tmp5(4218);
+    obj.style = items1;
+    obj = { style: tmp.upsellCard, start: null, end: null, colors: null, children: null };
+    tmp5(4987);
+    obj.start = tmp2(1093).HorizontalGradient.START;
+    obj.end = tmp2(1093).HorizontalGradient.END;
+    obj.colors = Gradients.PREMIUM_GUILD;
+    const tmp5Result = tmp5(4218);
     if (tmp5Result.isPremium(stateFromStores)) {
       obj1 = { children: null };
       const obj2 = {
-        style: null,
+        style: tmp.title,
         accessibilityRole: "header",
         variant: "heading-lg/semibold",
         color: "text-overlay-light",
         children: null,
       };
-      obj2[0] = tmp.title;
       const intl2 = tmp2(1114).intl;
-      obj2[4] = intl2.string(tmp2(1114).t.YYfHlx);
+      obj2.children = intl2.string(tmp2(1114).t.YYfHlx);
       const items2 = [tmp6(tmp2(4556).Text, obj2)];
-      const obj3 = { style: null, variant: "text-md/semibold", color: "text-overlay-light", children: null };
-      obj3[0] = tmp.subtitle;
+      const obj3 = { style: tmp.subtitle, variant: "text-md/semibold", color: "text-overlay-light", children: null };
       const intl3 = tmp2(1114).intl;
-      const obj4 = { numFreeGuildSubscriptions: null };
-      obj4[0] = closure_8;
-      obj3[3] = intl3.format(tmp2(1114).t.Af0zEZ, obj4);
+      const obj4 = { numFreeGuildSubscriptions };
+      obj3.children = intl3.format(tmp2(1114).t.Af0zEZ, obj4);
       items2[1] = tmp6(tmp2(4556).Text, obj3);
-      obj1[0] = items2;
-      let tmp6Result = tmp8(closure_11, obj1);
+      obj1.children = items2;
+      let tmp6Result = tmp8(closure_1_11, obj1);
     } else {
       const obj5 = {
-        style: null,
+        style: tmp.title,
         accessibilityRole: "header",
         variant: "heading-lg/semibold",
         color: "text-overlay-light",
         children: null,
       };
-      obj5[0] = tmp.title;
       const intl = tmp2(1114).intl;
-      obj5[4] = intl.string(tmp2(1114).t["qUl+K4"]);
+      obj5.children = intl.string(tmp2(1114).t["qUl+K4"]);
       tmp6Result = tmp6(tmp2(4556).Text, obj5);
     }
     const items3 = [tmp6Result, ,];
-    const obj6 = { style: null, children: null };
-    obj6[0] = tmp.upsellFeatures;
-    const obj7 = { style: null, source: null };
-    obj7[0] = tmp.upsellFeatureSubLogo;
-    obj7[1] = tmp5(13540);
-    const items4 = [closure_10(closure_4, obj7), ,];
-    const obj8 = { style: null, source: null };
-    obj8[0] = tmp.upsellFeatureLogoTier2;
-    obj8[1] = tmp5(13541);
-    items4[1] = closure_10(closure_4, obj8);
-    const obj9 = { style: null, features: null, labelStyle: null, rowStyle: null };
-    obj9[0] = tmp.upsellFeatureList;
-    const obj10 = { IconComponent: null, label: null, color: null };
-    obj10[0] = tmp2(4511).CheckmarkLargeIcon;
+    const obj6 = { style: tmp.upsellFeatures, children: null };
+    const obj7 = { style: tmp.upsellFeatureSubLogo, source: tmp5(13540) };
+    const items4 = [closure_1_10(React4, obj7), ,];
+    const obj8 = { style: tmp.upsellFeatureLogoTier2, source: tmp5(13541) };
+    items4[1] = closure_1_10(React4, obj8);
+    const obj9 = { style: tmp.upsellFeatureList, features: null, labelStyle: null, rowStyle: null };
+    const obj10 = { IconComponent: tmp2(4511).CheckmarkLargeIcon, label: null, color: null };
     const intl4 = tmp2(1114).intl;
     const obj11 = { discountPercentage: null };
     const tmp5Result1 = tmp5(9391);
-    obj11[0] = tmp2(1880).formatPercent(locale.locale, closure_9 / 100);
-    obj10[1] = intl4.formatToPlainString(tmp2(1114).t.P3aEj6, obj11);
-    obj10[2] = tmp5(576).unsafe_rawColors.WHITE;
+    obj11.discountPercentage = tmp2(1880).formatPercent(LocaleStore.locale, React7 / 100);
+    obj10.label = intl4.formatToPlainString(tmp2(1114).t.P3aEj6, obj11);
+    obj10.color = tmp5(576).unsafe_rawColors.WHITE;
     const items5 = [obj10];
-    const obj12 = { IconComponent: null, label: null, color: null };
-    obj12[0] = tmp2(4511).CheckmarkLargeIcon;
+    const obj12 = { IconComponent: tmp2(4511).CheckmarkLargeIcon, label: null, color: null };
     const intl5 = tmp2(1114).intl;
-    const obj13 = { numFreeGuildSubscriptions: null };
-    obj13[0] = closure_8;
-    obj12[1] = intl5.formatToPlainString(tmp2(1114).t.Ntlzbd, obj13);
-    obj12[2] = tmp5(576).unsafe_rawColors.WHITE;
+    const obj13 = { numFreeGuildSubscriptions };
+    obj12.label = intl5.formatToPlainString(tmp2(1114).t.Ntlzbd, obj13);
+    obj12.color = tmp5(576).unsafe_rawColors.WHITE;
     items5[1] = obj12;
-    obj9[1] = items5;
-    ({ upsellLabel: obj14[2], upsellRow: obj14[3] } = tmp);
-    items4[2] = closure_10(tmp5Result1, obj9);
-    obj6[1] = items4;
-    items3[1] = closure_12(closure_3, obj6);
-    const obj14 = { style: null, children: null };
-    obj14[0] = tmp.upsellButton;
+    obj9.features = items5;
+    ({ upsellLabel: obj14.labelStyle, upsellRow: obj14.rowStyle } = tmp);
+    items4[2] = closure_1_10(tmp5Result1, obj9);
+    obj6.children = items4;
+    items3[1] = closure_1_12(React3, obj6);
+    const obj14 = { style: tmp.upsellButton, children: null };
     const obj15 = { variant: "experimental_premium-secondary", text: null, onPress: null };
     const intl6 = tmp2(1114).intl;
     stringResult = intl6.string(tmp2(1114).t.fJOECn);
-    obj15[1] = stringResult;
-    obj15[2] = onLearnMorePremium;
+    obj15.text = stringResult;
+    obj15.onPress = onLearnMorePremium;
     tmp = tmp6(tmp2(4975).Button, obj15);
-    obj14[1] = tmp;
-    items3[2] = closure_10(closure_3, obj14);
-    obj[4] = items3;
+    obj14.children = tmp;
+    items3[2] = closure_1_10(React3, obj14);
+    obj.children = items3;
     obj = tmp8(tmp5Result, obj);
-    obj[1] = obj;
+    obj.children = obj;
     tmp6Result = tmp6(tmp7, obj);
     const tmp2Result = tmp2(1880);
   }

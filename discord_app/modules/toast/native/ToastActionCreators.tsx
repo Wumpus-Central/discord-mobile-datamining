@@ -1,19 +1,18 @@
 // discord_app/modules/toast/native/ToastActionCreators.tsx
-import set from "../../../../_runtime/00002_set.js";
-import dispatcherDefault from "../../../Dispatcher.tsx";
+import DispatcherDefault from "../../../Dispatcher.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/toast/native/ToastActionCreators.tsx");
+const result = size.fileFinishedImporting("modules/toast/native/ToastActionCreators.tsx");
 
 export default {
-  open(arg0) {
-    importDefault = arg0;
-    dispatcherDefault.wait(() => {
-      let obj = callback(closure_1_1[0]);
-      obj = { type: "TOAST_OPEN", toastProps: callback };
+  open(toastProps) {
+    importDefault = toastProps;
+    DispatcherDefault.wait(() => {
+      const obj = { type: "TOAST_OPEN", toastProps };
       return obj.dispatch(obj);
     });
   },
   close() {
-    dispatcherDefault.wait(() => callback(table[0]).dispatch({ type: "TOAST_CLOSE" }));
+    DispatcherDefault.wait(() => DispatcherDefault.dispatch({ type: "TOAST_CLOSE" }));
   },
 };

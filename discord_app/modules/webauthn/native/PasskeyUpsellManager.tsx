@@ -1,18 +1,17 @@
 // discord_app/modules/webauthn/native/PasskeyUpsellManager.tsx
-import DismissibleContent from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import UNSAFE_isDismissibleContentDismissed from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
-import _crypto from "../../../utils/MFAUtils.tsx";
-import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
-import _modDef14663 from "PasskeyUpsellActionCreators.tsx";
-import closure_3 from "../../../stores/AuthenticationStore.tsx";
-import closure_4 from "../../../stores/UserStore.tsx";
-import closure_5 from "../WebAuthnStore.tsx";
-import { LoginStates } from "../../../Constants.tsx";
+import dismissible_content from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import DismissibleContentUnsafeUtils from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
+import MFAUtils from "../../../utils/MFAUtils.tsx";
+import PasskeyUpsellActionCreatorsDefault from "PasskeyUpsellActionCreators.tsx";
+import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
+import WebAuthnStore from "../WebAuthnStore.tsx";
+import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
-require = arg1;
+require = fn;
+const LoginStates = fn(1074).LoginStates;
 let c7 = false;
 let c8 = false;
-initializeDefault;
 class PasskeyUpsellManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -32,19 +31,18 @@ class PasskeyUpsellManager extends tmp2 {
 const prototype = PasskeyUpsellManager.prototype;
 prototype["handlePasskeyUpsellShow"] = function handlePasskeyUpsellShow() {
   if (c8) {
-    if (_crypto.hasWebAuthn) {
-      if (loginStatus.getLoginStatus() === LoginStates.NONE) {
+    if (MFAUtils.hasWebAuthn) {
+      if (AuthenticationStore.getLoginStatus() === LoginStates.NONE) {
         if (obj.attemptedPasswordLogin()) {
           let tmpResult = tmp(4380);
           if (!tmpResult.UNSAFE_isDismissibleContentDismissed(tmp(1943).DismissibleContent.PASSWORDLESS_UPSELL)) {
-            if (!closure_5.hasFetchedCredentials()) {
+            if (!WebAuthnStore.hasFetchedCredentials()) {
               tmpResult = tmp(4417);
               if (!tmpResult.isModalOpen()) {
-                currentUser = currentUser.getCurrentUser();
+                const currentUser = UserStore.getCurrentUser();
                 if (tmp6) {
                   if (obj3.hasFetchedCredentials()) {
-                    _modDef14663.openPasskeyUpsell();
-                    const obj6 = _modDef14663;
+                    PasskeyUpsellActionCreatorsDefault.openPasskeyUpsell();
                   } else if (!c7) {
                     c7 = true;
                     const webAuthnCredentials = tmp(6597).fetchWebAuthnCredentials();
@@ -57,7 +55,7 @@ prototype["handlePasskeyUpsellShow"] = function handlePasskeyUpsellShow() {
           }
         }
       }
-      obj = loginStatus;
+      obj = AuthenticationStore;
     }
   }
 };
@@ -69,11 +67,11 @@ prototype["handleLogout"] = function handleLogout() {
   c8 = false;
 };
 prototype["markDismissed"] = function markDismissed(USER_DISMISS) {
-  let obj = UNSAFE_isDismissibleContentDismissed;
-  obj = { dismissAction: USER_DISMISS, forceTrack: true };
-  return obj.UNSAFE_markDismissibleContentAsDismissed(DismissibleContent.DismissibleContent.PASSWORDLESS_UPSELL, obj);
+  const obj = { dismissAction: USER_DISMISS, forceTrack: true };
+  return obj.UNSAFE_markDismissibleContentAsDismissed(dismissible_content.DismissibleContent.PASSWORDLESS_UPSELL, obj);
 };
 const passkeyUpsellManager = new PasskeyUpsellManager();
-let result = require("set").fileFinishedImporting("modules/webauthn/native/PasskeyUpsellManager.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/webauthn/native/PasskeyUpsellManager.tsx");
 
 export default passkeyUpsellManager;

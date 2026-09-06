@@ -1,7 +1,7 @@
 // discord_assets/assets/mana/asset-library/generated/CatIllocon-2x.png.js
-import set from "../../../../../_runtime/00002_set.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/CatIllocon-2x.png.js");
+const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/CatIllocon-2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/9af0badd716ab9255c841405a169dda54f64438488bc44080898752292aaad3b.png";
 export const metadata = { fileBytes: 673 };

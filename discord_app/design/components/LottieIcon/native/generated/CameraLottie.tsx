@@ -1,19 +1,19 @@
 // discord_app/design/components/LottieIcon/native/generated/CameraLottie.tsx
 import LottieIcon from "../LottieIcon.tsx";
-import registerAsset from "../../../../../../_runtime/09949_registerAsset.js";
-import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
-import importAllResult from "../../../../../../_runtime/00019_noop.js";
+import _mod9949 from "../../../../../../_runtime/metro/09949__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-let closure_3 = ["IconAnimation_Camera_v03"];
+require = fn;
+const jsx = fn(21).jsx;
+const layers = ["IconAnimation_Camera_v03"];
 const items = [
   { name: "mute", start: 0, duration: 70 },
   { name: "unmute", start: 100, duration: 70 },
 ];
-const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
-  const merged = Object.assign(arg0);
-  return jsx(LottieIcon.LottieIcon, { dotLottie: registerAsset, ref, layers: closure_3, markers: items });
-});
-const result = require("set").fileFinishedImporting("design/components/LottieIcon/native/generated/CameraLottie.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/LottieIcon/native/generated/CameraLottie.tsx");
 
-export const CameraLottie = forwardRefResult;
+export const CameraLottie = noop.forwardRef((arg0, ref) => {
+  const merged = Object.assign(arg0);
+  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod9949, ref, layers, markers: items });
+});

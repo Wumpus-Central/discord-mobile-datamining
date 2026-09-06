@@ -1,30 +1,27 @@
 // discord_app/modules/user_settings/defs/native/ParentalControlsSensitiveContentFilterSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import ME from "../../../../Constants.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
+import Constants from "../../../../Constants.tsx";
+import util from "../../../../intl/index.native.tsx";
 import ImageWarningIcon from "../../../../design/components/Icon/native/redesign/generated/ImageWarningIcon.tsx";
-import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
-import { UserSettingsSensitiveContentFilters } from "../../family_center/native/ParentalControlsSensitiveContentFiltersScreen.tsx";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["Hj/But"]);
+    const intl = util.intl;
+    return intl.string(util.t["Hj/But"]);
   },
   IconComponent: ImageWarningIcon.ImageWarningIcon,
-  parent: MobileUserSettings.MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
-  screen: obj,
-  unsearchable: true,
-};
-obj = {
-  route: ME.UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
-  getComponent() {
-    return UserSettingsSensitiveContentFilters /* UserSettingsSensitiveContentFilters */.default;
+  parent: SettingsConstants.MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  screen: {
+    route: Constants.UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
+    getComponent() {
+      return require("ParentalControlsSensitiveContentFiltersScreen").default;
+    },
   },
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting(
+  unsearchable: true,
+});
+const result = size.fileFinishedImporting(
   "modules/user_settings/defs/native/ParentalControlsSensitiveContentFilterSetting.tsx",
 );
 

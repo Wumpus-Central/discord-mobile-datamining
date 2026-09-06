@@ -1,12 +1,11 @@
 // discord_app/records/ConnectedAccountRecord.tsx
-import toJSDefault from "../lib/Record.tsx";
+import Record from "../lib/Record.tsx";
 
-toJSDefault;
-const result = require("set").fileFinishedImporting("records/ConnectedAccountRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("records/ConnectedAccountRecord.tsx");
 class ConnectedAccountRecord extends tmp2 {
   constructor(arg0) {
     tmp = new ConnectedAccountRecord(new.target, new.target, global, ConnectedAccountRecord);
-    // ThrowIfThisInitialized (0x7c)
     ({ id: tmp.id, type: tmp.type, name: tmp.name } = global);
     tmp.revoked = global.revoked || false;
     tmp.integrations = global.integrations || [];

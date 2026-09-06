@@ -1,23 +1,25 @@
 // discord_app/design/components/experimental/Pressables/native/AnimatedPressableHighlight.native.tsx
-import SPRING_CONFIG from "../../../../../modules/main_tabs_v2/native/shared_components/util/useIOSPressEffects.tsx";
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
-import { Pressable } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
-import set from "../../../../../utils/PlatformUtils.tsx";
-import importDefaultResult from "../../../../../modules/reanimated/ReanimatedRexport.tsx";
+import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import useToken from "../../../../tokens/native/useToken.tsx";
+import useIOSPressEffects from "../../../../../modules/main_tabs_v2/native/shared_components/util/useIOSPressEffects.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
+import ReanimatedRexport from "../../../../../modules/reanimated/ReanimatedRexport.tsx";
 
-require = arg1;
-let closure_6 = importDefaultResult.createAnimatedComponent(require("PressableBase").PressableHighlight);
-const result = set.fileFinishedImporting(
+require = fn;
+const Pressable = fn(17).Pressable;
+const jsx = fn(21).jsx;
+let closure_6 = ReanimatedRexport.createAnimatedComponent(fn(5123).PressableHighlight);
+const PlatformUtils = fn(1115);
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "design/components/experimental/Pressables/native/AnimatedPressableHighlight.native.tsx",
 );
 
-export const AnimatedPressableHighlight = set.isAndroid()
+export const AnimatedPressableHighlight = PlatformUtils.isAndroid()
   ? function AnimatedPressableHighlightAndroid(children) {
-      const merged = Object.assign(children, Object.create(null));
-      let token;
-      let obj = merged(4262);
-      token = obj.useToken(token(576).colors.MOBILE_ANDROID_BUTTON_BACKGROUND_RIPPLE);
+      const merged = Object.assign(children, Object.assign({ children: 0 }));
+      let obj = useToken;
+      const token = obj.useToken(nativeDefault.colors.MOBILE_ANDROID_BUTTON_BACKGROUND_RIPPLE);
       const items = [token];
       let androidRippleConfig = merged.androidRippleConfig;
       let cornerRadius;
@@ -26,7 +28,7 @@ export const AnimatedPressableHighlight = set.isAndroid()
       }
       items[1] = cornerRadius;
       obj = {
-        android_ripple: React.useMemo(() => {
+        android_ripple: noop.useMemo(() => {
           const obj = { color: token, cornerRadius: null };
           const androidRippleConfig = merged.androidRippleConfig;
           let num;
@@ -36,7 +38,7 @@ export const AnimatedPressableHighlight = set.isAndroid()
           if (num == null) {
             num = 12;
           }
-          obj[1] = num;
+          obj.cornerRadius = num;
           return obj;
         }, items),
       };
@@ -44,7 +46,7 @@ export const AnimatedPressableHighlight = set.isAndroid()
       obj.children = children.children;
       return (
         <Pressable
-          android_ripple={React.useMemo(() => {
+          android_ripple={noop.useMemo(() => {
             const obj = { color: token, cornerRadius: null };
             const androidRippleConfig = merged.androidRippleConfig;
             let num;
@@ -54,15 +56,15 @@ export const AnimatedPressableHighlight = set.isAndroid()
             if (num == null) {
               num = 12;
             }
-            obj[1] = num;
+            obj.cornerRadius = num;
             return obj;
           }, items)}
         />
       );
     }
   : function AnimatedPressableHighlightiOS(children) {
-      const merged = Object.assign(children, Object.create(null));
-      let obj = SPRING_CONFIG;
+      const merged = Object.assign(children, Object.assign({ children: 0 }));
+      let obj = useIOSPressEffects;
       const iOSPressEffects = obj.useIOSPressEffects(4);
       obj = {
         accessibilityRole: "button",

@@ -1,5 +1,5 @@
 // discord_app/modules/explicit_media_redaction/ObscureMediaModels.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
 const obj = {
   SPOILER: "spoiler",
@@ -15,10 +15,10 @@ const items = [, , ,];
   SELF_HARM_CONTENT: arr[2],
   POTENTIAL_EXPLICIT_CONTENT: arr[3],
 } = obj);
-let set = new Set(items);
 const items1 = [, ,];
 ({ EXPLICIT_CONTENT: arr2[0], GORE_CONTENT: arr2[1], SELF_HARM_CONTENT: arr2[2] } = obj);
-const result = set.fileFinishedImporting("modules/explicit_media_redaction/ObscureMediaModels.tsx");
+const set = new Set(items);
+const result = size.fileFinishedImporting("modules/explicit_media_redaction/ObscureMediaModels.tsx");
 
 export const ObscureReason = obj;
 export const SENSITIVE_CONTENT_OBSCURABLE_REASONS = set;

@@ -1,13 +1,12 @@
 // discord_app/modules/game_detection/GameDetectionTypes.tsx
-import toJSDefault from "../../lib/Record.tsx";
-import { createExecutable } from "../../records/ApplicationRecord.tsx";
+import Record from "../../lib/Record.tsx";
 
-toJSDefault;
-const result = require("set").fileFinishedImporting("modules/game_detection/GameDetectionTypes.tsx");
+const createExecutable = fn(1918).createExecutable;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_detection/GameDetectionTypes.tsx");
 class DetectableGameRecord extends tmp2 {
   constructor(arg0) {
     tmp3 = new DetectableGameRecord(tmp2, new.target, new.target, tmp);
-    // ThrowIfThisInitialized (0x7c)
     ({
       id: tmp3.id,
       name: tmp3.name,

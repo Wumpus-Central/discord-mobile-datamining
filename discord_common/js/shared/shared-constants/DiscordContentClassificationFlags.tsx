@@ -1,8 +1,8 @@
 // discord_common/js/shared/shared-constants/DiscordContentClassificationFlags.tsx
-import importAllResult from "../utils/BigFlagUtils.tsx";
+import BigFlagUtils from "../utils/BigFlagUtils.tsx";
 
 let obj = {
-  EMERGENCY_ONLY_USE_IF_YOU_HAVE_TO_FORCE_MARK_AGE_RESTRICTED: require("../../../../discord_app/index.native.tsx"),
+  EMERGENCY_ONLY_USE_IF_YOU_HAVE_TO_FORCE_MARK_AGE_RESTRICTED: null,
   SEXUALLY_SUGGESTIVE_IMAGERY: null,
   SEXUALLY_SUGGESTIVE_TEXT: null,
   SEXUALLY_EXPLICIT_IMAGERY: null,
@@ -28,64 +28,41 @@ let obj = {
   TRAGEDY_SIMULATED_NATURAL_DISASTER: null,
   TRAGEDY_REAL_MILITARY_CONFLICT: null,
 };
-obj[1] = require("../../../../discord_app/modules/debug/logAppStart.tsx");
-const importAllResult1 = importAllResult;
-obj[2] = require("set");
-const importAllResult2 = importAllResult;
-obj[3] = require("../../../../discord_app/modules/debug/Logger.tsx");
-const importAllResult3 = importAllResult;
-obj[4] = require("../../packages/logger/Logger.tsx");
-const importAllResult4 = importAllResult;
-obj[5] = require("../../../../_runtime/00005_asyncGeneratorStep.js");
-const importAllResult5 = importAllResult;
-obj[6] = require("../../packages/logger/LoggerPIIRestrictedObjects.tsx");
-const importAllResult6 = importAllResult;
-obj[7] = require("../../../../discord_app/modules/debug/LogAggregator.tsx");
-const importAllResult7 = importAllResult;
-obj[8] = require("../../../../_runtime/00008_Deque.js");
-const importAllResult8 = importAllResult;
-obj[9] = require("../../../../discord_app/modules/tti_analytics/TTITracker.tsx");
-const importAllResult9 = importAllResult;
-obj[10] = require("../../packages/app-start-performance/AppStartPerformance.tsx");
-const importAllResult10 = importAllResult;
-obj[11] = require("../../../../discord_app/utils/SnowflakeUtils.tsx");
-const importAllResult11 = importAllResult;
-obj[12] = require("../../../../_runtime/00012_apply.js");
-const importAllResult12 = importAllResult;
-obj[13] = require("../utils/SnowflakeUtils.tsx");
-const importAllResult13 = importAllResult;
-obj[14] = require("../../../../_runtime/00014_Integer.js");
-const importAllResult14 = importAllResult;
-obj[15] = require("../../../../discord_app/modules/gateway/native/fast_connect.tsx");
-const importAllResult15 = importAllResult;
-obj[16] = require("../../../../discord_app/utils/checkEnv.tsx");
-const importAllResult16 = importAllResult;
-obj[17] = require("../../../../_runtime/00017_get_ActivityIndicator.js");
-const importAllResult17 = importAllResult;
-obj[18] = require("../../../../_runtime/00018_ActivityIndicator.js");
-const importAllResult18 = importAllResult;
-obj[19] = require("../../../../_runtime/00019_noop.js");
-const importAllResult19 = importAllResult;
-obj[20] = require("../../../../_runtime/00020_noop.js");
-const importAllResult20 = importAllResult;
-obj[21] = require("../../../../_runtime/react/00021_jsxProd.js");
-const importAllResult21 = importAllResult;
-obj[22] = require("../../../../_runtime/react/00022_jsxProd.js");
-const importAllResult22 = importAllResult;
-obj[23] = require("../../../../_runtime/00023_ProgressBarAndroid.js");
-const importAllResult23 = importAllResult;
-obj[24] = require("../../../../_runtime/metro/00024___INTERNAL_VIEW_CONFIG.js");
+obj.EMERGENCY_ONLY_USE_IF_YOU_HAVE_TO_FORCE_MARK_AGE_RESTRICTED = BigFlagUtils.getBrandedFlag(0);
+obj.SEXUALLY_SUGGESTIVE_IMAGERY = BigFlagUtils.getBrandedFlag(1);
+obj.SEXUALLY_SUGGESTIVE_TEXT = BigFlagUtils.getBrandedFlag(2);
+obj.SEXUALLY_EXPLICIT_IMAGERY = BigFlagUtils.getBrandedFlag(3);
+obj.SEXUALLY_EXPLICIT_TEXT = BigFlagUtils.getBrandedFlag(4);
+obj.NUDITY = BigFlagUtils.getBrandedFlag(5);
+obj.DATING = BigFlagUtils.getBrandedFlag(6);
+obj.REGULATED_GOODS_USAGE = BigFlagUtils.getBrandedFlag(7);
+obj.REGULATED_GOODS_DEPICTION = BigFlagUtils.getBrandedFlag(8);
+obj.VIOLENCE_DOMESTIC_SIMULATED = BigFlagUtils.getBrandedFlag(9);
+obj.VIOLENCE_ANIMALS = BigFlagUtils.getBrandedFlag(10);
+obj.VIOLENCE_FANTASY = BigFlagUtils.getBrandedFlag(11);
+obj.VIOLENCE_GRAPHIC = BigFlagUtils.getBrandedFlag(12);
+obj.SELF_HARM_DEPICTION = BigFlagUtils.getBrandedFlag(13);
+obj.SELF_HARM_REFERENCE = BigFlagUtils.getBrandedFlag(14);
+obj.GAMBLING_REAL = BigFlagUtils.getBrandedFlag(15);
+obj.GAMBLING_SIMULATED = BigFlagUtils.getBrandedFlag(16);
+obj.PROFANITY_MILD = BigFlagUtils.getBrandedFlag(17);
+obj.PROFANITY_SEVERE = BigFlagUtils.getBrandedFlag(18);
+obj.SLURS = BigFlagUtils.getBrandedFlag(19);
+obj.DANGEROUS_PHYSICALLY_HARMFUL = BigFlagUtils.getBrandedFlag(20);
+obj.DANGEROUS_MENTALLY_HARMFUL = BigFlagUtils.getBrandedFlag(21);
+obj.TRAGEDY_SIMULATED_HISTORICAL = BigFlagUtils.getBrandedFlag(22);
+obj.TRAGEDY_SIMULATED_NATURAL_DISASTER = BigFlagUtils.getBrandedFlag(23);
+obj.TRAGEDY_REAL_MILITARY_CONFLICT = BigFlagUtils.getBrandedFlag(24);
 const frozen = Object.freeze(obj);
 obj = { RESTRICTED_TO_ADULT: null };
-const importAllResult24 = importAllResult;
-obj[0] = importAllResult.combine(
+obj.RESTRICTED_TO_ADULT = BigFlagUtils.combine(
   frozen.EMERGENCY_ONLY_USE_IF_YOU_HAVE_TO_FORCE_MARK_AGE_RESTRICTED,
   frozen.SEXUALLY_EXPLICIT_IMAGERY,
   frozen.SEXUALLY_EXPLICIT_TEXT,
 );
 const frozen1 = Object.freeze(obj);
-const importAllResult25 = importAllResult;
-const result = require("set").fileFinishedImporting(
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "../discord_common/js/shared/shared-constants/DiscordContentClassificationFlags.tsx",
 );
 

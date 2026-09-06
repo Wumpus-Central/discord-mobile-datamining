@@ -1,13 +1,13 @@
 // discord_app/modules/user_settings/privacy_and_safety/DefultGuildsRestrictedSetting.tsx
-import set from "../../../../_runtime/00002_set.js";
-import explicitContentFromProto from "../UserSettings.tsx";
+import UserSettings from "../UserSettings.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/user_settings/privacy_and_safety/DefultGuildsRestrictedSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/privacy_and_safety/DefultGuildsRestrictedSetting.tsx");
 
 export const useDefaultGuildsRestricted = function useDefaultGuildsRestricted() {
-  const DefaultGuildsRestricted = explicitContentFromProto.DefaultGuildsRestricted;
+  const DefaultGuildsRestricted = UserSettings.DefaultGuildsRestricted;
   const setting = DefaultGuildsRestricted.useSetting();
-  const DefaultGuildsRestrictedV2 = explicitContentFromProto.DefaultGuildsRestrictedV2;
+  const DefaultGuildsRestrictedV2 = UserSettings.DefaultGuildsRestrictedV2;
   let setting1 = DefaultGuildsRestrictedV2.useSetting();
   if (null == setting1) {
     setting1 = setting || setting;

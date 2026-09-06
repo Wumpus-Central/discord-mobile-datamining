@@ -1,18 +1,21 @@
 // discord_app/modules/auth/LoginHandoffSource.tsx
-import set from "../../../_runtime/00002_set.js";
-import MAX_FAVORITES from "../user_settings/UserSettingsConstants.tsx";
-import set2 from "../channel/ChannelConstants.tsx";
-import ME from "../links/LinkUtils.tsx";
+import UserSettingsConstants from "../user_settings/UserSettingsConstants.tsx";
+import ChannelConstants from "../channel/ChannelConstants.tsx";
+import LinkUtils from "../links/LinkUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const StaticChannelRoute = set2.StaticChannelRoute;
-const UserSettingsPath = MAX_FAVORITES.UserSettingsPath;
-let obj = { ROLE_SUBSCRIPTION: "role_subscription", ROLE_SUBSCRIPTION_SETTING: "role_subscription_setting" };
-const result = set.fileFinishedImporting("modules/auth/LoginHandoffSource.tsx");
+const StaticChannelRoute = ChannelConstants.StaticChannelRoute;
+const UserSettingsPath = UserSettingsConstants.UserSettingsPath;
+const LoginHandoffSource = {
+  ROLE_SUBSCRIPTION: "role_subscription",
+  ROLE_SUBSCRIPTION_SETTING: "role_subscription_setting",
+};
+const result = size.fileFinishedImporting("modules/auth/LoginHandoffSource.tsx");
 
-export const LoginHandoffSource = obj;
-export const getLoginHandoffSourceFromRedirectTo = function getLoginHandoffSourceFromRedirectTo(closure_0) {
-  const str = decodeURIComponent(closure_0);
-  obj = ME;
+export { LoginHandoffSource };
+export const getLoginHandoffSourceFromRedirectTo = function getLoginHandoffSourceFromRedirectTo(arg0) {
+  const str = decodeURIComponent(arg0);
+  const obj = LinkUtils;
   const tryParseChannelPathResult = obj.tryParseChannelPath(str);
   if (null != tryParseChannelPathResult) {
     if (tryParseChannelPathResult.channelId === StaticChannelRoute.ROLE_SUBSCRIPTIONS) {

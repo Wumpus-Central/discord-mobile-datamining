@@ -1,32 +1,32 @@
 // discord_app/modules/app_launcher/native/options/autocomplete/AppLauncherAutocompleteActionSheet.tsx
 import _modDef38 from "../../../../../../_runtime/metro/00038__.js";
-import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../../../intl/index.native.tsx";
-import Button from "../../../../../design/void/native.tsx";
-import t from "t" /* 4745 */;
-import _executeCommandDefault from "../../../../application_commands/executeCommand.tsx";
-import registerAssetDefault from "../../../../../../_runtime/12168_registerAsset.js";
-import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../../../application_commands/ApplicationCommandAutocompleteStore.tsx";
-import closure_7 from "../../../../../stores/GuildStore.tsx";
-import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
-import importDefaultResult from "../../../../../../_runtime/00012_apply.js";
+import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../../intl/index.native.tsx";
+import native from "../../../../../design/void/native.tsx";
+import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
+import _mod4745 from "module_4745" /* 4745 */;
+import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import executeCommandDefault from "../../../../application_commands/executeCommand.tsx";
+import _modDef12168 from "../../../../../../_runtime/metro/12168__.js";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
+import ApplicationCommandAutocompleteStore from "../../../../application_commands/ApplicationCommandAutocompleteStore.tsx";
+import GuildStore from "../../../../../stores/GuildStore.tsx";
+import apply from "../../../../../../_runtime/metro/00012__.js";
 
-require = arg1;
+require = fn;
 function Item(arg0) {
   ({ item, index: require, choices: importDefault, onChoiceSelect: dependencyMap } = arg0);
   closure_3 = undefined;
-  let React;
+  noop = undefined;
   function ListItem(arg0) {
     ({ label, onPress } = arg0);
-    return closure_1_9(closure_1_0(closure_1_2[18]).TableRow, {
+    return React7(TableRow.TableRow, {
       label,
       onPress,
-      start: 0 === closure_0,
-      end: closure_0 === length.length - 1,
+      start: 0 === closure_1_0,
+      end: closure_1_0 === length.length - 1,
     });
   }
   let tmp4 = item.type === AutoCompleteResultTypes.CHOICE;
@@ -37,22 +37,20 @@ function Item(arg0) {
     tmp4 = item.type === tmp3.LABEL;
   }
   _modDef38(tmp4, "Invalid autocomplete result type");
-  closure_3 = callback2();
-  React = React.useMemo(() => 100 * Math.random() + 50, []);
-  const tmp2 = _modDef38;
-  const match = t.match(item);
+  closure_3 = closure_12();
+  noop = noop.useMemo(() => 100 * Math.random() + 50, []);
+  const match = _mod4745.match(item);
   let obj = { type: tmp3.CHOICE };
-  const str = t;
   obj = { type: tmp3.LABEL };
   const withResult = match.with(obj, (children) => {
-    closure_0 = children;
-    obj = {
-      label: closure_1_9(closure_1_0(closure_1_2[20]).Text, obj),
+    const choice = children;
+    let obj = {
+      label: null,
       onPress() {
-        if (closure_1_2 != null) {
+        if (dependencyMap != null) {
           tmp(choice.choice);
         }
-        closure_2_1(closure_2_2[13]).hideActionSheet();
+        ActionSheetActionCreatorsDefault.hideActionSheet();
       },
     };
     obj = {
@@ -61,19 +59,20 @@ function Item(arg0) {
       color: "mobile-text-heading-primary",
       children: children.choice.displayName,
     };
+    obj.label = closure_1_9(Text_Text.Text, obj);
     return closure_1_9(ListItem, obj);
   });
-  obj1 = { type: AutoCompleteResultTypes.CHOICE_LOADING };
+  const obj1 = { type: AutoCompleteResultTypes.CHOICE_LOADING };
   const withResult1 = match
     .with(obj, (children) => {
-      closure_0 = children;
-      obj = {
-        label: closure_1_9(closure_1_0(closure_1_2[20]).Text, obj),
+      const choice = children;
+      let obj = {
+        label: null,
         onPress() {
-          if (closure_1_2 != null) {
+          if (dependencyMap != null) {
             tmp(choice.choice);
           }
-          closure_2_1(closure_2_2[13]).hideActionSheet();
+          ActionSheetActionCreatorsDefault.hideActionSheet();
         },
       };
       obj = {
@@ -82,38 +81,38 @@ function Item(arg0) {
         color: "mobile-text-heading-primary",
         children: children.choice.displayName,
       };
+      obj.label = closure_1_9(Text_Text.Text, obj);
       return closure_1_9(ListItem, obj);
     })
     .with(obj, (label) => {
       closure_0 = label;
-      const items = ['"', label.label, '"'];
-      return closure_1_9(ListItem, {
-        label: closure_1_10(closure_1_0(closure_1_2[20]).Text, {
-          lineClamp: 1,
-          variant: "text-md/normal",
-          color: "mobile-text-heading-primary",
-          children: items,
-        }),
+      let obj = {
+        label: null,
         onPress() {
-          if (closure_1_2 != null) {
+          if (dependencyMap != null) {
             const obj = { name: null, value: null, displayName: null };
-            ({ label: obj[0], label: obj[1], label: obj[2] } = closure_0);
+            ({ label: obj.name, label: obj.value, label: obj.displayName } = closure_0);
             tmp(obj);
           }
-          closure_2_1(closure_2_2[13]).hideActionSheet();
+          ActionSheetActionCreatorsDefault.hideActionSheet();
         },
-      });
+      };
+      obj = { lineClamp: 1, variant: "text-md/normal", color: "mobile-text-heading-primary", children: null };
+      const items = ['"', label.label, '"'];
+      obj.children = items;
+      obj.label = closure_1_10(Text_Text.Text, obj);
+      return closure_1_9(ListItem, obj);
     });
   return match
     .with(obj, (children) => {
-      closure_0 = children;
-      obj = {
-        label: closure_1_9(closure_1_0(closure_1_2[20]).Text, obj),
+      const choice = children;
+      let obj = {
+        label: null,
         onPress() {
-          if (closure_1_2 != null) {
+          if (dependencyMap != null) {
             tmp(choice.choice);
           }
-          closure_2_1(closure_2_2[13]).hideActionSheet();
+          ActionSheetActionCreatorsDefault.hideActionSheet();
         },
       };
       obj = {
@@ -122,72 +121,71 @@ function Item(arg0) {
         color: "mobile-text-heading-primary",
         children: children.choice.displayName,
       };
+      obj.label = closure_1_9(Text_Text.Text, obj);
       return closure_1_9(ListItem, obj);
     })
     .with(obj, (label) => {
       closure_0 = label;
-      const items = ['"', label.label, '"'];
-      return closure_1_9(ListItem, {
-        label: closure_1_10(closure_1_0(closure_1_2[20]).Text, {
-          lineClamp: 1,
-          variant: "text-md/normal",
-          color: "mobile-text-heading-primary",
-          children: items,
-        }),
+      let obj = {
+        label: null,
         onPress() {
-          if (closure_1_2 != null) {
+          if (dependencyMap != null) {
             const obj = { name: null, value: null, displayName: null };
-            ({ label: obj[0], label: obj[1], label: obj[2] } = closure_0);
+            ({ label: obj.name, label: obj.value, label: obj.displayName } = closure_0);
             tmp(obj);
           }
-          closure_2_1(closure_2_2[13]).hideActionSheet();
+          ActionSheetActionCreatorsDefault.hideActionSheet();
         },
-      });
+      };
+      obj = { lineClamp: 1, variant: "text-md/normal", color: "mobile-text-heading-primary", children: null };
+      const items = ['"', label.label, '"'];
+      obj.children = items;
+      obj.label = closure_1_10(Text_Text.Text, obj);
+      return closure_1_9(ListItem, obj);
     })
     .with({ type: AutoCompleteResultTypes.CHOICE_LOADING }, () => {
       let obj = { label: null };
-      obj = { style: closure_3.commandChoiceLoadingContainer, children: closure_1_9(ListItem, { style: items }) };
-      items = [closure_3.commandChoiceLoadingItem];
-      obj = { width: closure_4 };
-      items[1] = obj;
-      obj[0] = closure_1_9(ListItem, obj);
-      return closure_1_9(ListItem, obj);
+      obj = { style: closure_3.commandChoiceLoadingContainer, children: null };
+      obj = { style: null };
+      const items = [closure_3.commandChoiceLoadingItem, { width }];
+      obj.style = items;
+      obj.children = React7(View, obj);
+      obj.label = React7(View, obj);
+      return React7(ListItem, obj);
     })
     .exhaustive();
 }
 function AutocompleteFailedEmptyState() {
-  const obj = {
-    style: callback2().emptyState,
-    lightSource: registerAssetDefault,
-    darkSource: registerAssetDefault,
-    title: null,
-  };
-  const intl = getSystemLocale.intl;
-  obj[3] = intl.string(getSystemLocale.t.rTAbPn);
-  return callback(Button.EmptyState, obj);
+  const obj = { style: closure_12().emptyState, lightSource: _modDef12168, darkSource: _modDef12168, title: null };
+  const intl = util.intl;
+  obj.title = intl.string(util.t.rTAbPn);
+  return React7(native.EmptyState, obj);
 }
-require("ME").AutoCompleteResultTypes;
-({ jsx: c9, jsxs: c10 } = jsxProd);
-let closure_11 = importDefaultResult.debounce(
-  _executeCommandDefault,
-  require("TRUE_OPTION_NAME").AUTOCOMPLETE_OPTION_DEBOUNCE_TIME,
-  { leading: true, trailing: true },
-);
+const View = fn(17).View;
+fn(1074).AutoCompleteResultTypes;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const executeCommand = apply.debounce(executeCommandDefault, fn(4999).AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, {
+  leading: true,
+  trailing: true,
+});
+const createStyles = fn(4560);
 let obj = {
   commandChoiceLoadingContainer: { flex: 1, justifyContent: "center" },
   commandChoiceLoadingItem: null,
   emptyState: null,
 };
 obj = {
-  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
   height: 16,
-  borderRadius: ThemesDefault.radii.lg,
+  borderRadius: nativeDefault.radii.lg,
   alignSelf: "flex-start",
 };
-obj[1] = obj;
-obj[2] = { backgroundColor: "transparent" };
-let closure_12 = createCacheKey.createStyles(obj);
-const result = require("set").fileFinishedImporting(
+obj.commandChoiceLoadingItem = obj;
+obj.emptyState = { backgroundColor: "transparent" };
+let closure_12 = createStyles.createStyles(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/app_launcher/native/options/autocomplete/AppLauncherAutocompleteActionSheet.tsx",
 );
 
@@ -197,7 +195,7 @@ export default function AppLauncherAutocompleteActionSheet(onDismiss) {
   const channel = onDismiss.channel;
   const activeCommand = onDismiss.activeCommand;
   const optionValues = onDismiss.optionValues;
-  let first;
+  let query;
   let ref;
   let autocompleteResults;
   let lastErrored;
@@ -211,28 +209,26 @@ export default function AppLauncherAutocompleteActionSheet(onDismiss) {
     str = "";
   }
   const tmp = activeCommand(optionValues.useState(str), 2);
-  first = tmp[0];
+  query = tmp[0];
   ref = obj.useRef(null);
-  obj1 = option(channel[12]);
+  let obj1 = option(channel[12]);
   let items = [ref];
-  let items1 = [channel.id, option.name, first];
+  let items1 = [channel.id, option.name, query];
   const stateFromStoresObject = obj1.useStateFromStoresObject(
     items,
     () => ({
-      autocompleteResults: ref.getAutocompleteChoices(channel.id, option.name, first),
-      lastErrored: ref.getLastErrored(channel.id),
+      autocompleteResults: ApplicationCommandAutocompleteStore.getAutocompleteChoices(channel.id, option.name, first),
+      lastErrored: ApplicationCommandAutocompleteStore.getLastErrored(channel.id),
     }),
     items1,
   );
   autocompleteResults = stateFromStoresObject.autocompleteResults;
   lastErrored = stateFromStoresObject.lastErrored;
-  let items2 = [first, autocompleteResults, lastErrored];
+  let items2 = [query, autocompleteResults, lastErrored];
   memo = obj.useMemo(() => {
     const items = [];
     if ("" !== first) {
-      let obj = { type: null, label: null };
-      obj[0] = lastErrored.LABEL;
-      obj[1] = tmp;
+      let obj = { type: AutoCompleteResultTypes.LABEL, label: tmp };
       items.push(obj);
     }
     if (null == autocompleteResults) {
@@ -240,8 +236,7 @@ export default function AppLauncherAutocompleteActionSheet(onDismiss) {
         const push = items.push;
         const _Array = Array;
         const array = new Array(4);
-        obj = { type: null };
-        obj[0] = lastErrored.CHOICE_LOADING;
+        obj = { type: AutoCompleteResultTypes.CHOICE_LOADING };
         const items1 = [];
         HermesBuiltin.arraySpread(array.fill(obj), 0);
         HermesBuiltin.apply(items1, items);
@@ -259,43 +254,40 @@ export default function AppLauncherAutocompleteActionSheet(onDismiss) {
     }
   }, items2);
   let tmp12Result = 0 === memo.length && !lastErrored;
-  const items3 = [channel, option.name, activeCommand, optionValues, first];
+  const items3 = [channel, option.name, activeCommand, optionValues, query];
   const effect = obj.useEffect(() => {
     let obj = { command: activeCommand, optionValues, context: null };
-    obj = { channel, guild: autocompleteResults.getGuild(channel.guild_id), autocomplete: obj };
-    obj = { name: option.name, query: first };
-    obj[2] = obj;
-    closure_1_11(obj);
+    obj = { channel, guild: GuildStore.getGuild(channel.guild_id), autocomplete: null };
+    obj = { name: option.name, query };
+    obj.autocomplete = obj;
+    obj.context = obj;
+    executeCommand(obj);
     const current = ref.current;
     if (current != null) {
       current.scrollToOffset({ offset: 0, animated: false });
     }
   }, items3);
   const items4 = [onChoiceSelect, memo];
-  const items5 = [onChoiceSelect, first];
+  const items5 = [onChoiceSelect, query];
   const callback = obj.useCallback(
-    (item) => memo(closure_1_13, { item: item.item, index: item.index, onChoiceSelect, choices: memo }),
+    (item) => React7(Item, { item: item.item, index: item.index, onChoiceSelect, choices: memo }),
     items4,
   );
   const callback1 = obj.useCallback(() => {
     if ("" !== first) {
       if (onChoiceSelect != null) {
-        const obj = { name: null, value: null, displayName: null };
-        obj[0] = tmp;
-        obj[1] = tmp;
-        obj[2] = tmp;
+        const obj = { name: tmp, value: tmp, displayName: tmp };
         tmp2(obj);
       }
-      onChoiceSelect(channel[13]).hideActionSheet();
-      const obj2 = onChoiceSelect(channel[13]);
+      ActionSheetActionCreatorsDefault.hideActionSheet();
     }
   }, items5);
   obj = { option, onDismiss: onDismiss.onDismissAutocompleteSheet, children: null };
   obj = { placeholder: null, onChange: null, autoFocus: true, returnKeyType: "done", onSubmitEditing: null };
   const intl = tmp4(tmp5[16]).intl;
-  obj[0] = intl.string(option(channel[16]).t.Wuie9L);
-  obj[1] = tmp[1];
-  obj[4] = callback1;
+  obj.placeholder = intl.string(option(channel[16]).t.Wuie9L);
+  obj.onChange = tmp[1];
+  obj.onSubmitEditing = callback1;
   const items6 = [memo(option(channel[15]).AppLauncherListSearchBar, obj), , ,];
   if (tmp12Result) {
     tmp12Result = tmp12(tmp4(tmp5[15]).AppLauncherListEmptyState, {});
@@ -303,7 +295,7 @@ export default function AppLauncherAutocompleteActionSheet(onDismiss) {
   items6[1] = tmp12Result;
   obj1 = {
     ref,
-    keyExtractor(type) {
+    keyExtractor(type, arg1) {
       let str = "placeholder";
       if (type.type === lastErrored.CHOICE) {
         str = type.choice.name;
@@ -319,6 +311,6 @@ export default function AppLauncherAutocompleteActionSheet(onDismiss) {
     lastErrored = tmp12(AutocompleteFailedEmptyState, {});
   }
   items6[3] = lastErrored;
-  obj[2] = items6;
+  obj.children = items6;
   return closure_10(option(channel[14]).AppLauncherCommandOptionActionSheet, obj);
 }

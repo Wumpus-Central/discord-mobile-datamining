@@ -1,19 +1,20 @@
 // discord_app/design/components/Tooltip/native/useTooltipPosition.native.tsx
-import closure_0 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const result = require("set").fileFinishedImporting("design/components/Tooltip/native/useTooltipPosition.native.tsx");
+let size = fn(2);
+const result = size.fileFinishedImporting("design/components/Tooltip/native/useTooltipPosition.native.tsx");
 
 export default function useTooltipPosition(arg0, arg1, arg2, arg3) {
-  const React = arg0;
+  closure_0 = arg0;
   closure_1 = arg1;
-  closure_2 = arg2;
+  const styles = arg2;
   closure_3 = arg3;
   let num = arg4;
   if (arg4 === undefined) {
     num = 0;
   }
   const items = [arg3, arg0, arg2, arg1, num];
-  return React.useMemo(() => {
+  return noop.useMemo(() => {
     const size = closure_0;
     if (null != closure_0) {
       const point = closure_1;
@@ -30,15 +31,14 @@ export default function useTooltipPosition(arg0, arg1, arg2, arg3) {
             num = width2 - diff1 - width - 12;
           }
         }
-        const obj = { tooltipX: null, tooltipY: null, adjustmentX: null };
-        obj[0] = diff1 + num;
+        const obj = { tooltipX: diff1 + num, tooltipY: null, adjustmentX: null };
         if ("top" === closure_3) {
           let diff2 = diff - size.height - num;
         } else {
           diff2 = diff + styles.height + num;
         }
-        obj[1] = diff2;
-        obj[2] = num;
+        obj.tooltipY = diff2;
+        obj.adjustmentX = num;
         return obj;
       }
     }

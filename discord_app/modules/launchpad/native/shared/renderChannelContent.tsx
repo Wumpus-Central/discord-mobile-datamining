@@ -1,18 +1,12 @@
 // discord_app/modules/launchpad/native/shared/renderChannelContent.tsx
-import Text from "../../../../design/components/Text/native/Text.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import LockIcon from "../../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
 import WarningIcon from "../../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
-import getLayoutStyleDefault from "getLayoutStyles.tsx";
-import _modDef16983 from "ChannelTitle.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { SUBTITLE_OPACITY_NORMAL } from "../../../channel_list_v2/native/RedesignChannelListConstants.tsx";
-import { UnreadSetting } from "../../../read_states/ReadStateConstants.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import set from "../../../../utils/PlatformUtils.tsx";
+import getLayoutStylesDefault from "getLayoutStyles.tsx";
+import ChannelTitleDefault from "ChannelTitle.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+require = fn;
 function ChannelContent(arg0) {
   ({
     subtitle,
@@ -27,7 +21,7 @@ function ChannelContent(arg0) {
     isSubscriptionGated,
   } = arg0);
   ({ name, unread, connected, needSubscriptionToAccess } = arg0);
-  const tmp = callback2();
+  const tmp = closure_9();
   let tmp9Result = null != channel;
   if (tmp9Result) {
     if (!locked) {
@@ -38,7 +32,7 @@ function ChannelContent(arg0) {
   if (channel != null) {
     let isNSFWResult = channel.isNSFW();
   }
-  const isValidElementResult = validElement.isValidElement(subtitle);
+  const isValidElementResult = noop.isValidElement(subtitle);
   let obj = null != lastMessageTimestampString;
   let tmp9Result3 = obj;
   if (obj) {
@@ -51,7 +45,7 @@ function ChannelContent(arg0) {
   if (isValidElementResult) {
     str = "space-between";
   }
-  obj1 = { style: items, children: null };
+  const obj1 = { style: items, children: null };
   items[1] = { justifyContent: str };
   let num = 0;
   if (tmp9Result3) {
@@ -59,19 +53,22 @@ function ChannelContent(arg0) {
   }
   const obj2 = { style: { flexDirection: "row", paddingRight: num, alignItems: "center" }, children: null };
   const obj3 = { title: name, muted, unread, resolvedUnreadSetting: null, connected: null };
-  const tmp4 = getLayoutStyleDefault();
+  const tmp4 = getLayoutStylesDefault();
   if (resolvedUnreadSetting == null) {
     resolvedUnreadSetting = UnreadSetting.ONLY_MENTIONS;
   }
-  obj3[3] = resolvedUnreadSetting;
-  obj3[4] = connected;
-  const items1 = [closure_7(_modDef16983, obj3), ,];
+  obj3.resolvedUnreadSetting = resolvedUnreadSetting;
+  obj3.connected = connected;
+  const items1 = [React5(ChannelTitleDefault, obj3), ,];
   tmp9Result = null;
   if (null != channelCategoryName) {
-    const obj4 = { variant: "text-xs/bold", color: "text-muted", style: null, children: null };
-    obj4[2] = { marginRight: 4 };
-    obj4[3] = channelCategoryName;
-    tmp9Result = tmp9(Text.Text, obj4);
+    const obj4 = {
+      variant: "text-xs/bold",
+      color: "text-muted",
+      style: { marginRight: 4 },
+      children: channelCategoryName,
+    };
+    tmp9Result = tmp9(Text_Text.Text, obj4);
   }
   items1[1] = tmp9Result;
   let tmp11Result = tmp9Result;
@@ -88,34 +85,30 @@ function ChannelContent(arg0) {
       }
     }
     const obj5 = { style: null, children: null };
-    const obj6 = { maxWidth: null };
-    obj6[0] = 14 * num3;
+    const obj6 = { maxWidth: 14 * num3 };
     items2[1] = obj6;
-    obj5[0] = items2;
+    obj5.style = items2;
     if (tmp9Result) {
-      const obj7 = { size: "xxs", color: "icon-muted", style: null };
-      obj7[2] = tmp.channelTraitIcon;
+      const obj7 = { size: "xxs", color: "icon-muted", style: tmp.channelTraitIcon };
       tmp9Result = tmp9(LockIcon.LockIcon, obj7);
     }
     const items3 = [tmp9Result, ,];
     if (isNSFWResult) {
-      const obj8 = { size: "xxs", color: "icon-muted", style: null };
-      obj8[2] = tmp.channelTraitIcon;
+      const obj8 = { size: "xxs", color: "icon-muted", style: tmp.channelTraitIcon };
       isNSFWResult = tmp9(WarningIcon.WarningIcon, obj8);
     }
     items3[1] = isNSFWResult;
     if (isSubscriptionGated) {
-      const obj9 = { locked: null, isInMainTabsExperiment: true };
-      obj9[0] = needSubscriptionToAccess;
+      const obj9 = { locked: needSubscriptionToAccess, isInMainTabsExperiment: true };
       isSubscriptionGated = tmp9(tmp2(16118), obj9);
     }
     items3[2] = isSubscriptionGated;
-    obj5[1] = items3;
+    obj5.children = items3;
     tmp11Result = tmp11(tmp10, obj5);
   }
   items1[2] = tmp11Result;
-  obj2[1] = items1;
-  const items4 = [closure_8(View, obj2)];
+  obj2.children = items1;
+  const items4 = [React6(View, obj2)];
   let tmp9Result1 = null;
   if (isValidElementResult) {
     if (mentionCount == null) {
@@ -126,19 +119,17 @@ function ChannelContent(arg0) {
       num5 = 20;
     }
     const obj10 = { style: null, children: null };
-    const obj11 = { paddingRight: null };
-    obj11[0] = num5;
+    const obj11 = { paddingRight: num5 };
     const items5 = [obj11];
-    const obj12 = { marginTop: null };
-    obj12[0] = tmp4.messagePreview.margin.marginTop;
+    const obj12 = { marginTop: tmp4.messagePreview.margin.marginTop };
     items5[1] = obj12;
-    obj10[0] = items5;
-    obj10[1] = subtitle;
+    obj10.style = items5;
+    obj10.children = subtitle;
     tmp9Result1 = tmp9(tmp10, obj10);
   }
   items4[1] = tmp9Result1;
-  obj1[1] = items4;
-  const items6 = [closure_8(View, obj1)];
+  obj1.children = items4;
+  const items6 = [React6(View, obj1)];
   const obj13 = { style: tmp9Result3 ? tmp.rightContentAbsolute : tmp.rightBox, children: null };
   let tmp9Result2 = obj;
   if (obj) {
@@ -153,11 +144,10 @@ function ChannelContent(arg0) {
       maxFontSizeMultiplier: 1.75,
       children: null,
     };
-    const obj15 = { marginLeft: "auto", opacity: null };
-    obj15[1] = num6;
-    obj14[2] = obj15;
-    obj14[4] = lastMessageTimestampString;
-    tmp9Result2 = tmp9(Text.Text, obj14);
+    const obj15 = { marginLeft: "auto", opacity: num6 };
+    obj14.style = obj15;
+    obj14.children = lastMessageTimestampString;
+    tmp9Result2 = tmp9(Text_Text.Text, obj14);
   }
   const items7 = [tmp9Result2, ,];
   const items8 = [{ alignItems: "center", paddingLeft: 4 }];
@@ -165,25 +155,30 @@ function ChannelContent(arg0) {
     obj = { marginTop: 5 };
   }
   items8[1] = obj;
-  items7[1] = closure_7(View, { style: items8, children: mentionBadge });
+  items7[1] = React5(View, { style: items8, children: mentionBadge });
   if (tmp9Result3) {
-    const obj16 = { style: null };
-    obj16[0] = { flex: 1 };
+    const obj16 = { style: { flex: 1 } };
     tmp9Result3 = tmp9(tmp10, obj16);
   }
   items7[2] = tmp9Result3;
-  obj13[1] = items7;
-  items6[1] = closure_8(View, obj13);
-  obj[1] = items6;
-  obj[1] = closure_8(View, obj);
-  return closure_7(View, obj);
+  obj13.children = items7;
+  items6[1] = React6(View, obj13);
+  obj.children = items6;
+  obj.children = React6(View, obj);
+  return React5(View, obj);
 }
-({ jsx: error, jsxs: closure_8 } = jsxProd);
+const View = fn(17).View;
+const SUBTITLE_OPACITY_NORMAL = fn(10118).SUBTITLE_OPACITY_NORMAL;
+const UnreadSetting = fn(4742).UnreadSetting;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+let createStyles = fn(4560);
+let PlatformUtils = fn(1115);
 let num = -1;
-if (set.isIOS()) {
+if (PlatformUtils.isIOS()) {
   num = 2;
 }
-createCacheKey = {
+createStyles = {
   channelContent: { flex: 1, marginTop: num },
   channelContainer: { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between" },
   leftBox: { flexDirection: "column", alignItems: "flex-start", flexShrink: 1 },
@@ -192,17 +187,19 @@ createCacheKey = {
   channelTraits: { display: "flex", flexDirection: "row", alignItems: "center" },
   channelTraitIcon: null,
 };
-createCacheKey = { opacity: SUBTITLE_OPACITY_NORMAL, marginRight: 4, marginTop: null };
+createStyles = { opacity: SUBTITLE_OPACITY_NORMAL, marginRight: 4, marginTop: null };
+PlatformUtils = fn(1115);
 let num2 = 0;
-if (set.isAndroid()) {
+if (PlatformUtils.isAndroid()) {
   num2 = 2;
 }
-createCacheKey[2] = num2;
-createCacheKey[6] = createCacheKey;
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = set.fileFinishedImporting("modules/launchpad/native/shared/renderChannelContent.tsx");
+createStyles.marginTop = num2;
+createStyles.channelTraitIcon = createStyles;
+let closure_9 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/launchpad/native/shared/renderChannelContent.tsx");
 
 export default function renderChannelContent(arg0) {
   const merged = Object.assign(arg0);
-  return callback(ChannelContent, {});
+  return React5(ChannelContent, {});
 }

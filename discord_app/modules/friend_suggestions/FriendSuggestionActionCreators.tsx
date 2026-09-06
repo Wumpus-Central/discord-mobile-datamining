@@ -1,42 +1,38 @@
 // discord_app/modules/friend_suggestions/FriendSuggestionActionCreators.tsx
-import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import { Endpoints } from "../../Constants.tsx";
+import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/friend_suggestions/FriendSuggestionActionCreators.tsx");
+require = fn;
+const Endpoints = fn(1074).Endpoints;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/friend_suggestions/FriendSuggestionActionCreators.tsx");
 
 export default {
   fetch() {
-    return callback(function* () {
-      const callback = tmp3;
-      c3 = 1;
-      const HTTP = closure_1_0(closure_1_2[2]).HTTP;
-      obj1 = { url: null, rejectWithError: true };
-      obj1[0] = constants.FRIEND_SUGGESTIONS;
-      yield HTTP.get(obj1);
+    return (async () => {
+      closure_1 = tmp3;
+      const HTTP = HTTPUtils.HTTP;
+      await HTTP.get({ url: constants.FRIEND_SUGGESTIONS, rejectWithError: true });
       if (1 === tmp7) {
         c3 = 0;
-        let obj3 = callback(573);
+        let obj3 = closure_129_1(closure_129_2[3]);
         obj3.dispatch({ type: "LOAD_FRIEND_SUGGESTIONS_FAILURE" });
         c5 = 3;
       } else if (arg0 === 1) {
         c5 = 3;
         throw arg1;
       } else if (arg0 !== 2) {
-        const body = arg1;
-        const obj = callback(573);
-        obj3 = { type: "LOAD_FRIEND_SUGGESTIONS_SUCCESS", suggestions: null };
-        obj3[1] = body.body;
-        obj.dispatch(obj3);
+        closure_128_0 = arg1;
+        obj3 = { type: "LOAD_FRIEND_SUGGESTIONS_SUCCESS", suggestions: closure_128_0.body };
+        closure_129_1(closure_129_2[3]).dispatch(obj3);
         c3 = 0;
+        closure_129_1(closure_129_2[3]);
       }
-      c3 = 0;
       return arg1;
     })();
   },
   ignore(id) {
-    const HTTP = sendRequest.HTTP;
+    const HTTP = HTTPUtils.HTTP;
     HTTP.del({ url: Endpoints.FRIEND_SUGGESTION(id), rejectWithError: true });
   },
 };

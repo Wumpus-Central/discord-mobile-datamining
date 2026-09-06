@@ -1,65 +1,52 @@
 // discord_app/components_native/common/RolePill.tsx
-import noopAll from "../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
-import { View } from "../../../_runtime/00017_get_ActivityIndicator.js";
-import ME from "../../Constants.tsx";
-import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
+import ToastUtils from "../../modules/toast/native/ToastUtils.tsx";
+import ClipboardUtils from "../../utils/ClipboardUtils.native.tsx";
+import noop from "../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-noopAll;
-({ EMPTY_STRING_SNOWFLAKE_ID: c4, MAX_VISUAL_ROLE_LENGTH: c5 } = ME);
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: null, pill: null, bubble: null, verifiedContainer: null, roleIcon: null };
-createCacheKey = { marginRight: 4, marginBottom: 4, borderRadius: ThemesDefault.radii.xs };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = {
+require = fn;
+const View = fn(17).View;
+const Constants = fn(1074);
+({ EMPTY_STRING_SNOWFLAKE_ID: closure_4, MAX_VISUAL_ROLE_LENGTH: hasOwnProperty } = Constants);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+fn(4560);
+let createStyles = { container: null, pill: null, bubble: null, verifiedContainer: null, roleIcon: null };
+createStyles = { marginRight: 4, marginBottom: 4, borderRadius: nativeDefault.radii.xs };
+createStyles.container = createStyles;
+createStyles.pill = {
   flexDirection: "row",
   alignItems: "center",
   paddingHorizontal: 8,
   paddingVertical: 6,
-  borderRadius: ThemesDefault.radii.xs,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderRadius: nativeDefault.radii.xs,
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
 };
-let obj1 = {
-  flexDirection: "row",
-  alignItems: "center",
-  paddingHorizontal: 8,
-  paddingVertical: 6,
-  borderRadius: ThemesDefault.radii.xs,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
-};
-createCacheKey[2] = {
+let size = {
   marginRight: 8,
-  borderRadius: ThemesDefault.radii.sm,
+  borderRadius: nativeDefault.radii.sm,
   height: 12,
   width: 12,
-  backgroundColor: ThemesDefault.colors.ICON_MUTED,
+  backgroundColor: nativeDefault.colors.ICON_MUTED,
 };
-let obj2 = {
-  marginRight: 8,
-  borderRadius: ThemesDefault.radii.sm,
-  height: 12,
-  width: 12,
-  backgroundColor: ThemesDefault.colors.ICON_MUTED,
-};
-createCacheKey[3] = { marginRight: 8, borderRadius: ThemesDefault.radii.sm, height: 12, width: 12 };
-createCacheKey[4] = { paddingRight: 4 };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { marginRight: 8, borderRadius: ThemesDefault.radii.sm, height: 12, width: 12 };
-const result = require("set").fileFinishedImporting("components_native/common/RolePill.tsx");
+createStyles.bubble = size;
+const size1 = { marginRight: 8, borderRadius: nativeDefault.radii.sm, height: 12, width: 12 };
+createStyles.verifiedContainer = size1;
+createStyles.roleIcon = { paddingRight: 4 };
+let closure_8 = createStyles.createStyles(createStyles);
+size = fn(2);
+const result = size.fileFinishedImporting("components_native/common/RolePill.tsx");
 
 export default function RolePill(role) {
   role = role.role;
   ({ guildId, color } = role);
-  let combined;
   const DeveloperMode = role(1935).DeveloperMode;
   const setting = DeveloperMode.useSetting();
-  let obj = role(7186);
-  obj = { guildId, roleId: role.id, size: 12 };
+  role(7186);
+  let obj = { guildId, roleId: role.id, size: 12 };
   const roleIcon = obj.useRoleIcon(obj);
   let name = role.name;
-  combined = name;
+  let combined = name;
   if (role.name.length > closure_5) {
     name = role.name;
     const _HermesInternal = HermesInternal;
@@ -74,7 +61,7 @@ export default function RolePill(role) {
   if (tags != null) {
     guild_connections = tags.guild_connections;
   }
-  const tmp9 = callback();
+  const tmp9 = closure_8();
   let disableInteraction = !setting;
   if (setting) {
     disableInteraction = role.disableInteraction;
@@ -83,45 +70,46 @@ export default function RolePill(role) {
     disabled: disableInteraction,
     style: tmp9.container,
     onPress: function handlePress() {
-      role(closure_1_2[8]).copy(role.id);
-      const obj = role(closure_1_2[8]);
-      role(closure_1_2[9]).roleIdCopied(combined);
+      ClipboardUtils.copy(role.id);
+      ToastUtils.roleIdCopied(combined);
     },
     accessible: false,
     children: null,
   };
-  obj1 = { style: tmp9.pill, children: null };
+  const obj1 = { style: tmp9.pill, children: null };
   if (undefined !== guild_connections) {
-    const obj2 = { style: null, roleId: null, guildId: null, roleColor: null, size: 14, displayRoleIcon: false };
-    obj2[0] = tmp9.verifiedContainer;
-    obj2[1] = role.id;
+    const obj2 = {
+      style: tmp9.verifiedContainer,
+      roleId: role.id,
+      guildId: null,
+      roleColor: null,
+      size: 14,
+      displayRoleIcon: false,
+    };
     if (guildId == null) {
       guildId = closure_4;
     }
-    obj2[2] = guildId;
-    obj2[3] = color;
+    obj2.guildId = guildId;
+    obj2.roleColor = color;
     let tmp10Result = tmp10(combined(7204), obj2);
     const tmp15 = combined(7204);
   } else {
     const items = [tmp9.bubble];
     if (null != color) {
-      const obj3 = { backgroundColor: null };
-      obj3[0] = color;
+      const obj3 = { backgroundColor: color };
       let obj4 = obj3;
     } else {
       obj4 = {};
     }
     const obj5 = { style: null };
     items[1] = obj4;
-    obj5[0] = items;
+    obj5.style = items;
     tmp10Result = tmp10(tmp12, obj5);
   }
   const items1 = [tmp10Result, ,];
   tmp10Result = null;
   if (null != roleIcon) {
-    const obj6 = { style: null, children: null };
-    obj6[0] = tmp9.roleIcon;
-    obj6[1] = roleIcon;
+    const obj6 = { style: tmp9.roleIcon, children: roleIcon };
     tmp10Result = tmp10(tmp12, obj6);
   }
   items1[1] = tmp10Result;
@@ -130,7 +118,7 @@ export default function RolePill(role) {
     color: "interactive-text-active",
     children: name,
   });
-  obj1[1] = items1;
-  obj[4] = closure_7(View, obj1);
+  obj1.children = items1;
+  obj.children = closure_7(View, obj1);
   return closure_6(role(5123).PressableHighlight, obj);
 }

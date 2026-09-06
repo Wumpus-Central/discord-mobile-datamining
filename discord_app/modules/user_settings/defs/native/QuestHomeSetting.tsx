@@ -1,39 +1,37 @@
 // discord_app/modules/user_settings/defs/native/QuestHomeSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import ME from "../../../../Constants.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import getIsEligibleForQuests from "../../../quests/lib/QuestsEligibility.tsx";
+import Constants from "../../../../Constants.tsx";
+import util from "../../../../intl/index.native.tsx";
+import QuestContent from "../../../../../discord_common/js/shared/shared-constants/QuestContent.tsx";
+import utils_QuestUtils from "../../../quests/utils/QuestUtils.tsx";
+import QuestsEligibility from "../../../quests/lib/QuestsEligibility.tsx";
 import QuestsIcon from "../../../../design/components/Icon/native/redesign/generated/QuestsIcon.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
-import { QuestHomeSetting } from "../../../quests/native/QuestHomeSetting.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.JALI2K);
+    const intl = util.intl;
+    return intl.string(util.t.JALI2K);
   },
   usePredicate() {
-    return getIsEligibleForQuests.getIsEligibleForQuests();
+    return QuestsEligibility.getIsEligibleForQuests();
   },
   parent: null,
   IconComponent: QuestsIcon.QuestsIcon,
-  screen: obj,
+  screen: {
+    route: Constants.UserSettingsSections.QUESTS,
+    getComponent() {
+      return require("QuestHomeSetting").default;
+    },
+  },
   usePreNavigationAction() {
     return () => {
-      let obj = callback(7722);
-      obj = { fromContent: callback(5449).QuestContent.USER_SETTINGS };
+      const obj = { fromContent: QuestContent.QuestContent.USER_SETTINGS };
       const result = obj.setQuestHomeUtmContext(obj);
       return true;
     };
   },
-};
-obj = {
-  route: ME.UserSettingsSections.QUESTS,
-  getComponent() {
-    return QuestHomeSetting /* QuestHomeSetting */.default;
-  },
-};
-const route = createToggle.createRoute(obj);
-let result = set.fileFinishedImporting("modules/user_settings/defs/native/QuestHomeSetting.tsx");
+});
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/QuestHomeSetting.tsx");
 
 export default route;

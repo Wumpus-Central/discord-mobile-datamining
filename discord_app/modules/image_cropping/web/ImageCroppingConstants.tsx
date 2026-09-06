@@ -1,11 +1,11 @@
 // discord_app/modules/image_cropping/web/ImageCroppingConstants.tsx
-import set from "../../../../_runtime/00002_set.js";
-import VideoFilterType from "../../video_backgrounds/VideoBackgroundConstants.tsx";
+import VideoBackgroundConstants from "../../video_backgrounds/VideoBackgroundConstants.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const BACKGROUND_REPLACEMENT_SIZE = VideoFilterType.BACKGROUND_REPLACEMENT_SIZE;
+const BACKGROUND_REPLACEMENT_SIZE = VideoBackgroundConstants.BACKGROUND_REPLACEMENT_SIZE;
 const result = BACKGROUND_REPLACEMENT_SIZE.width / BACKGROUND_REPLACEMENT_SIZE.height;
 const result1 = 432 / result;
-const result2 = set.fileFinishedImporting("modules/image_cropping/web/ImageCroppingConstants.tsx");
+const result2 = size.fileFinishedImporting("modules/image_cropping/web/ImageCroppingConstants.tsx");
 
 export const UploadTypes = {
   AVATAR: "AVATAR",

@@ -1,12 +1,11 @@
 // discord_app/modules/calls/native/VideoBackgroundManager.tsx
-import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
-import closure_0 from "../../../stores/SelectedChannelStore.tsx";
+import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
+import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
-initializeDefault;
 let prototype = function VideoBackgroundManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  const voiceChannelId = applyArgumentsResult;
-  applyArgumentsResult.previousSelectedVoiceChannelId = voiceChannelId.getVoiceChannelId();
+  SelectedChannelStore = applyArgumentsResult;
+  applyArgumentsResult.previousSelectedVoiceChannelId = SelectedChannelStore.getVoiceChannelId();
   applyArgumentsResult.cachedDominantColors = {};
   applyArgumentsResult._handleSelectVoiceChannel = function _handleSelectVoiceChannel(channelId) {
     channelId = channelId.channelId;
@@ -20,6 +19,7 @@ let prototype = function VideoBackgroundManager() {
 }.prototype;
 class prototype extends tmp2 {}
 prototype = new prototype();
-const result = require("set").fileFinishedImporting("modules/calls/native/VideoBackgroundManager.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/calls/native/VideoBackgroundManager.tsx");
 
 export default prototype;

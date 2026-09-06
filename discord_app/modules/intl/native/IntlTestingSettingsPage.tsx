@@ -1,92 +1,78 @@
 // discord_app/modules/intl/native/IntlTestingSettingsPage.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import hooksDefault from "../../../../_runtime/04153_hooks.js";
-import TableRowInner from "../../../design/components/TableRow/native/TableRow.native.tsx";
-import TableRowGroupTitle from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import messagesProxyDefault from "../messages/Test.messages.js";
-import messagesProxyDefault2 from "../messages/SecondTest.messages.js";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_5 from "../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import { setAppLocale } from "../../../intl/IntlLoaderStore.tsx";
-import closure_9 from "../../user_settings/LocaleStore.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
+import _mod1155 from "../../../../_runtime/metro/01155__.js";
+import _modDef4153 from "../../../../_runtime/metro/04153__.js";
+import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
+import TableRowGroup from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import _modDef15623 from "../messages/Test.messages.js";
+import _modDef15655 from "../messages/SecondTest.messages.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../../_runtime/metro/00019__.js";
+import LocaleStore from "../../user_settings/LocaleStore.tsx";
 
-require = arg1;
+require = fn;
 function TestLocaleSelector() {
   let obj = {
     title: "Locale",
     hasIcons: false,
-    defaultValue: require("../../../intl/index.native.tsx").intl.currentLocale,
+    defaultValue: require("util").intl.currentLocale,
     onChange: null,
     children: null,
   };
-  _require = undefined;
-  _require = callback2((arg0) => {
-    closure_0 = arg0;
-    c3 = 0;
-    c4 = 0;
-    return (function* (arg0) {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+  _require = asyncGeneratorStep(async (arg0, value) => {
+    if (c4 === 2) {
+      c4 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_2 = tmp5;
-              closure_1 = tmp2;
-              c3 = 1;
-              c4 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = closure_1_8(closure_0);
-              return obj1;
-            }
-          } else if (arg0 === 1) {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c4 = 2;
+        if (0 === c3) {
+          if (arg0 === 1) {
             c4 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
+            obj = { value, done: true };
+            return obj;
           } else {
-            obj = closure_1_1(closure_1_2[11]);
-            obj.updateLocale(closure_0);
-            c4 = 3;
-            return { value: "HermesInternal", done: null };
+            closure_129_0 = closure_0;
+            c3 = 1;
+            c4 = 1;
+            const obj1 = { value: setAppLocale(closure_0), done: false };
+            return obj1;
           }
-        } catch (tmp14) {
-          c4 = tmp;
-          throw tmp14;
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          obj = tmp2(tmp5[11]);
+          obj.updateLocale(closure_129_0);
+          c4 = 3;
+          return { value: "HermesInternal", done: null };
         }
+      } catch (tmp14) {
+        c4 = tmp;
+        throw tmp14;
       }
-    })();
+    }
   });
-  obj[3] = function () {
+  obj.onChange = function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -97,56 +83,46 @@ function TestLocaleSelector() {
     return applyArgumentsResult;
   };
   const items = [
-    callback3(require("../../../design/components/TableRow/native/TableRadioRow.native.tsx").TableRadioRow, {
-      label: "English",
-      value: "en-US",
-    }),
-    callback3(require("../../../design/components/TableRow/native/TableRadioRow.native.tsx").TableRadioRow, {
-      label: "French",
-      value: "fr",
-    }),
+    closure_10(require("TableRadioRow").TableRadioRow, { label: "English", value: "en-US" }),
+    closure_10(require("TableRadioRow").TableRadioRow, { label: "French", value: "fr" }),
   ];
-  obj[4] = items;
-  return callback4(
-    require("../../../design/components/TableRow/native/TableRadioGroup.native.tsx").TableRadioGroup,
-    obj,
-  );
+  obj.children = items;
+  return closure_11(require("TableRadioGroup").TableRadioGroup, obj);
 }
 function LocaleInfo() {
   let obj = initialize;
-  let items = [closure_9];
-  const tmp = callback(
+  let items = [LocaleStore];
+  const tmp = _slicedToArray(
     obj.useStateFromStoresArray(items, () => {
       const items = [,];
-      ({ locale: arr[0], systemLocale: arr[1] } = closure_9);
+      ({ locale: arr[0], systemLocale: arr[1] } = LocaleStore);
       return items;
     }),
     2,
   );
   const first = tmp[0];
-  [tmp4, require] = callback(React.useState(hooksDefault.locale), 2);
+  [tmp4, require] = _slicedToArray(noop.useState(_modDef4153.locale), 2);
   const items1 = [first];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     const timerId = setTimeout(() => {
-      callback(closure_1_1(closure_1_2[14]).locale());
+      closure_1_0(_modDef4153.locale());
     }, 0);
   }, items1);
-  obj1 = hooksDefault;
-  obj = { label: "Active System", trailing: callback3(TableRowInner.TableRow.TrailingText, { text: "@discord/intl" }) };
-  const items2 = [callback3(TableRowInner.TableRow, obj), , , ,];
-  obj = { label: "App locale", trailing: callback3(TableRowInner.TableRow.TrailingText, { text: first }) };
-  items2[1] = callback3(TableRowInner.TableRow, obj);
-  obj1 = { label: "System locale", trailing: callback3(TableRowInner.TableRow.TrailingText, { text: tmp[1] }) };
-  items2[2] = callback3(TableRowInner.TableRow, obj1);
+  obj = { label: "Active System", trailing: closure_10(TableRow.TableRow.TrailingText, { text: "@discord/intl" }) };
+  const items2 = [closure_10(TableRow.TableRow, obj), , , ,];
+  obj = { label: "App locale", trailing: closure_10(TableRow.TableRow.TrailingText, { text: first }) };
+  items2[1] = closure_10(TableRow.TableRow, obj);
+  const obj1 = { label: "System locale", trailing: closure_10(TableRow.TableRow.TrailingText, { text: tmp[1] }) };
+  items2[2] = closure_10(TableRow.TableRow, obj1);
   const obj2 = { label: "@discord/intl locale", trailing: null };
-  const tmp3 = callback(React.useState(hooksDefault.locale), 2);
+  const tmp3 = _slicedToArray(noop.useState(_modDef4153.locale), 2);
   const tmp6 = closure_11;
-  const tmp7 = callback3;
-  obj2[1] = callback3(TableRowInner.TableRow.TrailingText, { text: getSystemLocale.intl.currentLocale });
-  items2[3] = callback3(TableRowInner.TableRow, obj2);
+  const tmp7 = closure_10;
+  obj2.trailing = closure_10(TableRow.TableRow.TrailingText, { text: util.intl.currentLocale });
+  items2[3] = closure_10(TableRow.TableRow, obj2);
   const obj4 = {
     label: "Moment locale",
-    trailing: callback3(TableRowInner.TableRow.TrailingText, { text: tmp4 }),
+    trailing: closure_10(TableRow.TableRow.TrailingText, { text: tmp4 }),
     subLabel: null,
   };
   let str = "Locale data does not match";
@@ -154,73 +130,79 @@ function LocaleInfo() {
     str = "Locale data matches current locale";
   }
   const obj5 = { hasIcons: false, children: null };
-  obj4[2] = str;
-  items2[4] = tmp7(TableRowInner.TableRow, obj4);
-  obj5[1] = items2;
-  return tmp6(TableRowGroupTitle.TableRowGroup, obj5);
+  obj4.subLabel = str;
+  items2[4] = tmp7(TableRow.TableRow, obj4);
+  obj5.children = items2;
+  return tmp6(TableRowGroup.TableRowGroup, obj5);
 }
-({ View: closure_6, ScrollView: error } = get_ActivityIndicator);
-({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-createCacheKey = { wrap: null, container: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { padding: 16 };
-let closure_12 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/intl/native/IntlTestingSettingsPage.tsx");
+get_ActivityIndicator = fn(17);
+({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
+const setAppLocale = fn(2026).setAppLocale;
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+fn(4560);
+let createStyles = { wrap: null, container: null };
+createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+createStyles.wrap = createStyles;
+createStyles.container = { padding: 16 };
+let closure_12 = createStyles.createStyles(createStyles);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/intl/native/IntlTestingSettingsPage.tsx");
 
 export default function IntlTestingSettingsPage() {
-  const tmp = callback5();
-  const syncExternalStore = React.useSyncExternalStore(
-    require("../../../intl/index.native.tsx").intl.onLocaleChange,
-    () => callback(1114).intl.currentLocale,
+  const tmp = closure_12();
+  const syncExternalStore = noop.useSyncExternalStore(
+    require("util").intl.onLocaleChange,
+    () => closure_0(1114).intl.currentLocale,
   );
-  _require = callback(React.useState({}), 2)[1];
-  const effect = React.useEffect(() => {
-    const result = callback(closure_1_2[17]).waitForAllDefaultIntlMessagesLoaded();
+  _require = _slicedToArray(noop.useState({}), 2)[1];
+  const effect = noop.useEffect(() => {
+    const result = _mod1155.waitForAllDefaultIntlMessagesLoaded();
     result.then(() => {
-      callback({});
+      closure_1_0({});
     });
   }, []);
   let obj = { style: tmp.wrap, children: null };
   obj = { spacing: 24, style: tmp.container, children: null };
-  const items = [callback3(LocaleInfo, {}), callback3(TestLocaleSelector, {}), , , , , ,];
+  const items = [closure_10(LocaleInfo, {}), closure_10(TestLocaleSelector, {}), , , , , ,];
   obj = { variant: "text-md/normal", children: null };
-  const intl = require("../../../intl/index.native.tsx").intl;
-  obj[1] = intl.format(messagesProxyDefault.HMvEC5, {});
-  items[2] = callback3(require("../../../design/components/Text/native/Text.tsx").Text, obj);
-  obj1 = { variant: "text-md/normal", children: null };
-  const intl2 = require("../../../intl/index.native.tsx").intl;
-  obj1[1] = intl2.format(messagesProxyDefault2.swfLzV, {});
-  items[3] = callback3(require("../../../design/components/Text/native/Text.tsx").Text, obj1);
+  const intl = require("util").intl;
+  obj.children = intl.format(_modDef15623.HMvEC5, {});
+  items[2] = closure_10(require("Text/Text").Text, obj);
+  const obj1 = { variant: "text-md/normal", children: null };
+  const intl2 = require("util").intl;
+  obj1.children = intl2.format(_modDef15655.swfLzV, {});
+  items[3] = closure_10(require("Text/Text").Text, obj1);
   const obj2 = { variant: "text-md/normal", children: null };
-  const intl3 = require("../../../intl/index.native.tsx").intl;
-  obj2[1] = intl3.format(messagesProxyDefault.rmps8y, {});
-  items[4] = callback3(require("../../../design/components/Text/native/Text.tsx").Text, obj2);
+  const intl3 = require("util").intl;
+  obj2.children = intl3.format(_modDef15623.rmps8y, {});
+  items[4] = closure_10(require("Text/Text").Text, obj2);
   const obj3 = { variant: "text-md/normal", children: null };
-  const intl4 = require("../../../intl/index.native.tsx").intl;
-  obj3[1] = intl4.format(messagesProxyDefault.uczI4g, {
+  const intl4 = require("util").intl;
+  obj3.children = intl4.format(_modDef15623.uczI4g, {
     linkTarget() {},
   });
-  items[5] = callback3(require("../../../design/components/Text/native/Text.tsx").Text, obj3);
+  items[5] = closure_10(require("Text/Text").Text, obj3);
   const obj5 = { variant: "text-md/normal", children: null };
-  const intl5 = require("../../../intl/index.native.tsx").intl;
-  obj5[1] = intl5.format(messagesProxyDefault.rdfRyh, {});
-  items[6] = callback3(require("../../../design/components/Text/native/Text.tsx").Text, obj5);
+  const intl5 = require("util").intl;
+  obj5.children = intl5.format(_modDef15623.rdfRyh, {});
+  items[6] = closure_10(require("Text/Text").Text, obj5);
   const obj6 = { variant: "text-md/normal", children: null };
-  const intl6 = require("../../../intl/index.native.tsx").intl;
-  obj6[1] = intl6.format(messagesProxyDefault.XOdbAy, {
+  const intl6 = require("util").intl;
+  obj6.children = intl6.format(_modDef15623.XOdbAy, {
     username: "some user",
     usernameHook(children) {
-      obj = {
+      let obj = {
         style: { backgroundColor: "green", borderRadius: 4, paddingHorizontal: 6, paddingVertical: 0 },
-        children: callback2(callback(4556).Text, obj),
+        children: null,
       };
       obj = { variant: "text-sm/normal", color: "text-overlay-light", children };
-      return callback2(closure_6, obj);
+      obj.children = closure_1_10(closure_0(4556).Text, obj);
+      return closure_1_10(closure_1_6, obj);
     },
   });
-  items[7] = callback3(require("../../../design/components/Text/native/Text.tsx").Text, obj6);
-  obj[2] = items;
-  obj[1] = callback4(require("../../../design/components/Stack/native/Stack.native.tsx").Stack, obj);
-  return callback3(closure_7, obj);
+  items[7] = closure_10(require("Text/Text").Text, obj6);
+  obj.children = items;
+  obj.children = closure_11(require("Stack/Stack").Stack, obj);
+  return closure_10(closure_7, obj);
 }

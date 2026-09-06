@@ -1,25 +1,23 @@
 // discord_app/modules/premium/PremiumBogoPromotionUtilsCommon.tsx
-import defaultAreStatesEqual from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import set from "../../utils/PlatformUtils.tsx";
-import hooksDefault from "../../../_runtime/04153_hooks.js";
-import getPremiumPlanItemDefault from "../../utils/PremiumUtils.tsx";
-import isTablet from "../../../discord_common/js/shared/lib/PlatformUtils.tsx";
-import useBlockedPaymentsConfig from "../billing/experiments/BlockedPaymentsCountryExperiment.tsx";
+import useStateFromStores from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import PlatformUtils from "../../utils/PlatformUtils.tsx";
+import _modDef4153 from "../../../_runtime/metro/04153__.js";
+import PremiumUtilsDefault from "../../utils/PremiumUtils.tsx";
+import shared_PlatformUtils from "../../../discord_common/js/shared/lib/PlatformUtils.tsx";
+import BlockedPaymentsCountryExperiment from "../billing/experiments/BlockedPaymentsCountryExperiment.tsx";
 import usePremiumTrialOffer from "hooks/usePremiumTrialOffer.android.tsx";
 import usePremiumDiscountOffer from "hooks/usePremiumDiscountOffer.android.tsx";
-import useEligibleActiveOutboundPromotions from "promotions/PromotionsHooks.tsx";
-import apexExperiment from "experiments/BogoPromotionExperiment.tsx";
+import PromotionsHooks from "promotions/PromotionsHooks.tsx";
+import BogoPromotionExperiment from "experiments/BogoPromotionExperiment.tsx";
 import useScheduledForcedUpdateDefault from "hooks/useScheduledForcedUpdate.tsx";
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../stores/UserStore.tsx";
-import closure_5 from "../../stores/billing/SubscriptionStore.tsx";
-import closure_6 from "../../stores/billing/UserOfferStore.tsx";
-import closure_7 from "../../stores/game_store/EntitlementStore.tsx";
-import closure_8 from "promotions/PromotionsStore.tsx";
-import GuildFeatures from "PremiumConstants.tsx";
-import ME from "../../Constants.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import UserStore from "../../stores/UserStore.tsx";
+import SubscriptionStore from "../../stores/billing/SubscriptionStore.tsx";
+import UserOfferStore from "../../stores/billing/UserOfferStore.tsx";
+import EntitlementStore from "../../stores/game_store/EntitlementStore.tsx";
+import PromotionsStore from "promotions/PromotionsStore.tsx";
 
-require = arg1;
+require = fn;
 function isUserEligibleBasedOnCurrentOrPreviousSubs(experimentEnabled) {
   ({ premiumSubscription, mostRecentSubscription, previousPremiumSubscription } = experimentEnabled);
   if (experimentEnabled.experimentEnabled) {
@@ -27,12 +25,12 @@ function isUserEligibleBasedOnCurrentOrPreviousSubs(experimentEnabled) {
       if (mostRecentSubscription.status === constants2.ENDED) {
         const endedAt = mostRecentSubscription.endedAt;
         if (null != endedAt) {
-          if (mostRecentSubscription.hasPremiumAtLeast(closure_10.TIER_2)) {
-            const obj = hooksDefault();
+          if (mostRecentSubscription.hasPremiumAtLeast(closure_1_10.TIER_2)) {
+            const obj = _modDef4153();
             if (subtractResult.isBefore(endedAt)) {
               return false;
             }
-            subtractResult = hooksDefault().subtract(10, "days");
+            subtractResult = _modDef4153().subtract(10, "days");
           }
         }
       }
@@ -41,39 +39,38 @@ function isUserEligibleBasedOnCurrentOrPreviousSubs(experimentEnabled) {
       if (previousPremiumSubscription.status === constants2.ENDED) {
         const endedAt2 = previousPremiumSubscription.endedAt;
         if (null != endedAt2) {
-          if (previousPremiumSubscription.hasPremiumAtLeast(closure_10.TIER_2)) {
-            const obj3 = hooksDefault();
+          if (previousPremiumSubscription.hasPremiumAtLeast(closure_1_10.TIER_2)) {
+            const obj3 = _modDef4153();
             if (subtractResult1.isBefore(endedAt2)) {
               return false;
             }
-            subtractResult1 = hooksDefault().subtract(10, "days");
+            subtractResult1 = _modDef4153().subtract(10, "days");
           }
         }
       }
     }
     if (null != premiumSubscription) {
       let hasActiveTrial;
-      currentUser = currentUser.getCurrentUser();
+      const currentUser = UserStore.getCurrentUser();
       if (premiumSubscription != null) {
         hasActiveTrial = premiumSubscription.hasActiveTrial;
       }
       let isPremiumExactlyResult = hasActiveTrial;
       if (isPremiumExactlyResult) {
-        isPremiumExactlyResult = getPremiumPlanItemDefault.isPremiumExactly(currentUser, tmp22.TIER_0);
-        const obj5 = getPremiumPlanItemDefault;
+        isPremiumExactlyResult = PremiumUtilsDefault.isPremiumExactly(currentUser, tmp22.TIER_0);
       }
-      const hasPremiumAtLeastResult = premiumSubscription.hasPremiumAtLeast(closure_10.TIER_2);
-      tmp22 = closure_10;
-      let isAndroidResult = set.isAndroid();
+      const hasPremiumAtLeastResult = premiumSubscription.hasPremiumAtLeast(closure_1_10.TIER_2);
+      tmp22 = closure_1_10;
+      let isAndroidResult = PlatformUtils.isAndroid();
       if (isAndroidResult) {
         isAndroidResult = premiumSubscription.paymentGateway !== constants.GOOGLE;
       }
       return false;
     }
-    const isMobile = isTablet.isMobile;
+    const isMobile = shared_PlatformUtils.isMobile;
     let tmp20 = !isMobile;
     if (isMobile) {
-      tmp20 = !fractionalPremiumActive.isFractionalPremiumActive();
+      tmp20 = !EntitlementStore.isFractionalPremiumActive();
     }
     return tmp20;
   } else {
@@ -82,7 +79,7 @@ function isUserEligibleBasedOnCurrentOrPreviousSubs(experimentEnabled) {
 }
 function isEligibleForBOGOPromotion() {
   const self = this;
-  const apply = _isEligibleForBOGOPromotion.apply;
+  const apply = closure_15.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -90,279 +87,239 @@ function isEligibleForBOGOPromotion() {
   }
   return applyArgumentsResult;
 }
-function _isEligibleForBOGOPromotion() {
-  const self = this;
-  const tmp = callback(() => {
-    closure_0 = arg0;
-    c3 = 0;
-    c4 = 0;
-    const iter = (function* () {
-      if (authStore === 2) {
-        authStore = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
+let closure_15 = async function _isEligibleForBOGOPromotion(arg0, value) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
         if (arg0 === 1) {
-          throw arg1;
+          c4 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c4 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_2 = tmp5;
+          closure_1 = tmp2;
+          closure_129_0 = undefined;
+          let flag = closure_0;
+          if (closure_0 === undefined) {
+            flag = true;
+          }
+          closure_129_0 = flag;
+          let currentUser2;
+          closure_129_2 = undefined;
+          let isPaymentsBlocked;
+          let bogoPromotionGateEnabled;
+          let bogoMarketingMaterialsEnabled;
+          closure_129_6 = undefined;
+          let mostRecentPremiumTypeSubscription;
+          c3 = 1;
+          c4 = 1;
+          return { value: "PX_16", done: true };
         }
       } else {
-        try {
-          authStore = 2;
-          if (0 === isPaymentsBlocked) {
-            if (arg0 === 1) {
-              authStore = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              authStore = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              dependencyMap = tmp5;
-              let currentUser2 = tmp2;
-              let flag;
-              if (flag === undefined) {
-                flag = true;
-              }
-              currentUser2 = undefined;
-              dependencyMap = undefined;
-              isPaymentsBlocked = undefined;
-              authStore = undefined;
-              let store;
-              c6 = undefined;
-              let mostRecentPremiumTypeSubscription;
-              isPaymentsBlocked = 1;
-              authStore = 1;
-              return { value: "PX_16", done: true };
-            }
+        if (1 === tmp5) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj1 = { value, done: true };
+            return obj1;
           } else {
-            if (1 === tmp5) {
-              if (arg0 === 1) {
-                authStore = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                authStore = 3;
-                obj1 = { value: null, done: true };
-                obj1[0] = arg1;
-                return obj1;
-              } else {
-                currentUser2 = authStore.getCurrentUser();
-                let isClaimedResult;
-                if (currentUser2 != null) {
-                  isClaimedResult = currentUser2.isClaimed();
-                }
-                dependencyMap = !isClaimedResult;
-                let obj2 = flag(7417);
-                isPaymentsBlocked = obj2.getIsPaymentsBlocked();
-                let obj3 = flag(13469);
-                authStore = obj3.getBogoPromotionGateEnabled("bogo eligibility async check");
-                let obj4 = flag(13471);
-                store = obj4.getBogoMarketingMaterialsEnabled("bogo marketing eligibility async check");
-                const isMobile = flag(4801).isMobile;
-                let isAndroidResult = !isMobile;
-                if (isMobile) {
-                  let obj5 = flag(1115);
-                  isAndroidResult = obj5.isAndroid();
-                }
-                c6 = isAndroidResult;
-                if (!dependencyMap) {
-                  if (!isPaymentsBlocked) {
-                    if (authStore) {
-                      if (!flag) {
-                        if (c6) {
-                          if (c6.hasFetchedOffer()) {
-                            authStore = 3;
-                            return { value: false, done: true };
-                          }
-                          const result = store.hasFetchedMostRecentPremiumTypeSubscription();
-                          let tmp37 = !result;
-                          if (!result) {
-                            const currentUser = authStore.getCurrentUser();
-                            let hasPurchasedFlagResult;
-                            if (currentUser != null) {
-                              hasPurchasedFlagResult = currentUser.hasPurchasedFlag(PREMIUM_TIER_2.PREMIUM_TIER_2);
-                            }
-                            tmp37 = hasPurchasedFlagResult;
-                          }
-                          if (tmp37) {
-                            isPaymentsBlocked = 2;
-                            authStore = 1;
-                            obj2 = { value: null, done: false };
-                            obj2[0] = flag(4884).fetchMostRecentSubscription();
-                            return obj2;
-                          }
+            currentUser2 = closure_130_4.getCurrentUser();
+            let isClaimedResult;
+            if (currentUser2 != null) {
+              isClaimedResult = currentUser2.isClaimed();
+            }
+            closure_129_2 = !isClaimedResult;
+            let obj2 = closure_130_0(closure_130_2[12]);
+            isPaymentsBlocked = obj2.getIsPaymentsBlocked();
+            let obj3 = closure_130_0(closure_130_2[14]);
+            bogoPromotionGateEnabled = obj3.getBogoPromotionGateEnabled("bogo eligibility async check");
+            let obj4 = closure_130_0(closure_130_2[19]);
+            bogoMarketingMaterialsEnabled = obj4.getBogoMarketingMaterialsEnabled(
+              "bogo marketing eligibility async check",
+            );
+            const isMobile = closure_130_0(closure_130_2[11]).isMobile;
+            let isAndroidResult = !isMobile;
+            if (isMobile) {
+              let obj5 = closure_130_0(closure_130_2[10]);
+              isAndroidResult = obj5.isAndroid();
+            }
+            closure_129_6 = isAndroidResult;
+            if (!closure_129_2) {
+              if (!isPaymentsBlocked) {
+                if (bogoPromotionGateEnabled) {
+                  if (!closure_129_0) {
+                    if (closure_129_6) {
+                      if (closure_130_6.hasFetchedOffer()) {
+                        c4 = 3;
+                        return { value: false, done: true };
+                      }
+                      const result = closure_130_5.hasFetchedMostRecentPremiumTypeSubscription();
+                      let tmp37 = !result;
+                      if (!result) {
+                        const currentUser = closure_130_4.getCurrentUser();
+                        let hasPurchasedFlagResult;
+                        if (currentUser != null) {
+                          hasPurchasedFlagResult = currentUser.hasPurchasedFlag(closure_130_9.PREMIUM_TIER_2);
                         }
+                        tmp37 = hasPurchasedFlagResult;
+                      }
+                      if (tmp37) {
+                        c3 = 2;
+                        c4 = 1;
+                        obj2 = { value: closure_130_0(closure_130_2[20]).fetchMostRecentSubscription(), done: false };
+                        return obj2;
                       }
                     }
                   }
                 }
-                authStore = 3;
-                return { value: false, done: true };
               }
-            } else {
-              if (2 === tmp5) {
-                if (arg0 === 1) {
-                  authStore = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  authStore = 3;
-                  obj3 = { value: null, done: true };
-                  obj3[0] = arg1;
-                  return obj3;
-                }
-              } else if (arg0 === 1) {
-                authStore = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                authStore = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              }
-              mostRecentPremiumTypeSubscription = store.getMostRecentPremiumTypeSubscription();
-              obj4 = {
-                experimentEnabled: null,
-                premiumSubscription: null,
-                mostRecentSubscription: null,
-                previousPremiumSubscription: null,
-              };
-              obj4[0] = authStore;
-              obj4[1] = store.getPremiumTypeSubscription();
-              obj4[2] = mostRecentPremiumTypeSubscription;
-              obj4[3] = store.getPreviousPremiumTypeSubscription();
-              authStore = 3;
-              obj5 = { value: null, done: true };
-              obj5[0] = callback(obj4);
-              return obj5;
             }
-            if (!store.hasFetchedSubscriptions()) {
-              isPaymentsBlocked = 3;
-              authStore = 1;
-              const obj6 = { value: null, done: false };
-              obj6[0] = flag(4884).fetchSubscriptions();
-              return obj6;
-            }
-          }
-        } catch (tmp59) {
-          authStore = tmp;
-          throw tmp59;
-        }
-      }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_15 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _maybeFetchActiveBogoPromotion() {
-  const self = this;
-  const tmp = callback(function* () {
-    if (c3 === 2) {
-      c3 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c3 = 2;
-        if (0 === table) {
-          if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            closure_1 = tmp5;
-            let bogoPromotion = tmp2;
-            bogoPromotion = undefined;
-            table = 1;
-            c3 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = closure_1_14(false);
-            return obj1;
+            c4 = 3;
+            return { value: false, done: true };
           }
         } else {
-          if (1 === tmp5) {
+          if (2 === tmp5) {
             if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
+              c4 = 3;
+              throw value;
             } else if (arg0 === 2) {
-              c3 = 3;
-              let obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else if (arg1) {
-              bogoPromotion = bogoPromotion.bogoPromotion;
-              if (null != bogoPromotion) {
-                const _Date = Date;
-                const date = new Date(bogoPromotion.endDate);
-                const _Date2 = Date;
-                if (valueOfResult >= Date.now()) {
-                  c3 = 3;
-                  return { value: "HermesInternal", done: null };
-                }
-                valueOfResult = date.valueOf();
-              }
-              obj2 = bogoPromotion(table[21]);
-              table = 2;
-              c3 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = obj2.fetchActiveBogoPromotion();
+              c4 = 3;
+              obj3 = { value, done: true };
               return obj3;
             }
           } else if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
+            c4 = 3;
+            throw value;
           } else if (arg0 === 2) {
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            c4 = 3;
+            obj = { value, done: true };
             return obj;
           }
-          c3 = 3;
-          return { value: "HermesInternal", done: null };
+          mostRecentPremiumTypeSubscription = closure_130_5.getMostRecentPremiumTypeSubscription();
+          obj4 = {
+            experimentEnabled: bogoPromotionGateEnabled,
+            premiumSubscription: closure_130_5.getPremiumTypeSubscription(),
+            mostRecentSubscription: mostRecentPremiumTypeSubscription,
+            previousPremiumSubscription: closure_130_5.getPreviousPremiumTypeSubscription(),
+          };
+          c4 = 3;
+          obj5 = { value: closure_130_13(obj4), done: true };
+          return obj5;
         }
-      } catch (tmp22) {
-        c3 = tmp;
-        throw tmp22;
+        if (!closure_130_5.hasFetchedSubscriptions()) {
+          c3 = 3;
+          c4 = 1;
+          const obj6 = { value: closure_130_0(closure_130_2[20]).fetchSubscriptions(), done: false };
+          return obj6;
+        }
       }
+    } catch (tmp59) {
+      c4 = tmp;
+      throw tmp59;
     }
-  });
-  closure_16 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
   }
-  return applyArgumentsResult;
-}
-({ PurchasedFlags: c9, PremiumTypes: c10 } = GuildFeatures);
-({ PaymentGateways: unpackModuleId, SubscriptionStatusTypes: closure_12 } = ME);
-let result = require("set").fileFinishedImporting("modules/premium/PremiumBogoPromotionUtilsCommon.tsx");
+};
+let closure_16 = async function _maybeFetchActiveBogoPromotion(arg0, value) {
+  if (c3 === 2) {
+    c3 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c3 = 2;
+      if (0 === c2) {
+        if (arg0 === 1) {
+          c3 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_1 = tmp5;
+          closure_0 = tmp2;
+          let bogoPromotion;
+          c2 = 1;
+          c3 = 1;
+          const obj1 = { value: isEligibleForBOGOPromotion(false), done: false };
+          return obj1;
+        }
+      } else {
+        if (1 === tmp5) {
+          if (arg0 === 1) {
+            c3 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            let obj2 = { value, done: true };
+            return obj2;
+          } else if (value) {
+            bogoPromotion = closure_129_8.bogoPromotion;
+            if (null != bogoPromotion) {
+              const _Date = Date;
+              const date = new Date(bogoPromotion.endDate);
+              const _Date2 = Date;
+              if (valueOfResult >= Date.now()) {
+                c3 = 3;
+                return { value: "HermesInternal", done: null };
+              }
+              valueOfResult = date.valueOf();
+            }
+            obj2 = closure_129_0(closure_129_2[21]);
+            c2 = 2;
+            c3 = 1;
+            const obj3 = { value: obj2.fetchActiveBogoPromotion(), done: false };
+            return obj3;
+          }
+        } else if (arg0 === 1) {
+          c3 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 3;
+          obj = { value, done: true };
+          return obj;
+        }
+        c3 = 3;
+        return { value: "HermesInternal", done: null };
+      }
+    } catch (tmp22) {
+      c3 = tmp;
+      throw tmp22;
+    }
+  }
+};
+const PremiumConstants = fn(1373);
+({ PurchasedFlags: closure_9, PremiumTypes: c10 } = PremiumConstants);
+const Constants = fn(1074);
+({ PaymentGateways: closure_11, SubscriptionStatusTypes: closure_12 } = Constants);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/premium/PremiumBogoPromotionUtilsCommon.tsx");
 
 export { isUserEligibleBasedOnCurrentOrPreviousSubs };
 export const useIsEligibleForBogoPromotion = function useIsEligibleForBogoPromotion() {
@@ -370,22 +327,17 @@ export const useIsEligibleForBogoPromotion = function useIsEligibleForBogoPromot
   if (arg0 === undefined) {
     flag = true;
   }
-  const isPaymentsBlocked = useBlockedPaymentsConfig.useIsPaymentsBlocked();
-  const obj = useBlockedPaymentsConfig;
-  const promotion = useEligibleActiveOutboundPromotions.useBogoPromotion().promotion;
-  const obj2 = useEligibleActiveOutboundPromotions;
-  const bogoPromotionGateEnabled = apexExperiment.useBogoPromotionGateEnabled("bogo eligibility hook");
-  const obj3 = apexExperiment;
-  const items = [closure_5];
-  const stateFromStoresObject = defaultAreStatesEqual.useStateFromStoresObject(items, () => ({
-    mostRecentSubscription: store.getMostRecentPremiumTypeSubscription(),
-    premiumSubscription: store.getPremiumTypeSubscription(),
-    previousPremiumSubscription: store.getPreviousPremiumTypeSubscription(),
+  const isPaymentsBlocked = BlockedPaymentsCountryExperiment.useIsPaymentsBlocked();
+  const promotion = PromotionsHooks.useBogoPromotion().promotion;
+  const bogoPromotionGateEnabled = BogoPromotionExperiment.useBogoPromotionGateEnabled("bogo eligibility hook");
+  const items = [SubscriptionStore];
+  const stateFromStoresObject = useStateFromStores.useStateFromStoresObject(items, () => ({
+    mostRecentSubscription: SubscriptionStore.getMostRecentPremiumTypeSubscription(),
+    premiumSubscription: SubscriptionStore.getPremiumTypeSubscription(),
+    previousPremiumSubscription: SubscriptionStore.getPreviousPremiumTypeSubscription(),
   }));
   ({ mostRecentSubscription, premiumSubscription, previousPremiumSubscription } = stateFromStoresObject);
-  const obj4 = defaultAreStatesEqual;
   const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
-  const obj5 = usePremiumTrialOffer;
   let num;
   const premiumDiscountOffer = usePremiumDiscountOffer.usePremiumDiscountOffer();
   if (promotion != null) {
@@ -394,7 +346,6 @@ export const useIsEligibleForBogoPromotion = function useIsEligibleForBogoPromot
   if (num == null) {
     num = 0;
   }
-  const obj6 = usePremiumDiscountOffer;
   const valueOfResult = new Date(num).valueOf();
   const timestamp = Date.now();
   let num2 = -1;
@@ -409,7 +360,6 @@ export const useIsEligibleForBogoPromotion = function useIsEligibleForBogoPromot
     let tmpResult = tmp(1115);
     isAndroidResult = tmpResult.isAndroid();
   }
-  const tmp11 = useScheduledForcedUpdateDefault;
   tmpResult = tmp(13471);
   let bogoMarketingMaterialsEnabled = tmpResult.useBogoMarketingMaterialsEnabled("bogo marketing eligibility hook");
   let tmp16 = !tmp10;
@@ -439,7 +389,7 @@ export const useIsEligibleForBogoPromotion = function useIsEligibleForBogoPromot
 export { isEligibleForBOGOPromotion };
 export const maybeFetchActiveBogoPromotion = function maybeFetchActiveBogoPromotion() {
   const self = this;
-  const apply = _maybeFetchActiveBogoPromotion.apply;
+  const apply = closure_16.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

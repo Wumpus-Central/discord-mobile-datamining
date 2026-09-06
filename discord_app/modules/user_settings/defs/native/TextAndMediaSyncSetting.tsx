@@ -1,24 +1,25 @@
 // discord_app/modules/user_settings/defs/native/TextAndMediaSyncSetting.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import saveGuildFoldersDefault from "../../../../actions/UserSettingsActionCreators.tsx";
-import closure_2 from "../../SelectivelySyncedUserSettingsStore.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import util from "../../../../intl/index.native.tsx";
+import UserSettingsActionCreatorsDefault from "../../../../actions/UserSettingsActionCreators.tsx";
+import SelectivelySyncedUserSettingsStore from "../../SelectivelySyncedUserSettingsStore.tsx";
 
-require = arg1;
-createToggle = {
+require = fn;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["3340dY"]);
+    const intl = util.intl;
+    return intl.string(util.t["3340dY"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.CHAT,
+  parent: fn(7975).MobileUserSettings.CHAT,
   useValue: function useTextAndMediaSyncSettingValue() {
-    const items = [closure_2];
-    return initialize.useStateFromStores(items, () => closure_2.shouldSync("text"));
+    const items = [SelectivelySyncedUserSettingsStore];
+    return initialize.useStateFromStores(items, () => SelectivelySyncedUserSettingsStore.shouldSync("text"));
   },
-  onValueChange: saveGuildFoldersDefault.setShouldSyncTextSettings,
+  onValueChange: UserSettingsActionCreatorsDefault.setShouldSyncTextSettings,
 };
-createToggle = createToggle.createToggle(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/TextAndMediaSyncSetting.tsx");
+SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/TextAndMediaSyncSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

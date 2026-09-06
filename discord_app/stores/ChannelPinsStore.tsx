@@ -1,49 +1,51 @@
 // discord_app/stores/ChannelPinsStore.tsx
-import applyDefault from "../../_runtime/00012_apply.js";
+import _modDef12 from "../../_runtime/metro/00012__.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../Dispatcher.tsx";
-import closure_3 from "../modules/user_settings/LocaleStore.tsx";
-import closure_4 from "ChannelStore.tsx";
-import closure_5 from "GuildMemberStore.tsx";
-import closure_6 from "GuildStore.tsx";
-import closure_7 from "MessageStore.tsx";
-import closure_8 from "RelationshipStore.tsx";
-import closure_9 from "UserStore.tsx";
+import DispatcherDefault from "../Dispatcher.tsx";
+import MessageRecordUtils from "../modules/messages/MessageRecordUtils.tsx";
+import ExplicitMediaRedactionUtils from "../modules/explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
+import LocaleStore from "../modules/user_settings/LocaleStore.tsx";
+import ChannelStore from "ChannelStore.tsx";
+import GuildMemberStore from "GuildMemberStore.tsx";
+import GuildStore from "GuildStore.tsx";
+import MessageStore from "MessageStore.tsx";
+import RelationshipStore from "RelationshipStore.tsx";
+import UserStore from "UserStore.tsx";
 
-const require = arg1;
+require = fn;
 function handleChannelDelete(arg0) {
   delete tmp2[tmp];
 }
 function handleRelationshipUpdate() {
-  let item = applyDefault.forEach(closure_11, (items) => {
+  let item = _modDef12.forEach(closure_11, (items) => {
     items = items.items;
     const item = items.forEach((message) => {
       message = message.message;
-      const result = message.set("blocked", closure_8.isBlockedForMessage(message));
-      const result1 = message.set("ignored", closure_8.isIgnoredForMessage(message));
+      const result = message.set("blocked", closure_1_8.isBlockedForMessage(message));
+      const result1 = message.set("ignored", closure_1_8.isIgnoredForMessage(message));
     });
     const items1 = items.items;
     items.items = items1.slice();
   });
 }
-let obj = {
+let FetchState = {
   LOADING: "LOADING",
   LOADED_HAS_MORE: "LOADED_HAS_MORE",
   LOADED_FINISHED: "LOADING_FINISHED",
   FAILED: "FAILED",
 };
-let closure_11 = {};
+const dependencyMap = {};
 const Store = initializeDefault.Store;
 class ChannelPinsStore extends Store {}
 const prototype = ChannelPinsStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_4, closure_5, closure_6, closure_3, closure_7, closure_8, closure_9);
+  this.waitFor(ChannelStore, GuildMemberStore, GuildStore, LocaleStore, MessageStore, RelationshipStore, UserStore);
 };
 prototype["getPins"] = function getPins(channelId) {
   return dependencyMap[channelId];
 };
 ChannelPinsStore.displayName = "ChannelPinsStore";
-obj = {
+FetchState = {
   CONNECTION_OPEN: function handleConnectionOpen() {
     closure_11 = {};
   },
@@ -54,7 +56,7 @@ obj = {
         dependencyMap[channelId].state = obj.LOADING;
       }
     }
-    channel = channel.getChannel(channelId);
+    const channel = ChannelStore.getChannel(channelId);
     let guildId;
     if (channel != null) {
       guildId = channel.getGuildId();
@@ -68,9 +70,9 @@ obj = {
       return false;
     } else {
       const mapped = pins.map((pinned_at) => {
-        obj = { pinnedAt: new Date(Date.parse(pinned_at.pinned_at)), message: null };
+        const obj = { pinnedAt: new Date(Date.parse(pinned_at.pinned_at)), message: null };
         const date = new Date(Date.parse(pinned_at.pinned_at));
-        obj[1] = callback(table[7]).createMessageRecord(pinned_at.message);
+        obj.message = MessageRecordUtils.createMessageRecord(pinned_at.message);
         return obj;
       });
       const items = [];
@@ -90,22 +92,21 @@ obj = {
   THREAD_DELETE: handleChannelDelete,
   GUILD_DELETE: function handleGuildDelete(guild) {
     guild = guild.guild;
-    const found = applyDefault(closure_11).filter((guildId) => guildId.guildId !== guild.id);
-    const arr = applyDefault(closure_11);
+    const found = _modDef12(closure_11).filter((guildId) => guildId.guildId !== guild.id);
+    const arr = _modDef12(closure_11);
     closure_11 = found.keyBy("id").value();
   },
   MESSAGE_DELETE: function handleMessageDelete(arg0) {
     ({ id: require, channelId } = arg0);
     let tmp2 = null != tmp;
     if (tmp2) {
-      const tmp5 = 0 !== applyDefault.remove(tmp.items, (message) => message.message.id === closure_0).length;
+      const tmp5 = 0 !== _modDef12.remove(tmp.items, (message) => message.message.id === require).length;
       if (tmp5) {
         const items = tmp.items;
         tmp.items = items.slice();
         dependencyMap[channelId] = tmp;
       }
       tmp2 = tmp5;
-      obj = applyDefault;
     }
     return tmp2;
   },
@@ -129,26 +130,22 @@ obj = {
       if (message.message.pinned) {
         const items = tmp20.items;
         tmp20.items = items.slice();
-        const findIndexResult = applyDefault.findIndex(tmp20.items, (message) => message.message.id === id);
+        const findIndexResult = _modDef12.findIndex(tmp20.items, (message) => message.message.id === id);
         if (-1 === findIndexResult) {
           const items1 = tmp20.items;
-          obj = { message: null, pinnedAt: null };
-          obj[0] = id(4783).createMessageRecord(message.message);
+          let obj = { message: MessageRecordUtils.createMessageRecord(message.message), pinnedAt: null };
           const _Date = Date;
           const date = new Date();
-          obj[1] = date;
+          obj.pinnedAt = date;
           items1.unshift(obj);
-          const obj6 = id(4783);
         } else {
-          tmp20.items[findIndexResult].message = id(4783).updateMessageRecord(
+          tmp20.items[findIndexResult].message = MessageRecordUtils.updateMessageRecord(
             tmp20.items[findIndexResult].message,
             message.message,
           );
-          const obj4 = id(4783);
         }
-        const obj3 = applyDefault;
       } else {
-        const findIndexResult1 = applyDefault.findIndex(tmp20.items, (message) => message.message.id === id);
+        const findIndexResult1 = _modDef12.findIndex(tmp20.items, (message) => message.message.id === id);
         if (-1 === findIndexResult1) {
           return false;
         } else {
@@ -157,25 +154,21 @@ obj = {
           const items3 = tmp20.items;
           items3.splice(findIndexResult1, 1);
         }
-        const obj2 = applyDefault;
       }
     } else {
-      const findIndexResult2 = applyDefault.findIndex(tmp20.items, (message) => message.message.id === id);
+      const findIndexResult2 = _modDef12.findIndex(tmp20.items, (message) => message.message.id === id);
       if (-1 !== findIndexResult2) {
         message = tmp.message;
-        obj = id(4783);
+        obj = MessageRecordUtils;
         const updateMessageRecordResult = obj.updateMessageRecord(message, message.message);
         if (updateMessageRecordResult !== message) {
           const items4 = tmp20.items;
           const substr = items4.slice();
-          obj = { pinnedAt: null, message: null };
-          obj[0] = tmp.pinnedAt;
-          obj[1] = updateMessageRecordResult;
+          obj = { pinnedAt: tmp.pinnedAt, message: updateMessageRecordResult };
           substr[findIndexResult2] = obj;
           dependencyMap[channel_id].items = substr;
         }
       }
-      const obj7 = applyDefault;
     }
   },
   RELATIONSHIP_ADD: handleRelationshipUpdate,
@@ -186,22 +179,22 @@ obj = {
     if (null == dependencyMap[messageId.channelId]) {
       return false;
     } else {
-      const findIndexResult = applyDefault.findIndex(tmp.items, (message) => message.message.id === messageId);
+      const findIndexResult = _modDef12.findIndex(tmp.items, (message) => message.message.id === messageId);
       if (-1 === findIndexResult) {
         return false;
       } else {
         const items = tmp.items;
         tmp.items = items.slice();
-        tmp.items[findIndexResult].message = messageId(7600).handleExplicitMediaScanTimeoutForMessage(
+        tmp.items[findIndexResult].message = ExplicitMediaRedactionUtils.handleExplicitMediaScanTimeoutForMessage(
           tmp.items[findIndexResult].message,
         );
       }
-      const obj2 = applyDefault;
     }
   },
 };
-const channelPinsStore = new ChannelPinsStore(dispatcherDefault, obj);
-let result = require("set").fileFinishedImporting("stores/ChannelPinsStore.tsx");
+const channelPinsStore = new ChannelPinsStore(DispatcherDefault, FetchState);
+const size = fn(2);
+let result = size.fileFinishedImporting("stores/ChannelPinsStore.tsx");
 
 export default channelPinsStore;
-export const FetchState = obj;
+export { FetchState };

@@ -1,7 +1,7 @@
 // discord_app/modules/guild_tag/PrimaryGuildUtils.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/guild_tag/PrimaryGuildUtils.tsx");
+const result = size.fileFinishedImporting("modules/guild_tag/PrimaryGuildUtils.tsx");
 
 export const isUserPrimaryGuildEqual = function isUserPrimaryGuildEqual(primaryGuild, primary_guild) {
   if (null != primaryGuild) {
@@ -23,7 +23,12 @@ export const ensureUserPrimaryGuild = function ensureUserPrimaryGuild(primary_gu
     return primary_guild;
   } else {
     const obj = { identityGuildId: null, identityEnabled: null, tag: null, badge: null };
-    ({ identity_guild_id: obj[0], identity_enabled: obj[1], tag: obj[2], badge: obj[3] } = primary_guild);
+    ({
+      identity_guild_id: obj.identityGuildId,
+      identity_enabled: obj.identityEnabled,
+      tag: obj.tag,
+      badge: obj.badge,
+    } = primary_guild);
     return obj;
   }
 };

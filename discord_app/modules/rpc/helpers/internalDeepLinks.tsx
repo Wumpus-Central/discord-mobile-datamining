@@ -1,16 +1,16 @@
 // discord_app/modules/rpc/helpers/internalDeepLinks.tsx
-import isDiscordProxiedAssetUrlDefault from "../../../utils/URLUtils.tsx";
-import _openURL from "../../../lib/openURL.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import set from "../../../../_runtime/00002_set.js";
+import URLUtilsDefault from "../../../utils/URLUtils.tsx";
+import openURL from "../../../lib/openURL.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
-require = arg1;
-let set = new Set(["channels", "users", "events"]);
+require = fn;
+const set = new Set(["channels", "users", "events"]);
 const set1 = new Set(["", "-"]);
-const result = set.fileFinishedImporting("modules/rpc/helpers/internalDeepLinks.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/rpc/helpers/internalDeepLinks.tsx");
 
-export const resolveInternalDeepLink = function resolveInternalDeepLink(closure_1_1) {
-  const toURLSafeResult = isDiscordProxiedAssetUrlDefault.toURLSafe(closure_1_1);
+export const resolveInternalDeepLink = function resolveInternalDeepLink(url) {
+  const toURLSafeResult = URLUtilsDefault.toURLSafe(url);
   if (null == toURLSafeResult) {
     return null;
   } else {
@@ -38,7 +38,7 @@ export const resolveInternalDeepLink = function resolveInternalDeepLink(closure_
         }
         tmpResult2 = tmp(1365);
       }
-      const tmp11 = callback(toURLSafeResult.pathname.split("/"), 2)[1];
+      const tmp11 = _slicedToArray(toURLSafeResult.pathname.split("/"), 2)[1];
       let combined2 = null;
       if (null != tmp11) {
         combined2 = null;
@@ -52,6 +52,6 @@ export const resolveInternalDeepLink = function resolveInternalDeepLink(closure_
   }
 };
 export const openInternalDeepLink = function openInternalDeepLink(internalDeepLink) {
-  _openURL.default(internalDeepLink);
+  openURL.default(internalDeepLink);
   return true;
 };

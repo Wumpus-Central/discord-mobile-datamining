@@ -1,16 +1,16 @@
 // discord_app/modules/app_launcher/native/hooks/useDefaultAppLauncherWidth.tsx
-import set from "../../../../../_runtime/00002_set.js";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
-import ACTION_SHEET_START_HEIGHT_RATIO from "../../../action_sheet/native/ActionSheetConstants.tsx";
-import AppLauncherEntrypoint from "../../AppLauncherTypes.tsx";
+import ActionSheetConstants from "../../../action_sheet/native/ActionSheetConstants.tsx";
+import AppLauncherTypes from "../../AppLauncherTypes.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const ACTION_SHEET_MAX_WIDTH = ACTION_SHEET_START_HEIGHT_RATIO.ACTION_SHEET_MAX_WIDTH;
-const result = set.fileFinishedImporting("modules/app_launcher/native/hooks/useDefaultAppLauncherWidth.tsx");
+const ACTION_SHEET_MAX_WIDTH = ActionSheetConstants.ACTION_SHEET_MAX_WIDTH;
+const result = size.fileFinishedImporting("modules/app_launcher/native/hooks/useDefaultAppLauncherWidth.tsx");
 
 export const useDefaultAppLauncherWidth = function useDefaultAppLauncherWidth(TEXT) {
   const width = useWindowDimensionsDefault().width;
   let bound = width;
-  if (TEXT !== AppLauncherEntrypoint.AppLauncherEntrypoint.TEXT) {
+  if (TEXT !== AppLauncherTypes.AppLauncherEntrypoint.TEXT) {
     const _Math = Math;
     bound = Math.min(width, ACTION_SHEET_MAX_WIDTH);
   }

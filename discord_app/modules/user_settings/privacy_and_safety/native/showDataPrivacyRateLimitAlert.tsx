@@ -1,19 +1,18 @@
 // discord_app/modules/user_settings/privacy_and_safety/native/showDataPrivacyRateLimitAlert.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import setDefault from "../../../../actions/AlertActionCreators.tsx";
+import util from "../../../../intl/index.native.tsx";
+import AlertActionCreatorsDefault from "../../../../actions/AlertActionCreators.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting(
+const result = size.fileFinishedImporting(
   "modules/user_settings/privacy_and_safety/native/showDataPrivacyRateLimitAlert.tsx",
 );
 
 export const showDataPrivacyRateLimitAlert = function showDataPrivacyRateLimitAlert(message) {
-  let obj = setDefault;
-  obj = { title: null, body: null, confirmText: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t["43LbVL"]);
-  obj[1] = message;
-  const intl2 = getSystemLocale.intl;
-  obj[2] = intl2.string(getSystemLocale.t.BddRzS);
+  const obj = { title: null, body: null, confirmText: null };
+  const intl = util.intl;
+  obj.title = intl.string(util.t["43LbVL"]);
+  obj.body = message;
+  const intl2 = util.intl;
+  obj.confirmText = intl2.string(util.t.BddRzS);
   obj.show(obj);
 };

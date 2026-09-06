@@ -1,10 +1,10 @@
 // discord_app/utils/callOnce.tsx
-import set from "../../_runtime/00002_set.js";
+import size from "../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("utils/callOnce.tsx");
+const result = size.fileFinishedImporting("utils/callOnce.tsx");
 
-export function callOnce(closure_1_1) {
-  closure_0 = closure_1_1;
+export function callOnce(arg0) {
+  closure_0 = arg0;
   c2 = false;
   return () => {
     const items = [...arguments];

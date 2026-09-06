@@ -1,6 +1,6 @@
 // discord_app/components_native/channel_settings/ChannelSettingsConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("components_native/channel_settings/ChannelSettingsConstants.tsx");
+const result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsConstants.tsx");
 
 export const ChannelSettingsAutoFocusElement = { CHANNEL_NAME: "channel-name" };

@@ -1,57 +1,52 @@
 // discord_app/modules/settings/native/renderer/SettingSegmentedControlRenderer.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../../user_settings/UserSettingSearchStore.tsx";
-import { NodeType } from "SettingRendererConstants.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import { useSegmentedControlState } from "../../../../design/components/SegmentedControl/native/SegmentedControlState.native.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import SettingTreeManagerDefault from "SettingTreeManager.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import UserSettingSearchStore from "../../../user_settings/UserSettingSearchStore.tsx";
 
-const require = arg1;
-({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { controlContainer: null, pageContainer: null };
-createCacheKey = {
-  paddingHorizontal: ThemesDefault.space.PX_16,
-  paddingTop: ThemesDefault.space.PX_16,
-  paddingBottom: ThemesDefault.space.PX_8,
+const require = fn;
+const View = fn(17).View;
+const NodeType = fn(11469).NodeType;
+const jsxProd = fn(21);
+({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
+fn(4560);
+let createStyles = { controlContainer: null, pageContainer: null };
+createStyles = {
+  paddingHorizontal: nativeDefault.space.PX_16,
+  paddingTop: nativeDefault.space.PX_16,
+  paddingBottom: nativeDefault.space.PX_8,
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flex: 1 };
-let closure_11 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting(
-  "modules/settings/native/renderer/SettingSegmentedControlRenderer.tsx",
-);
+createStyles.controlContainer = createStyles;
+createStyles.pageContainer = { flex: 1 };
+let closure_11 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/settings/native/renderer/SettingSegmentedControlRenderer.tsx");
 
 export default function SettingSegmentedControl(node) {
-  let _require;
+  _require = undefined;
   settings = undefined;
   dependencyMap = undefined;
   ({ defaultIndex: c0, settings } = node.node);
-  let tmp = callback4();
-  [tmp3, c2] = callback(React.useState(0), 2);
-  let tmp2 = callback(React.useState(0), 2);
-  [tmp5, r10021] = callback(
-    React.useState(() => {
-      const field = closure_1_6.getField("selected");
+  let tmp = closure_11();
+  [tmp3, c2] = _slicedToArray(noop.useState(0), 2);
+  let tmp2 = _slicedToArray(noop.useState(0), 2);
+  [tmp5, r10021] = _slicedToArray(
+    noop.useState(() => {
+      const field = UserSettingSearchStore.getField("selected");
       if (null != field) {
         const index = settings.indexOf(field);
         if (-1 !== index) {
           return index;
         } else {
-          const ancestors = settings(_undefined[8]).getAncestors(field);
+          const ancestors = SettingTreeManagerDefault.getAncestors(field);
           for (const item10020 of ancestors) {
-            let tmp9 = settings;
             let index1 = settings.indexOf(item10020);
-            let tmp11 = index1;
             if (-1 !== index1) {
-              let tmp12 = obj2;
               obj2.return();
               return index1;
             }
           }
-          const obj = settings(_undefined[8]);
         }
       }
       return c0;
@@ -59,74 +54,60 @@ export default function SettingSegmentedControl(node) {
     2,
   );
   let items = [settings];
-  callback = React.useCallback((nativeEvent) => {
+  const callback = noop.useCallback((nativeEvent) => {
     _undefined(nativeEvent.nativeEvent.layout.width);
   }, []);
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     const items = [];
-    const item = settings.forEach((closure_0) => {
-      const tmp = items(closure_1_2[9]).SETTING_RENDERER_CONFIG[closure_0];
-      closure_1_1(closure_1_2[10])(
-        tmp.type === closure_1_7.ROUTE,
-        "Invalid setting type for segmented control: " + closure_0,
-      );
+    const item = settings.forEach((id) => {
+      const tmp = items(14584).SETTING_RENDERER_CONFIG[id];
+      settings(38)(tmp.type === constants.ROUTE, "Invalid setting type for segmented control: " + id);
       const screen = tmp.screen;
       const obj = { label: null, id: null, page: null };
       const component = screen.getComponent();
-      const tmp2 = closure_1_1(closure_1_2[10]);
-      obj[0] = items(closure_1_2[11]).getSettingTitle(closure_0);
-      obj[1] = closure_0;
-      obj[2] = closure_1_8(component, {});
+      const tmp2 = settings(38);
+      obj.label = items(14693).getSettingTitle(id);
+      obj.id = id;
+      obj.page = closure_2_8(component, {});
       items.push(obj);
     });
     return items;
   }, items);
-  let obj = useSegmentedControlState;
+  let obj = require("SegmentedControlState");
   const segmentedControlState = obj.useSegmentedControlState({ items: memo, pageWidth: tmp3, defaultIndex: tmp5 });
   obj = { children: null };
   obj = {
     style: tmp.controlContainer,
     onLayout: callback,
-    children: callback2(
-      require("../../../../design/components/SegmentedControl/native/SegmentedControl.native.tsx").SegmentedControl,
-      { state: segmentedControlState },
-    ),
+    children: closure_8(require("SegmentedControl").SegmentedControl, { state: segmentedControlState }),
   };
-  const items1 = [callback2(View, obj)];
-  const tmp4 = callback(
-    React.useState(() => {
-      const field = closure_1_6.getField("selected");
+  const items1 = [closure_8(View, obj)];
+  const tmp4 = _slicedToArray(
+    noop.useState(() => {
+      const field = UserSettingSearchStore.getField("selected");
       if (null != field) {
         const index = settings.indexOf(field);
         if (-1 !== index) {
           return index;
         } else {
-          const ancestors = settings(_undefined[8]).getAncestors(field);
+          const ancestors = SettingTreeManagerDefault.getAncestors(field);
           for (const item10020 of ancestors) {
-            let tmp9 = settings;
             let index1 = settings.indexOf(item10020);
-            let tmp11 = index1;
             if (-1 !== index1) {
-              let tmp12 = obj2;
               obj2.return();
               return index1;
             }
           }
-          const obj = settings(_undefined[8]);
         }
       }
       return c0;
     }),
     2,
   );
-  items1[1] = callback2(View, {
+  items1[1] = closure_8(View, {
     style: tmp.pageContainer,
-    children: callback2(
-      require("../../../../design/components/SegmentedControl/native/SegmentedControlPages.native.tsx")
-        .SegmentedControlPages,
-      { state: segmentedControlState },
-    ),
+    children: closure_8(require("SegmentedControlPages").SegmentedControlPages, { state: segmentedControlState }),
   });
-  obj[0] = items1;
-  return callback3(closure_9, obj);
+  obj.children = items1;
+  return closure_10(closure_9, obj);
 }

@@ -1,28 +1,25 @@
 // discord_app/modules/user_settings/defs/native/FamilyCenterScheduleDowntimeSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import ME from "../../../../Constants.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import messagesProxyDefault from "../../../parent_tools/FamilyCenter.messages.js";
-import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
-import { OverlappingSchedulesWarning } from "../../../parent_tools/native/ScheduleDowntimeScreen.tsx";
+import Constants from "../../../../Constants.tsx";
+import util from "../../../../intl/index.native.tsx";
+import _modDef2396 from "../../../parent_tools/FamilyCenter.messages.js";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault["w/ISB8"]);
+    const intl = util.intl;
+    return intl.string(_modDef2396["w/ISB8"]);
   },
-  parent: MobileUserSettings.MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: SettingsConstants.MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   unsearchable: true,
-  screen: obj,
-};
-obj = {
-  route: ME.UserSettingsSections.FAMILY_CENTER_SCHEDULE_DOWNTIME,
-  getComponent() {
-    return OverlappingSchedulesWarning /* OverlappingSchedulesWarning */.default;
+  screen: {
+    route: Constants.UserSettingsSections.FAMILY_CENTER_SCHEDULE_DOWNTIME,
+    getComponent() {
+      return require("ScheduleDowntimeScreen").default;
+    },
   },
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/FamilyCenterScheduleDowntimeSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/FamilyCenterScheduleDowntimeSetting.tsx");
 
 export default route;

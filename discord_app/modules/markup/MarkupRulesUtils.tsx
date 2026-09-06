@@ -1,7 +1,7 @@
 // discord_app/modules/markup/MarkupRulesUtils.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/markup/MarkupRulesUtils.tsx");
+const result = size.fileFinishedImporting("modules/markup/MarkupRulesUtils.tsx");
 
 export const smartOutput = function smartOutput(node, output, state) {
   if (typeof node.content !== "string") {

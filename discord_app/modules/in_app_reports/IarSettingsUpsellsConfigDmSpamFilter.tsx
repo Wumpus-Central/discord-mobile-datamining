@@ -1,42 +1,42 @@
 // discord_app/modules/in_app_reports/IarSettingsUpsellsConfigDmSpamFilter.tsx
-import set from "../../../_runtime/00002_set.js";
-import set2 from "../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
-import getSystemLocale from "../../intl/index.native.tsx";
-import create from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import explicitContentFromProto from "../user_settings/UserSettings.tsx";
-import ReportNames from "MenuTypes.tsx";
+import ChannelTypes from "../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
+import util from "../../intl/index.native.tsx";
+import preloaded_user_settings from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import UserSettings from "../user_settings/UserSettings.tsx";
+import MenuTypes from "MenuTypes.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const obj = {
   getTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.vJOqMB);
+    const intl = util.intl;
+    return intl.string(util.t.vJOqMB);
   },
   getDisabledTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["B5ZvY+"]);
+    const intl = util.intl;
+    return intl.string(util.t["B5ZvY+"]);
   },
   getDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["43UEUh"]);
+    const intl = util.intl;
+    return intl.string(util.t["43UEUh"]);
   },
   eligibleReportSubtypes: null,
   eligibleChannelTypes: null,
   onApply: null,
   predicate: null,
 };
-const items = [ReportNames.ReportSubType.SUB_SPAM];
-obj[3] = items;
-const items1 = [set2.ChannelTypes.DM, set2.ChannelTypes.GROUP_DM];
-obj[4] = items1;
-obj[5] = function onApply() {
-  const DmSpamFilterV2 = explicitContentFromProto.DmSpamFilterV2;
-  return DmSpamFilterV2.updateSetting(create.DmSpamFilterV2.NON_FRIENDS);
+const items = [MenuTypes.ReportSubType.SUB_SPAM];
+obj.eligibleReportSubtypes = items;
+const items1 = [ChannelTypes.ChannelTypes.DM, ChannelTypes.ChannelTypes.GROUP_DM];
+obj.eligibleChannelTypes = items1;
+obj.onApply = function onApply() {
+  const DmSpamFilterV2 = UserSettings.DmSpamFilterV2;
+  return DmSpamFilterV2.updateSetting(preloaded_user_settings.DmSpamFilterV2.NON_FRIENDS);
 };
-obj[6] = function predicate() {
-  const DmSpamFilterV2 = explicitContentFromProto.DmSpamFilterV2;
+obj.predicate = function predicate() {
+  const DmSpamFilterV2 = UserSettings.DmSpamFilterV2;
   const setting = DmSpamFilterV2.getSetting();
-  return setting === create.DmSpamFilterV2.DISABLED;
+  return setting === preloaded_user_settings.DmSpamFilterV2.DISABLED;
 };
-const result = set.fileFinishedImporting("modules/in_app_reports/IarSettingsUpsellsConfigDmSpamFilter.tsx");
+const result = size.fileFinishedImporting("modules/in_app_reports/IarSettingsUpsellsConfigDmSpamFilter.tsx");
 
 export default obj;

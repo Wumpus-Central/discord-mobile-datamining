@@ -1,16 +1,15 @@
 // discord_app/design/components/Graphic/native/Graphic.native.tsx
-import preloadDefault from "../../../../components_native/common/FastImage.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../Styles/native/createStyles.tsx";
+import native from "../../../../../discord_common/js/packages/design/native.tsx";
+import GraphicTypes from "../../../../../discord_common/js/packages/design/components/Graphic/GraphicTypes.native.tsx";
+import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
+require = fn;
 function ImageGraphic(source) {
-  const tmp = callback();
-  return jsx(preloadDefault, {
+  const tmp = closure_7();
+  return jsx(FastImageDefault, {
     source: source.src,
-    style: callback().image,
+    style: closure_7().image,
     resizeMode: "contain",
     accessibilityElementsHidden: true,
   });
@@ -20,51 +19,56 @@ function RiveGraphic(riveProps) {
   if (riveProps === undefined) {
     riveProps = {};
   }
-  const tmp = callback();
+  const tmp = closure_7();
   let obj = { style: tmp.image, children: null };
   obj = {};
   const merged = Object.assign(riveProps);
   obj.style = tmp.image;
-  obj[1] = jsx(riveProps.rive, {});
+  obj.children = jsx(riveProps.rive, {});
   return <View />;
 }
+const View = fn(17).View;
+const jsx = fn(21).jsx;
 let closure_6 = { "21/9": 2.3333333333333335, "16/9": 1.7777777777777777, "6/4": 1.5, "2/1": 2, "1/1": 1 };
-let closure_7 = createCacheKey.createStyles({
+const createStyles = fn(4560);
+let closure_7 = createStyles.createStyles({
   container: { width: "100%", justifyContent: "center", alignItems: "center", overflow: "hidden" },
   image: { width: "100%", height: "100%" },
 });
-const result = require("set").fileFinishedImporting("design/components/Graphic/native/Graphic.native.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Graphic/native/Graphic.native.tsx");
 
 export const Graphic = function Graphic(aspectRatio) {
   let str = aspectRatio.aspectRatio;
   if (str === undefined) {
     str = "16/9";
   }
-  let merged = Object.assign(aspectRatio, Object.create(null));
+  let merged = Object.assign(aspectRatio, Object.assign({ aspectRatio: 0, style: 0 }));
   const items = [merged];
   let obj = {
-    style: items1,
-    children: React.useMemo(() => {
-      let obj = merged(closure_1_2[5]);
+    style: null,
+    children: noop.useMemo(() => {
+      let obj = native;
       if (obj.isImage(merged)) {
         obj = {};
         merged = Object.assign(tmp3);
-        let tmp4 = closure_1_5(closure_1_8, obj);
+        let tmp4 = <ImageGraphic />;
       } else {
         tmp4 = null;
         if (tmpResult.isRive(tmp3)) {
           obj = {};
           const merged1 = Object.assign(tmp3);
-          tmp4 = closure_1_5(closure_1_9, obj);
+          tmp4 = <RiveGraphic />;
         }
-        tmpResult = merged(closure_1_2[6]);
+        tmpResult = GraphicTypes;
       }
       return tmp4;
     }, items),
   };
-  items1 = [callback().container, ,];
-  obj = { aspectRatio: table[str] };
+  const items1 = [closure_7().container, ,];
+  obj = { aspectRatio: closure_6[str] };
   items1[1] = obj;
   items1[2] = aspectRatio.style;
-  return <View aspectRatio={table[str]} />;
+  obj.style = items1;
+  return <View aspectRatio={closure_6[str]} />;
 };

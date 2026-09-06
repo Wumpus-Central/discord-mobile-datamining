@@ -1,7 +1,7 @@
 // discord_app/modules/icymi/native/info_modal/ICYMIInfoModalTypes.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/icymi/native/info_modal/ICYMIInfoModalTypes.tsx");
+const result = size.fileFinishedImporting("modules/icymi/native/info_modal/ICYMIInfoModalTypes.tsx");
 
 export const ICYMI_INFO_MODAL_KEY = "icymi-info-modal";
 export const ICYMI_DISCOVERABLE_GUILDS_PAGE_SIZE = 48;

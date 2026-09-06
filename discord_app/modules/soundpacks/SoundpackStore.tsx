@@ -1,46 +1,46 @@
 // discord_app/modules/soundpacks/SoundpackStore.tsx
-import set from "../../../_runtime/00002_set.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import Soundpacks2 from "Constants.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import Constants from "Constants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const Soundpacks = Soundpacks2.Soundpacks;
-let closure_1 = { soundpack: Soundpacks.CLASSIC, lastSoundpackExperimentId: null };
+const Soundpacks = Constants.Soundpacks;
+let obj = { soundpack: Soundpacks.CLASSIC, lastSoundpackExperimentId: null };
 const PersistedStore = initializeDefault.PersistedStore;
 class SoundpackStore extends PersistedStore {}
 const prototype = SoundpackStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   if (null != arg0) {
-    closure_1 = arg0;
     const _Object = Object;
     const values = Object.values(Soundpacks);
-    if (!values.includes(closure_1.soundpack)) {
-      closure_1.soundpack = tmp2.CLASSIC;
+    if (!values.includes(arg0.soundpack)) {
+      obj.soundpack = tmp2.CLASSIC;
     }
     tmp2 = Soundpacks;
   }
 };
 prototype["getState"] = function getState() {
-  return closure_1;
+  return obj;
 };
 prototype["getSoundpack"] = function getSoundpack() {
-  return closure_1.soundpack;
+  return obj.soundpack;
 };
 prototype["getLastSoundpackExperimentId"] = function getLastSoundpackExperimentId() {
-  return closure_1.lastSoundpackExperimentId;
+  return obj.lastSoundpackExperimentId;
 };
 SoundpackStore.displayName = "SoundpackStore";
 SoundpackStore.persistKey = "SoundpackStore";
-const soundpackStore = new SoundpackStore(dispatcherDefault, {
+obj = {
   SET_SOUNDPACK: function handleSetSoundpack(forExperimentId) {
     let lastSoundpackExperimentId = forExperimentId.forExperimentId;
-    const obj = { soundpack: forExperimentId.soundpack, lastSoundpackExperimentId: null };
+    obj = { soundpack: forExperimentId.soundpack, lastSoundpackExperimentId: null };
     if (undefined === lastSoundpackExperimentId) {
       lastSoundpackExperimentId = obj.lastSoundpackExperimentId;
     }
-    obj[1] = lastSoundpackExperimentId;
+    obj.lastSoundpackExperimentId = lastSoundpackExperimentId;
   },
-});
-const result = set.fileFinishedImporting("modules/soundpacks/SoundpackStore.tsx");
+};
+const soundpackStore = new SoundpackStore(DispatcherDefault, obj);
+const result = size.fileFinishedImporting("modules/soundpacks/SoundpackStore.tsx");
 
 export default soundpackStore;

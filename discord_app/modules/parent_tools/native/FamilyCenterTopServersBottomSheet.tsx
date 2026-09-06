@@ -1,21 +1,19 @@
 // discord_app/modules/parent_tools/native/FamilyCenterTopServersBottomSheet.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import messagesProxyDefault from "../FamilyCenter.messages.js";
-import Text from "../../../design/components/Text/native/Text.tsx";
-import GuildIconSizesDefault from "../../guild/native/GuildIcon.tsx";
-import TableRowGroupTitle from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
+import _modDef2396 from "../FamilyCenter.messages.js";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import GuildIconDefault from "../../guild/native/GuildIcon.tsx";
+import TableRowGroup from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import ActionSheet from "../../../design/components/Sheet/native/ActionSheet.native.tsx";
-import closure_3 from "../FamilyCenterStore.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import FamilyCenterStore from "../FamilyCenterStore.tsx";
 
-require = arg1;
+require = fn;
 function GuildRow(guildActivity) {
   guildActivity = guildActivity.guildActivity;
   let obj = guildActivity(504);
-  const items = [closure_3];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_3.getGuild(guildActivity.guild_id));
+  const items = [FamilyCenterStore];
+  const stateFromStores = obj.useStateFromStores(items, () => FamilyCenterStore.getGuild(guildActivity.guild_id));
   if (null == stateFromStores) {
     return null;
   } else {
@@ -23,42 +21,41 @@ function GuildRow(guildActivity) {
       guildActivity.messages_sent,
       guildActivity.call_count,
     );
-    obj = { label: null, subLabel: null, icon: null };
-    obj[0] = stateFromStores.name;
-    obj[1] = topUserOrGuildDescription;
-    obj = { guild: null, style: null };
-    obj[0] = stateFromStores;
-    obj[1] = tmp.guildIcon;
-    obj[2] = callback(GuildIconSizesDefault, obj);
-    return callback(tmp2(5605).TableRow, obj);
+    obj = { label: stateFromStores.name, subLabel: topUserOrGuildDescription, icon: null };
+    obj = { guild: stateFromStores, style: tmp.guildIcon };
+    obj.icon = closure_4(GuildIconDefault, obj);
+    return closure_4(tmp2(5605).TableRow, obj);
   }
-  tmp = callback3();
+  tmp = closure_6();
 }
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { header: { textAlign: "center" }, guildIcon: null };
-createCacheKey = {
-  borderRadius: ThemesDefault.radii.md,
-  borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+fn(4560);
+let createStyles = { header: { textAlign: "center" }, guildIcon: null };
+createStyles = {
+  borderRadius: nativeDefault.radii.md,
+  borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
 };
-createCacheKey[1] = createCacheKey;
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting(
-  "modules/parent_tools/native/FamilyCenterTopServersBottomSheet.tsx",
-);
+createStyles.guildIcon = createStyles;
+let closure_6 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterTopServersBottomSheet.tsx");
 
 export default function FamilyCenterTopGuildsBottomSheet(topGuildActivities) {
   topGuildActivities = topGuildActivities.topGuildActivities;
   let obj = { children: null };
-  obj = { variant: "text-md/bold", style: callback3().header, children: null };
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.string(messagesProxyDefault.Lq9Set);
-  const items = [callback(Text.Text, obj)];
+  obj = { variant: "text-md/bold", style: closure_6().header, children: null };
+  const intl = util.intl;
+  obj.children = intl.string(_modDef2396.Lq9Set);
+  const items = [React4(Text_Text.Text, obj)];
   obj = {
     hasIcons: true,
-    children: topGuildActivities.map((guildActivity) => callback(closure_7, { guildActivity }, guildActivity.guild_id)),
+    children: topGuildActivities.map((guildActivity) =>
+      closure_1_4(GuildRow, { guildActivity }, guildActivity.guild_id),
+    ),
   };
-  items[1] = callback(TableRowGroupTitle.TableRowGroup, obj);
-  obj[0] = items;
-  return callback2(ActionSheet.ActionSheet, obj);
+  items[1] = React4(TableRowGroup.TableRowGroup, obj);
+  obj.children = items;
+  return hasOwnProperty(ActionSheet.ActionSheet, obj);
 }

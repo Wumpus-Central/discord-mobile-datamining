@@ -1,16 +1,17 @@
 // discord_app/modules/gateway/GatewaySocketDispatcher.tsx
-import timestampDefault from "../debug/Logger.tsx";
-import sleep from "../../../discord_common/js/packages/time-utils/TimeUtils.tsx";
-import prettyPrintTrace_ from "GatewaySocketAnalytics.tsx";
-import isVoiceServerUpdateImmediateEnabled from "VoiceServerUpdateImmediateExperiment.tsx";
-import CLOSEDDefault from "ConnectionState.tsx";
-import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
-import { DISPATCHER_IDEAL_TIME_LIMIT_MS as closure_4 } from "DispatcherWorkConstants.tsx";
-import set from "../../../_runtime/00002_set.js";
+import LoggerDefault from "../debug/Logger.tsx";
+import TimeUtils from "../../../discord_common/js/packages/time-utils/TimeUtils.tsx";
+import WorkSchedulerTelemetry from "WorkSchedulerTelemetry.tsx";
+import GatewaySocketAnalytics from "GatewaySocketAnalytics.tsx";
+import VoiceServerUpdateImmediateExperiment from "VoiceServerUpdateImmediateExperiment.tsx";
+import ConnectionStateDefault from "ConnectionState.tsx";
+import ActionBatcherDefault from "ActionBatcher.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
-require = arg1;
-let closure_5 = new timestampDefault("GatewaySocket");
-let set = new Set(["INITIAL_GUILD", "READY"]);
+require = fn;
+let closure_4 = fn(13639).DISPATCHER_IDEAL_TIME_LIMIT_MS;
+let closure_5 = new LoggerDefault("GatewaySocket");
+const set = new Set(["INITIAL_GUILD", "READY"]);
 const set1 = new Set(["READY", "INITIAL_GUILD"]);
 const set2 = new Set(["VOICE_SERVER_UPDATE", "STREAM_SERVER_UPDATE"]);
 const set3 = new Set(["READY", "READY_SUPPLEMENTAL", "RESUMED"]);
@@ -36,16 +37,17 @@ const set4 = new Set([
 ]);
 let closure_11 = { NotStarted: 0, [0]: "NotStarted", Loading: 1, [1]: "Loading", Loaded: 2, [2]: "Loaded" };
 let closure_12 = {};
-let result = set.fileFinishedImporting("modules/gateway/GatewaySocketDispatcher.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/gateway/GatewaySocketDispatcher.tsx");
 class GatewaySocketDispatcher {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
     closure_0 = obj;
-    obj = require("_queueIdleCallback");
+    obj = closure_0(closure_2[3]);
     obj.scheduler = obj.createDispatcherWorkScheduler();
     obj.queue = [];
     obj.paused = true;
-    obj2 = require("prettyPrintTrace_");
+    obj2 = closure_0(closure_2[4]);
     obj.resumeAnalytics = obj2.createResumeAnalytics();
     obj.getDispatchHandler = null;
     obj.flush = function flush(arg0) {
@@ -59,15 +61,14 @@ class GatewaySocketDispatcher {
           let num4 = 0;
           num2 = 0;
           obj = tmp;
-          if (tmp.queue[0].status === closure_1_11.Loaded) {
+          if (tmp.queue[0].status === closure_11.Loaded) {
             const sum = num4 + 1;
             num2 = sum;
             while (sum < obj.queue.length) {
-              let tmp7 = closure_1_11;
               num4 = sum;
               num2 = sum;
               obj = tmp6;
-              if (tmp6.queue[sum].status !== closure_1_11.Loaded) {
+              if (tmp6.queue[sum].status !== closure_11.Loaded) {
                 break;
               }
             }
@@ -81,13 +82,13 @@ class GatewaySocketDispatcher {
           const dispatchMultipleResult = obj.dispatchMultiple(spliceResult, arg0);
           if (dispatchMultipleResult) {
             const telemetry = obj.scheduler.telemetry;
-            telemetry.timeEnd(obj(closure_1_2[7]).WorkSchedulerTelemetryTiming.TIME_TO_QUEUE_EMPTY);
+            telemetry.timeEnd(WorkSchedulerTelemetry.WorkSchedulerTelemetryTiming.TIME_TO_QUEUE_EMPTY);
           }
           const _performance2 = performance;
           const diff = performance.now() - nowResult;
           if (tmp13) {
             const _HermesInternal = HermesInternal;
-            closure_1_5.log("Dispatched " + spliceResult.length + " messages in " + diff + "ms");
+            logger.log("Dispatched " + spliceResult.length + " messages in " + diff + "ms");
           }
           return dispatchMultipleResult;
         }
@@ -117,11 +118,8 @@ prototype["processFirstQueuedDispatch"] = function processFirstQueuedDispatch(se
         while (self.queue.length > 0) {
           if (!set.has(self.queue[0].type)) {
             break;
-          } else {
-            let tmp3 = closure_11;
-            if (self.queue[0].status !== closure_11.Loaded) {
-              break;
-            }
+          } else if (self.queue[0].status !== closure_11.Loaded) {
+            break;
           }
         }
       }
@@ -138,26 +136,21 @@ prototype["unpauseDispatchQueue"] = function unpauseDispatchQueue() {
   }
   self.flush();
 };
-prototype["receiveDispatch"] = function receiveDispatch(d, type, arg2) {
+prototype["receiveDispatch"] = function receiveDispatch(data, type, compressionAnalytics) {
   const self = this;
   if (null == this.getDispatchHandler) {
     const _Error = Error;
     throw Error("getDispatchHandler needs to be passed in first!");
   } else {
     const obj = {
-      data: null,
-      type: null,
-      compressionAnalytics: null,
-      status: null,
+      data,
+      type,
+      compressionAnalytics,
+      status: closure_11.NotStarted,
       preloadPromise: null,
       preloadedData: null,
-      receivedAt: null,
+      receivedAt: TimeUtils.now(),
     };
-    obj[0] = d;
-    obj[1] = type;
-    obj[2] = arg2;
-    obj[3] = closure_11.NotStarted;
-    obj[6] = sleep.now();
     const queue = self.queue;
     queue.push(obj);
     if (!self.maybePreload(obj)) {
@@ -166,15 +159,13 @@ prototype["receiveDispatch"] = function receiveDispatch(d, type, arg2) {
   }
 };
 prototype["maybePreload"] = function maybePreload(item10007) {
-  let self = this;
-  self = this;
-  closure_0 = item10007;
+  const self = this;
   if (this.paused) {
     if (!set.has(item10007.type)) {
       return false;
     }
   }
-  if (item10007.status === closure_11.NotStarted) {
+  if (item10007.status === Loaded.NotStarted) {
     const dispatchHandler = self.getDispatchHandler(item10007.type);
     let preloadResult;
     if (dispatchHandler != null) {
@@ -186,7 +177,7 @@ prototype["maybePreload"] = function maybePreload(item10007) {
       preloadResult
         .then((preloadedData) => {
           item10007.preloadedData = preloadedData;
-          item10007.status = closure_1_11.Loaded;
+          item10007.status = Loaded.Loaded;
           self.scheduleFlush(item10007.type);
         })
         .catch((error) => {
@@ -203,8 +194,7 @@ prototype["shouldFlushImmediately"] = function shouldFlushImmediately(type) {
   if (!hasItem) {
     let result = set2.has(type);
     if (result) {
-      result = isVoiceServerUpdateImmediateEnabled.isVoiceServerUpdateImmediateEnabled("GatewaySocketDispatcher");
-      const obj = isVoiceServerUpdateImmediateEnabled;
+      result = VoiceServerUpdateImmediateExperiment.isVoiceServerUpdateImmediateEnabled("GatewaySocketDispatcher");
     }
     hasItem = result;
   }
@@ -244,23 +234,22 @@ prototype["getIsRequestIdleCallbackEnabled"] = function getIsRequestIdleCallback
   return this.scheduler.isRequestIdleCallbackEnabled;
 };
 prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
-  let self = this;
-  self = this;
+  const self = this;
   importDefault = items;
   dependencyMap = arg1;
   if (0 === items.length) {
     return true;
   } else {
-    const none = "none";
-    c4 = false;
+    let type = "none";
+    let hasItem = false;
     const telemetry2 = self.scheduler.telemetry;
     telemetry2.measure(
-      require("WorkSchedulerTelemetry.tsx").WorkSchedulerTelemetryMeasurement.COUNT_INITIAL_DISPATCHS_LENGTH,
+      require("WorkSchedulerTelemetry").WorkSchedulerTelemetryMeasurement.COUNT_INITIAL_DISPATCHS_LENGTH,
       items.length,
     );
     try {
       closure_5 = [];
-      if (self.socket.connectionState === CLOSEDDefault.RESUMING) {
+      if (self.socket.connectionState === ConnectionStateDefault.RESUMING) {
         const Emitter = tmp2(504).Emitter;
         Emitter.pause(150);
       }
@@ -276,11 +265,9 @@ prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
           while (true) {
             arr = items;
             let tmp = items[num];
-            let type = tmp.type;
-            let tmp3 = num;
+            type = tmp.type;
             if (!hasItem) {
-              let tmp4 = closure_1_9;
-              hasItem = closure_1_9.has(tmp.type);
+              hasItem = set3.has(tmp.type);
             }
             let _performance = performance;
             let nowResult = performance.now();
@@ -289,20 +276,19 @@ prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
             let _performance2 = performance;
             closure_0 = performance.now() - nowResult;
             type = tmp.type;
-            items = closure_1_12[type];
+            items = closure_12[type];
             let tmp8 = closure_0;
-            let tmp9 = closure_1_12;
+            let tmp9 = closure_12;
             if (items == null) {
               items = [0, 0];
             }
-            let tmp10 = none;
-            let tmp11 = none(items, 2);
+            let tmp11 = _slicedToArray(items, 2);
             let tmp12 = tmp11[1];
             let items1 = [(tmp11[0] * tmp12 + tmp8) / (tmp12 + 1), tmp12 + 1];
             tmp9[type] = items1;
-            obj = dependencyMap;
+            obj = closure_2;
             let flag = false;
-            if (null != dependencyMap) {
+            if (null != closure_2) {
               let diff = arr.length - 1;
               let tmp14 = null;
               if (num < diff) {
@@ -332,13 +318,16 @@ prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
           closure_5 = arr.slice(sum);
           if (tmp18) {
             const telemetry = tmp6.scheduler.telemetry;
-            telemetry.timeTrack(v0(13642).WorkSchedulerTelemetryTiming.TIME_OVER_DEADLINE, obj.timeSinceExpiration);
+            telemetry.timeTrack(
+              WorkSchedulerTelemetry.WorkSchedulerTelemetryTiming.TIME_OVER_DEADLINE,
+              obj.timeSinceExpiration,
+            );
           }
           tmp18 = null != obj && obj.timeRemaining() <= 0;
         }
-        items(13646).flush();
+        ActionBatcherDefault.flush();
       });
-      if (c4) {
+      if (hasItem) {
         const Emitter3 = tmp2(504).Emitter;
         Emitter3.resume();
       }
@@ -361,9 +350,7 @@ prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
       }
     } catch (tmp18) {
       const socket = tmp.socket;
-      let obj = { error: null, action: null };
-      obj[0] = tmp18;
-      obj[1] = none;
+      let obj = { error: tmp18, action: type };
       const result = socket.resetSocketOnDispatchError(obj);
     }
     tmp21 = _require;
@@ -373,15 +360,15 @@ prototype["dispatchOne"] = function dispatchOne(arg0) {
   const self = this;
   ({ data, type, compressionAnalytics, preloadedData, receivedAt } = arg0);
   const nowResult = performance.now();
-  if (this.socket.connectionState !== CLOSEDDefault.RESUMING) {
+  if (this.socket.connectionState !== ConnectionStateDefault.RESUMING) {
     tmp2(13646).flush(type, data);
     if ("READY" === type) {
-      const readyPayloadByteSizeAnalytics = prettyPrintTrace_.getReadyPayloadByteSizeAnalytics(data);
+      const readyPayloadByteSizeAnalytics = GatewaySocketAnalytics.getReadyPayloadByteSizeAnalytics(data);
       const dispatchHandler = self.getDispatchHandler(type);
       if (dispatchHandler != null) {
         dispatchHandler.dispatch(data, type, preloadedData, receivedAt);
       }
-      const tmp16Result = prettyPrintTrace_;
+      const tmp16Result = GatewaySocketAnalytics;
       const result = tmp16Result.logReadyPayloadReceived(
         self.socket,
         data,
@@ -389,19 +376,15 @@ prototype["dispatchOne"] = function dispatchOne(arg0) {
         compressionAnalytics,
         readyPayloadByteSizeAnalytics,
       );
-      const obj6 = prettyPrintTrace_;
-      const tmp16 = require;
     } else if ("RESUMED" === type) {
       const dispatchHandler1 = self.getDispatchHandler(type);
       if (dispatchHandler1 != null) {
         dispatchHandler1.dispatch(data, type, preloadedData, receivedAt);
       }
-      prettyPrintTrace_.logResumeAnalytics(self.resumeAnalytics);
+      GatewaySocketAnalytics.logResumeAnalytics(self.resumeAnalytics);
       const socket = self.socket;
       const result1 = socket.handleResumeDispatched();
-      const obj4 = prettyPrintTrace_;
-      self.resumeAnalytics = prettyPrintTrace_.createResumeAnalytics();
-      const obj5 = prettyPrintTrace_;
+      self.resumeAnalytics = GatewaySocketAnalytics.createResumeAnalytics();
     } else {
       const dispatchHandler2 = self.getDispatchHandler(type);
       if (dispatchHandler2 != null) {

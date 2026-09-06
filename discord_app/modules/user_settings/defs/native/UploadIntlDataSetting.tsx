@@ -1,360 +1,318 @@
 // discord_app/modules/user_settings/defs/native/UploadIntlDataSetting.tsx
-import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import { ActivityIndicator } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import ME from "../../../../Constants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import keys from "../../../../../_runtime/00560_keys.js";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
+import AssetJsonUtils from "../../../asset_json/native/AssetJsonUtils.tsx";
+import _mod1154 from "../../../../../_runtime/metro/01154__.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
-const require = arg1;
-function _serializeIntlData() {
-  const self = this;
-  const tmp = callback(function* () {
-    if (Build === 2) {
-      Build = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
+require = fn;
+let closure_10 = async function _serializeIntlData(arg0, value) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
     } else {
-      try {
-        Build = 2;
-        if (0 === Identifier) {
-          if (arg0 === 1) {
-            Build = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            Build = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let obj4 = tmp3;
-            let callback = tmp7;
-            callback = undefined;
-            obj4 = undefined;
-            let lib;
-            dependencyMap = undefined;
-            Identifier = undefined;
-            Build = undefined;
-            dependencyMap = 1;
-            let obj5 = closure_1_0(1120);
-            Identifier = 2;
-            Build = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = obj5.loadJsonAsset(closure_1_0(1154));
-            return obj1;
-          }
-        } else if (1 === tmp7) {
-          dependencyMap = 0;
-          const _HermesInternal = HermesInternal;
-          Build = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = "Failed to serialize intl data: " + lib;
-          return obj2;
-        } else if (arg0 === 1) {
-          Build = 3;
-          throw arg1;
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          dependencyMap = 0;
-          Build = 3;
-          const obj3 = { value: null, done: true };
-          obj3[0] = arg1;
-          return obj3;
+          c5 = 3;
+          obj = { value, done: true };
+          return obj;
         } else {
-          callback = arg1;
-          obj4 = {
-            currentLocale: null,
-            systemLocale: null,
-            initialLocale: null,
-            messagesFromIntl: null,
-            messagesFromFile: null,
-            metadata: null,
-          };
-          obj4[0] = callback(1114).intl.currentLocale;
-          obj4[1] = callback(1114).systemLocale;
-          obj4[2] = callback(1114).initialLocale;
-          obj5 = {};
-          const _Object3 = Object;
-          const _Object4 = Object;
-          const keys = Object.keys(callback(1114).t);
-          const merged = Object.assign(
-            Object.fromEntries(
-              keys.map((arg0) => {
-                const items = [arg0];
-                const intl = callback(1114).intl;
-                items[1] = intl.reserialize(callback(1114).t[arg0]);
-                return items;
-              }),
-            ),
-          );
-          obj4[3] = obj5;
-          const obj6 = {};
-          const merged1 = Object.assign(callback);
-          obj4[4] = obj6;
-          const obj7 = {
-            timestamp: null,
-            platform: null,
-            clientInfo: null,
-            messagesFromFileKeys: null,
-            messagesFromIntlKeys: null,
-          };
-          const _Date = Date;
-          const date = new Date();
-          obj7[0] = date.toISOString();
-          let str = "Android";
-          if (obj15.isIOS()) {
-            str = "iOS";
-          }
-          obj7[1] = str;
-          obj = lib(1364);
-          lib = obj.getConstants();
-          let str3 = "N/A";
-          if (str2.trim().length > 0) {
-            str3 = lib.Manifest;
-          }
-          dependencyMap = str3;
-          Identifier = lib.Identifier;
-          Build = lib.Build;
-          const obj8 = {
-            appVersion: null,
-            buildNumber: null,
-            manifest: null,
-            releaseChannel: null,
-            identifier: null,
-            otaBuild: null,
-          };
-          obj8[0] = lib.Version;
-          obj8[1] = Build;
-          obj8[2] = dependencyMap;
-          obj8[3] = lib.ReleaseChannel;
-          obj8[4] = Identifier;
-          obj8[5] = lib.OTABuild;
-          obj7[2] = obj8;
-          const _Object = Object;
-          obj7[3] = Object.keys(callback).length;
-          const _Object2 = Object;
-          obj7[4] = Object.keys(callback(1114).t).length;
-          obj4[5] = obj7;
-          const _JSON = JSON;
-          dependencyMap = 0;
-          Build = 3;
-          const obj9 = { value: null, done: true };
-          obj9[0] = JSON.stringify(obj4, null, 2);
-          return obj9;
+          closure_1 = tmp3;
+          closure_0 = tmp7;
+          closure_128_0 = undefined;
+          closure_128_1 = undefined;
+          constants = undefined;
+          closure_128_3 = undefined;
+          let Identifier;
+          let Build;
+          c3 = 1;
+          let obj5 = AssetJsonUtils;
+          c4 = 2;
+          c5 = 1;
+          const obj1 = { value: obj5.loadJsonAsset(_mod1154), done: false };
+          return obj1;
         }
-      } catch (tmp35) {
-        lib = tmp35;
-        if (tmp4 === dependencyMap) {
-          Build = tmp2;
-          throw tmp35;
-        } else {
-          Identifier = tmp;
+      } else if (1 === tmp7) {
+        c3 = 0;
+        const _HermesInternal = HermesInternal;
+        c5 = 3;
+        const obj2 = { value: "Failed to serialize intl data: " + closure_2, done: true };
+        return obj2;
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c3 = 0;
+        c5 = 3;
+        const obj3 = { value, done: true };
+        return obj3;
+      } else {
+        closure_128_0 = value;
+        const obj4 = {
+          currentLocale: closure_129_0(closure_129_3[9]).intl.currentLocale,
+          systemLocale: closure_129_0(closure_129_3[9]).systemLocale,
+          initialLocale: closure_129_0(closure_129_3[9]).initialLocale,
+          messagesFromIntl: null,
+          messagesFromFile: null,
+          metadata: null,
+        };
+        obj5 = {};
+        const _Object3 = Object;
+        const _Object4 = Object;
+        const keys = Object.keys(closure_129_0(closure_129_3[9]).t);
+        const merged = Object.assign(
+          Object.fromEntries(
+            keys.map((item) => {
+              const items = [item];
+              const intl = closure_1_0(1114).intl;
+              items[1] = intl.reserialize(closure_1_0(1114).t[item]);
+              return items;
+            }),
+          ),
+        );
+        obj4.messagesFromIntl = obj5;
+        const obj6 = {};
+        const merged1 = Object.assign(closure_128_0);
+        obj4.messagesFromFile = obj6;
+        const obj7 = {
+          timestamp: null,
+          platform: null,
+          clientInfo: null,
+          messagesFromFileKeys: null,
+          messagesFromIntlKeys: null,
+        };
+        const _Date = Date;
+        const date = new Date();
+        obj7.timestamp = date.toISOString();
+        let str = "Android";
+        if (obj15.isIOS()) {
+          str = "iOS";
         }
+        obj7.platform = str;
+        obj = closure_129_2(closure_129_3[6]);
+        constants = obj.getConstants();
+        let str3 = "N/A";
+        if (str2.trim().length > 0) {
+          str3 = constants.Manifest;
+        }
+        closure_128_3 = str3;
+        Identifier = constants.Identifier;
+        Build = constants.Build;
+        const obj8 = {
+          appVersion: constants.Version,
+          buildNumber: Build,
+          manifest: closure_128_3,
+          releaseChannel: constants.ReleaseChannel,
+          identifier: Identifier,
+          otaBuild: constants.OTABuild,
+        };
+        obj7.clientInfo = obj8;
+        const _Object = Object;
+        obj7.messagesFromFileKeys = Object.keys(closure_128_0).length;
+        const _Object2 = Object;
+        obj7.messagesFromIntlKeys = Object.keys(closure_129_0(closure_129_3[9]).t).length;
+        obj4.metadata = obj7;
+        closure_128_1 = obj4;
+        const _JSON = JSON;
+        c3 = 0;
+        c5 = 3;
+        const obj9 = { value: JSON.stringify(closure_128_1, null, 2), done: true };
+        return obj9;
+      }
+    } catch (tmp35) {
+      closure_2 = tmp35;
+      if (tmp4 === c3) {
+        c5 = tmp2;
+        throw tmp35;
+      } else {
+        c4 = tmp;
       }
     }
-  });
-  closure_10 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
   }
-  return applyArgumentsResult;
-}
-function _handleUploadIntlDataSettingPress() {
-  let self = this;
-  const tmp = callback(function* () {
-    if (c5 === 2) {
-      c5 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp8 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
+};
+let closure_11 = async function _handleUploadIntlDataSettingPress(arg0, value) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp8 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
     } else {
-      try {
-        c5 = 2;
-        if (0 === c4) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let callback = tmp4;
-            let ANDROID_APP = tmp6;
-            ANDROID_APP = undefined;
-            callback = undefined;
-            closure_2 = undefined;
-            (function onUploadIntlDataRequestStart() {
-              ANDROID_APP(1249).batchUpdates(() => state.setState({ isDisabled: true, isUploading: true }));
-            })();
-            if (obj11.isIOS()) {
-              ANDROID_APP = tmp52.IOS_APP;
-            } else {
-              ANDROID_APP = tmp52.ANDROID_APP;
-            }
-            dependencyMap = 2;
-            (function serializeIntlData() {
-              const self = this;
-              const apply = closure_10.apply;
-              if (typeof apply === "unknown") {
-                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-              } else {
-                applyArgumentsResult = apply(self, arguments);
-              }
-              return applyArgumentsResult;
-            })();
-            c4 = 3;
-            c5 = 1;
-            obj11 = closure_1_0(1115);
-          }
-        } else if (1 === tmp9) {
-          dependencyMap = 0;
-          (function onUploadIntlDataRequestFinish() {
-            ANDROID_APP(1249).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
-            const timerId = setTimeout(
-              () => callback(table[5]).batchUpdates(() => state.setState({ isDisabled: false })),
-              5000,
-            );
-          })();
-          throw closure_2;
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          obj = { value, done: true };
+          return obj;
         } else {
-          if (2 === tmp9) {
-            dependencyMap = 1;
-            let obj5 = callback(4259);
-            obj1 = {
-              key: "USER_SETTINGS_INTL_DATA_UPLOAD_FAILED",
-              IconComponent: null,
-              content: "Failed to upload internationalization data.",
-            };
-            obj1[1] = ANDROID_APP(4515).CircleInformationIcon;
-            obj5.open(obj1);
-            dependencyMap = 0;
-            (function onUploadIntlDataRequestFinish() {
-              ANDROID_APP(1249).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
-              const timerId = setTimeout(
-                () => callback(table[5]).batchUpdates(() => state.setState({ isDisabled: false })),
-                5000,
-              );
-            })();
-            c5 = 3;
-          } else if (3 === tmp9) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              dependencyMap = 0;
-              (function onUploadIntlDataRequestFinish() {
-                ANDROID_APP(1249).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
-                const timerId = setTimeout(
-                  () => callback(table[5]).batchUpdates(() => state.setState({ isDisabled: false })),
-                  5000,
-                );
-              })();
-              c5 = 3;
-              const obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else {
-              callback = arg1;
-              closure_2 = closure_1_7.DEBUG_LOG(ANDROID_APP, "intl_data");
-              const HTTP = closure_1_0(1272).HTTP;
-              const obj3 = {
-                url: null,
-                body: null,
-                retries: 3,
-                headers: null,
-                oldFormErrors: true,
-                rejectWithError: true,
-              };
-              obj3[0] = closure_2;
-              obj3[1] = callback;
-              obj3[3] = { "Content-Type": "application/json" };
-              c4 = 4;
-              c5 = 1;
-              const obj4 = { value: null, done: false };
-              obj4[0] = HTTP.post(obj3);
-              return obj4;
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 !== 2) {
-            obj = callback(4259);
-            obj5 = {
-              key: "USER_SETTINGS_INTL_DATA_UPLOADED",
-              IconComponent: null,
-              content: "Internationalization data uploaded successfully.",
-            };
-            obj5[1] = ANDROID_APP(4515).CircleInformationIcon;
-            obj.open(obj5);
-            dependencyMap = 1;
+          closure_1 = tmp4;
+          closure_0 = tmp6;
+          closure_128_0 = undefined;
+          closure_128_1 = undefined;
+          closure_128_2 = undefined;
+          (function onUploadIntlDataRequestStart() {
+            closure_1_0(1249).batchUpdates(() => state.setState({ isDisabled: true, isUploading: true }));
+          })();
+          if (obj11.isIOS()) {
+            let ANDROID_APP = tmp51.IOS_APP;
+          } else {
+            ANDROID_APP = tmp51.ANDROID_APP;
           }
-          dependencyMap = 0;
+          closure_128_0 = ANDROID_APP;
+          c3 = 2;
+          (function serializeIntlData() {
+            const self = this;
+            const apply = closure_1_10.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          })();
+          c4 = 3;
+          c5 = 1;
+          obj11 = PlatformUtils;
+        }
+      } else if (1 === tmp9) {
+        c3 = 0;
+        (function onUploadIntlDataRequestFinish() {
+          closure_1_0(1249).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
+          const timerId = setTimeout(
+            () => closure_1_0(dependencyMap[5]).batchUpdates(() => state.setState({ isDisabled: false })),
+            5000,
+          );
+        })();
+        throw closure_2;
+      } else {
+        if (2 === tmp9) {
+          c3 = 1;
+          let obj5 = closure_129_1(closure_129_3[12]);
+          const obj1 = {
+            key: "USER_SETTINGS_INTL_DATA_UPLOAD_FAILED",
+            IconComponent: closure_129_0(closure_129_3[13]).CircleInformationIcon,
+            content: "Failed to upload internationalization data.",
+          };
+          obj5.open(obj1);
+          c3 = 0;
           (function onUploadIntlDataRequestFinish() {
-            ANDROID_APP(1249).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
+            closure_1_0(1249).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
             const timerId = setTimeout(
-              () => callback(table[5]).batchUpdates(() => state.setState({ isDisabled: false })),
+              () => closure_1_0(dependencyMap[5]).batchUpdates(() => state.setState({ isDisabled: false })),
               5000,
             );
           })();
           c5 = 3;
-          const obj6 = { value: null, done: true };
-          obj6[0] = arg1;
-          return obj6;
+        } else if (3 === tmp9) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 0;
+            (function onUploadIntlDataRequestFinish() {
+              closure_1_0(1249).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
+              const timerId = setTimeout(
+                () => closure_1_0(dependencyMap[5]).batchUpdates(() => state.setState({ isDisabled: false })),
+                5000,
+              );
+            })();
+            c5 = 3;
+            const obj2 = { value, done: true };
+            return obj2;
+          } else {
+            closure_128_1 = value;
+            closure_128_2 = closure_129_7.DEBUG_LOG(closure_128_0, "intl_data");
+            const HTTP = closure_129_0(closure_129_3[11]).HTTP;
+            const request = {
+              url: closure_128_2,
+              body: closure_128_1,
+              retries: 3,
+              headers: { "Content-Type": "application/json" },
+              oldFormErrors: true,
+              rejectWithError: true,
+            };
+            c4 = 4;
+            c5 = 1;
+            const obj3 = { value: HTTP.post(request), done: false };
+            return obj3;
+          }
+        } else if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 !== 2) {
+          obj = closure_129_1(closure_129_3[12]);
+          const obj4 = {
+            key: "USER_SETTINGS_INTL_DATA_UPLOADED",
+            IconComponent: closure_129_0(closure_129_3[13]).CircleInformationIcon,
+            content: "Internationalization data uploaded successfully.",
+          };
+          obj.open(obj4);
+          c3 = 1;
         }
-      } catch (tmp33) {
-        closure_2 = tmp33;
-        if (tmp5 === dependencyMap) {
-          c5 = tmp3;
-          throw tmp33;
-        } else if (tmp2 === tmp35) {
-          c4 = tmp2;
-        } else {
-          c4 = tmp;
-        }
+        c3 = 0;
+        (function onUploadIntlDataRequestFinish() {
+          closure_1_0(1249).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
+          const timerId = setTimeout(
+            () => closure_1_0(dependencyMap[5]).batchUpdates(() => state.setState({ isDisabled: false })),
+            5000,
+          );
+        })();
+        c5 = 3;
+        obj5 = { value, done: true };
+        return obj5;
+      }
+    } catch (tmp33) {
+      closure_2 = tmp33;
+      if (tmp5 === c3) {
+        c5 = tmp3;
+        throw tmp33;
+      } else if (tmp2 === tmp35) {
+        c4 = tmp2;
+      } else {
+        c4 = tmp;
       }
     }
-  });
-  closure_11 = tmp;
-  let apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
   }
-  return applyArgumentsResult;
-}
-({ DebugLogCategory: closure_6, Endpoints: error } = ME);
-let closure_9 = keys.create(() => ({ isDisabled: false, isUploading: false }));
-keys = {
+};
+const ActivityIndicator = fn(17).ActivityIndicator;
+const Constants = fn(1074);
+({ DebugLogCategory: metroRequire, Endpoints: closure_7 } = Constants);
+const jsx = fn(21).jsx;
+let module_560 = fn(560);
+let closure_9 = module_560.create(() => ({ isDisabled: false, isUploading: false }));
+const SettingBuilders = fn(11468);
+module_560 = {
   useTitle() {
     return "Upload i18n data";
   },
   parent: null,
-  IconComponent: require("FileUpIcon").FileUpIcon,
+  IconComponent: fn(15538).FileUpIcon,
   onPress: function handleUploadIntlDataSettingPress() {
     const self = this;
-    const apply = _handleUploadIntlDataSettingPress.apply;
+    const apply = closure_11.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -362,19 +320,20 @@ keys = {
     }
     return applyArgumentsResult;
   },
-  usePredicate: require("useStaffOrDeveloperSettingPredicate").useStaffOrDeveloperSettingPredicate,
+  usePredicate: fn(14842).useStaffOrDeveloperSettingPredicate,
   useTrailing: function useUploadIntlDataTrailing() {
     let tmp = null;
-    if (callback2().isUploading) {
+    if (closure_9().isUploading) {
       tmp = <ActivityIndicator />;
     }
     return tmp;
   },
   useIsDisabled: function useIsUploadIntlDataDisabled() {
-    return callback2().isDisabled;
+    return closure_9().isDisabled;
   },
 };
-keys = createToggle.createPressable(keys);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/UploadIntlDataSetting.tsx");
+module_560 = SettingBuilders.createPressable(module_560);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/UploadIntlDataSetting.tsx");
 
-export default keys;
+export default module_560;

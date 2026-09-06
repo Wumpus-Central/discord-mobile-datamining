@@ -1,13 +1,14 @@
 // discord_app/modules/panels/morphable/native/AppFreezer.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import setDefault from "../../../core/native/NativeView.tsx";
-import closure_2 from "../AppFreezeStore.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import Suspender from "../../../../../_runtime/04923_Suspender.js";
+import NativeViewDefault from "../../../core/native/NativeView.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import AppFreezeStore from "../AppFreezeStore.tsx";
 
-const require = arg1;
-noopAll;
-let closure_4 = jsx(setDefault, { style: { flex: 1 } });
-const result = require("set").fileFinishedImporting("modules/panels/morphable/native/AppFreezer.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const NativeView = jsx(NativeViewDefault, { style: { flex: 1 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/panels/morphable/native/AppFreezer.tsx");
 
 export default function AppFreezer(children) {
   let flag = children.manualFreeze;
@@ -16,13 +17,13 @@ export default function AppFreezer(children) {
   }
   let placeholder = children.placeholder;
   if (placeholder === undefined) {
-    placeholder = closure_4;
+    placeholder = NativeView;
   }
   let lockKeys = children.lockKeys;
-  let freeze = callback((lockKeys) => {
+  let freeze = AppFreezeStore((lockKeys) => {
     lockKeys = lockKeys.lockKeys;
     if (null != lockKeys) {
-      let someResult = lockKeys.some((arg0) => lockKeys.has(arg0));
+      let someResult = lockKeys.some((item) => lockKeys.has(item));
     } else {
       someResult = lockKeys.size > 0;
     }
@@ -31,5 +32,5 @@ export default function AppFreezer(children) {
   if (!freeze) {
     freeze = flag;
   }
-  return jsx(lockKeys(4923).Freeze, { freeze, placeholder, children: children.children });
+  return jsx(Suspender.Freeze, { freeze, placeholder, children: children.children });
 }

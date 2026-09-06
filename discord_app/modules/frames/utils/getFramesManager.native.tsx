@@ -1,9 +1,8 @@
 // discord_app/modules/frames/utils/getFramesManager.native.tsx
-import set from "../../../../_runtime/00002_set.js";
-import { postMessageToWebView } from "../native/FramesNativeManager.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/frames/utils/getFramesManager.native.tsx");
+const result = size.fileFinishedImporting("modules/frames/utils/getFramesManager.native.tsx");
 
 export default function getFramesManager() {
-  return postMessageToWebView;
+  return require("FramesNativeManager");
 }

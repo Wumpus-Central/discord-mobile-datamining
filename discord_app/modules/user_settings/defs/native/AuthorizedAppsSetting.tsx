@@ -1,27 +1,24 @@
 // discord_app/modules/user_settings/defs/native/AuthorizedAppsSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import ME from "../../../../Constants.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
+import Constants from "../../../../Constants.tsx";
+import util from "../../../../intl/index.native.tsx";
 import KeyIcon from "../../../../design/components/Icon/native/redesign/generated/KeyIcon.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
-import { UserSettingsAuthedApps } from "../../authorized_apps/native/UserSettingsAuthedApps.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["f6kk+r"]);
+    const intl = util.intl;
+    return intl.string(util.t["f6kk+r"]);
   },
   parent: null,
   IconComponent: KeyIcon.KeyIcon,
-  screen: obj,
-};
-obj = {
-  route: ME.UserSettingsSections.AUTHORIZED_APPS,
-  getComponent() {
-    return UserSettingsAuthedApps /* UserSettingsAuthedApps */.default;
+  screen: {
+    route: Constants.UserSettingsSections.AUTHORIZED_APPS,
+    getComponent() {
+      return require("UserSettingsAuthedApps").default;
+    },
   },
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/AuthorizedAppsSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AuthorizedAppsSetting.tsx");
 
 export default route;

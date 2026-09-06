@@ -1,34 +1,33 @@
 // discord_app/modules/regional_feature_config/RegionalTeenUtils.tsx
-import closure_2 from "../../../_runtime/00019_noop.js";
-import closure_3 from "RegionalFeatureConfigStore.tsx";
-import set from "../../../_runtime/00002_set.js";
+import MessageRequestActionCreators from "../message_request/MessageRequestActionCreators.tsx";
+import noop from "../../../_runtime/metro/00019__.js";
+import RegionalFeatureConfigStore from "RegionalFeatureConfigStore.tsx";
 
-const require = arg1;
+require = fn;
 let items = ["GB", "AU"];
-HermesBuiltin.arraySpread(require("set").CountryCodesSets.EU_COUNTRIES, 2);
-let set = new Set(items);
-const result = set.fileFinishedImporting("modules/regional_feature_config/RegionalTeenUtils.tsx");
+HermesBuiltin.arraySpread(fn(4778).CountryCodesSets.EU_COUNTRIES, 2);
+const set = new Set(items);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/regional_feature_config/RegionalTeenUtils.tsx");
 
 export const useUserCountryCode = function useUserCountryCode() {
-  const items = [closure_3];
+  const items = [RegionalFeatureConfigStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => userCountryCode.getUserCountryCode());
   const items1 = [stateFromStores];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (null == stateFromStores) {
-      const userCountryCode = stateFromStores(closure_1_1[4]).fetchUserCountryCode();
-      const obj = stateFromStores(closure_1_1[4]);
+      userCountryCode = MessageRequestActionCreators.fetchUserCountryCode();
     }
   }, items1);
   return stateFromStores;
 };
 export const useIsTeenInCountrySet = function useIsTeenInCountrySet(set) {
-  const items = [closure_3];
+  const items = [RegionalFeatureConfigStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => userCountryCode.getUserCountryCode());
   const items1 = [stateFromStores];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (null == stateFromStores) {
-      const userCountryCode = stateFromStores(closure_1_1[4]).fetchUserCountryCode();
-      const obj = stateFromStores(closure_1_1[4]);
+      userCountryCode = MessageRequestActionCreators.fetchUserCountryCode();
     }
   }, items1);
   const obj = stateFromStores(504);
@@ -42,13 +41,12 @@ export const useIsTeenInCountrySet = function useIsTeenInCountrySet(set) {
   return userIsTeen;
 };
 export const useIsTeenInStrictCountry = function useIsTeenInStrictCountry() {
-  const items = [closure_3];
+  const items = [RegionalFeatureConfigStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => userCountryCode.getUserCountryCode());
   const items1 = [stateFromStores];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (null == stateFromStores) {
-      const userCountryCode = stateFromStores(closure_1_1[4]).fetchUserCountryCode();
-      const obj = stateFromStores(closure_1_1[4]);
+      userCountryCode = MessageRequestActionCreators.fetchUserCountryCode();
     }
   }, items1);
   let obj = set;

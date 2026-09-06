@@ -1,16 +1,18 @@
 // discord_app/modules/in_app_reports/SafetyExperienceIarUserReportingExperiment.tsx
-import set from "../../../_runtime/00002_set.js";
 import createExperiment from "../experiments/index.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const items = [{ id: 1, label: "Enabled", config: { enabled: true } }];
-const experiment = createExperiment.createExperiment({
+const obj = {
   kind: "user",
   id: "2023-09_iar_user_reporting",
   label: "Safety Experience IAR User Reporting",
   defaultConfig: { enabled: false },
-  treatments: items,
-});
-const result = set.fileFinishedImporting("modules/in_app_reports/SafetyExperienceIarUserReportingExperiment.tsx");
+  treatments: null,
+};
+const items = [{ id: 1, label: "Enabled", config: { enabled: true } }];
+obj.treatments = items;
+const experiment = createExperiment.createExperiment(obj);
+const result = size.fileFinishedImporting("modules/in_app_reports/SafetyExperienceIarUserReportingExperiment.tsx");
 
 export default experiment;
 export const useIsIarUserReportingEnabled = function useIsIarUserReportingEnabled(location) {

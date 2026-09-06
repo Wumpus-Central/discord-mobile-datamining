@@ -1,24 +1,22 @@
 // discord_app/records/CompanyRecord.tsx
-import toJSDefault from "../lib/Record.tsx";
+import Record from "../lib/Record.tsx";
 
-toJSDefault;
-let prototype;
-prototype = function CompanyRecord(arg0) {
+const prototype = function CompanyRecord(arg0) {
   const tmp = new prototype(new.target, new.target);
-  // ThrowIfThisInitialized (0x7c)
   ({ id: tmp.id, name: tmp.name } = arg0);
   return tmp;
 }.prototype;
 class prototype extends tmp2 {}
 prototype["createFromServer"] = function createFromServer(arg0) {
-  if (typeof prototype !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof prototype === "function") {
+    const tmp7 = new prototype(tmp, tmp2);
+    ({ id: tmp7.id, name: tmp7.name } = arg0);
+    return tmp7;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const tmp2 = new prototype("Trying to call a non-function", prototype);
-  // ThrowIfThisInitialized (0x7c)
-  ({ id: tmp2.id, name: tmp2.name } = arg0);
-  return tmp2;
 };
-const result = require("set").fileFinishedImporting("records/CompanyRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("records/CompanyRecord.tsx");
 
 export default prototype;

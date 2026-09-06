@@ -1,65 +1,65 @@
 // discord_common/js/packages/media-engine/VideoQualityManager.tsx
-import set from "../../../../_runtime/00002_set.js";
-import getMaxSinkValue from "MediaSinkWantsLadder.tsx";
-import DesktopSources from "Constants.tsx";
+import MediaSinkWantsLadder from "MediaSinkWantsLadder.tsx";
+import Constants from "Constants.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 ({
-  defaultVideoQualityOptions: obj1,
+  defaultVideoQualityOptions: c2,
   MediaEngineContextTypes: c3,
   VideoQualityMode,
-  VIDEO_QUALITY_FRAMERATE: c4,
-  BIT_FLOOR_PER_PIXEL: c5,
-} = DesktopSources);
+  VIDEO_QUALITY_FRAMERATE: closure_4,
+  BIT_FLOOR_PER_PIXEL: hasOwnProperty,
+} = Constants);
 class WantsVideoQuality {
   constructor(arg0) {
     if (null == global.capture) {
       if (null == global.encode) {
-        tmp10 = globalThis;
+        tmp8 = globalThis;
         _Error = Error;
-        tmp11 = new.target;
+        tmp9 = new.target;
         str = "Invalid arguments.";
-        tmp12 = new.target;
+        tmp10 = new.target;
         error = new Error("Invalid arguments.");
-        tmp14 = error;
+        tmp12 = error;
         throw error;
       }
     }
     tmp = undefined;
     if (null != global.capture) {
       capture = global.capture;
-      tmp3 = new.target;
-      tmp2 = closure_7;
-      if (typeof closure_7 !== "function") {
+      tmp2 = new.target;
+      if (typeof closure_7 === "function") {
+        obj = Object.create(closure_7.prototype);
+        ({ width: tmp3.width, height: tmp3.height, framerate: tmp3.framerate } = capture);
+        obj.pixelCount = capture.width * capture.height;
+        tmp = obj;
+      } else {
         str2 = "Trying to call a non-function";
-        throwTypeErrorResult = HermesBuiltin.throwTypeError();
+        throw new TypeError("Trying to call a non-function");
       }
-      obj = Object.create(tmp2.prototype);
-      ({ width: tmp4.width, height: tmp4.height, framerate: tmp4.framerate } = capture);
-      obj.pixelCount = capture.width * capture.height;
-      tmp = obj;
     }
     obj1 = Object.create(new.target.prototype);
     obj1.capture = tmp;
-    tmp6 = undefined;
+    tmp5 = undefined;
     if (null != global.encode) {
       encode = global.encode;
-      tmp8 = new.target;
-      tmp7 = closure_7;
-      if (typeof closure_7 !== "function") {
+      tmp6 = new.target;
+      if (typeof closure_7 === "function") {
+        obj2 = Object.create(closure_7.prototype);
+        ({ width: tmp7.width, height: tmp7.height, framerate: tmp7.framerate } = encode);
+        obj2.pixelCount = encode.width * encode.height;
+        tmp5 = obj2;
+      } else {
         str3 = "Trying to call a non-function";
-        throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
+        throw new TypeError("Trying to call a non-function");
       }
-      obj2 = Object.create(tmp7.prototype);
-      ({ width: tmp9.width, height: tmp9.height, framerate: tmp9.framerate } = encode);
-      obj2.pixelCount = encode.width * encode.height;
-      tmp6 = obj2;
     }
-    obj1.encode = tmp6;
+    obj1.encode = tmp5;
     ({
-      bitrateMin: tmp5.bitrateMin,
-      bitrateMax: tmp5.bitrateMax,
-      bitrateTarget: tmp5.bitrateTarget,
-      localWant: tmp5.localWant,
+      bitrateMin: tmp4.bitrateMin,
+      bitrateMax: tmp4.bitrateMax,
+      bitrateTarget: tmp4.bitrateTarget,
+      localWant: tmp4.localWant,
     } = global);
     return obj1;
   }
@@ -117,10 +117,8 @@ prototype["extend"] = function extend(width, width2) {
     if (num2 == null) {
       num2 = 0;
     }
-    const obj = { width: null, height: null, framerate: null, pixelCount: null };
-    obj[0] = num;
-    obj[1] = num2;
-    let framerate;
+    const size = { width: num, height: num2, framerate: null, pixelCount: null };
+    framerate = undefined;
     if (width2 != null) {
       framerate = width2.framerate;
     }
@@ -131,32 +129,32 @@ prototype["extend"] = function extend(width, width2) {
       }
       framerate = framerate1;
     }
-    obj[2] = framerate;
-    obj[3] = num * num2;
-    return obj;
+    size.framerate = framerate;
+    size.pixelCount = num * num2;
+    return size;
   }
 };
 const frozen = Object.freeze({
   [VideoQualityMode.AUTO]: {},
   [VideoQualityMode.FULL]: { encode: { width: 1280, height: 720 } },
 });
-let result = set.fileFinishedImporting("../discord_common/js/packages/media-engine/VideoQualityManager.tsx");
+let result = size.fileFinishedImporting("../discord_common/js/packages/media-engine/VideoQualityManager.tsx");
 class VideoQualityManager {
   constructor(arg0, arg1) {
     tmp = importDefault;
     if (importDefault === undefined) {
       tmp = closure_2;
     }
-    obj = Object.create(new.target.prototype);
-    obj.contextType = global;
-    obj.connection = require;
-    obj.options = tmp;
-    obj.isStreamContext = obj.contextType === MediaEngineContextTypes.STREAM;
-    mediaSinkWantsLadder = new require("getMaxSinkValue").MediaSinkWantsLadder(tmp);
-    obj.ladder = mediaSinkWantsLadder;
-    obj.goliveMaxQuality = obj.getDefaultGoliveQuality();
-    obj.lastGoLivePixelCount = {};
-    return obj;
+    merged = Object.assign({ isMuted: false });
+    merged.contextType = global;
+    merged.connection = require;
+    merged.options = tmp;
+    merged.isStreamContext = merged.contextType === MediaEngineContextTypes.STREAM;
+    mediaSinkWantsLadder = new closure_0(closure_1[1]).MediaSinkWantsLadder(tmp);
+    merged.ladder = mediaSinkWantsLadder;
+    merged.goliveMaxQuality = merged.getDefaultGoliveQuality();
+    merged.lastGoLivePixelCount = {};
+    return merged;
   }
 }
 const prototype2 = VideoQualityManager.prototype;
@@ -202,29 +200,29 @@ prototype2["getQuality"] = function getQuality(arg0) {
       localWant: null,
     };
     tmp10 = WantsVideoQuality;
-    obj[0] = prototype.extend(goliveQuality.encode, self.qualityOverwrite.encode);
-    obj[1] = prototype.extend(goliveQuality.capture, self.qualityOverwrite.capture);
+    obj.encode = prototype.extend(goliveQuality.encode, self.qualityOverwrite.encode);
+    obj.capture = prototype.extend(goliveQuality.capture, self.qualityOverwrite.capture);
     let bitrateMin = self.qualityOverwrite.bitrateMin;
     if (bitrateMin == null) {
       bitrateMin = goliveQuality.bitrateMin;
     }
-    obj[2] = bitrateMin;
+    obj.bitrateMin = bitrateMin;
     let bitrateMax = self.qualityOverwrite.bitrateMax;
     if (bitrateMax == null) {
       bitrateMax = goliveQuality.bitrateMax;
     }
-    obj[3] = bitrateMax;
+    obj.bitrateMax = bitrateMax;
     let bitrateTarget = self.qualityOverwrite.bitrateTarget;
     if (bitrateTarget == null) {
       bitrateTarget = goliveQuality.bitrateTarget;
     }
-    obj[4] = bitrateTarget;
-    obj[5] = goliveQuality.localWant;
+    obj.bitrateTarget = bitrateTarget;
+    obj.localWant = goliveQuality.localWant;
     tmp10 = new tmp10(obj);
   }
   return tmp10;
 };
-prototype2["applyQualityConstraints"] = function applyQualityConstraints(constraints) {
+prototype2["applyQualityConstraints"] = function applyQualityConstraints(constraints, arg1) {
   const quality = this.getQuality(arg1);
   if (null != quality.capture) {
     constraints.encodingVideoWidth = quality.capture.width;
@@ -265,39 +263,39 @@ prototype2["setGoliveQuality"] = function setGoliveQuality(capture) {
   if (bitrateMin == null) {
     bitrateMin = self.goliveMaxQuality.bitrateMin;
   }
-  obj[2] = bitrateMin;
+  obj.bitrateMin = bitrateMin;
   let bitrateMax = capture.bitrateMax;
   if (bitrateMax == null) {
     bitrateMax = self.goliveMaxQuality.bitrateMax;
   }
-  obj[3] = bitrateMax;
+  obj.bitrateMax = bitrateMax;
   let bitrateTarget = capture.bitrateTarget;
   if (bitrateTarget == null) {
     bitrateTarget = self.goliveMaxQuality.bitrateTarget;
   }
-  obj[4] = bitrateTarget;
-  obj[5] = self.goliveMaxQuality.localWant;
+  obj.bitrateTarget = bitrateTarget;
+  obj.localWant = self.goliveMaxQuality.localWant;
   self.goliveMaxQuality = new WantsVideoQuality(obj);
 };
-prototype2["getVideoQuality"] = function getVideoQuality(arg0) {
+prototype2["getVideoQuality"] = function getVideoQuality(localWant) {
   const self = this;
   const ladder = this.ladder;
-  const resolution = ladder.getResolution(arg0);
+  const resolution = ladder.getResolution(localWant);
   let obj = { encode: null, capture: null, bitrateMin: null, bitrateMax: null, localWant: null };
   obj = {};
   const result = this.options.videoBitrate.min * resolution.budgetPortion;
   const result1 = this.options.videoBitrate.max * resolution.budgetPortion;
   const merged = Object.assign(resolution);
   obj.framerate = this.isMuted ? resolution.mutedFramerate : resolution.framerate;
-  obj[0] = obj;
-  obj[1] = {
+  obj.encode = obj;
+  obj.capture = {
     width: self.options.videoCapture.width,
     height: self.options.videoCapture.height,
     framerate: self.options.videoCapture.framerate,
   };
-  obj[2] = Math.max(result, self.options.videoBitrateFloor);
-  obj[3] = Math.max(result1, self.options.videoBitrateFloor);
-  obj[4] = arg0;
+  obj.bitrateMin = Math.max(result, self.options.videoBitrateFloor);
+  obj.bitrateMax = Math.max(result1, self.options.videoBitrateFloor);
+  obj.localWant = localWant;
   return new WantsVideoQuality(obj);
 };
 prototype2["scaleLinearly"] = function scaleLinearly(arg0, pixelCount, bitrateMax) {
@@ -319,7 +317,7 @@ prototype2["getGoliveQuality"] = function getGoliveQuality(localWant, arg1) {
       if (arg1 > 0) {
         const _Math7 = Math;
         const bound = Math.min(
-          closure_5 * self.goliveMaxQuality.encode.pixelCount * self.goliveMaxQuality.encode.framerate,
+          hasOwnProperty * self.goliveMaxQuality.encode.pixelCount * self.goliveMaxQuality.encode.framerate,
           self.goliveMaxQuality.bitrateMax,
         );
         let scaleLinearlyResult2;
@@ -336,21 +334,19 @@ prototype2["getGoliveQuality"] = function getGoliveQuality(localWant, arg1) {
           );
         }
         const obj = {
-          encode: null,
-          capture: null,
+          encode: self.goliveMaxQuality.encode,
+          capture: self.goliveMaxQuality.capture,
           bitrateMin: null,
           bitrateMax: null,
           bitrateTarget: null,
           localWant: null,
         };
-        obj[0] = self.goliveMaxQuality.encode;
-        obj[1] = self.goliveMaxQuality.capture;
         const _Math = Math;
         const _Math2 = Math;
-        obj[2] = Math.max(Math.ceil(scaleLinearlyResult), self.options.videoBitrateFloor);
+        obj.bitrateMin = Math.max(Math.ceil(scaleLinearlyResult), self.options.videoBitrateFloor);
         const _Math3 = Math;
         const _Math4 = Math;
-        obj[3] = Math.max(
+        obj.bitrateMax = Math.max(
           Math.ceil(
             self.scaleLinearly(arg1, self.goliveMaxQuality.encode.pixelCount, self.goliveMaxQuality.bitrateMax),
           ),
@@ -362,8 +358,8 @@ prototype2["getGoliveQuality"] = function getGoliveQuality(localWant, arg1) {
           const _Math6 = Math;
           bound1 = Math.max(Math.ceil(scaleLinearlyResult2), self.options.videoBitrateFloor);
         }
-        obj[4] = bound1;
-        obj[5] = localWant;
+        obj.bitrateTarget = bound1;
+        obj.localWant = localWant;
         return new WantsVideoQuality(obj);
       }
     }
@@ -371,15 +367,15 @@ prototype2["getGoliveQuality"] = function getGoliveQuality(localWant, arg1) {
   return self.goliveMaxQuality;
 };
 prototype2["getDefaultGoliveQuality"] = function getDefaultGoliveQuality() {
-  obj = {
-    capture: obj,
-    encode: obj,
+  const obj = {
+    capture: null,
+    encode: { width: 1280, height: 720, framerate, pixelCount: 921600 },
     bitrateMin: this.options.desktopBitrate.min,
     bitrateMax: this.options.desktopBitrate.max,
     bitrateTarget: this.options.desktopBitrate.target,
   };
-  obj = { width: 1280, height: 720, framerate: closure_4 };
-  obj = { width: 1280, height: 720, framerate: closure_4, pixelCount: 921600 };
+  const size = { width: 1280, height: 720, framerate };
+  obj.capture = size;
   return new WantsVideoQuality(obj);
 };
 

@@ -1,69 +1,73 @@
 // discord_app/modules/user_settings/account/native/mfa_modal_flow/TwoFASetupEnterCode.tsx
-import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../../_runtime/00019_noop.js";
-import closure_5 from "../../../../../stores/native/AppStateStore.tsx";
-import { TwoFAModalSetupSections } from "TwoFAConstants.tsx";
-import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import MFAUtils from "../../../../../utils/MFAUtils.tsx";
+import MFAActionCreatorsDefault from "../../../../../actions/MFAActionCreators.tsx";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
+import AppStateStore from "../../../../../stores/native/AppStateStore.tsx";
 
-const require = arg1;
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-let closure_9 = createCacheKey.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" } });
-const result = require("set").fileFinishedImporting(
+require = fn;
+const TwoFAModalSetupSections = fn(14783).TwoFAModalSetupSections;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4560);
+let closure_9 = createStyles.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" } });
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/user_settings/account/native/mfa_modal_flow/TwoFASetupEnterCode.tsx",
 );
 
-export default function TwoFASetupEnterCode(first) {
-  const _require = first;
-  let obj = _require(navigation[6]);
+export default function TwoFASetupEnterCode(set) {
+  _require = set;
+  let obj = require("TwoFASetupStyles");
   const twoFASetupStyles = obj.useTwoFASetupStyles();
-  importDefault = ref.useRef(first);
+  importDefault = ref.useRef(set);
   const effect = ref.useEffect(() => {
-    closure_1.current = closure_0;
+    closure_1.current = current;
   });
-  obj1 = _require(navigation[7]);
+  let obj1 = require("useNavigation");
   navigation = obj1.useNavigation();
-  let obj2 = _require(navigation[8]);
+  let obj2 = require("initialize");
   const items = [ref1];
   const stateFromStores = obj2.useStateFromStores(items, () => ref1.getState());
-  const tmp6 = callback(ref.useState(false), 2);
-  callback = tmp6[1];
+  const tmp6 = _slicedToArray(ref.useState(false), 2);
+  _slicedToArray = tmp6[1];
   ref = ref.useRef(null);
   ref1 = ref.useRef(null);
   const items1 = [navigation];
-  callback = ref.useCallback((code) => {
-    let obj = callback(navigation[9]);
-    callback2(true);
+  const callback = ref.useCallback((code) => {
+    let obj = MFAUtils;
+    closure_3(true);
     const encodeTotpSecretResult = obj.encodeTotpSecret(ref.current.totpSecret);
     obj = { code, secret: encodeTotpSecretResult };
-    const obj2 = ref(navigation[10]);
-    const enableResult = ref(navigation[10]).enable(obj);
-    ref(navigation[10])
-      .enable(obj)
-      .then(() => {})
-      .catch((body) => {
-        if (null != body.body) {
-          let message = body.body.message;
+    const enableResult = MFAActionCreatorsDefault.enable(obj);
+    MFAActionCreatorsDefault.enable(obj)
+      .then(() => {
+        navigation.push(constants.SUCCESS);
+      })
+      .catch((error) => {
+        if (null != error.body) {
+          let message = error.body.message;
         } else {
-          const intl = closure_1_0(closure_1_2[11]).intl;
-          message = intl.string(closure_1_0(closure_1_2[11]).t["1u5B+G"]);
+          const intl = closure_0(navigation[11]).intl;
+          message = intl.string(closure_0(navigation[11]).t["1u5B+G"]);
         }
-        closure_4.current = message;
-        const current = ref.current;
+        closure_1_4.current = message;
+        current = ref.current;
         if (current != null) {
           current.clear();
         }
-        callback(false);
+        closure_1_3(false);
       });
   }, items1);
   obj = { children: null };
-  obj = { bottom: true, style: callback4().container, children: null };
-  obj1 = { style: items2, children: null };
-  items2 = [,];
+  obj = { bottom: true, style: closure_9().container, children: null };
+  obj1 = { style: null, children: null };
+  const items2 = [,];
   ({ modalHeader: arr3[0], text: arr3[1] } = twoFASetupStyles);
-  let intl = _require(navigation[11]).intl;
-  obj1[1] = intl.string(_require(navigation[11]).t.HZPBOd);
-  const items3 = [callback2(_require(navigation[14]).LegacyText, obj1)];
+  obj1.style = items2;
+  let intl = require("util").intl;
+  obj1.children = intl.string(require("util").t.HZPBOd);
+  const items3 = [closure_7(require("native").LegacyText, obj1)];
   obj2 = {
     style: { maxHeight: 520 },
     ref: ref1,
@@ -72,11 +76,11 @@ export default function TwoFASetupEnterCode(first) {
     error: null,
     appState: null,
   };
-  const tmp = callback4();
-  obj2[4] = importDefault(navigation[16])(ref);
-  obj2[5] = stateFromStores;
-  items3[1] = callback2(importDefault(navigation[15]), obj2);
-  obj[2] = items3;
-  obj[0] = callback3(_require(navigation[13]).SafeAreaPaddingView, obj);
-  return callback2(_require(navigation[12]).TwoFASetupModalScreen, obj);
+  const tmp = closure_9();
+  obj2.error = require("useRefValue")(ref);
+  obj2.appState = stateFromStores;
+  items3[1] = closure_7(require("MFACodeInput"), obj2);
+  obj.children = items3;
+  obj.children = closure_8(require("common/SafeAreaView").SafeAreaPaddingView, obj);
+  return closure_7(require("TwoFASetupModal").TwoFASetupModalScreen, obj);
 }

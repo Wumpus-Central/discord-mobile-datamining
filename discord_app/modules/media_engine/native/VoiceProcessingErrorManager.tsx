@@ -1,8 +1,7 @@
 // discord_app/modules/media_engine/native/VoiceProcessingErrorManager.tsx
-import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
-let require = arg1;
-initializeDefault;
+let require = fn;
 let prototype = function VoiceProcessingErrorManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
@@ -24,6 +23,7 @@ let prototype = function VoiceProcessingErrorManager() {
 }.prototype;
 class prototype extends tmp2 {}
 prototype = new prototype();
-let result = require("set").fileFinishedImporting("modules/media_engine/native/VoiceProcessingErrorManager.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/media_engine/native/VoiceProcessingErrorManager.tsx");
 
 export default prototype;

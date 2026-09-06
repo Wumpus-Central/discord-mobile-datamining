@@ -1,18 +1,14 @@
 // discord_app/modules/chat_input/native/accessories/ChatInputSendButton.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import map from "../../../../design/tokens/native/useToken.tsx";
-import _modDef4296 from "../../../reanimated/ReanimatedRexport.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useToken from "../../../../design/tokens/native/useToken.tsx";
+import ReanimatedRexportDefault from "../../../reanimated/ReanimatedRexport.tsx";
 import useChatInputFloatingWidthDefault from "../action_buttons/useChatInputFloatingWidth.tsx";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../../a11y/AccessibilityStore.tsx";
-import closure_7 from "../../../../stores/SlowmodeStore.tsx";
-import { CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS as closure_8 } from "../ChatInputConstants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
+import SlowmodeStore from "../../../../stores/SlowmodeStore.tsx";
 
-require = arg1;
+require = fn;
 function renderChatInputSendButton(type, arg1, state, cleanup) {
   const merged = Object.assign(arg1);
   return <closure_12 key={arg0} type={arg0} state={arg2} cleanup={arg3} />;
@@ -25,37 +21,42 @@ function getChatInputSendButtonItemKey(sendVoiceMessageEnabled) {
 function FloatingSlot(arg0) {
   ({ buttonHeight, buttonMargin } = arg0);
   ({ buttonWidth, sendVoiceMessageEnabled, children } = arg0);
-  const style = [
-    { height: buttonHeight },
-    useChatInputFloatingWidthDefault({
-      expanded: !sendVoiceMessageEnabled,
-      collapsedWidth: buttonHeight + 2 * buttonMargin,
-      expandedWidth: buttonWidth + 2 * buttonMargin,
-    }).animatedStyle,
-  ];
-  return jsx(_modDef4296.View, { style, children });
+  let obj = {
+    expanded: !sendVoiceMessageEnabled,
+    collapsedWidth: buttonHeight + 2 * buttonMargin,
+    expandedWidth: buttonWidth + 2 * buttonMargin,
+  };
+  obj = { style: null, children };
+  const items = [{ height: buttonHeight }, useChatInputFloatingWidthDefault(obj).animatedStyle];
+  obj.style = items;
+  return jsx(ReanimatedRexportDefault.View, { style: null, children });
 }
-let c4 = importAllResult;
-let closure_10 = {
+const View = fn(17).View;
+let closure_8 = fn(11962).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
+const jsx = fn(21).jsx;
+const constants = {
   BUTTON_SEND: "send-button",
   BUTTON_SEND_DISABLED: "send-button-disabled",
   BUTTON_SEND_VOICE_MESSAGE: "voice-message-button",
   BUTTON_SEND_VOICE_MESSAGE_DISABLED: "voice-message-button-disabled",
 };
-let closure_11 = createCacheKey.createStyles((width, height) => {
-  obj = { button: obj, buttonActive: null, iconActive: null };
-  obj = { width, height };
-  obj = { backgroundColor: ThemesDefault.colors.CHAT_INPUT_SEND_BUTTON_ACTIVE_BACKGROUND };
-  obj[1] = obj;
-  obj[2] = { tintColor: ThemesDefault.colors.CHAT_INPUT_SEND_BUTTON_ICON_ACTIVE_TINT };
+const createStyles = fn(4560);
+let closure_11 = createStyles.createStyles((width, height) => {
+  let obj = { button: null, buttonActive: null, iconActive: null };
+  const size = { width, height };
+  obj.button = size;
+  obj = { backgroundColor: nativeDefault.colors.CHAT_INPUT_SEND_BUTTON_ACTIVE_BACKGROUND };
+  obj.buttonActive = obj;
+  obj = { tintColor: nativeDefault.colors.CHAT_INPUT_SEND_BUTTON_ICON_ACTIVE_TINT };
+  obj.iconActive = obj;
   return obj;
 });
-let closure_12 = importAllResult.memo((type) => {
+let closure_12 = noop.memo((type) => {
   type = type.type;
   ({ onSendMessage, sendEnabled, isOnCooldown, channelId, state, cleanup, withBounce } = type);
-  let obj = map;
-  const token = obj.useToken(ThemesDefault.modules.mobile.CHAT_INPUT_SEND_BUTTON_WIDTH);
-  obj1 = map;
+  let obj = useToken;
+  const token = obj.useToken(nativeDefault.modules.mobile.CHAT_INPUT_SEND_BUTTON_WIDTH);
+  let obj1 = useToken;
   let num = 0;
   if (type === constants.BUTTON_SEND_VOICE_MESSAGE || type === constants.BUTTON_SEND_VOICE_MESSAGE_DISABLED) {
     num = closure_8;
@@ -63,9 +64,7 @@ let closure_12 = importAllResult.memo((type) => {
   obj = { cleanup, state, withBounce, bounceEnterDelayMs: num, children: null };
   let tmp3Result = tmp3(12246);
   if (type === constants.BUTTON_SEND_VOICE_MESSAGE || type === constants.BUTTON_SEND_VOICE_MESSAGE_DISABLED) {
-    obj = { disabled: null, channelId: null };
-    obj[0] = isOnCooldown;
-    obj[1] = channelId;
+    obj = { disabled: isOnCooldown, channelId };
     let tmp7Result = tmp7(tmp3(12255), obj);
   } else {
     obj1 = {
@@ -78,23 +77,23 @@ let closure_12 = importAllResult.memo((type) => {
       onPress: null,
       disabled: null,
     };
-    ({ button: obj4[1], buttonActive: obj4[2], iconActive: obj4[3] } = tmp5);
+    ({ button: obj4.style, buttonActive: obj4.activeStyle, iconActive: obj4.activeIconStyle } = tmp5);
     tmp3Result = tmp3(12239);
-    obj1[4] = tmp(4505).SendMessageIcon;
+    obj1.IconComponent = tmp(4505).SendMessageIcon;
     const intl = tmp(1114).intl;
-    obj1[5] = intl.string(tmp(1114).t.TXNS7S);
-    obj1[6] = onSendMessage;
-    obj1[7] = !sendEnabled;
+    obj1.accessibilityLabel = intl.string(tmp(1114).t.TXNS7S);
+    obj1.onPress = onSendMessage;
+    obj1.disabled = !sendEnabled;
     tmp7Result = tmp7(tmp3Result, obj1);
   }
-  obj[4] = tmp7Result;
+  obj.children = tmp7Result;
   return (
     <tmp3Result cleanup={cleanup} state={state} withBounce={withBounce} bounceEnterDelayMs={num}>
       {null}
     </tmp3Result>
   );
 });
-const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
+const forwardRefResult = noop.forwardRef((channel, ref) => {
   channel = channel.channel;
   ({ canSendVoiceMessage, onSendMessage } = channel);
   let flag = channel.requireTextContent;
@@ -104,24 +103,23 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   }
   dependencyMap = undefined;
   let stateFromStores1;
-  importAllResult = undefined;
+  noop = undefined;
   canSendVoiceMessage = undefined;
   let obj = channel(4262);
   const token = obj.useToken(onSendMessage(576).modules.mobile.CHAT_INPUT_SEND_BUTTON_WIDTH);
-  obj1 = channel(4262);
+  let obj1 = channel(4262);
   const token1 = obj1.useToken(onSendMessage(576).modules.mobile.CHAT_INPUT_SEND_BUTTON_HEIGHT);
   let obj2 = channel(4262);
   const token2 = obj2.useToken(onSendMessage(576).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
   let obj3 = channel(504);
-  let items = [closure_6];
-  let obj4 = importAllResult;
+  let items = [AccessibilityStore];
   const stateFromStores = obj3.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  const tmp7 = callback(token, token1);
-  [tmp10, c2] = stateFromStores1(importAllResult.useState(defaultValue.length > 0), 2);
-  const tmp9 = stateFromStores1(importAllResult.useState(defaultValue.length > 0), 2);
-  const items1 = [closure_7];
+  const tmp7 = closure_11(token, token1);
+  [tmp10, c2] = stateFromStores1(noop.useState(defaultValue.length > 0), 2);
+  const tmp9 = stateFromStores1(noop.useState(defaultValue.length > 0), 2);
+  const items1 = [SlowmodeStore];
   const items2 = [channel];
-  stateFromStores1 = channel(504).useStateFromStores(items1, () => closure_1_7.isChannelOnCooldown(channel), items2);
+  stateFromStores1 = channel(504).useStateFromStores(items1, () => SlowmodeStore.isChannelOnCooldown(channel), items2);
   let tmp12 = !stateFromStores1;
   if (stateFromStores1) {
     tmp12 = hasPendingEdit;
@@ -135,39 +133,40 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
     }
     tmp12 = tmp10;
   }
-  importAllResult = tmp12;
+  noop = tmp12;
   if (canSendVoiceMessage) {
     canSendVoiceMessage = !tmp12;
   }
   const items3 = [channel.id, stateFromStores1, onSendMessage, tmp12, canSendVoiceMessage];
-  const memo = obj4.useMemo(() => {
+  const memo = obj5.useMemo(() => {
     const items = [
       {
         channelId: channel.id,
         isOnCooldown: stateFromStores1,
         onSendMessage,
-        sendEnabled: closure_4,
+        sendEnabled,
         sendVoiceMessageEnabled: canSendVoiceMessage,
         withBounce: true,
       },
     ];
     return items;
   }, items3);
-  const imperativeHandle = obj4.useImperativeHandle(ref, () => ({ setHasText: c2 }));
+  const imperativeHandle = obj5.useImperativeHandle(ref, () => ({ setHasText }));
   if (stateFromStores) {
     const result = 2 * token2;
     obj = { style: null, children: null };
-    obj = { width: null, height: null, alignItems: "center", justifyContent: "center" };
-    obj[0] = canSendVoiceMessage ? token1 + result : token + result;
-    obj[1] = token1;
-    obj[0] = obj;
+    const size = {
+      width: canSendVoiceMessage ? token1 + result : token + result,
+      height: token1,
+      alignItems: "center",
+      justifyContent: "center",
+    };
+    obj.style = size;
     if (canSendVoiceMessage) {
-      obj1 = { disabled: null, channelId: null };
-      obj1[0] = stateFromStores1;
-      obj1[1] = channel.id;
-      let tmp15Result = tmp15(tmp3(12255), obj1);
+      obj = { disabled: stateFromStores1, channelId: channel.id };
+      let tmp15Result = tmp15(tmp3(12255), obj);
     } else {
-      obj2 = {
+      obj1 = {
         active: true,
         style: null,
         activeStyle: null,
@@ -177,34 +176,32 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
         onPress: null,
         disabled: null,
       };
-      ({ button: obj11[1], buttonActive: obj11[2], iconActive: obj11[3] } = tmp7);
-      obj2[4] = tmp(4505).SendMessageIcon;
+      ({ button: obj11.style, buttonActive: obj11.activeStyle, iconActive: obj11.activeIconStyle } = tmp7);
+      obj1.IconComponent = tmp(4505).SendMessageIcon;
       const intl = tmp(1114).intl;
-      obj2[5] = intl.string(tmp(1114).t.TXNS7S);
-      obj2[6] = onSendMessage;
-      obj2[7] = !tmp12;
-      tmp15Result = tmp15(tmp3(12239), obj2);
+      obj1.accessibilityLabel = intl.string(tmp(1114).t.TXNS7S);
+      obj1.onPress = onSendMessage;
+      obj1.disabled = !tmp12;
+      tmp15Result = tmp15(tmp3(12239), obj1);
       const tmp3Result = tmp3(12239);
     }
-    obj[1] = tmp15Result;
+    obj.children = tmp15Result;
     return tmp15(canSendVoiceMessage, obj);
   } else {
-    obj3 = { items: null, renderItem: null, getItemKey: null };
-    obj3[0] = memo;
-    obj3[1] = renderChatInputSendButton;
-    obj3[2] = getChatInputSendButtonItemKey;
-    obj4 = { buttonWidth: null, buttonHeight: null, buttonMargin: null, sendVoiceMessageEnabled: null, children: null };
-    obj4[0] = token;
-    obj4[1] = token1;
-    obj4[2] = token2;
-    obj4[3] = canSendVoiceMessage;
-    obj4[4] = tmp15(tmp(4271).TransitionGroup, obj3);
-    return tmp15(FloatingSlot, obj4);
+    obj2 = { items: memo, renderItem: renderChatInputSendButton, getItemKey: getChatInputSendButtonItemKey };
+    obj3 = {
+      buttonWidth: token,
+      buttonHeight: token1,
+      buttonMargin: token2,
+      sendVoiceMessageEnabled: canSendVoiceMessage,
+      children: tmp15(tmp(4271).TransitionGroup, obj2),
+    };
+    return tmp15(FloatingSlot, obj3);
   }
   const obj6 = channel(504);
 });
 forwardRefResult.displayName = "ChatInputSendButton";
-const memoResult = importAllResult.memo(forwardRefResult);
-let result = require("set").fileFinishedImporting("modules/chat_input/native/accessories/ChatInputSendButton.tsx");
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/chat_input/native/accessories/ChatInputSendButton.tsx");
 
-export default memoResult;
+export default noop.memo(forwardRefResult);

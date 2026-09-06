@@ -1,7 +1,7 @@
 // discord_app/modules/claim_account/ClaimAccountModalActionCreators.native.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/claim_account/ClaimAccountModalActionCreators.native.tsx");
+const result = size.fileFinishedImporting("modules/claim_account/ClaimAccountModalActionCreators.native.tsx");
 
 export function openNewUserAgeGateModal() {}
 export function openClaimAccountModal() {}

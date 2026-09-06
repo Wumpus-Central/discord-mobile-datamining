@@ -1,22 +1,27 @@
 // discord_app/modules/guild_onboarding/GuildOnboardingStore.tsx
-import set from "../../../_runtime/00002_set.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import ME2 from "../../Constants.tsx";
-import getFavoritesAwareGuildName from "../favorites/FavoritesUtils.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import Constants from "../../Constants.tsx";
+import FavoritesUtils from "../favorites/FavoritesUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const ME = ME2.ME;
-let obj = { STARTED: "started", READY: "ready", COMPLETED: "completed", NOT_APPLICABLE: "not_applicable" };
-let closure_4 = {};
+const ME = Constants.ME;
+let GuildOnboardingStatus = {
+  STARTED: "started",
+  READY: "ready",
+  COMPLETED: "completed",
+  NOT_APPLICABLE: "not_applicable",
+};
+const dependencyMap = {};
 let closure_5 = {};
 const Store = initializeDefault.Store;
 class GuildOnboardingStore extends Store {}
 const prototype = GuildOnboardingStore.prototype;
-prototype["shouldShowOnboarding"] = function shouldShowOnboarding(c0) {
-  let tmp = c0 !== ME;
+prototype["shouldShowOnboarding"] = function shouldShowOnboarding(guildId) {
+  let tmp = guildId !== ME;
   if (tmp) {
-    obj = getFavoritesAwareGuildName;
-    tmp = !obj.isFavoritesGuildId(c0);
+    const obj = FavoritesUtils;
+    tmp = !obj.isFavoritesGuildId(guildId);
   }
   if (tmp) {
     let hasItem = null != tmp5;
@@ -37,14 +42,14 @@ prototype["resetOnboardingStatus"] = function resetOnboardingStatus(arg0) {
   closure_5[arg0] = "cover";
 };
 prototype["getCurrentOnboardingStep"] = function getCurrentOnboardingStep(arg0) {
-  let str = table[arg0];
+  let str = closure_5[arg0];
   if (str == null) {
     str = "cover";
   }
   return str;
 };
 GuildOnboardingStore.displayName = "GuildOnboardingStore";
-obj = {
+GuildOnboardingStatus = {
   LOGOUT: function handleReset() {
     closure_4 = {};
     closure_5 = {};
@@ -78,11 +83,11 @@ obj = {
     closure_5 = {};
   },
 };
-const guildOnboardingStore = new GuildOnboardingStore(dispatcherDefault, obj);
-const result = set.fileFinishedImporting("modules/guild_onboarding/GuildOnboardingStore.tsx");
+const guildOnboardingStore = new GuildOnboardingStore(DispatcherDefault, GuildOnboardingStatus);
+const result = size.fileFinishedImporting("modules/guild_onboarding/GuildOnboardingStore.tsx");
 
 export default guildOnboardingStore;
-export const GuildOnboardingStatus = obj;
+export { GuildOnboardingStatus };
 export const isOnboarding = function isOnboarding(arg0) {
   let hasItem = null != arg0;
   if (hasItem) {

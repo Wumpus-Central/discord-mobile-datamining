@@ -1,16 +1,14 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsShieldElement.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import AccountAgeTier10LargeBadge from "../../../../design/assets/native.tsx";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import native from "../../../../design/assets/native.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-let closure_4 = createCacheKey.createStyles({ container: { flex: 0, alignSelf: "center", marginBottom: 16 } });
-const result = require("set").fileFinishedImporting(
-  "modules/in_app_reports/native/components/InAppReportsShieldElement.tsx",
-);
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_4 = createStyles.createStyles({ container: { flex: 0, alignSelf: "center", marginBottom: 16 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsShieldElement.tsx");
 
 export default function ShieldElement(element) {
   element = element.element;
@@ -18,10 +16,8 @@ export default function ShieldElement(element) {
   if (null != element) {
     tmp2 = null;
     if ("success" === element.type) {
-      const obj = { style: null, children: null };
-      obj[0] = tmp.container;
-      obj[1] = jsx(AccountAgeTier10LargeBadge.ShieldSpotIllustration, { width: 100, height: 100 });
-      tmp2 = <View style={null}>{null}</View>;
+      const obj = { style: tmp.container, children: jsx(native.ShieldSpotIllustration, { width: 100, height: 100 }) };
+      tmp2 = <View style={tmp.container}>{jsx(native.ShieldSpotIllustration, { width: 100, height: 100 })}</View>;
     }
   }
   return tmp2;

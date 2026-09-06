@@ -1,6 +1,6 @@
 // discord_app/utils/AnalyticsSchema.tsx
-import set from "../../_runtime/00002_set.js";
-import ME from "../Constants.tsx";
+import Constants from "../Constants.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("utils/AnalyticsSchema.tsx");
+const AnalyticEvents = Constants.AnalyticEvents;
+const result = size.fileFinishedImporting("utils/AnalyticsSchema.tsx");

@@ -1,22 +1,22 @@
 // discord_app/utils/AuthenticationUtils.tsx
-import set from "../../_runtime/00002_set.js";
-import setSecondaryTokenAll from "../../discord_common/js/shared/lib/TokenManager.tsx";
-import registerAsset from "../../_runtime/07669_registerAsset.js";
+import TokenManagerAll from "../../discord_common/js/shared/lib/TokenManager.tsx";
+import _mod7669 from "../../_runtime/metro/07669__.js";
+import size from "../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("utils/AuthenticationUtils.tsx");
+const result = size.fileFinishedImporting("utils/AuthenticationUtils.tsx");
 
 export const getToken = function getToken() {
-  return setSecondaryTokenAll.getToken();
+  return TokenManagerAll.getToken();
 };
 export const isAuthenticated = function isAuthenticated() {
-  return null != setSecondaryTokenAll.getToken();
+  return null != TokenManagerAll.getToken();
 };
 export const getArtForPath = function getArtForPath(arg0) {
   let tmp = null;
   if (null != arg0) {
     tmp = null;
     if (obj.test(arg0)) {
-      tmp = registerAsset;
+      tmp = _mod7669;
     }
     obj = /^\/developers/;
   }

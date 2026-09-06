@@ -1,10 +1,8 @@
 // discord_common/js/shared/shared-constants/GuildFeedItemTypes.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const obj = { ALL: null };
-let set = new Set(["conversation", "forum_post", "message", "message_bundle"]);
-obj[0] = set;
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/GuildFeedItemTypes.tsx");
+const obj = { ALL: new Set(["conversation", "forum_post", "message", "message_bundle"]) };
+const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/GuildFeedItemTypes.tsx");
 
 export const GuildFeedItemTypes = {
   MESSAGE: "message",

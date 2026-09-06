@@ -1,55 +1,59 @@
 // discord_app/modules/app_launcher/native/options/mentionable/AppLauncherMentionableOption.tsx
 import initialize from "../../../../../../discord_common/js/packages/flux/index.tsx";
-import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import asyncRequireImpl from "../../../../../../_runtime/01896_asyncRequireImpl.js";
+import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import UserCircleIcon from "../../../../../design/components/Icon/native/redesign/generated/UserCircleIcon.tsx";
-import stylesDefault from "../../base_components/AppLauncherOptionIcon.tsx";
-import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../../_runtime/00019_noop.js";
-import closure_5 from "../../../../a11y/AccessibilityStore.tsx";
-import closure_6 from "../../../../../stores/GuildRoleStore.tsx";
-import closure_7 from "../../../../../stores/UserStore.tsx";
-import { StatusTypes } from "../../../../../../discord_common/js/shared/Constants.tsx";
-import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import AppLauncherOptionIconDefault from "../../base_components/AppLauncherOptionIcon.tsx";
+import AppLauncherMentionableListActionSheet from "AppLauncherMentionableListActionSheet.tsx";
+import UsernameTextDefault from "../../base_components/UsernameText.tsx";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
+import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
+import GuildRoleStore from "../../../../../stores/GuildRoleStore.tsx";
+import UserStore from "../../../../../stores/UserStore.tsx";
 
-require = arg1;
+require = fn;
 function MentionableIcon(mentionable) {
   mentionable = mentionable.mentionable;
   let obj = initialize;
-  const items = [closure_5];
+  const items = [AccessibilityStore];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   obj = { icon: null, wrapperStyle: null };
-  const tmp = callback2();
-  obj[0] = jsx(UserCircleIcon.UserCircleIcon, { size: "sm", color: "interactive-text-default" });
-  obj[1] = tmp.iconWrapper;
-  const tmp7 = jsx(stylesDefault, { icon: null, wrapperStyle: null });
+  const tmp = closure_10();
+  obj.icon = jsx(UserCircleIcon.UserCircleIcon, { size: "sm", color: "interactive-text-default" });
+  obj.wrapperStyle = tmp.iconWrapper;
+  const tmp7 = jsx(AppLauncherOptionIconDefault, { icon: null, wrapperStyle: null });
   if (null == mentionable) {
     return tmp7;
   } else {
     const type = mentionable.type;
     if (tmp2(12180).MentionableItemTypes.USER === type) {
-      obj = { user: null, guildId: null, animate: null, size: null };
-      obj[0] = mentionable.result.user;
-      obj[1] = mentionable.guildId;
-      obj[2] = !stateFromStores;
-      obj[3] = tmp2(1178).AvatarSizes.REFRESH_MEDIUM_32;
+      obj = {
+        user: mentionable.result.user,
+        guildId: mentionable.guildId,
+        animate: !stateFromStores,
+        size: tmp2(1178).AvatarSizes.REFRESH_MEDIUM_32,
+      };
       return tmp5(tmp2(1178).Avatar, obj);
     } else if (tmp2(12180).MentionableItemTypes.ROLE === type) {
-      obj1 = { role: null };
-      obj1[0] = mentionable.result;
+      const obj1 = { role: mentionable.result };
       return tmp5(tmp2(12181).RoleIcon, obj1);
     } else {
       const GLOBAL = tmp2(12180).MentionableItemTypes.GLOBAL;
       return tmp7;
     }
   }
-  const tmp6 = stylesDefault;
 }
-createCacheKey = { iconWrapper: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
-createCacheKey[0] = createCacheKey;
-let closure_10 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting(
+const StatusTypes = fn(1085).StatusTypes;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { iconWrapper: null };
+createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
+createStyles.iconWrapper = createStyles;
+let closure_10 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/app_launcher/native/options/mentionable/AppLauncherMentionableOption.tsx",
 );
 
@@ -57,40 +61,31 @@ export default function AppLauncherMentionableOption(option) {
   option = option.option;
   const initialValue = option.initialValue;
   const onMentionablePress = option.onMentionablePress;
-  ({ onActionSheetDismiss: closure_3, channel } = option);
+  ({ onActionSheetDismiss: _slicedToArray, channel } = option);
   const onPress = option.onPress;
-  let guild_id;
-  let first;
-  closure_8 = undefined;
-  guild_id = channel.guild_id;
+  const guild_id = channel.guild_id;
   ({ style, autoFocus, hasError } = option);
-  let tmp = callback(
+  let tmp = _slicedToArray(
     channel.useState(() => {
       if (null != initialValue) {
         if ("roleMention" === tmp.type) {
-          const role = guild_id.getRole(guild_id, tmp.roleId);
+          const role = GuildRoleStore.getRole(guild_id, tmp.roleId);
           if (null != role) {
-            let obj = { type: null, result: null };
-            obj[0] = option(onMentionablePress[12]).MentionableItemTypes.ROLE;
-            obj[1] = role;
+            let obj = { type: AppLauncherMentionableListActionSheet.MentionableItemTypes.ROLE, result: role };
             return obj;
           }
         } else if ("userMention" === tmp.type) {
-          const user = first.getUser(tmp.userId);
+          const user = UserStore.getUser(tmp.userId);
           if (null != user) {
-            obj = { type: null, result: null };
-            obj[0] = option(onMentionablePress[12]).MentionableItemTypes.USER;
-            obj = { user: null, score: 0, status: null, nick: "" };
-            obj[0] = user;
-            obj[2] = constants.UNKNOWN;
-            obj[1] = obj;
+            obj = { type: AppLauncherMentionableListActionSheet.MentionableItemTypes.USER, result: null };
+            obj = { user, score: 0, status: StatusTypes.UNKNOWN, nick: "" };
+            obj.result = obj;
             return obj;
           }
         } else if ("textMention" === tmp.type) {
-          obj1 = { type: null, result: null };
-          obj1[0] = option(onMentionablePress[12]).MentionableItemTypes.GLOBAL;
-          ({ text: obj5[0], text: obj5[1] } = tmp);
-          obj1[1] = { text: null, test: null, description: "" };
+          const obj1 = { type: AppLauncherMentionableListActionSheet.MentionableItemTypes.GLOBAL, result: null };
+          ({ text: obj5.text, text: obj5.test } = tmp);
+          obj1.result = { text: null, test: null, description: "" };
           return obj1;
         }
       }
@@ -98,9 +93,9 @@ export default function AppLauncherMentionableOption(option) {
     }),
     2,
   );
-  first = tmp[0];
+  let mentionable = tmp[0];
   closure_8 = tmp[1];
-  const items = [onMentionablePress, option.name, initialValue, first];
+  const items = [onMentionablePress, option.name, initialValue, mentionable];
   const effect = channel.useEffect(() => {
     let tmp = null != initialValue;
     if (tmp) {
@@ -110,20 +105,18 @@ export default function AppLauncherMentionableOption(option) {
       onMentionablePress({ mentionable: null });
     }
   }, items);
-  const items1 = [first, guild_id];
+  const items1 = [mentionable, guild_id];
   const memo = channel.useMemo(() => {
     if (null == first) {
       return null;
     } else {
       const type = tmp.type;
-      if (option(onMentionablePress[12]).MentionableItemTypes.USER === type) {
-        const obj = { guildId: null, user: null };
-        obj[0] = guild_id;
-        obj[1] = tmp.result.user;
-        return closure_1_9(initialValue(tmp6[15]), obj);
-      } else if (tmp5(tmp6[12]).MentionableItemTypes.ROLE === type) {
+      if (AppLauncherMentionableListActionSheet.MentionableItemTypes.USER === type) {
+        const obj = { guildId: guild_id, user: tmp.result.user };
+        return jsx(UsernameTextDefault, { guildId: guild_id, user: tmp.result.user });
+      } else if (tmp5(12180).MentionableItemTypes.ROLE === type) {
         return tmp.result.name;
-      } else if (tmp5(tmp6[12]).MentionableItemTypes.GLOBAL === type) {
+      } else if (tmp5(12180).MentionableItemTypes.GLOBAL === type) {
         return tmp.result.text;
       }
     }
@@ -132,45 +125,44 @@ export default function AppLauncherMentionableOption(option) {
     style,
     option,
     hasError,
-    selected: null != first,
+    selected: null != mentionable,
     selectedItemName: null,
     leading: null,
     onPress: null,
     autoFocus: null,
   };
   let tmp7;
-  if (null != first) {
+  if (null != mentionable) {
     tmp7 = memo;
   }
-  obj[4] = tmp7;
-  obj[5] = <MentionableIcon mentionable={first} guildId={guild_id} />;
-  obj[6] = function onPress() {
+  obj.selectedItemName = tmp7;
+  obj.leading = <MentionableIcon mentionable={mentionable} guildId={guild_id} />;
+  obj.onPress = function onPress() {
     if (onPress != null) {
       tmp();
     }
-    let obj = initialValue(onMentionablePress[17]);
-    obj = {
+    const obj = {
       option,
       channel,
       onMentionablePress(mentionable) {
         mentionable = mentionable.mentionable;
-        callback2(mentionable);
-        callback({ mentionable });
+        closure_1_8(mentionable);
+        onMentionablePress({ mentionable });
       },
-      onActionSheetDismiss: closure_3,
+      onActionSheetDismiss,
     };
     obj.openLazy(
-      option(onMentionablePress[19])(onMentionablePress[18], onMentionablePress.paths),
-      option(onMentionablePress[12]).APP_LAUNCHER_MENTIONABLE_LIST_ACTION_SHEET_KEY,
+      asyncRequireImpl(12180, dependencyMap.paths),
+      AppLauncherMentionableListActionSheet.APP_LAUNCHER_MENTIONABLE_LIST_ACTION_SHEET_KEY,
       obj,
     );
   };
-  obj[7] = autoFocus;
+  obj.autoFocus = autoFocus;
   return jsx(initialValue(onMentionablePress[16]), {
     style,
     option,
     hasError,
-    selected: null != first,
+    selected: null != mentionable,
     selectedItemName: null,
     leading: null,
     onPress: null,

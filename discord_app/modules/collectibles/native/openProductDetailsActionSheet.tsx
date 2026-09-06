@@ -1,12 +1,12 @@
 // discord_app/modules/collectibles/native/openProductDetailsActionSheet.tsx
-import set from "../../../../_runtime/00002_set.js";
 import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
-import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import openCollectiblesShop from "../CollectiblesActionCreators.tsx";
-import getProductOrbPrice from "../utils/CollectiblesProductUtils.tsx";
+import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import CollectiblesActionCreators from "../CollectiblesActionCreators.tsx";
+import CollectiblesProductUtils from "../utils/CollectiblesProductUtils.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 let c3 = "Shop Product Preview";
-const result = set.fileFinishedImporting("modules/collectibles/native/openProductDetailsActionSheet.tsx");
+const result = size.fileFinishedImporting("modules/collectibles/native/openProductDetailsActionSheet.tsx");
 
 export const PRODUCT_DETAILS_ACTION_SHEET_KEY = "Shop Product Preview";
 export const openProductDetailsActionSheet = function openProductDetailsActionSheet(arg0, stack) {
@@ -15,7 +15,7 @@ export const openProductDetailsActionSheet = function openProductDetailsActionSh
     initialVariantIndex = 0;
   }
   ({ analyticsLocations, shopAnalyticsContext } = arg0);
-  let obj = getProductOrbPrice;
+  let obj = CollectiblesProductUtils;
   const isVariantProduct = obj.getIsVariantProduct(product);
   let num = 0;
   if (isVariantProduct) {
@@ -29,17 +29,17 @@ export const openProductDetailsActionSheet = function openProductDetailsActionSh
   } else {
     skuId = product.skuId;
   }
-  openCollectiblesShop.productDetailsOpened(skuId);
+  CollectiblesActionCreators.productDetailsOpened(skuId);
   const tmp2 = dependencyMap;
-  const tmpResult = openCollectiblesShop;
+  const tmpResult = CollectiblesActionCreators;
   obj = { product, initialVariantIndex: num, analyticsLocations, shopAnalyticsContext };
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(8177, tmp2.paths), c3, obj, stack);
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8177, tmp2.paths), c3, obj, stack);
 };
 export const openProductDetailsActionSheetForSku = function openProductDetailsActionSheetForSku(skuId, stack) {
   skuId = skuId.skuId;
   ({ initialVariantIndex, analyticsLocations, shopAnalyticsContext, stageCollectibleChangeForEditProfile } = skuId);
-  let obj = openCollectiblesShop;
+  let obj = CollectiblesActionCreators;
   obj.productDetailsOpened(skuId);
   obj = { skuId, initialVariantIndex, analyticsLocations, shopAnalyticsContext, stageCollectibleChangeForEditProfile };
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(8177, dependencyMap.paths), c3, obj, stack);
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8177, dependencyMap.paths), c3, obj, stack);
 };

@@ -1,21 +1,18 @@
 // discord_app/stores/native/IAPStore.android.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import sum from "../../../discord_common/js/shared/Constants.tsx";
-import _createGatewayCheckoutContext from "../../utils/BillingUtils.tsx";
-import formatSingleCurrencyPrice from "../../utils/PriceUtils.tsx";
-import GPlayConnectionState from "../../modules/gplay/native/Constants.tsx";
-import set from "../../../_runtime/00002_set.js";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import Constants2 from "../../../discord_common/js/shared/Constants.tsx";
+import BillingUtils from "../../utils/BillingUtils.tsx";
+import PriceUtils from "../../utils/PriceUtils.tsx";
+import Constants from "../../modules/gplay/native/Constants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 function updateProduct(currencyCode) {
   const formatted = currencyCode.currencyCode.toLowerCase();
   const result = currencyCode.price / 100;
-  if ("BG" === c14) {
+  if ("BG" === countryCode) {
     if (formatted === CurrencyCodes.EUR) {
-      let formatDualPriceForBGResult = formatSingleCurrencyPrice.formatDualPriceForBG(result, {
-        convertToMajorUnits: false,
-      });
-      const obj2 = formatSingleCurrencyPrice;
+      let formatDualPriceForBGResult = PriceUtils.formatDualPriceForBG(result, { convertToMajorUnits: false });
     }
     let obj = {};
     const merged = Object.assign(currencyCode);
@@ -24,20 +21,20 @@ function updateProduct(currencyCode) {
     obj.priceString = formatDualPriceForBGResult;
     return obj;
   }
-  obj = formatSingleCurrencyPrice;
+  obj = PriceUtils;
   formatDualPriceForBGResult = obj.formatSingleCurrencyPrice(result, formatted, { convertToMajorUnits: false });
 }
 function skusLoaded(arg0) {
   ({ skus, skusType } = arg0);
   let item = skus.forEach((identifier) => {
-    const result = store.set(identifier.identifier, identifier);
+    const result = map.set(identifier.identifier, identifier);
   });
   const arr = Array.from(map.values());
   let found;
   if (arr != null) {
-    found = arr.filter((arg0) => null != arg0);
+    found = arr.filter((item) => null != item);
   }
-  let mapped = found;
+  mapped = found;
   if (found != null) {
     const item1 = found.forEach((offerIds) => {
       offerIds = undefined;
@@ -45,7 +42,7 @@ function skusLoaded(arg0) {
         offerIds = offerIds.offerIds;
       }
       if (null != offerIds) {
-        const item = offerIds.forEach((arg0) => set.add(arg0));
+        const item = offerIds.forEach((item) => set.add(item));
       }
     });
   }
@@ -56,7 +53,7 @@ function skusLoaded(arg0) {
     }
     if (mapped != null) {
       const item2 = mapped.forEach((identifier) => {
-        const result = store.set(identifier.identifier, identifier);
+        const result = map.set(identifier.identifier, identifier);
       });
     }
     if (GPlaySkusType.IN_APP === skusType) {
@@ -65,53 +62,52 @@ function skusLoaded(arg0) {
       c13 = false;
     }
   } catch (tmp7) {
-    let result = _createGatewayCheckoutContext.captureBillingException(tmp7);
-    const obj = _createGatewayCheckoutContext;
+    let result = BillingUtils.captureBillingException(tmp7);
   }
 }
-GPlayConnectionState = GPlayConnectionState.GPlayConnectionState;
-const GPlaySkusType = GPlayConnectionState.GPlaySkusType;
-const CurrencyCodes = sum.CurrencyCodes;
-const DISCONNECTED = GPlayConnectionState.DISCONNECTED;
-let c6 = null;
+const GPlayConnectionState = Constants.GPlayConnectionState;
+const GPlaySkusType = Constants.GPlaySkusType;
+const CurrencyCodes = Constants2.CurrencyCodes;
+let connectionState = GPlayConnectionState.DISCONNECTED;
+let mapped = null;
 const map = new Map();
-let set = new Set();
+const set = new Set();
 const set1 = new Set();
-let c10 = null;
-let c11 = false;
+let pendingDowngrade = null;
+let isDowngrading = false;
 let c12 = false;
 let c13 = false;
-let c14 = null;
+let countryCode = null;
 const Store = initializeDefault.Store;
 class IAPStore extends Store {}
 const prototype = IAPStore.prototype;
 prototype["getProducts"] = function getProducts() {
-  return c6;
+  return mapped;
 };
 prototype["getOfferIds"] = function getOfferIds() {
   return set;
 };
 prototype["getProduct"] = function getProduct(arg0) {
-  let value = map.get(arg0);
+  value = map.get(arg0);
   if (value == null) {
     value = null;
   }
   return value;
 };
 prototype["isBusy"] = function isBusy() {
-  return set1.size > 0 || c11;
+  return set1.size > 0 || isDowngrading;
 };
 prototype["isPurchasingProduct"] = function isPurchasingProduct(GENERIC_CONSUMABLE) {
   return set1.has(GENERIC_CONSUMABLE);
 };
 prototype["isReady"] = function isReady() {
-  return DISCONNECTED === GPlayConnectionState.CONNECTED;
+  return connectionState === GPlayConnectionState.CONNECTED;
 };
 prototype["hasConnectionError"] = function hasConnectionError() {
-  return DISCONNECTED === GPlayConnectionState.ERROR;
+  return connectionState === GPlayConnectionState.ERROR;
 };
 prototype["getPendingDowngrade"] = function getPendingDowngrade() {
-  return c10;
+  return pendingDowngrade;
 };
 prototype["isFetchingGoogleSkus"] = function isFetchingGoogleSkus() {
   let tmp = c13;
@@ -128,10 +124,10 @@ prototype["isFetchingProducts"] = function isFetchingProducts() {
   return tmp;
 };
 prototype["getUserCountry"] = function getUserCountry() {
-  return c14;
+  return countryCode;
 };
 IAPStore.displayName = "IAPStore";
-const iAPStore = new IAPStore(dispatcherDefault, {
+const iAPStore = new IAPStore(DispatcherDefault, {
   GPLAY_UPDATE_CONNECTION_STATE: function updateConnectionState(connectionState) {
     connectionState = connectionState.connectionState;
   },
@@ -159,7 +155,7 @@ const iAPStore = new IAPStore(dispatcherDefault, {
     } else {
       const _Error = Error;
       const _HermesInternal = HermesInternal;
-      error = new Error("Tried verifying product without initialization: " + productId);
+      const error = new Error("Tried verifying product without initialization: " + productId);
       throw error;
     }
     obj = set1;
@@ -174,6 +170,6 @@ const iAPStore = new IAPStore(dispatcherDefault, {
     countryCode = countryCode.countryCode;
   },
 });
-let result = set.fileFinishedImporting("stores/native/IAPStore.android.tsx");
+let result = size.fileFinishedImporting("stores/native/IAPStore.android.tsx");
 
 export default iAPStore;

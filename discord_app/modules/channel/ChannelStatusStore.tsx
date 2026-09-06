@@ -1,29 +1,28 @@
 // discord_app/modules/channel/ChannelStatusStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import set2 from "../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
-import closure_2 from "../gateway/GatewayConnectionStore.tsx";
-import set from "../../../_runtime/00002_set.js";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import ChannelTypes from "../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
+import GatewayConnectionStore from "../gateway/GatewayConnectionStore.tsx";
 
-require = arg1;
+require = fn;
 function handleConnectionReset() {
   set.clear();
 }
 function handleGuildReset(guild) {
   set.delete(guild.guild.id);
 }
-let set = new Set();
-let closure_4 = {};
+const set = new Set();
+const dependencyMap = {};
 const Store = initializeDefault.Store;
 class ChannelStatusStore extends Store {}
 const prototype = ChannelStatusStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_2);
+  this.waitFor(GatewayConnectionStore);
 };
 prototype["getChannelStatus"] = function getChannelStatus(guild_id) {
   if (null != guild_id) {
     if (null != guild_id.guild_id) {
-      if (guild_id.type === set2.ChannelTypes.GUILD_VOICE) {
+      if (guild_id.type === ChannelTypes.ChannelTypes.GUILD_VOICE) {
         let tmp5;
         if (dependencyMap[guild_id.guild_id] != null) {
           tmp5 = tmp4[guild_id.id];
@@ -37,7 +36,7 @@ prototype["hasRequestedStatuses"] = function hasRequestedStatuses(guild_id) {
   return set.has(guild_id);
 };
 ChannelStatusStore.displayName = "ChannelStatusStore";
-const channelStatusStore = new ChannelStatusStore(dispatcherDefault, {
+const channelStatusStore = new ChannelStatusStore(DispatcherDefault, {
   GUILD_CREATE: handleGuildReset,
   GUILD_DELETE: handleGuildReset,
   CONNECTION_RESUMED: handleConnectionReset,
@@ -52,7 +51,6 @@ const channelStatusStore = new ChannelStatusStore(dispatcherDefault, {
     ({ guildId, channels } = arg0);
     dependencyMap[guildId] = {};
     for (const item10009 of channels) {
-      let tmp = dependencyMap;
       dependencyMap[guildId][item10009.id] = item10009.status;
       continue;
     }
@@ -61,6 +59,7 @@ const channelStatusStore = new ChannelStatusStore(dispatcherDefault, {
     set.add(guildId.guildId);
   },
 });
-const result = set.fileFinishedImporting("modules/channel/ChannelStatusStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/channel/ChannelStatusStore.tsx");
 
 export default channelStatusStore;

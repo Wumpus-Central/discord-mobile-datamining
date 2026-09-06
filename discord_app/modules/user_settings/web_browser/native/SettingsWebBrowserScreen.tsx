@@ -1,21 +1,23 @@
 // discord_app/modules/user_settings/web_browser/native/SettingsWebBrowserScreen.tsx
-import _modDef14689 from "../../../settings/native/renderer/SettingLayout.tsx";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
-import { MobileUserSettings } from "../../core/native/SettingsConstants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayout.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let c3 = importAllResult;
-const memoResult = importAllResult.memo(function SettingsWebBrowserScreen() {
-  const node = importAllResult.useMemo(() => {
+require = fn;
+const MobileUserSettings = fn(7975).MobileUserSettings;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/web_browser/native/SettingsWebBrowserScreen.tsx");
+
+export default noop.memo(function SettingsWebBrowserScreen() {
+  const node = noop.useMemo(() => {
+    let obj = { sections: null };
+    obj = { settings: null };
     const items = [constants.SELECT_WEB_BROWSER];
-    const sections = [{ settings: items }];
-    return callback(table[3]).createList({ sections });
+    obj.settings = items;
+    const items1 = [obj];
+    obj.sections = items1;
+    return obj.createList(obj);
   }, []);
-  return jsx(_modDef14689, { node });
+  return jsx(SettingLayoutDefault, { node });
 });
-const result = require("set").fileFinishedImporting(
-  "modules/user_settings/web_browser/native/SettingsWebBrowserScreen.tsx",
-);
-
-export default memoResult;

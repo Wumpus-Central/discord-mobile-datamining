@@ -1,14 +1,12 @@
 // discord_app/modules/user_offers/records/UserTrialOfferRecord.tsx
-import toJSDefault from "../../../lib/Record.tsx";
-import closure_0 from "../../billing/records/SubscriptionTrialRecord.tsx";
-import { PREMIUM_TIER_2_REFERRAL_TRIAL_ID as closure_1 } from "../../premium/PremiumConstants.tsx";
+import Record from "../../../lib/Record.tsx";
+import SubscriptionTrialRecord from "../../billing/records/SubscriptionTrialRecord.tsx";
 
-toJSDefault;
+let closure_1 = fn(1373).PREMIUM_TIER_2_REFERRAL_TRIAL_ID;
 let UserTrialOfferRecord;
 class UserTrialOfferRecord extends tmp2 {
   constructor(arg0) {
     tmp = new UserTrialOfferRecord(new.target, new.target, global);
-    // ThrowIfThisInitialized (0x7c)
     ({ id: tmp.id, userId: tmp.userId, trialId: tmp.trialId, expiresAt } = global);
     if (expiresAt == null) {
       expiresAt = null;
@@ -55,56 +53,56 @@ UserTrialOfferRecord["createFromServer"] = function createFromServer(expires_at)
   }
   let fromServer = null;
   if (null != expires_at.subscription_trial) {
-    let _Date2 = closure_0;
-    fromServer = closure_0.createFromServer(expires_at.subscription_trial);
+    let _Date2 = SubscriptionTrialRecord;
+    fromServer = SubscriptionTrialRecord.createFromServer(expires_at.subscription_trial);
   }
   let date1 = null;
   if (null != expires_at.redeemed_at) {
     _Date2 = Date;
     date1 = new Date(expires_at.redeemed_at);
-    const tmp9 = new.target;
+    const tmp10 = new.target;
   }
-  if (typeof UserTrialOfferRecord !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof UserTrialOfferRecord === "function") {
+    const tmp17 = new UserTrialOfferRecord(
+      tmp4,
+      _Date2,
+      tmp10,
+      tmp,
+      new.target,
+      id,
+      user_id,
+      trial_id,
+      date,
+      referrer_id,
+      referrer,
+    );
+    tmp17.id = id;
+    tmp17.userId = user_id;
+    tmp17.trialId = trial_id;
+    if (date == null) {
+      date = null;
+    }
+    tmp17.expiresAt = date;
+    if (referrer_id == null) {
+      referrer_id = null;
+    }
+    tmp17.referrerId = referrer_id;
+    if (referrer == null) {
+      referrer = null;
+    }
+    tmp17.referrer = referrer;
+    if (fromServer == null) {
+      fromServer = null;
+    }
+    tmp17.subscriptionTrial = fromServer;
+    if (date1 == null) {
+      date1 = null;
+    }
+    tmp17.redeemedAt = date1;
+    return tmp17;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const tmp13 = new UserTrialOfferRecord(
-    str,
-    _Date2,
-    tmp9,
-    UserTrialOfferRecord,
-    new.target,
-    id,
-    user_id,
-    trial_id,
-    date,
-    referrer_id,
-    referrer,
-  );
-  // ThrowIfThisInitialized (0x7c)
-  tmp13.id = id;
-  tmp13.userId = user_id;
-  tmp13.trialId = trial_id;
-  if (date == null) {
-    date = null;
-  }
-  tmp13.expiresAt = date;
-  if (referrer_id == null) {
-    referrer_id = null;
-  }
-  tmp13.referrerId = referrer_id;
-  if (referrer == null) {
-    referrer = null;
-  }
-  tmp13.referrer = referrer;
-  if (fromServer == null) {
-    fromServer = null;
-  }
-  tmp13.subscriptionTrial = fromServer;
-  if (date1 == null) {
-    date1 = null;
-  }
-  tmp13.redeemedAt = date1;
-  return tmp13;
 };
 Object.defineProperty(prototype, "hasExpired", {
   get: function hasExpired() {
@@ -141,6 +139,7 @@ Object.defineProperty(prototype, "isReferralTrial", {
   },
   set: undefined,
 });
-const result = require("set").fileFinishedImporting("modules/user_offers/records/UserTrialOfferRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_offers/records/UserTrialOfferRecord.tsx");
 
 export default UserTrialOfferRecord;

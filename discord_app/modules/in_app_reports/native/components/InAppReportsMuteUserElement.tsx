@@ -1,28 +1,29 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsMuteUserElement.tsx
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
-import closure_5 from "../../../../stores/ChannelStore.tsx";
-import { AnalyticEvents } from "../../../../Constants.tsx";
-import { MuteUntilSeconds } from "../../../user_settings/UserSettingsConstants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import NicknameUtilsDefault from "../../../../utils/NicknameUtils.tsx";
+import AppAnalyticsUtilsDefault from "../../../app_analytics/AppAnalyticsUtils.tsx";
+import SafetyToastsActionCreatorsDefault from "../../../safety_common/SafetyToastsActionCreators.native.tsx";
+import MuteSettingsUtils from "../../../main_tabs_v2/native/sidebar/details/screens/MuteSettingsUtils.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting(
-  "modules/in_app_reports/native/components/InAppReportsMuteUserElement.tsx",
-);
+require = fn;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const MuteUntilSeconds = fn(1084).MuteUntilSeconds;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsMuteUserElement.tsx");
 
 export default function MuteUserElement(user) {
   user = user.user;
   const channelId = user.channelId;
   const reportId = user.reportId;
-  let dMFromUserId;
-  let stateFromStores;
-  dMFromUserId = undefined;
-  dMFromUserId = dMFromUserId.getDMFromUserId(user.id);
+  ChannelStore = undefined;
+  const dMFromUserId = ChannelStore.getDMFromUserId(user.id);
   let obj = user(reportId[6]);
-  const items = [dMFromUserId];
+  const items = [ChannelStore];
   const items1 = [channelId];
-  stateFromStores = obj.useStateFromStores(items, () => channel.getChannel(channelId), items1);
+  const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
   const items2 = [stateFromStores, user];
   const memo = stateFromStores.useMemo(() => {
     let guild_id;
@@ -33,33 +34,31 @@ export default function MuteUserElement(user) {
     if (stateFromStores != null) {
       id = tmp.id;
     }
-    return channelId(reportId[7]).getName(guild_id, id, user);
+    return NicknameUtilsDefault.getName(guild_id, id, user);
   }, items2);
   const items3 = [dMFromUserId];
-  let flag = stateFromStores.useMemo(() => user(reportId[8]).getMuteSettings(dMFromUserId), items3).muted;
+  let flag = stateFromStores.useMemo(() => MuteSettingsUtils.getMuteSettings(dMFromUserId), items3).muted;
   if (flag == null) {
     flag = false;
   }
   const tmp7 = dMFromUserId(stateFromStores.useState(flag), 2);
-  dMFromUserId = tmp7[1];
+  ChannelStore = tmp7[1];
   const items4 = [dMFromUserId, channelId, user, reportId];
   let tmp9 = null;
   if (null != user) {
     obj = { title: null, disabledTitle: null, description: null, disabled: null, onPress: null, icon: null };
     const intl = tmp2(tmp3[12]).intl;
-    obj = { username: null };
-    obj[0] = memo;
-    obj[0] = intl.formatToPlainString(tmp2(tmp3[12]).t.TRp5wR, obj);
+    obj = { username: memo };
+    obj.title = intl.formatToPlainString(tmp2(tmp3[12]).t.TRp5wR, obj);
     const intl2 = tmp2(tmp3[12]).intl;
-    obj1 = { username: null };
-    obj1[0] = memo;
-    obj[1] = intl2.formatToPlainString(tmp2(tmp3[12]).t.raALhx, obj1);
+    const obj1 = { username: memo };
+    obj.disabledTitle = intl2.formatToPlainString(tmp2(tmp3[12]).t.raALhx, obj1);
     const intl3 = tmp2(tmp3[12]).intl;
-    obj[2] = intl3.string(tmp2(tmp3[12]).t["yM/+AJ"]);
-    obj[3] = tmp7[0];
-    obj[4] = tmp8;
-    obj[5] = jsx(tmp2(tmp3[13]).BellSlashIcon, {});
-    tmp9 = jsx(channelId(tmp3[11]), { username: null });
+    obj.description = intl3.string(tmp2(tmp3[12]).t["yM/+AJ"]);
+    obj.disabled = tmp7[0];
+    obj.onPress = tmp8;
+    obj.icon = jsx(tmp2(tmp3[13]).BellSlashIcon, {});
+    tmp9 = jsx(channelId(tmp3[11]), { username: memo });
     const tmp12 = channelId(tmp3[11]);
   }
   return tmp9;

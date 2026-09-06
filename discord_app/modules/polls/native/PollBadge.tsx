@@ -1,41 +1,42 @@
 // discord_app/modules/polls/native/PollBadge.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import Button from "../../../design/void/native.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
-import registerAssetDefault from "../../../../_runtime/16672_registerAsset.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
+import native from "../../../design/void/native.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import _modDef16672 from "../../../../_runtime/metro/16672__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: null, text: null };
-createCacheKey = {
-  borderRadius: ThemesDefault.radii.round,
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+fn(4560);
+let createStyles = { container: null, text: null };
+createStyles = {
+  borderRadius: nativeDefault.radii.round,
   paddingHorizontal: 8,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
-  color: ThemesDefault.colors.TEXT_MUTED,
+  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
+  color: nativeDefault.colors.TEXT_MUTED,
   flexDirection: "row",
   alignItems: "center",
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginLeft: 4, textTransform: "uppercase" };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/polls/native/PollBadge.tsx");
+createStyles.container = createStyles;
+createStyles.text = { marginLeft: 4, textTransform: "uppercase" };
+let closure_6 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/polls/native/PollBadge.tsx");
 
 export default function PollBadge(style) {
-  const tmp = callback3();
-  let obj = { style: items, children: null };
-  items = [tmp.container, style.style];
-  obj = { size: Button.IconSizes.EXTRA_SMALL_10, source: registerAssetDefault };
-  const items1 = [callback(Button.Icon, obj)];
+  const tmp = closure_6();
+  let obj = { style: null, children: null };
+  const items = [tmp.container, style.style];
+  obj.style = items;
+  obj = { size: native.IconSizes.EXTRA_SMALL_10, source: _modDef16672 };
+  const items1 = [React4(native.Icon, obj)];
   obj = { style: tmp.text, variant: "text-xs/semibold", children: null };
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.string(getSystemLocale.t.RgIi2B);
-  items1[1] = callback(Text.Text, obj);
-  obj[1] = items1;
-  return callback2(View, obj);
+  const intl = util.intl;
+  obj.children = intl.string(util.t.RgIi2B);
+  items1[1] = React4(Text_Text.Text, obj);
+  obj.children = items1;
+  return hasOwnProperty(View, obj);
 }

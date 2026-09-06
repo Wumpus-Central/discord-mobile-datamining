@@ -1,13 +1,13 @@
 // discord_app/modules/user_profile/WidgetStore.tsx
-import applyDefault from "../../../_runtime/00012_apply.js";
+import _modDef12 from "../../../_runtime/metro/00012__.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import isDiscordFrontendDevelopment from "../../utils/GlobalUtils.tsx";
-import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../stores/UserStore.tsx";
-import closure_5 from "UserProfileStore.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import GlobalUtils from "../../utils/GlobalUtils.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import UserStore from "../../stores/UserStore.tsx";
+import UserProfileStore from "UserProfileStore.tsx";
 
-require = arg1;
+require = fn;
 let c6 = null;
 let c7 = null;
 let c8 = false;
@@ -19,7 +19,7 @@ const Store = initializeDefault.Store;
 class WidgetStore extends Store {}
 const prototype = WidgetStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_4);
+  this.waitFor(UserStore);
 };
 prototype["getPendingWidgets"] = function getPendingWidgets() {
   return c6;
@@ -29,21 +29,20 @@ prototype["getSaveablePendingWidgets"] = function getSaveablePendingWidgets() {
   if (null != _null) {
     const mapped = _null.map((isUpdatable) => {
       let tmp = isUpdatable;
-      closure_0 = isUpdatable;
       if (!isUpdatable.isUpdatable()) {
         let found;
-        if (closure_7 != null) {
+        if (_null2 != null) {
           found = arr.find((getUniqueKey) => {
             const uniqueKey = getUniqueKey.getUniqueKey();
             return uniqueKey === isUpdatable.getUniqueKey();
           });
         }
         tmp = found;
-        arr = closure_7;
+        arr = _null2;
       }
       return tmp;
     });
-    let found = mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
+    let found = mapped.filter(GlobalUtils.isNotNullish);
     found1 = found.filter((isDiscardable) => !isDiscardable.isDiscardable());
   }
   return found1;
@@ -53,8 +52,7 @@ prototype["hasPendingChanges"] = function hasPendingChanges() {
   if (tmp) {
     let tmp3 = null === c7;
     if (!tmp3) {
-      tmp3 = !applyDefault.isEqual(c6, c7);
-      const obj = applyDefault;
+      tmp3 = !_modDef12.isEqual(c6, c7);
     }
     tmp = tmp3;
   }
@@ -82,28 +80,22 @@ prototype["getWidgetUpdates"] = function getWidgetUpdates() {
       const items1 = [];
       const tmp37 = map1[Symbol.iterator]();
       while (tmp37 !== undefined) {
-        let tmp4 = callback;
-        let tmp5 = callback(tmp2, 2);
+        let tmp5 = _slicedToArray(tmp2, 2);
         let obj = tmp5[1];
-        let value = map.get(tmp5[0]);
+        value = map.get(tmp5[0]);
         let isEqualResult = null != value;
         if (isEqualResult) {
-          let tmp9 = obj;
-          let tmp10 = value;
           isEqualResult = obj.isEqual(tmp7);
         }
         if (!isEqualResult) {
-          let tmp11 = obj;
           let arr = items.push(obj);
         }
         continue;
       }
       for (const item10029 of tmp32) {
-        let tmp15 = callback;
-        let tmp16 = callback(item10029, 2);
+        let tmp16 = _slicedToArray(item10029, 2);
         let tmp17 = tmp16[1];
         if (!map1.has(tmp16[0])) {
-          let tmp18 = tmp17;
           arr = items1.push(tmp17);
         }
         continue;
@@ -113,12 +105,10 @@ prototype["getWidgetUpdates"] = function getWidgetUpdates() {
       if (0 < changedWidgets.length) {
         while (true) {
           let tmp20 = changedWidgets[num];
-          let tmp21 = num;
           let id;
           if (tmp20 != null) {
             id = tmp20.id;
           }
-          let tmp23 = _null2;
           let tmp24 = _null2[num];
           let id1;
           if (tmp24 != null) {
@@ -137,10 +127,7 @@ prototype["getWidgetUpdates"] = function getWidgetUpdates() {
           }
         }
       }
-      obj = { changedWidgets: null, removedWidgets: null, hasOrderChanges: null };
-      obj[0] = items;
-      obj[1] = items1;
-      obj[2] = flag;
+      obj = { changedWidgets: items, removedWidgets: items1, hasOrderChanges: flag };
       return obj;
     }
   }
@@ -204,13 +191,13 @@ Object.defineProperty(prototype, "suggestedGameIds", {
   },
   set: undefined,
 });
-const widgetStore = new WidgetStore(dispatcherDefault, {
+const widgetStore = new WidgetStore(DispatcherDefault, {
   WIDGET_PENDING_SET: function handleSetPendingWidgets(widgets) {
-    widgets = widgets.widgets;
-    if (null === widgets) {
-      currentUser = currentUser.getCurrentUser();
+    const widgets2 = widgets.widgets;
+    if (null === c7) {
+      const currentUser = UserStore.getCurrentUser();
       if (null != currentUser) {
-        userProfile = userProfile.getUserProfile(currentUser.id);
+        const userProfile = UserProfileStore.getUserProfile(currentUser.id);
         widgets = undefined;
         if (userProfile != null) {
           widgets = userProfile.widgets;
@@ -218,6 +205,7 @@ const widgetStore = new WidgetStore(dispatcherDefault, {
         if (widgets == null) {
           widgets = [];
         }
+        c7 = widgets;
       }
     }
   },
@@ -258,11 +246,12 @@ const widgetStore = new WidgetStore(dispatcherDefault, {
   WIDGET_SUGGESTED_REMOVE_GAME: function handleRemoveApplicationIdFromSuggestedGames(applicationId) {
     applicationId = applicationId.applicationId;
     const suggestedGamesIds = closure_9.suggestedGamesIds;
-    closure_9.suggestedGamesIds = suggestedGamesIds.filter((arg0) => arg0 !== applicationId);
+    closure_9.suggestedGamesIds = suggestedGamesIds.filter((item) => item !== applicationId);
     const prop = closure_9.suggestedWishlistGamesIds;
-    closure_9.suggestedWishlistGamesIds = prop.filter((arg0) => arg0 !== applicationId);
+    closure_9.suggestedWishlistGamesIds = prop.filter((item) => item !== applicationId);
   },
 });
-const result = require("set").fileFinishedImporting("modules/user_profile/WidgetStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/WidgetStore.tsx");
 
 export default widgetStore;

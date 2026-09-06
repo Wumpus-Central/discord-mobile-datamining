@@ -1,18 +1,19 @@
 // discord_app/modules/media_viewer/native/useMediaModalFooterAction.tsx
-import set from "../../../../_runtime/00002_set.js";
-import batchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import keys from "../../../../_runtime/00560_keys.js";
+import ReactBatchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
+import 00560__ from "../../../../_runtime/metro/00560__.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const obj = keys.create(() => ({}));
-const result = set.fileFinishedImporting("modules/media_viewer/native/useMediaModalFooterAction.tsx");
+const useMediaModalFooterActionStore = module_560.create(() => ({}));
+const result = size.fileFinishedImporting("modules/media_viewer/native/useMediaModalFooterAction.tsx");
 
-export const useMediaModalFooterActionStore = obj;
-export const setMediaModalFooterAction = function setMediaModalFooterAction(arg0) {
-  const _require = arg0;
-  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() =>
-    closure_1_2.setState({ footerAction: closure_0 }),
-  );
+export { useMediaModalFooterActionStore };
+export const setMediaModalFooterAction = function setMediaModalFooterAction(footerAction) {
+  _require = footerAction;
+  require("ReactBatchUpdates").batchUpdates(() => {
+    const obj = { footerAction };
+    return obj.setState(obj);
+  });
 };
 export const clearMediaModalFooterAction = function clearMediaModalFooterAction() {
-  batchUpdates.batchUpdates(() => state.setState({ footerAction: "Array" }));
+  ReactBatchUpdates.batchUpdates(() => state.setState({ footerAction: "Array" }));
 };

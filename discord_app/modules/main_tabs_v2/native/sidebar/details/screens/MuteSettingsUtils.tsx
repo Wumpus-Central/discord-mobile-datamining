@@ -1,39 +1,38 @@
 // discord_app/modules/main_tabs_v2/native/sidebar/details/screens/MuteSettingsUtils.tsx
-import getSystemLocale from "../../../../../../intl/index.native.tsx";
-import computeChannelName from "../../../../../channel/useChannelName.tsx";
-import UserNotificationSettings from "../../../../../../utils/NotificationSettingsUtils.tsx";
-import _modDef7119 from "../../../../../../actions/NotificationSettingsModalActionCreators.tsx";
-import getMuteSettingsAll from "../../../../../channel/ChannelMuteUtils.tsx";
-import closure_4 from "../../../../../threads/JoinedThreadsStore.tsx";
-import closure_5 from "../../../../../../stores/ChannelStore.tsx";
-import closure_6 from "../../../../../../stores/GuildStore.tsx";
-import closure_7 from "../../../../../../stores/RelationshipStore.tsx";
-import closure_8 from "../../../../../../stores/UserGuildSettingsStore.tsx";
-import closure_9 from "../../../../../../stores/UserStore.tsx";
-import ME from "../../../../../../Constants.tsx";
-import { MuteUntilSeconds } from "../../../../../user_settings/UserSettingsConstants.tsx";
+import util from "../../../../../../intl/index.native.tsx";
+import useChannelName from "../../../../../channel/useChannelName.tsx";
+import NotificationSettingsUtils from "../../../../../../utils/NotificationSettingsUtils.tsx";
+import NotificationSettingsModalActionCreatorsDefault from "../../../../../../actions/NotificationSettingsModalActionCreators.tsx";
+import ChannelMuteUtilsAll from "../../../../../channel/ChannelMuteUtils.tsx";
+import JoinedThreadsStore from "../../../../../threads/JoinedThreadsStore.tsx";
+import ChannelStore from "../../../../../../stores/ChannelStore.tsx";
+import GuildStore from "../../../../../../stores/GuildStore.tsx";
+import RelationshipStore from "../../../../../../stores/RelationshipStore.tsx";
+import UserGuildSettingsStore from "../../../../../../stores/UserGuildSettingsStore.tsx";
+import UserStore from "../../../../../../stores/UserStore.tsx";
 
-require = arg1;
-({ ChannelTypes: c10, UserNotificationSettings: unpackModuleId } = ME);
-let result = require("set").fileFinishedImporting(
-  "modules/main_tabs_v2/native/sidebar/details/screens/MuteSettingsUtils.tsx",
-);
+require = fn;
+const Constants = fn(1074);
+({ ChannelTypes: c10, UserNotificationSettings: closure_11 } = Constants);
+const MuteUntilSeconds = fn(1084).MuteUntilSeconds;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/screens/MuteSettingsUtils.tsx");
 
 export const getMuteSettingLabel = function getMuteSettingLabel(channel, guild) {
   if (null != channel) {
     if (channel.isPrivate()) {
-      const intl5 = getSystemLocale.intl;
-      let stringResult = intl5.string(getSystemLocale.t["Z/uD9+"]);
+      const intl5 = util.intl;
+      let stringResult = intl5.string(util.t["Z/uD9+"]);
     } else if (channel.type === constants.GUILD_CATEGORY) {
-      const intl4 = getSystemLocale.intl;
-      stringResult = intl4.string(getSystemLocale.t.Z33kYz);
+      const intl4 = util.intl;
+      stringResult = intl4.string(util.t.Z33kYz);
     } else if (channel.isForumPost()) {
-      const intl3 = getSystemLocale.intl;
-      stringResult = intl3.string(getSystemLocale.t.lbN8mz);
+      const intl3 = util.intl;
+      stringResult = intl3.string(util.t.lbN8mz);
     } else {
-      const intl2 = getSystemLocale.intl;
+      const intl2 = util.intl;
       const string = intl2.string;
-      const t = getSystemLocale.t;
+      const t = util.t;
       if (isThreadResult) {
         stringResult = string(t["wR+Fuo"]);
       } else {
@@ -44,23 +43,23 @@ export const getMuteSettingLabel = function getMuteSettingLabel(channel, guild) 
   } else {
     let stringResult1;
     if (null != guild) {
-      const intl = getSystemLocale.intl;
-      stringResult1 = intl.string(getSystemLocale.t.mvxGko);
+      const intl = util.intl;
+      stringResult1 = intl.string(util.t.mvxGko);
     }
     return stringResult1;
   }
 };
 export const getMuteSettingSublabel = function getMuteSettingSublabel(channel, guild) {
   if (null != channel) {
-    const obj = computeChannelName;
-    let name = obj.computeChannelName(channel, closure_9, closure_7, true);
+    const obj = useChannelName;
+    let name = obj.computeChannelName(channel, UserStore, RelationshipStore, true);
   } else if (null != guild) {
     name = guild.name;
   }
   return name;
 };
 export const handleUnmutePress = function handleUnmutePress(channelId, guildId) {
-  const channel = store.getChannel(channelId);
+  const channel = ChannelStore.getChannel(channelId);
   if (null != channel) {
     if (channel.isThread()) {
       let tmp7Result = tmp7(7765);
@@ -71,7 +70,7 @@ export const handleUnmutePress = function handleUnmutePress(channelId, guildId) 
         guildId,
         channel.id,
         { muted: false, mute_config: null },
-        UserNotificationSettings.NotificationLabels.Unmuted,
+        NotificationSettingsUtils.NotificationLabels.Unmuted,
       );
     }
   }
@@ -79,9 +78,9 @@ export const handleUnmutePress = function handleUnmutePress(channelId, guildId) 
 export const handleMuteSettingPress = function handleMuteSettingPress(arg0) {
   ({ guildId, onOptionPress } = arg0);
   ({ channelId, muteDurationSeconds } = arg0);
-  const muteSettings = getMuteSettingsAll.getMuteSettings(muteDurationSeconds);
-  const channel = store.getChannel(channelId);
-  guild = guild.getGuild(guildId);
+  const muteSettings = ChannelMuteUtilsAll.getMuteSettings(muteDurationSeconds);
+  const channel = ChannelStore.getChannel(channelId);
+  const guild = GuildStore.getGuild(guildId);
   if (null != onOptionPress) {
     onOptionPress(muteSettings);
   } else if (null != channel) {
@@ -94,93 +93,87 @@ export const handleMuteSettingPress = function handleMuteSettingPress(arg0) {
         guildId,
         channel.id,
         muteSettings,
-        UserNotificationSettings.NotificationLabels.Muted,
+        NotificationSettingsUtils.NotificationLabels.Muted,
       );
     }
   } else if (null != guild) {
-    const result2 = _modDef7119.updateGuildNotificationSettings(
+    const result2 = NotificationSettingsModalActionCreatorsDefault.updateGuildNotificationSettings(
       guild.id,
       muteSettings,
-      UserNotificationSettings.NotificationLabels.Muted,
+      NotificationSettingsUtils.NotificationLabels.Muted,
     );
-    const obj5 = _modDef7119;
   }
 };
 export const getMuteSettings = function getMuteSettings(arg0) {
-  let id = store.getChannel(arg0);
+  let id = ChannelStore.getChannel(arg0);
   if (null == id) {
     const obj = {
-      muteConfig: null,
-      muted: null,
-      messageNotifications: null,
-      guildMuted: null,
-      guildMessageNotifications: null,
+      muteConfig: undefined,
+      muted: undefined,
+      messageNotifications: undefined,
+      guildMuted: undefined,
+      guildMessageNotifications: undefined,
     };
-    obj[0] = undefined;
-    obj[1] = undefined;
-    obj[2] = undefined;
-    obj[3] = undefined;
-    obj[4] = undefined;
     return obj;
   } else {
     const guildId = id.getGuildId();
     if (id.isThread()) {
-      let muteConfig = closure_4.getMuteConfig(id.id);
-      let isMutedResult = closure_4.isMuted(id.id);
+      let muteConfig = JoinedThreadsStore.getMuteConfig(id.id);
+      let isMutedResult = JoinedThreadsStore.isMuted(id.id);
     } else {
-      muteConfig = store2.getChannelMuteConfig(guildId, id.id);
-      isMutedResult = store2.isChannelMuted(guildId, id.id);
+      muteConfig = UserGuildSettingsStore.getChannelMuteConfig(guildId, id.id);
+      isMutedResult = UserGuildSettingsStore.isChannelMuted(guildId, id.id);
     }
     id = id.id;
-    const channelMessageNotifications = store2.getChannelMessageNotifications(guildId, id);
-    store2.isMuted(guildId);
-    const messageNotifications = store2.getMessageNotifications(guildId);
+    const channelMessageNotifications = UserGuildSettingsStore.getChannelMessageNotifications(guildId, id);
+    UserGuildSettingsStore.isMuted(guildId);
+    const messageNotifications = UserGuildSettingsStore.getMessageNotifications(guildId);
   }
 };
 export const getMessageNotificationsText = function getMessageNotificationsText(messageNotifications) {
   if (constants2.ALL_MESSAGES === messageNotifications) {
-    const intl3 = getSystemLocale.intl;
-    return intl3.string(getSystemLocale.t.DZi15z);
+    const intl3 = util.intl;
+    return intl3.string(util.t.DZi15z);
   } else if (tmp.ONLY_MENTIONS === messageNotifications) {
-    const intl2 = getSystemLocale.intl;
-    return intl2.string(getSystemLocale.t.xGICju);
+    const intl2 = util.intl;
+    return intl2.string(util.t.xGICju);
   } else if (tmp.NO_MESSAGES === messageNotifications) {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.CtVGyQ);
+    const intl = util.intl;
+    return intl.string(util.t.CtVGyQ);
   } else {
     return null;
   }
 };
 export const getMuteOptions = function getMuteOptions() {
   let obj = { label: null, duration: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t["8ot6gv"]);
-  obj[1] = MuteUntilSeconds.MINUTES_15;
+  const intl = util.intl;
+  obj.label = intl.string(util.t["8ot6gv"]);
+  obj.duration = MuteUntilSeconds.MINUTES_15;
   const items = [obj, , , , ,];
   obj = { label: null, duration: null };
-  const intl2 = getSystemLocale.intl;
-  obj[0] = intl2.string(getSystemLocale.t.UMWBZr);
-  obj[1] = MuteUntilSeconds.HOURS_1;
+  const intl2 = util.intl;
+  obj.label = intl2.string(util.t.UMWBZr);
+  obj.duration = MuteUntilSeconds.HOURS_1;
   items[1] = obj;
   obj = { label: null, duration: null };
-  const intl3 = getSystemLocale.intl;
-  obj[0] = intl3.string(getSystemLocale.t.QmYWtu);
-  obj[1] = MuteUntilSeconds.HOURS_3;
+  const intl3 = util.intl;
+  obj.label = intl3.string(util.t.QmYWtu);
+  obj.duration = MuteUntilSeconds.HOURS_3;
   items[2] = obj;
-  obj1 = { label: null, duration: null };
-  const intl4 = getSystemLocale.intl;
-  obj1[0] = intl4.string(getSystemLocale.t.EpAXPC);
-  obj1[1] = MuteUntilSeconds.HOURS_8;
+  const obj1 = { label: null, duration: null };
+  const intl4 = util.intl;
+  obj1.label = intl4.string(util.t.EpAXPC);
+  obj1.duration = MuteUntilSeconds.HOURS_8;
   items[3] = obj1;
   const obj2 = { label: null, duration: null };
-  const intl5 = getSystemLocale.intl;
-  obj2[0] = intl5.string(getSystemLocale.t["755t4q"]);
-  obj2[1] = MuteUntilSeconds.HOURS_24;
+  const intl5 = util.intl;
+  obj2.label = intl5.string(util.t["755t4q"]);
+  obj2.duration = MuteUntilSeconds.HOURS_24;
   items[4] = obj2;
   const obj3 = { label: null, duration: null };
-  const intl6 = getSystemLocale.intl;
-  obj3[0] = intl6.string(getSystemLocale.t.r3LawO);
-  obj3[1] = MuteUntilSeconds.ALWAYS;
+  const intl6 = util.intl;
+  obj3.label = intl6.string(util.t.r3LawO);
+  obj3.duration = MuteUntilSeconds.ALWAYS;
   items[5] = obj3;
   return items;
 };

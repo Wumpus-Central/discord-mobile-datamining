@@ -1,30 +1,29 @@
 // discord_app/modules/shared_space_warnings/SharedSpacesWarningManager.tsx
-import setDefault from "../../utils/Durations.tsx";
-import keys from "../../ConstantsIOS.tsx";
-import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import DurationsDefault from "../../utils/Durations.tsx";
+import ConstantsIOS from "../../ConstantsIOS.tsx";
 import showGdmBlockedUserModal from "show_gdm_modal/showGdmBlockedUserModal.native.tsx";
 import showVoiceChannelBlockedUserWarning from "show_voice_channel_warning/showVoiceChannelBlockedUserWarning.native.tsx";
-import closure_2 from "../../stores/ChannelStore.tsx";
-import closure_3 from "../../stores/RTCConnectionStore.tsx";
-import closure_4 from "../../stores/RelationshipStore.tsx";
-import useSharedSpacesWarningStore from "SharedSpacesWarningStore.tsx";
-import closure_10 from "VoiceChannelBlockedUserStore.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
+import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
+import RelationshipStore from "../../stores/RelationshipStore.tsx";
+import VoiceChannelBlockedUserStore from "VoiceChannelBlockedUserStore.tsx";
+import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
-require = arg1;
+require = fn;
 function handleChannelSelect(channelId) {
   channelId = channelId.channelId;
   if (null != channelId) {
-    const channel = store.getChannel(channelId);
+    const channel = ChannelStore.getChannel(channelId);
     if (null != channel) {
       if (channel.isGroupDM()) {
         const recipients = channel.recipients;
-        const found = recipients.filter((arg0) => closure_4.isBlocked(arg0));
+        const found = recipients.filter((item) => RelationshipStore.isBlocked(item));
         const recipients1 = channel.recipients;
-        const found1 = recipients1.filter((arg0) => closure_4.isIgnored(arg0));
+        const found1 = recipients1.filter((item) => RelationshipStore.isIgnored(item));
         if (tmp) {
           let blockedUserWarningDismissed = channel.blockedUserWarningDismissed;
           if (!blockedUserWarningDismissed) {
-            let num2 = callback(channelId);
+            let num2 = hasOwnProperty(channelId);
             if (num2 == null) {
               num2 = 0;
             }
@@ -32,11 +31,7 @@ function handleChannelSelect(channelId) {
             blockedUserWarningDismissed = num2 > Date.now() - closure_11;
           }
           if (!blockedUserWarningDismissed) {
-            let obj = showGdmBlockedUserModal;
-            obj = { channelId: null, blockedUserIds: null, ignoredUserIds: null };
-            obj[0] = channelId;
-            obj[1] = found;
-            obj[2] = found1;
+            const obj = { channelId, blockedUserIds: found, ignoredUserIds: found1 };
             const result = obj.showGdmBlockedUserModal(obj);
           }
         }
@@ -46,13 +41,13 @@ function handleChannelSelect(channelId) {
   }
 }
 function handleAppStateChanged(state) {
-  if (state.state === keys.AppStates.ACTIVE) {
-    const channelId = store2.getChannelId();
+  if (state.state === ConstantsIOS.AppStates.ACTIVE) {
+    const channelId = RTCConnectionStore.getChannelId();
     if (null != channelId) {
-      const blockedUsersForVoiceChannel = authStore.getBlockedUsersForVoiceChannel(channelId);
-      const ignoredUsersForVoiceChannel = authStore.getIgnoredUsersForVoiceChannel(channelId);
+      const blockedUsersForVoiceChannel = VoiceChannelBlockedUserStore.getBlockedUsersForVoiceChannel(channelId);
+      const ignoredUsersForVoiceChannel = VoiceChannelBlockedUserStore.getIgnoredUsersForVoiceChannel(channelId);
       if (blockedUsersForVoiceChannel.size > 0) {
-        if (callback4()) {
+        if (React6()) {
           const _Set = Set;
           const items = [];
           HermesBuiltin.arraySpread(
@@ -60,7 +55,7 @@ function handleAppStateChanged(state) {
             HermesBuiltin.arraySpread(blockedUsersForVoiceChannel, 0),
           );
           const set = new Set(items);
-          let num3 = callback3();
+          let num3 = React5();
           if (num3 == null) {
             num3 = 0;
           }
@@ -68,15 +63,15 @@ function handleAppStateChanged(state) {
           let everyResult = num3 > Date.now() - HOUR;
           if (!everyResult) {
             const _Array = Array;
-            everyResult = Array.from(set).every((arg0) => {
+            everyResult = Array.from(set).every((item) => {
               let flag = false;
               {
-                let num = callback(arg0);
+                let num = closure_1_6(item);
                 if (num == null) {
                   num = 0;
                 }
                 const _Date = Date;
-                flag = num > Date.now() - closure_12;
+                flag = num > Date.now() - closure_1_12;
               }
               return flag;
             });
@@ -93,23 +88,23 @@ function handleAppStateChanged(state) {
           }
         }
       }
-      callback5();
+      React7();
     } else {
-      callback5();
+      React7();
     }
   }
 }
+const SharedSpacesWarningStore = fn(13734);
 ({
-  getChannelDismissTimestamp: c5,
-  getUserDismissTimestamp: closure_6,
-  getGlobalDismissTimestamp: error,
+  getChannelDismissTimestamp: hasOwnProperty,
+  getUserDismissTimestamp: metroRequire,
+  getGlobalDismissTimestamp: closure_7,
   isBlockedWarningQueued: closure_8,
-  dequeueBlockWarning: c9,
-} = useSharedSpacesWarningStore);
-let closure_11 = 3 * setDefault.Millis.DAY;
-let closure_12 = 2 * setDefault.Millis.DAY;
-const HOUR = setDefault.Millis.HOUR;
-initializeDefault;
+  dequeueBlockWarning: closure_9,
+} = SharedSpacesWarningStore);
+let closure_11 = 3 * DurationsDefault.Millis.DAY;
+let closure_12 = 2 * DurationsDefault.Millis.DAY;
+const HOUR = DurationsDefault.Millis.HOUR;
 class SharedSpacesWarningManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -119,11 +114,11 @@ class SharedSpacesWarningManager extends tmp3 {
   }
 }
 SharedSpacesWarningManager.prototype["handleBlockedOrIgnoredUserVoiceChannelJoin"] =
-  function handleBlockedOrIgnoredUserVoiceChannelJoin(channelId, id) {
-    channelId = store2.getChannelId();
+  function handleBlockedOrIgnoredUserVoiceChannelJoin(channelId, userId) {
+    channelId = RTCConnectionStore.getChannelId();
     if (channelId === channelId) {
-      if (null != store.getChannel(channelId)) {
-        let num = callback3();
+      if (null != ChannelStore.getChannel(channelId)) {
+        let num = React5();
         if (num == null) {
           num = 0;
         }
@@ -131,7 +126,7 @@ SharedSpacesWarningManager.prototype["handleBlockedOrIgnoredUserVoiceChannelJoin
         const tmp5 = num <= Date.now() - HOUR;
         let tmp6 = !tmp5;
         if (tmp5) {
-          let num2 = callback2(id);
+          let num2 = timestampProducer(userId);
           if (num2 == null) {
             num2 = 0;
           }
@@ -139,33 +134,33 @@ SharedSpacesWarningManager.prototype["handleBlockedOrIgnoredUserVoiceChannelJoin
           tmp6 = num2 > Date.now() - closure_12;
         }
         if (!tmp6) {
-          const result = showVoiceChannelBlockedUserWarning.showVoiceChannelBlockedUserWarning(channelId, id);
-          const obj = showVoiceChannelBlockedUserWarning;
+          const result = showVoiceChannelBlockedUserWarning.showVoiceChannelBlockedUserWarning(channelId, userId);
         }
       }
     }
   };
 const sharedSpacesWarningManager = new SharedSpacesWarningManager();
-let result = require("set").fileFinishedImporting("modules/shared_space_warnings/SharedSpacesWarningManager.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/shared_space_warnings/SharedSpacesWarningManager.tsx");
 
 export default sharedSpacesWarningManager;
 export const voiceBlockedWarningInCooldownForUsers = function voiceBlockedWarningInCooldownForUsers(arg0) {
-  let num = callback3();
+  let num = React5();
   if (num == null) {
     num = 0;
   }
   let everyResult = num > Date.now() - HOUR;
   if (!everyResult) {
     const _Array = Array;
-    everyResult = Array.from(arg0).every((arg0) => {
+    everyResult = Array.from(arg0).every((item) => {
       let flag = false;
       {
-        let num = callback(arg0);
+        let num = closure_1_6(item);
         if (num == null) {
           num = 0;
         }
         const _Date = Date;
-        flag = num > Date.now() - closure_12;
+        flag = num > Date.now() - closure_1_12;
       }
       return flag;
     });
@@ -179,7 +174,7 @@ export const userBlockedWarningInCooldown = function userBlockedWarningInCooldow
     flag = false;
   }
   if (!flag) {
-    let num = callback3();
+    let num = React5();
     if (num == null) {
       num = 0;
     }
@@ -188,7 +183,7 @@ export const userBlockedWarningInCooldown = function userBlockedWarningInCooldow
   }
   let tmp5 = !flag;
   if (flag) {
-    let num2 = callback2(arg0);
+    let num2 = timestampProducer(arg0);
     if (num2 == null) {
       num2 = 0;
     }

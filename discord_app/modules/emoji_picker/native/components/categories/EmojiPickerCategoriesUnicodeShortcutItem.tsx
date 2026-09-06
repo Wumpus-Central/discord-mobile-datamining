@@ -1,28 +1,32 @@
 // discord_app/modules/emoji_picker/native/components/categories/EmojiPickerCategoriesUnicodeShortcutItem.tsx
-import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import ME from "../../../../../Constants.tsx";
-import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import cheapWorkletShallowEqual from "../../../../reanimated/native/cheapWorkletShallowEqual.tsx";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-({ EXPRESSION_FOOTER_HEIGHT: closure_6, NODE_SIZE } = ME);
-createCacheKey = {
+require = fn;
+const View = fn(17).View;
+const Constants = fn(1074);
+({ EXPRESSION_FOOTER_HEIGHT: metroRequire, NODE_SIZE } = Constants);
+const jsx = fn(21).jsx;
+fn(4560);
+const createStyles = { itemInner: null, fadedItemOpacity: { opacity: 0.5 } };
+let size = {
   justifyContent: "center",
   alignItems: "center",
   height: NODE_SIZE,
   width: NODE_SIZE,
   borderRadius: NODE_SIZE / 2,
 };
-let closure_8 = createCacheKey.createStyles({ itemInner: createCacheKey, fadedItemOpacity: { opacity: 0.5 } });
-let closure_9 = {
+createStyles.itemInner = size;
+let closure_8 = createStyles.createStyles(createStyles);
+const __initData = {
   code: "function EmojiPickerCategoriesUnicodeShortcutItemTsx1(){const{blockRef}=this.__closure;return blockRef.get();}",
 };
-let closure_10 = {
+const __initData2 = {
   code: "function EmojiPickerCategoriesUnicodeShortcutItemTsx2(blockRef,previous){const{cheapWorkletShallowEqual,categoryIndex,EXPRESSION_FOOTER_HEIGHT,unicodeShortcutVisible,runOnJS,setUnicodeShortcutVisible}=this.__closure;if(blockRef==null||cheapWorkletShallowEqual(blockRef,previous!==null&&previous!==void 0?previous:undefined)){return;}const categoryScrollPos=categoryIndex*EXPRESSION_FOOTER_HEIGHT;const categoryUnicodeShortcutVisible=categoryScrollPos>blockRef.end-(unicodeShortcutVisible?0:EXPRESSION_FOOTER_HEIGHT);runOnJS(setUnicodeShortcutVisible)(categoryUnicodeShortcutVisible);}",
 };
-let result = require("set").fileFinishedImporting(
+size = fn(2);
+let result = size.fileFinishedImporting(
   "modules/emoji_picker/native/components/categories/EmojiPickerCategoriesUnicodeShortcutItem.tsx",
 );
 
@@ -31,67 +35,68 @@ export default function EmojiPickerCategoriesUnicodeShortcutItem(blockRef) {
   const category = blockRef.category;
   const categoryIndex = blockRef.categoryIndex;
   const onPress = blockRef.onPress;
-  let first;
-  closure_5 = undefined;
-  let tmp = onPress(first.useState(false), 2);
-  first = tmp[0];
+  let unicodeShortcutVisible;
+  let tmp = onPress(unicodeShortcutVisible.useState(false), 2);
+  unicodeShortcutVisible = tmp[0];
   closure_5 = tmp3;
-  let obj = blockRef(categoryIndex[6]);
+  blockRef(categoryIndex[6]);
   const fn = function f() {
     return blockRef.get();
   };
   fn.__closure = { blockRef };
   fn.__workletHash = 805688584630;
-  fn.__initData = closure_9;
+  fn.__initData = __initData;
   const fn2 = function b(end, current) {
     if (null != end) {
       if (!obj.cheapWorkletShallowEqual(end, tmp)) {
         let num = 0;
-        const result = categoryIndex * closure_1_6;
+        const result = categoryIndex * EXPRESSION_FOOTER_HEIGHT;
         if (!first) {
-          num = closure_1_6;
+          num = EXPRESSION_FOOTER_HEIGHT;
         }
         const diff = end.end - num;
-        tmp2(tmp3[6]).runOnJS(closure_5)(result > diff);
-        const tmp2Result = tmp2(tmp3[6]);
+        tmp2(4296).runOnJS(closure_5)(result > diff);
+        const tmp2Result = tmp2(4296);
       }
-      obj = blockRef(categoryIndex[7]);
+      obj = cheapWorkletShallowEqual;
       tmp = current;
-      tmp2 = blockRef;
-      tmp3 = categoryIndex;
+      tmp2 = require;
     }
   };
-  obj = {
+  let obj = {
     cheapWorkletShallowEqual: blockRef(categoryIndex[7]).cheapWorkletShallowEqual,
     categoryIndex,
-    EXPRESSION_FOOTER_HEIGHT: closure_6,
-    unicodeShortcutVisible: first,
+    EXPRESSION_FOOTER_HEIGHT,
+    unicodeShortcutVisible,
     runOnJS: blockRef(categoryIndex[6]).runOnJS,
     setUnicodeShortcutVisible: tmp3,
   };
   fn2.__closure = obj;
   fn2.__workletHash = 4994136030029;
-  fn2.__initData = closure_10;
+  fn2.__initData = __initData2;
   const animatedReaction = obj.useAnimatedReaction(fn, fn2);
   const items = [categoryIndex, category, onPress];
   let tmp9 = null;
-  if (first) {
-    obj = { style: null, onPress: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
-    obj[0] = blockRef.style;
-    obj[1] = tmp8;
+  if (unicodeShortcutVisible) {
+    obj = {
+      style: blockRef.style,
+      onPress: tmp8,
+      accessibilityRole: "button",
+      accessibilityLabel: null,
+      children: null,
+    };
     const intl = tmp4(tmp5[9]).intl;
-    obj[3] = intl.string(tmp4(tmp5[9]).t.gg3lOG);
-    obj1 = { style: null, children: null };
+    obj.accessibilityLabel = intl.string(tmp4(tmp5[9]).t.gg3lOG);
+    const obj1 = { style: null, children: null };
     const items1 = [,];
     ({ itemInner: arr2[0], fadedItemOpacity: arr2[1] } = tmp7);
-    obj1[0] = items1;
-    const obj2 = { id: null };
-    obj2[0] = category.id;
-    obj1[1] = jsx(category(tmp5[10]), { id: null });
-    obj[4] = <closure_5 style={null}>{null}</closure_5>;
+    obj1.style = items1;
+    const obj2 = { id: category.id };
+    obj1.children = jsx(category(tmp5[10]), { id: category.id });
+    obj.children = <closure_5 style={null}>{null}</closure_5>;
     tmp9 = jsx(tmp4(tmp5[8]).PressableOpacity, {
-      style: null,
-      onPress: null,
+      style: blockRef.style,
+      onPress: tmp8,
       accessibilityRole: "button",
       accessibilityLabel: null,
       children: null,

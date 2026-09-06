@@ -1,200 +1,216 @@
 // discord_app/modules/remote_auth/components/native/RemoteAuthModal.tsx
-import applyDefault from "../../../../../_runtime/00012_apply.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import Button from "../../../../design/void/native.tsx";
+import _modDef12 from "../../../../../_runtime/metro/00012__.js";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
+import native from "../../../../design/void/native.tsx";
+import HTTPUtils from "../../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import Text from "../../../../design/components/Text/native/Text.tsx";
-import _modDef4763 from "../../../../actions/ModalActionCreators.tsx";
-import Button2 from "../../../../design/components/Button/native/Button.native.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
+import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import ButtonGroup from "../../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
-import ActivityIndicator from "../../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
-import registerAssetDefault from "../../../../../_runtime/13862_registerAsset.js";
-import registerAssetDefault2 from "../../../../../_runtime/13864_registerAsset.js";
-import registerAssetDefault3 from "../../../../../_runtime/13865_registerAsset.js";
-import registerAssetDefault4 from "../../../../../_runtime/13866_registerAsset.js";
-import registerAssetDefault5 from "../../../../../_runtime/13867_registerAsset.js";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { Endpoints } from "../../../../Constants.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import ActivityIndicator_ActivityIndicator from "../../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
+import DeprecatedLayoutAnimation from "../../../animations/native/DeprecatedLayoutAnimation.tsx";
+import _modDef13862 from "../../../../../_runtime/metro/13862__.js";
+import _modDef13864 from "../../../../../_runtime/metro/13864__.js";
+import _modDef13866 from "../../../../../_runtime/metro/13866__.js";
+import _modDef13867 from "../../../../../_runtime/metro/13867__.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+const _modDef13865 = tmp7(13865);
+require = fn;
 function RemoteAuthBody(remoteAuthFingerprint) {
   remoteAuthFingerprint = remoteAuthFingerprint.remoteAuthFingerprint;
-  [tmp3, importDefault] = callback(React.useState(constants.LOADING), 2);
-  const tmp2 = callback(React.useState(constants.LOADING), 2);
-  [tmp5, dependencyMap] = callback(React.useState(null), 2);
+  [tmp3, importDefault] = _slicedToArray(noop.useState(constants.LOADING), 2);
+  const tmp2 = _slicedToArray(noop.useState(constants.LOADING), 2);
+  [tmp5, dependencyMap] = _slicedToArray(noop.useState(null), 2);
   const items = [remoteAuthFingerprint];
-  const effect = React.useEffect(() => {
-    const HTTP = remoteAuthFingerprint(closure_1_2[11]).HTTP;
-    obj = { url: closure_1_8.REMOTE_AUTH_INITIALIZE, body: obj, oldFormErrors: true, rejectWithError: true };
-    obj = { fingerprint: remoteAuthFingerprint };
-    const postResult = HTTP.post(obj);
-    HTTP.post(obj)
+  const effect = noop.useEffect(() => {
+    const HTTP = HTTPUtils.HTTP;
+    const request = {
+      url: Endpoints.REMOTE_AUTH_INITIALIZE,
+      body: { fingerprint: remoteAuthFingerprint },
+      oldFormErrors: true,
+      rejectWithError: true,
+    };
+    const obj = { fingerprint: remoteAuthFingerprint };
+    const postResult = HTTP.post(request);
+    HTTP.post(request)
       .then((body) => {
-        callback2(body.body.handshake_token);
-        callback(closure_1_13.LOADED);
-        const result = closure_1_0(closure_1_2[10]).DeprecatedLayoutAnimation();
+        dependencyMap(body.body.handshake_token);
+        closure_1_1(constants.LOADED);
+        const result = remoteAuthFingerprint(5581).DeprecatedLayoutAnimation();
       })
       .catch(() => {
-        callback(closure_1_13.NOT_FOUND);
-        const result = closure_1_0(closure_1_2[10]).DeprecatedLayoutAnimation();
+        closure_1_1(constants.NOT_FOUND);
+        const result = remoteAuthFingerprint(5581).DeprecatedLayoutAnimation();
       });
   }, items);
   if (constants.LOADING === tmp3) {
-    return callback2(RemoteAuthLoading, {});
+    return closure_9(RemoteAuthLoading, {});
   } else if (tmp.LOADED === tmp3) {
     if (null == tmp5) {
-      let tmp13 = callback2(RemoteAuthNotFound, {});
+      let tmp13 = closure_9(RemoteAuthNotFound, {});
     } else {
-      let obj = { handshakeToken: null, setAuthStep: null };
-      obj[0] = tmp5;
-      obj[1] = function transitionStep(arg0) {
-        callback(arg0);
-        const result = remoteAuthFingerprint(closure_1_2[10]).DeprecatedLayoutAnimation();
+      let obj = {
+        handshakeToken: tmp5,
+        setAuthStep: function transitionStep(arg0) {
+          importDefault(arg0);
+          const result = DeprecatedLayoutAnimation.DeprecatedLayoutAnimation();
+        },
       };
-      tmp13 = callback2(RemoteAuthLogin, obj);
+      tmp13 = closure_9(RemoteAuthLogin, obj);
     }
     return tmp13;
   } else if (tmp.SUCCEEDED === tmp3) {
-    return callback2(RemoteAuthLoginSucceeded, {});
+    return closure_9(RemoteAuthLoginSucceeded, {});
   } else {
     const NOT_FOUND = tmp.NOT_FOUND;
-    return callback2(RemoteAuthNotFound, {});
+    return closure_9(RemoteAuthNotFound, {});
   }
-  const tmp4 = callback(React.useState(null), 2);
+  const tmp4 = _slicedToArray(noop.useState(null), 2);
 }
 function RemoteAuthLogin(arg0) {
   ({ handshakeToken: require, setAuthStep: importDefault } = arg0);
   dependencyMap = undefined;
-  let callback;
-  const tmp = callback4();
-  [tmp3, c2] = callback(React.useState(false), 2);
-  const tmp2 = callback(React.useState(false), 2);
-  [tmp5, c3] = callback(React.useState(false), 2);
-  const effect = React.useEffect(() => {
+  _slicedToArray = undefined;
+  const tmp = closure_12();
+  [tmp3, c2] = _slicedToArray(noop.useState(false), 2);
+  const tmp2 = _slicedToArray(noop.useState(false), 2);
+  [tmp5, c3] = _slicedToArray(noop.useState(false), 2);
+  const effect = noop.useEffect(() => {
     const timeout = setTimeout(() => {
-      callback(true);
+      closure_1_2(true);
     }, 1000);
     return () => clearTimeout(closure_0);
   }, []);
-  let obj = applyDefault;
+  let obj = _modDef12;
   let tmp10 = !tmp3;
-  const tmp4 = callback(React.useState(false), 2);
-  const tmp7 = importDefault;
+  const tmp4 = _slicedToArray(noop.useState(false), 2);
   if (!tmp3) {
     tmp10 = !tmp5;
   }
   obj = { children: null };
-  obj = { source: registerAssetDefault3, style: tmp.mainImage };
-  const items = [callback2(closure_6, obj), , ,];
-  obj1 = { variant: "heading-md/extrabold", children: null };
-  const intl = getSystemLocale.intl;
-  obj1[1] = intl.string(getSystemLocale.t.jD2pqF);
-  items[1] = callback2(Text.Heading, obj1);
+  obj = { source: _modDef13865, style: tmp.mainImage };
+  const items = [closure_9(closure_6, obj), , ,];
+  const obj1 = { variant: "heading-md/extrabold", children: null };
+  const intl = util.intl;
+  obj1.children = intl.string(util.t.jD2pqF);
+  items[1] = closure_9(Text_Text.Heading, obj1);
   const obj2 = { style: tmp.warningCaption, children: null };
-  const intl2 = getSystemLocale.intl;
-  obj2[1] = intl2.string(getSystemLocale.t["hcd/kh"]);
-  items[2] = callback2(Button.LegacyText, obj2);
+  const intl2 = util.intl;
+  obj2.children = intl2.string(util.t["hcd/kh"]);
+  items[2] = closure_9(native.LegacyText, obj2);
   const obj3 = { style: tmp.buttonGroup, children: null };
   const obj4 = { text: null, onPress: null, disabled: null };
-  const intl3 = getSystemLocale.intl;
-  obj4[0] = intl3.string(getSystemLocale.t.N3qV8e);
-  obj4[1] = obj.throttle(
+  const intl3 = util.intl;
+  obj4.text = intl3.string(util.t.N3qV8e);
+  obj4.onPress = obj.throttle(
     () => {
-      _undefined2(true);
-      const HTTP = closure_1_0(_undefined[11]).HTTP;
-      obj = { url: closure_1_8.REMOTE_AUTH_FINISH, body: obj, oldFormErrors: true, rejectWithError: true };
-      obj = { handshake_token: closure_0 };
-      const postResult = HTTP.post(obj);
-      HTTP.post(obj)
+      _undefined(true);
+      const HTTP = HTTPUtils.HTTP;
+      const request = {
+        url: Endpoints.REMOTE_AUTH_FINISH,
+        body: { handshake_token },
+        oldFormErrors: true,
+        rejectWithError: true,
+      };
+      const obj = { handshake_token };
+      const postResult = HTTP.post(request);
+      HTTP.post(request)
         .then(() => {
-          callback(closure_1_13.SUCCEEDED);
+          closure_1_1(constants.SUCCEEDED);
         })
         .catch(() => {
-          callback(closure_1_13.NOT_FOUND);
+          closure_1_1(constants.NOT_FOUND);
         });
     },
     1000,
     { leading: true, trailing: false },
   );
-  obj4[2] = tmp10;
-  const items1 = [callback2(Button2.Button, obj4, "" + tmp10)];
+  obj4.disabled = tmp10;
+  const items1 = [closure_9(components_Button_Button.Button, obj4, "" + tmp10)];
   const obj5 = { variant: "secondary", text: null, onPress: null };
-  const intl4 = getSystemLocale.intl;
-  obj5[1] = intl4.string(getSystemLocale.t["ETE/oC"]);
-  obj5[2] = function onPress() {
-    const HTTP = closure_1_0(_undefined[11]).HTTP;
-    obj = { url: closure_1_8.REMOTE_AUTH_CANCEL, body: obj, oldFormErrors: true, rejectWithError: true };
-    obj = { handshake_token: closure_0 };
-    HTTP.post(obj);
-    let arr = closure_1_1(_undefined[19]);
+  const intl4 = util.intl;
+  obj5.text = intl4.string(util.t["ETE/oC"]);
+  obj5.onPress = function onPress() {
+    const HTTP = HTTPUtils.HTTP;
+    const request = {
+      url: Endpoints.REMOTE_AUTH_CANCEL,
+      body: { handshake_token },
+      oldFormErrors: true,
+      rejectWithError: true,
+    };
+    HTTP.post(request);
+    let arr = ModalActionCreatorsDefault;
     arr = arr.pop();
   };
-  items1[1] = callback2(Button2.Button, obj5);
-  obj3[1] = items1;
-  items[3] = callback3(ButtonGroup.ButtonGroup, obj3);
-  obj[0] = items;
-  return callback3(closure_11, obj);
+  items1[1] = closure_9(components_Button_Button.Button, obj5);
+  obj3.children = items1;
+  items[3] = closure_10(ButtonGroup.ButtonGroup, obj3);
+  obj.children = items;
+  return closure_10(closure_11, obj);
 }
 function RemoteAuthLoginSucceeded() {
-  const tmp = callback4();
+  const tmp = closure_12();
   let obj = { children: null };
-  obj = { source: registerAssetDefault4, style: tmp.mainImage };
-  const items = [callback2(closure_6, obj), , ,];
+  obj = { source: _modDef13866, style: tmp.mainImage };
+  const items = [React7(timestampProducer, obj), , ,];
   obj = { variant: "heading-xl/extrabold", children: null };
-  const intl = getSystemLocale.intl;
-  obj[1] = intl.string(getSystemLocale.t.HbwTOZ);
-  items[1] = callback2(Text.Heading, obj);
-  obj1 = { style: tmp.caption, variant: "text-md/medium", color: "text-muted", children: null };
-  const intl2 = getSystemLocale.intl;
-  obj1[3] = intl2.string(getSystemLocale.t.wKknJ0);
-  items[2] = callback2(Text.Text, obj1);
+  const intl = util.intl;
+  obj.children = intl.string(util.t.HbwTOZ);
+  items[1] = React7(Text_Text.Heading, obj);
+  const obj1 = { style: tmp.caption, variant: "text-md/medium", color: "text-muted", children: null };
+  const intl2 = util.intl;
+  obj1.children = intl2.string(util.t.wKknJ0);
+  items[2] = React7(Text_Text.Text, obj1);
   const obj2 = { style: tmp.buttonGroup, children: null };
   const obj3 = { text: null, onPress: null };
-  const intl3 = getSystemLocale.intl;
-  obj3[0] = intl3.string(getSystemLocale.t.pYWLA0);
-  obj3[1] = _modDef4763.pop;
-  obj2[1] = callback2(Button2.Button, obj3);
-  items[3] = callback2(ButtonGroup.ButtonGroup, obj2);
-  obj[0] = items;
-  return callback3(closure_11, obj);
+  const intl3 = util.intl;
+  obj3.text = intl3.string(util.t.pYWLA0);
+  obj3.onPress = ModalActionCreatorsDefault.pop;
+  obj2.children = React7(components_Button_Button.Button, obj3);
+  items[3] = React7(ButtonGroup.ButtonGroup, obj2);
+  obj.children = items;
+  return closure_1_10(closure_1_11, obj);
 }
 function RemoteAuthNotFound() {
-  const tmp = callback4();
+  const tmp = closure_12();
   let obj = { children: null };
-  obj = { source: registerAssetDefault5, style: tmp.mainImage };
-  const items = [callback2(closure_6, obj), , ,];
+  obj = { source: _modDef13867, style: tmp.mainImage };
+  const items = [React7(timestampProducer, obj), , ,];
   obj = { variant: "heading-xl/extrabold", children: null };
-  const intl = getSystemLocale.intl;
-  obj[1] = intl.string(getSystemLocale.t.NShI3Q);
-  items[1] = callback2(Text.Heading, obj);
-  obj1 = { style: tmp.caption, variant: "text-md/medium", color: "text-muted", children: null };
-  const intl2 = getSystemLocale.intl;
-  obj1[3] = intl2.string(getSystemLocale.t.Ygezov);
-  items[2] = callback2(Text.Text, obj1);
+  const intl = util.intl;
+  obj.children = intl.string(util.t.NShI3Q);
+  items[1] = React7(Text_Text.Heading, obj);
+  const obj1 = { style: tmp.caption, variant: "text-md/medium", color: "text-muted", children: null };
+  const intl2 = util.intl;
+  obj1.children = intl2.string(util.t.Ygezov);
+  items[2] = React7(Text_Text.Text, obj1);
   const obj2 = { style: tmp.buttonGroup, children: null };
   const obj3 = { text: null, onPress: null };
-  const intl3 = getSystemLocale.intl;
-  obj3[0] = intl3.string(getSystemLocale.t["ETE/oC"]);
-  obj3[1] = _modDef4763.pop;
-  obj2[1] = callback2(Button2.Button, obj3);
-  items[3] = callback2(ButtonGroup.ButtonGroup, obj2);
-  obj[0] = items;
-  return callback3(closure_11, obj);
+  const intl3 = util.intl;
+  obj3.text = intl3.string(util.t["ETE/oC"]);
+  obj3.onPress = ModalActionCreatorsDefault.pop;
+  obj2.children = React7(components_Button_Button.Button, obj3);
+  items[3] = React7(ButtonGroup.ButtonGroup, obj2);
+  obj.children = items;
+  return closure_1_10(closure_1_11, obj);
 }
 function RemoteAuthLoading() {
-  return callback2(closure_7, {
-    style: callback4().loadingContainer,
-    children: callback2(ActivityIndicator.ActivityIndicator, {}),
+  return React7(React5, {
+    style: closure_12().loadingContainer,
+    children: React7(ActivityIndicator_ActivityIndicator.ActivityIndicator, {}),
   });
 }
-({ ImageBackground: c5, Image: closure_6, View: error } = get_ActivityIndicator);
-({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
-createCacheKey = {
+get_ActivityIndicator = fn(17);
+({ ImageBackground: hasOwnProperty, Image: metroRequire, View: closure_7 } = get_ActivityIndicator);
+const Endpoints = fn(1074).Endpoints;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
+fn(4560);
+let createStyles = {
   background: { width: "100%", height: "100%" },
   container: { flex: 1, alignItems: "stretch", alignContent: "center" },
   imageStyle: { resizeMode: "cover" },
@@ -206,36 +222,36 @@ createCacheKey = {
   buttonGroup: null,
   loadingContainer: null,
 };
-createCacheKey = {
+createStyles = {
   fontSize: 16,
   lineHeight: 20,
-  color: ThemesDefault.unsafe_rawColors.RED_400,
+  color: nativeDefault.unsafe_rawColors.RED_400,
   textAlign: "center",
   marginTop: 8,
   marginBottom: 32,
 };
-createCacheKey[5] = createCacheKey;
-createCacheKey[6] = { lineHeight: 20, textAlign: "center", marginTop: 8, marginBottom: 32 };
-createCacheKey[7] = {
+createStyles.warningCaption = createStyles;
+createStyles.caption = { lineHeight: 20, textAlign: "center", marginTop: 8, marginBottom: 32 };
+createStyles.mainCard = {
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   marginTop: "auto",
   marginBottom: "auto",
   marginLeft: 16,
   marginRight: 16,
-  borderRadius: ThemesDefault.radii.sm,
+  borderRadius: nativeDefault.radii.sm,
   padding: 16,
-  shadowColor: ThemesDefault.colors.BLACK,
+  shadowColor: nativeDefault.colors.BLACK,
   shadowOpacity: 0.16,
   shadowRadius: 2,
   shadowOffset: { height: 2, width: 0 },
 };
-createCacheKey[8] = { paddingVertical: 0 };
-createCacheKey[9] = { height: 300, justifyContent: "center" };
-let closure_12 = createCacheKey.createStyles(createCacheKey);
-let closure_13 = {
+createStyles.buttonGroup = { paddingVertical: 0 };
+createStyles.loadingContainer = { height: 300, justifyContent: "center" };
+let closure_12 = createStyles.createStyles(createStyles);
+const constants = {
   LOADING: 0,
   [0]: "LOADING",
   NOT_FOUND: 1,
@@ -245,37 +261,23 @@ let closure_13 = {
   SUCCEEDED: 3,
   [3]: "SUCCEEDED",
 };
-let obj1 = {
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
-  marginTop: "auto",
-  marginBottom: "auto",
-  marginLeft: 16,
-  marginRight: 16,
-  borderRadius: ThemesDefault.radii.sm,
-  padding: 16,
-  shadowColor: ThemesDefault.colors.BLACK,
-  shadowOpacity: 0.16,
-  shadowRadius: 2,
-  shadowOffset: { height: 2, width: 0 },
-};
-let result = require("set").fileFinishedImporting("modules/remote_auth/components/native/RemoteAuthModal.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/remote_auth/components/native/RemoteAuthModal.tsx");
 
 export default function RemoteAuth(arg0) {
-  const tmp = callback4();
-  let obj = { source: registerAssetDefault2, imageStyle: null, style: null, children: null };
-  ({ imageStyle: obj[1], background: obj[2] } = tmp);
-  obj = { style: items, source: registerAssetDefault };
-  items = [tmp.logo, { marginTop: useSafeAreaInsetsDefault().top }];
-  const items1 = [callback2(closure_6, obj)];
+  const tmp = closure_12();
+  let obj = { source: _modDef13864, imageStyle: null, style: null, children: null };
+  ({ imageStyle: obj.imageStyle, background: obj.style } = tmp);
+  obj = { style: null, source: _modDef13862 };
+  const items = [tmp.logo, { marginTop: useSafeAreaInsetsDefault().top }];
+  obj.style = items;
+  const items1 = [React7(timestampProducer, obj)];
   obj = { style: tmp.container, children: null };
-  obj1 = { style: tmp.mainCard, children: null };
+  const obj1 = { style: tmp.mainCard, children: null };
   const merged = Object.assign(arg0);
-  obj1[1] = callback2(RemoteAuthBody, {});
-  obj[1] = callback2(closure_7, obj1);
-  items1[1] = callback2(closure_7, obj);
-  obj[3] = items1;
-  return callback3(closure_5, obj);
+  obj1.children = React7(RemoteAuthBody, {});
+  obj.children = React7(React5, obj1);
+  items1[1] = React7(React5, obj);
+  obj.children = items1;
+  return closure_1_10(hasOwnProperty, obj);
 }

@@ -1,34 +1,29 @@
 // discord_app/design/components/Layers/native/LayerScope.native.tsx
 import useInitialValueDefault from "../../../../hooks/useInitialValue.tsx";
-import add from "LayerContext.native.tsx";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { NOOP } from "../../../../Constants.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import LayerContext from "LayerContext.native.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+require = fn;
 function Layer(zIndex) {
   zIndex = zIndex.zIndex;
-  let context;
-  dependencyMap = undefined;
-  let callback;
-  context = React.useContext(zIndex(7157).LayerContext);
-  dependencyMap = callback(React.useState({}), 2)[1];
-  callback = React.useRef(null);
+  _slicedToArray = undefined;
+  const context = noop.useContext(zIndex(7157).LayerContext);
+  dependencyMap = _slicedToArray(noop.useState({}), 2)[1];
+  _slicedToArray = noop.useRef(null);
   const items = [context];
-  const effect = React.useEffect(() => {
-    context.invalidate = () => callback({});
+  const effect = noop.useEffect(() => {
+    context.invalidate = () => closure_1_2({});
     return () => {
-      closure_1.invalidate = () => null;
+      context.invalidate = () => null;
     };
   }, items);
   const items1 = context.items;
   const items2 = [zIndex];
-  return callback2(closure_5, {
-    style: React.useMemo(() => {
+  return closure_8(closure_5, {
+    style: noop.useMemo(() => {
       const obj = {};
-      const merged = Object.assign(closure_1_6.absoluteFillObject);
+      const merged = Object.assign(absoluteFillObject.absoluteFillObject);
       obj.zIndex = zIndex;
       return obj;
     }, items2),
@@ -38,23 +33,27 @@ function Layer(zIndex) {
     },
     onLayout: NOOP,
     pointerEvents: "box-none",
-    children: items1.map((children) => callback(React.Fragment, { children: children.component }, children.key)),
+    children: items1.map((children) => closure_1_8(React.Fragment, { children: children.component }, children.key)),
   });
 }
-({ View: c5, StyleSheet: closure_6 } = get_ActivityIndicator);
-({ jsx: closure_8, jsxs: c9 } = jsxProd);
-const result = require("set").fileFinishedImporting("design/components/Layers/native/LayerScope.native.tsx");
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
+const NOOP = fn(1074).NOOP;
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Layers/native/LayerScope.native.tsx");
 
 export const LayerScope = function LayerScope(arg0) {
   ({ children, zIndex } = arg0);
   const obj = {
     value: useInitialValueDefault(() => {
-      const layerContextManager = new callback(table[6]).LayerContextManager();
+      const layerContextManager = new LayerContext.LayerContextManager();
       return layerContextManager;
     }),
     children: null,
   };
-  const items = [children, callback2(Layer, { zIndex })];
-  obj[1] = items;
-  return callback3(add.LayerContext.Provider, obj);
+  const items = [children, React6(Layer, { zIndex })];
+  obj.children = items;
+  return React7(LayerContext.LayerContext.Provider, obj);
 };

@@ -1,7 +1,7 @@
 // discord_app/modules/icymi/native/DesignConstants.tsx
-import set from "../../../../_runtime/00002_set.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/icymi/native/DesignConstants.tsx");
+const result = size.fileFinishedImporting("modules/icymi/native/DesignConstants.tsx");
 
-export const ITEM_PADDING = ThemesDefault.space.PX_12;
+export const ITEM_PADDING = nativeDefault.space.PX_12;

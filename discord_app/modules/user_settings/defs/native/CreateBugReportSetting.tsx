@@ -1,41 +1,40 @@
 // discord_app/modules/user_settings/defs/native/CreateBugReportSetting.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import setDeveloperOptionSettings2 from "../../../../actions/DeveloperOptionsActionCreators.tsx";
-import showNotificationDefault from "../../../bug_reporter/native/BugReportManager.tsx";
-import closure_3 from "../../../../stores/DeveloperOptionsStore.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import util from "../../../../intl/index.native.tsx";
+import DeveloperOptionsActionCreators from "../../../../actions/DeveloperOptionsActionCreators.tsx";
+import BugReportManagerDefault from "../../../bug_reporter/native/BugReportManager.tsx";
+import DeveloperOptionsStore from "../../../../stores/DeveloperOptionsStore.tsx";
 
-require = arg1;
-createToggle = {
+require = fn;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.aIkGJD);
+    const intl = util.intl;
+    return intl.string(util.t.aIkGJD);
   },
   parent: null,
-  IconComponent: require("WrenchIcon").WrenchIcon,
+  IconComponent: fn(15562).WrenchIcon,
   onValueChange: function handleCreateBugReportSettingToggle(arg0) {
-    const setDeveloperOptionSettings = setDeveloperOptionSettings2.setDeveloperOptionSettings;
+    const setDeveloperOptionSettings = DeveloperOptionsActionCreators.setDeveloperOptionSettings;
     if (arg0) {
       const result = setDeveloperOptionSettings({ bugReporterEnabled: true });
-      showNotificationDefault.initialize();
-      const obj2 = showNotificationDefault;
+      BugReportManagerDefault.initialize();
     } else {
       const result1 = setDeveloperOptionSettings({ bugReporterEnabled: false });
-      showNotificationDefault.terminate(true);
-      const obj = showNotificationDefault;
+      BugReportManagerDefault.terminate(true);
     }
   },
   useValue: function useCreateBugReportSettingToggleValue() {
-    const items = [closure_3];
+    const items = [DeveloperOptionsStore];
     return initialize.useStateFromStores(items, () => isBugReporterEnabled.isBugReporterEnabled);
   },
   useDescription: function useCreateBugReportSettingDescription() {
     return "Photo permission is required";
   },
-  usePredicate: require("useBugReporterExperimentSettingPredicate").useBugReporterExperimentSettingPredicate,
+  usePredicate: fn(15737).useBugReporterExperimentSettingPredicate,
 };
-createToggle = createToggle.createToggle(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/CreateBugReportSetting.tsx");
+SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/CreateBugReportSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

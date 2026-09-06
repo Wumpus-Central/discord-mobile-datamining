@@ -1,20 +1,18 @@
 // discord_app/modules/gateway/LocalVoiceStateManager.tsx
-import hasFlag from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import explicitContentFromProto from "../user_settings/UserSettings.tsx";
-import shouldCommitDefault from "../../lib/StateManager.tsx";
+import FlagUtils from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import UserSettings from "../user_settings/UserSettings.tsx";
 import isClipsEnabled from "../clips/isClipsEnabled.tsx";
-import closure_2 from "../../stores/ChannelStore.tsx";
-import closure_3 from "../../stores/MediaEngineStore.tsx";
-import closure_4 from "../../stores/RTCRegionStore.tsx";
-import ME from "../../Constants.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
+import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
+import RTCRegionStore from "../../stores/RTCRegionStore.tsx";
+import StateManager from "../../lib/StateManager.tsx";
 
-require = arg1;
-({ ChannelTypes: c5, VoiceFlags: closure_6 } = ME);
-shouldCommitDefault;
+require = fn;
+const Constants = fn(1074);
+({ ChannelTypes: hasOwnProperty, VoiceFlags: metroRequire } = Constants);
 class LocalVoiceStateManager extends tmp3 {
   constructor(arg0) {
     tmp = new LocalVoiceStateManager(new.target);
-    // ThrowIfThisInitialized (0x7c)
     tmp.socket = global;
     return tmp;
   }
@@ -33,20 +31,19 @@ Object.defineProperty(prototype, "channelId", {
   set: undefined,
 });
 prototype["computeVoiceFlags"] = function computeVoiceFlags() {
-  const ClipsAllowVoiceRecording = explicitContentFromProto.ClipsAllowVoiceRecording;
+  const ClipsAllowVoiceRecording = UserSettings.ClipsAllowVoiceRecording;
   const setting = ClipsAllowVoiceRecording.getSetting();
-  const obj = hasFlag;
-  const setFlagResult = hasFlag.setFlag(0, constants2.ALLOW_VOICE_RECORDING, setting);
-  const obj2 = hasFlag;
+  const setFlagResult = FlagUtils.setFlag(0, constants2.ALLOW_VOICE_RECORDING, setting);
+  const obj2 = FlagUtils;
   return obj2.setFlag(setFlagResult, constants2.CLIPS_ENABLED, isClipsEnabled.isClipsEnabled());
 };
 prototype["getInitialState"] = function getInitialState() {
   return {
     guildId: null,
     channelId: null,
-    selfMute: closure_3.isSelfMute(),
-    selfDeaf: closure_3.isSelfDeaf(),
-    selfVideo: closure_3.isVideoEnabled(),
+    selfMute: MediaEngineStore.isSelfMute(),
+    selfDeaf: MediaEngineStore.isSelfDeaf(),
+    selfVideo: MediaEngineStore.isVideoEnabled(),
     preferredRegion: null,
     preferredRegions: null,
     videoStreamParameters: null,
@@ -57,12 +54,12 @@ prototype["getNextState"] = function getNextState(guildId) {
   return {
     guildId: guildId.guildId,
     channelId: guildId.channelId,
-    selfMute: closure_3.isSelfMute(),
-    selfDeaf: closure_3.isSelfDeaf(),
-    selfVideo: closure_3.isVideoEnabled(),
-    preferredRegion: store.getPreferredRegion(),
-    preferredRegions: store.getPreferredRegions(),
-    videoStreamParameters: closure_3.getVideoStreamParameters(),
+    selfMute: MediaEngineStore.isSelfMute(),
+    selfDeaf: MediaEngineStore.isSelfDeaf(),
+    selfVideo: MediaEngineStore.isVideoEnabled(),
+    preferredRegion: RTCRegionStore.getPreferredRegion(),
+    preferredRegions: RTCRegionStore.getPreferredRegions(),
+    videoStreamParameters: MediaEngineStore.getVideoStreamParameters(),
     flags: this.computeVoiceFlags(),
   };
 };
@@ -77,7 +74,7 @@ prototype["didCommit"] = function didCommit(state) {
   }
   const self = this;
   if (selfVideo) {
-    channel = channel.getChannel(channelId);
+    const channel = ChannelStore.getChannel(channelId);
     let type;
     if (channel != null) {
       type = channel.type;
@@ -85,25 +82,16 @@ prototype["didCommit"] = function didCommit(state) {
     if (type === constants.GUILD_STAGE_VOICE) {
       const socket2 = self.socket;
       const obj = {
-        guildId: null,
-        channelId: null,
-        selfMute: null,
-        selfDeaf: null,
-        selfVideo: null,
-        preferredRegion: null,
-        preferredRegions: null,
-        videoStreamParameters: null,
-        flags: null,
+        guildId,
+        channelId,
+        selfMute,
+        selfDeaf,
+        selfVideo,
+        preferredRegion,
+        preferredRegions,
+        videoStreamParameters: state.videoStreamParameters,
+        flags,
       };
-      obj[0] = guildId;
-      obj[1] = channelId;
-      obj[2] = selfMute;
-      obj[3] = selfDeaf;
-      obj[4] = selfVideo;
-      obj[5] = preferredRegion;
-      obj[6] = preferredRegions;
-      obj[7] = state.videoStreamParameters;
-      obj[8] = flags;
       socket2.voiceStateUpdate(obj);
     }
   }
@@ -119,6 +107,7 @@ prototype["didCommit"] = function didCommit(state) {
     flags,
   });
 };
-const result = require("set").fileFinishedImporting("modules/gateway/LocalVoiceStateManager.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/gateway/LocalVoiceStateManager.tsx");
 
 export default LocalVoiceStateManager;

@@ -1,23 +1,22 @@
 // discord_app/modules/user_settings/defs/native/UseDataForQuests3PSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import explicitContentFromProto from "../../UserSettings.tsx";
-import MobileUserSettings2 from "../../core/native/SettingsConstants.tsx";
-import useParentalControlledExplicitContentSettings from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
+import util from "../../../../intl/index.native.tsx";
+import UserSettings from "../../UserSettings.tsx";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
+import useParentalControlSettings from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
 import useAdPersonalizationTogglesDisabled from "../../../ads/hooks/useAdPersonalizationTogglesDisabled.tsx";
-import apexExperiment from "../../../ads/AdTopicOptOutClientExperiment.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import AdTopicOptOutClientExperiment from "../../../ads/AdTopicOptOutClientExperiment.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 function useDataToSupportQuests3PSettingValue() {
-  const Quests3PDataOptedOut = explicitContentFromProto.Quests3PDataOptedOut;
+  const Quests3PDataOptedOut = UserSettings.Quests3PDataOptedOut;
   return !Quests3PDataOptedOut.useSetting();
 }
 function useDataToSupportQuests3PSettingIsDisabled() {
   let adPersonalizationTogglesDisabled = useAdPersonalizationTogglesDisabled.useAdPersonalizationTogglesDisabled();
-  const DropsOptedOut = explicitContentFromProto.DropsOptedOut;
+  const DropsOptedOut = UserSettings.DropsOptedOut;
   const setting = DropsOptedOut.useSetting();
-  const obj = useAdPersonalizationTogglesDisabled;
-  const isParentallyControlled = useParentalControlledExplicitContentSettings.useIsParentallyControlled();
+  const isParentallyControlled = useParentalControlSettings.useIsParentallyControlled();
   if (!adPersonalizationTogglesDisabled) {
     adPersonalizationTogglesDisabled = setting;
   }
@@ -27,37 +26,37 @@ function useDataToSupportQuests3PSettingIsDisabled() {
   return adPersonalizationTogglesDisabled;
 }
 function onDataToSupportQuests3PSettingValueChange(arg0) {
-  const Quests3PDataOptedOut = explicitContentFromProto.Quests3PDataOptedOut;
+  const Quests3PDataOptedOut = UserSettings.Quests3PDataOptedOut;
   Quests3PDataOptedOut.updateSetting(!arg0);
 }
-const MobileUserSettings = MobileUserSettings2.MobileUserSettings;
+const MobileUserSettings = SettingsConstants.MobileUserSettings;
 let obj = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.CyLYKZ);
+    const intl = util.intl;
+    return intl.string(util.t.CyLYKZ);
   },
   parent: MobileUserSettings.DATA_AND_PRIVACY,
   usePredicate() {
-    return !apexExperiment.useIsAdTopicOptOutClientEnabled();
+    return !AdTopicOptOutClientExperiment.useIsAdTopicOptOutClientEnabled();
   },
   useValue: useDataToSupportQuests3PSettingValue,
   onValueChange: onDataToSupportQuests3PSettingValueChange,
   useIsDisabled: useDataToSupportQuests3PSettingIsDisabled,
 };
-const toggle = createToggle.createToggle(obj);
+const toggle = SettingBuilders.createToggle(obj);
 obj = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.CyLYKZ);
+    const intl = util.intl;
+    return intl.string(util.t.CyLYKZ);
   },
   parent: MobileUserSettings.SPONSORED_CONTENT_PREFERENCES,
-  usePredicate: apexExperiment.useIsAdTopicOptOutClientEnabled,
+  usePredicate: AdTopicOptOutClientExperiment.useIsAdTopicOptOutClientEnabled,
   useValue: useDataToSupportQuests3PSettingValue,
   onValueChange: onDataToSupportQuests3PSettingValueChange,
   useIsDisabled: useDataToSupportQuests3PSettingIsDisabled,
 };
-const toggle1 = createToggle.createToggle(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/UseDataForQuests3PSetting.tsx");
+const toggle1 = SettingBuilders.createToggle(obj);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/UseDataForQuests3PSetting.tsx");
 
 export default toggle;
 export const UseDataForQuests3PSponsoredContentSetting = toggle1;

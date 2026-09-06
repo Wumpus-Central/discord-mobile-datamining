@@ -1,9 +1,8 @@
 // discord_app/modules/activities/utils/getEmbeddedActivitiesManager.native.tsx
-import set from "../../../../_runtime/00002_set.js";
-import { postMessageToWebView } from "../native/EmbeddedActivitiesNativeManager.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/activities/utils/getEmbeddedActivitiesManager.native.tsx");
+const result = size.fileFinishedImporting("modules/activities/utils/getEmbeddedActivitiesManager.native.tsx");
 
 export default function getEmbeddedActivitiesManager() {
-  return postMessageToWebView;
+  return require("EmbeddedActivitiesNativeManager");
 }

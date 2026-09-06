@@ -1,8 +1,36 @@
 // discord_common/js/shared/shared-constants/OAuth2Scopes.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
 let obj = {
-  PUBLIC: null,
+  PUBLIC: new Set([
+    "applications.builds.read",
+    "applications.builds.upload",
+    "applications.commands",
+    "applications.commands.permissions.update",
+    "applications.entitlements",
+    "applications.store.update",
+    "bot",
+    "connections",
+    "email",
+    "gdm.join",
+    "guilds",
+    "guilds.join",
+    "guilds.members.read",
+    "identify",
+    "messages.read",
+    "openid",
+    "role_connections.write",
+    "rpc",
+    "rpc.activities.write",
+    "rpc.notifications.read",
+    "rpc.screenshare.read",
+    "rpc.screenshare.write",
+    "rpc.video.read",
+    "rpc.video.write",
+    "rpc.voice.read",
+    "rpc.voice.write",
+    "webhook.incoming",
+  ]),
   PRIVATE: null,
   TEAM_USER: null,
   EMBEDDED_APPS: null,
@@ -25,7 +53,7 @@ let obj = {
   APPLICATION_IDENTITIES_SCOPES: null,
   ALL: null,
 };
-let set = new Set([
+const set = new Set([
   "applications.builds.read",
   "applications.builds.upload",
   "applications.commands",
@@ -54,8 +82,7 @@ let set = new Set([
   "rpc.voice.write",
   "webhook.incoming",
 ]);
-obj[0] = set;
-obj[1] = new Set([
+obj.PRIVATE = new Set([
   "account.global_name.update",
   "activities.invites.write",
   "activities.read",
@@ -103,7 +130,7 @@ const set1 = new Set([
   "vibegrations.projects",
   "voice",
 ]);
-obj[2] = new Set([
+obj.TEAM_USER = new Set([
   "applications.builds.read",
   "applications.builds.upload",
   "applications.commands.update",
@@ -119,23 +146,23 @@ const set2 = new Set([
   "applications.store.update",
   "identify",
 ]);
-obj[3] = new Set(["rpc.activities.write", "rpc.voice.read", "rpc.voice.write"]);
+obj.EMBEDDED_APPS = new Set(["rpc.activities.write", "rpc.voice.read", "rpc.voice.write"]);
 const set3 = new Set(["rpc.activities.write", "rpc.voice.read", "rpc.voice.write"]);
-obj[4] = new Set(["applications.commands.update"]);
+obj.CLIENT_CREDENTIALS = new Set(["applications.commands.update"]);
 const set4 = new Set(["applications.commands.update"]);
-obj[5] = new Set(["role_connections.write"]);
+obj.CONFIDENTIAL_REQUEST_SCOPES = new Set(["role_connections.write"]);
 const set5 = new Set(["role_connections.write"]);
-obj[6] = new Set(["applications.commands", "bot"]);
+obj.BYPASS = new Set(["applications.commands", "bot"]);
 const set6 = new Set(["applications.commands", "bot"]);
-obj[7] = new Set(["applications.commands"]);
+obj.BASE_INTEGRATION = new Set(["applications.commands"]);
 const set7 = new Set(["applications.commands"]);
-obj[8] = new Set(["applications.commands", "bot", "webhook.incoming"]);
+obj.GUILD_INTEGRATION = new Set(["applications.commands", "bot", "webhook.incoming"]);
 const set8 = new Set(["applications.commands", "bot", "webhook.incoming"]);
-obj[9] = new Set(["applications.commands", "managed_platform.application_identities.write"]);
+obj.USER_INTEGRATION = new Set(["applications.commands", "managed_platform.application_identities.write"]);
 const set9 = new Set(["applications.commands", "managed_platform.application_identities.write"]);
-obj[10] = new Set(["bot", "webhook.incoming"]);
+obj.GUILD_INTEGRATION_EXCLUSIVE = new Set(["bot", "webhook.incoming"]);
 const set10 = new Set(["bot", "webhook.incoming"]);
-obj[11] = new Set([
+obj.ALL_INTEGRATION_SCOPES = new Set([
   "applications.commands",
   "bot",
   "managed_platform.application_identities.write",
@@ -147,9 +174,9 @@ const set11 = new Set([
   "managed_platform.application_identities.write",
   "webhook.incoming",
 ]);
-obj[12] = new Set(["applications.commands"]);
+obj.PRIVATE_CHANNEL_INTEGRATION = new Set(["applications.commands"]);
 const set12 = new Set(["applications.commands"]);
-obj[13] = new Set([
+obj.SLAYER_UMBRELLA_DEFAULT_SCOPES_MASK = new Set([
   "activities.invites.write",
   "activities.read",
   "activities.write",
@@ -181,12 +208,12 @@ const set13 = new Set([
   "relationships.read",
   "relationships.write",
 ]);
-obj[14] = new Set(["account.global_name.update", "openid", "sdk.social_layer"]);
+obj.SLAYER_INTEGRATION_PROVISIONAL_ACCOUNT = new Set(["account.global_name.update", "openid", "sdk.social_layer"]);
 const set14 = new Set(["account.global_name.update", "openid", "sdk.social_layer"]);
-obj[15] = new Set(["sdk.social_layer", "sdk.social_layer_presence"]);
+obj.UMBRELLA = new Set(["sdk.social_layer", "sdk.social_layer_presence"]);
 obj = { "sdk.social_layer_presence": null, "sdk.social_layer": null };
 const set15 = new Set(["sdk.social_layer", "sdk.social_layer_presence"]);
-obj[0] = new Set([
+obj["sdk.social_layer_presence"] = new Set([
   "activities.invites.write",
   "activities.read",
   "activities.write",
@@ -208,7 +235,7 @@ const set16 = new Set([
   "relationships.read",
   "relationships.write",
 ]);
-obj[1] = new Set([
+obj["sdk.social_layer"] = new Set([
   "activities.invites.write",
   "activities.read",
   "activities.write",
@@ -225,7 +252,7 @@ obj[1] = new Set([
   "relationships.read",
   "relationships.write",
 ]);
-obj[16] = obj;
+obj.UMBRELLA_PERMISSIBLE_SCOPES = obj;
 const set17 = new Set([
   "activities.invites.write",
   "activities.read",
@@ -243,9 +270,9 @@ const set17 = new Set([
   "relationships.read",
   "relationships.write",
 ]);
-obj[17] = new Set(["sdk.social_layer", "sdk.social_layer_presence"]);
+obj.SDK_SOCIAL_LAYER_UMBRELLA_SCOPES = new Set(["sdk.social_layer", "sdk.social_layer_presence"]);
 const set18 = new Set(["sdk.social_layer", "sdk.social_layer_presence"]);
-obj[18] = new Set([
+obj.SDK_SOCIAL_LAYER_UMBRELLA_DEFAULT_SCOPES = new Set([
   "activities.invites.write",
   "activities.read",
   "activities.write",
@@ -277,11 +304,14 @@ const set19 = new Set([
   "relationships.read",
   "relationships.write",
 ]);
-obj[19] = new Set(["activities.write", "managed_platform.application_identities.write"]);
+obj.CONNECTED_ACCOUNT_SDK_SCOPES = new Set(["activities.write", "managed_platform.application_identities.write"]);
 const set20 = new Set(["activities.write", "managed_platform.application_identities.write"]);
-obj[20] = new Set(["application_identities.write", "managed_platform.application_identities.write"]);
+obj.APPLICATION_IDENTITIES_SCOPES = new Set([
+  "application_identities.write",
+  "managed_platform.application_identities.write",
+]);
 const set21 = new Set(["application_identities.write", "managed_platform.application_identities.write"]);
-obj[21] = new Set([
+obj.ALL = new Set([
   "account.global_name.update",
   "activities.invites.write",
   "activities.read",
@@ -332,7 +362,7 @@ obj[21] = new Set([
   "voice",
   "webhook.incoming",
 ]);
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx");
 
 export const OAuth2Scopes = {
   IDENTIFY: "identify",

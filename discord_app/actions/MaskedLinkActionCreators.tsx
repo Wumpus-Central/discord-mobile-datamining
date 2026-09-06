@@ -1,16 +1,14 @@
 // discord_app/actions/MaskedLinkActionCreators.tsx
-import set from "../../_runtime/00002_set.js";
-import dispatcherDefault from "../Dispatcher.tsx";
+import DispatcherDefault from "../Dispatcher.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("actions/MaskedLinkActionCreators.tsx");
+const result = size.fileFinishedImporting("actions/MaskedLinkActionCreators.tsx");
 
 export const trustDomain = function trustDomain(url) {
-  let obj = dispatcherDefault;
-  obj = { type: "MASKED_LINK_ADD_TRUSTED_DOMAIN", url };
+  const obj = { type: "MASKED_LINK_ADD_TRUSTED_DOMAIN", url };
   obj.dispatch(obj);
 };
 export const trustProtocol = function trustProtocol(url) {
-  let obj = dispatcherDefault;
-  obj = { type: "MASKED_LINK_ADD_TRUSTED_PROTOCOL", url };
+  const obj = { type: "MASKED_LINK_ADD_TRUSTED_PROTOCOL", url };
   obj.dispatch(obj);
 };

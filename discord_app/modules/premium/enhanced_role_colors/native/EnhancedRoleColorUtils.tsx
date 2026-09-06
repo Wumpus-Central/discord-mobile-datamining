@@ -1,52 +1,47 @@
 // discord_app/modules/premium/enhanced_role_colors/native/EnhancedRoleColorUtils.tsx
-import nDefault from "../../../../../_runtime/00672_n.js";
-import isDiscordFrontendDevelopment from "../../../../utils/GlobalUtils.tsx";
+import _modDef672 from "../../../../../_runtime/metro/00672__.js";
+import GlobalUtils from "../../../../utils/GlobalUtils.tsx";
 import useHasEnhancedRoleColors from "../../powerups/hooks/useHasEnhancedRoleColors.tsx";
-import useHasEnhancedRoleColorsDefault from "../../powerups/hooks/useHasEnhancedRoleColors.tsx";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
-import { processColor } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../../user_settings/ThemeStore.tsx";
-import { ThemeTypes } from "../../../../../discord_common/js/shared/Constants.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import ThemeStore from "../../../user_settings/ThemeStore.tsx";
 
-require = arg1;
+const useHasEnhancedRoleColorsDefault = useHasEnhancedRoleColors;
+
+require = fn;
 function processColorStrings(colorStrings) {
   if (null != colorStrings) {
     const primaryColor = colorStrings.primaryColor;
-    if (theme.theme === ThemeTypes.LIGHT) {
+    if (ThemeStore.theme === ThemeTypes.LIGHT) {
       if (null != primaryColor) {
-        let obj = nDefault(primaryColor);
+        let obj = _modDef672(primaryColor);
         let tmp10 = processColor;
-        [tmp7, tmp8, tmp9] = callback(obj.hsl(), 3);
-        const tmp6 = callback(obj.hsl(), 3);
-        const obj2 = nDefault;
-        let tmp12Result = processColor(nDefault.hsl(tmp7, tmp8, 0.85 * tmp9).hex());
-        const hslResult = nDefault.hsl(tmp7, tmp8, 0.85 * tmp9);
+        [tmp7, tmp8, tmp9] = _slicedToArray(obj.hsl(), 3);
+        const tmp6 = _slicedToArray(obj.hsl(), 3);
+        let tmp12Result = processColor(_modDef672.hsl(tmp7, tmp8, 0.85 * tmp9).hex());
+        const hslResult = _modDef672.hsl(tmp7, tmp8, 0.85 * tmp9);
       }
-      obj = { primaryColor: null, secondaryColor: null, tertiaryColor: null };
-      obj[0] = tmp12Result;
+      obj = { primaryColor: tmp12Result, secondaryColor: null, tertiaryColor: null };
       const secondaryColor = colorStrings.secondaryColor;
       if (tmp.theme === tmp2.LIGHT) {
         if (null != secondaryColor) {
-          const obj5 = nDefault(secondaryColor);
-          [tmp17, tmp18, tmp19] = callback(nDefault(secondaryColor).hsl(), 3);
-          const tmp16 = callback(nDefault(secondaryColor).hsl(), 3);
-          const obj6 = nDefault;
-          let tmp10Result = tmp10(nDefault.hsl(tmp17, tmp18, 0.85 * tmp19).hex());
-          const hslResult1 = nDefault.hsl(tmp17, tmp18, 0.85 * tmp19);
+          const obj5 = _modDef672(secondaryColor);
+          [tmp17, tmp18, tmp19] = _slicedToArray(_modDef672(secondaryColor).hsl(), 3);
+          const tmp16 = _slicedToArray(_modDef672(secondaryColor).hsl(), 3);
+          let tmp10Result = tmp10(_modDef672.hsl(tmp17, tmp18, 0.85 * tmp19).hex());
+          const hslResult1 = _modDef672.hsl(tmp17, tmp18, 0.85 * tmp19);
         }
-        obj[1] = tmp10Result;
+        obj.secondaryColor = tmp10Result;
         const tertiaryColor = colorStrings.tertiaryColor;
         if (tmp.theme === tmp2.LIGHT) {
           if (null != tertiaryColor) {
-            const obj8 = nDefault(tertiaryColor);
-            [tmp25, tmp26, tmp27] = callback(nDefault(tertiaryColor).hsl(), 3);
-            const tmp24 = callback(nDefault(tertiaryColor).hsl(), 3);
-            const obj9 = nDefault;
-            tmp10Result = tmp10(nDefault.hsl(tmp25, tmp26, 0.85 * tmp27).hex());
-            const hslResult2 = nDefault.hsl(tmp25, tmp26, 0.85 * tmp27);
+            const obj8 = _modDef672(tertiaryColor);
+            [tmp25, tmp26, tmp27] = _slicedToArray(_modDef672(tertiaryColor).hsl(), 3);
+            const tmp24 = _slicedToArray(_modDef672(tertiaryColor).hsl(), 3);
+            tmp10Result = tmp10(_modDef672.hsl(tmp25, tmp26, 0.85 * tmp27).hex());
+            const hslResult2 = _modDef672.hsl(tmp25, tmp26, 0.85 * tmp27);
           }
-          obj[2] = tmp10Result;
+          obj.tertiaryColor = tmp10Result;
           return obj;
         }
         tmp10Result = tmp10(tertiaryColor);
@@ -57,9 +52,10 @@ function processColorStrings(colorStrings) {
     tmp10 = tmp12;
   }
 }
-const result = require("set").fileFinishedImporting(
-  "modules/premium/enhanced_role_colors/native/EnhancedRoleColorUtils.tsx",
-);
+const processColor = fn(17).processColor;
+const ThemeTypes = fn(1085).ThemeTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/enhanced_role_colors/native/EnhancedRoleColorUtils.tsx");
 
 export { processColorStrings };
 export const processColorStringsArray = function processColorStringsArray(colorStrings) {
@@ -68,7 +64,7 @@ export const processColorStringsArray = function processColorStringsArray(colorS
   } else {
     const items = [, ,];
     ({ primaryColor: arr[0], secondaryColor: arr[1], tertiaryColor: arr[2] } = processColorStrings(colorStrings));
-    return items.filter(isDiscordFrontendDevelopment.isNotNullish);
+    return items.filter(GlobalUtils.isNotNullish);
   }
 };
 export const useProcessColorStringsArray = function useProcessColorStringsArray(colorStrings) {
@@ -88,14 +84,14 @@ export const useProcessColorStringsArray = function useProcessColorStringsArray(
     tertiaryColor = colorStrings.tertiaryColor;
   }
   items[2] = tertiaryColor;
-  return React.useMemo(() => {
-    if (null == colorStrings) {
+  return noop.useMemo(() => {
+    if (null == closure_0) {
       let items = [];
     } else {
       const items1 = [, ,];
-      ({ primaryColor: arr[0], secondaryColor: arr[1], tertiaryColor: arr[2] } = closure_1_8(tmp));
-      items = items1.filter(colorStrings(closure_1_2[6]).isNotNullish);
-      const tmp3 = closure_1_8(tmp);
+      ({ primaryColor: arr[0], secondaryColor: arr[1], tertiaryColor: arr[2] } = processColorStrings(tmp));
+      items = items1.filter(GlobalUtils.isNotNullish);
+      const tmp3 = processColorStrings(tmp);
     }
     return items;
   }, items);

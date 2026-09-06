@@ -1,28 +1,33 @@
 // discord_app/modules/in_app_reports/IarSettingsUpsellsConfigRegistry.tsx
-import itemsDefault from "IarSettingsUpsellsConfigDmSpamFilter.tsx";
-import itemsDefault2 from "IarSettingsUpsellsConfigScFiltersSexualMedia.tsx";
-import itemsDefault3 from "IarSettingsUpsellsConfigScFiltersGraphicMedia.tsx";
-import closure_2 from "../../../_runtime/00019_noop.js";
+import GlobalUtils from "../../utils/GlobalUtils.tsx";
+import IarSettingsUpsellsConfigDmSpamFilterDefault from "IarSettingsUpsellsConfigDmSpamFilter.tsx";
+import IarSettingsUpsellsConfigScFiltersSexualMediaDefault from "IarSettingsUpsellsConfigScFiltersSexualMedia.tsx";
+import IarSettingsUpsellsConfigScFiltersGraphicMediaDefault from "IarSettingsUpsellsConfigScFiltersGraphicMedia.tsx";
+import noop from "../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const obj = {};
-obj[require("ReportNames").SettingsUpsells.SAFETY_DM_SPAM_FILTER] = itemsDefault;
-obj[require("ReportNames").SettingsUpsells.SAFETY_SC_FILTERS_SEXUAL_MEDIA] = itemsDefault2;
-obj[require("ReportNames").SettingsUpsells.SAFETY_SC_FILTERS_GRAPHIC_MEDIA] = itemsDefault3;
-const result = require("set").fileFinishedImporting("modules/in_app_reports/IarSettingsUpsellsConfigRegistry.tsx");
+require = fn;
+const SettingsUpsellsConfigRegistry = {};
+SettingsUpsellsConfigRegistry[fn(8630).SettingsUpsells.SAFETY_DM_SPAM_FILTER] =
+  IarSettingsUpsellsConfigDmSpamFilterDefault;
+SettingsUpsellsConfigRegistry[fn(8630).SettingsUpsells.SAFETY_SC_FILTERS_SEXUAL_MEDIA] =
+  IarSettingsUpsellsConfigScFiltersSexualMediaDefault;
+SettingsUpsellsConfigRegistry[fn(8630).SettingsUpsells.SAFETY_SC_FILTERS_GRAPHIC_MEDIA] =
+  IarSettingsUpsellsConfigScFiltersGraphicMediaDefault;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/in_app_reports/IarSettingsUpsellsConfigRegistry.tsx");
 
-export const SettingsUpsellsConfigRegistry = obj;
+export { SettingsUpsellsConfigRegistry };
 export const useIarReportSettingsUpsells = function useIarReportSettingsUpsells(reportSubType) {
   closure_0 = reportSubType;
   let items = [reportSubType];
-  return React.useMemo(() => {
+  return noop.useMemo(() => {
     let tmp = null;
     if (null != closure_0) {
       const items = [];
       const _Object = Object;
-      const entries = Object.entries(closure_1_3);
-      const item = entries.forEach((arg0) => {
-        [tmp, tmp2] = arg0;
+      const entries = Object.entries(obj);
+      const item = entries.forEach((item) => {
+        [tmp, tmp2] = item;
         let hasItem = null == tmp2.eligibleReportSubtypes;
         if (!hasItem) {
           const eligibleReportSubtypes = tmp2.eligibleReportSubtypes;
@@ -42,12 +47,11 @@ export const useIarReportSettingsUpsells = function useIarReportSettingsUpsells(
   }, items);
 };
 export const useSettingsUpsellsConfigs = function useSettingsUpsellsConfigs(settingsUpsells, type) {
-  closure_0 = settingsUpsells;
   closure_1 = type;
   const items = [settingsUpsells, type];
-  return React.useMemo(() => {
-    const mapped = settingsUpsells.map((arg0) => {
-      ({ predicate, eligibleChannelTypes } = closure_1_3[arg0]);
+  return noop.useMemo(() => {
+    const mapped = settingsUpsells.map((item) => {
+      ({ predicate, eligibleChannelTypes } = SettingsUpsellsConfigRegistry[item]);
       let tmp3 = null == predicate;
       if (!tmp3) {
         let predicateResult;
@@ -65,6 +69,6 @@ export const useSettingsUpsellsConfigs = function useSettingsUpsellsConfigs(sett
       }
       return tmp6;
     });
-    return mapped.filter(settingsUpsells(type[5]).isNotNullish);
+    return mapped.filter(GlobalUtils.isNotNullish);
   }, items);
 };

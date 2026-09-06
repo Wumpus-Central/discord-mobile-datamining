@@ -1,18 +1,19 @@
 // discord_app/intl/util.tsx
-import closure_2 from "../../_runtime/00019_noop.js";
-import { items } from "../../_runtime/01177_items.js";
+import _mod1155 from "../../_runtime/metro/01155__.js";
+import noop from "../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("intl/util.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("intl/util.tsx");
 
 export const getAvailableLocales = function getAvailableLocales() {
   _require = require("messages/en-US.messages.js").default;
-  const found = require("../../_runtime/01177_items.js").filter((enabled) => enabled.enabled);
+  const found = require("../../_runtime/metro/01177__.js").filter((enabled) => enabled.enabled);
   const mapped = found.map((code) => {
     code = code.code;
     const obj = { value: code, name: code.name, localizedName: null };
-    const obj2 = dependencyMap(closure_1_1[2]);
-    obj[2] = dependencyMap[obj2.runtimeHashMessageKey(obj2, code)];
+    const obj2 = _mod1155;
+    obj.localizedName = closure_0[obj2.runtimeHashMessageKey(obj2, code)];
     return obj;
   });
   return mapped.sort((name, name2) => {
@@ -30,15 +31,15 @@ export const getAvailableLocales = function getAvailableLocales() {
   });
 };
 export const getLanguages = function getLanguages() {
-  return items;
+  return require("../../_runtime/metro/01177__.js");
 };
-export const getNormalizedLocale = function getNormalizedLocale(str, arg1) {
-  const found = parts(1177).filter((enabled) => enabled.enabled);
+export const getNormalizedLocale = function getNormalizedLocale(Language, arg1) {
+  const found = require("../../_runtime/metro/01177__.js").filter((enabled) => enabled.enabled);
   const mapped = found.map((code) => code.code);
-  if (mapped.includes(str)) {
-    return str;
+  if (mapped.includes(Language)) {
+    return Language;
   } else {
-    parts = str.split("-");
+    const parts = Language.split("-");
     const first = parts[0];
     if (mapped.includes(parts[0])) {
       let found2 = first;
@@ -46,7 +47,7 @@ export const getNormalizedLocale = function getNormalizedLocale(str, arg1) {
       if ("zh" === first) {
         if (parts.length > 1) {
           if ("Hant" === parts[1]) {
-            let found1 = mapped.find((arg0) => "zh-TW" === arg0);
+            let found1 = mapped.find((item) => "zh-TW" === item);
             if (found1 == null) {
               found1 = arg1;
             }
@@ -54,19 +55,19 @@ export const getNormalizedLocale = function getNormalizedLocale(str, arg1) {
           }
         }
       }
-      found2 = mapped.find((arg0) => arg0.split("-")[0] === parts[0]);
+      found2 = mapped.find((item) => item.split("-")[0] === parts[0]);
       if (found2 == null) {
         found2 = arg1;
       }
     }
     return found2;
   }
-  const arr = parts(1177);
+  const arr = require("../../_runtime/metro/01177__.js");
 };
 export const useSyncMessages = function useSyncMessages(arg0, arg1) {
   closure_0 = arg0;
-  closure_1 = arg1;
-  const syncExternalStore = closure_2.useSyncExternalStore(
+  const currentLocale = arg1;
+  const syncExternalStore = noop.useSyncExternalStore(
     (arg0) => closure_0.onChange(arg0),
     () => closure_0.isLocaleLoaded(currentLocale.currentLocale),
   );

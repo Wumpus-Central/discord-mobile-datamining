@@ -1,17 +1,19 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsMultiPerkCard.tsx
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../a11y/AccessibilityStore.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import openGuildPowerupsMultiPerkBottomSheetDefault from "utils/openGuildPowerupsMultiPerkBottomSheet.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsMultiPerkCard.tsx");
+const require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsMultiPerkCard.tsx");
 
 export default function GuildPowerupsMultiPerkCard(guildId) {
   guildId = guildId.guildId;
   const listing = guildId.listing;
   let badge = listing(12549)(guildId, listing);
   let obj = guildId(504);
-  const items = [closure_4];
+  const items = [AccessibilityStore];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   obj = { guildId, powerups: listing.powerups };
   costDecorator = listing(12573)(obj);
@@ -30,15 +32,15 @@ export default function GuildPowerupsMultiPerkCard(guildId) {
         onPress: null,
         badge: null,
       };
-      ({ title: obj3[0], description: obj3[1] } = badge);
-      obj[2] = costDecorator.cost;
+      ({ title: obj3.title, description: obj3.description } = badge);
+      obj.cost = costDecorator.cost;
       const image = badge.image;
-      obj[3] = stateFromStores ? image.staticUrl : image.animatedUrl;
-      ({ status: obj3[4], costDecorator } = costDecorator);
-      obj[5] = costDecorator;
-      obj[6] = tmp4;
+      obj.imageUrl = stateFromStores ? image.staticUrl : image.animatedUrl;
+      ({ status: obj3.status, costDecorator } = costDecorator);
+      obj.costDecorator = costDecorator;
+      obj.onPress = tmp4;
       badge = badge.badge;
-      obj[7] = badge;
+      obj.badge = badge;
       jsx(listing(12571), {
         title: null,
         description: null,
@@ -49,7 +51,6 @@ export default function GuildPowerupsMultiPerkCard(guildId) {
         onPress: null,
         badge: null,
       });
-      const tmp6 = jsx;
     }
   }
   return tmp5;

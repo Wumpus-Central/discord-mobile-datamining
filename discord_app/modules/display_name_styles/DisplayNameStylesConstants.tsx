@@ -1,7 +1,7 @@
 // discord_app/modules/display_name_styles/DisplayNameStylesConstants.tsx
-import set from "../../../_runtime/00002_set.js";
 import DisplayNameEffect from "../../../discord_common/js/shared/shared-constants/DisplayNameEffect.tsx";
 import DisplayNameFont from "../../../discord_common/js/shared/shared-constants/DisplayNameFont.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 let items = [
   DisplayNameEffect.DisplayNameEffect.SOLID,
@@ -47,7 +47,7 @@ const items6 = [
   [3528287, 1497266, 2147829, 2850047, 7032319],
   [11004065, 14282892, 16769162, 16762024, 15972057],
 ];
-const result = set.fileFinishedImporting("modules/display_name_styles/DisplayNameStylesConstants.tsx");
+const result = size.fileFinishedImporting("modules/display_name_styles/DisplayNameStylesConstants.tsx");
 
 export const EFFECT_ORDER = items;
 export const FLYWHEEL_FONTS = items1;
@@ -59,16 +59,16 @@ export const DISPLAY_NAME_STYLES_GUMMY_HUE_SATURATION = 0.78;
 export const DISPLAY_NAME_STYLES_GUMMY_HUE_LIGHTNESS = 0.72;
 export const MIN_PRISM_GRADIENT_WIDTH = 38;
 export const DISPLAY_NAME_STYLES_PRISM_PRESETS = items6;
-export const getColorPresetsForEffect = function getColorPresetsForEffect(arg0) {
-  if (DisplayNameEffect.DisplayNameEffect.GUMMY === arg0) {
+export const getColorPresetsForEffect = function getColorPresetsForEffect(selectedEffectId) {
+  if (DisplayNameEffect.DisplayNameEffect.GUMMY === selectedEffectId) {
     return items5;
-  } else if (tmp(1390).DisplayNameEffect.PRISM === arg0) {
+  } else if (tmp(1390).DisplayNameEffect.PRISM === selectedEffectId) {
     return items6;
   } else {
-    if (tmp(1390).DisplayNameEffect.GRADIENT !== arg0) {
-      if (tmp(1390).DisplayNameEffect.GLOW !== arg0) {
-        return items3.map((arg0) => {
-          const items = [arg0];
+    if (tmp(1390).DisplayNameEffect.GRADIENT !== selectedEffectId) {
+      if (tmp(1390).DisplayNameEffect.GLOW !== selectedEffectId) {
+        return items3.map((item) => {
+          const items = [item];
           return items;
         });
       }

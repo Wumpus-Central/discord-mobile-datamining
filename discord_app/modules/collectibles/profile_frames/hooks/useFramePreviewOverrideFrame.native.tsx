@@ -1,22 +1,24 @@
 // discord_app/modules/collectibles/profile_frames/hooks/useFramePreviewOverrideFrame.native.tsx
-import closure_2 from "../../../../../_runtime/00019_noop.js";
-import closure_3 from "../../records/ProfileFrameRecord.tsx";
-import { useFramePreviewOverrideStore as closure_4 } from "../native/tooling/FramePreviewOverrideStore.tsx";
+import CollectiblesItemType from "../../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import ProfileFrameRecord from "../../records/ProfileFrameRecord.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
+require = fn;
+let closure_4 = fn(8203).useFramePreviewOverrideStore;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/collectibles/profile_frames/hooks/useFramePreviewOverrideFrame.native.tsx",
 );
 
 export default function useFramePreviewOverrideFrame() {
-  const tmp = callback((override) => override.override);
+  const tmp = closure_4((override) => override.override);
   closure_0 = tmp;
   const items = [tmp];
-  return React.useMemo(() => {
+  return noop.useMemo(() => {
     let tmp2 = null;
-    if (null != callback) {
+    if (null != closure_0) {
       const obj = {
-        type: null,
+        type: CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME,
         skuId: "frame-preview-override",
         label: null,
         layers: null,
@@ -25,16 +27,15 @@ export default function useFramePreviewOverrideFrame() {
         overflowBottom: null,
         overflowHorizontal: null,
       };
-      obj[0] = callback(closure_1_1[3]).CollectiblesItemType.PROFILE_FRAME;
       ({
-        frameKey: obj[2],
-        layers: obj[3],
-        innerWidth: obj[4],
-        overflowTop: obj[5],
-        overflowBottom: obj[6],
-        overflowHorizontal: obj[7],
-      } = callback);
-      tmp2 = new closure_1_3(obj);
+        frameKey: obj.label,
+        layers: obj.layers,
+        innerWidth: obj.innerWidth,
+        overflowTop: obj.overflowTop,
+        overflowBottom: obj.overflowBottom,
+        overflowHorizontal: obj.overflowHorizontal,
+      } = closure_0);
+      tmp2 = new ProfileFrameRecord(obj);
     }
     return tmp2;
   }, items);

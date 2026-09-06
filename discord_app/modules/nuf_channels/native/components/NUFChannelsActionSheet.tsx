@@ -1,29 +1,29 @@
 // discord_app/modules/nuf_channels/native/components/NUFChannelsActionSheet.tsx
-import NUFActionSheetTemplateDefault from "NUFTemplateV2.tsx";
+import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import NUFTemplateV2Default from "NUFTemplateV2.tsx";
 import NUFChannelIllustrationDefault from "NUFChannelIllustration.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import { ContentDismissActionType } from "../../../dismissible_content/DismissibleContentConstants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
-  "modules/nuf_channels/native/components/NUFChannelsActionSheet.tsx",
-);
+const require = fn;
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/nuf_channels/native/components/NUFChannelsActionSheet.tsx");
 
 export default function NUFChannelsActionSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
   const items = [markAsDismissed];
-  const callback = React.useCallback(() => {
-    closure_1_1(closure_1_2[3]).hideActionSheet();
+  const callback = noop.useCallback(() => {
+    ActionSheetActionCreatorsDefault.hideActionSheet();
     if (markAsDismissed != null) {
-      tmp2(closure_1_4.UNKNOWN);
+      tmp2(ContentDismissActionType.UNKNOWN);
     }
   }, items);
   let obj = {
     onDismiss() {
       let tmpResult;
       if (markAsDismissed != null) {
-        tmpResult = tmp(closure_1_4.UNKNOWN);
+        tmpResult = tmp(ContentDismissActionType.UNKNOWN);
       }
       return tmpResult;
     },
@@ -38,13 +38,13 @@ export default function NUFChannelsActionSheet(markAsDismissed) {
     onCTAPress: null,
   };
   const intl = markAsDismissed(1114).intl;
-  obj[1] = intl.string(markAsDismissed(1114).t.Ay9424);
+  obj.title = intl.string(markAsDismissed(1114).t.Ay9424);
   const intl2 = markAsDismissed(1114).intl;
-  obj[2] = intl2.string(markAsDismissed(1114).t.mufH2P);
+  obj.description = intl2.string(markAsDismissed(1114).t.mufH2P);
   const intl3 = markAsDismissed(1114).intl;
-  obj[3] = intl3.string(markAsDismissed(1114).t.BddRzS);
-  obj[4] = callback;
-  obj[2] = jsx(NUFActionSheetTemplateDefault, {
+  obj.CTALabel = intl3.string(markAsDismissed(1114).t.BddRzS);
+  obj.onCTAPress = callback;
+  obj.children = jsx(NUFTemplateV2Default, {
     illustration: jsx(NUFChannelIllustrationDefault, {}),
     title: null,
     description: null,

@@ -1,8 +1,8 @@
 // discord_app/design/components/Illustration/native/index.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import ManaContext from "../../../../../discord_common/js/packages/design/native.tsx";
+import native from "../../../../../discord_common/js/packages/design/native.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("design/components/Illustration/native/index.tsx");
+const result = size.fileFinishedImporting("design/components/Illustration/native/index.tsx");
 
 export const getIllustrationSource = function getIllustrationSource(theme, light) {
   if ("light" === theme) {
@@ -27,6 +27,6 @@ export const getIllustrationSource = function getIllustrationSource(theme, light
   }
   return lightResult;
 };
-export const useIllustrationSource = function useIllustrationSource(arg0) {
-  return arg0(ManaContext.useThemeContext().theme);
+export const useIllustrationSource = function useIllustrationSource(fn) {
+  return fn(native.useThemeContext().theme);
 };

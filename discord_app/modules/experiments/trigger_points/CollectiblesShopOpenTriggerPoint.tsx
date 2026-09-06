@@ -1,13 +1,13 @@
 // discord_app/modules/experiments/trigger_points/CollectiblesShopOpenTriggerPoint.tsx
-import set from "../../../../_runtime/00002_set.js";
-import ExperimentBuckets from "../ExperimentConstants.tsx";
-import registeredExperimentIds from "Helpers.tsx";
+import ExperimentConstants from "../ExperimentConstants.tsx";
+import Helpers from "Helpers.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const commonTriggerPointConfiguration = new registeredExperimentIds.CommonTriggerPointConfiguration(
+const commonTriggerPointConfiguration = new Helpers.CommonTriggerPointConfiguration(
   [],
-  ExperimentBuckets.CommonTriggerPoints.COLLECTIBLES_SHOP_OPEN,
+  ExperimentConstants.CommonTriggerPoints.COLLECTIBLES_SHOP_OPEN,
   { location: "collectibles shop open" },
 );
-const result = set.fileFinishedImporting("modules/experiments/trigger_points/CollectiblesShopOpenTriggerPoint.tsx");
+const result = size.fileFinishedImporting("modules/experiments/trigger_points/CollectiblesShopOpenTriggerPoint.tsx");
 
 export const CollectiblesShopOpenTriggerPoint = commonTriggerPointConfiguration;

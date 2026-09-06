@@ -1,124 +1,121 @@
 // discord_app/modules/notification_center/NotificationCenterStore.tsx
-import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import setDefault from "../../utils/Durations.tsx";
-import NotificationCenterScenes from "NotificationCenterItemsTypes.tsx";
-import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../inbox/RecentMentionsStore.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import DurationsDefault from "../../utils/Durations.tsx";
+import NotificationCenterItemsTypes from "NotificationCenterItemsTypes.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import RecentMentionsStore from "../inbox/RecentMentionsStore.tsx";
 
-require = arg1;
+require = fn;
 function handleLoadFinished() {
-  closure_6.hasNewMentions = false;
-  closure_6.isDataStale = false;
-  closure_6.isRefreshing = false;
+  obj.hasNewMentions = false;
+  obj.isDataStale = false;
+  obj.isRefreshing = false;
 }
-let closure_5 = 90 * setDefault.Millis.DAY;
-let closure_6 = { tab: null, localItemAcks: {}, hasNewMentions: false, isDataStale: false, isRefreshing: false };
+let closure_5 = 90 * DurationsDefault.Millis.DAY;
+let obj = { tab: null, localItemAcks: {}, hasNewMentions: false, isDataStale: false, isRefreshing: false };
 const PersistedStore = initializeDefault.PersistedStore;
 class NotificationCenterStore extends PersistedStore {}
 const prototype = NotificationCenterStore.prototype;
 prototype["initialize"] = function initialize(localItemAcks) {
-  this.waitFor(closure_4);
+  this.waitFor(RecentMentionsStore);
   if (null != localItemAcks) {
-    closure_6 = localItemAcks;
     localItemAcks = localItemAcks.localItemAcks;
     if (localItemAcks == null) {
       localItemAcks = {};
     }
     localItemAcks.localItemAcks = (function purge(localItemAcks) {
-      const obj = {};
+      obj = {};
       const entries = Object.entries(localItemAcks);
       while (tmp2 !== undefined) {
-        let tmp4 = callback;
-        let tmp5 = callback(tmp3, 2);
+        let tmp5 = _slicedToArray(tmp3, 2);
         [tmp6, tmp7] = tmp5;
         let _Date = Date;
         let tmp8 = tmp7;
-        let tmp9 = closure_5;
-        if (Date.now() - tmp7 < closure_5) {
-          let tmp10 = tmp6;
-          let tmp11 = tmp7;
+        if (Date.now() - tmp7 < closure_1_5) {
           obj[tmp6] = tmp8;
         }
         continue;
       }
       return obj;
     })(localItemAcks);
-    closure_6.isDataStale = true;
+    localItemAcks.isDataStale = true;
   }
 };
 prototype["getState"] = function getState() {
-  return closure_6;
+  return obj;
 };
 prototype["getTab"] = function getTab() {
-  let ForYou = closure_6.tab;
+  let ForYou = obj.tab;
   if (ForYou == null) {
-    ForYou = NotificationCenterScenes.NotificationCenterTabs.ForYou;
+    ForYou = NotificationCenterItemsTypes.NotificationCenterTabs.ForYou;
   }
   return ForYou;
 };
 prototype["isLocalItemAcked"] = function isLocalItemAcked(addResult) {
   let tmp = null != addResult.local_id;
   if (tmp) {
-    let tmp3 = null != closure_6.localItemAcks[addResult.local_id];
+    let tmp3 = null != obj.localItemAcks[addResult.local_id];
     if (!tmp3) {
-      tmp3 = DISCORD_EPOCHDefault.age(addResult.id) > closure_5;
-      const obj = DISCORD_EPOCHDefault;
+      obj = SnowflakeUtilsDefault;
+      tmp3 = obj.age(addResult.id) > closure_5;
     }
     tmp = tmp3;
   }
   return tmp;
 };
 prototype["hasNewMentions"] = function hasNewMentions() {
-  return closure_6.hasNewMentions;
+  return obj.hasNewMentions;
 };
 prototype["isDataStale"] = function isDataStale() {
-  return closure_6.isDataStale;
+  return obj.isDataStale;
 };
 prototype["isRefreshing"] = function isRefreshing() {
-  return closure_6.isRefreshing;
+  return obj.isRefreshing;
 };
 prototype["shouldReload"] = function shouldReload() {
-  let isRefreshing = closure_6.hasNewMentions;
+  let isRefreshing = obj.hasNewMentions;
   if (!isRefreshing) {
-    isRefreshing = closure_6.isDataStale;
+    isRefreshing = obj.isDataStale;
   }
   if (!isRefreshing) {
-    isRefreshing = closure_6.isRefreshing;
+    isRefreshing = obj.isRefreshing;
   }
   return isRefreshing;
 };
 NotificationCenterStore.displayName = "NotificationCenterStore";
 NotificationCenterStore.persistKey = "NotificationCenterStore";
-const notificationCenterStore = new NotificationCenterStore(dispatcherDefault, {
+obj = {
   MESSAGE_CREATE: function handleMessageCreate(message) {
-    if (closure_4.hasMention(message.message.id)) {
-      closure_6.hasNewMentions = true;
+    if (RecentMentionsStore.hasMention(message.message.id)) {
+      obj.hasNewMentions = true;
     }
   },
   NOTIFICATION_CENTER_SET_TAB: function handleSetTab(tab) {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(obj);
     obj.tab = tab.tab;
   },
   NOTIFICATION_CENTER_ITEMS_LOCAL_ACK: function handleAck(localIds) {
     localIds = localIds.localIds;
-    const item = localIds.forEach((arg0) => {
-      let obj = {};
-      const merged = Object.assign(obj);
-      obj = {};
-      const merged1 = Object.assign(obj.localItemAcks);
-      obj[arg0] = Date.now();
-      obj.localItemAcks = obj;
+    const item = localIds.forEach((item) => {
+      localItemAcks = {};
+      const merged = Object.assign(localItemAcks);
+      localItemAcks = {};
+      const merged1 = Object.assign(localItemAcks.localItemAcks);
+      localItemAcks[item] = Date.now();
+      localItemAcks.localItemAcks = localItemAcks;
     });
   },
   NOTIFICATION_CENTER_REFRESH: function handleRefreshData() {
-    closure_6.isRefreshing = true;
+    obj.isRefreshing = true;
   },
   LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE: handleLoadFinished,
   LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: handleLoadFinished,
-});
-const result = require("set").fileFinishedImporting("modules/notification_center/NotificationCenterStore.tsx");
+};
+const notificationCenterStore = new NotificationCenterStore(DispatcherDefault, obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/notification_center/NotificationCenterStore.tsx");
 
 export default notificationCenterStore;

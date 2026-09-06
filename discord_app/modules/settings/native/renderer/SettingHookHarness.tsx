@@ -1,27 +1,27 @@
 // discord_app/modules/settings/native/renderer/SettingHookHarness.tsx
-import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
-import closure_4 from "stores/SettingBlocklistStore.tsx";
-import { NodeType } from "SettingRendererConstants.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import SettingBlocklistStore from "stores/SettingBlocklistStore.tsx";
 
-const require = arg1;
-let c3 = importAllResult;
+const require = fn;
+const NodeType = fn(11469).NodeType;
 let closure_6 = [];
 const map = new Map();
 const map1 = new Map();
-const memoResult = importAllResult.memo(function SettingHookHarness() {
-  field = field.getField("blocklist");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/settings/native/renderer/SettingHookHarness.tsx");
+
+export default noop.memo(function SettingHookHarness() {
+  const field = SettingBlocklistStore.getField("blocklist");
   const items = [];
   const items1 = [];
   const entries = Object.entries(items(items1[4]).SETTING_RENDERER_CONFIG);
   let num = 0;
   if (0 < entries.length) {
     while (true) {
-      let tmp = callback;
-      let tmp2 = callback(entries[num], 2);
+      let tmp2 = _slicedToArray(entries[num], 2);
       [tmp3, obj2] = tmp2;
       let usePredicate = obj2.usePredicate;
-      let tmp4 = num;
       let predicate;
       if (usePredicate != null) {
         predicate = usePredicate();
@@ -31,16 +31,13 @@ const memoResult = importAllResult.memo(function SettingHookHarness() {
         if (!field.has(tmp3)) {
           let arr = items.push(tmp3);
         }
-        let tmp10 = NodeType;
         if (obj2.type !== NodeType.GUILD_SELECTOR) {
-          let tmp11 = map;
           let result = map.set(tmp3, obj2.useTitle());
           let useSearchTerms = obj2.useSearchTerms;
           let searchTerms;
           if (useSearchTerms != null) {
             searchTerms = useSearchTerms();
           }
-          let tmp14 = map1;
           if (searchTerms == null) {
             searchTerms = closure_6;
           }
@@ -60,27 +57,23 @@ const memoResult = importAllResult.memo(function SettingHookHarness() {
       }
     }
   }
-  const effect = importAllResult.useEffect(() => {
-    if (set.length > 0) {
+  const effect = noop.useEffect(() => {
+    if (items.length > 0) {
       const _Set = Set;
-      set = new Set(closure_1_4.getField("blocklist"));
-      const item = set.forEach((arg0) => set.add(arg0));
-      const item1 = items1.forEach((arg0) => set.delete(arg0));
-      const obj = { blocklist: null };
-      obj[0] = set;
-      closure_1_4.setState(obj);
+      const set = new Set(SettingBlocklistStore.getField("blocklist"));
+      const item = items.forEach((item) => set.add(item));
+      const item1 = items1.forEach((item) => set.delete(item));
+      const obj = { blocklist: set };
+      SettingBlocklistStore.setState(obj);
     }
   });
   return null;
 });
-let result = require("set").fileFinishedImporting("modules/settings/native/renderer/SettingHookHarness.tsx");
-
-export default memoResult;
 export const getCachedSettingTitle = function getCachedSettingTitle(setting) {
   return map.get(setting);
 };
 export const getCachedSettingSearchTerms = function getCachedSettingSearchTerms(arg0) {
-  let value = map1.get(arg0);
+  value = map1.get(arg0);
   if (value == null) {
     value = closure_6;
   }

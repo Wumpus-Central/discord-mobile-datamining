@@ -1,43 +1,31 @@
 // discord_app/modules/go_live/utils/canStreamWithSettings.tsx
-import set from "../../../../_runtime/00002_set.js";
-import getGoLiveAutoQualityExperimentConfig from "../GoLiveAutoQualityExperiment.tsx";
+import GoLiveAutoQualityExperiment from "../GoLiveAutoQualityExperiment.tsx";
 import canUseStreamSettingDefault from "canUseStreamSetting.tsx";
-import RESOLUTION_720 from "../StreamSettingsConstants.tsx";
+import StreamSettingsConstants from "../StreamSettingsConstants.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-({ ApplicationStreamSettingRequirements: c3, ApplicationStreamPresets: c4 } = RESOLUTION_720);
-const result = set.fileFinishedImporting("modules/go_live/utils/canStreamWithSettings.tsx");
+({ ApplicationStreamSettingRequirements: c3, ApplicationStreamPresets: closure_4 } = StreamSettingsConstants);
+const result = size.fileFinishedImporting("modules/go_live/utils/canStreamWithSettings.tsx");
 
 export default function canStreamWithSettings(arg0, arg1, arg2, arg3, arg4, arg5) {
   if (arg0 === constants.PRESET_AUTO) {
-    return getGoLiveAutoQualityExperimentConfig.getGoLiveAutoQualityExperimentConfig({
-      location: "canStreamWithSettings",
-    }).allowAutoQuality;
+    return GoLiveAutoQualityExperiment.getGoLiveAutoQualityExperimentConfig({ location: "canStreamWithSettings" })
+      .allowAutoQuality;
   } else {
     const iter = dependencyMap[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp4 = nextResult;
       if (null == nextResult.preset) {
-        let tmp6 = nextResult;
         if (arg1 === tmp4.resolution) {
-          let tmp7 = nextResult;
           if (arg2 === tmp4.fps) {
-            let tmp8 = importDefault;
-            let tmp9 = dependencyMap;
-            let tmp10 = nextResult;
-            let tmp11 = arg3;
-            let tmp12 = arg4;
-            let tmp13 = arg5;
             if (canUseStreamSettingDefault(tmp4, arg3, arg4, arg5)) {
-              let tmp14 = iter;
               iter.return();
               let flag = true;
               return true;
             }
           }
         }
-      } else {
-        let tmp5 = nextResult;
       }
       continue;
     }

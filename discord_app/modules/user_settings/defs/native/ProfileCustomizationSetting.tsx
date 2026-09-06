@@ -1,26 +1,23 @@
 // discord_app/modules/user_settings/defs/native/ProfileCustomizationSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import ME from "../../../../Constants.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
-import { ProfileCustomizationSubsection } from "../../profiles/native/ProfileCustomizationSettingScreen.tsx";
+import Constants from "../../../../Constants.tsx";
+import util from "../../../../intl/index.native.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.LYju5J);
+    const intl = util.intl;
+    return intl.string(util.t.LYju5J);
   },
   parent: null,
   unsearchable: true,
-  screen: obj,
-};
-obj = {
-  route: ME.UserSettingsSections.PROFILE_CUSTOMIZATION,
-  getComponent() {
-    return ProfileCustomizationSubsection /* ProfileCustomizationSubsection */.default;
+  screen: {
+    route: Constants.UserSettingsSections.PROFILE_CUSTOMIZATION,
+    getComponent() {
+      return require("ProfileCustomizationSettingScreen").default;
+    },
   },
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/ProfileCustomizationSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/ProfileCustomizationSetting.tsx");
 
 export default route;

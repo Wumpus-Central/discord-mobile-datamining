@@ -1,12 +1,13 @@
 // discord_app/design/components/ThemeContextProvider/native/getGradientThemeFromFlags.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import ManaContext from "../../../../../discord_common/js/packages/design/native.tsx";
+import native from "../../../../../discord_common/js/packages/design/native.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("design/components/ThemeContextProvider/native/getGradientThemeFromFlags.tsx");
+const result = size.fileFinishedImporting(
+  "design/components/ThemeContextProvider/native/getGradientThemeFromFlags.tsx",
+);
 
 export const getGradientThemeFromFlags = function getGradientThemeFromFlags(themeContext) {
-  const obj = ManaContext;
-  ManaContext;
+  native;
   let str = "dark";
   if (!hasThemeFlagResult) {
     let str2 = null;

@@ -1,14 +1,14 @@
 // discord_app/modules/markup/MarkupReactLinkUtils.tsx
-import set from "../../../_runtime/00002_set.js";
-import isLinkTrusted from "../../utils/MaskedLinkUtils.tsx";
+import MaskedLinkUtils from "../../utils/MaskedLinkUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/markup/MarkupReactLinkUtils.tsx");
+const result = size.fileFinishedImporting("modules/markup/MarkupReactLinkUtils.tsx");
 
 export const isLinkTrusted = function isLinkTrusted(target) {
   if (null == target.target) {
     return tmp;
   } else {
-    isLinkTrusted;
+    MaskedLinkUtils;
     if (null == target.title) {
       let title = tmp2(7987).astToString(target.content);
       tmp5(tmp6, title);

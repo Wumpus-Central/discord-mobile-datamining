@@ -1,7 +1,7 @@
 // discord_app/modules/application_commands/DraftCommand.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/application_commands/DraftCommand.tsx");
+const result = size.fileFinishedImporting("modules/application_commands/DraftCommand.tsx");
 
 export const isDraftCommandValidForText = function isDraftCommandValidForText(command, substr) {
   let tmp = null != command;

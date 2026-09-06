@@ -1,28 +1,25 @@
 // discord_app/modules/a11y/AccessibilityStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import Storage7 from "../../../discord_common/js/packages/storage/Storage.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import AccessibilityAnnouncer from "../../design/shared.tsx";
-import setDefault from "../../utils/CrossPlatformNativeUtils.native.tsx";
-import closure_4 from "../../../_runtime/metro/00109__objectWithoutProperties.js";
-import closure_5 from "../user_settings/SelectivelySyncedUserSettingsStore.tsx";
-import closure_6 from "../user_settings/ThemeStore.tsx";
-import closure_7 from "../user_settings/UserSettingsProtoStore.tsx";
-import ME from "../../Constants.tsx";
-import MESSAGE_GROUP_SPACING from "../messages/MessageConstants.tsx";
-import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import shared from "../../design/shared.tsx";
+import CrossPlatformNativeUtilsDefault from "../../utils/CrossPlatformNativeUtils.native.tsx";
+import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
+import SelectivelySyncedUserSettingsStore from "../user_settings/SelectivelySyncedUserSettingsStore.tsx";
+import ThemeStore from "../user_settings/ThemeStore.tsx";
+import UserSettingsProtoStore from "../user_settings/UserSettingsProtoStore.tsx";
 
-require = arg1;
+require = fn;
 function maybeApplyNoTextColorForLightCustomTheme() {
   const officialMessageStyleExplicitlySet = obj.officialMessageStyleExplicitlySet;
   let tmp = !officialMessageStyleExplicitlySet;
   if (!officialMessageStyleExplicitlySet) {
     let tmp3 = "default" !== obj.officialMessageStyle;
     if (!tmp3) {
-      tmp3 = theme.theme !== ThemeTypes.LIGHT;
+      tmp3 = ThemeStore.theme !== ThemeTypes.LIGHT;
     }
     if (!tmp3) {
-      const ClientThemeSettings = explicitContentFromProto /* explicitContentFromProto */.ClientThemeSettings;
+      const ClientThemeSettings = require("UserSettings").ClientThemeSettings;
       const setting = ClientThemeSettings.getSetting();
       let tmp10 = null != setting.backgroundGradientPresetId;
       if (!tmp10) {
@@ -91,13 +88,15 @@ function handleReducedMotionUpdated() {
   obj.youBarAvatarDecoAnimation = str;
 }
 let closure_3 = ["fontScale"];
-const Accessibility = ME.Accessibility;
-const ThemeTypes = ME.ThemeTypes;
+const Constants = fn(1074);
+const Accessibility = Constants.Accessibility;
+const ThemeTypes = Constants.ThemeTypes;
+const MessageConstants = fn(4553);
 ({
   MESSAGE_GROUP_SPACING: c10,
-  DEFAULT_COMPACT_SPACING: unpackModuleId,
+  DEFAULT_COMPACT_SPACING: closure_11,
   DEFAULT_COZY_SPACING: closure_12,
-} = MESSAGE_GROUP_SPACING);
+} = MessageConstants);
 let obj = { DEFAULT: "default", HIGH: "high" };
 obj = { FLEXIBLE: "flexible", CONDENSED: "condensed", HIDDEN: "hidden" };
 obj = {
@@ -152,7 +151,7 @@ const prototype = AccessibilityStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   const self = this;
   let tmp = arg0;
-  this.waitFor(closure_7);
+  this.waitFor(UserSettingsProtoStore);
   obj = {};
   const merged = Object.assign(obj);
   if (arg0 == null) {
@@ -166,14 +165,14 @@ prototype["initialize"] = function initialize(arg0) {
   if (null != obj.messageGroupSpacing) {
     num = obj.messageGroupSpacing;
   }
-  if (closure_10.indexOf(num) < 0) {
+  if (closure_1_10.indexOf(num) < 0) {
     obj.messageGroupSpacing = null;
   }
-  const items = [closure_7, closure_5];
+  const items = [UserSettingsProtoStore, SelectivelySyncedUserSettingsStore];
   self.syncWith(items, maybeApplyNoTextColorForLightCustomTheme);
 };
 Object.defineProperty(prototype, "fontScale", {
-  get: function fontScale(arg0) {
+  get: function fontScale() {
     return (obj.fontSize / Accessibility.FONT_SIZE_DEFAULT) * 100;
   },
   set: undefined,
@@ -199,7 +198,7 @@ Object.defineProperty(prototype, "isFontScaledDown", {
 Object.defineProperty(prototype, "fontScaleClass", {
   get: function fontScaleClass() {
     const self = this;
-    let str = table[this.fontSize];
+    let str = closure_17[this.fontSize];
     if (str == null) {
       str = "";
     }
@@ -255,7 +254,7 @@ Object.defineProperty(prototype, "lowContrastMode", {
   set: undefined,
 });
 Object.defineProperty(prototype, "saturation", {
-  get: function saturation(arg0) {
+  get: function saturation() {
     return obj.saturation;
   },
   set: undefined,
@@ -289,8 +288,8 @@ Object.defineProperty(prototype, "messageGroupSpacing", {
     if (null != obj.messageGroupSpacing) {
       let messageGroupSpacing = obj.messageGroupSpacing;
     } else {
-      const MessageDisplayCompact = explicitContentFromProto /* explicitContentFromProto */.MessageDisplayCompact;
-      messageGroupSpacing = MessageDisplayCompact.getSetting() ? closure_11 : closure_12;
+      const MessageDisplayCompact = require("UserSettings").MessageDisplayCompact;
+      messageGroupSpacing = MessageDisplayCompact.getSetting() ? closure_1_11 : closure_1_12;
     }
     return messageGroupSpacing;
   },
@@ -298,15 +297,15 @@ Object.defineProperty(prototype, "messageGroupSpacing", {
 });
 Object.defineProperty(prototype, "isMessageGroupSpacingIncreased", {
   get: function isMessageGroupSpacingIncreased() {
-    const MessageDisplayCompact = explicitContentFromProto /* explicitContentFromProto */.MessageDisplayCompact;
-    return this.messageGroupSpacing > (MessageDisplayCompact.getSetting() ? closure_11 : closure_12);
+    const MessageDisplayCompact = require("UserSettings").MessageDisplayCompact;
+    return this.messageGroupSpacing > (MessageDisplayCompact.getSetting() ? closure_1_11 : closure_1_12);
   },
   set: undefined,
 });
 Object.defineProperty(prototype, "isMessageGroupSpacingDecreased", {
   get: function isMessageGroupSpacingDecreased() {
-    const MessageDisplayCompact = explicitContentFromProto /* explicitContentFromProto */.MessageDisplayCompact;
-    return this.messageGroupSpacing < (MessageDisplayCompact.getSetting() ? closure_11 : closure_12);
+    const MessageDisplayCompact = require("UserSettings").MessageDisplayCompact;
+    return this.messageGroupSpacing < (MessageDisplayCompact.getSetting() ? closure_1_11 : closure_1_12);
   },
   set: undefined,
 });
@@ -385,7 +384,7 @@ Object.defineProperty(prototype, "systemPrefersCrossfades", {
   set: undefined,
 });
 Object.defineProperty(prototype, "alwaysShowLinkDecorations", {
-  get: function alwaysShowLinkDecorations(arg0) {
+  get: function alwaysShowLinkDecorations() {
     return obj.alwaysShowLinkDecorations;
   },
   set: undefined,
@@ -409,7 +408,7 @@ Object.defineProperty(prototype, "officialMessageStyle", {
   set: undefined,
 });
 Object.defineProperty(prototype, "displayNameStylesEnabled", {
-  get: function displayNameStylesEnabled(arg0) {
+  get: function displayNameStylesEnabled() {
     return obj.displayNameStylesEnabled;
   },
   set: undefined,
@@ -548,7 +547,7 @@ let items = [
       }
     }
     obj = {};
-    const merged = Object.assign(callback(fontScale, closure_3));
+    const merged = Object.assign(_objectWithoutProperties(fontScale, closure_3));
     obj.fontSize = num4;
     return obj;
   },
@@ -574,7 +573,7 @@ let items = [
   (saturation) => {
     obj = {};
     const merged = Object.assign(saturation);
-    obj.alwaysShowLinkDecorations = saturation.saturation <= AccessibilityAnnouncer.LOW_SATURATION_THRESHOLD;
+    obj.alwaysShowLinkDecorations = saturation.saturation <= shared.LOW_SATURATION_THRESHOLD;
     return obj;
   },
   (arg0) => {
@@ -621,7 +620,7 @@ let items = [
   },
 ];
 AccessibilityStore.migrations = items;
-const accessibilityStore = new AccessibilityStore(dispatcherDefault, {
+const accessibilityStore = new AccessibilityStore(DispatcherDefault, {
   ACCESSIBILITY_SET_FONT_SIZE: function handleFontScaleTo(fontSize) {
     let FONT_SIZE_DEFAULT = fontSize.fontSize;
     const FONT_SIZES = Accessibility.FONT_SIZES;
@@ -646,7 +645,7 @@ const accessibilityStore = new AccessibilityStore(dispatcherDefault, {
           obj = {};
           const merged = Object.assign(obj);
           obj.zoom = zoom.zoom;
-          setDefault.setZoomFactor(obj.zoom);
+          CrossPlatformNativeUtilsDefault.setZoomFactor(obj.zoom);
         }
       }
     }
@@ -665,8 +664,7 @@ const accessibilityStore = new AccessibilityStore(dispatcherDefault, {
     }
     if (obj.zoom !== Accessibility.ZOOM_DEFAULT) {
       obj.zoom = tmp.ZOOM_DEFAULT;
-      setDefault.setZoomFactor(obj.zoom);
-      const obj2 = setDefault;
+      CrossPlatformNativeUtilsDefault.setZoomFactor(obj.zoom);
     }
   },
   ACCESSIBILITY_KEYBOARD_MODE_ENABLE: function handleEnableKeyboardMode() {
@@ -826,43 +824,37 @@ const accessibilityStore = new AccessibilityStore(dispatcherDefault, {
     const merged = Object.assign(obj);
     let tmp2 = null != appsButtonEnabled.appsButtonEnabled;
     if (tmp2) {
-      obj = { appsButtonEnabled: null };
-      obj[0] = appsButtonEnabled.appsButtonEnabled;
+      obj = { appsButtonEnabled: appsButtonEnabled.appsButtonEnabled };
       tmp2 = obj;
     }
     const merged1 = Object.assign(tmp2);
     let tmp4 = null != appsButtonEnabled.expressionPickerFormat;
     if (tmp4) {
-      obj = { expressionPickerFormat: null };
-      obj[0] = appsButtonEnabled.expressionPickerFormat;
+      obj = { expressionPickerFormat: appsButtonEnabled.expressionPickerFormat };
       tmp4 = obj;
     }
     const merged2 = Object.assign(tmp4);
     let tmp6 = null != appsButtonEnabled.condensePickerWhenNarrow;
     if (tmp6) {
-      obj1 = { condensePickerWhenNarrow: null };
-      obj1[0] = appsButtonEnabled.condensePickerWhenNarrow;
+      const obj1 = { condensePickerWhenNarrow: appsButtonEnabled.condensePickerWhenNarrow };
       tmp6 = obj1;
     }
     const merged3 = Object.assign(tmp6);
     let tmp8 = null != appsButtonEnabled.emojiButtonEnabled;
     if (tmp8) {
-      const obj2 = { emojiButtonEnabled: null };
-      obj2[0] = appsButtonEnabled.emojiButtonEnabled;
+      const obj2 = { emojiButtonEnabled: appsButtonEnabled.emojiButtonEnabled };
       tmp8 = obj2;
     }
     const merged4 = Object.assign(tmp8);
     let tmp10 = null != appsButtonEnabled.gifButtonEnabled;
     if (tmp10) {
-      const obj3 = { gifButtonEnabled: null };
-      obj3[0] = appsButtonEnabled.gifButtonEnabled;
+      const obj3 = { gifButtonEnabled: appsButtonEnabled.gifButtonEnabled };
       tmp10 = obj3;
     }
     const merged5 = Object.assign(tmp10);
     let tmp12 = null != appsButtonEnabled.stickerButtonEnabled;
     if (tmp12) {
-      const obj4 = { stickerButtonEnabled: null };
-      obj4[0] = appsButtonEnabled.stickerButtonEnabled;
+      const obj4 = { stickerButtonEnabled: appsButtonEnabled.stickerButtonEnabled };
       tmp12 = obj4;
     }
     const merged6 = Object.assign(tmp12);
@@ -894,7 +886,8 @@ const accessibilityStore = new AccessibilityStore(dispatcherDefault, {
     obj.youBarAvatarDecoAnimation = str;
   },
 });
-const result = require("set").fileFinishedImporting("modules/a11y/AccessibilityStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/a11y/AccessibilityStore.tsx");
 
 export default accessibilityStore;
 export const AccessibilityContrastMode = obj;

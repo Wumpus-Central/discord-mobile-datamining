@@ -1,16 +1,16 @@
 // discord_app/modules/rpc/server/commands/users.tsx
 import transformUserDefault from "../../helpers/transformUser.tsx";
-import closure_2 from "../../../../stores/UserStore.tsx";
-import RPC_SCOPE_CONFIG from "../../Constants.tsx";
-import { RPCCommands } from "../../../../Constants.tsx";
-import CONTEXT_MENU_ICON_NAMES from "../../../../../discord_common/js/packages/rpc-schema/rpc-schema.tsx";
+import UserStore from "../../../../stores/UserStore.tsx";
 
-({ RPC_EMBEDDED_APP_SCOPE, RPC_LOCAL_SCOPE, RPC_SCOPE_CONFIG } = RPC_SCOPE_CONFIG);
+const Constants = fn(4465);
+({ RPC_EMBEDDED_APP_SCOPE, RPC_LOCAL_SCOPE, RPC_SCOPE_CONFIG } = Constants);
+const RPCCommands = fn(1074).RPCCommands;
 let obj = {};
+const CONTEXT_MENU_ICON_NAMES = fn(14476);
 obj = {
-  scope: { [RPC_SCOPE_CONFIG.ANY]: items },
+  scope: null,
   handler(args) {
-    user = user.getUser(args.args.id);
+    const user = UserStore.getUser(args.args.id);
     let tmp2 = null;
     if (null != user) {
       tmp2 = transformUserDefault(user);
@@ -18,8 +18,10 @@ obj = {
     return tmp2;
   },
 };
-items = [RPC_EMBEDDED_APP_SCOPE, RPC_LOCAL_SCOPE];
+const items = [RPC_EMBEDDED_APP_SCOPE, RPC_LOCAL_SCOPE];
+obj.scope = { [RPC_SCOPE_CONFIG.ANY]: items };
 obj[RPCCommands.GET_USER] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_USER, obj);
-const result = require("set").fileFinishedImporting("modules/rpc/server/commands/users.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/rpc/server/commands/users.tsx");
 
 export default obj;

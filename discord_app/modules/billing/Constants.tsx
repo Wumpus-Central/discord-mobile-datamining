@@ -1,7 +1,7 @@
 // discord_app/modules/billing/Constants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/billing/Constants.tsx");
+const result = size.fileFinishedImporting("modules/billing/Constants.tsx");
 
 export const StripeErrorTypes = [
   "api_connection_error",

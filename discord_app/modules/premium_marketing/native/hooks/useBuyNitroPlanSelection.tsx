@@ -1,22 +1,22 @@
 // discord_app/modules/premium_marketing/native/hooks/useBuyNitroPlanSelection.tsx
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
-import GuildFeatures from "../../../premium/PremiumConstants.tsx";
+import PremiumBundledPlansUtils from "../../../premium/native/PremiumBundledPlansUtils.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const PremiumTypes = GuildFeatures.PremiumTypes;
-const SubscriptionIntervalTypes = GuildFeatures.SubscriptionIntervalTypes;
+require = fn;
+const PremiumConstants = fn(1373);
+const PremiumTypes = PremiumConstants.PremiumTypes;
+const SubscriptionIntervalTypes = PremiumConstants.SubscriptionIntervalTypes;
 let items = [,];
 ({ TIER_2: arr[0], TIER_0: arr[1] } = PremiumTypes);
-let result = require("set").fileFinishedImporting(
-  "modules/premium_marketing/native/hooks/useBuyNitroPlanSelection.tsx",
-);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/premium_marketing/native/hooks/useBuyNitroPlanSelection.tsx");
 
 export const NITRO_PLAN_TIERS = items;
 export const useBuyNitroPlanSelection = function useBuyNitroPlanSelection(tier) {
   let obj = memo2(memo[4]);
   const premiumTrialOffer = obj.usePremiumTrialOffer();
-  obj1 = memo2(memo[5]);
+  let obj1 = memo2(memo[5]);
   const premiumTrialOfferPremiumType = obj1.usePremiumTrialOfferPremiumType();
   const buyNitroTrialUnavailableTiers = memo2(memo[6]).useBuyNitroTrialUnavailableTiers();
   let tmp5;
@@ -58,7 +58,7 @@ export const useBuyNitroPlanSelection = function useBuyNitroPlanSelection(tier) 
   items = [TIER_2];
   memo = obj5.useMemo(() => {
     closure_0 = closure_1;
-    const premiumBundlesWithPredicate = memo2(memo[3]).getPremiumBundlesWithPredicate((additionalPlans) => {
+    const premiumBundlesWithPredicate = PremiumBundledPlansUtils.getPremiumBundlesWithPredicate((additionalPlans) => {
       let tmp = 0 === additionalPlans.additionalPlans.length;
       if (tmp) {
         tmp = true !== additionalPlans.isDeprecated;
@@ -100,12 +100,12 @@ export const useBuyNitroPlanSelection = function useBuyNitroPlanSelection(tier) 
   if (num2 == null) {
     num2 = 1;
   }
-  obj[2] = num2;
+  obj.numMonths = num2;
   let tmp19 = null;
   if (!Number.isNaN(num)) {
     tmp19 = num;
   }
-  obj[3] = tmp19;
+  obj.percentOff = tmp19;
   found = memo.find((interval) => interval.interval === priceString1.MONTH);
   found1 = memo.find((interval) => interval.interval === priceString1.YEAR);
   let basePlanId;
@@ -114,7 +114,7 @@ export const useBuyNitroPlanSelection = function useBuyNitroPlanSelection(tier) 
   if (found != null) {
     basePlanId = found.basePlanId;
   }
-  const tmp23Result = importDefault(memo[10])(basePlanId);
+  const tmp23Result = require("usePremiumPlanPrice")(basePlanId);
   priceString = undefined;
   if (tmp23Result != null) {
     priceString = tmp23Result.priceString;
@@ -123,7 +123,7 @@ export const useBuyNitroPlanSelection = function useBuyNitroPlanSelection(tier) 
     priceString = null;
   }
   let basePlanId1;
-  const tmp23 = importDefault(memo[10]);
+  const tmp23 = require("usePremiumPlanPrice");
   if (found1 != null) {
     basePlanId1 = found1.basePlanId;
   }
@@ -155,13 +155,10 @@ export const useBuyNitroPlanSelection = function useBuyNitroPlanSelection(tier) 
       const result1 = map.set(found1.productId, priceString1);
     }
     while (tmp12 !== undefined) {
-      let tmp14 = found;
-      let tmp15 = found(tmp13, 2);
+      let tmp15 = _slicedToArray(tmp13, 2);
       [tmp16, tmp18] = tmp15;
       let tmp17 = tmp16;
       if (map.has(tmp16)) {
-        let tmp19 = tmp16;
-        let tmp20 = tmp18;
         let result2 = map.set(tmp17, tmp18);
       }
       continue;
@@ -173,10 +170,8 @@ export const useBuyNitroPlanSelection = function useBuyNitroPlanSelection(tier) 
     const set = new Set();
     if (memo1.size > 0) {
       for (const item10015 of memo) {
-        let tmp4 = memo1;
         let tmp3 = item10015;
         if (!memo1.has(item10015.productId)) {
-          let tmp5 = item10015;
           let addResult = set.add(tmp3.productId);
         }
         continue;
@@ -199,7 +194,7 @@ export const useBuyNitroPlanSelection = function useBuyNitroPlanSelection(tier) 
   const callback = obj5.useCallback((arg0) => {
     if (arg0 !== closure_1) {
       memo2(arg0);
-      callback(null);
+      closure_10(null);
     }
   }, items3);
   if (null != first) {
@@ -213,24 +208,19 @@ export const useBuyNitroPlanSelection = function useBuyNitroPlanSelection(tier) 
       tmp43 = premiumTier === tmp7;
     }
     obj = {
-      tier: null,
-      setTier: null,
-      productId: null,
-      setProductId: null,
-      item: null,
+      tier: TIER_2,
+      setTier: callback,
+      productId: first,
+      setProductId: tmp38,
+      item: found2,
       priceString: null,
       isDiscounted: null,
       isTrial: null,
     };
-    obj[0] = TIER_2;
-    obj[1] = callback;
-    obj[2] = first;
-    obj[3] = tmp38;
-    obj[4] = found2;
     let tmp45 = null;
     if (null != found2) {
       if (!tmp42) {
-        let value = memo1.get(found2.productId);
+        value = memo1.get(found2.productId);
         if (value == null) {
           value = null;
         }
@@ -249,18 +239,18 @@ export const useBuyNitroPlanSelection = function useBuyNitroPlanSelection(tier) 
       trialId: null,
       discounted: null,
     };
-    obj[5] = tmp45;
-    obj[6] = null != found2 && found2.productId === obj.id && null != discountedPriceString;
-    obj[7] = tmp43;
-    obj1[0] = obj;
-    obj1[1] = memo;
-    obj1[2] = memo1;
-    obj1[3] = memo2;
-    obj1[4] = isEligibleForBogoOffer;
-    obj1[5] = null != premiumDiscountOffer;
-    obj1[6] = tmp7;
-    obj1[7] = tmp8;
-    obj1[8] = obj;
+    obj.priceString = tmp45;
+    obj.isDiscounted = null != found2 && found2.productId === obj.id && null != discountedPriceString;
+    obj.isTrial = tmp43;
+    obj1.selection = obj;
+    obj1.items = memo;
+    obj1.priceStringByProductId = memo1;
+    obj1.unavailableProductIds = memo2;
+    obj1.bogoEligible = isEligibleForBogoOffer;
+    obj1.hasDiscountOffer = null != premiumDiscountOffer;
+    obj1.trialTier = tmp7;
+    obj1.trialId = tmp8;
+    obj1.discounted = obj;
     return obj1;
   }
   importDefault = isEligibleForBogoOffer ? priceString1.MONTH : priceString1.YEAR;

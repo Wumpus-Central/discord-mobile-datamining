@@ -1,8 +1,8 @@
 // discord_app/modules/media_uploads/experiments/ImageAttachmentMezzanineV2Experiment.tsx
-import set from "../../../../_runtime/00002_set.js";
 import ApexExperiment from "../../experiments/apex/index.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-let closure_0 = ApexExperiment.createApexExperiment({
+const config = ApexExperiment.createApexExperiment({
   name: "2025-09-image-attachment-mezzanine-v2",
   kind: "user",
   defaultConfig: { enabled: false },
@@ -12,7 +12,7 @@ let closure_0 = ApexExperiment.createApexExperiment({
     2: { enabled: true, maxFileSizeBytes: 262144 },
   },
 });
-const result = set.fileFinishedImporting("modules/media_uploads/experiments/ImageAttachmentMezzanineV2Experiment.tsx");
+const result = size.fileFinishedImporting("modules/media_uploads/experiments/ImageAttachmentMezzanineV2Experiment.tsx");
 
 export const getImageAttachmentMezzanineV2Config = function getImageAttachmentMezzanineV2Config(location) {
   return config.getConfig({ location: location.location });

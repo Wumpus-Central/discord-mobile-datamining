@@ -1,6 +1,6 @@
 // discord_app/lib/DiscordNative.tsx
-import set from "../../_runtime/00002_set.js";
+import size from "../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("lib/DiscordNative.tsx");
+const result = size.fileFinishedImporting("lib/DiscordNative.tsx");
 
 export default window.DiscordNative;

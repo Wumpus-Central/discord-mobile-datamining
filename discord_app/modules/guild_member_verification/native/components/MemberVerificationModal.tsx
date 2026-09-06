@@ -1,18 +1,23 @@
 // discord_app/modules/guild_member_verification/native/components/MemberVerificationModal.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../../stores/GuildMemberStore.tsx";
-import closure_6 from "../../MemberVerificationFormStore.tsx";
-import BANNER_RATIO_HEIGHT_16_9 from "MemberVerificationFormConstants.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import importDefaultResult from "../../../reanimated/ReanimatedRexport.tsx";
+import DispatcherDefault from "../../../../Dispatcher.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ReanimatedRexport2 from "../../../reanimated/ReanimatedRexport.tsx";
+import MemberVerificationTypes from "../../MemberVerificationTypes.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import GuildMemberStore from "../../../../stores/GuildMemberStore.tsx";
+import MemberVerificationFormStore from "../../MemberVerificationFormStore.tsx";
 
-const require = arg1;
-({ SCROLL_EVENT_TIMER_MS: error, useBannerHeight: closure_8 } = BANNER_RATIO_HEIGHT_16_9);
-({ jsx: c9, jsxs: c10 } = jsxProd);
-let closure_11 = importDefaultResult.createAnimatedComponent(require("Button").Icon);
+const ReanimatedRexport = ReanimatedRexport2;
+
+const MemberVerificationAlertActionCreators = tmp3(5527);
+require = fn;
+const View = fn(17).View;
+const MemberVerificationFormConstants = fn(5573);
+({ SCROLL_EVENT_TIMER_MS: closure_7, useBannerHeight: closure_8 } = MemberVerificationFormConstants);
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+let closure_11 = ReanimatedRexport.createAnimatedComponent(fn(1178).Icon);
+fn(4560);
 let obj = {
   flex: { flex: 1 },
   flexLoading: null,
@@ -27,29 +32,29 @@ obj = {
   flex: 1,
   alignItems: "center",
   justifyContent: "center",
-  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
 };
-obj[1] = obj;
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
-obj[2] = createCacheKey;
-obj[3] = { position: "absolute", right: 0 };
-obj[4] = { position: "relative", marginTop: 10, marginRight: 20, width: 24, height: 24 };
-obj[5] = { position: "absolute", tintColor: ThemesDefault.colors.WHITE };
-let obj2 = { position: "absolute", tintColor: ThemesDefault.colors.WHITE };
-obj[6] = { position: "absolute", tintColor: ThemesDefault.colors.TEXT_DEFAULT };
-obj[7] = { marginHorizontal: 16, marginVertical: 12 };
-let closure_12 = createCacheKey.createStyles(obj);
-let closure_13 = {
+obj.flexLoading = obj;
+const createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+obj.scrollContainer = createStyles;
+obj.closeButtonContainer = { position: "absolute", right: 0 };
+obj.closeIconContainer = { position: "relative", marginTop: 10, marginRight: 20, width: 24, height: 24 };
+obj.closeIconOverBanner = { position: "absolute", tintColor: nativeDefault.colors.WHITE };
+let obj2 = { position: "absolute", tintColor: nativeDefault.colors.WHITE };
+obj.closeIconAfterBanner = { position: "absolute", tintColor: nativeDefault.colors.TEXT_DEFAULT };
+obj.headerSeparator = { marginHorizontal: 16, marginVertical: 12 };
+let closure_12 = createStyles.createStyles(obj);
+const __initData = {
   code: "function MemberVerificationModalTsx1({contentOffset:{y:y}}){const{scrollTop}=this.__closure;return scrollTop.set(y);}",
 };
-let closure_14 = {
+const __initData2 = {
   code: "function MemberVerificationModalTsx2(){const{interpolate,scrollTop,bannerHeight,safeAreaTop,theme}=this.__closure;return{opacity:interpolate(scrollTop.get(),[0,bannerHeight-safeAreaTop],[1,theme==='dark'?1:0],'clamp')};}",
 };
-let closure_15 = {
+const __initData3 = {
   code: "function MemberVerificationModalTsx3(){const{interpolate,scrollTop,bannerHeight,safeAreaTop}=this.__closure;return{opacity:interpolate(scrollTop.get(),[0,bannerHeight-safeAreaTop],[0,1],'clamp')};}",
 };
-let obj3 = { position: "absolute", tintColor: ThemesDefault.colors.TEXT_DEFAULT };
-let result = require("set").fileFinishedImporting(
+const size = fn(2);
+let result = size.fileFinishedImporting(
   "modules/guild_member_verification/native/components/MemberVerificationModal.tsx",
 );
 
@@ -57,18 +62,17 @@ export default function MemberVerificationModal(guildId) {
   guildId = guildId.guildId;
   const onClose = guildId.onClose;
   let top;
-  let sharedValue;
   closure_4 = undefined;
   closure_5 = undefined;
   let stateFromStores;
   let memo1;
-  let callback;
-  let tmp = callback4();
+  closure_8 = undefined;
+  let tmp = closure_12();
   const rect = onClose(top[10])();
   top = rect.top;
   let obj = guildId(top[6]);
-  sharedValue = obj.useSharedValue(0);
-  obj1 = guildId(top[6]);
+  const sharedValue = obj.useSharedValue(0);
+  let obj1 = guildId(top[6]);
   class A {
     constructor(arg0) {
       return closure_3.set(guildId.contentOffset.y);
@@ -76,15 +80,15 @@ export default function MemberVerificationModal(guildId) {
   }
   A.__closure = { scrollTop: sharedValue };
   A.__workletHash = 16447800091731;
-  A.__initData = closure_13;
+  A.__initData = __initData;
   const tmp7 = onClose(top[11])();
   closure_4 = tmp7;
-  const tmp8 = callback();
+  const tmp8 = closure_8();
   closure_5 = tmp8;
   let obj2 = guildId(top[6]);
   class M {
     constructor() {
-      obj = guildId(top[6]);
+      obj = closure_0(closure_2[6]);
       value = closure_3.get();
       items = [0];
       items[1] = closure_5 - top;
@@ -92,9 +96,10 @@ export default function MemberVerificationModal(guildId) {
       if ("dark" === closure_4) {
         num = 1;
       }
-      obj = { opacity: obj.interpolate(value, items, items1, "clamp") };
+      obj = { opacity: null };
       items1 = [1];
       items1[1] = num;
+      obj.opacity = obj.interpolate(value, items, items1, "clamp");
       return obj;
     }
   }
@@ -107,23 +112,23 @@ export default function MemberVerificationModal(guildId) {
   };
   M.__closure = obj;
   M.__workletHash = 9776820170891;
-  M.__initData = closure_14;
+  M.__initData = __initData2;
   const animatedStyle = obj2.useAnimatedStyle(M);
   let obj4 = guildId(top[6]);
   class C {
     constructor() {
       obj = { opacity: null };
-      obj2 = guildId(top[6]);
+      obj2 = closure_0(closure_2[6]);
       items = [0];
       items[1] = closure_5 - top;
-      obj[0] = obj2.interpolate(closure_3.get(), items, [0, 1], "clamp");
+      obj.opacity = obj2.interpolate(closure_3.get(), items, [0, 1], "clamp");
       return obj;
     }
   }
   obj = { interpolate: guildId(top[6]).interpolate, scrollTop: sharedValue, bannerHeight: tmp8, safeAreaTop: top };
   C.__closure = obj;
   C.__workletHash = 4275816745587;
-  C.__initData = closure_15;
+  C.__initData = __initData3;
   const animatedStyle1 = obj4.useAnimatedStyle(C);
   let obj6 = guildId(top[12]);
   const setInitialVerificationEffect = obj6.useSetInitialVerificationEffect(guildId);
@@ -131,7 +136,7 @@ export default function MemberVerificationModal(guildId) {
   let obj7 = guildId(top[14]);
   let items = [stateFromStores];
   let items1 = [guildId];
-  stateFromStores = obj7.useStateFromStores(items, () => stateFromStores.get(guildId), items1);
+  stateFromStores = obj7.useStateFromStores(items, () => MemberVerificationFormStore.get(guildId), items1);
   let obj8 = sharedValue;
   let formFields;
   if (stateFromStores != null) {
@@ -145,7 +150,7 @@ export default function MemberVerificationModal(guildId) {
       const formFields = stateFromStores.formFields;
       if (formFields != null) {
         flag = formFields.some(
-          (field_type) => field_type.field_type !== callback(table[15]).VerificationFormFieldTypes.TERMS,
+          (field_type) => field_type.field_type !== guildId(top[15]).VerificationFormFieldTypes.TERMS,
         );
       }
     }
@@ -166,79 +171,69 @@ export default function MemberVerificationModal(guildId) {
     if (formFields == null) {
       formFields = [];
     }
-    closure_0 = Object.values(guildId(top[15]).VerificationFormFieldTypes);
+    closure_0 = Object.values(MemberVerificationTypes.VerificationFormFieldTypes);
     return formFields.some((field_type) => !closure_0.includes(field_type.field_type));
   }, items3);
-  callback = obj8.useRef(onClose);
+  closure_8 = obj8.useRef(onClose);
   const effect = obj8.useEffect(() => {
     closure_8.current = onClose;
   });
   const items4 = [memo1];
   const effect1 = obj8.useEffect(() => {
     if (memo1) {
-      onClose(top[16]).wait(() => {
+      DispatcherDefault.wait(() => {
         const current = ref.current;
         if (current != null) {
           current();
         }
-        const result = closure_1_0(closure_1_2[17]).openMemberVerificationUpdateAlert();
+        const result = guildId(top[17]).openMemberVerificationUpdateAlert();
       });
-      const obj = onClose(top[16]);
     }
   }, items4);
   if (null != tmp12) {
     if (null != setInitialVerificationEffect) {
       if (!memo1) {
-        obj1 = { style: null, children: null };
-        obj1[0] = tmp.flex;
+        obj1 = { style: tmp.flex, children: null };
         obj2 = {
-          style: null,
+          style: tmp.scrollContainer,
           contentContainerStyle: null,
           scrollEventThrottle: null,
           keyboardShouldPersistTaps: "handled",
           onScroll: null,
           children: null,
         };
-        obj2[0] = tmp.scrollContainer;
-        const obj3 = { paddingBottom: null };
-        obj3[0] = rect.bottom;
-        obj2[1] = obj3;
-        obj2[2] = memo1;
-        obj2[4] = animatedScrollHandler;
-        obj4 = { guild: null, scrollTop: null, hasManualFormFields: null };
-        obj4[0] = tmp12;
-        obj4[1] = sharedValue;
-        obj4[2] = memo;
-        const items5 = [callback2(tmp2(tmp3[20]), obj4), ,];
-        const obj5 = { style: null };
-        obj5[0] = tmp.headerSeparator;
-        items5[1] = callback2(tmp2(tmp3[21]), obj5);
-        obj6 = { guild: null, onSuccess: null, onClose: null };
-        obj6[0] = tmp12;
-        obj6[1] = function onSuccess(application_status) {
-          const tmp = guildId;
-          const tmp2 = null != selfMember.getSelfMember(guildId);
-          const tmp3 = guildId;
-          const tmp4 = top;
-          if (!tmp5) {
-            const result = tmp3(tmp4[17]).openMemberVerificationPendingAlert(tmp);
-            const tmp3Result = tmp3(tmp4[17]);
-          }
+        const obj3 = { paddingBottom: rect.bottom };
+        obj2.contentContainerStyle = obj3;
+        obj2.scrollEventThrottle = memo1;
+        obj2.onScroll = animatedScrollHandler;
+        obj4 = { guild: tmp12, scrollTop: sharedValue, hasManualFormFields: memo };
+        const items5 = [closure_9(tmp2(tmp3[20]), obj4), ,];
+        const obj5 = { style: tmp.headerSeparator };
+        items5[1] = closure_9(tmp2(tmp3[21]), obj5);
+        obj6 = {
+          guild: tmp12,
+          onSuccess(application_status) {
+            const tmp = guildId;
+            const tmp2 = null != GuildMemberStore.getSelfMember(guildId);
+            if (!tmp5) {
+              const result = MemberVerificationAlertActionCreators.openMemberVerificationPendingAlert(tmp);
+              const tmp3Result = MemberVerificationAlertActionCreators;
+            }
+          },
+          onClose,
         };
-        obj6[2] = onClose;
         class A {
           constructor(arg0) {
             return closure_3.set(guildId.contentOffset.y);
           }
         }
-        obj2[5] = items5;
-        const items6 = [callback3(tmp2(tmp3[6]).ScrollView, obj2)];
+        obj2.children = items5;
+        const items6 = [closure_10(tmp2(tmp3[6]).ScrollView, obj2)];
         obj7 = { style: null, children: null };
         const items7 = [tmp.closeButtonContainer];
-        obj8 = { top: null };
-        obj8[0] = top;
+        obj8 = { top };
         items7[1] = obj8;
-        obj7[0] = items7;
+        obj7.style = items7;
         const obj9 = {
           accessibilityRole: "button",
           accessibilityLabel: null,
@@ -248,7 +243,7 @@ export default function MemberVerificationModal(guildId) {
         };
         class M {
           constructor() {
-            obj = guildId(top[6]);
+            obj = closure_0(closure_2[6]);
             value = closure_3.get();
             items = [0];
             items[1] = closure_5 - top;
@@ -256,52 +251,51 @@ export default function MemberVerificationModal(guildId) {
             if ("dark" === closure_4) {
               num = 1;
             }
-            obj = { opacity: obj.interpolate(value, items, items1, "clamp") };
+            obj = { opacity: null };
             items1 = [1];
             items1[1] = num;
+            obj.opacity = obj.interpolate(value, items, items1, "clamp");
             return obj;
           }
         }
-        obj9[1] = tmp25(tmp4(tmp3[24]).t.cpT0Cq);
-        obj9[2] = tmp.closeIconContainer;
-        obj9[3] = function onPress() {
+        obj9.accessibilityLabel = tmp25(tmp4(tmp3[24]).t.cpT0Cq);
+        obj9.style = tmp.closeIconContainer;
+        obj9.onPress = function onPress() {
           let tmp;
           if (onClose != null) {
             tmp = onClose();
           }
           return tmp;
         };
-        const obj10 = { source: null, style: null };
-        obj10[0] = tmp2(tmp3[25]);
+        const obj10 = { source: tmp2(tmp3[25]), style: null };
         const items8 = [tmp.closeIconOverBanner, animatedStyle];
-        obj10[1] = items8;
-        const items9 = [callback2(closure_11, obj10)];
-        const obj11 = { source: null, style: null };
-        obj11[0] = tmp2(tmp3[25]);
+        obj10.style = items8;
+        const items9 = [closure_9(closure_11, obj10)];
+        const obj11 = { source: tmp2(tmp3[25]), style: null };
         class C {
           constructor() {
             obj = { opacity: null };
-            obj2 = guildId(top[6]);
+            obj2 = closure_0(closure_2[6]);
             items = [0];
             items[1] = closure_5 - top;
-            obj[0] = obj2.interpolate(closure_3.get(), items, [0, 1], "clamp");
+            obj.opacity = obj2.interpolate(closure_3.get(), items, [0, 1], "clamp");
             return obj;
           }
         }
         tmp27[0] = tmp.closeIconAfterBanner;
         tmp27[1] = animatedStyle1;
-        obj11[1] = tmp27;
-        items9[1] = callback2(closure_11, obj11);
-        obj9[4] = items9;
-        obj7[1] = callback3(tmp4(tmp3[23]).PressableOpacity, obj9);
-        items6[1] = callback2(closure_4, obj7);
-        obj1[1] = items6;
-        let tmp28 = callback3(tmp2(tmp3[19]), obj1);
+        obj11.style = tmp27;
+        items9[1] = closure_9(closure_11, obj11);
+        obj9.children = items9;
+        obj7.children = closure_10(tmp4(tmp3[23]).PressableOpacity, obj9);
+        items6[1] = closure_9(closure_4, obj7);
+        obj1.children = items6;
+        let tmp28 = closure_10(tmp2(tmp3[19]), obj1);
         const tmp2Result = tmp2(tmp3[19]);
       }
       return tmp28;
     }
   }
   animatedScrollHandler = obj1.useAnimatedScrollHandler(A);
-  tmp28 = callback2(closure_4, { style: tmp.flexLoading, children: callback2(guildId(top[18]).ActivityIndicator, {}) });
+  tmp28 = closure_9(closure_4, { style: tmp.flexLoading, children: closure_9(guildId(top[18]).ActivityIndicator, {}) });
 }

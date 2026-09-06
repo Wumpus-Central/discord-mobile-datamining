@@ -1,9 +1,9 @@
 // discord_app/modules/activities/native/doesOrientationMatchLockState.tsx
-import set from "../../../../_runtime/00002_set.js";
-import items3 from "../Constants.tsx";
+import Constants from "../Constants.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const OrientationLockState = items3.OrientationLockState;
-const result = set.fileFinishedImporting("modules/activities/native/doesOrientationMatchLockState.tsx");
+const OrientationLockState = Constants.OrientationLockState;
+const result = size.fileFinishedImporting("modules/activities/native/doesOrientationMatchLockState.tsx");
 
 export default function doesOrientationMatchLockState(arg0, arg1) {
   let tmp = null == arg1;

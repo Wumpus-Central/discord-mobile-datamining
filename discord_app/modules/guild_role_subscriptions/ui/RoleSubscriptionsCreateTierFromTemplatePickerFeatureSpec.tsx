@@ -1,28 +1,29 @@
 // discord_app/modules/guild_role_subscriptions/ui/RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpec.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import closure_2 from "../../experiments/ExperimentStore.tsx";
-import closure_3 from "../../../stores/PermissionStore.tsx";
-import ME from "../../../Constants.tsx";
+import util from "../../../intl/index.native.tsx";
+import ExperimentStore from "../../experiments/ExperimentStore.tsx";
+import PermissionStore from "../../../stores/PermissionStore.tsx";
 
-require = arg1;
-({ GuildFeatures: c4, Permissions: c5 } = ME);
-const result = require("set").fileFinishedImporting(
+require = fn;
+const Constants = fn(1074);
+({ GuildFeatures: closure_4, Permissions: hasOwnProperty } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/ui/RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpec.tsx",
 );
 
 export default {
   title() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.aTFQKh);
+    const intl = util.intl;
+    return intl.string(util.t.aTFQKh);
   },
   description() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.oTbFQg);
+    const intl = util.intl;
+    return intl.string(util.t.oTbFQg);
   },
   canCreateGuild: false,
   useIsGuildSupported() {
-    const items = [closure_2, closure_3];
+    const items = [ExperimentStore, PermissionStore];
     return initialize.useStateFromStores(
       items,
       () => (features) => {
@@ -33,11 +34,11 @@ export default {
           hasItem = !features2.has(constants.CREATOR_MONETIZABLE_RESTRICTED);
         }
         if (hasItem) {
-          hasItem = closure_3.can(constants2.ADMINISTRATOR, features);
+          hasItem = closure_1_3.can(constants2.ADMINISTRATOR, features);
         }
         if (hasItem) {
-          hasItem = callback(table[5]).isGuildEligibleForTierTemplates(features.id);
-          const obj = callback(table[5]);
+          hasItem = closure_1_0(dependencyMap[5]).isGuildEligibleForTierTemplates(features.id);
+          const obj = closure_1_0(dependencyMap[5]);
         }
         return hasItem;
       },

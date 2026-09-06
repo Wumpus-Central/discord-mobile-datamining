@@ -1,31 +1,31 @@
 // discord_app/modules/game_console/GameConsoleConstants.tsx
-import ME from "../../Constants.tsx";
-import set2 from "../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
-import set from "../../../_runtime/00002_set.js";
+import Constants from "../../Constants.tsx";
+import OAuth2Scopes from "../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const items = [
-  set2.OAuth2Scopes.VOICE,
-  set2.OAuth2Scopes.DM_CHANNELS_READ,
-  set2.OAuth2Scopes.GUILDS,
-  set2.OAuth2Scopes.GUILDS_MEMBERS_READ,
-  set2.OAuth2Scopes.IDENTIFY,
-  set2.OAuth2Scopes.CONNECTIONS,
-  set2.OAuth2Scopes.ACTIVITIES_READ,
+  OAuth2Scopes.OAuth2Scopes.VOICE,
+  OAuth2Scopes.OAuth2Scopes.DM_CHANNELS_READ,
+  OAuth2Scopes.OAuth2Scopes.GUILDS,
+  OAuth2Scopes.OAuth2Scopes.GUILDS_MEMBERS_READ,
+  OAuth2Scopes.OAuth2Scopes.IDENTIFY,
+  OAuth2Scopes.OAuth2Scopes.CONNECTIONS,
+  OAuth2Scopes.OAuth2Scopes.ACTIVITIES_READ,
 ];
 const items1 = [
-  set2.OAuth2Scopes.VOICE,
-  set2.OAuth2Scopes.DM_CHANNELS_READ,
-  set2.OAuth2Scopes.GUILDS,
-  set2.OAuth2Scopes.GUILDS_MEMBERS_READ,
-  set2.OAuth2Scopes.IDENTIFY,
-  set2.OAuth2Scopes.CONNECTIONS,
+  OAuth2Scopes.OAuth2Scopes.VOICE,
+  OAuth2Scopes.OAuth2Scopes.DM_CHANNELS_READ,
+  OAuth2Scopes.OAuth2Scopes.GUILDS,
+  OAuth2Scopes.OAuth2Scopes.GUILDS_MEMBERS_READ,
+  OAuth2Scopes.OAuth2Scopes.IDENTIFY,
+  OAuth2Scopes.OAuth2Scopes.CONNECTIONS,
 ];
 let obj = { PLAYSTATION: "playstation", XBOX: "xbox" };
 const items2 = [,];
 ({ XBOX: arr3[0], PLAYSTATION: arr3[1] } = obj);
-let set = new Set(items2);
 const items3 = [,];
-({ XBOX: arr4[0], PS5: arr4[1] } = ME.ActivityGamePlatforms);
+({ XBOX: arr4[0], PS5: arr4[1] } = Constants.ActivityGamePlatforms);
+const set = new Set(items2);
 obj = {
   CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED: 270000,
   [270000]: "CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED",
@@ -46,7 +46,7 @@ obj = {
 };
 const items4 = [obj.CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED];
 const set1 = new Set(items3);
-const result = set.fileFinishedImporting("modules/game_console/GameConsoleConstants.tsx");
+const result = size.fileFinishedImporting("modules/game_console/GameConsoleConstants.tsx");
 
 export const XBOX_URL_BASE = "xbox://communitylinking/donut/audio";
 export const XBOX_IOS_APP_LINK = "https://apps.apple.com/us/app/xbox/id736179781";

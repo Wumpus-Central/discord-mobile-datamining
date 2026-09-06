@@ -1,19 +1,19 @@
 // discord_app/stores/EditMessageStore.tsx
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../Dispatcher.tsx";
-import explicitContentFromProto from "../modules/user_settings/UserSettings.tsx";
-import rebuildDefault from "../modules/messages/MessageParser.tsx";
-import createEmptyState from "../modules/channel_text_area/slate/SlateUtils.tsx";
-import closure_3 from "MessageStore.tsx";
+import DispatcherDefault from "../Dispatcher.tsx";
+import UserSettings from "../modules/user_settings/UserSettings.tsx";
+import MessageParserDefault from "../modules/messages/MessageParser.tsx";
+import SlateUtils from "../modules/channel_text_area/slate/SlateUtils.tsx";
+import MessageStore from "MessageStore.tsx";
 
-require = arg1;
-let closure_4 = {};
+require = fn;
+const dependencyMap = {};
 let closure_5 = {};
 const Store = initializeDefault.Store;
 class EditMessageStore extends Store {}
 const prototype = EditMessageStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_3);
+  this.waitFor(MessageStore);
 };
 prototype["isEditing"] = function isEditing(arg0, arg1) {
   let messageId;
@@ -39,9 +39,9 @@ prototype["getEditingRichValue"] = function getEditingRichValue(arg0) {
   }
   return richValue;
 };
-prototype["getEditingMessageId"] = function getEditingMessageId(memo1) {
+prototype["getEditingMessageId"] = function getEditingMessageId(id) {
   let messageId;
-  if (dependencyMap[memo1] != null) {
+  if (dependencyMap[id] != null) {
     messageId = tmp.messageId;
   }
   return messageId;
@@ -51,28 +51,28 @@ prototype["getEditingMessage"] = function getEditingMessage(id) {
   if (null != dependencyMap[id]) {
     message = null;
     if (null != tmp.messageId) {
-      message = message.getMessage(id, tmp.messageId);
+      message = MessageStore.getMessage(id, tmp.messageId);
     }
   }
   return message;
 };
-prototype["getEditActionSource"] = function getEditActionSource(closure_1_0) {
-  return table[closure_1_0];
+prototype["getEditActionSource"] = function getEditActionSource(channel_id) {
+  return closure_5[channel_id];
 };
 EditMessageStore.displayName = "EditMessageStore";
-const editMessageStore = new EditMessageStore(dispatcherDefault, {
+const editMessageStore = new EditMessageStore(DispatcherDefault, {
   MESSAGE_START_EDIT: function handleMessageStartEdit(arg0) {
     ({ channelId, content } = arg0);
     ({ messageId, source } = arg0);
-    const UseLegacyChatInput = explicitContentFromProto.UseLegacyChatInput;
+    const UseLegacyChatInput = UserSettings.UseLegacyChatInput;
     const setting = UseLegacyChatInput.getSetting();
-    let obj = rebuildDefault;
+    let obj = MessageParserDefault;
     const unparseResult = obj.unparse(content, channelId);
     obj = { channelId, messageId, textValue: unparseResult, richValue: null };
     if (setting) {
       content = unparseResult;
     }
-    obj[3] = createEmptyState.toRichValue(content);
+    obj.richValue = SlateUtils.toRichValue(content);
     closure_4[channelId] = obj;
     closure_5[channelId] = source;
   },
@@ -113,6 +113,7 @@ const editMessageStore = new EditMessageStore(dispatcherDefault, {
     closure_5 = {};
   },
 });
-const result = require("set").fileFinishedImporting("stores/EditMessageStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("stores/EditMessageStore.tsx");
 
 export default editMessageStore;

@@ -1,9 +1,9 @@
 // discord_app/stores/native/AlertStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
 
 let c0 = null;
-let c1 = -1;
+let closure_1 = -1;
 let c2 = null;
 const Store = initializeDefault.Store;
 class AlertStore extends Store {}
@@ -12,13 +12,13 @@ prototype["getAlert"] = function getAlert() {
   return c0;
 };
 prototype["getAlertKey"] = function getAlertKey() {
-  return "alert-store-" + c1;
+  return "alert-store-" + closure_1;
 };
 prototype["isAlertDismissable"] = function isAlertDismissable() {
   return c2;
 };
 AlertStore.displayName = "AlertStore";
-const alertStore = new AlertStore(dispatcherDefault, {
+const alertStore = new AlertStore(DispatcherDefault, {
   ALERT_OPEN: function handleOpen(arg0) {
     closure_1 = closure_1 + 1;
     ({ alert: c0, isDismissable: c2 } = arg0);
@@ -28,6 +28,7 @@ const alertStore = new AlertStore(dispatcherDefault, {
     c2 = null;
   },
 });
-const result = require("set").fileFinishedImporting("stores/native/AlertStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("stores/native/AlertStore.tsx");
 
 export default alertStore;

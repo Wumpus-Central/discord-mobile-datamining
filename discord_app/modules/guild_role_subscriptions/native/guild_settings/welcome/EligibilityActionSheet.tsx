@@ -1,54 +1,59 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/welcome/EligibilityActionSheet.tsx
+import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import useCreatorMonetizationEligibilityItemsDefault from "../../../../creator_monetization_eligibility/guild_settings/useCreatorMonetizationEligibilityItems.tsx";
-import EligibilityChecklistRowDefault from "../../components/EligibilityChecklist.tsx";
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
-import { UserSettingsSections } from "../../../../../Constants.tsx";
-import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import EligibilityChecklistDefault from "../../components/EligibilityChecklist.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
+const require = fn;
+const UserSettingsSections = fn(1074).UserSettingsSections;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const EligibilityActionSheet = "EligibilityActionSheet";
-let closure_8 = createCacheKey.createStyles({
+const createStyles = fn(4560);
+let closure_8 = createStyles.createStyles({
   container: { flex: 1, paddingHorizontal: 0 },
   title: { marginHorizontal: 24, marginTop: 16 },
 });
-const result = require("set").fileFinishedImporting(
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/native/guild_settings/welcome/EligibilityActionSheet.tsx",
 );
 
 export default function EligibilityActionSheet(onRequireModeratorMFAClick) {
   onRequireModeratorMFAClick = onRequireModeratorMFAClick.onRequireModeratorMFAClick;
-  const tmp = callback3();
+  const tmp = closure_8();
   const items = [onRequireModeratorMFAClick];
-  const memo = React.useMemo(() => {
-    const actions = {
-      onEnableMFAClick() {
-        let obj = callback2(4527);
-        obj.hideActionSheet(closure_7);
-        callback2(9063).close();
-        const obj2 = callback2(9063);
-        obj = { screen: constants.ACCOUNT };
-        callback(7382).openUserSettings(obj);
+  const memo = noop.useMemo(
+    () => ({
+      actions: {
+        onEnableMFAClick() {
+          let obj = closure_1_1(4527);
+          obj.hideActionSheet(closure_1_7);
+          closure_1_1(9063).close();
+          const obj2 = closure_1_1(9063);
+          obj = { screen: constants.ACCOUNT };
+          onRequireModeratorMFAClick(7382).openUserSettings(obj);
+        },
+        onRequireModeratorMFAClick() {
+          ActionSheetActionCreatorsDefault.hideActionSheet(EligibilityActionSheet);
+          onRequireModeratorMFAClick();
+        },
       },
-      onRequireModeratorMFAClick() {
-        closure_1_1(closure_1_2[4]).hideActionSheet(closure_1_7);
-        callback();
-      },
-    };
-    return { actions, sortedByIneligible: true };
-  }, items);
+      sortedByIneligible: true,
+    }),
+    items,
+  );
   let obj = { startExpanded: true, children: null };
   obj = { style: tmp.title, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = onRequireModeratorMFAClick(1114).intl;
-  obj[3] = intl.string(onRequireModeratorMFAClick(1114).t["3s47iN"]);
-  const items1 = [callback(onRequireModeratorMFAClick(4556).Heading, obj)];
+  obj.children = intl.string(onRequireModeratorMFAClick(1114).t["3s47iN"]);
+  const items1 = [closure_5(onRequireModeratorMFAClick(4556).Heading, obj)];
   obj = {
     style: tmp.container,
     items: useCreatorMonetizationEligibilityItemsDefault(onRequireModeratorMFAClick.eligibility, memo),
   };
-  items1[1] = callback(EligibilityChecklistRowDefault, obj);
-  obj[1] = items1;
-  return callback2(onRequireModeratorMFAClick(7150).BottomSheet, obj);
+  items1[1] = closure_5(EligibilityChecklistDefault, obj);
+  obj.children = items1;
+  return closure_6(onRequireModeratorMFAClick(7150).BottomSheet, obj);
 }
 export const ELIGIBILITY_ACTION_SHEET_KEY = "EligibilityActionSheet";

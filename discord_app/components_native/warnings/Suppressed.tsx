@@ -1,41 +1,43 @@
 // discord_app/components_native/warnings/Suppressed.tsx
-import getSystemLocale from "../../intl/index.native.tsx";
-import registerAssetDefault from "../../../_runtime/16919_registerAsset.js";
-import registerAssetDefault2 from "../../../_runtime/16920_registerAsset.js";
-import closure_3 from "../../stores/PermissionSpeakStore.tsx";
-import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
-import importAllResult from "../../../_runtime/00019_noop.js";
+import util from "../../intl/index.native.tsx";
+import PermissionActionCreatorsDefault from "../../actions/PermissionActionCreators.tsx";
+import _modDef16919 from "../../../_runtime/metro/16919__.js";
+import _modDef16920 from "../../../_runtime/metro/16920__.js";
+import noop from "../../../_runtime/metro/00019__.js";
+import PermissionSpeakStore from "../../stores/PermissionSpeakStore.tsx";
 
-require = arg1;
-const Component = importAllResult.Component;
+require = fn;
+const jsx = fn(21).jsx;
+const Component = noop.Component;
 class Suppressed extends Component {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     applyArgumentsResult.close = function close() {
-      callback(table[3]).clearSuppressWarning();
+      PermissionActionCreatorsDefault.clearSuppressWarning();
     };
     return applyArgumentsResult;
   }
 }
 Suppressed.prototype["render"] = function render() {
-  const intl = getSystemLocale.intl;
+  const intl = util.intl;
   const string = intl.string;
-  const t = getSystemLocale.t;
+  const t = util.t;
   if (isAFKChannelResult) {
     let stringResult = string(t.KuYcnU);
     const intl3 = tmp2(1114).intl;
     let stringResult1 = intl3.string(tmp2(1114).t["RaFZ3+"]);
-    let tmp7 = registerAssetDefault;
+    let tmp7 = _modDef16919;
     let tmp6 = importDefault;
   } else {
     stringResult = string(t.FJSZVM);
     const intl2 = tmp2(1114).intl;
     stringResult1 = intl2.string(tmp2(1114).t.etJjgW);
     tmp6 = importDefault;
-    tmp7 = registerAssetDefault2;
+    tmp7 = _modDef16920;
   }
   return jsx(tmp6(4994), { title: stringResult, body: stringResult1, iconSource: tmp7, onConfirm: this.close });
 };
-const result = require("set").fileFinishedImporting("components_native/warnings/Suppressed.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/warnings/Suppressed.tsx");
 
 export default Suppressed;

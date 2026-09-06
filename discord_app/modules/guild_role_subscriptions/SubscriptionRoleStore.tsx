@@ -1,19 +1,19 @@
 // discord_app/modules/guild_role_subscriptions/SubscriptionRoleStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import GuildNSFWContentLevel from "../../records/GuildRecord.tsx";
-import GuildRoleRecordTypeTag from "../../records/GuildRoleRecord.tsx";
-import isSubscriptionRole from "PremiumRoleUtils.tsx";
-import closure_4 from "../../stores/GuildMemberStore.tsx";
-import closure_5 from "../../stores/GuildRoleStore.tsx";
-import closure_6 from "../../stores/GuildStore.tsx";
-import closure_7 from "../../stores/UserStore.tsx";
-import ME from "../../Constants.tsx";
-import set from "../../../_runtime/00002_set.js";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import GuildRecord from "../../records/GuildRecord.tsx";
+import GuildRoleRecord from "../../records/GuildRoleRecord.tsx";
+import PremiumRoleUtils from "PremiumRoleUtils.tsx";
+import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
+import GuildRoleStore from "../../stores/GuildRoleStore.tsx";
+import GuildStore from "../../stores/GuildStore.tsx";
+import UserStore from "../../stores/UserStore.tsx";
+import Constants from "../../Constants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 function computeRolesForGuild(guildId) {
-  const currentUser = authStore.getCurrentUser();
-  const guild = store.getGuild(guildId);
+  const currentUser = UserStore.getCurrentUser();
+  const guild = GuildStore.getGuild(guildId);
   if (null != guild) {
     if (null != currentUser) {
       const _Set = Set;
@@ -25,7 +25,7 @@ function computeRolesForGuild(guildId) {
       const result = map3.set(guildId, isGuildOwner(guild, currentUser));
       const features = guild.features;
       if (features.has(constants2.ROLE_SUBSCRIPTIONS_ENABLED)) {
-        member = member.getMember(guildId, currentUser.id);
+        const member = GuildMemberStore.getMember(guildId, currentUser.id);
         let roles;
         if (member != null) {
           roles = member.roles;
@@ -34,37 +34,28 @@ function computeRolesForGuild(guildId) {
           roles = [];
         }
         const set3 = new Set(roles);
-        sortedRoles = sortedRoles.getSortedRoles(guild.id);
+        const sortedRoles = GuildRoleStore.getSortedRoles(guild.id);
         const iter = sortedRoles[Symbol.iterator]();
         const nextResult = iter.next();
         while (iter !== undefined) {
           let tmp15 = nextResult;
           let tmp16 = require;
-          let tmp17 = dependencyMap;
-          let obj2 = isSubscriptionRole;
+          let obj2 = PremiumRoleUtils;
           if (obj2.isSubscriptionRole(nextResult)) {
-            let tmp18 = nextResult;
             let addResult = set.add(tmp15.id);
             let tmp16Result = tmp16(4190);
             if (tmp16Result.isSubscriptionRoleAvailableForPurchase(tmp15)) {
-              let tmp20 = nextResult;
               let addResult1 = set1.add(tmp15.id);
               if (set3.has(tmp15.id)) {
-                let tmp22 = nextResult;
                 let addResult2 = set2.add(tmp15.id);
               }
             }
           }
-          let tmp24 = nextResult;
           let hasItem = set3.has(tmp15.id);
           if (hasItem) {
-            let tmp26 = hasPermission;
-            let tmp27 = nextResult;
-            let tmp28 = constants;
             hasItem = hasPermission(tmp15, constants.ADMINISTRATOR);
           }
           if (hasItem) {
-            let tmp29 = map3;
             let result1 = map3.set(guildId, true);
           }
           continue;
@@ -83,33 +74,32 @@ function deleteEverything() {
   map2.clear();
   map1.clear();
   map3.clear();
-  c15 = null;
 }
 function handleGuildUpdate(guild) {
   const id = guild.guild.id;
-  if (null == set1) {
+  if (null == set) {
     return false;
   } else {
-    guild = store.getGuild(id);
+    guild = GuildStore.getGuild(id);
     if (null == guild) {
       return false;
     } else {
       const features = guild.features;
       const hasItem = features.has(constants2.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE);
       if (hasItem) {
-        if (!set1.has(id)) {
+        if (!set.has(id)) {
           const _Set = Set;
-          set = new Set(set1);
+          set = new Set(set);
           set.add(id);
-          set1 = set;
           return true;
         }
       }
       if (!hasItem) {
-        if (set1.has(id)) {
+        if (set.has(id)) {
           const _Set2 = Set;
-          set1 = new Set(set1);
+          const set1 = new Set(set);
           set1.delete(id);
+          set = set1;
           return true;
         }
       }
@@ -125,32 +115,30 @@ function handleRoleUpdate(guildId) {
   }
   return hasItem;
 }
-const isGuildOwner = GuildNSFWContentLevel.isGuildOwner;
-const hasPermission = GuildRoleRecordTypeTag.hasPermission;
-({ Permissions: closure_8, GuildFeatures: c9 } = ME);
-let set = new Set();
+const isGuildOwner = GuildRecord.isGuildOwner;
+const hasPermission = GuildRoleRecord.hasPermission;
+({ Permissions: closure_8, GuildFeatures: closure_9 } = Constants);
+new Set();
 const map = new Map();
 const map1 = new Map();
 const map2 = new Map();
 const map3 = new Map();
-let c15 = null;
+let set = null;
 const Store = initializeDefault.Store;
 class SubscriptionRoleStore extends Store {}
 const prototype = SubscriptionRoleStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_6, closure_5, closure_7, closure_4);
+  this.waitFor(GuildStore, GuildRoleStore, UserStore, GuildMemberStore);
 };
 prototype["getGuildIdsWithPurchasableRoles"] = function getGuildIdsWithPurchasableRoles() {
-  if (null == c15) {
+  if (null == set) {
     let tmp = (function computeGuildsWithPurchasableRoles() {
       guildsArray = guildsArray.getGuildsArray();
       set = new Set();
       for (const item10014 of guildsArray) {
         let features = item10014.features;
-        let tmp3 = constants;
         let tmp2 = item10014;
         if (features.has(constants.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) {
-          let tmp4 = item10014;
           let addResult = set.add(tmp2.id);
         }
         continue;
@@ -158,7 +146,7 @@ prototype["getGuildIdsWithPurchasableRoles"] = function getGuildIdsWithPurchasab
       return set;
     })();
   } else {
-    tmp = c15;
+    tmp = set;
   }
   return tmp;
 };
@@ -169,7 +157,7 @@ prototype["buildRoles"] = function buildRoles(guildId) {
 };
 prototype["getSubscriptionRoles"] = function getSubscriptionRoles(guildId) {
   const roles = this.buildRoles(guildId);
-  let value = map.get(guildId);
+  value = map.get(guildId);
   if (value == null) {
     value = set;
   }
@@ -177,7 +165,7 @@ prototype["getSubscriptionRoles"] = function getSubscriptionRoles(guildId) {
 };
 prototype["getPurchasableSubscriptionRoles"] = function getPurchasableSubscriptionRoles(guildId) {
   const roles = this.buildRoles(guildId);
-  let value = map1.get(guildId);
+  value = map1.get(guildId);
   if (value == null) {
     value = set;
   }
@@ -185,7 +173,7 @@ prototype["getPurchasableSubscriptionRoles"] = function getPurchasableSubscripti
 };
 prototype["getUserSubscriptionRoles"] = function getUserSubscriptionRoles(guildId) {
   const roles = this.buildRoles(guildId);
-  let value = map2.get(guildId);
+  value = map2.get(guildId);
   if (value == null) {
     value = set;
   }
@@ -200,7 +188,7 @@ prototype["getUserIsAdmin"] = function getUserIsAdmin(guildId) {
   return flag;
 };
 SubscriptionRoleStore.displayName = "SubscriptionRoleStore";
-const subscriptionRoleStore = new SubscriptionRoleStore(dispatcherDefault, {
+const subscriptionRoleStore = new SubscriptionRoleStore(DispatcherDefault, {
   CONNECTION_OPEN: deleteEverything,
   LOGOUT: deleteEverything,
   GUILD_CREATE: handleGuildUpdate,
@@ -225,7 +213,7 @@ const subscriptionRoleStore = new SubscriptionRoleStore(dispatcherDefault, {
   GUILD_ROLE_DELETE: handleRoleUpdate,
   GUILD_MEMBER_UPDATE: function handleGuildMemberUpdate(guildId) {
     guildId = guildId.guildId;
-    const currentUser = authStore.getCurrentUser();
+    const currentUser = UserStore.getCurrentUser();
     let id;
     if (currentUser != null) {
       id = currentUser.id;
@@ -241,6 +229,6 @@ const subscriptionRoleStore = new SubscriptionRoleStore(dispatcherDefault, {
     return tmp5;
   },
 });
-let result = set.fileFinishedImporting("modules/guild_role_subscriptions/SubscriptionRoleStore.tsx");
+let result = size.fileFinishedImporting("modules/guild_role_subscriptions/SubscriptionRoleStore.tsx");
 
 export default subscriptionRoleStore;

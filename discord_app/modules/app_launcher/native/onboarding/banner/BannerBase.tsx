@@ -1,79 +1,108 @@
 // discord_app/modules/app_launcher/native/onboarding/banner/BannerBase.tsx
-import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../../../a11y/AccessibilityStore.tsx";
-import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
-import { 12062__ } from "../../../../../../_runtime/metro/12062__.js";
-import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
-import { hexToRgba } from "../../../../../utils/ColorUtils.tsx";
-import { ReanimatedRexport } from "../../../../reanimated/ReanimatedRexport.tsx";
+import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
+import spring from "../../../../../design/animation/reanimated/spring/spring.tsx";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
+import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
 
-const require = arg1;
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-const PX_12 = ThemesDefault.space.PX_12;
-let closure_9 = { mass: 1, stiffness: 100, damping: 15 };
-createCacheKey = { banner: null, bannerGradientColor: null, bannerBackgroundGradient: null, imageContainer: null, trinketsLottie: null, bannerTextContainer: null, bannerText: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, position: "absolute", borderRadius: ThemesDefault.radii.lg, paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: PX_12, flexDirection: "row", minHeight: require("ApplicationsImage").APP_ICON_SIZE + 2 * PX_12 + 4, bottom: ThemesDefault.space.PX_16, left: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { backgroundColor: "#7eaaff" };
-createCacheKey[2] = { position: "absolute", top: 0, left: 0, borderRadius: ThemesDefault.radii.lg };
-createCacheKey[3] = { width: 72 };
-createCacheKey[4] = { width: 175, height: 175, position: "absolute", top: -38, left: -27, zIndex: 1, pointerEvents: "none" };
-let obj1 = { position: "absolute", top: 0, left: 0, borderRadius: ThemesDefault.radii.lg };
-createCacheKey[5] = { alignItems: "center", justifyContent: "center", marginLeft: ThemesDefault.space.PX_12, flexShrink: 1 };
-createCacheKey[6] = { width: "100%" };
-let closure_10 = createCacheKey.createStyles(createCacheKey);
-let closure_11 = { code: "function BannerBaseTsx1(){const{bannerMeasured,withDelay,withSpring,SPRING_CONFIG}=this.__closure;return{opacity:bannerMeasured.get()?withDelay(150,withSpring(1,SPRING_CONFIG)):0,transform:[{translateY:bannerMeasured.get()?withDelay(150,withSpring(0,SPRING_CONFIG)):30}]};}" };
-let obj2 = { alignItems: "center", justifyContent: "center", marginLeft: ThemesDefault.space.PX_12, flexShrink: 1 };
-let result = require("set").fileFinishedImporting("modules/app_launcher/native/onboarding/banner/BannerBase.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const PX_12 = nativeDefault.space.PX_12;
+const SPRING_CONFIG = { mass: 1, stiffness: 100, damping: 15 };
+fn(4560);
+let createStyles = {
+  banner: null,
+  bannerGradientColor: null,
+  bannerBackgroundGradient: null,
+  imageContainer: null,
+  trinketsLottie: null,
+  bannerTextContainer: null,
+  bannerText: null,
+};
+const rect = {
+  backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
+  position: "absolute",
+  borderRadius: nativeDefault.radii.lg,
+  paddingHorizontal: nativeDefault.space.PX_16,
+  paddingVertical: PX_12,
+  flexDirection: "row",
+  minHeight: fn(12050).APP_ICON_SIZE + 2 * PX_12 + 4,
+  bottom: nativeDefault.space.PX_16,
+  left: nativeDefault.space.PX_16,
+};
+createStyles.banner = rect;
+createStyles.bannerGradientColor = { backgroundColor: "#7eaaff" };
+const rect1 = { position: "absolute", top: 0, left: 0, borderRadius: nativeDefault.radii.lg };
+createStyles.bannerBackgroundGradient = rect1;
+createStyles.imageContainer = { width: 72 };
+createStyles.trinketsLottie = {
+  width: 175,
+  height: 175,
+  position: "absolute",
+  top: -38,
+  left: -27,
+  zIndex: 1,
+  pointerEvents: "none",
+};
+createStyles = { alignItems: "center", justifyContent: "center", marginLeft: nativeDefault.space.PX_12, flexShrink: 1 };
+createStyles.bannerTextContainer = createStyles;
+createStyles.bannerText = { width: "100%" };
+let closure_10 = createStyles.createStyles(createStyles);
+const __initData = {
+  code: "function BannerBaseTsx1(){const{bannerMeasured,withDelay,withSpring,SPRING_CONFIG}=this.__closure;return{opacity:bannerMeasured.get()?withDelay(150,withSpring(1,SPRING_CONFIG)):0,transform:[{translateY:bannerMeasured.get()?withDelay(150,withSpring(0,SPRING_CONFIG)):30}]};}",
+};
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/app_launcher/native/onboarding/banner/BannerBase.tsx");
 
 export default function BannerBase(arg0) {
-  let _require;
-  let sharedValue;
+  _require = undefined;
   ({ image, text } = arg0);
-  const tmp = callback3();
+  const tmp = closure_10();
   let num = 0;
-  [tmp3, c0] = callback(React.useState(0), 2);
-  let obj = ReanimatedRexport;
-  sharedValue = obj.useSharedValue(false);
+  [tmp3, c0] = _slicedToArray(noop.useState(0), 2);
+  let obj = require("ReanimatedRexport");
+  const sharedValue = obj.useSharedValue(false);
   const diff = sharedValue(1477)().width - 2 * sharedValue(576).space.PX_16;
   const backgroundColor = tmp.bannerGradientColor.backgroundColor;
-  obj1 = hexToRgba;
-  let items = [obj1.hexOpacityToRgba(backgroundColor, 0.2), ];
-  let obj2 = hexToRgba;
+  let obj1 = require("ColorUtils");
+  let items = [obj1.hexOpacityToRgba(backgroundColor, 0.2)];
+  let obj2 = require("ColorUtils");
   items[1] = obj2.hexOpacityToRgba(backgroundColor, 0);
-  let obj3 = initialize;
-  const items1 = [closure_6];
+  let obj3 = require("initialize");
+  const items1 = [AccessibilityStore];
   const stateFromStores = obj3.useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
-  let obj4 = ReanimatedRexport;
+  let obj4 = require("ReanimatedRexport");
   const fn = function _() {
     let obj = sharedValue;
     let num = 0;
     if (sharedValue.get()) {
-      const obj2 = _undefined(closure_1_2[8]);
-      num = obj2.withDelay(150, _undefined(closure_1_2[12]).withSpring(1, closure_1_9));
-      const obj3 = _undefined(closure_1_2[12]);
+      const obj2 = ReanimatedRexport;
+      num = obj2.withDelay(150, spring.withSpring(1, closure_9));
     }
     obj = { opacity: num, transform: null };
     let num4 = 30;
     if (obj.get()) {
-      const obj5 = _undefined(closure_1_2[8]);
-      num4 = obj5.withDelay(150, _undefined(closure_1_2[12]).withSpring(0, closure_1_9));
-      const obj6 = _undefined(closure_1_2[12]);
+      const obj5 = ReanimatedRexport;
+      num4 = obj5.withDelay(150, spring.withSpring(0, closure_9));
     }
     const items = [{ translateY: num4 }];
-    obj[1] = items;
+    obj.transform = items;
     return obj;
   };
-  obj = { bannerMeasured: sharedValue, withDelay: require("../../../../reanimated/ReanimatedRexport.tsx").withDelay, withSpring: require("../../../../../design/animation/reanimated/spring/spring.tsx").withSpring, SPRING_CONFIG: closure_9 };
+  obj = {
+    bannerMeasured: sharedValue,
+    withDelay: require("ReanimatedRexport").withDelay,
+    withSpring: require("spring").withSpring,
+    SPRING_CONFIG,
+  };
   fn.__closure = obj;
   fn.__workletHash = 5314641176204;
-  fn.__initData = closure_11;
+  fn.__initData = __initData;
   const animatedStyle = obj4.useAnimatedStyle(fn);
-  const items2 = [tmp.banner, , ];
+  const items2 = [tmp.banner, ,];
   if (tmp3 > 0) {
     num = 1;
   }
@@ -90,23 +119,32 @@ export default function BannerBase(arg0) {
         const result = sharedValue.set(true);
       }
     },
-    children: null
+    children: null,
   };
   items2[1] = { opacity: num, width: diff };
   items2[2] = animatedStyle;
+  obj1 = { start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, colors: items, style: null };
   const items3 = [tmp.bannerBackgroundGradient, { height: tmp3, width: diff }];
-  const items4 = [callback2(sharedValue(4987), { start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, colors: items, style: items3 }), , ];
-  obj1 = { style: tmp.imageContainer, children: null };
-  obj2 = { style: tmp.trinketsLottie, source: null, autoPlay: null };
-  const tmp2 = callback(React.useState(0), 2);
-  obj2[1] = 12062__;
-  obj2[2] = !stateFromStores;
-  const items5 = [callback2(sharedValue(5529), obj2), image];
-  obj1[1] = items5;
-  items4[1] = closure_8(View, obj1);
-  obj3 = { style: tmp.bannerTextContainer, children: callback2(tmp4(4556).Text, obj4) };
-  obj4 = { variant: "text-md/semibold", color: "text-overlay-light", style: tmp.bannerText, children: text };
-  items4[2] = callback2(View, obj3);
-  obj[2] = items4;
+  obj1.style = items3;
+  const items4 = [closure_7(sharedValue(4987), obj1), ,];
+  obj2 = { style: tmp.imageContainer, children: null };
+  obj3 = { style: tmp.trinketsLottie, source: null, autoPlay: null };
+  const tmp2 = _slicedToArray(noop.useState(0), 2);
+  obj3.source = require("../../../../../../_runtime/metro/12062__.js");
+  obj3.autoPlay = !stateFromStores;
+  const items5 = [closure_7(sharedValue(5529), obj3), image];
+  obj2.children = items5;
+  items4[1] = closure_8(View, obj2);
+  obj4 = {
+    style: tmp.bannerTextContainer,
+    children: closure_7(require("Text/Text").Text, {
+      variant: "text-md/semibold",
+      color: "text-overlay-light",
+      style: tmp.bannerText,
+      children: text,
+    }),
+  };
+  items4[2] = closure_7(View, obj4);
+  obj.children = items4;
   return closure_8(sharedValue(4296).View, obj);
-};
+}

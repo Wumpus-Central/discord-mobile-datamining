@@ -1,27 +1,32 @@
 // discord_app/modules/user_profile/native/NonUserBotProfileContent.tsx
-import getNicknameDefault from "../../../utils/NicknameUtils.tsx";
+import ToastUtils from "../../toast/native/ToastUtils.tsx";
+import NicknameUtilsDefault from "../../../utils/NicknameUtils.tsx";
+import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import useProfileThemeDefault from "../hooks/useProfileTheme.tsx";
 import useUserProfileBannerHeightDefault from "../hooks/native/useUserProfileBannerHeight.tsx";
-import useSharedStylesDefault from "UserProfileSharedStyles.tsx";
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles.tsx";
 import useBadgesDefault from "../hooks/useBadges.tsx";
 import useUserProfileOverscrollStylesDefault from "useUserProfileOverscrollStyles.tsx";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import ARBITRARY_LARGE_OFFSET from "Constants.tsx";
-import { ACTION_SHEET_MAX_WIDTH } from "../../action_sheet/native/ActionSheetConstants.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import importAllResult from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-({ PROFILE_CONTENT_BOTTOM_PADDING: c4, PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: c5 } = ARBITRARY_LARGE_OFFSET);
-({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
-const memoResult = importAllResult.memo(function NonUserBotProfileContent(scrollPosition) {
+require = fn;
+const View = fn(17).View;
+const Constants = fn(7208);
+({ PROFILE_CONTENT_BOTTOM_PADDING: closure_4, PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: hasOwnProperty } = Constants);
+const ACTION_SHEET_MAX_WIDTH = fn(7151).ACTION_SHEET_MAX_WIDTH;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_profile/native/NonUserBotProfileContent.tsx");
+
+export default noop.memo(function NonUserBotProfileContent(scrollPosition) {
   ({ user, channel, displayProfile } = scrollPosition);
   let trackUserProfileAction;
   importDefault = undefined;
-  const tmp3 = useSharedStylesDefault();
+  const tmp3 = UserProfileSharedStylesDefault();
   let obj = trackUserProfileAction(8190);
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
-  obj1 = getNicknameDefault;
+  let obj1 = NicknameUtilsDefault;
   let guild_id;
   if (channel != null) {
     guild_id = channel.guild_id;
@@ -49,45 +54,33 @@ const memoResult = importAllResult.memo(function NonUserBotProfileContent(scroll
     return null;
   } else {
     obj = {
-      user: null,
-      displayProfile: null,
-      bannerHeight: null,
-      bannerAnimatedStyle: null,
-      bannerImageAnimatedStyle: null,
-      blurAnimatedProps: null,
-      showBlur: null,
+      user,
+      displayProfile,
+      bannerHeight: tmp9,
+      bannerAnimatedStyle,
+      bannerImageAnimatedStyle,
+      blurAnimatedProps,
+      showBlur,
     };
-    obj[0] = user;
-    obj[1] = displayProfile;
-    obj[2] = tmp9;
-    obj[3] = bannerAnimatedStyle;
-    obj[4] = bannerImageAnimatedStyle;
-    obj[5] = blurAnimatedProps;
-    obj[6] = showBlur;
-    const items = [callback(tmp(8244), obj)];
-    obj = { style: null, children: null };
-    obj[0] = contentAnimatedStyle;
-    obj1 = { user: null, guildId: null, backgroundColor: null, disableStatus: true };
-    obj1[0] = user;
+    const items = [closure_7(tmp(8244), obj)];
+    obj = { style: contentAnimatedStyle, children: null };
+    obj1 = { user, guildId: null, backgroundColor: null, disableStatus: true };
     let guildId;
     if (displayProfile != null) {
       guildId = displayProfile.guildId;
     }
-    obj1[1] = guildId;
-    obj1[2] = tmp13;
-    const items1 = [callback(tmp4(8256).OpenableUserProfileAvatar, obj1)];
+    obj1.guildId = guildId;
+    obj1.backgroundColor = tmp13;
+    const items1 = [closure_7(tmp4(8256).OpenableUserProfileAvatar, obj1)];
     const obj2 = { style: null, children: null };
     const items2 = [, ,];
     ({ profileContentWrapper: arr2[0], profileContent: arr2[1] } = tmp3);
-    const obj3 = { paddingTop: null, paddingBottom: null };
-    obj3[0] = closure_5;
-    obj3[1] = tmp(1611)().bottom + closure_4;
+    const obj3 = { paddingTop, paddingBottom: tmp(1611)().bottom + closure_4 };
     items2[2] = obj3;
-    obj2[0] = items2;
-    const obj4 = { style: null, children: null };
-    obj4[0] = tmp3.primaryInfo;
+    obj2.style = items2;
+    const obj4 = { style: tmp3.primaryInfo, children: null };
     const obj5 = {
-      user: null,
+      user,
       guildId: null,
       displayName: null,
       pronouns: null,
@@ -99,60 +92,50 @@ const memoResult = importAllResult.memo(function NonUserBotProfileContent(scroll
       onPressPronouns: null,
       showBadgeToastOnPress: true,
     };
-    obj5[0] = user;
     let guild_id1;
     tmpResult = tmp(11152);
     if (channel != null) {
       guild_id1 = channel.guild_id;
     }
-    obj5[1] = guild_id1;
-    obj5[2] = name;
+    obj5.guildId = guild_id1;
+    obj5.displayName = name;
     let pronouns;
     if (displayProfile != null) {
       pronouns = displayProfile.pronouns;
     }
     function handleCopyUsername() {
       trackUserProfileAction({ action: "COPY_USERNAME" });
-      trackUserProfileAction(closure_1_2[15]).copy(closure_1);
-      const obj = trackUserProfileAction(closure_1_2[15]);
-      const result = trackUserProfileAction(closure_1_2[16]).presentUsernameCopied();
+      ClipboardUtils.copy(closure_1);
+      const result = ToastUtils.presentUsernameCopied();
     }
     const obj6 = { children: null };
-    obj5[3] = pronouns;
-    obj5[4] = tmp8;
-    obj5[5] = containerBackground;
+    obj5.pronouns = pronouns;
+    obj5.badges = tmp8;
+    obj5.badgeContainerBackground = containerBackground;
     const intl = tmp4(1114).intl;
-    obj5[6] = intl.string(tmp4(1114).t.y5MwJy);
-    obj5[7] = handleCopyUsername;
-    obj5[8] = handleCopyUsername;
-    obj5[9] = function onPressPronouns() {
+    obj5.displayNameAccessibilityHint = intl.string(tmp4(1114).t.y5MwJy);
+    obj5.onPressDisplayName = handleCopyUsername;
+    obj5.onPressUserTag = handleCopyUsername;
+    obj5.onPressPronouns = function onPressPronouns() {
       trackUserProfileAction({ action: "PRESS_PRONOUNS" });
-      trackUserProfileAction(closure_1_2[16]).presentUserPronouns();
+      ToastUtils.presentUserPronouns();
     };
-    obj4[1] = callback(tmpResult, obj5);
-    const items3 = [callback(View, obj4)];
-    const obj7 = { style: null, children: null };
-    obj7[0] = tmp3.cards;
-    const obj8 = { userId: null, displayProfile: null, channel: null, style: null };
-    obj8[0] = user.id;
-    obj8[1] = displayProfile;
-    obj8[2] = channel;
+    obj4.children = closure_7(tmpResult, obj5);
+    const items3 = [closure_7(View, obj4)];
+    const obj7 = { style: tmp3.cards, children: null };
+    const obj8 = { userId: user.id, displayProfile, channel, style: null };
     const items4 = [tmp3.card];
-    const obj9 = { backgroundColor: null };
-    obj9[0] = containerBackground;
+    const obj9 = { backgroundColor: containerBackground };
     items4[1] = obj9;
-    obj8[3] = items4;
-    obj7[1] = callback(tmp(11207), obj8);
-    items3[1] = callback(View, obj7);
-    obj2[1] = items3;
+    obj8.style = items4;
+    obj7.children = closure_7(tmp(11207), obj8);
+    items3[1] = closure_7(View, obj7);
+    obj2.children = items3;
     items1[1] = closure_8(View, obj2);
-    obj[1] = items1;
+    obj.children = items1;
     items[1] = closure_8(tmp(4296).View, obj);
-    obj6[0] = items;
+    obj6.children = items;
     return closure_8(closure_9, obj6);
   }
   const tmp4Result = trackUserProfileAction(8238);
 });
-let result = require("set").fileFinishedImporting("modules/user_profile/native/NonUserBotProfileContent.tsx");
-
-export default memoResult;

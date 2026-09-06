@@ -1,10 +1,10 @@
 // discord_common/js/shared/utils/InteractionObserverUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-function __handleIntersections(arr) {
+function __handleIntersections(arr, arg1) {
   closure_0 = arg1;
   const item = arr.forEach((target) => {
-    let value = closure_1_1.get(closure_0);
+    weakMap1.get(closure_0);
     value = undefined;
     if (value != null) {
       value = value.get(target.target);
@@ -21,10 +21,10 @@ function __handleIntersections(arr) {
 }
 let weakMap = new WeakMap();
 const weakMap1 = new WeakMap();
-let result = set.fileFinishedImporting("../discord_common/js/shared/utils/InteractionObserverUtils.tsx");
+let result = size.fileFinishedImporting("../discord_common/js/shared/utils/InteractionObserverUtils.tsx");
 
 export const getIntersectionObserver = function getIntersectionObserver(current) {
-  let value = weakMap.get(current);
+  value = weakMap.get(current);
   if (null == value) {
     const intersectionObserver = new globalThis.IntersectionObserver(__handleIntersections, current);
     const result = weakMap.set(current, intersectionObserver);
@@ -35,7 +35,7 @@ export const getIntersectionObserver = function getIntersectionObserver(current)
   }
   return value;
 };
-export const watch = function watch(current2, current, current2) {
+export const watch = function watch(current2, current, arg2) {
   weakMap = weakMap1.get(current2);
   if (weakMap == null) {
     const _WeakMap = WeakMap;
@@ -44,7 +44,7 @@ export const watch = function watch(current2, current, current2) {
   if (!weakMap.has(current)) {
     current2.observe(current);
   }
-  const result = weakMap.set(current, current2);
+  const result = weakMap.set(current, arg2);
   const result1 = weakMap1.set(current2, weakMap);
 };
 export const unwatch = function unwatch(current2, current) {

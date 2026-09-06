@@ -1,25 +1,25 @@
 // discord_app/design/shared.tsx
-import set from "../../_runtime/00002_set.js";
-import isThemeLight from "utils/shared/themes.tsx";
-import WCAGContrastRatios from "../../discord_common/js/packages/design/components/Colors/shared/Colors.tsx";
-import _mod4412 from "../../discord_common/js/packages/design/shared.tsx";
+import themes from "utils/shared/themes.tsx";
+import Colors from "../../discord_common/js/packages/design/components/Colors/shared/Colors.tsx";
+import design_shared from "../../discord_common/js/packages/design/shared.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("design/shared.tsx");
+const result = size.fileFinishedImporting("design/shared.tsx");
 
-export const AccessibilityAnnouncer = _mod4412.AccessibilityAnnouncer;
-export const AccessibilityPreferencesContext = _mod4412.AccessibilityPreferencesContext;
-export const LOW_SATURATION_THRESHOLD = _mod4412.LOW_SATURATION_THRESHOLD;
-export const ContrastPreference = _mod4412.ContrastPreference;
-export const ForcedColorsPreference = _mod4412.ForcedColorsPreference;
-export const MotionPreference = _mod4412.MotionPreference;
-export const RoleStyle = _mod4412.RoleStyle;
-export const AccessibilityPreferences = _mod4412.AccessibilityPreferences;
-export const useThemeContext = _mod4412.useThemeContext;
-export const ThemeContextType = _mod4412.ThemeContextType;
-export const isThemeDark = isThemeLight.isThemeDark;
-export const isThemeLight = isThemeLight.isThemeLight;
-export const getContrastingColor = WCAGContrastRatios.getContrastingColor;
-export const darkenColor = WCAGContrastRatios.darkenColor;
-export const brightenColor = WCAGContrastRatios.brightenColor;
-export const setColorOpacity = WCAGContrastRatios.setColorOpacity;
-export const WCAGContrastRatios = WCAGContrastRatios.WCAGContrastRatios;
+export const AccessibilityAnnouncer = design_shared.AccessibilityAnnouncer;
+export const AccessibilityPreferencesContext = design_shared.AccessibilityPreferencesContext;
+export const LOW_SATURATION_THRESHOLD = design_shared.LOW_SATURATION_THRESHOLD;
+export const ContrastPreference = design_shared.ContrastPreference;
+export const ForcedColorsPreference = design_shared.ForcedColorsPreference;
+export const MotionPreference = design_shared.MotionPreference;
+export const RoleStyle = design_shared.RoleStyle;
+export const AccessibilityPreferences = design_shared.AccessibilityPreferences;
+export const useThemeContext = design_shared.useThemeContext;
+export const ThemeContextType = design_shared.ThemeContextType;
+export const isThemeDark = themes.isThemeDark;
+export const isThemeLight = themes.isThemeLight;
+export const getContrastingColor = Colors.getContrastingColor;
+export const darkenColor = Colors.darkenColor;
+export const brightenColor = Colors.brightenColor;
+export const setColorOpacity = Colors.setColorOpacity;
+export const WCAGContrastRatios = Colors.WCAGContrastRatios;

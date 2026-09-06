@@ -1,16 +1,15 @@
 // discord_app/modules/vibegrations/lib/VibegrationsClarification.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-let result = set.fileFinishedImporting("modules/vibegrations/lib/VibegrationsClarification.tsx");
+let result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsClarification.tsx");
 
-export const isClarificationComplete = function isClarificationComplete(questions) {
+export const isClarificationComplete = function isClarificationComplete(questions, arg1) {
   closure_0 = arg1;
   questions = questions.questions;
-  return questions.every((arg0) => {
+  return questions.every((item) => {
     let tmp2 = null != tmp;
     if (tmp2) {
       tmp2 = "" !== tmp.text.trim();
-      const str = tmp.text;
     }
     return tmp2;
   });
@@ -32,15 +31,14 @@ export const nextClarificationStep = function nextClarificationStep(clarificatio
   }
   return null;
 };
-export const formatClarificationAnswers = function formatClarificationAnswers(questions, arg1) {
+export const formatClarificationAnswers = function formatClarificationAnswers(clarification, arg1) {
   closure_0 = arg1;
-  questions = questions.questions;
-  const mapped = questions.map((question, index) => ({ question, index, answer: table[question.id] }));
+  const questions = clarification.questions;
+  const mapped = questions.map((question, index) => ({ question, index, answer: closure_0[question.id] }));
   const found = mapped.filter((answer) => {
     let tmp = null != answer.answer;
     if (tmp) {
       tmp = "" !== answer.answer.text.trim();
-      const str = answer.answer.text;
     }
     return tmp;
   });

@@ -1,9 +1,9 @@
 // discord_common/js/packages/analytics-utils/AnalyticsSchema.tsx
-import set from "../../../../_runtime/00002_set.js";
-import sum from "../../shared/Constants.tsx";
+import Constants from "../../shared/Constants.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const WebAnalyticsEvents = sum.WebAnalyticsEvents;
-const result = set.fileFinishedImporting("../discord_common/js/packages/analytics-utils/AnalyticsSchema.tsx");
+const WebAnalyticsEvents = Constants.WebAnalyticsEvents;
+const result = size.fileFinishedImporting("../discord_common/js/packages/analytics-utils/AnalyticsSchema.tsx");
 
 export const ImpressionNames = {
   ACCOUNT_REVERT_CHANGE_PASSWORD: "impression_account_revert_change_password",

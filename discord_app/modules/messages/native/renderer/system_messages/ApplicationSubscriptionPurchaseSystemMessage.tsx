@@ -1,18 +1,18 @@
 // discord_app/modules/messages/native/renderer/system_messages/ApplicationSubscriptionPurchaseSystemMessage.tsx
-import set from "../../../../../../_runtime/00002_set.js";
-import getMessageAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
 import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
-import getApplicationSubscriptionSystemMessageASTContent from "../../../../premium_apps/ApplicationSubscriptionSystemMessageUtils.tsx";
+import ApplicationSubscriptionSystemMessageUtils from "../../../../premium_apps/ApplicationSubscriptionSystemMessageUtils.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting(
+const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/ApplicationSubscriptionPurchaseSystemMessage.tsx",
 );
 
 export const createApplicationSubscriptionPurchaseSystemMessage =
   function createApplicationSubscriptionPurchaseSystemMessage(roleStyle) {
     const message = roleStyle.message;
-    let obj = getMessageAuthorWithProcessedColor;
+    let obj = useAuthorWithProcessedColor;
     const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
     obj = { content: null };
     obj = {
@@ -24,7 +24,7 @@ export const createApplicationSubscriptionPurchaseSystemMessage =
         roleStyle: roleStyle.roleStyle,
       }),
     };
-    obj[0] = getApplicationSubscriptionSystemMessageASTContent.getApplicationSubscriptionSystemMessageASTContent(obj);
+    obj.content = ApplicationSubscriptionSystemMessageUtils.getApplicationSubscriptionSystemMessageASTContent(obj);
     const merged = Object.assign(createCommonMessageDefault(roleStyle));
     return obj;
   };

@@ -1,18 +1,23 @@
 // discord_app/modules/instant_invite/canViewInviteModal.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
+import Constants from "../../Constants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const Permissions = ME.Permissions;
-const result = set.fileFinishedImporting("modules/instant_invite/canViewInviteModal.tsx");
+const Permissions = Constants.Permissions;
+const result = size.fileFinishedImporting("modules/instant_invite/canViewInviteModal.tsx");
 
-export const canViewInviteModal = function canViewInviteModal(closure_6, guild, closure_0, stageInstanceByChannel) {
-  let tmp = closure_0;
-  if (closure_0 == null) {
+export const canViewInviteModal = function canViewInviteModal(
+  PermissionStore,
+  guild,
+  defaultChannel,
+  stageInstanceByChannel,
+) {
+  let tmp = defaultChannel;
+  if (defaultChannel == null) {
     tmp = guild;
   }
   let canResult = null != tmp;
   if (canResult) {
-    canResult = closure_6.can(Permissions.CREATE_INSTANT_INVITE, tmp);
+    canResult = PermissionStore.can(Permissions.CREATE_INSTANT_INVITE, tmp);
   }
   if (!canResult) {
     canResult = null != guild && null != guild.vanityURLCode;

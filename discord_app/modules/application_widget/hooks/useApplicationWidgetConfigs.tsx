@@ -1,54 +1,54 @@
 // discord_app/modules/application_widget/hooks/useApplicationWidgetConfigs.tsx
-import closure_2 from "../../../../_runtime/00019_noop.js";
-import closure_3 from "../ApplicationWidgetConfigStore.tsx";
-import { FetchState } from "../ApplicationWidgetConfigStore.tsx";
+import GlobalUtils from "../../../utils/GlobalUtils.tsx";
+import ApplicationWidgetConfigActions from "../ApplicationWidgetConfigActions.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import ApplicationWidgetConfigStore from "../ApplicationWidgetConfigStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/application_widget/hooks/useApplicationWidgetConfigs.tsx");
+require = fn;
+const FetchState = fn(9026).FetchState;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/application_widget/hooks/useApplicationWidgetConfigs.tsx");
 
 export default function useApplicationWidgetConfigs(arg0) {
-  const _require = arg0;
-  const DeveloperMode = _require(setting[2]).DeveloperMode;
+  _require = arg0;
+  const DeveloperMode = require("UserSettings").DeveloperMode;
   setting = DeveloperMode.useSetting();
   const items = [stateFromStores1];
-  const stateFromStores = _require(setting[3]).useStateFromStores(items, () =>
+  const stateFromStores = require("initialize").useStateFromStores(items, () =>
     stateFromStores1.getFeaturedFetchState(),
   );
-  let obj = _require(setting[3]);
+  let obj = require("initialize");
   const items1 = [stateFromStores1];
-  stateFromStores1 = _require(setting[3]).useStateFromStores(items1, () => stateFromStores1.getDeveloperFetchState());
-  const obj2 = _require(setting[3]);
+  stateFromStores1 = require("initialize").useStateFromStores(items1, () => stateFromStores1.getDeveloperFetchState());
+  const obj2 = require("initialize");
   const items2 = [stateFromStores1];
-  const stateFromStoresArray = _require(setting[3]).useStateFromStoresArray(items2, () =>
-    lib.filter((arg0) => fetchState.getFetchState(arg0) === constants.NOT_FETCHED),
+  const stateFromStoresArray = require("initialize").useStateFromStoresArray(items2, () =>
+    closure_0.filter((item) => fetchState.getFetchState(item) === constants.NOT_FETCHED),
   );
-  const obj3 = _require(setting[3]);
+  const obj3 = require("initialize");
   const items3 = [stateFromStores1];
-  const stateFromStoresArray1 = _require(setting[3]).useStateFromStoresArray(items3, () => {
-    const mapped = lib.map((arg0) => config.getConfig(arg0));
-    return mapped.filter(lib(setting[4]).isNotNullish);
+  const stateFromStoresArray1 = require("initialize").useStateFromStoresArray(items3, () => {
+    const mapped = closure_0.map((item) => config.getConfig(item));
+    return mapped.filter(GlobalUtils.isNotNullish);
   });
   const effect = stateFromStores.useEffect(() => {
-    const featuredWidgetConfigs = lib(setting[5]).fetchFeaturedWidgetConfigs();
+    const featuredWidgetConfigs = closure_0(setting[5]).fetchFeaturedWidgetConfigs();
     featuredWidgetConfigs.catch(() => {});
   }, []);
   const items4 = [setting];
   const effect1 = stateFromStores.useEffect(() => {
     if (setting) {
-      const developerWidgetConfigs = lib(setting[5]).fetchDeveloperWidgetConfigs();
+      const developerWidgetConfigs = ApplicationWidgetConfigActions.fetchDeveloperWidgetConfigs();
       developerWidgetConfigs.catch(() => {});
-      const obj = lib(setting[5]);
     }
   }, items4);
   const items5 = [stateFromStores1, stateFromStores, stateFromStoresArray, setting];
   const effect2 = stateFromStores.useEffect(() => {
-    if (stateFromStores !== stateFromStoresArray.NOT_FETCHED) {
+    if (stateFromStores !== FetchState.NOT_FETCHED) {
       if (tmp !== tmp2.FETCHING) {
         if (!setting) {
           for (const item10012 of stateFromStoresArray) {
-            let tmp7 = lib;
-            let tmp8 = setting;
-            let obj = lib(setting[5]);
+            let obj = ApplicationWidgetConfigActions;
             let widgetConfigs = obj.fetchWidgetConfigs(item10012);
             let catchPromise = widgetConfigs.catch(() => {});
             continue;

@@ -1,7 +1,7 @@
 // discord_app/modules/keyboard/native/KeyboardTypes.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/keyboard/native/KeyboardTypes.tsx");
+const result = size.fileFinishedImporting("modules/keyboard/native/KeyboardTypes.tsx");
 
 export const KeyboardTypes = {
   SYSTEM: "system",

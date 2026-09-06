@@ -1,16 +1,16 @@
 // discord_app/modules/notification_center/useGetOrFetchNotificationCenterItemApplications.tsx
 import useGetOrFetchApplicationsDefault from "../applications/useGetOrFetchApplications.tsx";
-import closure_2 from "../../../_runtime/00019_noop.js";
-import set from "../../../_runtime/00002_set.js";
+import noop from "../../../_runtime/metro/00019__.js";
 
 let items = [
-  require("NotificationCenterScenes").NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS,
-  require("NotificationCenterScenes").NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED,
-  require("NotificationCenterScenes").NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS,
-  require("NotificationCenterScenes").NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED,
+  fn(7640).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS,
+  fn(7640).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED,
+  fn(7640).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS,
+  fn(7640).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED,
 ];
 let set = new Set(items);
-const result = set.fileFinishedImporting(
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/notification_center/useGetOrFetchNotificationCenterItemApplications.tsx",
 );
 
@@ -18,12 +18,12 @@ export const useGetOrFetchNotificationCenterItemsApplications =
   function useGetOrFetchNotificationCenterItemsApplications(stateFromStores1) {
     importDefault = stateFromStores1;
     let items = [stateFromStores1];
-    const memo = React.useMemo(() => {
+    const memo = noop.useMemo(() => {
       set = new Set();
       const items = [];
-      const item = set.forEach((applicationId) => {
+      const item = stateFromStores1.forEach((applicationId) => {
         applicationId = applicationId.applicationId;
-        if (closure_1_3.has(applicationId.type)) {
+        if (set.has(applicationId.type)) {
           let hasItem = null == applicationId;
           if (!hasItem) {
             hasItem = set.has(applicationId);

@@ -1,14 +1,13 @@
 // discord_app/modules/applications/ApplicationFrecencyStore.tsx
-import applyDefault from "../../../_runtime/00012_apply.js";
+import _modDef12 from "../../../_runtime/metro/00012__.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import DEFAULT_FRECENCYDefault from "../../lib/Frecency.tsx";
-import closure_2 from "../activities/EmbeddedActivitiesStore.tsx";
-import closure_3 from "../user_settings/UserSettingsProtoStore.tsx";
-import { UserSettingsTypes } from "../user_settings/UserSettingsConstants.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import FrecencyDefault from "../../lib/Frecency.tsx";
+import EmbeddedActivitiesStore from "../activities/EmbeddedActivitiesStore.tsx";
+import UserSettingsProtoStore from "../user_settings/UserSettingsProtoStore.tsx";
 
 function handleUserSettingsProtoStoreChange() {
-  const applicationFrecency = obj.frecencyWithoutFetchingLatest.applicationFrecency;
+  const applicationFrecency = UserSettingsProtoStore.frecencyWithoutFetchingLatest.applicationFrecency;
   let applications;
   if (applicationFrecency != null) {
     applications = applicationFrecency.applications;
@@ -17,22 +16,20 @@ function handleUserSettingsProtoStoreChange() {
     applications = {};
   }
   closure_7.overwriteHistory(
-    applyDefault.mapValues(applications, (recentUses) => {
+    _modDef12.mapValues(applications, (recentUses) => {
       const obj = {};
       const merged = Object.assign(recentUses);
       recentUses = recentUses.recentUses;
       const mapped = recentUses.map(Number);
-      obj.recentUses = mapped.filter((arg0) => arg0 > 0);
+      obj.recentUses = mapped.filter((item) => item > 0);
       return obj;
     }),
-    closure_6.pendingUsages,
+    global.pendingUsages,
   );
 }
-let items = [
-  require("PermissionOverwriteType").ApplicationCommandType.CHAT,
-  require("PermissionOverwriteType").ApplicationCommandType.PRIMARY_ENTRY_POINT,
-];
-let closure_6 = { pendingUsages: [] };
+const UserSettingsTypes = fn(1084).UserSettingsTypes;
+let items = [fn(1894).ApplicationCommandType.CHAT, fn(1894).ApplicationCommandType.PRIMARY_ENTRY_POINT];
+let global = { pendingUsages: [] };
 let obj = {
   computeBonus() {
     return 100;
@@ -41,25 +38,25 @@ let obj = {
     return arg0;
   },
   afterCompute() {},
-  numFrequentlyItems: require("ApplicationTypes").FREQUENCY_ITEM_LIMIT,
+  numFrequentlyItems: fn(1350).FREQUENCY_ITEM_LIMIT,
 };
-let closure_7 = new DEFAULT_FRECENCYDefault(obj);
+let closure_7 = new FrecencyDefault(obj);
 const PersistedStore = initializeDefault.PersistedStore;
 class ApplicationFrecencyStore extends PersistedStore {}
 const prototype = ApplicationFrecencyStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   if (null != arg0) {
-    closure_6 = arg0;
+    global = arg0;
   }
-  this.waitFor(closure_2, closure_3);
-  items = [closure_3];
+  this.waitFor(EmbeddedActivitiesStore, UserSettingsProtoStore);
+  items = [UserSettingsProtoStore];
   this.syncWith(items, handleUserSettingsProtoStoreChange);
 };
 prototype["getState"] = function getState() {
-  return closure_6;
+  return global;
 };
 prototype["hasPendingUsage"] = function hasPendingUsage() {
-  return closure_6.pendingUsages.length > 0;
+  return global.pendingUsages.length > 0;
 };
 prototype["getApplicationFrecencyWithoutLoadingLatest"] = function getApplicationFrecencyWithoutLoadingLatest() {
   return closure_7;
@@ -81,18 +78,17 @@ obj = {
     command = command.command;
     let hasItem = items.includes(command.type);
     if (hasItem) {
-      launchState = launchState.getLaunchState(command.applicationId);
+      const launchState = EmbeddedActivitiesStore.getLaunchState(command.applicationId);
       let isLaunching;
       if (launchState != null) {
         isLaunching = launchState.isLaunching;
       }
       if (!isLaunching) {
         const applicationId = command.applicationId;
-        const pendingUsages = closure_6.pendingUsages;
-        const obj = { key: null, timestamp: null };
-        obj[0] = applicationId;
+        const pendingUsages = global.pendingUsages;
+        const obj = { key: applicationId, timestamp: null };
         const _Date = Date;
-        obj[1] = Date.now();
+        obj.timestamp = Date.now();
         pendingUsages.push(obj);
         closure_7.track(applicationId);
         closure_7.compute();
@@ -104,7 +100,7 @@ obj = {
   },
   EMBEDDED_ACTIVITY_OPEN: function handleEmbeddedActivityOpen(applicationId) {
     applicationId = applicationId.applicationId;
-    const pendingUsages = closure_6.pendingUsages;
+    const pendingUsages = global.pendingUsages;
     pendingUsages.push({ key: applicationId, timestamp: Date.now() });
     closure_7.track(applicationId);
     closure_7.compute();
@@ -112,14 +108,14 @@ obj = {
   USER_SETTINGS_PROTO_UPDATE: function handleUserSettingsProtoUpdate(settings) {
     if (settings.settings.type === UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) {
       if (settings.wasSaved) {
-        closure_6.pendingUsages = [];
+        global.pendingUsages = [];
       }
     }
     return false;
   },
 };
-const applicationFrecencyStore = new ApplicationFrecencyStore(dispatcherDefault, obj);
-const tmp2 = new DEFAULT_FRECENCYDefault(obj);
-const result = require("set").fileFinishedImporting("modules/applications/ApplicationFrecencyStore.tsx");
+const applicationFrecencyStore = new ApplicationFrecencyStore(DispatcherDefault, obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/applications/ApplicationFrecencyStore.tsx");
 
 export default applicationFrecencyStore;

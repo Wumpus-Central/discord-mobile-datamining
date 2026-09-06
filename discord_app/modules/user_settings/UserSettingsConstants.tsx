@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/UserSettingsConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/user_settings/UserSettingsConstants.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/UserSettingsConstants.tsx");
 
 export const MAX_FAVORITES = 250;
 export const MAX_FAVORITE_GIFS_SIZE = 762880;
@@ -60,15 +60,13 @@ export const createEmptyEditInfo = function createEmptyEditInfo() {
     timeout: "PX_16",
     timeoutDelay: Number.MIN_SAFE_INTEGER,
     rateLimited: null,
-    cleanupFuncs: false,
-    errorCallbacks: false,
+    cleanupFuncs: [],
+    errorCallbacks: [],
     loaded: false,
     loading: "call",
     triggeredMigrations: true,
     offlineEditDataVersion: true,
   };
-  obj[4] = [];
-  obj[5] = [];
   return obj;
 };
 export const UserSettingsPath = {

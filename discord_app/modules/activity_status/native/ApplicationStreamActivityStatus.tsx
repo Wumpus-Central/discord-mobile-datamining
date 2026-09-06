@@ -1,16 +1,14 @@
 // discord_app/modules/activity_status/native/ApplicationStreamActivityStatus.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import getSystemLocale from "../../../intl/index.native.tsx";
+import util from "../../../intl/index.native.tsx";
 import ActivityStatusIconDefault from "ActivityStatusIcon.tsx";
 import ActivityStatusTextDefault from "ActivityStatusText.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-({ jsx: c3, Fragment: c4, jsxs: c5 } = jsxProd);
-const result = require("set").fileFinishedImporting(
-  "modules/activity_status/native/ApplicationStreamActivityStatus.tsx",
-);
+require = fn;
+const jsxProd = fn(21);
+({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activity_status/native/ApplicationStreamActivityStatus.tsx");
 
 export default function ApplicationStreamActivityStatus(hideText) {
   ({ game, hideIcon } = hideText);
@@ -40,33 +38,26 @@ export default function ApplicationStreamActivityStatus(hideText) {
     tmp2 = name1;
   }
   if (null != tmp2) {
-    const intl2 = getSystemLocale.intl;
-    let obj = { name: null };
-    obj[0] = tmp2;
-    let formatResult = intl2.format(getSystemLocale.t["0wJXSh"], obj);
+    const intl2 = util.intl;
+    let obj = { name: tmp2 };
+    let formatResult = intl2.format(util.t["0wJXSh"], obj);
     let tmp7 = require;
   } else {
-    const intl = getSystemLocale.intl;
-    formatResult = intl.string(getSystemLocale.t.eXan7B);
+    const intl = util.intl;
+    formatResult = intl.string(util.t.eXan7B);
     tmp7 = require;
   }
   let tmp12 = !hideIcon;
   if (!hideIcon) {
-    obj = { icon: null, style: null };
-    obj[0] = tmp7(10883).TvIcon;
-    obj[1] = iconStyle;
-    tmp12 = callback(ActivityStatusIconDefault, obj);
-    const tmp15 = ActivityStatusIconDefault;
+    obj = { icon: tmp7(10883).TvIcon, style: iconStyle };
+    tmp12 = React3(ActivityStatusIconDefault, obj);
   }
   const children = [tmp12];
   let tmp16 = !flag;
   if (!flag) {
-    obj = { style: null, maxFontSizeMultiplier: null, children: null };
-    obj[0] = textStyle;
-    obj[1] = maxFontSizeMultiplier;
-    obj[2] = formatResult;
-    tmp16 = callback(ActivityStatusTextDefault, obj);
+    obj = { style: textStyle, maxFontSizeMultiplier, children: formatResult };
+    tmp16 = React3(ActivityStatusTextDefault, obj);
   }
   children[1] = tmp16;
-  return closure_5(closure_4, { children });
+  return hasOwnProperty(React4, { children });
 }

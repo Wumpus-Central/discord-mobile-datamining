@@ -1,8 +1,21 @@
 // discord_app/modules/quests/experiments/BountiesStage1Experiment.tsx
-import set from "../../../../_runtime/00002_set.js";
 import ApexExperiment from "../../experiments/apex/index.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const obj = {
+let obj = {
+  name: "2026-05-bounties-stage-1",
+  kind: "user",
+  defaultConfig: {
+    enabled: false,
+    verticalScrollEnabled: false,
+    loopingEnabled: false,
+    ctaTimerMilliSeconds: 3000,
+    rewardTimerSeconds: 15,
+    orbAmount: 50,
+  },
+  variations: null,
+};
+obj = {
   1: null,
   2: {
     enabled: true,
@@ -85,19 +98,8 @@ obj[10] = {
   rewardTimerSeconds: 25,
   orbAmount: 50,
 };
-const apexExperiment = ApexExperiment.createApexExperiment({
-  name: "2026-05-bounties-stage-1",
-  kind: "user",
-  defaultConfig: {
-    enabled: false,
-    verticalScrollEnabled: false,
-    loopingEnabled: false,
-    ctaTimerMilliSeconds: 3000,
-    rewardTimerSeconds: 15,
-    orbAmount: 50,
-  },
-  variations: obj,
-});
-const result = set.fileFinishedImporting("modules/quests/experiments/BountiesStage1Experiment.tsx");
+obj.variations = obj;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/quests/experiments/BountiesStage1Experiment.tsx");
 
 export const BountiesStage1Experiment = apexExperiment;

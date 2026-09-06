@@ -1,25 +1,14 @@
 // discord_common/js/packages/protos/google/protobuf/wrappers.tsx
 import _mod1188 from "../../../../../../_runtime/metro/01188__.js";
-import closure_2 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import {
-  MessageType,
-  MessageType as MessageType2,
-  MessageType as MessageType3,
-  MessageType as MessageType4,
-  MessageType as MessageType5,
-  MessageType as MessageType6,
-  MessageType as MessageType7,
-  MessageType as MessageType8,
-  MessageType as MessageType9,
-} from "../../../../../../_runtime/metro/01188__.js";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 
-require = arg1;
+require = fn;
+const MessageType = fn(1188).MessageType;
 class DoubleValue$Type extends MessageType {
   constructor() {
     items = [];
     items[0] = { no: 1, name: "value", kind: "scalar", T: 1 };
     tmp = new tmp("google.protobuf.DoubleValue", items, new.target);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
@@ -49,7 +38,7 @@ prototype["create"] = function create(arr) {
   }
   return obj;
 };
-prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
   let obj = arg3;
   if (arg3 == null) {
@@ -58,8 +47,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         obj.value = pos.double();
@@ -72,25 +60,16 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -122,13 +101,12 @@ defineProperty = new defineProperty(
   "internalJsonWrite",
   "internalJsonRead",
 );
-// ThrowIfThisInitialized (0x7c)
+const MessageType2 = fn(1188).MessageType;
 class FloatValue$Type extends MessageType2 {
   constructor() {
     items = [];
     items[0] = { no: 1, name: "value", kind: "scalar", T: 2 };
     tmp = new tmp("google.protobuf.FloatValue", items, new.target);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
@@ -158,7 +136,7 @@ prototype2["create"] = function create(arr) {
   }
   return obj;
 };
-prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
   let obj = arg3;
   if (arg3 == null) {
@@ -167,8 +145,7 @@ prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         obj.value = pos.float();
@@ -181,25 +158,16 @@ prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -231,13 +199,12 @@ const defineProperty1 = new defineProperty(
   "internalJsonWrite",
   "internalJsonRead",
 );
-// ThrowIfThisInitialized (0x7c)
+const MessageType3 = fn(1188).MessageType;
 class Int64Value$Type extends MessageType3 {
   constructor() {
     items = [];
     items[0] = { no: 1, name: "value", kind: "scalar", T: 3 };
     tmp = new tmp("google.protobuf.Int64Value", items, new.target);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
@@ -267,7 +234,7 @@ prototype3["create"] = function create(arr) {
   }
   return obj;
 };
-prototype3["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype3["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
   let obj = arg3;
   if (arg3 == null) {
@@ -276,8 +243,7 @@ prototype3["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         let str4 = pos.int64();
@@ -291,25 +257,16 @@ prototype3["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -341,13 +298,12 @@ const defineProperty2 = new defineProperty(
   "internalJsonWrite",
   "internalJsonRead",
 );
-// ThrowIfThisInitialized (0x7c)
+const MessageType4 = fn(1188).MessageType;
 class UInt64Value$Type extends MessageType4 {
   constructor() {
     items = [];
     items[0] = { no: 1, name: "value", kind: "scalar", T: 4 };
     tmp = new tmp("google.protobuf.UInt64Value", items, new.target);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
@@ -377,7 +333,7 @@ prototype4["create"] = function create(arr) {
   }
   return obj;
 };
-prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
   let obj = arg3;
   if (arg3 == null) {
@@ -386,8 +342,7 @@ prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         let str4 = pos.uint64();
@@ -401,25 +356,16 @@ prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -451,13 +397,12 @@ const defineProperty3 = new defineProperty(
   "internalJsonWrite",
   "internalJsonRead",
 );
-// ThrowIfThisInitialized (0x7c)
+const MessageType5 = fn(1188).MessageType;
 class Int32Value$Type extends MessageType5 {
   constructor() {
     items = [];
     items[0] = { no: 1, name: "value", kind: "scalar", T: 5 };
     tmp = new tmp("google.protobuf.Int32Value", items, new.target);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
@@ -487,7 +432,7 @@ prototype5["create"] = function create(arr) {
   }
   return obj;
 };
-prototype5["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype5["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
   let obj = arg3;
   if (arg3 == null) {
@@ -496,8 +441,7 @@ prototype5["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         obj.value = pos.int32();
@@ -510,25 +454,16 @@ prototype5["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -560,13 +495,12 @@ const defineProperty4 = new defineProperty(
   "internalJsonWrite",
   "internalJsonRead",
 );
-// ThrowIfThisInitialized (0x7c)
+const MessageType6 = fn(1188).MessageType;
 class UInt32Value$Type extends MessageType6 {
   constructor() {
     items = [];
     items[0] = { no: 1, name: "value", kind: "scalar", T: 13 };
     tmp = new tmp("google.protobuf.UInt32Value", items, new.target);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
@@ -596,7 +530,7 @@ prototype6["create"] = function create(arr) {
   }
   return obj;
 };
-prototype6["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype6["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
   let obj = arg3;
   if (arg3 == null) {
@@ -605,8 +539,7 @@ prototype6["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         obj.value = pos.uint32();
@@ -619,25 +552,16 @@ prototype6["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -669,13 +593,12 @@ const defineProperty5 = new defineProperty(
   "internalJsonWrite",
   "internalJsonRead",
 );
-// ThrowIfThisInitialized (0x7c)
+const MessageType7 = fn(1188).MessageType;
 class BoolValue$Type extends MessageType7 {
   constructor() {
     items = [];
     items[0] = { no: 1, name: "value", kind: "scalar", T: 8 };
     tmp = new tmp("google.protobuf.BoolValue", items, new.target);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
@@ -704,7 +627,7 @@ prototype7["create"] = function create(arr) {
   }
   return obj;
 };
-prototype7["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype7["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
   let obj = arg3;
   if (arg3 == null) {
@@ -713,8 +636,7 @@ prototype7["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         obj.value = pos.bool();
@@ -727,25 +649,16 @@ prototype7["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -777,13 +690,12 @@ const defineProperty6 = new defineProperty(
   "internalJsonWrite",
   "internalJsonRead",
 );
-// ThrowIfThisInitialized (0x7c)
+const MessageType8 = fn(1188).MessageType;
 class StringValue$Type extends MessageType8 {
   constructor() {
     items = [];
     items[0] = { no: 1, name: "value", kind: "scalar", T: 9 };
     tmp = new tmp("google.protobuf.StringValue", items, new.target);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
@@ -812,7 +724,7 @@ prototype8["create"] = function create(arr) {
   }
   return obj;
 };
-prototype8["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype8["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
   let obj = arg3;
   if (arg3 == null) {
@@ -821,8 +733,7 @@ prototype8["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         obj.value = pos.string();
@@ -835,25 +746,16 @@ prototype8["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -890,7 +792,7 @@ tmp = new tmp(
   "internalBinaryWrite",
   tmp,
   undefined,
-  arg1,
+  fn,
   dependencyMap,
   new.target,
   defineProperty,
@@ -904,13 +806,12 @@ tmp = new tmp(
   defineProperty4,
   new.target,
 );
-// ThrowIfThisInitialized (0x7c)
+const MessageType9 = fn(1188).MessageType;
 class BytesValue$Type extends MessageType9 {
   constructor() {
     items = [];
     items[0] = { no: 1, name: "value", kind: "scalar", T: 12 };
     tmp = new tmp("google.protobuf.BytesValue", items, new.target);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
@@ -932,7 +833,7 @@ prototype9["internalJsonRead"] = function internalJsonRead(arg0, arg1, arg2) {
 prototype9["create"] = function create(arr) {
   let obj = { value: null };
   const uint8Array = new Uint8Array(0);
-  obj[0] = uint8Array;
+  obj.value = uint8Array;
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
@@ -942,7 +843,7 @@ prototype9["create"] = function create(arr) {
   }
   return obj;
 };
-prototype9["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype9["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
   let obj = arg3;
   if (arg3 == null) {
@@ -951,8 +852,7 @@ prototype9["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         obj.value = pos.bytes();
@@ -965,25 +865,16 @@ prototype9["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -1008,8 +899,18 @@ prototype9["internalBinaryWrite"] = function internalBinaryWrite(value, tag, wri
   return tag;
 };
 const items8 = [{ no: 1, name: "value", kind: "scalar", T: 12 }];
-// ThrowIfThisInitialized (0x7c)
-let tmp12 = new "internalBinaryWrite"(
+const size = fn(2);
+let result = size.fileFinishedImporting("../discord_common/js/packages/protos/google/protobuf/wrappers.tsx");
+
+export const DoubleValue = defineProperty;
+export const FloatValue = defineProperty1;
+export const Int64Value = defineProperty2;
+export const UInt64Value = defineProperty3;
+export const Int32Value = defineProperty4;
+export const UInt32Value = defineProperty5;
+export const BoolValue = defineProperty6;
+export const StringValue = tmp;
+export const BytesValue = new "internalBinaryWrite"(
   "google.protobuf.BytesValue",
   items8,
   tmp2,
@@ -1021,7 +922,7 @@ let tmp12 = new "internalBinaryWrite"(
   "internalBinaryWrite",
   items8,
   undefined,
-  arg1,
+  fn,
   dependencyMap,
   new.target,
   defineProperty,
@@ -1035,14 +936,3 @@ let tmp12 = new "internalBinaryWrite"(
   defineProperty4,
   new.target,
 );
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/google/protobuf/wrappers.tsx");
-
-export const DoubleValue = defineProperty;
-export const FloatValue = defineProperty1;
-export const Int64Value = defineProperty2;
-export const UInt64Value = defineProperty3;
-export const Int32Value = defineProperty4;
-export const UInt32Value = defineProperty5;
-export const BoolValue = defineProperty6;
-export const StringValue = tmp;
-export const BytesValue = tmp12;

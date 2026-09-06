@@ -1,11 +1,11 @@
 // discord_app/modules/collectibles/CollectiblesShopConstants.tsx
-import set2 from "../../../discord_common/js/shared/shared-constants/FractionalPremiumSKUs.tsx";
+import FractionalPremiumSKUs from "../../../discord_common/js/shared/shared-constants/FractionalPremiumSKUs.tsx";
 import CollectibleSearchItemType from "../../../discord_common/js/shared/shared-constants/CollectibleSearchItemType.tsx";
 import CollectibleSearchSortType from "../../../discord_common/js/shared/shared-constants/CollectibleSearchSortType.tsx";
 import CollectibleSearchSortDirection from "../../../discord_common/js/shared/shared-constants/CollectibleSearchSortDirection.tsx";
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-let obj = {
+let EXTERNAL_PRODUCT_SKU_IDS = {
   HOME: "home",
   CATALOG: "catalog",
   ORBS: "orbs",
@@ -28,13 +28,13 @@ const items = [, , , ,];
   NAMEPLATES: arr[2],
   PROFILE_FRAMES: arr[3],
   BUNDLES: arr[4],
-} = obj);
-obj = {
+} = EXTERNAL_PRODUCT_SKU_IDS);
+EXTERNAL_PRODUCT_SKU_IDS = {
   ORB_PROFILE_BADGE: "1342211853484429445",
-  FRACTIONAL_PREMIUM: set2.FractionalPremiumSKUs.PREMIUM_TIER_2_3_DAY,
-  FRACTIONAL_PREMIUM_1_DAY: set2.FractionalPremiumSKUs.PREMIUM_TIER_2_1_DAY,
+  FRACTIONAL_PREMIUM: FractionalPremiumSKUs.FractionalPremiumSKUs.PREMIUM_TIER_2_3_DAY,
+  FRACTIONAL_PREMIUM_1_DAY: FractionalPremiumSKUs.FractionalPremiumSKUs.PREMIUM_TIER_2_1_DAY,
 };
-let set = new Set(Object.values(obj));
+const set = new Set(Object.values(EXTERNAL_PRODUCT_SKU_IDS));
 const items1 = [
   CollectibleSearchItemType.CollectibleSearchItemType.AVATAR_DECORATION,
   CollectibleSearchItemType.CollectibleSearchItemType.NAMEPLATE,
@@ -42,12 +42,12 @@ const items1 = [
   CollectibleSearchItemType.CollectibleSearchItemType.PROFILE_FRAME,
   CollectibleSearchItemType.CollectibleSearchItemType.BUNDLE,
 ];
-obj = {
+EXTERNAL_PRODUCT_SKU_IDS = {
   sortType: CollectibleSearchSortType.CollectibleSearchSortType.RELEVANCE,
   sortDirection: CollectibleSearchSortDirection.CollectibleSearchSortDirection.DESC,
 };
 const items2 = [
-  obj,
+  EXTERNAL_PRODUCT_SKU_IDS,
   {
     sortType: CollectibleSearchSortType.CollectibleSearchSortType.RECENCY,
     sortDirection: CollectibleSearchSortDirection.CollectibleSearchSortDirection.DESC,
@@ -79,7 +79,7 @@ items2[4] = {
   sortType: CollectibleSearchSortType.CollectibleSearchSortType.POPULARITY,
   sortDirection: CollectibleSearchSortDirection.CollectibleSearchSortDirection.DESC,
 };
-const result = set.fileFinishedImporting("modules/collectibles/CollectiblesShopConstants.tsx");
+const result = size.fileFinishedImporting("modules/collectibles/CollectiblesShopConstants.tsx");
 const items3 = [{ categorySkuId: "1440063059895779408", rewardSkuId: "1440063059862487193" }];
 
 export const POPULAR_PICK_PRODUCTS = [
@@ -138,7 +138,7 @@ export const CollectiblesSearchBarCTAName = {
 };
 export const BROWSE_CATEGORY_QUERY_PARAM = "category";
 export const GAME_SERVER_GAME_ID_QUERY_PARAM = "game_server_game_id";
-export const CollectibleShopTab = obj;
+export const CollectibleShopTab = EXTERNAL_PRODUCT_SKU_IDS;
 export const CollectiblesIndexPageTabs = items;
 export const isIndexPageTab = function isIndexPageTab(arg0) {
   return items.includes(arg0);
@@ -511,9 +511,9 @@ export const ShopPurchaseType = {
   GIFT: 5,
   [5]: "GIFT",
 };
-export const EXTERNAL_PRODUCT_SKU_IDS = obj;
+export { EXTERNAL_PRODUCT_SKU_IDS };
 export const isFractionalPremiumSku = function isFractionalPremiumSku(arg0) {
-  const ALL = set2.FractionalPremiumSKUsSets.ALL;
+  const ALL = FractionalPremiumSKUs.FractionalPremiumSKUsSets.ALL;
   return ALL.has(arg0);
 };
 export const isExternalProduct = function isExternalProduct(arg0) {

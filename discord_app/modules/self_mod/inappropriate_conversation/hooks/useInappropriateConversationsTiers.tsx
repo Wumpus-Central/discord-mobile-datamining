@@ -1,23 +1,23 @@
 // discord_app/modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationsTiers.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import InappropriateConversationExperiment from "../SelfModInappropriateConversationExperiment.tsx";
+import SelfModInappropriateConversationExperiment from "../SelfModInappropriateConversationExperiment.tsx";
 import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel.tsx";
-import closure_2 from "../../../../stores/UserStore.tsx";
-import { SafetyWarningTypes } from "../../ChannelSafetyWarningsStore.tsx";
+import UserStore from "../../../../stores/UserStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting(
+require = fn;
+const SafetyWarningTypes = fn(10915).SafetyWarningTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationsTiers.tsx",
 );
 
 export const useInappropriateConversationsTiers = function useInappropriateConversationsTiers(channel) {
-  let obj = InappropriateConversationExperiment;
+  let obj = SelfModInappropriateConversationExperiment;
   const isEligibleForInappropriateConversationWarning = obj.useIsEligibleForInappropriateConversationWarning({
     location: "context-menu-item",
   });
-  const items = [closure_2];
+  const items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const obj2 = initialize;
   const inappropriateConversationBannerForChannel =
     useInappropriateConversationBannerForChannel.useInappropriateConversationBannerForChannel(
       channel.id,
@@ -37,15 +37,13 @@ export const useInappropriateConversationsTiers = function useInappropriateConve
         if (inappropriateConversationBannerForChannel != null) {
           type = inappropriateConversationBannerForChannel.type;
         }
-        obj = { isTier1: null, isTier2: null };
-        obj[0] = type === SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1;
+        obj = { isTier1: type === SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1, isTier2: null };
         let type1;
         if (inappropriateConversationBannerForChannel != null) {
           type1 = inappropriateConversationBannerForChannel.type;
         }
-        obj[1] = type1 === SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2;
+        obj.isTier2 = type1 === SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2;
         tmp4 = obj;
-        const tmp6 = SafetyWarningTypes;
       }
     }
   }

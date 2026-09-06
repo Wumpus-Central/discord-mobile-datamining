@@ -1,11 +1,13 @@
 // discord_app/modules/saved_messages/useRefreshSavedMessages.tsx
-import closure_2 from "../../../_runtime/00019_noop.js";
+import SavedMessagesActions from "SavedMessagesActions.tsx";
+import noop from "../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/saved_messages/useRefreshSavedMessages.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/saved_messages/useRefreshSavedMessages.tsx");
 
 export default function useRefreshSavedMessages() {
-  const effect = React.useEffect(() => {
-    const andUpdateSavedMessages = callback(table[1]).fetchAndUpdateSavedMessages();
+  const effect = noop.useEffect(() => {
+    const andUpdateSavedMessages = SavedMessagesActions.fetchAndUpdateSavedMessages();
   }, []);
 }

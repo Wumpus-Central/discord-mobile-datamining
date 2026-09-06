@@ -1,7 +1,7 @@
 // discord_app/modules/fastest_list/FastestListItemType.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/fastest_list/FastestListItemType.tsx");
+const result = size.fileFinishedImporting("modules/fastest_list/FastestListItemType.tsx");
 
 export default {
   ITEM: 0,

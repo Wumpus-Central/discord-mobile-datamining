@@ -1,7 +1,7 @@
 // discord_app/modules/polls/PollTypes.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/polls/PollTypes.tsx");
+const result = size.fileFinishedImporting("modules/polls/PollTypes.tsx");
 
 export const PollMediaUploadAttachmentStatus = {
   PREPARING: "PREPARING",

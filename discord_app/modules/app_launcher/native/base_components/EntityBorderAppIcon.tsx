@@ -1,27 +1,26 @@
 // discord_app/modules/app_launcher/native/base_components/EntityBorderAppIcon.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import preloadDefault from "../../../../components_native/common/FastImage.tsx";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const View = get_ActivityIndicator.View;
+const View = _mod17.View;
 const jsx = jsxProd.jsx;
-const sm = ThemesDefault.radii.sm;
-let closure_5 = createCacheKey.createStyles((width, borderRadius) => {
-  obj = { appIcon: obj, entityWrapper: null };
-  obj = { width, height: width, borderRadius };
+const sm = nativeDefault.radii.sm;
+let closure_5 = createStyles.createStyles((width, borderRadius) => {
+  let obj = { appIcon: { width, height: width, borderRadius }, entityWrapper: null };
   obj = {
     padding: 1,
-    backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+    backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
     overflow: "hidden",
     borderRadius: borderRadius + 1,
   };
-  obj[1] = obj;
+  obj.entityWrapper = obj;
   return obj;
 });
-const result = set.fileFinishedImporting("modules/app_launcher/native/base_components/EntityBorderAppIcon.tsx");
+const result = size.fileFinishedImporting("modules/app_launcher/native/base_components/EntityBorderAppIcon.tsx");
 
 export default function EntityBorderAppIcon(iconSize) {
   let num = iconSize.iconSize;
@@ -33,8 +32,13 @@ export default function EntityBorderAppIcon(iconSize) {
   if (iconBorderRadius === undefined) {
     iconBorderRadius = sm;
   }
-  const tmp = callback(num, iconBorderRadius);
+  const tmp = closure_5(num, iconBorderRadius);
+  let obj = { style: null, children: null };
   const items = [tmp.entityWrapper, wrapperStyle];
+  obj.style = items;
+  obj = { style: null, source: iconSource };
   const items1 = [tmp.appIcon, iconStyle];
-  return <View style={items}>{jsx(preloadDefault, { style: items1, source: iconSource })}</View>;
+  obj.style = items1;
+  obj.children = jsx(FastImageDefault, { style: null, source: iconSource });
+  return <View style={null} source={iconSource} />;
 }

@@ -1,8 +1,8 @@
 // discord_app/modules/multi_account/StatusUtils.tsx
-import set from "../../../_runtime/00002_set.js";
-import getSystemLocale from "../../intl/index.native.tsx";
+import util from "../../intl/index.native.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/multi_account/StatusUtils.tsx");
+const result = size.fileFinishedImporting("modules/multi_account/StatusUtils.tsx");
 
 export const getStatusExpiryParts = function getStatusExpiryParts(arg0) {
   const date = new Date(Number(arg0));
@@ -29,25 +29,25 @@ export const getStatusExpiryParts = function getStatusExpiryParts(arg0) {
     tmp7 = date.getDate() === date3.getDate();
     const date4 = date.getDate();
   }
-  const data = getSystemLocale.intl.data;
+  const data = util.intl.data;
   const formatTimeResult = data.formatTime(date, { format: "short" });
   if (tmp2) {
     let obj = { kind: "today", dateString: null, timeString: null };
     const data4 = tmp10(1114).intl.data;
-    obj[1] = data4.formatRelativeTime(0, "day", { numeric: "auto" });
-    obj[2] = formatTimeResult;
-    obj1 = obj;
+    obj.dateString = data4.formatRelativeTime(0, "day", { numeric: "auto" });
+    obj.timeString = formatTimeResult;
+    let obj1 = obj;
   } else if (tmp7) {
     obj = { kind: "tomorrow", dateString: null, timeString: null };
     const data3 = tmp10(1114).intl.data;
-    obj[1] = data3.formatRelativeTime(1, "day", { numeric: "auto" });
-    obj[2] = formatTimeResult;
+    obj.dateString = data3.formatRelativeTime(1, "day", { numeric: "auto" });
+    obj.timeString = formatTimeResult;
     obj1 = obj;
   } else {
     obj1 = { kind: "date", dateString: null, timeString: null };
     const data2 = tmp10(1114).intl.data;
-    obj1[1] = data2.formatDate(date, { dateStyle: "short" });
-    obj1[2] = formatTimeResult;
+    obj1.dateString = data2.formatDate(date, { dateStyle: "short" });
+    obj1.timeString = formatTimeResult;
   }
   return obj1;
 };

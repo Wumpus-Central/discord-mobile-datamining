@@ -1,128 +1,104 @@
 // discord_app/modules/device/native/DeviceState.tsx
-import timestampDefault from "../../debug/Logger.tsx";
-import closure_2 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import { NativeModules } from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import LoggerDefault from "../../debug/Logger.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
-const require = arg1;
-function _getDeviceState() {
-  const self = this;
-  const tmp = callback(() => {
-    closure_0 = arg0;
-    c5 = 0;
-    c6 = 0;
-    c4 = 0;
-    const iter = (function* () {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp7 === 3) {
+const require = fn;
+let closure_5 = async function _getDeviceState(arg0, value) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp7 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
         if (arg0 === 1) {
-          throw arg1;
+          c6 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c6 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_2 = tmp3;
+          closure_1 = tmp5;
+          let fallback;
+          let obj1 = closure_0;
+          if (closure_0 === undefined) {
+            obj1 = { fallback: true };
+          }
+          fallback = obj1.fallback;
+          c5 = 1;
+          c6 = 1;
+          return { value: "PX_16", done: true };
         }
+      } else if (1 === tmp8) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          c4 = 1;
+          const MediaManager = closure_130_3.MediaManager;
+          c5 = 3;
+          c6 = 1;
+          const obj3 = { value: MediaManager.getDeviceStateInfo(), done: false };
+          return obj3;
+        }
+      } else if (2 === tmp8) {
+        c4 = 0;
+        closure_129_1 = closure_3;
+        closure_130_4.warn("Failed to get device state:", closure_129_1);
+        if (fallback) {
+          const DEFAULT_DEVICE_STATE = closure_130_0(closure_130_1[3]).DEFAULT_DEVICE_STATE;
+        }
+        c6 = 3;
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 0;
+        c6 = 3;
+        const obj4 = { value, done: true };
+        return obj4;
       } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_2 = tmp3;
-              let table = tmp5;
-              let fallback;
-              obj1 = fallback;
-              if (fallback === undefined) {
-                obj1 = { fallback: true };
-              }
-              fallback = obj1.fallback;
-              c5 = 1;
-              c6 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp8) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              const obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else {
-              let logger = 1;
-              MediaManager = MediaManager.MediaManager;
-              c5 = 3;
-              c6 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = MediaManager.getDeviceStateInfo();
-              return obj3;
-            }
-          } else if (2 === tmp8) {
-            logger = 0;
-            table = MediaManager;
-            logger.warn("Failed to get device state:", table);
-            if (fallback) {
-              const DEFAULT_DEVICE_STATE = fallback(table[3]).DEFAULT_DEVICE_STATE;
-            }
-            c6 = 3;
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            logger = 0;
-            c6 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          } else {
-            logger = 0;
-            c6 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp24) {
-          MediaManager = tmp24;
-          if (tmp4 === logger) {
-            c6 = tmp2;
-            throw tmp24;
-          } else {
-            c5 = tmp;
-          }
-        }
+        c4 = 0;
+        c6 = 3;
+        obj = { value, done: true };
+        return obj;
       }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_5 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp24) {
+      closure_3 = tmp24;
+      if (tmp4 === c4) {
+        c6 = tmp2;
+        throw tmp24;
+      } else {
+        c5 = tmp;
+      }
+    }
   }
-  return applyArgumentsResult;
-}
-const tmp2 = new timestampDefault("native/DeviceState.tsx");
+};
+const NativeModules = fn(17).NativeModules;
+const tmp2 = new LoggerDefault("native/DeviceState.tsx");
 let closure_4 = tmp2;
-const result = require("set").fileFinishedImporting("modules/device/native/DeviceState.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/device/native/DeviceState.tsx");
 
 export const logger = tmp2;
-export const getDeviceState = function getDeviceState(arg0) {
+export const getDeviceState = function getDeviceState() {
   const self = this;
-  const apply = _getDeviceState.apply;
+  const apply = closure_5.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

@@ -1,34 +1,34 @@
 // discord_app/modules/user_settings/defs/native/BugReporterSetting.tsx
-import getSystemLocale from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js";
-import _modDef4763 from "../../../../actions/ModalActionCreators.tsx";
-import apexExperimentDefault from "../../../bug_reporter/BugReporterExperiment.tsx";
-import closure_3 from "../../../bug_reporter/BugReportStore.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
+import BugReporterExperimentDefault from "../../../bug_reporter/BugReporterExperiment.tsx";
+import BugReportStore from "../../../bug_reporter/BugReportStore.tsx";
 
-require = arg1;
+require = fn;
 function useBugReporterExperimentSettingPredicate() {
-  return apexExperimentDefault.useConfig({ location: "native-settings" }).hasBugReporterAccess;
+  return BugReporterExperimentDefault.useConfig({ location: "native-settings" }).hasBugReporterAccess;
 }
-createToggle = {
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["/tZh0A"]);
+    const intl = util.intl;
+    return intl.string(util.t["/tZh0A"]);
   },
   parent: null,
-  IconComponent: require("BugIcon").BugIcon,
+  IconComponent: fn(15738).BugIcon,
   onPress: function handleBugReporterSettingPress() {
-    if (!field.getField("isReportOpen")) {
-      field.setState({ isReportOpen: true });
-      _modDef4763.pushLazy(asyncRequireImpl(10185, dependencyMap.paths));
-      const obj2 = _modDef4763;
+    if (!BugReportStore.getField("isReportOpen")) {
+      BugReportStore.setState({ isReportOpen: true });
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10185, dependencyMap.paths));
     }
   },
   withArrow: true,
   usePredicate: useBugReporterExperimentSettingPredicate,
 };
-createToggle = createToggle.createPressable(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/BugReporterSetting.tsx");
+SettingBuilders = SettingBuilders.createPressable(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/BugReporterSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;
 export { useBugReporterExperimentSettingPredicate };

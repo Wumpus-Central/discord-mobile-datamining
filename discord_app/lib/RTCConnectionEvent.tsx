@@ -1,7 +1,7 @@
 // discord_app/lib/RTCConnectionEvent.tsx
-import set from "../../_runtime/00002_set.js";
+import size from "../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("lib/RTCConnectionEvent.tsx");
+const result = size.fileFinishedImporting("lib/RTCConnectionEvent.tsx");
 
 export const RTCConnectionEvent = {
   State: "state",

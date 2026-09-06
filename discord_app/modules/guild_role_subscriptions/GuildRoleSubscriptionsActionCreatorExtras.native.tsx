@@ -1,33 +1,34 @@
 // discord_app/modules/guild_role_subscriptions/GuildRoleSubscriptionsActionCreatorExtras.native.tsx
 import asyncRequireImpl from "../../../_runtime/01896_asyncRequireImpl.js";
-import _modDef4763 from "../../actions/ModalActionCreators.tsx";
-import getRoleEmojisAll from "edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
-import closure_4 from "native/RoleTierEditStore.tsx";
-import MAX_SUBSCRIPTION_TIERS from "GuildRoleSubscriptionsConstants.tsx";
+import ModalActionCreatorsDefault from "../../actions/ModalActionCreators.tsx";
+import GuildRoleSubscriptionListingEditStateUtilsAll from "edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
+import RoleTierEditStore from "native/RoleTierEditStore.tsx";
 
-require = arg1;
-({ GUILD_ROLE_SUBSCRIPTION_TIER_CREATION_KEY: c5, GUILD_ROLE_SUBSCRIPTION_GROUP_SETUP_KEY: closure_6 } =
-  MAX_SUBSCRIPTION_TIERS);
+require = fn;
+const GuildRoleSubscriptionsConstants = fn(15205);
+({ GUILD_ROLE_SUBSCRIPTION_TIER_CREATION_KEY: hasOwnProperty, GUILD_ROLE_SUBSCRIPTION_GROUP_SETUP_KEY: metroRequire } =
+  GuildRoleSubscriptionsConstants);
 const NEW_LISTING_EDIT_STATE_ID = "NEW_LISTING_EDIT_STATE_ID";
-const result = require("set").fileFinishedImporting(
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/GuildRoleSubscriptionsActionCreatorExtras.native.tsx",
 );
 
 export const NEW_LISTING_EDIT_STATE_ID = "NEW_LISTING_EDIT_STATE_ID";
 export const openTierCreationModal = function openTierCreationModal(arg0) {
-  closure_4.resetImperatively();
-  let obj = getRoleEmojisAll;
+  RoleTierEditStore.resetImperatively();
+  let obj = GuildRoleSubscriptionListingEditStateUtilsAll;
   obj.clearEditState(NEW_LISTING_EDIT_STATE_ID);
   obj = {};
-  const obj2 = _modDef4763;
+  const obj2 = ModalActionCreatorsDefault;
   const merged = Object.assign(arg0);
   obj.editStateId = NEW_LISTING_EDIT_STATE_ID;
-  obj2.pushLazy(asyncRequireImpl(17740, dependencyMap.paths), obj, closure_5);
+  obj2.pushLazy(asyncRequireImpl(17740, dependencyMap.paths), obj, hasOwnProperty);
 };
 export const openGroupSetupModal = function openGroupSetupModal(guildId) {
-  closure_4.resetImperatively();
-  let obj = getRoleEmojisAll;
+  RoleTierEditStore.resetImperatively();
+  let obj = GuildRoleSubscriptionListingEditStateUtilsAll;
   obj.clearEditState(NEW_LISTING_EDIT_STATE_ID);
   obj = { guildId, editStateId: NEW_LISTING_EDIT_STATE_ID };
-  _modDef4763.pushLazy(asyncRequireImpl(17772, dependencyMap.paths), obj, closure_6);
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17772, dependencyMap.paths), obj, timestampProducer);
 };

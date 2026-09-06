@@ -1,13 +1,13 @@
 // discord_app/modules/voice_calls/native/components/OngoingCallStatusLabel.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import closure_2 from "../../../../stores/AuthenticationStore.tsx";
-import closure_3 from "../../../../stores/CallStore.tsx";
-import closure_4 from "../../../../stores/VoiceStateStore.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
+import CallStore from "../../../../stores/CallStore.tsx";
+import VoiceStateStore from "../../../../stores/VoiceStateStore.tsx";
 
-const require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/voice_calls/native/components/OngoingCallStatusLabel.tsx");
+const require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_calls/native/components/OngoingCallStatusLabel.tsx");
 
 export default function OngoingCallStatusLabel(style) {
   ({ channel, voiceState, useAllAloneText } = style);
@@ -17,10 +17,9 @@ export default function OngoingCallStatusLabel(style) {
   if (useAllAloneText === undefined) {
     useAllAloneText = true;
   }
-  let id;
-  id = id.getId();
+  const id = AuthenticationStore.getId();
   let obj = channel(id[5]);
-  const items = [closure_4, closure_3];
+  const items = [VoiceStateStore, CallStore];
   const items1 = [id, channel];
   const stateFromStores = obj.useStateFromStores(
     items,
@@ -29,8 +28,8 @@ export default function OngoingCallStatusLabel(style) {
         return false;
       } else {
         const _Object = Object;
-        const values = Object.values(closure_1_4.getVoiceStatesForChannel(tmp.id));
-        const call = closure_1_3.getCall(tmp.id);
+        const values = Object.values(VoiceStateStore.getVoiceStatesForChannel(tmp.id));
+        const call = CallStore.getCall(tmp.id);
         let tmp2 = null != call;
         if (tmp2) {
           tmp2 = call.ringing.length > 0;
@@ -58,10 +57,8 @@ export default function OngoingCallStatusLabel(style) {
         const intl5 = tmp2(tmp3[6]).intl;
         stringResult = intl5.string(tmp2(tmp3[6]).t["w//7ET"]);
       }
-      obj = { style: null, children: null };
-      obj[0] = style.style;
-      obj[1] = stringResult;
-      return jsx(tmp2(tmp3[8]).LegacyText, { style: null, children: null });
+      obj = { style: style.style, children: stringResult };
+      return jsx(tmp2(tmp3[8]).LegacyText, { style: style.style, children: stringResult });
     }
   }
   if (!stateFromStores) {

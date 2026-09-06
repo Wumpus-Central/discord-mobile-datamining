@@ -1,62 +1,63 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/SearchBarNav.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import set from "../../../../utils/PlatformUtils.tsx";
-import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
+import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
+import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import SearchField from "../../../../design/components/TextField/native/SearchField.native.tsx";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-({ View: obj1, StyleSheet } = get_ActivityIndicator);
-({ jsx: c3, jsxs: c4 } = jsxProd);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: c2, StyleSheet } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+fn(4560);
 let obj = { container: null, cancelText: null, cancelIcon: null, flex: null };
 obj = {
   flexDirection: "row",
   alignItems: "center",
-  height: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT,
-  paddingHorizontal: ThemesDefault.space.PX_16,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  height: fn(5682).NAV_BAR_HEIGHT,
+  paddingHorizontal: nativeDefault.space.PX_16,
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   borderBottomWidth: StyleSheet.hairlineWidth,
-  borderColor: ThemesDefault.colors.BORDER_STRONG,
+  borderColor: nativeDefault.colors.BORDER_STRONG,
 };
-obj[0] = obj;
-createCacheKey = { paddingLeft: ThemesDefault.space.PX_16 };
-obj[1] = createCacheKey;
-obj[2] = { marginRight: ThemesDefault.space.PX_16 };
-obj[3] = { flex: 1 };
-let closure_5 = createCacheKey.createStyles(obj);
-let obj2 = { marginRight: ThemesDefault.space.PX_16 };
-const forwardRefResult = importAllResult.forwardRef((onClose, ref) => {
-  const merged = Object.assign(onClose, Object.create(null));
-  const tmp2 = callback();
+obj.container = obj;
+const createStyles = { paddingLeft: nativeDefault.space.PX_16 };
+obj.cancelText = createStyles;
+obj.cancelIcon = { marginRight: nativeDefault.space.PX_16 };
+obj.flex = { flex: 1 };
+let closure_5 = createStyles.createStyles(obj);
+let obj2 = { marginRight: nativeDefault.space.PX_16 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/SearchBarNav.tsx");
+
+export default noop.forwardRef((onClose, ref) => {
+  const merged = Object.assign(onClose, Object.assign({ onClose: 0 }));
+  const tmp2 = closure_5();
   let obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, hitSlop: null, children: null };
-  const intl = getSystemLocale.intl;
-  obj[1] = intl.string(getSystemLocale.t["ETE/oC"]);
-  obj[2] = onClose.onClose;
-  obj[3] = { top: 8, right: 8, bottom: 8, left: 8 };
-  obj1 = set;
+  const intl = util.intl;
+  obj.accessibilityLabel = intl.string(util.t["ETE/oC"]);
+  obj.onPress = onClose.onClose;
+  obj.hitSlop = { top: 8, right: 8, bottom: 8, left: 8 };
+  let obj1 = PlatformUtils;
   if (obj1.isAndroid()) {
-    obj = { style: null };
-    obj[0] = tmp2.cancelIcon;
+    obj = { style: tmp2.cancelIcon };
     let tmp3Result = tmp3(tmp4(5628).ArrowLargeLeftIcon, obj);
   } else {
     obj = {
-      style: null,
+      style: tmp2.cancelText,
       maxFontSizeMultiplier: 2,
       variant: "text-md/semibold",
       color: "mobile-text-heading-primary",
       children: null,
     };
-    obj[0] = tmp2.cancelText;
     const intl2 = tmp4(1114).intl;
-    obj[4] = intl2.string(tmp4(1114).t["ETE/oC"]);
+    obj.children = intl2.string(tmp4(1114).t["ETE/oC"]);
     tmp3Result = tmp3(tmp4(4556).Text, obj);
   }
-  obj[4] = tmp3Result;
-  tmp3Result = tmp3(PressableBase.PressableOpacity, obj);
+  obj.children = tmp3Result;
+  tmp3Result = tmp3(Pressables.PressableOpacity, obj);
   obj1 = { style: tmp2.container, children: null };
   let tmp4Result = tmp4(1115);
   let tmp10 = null;
@@ -67,18 +68,15 @@ const forwardRefResult = importAllResult.forwardRef((onClose, ref) => {
   const obj2 = { style: tmp2.flex, children: null };
   const obj3 = { children: null };
   const merged1 = Object.assign(merged);
-  obj3[0] = closure_3(SearchField.SearchField, { size: "md", isRound: true, ref });
-  obj2[1] = closure_3(closure_2, obj3);
-  items[1] = closure_3(closure_2, obj2);
+  obj3.children = React3(SearchField.SearchField, { size: "md", isRound: true, ref });
+  obj2.children = React3(React2, obj3);
+  items[1] = React3(React2, obj2);
   tmp4Result = tmp4(1115);
   let tmp12 = null;
   if (!tmp4Result.isAndroid()) {
     tmp12 = tmp3Result;
   }
   items[2] = tmp12;
-  obj1[1] = items;
-  return closure_4(closure_2, obj1);
+  obj1.children = items;
+  return React4(React2, obj1);
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/SearchBarNav.tsx");
-
-export default forwardRefResult;

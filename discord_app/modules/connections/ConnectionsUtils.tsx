@@ -1,18 +1,22 @@
 // discord_app/modules/connections/ConnectionsUtils.tsx
-import applyDefault from "../../../_runtime/00012_apply.js";
+import _modDef12 from "../../../_runtime/metro/00012__.js";
 import _modDef38 from "../../../_runtime/metro/00038__.js";
-import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
-import ChannelTypesDefault from "../channel/getConnectionsRoles.tsx";
-import closure_3 from "../../stores/GuildRoleStore.tsx";
-import closure_4 from "../../stores/GuildStore.tsx";
-import closure_5 from "../../stores/PermissionStore.tsx";
-import OperatorTypes from "Constants.tsx";
-import ME from "../../Constants.tsx";
+import util from "../../intl/index.native.tsx";
+import URLUtilsDefault from "../../utils/URLUtils.tsx";
+import dismissible_content from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import DismissibleContentUnsafeUtils from "../dismissible_content/DismissibleContentUnsafeUtils.tsx";
+import getConnectionsRolesDefault from "../channel/getConnectionsRoles.tsx";
+import GuildRoleStore from "../../stores/GuildRoleStore.tsx";
+import GuildStore from "../../stores/GuildStore.tsx";
+import PermissionStore from "../../stores/PermissionStore.tsx";
 
-const require = arg1;
-({ MetadataFields: closure_6, OperatorTypes: error } = OperatorTypes);
-({ Permissions: closure_8, PlatformTypes: c9 } = ME);
-let result = require("set").fileFinishedImporting("modules/connections/ConnectionsUtils.tsx");
+require = fn;
+let Constants = fn(5408);
+({ MetadataFields: metroRequire, OperatorTypes: closure_7 } = Constants);
+Constants = fn(1074);
+({ Permissions: closure_8, PlatformTypes: closure_9 } = Constants);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/connections/ConnectionsUtils.tsx");
 
 export const officialApplicationIds = [
   "426537812993638400",
@@ -24,13 +28,13 @@ export const officialApplicationIds = [
 ];
 export const ConnectionConfigurationRuleOperator = { AND: 0, [0]: "AND", OR: 1, [1]: "OR" };
 export const getCallbackParamsFromURL = function getCallbackParamsFromURL(c0) {
-  let obj = isDiscordProxiedAssetUrlDefault;
+  let obj = URLUtilsDefault;
   let toURLSafeResult = obj.toURLSafe(c0);
   if (toURLSafeResult == null) {
     obj = { searchParams: null };
     const _URLSearchParams = URLSearchParams;
     const uRLSearchParams = new URLSearchParams();
-    obj[0] = uRLSearchParams;
+    obj.searchParams = uRLSearchParams;
     toURLSafeResult = obj;
   }
   ({ code, state, error, error_description } = Object.fromEntries(toURLSafeResult.searchParams));
@@ -46,27 +50,26 @@ export const getCallbackParamsFromURL = function getCallbackParamsFromURL(c0) {
 };
 export const getConnectionsCheckText = function getConnectionsCheckText(value) {
   ({ connectionType, connectionMetadataField, operator, operatorText } = value);
-  let _require;
   const rounded = Math.round(Number(value.value));
   _require = rounded;
   if (constants2.EQUAL === operator) {
-    let tmp14 = connectionType === constants3.PAYPAL;
+    let tmp14 = connectionType === constants4.PAYPAL;
     if (tmp14) {
       tmp14 = connectionMetadataField === constants.PAYPAL_VERIFIED;
     }
-    let H97H4S = require("../../intl/index.native.tsx").t.H97H4S;
+    let H97H4S = require("util").t.H97H4S;
     if (tmp14) {
       H97H4S = tmp11(1114).t["N95b+f"];
     }
     tmp11 = _require;
   } else if (tmp2.NOT_EQUAL === operator) {
-    H97H4S = require("../../intl/index.native.tsx").t["D9B/q2"];
+    H97H4S = require("util").t["D9B/q2"];
   } else if (tmp2.LESS_THAN === operator) {
-    H97H4S = require("../../intl/index.native.tsx").t["3ru8/N"];
+    H97H4S = require("util").t["3ru8/N"];
     const _Math2 = Math;
     _require = Math.max(0, rounded - 1);
   } else if (tmp2.GREATER_THAN === operator) {
-    H97H4S = require("../../intl/index.native.tsx").t.wCVDHn;
+    H97H4S = require("util").t.wCVDHn;
     const _Math = Math;
     _require = Math.max(0, rounded + 1);
   } else {
@@ -82,37 +85,41 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
   if (null != H97H4S) {
     formatResult = H97H4S;
     if (null != operator) {
-      if (constants3.REDDIT === connectionType) {
+      if (constants4.REDDIT === connectionType) {
         if (constants.CREATED_AT === connectionMetadataField) {
-          const intl26 = require("../../intl/index.native.tsx").intl;
-          let obj = { platformQuantityHook: null };
-          obj[0] = function platformQuantityHook() {
-            const intl = callback(closure_1_2[7]).intl;
-            return intl.formatToPlainString(callback(closure_1_2[7]).t.TPbtEu, { days: callback });
+          const intl26 = require("util").intl;
+          let obj = {
+            platformQuantityHook() {
+              const intl = util.intl;
+              return intl.formatToPlainString(util.t.TPbtEu, { days });
+            },
           };
           formatResult = intl26.format(H97H4S, obj);
         } else if (tmp67.REDDIT_TOTAL_KARMA === connectionMetadataField) {
-          const intl25 = require("../../intl/index.native.tsx").intl;
-          obj = { platformQuantityHook: null };
-          obj[0] = function platformQuantityHook() {
-            const intl = callback(closure_1_2[7]).intl;
-            return intl.formatToPlainString(callback(closure_1_2[7]).t.P2JAEc, { karma: callback });
+          const intl25 = require("util").intl;
+          obj = {
+            platformQuantityHook() {
+              const intl = util.intl;
+              return intl.formatToPlainString(util.t.P2JAEc, { karma });
+            },
           };
           formatResult = intl25.format(H97H4S, obj);
         } else if (tmp67.REDDIT_GOLD === connectionMetadataField) {
-          const intl24 = require("../../intl/index.native.tsx").intl;
-          obj1 = { platformQuantityHook: null };
-          obj1[0] = function platformQuantityHook() {
-            const intl = callback(1114).intl;
-            return intl.string(callback(1114).t["+/5TCx"]);
+          const intl24 = require("util").intl;
+          const obj1 = {
+            platformQuantityHook() {
+              const intl = closure_0(1114).intl;
+              return intl.string(closure_0(1114).t["+/5TCx"]);
+            },
           };
           formatResult = intl24.format(H97H4S, obj1);
         } else if (tmp67.REDDIT_MOD === connectionMetadataField) {
-          const intl23 = require("../../intl/index.native.tsx").intl;
-          const obj2 = { platformQuantityHook: null };
-          obj2[0] = function platformQuantityHook() {
-            const intl = callback(1114).intl;
-            return intl.string(callback(1114).t["9rPbEs"]);
+          const intl23 = require("util").intl;
+          const obj2 = {
+            platformQuantityHook() {
+              const intl = closure_0(1114).intl;
+              return intl.string(closure_0(1114).t["9rPbEs"]);
+            },
           };
           formatResult = intl23.format(H97H4S, obj2);
         } else {
@@ -120,35 +127,39 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
         }
       } else if (tmp76.STEAM === connectionType) {
         if (constants.CREATED_AT === connectionMetadataField) {
-          const intl22 = require("../../intl/index.native.tsx").intl;
-          const obj3 = { platformQuantityHook: null };
-          obj3[0] = function platformQuantityHook() {
-            const intl = callback(closure_1_2[7]).intl;
-            return intl.formatToPlainString(callback(closure_1_2[7]).t.TPbtEu, { days: callback });
+          const intl22 = require("util").intl;
+          const obj3 = {
+            platformQuantityHook() {
+              const intl = util.intl;
+              return intl.formatToPlainString(util.t.TPbtEu, { days });
+            },
           };
           formatResult = intl22.format(H97H4S, obj3);
         } else if (tmp58.STEAM_GAME_COUNT === connectionMetadataField) {
-          const intl21 = require("../../intl/index.native.tsx").intl;
-          const obj4 = { platformQuantityHook: null };
-          obj4[0] = function platformQuantityHook() {
-            const intl = callback(closure_1_2[7]).intl;
-            return intl.formatToPlainString(callback(closure_1_2[7]).t.H9eLoe, { count: callback });
+          const intl21 = require("util").intl;
+          const obj4 = {
+            platformQuantityHook() {
+              const intl = util.intl;
+              return intl.formatToPlainString(util.t.H9eLoe, { count });
+            },
           };
           formatResult = intl21.format(H97H4S, obj4);
         } else if (tmp58.STEAM_ITEM_COUNT_TF2 === connectionMetadataField) {
-          const intl20 = require("../../intl/index.native.tsx").intl;
-          const obj5 = { platformQuantityHook: null };
-          obj5[0] = function platformQuantityHook() {
-            const intl = callback(closure_1_2[7]).intl;
-            return intl.formatToPlainString(callback(closure_1_2[7]).t.MceZJ6, { count: callback });
+          const intl20 = require("util").intl;
+          const obj5 = {
+            platformQuantityHook() {
+              const intl = util.intl;
+              return intl.formatToPlainString(util.t.MceZJ6, { count });
+            },
           };
           formatResult = intl20.format(H97H4S, obj5);
         } else if (tmp58.STEAM_ITEM_COUNT_DOTA2 === connectionMetadataField) {
-          const intl19 = require("../../intl/index.native.tsx").intl;
-          const obj6 = { platformQuantityHook: null };
-          obj6[0] = function platformQuantityHook() {
-            const intl = callback(closure_1_2[7]).intl;
-            return intl.formatToPlainString(callback(closure_1_2[7]).t.dMnRar, { count: callback });
+          const intl19 = require("util").intl;
+          const obj6 = {
+            platformQuantityHook() {
+              const intl = util.intl;
+              return intl.formatToPlainString(util.t.dMnRar, { count });
+            },
           };
           formatResult = intl19.format(H97H4S, obj6);
         } else {
@@ -156,27 +167,30 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
         }
       } else if (tmp76.BLUESKY === connectionType) {
         if (constants.CREATED_AT === connectionMetadataField) {
-          const intl18 = require("../../intl/index.native.tsx").intl;
-          const obj7 = { platformQuantityHook: null };
-          obj7[0] = function platformQuantityHook() {
-            const intl = callback(closure_1_2[7]).intl;
-            return intl.formatToPlainString(callback(closure_1_2[7]).t.TPbtEu, { days: callback });
+          const intl18 = require("util").intl;
+          const obj7 = {
+            platformQuantityHook() {
+              const intl = util.intl;
+              return intl.formatToPlainString(util.t.TPbtEu, { days });
+            },
           };
           formatResult = intl18.format(H97H4S, obj7);
         } else if (tmp51.BLUESKY_FOLLOWERS_COUNT === connectionMetadataField) {
-          const intl17 = require("../../intl/index.native.tsx").intl;
-          const obj8 = { platformQuantityHook: null };
-          obj8[0] = function platformQuantityHook() {
-            const intl = callback(closure_1_2[7]).intl;
-            return intl.formatToPlainString(callback(closure_1_2[7]).t.xIdKU8, { count: callback });
+          const intl17 = require("util").intl;
+          const obj8 = {
+            platformQuantityHook() {
+              const intl = util.intl;
+              return intl.formatToPlainString(util.t.xIdKU8, { count });
+            },
           };
           formatResult = intl17.format(H97H4S, obj8);
         } else if (tmp51.BLUESKY_STATUSES_COUNT === connectionMetadataField) {
-          const intl16 = require("../../intl/index.native.tsx").intl;
-          const obj9 = { platformQuantityHook: null };
-          obj9[0] = function platformQuantityHook() {
-            const intl = callback(closure_1_2[7]).intl;
-            return intl.formatToPlainString(callback(closure_1_2[7]).t["dy3+NR"], { count: callback });
+          const intl16 = require("util").intl;
+          const obj9 = {
+            platformQuantityHook() {
+              const intl = util.intl;
+              return intl.formatToPlainString(util.t["dy3+NR"], { count });
+            },
           };
           formatResult = intl16.format(H97H4S, obj9);
         } else {
@@ -184,35 +198,39 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
         }
       } else if (tmp76.TWITTER === connectionType) {
         if (constants.CREATED_AT === connectionMetadataField) {
-          const intl15 = require("../../intl/index.native.tsx").intl;
-          const obj10 = { platformQuantityHook: null };
-          obj10[0] = function platformQuantityHook() {
-            const intl = callback(closure_1_2[7]).intl;
-            return intl.formatToPlainString(callback(closure_1_2[7]).t.TPbtEu, { days: callback });
+          const intl15 = require("util").intl;
+          const obj10 = {
+            platformQuantityHook() {
+              const intl = util.intl;
+              return intl.formatToPlainString(util.t.TPbtEu, { days });
+            },
           };
           formatResult = intl15.format(H97H4S, obj10);
         } else if (tmp42.TWITTER_VERIFIED === connectionMetadataField) {
-          const intl14 = require("../../intl/index.native.tsx").intl;
-          const obj11 = { platformQuantityHook: null };
-          obj11[0] = function platformQuantityHook() {
-            const intl = callback(1114).intl;
-            return intl.string(callback(1114).t.xRygZL);
+          const intl14 = require("util").intl;
+          const obj11 = {
+            platformQuantityHook() {
+              const intl = closure_0(1114).intl;
+              return intl.string(closure_0(1114).t.xRygZL);
+            },
           };
           formatResult = intl14.format(H97H4S, obj11);
         } else if (tmp42.TWITTER_FOLLOWERS_COUNT === connectionMetadataField) {
-          const intl13 = require("../../intl/index.native.tsx").intl;
-          const obj12 = { platformQuantityHook: null };
-          obj12[0] = function platformQuantityHook() {
-            const intl = callback(closure_1_2[7]).intl;
-            return intl.formatToPlainString(callback(closure_1_2[7]).t.bkajar, { count: callback });
+          const intl13 = require("util").intl;
+          const obj12 = {
+            platformQuantityHook() {
+              const intl = util.intl;
+              return intl.formatToPlainString(util.t.bkajar, { count });
+            },
           };
           formatResult = intl13.format(H97H4S, obj12);
         } else if (tmp42.TWITTER_STATUSES_COUNT === connectionMetadataField) {
-          const intl12 = require("../../intl/index.native.tsx").intl;
-          const obj13 = { platformQuantityHook: null };
-          obj13[0] = function platformQuantityHook() {
-            const intl = callback(closure_1_2[7]).intl;
-            return intl.formatToPlainString(callback(closure_1_2[7]).t.MI7NKi, { count: callback });
+          const intl12 = require("util").intl;
+          const obj13 = {
+            platformQuantityHook() {
+              const intl = util.intl;
+              return intl.formatToPlainString(util.t.MI7NKi, { count });
+            },
           };
           formatResult = intl12.format(H97H4S, obj13);
         } else {
@@ -220,19 +238,21 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
         }
       } else if (tmp76.PAYPAL === connectionType) {
         if (constants.CREATED_AT === connectionMetadataField) {
-          const intl11 = require("../../intl/index.native.tsx").intl;
-          const obj14 = { platformQuantityHook: null };
-          obj14[0] = function platformQuantityHook() {
-            const intl = callback(closure_1_2[7]).intl;
-            return intl.formatToPlainString(callback(closure_1_2[7]).t.TPbtEu, { days: callback });
+          const intl11 = require("util").intl;
+          const obj14 = {
+            platformQuantityHook() {
+              const intl = util.intl;
+              return intl.formatToPlainString(util.t.TPbtEu, { days });
+            },
           };
           formatResult = intl11.format(H97H4S, obj14);
         } else if (tmp37.PAYPAL_VERIFIED === connectionMetadataField) {
-          const intl10 = require("../../intl/index.native.tsx").intl;
-          const obj15 = { platformQuantityHook: null };
-          obj15[0] = function platformQuantityHook() {
-            const intl = callback(1114).intl;
-            return intl.string(callback(1114).t.slSQuB);
+          const intl10 = require("util").intl;
+          const obj15 = {
+            platformQuantityHook() {
+              const intl = closure_0(1114).intl;
+              return intl.string(closure_0(1114).t.slSQuB);
+            },
           };
           formatResult = intl10.format(H97H4S, obj15);
         } else {
@@ -240,43 +260,48 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
         }
       } else if (tmp76.EBAY === connectionType) {
         if (constants.CREATED_AT === connectionMetadataField) {
-          const intl9 = require("../../intl/index.native.tsx").intl;
-          const obj16 = { platformQuantityHook: null };
-          obj16[0] = function platformQuantityHook() {
-            const intl = callback(closure_1_2[7]).intl;
-            return intl.formatToPlainString(callback(closure_1_2[7]).t.TPbtEu, { days: callback });
+          const intl9 = require("util").intl;
+          const obj16 = {
+            platformQuantityHook() {
+              const intl = util.intl;
+              return intl.formatToPlainString(util.t.TPbtEu, { days });
+            },
           };
           formatResult = intl9.format(H97H4S, obj16);
         } else if (tmp26.EBAY_TOP_RATED_SELLER === connectionMetadataField) {
-          const intl8 = require("../../intl/index.native.tsx").intl;
-          const obj17 = { platformQuantityHook: null };
-          obj17[0] = function platformQuantityHook() {
-            const intl = callback(1114).intl;
-            return intl.string(callback(1114).t.TEEYwa);
+          const intl8 = require("util").intl;
+          const obj17 = {
+            platformQuantityHook() {
+              const intl = closure_0(1114).intl;
+              return intl.string(closure_0(1114).t.TEEYwa);
+            },
           };
           formatResult = intl8.format(H97H4S, obj17);
         } else if (tmp26.EBAY_POSITIVE_FEEDBACK_PERCENTAGE === connectionMetadataField) {
-          const intl7 = require("../../intl/index.native.tsx").intl;
-          const obj18 = { platformQuantityHook: null };
-          obj18[0] = function platformQuantityHook() {
-            const intl = callback(closure_1_2[7]).intl;
-            return intl.formatToPlainString(callback(closure_1_2[7]).t.rl9Vgy, { value: callback });
+          const intl7 = require("util").intl;
+          const obj18 = {
+            platformQuantityHook() {
+              const intl = util.intl;
+              return intl.formatToPlainString(util.t.rl9Vgy, { value });
+            },
           };
           formatResult = intl7.format(H97H4S, obj18);
         } else if (tmp26.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT === connectionMetadataField) {
-          const intl6 = require("../../intl/index.native.tsx").intl;
-          const obj19 = { platformQuantityHook: null };
-          obj19[0] = function platformQuantityHook() {
-            const intl = callback(closure_1_2[7]).intl;
-            return intl.formatToPlainString(callback(closure_1_2[7]).t.QP5W1R, { count: callback });
+          const intl6 = require("util").intl;
+          const obj19 = {
+            platformQuantityHook() {
+              const intl = util.intl;
+              return intl.formatToPlainString(util.t.QP5W1R, { count });
+            },
           };
           formatResult = intl6.format(H97H4S, obj19);
         } else if (tmp26.EBAY_UNIQUE_NEGATIVE_FEEDBACK_COUNT === connectionMetadataField) {
-          const intl5 = require("../../intl/index.native.tsx").intl;
-          const obj20 = { platformQuantityHook: null };
-          obj20[0] = function platformQuantityHook() {
-            const intl = callback(closure_1_2[7]).intl;
-            return intl.formatToPlainString(callback(closure_1_2[7]).t["6ZFYdK"], { count: callback });
+          const intl5 = require("util").intl;
+          const obj20 = {
+            platformQuantityHook() {
+              const intl = util.intl;
+              return intl.formatToPlainString(util.t["6ZFYdK"], { count });
+            },
           };
           formatResult = intl5.format(H97H4S, obj20);
         } else {
@@ -284,35 +309,39 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
         }
       } else if (tmp76.TIKTOK === connectionType) {
         if (constants.TIKTOK_VERIFIED === connectionMetadataField) {
-          const intl4 = require("../../intl/index.native.tsx").intl;
-          const obj21 = { platformQuantityHook: null };
-          obj21[0] = function platformQuantityHook() {
-            const intl = callback(1114).intl;
-            return intl.string(callback(1114).t.uv7ety);
+          const intl4 = require("util").intl;
+          const obj21 = {
+            platformQuantityHook() {
+              const intl = closure_0(1114).intl;
+              return intl.string(closure_0(1114).t.uv7ety);
+            },
           };
           formatResult = intl4.format(H97H4S, obj21);
         } else if (tmp17.TIKTOK_FOLLOWER_COUNT === connectionMetadataField) {
-          const intl3 = require("../../intl/index.native.tsx").intl;
-          const obj22 = { platformQuantityHook: null };
-          obj22[0] = function platformQuantityHook() {
-            const intl = callback(closure_1_2[7]).intl;
-            return intl.formatToPlainString(callback(closure_1_2[7]).t.qIPDRy, { count: callback });
+          const intl3 = require("util").intl;
+          const obj22 = {
+            platformQuantityHook() {
+              const intl = util.intl;
+              return intl.formatToPlainString(util.t.qIPDRy, { count });
+            },
           };
           formatResult = intl3.format(H97H4S, obj22);
         } else if (tmp17.TIKTOK_FOLLOWING_COUNT === connectionMetadataField) {
-          const intl2 = require("../../intl/index.native.tsx").intl;
-          const obj23 = { platformQuantityHook: null };
-          obj23[0] = function platformQuantityHook() {
-            const intl = callback(closure_1_2[7]).intl;
-            return intl.formatToPlainString(callback(closure_1_2[7]).t.zRta4X, { count: callback });
+          const intl2 = require("util").intl;
+          const obj23 = {
+            platformQuantityHook() {
+              const intl = util.intl;
+              return intl.formatToPlainString(util.t.zRta4X, { count });
+            },
           };
           formatResult = intl2.format(H97H4S, obj23);
         } else if (tmp17.TIKTOK_LIKES_COUNT === connectionMetadataField) {
-          let intl = require("../../intl/index.native.tsx").intl;
-          obj = { platformQuantityHook: null };
-          obj[0] = function platformQuantityHook() {
-            const intl = callback(closure_1_2[7]).intl;
-            return intl.formatToPlainString(callback(closure_1_2[7]).t["ar0WW+"], { count: callback });
+          let intl = require("util").intl;
+          obj = {
+            platformQuantityHook() {
+              const intl = util.intl;
+              return intl.formatToPlainString(util.t["ar0WW+"], { count });
+            },
           };
           formatResult = intl.format(H97H4S, obj);
         } else {
@@ -338,13 +367,13 @@ export const getVisibleConnectionsRole = function getVisibleConnectionsRole(guil
     return null;
   } else {
     if (tmp) {
-      guild = guild.getGuild(channel.getGuildId());
+      guild = GuildStore.getGuild(channel.getGuildId());
     }
     if (null == guild) {
       return null;
     } else {
       if (null == sortedGuildRoles) {
-        sortedGuildRoles = sortedRoles.getSortedRoles(tmp10);
+        sortedGuildRoles = GuildRoleStore.getSortedRoles(tmp10);
       }
       const found = sortedGuildRoles.filter((tags) => {
         let hasItem = null === tags.tags.guild_connections;
@@ -354,7 +383,7 @@ export const getVisibleConnectionsRole = function getVisibleConnectionsRole(guil
         }
         return hasItem;
       });
-      const intersectionResult = applyDefault.intersection(found, ChannelTypesDefault(channel));
+      const intersectionResult = _modDef12.intersection(found, getConnectionsRolesDefault(channel));
       if (intersectionResult.length > 0) {
         let first = intersectionResult[0];
         if (first == null) {
@@ -376,11 +405,11 @@ export const getVisibleConnectionsRole = function getVisibleConnectionsRole(guil
     tmp = null == guild && null != channel;
   }
 };
-export const getCreatedAtDate = function getCreatedAtDate(date, locale) {
-  if (null != date) {
-    if ("" !== date) {
+export const getCreatedAtDate = function getCreatedAtDate(metadata, locale) {
+  if (null != metadata) {
+    if ("" !== metadata) {
       const _Date = Date;
-      date = new Date(date);
+      const date = new Date(metadata);
       const _Date2 = Date;
       let toLocaleDateStringResult = null;
       if (date instanceof Date) {
@@ -400,16 +429,15 @@ export const getCreatedAtDate = function getCreatedAtDate(date, locale) {
   return null;
 };
 export const useShowLinkedRolesAdminNux = function useShowLinkedRolesAdminNux(arg0) {
-  const _require = arg0;
-  const items = [closure_3, closure_5];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    const sortedRoles = closure_1_3.getSortedRoles(lib.id);
+  _require = arg0;
+  const items = [GuildRoleStore, PermissionStore];
+  return require("initialize").useStateFromStores(items, () => {
+    const sortedRoles = GuildRoleStore.getSortedRoles(id.id);
     const someResult = sortedRoles.some((tags) => null === tags.tags.guild_connections);
-    const result = lib(closure_1_2[11]).UNSAFE_isDismissibleContentDismissed(
-      lib(closure_1_2[12]).DismissibleContent.CONNECTIONS_NUX,
+    const result = DismissibleContentUnsafeUtils.UNSAFE_isDismissibleContentDismissed(
+      dismissible_content.DismissibleContent.CONNECTIONS_NUX,
     );
     let tmp4 = !someResult;
-    const obj2 = lib(closure_1_2[11]);
     if (!someResult) {
       tmp4 = result;
     }

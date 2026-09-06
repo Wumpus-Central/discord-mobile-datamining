@@ -1,7 +1,7 @@
 // discord_app/modules/relationships/RelationshipConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/relationships/RelationshipConstants.tsx");
+const result = size.fileFinishedImporting("modules/relationships/RelationshipConstants.tsx");
 
 export const ClearFriendRequestFilters = { SPAM: 1, [1]: "SPAM", IGNORED: 2, [2]: "IGNORED" };
 export const UserRemediationAction = {

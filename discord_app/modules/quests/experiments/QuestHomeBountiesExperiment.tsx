@@ -1,15 +1,12 @@
 // discord_app/modules/quests/experiments/QuestHomeBountiesExperiment.tsx
-import set from "../../../../_runtime/00002_set.js";
 import ApexExperiment from "../../experiments/apex/index.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const obj = { 1: null };
+let obj = { name: "2026-03-quest-home-bounties", kind: "user", defaultConfig: { enabled: false }, variations: null };
+obj = { 1: null };
 obj[1] = { enabled: true };
-const apexExperiment = ApexExperiment.createApexExperiment({
-  name: "2026-03-quest-home-bounties",
-  kind: "user",
-  defaultConfig: { enabled: false },
-  variations: obj,
-});
-const result = set.fileFinishedImporting("modules/quests/experiments/QuestHomeBountiesExperiment.tsx");
+obj.variations = obj;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/quests/experiments/QuestHomeBountiesExperiment.tsx");
 
 export const QuestHomeBountiesExperiment = apexExperiment;

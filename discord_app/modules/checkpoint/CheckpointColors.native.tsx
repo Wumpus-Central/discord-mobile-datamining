@@ -1,130 +1,130 @@
 // discord_app/modules/checkpoint/CheckpointColors.native.tsx
-import set from "../../../_runtime/00002_set.js";
-import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
-import CheckpointPersonas2 from "CheckpointConstants.tsx";
+import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
+import CheckpointConstants from "CheckpointConstants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const CheckpointPersonas = CheckpointPersonas2.CheckpointPersonas;
+const CheckpointPersonas = CheckpointConstants.CheckpointPersonas;
 let obj = {};
 obj = {
-  primaryColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_ZERO_PRIMARY,
-  secondaryColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_ZERO_SECONDARY,
-  backgroundOverlayColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_ZERO_BACKGROUND_OVERLAY,
+  primaryColor: nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_ZERO_PRIMARY,
+  secondaryColor: nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_ZERO_SECONDARY,
+  backgroundOverlayColor: nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_ZERO_BACKGROUND_OVERLAY,
   gradient: null,
 };
 const items = [
-  ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_ZERO_GRADIENT_START,
-  ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_ZERO_GRADIENT_END,
+  nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_ZERO_GRADIENT_START,
+  nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_ZERO_GRADIENT_END,
 ];
-obj[3] = items;
+obj.gradient = items;
 obj[CheckpointPersonas.ZERO] = obj;
 obj = {
-  primaryColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_ONE_PRIMARY,
-  secondaryColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_ONE_SECONDARY,
-  backgroundOverlayColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_ONE_BACKGROUND_OVERLAY,
+  primaryColor: nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_ONE_PRIMARY,
+  secondaryColor: nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_ONE_SECONDARY,
+  backgroundOverlayColor: nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_ONE_BACKGROUND_OVERLAY,
   gradient: null,
 };
 const items1 = [
-  ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_ONE_GRADIENT_START,
-  ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_ONE_GRADIENT_END,
+  nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_ONE_GRADIENT_START,
+  nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_ONE_GRADIENT_END,
 ];
-obj[3] = items1;
+obj.gradient = items1;
 obj[CheckpointPersonas.ONE] = obj;
 const obj1 = {
-  primaryColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_TWO_PRIMARY,
-  secondaryColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_TWO_SECONDARY,
-  backgroundOverlayColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_TWO_BACKGROUND_OVERLAY,
+  primaryColor: nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_TWO_PRIMARY,
+  secondaryColor: nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_TWO_SECONDARY,
+  backgroundOverlayColor: nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_TWO_BACKGROUND_OVERLAY,
   gradient: null,
 };
 const items2 = [
-  ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_TWO_GRADIENT_START,
-  ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_TWO_GRADIENT_END,
+  nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_TWO_GRADIENT_START,
+  nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_TWO_GRADIENT_END,
 ];
-obj1[3] = items2;
+obj1.gradient = items2;
 obj[CheckpointPersonas.TWO] = obj1;
 const obj2 = {
-  primaryColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_THREE_PRIMARY,
-  secondaryColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_THREE_SECONDARY,
-  backgroundOverlayColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_THREE_BACKGROUND_OVERLAY,
+  primaryColor: nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_THREE_PRIMARY,
+  secondaryColor: nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_THREE_SECONDARY,
+  backgroundOverlayColor: nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_THREE_BACKGROUND_OVERLAY,
   gradient: null,
 };
 const items3 = [
-  ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_THREE_GRADIENT_START,
-  ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_THREE_GRADIENT_END,
+  nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_THREE_GRADIENT_START,
+  nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_THREE_GRADIENT_END,
 ];
-obj2[3] = items3;
+obj2.gradient = items3;
 obj[CheckpointPersonas.THREE] = obj2;
 const obj3 = {
-  primaryColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_FOUR_PRIMARY,
-  secondaryColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_FOUR_SECONDARY,
-  backgroundOverlayColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_FOUR_BACKGROUND_OVERLAY,
+  primaryColor: nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_FOUR_PRIMARY,
+  secondaryColor: nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_FOUR_SECONDARY,
+  backgroundOverlayColor: nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_FOUR_BACKGROUND_OVERLAY,
   gradient: null,
 };
 const items4 = [
-  ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_FOUR_GRADIENT_START,
-  ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_FOUR_GRADIENT_END,
+  nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_FOUR_GRADIENT_START,
+  nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_FOUR_GRADIENT_END,
 ];
-obj3[3] = items4;
+obj3.gradient = items4;
 obj[CheckpointPersonas.FOUR] = obj3;
 const obj4 = {
-  primaryColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_FIVE_PRIMARY,
-  secondaryColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_FIVE_SECONDARY,
-  backgroundOverlayColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_FIVE_BACKGROUND_OVERLAY,
+  primaryColor: nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_FIVE_PRIMARY,
+  secondaryColor: nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_FIVE_SECONDARY,
+  backgroundOverlayColor: nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_FIVE_BACKGROUND_OVERLAY,
   gradient: null,
 };
 const items5 = [
-  ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_FIVE_GRADIENT_START,
-  ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_FIVE_GRADIENT_END,
+  nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_FIVE_GRADIENT_START,
+  nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_FIVE_GRADIENT_END,
 ];
-obj4[3] = items5;
+obj4.gradient = items5;
 obj[CheckpointPersonas.FIVE] = obj4;
 const obj5 = {
-  primaryColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_SIX_PRIMARY,
-  secondaryColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_SIX_SECONDARY,
-  backgroundOverlayColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_SIX_BACKGROUND_OVERLAY,
+  primaryColor: nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_SIX_PRIMARY,
+  secondaryColor: nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_SIX_SECONDARY,
+  backgroundOverlayColor: nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_SIX_BACKGROUND_OVERLAY,
   gradient: null,
 };
 const items6 = [
-  ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_SIX_GRADIENT_START,
-  ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_SIX_GRADIENT_END,
+  nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_SIX_GRADIENT_START,
+  nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_SIX_GRADIENT_END,
 ];
-obj5[3] = items6;
+obj5.gradient = items6;
 obj[CheckpointPersonas.SIX] = obj5;
 const obj6 = {
-  primaryColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_SEVEN_PRIMARY,
-  secondaryColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_SEVEN_SECONDARY,
-  backgroundOverlayColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_SEVEN_BACKGROUND_OVERLAY,
+  primaryColor: nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_SEVEN_PRIMARY,
+  secondaryColor: nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_SEVEN_SECONDARY,
+  backgroundOverlayColor: nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_SEVEN_BACKGROUND_OVERLAY,
   gradient: null,
 };
 const items7 = [
-  ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_SEVEN_GRADIENT_START,
-  ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_SEVEN_GRADIENT_END,
+  nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_SEVEN_GRADIENT_START,
+  nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_SEVEN_GRADIENT_END,
 ];
-obj6[3] = items7;
+obj6.gradient = items7;
 obj[CheckpointPersonas.SEVEN] = obj6;
 const obj7 = {
-  primaryColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_EIGHT_PRIMARY,
-  secondaryColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_EIGHT_SECONDARY,
-  backgroundOverlayColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_EIGHT_BACKGROUND_OVERLAY,
+  primaryColor: nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_EIGHT_PRIMARY,
+  secondaryColor: nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_EIGHT_SECONDARY,
+  backgroundOverlayColor: nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_EIGHT_BACKGROUND_OVERLAY,
   gradient: null,
 };
 const items8 = [
-  ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_EIGHT_GRADIENT_START,
-  ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_EIGHT_GRADIENT_END,
+  nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_EIGHT_GRADIENT_START,
+  nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_EIGHT_GRADIENT_END,
 ];
-obj7[3] = items8;
+obj7.gradient = items8;
 obj[CheckpointPersonas.EIGHT] = obj7;
 const obj8 = {
-  primaryColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_NINE_PRIMARY,
-  secondaryColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_NINE_SECONDARY,
-  backgroundOverlayColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_NINE_BACKGROUND_OVERLAY,
+  primaryColor: nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_NINE_PRIMARY,
+  secondaryColor: nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_NINE_SECONDARY,
+  backgroundOverlayColor: nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_NINE_BACKGROUND_OVERLAY,
   gradient: null,
 };
 const items9 = [
-  ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_NINE_GRADIENT_START,
-  ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_NINE_GRADIENT_END,
+  nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_NINE_GRADIENT_START,
+  nativeDefault.unsafe_rawColors.CHECKPOINT_PERSONA_NINE_GRADIENT_END,
 ];
-obj8[3] = items9;
+obj8.gradient = items9;
 obj[CheckpointPersonas.NINE] = obj8;
-const result = set.fileFinishedImporting("modules/checkpoint/CheckpointColors.native.tsx");
+const result = size.fileFinishedImporting("modules/checkpoint/CheckpointColors.native.tsx");
 
 export const CHECKPOINT_PERSONA_COLORS = obj;

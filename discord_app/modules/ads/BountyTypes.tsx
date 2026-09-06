@@ -1,25 +1,23 @@
 // discord_app/modules/ads/BountyTypes.tsx
-import set from "../../../_runtime/00002_set.js";
-import resolveAsset from "../quests/lib/AssetUtils.tsx";
+import AssetUtils from "../quests/lib/AssetUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/ads/BountyTypes.tsx");
+const result = size.fileFinishedImporting("modules/ads/BountyTypes.tsx");
 
 export const bountyCtaFromServer = function bountyCtaFromServer(url) {
   let obj = { url: url.url, buttonLabel: url.button_label, android: null, ios: null };
   let tmp;
   if (null != url.android) {
-    obj = { androidAppId: null };
-    obj[0] = url.android.android_app_id;
+    obj = { androidAppId: url.android.android_app_id };
     tmp = obj;
   }
-  obj[2] = tmp;
+  obj.android = tmp;
   let tmp2;
   if (null != url.ios) {
-    obj = { iosAppId: null };
-    obj[0] = url.ios.ios_app_id;
+    obj = { iosAppId: url.ios.ios_app_id };
     tmp2 = obj;
   }
-  obj[3] = tmp2;
+  obj.ios = tmp2;
   return obj;
 };
 export const bountyFromServer = function bountyFromServer(creative_content) {
@@ -34,34 +32,30 @@ export const bountyFromServer = function bountyFromServer(creative_content) {
     cta: null,
     rewardTimerSeconds: null,
   };
-  obj1 = resolveAsset;
-  obj[3] = obj1.resolveOptionalAdCreativeCdnUrl(creative_content.product_icon);
-  obj[4] = resolveAsset.resolveOptionalAdCreativeCdnUrl(creative_content.video_preview);
-  const obj3 = resolveAsset;
-  obj[5] = resolveAsset.resolveOptionalAdCreativeCdnUrl(creative_content.image_preview);
-  const obj4 = resolveAsset;
-  obj[6] = resolveAsset.resolveAdCreativeCdnUrl(creative_content.video_hls);
+  let obj1 = AssetUtils;
+  obj.productIcon = obj1.resolveOptionalAdCreativeCdnUrl(creative_content.product_icon);
+  obj.videoPreview = AssetUtils.resolveOptionalAdCreativeCdnUrl(creative_content.video_preview);
+  obj.imagePreview = AssetUtils.resolveOptionalAdCreativeCdnUrl(creative_content.image_preview);
+  obj.videoHls = AssetUtils.resolveAdCreativeCdnUrl(creative_content.video_hls);
   const cta = creative_content.cta;
   obj = { url: cta.url, buttonLabel: cta.button_label, android: null, ios: null };
   let tmp;
   if (null != cta.android) {
-    obj = { androidAppId: null };
-    obj[0] = cta.android.android_app_id;
+    obj = { androidAppId: cta.android.android_app_id };
     tmp = obj;
   }
-  obj[2] = tmp;
+  obj.android = tmp;
   let tmp2;
   if (null != cta.ios) {
-    obj1 = { iosAppId: null };
-    obj1[0] = cta.ios.ios_app_id;
+    obj1 = { iosAppId: cta.ios.ios_app_id };
     tmp2 = obj1;
   }
-  obj[3] = tmp2;
-  obj[7] = obj;
+  obj.ios = tmp2;
+  obj.cta = obj;
   let num = creative_content.reward_timer_seconds;
   if (num == null) {
     num = 15;
   }
-  obj[8] = num;
+  obj.rewardTimerSeconds = num;
   return obj;
 };

@@ -1,22 +1,23 @@
 // discord_app/modules/user_profile/native/UserProfileRolesCard.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../stores/GuildMemberStore.tsx";
-import closure_6 from "../../../stores/GuildRoleStore.tsx";
-import ME from "../../../Constants.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import ToastUtils from "../../toast/native/ToastUtils.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
+import VerifiedRoleIconDefault from "../../connections/native/VerifiedRoleIcon.tsx";
+import UserProfileRoleUtils from "../UserProfileRoleUtils.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
+import GuildRoleStore from "../../../stores/GuildRoleStore.tsx";
 
-const require = arg1;
+require = fn;
 function RoleDot(color) {
   color = color.color;
-  const style = [callback2().roleDot];
+  const style = [closure_12().roleDot];
   if (color == null) {
-    color = closure_7;
+    color = React5;
   }
   style[1] = { backgroundColor: color };
-  return closure_9(View, { style });
+  return React7(View, { style });
 }
 class RoleItem {
   constructor(arg0) {
@@ -37,7 +38,7 @@ class RoleItem {
       _HermesInternal = HermesInternal;
       str = "...";
       str2 = "";
-      name = "" + require("../../../index.native.tsx") + "...";
+      name = "" + name.slice(0, tmp2) + "...";
     }
     closure_2 = name;
     if (colorString == null) {
@@ -45,7 +46,7 @@ class RoleItem {
     }
     tmp4 = role;
     tmp5 = closure_2;
-    obj = require("useRoleIcon");
+    obj = role(closure_2[8]);
     obj = { guildId, roleId: role.id, size: 12 };
     roleIcon = obj.useRoleIcon(obj);
     closure_4 = roleIcon;
@@ -56,34 +57,28 @@ class RoleItem {
     }
     renderContent = function renderContent() {
       if (closure_5) {
-        let obj = { roleId: null, guildId: null, roleColor: null, size: 12, displayRoleIcon: false };
-        obj[0] = role.id;
-        obj[1] = guildId;
+        let obj = { roleId: role.id, guildId, roleColor: null, size: 12, displayRoleIcon: false };
         colorString = undefined;
         if (role != null) {
           colorString = role.colorString;
         }
-        obj[2] = colorString;
-        let tmp3Result = tmp3(guildId(name[16]), obj);
+        obj.roleColor = colorString;
+        let tmp3Result = tmp3(VerifiedRoleIconDefault, obj);
         let tmp8 = tmp3;
-        const tmp11 = guildId(name[16]);
       } else {
-        obj = { color: null };
-        obj[0] = colorString;
-        tmp3Result = tmp3(closure_1_13, obj);
+        obj = { color: colorString };
+        tmp3Result = tmp3(RoleDot, obj);
         tmp8 = tmp3;
-        const tmp4 = closure_1_13;
-        const tmp5 = colorString;
       }
       obj = { children: null };
-      const items = [tmp3Result, tmp8(role(name[17]).Text, { variant: "text-xs/medium", children: name }), roleIcon];
-      obj[0] = items;
-      return closure_1_11(closure_1_10, obj);
+      const items = [tmp3Result, tmp8(Text_Text.Text, { variant: "text-xs/medium", children: name }), roleIcon];
+      obj.children = items;
+      return closure_2_11(closure_2_10, obj);
     };
     closure_5 = undefined !== guild_connections;
-    DeveloperMode = require("explicitContentFromProto").DeveloperMode;
+    DeveloperMode = tmp4(tmp5[9]).DeveloperMode;
     setting = DeveloperMode.useSetting();
-    obj3 = require("experiment");
+    obj3 = guildId(tmp5[10]);
     items = [,];
     items[0] = role.id;
     items[1] = name;
@@ -92,9 +87,8 @@ class RoleItem {
     items1[1] = name;
     items1[2] = roleIcon;
     callback = colorString.useCallback(() => {
-      role(name[11]).copy(role.id);
-      const obj = role(name[11]);
-      role(name[12]).roleIdCopied(name);
+      ClipboardUtils.copy(role.id);
+      ToastUtils.roleIdCopied(name);
     }, items);
     tmp11 = jsx;
     if (setting) {
@@ -107,27 +101,27 @@ class RoleItem {
         style: null,
         children: null,
       };
-      obj1[0] = callback;
+      obj1.onPress = callback;
       tmp14 = undefined;
       if (setting) {
         if (obj3.useExperiment({ location: "RoleItem" }, { autoTrackExposure: false }).tidaWebformEnabled) {
           tmp14 = tmp10;
         }
       }
-      obj1[1] = tmp14;
-      obj1[3] = name;
-      intl = require("getSystemLocale").intl;
-      obj1[4] = intl.string(require("getSystemLocale").t.sMsaLg);
-      obj1[5] = tmp.role;
+      obj1.onLongPress = tmp14;
+      obj1.accessibilityLabel = name;
+      intl = tmp4(tmp5[13]).intl;
+      obj1.accessibilityHint = intl.string(tmp4(tmp5[13]).t.sMsaLg);
+      obj1.style = tmp.role;
       num3 = 0;
-      obj1[6] = renderContent();
-      tmp11Result = tmp11(require("PressableBase").PressableHighlight, obj1);
+      obj1.children = renderContent();
+      tmp11Result = tmp11(tmp4(tmp5[18]).PressableHighlight, obj1);
     } else {
       tmp12 = closure_4;
       obj2 = { style: null, children: null };
-      obj2[0] = tmp.role;
+      obj2.style = tmp.role;
       num2 = 0;
-      obj2[1] = renderContent();
+      obj2.children = renderContent();
       tmp11Result = tmp11(closure_4, obj2);
     }
     return tmp11Result;
@@ -137,49 +131,55 @@ function RolesList(guildMemberRoleIds) {
   guildMemberRoleIds = guildMemberRoleIds.guildMemberRoleIds;
   const guildId = guildMemberRoleIds.guildId;
   let obj = guildMemberRoleIds(504);
-  const items = [closure_6];
+  const items = [GuildRoleStore];
   const items1 = [guildMemberRoleIds, guildId];
   const stateFromStoresArray = obj.useStateFromStoresArray(
     items,
     () => {
-      const manyRoles = closure_1_6.getManyRoles(guildId, guildMemberRoleIds);
-      return manyRoles.sort(guildMemberRoleIds(closure_1_2[20]).sortRolesByVerification);
+      const manyRoles = GuildRoleStore.getManyRoles(guildId, guildMemberRoleIds);
+      return manyRoles.sort(UserProfileRoleUtils.sortRolesByVerification);
     },
     items1,
   );
   let tmp2 = null;
   if (0 !== stateFromStoresArray.length) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.roleContainer;
-    obj[1] = stateFromStoresArray.map((id) => closure_1_9(closure_1_14, { role: id, guildId }, id.id));
-    tmp2 = callback(View, obj);
+    obj = {
+      style: tmp.roleContainer,
+      children: stateFromStoresArray.map((role) => React7(RoleItem, { role, guildId }, role.id)),
+    };
+    tmp2 = closure_9(View, obj);
   }
   return tmp2;
 }
-({ DEFAULT_ROLE_COLOR_HEX: error, MAX_VISUAL_ROLE_LENGTH: closure_8 } = ME);
-({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = jsxProd);
-createCacheKey = { roleContainer: { flexDirection: "row", gap: 8, flexWrap: "wrap" }, role: null, roleDot: null };
-createCacheKey = {
+const View = fn(17).View;
+const Constants = fn(1074);
+({ DEFAULT_ROLE_COLOR_HEX: closure_7, MAX_VISUAL_ROLE_LENGTH: closure_8 } = Constants);
+const jsxProd = fn(21);
+({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
+fn(4560);
+let createStyles = { roleContainer: { flexDirection: "row", gap: 8, flexWrap: "wrap" }, role: null, roleDot: null };
+createStyles = {
   flexDirection: "row",
   alignItems: "center",
   columnGap: 4,
   padding: 6,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
-  borderRadius: ThemesDefault.radii.sm,
+  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
+  borderRadius: nativeDefault.radii.sm,
 };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { borderRadius: ThemesDefault.radii.round, height: 12, width: 12 };
-let closure_12 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { borderRadius: ThemesDefault.radii.round, height: 12, width: 12 };
-let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileRolesCard.tsx");
+createStyles.role = createStyles;
+let size = { borderRadius: nativeDefault.radii.round, height: 12, width: 12 };
+createStyles.roleDot = size;
+let closure_12 = createStyles.createStyles(createStyles);
+size = fn(2);
+let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileRolesCard.tsx");
 
 export default function UserProfileRolesCard(userId) {
   userId = userId.userId;
   const guildId = userId.guildId;
   let obj = userId(504);
-  const items = [closure_5];
+  const items = [GuildMemberStore];
   const items1 = [userId, guildId];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getMember(guildId, userId), items1);
+  const stateFromStores = obj.useStateFromStores(items, () => GuildMemberStore.getMember(guildId, userId), items1);
   let roles;
   if (stateFromStores != null) {
     roles = stateFromStores.roles;
@@ -191,13 +191,11 @@ export default function UserProfileRolesCard(userId) {
   if (0 !== roles.length) {
     obj = { title: null, style: null, children: null };
     const intl = tmp(1114).intl;
-    obj[0] = intl.string(tmp(1114).t["LPJmL/"]);
-    obj[1] = userId.style;
-    obj = { guildId: null, guildMemberRoleIds: null };
-    obj[0] = guildId;
-    obj[1] = roles;
-    obj[2] = callback(RolesList, obj);
-    tmp4 = callback(guildId(7207), obj);
+    obj.title = intl.string(tmp(1114).t["LPJmL/"]);
+    obj.style = userId.style;
+    obj = { guildId, guildMemberRoleIds: roles };
+    obj.children = closure_9(RolesList, obj);
+    tmp4 = closure_9(guildId(7207), obj);
     const tmp7 = guildId(7207);
   }
   return tmp4;

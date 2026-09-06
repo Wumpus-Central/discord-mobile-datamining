@@ -1,9 +1,9 @@
 // discord_app/modules/threads/sanitizeThreadName.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/threads/sanitizeThreadName.tsx");
+const result = size.fileFinishedImporting("modules/threads/sanitizeThreadName.tsx");
 
-export default function sanitizeThreadName(str) {
+export default function sanitizeThreadName(str, arg1) {
   let trimmed = str;
   if (arg1) {
     trimmed = str.trim();

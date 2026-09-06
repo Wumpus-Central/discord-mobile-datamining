@@ -1,8 +1,8 @@
 // discord_app/modules/auth/RegistrationConstants.tsx
-import set from "../../../_runtime/00002_set.js";
-import keys from "../../ConstantsIOS.tsx";
+import ConstantsIOS from "../../ConstantsIOS.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const obj = {
+const RegisterTransitionSteps = {
   ACCOUNT_IDENTITY: "Account Identity",
   ACCOUNT_DISPLAY_NAME: "Account Display Name",
   ACCOUNT_INFORMATION: "Account Information",
@@ -12,7 +12,7 @@ const obj = {
   REGISTER: "Register",
   CAPTCHA: "Captcha",
 };
-const result = set.fileFinishedImporting("modules/auth/RegistrationConstants.tsx");
+const result = size.fileFinishedImporting("modules/auth/RegistrationConstants.tsx");
 
 export const RegistrationTransitionActionTypes = {
   VIEWED: "viewed",
@@ -31,9 +31,9 @@ export const RegistrationSteps = {
   INVITE: "invite",
   SMS_VERIFY: "sms_verify",
 };
-export const RegisterTransitionSteps = obj;
+export { RegisterTransitionSteps };
 export const authStateToRegisterTransitionStep = function authStateToRegisterTransitionStep(arg0) {
-  if (keys.AuthStates.REGISTER_IDENTITY === arg0) {
+  if (ConstantsIOS.AuthStates.REGISTER_IDENTITY === arg0) {
     return obj.ACCOUNT_IDENTITY;
   } else if (tmp(1093).AuthStates.REGISTER_DISPLAY_NAME === arg0) {
     return obj.ACCOUNT_DISPLAY_NAME;

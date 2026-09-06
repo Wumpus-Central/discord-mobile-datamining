@@ -1,14 +1,15 @@
 // discord_app/modules/rpc/server/commands/userSettings.tsx
-import closure_0 from "../../../user_settings/LocaleStore.tsx";
+import LocaleStore from "../../../user_settings/LocaleStore.tsx";
 
 let obj = {};
 obj = {
-  scope: require("set").OAuth2Scopes.IDENTIFY,
+  scope: fn(8339).OAuth2Scopes.IDENTIFY,
   handler() {
-    return { locale: locale.locale };
+    return { locale: LocaleStore.locale };
   },
 };
-obj[require("ME").RPCCommands.USER_SETTINGS_GET_LOCALE] = obj;
-const result = require("set").fileFinishedImporting("modules/rpc/server/commands/userSettings.tsx");
+obj[fn(1074).RPCCommands.USER_SETTINGS_GET_LOCALE] = obj;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/rpc/server/commands/userSettings.tsx");
 
 export default obj;

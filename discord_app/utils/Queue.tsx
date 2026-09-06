@@ -1,26 +1,26 @@
 // discord_app/utils/Queue.tsx
-import timestampDefault from "../modules/debug/Logger.tsx";
+import LoggerDefault from "../modules/debug/Logger.tsx";
 import DequeDefault from "../../_runtime/00008_Deque.js";
 
-let closure_2 = new timestampDefault("Queue");
-const tmp2 = new timestampDefault("Queue");
-const result = require("set").fileFinishedImporting("utils/Queue.tsx");
+let closure_2 = new LoggerDefault("Queue");
+const size = fn(2);
+const result = size.fileFinishedImporting("utils/Queue.tsx");
 class Queue {
   constructor() {
     tmp = global;
     if (global === undefined) {
       tmp = closure_2;
     }
-    num = arg1;
-    if (arg1 === undefined) {
+    num = fn;
+    if (fn === undefined) {
       num = 100;
     }
-    obj = Object.create(new.target.prototype);
-    tmp3 = new require("Deque")();
-    obj[0] = tmp3;
-    obj.logger = tmp;
-    obj.defaultRetryAfter = num;
-    return obj;
+    merged = Object.assign({ queue: null, timeout: null, draining: false, pendingRetryItem: null });
+    tmp3 = new closure_0(closure_1[1])();
+    merged[0] = tmp3;
+    merged.logger = tmp;
+    merged.defaultRetryAfter = num;
+    return merged;
   }
 }
 const prototype = Queue.prototype;
@@ -36,27 +36,26 @@ Object.defineProperty(prototype, "length", {
   set: undefined,
 });
 prototype["_drainIfNecessary"] = function _drainIfNecessary() {
-  let self = this;
-  self = this;
+  const self = this;
   if (null === this.timeout) {
     if (0 !== self.queue.length) {
       if (true !== self.draining) {
         self.draining = true;
         let queue = self.queue;
-        const arr = queue.shift();
-        ({ success: closure_2, logId } = arr);
+        const pendingRetryItem = queue.shift();
+        ({ success: closure_2, logId } = pendingRetryItem);
         let logger = self.logger;
         let _HermesInternal = HermesInternal;
         logger.log("Draining message from queue LogId:" + logId + " QueueLength: " + self.queue.length);
-        self.drain(arr.message, (retryAfter) => {
+        self.drain(pendingRetryItem.message, (retryAfter, arg1) => {
           const logger = self.logger;
           logger.log("Finished draining message from queue LogId:" + logId + " QueueLength: " + self.queue.length);
           self.draining = false;
           if (null == retryAfter) {
             const _setImmediate = setImmediate;
-            setImmediate(() => closure_3._drainIfNecessary());
+            setImmediate(() => self._drainIfNecessary());
             try {
-              callback(arg1);
+              closure_1_2(arg1);
             } catch (tmp13) {
               const logger3 = tmp.logger;
               logger3.error("", tmp13);
@@ -76,14 +75,14 @@ prototype["_drainIfNecessary"] = function _drainIfNecessary() {
                 " QueueLength: " +
                 tmp2.queue.length,
             );
-            tmp2.pendingRetryItem = arr;
+            tmp2.pendingRetryItem = pendingRetryItem;
             const _setTimeout = setTimeout;
             tmp2.timeout = setTimeout(() => {
-              closure_3.pendingRetryItem = null;
-              const queue = closure_3.queue;
-              queue.unshift(closure_1);
-              closure_3.timeout = null;
-              closure_3._drainIfNecessary();
+              self.pendingRetryItem = null;
+              const queue = self.queue;
+              queue.unshift(pendingRetryItem);
+              self.timeout = null;
+              self._drainIfNecessary();
             }, defaultRetryAfter);
           }
         });
@@ -99,14 +98,14 @@ prototype["clear"] = function clear() {
   this.draining = false;
   this.pendingRetryItem = null;
 };
-prototype["remove"] = function remove(arg0) {
+prototype["remove"] = function remove(fn) {
   const self = this;
   const items = [];
   if (this.queue.length > 0) {
     do {
       let queue = self.queue;
       let arr = queue.shift();
-      if (!arg0(arr.message)) {
+      if (!fn(arr.message)) {
         arr = items.push(arr);
       }
     } while (self.queue.length > 0);

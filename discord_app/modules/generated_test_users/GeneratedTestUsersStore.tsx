@@ -1,7 +1,7 @@
 // discord_app/modules/generated_test_users/GeneratedTestUsersStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import closure_0 from "../../records/UserRecord.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import UserRecord from "../../records/UserRecord.tsx";
 
 function handleAddUser(id) {
   if (null == closure_1.users) {
@@ -10,7 +10,7 @@ function handleAddUser(id) {
     tmp.users = map;
   }
   const users = tmp.users;
-  const result = users.set(id.id, new closure_0(id));
+  const result = users.set(id.id, new UserRecord(id));
 }
 let closure_1 = { pools: null, users: null };
 const PersistedStore = initializeDefault.PersistedStore;
@@ -44,12 +44,12 @@ prototype["getState"] = function getState() {
     const _Object2 = Object;
     fromEntriesResult1 = Object.fromEntries(tmp.users);
   }
-  obj[1] = fromEntriesResult1;
+  obj.users = fromEntriesResult1;
   return obj;
 };
 prototype["getUsersForPool"] = function getUsersForPool(id) {
   closure_0 = id;
-  const users = closure_1.users;
+  const users = pools.users;
   let items;
   if (users != null) {
     items = users.values();
@@ -58,10 +58,10 @@ prototype["getUsersForPool"] = function getUsersForPool(id) {
     items = [];
   }
   return Array.from(items).filter((id) => {
-    const pools = closure_1_1.pools;
+    pools = pools.pools;
     let hasItem;
     if (pools != null) {
-      const value = pools.get(closure_0);
+      value = pools.get(closure_0);
       if (value != null) {
         const userIds = value.userIds;
         hasItem = userIds.includes(id.id);
@@ -72,7 +72,7 @@ prototype["getUsersForPool"] = function getUsersForPool(id) {
 };
 prototype["getPool"] = function getPool(id) {
   const pools = closure_1.pools;
-  let value;
+  value = undefined;
   if (pools != null) {
     value = pools.get(id);
   }
@@ -83,7 +83,7 @@ prototype["getPool"] = function getPool(id) {
 };
 prototype["getUser"] = function getUser(arg0) {
   const users = closure_1.users;
-  let value;
+  value = undefined;
   if (users != null) {
     value = users.get(arg0);
   }
@@ -103,7 +103,7 @@ prototype["getPools"] = function getPools() {
 };
 GeneratedTestUsersStore.displayName = "GeneratedTestUsersStore";
 GeneratedTestUsersStore.persistKey = "GeneratedTestUsersStore";
-const generatedTestUsersStore = new GeneratedTestUsersStore(dispatcherDefault, {
+const generatedTestUsersStore = new GeneratedTestUsersStore(DispatcherDefault, {
   GENERATED_POOL_BY_ID_FETCH_SUCCESS: function handleFetchPoolByIdSuccess(arg0) {
     ({ pool, users } = arg0);
     if (null == closure_1.pools) {
@@ -117,8 +117,8 @@ const generatedTestUsersStore = new GeneratedTestUsersStore(dispatcherDefault, {
   },
   GENERATED_POOL_REMOVE_FROM_LIST: function handleRemovePool(poolId) {
     poolId = poolId.poolId;
-    const pools = closure_1.pools;
-    let value;
+    const pools = users.pools;
+    value = undefined;
     if (pools != null) {
       value = pools.get(poolId);
     }
@@ -127,10 +127,10 @@ const generatedTestUsersStore = new GeneratedTestUsersStore(dispatcherDefault, {
     } else {
       if (value.userIds.length > 0) {
         const userIds = value.userIds;
-        const item = userIds.forEach((arg0) => {
+        const item = userIds.forEach((item) => {
           users = users.users;
           if (users != null) {
-            users.delete(arg0);
+            users.delete(item);
           }
         });
       }
@@ -139,9 +139,10 @@ const generatedTestUsersStore = new GeneratedTestUsersStore(dispatcherDefault, {
         pools2.delete(poolId);
       }
     }
-    tmp = closure_1;
+    tmp = users;
   },
 });
-let result = require("set").fileFinishedImporting("modules/generated_test_users/GeneratedTestUsersStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/generated_test_users/GeneratedTestUsersStore.tsx");
 
 export default generatedTestUsersStore;

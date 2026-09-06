@@ -1,26 +1,20 @@
 // discord_app/modules/voice_calls/PastVcActivityMessagesExperiment.tsx
-import set from "../../../_runtime/00002_set.js";
-import ExperimentBuckets from "../experiments/ExperimentConstants.tsx";
+import ExperimentConstants from "../experiments/ExperimentConstants.tsx";
 import createExperiment from "../experiments/index.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const items = [{ id: 1, label: "Show past VC activity messages in system channel", config: { enabled: true } }];
-const experiment = createExperiment.createExperiment({
-  kind: "guild",
-  id: "2026-02_past_vc_activity_messages",
-  label: "Past VC Activity Messages",
-  commonTriggerPoint: ExperimentBuckets.CommonTriggerPoints.VOICE_CALL,
-  defaultConfig: { enabled: false },
-  treatments: items,
-});
 const obj = {
   kind: "guild",
   id: "2026-02_past_vc_activity_messages",
   label: "Past VC Activity Messages",
-  commonTriggerPoint: ExperimentBuckets.CommonTriggerPoints.VOICE_CALL,
+  commonTriggerPoint: ExperimentConstants.CommonTriggerPoints.VOICE_CALL,
   defaultConfig: { enabled: false },
-  treatments: items,
+  treatments: null,
 };
-const result = set.fileFinishedImporting("modules/voice_calls/PastVcActivityMessagesExperiment.tsx");
+const items = [{ id: 1, label: "Show past VC activity messages in system channel", config: { enabled: true } }];
+obj.treatments = items;
+const experiment = createExperiment.createExperiment(obj);
+const result = size.fileFinishedImporting("modules/voice_calls/PastVcActivityMessagesExperiment.tsx");
 
 export default experiment;
 export const isPastVcActivityMessagesEnabled = function isPastVcActivityMessagesEnabled(

@@ -1,20 +1,17 @@
 // discord_app/modules/premium/powerups/native/hooks/useGuildPowerupOnShowMore.tsx
-import closure_2 from "../../../../../../_runtime/00019_noop.js";
+import openGuildPowerupsBottomSheetDefault from "../utils/openGuildPowerupsBottomSheet.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const result = require("set").fileFinishedImporting(
-  "modules/premium/powerups/native/hooks/useGuildPowerupOnShowMore.tsx",
-);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupOnShowMore.tsx");
 
-export default function useGuildPowerupOnShowMore(arg0, arg1) {
-  closure_0 = arg0;
+export default function useGuildPowerupOnShowMore(guildId, arg1) {
   closure_1 = arg1;
-  const items = [arg0, arg1];
-  return React.useCallback(() => {
-    if (null != table) {
-      const obj = { guildId: null, powerup: null };
-      obj[0] = callback;
-      obj[1] = tmp;
-      callback(table[1])(obj);
+  const items = [guildId, arg1];
+  return noop.useCallback(() => {
+    if (null != closure_1) {
+      const obj = { guildId, powerup: tmp };
+      openGuildPowerupsBottomSheetDefault(obj);
     }
   }, items);
 }

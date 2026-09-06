@@ -1,23 +1,21 @@
 // discord_app/modules/guild_role_subscriptions/edit_state/EditStateContextProvider.tsx
-import importAllResult from "../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let c0 = importAllResult;
-let context = importAllResult.createContext(undefined);
-const result = require("set").fileFinishedImporting(
-  "modules/guild_role_subscriptions/edit_state/EditStateContextProvider.tsx",
-);
+const jsx = fn(21).jsx;
+const redux = noop.createContext(undefined);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/edit_state/EditStateContextProvider.tsx");
 
 export const useEditStateContext = function useEditStateContext() {
-  const context = importAllResult.useContext(closure_2);
+  const context = noop.useContext(closure_2);
   if (null == context) {
     const _Error = Error;
-    error = new Error("No edit state; are you missing an <EditStateContextProvider />?");
+    const error = new Error("No edit state; are you missing an <EditStateContextProvider />?");
     throw error;
   } else {
     return context;
   }
 };
 export const EditStateContextProvider = function EditStateContextProvider(children) {
-  return <redux.Provider value={Object.assign(arg0, Object.create(null))}>{arg0.children}</redux.Provider>;
+  return <redux.Provider value={Object.assign(arg0, Object.assign({ children: 0 }))}>{arg0.children}</redux.Provider>;
 };

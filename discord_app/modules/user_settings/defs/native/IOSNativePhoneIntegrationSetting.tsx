@@ -1,46 +1,30 @@
 // discord_app/modules/user_settings/defs/native/IOSNativePhoneIntegrationSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import set2 from "../../../../utils/PlatformUtils.tsx";
-import explicitContentFromProto from "../../UserSettings.tsx";
-import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
-import apexExperimentDefault from "../../../voice_calls/CallKitMetricCollectionExperiment.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import util from "../../../../intl/index.native.tsx";
+import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
+import UserSettings from "../../UserSettings.tsx";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
+import CallKitMetricCollectionExperimentDefault from "../../../voice_calls/CallKitMetricCollectionExperiment.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const toggle = createToggle.createToggle({
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.V6D0wU);
+    const intl = util.intl;
+    return intl.string(util.t.V6D0wU);
   },
-  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
-  useValue: explicitContentFromProto.NativePhoneIntegrationEnabled.useSetting,
-  onValueChange: explicitContentFromProto.NativePhoneIntegrationEnabled.updateSetting,
+  parent: SettingsConstants.MobileUserSettings.NOTIFICATIONS,
+  useValue: UserSettings.NativePhoneIntegrationEnabled.useSetting,
+  onValueChange: UserSettings.NativePhoneIntegrationEnabled.updateSetting,
   usePredicate() {
-    let enabled = apexExperimentDefault.useConfig({ location: "IOSNativePhoneIntegrationSetting" }).enabled;
+    let enabled = CallKitMetricCollectionExperimentDefault.useConfig({
+      location: "IOSNativePhoneIntegrationSetting",
+    }).enabled;
     if (enabled) {
-      enabled = set2.isIOS();
-      const obj2 = set2;
+      enabled = PlatformUtils.isIOS();
     }
     return enabled;
   },
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.V6D0wU);
-  },
-  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
-  useValue: explicitContentFromProto.NativePhoneIntegrationEnabled.useSetting,
-  onValueChange: explicitContentFromProto.NativePhoneIntegrationEnabled.updateSetting,
-  usePredicate() {
-    let enabled = apexExperimentDefault.useConfig({ location: "IOSNativePhoneIntegrationSetting" }).enabled;
-    if (enabled) {
-      enabled = set2.isIOS();
-      const obj2 = set2;
-    }
-    return enabled;
-  },
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/IOSNativePhoneIntegrationSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/IOSNativePhoneIntegrationSetting.tsx");
 
 export default toggle;

@@ -1,40 +1,42 @@
 // discord_app/modules/user_profile/native/WishlistViewerCoachmark.tsx
-import metadataDefault from "../../../../discord_assets/assets/assets/mobile_wishlist_coachmark.png.js";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import { ContentDismissActionType } from "../../dismissible_content/DismissibleContentConstants.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import util from "../../../intl/index.native.tsx";
+import _modDef13130 from "../../../../discord_assets/assets/assets/mobile_wishlist_coachmark.png.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
+require = fn;
 function CoachmarkImage() {
-  const tmp = callback();
+  const tmp = closure_8();
   let obj = { style: tmp.imageContainer, children: null };
   obj = { source: null, style: null };
-  obj = { uri: metadataDefault };
-  obj[0] = obj;
-  obj[1] = tmp.image;
-  obj[1] = <closure_5 uri={metadataDefault} />;
-  return <closure_4 uri={metadataDefault} />;
+  obj = { uri: _modDef13130 };
+  obj.source = obj;
+  obj.style = tmp.image;
+  obj.children = <hasOwnProperty uri={_modDef13130} />;
+  return <React4 uri={_modDef13130} />;
 }
-({ View: c4, Image: c5 } = get_ActivityIndicator);
-let closure_8 = createCacheKey.createStyles({
+get_ActivityIndicator = fn(17);
+({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_8 = createStyles.createStyles({
   imageContainer: { alignItems: "center", justifyContent: "center" },
   image: { width: 160, height: 106 },
 });
-const result = require("set").fileFinishedImporting("modules/user_profile/native/WishlistViewerCoachmark.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/WishlistViewerCoachmark.tsx");
 
 export default function WishlistViewerCoachmark(isVisible) {
   isVisible = isVisible.isVisible;
   const markAsDismissed = isVisible.markAsDismissed;
   const onViewWishlist = isVisible.onViewWishlist;
-  let callback;
+  let onButtonPress;
   const items = [onViewWishlist];
-  callback = callback.useCallback(() => {
+  onButtonPress = onButtonPress.useCallback(() => {
     onViewWishlist();
   }, items);
-  const items1 = [isVisible, markAsDismissed, callback];
-  const memo = callback.useMemo(() => {
+  const items1 = [isVisible, markAsDismissed, onButtonPress];
+  const memo = onButtonPress.useMemo(() => {
     const obj = {
       title: null,
       description: null,
@@ -46,20 +48,20 @@ export default function WishlistViewerCoachmark(isVisible) {
       buttonVariant: "primary",
       onButtonPress: null,
     };
-    const intl = isVisible(onViewWishlist[6]).intl;
-    obj[0] = intl.string(isVisible(onViewWishlist[6]).t["+b6iUl"]);
-    const intl2 = isVisible(onViewWishlist[6]).intl;
-    obj[1] = intl2.string(isVisible(onViewWishlist[6]).t.Howsng);
-    obj[3] = isVisible;
-    obj[4] = function onDismiss() {
-      return callback(closure_1_6.USER_DISMISS);
+    const intl = util.intl;
+    obj.title = intl.string(util.t["+b6iUl"]);
+    const intl2 = util.intl;
+    obj.description = intl2.string(util.t.Howsng);
+    obj.visible = isVisible;
+    obj.onDismiss = function onDismiss() {
+      return markAsDismissed(constants.USER_DISMISS);
     };
-    obj[5] = function renderImgComponent() {
-      return callback2(closure_9, {});
+    obj.renderImgComponent = function renderImgComponent() {
+      return closure_1_7(closure_1_9, {});
     };
-    const intl3 = isVisible(onViewWishlist[6]).intl;
-    obj[6] = intl3.string(isVisible(onViewWishlist[6]).t.TxBQzD);
-    obj[8] = callback;
+    const intl3 = util.intl;
+    obj.buttonLabel = intl3.string(util.t.TxBQzD);
+    obj.onButtonPress = onButtonPress;
     return obj;
   }, items1);
   const coachmark = isVisible(onViewWishlist[7]).useCoachmark(isVisible.anchorRef, memo);

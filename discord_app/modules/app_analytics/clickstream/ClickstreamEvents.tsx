@@ -1,75 +1,66 @@
 // discord_app/modules/app_analytics/clickstream/ClickstreamEvents.tsx
-import set from "../../../../_runtime/00002_set.js";
-import ME from "../../../Constants.tsx";
+import Constants from "../../../Constants.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/app_analytics/clickstream/ClickstreamEvents.tsx");
+const AnalyticEvents = Constants.AnalyticEvents;
+const result = size.fileFinishedImporting("modules/app_analytics/clickstream/ClickstreamEvents.tsx");
 
-export const getClickstreamDrainEvent = function getClickstreamDrainEvent(first, arr) {
+export const getClickstreamDrainEvent = function getClickstreamDrainEvent(arg0, arr) {
   const date = new Date();
-  if (date.GUILD_VIEWED_CLICKSTREAM === first) {
-    let obj = { time_minus: null, rtc_states: null, guild_ids: null };
-    obj[0] = arr.map((timestamp) => {
-      timestamp = timestamp.timestamp;
-      const time = date.getTime();
-      return time - timestamp.getTime();
-    });
-    obj[1] = arr.map((rtc_state) => rtc_state.rtc_state);
-    obj[2] = arr.map((guild_id) => guild_id.guild_id);
-    return obj;
-  } else if (tmp2.FRIENDS_LIST_VIEWED_CLICKSTREAM === first) {
-    obj = {
-      time_minus: null,
-      rtc_states: null,
-      tab_opened: null,
-      num_friends: null,
-      now_playing_visible: null,
-      now_playing_num_cards: null,
+  if (AnalyticEvents.GUILD_VIEWED_CLICKSTREAM === arg0) {
+    let obj = {
+      time_minus: arr.map((timestamp) => {
+        timestamp = timestamp.timestamp;
+        const time = date.getTime();
+        return time - timestamp.getTime();
+      }),
+      rtc_states: arr.map((rtc_state) => rtc_state.rtc_state),
+      guild_ids: arr.map((guild_id) => guild_id.guild_id),
     };
-    obj[0] = arr.map((timestamp) => {
-      timestamp = timestamp.timestamp;
-      const time = date.getTime();
-      return time - timestamp.getTime();
-    });
-    obj[1] = arr.map((rtc_state) => rtc_state.rtc_state);
-    obj[2] = arr.map((tab_opened) => tab_opened.tab_opened);
-    obj[3] = arr.map((num_friends) => num_friends.num_friends);
-    obj[4] = arr.map((now_playing_visible) => now_playing_visible.now_playing_visible);
-    obj[5] = arr.map((now_playing_num_cards) => now_playing_num_cards.now_playing_num_cards);
     return obj;
-  } else if (tmp2.CHANNEL_OPENED_CLICKSTREAM === first) {
-    obj1 = { time_minus: null, rtc_states: null, channel_ids: null, channel_types: null };
-    obj1[0] = arr.map((timestamp) => {
-      timestamp = timestamp.timestamp;
-      const time = date.getTime();
-      return time - timestamp.getTime();
-    });
-    obj1[1] = arr.map((rtc_state) => rtc_state.rtc_state);
-    obj1[2] = arr.map((channel_id) => channel_id.channel_id);
-    obj1[3] = arr.map((channel_type) => channel_type.channel_type);
+  } else if (tmp2.FRIENDS_LIST_VIEWED_CLICKSTREAM === arg0) {
+    obj = {
+      time_minus: arr.map((timestamp) => {
+        timestamp = timestamp.timestamp;
+        const time = date.getTime();
+        return time - timestamp.getTime();
+      }),
+      rtc_states: arr.map((rtc_state) => rtc_state.rtc_state),
+      tab_opened: arr.map((tab_opened) => tab_opened.tab_opened),
+      num_friends: arr.map((num_friends) => num_friends.num_friends),
+      now_playing_visible: arr.map((now_playing_visible) => now_playing_visible.now_playing_visible),
+      now_playing_num_cards: arr.map((now_playing_num_cards) => now_playing_num_cards.now_playing_num_cards),
+    };
+    return obj;
+  } else if (tmp2.CHANNEL_OPENED_CLICKSTREAM === arg0) {
+    const obj1 = {
+      time_minus: arr.map((timestamp) => {
+        timestamp = timestamp.timestamp;
+        const time = date.getTime();
+        return time - timestamp.getTime();
+      }),
+      rtc_states: arr.map((rtc_state) => rtc_state.rtc_state),
+      channel_ids: arr.map((channel_id) => channel_id.channel_id),
+      channel_types: arr.map((channel_type) => channel_type.channel_type),
+    };
     return obj1;
-  } else if (tmp2.CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM === first) {
+  } else if (tmp2.CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM === arg0) {
     obj = {
-      time_minus: null,
-      rtc_states: null,
-      load_duration_ms: null,
-      were_messages_cached: null,
-      is_first_load: null,
+      time_minus: arr.map((timestamp) => {
+        timestamp = timestamp.timestamp;
+        const time = date.getTime();
+        return time - timestamp.getTime();
+      }),
+      rtc_states: arr.map((rtc_state) => rtc_state.rtc_state),
+      load_duration_ms: arr.map((load_duration_ms) => load_duration_ms.load_duration_ms),
+      were_messages_cached: arr.map((were_messages_cached) => were_messages_cached.were_messages_cached),
+      is_first_load: arr.map((is_first_load) => is_first_load.is_first_load),
     };
-    obj[0] = arr.map((timestamp) => {
-      timestamp = timestamp.timestamp;
-      const time = date.getTime();
-      return time - timestamp.getTime();
-    });
-    obj[1] = arr.map((rtc_state) => rtc_state.rtc_state);
-    obj[2] = arr.map((load_duration_ms) => load_duration_ms.load_duration_ms);
-    obj[3] = arr.map((were_messages_cached) => were_messages_cached.were_messages_cached);
-    obj[4] = arr.map((is_first_load) => is_first_load.is_first_load);
     return obj;
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    error = new Error("getClickstreamDrainEvent: Unknown event: " + first);
+    const error = new Error("getClickstreamDrainEvent: Unknown event: " + arg0);
     throw error;
   }
 };

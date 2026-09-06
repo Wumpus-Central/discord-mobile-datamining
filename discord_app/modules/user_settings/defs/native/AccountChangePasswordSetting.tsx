@@ -1,25 +1,23 @@
 // discord_app/modules/user_settings/defs/native/AccountChangePasswordSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import ME from "../../../../Constants.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import Constants from "../../../../Constants.tsx";
+import util from "../../../../intl/index.native.tsx";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["CIGa+7"]);
+    const intl = util.intl;
+    return intl.string(util.t["CIGa+7"]);
   },
-  parent: MobileUserSettings.MobileUserSettings.ACCOUNT,
-  screen: obj,
-};
-obj = {
-  route: ME.UserSettingsSections.ACCOUNT_CHANGE_PASSWORD,
-  getComponent() {
-    return require("../../account/native/AccountEditPassword.tsx").default;
+  parent: SettingsConstants.MobileUserSettings.ACCOUNT,
+  screen: {
+    route: Constants.UserSettingsSections.ACCOUNT_CHANGE_PASSWORD,
+    getComponent() {
+      return require("AccountEditPassword").default;
+    },
   },
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/AccountChangePasswordSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountChangePasswordSetting.tsx");
 
 export default route;

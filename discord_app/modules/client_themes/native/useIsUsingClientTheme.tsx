@@ -1,9 +1,9 @@
 // discord_app/modules/client_themes/native/useIsUsingClientTheme.tsx
-import set from "../../../../_runtime/00002_set.js";
-import useActiveThemeType from "useActiveTheme.tsx";
+import useActiveTheme from "useActiveTheme.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/client_themes/native/useIsUsingClientTheme.tsx");
+const result = size.fileFinishedImporting("modules/client_themes/native/useIsUsingClientTheme.tsx");
 
 export default function useIsUsingClientTheme() {
-  return useActiveThemeType.useIsClientThemeOrCustomThemeActive();
+  return useActiveTheme.useIsClientThemeOrCustomThemeActive();
 }

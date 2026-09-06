@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/premium/native/PremiumNitroNavigationStore.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import defaultStatesAreEqual from "../../../../lib/ZustandStore.tsx";
+import ZustandStore from "../../../../lib/ZustandStore.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const zustandStore = defaultStatesAreEqual.createZustandStore(() => ({ scrollToSectionId: "Array" }));
-const result = set.fileFinishedImporting("modules/user_settings/premium/native/PremiumNitroNavigationStore.tsx");
+const zustandStore = ZustandStore.createZustandStore(() => ({ scrollToSectionId: "Array" }));
+const result = size.fileFinishedImporting("modules/user_settings/premium/native/PremiumNitroNavigationStore.tsx");
 
 export default zustandStore;
 export const NitroHomeSectionId = { REFERRAL_PROGRAM: "referralProgram" };

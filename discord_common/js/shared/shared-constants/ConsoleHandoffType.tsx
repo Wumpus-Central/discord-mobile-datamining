@@ -1,10 +1,8 @@
 // discord_common/js/shared/shared-constants/ConsoleHandoffType.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const obj = { ALL: null };
-let set = new Set(["CREATE_NEW_CALL", "TRANSFER_EXISTING_CALL"]);
-obj[0] = set;
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/ConsoleHandoffType.tsx");
+const obj = { ALL: new Set(["CREATE_NEW_CALL", "TRANSFER_EXISTING_CALL"]) };
+const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ConsoleHandoffType.tsx");
 
 export const ConsoleHandoffType = {
   TRANSFER_EXISTING_CALL: "TRANSFER_EXISTING_CALL",

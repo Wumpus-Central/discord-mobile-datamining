@@ -1,20 +1,24 @@
 // discord_app/modules/premium/powerups/hooks/useTotalPossibleBoostCount.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import noop from "../../../../../_runtime/00019_noop.js";
-import BoostedGuildTiers from "../constants/GuildPowerupsConstants.tsx";
-import ME from "../../../../Constants.tsx";
+import _mod19 from "../../../../../_runtime/metro/00019__.js";
+import GuildPowerupsConstants from "../constants/GuildPowerupsConstants.tsx";
+import Constants from "../../../../Constants.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-let useMemo = noop.useMemo;
-({ MULTIPLE_PURCHASEABLE_PREMIUM_FEATURES_BOOST_INFO: closure_1, PURCHASABLE_PREMIUM_FEATURES_BOOST_INFO: obj1 } =
-  BoostedGuildTiers);
-({ AppliedGuildBoostsRequiredForBoostedGuildTier: c3, BoostedGuildTiers: c4, GuildFeatures: c5 } = ME);
-const result = set.fileFinishedImporting("modules/premium/powerups/hooks/useTotalPossibleBoostCount.tsx");
+let useMemo = _mod19.useMemo;
+({ MULTIPLE_PURCHASEABLE_PREMIUM_FEATURES_BOOST_INFO: closure_1, PURCHASABLE_PREMIUM_FEATURES_BOOST_INFO: c2 } =
+  GuildPowerupsConstants);
+({
+  AppliedGuildBoostsRequiredForBoostedGuildTier: c3,
+  BoostedGuildTiers: closure_4,
+  GuildFeatures: hasOwnProperty,
+} = Constants);
+const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useTotalPossibleBoostCount.tsx");
 
 export default function useTotalPossibleBoostCount(arg0) {
   useMemo = arg0;
   const items = [arg0];
   return useMemo(() => {
-    if (null == num) {
+    if (null == id) {
       return 0;
     } else {
       let hasItem;
@@ -22,10 +26,11 @@ export default function useTotalPossibleBoostCount(arg0) {
         const features = tmp.features;
         hasItem = features.has(closure_1_5.PREMIUM_TIER_3_OVERRIDE);
       }
-      num = 0;
+      let num = 0;
       if (true !== hasItem) {
-        num = closure_1_3[closure_1_4.TIER_3];
+        num = closure_1_3[TIER_3.TIER_3];
       }
+      id = num;
       const _Object = Object;
       const values = Object.values(closure_1_2);
       const _Object2 = Object;
@@ -34,9 +39,9 @@ export default function useTotalPossibleBoostCount(arg0) {
         let tmp = null == includedInLevel.includedInLevel;
         if (tmp) {
           const isEnabled = includedInLevel.isEnabled;
-          num = undefined;
+          let num;
           if (isEnabled != null) {
-            num = isEnabled(num.id);
+            num = isEnabled(id.id);
           }
           if (num == null) {
             num = 1;
@@ -44,10 +49,10 @@ export default function useTotalPossibleBoostCount(arg0) {
           tmp = num;
         }
         if (tmp) {
-          closure_0 = closure_0 + includedInLevel.boostPrice;
+          id = id + includedInLevel.boostPrice;
         }
       });
-      return num;
+      return id;
     }
   }, items);
 }

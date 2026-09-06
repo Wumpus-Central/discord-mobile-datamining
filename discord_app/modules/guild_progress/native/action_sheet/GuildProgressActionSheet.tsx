@@ -1,18 +1,23 @@
 // discord_app/modules/guild_progress/native/action_sheet/GuildProgressActionSheet.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import Button from "../../../../design/void/native.tsx";
-import Text from "../../../../design/components/Text/native/Text.tsx";
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../../guild_settings/GuildSettingsStore.tsx";
-import closure_7 from "../../../../stores/GuildChannelStore.tsx";
-import Steps from "../../GuildProgressConstants.tsx";
-import ME from "../../../../Constants.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ComponentDispatchUtils from "../../../../utils/ComponentDispatchUtils.tsx";
+import native from "../../../../design/void/native.tsx";
+import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
+import ToastUtils from "../../../toast/native/ToastUtils.tsx";
+import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import transitionToChannel from "../../../routing/transitionToChannel.tsx";
+import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
+import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
+import GuildProgressUtils from "../GuildProgressUtils.tsx";
+import GuildProgressActionCreatorsDefault from "../../GuildProgressActionCreators.tsx";
+import openGuildPowerupsModalDefault from "../../../premium/powerups/native/utils/openGuildPowerupsModal.tsx";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import GuildSettingsStore from "../../../guild_settings/GuildSettingsStore.tsx";
+import GuildChannelStore from "../../../../stores/GuildChannelStore.tsx";
 
-require = arg1;
+require = fn;
 class GuildProgressHeader {
   constructor(arg0) {
     ({ title, subtitle } = global);
@@ -26,22 +31,27 @@ class GuildProgressHeader {
       children: title,
     };
     items = [,];
-    items[0] = jsx(require("Text").Text, obj);
+    items[0] = jsx(closure_0(closure_2[29]).Text, obj);
     obj1 = { style: tmp.headerSubtitle, children: subtitle };
-    items[1] = jsx(require("Button").LegacyText, obj1);
-    obj[1] = items;
+    items[1] = jsx(closure_0(closure_2[33]).LegacyText, obj1);
+    obj.children = items;
     return jsxs(View, obj);
   }
 }
-({ AnalyticsSetupTypes: closure_8, AnalyticsActions: c9 } = Steps);
+const View = fn(17).View;
+const GuildProgressConstants = fn(12469);
+({ AnalyticsSetupTypes: closure_8, AnalyticsActions: closure_9 } = GuildProgressConstants);
+const Constants = fn(1074);
 ({
   UPLOAD_MEDIUM_SIZE: c10,
-  AnalyticEvents: unpackModuleId,
+  AnalyticEvents: closure_11,
   ComponentActions: closure_12,
   InstantInviteSources: map1,
-} = ME);
+} = Constants);
+const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-createCacheKey = {
+fn(4560);
+let createStyles = {
   container: { padding: 16 },
   header: { alignItems: "center", paddingTop: 8, paddingBottom: 16 },
   headerTitle: { marginBottom: 8, textAlign: "center" },
@@ -49,137 +59,109 @@ createCacheKey = {
   footer: null,
   center: null,
 };
-createCacheKey = { fontSize: 14, fontWeight: "500", color: ThemesDefault.colors.TEXT_SUBTLE };
-createCacheKey[3] = createCacheKey;
-createCacheKey[4] = { marginTop: 4 };
-createCacheKey[5] = { alignItems: "center" };
-let closure_16 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting(
-  "modules/guild_progress/native/action_sheet/GuildProgressActionSheet.tsx",
-);
+createStyles = { fontSize: 14, fontWeight: "500", color: nativeDefault.colors.TEXT_SUBTLE };
+createStyles.headerSubtitle = createStyles;
+createStyles.footer = { marginTop: 4 };
+createStyles.center = { alignItems: "center" };
+const value = createStyles.createStyles(createStyles);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_progress/native/action_sheet/GuildProgressActionSheet.tsx");
 
 export default function GuildProgressActionSheet(guild) {
   guild = guild.guild;
-  importDefault = undefined;
   let numFinished;
-  let totalSteps;
-  let stateFromStoresObject;
-  let id;
-  function _addServerIcon() {
-    const self = this;
-    const tmp = totalSteps(function* () {
-      if (c3 === 2) {
-        c3 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+  const errors = async function _addServerIcon(arg0, value) {
+    if (c3 === 2) {
+      c3 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          c3 = 2;
-          if (0 === dependencyMap) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_1 = tmp5;
-              let base64 = tmp2;
-              base64 = undefined;
-              closure_1_1(9063).init(closure_1_5);
-              const obj6 = closure_1_1(9063);
-              closure_1_0(12474).hideActionSheet(closure_1_0.id);
-              const obj7 = closure_1_0(12474);
-              obj1 = { size: null };
-              obj1[0] = closure_1_10;
-              dependencyMap = 1;
-              c3 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = closure_1_1(5138).openImagePicker(obj1);
-              return obj2;
-            }
-          } else if (arg0 === 1) {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c3 = 2;
+        if (0 === dependencyMap) {
+          if (arg0 === 1) {
             c3 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
+            obj = { value, done: true };
+            return obj;
           } else {
-            base64 = arg1.base64;
-            if (null != base64) {
-              obj = closure_1_1(9063);
-              obj.updateIcon(closure_5, base64);
-            }
-            c3 = 3;
-            return { value: "HermesInternal", done: null };
+            let base64;
+            tmp5(9063).init(View);
+            const obj6 = tmp5(9063);
+            tmp2(12474).hideActionSheet(id.id);
+            const obj7 = tmp2(12474);
+            const obj1 = { size };
+            dependencyMap = 1;
+            c3 = 1;
+            const obj2 = { value: tmp5(5138).openImagePicker(obj1), done: false };
+            return obj2;
           }
-        } catch (tmp16) {
-          c3 = tmp;
-          throw tmp16;
+        } else if (arg0 === 1) {
+          c3 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          base64 = value.base64;
+          if (null != base64) {
+            obj = tmp5(9063);
+            obj.updateIcon(closure_129_5, base64);
+          }
+          c3 = 3;
+          return { value: "HermesInternal", done: null };
         }
+      } catch (tmp16) {
+        c3 = tmp;
+        throw tmp16;
       }
-    });
-    closure_6 = tmp;
-    const apply = tmp.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
     }
-    return applyArgumentsResult;
-  }
-  let tmp = callback3();
+  };
+  const tmp = closure_16();
   let obj = guild(numFinished[10]);
-  const items = [closure_7];
-  importDefault = obj.useStateFromStores(items, () => closure_1_7.getDefaultChannel(guild.id));
-  obj1 = guild(numFinished[11]);
+  const items = [GuildChannelStore];
+  importDefault = obj.useStateFromStores(items, () => GuildChannelStore.getDefaultChannel(guild.id));
+  let obj1 = guild(numFinished[11]);
   const iOSCompletionStates = obj1.useIOSCompletionStates(guild);
   numFinished = iOSCompletionStates.numFinished;
-  totalSteps = iOSCompletionStates.totalSteps;
+  const totalSteps = iOSCompletionStates.totalSteps;
   ({ guildPopulated, guildPersonalized, guildMessaged, guildBoosted, showBoostStep } = iOSCompletionStates);
   let obj2 = guild(numFinished[10]);
-  const items1 = [_addServerIcon];
-  stateFromStoresObject = obj2.useStateFromStoresObject(items1, () => _addServerIcon.getErrors());
-  id = guild.id;
+  const items1 = [errors];
+  const stateFromStoresObject = obj2.useStateFromStoresObject(items1, () => errors.getErrors());
+  const id = guild.id;
   const items2 = [stateFromStoresObject.message];
   const layoutEffect = stateFromStoresObject.useLayoutEffect(() => {
     if (null != stateFromStoresObject.message) {
-      guild(numFinished[12]).presentError(tmp.message);
-      const obj = guild(numFinished[12]);
+      ToastUtils.presentError(tmp.message);
     }
   }, items2);
   const items3 = [id];
   const effect = stateFromStoresObject.useEffect(() => {
-    let obj = callback(numFinished[13]);
-    obj = { type: "Guild Progress Sheet", guild_id: id };
-    obj.track(closure_1_11.OPEN_POPOUT, obj);
+    const obj = { type: "Guild Progress Sheet", guild_id: id };
+    obj.track(constants3.OPEN_POPOUT, obj);
   }, items3);
   const items4 = [id, totalSteps, numFinished];
   const effect1 = stateFromStoresObject.useEffect(() => {
     if (numFinished === totalSteps) {
-      const result = callback(numFinished[14]).markCompletedProgressSeen(id);
-      const obj = callback(numFinished[14]);
+      const result = GuildProgressActionCreatorsDefault.markCompletedProgressSeen(id);
     }
   }, items4);
   obj = {
     onPress: function inviteFriends() {
       if (null != closure_1) {
-        let obj = guild(numFinished[16]);
-        obj = { source: null };
-        obj[0] = closure_1_13.GUILD_PROGRESS;
+        const obj = { source: constants5.GUILD_PROGRESS };
         const result = obj.showInstantInviteActionSheet(tmp, obj);
       }
     },
@@ -189,20 +171,20 @@ export default function GuildProgressActionSheet(guild) {
     analyticsSetupType: null,
     analyticsAction: null,
   };
-  obj = { uri: importDefault(numFinished[17]) };
-  obj[1] = obj;
+  obj = { uri: require("../../../../../discord_assets/assets/mana/asset-library/generated/MailboxIllocon-2x.png.js") };
+  obj.source = obj;
   const intl = guild(numFinished[18]).intl;
-  obj[2] = intl.string(guild(numFinished[18]).t.q9n0Ta);
-  obj[3] = guildPopulated;
-  obj[4] = constants.GUILD_PROGRESS;
-  obj[5] = constants2.INVITE;
-  const tmp11 = importDefault(numFinished[15]);
+  obj.title = intl.string(guild(numFinished[18]).t.q9n0Ta);
+  obj.isCompleted = guildPopulated;
+  obj.analyticsSetupType = constants.GUILD_PROGRESS;
+  obj.analyticsAction = constants2.INVITE;
+  const tmp11 = require("ProgressItem");
   const tmp12 = constants;
   const tmp13 = constants2;
   obj1 = {
     onPress: function addServerIcon() {
       const self = this;
-      const apply = _addServerIcon.apply;
+      const apply = closure_6.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
@@ -217,30 +199,29 @@ export default function GuildProgressActionSheet(guild) {
     analyticsAction: null,
   };
   obj2 = { uri: null };
-  const tmp14 = callback(importDefault(numFinished[15]), obj);
-  obj2[0] = importDefault(numFinished[21]);
-  obj1[1] = obj2;
+  const tmp14 = closure_14(require("ProgressItem"), obj);
+  obj2.uri = require("../../../../../discord_assets/assets/mana/asset-library/generated/BrushIllocon-2x.png.js");
+  obj1.source = obj2;
   const intl2 = guild(numFinished[18]).intl;
-  obj1[2] = intl2.string(guild(numFinished[18]).t.DWB2YZ);
-  obj1[3] = guildPersonalized;
-  obj1[4] = constants.GUILD_PROGRESS;
-  obj1[5] = constants2.PERSONALIZE_SERVER;
-  const tmp15 = importDefault(numFinished[15]);
+  obj1.title = intl2.string(guild(numFinished[18]).t.DWB2YZ);
+  obj1.isCompleted = guildPersonalized;
+  obj1.analyticsSetupType = constants.GUILD_PROGRESS;
+  obj1.analyticsAction = constants2.PERSONALIZE_SERVER;
+  const tmp15 = require("ProgressItem");
   let obj3 = {
     onPress: function goToChannel() {
-      if (null != callback) {
-        let obj = guild(numFinished[22]);
+      if (null != closure_1) {
+        let obj = transitionToChannel;
         obj.transitionToChannel(tmp.id);
       }
-      callback(numFinished[23]).hideActionSheet();
+      ActionSheetActionCreatorsDefault.hideActionSheet();
       let tmp6;
-      if (null != callback) {
-        obj = { channelId: null };
-        obj[0] = tmp.id;
+      if (null != closure_1) {
+        obj = { channelId: tmp.id };
         tmp6 = obj;
       }
-      const ComponentDispatch = guild(numFinished[24]).ComponentDispatch;
-      ComponentDispatch.dispatch(closure_1_12.TEXTAREA_FOCUS, tmp6);
+      const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
+      ComponentDispatch.dispatch(constants4.TEXTAREA_FOCUS, tmp6);
     },
     source: null,
     title: null,
@@ -249,52 +230,50 @@ export default function GuildProgressActionSheet(guild) {
     analyticsAction: null,
   };
   const obj4 = { uri: null };
-  const tmp16 = callback(importDefault(numFinished[15]), obj1);
-  obj4[0] = importDefault(numFinished[25]);
-  obj3[1] = obj4;
+  const tmp16 = closure_14(require("ProgressItem"), obj1);
+  obj4.uri = require("../../../../../discord_assets/assets/mana/asset-library/generated/PlaneIllocon-2x.png.js");
+  obj3.source = obj4;
   const intl3 = guild(numFinished[18]).intl;
-  obj3[2] = intl3.string(guild(numFinished[18]).t.dNktpr);
-  obj3[3] = guildMessaged;
-  obj3[4] = constants.GUILD_PROGRESS;
-  obj3[5] = constants2.SEND_MESSAGE;
+  obj3.title = intl3.string(guild(numFinished[18]).t.dNktpr);
+  obj3.isCompleted = guildMessaged;
+  obj3.analyticsSetupType = constants.GUILD_PROGRESS;
+  obj3.analyticsAction = constants2.SEND_MESSAGE;
   let tmp9Result = null;
-  const tmp17 = importDefault(numFinished[15]);
+  const tmp17 = require("ProgressItem");
   if (showBoostStep) {
     const obj5 = {
-      onPress: null,
+      onPress: function goToBoosts() {
+        let obj = GuildProgressUtils;
+        obj.hideActionSheet(id);
+        obj = { guildId: id, analyticsLocation: AnalyticsLocationDefault.GUILD_POWERUPS_GUILD_PROGRESS };
+        openGuildPowerupsModalDefault(obj);
+      },
       source: null,
       title: null,
       isCompleted: null,
       analyticsSetupType: null,
       analyticsAction: null,
     };
-    obj5[0] = function goToBoosts() {
-      let obj = guild(numFinished[11]);
-      obj.hideActionSheet(id);
-      obj = { guildId: id, analyticsLocation: callback(numFinished[27]).GUILD_POWERUPS_GUILD_PROGRESS };
-      callback(numFinished[26])(obj);
-    };
-    let obj6 = { uri: null };
-    obj6[0] = tmp10(tmp3[28]);
-    obj5[1] = obj6;
+    let obj6 = { uri: tmp10(tmp3[28]) };
+    obj5.source = obj6;
     const intl4 = tmp2(tmp3[18]).intl;
-    obj5[2] = intl4.string(tmp2(tmp3[18]).t["6Qbqxw"]);
-    obj5[3] = guildBoosted;
-    obj5[4] = tmp12.GUILD_PROGRESS;
-    obj5[5] = tmp13.BOOST;
+    obj5.title = intl4.string(tmp2(tmp3[18]).t["6Qbqxw"]);
+    obj5.isCompleted = guildBoosted;
+    obj5.analyticsSetupType = tmp12.GUILD_PROGRESS;
+    obj5.analyticsAction = tmp13.BOOST;
     tmp9Result = tmp9(tmp10(tmp3[15]), obj5);
     const tmp10Result = tmp10(tmp3[15]);
   }
   let obj7 = { style: tmp.container, children: null };
   const obj8 = { title: null, subtitle: null };
   const intl5 = tmp2(tmp3[18]).intl;
-  obj8[0] = intl5.string(guild(numFinished[18]).t["tu/tr8"]);
+  obj8.title = intl5.string(guild(numFinished[18]).t["tu/tr8"]);
   const intl6 = tmp2(tmp3[18]).intl;
-  obj8[1] = intl6.format(guild(numFinished[18]).t.l6iRLs, {
+  obj8.subtitle = intl6.format(guild(numFinished[18]).t.l6iRLs, {
     numFinished,
     total: totalSteps,
-    stepsHook(children) {
-      return callback2(
+    stepsHook(children, arg1) {
+      return closure_1_14(
         guild(numFinished[29]).Text,
         { variant: "text-sm/medium", color: "mobile-text-heading-primary", children },
         arg1,
@@ -302,10 +281,10 @@ export default function GuildProgressActionSheet(guild) {
     },
   });
   const items5 = [
-    callback(GuildProgressHeader, obj8),
+    closure_14(GuildProgressHeader, obj8),
     tmp14,
     tmp16,
-    callback(importDefault(numFinished[15]), obj3),
+    closure_14(require("ProgressItem"), obj3),
     tmp9Result,
   ];
   const items6 = [tmp.footer];
@@ -314,39 +293,36 @@ export default function GuildProgressActionSheet(guild) {
     center = tmp.center;
   }
   function handleDismissGuildProgress() {
-    let obj = callback(numFinished[14]);
+    let obj = GuildProgressActionCreatorsDefault;
     obj.dismissProgress(guild.id);
-    callback(numFinished[23]).hideActionSheet("guild-progress-" + guild.id);
-    const obj2 = callback(numFinished[23]);
+    ActionSheetActionCreatorsDefault.hideActionSheet("guild-progress-" + guild.id);
     obj = {
-      action: closure_1_9.DISMISS_GUILD_PROGRESS,
-      setup_type: closure_1_8.GUILD_PROGRESS,
+      action: constants2.DISMISS_GUILD_PROGRESS,
+      setup_type: constants.GUILD_PROGRESS,
       num_total_actions: totalSteps,
       num_actions_completed: numFinished,
     };
-    callback(numFinished[13]).track(closure_1_11.SERVER_SETUP_CTA_CLICKED, obj);
+    AnalyticsUtilsDefault.track(constants3.SERVER_SETUP_CTA_CLICKED, obj);
   }
   const obj10 = { style: items6, children: null };
   items6[1] = center;
   if (numFinished === totalSteps) {
-    const obj11 = { variant: "primary", grow: true, onPress: null, text: null };
-    obj11[2] = handleDismissGuildProgress;
+    const obj11 = { variant: "primary", grow: true, onPress: handleDismissGuildProgress, text: null };
     const intl8 = tmp2(tmp3[18]).intl;
-    obj11[3] = intl8.string(tmp2(tmp3[18]).t["0/5zhg"]);
+    obj11.text = intl8.string(tmp2(tmp3[18]).t["0/5zhg"]);
     tmp9Result = tmp9(tmp2(tmp3[30]).Button, obj11);
   } else {
-    const obj12 = { accessibilityRole: "button", onPress: null, children: null };
-    obj12[1] = handleDismissGuildProgress;
+    const obj12 = { accessibilityRole: "button", onPress: handleDismissGuildProgress, children: null };
     const obj13 = { variant: "text-sm/medium", color: "text-default", children: null };
     const intl7 = tmp2(tmp3[18]).intl;
-    obj13[2] = intl7.string(tmp2(tmp3[18]).t["9E36wf"]);
-    obj12[2] = tmp9(tmp2(tmp3[29]).Text, obj13);
+    obj13.children = intl7.string(tmp2(tmp3[18]).t["9E36wf"]);
+    obj12.children = tmp9(tmp2(tmp3[29]).Text, obj13);
     tmp9Result = tmp9(tmp2(tmp3[31]).PressableOpacity, obj12);
   }
-  obj10[1] = tmp9Result;
-  items5[5] = callback(id, obj10);
-  obj7[1] = items5;
+  obj10.children = tmp9Result;
+  items5[5] = closure_14(id, obj10);
+  obj7.children = items5;
   const children = closure_15(tmp23, obj7);
-  return callback(guild(numFinished[32]).ActionSheet, { showGradient: true, startExpanded: true, children });
+  return closure_14(guild(numFinished[32]).ActionSheet, { showGradient: true, startExpanded: true, children });
 }
 export { GuildProgressHeader };

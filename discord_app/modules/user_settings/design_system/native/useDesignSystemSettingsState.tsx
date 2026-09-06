@@ -1,15 +1,7 @@
 // discord_app/modules/user_settings/design_system/native/useDesignSystemSettingsState.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import keys from "../../../../../_runtime/00560_keys.js";
+import 00560__ from "../../../../../_runtime/metro/00560__.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const obj = keys.create(() => ({
-  buttonSize: "md",
-  buttonScale: 8,
-  enableLoadingState: false,
-  iconPosition: "start",
-  showIcon: false,
-  showDisabled: false,
-}));
-const result = set.fileFinishedImporting("modules/user_settings/design_system/native/useDesignSystemSettingsState.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/design_system/native/useDesignSystemSettingsState.tsx");
 
-export default obj;
+export default module_560.create(() => ({ buttonSize: "md", buttonScale: 8, enableLoadingState: false, iconPosition: "start", showIcon: false, showDisabled: false }));

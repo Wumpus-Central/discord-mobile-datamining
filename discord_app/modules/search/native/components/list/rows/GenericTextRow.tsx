@@ -1,32 +1,35 @@
 // discord_app/modules/search/native/components/list/rows/GenericTextRow.tsx
-import closure_2 from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
-import importAllResult from "../../../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
+import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
+import SearchListRow from "../SearchListRow.tsx";
+import asyncGeneratorStep from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../../../../../_runtime/metro/00019__.js";
 
-let require = arg1;
-let c3 = importAllResult;
-let closure_6 = createCacheKey.createStyles({ title: { flexDirection: "row" }, container: { padding: 10 } });
-const memoResult = importAllResult.memo(function GenericTextRow(text) {
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_6 = createStyles.createStyles({ title: { flexDirection: "row" }, container: { padding: 10 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/search/native/components/list/rows/GenericTextRow.tsx");
+
+export default noop.memo(function GenericTextRow(text) {
   text = text.text;
   require = text;
   ({ icon, onPress } = text);
   ({ trailing, accessibilityActions, onAccessibilityAction } = text);
-  const tmp = callback2();
+  const tmp = closure_6();
   const items = [onPress, text];
   let obj = { style: tmp.title, children: null };
-  onPress = importAllResult.useCallback(
-    callback(function* () {
+  onPress = noop.useCallback(
+    asyncGeneratorStep(async (arg0, value) => {
       if (c0 === 2) {
         c0 = 3;
-        HermesBuiltin.throwTypeError();
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp3 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          let obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
@@ -34,29 +37,26 @@ const memoResult = importAllResult.memo(function GenericTextRow(text) {
       } else {
         try {
           c0 = 2;
-          if (0 === v0) {
+          if (0 === c1) {
             if (arg0 === 1) {
               c0 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c0 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj = { value, done: true };
               return obj;
             } else {
-              v0 = 1;
+              c1 = 1;
               c0 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = v0(c0);
+              const obj1 = { value: onPress(text), done: false };
               return obj1;
             }
           } else if (arg0 === 1) {
             c0 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
             c0 = 3;
@@ -77,7 +77,7 @@ const memoResult = importAllResult.memo(function GenericTextRow(text) {
     style: tmp.container,
     children: text,
   };
-  obj[1] = jsx(require(onPress[5]).Text, {
+  obj.children = jsx(Text_Text.Text, {
     lineClamp: 1,
     variant: "text-md/medium",
     color: "mobile-text-heading-primary",
@@ -93,7 +93,7 @@ const memoResult = importAllResult.memo(function GenericTextRow(text) {
   if (icon) {
     icon = tmp3(icon, { size: "sm", color: "mobile-text-heading-primary" });
   }
-  return jsx(require(onPress[6]).SearchListRow, {
+  return jsx(SearchListRow.SearchListRow, {
     icon,
     label,
     onPress,
@@ -102,6 +102,3 @@ const memoResult = importAllResult.memo(function GenericTextRow(text) {
     onAccessibilityAction,
   });
 });
-const result = require("set").fileFinishedImporting("modules/search/native/components/list/rows/GenericTextRow.tsx");
-
-export default memoResult;

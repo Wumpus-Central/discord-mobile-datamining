@@ -1,26 +1,27 @@
 // discord_app/modules/user_settings/defs/native/EnableSwitchIconsSetting.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import closure_2 from "../../../a11y/AccessibilityStore.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import util from "../../../../intl/index.native.tsx";
+import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
-require = arg1;
+require = fn;
 function useEnableSwitchIconsSettingValue() {
-  const items = [closure_2];
+  const items = [AccessibilityStore];
   return initialize.useStateFromStores(items, () => isSwitchIconsEnabled.isSwitchIconsEnabled);
 }
-createToggle = {
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["S3z+pV"]);
+    const intl = util.intl;
+    return intl.string(util.t["S3z+pV"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.ACCESSIBILITY,
+  parent: fn(7975).MobileUserSettings.ACCESSIBILITY,
   useValue: useEnableSwitchIconsSettingValue,
-  onValueChange: require("setFontSize").setSwitchIconsEnabled,
+  onValueChange: fn(14437).setSwitchIconsEnabled,
   hasIcon: true,
 };
-createToggle = createToggle.createToggle(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/EnableSwitchIconsSetting.tsx");
+SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/EnableSwitchIconsSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;
 export { useEnableSwitchIconsSettingValue };

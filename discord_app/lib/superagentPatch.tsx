@@ -1,47 +1,50 @@
 // discord_app/lib/superagentPatch.tsx
-import reportAll from "../modules/debug/LogAggregator.tsx";
+import LogAggregatorAll from "../modules/debug/LogAggregator.tsx";
+import SentryUtilsDefault from "../utils/SentryUtils.native.tsx";
 import _createForOfIteratorHelperDefault from "../../_runtime/01273__createForOfIteratorHelper.js";
 import getTimeZoneDefault from "getTimeZone.native.tsx";
-import closure_4 from "../modules/experiments/ExperimentStore.tsx";
-import { AbortCodes } from "../Constants.tsx";
-import ApexExperiment from "../modules/experiments/apex/index.tsx";
-import importDefaultResult from "../../_runtime/00005_asyncGeneratorStep.js";
-import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import importDefaultResult1 from "../Dispatcher.tsx";
+import trackHttpRequestDefault from "../modules/telemetry_ring/trackHttpRequest.tsx";
+import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
+import ExperimentStore from "../modules/experiments/ExperimentStore.tsx";
+import Dispatcher from "../Dispatcher.tsx";
 
-let closure_0 = arg1;
 function isAnalyticsEndpoint(pathname) {
   try {
     const _URL = URL;
     const uRL = new URL(pathname);
-    return regex.test(uRL.pathname);
+    return re8.test(uRL.pathname);
   } catch (err) {
-    return regex.test(tmp);
+    return re8.test(tmp);
   }
 }
+const AbortCodes = fn(1074).AbortCodes;
 let closure_6 = [
   "https://cdn.discordapp.com/bad-domains/updated_hashes.json",
   "https://cdn.discordapp.com/bad-domains/hashes.json",
 ];
 _createForOfIteratorHelperDefault.parse[""] = JSON.parse;
-const idGenerator = new require("IdGenerator").IdGenerator();
+const idGenerator = new fn(17280).IdGenerator();
 const re8 = /\/api(\/v\d+)?\/science/;
-ApexExperiment = { 1: null };
-ApexExperiment[1] = { migrationKilled: true };
-let closure_10 = ApexExperiment.createApexExperiment({
+fn(1433);
+let ApexExperiment = {
   name: "2026-07-reject-with-error-kill-switch",
   kind: "user",
   defaultConfig: { migrationKilled: false },
-  variations: ApexExperiment,
+  variations: null,
+};
+ApexExperiment = { 1: null };
+ApexExperiment[1] = { migrationKilled: true };
+ApexExperiment.variations = ApexExperiment;
+const config = ApexExperiment.createApexExperiment(ApexExperiment);
+let closure_11 = null;
+const subscription = Dispatcher.subscribe("LOGOUT", () => {
+  closure_11 = null;
 });
-let c11 = null;
-const subscription = importDefaultResult1.subscribe("LOGOUT", () => {
-  c11 = null;
-});
-let result = sendRequest.setRejectWithMigratedError(function isRejectWithMigratedErrorEnabled() {
+let HTTPUtils = fn(1272);
+let result = HTTPUtils.setRejectWithMigratedError(function isRejectWithMigratedErrorEnabled() {
   let tmp = closure_11;
   if (null == closure_11) {
-    hasLoadedExperiments = hasLoadedExperiments.hasLoadedExperiments;
+    const hasLoadedExperiments = ExperimentStore.hasLoadedExperiments;
     let tmp3 = !hasLoadedExperiments;
     if (hasLoadedExperiments) {
       const tmp5 = !config.getConfig({ location: "reject_with_error_migration" }).migrationKilled;
@@ -52,12 +55,13 @@ let result = sendRequest.setRejectWithMigratedError(function isRejectWithMigrate
   }
   return tmp;
 });
-ApexExperiment = {
+HTTPUtils = fn(1272);
+HTTPUtils.setRequestPatch({
   prepareRequest(promise) {
-    const callback = promise;
-    const _default = callback(502).default;
-    const _default2 = callback(1347).default;
-    const _default3 = callback(1371).default;
+    closure_0 = promise;
+    const _default = closure_0(502).default;
+    const _default2 = closure_0(1347).default;
+    const _default3 = closure_0(1371).default;
     importDefault = performance.now();
     if ("/" === promise.url[0]) {
       let tmpResult = tmp(1272);
@@ -91,7 +95,7 @@ ApexExperiment = {
       if (tmp13) {
         const result4 = promise.set("X-Installation-ID", installationForTracking);
       }
-      if (callback(1115).isPlatformEmbedded) {
+      if (closure_0(1115).isPlatformEmbedded) {
         const tmpResult1 = tmp(17);
         if (tmpResult2.isAndroid()) {
           let LocalizationManager = tmp(1117).default;
@@ -109,13 +113,13 @@ ApexExperiment = {
         const result5 = promise.set(
           "Accept-Language",
           (function populateQValues(items) {
-            c0 = 10;
-            const reduced = items.reduce((arr) => {
+            closure_0 = 10;
+            const reduced = items.reduce((arr, item) => {
               if (10 === closure_0) {
-                arr.push(arg1);
+                arr.push(item);
               } else {
                 const _HermesInternal = HermesInternal;
-                arr.push("" + arg1 + ";q=0." + closure_0);
+                arr.push("" + item + ";q=0." + closure_0);
               }
               closure_0 = Math.max(closure_0 - 1, 1);
               return arr;
@@ -125,7 +129,7 @@ ApexExperiment = {
         );
         tmpResult2 = tmp(1115);
       }
-      const result6 = promise.set("X-Discord-Locale", callback(2025).default.locale);
+      const result6 = promise.set("X-Discord-Locale", closure_0(2025).default.locale);
       const tmp19 = getTimeZoneDefault();
       if (null != tmp19) {
         const result7 = promise.set("X-Discord-Timezone", tmp19);
@@ -165,7 +169,7 @@ ApexExperiment = {
               let str = new URLSearchParams();
               str.append("query", '@http.x_client_trace_id:"' + generateResult + '"');
               str.append("showAllSpans", "true");
-              const str2 = callback(table[5]).toURLSafe(
+              const str2 = closure_1(dependencyMap[5]).toURLSafe(
                 "traces?" + str.toString(),
                 "https://datadog.discord.tools/apm/",
               );
@@ -180,10 +184,10 @@ ApexExperiment = {
       }
     }
     importAll = (function shouldTrackHttpRequest(url) {
-      return !callback3(url);
+      return !isAnalyticsEndpoint(url);
     })(promise.url);
-    _default4 = callback(1242).default;
-    reportAll.report("Network", "Sending " + promise.method + " to " + promise.url);
+    _default4 = closure_0(1242).default;
+    LogAggregatorAll.report("Network", "Sending " + promise.method + " to " + promise.url);
     promise.on("response", (status) => {
       let text = null;
       if (null != status) {
@@ -197,31 +201,29 @@ ApexExperiment = {
         const _HermesInternal = HermesInternal;
         str = "and body: " + text;
       }
-      let obj = callback2(closure_1_3[20]);
       ({ method, url } = closure_0);
       status = undefined;
       if (status != null) {
         status = status.status;
       }
-      obj.report("Network", "Completed " + method + " to " + url + " with status: " + status + " " + str);
+      LogAggregatorAll.report("Network", "Completed " + method + " to " + url + " with status: " + status + " " + str);
       if (c2) {
-        obj = { url: null, method: null, status_code: null, duration_ms: null };
-        ({ url: obj2[0], method: obj2[1] } = closure_0);
+        const request = { url: null, method: null, status_code: null, duration_ms: null };
+        ({ url: obj2.url, method: obj2.method } = closure_0);
         let status1;
         if (status != null) {
           status1 = status.status;
         }
-        obj[2] = status1;
+        request.status_code = status1;
         const _Math = Math;
         const _performance = performance;
-        obj[3] = Math.round(performance.now() - callback);
-        callback(closure_1_3[19])(obj);
+        request.duration_ms = Math.round(performance.now() - closure_1);
+        trackHttpRequestDefault(request);
         c2 = false;
-        const tmp8 = callback(closure_1_3[19]);
       }
     });
     promise.on("error", (status, text) => {
-      let obj = callback2(closure_1_3[20]);
+      let obj = LogAggregatorAll;
       ({ method, url } = closure_0);
       status = undefined;
       if (status != null) {
@@ -236,7 +238,7 @@ ApexExperiment = {
         if ("parse" in status) {
           if (status.parse) {
             let str = "[FILTERED]";
-            if (closure_1_6.includes(tmp2.url)) {
+            if (closure_6.includes(tmp2.url)) {
               const xhr = tmp2.xhr;
               let substr;
               if (xhr != null) {
@@ -247,36 +249,33 @@ ApexExperiment = {
               }
               str = substr;
             }
-            obj1 = callback(tmp[21]);
             obj = { category: "superagent", message: "Failed to parse HTTP response.", data: null };
-            obj = { method: null, url: null, responseText: null, status: null };
-            ({ method: obj4[0], url: obj4[1] } = tmp2);
-            obj[2] = str;
-            obj[3] = status.status;
-            obj[2] = obj;
-            obj1.addBreadcrumb(obj);
+            const request = { method: null, url: null, responseText: null, status: null };
+            ({ method: obj4.method, url: obj4.url } = tmp2);
+            request.responseText = str;
+            request.status = status.status;
+            obj.data = request;
+            SentryUtilsDefault.addBreadcrumb(obj);
           }
         }
       }
       if (c2) {
-        obj1 = { url: null, method: null, status_code: null, duration_ms: null };
-        ({ url: obj5[0], method: obj5[1] } = tmp2);
+        const request1 = { url: null, method: null, status_code: null, duration_ms: null };
+        ({ url: obj5.url, method: obj5.method } = tmp2);
         let status1;
         if (text != null) {
           status1 = text.status;
         }
-        obj1[2] = status1;
+        request1.status_code = status1;
         const _Math = Math;
         const _performance = performance;
-        obj1[3] = Math.round(performance.now() - callback);
-        callback(tmp[19])(obj1);
+        request1.duration_ms = Math.round(performance.now() - closure_1);
+        trackHttpRequestDefault(request1);
         c2 = false;
-        const tmp11 = callback(tmp[19]);
       }
     });
   },
-  interceptResponse(statusCode) {
-    const callback = statusCode;
+  interceptResponse(statusCode, arg1, arg2) {
     closure_1 = arg1;
     closure_2 = arg2;
     if (400 === statusCode.statusCode) {
@@ -286,10 +285,10 @@ ApexExperiment = {
         captcha_key = body.captcha_key;
       }
       if (captcha_key) {
-        const items = [callback(1896)(17286, dependencyMap.paths), callback(1896)(11277, dependencyMap.paths)];
+        const items = [statusCode(1896)(17286, dependencyMap.paths), statusCode(1896)(11277, dependencyMap.paths)];
         const allPromises = Promise.all(items);
-        const nextPromise = Promise.all(items).then((arg0) => {
-          const iter = arg0[Symbol.iterator]();
+        const nextPromise = Promise.all(items).then((result) => {
+          const iter = result[Symbol.iterator]();
           let nextResult;
           if (iter !== undefined) {
             nextResult = iter.next();
@@ -309,8 +308,8 @@ ApexExperiment = {
           return nextResult.default.showCaptchaAsync(nextResult1.extractCaptchaPropsFromResponse(statusCode.body));
         });
         Promise.all(items)
-          .then((arg0) => {
-            const iter = arg0[Symbol.iterator]();
+          .then((result) => {
+            const iter = result[Symbol.iterator]();
             let nextResult;
             if (iter !== undefined) {
               nextResult = iter.next();
@@ -338,13 +337,13 @@ ApexExperiment = {
             if (null != captcha_session_id) {
               obj["X-Captcha-Session-Id"] = captcha_session_id;
             }
-            callback(obj);
+            closure_1(obj);
           })
           .catch(arg2);
         let flag = true;
         const nextPromise1 = Promise.all(items)
-          .then((arg0) => {
-            const iter = arg0[Symbol.iterator]();
+          .then((result) => {
+            const iter = result[Symbol.iterator]();
             let nextResult;
             if (iter !== undefined) {
               nextResult = iter.next();
@@ -372,7 +371,7 @@ ApexExperiment = {
             if (null != captcha_session_id) {
               obj["X-Captcha-Session-Id"] = captcha_session_id;
             }
-            callback(obj);
+            closure_1(obj);
           });
       }
       return flag;
@@ -390,14 +389,14 @@ ApexExperiment = {
           mfa = body3.mfa;
         }
         if (mfa) {
-          const promise4 = callback(1896)(15664, dependencyMap.paths);
-          callback(1896)(15664, dependencyMap.paths)
+          const promise4 = statusCode(1896)(15664, dependencyMap.paths);
+          statusCode(1896)(15664, dependencyMap.paths)
             .then((openMFAModal) => {
               openMFAModal.openMFAModal(statusCode.body.mfa, closure_1, closure_2);
             })
             .catch(arg2);
           flag = true;
-          const nextPromise2 = callback(1896)(15664, dependencyMap.paths).then((openMFAModal) => {
+          const nextPromise2 = statusCode(1896)(15664, dependencyMap.paths).then((openMFAModal) => {
             openMFAModal.openMFAModal(statusCode.body.mfa, closure_1, closure_2);
           });
         }
@@ -409,8 +408,8 @@ ApexExperiment = {
       code1 = body4.code;
     }
     if (obj.isLimitedAccessErrorCode(statusCode.statusCode, code1)) {
-      tmp7(1896)(5522, tmp8.paths).then((arg0) => {
-        arg0.default();
+      tmp7(1896)(5522, tmp8.paths).then((result) => {
+        result.default();
       });
       flag = false;
       const promise3 = tmp7(1896)(5522, tmp8.paths);
@@ -421,13 +420,13 @@ ApexExperiment = {
         code2 = body5.code;
       }
       if (tmp7Result.isLimitedAccessErrorCode(statusCode.statusCode, code2)) {
-        tmp7(1896)(13830, tmp8.paths).then((arg0) => {
+        tmp7(1896)(13830, tmp8.paths).then((result) => {
           const body = statusCode.body;
           let guild_id;
           if (body != null) {
             guild_id = body.guild_id;
           }
-          arg0.default(guild_id);
+          result.default(guild_id);
         });
         flag = false;
         const promise2 = tmp7(1896)(13830, tmp8.paths);
@@ -452,77 +451,66 @@ ApexExperiment = {
       tmp7Result = tmp7(17292);
     }
   },
-};
-ApexExperiment = sendRequest.setRequestPatch(ApexExperiment);
-closure_0 = undefined;
-closure_0 = importDefaultResult((arg0) => {
-  closure_0 = arg0;
-  c3 = 0;
-  c4 = 0;
-  return (function* (arg0) {
-    if (c4 === 2) {
-      c4 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c4 = 2;
-        if (0 === dependencyMap) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            closure_2 = tmp5;
-            closure_1 = tmp2;
-            const _HermesInternal2 = HermesInternal;
-            closure_1_2(7).report("Network", "Request to " + closure_0 + " failed, will retry.");
-            const obj7 = closure_1_2(7);
-            const tmp25 = closure_1_1;
-            if (obj8.isOnline()) {
-              c4 = 3;
-            } else {
-              dependencyMap = 1;
-              c4 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = tmp25(1461).awaitOnline();
-              return obj1;
-            }
-            obj8 = closure_1_1(1461);
-          }
-        } else if (arg0 === 1) {
-          c4 = 3;
-          throw arg1;
-        } else if (arg0 !== 2) {
-          obj = closure_1_2(7);
-          const _HermesInternal = HermesInternal;
-          obj.report("Network", "Network detected online, retrying " + closure_0);
-        }
-        c4 = 3;
-        const obj2 = { value: null, done: true };
-        obj2[0] = arg1;
-        return obj2;
-      } catch (tmp14) {
-        c4 = tmp;
-        throw tmp14;
-      }
-    }
-  })();
 });
-sendRequest.setAwaitOnline(function () {
+HTTPUtils = fn(1272);
+let closure_0 = asyncGeneratorStep(async (arg0, value) => {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === dependencyMap) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_129_0 = closure_0;
+          const _HermesInternal2 = HermesInternal;
+          tmp5(7).report("Network", "Request to " + closure_0 + " failed, will retry.");
+          const obj7 = tmp5(7);
+          const tmp24 = tmp2;
+          if (obj8.isOnline()) {
+            c4 = 3;
+          } else {
+            dependencyMap = 1;
+            c4 = 1;
+            const obj1 = { value: tmp24(1461).awaitOnline(), done: false };
+            return obj1;
+          }
+          obj8 = tmp2(1461);
+        }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 !== 2) {
+        obj = tmp5(7);
+        const _HermesInternal = HermesInternal;
+        obj.report("Network", "Network detected online, retrying " + closure_129_0);
+      }
+      c4 = 3;
+      const obj2 = { value, done: true };
+      return obj2;
+    } catch (tmp14) {
+      c4 = tmp;
+      throw tmp14;
+    }
+  }
+});
+HTTPUtils.setAwaitOnline(function () {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {
@@ -532,4 +520,5 @@ sendRequest.setAwaitOnline(function () {
   }
   return applyArgumentsResult;
 });
-let result1 = require("set").fileFinishedImporting("lib/superagentPatch.tsx");
+const size = fn(2);
+let result1 = size.fileFinishedImporting("lib/superagentPatch.tsx");

@@ -1,12 +1,16 @@
 // discord_app/modules/emoji_picker/native/components/data/getEmojiPickerDataRowItemNativeSection.tsx
-import set from "../../../../../../_runtime/00002_set.js";
 import useEmojiPickerData from "useEmojiPickerData.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting(
+const result = size.fileFinishedImporting(
   "modules/emoji_picker/native/components/data/getEmojiPickerDataRowItemNativeSection.tsx",
 );
 
-export default function getEmojiPickerDataRowItemNativeSection(isSectionNitroLocked) {
+export default function getEmojiPickerDataRowItemNativeSection(
+  isSectionNitroLocked,
+  hasPremiumInlineRoadblockHeader,
+  hasPremiumInlineRoadblockFooter,
+) {
   let flag = isSectionNitroLocked.isSectionNitroLocked;
   ({ label, guildId, emojiCount, emojisDisabled, emojisHidden } = isSectionNitroLocked);
   if (flag === undefined) {
@@ -26,8 +30,8 @@ export default function getEmojiPickerDataRowItemNativeSection(isSectionNitroLoc
     emojisDisabled: items,
     emojisHidden: Array.from(emojisHidden),
     isSectionNitroLocked: flag,
-    hasPremiumInlineRoadblockHeader: arg1,
-    hasPremiumInlineRoadblockFooter: arg2,
+    hasPremiumInlineRoadblockHeader,
+    hasPremiumInlineRoadblockFooter,
   };
   return obj;
 }

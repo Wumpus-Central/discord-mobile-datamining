@@ -1,18 +1,14 @@
 // discord_common/js/packages/rtn-codegen/js/ZoomLayoutNativeComponent.tsx
-import set from "../../../../../_runtime/00002_set.js";
 import renderElement from "../../../../../_runtime/00114_renderElement.js";
 import weakSet from "../../../../../_runtime/00106_weakSet.js";
-import setRuntimeConfigProvider from "../../../../../_runtime/00065_setRuntimeConfigProvider.js";
+import 00065__ from "../../../../../_runtime/metro/00065__.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-let obj = {
-  uiViewClassName: "DCDZoomLayoutAndroid",
-  directEventTypes: { topZoomChanged: { registrationName: "onZoomChanged" } },
-  validAttributes: null,
-};
-obj = { gestureEnabled: true, minimumZoomScale: true, maximumZoomScale: true };
+let Commands = { uiViewClassName: "DCDZoomLayoutAndroid", directEventTypes: { topZoomChanged: { registrationName: "onZoomChanged" } }, validAttributes: null };
+Commands = { gestureEnabled: true, minimumZoomScale: true, maximumZoomScale: true };
 const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onZoomChanged: true }));
-obj[2] = obj;
-obj = {
+Commands.validAttributes = Commands;
+Commands = {
   zoomTo(arg0, arg1, arg2, arg3, arg4) {
     const items = [arg1, arg2, arg3, arg4];
     renderElement.dispatchCommand(arg0, "zoomTo", items);
@@ -20,11 +16,11 @@ obj = {
   unzoom(arg0, arg1) {
     const items = [arg1];
     renderElement.dispatchCommand(arg0, "unzoom", items);
-  },
+  }
 };
-const value = setRuntimeConfigProvider.get("DCDZoomLayoutAndroid", () => obj);
-const result = set.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/ZoomLayoutNativeComponent.tsx");
+const value = module_65.get("DCDZoomLayoutAndroid", () => obj);
+const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/ZoomLayoutNativeComponent.tsx");
 
 export default value;
-export const __INTERNAL_VIEW_CONFIG = obj;
-export const Commands = obj;
+export const __INTERNAL_VIEW_CONFIG = Commands;
+export { Commands };

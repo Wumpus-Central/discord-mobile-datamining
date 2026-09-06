@@ -1,10 +1,20 @@
 // discord_app/modules/screen/native/useWindowSizeClassifier.tsx
-import set from "../../../../_runtime/00002_set.js";
 import useBaseAppContainerDimensions from "useBaseAppContainerDimensions.tsx";
-import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-let obj = { SMALL: 0, [0]: "SMALL", NORMAL: 1, [1]: "NORMAL", LARGE: 2, [2]: "LARGE", XLARGE: 3, [3]: "XLARGE" };
-const result = set.fileFinishedImporting("modules/screen/native/useWindowSizeClassifier.tsx");
+const useBaseAppContainerDimensionsDefault = useBaseAppContainerDimensions;
+
+const WindowSizeClassifier = {
+  SMALL: 0,
+  [0]: "SMALL",
+  NORMAL: 1,
+  [1]: "NORMAL",
+  LARGE: 2,
+  [2]: "LARGE",
+  XLARGE: 3,
+  [3]: "XLARGE",
+};
+const result = size.fileFinishedImporting("modules/screen/native/useWindowSizeClassifier.tsx");
 
 export default function useWindowSizeClassifier() {
   const width = useBaseAppContainerDimensionsDefault().width;
@@ -19,9 +29,9 @@ export default function useWindowSizeClassifier() {
   }
   return XLARGE;
 }
-export const WindowSizeClassifier = obj;
+export { WindowSizeClassifier };
 export const getWindowSizeClassifier = function getWindowSizeClassifier() {
-  obj = useBaseAppContainerDimensions;
+  const obj = useBaseAppContainerDimensions;
   const width = obj.getBaseAppContainerDimensions().width;
   if (width <= 360) {
     let XLARGE = obj.SMALL;

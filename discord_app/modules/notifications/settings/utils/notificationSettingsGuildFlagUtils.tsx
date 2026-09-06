@@ -1,53 +1,49 @@
 // discord_app/modules/notifications/settings/utils/notificationSettingsGuildFlagUtils.tsx
-import Presets from "notificationSettingsPresetUtils.tsx";
-import _modDef7119 from "../../../../actions/NotificationSettingsModalActionCreators.tsx";
-import closure_3 from "../../../../stores/UserGuildSettingsStore.tsx";
-import { UserNotificationSettings } from "../../../../Constants.tsx";
-import { GuildNotificationSettingsFlags as closure_5 } from "../../../user_settings/UserSettingsConstants.tsx";
-import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import notificationSettingsPresetUtils from "notificationSettingsPresetUtils.tsx";
+import NotificationSettingsModalActionCreatorsDefault from "../../../../actions/NotificationSettingsModalActionCreators.tsx";
+import UserGuildSettingsStore from "../../../../stores/UserGuildSettingsStore.tsx";
 
-require = arg1;
-let result = require("set").fileFinishedImporting(
-  "modules/notifications/settings/utils/notificationSettingsGuildFlagUtils.tsx",
-);
+require = fn;
+const UserNotificationSettings = fn(1074).UserNotificationSettings;
+const constants = fn(1084).GuildNotificationSettingsFlags;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/notifications/settings/utils/notificationSettingsGuildFlagUtils.tsx");
 
 export const updateGuildPreset = function updateGuildPreset(guildId, arg1) {
-  guildFlags = guildFlags.getGuildFlags(guildId);
-  if (arg1 === Presets.Presets.ALL_MESSAGES) {
-    let obj = { message_notifications: null, flags: null };
-    obj[0] = UserNotificationSettings.ALL_MESSAGES;
+  const guildFlags = UserGuildSettingsStore.getGuildFlags(guildId);
+  if (arg1 === notificationSettingsPresetUtils.Presets.ALL_MESSAGES) {
+    let obj = { message_notifications: UserNotificationSettings.ALL_MESSAGES, flags: null };
     let tmp2Result = tmp2(10150);
-    obj[1] = tmp2Result.withGuildUnreadFlags(guildFlags, constants.UNREADS_ALL_MESSAGES);
-    const result = _modDef7119.updateGuildNotificationSettings(guildId, obj, tmp2(7114).NotificationLabels.PresetAll);
-    const obj4 = _modDef7119;
+    obj.flags = tmp2Result.withGuildUnreadFlags(guildFlags, constants.UNREADS_ALL_MESSAGES);
+    const result = NotificationSettingsModalActionCreatorsDefault.updateGuildNotificationSettings(
+      guildId,
+      obj,
+      tmp2(7114).NotificationLabels.PresetAll,
+    );
   } else if (arg1 === tmp2(4744).Presets.MENTIONS) {
-    obj = _modDef7119;
-    obj = { message_notifications: null, flags: null };
-    obj[0] = UserNotificationSettings.ONLY_MENTIONS;
+    obj = { message_notifications: UserNotificationSettings.ONLY_MENTIONS, flags: null };
     tmp2Result = tmp2(10150);
-    obj[1] = tmp2Result.withGuildUnreadFlags(guildFlags, constants.UNREADS_ONLY_MENTIONS);
+    obj.flags = tmp2Result.withGuildUnreadFlags(guildFlags, constants.UNREADS_ONLY_MENTIONS);
     const result1 = obj.updateGuildNotificationSettings(guildId, obj, tmp2(7114).NotificationLabels.PresetMentions);
   } else if (arg1 === tmp2(4744).Presets.NOTHING) {
-    obj1 = { message_notifications: null, flags: null };
-    obj1[0] = UserNotificationSettings.NO_MESSAGES;
-    const obj7 = _modDef7119;
-    obj1[1] = tmp2(10150).withGuildUnreadFlags(guildFlags, constants.UNREADS_ONLY_MENTIONS);
+    const obj1 = { message_notifications: UserNotificationSettings.NO_MESSAGES, flags: null };
+    const obj7 = NotificationSettingsModalActionCreatorsDefault;
+    obj1.flags = tmp2(10150).withGuildUnreadFlags(guildFlags, constants.UNREADS_ONLY_MENTIONS);
     const result2 = obj7.updateGuildNotificationSettings(guildId, obj1, tmp2(7114).NotificationLabels.PresetNothing);
     const tmp2Result1 = tmp2(10150);
   }
 };
 export const useGuildPresetSettings = function useGuildPresetSettings(guildId) {
-  const _require = guildId;
-  let obj = defaultAreStatesEqual;
-  const items = [closure_3];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_3.getGuildUnreadSetting(closure_0));
-  const items1 = [closure_3];
-  const stateFromStores1 =
-    require("../../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items1, () =>
-      closure_1_3.getMessageNotifications(closure_0),
-    );
+  _require = guildId;
+  let obj = require("useStateFromStores");
+  const items = [UserGuildSettingsStore];
+  const stateFromStores = obj.useStateFromStores(items, () => UserGuildSettingsStore.getGuildUnreadSetting(closure_0));
+  const items1 = [UserGuildSettingsStore];
+  const stateFromStores1 = require("useStateFromStores").useStateFromStores(items1, () =>
+    UserGuildSettingsStore.getMessageNotifications(closure_0),
+  );
   obj = { unread: stateFromStores, notification: stateFromStores1, preset: null };
-  const obj2 = defaultAreStatesEqual;
-  obj[2] = require("notificationSettingsPresetUtils.tsx").presetFromSettings(stateFromStores, stateFromStores1);
+  const obj2 = require("useStateFromStores");
+  obj.preset = require("notificationSettingsPresetUtils").presetFromSettings(stateFromStores, stateFromStores1);
   return obj;
 };

@@ -1,18 +1,18 @@
 // discord_app/modules/guild_mod_dash_member_safety/GuildMemberSafetySearchUtils.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/guild_mod_dash_member_safety/GuildMemberSafetySearchUtils.tsx");
+const result = size.fileFinishedImporting("modules/guild_mod_dash_member_safety/GuildMemberSafetySearchUtils.tsx");
 
 export const splitQuery = function splitQuery(query) {
   const parts = query.split(",");
-  const mapped = parts.map((str) => str.trim());
+  const mapped = parts.map((item) => item.trim());
   const items = [];
   const items1 = [];
-  const item = mapped.forEach((text) => {
-    if (obj.isSnowflake(text)) {
-      items.push(text);
+  const item = mapped.forEach((item) => {
+    if (obj.isSnowflake(item)) {
+      items.push(item);
     } else {
-      items1.push(text);
+      items1.push(item);
     }
   });
   const items2 = [items1, items];

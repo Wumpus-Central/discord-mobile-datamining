@@ -1,22 +1,24 @@
 // discord_app/modules/notifications/settings/native/NotificationSettingsMessageUnreadGuildActionSheet.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
+import NotificationSettingsUtils from "../../../../utils/NotificationSettingsUtils.tsx";
+import NotificationSettingsModalActionCreatorsDefault from "../../../../actions/NotificationSettingsModalActionCreators.tsx";
+import notificationSettingsFlagUtils from "../utils/notificationSettingsFlagUtils.tsx";
 import NotificationSettingsMessageUnreadActionSheetDefault from "NotificationSettingsMessageUnreadActionSheet.tsx";
-import closure_3 from "../../../../stores/UserGuildSettingsStore.tsx";
-import { UserNotificationSettings } from "../../../../Constants.tsx";
-import { UnreadSetting } from "../../../read_states/ReadStateConstants.tsx";
-import { GuildNotificationSettingsFlags as closure_6 } from "../../../user_settings/UserSettingsConstants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import { updateGuildPreset } from "../utils/notificationSettingsGuildFlagUtils.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import UserGuildSettingsStore from "../../../../stores/UserGuildSettingsStore.tsx";
 
-const require = arg1;
-noopAll;
-let result = require("set").fileFinishedImporting(
+require = fn;
+const UserNotificationSettings = fn(1074).UserNotificationSettings;
+const UnreadSetting = fn(4742).UnreadSetting;
+let closure_6 = fn(1084).GuildNotificationSettingsFlags;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting(
   "modules/notifications/settings/native/NotificationSettingsMessageUnreadGuildActionSheet.tsx",
 );
 
 export default function NotificationSettingsMessageUnreadGuildActionSheet(guildId) {
-  const _require = guildId;
-  let obj = updateGuildPreset;
+  _require = guildId;
+  let obj = require("notificationSettingsGuildFlagUtils");
   const guildPresetSettings = obj.useGuildPresetSettings(guildId.guildId);
   ({ unread, notification } = guildPresetSettings);
   let stringResult;
@@ -27,40 +29,40 @@ export default function NotificationSettingsMessageUnreadGuildActionSheet(guildI
   obj = {
     disabledMentionOnlyWithReason: stringResult,
     value: unread,
-    onChange(ONLY_MENTIONS) {
-      const guildFlags = closure_1_3.getGuildFlags(guildId.guildId);
-      let obj = closure_1_1(closure_1_2[9]);
-      if (ONLY_MENTIONS === closure_1_5.ALL_MESSAGES) {
-        let UNREADS_ONLY_MENTIONS = closure_1_6.UNREADS_ALL_MESSAGES;
+    onChange(toggleExpandedHistory) {
+      const guildFlags = UserGuildSettingsStore.getGuildFlags(guildId.guildId);
+      let obj = NotificationSettingsModalActionCreatorsDefault;
+      if (toggleExpandedHistory === UnreadSetting.ALL_MESSAGES) {
+        let UNREADS_ONLY_MENTIONS = constants.UNREADS_ALL_MESSAGES;
       } else {
-        UNREADS_ONLY_MENTIONS = closure_1_6.UNREADS_ONLY_MENTIONS;
+        UNREADS_ONLY_MENTIONS = constants.UNREADS_ONLY_MENTIONS;
       }
-      obj = { flags: guildId(closure_1_2[10]).withGuildUnreadFlags(guildFlags, UNREADS_ONLY_MENTIONS) };
-      const NotificationLabel = guildId(closure_1_2[11]).NotificationLabel;
+      obj = { flags: notificationSettingsFlagUtils.withGuildUnreadFlags(guildFlags, UNREADS_ONLY_MENTIONS) };
+      const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
       const result = obj.updateGuildNotificationSettings(
         guildId.guildId,
         obj,
-        NotificationLabel.unreads(ONLY_MENTIONS),
+        NotificationLabel.unreads(toggleExpandedHistory),
       );
     },
   };
   return jsx(NotificationSettingsMessageUnreadActionSheetDefault, {
     disabledMentionOnlyWithReason: stringResult,
     value: unread,
-    onChange(ONLY_MENTIONS) {
-      const guildFlags = closure_1_3.getGuildFlags(guildId.guildId);
-      let obj = closure_1_1(closure_1_2[9]);
-      if (ONLY_MENTIONS === closure_1_5.ALL_MESSAGES) {
-        let UNREADS_ONLY_MENTIONS = closure_1_6.UNREADS_ALL_MESSAGES;
+    onChange(toggleExpandedHistory) {
+      const guildFlags = UserGuildSettingsStore.getGuildFlags(guildId.guildId);
+      let obj = NotificationSettingsModalActionCreatorsDefault;
+      if (toggleExpandedHistory === UnreadSetting.ALL_MESSAGES) {
+        let UNREADS_ONLY_MENTIONS = constants.UNREADS_ALL_MESSAGES;
       } else {
-        UNREADS_ONLY_MENTIONS = closure_1_6.UNREADS_ONLY_MENTIONS;
+        UNREADS_ONLY_MENTIONS = constants.UNREADS_ONLY_MENTIONS;
       }
-      obj = { flags: guildId(closure_1_2[10]).withGuildUnreadFlags(guildFlags, UNREADS_ONLY_MENTIONS) };
-      const NotificationLabel = guildId(closure_1_2[11]).NotificationLabel;
+      obj = { flags: notificationSettingsFlagUtils.withGuildUnreadFlags(guildFlags, UNREADS_ONLY_MENTIONS) };
+      const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
       const result = obj.updateGuildNotificationSettings(
         guildId.guildId,
         obj,
-        NotificationLabel.unreads(ONLY_MENTIONS),
+        NotificationLabel.unreads(toggleExpandedHistory),
       );
     },
   });

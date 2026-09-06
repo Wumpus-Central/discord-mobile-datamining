@@ -1,172 +1,157 @@
 // discord_app/modules/user_profile/native/AddFriendNicknameModal.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import TextField from "../../../design/components/TextField/native/TextField.native.tsx";
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_7 from "../../../stores/RelationshipStore.tsx";
-import closure_8 from "../../../stores/UserStore.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
+import RelationshipStore from "../../../stores/RelationshipStore.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
 
-require = arg1;
-({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { container: null, title: null, description: null };
-createCacheKey = {
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+fn(4560);
+let createStyles = { container: null, title: null, description: null };
+createStyles = {
   flex: 1,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM,
+  backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM,
   justifyContent: "center",
   alignItems: "center",
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { textAlign: "center" };
-createCacheKey[2] = { marginTop: 8, marginBottom: 16, textAlign: "center", lineHeight: 18 };
-let closure_11 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/user_profile/native/AddFriendNicknameModal.tsx");
+createStyles.container = createStyles;
+createStyles.title = { textAlign: "center" };
+createStyles.description = { marginTop: 8, marginBottom: 16, textAlign: "center", lineHeight: 18 };
+let closure_11 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/AddFriendNicknameModal.tsx");
 
 export default function AddFriendNicknameModal(arg0) {
   ({ userId: require, showUserProfile } = arg0);
   dependencyMap = undefined;
   c3 = undefined;
-  let callback;
-  let React;
+  _slicedToArray = undefined;
+  noop = undefined;
   let callback1;
-  function _handleSubmit() {
-    const self = this;
-    const tmp = _undefined2(function* () {
-      if (v0 === 2) {
-        v0 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+  closure_7 = async function _handleSubmit(arg0, value) {
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          v0 = 2;
-          if (0 === ref) {
-            if (arg0 === 1) {
-              v0 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              v0 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_2 = tmp3;
-              closure_1 = tmp7;
-              let length;
-              if (closure_1_2) {
-                v0 = 3;
-              } else {
-                const current = ref.current;
-                length = current;
-                if (current == null) {
-                  length = "";
-                }
-                closure_1_3(true);
-                c4 = 1;
-                let obj3 = closure_1_1(closure_1_2[13]);
-                ref = 2;
-                v0 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = obj3.updateRelationship(closure_1_0, length);
-                return obj1;
-              }
-            }
-          } else if (1 === tmp7) {
-            c4 = 0;
-            callback(false);
-            throw callback;
-          } else if (2 === tmp7) {
-            if (arg0 === 1) {
-              v0 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 0;
-              closure_1_3(false);
-              v0 = 3;
-              const obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else {
-              let tmp30 = c4;
-              if (0 === length.length) {
-                const intl2 = closure_1_0(closure_1_2[11]).intl;
-                let stringResult = intl2.string(closure_1_0(closure_1_2[11]).t.O1Uqo3);
-              } else {
-                const intl = closure_1_0(closure_1_2[11]).intl;
-                obj3 = { nickname: null };
-                obj3[0] = length;
-                stringResult = intl.formatToPlainString(closure_1_0(closure_1_2[11]).t.l4ZOaw, obj3);
-              }
-              tmp30 = tmp30(stringResult);
-              ref = 3;
-              v0 = 1;
-            }
-          } else if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
-          } else if (arg0 !== 2) {
-            v0();
-            c4 = 0;
-            callback(false);
-          }
-          c4 = 0;
-          callback(false);
-          v0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } catch (tmp46) {
-          callback = tmp46;
-          if (tmp4 === c4) {
-            v0 = tmp2;
-            throw tmp46;
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            obj = { value, done: true };
+            return obj;
           } else {
-            ref = tmp;
+            showUserProfile = tmp7;
+            closure_129_0 = undefined;
+            if (dependencyMap) {
+              c6 = 3;
+            } else {
+              const current = ref.current;
+              let _var = current;
+              if (current == null) {
+                _var = "";
+              }
+              closure_129_0 = _var;
+              asyncGeneratorStep(true);
+              c4 = 1;
+              let obj3 = showUserProfile(tmp3[13]);
+              c5 = 2;
+              c6 = 1;
+              const obj1 = { value: obj3.updateRelationship(require, _var), done: false };
+              return obj1;
+            }
           }
+        } else if (1 === tmp7) {
+          c4 = 0;
+          closure_130_3(false);
+          throw closure_3;
+        } else if (2 === tmp7) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 0;
+            closure_130_3(false);
+            c6 = 3;
+            const obj2 = { value, done: true };
+            return obj2;
+          } else {
+            let tmp30 = closure_130_4;
+            if (0 === closure_129_0.length) {
+              const intl2 = _var(tmp3[11]).intl;
+              let stringResult = intl2.string(_var(tmp3[11]).t.O1Uqo3);
+            } else {
+              const intl = _var(tmp3[11]).intl;
+              obj3 = { nickname: closure_129_0 };
+              stringResult = intl.formatToPlainString(_var(tmp3[11]).t.l4ZOaw, obj3);
+            }
+            tmp30 = tmp30(stringResult);
+            c5 = 3;
+            c6 = 1;
+          }
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 !== 2) {
+          closure_130_6();
+          c4 = 0;
+          closure_130_3(false);
+        }
+        c4 = 0;
+        closure_130_3(false);
+        c6 = 3;
+        obj = { value, done: true };
+        return obj;
+      } catch (tmp46) {
+        closure_3 = tmp46;
+        if (tmp4 === c4) {
+          c6 = tmp2;
+          throw tmp46;
+        } else {
+          c5 = tmp;
         }
       }
-    });
-    closure_7 = tmp;
-    const apply = tmp.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
     }
-    return applyArgumentsResult;
-  }
-  let tmp = callback4();
-  let obj = React;
-  [c2, c3] = callback(React.useState(false), 2);
-  callback = showUserProfile(10927)();
-  obj1 = initialize;
-  const items = [_handleSubmit];
-  const stateFromStores = obj1.useStateFromStores(items, () => _handleSubmit.getNickname(closure_0));
+  };
+  const tmp = closure_11();
+  let obj = noop;
+  [c2, c3] = _slicedToArray(noop.useState(false), 2);
+  _slicedToArray = showUserProfile(10927)();
+  let obj1 = initialize;
+  const items = [closure_7];
+  const stateFromStores = obj1.useStateFromStores(items, () => RelationshipStore.getNickname(require));
   let tmp7 = stateFromStores;
   if (stateFromStores == null) {
     tmp7 = null;
   }
-  React = React.useRef(tmp7);
-  callback = obj.useCallback((current) => {
+  noop = noop.useRef(tmp7);
+  const callback = obj.useCallback((current) => {
     closure_5.current = current;
   }, []);
-  const tmp2 = callback(React.useState(false), 2);
-  const items1 = [closure_8];
-  const stateFromStores1 = initialize.useStateFromStores(items1, () => closure_1_8.getUser(closure_0));
+  const tmp2 = _slicedToArray(noop.useState(false), 2);
+  const items1 = [UserStore];
+  const stateFromStores1 = initialize.useStateFromStores(items1, () => UserStore.getUser(require));
   if (null == stateFromStores) {
     let intl2 = tmp5(1114).intl;
     let stringResult = intl2.string(tmp5(1114).t.BGYkaH);
@@ -176,7 +161,7 @@ export default function AddFriendNicknameModal(arg0) {
   }
   const items2 = [showUserProfile];
   callback1 = obj.useCallback(() => {
-    let arr = showUserProfile(_undefined[12]);
+    let arr = ModalActionCreatorsDefault;
     arr = arr.pop();
     if (showUserProfile != null) {
       showUserProfile();
@@ -184,14 +169,14 @@ export default function AddFriendNicknameModal(arg0) {
   }, items2);
   obj = { style: tmp.container, children: null };
   obj = { children: null };
-  let tmp3Result = tmp3(5578);
+  tmp3(5578);
   obj1 = { confirmText: null, onConfirm: null, cancelText: null, onCancel: null, children: null };
-  tmp3Result = tmp3(4994);
+  const tmp3Result = tmp3(4994);
   const intl3 = tmp5(1114).intl;
-  obj1[0] = intl3.string(getSystemLocale.t["R3BPH+"]);
-  obj1[1] = function handleSubmit() {
+  obj1.confirmText = intl3.string(util.t["R3BPH+"]);
+  obj1.onConfirm = function handleSubmit() {
     const self = this;
-    const apply = _handleSubmit.apply;
+    const apply = closure_7.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -200,10 +185,10 @@ export default function AddFriendNicknameModal(arg0) {
     return applyArgumentsResult;
   };
   const intl4 = tmp5(1114).intl;
-  obj1[2] = intl4.string(getSystemLocale.t["ETE/oC"]);
-  obj1[3] = callback1;
+  obj1.cancelText = intl4.string(util.t["ETE/oC"]);
+  obj1.onCancel = callback1;
   const items3 = [
-    callback2(Text.Text, {
+    closure_9(Text_Text.Text, {
       style: tmp.title,
       accessibilityRole: "header",
       variant: "heading-lg/extrabold",
@@ -214,8 +199,8 @@ export default function AddFriendNicknameModal(arg0) {
   ];
   let obj3 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
   const intl5 = tmp5(1114).intl;
-  obj3[3] = intl5.string(getSystemLocale.t["NdQ+lP"]);
-  items3[1] = callback2(Text.Text, obj3);
+  obj3.children = intl5.string(util.t["NdQ+lP"]);
+  items3[1] = closure_9(Text_Text.Text, obj3);
   const obj4 = {
     onChange: callback,
     autoFocus: true,
@@ -226,7 +211,7 @@ export default function AddFriendNicknameModal(arg0) {
     isClearable: true,
   };
   const intl6 = tmp5(1114).intl;
-  obj4[2] = intl6.string(getSystemLocale.t.pqG6GS);
+  obj4.accessibilityLabel = intl6.string(util.t.pqG6GS);
   let obj2 = {
     style: tmp.title,
     accessibilityRole: "header",
@@ -235,11 +220,11 @@ export default function AddFriendNicknameModal(arg0) {
     children: stringResult,
   };
   const tmp5Result = initialize;
-  obj4[3] = showUserProfile(4404).getName(stateFromStores1);
-  obj4[4] = stateFromStores;
-  items3[2] = callback2(TextField.TextField, obj4);
-  obj1[4] = items3;
-  obj[0] = callback3(tmp3Result, obj1);
-  obj[1] = callback2(tmp3Result, obj);
-  return callback2(callback1, obj);
+  obj4.placeholder = showUserProfile(4404).getName(stateFromStores1);
+  obj4.defaultValue = stateFromStores;
+  items3[2] = closure_9(TextField.TextField, obj4);
+  obj1.children = items3;
+  obj.children = closure_10(tmp3Result, obj1);
+  obj.children = closure_9(tmp3Result, obj);
+  return closure_9(callback1, obj);
 }

@@ -1,43 +1,43 @@
 // discord_app/utils/ChannelSortingUtils.tsx
-import set from "../../_runtime/00002_set.js";
-import ME from "../Constants.tsx";
-import getFlattenedChannelListDefault from "../modules/channel/getFlattedChannelList.tsx";
-import createChannelRecord from "../records/ChannelRecord.tsx";
+import Constants from "../Constants.tsx";
+import getFlattedChannelListDefault from "../modules/channel/getFlattedChannelList.tsx";
+import DragAndDropUtilsDefault from "DragAndDropUtils.tsx";
+import ChannelRecord from "../records/ChannelRecord.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
 function getFirstChannelOfType(arg0, arg1, arg2, arr) {
   closure_0 = arg1;
-  c1 = -1;
-  const found = arr.find((channel) => {
+  closure_1 = -1;
+  const found = arr.find((channel, index) => {
     let flag = channel.channel.id === closure_0;
     if (flag) {
-      closure_1 = arg1;
+      closure_1 = index;
       flag = true;
     }
     return flag;
   });
-  if (c1 < 0) {
+  if (closure_1 < 0) {
     return null;
   } else {
-    let tmp12 = c1;
-    if (c1 >= 0) {
+    let tmp12 = closure_1;
+    if (closure_1 >= 0) {
       if (tmp12 < arr.length) {
         while (true) {
           let type = arr[tmp12].channel.type;
           let tmp4 = null != type;
-          let tmp5 = tmp12;
           if (tmp4) {
             tmp4 = null != arg2;
           }
           if (tmp4) {
             let tmp6 = type === arg2;
             if (!tmp6) {
-              let tmp7 = callback;
-              let tmp8 = callback(type) && tmp7(arg2);
+              let tmp7 = React2;
+              let tmp8 = React2(type) && tmp7(arg2);
               tmp6 = tmp8;
             }
             if (!tmp6) {
-              let tmp9 = callback2;
-              let tmp10 = callback2(type) && tmp9(arg2);
+              let tmp9 = React3;
+              let tmp10 = React3(type) && tmp9(arg2);
               tmp6 = tmp10;
             }
             tmp4 = tmp6;
@@ -57,62 +57,58 @@ function getFirstChannelOfType(arg0, arg1, arg2, arr) {
     return null;
   }
 }
-({ isGuildSelectableChannelType: obj1, isGuildVocalChannelType: c3 } = createChannelRecord);
-let ChannelTypes = ME.ChannelTypes;
-const result = set.fileFinishedImporting("utils/ChannelSortingUtils.tsx");
+({ isGuildSelectableChannelType: c2, isGuildVocalChannelType: c3 } = ChannelRecord);
+let ChannelTypes = Constants.ChannelTypes;
+const result = size.fileFinishedImporting("utils/ChannelSortingUtils.tsx");
 
 export const areTypesInSameSection = function areTypesInSameSection(arg0, arg1) {
   let tmp = null != arg0 && null != arg1;
   if (tmp) {
     let tmp2 = arg0 === arg1;
     if (!tmp2) {
-      tmp2 = callback(arg0) && callback(arg1);
-      const tmp3 = callback;
-      const tmp4 = callback(arg0) && callback(arg1);
+      tmp2 = React2(arg0) && React2(arg1);
+      const tmp4 = React2(arg0) && React2(arg1);
     }
     if (!tmp2) {
-      tmp2 = callback2(arg0) && callback2(arg1);
-      const tmp5 = callback2;
-      const tmp6 = callback2(arg0) && callback2(arg1);
+      tmp2 = React3(arg0) && React3(arg1);
+      const tmp6 = React3(arg0) && React3(arg1);
     }
     tmp = tmp2;
   }
   return tmp;
 };
-export const getDropData = function getDropData(localChannel, arg1, localChannel2, index, channelList) {
+export const getDropData = function getDropData(localChannel, arg1, localChannel2, to, channelList) {
   if (null != localChannel) {
     parent_id3 = localChannel2;
     if (null != localChannel2) {
       const GUILD_CATEGORY = ChannelTypes.GUILD_CATEGORY;
       if (localChannel.type === GUILD_CATEGORY) {
-        if (index !== arg1) {
-          if (index >= arg1) {
-            let tmp47 = null;
-            if (index > arg1) {
-              c1 = true;
-              let callback;
+        if (to !== arg1) {
+          if (to >= arg1) {
+            if (to > arg1) {
+              closure_132_0 = parent_id3;
+              closure_132_1 = true;
+              closure_132_2 = undefined;
               let num17 = 0;
               if (null != parent_id3) {
-                callback = null;
+                closure_132_2 = null;
                 const found = channelList.filter((channel) => {
                   const type = channel.channel.type;
                   let tmp2 = null != closure_0;
                   if (tmp2) {
-                    let tmp3 = c1;
-                    if (!c1) {
+                    let tmp3 = closure_1;
+                    if (!closure_1) {
                       const type2 = tmp.type;
                       let tmp4 = null != type2 && null != type;
                       if (tmp4) {
                         let tmp5 = type2 === type;
                         if (!tmp5) {
-                          tmp5 = _null(type2) && _null(type);
-                          const tmp6 = _null;
-                          const tmp7 = _null(type2) && _null(type);
+                          tmp5 = React2(type2) && React2(type);
+                          const tmp7 = React2(type2) && React2(type);
                         }
                         if (!tmp5) {
-                          tmp5 = num11(type2) && num11(type);
-                          const tmp8 = num11;
-                          const tmp9 = num11(type2) && num11(type);
+                          tmp5 = React3(type2) && React3(type);
+                          const tmp9 = React3(type2) && React3(type);
                         }
                         tmp4 = tmp5;
                       }
@@ -122,42 +118,36 @@ export const getDropData = function getDropData(localChannel, arg1, localChannel
                   }
                   return tmp2;
                 });
-                const found1 = found.find((arg0, arg1) => {
-                  let flag = null != localChannel2 && tmp === localChannel2.id;
+                const found1 = found.find((item, index) => {
+                  let flag = null != localChannel && tmp === localChannel.id;
                   if (flag) {
-                    closure_2 = arg1;
+                    closure_2 = index;
                     flag = true;
                   }
                   return flag;
                 });
-                num17 = callback;
+                num17 = closure_132_2;
               }
               if (num17 == null) {
                 num17 = 0;
               }
               const tmp52 = getFirstChannelOfType(-1, parent_id3.id, localChannel.type, channelList);
-              let tmp53 = null;
               if (null != tmp52) {
-                tmp53 = null;
                 if (tmp52.channel.id !== localChannel.id) {
                   if (null == tmp49) {
-                    let obj = { referenceId: null, parentId: null };
-                    obj[0] = tmp52.channel.id;
+                    let obj = { referenceId: tmp52.channel.id, parentId: null };
                     let tmp54 = obj;
                   } else {
                     tmp54 = null;
                   }
-                  tmp53 = tmp54;
                 }
               }
-              tmp47 = tmp53;
             }
           }
         }
         obj = { referenceId: null, parentId: null };
-        ({ id: obj13[0], parent_id: parent_id3 } = parent_id3);
-        obj[1] = parent_id3;
-        tmp47 = obj;
+        ({ id: obj13.referenceId, parent_id: parent_id3 } = parent_id3);
+        obj.parentId = parent_id3;
       } else {
         const type3 = localChannel.type;
         const type4 = parent_id3.type;
@@ -165,46 +155,43 @@ export const getDropData = function getDropData(localChannel, arg1, localChannel
         if (tmp) {
           let tmp2 = type3 === type4;
           if (!tmp2) {
-            tmp2 = callback(type3) && callback(type4);
-            const tmp3 = callback;
-            const tmp4 = callback(type3) && callback(type4);
+            tmp2 = c2(type3) && c2(type4);
+            const tmp4 = c2(type3) && c2(type4);
           }
           if (!tmp2) {
-            tmp2 = callback2(type3) && callback2(type4);
-            const tmp5 = callback2;
-            const tmp6 = callback2(type3) && callback2(type4);
+            tmp2 = closure_3(type3) && closure_3(type4);
+            const tmp6 = closure_3(type3) && closure_3(type4);
           }
           tmp = tmp2;
         }
         if (tmp) {
-          ({ id: obj11[0], parent_id: obj11[1] } = parent_id3);
+          ({ id: obj11.referenceId, parent_id: obj11.parentId } = parent_id3);
           let tmp12 = { referenceId: null, parentId: null };
-          obj1 = { referenceId: null, parentId: null };
-        } else if (index < arg1) {
+          const obj1 = { referenceId: null, parentId: null };
+        } else if (to < arg1) {
           if (parent_id3.type !== GUILD_CATEGORY) {
-            c1 = true;
+            closure_130_0 = parent_id3;
+            closure_130_1 = true;
             let num9 = 0;
             if (null != parent_id3) {
-              callback = null;
+              closure_130_2 = null;
               const found2 = channelList.filter((channel) => {
                 const type = channel.channel.type;
                 let tmp2 = null != closure_0;
                 if (tmp2) {
-                  let tmp3 = c1;
-                  if (!c1) {
+                  let tmp3 = closure_1;
+                  if (!closure_1) {
                     const type2 = tmp.type;
                     let tmp4 = null != type2 && null != type;
                     if (tmp4) {
                       let tmp5 = type2 === type;
                       if (!tmp5) {
-                        tmp5 = _null(type2) && _null(type);
-                        const tmp6 = _null;
-                        const tmp7 = _null(type2) && _null(type);
+                        tmp5 = React2(type2) && React2(type);
+                        const tmp7 = React2(type2) && React2(type);
                       }
                       if (!tmp5) {
-                        tmp5 = num11(type2) && num11(type);
-                        const tmp8 = num11;
-                        const tmp9 = num11(type2) && num11(type);
+                        tmp5 = React3(type2) && React3(type);
+                        const tmp9 = React3(type2) && React3(type);
                       }
                       tmp4 = tmp5;
                     }
@@ -214,15 +201,15 @@ export const getDropData = function getDropData(localChannel, arg1, localChannel
                 }
                 return tmp2;
               });
-              const found3 = found2.find((arg0, arg1) => {
-                let flag = null != localChannel2 && tmp === localChannel2.id;
+              const found3 = found2.find((item, index) => {
+                let flag = null != localChannel && tmp === localChannel.id;
                 if (flag) {
-                  closure_2 = arg1;
+                  closure_2 = index;
                   flag = true;
                 }
                 return flag;
               });
-              num9 = callback;
+              num9 = closure_130_2;
             }
             if (num9 == null) {
               num9 = 0;
@@ -234,51 +221,42 @@ export const getDropData = function getDropData(localChannel, arg1, localChannel
                 if (null != tmp30) {
                   id = tmp30.channel.id;
                 }
-                let obj2 = { referenceId: null, parentId: null };
-                obj2[0] = id;
+                const obj2 = { referenceId: id, parentId: null };
               }
             }
-            let tmp33 = null;
-            if (callback(localChannel.type)) {
-              tmp33 = null;
+            if (c2(localChannel.type)) {
               if (null != tmp30) {
                 if (tmp32(tmp27.channel.type)) {
-                  const obj3 = { referenceId: null, parentId: null };
-                  obj3[0] = tmp30.channel.id;
-                  obj3[1] = parent_id3.parent_id;
-                  tmp33 = obj3;
+                  const obj3 = { referenceId: tmp30.channel.id, parentId: parent_id3.parent_id };
                 } else {
                   const channel5 = tmp27.channel;
-                  tmp33 = null;
                 }
               }
             }
-            obj2 = tmp33;
-            tmp32 = callback;
+            tmp32 = c2;
           }
-          c1 = true;
+          closure_131_0 = parent_id3;
+          closure_131_1 = true;
           let num13 = 0;
           if (null != parent_id3) {
-            callback = null;
+            closure_131_2 = null;
             const found4 = channelList.filter((channel) => {
               const type = channel.channel.type;
               let tmp2 = null != closure_0;
               if (tmp2) {
-                let tmp3 = c1;
-                if (!c1) {
+                let tmp3 = closure_1;
+                if (!closure_1) {
                   const type2 = tmp.type;
                   let tmp4 = null != type2 && null != type;
                   if (tmp4) {
                     let tmp5 = type2 === type;
                     if (!tmp5) {
-                      tmp5 = _null(type2) && _null(type);
-                      const tmp6 = _null;
-                      const tmp7 = _null(type2) && _null(type);
+                      tmp5 = React2(type2) && React2(type);
+                      const tmp7 = React2(type2) && React2(type);
                     }
                     if (!tmp5) {
-                      tmp5 = num11(type2) && num11(type);
-                      const tmp8 = num11;
-                      const tmp9 = num11(type2) && num11(type);
+                      tmp5 = React3(type2) && React3(type);
+                      const tmp9 = React3(type2) && React3(type);
                     }
                     tmp4 = tmp5;
                   }
@@ -288,15 +266,15 @@ export const getDropData = function getDropData(localChannel, arg1, localChannel
               }
               return tmp2;
             });
-            const found5 = found4.find((arg0, arg1) => {
-              let flag = null != localChannel2 && tmp === localChannel2.id;
+            const found5 = found4.find((item, index) => {
+              let flag = null != localChannel && tmp === localChannel.id;
               if (flag) {
-                closure_2 = arg1;
+                closure_2 = index;
                 flag = true;
               }
               return flag;
             });
-            num13 = callback;
+            num13 = closure_131_2;
           }
           if (num13 == null) {
             num13 = 0;
@@ -304,9 +282,8 @@ export const getDropData = function getDropData(localChannel, arg1, localChannel
           let parent_id2 = channelList[num13 - 1];
           let id2 = getFirstChannelOfType(1, parent_id3.id, localChannel.type, channelList);
           if (null == parent_id2) {
-            let obj4 = { referenceId: null, parentId: null };
+            const obj4 = { referenceId: null, parentId: null };
           } else {
-            obj4 = null;
             if (null != id2) {
               const type = parent_id2.channel.type;
               const type2 = localChannel.type;
@@ -314,61 +291,53 @@ export const getDropData = function getDropData(localChannel, arg1, localChannel
               if (tmp37) {
                 let tmp38 = type === type2;
                 if (!tmp38) {
-                  tmp38 = callback(type) && callback(type2);
-                  const tmp39 = callback;
-                  const tmp40 = callback(type) && callback(type2);
+                  tmp38 = c2(type) && c2(type2);
+                  const tmp40 = c2(type) && c2(type2);
                 }
                 if (!tmp38) {
-                  tmp38 = callback2(type) && callback2(type2);
-                  const tmp41 = callback2;
-                  const tmp42 = callback2(type) && callback2(type2);
+                  tmp38 = closure_3(type) && closure_3(type2);
+                  const tmp42 = closure_3(type) && closure_3(type2);
                 }
                 tmp37 = tmp38;
               }
               if (!tmp37) {
                 if (!localChannel.isGuildVocal()) {
                   const channel6 = parent_id2.channel;
-                  obj4 = null;
                   if (channel6.isCategory()) {
-                    const obj5 = { referenceId: null, parentId: null };
-                    obj5[0] = id2.channel.id;
-                    obj5[1] = parent_id2.channel.id;
-                    obj4 = obj5;
+                    const obj5 = { referenceId: id2.channel.id, parentId: parent_id2.channel.id };
                   }
                 }
               }
             }
             const obj6 = { referenceId: null, parentId: null };
             id2 = id2.channel.id;
-            obj6[0] = id2;
+            obj6.referenceId = id2;
             parent_id2 = parent_id2.channel.parent_id;
-            obj6[1] = parent_id2;
-            obj4 = obj6;
+            obj6.parentId = parent_id2;
           }
         } else if (parent_id3.type === GUILD_CATEGORY) {
-          c1 = true;
+          closure_129_0 = parent_id3;
+          closure_129_1 = true;
           let num5 = 0;
           if (null != parent_id3) {
-            callback = null;
+            closure_129_2 = null;
             const found6 = channelList.filter((channel) => {
               const type = channel.channel.type;
               let tmp2 = null != closure_0;
               if (tmp2) {
-                let tmp3 = c1;
-                if (!c1) {
+                let tmp3 = closure_1;
+                if (!closure_1) {
                   const type2 = tmp.type;
                   let tmp4 = null != type2 && null != type;
                   if (tmp4) {
                     let tmp5 = type2 === type;
                     if (!tmp5) {
-                      tmp5 = _null(type2) && _null(type);
-                      const tmp6 = _null;
-                      const tmp7 = _null(type2) && _null(type);
+                      tmp5 = React2(type2) && React2(type);
+                      const tmp7 = React2(type2) && React2(type);
                     }
                     if (!tmp5) {
-                      tmp5 = num11(type2) && num11(type);
-                      const tmp8 = num11;
-                      const tmp9 = num11(type2) && num11(type);
+                      tmp5 = React3(type2) && React3(type);
+                      const tmp9 = React3(type2) && React3(type);
                     }
                     tmp4 = tmp5;
                   }
@@ -378,29 +347,26 @@ export const getDropData = function getDropData(localChannel, arg1, localChannel
               }
               return tmp2;
             });
-            const found7 = found6.find((arg0, arg1) => {
-              let flag = null != localChannel2 && tmp === localChannel2.id;
+            const found7 = found6.find((item, index) => {
+              let flag = null != localChannel && tmp === localChannel.id;
               if (flag) {
-                closure_2 = arg1;
+                closure_2 = index;
                 flag = true;
               }
               return flag;
             });
-            num5 = callback;
+            num5 = closure_129_2;
           }
           if (num5 == null) {
             num5 = 0;
           }
           let parent_id = channelList[num5 + 1];
           id = getFirstChannelOfType(-1, parent_id3.id, localChannel.type, channelList);
-          let tmp17 = null;
           if (null != id) {
             if (null == parent_id) {
-              const obj7 = { referenceId: null, parentId: null };
-              obj7[0] = id.channel.id;
+              const obj7 = { referenceId: id.channel.id, parentId: null };
               id = parent_id3.id;
-              obj7[1] = id;
-              tmp17 = obj7;
+              obj7.parentId = id;
             } else {
               const type5 = parent_id.channel.type;
               const type6 = localChannel.type;
@@ -408,62 +374,52 @@ export const getDropData = function getDropData(localChannel, arg1, localChannel
               if (tmp18) {
                 let tmp19 = type5 === type6;
                 if (!tmp19) {
-                  tmp19 = callback(type5) && callback(type6);
-                  const tmp20 = callback;
-                  const tmp21 = callback(type5) && callback(type6);
+                  tmp19 = c2(type5) && c2(type6);
+                  const tmp21 = c2(type5) && c2(type6);
                 }
                 if (!tmp19) {
-                  tmp19 = callback2(type5) && callback2(type6);
-                  const tmp22 = callback2;
-                  const tmp23 = callback2(type5) && callback2(type6);
+                  tmp19 = closure_3(type5) && closure_3(type6);
+                  const tmp23 = closure_3(type5) && closure_3(type6);
                 }
                 tmp18 = tmp19;
               }
               if (!tmp18) {
-                if (!callback(localChannel.type)) {
+                if (!c2(localChannel.type)) {
                   const channel4 = parent_id.channel;
-                  tmp17 = null;
                   if (channel4.isCategory()) {
-                    const obj8 = { referenceId: null, parentId: null };
-                    obj8[0] = id.channel.id;
-                    obj8[1] = parent_id3.id;
-                    tmp17 = obj8;
+                    const obj8 = { referenceId: id.channel.id, parentId: parent_id3.id };
                   }
                 } else {
                   const channel3 = parent_id.channel;
                 }
               }
             }
-            const obj9 = { referenceId: null, parentId: null };
-            obj9[0] = id.channel.id;
+            const obj9 = { referenceId: id.channel.id, parentId: null };
             parent_id = parent_id.channel.parent_id;
-            obj9[1] = parent_id;
-            tmp17 = obj9;
+            obj9.parentId = parent_id;
           }
         } else {
           c1 = true;
           let num = 0;
           if (null != parent_id3) {
-            callback = null;
+            c2 = null;
             const found8 = channelList.filter((channel) => {
               const type = channel.channel.type;
               let tmp2 = null != closure_0;
               if (tmp2) {
-                let tmp3 = c1;
-                if (!c1) {
+                let tmp3 = closure_1;
+                if (!closure_1) {
                   const type2 = tmp.type;
                   let tmp4 = null != type2 && null != type;
                   if (tmp4) {
                     let tmp5 = type2 === type;
                     if (!tmp5) {
-                      tmp5 = _null(type2) && _null(type);
-                      const tmp6 = _null;
-                      const tmp7 = _null(type2) && _null(type);
+                      tmp5 = React2(type2) && React2(type);
+                      const tmp7 = React2(type2) && React2(type);
                     }
                     if (!tmp5) {
-                      tmp5 = num11(type2) && num11(type);
-                      const tmp8 = num11;
-                      const tmp9 = num11(type2) && num11(type);
+                      tmp5 = React3(type2) && React3(type);
+                      const tmp9 = React3(type2) && React3(type);
                     }
                     tmp4 = tmp5;
                   }
@@ -473,15 +429,15 @@ export const getDropData = function getDropData(localChannel, arg1, localChannel
               }
               return tmp2;
             });
-            const found9 = found8.find((arg0, arg1) => {
-              let flag = null != localChannel2 && tmp === localChannel2.id;
+            const found9 = found8.find((item, index) => {
+              let flag = null != localChannel && tmp === localChannel.id;
               if (flag) {
-                closure_2 = arg1;
+                closure_2 = index;
                 flag = true;
               }
               return flag;
             });
-            num = callback;
+            num = c2;
           }
           if (num == null) {
             num = 0;
@@ -493,8 +449,7 @@ export const getDropData = function getDropData(localChannel, arg1, localChannel
               let tmp13 = null;
               if (localChannel.isCategory()) {
                 if (null == tmp8) {
-                  obj = { referenceId: null, parentId: null };
-                  obj[0] = tmp11.channel.id;
+                  obj = { referenceId: tmp11.channel.id, parentId: null };
                   tmp13 = obj;
                 } else {
                   const channel2 = tmp8.channel;
@@ -508,16 +463,12 @@ export const getDropData = function getDropData(localChannel, arg1, localChannel
                 if (!channel7.isCategory()) {
                   const channel = tmp8.channel;
                   if (channel.isGuildVocal()) {
-                    const obj10 = { referenceId: null, parentId: null };
-                    obj10[0] = tmp11.channel.id;
-                    obj10[1] = tmp8.channel.parent_id;
+                    const obj10 = { referenceId: tmp11.channel.id, parentId: tmp8.channel.parent_id };
                     tmp12 = obj10;
                   }
                 }
               }
-              const obj11 = { referenceId: null, parentId: null };
-              obj11[0] = tmp11.channel.id;
-              obj11[1] = parent_id3.parent_id;
+              const obj11 = { referenceId: tmp11.channel.id, parentId: parent_id3.parent_id };
               tmp12 = obj11;
             }
           }
@@ -532,7 +483,7 @@ export const getDnDUpdates = function getDnDUpdates(localChannel, localChannel2,
   importDefault = localChannel;
   dependencyMap = parentId;
   function generateUpdates(substr) {
-    if (null != c2) {
+    if (null != closure_2) {
       if (null != num11) {
         let tmp4 = null != tmp;
         if (tmp4) {
@@ -542,25 +493,26 @@ export const getDnDUpdates = function getDnDUpdates(localChannel, localChannel2,
           tmp4 = null != substr[tmp];
         }
         if (tmp4) {
-          tmp4 = substr[tmp].channel === localChannel2;
+          tmp4 = substr[tmp].channel === closure_0;
         }
         if (tmp4) {
           tmp4 = null != substr[tmp2];
         }
         if (tmp4) {
-          let obj = localChannel2(12416);
+          let obj = DragAndDropUtilsDefault;
           let moveItemFromToResult = obj.moveItemFromTo(substr, tmp, tmp2);
         }
-        obj = { oldOrdering: null, newOrdering: null, idGetter: null, existingPositionGetter: null };
-        obj[0] = substr;
-        obj[1] = moveItemFromToResult;
-        obj[2] = function idGetter(channel) {
-          return channel.channel.id;
+        obj = {
+          oldOrdering: substr,
+          newOrdering: moveItemFromToResult,
+          idGetter(channel) {
+            return channel.channel.id;
+          },
+          existingPositionGetter(channel) {
+            return channel.channel.position;
+          },
         };
-        obj[3] = function existingPositionGetter(channel) {
-          return channel.channel.position;
-        };
-        closure_4 = closure_4.concat(localChannel2(12416).calculatePositionDeltas(obj));
+        closure_4 = closure_4.concat(DragAndDropUtilsDefault.calculatePositionDeltas(obj));
         return moveItemFromToResult;
       }
     }
@@ -573,31 +525,29 @@ export const getDnDUpdates = function getDnDUpdates(localChannel, localChannel2,
     const items1 = [];
     HermesBuiltin.arraySpread(_categories, 0);
     const substr = items1.slice(1);
-    importDefault = localChannel;
-    dependencyMap = false;
-    let callback;
+    closure_129_0 = localChannel;
+    closure_129_1 = false;
+    closure_129_2 = undefined;
     let num4 = 0;
     if (null != localChannel) {
-      callback = null;
+      closure_129_2 = null;
       const found = substr.filter((channel) => {
         const type = channel.channel.type;
         let tmp2 = null != closure_0;
         if (tmp2) {
-          let tmp3 = c1;
-          if (!c1) {
+          let tmp3 = closure_1;
+          if (!closure_1) {
             const type2 = tmp.type;
             let tmp4 = null != type2 && null != type;
             if (tmp4) {
               let tmp5 = type2 === type;
               if (!tmp5) {
-                tmp5 = _null(type2) && _null(type);
-                const tmp6 = _null;
-                const tmp7 = _null(type2) && _null(type);
+                tmp5 = React2(type2) && React2(type);
+                const tmp7 = React2(type2) && React2(type);
               }
               if (!tmp5) {
-                tmp5 = num11(type2) && num11(type);
-                const tmp8 = num11;
-                const tmp9 = num11(type2) && num11(type);
+                tmp5 = React3(type2) && React3(type);
+                const tmp9 = React3(type2) && React3(type);
               }
               tmp4 = tmp5;
             }
@@ -607,42 +557,39 @@ export const getDnDUpdates = function getDnDUpdates(localChannel, localChannel2,
         }
         return tmp2;
       });
-      const found1 = found.find((arg0, arg1) => {
-        let flag = null != localChannel2 && tmp === localChannel2.id;
+      const found1 = found.find((item, index) => {
+        let flag = null != localChannel && tmp === localChannel.id;
         if (flag) {
-          closure_2 = arg1;
+          closure_2 = index;
           flag = true;
         }
         return flag;
       });
-      num4 = callback;
+      num4 = closure_129_2;
     }
-    callback = num4;
-    importDefault = localChannel2;
-    dependencyMap = false;
-    callback = undefined;
-    let num5 = 0;
+    localChannel2 = num4;
+    closure_130_0 = localChannel2;
+    closure_130_1 = false;
+    closure_130_2 = undefined;
     if (null != localChannel2) {
-      callback = null;
+      closure_130_2 = null;
       const found2 = substr.filter((channel) => {
         const type = channel.channel.type;
         let tmp2 = null != closure_0;
         if (tmp2) {
-          let tmp3 = c1;
-          if (!c1) {
+          let tmp3 = closure_1;
+          if (!closure_1) {
             const type2 = tmp.type;
             let tmp4 = null != type2 && null != type;
             if (tmp4) {
               let tmp5 = type2 === type;
               if (!tmp5) {
-                tmp5 = _null(type2) && _null(type);
-                const tmp6 = _null;
-                const tmp7 = _null(type2) && _null(type);
+                tmp5 = React2(type2) && React2(type);
+                const tmp7 = React2(type2) && React2(type);
               }
               if (!tmp5) {
-                tmp5 = num11(type2) && num11(type);
-                const tmp8 = num11;
-                const tmp9 = num11(type2) && num11(type);
+                tmp5 = React3(type2) && React3(type);
+                const tmp9 = React3(type2) && React3(type);
               }
               tmp4 = tmp5;
             }
@@ -652,52 +599,48 @@ export const getDnDUpdates = function getDnDUpdates(localChannel, localChannel2,
         }
         return tmp2;
       });
-      const found3 = found2.find((arg0, arg1) => {
-        let flag = null != localChannel2 && tmp === localChannel2.id;
+      const found3 = found2.find((item, index) => {
+        let flag = null != localChannel && tmp === localChannel.id;
         if (flag) {
-          closure_2 = arg1;
+          closure_2 = index;
           flag = true;
         }
         return flag;
       });
-      num5 = callback;
     }
-    let num11 = num5;
     const updates = generateUpdates(substr);
     updates.unshift(_categories[0]);
     items = updates;
   }
-  if (callback(localChannel.type)) {
+  if (localChannel2(localChannel.type)) {
     let tmp11 = _categories;
     if (items.length > 0) {
       tmp11 = items;
     }
-    const tmp10Result = getFlattenedChannelListDefault(tmp11, channels, (channel) => _null(channel.channel.type));
-    importDefault = localChannel;
-    dependencyMap = false;
-    callback = undefined;
+    const tmp10Result = getFlattedChannelListDefault(tmp11, channels, (channel) => localChannel2(channel.channel.type));
+    closure_131_0 = localChannel;
+    closure_131_1 = false;
+    closure_131_2 = undefined;
     let num7 = 0;
     if (null != localChannel) {
-      callback = null;
+      closure_131_2 = null;
       const found4 = tmp10Result.filter((channel) => {
         const type = channel.channel.type;
         let tmp2 = null != closure_0;
         if (tmp2) {
-          let tmp3 = c1;
-          if (!c1) {
+          let tmp3 = closure_1;
+          if (!closure_1) {
             const type2 = tmp.type;
             let tmp4 = null != type2 && null != type;
             if (tmp4) {
               let tmp5 = type2 === type;
               if (!tmp5) {
-                tmp5 = _null(type2) && _null(type);
-                const tmp6 = _null;
-                const tmp7 = _null(type2) && _null(type);
+                tmp5 = React2(type2) && React2(type);
+                const tmp7 = React2(type2) && React2(type);
               }
               if (!tmp5) {
-                tmp5 = num11(type2) && num11(type);
-                const tmp8 = num11;
-                const tmp9 = num11(type2) && num11(type);
+                tmp5 = React3(type2) && React3(type);
+                const tmp9 = React3(type2) && React3(type);
               }
               tmp4 = tmp5;
             }
@@ -707,42 +650,39 @@ export const getDnDUpdates = function getDnDUpdates(localChannel, localChannel2,
         }
         return tmp2;
       });
-      const found5 = found4.find((arg0, arg1) => {
-        let flag = null != localChannel2 && tmp === localChannel2.id;
+      const found5 = found4.find((item, index) => {
+        let flag = null != localChannel && tmp === localChannel.id;
         if (flag) {
-          closure_2 = arg1;
+          closure_2 = index;
           flag = true;
         }
         return flag;
       });
-      num7 = callback;
+      num7 = closure_131_2;
     }
-    callback = num7;
-    importDefault = localChannel2;
-    dependencyMap = false;
-    callback = undefined;
-    let num8 = 0;
+    localChannel2 = num7;
+    closure_132_0 = localChannel2;
+    closure_132_1 = false;
+    closure_132_2 = undefined;
     if (null != localChannel2) {
-      callback = null;
+      closure_132_2 = null;
       const found6 = tmp10Result.filter((channel) => {
         const type = channel.channel.type;
         let tmp2 = null != closure_0;
         if (tmp2) {
-          let tmp3 = c1;
-          if (!c1) {
+          let tmp3 = closure_1;
+          if (!closure_1) {
             const type2 = tmp.type;
             let tmp4 = null != type2 && null != type;
             if (tmp4) {
               let tmp5 = type2 === type;
               if (!tmp5) {
-                tmp5 = _null(type2) && _null(type);
-                const tmp6 = _null;
-                const tmp7 = _null(type2) && _null(type);
+                tmp5 = React2(type2) && React2(type);
+                const tmp7 = React2(type2) && React2(type);
               }
               if (!tmp5) {
-                tmp5 = num11(type2) && num11(type);
-                const tmp8 = num11;
-                const tmp9 = num11(type2) && num11(type);
+                tmp5 = React3(type2) && React3(type);
+                const tmp9 = React3(type2) && React3(type);
               }
               tmp4 = tmp5;
             }
@@ -752,53 +692,48 @@ export const getDnDUpdates = function getDnDUpdates(localChannel, localChannel2,
         }
         return tmp2;
       });
-      const found7 = found6.find((arg0, arg1) => {
-        let flag = null != localChannel2 && tmp === localChannel2.id;
+      const found7 = found6.find((item, index) => {
+        let flag = null != localChannel && tmp === localChannel.id;
         if (flag) {
-          closure_2 = arg1;
+          closure_2 = index;
           flag = true;
         }
         return flag;
       });
-      num8 = callback;
     }
-    num11 = num8;
     const updates1 = generateUpdates(tmp10Result);
-    const tmp10 = getFlattenedChannelListDefault;
   }
   if (localChannel.isGuildVocal()) {
     if (items.length > 0) {
       _categories = items;
     }
-    const tmp18Result = getFlattenedChannelListDefault(_categories, channels, (channel) => {
+    const tmp18Result = getFlattedChannelListDefault(_categories, channels, (channel) => {
       channel = channel.channel;
       return channel.isGuildVocal();
     });
-    importDefault = localChannel;
-    dependencyMap = false;
-    callback = undefined;
+    closure_133_0 = localChannel;
+    closure_133_1 = false;
+    closure_133_2 = undefined;
     let num10 = 0;
     if (null != localChannel) {
-      callback = null;
+      closure_133_2 = null;
       const found8 = tmp18Result.filter((channel) => {
         const type = channel.channel.type;
         let tmp2 = null != closure_0;
         if (tmp2) {
-          let tmp3 = c1;
-          if (!c1) {
+          let tmp3 = closure_1;
+          if (!closure_1) {
             const type2 = tmp.type;
             let tmp4 = null != type2 && null != type;
             if (tmp4) {
               let tmp5 = type2 === type;
               if (!tmp5) {
-                tmp5 = _null(type2) && _null(type);
-                const tmp6 = _null;
-                const tmp7 = _null(type2) && _null(type);
+                tmp5 = React2(type2) && React2(type);
+                const tmp7 = React2(type2) && React2(type);
               }
               if (!tmp5) {
-                tmp5 = num11(type2) && num11(type);
-                const tmp8 = num11;
-                const tmp9 = num11(type2) && num11(type);
+                tmp5 = React3(type2) && React3(type);
+                const tmp9 = React3(type2) && React3(type);
               }
               tmp4 = tmp5;
             }
@@ -808,42 +743,39 @@ export const getDnDUpdates = function getDnDUpdates(localChannel, localChannel2,
         }
         return tmp2;
       });
-      const found9 = found8.find((arg0, arg1) => {
-        let flag = null != localChannel2 && tmp === localChannel2.id;
+      const found9 = found8.find((item, index) => {
+        let flag = null != localChannel && tmp === localChannel.id;
         if (flag) {
-          closure_2 = arg1;
+          closure_2 = index;
           flag = true;
         }
         return flag;
       });
-      num10 = callback;
+      num10 = closure_133_2;
     }
-    callback = num10;
-    importDefault = localChannel2;
-    dependencyMap = false;
-    callback = undefined;
-    num11 = 0;
+    localChannel2 = num10;
+    closure_134_0 = localChannel2;
+    closure_134_1 = false;
+    closure_134_2 = undefined;
     if (null != localChannel2) {
-      callback = null;
+      closure_134_2 = null;
       const found10 = tmp18Result.filter((channel) => {
         const type = channel.channel.type;
         let tmp2 = null != closure_0;
         if (tmp2) {
-          let tmp3 = c1;
-          if (!c1) {
+          let tmp3 = closure_1;
+          if (!closure_1) {
             const type2 = tmp.type;
             let tmp4 = null != type2 && null != type;
             if (tmp4) {
               let tmp5 = type2 === type;
               if (!tmp5) {
-                tmp5 = _null(type2) && _null(type);
-                const tmp6 = _null;
-                const tmp7 = _null(type2) && _null(type);
+                tmp5 = React2(type2) && React2(type);
+                const tmp7 = React2(type2) && React2(type);
               }
               if (!tmp5) {
-                tmp5 = num11(type2) && num11(type);
-                const tmp8 = num11;
-                const tmp9 = num11(type2) && num11(type);
+                tmp5 = React3(type2) && React3(type);
+                const tmp9 = React3(type2) && React3(type);
               }
               tmp4 = tmp5;
             }
@@ -853,36 +785,32 @@ export const getDnDUpdates = function getDnDUpdates(localChannel, localChannel2,
         }
         return tmp2;
       });
-      const found11 = found10.find((arg0, arg1) => {
-        let flag = null != localChannel2 && tmp === localChannel2.id;
+      const found11 = found10.find((item, index) => {
+        let flag = null != localChannel && tmp === localChannel.id;
         if (flag) {
-          closure_2 = arg1;
+          closure_2 = index;
           flag = true;
         }
         return flag;
       });
-      num11 = callback;
     }
     const updates2 = generateUpdates(tmp18Result);
-    const tmp18 = getFlattenedChannelListDefault;
   }
   let tmp23 = localChannel.parent_id !== parentId;
   if (tmp23) {
     tmp23 =
       null ==
       ChannelTypes.find((id) => {
-        let flag = id.id === localChannel2.id;
+        let flag = id.id === localChannel.id;
         if (flag) {
-          id.parent_id = c1;
+          id.parent_id = parent_id;
           flag = true;
         }
         return flag;
       });
   }
   if (tmp23) {
-    let obj = { id: null, parent_id: null };
-    obj[0] = localChannel.id;
-    obj[1] = parentId;
+    let obj = { id: localChannel.id, parent_id: parentId };
     ChannelTypes.push(obj);
   }
   return ChannelTypes;

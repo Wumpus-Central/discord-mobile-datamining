@@ -1,40 +1,43 @@
 // discord_app/modules/applications/useGetOrFetchApplications.tsx
-import closure_3 from "../../../_runtime/00019_noop.js";
-import closure_4 from "ApplicationStore.tsx";
+import _modDef12 from "../../../_runtime/metro/00012__.js";
+import discord_common_shallowEqual from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import GlobalUtils from "../../utils/GlobalUtils.tsx";
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators.tsx";
+import noop from "../../../_runtime/metro/00019__.js";
+import ApplicationStore from "ApplicationStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/applications/useGetOrFetchApplications.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/applications/useGetOrFetchApplications.tsx");
 
 export default function useGetOrFetchApplications(arg0) {
-  const _require = arg0;
+  _require = arg0;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = true;
   }
-  dependencyMap = undefined;
-  dependencyMap = React.useRef([]);
+  dependencyMap = noop.useRef([]);
   const items = [arg0, flag];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     let tmp = flag;
     if (flag) {
-      tmp = !items1(ref[2]).areArraysShallowEqual(items1, ref.current);
-      const obj = items1(ref[2]);
+      tmp = !discord_common_shallowEqual.areArraysShallowEqual(items1, ref.current);
     }
     if (tmp) {
-      const obj2 = flag(ref[3]);
-      const found = flag(ref[4])(items1).filter(items1(ref[5]).isNotNullish);
-      const arr = flag(ref[4])(items1);
+      const obj2 = ApplicationActionCreatorsDefault;
+      const found = _modDef12(items1).filter(GlobalUtils.isNotNullish);
+      const arr = _modDef12(items1);
       const applications = obj2.fetchApplications(found.uniq().value(), false);
       ref.current = items1;
       const iter = found.uniq();
     }
   }, items);
-  const items1 = [closure_4];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items1, () =>
-    items1.map((arg0) => {
-      let application;
-      if (null != arg0) {
-        application = application.getApplication(arg0);
+  const items1 = [ApplicationStore];
+  return require("initialize").useStateFromStoresArray(items1, () =>
+    items1.map((item) => {
+      application = undefined;
+      if (null != item) {
+        application = application.getApplication(item);
       }
       return application;
     }),
@@ -54,30 +57,28 @@ export const useGetOrFetchApplication = function useGetOrFetchApplication(applic
   if (flag === undefined) {
     flag = true;
   }
-  dependencyMap = undefined;
-  dependencyMap = React.useRef([]);
+  dependencyMap = noop.useRef([]);
   const items2 = [items1, flag];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     let tmp = flag;
     if (flag) {
-      tmp = !items1(ref[2]).areArraysShallowEqual(items1, ref.current);
-      const obj = items1(ref[2]);
+      tmp = !discord_common_shallowEqual.areArraysShallowEqual(items1, ref.current);
     }
     if (tmp) {
-      const obj2 = flag(ref[3]);
-      const found = flag(ref[4])(items1).filter(items1(ref[5]).isNotNullish);
-      const arr = flag(ref[4])(items1);
+      const obj2 = ApplicationActionCreatorsDefault;
+      const found = _modDef12(items1).filter(GlobalUtils.isNotNullish);
+      const arr = _modDef12(items1);
       const applications = obj2.fetchApplications(found.uniq().value(), false);
       ref.current = items1;
       const iter = found.uniq();
     }
   }, items2);
-  const items3 = [closure_4];
+  const items3 = [ApplicationStore];
   return items1(504).useStateFromStoresArray(items3, () =>
-    items1.map((arg0) => {
-      let application;
-      if (null != arg0) {
-        application = application.getApplication(arg0);
+    items1.map((item) => {
+      application = undefined;
+      if (null != item) {
+        application = application.getApplication(item);
       }
       return application;
     }),

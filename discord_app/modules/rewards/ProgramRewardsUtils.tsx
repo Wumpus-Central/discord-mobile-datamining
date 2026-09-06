@@ -1,23 +1,22 @@
 // discord_app/modules/rewards/ProgramRewardsUtils.tsx
-import isPastDefault from "../../../_runtime/03994_isPast.js";
-import getPremiumPlanItem from "../../utils/PremiumUtils.tsx";
-import apexExperiment from "../partner_perks/xbox/game_pass_perks/XboxGamePassPerksExperiment.tsx";
-import RewardProgram from "ProgramRewardsTypes.tsx";
-import PremiumRewardsOrbsTreatment from "../premium/tenure_reward/experiments/PremiumRewardsOrbsExperiment.tsx";
-import closure_3 from "../../stores/UserStore.tsx";
-import { PremiumTypes } from "../premium/PremiumConstants.tsx";
+import _modDef3994 from "../../../_runtime/metro/03994__.js";
+import PremiumUtils from "../../utils/PremiumUtils.tsx";
+import XboxGamePassPerksExperiment from "../partner_perks/xbox/game_pass_perks/XboxGamePassPerksExperiment.tsx";
+import ProgramRewardsTypes from "ProgramRewardsTypes.tsx";
+import PremiumRewardsOrbsExperiment from "../premium/tenure_reward/experiments/PremiumRewardsOrbsExperiment.tsx";
+import UserStore from "../../stores/UserStore.tsx";
 
-require = arg1;
-function canFetchNitroProgramReward(canUseMonthlyOrbs) {
-  let str = canUseMonthlyOrbs;
-  if (canUseMonthlyOrbs === undefined) {
+require = fn;
+function canFetchNitroProgramReward(ProgramRewardsUtils) {
+  let str = ProgramRewardsUtils;
+  if (ProgramRewardsUtils === undefined) {
     str = "ProgramRewardsUtils";
   }
-  const NITRO = RewardProgram.RewardProgram.NITRO;
+  const NITRO = ProgramRewardsTypes.RewardProgram.NITRO;
   if (str === undefined) {
     str = "ProgramRewardsUtils";
   }
-  if (RewardProgram.RewardProgram.NITRO === NITRO) {
+  if (ProgramRewardsTypes.RewardProgram.NITRO === NITRO) {
     let tmpResult = tmp(13730);
     let flag = tmpResult.getPremiumRewardsOrbsExperiment(str).isInTreatment;
   } else {
@@ -28,22 +27,22 @@ function canFetchNitroProgramReward(canUseMonthlyOrbs) {
     }
   }
   if (flag) {
-    const currentUser = authStore.getCurrentUser();
+    const currentUser = UserStore.getCurrentUser();
     flag = tmp(4218).isPremiumExactly(currentUser, PremiumTypes.TIER_2);
     const tmpResult1 = tmp(4218);
   }
   return flag;
 }
-function canFetchXboxProgramReward(canUseMonthlyOrbs) {
-  let str = canUseMonthlyOrbs;
-  if (canUseMonthlyOrbs === undefined) {
+function canFetchXboxProgramReward(ProgramRewardsUtils) {
+  let str = ProgramRewardsUtils;
+  if (ProgramRewardsUtils === undefined) {
     str = "ProgramRewardsUtils";
   }
-  const XBOX = RewardProgram.RewardProgram.XBOX;
+  const XBOX = ProgramRewardsTypes.RewardProgram.XBOX;
   if (str === undefined) {
     str = "ProgramRewardsUtils";
   }
-  if (RewardProgram.RewardProgram.NITRO === XBOX) {
+  if (ProgramRewardsTypes.RewardProgram.NITRO === XBOX) {
     let tmpResult = tmp(13730);
     let flag = tmpResult.getPremiumRewardsOrbsExperiment(str).isInTreatment;
   } else {
@@ -54,16 +53,18 @@ function canFetchXboxProgramReward(canUseMonthlyOrbs) {
     }
   }
   if (flag) {
-    flag = tmp(13731).hasCrepeMonthlyOrbsPerk(authStore.getCurrentUser());
+    flag = tmp(13731).hasCrepeMonthlyOrbsPerk(UserStore.getCurrentUser());
     const tmpResult1 = tmp(13731);
   }
   return flag;
 }
-let closure_5 = {
-  [arg1(13727).RewardProgram.NITRO]: canFetchNitroProgramReward,
-  [arg1(13727).RewardProgram.XBOX]: canFetchXboxProgramReward,
+const PremiumTypes = fn(1373).PremiumTypes;
+const dependencyMap = {
+  [fn(13727).RewardProgram.NITRO]: canFetchNitroProgramReward,
+  [fn(13727).RewardProgram.XBOX]: canFetchXboxProgramReward,
 };
-const result = require("set").fileFinishedImporting("modules/rewards/ProgramRewardsUtils.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/rewards/ProgramRewardsUtils.tsx");
 
 export const isProgramRewardStale = function isProgramRewardStale(next_reward_date) {
   if (null == next_reward_date) {
@@ -77,18 +78,17 @@ export const isProgramRewardStale = function isProgramRewardStale(next_reward_da
     if (tmp) {
       const _Date = Date;
       const date = new Date(next_reward_date);
-      tmp = isPastDefault(date);
-      const tmp4 = isPastDefault;
+      tmp = _modDef3994(date);
     }
     return tmp;
   }
 };
-export const isEligibleForProgramReward = function isEligibleForProgramReward(arg0, canUseMonthlyOrbs) {
-  let str = canUseMonthlyOrbs;
-  if (canUseMonthlyOrbs === undefined) {
+export const isEligibleForProgramReward = function isEligibleForProgramReward(arg0, ProgramRewardsUtils) {
+  let str = ProgramRewardsUtils;
+  if (ProgramRewardsUtils === undefined) {
     str = "ProgramRewardsUtils";
   }
-  if (RewardProgram.RewardProgram.NITRO === arg0) {
+  if (ProgramRewardsTypes.RewardProgram.NITRO === arg0) {
     let tmpResult = tmp(13730);
     return tmpResult.getPremiumRewardsOrbsExperiment(str).isInTreatment;
   } else if (tmp(13727).RewardProgram.XBOX === arg0) {
@@ -98,22 +98,20 @@ export const isEligibleForProgramReward = function isEligibleForProgramReward(ar
     return false;
   }
 };
-export const useIsEligibleForProgramReward = function useIsEligibleForProgramReward(arg0, location) {
-  let str = location;
-  if (location === undefined) {
+export const useIsEligibleForProgramReward = function useIsEligibleForProgramReward(arg0, ProgramRewardsUtils) {
+  let str = ProgramRewardsUtils;
+  if (ProgramRewardsUtils === undefined) {
     str = "ProgramRewardsUtils";
   }
-  const obj = PremiumRewardsOrbsTreatment;
-  const tmp = require;
-  const isXboxGamePassPerksEnabled = apexExperiment.useIsXboxGamePassPerksEnabled(str);
-  if (RewardProgram.RewardProgram.NITRO === arg0) {
+  const obj = PremiumRewardsOrbsExperiment;
+  const isXboxGamePassPerksEnabled = XboxGamePassPerksExperiment.useIsXboxGamePassPerksEnabled(str);
+  if (ProgramRewardsTypes.RewardProgram.NITRO === arg0) {
     return obj.usePremiumRewardsOrbsExperiment(str).isInTreatment;
-  } else if (RewardProgram.RewardProgram.XBOX === arg0) {
+  } else if (ProgramRewardsTypes.RewardProgram.XBOX === arg0) {
     return isXboxGamePassPerksEnabled;
   } else {
     return false;
   }
-  const obj2 = apexExperiment;
 };
 export { canFetchNitroProgramReward };
 export { canFetchXboxProgramReward };
@@ -122,13 +120,10 @@ export const canFetchAnyProgramReward = function canFetchAnyProgramReward(Progra
   if (ProgramRewardsStore === undefined) {
     str = "ProgramRewardsUtils";
   }
-  const values = Object.values(RewardProgram.RewardProgram);
+  const values = Object.values(ProgramRewardsTypes.RewardProgram);
   for (const item10015 of values) {
     if (typeof item10015 === "number") {
-      let tmp4 = dependencyMap;
-      let tmp5 = item10015;
       if (dependencyMap[tmp2](str)) {
-        let tmp3 = obj;
         obj.return();
         let flag = true;
         return true;
@@ -140,7 +135,7 @@ export const canFetchAnyProgramReward = function canFetchAnyProgramReward(Progra
 };
 export const hasNecessaryPremiumSubscriptionStatus = function hasNecessaryPremiumSubscriptionStatus(currentUser) {
   if (currentUser == null) {
-    currentUser = authStore.getCurrentUser();
+    currentUser = UserStore.getCurrentUser();
   }
-  return getPremiumPlanItem.isPremiumExactly(currentUser, PremiumTypes.TIER_2);
+  return PremiumUtils.isPremiumExactly(currentUser, PremiumTypes.TIER_2);
 };

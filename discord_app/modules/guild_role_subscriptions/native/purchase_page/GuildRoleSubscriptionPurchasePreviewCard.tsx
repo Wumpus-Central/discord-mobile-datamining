@@ -1,121 +1,112 @@
 // discord_app/modules/guild_role_subscriptions/native/purchase_page/GuildRoleSubscriptionPurchasePreviewCard.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import Button from "../../../../design/void/native.tsx";
-import Text from "../../../../design/components/Text/native/Text.tsx";
-import GappedList from "../components/LayoutUtils.tsx";
-import getRoleEmojisAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
-import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_7 from "../../../../stores/ChannelStore.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
+import native from "../../../../design/void/native.tsx";
+import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js";
+import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import LayoutUtils from "../components/LayoutUtils.tsx";
+import GuildRoleSubscriptionListingEditStateUtilsAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
+import EmojiIconDefault from "../components/EmojiIcon.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
-require = arg1;
+require = fn;
 function ContentHeader(arg0) {
   ({ count, title } = arg0);
-  const tmp = callback4();
+  const tmp = closure_11();
   let obj = { variant: "text-xs/bold", color: "text-muted", style: tmp.contentHeader, children: null };
   obj = { variant: "text-xs/bold", color: "text-default", style: tmp.contentHeader, children: count };
-  const items = [callback2(Text.Text, obj), " ", title];
-  obj[3] = items;
-  return callback3(Text.Text, obj);
+  const items = [React6(Text_Text.Text, obj), " ", title];
+  obj.children = items;
+  return React7(Text_Text.Text, obj);
 }
 function Separator() {
-  return callback2(closure_6, { style: callback4().separator });
+  return React6(timestampProducer, { style: closure_11().separator });
 }
 function EmojiGallery(arg0) {
   ({ emojiIds, maxEmojis, guildId: require } = arg0);
-  const tmp = callback4();
+  const tmp = closure_11();
   const substr = emojiIds.slice(0, maxEmojis);
   const diff = emojiIds.length - maxEmojis;
   let obj = { style: tmp.emojiGallery, children: null };
-  const items = [
-    ...substr.map((id) =>
-      closure_1_8(closure_1_1(closure_1_3[12]), { size: 30, fontSize: 20, guildId: closure_0, id }, id),
-    ),
-  ];
+  const items = [...substr.map((id) => React6(EmojiIconDefault, { size: 30, fontSize: 20, guildId, id }, id))];
   let tmp3Result = diff > 0;
   if (tmp3Result) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.emojiTruncatedContainer;
+    obj = { style: tmp.emojiTruncatedContainer, children: null };
     obj = { variant: "text-sm/bold", color: "text-default", children: null };
     const items1 = ["+", diff];
-    obj[2] = items1;
-    obj[1] = callback3(Text.Text, obj);
+    obj.children = items1;
+    obj.children = closure_9(Text_Text.Text, obj);
     tmp3Result = tmp3(tmp4, obj, "andMore");
   }
   items[tmp7] = tmp3Result;
-  obj[1] = closure_8(GappedList.GappedList, { gap: 18, children: items });
+  obj.children = closure_8(LayoutUtils.GappedList, { gap: 18, children: items });
   return closure_8(closure_6, obj);
 }
 function BenefitShowCase(arg0) {
   ({ title, description } = arg0);
   let tmp3 = title;
   if (typeof title === "string") {
-    let obj = { variant: "text-md/semibold", color: "text-default", children: null };
-    obj[2] = title;
-    tmp3 = callback2(Text.Text, obj);
+    let obj = { variant: "text-md/semibold", color: "text-default", children: title };
+    tmp3 = React6(Text_Text.Text, obj);
   }
   const children = [tmp3];
   let tmpResult = null != description;
   if (tmpResult) {
     obj = { children: null };
-    const items1 = [callback2(Button.Spacer, { size: 2 })];
-    obj = { variant: "text-sm/medium", color: "interactive-text-default", children: null };
-    obj[2] = description;
-    items1[1] = callback2(Text.Text, obj);
-    obj[0] = items1;
-    tmpResult = tmp(closure_10, obj);
+    const items1 = [React6(native.Spacer, { size: 2 })];
+    obj = { variant: "text-sm/medium", color: "interactive-text-default", children: description };
+    items1[1] = React6(Text_Text.Text, obj);
+    obj.children = items1;
+    tmpResult = tmp(closure_1_10, obj);
   }
   children[1] = tmpResult;
-  return closure_9(closure_6, { children });
+  return React7(timestampProducer, { children });
 }
 function ChannelBenefitShowCase(description) {
   const channelId = description.channelId;
   let obj = channelId(504);
-  const items = [closure_7];
+  const items = [ChannelStore];
   const items1 = [channelId];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_7.getChannel(channelId), items1);
+  const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
   const intl = channelId(1114).intl;
   let title = intl.string(channelId(1114).t.bz1PZX);
   if (null != stateFromStores) {
-    obj = { style: null, children: null };
-    obj[0] = { flexDirection: "row", alignItems: "center" };
-    obj = { size: null, source: null };
-    obj[0] = tmp(1178).Icon.Sizes.REFRESH_SMALL_16;
-    obj[1] = tmp(5028).getChannelIcon(stateFromStores);
-    const items2 = [callback2(tmp(1178).Icon, obj), callback2(tmp(1178).Spacer, { size: 4 })];
-    obj1 = { variant: "text-md/semibold", color: "text-default", children: null };
-    obj1[2] = tmp4;
-    items2[2] = callback2(tmp(4556).Text, obj1);
-    obj[1] = items2;
-    title = callback3(closure_6, obj);
+    obj = { style: { flexDirection: "row", alignItems: "center" }, children: null };
+    obj = { size: tmp(1178).Icon.Sizes.REFRESH_SMALL_16, source: tmp(5028).getChannelIcon(stateFromStores) };
+    const items2 = [closure_8(tmp(1178).Icon, obj), closure_8(tmp(1178).Spacer, { size: 4 })];
+    const obj1 = { variant: "text-md/semibold", color: "text-default", children: tmp4 };
+    items2[2] = closure_8(tmp(4556).Text, obj1);
+    obj.children = items2;
+    title = closure_9(closure_6, obj);
     const tmpResult = tmp(5028);
   }
-  return callback2(BenefitShowCase, { title, description: description.description });
+  return closure_8(BenefitShowCase, { title, description: description.description });
 }
 function ShowAllButton(onPress) {
-  const tmp = callback4();
+  const tmp = closure_11();
   let obj = { onPress: onPress.onPress, style: tmp.showAllButton, activeOpacity: 0.5, children: null };
   obj = { children: null };
   obj = { variant: "text-sm/semibold", color: "interactive-text-hover", style: { marginTop: -1 }, children: null };
-  const intl = getSystemLocale.intl;
-  obj[3] = intl.string(getSystemLocale.t["hub6t/"]);
+  const intl = util.intl;
+  obj.children = intl.string(util.t["hub6t/"]);
   const items = [
-    callback2(Text.Text, obj),
-    callback2(Button.Spacer, { size: 3 }),
-    callback2(closure_6, { style: tmp.showAllButtonUnderline }),
+    React6(Text_Text.Text, obj),
+    React6(native.Spacer, { size: 3 }),
+    React6(timestampProducer, { style: tmp.showAllButtonUnderline }),
   ];
-  obj[0] = items;
-  obj[3] = callback3(closure_6, obj);
-  return callback2(closure_5, obj);
+  obj.children = items;
+  obj.children = React7(timestampProducer, obj);
+  return React6(hasOwnProperty, obj);
 }
-noopAll;
-({ TouchableOpacity: c5, View: closure_6 } = get_ActivityIndicator);
-({ jsx: closure_8, jsxs: c9, Fragment: c10 } = jsxProd);
-createCacheKey = {
+get_ActivityIndicator = fn(17);
+({ TouchableOpacity: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
+fn(4560);
+let createStyles = {
   container: null,
   header: null,
   image: null,
@@ -127,113 +118,84 @@ createCacheKey = {
   showAllButton: null,
   showAllButtonUnderline: null,
 };
-createCacheKey = {
+createStyles = {
   padding: 16,
-  borderRadius: ThemesDefault.radii.md,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL,
+  borderRadius: nativeDefault.radii.md,
+  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL,
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexDirection: "row" };
-createCacheKey[2] = { width: 48, height: 48, borderRadius: ThemesDefault.radii.xl };
-let obj1 = { width: 48, height: 48, borderRadius: ThemesDefault.radii.xl };
-createCacheKey[3] = {
+createStyles.container = createStyles;
+createStyles.header = { flexDirection: "row" };
+let size = { width: 48, height: 48, borderRadius: nativeDefault.radii.xl };
+createStyles.image = size;
+const size1 = {
   width: "100%",
   height: 1,
-  backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_HOVER,
+  backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_HOVER,
   marginVertical: 16,
 };
-let obj2 = {
-  width: "100%",
-  height: 1,
-  backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_HOVER,
-  marginVertical: 16,
-};
-createCacheKey[4] = {
-  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
-  borderTopRightRadius: ThemesDefault.radii.sm,
-  borderTopLeftRadius: ThemesDefault.radii.sm,
+createStyles.separator = size1;
+createStyles.contentContainer = {
+  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderTopRightRadius: nativeDefault.radii.sm,
+  borderTopLeftRadius: nativeDefault.radii.sm,
   padding: 16,
 };
-createCacheKey[5] = { textTransform: "uppercase" };
-createCacheKey[6] = { flexDirection: "row" };
-let obj3 = {
-  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
-  borderTopRightRadius: ThemesDefault.radii.sm,
-  borderTopLeftRadius: ThemesDefault.radii.sm,
-  padding: 16,
-};
-createCacheKey[7] = {
+createStyles.contentHeader = { textTransform: "uppercase" };
+createStyles.emojiGallery = { flexDirection: "row" };
+const size2 = {
   width: 32,
   height: 32,
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  borderRadius: ThemesDefault.radii.xs,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  borderRadius: nativeDefault.radii.xs,
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   paddingTop: 1,
 };
-let obj4 = {
-  width: 32,
-  height: 32,
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  borderRadius: ThemesDefault.radii.xs,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
-  paddingTop: 1,
+createStyles.emojiTruncatedContainer = size2;
+let obj1 = {
+  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderTopRightRadius: nativeDefault.radii.sm,
+  borderTopLeftRadius: nativeDefault.radii.sm,
+  padding: 16,
 };
-createCacheKey[8] = {
+createStyles.showAllButton = {
   paddingVertical: 16,
   paddingHorizontal: 20,
   justifyContent: "center",
   alignItems: "center",
-  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
-  borderBottomLeftRadius: ThemesDefault.radii.sm,
-  borderBottomRightRadius: ThemesDefault.radii.sm,
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
+  borderBottomLeftRadius: nativeDefault.radii.sm,
+  borderBottomRightRadius: nativeDefault.radii.sm,
 };
-let obj5 = {
-  paddingVertical: 16,
-  paddingHorizontal: 20,
-  justifyContent: "center",
-  alignItems: "center",
-  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
-  borderBottomLeftRadius: ThemesDefault.radii.sm,
-  borderBottomRightRadius: ThemesDefault.radii.sm,
-};
-createCacheKey[9] = {
+const rect = {
   position: "absolute",
   left: 0,
   right: 0,
   height: 1,
   bottom: 0,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
 };
-let closure_11 = createCacheKey.createStyles(createCacheKey);
-let obj6 = {
-  position: "absolute",
-  left: 0,
-  right: 0,
-  height: 1,
-  bottom: 0,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
-};
-const result = require("set").fileFinishedImporting(
+createStyles.showAllButtonUnderline = rect;
+let closure_11 = createStyles.createStyles(createStyles);
+size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/native/purchase_page/GuildRoleSubscriptionPurchasePreviewCard.tsx",
 );
 
 export default function GuildRoleSubscriptionPurchasePreviewCard(listingId) {
   listingId = listingId.listingId;
   const guildId = listingId.guildId;
-  const tmp = callback4();
-  let obj = getRoleEmojisAll;
-  let str = callback(obj.useImage(listingId), 1)[0];
-  obj1 = getRoleEmojisAll;
-  let obj2 = getRoleEmojisAll;
-  const first = callback(obj2.useTierEmojiIds(listingId, guildId), 1)[0];
-  let obj3 = getRoleEmojisAll;
-  const first1 = callback(obj3.useChannelBenefits(listingId), 1)[0];
-  let obj4 = getRoleEmojisAll;
-  const first2 = callback(obj4.useIntangibleBenefits(listingId), 1)[0];
+  const tmp = closure_11();
+  let obj = GuildRoleSubscriptionListingEditStateUtilsAll;
+  let str = _slicedToArray(obj.useImage(listingId), 1)[0];
+  let obj1 = GuildRoleSubscriptionListingEditStateUtilsAll;
+  let obj2 = GuildRoleSubscriptionListingEditStateUtilsAll;
+  const first = _slicedToArray(obj2.useTierEmojiIds(listingId, guildId), 1)[0];
+  let obj3 = GuildRoleSubscriptionListingEditStateUtilsAll;
+  const first1 = _slicedToArray(obj3.useChannelBenefits(listingId), 1)[0];
+  let obj4 = GuildRoleSubscriptionListingEditStateUtilsAll;
+  const first2 = _slicedToArray(obj4.useIntangibleBenefits(listingId), 1)[0];
   let obj5 = listingId(16541);
   const first3 = first1[0];
   const first4 = first2[0];
@@ -251,7 +213,7 @@ export default function GuildRoleSubscriptionPurchasePreviewCard(listingId) {
     closure_8(listingId(4556).Text, {
       variant: "heading-md/semibold",
       color: "mobile-text-heading-primary",
-      children: callback(obj1.useName(listingId), 1)[0],
+      children: _slicedToArray(obj1.useName(listingId), 1)[0],
     }),
     closure_8(listingId(1178).Spacer, { size: 4 }),
     closure_8(listingId(4556).Text, {
@@ -260,9 +222,9 @@ export default function GuildRoleSubscriptionPurchasePreviewCard(listingId) {
       children: formattedSubscriptionPlan,
     }),
   ];
-  obj2[0] = items1;
+  obj2.children = items1;
   items[2] = closure_9(closure_6, obj2);
-  obj[1] = items;
+  obj.children = items;
   const items2 = [
     closure_9(closure_6, obj),
     closure_8(listingId(1178).Spacer, { size: 16 }),
@@ -271,28 +233,29 @@ export default function GuildRoleSubscriptionPurchasePreviewCard(listingId) {
   let tmp8Result2 = length > 0 || size > 0 || length2 > 0;
   if (tmp8Result2) {
     const items3 = [tmp10(tmp4(1178).Spacer, { size: 24 }), ,];
-    obj3 = { style: null, children: null };
-    obj3[0] = tmp.contentContainer;
-    obj4 = { renderGap: null, children: null };
-    obj4[0] = function renderGap() {
-      return callback(closure_13, {});
+    obj3 = { style: tmp.contentContainer, children: null };
+    obj4 = {
+      renderGap() {
+        return closure_1_8(Separator, {});
+      },
+      children: null,
     };
     let tmp8Result = null;
     if (size > 0) {
       obj5 = { children: null };
       const obj6 = { title: null, count: null };
       const intl = tmp4(1114).intl;
-      obj6[0] = intl.string(tmp4(1114).t.ebOU2b);
-      obj6[1] = size;
+      obj6.title = intl.string(tmp4(1114).t.ebOU2b);
+      obj6.count = size;
       const items4 = [tmp10(ContentHeader, obj6), tmp10(tmp4(1178).Spacer, { size: 8 }), ,];
       const obj7 = { emojiIds: null, guildId: null, maxEmojis: 5 };
       const items5 = [];
       HermesBuiltin.arraySpread(first, 0);
-      obj7[0] = items5;
-      obj7[1] = guildId;
+      obj7.emojiIds = items5;
+      obj7.guildId = guildId;
       items4[2] = tmp10(EmojiGallery, obj7);
       items4[3] = tmp10(tmp4(1178).Spacer, { size: 4 });
-      obj5[0] = items4;
+      obj5.children = items4;
       tmp8Result = tmp8(tmp9, obj5);
     }
     const items6 = [tmp8Result, ,];
@@ -301,15 +264,14 @@ export default function GuildRoleSubscriptionPurchasePreviewCard(listingId) {
       const obj8 = { children: null };
       const obj9 = { title: null, count: null };
       const intl2 = tmp4(1114).intl;
-      const obj10 = { numChannels: null };
-      obj10[0] = length;
-      obj9[0] = intl2.formatToPlainString(tmp4(1114).t.y7dUrm, obj10);
-      obj9[1] = length;
+      const obj10 = { numChannels: length };
+      obj9.title = intl2.formatToPlainString(tmp4(1114).t.y7dUrm, obj10);
+      obj9.count = length;
       const items7 = [tmp10(ContentHeader, obj9), tmp10(tmp4(1178).Spacer, { size: 12 }), ,];
-      ({ ref_id: obj19[0], description: obj19[1] } = first3);
+      ({ ref_id: obj19.channelId, description: obj19.description } = first3);
       items7[2] = tmp10(ChannelBenefitShowCase, { channelId: null, description: null });
       items7[3] = tmp10(tmp4(1178).Spacer, { size: 6 });
-      obj8[0] = items7;
+      obj8.children = items7;
       tmp8Result = tmp8(tmp9, obj8);
       const obj11 = { channelId: null, description: null };
     }
@@ -319,35 +281,33 @@ export default function GuildRoleSubscriptionPurchasePreviewCard(listingId) {
       const obj12 = { children: null };
       const obj13 = { title: null, count: null };
       const intl3 = tmp4(1114).intl;
-      const obj14 = { numBenefits: null };
-      obj14[0] = length2;
-      obj13[0] = intl3.formatToPlainString(tmp4(1114).t.MR7oOF, obj14);
-      obj13[1] = length2;
+      const obj14 = { numBenefits: length2 };
+      obj13.title = intl3.formatToPlainString(tmp4(1114).t.MR7oOF, obj14);
+      obj13.count = length2;
       const items8 = [tmp10(ContentHeader, obj13), tmp10(tmp4(1178).Spacer, { size: 12 }), ,];
-      ({ name: obj23[0], description: obj23[1] } = first4);
+      ({ name: obj23.title, description: obj23.description } = first4);
       items8[2] = tmp10(BenefitShowCase, { title: null, description: null });
       items8[3] = tmp10(tmp4(1178).Spacer, { size: 6 });
-      obj12[0] = items8;
+      obj12.children = items8;
       tmp8Result1 = tmp8(tmp9, obj12);
       const obj15 = { title: null, description: null };
     }
     const obj16 = { children: null };
     items6[2] = tmp8Result1;
-    obj4[1] = items6;
-    obj3[1] = tmp8(tmp4(10346).GappedList, obj4);
+    obj4.children = items6;
+    obj3.children = tmp8(tmp4(10346).GappedList, obj4);
     items3[1] = tmp10(tmp9, obj3);
-    const obj17 = { onPress: null };
-    obj17[0] = function onPress() {
-      let obj = guildId(closure_1_3[8]);
-      obj = { listingId, guildId };
-      obj.openLazy(listingId(closure_1_3[10])(closure_1_3[9], closure_1_3.paths), "PurchaseCard:" + listingId, obj);
+    const obj17 = {
+      onPress() {
+        const obj = { listingId, guildId };
+        obj.openLazy(asyncRequireImpl(16546, dependencyMap.paths), "PurchaseCard:" + listingId, obj);
+      },
     };
     items3[2] = tmp10(ShowAllButton, obj17);
-    obj16[0] = items3;
+    obj16.children = items3;
     tmp8Result2 = tmp8(closure_10, obj16);
-    const tmp14 = closure_10;
   }
   items2[3] = tmp8Result2;
-  obj[1] = items2;
+  obj.children = items2;
   return closure_9(closure_6, obj);
 }

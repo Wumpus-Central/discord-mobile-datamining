@@ -1,30 +1,31 @@
 // discord_app/modules/premium/roadblocks/native/hooks/useEmojiPickerViewableItemsCallback.tsx
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../../../stores/UserStore.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
+import UserStore from "../../../../../stores/UserStore.tsx";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting(
+const require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting(
   "modules/premium/roadblocks/native/hooks/useEmojiPickerViewableItemsCallback.tsx",
 );
 
 export default function useEmojiPickerViewableItemsChanged(arg0) {
-  const _require = arg0;
-  closure_1 = React.useRef(0);
-  const items = [closure_4];
-  stateFromStores = _require(stateFromStores[2]).useStateFromStores(items, () => {
+  _require = arg0;
+  closure_1 = noop.useRef(0);
+  const items = [UserStore];
+  stateFromStores = require("initialize").useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
-    const result = callback2(stateFromStores[3]).canUseEmojisEverywhere(currentUser);
+    const result = closure_1(stateFromStores[3]).canUseEmojisEverywhere(currentUser);
     let tmp5 = !result;
     if (result) {
-      tmp5 = !callback2(stateFromStores[3]).canUseAnimatedEmojis(currentUser);
-      const tmp2Result = callback2(stateFromStores[3]);
+      tmp5 = !closure_1(stateFromStores[3]).canUseAnimatedEmojis(currentUser);
+      const tmp2Result = closure_1(stateFromStores[3]);
     }
     return tmp5;
   });
   const items1 = [arg0, stateFromStores];
-  return React.useMemo(() => {
-    callback = callback(stateFromStores[4]).debounce(() => {
-      callback(ref.current > 7);
+  return noop.useMemo(() => {
+    closure_0 = closure_0(stateFromStores[4]).debounce(() => {
+      closure_0(ref.current > 7);
     }, 200);
     let onViewableItemsChanged;
     if (stateFromStores) {
@@ -35,23 +36,22 @@ export default function useEmojiPickerViewableItemsChanged(arg0) {
           let item = nextResult.item;
           let isSectionNitroLocked;
           let tmp2 = nextResult;
-          let tmp3 = closure_1_1;
+          let tmp3 = ref;
           if (item != null) {
             isSectionNitroLocked = item.isSectionNitroLocked;
           }
           let num = 0;
           if (true === isSectionNitroLocked) {
-            let tmp5 = nextResult;
             let num2 = -1;
             if (tmp2.isViewable) {
               num2 = 1;
             }
             num = num2;
           }
-          tmp3.current = Math.max(0, closure_1_1.current + num);
+          tmp3.current = Math.max(0, ref.current + num);
           continue;
         }
-        callback();
+        closure_0();
       };
     }
     return { onViewableItemsChanged };

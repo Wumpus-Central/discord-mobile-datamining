@@ -1,10 +1,10 @@
 // discord_app/modules/media/MediaAnalytics.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import Constants from "../../Constants.tsx";
+import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/media/MediaAnalytics.tsx");
+const AnalyticEvents = Constants.AnalyticEvents;
+const result = size.fileFinishedImporting("modules/media/MediaAnalytics.tsx");
 
 export const logMediaAttachmentPlaybackStarted = function logMediaAttachmentPlaybackStarted(
   messageChannel,
@@ -15,8 +15,7 @@ export const logMediaAttachmentPlaybackStarted = function logMediaAttachmentPlay
   id,
 ) {
   let tmp = totalDurationSecs;
-  let obj = expandEventPropertiesDefault;
-  obj = {
+  const obj = {
     guild_id: messageChannel.guild_id,
     channel_id: messageChannel.id,
     channel_type: messageChannel.type,
@@ -32,8 +31,8 @@ export const logMediaAttachmentPlaybackStarted = function logMediaAttachmentPlay
   if (totalDurationSecs == null) {
     tmp = startDurationSecs;
   }
-  obj[9] = Math.min(tmp, startDurationSecs);
-  obj[10] = id;
+  obj.start_duration_secs = Math.min(tmp, startDurationSecs);
+  obj.sender_user_id = id;
   obj.track(AnalyticEvents.MEDIA_ATTACHMENT_PLAYBACK_STARTED, obj);
 };
 export const logMediaAttachmentPlaybackEnded = function logMediaAttachmentPlaybackEnded(
@@ -45,8 +44,7 @@ export const logMediaAttachmentPlaybackEnded = function logMediaAttachmentPlayba
   found,
 ) {
   let tmp = totalDurationSecs;
-  let obj = expandEventPropertiesDefault;
-  obj = {
+  const obj = {
     message_id: messageId,
     total_duration_secs: totalDurationSecs,
     end_duration_secs: null,
@@ -57,9 +55,9 @@ export const logMediaAttachmentPlaybackEnded = function logMediaAttachmentPlayba
   if (totalDurationSecs == null) {
     tmp = endDurationSecs;
   }
-  obj[2] = Math.min(tmp, endDurationSecs);
-  obj[3] = id;
-  obj[4] = durationListeningSecs;
-  obj[5] = found.content_type;
+  obj.end_duration_secs = Math.min(tmp, endDurationSecs);
+  obj.sender_user_id = id;
+  obj.duration_listening_secs = durationListeningSecs;
+  obj.type = found.content_type;
   obj.track(AnalyticEvents.MEDIA_ATTACHMENT_PLAYBACK_ENDED, obj);
 };

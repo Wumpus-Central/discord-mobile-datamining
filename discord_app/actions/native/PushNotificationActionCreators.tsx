@@ -1,19 +1,19 @@
 // discord_app/actions/native/PushNotificationActionCreators.tsx
-import timestampDefault from "../../modules/debug/Logger.tsx";
+import LoggerDefault from "../../modules/debug/Logger.tsx";
 import Storage2 from "../../../discord_common/js/packages/storage/Storage.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import encodeProperties from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import _modDef4753 from "../../utils/TrackedHTTPUtils.tsx";
-import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_5 from "../../modules/multi_account/MultiAccountStore.tsx";
-import closure_6 from "../../stores/AuthenticationStore.tsx";
-import ME from "../../Constants.tsx";
-import str2 from "../../modules/push_notifications/PushNotificationConstants.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import TokenManagerAll from "../../../discord_common/js/shared/lib/TokenManager.tsx";
+import discord_common_AnalyticsUtils from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import TrackedHTTPUtilsDefault from "../../utils/TrackedHTTPUtils.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import MultiAccountStore from "../../modules/multi_account/MultiAccountStore.tsx";
+import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 
-require = arg1;
+require = fn;
 function getOrRefreshPushSyncToken() {
   const self = this;
-  const apply = _getOrRefreshPushSyncToken.apply;
+  const apply = closure_16.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -21,131 +21,118 @@ function getOrRefreshPushSyncToken() {
   }
   return applyArgumentsResult;
 }
-function _getOrRefreshPushSyncToken() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c5 = 0;
-    c6 = 0;
-    c4 = 0;
-    return (function* (arg0, body) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp7 === 3) {
-        if (arg0 === 1) {
-          throw body;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+let closure_16 = async function _getOrRefreshPushSyncToken(arg0) {
+  let pushSyncToken = arg0;
+  c5 = 0;
+  c6 = 0;
+  c4 = 0;
+  return (async (arg0, value) => {
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp7 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              let callback = tmp3;
-              let token = tmp5;
-              token = undefined;
-              if (null == lib.pushSyncToken) {
-                let obj5 = closure_1_2(closure_1_3[6]);
-                token = obj5.getToken(tmp40.id);
-                if (null == token) {
-                  c6 = 3;
-                  return { value: null, done: true };
-                } else {
-                  c4 = 1;
-                  const HTTP = lib(closure_1_3[7]).HTTP;
-                  obj1 = { url: null, headers: null, rejectWithError: false };
-                  obj1[0] = closure_1_9.DEVICES_SYNC_TOKEN;
-                  const obj2 = { authorization: null };
-                  obj2[0] = token;
-                  obj1[1] = obj2;
-                  c5 = 2;
-                  c6 = 1;
-                  let obj3 = { value: null, done: false };
-                  obj3[0] = HTTP.get(obj1);
-                  return obj3;
-                }
-              } else {
-                c6 = 3;
-                const obj4 = { value: null, done: true };
-                obj4[0] = tmp40.pushSyncToken;
-                return obj4;
-              }
-            }
-          } else if (1 === tmp8) {
-            c4 = 0;
-            callback = dependencyMap;
-            obj3 = token(1232);
-            obj3.captureException(callback);
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
             c6 = 3;
-            return { value: null, done: true };
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw body;
+            throw value;
           } else if (arg0 === 2) {
-            c4 = 0;
             c6 = 3;
-            obj5 = { value: null, done: true };
-            obj5[0] = body;
-            return obj5;
+            obj = { value, done: true };
+            return obj;
           } else {
-            token = body.body.token;
-            c4 = 0;
-            obj = callback(12417);
-            obj.updatePushSyncToken(lib.id, token);
-            c6 = 3;
-            const obj6 = { value: null, done: true };
-            obj6[0] = token;
-            return obj6;
+            closure_2 = tmp3;
+            closure_1 = tmp5;
+            closure_129_0 = pushSyncToken;
+            let token2;
+            if (null == pushSyncToken.pushSyncToken) {
+              let obj5 = TokenManagerAll;
+              const token = obj5.getToken(tmp39.id);
+              if (null == token) {
+                c6 = 3;
+                return { value: null, done: true };
+              } else {
+                c4 = 1;
+                const HTTP = HTTPUtils.HTTP;
+                const obj1 = { url: constants.DEVICES_SYNC_TOKEN, headers: null, rejectWithError: false };
+                const obj2 = { authorization: token };
+                obj1.headers = obj2;
+                c5 = 2;
+                c6 = 1;
+                let obj3 = { value: HTTP.get(obj1), done: false };
+                return obj3;
+              }
+            } else {
+              c6 = 3;
+              const obj4 = { value: tmp39.pushSyncToken, done: true };
+              return obj4;
+            }
           }
-        } catch (tmp31) {
-          dependencyMap = tmp31;
-          if (tmp4 === c4) {
-            c6 = tmp2;
-            throw tmp31;
-          } else {
-            c5 = tmp;
-          }
+        } else if (1 === tmp8) {
+          c4 = 0;
+          closure_129_2 = closure_3;
+          obj3 = closure_130_1(closure_130_3[8]);
+          obj3.captureException(closure_129_2);
+          c6 = 3;
+          return { value: null, done: true };
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 0;
+          c6 = 3;
+          obj5 = { value, done: true };
+          return obj5;
+        } else {
+          token2 = value.body.token;
+          c4 = 0;
+          obj = closure_130_2(closure_130_3[9]);
+          obj.updatePushSyncToken(closure_129_0.id, token2);
+          c6 = 3;
+          const obj6 = { value: token2, done: true };
+          return obj6;
+        }
+      } catch (tmp31) {
+        closure_3 = tmp31;
+        if (tmp4 === c4) {
+          c6 = tmp2;
+          throw tmp31;
+        } else {
+          c5 = tmp;
         }
       }
-    })();
-  });
-  closure_16 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-({ DEVICE_TOKEN: error, DEVICE_VOIP_TOKEN: closure_8, Endpoints: c9 } = ME);
+    }
+  })();
+};
+const Constants = fn(1074);
+({ DEVICE_TOKEN: closure_7, DEVICE_VOIP_TOKEN: closure_8, Endpoints: closure_9 } = Constants);
+const PushNotificationConstants = fn(6596);
 ({
   BUNDLE_ID: c10,
-  DEVICE_PUSH_VOIP_PROVIDER: unpackModuleId,
+  DEVICE_PUSH_VOIP_PROVIDER: closure_11,
   getDevicePushProvider: closure_12,
   IS_QUEST_RELEASE: map1,
-} = require("str2"));
-let closure_14 = new timestampDefault("PushNotificationActionCreators");
-let obj = {
+} = PushNotificationConstants);
+const logger = new LoggerDefault("PushNotificationActionCreators");
+const size = fn(2);
+let result = size.fileFinishedImporting("actions/native/PushNotificationActionCreators.tsx");
+
+export default {
   registerDevice(token, flag) {
     if (flag === undefined) {
       flag = false;
     }
-    const canUseMultiAccountNotifications = obj.canUseMultiAccountNotifications;
+    const canUseMultiAccountNotifications = MultiAccountStore.canUseMultiAccountNotifications;
     logger.log(
       "Registering push notification token: " +
         token +
@@ -155,33 +142,35 @@ let obj = {
         canUseMultiAccountNotifications,
     );
     const Storage = Storage2.Storage;
-    const result = Storage.set(flag ? closure_8 : closure_7, token);
+    const result = Storage.set(flag ? React6 : React5, token);
     if (canUseMultiAccountNotifications) {
       const self = this;
       let syncDeviceResult = this.syncDevice(token, flag);
     } else {
-      obj = _modDef4753;
-      obj = { url: null, body: null, oldFormErrors: true, trackedActionData: null, rejectWithError: false };
-      obj[0] = constants.DEVICES;
+      let obj = TrackedHTTPUtilsDefault;
+      const request = {
+        url: constants.DEVICES,
+        body: null,
+        oldFormErrors: true,
+        trackedActionData: null,
+        rejectWithError: false,
+      };
       if (flag) {
-        let tmp8 = closure_11;
+        let tmp8 = closure_1_11;
       } else {
-        tmp8 = callback2();
+        tmp8 = closure_1_12();
       }
-      obj = { provider: null, token: null, bypass_server_throttling_supported: null, bundle_id: null };
-      obj[0] = tmp8;
-      obj[1] = token;
+      obj = { provider: tmp8, token, bypass_server_throttling_supported: null, bundle_id: null };
       let isAndroidResult = tmp2(1115).isAndroid();
       if (isAndroidResult) {
-        isAndroidResult = !closure_13;
+        isAndroidResult = !map1;
       }
-      obj[2] = isAndroidResult;
-      obj[3] = closure_10;
-      obj[1] = obj;
-      obj1 = { event: null };
-      obj1[0] = tmp2(1250).NetworkActionNames.USER_REGISTER_DEVICE_TOKEN;
-      obj[3] = obj1;
-      syncDeviceResult = obj.post(obj);
+      obj.bypass_server_throttling_supported = isAndroidResult;
+      obj.bundle_id = bundle_id;
+      request.body = obj;
+      obj = { event: tmp2(1250).NetworkActionNames.USER_REGISTER_DEVICE_TOKEN };
+      request.trackedActionData = obj;
+      syncDeviceResult = obj.post(request);
       const tmp2Result = tmp2(1115);
     }
     return syncDeviceResult;
@@ -191,13 +180,12 @@ let obj = {
     if (flag === undefined) {
       flag = false;
     }
-    return callback(function* () {
-      let id = tmp2;
-      id = closure_1_6.getId();
-      const validUsers = closure_1_5.getValidUsers();
+    return (async (arg0, value) => {
+      const id2 = id.getId();
+      validUsers = validUsers.getValidUsers();
       const sorted = validUsers.sort((id, id2) => {
         let num = -1;
-        if (id.id !== closure_0) {
+        if (id.id !== closure_1_0) {
           let num2 = 0;
           if (id2.id === tmp) {
             num2 = 1;
@@ -206,104 +194,91 @@ let obj = {
         }
         return num;
       });
-      yield Promise.all(sorted.map(closure_1_15));
+      await Promise.all(sorted.map(closure_1_15));
       if (1 === tmp5) {
         if (arg0 === 1) {
           dependencyMap = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           dependencyMap = 3;
-          let obj2 = { value: null, done: true };
-          obj2[0] = arg1;
+          let obj2 = { value, done: true };
           return obj2;
         } else {
-          closure_1 = arg1;
-          if (closure_1.length >= 1) {
-            if (null != closure_1[0]) {
-              const HTTP = closure_1_0(1272).HTTP;
-              const obj3 = { url: null, body: null, rejectWithError: false };
-              obj3[0] = closure_1_9.DEVICES_SYNC;
-              if (closure_1) {
+          closure_128_1 = value;
+          if (closure_128_1.length >= 1) {
+            if (null != closure_128_1[0]) {
+              const HTTP = tmp2(1272).HTTP;
+              const request = { url: constants.DEVICES_SYNC, body: null, rejectWithError: false };
+              if (closure_129_1) {
                 let tmp9 = closure_1_11;
               } else {
                 tmp9 = closure_1_12();
               }
-              const obj4 = {
-                provider: null,
-                token: null,
-                push_sync_tokens: null,
+              const obj3 = {
+                provider: tmp9,
+                token: closure_129_0,
+                push_sync_tokens: closure_128_1.filter(tmp2(1369).isNotNullish),
                 bypass_server_throttling_supported: null,
                 bundle_id: null,
               };
-              obj4[0] = tmp9;
-              obj4[1] = closure_1_0;
-              obj4[2] = closure_1.filter(closure_1_0(1369).isNotNullish);
-              obj2 = closure_1_0(1115);
+              obj2 = tmp2(1115);
               let isAndroidResult = obj2.isAndroid();
               if (isAndroidResult) {
                 isAndroidResult = !closure_1_13;
               }
-              obj4[3] = isAndroidResult;
-              obj4[4] = closure_1_10;
-              obj3[1] = obj4;
-              let v0 = 2;
+              obj3.bypass_server_throttling_supported = isAndroidResult;
+              obj3.bundle_id = bundle_id;
+              request.body = obj3;
+              const v2 = 2;
               dependencyMap = 1;
-              const obj5 = { value: null, done: false };
-              obj5[0] = HTTP.put(obj3);
-              return obj5;
+              return { value: HTTP.put(request), done: false };
             }
           }
           dependencyMap = 3;
         }
       } else if (arg0 === 1) {
         dependencyMap = 3;
-        throw arg1;
+        throw value;
       } else if (arg0 !== 2) {
-        v0 = arg1;
-        if (v0.body.invalid_push_sync_tokens.length > 0) {
-          const result = v0(12417).invalidatePushSyncTokens(v0.body.invalid_push_sync_tokens);
-          const obj9 = v0(12417);
+        closure_128_2 = value;
+        if (closure_128_2.body.invalid_push_sync_tokens.length > 0) {
+          const result = v2(12417).invalidatePushSyncTokens(closure_128_2.body.invalid_push_sync_tokens);
+          v2(12417);
         }
       }
-      return arg1;
+      return value;
     })();
   },
   unregisterDevice(token) {
     logger.log("Unregistering push notification token: " + token);
-    let obj = _modDef4753;
-    obj = { url: constants.DEVICES, body: null, trackedActionData: null, rejectWithError: false };
-    obj = { provider: callback2(), token };
-    obj[1] = obj;
-    obj[2] = { event: encodeProperties.NetworkActionNames.USER_UNREGISTER_DEVICE_TOKEN };
-    return obj.delete(obj);
+    const request = { url: constants.DEVICES, body: null, trackedActionData: null, rejectWithError: false };
+    let obj = { provider: closure_1_12(), token };
+    request.body = obj;
+    obj = { event: discord_common_AnalyticsUtils.NetworkActionNames.USER_UNREGISTER_DEVICE_TOKEN };
+    request.trackedActionData = obj;
+    return obj.delete(request);
   },
 };
-const tmp4 = new timestampDefault("PushNotificationActionCreators");
-let result = require("set").fileFinishedImporting("actions/native/PushNotificationActionCreators.tsx");
-
-export default obj;
 export const setPushPermissionState = function setPushPermissionState(PROMPT_SEEN) {
-  closure_0 = PROMPT_SEEN;
-  dispatcherDefault.wait(() => {
-    let obj = closure_1_1(closure_1_3[15]);
-    obj = { type: "PUSH_NOTIFICATION_PERMISSION_SET_STATE", permissionState: closure_0 };
+  const permissionState = PROMPT_SEEN;
+  DispatcherDefault.wait(() => {
+    const obj = { type: "PUSH_NOTIFICATION_PERMISSION_SET_STATE", permissionState };
     obj.dispatch(obj);
   });
 };
 export const setPushPermissionReactivationSeen = function setPushPermissionReactivationSeen(promptType) {
-  let obj = dispatcherDefault;
-  obj = { type: "PUSH_NOTIFICATION_PERMISSION_REACTIVATION_SEEN", promptType };
+  const obj = { type: "PUSH_NOTIFICATION_PERMISSION_REACTIVATION_SEEN", promptType };
   obj.dispatch(obj);
 };
 export const setPushNotificationPermissionEligibleForPrompt = function setPushNotificationPermissionEligibleForPrompt(
   CHANNEL_BANNER,
 ) {
-  let obj = dispatcherDefault;
-  obj = { type: "PUSH_NOTIFICATION_PERMISSION_SET_ELIGIBLE", promptType: CHANNEL_BANNER };
+  const obj = { type: "PUSH_NOTIFICATION_PERMISSION_SET_ELIGIBLE", promptType: CHANNEL_BANNER };
   obj.dispatch(obj);
 };
-export const updateNotificationAuthorizationStatus = function updateNotificationAuthorizationStatus(closure_0) {
-  let obj = dispatcherDefault;
-  obj = { type: "PUSH_NOTIFICATION_AUTHORIZATION_STATUS_UPDATE", authorizationStatus: closure_0 };
+export const updateNotificationAuthorizationStatus = function updateNotificationAuthorizationStatus(
+  authorizationStatus,
+) {
+  const obj = { type: "PUSH_NOTIFICATION_AUTHORIZATION_STATUS_UPDATE", authorizationStatus };
   obj.dispatch(obj);
 };

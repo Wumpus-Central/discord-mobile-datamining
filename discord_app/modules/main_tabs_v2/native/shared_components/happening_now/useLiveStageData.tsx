@@ -1,27 +1,30 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/useLiveStageData.tsx
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../../stage_channels/StageChannelParticipantStore.tsx";
-import closure_5 from "../../../../../stores/ChannelStore.tsx";
+import _modDef12 from "../../../../../../_runtime/metro/00012__.js";
+import StageChannelParticipants from "../../../../stage_channels/StageChannelParticipants.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
+import StageChannelParticipantStore from "../../../../stage_channels/StageChannelParticipantStore.tsx";
+import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/main_tabs_v2/native/shared_components/happening_now/useLiveStageData.tsx",
 );
 
 export const useLiveStageData = function useLiveStageData(stage) {
-  const _require = stage;
-  let obj = _require(stateFromStoresArray1[3]);
+  _require = stage;
+  let obj = require("useStateFromStores");
   let items = [memo1];
   const items1 = [stage.channel_id];
   const stateFromStoresArray = obj.useStateFromStoresArray(
     items,
     () => {
-      const mutableParticipants = memo1.getMutableParticipants(
+      const mutableParticipants = StageChannelParticipantStore.getMutableParticipants(
         stage.channel_id,
-        stage(stateFromStoresArray1[4]).StageChannelParticipantNamedIndex.FRIEND,
+        StageChannelParticipants.StageChannelParticipantNamedIndex.FRIEND,
       );
       const found = mutableParticipants.filter(
-        (type) => type.type === callback(table[4]).StageChannelParticipantTypes.VOICE,
+        (type) => type.type === stage(stateFromStoresArray1[4]).StageChannelParticipantTypes.VOICE,
       );
       return found.map((user) => user.user);
     },
@@ -29,32 +32,32 @@ export const useLiveStageData = function useLiveStageData(stage) {
   );
   const items2 = [memo1];
   const items3 = [stage.channel_id];
-  stateFromStoresArray1 = _require(stateFromStoresArray1[3]).useStateFromStoresArray(
+  stateFromStoresArray1 = require("useStateFromStores").useStateFromStoresArray(
     items2,
     () => {
-      const mutableParticipants = memo1.getMutableParticipants(
+      const mutableParticipants = StageChannelParticipantStore.getMutableParticipants(
         stage.channel_id,
-        stage(stateFromStoresArray1[4]).StageChannelParticipantNamedIndex.SPEAKER,
+        StageChannelParticipants.StageChannelParticipantNamedIndex.SPEAKER,
       );
       const found = mutableParticipants.filter(
-        (type) => type.type === callback(table[4]).StageChannelParticipantTypes.VOICE,
+        (type) => type.type === stage(stateFromStoresArray1[4]).StageChannelParticipantTypes.VOICE,
       );
       return found.map((user) => user.user);
     },
     items3,
   );
-  const obj2 = _require(stateFromStoresArray1[3]);
+  const obj2 = require("useStateFromStores");
   const items4 = [memo1];
   const items5 = [stage.channel_id];
-  const stateFromStoresArray2 = _require(stateFromStoresArray1[3]).useStateFromStoresArray(
+  const stateFromStoresArray2 = require("useStateFromStores").useStateFromStoresArray(
     items4,
     () => {
-      const mutableParticipants = memo1.getMutableParticipants(
+      const mutableParticipants = StageChannelParticipantStore.getMutableParticipants(
         stage.channel_id,
-        stage(stateFromStoresArray1[4]).StageChannelParticipantNamedIndex.AUDIENCE,
+        StageChannelParticipants.StageChannelParticipantNamedIndex.AUDIENCE,
       );
       const found = mutableParticipants.filter(
-        (type) => type.type === callback(table[4]).StageChannelParticipantTypes.VOICE,
+        (type) => type.type === stage(stateFromStoresArray1[4]).StageChannelParticipantTypes.VOICE,
       );
       return found.map((user) => user.user);
     },
@@ -64,17 +67,15 @@ export const useLiveStageData = function useLiveStageData(stage) {
   const items7 = [stateFromStoresArray, stateFromStoresArray1];
   const memo = stateFromStoresArray2.useMemo(() => {
     const items = [...stateFromStoresArray1];
-    return stateFromStoresArray(stateFromStoresArray1[5]).uniqBy(items, (id) => id.id);
+    return _modDef12.uniqBy(items, (id) => id.id);
   }, items6);
   memo1 = stateFromStoresArray2.useMemo(
-    () =>
-      stateFromStoresArray(stateFromStoresArray1[5]).differenceBy(stateFromStoresArray, stateFromStoresArray1, "id"),
+    () => _modDef12.differenceBy(stateFromStoresArray, stateFromStoresArray1, "id"),
     items7,
   );
   const items8 = [stateFromStoresArray, stateFromStoresArray2];
   const memo2 = stateFromStoresArray2.useMemo(
-    () =>
-      stateFromStoresArray(stateFromStoresArray1[5]).differenceBy(stateFromStoresArray2, stateFromStoresArray, "id"),
+    () => _modDef12.differenceBy(stateFromStoresArray2, stateFromStoresArray, "id"),
     items8,
   );
   const items9 = [memo1, memo2];
@@ -82,7 +83,7 @@ export const useLiveStageData = function useLiveStageData(stage) {
     const items = [...memo2];
     return items;
   }, items9);
-  const obj3 = _require(stateFromStoresArray1[3]);
+  const obj3 = require("useStateFromStores");
   const items10 = [memo2];
   const items11 = [stage.channel_id];
   obj = {
@@ -92,9 +93,9 @@ export const useLiveStageData = function useLiveStageData(stage) {
     users: memo,
     audiencePrefixedFriends: memo3,
     audienceFriends: memo1,
-    channel: _require(stateFromStoresArray1[3]).useStateFromStores(
+    channel: require("useStateFromStores").useStateFromStores(
       items10,
-      () => memo2.getChannel(stage.channel_id),
+      () => ChannelStore.getChannel(stage.channel_id),
       items11,
     ),
   };

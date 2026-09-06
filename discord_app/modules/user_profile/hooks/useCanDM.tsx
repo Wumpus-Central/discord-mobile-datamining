@@ -1,53 +1,51 @@
 // discord_app/modules/user_profile/hooks/useCanDM.tsx
-import closure_2 from "../../game_relationships/GameRelationshipStore.tsx";
-import closure_3 from "../../lurker_mode/LurkingStore.tsx";
-import closure_4 from "../../../stores/AuthenticationStore.tsx";
-import closure_5 from "../../../stores/GuildMemberStore.tsx";
-import closure_6 from "../../../stores/RelationshipStore.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import UserSettings from "../../user_settings/UserSettings.tsx";
+import GameRelationshipStore from "../../game_relationships/GameRelationshipStore.tsx";
+import LurkingStore from "../../lurker_mode/LurkingStore.tsx";
+import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
+import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
+import RelationshipStore from "../../../stores/RelationshipStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_profile/hooks/useCanDM.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/hooks/useCanDM.tsx");
 
 export default function useCanDM(arg0, arg1) {
-  const _require = arg0;
+  _require = arg0;
   dependencyMap = arg1;
   const items = [closure_4];
-  closure_2 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
-    items,
-    () => id.getId() === closure_0,
-  );
-  const obj = initialize;
+  closure_2 = require("initialize").useStateFromStores(items, () => AuthenticationStore.getId() === closure_0);
+  const obj = require("initialize");
   const items1 = [closure_3];
-  closure_3 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
+  closure_3 = require("initialize").useStateFromStores(items1, () => {
     let isLurkingResult = null != closure_1;
     if (isLurkingResult) {
-      isLurkingResult = lurking.isLurking(tmp);
+      isLurkingResult = LurkingStore.isLurking(tmp);
     }
     return isLurkingResult;
   });
-  const RestrictedGuildIds = require("../../user_settings/UserSettings.tsx").RestrictedGuildIds;
+  const RestrictedGuildIds = require("UserSettings").RestrictedGuildIds;
   closure_4 = RestrictedGuildIds.useSetting();
-  const obj2 = initialize;
-  const items2 = [closure_6, closure_5, closure_2];
-  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
-    let tmp = !gameFriendsForUser;
-    if (!gameFriendsForUser) {
+  const obj2 = require("initialize");
+  const items2 = [RelationshipStore, GuildMemberStore, closure_2];
+  return require("initialize").useStateFromStores(items2, () => {
+    let tmp = !closure_2;
+    if (!closure_2) {
       tmp = !closure_3;
     }
     if (tmp) {
-      let isFriendResult = closure_1_6.isFriend(callback);
+      let isFriendResult = RelationshipStore.isFriend(closure_0);
       if (!isFriendResult) {
-        isFriendResult = null != closure_1_5.memberOf(tmp4).find((arg0) => !closure_4.includes(arg0));
-        const memberOfResult = closure_1_5.memberOf(tmp4);
+        isFriendResult = null != GuildMemberStore.memberOf(tmp4).find((item) => !closure_1_4.includes(item));
+        const memberOfResult = GuildMemberStore.memberOf(tmp4);
       }
       tmp = isFriendResult;
-      tmp4 = callback;
+      tmp4 = closure_0;
     }
     if (!tmp) {
-      let setting = gameFriendsForUser.getGameFriendsForUser(callback).length > 0;
+      let setting = GameRelationshipStore.getGameFriendsForUser(closure_0).length > 0;
       if (setting) {
-        const AllowGameFriendDmsInDiscord = callback(table[5]).AllowGameFriendDmsInDiscord;
+        const AllowGameFriendDmsInDiscord = UserSettings.AllowGameFriendDmsInDiscord;
         setting = AllowGameFriendDmsInDiscord.getSetting();
       }
       tmp = setting;
@@ -57,28 +55,28 @@ export default function useCanDM(arg0, arg1) {
 }
 export const canDm = function canDm(userId, guildId) {
   let isLurkingResult = null != guildId;
-  id = id.getId();
+  const id = AuthenticationStore.getId();
   if (isLurkingResult) {
-    isLurkingResult = lurking.isLurking(guildId);
+    isLurkingResult = LurkingStore.isLurking(guildId);
   }
-  const RestrictedGuildIds = require("../../user_settings/UserSettings.tsx").RestrictedGuildIds;
-  _require = RestrictedGuildIds.getSetting();
-  let isFriendResult = friend.isFriend(userId);
+  const RestrictedGuildIds = UserSettings.RestrictedGuildIds;
+  const setting2 = RestrictedGuildIds.getSetting();
+  let isFriendResult = RelationshipStore.isFriend(userId);
   let tmp8 = !tmp4;
   if (id !== userId) {
     tmp8 = !isLurkingResult;
   }
   if (tmp8) {
     if (!isFriendResult) {
-      isFriendResult = null != closure_5.memberOf(userId).find((arg0) => !closure_0.includes(arg0));
-      const memberOfResult = closure_5.memberOf(userId);
+      isFriendResult = null != GuildMemberStore.memberOf(userId).find((item) => !closure_0.includes(item));
+      const memberOfResult = GuildMemberStore.memberOf(userId);
     }
     tmp8 = isFriendResult;
   }
   if (!tmp8) {
-    let setting = gameFriendsForUser.getGameFriendsForUser(userId).length > 0;
+    let setting = GameRelationshipStore.getGameFriendsForUser(userId).length > 0;
     if (setting) {
-      const AllowGameFriendDmsInDiscord = require("../../user_settings/UserSettings.tsx").AllowGameFriendDmsInDiscord;
+      const AllowGameFriendDmsInDiscord = UserSettings.AllowGameFriendDmsInDiscord;
       setting = AllowGameFriendDmsInDiscord.getSetting();
     }
     tmp8 = setting;

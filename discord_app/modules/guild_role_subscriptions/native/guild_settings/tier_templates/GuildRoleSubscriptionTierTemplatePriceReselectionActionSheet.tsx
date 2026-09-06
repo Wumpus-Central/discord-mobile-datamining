@@ -1,24 +1,19 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet.tsx
-import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../../../intl/index.native.tsx";
-import useCheckboxA11yNative from "../../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
-import Text from "../../../../../design/components/Text/native/Text.tsx";
-import preloadDefault from "../../../../../components_native/common/FastImage.tsx";
-import renderDefault from "../../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
-import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { SubscriptionIntervalTypes } from "../../../../premium/PremiumConstants.tsx";
-import { CurrencyCodes } from "../../../../../../discord_common/js/shared/Constants.tsx";
-import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../../intl/index.native.tsx";
+import useA11yRolesNative from "../../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
+import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
+import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
+import TouchableHitBoxDefault from "../../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+require = fn;
 function PriceOptionRow(selected) {
   selected = selected.selected;
   ({ price, onPress } = selected);
-  const tmp = callback4();
-  let obj = useCheckboxA11yNative;
+  const tmp = closure_11();
+  let obj = useA11yRolesNative;
   const radioA11yNative = obj.useRadioA11yNative({ selected });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   const items = [tmp.rowContainer];
@@ -29,25 +24,30 @@ function PriceOptionRow(selected) {
   obj = { style: items, accessibilityRole, accessibilityState, onPress, children: null };
   items[1] = containerSelected;
   obj = { style: tmp.rowStatusIcon, source: null };
-  const tmp5 = closure_10;
-  const tmp7 = renderDefault;
-  obj[1] = importDefault(selected ? 17692 : 16563);
-  const items1 = [closure_9(preloadDefault, obj)];
-  obj1 = { variant: "text-sm/normal", color: "text-default", children: null };
+  const tmp5 = closure_1_10;
+  const tmp7 = TouchableHitBoxDefault;
+  obj.source = importDefault(selected ? 17692 : 16563);
+  const items1 = [React7(FastImageDefault, obj)];
+  const obj1 = { variant: "text-sm/normal", color: "text-default", children: null };
   const intl = tmp2(1114).intl;
   const obj2 = { price: null, interval: null };
   let tmp2Result = tmp2(7234);
-  obj2[0] = tmp2Result.formatPrice(price, CurrencyCodes.USD);
+  obj2.price = tmp2Result.formatPrice(price, CurrencyCodes.USD);
   tmp2Result = tmp2(15231);
-  obj2[1] = tmp2Result.formatPlanInterval({ interval: SubscriptionIntervalTypes.MONTH, interval_count: 1 });
-  obj1[2] = intl.format(getSystemLocale.t.CgmBaG, obj2);
-  items1[1] = closure_9(Text.Text, obj1);
-  obj[4] = items1;
+  obj2.interval = tmp2Result.formatPlanInterval({ interval: SubscriptionIntervalTypes.MONTH, interval_count: 1 });
+  obj1.children = intl.format(util.t.CgmBaG, obj2);
+  items1[1] = React7(Text_Text.Text, obj1);
+  obj.children = items1;
   return tmp5(tmp7, obj);
 }
-({ TouchableOpacity: c5, View: closure_6 } = get_ActivityIndicator);
-({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = {
+get_ActivityIndicator = fn(17);
+({ TouchableOpacity: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+const SubscriptionIntervalTypes = fn(1373).SubscriptionIntervalTypes;
+const CurrencyCodes = fn(1085).CurrencyCodes;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+fn(4560);
+let createStyles = {
   container: null,
   rowContainer: null,
   containerSelected: null,
@@ -55,64 +55,64 @@ createCacheKey = {
   confirmButton: null,
   backToTemplates: null,
 };
-createCacheKey = {
-  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+createStyles = {
+  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   padding: 24,
-  borderTopLeftRadius: ThemesDefault.radii.md,
-  borderTopRightRadius: ThemesDefault.radii.md,
+  borderTopLeftRadius: nativeDefault.radii.md,
+  borderTopRightRadius: nativeDefault.radii.md,
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = {
-  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
-  borderRadius: ThemesDefault.radii.sm,
+createStyles.container = createStyles;
+createStyles.rowContainer = {
+  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: nativeDefault.radii.sm,
   flexDirection: "row",
   alignSelf: "stretch",
   justifyContent: "flex-start",
   padding: 12,
   marginBottom: 12,
   borderWidth: 1,
-  borderColor: ThemesDefault.colors.BORDER_MUTED,
+  borderColor: nativeDefault.colors.BORDER_MUTED,
 };
 let obj1 = {
-  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
-  borderRadius: ThemesDefault.radii.sm,
+  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: nativeDefault.radii.sm,
   flexDirection: "row",
   alignSelf: "stretch",
   justifyContent: "flex-start",
   padding: 12,
   marginBottom: 12,
   borderWidth: 1,
-  borderColor: ThemesDefault.colors.BORDER_MUTED,
+  borderColor: nativeDefault.colors.BORDER_MUTED,
 };
-createCacheKey[2] = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-createCacheKey[3] = { height: 20, width: 20, marginRight: 12 };
-let obj2 = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-createCacheKey[4] = { borderRadius: ThemesDefault.radii.xs };
-createCacheKey[5] = { alignSelf: "center" };
-let closure_11 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { borderRadius: ThemesDefault.radii.xs };
-const result = require("set").fileFinishedImporting(
+createStyles.containerSelected = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+createStyles.rowStatusIcon = { height: 20, width: 20, marginRight: 12 };
+let obj2 = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+createStyles.confirmButton = { borderRadius: nativeDefault.radii.xs };
+createStyles.backToTemplates = { alignSelf: "center" };
+let closure_11 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet.tsx",
 );
 
 export default function GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet(selectedTemplate) {
   selectedTemplate = selectedTemplate.selectedTemplate;
   ({ handleCreateFromTemplate: importDefault, newPricesToPick } = selectedTemplate);
-  let callback;
-  let React;
-  const tmp = callback4();
-  [c3, c4] = callback(React.useState(0), 2);
+  _slicedToArray = undefined;
+  noop = undefined;
+  const tmp = closure_11();
+  [c3, c4] = _slicedToArray(noop.useState(0), 2);
   let obj = { backdropOpacity: 0.8, startExpanded: true, children: null };
   obj = { style: tmp.container, children: null };
-  obj = { contentContainerStyle: { paddingBottom: importDefault(newPricesToPick[17])().bottom }, children: null };
-  obj1 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
+  obj = { contentContainerStyle: { paddingBottom: require("useSafeAreaInsets")().bottom }, children: null };
+  const obj1 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = selectedTemplate(newPricesToPick[14]).intl;
-  obj1[2] = intl.format(selectedTemplate(newPricesToPick[14]).t["5WZ9Ct"], {
+  obj1.children = intl.format(selectedTemplate(newPricesToPick[14]).t["5WZ9Ct"], {
     tierName: selectedTemplate.listings[0].name,
   });
   let items = [
-    callback2(selectedTemplate(newPricesToPick[13]).Text, obj1),
-    callback2(selectedTemplate(newPricesToPick[20]).Spacer, { size: 12 }),
+    closure_9(selectedTemplate(newPricesToPick[13]).Text, obj1),
+    closure_9(selectedTemplate(newPricesToPick[20]).Spacer, { size: 12 }),
     ,
     ,
     ,
@@ -124,26 +124,26 @@ export default function GuildRoleSubscriptionTierTemplatePriceReselectionActionS
   const intl2 = selectedTemplate(newPricesToPick[14]).intl;
   const obj4 = { price: null };
   let obj7 = selectedTemplate(newPricesToPick[15]);
-  obj4[0] = obj7.formatPrice(selectedTemplate.listings[0].price_tier, CurrencyCodes.USD);
-  obj3[2] = intl2.format(selectedTemplate(newPricesToPick[14]).t["5i7Uhb"], obj4);
-  items[2] = callback2(selectedTemplate(newPricesToPick[13]).Text, obj3);
-  items[3] = callback2(selectedTemplate(newPricesToPick[20]).Spacer, { size: 24 });
-  items[4] = newPricesToPick.map((price) => {
-    closure_0 = arg1;
+  obj4.price = obj7.formatPrice(selectedTemplate.listings[0].price_tier, CurrencyCodes.USD);
+  obj3.children = intl2.format(selectedTemplate(newPricesToPick[14]).t["5i7Uhb"], obj4);
+  items[2] = closure_9(selectedTemplate(newPricesToPick[13]).Text, obj3);
+  items[3] = closure_9(selectedTemplate(newPricesToPick[20]).Spacer, { size: 24 });
+  items[4] = newPricesToPick.map((price, index) => {
+    closure_0 = index;
     return closure_1_9(
-      closure_1_12,
+      PriceOptionRow,
       {
         price,
-        selected: arg1 === c3,
+        selected: index === c3,
         onPress() {
-          return closure_1_4(closure_0);
+          return c4(closure_0);
         },
       },
       price,
     );
   });
-  items[5] = callback2(selectedTemplate(newPricesToPick[20]).Spacer, { size: 36 });
-  items[6] = callback2(selectedTemplate(newPricesToPick[21]).BaseTextButton, {
+  items[5] = closure_9(selectedTemplate(newPricesToPick[20]).Spacer, { size: 36 });
+  items[6] = closure_9(selectedTemplate(newPricesToPick[21]).BaseTextButton, {
     text: "Confirm New Price",
     pillStyle: tmp.confirmButton,
     onPress() {
@@ -154,14 +154,14 @@ export default function GuildRoleSubscriptionTierTemplatePriceReselectionActionS
       obj.price_tier = newPricesToPick[c3];
       const items = [obj];
       obj.listings = items;
-      callback(obj, true);
+      importDefault(obj, true);
     },
     grow: true,
   });
-  items[7] = callback2(selectedTemplate(newPricesToPick[20]).Spacer, { size: 24 });
+  items[7] = closure_9(selectedTemplate(newPricesToPick[20]).Spacer, { size: 24 });
   const obj6 = {
     onPress() {
-      return callback(newPricesToPick[22]).hideActionSheet();
+      return require("ActionSheetActionCreators").hideActionSheet();
     },
     style: tmp.backToTemplates,
     activeOpacity: 0.5,
@@ -169,11 +169,11 @@ export default function GuildRoleSubscriptionTierTemplatePriceReselectionActionS
   };
   obj7 = { variant: "text-sm/semibold", color: "interactive-text-active", children: null };
   const intl3 = selectedTemplate(newPricesToPick[14]).intl;
-  obj7[2] = intl3.string(selectedTemplate(newPricesToPick[14]).t.h26VOI);
-  obj6[3] = callback2(selectedTemplate(newPricesToPick[13]).Text, obj7);
-  items[8] = callback2(closure_5, obj6);
-  obj[1] = items;
-  obj[1] = callback3(selectedTemplate(newPricesToPick[19]).BottomSheetScrollView, obj);
-  obj[2] = callback2(closure_6, obj);
-  return callback2(selectedTemplate(newPricesToPick[18]).BottomSheet, obj);
+  obj7.children = intl3.string(selectedTemplate(newPricesToPick[14]).t.h26VOI);
+  obj6.children = closure_9(selectedTemplate(newPricesToPick[13]).Text, obj7);
+  items[8] = closure_9(closure_5, obj6);
+  obj.children = items;
+  obj.children = closure_10(selectedTemplate(newPricesToPick[19]).BottomSheetScrollView, obj);
+  obj.children = closure_9(closure_6, obj);
+  return closure_9(selectedTemplate(newPricesToPick[18]).BottomSheet, obj);
 }

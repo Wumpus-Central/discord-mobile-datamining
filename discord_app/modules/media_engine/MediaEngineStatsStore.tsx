@@ -1,12 +1,12 @@
 // discord_app/modules/media_engine/MediaEngineStatsStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import isStreamKey from "../go_live/utils/StreamKeyUtils.tsx";
-import closure_2 from "../../stores/AuthenticationStore.tsx";
-import closure_3 from "../../stores/StreamRTCConnectionStore.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import StreamKeyUtils from "../go_live/utils/StreamKeyUtils.tsx";
+import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
+import StreamRTCConnectionStore from "../../stores/StreamRTCConnectionStore.tsx";
 
-require = arg1;
-function updateAveragedStatsHelper(arg0, arg1, arg2, arr, arr2) {
+require = fn;
+function updateAveragedStatsHelper(minVersion, arg1, arg2, arr, arr2) {
   let tmp = arg2;
   const found = arr.find((type) => "video" === type.type);
   if (null == arg2) {
@@ -21,9 +21,8 @@ function updateAveragedStatsHelper(arg0, arg1, arg2, arr, arr2) {
       frameRateAggregated: 0,
       resolutionAggregated: 0,
       entropyAggregated: 0,
-      minVersion: null,
+      minVersion,
     };
-    obj[10] = arg0;
     tmp = obj;
   }
   if (null == found) {
@@ -148,7 +147,7 @@ function updateAveragedStats(arg0, arg1, version, version2) {
   if (null == arg0[arg1]) {
     arg0[arg1] = {};
   }
-  id = id.getId();
+  const id = AuthenticationStore.getId();
   let num;
   if (version2 != null) {
     num = version2.version;
@@ -179,20 +178,12 @@ function updateAveragedStats(arg0, arg1, version, version2) {
     if (num2 == null) {
       num2 = 0;
     }
-    let tmp7 = item10043;
     let tmp8 = arg0[arg1][tmp5];
     let tmp9 = arg2.stats.rtp.inbound[tmp5];
     let tmp10;
     if (arg3 != null) {
-      let tmp11 = item10043;
       tmp10 = arg3.stats.rtp.inbound[tmp5];
     }
-    let num3 = 0;
-    let tmp12 = version;
-    let tmp13 = num2;
-    let tmp14 = tmp8;
-    let tmp15 = tmp9;
-    let tmp16 = tmp10;
     arg0[arg1][item10043] = tmp6(version, num2, tmp8, tmp9, tmp10);
     continue;
   }
@@ -211,14 +202,14 @@ function getStatsHistoryAtIndex(arg0, arg1) {
     return tmp2;
   }
 }
-let closure_4 = {};
-let closure_5 = {};
-let closure_6 = {};
+const dependencyMap = {};
+const dependencyMap2 = {};
+const dependencyMap3 = {};
 const Store = initializeDefault.Store;
 class MediaEngineStatsStore extends Store {}
 const prototype = MediaEngineStatsStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_2, closure_3);
+  this.waitFor(AuthenticationStore, StreamRTCConnectionStore);
 };
 prototype["getConnectionStats"] = function getConnectionStats(mediaEngineConnectionId) {
   let tmp = null;
@@ -279,7 +270,7 @@ prototype["getAccumulatedPerformanceStats"] = function getAccumulatedPerformance
   }
 };
 MediaEngineStatsStore.displayName = "MediaEngineStatsStore";
-const mediaEngineStatsStore = new MediaEngineStatsStore(dispatcherDefault, {
+const mediaEngineStatsStore = new MediaEngineStatsStore(DispatcherDefault, {
   MEDIA_ENGINE_CONNECTION_STATS: function handleMediaEngineConnectionStats(arg0) {
     const iter = arg0.connectionStats[Symbol.iterator]();
     const nextResult = iter.next();
@@ -288,43 +279,27 @@ const mediaEngineStatsStore = new MediaEngineStatsStore(dispatcherDefault, {
       let prop = nextResult.mediaEngineConnectionId;
       let tmp3 = prop;
       if (0 !== prop.length) {
-        let tmp26 = prop;
-        let tmp27 = nextResult;
         {
         }
         [tmp3] = tmp2;
         let tmp28 = closure_4;
         if (!(tmp3 in closure_4)) {
-          let tmp4 = prop;
           tmp28[tmp3] = [];
         }
-        let tmp5 = prop;
         let arr2 = tmp28[tmp3];
-        let tmp6 = nextResult;
-        let arr = arr2.push(tmp2);
-        arr = undefined;
+        arr2.push(tmp2);
+        let arr;
         if (tmp28[tmp3].length > 30) {
-          let tmp9 = prop;
           let arr3 = tmp28[tmp3];
           arr = arr3.shift();
         }
         let tmp10 = updateAveragedStats;
         let tmp11 = closure_6;
-        let tmp14 = getStatsHistoryAtIndex;
         let tmp12 = prop;
         let tmp13 = nextResult;
         let tmp15 = getStatsHistoryAtIndex(tmp3, 15);
-        let num = 0;
-        let tmp16 = tmp11;
-        let tmp17 = tmp3;
-        let tmp18 = tmp2;
-        let tmp19 = tmp15;
-        let tmp10Result = tmp10(tmp11, tmp12, tmp13, tmp15);
-        let tmp21 = closure_5;
-        let tmp22 = prop;
-        let tmp23 = nextResult;
-        let tmp24 = arr;
-        tmp10Result = tmp10(closure_5, tmp3, tmp2, arr);
+        tmp10(tmp11, tmp12, tmp13, tmp15);
+        let tmp10Result = tmp10(closure_5, tmp3, tmp2, arr);
       }
       continue;
     }
@@ -341,7 +316,7 @@ const mediaEngineStatsStore = new MediaEngineStatsStore(dispatcherDefault, {
     if (streamKey.paused) {
       return false;
     } else {
-      rTCConnection = rTCConnection.getRTCConnection(streamKey);
+      const rTCConnection = StreamRTCConnectionStore.getRTCConnection(streamKey);
       let mediaEngineConnectionId;
       if (rTCConnection != null) {
         mediaEngineConnectionId = rTCConnection.getMediaEngineConnectionId();
@@ -349,7 +324,7 @@ const mediaEngineStatsStore = new MediaEngineStatsStore(dispatcherDefault, {
       if (null == mediaEngineConnectionId) {
         return false;
       } else {
-        const ownerId = isStreamKey.decodeStreamKey(streamKey).ownerId;
+        const ownerId = StreamKeyUtils.decodeStreamKey(streamKey).ownerId;
         let tmp11;
         if (dependencyMap2[mediaEngineConnectionId] != null) {
           tmp11 = tmp10[ownerId];
@@ -389,6 +364,7 @@ const mediaEngineStatsStore = new MediaEngineStatsStore(dispatcherDefault, {
     }
   },
 });
-const result = require("set").fileFinishedImporting("modules/media_engine/MediaEngineStatsStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/media_engine/MediaEngineStatsStore.tsx");
 
 export default mediaEngineStatsStore;

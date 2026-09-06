@@ -1,14 +1,14 @@
 // discord_app/modules/messages/WebViewWebmSupportTest.native.tsx
-import set from "../../../_runtime/00002_set.js";
-import set2 from "../../utils/PlatformUtils.tsx";
-import DCDDeviceManager from "../../utils/native/DeviceUtils.tsx";
+import PlatformUtils from "../../utils/PlatformUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
+const DeviceUtils = tmp(4539);
 const ARM64_ = "ARM64_";
-const result = set.fileFinishedImporting("modules/messages/WebViewWebmSupportTest.native.tsx");
+const result = size.fileFinishedImporting("modules/messages/WebViewWebmSupportTest.native.tsx");
 
 export const isIOSWithWebM = function isIOSWithWebM() {
   if (obj.isIOS()) {
-    const str = DCDDeviceManager.getSocName();
+    const str = DeviceUtils.getSocName();
     let tmp4 = null == str;
     if (!tmp4) {
       tmp4 = !str.startsWith(ARM64_);
@@ -38,6 +38,5 @@ export const isIOSWithWebM = function isIOSWithWebM() {
   } else {
     return false;
   }
-  obj = set2;
-  const tmp = require;
+  obj = PlatformUtils;
 };

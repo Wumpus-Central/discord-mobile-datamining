@@ -1,32 +1,33 @@
 // discord_app/modules/collectibles/native/ShopFlashList.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import Button from "../../../design/void/native.tsx";
-import getNoResultsSource from "../../../design/components/Illustration/native/redesign/generated/NoResults.tsx";
-import noop from "../../../../discord_common/js/packages/flash-list/index.js";
-import INITIAL_SCROLL_DELAY_MS from "hooks/useScrollToInitialIndexOnce.tsx";
-import closure_2 from "../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
+import native from "../../../design/void/native.tsx";
+import generated_NoResults from "../../../design/components/Illustration/native/redesign/generated/NoResults.tsx";
+import _mod8874 from "../../../../discord_common/js/packages/flash-list/index.js";
+import useScrollToInitialIndexOnce from "hooks/useScrollToInitialIndexOnce.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+require = fn;
 function ShopEmptyState() {
-  const obj = { style: { marginTop: 42 }, Illustration: getNoResultsSource.NoResults, body: null };
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.string(getSystemLocale.t.eAn6z2);
-  return jsx(Button.EmptyState, { style: { marginTop: 42 }, Illustration: getNoResultsSource.NoResults, body: null });
+  const obj = { style: { marginTop: 42 }, Illustration: generated_NoResults.NoResults, body: null };
+  const intl = util.intl;
+  obj.body = intl.string(util.t.eAn6z2);
+  return jsx(native.EmptyState, { style: { marginTop: 42 }, Illustration: generated_NoResults.NoResults, body: null });
 }
-createCacheKey = { contentContainer: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
-createCacheKey[0] = createCacheKey;
-let closure_4 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/collectibles/native/ShopFlashList.tsx");
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { contentContainer: null };
+createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+createStyles.contentContainer = createStyles;
+let closure_4 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/native/ShopFlashList.tsx");
 
 export default function ShopFlashList(initialScrollIndex) {
   initialScrollIndex = initialScrollIndex.initialScrollIndex;
   ({ data, renderItem, getItemType } = initialScrollIndex);
-  const ref = React.useRef(null);
-  let obj = INITIAL_SCROLL_DELAY_MS;
+  const ref = noop.useRef(null);
+  let obj = useScrollToInitialIndexOnce;
   let tmp5 = null != initialScrollIndex;
   if (tmp5) {
     tmp5 = initialScrollIndex > 0;
@@ -41,9 +42,9 @@ export default function ShopFlashList(initialScrollIndex) {
     ListEmptyComponent: ShopEmptyState,
     initialScrollIndex,
     getItemType,
-    contentContainerStyle: callback().contentContainer,
+    contentContainerStyle: closure_4().contentContainer,
   };
-  return jsx(noop.FlashList, {
+  return jsx(_mod8874.FlashList, {
     ref,
     data,
     renderItem,
@@ -51,6 +52,6 @@ export default function ShopFlashList(initialScrollIndex) {
     ListEmptyComponent: ShopEmptyState,
     initialScrollIndex,
     getItemType,
-    contentContainerStyle: callback().contentContainer,
+    contentContainerStyle: closure_4().contentContainer,
   });
 }

@@ -1,53 +1,60 @@
 // discord_app/components_native/channel_settings/ChannelSettingsChangeCategory.tsx
 import _modDef38 from "../../../_runtime/metro/00038__.js";
-import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
-import TableRowGroupTitle from "../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import closure_4 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../_runtime/00718__toArray.js";
-import closure_6 from "../../stores/ChannelStore.tsx";
-import closure_7 from "../../stores/GuildCategoryStore.tsx";
-import closure_8 from "../../stores/GuildStore.tsx";
-import closure_9 from "../../stores/PermissionStore.tsx";
-import closure_10 from "../../stores/RelationshipStore.tsx";
-import closure_11 from "../../stores/UserStore.tsx";
-import { Permissions } from "../../Constants.tsx";
-import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
-import importAllResult from "../../../_runtime/00019_noop.js";
+import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../intl/index.native.tsx";
+import Text_Text from "../../design/components/Text/native/Text.tsx";
+import useChannelName from "../../modules/channel/useChannelName.tsx";
+import AlertActionCreatorsDefault from "../../actions/AlertActionCreators.tsx";
+import Stack_Stack from "../../design/components/Stack/native/Stack.native.tsx";
+import GuildActionCreatorsDefault from "../../actions/GuildActionCreators.tsx";
+import TableRow from "../../design/components/TableRow/native/TableRow.native.tsx";
+import TableRowGroup from "../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import Form from "../../design/void/Form/native/index.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import _toArray from "../../../_runtime/00718__toArray.js";
+import noop from "../../../_runtime/metro/00019__.js";
+import ChannelStore from "../../stores/ChannelStore.tsx";
+import GuildCategoryStore from "../../stores/GuildCategoryStore.tsx";
+import GuildStore from "../../stores/GuildStore.tsx";
+import PermissionStore from "../../stores/PermissionStore.tsx";
+import RelationshipStore from "../../stores/RelationshipStore.tsx";
+import UserStore from "../../stores/UserStore.tsx";
 
-require = arg1;
+require = fn;
+const Permissions = fn(1074).Permissions;
+const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-createCacheKey = { screenContainer: null, stackPadding: null };
-createCacheKey = {
+fn(4560);
+let createStyles = { screenContainer: null, stackPadding: null };
+createStyles = {
   flex: 1,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER,
-  paddingTop: ThemesDefault.space.PX_16,
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
+  paddingTop: nativeDefault.space.PX_16,
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
-let closure_15 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
-const Component = importAllResult.Component;
+createStyles.screenContainer = createStyles;
+createStyles.stackPadding = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
+let closure_15 = createStyles.createLegacyClassComponentStyles(createStyles);
+const Component = noop.Component;
 class ChannelSettingsChangeCategory extends Component {
   constructor(arg0) {
     tmp3 = new ChannelSettingsChangeCategory(global, tmp2, tmp);
-    // ThrowIfThisInitialized (0x7c)
     channel = global.channel;
     closure_0 = closure_8.getGuild(channel.getGuildId());
     channel2 = global.channel;
     obj = { category: null, categories: null, submitting: false };
     categories = closure_7.getCategories(channel2.getGuildId());
-    obj[0] = closure_6.getChannel(global.channel.parent_id);
+    obj.category = closure_6.getChannel(global.channel.parent_id);
     _categories = categories._categories;
     mapped = _categories.map((channel) => channel.channel);
-    obj[1] = mapped.filter((id) => {
+    obj.categories = mapped.filter((id) => {
       let canResult = "null" === id.id;
       if (canResult) {
-        canResult = closure_1_9.can(closure_1_12.MANAGE_CHANNELS, closure_0);
+        canResult = PermissionStore.can(Permissions.MANAGE_CHANNELS, closure_0);
       }
       if (!canResult) {
-        let canResult1 = closure_1_9.can(closure_1_12.MANAGE_CHANNELS, id);
+        let canResult1 = PermissionStore.can(Permissions.MANAGE_CHANNELS, id);
         if (canResult1) {
-          canResult1 = closure_1_9.can(closure_1_12.VIEW_CHANNEL, id);
+          canResult1 = PermissionStore.can(Permissions.VIEW_CHANNEL, id);
         }
         canResult = canResult1;
       }
@@ -63,28 +70,24 @@ prototype["shouldComponentUpdate"] = function shouldComponentUpdate() {
 };
 prototype["handleSetCategory"] = function handleSetCategory(id) {
   const self = this;
-  let _require = id;
+  _require = id;
   function saveUpdates() {
     if (null == guildId) {
       const _Error = Error;
-      error = new Error("ChannelSettingsChangeCategory.handleSetCategory: Invalid guild_id");
+      const error = new Error("ChannelSettingsChangeCategory.handleSetCategory: Invalid guild_id");
       throw error;
     } else {
-      obj = channel(channel[17]);
-      return channel(channel[17])
-        .batchChannelUpdate(tmp, closure_7)
-        .then(() => arr.pop());
+      return GuildActionCreatorsDefault.batchChannelUpdate(tmp, result).then(() => closure_1_2.pop());
     }
   }
   const props = this.props;
-  let channel = props.channel;
   const navigation = props.navigation;
-  let obj = obj1;
-  channel = obj1.getChannel(id);
+  let obj = ChannelStore;
+  const channel = ChannelStore.getChannel(id);
   const guildId = channel.getGuildId();
   if (null == guildId) {
     const _Error2 = Error;
-    error = new Error("ChannelSettingsChangeCategory.handleSetCategory: Invalid guild_id");
+    let error = new Error("ChannelSettingsChangeCategory.handleSetCategory: Invalid guild_id");
     throw error;
   } else {
     let tmp3 = null;
@@ -92,7 +95,7 @@ prototype["handleSetCategory"] = function handleSetCategory(id) {
       tmp3 = id;
     }
     _require = tmp3;
-    const categories = store.getCategories(channel.getGuildId());
+    const categories = GuildCategoryStore.getCategories(channel.getGuildId());
     let arr = channel(channel[14])(
       categories._categories,
       categories,
@@ -115,8 +118,7 @@ prototype["handleSetCategory"] = function handleSetCategory(id) {
         let tmp = channel.channel.id !== channel.id;
         if (tmp) {
           const _String = String;
-          let arr = obj[String(undefined, channel.channel.parent_id)];
-          arr = undefined;
+          let arr;
           if (arr != null) {
             arr = arr.push(channel);
           }
@@ -128,35 +130,35 @@ prototype["handleSetCategory"] = function handleSetCategory(id) {
       arr = obj[String(undefined, tmp3)].push(found);
       const arr3 = obj[String(undefined, tmp3)];
       const tmp28 = tmp6(tmp7[14])(categories._categories, obj);
-      obj = { oldOrdering: null, newOrdering: null, idGetter: null, existingPositionGetter: null };
-      obj[0] = arr;
-      obj[1] = tmp28;
-      obj[2] = function idGetter(channel) {
-        return channel.channel.id;
+      obj = {
+        oldOrdering: arr,
+        newOrdering: tmp28,
+        idGetter(channel) {
+          return channel.channel.id;
+        },
+        existingPositionGetter(channel) {
+          return channel.channel.position;
+        },
       };
-      obj[3] = function existingPositionGetter(channel) {
-        return channel.channel.position;
-      };
-      const result = _require(tmp7[15]).calculatePositionDeltas(obj);
-      store = result;
+      const result = require("DragAndDropUtils").calculatePositionDeltas(obj);
+      GuildCategoryStore = result;
       if (result.length > 0) {
         const found1 = result.find((id) => {
           let flag = id.id === channel.id;
           if (flag) {
-            id.parent_id = closure_0;
+            id.parent_id = parent_id;
             closure_6 = id;
             flag = true;
           }
           return flag;
         });
       } else {
-        obj1 = { id: null, parent_id: null };
-        obj1[0] = channel.id;
-        obj1[1] = tmp3;
-        arr = result.push(obj1);
+        const obj1 = { id: channel.id, parent_id: tmp3 };
+        ChannelStore = obj1;
+        arr = result.push(ChannelStore);
       }
       const appChannelBotUserId = self.props.appChannelBotUserId;
-      let obj6 = _require(tmp7[15]);
+      let obj6 = require("DragAndDropUtils");
       closure_8 = navigation(tmp7[16]).areChannelsLocked(channel, channel, appChannelBotUserId);
       const obj3 = navigation(tmp7[16]);
       closure_9 = navigation(tmp7[16]).areChannelsLocked(
@@ -168,49 +170,44 @@ prototype["handleSetCategory"] = function handleSetCategory(id) {
         if (null != channel) {
           if (closure_9) {
             if (!closure_8) {
-              obj = channel(channel[18]);
               obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null };
-              const intl = id(channel[19]).intl;
-              obj[0] = intl.string(id(channel[19]).t.YWMtRe);
-              const intl2 = id(channel[19]).intl;
+              const intl = util.intl;
+              obj.title = intl.string(util.t.YWMtRe);
+              const intl2 = util.intl;
               obj = { channelName: null, categoryName: null };
-              const obj4 = id(channel[20]);
-              obj[0] = obj4.computeChannelName(channel, closure_1_11, saveUpdates, true);
-              obj[1] = id(channel[20]).computeChannelName(tmp, closure_1_11, saveUpdates);
-              obj[1] = intl2.format(id(channel[19]).t["iKW+jY"], obj);
-              const intl3 = id(channel[19]).intl;
-              obj[2] = intl3.string(id(channel[19]).t.eW8Gy4);
-              const intl4 = id(channel[19]).intl;
-              obj[3] = intl4.string(id(channel[19]).t.s4uM3b);
-              obj[4] = function onConfirm() {
-                closure_6.lock_permissions = true;
-                if (null == closure_4) {
+              const obj4 = useChannelName;
+              obj.channelName = obj4.computeChannelName(channel, UserStore, RelationshipStore, true);
+              obj.categoryName = useChannelName.computeChannelName(tmp, UserStore, RelationshipStore);
+              obj.body = intl2.format(util.t["iKW+jY"], obj);
+              const intl3 = util.intl;
+              obj.confirmText = intl3.string(util.t.eW8Gy4);
+              const intl4 = util.intl;
+              obj.cancelText = intl4.string(util.t.s4uM3b);
+              obj.onConfirm = function onConfirm() {
+                id.lock_permissions = true;
+                if (null == guildId) {
                   const _Error = Error;
-                  error = new Error("ChannelSettingsChangeCategory.handleSetCategory: Invalid guild_id");
+                  const error = new Error("ChannelSettingsChangeCategory.handleSetCategory: Invalid guild_id");
                   throw error;
                 } else {
-                  obj = closure_1_1(closure_1_3[17]);
-                  closure_1_1(closure_1_3[17])
-                    .batchChannelUpdate(tmp, closure_7)
-                    .then(() => arr.pop());
+                  obj = channel(channel[17]);
+                  channel(channel[17])
+                    .batchChannelUpdate(tmp, closure_1_7)
+                    .then(() => closure_1_2.pop());
                 }
               };
-              obj[5] = saveUpdates;
+              obj.onCancel = saveUpdates;
               obj.show(obj);
-              const obj5 = id(channel[20]);
             }
           }
         }
         if (null == guildId) {
           let _Error = Error;
-          error = new Error("ChannelSettingsChangeCategory.handleSetCategory: Invalid guild_id");
+          let error = new Error("ChannelSettingsChangeCategory.handleSetCategory: Invalid guild_id");
           throw error;
         } else {
-          const obj6 = channel(channel[17]);
-          channel(channel[17])
-            .batchChannelUpdate(tmp24, closure_7)
-            .then(() => arr.pop());
-          const batchChannelUpdateResult = channel(channel[17]).batchChannelUpdate(tmp24, closure_7);
+          GuildActionCreatorsDefault.batchChannelUpdate(tmp24, result).then(() => closure_1_2.pop());
+          const batchChannelUpdateResult = GuildActionCreatorsDefault.batchChannelUpdate(tmp24, result);
         }
       });
     }
@@ -219,9 +216,8 @@ prototype["handleSetCategory"] = function handleSetCategory(id) {
 };
 prototype["renderCategory"] = function renderCategory(label) {
   const self = this;
-  const _require = label;
-  return callback3(
-    require("../../design/components/TableRow/native/TableRow.native.tsx").TableRow,
+  return map1(
+    TableRow.TableRow,
     {
       label: label.name,
       onPress() {
@@ -233,7 +229,7 @@ prototype["renderCategory"] = function renderCategory(label) {
 };
 prototype["renderCategories"] = function renderCategories() {
   const self = this;
-  let arr = callback2(this.state.categories);
+  let arr = _toArray(this.state.categories);
   const substr = arr.slice(0);
   const category = this.state.category;
   if (null != category) {
@@ -249,21 +245,19 @@ prototype["renderCategories"] = function renderCategories() {
   const mapped = substr.map(self.renderCategory, self);
   let tmp4 = null;
   if (mapped.length > 0) {
-    const obj = { hasIcons: false, children: null };
-    obj[1] = mapped;
-    tmp4 = callback3(TableRowGroupTitle.TableRowGroup, obj);
+    const obj = { hasIcons: false, children: mapped };
+    tmp4 = map1(TableRowGroup.TableRowGroup, obj);
   }
   return tmp4;
 };
 prototype["render"] = function render() {
-  let self = this;
-  self = this;
+  const self = this;
   const category = this.state.category;
-  const first = callback(this.state.categories, 1)[0];
-  const tmp2 = callback4(this.context);
+  const first = _slicedToArray(this.state.categories, 1)[0];
+  const tmp2 = closure_15(this.context);
   let obj = { style: tmp2.screenContainer, children: null };
-  obj = { style: tmp2.stackPadding, spacing: self(576).space.PX_24, children: null };
-  const intl = first(1114).intl;
+  obj = { style: tmp2.stackPadding, spacing: nativeDefault.space.PX_24, children: null };
+  const intl = util.intl;
   if (null != category) {
     let name = category.name;
   } else {
@@ -273,46 +267,45 @@ prototype["render"] = function render() {
   obj = {
     variant: "text-md/medium",
     color: "text-muted",
-    children: intl.formatToPlainString(first(1114).t.OqccVl, { categoryName: name }),
+    children: intl.formatToPlainString(util.t.OqccVl, { categoryName: name }),
   };
-  const items = [closure_13(first(4556).Text, obj), ,];
+  const items = [map1(Text_Text.Text, obj), ,];
   let tmp3Result = null;
   if (null != first) {
     tmp3Result = null;
     if ("null" === first.id) {
       tmp3Result = null;
       if (null != category) {
-        obj1 = { hasIcons: false, children: null };
-        const obj2 = { label: null, onPress: null };
-        obj2[0] = first.name;
-        obj2[1] = function onPress() {
-          return self.handleSetCategory(first.id);
+        const obj1 = { hasIcons: false, children: null };
+        const obj2 = {
+          label: first.name,
+          onPress() {
+            return self.handleSetCategory(first.id);
+          },
         };
-        obj1[1] = tmp3(tmp4(5605).TableRow, obj2, first.id);
+        obj1.children = tmp3(tmp4(5605).TableRow, obj2, first.id);
         tmp3Result = tmp3(tmp4(5687).TableRowGroup, obj1);
       }
     }
   }
   items[1] = tmp3Result;
   items[2] = self.renderCategories();
-  obj[2] = items;
-  obj[1] = closure_14(first(4973).Stack, obj);
-  return closure_13(first(8593).Form, obj);
+  obj.children = items;
+  obj.children = closure_1_14(Stack_Stack.Stack, obj);
+  return map1(Form.Form, obj);
 };
-ChannelSettingsChangeCategory.contextType = require("ManaContext").ThemeContext;
-let obj1 = { paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
-let result = require("set").fileFinishedImporting(
-  "components_native/channel_settings/ChannelSettingsChangeCategory.tsx",
-);
+ChannelSettingsChangeCategory.contextType = fn(4271).ThemeContext;
+const size = fn(2);
+let result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsChangeCategory.tsx");
 
 export default function ConnectedChannelSettingsChangeCategory(channelId) {
   channelId = channelId.channelId;
-  const items = [closure_6];
-  const channel = channelId(504).useStateFromStores(items, () => closure_1_6.getChannel(channelId));
+  const items = [ChannelStore];
+  const channel = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   const obj = channelId(504);
   const navigation = channelId(1483).useNavigation();
   const obj2 = channelId(1483);
   const appChannelBotUserId = channelId(11610).useAppChannelBotUserId(channel);
   _modDef38(null != channel, "ConnectedChannelSettingsChangeCategory: channel cannot be undefined");
-  return callback3(ChannelSettingsChangeCategory, { channel, navigation, appChannelBotUserId });
+  return closure_13(ChannelSettingsChangeCategory, { channel, navigation, appChannelBotUserId });
 }

@@ -1,38 +1,38 @@
 // discord_app/modules/guild_role_subscriptions/native/components/NavigateForwardButton.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import Button from "../../../../design/void/native.tsx";
-import Text from "../../../../design/components/Text/native/Text.tsx";
-import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
-import registerAssetDefault from "../../../../../_runtime/15222_registerAsset.js";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import native from "../../../../design/void/native.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
+import _modDef15222 from "../../../../../_runtime/metro/15222__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-createCacheKey = { container: null, text: null };
-createCacheKey = {
+require = fn;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+fn(4560);
+let createStyles = { container: null, text: null };
+createStyles = {
   alignItems: "center",
-  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL,
+  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL,
   flexDirection: "row",
   padding: 16,
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexGrow: 1 };
-let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting(
+createStyles.container = createStyles;
+createStyles.text = { flexGrow: 1 };
+let closure_5 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/native/components/NavigateForwardButton.tsx",
 );
 
 export default function NavigateForwardButton(arg0) {
   ({ onPress, text } = arg0);
-  const tmp = callback3();
+  const tmp = closure_5();
   let obj = { style: tmp.container, onPress, children: null };
   obj = { style: tmp.text, variant: "text-md/semibold", color: "interactive-text-active", children: text };
-  const items = [callback(Text.Text, obj)];
-  obj = { source: registerAssetDefault };
-  items[1] = callback(Button.Icon, obj);
-  obj[2] = items;
-  return callback2(PressableBase.PressableHighlight, obj);
+  const items = [React3(Text_Text.Text, obj)];
+  obj = { source: _modDef15222 };
+  items[1] = React3(native.Icon, obj);
+  obj.children = items;
+  return React4(Pressables.PressableHighlight, obj);
 }

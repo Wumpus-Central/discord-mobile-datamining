@@ -1,15 +1,16 @@
 // discord_app/modules/guilds_bar/native/utils/getGuildBarNeighbors.tsx
-import GuildsNodeType from "../../GuildsTree.tsx";
-import closure_2 from "../../../../stores/SortedGuildStore.tsx";
+import GuildsTree from "../../GuildsTree.tsx";
+import SortedGuildStore from "../../../../stores/SortedGuildStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/guilds_bar/native/utils/getGuildBarNeighbors.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guilds_bar/native/utils/getGuildBarNeighbors.tsx");
 
 export default function getGuildBarNeighbors(arg0) {
-  guildsTree = guildsTree.getGuildsTree();
+  const guildsTree = SortedGuildStore.getGuildsTree();
   const node = guildsTree.getNode(arg0);
   if (null != node) {
-    if (node.type === GuildsNodeType.GuildsNodeType.GUILD) {
+    if (node.type === GuildsTree.GuildsNodeType.GUILD) {
       if (null != node.parentId) {
         let root = guildsTree.getNode(node.parentId);
       } else {
@@ -27,24 +28,19 @@ export default function getGuildBarNeighbors(arg0) {
           if (root.type === tmp5(5440).GuildsNodeType.FOLDER) {
             tmp2 = root;
           }
-          let obj = { containingFolder: null, above: null, below: null };
-          obj[0] = tmp2;
+          let obj = { containingFolder: tmp2, above: null, below: null };
           let tmp3 = null;
           if (null != root.children[index - 1]) {
-            obj = { node: null, isFolder: null };
-            obj[0] = tmp8;
-            obj[1] = tmp8.type === tmp5(5440).GuildsNodeType.FOLDER;
+            obj = { node: tmp8, isFolder: tmp8.type === tmp5(5440).GuildsNodeType.FOLDER };
             tmp3 = obj;
           }
-          obj[1] = tmp3;
+          obj.above = tmp3;
           let tmp4 = null;
           if (null != root.children[index + 1]) {
-            obj1 = { node: null, isFolder: null };
-            obj1[0] = tmp9;
-            obj1[1] = tmp9.type === tmp5(5440).GuildsNodeType.FOLDER;
+            const obj1 = { node: tmp9, isFolder: tmp9.type === tmp5(5440).GuildsNodeType.FOLDER };
             tmp4 = obj1;
           }
-          obj[2] = tmp4;
+          obj.below = tmp4;
           return obj;
         }
       }

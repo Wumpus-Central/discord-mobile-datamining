@@ -1,19 +1,21 @@
 // discord_app/actions/native/CreateGuildActionCreators.tsx
-import closure_2 from "../../stores/GuildChannelStore.tsx";
-import { InstantInviteSources } from "../../Constants.tsx";
+import GuildChannelStore from "../../stores/GuildChannelStore.tsx";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("actions/native/CreateGuildActionCreators.tsx");
+const require = fn;
+const InstantInviteSources = fn(1074).InstantInviteSources;
+const size = fn(2);
+let result = size.fileFinishedImporting("actions/native/CreateGuildActionCreators.tsx");
 
-export const showInstantInviteModal = function showInstantInviteModal(closure_0) {
-  let result = closure_2.addConditionalChangeListener(() => {
-    defaultChannel = closure_1_2.getDefaultChannel(defaultChannel);
+export const showInstantInviteModal = function showInstantInviteModal(arg0) {
+  closure_0 = arg0;
+  let result = GuildChannelStore.addConditionalChangeListener(() => {
+    defaultChannel = GuildChannelStore.getDefaultChannel(defaultChannel);
     let flag = null == defaultChannel;
     if (!flag) {
       const _setImmediate = setImmediate;
       setImmediate(() => {
-        let obj = defaultChannel(closure_1_1[2]);
-        obj = { source: closure_1_3.GUILD_CREATE };
+        defaultChannel(dependencyMap[2]);
+        const obj = { source: constants.GUILD_CREATE };
         const result = obj.showInstantInviteActionSheet(defaultChannel, obj);
       });
       flag = false;

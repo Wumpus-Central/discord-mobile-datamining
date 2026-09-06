@@ -1,26 +1,29 @@
 // discord_app/actions/native/MessagePreviewActionCreators.tsx
-import set from "../../../_runtime/00002_set.js";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import ME from "../../Constants.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import Constants from "../../Constants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-({ Endpoints: c3, MAX_MESSAGES_PER_CHANNEL: c4 } = ME);
-const result = set.fileFinishedImporting("actions/native/MessagePreviewActionCreators.tsx");
+({ Endpoints: c3, MAX_MESSAGES_PER_CHANNEL: closure_4 } = Constants);
+const result = size.fileFinishedImporting("actions/native/MessagePreviewActionCreators.tsx");
 
 export default {
   fetchMessages(channelId, around) {
-    const _require = channelId;
-    closure_1 = around;
-    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
-    obj = { url: closure_3.MESSAGES(channelId), query: obj, retries: 2, oldFormErrors: true, rejectWithError: true };
-    obj = { limit: closure_4, around };
-    const value = HTTP.get(obj);
+    _require = channelId;
+    const HTTP = require("HTTPUtils").HTTP;
+    const request = {
+      url: closure_3.MESSAGES(channelId),
+      query: { limit, around },
+      retries: 2,
+      oldFormErrors: true,
+      rejectWithError: true,
+    };
+    value = HTTP.get(request);
     value.then((body) => {
-      let obj = around(closure_1_2[2]);
-      obj = { type: "LOAD_MESSAGES_AROUND_SUCCESS", channelId: closure_0, messages: body.body, around };
+      const obj = { type: "LOAD_MESSAGES_AROUND_SUCCESS", channelId, messages: body.body, around };
       obj.dispatch(obj);
     });
   },
   clearMessages() {
-    dispatcherDefault.dispatch({ type: "CLEAR_MESSAGES_AROUND_SUCCESS" });
+    DispatcherDefault.dispatch({ type: "CLEAR_MESSAGES_AROUND_SUCCESS" });
   },
 };

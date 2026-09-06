@@ -1,66 +1,60 @@
 // discord_app/modules/client_themes/ClientThemesBackgroundStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import getThemeForColor from "ClientThemesUtils.tsx";
-import explicitContentFromProto from "../user_settings/UserSettings.tsx";
-import DismissibleContent from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import getPremiumPlanItemDefault from "../../utils/PremiumUtils.tsx";
-import UNSAFE_isDismissibleContentDismissed from "../dismissible_content/DismissibleContentUnsafeUtils.tsx";
-import closure_5 from "../user_settings/SelectivelySyncedUserSettingsStore.tsx";
-import closure_6 from "../user_settings/ThemeStore.tsx";
-import closure_7 from "../user_settings/UnsyncedUserSettingsStore.tsx";
-import closure_8 from "../user_settings/UserSettingsProtoStore.tsx";
-import { isGuildTextChannelType } from "../../records/ChannelRecord.tsx";
-import closure_10 from "../../stores/ChannelStore.tsx";
-import closure_11 from "../../stores/UserStore.tsx";
-import { BACKGROUND_GRADIENT_PRESETS_MAP as closure_12 } from "ClientThemesConstants.tsx";
-import { SystemThemeState } from "../user_settings/ThemeConstants.tsx";
-import { isPerModeThemingActive } from "../user_settings/isPerModeThemingActive.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import ClientThemesUtils from "ClientThemesUtils.tsx";
+import UserSettings from "../user_settings/UserSettings.tsx";
+import dismissible_content from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import PremiumUtilsDefault from "../../utils/PremiumUtils.tsx";
+import DismissibleContentUnsafeUtils from "../dismissible_content/DismissibleContentUnsafeUtils.tsx";
+import SelectivelySyncedUserSettingsStore from "../user_settings/SelectivelySyncedUserSettingsStore.tsx";
+import ThemeStore from "../user_settings/ThemeStore.tsx";
+import UnsyncedUserSettingsStore from "../user_settings/UnsyncedUserSettingsStore.tsx";
+import UserSettingsProtoStore from "../user_settings/UserSettingsProtoStore.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
+import UserStore from "../../stores/UserStore.tsx";
 
-require = arg1;
+require = fn;
 function reset() {
-  if (c14) {
+  if (closure_14) {
     c3 = undefined;
   }
   c16 = false;
   c15 = false;
 }
 function handleUserStoreChange() {
-  const tmp = !getPremiumPlanItemDefault.canUseClientThemes(currentUser.getCurrentUser());
+  const tmp = !PremiumUtilsDefault.canUseClientThemes(UserStore.getCurrentUser());
   if (tmp === closure_14) {
     return false;
   } else {
     closure_14 = tmp;
     c16 = false;
   }
-  const obj = getPremiumPlanItemDefault;
 }
 function handleSelectivelySyncedStoreChange() {
-  const ClientThemeSettings = explicitContentFromProto.ClientThemeSettings;
+  const ClientThemeSettings = UserSettings.ClientThemeSettings;
   const backgroundGradientPresetId = ClientThemeSettings.getSetting().backgroundGradientPresetId;
   if (null == backgroundGradientPresetId) {
-    if (null == closure_3) {
+    if (null == c3) {
       return false;
     } else {
-      closure_3 = undefined;
+      c3 = undefined;
     }
-  } else if (dependencyMap[backgroundGradientPresetId] === closure_3) {
+  } else if (dependencyMap[backgroundGradientPresetId] === c3) {
     return false;
   } else {
-    closure_3 = tmp2;
+    c3 = tmp2;
   }
 }
 function handleSyncedModeChange() {
-  return isPerModeThemingActive /* isPerModeThemingActive */
-    .isPerModeThemingActive();
+  return require("isPerModeThemingActive").isPerModeThemingActive();
 }
 function handleSameAsDeviceThemeToggle() {
   return true;
 }
 function handleUserSettingsProtoStoreUpdate() {
-  const ClientThemeSettings = explicitContentFromProto.ClientThemeSettings;
+  const ClientThemeSettings = UserSettings.ClientThemeSettings;
   const backgroundGradientPresetId = ClientThemeSettings.getSetting().backgroundGradientPresetId;
-  let result = useSystemTheme.useSystemTheme !== SystemThemeState.ON;
+  let result = UnsyncedUserSettingsStore.useSystemTheme !== SystemThemeState.ON;
   if (!result) {
     result = null == backgroundGradientPresetId;
   }
@@ -76,8 +70,8 @@ function handleUserSettingsProtoStoreUpdate() {
     let tmp10 = null == tmp9;
     if (!tmp10) {
       let id;
-      if (user != null) {
-        id = user.id;
+      if (_undefined != null) {
+        id = _undefined.id;
       }
       let id1;
       if (tmp9 != null) {
@@ -86,13 +80,16 @@ function handleUserSettingsProtoStoreUpdate() {
       tmp10 = id === id1;
     }
     if (!tmp10) {
-      user = tmp9;
+      _undefined = tmp9;
     }
-  } else if (null != user) {
-    user = undefined;
+  } else if (null != _undefined) {
+    _undefined = undefined;
   }
 }
-let c14 = true;
+const isGuildTextChannelType = fn(1961).isGuildTextChannelType;
+const dependencyMap = fn(1230).BACKGROUND_GRADIENT_PRESETS_MAP;
+const SystemThemeState = fn(1186).SystemThemeState;
+let closure_14 = true;
 let c15 = false;
 let c16 = false;
 const PersistedStore = initializeDefault.PersistedStore;
@@ -122,39 +119,45 @@ prototype["initialize"] = function initialize(gradientPresetId) {
     if (null != gradientPresetId.gradientPresetId) {
       tmp = dependencyMap[gradientPresetId.gradientPresetId];
     }
-    closure_3 = tmp;
+    c3 = tmp;
     closure_14 = true !== gradientPresetId.canUseClientThemes;
   }
-  this.waitFor(closure_10, closure_5, closure_6, closure_7, closure_8, closure_11);
-  const items = [closure_11];
+  this.waitFor(
+    ChannelStore,
+    SelectivelySyncedUserSettingsStore,
+    ThemeStore,
+    UnsyncedUserSettingsStore,
+    UserSettingsProtoStore,
+    UserStore,
+  );
+  const items = [UserStore];
   this.syncWith(items, handleUserStoreChange);
-  const items1 = [closure_5];
+  const items1 = [SelectivelySyncedUserSettingsStore];
   this.syncWith(items1, handleSelectivelySyncedStoreChange);
 };
 prototype["getState"] = function getState() {
-  if (c14) {
+  if (closure_14) {
     let obj = {};
   } else {
     let id;
-    if (user != null) {
-      id = user.id;
+    if (_undefined != null) {
+      id = _undefined.id;
     }
-    obj = { gradientPresetId: null, canUseClientThemes: true };
-    obj[0] = id;
+    obj = { gradientPresetId: id, canUseClientThemes: true };
   }
   return obj;
 };
 Object.defineProperty(prototype, "gradientPreset", {
   get: function gradientPreset() {
     if (obj.isPerModeThemingActive()) {
-      if (c14) {
+      if (closure_14) {
         let tmp10;
         if (c16) {
-          tmp10 = closure_3;
+          tmp10 = c3;
         }
         return tmp10;
       } else {
-        syncedClientTheme = syncedClientTheme.getSyncedClientTheme(syncedClientTheme.systemTheme);
+        const syncedClientTheme = ThemeStore.getSyncedClientTheme(ThemeStore.systemTheme);
         let prop;
         if (syncedClientTheme != null) {
           prop = syncedClientTheme.backgroundGradientPresetId;
@@ -166,23 +169,22 @@ Object.defineProperty(prototype, "gradientPreset", {
         return tmp7;
       }
     } else {
-      return closure_3;
+      return c3;
     }
-    obj = isPerModeThemingActive;
+    obj = require("isPerModeThemingActive");
   },
   set: undefined,
 });
 prototype["getLinearGradient"] = function getLinearGradient() {
   let linearGradientForBackgroundGradient = null;
   if (null != this.gradientPreset) {
-    linearGradientForBackgroundGradient = getThemeForColor.getLinearGradientForBackgroundGradient(tmp.gradientPreset);
-    const obj = getThemeForColor;
+    linearGradientForBackgroundGradient = ClientThemesUtils.getLinearGradientForBackgroundGradient(tmp.gradientPreset);
   }
   return linearGradientForBackgroundGradient;
 };
 Object.defineProperty(prototype, "isPreview", {
   get: function isPreview() {
-    return c14;
+    return closure_14;
   },
   set: undefined,
 });
@@ -194,21 +196,21 @@ Object.defineProperty(prototype, "isCoachmark", {
 });
 Object.defineProperty(prototype, "mobilePendingThemeIndex", {
   get: function mobilePendingThemeIndex() {
-    return closure_4;
+    return mobileThemesIndex;
   },
   set: undefined,
 });
 ClientThemesBackgroundStore.displayName = "ClientThemesBackgroundStore";
 ClientThemesBackgroundStore.persistKey = "ClientThemesBackgroundStore";
-const clientThemesBackgroundStore = new ClientThemesBackgroundStore(dispatcherDefault, {
+const clientThemesBackgroundStore = new ClientThemesBackgroundStore(DispatcherDefault, {
   UPDATE_BACKGROUND_GRADIENT_PRESET: function handleUpdateBackgroundGradientPreset(presetId) {
     presetId = presetId.presetId;
-    closure_16 = c14;
+    c16 = closure_14;
     let tmp;
     if (null != presetId) {
       tmp = dependencyMap[presetId];
     }
-    closure_3 = tmp;
+    c3 = tmp;
   },
   UPDATE_MOBILE_PENDING_THEME_INDEX: function handleUpdateMobilePendingThemeIndex(mobileThemesIndex) {
     mobileThemesIndex = mobileThemesIndex.mobileThemesIndex;
@@ -227,9 +229,11 @@ const clientThemesBackgroundStore = new ClientThemesBackgroundStore(dispatcherDe
     channelId = channelId.channelId;
     if (null != channelId) {
       if (null != channelId.guildId) {
-        if (!obj2.UNSAFE_isDismissibleContentDismissed(DismissibleContent.DismissibleContent.CLIENT_THEMES_COACHMARK)) {
+        if (
+          !obj2.UNSAFE_isDismissibleContentDismissed(dismissible_content.DismissibleContent.CLIENT_THEMES_COACHMARK)
+        ) {
           if (tmp6Result.ageEligibleForPremiumUpsell(tmp)) {
-            channel = channel.getChannel(channelId);
+            const channel = ChannelStore.getChannel(channelId);
             let tmp4 = null != channel;
             if (tmp4) {
               tmp4 = isGuildTextChannelType(channel.type);
@@ -240,7 +244,7 @@ const clientThemesBackgroundStore = new ClientThemesBackgroundStore(dispatcherDe
           }
           tmp6Result = tmp6(4404);
         }
-        obj2 = UNSAFE_isDismissibleContentDismissed;
+        obj2 = DismissibleContentUnsafeUtils;
         tmp6 = require;
       }
     }
@@ -257,6 +261,7 @@ const clientThemesBackgroundStore = new ClientThemesBackgroundStore(dispatcherDe
   SET_SAME_AS_DEVICE_THEME_ENABLED: handleSameAsDeviceThemeToggle,
   CLEAR_SYNCED_CLIENT_THEMES: handleSameAsDeviceThemeToggle,
 });
-let result = require("set").fileFinishedImporting("modules/client_themes/ClientThemesBackgroundStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/client_themes/ClientThemesBackgroundStore.tsx");
 
 export default clientThemesBackgroundStore;

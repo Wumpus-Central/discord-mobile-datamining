@@ -1,85 +1,70 @@
 // discord_app/modules/age_gate/native/components/ExistingUserAgeGateConfirm.tsx
-import combinedDefault from "../../../../utils/HelpdeskUtils.tsx";
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { HelpdeskArticles } from "../../../../Constants.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-({ jsx: closure_8, jsxs: c9 } = jsxProd);
-let closure_10 = createCacheKey.createStyles({
+const require = fn;
+const View = fn(17).View;
+const HelpdeskArticles = fn(1074).HelpdeskArticles;
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(4560);
+let closure_10 = createStyles.createStyles({
   container: { padding: 16, flex: 1, alignItems: "center", justifyContent: "center" },
   header: { textAlign: "center", marginBottom: 8 },
   body: { textAlign: "center", lineHeight: 20, marginBottom: 16 },
   buttonWrapper: { width: "100%" },
 });
-const result = require("set").fileFinishedImporting(
-  "modules/age_gate/native/components/ExistingUserAgeGateConfirm.tsx",
-);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/age_gate/native/components/ExistingUserAgeGateConfirm.tsx");
 
 export default function ExistingUserAgeGateConfirm(age) {
   const onConfirm = age.onConfirm;
-  importDefault = undefined;
   dependencyMap = undefined;
-  function _handleConfirm() {
-    const self = this;
-    const tmp = _handleConfirm(function* () {
-      closure_0 = tmp3;
-      closure_1_2(true);
-      c3 = 1;
-      yield closure_1_0();
-      if (1 === tmp7) {
-        c3 = 0;
-        arr = arr.pop();
-        callback(false);
-        c4 = 3;
-      } else if (arg0 === 1) {
-        c4 = 3;
-        throw arg1;
-      } else if (arg0 !== 2) {
-        if (arg1.shouldShowError) {
-          arr = arr.pop();
-        }
-        c3 = 0;
+  closure_3 = async function _handleConfirm() {
+    closure_0 = tmp3;
+    dependencyMap(true);
+    await onConfirm();
+    if (1 === tmp7) {
+      c3 = 0;
+      closure_128_1.pop();
+      closure_128_2(false);
+      c4 = 3;
+    } else if (arg0 === 1) {
+      c4 = 3;
+      throw arg1;
+    } else if (arg0 !== 2) {
+      if (arg1.shouldShowError) {
+        closure_128_1.pop();
       }
       c3 = 0;
-      return arg1;
-    });
-    closure_3 = tmp;
-    const apply = tmp.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
     }
-    return applyArgumentsResult;
-  }
-  let tmp = callback4();
+    return arg1;
+  };
+  const tmp = closure_10();
   let obj = onConfirm(1483);
   importDefault = obj.useNavigation();
-  [tmp3, c2] = callback(React.useState(false), 2);
+  [tmp3, c2] = _slicedToArray(noop.useState(false), 2);
   obj = { top: true, style: tmp.container, children: null };
   obj = { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = onConfirm(1114).intl;
-  obj[3] = intl.format(onConfirm(1114).t.wumolR, { age: age.age });
-  const items = [callback2(onConfirm(4556).Text, obj), ,];
-  obj1 = { style: tmp.body, variant: "text-md/medium", color: "interactive-text-default", children: null };
+  obj.children = intl.format(onConfirm(1114).t.wumolR, { age: age.age });
+  const items = [closure_8(onConfirm(4556).Text, obj), ,];
+  const obj1 = { style: tmp.body, variant: "text-md/medium", color: "interactive-text-default", children: null };
   const intl2 = onConfirm(1114).intl;
   const obj2 = { helpURL: null };
-  const tmp2 = callback(React.useState(false), 2);
-  obj2[0] = combinedDefault.getArticleURL(HelpdeskArticles.AGE_GATE);
-  obj1[3] = intl2.format(onConfirm(1114).t.n3QjDE, obj2);
-  items[1] = callback2(onConfirm(4556).Text, obj1);
+  const tmp2 = _slicedToArray(noop.useState(false), 2);
+  obj2.helpURL = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.AGE_GATE);
+  obj1.children = intl2.format(onConfirm(1114).t.n3QjDE, obj2);
+  items[1] = closure_8(onConfirm(4556).Text, obj1);
   const obj3 = { style: tmp.buttonWrapper, children: null };
   const obj4 = { loading: tmp3, disabled: tmp3, text: null, onPress: null, grow: true };
   const intl3 = onConfirm(1114).intl;
-  obj4[2] = intl3.string(onConfirm(1114).t["6tahin"]);
-  obj4[3] = function handleConfirm() {
+  obj4.text = intl3.string(onConfirm(1114).t["6tahin"]);
+  obj4.onPress = function handleConfirm() {
     const self = this;
-    const apply = _handleConfirm.apply;
+    const apply = closure_3.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -87,8 +72,8 @@ export default function ExistingUserAgeGateConfirm(age) {
     }
     return applyArgumentsResult;
   };
-  obj3[1] = callback2(onConfirm(4975).Button, obj4);
-  items[2] = callback2(View, obj3);
-  obj[2] = items;
-  return callback3(onConfirm(7123).SafeAreaPaddingView, obj);
+  obj3.children = closure_8(onConfirm(4975).Button, obj4);
+  items[2] = closure_8(View, obj3);
+  obj.children = items;
+  return closure_9(onConfirm(7123).SafeAreaPaddingView, obj);
 }

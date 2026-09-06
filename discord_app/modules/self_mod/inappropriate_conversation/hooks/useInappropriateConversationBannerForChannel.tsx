@@ -1,13 +1,13 @@
 // discord_app/modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationBannerForChannel.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import handleConnectionOpen from "../../ChannelSafetyWarningsStore.tsx";
-import InappropriateConversationExperiment from "../SelfModInappropriateConversationExperiment.tsx";
+import ChannelSafetyWarningsStore from "../../ChannelSafetyWarningsStore.tsx";
+import SelfModInappropriateConversationExperiment from "../SelfModInappropriateConversationExperiment.tsx";
 import useSafetyAlertsSettingOrDefault from "useSafetyAlertsSettingOrDefault.tsx";
 import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel.tsx";
 import useChannelSafetyWarning from "../../hooks/useChannelSafetyWarning.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const SafetyWarningTypes = handleConnectionOpen.SafetyWarningTypes;
-const result = set.fileFinishedImporting(
+const SafetyWarningTypes = ChannelSafetyWarningsStore.SafetyWarningTypes;
+const result = size.fileFinishedImporting(
   "modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationBannerForChannel.tsx",
 );
 
@@ -15,11 +15,9 @@ export const useInappropriateConversationBannerForChannel = function useInapprop
   channelId,
   LOCATION_CONTEXT_MOBILE,
 ) {
-  let obj = InappropriateConversationExperiment;
-  obj = { location: LOCATION_CONTEXT_MOBILE };
+  const obj = { location: LOCATION_CONTEXT_MOBILE };
   const isEligibleForInappropriateConversationWarning = obj.useIsEligibleForInappropriateConversationWarning(obj);
   const safetyAlertsSettingOrDefault = useSafetyAlertsSettingOrDefault.useSafetyAlertsSettingOrDefault();
-  const obj3 = useSafetyAlertsSettingOrDefault;
   const inappropriateConversationWarningsForChannel =
     useInappropriateConversationWarningsForChannel.useInappropriateConversationWarningsForChannel(channelId);
   useChannelSafetyWarning;
@@ -28,7 +26,7 @@ export const useInappropriateConversationBannerForChannel = function useInapprop
       if (0 !== inappropriateConversationWarningsForChannel.length) {
         if (
           !inappropriateConversationWarningsForChannel.some((type) => {
-            let tmp2 = type.type === obj.INAPPROPRIATE_CONVERSATION_TIER_1;
+            let tmp2 = type.type === SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1;
             if (!tmp2) {
               let tmp3 = type.type === tmp.INAPPROPRIATE_CONVERSATION_TIER_2;
               if (tmp3) {

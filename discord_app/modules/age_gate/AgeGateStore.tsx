@@ -1,10 +1,10 @@
 // discord_app/modules/age_gate/AgeGateStore.tsx
-import set from "../../../_runtime/00002_set.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import result2 from "AgeGateConstants.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import AgeGateConstants from "AgeGateConstants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const AGE_GATE_REGISTER_TIMEOUT_MS = result2.AGE_GATE_REGISTER_TIMEOUT_MS;
+const AGE_GATE_REGISTER_TIMEOUT_MS = AgeGateConstants.AGE_GATE_REGISTER_TIMEOUT_MS;
 let c0 = false;
 const Store = initializeDefault.Store;
 class AgeGateStore extends Store {}
@@ -12,7 +12,7 @@ AgeGateStore.prototype["isUnderageAnonymous"] = function isUnderageAnonymous() {
   return c0;
 };
 AgeGateStore.displayName = "AgeGateStore";
-const ageGateStore = new AgeGateStore(dispatcherDefault, {
+const ageGateStore = new AgeGateStore(DispatcherDefault, {
   AGE_GATE_PREVENT_UNDERAGE_REGISTRATION: function handleMarkUnderageAnonymous() {
     c0 = true;
     const timestamp = Date.now();
@@ -21,6 +21,6 @@ const ageGateStore = new AgeGateStore(dispatcherDefault, {
     c0 = false;
   },
 });
-const result = set.fileFinishedImporting("modules/age_gate/AgeGateStore.tsx");
+const result = size.fileFinishedImporting("modules/age_gate/AgeGateStore.tsx");
 
 export default ageGateStore;

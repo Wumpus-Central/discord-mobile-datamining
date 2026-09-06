@@ -1,24 +1,25 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardEvent.tsx
-import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import importAllResult from "../../../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../../../user_settings/LocaleStore.tsx";
-import closure_7 from "../../../../../stores/UserStore.tsx";
-import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HappeningNowConstants.tsx";
-import { AnalyticEvents } from "../../../../../Constants.tsx";
-import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
+import guild_scheduled_events_GuildScheduledEventModalActionCreators from "../../../../guild_scheduled_events/GuildScheduledEventModalActionCreators.native.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
+import LocaleStore from "../../../../user_settings/LocaleStore.tsx";
+import UserStore from "../../../../../stores/UserStore.tsx";
 
-const require = arg1;
-let c3 = importAllResult;
-({ View: c4, Image: c5 } = get_ActivityIndicator);
-const HAPPENING_NOW_CONTENT_HEIGHT = HAPPENING_NOW_PANELS_CONTAINER_PADDING.HAPPENING_NOW_CONTENT_HEIGHT;
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
+const HappeningNowConstants = fn(15294);
+const HAPPENING_NOW_CONTENT_HEIGHT = HappeningNowConstants.HAPPENING_NOW_CONTENT_HEIGHT;
 ({
-  HappeningNowCardTrackingType: c9,
+  HappeningNowCardTrackingType: closure_9,
   HAPPENING_NOW_CARD_HEIGHT: c10,
   HAPPENING_NOW_EVENT_BANNER_WIDTH,
-} = HAPPENING_NOW_PANELS_CONTAINER_PADDING);
+} = HappeningNowConstants);
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
+fn(4560);
 let obj = {
   info: { alignSelf: "center", flexShrink: 1, marginLeft: 12, gap: 2 },
   infoNoImage: null,
@@ -36,81 +37,84 @@ obj = {
   justifyContent: "center",
   flexShrink: 1,
   flexGrow: 1,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
   height: HAPPENING_NOW_CONTENT_HEIGHT,
   gap: 2,
   marginRight: -4,
   paddingLeft: 8,
   paddingRight: 8,
-  borderTopRightRadius: ThemesDefault.radii.sm,
-  borderBottomRightRadius: ThemesDefault.radii.sm,
+  borderTopRightRadius: nativeDefault.radii.sm,
+  borderBottomRightRadius: nativeDefault.radii.sm,
 };
-obj[1] = obj;
-createCacheKey = {
-  borderTopRightRadius: ThemesDefault.radii.sm,
-  borderBottomRightRadius: ThemesDefault.radii.sm,
+obj.infoNoImage = obj;
+let size = {
+  borderTopRightRadius: nativeDefault.radii.sm,
+  borderBottomRightRadius: nativeDefault.radii.sm,
   alignSelf: "center",
   width: HAPPENING_NOW_EVENT_BANNER_WIDTH,
   height: HAPPENING_NOW_CONTENT_HEIGHT,
 };
-obj[2] = createCacheKey;
-obj[3] = { flexDirection: "column", gap: 4, position: "absolute", right: 0, top: 0, bottom: 0, overflow: "hidden" };
-obj[4] = { width: 2, height: 2, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, opacity: 0.8 };
-let obj2 = { width: 2, height: 2, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, opacity: 0.8 };
-obj[5] = { width: 2, height: 4, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, opacity: 0.8 };
-obj[6] = { justifyContent: "center", alignItems: "center" };
-let obj3 = { width: 2, height: 4, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, opacity: 0.8 };
-obj[7] = { tintColor: ThemesDefault.colors.TEXT_SUBTLE };
-let obj4 = { tintColor: ThemesDefault.colors.TEXT_SUBTLE };
-obj[8] = {
-  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+obj.decorationImage = size;
+obj.dottedLineContainer = {
+  flexDirection: "column",
+  gap: 4,
+  position: "absolute",
+  right: 0,
+  top: 0,
+  bottom: 0,
+  overflow: "hidden",
+};
+const size1 = { width: 2, height: 2, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, opacity: 0.8 };
+obj.shortDottedLineSegment = size1;
+const size2 = { width: 2, height: 4, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, opacity: 0.8 };
+obj.dottedLineSegment = size2;
+obj.interestedUsersContainer = { justifyContent: "center", alignItems: "center" };
+const createStyles = { tintColor: nativeDefault.colors.TEXT_SUBTLE };
+obj.interestedUsersIcon = createStyles;
+obj.ticketContainer = {
+  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
   flexDirection: "column",
   justifyContent: "space-between",
   alignItems: "center",
   height: HAPPENING_NOW_CONTENT_HEIGHT,
   padding: 6,
-  borderTopLeftRadius: ThemesDefault.radii.sm,
-  borderBottomLeftRadius: ThemesDefault.radii.sm,
+  borderTopLeftRadius: nativeDefault.radii.sm,
+  borderBottomLeftRadius: nativeDefault.radii.sm,
 };
-let obj5 = {
-  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+let obj2 = {
+  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
   flexDirection: "column",
   justifyContent: "space-between",
   alignItems: "center",
   height: HAPPENING_NOW_CONTENT_HEIGHT,
   padding: 6,
-  borderTopLeftRadius: ThemesDefault.radii.sm,
-  borderBottomLeftRadius: ThemesDefault.radii.sm,
+  borderTopLeftRadius: nativeDefault.radii.sm,
+  borderBottomLeftRadius: nativeDefault.radii.sm,
 };
-obj[9] = { width: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.XSMALL_20] };
-let closure_14 = createCacheKey.createStyles(obj);
-const obj6 = { width: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.XSMALL_20] };
-let items = [
-  { shape: require("SolidCutout").CutoutShape.Circle, x: -8, y: HAPPENING_NOW_CONTENT_HEIGHT / 2 - 8, size: 16 },
-];
-let closure_16 = importAllResult.memo(() => {
-  const tmp = callback2();
+obj.avatarContainer = { width: fn(1178).AVATAR_SIZE_MAP[fn(undefined, 1178).AvatarSizes.XSMALL_20] };
+let closure_14 = createStyles.createStyles(obj);
+const point = { shape: fn(8813).CutoutShape.Circle, x: -8, y: HAPPENING_NOW_CONTENT_HEIGHT / 2 - 8, size: 16 };
+let items = [point];
+let closure_16 = noop.memo(() => {
+  const tmp = closure_14();
   items = [];
   let num = 0;
   if (0 <= HAPPENING_NOW_CONTENT_HEIGHT) {
     do {
-      let tmp2 = num;
-      let obj = { style: null };
-      obj[0] = 0 === num ? tmp.shortDottedLineSegment : tmp.dottedLineSegment;
-      let arr = items.push(callback(closure_4, obj, num));
+      let obj = { style: 0 === num ? tmp.shortDottedLineSegment : tmp.dottedLineSegment };
+      let arr = items.push(closure_1_12(React4, obj, num));
       num = num + 8;
-      let tmp4 = HAPPENING_NOW_CONTENT_HEIGHT;
     } while (num <= HAPPENING_NOW_CONTENT_HEIGHT);
   }
   return items;
 });
-let obj7 = {
-  shape: require("SolidCutout").CutoutShape.Circle,
-  x: -8,
-  y: HAPPENING_NOW_CONTENT_HEIGHT / 2 - 8,
-  size: 16,
-};
-const memoResult = importAllResult.memo((event) => {
+let obj3 = { width: fn(1178).AVATAR_SIZE_MAP[fn(undefined, 1178).AvatarSizes.XSMALL_20] };
+size = fn(2);
+let result = size.fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardEvent.tsx",
+);
+
+export default noop.memo((event) => {
   event = event.event;
   const index = event.index;
   ({ isLive, panelVariant } = event);
@@ -118,9 +122,9 @@ const memoResult = importAllResult.memo((event) => {
     panelVariant = false;
   }
   let creator_id;
-  const tmp = callback2();
+  const tmp = closure_14();
   let obj = event(creator_id[11]);
-  items = [closure_6];
+  items = [LocaleStore];
   creator_id = event.host_id;
   const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
   if (creator_id == null) {
@@ -135,8 +139,8 @@ const memoResult = importAllResult.memo((event) => {
   }
   const ensureHydratedUsers = tmp2Result.useEnsureHydratedUsers(event.guild_id, items2);
   tmp2Result = tmp2(tmp3[11]);
-  const items3 = [closure_7];
-  const stateFromStores1 = tmp2Result.useStateFromStores(items3, () => closure_1_7.getUser(creator_id));
+  const items3 = [UserStore];
+  const stateFromStores1 = tmp2Result.useStateFromStores(items3, () => UserStore.getUser(creator_id));
   let nextRecurrenceIdInEvent = null;
   if (null != event) {
     nextRecurrenceIdInEvent = tmp2(tmp3[13]).getNextRecurrenceIdInEvent(event);
@@ -145,12 +149,11 @@ const memoResult = importAllResult.memo((event) => {
   const tmp9 = index(creator_id[14])(event.guild_id, event.id, nextRecurrenceIdInEvent);
   const items4 = [event, index, creator_id];
   let source = null;
-  const callback = importAllResult.useCallback(() => {
-    let obj = index(creator_id[15]);
-    obj = {
+  const callback = noop.useCallback(() => {
+    let obj = {
       order: index,
       guild_id: event.guild_id,
-      type: closure_1_9.GUILD_EVENT_CARD,
+      type: constants.GUILD_EVENT_CARD,
       highlighted_user_ids: null,
       destination_channel_id: null,
     };
@@ -159,11 +162,11 @@ const memoResult = importAllResult.memo((event) => {
       items = [tmp3];
       tmp4 = items;
     }
-    obj[3] = tmp4;
-    obj[4] = event.channel_id;
-    obj.track(closure_1_11.ACTIVITY_CARD_CLICKED, obj);
+    obj.highlighted_user_ids = tmp4;
+    obj.destination_channel_id = event.channel_id;
+    obj.track(AnalyticEvents.ACTIVITY_CARD_CLICKED, obj);
     obj = { eventId: tmp2.id, event: tmp2 };
-    const result = event(creator_id[16]).openGuildEventDetails(obj);
+    const result = guild_scheduled_events_GuildScheduledEventModalActionCreators.openGuildEventDetails(obj);
   }, items4);
   if (null != event.image) {
     source = tmp2(tmp3[17]).makeSource(tmp8(tmp3[18])(event, 200));
@@ -174,13 +177,9 @@ const memoResult = importAllResult.memo((event) => {
   let num2 = 0;
   if (0 < closure_10) {
     do {
-      let tmp12 = callback;
-      let tmp13 = closure_4;
-      obj = { style: null };
-      obj[0] = tmp.dottedLineSegment;
-      let arr = items5.push(callback(closure_4, obj, num2));
+      obj = { style: tmp.dottedLineSegment };
+      let arr = items5.push(closure_12(closure_4, obj, num2));
       num2 = num2 + 8;
-      let tmp15 = closure_10;
     } while (num2 < closure_10);
   }
   obj = { onPress: callback, width: null, panelVariant: null, children: null };
@@ -191,58 +190,58 @@ const memoResult = importAllResult.memo((event) => {
   if (event.fullwidth) {
     str = "full";
   }
-  obj[1] = str;
-  obj[2] = panelVariant;
-  obj1 = { cutouts: items, children: null };
+  obj.width = str;
+  obj.panelVariant = panelVariant;
+  const obj1 = { cutouts: items, children: null };
   const obj2 = { style: tmp.ticketContainer, children: null };
   const obj3 = { style: tmp.avatarContainer, children: null };
   let tmp22Result = null != stateFromStores1;
   const tmp19 = index(creator_id[19]);
   if (tmp22Result) {
-    const obj4 = { user: null, avatarDecoration: null, guildId: null, size: null };
-    obj4[0] = stateFromStores1;
-    obj4[1] = stateFromStores1.avatarDecoration;
-    obj4[2] = event.guild_id;
-    obj4[3] = event(tmp18[9]).AvatarSizes.XSMALL_20;
+    const obj4 = {
+      user: stateFromStores1,
+      avatarDecoration: stateFromStores1.avatarDecoration,
+      guildId: event.guild_id,
+      size: event(tmp18[9]).AvatarSizes.XSMALL_20,
+    };
     tmp22Result = tmp22(event(tmp18[9]).Avatar, obj4);
   }
-  obj3[1] = tmp22Result;
-  const items6 = [callback(closure_4, obj3)];
+  obj3.children = tmp22Result;
+  const items6 = [closure_12(closure_4, obj3)];
   const obj5 = { style: tmp.interestedUsersContainer, children: null };
-  const items7 = [callback(event(creator_id[20]).GroupIcon, { style: tmp.interestedUsersIcon, size: "xxs" })];
+  const items7 = [closure_12(event(creator_id[20]).GroupIcon, { style: tmp.interestedUsersIcon, size: "xxs" })];
   tmp22Result = tmp9 > 0;
   if (tmp22Result) {
-    const obj7 = { color: "mobile-text-heading-primary", variant: "text-xs/semibold", children: null };
-    obj7[2] = tmp25(tmp18[22]).humanizeValue(tmp9, stateFromStores);
+    const obj7 = {
+      color: "mobile-text-heading-primary",
+      variant: "text-xs/semibold",
+      children: tmp25(tmp18[22]).humanizeValue(tmp9, stateFromStores),
+    };
     tmp22Result = tmp22(tmp25(tmp18[21]).Text, obj7);
     const tmp25Result = tmp25(tmp18[22]);
   }
   items7[1] = tmp22Result;
-  obj5[1] = items7;
+  obj5.children = items7;
   items6[1] = closure_13(closure_4, obj5);
-  obj2[1] = items6;
+  obj2.children = items6;
   const items8 = [closure_13(closure_4, obj2)];
   let tmp22Result1 = null == source;
   if (tmp22Result1) {
-    const obj8 = { style: null, children: null };
-    obj8[0] = tmp.dottedLineContainer;
-    obj8[1] = tmp22(closure_16, {});
+    const obj8 = { style: tmp.dottedLineContainer, children: tmp22(closure_16, {}) };
     tmp22Result1 = tmp22(tmp21, obj8);
   }
   items8[1] = tmp22Result1;
-  obj1[1] = items8;
+  obj1.children = items8;
   const items9 = [closure_13(tmp17(creator_id[10]), obj1), ,];
   let tmp22Result2 = null != source;
   if (tmp22Result2) {
-    const obj9 = { style: null, source: null, resizeMode: "cover" };
-    obj9[0] = tmp.decorationImage;
-    obj9[1] = source;
+    const obj9 = { style: tmp.decorationImage, source, resizeMode: "cover" };
     tmp22Result2 = tmp22(closure_5, obj9);
   }
   items9[1] = tmp22Result2;
   const obj10 = { style: null == source ? tmp.infoNoImage : tmp.info, children: null };
   const items10 = [
-    callback(event(creator_id[19]).HappeningNowCardHeader, { lineClamp: 3, noMargin: true, children: event.name }),
+    closure_12(event(creator_id[19]).HappeningNowCardHeader, { lineClamp: 3, noMargin: true, children: event.name }),
   ];
   let str2;
   if (isLive) {
@@ -253,22 +252,17 @@ const memoResult = importAllResult.memo((event) => {
   if (isLive) {
     str3 = "text-xs/bold";
   }
-  obj12[1] = str3;
+  obj12.variant = str3;
   if (isLive) {
     const intl = tmp25(tmp18[23]).intl;
     const _HermesInternal = HermesInternal;
     startDateTimeString = "\u00B7 " + intl.string(tmp25(tmp18[23]).t.dI3q4h).toUpperCase();
     const str4 = intl.string(tmp25(tmp18[23]).t.dI3q4h);
   }
-  obj12[2] = startDateTimeString;
-  items10[1] = callback(event(creator_id[19]).HappeningNowCardSubtitle, obj12);
-  obj10[1] = items10;
+  obj12.children = startDateTimeString;
+  items10[1] = closure_12(event(creator_id[19]).HappeningNowCardSubtitle, obj12);
+  obj10.children = items10;
   items9[2] = closure_13(closure_4, obj10);
-  obj[3] = items9;
+  obj.children = items9;
   return closure_13(tmp19, obj);
 });
-let result = require("set").fileFinishedImporting(
-  "modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardEvent.tsx",
-);
-
-export default memoResult;

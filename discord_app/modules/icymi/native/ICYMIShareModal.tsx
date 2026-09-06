@@ -1,36 +1,40 @@
 // discord_app/modules/icymi/native/ICYMIShareModal.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import SHARE_EVENT_DETAILS_LINK from "../../guild_scheduled_events/utils/ShareEventUtils.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_5 from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_7 from "../../../stores/ChannelStore.tsx";
-import { DraftType } from "../../../stores/DraftStore.tsx";
-import closure_9 from "../../../stores/UploadAttachmentStore.tsx";
-import { AbortCodes } from "../../../Constants.tsx";
-import { UserRowModes } from "../../main_tabs_v2/native/shared_components/user_list/UserRowConstants.tsx";
-import { MessageSendLocation } from "../../messages/MessageConstants.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
+import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
+import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
+import native from "../../../../discord_common/js/packages/design/native.tsx";
+import client_themes_ClientThemesUtils from "../../client_themes/native/ClientThemesUtils.tsx";
+import useColorThemeBackgroundDefault from "../../client_themes/native/useColorThemeBackground.tsx";
+import ThemedGradientDefault from "../../client_themes/native/ThemedGradient.tsx";
+import useSafeAreaInsetsKeyboardAwareDefault from "../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
+import HeaderShared from "../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
+import ClientThemesOverrides from "../../client_themes/native/ClientThemesOverrides.tsx";
+import ShareEventUtils from "../../guild_scheduled_events/utils/ShareEventUtils.tsx";
+import useShareChatInputActions from "../../share/native/useShareChatInputActions.tsx";
+import ShareChatInputDefault from "../../share/native/ShareChatInput.tsx";
+import _modDef16504 from "../../../../_runtime/metro/16504__.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../../_runtime/metro/00019__.js";
+import ChannelStore from "../../../stores/ChannelStore.tsx";
+import UploadAttachmentStore from "../../../stores/UploadAttachmentStore.tsx";
 
-require = arg1;
+require = fn;
 function Screenshot(setUri) {
   setUri = setUri.setUri;
-  let ref;
-  const tmp = callback5();
-  ref = React.useRef(null);
+  const tmp = closure_15();
+  const ref = noop.useRef(null);
   const items = [setUri];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     const timerId = setTimeout(() => {
       const current = ref.current;
       let nextPromise;
       if (current != null) {
         const capture = current.capture;
         if (capture != null) {
-          nextPromise = capture().then((arg0) => {
-            callback(arg0);
+          nextPromise = capture().then((result) => {
+            closure_1_0(result);
           });
           const captureResult = capture();
         }
@@ -38,89 +42,82 @@ function Screenshot(setUri) {
       return nextPromise;
     }, 500);
   }, items);
-  let obj = setUri(7872);
-  obj = { style: { position: "absolute", top: -1000, overflow: "hidden" }, children: null };
-  obj = { style: items1, children: null };
-  items1 = [tmp.preview, { width: ref(1477)().width }];
+  let obj = { style: { position: "absolute", top: -1000, overflow: "hidden" }, children: null };
+  obj = { style: null, children: null };
+  const items1 = [tmp.preview, { width: useWindowDimensionsDefault().width }];
+  obj.style = items1;
   const clientThemesOverride = obj.useClientThemesOverride();
-  obj1 = { ref, options: { fileName: "icymi_content", format: "png", quality: 1 }, children: null };
+  const obj1 = { ref, options: { fileName: "icymi_content", format: "png", quality: 1 }, children: null };
   const obj2 = { style: tmp.base, children: null };
-  const tmp4 = ref(4413)();
+  const tmp4 = useColorThemeBackgroundDefault();
   const obj3 = { absolute: true, wide: true, tall: true, mix: true, mixAmount: null };
   const obj4 = { dark: null, light: null };
-  const tmp6 = ref(16504);
-  obj4[0] = setUri(4378).OverlayOpacity.LEVEL_7;
-  obj4[1] = setUri(4378).OverlayOpacity.LEVEL_8;
-  obj3[4] = obj4;
-  const items2 = [callback3(ref(5125), obj3), ];
+  const tmp6 = _modDef16504;
+  obj4.dark = client_themes_ClientThemesUtils.OverlayOpacity.LEVEL_7;
+  obj4.light = client_themes_ClientThemesUtils.OverlayOpacity.LEVEL_8;
+  obj3.mixAmount = obj4;
+  const items2 = [map1(ThemedGradientDefault, obj3)];
   const obj5 = { gradient: tmp4, children: null };
-  const tmp7 = ref(5125);
+  const obj6 = { style: null, children: setUri.render() };
   const items3 = [tmp.contentContainer, clientThemesOverride];
-  obj5[1] = callback3(View, { style: items3, children: setUri.render() });
-  items2[1] = callback3(setUri(4271).ThemeContextProvider, obj5);
-  obj2[1] = items2;
-  obj1[2] = callback4(View, obj2);
-  obj[1] = callback3(tmp6, obj1);
-  obj[1] = callback3(View, obj);
-  return callback3(View, obj);
+  obj6.style = items3;
+  obj5.children = map1(View, obj6);
+  items2[1] = map1(native.ThemeContextProvider, obj5);
+  obj2.children = items2;
+  obj1.children = closure_1_14(View, obj2);
+  obj.children = map1(tmp6, obj1);
+  obj.children = map1(View, obj);
+  return map1(View, obj);
 }
 function GravityShareFooter(arg0) {
   ({ count, isSending, onSend } = arg0);
-  importDefault = undefined;
-  let first;
-  let insets;
-  const tmp = callback5();
-  importDefault = tmp;
-  const tmp2 = insets(React.useState(""), 2);
-  first = tmp2[0];
-  insets = importDefault(first[24])({ includeKeyboardHeight: true }).insets;
-  let obj = onSend(first[25]);
+  const tmp = closure_15();
+  closure_1 = tmp;
+  const tmp2 = _slicedToArray(noop.useState(""), 2);
+  const text = tmp2[0];
+  const insets = useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets;
+  let obj = useShareChatInputActions;
   const shareChatInputActions = obj.useShareChatInputActions(tmp4);
-  let items = [first, onSend];
-  ({ textInputRef, handleSelectionChange, handleMessageFocus, handleMessageBlur, handlePressEmoji } = shareChatInputActions);
-  const callback = React.useCallback(() => {
+  let items = [text, onSend];
+  ({ textInputRef, handleSelectionChange, handleMessageFocus, handleMessageBlur, handlePressEmoji } =
+    shareChatInputActions);
+  const callback = noop.useCallback(() => {
     onSend(first);
   }, items);
   if (count <= 1) {
-    const intl2 = tmp7(tmp6[14]).intl;
-    let stringResult = intl2.string(tmp7(tmp6[14]).t.TXNS7S);
+    const intl2 = tmp7(1114).intl;
+    let stringResult = intl2.string(tmp7(1114).t.TXNS7S);
   } else {
-    const intl = tmp7(tmp6[14]).intl;
-    obj = { count: null };
-    obj[0] = count;
-    stringResult = intl.formatToPlainString(tmp7(tmp6[14]).t.jWtYUm, obj);
+    const intl = tmp7(1114).intl;
+    obj = { count };
+    stringResult = intl.formatToPlainString(tmp7(1114).t.jWtYUm, obj);
   }
   const items1 = [tmp.footer, insets.bottom];
   let tmp14Result = null;
   if (0 !== count) {
-    obj = { style: null, children: null };
-    obj[0] = tmp11;
-    obj1 = { inputRef: null, text: null, onChange: null, onSelectionChange: null, onFocus: null, onBlur: null, onPressEmoji: null, onSend: null, disabled: null };
-    obj1[0] = textInputRef;
-    obj1[1] = first;
-    obj1[2] = tmp4;
-    obj1[3] = handleSelectionChange;
-    obj1[4] = handleMessageFocus;
-    obj1[5] = handleMessageBlur;
-    obj1[6] = handlePressEmoji;
-    obj1[7] = callback;
-    obj1[8] = isSending;
-    const items2 = [callback3(importDefault(tmp6[26]), obj1), ];
-    const obj2 = { variant: "primary", size: "md", text: null, disabled: null, onPress: null, loading: null };
-    obj2[2] = stringResult;
-    obj2[3] = tmp12;
+    obj = { style: tmp11, children: null };
+    const obj1 = {
+      inputRef: textInputRef,
+      text,
+      onChange: tmp4,
+      onSelectionChange: handleSelectionChange,
+      onFocus: handleMessageFocus,
+      onBlur: handleMessageBlur,
+      onPressEmoji: handlePressEmoji,
+      onSend: callback,
+      disabled: isSending,
+    };
+    const items2 = [map1(ShareChatInputDefault, obj1)];
+    const obj2 = { variant: "primary", size: "md", text: stringResult, disabled: tmp12, onPress: null, loading: null };
     let tmp17;
     if (!isSending) {
       tmp17 = callback;
     }
-    obj2[4] = tmp17;
-    obj2[5] = isSending;
-    items2[1] = callback3(tmp7(tmp6[27]).Button, obj2);
-    obj[1] = items2;
-    tmp14Result = closure_14(View, obj);
-    const tmp14 = closure_14;
-    const tmp15 = View;
-    const tmp16 = callback3;
+    obj2.onPress = tmp17;
+    obj2.loading = isSending;
+    items2[1] = map1(tmp7(4975).Button, obj2);
+    obj.children = items2;
+    tmp14Result = closure_1_14(View, obj);
   }
   return tmp14Result;
 }
@@ -134,105 +131,183 @@ class ICYMIShareModal {
     closure_7 = undefined;
     closure_9 = undefined;
     height = undefined;
-    _handleSendForwards = function _handleSendForwards() {
-      let self = this;
-      const tmp = closure_1_4((arg0) => {
-        closure_0 = arg0;
-        c3 = 0;
-        c4 = 0;
-        return (function*(arg0, arr) {
-          if (v0 === 2) {
-            v0 = 3;
-            HermesBuiltin.throwTypeError();
-          } else if (tmp5 === 3) {
+    closure_8 = async function _handleSendForwards(arg0, value) {
+      if (c4 === 2) {
+        c4 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp5 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          let obj = { value, done: true };
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c4 = 2;
+          if (0 === c3) {
             if (arg0 === 1) {
-              throw arr;
+              c4 = 3;
+              throw value;
             } else if (arg0 === 2) {
-              let obj = { value: null, done: true };
-              obj[0] = arr;
+              c4 = 3;
+              obj = { value, done: true };
               return obj;
             } else {
-              return { value: "HermesInternal", done: null };
-            }
-          } else {
-            try {
-              v0 = 2;
-              if (0 === c3) {
-                if (arg0 === 1) {
-                  v0 = 3;
-                  throw arr;
-                } else if (arg0 === 2) {
-                  v0 = 3;
-                  obj = { value: null, done: true };
-                  obj[0] = arr;
-                  return obj;
-                } else {
-                  closure_2 = tmp2;
-                  closure_1 = tmp3;
-                  closure_1_6(true);
-                  let tmp8 = null == closure_1_2;
-                  if (!tmp8) {
-                    tmp8 = null != closure_1_7;
-                  }
-                  if (tmp8) {
-                    c3 = 1;
-                    v0 = 1;
-                    obj1 = { value: null, done: false };
-                    obj1[0] = Promise.all(closure_1_5.map(callback(closure_1_2[29]).getOrResolveChannelIdFromDestinationId));
-                    return obj1;
-                  } else {
-                    v0 = 3;
-                  }
-                }
-              } else if (arg0 === 1) {
-                v0 = 3;
-                throw arr;
-              } else if (arg0 !== 2) {
-                const mapped = arr.map((arg0) => channel.getChannel(arg0));
-                const found = mapped.filter(callback(closure_1_2[30]).isNotNullish);
-                const item = found.forEach((() => {
-                  closure_0 = v3((arg0) => {
-                    closure_0 = arg0;
-                    c2 = 0;
-                    c1 = 0;
-                    return (/* F125923 */ function*() { ... })();
-                  });
-                  return function(arg0) {
-                    const self = this;
-                    const apply = closure_0.apply;
-                    if (typeof apply === "unknown") {
-                      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                    } else {
-                      applyArgumentsResult = apply(self, arguments);
-                    }
-                    return applyArgumentsResult;
-                  };
-                })());
-                closure_1_1(closure_1_2[28]).pop();
-                if (null != v0) {
-                  v0();
-                }
-                const arr3 = closure_1_1(closure_1_2[28]);
+              closure_129_0 = title;
+              View(true);
+              let tmp8 = null == render;
+              if (!tmp8) {
+                tmp8 = null != ChannelStore;
               }
-              v0 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arr;
-              return obj;
-            } catch (tmp13) {
-              v0 = tmp;
-              throw tmp13;
+              if (tmp8) {
+                c3 = 1;
+                c4 = 1;
+                let obj1 = {
+                  value: Promise.all(first.map(title(tmp2[29]).getOrResolveChannelIdFromDestinationId)),
+                  done: false,
+                };
+                return obj1;
+              } else {
+                c4 = 3;
+              }
             }
+          } else if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            const mapped = value.map((item) => channel.getChannel(item));
+            const found = mapped.filter(title(tmp2[30]).isNotNullish);
+            const item = found.forEach(
+              (() => {
+                closure_0 = c4(function* (arg0, value) {
+                  if (c1 === 2) {
+                    c1 = 3;
+                    throw new TypeError("Generator functions may not be called on executing generators");
+                  } else if (tmp3 === 3) {
+                    if (arg0 === 1) {
+                      throw value;
+                    } else if (arg0 === 2) {
+                      let obj = { value, done: true };
+                      return obj;
+                    } else {
+                      return { value: "HermesInternal", done: null };
+                    }
+                  } else {
+                    try {
+                      c1 = 2;
+                      if (0 === c2) {
+                        if (arg0 === 1) {
+                          c1 = 3;
+                          throw value;
+                        } else if (arg0 === 2) {
+                          c1 = 3;
+                          obj = { value, done: true };
+                          return obj;
+                        } else {
+                          if (null != guildId) {
+                            if (str4.trim().length > 0) {
+                              const _HermesInternal = HermesInternal;
+                              let combined = "" + str4 + "\n\n" + closure_2_1;
+                            }
+                            let obj1 = tmp3(tmp2[31]);
+                            const parsed = obj1.parse(tmp32, combined);
+                            if (null == closure_2_3) {
+                              let tmp14 = null != closure_2_2;
+                              if (tmp14) {
+                                tmp14 = null != originalUri;
+                              }
+                              uploads = undefined;
+                              if (tmp14) {
+                                let tmp8Result = tmp8(tmp9[32]);
+                                obj1 = { channelId: tmp32.id, file: null, draftType: null };
+                                const obj2 = {
+                                  uri: originalUri,
+                                  originalUri,
+                                  id: closure_3_0(tmp9[33]).v4(),
+                                  platform: closure_3_0(tmp9[34]).UploadPlatform.REACT_NATIVE,
+                                };
+                                obj1.file = obj2;
+                                obj1.draftType = closure_3_8.ChannelMessage;
+                                tmp8Result.addFile(obj1);
+                                uploads = uploads.getUploads(tmp32.id, closure_3_8.ChannelMessage);
+                                tmp8Result = tmp8(tmp9[32]);
+                                tmp8Result.clearAll(tmp32.id, closure_3_8.ChannelMessage);
+                                const obj6 = closure_3_0(tmp9[33]);
+                              }
+                              const tmp8Result1 = tmp8(tmp9[35]);
+                              const obj3 = {
+                                location: constants.ICYMI,
+                                attachmentsToUpload: uploads,
+                                onAttachmentUploadError(file, code, reason) {
+                                  guildId(c2[36]);
+                                  const obj = {
+                                    file,
+                                    guildId: guildId.getGuildId(),
+                                    analyticsLocations: [],
+                                    code,
+                                    reason,
+                                  };
+                                  const result = obj.handleUploadMessageAttachmentsErrors(obj);
+                                },
+                              };
+                              c2 = 1;
+                              c1 = 1;
+                              const obj4 = {
+                                value: tmp8Result1.sendMessage(tmp32.id, parsed, false, obj3),
+                                done: false,
+                              };
+                              return obj4;
+                            } else {
+                              tmp11(tmp32);
+                            }
+                          }
+                          combined = closure_2_1;
+                        }
+                      } else if (arg0 === 1) {
+                        c1 = 3;
+                        throw value;
+                      } else if (arg0 === 2) {
+                        c1 = 3;
+                        obj = { value, done: true };
+                        return obj;
+                      }
+                      c1 = 3;
+                      return { value: "HermesInternal", done: null };
+                    } catch (tmp27) {
+                      c1 = tmp;
+                      throw tmp27;
+                    }
+                  }
+                });
+                return function (arg0) {
+                  const self = this;
+                  const apply = closure_0.apply;
+                  if (typeof apply === "unknown") {
+                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                  } else {
+                    applyArgumentsResult = apply(self, arguments);
+                  }
+                  return applyArgumentsResult;
+                };
+              })(),
+            );
+            tmp3(tmp2[28]).pop();
+            if (null != closure_130_4) {
+              closure_130_4();
+            }
+            const arr3 = tmp3(tmp2[28]);
           }
-        })();
-      });
-      closure_8 = tmp;
-      let apply = tmp.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
+          c4 = 3;
+          obj = { value, done: true };
+          return obj;
+        } catch (tmp13) {
+          c4 = tmp;
+          throw tmp13;
+        }
       }
-      return applyArgumentsResult;
     };
     tmp = forwardToChannel(closure_5.useState([]), 2);
     first = tmp[0];
@@ -242,27 +317,27 @@ class ICYMIShareModal {
     tmp3 = forwardToChannel(closure_5.useState(null), 2);
     [closure_7, tmp4] = tmp3;
     callback = closure_5.useCallback(() => {
-      let arr = callback(render[28]);
+      let arr = require("ModalActionCreators");
       arr = arr.pop();
     }, []);
     tmp6 = closure_15();
     tmp7 = linkText;
     tmp8 = render;
-    rect = require("useSafeAreaInsets")();
+    rect = linkText(render[37])();
     closure_9 = rect;
-    height = require("useWindowDimensions")().height;
-    items = [, ];
+    height = linkText(render[17])().height;
+    items = [,];
     items[0] = rect.bottom;
     items[1] = height;
     obj = {
       style: closure_5.useMemo(() => {
-            height = "100%";
-            if (obj.isAndroid()) {
-              height = height + rect.bottom;
-            }
-            return { height };
-          }, items),
-      children: null
+        height = "100%";
+        if (obj.isAndroid()) {
+          height = height + rect.bottom;
+        }
+        return { height };
+      }, items),
+      children: null,
     };
     tmp11 = jsx;
     tmp9 = jsxs;
@@ -271,193 +346,225 @@ class ICYMIShareModal {
     obj = {
       title,
       headerTitle() {
-            return closure_1_13(title(render[40]).GenericHeaderTitle, { title });
-          },
+        return map1(HeaderShared.GenericHeaderTitle, { title });
+      },
       headerTitleAlign: "center",
       headerStatusBarHeight: null,
       headerLeft: null,
       headerLeftContainerStyle: null,
-      headerRightContainerStyle: null
+      headerRightContainerStyle: null,
     };
-    obj3 = require("set");
+    obj3 = title(render[38]);
     num = 0;
     if (!obj3.isIOS()) {
       num = rect.top;
     }
-    obj[3] = num + require("Themes").space.PX_8;
-    tmp12Result = require("HeaderBackImage");
-    obj[4] = tmp12Result.getHeaderCloseButton(callback);
-    ({ headerLeftContainer: obj2[5], headerRightContainer: obj2[6] } = tmp6);
-    items1 = [, , , ];
-    items1[0] = tmp11(require("Background").Header, obj);
+    obj.headerStatusBarHeight = num + tmp7(tmp8[12]).space.PX_8;
+    tmp12Result = tmp12(tmp8[41]);
+    obj.headerLeft = tmp12Result.getHeaderCloseButton(callback);
+    ({ headerLeftContainer: obj2.headerLeftContainerStyle, headerRightContainer: obj2.headerRightContainerStyle } =
+      tmp6);
+    items1 = [, , ,];
+    items1[0] = tmp11(title(render[39]).Header, obj);
     tmp11Result = null != render;
     if (tmp11Result) {
       tmp14 = Screenshot;
       obj1 = { render: null, setUri: null };
-      obj1[0] = render;
-      obj1[1] = tmp4;
+      obj1.render = render;
+      obj1.setUri = tmp4;
       tmp11Result = tmp11(Screenshot, obj1);
     }
     items1[1] = tmp11Result;
-    obj2 = { rowMode: UserRowModes.TOGGLE, onSelectedDestinationChange: tmp[1], originDestination: global.originDestinationId, insetEnd: null, disableGradient: true, disableStickySections: true };
-    tmp7Result = require("SearchableDestinationList");
-    sum = rect.bottom + require("Themes").space.PX_8;
-    obj2[3] = sum + require("Themes").space.PX_96;
+    obj2 = {
+      rowMode: UserRowModes.TOGGLE,
+      onSelectedDestinationChange: tmp[1],
+      originDestination: global.originDestinationId,
+      insetEnd: null,
+      disableGradient: true,
+      disableStickySections: true,
+    };
+    tmp7Result = tmp7(tmp8[42]);
+    sum = rect.bottom + tmp7(tmp8[12]).space.PX_8;
+    obj2.insetEnd = sum + tmp7(tmp8[12]).space.PX_96;
     items1[2] = tmp11(tmp7Result, obj2);
     obj3 = {
       count: first.length,
       isSending: tmp2[0],
       onSend: function handleSendForwards(arg0) {
-            const self = this;
-            const apply = _handleSendForwards.apply;
-            if (typeof apply === "unknown") {
-              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-            } else {
-              applyArgumentsResult = apply(self, arguments);
-            }
-            return applyArgumentsResult;
-          }
+        const self = this;
+        const apply = closure_8.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      },
     };
     items1[3] = tmp11(GravityShareFooter, obj3);
-    obj[1] = items1;
+    obj.children = items1;
     return tmp9(tmp10, obj);
   }
 }
+const View = fn(17).View;
+const DraftType = fn(4901).DraftType;
+const AbortCodes = fn(1074).AbortCodes;
+const UserRowModes = fn(10860).UserRowModes;
+const MessageSendLocation = fn(4553).MessageSendLocation;
+const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-createCacheKey = { headerLeftContainer: null, headerRightContainer: null, preview: null, base: null, contentContainer: null, footer: null };
-createCacheKey = { paddingLeft: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { paddingRight: ThemesDefault.space.PX_16 };
-let obj1 = { paddingRight: ThemesDefault.space.PX_16 };
-createCacheKey[2] = { borderRadius: ThemesDefault.radii.md, overflow: "hidden", borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_STRONG };
-createCacheKey[3] = { position: "relative" };
-let obj2 = { borderRadius: ThemesDefault.radii.md, overflow: "hidden", borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_STRONG };
-createCacheKey[4] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-createCacheKey[5] = { display: "flex", flexDirection: "row", alignItems: "flex-end", paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_12, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE };
-let closure_15 = createCacheKey.createStyles(createCacheKey);
-let obj4 = { display: "flex", flexDirection: "row", alignItems: "flex-end", paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_12, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE };
-let result = require("set").fileFinishedImporting("modules/icymi/native/ICYMIShareModal.tsx");
+fn(4560);
+let createStyles = {
+  headerLeftContainer: null,
+  headerRightContainer: null,
+  preview: null,
+  base: null,
+  contentContainer: null,
+  footer: null,
+};
+createStyles = { paddingLeft: nativeDefault.space.PX_16 };
+createStyles.headerLeftContainer = createStyles;
+createStyles.headerRightContainer = { paddingRight: nativeDefault.space.PX_16 };
+let obj1 = { paddingRight: nativeDefault.space.PX_16 };
+createStyles.preview = {
+  borderRadius: nativeDefault.radii.md,
+  overflow: "hidden",
+  borderWidth: 1,
+  borderColor: nativeDefault.colors.BORDER_STRONG,
+};
+createStyles.base = { position: "relative" };
+let obj2 = {
+  borderRadius: nativeDefault.radii.md,
+  overflow: "hidden",
+  borderWidth: 1,
+  borderColor: nativeDefault.colors.BORDER_STRONG,
+};
+createStyles.contentContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+createStyles.footer = {
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "flex-end",
+  paddingHorizontal: nativeDefault.space.PX_16,
+  paddingVertical: nativeDefault.space.PX_12,
+  gap: nativeDefault.space.PX_12,
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
+  borderTopWidth: 1,
+  borderTopColor: nativeDefault.colors.BORDER_SUBTLE,
+};
+const __initData = createStyles.createStyles(createStyles);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/icymi/native/ICYMIShareModal.tsx");
 
 export default ICYMIShareModal;
 export const GuildEventShareModal = function GuildEventShareModal(event) {
   event = event.event;
-  let obj = SHARE_EVENT_DETAILS_LINK;
-  obj = { guildId: event.guild_id, guildEventId: event.id };
+  let obj = { guildId: event.guild_id, guildEventId: event.id };
   obj = { title: null, originDestinationId: null, linkText: null };
   const result = obj.SHARE_EVENT_DETAILS_LINK(obj);
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t["7TVSLK"]);
+  const intl = util.intl;
+  obj.title = intl.string(util.t["7TVSLK"]);
   let tmp4;
   if (null != event.channel_id) {
-    obj1 = { type: "channel", id: null };
-    obj1[1] = event.channel_id;
+    const obj1 = { type: "channel", id: event.channel_id };
     tmp4 = obj1;
   }
-  obj[1] = tmp4;
-  obj[2] = result;
-  return closure_13(ICYMIShareModal, obj);
+  obj.originDestinationId = tmp4;
+  obj.linkText = result;
+  return map1(ICYMIShareModal, obj);
 };
 export const GameShareModal = function GameShareModal(content) {
-  let _require = content.content;
+  _require = content.content;
   let obj = { title: null, linkText: "", forwardToChannel: null };
-  let intl = require("../../../intl/index.native.tsx").intl;
-  obj[0] = intl.string(require("../../../intl/index.native.tsx").t["59CWHK"]);
-  _require = undefined;
-  _require = callback2((arg0) => {
-    closure_0 = arg0;
-    c5 = 0;
-    c6 = 0;
-    c4 = 0;
-    return (function*(arg0) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+  let intl = require("util").intl;
+  obj.title = intl.string(require("util").t["59CWHK"]);
+  _require = asyncGeneratorStep(async (arg0, value) => {
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_2 = tmp3;
-              closure_1 = tmp7;
-              c0 = undefined;
-              c4 = 1;
-              let obj3 = callback(closure_2_2[15]);
-              obj1 = { channel: null, content: "", entry: null, whenReady: false, doNotNotifyOnError: true, location: null };
-              obj1[0] = c0;
-              obj1[2] = callback;
-              obj1[5] = closure_2_12.ICYMI;
-              c5 = 2;
-              c6 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = obj3.sendMessageWithEmbed(obj1);
-              return obj2;
-            }
-          } else if (1 === tmp7) {
-            c4 = 0;
-            closure_1 = closure_3;
-            let tmp12 = null != closure_1.body;
-            if (tmp12) {
-              tmp12 = closure_1.body.code === closure_2_10.CONTENT_INVENTORY_ENTRY_INVALID_PERMISSION;
-            }
-            callback = tmp12;
-            obj1 = closure_2_1(closure_2_2[16]);
-            const intl = callback(closure_2_2[14]).intl;
-            const string = intl.string;
-            let t = callback(closure_2_2[14]).t;
-            if (callback) {
-              let stringResult = string(t.BC5vfD);
-            } else {
-              stringResult = string(t.F8FvUy);
-            }
-            obj3 = { key: "FORWARD_CONTENT_INVENTORY_ENTRY_ERROR", content: null };
-            obj3[1] = stringResult;
-            t = obj1.open(obj3);
-          } else if (arg0 === 1) {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
             c6 = 3;
-            throw arg1;
-          } else {
-            if (arg0 !== 2) {
-              c4 = 0;
-              c6 = 3;
-            }
-            c4 = 0;
+            throw value;
+          } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
-          }
-        } catch (tmp33) {
-          closure_3 = tmp33;
-          if (tmp4 === c4) {
-            c6 = tmp2;
-            throw tmp33;
           } else {
-            c5 = tmp;
+            closure_2 = tmp3;
+            closure_1 = tmp7;
+            closure_129_0 = undefined;
+            c4 = 1;
+            let obj3 = entry(16503);
+            let obj1 = {
+              channel: entry,
+              content: "",
+              entry,
+              whenReady: false,
+              doNotNotifyOnError: true,
+              location: constants2.ICYMI,
+            };
+            c5 = 2;
+            c6 = 1;
+            const obj2 = { value: obj3.sendMessageWithEmbed(obj1), done: false };
+            return obj2;
           }
+        } else if (1 === tmp7) {
+          c4 = 0;
+          closure_129_1 = closure_3;
+          let tmp12 = null != closure_129_1.body;
+          if (tmp12) {
+            tmp12 = closure_129_1.body.code === constants.CONTENT_INVENTORY_ENTRY_INVALID_PERMISSION;
+          }
+          closure_129_0 = tmp12;
+          obj1 = ToastActionCreatorsDefault;
+          const intl = entry(1114).intl;
+          const string = intl.string;
+          let t = entry(1114).t;
+          if (closure_129_0) {
+            let stringResult = string(t.BC5vfD);
+          } else {
+            stringResult = string(t.F8FvUy);
+          }
+          obj3 = { key: "FORWARD_CONTENT_INVENTORY_ENTRY_ERROR", content: stringResult };
+          t = obj1.open(obj3);
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else {
+          if (arg0 !== 2) {
+            c4 = 0;
+            c6 = 3;
+          }
+          c4 = 0;
+          c6 = 3;
+          obj = { value, done: true };
+          return obj;
+        }
+      } catch (tmp33) {
+        closure_3 = tmp33;
+        if (tmp4 === c4) {
+          c6 = tmp2;
+          throw tmp33;
+        } else {
+          c5 = tmp;
         }
       }
-    })();
+    }
   });
-  obj[2] = function() {
+  obj.forwardToChannel = function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -467,5 +574,5 @@ export const GameShareModal = function GameShareModal(content) {
     }
     return applyArgumentsResult;
   };
-  return callback3(ICYMIShareModal, obj);
+  return closure_13(ICYMIShareModal, obj);
 };

@@ -1,42 +1,40 @@
 // discord_app/modules/app_launcher/native/options/autocomplete/AppLauncherAutocompleteOption.tsx
-import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import Text from "../../../../../design/components/Text/native/Text.tsx";
-import PressableBase from "../../../../../design/void/Pressables/native/Pressables.tsx";
+import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import KeyboardManagerUtils from "../../../../../utils/native/KeyboardManagerUtils.tsx";
+import asyncRequireImpl from "../../../../../../_runtime/01896_asyncRequireImpl.js";
+import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
+import Pressables from "../../../../../design/void/Pressables/native/Pressables.tsx";
 import useAnimationDelayedAutoFocus from "../../hooks/useAnimationDelayedAutoFocus.tsx";
-import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-createCacheKey = { container: null, hasError: null, inputText: null };
-createCacheKey = {
+require = fn;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { container: null, hasError: null, inputText: null };
+createStyles = {
   width: "100%",
-  backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT,
-  borderRadius: ThemesDefault.radii.lg,
+  backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT,
+  borderRadius: nativeDefault.radii.lg,
   padding: 12,
   borderWidth: 2,
   borderColor: "transparent",
   flexDirection: "row",
   alignItems: "center",
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { borderColor: ThemesDefault.colors.BORDER_FEEDBACK_CRITICAL, padding: 12 };
-const obj1 = { borderColor: ThemesDefault.colors.BORDER_FEEDBACK_CRITICAL, padding: 12 };
-createCacheKey[2] = {
+createStyles.container = createStyles;
+createStyles.hasError = { borderColor: nativeDefault.colors.BORDER_FEEDBACK_CRITICAL, padding: 12 };
+const obj1 = { borderColor: nativeDefault.colors.BORDER_FEEDBACK_CRITICAL, padding: 12 };
+createStyles.inputText = {
   fontSize: 16,
   alignSelf: "center",
-  fontFamily: require("ME").Fonts.PRIMARY_MEDIUM,
-  color: ThemesDefault.colors.TEXT_DEFAULT,
+  fontFamily: fn(1074).Fonts.PRIMARY_MEDIUM,
+  color: nativeDefault.colors.TEXT_DEFAULT,
 };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const obj2 = {
-  fontSize: 16,
-  alignSelf: "center",
-  fontFamily: require("ME").Fonts.PRIMARY_MEDIUM,
-  color: ThemesDefault.colors.TEXT_DEFAULT,
-};
-let result = require("set").fileFinishedImporting(
+let closure_6 = createStyles.createStyles(createStyles);
+const size = fn(2);
+let result = size.fileFinishedImporting(
   "modules/app_launcher/native/options/autocomplete/AppLauncherAutocompleteOption.tsx",
 );
 
@@ -45,47 +43,45 @@ export default function AppLauncherAutocompleteOption(arg0) {
     option: require,
     onSelect: importDefault,
     onOpenAutocompleteSheet: dependencyMap,
-    onDismissAutocompleteSheet: closure_3,
-    channel: closure_4,
+    onDismissAutocompleteSheet: _slicedToArray,
+    channel: noop,
     activeCommand: jsx,
     optionValues: closure_6,
     initialValue: closure_7,
     hasError,
   } = arg0);
-  let first;
-  closure_9 = undefined;
   function onPress() {
-    if (closure_2 != null) {
+    if (closure_1_2 != null) {
       tmp();
     }
-    let obj = closure_1_0(closure_1_2[6]);
+    let obj = KeyboardManagerUtils;
     const result = obj.dismissGlobalKeyboard();
     obj = {
-      option: closure_0,
-      initChoice: first,
+      option,
+      initChoice,
       onChoiceSelect(arg0) {
-        callback2(arg0);
-        callback(arg0);
+        closure_1_9(arg0);
+        closure_1_1(arg0);
       },
-      channel: closure_4,
-      activeCommand: closure_5,
-      onDismissAutocompleteSheet: closure_3,
+      channel,
+      activeCommand,
+      onDismissAutocompleteSheet,
       optionValues: ref.current,
     };
-    closure_1_1(closure_1_2[7]).openLazy(
-      closure_1_0(closure_1_2[9])(closure_1_2[8], closure_1_2.paths),
+    ActionSheetActionCreatorsDefault.openLazy(
+      asyncRequireImpl(12171, dependencyMap.paths),
       "AppLauncherAutocompleteActionSheet",
       obj,
     );
   }
   ({ style, autoFocus } = arg0);
-  const tmp = callback(
-    React.useState(() => {
-      if (null != closure_7) {
+  const tmp = _slicedToArray(
+    noop.useState(() => {
+      if (null != closure_1_7) {
         if ("text" === tmp.type) {
           if ("" !== tmp.text) {
             const obj = { displayName: null, name: null, value: null };
-            ({ text: obj[0], text: obj[1], text: obj[2] } = tmp);
+            ({ text: obj.displayName, text: obj.name, text: obj.value } = tmp);
             return obj;
           }
         }
@@ -93,9 +89,9 @@ export default function AppLauncherAutocompleteOption(arg0) {
     }),
     2,
   );
-  first = tmp[0];
+  const initChoice = tmp[0];
   closure_9 = tmp[1];
-  const tmp3 = callback2();
+  const tmp3 = ref();
   let obj = useAnimationDelayedAutoFocus;
   const animationDelayedAutoFocus = obj.useAnimationDelayedAutoFocus(autoFocus, onPress);
   obj = { onPress, style: null, children: null };
@@ -105,13 +101,13 @@ export default function AppLauncherAutocompleteOption(arg0) {
   }
   items[1] = hasError;
   items[2] = style;
-  obj[1] = items;
+  obj.style = items;
   obj = { variant: "text-md/normal", style: tmp3.inputText, children: null };
   let str = " ";
-  if (null != first) {
-    str = first.displayName;
+  if (null != initChoice) {
+    str = initChoice.displayName;
   }
-  obj[2] = str;
-  obj[2] = jsx(Text.Text, { variant: "text-md/normal", style: tmp3.inputText, children: null });
-  return jsx(PressableBase.PressableOpacity, { variant: "text-md/normal", style: tmp3.inputText, children: null });
+  obj.children = str;
+  obj.children = jsx(Text_Text.Text, { variant: "text-md/normal", style: tmp3.inputText, children: null });
+  return jsx(Pressables.PressableOpacity, { variant: "text-md/normal", style: tmp3.inputText, children: null });
 }

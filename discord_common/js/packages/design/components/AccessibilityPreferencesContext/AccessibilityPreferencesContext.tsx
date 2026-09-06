@@ -1,7 +1,7 @@
 // discord_common/js/packages/design/components/AccessibilityPreferencesContext/AccessibilityPreferencesContext.tsx
-import importAllResult from "../../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const context = importAllResult.createContext({
+const context = noop.createContext({
   reducedMotion: { enabled: false, rawValue: "no-preference" },
   prefersCrossfades: false,
   forcedColors: { enabled: false, rawValue: "none" },
@@ -10,7 +10,8 @@ const context = importAllResult.createContext({
   keyboardModeEnabled: true,
   switchIconsEnabled: false,
 });
-const result = require("set").fileFinishedImporting(
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "../discord_common/js/packages/design/components/AccessibilityPreferencesContext/AccessibilityPreferencesContext.tsx",
 );
 

@@ -1,23 +1,23 @@
 // discord_app/modules/age_assurance/AgeVerificationStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import Storage2 from "../../../discord_common/js/packages/storage/Storage.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import closure_2 from "../../stores/UserStore.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import UserStore from "../../stores/UserStore.tsx";
 
-require = arg1;
+require = fn;
 let c3 = 86400000;
-let c4 = null;
+let methods = null;
 let c5 = null;
 let c6 = null;
 let c7 = null;
 let c8 = false;
-let unchecked = "unchecked";
+let suppress = "unchecked";
 let c10 = null;
 const Store = initializeDefault.Store;
 class AgeVerificationStore extends Store {}
 const prototype = AgeVerificationStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_2);
+  this.waitFor(UserStore);
 };
 Object.defineProperty(prototype, "loading", {
   get: function loading() {
@@ -26,8 +26,8 @@ Object.defineProperty(prototype, "loading", {
   set: undefined,
 });
 Object.defineProperty(prototype, "methods", {
-  get: function methods(first, arg1) {
-    return c4;
+  get: function methods() {
+    return methods;
   },
   set: undefined,
 });
@@ -50,10 +50,10 @@ Object.defineProperty(prototype, "methodsV2OutageBannerMessage", {
   set: undefined,
 });
 prototype["getReactiveCheckStatus"] = function getReactiveCheckStatus() {
-  return unchecked;
+  return suppress;
 };
 prototype["getReactiveCheckMiss"] = function getReactiveCheckMiss() {
-  let tmp = "miss" === unchecked;
+  let tmp = "miss" === suppress;
   if (tmp) {
     tmp = null != c10;
   }
@@ -64,10 +64,10 @@ prototype["getReactiveCheckMiss"] = function getReactiveCheckMiss() {
   return tmp;
 };
 prototype["getReactiveCheckPassed"] = function getReactiveCheckPassed() {
-  return "passed" === unchecked;
+  return "passed" === suppress;
 };
 prototype["shouldCallReactiveCheck"] = function shouldCallReactiveCheck() {
-  let tmp2 = "passed" !== unchecked;
+  let tmp2 = "passed" !== suppress;
   if (tmp2) {
     let tmp3 = "suppress" !== tmp;
     if (tmp3) {
@@ -86,7 +86,7 @@ prototype["shouldCallReactiveCheck"] = function shouldCallReactiveCheck() {
   return tmp2;
 };
 AgeVerificationStore.displayName = "AgeVerificationStore";
-const ageVerificationStore = new AgeVerificationStore(dispatcherDefault, {
+const ageVerificationStore = new AgeVerificationStore(DispatcherDefault, {
   AGE_VERIFICATION_METHODS_LOAD_START: function handleAgeVerificationMethodsLoadStart() {
     c8 = true;
   },
@@ -106,7 +106,7 @@ const ageVerificationStore = new AgeVerificationStore(dispatcherDefault, {
     c7 = null;
   },
   CONNECTION_OPEN: function handleConnectionOpen() {
-    const currentUser = authStore.getCurrentUser();
+    const currentUser = UserStore.getCurrentUser();
     let id;
     if (currentUser != null) {
       id = currentUser.id;
@@ -118,14 +118,14 @@ const ageVerificationStore = new AgeVerificationStore(dispatcherDefault, {
     }
     if (null != combined) {
       const Storage = Storage2.Storage;
-      const value = Storage.get(combined);
+      value = Storage.get(combined);
       if (null != value) {
         if (typeof value === "object") {
           let str4 = value.reactiveCheckStatus;
           if (str4 == null) {
             str4 = "unchecked";
           }
-          let reactiveCheckMissAt = value.reactiveCheckMissAt;
+          reactiveCheckMissAt = value.reactiveCheckMissAt;
           if (reactiveCheckMissAt == null) {
             reactiveCheckMissAt = null;
           }
@@ -135,18 +135,18 @@ const ageVerificationStore = new AgeVerificationStore(dispatcherDefault, {
             tmp9 = Date.now() - reactiveCheckMissAt >= c3;
           }
           if (tmp9) {
-            unchecked = "unchecked";
+            suppress = "unchecked";
             c10 = null;
           } else {
-            unchecked = str4;
+            suppress = str4;
             c10 = reactiveCheckMissAt;
           }
         }
       }
-      unchecked = "unchecked";
+      suppress = "unchecked";
       c10 = null;
     } else {
-      unchecked = "unchecked";
+      suppress = "unchecked";
       c10 = null;
     }
     c5 = null;
@@ -155,12 +155,14 @@ const ageVerificationStore = new AgeVerificationStore(dispatcherDefault, {
   },
   AGE_VERIFICATION_CHECK_RESULT_SET: function handleReactiveCheckResultSet(status) {
     status = status.status;
+    suppress = status;
     let timestamp = null;
     if ("miss" === status) {
       const _Date = Date;
       timestamp = Date.now();
     }
-    const currentUser = authStore.getCurrentUser();
+    reactiveCheckMissAt = timestamp;
+    const currentUser = UserStore.getCurrentUser();
     let id;
     if (currentUser != null) {
       id = currentUser.id;
@@ -172,16 +174,14 @@ const ageVerificationStore = new AgeVerificationStore(dispatcherDefault, {
     }
     if (null != combined) {
       const Storage = Storage2.Storage;
-      const obj = { reactiveCheckStatus: null, reactiveCheckMissAt: null };
-      obj[0] = status;
-      obj[1] = timestamp;
+      const obj = { reactiveCheckStatus: suppress, reactiveCheckMissAt };
       const result = Storage.set(combined, obj);
     }
   },
   AGE_VERIFICATION_RESET: function handleAgeVerificationReset() {
-    const suppress = "suppress";
-    c10 = null;
-    const currentUser = authStore.getCurrentUser();
+    suppress = "suppress";
+    reactiveCheckMissAt = null;
+    const currentUser = UserStore.getCurrentUser();
     let id;
     if (currentUser != null) {
       id = currentUser.id;
@@ -193,9 +193,7 @@ const ageVerificationStore = new AgeVerificationStore(dispatcherDefault, {
     }
     if (null != combined) {
       const Storage = Storage2.Storage;
-      const obj = { reactiveCheckStatus: null, reactiveCheckMissAt: null };
-      obj[0] = suppress;
-      obj[1] = c10;
+      const obj = { reactiveCheckStatus: suppress, reactiveCheckMissAt };
       const result = Storage.set(combined, obj);
     }
     c5 = null;
@@ -203,6 +201,7 @@ const ageVerificationStore = new AgeVerificationStore(dispatcherDefault, {
     c7 = null;
   },
 });
-let result = require("set").fileFinishedImporting("modules/age_assurance/AgeVerificationStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/age_assurance/AgeVerificationStore.tsx");
 
 export default ageVerificationStore;

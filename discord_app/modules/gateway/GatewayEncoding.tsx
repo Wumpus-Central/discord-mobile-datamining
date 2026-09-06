@@ -1,9 +1,9 @@
 // discord_app/modules/gateway/GatewayEncoding.tsx
-import set from "../../../_runtime/00002_set.js";
-import get from "../../utils/ProcessArgs.tsx";
-import getErlpackEncoding from "GatewayEncodingErlpackEncoding.native.tsx";
+import ProcessArgs2 from "../../utils/ProcessArgs.tsx";
+import GatewayEncodingErlpackEncoding from "GatewayEncodingErlpackEncoding.native.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-getErlpackEncoding = getErlpackEncoding.getErlpackEncoding();
+GatewayEncodingErlpackEncoding = GatewayEncodingErlpackEncoding.getErlpackEncoding();
 class JSONEncoding {}
 const prototype = JSONEncoding.prototype;
 prototype["pack"] = function pack(arg0) {
@@ -16,7 +16,7 @@ prototype["unpack"] = function unpack(str) {
       tmp2 = typeof str;
     }
     const _HermesInternal = HermesInternal;
-    error = new Error("Expected a string to be passed to JSONEncoding.unpack, got " + tmp2);
+    const error = new Error("Expected a string to be passed to JSONEncoding.unpack, got " + tmp2);
     throw error;
   } else {
     const _JSON = JSON;
@@ -30,13 +30,13 @@ prototype["wantsString"] = function wantsString() {
   return true;
 };
 let tmp3 = JSONEncoding;
-if (undefined !== getErlpackEncoding) {
-  tmp3 = getErlpackEncoding;
+if (undefined !== GatewayEncodingErlpackEncoding) {
+  tmp3 = GatewayEncodingErlpackEncoding;
 }
-const ProcessArgs = get.ProcessArgs;
+const ProcessArgs = ProcessArgs2.ProcessArgs;
 if (ProcessArgs.isDiscordGatewayPlaintextSet()) {
   tmp3 = JSONEncoding;
 }
-const result = set.fileFinishedImporting("modules/gateway/GatewayEncoding.tsx");
+const result = size.fileFinishedImporting("modules/gateway/GatewayEncoding.tsx");
 
 export default tmp3;

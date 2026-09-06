@@ -1,7 +1,7 @@
 // discord_app/lib/MuteTimers.tsx
-import set from "../../_runtime/00002_set.js";
+import size from "../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("lib/MuteTimers.tsx");
+const result = size.fileFinishedImporting("lib/MuteTimers.tsx");
 class MuteTimers {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -12,7 +12,7 @@ class MuteTimers {
 const prototype = MuteTimers.prototype;
 prototype["reset"] = function reset() {
   const values = Object.values(this.timers);
-  const item = values.forEach((arg0) => clearTimeout(arg0));
+  const item = values.forEach((item) => clearTimeout(item));
   this.timers = {};
 };
 prototype["setTimer"] = function setTimer(id, muteConfig, arg2) {

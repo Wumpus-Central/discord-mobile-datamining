@@ -1,39 +1,43 @@
 // discord_app/modules/user_settings/UserSettingsProtoUtils.tsx
-import set from "../../../_runtime/00002_set.js";
-import BINARY_READ_OPTIONS from "../../utils/ProtoUtils.tsx";
+import ProtoUtils from "../../utils/ProtoUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/user_settings/UserSettingsProtoUtils.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/UserSettingsProtoUtils.tsx");
 
-export const getProtoFieldClass = function getProtoFieldClass(PreloadedUserSettings, closure_0) {
+export const getProtoFieldClass = function getProtoFieldClass(PreloadedUserSettings, field) {
+  closure_0 = field;
   const fields = PreloadedUserSettings.fields;
   const found = fields.find((localName) => localName.localName === closure_0);
   if (null == found) {
     const _Error = Error;
     const _String = String;
     const _HermesInternal = HermesInternal;
-    throw Error("Unknown proto field name " + String(closure_0));
+    throw Error("Unknown proto field name " + String(field));
   } else {
     return found.T();
   }
 };
 export const createModifiedProto = function createModifiedProto(
-  closure_1,
-  c2,
-  closure_0,
+  favoriteGifs,
+  fn,
+  protoFieldClass,
   PreloadedUserSettings,
-  closure_02,
+  arg4,
 ) {
-  if (null != closure_1) {
-    let fromBinaryResult = closure_0.fromBinary(closure_0.toBinary(closure_1), BINARY_READ_OPTIONS.BINARY_READ_OPTIONS);
-    const toBinaryResult = closure_0.toBinary(closure_1);
+  if (null != favoriteGifs) {
+    let fromBinaryResult = protoFieldClass.fromBinary(
+      protoFieldClass.toBinary(favoriteGifs),
+      ProtoUtils.BINARY_READ_OPTIONS,
+    );
+    const toBinaryResult = protoFieldClass.toBinary(favoriteGifs);
   } else {
-    fromBinaryResult = closure_0.create();
+    fromBinaryResult = protoFieldClass.create();
   }
-  if (false === c2(fromBinaryResult)) {
+  if (false === fn(fromBinaryResult)) {
     return null;
   } else {
     const obj = PreloadedUserSettings.create();
-    obj[closure_02] = fromBinaryResult;
+    obj[arg4] = fromBinaryResult;
     return obj;
   }
 };

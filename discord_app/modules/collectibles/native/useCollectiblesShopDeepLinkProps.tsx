@@ -1,17 +1,16 @@
 // discord_app/modules/collectibles/native/useCollectiblesShopDeepLinkProps.tsx
-import set from "../../../../_runtime/00002_set.js";
-import noop from "../../../../_runtime/00019_noop.js";
-import closure_3 from "../CollectiblesCategoryStore.tsx";
-import closure_4 from "../CollectiblesShopStore.tsx";
+import _mod19 from "../../../../_runtime/metro/00019__.js";
+import CollectiblesCategoryStore from "../CollectiblesCategoryStore.tsx";
+import CollectiblesShopStore from "../CollectiblesShopStore.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const useMemo = noop.useMemo;
+const useMemo = _mod19.useMemo;
 let closure_5 = {};
-const result = set.fileFinishedImporting("modules/collectibles/native/useCollectiblesShopDeepLinkProps.tsx");
+const result = size.fileFinishedImporting("modules/collectibles/native/useCollectiblesShopDeepLinkProps.tsx");
 
 export const useCollectiblesShopDeepLinkProps = function useCollectiblesShopDeepLinkProps(categories) {
   categories = categories.categories;
   const products = categories.products;
-  let initialCategorySkuId;
   let initialBaseProductSkuId;
   let initialVariantIndex;
   const items = [initialBaseProductSkuId, initialVariantIndex];
@@ -27,8 +26,8 @@ export const useCollectiblesShopDeepLinkProps = function useCollectiblesShopDeep
         const productByStoreListingId = obj.getProductByStoreListingId(product.variantGroupStoreListingId);
         let isVariantProduct = null != productByStoreListingId;
         if (isVariantProduct) {
-          isVariantProduct = initialProductSkuId(products[4]).getIsVariantProduct(productByStoreListingId);
-          const obj2 = initialProductSkuId(products[4]);
+          isVariantProduct = categories(products[4]).getIsVariantProduct(productByStoreListingId);
+          const obj2 = categories(products[4]);
         }
         initialVariantIndex = 0;
         initialBaseProductSkuId = initialProductSkuId;
@@ -50,7 +49,7 @@ export const useCollectiblesShopDeepLinkProps = function useCollectiblesShopDeep
     }
     return { initialCategorySkuId, initialBaseProductSkuId, initialVariantIndex };
   });
-  initialCategorySkuId = stateFromStoresObject.initialCategorySkuId;
+  let initialCategorySkuId = stateFromStoresObject.initialCategorySkuId;
   initialBaseProductSkuId = stateFromStoresObject.initialBaseProductSkuId;
   initialVariantIndex = stateFromStoresObject.initialVariantIndex;
   const items1 = [initialBaseProductSkuId, initialVariantIndex, initialCategorySkuId, products, categories];
@@ -58,38 +57,35 @@ export const useCollectiblesShopDeepLinkProps = function useCollectiblesShopDeep
     if (null != initialBaseProductSkuId) {
       if (null != initialCategorySkuId) {
         let obj = {
-          initialProductSkuId: null,
-          initialVariantIndex: null,
-          initialCategorySkuId: null,
+          initialProductSkuId: tmp,
+          initialVariantIndex,
+          initialCategorySkuId: tmp6,
           productIndex: null,
           categoryIndex: null,
         };
-        obj[0] = tmp;
-        obj[1] = initialVariantIndex;
-        obj[2] = tmp6;
         let bound;
         if (null != products) {
           const _Math = Math;
           bound = Math.max(
             0,
-            obj3.findIndex((skuId) => skuId.skuId === closure_3),
+            obj3.findIndex((skuId) => skuId.skuId === initialBaseProductSkuId),
           );
         }
-        obj[3] = bound;
+        obj.productIndex = bound;
         obj = categories;
         let bound1;
         if (null != categories) {
           const _Math2 = Math;
           bound1 = Math.max(
             0,
-            obj.findIndex((skuId) => skuId.skuId === closure_2),
+            obj.findIndex((skuId) => skuId.skuId === initialCategorySkuId),
           );
         }
-        obj[4] = bound1;
+        obj.categoryIndex = bound1;
         obj3 = products;
       }
       return obj;
     }
-    obj = closure_1_5;
+    obj = closure_5;
   }, items1);
 };

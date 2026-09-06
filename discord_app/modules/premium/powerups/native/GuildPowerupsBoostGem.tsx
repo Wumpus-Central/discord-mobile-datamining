@@ -1,32 +1,32 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsBoostGem.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import BoostGemDefault from "images/BoostGem.tsx";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const View = get_ActivityIndicator.View;
+const View = _mod17.View;
 const jsx = jsxProd.jsx;
 let obj = { boostGemContainer: null };
-obj = {
+let size = {
   width: 100,
   height: 100,
-  borderRadius: ThemesDefault.radii.round,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_SECONDARY_ALT,
+  borderRadius: nativeDefault.radii.round,
+  backgroundColor: nativeDefault.colors.BACKGROUND_SECONDARY_ALT,
   alignItems: "center",
   justifyContent: "center",
   alignSelf: "center",
 };
-obj[0] = obj;
-let closure_4 = createCacheKey.createStyles(obj);
-const result = set.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsBoostGem.tsx");
+obj.boostGemContainer = size;
+let closure_4 = createStyles.createStyles(obj);
+const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsBoostGem.tsx");
 
 export default function GuildPowerupsBoostGem(arg0) {
   ({ style, gemWidth, gemHeight } = arg0);
   const obj = { style: null, children: null };
-  const items = [callback().boostGemContainer, style];
-  obj[0] = items;
-  obj[1] = jsx(BoostGemDefault, { width: gemWidth, height: gemHeight });
+  const items = [closure_4().boostGemContainer, style];
+  obj.style = items;
+  obj.children = jsx(BoostGemDefault, { width: gemWidth, height: gemHeight });
   return <View style={null}>{null}</View>;
 }

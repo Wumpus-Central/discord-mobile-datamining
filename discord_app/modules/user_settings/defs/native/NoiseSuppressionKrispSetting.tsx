@@ -1,61 +1,62 @@
 // discord_app/modules/user_settings/defs/native/NoiseSuppressionKrispSetting.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import handleAutomaticGainControlChange from "../../voice/native/UserSettingsVoiceUtils.tsx";
-import getNoiseCancellationDeferredToSystem from "../../../noise_cancellation/NoiseCancellationUtils.tsx";
-import closure_2 from "../../../../stores/MediaEngineStore.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import util from "../../../../intl/index.native.tsx";
+import UserSettingsVoiceUtils from "../../voice/native/UserSettingsVoiceUtils.tsx";
+import NoiseCancellationUtils from "../../../noise_cancellation/NoiseCancellationUtils.tsx";
+import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
-require = arg1;
-createToggle = {
+require = fn;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.t8Qhib);
+    const intl = util.intl;
+    return intl.string(util.t.t8Qhib);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.VOICE,
+  parent: fn(7975).MobileUserSettings.VOICE,
   useValue() {
-    return handleAutomaticGainControlChange.useSelectedNoiseSuppressionOption();
+    return UserSettingsVoiceUtils.useSelectedNoiseSuppressionOption();
   },
   onValueChange: function onNoiseSuppressionKrispValueSettingChange(arg0) {
-    const result = handleAutomaticGainControlChange.handleNoiseSuppressionChange(arg0);
+    const result = UserSettingsVoiceUtils.handleNoiseSuppressionChange(arg0);
   },
   useOptions: function useNoiseSuppressionKrispSettingOptions() {
-    let obj = getNoiseCancellationDeferredToSystem;
+    let obj = NoiseCancellationUtils;
     const noiseCancellationDeferredToSystem = obj.useNoiseCancellationDeferredToSystem();
-    obj = { value: handleAutomaticGainControlChange.NoiseSuppressionOpt.KRISP, label: null, disabled: null };
-    const intl = getSystemLocale.intl;
-    obj[1] = intl.string(getSystemLocale.t.rdoNzt);
-    obj[2] = noiseCancellationDeferredToSystem;
+    obj = { value: UserSettingsVoiceUtils.NoiseSuppressionOpt.KRISP, label: null, disabled: null };
+    const intl = util.intl;
+    obj.label = intl.string(util.t.rdoNzt);
+    obj.disabled = noiseCancellationDeferredToSystem;
     const items = [obj, ,];
     obj = {
-      value: handleAutomaticGainControlChange.NoiseSuppressionOpt.STANDARD,
+      value: UserSettingsVoiceUtils.NoiseSuppressionOpt.STANDARD,
       disabled: noiseCancellationDeferredToSystem,
       label: null,
     };
-    const intl2 = getSystemLocale.intl;
-    obj[2] = intl2.string(getSystemLocale.t.qXeYHw);
+    const intl2 = util.intl;
+    obj.label = intl2.string(util.t.qXeYHw);
     items[1] = obj;
-    obj1 = {
-      value: handleAutomaticGainControlChange.NoiseSuppressionOpt.NONE,
+    const obj1 = {
+      value: UserSettingsVoiceUtils.NoiseSuppressionOpt.NONE,
       disabled: noiseCancellationDeferredToSystem,
       label: null,
     };
-    const intl3 = getSystemLocale.intl;
-    obj1[2] = intl3.string(getSystemLocale.t.wkYAlz);
+    const intl3 = util.intl;
+    obj1.label = intl3.string(util.t.wkYAlz);
     items[2] = obj1;
     return items;
   },
   usePredicate: function useHasNoiseSuppressionKrispSetting() {
-    const items = [closure_2];
+    const items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () => noiseCancellationSupported.isNoiseCancellationSupported());
   },
   useSearchTerms() {
-    const intl = getSystemLocale.intl;
-    const items = [intl.string(getSystemLocale.t.hmfkCi)];
+    const intl = util.intl;
+    const items = [intl.string(util.t.hmfkCi)];
     return items;
   },
 };
-createToggle = createToggle.createRadio(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/NoiseSuppressionKrispSetting.tsx");
+SettingBuilders = SettingBuilders.createRadio(SettingBuilders);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/NoiseSuppressionKrispSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

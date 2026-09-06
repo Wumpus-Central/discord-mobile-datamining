@@ -1,15 +1,19 @@
 // discord_common/js/shared/shared-constants/QuestContent.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const obj = { DISMISSIBLE: null, TARGETED: null, DESKTOP_DELIVERY: null, MOBILE_DELIVERY: null };
-let set = new Set([0, 1, 4, 5, 10, 13]);
-obj[0] = set;
-obj[1] = new Set([0, 8]);
+const obj = {
+  DISMISSIBLE: new Set([0, 1, 4, 5, 10, 13]),
+  TARGETED: null,
+  DESKTOP_DELIVERY: null,
+  MOBILE_DELIVERY: null,
+};
+const set = new Set([0, 1, 4, 5, 10, 13]);
+obj.TARGETED = new Set([0, 8]);
 const set1 = new Set([0, 8]);
-obj[2] = new Set([1, 10]);
+obj.DESKTOP_DELIVERY = new Set([1, 10]);
 const set2 = new Set([1, 10]);
-obj[3] = new Set([13]);
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/QuestContent.tsx");
+obj.MOBILE_DELIVERY = new Set([13]);
+const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/QuestContent.tsx");
 
 export const QuestContent = {
   GIFT_INVENTORY_SETTINGS_BADGE: 0,

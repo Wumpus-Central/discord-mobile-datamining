@@ -1,7 +1,8 @@
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitEditorModalStateStore.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import isIterable from "../../../../../_runtime/04184_isIterable.js";
-import identity from "../../../../../_runtime/01244_identity.js";
+import ReactBatchUpdates from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
+import _mod4184 from "../../../../../_runtime/metro/04184__.js";
+import identity from "../../../../../_runtime/metro/01244__.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 let closure_2 = Object.freeze({
   name: "",
@@ -15,40 +16,38 @@ let closure_3 = identity.createWithEqualityFn((arg0) => {
   const obj = {};
   const merged = Object.assign(closure_2);
   obj.setEmojiId = function setEmojiId(emoji_id) {
-    const callback = emoji_id;
-    callback(closure_1_1[1]).batchUpdates(() => emoji_id({ emojiId: emoji_id }));
+    const emojiId = emoji_id;
+    emojiId(1249).batchUpdates(() => emojiId({ emojiId }));
   };
   obj.setEmojiName = function setEmojiName(emoji_name) {
-    const callback = emoji_name;
-    callback(closure_1_1[1]).batchUpdates(() => emoji_name({ emojiName: emoji_name }));
+    const emojiName = emoji_name;
+    emojiName(1249).batchUpdates(() => emojiName({ emojiName }));
   };
-  obj.setName = function setName(arg0) {
-    const callback = arg0;
-    callback(closure_1_1[1]).batchUpdates(() => callback({ name: callback }));
+  obj.setName = function setName(name) {
+    name(1249).batchUpdates(() => name({ name }));
   };
   obj.setDescription = function setDescription(description) {
-    const callback = description;
-    callback(closure_1_1[1]).batchUpdates(() => description({ description }));
+    description(1249).batchUpdates(() => description({ description }));
   };
   obj.setRefId = function setRefId(ref_id) {
-    const callback = ref_id;
-    callback(closure_1_1[1]).batchUpdates(() => callback({ refId: callback }));
+    const refId = ref_id;
+    refId(1249).batchUpdates(() => refId({ refId }));
   };
   obj.reset = function reset() {
-    callback(closure_1_1[1]).batchUpdates(() => callback(closure_1_2));
+    ReactBatchUpdates.batchUpdates(() => closure_1_0(closure_2_2));
   };
   return obj;
 });
-const result = set.fileFinishedImporting(
+const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitEditorModalStateStore.tsx",
 );
 
 export const resetImperatively = function resetImperatively() {
-  const state = store.getState();
+  const state = closure_3.getState();
   state.reset();
 };
 export const initializeImperatively = function initializeImperatively(benefit) {
-  const state = store.getState();
+  const state = closure_3.getState();
   ({ setDescription, setEmojiId, setEmojiName, setName, setRefId } = state);
   state.reset();
   if (null != benefit.description) {
@@ -62,37 +61,37 @@ export const initializeImperatively = function initializeImperatively(benefit) {
   }
 };
 export const useDescriptionState = function useDescriptionState() {
-  return store((arg0) => {
+  return closure_3((arg0) => {
     const items = [,];
     ({ description: arr[0], setDescription: arr[1] } = arg0);
     return items;
-  }, isIterable.shallow);
+  }, _mod4184.shallow);
 };
 export const useEmojiIdState = function useEmojiIdState() {
-  return store((arg0) => {
+  return closure_3((arg0) => {
     const items = [,];
     ({ emojiId: arr[0], setEmojiId: arr[1] } = arg0);
     return items;
-  }, isIterable.shallow);
+  }, _mod4184.shallow);
 };
 export const useEmojiNameState = function useEmojiNameState() {
-  return store((arg0) => {
+  return closure_3((arg0) => {
     const items = [,];
     ({ emojiName: arr[0], setEmojiName: arr[1] } = arg0);
     return items;
-  }, isIterable.shallow);
+  }, _mod4184.shallow);
 };
 export const useNameState = function useNameState() {
-  return store((arg0) => {
+  return closure_3((arg0) => {
     const items = [,];
     ({ name: arr[0], setName: arr[1] } = arg0);
     return items;
-  }, isIterable.shallow);
+  }, _mod4184.shallow);
 };
 export const useRefIdState = function useRefIdState() {
-  return store((arg0) => {
+  return closure_3((arg0) => {
     const items = [,];
     ({ refId: arr[0], setRefId: arr[1] } = arg0);
     return items;
-  }, isIterable.shallow);
+  }, _mod4184.shallow);
 };

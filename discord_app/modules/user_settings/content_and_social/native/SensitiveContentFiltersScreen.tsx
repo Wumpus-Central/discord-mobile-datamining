@@ -1,53 +1,56 @@
 // discord_app/modules/user_settings/content_and_social/native/SensitiveContentFiltersScreen.tsx
-import _modDef14689 from "../../../settings/native/renderer/SettingLayout.tsx";
-import items3 from "../../privacy_and_safety/native/SettingsScreenNotices.tsx";
-import itemsDefault from "../../privacy_and_safety/native/SettingsScreenNotices.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import { MobileUserSettings } from "../../core/native/SettingsConstants.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import util from "../../../../intl/index.native.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayout.tsx";
+import SettingsScreenNotices from "../../privacy_and_safety/native/SettingsScreenNotices.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-const result = require("set").fileFinishedImporting(
+const SettingsScreenNoticesDefault = SettingsScreenNotices;
+
+require = fn;
+const MobileUserSettings = fn(7975).MobileUserSettings;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/user_settings/content_and_social/native/SensitiveContentFiltersScreen.tsx",
 );
 
 export default function UserSettingsSensitiveContentFilters() {
   let obj = { children: null };
-  const memo = React.useMemo(() => {
-    let obj = callback(11468);
-    obj = { sections: null };
+  const memo = noop.useMemo(() => {
+    let obj = { sections: null };
     obj = { label: null, settings: null, subLabel: null };
-    const intl = callback(1114).intl;
-    obj[0] = intl.string(callback(1114).t.GYpoAq);
+    const intl = util.intl;
+    obj.label = intl.string(util.t.GYpoAq);
     const items = [, ,];
     ({
       EXPLICIT_MEDIA_FILTERS_FRIENDS_DMS: arr[0],
       EXPLICIT_MEDIA_FILTERS_NON_FRIENDS_DMS: arr[1],
       EXPLICIT_MEDIA_FILTERS_GUILDS: arr[2],
-    } = closure_4);
-    obj[1] = items;
-    const intl2 = callback(1114).intl;
-    obj[2] = intl2.string(callback(1114).t.Wnojv1);
+    } = MobileUserSettings);
+    obj.settings = items;
+    const intl2 = util.intl;
+    obj.subLabel = intl2.string(util.t.Wnojv1);
     const items1 = [obj];
-    obj1 = { label: null, settings: null, subLabel: null };
-    const intl3 = callback(1114).intl;
-    obj1[0] = intl3.string(callback(1114).t["16/3Bi"]);
+    const obj1 = { label: null, settings: null, subLabel: null };
+    const intl3 = util.intl;
+    obj1.label = intl3.string(util.t["16/3Bi"]);
     const items2 = [, ,];
     ({
       GORE_MEDIA_FILTERS_FRIENDS_DMS: arr3[0],
       GORE_MEDIA_FILTERS_NON_FRIENDS_DMS: arr3[1],
       GORE_MEDIA_FILTERS_GUILDS: arr3[2],
-    } = closure_4);
-    obj1[1] = items2;
-    const intl4 = callback(1114).intl;
-    obj1[2] = intl4.string(callback(1114).t.XgH9eh);
+    } = MobileUserSettings);
+    obj1.settings = items2;
+    const intl4 = util.intl;
+    obj1.subLabel = intl4.string(util.t.XgH9eh);
     items1[1] = obj1;
-    obj[0] = items1;
+    obj.sections = items1;
     return obj.createList(obj);
   }, []);
-  obj = { screen: items3.SettingsScreen.SENSITIVE_CONTENT_FILTERS };
-  let items = [callback(itemsDefault, obj), callback(_modDef14689, { node: memo })];
-  obj[0] = items;
-  return callback2(closure_6, obj);
+  obj = { screen: SettingsScreenNotices.SettingsScreen.SENSITIVE_CONTENT_FILTERS };
+  let items = [hasOwnProperty(SettingsScreenNoticesDefault, obj), hasOwnProperty(SettingLayoutDefault, { node: memo })];
+  obj.children = items;
+  return React5(timestampProducer, obj);
 }

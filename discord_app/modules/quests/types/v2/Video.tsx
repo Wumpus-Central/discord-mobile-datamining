@@ -1,10 +1,10 @@
 // discord_app/modules/quests/types/v2/Video.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/quests/types/v2/Video.tsx");
+const result = size.fileFinishedImporting("modules/quests/types/v2/Video.tsx");
 
 export const videoAssetFromServer = function videoAssetFromServer(url) {
-  return {
+  const size = {
     url: url.url,
     width: url.width,
     height: url.height,
@@ -12,11 +12,12 @@ export const videoAssetFromServer = function videoAssetFromServer(url) {
     caption: url.caption,
     transcript: url.transcript,
   };
+  return size;
 };
 export const desktopVideoAssetsFromServer = function desktopVideoAssetsFromServer(assets) {
-  obj = { video: obj };
+  const obj = { video: null };
   const video = assets.video;
-  obj = {
+  obj.video = {
     url: video.url,
     width: video.width,
     height: video.height,
@@ -25,28 +26,28 @@ export const desktopVideoAssetsFromServer = function desktopVideoAssetsFromServe
     transcript: video.transcript,
   };
   if (null != assets.video_low_res) {
-    obj = { url: null, width: null, height: null, thumbnail: null, caption: null, transcript: null };
+    const size = { url: null, width: null, height: null, thumbnail: null, caption: null, transcript: null };
     ({
-      url: obj3[0],
-      width: obj3[1],
-      height: obj3[2],
-      thumbnail: obj3[3],
-      caption: obj3[4],
-      transcript: obj3[5],
+      url: obj2.url,
+      width: obj2.width,
+      height: obj2.height,
+      thumbnail: obj2.thumbnail,
+      caption: obj2.caption,
+      transcript: obj2.transcript,
     } = assets.video_low_res);
-    obj.videoLowRes = obj;
+    obj.videoLowRes = size;
   }
   if (null != assets.video_hls) {
+    const size1 = { url: null, width: null, height: null, thumbnail: null, caption: null, transcript: null };
     ({
-      url: obj4[0],
-      width: obj4[1],
-      height: obj4[2],
-      thumbnail: obj4[3],
-      caption: obj4[4],
-      transcript: obj4[5],
+      url: obj3.url,
+      width: obj3.width,
+      height: obj3.height,
+      thumbnail: obj3.thumbnail,
+      caption: obj3.caption,
+      transcript: obj3.transcript,
     } = assets.video_hls);
-    obj.videoHls = { url: null, width: null, height: null, thumbnail: null, caption: null, transcript: null };
-    obj1 = { url: null, width: null, height: null, thumbnail: null, caption: null, transcript: null };
+    obj.videoHls = size1;
   }
   return obj;
 };
@@ -54,9 +55,9 @@ export const desktopVideoMessagesFromServer = function desktopVideoMessagesFromS
   return { videoTitle: messages.video_title };
 };
 export const mobileVideoAssetsFromServer = function mobileVideoAssetsFromServer(assets) {
-  obj = { video: obj };
+  const obj = { video: null };
   const video = assets.video;
-  obj = {
+  obj.video = {
     url: video.url,
     width: video.width,
     height: video.height,
@@ -65,28 +66,28 @@ export const mobileVideoAssetsFromServer = function mobileVideoAssetsFromServer(
     transcript: video.transcript,
   };
   if (null != assets.video_low_res) {
-    obj = { url: null, width: null, height: null, thumbnail: null, caption: null, transcript: null };
+    const size = { url: null, width: null, height: null, thumbnail: null, caption: null, transcript: null };
     ({
-      url: obj3[0],
-      width: obj3[1],
-      height: obj3[2],
-      thumbnail: obj3[3],
-      caption: obj3[4],
-      transcript: obj3[5],
+      url: obj2.url,
+      width: obj2.width,
+      height: obj2.height,
+      thumbnail: obj2.thumbnail,
+      caption: obj2.caption,
+      transcript: obj2.transcript,
     } = assets.video_low_res);
-    obj.videoLowRes = obj;
+    obj.videoLowRes = size;
   }
   if (null != assets.video_hls) {
+    const size1 = { url: null, width: null, height: null, thumbnail: null, caption: null, transcript: null };
     ({
-      url: obj4[0],
-      width: obj4[1],
-      height: obj4[2],
-      thumbnail: obj4[3],
-      caption: obj4[4],
-      transcript: obj4[5],
+      url: obj3.url,
+      width: obj3.width,
+      height: obj3.height,
+      thumbnail: obj3.thumbnail,
+      caption: obj3.caption,
+      transcript: obj3.transcript,
     } = assets.video_hls);
-    obj.videoHls = { url: null, width: null, height: null, thumbnail: null, caption: null, transcript: null };
-    obj1 = { url: null, width: null, height: null, thumbnail: null, caption: null, transcript: null };
+    obj.videoHls = size1;
   }
   return obj;
 };

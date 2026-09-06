@@ -1,22 +1,21 @@
 // discord_app/lib/ZustandStore.tsx
-import set from "../../_runtime/00002_set.js";
-import { identity } from "../../_runtime/01244_identity.js";
+import size from "../../_runtime/metro/00002__.js";
 
 function defaultStatesAreEqual(arg0, arg1) {
   return arg0 === arg1;
 }
-const result = set.fileFinishedImporting("lib/ZustandStore.tsx");
+const result = size.fileFinishedImporting("lib/ZustandStore.tsx");
 
 export const createZustandStore = function createZustandStore(arg0) {
-  const _require = arg0;
-  let obj = identity;
+  _require = arg0;
+  const obj = require("../../_runtime/metro/01244__.js");
   dependencyMap = obj.createWithEqualityFn(
-    require("../../_runtime/04430_createJSONStorage.js").subscribeWithSelector((arg0, arg1, arg2) => {
-      let callback = arg0;
-      return callback(
+    require("../../_runtime/metro/04430__.js").subscribeWithSelector((arg0, arg1, arg2) => {
+      closure_0 = arg0;
+      return closure_0(
         (arg0) => {
-          const callback = arg0;
-          return callback(closure_1_1[2]).batchUpdates(() => callback(callback));
+          closure_0 = arg0;
+          return closure_0(closure_1_1[2]).batchUpdates(() => closure_0(closure_0));
         },
         arg1,
         arg2,
@@ -24,22 +23,22 @@ export const createZustandStore = function createZustandStore(arg0) {
     }),
   );
   function setState(arg0) {
-    const callback = arg0;
-    callback(store[2]).batchUpdates(() => closure_1_1.setState(initialState));
+    closure_0 = arg0;
+    closure_0(closure_1[2]).batchUpdates(() => state.setState(closure_0));
   }
-  obj = {
+  const store = {
     useState(arg0) {
       let tmp = arg1;
       if (arg1 === undefined) {
-        tmp = setState;
+        tmp = defaultStatesAreEqual;
       }
-      return store(arg0, tmp);
+      return closure_1(arg0, tmp);
     },
-    getState(arg0) {
-      const state = store.getState();
+    getState(fn) {
+      const state = closure_1.getState();
       let tmp2 = state;
-      if (null != arg0) {
-        tmp2 = arg0(state);
+      if (null != fn) {
+        tmp2 = fn(state);
       }
       return tmp2;
     },
@@ -47,27 +46,28 @@ export const createZustandStore = function createZustandStore(arg0) {
       closure_0 = blocklist;
       let tmp = arg1;
       if (arg1 === undefined) {
-        tmp = setState;
+        tmp = defaultStatesAreEqual;
       }
       if (tmp === undefined) {
-        tmp = setState;
+        tmp = defaultStatesAreEqual;
       }
-      return store((arg0) => arg0[closure_0], tmp);
+      return closure_1((arg0) => arg0[closure_0], tmp);
     },
     getField(blocklist) {
-      return store.getState()[blocklist];
+      return closure_1.getState()[blocklist];
     },
     subscribe(arg0, arg1, arg2) {
-      return store.subscribe(arg0, arg1, arg2);
+      return closure_1.subscribe(arg0, arg1, arg2);
     },
     setState,
     resetState() {
-      const initialState = store.getInitialState();
-      if (typeof setState !== "function") {
-        HermesBuiltin.throwTypeError();
+      if (typeof setState === "function") {
+        const initialState = state.getInitialState();
+        initialState(state[2]).batchUpdates(() => state.setState(closure_0));
+      } else {
+        throw new TypeError("Trying to call a non-function");
       }
-      callback(store[2]).batchUpdates(() => closure_1_1.setState(initialState));
     },
   };
-  return obj;
+  return store;
 };

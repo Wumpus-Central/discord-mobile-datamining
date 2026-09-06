@@ -1,16 +1,15 @@
 // discord_app/modules/voice_calls/showActivitiesInvalidPermissionsAlert.tsx
-import set from "../../../_runtime/00002_set.js";
-import getSystemLocale from "../../intl/index.native.tsx";
-import setDefault from "../../actions/AlertActionCreators.tsx";
+import util from "../../intl/index.native.tsx";
+import AlertActionCreatorsDefault from "../../actions/AlertActionCreators.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/voice_calls/showActivitiesInvalidPermissionsAlert.tsx");
+const result = size.fileFinishedImporting("modules/voice_calls/showActivitiesInvalidPermissionsAlert.tsx");
 
 export const showActivitiesInvalidPermissionsAlert = function showActivitiesInvalidPermissionsAlert() {
-  let obj = setDefault;
-  obj = { title: null, body: null, hideActionSheet: false };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t.otsg2R);
-  const intl2 = getSystemLocale.intl;
-  obj[1] = intl2.string(getSystemLocale.t["/Yx5qX"]);
+  const obj = { title: null, body: null, hideActionSheet: false };
+  const intl = util.intl;
+  obj.title = intl.string(util.t.otsg2R);
+  const intl2 = util.intl;
+  obj.body = intl2.string(util.t["/Yx5qX"]);
   obj.show(obj);
 };

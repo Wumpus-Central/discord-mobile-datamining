@@ -1,16 +1,16 @@
 // discord_common/js/packages/id-generator/IdGenerator.tsx
-import set from "../../../../_runtime/00002_set.js";
 import IntegerDefault from "../../../../_runtime/00014_Integer.js";
 import Buffer from "../../../../_runtime/01253_Buffer.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/id-generator/IdGenerator.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/id-generator/IdGenerator.tsx");
 class IdGenerator {
   constructor() {
-    obj = Object.create(new.target.prototype);
-    obj[0] = Math.floor(4294967296 * Math.random()) | 0;
-    tmp2 = require("Integer");
-    obj[1] = tmp2(Date.now());
-    return obj;
+    merged = Object.assign({ _randomPrefix: null, _creationTime: null, _sequenceNumber: 0 });
+    merged[0] = Math.floor(4294967296 * Math.random()) | 0;
+    tmp2 = closure_1(closure_2[0]);
+    merged[1] = tmp2(Date.now());
+    return merged;
   }
 }
 IdGenerator.prototype["generate"] = function generate(arg0) {

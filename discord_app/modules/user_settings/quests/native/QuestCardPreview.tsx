@@ -1,9 +1,14 @@
 // discord_app/modules/user_settings/quests/native/QuestCardPreview.tsx
-import set from "../../../../../_runtime/00002_set.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
+import QuestTypes from "../../../quests/QuestTypes.tsx";
+import QuestCard from "../../../quests/native/QuestCard.tsx";
+import MobileQuestPreviewContainerDefault from "MobileQuestPreviewContainer.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("modules/user_settings/quests/native/QuestCardPreview.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/quests/native/QuestCardPreview.tsx");
 
 export const QuestCardPreview = function QuestCardPreview(quest) {
   quest = quest.quest;
@@ -14,15 +19,23 @@ export const QuestCardPreview = function QuestCardPreview(quest) {
     trackGuildAndChannelMetadata: false,
     children() {
       let obj = { title: null, children: null };
-      const intl = quest(closure_1_2[4]).intl;
-      obj[0] = intl.string(quest(closure_1_2[4]).t.BDUDau);
+      const intl = util.intl;
+      obj.title = intl.string(util.t.BDUDau);
       obj = {
         quest,
-        containerPadding: closure_1_1(closure_1_2[6]).space.PX_16,
-        sourceQuestContent: quest(closure_1_2[2]).QuestContent.INTERNAL_PREVIEW_TOOL,
+        containerPadding: nativeDefault.space.PX_16,
+        sourceQuestContent: QuestTypes.QuestContent.INTERNAL_PREVIEW_TOOL,
       };
-      obj[1] = closure_1_3(quest(closure_1_2[5]).QuestCard, obj);
-      return closure_1_3(closure_1_1(closure_1_2[3]), obj);
+      obj.children = jsx(QuestCard.QuestCard, {
+        quest,
+        containerPadding: nativeDefault.space.PX_16,
+        sourceQuestContent: QuestTypes.QuestContent.INTERNAL_PREVIEW_TOOL,
+      });
+      return jsx(MobileQuestPreviewContainerDefault, {
+        quest,
+        containerPadding: nativeDefault.space.PX_16,
+        sourceQuestContent: QuestTypes.QuestContent.INTERNAL_PREVIEW_TOOL,
+      });
     },
   });
 };

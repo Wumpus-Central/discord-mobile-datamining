@@ -1,11 +1,12 @@
 // discord_app/modules/activities/getURLForApplication.tsx
-import closure_0 from "../../stores/game_store/TestModeStore.tsx";
-import closure_1 from "DeveloperActivityShelfStore.tsx";
+import TestModeStore from "../../stores/game_store/TestModeStore.tsx";
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore.tsx";
 
-const result = require("set").fileFinishedImporting("modules/activities/getURLForApplication.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/getURLForApplication.tsx");
 
 export default function getURLForApplication(arg0) {
-  const state = store.getState();
+  const state = DeveloperActivityShelfStore.getState();
   let useActivityUrlOverride = state.useActivityUrlOverride;
   if (useActivityUrlOverride) {
     useActivityUrlOverride = null != state.activityUrlOverride;
@@ -14,9 +15,9 @@ export default function getURLForApplication(arg0) {
     useActivityUrlOverride = "" !== state.activityUrlOverride;
   }
   if (useActivityUrlOverride) {
-    let activityUrlOverride = store.getState().activityUrlOverride;
+    let activityUrlOverride = DeveloperActivityShelfStore.getState().activityUrlOverride;
   } else {
-    if (closure_0.inTestModeForEmbeddedApplication(arg0)) {
+    if (TestModeStore.inTestModeForEmbeddedApplication(arg0)) {
       activityUrlOverride = tmp4.testModeOriginURL;
     } else {
       const _window = window;
@@ -35,7 +36,7 @@ export default function getURLForApplication(arg0) {
         }
       }
     }
-    tmp4 = closure_0;
+    tmp4 = TestModeStore;
   }
   return activityUrlOverride;
 }
@@ -55,7 +56,7 @@ export const getNonTestModeUrlForApplication = function getNonTestModeUrlForAppl
   }
 };
 export const isUsingDevShelfActivityUrlOverride = function isUsingDevShelfActivityUrlOverride() {
-  const state = store.getState();
+  const state = DeveloperActivityShelfStore.getState();
   let useActivityUrlOverride = state.useActivityUrlOverride;
   if (useActivityUrlOverride) {
     useActivityUrlOverride = null != state.activityUrlOverride;

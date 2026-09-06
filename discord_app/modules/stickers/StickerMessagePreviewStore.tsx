@@ -1,19 +1,19 @@
 // discord_app/modules/stickers/StickerMessagePreviewStore.tsx
-import set from "../../../_runtime/00002_set.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import handleChanged from "../../stores/DraftStore.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import DraftStore from "../../stores/DraftStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const DraftType = handleChanged.DraftType;
+const DraftType = DraftStore.DraftType;
 let closure_1 = {};
 let closure_2 = {};
 const Store = initializeDefault.Store;
 class StickerMessagePreviewStore extends Store {}
-StickerMessagePreviewStore.prototype["getStickerPreview"] = function getStickerPreview(channelId, ChannelMessage) {
-  return ChannelMessage === DraftType.FirstThreadMessage ? closure_2 : closure_1[channelId];
+StickerMessagePreviewStore.prototype["getStickerPreview"] = function getStickerPreview(c1, ChannelMessage) {
+  return ChannelMessage === DraftType.FirstThreadMessage ? closure_2 : closure_1[c1];
 };
 StickerMessagePreviewStore.displayName = "StickerMessagePreviewStore";
-const stickerMessagePreviewStore = new StickerMessagePreviewStore(dispatcherDefault, {
+const stickerMessagePreviewStore = new StickerMessagePreviewStore(DispatcherDefault, {
   ADD_STICKER_PREVIEW: function handleAddStickerPreview(sticker) {
     const items = [sticker.sticker];
     sticker.draftType === DraftType.FirstThreadMessage ? closure_2 : (closure_1[sticker.channelId] = items);
@@ -28,6 +28,6 @@ const stickerMessagePreviewStore = new StickerMessagePreviewStore(dispatcherDefa
     closure_2 = {};
   },
 });
-const result = set.fileFinishedImporting("modules/stickers/StickerMessagePreviewStore.tsx");
+const result = size.fileFinishedImporting("modules/stickers/StickerMessagePreviewStore.tsx");
 
 export default stickerMessagePreviewStore;

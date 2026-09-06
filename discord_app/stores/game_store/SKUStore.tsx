@@ -1,14 +1,12 @@
 // discord_app/stores/game_store/SKUStore.tsx
 import initializeAll from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import closure_1 from "../../modules/skus/SKURecord.tsx";
-import closure_2 from "../../modules/user_settings/LocaleStore.tsx";
-import set from "../../../_runtime/00002_set.js";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import SKURecord from "../../modules/skus/SKURecord.tsx";
+import LocaleStore from "../../modules/user_settings/LocaleStore.tsx";
 
 function addSku(sku) {
-  closure_0 = sku;
-  let value = map1.get(sku.id);
-  const fromServer = closure_1.createFromServer(sku);
+  value = map1.get(sku.id);
+  const fromServer = SKURecord.createFromServer(sku);
   if (null != value) {
     if (tmp3) {
       fromServer.price = value.price;
@@ -37,8 +35,8 @@ function addSku(sku) {
   set1.delete(sku.id);
   const bundled_sku_ids = sku.bundled_sku_ids;
   if (bundled_sku_ids != null) {
-    const item = bundled_sku_ids.forEach((arg0) => {
-      const result = closure_1_3.set(arg0, sku.id);
+    const item = bundled_sku_ids.forEach((item) => {
+      const result = map.set(item, sku.id);
     });
   }
   if (!map2.has(sku.application_id)) {
@@ -56,14 +54,14 @@ function handleStoreListing(sku) {
   addSku(sku.sku);
   if (null != sku.child_skus) {
     const child_skus = sku.child_skus;
-    const item = child_skus.forEach((arg0) => {
-      callback(arg0);
+    const item = child_skus.forEach((item) => {
+      addSku(item);
     });
   }
   if (null != sku.alternative_skus) {
     const alternative_skus = sku.alternative_skus;
-    const item1 = alternative_skus.forEach((arg0) => {
-      callback(arg0);
+    const item1 = alternative_skus.forEach((item) => {
+      addSku(item);
     });
   }
 }
@@ -72,15 +70,13 @@ function handleEntitlementsFetch(arg0) {
   const nextResult = iter.next();
   while (iter !== undefined) {
     if (null != nextResult.sku) {
-      let tmp3 = addSku;
-      let tmp4 = nextResult;
       let tmp5 = addSku(tmp2.sku);
     }
     continue;
   }
 }
 function handleUserSettingsStoreUpdate() {
-  if (locale === closure_2.locale) {
+  if (locale === LocaleStore.locale) {
     return false;
   } else {
     locale = tmp.locale;
@@ -108,21 +104,21 @@ const Store = initializeAll.Store;
 class SKUStore extends Store {}
 const prototype = SKUStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_2);
-  const items = [closure_2];
+  this.waitFor(LocaleStore);
+  const items = [LocaleStore];
   this.syncWith(items, handleUserSettingsStoreUpdate);
-  const locale = closure_2.locale;
+  locale = LocaleStore.locale;
 };
 prototype["get"] = function get(arg0) {
   return map1.get(arg0);
 };
 prototype["getForApplication"] = function getForApplication(arg0) {
-  const value = map2.get(arg0);
+  value = map2.get(arg0);
   if (null == value) {
     let items = [];
   } else {
     const _Array = Array;
-    items = Array.from(value).map((arg0) => closure_6.get(arg0));
+    items = Array.from(value).map((item) => map1.get(item));
     const arr = Array.from(value);
   }
   return items;
@@ -138,7 +134,7 @@ prototype["getSKUs"] = function getSKUs() {
   return Object.fromEntries(map1);
 };
 prototype["getParentSKU"] = function getParentSKU(arg0) {
-  const value = map.get(arg0);
+  value = map.get(arg0);
   if (null != value) {
     const self = this;
     return this.get(value);
@@ -148,7 +144,7 @@ prototype["didFetchingSkuFail"] = function didFetchingSkuFail(skuId) {
   return set1.has(skuId);
 };
 SKUStore.displayName = "SKUStore";
-const sKUStore = new SKUStore(dispatcherDefault, {
+const sKUStore = new SKUStore(DispatcherDefault, {
   STORE_LISTINGS_FETCH_START: function handleStoreListingsFetchStart(skuId) {
     set.add(skuId.skuId);
   },
@@ -159,7 +155,6 @@ const sKUStore = new SKUStore(dispatcherDefault, {
   },
   STORE_LISTINGS_FETCH_SUCCESS: function handleStoreListingsFetchSuccess(arg0) {
     while (tmp !== undefined) {
-      let tmp3 = handleStoreListing;
       let tmp4 = handleStoreListing(tmp2);
       continue;
     }
@@ -169,14 +164,14 @@ const sKUStore = new SKUStore(dispatcherDefault, {
     addSku(storeListing.sku);
     if (null != storeListing.child_skus) {
       const child_skus = storeListing.child_skus;
-      const item = child_skus.forEach((arg0) => {
-        callback(arg0);
+      const item = child_skus.forEach((item) => {
+        addSku(item);
       });
     }
     if (null != storeListing.alternative_skus) {
       const alternative_skus = storeListing.alternative_skus;
-      const item1 = alternative_skus.forEach((arg0) => {
-        callback(arg0);
+      const item1 = alternative_skus.forEach((item) => {
+        addSku(item);
       });
     }
   },
@@ -202,7 +197,6 @@ const sKUStore = new SKUStore(dispatcherDefault, {
   SKUS_FETCH_SUCCESS: function handleSkusFetchSuccess(arg0) {
     ({ guildId, skus } = arg0);
     while (tmp !== undefined) {
-      let tmp3 = skuFetchSuccess;
       let tmp4 = skuFetchSuccess(tmp2);
       continue;
     }
@@ -224,6 +218,7 @@ const sKUStore = new SKUStore(dispatcherDefault, {
   APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: handleEntitlementsFetch,
   ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: handleEntitlementsFetch,
 });
-let result = set.fileFinishedImporting("stores/game_store/SKUStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("stores/game_store/SKUStore.tsx");
 
 export default sKUStore;

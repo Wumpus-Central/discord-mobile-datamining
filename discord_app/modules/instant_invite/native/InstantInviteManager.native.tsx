@@ -1,8 +1,8 @@
 // discord_app/modules/instant_invite/native/InstantInviteManager.native.tsx
-import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
+import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
-let require = arg1;
-initializeDefault;
+let require = fn;
 let prototype = function InstantInviteManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
@@ -12,16 +12,16 @@ let prototype = function InstantInviteManager() {
     },
   };
   applyArgumentsResult.shareInviteFailed = function shareInviteFailed() {
-    let obj = callback(4259);
-    obj = { key: "GROUP_DM_ADD_ERROR", content: null };
+    const obj = { key: "GROUP_DM_ADD_ERROR", content: null };
     const intl = applyArgumentsResult(1114).intl;
-    obj[1] = intl.string(applyArgumentsResult(1114).t["N/9OFy"]);
+    obj.content = intl.string(applyArgumentsResult(1114).t["N/9OFy"]);
     obj.open(obj);
   };
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp2 {}
 prototype = new prototype();
-const result = require("set").fileFinishedImporting("modules/instant_invite/native/InstantInviteManager.native.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/instant_invite/native/InstantInviteManager.native.tsx");
 
 export default prototype;

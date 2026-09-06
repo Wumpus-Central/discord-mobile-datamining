@@ -1,42 +1,42 @@
 // discord_app/modules/devtools/native/components/screens/performance/useFrameMonitor.tsx
-import closure_2 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../../../../../_runtime/00019_noop.js";
+import startFrameMonitor from "startFrameMonitor.tsx";
+import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
-  "modules/devtools/native/components/screens/performance/useFrameMonitor.tsx",
-);
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/devtools/native/components/screens/performance/useFrameMonitor.tsx");
 
-export default function useFrameMonitor(first) {
-  closure_0 = first;
-  const monitoring = callback(React.useState(false), 2);
+export default function useFrameMonitor(set) {
+  let current = set;
+  const monitoring = _slicedToArray(noop.useState(false), 2);
   closure_1 = monitoring[1];
-  callback = React.useRef(null);
-  React = React.useRef(first);
-  const items = [first];
-  const effect = React.useEffect(() => {
-    closure_3.current = closure_0;
+  _slicedToArray = noop.useRef(null);
+  noop = noop.useRef(set);
+  const items = [set];
+  const effect = noop.useEffect(() => {
+    closure_3.current = current;
   }, items);
-  const start = React.useCallback(() => {
-    const current = ref.current;
+  const start = noop.useCallback(() => {
+    current = ref.current;
     if (current != null) {
       current.stop();
     }
-    ref.current = callback(15730).startFrameMonitor();
-    dependencyMap(true);
+    ref.current = startFrameMonitor.startFrameMonitor();
+    closure_1(true);
   }, []);
-  const stop = React.useCallback(() => {
-    const current = ref.current;
+  const stop = noop.useCallback(() => {
+    current = ref.current;
     if (null != current) {
       ref.current = null;
-      dependencyMap(false);
+      closure_1(false);
       ref2.current(current.stop());
       const stopResult = current.stop();
     }
   }, []);
-  const effect1 = React.useEffect(
+  const effect1 = noop.useEffect(
     () => () => {
-      const current = ref.current;
+      current = ref.current;
       if (current != null) {
         current.stop();
       }

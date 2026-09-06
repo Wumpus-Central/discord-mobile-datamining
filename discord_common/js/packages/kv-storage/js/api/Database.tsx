@@ -1,10 +1,11 @@
 // discord_common/js/packages/kv-storage/js/api/Database.tsx
+import AppStartPerformanceDefault from "../../../app-start-performance/AppStartPerformance.tsx";
 import TableId from "../types/index.tsx";
-import open from "../raw/Host.tsx";
-import logger from "../raw/Runtime.tsx";
-import closure_3 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import Host2 from "../raw/Host.tsx";
+import Runtime2 from "../raw/Runtime.tsx";
+import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 
-require = arg1;
+require = fn;
 let Database;
 class Database {
   constructor(arg0) {
@@ -12,9 +13,9 @@ class Database {
     closure_0 = obj;
     obj.raw = global;
     obj.name = global.name;
-    obj.lastState = require("TableId").DatabaseState.Open;
+    obj.lastState = closure_0(closure_2[2]).DatabaseState.Open;
     obj.handle = global.handle;
-    Runtime = require("logger").Runtime;
+    Runtime = closure_0(closure_2[3]).Runtime;
     obj.databaseStateCallback = Runtime.addDatabaseStateCallback((arg0, lastState) => {
       if (obj.handle === arg0) {
         tmp.lastState = lastState;
@@ -27,34 +28,36 @@ const prototype = Database.prototype;
 Database["open"] = function open(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
-  return callback(function*() {
-    closure_0 = closure_1_5;
-    const Host = closure_1_0(table[1]).Host;
-    yield Host.open(closure_1_0, c1);
+  return (async () => {
+    closure_0 = Database;
+    const Host = closure_0(c2[1]).Host;
+    await Host.open(closure_0, closure_1);
     return new closure_0(arg1);
   })();
 };
 Database["openSyncUnsafe"] = function openSyncUnsafe(arg0, arg1) {
-  const Host = obj(1995).Host;
+  const Host = Host2.Host;
   const openSyncUnsafeResult = Host.openSyncUnsafe(arg0, arg1);
-  if (typeof Database !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof Database === "function") {
+    const obj = Object.create(tmp.prototype);
+    obj.raw = openSyncUnsafeResult;
+    obj.name = openSyncUnsafeResult.name;
+    obj.lastState = tmp2(1993).DatabaseState.Open;
+    obj.handle = openSyncUnsafeResult.handle;
+    const Runtime = tmp2(1996).Runtime;
+    obj.databaseStateCallback = Runtime.addDatabaseStateCallback((arg0, lastState) => {
+      if (obj.handle === arg0) {
+        tmp.lastState = lastState;
+      }
+    });
+    return obj;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  obj = Object.create(Database.prototype);
-  obj.raw = openSyncUnsafeResult;
-  obj.name = openSyncUnsafeResult.name;
-  obj.lastState = obj(1993).DatabaseState.Open;
-  obj.handle = openSyncUnsafeResult.handle;
-  const Runtime = tmp2(1996).Runtime;
-  obj.databaseStateCallback = Runtime.addDatabaseStateCallback((arg0, lastState) => {
-    if (obj.handle === arg0) {
-      tmp.lastState = lastState;
-    }
-  });
-  return obj;
+  tmp = Database;
 };
 Database["delete"] = function delete(arg0) {
-  const Host = open.Host;
+  const Host = Host2.Host;
   return Host.delete(arg0);
 };
 prototype["close"] = function close() {
@@ -65,30 +68,29 @@ prototype["close"] = function close() {
     raw.close();
   }
   self.raw = null;
-  const Runtime = logger.Runtime;
+  const Runtime = Runtime2.Runtime;
   const result = Runtime.removeCompletionCallback(self.databaseStateCallback);
 };
-prototype["disable"] = function disable(arg0) {
+prototype["disable"] = function disable(reason) {
   const self = this;
   if (null == this.raw) {
     let resolved = Promise.resolve();
   } else {
     self.lastState = TableId.DatabaseState.Disabled;
-    const obj = { type: "db.disable", handle: 0, reason: null };
-    obj[2] = arg0;
+    const obj = { type: "db.disable", handle: 0, reason };
     resolved = self.execute(obj);
   }
   return resolved;
 };
-prototype["execute"] = function execute(table) {
+prototype["execute"] = function execute(table, arg1) {
   const self = this;
   importDefault = table;
   let type = arg1;
-  const _require = arg1;
+  _require = arg1;
   if (null == this.raw) {
     const _Error = Error;
     const _HermesInternal2 = HermesInternal;
-    error = new Error("database is no longer open (database: " + tmp);
+    const error = new Error("database is no longer open (database: " + tmp);
     throw error;
   } else {
     if ("key" in table) {
@@ -97,14 +99,14 @@ prototype["execute"] = function execute(table) {
       str = table.table;
     }
     if (null === type) {
-      let Runtime = _require(self[3]).Runtime;
+      let Runtime = require("Runtime").Runtime;
       if (type == null) {
         type = table.type;
       }
-      let executeAsyncResult = Runtime.executeAsync(type, (arg0) => {
+      let executeAsyncResult = Runtime.executeAsync(type, async (arg0) => {
         raw = raw.raw;
         const obj = {};
-        const merged = Object.assign(closure_1);
+        const merged = Object.assign(table);
         obj.handle = 0;
         raw.execute(arg0, obj);
       });
@@ -118,21 +120,21 @@ prototype["execute"] = function execute(table) {
       }
       const _HermesInternal = HermesInternal;
       function callback() {
-        const Runtime = callback(self[3]).Runtime;
-        let type = callback;
-        if (callback == null) {
-          type = table.type;
+        const Runtime = Runtime2.Runtime;
+        let type = closure_0;
+        if (closure_0 == null) {
+          type = closure_1.type;
         }
-        return Runtime.executeAsync(type, (arg0) => {
+        return Runtime.executeAsync(type, async (arg0) => {
           raw = raw.raw;
           const obj = {};
-          const merged = Object.assign(closure_1);
+          const merged = Object.assign(table);
           obj.handle = 0;
           raw.execute(arg0, obj);
         });
       }
-      executeAsyncResult = importDefault(self[4]).timeAsync("\u{1F4BE}", "" + type2 + " " + str, callback);
-      let obj = importDefault(self[4]);
+      executeAsyncResult = require("AppStartPerformance").timeAsync("\u{1F4BE}", "" + type2 + " " + str, callback);
+      let obj = require("AppStartPerformance");
     }
     return executeAsyncResult;
   }
@@ -143,7 +145,7 @@ prototype["executeSync"] = function executeSync(table) {
   if (null == this.raw) {
     const _Error = Error;
     const _HermesInternal2 = HermesInternal;
-    error = new Error("database is no longer open (database: " + tmp);
+    const error = new Error("database is no longer open (database: " + tmp);
     throw error;
   } else {
     if ("key" in table) {
@@ -155,7 +157,7 @@ prototype["executeSync"] = function executeSync(table) {
       str = "";
     }
     const _HermesInternal = HermesInternal;
-    return self(10).time("\u{1F4BE}", "SYNC: " + table.type + " " + str, () => {
+    return AppStartPerformanceDefault.time("\u{1F4BE}", "SYNC: " + table.type + " " + str, () => {
       const raw = self.raw;
       const obj = {};
       const merged = Object.assign(closure_0);
@@ -185,57 +187,53 @@ prototype["instantaneousState"] = function instantaneousState() {
 };
 prototype["instantaneousStateAsync"] = function instantaneousStateAsync() {
   const self = this;
-  return callback(function*() {
-    if (table === 2) {
-      table = 3;
-      HermesBuiltin.throwTypeError();
+  return (async (arg0, value) => {
+    if (c2 === 2) {
+      c2 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp3 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
       }
     } else {
       try {
-        table = 2;
+        c2 = 2;
         if (0 === c1) {
           if (arg0 === 1) {
-            table = 3;
-            throw arg1;
+            c2 = 3;
+            throw value;
           } else if (arg0 === 2) {
-            table = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            c2 = 3;
+            obj = { value, done: true };
             return obj;
           } else {
-            const obj5 = closure_1_0;
-            if (null == closure_1_0.raw) {
-              const Closed = closure_1_0(table[2]).DatabaseState.Closed;
-              table = 3;
+            const obj5 = self;
+            if (null == self.raw) {
+              const Closed = obj5(c2[2]).DatabaseState.Closed;
+              c2 = 3;
             } else {
               c1 = 1;
-              table = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = obj5.execute({ type: "db.state" });
+              c2 = 1;
+              const obj1 = { value: obj5.execute({ type: "db.state" }), done: false };
               return obj1;
             }
           }
         } else if (arg0 === 1) {
-          table = 3;
-          throw arg1;
+          c2 = 3;
+          throw value;
         } else if (arg0 !== 2) {
-          obj5.lastState = arg1;
+          obj5.lastState = value;
         }
-        table = 3;
-        obj = { value: null, done: true };
-        obj[0] = arg1;
+        c2 = 3;
+        obj = { value, done: true };
         return obj;
       } catch (tmp9) {
-        table = tmp;
+        c2 = tmp;
         throw tmp9;
       }
     }
@@ -244,26 +242,27 @@ prototype["instantaneousStateAsync"] = function instantaneousStateAsync() {
 prototype["state"] = function state() {
   return this.lastState;
 };
-prototype["transaction"] = function transaction(arg0, arg1) {
+prototype["transaction"] = function transaction(fn, arg1) {
   const self = this;
   closure_1 = arg1;
-  if (typeof DatabaseTransaction !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof DatabaseTransaction === "function") {
+    let obj = Object.create(tmp2.prototype);
+    obj.database = tmp;
+    obj.operations = [];
+    const resolved = Promise.resolve(fn(obj));
+    return resolved.then(() => {
+      if (obj.operations.length > 0) {
+        obj = { type: "db.transaction", operations: null };
+        obj.operations = obj.complete();
+        let executeResult = self.execute(obj, closure_1);
+      } else {
+        executeResult = Promise.resolve();
+      }
+      return executeResult;
+    });
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  let obj = Object.create(DatabaseTransaction.prototype);
-  obj.database = this;
-  obj.operations = [];
-  const resolved = Promise.resolve(arg0(obj));
-  return resolved.then(() => {
-    if (obj.operations.length > 0) {
-      obj = { type: "db.transaction", operations: null };
-      obj[1] = obj.complete();
-      let executeResult = self.execute(obj, closure_1);
-    } else {
-      executeResult = Promise.resolve();
-    }
-    return executeResult;
-  });
 };
 class DatabaseTransaction {
   constructor(arg0) {
@@ -289,7 +288,8 @@ prototype2["complete"] = function complete() {
 prototype2["toString"] = function toString() {
   return "[DatabaseTransaction " + this.database.handle + ": " + this.operations.length + " ops]";
 };
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/Database.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/Database.tsx");
 
 export { Database };
 export { DatabaseTransaction };

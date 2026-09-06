@@ -1,45 +1,45 @@
 // discord_app/modules/routing/router_utils.tsx
-import set from "../../../_runtime/00002_set.js";
-import timestampDefault from "../debug/Logger.tsx";
-import ComponentDispatcher from "../../utils/ComponentDispatchUtils.tsx";
-import set2 from "RoutingSources.tsx";
-import ME from "../../Constants.tsx";
-import _extends from "../../../_runtime/metro/01101__extends.js";
+import LoggerDefault from "../debug/Logger.tsx";
+import ComponentDispatchUtils from "../../utils/ComponentDispatchUtils.tsx";
+import RoutingSources from "RoutingSources.tsx";
+import Constants from "../../Constants.tsx";
+import _extends from "../../../_runtime/metro/01101__.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-function transitionTo(ME, closure_1) {
-  closure_0 = ME;
-  let tmp = typeof ME !== "string";
-  if (typeof ME === "string") {
-    tmp = !items.some((arg0) => ME.startsWith(arg0));
+function transitionTo(CHANNELResult, guildScheduledEvent1) {
+  closure_0 = CHANNELResult;
+  let tmp = typeof CHANNELResult !== "string";
+  if (typeof CHANNELResult === "string") {
+    tmp = !items.some((item) => ME.startsWith(item));
   }
   let flag = !tmp;
   if (!tmp) {
     const _HermesInternal = HermesInternal;
-    logger.log("" + "assign" + " - route to external path " + ME);
+    logger.log("" + "assign" + " - route to external path " + CHANNELResult);
     const _window = window;
     const _Event = Event;
     const event = new Event("beforeunload");
     window.dispatchEvent(event);
     const _window2 = window;
     const _location = window.location;
-    let obj = _location.assign(ME);
+    let obj = _location.assign(CHANNELResult);
     flag = true;
   }
   if (!flag) {
     const _URL = URL;
     const _window3 = window;
     const _HermesInternal2 = HermesInternal;
-    const uRL = new URL(ME, "https:" + window.GLOBAL_ENV.WEBAPP_ENDPOINT);
+    const uRL = new URL(CHANNELResult, "https:" + window.GLOBAL_ENV.WEBAPP_ENDPOINT);
     obj = { pathname: null, search: null, hash: null };
-    ({ pathname: obj[0], search: obj[1], hash: obj[2] } = uRL);
-    const merged = Object.assign(closure_1);
+    ({ pathname: obj.pathname, search: obj.search, hash: obj.hash } = uRL);
+    const merged = Object.assign(guildScheduledEvent1);
     const _HermesInternal3 = HermesInternal;
-    logger.log("transitionTo - Transitioning to " + ME);
-    if (closure_1 != null) {
-      const source = closure_1.source;
+    logger.log("transitionTo - Transitioning to " + CHANNELResult);
+    if (guildScheduledEvent1 != null) {
+      const source = guildScheduledEvent1.source;
     }
-    if (closure_1 != null) {
-      const sourceLocationStack = closure_1.sourceLocationStack;
+    if (guildScheduledEvent1 != null) {
+      sourceLocationStack = guildScheduledEvent1.sourceLocationStack;
     }
     const _location2 = _extends.location;
     let tmp24 = _location2.pathname === obj.pathname;
@@ -81,46 +81,45 @@ function transitionTo(ME, closure_1) {
     }
     if (tmp24) {
       const replaced = str7.replace(obj);
-    } else if (null != closure_1) {
+      c3 = source;
+    } else if (null != guildScheduledEvent1) {
       str7.push(obj);
     }
-    _extends.push(ME);
+    _extends.push(CHANNELResult);
   }
 }
-({ Routes: c5, PageAnalyticsLocations: closure_6, ComponentActions: error } = ME);
-let closure_8 = new timestampDefault("Routing/Utils");
-const items = [ME.RelativeMarketingURLs.DEVELOPER_PORTAL];
+({ Routes: hasOwnProperty, PageAnalyticsLocations: metroRequire, ComponentActions: closure_7 } = Constants);
+const logger = new LoggerDefault("Routing/Utils");
+const items = [Constants.RelativeMarketingURLs.DEVELOPER_PORTAL];
 _extends = _extends.createMemoryHistory();
 let closure_10 = _extends.listen((arg0, arg1) => {
   if ("REPLACE" !== arg1) {
-    callback();
+    closure_10();
   }
 });
-const tmp3 = new timestampDefault("Routing/Utils");
-const result = set.fileFinishedImporting("modules/routing/router_utils.tsx");
+const result = size.fileFinishedImporting("modules/routing/router_utils.tsx");
 
 export const shouldNavigate = function shouldNavigate() {
-  const ComponentDispatch = ComponentDispatcher.ComponentDispatch;
+  const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
   return !ComponentDispatch.hasSubscribers(constants2.MODAL_CLOSE);
 };
 export { transitionTo };
-export const transitionToGuild = function transitionToGuild(guildId, channelId, messageId, closure_1) {
+export const transitionToGuild = function transitionToGuild(guildId, channelId, messageId, guildScheduledEvent1) {
   logger.log("transitionToGuild - Transitioning to " + JSON.stringify({ guildId, channelId, messageId }));
-  transitionTo(closure_5.CHANNEL(guildId, channelId, messageId), closure_1);
+  transitionTo(hasOwnProperty.CHANNEL(guildId, channelId, messageId), guildScheduledEvent1);
 };
 export const currentRouteHasBackNavigation = function currentRouteHasBackNavigation() {
-  let hasItem = null != closure_3;
+  let hasItem = null != c3;
   if (hasItem) {
-    const ChannelBackNavigationSources = set2.ChannelBackNavigationSources;
-    hasItem = ChannelBackNavigationSources.has(closure_3);
+    const ChannelBackNavigationSources = RoutingSources.ChannelBackNavigationSources;
+    hasItem = ChannelBackNavigationSources.has(c3);
   }
   return hasItem;
 };
-export const replaceWith = function replaceWith(ME, state) {
-  closure_0 = ME;
+export const replaceWith = function replaceWith(ME, state, arg2) {
   let tmp = typeof ME !== "string";
   if (typeof ME === "string") {
-    tmp = !items.some((arg0) => ME.startsWith(arg0));
+    tmp = !items.some((item) => ME.startsWith(item));
   }
   let flag = !tmp;
   if (!tmp) {
@@ -143,17 +142,17 @@ export const replaceWith = function replaceWith(ME, state) {
     } else {
       const replaced2 = _extends.replace(ME);
     }
-    closure_3 = arg2;
+    c3 = arg2;
   }
 };
 export function getHistory() {
   return _extends;
 }
 export function getLastRouteChangeSource() {
-  return closure_3;
+  return c3;
 }
 export function getLastRouteChangeSourceLocationStack() {
-  return closure_4;
+  return sourceLocationStack;
 }
 export const isValidFingerprintRoute = function isValidFingerprintRoute(arg0) {
   return true;
@@ -167,7 +166,7 @@ export const getFingerprintLocation = function getFingerprintLocation(arg0) {
     }
     ACCOUNT_REVERT = str;
   }
-  if (ACCOUNT_REVERT.startsWith(closure_5.LOGIN)) {
+  if (ACCOUNT_REVERT.startsWith(hasOwnProperty.LOGIN)) {
     ACCOUNT_REVERT = constants.LOGIN;
   } else if (ACCOUNT_REVERT.startsWith(obj.REGISTER)) {
     ACCOUNT_REVERT = constants.REGISTER;
@@ -202,14 +201,14 @@ export function hasNavigated() {
   return false;
 }
 export const back = function back() {
-  const ComponentDispatch = ComponentDispatcher.ComponentDispatch;
+  const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
   if (!hasSubscribersResult) {
     c3 = null;
     _extends.goBack();
   }
 };
 export const forward = function forward() {
-  const ComponentDispatch = ComponentDispatcher.ComponentDispatch;
+  const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
   if (!hasSubscribersResult) {
     c3 = null;
     _extends.goForward();

@@ -1,32 +1,32 @@
 // discord_app/modules/a11y/native/useIsAccessibilityServiceEnabled.native.tsx
-import set from "../../../../_runtime/00002_set.js";
-import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceAccessibilityModule.tsx";
-import SCREEN_READER_ENABLED_GETTER from "useIsScreenReaderEnabled.native.tsx";
-import keys from "../../../../_runtime/00560_keys.js";
+import NativeDeviceAccessibilityModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceAccessibilityModule.tsx";
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled.native.tsx";
+import 00560__ from "../../../../_runtime/metro/00560__.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
 function ACCESSIBILITY_SERVICE_ENABLED_GETTER(accessibilityServiceEnabled) {
   return accessibilityServiceEnabled.accessibilityServiceEnabled;
 }
-let closure_4 = keys.create((arg0) => {
+const state = module_560.create((arg0) => {
   closure_0 = arg0;
-  let obj = enforcingDefault;
+  let obj = NativeDeviceAccessibilityModuleDefault;
   const result = obj.onAccessibilityServiceEnabledChanged((accessibilityServiceEnabled) => {
-    callback({ accessibilityServiceEnabled });
+    closure_0({ accessibilityServiceEnabled });
   });
-  obj = { accessibilityServiceEnabled: enforcingDefault.isAccessibilityServiceEnabled() };
+  obj = { accessibilityServiceEnabled: NativeDeviceAccessibilityModuleDefault.isAccessibilityServiceEnabled() };
   return obj;
 });
-let result = set.fileFinishedImporting("modules/a11y/native/useIsAccessibilityServiceEnabled.native.tsx");
+let result = size.fileFinishedImporting("modules/a11y/native/useIsAccessibilityServiceEnabled.native.tsx");
 
 export const getIsAccessibilityServiceEnabled = function getIsAccessibilityServiceEnabled() {
-  let accessibilityServiceEnabled = SCREEN_READER_ENABLED_GETTER.getIsScreenReaderEnabled();
+  let accessibilityServiceEnabled = useIsScreenReaderEnabled.getIsScreenReaderEnabled();
   if (!accessibilityServiceEnabled) {
     accessibilityServiceEnabled = state.getState().accessibilityServiceEnabled;
   }
   return accessibilityServiceEnabled;
 };
 export const useIsAccessibilityServiceEnabled = function useIsAccessibilityServiceEnabled() {
-  let isScreenReaderEnabled = SCREEN_READER_ENABLED_GETTER.useIsScreenReaderEnabled();
+  let isScreenReaderEnabled = useIsScreenReaderEnabled.useIsScreenReaderEnabled();
   if (!isScreenReaderEnabled) {
     isScreenReaderEnabled = state(ACCESSIBILITY_SERVICE_ENABLED_GETTER);
   }

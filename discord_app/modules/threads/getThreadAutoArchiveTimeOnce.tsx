@@ -1,23 +1,24 @@
 // discord_app/modules/threads/getThreadAutoArchiveTimeOnce.tsx
-import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
-import setDefault from "../../utils/Durations.tsx";
-import closure_2 from "../../stores/ReadStateStore.tsx";
+import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
+import DurationsDefault from "../../utils/Durations.tsx";
+import ReadStateStore from "../../stores/ReadStateStore.tsx";
 
-let result = require("set").fileFinishedImporting("modules/threads/getThreadAutoArchiveTimeOnce.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/threads/getThreadAutoArchiveTimeOnce.tsx");
 
 export default function getThreadAutoArchiveTimeOnce(threadMetadata) {
   if (null == threadMetadata.threadMetadata) {
     return 0;
   } else {
     let num3 = 0;
-    const result = threadMetadata.threadMetadata.autoArchiveDuration * setDefault.Millis.MINUTE;
+    const result = threadMetadata.threadMetadata.autoArchiveDuration * DurationsDefault.Millis.MINUTE;
     if (null != threadMetadata.threadMetadata) {
-      let id = closure_2.lastMessageId(threadMetadata.id);
+      let id = ReadStateStore.lastMessageId(threadMetadata.id);
       if (id == null) {
         id = threadMetadata.id;
       }
       let num = 0;
-      const tmp12Result = DISCORD_EPOCHDefault;
+      const tmp12Result = SnowflakeUtilsDefault;
       if (null != threadMetadata.lastNonMessageActivityTimestamp) {
         const _Date = Date;
         const date = new Date(threadMetadata.lastNonMessageActivityTimestamp);
@@ -30,8 +31,8 @@ export default function getThreadAutoArchiveTimeOnce(threadMetadata) {
         num2 = date1.getTime();
       }
       const _Math = Math;
-      num3 = Math.max(DISCORD_EPOCHDefault.extractTimestamp(id), num, num2);
-      const extractTimestampResult = DISCORD_EPOCHDefault.extractTimestamp(id);
+      num3 = Math.max(SnowflakeUtilsDefault.extractTimestamp(id), num, num2);
+      const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(id);
     }
     return num3 + result;
   }
@@ -40,12 +41,11 @@ export const getThreadLastActivityTime = function getThreadLastActivityTime(thre
   if (null == threadMetadata.threadMetadata) {
     return 0;
   } else {
-    let id = closure_2.lastMessageId(threadMetadata.id);
+    let id = ReadStateStore.lastMessageId(threadMetadata.id);
     if (id == null) {
       id = threadMetadata.id;
     }
     let num = 0;
-    const obj = DISCORD_EPOCHDefault;
     if (null != threadMetadata.lastNonMessageActivityTimestamp) {
       const _Date = Date;
       const date = new Date(threadMetadata.lastNonMessageActivityTimestamp);
@@ -58,6 +58,6 @@ export const getThreadLastActivityTime = function getThreadLastActivityTime(thre
       num2 = date1.getTime();
     }
     const _Math = Math;
-    return Math.max(DISCORD_EPOCHDefault.extractTimestamp(id), num, num2);
+    return Math.max(SnowflakeUtilsDefault.extractTimestamp(id), num, num2);
   }
 };

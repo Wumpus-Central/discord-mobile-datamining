@@ -1,19 +1,20 @@
 // discord_app/modules/spotify/SpotifyProtocolStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
 
-let c0 = false;
+let isRegistered = false;
 const Store = initializeDefault.Store;
 class SpotifyProtocolStore extends Store {}
 SpotifyProtocolStore.prototype["isProtocolRegistered"] = function isProtocolRegistered() {
-  return c0;
+  return isRegistered;
 };
 SpotifyProtocolStore.displayName = "SpotifyProtocolStore";
-const spotifyProtocolStore = new SpotifyProtocolStore(dispatcherDefault, {
+const spotifyProtocolStore = new SpotifyProtocolStore(DispatcherDefault, {
   SPOTIFY_SET_PROTOCOL_REGISTERED: function handleSetProtocolRegistered(isRegistered) {
     isRegistered = isRegistered.isRegistered;
   },
 });
-const result = require("set").fileFinishedImporting("modules/spotify/SpotifyProtocolStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/spotify/SpotifyProtocolStore.tsx");
 
 export default spotifyProtocolStore;

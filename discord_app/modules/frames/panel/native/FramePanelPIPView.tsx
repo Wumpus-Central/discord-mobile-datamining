@@ -1,42 +1,55 @@
 // discord_app/modules/frames/panel/native/FramePanelPIPView.tsx
-import importAllResult from "../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../FramesStore.tsx";
-import FrameLayoutModes from "../../FramesConstants.tsx";
-import { DEFAULT_PORTRAIT_LETTERBOX_CONFIG as closure_8 } from "../../../activities/panel/native/ActivityPanelNativeConstants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import FrameViewDefault from "../../native/FrameView.tsx";
+import ActivityPanelPIPView from "../../../activities/panel/native/ActivityPanelPIPView.tsx";
+import FramePanelStateContextDefault from "FramePanelStateContext.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import FramesStore from "../../FramesStore.tsx";
 
-const require = arg1;
-let c3 = importAllResult;
-({ asLaunched: c5, FrameLayoutModes: closure_6, getPipOrientationLockStateForFrame: error } = FrameLayoutModes);
-const memoResult = importAllResult.memo((transitionState) => {
+require = fn;
+const FramesConstants = fn(9511);
+({
+  asLaunched: hasOwnProperty,
+  FrameLayoutModes: metroRequire,
+  getPipOrientationLockStateForFrame: closure_7,
+} = FramesConstants);
+let closure_8 = fn(17018).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/frames/panel/native/FramePanelPIPView.tsx");
+
+export default noop.memo((transitionState) => {
   transitionState = transitionState.transitionState;
   const transitionCleanUp = transitionState.transitionCleanUp;
   let stateFromStores;
-  importAllResult = undefined;
   let landscapeSafeAreasConfig;
   const items = [landscapeSafeAreasConfig];
   stateFromStores = transitionState(stateFromStores[5]).useStateFromStores(items, () =>
-    callback(landscapeSafeAreasConfig.getMainFrame()),
+    closure_1_5(landscapeSafeAreasConfig.getMainFrame()),
   );
-  const tmp2 = callback(stateFromStores);
-  importAllResult = tmp2;
+  const tmp2 = closure_7(stateFromStores);
+  noop = tmp2;
   let obj = transitionState(stateFromStores[5]);
   landscapeSafeAreasConfig = transitionState(stateFromStores[6]).useBaseActivityPanelPIPView().landscapeSafeAreasConfig;
   const items1 = [stateFromStores, landscapeSafeAreasConfig, tmp2, transitionCleanUp, transitionState];
-  return importAllResult.useMemo(() => {
+  return noop.useMemo(() => {
     let obj = {
       transitionState,
       transitionCleanUp,
-      pipOrientationLockState: closure_3,
+      pipOrientationLockState,
       hasActivity: null != stateFromStores,
-      context: transitionCleanUp(stateFromStores[7]),
+      context: FramePanelStateContextDefault,
       children: null,
     };
-    obj = { layoutMode: closure_1_6.PIP, portraitSafeAreasConfig: closure_1_8, landscapeSafeAreasConfig };
-    obj[5] = closure_1_9(transitionCleanUp(stateFromStores[8]), obj);
-    return closure_1_9(transitionState(stateFromStores[6]).BaseActivityPanelPIPView, obj);
+    obj = { layoutMode: constants.PIP, portraitSafeAreasConfig, landscapeSafeAreasConfig };
+    obj.children = jsx(FrameViewDefault, {
+      layoutMode: constants.PIP,
+      portraitSafeAreasConfig,
+      landscapeSafeAreasConfig,
+    });
+    return jsx(ActivityPanelPIPView.BaseActivityPanelPIPView, {
+      layoutMode: constants.PIP,
+      portraitSafeAreasConfig,
+      landscapeSafeAreasConfig,
+    });
   }, items1);
 });
-const result = require("set").fileFinishedImporting("modules/frames/panel/native/FramePanelPIPView.tsx");
-
-export default memoResult;

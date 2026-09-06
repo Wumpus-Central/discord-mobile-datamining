@@ -1,20 +1,21 @@
 // discord_app/modules/message_request/hooks/useListHasSingleMessageRequest.tsx
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../MessageRequestStore.tsx";
-import closure_5 from "../SpamMessageRequestStore.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import MessageRequestStore from "../MessageRequestStore.tsx";
+import SpamMessageRequestStore from "../SpamMessageRequestStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/message_request/hooks/useListHasSingleMessageRequest.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/message_request/hooks/useListHasSingleMessageRequest.tsx");
 
 export const useListHasSingleMessageRequest = function useListHasSingleMessageRequest() {
   messageRequestsCount = messageRequestsCount(stateFromStores[3]).useMessageRequestsCount();
-  const ref = React.useRef(messageRequestsCount);
+  const ref = noop.useRef(messageRequestsCount);
   const obj = messageRequestsCount(stateFromStores[3]);
-  const items = [closure_4];
+  const items = [MessageRequestStore];
   stateFromStores = messageRequestsCount(stateFromStores[4]).useStateFromStores(items, () => ready.isReady());
-  React = React.useRef(stateFromStores);
+  noop = noop.useRef(stateFromStores);
   const items1 = [stateFromStores, messageRequestsCount];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     let tmp = stateFromStores;
     if (stateFromStores) {
       tmp = !ref.current;
@@ -29,13 +30,13 @@ export const useListHasSingleMessageRequest = function useListHasSingleMessageRe
 };
 export const useListHasSingleSpamMessageRequest = function useListHasSingleSpamMessageRequest() {
   spamMessageRequestCount = spamMessageRequestCount(stateFromStores[6]).useSpamMessageRequestCount();
-  const ref = React.useRef(spamMessageRequestCount);
+  const ref = noop.useRef(spamMessageRequestCount);
   const obj = spamMessageRequestCount(stateFromStores[6]);
-  const items = [closure_5];
+  const items = [SpamMessageRequestStore];
   stateFromStores = spamMessageRequestCount(stateFromStores[4]).useStateFromStores(items, () => ready.isReady());
-  React = React.useRef(stateFromStores);
+  noop = noop.useRef(stateFromStores);
   const items1 = [stateFromStores, spamMessageRequestCount];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     let tmp = stateFromStores;
     if (stateFromStores) {
       tmp = !ref.current;

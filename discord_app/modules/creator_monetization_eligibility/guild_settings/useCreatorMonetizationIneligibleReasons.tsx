@@ -1,8 +1,8 @@
 // discord_app/modules/creator_monetization_eligibility/guild_settings/useCreatorMonetizationIneligibleReasons.tsx
-import set from "../../../../_runtime/00002_set.js";
 import useCreatorMonetizationEligibilityItemsDefault from "useCreatorMonetizationEligibilityItems.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting(
+const result = size.fileFinishedImporting(
   "modules/creator_monetization_eligibility/guild_settings/useCreatorMonetizationIneligibleReasons.tsx",
 );
 

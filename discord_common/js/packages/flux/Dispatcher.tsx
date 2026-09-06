@@ -1,12 +1,13 @@
 // discord_common/js/packages/flux/Dispatcher.tsx
-import log from "../logger/Logger.tsx";
+import logger_Logger from "../logger/Logger.tsx";
+import AppStartPerformanceDefault from "../app-start-performance/AppStartPerformance.tsx";
 import _modDef38 from "../../../../_runtime/metro/00038__.js";
-import loggerDefault from "Emitter.tsx";
-import addAll from "LastFewActions.tsx";
-import logger2 from "LoggingUtils.tsx";
+import flux_EmitterDefault from "Emitter.tsx";
+import LastFewActionsAll from "LastFewActions.tsx";
+import LoggingUtils from "LoggingUtils.tsx";
+import profiling from "../../shared/utils/profiling.tsx";
 import DepGraph from "../../../../_runtime/00572_DepGraph.js";
-import set from "../../../../_runtime/00002_set.js";
-import { mark } from "../../shared/utils/profiling.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 function setDisplayName(arg0, displayName) {
   arg0.displayName = displayName;
@@ -27,14 +28,19 @@ let set = new Set([
   "UPLOAD_FAIL",
   "WRITE_CACHES",
 ]);
-const logger = new log.Logger("Flux");
+const logger = new logger_Logger.Logger("Flux");
 class ActionHandlersGraph {
   constructor() {
-    obj = Object.create(new.target.prototype);
-    obj[0] = {};
-    depGraph = new require("DepGraph").DepGraph();
-    obj[3] = depGraph;
-    return obj;
+    merged = Object.assign({
+      _orderedActionHandlers: null,
+      _orderedCallbackTokens: null,
+      _lastID: 1,
+      _dependencyGraph: null,
+    });
+    merged[0] = {};
+    depGraph = new closure_0(closure_3[7]).DepGraph();
+    merged[3] = depGraph;
+    return merged;
   }
 }
 const prototype = ActionHandlersGraph.prototype;
@@ -59,10 +65,9 @@ prototype["register"] = function register(name, obj, storeDidChange, band, token
   _modDef38(isIntegerResult, "band must be a non-negative integer.");
   obj = {};
   for (const key10024 in arg1) {
-    let tmp9 = key10024;
     closure_0 = arg1[key10024];
     function wrapper(arg0) {
-      return callback(arg0);
+      return closure_0(arg0);
     }
     let _HermesInternal = HermesInternal;
     wrapper.displayName = "" + arg0 + "_" + key10024;
@@ -101,11 +106,12 @@ prototype["_bandToken"] = function _bandToken(band) {
   const _dependencyGraph = this._dependencyGraph;
   if (!_dependencyGraph.hasNode(combined)) {
     const _dependencyGraph2 = self._dependencyGraph;
-    const obj = { name: null, band: null, actionHandler: null, storeDidChange: null };
-    obj[0] = combined;
-    obj[1] = band;
-    obj[2] = {};
-    obj[3] = function storeDidChange(actionHandler) {};
+    const obj = {
+      name: combined,
+      band,
+      actionHandler: {},
+      storeDidChange() {},
+    };
     _dependencyGraph2.addNode(combined, obj);
     if (band > 0) {
       const _dependencyGraph3 = self._dependencyGraph;
@@ -134,12 +140,8 @@ prototype["_computeOrderedActionHandlers"] = function _computeOrderedActionHandl
     let _dependencyGraph = self._dependencyGraph;
     let nodeData = _dependencyGraph.getNodeData(prop[num]);
     let tmp4 = nodeData.actionHandler[type];
-    let tmp5 = num;
     if (null != tmp4) {
-      let obj = { name: null, actionHandler: null, storeDidChange: null };
-      obj[0] = tmp2;
-      obj[1] = tmp4;
-      obj[2] = tmp3;
+      let obj = { name: tmp2, actionHandler: tmp4, storeDidChange: tmp3 };
       let arr = items.push(obj);
     }
   }
@@ -147,8 +149,7 @@ prototype["_computeOrderedActionHandlers"] = function _computeOrderedActionHandl
   return items;
 };
 prototype["_computeOrderedCallbackTokens"] = function _computeOrderedCallbackTokens() {
-  let self = this;
-  self = this;
+  const self = this;
   try {
     let _dependencyGraph = self._dependencyGraph;
     const overallOrderResult = _dependencyGraph.overallOrder();
@@ -157,64 +158,84 @@ prototype["_computeOrderedCallbackTokens"] = function _computeOrderedCallbackTok
   } catch (tmp2) {
     if (null != tmp2.cyclePath) {
       const cyclePath = tmp2.cyclePath;
-      const mapped = cyclePath.map((arg0) => {
+      const mapped = cyclePath.map((item) => {
         const _dependencyGraph = self._dependencyGraph;
-        return "" + _dependencyGraph.getNodeData(arg0).name + "(" + arg0 + ")";
+        return "" + _dependencyGraph.getNodeData(item).name + "(" + item + ")";
       });
       const _Error = Error;
       const _HermesInternal = HermesInternal;
-      error = new Error("Dependency Cycle Found: " + mapped.join(" -> "));
+      const error = new Error("Dependency Cycle Found: " + mapped.join(" -> "));
       throw error;
     } else {
       throw tmp2;
     }
   }
 };
-let result = set.fileFinishedImporting("../discord_common/js/packages/flux/Dispatcher.tsx");
+let result = size.fileFinishedImporting("../discord_common/js/packages/flux/Dispatcher.tsx");
 class Dispatcher {
   constructor() {
     num = global;
     if (global === undefined) {
       num = 0;
     }
-    obj = Object.create(new.target.prototype);
-    obj[0] = [];
-    obj[1] = {};
-    obj[2] = [];
-    tmp2 = ActionHandlersGraph;
-    if (typeof ActionHandlersGraph !== "function") {
-      str = "Trying to call a non-function";
-      throwTypeErrorResult = HermesBuiltin.throwTypeError();
-    }
-    actionLogger = require;
-    obj1 = Object.create(tmp2.prototype);
-    obj1[0] = {};
-    tmp5 = closure_0;
-    tmp6 = closure_3;
-    depGraph = new require("DepGraph").DepGraph();
-    obj1[3] = depGraph;
-    obj[5] = obj1;
-    obj[7] = {};
-    obj._defaultBand = num;
-    obj._sentryUtils = importDefault;
-    if (null == require) {
+    merged = Object.assign({
+      _interceptors: null,
+      _subscriptions: null,
+      _waitQueue: null,
+      _processingWaitQueue: false,
+      _currentDispatchActionType: null,
+      _actionHandlers: null,
+      _sentryUtils: "Array",
+      functionCache: "\u{1F468}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FB}",
+    });
+    merged[0] = [];
+    merged[1] = {};
+    merged[2] = [];
+    if (typeof ActionHandlersGraph === "function") {
+      actionLogger = require;
+      tmp4 = importDefault;
+      merged1 = Object.assign({
+        _orderedActionHandlers: null,
+        _orderedCallbackTokens: null,
+        _lastID: 1,
+        _dependencyGraph: null,
+      });
+      merged1[0] = {};
+      tmp6 = closure_0;
+      tmp7 = closure_3;
       tmp8 = new.target;
       tmp9 = new.target;
-      actionLogger = new require("logger").ActionLogger();
+      depGraph = new closure_0(closure_3[7]).DepGraph();
+      tmp11 = depGraph;
+      merged1[3] = depGraph;
+      merged[5] = merged1;
+      merged[7] = {};
+      merged._defaultBand = num;
+      merged._sentryUtils = importDefault;
+      tmp12 = null;
+      if (null == require) {
+        tmp13 = new.target;
+        tmp14 = new.target;
+        actionLogger = new tmp6(tmp7[1]).ActionLogger();
+      }
+      merged.actionLogger = actionLogger;
+      actionLogger = merged.actionLogger;
+      str = "trace";
+      onResult = actionLogger.on("trace", (arg0, arg1, arg2) => {
+        let isTracing = AppStartPerformanceDefault.isTracing;
+        if (isTracing) {
+          isTracing = arg2 >= 10;
+        }
+        if (isTracing) {
+          AppStartPerformanceDefault.mark("\u{1F9A5}", arg1, arg2);
+          const tmpResult = AppStartPerformanceDefault;
+        }
+      });
+      return merged;
+    } else {
+      str2 = "Trying to call a non-function";
+      throw new TypeError("Trying to call a non-function");
     }
-    obj.actionLogger = actionLogger;
-    actionLogger = obj.actionLogger;
-    onResult = actionLogger.on("trace", (arg0, arg1, arg2) => {
-      let isTracing = callback(table[2]).isTracing;
-      if (isTracing) {
-        isTracing = arg2 >= 10;
-      }
-      if (isTracing) {
-        callback(table[2]).mark("\u{1F9A5}", arg1, arg2);
-        const tmpResult = callback(table[2]);
-      }
-    });
-    return obj;
   }
 }
 const prototype2 = Dispatcher.prototype;
@@ -226,35 +247,33 @@ prototype2["dispatch"] = function dispatch(arg0) {
   closure_0 = arg0;
   return new Promise((arg0, arg1) => {
     closure_0 = arg0;
-    const _self = arg1;
+    _self = arg1;
     const _waitQueue = _self._waitQueue;
     _waitQueue.push(() => {
       try {
-        if (null == lib2.functionCache[lib.type]) {
-          tmp.functionCache[tmp2.type] = (type) => closure_1._dispatchWithDevtools(type);
-          closure_2_7(tmp.functionCache[tmp2.type], "dispatch_" + tmp2.type);
+        if (null == self.functionCache[closure_0.type]) {
+          tmp.functionCache[tmp2.type] = (type) => closure_1_1._dispatchWithDevtools(type);
+          setDisplayName(tmp.functionCache[tmp2.type], "dispatch_" + tmp2.type);
         }
         const functionCache = tmp.functionCache;
-        functionCache[lib.type](lib);
-        lib();
+        functionCache[closure_0.type](closure_0);
+        closure_0();
       } catch (tmp9) {
-        lib2(tmp9);
+        closure_1(tmp9);
       }
     });
     _self.flushWaitQueue();
   });
 };
-prototype2["dispatchForStoreTest"] = function dispatchForStoreTest(type) {
+prototype2["dispatchForStoreTest"] = function dispatchForStoreTest(type, arg1) {
   _modDef38(false, "dispatchForTest cannot be called in: production");
   for (const item10019 of orderedActionHandlers) {
     ({ actionHandler, storeDidChange } = item10019);
     let tmp3 = item10019.name === arg1;
     if (tmp3) {
-      let tmp4 = actionHandler;
       tmp3 = false !== actionHandler(arg0);
     }
     if (tmp3) {
-      let tmp5 = storeDidChange;
       let storeDidChangeResult = storeDidChange(arg0);
     }
     continue;
@@ -266,8 +285,7 @@ prototype2["flushWaitQueue"] = function flushWaitQueue() {
     try {
       self._processingWaitQueue = true;
       let tmp4 = importDefault;
-      let tmp6 = dependencyMap;
-      loggerDefault.isDispatching = true;
+      flux_EmitterDefault.isDispatching = true;
       let num2 = 0;
       if (self._waitQueue.length > 0) {
         const sum = num2 + 1;
@@ -280,21 +298,18 @@ prototype2["flushWaitQueue"] = function flushWaitQueue() {
               length = self._waitQueue.length;
             } while (length > 0);
           }
-          let tmp10 = importDefault;
           tmp4 = importDefault;
-          let tmp11 = dependencyMap;
-          tmp6 = dependencyMap;
-          let obj = loggerDefault;
+          let obj = flux_EmitterDefault;
           let emitResult = obj.emit();
         }
-        const serializeResult = addAll.serialize();
+        const serializer = LastFewActionsAll;
+        const serializeResult = serializer.serialize();
         logger.error("LastFewActions", serializeResult);
         const _sentryUtils = self._sentryUtils;
         if (_sentryUtils != null) {
           obj = { message: "Dispatcher: Dispatch loop detected", data: null };
-          obj = { lastFewActions: null };
-          obj[0] = serializeResult;
-          obj[1] = obj;
+          obj = { lastFewActions: serializeResult };
+          obj.data = obj;
           _sentryUtils.addBreadcrumb(obj);
         }
         const _Error = Error;
@@ -304,7 +319,7 @@ prototype2["flushWaitQueue"] = function flushWaitQueue() {
       tmp4(508).isDispatching = false;
     } catch (tmp25) {
       tmp2._processingWaitQueue = false;
-      loggerDefault.isDispatching = false;
+      flux_EmitterDefault.isDispatching = false;
       throw tmp25;
     }
   }
@@ -314,30 +329,26 @@ prototype2["_dispatchWithDevtools"] = function _dispatchWithDevtools(type) {
 };
 prototype2["_dispatchWithLogging"] = function _dispatchWithLogging(type) {
   const self = this;
-  const _require = type;
-  self(38)(
+  _modDef38(
     null == this._currentDispatchActionType,
     "Dispatch.dispatch(...): Cannot dispatch in the middle of a dispatch. Action: " +
       type.type +
       " Already dispatching: " +
       this._currentDispatchActionType,
   );
-  self(38)(type.type, "Dispatch.dispatch(...) called without an action type");
+  _modDef38(type.type, "Dispatch.dispatch(...) called without an action type");
   if (set.has(type.type)) {
     const _HermesInternal = HermesInternal;
     logger.log("Dispatching " + type.type);
   }
-  const tmp2 = self(38);
   const tmp3 = null == this._currentDispatchActionType;
-  const tmp8 = _require;
-  require("../../shared/utils/profiling.tsx").mark(type.type);
-  const obj = mark;
-  addAll.add(type.type);
+  profiling.mark(type.type);
+  LastFewActionsAll.add(type.type);
   const actionLogger = this.actionLogger;
-  const logResult1 = actionLogger.log(type, (arg0) => {
+  const logResult1 = actionLogger.log(type, (fn) => {
     try {
       self._currentDispatchActionType = type.type;
-      self._dispatch(type, arg0);
+      self._dispatch(type, fn);
       self._currentDispatchActionType = null;
     } catch (tmp8) {
       self._currentDispatchActionType = null;
@@ -350,28 +361,28 @@ prototype2["_dispatchWithLogging"] = function _dispatchWithLogging(type) {
   }
   try {
     const _HermesInternal3 = HermesInternal;
-    tmp8(571).measure("DISPATCH[" + type.type + "]", type.type);
+    profiling.measure("DISPATCH[" + type.type + "]", type.type);
   } catch (err) {}
 };
-prototype2["_dispatch"] = function _dispatch(closure_0, arg1) {
+prototype2["_dispatch"] = function _dispatch(type, fn) {
   let sum;
   const self = this;
-  closure_1 = arg1;
+  closure_0 = type;
+  closure_1 = fn;
   for (const item10008 of tmp) {
     if (item10008(arg0)) {
-      let tmp2 = obj;
       obj.return();
       let flag = false;
       return false;
     }
   }
-  const orderedActionHandlers = self._actionHandlers.getOrderedActionHandlers(closure_0);
+  const orderedActionHandlers = self._actionHandlers.getOrderedActionHandlers(type);
   c3 = 0;
   let num = 0;
   if (0 < orderedActionHandlers.length) {
     do {
       let tmp3 = (function _loop() {
-        if (false !== callback(orderedActionHandlers[c3].name, () => actionHandler(actionHandler))) {
+        if (false !== closure_1(orderedActionHandlers[c3].name, () => actionHandler(closure_0))) {
           obj.storeDidChange(actionHandler);
         }
       })();
@@ -381,9 +392,9 @@ prototype2["_dispatch"] = function _dispatch(closure_0, arg1) {
     } while (sum < length);
   }
   closure_4 = tmp5;
-  if (null != self._subscriptions[closure_0.type]) {
-    arg1("__subscriptions", () => {
-      const item = closure_4.forEach((arg0) => arg0(closure_0));
+  if (null != self._subscriptions[type.type]) {
+    fn("__subscriptions", () => {
+      const item = closure_4.forEach((fn) => fn(type));
     });
   }
 };

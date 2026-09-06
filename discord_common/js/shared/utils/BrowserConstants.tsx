@@ -144,7 +144,8 @@ if (!tmp20) {
   }
   tmp20 = tmp23;
 }
-const result = require("set").fileFinishedImporting("../discord_common/js/shared/utils/BrowserConstants.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("../discord_common/js/shared/utils/BrowserConstants.tsx");
 
 export const BROWSER_VERSION = parsed;
 export const IS_OCULUS_BROWSER = tmp3;

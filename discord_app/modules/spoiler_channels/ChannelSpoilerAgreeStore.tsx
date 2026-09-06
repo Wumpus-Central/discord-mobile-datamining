@@ -1,18 +1,17 @@
 // discord_app/modules/spoiler_channels/ChannelSpoilerAgreeStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import closure_0 from "../../stores/AuthenticationStore.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 
 let closure_1 = { users: {} };
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class ChannelSpoilerAgreeStore extends DeviceSettingsStore {}
 const prototype = ChannelSpoilerAgreeStore.prototype;
 prototype["initialize"] = function initialize(users) {
-  this.waitFor(closure_0);
+  this.waitFor(AuthenticationStore);
   if (null != users) {
     if (null != users.users) {
-      const obj = { users: null };
-      obj[0] = users.users;
+      const obj = { users: users.users };
     }
     closure_1 = { users: {} };
   }
@@ -21,7 +20,7 @@ prototype["didAgree"] = function didAgree(arg0) {
   if (null == arg0) {
     return false;
   } else {
-    const id = store.getId();
+    const id = AuthenticationStore.getId();
     let tmp3 = null != id;
     if (tmp3) {
       let flag;
@@ -44,22 +43,21 @@ prototype["getUserAgnosticState"] = function getUserAgnosticState() {
 };
 ChannelSpoilerAgreeStore.displayName = "ChannelSpoilerAgreeStore";
 ChannelSpoilerAgreeStore.persistKey = "ChannelSpoilerAgreeStore";
-const channelSpoilerAgreeStore = new ChannelSpoilerAgreeStore(dispatcherDefault, {
+const channelSpoilerAgreeStore = new ChannelSpoilerAgreeStore(DispatcherDefault, {
   CHANNEL_SPOILER_AGREE: function handleChannelSpoilerAgree(channelId) {
-    const id = store.getId();
+    const id = AuthenticationStore.getId();
     if (null == id) {
       return false;
     } else {
       if (null == closure_1.users[id]) {
-        const obj = { channels: null };
-        obj[0] = {};
+        const obj = { channels: {} };
         closure_1.users[id] = obj;
       }
       closure_1.users[id].channels[channelId.channelId] = true;
     }
   },
   CHANNEL_SPOILER_AGREE_CLEAR: function handleChannelSpoilerAgreeClear(arg0) {
-    const id = store.getId();
+    const id = AuthenticationStore.getId();
     let tmp4 = null != id;
     if (tmp4) {
       if (null != closure_1.users[id]) {
@@ -71,6 +69,7 @@ const channelSpoilerAgreeStore = new ChannelSpoilerAgreeStore(dispatcherDefault,
     return tmp4;
   },
 });
-const result = require("set").fileFinishedImporting("modules/spoiler_channels/ChannelSpoilerAgreeStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/spoiler_channels/ChannelSpoilerAgreeStore.tsx");
 
 export default channelSpoilerAgreeStore;

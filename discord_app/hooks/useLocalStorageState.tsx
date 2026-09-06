@@ -1,18 +1,20 @@
 // discord_app/hooks/useLocalStorageState.tsx
-import useMountLayoutEffectDefault from "useMountEffect.tsx";
-import closure_3 from "../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../_runtime/00019_noop.js";
+import Storage3 from "../../discord_common/js/packages/storage/Storage.tsx";
+import useMountEffectDefault from "useMountEffect.tsx";
+import _slicedToArray from "../../_runtime/metro/00032__.js";
+import noop from "../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("hooks/useLocalStorageState.tsx");
+require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting("hooks/useLocalStorageState.tsx");
 
 export const useLocalStorageState = function useLocalStorageState(c2, arg1) {
   closure_0 = c2;
   importDefault = arg1;
-  const tmp = callback(
-    React.useState(() => {
-      const Storage = c2(510).Storage;
-      let value = Storage.get(c2);
+  const tmp = _slicedToArray(
+    noop.useState(() => {
+      const Storage = Storage3.Storage;
+      value = Storage.get(closure_0);
       if (null == value) {
         value = closure_1;
       }
@@ -21,19 +23,19 @@ export const useLocalStorageState = function useLocalStorageState(c2, arg1) {
     2,
   );
   dependencyMap = tmp[1];
-  useMountLayoutEffectDefault(() => {
-    const Storage = c2(510).Storage;
-    if (null == Storage.get(c2)) {
-      const Storage2 = c2(510).Storage;
-      const result = Storage2.set(c2, closure_1);
+  useMountEffectDefault(() => {
+    const Storage = Storage3.Storage;
+    if (null == Storage.get(closure_0)) {
+      const Storage2 = Storage3.Storage;
+      const result = Storage2.set(closure_0, closure_1);
     }
   });
   const items = [tmp[0]];
   const items1 = [c2];
-  items[1] = React.useCallback((arg0) => {
-    dependencyMap(arg0);
-    const Storage = c2(510).Storage;
-    const result = Storage.set(c2, arg0);
+  items[1] = noop.useCallback((arg0) => {
+    closure_2(arg0);
+    const Storage = Storage3.Storage;
+    const result = Storage.set(closure_0, arg0);
   }, items1);
   return items;
 };

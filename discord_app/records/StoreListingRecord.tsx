@@ -1,15 +1,13 @@
 // discord_app/records/StoreListingRecord.tsx
-import toJSDefault from "../lib/Record.tsx";
-import transformStoreAssetFromServer from "../modules/game_store/GameStoreAsset.tsx";
-import closure_2 from "UserRecord.tsx";
+import GameStoreAsset from "../modules/game_store/GameStoreAsset.tsx";
+import Record from "../lib/Record.tsx";
+import UserRecord from "UserRecord.tsx";
 
-require = arg1;
-toJSDefault;
+require = fn;
 let StoreListingRecord;
 class StoreListingRecord extends tmp2 {
   constructor(arg0) {
     tmp2 = new StoreListingRecord(tmp, new.target, new.target);
-    // ThrowIfThisInitialized (0x7c)
     ({
       id: tmp2.id,
       applicationId: tmp2.applicationId,
@@ -124,13 +122,13 @@ StoreListingRecord["createFromServer"] = function createFromServer(id) {
     const child_skus = id.child_skus;
     mapped = child_skus.map((id) => id.id);
   }
-  obj[8] = mapped;
+  obj.childSkuIds = mapped;
   let mapped1 = null;
   if (null != id.alternative_skus) {
     const alternative_skus = id.alternative_skus;
     mapped1 = alternative_skus.map((id) => id.id);
   }
-  obj[9] = mapped1;
+  obj.alternativeSkuIds = mapped1;
   let mapped2 = null;
   if (null != id.carousel_items) {
     const carousel_items = id.carousel_items;
@@ -139,90 +137,83 @@ StoreListingRecord["createFromServer"] = function createFromServer(id) {
       youtubeVideoId: assetId.youtube_video_id,
     }));
   }
-  obj[10] = mapped2;
+  obj.carouselItems = mapped2;
   let mapped3 = null;
   if (null != id.assets) {
     const assets = id.assets;
-    mapped3 = assets.map(transformStoreAssetFromServer.transformStoreAssetFromServer);
+    mapped3 = assets.map(GameStoreAsset.transformStoreAssetFromServer);
   }
-  obj[11] = mapped3;
+  obj.assets = mapped3;
   let tmp8 = null;
   if (null != staff_notes) {
-    obj = { content: null, user: null };
-    obj[0] = staff_notes.content;
+    obj = { content: staff_notes.content, user: null };
     let tmp9 = null;
     if (null != staff_notes.user) {
-      tmp9 = new closure_2(staff_notes.user);
+      tmp9 = new UserRecord(staff_notes.user);
     }
-    obj[1] = tmp9;
+    obj.user = tmp9;
     tmp8 = obj;
   }
-  obj[12] = tmp8;
+  obj.staffNotes = tmp8;
   let tmp13 = null;
   if (null != id.guild) {
-    obj = { id: null, name: null, icon: null, approximateMemberCount: null, approximatePresenceCount: null };
-    obj[0] = id.guild.id;
-    obj[1] = id.guild.name;
-    obj[2] = id.guild.icon;
-    obj[3] = id.guild.approximate_member_count;
-    obj[4] = id.guild.approximate_presence_count;
+    obj = {
+      id: id.guild.id,
+      name: id.guild.name,
+      icon: id.guild.icon,
+      approximateMemberCount: id.guild.approximate_member_count,
+      approximatePresenceCount: id.guild.approximate_presence_count,
+    };
     tmp13 = obj;
   }
-  obj[13] = tmp13;
+  obj.guild = tmp13;
   let result = null;
   if (null != id.thumbnail) {
-    result = transformStoreAssetFromServer.transformStoreAssetFromServer(id.thumbnail);
-    const obj4 = transformStoreAssetFromServer;
+    result = GameStoreAsset.transformStoreAssetFromServer(id.thumbnail);
   }
-  obj[14] = result;
+  obj.thumbnail = result;
   let result1 = null;
   if (null != id.preview_video) {
-    result1 = transformStoreAssetFromServer.transformStoreAssetFromServer(id.preview_video);
-    const obj5 = transformStoreAssetFromServer;
+    result1 = GameStoreAsset.transformStoreAssetFromServer(id.preview_video);
   }
-  obj[15] = result1;
+  obj.previewVideo = result1;
   let result2 = null;
   if (null != id.header_background) {
-    result2 = transformStoreAssetFromServer.transformStoreAssetFromServer(id.header_background);
-    const obj6 = transformStoreAssetFromServer;
+    result2 = GameStoreAsset.transformStoreAssetFromServer(id.header_background);
   }
-  obj[16] = result2;
+  obj.headerBackground = result2;
   let result3 = null;
   if (null != id.header_logo_dark_theme) {
-    result3 = transformStoreAssetFromServer.transformStoreAssetFromServer(id.header_logo_dark_theme);
-    const obj7 = transformStoreAssetFromServer;
+    result3 = GameStoreAsset.transformStoreAssetFromServer(id.header_logo_dark_theme);
   }
-  obj[17] = result3;
+  obj.headerLogoDarkTheme = result3;
   let result4 = null;
   if (null != id.header_logo_light_theme) {
-    result4 = transformStoreAssetFromServer.transformStoreAssetFromServer(id.header_logo_light_theme);
-    const obj8 = transformStoreAssetFromServer;
+    result4 = GameStoreAsset.transformStoreAssetFromServer(id.header_logo_light_theme);
   }
-  obj[18] = result4;
+  obj.headerLogoLightTheme = result4;
   let result5 = null;
   if (null != id.box_art) {
-    result5 = transformStoreAssetFromServer.transformStoreAssetFromServer(id.box_art);
-    const obj9 = transformStoreAssetFromServer;
+    result5 = GameStoreAsset.transformStoreAssetFromServer(id.box_art);
   }
-  obj[19] = result5;
+  obj.boxArt = result5;
   let result6 = null;
   if (null != id.hero_background) {
-    result6 = transformStoreAssetFromServer.transformStoreAssetFromServer(id.hero_background);
-    const obj10 = transformStoreAssetFromServer;
+    result6 = GameStoreAsset.transformStoreAssetFromServer(id.hero_background);
   }
-  obj[20] = result6;
+  obj.heroBackground = result6;
   let result7 = null;
   if (null != id.hero_video) {
-    result7 = transformStoreAssetFromServer.transformStoreAssetFromServer(id.hero_video);
-    const obj11 = transformStoreAssetFromServer;
+    result7 = GameStoreAsset.transformStoreAssetFromServer(id.hero_video);
   }
-  obj[21] = result7;
-  ({ entitlement_branch_id: obj[22], benefits: obj[23], published: obj[24] } = id);
+  obj.heroVideo = result7;
+  ({ entitlement_branch_id: obj.entitlementBranchId, benefits: obj.benefits, published: obj.published } = id);
   return new StoreListingRecord(obj);
 };
 StoreListingRecord.prototype["isSlimDirectoryVersion"] = function isSlimDirectoryVersion() {
   return null == this.description;
 };
-let result = require("set").fileFinishedImporting("records/StoreListingRecord.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("records/StoreListingRecord.tsx");
 
 export default StoreListingRecord;

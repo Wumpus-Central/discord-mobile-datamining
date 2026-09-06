@@ -1,36 +1,43 @@
 // discord_app/modules/reactions/native/MessageReactions.tsx
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../stores/MessageStore.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import useAnalyticsLocationsDefault from "../../app_analytics/useAnalyticsLocations.tsx";
+import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import MessageStore from "../../../stores/MessageStore.tsx";
 
-const require = arg1;
+const require = fn;
+const jsx = fn(21).jsx;
 let closure_6 = [];
-const result = require("set").fileFinishedImporting("modules/reactions/native/MessageReactions.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/reactions/native/MessageReactions.tsx");
 
 export default function MessageReactions(emoji) {
   ({ channelId, messageId, reactions, isSelectedBurst } = emoji);
   if (isSelectedBurst === undefined) {
     isSelectedBurst = false;
   }
-  let merged = Object.assign(emoji, Object.create(null));
+  let merged = Object.assign(
+    emoji,
+    Object.assign({ channelId: 0, messageId: 0, emoji: 0, reactions: 0, isSelectedBurst: 0 }),
+  );
   let items3;
-  items3 = channelId;
-  let stateFromStores;
-  let obj = items3(stateFromStores[3]);
-  const items = [closure_4];
+  closure_129_0 = channelId;
+  closure_129_1 = messageId;
+  let obj = items3(504);
+  const items = [MessageStore];
   const items1 = [channelId, messageId];
-  stateFromStores = obj.useStateFromStores(
+  const stateFromStores = obj.useStateFromStores(
     items,
     () => {
-      const message = closure_1_4.getMessage(items3, messageId);
-      return null != message ? message.reactions : closure_1_6;
+      const message = MessageStore.getMessage(items3, importDefault);
+      return null != message ? message.reactions : closure_6;
     },
     items1,
   );
+  closure_129_2 = stateFromStores;
   const items2 = [stateFromStores];
-  const memo = React.useMemo(
+  const memo = noop.useMemo(
     () =>
-      stateFromStores.filter((count_details) => {
+      dependencyMap.filter((count_details) => {
         count_details = count_details.count_details;
         let vote;
         if (count_details != null) {
@@ -71,24 +78,19 @@ export default function MessageReactions(emoji) {
       (burst_count.burst_count > 0 ? burst_count.burst_count : burst_count.count),
   );
   obj = {
-    value: messageId(stateFromStores[4])(messageId(stateFromStores[5]).MESSAGE_REACTIONS).analyticsLocations,
+    value: useAnalyticsLocationsDefault(AnalyticsLocationDefault.MESSAGE_REACTIONS).analyticsLocations,
     children: null,
   };
   if (items3.length > 0) {
-    obj = { channelId: null, messageId: null, emoji: null, reactions: null, isSelectedBurst: null };
-    obj[0] = channelId;
-    obj[1] = messageId;
-    obj[2] = emoji.emoji;
-    obj[3] = items3;
-    obj[4] = isSelectedBurst;
+    obj = { channelId, messageId, emoji: emoji.emoji, reactions: items3, isSelectedBurst };
     let merged1 = Object.assign(merged);
-    let tmp9Result = tmp9(tmp4(tmp2[6]).MessageReactionsContent, obj);
+    let tmp9Result = tmp9(tmp4(11256).MessageReactionsContent, obj);
   } else {
-    tmp9Result = tmp9(tmp4(tmp2[6]).MessageReactionsEmpty, {});
+    tmp9Result = tmp9(tmp4(11256).MessageReactionsEmpty, {});
   }
-  obj[1] = tmp9Result;
-  return jsx(items3(stateFromStores[4]).AnalyticsLocationProvider, {
-    value: messageId(stateFromStores[4])(messageId(stateFromStores[5]).MESSAGE_REACTIONS).analyticsLocations,
+  obj.children = tmp9Result;
+  return jsx(items3(7162).AnalyticsLocationProvider, {
+    value: useAnalyticsLocationsDefault(AnalyticsLocationDefault.MESSAGE_REACTIONS).analyticsLocations,
     children: null,
   });
 }

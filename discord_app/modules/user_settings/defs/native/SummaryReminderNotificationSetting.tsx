@@ -1,43 +1,27 @@
 // discord_app/modules/user_settings/defs/native/SummaryReminderNotificationSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import explicitContentFromProto from "../../UserSettings.tsx";
-import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
-import onSummaryReminderNotificationSettingsChanged from "../../../notifications/summary_reminder/SummaryReminderNotificationUtils.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import util from "../../../../intl/index.native.tsx";
+import UserSettings from "../../UserSettings.tsx";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
+import SummaryReminderNotificationUtils from "../../../notifications/summary_reminder/SummaryReminderNotificationUtils.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const toggle = createToggle.createToggle({
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.xEqC6q);
+    const intl = util.intl;
+    return intl.string(util.t.xEqC6q);
   },
   useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.KmVXll);
+    const intl = util.intl;
+    return intl.string(util.t.KmVXll);
   },
-  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
-  useValue: explicitContentFromProto.EnableSummaryReminderNotifications.useSetting,
-  onValueChange: onSummaryReminderNotificationSettingsChanged.onSummaryReminderNotificationSettingsChanged,
+  parent: SettingsConstants.MobileUserSettings.NOTIFICATIONS,
+  useValue: UserSettings.EnableSummaryReminderNotifications.useSetting,
+  onValueChange: SummaryReminderNotificationUtils.onSummaryReminderNotificationSettingsChanged,
   usePredicate() {
     return false;
   },
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.xEqC6q);
-  },
-  useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.KmVXll);
-  },
-  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
-  useValue: explicitContentFromProto.EnableSummaryReminderNotifications.useSetting,
-  onValueChange: onSummaryReminderNotificationSettingsChanged.onSummaryReminderNotificationSettingsChanged,
-  usePredicate() {
-    return false;
-  },
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/SummaryReminderNotificationSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/SummaryReminderNotificationSetting.tsx");
 
 export default toggle;

@@ -1,59 +1,61 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/items/MessagesItemEmptyState.tsx
-import ThemesDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../../../../intl/index.native.tsx";
-import Text from "../../../../../../design/components/Text/native/Text.tsx";
-import Button from "../../../../../../design/components/Button/native/Button.native.tsx";
-import registerAssetDefault from "../../../../../../../_runtime/16054_registerAsset.js";
-import importAllResult from "../../../../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../../../intl/index.native.tsx";
+import RootNavigationRef from "../../../../RootNavigationRef.native.tsx";
+import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
+import components_Button_Button from "../../../../../../design/components/Button/native/Button.native.tsx";
+import _modDef16054 from "../../../../../../../_runtime/metro/16054__.js";
+import noop from "../../../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-let c3 = importAllResult;
-({ Image: c4, View: c5 } = get_ActivityIndicator);
-({ jsx: closure_6, jsxs: error } = jsxProd);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+fn(4560);
 let obj = { container: null, containerImage: null, image: null, body: null, title: null };
-obj = { padding: ThemesDefault.space.PX_16, flex: 1, height: 325 };
-obj[0] = obj;
-createCacheKey = { marginBottom: ThemesDefault.space.PX_16, flexShrink: 1, flexGrow: 1 };
-obj[1] = createCacheKey;
-obj[2] = { height: "100%", width: "100%" };
-obj[3] = { marginBottom: ThemesDefault.space.PX_16, marginTop: ThemesDefault.space.PX_8, textAlign: "center" };
-obj[4] = { textAlign: "center" };
-let closure_8 = createCacheKey.createStyles(obj);
-let obj2 = { marginBottom: ThemesDefault.space.PX_16, marginTop: ThemesDefault.space.PX_8, textAlign: "center" };
-const memoResult = importAllResult.memo(function MessagesItemEmptyState() {
-  const tmp = callback3();
+obj = { padding: nativeDefault.space.PX_16, flex: 1, height: 325 };
+obj.container = obj;
+const createStyles = { marginBottom: nativeDefault.space.PX_16, flexShrink: 1, flexGrow: 1 };
+obj.containerImage = createStyles;
+obj.image = { height: "100%", width: "100%" };
+obj.body = { marginBottom: nativeDefault.space.PX_16, marginTop: nativeDefault.space.PX_8, textAlign: "center" };
+obj.title = { textAlign: "center" };
+let closure_8 = createStyles.createStyles(obj);
+let obj2 = { marginBottom: nativeDefault.space.PX_16, marginTop: nativeDefault.space.PX_8, textAlign: "center" };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/MessagesItemEmptyState.tsx");
+
+export default noop.memo(function MessagesItemEmptyState() {
+  const tmp = closure_8();
   let obj = { style: tmp.container, collapsable: false, children: null };
   obj = { style: tmp.containerImage, children: null };
   obj = { resizeMode: "contain", source: null, style: null };
-  const callback = importAllResult.useCallback(() => {
-    let obj = callback(table[5]);
+  const callback = noop.useCallback(() => {
+    let obj = RootNavigationRef;
     const rootNavigationRef = obj.getRootNavigationRef();
     if (rootNavigationRef != null) {
       const current = rootNavigationRef.current;
       if (current != null) {
-        obj = { screen: "add-friends", params: null };
-        obj[1] = { sourcePage: "Messages Empty State", presentation: "card" };
+        obj = { screen: "add-friends", params: { sourcePage: "Messages Empty State", presentation: "card" } };
         current.navigate("friends", obj);
       }
     }
   }, []);
-  obj[1] = registerAssetDefault;
-  obj[2] = tmp.image;
-  obj[1] = callback(closure_4, obj);
-  const items = [callback(closure_5, obj), , ,];
-  obj1 = {
+  obj.source = _modDef16054;
+  obj.style = tmp.image;
+  obj.children = timestampProducer(React4, obj);
+  const items = [timestampProducer(hasOwnProperty, obj), , ,];
+  const obj1 = {
     color: "mobile-text-heading-primary",
     variant: "heading-lg/bold",
     style: tmp.title,
     maxFontSizeMultiplier: 2,
     children: null,
   };
-  const intl = getSystemLocale.intl;
-  obj1[4] = intl.string(getSystemLocale.t["8JZof8"]);
-  items[1] = callback(Text.Heading, obj1);
+  const intl = util.intl;
+  obj1.children = intl.string(util.t["8JZof8"]);
+  items[1] = timestampProducer(Text_Text.Heading, obj1);
   const obj2 = {
     color: "text-default",
     variant: "text-md/medium",
@@ -61,20 +63,15 @@ const memoResult = importAllResult.memo(function MessagesItemEmptyState() {
     maxFontSizeMultiplier: 2,
     children: null,
   };
-  const intl2 = getSystemLocale.intl;
-  obj2[4] = intl2.string(getSystemLocale.t["qm+H7x"]);
-  items[2] = callback(Text.Text, obj2);
+  const intl2 = util.intl;
+  obj2.children = intl2.string(util.t["qm+H7x"]);
+  items[2] = timestampProducer(Text_Text.Text, obj2);
   const obj3 = { text: null, onPress: null, size: "lg" };
-  const intl3 = getSystemLocale.intl;
-  obj3[0] = intl3.string(getSystemLocale.t.zIJnA6);
-  obj3[1] = callback;
-  items[3] = callback(Button.Button, obj3);
-  obj[2] = items;
-  return callback2(closure_5, obj);
+  const intl3 = util.intl;
+  obj3.text = intl3.string(util.t.zIJnA6);
+  obj3.onPress = callback;
+  items[3] = timestampProducer(components_Button_Button.Button, obj3);
+  obj.children = items;
+  return React5(hasOwnProperty, obj);
 });
-const result = require("set").fileFinishedImporting(
-  "modules/main_tabs_v2/native/tabs/messages/items/MessagesItemEmptyState.tsx",
-);
-
-export default memoResult;
 export const MESSAGES_ITEM_EMPTY_STATE_HEIGHT = 325;

@@ -1,10 +1,8 @@
 // discord_app/design/components/experimental/Button/native/HeaderButton.native.tsx
-import noopAll from "../../../../../../_runtime/00019_noop.js";
-import CollapsingText from "../../../Button/native/BaseTextButton.native.tsx";
-import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../Styles/native/createStyles.tsx";
+import BaseTextButton from "../../../Button/native/BaseTextButton.native.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+require = fn;
 class HeaderButton {
   constructor(arg0) {
     tmp = closure_4();
@@ -14,18 +12,18 @@ class HeaderButton {
     obj.size = "sm";
     obj.textVariant = c3;
     obj.variant = "secondary-overlay";
-    return jsx(require("CollapsingText").BaseTextButton, obj);
+    return jsx(closure_0(closure_1[5]).BaseTextButton, obj);
   }
 }
-noopAll;
-let c3 = "heading-md/bold";
-const diff = require("MINIMUM_HIT_AREA").SMALL_BUTTON_HEIGHT - 2 * require("MINIMUM_HIT_AREA").BUTTON_BORDER_WIDTH;
-const diff1 = diff - require("Text").TextStyleSheet["heading-md/bold"].lineHeight;
-createCacheKey = { paddingVertical: diff1 / 2 };
-let closure_4 = createCacheKey.createStyles({ pill: createCacheKey });
-HeaderButton.Icon = require("CollapsingText").BaseTextButton.Icon;
-const result = require("set").fileFinishedImporting(
-  "design/components/experimental/Button/native/HeaderButton.native.tsx",
-);
+const jsx = fn(21).jsx;
+const React3 = "heading-md/bold";
+const diff = fn(4980).SMALL_BUTTON_HEIGHT - 2 * fn(4980).BUTTON_BORDER_WIDTH;
+const diff1 = diff - fn(4556).TextStyleSheet["heading-md/bold"].lineHeight;
+fn(4560);
+const createStyles = { pill: { paddingVertical: diff1 / 2 } };
+const React4 = createStyles.createStyles(createStyles);
+HeaderButton.Icon = fn(4976).BaseTextButton.Icon;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/experimental/Button/native/HeaderButton.native.tsx");
 
 export { HeaderButton };

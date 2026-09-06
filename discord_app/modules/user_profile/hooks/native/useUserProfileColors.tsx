@@ -1,21 +1,22 @@
 // discord_app/modules/user_profile/hooks/native/useUserProfileColors.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import map from "../../../../design/tokens/native/useToken.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useToken from "../../../../design/tokens/native/useToken.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import useProfileThemeValues from "../../useProfileThemeValues.native.tsx";
-import closure_3 from "../../../a11y/AccessibilityStore.tsx";
-import { ThemeTypes } from "../../../../../discord_common/js/shared/Constants.tsx";
+import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
-require = arg1;
-let result = require("set").fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileColors.tsx");
+require = fn;
+const ThemeTypes = fn(1085).ThemeTypes;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileColors.tsx");
 
 export const useUserProfileColors = function useUserProfileColors(theme) {
   ({ primaryColor, secondaryColor } = theme);
   const tmp2 = useThemeDefault();
   let obj = useProfileThemeValues;
   const profileThemeValues = obj.useProfileThemeValues(theme.theme);
-  const items = [closure_3];
+  const items = [AccessibilityStore];
   obj = {
     gradientFallbackBackground: null,
     gradientSecondaryBackground: null,
@@ -24,19 +25,13 @@ export const useUserProfileColors = function useUserProfileColors(theme) {
     avatarBackground: null,
     statusBackground: null,
   };
-  const stateFromStores = initialize.useStateFromStores(items, () => obj.syncProfileThemeWithUserTheme);
-  const obj2 = initialize;
-  obj[0] = map.useToken(ThemesDefault.colors.USER_PROFILE_GRADIENT_BACKGROUND, tmp2);
-  const obj4 = map;
-  obj[1] = map.useToken(ThemesDefault.colors.USER_PROFILE_GRADIENT_BACKGROUND, tmp2);
-  const obj5 = map;
-  obj[2] = map.useToken(ThemesDefault.colors.CARD_MUTED_BG, tmp2);
-  const obj6 = map;
-  obj[3] = map.useToken(ThemesDefault.colors.BORDER_MUTED, tmp2);
-  const obj7 = map;
-  obj[4] = map.useToken(ThemesDefault.colors.BACKGROUND_BASE_LOWER, tmp2);
-  const obj8 = map;
-  obj[5] = map.useToken(ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, tmp2);
+  const stateFromStores = initialize.useStateFromStores(items, () => AccessibilityStore.syncProfileThemeWithUserTheme);
+  obj.gradientFallbackBackground = useToken.useToken(nativeDefault.colors.USER_PROFILE_GRADIENT_BACKGROUND, tmp2);
+  obj.gradientSecondaryBackground = useToken.useToken(nativeDefault.colors.USER_PROFILE_GRADIENT_BACKGROUND, tmp2);
+  obj.containerBackground = useToken.useToken(nativeDefault.colors.CARD_MUTED_BG, tmp2);
+  obj.containerBorderColor = useToken.useToken(nativeDefault.colors.BORDER_MUTED, tmp2);
+  obj.avatarBackground = useToken.useToken(nativeDefault.colors.BACKGROUND_BASE_LOWER, tmp2);
+  obj.statusBackground = useToken.useToken(nativeDefault.colors.BACKGROUND_SURFACE_HIGH, tmp2);
   if (null != primaryColor) {
     if (null != secondaryColor) {
       if (null != profileThemeValues) {

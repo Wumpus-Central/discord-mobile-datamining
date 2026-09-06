@@ -1,23 +1,25 @@
 // discord_app/modules/user_profile/hooks/useBadges.tsx
-import explicitContentFromProto from "../../user_settings/UserSettings.tsx";
-import closure_2 from "../../../stores/StreamerModeStore.tsx";
-import closure_3 from "../../../stores/UserStore.tsx";
+import util from "../../../intl/index.native.tsx";
+import UserSettings from "../../user_settings/UserSettings.tsx";
+import StreamerModeStore from "../../../stores/StreamerModeStore.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
 
-require = arg1;
+require = fn;
 const legacy_username = "legacy_username";
-const result = require("set").fileFinishedImporting("modules/user_profile/hooks/useBadges.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/hooks/useBadges.tsx");
 
-export default function useBadges(getBadges) {
-  const LegacyUsernameDisabled = explicitContentFromProto.LegacyUsernameDisabled;
+export default function useBadges(getBadges, arg1) {
+  const LegacyUsernameDisabled = UserSettings.LegacyUsernameDisabled;
   let setting = LegacyUsernameDisabled.useSetting();
   if (undefined !== arg1) {
     setting = arg1;
   }
   let tmpResult = tmp(563);
-  const items = [closure_3];
+  const items = [UserStore];
   const stateFromStores = tmpResult.useStateFromStores(items, () => currentUser.getCurrentUser());
   tmpResult = tmp(563);
-  [][0] = closure_2;
+  [][0] = StreamerModeStore;
   if (null == getBadges) {
     return [];
   } else {
@@ -30,16 +32,16 @@ export default function useBadges(getBadges) {
     }
     let found = badges;
     if (tmp7) {
-      found = badges.filter((id) => id.id !== closure_4);
+      found = badges.filter((id) => id.id !== legacy_username);
     }
     let mapped = found;
     if (tmp6) {
       mapped = found.map((id) => {
         const obj = {};
         const merged = Object.assign(id);
-        if (id.id === closure_4) {
-          const intl = callback(1114).intl;
-          let description = intl.string(callback(1114).t.Br1ls3);
+        if (id.id === legacy_username) {
+          const intl = util.intl;
+          let description = intl.string(util.t.Br1ls3);
         } else {
           description = id.description;
         }

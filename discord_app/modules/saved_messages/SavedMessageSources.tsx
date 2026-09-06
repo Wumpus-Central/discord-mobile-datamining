@@ -1,7 +1,7 @@
 // discord_app/modules/saved_messages/SavedMessageSources.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/saved_messages/SavedMessageSources.tsx");
+const result = size.fileFinishedImporting("modules/saved_messages/SavedMessageSources.tsx");
 
 export const SavedMessageSources = {
   REACTION_BUTTON: "reaction_button",

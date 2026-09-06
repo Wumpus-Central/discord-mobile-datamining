@@ -1,23 +1,24 @@
 // discord_app/modules/user_settings/defs/native/SyncProfileColorsSetting.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import closure_2 from "../../../a11y/AccessibilityStore.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import util from "../../../../intl/index.native.tsx";
+import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
-require = arg1;
-createToggle = {
+require = fn;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["sSY+mD"]);
+    const intl = util.intl;
+    return intl.string(util.t["sSY+mD"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.ACCESSIBILITY,
+  parent: fn(7975).MobileUserSettings.ACCESSIBILITY,
   useValue: function useProfileColorsSettingValue() {
-    const items = [closure_2];
-    return initialize.useStateFromStores(items, () => obj.syncProfileThemeWithUserTheme);
+    const items = [AccessibilityStore];
+    return initialize.useStateFromStores(items, () => AccessibilityStore.syncProfileThemeWithUserTheme);
   },
-  onValueChange: require("setFontSize").toggleSyncProfileThemeWithUserTheme,
+  onValueChange: fn(14437).toggleSyncProfileThemeWithUserTheme,
 };
-createToggle = createToggle.createToggle(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/SyncProfileColorsSetting.tsx");
+SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/SyncProfileColorsSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

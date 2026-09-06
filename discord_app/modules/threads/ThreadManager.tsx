@@ -1,10 +1,10 @@
 // discord_app/modules/threads/ThreadManager.tsx
-import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
-import withErrorHandlingDefault from "../forums/ForumActionCreators.tsx";
-import closure_2 from "../../stores/AuthenticationStore.tsx";
-import closure_3 from "../../stores/ChannelStore.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import ForumActionCreatorsDefault from "../forums/ForumActionCreators.tsx";
+import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
+import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
-initializeDefault;
 class ThreadManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -21,16 +21,13 @@ prototype["handleChannelDelete"] = function handleChannelDelete(channel) {
   channel = channel.channel;
   let allThreadsForParent;
   if (null != channel.guild_id) {
-    allThreadsForParent = store.getAllThreadsForParent(channel.id);
+    allThreadsForParent = ChannelStore.getAllThreadsForParent(channel.id);
     if (allThreadsForParent.length > 0) {
       const Emitter = allThreadsForParent(504).Emitter;
       Emitter.batched(() => {
         for (const item10005 of allThreadsForParent) {
-          let tmp = allThreadsForParent;
-          let tmp2 = closure_1_1;
-          let obj = allThreadsForParent(closure_1_1[4]);
-          obj = { type: "THREAD_DELETE", channel: null };
-          obj[1] = item10005;
+          let obj = DispatcherDefault;
+          obj = { type: "THREAD_DELETE", channel: item10005 };
           let dispatchResult = obj.dispatch(obj);
           continue;
         }
@@ -39,13 +36,13 @@ prototype["handleChannelDelete"] = function handleChannelDelete(channel) {
   }
 };
 prototype["handleMessageCreate"] = function handleMessageCreate(channelId) {
-  const channel = store.getChannel(channelId.channelId);
+  const channel = ChannelStore.getChannel(channelId.channelId);
   const author = channelId.message.author;
   let id;
   if (author != null) {
     id = author.id;
   }
-  if (id === id.getId()) {
+  if (id === AuthenticationStore.getId()) {
     let isActiveThreadResult;
     if (channel != null) {
       isActiveThreadResult = channel.isActiveThread();
@@ -63,8 +60,7 @@ prototype["handleMessageCreate"] = function handleMessageCreate(channelId) {
       const _Date = Date;
       const time = date.getTime();
       if (Date.now() - time < 5000) {
-        withErrorHandlingDefault.resort(channel.parent_id);
-        const obj3 = withErrorHandlingDefault;
+        ForumActionCreatorsDefault.resort(channel.parent_id);
       }
     }
   }
@@ -73,16 +69,13 @@ prototype["handleGuildDelete"] = function handleGuildDelete(guild) {
   guild = guild.guild;
   let allThreadsForGuild;
   if (!guild.unavailable) {
-    allThreadsForGuild = store.getAllThreadsForGuild(guild.id);
+    allThreadsForGuild = ChannelStore.getAllThreadsForGuild(guild.id);
     if (0 !== allThreadsForGuild.length) {
       const Emitter = allThreadsForGuild(504).Emitter;
       Emitter.batched(() => {
         for (const item10005 of allThreadsForGuild) {
-          let tmp = allThreadsForGuild;
-          let tmp2 = closure_1_1;
-          let obj = allThreadsForGuild(closure_1_1[4]);
-          obj = { type: "THREAD_DELETE", channel: null };
-          obj[1] = item10005;
+          let obj = DispatcherDefault;
+          obj = { type: "THREAD_DELETE", channel: item10005 };
           let dispatchResult = obj.dispatch(obj);
           continue;
         }
@@ -91,6 +84,7 @@ prototype["handleGuildDelete"] = function handleGuildDelete(guild) {
   }
 };
 const threadManager = new ThreadManager();
-const result = require("set").fileFinishedImporting("modules/threads/ThreadManager.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/threads/ThreadManager.tsx");
 
 export default threadManager;

@@ -1,11 +1,15 @@
 // discord_app/modules/global_discovery_servers/GlobalDiscoveryServersSearchCountsStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
 import V6OrEarlierAPIError from "../../errors/index.tsx";
 
-require = arg1;
+require = fn;
 const map = new Map();
-class SearchCountState {}
+class SearchCountState {
+  constructor() {
+    return Object.assign({ isInitialFetchComplete: false, isFetching: false, error: null, counts: null });
+  }
+}
 const prototype = SearchCountState.prototype;
 prototype["handleSearchCountStart"] = function handleSearchCountStart() {
   this.error = null;
@@ -25,7 +29,7 @@ const Store = initializeDefault.Store;
 class GlobalDiscoveryServersSearchCountStore extends Store {}
 const prototype2 = GlobalDiscoveryServersSearchCountStore.prototype;
 prototype2["getIsInitialFetchComplete"] = function getIsInitialFetchComplete(arg0) {
-  const value = map.get(arg0);
+  value = map.get(arg0);
   let prop = null;
   if (null != value) {
     prop = value.isInitialFetchComplete;
@@ -33,7 +37,7 @@ prototype2["getIsInitialFetchComplete"] = function getIsInitialFetchComplete(arg
   return prop;
 };
 prototype2["getIsFetchingCounts"] = function getIsFetchingCounts(arg0) {
-  const value = map.get(arg0);
+  value = map.get(arg0);
   let isFetching = null;
   if (null != value) {
     isFetching = value.isFetching;
@@ -41,7 +45,7 @@ prototype2["getIsFetchingCounts"] = function getIsFetchingCounts(arg0) {
   return isFetching;
 };
 prototype2["getCounts"] = function getCounts(query) {
-  const value = map.get(query);
+  value = map.get(query);
   let counts = null;
   if (null != value) {
     counts = value.counts;
@@ -49,64 +53,59 @@ prototype2["getCounts"] = function getCounts(query) {
   return counts;
 };
 GlobalDiscoveryServersSearchCountStore.displayName = "GlobalDiscoveryServersSearchCountStore";
-const globalDiscoveryServersSearchCountStore = new GlobalDiscoveryServersSearchCountStore(dispatcherDefault, {
+const globalDiscoveryServersSearchCountStore = new GlobalDiscoveryServersSearchCountStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     map.clear();
   },
   GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_START: function handleGlobalDiscoveryServersSearchCountStart(query) {
     query = query.query;
-    let obj = map;
-    obj = map.get(query);
-    if (obj == null) {
-      if (typeof SearchCountState !== "function") {
-        HermesBuiltin.throwTypeError();
+    let merged = map.get(query);
+    if (merged == null) {
+      if (typeof SearchCountState === "function") {
+        merged = Object.assign({ isInitialFetchComplete: false, isFetching: false, error: null, counts: null });
+      } else {
+        throw new TypeError("Trying to call a non-function");
       }
-      obj = Object.create(SearchCountState.prototype);
-      const tmp = SearchCountState;
     }
-    const result = obj.set(query, obj);
-    const result1 = obj.handleSearchCountStart();
+    const result = map.set(query, merged);
+    const result1 = merged.handleSearchCountStart();
   },
   GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_SUCCESS: function handleGlobalDiscoveryServersSearchCountSuccess(query) {
     query = query.query;
-    let obj = map;
-    obj = map.get(query);
-    if (obj == null) {
-      if (typeof SearchCountState !== "function") {
-        HermesBuiltin.throwTypeError();
+    let merged = map.get(query);
+    if (merged == null) {
+      if (typeof SearchCountState === "function") {
+        merged = Object.assign({ isInitialFetchComplete: false, isFetching: false, error: null, counts: null });
+      } else {
+        throw new TypeError("Trying to call a non-function");
       }
-      obj = Object.create(SearchCountState.prototype);
-      const tmp = SearchCountState;
     }
-    const result = obj.set(query, obj);
-    const result1 = obj.handleSearchCountSuccess(query.categoryCounts);
+    const result = map.set(query, merged);
+    const result1 = merged.handleSearchCountSuccess(query.categoryCounts);
   },
   GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_FAILURE: function handleGlobalDiscoveryServersSearchCountFailure(query) {
     query = query.query;
-    let obj = map;
-    obj = map.get(query);
-    if (obj == null) {
-      if (typeof SearchCountState !== "function") {
-        HermesBuiltin.throwTypeError();
+    let merged = map.get(query);
+    if (merged == null) {
+      if (typeof SearchCountState === "function") {
+        merged = Object.assign({ isInitialFetchComplete: false, isFetching: false, error: null, counts: null });
+      } else {
+        throw new TypeError("Trying to call a non-function");
       }
-      obj = Object.create(SearchCountState.prototype);
-      const tmp = SearchCountState;
     }
-    const result = obj.set(query, obj);
-    const result1 = obj.handleSearchCountFailure(query.error);
+    const result = map.set(query, merged);
+    const result1 = merged.handleSearchCountFailure(query.error);
   },
   GLOBAL_DISCOVERY_SERVERS_SEARCH_CLEAR: function handleGlobalDiscoveryServersSearchClear(ignoreQueries) {
-    let set;
-    set = new Set(ignoreQueries.ignoreQueries);
-    const item = map.forEach((arg0, arg1) => {
-      if (!set.has(arg1)) {
-        closure_1_2.delete(arg1);
+    const set = new Set(ignoreQueries.ignoreQueries);
+    const item = map.forEach((item, index) => {
+      if (!set.has(index)) {
+        map.delete(index);
       }
     });
   },
 });
-let result = require("set").fileFinishedImporting(
-  "modules/global_discovery_servers/GlobalDiscoveryServersSearchCountsStore.tsx",
-);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/global_discovery_servers/GlobalDiscoveryServersSearchCountsStore.tsx");
 
 export default globalDiscoveryServersSearchCountStore;

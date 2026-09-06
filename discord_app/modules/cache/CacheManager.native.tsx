@@ -1,18 +1,17 @@
 // discord_app/modules/cache/CacheManager.native.tsx
-import timestampDefault from "../debug/Logger.tsx";
-import setDefault from "../../utils/Durations.tsx";
-import keys from "../../ConstantsIOS.tsx";
-import set from "../../utils/PlatformUtils.tsx";
-import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
-import okAsyncDefault from "../app_database/modules/KvCacheVersion.tsx";
-import _writeCaches from "CacheActionCreators.tsx";
-import closure_3 from "../gateway/GatewayConnectionStore.tsx";
-import closure_4 from "CacheStore.tsx";
+import LoggerDefault from "../debug/Logger.tsx";
+import DurationsDefault from "../../utils/Durations.tsx";
+import ConstantsIOS from "../../ConstantsIOS.tsx";
+import PlatformUtils from "../../utils/PlatformUtils.tsx";
+import KvCacheVersionDefault from "../app_database/modules/KvCacheVersion.tsx";
+import GatewayConnectionStore from "../gateway/GatewayConnectionStore.tsx";
+import CacheStore from "CacheStore.tsx";
+import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
-require = arg1;
-let closure_5 = new timestampDefault("CacheStore");
-let closure_6 = 15 * setDefault.Millis.MINUTE;
-initializeDefault;
+const CacheActionCreators = tmp(15570);
+require = fn;
+let closure_5 = new LoggerDefault("CacheStore");
+let closure_6 = 15 * DurationsDefault.Millis.MINUTE;
 class CacheManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -32,11 +31,10 @@ class CacheManager extends tmp3 {
 }
 const prototype = CacheManager.prototype;
 prototype["handleConnectionOpen"] = function handleConnectionOpen() {
-  const result = okAsyncDefault.doesDatabaseVersionMatchJsConstants();
-  result.then((arg0) => {
-    if (!arg0) {
-      callback(table[6]).writeCaches();
-      const obj = callback(table[6]);
+  const result = KvCacheVersionDefault.doesDatabaseVersionMatchJsConstants();
+  result.then((result) => {
+    if (!result) {
+      CacheActionCreators.writeCaches();
     }
   });
 };
@@ -44,26 +42,23 @@ prototype["handleConnectionClose"] = function handleConnectionClose() {
   return false;
 };
 prototype["handleAppStateUpdate"] = function handleAppStateUpdate(state) {
-  const obj = set;
-  const tmp = require;
-  const AppStates = keys.AppStates;
-  let isConnectedResult = (set.isAndroid() ? AppStates.BACKGROUND : AppStates.INACTIVE) === state.state;
+  const AppStates = ConstantsIOS.AppStates;
+  let isConnectedResult = (PlatformUtils.isAndroid() ? AppStates.BACKGROUND : AppStates.INACTIVE) === state.state;
   if (isConnectedResult) {
-    isConnectedResult = connected.isConnected();
+    isConnectedResult = GatewayConnectionStore.isConnected();
   }
   if (isConnectedResult) {
-    _writeCaches.writeCaches();
-    const tmpResult = _writeCaches;
+    CacheActionCreators.writeCaches();
+    const tmpResult = CacheActionCreators;
   }
   return false;
 };
 prototype["handleWindowFocus"] = function handleWindowFocus(focused) {
   if (!focused.focused) {
     const _Date = Date;
-    if (Date.now() - lastWriteTime.lastWriteTime > closure_6) {
+    if (Date.now() - CacheStore.lastWriteTime > closure_6) {
       closure_5.verbose("Writing cache from window unfocus");
-      _writeCaches.writeCaches();
-      const obj = _writeCaches;
+      CacheActionCreators.writeCaches();
     } else {
       closure_5.verbose("Not writing cache from window unfocus");
     }
@@ -71,7 +66,7 @@ prototype["handleWindowFocus"] = function handleWindowFocus(focused) {
   return false;
 };
 const cacheManager = new CacheManager();
-const tmp2 = new timestampDefault("CacheStore");
-let result = require("set").fileFinishedImporting("modules/cache/CacheManager.native.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/cache/CacheManager.native.tsx");
 
 export default cacheManager;

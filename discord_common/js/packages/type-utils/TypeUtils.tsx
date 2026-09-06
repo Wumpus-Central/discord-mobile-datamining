@@ -1,18 +1,18 @@
 // discord_common/js/packages/type-utils/TypeUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/type-utils/TypeUtils.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/type-utils/TypeUtils.tsx");
 
 export function exact(arg0) {
   return arg0;
 }
-export const hasOwnProperty = function hasOwnProperty(key10009, type) {
-  return key10009.hasOwnProperty(type);
+export const hasOwnProperty = function hasOwnProperty(key10009, Shape) {
+  return key10009.hasOwnProperty(Shape);
 };
-export const dangerouslyCast = function dangerouslyCast(reduced, ForumChannelRecord) {
-  return Object.setPrototypeOf(reduced, ForumChannelRecord.prototype);
+export const dangerouslyCast = function dangerouslyCast(reduced, UnknownChannelRecord) {
+  return Object.setPrototypeOf(reduced, UnknownChannelRecord.prototype);
 };
-export const assertUnreachable = function assertUnreachable(closure_0, arg1) {
+export const assertUnreachable = function assertUnreachable(id, arg1) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -23,7 +23,7 @@ export const assertUnreachable = function assertUnreachable(closure_0, arg1) {
   }
   if (flag) {
     const _Error = Error;
-    error = new Error();
+    const error = new Error();
     throw error;
   }
 };

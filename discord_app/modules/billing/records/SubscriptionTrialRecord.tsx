@@ -1,35 +1,26 @@
 // discord_app/modules/billing/records/SubscriptionTrialRecord.tsx
-import toJSDefault from "../../../lib/Record.tsx";
+import Record from "../../../lib/Record.tsx";
 
-toJSDefault;
 let SubscriptionTrialRecord;
 class SubscriptionTrialRecord extends tmp2 {
   constructor(arg0) {
     tmp = new SubscriptionTrialRecord(new.target, new.target);
-    // ThrowIfThisInitialized (0x7c)
     ({ id: tmp.id, interval: tmp.interval, intervalCount: tmp.intervalCount, skuId: tmp.skuId } = global);
     return tmp;
   }
 }
 SubscriptionTrialRecord["createFromServer"] = function createFromServer(arg0) {
   ({ id, interval } = arg0);
-  ({ interval_count, sku_id } = arg0);
-  if (typeof SubscriptionTrialRecord !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof SubscriptionTrialRecord === "function") {
+    const tmp8 = new SubscriptionTrialRecord(tmp, tmp2, new.target, id, interval);
+    tmp8.id = id;
+    tmp8.interval = interval;
+    tmp8.intervalCount = tmp3;
+    tmp8.skuId = tmp4;
+    return tmp8;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const tmp2 = new SubscriptionTrialRecord(
-    "Trying to call a non-function",
-    SubscriptionTrialRecord,
-    new.target,
-    id,
-    interval,
-  );
-  // ThrowIfThisInitialized (0x7c)
-  tmp2.id = id;
-  tmp2.interval = interval;
-  tmp2.intervalCount = interval_count;
-  tmp2.skuId = sku_id;
-  return tmp2;
 };
 Object.defineProperty(SubscriptionTrialRecord.prototype, "isMultiInterval", {
   get: function isMultiInterval() {
@@ -41,6 +32,7 @@ Object.defineProperty(SubscriptionTrialRecord.prototype, "isMultiInterval", {
   },
   set: undefined,
 });
-const result = require("set").fileFinishedImporting("modules/billing/records/SubscriptionTrialRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/billing/records/SubscriptionTrialRecord.tsx");
 
 export default SubscriptionTrialRecord;

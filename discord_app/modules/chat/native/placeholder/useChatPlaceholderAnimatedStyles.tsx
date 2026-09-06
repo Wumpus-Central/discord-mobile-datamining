@@ -1,38 +1,37 @@
 // discord_app/modules/chat/native/placeholder/useChatPlaceholderAnimatedStyles.tsx
-import closure_2 from "../../../a11y/AccessibilityStore.tsx";
+import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
+import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
+import timingPresets from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
+import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
-const require = arg1;
-let obj = { duration: 1300, easing: require("Button").STANDARD_EASING };
-let closure_4 = {
+require = fn;
+let obj = { duration: 1300, easing: fn(1178).STANDARD_EASING };
+const __initData = {
   code: "function useChatPlaceholderAnimatedStylesTsx1(){const{visible,animated,useReducedMotion,withRepeat,withSequence,withTiming,timingNone,TIMING_CONFIG}=this.__closure;if(!visible){return{opacity:0};}else if(!animated||useReducedMotion){return{opacity:0.7};}return{opacity:withRepeat(withSequence(withTiming(0.3,timingNone),withTiming(0.7,TIMING_CONFIG),withTiming(0.3,TIMING_CONFIG)),-1)};}",
 };
-const result = require("set").fileFinishedImporting(
-  "modules/chat/native/placeholder/useChatPlaceholderAnimatedStyles.tsx",
-);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/chat/native/placeholder/useChatPlaceholderAnimatedStyles.tsx");
 
 export default function useChatPlaceholderAnimatedStyles(visible) {
   visible = visible.visible;
   const animated = visible.animated;
   let stateFromStores;
-  obj = visible(animated[2]);
+  let __closure = visible(animated[2]);
   const items = [stateFromStores];
-  stateFromStores = obj.useStateFromStores(items, () => stateFromStores.useReducedMotion);
+  stateFromStores = __closure.useStateFromStores(items, () => stateFromStores.useReducedMotion);
   const fn = function c() {
     if (visible) {
       if (animated) {
         if (!stateFromStores) {
           obj = { opacity: null };
-          const obj2 = visible(animated[3]);
-          const obj3 = visible(animated[3]);
-          const obj4 = visible(animated[4]);
-          const withTimingResult = visible(animated[4]).withTiming(0.3, visible(animated[5]).timingNone);
-          const obj5 = visible(animated[4]);
-          const withTimingResult1 = visible(animated[4]).withTiming(0.7, closure_1_3);
-          obj[0] = obj2.withRepeat(
-            obj3.withSequence(withTimingResult, withTimingResult1, visible(animated[4]).withTiming(0.3, closure_1_3)),
+          const obj2 = ReanimatedRexport;
+          const obj3 = ReanimatedRexport;
+          const withTimingResult = timing.withTiming(0.3, timingPresets.timingNone);
+          const withTimingResult1 = timing.withTiming(0.7, obj);
+          obj.opacity = obj2.withRepeat(
+            obj3.withSequence(withTimingResult, withTimingResult1, timing.withTiming(0.3, obj)),
             -1,
           );
-          const obj6 = visible(animated[4]);
         }
       }
       obj = { opacity: 0.7 };
@@ -40,7 +39,7 @@ export default function useChatPlaceholderAnimatedStyles(visible) {
       return { opacity: 0 };
     }
   };
-  obj = {
+  __closure = {
     visible,
     animated,
     useReducedMotion: stateFromStores,
@@ -48,10 +47,10 @@ export default function useChatPlaceholderAnimatedStyles(visible) {
     withSequence: visible(animated[3]).withSequence,
     withTiming: visible(animated[4]).withTiming,
     timingNone: visible(animated[5]).timingNone,
-    TIMING_CONFIG: obj,
+    TIMING_CONFIG: __closure,
   };
-  fn.__closure = obj;
+  fn.__closure = __closure;
   fn.__workletHash = 3375288363194;
-  fn.__initData = closure_4;
+  fn.__initData = __initData;
   return visible(animated[3]).useAnimatedStyle(fn);
 }

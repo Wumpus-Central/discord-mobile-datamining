@@ -1,23 +1,22 @@
 // discord_app/modules/game_profile/hooks/useGameProfileObscured.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import isAgeRestrictedContentClassification from "../../content_classification/utils.tsx";
-import closure_2 from "../../../stores/UserStore.tsx";
+import utils from "../../content_classification/utils.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
 
-require = arg1;
-let result = require("set").fileFinishedImporting("modules/game_profile/hooks/useGameProfileObscured.tsx");
+require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileObscured.tsx");
 
 export default function useGameProfileObscured(contentClassification) {
   initialize;
-  [][0] = closure_2;
+  [][0] = UserStore;
   let result = null != contentClassification;
   if (result) {
     result = false === tmp4;
   }
   if (result) {
-    result = isAgeRestrictedContentClassification.isAgeRestrictedContentClassification(
-      contentClassification.contentClassification,
-    );
-    const tmpResult = isAgeRestrictedContentClassification;
+    result = utils.isAgeRestrictedContentClassification(contentClassification.contentClassification);
+    const tmpResult = utils;
   }
   return result;
 }
@@ -27,8 +26,7 @@ export const isGameProfileObscured = function isGameProfileObscured(game, nsfwAl
     result = false === nsfwAllowed;
   }
   if (result) {
-    result = isAgeRestrictedContentClassification.isAgeRestrictedContentClassification(game.contentClassification);
-    const obj = isAgeRestrictedContentClassification;
+    result = utils.isAgeRestrictedContentClassification(game.contentClassification);
   }
   return result;
 };

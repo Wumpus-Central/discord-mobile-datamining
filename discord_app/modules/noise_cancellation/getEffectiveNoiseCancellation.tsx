@@ -1,9 +1,9 @@
 // discord_app/modules/noise_cancellation/getEffectiveNoiseCancellation.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
 const deep_noise_suppression = "deep_noise_suppression";
-let set = new Set(["voice_isolation", "wide_spectrum"]);
-const result = set.fileFinishedImporting("modules/noise_cancellation/getEffectiveNoiseCancellation.tsx");
+const set = new Set(["voice_isolation", "wide_spectrum"]);
+const result = size.fileFinishedImporting("modules/noise_cancellation/getEffectiveNoiseCancellation.tsx");
 
 export default function getEffectiveNoiseCancellation(arg0, arg1) {
   if (!obj.isIOS()) {

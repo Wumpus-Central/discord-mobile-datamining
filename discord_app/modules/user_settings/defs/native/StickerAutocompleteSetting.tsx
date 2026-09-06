@@ -1,29 +1,20 @@
 // discord_app/modules/user_settings/defs/native/StickerAutocompleteSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import explicitContentFromProto from "../../UserSettings.tsx";
-import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
+import util from "../../../../intl/index.native.tsx";
+import UserSettings from "../../UserSettings.tsx";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import UserSettingsText from "../../chat/native/UserSettingsText.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const toggle = createToggle.createToggle({
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["29xPVZ"]);
+    const intl = util.intl;
+    return intl.string(util.t["29xPVZ"]);
   },
-  parent: MobileUserSettings.MobileUserSettings.CHAT,
-  useValue: explicitContentFromProto.IncludeStickersInAutocomplete.useSetting,
+  parent: SettingsConstants.MobileUserSettings.CHAT,
+  useValue: UserSettings.IncludeStickersInAutocomplete.useSetting,
   onValueChange: UserSettingsText.setStickerAutocomplete,
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["29xPVZ"]);
-  },
-  parent: MobileUserSettings.MobileUserSettings.CHAT,
-  useValue: explicitContentFromProto.IncludeStickersInAutocomplete.useSetting,
-  onValueChange: UserSettingsText.setStickerAutocomplete,
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/StickerAutocompleteSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/StickerAutocompleteSetting.tsx");
 
 export default toggle;

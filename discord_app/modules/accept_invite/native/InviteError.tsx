@@ -1,33 +1,31 @@
 // discord_app/modules/accept_invite/native/InviteError.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import getAvatarURLDefault from "../../../utils/AvatarUtils.tsx";
-import combinedDefault from "../../../utils/HelpdeskUtils.tsx";
-import AccessibilityAnnouncer from "../../../design/shared.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
+import native from "../../../design/void/native.tsx";
+import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
+import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
+import shared from "../../../design/shared.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
-import Button from "../../../design/components/Button/native/Button.native.tsx";
-import GuildIconSizesDefault from "../../guild/native/GuildIcon.tsx";
-import getDescriptiveInviteError from "../../../utils/InviteErrorUtils.tsx";
-import registerAssetDefault from "../../../../_runtime/12725_registerAsset.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import ME from "../../../Constants.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
+import GuildIcon from "../../guild/native/GuildIcon.tsx";
+import InviteErrorUtils from "../../../utils/InviteErrorUtils.tsx";
+import _modDef12725 from "../../../../_runtime/metro/12725__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+const GuildIconDefault = GuildIcon;
+
+require = fn;
 function InviteErrorBase(invite) {
   ({ onPressClose: require, inviteError } = invite);
-  const tmp = callback3();
-  let obj = AccessibilityAnnouncer;
-  const tmp4 = importDefault;
+  const tmp = closure_11();
+  let obj = shared;
   const tmp4Result = importDefault(obj.isThemeDark(useThemeDefault()) ? 12722 : 12723);
   let code;
   if (inviteError != null) {
     code = inviteError.code;
   }
-  const descriptiveInviteError = getDescriptiveInviteError.getDescriptiveInviteError(code);
+  const descriptiveInviteError = InviteErrorUtils.getDescriptiveInviteError(code);
   if (invite.invite.state === constants3.BANNED) {
     const intl2 = tmp2(1114).intl;
     let stringResult = intl2.string(tmp2(1114).t["GzD/aa"]);
@@ -42,7 +40,7 @@ function InviteErrorBase(invite) {
     }
   }
   obj = { style: tmp.expiredImage, source: tmp4Result };
-  const items = [callback(closure_3, obj), , ,];
+  const items = [React6(React3, obj), , ,];
   obj = {
     style: tmp.expiredTitle,
     variant: "heading-xl/extrabold",
@@ -57,13 +55,13 @@ function InviteErrorBase(invite) {
     const intl3 = tmp2(1114).intl;
     title = intl3.string(tmp2(1114).t.u9zxnX);
   }
-  obj1 = { children: null };
-  obj[3] = title;
+  const obj1 = { children: null };
+  obj.children = title;
   function handlePressClose() {
-    callback();
+    require();
   }
-  items[1] = callback(Text.Text, obj);
-  items[2] = callback(Text.Text, {
+  items[1] = React6(Text_Text.Text, obj);
+  items[2] = React6(Text_Text.Text, {
     style: tmp.expiredBody,
     variant: "text-sm/medium",
     color: "text-default",
@@ -71,15 +69,15 @@ function InviteErrorBase(invite) {
   });
   const obj3 = { variant: "primary", size: "lg", text: null, onPress: null };
   const intl4 = tmp2(1114).intl;
-  obj3[2] = intl4.string(getSystemLocale.t.wcqOoF);
-  obj3[3] = handlePressClose;
-  items[3] = callback(Button.Button, obj3);
-  obj1[0] = items;
-  return closure_10(closure_9, obj1);
+  obj3.text = intl4.string(util.t.wcqOoF);
+  obj3.onPress = handlePressClose;
+  items[3] = React6(components_Button_Button.Button, obj3);
+  obj1.children = items;
+  return closure_1_10(React7, obj1);
 }
 function InviteDisabledError(onPressClose) {
   onPressClose = onPressClose.onPressClose;
-  const tmp = callback3();
+  const tmp = closure_11();
   const guild = onPressClose.invite.guild;
   if (null == guild) {
     return null;
@@ -87,51 +85,49 @@ function InviteDisabledError(onPressClose) {
     function handlePressClose() {
       onPressClose();
     }
-    let obj = getAvatarURLDefault;
-    obj = { id: null, icon: null, size: 64, canAnimate: false };
-    ({ id: obj2[0], icon: obj2[1] } = guild);
+    let obj = { id: null, icon: null, size: 64, canAnimate: false };
+    ({ id: obj2.id, icon: obj2.icon } = guild);
     obj = { children: null };
-    obj1 = { style: null, children: null };
-    obj1[0] = tmp.disabledView;
+    const obj1 = { style: tmp.disabledView, children: null };
     const guildIconURL = obj.getGuildIconURL(obj);
-    const obj2 = { style: null, source: null };
-    obj2[0] = tmp.disabledPauseIcon;
-    obj2[1] = registerAssetDefault;
-    const items = [callback(onPressClose(1178).Icon, obj2)];
-    const obj3 = { style: null, icon: null, size: null };
-    obj3[0] = tmp.guildIcon;
-    obj3[1] = guildIconURL;
-    obj3[2] = onPressClose(5584).GuildIconSizes.XLARGE;
-    items[1] = callback(GuildIconSizesDefault, obj3);
-    obj1[1] = items;
-    const items1 = [callback2(closure_4, obj1), , ,];
-    const obj4 = { style: null, variant: "heading-xl/semibold", color: "text-feedback-critical", children: null };
-    obj4[0] = tmp.disabledTitle;
-    const intl = onPressClose(1114).intl;
-    obj4[3] = intl.string(onPressClose(1114).t.jlLX2Z);
-    items1[1] = callback(onPressClose(4556).Text, obj4);
-    const obj5 = { style: null, variant: "text-md/normal", color: "text-default", children: null };
-    obj5[0] = tmp.disabledBody;
-    const intl2 = onPressClose(1114).intl;
+    const obj2 = { style: tmp.disabledPauseIcon, source: _modDef12725 };
+    const items = [React6(native.Icon, obj2)];
+    const obj3 = { style: tmp.guildIcon, icon: guildIconURL, size: GuildIcon.GuildIconSizes.XLARGE };
+    items[1] = React6(GuildIconDefault, obj3);
+    obj1.children = items;
+    const items1 = [closure_1_10(React4, obj1), , ,];
+    const obj4 = {
+      style: tmp.disabledTitle,
+      variant: "heading-xl/semibold",
+      color: "text-feedback-critical",
+      children: null,
+    };
+    const intl = util.intl;
+    obj4.children = intl.string(util.t.jlLX2Z);
+    items1[1] = React6(Text_Text.Text, obj4);
+    const obj5 = { style: tmp.disabledBody, variant: "text-md/normal", color: "text-default", children: null };
+    const intl2 = util.intl;
     const obj6 = { articleLink: null };
-    const tmp10 = GuildIconSizesDefault;
-    obj6[0] = combinedDefault.getArticleURL(constants2.INVITE_DISABLED);
-    obj5[3] = intl2.format(onPressClose(1114).t.RXSeLl, obj6);
-    items1[2] = callback(onPressClose(4556).Text, obj5);
+    obj6.articleLink = HelpdeskUtilsDefault.getArticleURL(constants2.INVITE_DISABLED);
+    obj5.children = intl2.format(util.t.RXSeLl, obj6);
+    items1[2] = React6(Text_Text.Text, obj5);
     const obj7 = { variant: "primary", size: "lg", text: null, onPress: null };
-    const intl3 = onPressClose(1114).intl;
-    obj7[2] = intl3.string(onPressClose(1114).t["yD/zkn"]);
-    obj7[3] = handlePressClose;
-    items1[3] = callback(onPressClose(4975).Button, obj7);
-    obj[0] = items1;
-    return callback2(closure_9, obj);
+    const intl3 = util.intl;
+    obj7.text = intl3.string(util.t["yD/zkn"]);
+    obj7.onPress = handlePressClose;
+    items1[3] = React6(components_Button_Button.Button, obj7);
+    obj.children = items1;
+    return closure_1_10(React7, obj);
   }
 }
-noopAll;
-({ Image: c3, View: c4 } = get_ActivityIndicator);
-({ AbortCodes: c5, HelpdeskArticles: closure_6, InviteStates: error } = ME);
-({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
-createCacheKey = {
+get_ActivityIndicator = fn(17);
+({ Image: c3, View: closure_4 } = get_ActivityIndicator);
+const Constants = fn(1074);
+({ AbortCodes: hasOwnProperty, HelpdeskArticles: metroRequire, InviteStates: closure_7 } = Constants);
+const jsxProd = fn(21);
+({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
+fn(4560);
+let createStyles = {
   expiredImage: { marginTop: 32, marginBottom: 32 },
   expiredTitle: { marginBottom: 8, backgroundColor: "transparent", textAlign: "center" },
   expiredBody: { backgroundColor: "transparent", marginBottom: 24 },
@@ -141,35 +137,30 @@ createCacheKey = {
   disabledTitle: null,
   disabledBody: null,
 };
-createCacheKey = {
-  position: "absolute",
-  alignSelf: "center",
-  tintColor: ThemesDefault.colors.WHITE,
-  width: 42,
-  height: 42,
-};
-createCacheKey[4] = createCacheKey;
-createCacheKey[5] = { borderRadius: ThemesDefault.radii.lg, opacity: 0.2, zIndex: -999 };
-createCacheKey[6] = { marginTop: 16, marginBottom: 8, textAlign: "center" };
-createCacheKey[7] = { textAlign: "center", marginBottom: 16 };
-let closure_11 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { borderRadius: ThemesDefault.radii.lg, opacity: 0.2, zIndex: -999 };
-const result = require("set").fileFinishedImporting("modules/accept_invite/native/InviteError.tsx");
+let size = { position: "absolute", alignSelf: "center", tintColor: nativeDefault.colors.WHITE, width: 42, height: 42 };
+createStyles.disabledPauseIcon = size;
+createStyles = { borderRadius: nativeDefault.radii.lg, opacity: 0.2, zIndex: -999 };
+createStyles.guildIcon = createStyles;
+createStyles.disabledTitle = { marginTop: 16, marginBottom: 8, textAlign: "center" };
+createStyles.disabledBody = { textAlign: "center", marginBottom: 16 };
+let closure_11 = createStyles.createStyles(createStyles);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/accept_invite/native/InviteError.tsx");
 
 export default function InviteError(inviteError) {
   inviteError = inviteError.inviteError;
   if (null == inviteError) {
     let obj = {};
     const merged = Object.assign(inviteError);
-    let tmp7 = callback(InviteErrorBase, obj);
+    let tmp7 = React6(InviteErrorBase, obj);
   } else if (inviteError.code === constants.INVITES_DISABLED) {
     obj = {};
     const merged1 = Object.assign(inviteError);
-    tmp7 = callback(InviteDisabledError, obj);
+    tmp7 = React6(InviteDisabledError, obj);
   } else {
     obj = {};
     const merged2 = Object.assign(inviteError);
-    tmp7 = callback(InviteErrorBase, obj);
+    tmp7 = React6(InviteErrorBase, obj);
   }
   return tmp7;
 }

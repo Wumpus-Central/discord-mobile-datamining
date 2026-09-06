@@ -1,17 +1,17 @@
 // discord_app/modules/app_launcher/native/onboarding/hooks/useBannerBots.tsx
-import closure_2 from "../../../../../../_runtime/00019_noop.js";
-import closure_3 from "../../../../../stores/GuildStore.tsx";
-import closure_4 from "../stores/AppLauncherOnboardingStore.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
+import GuildStore from "../../../../../stores/GuildStore.tsx";
+import AppLauncherOnboardingStore from "../stores/AppLauncherOnboardingStore.tsx";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/app_launcher/native/onboarding/hooks/useBannerBots.tsx");
+const require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/app_launcher/native/onboarding/hooks/useBannerBots.tsx");
 
 export const useBannerBots = function useBannerBots(context) {
   context = context.context;
   let first1;
   let obj = (function useAppsMap(context) {
-    let apps;
-    apps = apps(12067).useApplicationsInContext({
+    const apps = first1(12067).useApplicationsInContext({
       context: context.context,
       onlyWithCommands: true,
       includeBuiltIn: false,
@@ -38,8 +38,7 @@ export const useBannerBots = function useBannerBots(context) {
   const obj2 = first1(12067);
   const tmp2 = first1;
   const obj3 = (function useCommandsMap(context) {
-    let commands;
-    commands = commands(12067).useApplicationCommandsInContext({
+    const commands = first1(12067).useApplicationCommandsInContext({
       context: context.context,
       includeBuiltIn: false,
     }).commands;
@@ -65,7 +64,7 @@ export const useBannerBots = function useBannerBots(context) {
         if (channel != null) {
           guild_id = channel.guild_id;
         }
-        return closure_1_3.getGuild(guild_id);
+        return guild.getGuild(guild_id);
       }),
     };
     return context(9299).useTopCommands(obj);
@@ -77,11 +76,11 @@ export const useBannerBots = function useBannerBots(context) {
   }
   const activityApplications = first1(12038).useActivityApplications({ guildId: guild_id, fetchesShelf: true });
   const obj4 = first1(12038);
-  let items = [closure_4];
+  let items = [AppLauncherOnboardingStore];
   const stateFromStores = tmp2(504).useStateFromStores(items, () =>
     recentApplicationCommandMetadata.getRecentApplicationCommandMetadata(),
   );
-  let value = null;
+  value = null;
   if (null != stateFromStores) {
     value = obj.get(stateFromStores.applicationId);
   }
@@ -90,65 +89,48 @@ export const useBannerBots = function useBannerBots(context) {
   for (const item10049 of tmp4) {
     value = obj3.get(item10049);
     if (null != value) {
-      let tmp12 = value;
       let value1 = obj.get(tmp11.applicationId);
       let tmp14 = value1;
       if (null != value1) {
-        let tmp15 = tmp9;
         if (null == tmp9) {
-          let tmp20 = value1;
           tmp9 = tmp14;
           first1 = tmp14;
         } else {
-          let tmp16 = value1;
-          let tmp17 = tmp9;
           let id;
           if (tmp9 != null) {
             id = tmp9.id;
           }
           if (tmp14.id !== id) {
             let found = value1;
-            let tmp19 = obj6;
             obj6.return();
             break;
           }
-          let tmp21 = tmp9;
           if (null == tmp9) {
             if (apps.length > 0) {
               let first = apps[0];
               tmp9 = first;
               first1 = first;
             }
-            let num = 1;
             if (apps.length > 1) {
               found = apps[1];
             }
-          } else {
-            let tmp22 = found;
-            if (null == found) {
-              found = apps.find((id) => {
-                id = undefined;
-                if (first1 != null) {
-                  id = first1.id;
-                }
-                return id.id !== id;
-              });
-            }
+          } else if (null == found) {
+            found = apps.find((id) => {
+              id = undefined;
+              if (first1 != null) {
+                id = first1.id;
+              }
+              return id.id !== id;
+            });
           }
-          let tmp24 = tmp9;
           if (null == tmp9) {
             first1 = activityApplications[0];
             tmp9 = first1;
             found = activityApplications[1];
-          } else {
-            let tmp25 = found;
-            if (null == found) {
-              found = activityApplications[0];
-            }
+          } else if (null == found) {
+            found = activityApplications[0];
           }
-          obj = { firstBotApplication: null, secondBotApplication: null };
-          obj[0] = tmp9;
-          obj[1] = found;
+          obj = { firstBotApplication: tmp9, secondBotApplication: found };
           return obj;
         }
       }

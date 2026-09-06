@@ -1,21 +1,22 @@
 // discord_app/modules/messages/CtaButtonUtils.tsx
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import useAgeVerificationRunner from "../age_assurance/AgeVerificationUtils.tsx";
-import shouldRenderReportFalsePositiveButton2 from "../explicit_media_redaction/hooks/useShouldRenderReportFalsePositiveButton.tsx";
-import closure_2 from "../parent_tools/FamilyCenterPendingConnectionStore.tsx";
+import AgeVerificationUtils from "../age_assurance/AgeVerificationUtils.tsx";
+import useShouldRenderReportFalsePositiveButton from "../explicit_media_redaction/hooks/useShouldRenderReportFalsePositiveButton.tsx";
+import FamilyCenterPendingConnectionStore from "../parent_tools/FamilyCenterPendingConnectionStore.tsx";
 
-require = arg1;
-let obj = {
+require = fn;
+const CtaButtonType = {
   MARK_AS_FALSE_POSITIVE: "mark_as_false_positive",
   AGE_VERIFICATION_RETRY: "age_verification_retry",
   CONNECT_TO_TEEN: "connect_to_teen",
   AGE_VERIFICATION_MANUAL_REVIEW: "age_verification_manual_review",
 };
-let result = require("set").fileFinishedImporting("modules/messages/CtaButtonUtils.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/messages/CtaButtonUtils.tsx");
 
-export const CtaButtonType = obj;
+export { CtaButtonType };
 export const getCtaButtonType = function getCtaButtonType(id, channel_id) {
-  obj = shouldRenderReportFalsePositiveButton2;
+  const obj = useShouldRenderReportFalsePositiveButton;
   if (obj.shouldRenderReportFalsePositiveButton(id)) {
     let CONNECT_TO_TEEN = obj.MARK_AS_FALSE_POSITIVE;
   } else {
@@ -32,16 +33,14 @@ export const getCtaButtonType = function getCtaButtonType(id, channel_id) {
   return CONNECT_TO_TEEN;
 };
 export const useCtaButtonType = function useCtaButtonType(id, channel_id) {
-  obj = shouldRenderReportFalsePositiveButton2;
+  const obj = useShouldRenderReportFalsePositiveButton;
   const shouldRenderReportFalsePositiveButton = obj.useShouldRenderReportFalsePositiveButton(id);
-  const result = useAgeVerificationRunner.isAgeVerificationMessageWithRetryCta(channel_id, id);
-  const obj2 = useAgeVerificationRunner;
-  const tmp = require;
-  const items = [closure_2];
+  const result = AgeVerificationUtils.isAgeVerificationMessageWithRetryCta(channel_id, id);
+  const items = [FamilyCenterPendingConnectionStore];
   let result1 = null != initialize.useStateFromStores(items, () => pendingConnection.getPendingConnection());
   if (result1) {
-    result1 = useAgeVerificationRunner.isAgeVerificationMessageWithConnectToTeenCta(channel_id, id);
-    const tmpResult = useAgeVerificationRunner;
+    result1 = AgeVerificationUtils.isAgeVerificationMessageWithConnectToTeenCta(channel_id, id);
+    const tmpResult = AgeVerificationUtils;
   }
   if (shouldRenderReportFalsePositiveButton) {
     let CONNECT_TO_TEEN = obj.MARK_AS_FALSE_POSITIVE;

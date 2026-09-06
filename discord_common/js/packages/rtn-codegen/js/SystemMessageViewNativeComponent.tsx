@@ -1,12 +1,10 @@
 // discord_common/js/packages/rtn-codegen/js/SystemMessageViewNativeComponent.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import setRuntimeConfigProvider from "../../../../../_runtime/00065_setRuntimeConfigProvider.js";
+import 00065__ from "../../../../../_runtime/metro/00065__.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const obj = { uiViewClassName: "DCDSystemMessageView", validAttributes: { row: true } };
-const value = setRuntimeConfigProvider.get("DCDSystemMessageView", () => obj);
-const result = set.fileFinishedImporting(
-  "../discord_common/js/packages/rtn-codegen/js/SystemMessageViewNativeComponent.tsx",
-);
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "DCDSystemMessageView", validAttributes: { row: true } };
+const value = module_65.get("DCDSystemMessageView", () => obj);
+const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/SystemMessageViewNativeComponent.tsx");
 
 export default value;
-export const __INTERNAL_VIEW_CONFIG = obj;
+export { __INTERNAL_VIEW_CONFIG };

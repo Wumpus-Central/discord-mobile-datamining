@@ -1,18 +1,19 @@
 // discord_app/modules/application_commands/native/ApplicationCommandUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
-import getAvatarURLDefault from "../../../utils/AvatarUtils.tsx";
-import registerAssetDefault from "../../../../_runtime/01884_registerAsset.js";
-import handleChanged from "../../../stores/DraftStore.tsx";
-import TRUE_OPTION_NAME from "../ApplicationCommandConstants.tsx";
-import ApplicationCommandSectionType from "../ApplicationCommandTypes.tsx";
+import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
+import _modDef1884 from "../../../../_runtime/metro/01884__.js";
+import DraftStore from "../../../stores/DraftStore.tsx";
+import ApplicationCommandConstants from "../ApplicationCommandConstants.tsx";
+import ApplicationCommandTypes from "../ApplicationCommandTypes.tsx";
+import UploadAttachmentActionCreatorsDefault from "../../../actions/UploadAttachmentActionCreators.tsx";
 import showUploadPreviewActionSheetDefault from "../../media_uploads/native/showUploadPreviewActionSheet.tsx";
-import registerAssetDefault2 from "../../../../_runtime/12232_registerAsset.js";
-import registerAssetDefault3 from "../../../../_runtime/12233_registerAsset.js";
-import closure_4 from "../../../stores/UploadAttachmentStore.tsx";
+import _modDef12232 from "../../../../_runtime/metro/12232__.js";
+import _modDef12233 from "../../../../_runtime/metro/12233__.js";
+import UploadAttachmentStore from "../../../stores/UploadAttachmentStore.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const DraftType = handleChanged.DraftType;
-const BuiltInSectionId = TRUE_OPTION_NAME.BuiltInSectionId;
-let result = set.fileFinishedImporting("modules/application_commands/native/ApplicationCommandUtils.tsx");
+const DraftType = DraftStore.DraftType;
+const BuiltInSectionId = ApplicationCommandConstants.BuiltInSectionId;
+let result = size.fileFinishedImporting("modules/application_commands/native/ApplicationCommandUtils.tsx");
 
 export const getApplicationCommandsIconSource = function getApplicationCommandsIconSource(section, stateFromStores) {
   if (null == section) {
@@ -20,23 +21,22 @@ export const getApplicationCommandsIconSource = function getApplicationCommandsI
   } else {
     const id = section.id;
     if (BuiltInSectionId.BUILT_IN === id) {
-      return getAvatarURLDefault.makeSource(registerAssetDefault2);
+      return AvatarUtilsDefault.makeSource(_modDef12232);
     } else if (tmp10.FRECENCY === id) {
-      return getAvatarURLDefault.makeSource(registerAssetDefault3);
+      return AvatarUtilsDefault.makeSource(_modDef12233);
     } else {
-      if (section.type === ApplicationCommandSectionType.ApplicationCommandSectionType.APPLICATION) {
-        let obj = getAvatarURLDefault;
-        obj = { id: null, icon: null, bot: null, botIconFirst: true, guildMember: null };
-        ({ id: obj2[0], icon: obj2[1], application } = section);
+      if (section.type === ApplicationCommandTypes.ApplicationCommandSectionType.APPLICATION) {
+        const obj = { id: null, icon: null, bot: null, botIconFirst: true, guildMember: null };
+        ({ id: obj2.id, icon: obj2.icon, application } = section);
         let bot;
         if (application != null) {
           bot = application.bot;
         }
-        obj[2] = bot;
-        obj[4] = stateFromStores;
+        obj.bot = bot;
+        obj.guildMember = stateFromStores;
         let applicationIconSource = obj.getApplicationIconSource(obj);
       } else {
-        applicationIconSource = registerAssetDefault;
+        applicationIconSource = _modDef1884;
       }
       return applicationIconSource;
     }
@@ -51,30 +51,32 @@ export const openCommandAttachmentPreview = function openCommandAttachmentPrevie
   closure_0 = applicationCommandManager;
   importDefault = channelId;
   dependencyMap = name;
-  upload = upload.getUpload(channelId, name, upload.SlashCommand);
+  upload = UploadAttachmentStore.getUpload(channelId, name, upload.SlashCommand);
   if (null != upload) {
-    const obj = { channelId: null, disableSpoiler: true, onClose: null, onRemove: null, upload: null };
-    obj[0] = channelId;
-    obj[2] = fn;
-    obj[3] = function onRemove() {
-      channelId(name[9]).remove(channelId, upload.id, upload.SlashCommand);
-      let found;
-      if (closure_0 != null) {
-        const activeCommand = obj2.props.activeCommand;
-        if (activeCommand != null) {
-          const options = activeCommand.options;
-          if (options != null) {
-            found = options.find((name) => name.name === closure_2);
+    const obj = {
+      channelId,
+      disableSpoiler: true,
+      onClose: fn,
+      onRemove() {
+        UploadAttachmentActionCreatorsDefault.remove(closure_1, upload.id, DraftType.SlashCommand);
+        let found;
+        if (closure_0 != null) {
+          const activeCommand = obj2.props.activeCommand;
+          if (activeCommand != null) {
+            const options = activeCommand.options;
+            if (options != null) {
+              found = options.find((name) => name.name === name);
+            }
           }
         }
-      }
-      if (null != found) {
-        if (obj2 != null) {
-          const result = obj2.insertOrJumpCommandOption(found, undefined, false, { displayText: "" });
+        if (null != found) {
+          if (obj2 != null) {
+            const result = obj2.insertOrJumpCommandOption(found, undefined, false, { displayText: "" });
+          }
         }
-      }
+      },
+      upload,
     };
-    obj[4] = upload;
     showUploadPreviewActionSheetDefault(obj);
   }
 };

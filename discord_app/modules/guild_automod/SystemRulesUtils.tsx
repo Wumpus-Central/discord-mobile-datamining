@@ -1,8 +1,8 @@
 // discord_app/modules/guild_automod/SystemRulesUtils.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-let set = new Set(["1030554520465440818"]);
-const result = set.fileFinishedImporting("modules/guild_automod/SystemRulesUtils.tsx");
+const set = new Set(["1030554520465440818"]);
+const result = size.fileFinishedImporting("modules/guild_automod/SystemRulesUtils.tsx");
 
 export const isDefaultRuleId = function isDefaultRuleId(id) {
   let hasItem = null != id;

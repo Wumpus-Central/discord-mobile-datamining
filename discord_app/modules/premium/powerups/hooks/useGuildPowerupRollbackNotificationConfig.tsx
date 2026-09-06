@@ -1,19 +1,19 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupRollbackNotificationConfig.tsx
-import messagesProxyDefault from "../GuildPowerups.messages.js";
+import _modDef2428 from "../GuildPowerups.messages.js";
 import getGuildPowerupFormattedDateStringDefault from "../utils/getGuildPowerupFormattedDateString.tsx";
-import closure_3 from "../GuildPowerupsStore.tsx";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/premium/powerups/hooks/useGuildPowerupRollbackNotificationConfig.tsx",
 );
 
 export default function useGuildPowerupRollbackNotificationConfig(guildId, location) {
-  const _require = guildId;
-  let obj = initialize;
-  const items = [closure_3];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_3.getStateForGuild(closure_0));
+  _require = guildId;
+  let obj = require("initialize");
+  const items = [GuildPowerupsStore];
+  const stateFromStores = obj.useStateFromStores(items, () => GuildPowerupsStore.getStateForGuild(closure_0));
   let tmp4;
   if (stateFromStores != null) {
     tmp4 = stateFromStores.allPowerups[tmp(undefined, 4453).GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID];
@@ -37,27 +37,32 @@ export default function useGuildPowerupRollbackNotificationConfig(guildId, locat
         }
         tmp5 = null;
         if (null != cost) {
-          obj = { dismissibleContent: null, title: null, description: null };
-          obj[0] = tmp(1943).DismissibleContent.FILE_UPLOAD_POWERUP_ROLLBACK_NOTIFICATION;
+          obj = {
+            dismissibleContent: tmp(1943).DismissibleContent.FILE_UPLOAD_POWERUP_ROLLBACK_NOTIFICATION,
+            title: null,
+            description: null,
+          };
           const intl = tmp(1114).intl;
-          obj = { dateString: null };
-          obj[0] = getGuildPowerupFormattedDateStringDefault(storeRemovalDate);
-          obj[1] = intl.formatToPlainString(messagesProxyDefault["6e2ry1"], obj);
+          obj = { dateString: getGuildPowerupFormattedDateStringDefault(storeRemovalDate) };
+          obj.title = intl.formatToPlainString(_modDef2428["6e2ry1"], obj);
           const intl2 = tmp(1114).intl;
-          obj1 = { startDate: null, endDate: null, perkName: null, boostCount: null };
-          obj1[0] = getGuildPowerupFormattedDateStringDefault(storeRemovalDate);
-          obj1[1] = getGuildPowerupFormattedDateStringDefault(storeRemovalDate);
+          const obj1 = {
+            startDate: getGuildPowerupFormattedDateStringDefault(storeRemovalDate),
+            endDate: getGuildPowerupFormattedDateStringDefault(storeRemovalDate),
+            perkName: null,
+            boostCount: null,
+          };
           let title1;
           if (tmp4 != null) {
             title1 = tmp4.title;
           }
-          obj1[2] = title1;
+          obj1.perkName = title1;
           let cost1;
           if (tmp4 != null) {
             cost1 = tmp4.cost;
           }
-          obj1[3] = cost1;
-          obj[2] = intl2.formatToPlainString(messagesProxyDefault.jd8fki, obj1);
+          obj1.boostCount = cost1;
+          obj.description = intl2.formatToPlainString(_modDef2428.jd8fki, obj1);
           tmp5 = obj;
         }
       }

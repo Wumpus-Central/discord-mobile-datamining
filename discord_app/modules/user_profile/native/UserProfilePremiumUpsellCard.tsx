@@ -1,16 +1,27 @@
 // discord_app/modules/user_profile/native/UserProfilePremiumUpsellCard.tsx
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import ME from "../../../Constants.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import UserSettingsModalActionCreatorsDefault from "../../../actions/UserSettingsModalActionCreators.tsx";
+import PremiumFeaturesCards from "../../user_settings/premium/native/PremiumFeaturesCards.tsx";
+import openPremiumModalDefault from "../../../components_native/premium/openPremiumModal.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-({ AnalyticsObjects: c4, AnalyticsPages: c5, AnalyticsSections: closure_6, UserSettingsSections: error } = ME);
-let closure_9 = createCacheKey.createStyles((bottom) => {
-  const container = { position: "absolute", bottom, start: 0, end: 0 };
-  return { container };
+require = fn;
+const Constants = fn(1074);
+({
+  AnalyticsObjects: closure_4,
+  AnalyticsPages: hasOwnProperty,
+  AnalyticsSections: metroRequire,
+  UserSettingsSections: closure_7,
+} = Constants);
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_9 = createStyles.createStyles((bottom) => {
+  let obj = { container: null };
+  obj = { position: "absolute", bottom, start: 0, end: 0 };
+  obj.container = obj;
+  return obj;
 });
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfilePremiumUpsellCard.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfilePremiumUpsellCard.tsx");
 
 export const UserProfilePremiumUpsellCard = function UserProfilePremiumUpsellCard(isTryItOut) {
   isTryItOut = isTryItOut.isTryItOut;
@@ -19,27 +30,28 @@ export const UserProfilePremiumUpsellCard = function UserProfilePremiumUpsellCar
   let obj = navigation(1483);
   navigation = obj.useNavigation();
   const tmp = analyticsLocations;
-  const tmp3 = callback(analyticsLocations(1611)().bottom);
+  const tmp3 = closure_9(analyticsLocations(1611)().bottom);
   let nitroTrialCtaOverride = navigation(7446).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
   const obj2 = navigation(7446);
   const tmp8 = analyticsLocations(7182);
   const items = [isTryItOut ? tmp8.USER_SETTINGS_TRY_OUT_PREMIUM : tmp8.USER_SETTINGS_USER_PROFILE];
   analyticsLocations = analyticsLocations(7162)(items).analyticsLocations;
   const items1 = [navigation];
-  callback = React.useCallback(() => {
-    analyticsLocations(closure_1_2[9]).setSection(closure_1_7.PROFILE_CUSTOMIZATION_TRY_IT_OUT);
-    navigation.push(closure_1_7.PROFILE_CUSTOMIZATION_TRY_IT_OUT);
+  let callback = noop.useCallback(() => {
+    UserSettingsModalActionCreatorsDefault.setSection(constants4.PROFILE_CUSTOMIZATION_TRY_IT_OUT);
+    navigation.push(constants4.PROFILE_CUSTOMIZATION_TRY_IT_OUT);
   }, items1);
   const items2 = [analyticsLocations];
-  const callback1 = React.useCallback(() => {
-    obj = { analyticsLocation: obj, analyticsLocations, premiumFeatureCardOrder: null };
+  const callback1 = noop.useCallback(() => {
+    let obj = { analyticsLocation: null, analyticsLocations, premiumFeatureCardOrder: null };
     obj = {
-      page: closure_1_5.USER_SETTINGS,
-      section: closure_1_6.SETTINGS_CUSTOMIZE_PROFILE_TRY_IT_OUT,
-      object: closure_1_4.BUTTON_CTA,
+      page: constants2.USER_SETTINGS,
+      section: constants3.SETTINGS_CUSTOMIZE_PROFILE_TRY_IT_OUT,
+      object: constants.BUTTON_CTA,
     };
-    obj[2] = navigation(closure_1_2[11]).PremiumFeatureCardOrder.TIER_2_LEADING;
-    analyticsLocations(closure_1_2[10])(obj);
+    obj.analyticsLocation = obj;
+    obj.premiumFeatureCardOrder = PremiumFeaturesCards.PremiumFeatureCardOrder.TIER_2_LEADING;
+    openPremiumModalDefault(obj);
   }, items2);
   obj = { style: tmp3.container, ctaText: null, showLinearGradient: true, onPress: null, children: null };
   const tmp7 = analyticsLocations(7162);
@@ -53,11 +65,11 @@ export const UserProfilePremiumUpsellCard = function UserProfilePremiumUpsellCar
     const intl = tmp4(1114).intl;
     stringResult = intl.string(tmp4(1114).t.PxUx8e);
   }
-  obj[1] = stringResult;
+  obj.ctaText = stringResult;
   if (isTryItOut) {
     callback = callback1;
   }
-  obj[3] = callback;
+  obj.onPress = callback;
   const intl3 = tmp4(1114).intl;
   const string = intl3.string;
   const t = tmp4(1114).t;
@@ -66,7 +78,7 @@ export const UserProfilePremiumUpsellCard = function UserProfilePremiumUpsellCar
   } else {
     stringResult1 = string(t.Tii53U);
   }
-  obj[4] = jsx(navigation(4556).Text, {
+  obj.children = jsx(navigation(4556).Text, {
     variant: "text-sm/normal",
     maxFontSizeMultiplier: 2.5,
     children: stringResult1,

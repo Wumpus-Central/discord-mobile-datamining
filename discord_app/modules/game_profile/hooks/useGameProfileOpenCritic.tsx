@@ -1,12 +1,12 @@
 // discord_app/modules/game_profile/hooks/useGameProfileOpenCritic.tsx
-import set from "../../../../_runtime/00002_set.js";
 import OpenCriticTier from "../../../../discord_common/js/shared/shared-constants/OpenCriticTier.tsx";
-import metadataDefault from "../../../../discord_assets/assets/game-profile/opencritic-mighty.png.js";
-import metadataDefault2 from "../../../../discord_assets/assets/game-profile/opencritic-strong.png.js";
-import metadataDefault3 from "../../../../discord_assets/assets/game-profile/opencritic-fair.png.js";
-import metadataDefault4 from "../../../../discord_assets/assets/game-profile/opencritic-weak.png.js";
+import _modDef8727 from "../../../../discord_assets/assets/game-profile/opencritic-mighty.png.js";
+import _modDef8728 from "../../../../discord_assets/assets/game-profile/opencritic-strong.png.js";
+import _modDef8729 from "../../../../discord_assets/assets/game-profile/opencritic-fair.png.js";
+import _modDef8730 from "../../../../discord_assets/assets/game-profile/opencritic-weak.png.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/game_profile/hooks/useGameProfileOpenCritic.tsx");
+const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileOpenCritic.tsx");
 
 export const getOpenCriticTierText = function getOpenCriticTierText(tier) {
   if (OpenCriticTier.OpenCriticTier.MIGHTY === tier) {
@@ -25,13 +25,13 @@ export const getOpenCriticTierText = function getOpenCriticTierText(tier) {
 };
 export const getOpenCriticTierImage = function getOpenCriticTierImage(tier) {
   if (OpenCriticTier.OpenCriticTier.MIGHTY === tier) {
-    return metadataDefault;
+    return _modDef8727;
   } else if (tmp(8726).OpenCriticTier.STRONG === tier) {
-    return metadataDefault2;
+    return _modDef8728;
   } else if (tmp(8726).OpenCriticTier.FAIR === tier) {
-    return metadataDefault3;
+    return _modDef8729;
   } else if (tmp(8726).OpenCriticTier.WEAK === tier) {
-    return metadataDefault4;
+    return _modDef8730;
   }
 };
 export const getOpenCriticCircleRatingColor = function getOpenCriticCircleRatingColor(tier) {

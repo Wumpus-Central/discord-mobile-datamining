@@ -1,99 +1,94 @@
 // discord_app/modules/experiments/client_override_hooks/useLegacyExperiments.tsx
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import { useMemo } from "../../../../_runtime/00019_noop.js";
-import closure_5 from "../ExperimentStore.tsx";
-import ExperimentBuckets from "../ExperimentConstants.tsx";
+import ExperimentManager from "../ExperimentManager.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import ExperimentStore from "../ExperimentStore.tsx";
 
-const require = arg1;
-function parseRegisteredExperiments(registeredExperiments) {
+require = fn;
+function parseRegisteredExperiments(stateFromStoresObject) {
   let obj = {};
   function _loop(type) {
-    closure_0 = type;
-    obj = { system: obj(closure_1_2[5]).ExperimentSystem.LEGACY, kind: null, name: null, title: null, variants: null };
+    obj = { system: ExperimentManager.ExperimentSystem.LEGACY, kind: null, name: null, title: null, variants: null };
     let str = "guild";
-    if (type.type === closure_1_7.USER) {
+    if (type.type === constants.USER) {
       str = "user";
     }
-    obj[1] = str;
-    obj[2] = closure_1;
-    ({ title: obj[3], buckets } = type);
-    obj[4] = buckets.map((bucket) => {
-      obj = { id: bucket.valueOf(), label: null, shortLabel: null, type: null };
+    obj.kind = str;
+    obj.name = name;
+    ({ title: obj.title, buckets } = type);
+    obj.variants = buckets.map((item, index) => {
+      obj = { id: item.valueOf(), label: null, shortLabel: null, type: null };
       if (typeof type.description === "object") {
-        let experimentBucketName = tmp.description[arg1];
+        let experimentBucketName = tmp.description[index];
       } else {
-        experimentBucketName = closure_1_1(closure_1_2[6]).getExperimentBucketName(bucket);
-        const obj3 = closure_1_1(closure_1_2[6]);
+        experimentBucketName = closure_1(7891).getExperimentBucketName(item);
+        const obj3 = closure_1(7891);
       }
-      obj[1] = experimentBucketName;
-      obj[2] = closure_1_1(closure_1_2[6]).getExperimentBucketName(bucket);
-      if (bucket === closure_1_6.CONTROL) {
-        let TREATMENT = type(closure_1_2[4]).Variation_Type.CONTROL;
-      } else if (bucket === tmp4.NOT_ELIGIBLE) {
-        TREATMENT = type(closure_1_2[4]).Variation_Type.UNSPECIFIED;
+      obj.label = experimentBucketName;
+      obj.shortLabel = closure_1(7891).getExperimentBucketName(item);
+      if (item === constants.CONTROL) {
+        let TREATMENT = obj(7893).Variation_Type.CONTROL;
+      } else if (item === tmp4.NOT_ELIGIBLE) {
+        TREATMENT = obj(7893).Variation_Type.UNSPECIFIED;
       } else {
-        TREATMENT = type(closure_1_2[4]).Variation_Type.TREATMENT;
+        TREATMENT = obj(7893).Variation_Type.TREATMENT;
       }
-      obj[3] = TREATMENT;
+      obj.type = TREATMENT;
       return obj;
     });
-    closure_0[closure_1] = obj;
+    obj[name] = obj;
   }
-  const entries = Object.entries(registeredExperiments);
+  const entries = Object.entries(stateFromStoresObject);
   while (tmp2 !== undefined) {
-    let tmp4 = callback;
-    let tmp5 = callback(tmp3, 2);
-    closure_1 = tmp5[0];
+    let tmp5 = _slicedToArray(tmp3, 2);
+    let name = tmp5[0];
     let _loopResult = _loop(tmp5[1]);
     continue;
   }
   return obj;
 }
-function getLegacyOverridesInfo(allExperimentOverrideDescriptors) {
+function getLegacyOverridesInfo(stateFromStoresObject1) {
   let obj = {};
-  const entries = Object.entries(allExperimentOverrideDescriptors);
+  const entries = Object.entries(stateFromStoresObject1);
   while (tmp2 !== undefined) {
-    let tmp4 = callback;
-    let tmp5 = callback(tmp3, 2);
+    let tmp5 = _slicedToArray(tmp3, 2);
     [tmp6, tmp7] = tmp5;
-    obj = { experimentId: null, variantId: null, originalDescriptor: null };
-    obj[0] = tmp6;
+    obj = { experimentId: tmp6, variantId: null, originalDescriptor: null };
     let bucket = tmp7.bucket;
-    obj[1] = bucket.valueOf();
-    obj[2] = tmp7;
+    obj.variantId = bucket.valueOf();
+    obj.originalDescriptor = tmp7;
     obj[tmp6] = obj;
     continue;
   }
   return obj;
 }
-({ ExperimentBuckets: closure_6, ExperimentTypes: error } = ExperimentBuckets);
-const result = require("set").fileFinishedImporting(
-  "modules/experiments/client_override_hooks/useLegacyExperiments.tsx",
-);
+const useMemo = fn(19).useMemo;
+const ExperimentConstants = fn(4477);
+({ ExperimentBuckets: metroRequire, ExperimentTypes: closure_7 } = ExperimentConstants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/experiments/client_override_hooks/useLegacyExperiments.tsx");
 
 export { parseRegisteredExperiments };
 export { getLegacyOverridesInfo };
 export const getLegacyExperiments = function getLegacyExperiments() {
-  const registeredExperiments = store.getRegisteredExperiments();
+  const registeredExperiments = ExperimentStore.getRegisteredExperiments();
   const obj = { experiments: null, overridesInfo: null };
-  const allExperimentOverrideDescriptors = store.getAllExperimentOverrideDescriptors();
-  obj[0] = parseRegisteredExperiments(registeredExperiments);
-  obj[1] = getLegacyOverridesInfo(allExperimentOverrideDescriptors);
+  const allExperimentOverrideDescriptors = ExperimentStore.getAllExperimentOverrideDescriptors();
+  obj.experiments = parseRegisteredExperiments(registeredExperiments);
+  obj.overridesInfo = getLegacyOverridesInfo(allExperimentOverrideDescriptors);
   return obj;
 };
 export const useLegacyExperiments = function useLegacyExperiments() {
   let obj = stateFromStoresObject(504);
-  const items = [closure_5];
-  stateFromStoresObject = obj.useStateFromStoresObject(items, () => store.getRegisteredExperiments());
-  const items1 = [closure_5];
+  const items = [ExperimentStore];
+  stateFromStoresObject = obj.useStateFromStoresObject(items, () => ExperimentStore.getRegisteredExperiments());
+  const items1 = [ExperimentStore];
   const stateFromStoresObject1 = stateFromStoresObject(504).useStateFromStoresObject(items1, () =>
-    store.getAllExperimentOverrideDescriptors(),
+    ExperimentStore.getAllExperimentOverrideDescriptors(),
   );
-  obj = {
-    experiments: useMemo(() => closure_1_8(stateFromStoresObject), items2),
-    overridesInfo: useMemo(() => closure_1_9(stateFromStoresObject1), items3),
-  };
-  items2 = [stateFromStoresObject];
-  items3 = [stateFromStoresObject1];
+  obj = { experiments: null, overridesInfo: null };
+  const items2 = [stateFromStoresObject];
+  obj.experiments = useMemo(() => parseRegisteredExperiments(stateFromStoresObject), items2);
+  const items3 = [stateFromStoresObject1];
+  obj.overridesInfo = useMemo(() => getLegacyOverridesInfo(stateFromStoresObject1), items3);
   return obj;
 };

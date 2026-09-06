@@ -1,16 +1,17 @@
 // discord_app/modules/headless_tasks/HeadlessTaskUtils.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
+import Storage2 from "../../../discord_common/js/packages/storage/Storage.tsx";
+import Constants from "../../Constants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const TOKEN_KEY = ME.TOKEN_KEY;
-const result = set.fileFinishedImporting("modules/headless_tasks/HeadlessTaskUtils.tsx");
+const TOKEN_KEY = Constants.TOKEN_KEY;
+const result = size.fileFinishedImporting("modules/headless_tasks/HeadlessTaskUtils.tsx");
 
 export default {
   awaitStorage(arg0) {
-    const _require = arg0;
-    const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx").Storage;
-    Storage.asyncGet(TOKEN_KEY, () => {
-      callback();
+    closure_0 = arg0;
+    const Storage = Storage2.Storage;
+    Storage.asyncGet(TOKEN_KEY, async () => {
+      closure_0();
     });
   },
 };

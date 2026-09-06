@@ -1,21 +1,20 @@
 // discord_app/modules/creator_monetization_eligibility/guild_settings/CreatorMonetizationAcceptTermCheckboxText.tsx
-import set from "../../../../_runtime/00002_set.js";
-import ME from "../../../Constants.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import combinedDefault from "../../../utils/HelpdeskUtils.tsx";
+import Constants from "../../../Constants.tsx";
+import util from "../../../intl/index.native.tsx";
+import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const HelpdeskArticles = ME.HelpdeskArticles;
-const result = set.fileFinishedImporting(
+const HelpdeskArticles = Constants.HelpdeskArticles;
+const result = size.fileFinishedImporting(
   "modules/creator_monetization_eligibility/guild_settings/CreatorMonetizationAcceptTermCheckboxText.tsx",
 );
 
 export const getCreatorMonetizationAcceptTermsCheckboxText = function getCreatorMonetizationAcceptTermsCheckboxText() {
-  const intl = getSystemLocale.intl;
+  const intl = util.intl;
   const obj = {
-    fullTermsUrl: combinedDefault.getArticleURL(HelpdeskArticles.CREATOR_TERMS),
+    fullTermsUrl: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.CREATOR_TERMS),
     creatorRevenuePolicyUrl: null,
   };
-  const obj2 = combinedDefault;
-  obj[1] = combinedDefault.getArticleURL(HelpdeskArticles.CREATOR_POLICY);
-  return intl.format(getSystemLocale.t["+ALa7+"], obj);
+  obj.creatorRevenuePolicyUrl = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.CREATOR_POLICY);
+  return intl.format(util.t["+ALa7+"], obj);
 };

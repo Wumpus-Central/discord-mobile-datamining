@@ -1,25 +1,20 @@
 // discord_app/modules/contact_sync/native/components/ContactSyncNameUpdateModal.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4763 from "../../../../actions/ModalActionCreators.tsx";
-import NavigationStack from "../../../../design/components/Navigator/native/Navigator.native.tsx";
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { ContactSyncScenes } from "../ContactSyncConstants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import HeaderBackImage from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
+import Navigator from "../../../../design/components/Navigator/native/Navigator.native.tsx";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+require = fn;
 function onClose() {
-  let arr = _modDef4763;
+  let arr = ModalActionCreatorsDefault;
   arr = arr.pop();
 }
 function ContactSyncNameInputScreen() {
-  function onNext(arg0) {
+  function onNext() {
     const self = this;
-    const apply = _onNext.apply;
+    const apply = closure_2.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -27,75 +22,54 @@ function ContactSyncNameInputScreen() {
     }
     return applyArgumentsResult;
   }
-  function _onNext() {
-    const self = this;
-    const tmp = closure_1_3((arg0) => {
-      closure_0 = arg0;
-      c2 = 0;
-      c4 = 0;
+  dependencyMap = async function _onNext(arg0, arg1) {
+    _require(true);
+    await tmp3(12684).updateName(closure_0);
+    if (1 === tmp7) {
       c3 = 0;
-      return (function* (arg0) {
-        closure_1 = tmp3;
-        callback(true);
-        c3 = 1;
-        yield closure_1_1(12684).updateName(callback);
-        if (1 === tmp7) {
-          c3 = 0;
-          obj1 = closure_1_1(4259);
-          const obj2 = { key: "ERROR_GENERIC_TITLE", content: null, icon: null };
-          const intl = callback(1114).intl;
-          obj2[1] = intl.string(callback(1114).t.R0RpRX);
-          obj2[2] = closure_1_1(5597);
-          obj1.open(obj2);
-          callback(false);
-          c4 = 3;
-        } else if (arg0 === 1) {
-          c4 = 3;
-          throw arg1;
-        } else if (arg0 !== 2) {
-          callback(false);
-          closure_1_9();
-          c3 = 0;
-        }
-        c3 = 0;
-        return arg1;
-      })();
-    });
-    closure_2 = tmp;
-    const apply = tmp.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
+      const obj2 = { key: "ERROR_GENERIC_TITLE", content: null, icon: null };
+      const intl = closure_0(1114).intl;
+      obj2.content = intl.string(closure_0(1114).t.R0RpRX);
+      obj2.icon = tmp3(5597);
+      tmp3(4259).open(obj2);
+      closure_129_0(false);
+      c4 = 3;
+      tmp3(4259);
+    } else if (arg0 === 1) {
+      c4 = 3;
+      throw arg1;
+    } else if (arg0 !== 2) {
+      closure_129_0(false);
+      onClose();
+      c3 = 0;
     }
-    return applyArgumentsResult;
-  }
-  let obj = _require(_onNext[10]);
+    return arg1;
+  };
+  let obj = require("ContactSyncUtils");
   const contactSyncAccount = obj.useContactSyncAccount();
-  const tmp3 = callback(React.useState(false), 2);
+  const tmp3 = _slicedToArray(noop.useState(false), 2);
   _require = tmp3[1];
-  obj = { style: callback2().container, children: null };
+  obj = { style: closure_10().container, children: null };
   obj = {
     onNext,
-    onRemoveName(arg0) {
+    onRemoveName() {
       return onNext(null);
     },
     loading: tmp3[0],
     initialName: null,
   };
   let str;
-  let tmp = callback2();
-  const tmp5 = View;
+  const tmp = closure_10();
   if (contactSyncAccount != null) {
     str = contactSyncAccount.name;
   }
   if (str == null) {
     str = "";
   }
-  obj[3] = str;
-  obj[1] = jsx(onNext(_onNext[15]), {
+  obj.initialName = str;
+  obj.children = jsx(onNext(12697), {
     onNext,
-    onRemoveName(arg0) {
+    onRemoveName() {
       return onNext(null);
     },
     loading: tmp3[0],
@@ -104,7 +78,7 @@ function ContactSyncNameInputScreen() {
   return (
     <tmp5
       onNext={onNext}
-      onRemoveName={function onRemoveName(arg0) {
+      onRemoveName={function onRemoveName() {
         return onNext(null);
       }}
       loading={tmp3[0]}
@@ -112,16 +86,20 @@ function ContactSyncNameInputScreen() {
     />
   );
 }
-createCacheKey = { container: null };
-createCacheKey = {
+const View = fn(17).View;
+const ContactSyncScenes = fn(12678).ContactSyncScenes;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { container: null };
+createStyles = {
   flex: 1,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   justifyContent: "center",
-  paddingTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT + 32,
+  paddingTop: fn(5682).NAV_BAR_HEIGHT + 32,
 };
-createCacheKey[0] = createCacheKey;
-let closure_10 = createCacheKey.createStyles(createCacheKey);
-let obj1 = {};
+createStyles.container = createStyles;
+let closure_10 = createStyles.createStyles(createStyles);
+const obj1 = {};
 let obj2 = {
   render() {
     return <ContactSyncNameInputScreen />;
@@ -131,12 +109,12 @@ let obj2 = {
   headerLeft: null,
   title: "",
 };
-obj2[3] = HeaderBackImage.getHeaderCloseButton(onClose);
+const NavigatorHeader = fn(5624);
+obj2.headerLeft = NavigatorHeader.getHeaderCloseButton(onClose);
 obj1[ContactSyncScenes.NAME_INPUT] = obj2;
-const result = require("set").fileFinishedImporting(
-  "modules/contact_sync/native/components/ContactSyncNameUpdateModal.tsx",
-);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/contact_sync/native/components/ContactSyncNameUpdateModal.tsx");
 
 export default function ContactSyncNameUpdateModal() {
-  return jsx(NavigationStack.Navigator, { initialRouteName: ContactSyncScenes.NAME_INPUT, screens: obj1 });
+  return jsx(Navigator.Navigator, { initialRouteName: ContactSyncScenes.NAME_INPUT, screens: obj1 });
 }

@@ -1,9 +1,9 @@
 // discord_app/modules/quests/native/AdsVideoUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
-import set2 from "../../../utils/PlatformUtils.tsx";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 let closure_2 = [-1000, -1003, -1004, -1008];
-const result = set.fileFinishedImporting("modules/quests/native/AdsVideoUtils.tsx");
+const result = size.fileFinishedImporting("modules/quests/native/AdsVideoUtils.tsx");
 
 export const isSourceError = function isSourceError(error) {
   if (error != null) {
@@ -19,7 +19,7 @@ export const isSourceError = function isSourceError(error) {
     }
     let isIOSResult = hasItem;
   } else {
-    isIOSResult = set2.isIOS();
+    isIOSResult = PlatformUtils.isIOS();
     if (isIOSResult) {
       let hasItem1 = null != code;
       if (hasItem1) {
@@ -27,7 +27,7 @@ export const isSourceError = function isSourceError(error) {
       }
       isIOSResult = hasItem1;
     }
-    const tmpResult = set2;
+    const tmpResult = PlatformUtils;
   }
   return isIOSResult;
 };

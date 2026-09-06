@@ -1,15 +1,16 @@
 // discord_app/modules/auth/native/useLoginReset.tsx
-import closure_2 from "../../../../_runtime/00019_noop.js";
-import closure_3 from "../../../stores/AuthenticationStore.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 
-const result = require("set").fileFinishedImporting("modules/auth/native/useLoginReset.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/auth/native/useLoginReset.tsx");
 
 export default function useLoginReset() {
-  const effect = React.useEffect(
+  const effect = noop.useEffect(
     () => () => {
       if (!authenticated.isAuthenticated()) {
-        callback(table[2]).loginReset();
-        const obj = callback(table[2]);
+        closure_1_0(dependencyMap[2]).loginReset();
+        const obj = closure_1_0(dependencyMap[2]);
       }
     },
     [],

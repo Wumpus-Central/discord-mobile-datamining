@@ -1,39 +1,39 @@
 // discord_app/utils/native/AutocompleteUtils.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
-import getSystemLocale from "../../intl/index.native.tsx";
+import Constants from "../../Constants.tsx";
+import util from "../../intl/index.native.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-ME.AutoCompleteResultTypes;
+Constants.AutoCompleteResultTypes;
 const items = [
   ["game", "gameMentionInput"],
   ["time", "timestampMentionInput"],
 ];
 const map = new Map(items);
-const result = set.fileFinishedImporting("utils/native/AutocompleteUtils.tsx");
+const result = size.fileFinishedImporting("utils/native/AutocompleteUtils.tsx");
 
 export default {
   MENTION_EVERYONE() {
     const obj = { type: AutoCompleteResultTypes.GLOBAL, test: "everyone", text: "@everyone", description: null };
-    const intl = getSystemLocale.intl;
-    obj[3] = intl.string(getSystemLocale.t["5atMLZ"]);
+    const intl = util.intl;
+    obj.description = intl.string(util.t["5atMLZ"]);
     return obj;
   },
   MENTION_HERE() {
     const obj = { type: AutoCompleteResultTypes.GLOBAL, test: "here", text: "@here", description: null };
-    const intl = getSystemLocale.intl;
-    obj[3] = intl.string(getSystemLocale.t.iX9SFD);
+    const intl = util.intl;
+    obj.description = intl.string(util.t.iX9SFD);
     return obj;
   },
   MENTION_GAME() {
     const obj = { test: "game", text: "@game", inlineAutocompleteType: "gameMentionInput", description: null };
-    const intl = getSystemLocale.intl;
-    obj[3] = intl.string(getSystemLocale.t["1kR88y"]);
+    const intl = util.intl;
+    obj.description = intl.string(util.t["1kR88y"]);
     return obj;
   },
   MENTION_TIMESTAMP() {
     const obj = { test: "time", text: "@time", inlineAutocompleteType: "timestampMentionInput", description: null };
-    const intl = getSystemLocale.intl;
-    obj[3] = intl.string(getSystemLocale.t.V6L3TV);
+    const intl = util.intl;
+    obj.description = intl.string(util.t.V6L3TV);
     return obj;
   },
   LAUNCHABLE_APPLICATIONS() {

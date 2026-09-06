@@ -1,8 +1,8 @@
 // discord_app/intl/locale-data/moment.tsx
-import set from "../../../_runtime/00002_set.js";
 import asyncRequireImpl from "../../../_runtime/01896_asyncRequireImpl.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("intl/locale-data/moment.tsx");
+const result = size.fileFinishedImporting("intl/locale-data/moment.tsx");
 
 export const momentLocales = {
   bg() {

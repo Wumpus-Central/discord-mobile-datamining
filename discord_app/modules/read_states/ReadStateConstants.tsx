@@ -1,7 +1,7 @@
 // discord_app/modules/read_states/ReadStateConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/read_states/ReadStateConstants.tsx");
+const result = size.fileFinishedImporting("modules/read_states/ReadStateConstants.tsx");
 
 export const ReadStateTypes = {
   CHANNEL: 0,

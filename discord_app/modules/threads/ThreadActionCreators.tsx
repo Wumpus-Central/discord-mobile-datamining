@@ -1,85 +1,88 @@
 // discord_app/modules/threads/ThreadActionCreators.tsx
-import dispatcherDefault from "../../Dispatcher.tsx";
-import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import collectGuildAnalyticsMetadata from "../app_analytics/AppAnalyticsUtils.tsx";
-import dispatcherDefault2 from "../../actions/DraftActionCreators.tsx";
-import setActiveCommand from "../application_commands/ApplicationCommandActionCreators.tsx";
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import { createChannelRecordFromServer as closure_4 } from "../../records/ChannelRecord.tsx";
-import closure_5 from "../../stores/AuthenticationStore.tsx";
-import closure_6 from "../../stores/ChannelStore.tsx";
-import closure_7 from "../../stores/PermissionStore.tsx";
-import closure_8 from "ArchivedThreadsStore.tsx";
-import { PAGE_SIZE } from "ArchivedThreadsStore.tsx";
-import closure_10 from "JoinedThreadsStore.tsx";
-import closure_11 from "ThreadSummaryStore.tsx";
-import ME from "../../Constants.tsx";
-import { ChannelFlags } from "../channel/ChannelConstants.tsx";
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import util from "../../intl/index.native.tsx";
+import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import GlobalUtils from "../../utils/GlobalUtils.tsx";
+import AppAnalyticsUtils from "../app_analytics/AppAnalyticsUtils.tsx";
+import AlertActionCreatorsDefault from "../../actions/AlertActionCreators.tsx";
+import DraftActionCreatorsDefault from "../../actions/DraftActionCreators.tsx";
+import ApplicationCommandActionCreators from "../application_commands/ApplicationCommandActionCreators.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
+import PermissionStore from "../../stores/PermissionStore.tsx";
+import ArchivedThreadsStore from "ArchivedThreadsStore.tsx";
+import JoinedThreadsStore from "JoinedThreadsStore.tsx";
+import ThreadSummaryStore from "ThreadSummaryStore.tsx";
 
-require = arg1;
+require = fn;
 function patchThread(id, body) {
-  const _require = id;
-  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
-  const obj = {
+  _require = id;
+  const HTTP = require("HTTPUtils").HTTP;
+  const request = {
     url: closure_12.CHANNEL(id.id),
     body,
-    rejectWithError: require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError(),
+    rejectWithError: require("HTTPUtils").rejectWithMigratedError(),
   };
-  const obj2 = sendRequest;
-  return HTTP.patch(obj).then((body) => {
-    let obj = closure_1_1(closure_1_2[11]);
-    obj = { type: "THREAD_UPDATE", channel: closure_1_4(body.body) };
+  const obj2 = require("HTTPUtils");
+  return HTTP.patch(request).then((body) => {
+    let obj = { type: "THREAD_UPDATE", channel: closure_4(body.body) };
     obj.dispatch(obj);
     let isForumPostResult = forumPost.isForumPost();
     if (isForumPostResult) {
       isForumPostResult = null != tmp4.parent_id;
     }
     if (isForumPostResult) {
-      obj = { type: "RESORT_THREADS", channelId: null };
-      obj[1] = tmp4.parent_id;
-      closure_1_1(closure_1_2[11]).dispatch(obj);
-      const tmpResult = closure_1_1(closure_1_2[11]);
+      obj = { type: "RESORT_THREADS", channelId: tmp4.parent_id };
+      DispatcherDefault.dispatch(obj);
+      const tmpResult = DispatcherDefault;
     }
     return body;
   });
 }
 function dispatchThreadMemberLocalUpdate(id, isJoining) {
-  let obj = dispatcherDefault;
-  obj = { type: "THREAD_MEMBER_LOCAL_UPDATE", id: id.id, guildId: id.getGuildId(), userId: store.getId(), isJoining };
+  const obj = {
+    type: "THREAD_MEMBER_LOCAL_UPDATE",
+    id: id.id,
+    guildId: id.getGuildId(),
+    userId: AuthenticationStore.getId(),
+    isJoining,
+  };
   obj.dispatch(obj);
 }
-({ Endpoints: closure_12, AbortCodes: map1, AnalyticEvents: closure_14, Permissions: closure_15 } = ME);
-let result = require("set").fileFinishedImporting("modules/threads/ThreadActionCreators.tsx");
+let closure_4 = fn(1961).createChannelRecordFromServer;
+const PAGE_SIZE = fn(7766).PAGE_SIZE;
+const Constants = fn(1074);
+({ Endpoints: closure_12, AbortCodes: map1, AnalyticEvents: closure_14, Permissions: closure_15 } = Constants);
+const ChannelFlags = fn(1964).ChannelFlags;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/threads/ThreadActionCreators.tsx");
 
 export default {
   archiveThread(channel, arg1) {
-    let obj = { archived: true };
+    const obj = { archived: true };
     if (arg1) {
       obj.locked = true;
     }
-    const _require = channel;
-    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
-    obj = {
+    _require = channel;
+    const HTTP = require("HTTPUtils").HTTP;
+    const request = {
       url: closure_12.CHANNEL(channel.id),
       body: obj,
-      rejectWithError:
-        require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError(),
+      rejectWithError: require("HTTPUtils").rejectWithMigratedError(),
     };
-    const obj3 = sendRequest;
-    return HTTP.patch(obj).then((body) => {
-      let obj = closure_1_1(closure_1_2[11]);
-      obj = { type: "THREAD_UPDATE", channel: closure_1_4(body.body) };
+    const obj3 = require("HTTPUtils");
+    return HTTP.patch(request).then((body) => {
+      let obj = { type: "THREAD_UPDATE", channel: closure_4(body.body) };
       obj.dispatch(obj);
       let isForumPostResult = forumPost.isForumPost();
       if (isForumPostResult) {
         isForumPostResult = null != tmp4.parent_id;
       }
       if (isForumPostResult) {
-        obj = { type: "RESORT_THREADS", channelId: null };
-        obj[1] = tmp4.parent_id;
-        closure_1_1(closure_1_2[11]).dispatch(obj);
-        const tmpResult = closure_1_1(closure_1_2[11]);
+        obj = { type: "RESORT_THREADS", channelId: tmp4.parent_id };
+        DispatcherDefault.dispatch(obj);
+        const tmpResult = DispatcherDefault;
       }
       return body;
     });
@@ -87,16 +90,15 @@ export default {
   lockThread(channel) {
     closure_0 = channel;
     const self = this;
-    return callback(function* () {
+    return (async (arg0, value) => {
       if (c3 === 2) {
         c3 = 3;
-        HermesBuiltin.throwTypeError();
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp5 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          let obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
@@ -107,40 +109,34 @@ export default {
           if (0 === c2) {
             if (arg0 === 1) {
               c3 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj = { value, done: true };
               return obj;
             } else {
               closure_1 = tmp2;
-              c0 = tmp3;
-              c0 = undefined;
-              const isArchivedThreadResult = closure_1_0.isArchivedThread();
-              c0 = isArchivedThreadResult;
+              closure_128_0 = undefined;
+              const isArchivedThreadResult = tmp3.isArchivedThread();
+              closure_128_0 = isArchivedThreadResult;
               if (isArchivedThreadResult) {
                 c2 = 1;
                 c3 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = closure_1_1.unarchiveThread(closure_1_0, false);
+                const obj1 = { value: self.unarchiveThread(tmp3, false), done: false };
                 return obj1;
               }
             }
           } else if (arg0 === 1) {
             c3 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           }
-          const obj2 = { locked: true, archived: null };
-          obj2[1] = c0;
+          const obj2 = { locked: true, archived: closure_128_0 };
           c3 = 3;
-          const obj3 = { value: null, done: true };
-          obj3[0] = closure_1_17(c0, obj2);
+          const obj3 = { value: patchThread(closure_129_0, obj2), done: true };
           return obj3;
         } catch (tmp14) {
           c3 = tmp;
@@ -152,16 +148,15 @@ export default {
   unlockThread(channel) {
     closure_0 = channel;
     const self = this;
-    return callback(function* () {
+    return (async (arg0, value) => {
       if (c3 === 2) {
         c3 = 3;
-        HermesBuiltin.throwTypeError();
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp5 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          let obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
@@ -172,40 +167,34 @@ export default {
           if (0 === c2) {
             if (arg0 === 1) {
               c3 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj = { value, done: true };
               return obj;
             } else {
               closure_1 = tmp2;
-              c0 = tmp3;
-              c0 = undefined;
-              const isArchivedThreadResult = closure_1_0.isArchivedThread();
-              c0 = isArchivedThreadResult;
+              closure_128_0 = undefined;
+              const isArchivedThreadResult = tmp3.isArchivedThread();
+              closure_128_0 = isArchivedThreadResult;
               if (isArchivedThreadResult) {
                 c2 = 1;
                 c3 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = closure_1_1.unarchiveThread(closure_1_0, true);
+                const obj1 = { value: self.unarchiveThread(tmp3, true), done: false };
                 return obj1;
               }
             }
           } else if (arg0 === 1) {
             c3 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           }
-          const obj2 = { locked: false, archived: null };
-          obj2[1] = c0;
+          const obj2 = { locked: false, archived: closure_128_0 };
           c3 = 3;
-          const obj3 = { value: null, done: true };
-          obj3[0] = closure_1_17(c0, obj2);
+          const obj3 = { value: patchThread(closure_129_0, obj2), done: true };
           return obj3;
         } catch (tmp14) {
           c3 = tmp;
@@ -217,204 +206,170 @@ export default {
   unarchiveThread(channel, arg1) {
     closure_0 = channel;
     closure_1 = arg1;
-    return callback(function* () {
+    return (async (arg0, value) => {
       if (c5 === 2) {
         c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else {
-        let showResult3 = null;
-        if (tmp7 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            return { value: "HermesInternal", done: null };
-          }
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp7 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          let obj = { value, done: true };
+          return obj;
         } else {
-          try {
-            c5 = 2;
-            if (0 === showResult3) {
-              if (arg0 === 1) {
-                c5 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c5 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                let body = tmp3;
-                closure_0 = tmp5;
-                closure_0 = undefined;
-                obj1 = { archived: false };
-                closure_0 = closure_1_0.isForumPost();
-                if (closure_1_1) {
-                  obj1.locked = false;
-                }
-                c3 = 1;
-                showResult3 = 2;
-                c5 = 1;
-                let obj2 = { value: null, done: false };
-                obj2[0] = closure_1_17(closure_1_0, obj1);
-                return obj2;
-              }
-            } else if (1 === tmp8) {
-              c3 = 0;
-              body = closure_2;
-              body = body.body;
-              let code;
-              if (body != null) {
-                code = body.code;
-              }
-              if (code === closure_1_13.TOO_MANY_THREADS) {
-                let obj8 = closure_1_1(closure_1_2[12]);
-                const intl7 = closure_1_0(closure_1_2[13]).intl;
-                const string4 = intl7.string;
-                const t4 = closure_1_0(closure_1_2[13]).t;
-                if (closure_1_0) {
-                  let string4Result = string4(t4.kwyWNX);
-                } else {
-                  string4Result = string4(t4["PeIE/r"]);
-                }
-                let obj3 = { title: null, body: null };
-                obj3[0] = string4Result;
-                const intl8 = closure_1_0(closure_1_2[13]).intl;
-                const string5 = intl8.string;
-                let KGaiEK = closure_1_0(closure_1_2[13]).t;
-                if (closure_1_0) {
-                  KGaiEK = KGaiEK.KGaiEK;
-                  let string5Result = string5(KGaiEK);
-                } else {
-                  string5Result = string5(KGaiEK.P0wT5S);
-                }
-                obj3[1] = string5Result;
-                obj3 = obj8.show(obj3);
-              } else {
-                showResult3 = closure_0;
-                showResult3 = closure_1_1;
-                const body2 = closure_1_1.body;
-                let code1;
-                if (body2 != null) {
-                  code1 = body2.code;
-                }
-                if (code1 === closure_1_13.TOO_MANY_ANNOUNCEMENT_THREADS) {
-                  let obj6 = closure_1_1(closure_1_2[12]);
-                  let obj4 = { title: null, body: null };
-                  const intl5 = closure_1_0(closure_1_2[13]).intl;
-                  obj4[0] = intl5.string(closure_1_0(closure_1_2[13]).t["PeIE/r"]);
-                  const intl6 = closure_1_0(closure_1_2[13]).intl;
-                  obj4[1] = intl6.string(closure_1_0(closure_1_2[13]).t.jDMxz2);
-                  obj6.show(obj4);
-                } else {
-                  showResult3 = closure_0;
-                  showResult3 = closure_1_1;
-                  if (429 === closure_1_1.status) {
-                    obj4 = closure_1_1(closure_1_2[12]);
-                    const intl3 = closure_1_0(closure_1_2[13]).intl;
-                    const string3 = intl3.string;
-                    const t3 = closure_1_0(closure_1_2[13]).t;
-                    if (closure_1_0) {
-                      let string3Result = string3(t3.kwyWNX);
-                    } else {
-                      string3Result = string3(t3["PeIE/r"]);
-                    }
-                    const obj5 = { title: null, body: null };
-                    obj5[0] = string3Result;
-                    const intl4 = closure_1_0(closure_1_2[13]).intl;
-                    obj5[1] = intl4.string(closure_1_0(closure_1_2[13]).t.Whhv4w);
-                    obj4.show(obj5);
-                  } else {
-                    showResult3 = closure_0;
-                    showResult3 = closure_1_1;
-                    if (403 === closure_1_1.status) {
-                      obj2 = closure_1_1(closure_1_2[12]);
-                      const intl = closure_1_0(closure_1_2[13]).intl;
-                      const string = intl.string;
-                      const t = closure_1_0(closure_1_2[13]).t;
-                      if (closure_1_0) {
-                        let stringResult = string(t.kwyWNX);
-                      } else {
-                        stringResult = string(t["PeIE/r"]);
-                      }
-                      obj6 = { title: null, body: null };
-                      obj6[0] = stringResult;
-                      const intl2 = closure_1_0(closure_1_2[13]).intl;
-                      const string2 = intl2.string;
-                      const t2 = closure_1_0(closure_1_2[13]).t;
-                      if (closure_1_0) {
-                        let string2Result = string2(t2.hIXtcT);
-                      } else {
-                        string2Result = string2(t2["96UEzi"]);
-                      }
-                      obj6[1] = string2Result;
-                      obj2.show(obj6);
-                    } else {
-                      showResult3 = body;
-                      showResult3 = closure_1_1;
-                      showResult3 = closure_1_2;
-                      const obj7 = { title: null, body: null };
-                      showResult3 = closure_1_0;
-                      showResult3 = closure_1_2;
-                      const intl9 = closure_1_0(closure_1_2[13]).intl;
-                      showResult3 = closure_1_0;
-                      showResult3 = closure_1_2;
-                      obj7[0] = intl9.string(closure_1_0(closure_1_2[13]).t.j2d6Km);
-                      showResult3 = closure_1_0;
-                      showResult3 = closure_1_2;
-                      const intl10 = closure_1_0(closure_1_2[13]).intl;
-                      showResult3 = closure_1_0;
-                      showResult3 = closure_1_2;
-                      obj7[1] = intl10.string(closure_1_0(closure_1_2[13]).t.fEptJP);
-                      showResult3 = closure_1_1(closure_1_2[12]).show(obj7);
-                      const obj15 = closure_1_1(closure_1_2[12]);
-                    }
-                  }
-                }
-                throw closure_1_1;
-              }
-            } else if (arg0 === 1) {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c5 = 2;
+          if (0 === c4) {
+            if (arg0 === 1) {
               c5 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
-              c3 = 0;
               c5 = 3;
-              obj8 = { value: null, done: true };
-              obj8[0] = arg1;
-              return obj8;
-            } else {
-              c3 = 0;
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj = { value, done: true };
               return obj;
+            } else {
+              closure_128_0 = undefined;
+              const obj1 = { archived: false };
+              closure_128_0 = tmp5.isForumPost();
+              if (tmp3) {
+                obj1.locked = false;
+              }
+              c3 = 1;
+              c4 = 2;
+              c5 = 1;
+              let obj2 = { value: patchThread(tmp5, obj1), done: false };
+              return obj2;
             }
-          } catch (tmp92) {
-            closure_2 = tmp92;
-            if (tmp4 === c3) {
-              c5 = tmp2;
-              throw tmp92;
+          } else if (1 === tmp8) {
+            c3 = 0;
+            closure_128_1 = tmp92;
+            const body = closure_128_1.body;
+            let code;
+            if (body != null) {
+              code = body.code;
             }
+            if (code === constants.TOO_MANY_THREADS) {
+              let obj8 = tmp3(tmp92[12]);
+              const intl7 = tmp5(tmp92[13]).intl;
+              const string4 = intl7.string;
+              const t4 = tmp5(tmp92[13]).t;
+              if (closure_128_0) {
+                let string4Result = string4(t4.kwyWNX);
+              } else {
+                string4Result = string4(t4["PeIE/r"]);
+              }
+              let obj3 = { title: string4Result, body: null };
+              const intl8 = tmp5(tmp92[13]).intl;
+              const string5 = intl8.string;
+              let KGaiEK = tmp5(tmp92[13]).t;
+              if (closure_128_0) {
+                KGaiEK = KGaiEK.KGaiEK;
+                let string5Result = string5(KGaiEK);
+              } else {
+                string5Result = string5(KGaiEK.P0wT5S);
+              }
+              obj3.body = string5Result;
+              obj3 = obj8.show(obj3);
+            } else {
+              const body2 = closure_128_1.body;
+              let code1;
+              if (body2 != null) {
+                code1 = body2.code;
+              }
+              if (code1 === constants.TOO_MANY_ANNOUNCEMENT_THREADS) {
+                let obj6 = tmp3(tmp92[12]);
+                let obj4 = { title: null, body: null };
+                const intl5 = tmp5(tmp92[13]).intl;
+                obj4.title = intl5.string(tmp5(tmp92[13]).t["PeIE/r"]);
+                const intl6 = tmp5(tmp92[13]).intl;
+                obj4.body = intl6.string(tmp5(tmp92[13]).t.jDMxz2);
+                obj6.show(obj4);
+              } else if (429 === closure_128_1.status) {
+                obj4 = tmp3(tmp92[12]);
+                const intl3 = tmp5(tmp92[13]).intl;
+                const string3 = intl3.string;
+                const t3 = tmp5(tmp92[13]).t;
+                if (closure_128_0) {
+                  let string3Result = string3(t3.kwyWNX);
+                } else {
+                  string3Result = string3(t3["PeIE/r"]);
+                }
+                const obj5 = { title: string3Result, body: null };
+                const intl4 = tmp5(tmp92[13]).intl;
+                obj5.body = intl4.string(tmp5(tmp92[13]).t.Whhv4w);
+                obj4.show(obj5);
+              } else if (403 === closure_128_1.status) {
+                obj2 = tmp3(tmp92[12]);
+                const intl = tmp5(tmp92[13]).intl;
+                const string = intl.string;
+                const t = tmp5(tmp92[13]).t;
+                if (closure_128_0) {
+                  let stringResult = string(t.kwyWNX);
+                } else {
+                  stringResult = string(t["PeIE/r"]);
+                }
+                obj6 = { title: stringResult, body: null };
+                const intl2 = tmp5(tmp92[13]).intl;
+                const string2 = intl2.string;
+                const t2 = tmp5(tmp92[13]).t;
+                if (closure_128_0) {
+                  let string2Result = string2(t2.hIXtcT);
+                } else {
+                  string2Result = string2(t2["96UEzi"]);
+                }
+                obj6.body = string2Result;
+                obj2.show(obj6);
+              } else {
+                const obj7 = { title: null, body: null };
+                const intl9 = tmp5(tmp92[13]).intl;
+                obj7.title = intl9.string(tmp5(tmp92[13]).t.j2d6Km);
+                const intl10 = tmp5(tmp92[13]).intl;
+                obj7.body = intl10.string(tmp5(tmp92[13]).t.fEptJP);
+                tmp3(tmp92[12]).show(obj7);
+                const obj15 = tmp3(tmp92[12]);
+              }
+              throw closure_128_1;
+            }
+          } else if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 0;
+            c5 = 3;
+            obj8 = { value, done: true };
+            return obj8;
+          } else {
+            c3 = 0;
+            c5 = 3;
+            obj = { value, done: true };
+            return obj;
+          }
+        } catch (tmp92) {
+          if (tmp4 === c3) {
+            c5 = tmp2;
+            throw tmp92;
+          } else {
+            c4 = tmp;
           }
         }
       }
     })();
   },
-  unarchiveThreadIfNecessary(closure_1_0) {
-    closure_0 = closure_1_0;
+  unarchiveThreadIfNecessary(id) {
+    closure_0 = id;
     const self = this;
-    return callback(function* () {
+    return (async (arg0, value) => {
       if (c0 === 2) {
         c0 = 3;
-        HermesBuiltin.throwTypeError();
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp3 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          let obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
@@ -425,15 +380,14 @@ export default {
           if (0 === c1) {
             if (arg0 === 1) {
               c0 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c0 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj = { value, done: true };
               return obj;
             } else {
-              const channel = closure_1_6.getChannel(c0);
-              let canResult = closure_1_7.can(closure_1_15.MANAGE_THREADS, channel);
+              channel = channel.getChannel(closure_0);
+              let canResult = PermissionStore.can(constants.MANAGE_THREADS, channel);
               let isArchivedThreadResult = null != channel;
               if (isArchivedThreadResult) {
                 isArchivedThreadResult = channel.isArchivedThread();
@@ -452,18 +406,16 @@ export default {
               if (isArchivedThreadResult) {
                 c1 = 1;
                 c0 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = c1.unarchiveThread(channel, false);
+                const obj1 = { value: self.unarchiveThread(channel, false), done: false };
                 return obj1;
               }
             }
           } else if (arg0 === 1) {
             c0 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           }
           c0 = 3;
@@ -476,46 +428,42 @@ export default {
     })();
   },
   setInvitable(id, invitable) {
-    let obj = { invitable };
-    const _require = id;
-    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
-    obj = {
+    _require = id;
+    const HTTP = require("HTTPUtils").HTTP;
+    const request = {
       url: closure_12.CHANNEL(id.id),
-      body: obj,
-      rejectWithError:
-        require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError(),
+      body: { invitable },
+      rejectWithError: require("HTTPUtils").rejectWithMigratedError(),
     };
-    const obj3 = sendRequest;
-    return HTTP.patch(obj).then((body) => {
-      let obj = closure_1_1(closure_1_2[11]);
-      obj = { type: "THREAD_UPDATE", channel: closure_1_4(body.body) };
+    let obj = { invitable };
+    const obj3 = require("HTTPUtils");
+    return HTTP.patch(request).then((body) => {
+      let obj = { type: "THREAD_UPDATE", channel: closure_4(body.body) };
       obj.dispatch(obj);
       let isForumPostResult = forumPost.isForumPost();
       if (isForumPostResult) {
         isForumPostResult = null != tmp4.parent_id;
       }
       if (isForumPostResult) {
-        obj = { type: "RESORT_THREADS", channelId: null };
-        obj[1] = tmp4.parent_id;
-        closure_1_1(closure_1_2[11]).dispatch(obj);
-        const tmpResult = closure_1_1(closure_1_2[11]);
+        obj = { type: "RESORT_THREADS", channelId: tmp4.parent_id };
+        DispatcherDefault.dispatch(obj);
+        const tmpResult = DispatcherDefault;
       }
       return body;
     });
   },
-  joinThread(c5, arg1) {
-    closure_0 = c5;
+  joinThread(channel, arg1) {
+    closure_0 = channel;
     closure_1 = arg1;
-    return callback(function* () {
+    return (async (arg0, value) => {
       if (c5 === 2) {
         c5 = 3;
-        HermesBuiltin.throwTypeError();
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp6 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          let obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
@@ -526,96 +474,87 @@ export default {
           if (0 === c4) {
             if (arg0 === 1) {
               c5 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj = { value, done: true };
               return obj;
             } else {
-              closure_1 = tmp3;
-              let lib = tmp7;
-              lib = undefined;
-              if (lib.isForumPost()) {
-                closure_1_18(lib, true);
+              const _location = tmp3;
+              const forumPost = tmp7;
+              closure_128_0 = undefined;
+              if (forumPost.isForumPost()) {
+                dispatchThreadMemberLocalUpdate(forumPost, true);
               }
               c3 = 1;
-              const HTTP = lib(closure_1_2[10]).HTTP;
-              obj1 = { url: null, query: null, rejectWithError: null };
-              obj1[0] = closure_1_12.THREAD_MEMBER(lib.id);
-              let obj2 = { location: null };
-              obj2[0] = closure_1_1;
-              obj1[1] = obj2;
-              let obj6 = lib(closure_1_2[10]);
-              obj1[2] = obj6.rejectWithMigratedError();
+              const HTTP = forumPost(tmp49[10]).HTTP;
+              const request = { url: closure_1_12.THREAD_MEMBER(forumPost.id), query: null, rejectWithError: null };
+              const obj1 = { location: _location };
+              request.query = obj1;
+              request.rejectWithError = forumPost(tmp49[10]).rejectWithMigratedError();
               c4 = 2;
               c5 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = HTTP.post(obj1);
-              return obj3;
+              let obj2 = { value: HTTP.post(request), done: false };
+              return obj2;
             }
           } else if (1 === tmp7) {
             c3 = 0;
-            body = body.body;
+            const body = tmp49.body;
             let code;
             if (body != null) {
               code = body.code;
             }
-            if (code === closure_1_13.TOO_MANY_THREAD_MEMBERS) {
-              lib = lib.isForumPost();
-              obj2 = closure_1_1(closure_1_2[12]);
-              const intl = lib(closure_1_2[13]).intl;
+            if (code === constants.TOO_MANY_THREAD_MEMBERS) {
+              closure_128_0 = closure_129_0.isForumPost();
+              obj2 = _location(tmp49[12]);
+              const intl = forumPost(tmp49[13]).intl;
               const string = intl.string;
-              const t = lib(closure_1_2[13]).t;
-              if (lib) {
+              const t = forumPost(tmp49[13]).t;
+              if (closure_128_0) {
                 let stringResult = string(t.EMYJFi);
               } else {
                 stringResult = string(t.gtdVcs);
               }
-              let obj4 = { title: null, body: null };
-              obj4[0] = stringResult;
-              const intl2 = lib(closure_1_2[13]).intl;
+              let obj3 = { title: stringResult, body: null };
+              const intl2 = forumPost(tmp49[13]).intl;
               const string2 = intl2.string;
-              let QYyad3 = lib(closure_1_2[13]).t;
-              if (lib) {
+              let QYyad3 = forumPost(tmp49[13]).t;
+              if (closure_128_0) {
                 QYyad3 = QYyad3.QYyad3;
                 let string2Result = string2(QYyad3);
               } else {
                 string2Result = string2(QYyad3.abMwgm);
               }
-              obj4[1] = string2Result;
-              obj4 = obj2.show(obj4);
+              obj3.body = string2Result;
+              obj3 = obj2.show(obj3);
             } else {
-              const obj5 = { title: null, body: null };
-              const intl3 = lib(closure_1_2[13]).intl;
-              obj5[0] = intl3.string(lib(closure_1_2[13]).t.j2d6Km);
-              const intl4 = lib(closure_1_2[13]).intl;
-              obj5[1] = intl4.string(lib(closure_1_2[13]).t.fEptJP);
-              closure_1_1(closure_1_2[12]).show(obj5);
-              if (lib.isForumPost()) {
-                closure_1_18(lib, false);
+              const obj4 = { title: null, body: null };
+              const intl3 = forumPost(tmp49[13]).intl;
+              obj4.title = intl3.string(forumPost(tmp49[13]).t.j2d6Km);
+              const intl4 = forumPost(tmp49[13]).intl;
+              obj4.body = intl4.string(forumPost(tmp49[13]).t.fEptJP);
+              _location(tmp49[12]).show(obj4);
+              if (closure_129_0.isForumPost()) {
+                dispatchThreadMemberLocalUpdate(closure_129_0, false);
               }
               c5 = 3;
               return { value: "HermesInternal", done: null };
             }
           } else if (arg0 === 1) {
             c5 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c3 = 0;
             c5 = 3;
-            obj6 = { value: null, done: true };
-            obj6[0] = arg1;
-            return obj6;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
             c3 = 0;
             c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           }
         } catch (tmp49) {
-          body = tmp49;
           if (tmp4 === c3) {
             c5 = tmp2;
             throw tmp49;
@@ -630,16 +569,15 @@ export default {
     closure_0 = arg0;
     closure_1 = arg1;
     closure_2 = arg2;
-    return callback(function* () {
+    return (async (arg0, value) => {
       if (c5 === 2) {
         c5 = 3;
-        HermesBuiltin.throwTypeError();
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp6 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          let obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
@@ -650,88 +588,84 @@ export default {
           if (0 === c4) {
             if (arg0 === 1) {
               c5 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj = { value, done: true };
               return obj;
             } else {
-              closure_1 = tmp3;
-              let forumPost = tmp7;
-              forumPost = undefined;
+              closure_0 = tmp7;
+              closure_128_0 = undefined;
               c3 = 1;
-              const HTTP = forumPost(closure_1_2[10]).HTTP;
-              obj1 = { url: null, query: null, rejectWithError: null };
-              obj1[0] = closure_1_12.THREAD_MEMBER(forumPost.id, closure_1_1);
-              let obj2 = { location: null };
-              obj2[0] = closure_1_2;
-              obj1[1] = obj2;
-              obj1[2] = forumPost(closure_1_2[10]).rejectWithMigratedError();
+              const HTTP = closure_0(_location[10]).HTTP;
+              const request = {
+                url: closure_1_12.THREAD_MEMBER(closure_0.id, tmp3),
+                query: null,
+                rejectWithError: null,
+              };
+              const obj1 = { location: _location };
+              request.query = obj1;
+              request.rejectWithError = closure_0(_location[10]).rejectWithMigratedError();
               c4 = 2;
               c5 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = HTTP.post(obj1);
-              return obj3;
+              let obj2 = { value: HTTP.post(request), done: false };
+              return obj2;
             }
           } else if (1 === tmp7) {
             c3 = 0;
-            body = body.body;
+            const body = _location.body;
             let code;
             if (body != null) {
               code = body.code;
             }
-            if (code !== closure_1_13.TOO_MANY_THREAD_MEMBERS) {
-              const obj4 = { title: null, body: null };
-              const intl3 = forumPost(closure_1_2[13]).intl;
-              obj4[0] = intl3.string(forumPost(closure_1_2[13]).t.j2d6Km);
-              const intl4 = forumPost(closure_1_2[13]).intl;
-              obj4[1] = intl4.string(forumPost(closure_1_2[13]).t.fEptJP);
-              closure_1_1(closure_1_2[12]).show(obj4);
+            if (code !== constants.TOO_MANY_THREAD_MEMBERS) {
+              const obj3 = { title: null, body: null };
+              const intl3 = closure_0(_location[13]).intl;
+              obj3.title = intl3.string(closure_0(_location[13]).t.j2d6Km);
+              const intl4 = closure_0(_location[13]).intl;
+              obj3.body = intl4.string(closure_0(_location[13]).t.fEptJP);
+              tmp3(_location[12]).show(obj3);
               c5 = 3;
-              const obj8 = closure_1_1(closure_1_2[12]);
+              const obj8 = tmp3(_location[12]);
             }
-            forumPost = forumPost.isForumPost();
-            obj2 = closure_1_1(closure_1_2[12]);
-            const intl = forumPost(closure_1_2[13]).intl;
+            closure_128_0 = closure_129_0.isForumPost();
+            obj2 = tmp3(_location[12]);
+            const intl = closure_0(_location[13]).intl;
             const string = intl.string;
-            const t = forumPost(closure_1_2[13]).t;
-            if (forumPost) {
+            const t = closure_0(_location[13]).t;
+            if (closure_128_0) {
               let stringResult = string(t["0yAqqN"]);
             } else {
               stringResult = string(t.YErysD);
             }
-            let obj5 = { title: null, body: null };
-            obj5[0] = stringResult;
-            const intl2 = forumPost(closure_1_2[13]).intl;
+            let obj4 = { title: stringResult, body: null };
+            const intl2 = closure_0(_location[13]).intl;
             const string2 = intl2.string;
-            let QYyad3 = forumPost(closure_1_2[13]).t;
-            if (forumPost) {
+            let QYyad3 = closure_0(_location[13]).t;
+            if (closure_128_0) {
               QYyad3 = QYyad3.QYyad3;
               let string2Result = string2(QYyad3);
             } else {
               string2Result = string2(QYyad3.abMwgm);
             }
-            obj5[1] = string2Result;
-            obj5 = obj2.show(obj5);
+            obj4.body = string2Result;
+            obj4 = obj2.show(obj4);
           } else if (arg0 === 1) {
             c5 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c3 = 0;
             c5 = 3;
-            const obj6 = { value: null, done: true };
-            obj6[0] = arg1;
-            return obj6;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
             c3 = 0;
             c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           }
         } catch (tmp33) {
-          body = tmp33;
+          _location = tmp33;
           if (tmp4 === c3) {
             c5 = tmp2;
             throw tmp33;
@@ -744,34 +678,40 @@ export default {
   },
   leaveThread(channel, location) {
     if (channel.isForumPost()) {
-      let obj = dispatcherDefault;
-      obj = { type: "THREAD_MEMBER_LOCAL_UPDATE", id: null, guildId: null, userId: null, isJoining: false };
-      obj[1] = channel.id;
-      obj[2] = channel.getGuildId();
-      obj[3] = store.getId();
+      const obj = {
+        type: "THREAD_MEMBER_LOCAL_UPDATE",
+        id: channel.id,
+        guildId: channel.getGuildId(),
+        userId: AuthenticationStore.getId(),
+        isJoining: false,
+      };
       obj.dispatch(obj);
     }
-    const HTTP = sendRequest.HTTP;
-    obj = {
-      url: closure_12.THREAD_MEMBER(channel.id),
-      query: obj1,
-      rejectWithError: sendRequest.rejectWithMigratedError(),
+    const HTTP = HTTPUtils.HTTP;
+    const request = {
+      url: closure_1_12.THREAD_MEMBER(channel.id),
+      query: { location },
+      rejectWithError: HTTPUtils.rejectWithMigratedError(),
     };
-    return HTTP.del(obj);
+    return HTTP.del(request);
   },
-  removeMember(id, closure_1_1, location) {
-    const HTTP = sendRequest.HTTP;
-    obj = { url: closure_12.THREAD_MEMBER(id, closure_1_1), query: obj, rejectWithError: null };
-    obj = { location };
-    obj[2] = sendRequest.rejectWithMigratedError();
-    return HTTP.del(obj);
+  removeMember(id, arg1, location) {
+    const HTTP = HTTPUtils.HTTP;
+    const request = {
+      url: closure_1_12.THREAD_MEMBER(id, arg1),
+      query: { location },
+      rejectWithError: HTTPUtils.rejectWithMigratedError(),
+    };
+    return HTTP.del(request);
   },
   setAutoArchiveDuration(id, auto_archive_duration) {
-    const HTTP = sendRequest.HTTP;
-    obj = { url: closure_12.CHANNEL(id.id), body: obj, rejectWithError: null };
-    obj = { auto_archive_duration };
-    obj[2] = sendRequest.rejectWithMigratedError();
-    return HTTP.patch(obj);
+    const HTTP = HTTPUtils.HTTP;
+    const request = {
+      url: closure_1_12.CHANNEL(id.id),
+      body: { auto_archive_duration },
+      rejectWithError: HTTPUtils.rejectWithMigratedError(),
+    };
+    return HTTP.patch(request);
   },
   pin(thread) {
     this.updateFlags(thread, thread.flags | ChannelFlags.PINNED, thread.isArchivedThread());
@@ -786,30 +726,20 @@ export default {
     if (arg2 === undefined) {
       flag = false;
     }
-    return callback(function* () {
-      closure_0 = tmp3;
-      obj1 = { type: "THREAD_UPDATE", channel: null };
-      const obj2 = { flags: null };
-      obj2[0] = v0;
-      obj1[1] = closure_1_0.merge(obj2);
-      v0(573).dispatch(obj1);
-      const obj3 = { flags: null };
-      obj3[0] = v0;
-      if (dependencyMap) {
+    return (async () => {
+      let obj1 = { type: "THREAD_UPDATE", channel: tmp3.merge({ flags }) };
+      flags(573).dispatch(obj1);
+      const obj3 = { flags };
+      if (flag) {
         obj3.archived = false;
       }
-      dependencyMap = 1;
-      const HTTP = closure_1_0(1272).HTTP;
-      const obj4 = { url: null, body: null, rejectWithError: true };
-      obj4[0] = closure_1_12.CHANNEL(closure_1_0.id);
-      obj4[1] = obj3;
-      yield HTTP.patch(obj4);
+      const HTTP = tmp3(1272).HTTP;
+      const request = { url: closure_1_12.CHANNEL(tmp3.id), body: obj3, rejectWithError: true };
+      await HTTP.patch(request);
       if (1 === tmp7) {
         dependencyMap = 0;
-        obj1 = v0(573);
-        const obj6 = { type: "THREAD_UPDATE", channel: null };
-        obj6[1] = closure_0;
-        obj1.dispatch(obj6);
+        obj1 = flags(573);
+        obj1.dispatch({ type: "THREAD_UPDATE", channel: closure_128_0 });
         c3 = 3;
       } else if (arg0 === 1) {
         c3 = 3;
@@ -817,24 +747,22 @@ export default {
       } else if (arg0 !== 2) {
         dependencyMap = 0;
       }
-      dependencyMap = 0;
       return arg1;
     })();
   },
-  replacePin(closure_5, closure_0) {
-    closure_0 = closure_5;
-    closure_1 = closure_0;
+  replacePin(arg0, arg1) {
+    closure_0 = arg0;
+    closure_1 = arg1;
     const self = this;
-    return callback(function* () {
+    return (async (arg0, value) => {
       if (c3 === 2) {
         c3 = 3;
-        HermesBuiltin.throwTypeError();
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp7 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          let obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
@@ -842,222 +770,192 @@ export default {
       } else {
         try {
           c3 = 2;
-          if (0 === v0) {
+          if (0 === v6) {
             if (arg0 === 1) {
               c3 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj = { value, done: true };
               return obj;
             } else {
-              closure_0 = tmp3;
-              obj1 = { flags: null };
-              obj1[0] = closure_1_0.flags & ~closure_1_16.PINNED;
-              const obj2 = { flags: null };
-              obj2[0] = v0.flags | closure_1_16.PINNED;
-              const mergeResult = closure_1_0.merge(obj1);
-              const mergeResult1 = v0.merge(obj2);
-              let obj3 = { type: "THREAD_UPDATE", channel: null };
-              obj3[1] = mergeResult;
-              v0(c2[11]).dispatch(obj3);
-              const obj24 = v0(c2[11]);
-              const obj4 = { type: "THREAD_UPDATE", channel: null };
-              obj4[1] = mergeResult1;
-              v0(c2[11]).dispatch(obj4);
-              v0 = 1;
+              const obj1 = { flags: tmp3.flags & ~constants.PINNED };
+              const obj2 = { flags: v6.flags | constants.PINNED };
+              const mergeResult = tmp3.merge(obj1);
+              const mergeResult1 = v6.merge(obj2);
+              let obj3 = { type: "THREAD_UPDATE", channel: mergeResult };
+              v6(573).dispatch(obj3);
+              const obj24 = v6(573);
+              const obj4 = { type: "THREAD_UPDATE", channel: mergeResult1 };
+              v6(573).dispatch(obj4);
+              v6 = 1;
               c3 = 1;
-              let obj5 = { value: null, done: false };
-              obj5[0] = c2.unarchiveThreadIfNecessary(closure_1_0.id);
+              let obj5 = { value: self.unarchiveThreadIfNecessary(tmp3.id), done: false };
               return obj5;
             }
           } else if (1 === tmp8) {
             if (arg0 === 1) {
               c3 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              const obj6 = { value: null, done: true };
-              obj6[0] = arg1;
+              const obj6 = { value, done: true };
               return obj6;
             } else {
-              v0 = 2;
+              v6 = 2;
               c3 = 1;
-              let obj7 = { value: null, done: false };
-              obj7[0] = c2.unarchiveThreadIfNecessary(v0.id);
+              let obj7 = { value: closure_128_2.unarchiveThreadIfNecessary(closure_128_1.id), done: false };
               return obj7;
             }
           } else if (2 === tmp8) {
             if (arg0 === 1) {
               c3 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              const obj8 = { value: null, done: true };
-              obj8[0] = arg1;
+              const obj8 = { value, done: true };
               return obj8;
             } else {
-              c2 = 1;
-              const HTTP2 = closure_1_0(c2[10]).HTTP;
-              const obj9 = { url: null, body: null, rejectWithError: true };
-              obj9[0] = closure_1_12.CHANNEL(closure_0.id);
-              const obj10 = { flags: null };
-              obj10[0] = closure_0.flags & ~closure_1_16.PINNED;
-              obj9[1] = obj10;
-              v0 = 5;
+              dependencyMap = 1;
+              const HTTP2 = tmp3(1272).HTTP;
+              const request = { url: closure_1_12.CHANNEL(closure_128_0.id), body: null, rejectWithError: true };
+              const obj9 = { flags: closure_128_0.flags & ~constants.PINNED };
+              request.body = obj9;
+              v6 = 5;
               c3 = 1;
-              const obj11 = { value: null, done: false };
-              obj11[0] = HTTP2.patch(obj9);
-              return obj11;
+              const obj10 = { value: HTTP2.patch(request), done: false };
+              return obj10;
             }
           } else if (3 === tmp8) {
-            c2 = 0;
-            obj5 = v0(c2[11]);
-            const obj12 = { type: "THREAD_UPDATE", channel: null };
-            obj12[1] = closure_0;
-            obj5.dispatch(obj12);
-            obj7 = v0(c2[11]);
-            const obj13 = { type: "THREAD_UPDATE", channel: null };
-            obj13[1] = v0;
-            obj7.dispatch(obj13);
+            dependencyMap = 0;
+            obj5 = v6(573);
+            const obj11 = { type: "THREAD_UPDATE", channel: closure_128_0 };
+            obj5.dispatch(obj11);
+            obj7 = v6(573);
+            const obj12 = { type: "THREAD_UPDATE", channel: closure_128_1 };
+            obj7.dispatch(obj12);
             c3 = 3;
-            const obj14 = { value: null, done: true };
-            obj14[0] = undefined;
-            return obj14;
+            const obj13 = { value: undefined, done: true };
+            return obj13;
           } else {
             if (4 === tmp8) {
-              c2 = 0;
-              obj3 = v0(c2[11]);
-              const obj15 = { type: "THREAD_UPDATE", channel: null };
-              obj15[1] = v0;
-              obj3.dispatch(obj15);
+              dependencyMap = 0;
+              obj3 = v6(573);
+              const obj14 = { type: "THREAD_UPDATE", channel: closure_128_1 };
+              obj3.dispatch(obj14);
               c3 = 3;
             } else if (5 === tmp8) {
               if (arg0 === 1) {
                 c3 = 3;
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
-                c2 = 0;
+                dependencyMap = 0;
                 c3 = 3;
-                const obj16 = { value: null, done: true };
-                obj16[0] = arg1;
-                return obj16;
+                const obj15 = { value, done: true };
+                return obj15;
               } else {
-                c2 = 2;
-                const HTTP = closure_1_0(c2[10]).HTTP;
-                const obj17 = { url: null, body: null, rejectWithError: true };
-                obj17[0] = closure_1_12.CHANNEL(v0.id);
-                const obj18 = { flags: null };
-                obj18[0] = v0.flags | closure_1_16.PINNED;
-                obj17[1] = obj18;
-                v0 = 6;
+                dependencyMap = 2;
+                const HTTP = tmp3(1272).HTTP;
+                const request1 = { url: closure_1_12.CHANNEL(closure_128_1.id), body: null, rejectWithError: true };
+                const obj16 = { flags: closure_128_1.flags | constants.PINNED };
+                request1.body = obj16;
+                v6 = 6;
                 c3 = 1;
-                const obj19 = { value: null, done: false };
-                obj19[0] = HTTP.patch(obj17);
-                return obj19;
+                const obj17 = { value: HTTP.patch(request1), done: false };
+                return obj17;
               }
             } else if (arg0 === 1) {
               c3 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 !== 2) {
-              c2 = 0;
+              dependencyMap = 0;
             }
-            c2 = 0;
+            dependencyMap = 0;
             c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           }
         } catch (tmp26) {
-          if (tmp4 === c2) {
+          if (tmp4 === dependencyMap) {
             c3 = tmp2;
             throw tmp26;
           } else if (tmp === tmp27) {
-            v0 = tmp2;
+            v6 = tmp2;
           } else {
-            v0 = tmp5;
+            v6 = tmp5;
           }
         }
       }
     })();
   },
   openThreadCreationForMobile(channel, id, Message) {
-    let obj = collectGuildAnalyticsMetadata;
-    obj = { location: Message, channel_id: channel.id, guild_id: channel.guild_id };
+    let obj = { location: Message, channel_id: channel.id, guild_id: channel.guild_id };
     obj.trackWithMetadata(constants.THREAD_CREATION_STARTED, obj);
     obj = { parentMessageId: id, isPrivate: false, location: Message };
-    dispatcherDefault2.changeThreadSettings(channel.id, obj);
+    DraftActionCreatorsDefault.changeThreadSettings(channel.id, obj);
     if (null == id) {
-      obj1 = { channelId: null, command: null, section: null };
-      obj1[0] = channel.id;
-      setActiveCommand.setActiveCommand(obj1);
-      const tmpResult = setActiveCommand;
+      const obj1 = { channelId: channel.id, command: null, section: null };
+      ApplicationCommandActionCreators.setActiveCommand(obj1);
+      const tmpResult = ApplicationCommandActionCreators;
     }
   },
   setNotificationSettings(channel, muteSettings) {
     closure_0 = channel;
     closure_1 = muteSettings;
     const self = this;
-    return callback(function* () {
-      if (c2 === 2) {
-        c2 = 3;
-        HermesBuiltin.throwTypeError();
+    return (async (arg0, value) => {
+      if (dependencyMap === 2) {
+        dependencyMap = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp3 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          let obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
         }
       } else {
         try {
-          c2 = 2;
+          dependencyMap = 2;
           if (0 === c1) {
             if (arg0 === 1) {
-              c2 = 3;
-              throw arg1;
+              dependencyMap = 3;
+              throw value;
             } else if (arg0 === 2) {
-              c2 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              dependencyMap = 3;
+              obj = { value, done: true };
               return obj;
             } else {
-              const id = tmp4;
-              const result = closure_1_0(c2[17]).trackThreadNotificationSettingsUpdated(closure_1_0, c1);
-              if (!closure_1_10.hasJoined(closure_1_0.id)) {
+              const result = tmp4(7781).trackThreadNotificationSettingsUpdated(tmp4, closure_1);
+              if (!JoinedThreadsStore.hasJoined(tmp4.id)) {
                 c1 = 1;
-                c2 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = c2.joinThread(closure_1_0, "Change Notification Settings");
+                dependencyMap = 1;
+                const obj1 = { value: self.joinThread(tmp4, "Change Notification Settings"), done: false };
                 return obj1;
               }
-              const obj8 = closure_1_0(c2[17]);
+              const obj8 = tmp4(7781);
             }
           } else if (arg0 === 1) {
-            c2 = 3;
-            throw arg1;
+            dependencyMap = 3;
+            throw value;
           } else if (arg0 === 2) {
-            c2 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            dependencyMap = 3;
+            obj = { value, done: true };
             return obj;
           }
-          const HTTP = closure_1_0(c2[10]).HTTP;
-          const obj2 = { url: null, body: null, rejectWithError: null };
-          obj2[0] = closure_1_12.THREAD_MEMBER_SETTINGS(id.id);
-          obj2[1] = c1;
-          let obj3 = closure_1_0(c2[10]);
-          obj2[2] = obj3.rejectWithMigratedError();
-          c2 = 3;
-          obj3 = { value: null, done: true };
-          obj3[0] = HTTP.patch(obj2);
-          return obj3;
+          const HTTP = tmp4(1272).HTTP;
+          const request = {
+            url: closure_1_12.THREAD_MEMBER_SETTINGS(closure_128_0.id),
+            body: closure_128_1,
+            rejectWithError: tmp4(1272).rejectWithMigratedError(),
+          };
+          dependencyMap = 3;
+          const obj2 = { value: HTTP.patch(request), done: true };
+          return obj2;
         } catch (tmp15) {
-          c2 = tmp;
+          dependencyMap = tmp;
           throw tmp15;
         }
       }
@@ -1069,186 +967,142 @@ export default {
     const tagFilter = sortOrder.tagFilter;
     const tagSetting = sortOrder.tagSetting;
     const offset = sortOrder.offset;
-    if (!loading.isLoading(channelId, sortOrder, tagFilter, tagSetting)) {
-      let obj = channelId(sortOrder[11]);
-      obj = { type: "LOAD_ARCHIVED_THREADS", channelId: null, sortOrder: null, tagFilter: null, tagSetting: null };
-      obj[1] = channelId;
-      obj[2] = sortOrder;
-      obj[3] = tagFilter;
-      obj[4] = tagSetting;
+    if (!ArchivedThreadsStore.isLoading(channelId, sortOrder, tagFilter, tagSetting)) {
+      channelId(sortOrder[11]);
+      let obj = { type: "LOAD_ARCHIVED_THREADS", channelId, sortOrder, tagFilter, tagSetting };
       obj.dispatch(obj);
-      const HTTP = require(sortOrder[10]).HTTP;
-      obj = { url: null, query: null, retries: 2, rejectWithError: true };
-      obj[0] = closure_12.THREAD_SEARCH(channelId);
-      obj1 = {
+      const HTTP = require("HTTPUtils").HTTP;
+      const request = { url: closure_12.THREAD_SEARCH(channelId), query: null, retries: 2, rejectWithError: true };
+      obj = {
         archived: true,
         sort_by: "last_message_time",
         sort_order: "desc",
-        limit: null,
+        limit: PAGE_SIZE,
         tag: null,
         tag_setting: null,
         offset: null,
       };
-      obj1[3] = PAGE_SIZE;
       let joined;
       if (tagFilter.size > 0) {
         const _Array = Array;
         joined = Array.from(tagFilter).join(",");
         const arr = Array.from(tagFilter);
       }
-      obj1[4] = joined;
-      obj1[5] = tagSetting;
-      obj1[6] = offset;
-      obj[1] = obj1;
-      const value = HTTP.get(obj);
+      obj.tag = joined;
+      obj.tag_setting = tagSetting;
+      obj.offset = offset;
+      request.query = obj;
+      value = HTTP.get(request);
       value.then(
         (body) => {
           ({ threads, members } = body.body);
           if (null == threads) {
-            let obj = channelId(sortOrder[11]);
-            obj = {
-              type: "LOAD_ARCHIVED_THREADS_FAIL",
-              channelId: null,
-              sortOrder: null,
-              tagFilter: null,
-              tagSetting: null,
-            };
-            obj[1] = channelId;
-            obj[2] = sortOrder;
-            obj[3] = tagFilter;
-            obj[4] = tagSetting;
+            let obj = { type: "LOAD_ARCHIVED_THREADS_FAIL", channelId, sortOrder, tagFilter, tagSetting };
             obj.dispatch(obj);
           } else {
             obj = {
               type: "LOAD_ARCHIVED_THREADS_SUCCESS",
-              guildId: null,
-              channelId: null,
-              offset: null,
-              sortOrder: null,
-              tagFilter: null,
-              tagSetting: null,
-              threads: null,
-              firstMessages: null,
-              mostRecentMessages: null,
+              guildId,
+              channelId,
+              offset,
+              sortOrder,
+              tagFilter,
+              tagSetting,
+              threads,
+              firstMessages: tmp2,
+              mostRecentMessages: tmp3,
               members: null,
               owners: null,
               hasMore: null,
             };
-            obj[1] = closure_0;
-            obj[2] = channelId;
-            obj[3] = offset;
-            obj[4] = sortOrder;
-            obj[5] = tagFilter;
-            obj[6] = tagSetting;
-            obj[7] = threads;
-            obj[8] = tmp2;
-            obj[9] = tmp3;
             if (members == null) {
               members = [];
             }
-            obj[10] = members.map((arg0) => callback(table[18])(arg0));
+            obj.members = members.map((item) => channelId(sortOrder[18])(item));
             const mapped = threads.map((owner) => owner.owner);
-            obj[11] = mapped.filter(closure_1_0(sortOrder[19]).isNotNullish);
-            obj[12] = tmp;
-            channelId(sortOrder[11]).dispatch(obj);
-            const obj3 = channelId(sortOrder[11]);
+            obj.owners = mapped.filter(GlobalUtils.isNotNullish);
+            obj.hasMore = tmp;
+            DispatcherDefault.dispatch(obj);
           }
         },
         () => {
-          let obj = channelId(sortOrder[11]);
-          obj = { type: "LOAD_ARCHIVED_THREADS_FAIL", channelId, sortOrder, tagFilter, tagSetting };
+          const obj = { type: "LOAD_ARCHIVED_THREADS_FAIL", channelId, sortOrder, tagFilter, tagSetting };
           obj.dispatch(obj);
         },
       );
     }
   },
-  searchThreads(closure_1_0, closure_1_1, c2, c3, c4) {
-    const _require = closure_1_0;
-    closure_1 = closure_1_1;
-    dependencyMap = c2;
-    const callback = c3;
-    let MATCH_SOME = c4;
-    if (c4 === undefined) {
-      MATCH_SOME = require("../../../discord_common/js/shared/shared-constants/ThreadSearchTagSetting.tsx")
-        .ThreadSearchTagSetting.MATCH_SOME;
+  searchThreads(arg0, arg1, arg2, arg3, arg4) {
+    _require = arg0;
+    closure_1 = arg1;
+    dependencyMap = arg2;
+    asyncGeneratorStep = arg3;
+    let MATCH_SOME = arg4;
+    if (arg4 === undefined) {
+      MATCH_SOME = require("ThreadSearchTagSetting").ThreadSearchTagSetting.MATCH_SOME;
     }
-    return callback(function* () {
-      let threads = tmp3;
-      let body = tmp2;
-      if (null != first_messages) {
-        if (tmp37.size > 0) {
+    return (async () => {
+      if (null != closure_3) {
+        if (tmp36.size > 0) {
           const _Array = Array;
-          const joined = Array.from(tmp37).join(",");
-          const arr = Array.from(tmp37);
+          const joined = Array.from(tmp36).join(",");
+          Array.from(tmp36);
         }
       }
-      const HTTP = closure_1_0(1272).HTTP;
-      obj1 = { url: null, query: null, rejectWithError: null };
-      obj1[0] = closure_1_12.THREAD_SEARCH(closure_1_1);
-      const obj2 = { name: null, tag: null, tag_setting: null };
-      obj2[0] = dependencyMap;
-      obj2[1] = joined;
-      obj2[2] = closure_1_4;
-      obj1[1] = obj2;
-      let obj5 = closure_1_0(1272);
-      obj1[2] = obj5.rejectWithMigratedError();
-      yield HTTP.get(obj1);
-      body = arg1.body;
-      threads = body.threads;
-      const most_recent_messages = body.most_recent_messages;
-      obj5 = {
-        type: "LOAD_THREADS_SUCCESS",
-        threads: null,
-        members: null,
-        guildId: null,
-        firstMessages: null,
-        mostRecentMessages: null,
+      const HTTP = tmp2(name[10]).HTTP;
+      const request = {
+        url: closure_1_12.THREAD_SEARCH(tmp3),
+        query: { name, tag: joined, tag_setting: MATCH_SOME },
+        rejectWithError: tmp2(name[10]).rejectWithMigratedError(),
       };
-      obj5[1] = threads;
-      obj5[2] = members;
-      obj5[3] = body;
-      obj5[4] = first_messages;
-      obj5[5] = most_recent_messages;
-      closure_1_1(573).dispatch(obj5);
+      await HTTP.get(request);
+      const body = arg1.body;
+      const threads = body.threads;
+      const members = body.members;
+      const first_messages = body.first_messages;
+      const most_recent_messages = body.most_recent_messages;
+      tmp3(name[11]).dispatch({
+        type: "LOAD_THREADS_SUCCESS",
+        threads,
+        members,
+        guildId: closure_129_0,
+        firstMessages: first_messages,
+        mostRecentMessages: most_recent_messages,
+      });
       return threads.map((id) => id.id);
     })();
   },
-  summarizeThread(isThread) {
-    const _require = isThread;
+  summarizeThread(isThread, arg1) {
+    _require = isThread;
     if (isThread.isThread()) {
-      if (!inProgress.isInProgress()) {
+      if (!ThreadSummaryStore.isInProgress()) {
         let flag = arg1;
-        let obj = dispatcherDefault;
+        let obj = DispatcherDefault;
         obj.dispatch({ type: "SUMMARIZE_THREAD_START" });
-        const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
-        obj = { url: null, body: null, rejectWithError: null };
-        obj[0] = closure_12.AI_SUMMARIZE_THREAD(isThread.id);
+        const HTTP = require("HTTPUtils").HTTP;
+        const request = { url: closure_12.AI_SUMMARIZE_THREAD(isThread.id), body: null, rejectWithError: null };
         if (arg1 == null) {
           flag = true;
         }
-        obj = { ephemeral: null };
-        obj[0] = flag;
-        obj[1] = obj;
-        obj[2] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
-        const tmp5 = _require;
-        const tmp5Result = sendRequest;
-        const postResult = HTTP.post(obj);
-        return HTTP.post(obj)
+        obj = { ephemeral: flag };
+        request.body = obj;
+        request.rejectWithError = require("HTTPUtils").rejectWithMigratedError();
+        const tmp5Result = require("HTTPUtils");
+        const postResult = HTTP.post(request);
+        return HTTP.post(request)
           .then(() => {
-            let obj = closure_1_1(closure_1_2[11]);
-            obj = { type: "SUMMARIZE_THREAD_SUCCESS", channelId: isThread.id };
+            const obj = { type: "SUMMARIZE_THREAD_SUCCESS", channelId: isThread.id };
             obj.dispatch(obj);
           })
           .catch(() => {
-            let obj = closure_1_1(closure_1_2[11]);
-            obj = { type: "SUMMARIZE_THREAD_FAILURE", channelId: isThread.id };
+            let obj = { type: "SUMMARIZE_THREAD_FAILURE", channelId: isThread.id };
             obj.dispatch(obj);
             obj = { title: null, body: null };
-            const intl = isThread(closure_1_2[13]).intl;
-            obj[0] = intl.string(isThread(closure_1_2[13]).t.j2d6Km);
-            const intl2 = isThread(closure_1_2[13]).intl;
-            obj[1] = intl2.string(isThread(closure_1_2[13]).t.fEptJP);
-            closure_1_1(closure_1_2[12]).show(obj);
+            const intl = util.intl;
+            obj.title = intl.string(util.t.j2d6Km);
+            const intl2 = util.intl;
+            obj.body = intl2.string(util.t.fEptJP);
+            AlertActionCreatorsDefault.show(obj);
           });
       }
     }

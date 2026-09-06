@@ -1,8 +1,9 @@
 // discord_app/hooks/useInitialValue.tsx
-import closure_0 from "../../_runtime/00019_noop.js";
+import noop from "../../_runtime/metro/00019__.js";
 
-const result = require("set").fileFinishedImporting("hooks/useInitialValue.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("hooks/useInitialValue.tsx");
 
 export default function useInitialValue(arg0) {
-  return React.useState(arg0)[0];
+  return noop.useState(arg0)[0];
 }

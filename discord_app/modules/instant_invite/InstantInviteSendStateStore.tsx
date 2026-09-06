@@ -1,25 +1,23 @@
 // discord_app/modules/instant_invite/InstantInviteSendStateStore.tsx
-import set from "../../../_runtime/00002_set.js";
-import keys from "../../../_runtime/00560_keys.js";
-import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
+import 00560__ from "../../../_runtime/metro/00560__.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-let obj = keys.create(() => ({}));
-const result = set.fileFinishedImporting("modules/instant_invite/InstantInviteSendStateStore.tsx");
+let useInstantInviteSendStates = module_560.create(() => ({}));
+const result = size.fileFinishedImporting("modules/instant_invite/InstantInviteSendStateStore.tsx");
 
 export const setSendState = function setSendState(arg0, arg1, arg2) {
-  const _require = arg0;
+  _require = arg0;
   dependencyMap = arg1;
-  obj = arg2;
-  const state = obj.getState();
-  obj = batchUpdates;
-  obj.batchUpdates(() => {
+  useInstantInviteSendStates = arg2;
+  const state = useInstantInviteSendStates.getState();
+  require("ReactBatchUpdates").batchUpdates(() => {
+    let obj = {};
+    const merged = Object.assign(closure_3);
     obj = {};
-    const merged = Object.assign(table);
-    obj = {};
-    const merged1 = Object.assign(table[closure_0]);
-    obj[closure_1] = state;
+    const merged1 = Object.assign(closure_3[closure_0]);
+    obj[closure_1] = closure_2;
     obj[closure_0] = obj;
-    state.setState(obj);
+    obj.setState(obj);
   });
 };
-export const useInstantInviteSendStates = obj;
+export { useInstantInviteSendStates };

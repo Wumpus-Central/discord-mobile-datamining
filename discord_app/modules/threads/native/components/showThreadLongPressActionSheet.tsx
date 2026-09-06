@@ -1,16 +1,15 @@
 // discord_app/modules/threads/native/components/showThreadLongPressActionSheet.tsx
-import set from "../../../../../_runtime/00002_set.js";
 import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js";
-import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/threads/native/components/showThreadLongPressActionSheet.tsx");
+const result = size.fileFinishedImporting("modules/threads/native/components/showThreadLongPressActionSheet.tsx");
 
 export default function showThreadLongPressActionSheet(channelId) {
-  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj = {
+  const obj = {
     channelId,
     onClose() {
-      callback(table[0]).hideActionSheet("ThreadLongPressActionSheet");
+      ActionSheetActionCreatorsDefault.hideActionSheet("ThreadLongPressActionSheet");
     },
   };
   obj.openLazy(asyncRequireImpl(16115, dependencyMap.paths), "ThreadLongPressActionSheet", obj);

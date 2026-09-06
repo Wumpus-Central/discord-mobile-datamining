@@ -1,23 +1,23 @@
 // discord_app/modules/safety_flows/pendingRequestTimestamp.tsx
-import set from "../../../_runtime/00002_set.js";
-import getSystemLocale from "../../intl/index.native.tsx";
-import messagesProxyDefault from "SafetyFlows.messages.js";
-import getEmptyActivityFormatter from "../parent_tools/FamilyCenterUtils.tsx";
+import util from "../../intl/index.native.tsx";
+import _modDef2690 from "SafetyFlows.messages.js";
+import FamilyCenterUtils from "../parent_tools/FamilyCenterUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 function SENT_TIMESTAMP_FORMATTER() {
-  const obj = { seconds: null, minutes: null, hours: null, yesterday: null, days: null, date: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(messagesProxyDefault.M4NOO3);
-  obj[1] = messagesProxyDefault["9nem85"];
-  obj[2] = messagesProxyDefault.sJjWRY;
-  const intl2 = getSystemLocale.intl;
-  obj[3] = intl2.string(messagesProxyDefault["7SxW32"]);
-  obj[4] = messagesProxyDefault.tVHevX;
-  obj[5] = messagesProxyDefault.q6jzya;
-  return obj;
+  const time = { seconds: null, minutes: null, hours: null, yesterday: null, days: null, date: null };
+  const intl = util.intl;
+  time.seconds = intl.string(_modDef2690.M4NOO3);
+  time.minutes = _modDef2690["9nem85"];
+  time.hours = _modDef2690.sJjWRY;
+  const intl2 = util.intl;
+  time.yesterday = intl2.string(_modDef2690["7SxW32"]);
+  time.days = _modDef2690.tVHevX;
+  time.date = _modDef2690.q6jzya;
+  return time;
 }
-const result = set.fileFinishedImporting("modules/safety_flows/pendingRequestTimestamp.tsx");
+const result = size.fileFinishedImporting("modules/safety_flows/pendingRequestTimestamp.tsx");
 
 export const formatPendingRequestSentText = function formatPendingRequestSentText(created_at) {
-  return getEmptyActivityFormatter.formatLinkTimestamp(Date.parse(created_at), SENT_TIMESTAMP_FORMATTER);
+  return FamilyCenterUtils.formatLinkTimestamp(Date.parse(created_at), SENT_TIMESTAMP_FORMATTER);
 };

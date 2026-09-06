@@ -1,10 +1,12 @@
 // discord_app/modules/errors/hooks/useVideoReadyTimeout.tsx
-import setDefault from "../../../utils/Durations.tsx";
-import closure_2 from "../../../../_runtime/00019_noop.js";
+import DurationsDefault from "../../../utils/Durations.tsx";
+import VideoStreamReadyActionCreators from "../VideoStreamReadyActionCreators.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let closure_3 = 20 * setDefault.Millis.SECOND;
-let result = require("set").fileFinishedImporting("modules/errors/hooks/useVideoReadyTimeout.tsx");
+require = fn;
+let closure_3 = 20 * DurationsDefault.Millis.SECOND;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/errors/hooks/useVideoReadyTimeout.tsx");
 
 export default function useVideoReadyTimeout(streamId) {
   streamId = streamId.streamId;
@@ -15,11 +17,10 @@ export default function useVideoReadyTimeout(streamId) {
   if (flag === undefined) {
     flag = false;
   }
-  closure_5 = undefined;
   let STREAM;
   let obj = streamKey;
   const timeout = new streamId(userId[2]).Timeout();
-  closure_5 = streamKey.useRef(timeout);
+  streamKey.useRef(timeout);
   if (videoSpinnerContext !== streamId(userId[3]).VideoSpinnerContext.SELF_STREAM) {
     if (videoSpinnerContext !== tmp(tmp2[3]).VideoSpinnerContext.REMOTE_STREAM) {
       STREAM = tmp(tmp2[4]).MediaEngineContextTypes.DEFAULT;
@@ -32,7 +33,7 @@ export default function useVideoReadyTimeout(streamId) {
           if (WindowVisibilityVideoManager.isIncomingVideoEnabled()) {
             const current = ref.current;
             current.start(loading, () => {
-              current(closure_1_1[6]).videoStreamTimedOut(current, closure_1, closure_6, closure_2);
+              streamId(userId[6]).videoStreamTimedOut(current, closure_1_1, STREAM, streamKey);
             });
             return () => {
               current.stop();
@@ -43,10 +44,10 @@ export default function useVideoReadyTimeout(streamId) {
     }, items);
     obj = { onReady: null };
     const items1 = [userId, STREAM];
-    obj[0] = obj.useCallback(() => {
+    obj.onReady = obj.useCallback(() => {
       const current = ref.current;
       current.stop();
-      const result = streamId(userId[6]).clearVideoStreamTimeout(STREAM, userId);
+      const result = VideoStreamReadyActionCreators.clearVideoStreamTimeout(STREAM, userId);
     }, items1);
     return obj;
   }

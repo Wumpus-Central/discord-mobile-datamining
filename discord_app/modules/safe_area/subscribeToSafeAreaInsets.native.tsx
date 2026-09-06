@@ -1,18 +1,20 @@
 // discord_app/modules/safe_area/subscribeToSafeAreaInsets.native.tsx
-import set from "../../../_runtime/00002_set.js";
+import AppEntryKeyContext from "../window/native/AppEntryKeyContext.tsx";
+import SafeAreaStoreDefault from "SafeAreaStore.native.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/safe_area/subscribeToSafeAreaInsets.native.tsx");
+const result = size.fileFinishedImporting("modules/safe_area/subscribeToSafeAreaInsets.native.tsx");
 
 export default function subscribeToSafeAreaInsets(arg0) {
-  const _require = arg0;
+  closure_0 = arg0;
   let DEFAULT_APP_ENTRY_KEY = arg1;
   if (arg1 === undefined) {
-    DEFAULT_APP_ENTRY_KEY = require("../window/native/AppEntryKeyContext.tsx").DEFAULT_APP_ENTRY_KEY;
+    DEFAULT_APP_ENTRY_KEY = AppEntryKeyContext.DEFAULT_APP_ENTRY_KEY;
   }
-  return DEFAULT_APP_ENTRY_KEY(1612).subscribe((arg0, arg1) => {
+  return SafeAreaStoreDefault.subscribe((arg0, arg1) => {
     const safeAreaInsets = arg0.byAppEntry[DEFAULT_APP_ENTRY_KEY].safeAreaInsets;
     if (safeAreaInsets !== arg1.byAppEntry[DEFAULT_APP_ENTRY_KEY].safeAreaInsets) {
-      callback(safeAreaInsets);
+      closure_0(safeAreaInsets);
     }
   });
 }

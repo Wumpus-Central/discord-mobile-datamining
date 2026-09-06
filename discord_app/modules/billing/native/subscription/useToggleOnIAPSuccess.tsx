@@ -1,18 +1,20 @@
 // discord_app/modules/billing/native/subscription/useToggleOnIAPSuccess.tsx
-import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import DispatcherDefault from "../../../../Dispatcher.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const result = require("set").fileFinishedImporting("modules/billing/native/subscription/useToggleOnIAPSuccess.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/billing/native/subscription/useToggleOnIAPSuccess.tsx");
 
 export default function useToggleOnIAPSuccess() {
   function toggleFlip() {
-    callback((arg0) => !arg0);
+    importDefault((arg0) => !arg0);
   }
-  [tmp2, importDefault] = callback(React.useState(false), 2);
-  const effect = React.useEffect(() => {
-    const subscription = closure_1_0(toggleFlip[2]).subscribe("IAP_PURCHASE_PRODUCT_SUCCESS", toggleFlip);
+  [tmp2, importDefault] = _slicedToArray(noop.useState(false), 2);
+  const effect = noop.useEffect(() => {
+    const subscription = DispatcherDefault.subscribe("IAP_PURCHASE_PRODUCT_SUCCESS", toggleFlip);
     return () => {
-      closure_1_0(closure_1_1[2]).unsubscribe("IAP_PURCHASE_PRODUCT_SUCCESS", closure_1);
+      require("Dispatcher").unsubscribe("IAP_PURCHASE_PRODUCT_SUCCESS", closure_1_1);
     };
   }, []);
   return tmp2;

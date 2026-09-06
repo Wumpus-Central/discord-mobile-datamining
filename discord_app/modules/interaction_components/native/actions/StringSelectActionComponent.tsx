@@ -1,27 +1,31 @@
 // discord_app/modules/interaction_components/native/actions/StringSelectActionComponent.tsx
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js";
+import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import InteractionComponentUtils from "../../InteractionComponentUtils.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/interaction_components/native/actions/StringSelectActionComponent.tsx",
 );
 
 export default function StringSelectActionComponent(type) {
-  const _require = type;
+  _require = type;
   type = type.type;
   const options = type.options;
-  let obj = _require(options[2]);
-  obj1 = componentStateContext;
+  let obj = require("InteractionComponentUtils");
+  let obj1 = componentStateContext;
   const items = [options];
   const selectPlaceholder = obj.getSelectPlaceholder(type);
   const memo = componentStateContext.useMemo(() => {
-    const found = options.filter((arg0) => arg0.default);
+    const found = options.filter((item) => item.default);
     return found.map((value) => value.value);
   }, items);
-  componentStateContext = _require(options[3]).useComponentStateContext();
+  componentStateContext = require("ComponentStateContext").useComponentStateContext();
   let modal;
-  const obj3 = _require(options[3]);
+  const obj3 = require("ComponentStateContext");
   let tmp = _require;
   const tmp4 = type;
   if (componentStateContext != null) {
@@ -30,9 +34,7 @@ export default function StringSelectActionComponent(type) {
   type(options[4])(null != modal, "StringSelectActionComponent must be rendered inside a modal ComponentStateContext");
   let tmp8;
   if (memo.length > 0) {
-    obj = { type: null, values: null };
-    obj[0] = type;
-    obj[1] = memo;
+    obj = { type, values: memo };
     tmp8 = obj;
   }
   const componentState = componentStateContext.useComponentState(type, tmp8);
@@ -48,26 +50,26 @@ export default function StringSelectActionComponent(type) {
     const mapped =
       type === type
         ? state.values
-        : [].map((arg0) => {
-            closure_0 = arg0;
-            return closure_2.findIndex((value) => value.value === closure_0);
+        : [].map((item) => {
+            closure_0 = item;
+            return options.findIndex((value) => value.value === closure_0);
           });
-    return mapped.filter((arg0) => -1 !== arg0);
+    return mapped.filter((item) => -1 !== item);
   }, items1);
   const parents = componentStateContext.getParents(type);
-  let first;
+  let labelComponent;
   if (parents != null) {
-    first = parents[0];
+    labelComponent = parents[0];
   }
   type = undefined;
-  if (first != null) {
-    type = first.type;
+  if (labelComponent != null) {
+    type = labelComponent.type;
   }
   let tmp14;
   if (type === tmp(options[5]).ComponentType.LABEL) {
-    tmp14 = first;
+    tmp14 = labelComponent;
   }
-  first = tmp14;
+  labelComponent = tmp14;
   obj = { model: null, onTap: null };
   obj1 = {};
   const tmp5 = type(options[4]);
@@ -75,20 +77,19 @@ export default function StringSelectActionComponent(type) {
   obj1.placeholder = selectPlaceholder;
   obj1.state = componentState.visualState;
   obj1.selectedOptions = memo1;
-  obj[0] = obj1;
-  obj[1] = function onTap() {
-    let obj = type(options[7]);
-    obj = {
-      selectionActionComponent: type,
-      labelComponent: first,
+  obj.model = obj1;
+  obj.onTap = function onTap() {
+    const obj = {
+      selectionActionComponent,
+      labelComponent,
       channelId: componentStateContext.channelId,
       containerId: customId,
       onSubmit: executeStateUpdate,
       allowEmpty: null,
     };
     const combined = "StringSelectComponentActionSheet:" + customId;
-    const tmp = type(options[9])(options[8], options.paths);
-    obj[5] = type(options[2]).canSelectBeEmpty(type, "modal");
+    const tmp = asyncRequireImpl(11821, dependencyMap.paths);
+    obj.allowEmpty = InteractionComponentUtils.canSelectBeEmpty(selectionActionComponent, "modal");
     obj.openLazy(tmp, combined, obj);
   };
   return state(tmp4(options[6]), obj);

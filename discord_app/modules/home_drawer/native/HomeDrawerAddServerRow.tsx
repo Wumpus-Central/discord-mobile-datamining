@@ -1,21 +1,21 @@
 // discord_app/modules/home_drawer/native/HomeDrawerAddServerRow.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
-import HomeDrawerSharedItem from "HomeDrawerShared.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import util from "../../../intl/index.native.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import HomeDrawerShared from "HomeDrawerShared.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/home_drawer/native/HomeDrawerAddServerRow.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawerAddServerRow.tsx");
 
 export const HomeDrawerAddServerRowExpandedChildren = function HomeDrawerAddServerRowExpandedChildren() {
   let obj = { title: null, subtitle: null };
   obj = { variant: "text-md/medium", color: "text-default", children: null };
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.string(getSystemLocale.t.l5WIbf);
-  obj[0] = jsx(Text.Text, { variant: "text-md/medium", color: "text-default", children: null });
-  return jsx(HomeDrawerSharedItem.HomeDrawerSharedItem, {
+  const intl = util.intl;
+  obj.children = intl.string(util.t.l5WIbf);
+  obj.title = jsx(Text_Text.Text, { variant: "text-md/medium", color: "text-default", children: null });
+  return jsx(HomeDrawerShared.HomeDrawerSharedItem, {
     variant: "text-md/medium",
     color: "text-default",
     children: null,

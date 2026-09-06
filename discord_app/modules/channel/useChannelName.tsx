@@ -1,15 +1,14 @@
 // discord_app/modules/channel/useChannelName.tsx
-import nameFromUserDefault from "../../utils/UserUtils.tsx";
-import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../experiments/ExperimentStore.tsx";
-import closure_5 from "../../stores/RelationshipStore.tsx";
-import closure_6 from "../../stores/UserStore.tsx";
-import ME from "../../Constants.tsx";
+import GlobalUtils from "../../utils/GlobalUtils.tsx";
+import UserUtilsDefault from "../../utils/UserUtils.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import ExperimentStore from "../experiments/ExperimentStore.tsx";
+import RelationshipStore from "../../stores/RelationshipStore.tsx";
+import UserStore from "../../stores/UserStore.tsx";
 
-const require = arg1;
-function computeChannelName(channel, closure_9, closure_7, arg3, arg4) {
-  let flag = arg3;
-  if (arg3 === undefined) {
+require = fn;
+function computeChannelName(channel, UserStore, RelationshipStore, flag, arg4) {
+  if (flag === undefined) {
     flag = false;
   }
   let flag2 = arg4;
@@ -17,8 +16,8 @@ function computeChannelName(channel, closure_9, closure_7, arg3, arg4) {
     flag2 = false;
   }
   if (channel.isObfuscated()) {
-    const intl3 = require("../../intl/index.native.tsx").intl;
-    return intl3.string(require("../../intl/index.native.tsx").t["/YzI63"]);
+    const intl3 = require("util").intl;
+    return intl3.string(require("util").t["/YzI63"]);
   } else {
     const type = channel.type;
     if (constants.DM === type) {
@@ -31,16 +30,15 @@ function computeChannelName(channel, closure_9, closure_7, arg3, arg4) {
         return combined;
       } else {
         const recipients = channel.recipients;
-        const mapped = recipients.map(closure_9.getUser);
-        const first = callback(mapped.filter(require("../../utils/GlobalUtils.tsx").isNotNullish), 1)[0];
+        const mapped = recipients.map(UserStore.getUser);
+        const first = _slicedToArray(mapped.filter(require("GlobalUtils").isNotNullish), 1)[0];
         if (null == first) {
           return "???";
         } else {
           if (!first.isProvisional) {
-            let str17 = closure_7.getNickname(first.id);
+            let str17 = RelationshipStore.getNickname(first.id);
             if (str17 == null) {
-              str17 = nameFromUserDefault.getName(first);
-              const obj3 = nameFromUserDefault;
+              str17 = UserUtilsDefault.getName(first);
             }
             if (str17 == null) {
               str17 = "???";
@@ -59,14 +57,13 @@ function computeChannelName(channel, closure_9, closure_7, arg3, arg4) {
         return str;
       } else {
         const recipients1 = channel.recipients;
-        _require = closure_7;
-        const mapped1 = recipients1.map(closure_9.getUser);
-        const found = mapped1.filter(require("../../utils/GlobalUtils.tsx").isNotNullish);
+        _require = RelationshipStore;
+        const mapped1 = recipients1.map(UserStore.getUser);
+        const found = mapped1.filter(require("GlobalUtils").isNotNullish);
         const mapped2 = found.map((id) => {
           nickname = nickname.getNickname(id.id);
           if (nickname == null) {
-            nickname = closure_1_1(closure_1_2[6]).getName(id);
-            const obj = closure_1_1(closure_1_2[6]);
+            nickname = UserUtilsDefault.getName(id);
           }
           return nickname;
         });
@@ -74,10 +71,8 @@ function computeChannelName(channel, closure_9, closure_7, arg3, arg4) {
           let joined = mapped2.join(", ");
         } else {
           const intl2 = tmp25(1114).intl;
-          const obj = { name: null };
-          obj[0] = nameFromUserDefault.getName(closure_9.getCurrentUser());
+          const obj = { name: UserUtilsDefault.getName(UserStore.getCurrentUser()) };
           joined = intl2.formatToPlainString(tmp25(1114).t["9Uk8PF"], obj);
-          const obj2 = nameFromUserDefault;
         }
       }
     } else {
@@ -88,8 +83,8 @@ function computeChannelName(channel, closure_9, closure_7, arg3, arg4) {
               if (tmp3.GUILD_APP !== type) {
                 if (tmp3.GUILD_CATEGORY === type) {
                   if (channel.id === closure_8) {
-                    const intl = require("../../intl/index.native.tsx").intl;
-                    let stringResult = intl.string(require("../../intl/index.native.tsx").t.GSfOoo);
+                    const intl = require("util").intl;
+                    let stringResult = intl.string(require("util").t.GSfOoo);
                   } else {
                     stringResult = str;
                     if (flag2) {
@@ -150,33 +145,34 @@ function computeChannelName(channel, closure_9, closure_7, arg3, arg4) {
     }
   }
 }
-({ ChannelTypes: error, NULL_STRING_CHANNEL_ID: closure_8 } = ME);
-const result = require("set").fileFinishedImporting("modules/channel/useChannelName.tsx");
+const Constants = fn(1074);
+({ ChannelTypes: closure_7, NULL_STRING_CHANNEL_ID: closure_8 } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/channel/useChannelName.tsx");
 
 export default function useChannelName(arg0) {
-  const _require = arg0;
+  _require = arg0;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
   }
-  const items = [closure_6, closure_4, closure_5];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  const items = [UserStore, ExperimentStore, RelationshipStore];
+  return require("initialize").useStateFromStores(items, () => {
     let tmp2 = null;
     if (null != closure_0) {
-      tmp2 = closure_1_9(tmp, closure_1_6, closure_1_5, flag);
+      tmp2 = computeChannelName(tmp, UserStore, RelationshipStore, flag);
     }
     return tmp2;
   });
 }
-export const computeDefaultGroupDmNameFromUserIds = function computeDefaultGroupDmNameFromUserIds(arr, getUser) {
-  const _require = arg2;
+export const computeDefaultGroupDmNameFromUserIds = function computeDefaultGroupDmNameFromUserIds(arr, getUser, arg2) {
+  _require = arg2;
   const mapped = arr.map(getUser.getUser);
-  const found = mapped.filter(require("../../utils/GlobalUtils.tsx").isNotNullish);
+  const found = mapped.filter(require("GlobalUtils").isNotNullish);
   const mapped1 = found.map((id) => {
     nickname = nickname.getNickname(id.id);
     if (nickname == null) {
-      nickname = closure_1_1(closure_1_2[6]).getName(id);
-      const obj = closure_1_1(closure_1_2[6]);
+      nickname = UserUtilsDefault.getName(id);
     }
     return nickname;
   });
@@ -184,23 +180,20 @@ export const computeDefaultGroupDmNameFromUserIds = function computeDefaultGroup
     let joined = mapped1.join(", ");
   } else {
     const intl = tmp(1114).intl;
-    const obj = { name: null };
-    obj[0] = nameFromUserDefault.getName(getUser.getCurrentUser());
+    const obj = { name: UserUtilsDefault.getName(getUser.getCurrentUser()) };
     joined = intl.formatToPlainString(tmp(1114).t["9Uk8PF"], obj);
-    const obj2 = nameFromUserDefault;
   }
   return joined;
 };
-export const computeDefaultGroupDmName = function computeDefaultGroupDmName(recipients, getUser) {
+export const computeDefaultGroupDmName = function computeDefaultGroupDmName(recipients, getUser, arg2) {
   recipients = recipients.recipients;
-  const _require = arg2;
+  _require = arg2;
   const mapped = recipients.map(getUser.getUser);
-  const found = mapped.filter(require("../../utils/GlobalUtils.tsx").isNotNullish);
+  const found = mapped.filter(require("GlobalUtils").isNotNullish);
   const mapped1 = found.map((id) => {
     nickname = nickname.getNickname(id.id);
     if (nickname == null) {
-      nickname = closure_1_1(closure_1_2[6]).getName(id);
-      const obj = closure_1_1(closure_1_2[6]);
+      nickname = UserUtilsDefault.getName(id);
     }
     return nickname;
   });
@@ -208,44 +201,39 @@ export const computeDefaultGroupDmName = function computeDefaultGroupDmName(reci
     let joined = mapped1.join(", ");
   } else {
     const intl = tmp(1114).intl;
-    const obj = { name: null };
-    obj[0] = nameFromUserDefault.getName(getUser.getCurrentUser());
+    const obj = { name: UserUtilsDefault.getName(getUser.getCurrentUser()) };
     joined = intl.formatToPlainString(tmp(1114).t["9Uk8PF"], obj);
-    const obj2 = nameFromUserDefault;
   }
   return joined;
 };
 export const useComputedGroupDmName = function useComputedGroupDmName(stateFromStores) {
-  const _require = stateFromStores;
-  const items = [closure_6, closure_5];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    let obj = stateFromStores;
+  _require = stateFromStores;
+  const items = [UserStore, RelationshipStore];
+  return require("initialize").useStateFromStores(items, () => {
+    let obj = nickname;
     let tmp = null;
-    if (null != stateFromStores) {
+    if (null != nickname) {
       tmp = null;
       if (obj.isMultiUserDM()) {
         const recipients = obj.recipients;
-        stateFromStores = closure_1_5;
-        const mapped = recipients.map(closure_1_6.getUser);
-        const found = mapped.filter(stateFromStores(closure_1_2[5]).isNotNullish);
+        nickname = RelationshipStore;
+        const mapped = recipients.map(UserStore.getUser);
+        const found = mapped.filter(GlobalUtils.isNotNullish);
         const mapped1 = found.map((id) => {
           nickname = nickname.getNickname(id.id);
           if (nickname == null) {
-            nickname = closure_1_1(closure_1_2[6]).getName(id);
-            const obj = closure_1_1(closure_1_2[6]);
+            nickname = UserUtilsDefault.getName(id);
           }
           return nickname;
         });
         if (mapped1.length > 0) {
           let joined = mapped1.join(", ");
         } else {
-          const intl = tmp3(tmp4[7]).intl;
-          obj = { name: null };
-          obj[0] = closure_1_1(tmp4[6]).getName(obj2.getCurrentUser());
-          joined = intl.formatToPlainString(tmp3(tmp4[7]).t["9Uk8PF"], obj);
-          const obj4 = closure_1_1(tmp4[6]);
+          const intl = tmp3(1114).intl;
+          obj = { name: UserUtilsDefault.getName(obj2.getCurrentUser()) };
+          joined = intl.formatToPlainString(tmp3(1114).t["9Uk8PF"], obj);
         }
-        obj2 = closure_1_6;
+        obj2 = UserStore;
       }
     }
     return tmp;

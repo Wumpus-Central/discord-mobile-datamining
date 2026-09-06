@@ -1,7 +1,7 @@
 // discord_app/modules/safety_flows/types.tsx
-import getSystemLocale from "../../intl/index.native.tsx";
-import messagesProxyDefault from "SafetyFlows.messages.js";
-import set from "../../../_runtime/00002_set.js";
+import util from "../../intl/index.native.tsx";
+import _modDef2690 from "SafetyFlows.messages.js";
+import size from "../../../_runtime/metro/00002__.js";
 
 let obj = {
   REFRESH_APP: -1,
@@ -24,8 +24,8 @@ obj = {
   PARENTAL_CONSENT_CONNECTION: "parental_consent_connection",
   APP_STORE_PARENTAL_REVOCATION: "app_store_parental_revocation",
 };
-let set = new Set(Object.values(obj));
 const items = [obj.PARENTAL_CONSENT_CONNECTION];
+const set = new Set(Object.values(obj));
 const items1 = [obj.APP_STORE_PARENTAL_REVOCATION];
 const set1 = new Set(items);
 obj = {
@@ -44,15 +44,15 @@ const items3 = [obj.AGE_VERIFICATION];
 const items4 = [obj.PARENTAL_CONSENT_CONNECTION];
 const items5 = [obj.APP_STORE_PARENTAL_REVOCATION];
 const obj1 = {};
-const intl = getSystemLocale.intl;
-obj1[obj.EMAIL_VERIFICATION] = intl.string(messagesProxyDefault["Qm6K/s"]);
-const intl2 = getSystemLocale.intl;
-obj1[obj.AGE_VERIFICATION] = intl2.string(messagesProxyDefault["dSkE/A"]);
-const intl3 = getSystemLocale.intl;
-obj1[obj.PARENTAL_CONSENT_CONNECTION] = intl3.string(messagesProxyDefault.dMMSA0);
-const intl4 = getSystemLocale.intl;
-obj1[obj.APP_STORE_PARENTAL_REVOCATION] = intl4.string(messagesProxyDefault.Z87TFb);
-const result = set.fileFinishedImporting("modules/safety_flows/types.tsx");
+const intl = util.intl;
+obj1[obj.EMAIL_VERIFICATION] = intl.string(_modDef2690["Qm6K/s"]);
+const intl2 = util.intl;
+obj1[obj.AGE_VERIFICATION] = intl2.string(_modDef2690["dSkE/A"]);
+const intl3 = util.intl;
+obj1[obj.PARENTAL_CONSENT_CONNECTION] = intl3.string(_modDef2690.dMMSA0);
+const intl4 = util.intl;
+obj1[obj.APP_STORE_PARENTAL_REVOCATION] = intl4.string(_modDef2690.Z87TFb);
+const result = size.fileFinishedImporting("modules/safety_flows/types.tsx");
 
 export const TaskType = obj;
 export const SafetyFlowComponentType = obj;

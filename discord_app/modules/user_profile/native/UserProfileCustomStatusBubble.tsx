@@ -1,54 +1,52 @@
 // discord_app/modules/user_profile/native/UserProfileCustomStatusBubble.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import set from "../../../utils/PlatformUtils.tsx";
-import getAvatarURLDefault from "../../../utils/AvatarUtils.tsx";
-import explicitContentFromProto from "../../user_settings/UserSettings.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
-import preloadDefault from "../../../components_native/common/FastImage.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
+import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
+import UserSettings from "../../user_settings/UserSettings.tsx";
+import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import EmojiDefault from "../../emojis/native/Emoji.tsx";
+import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import inlineStyles from "../../../../_runtime/08453_inlineStyles.js";
-import inlineStylesDefault from "../../../../_runtime/08453_inlineStyles.js";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import importAllResult from "../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import { EMOJI_URL_BASE_SIZE } from "../../emojis/EmojiConstants.tsx";
-import { Fonts } from "../../../../discord_common/js/shared/Constants.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import CustomStatusUtils from "../../custom_status/native/CustomStatusUtils.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+const inlineStylesDefault = inlineStyles;
+
+require = fn;
 function StatusBubbleConnector(arg0) {
   ({ backgroundColor, borderColor, style } = arg0);
-  const obj = { pointerEvents: "none", style, width: 20, height: 11, viewBox: "0 0 20 11", children: null };
+  const size = { pointerEvents: "none", style, width: 20, height: 11, viewBox: "0 0 20 11", children: null };
   const items = [
-    callback(inlineStyles.Path, { d: "M0 10 A10 10 0 0 1 20 10 L20 11 L0 11 Z", fill: backgroundColor }),
-    callback(inlineStyles.Path, {
+    React7(inlineStyles.Path, { d: "M0 10 A10 10 0 0 1 20 10 L20 11 L0 11 Z", fill: backgroundColor }),
+    React7(inlineStyles.Path, {
       d: "M0.5 10 A9.5 9.5 0 0 1 19.5 10",
       fill: "none",
       stroke: borderColor,
       strokeWidth: 1,
     }),
   ];
-  obj[5] = items;
-  return callback2(inlineStylesDefault, obj);
+  size.children = items;
+  return closure_1_10(inlineStylesDefault, size);
 }
 function EmojiImage(id) {
   ({ size, animated } = id);
   if (animated === undefined) {
     animated = false;
   }
-  const AnimateEmoji = explicitContentFromProto.AnimateEmoji;
+  const AnimateEmoji = UserSettings.AnimateEmoji;
   const setting = AnimateEmoji.useSetting();
-  let obj = { style: items, source: null, resizeMode: "contain" };
-  items = [{ height: size, width: size }, id.style];
-  const tmp2 = closure_9;
-  const tmp3 = preloadDefault;
+  let obj = { style: null, source: null, resizeMode: "contain" };
+  const items = [{ height: size, width: size }, id.style];
+  obj.style = items;
+  const tmp2 = React7;
+  const tmp3 = FastImageDefault;
   obj = { id: id.emojiId, animated: null, size: null };
-  const obj2 = getAvatarURLDefault;
-  obj = { uri: obj2.getEmojiURL(obj) };
-  obj[1] = Boolean(animated) && setting;
-  obj[2] = EMOJI_URL_BASE_SIZE;
-  obj[1] = obj;
+  const obj2 = AvatarUtilsDefault;
+  obj = { uri: obj2.getEmojiURL(obj), animated: Boolean(animated) && setting, size: EMOJI_URL_BASE_SIZE };
+  obj.source = obj;
   return tmp2(tmp3, obj);
 }
 function TextStatusContent(arg0) {
@@ -60,34 +58,26 @@ function TextStatusContent(arg0) {
   let obj = { paddingVertical: lineHeight / 10 };
   if (!isPlaceholderText) {
     const merged = Object.assign(isPlaceholderText);
-    obj = { variant: null, color: "text-default", lineClamp: null, onTextLayout: null, style: null, children: null };
-    obj[0] = textVariant;
-    obj[2] = lineClamp;
-    obj[3] = onTextLayout;
-    obj[4] = obj;
+    obj = { variant: textVariant, color: "text-default", lineClamp, onTextLayout, style: null, children: null };
+    obj.style = obj;
     let id;
     if (emoji != null) {
       id = emoji.id;
     }
     if (null != id) {
       obj = { children: null };
-      obj1 = { children: null };
-      const obj2 = { emojiId: null, size: null, animated: null, style: null };
-      obj2[0] = emoji.id;
-      obj2[1] = 0.9 * lineHeight;
-      obj2[2] = emoji.animated;
-      const obj3 = { marginBottom: null };
-      obj3[0] = 0.1 * -lineHeight;
-      obj2[3] = obj3;
-      obj1[0] = callback(EmojiImage, obj2);
-      const items = [callback(closure_6, obj1)];
+      let obj1 = { children: null };
+      const obj2 = { emojiId: emoji.id, size: 0.9 * lineHeight, animated: emoji.animated, style: null };
+      const obj3 = { marginBottom: 0.1 * -lineHeight };
+      obj2.style = obj3;
+      obj1.children = React7(EmojiImage, obj2);
+      const items = [React7(timestampProducer, obj1)];
       const obj4 = { style: null };
-      const obj5 = { width: null };
-      obj5[0] = 0.5 * lineHeight;
-      obj4[0] = obj5;
-      items[1] = callback(closure_6, obj4);
-      obj[0] = items;
-      let tmp8Result = tmp8(closure_11, obj);
+      const obj5 = { width: 0.5 * lineHeight };
+      obj4.style = obj5;
+      items[1] = React7(timestampProducer, obj4);
+      obj.children = items;
+      let tmp8Result = tmp8(closure_1_11, obj);
     } else {
       let name;
       if (emoji != null) {
@@ -98,31 +88,28 @@ function TextStatusContent(arg0) {
         const obj6 = { children: null };
         const items1 = [emoji.name];
         const obj7 = { style: null };
-        const obj8 = { width: null };
-        obj8[0] = 0.4 * lineHeight;
-        obj7[0] = obj8;
-        items1[1] = callback(closure_6, obj7);
-        obj6[0] = items1;
-        tmp8Result = tmp8(closure_11, obj6);
+        const obj8 = { width: 0.4 * lineHeight };
+        obj7.style = obj8;
+        items1[1] = React7(timestampProducer, obj7);
+        obj6.children = items1;
+        tmp8Result = tmp8(closure_1_11, obj6);
       }
     }
     const items2 = [tmp8Result, text];
-    obj[5] = items2;
-    return closure_10(Text.Text, obj);
+    obj.children = items2;
+    return closure_1_10(Text_Text.Text, obj);
   } else {
-    obj1 = set;
+    obj1 = PlatformUtils;
     if (obj1.isAndroid()) {
-      const obj9 = { fontFamily: null };
-      obj9[0] = Fonts.PRIMARY_NORMAL_ITALIC;
-      let obj10 = obj9;
+      const obj9 = { fontFamily: Fonts.PRIMARY_NORMAL_ITALIC };
     } else {
-      obj10 = { fontStyle: "italic" };
+      const obj10 = { fontStyle: "italic" };
     }
   }
 }
 function EmojiOnlyStatusContent(arg0) {
   ({ emoji, size } = arg0);
-  const AnimateEmoji = explicitContentFromProto.AnimateEmoji;
+  const AnimateEmoji = UserSettings.AnimateEmoji;
   let id;
   const setting = AnimateEmoji.useSetting();
   if (emoji != null) {
@@ -130,42 +117,44 @@ function EmojiOnlyStatusContent(arg0) {
   }
   let emojiURL;
   if (null != id) {
-    let obj = getAvatarURLDefault;
-    obj = { id: null, animated: null, size: null };
-    obj[0] = emoji.id;
+    let obj = { id: emoji.id, animated: null, size: null };
     let animated;
     if (emoji != null) {
       animated = emoji.animated;
     }
-    obj[1] = Boolean(animated) && setting;
-    obj[2] = EMOJI_URL_BASE_SIZE;
+    obj.animated = Boolean(animated) && setting;
+    obj.size = EMOJI_URL_BASE_SIZE;
     emojiURL = obj.getEmojiURL(obj);
     const tmp9 = Boolean(animated) && setting;
   }
-  obj = { style: callback3().container, children: null };
-  obj1 = {
+  obj = { style: closure_18().container, children: null };
+  const obj1 = {
     textEmojiStyle: { fontSize: size },
     fastImageStyle: { width: size, height: size },
     src: emojiURL,
     name: null,
   };
   let str;
-  const tmp = callback3();
-  const tmp12 = closure_6;
+  const tmp = closure_18();
+  const tmp12 = timestampProducer;
   if (emoji != null) {
     str = emoji.name;
   }
   if (str == null) {
     str = "";
   }
-  obj1[3] = str;
-  obj[1] = closure_9(EmojiDefault, obj1);
-  return closure_9(tmp12, obj);
+  obj1.name = str;
+  obj.children = React7(EmojiDefault, obj1);
+  return React7(tmp12, obj);
 }
-let c4 = importAllResult;
-({ PixelRatio: c5, View: closure_6 } = get_ActivityIndicator);
-({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
-let closure_12 = createCacheKey.createStyles((arg0) => {
+get_ActivityIndicator = fn(17);
+({ PixelRatio: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+const EMOJI_URL_BASE_SIZE = fn(1374).EMOJI_URL_BASE_SIZE;
+const Fonts = fn(1085).Fonts;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
+let createStyles = fn(4560);
+let closure_12 = createStyles.createStyles((arg0) => {
   let obj = {
     container: { position: "relative" },
     bubble: null,
@@ -176,7 +165,7 @@ let closure_12 = createCacheKey.createStyles((arg0) => {
     addStatusIconSpacer: null,
     statusBubbleLeftAligned: null,
   };
-  const colors = ThemesDefault.colors;
+  const colors = nativeDefault.colors;
   if (arg0) {
     let BACKGROUND_SURFACE_HIGH = colors.CUSTOM_STATUS_BUBBLE_BG;
     let tmp4 = tmp;
@@ -186,18 +175,19 @@ let closure_12 = createCacheKey.createStyles((arg0) => {
   }
   obj = { backgroundColor: BACKGROUND_SURFACE_HIGH, borderColor: null, borderWidth: 1 };
   const colors2 = tmp4(576).colors;
-  obj[1] = arg0 ? colors2.BORDER_MUTED : colors2.BORDER_SUBTLE;
-  obj[1] = obj;
+  obj.borderColor = arg0 ? colors2.BORDER_MUTED : colors2.BORDER_SUBTLE;
+  obj.bubble = obj;
   obj = { alignSelf: "flex-start", alignItems: "center", justifyContent: "center", borderRadius: tmp4(576).radii.lg };
   const merged = Object.assign(tmp4(576).shadows.SHADOW_LOW);
   obj.top = -14;
-  obj[2] = obj;
-  obj[3] = { position: "absolute", top: 0, left: 0, opacity: 0 };
+  obj.statusBubble = obj;
+  obj.statusBubbleMeasureable = { position: "absolute", top: 0, left: 0, opacity: 0 };
+  const size = { position: "absolute", top: -30, width: 12, height: 12, borderRadius: tmp4(576).radii.round };
   const merged1 = Object.assign(tmp4(576).shadows.SHADOW_LOW);
-  obj[4] = { position: "absolute", top: -30, width: 12, height: 12, borderRadius: tmp4(576).radii.round };
-  obj[5] = { position: "absolute", top: -10, left: 12, width: 20, height: 11 };
-  obj[6] = { width: 6 };
-  obj[7] = { alignItems: "flex-start" };
+  obj.smallCircle = size;
+  obj.largeCircle = { position: "absolute", top: -10, left: 12, width: 20, height: 11 };
+  obj.addStatusIconSpacer = { width: 6 };
+  obj.statusBubbleLeftAligned = { alignItems: "flex-start" };
   return obj;
 });
 let closure_14 = {
@@ -208,7 +198,7 @@ let closure_14 = {
   statusBubblePaddingVertical: 7,
 };
 let closure_15 = {
-  [arg1(7208).UserProfileThemeTypes.PREVIEW]: {
+  [fn(7208).UserProfileThemeTypes.PREVIEW]: {
     textVariant: "text-sm/normal",
     emojiOnlyEmojiSize: 26,
     textMinWidth: 53,
@@ -216,16 +206,20 @@ let closure_15 = {
     statusBubblePaddingVertical: 6,
   },
 };
-let closure_18 = createCacheKey.createStyles(() => ({ container: { alignItems: "center" } }));
-const forwardRefResult = importAllResult.forwardRef((showFullStatus, ref) => {
+createStyles = fn(4560);
+let closure_18 = createStyles.createStyles(() => ({ container: { alignItems: "center" } }));
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileCustomStatusBubble.tsx");
+
+export default noop.forwardRef((showFullStatus, ref) => {
   ({ customStatusActivity, themeType, hasCustomProfileTheme, editEnabled } = showFullStatus);
   showFullStatus = showFullStatus.showFullStatus;
-  const _require = tmp2;
+  _require = tmp2;
   ({ onPressTruncatedStatus, previewEmoji, previewText, placeholderText, prompt: importDefault } = showFullStatus);
   ({ style, emojiOnlyStyle } = showFullStatus);
   const tmp3 = scaledTextLineHeight(hasCustomProfileTheme);
-  let obj = _require(textVariant[16]);
-  const colors = importDefault(textVariant[8]).colors;
+  let obj = require("useToken");
+  const colors = require("native").colors;
   if (hasCustomProfileTheme) {
     let BACKGROUND_SURFACE_HIGH = colors.CUSTOM_STATUS_BUBBLE_BG;
     let tmp7 = tmp6;
@@ -241,7 +235,7 @@ const forwardRefResult = importAllResult.forwardRef((showFullStatus, ref) => {
   let tmp11;
   const token1 = tmp4Result.useToken(hasCustomProfileTheme ? colors2.BORDER_MUTED : colors2.BORDER_SUBTLE);
   if (null != themeType) {
-    tmp11 = table[themeType];
+    tmp11 = closure_15[themeType];
   }
   if (tmp11 == null) {
     tmp11 = closure_14;
@@ -258,7 +252,7 @@ const forwardRefResult = importAllResult.forwardRef((showFullStatus, ref) => {
     }
     previewText = state;
   }
-  const gameMentionsAsPlainText = _require(textVariant[18]).useGameMentionsAsPlainText(previewText);
+  const gameMentionsAsPlainText = require("useGameMentionsAsPlainText").useGameMentionsAsPlainText(previewText);
   let tmp15 = null != gameMentionsAsPlainText;
   if (tmp15) {
     tmp15 = "" !== gameMentionsAsPlainText;
@@ -285,7 +279,7 @@ const forwardRefResult = importAllResult.forwardRef((showFullStatus, ref) => {
   if (tmp19) {
     tmp19 = "" !== placeholderText;
   }
-  closure_7 = tmp19;
+  const isPlaceholderText = tmp19;
   let str4 = gameMentionsAsPlainText;
   if (tmp19) {
     str4 = placeholderText;
@@ -294,7 +288,7 @@ const forwardRefResult = importAllResult.forwardRef((showFullStatus, ref) => {
   if (tmp20) {
     tmp20 = "" !== str4;
   }
-  const callback = tmp20;
+  closure_9 = tmp20;
   if (!tmp15) {
     tmp15 = tmp17;
   }
@@ -321,15 +315,15 @@ const forwardRefResult = importAllResult.forwardRef((showFullStatus, ref) => {
   if (tmp18) {
     num2 = emojiOnlyEmojiSize + 2 * statusBubblePaddingVertical;
   }
-  obj[1] = num2;
+  obj.minHeight = num2;
   if (tmp20) {
     let num3 = statusBubblePaddingVertical;
   } else {
     num3 = 0;
   }
-  obj[2] = num3;
-  obj[3] = statusBubblePaddingHorizontal;
-  obj = {
+  obj.paddingVertical = num3;
+  obj.paddingHorizontal = statusBubblePaddingHorizontal;
+  const rect = {
     top: statusBubblePaddingVertical,
     bottom: statusBubblePaddingVertical,
     left: statusBubblePaddingHorizontal,
@@ -337,8 +331,8 @@ const forwardRefResult = importAllResult.forwardRef((showFullStatus, ref) => {
   };
   ref = obj4.useRef(null);
   const imperativeHandle = obj4.useImperativeHandle(ref, () => ref.current);
-  const tmp4Result1 = _require(textVariant[18]);
-  scaledTextLineHeight = _require(textVariant[19]).useScaledTextLineHeight(textVariant);
+  const tmp4Result1 = require("useGameMentionsAsPlainText");
+  scaledTextLineHeight = require("useScaledTextLineHeight").useScaledTextLineHeight(textVariant);
   if (!tmp15) {
     if (!tmp22) {
       return null;
@@ -348,20 +342,22 @@ const forwardRefResult = importAllResult.forwardRef((showFullStatus, ref) => {
   if (previewEmoji != null) {
     name = previewEmoji.name;
   }
-  obj1 = { text: null };
+  obj = { text: null };
   let items = [name, str4];
-  const found = items.filter((arg0) => null != arg0);
-  obj1[0] = found.join(" ");
+  const found = items.filter((item) => null != item);
+  obj.text = found.join(" ");
   const items1 = [style];
   let tmp30;
   if (tmp18) {
     tmp30 = emojiOnlyStyle;
   }
-  const obj2 = { style: items1, children: null };
+  const obj1 = { style: items1, children: null };
   items1[1] = tmp30;
+  const obj2 = { style: null };
   const items2 = [,];
   ({ bubble: arr3[0], smallCircle: arr3[1] } = tmp3);
-  const items3 = [callback(closure_6, { style: items2 }), ,];
+  obj2.style = items2;
+  const items3 = [closure_9(closure_6, obj2), ,];
   let tmp31Result;
   if (null != onPressTruncatedStatus) {
     if (!tmp2) {
@@ -371,24 +367,18 @@ const forwardRefResult = importAllResult.forwardRef((showFullStatus, ref) => {
         ({ bubble: arr5[0], statusBubble: arr5[1] } = tmp3);
         items4[2] = obj;
         items4[3] = tmp3.statusBubbleMeasureable;
-        obj3[0] = items4;
+        obj3.style = items4;
         obj4 = {
-          text: null,
-          isPlaceholderText: null,
-          emoji: null,
-          textVariant: null,
-          onTextLayout: null,
-          lineHeight: null,
+          text: str4,
+          isPlaceholderText: tmp19,
+          emoji: previewEmoji,
+          textVariant,
+          onTextLayout(nativeEvent) {
+            closure_10(nativeEvent.nativeEvent.lines.length > Math.ceil(2 * hasOwnProperty.getFontScale()));
+          },
+          lineHeight: scaledTextLineHeight,
         };
-        obj4[0] = str4;
-        obj4[1] = tmp19;
-        obj4[2] = previewEmoji;
-        obj4[3] = textVariant;
-        obj4[4] = function onTextLayout(nativeEvent) {
-          callback3(nativeEvent.nativeEvent.lines.length > Math.ceil(2 * previewEmoji.getFontScale()));
-        };
-        obj4[5] = scaledTextLineHeight;
-        obj3[1] = tmp31(TextStatusContent, obj4);
+        obj3.children = tmp31(TextStatusContent, obj4);
         tmp31Result = tmp31(tmp29, obj3);
       }
     }
@@ -403,18 +393,18 @@ const forwardRefResult = importAllResult.forwardRef((showFullStatus, ref) => {
   }
   function handlePressAddOrEditStatus() {
     trackUserProfileAction({ action: "PRESS_EDIT_CUSTOM_STATUS" });
-    let obj = closure_1_1(textVariant[20]);
+    let obj = ActionSheetActionCreatorsDefault;
     obj.hideActionSheet();
     obj = { analyticsLocations: null, prompt: null };
-    const items = [closure_1_1(textVariant[22]).USER_PROFILE_CUSTOM_STATUS_BUBBLE];
-    obj[0] = items;
-    obj[1] = closure_1;
-    const result = callback(textVariant[21]).openEditCustomStatusModal(obj);
+    const items = [AnalyticsLocationDefault.USER_PROFILE_CUSTOM_STATUS_BUBBLE];
+    obj.analyticsLocations = items;
+    obj.prompt = _prompt;
+    const result = CustomStatusUtils.openEditCustomStatusModal(obj);
   }
   const obj5 = { style: items5, ref, children: null };
   items5[3] = statusBubbleLeftAligned;
   const items6 = [
-    callback(StatusBubbleConnector, { style: tmp3.largeCircle, backgroundColor: token, borderColor: token1 }),
+    closure_9(StatusBubbleConnector, { style: tmp3.largeCircle, backgroundColor: token, borderColor: token1 }),
   ];
   if (tmp22) {
     let stringResult = placeholderText;
@@ -431,96 +421,80 @@ const forwardRefResult = importAllResult.forwardRef((showFullStatus, ref) => {
       children: null,
     };
     const intl4 = tmp4(tmp5[23]).intl;
-    obj7[1] = intl4.string(tmp4(tmp5[23]).t["zrpF/b"]);
+    obj7.accessibilityLabel = intl4.string(tmp4(tmp5[23]).t["zrpF/b"]);
     let formatToPlainStringResult;
     if (tmp19) {
       const intl5 = tmp4(tmp5[23]).intl;
-      const obj8 = { prompt: null };
-      obj8[0] = placeholderText;
+      const obj8 = { prompt: placeholderText };
       formatToPlainStringResult = intl5.formatToPlainString(tmp4(tmp5[23]).t.ioWOMP, obj8);
     }
-    obj7[2] = formatToPlainStringResult;
-    obj7[3] = handlePressAddOrEditStatus;
-    obj7[4] = obj;
+    obj7.accessibilityHint = formatToPlainStringResult;
+    obj7.onPress = handlePressAddOrEditStatus;
+    obj7.hitSlop = rect;
     let str7 = "text-md/medium";
     if (tmp19) {
       str7 = "text-md/normal";
     }
     const obj9 = {
-      variant: null,
+      variant: str7,
       color: "control-secondary-text-default",
       lineClamp: null,
       style: null,
       children: null,
     };
-    obj9[0] = str7;
     let _Math = Math;
-    obj9[2] = Math.ceil(2 * previewEmoji.getFontScale());
-    const obj10 = { paddingVertical: null };
-    obj10[0] = scaledTextLineHeight / 10;
+    obj9.lineClamp = Math.ceil(2 * previewEmoji.getFontScale());
+    const obj10 = { paddingVertical: scaledTextLineHeight / 10 };
     if (!tmp19) {
       const merged = Object.assign(tmp19);
-      obj9[3] = obj10;
-      const obj11 = { color: null, size: "xs", style: null };
-      obj11[0] = tmp7(tmp5[8]).colors.CONTROL_SECONDARY_TEXT_DEFAULT;
+      obj9.style = obj10;
+      const obj11 = { color: tmp7(tmp5[8]).colors.CONTROL_SECONDARY_TEXT_DEFAULT, size: "xs", style: null };
       let tmp44;
       if (tmp4Result3.isAndroid()) {
-        const obj12 = { marginBottom: null };
-        obj12[0] = 0.1 * -scaledTextLineHeight;
+        const obj12 = { marginBottom: 0.1 * -scaledTextLineHeight };
         tmp44 = obj12;
       }
       const obj13 = { children: null };
-      obj11[2] = tmp44;
-      obj13[0] = tmp31(tmp4(tmp5[25]).CirclePlusIcon, obj11);
+      obj11.style = tmp44;
+      obj13.children = tmp31(tmp4(tmp5[25]).CirclePlusIcon, obj11);
       const items7 = [tmp31(tmp29, obj13), ,];
-      const obj14 = { style: null };
-      obj14[0] = tmp3.addStatusIconSpacer;
+      const obj14 = { style: tmp3.addStatusIconSpacer };
       items7[1] = tmp31(tmp29, obj14);
       items7[2] = stringResult;
-      obj9[4] = items7;
-      obj7[5] = tmp28(tmp4(tmp5[14]).Text, obj9);
+      obj9.children = items7;
+      obj7.children = tmp28(tmp4(tmp5[14]).Text, obj9);
       tmp31Result = tmp31(tmp4(tmp5[24]).PressableOpacity, obj7);
       tmp4Result3 = tmp4(tmp5[13]);
     } else {
       if (tmp4Result4.isAndroid()) {
-        const obj15 = { fontFamily: null };
-        obj15[0] = str4.PRIMARY_NORMAL_ITALIC;
-        let obj16 = obj15;
+        const obj15 = { fontFamily: str4.PRIMARY_NORMAL_ITALIC };
       } else {
-        obj16 = { fontStyle: "italic" };
+        const obj16 = { fontStyle: "italic" };
       }
       tmp4Result4 = tmp4(tmp5[13]);
     }
   } else {
     function renderStatusContent() {
-      if (callback2) {
+      if (closure_9) {
         let obj = {
-          text: null,
-          isPlaceholderText: null,
-          emoji: null,
-          textVariant: null,
+          text: str4,
+          isPlaceholderText,
+          emoji: previewEmoji,
+          textVariant,
           lineClamp: null,
           lineHeight: null,
         };
-        obj[0] = str4;
-        obj[1] = closure_7;
-        obj[2] = previewEmoji;
-        obj[3] = textVariant;
         let rounded;
         if (!closure_0) {
           const _Math = Math;
-          rounded = Math.ceil(2 * previewEmoji.getFontScale());
+          rounded = Math.ceil(2 * hasOwnProperty.getFontScale());
         }
-        obj[4] = rounded;
-        obj[5] = scaledTextLineHeight;
-        let tmp7Result = callback2(closure_1_17, obj);
-        const tmp7 = callback2;
-        const tmp8 = closure_1_17;
+        obj.lineClamp = rounded;
+        obj.lineHeight = scaledTextLineHeight;
+        let tmp7Result = React7(TextStatusContent, obj);
       } else if (closure_6) {
-        obj = { emoji: null, size: null };
-        obj[0] = previewEmoji;
-        obj[1] = emojiOnlyEmojiSize;
-        tmp7Result = callback2(closure_1_19, obj);
+        obj = { emoji: previewEmoji, size: emojiOnlyEmojiSize };
+        tmp7Result = React7(EmojiOnlyStatusContent, obj);
       }
       return tmp7Result;
     }
@@ -534,11 +508,11 @@ const forwardRefResult = importAllResult.forwardRef((showFullStatus, ref) => {
         children: null,
       };
       const intl2 = tmp4(tmp5[23]).intl;
-      obj17[1] = intl2.string(tmp4(tmp5[23]).t.QdHxos);
-      obj17[2] = obj1;
-      obj17[3] = handlePressAddOrEditStatus;
-      obj17[4] = obj;
-      obj17[5] = renderStatusContent();
+      obj17.accessibilityLabel = intl2.string(tmp4(tmp5[23]).t.QdHxos);
+      obj17.accessibilityValue = obj;
+      obj17.onPress = handlePressAddOrEditStatus;
+      obj17.hitSlop = rect;
+      obj17.children = renderStatusContent();
       tmp31Result = tmp31(tmp4(tmp5[24]).PressableOpacity, obj17);
     } else {
       if (null != onPressTruncatedStatus) {
@@ -552,8 +526,7 @@ const forwardRefResult = importAllResult.forwardRef((showFullStatus, ref) => {
             if (str6 == null) {
               str6 = "";
             }
-            const obj18 = { emoji: null, status: null };
-            obj18[0] = str6;
+            const obj18 = { emoji: str6, status: null };
             if (str4 == null) {
               str4 = "";
             }
@@ -564,11 +537,11 @@ const forwardRefResult = importAllResult.forwardRef((showFullStatus, ref) => {
               hitSlop: null,
               children: null,
             };
-            obj18[1] = str4;
-            obj19[1] = intl.formatToPlainString(tmp4(tmp5[23]).t.UpF5Qa, obj18);
-            obj19[2] = onPressTruncatedStatus;
-            obj19[3] = obj;
-            obj19[4] = renderStatusContent();
+            obj18.status = str4;
+            obj19.accessibilityLabel = intl.formatToPlainString(tmp4(tmp5[23]).t.UpF5Qa, obj18);
+            obj19.onPress = onPressTruncatedStatus;
+            obj19.hitSlop = rect;
+            obj19.children = renderStatusContent();
             tmp31Result = tmp31(tmp4(tmp5[24]).PressableOpacity, obj19);
           }
         }
@@ -577,11 +550,8 @@ const forwardRefResult = importAllResult.forwardRef((showFullStatus, ref) => {
     }
   }
   items6[1] = tmp31Result;
-  obj5[2] = items6;
+  obj5.children = items6;
   items3[2] = closure_10(closure_6, obj5);
-  obj2[1] = items3;
-  return closure_10(closure_6, obj2);
+  obj1.children = items3;
+  return closure_10(closure_6, obj1);
 });
-let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileCustomStatusBubble.tsx");
-
-export default forwardRefResult;

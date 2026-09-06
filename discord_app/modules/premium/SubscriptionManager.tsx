@@ -1,17 +1,16 @@
 // discord_app/modules/premium/SubscriptionManager.tsx
-import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
-import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_3 from "../../stores/UserStore.tsx";
-import closure_4 from "../../stores/billing/BillingInfoStore.tsx";
-import closure_5 from "../../stores/billing/SubscriptionStore.tsx";
-import closure_6 from "../../stores/game_store/EntitlementStore.tsx";
-import GuildFeatures from "PremiumConstants.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import UserStore from "../../stores/UserStore.tsx";
+import BillingInfoStore from "../../stores/billing/BillingInfoStore.tsx";
+import SubscriptionStore from "../../stores/billing/SubscriptionStore.tsx";
+import EntitlementStore from "../../stores/game_store/EntitlementStore.tsx";
+import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
-let require = arg1;
-({ PREMIUM_SUBSCRIPTION_APPLICATION: error, PremiumTypes: closure_8 } = GuildFeatures);
-initializeDefault;
+let require = fn;
+const PremiumConstants = fn(1373);
+({ PREMIUM_SUBSCRIPTION_APPLICATION: closure_7, PremiumTypes: closure_8 } = PremiumConstants);
 let prototype = function SubscriptionManager() {
-  const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+  let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
   applyArgumentsResult.actions = {
     POST_CONNECTION_OPEN() {
@@ -20,16 +19,15 @@ let prototype = function SubscriptionManager() {
       const result2 = applyArgumentsResult.maybeFetchMostRecentSubscription();
     },
   };
-  applyArgumentsResult.maybeFetchSubscriptions = callback(function* () {
+  applyArgumentsResult.maybeFetchSubscriptions = asyncGeneratorStep(async (arg0, value) => {
     if (currentUser === 2) {
       currentUser = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp4 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
@@ -40,28 +38,25 @@ let prototype = function SubscriptionManager() {
         if (0 === c2) {
           if (arg0 === 1) {
             currentUser = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             currentUser = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
-            closure_1 = tmp5;
-            let paymentSourceId = tmp2;
-            paymentSourceId = undefined;
+            dependencyMap = tmp5;
+            let premiumSubscription;
             currentUser = currentUser.getCurrentUser();
             if (obj9.isPremium(currentUser)) {
-              let isSubscriptionFetching = closure_1_5.hasFetchedSubscriptions();
+              let isSubscriptionFetching = isFetchingMostRecentSubscription.hasFetchedSubscriptions();
               if (!isSubscriptionFetching) {
-                isSubscriptionFetching = closure_1_4.isSubscriptionFetching;
+                isSubscriptionFetching = BillingInfoStore.isSubscriptionFetching;
               }
               if (!isSubscriptionFetching) {
-                let obj2 = closure_1_0(closure_1_1[8]);
+                let obj2 = tmp2(4884);
                 c2 = 1;
                 currentUser = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = obj2.fetchSubscriptions();
+                const obj1 = { value: obj2.fetchSubscriptions(), done: false };
                 return obj1;
               }
             }
@@ -71,37 +66,34 @@ let prototype = function SubscriptionManager() {
         } else if (1 === tmp5) {
           if (arg0 === 1) {
             currentUser = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             currentUser = 3;
-            obj2 = { value: null, done: true };
-            obj2[0] = arg1;
+            obj2 = { value, done: true };
             return obj2;
           }
         } else if (arg0 === 1) {
           currentUser = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           currentUser = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj = { value, done: true };
           return obj;
         }
-        paymentSourceId = closure_1_5.getPremiumSubscription();
-        paymentSourceId = undefined;
-        if (paymentSourceId != null) {
-          paymentSourceId = paymentSourceId.paymentSourceId;
+        premiumSubscription = isFetchingMostRecentSubscription.getPremiumSubscription();
+        let paymentSourceId;
+        if (premiumSubscription != null) {
+          paymentSourceId = premiumSubscription.paymentSourceId;
         }
         let hasItem = null != paymentSourceId;
         if (!hasItem) {
-          const applicationIdsFetched = closure_1_6.applicationIdsFetched;
+          const applicationIdsFetched = EntitlementStore.applicationIdsFetched;
           hasItem = applicationIdsFetched.has(closure_1_7);
         }
         if (!hasItem) {
           c2 = 2;
           currentUser = 1;
-          const obj3 = { value: null, done: false };
-          obj3[0] = closure_1_0(closure_1_1[9]).fetchUserEntitlementsForApplication(closure_1_7);
+          const obj3 = { value: tmp2(7400).fetchUserEntitlementsForApplication(closure_1_7), done: false };
           return obj3;
         }
       } catch (tmp22) {
@@ -119,9 +111,9 @@ let prototype = function SubscriptionManager() {
     if (premiumType == null) {
       premiumType = null;
     }
-    const obj2 = applyArgumentsResult(table[7]);
+    const obj2 = applyArgumentsResult(dependencyMap[7]);
     const tmp = applyArgumentsResult;
-    const tmp2 = table;
+    const tmp2 = dependencyMap;
     let hasHadPremiumResult = null != currentUser;
     isFetchingMostRecentSubscription = isFetchingMostRecentSubscription.getIsFetchingMostRecentSubscription();
     if (hasHadPremiumResult) {
@@ -138,75 +130,70 @@ let prototype = function SubscriptionManager() {
       const tmpResult = tmp(tmp2[8]);
     }
   };
-  require = applyArgumentsResult;
-  applyArgumentsResult.maybeFetchCountryCode = callback(function* () {
-    if (v0 === 2) {
-      v0 = 3;
-      HermesBuiltin.throwTypeError();
+  closure_129_0 = applyArgumentsResult;
+  applyArgumentsResult.maybeFetchCountryCode = asyncGeneratorStep(async (arg0, value) => {
+    if (v3 === 2) {
+      v3 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp3 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
       }
     } else {
       try {
-        v0 = 2;
-        if (0 === table) {
+        v3 = 2;
+        if (0 === dependencyMap) {
           if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
+            v3 = 3;
+            throw value;
           } else if (arg0 === 2) {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            v3 = 3;
+            obj = { value, done: true };
             return obj;
           } else {
-            const currentUser = closure_1_3.getCurrentUser();
-            let isPremiumResult = v0(table[7]).isPremium(currentUser);
+            currentUser = currentUser.getCurrentUser();
+            let isPremiumResult = v3(dependencyMap[7]).isPremium(currentUser);
             if (isPremiumResult) {
-              isPremiumResult = !closure_1_4.ipCountryCodeLoaded;
+              isPremiumResult = !ipCountryCodeLoaded.ipCountryCodeLoaded;
             }
             if (isPremiumResult) {
-              table = 1;
-              v0 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = v0.fetchCountryCode();
+              dependencyMap = 1;
+              v3 = 1;
+              const obj1 = { value: applyArgumentsResult.fetchCountryCode(), done: false };
               return obj1;
             }
-            const obj5 = v0(table[7]);
+            const obj5 = v3(dependencyMap[7]);
           }
         } else if (arg0 === 1) {
-          v0 = 3;
-          throw arg1;
+          v3 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          v0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          v3 = 3;
+          obj = { value, done: true };
           return obj;
         }
-        v0 = 3;
+        v3 = 3;
         return { value: "HermesInternal", done: null };
       } catch (tmp8) {
-        v0 = tmp;
+        v3 = tmp;
         throw tmp8;
       }
     }
   });
-  applyArgumentsResult.fetchCountryCode = callback(function* () {
+  applyArgumentsResult.fetchCountryCode = asyncGeneratorStep(async (arg0, value) => {
     if (c2 === 2) {
       c2 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp3 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
@@ -217,45 +204,40 @@ let prototype = function SubscriptionManager() {
         if (0 === dependencyMap) {
           if (arg0 === 1) {
             c2 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c2 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
-            closure_0 = tmp4;
+            applyArgumentsResult = tmp4;
             dependencyMap = 1;
             c2 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = closure_1_0(4884).fetchIpCountryCode();
+            let obj1 = { value: applyArgumentsResult(4884).fetchIpCountryCode(), done: false };
             return obj1;
           }
         } else {
           if (1 === tmp4) {
             if (arg0 === 1) {
               c2 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c2 = 3;
-              const obj2 = { value: null, done: true };
-              obj2[0] = arg1;
+              const obj2 = { value, done: true };
               return obj2;
-            } else if (null != closure_1_4.ipCountryCode) {
-              obj1 = closure_1_0(4884);
+            } else if (null != ipCountryCode.ipCountryCode) {
+              obj1 = applyArgumentsResult(4884);
               dependencyMap = 2;
               c2 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = obj1.fetchPaymentSources();
+              const obj3 = { value: obj1.fetchPaymentSources(), done: false };
               return obj3;
             }
           } else if (arg0 === 1) {
             c2 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c2 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           }
           c2 = 3;
@@ -271,6 +253,7 @@ let prototype = function SubscriptionManager() {
 }.prototype;
 class prototype extends tmp3 {}
 prototype = new prototype();
-let result = require("set").fileFinishedImporting("modules/premium/SubscriptionManager.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/premium/SubscriptionManager.tsx");
 
 export default prototype;

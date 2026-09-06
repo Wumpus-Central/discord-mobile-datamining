@@ -1,7 +1,7 @@
 // discord_assets/assets/premium/tiered_tenure_badging/mobile_diamond_badge_large.png.js
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting(
+const result = size.fileFinishedImporting(
   "../discord_assets/assets/premium/tiered_tenure_badging/mobile_diamond_badge_large.png.js",
 );
 

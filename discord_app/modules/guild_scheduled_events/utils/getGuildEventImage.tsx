@@ -1,10 +1,10 @@
 // discord_app/modules/guild_scheduled_events/utils/getGuildEventImage.tsx
-import set from "../../../../_runtime/00002_set.js";
-import ME from "../../../Constants.tsx";
-import handleImageLoad from "../../image_upload/ImageLoaderUtils.tsx";
+import Constants from "../../../Constants.tsx";
+import ImageLoaderUtils from "../../image_upload/ImageLoaderUtils.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const Endpoints = ME.Endpoints;
-let result = set.fileFinishedImporting("modules/guild_scheduled_events/utils/getGuildEventImage.tsx");
+const Endpoints = Constants.Endpoints;
+let result = size.fileFinishedImporting("modules/guild_scheduled_events/utils/getGuildEventImage.tsx");
 
 export default function getGuildEventImageURL(image, size) {
   if (null == image.image) {
@@ -13,11 +13,10 @@ export default function getGuildEventImageURL(image, size) {
     let result = size;
     if (null == size) {
       const _window = window;
-      result = window.screen.width * handleImageLoad.getDevicePixelRatio();
-      const obj = handleImageLoad;
+      result = window.screen.width * ImageLoaderUtils.getDevicePixelRatio();
     }
     const _window2 = window;
-    const bestMediaProxySize = handleImageLoad.getBestMediaProxySize(result);
+    const bestMediaProxySize = ImageLoaderUtils.getBestMediaProxySize(result);
     if (null != CDN_HOST) {
       const _HermesInternal = HermesInternal;
       let combined = "https://" + CDN_HOST + "/guild-events/" + image.id + "/" + image.image;

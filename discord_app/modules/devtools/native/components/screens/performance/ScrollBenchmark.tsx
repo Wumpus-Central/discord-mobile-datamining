@@ -1,14 +1,12 @@
 // discord_app/modules/devtools/native/components/screens/performance/ScrollBenchmark.tsx
-import noopAll from "../../../../../../../_runtime/00019_noop.js";
-import TableRowInner from "../../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import TableRow from "../../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import useFrameMonitorDefault from "useFrameMonitor.tsx";
-import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
+import noop from "../../../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting(
-  "modules/devtools/native/components/screens/performance/ScrollBenchmark.tsx",
-);
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/devtools/native/components/screens/performance/ScrollBenchmark.tsx");
 
 export default function ScrollBenchmark(subLabel) {
   let str = subLabel.subLabel;
@@ -26,10 +24,10 @@ export default function ScrollBenchmark(subLabel) {
   if (monitoring) {
     str3 = "danger";
   }
-  obj[2] = str3;
+  obj.variant = str3;
   if (monitoring) {
     start = tmp.stop;
   }
-  obj[4] = start;
-  return jsx(TableRowInner.TableRow, { label: str2, subLabel: str, variant: null, arrow: true, onPress: null });
+  obj.onPress = start;
+  return jsx(TableRow.TableRow, { label: str2, subLabel: str, variant: null, arrow: true, onPress: null });
 }

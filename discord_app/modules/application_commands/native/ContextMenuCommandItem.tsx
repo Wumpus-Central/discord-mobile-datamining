@@ -1,33 +1,29 @@
 // discord_app/modules/application_commands/native/ContextMenuCommandItem.tsx
-import applyDefault from "../../../../_runtime/00012_apply.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import preloadDefault from "../../../components_native/common/FastImage.tsx";
-import TableRowInner from "../../../design/components/TableRow/native/TableRow.native.tsx";
-import getApplicationCommandsIconSource from "ApplicationCommandUtils.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import _modDef12 from "../../../../_runtime/metro/00012__.js";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
+import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
+import application_commands_ApplicationCommandUtils from "ApplicationCommandUtils.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-createCacheKey = { commandIcon: null, loadingIcon: null, loadingName: null };
-createCacheKey = { width: 32, height: 32, borderRadius: ThemesDefault.radii.lg };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
-const obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
-createCacheKey[2] = {
-  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { commandIcon: null, loadingIcon: null, loadingName: null };
+let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.lg };
+createStyles.commandIcon = size;
+createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
+createStyles.loadingIcon = createStyles;
+createStyles.loadingName = {
+  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
   height: 24,
-  borderRadius: ThemesDefault.radii.md,
+  borderRadius: nativeDefault.radii.md,
 };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const obj2 = {
-  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
-  height: 24,
-  borderRadius: ThemesDefault.radii.md,
-};
-const result = require("set").fileFinishedImporting("modules/application_commands/native/ContextMenuCommandItem.tsx");
+let closure_6 = createStyles.createStyles(createStyles);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/application_commands/native/ContextMenuCommandItem.tsx");
 
 export default function ContextMenuCommandItem(item) {
   item = item.item;
@@ -39,17 +35,14 @@ export default function ContextMenuCommandItem(item) {
     name = section.name;
   }
   items[1] = name;
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     const type = item.type;
-    const intl = tmp2(tmp3[7]).intl;
+    const intl = tmp2(1114).intl;
     let name;
     if (section != null) {
       name = section.name;
     }
-    return intl.formatToPlainString(item(closure_1_2[7]).t.Pk4Mz3, {
-      applicationName: name,
-      commandName: item.displayName,
-    });
+    return intl.formatToPlainString(util.t.Pk4Mz3, { applicationName: name, commandName: item.displayName });
   }, items);
   let obj = item(12231);
   const applicationCommandsIconSource = obj.getApplicationCommandsIconSource(section);
@@ -64,15 +57,13 @@ export default function ContextMenuCommandItem(item) {
   };
   let tmp8Result = null != applicationCommandsIconSource;
   if (tmp8Result) {
-    obj = { style: null, source: null };
-    obj[0] = tmp.commandIcon;
-    obj[1] = applicationCommandsIconSource;
+    obj = { style: tmp.commandIcon, source: applicationCommandsIconSource };
     tmp8Result = tmp8(section(5587), obj);
   }
-  obj[3] = tmp8Result;
-  obj[4] = jsx(item(4505).SendMessageIcon, {});
-  obj[5] = start;
-  obj[6] = end;
+  obj.icon = tmp8Result;
+  obj.trailing = jsx(item(4505).SendMessageIcon, {});
+  obj.start = start;
+  obj.end = end;
   return jsx(item(5605).TableRow, {
     accessibilityLabel: memo,
     onPress,
@@ -85,48 +76,50 @@ export default function ContextMenuCommandItem(item) {
 }
 export const ContextMenuCommandLoadingItem = function ContextMenuCommandLoadingItem(arg0) {
   ({ start, end } = arg0);
-  const tmp = callback();
+  const tmp = closure_6();
   let obj = { label: null, icon: null, start: null, end: null };
   obj = { style: null };
   const items = [tmp.loadingName];
-  obj = { width: "" + applyDefault.random(60, 80) + "%" };
+  obj = { width: "" + _modDef12.random(60, 80) + "%" };
   items[1] = obj;
-  obj[0] = items;
-  obj[0] = <View width={"" + applyDefault.random(60, 80) + "%"} />;
+  obj.style = items;
+  obj.label = <View width={"" + _modDef12.random(60, 80) + "%"} />;
+  const obj1 = { style: null };
   const items1 = [,];
   ({ commandIcon: arr2[0], loadingIcon: arr2[1] } = tmp);
-  obj[1] = <View style={items1} />;
-  obj[2] = start;
-  obj[3] = end;
-  return jsx(TableRowInner.TableRow, { width: "" + applyDefault.random(60, 80) + "%" });
+  obj1.style = items1;
+  obj.icon = <View style={null} />;
+  obj.start = start;
+  obj.end = end;
+  return jsx(TableRow.TableRow, { width: "" + _modDef12.random(60, 80) + "%" });
 };
 export const ContextMenuCommandEmptyItem = function ContextMenuCommandEmptyItem(arg0) {
   ({ start, end } = arg0);
-  const obj = { label: null, icon: null, start: null, end: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t.YSNlV2);
+  let obj = { label: null, icon: null, start: null, end: null };
+  const intl = util.intl;
+  obj.label = intl.string(util.t.YSNlV2);
+  obj = { style: null };
   const items = [,];
-  ({ commandIcon: arr[0], loadingIcon: arr[1] } = callback());
-  obj[1] = <View style={items} />;
-  obj[2] = start;
-  obj[3] = end;
-  return jsx(TableRowInner.TableRow, { label: null, icon: null, start: null, end: null });
+  ({ commandIcon: arr[0], loadingIcon: arr[1] } = closure_6());
+  obj.style = items;
+  obj.icon = <View style={null} />;
+  obj.start = start;
+  obj.end = end;
+  return jsx(TableRow.TableRow, { style: null });
 };
 export const ContextMenuCommandAppItem = function ContextMenuCommandAppItem(section) {
   section = section.section;
   ({ onPress, start, end } = section);
-  let obj = getApplicationCommandsIconSource;
+  let obj = application_commands_ApplicationCommandUtils;
   const applicationCommandsIconSource = obj.getApplicationCommandsIconSource(section);
   obj = { onPress, label: section.name, icon: null, start: null, end: null, arrow: true };
   let tmp4Result = null != applicationCommandsIconSource;
   if (tmp4Result) {
-    obj = { style: null, source: null };
-    obj[0] = tmp.commandIcon;
-    obj[1] = applicationCommandsIconSource;
-    tmp4Result = tmp4(preloadDefault, obj);
+    obj = { style: tmp.commandIcon, source: applicationCommandsIconSource };
+    tmp4Result = tmp4(FastImageDefault, obj);
   }
-  obj[2] = tmp4Result;
-  obj[3] = start;
-  obj[4] = end;
-  return jsx(TableRowInner.TableRow, { onPress, label: section.name, icon: null, start: null, end: null, arrow: true });
+  obj.icon = tmp4Result;
+  obj.start = start;
+  obj.end = end;
+  return jsx(TableRow.TableRow, { onPress, label: section.name, icon: null, start: null, end: null, arrow: true });
 };

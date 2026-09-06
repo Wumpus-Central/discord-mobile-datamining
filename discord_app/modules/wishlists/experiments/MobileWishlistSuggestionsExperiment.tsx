@@ -1,6 +1,6 @@
 // discord_app/modules/wishlists/experiments/MobileWishlistSuggestionsExperiment.tsx
-import set from "../../../../_runtime/00002_set.js";
 import ApexExperiment from "../../experiments/apex/index.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 let closure_0 = ApexExperiment.createApexExperiment({
   name: "2026-07-smag-mobile-wishlist-suggestions",
@@ -8,7 +8,7 @@ let closure_0 = ApexExperiment.createApexExperiment({
   defaultConfig: { isEnabled: false },
   variations: { 0: { isEnabled: false }, 1: { isEnabled: true } },
 });
-const result = set.fileFinishedImporting("modules/wishlists/experiments/MobileWishlistSuggestionsExperiment.tsx");
+const result = size.fileFinishedImporting("modules/wishlists/experiments/MobileWishlistSuggestionsExperiment.tsx");
 
 export const useIsMobileWishlistSuggestionsEnabled = function useIsMobileWishlistSuggestionsEnabled(
   WishlistEmptyState,

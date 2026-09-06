@@ -1,17 +1,17 @@
 // discord_app/modules/guild_settings/roles/native/GuildSettingsRoleItem.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import importAllResult from "../../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { DEFAULT_ROLE_COLOR_HEX } from "../../../../Constants.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import GuildActionCreatorsDefault from "../../../../actions/GuildActionCreators.tsx";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let c4 = importAllResult;
-({ View: c5, StyleSheet } = get_ActivityIndicator);
-({ jsx: error, jsxs: closure_8 } = jsxProd);
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
+const DEFAULT_ROLE_COLOR_HEX = fn(1074).DEFAULT_ROLE_COLOR_HEX;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = "text-md/semibold";
+let createStyles = fn(4560);
 let obj = {
   row: { flexDirection: "row", gap: 4, alignItems: "center" },
   everyone: null,
@@ -23,57 +23,52 @@ let obj = {
   image: null,
 };
 obj = {
-  tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+  tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT,
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
   borderRadius: 20,
   padding: 8,
 };
-obj[1] = obj;
-text_md_semibold = require("Text").TextStyleSheet["text-md/semibold"];
+obj.everyone = obj;
+let prop = fn(4556).TextStyleSheet["text-md/semibold"];
 let num;
-if (text_md_semibold != null) {
-  num = text_md_semibold.lineHeight;
+if (prop != null) {
+  num = prop.lineHeight;
 }
 if (num == null) {
   num = 20;
 }
-createCacheKey = { lineHeight: num + 1 };
-obj[2] = createCacheKey;
-obj[3] = { tintColor: ThemesDefault.colors.ICON_MUTED };
-obj[4] = { alignSelf: "stretch", justifyContent: "center" };
-let obj2 = { tintColor: ThemesDefault.colors.ICON_MUTED };
-obj[5] = {
+createStyles = { lineHeight: num + 1 };
+obj.label = createStyles;
+obj.sparkleIcon = { tintColor: nativeDefault.colors.ICON_MUTED };
+obj.dragHandlePressable = { alignSelf: "stretch", justifyContent: "center" };
+let size = {
   width: 32,
   height: 32,
-  borderRadius: ThemesDefault.radii.round,
+  borderRadius: nativeDefault.radii.round,
   overflow: "hidden",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
 };
+obj.container = size;
 let merged = Object.assign(StyleSheet.absoluteFillObject);
-obj[6] = {};
-obj[7] = { tintColor: "white" };
-let closure_10 = createCacheKey.createStyles(obj);
-let obj3 = {
-  width: 32,
-  height: 32,
-  borderRadius: ThemesDefault.radii.round,
-  overflow: "hidden",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-};
-let obj4 = {};
-const memoResult = importAllResult.memo(function GuildSettingsRoleItem(guildId) {
-  const tmp4 = callback3();
+obj.gradient = {};
+obj.image = { tintColor: "white" };
+let closure_10 = createStyles.createStyles(obj);
+let obj2 = { tintColor: nativeDefault.colors.ICON_MUTED };
+let obj3 = {};
+size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRoleItem.tsx");
+
+export default noop.memo(function GuildSettingsRoleItem(guildId) {
+  const tmp4 = closure_10();
   const role = guildId.role;
   ({ sorting, locked, onPress: importDefault, onMoveUp } = guildId);
   const onMoveDown = guildId.onMoveDown;
   ({ sortHandlers, isEveryoneRole, guildId } = guildId);
   ({ onLongPress, numMembers, isLastRole, isFirstRole } = guildId);
-  let obj = role(onMoveUp[9]);
-  obj = { guildId, roleId: role.id, size: 32 };
+  role(onMoveUp[9]);
+  let obj = { guildId, roleId: role.id, size: 32 };
   const roleIcon = obj.useRoleIcon(obj);
   const tags = role.tags;
   let guild_connections;
@@ -85,13 +80,13 @@ const memoResult = importAllResult.memo(function GuildSettingsRoleItem(guildId) 
   if (null != onMoveUp) {
     obj = { name: "moveup", label: null };
     let intl = tmp5(tmp2[11]).intl;
-    obj[1] = intl.string(tmp5(tmp2[11]).t.Yl8E4h);
+    obj.label = intl.string(tmp5(tmp2[11]).t.Yl8E4h);
     items.push(obj);
   }
   if (null != onMoveDown) {
-    obj1 = { name: "movedown", label: null };
+    let obj1 = { name: "movedown", label: null };
     let intl2 = tmp5(tmp2[11]).intl;
-    obj1[1] = intl2.string(tmp5(tmp2[11]).t["5PbXSy"]);
+    obj1.label = intl2.string(tmp5(tmp2[11]).t["5PbXSy"]);
     items.push(obj1);
   }
   const items1 = [onMoveUp, onMoveDown];
@@ -108,14 +103,13 @@ const memoResult = importAllResult.memo(function GuildSettingsRoleItem(guildId) 
         hitSlop: null,
       };
       let intl3 = tmp5(tmp2[11]).intl;
-      const obj3 = { name: null };
-      obj3[0] = role.name;
-      obj2[1] = intl3.formatToPlainString(tmp5(tmp2[11]).t.Zazao2, obj3);
+      const obj3 = { name: role.name };
+      obj2.accessibilityLabel = intl3.formatToPlainString(tmp5(tmp2[11]).t.Zazao2, obj3);
       let intl4 = tmp5(tmp2[11]).intl;
-      obj2[2] = intl4.string(tmp5(tmp2[11]).t.BGMUFB);
-      obj2[3] = items;
-      obj2[4] = tmp11;
-      obj2[7] = tmp(tmp2[6]).space.PX_4;
+      obj2.accessibilityHint = intl4.string(tmp5(tmp2[11]).t.BGMUFB);
+      obj2.accessibilityActions = items;
+      obj2.onAccessibilityAction = tmp11;
+      obj2.hitSlop = tmp(tmp2[6]).space.PX_4;
       const merged = Object.assign(sortHandlers);
       const items2 = [tmp4.dragHandlePressable];
       let style;
@@ -129,35 +123,39 @@ const memoResult = importAllResult.memo(function GuildSettingsRoleItem(guildId) 
       let tmp17 = obj2;
       if (!tmp16) {
         const obj4 = { icon: null, accessibilityLabel: null, size: "sm", variant: "destructive", onPress: null };
-        const obj5 = { size: "xs", color: null };
-        obj5[1] = tmp(tmp2[6]).colors.CONTROL_CRITICAL_PRIMARY_TEXT_DEFAULT;
-        obj4[0] = callback(tmp5(tmp2[16]).TrashIcon, obj5);
+        const obj5 = { size: "xs", color: tmp(tmp2[6]).colors.CONTROL_CRITICAL_PRIMARY_TEXT_DEFAULT };
+        obj4.icon = closure_7(tmp5(tmp2[16]).TrashIcon, obj5);
         const intl5 = tmp5(tmp2[11]).intl;
-        const obj6 = { name: null };
-        obj6[0] = role.name;
-        obj4[1] = intl5.formatToPlainString(tmp5(tmp2[11]).t.FiMFTZ, obj6);
-        obj4[4] = function handleDeleteRow() {
-          let obj = closure_1_1(onMoveUp[10]);
-          obj = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, confirmColor: null };
+        const obj6 = { name: role.name };
+        obj4.accessibilityLabel = intl5.formatToPlainString(tmp5(tmp2[11]).t.FiMFTZ, obj6);
+        obj4.onPress = function handleDeleteRow() {
+          require("actions/AlertActionCreators");
+          let obj = {
+            title: null,
+            body: null,
+            cancelText: null,
+            confirmText: null,
+            onConfirm: null,
+            confirmColor: null,
+          };
           const intl = role(onMoveUp[11]).intl;
           obj = { name: name.name };
-          obj[0] = intl.formatToPlainString(role(onMoveUp[11]).t.FiMFTZ, obj);
+          obj.title = intl.formatToPlainString(role(onMoveUp[11]).t.FiMFTZ, obj);
           const intl2 = role(onMoveUp[11]).intl;
-          obj[1] = intl2.string(role(onMoveUp[11]).t.qALKny);
+          obj.body = intl2.string(role(onMoveUp[11]).t.qALKny);
           const intl3 = role(onMoveUp[11]).intl;
-          obj[2] = intl3.string(role(onMoveUp[11]).t.gm1Vej);
+          obj.cancelText = intl3.string(role(onMoveUp[11]).t.gm1Vej);
           const intl4 = role(onMoveUp[11]).intl;
-          obj[3] = intl4.string(role(onMoveUp[11]).t.p89ACt);
-          name = onMoveDown(function* () {
+          obj.confirmText = intl4.string(role(onMoveUp[11]).t.p89ACt);
+          name = onMoveDown(function* (arg0, value) {
             if (c2 === 2) {
               c2 = 3;
-              HermesBuiltin.throwTypeError();
+              throw new TypeError("Generator functions may not be called on executing generators");
             } else if (tmp4 === 3) {
               if (arg0 === 1) {
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
-                let obj = { value: null, done: true };
-                obj[0] = arg1;
+                let obj = { value, done: true };
                 return obj;
               } else {
                 return { value: "HermesInternal", done: null };
@@ -168,37 +166,30 @@ const memoResult = importAllResult.memo(function GuildSettingsRoleItem(guildId) 
                 if (0 === c1) {
                   if (arg0 === 1) {
                     c2 = 3;
-                    throw arg1;
+                    throw value;
                   } else if (arg0 === 2) {
                     c2 = 3;
-                    obj = { value: null, done: true };
-                    obj[0] = arg1;
+                    obj = { value, done: true };
                     return obj;
-                  } else {
-                    const callback = tmp2;
-                    if (closure_1_5) {
-                      c1 = 1;
-                      c2 = 1;
-                      obj1 = { value: null, done: false };
-                      obj1[0] = callback(closure_2_2[12]).putRoleConnectionsConfigurations(
-                        closure_1_4,
-                        closure_1_0.id,
-                        [],
-                      );
-                      return obj1;
-                    }
+                  } else if (closure_1_5) {
+                    c1 = 1;
+                    c2 = 1;
+                    let obj1 = {
+                      value: tmp2(11573).putRoleConnectionsConfigurations(guildId, tmp2.id, []),
+                      done: false,
+                    };
+                    return obj1;
                   }
                 } else if (arg0 === 1) {
                   c2 = 3;
-                  throw arg1;
+                  throw value;
                 } else if (arg0 === 2) {
                   c2 = 3;
-                  obj = { value: null, done: true };
-                  obj[0] = arg1;
+                  obj = { value, done: true };
                   return obj;
                 }
-                obj1 = closure_2_1(closure_2_2[13]);
-                obj1.deleteRole(closure_1_4, closure_1_0.id);
+                obj1 = GuildActionCreatorsDefault;
+                obj1.deleteRole(guildId, tmp2.id);
                 c2 = 3;
                 return { value: "HermesInternal", done: null };
               } catch (tmp16) {
@@ -207,7 +198,7 @@ const memoResult = importAllResult.memo(function GuildSettingsRoleItem(guildId) 
               }
             }
           });
-          obj[4] = function () {
+          obj.onConfirm = function () {
             const self = this;
             const apply = closure_0.apply;
             if (typeof apply === "unknown") {
@@ -217,19 +208,19 @@ const memoResult = importAllResult.memo(function GuildSettingsRoleItem(guildId) 
             }
             return applyArgumentsResult;
           };
-          obj[5] = closure_1_1(onMoveUp[14]).Colors.RED;
+          obj.confirmColor = require("common/Alert").Colors.RED;
           obj.show(obj);
         };
         flag = false;
         flag2 = true;
         tmp17 = obj2;
-        const tmp18 = callback(tmp5(tmp2[15]).IconButton, obj4);
+        const tmp18 = closure_7(tmp5(tmp2[15]).IconButton, obj4);
       }
       tmp16 = role.managed && !tmp8;
     }
     if (null != roleIcon) {
       const obj7 = {
-        onLongPress: null,
+        onLongPress,
         onPress: null,
         disabled: null,
         draggable: null,
@@ -242,41 +233,33 @@ const memoResult = importAllResult.memo(function GuildSettingsRoleItem(guildId) 
         start: null,
         end: null,
       };
-      obj7[0] = onLongPress;
       let fn;
       if (!sorting) {
         fn = () => {
-          if (closure_1 != null) {
+          if (importDefault != null) {
             tmp(role);
           }
         };
       }
-      obj7[1] = fn;
+      obj7.onPress = fn;
       if (sorting) {
         sorting = !flag2;
       }
-      obj7[2] = sorting;
-      obj7[3] = flag2;
-      obj7[4] = tmp17;
-      obj7[5] = tmp18;
-      obj7[6] = flag;
+      obj7.disabled = sorting;
+      obj7.draggable = flag2;
+      obj7.dragHandlePressableProps = tmp17;
+      obj7.trailing = tmp18;
+      obj7.arrow = flag;
       if (isEveryoneRole) {
-        const obj8 = { style: null, children: null };
-        obj8[0] = tmp4.everyone;
-        obj8[1] = tmp31(tmp5(tmp2[23]).GroupIcon, {});
+        const obj8 = { style: tmp4.everyone, children: tmp31(tmp5(tmp2[23]).GroupIcon, {}) };
         let obj9 = obj8;
       } else {
-        obj9 = { children: null };
-        obj9[0] = roleIcon;
+        obj9 = { children: roleIcon };
       }
-      obj7[7] = callback(closure_5, obj9);
-      const obj10 = { style: null, children: null };
-      obj10[0] = tmp4.row;
-      const obj11 = { lineClamp: 1, style: null, variant: null, color: "interactive-text-active", children: null };
-      obj11[1] = tmp4.label;
-      obj11[2] = c9;
-      obj11[4] = role.name;
-      const items3 = [callback(tmp5(tmp2[7]).Text, obj11), ,];
+      obj7.icon = closure_7(closure_5, obj9);
+      const obj10 = { style: tmp4.row, children: null };
+      const obj11 = { lineClamp: 1, style: tmp4.label, variant, color: "interactive-text-active", children: role.name };
+      const items3 = [closure_7(tmp5(tmp2[7]).Text, obj11), ,];
       const tags2 = role.tags;
       let prop;
       if (tags2 != null) {
@@ -284,12 +267,15 @@ const memoResult = importAllResult.memo(function GuildSettingsRoleItem(guildId) 
       }
       let tmp31Result = null;
       if (null != prop) {
-        const obj12 = { size: null, source: null, "aria-label": null, style: null };
-        obj12[0] = tmp5(tmp2[24]).Icon.Sizes.REFRESH_SMALL_16;
-        obj12[1] = tmp(tmp2[25]);
+        const obj12 = {
+          size: tmp5(tmp2[24]).Icon.Sizes.REFRESH_SMALL_16,
+          source: tmp(tmp2[25]),
+          "aria-label": null,
+          style: null,
+        };
         const intl6 = tmp5(tmp2[11]).intl;
-        obj12[2] = intl6.string(tmp5(tmp2[11]).t.a2Ak8b);
-        obj12[3] = tmp4.sparkleIcon;
+        obj12["aria-label"] = intl6.string(tmp5(tmp2[11]).t.a2Ak8b);
+        obj12.style = tmp4.sparkleIcon;
         tmp31Result = tmp31(tmp5(tmp2[24]).Icon, obj12);
       }
       items3[1] = tmp31Result;
@@ -298,21 +284,21 @@ const memoResult = importAllResult.memo(function GuildSettingsRoleItem(guildId) 
         tmp31Result = tmp31(tmp5(tmp2[26]).LockIcon, { size: "xxs", color: "icon-subtle" });
       }
       items3[2] = tmp31Result;
-      obj10[1] = items3;
-      obj7[8] = callback2(closure_5, obj10);
+      obj10.children = items3;
+      obj7.label = closure_8(closure_5, obj10);
       const intl7 = tmp5(tmp2[11]).intl;
       if (isEveryoneRole) {
         let stringResult = intl7.string(tmp5(tmp2[11]).t["72gF3G"]);
       } else {
         const obj13 = { count: null };
         const _HermesInternal = HermesInternal;
-        obj13[0] = "" + numMembers;
+        obj13.count = "" + numMembers;
         stringResult = intl7.formatToPlainString(tmp5(tmp2[11]).t.AWmdd9, obj13);
       }
-      obj7[9] = stringResult;
-      obj7[10] = isFirstRole;
-      obj7[11] = isLastRole;
-      return callback(tmp5(tmp2[22]).TableRow, obj7);
+      obj7.subLabel = stringResult;
+      obj7.start = isFirstRole;
+      obj7.end = isLastRole;
+      return closure_7(tmp5(tmp2[22]).TableRow, obj7);
     } else {
       const tags3 = role.tags;
       let guild_connections1;
@@ -320,44 +306,37 @@ const memoResult = importAllResult.memo(function GuildSettingsRoleItem(guildId) 
         guild_connections1 = tags3.guild_connections;
       }
       if (null === guild_connections1) {
-        const obj14 = { size: 32, guildId: null, role: null };
-        obj14[1] = guildId;
-        obj14[2] = role;
-        let tmp22Result = callback(tmp(tmp2[17]), obj14);
+        const obj14 = { size: 32, guildId, role };
+        let tmp22Result = closure_7(tmp(tmp2[17]), obj14);
       } else {
         if (tmp3) {
           if (null != role.colors) {
             if (null != role.colors.secondary_color) {
-              const obj15 = { style: null, children: null };
-              obj15[0] = tmp4.container;
+              const obj15 = { style: tmp4.container, children: null };
               const obj16 = { colors: null, start: null, end: null, style: null };
               const items4 = [role.colors.primary_color, role.colors.secondary_color, role.colors.tertiary_color];
               const found = items4.filter(tmp5(tmp2[19]).isNotNullish);
-              obj16[0] = found.map((color) => role(onMoveUp[20]).int2hex(color));
-              obj16[1] = { x: 0, y: 0 };
-              obj16[2] = { x: 1, y: 0 };
-              obj16[3] = tmp4.gradient;
-              const items5 = [callback(tmp(tmp2[18]), obj16)];
-              const obj17 = { size: "md", style: null };
-              obj17[1] = tmp4.image;
-              items5[1] = callback(tmp5(tmp2[21]).ShieldUserIcon, obj17);
-              obj15[1] = items5;
-              tmp22Result = callback2(closure_5, obj15);
+              obj16.colors = found.map((item) => role(onMoveUp[20]).int2hex(item));
+              obj16.start = { x: 0, y: 0 };
+              obj16.end = { x: 1, y: 0 };
+              obj16.style = tmp4.gradient;
+              const items5 = [closure_7(tmp(tmp2[18]), obj16)];
+              const obj17 = { size: "md", style: tmp4.image };
+              items5[1] = closure_7(tmp5(tmp2[21]).ShieldUserIcon, obj17);
+              obj15.children = items5;
+              tmp22Result = closure_8(closure_5, obj15);
               const tmpResult = tmp(tmp2[18]);
             }
           }
         }
         const items6 = [tmp4.container];
         const obj18 = { style: null, children: null };
-        const obj19 = { backgroundColor: null };
-        obj19[0] = null != role.colorString ? role.colorString : DEFAULT_ROLE_COLOR_HEX;
+        const obj19 = { backgroundColor: null != role.colorString ? role.colorString : DEFAULT_ROLE_COLOR_HEX };
         items6[1] = obj19;
-        obj18[0] = items6;
-        const obj20 = { size: "md", style: null };
-        obj20[1] = tmp4.image;
-        obj18[1] = callback(tmp5(tmp2[21]).ShieldUserIcon, obj20);
+        obj18.style = items6;
+        const obj20 = { size: "md", style: tmp4.image };
+        obj18.children = closure_7(tmp5(tmp2[21]).ShieldUserIcon, obj20);
         tmp22Result = tmp22(closure_5, obj18);
-        const tmp23 = closure_5;
       }
     }
   }
@@ -368,6 +347,3 @@ const memoResult = importAllResult.memo(function GuildSettingsRoleItem(guildId) 
     flag2 = false;
   }
 });
-const result = require("set").fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRoleItem.tsx");
-
-export default memoResult;

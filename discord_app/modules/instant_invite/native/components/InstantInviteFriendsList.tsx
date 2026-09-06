@@ -1,37 +1,36 @@
 // discord_app/modules/instant_invite/native/components/InstantInviteFriendsList.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import Button from "../../../../design/void/native.tsx";
-import Text from "../../../../design/components/Text/native/Text.tsx";
-import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import { Fonts } from "../../../../Constants.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import importDefaultResult from "../../../rebrand/native/TextStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
+import native from "../../../../design/void/native.tsx";
+import RootNavigationRef from "../../../main_tabs_v2/RootNavigationRef.native.tsx";
+import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
+import InstantInviteRowDefault from "InstantInviteRow.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import TextStyles from "../../../rebrand/native/TextStyles.tsx";
 
-require = arg1;
+require = fn;
 function keyExtractor(item) {
   return item.item.id;
 }
 function FriendsEmptyComponent() {
-  const tmp = callback3();
+  const tmp = closure_7();
   let obj = { children: null };
   obj = { title: null, body: null, titleStyle: null, bodyStyle: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t.dz4UlO);
-  const intl2 = getSystemLocale.intl;
-  obj[1] = intl2.string(getSystemLocale.t.MBQBI7);
-  ({ emptyTitle: obj2[2], emptyBody: obj2[3] } = tmp);
-  const items = [callback(Button.RefreshEmptyState, obj)];
+  const intl = util.intl;
+  obj.title = intl.string(util.t.dz4UlO);
+  const intl2 = util.intl;
+  obj.body = intl2.string(util.t.MBQBI7);
+  ({ emptyTitle: obj2.titleStyle, emptyBody: obj2.bodyStyle } = tmp);
+  const items = [React4(native.RefreshEmptyState, obj)];
   obj = {
     onPress() {
-      let obj = callback2(4527);
+      let obj = ActionSheetActionCreatorsDefault;
       obj.hideActionSheet();
-      const rootNavigationRef = callback(4418).getRootNavigationRef();
+      const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
       if (null != rootNavigationRef) {
-        obj = { screen: "add-friends", params: null };
-        obj[1] = { sourcePage: "Instant Invite Empty State" };
+        obj = { screen: "add-friends", params: { sourcePage: "Instant Invite Empty State" } };
         rootNavigationRef.navigate("friends", obj);
       }
     },
@@ -40,38 +39,38 @@ function FriendsEmptyComponent() {
     hitSlop: null,
     children: null,
   };
-  const intl3 = getSystemLocale.intl;
-  obj[2] = intl3.string(getSystemLocale.t.a7FVbE);
-  obj[3] = { top: 8, left: 8, bottom: 8, right: 8 };
-  obj1 = { style: items1, variant: "text-sm/semibold", color: "text-link", children: null };
-  items1 = [tmp.goToFriendsLink];
-  const intl4 = getSystemLocale.intl;
-  obj1[3] = intl4.string(getSystemLocale.t.a7FVbE);
-  obj[4] = callback(Text.Text, obj1);
-  items[1] = callback(PressableBase.PressableOpacity, obj);
-  obj[0] = items;
-  return callback2(closure_5, obj);
+  const intl3 = util.intl;
+  obj.accessibilityLabel = intl3.string(util.t.a7FVbE);
+  obj.hitSlop = { top: 8, left: 8, bottom: 8, right: 8 };
+  const obj1 = { style: null, variant: "text-sm/semibold", color: "text-link", children: null };
+  const items1 = [tmp.goToFriendsLink];
+  obj1.style = items1;
+  const intl4 = util.intl;
+  obj1.children = intl4.string(util.t.a7FVbE);
+  obj.children = React4(Text_Text.Text, obj1);
+  items[1] = React4(Pressables.PressableOpacity, obj);
+  obj.children = items;
+  return timestampProducer(hasOwnProperty, obj);
 }
-({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { emptyTitle: null, emptyBody: null, goToFriendsLink: null };
-createCacheKey = {};
-const merged = Object.assign(
-  importDefaultResult(Fonts.DISPLAY_EXTRABOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 18),
-);
-createCacheKey.textTransform = "none";
-createCacheKey.lineHeight = 24;
-createCacheKey[0] = createCacheKey;
+const Fonts = fn(1074).Fonts;
+const jsxProd = fn(21);
+({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+fn(4560);
+let createStyles = { emptyTitle: null, emptyBody: null, goToFriendsLink: null };
+createStyles = {};
+const merged = Object.assign(TextStyles(Fonts.DISPLAY_EXTRABOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 18));
+createStyles.textTransform = "none";
+createStyles.lineHeight = 24;
+createStyles.emptyTitle = createStyles;
 let obj1 = {};
-const merged1 = Object.assign(importDefaultResult(Fonts.PRIMARY_MEDIUM, ThemesDefault.colors.TEXT_SUBTLE, 16));
+const merged1 = Object.assign(TextStyles(Fonts.PRIMARY_MEDIUM, nativeDefault.colors.TEXT_SUBTLE, 16));
 obj1.lineHeight = 20;
 obj1.fontWeight = "600";
-createCacheKey[1] = obj1;
-createCacheKey[2] = { textAlign: "center" };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const importDefaultResult1 = importDefaultResult;
-const result = require("set").fileFinishedImporting(
-  "modules/instant_invite/native/components/InstantInviteFriendsList.tsx",
-);
+createStyles.emptyBody = obj1;
+createStyles.goToFriendsLink = { textAlign: "center" };
+let closure_7 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/instant_invite/native/components/InstantInviteFriendsList.tsx");
 
 export default function InstantInviteFriendsList(code) {
   code = code.code;
@@ -80,12 +79,12 @@ export default function InstantInviteFriendsList(code) {
   const data = code.data;
   const source = code.source;
   const items = [onPressAvatar, onInviteSent, code, source, data.length];
-  const callback = data.useCallback((index) => {
-    index = index.index;
-    return source(onPressAvatar(onInviteSent[12]), {
+  const callback = data.useCallback((row) => {
+    const index = row.index;
+    return React4(InstantInviteRowDefault, {
       start: 0 === index,
       end: index === data.length - 1,
-      row: index.item,
+      row: row.item,
       onPressAvatar,
       onInviteSent,
       code,
@@ -107,10 +106,10 @@ export default function InstantInviteFriendsList(code) {
       onPressAvatar(onInviteSent[13])({ isKeyboardAwareOnAndroid: false }).insets.bottom,
     paddingHorizontal: onPressAvatar(onInviteSent[5]).space.PX_12,
   };
-  obj[0] = obj;
-  obj[2] = callback;
-  obj[3] = data;
-  obj[4] = keyExtractor;
-  obj[6] = FriendsEmptyComponent;
+  obj.contentContainerStyle = obj;
+  obj.renderItem = callback;
+  obj.data = data;
+  obj.keyExtractor = keyExtractor;
+  obj.ListEmptyComponent = FriendsEmptyComponent;
   return source(code(onInviteSent[14]).BottomSheetFlatList, obj);
 }

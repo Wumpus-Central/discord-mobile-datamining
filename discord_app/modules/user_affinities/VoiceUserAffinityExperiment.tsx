@@ -1,6 +1,6 @@
 // discord_app/modules/user_affinities/VoiceUserAffinityExperiment.tsx
-import set from "../../../_runtime/00002_set.js";
 import ApexExperiment from "../experiments/apex/index.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const apexExperiment = ApexExperiment.createApexExperiment({
   kind: "user",
@@ -12,7 +12,7 @@ const apexExperiment = ApexExperiment.createApexExperiment({
     2: { enabled: true, sortType: "communication_probability" },
   },
 });
-const result = set.fileFinishedImporting("modules/user_affinities/VoiceUserAffinityExperiment.tsx");
+const result = size.fileFinishedImporting("modules/user_affinities/VoiceUserAffinityExperiment.tsx");
 
 export default apexExperiment;
 export const getVoiceUserAffinitySortType = function getVoiceUserAffinitySortType(location) {

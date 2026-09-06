@@ -1,10 +1,11 @@
 // discord_app/hooks/useMountEffect.tsx
-import set from "../../_runtime/00002_set.js";
-import useMountEffect from "../../discord_common/js/shared/hooks/useMountEffect.tsx";
-import useMountEffectDefault from "../../discord_common/js/shared/hooks/useMountEffect.tsx";
+import hooks_useMountEffect from "../../discord_common/js/shared/hooks/useMountEffect.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("hooks/useMountEffect.tsx");
+const hooks_useMountEffectDefault = hooks_useMountEffect;
 
-export default useMountEffectDefault;
-export const useMountLayoutEffect = useMountEffect.useMountLayoutEffect;
-export const useUnmountEffect = useMountEffect.useUnmountEffect;
+const result = size.fileFinishedImporting("hooks/useMountEffect.tsx");
+
+export default hooks_useMountEffectDefault;
+export const useMountLayoutEffect = hooks_useMountEffect.useMountLayoutEffect;
+export const useUnmountEffect = hooks_useMountEffect.useUnmountEffect;

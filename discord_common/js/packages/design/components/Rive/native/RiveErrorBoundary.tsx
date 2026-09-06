@@ -1,7 +1,7 @@
 // discord_common/js/packages/design/components/Rive/native/RiveErrorBoundary.tsx
-import noopAll from "../../../../../../../_runtime/00019_noop.js";
+import _modAll19 from "../../../../../../../_runtime/metro/00019__.js";
 
-const Component = noopAll.Component;
+const Component = _modAll19.Component;
 class RiveErrorBoundary extends Component {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -10,7 +10,7 @@ class RiveErrorBoundary extends Component {
   }
 }
 const prototype = RiveErrorBoundary.prototype;
-RiveErrorBoundary["getDerivedStateFromError"] = function getDerivedStateFromError(closure_4) {
+RiveErrorBoundary["getDerivedStateFromError"] = function getDerivedStateFromError() {
   return { hasError: true };
 };
 prototype["componentDidCatch"] = function componentDidCatch(arg0) {
@@ -33,8 +33,9 @@ prototype["render"] = function render() {
   }
   return children;
 };
-RiveErrorBoundary.contextType = require("context").ManaContext;
-const result = require("set").fileFinishedImporting(
+RiveErrorBoundary.contextType = fn(4341).ManaContext;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "../discord_common/js/packages/design/components/Rive/native/RiveErrorBoundary.tsx",
 );
 

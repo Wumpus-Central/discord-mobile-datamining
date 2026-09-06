@@ -1,13 +1,16 @@
 // discord_app/modules/collectibles/CollectiblesCategoryStore.tsx
+import _mod12 from "../../../_runtime/metro/00012__.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import failsDefault from "../../../discord_common/js/packages/backoff/Backoff.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import setDefault from "../../utils/Durations.tsx";
-import closure_3 from "../user_settings/LocaleStore.tsx";
-import closure_4 from "records/CollectiblesCategoryRecord.tsx";
+import BackoffDefault from "../../../discord_common/js/packages/backoff/Backoff.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import DurationsDefault from "../../utils/Durations.tsx";
+import CollectiblesUtils from "CollectiblesUtils.tsx";
+import LocaleStore from "../user_settings/LocaleStore.tsx";
+import CollectiblesCategoryRecord from "records/CollectiblesCategoryRecord.tsx";
 
-const require = arg1;
+require = fn;
 function updateCategoriesAndProducts(map) {
+  closure_14 = map;
   let items = [...closure_14.values()];
   map = new Map(
     items.map((storeListingId) => {
@@ -15,20 +18,20 @@ function updateCategoriesAndProducts(map) {
       return items;
     }),
   );
-  const productsFromCategories = map1(7554).getProductsFromCategories(map, true);
+  const productsFromCategories = CollectiblesUtils.getProductsFromCategories(closure_14, true);
   map1 = new Map(
     productsFromCategories.map((skuId) => {
       const items = [skuId.skuId, skuId];
       return items;
     }),
   );
-  const item = map1.forEach((skuId) => {
+  const item = closure_9.forEach((skuId) => {
     if (!map1.has(skuId.skuId)) {
       const result = map1.set(skuId.skuId, skuId);
     }
   });
-  const obj = map1(7554);
-  const productsFromCategories1 = map1(7554).getProductsFromCategories(map, false);
+  closure_9 = map1;
+  const productsFromCategories1 = CollectiblesUtils.getProductsFromCategories(closure_14, false);
   map2 = new Map(
     productsFromCategories1.map((storeListingId) => {
       const items = [storeListingId.storeListingId, storeListingId];
@@ -40,37 +43,39 @@ function updateCategoriesAndProducts(map) {
 function reset() {
   closure_14 = map;
   closure_9 = map1;
-  c18 = undefined;
+  closure_18 = undefined;
   c16 = false;
   closure_13 = {};
   const values = Object.values(closure_12);
   const item = values.forEach((cancel) => cancel.cancel());
   closure_12 = {};
-  c17 = undefined;
-  c19 = undefined;
-  closure_20 = {};
-  c21 = 0;
+  error = undefined;
+  closure_19 = undefined;
+  options = {};
+  skipNumCategories = 0;
 }
-let closure_5 = 10 * setDefault.Millis.SECOND;
-let closure_6 = 10 * setDefault.Millis.MINUTE;
+let closure_5 = 10 * DurationsDefault.Millis.SECOND;
+let closure_6 = 10 * DurationsDefault.Millis.MINUTE;
 let map = new Map();
 let map1 = new Map();
 let map2 = new Map();
-const map3 = new Map();
+let closure_9 = map1;
 let closure_11 = [];
-let closure_12 = {};
-let closure_13 = {};
+const dependencyMap = {};
+const dependencyMap2 = {};
+let closure_14 = map;
+map = new Map();
 let c16 = false;
-let c17;
-let c18;
-let c19;
-let closure_20 = {};
-let c21 = 0;
+let error;
+let closure_18;
+let closure_19;
+let options = {};
+let skipNumCategories = 0;
 const Store = initializeDefault.Store;
 class CollectiblesCategoryStore extends Store {}
 const prototype = CollectiblesCategoryStore.prototype;
 prototype["initialize"] = function initialize() {
-  const items = [closure_3];
+  const items = [LocaleStore];
   this.syncWith(items, reset);
 };
 Object.defineProperty(prototype, "isFetchingCategories", {
@@ -79,22 +84,22 @@ Object.defineProperty(prototype, "isFetchingCategories", {
   },
   set: undefined,
 });
-prototype["isFetchingProduct"] = function isFetchingProduct(closure_0) {
-  let tmp = null != closure_0;
+prototype["isFetchingProduct"] = function isFetchingProduct(arg0) {
+  let tmp = null != arg0;
   if (tmp) {
     let state;
-    if (dependencyMap2[closure_0] != null) {
+    if (dependencyMap2[arg0] != null) {
       state = tmp3.state;
     }
     tmp = "fetching" === state;
   }
   return tmp;
 };
-prototype["isProductFetchBackedOff"] = function isProductFetchBackedOff(closure_0) {
-  let tmp = null != closure_0;
+prototype["isProductFetchBackedOff"] = function isProductFetchBackedOff(item) {
+  let tmp = null != item;
   if (tmp) {
     let pending;
-    if (dependencyMap[closure_0] != null) {
+    if (dependencyMap[item] != null) {
       pending = tmp3.pending;
     }
     tmp = true === pending;
@@ -103,37 +108,37 @@ prototype["isProductFetchBackedOff"] = function isProductFetchBackedOff(closure_
 };
 Object.defineProperty(prototype, "error", {
   get: function error() {
-    return c17;
+    return error;
   },
   set: undefined,
 });
 Object.defineProperty(prototype, "lastErrorTimestamp", {
   get: function lastErrorTimestamp() {
-    return c19;
+    return closure_19;
   },
   set: undefined,
 });
 Object.defineProperty(prototype, "lastSuccessfulFetch", {
   get: function lastSuccessfulFetch() {
-    return c18;
+    return closure_18;
   },
   set: undefined,
 });
 Object.defineProperty(prototype, "lastFetchOptions", {
   get: function lastFetchOptions() {
-    return closure_20;
+    return options;
   },
   set: undefined,
 });
 Object.defineProperty(prototype, "categories", {
   get: function categories() {
-    return map;
+    return closure_14;
   },
   set: undefined,
 });
 Object.defineProperty(prototype, "products", {
-  get: function products(arg0) {
-    return map1;
+  get: function products() {
+    return closure_9;
   },
   set: undefined,
 });
@@ -145,51 +150,51 @@ Object.defineProperty(prototype, "productsWithVariantsAsGroup", {
 });
 Object.defineProperty(prototype, "skipNumCategories", {
   get: function skipNumCategories() {
-    return c21;
+    return skipNumCategories;
   },
   set: undefined,
 });
 prototype["getCategory"] = function getCategory(arg0) {
-  let value;
+  value = undefined;
   if (null != arg0) {
-    value = map.get(arg0);
+    value = closure_14.get(arg0);
   }
   return value;
 };
 prototype["getProduct"] = function getProduct(arg0) {
-  let value;
+  value = undefined;
   if (null != arg0) {
-    value = map1.get(arg0);
+    value = closure_9.get(arg0);
   }
   return value;
 };
 prototype["getProductsBySkus"] = function getProductsBySkus(arr) {
-  const mapped = arr.map((arg0) => closure_9.get(arg0));
-  return mapped.filter((arg0) => null != arg0);
+  const mapped = arr.map((item) => closure_1_9.get(item));
+  return mapped.filter((item) => null != item);
 };
-prototype["getProductFetch"] = function getProductFetch(closure_0) {
+prototype["getProductFetch"] = function getProductFetch(skuId) {
   let tmp;
-  if (null != closure_0) {
-    tmp = dependencyMap2[closure_0];
+  if (null != skuId) {
+    tmp = dependencyMap2[skuId];
   }
   return tmp;
 };
 prototype["getProductByStoreListingId"] = function getProductByStoreListingId(variantGroupStoreListingId) {
-  let value;
+  value = undefined;
   if (null != variantGroupStoreListingId) {
     value = map2.get(variantGroupStoreListingId);
   }
   return value;
 };
 prototype["getCategoryByStoreListingId"] = function getCategoryByStoreListingId(categoryStoreListingId) {
-  let value;
+  value = undefined;
   if (null != categoryStoreListingId) {
-    value = map3.get(categoryStoreListingId);
+    value = map.get(categoryStoreListingId);
   }
   return value;
 };
-prototype["getCategoryForProduct"] = function getCategoryForProduct(closure_0) {
-  const product = this.getProduct(closure_0);
+prototype["getCategoryForProduct"] = function getCategoryForProduct(initialProductSkuId) {
+  const product = this.getProduct(initialProductSkuId);
   let categorySkuId;
   if (product != null) {
     categorySkuId = product.categorySkuId;
@@ -197,26 +202,26 @@ prototype["getCategoryForProduct"] = function getCategoryForProduct(closure_0) {
   return this.getCategory(categorySkuId);
 };
 CollectiblesCategoryStore.displayName = "CollectiblesCategoryStore";
-const collectiblesCategoryStore = new CollectiblesCategoryStore(dispatcherDefault, {
+const collectiblesCategoryStore = new CollectiblesCategoryStore(DispatcherDefault, {
   COLLECTIBLES_CATEGORIES_FETCH: function handleFetchCategories(options) {
     c16 = true;
-    c17 = undefined;
-    c19 = undefined;
+    error = undefined;
+    closure_19 = undefined;
     options = options.options;
   },
   COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: function handleFetchCategoriesSuccess(categories) {
     if (categories.categories.collections.length > 0) {
       const collections = categories.categories.collections;
-      let mapped = collections.map(obj.fromStorefrontCollectionRecord);
+      let mapped = collections.map(CollectiblesCategoryRecord.fromStorefrontCollectionRecord);
     } else {
       mapped = categories.categories.categories;
     }
     if (0 === mapped.length) {
+      closure_14 = map;
       closure_9 = map1;
     } else {
-      obj = map(12);
       let items = [];
-      HermesBuiltin.arraySpread(map.values(), 0);
+      HermesBuiltin.arraySpread(closure_14.values(), 0);
       if (!obj.isEqual(items, mapped)) {
         if (!categories.noOp) {
           const _Map = Map;
@@ -228,8 +233,8 @@ const collectiblesCategoryStore = new CollectiblesCategoryStore(dispatcherDefaul
           );
           const _Date = Date;
           const date = new Date();
-          const item = map.forEach((unpublishedAt) => {
-            const hasItem = map.has(arg1);
+          const item = closure_14.forEach((unpublishedAt, index) => {
+            const hasItem = map.has(index);
             let tmp2 = !hasItem;
             if (!hasItem) {
               let tmp4 = null == unpublishedAt.unpublishedAt;
@@ -239,17 +244,18 @@ const collectiblesCategoryStore = new CollectiblesCategoryStore(dispatcherDefaul
               tmp2 = tmp4;
             }
             if (tmp2) {
-              const result = map.set(arg1, unpublishedAt);
+              const result = map.set(index, unpublishedAt);
             }
           });
           updateCategoriesAndProducts(map);
         }
       }
+      obj = _mod12;
     }
     closure_18 = Date.now();
     c16 = false;
-    c17 = undefined;
-    c19 = undefined;
+    error = undefined;
+    closure_19 = undefined;
   },
   COLLECTIBLES_CATEGORIES_FETCH_FAILURE: function handleFetchCategoriesFailure(error) {
     closure_14 = map;
@@ -264,7 +270,7 @@ const collectiblesCategoryStore = new CollectiblesCategoryStore(dispatcherDefaul
   },
   COLLECTIBLES_PRODUCT_FETCH_SUCCESS: function handleFetchProductSuccess(endedAt) {
     ({ skuId, product } = endedAt);
-    let value = map1.get(skuId);
+    value = closure_9.get(skuId);
     if (null != value) {
       const _Object2 = Object;
       if (0 === Object.keys(product.prices).length) {
@@ -274,9 +280,9 @@ const collectiblesCategoryStore = new CollectiblesCategoryStore(dispatcherDefaul
             const _Map = Map;
             let bundledProducts = value.bundledProducts;
             map = new Map(
-              bundledProducts.map((arg0) => {
+              bundledProducts.map((item) => {
                 const items = [,];
-                ({ skuId: arr[0], prices: arr[1] } = arg0);
+                ({ skuId: arr[0], prices: arr[1] } = item);
                 return items;
               }),
             );
@@ -288,12 +294,9 @@ const collectiblesCategoryStore = new CollectiblesCategoryStore(dispatcherDefaul
               let tmp5 = value;
               if (tmp6) {
                 let _Object = Object;
-                let tmp7 = item10012;
                 tmp6 = 0 === Object.keys(tmp3.prices).length;
               }
               if (tmp6) {
-                let tmp8 = item10012;
-                let tmp9 = value;
                 tmp3.prices = tmp5;
               }
               continue;
@@ -302,7 +305,7 @@ const collectiblesCategoryStore = new CollectiblesCategoryStore(dispatcherDefaul
         }
       }
     }
-    const result = map1.set(skuId, product);
+    const result = closure_9.set(skuId, product);
     let startedAt;
     if (dependencyMap2[skuId] != null) {
       startedAt = tmp12.startedAt;
@@ -322,14 +325,13 @@ const collectiblesCategoryStore = new CollectiblesCategoryStore(dispatcherDefaul
     dependencyMap2[skuId] = { state: "error", startedAt, endedAt, error };
     let obj = dependencyMap[skuId];
     if (null == obj) {
-      const tmp10 = new failsDefault(closure_5, closure_6);
+      const tmp10 = new BackoffDefault(closure_5, closure_6);
       dependencyMap[skuId] = tmp10;
       obj = tmp10;
     }
     if (!obj.pending) {
       obj.fail(() => {
-        let obj = closure_1_1(closure_1_2[4]);
-        obj = { type: "COLLECTIBLES_PRODUCT_FETCH_BACKOFF_EXPIRED", skuId };
+        const obj = { type: "COLLECTIBLES_PRODUCT_FETCH_BACKOFF_EXPIRED", skuId };
         return obj.dispatch(obj);
       });
     }
@@ -351,7 +353,7 @@ const collectiblesCategoryStore = new CollectiblesCategoryStore(dispatcherDefaul
       );
       const _Map2 = Map;
       let items = [];
-      HermesBuiltin.arraySpread(map, HermesBuiltin.arraySpread(map, 0));
+      HermesBuiltin.arraySpread(map, HermesBuiltin.arraySpread(closure_14, 0));
       map1 = new Map(items);
       updateCategoriesAndProducts(map1);
     }
@@ -361,6 +363,7 @@ const collectiblesCategoryStore = new CollectiblesCategoryStore(dispatcherDefaul
   },
   LOGOUT: reset,
 });
-let result = require("set").fileFinishedImporting("modules/collectibles/CollectiblesCategoryStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/collectibles/CollectiblesCategoryStore.tsx");
 
 export default collectiblesCategoryStore;

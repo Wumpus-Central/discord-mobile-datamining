@@ -1,20 +1,21 @@
 // discord_app/modules/guild_moderation/native/KickConfirmModal.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import KickConfirmDefault from "KickConfirm.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/guild_moderation/native/KickConfirmModal.tsx");
+const require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_moderation/native/KickConfirmModal.tsx");
 
 export default function KickConfirmModal(onBeforeGoBack) {
   ({ guildId: require, userId: importDefault } = onBeforeGoBack);
   let onGoBack;
-  onGoBack = importDefault(onGoBack[2])({ onBeforeGoBack: onBeforeGoBack.cancelButtonCallback }).onGoBack;
+  onGoBack = require("useNavigatorBackHandler")({ onBeforeGoBack: onBeforeGoBack.cancelButtonCallback }).onGoBack;
   const obj = { screenKey: "kick", title: null, render: null };
-  const intl = require(onGoBack[4]).intl;
-  obj[1] = intl.string(require(onGoBack[4]).t.R3QeLQ);
-  obj[2] = function render() {
-    return closure_1_3(closure_1_1(onGoBack[5]), { onKick: onGoBack, guildId: closure_0, userId: closure_1 });
+  const intl = require("util").intl;
+  obj.title = intl.string(require("util").t.R3QeLQ);
+  obj.render = function render() {
+    return jsx(KickConfirmDefault, { onKick: onGoBack, guildId, userId });
   };
-  return jsx(importDefault(onGoBack[3]), { screenKey: "kick", title: null, render: null });
+  return jsx(require("ModalStackNavigator"), { screenKey: "kick", title: null, render: null });
 }

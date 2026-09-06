@@ -1,31 +1,34 @@
 // discord_app/modules/calls/useHideSelfVideo.tsx
-import closure_3 from "../../stores/AuthenticationStore.tsx";
-import closure_4 from "../../stores/MediaEngineStore.tsx";
-import { VideoToggleState } from "../../Constants.tsx";
-import DesktopSources from "../../../discord_common/js/packages/media-engine/Constants.tsx";
+import AudioActionCreatorsDefault from "../../actions/AudioActionCreators.tsx";
+import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
+import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
 
-const require = arg1;
-({ MediaEngineContextTypes: closure_6, Features: error } = DesktopSources);
-const result = require("set").fileFinishedImporting("modules/calls/useHideSelfVideo.tsx");
+const require = fn;
+const VideoToggleState = fn(1074).VideoToggleState;
+const Constants = fn(4585);
+({ MediaEngineContextTypes: metroRequire, Features: closure_7 } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/calls/useHideSelfVideo.tsx");
 
 export default function useHideSelfVideo(arg0) {
   let DEFAULT = arg1;
   if (arg1 === undefined) {
     DEFAULT = constants.DEFAULT;
   }
-  let stateFromStores;
-  const items = [closure_3];
-  stateFromStores = DEFAULT(504).useStateFromStores(items, () => id.getId());
+  const items = [AuthenticationStore];
+  const stateFromStores = DEFAULT(504).useStateFromStores(items, () => id.getId());
   const obj = DEFAULT(504);
-  const items1 = [closure_4];
-  const stateFromStores1 = DEFAULT(504).useStateFromStores(items1, () => closure_4.supports(constants.DISABLE_VIDEO));
+  const items1 = [MediaEngineStore];
+  const stateFromStores1 = DEFAULT(504).useStateFromStores(items1, () =>
+    MediaEngineStore.supports(constants.DISABLE_VIDEO),
+  );
   const obj2 = DEFAULT(504);
-  const items2 = [closure_4];
+  const items2 = [MediaEngineStore];
   const items3 = [stateFromStores, DEFAULT];
   let tmp5 = null == arg0;
   const stateFromStores2 = DEFAULT(504).useStateFromStores(
     items2,
-    () => closure_1_4.isLocalVideoDisabled(stateFromStores, DEFAULT),
+    () => MediaEngineStore.isLocalVideoDisabled(stateFromStores, DEFAULT),
     items3,
   );
   if (!tmp5) {
@@ -38,9 +41,9 @@ export default function useHideSelfVideo(arg0) {
     tmp5,
     stateFromStores2,
     (arg0) => {
-      stateFromStores(closure_1_2[5]).setDisableLocalVideo(
+      AudioActionCreatorsDefault.setDisableLocalVideo(
         stateFromStores,
-        arg0 ? closure_1_5.DISABLED : closure_1_5.MANUAL_ENABLED,
+        arg0 ? VideoToggleState.DISABLED : VideoToggleState.MANUAL_ENABLED,
         DEFAULT,
       );
     },

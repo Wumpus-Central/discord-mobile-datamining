@@ -1,38 +1,41 @@
 // discord_app/modules/search/native/components/tabs/pages/messages/MediaScreen.tsx
-import importAllResult from "../../../../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../../../../spoiler_channels/ChannelSpoilerAgreeStore.tsx";
-import closure_5 from "../../../../../../../stores/ChannelStore.tsx";
-import closure_6 from "../../../../../SearchMessageStore.tsx";
-import closure_7 from "../../../../stores/SearchQueryStore.tsx";
-import MessageEmbedTypes from "../../../../../SearchConstants.tsx";
-import { EMPTY_MEDIA_RESULTS } from "../../../../SearchPlatformConstants.tsx";
-import { MEDIA_MODAL_KEY } from "../../../../../../../Constants.tsx";
-import { jsx } from "../../../../../../../../_runtime/react/00021_jsxProd.js";
+import AgeVerificationActionCreatorsDefault from "../../../../../../age_assurance/AgeVerificationActionCreators.native.tsx";
+import SearchPlatformUtils from "../../../../SearchPlatformUtils.tsx";
+import ExplicitMediaRedactionNativeUtils from "../../../../../../explicit_media_redaction/native/ExplicitMediaRedactionNativeUtils.tsx";
+import noop from "../../../../../../../../_runtime/metro/00019__.js";
+import ChannelSpoilerAgreeStore from "../../../../../../spoiler_channels/ChannelSpoilerAgreeStore.tsx";
+import ChannelStore from "../../../../../../../stores/ChannelStore.tsx";
+import SearchMessageStore from "../../../../../SearchMessageStore.tsx";
+import SearchQueryStore from "../../../../stores/SearchQueryStore.tsx";
 
-const require = arg1;
-let c3 = importAllResult;
+const SearchPlatformUtilsDefault = SearchPlatformUtils;
+
+require = fn;
+const SearchConstants = fn(7878);
 ({
   SearchListItemTypes: closure_8,
-  MEDIA_NUM_COLUMNS: c9,
+  MEDIA_NUM_COLUMNS: closure_9,
   MEDIA_ITEM_GAP_WIDTH: c10,
-  SearchMediaTypes: unpackModuleId,
-} = MessageEmbedTypes);
+  SearchMediaTypes: closure_11,
+} = SearchConstants);
+const EMPTY_MEDIA_RESULTS = fn(12353).EMPTY_MEDIA_RESULTS;
+const MEDIA_MODAL_KEY = fn(1074).MEDIA_MODAL_KEY;
+const jsx = fn(21).jsx;
 let closure_15 = [];
-const memoResult = importAllResult.memo(function MediaScreen(searchContext) {
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/messages/MediaScreen.tsx");
+
+export default noop.memo(function MediaScreen(searchContext) {
   searchContext = searchContext.searchContext;
   const tab = searchContext.tab;
-  dependencyMap = undefined;
-  let searchMessages;
   let placeholderCount;
   let memo;
-  let onPressMediaItem;
-  let callback1;
   ({ isFocused, width } = searchContext);
   let obj = searchContext(16685);
   const contentContainerStyles = obj.useContentContainerStyles();
   const tmp2 = tab(16645)(width);
   dependencyMap = tmp2;
-  searchMessages = searchContext(16693).useSearchMessages(searchContext, tab);
+  const searchMessages = searchContext(16693).useSearchMessages(searchContext, tab);
   const obj2 = searchContext(16693);
   let items = [placeholderCount, memo];
   const items1 = [searchMessages];
@@ -50,89 +53,84 @@ const memoResult = importAllResult.memo(function MediaScreen(searchContext) {
           let id = null;
           if (isSpoilerChannelResult) {
             id = null;
-            if (!closure_4.didAgree(channel.id)) {
+            if (!placeholderCount.didAgree(channel.id)) {
               id = channel.id;
             }
           }
           return id;
         });
-        found = mapped.filter((arg0) => null != arg0);
+        found = mapped.filter((item) => null != item);
       }
       if (found == null) {
-        found = closure_1_15;
+        found = closure_15;
       }
       return found;
     },
     items1,
   );
   let obj3 = searchContext(504);
-  obj = { searchContext, tab, placeholderHeight: tmp2, numColumns: closure_9 };
+  obj = { searchContext, tab, placeholderHeight: tmp2, numColumns };
   const searchMessagesLoadingState = searchContext(16694).useSearchMessagesLoadingState(obj);
   placeholderCount = searchMessagesLoadingState.placeholderCount;
   const items2 = [searchMessages, searchContext, stateFromStoresArray];
   ({ isFirstPageLoading, isNextPageLoading } = searchMessagesLoadingState);
   memo = searchMessages.useMemo(() => {
     if (null != searchMessages) {
-      let media = searchContext(12338).getMedia(searchContext, tmp);
-      const obj = searchContext(12338);
+      let media = SearchPlatformUtils.getMedia(searchContext, tmp);
     } else {
-      media = closure_1_12;
+      media = EMPTY_MEDIA_RESULTS;
     }
     return media;
   }, items2);
   const items3 = [searchContext, tab];
   const callback = searchMessages.useCallback(() => {
-    const nextMessages = tab(12338).fetchNextMessages(searchContext, tab, () => {
-      let obj = closure_1_0(closure_1_2[15]);
-      if (obj.isModalOpen(closure_1_13)) {
+    const nextMessages = SearchPlatformUtilsDefault.fetchNextMessages(searchContext, tab, () => {
+      let obj = searchContext(closure_2[15]);
+      if (obj.isModalOpen(MEDIA_MODAL_KEY)) {
         let tmpResult = tmp(tmp2[16]);
-        const messages = closure_1_6.getMessages(
-          tmpResult.getSearchTabFetchId(items, closure_1, closure_1_7.getSearchResultsQuery(items)),
+        const messages = onPressMediaItem.getMessages(
+          tmpResult.getSearchTabFetchId(closure_1_0, tab, callback1.getSearchResultsQuery(closure_1_0)),
         );
         if (null != messages) {
           tmpResult = tmp(tmp2[14]);
           const media = tmpResult.getMedia(tmp4, messages);
-          items = [];
+          const items = [];
           const item = media.forEach((type) => {
             if (!tmp2) {
               items.push(type.sources);
             }
           });
-          obj = { sources: null };
-          obj[0] = items;
+          obj = { sources: items };
           const result = tmp(tmp2[17]).setMediaViewerSources(obj);
           const tmpResult1 = tmp(tmp2[17]);
         }
-        const searchResultsQuery = closure_1_7.getSearchResultsQuery(items);
-        tmp4 = items;
+        const searchResultsQuery = callback1.getSearchResultsQuery(closure_1_0);
+        tmp4 = closure_1_0;
       }
     });
   }, items3);
   let obj4 = searchContext(16694);
-  onPressMediaItem = searchContext(16642).useOnPressMediaItem({
+  const onPressMediaItem = searchContext(16642).useOnPressMediaItem({
     searchContext,
     allMediaResults: memo,
     onEndReached: callback,
     onEndReachedThreshold: 500,
   });
   const items4 = [onPressMediaItem, searchContext, searchMessages];
-  callback1 = searchMessages.useCallback((media) => {
+  const callback1 = searchMessages.useCallback((media, index) => {
     media = media.media;
     let found;
     if (searchMessages != null) {
       found = searchMessages.find((id) => id.id === media.messageId);
     }
-    let obj = searchContext(14821);
+    let obj = ExplicitMediaRedactionNativeUtils;
     if (obj.shouldAgeVerifyForSearchMedia(media, found)) {
-      obj = { entryPoint: null };
-      obj[0] = tmp2(8413).AgeVerificationModalEntryPoint.SEARCH_MEDIA_PREVIEW;
-      const result = tab(8411).showAgeVerificationGetStartedModal(obj);
-      const obj4 = tab(8411);
+      obj = { entryPoint: tmp2(8413).AgeVerificationModalEntryPoint.SEARCH_MEDIA_PREVIEW };
+      const result = AgeVerificationActionCreatorsDefault.showAgeVerificationGetStartedModal(obj);
     } else {
-      obj = { searchContext: null, channelId: null, messageId: null, index: null };
-      obj[0] = media;
-      ({ channelId: obj3[1], messageId: obj3[2] } = media);
-      obj[3] = arg1;
+      obj = { searchContext, channelId: null, messageId: null, index: null };
+      ({ channelId: obj3.channelId, messageId: obj3.messageId } = media);
+      obj.index = index;
       const result1 = tmp2(16695).trackMessageItemPress(obj);
       onPressMediaItem(media, media.originView);
       const tmp2Result = tmp2(16695);
@@ -140,54 +138,43 @@ const memoResult = importAllResult.memo(function MediaScreen(searchContext) {
   }, items4);
   const items5 = [callback1, memo, tmp2, placeholderCount];
   const memo1 = searchMessages.useMemo(() => {
-    let items = [];
+    const items = [];
     const item = memo.forEach((media, itemIndex) => {
-      items = itemIndex;
-      let obj = { type: closure_2_8.MEDIA, props: null };
-      obj = {
+      closure_0 = itemIndex;
+      const element = { type: constants.MEDIA, props: null };
+      let obj = {
         media,
-        size: closure_1_2,
+        size,
         onPress(arg0) {
-          return closure_1_7(arg0, closure_0);
+          return callback1(arg0, closure_0);
         },
         containerStyle: null,
       };
-      obj = { itemIndex, numItems: closure_1_5.length, numColumns: closure_2_9, spacing: closure_2_10 - 2 };
-      obj[3] = searchContext(table[14]).getMediaGridItemStyles(obj);
-      obj[1] = obj;
-      items.push(obj);
+      obj = { itemIndex, numItems: memo.length, numColumns, spacing: closure_3_10 - 2 };
+      obj.containerStyle = SearchPlatformUtils.getMediaGridItemStyles(obj);
+      element.props = obj;
+      items.push(element);
     });
     if (placeholderCount > 0) {
-      let obj = { numColumns: null, numResults: null, placeholderCount: null };
-      obj[0] = closure_1_9;
-      obj[1] = items.length;
-      obj[2] = tmp2;
-      const adjustedPlaceholderCount = searchContext(16699).getAdjustedPlaceholderCount(obj);
+      let obj = { numColumns, numResults: items.length, placeholderCount: tmp2 };
+      const adjustedPlaceholderCount = searchContext(size[23]).getAdjustedPlaceholderCount(obj);
       for (let num = 0; num < adjustedPlaceholderCount; num = num + 1) {
-        obj = { type: null, key: null, props: null };
-        let tmp3 = closure_1_8;
-        obj[0] = closure_1_8.MEDIA_PLACEHOLDER;
+        let element = { type: null, key: null, props: null };
+        element.type = constants.MEDIA_PLACEHOLDER;
         let _HermesInternal = HermesInternal;
-        obj[1] = "media-placeholder-" + length + num;
+        element.key = "media-placeholder-" + length + num;
         obj = { size: null, containerStyle: null };
-        let tmp4 = dependencyMap;
-        obj[0] = dependencyMap;
-        let tmp5 = searchContext;
-        let tmp6 = dependencyMap;
-        let obj3 = searchContext(12338);
-        obj1 = { itemIndex: null, numItems: null, numColumns: null, spacing: null };
-        obj1[0] = length + num;
-        let tmp7 = memo;
-        obj1[1] = memo.length;
-        let tmp8 = closure_1_9;
-        obj1[2] = closure_1_9;
-        let tmp9 = closure_1_10;
-        obj1[3] = closure_1_10 - 2;
-        obj[1] = obj3.getMediaGridItemStyles(obj1);
-        obj[2] = obj;
-        let arr = items.push(obj);
+        obj.size = size;
+        let obj3 = searchContext(size[14]);
+        let obj1 = { itemIndex: length + num, numItems: null, numColumns: null, spacing: null };
+        obj1.numItems = memo.length;
+        obj1.numColumns = numColumns;
+        obj1.spacing = closure_1_10 - 2;
+        obj.containerStyle = obj3.getMediaGridItemStyles(obj1);
+        element.props = obj;
+        let arr = items.push(element);
       }
-      const obj5 = searchContext(16699);
+      const obj5 = searchContext(size[23]);
     }
     return items;
   }, items5);
@@ -203,10 +190,10 @@ const memoResult = importAllResult.memo(function MediaScreen(searchContext) {
     isNextPageLoading: null,
   };
   const obj6 = searchContext(16642);
-  obj[5] = searchContext(16649).MediaVerticalSeparator;
-  obj[6] = closure_9;
-  obj[7] = isFirstPageLoading;
-  obj[8] = isNextPageLoading;
+  obj.ItemSeparatorComponent = searchContext(16649).MediaVerticalSeparator;
+  obj.numColumns = numColumns;
+  obj.isFirstPageLoading = isFirstPageLoading;
+  obj.isNextPageLoading = isNextPageLoading;
   return jsx(tab(16695), {
     data: memo1,
     searchContext,
@@ -219,8 +206,3 @@ const memoResult = importAllResult.memo(function MediaScreen(searchContext) {
     isNextPageLoading: null,
   });
 });
-let result = require("set").fileFinishedImporting(
-  "modules/search/native/components/tabs/pages/messages/MediaScreen.tsx",
-);
-
-export default memoResult;

@@ -1,17 +1,16 @@
 // discord_app/actions/LayerActionCreators.tsx
-import set from "../../_runtime/00002_set.js";
-import dispatcherDefault from "../Dispatcher.tsx";
+import DispatcherDefault from "../Dispatcher.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("actions/LayerActionCreators.tsx");
+const result = size.fileFinishedImporting("actions/LayerActionCreators.tsx");
 
 export const pushLayer = function pushLayer(component) {
-  let obj = dispatcherDefault;
-  obj = { type: "LAYER_PUSH", component };
+  const obj = { type: "LAYER_PUSH", component };
   obj.dispatch(obj);
 };
 export const popLayer = function popLayer() {
-  dispatcherDefault.dispatch({ type: "LAYER_POP" });
+  DispatcherDefault.dispatch({ type: "LAYER_POP" });
 };
 export const popAllLayers = function popAllLayers() {
-  dispatcherDefault.dispatch({ type: "LAYER_POP_ALL" });
+  DispatcherDefault.dispatch({ type: "LAYER_POP_ALL" });
 };

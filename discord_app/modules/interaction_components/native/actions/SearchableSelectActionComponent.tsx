@@ -1,18 +1,22 @@
 // discord_app/modules/interaction_components/native/actions/SearchableSelectActionComponent.tsx
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../../stores/ChannelStore.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import Server from "../../../../flow/Server.tsx";
+import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import SearchableSelectActionComponentUtils from "../../SearchableSelectActionComponentUtils.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/interaction_components/native/actions/SearchableSelectActionComponent.tsx",
 );
 
 export default function SearchableSelectActionComponent(defaultValues) {
-  const _require = defaultValues;
-  let obj = _require(customId[3]);
+  _require = defaultValues;
+  let obj = require("InteractionComponentUtils");
   const selectPlaceholder = obj.getSelectPlaceholder(defaultValues);
-  obj1 = _require(customId[4]);
+  let obj1 = require("ComponentStateContext");
   const componentStateContext = obj1.useComponentStateContext();
   let modal;
   if (componentStateContext != null) {
@@ -28,7 +32,7 @@ export default function SearchableSelectActionComponent(defaultValues) {
     channelId = componentStateContext.channelId;
   }
   tmp4Result(null != channelId, "SearchableSelectActionComponent must be used inside a channel");
-  channel = channel.getChannel(componentStateContext.channelId);
+  const channel = ChannelStore.getChannel(componentStateContext.channelId);
   guild_id = undefined;
   if (channel != null) {
     guild_id = channel.guild_id;
@@ -38,7 +42,7 @@ export default function SearchableSelectActionComponent(defaultValues) {
   }
   const items = [defaultValues.defaultValues, guild_id];
   let memo = obj.useMemo(() => {
-    let snowflakeSelectDefaultValues = defaultValues(customId[6]).getSnowflakeSelectDefaultValues(
+    let snowflakeSelectDefaultValues = SearchableSelectActionComponentUtils.getSnowflakeSelectDefaultValues(
       defaultValues.defaultValues,
       guild_id,
     );
@@ -49,9 +53,7 @@ export default function SearchableSelectActionComponent(defaultValues) {
   }, items);
   let tmp13;
   if (memo.length > 0) {
-    obj = { type: null, selectedOptions: null };
-    obj[0] = defaultValues.type;
-    obj[1] = memo;
+    obj = { type: defaultValues.type, selectedOptions: memo };
     tmp13 = obj;
   }
   const componentState = componentStateContext.useComponentState(defaultValues, tmp13);
@@ -62,7 +64,7 @@ export default function SearchableSelectActionComponent(defaultValues) {
   if (state != null) {
     type = state.type;
   }
-  if (type !== _require(customId[7]).ComponentType.USER_SELECT) {
+  if (type !== require("Server").ComponentType.USER_SELECT) {
     let type1;
     if (state != null) {
       type1 = state.type;
@@ -92,20 +94,15 @@ export default function SearchableSelectActionComponent(defaultValues) {
         tmp22 = first;
       }
       obj = {
-        channelId: null,
-        guildId: null,
-        containerId: null,
-        onSubmit: null,
-        labelComponent: null,
+        channelId: componentStateContext.channelId,
+        guildId: guild_id,
+        containerId: customId,
+        onSubmit: executeStateUpdate,
+        labelComponent: tmp22,
         allowEmpty: null,
       };
-      obj[0] = componentStateContext.channelId;
-      obj[1] = guild_id;
-      obj[2] = customId;
-      obj[3] = executeStateUpdate;
-      obj[4] = tmp22;
       let tmpResult = tmp(tmp2[3]);
-      obj[5] = tmpResult.canSelectBeEmpty(defaultValues, "modal");
+      obj.allowEmpty = tmpResult.canSelectBeEmpty(defaultValues, "modal");
       obj1 = { model: null, onTap: null };
       const obj2 = {};
       tmp4Result = tmp4(tmp2[8]);
@@ -114,26 +111,23 @@ export default function SearchableSelectActionComponent(defaultValues) {
       obj2.state = visualState;
       tmpResult = tmp(tmp2[9]);
       obj2.selectedOptions = tmpResult.transformSearchableSelectOptions(memo, guild_id);
-      obj1[0] = obj2;
-      obj1[1] = function onTap() {
-        if (defaultValues.type === defaultValues(customId[7]).ComponentType.CHANNEL_SELECT) {
+      obj1.model = obj2;
+      obj1.onTap = function onTap() {
+        if (defaultValues.type === Server.ComponentType.CHANNEL_SELECT) {
           const _HermesInternal2 = HermesInternal;
-          const obj3 = guild_id(tmp3[10]);
-          obj = { selectionActionComponent: null };
-          obj[0] = tmp;
+          const obj3 = ActionSheetActionCreatorsDefault;
+          obj = { selectionActionComponent: tmp };
           const combined = "ChannelSelectComponentActionSheet:" + customId;
           const merged = Object.assign(obj);
-          obj3.openLazy(tmp2(tmp3[12])(tmp3[11], tmp3.paths), combined, obj);
-          const tmp14 = tmp2(tmp3[12])(tmp3[11], tmp3.paths);
+          obj3.openLazy(tmp2(1896)(11827, tmp3.paths), combined, obj);
+          const tmp14 = tmp2(1896)(11827, tmp3.paths);
         } else {
-          obj = guild_id(tmp3[10]);
           const _HermesInternal = HermesInternal;
-          obj = { selectionActionComponent: null };
-          obj[0] = tmp;
+          obj = { selectionActionComponent: tmp };
           const combined1 = "MentionableSelectComponentActionSheet:" + customId;
           const merged1 = Object.assign(obj);
-          obj.openLazy(tmp2(tmp3[12])(tmp3[13], tmp3.paths), combined1, obj);
-          const tmp5 = tmp2(tmp3[12])(tmp3[13], tmp3.paths);
+          obj.openLazy(tmp2(1896)(11823, tmp3.paths), combined1, obj);
+          const tmp5 = tmp2(1896)(11823, tmp3.paths);
         }
       };
       return <tmp4Result model={null} onTap={null} />;

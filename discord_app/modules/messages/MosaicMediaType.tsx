@@ -1,12 +1,12 @@
 // discord_app/modules/messages/MosaicMediaType.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
-import urlMatchesFileExtension from "MediaFormatTesters.tsx";
-import set2 from "PlaintextFilePreviewHelpers.tsx";
+import Constants from "../../Constants.tsx";
+import MediaFormatTesters from "MediaFormatTesters.tsx";
+import PlaintextFilePreviewHelpers from "PlaintextFilePreviewHelpers.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const MessageAttachmentFlags = ME.MessageAttachmentFlags;
+const MessageAttachmentFlags = Constants.MessageAttachmentFlags;
 const re3 = /\.(mp3|m4a|ogg|opus|wav|flac)$/i;
-const result = set.fileFinishedImporting("modules/messages/MosaicMediaType.tsx");
+const result = size.fileFinishedImporting("modules/messages/MosaicMediaType.tsx");
 
 export function isVisualMedia(arg0) {
   let tmp = "IMAGE" === arg0;
@@ -50,7 +50,7 @@ export const getMosaicMediaTypeForAttachment = function getMosaicMediaTypeForAtt
               str3 = str5;
             }
             let str = str3;
-            obj2 = urlMatchesFileExtension;
+            obj2 = MediaFormatTesters;
           }
           return str;
         }
@@ -58,7 +58,7 @@ export const getMosaicMediaTypeForAttachment = function getMosaicMediaTypeForAtt
     }
   }
   if (null != arg1) {
-    if (regex.test(filename)) {
+    if (re3.test(filename)) {
       str = "AUDIO";
     }
   }
@@ -68,7 +68,7 @@ export const getMosaicMediaTypeForAttachment = function getMosaicMediaTypeForAtt
     if (obj.isPlaintextPreviewableFile(filename)) {
       str2 = "PLAINTEXT_PREVIEW";
     }
-    obj = set2;
+    obj = PlaintextFilePreviewHelpers;
   }
   str = str2;
 };
@@ -86,7 +86,7 @@ export const getMosaicMediaTypeForUnfurledMediaItem = function getMosaicMediaTyp
             }
             tmpResult = tmp(4710);
           }
-          obj = urlMatchesFileExtension;
+          obj = MediaFormatTesters;
           tmp = require;
         }
       }

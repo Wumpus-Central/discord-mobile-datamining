@@ -1,10 +1,11 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupExpiringNotificationsConfig.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import getSystemLocale from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
+import Powerups from "../../../../../discord_common/js/shared/shared-constants/Powerups.tsx";
 import useGetExpiringGuildPowerupsDefault from "useGetExpiringGuildPowerups.tsx";
 import useGameServerGetExpiringEntitlementsDefault from "../../../game_server/hooks/useGameServerGetExpiringEntitlements.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting(
+const result = size.fileFinishedImporting(
   "modules/premium/powerups/hooks/useGuildPowerupExpiringNotificationsConfig.tsx",
 );
 
@@ -14,7 +15,7 @@ export default function useGuildPowerupExpiringNotificationsConfig(arg0) {
   if (arr.length > 0 || arr2.length > 0) {
     let stringResult;
     if (arr2.length > 0) {
-      const intl = getSystemLocale.intl;
+      const intl = util.intl;
       stringResult = intl.string(tmp(2850)["B3OfL/"]);
     }
     const items = [];
@@ -30,25 +31,18 @@ export default function useGuildPowerupExpiringNotificationsConfig(arg0) {
     }
     arraySpreadResult = HermesBuiltin.arraySpread(items2, arraySpreadResult);
     const items3 = [];
-    if (arr.some((skuId) => skuId.skuId === callback(table[4]).VANITY_URL_POWERUP_SKU_ID)) {
-      const intl2 = getSystemLocale.intl;
+    if (arr.some((skuId) => skuId.skuId === Powerups.VANITY_URL_POWERUP_SKU_ID)) {
+      const intl2 = util.intl;
       arr = items3.push(intl2.string(tmp(2428).Sfr0Jw));
     }
     if (arr2.length > 0) {
-      const intl3 = getSystemLocale.intl;
+      const intl3 = util.intl;
       arr = items3.push(intl3.string(tmp(2850).wiungr));
     }
-    let obj = { shouldShow: null, expiringPowerups: null, expiringPowerupNames: null, warnings: null };
-    obj[0] = tmp3;
-    obj[1] = arr;
-    obj[2] = items;
-    obj[3] = items3;
+    let obj = { shouldShow: tmp3, expiringPowerups: arr, expiringPowerupNames: items, warnings: items3 };
     return obj;
   } else {
-    obj = { shouldShow: false, expiringPowerups: null, expiringPowerupNames: null, warnings: null };
-    obj[1] = [];
-    obj[2] = [];
-    obj[3] = [];
+    obj = { shouldShow: false, expiringPowerups: [], expiringPowerupNames: [], warnings: [] };
     return obj;
   }
 }

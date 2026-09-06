@@ -1,39 +1,39 @@
 // discord_app/modules/screen_recording/native/ScreenRecordingActionSheet.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import get_defaultRulesDefault from "../../markup/MarkupUtils.tsx";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import { useScreenRecordingStore } from "ScreenRecordingStore.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import MarkupUtilsDefault from "../../markup/MarkupUtils.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-noopAll;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: null, closeButton: null, buttonContainer: null };
-createCacheKey = {
+const require = fn;
+const View = fn(17).View;
+const useScreenRecordingStore = fn(15932).useScreenRecordingStore;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+fn(4560);
+let createStyles = { container: null, closeButton: null, buttonContainer: null };
+createStyles = {
   justifyContent: "center",
   alignItems: "center",
-  gap: ThemesDefault.space.PX_16,
-  paddingVertical: ThemesDefault.space.PX_16,
-  paddingHorizontal: ThemesDefault.space.PX_8,
-  borderRadius: ThemesDefault.radii.xl,
+  gap: nativeDefault.space.PX_16,
+  paddingVertical: nativeDefault.space.PX_16,
+  paddingHorizontal: nativeDefault.space.PX_8,
+  borderRadius: nativeDefault.radii.xl,
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { position: "absolute", top: ThemesDefault.space.PX_8, right: ThemesDefault.space.PX_8 };
-let obj1 = { position: "absolute", top: ThemesDefault.space.PX_8, right: ThemesDefault.space.PX_8 };
-createCacheKey[2] = { display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_8 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_8 };
-const result = require("set").fileFinishedImporting("modules/screen_recording/native/ScreenRecordingActionSheet.tsx");
+createStyles.container = createStyles;
+const rect = { position: "absolute", top: nativeDefault.space.PX_8, right: nativeDefault.space.PX_8 };
+createStyles.closeButton = rect;
+createStyles.buttonContainer = { display: "flex", flexDirection: "row", gap: nativeDefault.space.PX_8 };
+let closure_7 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/screen_recording/native/ScreenRecordingActionSheet.tsx");
 
 export default function ScreenRecordingActionSheet() {
-  const tmp = callback3();
+  const tmp = closure_7();
   const tmp2 = useScreenRecordingStore((isUploading) => isUploading.isUploading);
   const tmp3 = useScreenRecordingStore((isCompleted) => isCompleted.isCompleted);
   const tmp4 = useScreenRecordingStore((currentStep) => currentStep.currentStep);
   let obj = useScreenRecordingStore((currentSurveyConfig) => currentSurveyConfig.currentSurveyConfig);
-  const _require = useScreenRecordingStore((nextStep) => nextStep.nextStep);
+  _require = useScreenRecordingStore((nextStep) => nextStep.nextStep);
   importDefault = useScreenRecordingStore((completeActionSheet) => completeActionSheet.completeActionSheet);
   let steps;
   if (obj != null) {
@@ -74,81 +74,66 @@ export default function ScreenRecordingActionSheet() {
   }
   obj = { style: tmp.container, children: null };
   const items = [
-    callback(require("../../../design/components/Text/native/Text.tsx").Text, {
-      variant: "heading-xl/bold",
-      children: str,
-    }),
-    callback(require("../../../design/components/Text/native/Text.tsx").Text, {
-      variant: "text-md/normal",
-      children: str2,
-    }),
+    closure_5(require("Text/Text").Text, { variant: "heading-xl/bold", children: str }),
+    closure_5(require("Text/Text").Text, { variant: "text-md/normal", children: str2 }),
   ];
   obj = {
     disabled: tmp2,
     text: "Done",
     loading: tmp2,
     onPress() {
-      callback2();
-      callback2(closure_1_2[8]).hideActionSheet();
+      closure_1();
+      ActionSheetActionCreatorsDefault.hideActionSheet();
     },
   };
-  items[2] = callback(require("../../../design/components/Button/native/Button.native.tsx").Button, obj);
-  obj[1] = items;
-  obj1 = { style: tmp.container, children: null };
-  const tmp11 = callback2(View, obj);
-  const tmp6 = callback2;
+  items[2] = closure_5(require("components/Button/Button").Button, obj);
+  obj.children = items;
+  const obj1 = { style: tmp.container, children: null };
+  const tmp11 = closure_6(View, obj);
+  const tmp6 = closure_6;
   const tmp9 = _require;
   const items1 = [
-    callback(require("../../../design/void/Pressables/native/Pressables.tsx").PressableOpacity, {
+    closure_5(require("Pressables").PressableOpacity, {
       style: tmp.closeButton,
       onPress() {
-        return callback2(table[8]).hideActionSheet();
+        return closure_1(dependencyMap[8]).hideActionSheet();
       },
       accessibilityLabel: "close",
-      children: callback(
-        require("../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx").XSmallIcon,
-        { size: "md", color: "text-default" },
-      ),
+      children: closure_5(require("XSmallIcon").XSmallIcon, { size: "md", color: "text-default" }),
     }),
-    callback(require("../../../design/components/Text/native/Text.tsx").Text, {
-      variant: "heading-xl/bold",
-      children: tmp5.title,
-    }),
+    closure_5(require("Text/Text").Text, { variant: "heading-xl/bold", children: tmp5.title }),
     ,
   ];
   const obj4 = { variant: "text-md/normal", children: null };
   const obj2 = {
     style: tmp.closeButton,
     onPress() {
-      return callback2(table[8]).hideActionSheet();
+      return closure_1(dependencyMap[8]).hideActionSheet();
     },
     accessibilityLabel: "close",
-    children: callback(require("../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx").XSmallIcon, {
-      size: "md",
-      color: "text-default",
-    }),
+    children: closure_5(require("XSmallIcon").XSmallIcon, { size: "md", color: "text-default" }),
   };
   const obj3 = { variant: "heading-xl/bold", children: tmp5.title };
-  obj4[1] = get_defaultRulesDefault.parse(tmp5.instructions);
-  items1[2] = callback(require("../../../design/components/Text/native/Text.tsx").Text, obj4);
+  obj4.children = MarkupUtilsDefault.parse(tmp5.instructions);
+  items1[2] = closure_5(require("Text/Text").Text, obj4);
   const obj5 = { style: tmp.buttonContainer, children: null };
   let tmp12 = !flag;
   if (flag) {
     tmp12 = tmp2;
   }
-  obj5[1] = callback(require("../../../design/components/Button/native/Button.native.tsx").Button, {
+  obj5.children = closure_5(require("components/Button/Button").Button, {
     disabled: tmp12,
     text: "Next",
     loading: tmp2,
     onPress() {
-      callback();
+      closure_0();
     },
   });
-  items1[3] = callback(View, obj5);
-  obj1[1] = items1;
+  items1[3] = closure_5(View, obj5);
+  obj1.children = items1;
   let children = tmp6(tmp7, obj1);
   if (tmp3) {
     children = tmp11;
   }
-  return callback(tmp9(7198).ActionSheet, { children });
+  return closure_5(tmp9(7198).ActionSheet, { children });
 }

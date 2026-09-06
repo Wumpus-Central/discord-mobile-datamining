@@ -1,44 +1,44 @@
 // discord_app/modules/user_settings/defs/native/DefaultGuildThemePreferenceSetting.tsx
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import explicitContentFromProto from "../../UserSettings.tsx";
-import apexExperiment from "../../../premium/powerups/experiments/ServerThemeUserExperiment.tsx";
-import closure_2 from "../../../../../_runtime/00019_noop.js";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import util from "../../../../intl/index.native.tsx";
+import preloaded_user_settings from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import UserSettings from "../../UserSettings.tsx";
+import ServerThemeUserExperiment from "../../../premium/powerups/experiments/ServerThemeUserExperiment.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-createToggle = {
+require = fn;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.Q7mm4g);
+    const intl = util.intl;
+    return intl.string(util.t.Q7mm4g);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.APPEARANCE,
-  useValue: require("explicitContentFromProto").DefaultGuildThemePreference.useSetting,
+  parent: fn(7975).MobileUserSettings.APPEARANCE,
+  useValue: fn(1935).DefaultGuildThemePreference.useSetting,
   onValueChange: function onDefaultGuildThemePreferenceChange(arg0) {
-    const DefaultGuildThemePreference = explicitContentFromProto.DefaultGuildThemePreference;
+    const DefaultGuildThemePreference = UserSettings.DefaultGuildThemePreference;
     DefaultGuildThemePreference.updateSetting(Number(arg0));
   },
   useOptions: function useDefaultGuildThemePreferenceOptions() {
-    return React.useMemo(() => {
+    return noop.useMemo(() => {
       let obj = { label: null, value: null };
-      const intl = callback(1114).intl;
-      obj[0] = intl.string(callback(1114).t.aN3RNQ);
-      obj[1] = callback(1187).GuildThemeSourcePreference.GUILD;
+      const intl = util.intl;
+      obj.label = intl.string(util.t.aN3RNQ);
+      obj.value = preloaded_user_settings.GuildThemeSourcePreference.GUILD;
       const items = [obj];
       obj = { label: null, value: null };
-      const intl2 = callback(1114).intl;
-      obj[0] = intl2.string(callback(1114).t.js8y7t);
-      obj[1] = callback(1187).GuildThemeSourcePreference.PERSONAL;
+      const intl2 = util.intl;
+      obj.label = intl2.string(util.t.js8y7t);
+      obj.value = preloaded_user_settings.GuildThemeSourcePreference.PERSONAL;
       items[1] = obj;
       return items;
     }, []);
   },
   usePredicate() {
-    return apexExperiment.useServerThemeUserEnabled("DefaultGuildThemePreferenceSetting");
+    return ServerThemeUserExperiment.useServerThemeUserEnabled("DefaultGuildThemePreferenceSetting");
   },
 };
-createToggle = createToggle.createRadio(createToggle);
-const result = require("set").fileFinishedImporting(
-  "modules/user_settings/defs/native/DefaultGuildThemePreferenceSetting.tsx",
-);
+SettingBuilders = SettingBuilders.createRadio(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/DefaultGuildThemePreferenceSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

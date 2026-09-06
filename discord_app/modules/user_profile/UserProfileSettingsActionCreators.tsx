@@ -1,26 +1,27 @@
 // discord_app/modules/user_profile/UserProfileSettingsActionCreators.tsx
-import dispatcherDefault from "../../Dispatcher.tsx";
-import isEqualDefault from "../../../_runtime/04679_isEqual.js";
-import guildHasTag from "../guild_tag/GuildTagUtils.tsx";
-import closure_3 from "../../stores/GuildMemberStore.tsx";
-import closure_4 from "../../stores/UserStore.tsx";
-import closure_5 from "UserProfileStore.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import _modDef4679 from "../../../_runtime/metro/04679__.js";
+import GuildTagUtils from "../guild_tag/GuildTagUtils.tsx";
+import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
+import UserStore from "../../stores/UserStore.tsx";
+import UserProfileStore from "UserProfileStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_profile/UserProfileSettingsActionCreators.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/UserProfileSettingsActionCreators.tsx");
 
-export const setPendingChanges = function setPendingChanges(closure_1) {
-  let guildId = closure_1.guildId;
-  const merged = Object.assign(closure_1, Object.create(null));
-  currentUser = currentUser.getCurrentUser();
+export const setPendingChanges = function setPendingChanges(guildId) {
+  guildId = guildId.guildId;
+  const merged = Object.assign(guildId, Object.assign({ guildId: 0 }));
+  const currentUser = UserStore.getCurrentUser();
   if (null != currentUser) {
-    userProfile = userProfile.getUserProfile(currentUser.id);
+    let userProfile = UserProfileStore.getUserProfile(currentUser.id);
     if (null != guildId) {
       userProfile = obj5.getGuildMemberProfile(currentUser.id, guildId);
     }
     let member = null;
     if (null != guildId) {
-      member = member.getMember(guildId, currentUser.id);
+      member = GuildMemberStore.getMember(guildId, currentUser.id);
     }
     let obj = {};
     if ("globalName" in merged) {
@@ -65,8 +66,7 @@ export const setPendingChanges = function setPendingChanges(closure_1) {
       if (displayNameStyles1 == null) {
         displayNameStyles1 = null;
       }
-      obj.pendingDisplayNameStyles = isEqualDefault(tmp13, displayNameStyles1) ? undefined : displayNameStyles;
-      const tmp12 = isEqualDefault;
+      obj.pendingDisplayNameStyles = _modDef4679(tmp13, displayNameStyles1) ? undefined : displayNameStyles;
     }
     if ("customTypingIndicatorStyle" in merged) {
       const customTypingIndicatorStyle = merged.customTypingIndicatorStyle;
@@ -78,10 +78,9 @@ export const setPendingChanges = function setPendingChanges(closure_1) {
       if (typingIndicatorStyle == null) {
         typingIndicatorStyle = null;
       }
-      obj.pendingCustomTypingIndicatorStyle = isEqualDefault(tmp17, typingIndicatorStyle)
+      obj.pendingCustomTypingIndicatorStyle = _modDef4679(tmp17, typingIndicatorStyle)
         ? undefined
         : customTypingIndicatorStyle;
-      const tmp16 = isEqualDefault;
     }
     if ("pronouns" in merged) {
       let pronouns;
@@ -284,7 +283,7 @@ export const setPendingChanges = function setPendingChanges(closure_1) {
           if (themeColors == null) {
             themeColors = null;
           }
-          if (isEqualDefault(tmp42, themeColors)) {
+          if (_modDef4679(tmp42, themeColors)) {
             obj.pendingThemeColors = undefined;
           } else {
             obj.pendingThemeColors = merged.themeColors;
@@ -309,7 +308,7 @@ export const setPendingChanges = function setPendingChanges(closure_1) {
       }
     }
     if ("primaryGuildId" in merged) {
-      guildId = guildHasTag.getUserPrimaryGuild(currentUser.primaryGuild).guildId;
+      guildId = GuildTagUtils.getUserPrimaryGuild(currentUser.primaryGuild).guildId;
       if (guildId == null) {
         guildId = null;
       }
@@ -318,16 +317,13 @@ export const setPendingChanges = function setPendingChanges(closure_1) {
       } else {
         obj.pendingPrimaryGuildId = merged.primaryGuildId;
       }
-      const obj2 = guildHasTag;
     }
     if ("legacyUsernameDisabled" in merged) {
       obj.pendingLegacyUsernameDisabled = merged.legacyUsernameDisabled;
     }
-    obj = { type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", guildId: null };
-    obj[1] = guildId;
+    obj = { type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", guildId };
     const merged1 = Object.assign(obj);
-    dispatcherDefault.dispatch(obj);
-    const obj3 = dispatcherDefault;
-    obj5 = userProfile;
+    DispatcherDefault.dispatch(obj);
+    obj5 = UserProfileStore;
   }
 };

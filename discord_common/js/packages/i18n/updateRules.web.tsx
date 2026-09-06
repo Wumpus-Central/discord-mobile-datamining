@@ -1,25 +1,25 @@
 // discord_common/js/packages/i18n/updateRules.web.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import t from "../../../../_runtime/04257_t.js";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import _mod4257 from "../../../../_runtime/metro/04257__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/i18n/updateRules.web.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("../discord_common/js/packages/i18n/updateRules.web.tsx");
 
 export default function updateRules(paragraph) {
-  paragraph.heading = t.defaultRules.heading;
-  paragraph.lheading = t.defaultRules.lheading;
-  paragraph.list = t.defaultRules.list;
+  paragraph.heading = _mod4257.defaultRules.heading;
+  paragraph.lheading = _mod4257.defaultRules.lheading;
+  paragraph.list = _mod4257.defaultRules.list;
   let obj = {};
   let merged = Object.assign(paragraph.paragraph);
-  obj.react = function react(content, arg1, key) {
-    return callback2("p", { children: arg1(content.content, key) }, key.key);
+  obj.react = function react(content, fn, key) {
+    return <p key={arg2.key}>{arg1(arg0.content, arg2)}</p>;
   };
   paragraph.paragraph = obj;
   obj = {};
   const merged1 = Object.assign(paragraph.link);
-  obj.react = function react(context, arg1, key) {
+  obj.react = function react(context, fn, key) {
     let obj = {};
     if (null != context.context) {
       if (context.context[context.target]) {
@@ -30,16 +30,15 @@ export default function updateRules(paragraph) {
       obj.onClick = context.context[context.target];
     }
     if (null == obj.onClick) {
-      const sanitizeUrlResult = callback(table[2]).sanitizeUrl(context.target);
+      const sanitizeUrlResult = _mod4257.sanitizeUrl(context.target);
       obj.href = sanitizeUrlResult;
       obj.target = "_blank";
-      const obj2 = callback(table[2]);
     }
     obj = { title: context.title };
     const merged = Object.assign(obj);
     obj.rel = "noreferrer";
-    obj.children = arg1(context.content, key);
-    return callback2("a", obj, key.key);
+    obj.children = fn(context.content, key);
+    return <a key={arg2.key} title={arg0.title} />;
   };
   paragraph.link = obj;
   return paragraph;

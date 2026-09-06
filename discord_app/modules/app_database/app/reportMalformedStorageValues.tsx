@@ -1,12 +1,12 @@
 // discord_app/modules/app_database/app/reportMalformedStorageValues.tsx
-import set from "../../../../_runtime/00002_set.js";
-import _modDef1232 from "../../../utils/SentryUtils.native.tsx";
+import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
 import _mod1987 from "../../../../discord_common/js/packages/kv-storage/js/index.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 let c3 = false;
-const result = set.fileFinishedImporting("modules/app_database/app/reportMalformedStorageValues.tsx");
+const result = size.fileFinishedImporting("modules/app_database/app/reportMalformedStorageValues.tsx");
 
-export default function reportMalformedStorageValues(arg0) {
+export default function reportMalformedStorageValues(source) {
   if (!c3) {
     const Stats = _mod1987.Stats;
     const malformedValueCountResult = Stats.malformedValueCount();
@@ -14,14 +14,14 @@ export default function reportMalformedStorageValues(arg0) {
     const malformedEntryCountResult = Stats2.malformedEntryCount();
     if (!tmp5) {
       c3 = true;
-      let obj = _modDef1232;
-      obj = { extra: null, fingerprint: null };
-      obj = { malformed_value_count: null, malformed_entry_count: null, source: null };
-      obj[0] = malformedValueCountResult;
-      obj[1] = malformedEntryCountResult;
-      obj[2] = arg0;
-      obj[0] = obj;
-      obj[1] = ["kv-storage-omitted-undecodable-values"];
+      let obj = { extra: null, fingerprint: null };
+      obj = {
+        malformed_value_count: malformedValueCountResult,
+        malformed_entry_count: malformedEntryCountResult,
+        source,
+      };
+      obj.extra = obj;
+      obj.fingerprint = ["kv-storage-omitted-undecodable-values"];
       obj.captureMessage("kv-storage: omitted undecodable values", obj, "warning");
     }
     tmp5 = 0 === malformedValueCountResult && 0 === malformedEntryCountResult;

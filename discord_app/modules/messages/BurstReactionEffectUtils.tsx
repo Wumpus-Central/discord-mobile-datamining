@@ -1,31 +1,15 @@
 // discord_app/modules/messages/BurstReactionEffectUtils.tsx
-import set from "../../../_runtime/00002_set.js";
-import hexToRgba from "../../utils/ColorUtils.tsx";
-import apply from "../../../_runtime/00012_apply.js";
+import ColorUtils from "../../utils/ColorUtils.tsx";
+import apply from "../../../_runtime/metro/00012__.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const memoizeResult = apply.memoize((str) => {
-  let length;
-  let num = 0;
-  let num2 = 0;
-  let num3 = 0;
-  if (0 < str.length) {
-    do {
-      num2 = (num2 << 5) - num2 + str.charCodeAt(num);
-      num = num + 1;
-      num3 = num2;
-      length = str.length;
-    } while (num < length);
-  }
-  return Math.abs(num3);
-});
-const result = set.fileFinishedImporting("modules/messages/BurstReactionEffectUtils.tsx");
+const result = size.fileFinishedImporting("modules/messages/BurstReactionEffectUtils.tsx");
 
-export const replaceAnimationColors = function replaceAnimationColors(c5, arg1) {
+export const replaceAnimationColors = function replaceAnimationColors(str, arg1) {
   const items = [, ,];
   ({ r: arr[0], g: arr[1], b: arr[2] } = arg1);
-  const complimentaryPaletteForColor = hexToRgba.getComplimentaryPaletteForColor(items, 2);
-  const obj = hexToRgba;
-  return c5
+  const complimentaryPaletteForColor = ColorUtils.getComplimentaryPaletteForColor(items, 2);
+  return str
     .replace(
       /(\[1,0,0,)/g,
       "[" +
@@ -47,4 +31,18 @@ export const replaceAnimationColors = function replaceAnimationColors(c5, arg1) 
         ",",
     );
 };
-export const getBurstAnimationHash = memoizeResult;
+export const getBurstAnimationHash = apply.memoize((str) => {
+  let length;
+  let num = 0;
+  let num2 = 0;
+  let num3 = 0;
+  if (0 < str.length) {
+    do {
+      num2 = (num2 << 5) - num2 + str.charCodeAt(num);
+      num = num + 1;
+      num3 = num2;
+      length = str.length;
+    } while (num < length);
+  }
+  return Math.abs(num3);
+});

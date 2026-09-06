@@ -1,22 +1,21 @@
 // discord_app/modules/external_pip/ExternalPip.android.tsx
-import set from "../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
+import get_ActivityIndicator from "../../../_runtime/metro/00017__.js";
+import size from "../../../_runtime/metro/00002__.js";
 
 const NativeEventEmitter = get_ActivityIndicator.NativeEventEmitter;
 const NativeModules = get_ActivityIndicator.NativeModules;
 const ExternalPip = NativeModules.ExternalPip;
 class ExternalPip {
   constructor() {
-    obj = Object.create(new.target.prototype);
+    merged = Object.assign({ _enabled: false, _isInPipMode: false });
     tmp2 = new NativeEventEmitter(NativeModules.PipAndroid);
-    obj.eventEmitter = tmp2;
-    return obj;
+    merged.eventEmitter = tmp2;
+    return merged;
   }
 }
 const prototype = ExternalPip.prototype;
 prototype["addOnPipModeChangedListener"] = function addOnPipModeChangedListener(callback2) {
   const self = this;
-  closure_0 = callback2;
   const eventEmitter = this.eventEmitter;
   return eventEmitter.addListener("onPipModeChanged", (isInPipMode) => {
     isInPipMode = isInPipMode.isInPipMode;
@@ -54,9 +53,9 @@ prototype["isSupported"] = function isSupported() {
 prototype["isInPipMode"] = function isInPipMode() {
   return this._isInPipMode;
 };
-let obj = Object.create(ExternalPip.prototype);
+let merged = Object.assign({ _enabled: false, _isInPipMode: false });
 const nativeEventEmitter = new NativeEventEmitter(NativeModules.PipAndroid);
-obj.eventEmitter = nativeEventEmitter;
-const result = set.fileFinishedImporting("modules/external_pip/ExternalPip.android.tsx");
+merged.eventEmitter = nativeEventEmitter;
+const result = size.fileFinishedImporting("modules/external_pip/ExternalPip.android.tsx");
 
-export default obj;
+export default merged;

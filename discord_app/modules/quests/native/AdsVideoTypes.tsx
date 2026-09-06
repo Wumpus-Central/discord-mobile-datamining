@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/AdsVideoTypes.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/quests/native/AdsVideoTypes.tsx");
+const result = size.fileFinishedImporting("modules/quests/native/AdsVideoTypes.tsx");
 
 export const PlayerState = {
   PAUSED: "paused",

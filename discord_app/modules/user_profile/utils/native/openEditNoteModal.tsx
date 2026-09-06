@@ -1,10 +1,12 @@
 // discord_app/modules/user_profile/utils/native/openEditNoteModal.tsx
-import set from "../../../../../_runtime/00002_set.js";
 import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js";
-import _modDef4763 from "../../../../actions/ModalActionCreators.tsx";
+import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/user_profile/utils/native/openEditNoteModal.tsx");
+const result = size.fileFinishedImporting("modules/user_profile/utils/native/openEditNoteModal.tsx");
 
-export default function openEditNoteModal(closure_0) {
-  _modDef4763.pushLazy(asyncRequireImpl(13057, dependencyMap.paths), closure_0, undefined, { presentation: "modal" });
+export default function openEditNoteModal(merged) {
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13057, dependencyMap.paths), merged, undefined, {
+    presentation: "modal",
+  });
 }

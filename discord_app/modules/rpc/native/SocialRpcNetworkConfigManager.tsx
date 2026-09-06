@@ -1,40 +1,37 @@
 // discord_app/modules/rpc/native/SocialRpcNetworkConfigManager.tsx
-import set from "../../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import set2 from "../../../utils/PlatformUtils.tsx";
-import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
-import sendRequest from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
-import closure_4 from "../../user_settings/LocaleStore.tsx";
-import closure_5 from "../../../stores/AuthenticationStore.tsx";
+import _mod17 from "../../../../_runtime/metro/00017__.js";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
+import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
+import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import LocaleStore from "../../user_settings/LocaleStore.tsx";
+import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
+import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 function updateSocialRpcNetworkConfig() {
   let obj = {
-    "X-Super-Properties": expandEventPropertiesDefault.getSuperPropertiesBase64(),
-    "X-Fingerprint": store.getFingerprint(),
-    "X-Installation-ID": store.getInstallationForTracking(),
-    "X-Discord-Locale": locale.locale,
+    "X-Super-Properties": AnalyticsUtilsDefault.getSuperPropertiesBase64(),
+    "X-Fingerprint": AuthenticationStore.getFingerprint(),
+    "X-Installation-ID": AuthenticationStore.getInstallationForTracking(),
+    "X-Discord-Locale": LocaleStore.locale,
   };
   const NativeCacheModule = NativeModules.NativeCacheModule;
   if (NativeCacheModule != null) {
     const _JSON = JSON;
-    obj = { apiBaseUrl: null, headers: null };
-    obj[0] = sendRequest.getAPIBaseURL();
-    obj[1] = obj;
+    obj = { apiBaseUrl: HTTPUtils.getAPIBaseURL(), headers: null };
+    obj.headers = obj;
     const result = NativeCacheModule.setItem("socialRpcNetworkRequest", JSON.stringify(obj));
-    const obj4 = sendRequest;
   }
 }
-const NativeModules = get_ActivityIndicator.NativeModules;
-initializeDefault;
+const NativeModules = _mod17.NativeModules;
 let prototype = function SocialRpcNetworkConfigManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  applyArgumentsResult.handleUpdate = set2.isAndroid() ? updateSocialRpcNetworkConfig : () => {};
+  applyArgumentsResult.handleUpdate = PlatformUtils.isAndroid() ? updateSocialRpcNetworkConfig : () => {};
   applyArgumentsResult.actions = { POST_CONNECTION_OPEN: applyArgumentsResult.handleUpdate };
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp2 {}
 prototype = new prototype();
-let result = set.fileFinishedImporting("modules/rpc/native/SocialRpcNetworkConfigManager.tsx");
+let result = size.fileFinishedImporting("modules/rpc/native/SocialRpcNetworkConfigManager.tsx");
 
 export default prototype;

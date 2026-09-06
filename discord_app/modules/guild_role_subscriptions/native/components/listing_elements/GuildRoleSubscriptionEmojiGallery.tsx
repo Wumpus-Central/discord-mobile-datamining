@@ -1,13 +1,14 @@
 // discord_app/modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionEmojiGallery.tsx
-import noopAll from "../../../../../../_runtime/00019_noop.js";
 import chunkDefault from "../../../../../../_runtime/10344_chunk.js";
-import GappedList from "../LayoutUtils.tsx";
-import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import LayoutUtils from "../LayoutUtils.tsx";
+import EmojiIconDefault from "../EmojiIcon.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting(
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionEmojiGallery.tsx",
 );
 
@@ -19,44 +20,53 @@ export default function EmojiGallery(emojiIds) {
   let obj = { children: null };
   obj = {
     gap: 8,
-    children: chunkDefault(emojiIds.emojiIds, maxPerRow).map((arr) => {
+    children: chunkDefault(emojiIds.emojiIds, maxPerRow).map((arr, index) => {
       let obj = { style: { flexDirection: "row" }, children: null };
-      obj = {
+      obj = { gap: 16, children: arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id)) };
+      obj.children = jsx(LayoutUtils.GappedList, {
         gap: 16,
-        children: arr.map((id) =>
-          closure_1_4(closure_1_1(closure_1_2[5]), { size: 22, fontSize: 18, guildId: closure_0, id }, id),
-        ),
-      };
-      obj[1] = closure_1_4(closure_1_0(closure_1_2[4]).GappedList, obj);
-      return closure_1_4(closure_1_3, obj, arg1);
+        children: arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id)),
+      });
+      return (
+        <View key={arg1} gap={16}>
+          {arg0.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id))}
+        </View>
+      );
     }),
   };
-  obj[0] = jsx(GappedList.GappedList, {
+  obj.children = jsx(LayoutUtils.GappedList, {
     gap: 8,
-    children: chunkDefault(emojiIds.emojiIds, maxPerRow).map((arr) => {
+    children: chunkDefault(emojiIds.emojiIds, maxPerRow).map((arr, index) => {
       let obj = { style: { flexDirection: "row" }, children: null };
-      obj = {
+      obj = { gap: 16, children: arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id)) };
+      obj.children = jsx(LayoutUtils.GappedList, {
         gap: 16,
-        children: arr.map((id) =>
-          closure_1_4(closure_1_1(closure_1_2[5]), { size: 22, fontSize: 18, guildId: closure_0, id }, id),
-        ),
-      };
-      obj[1] = closure_1_4(closure_1_0(closure_1_2[4]).GappedList, obj);
-      return closure_1_4(closure_1_3, obj, arg1);
+        children: arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id)),
+      });
+      return (
+        <View key={arg1} gap={16}>
+          {arg0.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id))}
+        </View>
+      );
     }),
   });
   return (
     <View gap={8}>
-      {chunkDefault(arg0.emojiIds, maxPerRow).map((arr) => {
+      {chunkDefault(arg0.emojiIds, maxPerRow).map((arr, index) => {
         let obj = { style: { flexDirection: "row" }, children: null };
         obj = {
           gap: 16,
-          children: arr.map((id) =>
-            closure_1_4(closure_1_1(closure_1_2[5]), { size: 22, fontSize: 18, guildId: closure_0, id }, id),
-          ),
+          children: arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id)),
         };
-        obj[1] = closure_1_4(closure_1_0(closure_1_2[4]).GappedList, obj);
-        return closure_1_4(closure_1_3, obj, arg1);
+        obj.children = jsx(LayoutUtils.GappedList, {
+          gap: 16,
+          children: arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id)),
+        });
+        return (
+          <View key={arg1} gap={16}>
+            {arg0.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id))}
+          </View>
+        );
       })}
     </View>
   );

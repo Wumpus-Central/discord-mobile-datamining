@@ -1,12 +1,13 @@
 // discord_app/modules/collectibles/native/NitroIcon.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
 import inlineStyles from "../../../../_runtime/08453_inlineStyles.js";
-import inlineStylesDefault from "../../../../_runtime/08453_inlineStyles.js";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/collectibles/native/NitroIcon.tsx");
+const inlineStylesDefault = inlineStyles;
+
+require = fn;
+const jsx = fn(21).jsx;
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/native/NitroIcon.tsx");
 
 export default function NitroIcon(width) {
   let num = width.width;
@@ -21,7 +22,7 @@ export default function NitroIcon(width) {
   if (str === undefined) {
     str = "#ffffff";
   }
-  const obj = {
+  const size = {
     width: num,
     height: num2,
     viewBox: "0 0 106 26",

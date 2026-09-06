@@ -1,31 +1,28 @@
 // discord_app/modules/emoji_picker/analytics/trackOnEmojiPickerOpened.tsx
-import collectGuildAnalyticsMetadataDefault from "../../app_analytics/AppAnalyticsUtils.tsx";
+import AppAnalyticsUtilsDefault from "../../app_analytics/AppAnalyticsUtils.tsx";
 import useTopAndNewlyAddedEmojis from "../hooks/useTopAndNewlyAddedEmojis.tsx";
 import useEmojiHotrail from "../hooks/useEmojiHotrail.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../../emojis/EmojiStore.tsx";
-import closure_5 from "../../../stores/ChannelStore.tsx";
-import closure_6 from "../../../stores/SelectedChannelStore.tsx";
-import { AnalyticEvents } from "../../../Constants.tsx";
-import { EmojiIntention } from "../../emojis/EmojiConstants.tsx";
-import { ExpressionPickerViewType } from "../../expression_picker/ExpressionPickerConstants.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import EmojiStore from "../../emojis/EmojiStore.tsx";
+import ChannelStore from "../../../stores/ChannelStore.tsx";
+import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
 
-require = arg1;
-function trackOnEmojiPickerOpened(arg0) {
-  ({ intention, analyticsObject } = arg0);
-  ({ containerWidth, rowSize, isBurstReaction } = arg0);
-  channel = channel.getChannel(channelId.getChannelId());
+require = fn;
+function trackOnEmojiPickerOpened(current) {
+  ({ intention, analyticsObject } = current);
+  ({ containerWidth, rowSize, isBurstReaction } = current);
+  const channel = ChannelStore.getChannel(SelectedChannelStore.getChannelId());
   let guildId;
   if (channel != null) {
     guildId = channel.getGuildId();
   }
   if (intention === EmojiIntention.REACTION) {
-    const frequently = closure_4.emojiReactionFrecencyWithoutFetchingLatest.frequently;
+    const frequently = EmojiStore.emojiReactionFrecencyWithoutFetchingLatest.frequently;
     let substr = frequently.slice();
-    obj1 = closure_4;
+    let obj1 = EmojiStore;
   } else {
-    obj1 = closure_4;
-    const frequently1 = closure_4.emojiFrecencyWithoutFetchingLatest.frequently;
+    obj1 = EmojiStore;
+    const frequently1 = EmojiStore.emojiFrecencyWithoutFetchingLatest.frequently;
     substr = frequently1.slice();
   }
   if (null != channel) {
@@ -59,8 +56,6 @@ function trackOnEmojiPickerOpened(arg0) {
     pickerIntention: intention,
   });
   ({ topEmojis, newlyAddedEmojis } = topAndNewlyAddedEmojis);
-  const obj4 = useTopAndNewlyAddedEmojis;
-  const tmp6 = require;
   const emojiHotrail = useEmojiHotrail.getEmojiHotrail({ topEmojis, newlyAddedEmojis, rowSize });
   ({ visibleTopEmojis, visibleNewlyAddedEmojis } = emojiHotrail);
   const tmp6Result = useEmojiHotrail;
@@ -102,28 +97,30 @@ function trackOnEmojiPickerOpened(arg0) {
   };
   let tmp14 = intention === tmp2.REACTION;
   if (tmp14) {
-    obj = { is_burst: null };
-    obj[0] = isBurstReaction;
+    obj = { is_burst: isBurstReaction };
     tmp14 = obj;
   }
   const merged = Object.assign(tmp14);
   let tmp16 = null != analyticsObject;
   if (tmp16) {
-    obj1 = { location_object: null };
-    obj1[0] = analyticsObject;
+    obj1 = { location_object: analyticsObject };
     tmp16 = obj1;
   }
   const merged1 = Object.assign(tmp16);
-  collectGuildAnalyticsMetadataDefault.trackWithMetadata(EXPRESSION_PICKER_OPENED, obj);
+  AppAnalyticsUtilsDefault.trackWithMetadata(EXPRESSION_PICKER_OPENED, obj);
 }
-const result = require("set").fileFinishedImporting("modules/emoji_picker/analytics/trackOnEmojiPickerOpened.tsx");
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const EmojiIntention = fn(1374).EmojiIntention;
+const ExpressionPickerViewType = fn(1219).ExpressionPickerViewType;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/emoji_picker/analytics/trackOnEmojiPickerOpened.tsx");
 
 export default trackOnEmojiPickerOpened;
-export const useTrackOnEmojiPickerOpenedForReactions = function useTrackOnEmojiPickerOpenedForReactions(first) {
-  closure_0 = React.useRef(first);
-  const effect = React.useEffect(() => {
-    if (ref.current.intention === closure_1_8.REACTION) {
-      closure_1_10(tmp.current);
+export const useTrackOnEmojiPickerOpenedForReactions = function useTrackOnEmojiPickerOpenedForReactions(set) {
+  noop.useRef(set);
+  const effect = noop.useEffect(() => {
+    if (ref.current.intention === EmojiIntention.REACTION) {
+      trackOnEmojiPickerOpened(tmp.current);
     }
   }, []);
 };

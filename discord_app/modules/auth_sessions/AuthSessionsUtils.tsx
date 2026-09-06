@@ -1,20 +1,21 @@
 // discord_app/modules/auth_sessions/AuthSessionsUtils.tsx
-import getSystemLocale from "../../intl/index.native.tsx";
-import hooksDefault from "../../../_runtime/04153_hooks.js";
-import closure_3 from "../../../_runtime/00019_noop.js";
-import closure_4 from "../../stores/AuthenticationStore.tsx";
-import closure_5 from "AuthSessionsStore.tsx";
+import util from "../../intl/index.native.tsx";
+import _modDef4153 from "../../../_runtime/metro/04153__.js";
+import noop from "../../../_runtime/metro/00019__.js";
+import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
+import AuthSessionsStore from "AuthSessionsStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/auth_sessions/AuthSessionsUtils.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/auth_sessions/AuthSessionsUtils.tsx");
 
 export const useAuthSessions = function useAuthSessions() {
-  const items = [closure_5];
+  const items = [AuthSessionsStore];
   stateFromStoresObject = stateFromStoresObject(504).useStateFromStoresObject(items, () => sessions.getSessions());
   const items1 = [stateFromStoresObject];
-  return React.useMemo(() => {
-    const otherSessions = [...authSessionIdHash];
-    authSessionIdHash = closure_1_4.getAuthSessionIdHash();
+  return noop.useMemo(() => {
+    const otherSessions = [...stateFromStoresObject];
+    const authSessionIdHash = AuthenticationStore.getAuthSessionIdHash();
     let currentSession = null;
     if (null != authSessionIdHash) {
       const findIndexResult = otherSessions.findIndex((id_hash) => id_hash.id_hash === authSessionIdHash);
@@ -34,11 +35,11 @@ export const useAuthSessions = function useAuthSessions() {
 export const formatDate = function formatDate(arg0) {
   const timestamp = Date.now();
   if ((timestamp - arg0.valueOf()) / 1000 / 60 / 60 < 1) {
-    const intl = getSystemLocale.intl;
-    let stringResult = intl.string(getSystemLocale.t.TXCmfL);
+    const intl = util.intl;
+    let stringResult = intl.string(util.t.TXCmfL);
   } else {
-    stringResult = hooksDefault(arg0).fromNow();
-    const obj = hooksDefault(arg0);
+    stringResult = _modDef4153(arg0).fromNow();
+    const obj = _modDef4153(arg0);
   }
   return stringResult;
 };

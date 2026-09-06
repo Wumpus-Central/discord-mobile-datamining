@@ -1,25 +1,26 @@
 // discord_app/design/components/Pile/native/AvatarPile.native.tsx
-import SolidCutout from "../../Icon/native/ClipView.tsx";
+import ClipView from "../../Icon/native/ClipView.tsx";
 import Pile from "Pile.native.tsx";
-import map from "PileOverflow.native.tsx";
-import getListSummaryLabel from "../../../../utils/ListUtils.tsx";
-import StaticNativeCutoutAvatarImage from "../../../void/CutoutableAvatarImage/native/CutoutableAvatarImage.tsx";
-import closure_2 from "../../../../../_runtime/00019_noop.js";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import PileOverflow from "PileOverflow.native.tsx";
+import ListUtils from "../../../../utils/ListUtils.tsx";
+import CutoutableAvatarImage from "../../../void/CutoutableAvatarImage/native/CutoutableAvatarImage.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-const result = require("set").fileFinishedImporting("design/components/Pile/native/AvatarPile.native.tsx");
+require = fn;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Pile/native/AvatarPile.native.tsx");
 
 export const AvatarPile = function AvatarPile(arg0) {
   ({ totalCount, children } = arg0);
-  const Children = React.Children;
+  const Children = noop.Children;
   ({ size, names } = arg0);
   const countResult = Children.count(children);
-  const tmp4 = StaticNativeCutoutAvatarImage.AVATAR_SIZE_MAP[size];
+  const tmp4 = CutoutableAvatarImage.AVATAR_SIZE_MAP[size];
   let obj = {
-    "aria-label": getListSummaryLabel.getListSummaryLabel(names, totalCount),
-    shape: SolidCutout.CutoutShape.Circle,
+    "aria-label": ListUtils.getListSummaryLabel(names, totalCount),
+    shape: ClipView.CutoutShape.Circle,
     size: tmp4,
     gap: null,
     depthX: 0.4,
@@ -29,17 +30,14 @@ export const AvatarPile = function AvatarPile(arg0) {
   if (tmp4 <= 40) {
     num = 2;
   }
-  obj[3] = num;
+  obj.gap = num;
   const items = [children];
   let tmp6 = null != totalCount && countResult < totalCount;
   if (tmp6) {
-    obj = { size: null, borderRadius: null, value: null };
-    obj[0] = tmp4;
-    obj[1] = tmp4 / 2;
-    obj[2] = totalCount - countResult;
-    tmp6 = callback(map.PileOverflow, obj);
+    obj = { size: tmp4, borderRadius: tmp4 / 2, value: totalCount - countResult };
+    tmp6 = React3(PileOverflow.PileOverflow, obj);
   }
   items[1] = tmp6;
-  obj[5] = items;
-  return closure_4(Pile.Pile, obj);
+  obj.children = items;
+  return React4(Pile.Pile, obj);
 };

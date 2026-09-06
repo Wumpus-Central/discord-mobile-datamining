@@ -1,23 +1,23 @@
 // discord_app/modules/guild_settings/safety/GuildInvitesDisabledUtils.tsx
-import closure_2 from "../../guild_antiraid/GuildIncidentsStore.tsx";
-import closure_3 from "../../../stores/PermissionStore.tsx";
-import ME from "../../../Constants.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import GuildIncidentsStore from "../../guild_antiraid/GuildIncidentsStore.tsx";
+import PermissionStore from "../../../stores/PermissionStore.tsx";
 
-const require = arg1;
-({ GuildFeatures: c4, Permissions: c5 } = ME);
-const result = require("set").fileFinishedImporting("modules/guild_settings/safety/GuildInvitesDisabledUtils.tsx");
+const require = fn;
+const Constants = fn(1074);
+({ GuildFeatures: closure_4, Permissions: hasOwnProperty } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_settings/safety/GuildInvitesDisabledUtils.tsx");
 
 export const useInvitesDisabledPermission = function useInvitesDisabledPermission(guild) {
-  const _require = guild;
-  const items = [closure_3];
+  _require = guild;
+  const items = [PermissionStore];
   const items1 = [guild];
-  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+  return require("initialize").useStateFromStores(
     items,
     () => {
       let canResult = null != closure_0;
       if (canResult) {
-        canResult = closure_1_3.can(closure_1_5.MANAGE_GUILD, tmp);
+        canResult = PermissionStore.can(constants2.MANAGE_GUILD, tmp);
       }
       return canResult;
     },
@@ -25,18 +25,15 @@ export const useInvitesDisabledPermission = function useInvitesDisabledPermissio
   );
 };
 export const useInvitesDisabled = function useInvitesDisabled(features) {
-  const _require = features;
-  const items = [closure_2];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
-    items,
-    () => {
-      let guildIncident = null;
-      if (null != closure_0) {
-        guildIncident = closure_1_2.getGuildIncident(tmp.id);
-      }
-      return guildIncident;
-    },
-  );
+  _require = features;
+  const items = [GuildIncidentsStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
+    let guildIncident = null;
+    if (null != closure_0) {
+      guildIncident = GuildIncidentsStore.getGuildIncident(tmp.id);
+    }
+    return guildIncident;
+  });
   let hasItem;
   if (features != null) {
     features = features.features;
@@ -60,33 +57,30 @@ export const useInvitesDisabled = function useInvitesDisabled(features) {
   return hasItem;
 };
 export const useShouldShowInvitesDisabledNotif = function useShouldShowInvitesDisabledNotif(guild) {
-  let _require = guild;
-  const items = [closure_3];
+  _require = guild;
+  const items = [PermissionStore];
   const items1 = [guild];
-  let stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+  let stateFromStores = require("initialize").useStateFromStores(
     items,
     () => {
       let canResult = null != closure_0;
       if (canResult) {
-        canResult = closure_1_3.can(closure_1_5.MANAGE_GUILD, tmp);
+        canResult = PermissionStore.can(constants2.MANAGE_GUILD, tmp);
       }
       return canResult;
     },
     items1,
   );
-  _require = guild;
-  const obj = initialize;
-  const items2 = [closure_2];
-  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
-    items2,
-    () => {
-      let guildIncident = null;
-      if (null != closure_0) {
-        guildIncident = closure_1_2.getGuildIncident(tmp.id);
-      }
-      return guildIncident;
-    },
-  );
+  closure_129_0 = guild;
+  const obj = require("initialize");
+  const items2 = [GuildIncidentsStore];
+  const stateFromStores1 = require("initialize").useStateFromStores(items2, () => {
+    let guildIncident = null;
+    if (null != closure_0) {
+      guildIncident = GuildIncidentsStore.getGuildIncident(tmp.id);
+    }
+    return guildIncident;
+  });
   let hasItem;
   if (guild != null) {
     const features = guild.features;

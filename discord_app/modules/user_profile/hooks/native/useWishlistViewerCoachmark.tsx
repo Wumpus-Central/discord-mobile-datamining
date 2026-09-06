@@ -1,28 +1,30 @@
 // discord_app/modules/user_profile/hooks/native/useWishlistViewerCoachmark.tsx
-import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import dismissible_content from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_profile/hooks/native/useWishlistViewerCoachmark.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/hooks/native/useWishlistViewerCoachmark.tsx");
 
 export const useWishlistViewerCoachmark = function useWishlistViewerCoachmark(isCurrentUser) {
   isCurrentUser = isCurrentUser.isCurrentUser;
   const shouldShowWishlistTab = isCurrentUser.shouldShowWishlistTab;
   let items = [isCurrentUser, shouldShowWishlistTab];
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     if (!isCurrentUser) {
       if (shouldShowWishlistTab) {
-        let items = [isCurrentUser(shouldShowWishlistTab[2]).DismissibleContent.WISHLIST_MOBILE_VIEWER_COACHMARK];
+        let items = [dismissible_content.DismissibleContent.WISHLIST_MOBILE_VIEWER_COACHMARK];
       }
       return items;
     }
     items = [];
   }, items);
-  let obj = isCurrentUser(shouldShowWishlistTab[3]);
-  obj = {
+  isCurrentUser(shouldShowWishlistTab[3]);
+  const obj = {
     isVisible: tmp3 === isCurrentUser(shouldShowWishlistTab[2]).DismissibleContent.WISHLIST_MOBILE_VIEWER_COACHMARK,
     markAsDismissed: tmp4,
   };
-  [tmp3, tmp4] = callback(obj.useSelectedDismissibleContent(memo), 2);
+  [tmp3, tmp4] = _slicedToArray(obj.useSelectedDismissibleContent(memo), 2);
   return obj;
 };

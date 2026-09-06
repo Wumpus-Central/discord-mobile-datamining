@@ -1,90 +1,80 @@
 // discord_app/stores/RTCConnectionDesyncStore.tsx
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../Dispatcher.tsx";
-import keysDefault from "../lib/CachedEntriesMap.tsx";
+import DispatcherDefault from "../Dispatcher.tsx";
+import CachedEntriesMapDefault from "../lib/CachedEntriesMap.tsx";
 import BaseConnectionEvent from "../../discord_common/js/packages/media-engine/index.tsx";
-import closure_3 from "../records/VoiceStateRecord.tsx";
-import closure_4 from "ChannelStore.tsx";
-import closure_5 from "RTCConnectionStore.tsx";
-import closure_6 from "UserStore.tsx";
-import closure_7 from "VoiceStateStore.tsx";
-import { makeSortedVoiceState } from "views/SortedVoiceStateStore.tsx";
-import ME from "../Constants.tsx";
-import { ParticipantTypes } from "../modules/calls/CallConstants.tsx";
-import set from "../../_runtime/00002_set.js";
+import NicknameUtilsDefault from "../utils/NicknameUtils.tsx";
+import useAvatarDecoration from "../modules/collectibles/avatar_decorations/useAvatarDecoration.tsx";
+import VoiceStateRecord from "../records/VoiceStateRecord.tsx";
+import ChannelStore from "ChannelStore.tsx";
+import RTCConnectionStore from "RTCConnectionStore.tsx";
+import UserStore from "UserStore.tsx";
+import VoiceStateStore from "VoiceStateStore.tsx";
 
-require = arg1;
+require = fn;
 function retryFailedUsers() {
-  const channelId = store.getChannelId();
+  const channelId = RTCConnectionStore.getChannelId();
   if (null == channelId) {
     return false;
   } else {
-    channel = channel.getChannel(channelId);
+    const channel = ChannelStore.getChannel(channelId);
     let guildId;
     if (channel != null) {
       guildId = channel.getGuildId();
     }
     c2 = false;
-    const item = set.forEach((userId) => {
-      if (null == closure_1_7.getVoiceStateForChannel(channelId, userId)) {
-        const user = closure_1_6.getUser(userId);
+    const item = set.forEach((item) => {
+      if (null == VoiceStateStore.getVoiceStateForChannel(channelId, item)) {
+        const user = UserStore.getUser(item);
         if (null != user) {
-          dependencyMap = true;
-          closure_1_14.delete(userId);
-          let obj = { userId: null, channelId: null };
-          obj[0] = user.id;
-          obj[1] = tmp;
-          const tmp23 = new closure_1_3(obj);
+          c2 = true;
+          set.delete(item);
+          let obj = { userId: user.id, channelId: tmp };
+          const tmp23 = new VoiceStateRecord(obj);
           let tmp6 = guildId;
           if (guildId == null) {
-            tmp6 = closure_1_9;
+            tmp6 = React7;
           }
-          const result = closure_1_12.set(user.id, closure_1_8(tmp23, tmp6, user.id));
+          const result = closure_12.set(user.id, makeSortedVoiceState(tmp23, tmp6, user.id));
           obj = {
-            type: null,
-            user: null,
-            id: null,
+            type: ParticipantTypes.USER,
+            user,
+            id: user.id,
             streamId: null,
-            voiceState: null,
+            voiceState: tmp23,
             voicePlatform: null,
             speaking: false,
             lastSpoke: 0,
             soundsharing: false,
             ringing: false,
-            userNick: null,
+            userNick: NicknameUtilsDefault.getName(guildId, tmp, user),
             userAvatarDecoration: null,
             localVideoDisabled: false,
             isPoppedOut: false,
           };
-          obj[0] = closure_1_11.USER;
-          obj[1] = user;
-          obj[2] = user.id;
-          obj[4] = tmp23;
-          obj[10] = guildId(4712).getName(guildId, tmp, user);
-          const obj2 = guildId(4712);
-          const tmp24 = closure_1_8;
-          obj[11] = channelId(8217).getAvatarDecoration(user, guildId);
-          const result1 = closure_1_13.set(user.id, obj);
-          const obj3 = channelId(8217);
+          obj.userAvatarDecoration = useAvatarDecoration.getAvatarDecoration(user, guildId);
+          const result1 = closure_13.set(user.id, obj);
         }
       } else {
-        closure_1_14.delete(userId);
+        set.delete(item);
       }
     });
     return c2;
   }
 }
-({ ME: c9, RTCConnectionStates: c10 } = ME);
-let closure_12 = new keysDefault();
-const tmp3 = new keysDefault();
-let closure_13 = new keysDefault();
-let set = new Set();
+const makeSortedVoiceState = fn(4584).makeSortedVoiceState;
+const Constants = fn(1074);
+({ ME: closure_9, RTCConnectionStates: c10 } = Constants);
+const ParticipantTypes = fn(4581).ParticipantTypes;
+new CachedEntriesMapDefault();
+const tmp3 = new CachedEntriesMapDefault();
+const set = new Set();
 const Store = initializeDefault.Store;
 class RTCConnectionDesyncStore extends Store {}
 const prototype = RTCConnectionDesyncStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_7, closure_6, closure_4, closure_5);
-  const items = [closure_6];
+  this.waitFor(VoiceStateStore, UserStore, ChannelStore, RTCConnectionStore);
+  const items = [UserStore];
   this.syncWith(items, retryFailedUsers);
 };
 Object.defineProperty(prototype, "desyncedVoiceStatesCount", {
@@ -103,7 +93,7 @@ prototype["getDesyncedParticipants"] = function getDesyncedParticipants() {
   return set2.values();
 };
 RTCConnectionDesyncStore.displayName = "RTCConnectionDesyncStore";
-const rTCConnectionDesyncStore = new RTCConnectionDesyncStore(dispatcherDefault, {
+const rTCConnectionDesyncStore = new RTCConnectionDesyncStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     set.clear();
     set2.clear();
@@ -129,16 +119,15 @@ const rTCConnectionDesyncStore = new RTCConnectionDesyncStore(dispatcherDefault,
   },
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
     voiceStates = voiceStates.voiceStates;
-    let channelId;
-    channelId = store.getChannelId();
+    const channelId = RTCConnectionStore.getChannelId();
     let reduced = null != channelId;
     if (reduced) {
-      reduced = voiceStates.reduce((arg0, userId) => {
+      reduced = voiceStates.reduce((acc, userId) => {
         userId = userId.userId;
         let tmp = userId.channelId === channelId;
         if (tmp) {
-          let deleteResult = closure_1_12.delete(userId);
-          const deleteResult1 = closure_1_13.delete(userId);
+          let deleteResult = set.delete(userId);
+          const deleteResult1 = set2.delete(userId);
           if (!deleteResult) {
             deleteResult = deleteResult1;
           }
@@ -146,10 +135,10 @@ const rTCConnectionDesyncStore = new RTCConnectionDesyncStore(dispatcherDefault,
             deleteResult = deleteResult2;
           }
           tmp = deleteResult;
-          deleteResult2 = closure_1_14.delete(userId);
+          deleteResult2 = set.delete(userId);
         }
         if (!tmp) {
-          tmp = arg0;
+          tmp = acc;
         }
         return tmp;
       }, false);
@@ -160,51 +149,41 @@ const rTCConnectionDesyncStore = new RTCConnectionDesyncStore(dispatcherDefault,
     ({ userIds, guildId: require, channelId: importDefault } = context);
     let reduced = context.context === BaseConnectionEvent.MediaEngineContextTypes.DEFAULT;
     if (reduced) {
-      reduced = userIds.reduce((arg0, userId) => {
-        if (null != closure_1_7.getVoiceStateForChannel(closure_1, userId)) {
-          return arg0;
+      reduced = userIds.reduce((acc, item) => {
+        if (null != VoiceStateStore.getVoiceStateForChannel(closure_1_1, item)) {
+          return acc;
         } else {
-          const user = closure_1_6.getUser(userId);
+          const user = UserStore.getUser(item);
           if (null == user) {
-            closure_1_14.add(userId);
-            let flag = arg0;
+            set.add(item);
+            let flag = acc;
           } else {
-            let obj = { userId: null, channelId: null };
-            obj[0] = user.id;
-            obj[1] = tmp;
-            const tmp21 = new closure_1_3(obj);
-            let tmp2 = closure_0;
-            if (closure_0 == null) {
-              tmp2 = closure_1_9;
+            let obj = { userId: user.id, channelId: tmp };
+            const tmp21 = new VoiceStateRecord(obj);
+            let tmp2 = closure_1_0;
+            if (closure_1_0 == null) {
+              tmp2 = React7;
             }
-            const result = closure_1_12.set(user.id, closure_1_8(tmp21, tmp2, user.id));
+            const result = closure_12.set(user.id, makeSortedVoiceState(tmp21, tmp2, user.id));
             obj = {
-              type: null,
-              user: null,
-              id: null,
+              type: ParticipantTypes.USER,
+              user,
+              id: user.id,
               streamId: null,
-              voiceState: null,
+              voiceState: tmp21,
               voicePlatform: null,
               speaking: false,
               lastSpoke: 0,
               soundsharing: false,
               ringing: false,
-              userNick: null,
+              userNick: NicknameUtilsDefault.getName(closure_1_0, tmp, user),
               userAvatarDecoration: null,
               localVideoDisabled: false,
               isPoppedOut: false,
             };
-            obj[0] = closure_1_11.USER;
-            obj[1] = user;
-            obj[2] = user.id;
-            obj[4] = tmp21;
-            obj[10] = closure_1_1(closure_1_2[9]).getName(closure_0, tmp, user);
-            const obj2 = closure_1_1(closure_1_2[9]);
-            const tmp22 = closure_1_8;
-            obj[11] = closure_1_0(closure_1_2[10]).getAvatarDecoration(user, closure_0);
-            const result1 = closure_1_13.set(user.id, obj);
+            obj.userAvatarDecoration = useAvatarDecoration.getAvatarDecoration(user, closure_1_0);
+            const result1 = closure_13.set(user.id, obj);
             flag = true;
-            const obj3 = closure_1_0(closure_1_2[10]);
           }
           return flag;
         }
@@ -230,6 +209,7 @@ const rTCConnectionDesyncStore = new RTCConnectionDesyncStore(dispatcherDefault,
     return tmp;
   },
 });
-let result = set.fileFinishedImporting("stores/RTCConnectionDesyncStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("stores/RTCConnectionDesyncStore.tsx");
 
 export default rTCConnectionDesyncStore;

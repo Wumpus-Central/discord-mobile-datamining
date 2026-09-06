@@ -1,19 +1,19 @@
 // discord_app/modules/portals/PortalToNativeView.native.tsx
-import noopAll from "../../../_runtime/00019_noop.js";
-import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../_runtime/metro/00019__.js";
 
-noopAll;
-let closure_1 = require("get ActivityIndicator").requireNativeComponent("PortalToNativeView");
-let closure_2 = createCacheKey.createStyles({
+const jsx = fn(21).jsx;
+let closure_1 = fn(17).requireNativeComponent("PortalToNativeView");
+const createStyles = fn(4560);
+let closure_2 = createStyles.createStyles({
   portal: { position: "absolute", opacity: 0, height: 0, right: 0, left: 0, top: 0 },
 });
-const result = require("set").fileFinishedImporting("modules/portals/PortalToNativeView.native.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/portals/PortalToNativeView.native.tsx");
 
 export default function PortalToNativeView(arg0) {
   ({ portalId, children } = arg0);
   return (
-    <closure_1 pointerEvents="none" portalId={portalId} style={callback().portal}>
+    <closure_1 pointerEvents="none" portalId={portalId} style={closure_2().portal}>
       {children}
     </closure_1>
   );

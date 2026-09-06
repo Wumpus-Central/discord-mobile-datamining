@@ -1,22 +1,21 @@
 // discord_app/modules/premium/referral_program/hooks/useReferralIncentiveEligibility.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram.tsx";
-import apexExperiment from "../../experiments/PremiumReferralIncentivesExperiment.tsx";
-import closure_2 from "../../../../stores/billing/SubscriptionStore.tsx";
+import PremiumReferralIncentivesExperiment from "../../experiments/PremiumReferralIncentivesExperiment.tsx";
+import SubscriptionStore from "../../../../stores/billing/SubscriptionStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting(
-  "modules/premium/referral_program/hooks/useReferralIncentiveEligibility.tsx",
-);
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/referral_program/hooks/useReferralIncentiveEligibility.tsx");
 
 export const useReferralIncentiveEligibility = function useReferralIncentiveEligibility(location) {
   const isEligibleSenderForReferralProgram =
     useIsEligibleSenderForReferralProgram.useIsEligibleSenderForReferralProgram(true);
-  const obj = useIsEligibleSenderForReferralProgram;
-  const premiumReferralIncentivesVariant = apexExperiment.usePremiumReferralIncentivesVariant(location.location);
+  const premiumReferralIncentivesVariant = PremiumReferralIncentivesExperiment.usePremiumReferralIncentivesVariant(
+    location.location,
+  );
   ({ referralRewardType, useAltReferralCardArt } = premiumReferralIncentivesVariant);
-  const obj2 = apexExperiment;
-  const items = [closure_2];
+  const items = [SubscriptionStore];
   const stateFromStores = initialize.useStateFromStores(items, () =>
     premiumTypeSubscription.getPremiumTypeSubscription(),
   );

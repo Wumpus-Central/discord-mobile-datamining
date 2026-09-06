@@ -1,6 +1,6 @@
 // discord_app/modules/collectibles/experiments/CollectiblesProfileFramesPurchaseExperiment.tsx
-import set from "../../../../_runtime/00002_set.js";
 import ApexExperiment from "../../experiments/apex/index.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 let obj = {
   CONTROL: 0,
@@ -10,15 +10,20 @@ let obj = {
   PAID_PREMIUM_SUBSCRIBERS_ONLY: 2,
   [2]: "PAID_PREMIUM_SUBSCRIBERS_ONLY",
 };
-obj = { bucket: obj.CONTROL };
-obj = { bucket: obj.CONTROL };
-const apexExperiment = ApexExperiment.createApexExperiment({
+obj = {
   name: "2026-04-collectibles-profile-frames-purchase",
   kind: "user",
-  defaultConfig: obj,
-  variations: { 0: obj, 1: { bucket: obj.OPEN_PURCHASE }, 2: { bucket: obj.PAID_PREMIUM_SUBSCRIBERS_ONLY } },
-});
-const result = set.fileFinishedImporting(
+  defaultConfig: { bucket: obj.CONTROL },
+  variations: null,
+};
+obj = {
+  0: { bucket: obj.CONTROL },
+  1: { bucket: obj.OPEN_PURCHASE },
+  2: { bucket: obj.PAID_PREMIUM_SUBSCRIBERS_ONLY },
+};
+obj.variations = obj;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting(
   "modules/collectibles/experiments/CollectiblesProfileFramesPurchaseExperiment.tsx",
 );
 

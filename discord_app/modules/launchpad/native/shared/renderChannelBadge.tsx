@@ -1,15 +1,15 @@
 // discord_app/modules/launchpad/native/shared/renderChannelBadge.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import Button from "../../../../design/void/native.tsx";
-import shortenAndLocalizeNumber from "../../../../utils/NumberUtils.tsx";
-import Text from "../../../../design/components/Text/native/Text.tsx";
+import util from "../../../../intl/index.native.tsx";
+import native from "../../../../design/void/native.tsx";
+import NumberUtils from "../../../../utils/NumberUtils.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import NewBadgeDefault from "../../../channel_list_v2/native/components/NewBadge.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/launchpad/native/shared/renderChannelBadge.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/launchpad/native/shared/renderChannelBadge.tsx");
 
 export default function renderChannelBadge(newChannel) {
   let flag = newChannel.newChannel;
@@ -23,10 +23,8 @@ export default function renderChannelBadge(newChannel) {
   ({ postsWithUnreadsCount, newPostCount, eventsMentionCount } = newChannel);
   if (null != num) {
     if (num > 0) {
-      let obj = { value: null, isMentionLowImportance: null };
-      obj[0] = num;
-      obj[1] = tmp;
-      let tmp2 = jsx(Button.Badge, { value: null, isMentionLowImportance: null });
+      let obj = { value: num, isMentionLowImportance: tmp };
+      let tmp2 = jsx(native.Badge, { value: num, isMentionLowImportance: tmp });
     }
     return tmp2;
   }
@@ -36,28 +34,24 @@ export default function renderChannelBadge(newChannel) {
     if (null != newPostCount) {
       if (newPostCount > 0) {
         obj = { variant: "text-xs/bold", color: "text-brand", children: null };
-        const intl = getSystemLocale.intl;
-        obj1 = { count: null };
-        obj1[0] = shortenAndLocalizeNumber.humanizeValue(newPostCount, newChannel.locale);
-        obj[2] = intl.format(getSystemLocale.t.GkAbqY, obj1);
-        tmp2 = jsx(Text.Text, { variant: "text-xs/bold", color: "text-brand", children: null });
-        const obj5 = shortenAndLocalizeNumber;
+        const intl = util.intl;
+        const obj1 = { count: NumberUtils.humanizeValue(newPostCount, newChannel.locale) };
+        obj.children = intl.format(util.t.GkAbqY, obj1);
+        tmp2 = jsx(Text_Text.Text, { variant: "text-xs/bold", color: "text-brand", children: null });
       }
     }
     if (null != postsWithUnreadsCount) {
       if (postsWithUnreadsCount > 0) {
-        const obj2 = { variant: "text-xs/bold", color: "text-muted", children: null };
-        obj2[2] = postsWithUnreadsCount;
-        tmp2 = jsx(Text.Text, { variant: "text-xs/bold", color: "text-muted", children: null });
+        const obj2 = { variant: "text-xs/bold", color: "text-muted", children: postsWithUnreadsCount };
+        tmp2 = jsx(Text_Text.Text, { variant: "text-xs/bold", color: "text-muted", children: postsWithUnreadsCount });
       }
     }
     tmp2 = null;
     if (null != eventsMentionCount) {
       tmp2 = null;
       if (eventsMentionCount > 0) {
-        obj = { value: null, eventsMentionBadge: true };
-        obj[0] = eventsMentionCount;
-        tmp2 = jsx(Button.Badge, { value: null, eventsMentionBadge: true });
+        obj = { value: eventsMentionCount, eventsMentionBadge: true };
+        tmp2 = jsx(native.Badge, { value: eventsMentionCount, eventsMentionBadge: true });
       }
     }
   }

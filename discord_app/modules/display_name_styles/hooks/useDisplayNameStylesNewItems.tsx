@@ -1,91 +1,93 @@
 // discord_app/modules/display_name_styles/hooks/useDisplayNameStylesNewItems.tsx
-import closure_2 from "../../../../_runtime/00019_noop.js";
-import closure_3 from "../DisplayNameStylesSeenStore.tsx";
-import items3 from "../DisplayNameStylesConstants.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import DisplayNameStylesSeenStore from "../DisplayNameStylesSeenStore.tsx";
 
-const require = arg1;
-({ FLYWHEEL_EFFECTS: c4, FLYWHEEL_FONTS: c5 } = items3);
-let result = require("set").fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesNewItems.tsx");
+const require = fn;
+const DisplayNameStylesConstants = fn(1389);
+({ FLYWHEEL_EFFECTS: closure_4, FLYWHEEL_FONTS: hasOwnProperty } = DisplayNameStylesConstants);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesNewItems.tsx");
 
 export const useDisplayNameStylesNewFonts = function useDisplayNameStylesNewFonts(visibleFontOrder) {
-  const _require = visibleFontOrder;
-  let obj = _require(stateFromStores[3]);
-  const items = [closure_3];
+  _require = visibleFontOrder;
+  let obj = require("initialize");
+  const items = [DisplayNameStylesSeenStore];
   stateFromStores = obj.useStateFromStores(items, () => seenFonts.getSeenFonts());
   obj = {
-    dotFontIds: React.useMemo(
-      () =>
-        new Set(
-          visibleFontOrder.filter((arg0) => {
-            let hasItem = closure_1_5.includes(arg0);
-            if (hasItem) {
-              hasItem = !set.has(arg0);
-            }
-            return hasItem;
-          }),
-        ),
-      items1,
-    ),
-    dismissFontDot: React.useCallback((fontId) => {
+    dotFontIds: null,
+    dismissFontDot: noop.useCallback((fontId) => {
       const result = visibleFontOrder(stateFromStores[4]).markDisplayNameStyleFontSeen(fontId);
     }, []),
   };
-  items1 = [visibleFontOrder, stateFromStores];
+  const items1 = [visibleFontOrder, stateFromStores];
+  obj.dotFontIds = noop.useMemo(
+    () =>
+      new Set(
+        visibleFontOrder.filter((item) => {
+          let hasItem = closure_2_5.includes(item);
+          if (hasItem) {
+            hasItem = !set.has(item);
+          }
+          return hasItem;
+        }),
+      ),
+    items1,
+  );
   return obj;
 };
 export const useDisplayNameStylesNewEffects = function useDisplayNameStylesNewEffects(visibleEffectOrder) {
-  const _require = visibleEffectOrder;
-  let obj = _require(stateFromStores[3]);
-  const items = [closure_3];
+  _require = visibleEffectOrder;
+  let obj = require("initialize");
+  const items = [DisplayNameStylesSeenStore];
   stateFromStores = obj.useStateFromStores(items, () => seenEffects.getSeenEffects());
   obj = {
-    dotEffectIds: React.useMemo(
-      () =>
-        new Set(
-          visibleEffectOrder.filter((arg0) => {
-            let hasItem = closure_1_4.includes(arg0);
-            if (hasItem) {
-              hasItem = !set.has(arg0);
-            }
-            return hasItem;
-          }),
-        ),
-      items1,
-    ),
-    dismissEffectDot: React.useCallback((effectId) => {
+    dotEffectIds: null,
+    dismissEffectDot: noop.useCallback((effectId) => {
       const result = visibleEffectOrder(stateFromStores[4]).markDisplayNameStyleEffectSeen(effectId);
     }, []),
   };
-  items1 = [visibleEffectOrder, stateFromStores];
+  const items1 = [visibleEffectOrder, stateFromStores];
+  obj.dotEffectIds = noop.useMemo(
+    () =>
+      new Set(
+        visibleEffectOrder.filter((item) => {
+          let hasItem = closure_2_4.includes(item);
+          if (hasItem) {
+            hasItem = !set.has(item);
+          }
+          return hasItem;
+        }),
+      ),
+    items1,
+  );
   return obj;
 };
 export const useDisplayNameStylesNewFontsBadge = function useDisplayNameStylesNewFontsBadge(visibleFontOrder) {
-  const _require = visibleFontOrder;
-  let obj = initialize;
-  const items = [closure_3];
+  _require = visibleFontOrder;
+  let obj = require("initialize");
+  const items = [DisplayNameStylesSeenStore];
   const items1 = [visibleFontOrder];
   const stateFromStores = obj.useStateFromStores(items, () => newFontsBadgeDismissed.getNewFontsBadgeDismissed());
   obj = {
     showFontsBadge:
-      React.useMemo(() => visibleFontOrder.some((arg0) => closure_5.includes(arg0)), items1) && !stateFromStores,
-    dismissFontsBadge: React.useCallback(() => {
-      const result = visibleFontOrder(table[4]).markDisplayNameStyleNewFontsBadgeDismissed();
+      noop.useMemo(() => visibleFontOrder.some((item) => closure_1_5.includes(item)), items1) && !stateFromStores,
+    dismissFontsBadge: noop.useCallback(() => {
+      const result = visibleFontOrder(dependencyMap[4]).markDisplayNameStyleNewFontsBadgeDismissed();
     }, []),
   };
   return obj;
 };
 export const useDisplayNameStylesNewEffectsBadge = function useDisplayNameStylesNewEffectsBadge(visibleEffectOrder) {
-  const _require = visibleEffectOrder;
-  let obj = initialize;
-  const items = [closure_3];
+  _require = visibleEffectOrder;
+  let obj = require("initialize");
+  const items = [DisplayNameStylesSeenStore];
   const items1 = [visibleEffectOrder];
   const stateFromStores = obj.useStateFromStores(items, () => newEffectsBadgeDismissed.getNewEffectsBadgeDismissed());
   obj = {
     showEffectsBadge:
-      React.useMemo(() => visibleEffectOrder.some((arg0) => closure_4.includes(arg0)), items1) && !stateFromStores,
-    dismissEffectsBadge: React.useCallback(() => {
-      const result = visibleEffectOrder(table[4]).markDisplayNameStyleNewEffectsBadgeDismissed();
+      noop.useMemo(() => visibleEffectOrder.some((item) => closure_1_4.includes(item)), items1) && !stateFromStores,
+    dismissEffectsBadge: noop.useCallback(() => {
+      const result = visibleEffectOrder(dependencyMap[4]).markDisplayNameStyleNewEffectsBadgeDismissed();
     }, []),
   };
   return obj;

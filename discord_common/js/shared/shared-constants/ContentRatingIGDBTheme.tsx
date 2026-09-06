@@ -1,11 +1,13 @@
 // discord_common/js/shared/shared-constants/ContentRatingIGDBTheme.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const obj = { ALL: null, ADULT_THEMES: null };
-let set = new Set([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]);
-obj[0] = set;
-obj[1] = new Set([21]);
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/ContentRatingIGDBTheme.tsx");
+const obj = {
+  ALL: new Set([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]),
+  ADULT_THEMES: null,
+};
+const set = new Set([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]);
+obj.ADULT_THEMES = new Set([21]);
+const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ContentRatingIGDBTheme.tsx");
 
 export const ContentRatingIGDBTheme = {
   UNKNOWN_THEME: 0,

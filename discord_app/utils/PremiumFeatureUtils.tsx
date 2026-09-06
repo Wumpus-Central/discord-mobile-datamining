@@ -1,18 +1,16 @@
 // discord_app/utils/PremiumFeatureUtils.tsx
-import isPremiumAtLeast from "PremiumTypeUtils.tsx";
-import closure_2 from "../modules/premium/OverridePremiumTypeStore.tsx";
-import ME from "../Constants.tsx";
-import GuildFeatures from "../modules/premium/PremiumConstants.tsx";
+import PremiumTypeUtils from "PremiumTypeUtils.tsx";
+import OverridePremiumTypeStore from "../modules/premium/OverridePremiumTypeStore.tsx";
 
-require = arg1;
+require = fn;
 function getUserMaxFileSize(currentUser) {
   if (null == currentUser) {
-    return closure_3;
+    return React3;
   } else {
-    premiumTypeOverride = premiumTypeOverride.getPremiumTypeOverride();
+    const premiumTypeOverride = OverridePremiumTypeStore.getPremiumTypeOverride();
     if (currentUser.isStaff()) {
-      if (premiumTypeOverride === closure_7) {
-        let tmp2 = closure_4;
+      if (premiumTypeOverride === React5) {
+        let tmp2 = React4;
       }
       return tmp2;
     }
@@ -26,17 +24,24 @@ function getUserMaxFileSize(currentUser) {
           obj = { location: "getUserMaxFileSize" };
           let fileSize = getNitroFileUploadLimitBytes(obj);
         } else {
-          fileSize = table[currentUser.premiumType].fileSize;
+          fileSize = timestampProducer[currentUser.premiumType].fileSize;
         }
       }
-      obj2 = isPremiumAtLeast;
+      obj2 = PremiumTypeUtils;
     }
-    tmp2 = closure_3;
+    tmp2 = React3;
   }
 }
-({ MAX_ATTACHMENT_SIZE: c3, MAX_STAFF_ATTACHMENT_SIZE: c4 } = ME);
-({ PremiumTypes: c5, PremiumUserLimits: closure_6, UNSELECTED_PREMIUM_TYPE_OVERRIDE: error } = GuildFeatures);
-const result = require("set").fileFinishedImporting("utils/PremiumFeatureUtils.tsx");
+const Constants = fn(1074);
+({ MAX_ATTACHMENT_SIZE: c3, MAX_STAFF_ATTACHMENT_SIZE: closure_4 } = Constants);
+const PremiumConstants = fn(1373);
+({
+  PremiumTypes: hasOwnProperty,
+  PremiumUserLimits: metroRequire,
+  UNSELECTED_PREMIUM_TYPE_OVERRIDE: closure_7,
+} = PremiumConstants);
+const size = fn(2);
+const result = size.fileFinishedImporting("utils/PremiumFeatureUtils.tsx");
 
 export default { getUserMaxFileSize };
 export { getUserMaxFileSize };

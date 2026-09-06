@@ -1,6 +1,6 @@
 // discord_app/modules/quests/useInGameQuestConnectState.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/quests/useInGameQuestConnectState.tsx");
+const result = size.fileFinishedImporting("modules/quests/useInGameQuestConnectState.tsx");
 
-export function useInGameQuestConnectState(quest) {}
+export function useInGameQuestConnectState() {}

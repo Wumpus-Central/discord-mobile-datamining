@@ -1,41 +1,40 @@
 // discord_app/components_native/warnings/GuildNSFW.tsx
+import GuildActionCreatorsDefault from "../../actions/GuildActionCreators.tsx";
+import AgeVerificationActionCreatorsDefault from "../../modules/age_assurance/AgeVerificationActionCreators.native.tsx";
 import GatedContentDefault from "GatedContent.tsx";
-import closure_4 from "../../../_runtime/metro/00109__objectWithoutProperties.js";
-import closure_5 from "../../../_runtime/00019_noop.js";
-import closure_6 from "../../stores/GuildStore.tsx";
-import { AgeGateSource } from "../../modules/age_gate/AgeGateConstants.tsx";
-import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { useAgeVerificationRunner } from "../../modules/age_assurance/AgeVerificationUtils.tsx";
-import { shouldShowAgeGateForVoiceChannel } from "../../modules/age_gate/AgeGateUtils.tsx";
+import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
+import noop from "../../../_runtime/metro/00019__.js";
+import GuildStore from "../../stores/GuildStore.tsx";
 
-const require = arg1;
+const require = fn;
 let closure_3 = ["modalType"];
-let result = require("set").fileFinishedImporting("components_native/warnings/GuildNSFW.tsx");
+const AgeGateSource = fn(1098).AgeGateSource;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("components_native/warnings/GuildNSFW.tsx");
 
 export default function GuildNSFW(channelId) {
-  const _require = channelId;
-  let obj = initialize;
-  const items = [closure_6];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getGuild(channelId.guildId));
-  obj1 = shouldShowAgeGateForVoiceChannel;
+  _require = channelId;
+  let obj = require("initialize");
+  const items = [GuildStore];
+  const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(channelId.guildId));
+  let obj1 = require("AgeGateUtils");
   const ageGateVerifyContentForGuild = obj1.useAgeGateVerifyContentForGuild(stateFromStores);
   const modalType = ageGateVerifyContentForGuild.modalType;
-  let obj2 = useAgeVerificationRunner;
+  let obj2 = require("AgeVerificationUtils");
   const maybePerformReactiveCheckForSource = obj2.useMaybePerformReactiveCheckForSource(AgeGateSource.NSFW_SERVER);
   obj = {};
-  const callback = React.useCallback(() => {
-    let obj = callback(8411);
-    obj = { entryPoint: channelId(8413).AgeVerificationModalEntryPoint.NSFW_GUILD };
+  const callback = noop.useCallback(() => {
+    const obj = { entryPoint: channelId(8413).AgeVerificationModalEntryPoint.NSFW_GUILD };
     const result = obj.showAgeVerificationGetStartedModal(obj);
   }, []);
-  const merged = Object.assign(callback(ageGateVerifyContentForGuild, closure_3));
+  const merged = Object.assign(_objectWithoutProperties(ageGateVerifyContentForGuild, closure_3));
   let id;
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
   function handleDisagree() {
-    closure_1_1(closure_1_2[8]).nsfwReturnToSafety(channelId.guildId);
+    GuildActionCreatorsDefault.nsfwReturnToSafety(channelId.guildId);
     if (channelId.onReturnToSafety != null) {
       onReturnToSafety();
     }
@@ -43,32 +42,38 @@ export default function GuildNSFW(channelId) {
   obj.guildId = id;
   obj.channelId = channelId.channelId;
   const intl = tmp(1114).intl;
-  obj.disagreement = intl.string(require("../../intl/index.native.tsx").t["/g10LC"]);
-  if (
-    require("../../modules/age_assurance/AgeVerificationAnalyticsUtils.tsx").NsfwSpaceWarningModalType
-      .NSFW_CHANNEL_AGE_VERIFY !== modalType
-  ) {
+  obj.disagreement = intl.string(require("util").t["/g10LC"]);
+  if (require("AgeVerificationAnalyticsUtils").NsfwSpaceWarningModalType.NSFW_CHANNEL_AGE_VERIFY !== modalType) {
     if (tmp(8413).NsfwSpaceWarningModalType.GUILD_LARGE_SERVER !== modalType) {
       if (tmp(8413).NsfwSpaceWarningModalType.NSFW_CHANNEL_UNDERAGE === modalType) {
-        obj = { modalType: null, disagreementButtonVariant: "primary", onDisagree: null };
-        obj[0] = modalType;
-        obj[2] = handleDisagree;
+        obj = { modalType, disagreementButtonVariant: "primary", onDisagree: handleDisagree };
         const merged1 = Object.assign(obj);
-        return jsx(GatedContentDefault, { modalType: null, disagreementButtonVariant: "primary", onDisagree: null });
+        return jsx(GatedContentDefault, {
+          modalType,
+          disagreementButtonVariant: "primary",
+          onDisagree: handleDisagree,
+        });
       } else {
-        obj1 = { modalType: null, onAgree: null, onDisagree: null };
-        obj1[0] = modalType;
-        obj1[1] = function handleAgree() {
-          closure_1_1(closure_1_2[8]).nsfwAgree(channelId.guildId);
+        obj1 = {
+          modalType,
+          onAgree: function handleAgree() {
+            GuildActionCreatorsDefault.nsfwAgree(channelId.guildId);
+          },
+          onDisagree: handleDisagree,
         };
-        obj1[2] = handleDisagree;
         const merged2 = Object.assign(obj);
-        return jsx(GatedContentDefault, { modalType: null, onAgree: null, onDisagree: null });
+        return jsx(GatedContentDefault, {
+          modalType,
+          onAgree: function handleAgree() {
+            GuildActionCreatorsDefault.nsfwAgree(channelId.guildId);
+          },
+          onDisagree: handleDisagree,
+        });
       }
     }
   }
   obj2 = { modalType, onAgree: callback, onDisagree: handleDisagree };
-  const tmp5 = callback(ageGateVerifyContentForGuild, closure_3);
+  const tmp5 = _objectWithoutProperties(ageGateVerifyContentForGuild, closure_3);
   const merged3 = Object.assign(obj);
   return jsx(GatedContentDefault, { modalType, onAgree: callback, onDisagree: handleDisagree });
 }

@@ -1,31 +1,30 @@
 // discord_app/modules/user_profile/native/UserProfileEditTheme.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import int2hslRaw from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import DismissibleContent from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import UNSAFE_isDismissibleContentDismissed from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
-import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
+import util from "../../../intl/index.native.tsx";
+import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
+import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import _modDef4679 from "../../../../_runtime/metro/04679__.js";
+import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import getHigherContrastColor from "../utils/getHigherContrastColor.tsx";
 import PencilIcon from "../../../design/components/Icon/native/redesign/generated/PencilIcon.tsx";
-import showCustomColorPickerActionSheetDefault from "../../color_picker/native/showCustomColorPickerActionSheet.tsx";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+require = fn;
 function ColorSwatch(color) {
   color = color.color;
   ({ label, accessibilityLabel, onPress, style } = color);
-  const tmp = callback3();
-  let obj = int2hslRaw;
+  const tmp = closure_6();
+  let obj = utils_ColorUtils;
   const int2hexResult = obj.int2hex(color);
-  obj1 = getHigherContrastColor;
+  let obj1 = getHigherContrastColor;
+  obj = { backgroundColor: int2hexResult, colors: null };
   const items = [WHITE, PRIMARY_530];
+  obj.colors = items;
   obj = { style: tmp.colorSwatchContainer, children: null };
-  const higherContrastColor = obj1.getHigherContrastColor({ backgroundColor: int2hexResult, colors: items });
-  obj = {
+  const higherContrastColor = obj1.getHigherContrastColor(obj);
+  obj1 = {
     accessibilityRole: "button",
     accessibilityLabel,
     accessibilityHint: null,
@@ -33,16 +32,19 @@ function ColorSwatch(color) {
     onPress: null,
     children: null,
   };
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.string(getSystemLocale.t.Qp04hK);
+  const intl = util.intl;
+  obj1.accessibilityHint = intl.string(util.t.Qp04hK);
   const items1 = [tmp.colorSwatch, { backgroundColor: int2hexResult }, style];
-  obj[3] = items1;
-  obj[4] = onPress;
-  obj1 = { size: "xs", color: higherContrastColor, style: tmp.dropperIcon };
-  obj[5] = callback(PencilIcon.PencilIcon, obj1);
+  obj1.style = items1;
+  obj1.onPress = onPress;
+  obj1.children = suggestedColors(PencilIcon.PencilIcon, {
+    size: "xs",
+    color: higherContrastColor,
+    style: tmp.dropperIcon,
+  });
   const items2 = [
-    callback(PressableBase.PressableOpacity, obj, color),
-    callback(Text.Text, {
+    suggestedColors(Pressables.PressableOpacity, obj1, color),
+    suggestedColors(Text_Text.Text, {
       variant: "text-sm/normal",
       color: "text-default",
       accessibilityElementsHidden: true,
@@ -50,12 +52,14 @@ function ColorSwatch(color) {
       children: label,
     }),
   ];
-  obj[1] = items2;
-  return callback2(View, obj);
+  obj.children = items2;
+  return hasOwnProperty(View, obj);
 }
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = {
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+fn(4560);
+let createStyles = {
   container: { gap: 6 },
   sectionHeader: { display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
   themeColorContainer: { flexDirection: "row", gap: 12, justifyContent: "center" },
@@ -64,15 +68,16 @@ createCacheKey = {
   dropperIcon: null,
   overflowMenu: null,
 };
-createCacheKey = { height: 50, width: "100%", borderRadius: ThemesDefault.radii.sm };
-createCacheKey[4] = createCacheKey;
-createCacheKey[5] = { position: "absolute", top: 10, right: 10 };
-createCacheKey[6] = { tintColor: ThemesDefault.colors.TEXT_SUBTLE };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const WHITE = ThemesDefault.unsafe_rawColors.WHITE;
-const PRIMARY_530 = ThemesDefault.unsafe_rawColors.PRIMARY_530;
-let obj1 = { tintColor: ThemesDefault.colors.TEXT_SUBTLE };
-let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileEditTheme.tsx");
+let size = { height: 50, width: "100%", borderRadius: nativeDefault.radii.sm };
+createStyles.colorSwatch = size;
+createStyles.dropperIcon = { position: "absolute", top: 10, right: 10 };
+createStyles = { tintColor: nativeDefault.colors.TEXT_SUBTLE };
+createStyles.overflowMenu = createStyles;
+let closure_6 = createStyles.createStyles(createStyles);
+const WHITE = nativeDefault.unsafe_rawColors.WHITE;
+const PRIMARY_530 = nativeDefault.unsafe_rawColors.PRIMARY_530;
+size = fn(2);
+let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileEditTheme.tsx");
 
 export default function UserProfileEditTheme(pendingThemeColors) {
   ({
@@ -91,9 +96,8 @@ export default function UserProfileEditTheme(pendingThemeColors) {
   }
   let f97613;
   let primaryColor;
-  secondaryColor = undefined;
-  let callback;
-  const tmp = callback3();
+  suggestedColors = undefined;
+  const tmp = closure_6();
   let tmp4 = f97613(primaryColor[11])(user.id, guildId);
   f97613 = tmp4;
   const tmp5 = f97613(primaryColor[12])({
@@ -108,26 +112,23 @@ export default function UserProfileEditTheme(pendingThemeColors) {
     pendingAvatarSrc = user.getAvatarURL(guildId, 80);
   }
   let obj = secondaryColor(tmp3[13]);
-  callback = obj.useAvatarColors(pendingAvatarSrc, f97613(tmp3[4]).unsafe_rawColors.PRIMARY_530, false);
+  suggestedColors = obj.useAvatarColors(pendingAvatarSrc, f97613(tmp3[4]).unsafe_rawColors.PRIMARY_530, false);
   if (null != primaryColor) {
     if (null != secondaryColor) {
-      obj = { style: null, children: null };
-      obj[0] = tmp.container;
-      obj = { style: null, children: null };
-      obj[0] = tmp.sectionHeader;
-      obj1 = { variant: "text-sm/semibold", color: "text-subtle", children: null };
+      obj = { style: tmp.container, children: null };
+      obj = { style: tmp.sectionHeader, children: null };
+      const obj1 = { variant: "text-sm/semibold", color: "text-subtle", children: null };
       const intl6 = tmp6(tmp3[8]).intl;
-      obj1[2] = intl6.string(tmp6(tmp3[8]).t.DMeO2X);
-      let items = [callback(tmp6(tmp3[10]).Text, obj1)];
+      obj1.children = intl6.string(tmp6(tmp3[8]).t.DMeO2X);
+      let items = [suggestedColors(tmp6(tmp3[10]).Text, obj1)];
       if (showResetMenu) {
         const obj2 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
         const intl = tmp6(tmp3[8]).intl;
-        obj2[1] = intl.string(tmp6(tmp3[8]).t["+1H47t"]);
-        obj2[2] = function onPress() {
-          let obj = f97613(primaryColor[18]);
-          obj = {
-            onResetTheme(arg0) {
-              let themeColors;
+        obj2.accessibilityLabel = intl.string(tmp6(tmp3[8]).t["+1H47t"]);
+        obj2.onPress = function onPress() {
+          const obj = {
+            onResetTheme() {
+              themeColors = undefined;
               if (themeColors != null) {
                 themeColors = themeColors.themeColors;
               }
@@ -136,21 +137,19 @@ export default function UserProfileEditTheme(pendingThemeColors) {
               if (!tmp(items, themeColors)) {
                 tmp4 = items;
               }
-              closure_0(tmp4);
+              secondaryColor(tmp4);
             },
           };
-          obj.openLazy(secondaryColor(primaryColor[20])(primaryColor[19], primaryColor.paths), "Profile Theme", obj);
+          obj.openLazy(asyncRequireImpl(14624, dependencyMap.paths), "Profile Theme", obj);
         };
-        const obj3 = { color: null };
-        obj3[0] = tmp.overflowMenu.tintColor;
-        obj2[3] = tmp10(tmp6(tmp3[21]).MoreHorizontalIcon, obj3);
+        const obj3 = { color: tmp.overflowMenu.tintColor };
+        obj2.children = tmp10(tmp6(tmp3[21]).MoreHorizontalIcon, obj3);
         showResetMenu = tmp10(tmp6(tmp3[7]).PressableOpacity, obj2);
       }
       items[1] = showResetMenu;
-      obj[1] = items;
+      obj.children = items;
       const items1 = [closure_5(secondaryColor, obj)];
-      const obj4 = { style: null, children: null };
-      obj4[0] = tmp.themeColorContainer;
+      const obj4 = { style: tmp.themeColorContainer, children: null };
       const obj5 = { onPress: null, color: null, label: null, accessibilityLabel: null };
       secondaryColor = primaryColor;
       f97613 = (arg0) => {
@@ -165,32 +164,30 @@ export default function UserProfileEditTheme(pendingThemeColors) {
             tmp8 = items;
           }
           secondaryColor(tmp8);
-          tmp4 = f97613(primaryColor[14]);
-          const tmp7 = secondaryColor;
+          tmp4 = _modDef4679;
         }
       };
-      obj5[0] = () => {
-        let obj = UNSAFE_isDismissibleContentDismissed;
+      obj5.onPress = () => {
+        let obj = secondaryColor(primaryColor[15]);
         const result = obj.UNSAFE_markDismissibleContentAsDismissed(
-          DismissibleContent.DismissibleContent.PROFILE_THEMES_SETTINGS_VIEWED_V2,
+          secondaryColor(primaryColor[16]).DismissibleContent.PROFILE_THEMES_SETTINGS_VIEWED_V2,
         );
-        obj = { color: secondaryColor, onSelect: f97613, suggestedColors: closure_4 };
-        showCustomColorPickerActionSheetDefault(obj);
+        obj = { color: secondaryColor, onSelect: f97613, suggestedColors };
+        closure_1(primaryColor[17])(obj);
       };
-      obj5[1] = primaryColor;
+      obj5.color = primaryColor;
       const intl2 = tmp6(tmp3[8]).intl;
-      obj5[2] = intl2.string(tmp6(tmp3[8]).t.C3KTQk);
+      obj5.label = intl2.string(tmp6(tmp3[8]).t.C3KTQk);
       const intl3 = tmp6(tmp3[8]).intl;
       const obj6 = { colorHex: null };
       let tmp6Result = tmp6(tmp3[5]);
-      obj6[0] = tmp6Result.int2hex(primaryColor);
-      obj5[3] = intl3.formatToPlainString(tmp6(tmp3[8]).t.v4X2kc, obj6);
-      const items2 = [callback(ColorSwatch, obj5)];
-      const obj7 = { color: null, onPress: null, label: null, accessibilityLabel: null };
-      obj7[0] = secondaryColor;
-      f97613 = (arg0) => {
-        if (arg0 !== secondaryColor) {
-          const items = [primaryColor, arg0];
+      obj6.colorHex = tmp6Result.int2hex(primaryColor);
+      obj5.accessibilityLabel = intl3.formatToPlainString(tmp6(tmp3[8]).t.v4X2kc, obj6);
+      const items2 = [suggestedColors(ColorSwatch, obj5)];
+      const obj7 = { color: secondaryColor, onPress: null, label: null, accessibilityLabel: null };
+      f97613 = (primaryColor) => {
+        if (primaryColor !== secondaryColor) {
+          const items = [primaryColor, primaryColor];
           let themeColors;
           if (f97613 != null) {
             themeColors = f97613.themeColors;
@@ -200,29 +197,28 @@ export default function UserProfileEditTheme(pendingThemeColors) {
             tmp8 = items;
           }
           secondaryColor(tmp8);
-          tmp4 = f97613(primaryColor[14]);
-          const tmp7 = secondaryColor;
+          tmp4 = _modDef4679;
         }
       };
-      obj7[1] = () => {
-        let obj = UNSAFE_isDismissibleContentDismissed;
+      obj7.onPress = () => {
+        let obj = secondaryColor(primaryColor[15]);
         const result = obj.UNSAFE_markDismissibleContentAsDismissed(
-          DismissibleContent.DismissibleContent.PROFILE_THEMES_SETTINGS_VIEWED_V2,
+          secondaryColor(primaryColor[16]).DismissibleContent.PROFILE_THEMES_SETTINGS_VIEWED_V2,
         );
-        obj = { color: secondaryColor, onSelect: f97613, suggestedColors: closure_4 };
-        showCustomColorPickerActionSheetDefault(obj);
+        obj = { color: secondaryColor, onSelect: f97613, suggestedColors };
+        closure_1(primaryColor[17])(obj);
       };
       const intl4 = tmp6(tmp3[8]).intl;
-      obj7[2] = intl4.string(tmp6(tmp3[8]).t["8elvy6"]);
+      obj7.label = intl4.string(tmp6(tmp3[8]).t["8elvy6"]);
       const intl5 = tmp6(tmp3[8]).intl;
       const obj8 = { colorHex: null };
       tmp6Result = tmp6(tmp3[5]);
-      obj8[0] = tmp6Result.int2hex(secondaryColor);
-      obj7[3] = intl5.formatToPlainString(tmp6(tmp3[8]).t.I0tmru, obj8);
-      items2[1] = callback(ColorSwatch, obj7);
-      obj4[1] = items2;
+      obj8.colorHex = tmp6Result.int2hex(secondaryColor);
+      obj7.accessibilityLabel = intl5.formatToPlainString(tmp6(tmp3[8]).t.I0tmru, obj8);
+      items2[1] = suggestedColors(ColorSwatch, obj7);
+      obj4.children = items2;
       items1[1] = closure_5(secondaryColor, obj4);
-      obj[1] = items1;
+      obj.children = items1;
       return closure_5(secondaryColor, obj);
     }
   }

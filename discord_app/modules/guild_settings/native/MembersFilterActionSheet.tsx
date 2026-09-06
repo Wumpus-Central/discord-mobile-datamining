@@ -1,64 +1,62 @@
 // discord_app/modules/guild_settings/native/MembersFilterActionSheet.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../a11y/AccessibilityStore.tsx";
-import closure_6 from "../../../stores/GuildRoleStore.tsx";
-import closure_7 from "../GuildSettingsStore.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import GuildSettingsActionCreatorsDefault from "../GuildSettingsActionCreators.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
+import GuildRoleStore from "../../../stores/GuildRoleStore.tsx";
+import GuildSettingsStore from "../GuildSettingsStore.tsx";
 
-const require = arg1;
-({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { listView: null, roleDot: null, labelContainer: null, label: null };
-createCacheKey = { marginVertical: 8, borderRadius: ThemesDefault.radii.lg, overflow: "hidden" };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginEnd: 4 };
-createCacheKey[2] = { flexDirection: "row" };
-createCacheKey[3] = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-let closure_10 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-let result = require("set").fileFinishedImporting("modules/guild_settings/native/MembersFilterActionSheet.tsx");
+const require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+fn(4560);
+let createStyles = { listView: null, roleDot: null, labelContainer: null, label: null };
+createStyles = { marginVertical: 8, borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
+createStyles.listView = createStyles;
+createStyles.roleDot = { marginEnd: 4 };
+createStyles.labelContainer = { flexDirection: "row" };
+createStyles.label = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+let closure_10 = createStyles.createStyles(createStyles);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_settings/native/MembersFilterActionSheet.tsx");
 
 export default function MembersFilterActionSheet(onFilterRoleId) {
   ({ guild: require, selectedRoleId } = onFilterRoleId);
   if (selectedRoleId === undefined) {
-    selectedRoleId = props.getProps().selectedRoleId;
+    selectedRoleId = GuildSettingsStore.getProps().selectedRoleId;
   }
   onFilterRoleId = onFilterRoleId.onFilterRoleId;
-  let React;
-  let callback;
   let stateFromStores1;
-  const tmp2 = callback2();
-  React = tmp2;
-  let obj = require(onFilterRoleId[8]);
-  let items = [closure_6];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getSortedRoles(id.id));
+  const tmp2 = closure_10();
+  noop = tmp2;
+  let obj = require("initialize");
+  let items = [GuildRoleStore];
+  const stateFromStores = obj.useStateFromStores(items, () => GuildRoleStore.getSortedRoles(require.id));
   const mapped = stateFromStores.map((id) => {
     const merged = Object.assign(id);
     return { value: id.id };
   });
   mapped.unshift(mapped.splice(mapped.length - 1, 1)[0]);
   let items1 = [onFilterRoleId, selectedRoleId];
-  callback = React.useCallback((hideActionSheet) => {
+  const callback = noop.useCallback((hideActionSheet) => {
     if (hideActionSheet !== selectedRoleId) {
       let hideActionSheetResult = onFilterRoleId;
       if (null != onFilterRoleId) {
         const result = hideActionSheetResult(hideActionSheet);
       } else {
-        const role = selectedRoleId(onFilterRoleId[9]).selectRole(hideActionSheet);
-        const obj = selectedRoleId(onFilterRoleId[9]);
+        const role = GuildSettingsActionCreatorsDefault.selectRole(hideActionSheet);
       }
-      hideActionSheet = selectedRoleId(onFilterRoleId[10]).hideActionSheet;
+      hideActionSheet = ActionSheetActionCreatorsDefault.hideActionSheet;
       hideActionSheetResult = hideActionSheet("MembersFilter");
-      const tmp9 = selectedRoleId(onFilterRoleId[10]);
     }
   }, items1);
-  obj1 = require(onFilterRoleId[8]);
+  let obj1 = require("initialize");
   const items2 = [stateFromStores1];
   stateFromStores1 = obj1.useStateFromStores(items2, () => stateFromStores1.roleStyle);
   const items3 = [callback, stateFromStores1, selectedRoleId, tmp2];
-  const callback1 = React.useCallback((item) => {
+  const callback1 = noop.useCallback((item) => {
     item = item.item;
     let obj = { value: item.id, label: null, legacyCompat_onPress: null, legacyCompat_selected: null };
     obj = { style: labelContainer.labelContainer, children: null };
@@ -67,9 +65,8 @@ export default function MembersFilterActionSheet(onFilterRoleId) {
       tmpResult = null != item.colorString;
     }
     if (tmpResult) {
-      obj = { containerStyles: null, color: null, colors: null };
-      obj[0] = tmp6.roleDot;
-      ({ colorString: obj3[1], colorStrings: obj3[2] } = item);
+      obj = { containerStyles: tmp6.roleDot, color: null, colors: null };
+      ({ colorString: obj3.color, colorStrings: obj3.colors } = item);
       tmpResult = tmp(tmp2(tmp3[12]).RoleDot, obj);
     }
     const items = [tmpResult];
@@ -78,30 +75,29 @@ export default function MembersFilterActionSheet(onFilterRoleId) {
     if (null != item.colorString) {
       tmp10 = null;
       if ("username" === stateFromStores1) {
-        obj1 = { color: null };
-        obj1[0] = item.colorString;
+        const obj1 = { color: item.colorString };
         tmp10 = obj1;
       }
     }
     items1[1] = tmp10;
-    items[1] = closure_1_8(closure_1_0(onFilterRoleId[13]).Text, {
+    items[1] = closure_1_8(require("Text/Text").Text, {
       variant: "text-md/medium",
       style: items1,
       children: item.name,
     });
-    obj[1] = items;
-    obj[1] = closure_1_9(callback, obj);
-    obj[2] = function legacyCompat_onPress() {
-      return closure_1_4(item.id);
+    obj.children = items;
+    obj.label = closure_1_9(callback, obj);
+    obj.legacyCompat_onPress = function legacyCompat_onPress() {
+      return callback(item.id);
     };
-    obj[3] = item.id === selectedRoleId;
-    return closure_1_8(closure_1_0(onFilterRoleId[11]).TableRadioRow, obj);
+    obj.legacyCompat_selected = item.id === selectedRoleId;
+    return closure_1_8(require("TableRadioRow").TableRadioRow, obj);
   }, items3);
   obj = { scrollable: true, header: null, children: null };
   obj = { title: null };
-  const intl = require(onFilterRoleId[16]).intl;
-  obj[0] = intl.string(require(onFilterRoleId[16]).t.pEasFX);
-  obj[1] = callback(require(onFilterRoleId[15]).BottomSheetTitleHeader, obj);
+  const intl = require("util").intl;
+  obj.title = intl.string(require("util").t.pEasFX);
+  obj.header = closure_8(require("BottomSheetTitleHeader").BottomSheetTitleHeader, obj);
   obj1 = {
     data: mapped,
     keyExtractor(id) {
@@ -112,6 +108,6 @@ export default function MembersFilterActionSheet(onFilterRoleId) {
     initialNumToRender: 10,
     removeClippedSubviews: false,
   };
-  obj[2] = callback(require(onFilterRoleId[17]).BottomSheetFlatList, obj1);
-  return callback(require(onFilterRoleId[14]).ActionSheet, obj);
+  obj.children = closure_8(require("BottomSheetModal").BottomSheetFlatList, obj1);
+  return closure_8(require("ActionSheet").ActionSheet, obj);
 }

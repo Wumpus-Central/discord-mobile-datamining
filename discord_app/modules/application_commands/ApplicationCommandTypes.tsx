@@ -1,7 +1,7 @@
 // discord_app/modules/application_commands/ApplicationCommandTypes.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/application_commands/ApplicationCommandTypes.tsx");
+const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandTypes.tsx");
 
 export const ApplicationCommandSectionType = { BUILT_IN: 0, [0]: "BUILT_IN", APPLICATION: 1, [1]: "APPLICATION" };
 export const ApplicationCommandInputType = {

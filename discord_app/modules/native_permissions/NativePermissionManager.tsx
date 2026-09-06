@@ -1,19 +1,18 @@
 // discord_app/modules/native_permissions/NativePermissionManager.tsx
-import set from "../../../_runtime/00002_set.js";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import ME from "../../Constants.tsx";
-import set2 from "../../utils/PlatformUtils.tsx";
-import initializeDefault from "../../lib/LifecycleManager.tsx";
-import NativePermissionStatus from "NativePermissionConstants.tsx";
-import NativePermissionsRequestOptions from "NativePermissionUtils.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import Constants from "../../Constants.tsx";
+import PlatformUtils from "../../utils/PlatformUtils.tsx";
+import NativePermissionConstants from "NativePermissionConstants.tsx";
+import NativePermissionUtils from "NativePermissionUtils.tsx";
+import LifecycleManager from "../../lib/LifecycleManager.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const NativePermissionTypes = NativePermissionStatus.NativePermissionTypes;
-const InputModes = ME.InputModes;
-initializeDefault;
+const NativePermissionTypes = NativePermissionConstants.NativePermissionTypes;
+const InputModes = Constants.InputModes;
 class NativePermissionManager extends tmp2 {}
 const prototype = NativePermissionManager.prototype;
 prototype["isEnabled"] = function isEnabled() {
-  let isDesktopResult = set2.isDesktop();
+  let isDesktopResult = PlatformUtils.isDesktop();
   if (isDesktopResult) {
     isDesktopResult = tmp(1115).isMac();
     const tmpResult = tmp(1115);
@@ -26,25 +25,21 @@ prototype["isEnabled"] = function isEnabled() {
 };
 prototype["_initialize"] = function _initialize() {
   if (this.isEnabled()) {
-    const subscription = dispatcherDefault.subscribe("AUDIO_SET_MODE", this.handleAudioSetMode);
-    const obj = dispatcherDefault;
+    const subscription = DispatcherDefault.subscribe("AUDIO_SET_MODE", this.handleAudioSetMode);
   }
 };
 prototype["_terminate"] = function _terminate() {
   if (this.isEnabled()) {
-    dispatcherDefault.unsubscribe("AUDIO_SET_MODE", this.handleAudioSetMode);
-    const obj = dispatcherDefault;
+    DispatcherDefault.unsubscribe("AUDIO_SET_MODE", this.handleAudioSetMode);
   }
 };
 prototype["handleAudioSetMode"] = function handleAudioSetMode(mode) {
   if (mode.mode === InputModes.PUSH_TO_TALK) {
-    const permission = NativePermissionsRequestOptions.default.requestPermission(
-      NativePermissionTypes.INPUT_MONITORING,
-    );
-    const _default = NativePermissionsRequestOptions.default;
+    const permission = NativePermissionUtils.default.requestPermission(NativePermissionTypes.INPUT_MONITORING);
+    const _default = NativePermissionUtils.default;
   }
 };
 const nativePermissionManager = new NativePermissionManager();
-const result = set.fileFinishedImporting("modules/native_permissions/NativePermissionManager.tsx");
+const result = size.fileFinishedImporting("modules/native_permissions/NativePermissionManager.tsx");
 
 export default nativePermissionManager;

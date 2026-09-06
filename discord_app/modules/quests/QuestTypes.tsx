@@ -1,21 +1,20 @@
 // discord_app/modules/quests/QuestTypes.tsx
 import QuestRewardCodePlatforms from "../../../discord_common/js/shared/shared-constants/QuestRewardCodePlatforms.tsx";
-import set2 from "../../../discord_common/js/shared/shared-constants/QuestContent.tsx";
+import QuestContent from "../../../discord_common/js/shared/shared-constants/QuestContent.tsx";
 import AdPlacement from "../../../discord_common/js/shared/shared-constants/AdPlacement.tsx";
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
 const values = Object.values(QuestRewardCodePlatforms.QuestRewardCodePlatforms);
-let set = new Set(values.filter((num) => typeof num === "number"));
-const result = set.fileFinishedImporting("modules/quests/QuestTypes.tsx");
+const result = size.fileFinishedImporting("modules/quests/QuestTypes.tsx");
 
 export const QuestsVisibleMessagesChangedSource = {
   FIRST_LAYOUT: "FIRST_LAYOUT",
   SCROLL: "SCROLL",
   VISIBILITY_CHANGED: "VISIBILITY_CHANGED",
 };
-export const QUEST_REWARD_CODE_PLATFORMS_SET = set;
+export const QUEST_REWARD_CODE_PLATFORMS_SET = new Set(values.filter((item) => typeof item === "number"));
 export const QuestRewardCodePlatforms = QuestRewardCodePlatforms.QuestRewardCodePlatforms;
-export const QuestContent = set2.QuestContent;
+export const QuestContent = QuestContent.QuestContent;
 export const AdPlacement = AdPlacement.AdPlacement;
 export const QuestConsoleStartErrorLocal = { GENERIC: "generic", RATE_LIMITED: "rate_limited" };
 export const TaskPlatformScreen = { DESKTOP: "desktop", CONSOLE: "console", SELECT: "select" };

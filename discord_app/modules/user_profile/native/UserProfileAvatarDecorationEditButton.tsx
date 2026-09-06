@@ -1,59 +1,58 @@
 // discord_app/modules/user_profile/native/UserProfileAvatarDecorationEditButton.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../../stores/GuildMemberStore.tsx";
-import { COLLECTIBLES_PREVIEW_SIZE } from "Constants.tsx";
-import { NOOP } from "../../../../discord_common/js/shared/Constants.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import avatar_decorations_AvatarDecorationUtils from "../../collectibles/avatar_decorations/native/AvatarDecorationUtils.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 
-const require = arg1;
-({ ActivityIndicator: c4, View: c5 } = get_ActivityIndicator);
-createCacheKey = { previewContainer: null, noneIcon: null };
-createCacheKey = {
+require = fn;
+get_ActivityIndicator = fn(17);
+({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const COLLECTIBLES_PREVIEW_SIZE = fn(7208).COLLECTIBLES_PREVIEW_SIZE;
+const NOOP = fn(1085).NOOP;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { previewContainer: null, noneIcon: null };
+let size = {
   position: "relative",
   height: COLLECTIBLES_PREVIEW_SIZE,
   width: COLLECTIBLES_PREVIEW_SIZE,
   justifyContent: "center",
   alignItems: "center",
-  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
-  borderRadius: ThemesDefault.radii.xs,
+  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
+  borderRadius: nativeDefault.radii.xs,
   overflow: "hidden",
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { tintColor: ThemesDefault.colors.TEXT_SUBTLE };
-let closure_10 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { tintColor: ThemesDefault.colors.TEXT_SUBTLE };
-let result = require("set").fileFinishedImporting(
-  "modules/user_profile/native/UserProfileAvatarDecorationEditButton.tsx",
-);
+createStyles.previewContainer = size;
+createStyles = { tintColor: nativeDefault.colors.TEXT_SUBTLE };
+createStyles.noneIcon = createStyles;
+let closure_10 = createStyles.createStyles(createStyles);
+size = fn(2);
+let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileAvatarDecorationEditButton.tsx");
 
 export default function UserProfileAvatarDecorationEditButton(user) {
   user = user.user;
   const guildId = user.guildId;
   ({ pendingAvatarDecoration, isTryItOut } = user);
-  let React;
   let userAvatarDecoration;
-  const tmp = callback();
-  React = tmp2;
+  const tmp = closure_10();
+  noop = tmp2;
   let obj = user(isTryItOut[8]);
-  const items = [closure_6];
+  const items = [GuildMemberStore];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let member = null;
     if (closure_3) {
-      member = closure_1_6.getMember(guildId, user.id);
+      member = GuildMemberStore.getMember(guildId, user.id);
     }
     return member;
   });
-  obj1 = user(isTryItOut[10]);
+  let obj1 = user(isTryItOut[10]);
   obj = { pendingValue: pendingAvatarDecoration, userValue: user.avatarDecoration, guildValue: null, guildId: null };
   let avatarDecoration;
   if (stateFromStores != null) {
     avatarDecoration = stateFromStores.avatarDecoration;
   }
-  obj[2] = avatarDecoration;
-  obj[3] = guildId;
+  obj.guildValue = avatarDecoration;
+  obj.guildId = guildId;
   const tmp7Result = guildId(isTryItOut[9])(obj1.getProfilePreviewValue(obj));
   let tmp3Result = tmp3(tmp4[11]);
   let skuId;
@@ -69,9 +68,8 @@ export default function UserProfileAvatarDecorationEditButton(user) {
   }
   const items1 = [user, guildId, userAvatarDecoration, isTryItOut];
   let name;
-  callback = React.useCallback(() => {
-    let obj = user(isTryItOut[12]);
-    obj = { user, guildId, currentAvatarDecoration: userAvatarDecoration, isTryItOut };
+  const callback = noop.useCallback(() => {
+    const obj = { user, guildId, currentAvatarDecoration: userAvatarDecoration, isTryItOut };
     const result = obj.openAvatarDecorationActionSheet(obj);
   }, items1);
   if (product != null) {
@@ -86,8 +84,7 @@ export default function UserProfileAvatarDecorationEditButton(user) {
     formatToPlainStringResult = name;
     if (null == userAvatarDecoration) {
       const intl2 = tmp3(tmp4[13]).intl;
-      obj = { label: null };
-      obj[0] = name;
+      obj = { label: name };
       formatToPlainStringResult = intl2.formatToPlainString(tmp3(tmp4[13]).t.ep5D4i, obj);
     }
   }
@@ -102,37 +99,35 @@ export default function UserProfileAvatarDecorationEditButton(user) {
       hideArrow: true,
     };
     const intl4 = tmp3(tmp4[13]).intl;
-    obj1[0] = intl4.string(tmp3(tmp4[13]).t["7v0T9P"]);
+    obj1.label = intl4.string(tmp3(tmp4[13]).t["7v0T9P"]);
     const intl5 = tmp3(tmp4[13]).intl;
-    obj1[1] = intl5.string(tmp3(tmp4[13]).t.MKDeyL);
-    obj1[2] = NOOP;
-    obj1[3] = tmp16(userAvatarDecoration, { animating: true, size: "large" });
+    obj1.buttonText = intl5.string(tmp3(tmp4[13]).t.MKDeyL);
+    obj1.onPress = NOOP;
+    obj1.leading = tmp16(userAvatarDecoration, { animating: true, size: "large" });
     let obj2 = obj1;
   } else {
     obj2 = { label: null, buttonText: null, accessibilityValue: null, onPress: null, leading: null };
     const intl3 = tmp3(tmp4[13]).intl;
-    obj2[0] = intl3.string(tmp3(tmp4[13]).t["7v0T9P"]);
-    obj2[1] = formatToPlainStringResult;
-    const obj3 = { text: null };
-    obj3[0] = formatToPlainStringResult;
-    obj2[2] = obj3;
-    obj2[3] = callback;
+    obj2.label = intl3.string(tmp3(tmp4[13]).t["7v0T9P"]);
+    obj2.buttonText = formatToPlainStringResult;
+    const obj3 = { text: formatToPlainStringResult };
+    obj2.accessibilityValue = obj3;
+    obj2.onPress = callback;
     if (null != product) {
-      const obj4 = { style: null, children: null };
-      obj4[0] = tmp.previewContainer;
-      const obj5 = { avatarDecoration: null, size: null, animate: false };
-      obj5[0] = tmp7Result;
-      obj5[1] = COLLECTIBLES_PREVIEW_SIZE - 2 * tmp6(tmp4[7]).space.PX_4;
-      obj4[1] = tmp16(tmp6(tmp4[15]), obj5);
+      const obj4 = { style: tmp.previewContainer, children: null };
+      const obj5 = {
+        avatarDecoration: tmp7Result,
+        size: COLLECTIBLES_PREVIEW_SIZE - 2 * tmp6(tmp4[7]).space.PX_4,
+        animate: false,
+      };
+      obj4.children = tmp16(tmp6(tmp4[15]), obj5);
       let tmp16Result = tmp16(closure_5, obj4);
       const tmp6Result = tmp6(tmp4[15]);
     } else {
-      const obj6 = { source: null, style: null };
-      obj6[0] = tmp6(tmp4[17]);
-      obj6[1] = tmp.noneIcon;
+      const obj6 = { source: tmp6(tmp4[17]), style: tmp.noneIcon };
       tmp16Result = tmp16(tmp3(tmp4[16]).Icon, obj6);
     }
-    obj2[4] = tmp16Result;
+    obj2.leading = tmp16Result;
   }
   return jsx(user(isTryItOut[14]).UserProfileEditFormButton, obj2);
 }

@@ -1,19 +1,19 @@
 // discord_app/modules/main_tabs_v2/native/sidebar/details/stores/ChannelDetailsStore.tsx
-import set from "../../../../../../../_runtime/00002_set.js";
-import batchUpdates from "../../../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import keys from "../../../../../../../_runtime/00560_keys.js";
+import ReactBatchUpdates from "../../../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
+import 00560__ from "../../../../../../../_runtime/metro/00560__.js";
+import size from "../../../../../../../_runtime/metro/00002__.js";
 
 let closure_2 = { isSearchActive: false, searchActiveSource: "initial" };
-let obj = keys.create(() => {
-  obj = { states: new Map() };
+const useChannelDetailsStore = module_560.create(() => {
+  const obj = { states: new Map() };
   return obj;
 });
-let result = set.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/stores/ChannelDetailsStore.tsx");
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/stores/ChannelDetailsStore.tsx");
 
-export const useChannelDetailsStore = obj;
+export { useChannelDetailsStore };
 export const deleteChannelStates = function deleteChannelStates() {
-  batchUpdates.batchUpdates(() => {
-    obj = { states: new Map() };
+  ReactBatchUpdates.batchUpdates(() => {
+    const obj = { states: new Map() };
     return state.setState(obj);
   });
 };
@@ -22,10 +22,10 @@ export const useIsChannelDetailsSearchActive = function useIsChannelDetailsSearc
   const f82970 = (isSearchActive) => isSearchActive.isSearchActive;
   return obj((states) => {
     states = states.states;
-    let value = states.get(closure_0);
+    value = states.get(closure_0);
     if (value == null) {
-      obj = {};
-      const merged = Object.assign(closure_1_2);
+      const obj = {};
+      const merged = Object.assign(closure_2);
       value = obj;
     }
     return f82971(value);
@@ -36,23 +36,19 @@ export const useChannelDetailsSearchActiveSource = function useChannelDetailsSea
   const f82971 = (searchActiveSource) => searchActiveSource.searchActiveSource;
   return obj((states) => {
     states = states.states;
-    let value = states.get(closure_0);
+    value = states.get(closure_0);
     if (value == null) {
-      obj = {};
-      const merged = Object.assign(closure_1_2);
+      const obj = {};
+      const merged = Object.assign(closure_2);
       value = obj;
     }
     return f82971(value);
   });
 };
-export const setIsChannelDetailsSearchActive = function setIsChannelDetailsSearchActive(
-  arg0,
-  isSearchActive,
-  searchActiveSource,
-) {
-  obj = { isSearchActive, searchActiveSource };
+export const setIsChannelDetailsSearchActive = function setIsChannelDetailsSearchActive(arg0, isSearchActive, searchActiveSource) {
+  let obj = { isSearchActive, searchActiveSource };
   const states = obj.getState().states;
-  let value = states.get(arg0);
+  value = states.get(arg0);
   if (value == null) {
     obj = {};
     const merged = Object.assign(closure_2);
@@ -63,11 +59,14 @@ export const setIsChannelDetailsSearchActive = function setIsChannelDetailsSearc
   const merged2 = Object.assign(obj);
   const map = new Map(states);
   const result = map.set(arg0, obj);
-  map(1249).batchUpdates(() => closure_1_3.setState({ states: map }));
+  map(1249).batchUpdates(() => {
+    const obj = { states: map };
+    return obj.setState(obj);
+  });
 };
 export const getIsChannelDetailsSearchActive = function getIsChannelDetailsSearchActive(arg0) {
   const states = obj.getState().states;
-  let value = states.get(arg0);
+  value = states.get(arg0);
   if (value == null) {
     obj = {};
     const merged = Object.assign(closure_2);
@@ -80,5 +79,8 @@ export const deleteChannelDetailsSearchState = function deleteChannelDetailsSear
   states.delete(arg0);
   const map = new Map(states);
   obj = map(1249);
-  obj.batchUpdates(() => closure_1_3.setState({ states: map }));
+  obj.batchUpdates(() => {
+    const obj = { states: map };
+    return obj.setState(obj);
+  });
 };

@@ -1,12 +1,12 @@
 // discord_app/modules/favorites/FavoritesUtils.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
-import getSystemLocale from "../../intl/index.native.tsx";
-import date from "FavoritesConstants.tsx";
+import Constants from "../../Constants.tsx";
+import util from "../../intl/index.native.tsx";
+import FavoritesConstants from "FavoritesConstants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const FAVORITES_RAW_GUILD_ID = date.FAVORITES_RAW_GUILD_ID;
-const FAVORITES = ME.FAVORITES;
-const result = set.fileFinishedImporting("modules/favorites/FavoritesUtils.tsx");
+const FAVORITES_RAW_GUILD_ID = FavoritesConstants.FAVORITES_RAW_GUILD_ID;
+const FAVORITES = Constants.FAVORITES;
+const result = size.fileFinishedImporting("modules/favorites/FavoritesUtils.tsx");
 
 export const getFavoritesAwareGuildName = function getFavoritesAwareGuildName(guild) {
   if (null != guild) {
@@ -16,8 +16,8 @@ export const getFavoritesAwareGuildName = function getFavoritesAwareGuildName(gu
       tmp2 = id === FAVORITES;
     }
     if (tmp2) {
-      const intl = getSystemLocale.intl;
-      let name = intl.string(getSystemLocale.t.wMWyci);
+      const intl = util.intl;
+      let name = intl.string(util.t.wMWyci);
     } else {
       name = guild.name;
     }
@@ -31,8 +31,8 @@ export function isFavoritesGuildId(guildId) {
   }
   return tmp;
 }
-export const isFavoritesGuildCategoryNameValid = function isFavoritesGuildCategoryNameValid(closure_0) {
-  return "" !== closure_0.trim();
+export const isFavoritesGuildCategoryNameValid = function isFavoritesGuildCategoryNameValid(str) {
+  return "" !== str.trim();
 };
 export const isFavoritableChannel = function isFavoritableChannel(record) {
   return !record.isCategory();

@@ -1,74 +1,53 @@
 // discord_app/modules/user_settings/defs/native/GoreMediaFiltersNonFriendsDMsSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import resolveGoreSettingWithDefaults from "../../../explicit_media_redaction/SensitiveMediaGoreRedactionSettingsUtils.tsx";
-import redactionSettingToRenderedString from "../../../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
-import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
-import useExplicitContentSettingOrDefault from "../../../explicit_media_redaction/hooks/useExplicitContentSettingsOrDefault.tsx";
-import handleSensitiveMediaFilterPress from "../../../explicit_media_redaction/native/ExplicitMediaRedactionNativeUtils.tsx";
+import util from "../../../../intl/index.native.tsx";
+import SensitiveMediaGoreRedactionSettingsUtils from "../../../explicit_media_redaction/SensitiveMediaGoreRedactionSettingsUtils.tsx";
+import ExplicitMediaRedactionUtils from "../../../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
+import useExplicitContentSettingsOrDefault from "../../../explicit_media_redaction/hooks/useExplicitContentSettingsOrDefault.tsx";
+import ExplicitMediaRedactionNativeUtils from "../../../explicit_media_redaction/native/ExplicitMediaRedactionNativeUtils.tsx";
 import useSensitiveMediaSettingDisabled from "../../../explicit_media_redaction/hooks/useSensitiveMediaSettingDisabled.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 function useGoreContentNonFriendsDmSettingValue() {
-  const obj = useExplicitContentSettingOrDefault;
-  return redactionSettingToRenderedString.redactionSettingToRenderedString(
+  const obj = useExplicitContentSettingsOrDefault;
+  return ExplicitMediaRedactionUtils.redactionSettingToRenderedString(
     obj.useGoreContentSettingOrDefault().goreContentNonFriendDm,
   )();
 }
 function onGoreContentNonFriendsDmOnPress() {
-  let obj = resolveGoreSettingWithDefaults;
-  obj = { title: null, subtitle: null, handlePress: null, currentValue: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t["16/3Bi"]);
-  const intl2 = getSystemLocale.intl;
-  obj[1] = intl2.string(getSystemLocale.t["Yh+HX1"]);
-  obj[2] = function handlePress(goreContentNonFriendDm) {
-    let obj = callback(table[3]);
-    obj = { goreContentNonFriendDm };
+  let obj = { title: null, subtitle: null, handlePress: null, currentValue: null };
+  const intl = util.intl;
+  obj.title = intl.string(util.t["16/3Bi"]);
+  const intl2 = util.intl;
+  obj.subtitle = intl2.string(util.t["Yh+HX1"]);
+  obj.handlePress = function handlePress(goreContentNonFriendDm) {
+    const obj = { goreContentNonFriendDm };
     return obj.updateGoreContentSetting(obj);
   };
-  obj[3] = obj.getGoreContentSettingOrDefault().goreContentNonFriendDm;
-  const result = handleSensitiveMediaFilterPress.handleSensitiveMediaFilterPress(obj);
+  obj.currentValue = obj.getGoreContentSettingOrDefault().goreContentNonFriendDm;
+  const result = ExplicitMediaRedactionNativeUtils.handleSensitiveMediaFilterPress(obj);
 }
-const pressable = createToggle.createPressable({
+const pressable = SettingBuilders.createPressable({
   useTitle: function getTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["Yh+HX1"]);
+    const intl = util.intl;
+    return intl.string(util.t["Yh+HX1"]);
   },
-  parent: MobileUserSettings.MobileUserSettings.SENSITIVE_CONTENT_FILTERS,
+  parent: SettingsConstants.MobileUserSettings.SENSITIVE_CONTENT_FILTERS,
   useTrailing: useGoreContentNonFriendsDmSettingValue,
   onPress: onGoreContentNonFriendsDmOnPress,
   useSearchTerms() {
-    const intl = getSystemLocale.intl;
-    const items = [intl.string(getSystemLocale.t["N/oRI+"]), ,];
-    const intl2 = getSystemLocale.intl;
-    items[1] = intl2.string(getSystemLocale.t.QVdYsK);
-    const intl3 = getSystemLocale.intl;
-    items[2] = intl3.string(getSystemLocale.t["K0OWP+"]);
+    const intl = util.intl;
+    const items = [intl.string(util.t["N/oRI+"]), ,];
+    const intl2 = util.intl;
+    items[1] = intl2.string(util.t.QVdYsK);
+    const intl3 = util.intl;
+    items[2] = intl3.string(util.t["K0OWP+"]);
     return items;
   },
   useIsDisabled: useSensitiveMediaSettingDisabled.useSensitiveMediaSettingDisabled,
 });
-let obj = {
-  useTitle: function getTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["Yh+HX1"]);
-  },
-  parent: MobileUserSettings.MobileUserSettings.SENSITIVE_CONTENT_FILTERS,
-  useTrailing: useGoreContentNonFriendsDmSettingValue,
-  onPress: onGoreContentNonFriendsDmOnPress,
-  useSearchTerms() {
-    const intl = getSystemLocale.intl;
-    const items = [intl.string(getSystemLocale.t["N/oRI+"]), ,];
-    const intl2 = getSystemLocale.intl;
-    items[1] = intl2.string(getSystemLocale.t.QVdYsK);
-    const intl3 = getSystemLocale.intl;
-    items[2] = intl3.string(getSystemLocale.t["K0OWP+"]);
-    return items;
-  },
-  useIsDisabled: useSensitiveMediaSettingDisabled.useSensitiveMediaSettingDisabled,
-};
-let result = set.fileFinishedImporting("modules/user_settings/defs/native/GoreMediaFiltersNonFriendsDMsSetting.tsx");
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/GoreMediaFiltersNonFriendsDMsSetting.tsx");
 
 export default pressable;
 export { useGoreContentNonFriendsDmSettingValue };

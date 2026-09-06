@@ -1,15 +1,19 @@
 // discord_app/modules/share/native/ShareChatInput.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
-import set from "../../../utils/PlatformUtils.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
+import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
+import ReactionIcon from "../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
+import useMessageMaxLengthDefault from "../../messages/useMessageMaxLength.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = {
+const FormInputDefault = tmp2(8601);
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+fn(4560);
+let createStyles = {
   container: null,
   chatInput: null,
   chatText: null,
@@ -17,44 +21,46 @@ createCacheKey = {
   emojiButton: null,
   focused: null,
 };
-createCacheKey = {
+createStyles = {
   flex: 1,
   flexDirection: "row",
-  backgroundColor: ThemesDefault.colors.SHARE_CHAT_INPUT_BACKGROUND,
-  borderRadius: ThemesDefault.modules.mobile.CHAT_INPUT_BORDER_RADIUS,
-  borderWidth: ThemesDefault.modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH,
-  borderColor: ThemesDefault.colors.MOBILE_CHATINPUT_BORDER_DEFAULT,
-  paddingHorizontal: ThemesDefault.space.PX_12,
+  backgroundColor: nativeDefault.colors.SHARE_CHAT_INPUT_BACKGROUND,
+  borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_BORDER_RADIUS,
+  borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH,
+  borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_DEFAULT,
+  paddingHorizontal: nativeDefault.space.PX_12,
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flex: 1, paddingVertical: 0, paddingHorizontal: ThemesDefault.space.PX_4, maxHeight: 80 };
+createStyles.container = createStyles;
+createStyles.chatInput = { flex: 1, paddingVertical: 0, paddingHorizontal: nativeDefault.space.PX_4, maxHeight: 80 };
 const obj2 = {
   fontSize: 16,
   lineHeight: 20,
-  fontFamily: require("ME").Fonts.PRIMARY_NORMAL,
-  color: ThemesDefault.colors.TEXT_STRONG,
+  fontFamily: fn(1074).Fonts.PRIMARY_NORMAL,
+  color: nativeDefault.colors.TEXT_STRONG,
   paddingTop: null,
   paddingBottom: null,
 };
+let PlatformUtils = fn(1115);
 let num = 2;
-if (set.isAndroid()) {
+if (PlatformUtils.isAndroid()) {
   num = 0;
 }
-obj2[4] = ThemesDefault.space.PX_8 + num;
-obj2[5] = ThemesDefault.space.PX_8;
-createCacheKey[2] = obj2;
-const obj1 = { flex: 1, paddingVertical: 0, paddingHorizontal: ThemesDefault.space.PX_4, maxHeight: 80 };
-createCacheKey[3] = { color: ThemesDefault.colors.TEXT_MUTED };
-const obj3 = { color: ThemesDefault.colors.TEXT_MUTED };
-createCacheKey[4] = {
-  paddingTop: ThemesDefault.space.PX_8,
-  paddingBottom: ThemesDefault.space.PX_8,
+obj2.paddingTop = nativeDefault.space.PX_8 + num;
+obj2.paddingBottom = nativeDefault.space.PX_8;
+createStyles.chatText = obj2;
+const obj1 = { flex: 1, paddingVertical: 0, paddingHorizontal: nativeDefault.space.PX_4, maxHeight: 80 };
+createStyles.inputPlaceholder = { color: nativeDefault.colors.TEXT_MUTED };
+const obj3 = { color: nativeDefault.colors.TEXT_MUTED };
+createStyles.emojiButton = {
+  paddingTop: nativeDefault.space.PX_8,
+  paddingBottom: nativeDefault.space.PX_8,
   alignSelf: "flex-end",
 };
-set = { borderColor: ThemesDefault.colors.MOBILE_CHATINPUT_BORDER_ACTIVE };
-createCacheKey[5] = set;
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = set.fileFinishedImporting("modules/share/native/ShareChatInput.tsx");
+PlatformUtils = { borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_ACTIVE };
+createStyles.focused = PlatformUtils;
+let closure_8 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/share/native/ShareChatInput.tsx");
 
 export default function ShareChatInput(onFocus) {
   onFocus = onFocus.onFocus;
@@ -64,19 +70,18 @@ export default function ShareChatInput(onFocus) {
   if (flag === undefined) {
     flag = false;
   }
-  dependencyMap = undefined;
-  const tmp = callback3();
-  const tmp2 = onBlur;
-  const tmp4 = onBlur(9304)();
-  [focused, c2] = callback(React.useState(false), 2);
+  c2 = undefined;
+  const tmp = closure_8();
+  const tmp4 = useMessageMaxLengthDefault();
+  [focused, c2] = _slicedToArray(noop.useState(false), 2);
   const items = [onFocus];
   const items1 = [onBlur];
-  callback = React.useCallback(() => {
+  const callback = noop.useCallback(() => {
     _undefined(true);
     onFocus();
   }, items);
   const items2 = [tmp.container];
-  const callback1 = React.useCallback(() => {
+  const callback1 = noop.useCallback(() => {
     _undefined(false);
     onBlur();
   }, items1);
@@ -105,24 +110,24 @@ export default function ShareChatInput(onFocus) {
     inputTextStyle: null,
     editable: null,
   };
-  const tmp5 = callback(React.useState(false), 2);
-  const tmp8 = closure_7;
+  const tmp5 = _slicedToArray(noop.useState(false), 2);
+  const tmp8 = React5;
   const tmp9 = View;
-  const intl = onFocus(1114).intl;
-  obj[2] = intl.string(onFocus(1114).t.ZroO3G);
-  obj[3] = tmp.inputPlaceholder.color;
-  const intl2 = onFocus(1114).intl;
-  obj[4] = intl2.string(onFocus(1114).t["/+MXmw"]);
-  obj[5] = onSend;
-  obj[6] = onSelectionChange;
-  obj[7] = tmp.chatInput;
-  obj[8] = text;
-  obj[9] = onChange;
-  obj[10] = callback;
-  obj[11] = callback1;
-  obj[16] = tmp.chatText;
-  obj[17] = !flag;
-  const items3 = [callback2(tmp2(8601), obj)];
+  const intl = util.intl;
+  obj.placeholder = intl.string(util.t.ZroO3G);
+  obj.placeholderTextColor = tmp.inputPlaceholder.color;
+  const intl2 = util.intl;
+  obj.accessibilityLabel = intl2.string(util.t["/+MXmw"]);
+  obj.onSubmitEditing = onSend;
+  obj.onSelectionChange = onSelectionChange;
+  obj.style = tmp.chatInput;
+  obj.value = text;
+  obj.onChange = onChange;
+  obj.onFocus = callback;
+  obj.onBlur = callback1;
+  obj.inputTextStyle = tmp.chatText;
+  obj.editable = !flag;
+  const items3 = [timestampProducer(FormInputDefault, obj)];
   obj = {
     accessibilityLabel: null,
     accessibilityRole: "button",
@@ -131,13 +136,13 @@ export default function ShareChatInput(onFocus) {
     disabled: null,
     children: null,
   };
-  const intl3 = onFocus(1114).intl;
-  obj[0] = intl3.string(onFocus(1114).t.iZ7Mz9);
-  obj[2] = onPressEmoji;
-  obj[3] = tmp.emojiButton;
-  obj[4] = flag;
-  obj[5] = callback2(onFocus(8757).ReactionIcon, { size: "md" });
-  items3[1] = callback2(onFocus(5123).PressableOpacity, obj);
-  obj[1] = items3;
+  const intl3 = util.intl;
+  obj.accessibilityLabel = intl3.string(util.t.iZ7Mz9);
+  obj.onPress = onPressEmoji;
+  obj.style = tmp.emojiButton;
+  obj.disabled = flag;
+  obj.children = timestampProducer(ReactionIcon.ReactionIcon, { size: "md" });
+  items3[1] = timestampProducer(Pressables.PressableOpacity, obj);
+  obj.children = items3;
   return tmp8(tmp9, obj);
 }

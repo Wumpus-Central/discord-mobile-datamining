@@ -1,260 +1,183 @@
 // discord_app/modules/global_discovery_servers/GlobalDiscoveryServersUtils.tsx
-import getSystemLocale from "../../intl/index.native.tsx";
+import util from "../../intl/index.native.tsx";
 import v1 from "../../../_runtime/01256_v1.js";
-import isDiscordFrontendDevelopment from "../../utils/GlobalUtils.tsx";
-import prototypeDefault from "GlobalDiscoveryServersFeaturedSearchManager.tsx";
-import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_5 from "../user_settings/LocaleStore.tsx";
-import closure_6 from "GlobalDiscoveryServersSearchResultsStore.tsx";
-import DEFAULT_DISCOVERY_CATEGORY_ID from "GlobalDiscoveryServersConstants.tsx";
-import { AnalyticEvents } from "../../Constants.tsx";
+import GlobalUtils from "../../utils/GlobalUtils.tsx";
+import GlobalDiscoveryServersSearchResultsStoreDefault from "GlobalDiscoveryServersSearchResultsStore.tsx";
+import GlobalDiscoveryServersFeaturedSearchManagerDefault from "GlobalDiscoveryServersFeaturedSearchManager.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import LocaleStore from "../user_settings/LocaleStore.tsx";
 
-require = arg1;
-function _navigateToGuild() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c3 = 0;
-    c4 = 0;
-    const iter = (function* (arg0) {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === dependencyMap) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let callback2 = tmp5;
-              let callback = tmp2;
-              c0 = undefined;
-              callback = undefined;
-              callback2 = undefined;
-              dependencyMap = undefined;
-              c4 = undefined;
-              c5 = undefined;
-              ({ loadId: c0, guildId: c1, index: c2, categoryId: c3, analyticsLocation: c4, options: c5 } = c0);
-              let obj2;
-              dependencyMap = 1;
-              c4 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              obj2 = {};
-              const merged = Object.assign(c5);
-              obj2.loadId = c0;
-              let obj4 = callback2(7341);
-              dependencyMap = 2;
-              c4 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = obj4.startLurking(callback, c4, obj2);
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          } else {
-            obj = callback(1242);
-            const obj5 = { guild_id: null, load_id: null, card_index: null, category_id: null, location: null };
-            obj5[0] = callback;
-            obj5[1] = c0;
-            obj5[2] = callback2;
-            obj5[3] = dependencyMap;
-            obj5[4] = c4;
-            obj.track(constants.GUILD_DISCOVERY_GUILD_SELECTED, obj5);
-            c4 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp28) {
-          c4 = tmp;
-          throw tmp28;
-        }
-      }
-    })();
-    iter.next();
-    return iter;
+require = fn;
+let closure_15 = async function _navigateToGuild() {
+  const obj2 = {};
+  const merged = Object.assign(closure_129_5);
+  obj2.loadId = closure_129_0;
+  closure_129_6 = obj2;
+  await closure_130_2(closure_130_3[7]).startLurking(closure_129_1, closure_129_4, closure_129_6);
+  closure_130_2(closure_130_3[7]);
+  closure_130_1(closure_130_3[8]).track(closure_130_14.GUILD_DISCOVERY_GUILD_SELECTED, {
+    guild_id: closure_129_1,
+    load_id: closure_129_0,
+    card_index: closure_129_2,
+    category_id: closure_129_3,
+    location: closure_129_4,
   });
-  closure_15 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
+  await "HermesInternal";
+  closure_1 = tmp2;
+  ({
+    loadId: closure_129_0,
+    guildId: closure_129_1,
+    index: closure_129_2,
+    categoryId: closure_129_3,
+    analyticsLocation: closure_129_4,
+    options: closure_129_5,
+  } = closure_0);
+  return "PX_16";
+};
+GlobalDiscoveryServersSearchResultsStoreDefault;
+const GlobalDiscoveryServersConstants = fn(9066);
 ({
-  GlobalDiscoveryServerTab: error,
+  GlobalDiscoveryServerTab: closure_7,
   FEATURED_GUILDS_CACHE_DURATION: closure_8,
-  FEATURED_GUILDS_SEARCH_OPTIONS: c9,
+  FEATURED_GUILDS_SEARCH_OPTIONS: closure_9,
   CategoryId: c10,
-  DISCOVERY_ALL_CATEGORIES_ID: unpackModuleId,
+  DISCOVERY_ALL_CATEGORIES_ID: closure_11,
   getLanguageOptions: closure_12,
   HUBS_CATEGORY_ID: map1,
-} = DEFAULT_DISCOVERY_CATEGORY_ID);
-const result = require("set").fileFinishedImporting("modules/global_discovery_servers/GlobalDiscoveryServersUtils.tsx");
+} = GlobalDiscoveryServersConstants);
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/global_discovery_servers/GlobalDiscoveryServersUtils.tsx");
 
 export const getGlobalDiscoveryServersTabTitle = function getGlobalDiscoveryServersTabTitle(arg0) {
   if (constants.FEATURED === arg0) {
-    const intl7 = getSystemLocale.intl;
-    return intl7.string(getSystemLocale.t["RU+DCe"]);
+    const intl7 = util.intl;
+    return intl7.string(util.t["RU+DCe"]);
   } else if (tmp.GAMING === arg0) {
-    const intl6 = getSystemLocale.intl;
-    return intl6.string(getSystemLocale.t["CD/USA"]);
+    const intl6 = util.intl;
+    return intl6.string(util.t["CD/USA"]);
   } else if (tmp.MUSIC === arg0) {
-    const intl5 = getSystemLocale.intl;
-    return intl5.string(getSystemLocale.t["nt9PL+"]);
+    const intl5 = util.intl;
+    return intl5.string(util.t["nt9PL+"]);
   } else if (tmp.ENTERTAINMENT === arg0) {
-    const intl4 = getSystemLocale.intl;
-    return intl4.string(getSystemLocale.t.gSbmdt);
+    const intl4 = util.intl;
+    return intl4.string(util.t.gSbmdt);
   } else if (tmp.TECH === arg0) {
-    const intl3 = getSystemLocale.intl;
-    return intl3.string(getSystemLocale.t["0A0By5"]);
+    const intl3 = util.intl;
+    return intl3.string(util.t["0A0By5"]);
   } else if (tmp.EDUCATION === arg0) {
-    const intl2 = getSystemLocale.intl;
-    return intl2.string(getSystemLocale.t.Gy9woq);
+    const intl2 = util.intl;
+    return intl2.string(util.t.Gy9woq);
   } else if (tmp.HUBS === arg0) {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["q469/Z"]);
+    const intl = util.intl;
+    return intl.string(util.t["q469/Z"]);
   }
 };
 export const getGlobalDiscoveryServersBannerTitle = function getGlobalDiscoveryServersBannerTitle(arg0) {
   if (constants.FEATURED === arg0) {
-    const intl7 = getSystemLocale.intl;
-    return intl7.string(getSystemLocale.t.OlDfzP);
+    const intl7 = util.intl;
+    return intl7.string(util.t.OlDfzP);
   } else if (tmp.GAMING === arg0) {
-    const intl6 = getSystemLocale.intl;
-    return intl6.string(getSystemLocale.t["CD/USA"]);
+    const intl6 = util.intl;
+    return intl6.string(util.t["CD/USA"]);
   } else if (tmp.MUSIC === arg0) {
-    const intl5 = getSystemLocale.intl;
-    return intl5.string(getSystemLocale.t["nt9PL+"]);
+    const intl5 = util.intl;
+    return intl5.string(util.t["nt9PL+"]);
   } else if (tmp.ENTERTAINMENT === arg0) {
-    const intl4 = getSystemLocale.intl;
-    return intl4.string(getSystemLocale.t.gSbmdt);
+    const intl4 = util.intl;
+    return intl4.string(util.t.gSbmdt);
   } else if (tmp.TECH === arg0) {
-    const intl3 = getSystemLocale.intl;
-    return intl3.string(getSystemLocale.t["0A0By5"]);
+    const intl3 = util.intl;
+    return intl3.string(util.t["0A0By5"]);
   } else if (tmp.EDUCATION === arg0) {
-    const intl2 = getSystemLocale.intl;
-    return intl2.string(getSystemLocale.t.Gy9woq);
+    const intl2 = util.intl;
+    return intl2.string(util.t.Gy9woq);
   } else if (tmp.HUBS === arg0) {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.X5xPlb);
+    const intl = util.intl;
+    return intl.string(util.t.X5xPlb);
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    error = new Error("[getGlobalDiscoveryServerTabTitle] Unsupported tab: " + arg0);
+    const error = new Error("[getGlobalDiscoveryServerTabTitle] Unsupported tab: " + arg0);
     throw error;
   }
 };
 export const getGlobalDiscoveryServersBannerDescription = function getGlobalDiscoveryServersBannerDescription(arg0) {
   if (constants.FEATURED === arg0) {
-    const intl7 = getSystemLocale.intl;
-    return intl7.string(getSystemLocale.t.SdMhrk);
+    const intl7 = util.intl;
+    return intl7.string(util.t.SdMhrk);
   } else if (tmp.GAMING === arg0) {
-    const intl6 = getSystemLocale.intl;
-    return intl6.string(getSystemLocale.t.AAJ5ov);
+    const intl6 = util.intl;
+    return intl6.string(util.t.AAJ5ov);
   } else if (tmp.MUSIC === arg0) {
-    const intl5 = getSystemLocale.intl;
-    return intl5.string(getSystemLocale.t["SOio+D"]);
+    const intl5 = util.intl;
+    return intl5.string(util.t["SOio+D"]);
   } else if (tmp.ENTERTAINMENT === arg0) {
-    const intl4 = getSystemLocale.intl;
-    return intl4.string(getSystemLocale.t.R09vf0);
+    const intl4 = util.intl;
+    return intl4.string(util.t.R09vf0);
   } else if (tmp.TECH === arg0) {
-    const intl3 = getSystemLocale.intl;
-    return intl3.string(getSystemLocale.t.Ew4d56);
+    const intl3 = util.intl;
+    return intl3.string(util.t.Ew4d56);
   } else if (tmp.EDUCATION === arg0) {
-    const intl2 = getSystemLocale.intl;
-    return intl2.string(getSystemLocale.t.sasIWU);
+    const intl2 = util.intl;
+    return intl2.string(util.t.sasIWU);
   } else if (tmp.HUBS === arg0) {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["F/IQCI"]);
+    const intl = util.intl;
+    return intl.string(util.t["F/IQCI"]);
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    error = new Error("[getGlobalDiscoveryServerTabTitle] Unsupported tab: " + arg0);
+    const error = new Error("[getGlobalDiscoveryServerTabTitle] Unsupported tab: " + arg0);
     throw error;
   }
 };
 export const getGlobalDiscoveryServersTabSectionTitle = function getGlobalDiscoveryServersTabSectionTitle(arg0) {
   if (constants.FEATURED === arg0) {
-    const intl6 = getSystemLocale.intl;
-    return intl6.string(getSystemLocale.t.crt84X);
+    const intl6 = util.intl;
+    return intl6.string(util.t.crt84X);
   } else if (tmp.GAMING === arg0) {
-    const intl5 = getSystemLocale.intl;
-    return intl5.string(getSystemLocale.t.fWbIpf);
+    const intl5 = util.intl;
+    return intl5.string(util.t.fWbIpf);
   } else if (tmp.MUSIC === arg0) {
-    const intl4 = getSystemLocale.intl;
-    return intl4.string(getSystemLocale.t.nfgDzz);
+    const intl4 = util.intl;
+    return intl4.string(util.t.nfgDzz);
   } else if (tmp.ENTERTAINMENT === arg0) {
-    const intl3 = getSystemLocale.intl;
-    return intl3.string(getSystemLocale.t.k1CYxv);
+    const intl3 = util.intl;
+    return intl3.string(util.t.k1CYxv);
   } else if (tmp.TECH === arg0) {
-    const intl2 = getSystemLocale.intl;
-    return intl2.string(getSystemLocale.t["4dawps"]);
+    const intl2 = util.intl;
+    return intl2.string(util.t["4dawps"]);
   } else if (tmp.EDUCATION === arg0) {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.uexPgT);
+    const intl = util.intl;
+    return intl.string(util.t.uexPgT);
   } else {
     return null;
   }
 };
 export const getCategoryIdFromServerTab = function getCategoryIdFromServerTab(arg0) {
   if (constants.FEATURED === arg0) {
-    return closure_11;
+    return closure_1_11;
   } else if (tmp.GAMING === arg0) {
-    return closure_10.Activity;
+    return closure_1_10.Activity;
   } else if (tmp.MUSIC === arg0) {
-    return closure_10.Music;
+    return closure_1_10.Music;
   } else if (tmp.ENTERTAINMENT === arg0) {
-    return closure_10.Television;
+    return closure_1_10.Television;
   } else if (tmp.TECH === arg0) {
-    return closure_10.Science;
+    return closure_1_10.Science;
   } else if (tmp.EDUCATION === arg0) {
-    return closure_10.Education;
+    return closure_1_10.Education;
   } else if (tmp.HUBS === arg0) {
-    return closure_13;
+    return map1;
   } else {
-    isDiscordFrontendDevelopment.assertNever(arg0);
+    GlobalUtils.assertNever(arg0);
   }
 };
-export const isStaleFeaturedGuilds = function isStaleFeaturedGuilds(closure_2) {
-  let tmp = null == closure_2;
+export const isStaleFeaturedGuilds = function isStaleFeaturedGuilds(arg0) {
+  let tmp = null == arg0;
   if (!tmp) {
     const _Date = Date;
-    tmp = Date.now() - closure_2 > closure_8;
+    tmp = Date.now() - arg0 > React6;
   }
   return tmp;
 };
@@ -276,13 +199,13 @@ export const fromDiscoverableGuildServer = function fromDiscoverableGuildServer(
     emojiCount: null,
   };
   ({
-    approximate_presence_count: obj[7],
-    approximate_member_count: obj[8],
-    premium_subscription_count: obj[9],
-    preferred_locale: obj[10],
-    discovery_splash: obj[11],
-    emojis: obj[12],
-    emoji_count: obj[13],
+    approximate_presence_count: obj.presenceCount,
+    approximate_member_count: obj.memberCount,
+    premium_subscription_count: obj.premiumSubscriptionCount,
+    preferred_locale: obj.preferredLocale,
+    discovery_splash: obj.discoverySplash,
+    emojis: obj.emojis,
+    emoji_count: obj.emojiCount,
   } = id);
   return obj;
 };
@@ -302,19 +225,22 @@ export const fromDiscoverableGuildSearchResult = function fromDiscoverableGuildS
     discoverySplash: "kMaxLength",
     emojis: "isArrayBuffer",
   };
-  ({ approximate_presence_count: obj[7], approximate_member_count: obj[8], discovery_splash: obj[11] } = id);
-  obj[12] = [];
+  ({
+    approximate_presence_count: obj.presenceCount,
+    approximate_member_count: obj.memberCount,
+    discovery_splash: obj.discoverySplash,
+  } = id);
+  obj.emojis = [];
   return obj;
 };
 export const getLanguageCodeFallback = function getLanguageCodeFallback() {
   let tmp = arg0;
   if (arg0 === undefined) {
-    const items = [closure_5];
+    const items = [LocaleStore];
     tmp = items;
   }
   [tmp3] = tmp;
-  let locale;
-  const arr2 = callback2();
+  const arr2 = closure_1_12();
   locale = tmp3.locale;
   let found = arr2.find((code) => code.code === locale);
   if (found == null) {
@@ -324,7 +250,7 @@ export const getLanguageCodeFallback = function getLanguageCodeFallback() {
 };
 export const navigateToGuild = function navigateToGuild() {
   const self = this;
-  const apply = _navigateToGuild.apply;
+  const apply = closure_15.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -333,13 +259,12 @@ export const navigateToGuild = function navigateToGuild() {
   return applyArgumentsResult;
 };
 export const handleTabPressPrefetch = function handleTabPressPrefetch() {
-  error = store.getError(closure_9);
-  const isFetching = store.getIsFetching(closure_9);
-  let isInitialFetchComplete = store.getIsInitialFetchComplete(closure_9);
+  const error = GlobalDiscoveryServersSearchResultsStore.getError(React7);
+  const isFetching = GlobalDiscoveryServersSearchResultsStore.getIsFetching(React7);
+  let isInitialFetchComplete = GlobalDiscoveryServersSearchResultsStore.getIsInitialFetchComplete(React7);
   if (!isInitialFetchComplete) {
     if (!isFetching) {
-      const featuredGuilds = prototypeDefault.fetchFeaturedGuilds();
-      const obj = prototypeDefault;
+      const featuredGuilds = GlobalDiscoveryServersFeaturedSearchManagerDefault.fetchFeaturedGuilds();
     }
   }
   if (isInitialFetchComplete) {
@@ -349,11 +274,11 @@ export const handleTabPressPrefetch = function handleTabPressPrefetch() {
     isInitialFetchComplete = null != error;
   }
   if (isInitialFetchComplete) {
-    const featuredGuilds1 = prototypeDefault.fetchFeaturedGuilds({ forceRefresh: true });
-    const obj2 = prototypeDefault;
+    const featuredGuilds1 = GlobalDiscoveryServersFeaturedSearchManagerDefault.fetchFeaturedGuilds({
+      forceRefresh: true,
+    });
   }
 };
 export const makeAnalyticsID = function makeAnalyticsID() {
-  const obj = v1;
   return v1.v4().replace(/-/g, "");
 };

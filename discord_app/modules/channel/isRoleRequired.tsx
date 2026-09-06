@@ -1,13 +1,13 @@
 // discord_app/modules/channel/isRoleRequired.tsx
-import set from "../../../_runtime/00002_set.js";
-import sum from "../../../discord_common/js/shared/Constants.tsx";
-import fromStringAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
-import createChannelRecord from "../../records/ChannelRecord.tsx";
-import applyOverwritesAll from "../../utils/PermissionUtils.tsx";
+import Constants from "../../../discord_common/js/shared/Constants.tsx";
+import BigFlagUtilsAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import ChannelRecord from "../../records/ChannelRecord.tsx";
+import PermissionUtilsAll from "../../utils/PermissionUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-let closure_2 = createChannelRecord.GUILD_NON_CATEGORY_CHANNEL_TYPES;
-const Permissions = sum.Permissions;
-const result = set.fileFinishedImporting("modules/channel/isRoleRequired.tsx");
+ChannelRecord.GUILD_NON_CATEGORY_CHANNEL_TYPES;
+const Permissions = Constants.Permissions;
+const result = size.fileFinishedImporting("modules/channel/isRoleRequired.tsx");
 
 export default function isRoleRequired(guild_id) {
   if (null == guild_id) {
@@ -19,12 +19,11 @@ export default function isRoleRequired(guild_id) {
           if (!obj.canEveryoneRole(Permissions.CONNECT, guild_id)) {
             return true;
           }
-          obj = applyOverwritesAll;
+          obj = PermissionUtilsAll;
         }
         let hasItem = null != tmp4;
         if (hasItem) {
-          hasItem = fromStringAll.has(tmp4.deny, Permissions.VIEW_CHANNEL);
-          const obj2 = fromStringAll;
+          hasItem = BigFlagUtilsAll.has(tmp4.deny, Permissions.VIEW_CHANNEL);
         }
         return hasItem;
       }

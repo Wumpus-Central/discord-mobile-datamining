@@ -1,33 +1,30 @@
 // discord_app/components_native/common/ViewEmptyState.tsx
-import noopAll from "../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
-import Button from "../../design/void/native.tsx";
-import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
-import { Fonts } from "../../Constants.tsx";
-import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
-import importDefaultResult from "../../modules/rebrand/native/TextStyles.tsx";
+import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
+import native from "../../design/void/native.tsx";
+import noop from "../../../_runtime/metro/00019__.js";
+import TextStyles from "../../modules/rebrand/native/TextStyles.tsx";
 
-require = arg1;
-noopAll;
-({ View: obj1, Image: c3 } = get_ActivityIndicator);
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = {
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: c2, Image: c3 } = get_ActivityIndicator);
+const Fonts = fn(1074).Fonts;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+fn(4560);
+let createStyles = {
   emptyContainer: { flex: 1, justifyContent: "center", alignItems: "center", marginHorizontal: 36 },
   emptyImage: { width: 170, height: 130 },
   fixOpticalIllusion: { marginTop: -50, alignItems: "center" },
   emptyLabel: null,
   emptyText: null,
 };
-createCacheKey = {};
-const merged = Object.assign(
-  importDefaultResult(Fonts.DISPLAY_SEMIBOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 18),
-);
-createCacheKey.textAlign = "center";
-createCacheKey.marginTop = 32;
-createCacheKey.opacity = 0.8;
-createCacheKey[3] = createCacheKey;
-createCacheKey[4] = {
+createStyles = {};
+const merged = Object.assign(TextStyles(Fonts.DISPLAY_SEMIBOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 18));
+createStyles.textAlign = "center";
+createStyles.marginTop = 32;
+createStyles.opacity = 0.8;
+createStyles.emptyLabel = createStyles;
+createStyles.emptyText = {
   fontFamily: Fonts.PRIMARY_MEDIUM,
   fontSize: 13,
   marginTop: 8,
@@ -35,24 +32,24 @@ createCacheKey[4] = {
   opacity: 0.6,
   fontWeight: "400",
 };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("components_native/common/ViewEmptyState.tsx");
+let closure_6 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/common/ViewEmptyState.tsx");
 
 export default function ViewEmptyState(arg0) {
   ({ label, text } = arg0);
   ({ source, style } = arg0);
-  const tmp = callback2();
-  let obj = { style: items, children: null };
-  items = [tmp.emptyContainer, style];
+  const tmp = closure_6();
+  let obj = { style: null, children: null };
+  const items = [tmp.emptyContainer, style];
+  obj.style = items;
   obj = { style: tmp.fixOpticalIllusion, children: null };
   obj = { resizeMode: "contain", source, style: tmp.emptyImage };
-  const items1 = [callback(closure_3, obj), ,];
+  const items1 = [React4(React3, obj), ,];
   let tmp2Result = null;
   if (null != label) {
-    obj1 = { style: null, children: null };
-    obj1[0] = tmp.emptyLabel;
-    obj1[1] = label.toUpperCase();
-    tmp2Result = tmp2(Button.LegacyText, obj1);
+    const obj1 = { style: tmp.emptyLabel, children: label.toUpperCase() };
+    tmp2Result = tmp2(native.LegacyText, obj1);
   }
   items1[1] = tmp2Result;
   tmp2Result = null;
@@ -60,12 +57,12 @@ export default function ViewEmptyState(arg0) {
     const obj2 = { style: null, children: null };
     const items2 = [,];
     ({ emptyLabel: arr3[0], emptyText: arr3[1] } = tmp);
-    obj2[0] = items2;
-    obj2[1] = text;
-    tmp2Result = tmp2(Button.LegacyText, obj2);
+    obj2.style = items2;
+    obj2.children = text;
+    tmp2Result = tmp2(native.LegacyText, obj2);
   }
   items1[2] = tmp2Result;
-  obj[1] = items1;
-  obj[1] = closure_5(closure_2, obj);
-  return callback(closure_2, obj);
+  obj.children = items1;
+  obj.children = hasOwnProperty(React2, obj);
+  return React4(React2, obj);
 }

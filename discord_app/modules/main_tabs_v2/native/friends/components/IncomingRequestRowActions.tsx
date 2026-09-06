@@ -1,30 +1,32 @@
 // discord_app/modules/main_tabs_v2/native/friends/components/IncomingRequestRowActions.tsx
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
+import timing from "../../../../../design/animation/reanimated/timing/timing.tsx";
+import AddFriendsScreenUtils from "AddFriendsScreenUtils.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles({ container: { flexDirection: "row" } });
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4560);
+let closure_7 = createStyles.createStyles({ container: { flexDirection: "row" } });
 let closure_8 = {
   code: "function IncomingRequestRowActionsTsx1(){const{animate,pressed,withTiming}=this.__closure;return{position:'absolute',right:0,flexDirection:'row',opacity:!animate?!pressed.get()?1:0:withTiming(!pressed.get()?1:0,{duration:150}),pointerEvents:!pressed.get()?'auto':'none'};}",
 };
 let closure_9 = {
   code: "function IncomingRequestRowActionsTsx2(){const{buttonWidth,buttonOffsetX,pressed,animate,withTiming}=this.__closure;const width=buttonWidth.get();const offset=buttonOffsetX.get();const scaleX=!pressed.get()?0.5:1;const translateX=!pressed.get()?width-offset:0;return{transform:[{translateX:!animate?translateX:withTiming(translateX)},{scaleX:!animate?scaleX:withTiming(scaleX)}],opacity:!animate?!pressed.get()?0:1:withTiming(!pressed.get()?0:1),pointerEvents:!pressed.get()?'none':'auto'};}",
 };
-let closure_10 = {
+const __initData = {
   code: "function IncomingRequestRowActionsTsx3(){const{waveWidth,waveHeight}=this.__closure;return{transform:[{translateX:waveWidth.get()/2},{translateY:waveHeight.get()/2}]};}",
 };
-let closure_11 = {
+const __initData2 = {
   code: "function IncomingRequestRowActionsTsx4(){const{withDelay,withRepeat,withTiming,pressed,Easing,waveWidth,waveHeight}=this.__closure;return{transform:[{rotateZ:withDelay(450,withRepeat(withTiming(pressed.get()?'8deg':'-2deg',{duration:150,easing:Easing.inOut(Easing.quad)}),4,true))},{translateX:-waveWidth.get()/2},{translateY:-waveHeight.get()/2}]};}",
 };
-let closure_12 = {
+const __initData3 = {
   code: "function IncomingRequestRowActionsTsx5(){const{pressed}=this.__closure;return{pointerEvents:!pressed.get()?'none':'none'};}",
 };
-let result = require("set").fileFinishedImporting(
-  "modules/main_tabs_v2/native/friends/components/IncomingRequestRowActions.tsx",
-);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/components/IncomingRequestRowActions.tsx");
 
 export const IncomingRequestRowActions = function IncomingRequestRowActions(user) {
   user = user.user;
@@ -33,26 +35,22 @@ export const IncomingRequestRowActions = function IncomingRequestRowActions(user
   const onAcceptIncomingRequest = user.onAcceptIncomingRequest;
   const onDeclineIncomingRequest = user.onDeclineIncomingRequest;
   const animate = user.animate;
-  let sharedValue;
-  let sharedValue1;
-  let sharedValue2;
-  let sharedValue3;
   ({ acceptRequestAccessibilityLabel, ignoreRequestAccessibilityLabel } = user);
   let obj = user(pressed[4]);
-  sharedValue = obj.useSharedValue(0);
-  obj1 = user(pressed[4]);
-  sharedValue1 = obj1.useSharedValue(-1);
+  const sharedValue = obj.useSharedValue(0);
+  let obj1 = user(pressed[4]);
+  const sharedValue1 = obj1.useSharedValue(-1);
   let obj2 = user(pressed[4]);
-  sharedValue2 = obj2.useSharedValue(-1);
+  const sharedValue2 = obj2.useSharedValue(-1);
   let obj3 = user(pressed[4]);
-  sharedValue3 = obj3.useSharedValue(-1);
+  const sharedValue3 = obj3.useSharedValue(-1);
   let obj4 = user(pressed[4]);
   class E {
     constructor() {
       if (animate) {
-        tmp = user;
-        tmp2 = pressed;
-        obj2 = user(pressed[5]);
+        tmp = closure_0;
+        tmp2 = closure_2;
+        obj2 = closure_0(closure_2[5]);
         tmp3 = pressed;
         num2 = 1;
         if (pressed.get()) {
@@ -72,7 +70,7 @@ export const IncomingRequestRowActions = function IncomingRequestRowActions(user
       if (obj.get()) {
         str = "none";
       }
-      obj[4] = str;
+      obj.pointerEvents = str;
       return obj;
     }
   }
@@ -83,7 +81,7 @@ export const IncomingRequestRowActions = function IncomingRequestRowActions(user
   const animatedStyle = obj4.useAnimatedStyle(E);
   let obj6 = user(pressed[4]);
   const fn = function q() {
-    let value = sharedValue1.get();
+    sharedValue1.get();
     let obj = pressed;
     value = sharedValue.get();
     let num = 0.5;
@@ -96,14 +94,12 @@ export const IncomingRequestRowActions = function IncomingRequestRowActions(user
     }
     let withTimingResult = num2;
     if (animate) {
-      withTimingResult = user(pressed[5]).withTiming(num2);
-      const obj2 = user(pressed[5]);
+      withTimingResult = timing.withTiming(num2);
     }
     const items = [{ translateX: withTimingResult }];
     let withTimingResult1 = num;
     if (animate) {
-      withTimingResult1 = user(pressed[5]).withTiming(num);
-      const obj3 = user(pressed[5]);
+      withTimingResult1 = timing.withTiming(num);
     }
     obj = { transform: items, opacity: null, pointerEvents: null };
     items[1] = { scaleX: withTimingResult1 };
@@ -112,20 +108,19 @@ export const IncomingRequestRowActions = function IncomingRequestRowActions(user
       if (obj.get()) {
         num4 = 1;
       }
-      let num3 = user(pressed[5]).withTiming(num4);
-      const obj5 = user(pressed[5]);
+      let num3 = timing.withTiming(num4);
     } else {
       num3 = 0;
       if (obj.get()) {
         num3 = 1;
       }
     }
-    obj[1] = num3;
+    obj.opacity = num3;
     let str = "none";
     if (obj.get()) {
       str = "auto";
     }
-    obj[2] = str;
+    obj.pointerEvents = str;
     return obj;
   };
   obj = {
@@ -146,21 +141,21 @@ export const IncomingRequestRowActions = function IncomingRequestRowActions(user
     const items = [obj];
     obj = { translateY: sharedValue3.get() / 2 };
     items[1] = obj;
-    obj[0] = items;
+    obj.transform = items;
     return obj;
   };
   fn2.__closure = { waveWidth: sharedValue2, waveHeight: sharedValue3 };
   fn2.__workletHash = 4308223742756;
-  fn2.__initData = closure_10;
+  fn2.__initData = __initData;
   const animatedStyle2 = obj8.useAnimatedStyle(fn2);
   let obj9 = user(pressed[4]);
   class A {
     constructor() {
-      tmp = user;
-      tmp2 = pressed;
-      obj = user(pressed[4]);
-      obj2 = user(pressed[4]);
-      obj3 = user(pressed[5]);
+      tmp = closure_0;
+      tmp2 = closure_2;
+      obj = closure_0(closure_2[4]);
+      obj2 = closure_0(closure_2[4]);
+      obj3 = closure_0(closure_2[5]);
       str = "-2deg";
       if (pressed.get()) {
         str = "8deg";
@@ -169,15 +164,15 @@ export const IncomingRequestRowActions = function IncomingRequestRowActions(user
       obj1 = { rotateZ: null };
       obj2 = { duration: 150, easing: null };
       Easing = tmp(tmp2[4]).Easing;
-      obj2[1] = Easing.inOut(tmp(tmp2[4]).Easing.quad);
-      obj1[0] = obj.withDelay(450, obj2.withRepeat(obj3.withTiming(str, obj2), 4, true));
+      obj2.easing = Easing.inOut(tmp(tmp2[4]).Easing.quad);
+      obj1.rotateZ = obj.withDelay(450, obj2.withRepeat(obj3.withTiming(str, obj2), 4, true));
       items = [, ,];
       items[0] = obj1;
       obj3 = { translateX: -closure_8.get() / 2 };
       items[1] = obj3;
       obj4 = { translateY: -closure_9.get() / 2 };
       items[2] = obj4;
-      obj[0] = items;
+      obj.transform = items;
       return obj;
     }
   }
@@ -192,7 +187,7 @@ export const IncomingRequestRowActions = function IncomingRequestRowActions(user
   };
   A.__closure = obj1;
   A.__workletHash = 6870822621980;
-  A.__initData = closure_11;
+  A.__initData = __initData2;
   const animatedStyle3 = obj9.useAnimatedStyle(A);
   const tmp = sharedValue1();
   const tmp2 = user;
@@ -204,27 +199,25 @@ export const IncomingRequestRowActions = function IncomingRequestRowActions(user
   }
   X.__closure = { pressed };
   X.__workletHash = 5804402563280;
-  X.__initData = closure_12;
+  X.__initData = __initData3;
   const animatedProps = user(pressed[4]).useAnimatedProps(X);
   let items = [applicationId, onAcceptIncomingRequest, pressed, user];
   const items1 = [applicationId, onDeclineIncomingRequest, user];
   const callback = onAcceptIncomingRequest.useCallback(() => {
     const result = pressed.set(true);
-    let obj = user(pressed[6]);
-    obj = { userId: user.id, applicationId };
+    const obj = { userId: user.id, applicationId };
     const result1 = obj.acceptIncomingRequest(obj);
     onAcceptIncomingRequest(user.id, applicationId);
   }, items);
   const items2 = [user];
   const callback1 = onAcceptIncomingRequest.useCallback(() => {
     onDeclineIncomingRequest(user.id, applicationId);
-    let obj = user(pressed[6]);
-    obj = { userId: user.id, applicationId };
+    const obj = { userId: user.id, applicationId };
     const result = obj.dismissIncomingRequest(obj);
   }, items1);
   obj2 = { style: tmp.container, children: null };
   const callback2 = onAcceptIncomingRequest.useCallback(() => {
-    user(pressed[6]).sendWave(user.id, true, "Incoming Friend Request");
+    AddFriendsScreenUtils.sendWave(user.id, true, "Incoming Friend Request");
   }, items2);
   obj3 = {
     onLayout(nativeEvent) {
@@ -257,8 +250,8 @@ export const IncomingRequestRowActions = function IncomingRequestRowActions(user
     maxFontSizeMultiplier: 2,
   };
   items3[1] = animate(user(pressed[8]).IconButton, obj6);
-  obj4[2] = items3;
-  obj3[2] = sharedValue(user(pressed[7]).Stack, obj4);
+  obj4.children = items3;
+  obj3.children = sharedValue(user(pressed[7]).Stack, obj4);
   const items4 = [animate(applicationId(pressed[4]).View, obj3)];
   const obj7 = {
     style: animatedStyle1,
@@ -269,7 +262,7 @@ export const IncomingRequestRowActions = function IncomingRequestRowActions(user
   const merged = Object.assign(animatedProps);
   obj8 = { size: "sm", variant: "secondary", text: null, icon: null, onPress: null };
   const intl = user(pressed[12]).intl;
-  obj8[2] = intl.string(user(pressed[12]).t.n8nU4W);
+  obj8.text = intl.string(user(pressed[12]).t.n8nU4W);
   let tmp21 = null;
   if (animate) {
     tmp21 = animatedStyle2;
@@ -292,7 +285,7 @@ export const IncomingRequestRowActions = function IncomingRequestRowActions(user
     accessibilityLabel: ignoreRequestAccessibilityLabel,
     maxFontSizeMultiplier: 2,
   };
-  obj9[3] = animate(tmp19(pressed[4]).View, {
+  obj9.children = animate(tmp19(pressed[4]).View, {
     style: tmp22,
     onLayout(nativeEvent) {
       const result = sharedValue2.set(nativeEvent.nativeEvent.layout.width);
@@ -304,10 +297,10 @@ export const IncomingRequestRowActions = function IncomingRequestRowActions(user
       children: "\u{1F44B}",
     }),
   });
-  obj8[3] = animate(applicationId(pressed[4]).View, obj9);
-  obj8[4] = callback2;
+  obj8.icon = animate(applicationId(pressed[4]).View, obj9);
+  obj8.onPress = callback2;
   obj7.children = animate(user(pressed[11]).Button, obj8);
   items4[1] = animate(applicationId(pressed[4]).View, obj7);
-  obj2[1] = items4;
+  obj2.children = items4;
   return tmp16(tmp17, obj2);
 };

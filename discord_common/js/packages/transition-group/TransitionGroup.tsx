@@ -1,9 +1,9 @@
 // discord_common/js/packages/transition-group/TransitionGroup.tsx
-import getChildMapping from "TransitionChildMapping.tsx";
-import closure_2 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import importAllResult from "../../../../_runtime/00019_noop.js";
+import TransitionChildMapping from "TransitionChildMapping.tsx";
+import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+require = fn;
 function _toPropertyKey(obj) {
   let StringResult = obj;
   if (typeof obj === "object") {
@@ -35,21 +35,19 @@ function _toPropertyKey(obj) {
   }
   return text;
 }
-let c3 = importAllResult;
 let TransitionGroup;
-const Component = importAllResult.Component;
+const Component = noop.Component;
 class TransitionGroup extends Component {
   constructor(arg0) {
     tmp2 = new TransitionGroup(global, new.target, tmp, global);
-    // ThrowIfThisInitialized (0x7c)
     closure_0 = tmp2;
     tmp2._keyChildMapping = {};
     tmp2.addChildRef = function addChildRef(key10011, arg1) {
       _keyChildMapping._keyChildMapping[key10011] = arg1;
     };
     obj = { children: null, firstRender: true };
-    obj2 = require("getChildMapping");
-    obj[0] = obj2.getChildMapping(global.children);
+    obj2 = closure_0(closure_1[2]);
+    obj.children = obj2.getChildMapping(global.children);
     tmp2.state = obj;
     set = new Set();
     tmp2._currentlyTransitioningKeys = set;
@@ -60,13 +58,13 @@ class TransitionGroup extends Component {
   }
 }
 const prototype = TransitionGroup.prototype;
-TransitionGroup["getDerivedStateFromProps"] = function getDerivedStateFromProps(children) {
+TransitionGroup["getDerivedStateFromProps"] = function getDerivedStateFromProps(children, arg1) {
   ({ children, firstRender } = arg1);
-  const childMapping = getChildMapping.getChildMapping(children.children);
+  const childMapping = TransitionChildMapping.getChildMapping(children.children);
   children = childMapping;
   if (!firstRender) {
-    children = getChildMapping.mergeChildMappings(children, childMapping);
-    const tmpResult = getChildMapping;
+    children = TransitionChildMapping.mergeChildMappings(children, childMapping);
+    const tmpResult = TransitionChildMapping;
   }
   return { children, firstRender: false };
 };
@@ -76,7 +74,6 @@ prototype["componentDidMount"] = function componentDidMount() {
   const children = this.state.children;
   if (this.props.transitionAppear) {
     for (const key10008 in children) {
-      let tmp3 = key10008;
       if (!children[key10008]) {
         continue;
       } else {
@@ -106,7 +103,7 @@ prototype["componentDidUpdate"] = function componentDidUpdate(children, children
       const item1 = _keysToLeave.forEach(self.performLeave, self);
     }
   }
-  let obj = getChildMapping;
+  let obj = TransitionChildMapping;
   const childMapping = obj.getChildMapping(self.props.children);
   children = children2.children;
   if (self.props.transitionEnter) {
@@ -121,28 +118,25 @@ prototype["componentDidUpdate"] = function componentDidUpdate(children, children
     const items = [];
     _enqueueTransitions(children, childMapping, items);
     let num4 = 0;
-    const tmp3Result = getChildMapping;
+    const tmp3Result = TransitionChildMapping;
     if (0 < items.length) {
       do {
-        let tmp9 = items[num4];
         delete tmp[tmp2];
         num4 = num4 + 1;
       } while (num4 < length);
     }
     if (self._isMounted) {
-      obj = { children: null };
-      obj[0] = mergeChildMappingsResult;
+      obj = { children: mergeChildMappingsResult };
       self.setState(obj);
     }
     if (self._keysToLeave.length > 0) {
       self._keysToLeave = [];
     }
-    mergeChildMappingsResult = getChildMapping.mergeChildMappings(children, childMapping);
+    mergeChildMappingsResult = TransitionChildMapping.mergeChildMappings(children, childMapping);
   }
 };
 prototype["_enqueueTransitions"] = function _enqueueTransitions(children, childMapping, _keysToEnter) {
   for (const key10006 in arg0) {
-    let tmp6 = key10006;
     let hasOwnPropertyResult = arg1;
     if (arg1) {
       hasOwnPropertyResult = arg1.hasOwnProperty(key10006);
@@ -166,8 +160,7 @@ prototype["_enqueueTransitions"] = function _enqueueTransitions(children, childM
   }
 };
 prototype["_perform"] = function _perform(key10008, componentWillAppear, componentDidAppear, flag) {
-  let self = this;
-  self = this;
+  const self = this;
   closure_1 = key10008;
   closure_2 = componentDidAppear;
   if (flag === undefined) {
@@ -184,43 +177,45 @@ prototype["_perform"] = function _perform(key10008, componentWillAppear, compone
   }
   self._handleDonePerform(key10008, componentDidAppear, flag);
 };
-prototype["_handleDonePerform"] = function _handleDonePerform(closure_1, closure_2, flag) {
-  const _require = closure_1;
+prototype["_handleDonePerform"] = function _handleDonePerform(key10008, componentDidAppear, flag) {
+  _require = key10008;
   if (flag === undefined) {
     flag = false;
   }
   const self = this;
   if (tmp2) {
-    tmp[closure_2]();
+    tmp[componentDidAppear]();
   }
   const _currentlyTransitioningKeys = self._currentlyTransitioningKeys;
-  _currentlyTransitioningKeys.delete(closure_1);
-  const childMapping = require("TransitionChildMapping.tsx").getChildMapping(self.props.children);
+  _currentlyTransitioningKeys.delete(key10008);
+  const childMapping = require("TransitionChildMapping").getChildMapping(self.props.children);
   if (flag) {
     if (null != childMapping) {
-      if (childMapping.hasOwnProperty(closure_1)) {
-        self.performEnter(closure_1);
+      if (childMapping.hasOwnProperty(key10008)) {
+        self.performEnter(key10008);
       }
     }
     self.setState((children) => {
+      const obj = { children: null };
       const items = [closure_0];
-      return { children: closure_1_2(children.children, items.map(closure_1_4)) };
+      obj.children = _objectWithoutProperties(children.children, items.map(_toPropertyKey));
+      return obj;
     });
   } else {
     if (!tmp5) {
-      self.performLeave(closure_1);
+      self.performLeave(key10008);
     }
-    tmp5 = null != childMapping && childMapping.hasOwnProperty(closure_1);
+    tmp5 = null != childMapping && childMapping.hasOwnProperty(key10008);
   }
 };
 prototype["performAppear"] = function performAppear(key10008) {
   this._perform(key10008, "componentWillAppear", "componentDidAppear");
 };
-prototype["performEnter"] = function performEnter(closure_1) {
-  this._perform(closure_1, "componentWillEnter", "componentDidEnter");
+prototype["performEnter"] = function performEnter(key10008) {
+  this._perform(key10008, "componentWillEnter", "componentDidEnter");
 };
-prototype["performLeave"] = function performLeave(closure_1) {
-  this._perform(closure_1, "componentWillLeave", "componentDidLeave", true);
+prototype["performLeave"] = function performLeave(key10008) {
+  this._perform(key10008, "componentWillLeave", "componentDidLeave", true);
 };
 prototype["render"] = function render() {
   const key10011 = this;
@@ -229,27 +224,25 @@ prototype["render"] = function render() {
   const children = this.state.children;
   const items = [];
   for (const key10011 in children) {
-    let tmp8 = key10011;
     let tmp9 = children[key10011];
     let isValidElementResult = null != tmp9;
     if (isValidElementResult) {
-      let tmp = importAllResult;
-      isValidElementResult = importAllResult.isValidElement(tmp9);
+      isValidElementResult = noop.isValidElement(tmp9);
     }
     if (!isValidElementResult) {
       continue;
     } else {
       let childFactoryResult = tmp9;
-      let tmp3 = importAllResult;
       if (null != childFactory) {
         childFactoryResult = childFactory(tmp9);
       }
-      let obj = { ref: null, key: null };
-      obj[0] = function ref(arg0) {
-        return key10011.addChildRef(key10011, arg0);
+      let obj = {
+        ref(arg0) {
+          return require.addChildRef(key10011, arg0);
+        },
+        key: key10011,
       };
-      obj[1] = key10011;
-      let arr = items.push(importAllResult.cloneElement(childFactoryResult, obj));
+      let arr = items.push(noop.cloneElement(childFactoryResult, obj));
       continue;
     }
     continue;
@@ -257,7 +250,7 @@ prototype["render"] = function render() {
   obj = {};
   const merged = Object.assign(this.props);
   const keys = Object.keys(TransitionGroup.defaultProps);
-  const item = keys.forEach((arg0) => {
+  const item = keys.forEach((item) => {
     delete tmp3[tmp2];
     return tmp;
   });
@@ -270,8 +263,7 @@ TransitionGroup.defaultProps = {
   transitionEnter: true,
   childFactory: null,
 };
-const result = require("set").fileFinishedImporting(
-  "../discord_common/js/packages/transition-group/TransitionGroup.tsx",
-);
+const size = fn(2);
+const result = size.fileFinishedImporting("../discord_common/js/packages/transition-group/TransitionGroup.tsx");
 
 export { TransitionGroup };

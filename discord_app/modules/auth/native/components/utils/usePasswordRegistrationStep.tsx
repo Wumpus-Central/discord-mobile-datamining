@@ -1,32 +1,30 @@
 // discord_app/modules/auth/native/components/utils/usePasswordRegistrationStep.tsx
-import closure_3 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../../../../_runtime/00019_noop.js";
-import { useRegistrationUIStore } from "../../RegistrationUIStore.tsx";
+import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
-  "modules/auth/native/components/utils/usePasswordRegistrationStep.tsx",
-);
+const require = fn;
+const useRegistrationUIStore = fn(15946).useRegistrationUIStore;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/auth/native/components/utils/usePasswordRegistrationStep.tsx");
 
 export const usePasswordRegistrationStep = function usePasswordRegistrationStep() {
-  let obj = React;
+  let obj = noop;
   let str = useRegistrationUIStore((registrationOptions) => registrationOptions.registrationOptions).password;
   if (str == null) {
     str = "";
   }
-  let tmp2 = callback2(React.useState(str), 2);
-  const first = tmp2[0];
-  const tmp5 = importDefault(passwordValid[4])(
+  let tmp2 = _slicedToArray(noop.useState(str), 2);
+  const password = tmp2[0];
+  const tmp5 = require("getError")(
     "password",
     useRegistrationUIStore((errors) => errors.errors),
   );
   importDefault = tmp5;
-  let tmp = useRegistrationUIStore;
   const tmpResult = useRegistrationUIStore((errors) => errors.errors);
-  const passwordScore = first(passwordValid[5]).usePasswordScore(first);
+  const passwordScore = password(passwordValid[5]).usePasswordScore(password);
   passwordValid = passwordScore.passwordValid;
-  const items = [first, tmp5, passwordValid];
+  const items = [password, tmp5, passwordValid];
   const memo = obj.useMemo(() => {
     let tmp = null == first;
     if (!tmp) {
@@ -44,23 +42,22 @@ export const usePasswordRegistrationStep = function usePasswordRegistrationStep(
     }
     return tmp;
   }, items);
-  const items1 = [first, tmp5];
+  const items1 = [password, tmp5];
   obj = {
-    password: first,
+    password,
     setPassword: tmp2[1],
     passwordScore: passwordScore.passwordScore,
     preventSubmitPassword: memo,
     validatePassword: obj.useCallback(
-      callback(function* () {
+      asyncGeneratorStep(async (arg0, value) => {
         if (c4 === 2) {
           c4 = 3;
-          HermesBuiltin.throwTypeError();
+          throw new TypeError("Generator functions may not be called on executing generators");
         } else if (tmp6 === 3) {
           if (arg0 === 1) {
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
+            let obj = { value, done: true };
             return obj;
           } else {
             return { value: "HermesInternal", done: null };
@@ -71,42 +68,36 @@ export const usePasswordRegistrationStep = function usePasswordRegistrationStep(
             if (0 === c1) {
               if (arg0 === 1) {
                 c4 = 3;
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
                 c4 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
+                obj = { value, done: true };
                 return obj;
               } else {
-                closure_0 = tmp3;
-                if (null != closure_1_0) {
+                if (null != first) {
                   if ("" !== arr) {
                     if (arr.length < 8) {
-                      const intl2 = closure_1_0(closure_1_2[6]).intl;
+                      const intl2 = tmp3(tmp25[6]).intl;
                       c4 = 3;
-                      obj1 = { value: null, done: true };
-                      obj1[0] = intl2.string(closure_1_0(closure_1_2[6]).t.DfaKHr);
+                      const obj1 = { value: intl2.string(tmp3(tmp25[6]).t.DfaKHr), done: true };
                       return obj1;
-                    } else if (null != c1) {
+                    } else if (null != closure_1) {
                       c4 = 3;
-                      let obj2 = { value: null, done: true };
-                      obj2[0] = tmp14;
+                      let obj2 = { value: tmp14, done: true };
                       return obj2;
                     } else {
                       c3 = 1;
-                      obj2 = closure_1_0(closure_1_2[7]);
+                      obj2 = tmp3(tmp25[7]);
                       c1 = 2;
                       c4 = 1;
-                      const obj3 = { value: null, done: false };
-                      obj3[0] = obj2.scorePassword(arr);
+                      const obj3 = { value: obj2.scorePassword(arr), done: false };
                       return obj3;
                     }
                   }
                 }
-                const intl3 = closure_1_0(closure_1_2[6]).intl;
+                const intl3 = tmp3(tmp25[6]).intl;
                 c4 = 3;
-                const obj4 = { value: null, done: true };
-                obj4[0] = intl3.string(closure_1_0(closure_1_2[6]).t.R98xD5);
+                const obj4 = { value: intl3.string(tmp3(tmp25[6]).t.R98xD5), done: true };
                 return obj4;
               }
             } else {
@@ -115,25 +106,22 @@ export const usePasswordRegistrationStep = function usePasswordRegistrationStep(
                 c4 = 3;
               } else if (arg0 === 1) {
                 c4 = 3;
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
                 c3 = 0;
                 c4 = 3;
-                const obj5 = { value: null, done: true };
-                obj5[0] = arg1;
+                const obj5 = { value, done: true };
                 return obj5;
-              } else if (false !== arg1.valid) {
+              } else if (false !== value.valid) {
                 c3 = 0;
               }
-              const intl = closure_1_0(closure_1_2[6]).intl;
+              const intl = tmp3(tmp25[6]).intl;
               c3 = 0;
               c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = intl.string(closure_1_0(closure_1_2[6]).t.DfaKHr);
+              obj = { value: intl.string(tmp3(tmp25[6]).t.DfaKHr), done: true };
               return obj;
             }
           } catch (tmp25) {
-            closure_2 = tmp25;
             if (tmp4 === c3) {
               c4 = tmp2;
               throw tmp25;

@@ -1,35 +1,33 @@
 // discord_app/modules/request_to_stream/useCanFulfillStreamRequest.tsx
-import closure_2 from "../game_detection/RunningGameStore.native.tsx";
-import closure_3 from "../../stores/ApplicationStreamingStore.tsx";
-import closure_4 from "../../stores/AuthenticationStore.tsx";
-import closure_5 from "../../stores/ChannelStore.tsx";
-import closure_6 from "../../stores/GuildStore.tsx";
-import closure_7 from "../../stores/PermissionStore.tsx";
-import closure_8 from "../../stores/PresenceStore.tsx";
-import closure_9 from "../../stores/RTCConnectionStore.tsx";
-import ME from "../../Constants.tsx";
+import RunningGameStore from "../game_detection/RunningGameStore.native.tsx";
+import ApplicationStreamingStore from "../../stores/ApplicationStreamingStore.tsx";
+import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
+import GuildStore from "../../stores/GuildStore.tsx";
+import PermissionStore from "../../stores/PermissionStore.tsx";
+import PresenceStore from "../../stores/PresenceStore.tsx";
+import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
 
-const require = arg1;
-function canFulfillStreamRequest(channel_id, arg1) {
-  let flag = arg1;
-  if (arg1 === undefined) {
+const require = fn;
+function canFulfillStreamRequest(channel_id, flag, ApplicationStreamingStore, ChannelStore, PresenceStore) {
+  if (flag === undefined) {
     flag = false;
   }
-  obj = arg2;
-  if (arg2 === undefined) {
-    obj = closure_3;
+  let obj = ApplicationStreamingStore;
+  if (ApplicationStreamingStore === undefined) {
+    obj = ApplicationStreamingStore;
   }
-  let obj2 = arg3;
-  if (arg3 === undefined) {
-    obj2 = closure_5;
+  let obj2 = ChannelStore;
+  if (ChannelStore === undefined) {
+    obj2 = ChannelStore;
   }
-  let obj3 = arg4;
-  if (arg4 === undefined) {
-    obj3 = closure_8;
+  let obj3 = PresenceStore;
+  if (PresenceStore === undefined) {
+    obj3 = PresenceStore;
   }
-  let obj4 = arg6;
-  if (arg6 === undefined) {
-    obj4 = closure_9;
+  let obj4 = RTCConnectionStore;
+  if (RTCConnectionStore === undefined) {
+    obj4 = RTCConnectionStore;
   }
   let id;
   let DESKTOP;
@@ -48,14 +46,13 @@ function canFulfillStreamRequest(channel_id, arg1) {
     if (application != null) {
       id = application.id;
     }
-    DESKTOP = constants.DESKTOP;
     const obj6 = flag(id[9]);
     DESKTOP = tmp16(tmp17[10]).isAndroid() ? tmp3.ANDROID : tmp3.IOS;
     if (null == id) {
       const items1 = [false, obj.NOT_RUNNING_GAME];
       return items1;
     } else {
-      const activities = obj3.getActivities(id.getId(), channel.guild_id);
+      const activities = obj3.getActivities(AuthenticationStore.getId(), channel.guild_id);
       if (tmp15) {
         const items2 = [false, obj.ALREADY_STREAMING];
         let items4 = items2;
@@ -68,11 +65,9 @@ function canFulfillStreamRequest(channel_id, arg1) {
         if (tmp21) {
           items3[0] = true;
           items3[1] = null;
-          let tmp8 = items3;
         } else {
           items3[0] = false;
           items3[1] = obj.NOT_RUNNING_GAME;
-          tmp8 = items3;
         }
       } else {
         items4 = [false, obj.NOT_IN_VOICE_CHANNEL];
@@ -82,8 +77,9 @@ function canFulfillStreamRequest(channel_id, arg1) {
     const tmp16Result = tmp16(tmp17[10]);
   }
 }
-({ ActivityGamePlatforms: c10, ActivityTypes: unpackModuleId } = ME);
-let obj = {
+const Constants = fn(1074);
+({ ActivityGamePlatforms: c10, ActivityTypes: closure_11 } = Constants);
+const StreamRequestUnfulfillableReason = {
   NOT_IN_VOICE_CHANNEL: "NOT_IN_VOICE_CHANNEL",
   NOT_RUNNING_GAME: "NOT_RUNNING_GAME",
   ALREADY_STREAMING: "ALREADY_STREAMING",
@@ -91,28 +87,37 @@ let obj = {
   PENDING_REQUEST: "PENDING_REQUEST",
   EXPIRED: "EXPIRED",
 };
-const result = require("set").fileFinishedImporting("modules/request_to_stream/useCanFulfillStreamRequest.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/request_to_stream/useCanFulfillStreamRequest.tsx");
 
 export default function useCanFulfillStreamRequest(arg0) {
-  const _require = arg0;
+  _require = arg0;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
   }
-  const items = [closure_3, closure_5, closure_8, closure_2, closure_9, closure_6, closure_7];
-  return _require(flag[11]).useStateFromStores(items, () =>
-    closure_1_13(
+  const items = [
+    ApplicationStreamingStore,
+    ChannelStore,
+    PresenceStore,
+    RunningGameStore,
+    RTCConnectionStore,
+    GuildStore,
+    PermissionStore,
+  ];
+  return require("initialize").useStateFromStores(items, () =>
+    canFulfillStreamRequest(
       closure_0,
       flag,
-      closure_1_3,
-      closure_1_5,
-      closure_1_8,
-      closure_1_2,
-      closure_1_9,
-      closure_1_6,
-      closure_1_7,
+      ApplicationStreamingStore,
+      ChannelStore,
+      PresenceStore,
+      RunningGameStore,
+      RTCConnectionStore,
+      GuildStore,
+      PermissionStore,
     ),
   );
 }
-export const StreamRequestUnfulfillableReason = obj;
+export { StreamRequestUnfulfillableReason };
 export { canFulfillStreamRequest };

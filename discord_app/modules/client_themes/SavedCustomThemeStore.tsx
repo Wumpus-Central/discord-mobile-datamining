@@ -1,9 +1,9 @@
 // discord_app/modules/client_themes/SavedCustomThemeStore.tsx
-import set from "../../../_runtime/00002_set.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import _modDef1232 from "../../utils/SentryUtils.native.tsx";
-import SystemThemeState from "../user_settings/ThemeConstants.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import SentryUtilsDefault from "../../utils/SentryUtils.native.tsx";
+import ThemeConstants from "../user_settings/ThemeConstants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 function validateSavedTheme(colors) {
   try {
@@ -19,15 +19,14 @@ function validateSavedTheme(colors) {
     }
     return tmp5;
   } catch (tmp8) {
-    obj = _modDef1232;
-    obj = { tags: null };
-    obj[0] = { app_context: "SavedCustomThemeStore" };
+    let obj = SentryUtilsDefault;
+    obj = { tags: { app_context: "SavedCustomThemeStore" } };
     obj.captureMessage("Invalid saved custom theme: " + tmp8, obj);
     return false;
   }
 }
-({ PROTO_THEME_MAP_WEB_REFRESH, PROTO_THEME_MAP_MOBILE: obj1 } = SystemThemeState);
-let obj = {
+({ PROTO_THEME_MAP_WEB_REFRESH, PROTO_THEME_MAP_MOBILE: c2 } = ThemeConstants);
+let FetchState = {
   NOT_FETCHED: 0,
   [0]: "NOT_FETCHED",
   IS_FETCHING: 1,
@@ -38,7 +37,7 @@ let obj = {
   [3]: "ERROR",
 };
 let closure_4 = [];
-let NOT_FETCHED = obj.NOT_FETCHED;
+let ERROR = FetchState.NOT_FETCHED;
 const PersistedStore = initializeDefault.PersistedStore;
 class SavedCustomThemeStore extends PersistedStore {}
 const prototype = SavedCustomThemeStore.prototype;
@@ -46,7 +45,7 @@ prototype["initialize"] = function initialize(savedCustomThemes) {
   if (null != savedCustomThemes) {
     savedCustomThemes = savedCustomThemes.savedCustomThemes;
   }
-  NOT_FETCHED = obj.NOT_FETCHED;
+  ERROR = obj.NOT_FETCHED;
 };
 prototype["getState"] = function getState() {
   let savedCustomThemes = closure_4;
@@ -70,7 +69,7 @@ prototype["getSavedCustomTheme"] = function getSavedCustomTheme() {
   return first;
 };
 prototype["getFetchState"] = function getFetchState() {
-  return NOT_FETCHED;
+  return ERROR;
 };
 prototype["hasSavedCustomThemes"] = function hasSavedCustomThemes() {
   let length;
@@ -80,39 +79,39 @@ prototype["hasSavedCustomThemes"] = function hasSavedCustomThemes() {
   return length > 0;
 };
 prototype["isFetching"] = function isFetching() {
-  return NOT_FETCHED === obj.IS_FETCHING;
+  return ERROR === obj.IS_FETCHING;
 };
 prototype["hasFetched"] = function hasFetched() {
-  return NOT_FETCHED === obj.HAS_FETCHED;
+  return ERROR === obj.HAS_FETCHED;
 };
 prototype["hasError"] = function hasError() {
-  return NOT_FETCHED === obj.ERROR;
+  return ERROR === obj.ERROR;
 };
 SavedCustomThemeStore.displayName = "SavedCustomThemeStore";
 SavedCustomThemeStore.persistKey = "SavedCustomThemeStore";
-obj = {
+FetchState = {
   SAVED_CUSTOM_THEMES_FETCH_START: function handleCustomThemesFetchStart() {
-    const IS_FETCHING = obj.IS_FETCHING;
+    ERROR = obj.IS_FETCHING;
   },
   SAVED_CUSTOM_THEMES_FETCH_SUCCESS: function handleCustomThemesFetchSuccess(themes) {
     themes = themes.themes;
-    const HAS_FETCHED = obj.HAS_FETCHED;
+    ERROR = obj.HAS_FETCHED;
     const found = themes.filter(validateSavedTheme);
     closure_4 = found.map((colors) => ({
       colors: colors.colors,
       gradient_angle: colors.gradient_angle,
       base_mix: colors.base_mix,
-      base_theme: table[colors.base_theme],
+      base_theme: closure_1_2[colors.base_theme],
     }));
   },
   SAVED_CUSTOM_THEMES_FETCH_FAILURE: function handleCustomThemesFetchFailure(error) {
-    const ERROR = obj.ERROR;
-    obj = _modDef1232;
+    ERROR = obj.ERROR;
+    obj = SentryUtilsDefault;
     obj.captureException(error.error, { tags: { app_context: "SavedCustomThemeStore" } });
   },
 };
-const savedCustomThemeStore = new SavedCustomThemeStore(dispatcherDefault, obj);
-const result = set.fileFinishedImporting("modules/client_themes/SavedCustomThemeStore.tsx");
+const savedCustomThemeStore = new SavedCustomThemeStore(DispatcherDefault, FetchState);
+const result = size.fileFinishedImporting("modules/client_themes/SavedCustomThemeStore.tsx");
 
 export default savedCustomThemeStore;
-export const FetchState = obj;
+export { FetchState };

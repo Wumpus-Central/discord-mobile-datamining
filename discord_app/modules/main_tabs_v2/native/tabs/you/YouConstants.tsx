@@ -1,17 +1,17 @@
 // discord_app/modules/main_tabs_v2/native/tabs/you/YouConstants.tsx
-import set from "../../../../../../_runtime/00002_set.js";
-import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import Button from "../../../../../design/void/native.tsx";
+import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import native from "../../../../../design/void/native.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouConstants.tsx");
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouConstants.tsx");
 
 export const YOU_SCREEN_ID = "you-screen-native-id";
 export const YOU_BANNER_IMAGE_HEIGHT = 150;
 export const YOU_AVATAR_PADDING = 6;
-export const YOU_AVATAR_SIZE = Button.AVATAR_SIZE_MAP[Button.AvatarSizes.XXLARGE];
+export const YOU_AVATAR_SIZE = native.AVATAR_SIZE_MAP[native.AvatarSizes.XXLARGE];
 export const YOU_CUSTOM_STATUS_MODAL_KEY = "you-custom-status-modal-key";
 export const YOU_ACCOUNT_ACTION_SHEET_KEY = "you-account-action-sheet-key";
-export const YOU_CARD_BORDER_RADIUS = ThemesDefault.radii.lg;
+export const YOU_CARD_BORDER_RADIUS = nativeDefault.radii.lg;
 export const YOU_CARD_BORDER_WIDTH = 1;
 export const YOU_SCROLL_EVENT_THROTTLE = 16;
 export const YOU_ACTION_SHEET_TOP_INSET = 12;

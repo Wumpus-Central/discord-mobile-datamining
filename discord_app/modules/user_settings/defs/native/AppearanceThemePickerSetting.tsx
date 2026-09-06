@@ -1,33 +1,30 @@
 // discord_app/modules/user_settings/defs/native/AppearanceThemePickerSetting.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import closure_2 from "../../ThemeStore.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
-import { ThemeTypes } from "../../appearance/native/SettingsAppearanceThemePickerScreen.tsx";
+import util from "../../../../intl/index.native.tsx";
+import ThemeStore from "../../ThemeStore.tsx";
 
-require = arg1;
-createToggle = {
+require = fn;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.Ksh3ik);
+    const intl = util.intl;
+    return intl.string(util.t.Ksh3ik);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.APPEARANCE,
+  parent: fn(7975).MobileUserSettings.APPEARANCE,
   usePredicate: function useIsSingleThemePickerVisible() {
-    const items = [closure_2];
+    const items = [ThemeStore];
     return !initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
   },
-  useTrailing: require("useAppearanceSettingTrailing").useAppearanceSettingTrailing,
-  screen: createToggle,
-};
-createToggle = {
-  route: require("ME").UserSettingsSections.APPEARANCE_THEME_PICKER,
-  getComponent() {
-    return ThemeTypes /* ThemeTypes */.default;
+  useTrailing: fn(15261).useAppearanceSettingTrailing,
+  screen: {
+    route: fn(1074).UserSettingsSections.APPEARANCE_THEME_PICKER,
+    getComponent() {
+      return require("SettingsAppearanceThemePickerScreen").default;
+    },
   },
 };
-createToggle = createToggle.createRoute(createToggle);
-const result = require("set").fileFinishedImporting(
-  "modules/user_settings/defs/native/AppearanceThemePickerSetting.tsx",
-);
+SettingBuilders = SettingBuilders.createRoute(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AppearanceThemePickerSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

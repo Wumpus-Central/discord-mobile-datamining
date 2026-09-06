@@ -1,11 +1,11 @@
 // discord_app/modules/main_tabs_v2/native/panels/PanelsNavigationUtils.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import getRootNavigationRef from "../../RootNavigationRef.native.tsx";
+import RootNavigationRef from "../../RootNavigationRef.native.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/main_tabs_v2/native/panels/PanelsNavigationUtils.tsx");
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/PanelsNavigationUtils.tsx");
 
 export const convertPortraitToLandscapeScreens = function convertPortraitToLandscapeScreens() {
-  let obj = getRootNavigationRef;
+  let obj = RootNavigationRef;
   const store = obj.getRootNavigationRef();
   if (null != store) {
     let state = store.getState();
@@ -46,7 +46,7 @@ export const convertPortraitToLandscapeScreens = function convertPortraitToLands
                   const items1 = [obj];
                   HermesBuiltin.arraySpread(substr, 1);
                   const CommonActions = tmp(1488).CommonActions;
-                  obj1 = {};
+                  const obj1 = {};
                   const merged2 = Object.assign(state);
                   obj1.routes = items1;
                   obj1.index = items1.length - 1;
@@ -63,7 +63,7 @@ export const convertPortraitToLandscapeScreens = function convertPortraitToLands
   }
 };
 export const convertLandscapeToPortraitScreens = function convertLandscapeToPortraitScreens() {
-  let obj = getRootNavigationRef;
+  let obj = RootNavigationRef;
   const store = obj.getRootNavigationRef();
   if (null != store) {
     let state = store.getState();
@@ -106,22 +106,20 @@ export const convertLandscapeToPortraitScreens = function convertLandscapeToPort
                 channelId = "channel-" + tmp(1256).v4();
                 const tmpResult3 = tmp(1256);
               }
-              obj = { name: "channel", key: null, params: null };
-              obj[1] = channelId;
+              obj = { name: "channel", key: channelId, params: null };
               const params = coerceGuildsRouteResult.params;
               let channelId1;
               if (params != null) {
                 channelId1 = params.channelId;
               }
-              obj1 = { channelId: null, guildId: null };
-              obj1[0] = channelId1;
+              const obj1 = { channelId: channelId1, guildId: null };
               const params2 = coerceGuildsRouteResult.params;
               let guildId;
               if (params2 != null) {
                 guildId = params2.guildId;
               }
-              obj1[1] = guildId;
-              obj[2] = obj1;
+              obj1.guildId = guildId;
+              obj.params = obj1;
               items[1] = obj;
               const routes = state2.routes;
               HermesBuiltin.arraySpread(routes.slice(1), 2);

@@ -1,22 +1,24 @@
 // discord_app/modules/user_profile/hooks/useDisplayProfile.tsx
-import premiumSinceDefault from "../DisplayProfile.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../stores/UserStore.tsx";
-import closure_5 from "../UserProfileStore.tsx";
-import areArraysShallowlyEqual from "../../../utils/FunctionUtils.tsx";
+import maybeFetchUserProfileDefault from "../maybeFetchUserProfile.tsx";
+import DisplayProfileDefault from "../DisplayProfile.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import UserStore from "../../../stores/UserStore.tsx";
+import UserProfileStore from "../UserProfileStore.tsx";
 
-const require = arg1;
-let closure_6 = areArraysShallowlyEqual.cachedFunction((arg0, arg1) => new premiumSinceDefault(arg0, arg1));
-const result = require("set").fileFinishedImporting("modules/user_profile/hooks/useDisplayProfile.tsx");
+const require = fn;
+const FunctionUtils = fn(1933);
+let closure_6 = FunctionUtils.cachedFunction((arg0, arg1) => new DisplayProfileDefault(arg0, arg1));
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/hooks/useDisplayProfile.tsx");
 
 export default function useDisplayProfile(arg0, arg1) {
-  const _require = arg0;
+  _require = arg0;
   closure_1 = arg1;
-  const items = [closure_4, closure_5];
-  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  const items = [UserStore, UserProfileStore];
+  return require("initialize").useStateFromStores(items, () => {
     let tmp2 = null;
     if (null != closure_0) {
-      const items = [closure_1_4, closure_1_5];
+      const items = [UserStore, UserProfileStore];
       [obj, obj2] = items;
       let tmp6 = null;
       if (null !== tmp) {
@@ -26,7 +28,7 @@ export default function useDisplayProfile(arg0, arg1) {
         if (null != user) {
           tmp10 = null;
           if (null != userProfile) {
-            tmp10 = closure_1_6(userProfile, tmp9);
+            tmp10 = closure_6(userProfile, tmp9);
           }
         }
         tmp6 = tmp10;
@@ -36,20 +38,19 @@ export default function useDisplayProfile(arg0, arg1) {
     return tmp2;
   });
 }
-export const useDisplayProfileWithFetchEffect = function useDisplayProfileWithFetchEffect(arg0, arg1) {
-  let _require = arg0;
-  closure_1 = arg1;
-  let items = [arg1, arg0];
-  const effect = React.useEffect(() => {
-    callback(closure_1_2[4])(closure_0, undefined, { guildId: callback });
-  }, items);
+export const useDisplayProfileWithFetchEffect = function useDisplayProfileWithFetchEffect(arg0, guildId) {
   _require = arg0;
-  closure_1 = arg1;
-  const items1 = [closure_4, closure_5];
-  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
+  let items = [guildId, arg0];
+  const effect = noop.useEffect(() => {
+    maybeFetchUserProfileDefault(closure_0, undefined, { guildId });
+  }, items);
+  closure_129_0 = arg0;
+  closure_129_1 = guildId;
+  const items1 = [UserStore, UserProfileStore];
+  return require("initialize").useStateFromStores(items1, () => {
     let tmp2 = null;
     if (null != closure_0) {
-      const items = [closure_1_4, closure_1_5];
+      const items = [UserStore, UserProfileStore];
       [obj, obj2] = items;
       let tmp6 = null;
       if (null !== tmp) {
@@ -59,7 +60,7 @@ export const useDisplayProfileWithFetchEffect = function useDisplayProfileWithFe
         if (null != user) {
           tmp10 = null;
           if (null != userProfile) {
-            tmp10 = closure_1_6(userProfile, tmp9);
+            tmp10 = closure_6(userProfile, tmp9);
           }
         }
         tmp6 = tmp10;
@@ -69,10 +70,10 @@ export const useDisplayProfileWithFetchEffect = function useDisplayProfileWithFe
     return tmp2;
   });
 };
-export const getDisplayProfile = function getDisplayProfile(id, arg1) {
+export const getDisplayProfile = function getDisplayProfile(id, guildId) {
   let tmp = arg2;
   if (arg2 === undefined) {
-    const items = [closure_4, closure_5];
+    const items = [UserStore, UserProfileStore];
     tmp = items;
   }
   [obj, obj2] = tmp;
@@ -85,7 +86,7 @@ export const getDisplayProfile = function getDisplayProfile(id, arg1) {
     if (null != user) {
       tmp8 = null;
       if (null != userProfile) {
-        tmp8 = callback(userProfile, tmp7);
+        tmp8 = closure_6(userProfile, tmp7);
       }
     }
     return tmp8;

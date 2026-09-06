@@ -1,12 +1,11 @@
 // discord_app/modules/collectibles/CollectiblesShopManager.tsx
-import dispatcherDefault from "../../Dispatcher.tsx";
-import _maybeFetchProductsWithSkus from "../storefront/StorefrontProductActionCreators.tsx";
-import _maybeFetchCollectionsWithProducts from "../storefront/StorefrontCollectionActionCreators.tsx";
-import closure_2 from "../storefront/StorefrontCollectionStore.tsx";
-import closure_3 from "../storefront/StorefrontProductStore.tsx";
-import set from "../../../_runtime/00002_set.js";
+import StorefrontProductActionCreators from "../storefront/StorefrontProductActionCreators.tsx";
+import StorefrontCollectionActionCreators from "../storefront/StorefrontCollectionActionCreators.tsx";
+import StorefrontCollectionStore from "../storefront/StorefrontCollectionStore.tsx";
+import StorefrontProductStore from "../storefront/StorefrontProductStore.tsx";
+import Dispatcher from "../../Dispatcher.tsx";
 
-require = arg1;
+require = fn;
 function chunk(arr) {
   let length;
   let sum;
@@ -27,11 +26,8 @@ function flushProducts() {
   const items = [...set];
   set.clear();
   for (const item10016 of tmp2) {
-    let tmp3 = require;
-    let tmp4 = dependencyMap;
-    let obj = _maybeFetchProductsWithSkus;
-    obj = { skuIds: null };
-    obj[0] = item10016;
+    let obj = StorefrontProductActionCreators;
+    obj = { skuIds: item10016 };
     let result = obj.maybeFetchProductsBySkuIds(obj);
     continue;
   }
@@ -42,18 +38,13 @@ function flushCollections() {
   set1.clear();
   c8 = false;
   for (const item10018 of tmp3) {
-    let tmp4 = require;
-    let tmp5 = dependencyMap;
-    let obj = _maybeFetchCollectionsWithProducts;
-    obj = { collectionIds: null, includeUnpublishedCollections: null, includeUnpublishedProducts: null };
-    obj[0] = item10018;
-    obj[1] = tmp;
-    obj[2] = tmp;
+    let obj = StorefrontCollectionActionCreators;
+    obj = { collectionIds: item10018, includeUnpublishedCollections: tmp, includeUnpublishedProducts: tmp };
     let result = obj.maybeFetchCollectionsWithProducts(obj);
     continue;
   }
 }
-let set = new Set();
+const set = new Set();
 const set1 = new Set();
 let c6 = null;
 let c7 = null;
@@ -66,13 +57,9 @@ let obj = {
       let tmp2 = nextResult;
       let tmp3 = "" !== nextResult;
       if (tmp3) {
-        let tmp4 = fetchStateForSku;
-        let tmp5 = nextResult;
-        tmp3 = "loading" !== fetchStateForSku.getFetchStateForSku(tmp2);
+        tmp3 = "loading" !== StorefrontProductStore.getFetchStateForSku(tmp2);
       }
       if (tmp3) {
-        let tmp6 = set;
-        let tmp7 = nextResult;
         let addResult = set.add(tmp2);
       }
       continue;
@@ -101,13 +88,9 @@ let obj = {
       let tmp2 = nextResult;
       let tmp3 = "" !== nextResult;
       if (tmp3) {
-        let tmp4 = fetchState;
-        let tmp5 = nextResult;
-        tmp3 = "loading" !== fetchState.getFetchState(tmp2);
+        tmp3 = "loading" !== StorefrontCollectionStore.getFetchState(tmp2);
       }
       if (tmp3) {
-        let tmp6 = set1;
-        let tmp7 = nextResult;
         let addResult = set1.add(tmp2);
       }
       continue;
@@ -140,7 +123,8 @@ let obj = {
     }
   },
 };
-const subscription = dispatcherDefault.subscribe("LOGOUT", obj.reset);
-let result = set.fileFinishedImporting("modules/collectibles/CollectiblesShopManager.tsx");
+const subscription = Dispatcher.subscribe("LOGOUT", obj.reset);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/collectibles/CollectiblesShopManager.tsx");
 
 export const CollectiblesShopManager = obj;

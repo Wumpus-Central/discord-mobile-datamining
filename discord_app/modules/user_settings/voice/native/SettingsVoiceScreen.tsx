@@ -1,24 +1,20 @@
 // discord_app/modules/user_settings/voice/native/SettingsVoiceScreen.tsx
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import AccessibilityAnnouncer from "../../../../design/shared.tsx";
-import Text from "../../../../design/components/Text/native/Text.tsx";
+import util from "../../../../intl/index.native.tsx";
+import shared from "../../../../design/shared.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import LegacyBaseButton from "../../../../../_runtime/06655_LegacyBaseButton.js";
-import getNoiseCancellationDeferredToSystem from "../../../noise_cancellation/NoiseCancellationUtils.tsx";
-import handleKrispLinkPressed from "KrispLogo.tsx";
-import _modDef14689 from "../../../settings/native/renderer/SettingLayout.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../../../stores/MediaEngineStore.tsx";
-import { MobileUserSettings } from "../../core/native/SettingsConstants.tsx";
-import { HelpdeskArticles } from "../../../../Constants.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import importDefaultResult from "../../../../utils/HelpdeskUtils.tsx";
+import NoiseCancellationUtils from "../../../noise_cancellation/NoiseCancellationUtils.tsx";
+import KrispLogo2 from "KrispLogo.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayout.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
+import HelpdeskUtils from "../../../../utils/HelpdeskUtils.tsx";
 
-require = arg1;
+require = fn;
 function KrispLogo() {
-  const tmp = callback3();
-  let obj = AccessibilityAnnouncer;
+  const tmp = closure_13();
+  let obj = shared;
   if (obj.isThemeLight(tmp4)) {
     let tmp2Result = tmp2(9998);
   } else {
@@ -27,101 +23,108 @@ function KrispLogo() {
   obj = { style: tmp.krisp, children: null };
   obj = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };
   const intl = tmp5(1114).intl;
-  obj[2] = intl.string(getSystemLocale.t.vFiCSx);
-  const items = [callback(closure_5, obj)];
-  obj1 = { accessibilityRole: "link", accessibilityLabel: null, onPress: null, children: null };
+  obj.accessibilityLabel = intl.string(util.t.vFiCSx);
+  const items = [React7(hasOwnProperty, obj)];
+  const obj1 = { accessibilityRole: "link", accessibilityLabel: null, onPress: null, children: null };
   const intl2 = tmp5(1114).intl;
-  obj1[1] = intl2.string(getSystemLocale.t.hvVgAZ);
-  obj1[2] = handleKrispLinkPressed.handleKrispLinkPressed;
+  obj1.accessibilityLabel = intl2.string(util.t.hvVgAZ);
+  obj1.onPress = KrispLogo2.handleKrispLinkPressed;
   const obj2 = { variant: "text-sm/medium", color: "text-link", children: null };
   const intl3 = tmp5(1114).intl;
-  obj2[2] = intl3.string(getSystemLocale.t.hvVgAZ);
-  obj1[3] = callback(Text.Text, obj2);
-  items[1] = callback(LegacyBaseButton.LegacyPressable, obj1);
-  obj[1] = items;
-  return callback2(closure_4, obj);
+  obj2.children = intl3.string(util.t.hvVgAZ);
+  obj1.children = React7(Text_Text.Text, obj2);
+  items[1] = React7(LegacyBaseButton.LegacyPressable, obj1);
+  obj.children = items;
+  return closure_1_10(React4, obj);
 }
 function SystemProcessingSubLabel() {
-  let obj = getNoiseCancellationDeferredToSystem;
+  let obj = NoiseCancellationUtils;
   let tmp3 = null;
   if (obj.useNoiseCancellationDeferredToSystem()) {
     obj = { variant: "text-sm/medium", children: null };
     const intl = tmp(1114).intl;
-    obj = { onSettingsClick: null };
-    obj[0] = function onSettingsClick() {
-      mediaEngine = mediaEngine.getMediaEngine();
-      const result = mediaEngine.showSystemCaptureConfigurationUI("microphone_modes");
+    obj = {
+      onSettingsClick() {
+        mediaEngine = mediaEngine.getMediaEngine();
+        const result = mediaEngine.showSystemCaptureConfigurationUI("microphone_modes");
+      },
     };
-    obj[1] = intl.format(tmp(1114).t.EUNgko, obj);
-    tmp3 = callback(tmp(4556).Text, obj);
+    obj.children = intl.format(tmp(1114).t.EUNgko, obj);
+    tmp3 = React7(tmp(4556).Text, obj);
   }
   return tmp3;
 }
-({ View: c4, Image: c5 } = get_ActivityIndicator);
-({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
+get_ActivityIndicator = fn(17);
+({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
+const MobileUserSettings = fn(7975).MobileUserSettings;
+const HelpdeskArticles = fn(1074).HelpdeskArticles;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 let closure_12 =
   "" +
-  importDefaultResult.getArticleURL(HelpdeskArticles.VOICE_VIDEO_TROUBLESHOOTING) +
+  HelpdeskUtils.getArticleURL(HelpdeskArticles.VOICE_VIDEO_TROUBLESHOOTING) +
   "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm";
-let closure_13 = createCacheKey.createStyles({
+const createStyles = fn(4560);
+let closure_13 = createStyles.createStyles({
   krisp: { marginTop: 8, flexDirection: "row", alignItems: "center" },
   logo: { marginRight: 8, height: 30, width: 67 },
 });
-let result = require("set").fileFinishedImporting("modules/user_settings/voice/native/SettingsVoiceScreen.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/voice/native/SettingsVoiceScreen.tsx");
 
 export default function SettingsVoiceScreen() {
-  const node = React.useMemo(() => {
-    let obj = callback(11468);
-    obj = { sections: null };
+  const node = noop.useMemo(() => {
+    let obj = { sections: null };
     obj = { label: null, settings: null };
-    const intl = callback(1114).intl;
-    obj[0] = intl.string(callback(1114).t.LKCupB);
+    const intl = util.intl;
+    obj.label = intl.string(util.t.LKCupB);
     const items = [, ,];
     ({ INPUT_MODE: arr[0], AUTO_VOICE_SENSITIVITY: arr[1], VOICE_SENSITIVITY: arr[2] } = constants);
-    obj[1] = items;
+    obj.settings = items;
     const items1 = [obj, , , , , , ,];
-    obj1 = { label: null, settings: null, subLabel: null };
-    const intl2 = callback(1114).intl;
-    obj1[0] = intl2.string(callback(1114).t.UXxPGB);
+    const obj1 = { label: null, settings: null, subLabel: null };
+    const intl2 = util.intl;
+    obj1.label = intl2.string(util.t.UXxPGB);
     const items2 = [,];
     ({ OUTPUT_VOLUME: arr3[0], STREAM_OUTPUT_VOLUME: arr3[1] } = constants);
-    obj1[1] = items2;
-    const intl3 = callback(1114).intl;
-    obj1[2] = intl3.format(callback(1114).t["V+B3FH"], { guideURL: closure_12 });
+    obj1.settings = items2;
+    const intl3 = util.intl;
+    obj1.subLabel = intl3.format(util.t["V+B3FH"], { guideURL });
     items1[1] = obj1;
     const obj3 = { label: null, settings: null, subLabel: null };
-    const intl4 = callback(1114).intl;
-    obj3[0] = intl4.string(callback(1114).t.xbMc8r);
+    const intl4 = util.intl;
+    obj3.label = intl4.string(util.t.xbMc8r);
     const items3 = [constants.SOUNDBOARD_VOLUME];
-    obj3[1] = items3;
-    const intl5 = callback(1114).intl;
+    obj3.settings = items3;
+    const intl5 = util.intl;
     const obj4 = { helpCenterArticle: null };
-    let obj7 = callback2(2024);
-    obj4[0] = obj7.getArticleURL(constants2.SOUNDBOARD);
-    obj3[2] = intl5.format(callback(1114).t.BPbGq7, obj4);
+    let obj7 = HelpdeskUtils;
+    obj4.helpCenterArticle = obj7.getArticleURL(constants2.SOUNDBOARD);
+    obj3.subLabel = intl5.format(util.t.BPbGq7, obj4);
     items1[2] = obj3;
     const obj5 = { label: null, settings: null };
-    const intl6 = callback(1114).intl;
-    obj5[0] = intl6.string(callback(1114).t.bNqkD9);
+    const intl6 = util.intl;
+    obj5.label = intl6.string(util.t.bNqkD9);
     const items4 = [constants.ANDROID_MOBILE_OVERLAY];
-    obj5[1] = items4;
+    obj5.settings = items4;
     items1[3] = obj5;
-    const obj6 = { settings: items5, subLabel: null };
-    items5 = [constants.NOISE_SUPPRESSION_KRISP];
+    const obj6 = { settings: null, subLabel: null };
+    const items5 = [constants.NOISE_SUPPRESSION_KRISP];
+    obj6.settings = items5;
     obj7 = { children: null };
-    const items6 = [callback3(closure_15, {}), callback3(closure_14, {})];
-    obj7[0] = items6;
-    obj6[1] = callback4(closure_11, obj7);
+    const items6 = [closure_1_9(SystemProcessingSubLabel, {}), closure_1_9(KrispLogo, {})];
+    obj7.children = items6;
+    obj6.subLabel = closure_1_10(closure_1_11, obj7);
     items1[4] = obj6;
     const obj8 = { label: null, settings: null };
-    const intl7 = callback(1114).intl;
-    obj8[0] = intl7.string(callback(1114).t.t8Qhib);
+    const intl7 = util.intl;
+    obj8.label = intl7.string(util.t.t8Qhib);
     const items7 = [constants.NOISE_SUPPRESSION];
-    obj8[1] = items7;
+    obj8.settings = items7;
     items1[5] = obj8;
     const obj9 = { label: null, settings: null };
-    const intl8 = callback(1114).intl;
-    obj9[0] = intl8.string(callback(1114).t["6I6GUv"]);
+    const intl8 = util.intl;
+    obj9.label = intl8.string(util.t["6I6GUv"]);
     const items8 = [, , ,];
     ({
       ECHO_CANCELLATION: arr9[0],
@@ -129,16 +132,16 @@ export default function SettingsVoiceScreen() {
       AUTOMATIC_GAIN_CONTROL: arr9[2],
       ADVANCED_VOICE_ACTIVITY: arr9[3],
     } = constants);
-    obj9[1] = items8;
+    obj9.settings = items8;
     items1[6] = obj9;
     const obj10 = { label: null, settings: null };
-    const intl9 = callback(1114).intl;
-    obj10[0] = intl9.string(callback(1114).t.OBwCXF);
+    const intl9 = util.intl;
+    obj10.label = intl9.string(util.t.OBwCXF);
     const items9 = [constants.DISABLE_STREAM_PREVIEWS];
-    obj10[1] = items9;
+    obj10.settings = items9;
     items1[7] = obj10;
-    obj[0] = items1;
+    obj.sections = items1;
     return obj.createList(obj);
   }, []);
-  return callback(_modDef14689, { node });
+  return React7(SettingLayoutDefault, { node });
 }

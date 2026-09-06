@@ -1,6 +1,6 @@
 // discord_app/modules/favorites/FavoritesConstants.tsx
-import set from "../../../_runtime/00002_set.js";
-import fromGuildPropertiesWithAdditionalFields from "../../utils/GuildRecordUtils.tsx";
+import GuildRecordUtils from "../../utils/GuildRecordUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const obj = {
   id: "373",
@@ -9,9 +9,8 @@ const obj = {
   joinedAt: new Date(),
   maxMembers: 500000,
 };
-const result = fromGuildPropertiesWithAdditionalFields.constructFromPartialGuildRecord(obj);
-const date = new Date();
-const result1 = set.fileFinishedImporting("modules/favorites/FavoritesConstants.tsx");
+const result = GuildRecordUtils.constructFromPartialGuildRecord(obj);
+const result1 = size.fileFinishedImporting("modules/favorites/FavoritesConstants.tsx");
 
 export const FAVORITES_RAW_GUILD_ID = "373";
 export const FAVORITES_GUILD_RECORD = result;

@@ -1,29 +1,26 @@
 // discord_app/actions/AuthenticationActionCreators.tsx
-import timestampDefault from "../modules/debug/Logger.tsx";
-import dispatcherDefault from "../Dispatcher.tsx";
-import setSecondaryTokenAll from "../../discord_common/js/shared/lib/TokenManager.tsx";
-import encodeProperties from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import getRootNavigationRef from "../modules/main_tabs_v2/RootNavigationRef.native.tsx";
-import setDefault from "../utils/CrossPlatformNativeUtils.native.tsx";
-import _modDef4753 from "../utils/TrackedHTTPUtils.tsx";
-import closure_5 from "../../_runtime/00005_asyncGeneratorStep.js";
-import { setPromoEmailConsentState } from "../modules/auth/PromoEmailConsentStore.tsx";
-import closure_7 from "../stores/AuthenticationStore.tsx";
-import closure_8 from "../stores/ConsentStore.tsx";
-import ME from "../Constants.tsx";
-import str2 from "../modules/push_notifications/PushNotificationConstants.tsx";
-import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import LoggerDefault from "../modules/debug/Logger.tsx";
+import DispatcherDefault from "../Dispatcher.tsx";
+import TokenManagerAll from "../../discord_common/js/shared/lib/TokenManager.tsx";
+import discord_common_AnalyticsUtils from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import RootNavigationRef from "../modules/main_tabs_v2/RootNavigationRef.native.tsx";
+import V6OrEarlierAPIError from "../errors/index.tsx";
+import CrossPlatformNativeUtilsDefault from "../utils/CrossPlatformNativeUtils.native.tsx";
+import TrackedHTTPUtilsDefault from "../utils/TrackedHTTPUtils.tsx";
+import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
+import AuthenticationStore from "../stores/AuthenticationStore.tsx";
+import ConsentStore from "../stores/ConsentStore.tsx";
 
-require = arg1;
-function handleLogout(arg0, ME) {
-  let DEFAULT_LOGGED_OUT = ME;
-  if (ME === undefined) {
-    DEFAULT_LOGGED_OUT = constants.DEFAULT_LOGGED_OUT;
+require = fn;
+function handleLogout(source, CHANNELResult) {
+  let DEFAULT_LOGGED_OUT = CHANNELResult;
+  if (CHANNELResult === undefined) {
+    DEFAULT_LOGGED_OUT = constants2.DEFAULT_LOGGED_OUT;
   }
-  obj = setDefault;
+  obj = CrossPlatformNativeUtilsDefault;
   const result = obj.clearNavigationHistory();
-  const id = authStore.getId();
+  const id = AuthenticationStore.getId();
   obj = { type: "LOGOUT", userId: id };
   const merged = Object.assign(undefined);
   let tmp2Result = tmp2(573);
@@ -35,109 +32,95 @@ function handleLogout(arg0, ME) {
     throw error;
   });
   if (null != DEFAULT_LOGGED_OUT) {
-    const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
+    const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
     if (null != rootNavigationRef) {
       tmp2Result = tmp2(4763);
       tmp2Result.popAll();
       obj = { index: 0, routes: null };
       const items = [{ name: "auth" }];
-      obj[1] = items;
+      obj.routes = items;
       rootNavigationRef.reset(obj);
     } else {
-      obj1 = { source: null };
-      obj1[0] = arg0;
+      const obj1 = { source };
       tmp12(1100).transitionTo(DEFAULT_LOGGED_OUT, obj1);
       const tmp12Result = tmp12(1100);
     }
-    const obj8 = getRootNavigationRef;
     tmp12 = require;
   }
 }
-({ Endpoints: c9, DEVICE_TOKEN: c10, DEVICE_VOIP_TOKEN: unpackModuleId, AbortCodes: closure_12, Routes: map1 } = ME);
-({ DEVICE_PUSH_VOIP_PROVIDER: closure_14, getDevicePushProvider: closure_15 } = require("str2"));
-let closure_16 = new timestampDefault("AuthenticationActionCreators");
-let c17 = null;
-let obj = { MFA: "MFA", SUCCESS: "SUCCESS" };
-obj = {
-  startSession(arg0) {
-    closure_0 = arg0;
-    dispatcherDefault.wait(() => {
-      obj = closure_1_1(closure_1_3[8]);
-      obj = { type: "START_SESSION", token: closure_0 };
+const setPromoEmailConsentState = fn(6594).setPromoEmailConsentState;
+const Constants = fn(1074);
+({
+  Endpoints: closure_9,
+  DEVICE_TOKEN: c10,
+  DEVICE_VOIP_TOKEN: closure_11,
+  AbortCodes: closure_12,
+  Routes: map1,
+} = Constants);
+const PushNotificationConstants = fn(6596);
+({ DEVICE_PUSH_VOIP_PROVIDER: closure_14, getDevicePushProvider: closure_15 } = PushNotificationConstants);
+const logger = new LoggerDefault("AuthenticationActionCreators");
+let PasswordResetResult = { MFA: "MFA", SUCCESS: "SUCCESS" };
+PasswordResetResult = {
+  startSession(token) {
+    DispatcherDefault.wait(() => {
+      obj = { type: "START_SESSION", token };
       obj.dispatch(obj);
     });
   },
-  login(login) {
-    const self = this;
-    login = login.login;
-    const password = login.password;
-    ({ invite, isMultiAccount } = login);
-    ({ undelete, source, giftCodeSKUId } = login);
-    obj = login(self[8]);
-    obj.dispatch({ type: "LOGIN", isPasswordAttempt: true });
-    obj1 = login(self[12]);
-    obj = {
+  login(self) {
+    self = this;
+    const login = self.login;
+    const password = self.password;
+    ({ invite, isMultiAccount } = self);
+    ({ undelete, source, giftCodeSKUId } = self);
+    let trackedActionData = login(self[8]);
+    trackedActionData.dispatch({ type: "LOGIN", isPasswordAttempt: true });
+    let obj1 = login(self[12]);
+    const request = {
       url: closure_9.LOGIN,
       body: { login, password, undelete, login_source: source, gift_code_sku_id: giftCodeSKUId },
       retries: 2,
       oldFormErrors: true,
       trackedActionData: null,
     };
-    obj = { event: isMultiAccount(self[13]).NetworkActionNames.USER_LOGIN, properties: null };
+    trackedActionData = { event: isMultiAccount(self[13]).NetworkActionNames.USER_LOGIN, properties: null };
     let code;
     if (invite != null) {
       code = invite.code;
     }
-    obj[1] = { invite_code: code, is_multi_account: isMultiAccount };
-    obj[4] = obj;
+    trackedActionData.properties = { invite_code: code, is_multi_account: isMultiAccount };
+    request.trackedActionData = trackedActionData;
     if (isMultiAccount) {
-      obj1 = { headers: null };
-      obj1[0] = { authorization: "" };
-      let obj2 = obj1;
+      trackedActionData = { headers: { authorization: "" } };
+      obj1 = trackedActionData;
     } else {
-      obj2 = {};
+      obj1 = {};
     }
-    const merged = Object.assign(obj2);
-    obj.rejectWithError = isMultiAccount(self[14]).rejectWithMigratedError();
-    const tmp = self;
-    const tmp3 = isMultiAccount;
+    const merged = Object.assign(obj1);
+    request.rejectWithError = isMultiAccount(self[14]).rejectWithMigratedError();
     const tmp3Result = isMultiAccount(self[14]);
-    return obj1.post(obj).then(
+    return obj1.post(request).then(
       (body) => {
         body = body.body;
         const token = body.token;
         ({ mfa, sms, webauthn, ticket, backup, user_id, required_actions, totp, login_instance_id } = body);
-        obj = login(self[8]);
+        obj = DispatcherDefault;
         obj.dispatch({ type: "LOGIN_ATTEMPTED", user_id, required_actions });
         if (mfa) {
-          let tmpResult = tmp(tmp2[8]);
-          obj = {
-            type: "LOGIN_MFA_STEP",
-            ticket: null,
-            sms: null,
-            webauthn: null,
-            totp: null,
-            backup: null,
-            loginInstanceId: null,
-          };
-          obj[1] = ticket;
-          obj[2] = sms;
-          obj[3] = webauthn;
-          obj[4] = totp;
-          obj[5] = backup;
-          obj[6] = login_instance_id;
+          let tmpResult = tmp(573);
+          obj = { type: "LOGIN_MFA_STEP", ticket, sms, webauthn, totp, backup, loginInstanceId: login_instance_id };
           tmpResult.dispatch(obj);
         } else if (isMultiAccount) {
           self.switchAccountToken(token);
         } else {
-          tmpResult = tmp(tmp2[8]);
-          obj = { type: "LOGIN_SUCCESS", token: null };
-          obj[1] = token;
+          tmpResult = tmp(573);
+          obj = { type: "LOGIN_SUCCESS", token };
           tmpResult.dispatch(obj);
         }
       },
       (body) => {
-        const v6OrEarlierAPIError = new isMultiAccount(self[15]).V6OrEarlierAPIError(body);
+        const v6OrEarlierAPIError = new V6OrEarlierAPIError.V6OrEarlierAPIError(body);
         if (null != body.body) {
           body = body.body;
           let suspended_user_token;
@@ -150,9 +133,8 @@ obj = {
             if (body3 != null) {
               suspended_user_token1 = body3.suspended_user_token;
             }
-            obj = { type: "LOGIN_SUSPENDED_USER", suspendedUserToken: null };
-            obj[1] = suspended_user_token1;
-            login(tmp[8]).dispatch(obj);
+            obj = { type: "LOGIN_SUSPENDED_USER", suspendedUserToken: suspended_user_token1 };
+            DispatcherDefault.dispatch(obj);
             throw v6OrEarlierAPIError;
           }
         }
@@ -161,45 +143,37 @@ obj = {
         if (body2 != null) {
           code = body2.code;
         }
-        if (code === closure_1_12.ACCOUNT_SCHEDULED_FOR_DELETION) {
+        if (code === constants.ACCOUNT_SCHEDULED_FOR_DELETION) {
           if (null != password) {
             if ("" !== tmp6) {
               obj = { type: "LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION", credentials: null };
-              obj1 = { login: null, password: null };
-              obj1[0] = login;
-              obj1[1] = tmp6;
-              obj[1] = obj1;
-              login(tmp[8]).dispatch(obj);
-              const obj9 = login(tmp[8]);
+              const obj1 = { login, password: tmp6 };
+              obj.credentials = obj1;
+              DispatcherDefault.dispatch(obj);
             }
             throw v6OrEarlierAPIError;
           }
         }
-        if (code === closure_1_12.ACCOUNT_DISABLED) {
+        if (code === constants.ACCOUNT_DISABLED) {
           if (null != password) {
             if ("" !== tmp7) {
-              let obj5 = login(tmp[8]);
+              let obj5 = DispatcherDefault;
               let obj2 = { type: "LOGIN_ACCOUNT_DISABLED", credentials: null };
-              const obj3 = { login: null, password: null };
-              obj3[0] = login;
-              obj3[1] = tmp7;
-              obj2[1] = obj3;
+              const obj3 = { login, password: tmp7 };
+              obj2.credentials = obj3;
               obj5.dispatch(obj2);
             }
           }
         }
-        if (code === closure_1_12.PHONE_VERIFICATION_REQUIRED) {
-          obj2 = login(tmp[8]);
+        if (code === constants.PHONE_VERIFICATION_REQUIRED) {
+          obj2 = DispatcherDefault;
           const obj4 = { type: "LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED", credentials: null };
-          obj5 = { login: null, password: null };
-          obj5[0] = login;
-          obj5[1] = password;
-          obj4[1] = obj5;
+          obj5 = { login, password };
+          obj4.credentials = obj5;
           obj2.dispatch(obj4);
         } else {
-          obj = login(tmp[8]);
-          const obj6 = { type: "LOGIN_FAILURE", error: null };
-          obj6[1] = v6OrEarlierAPIError;
+          obj = DispatcherDefault;
+          const obj6 = { type: "LOGIN_FAILURE", error: v6OrEarlierAPIError };
           obj.dispatch(obj6);
         }
       },
@@ -209,8 +183,8 @@ obj = {
     const self = this;
     ({ isMultiAccount: require, loginInstanceId } = arg0);
     ({ code, ticket, source, giftCodeSKUId, mfaType } = arg0);
-    obj = self(4753);
-    obj = {
+    self(4753);
+    const request = {
       url: closure_9.LOGIN_MFA(mfaType),
       body: null,
       retries: 2,
@@ -218,47 +192,50 @@ obj = {
       trackedActionData: null,
       rejectWithError: true,
     };
-    obj = { code, ticket, login_source: source, gift_code_sku_id: giftCodeSKUId, login_instance_id: null };
+    let trackedActionData = {
+      code,
+      ticket,
+      login_source: source,
+      gift_code_sku_id: giftCodeSKUId,
+      login_instance_id: null,
+    };
     if (loginInstanceId == null) {
-      loginInstanceId = authStore.getLoginInstanceId();
+      loginInstanceId = AuthenticationStore.getLoginInstanceId();
     }
-    obj[4] = loginInstanceId;
-    obj[1] = obj;
-    obj[4] = { event: encodeProperties.NetworkActionNames.USER_LOGIN_MFA };
-    obj1 = { event: encodeProperties.NetworkActionNames.USER_LOGIN_MFA };
-    const postResult = obj.post(obj);
-    return obj
-      .post(obj)
+    trackedActionData.login_instance_id = loginInstanceId;
+    request.body = trackedActionData;
+    trackedActionData = { event: discord_common_AnalyticsUtils.NetworkActionNames.USER_LOGIN_MFA };
+    request.trackedActionData = trackedActionData;
+    const postResult = trackedActionData.post(request);
+    return trackedActionData
+      .post(request)
       .then((body) => {
-        if (closure_0) {
+        if (_require) {
           self.switchAccountToken(body.body.token);
         } else {
-          obj = self(closure_1_3[8]);
-          obj = { type: "LOGIN_SUCCESS", token: null };
-          obj[1] = body.body.token;
+          obj = { type: "LOGIN_SUCCESS", token: body.body.token };
           obj.dispatch(obj);
         }
       })
-      .catch((body) => {
-        if (null != body.body) {
-          if (null != body.body.suspended_user_token) {
-            obj = self(table[8]);
-            obj = { type: "LOGIN_SUSPENDED_USER", suspendedUserToken: null };
-            obj[1] = body.body.suspended_user_token;
+      .catch((error) => {
+        if (null != error.body) {
+          if (null != error.body.suspended_user_token) {
+            self(dependencyMap[8]);
+            obj = { type: "LOGIN_SUSPENDED_USER", suspendedUserToken: error.body.suspended_user_token };
             obj.dispatch(obj);
           }
         }
-        body = body.body;
+        const body = error.body;
         let code;
         if (body != null) {
           code = body.code;
         }
         if (code === constants.MFA_INVALID_CODE) {
           const _Error = Error;
-          error = new Error(body.body.message);
+          error = new Error(error.body.message);
           throw error;
         } else {
-          throw body;
+          throw error;
         }
       });
   },
@@ -271,16 +248,15 @@ obj = {
       isMultiAccount: closure_4,
     } = arg0);
     const self = this;
-    return self(function* () {
+    return self(function* (arg0, value) {
       if (c5 === 2) {
         c5 = 3;
-        HermesBuiltin.throwTypeError();
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp7 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
@@ -291,116 +267,107 @@ obj = {
           if (0 === c4) {
             if (arg0 === 1) {
               c5 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj = { value, done: true };
               return obj;
             } else {
-              c1 = tmp3;
-              c0 = tmp8;
-              c0 = undefined;
-              c1 = undefined;
-              c2 = undefined;
-              dependencyMap = undefined;
-              if (challenge != null) {
+              closure_0 = tmp8;
+              closure_128_0 = undefined;
+              let challenge;
+              let ticket;
+              closure_128_3 = undefined;
+              if (importDefault != null) {
                 obj17.abort("Starting non-conditional mediation");
               }
-              challenge(573).dispatch({ type: "PASSWORDLESS_START" });
+              tmp3(573).dispatch({ type: "PASSWORDLESS_START" });
               dependencyMap = 1;
-              const obj12 = challenge(573);
-              obj17 = challenge;
+              const obj12 = tmp3(573);
+              obj17 = importDefault;
               c4 = 2;
               c5 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = lib(6597).fetchWebAuthnPasswordlessChallenge();
+              const obj1 = { value: closure_0(6597).fetchWebAuthnPasswordlessChallenge(), done: false };
               return obj1;
             }
           } else if (1 === tmp8) {
             dependencyMap = 0;
-            closure_5 = c2;
-            let obj9 = challenge(573);
-            let obj2 = { type: "PASSWORDLESS_FAILURE", error: null };
-            obj2[1] = closure_5;
+            closure_128_5 = closure_2;
+            let obj9 = tmp3(573);
+            let obj2 = { type: "PASSWORDLESS_FAILURE", error: closure_128_5 };
             obj9.dispatch(obj2);
-            throw closure_5;
+            throw closure_128_5;
           } else if (2 === tmp8) {
             if (arg0 === 1) {
               c5 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               dependencyMap = 0;
               c5 = 3;
-              const obj3 = { value: null, done: true };
-              obj3[0] = arg1;
+              const obj3 = { value, done: true };
               return obj3;
             } else {
-              lib = arg1;
-              challenge = lib.challenge;
-              const ticket = lib.ticket;
+              closure_128_0 = value;
+              challenge = closure_128_0.challenge;
+              ticket = closure_128_0.ticket;
               c4 = 3;
               c5 = 1;
-              const obj4 = { value: null, done: false };
-              obj4[0] = lib(challenge);
+              const obj4 = { value: closure_129_0(challenge), done: false };
               return obj4;
             }
           } else if (3 === tmp8) {
             if (arg0 === 1) {
               c5 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               dependencyMap = 0;
               c5 = 3;
-              const obj5 = { value: null, done: true };
-              obj5[0] = arg1;
+              const obj5 = { value, done: true };
               return obj5;
             } else {
-              dependencyMap = arg1;
+              closure_128_3 = value;
               dependencyMap = 2;
-              const obj6 = { ticket: null, credential: null, source: null, giftCodeSKUId: null, isMultiAccount: null };
-              obj6[0] = c2;
-              obj6[1] = dependencyMap;
-              obj6[2] = c2;
-              obj6[3] = dependencyMap;
-              obj6[4] = c4;
+              const obj6 = {
+                ticket,
+                credential: closure_128_3,
+                source: closure_129_2,
+                giftCodeSKUId: closure_129_3,
+                isMultiAccount: closure_129_4,
+              };
               c4 = 5;
               c5 = 1;
-              const obj7 = { value: null, done: false };
-              obj7[0] = c5.loginWebAuthn(obj6);
+              const obj7 = { value: closure_129_5.loginWebAuthn(obj6), done: false };
               return obj7;
             }
           } else {
             if (4 === tmp8) {
               dependencyMap = 1;
-              c4 = c2;
-              let tmp16 = c4 instanceof lib(4461).APIError;
+              closure_128_4 = closure_2;
+              let tmp16 = closure_128_4 instanceof closure_0(4461).APIError;
               if (tmp16) {
-                tmp16 = null != c4.status;
+                tmp16 = null != closure_128_4.status;
               }
               if (tmp16) {
-                tmp16 = c4.status >= 400;
+                tmp16 = closure_128_4.status >= 400;
               }
               if (tmp16) {
-                tmp16 = c4.status < 500;
+                tmp16 = closure_128_4.status < 500;
               }
               if (tmp16) {
-                obj2 = challenge(6598);
+                obj2 = tmp3(6598);
                 c4 = 6;
                 c5 = 1;
-                const obj8 = { value: null, done: false };
-                obj8[0] = obj2.signalUnknownCredential(dependencyMap);
+                const obj8 = { value: obj2.signalUnknownCredential(closure_128_3), done: false };
                 return obj8;
               }
             } else if (5 === tmp8) {
               if (arg0 === 1) {
                 c5 = 3;
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
                 dependencyMap = 0;
                 c5 = 3;
-                obj9 = { value: null, done: true };
-                obj9[0] = arg1;
+                obj9 = { value, done: true };
                 return obj9;
               } else {
                 dependencyMap = 0;
@@ -409,18 +376,17 @@ obj = {
               }
             } else if (arg0 === 1) {
               c5 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               dependencyMap = 0;
               c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj = { value, done: true };
               return obj;
             }
-            throw c4;
+            throw closure_128_4;
           }
         } catch (tmp59) {
-          c2 = tmp59;
+          closure_2 = tmp59;
           if (tmp4 === dependencyMap) {
             c5 = tmp2;
             throw tmp59;
@@ -437,84 +403,79 @@ obj = {
     const self = this;
     isMultiAccount = isMultiAccount.isMultiAccount;
     ({ ticket, credential, source, giftCodeSKUId } = isMultiAccount);
-    obj = self(4753);
-    obj = {
+    self(4753);
+    const request = {
       url: closure_9.WEBAUTHN_CONDITIONAL_UI_LOGIN,
       body: { credential, ticket, source, giftCodeSKUId },
       retries: 1,
       trackedActionData: null,
       rejectWithError: true,
     };
-    obj = { event: isMultiAccount(1250).NetworkActionNames.USER_LOGIN_PASSWORDLESS };
-    obj[3] = obj;
-    const postResult = obj.post(obj);
-    return obj
-      .post(obj)
+    const trackedActionData = { event: isMultiAccount(1250).NetworkActionNames.USER_LOGIN_PASSWORDLESS };
+    request.trackedActionData = trackedActionData;
+    const postResult = trackedActionData.post(request);
+    return trackedActionData
+      .post(request)
       .then((body) => {
         body = body.body;
         const token = body.token;
         ({ user_id, required_actions } = body);
-        obj = self(closure_1_3[8]);
+        obj = DispatcherDefault;
         obj.dispatch({ type: "LOGIN_ATTEMPTED", user_id, required_actions });
         if (isMultiAccount) {
           self.switchAccountToken(token);
         } else {
-          obj = { type: "LOGIN_SUCCESS", token: null };
-          obj[1] = token;
-          self(closure_1_3[8]).dispatch(obj);
-          const tmpResult = self(closure_1_3[8]);
+          obj = { type: "LOGIN_SUCCESS", token };
+          DispatcherDefault.dispatch(obj);
+          const tmpResult = DispatcherDefault;
         }
       })
-      .catch((body) => {
-        let aPIError = body;
-        if (body instanceof isMultiAccount(table[14]).HTTPResponseError) {
-          if (null != body.body.suspended_user_token) {
-            obj = self(tmp2[8]);
-            obj = { type: "LOGIN_SUSPENDED_USER", suspendedUserToken: null };
-            obj[1] = body.body.suspended_user_token;
+      .catch((error) => {
+        let aPIError = error;
+        if (error instanceof isMultiAccount(dependencyMap[14]).HTTPResponseError) {
+          if (null != error.body.suspended_user_token) {
+            self(tmp2[8]);
+            obj = { type: "LOGIN_SUSPENDED_USER", suspendedUserToken: error.body.suspended_user_token };
             obj.dispatch(obj);
           } else {
-            aPIError = new isMultiAccount(tmp2[15]).APIError(body);
+            aPIError = new isMultiAccount(tmp2[15]).APIError(error);
           }
         }
         throw aPIError;
       });
   },
-  loginToken(c0, arg1) {
+  loginToken(token, arg1) {
     const self = this;
-    importDefault = c0;
+    importDefault = token;
     let flag = arg1;
     if (arg1 === undefined) {
       flag = true;
     }
-    dispatcherDefault.dispatch({ type: "LOGIN" });
-    obj = dispatcherDefault;
+    DispatcherDefault.dispatch({ type: "LOGIN" });
     return new Promise((arg0) => {
       closure_0 = arg0;
       setImmediate(() => {
-        obj = callback2(closure_2_3[8]);
-        obj = { type: "LOGIN_SUCCESS", token: closure_1_1 };
+        obj = { type: "LOGIN_SUCCESS", token };
         obj.dispatch(obj);
-        if (callback) {
-          closure_1_2.startSession(closure_1_1);
+        if (flag) {
+          self.startSession(token);
         }
-        callback();
+        closure_0();
       });
     });
   },
   oneTimeLogin(arg0) {
     closure_0 = arg0;
     const self = this;
-    return callback(function* () {
+    return (async (arg0, value) => {
       if (c5 === 2) {
         c5 = 3;
-        HermesBuiltin.throwTypeError();
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp6 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
@@ -525,80 +486,76 @@ obj = {
           if (0 === c4) {
             if (arg0 === 1) {
               c5 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj = { value, done: true };
               return obj;
             } else {
-              closure_1 = tmp3;
-              let token = tmp7;
-              token = undefined;
-              closure_1_1(573).dispatch({ type: "LOGIN" });
+              const ticket = tmp7;
+              let token;
+              tmp3(573).dispatch({ type: "LOGIN" });
               dependencyMap = 1;
-              const obj10 = closure_1_1(573);
-              obj1 = { url: null, body: null, oldFormErrors: true, trackedActionData: null, rejectWithError: true };
-              obj1[0] = closure_1_9.ONE_TIME_LOGIN;
-              const obj2 = { ticket: null };
-              obj2[0] = closure_1_0;
-              obj1[1] = obj2;
-              const obj3 = { event: null };
-              obj3[0] = closure_1_0(1250).NetworkActionNames.USER_ONE_TIME_LOGIN;
-              obj1[3] = obj3;
+              const obj10 = tmp3(573);
+              const request = {
+                url: constants.ONE_TIME_LOGIN,
+                body: null,
+                oldFormErrors: true,
+                trackedActionData: null,
+                rejectWithError: true,
+              };
+              const obj1 = { ticket };
+              request.body = obj1;
+              const obj2 = { event: ticket(1250).NetworkActionNames.USER_ONE_TIME_LOGIN };
+              request.trackedActionData = obj2;
               c4 = 2;
               c5 = 1;
-              let obj4 = { value: null, done: false };
-              obj4[0] = closure_1_1(4753).post(obj1);
-              return obj4;
+              const obj3 = { value: tmp3(4753).post(request), done: false };
+              return obj3;
             }
           } else if (1 === tmp7) {
             dependencyMap = 0;
-            closure_1 = closure_2;
-            obj4 = closure_1_1(573);
-            const obj5 = { type: "LOGIN_FAILURE", error: null };
-            const v6OrEarlierAPIError = new closure_1_0(4461).V6OrEarlierAPIError(closure_1);
-            obj5[1] = v6OrEarlierAPIError;
-            obj4.dispatch(obj5);
-            throw closure_1;
+            closure_128_1 = closure_2;
+            let obj4 = tmp3(573);
+            obj4 = { type: "LOGIN_FAILURE", error: null };
+            const v6OrEarlierAPIError = new ticket(4461).V6OrEarlierAPIError(closure_128_1);
+            obj4.error = v6OrEarlierAPIError;
+            obj4.dispatch(obj4);
+            throw closure_128_1;
           } else if (2 === tmp7) {
             if (arg0 === 1) {
               c5 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               dependencyMap = 0;
               c5 = 3;
-              const obj6 = { value: null, done: true };
-              obj6[0] = arg1;
-              return obj6;
+              const obj5 = { value, done: true };
+              return obj5;
             } else {
-              token = arg1.body.token;
+              token = value.body.token;
               if (token) {
                 c4 = 3;
                 c5 = 1;
-                const obj7 = { value: null, done: false };
-                obj7[0] = closure_1.loginToken(token, false);
-                return obj7;
+                const obj6 = { value: closure_129_1.loginToken(token, false), done: false };
+                return obj6;
               } else {
                 const _Error = Error;
-                error = new Error("No token in response");
+                const error = new Error("No token in response");
                 throw error;
               }
             }
           } else if (arg0 === 1) {
             c5 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             dependencyMap = 0;
             c5 = 3;
-            const obj8 = { value: null, done: true };
-            obj8[0] = arg1;
-            return obj8;
+            const obj7 = { value, done: true };
+            return obj7;
           } else {
             dependencyMap = 0;
             c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = token;
+            obj = { value: token, done: true };
             return obj;
           }
         } catch (tmp34) {
@@ -614,22 +571,20 @@ obj = {
     })();
   },
   loginReset(isMultiAccount) {
-    obj = dispatcherDefault;
     obj = { type: "LOGIN_RESET", isMultiAccount };
     obj.dispatch(obj);
   },
   loginStatusReset() {
-    dispatcherDefault.dispatch({ type: "LOGIN_STATUS_RESET" });
+    DispatcherDefault.dispatch({ type: "LOGIN_STATUS_RESET" });
   },
   logoutInternal(arg0) {
-    obj = setDefault;
+    obj = CrossPlatformNativeUtilsDefault;
     const result = obj.clearNavigationHistory();
-    const id = authStore.getId();
+    const id = AuthenticationStore.getId();
     obj = { type: "LOGOUT", userId: id };
     const merged = Object.assign(arg0);
-    const tmp = importDefault;
-    const tmpResult = dispatcherDefault;
-    dispatcherDefault.dispatch(obj).catch((error) => {
+    const tmpResult = DispatcherDefault;
+    DispatcherDefault.dispatch(obj).catch((error) => {
       logger.error("Error while dispatching LOGOUT", error);
       if (DiscordErrors != null) {
         DiscordErrors.softCrash(error);
@@ -637,57 +592,48 @@ obj = {
       throw error;
     });
   },
-  logout(login_required_account_manager, LOGIN) {
-    const _require = login_required_account_manager;
+  logout(TTI_test, LOGIN) {
+    _require = TTI_test;
     let DEFAULT_LOGGED_OUT = LOGIN;
     if (LOGIN === undefined) {
-      DEFAULT_LOGGED_OUT = constants.DEFAULT_LOGGED_OUT;
+      DEFAULT_LOGGED_OUT = constants2.DEFAULT_LOGGED_OUT;
     }
     importAll = arg2;
-    obj = DEFAULT_LOGGED_OUT(4753);
-    obj = { url: closure_9.LOGOUT, body: null, oldFormErrors: true, trackedActionData: null };
-    obj = { provider: callback2(), token: null, voip_provider: null, voip_token: null };
-    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx").Storage;
-    obj[1] = Storage.get(closure_10);
-    obj[2] = closure_14;
-    const Storage2 = require("../../discord_common/js/packages/storage/Storage.tsx").Storage;
-    obj[3] = Storage2.get(closure_11);
-    obj[1] = obj;
-    obj[3] = {
-      event: require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx").NetworkActionNames
-        .USER_LOGOUT,
-      properties: obj2,
+    DEFAULT_LOGGED_OUT(4753);
+    const request = { url: closure_9.LOGOUT, body: null, oldFormErrors: true, trackedActionData: null };
+    let trackedActionData = { provider: closure_15(), token: null, voip_provider: null, voip_token: null };
+    const Storage = require("Storage").Storage;
+    trackedActionData.token = Storage.get(closure_10);
+    trackedActionData.voip_provider = voip_provider;
+    const Storage2 = require("Storage").Storage;
+    trackedActionData.voip_token = Storage2.get(closure_11);
+    request.body = trackedActionData;
+    trackedActionData = {
+      event: require("discord_common/AnalyticsUtils").NetworkActionNames.USER_LOGOUT,
+      properties: { logout_source: TTI_test },
     };
+    request.trackedActionData = trackedActionData;
     let tmp4 = null != arg2;
     if (tmp4) {
-      let str = setSecondaryTokenAll.getToken(arg2);
+      let str = TokenManagerAll.getToken(arg2);
       if (str == null) {
         str = "";
       }
-      const obj3 = { headers: null };
-      const obj4 = { authorization: null };
-      obj4[0] = str;
-      obj3[0] = obj4;
-      tmp4 = obj3;
-      const obj6 = setSecondaryTokenAll;
+      const obj1 = { headers: null };
+      const obj2 = { authorization: str };
+      obj1.headers = obj2;
+      tmp4 = obj1;
     }
     const merged = Object.assign(tmp4);
-    obj1 = {
-      event: require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx").NetworkActionNames
-        .USER_LOGOUT,
-      properties: obj2,
-    };
-    const tmp3 = _require;
-    obj.rejectWithError =
-      require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
-    const tmp3Result = sendRequest;
-    return obj.post(obj).finally(() => {
+    request.rejectWithError = require("HTTPUtils").rejectWithMigratedError();
+    const tmp3Result = require("HTTPUtils");
+    return trackedActionData.post(request).finally(() => {
       let tmp2 = null != closure_2;
       if (tmp2) {
-        tmp2 = tmp !== closure_1_7.getId();
+        tmp2 = tmp !== AuthenticationStore.getId();
       }
       if (!tmp2) {
-        closure_1_19(closure_0, DEFAULT_LOGGED_OUT);
+        handleLogout(closure_0, DEFAULT_LOGGED_OUT);
       }
     });
   },
@@ -697,149 +643,144 @@ obj = {
     if (switchSynchronously === undefined) {
       flag = true;
     }
-    token = authStore.getToken();
+    token = AuthenticationStore.getToken();
     obj = { wasLoggedIn: null != token, tokenHasChanged: token !== token };
     logger.log("Switching accounts", obj);
     obj = { isSwitchingAccount: true, goHomeAfterSwitching: flag };
-    const result = setDefault.clearNavigationHistory();
-    const id = authStore.getId();
+    const result = CrossPlatformNativeUtilsDefault.clearNavigationHistory();
+    const id = AuthenticationStore.getId();
     obj = { type: "LOGOUT", userId: id };
     const merged = Object.assign(obj);
-    const obj3 = setDefault;
-    const tmp3 = importDefault;
-    const tmp3Result = dispatcherDefault;
-    dispatcherDefault.dispatch(obj).catch((error) => {
+    const tmp3Result = DispatcherDefault;
+    DispatcherDefault.dispatch(obj).catch((error) => {
       logger.error("Error while dispatching LOGOUT", error);
       if (DiscordErrors != null) {
         DiscordErrors.softCrash(error);
       }
       throw error;
     });
-    const dispatchResult = dispatcherDefault.dispatch(obj);
+    const dispatchResult = DispatcherDefault.dispatch(obj);
     return this.loginToken(token, true).then(() => {
-      const tmp = closure_0 === closure_1_7.getToken();
-      closure_1_16.log("Switched accounts finished", { isCorrectToken: tmp });
+      const tmp = closure_0 === AuthenticationStore.getToken();
+      logger.log("Switched accounts finished", { isCorrectToken: tmp });
       return tmp;
     });
   },
   verifySSOToken(arg0) {
-    const _require = arg0;
+    _require = arg0;
     let DEFAULT_LOGGED_OUT = arg1;
     if (arg1 === undefined) {
-      DEFAULT_LOGGED_OUT = constants.DEFAULT_LOGGED_OUT;
+      DEFAULT_LOGGED_OUT = constants2.DEFAULT_LOGGED_OUT;
     }
-    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
-    const value = HTTP.get({ url: closure_9.ME, oldFormErrors: true, rejectWithError: true });
+    const HTTP = require("HTTPUtils").HTTP;
+    value = HTTP.get({ url: closure_9.ME, oldFormErrors: true, rejectWithError: true });
     return value.catch(() => {
-      closure_1_19(closure_0, DEFAULT_LOGGED_OUT);
+      handleLogout(closure_0, DEFAULT_LOGGED_OUT);
     });
   },
   verify(arg0) {
     closure_0 = arg0;
-    return callback(function* () {
-      closure_1 = tmp2;
-      closure_0 = tmp5;
-      const obj7 = closure_1_1(4753);
-      obj1 = { url: null, body: null, trackedActionData: null, rejectWithError: null };
-      obj1[0] = closure_1_9.VERIFY;
-      const obj2 = { token: null };
-      obj2[0] = closure_1_0;
-      obj1[1] = obj2;
-      const obj3 = { event: null };
-      obj3[0] = closure_1_0(1250).NetworkActionNames.USER_VERIFY;
-      obj1[2] = obj3;
-      obj1[3] = closure_1_0(1272).rejectWithMigratedError();
-      closure_0 = yield obj7.post(obj1);
-      obj = closure_1_1(573);
-      const obj6 = { type: "LOGIN_SUCCESS", token: null };
-      obj6[1] = closure_0.body.token;
-      obj.dispatch(obj6);
-      return closure_0.body.user_id;
+    return (async () => {
+      const token = tmp5;
+      const request = {
+        url: constants.VERIFY,
+        body: { token },
+        trackedActionData: { event: token(1250).NetworkActionNames.USER_VERIFY },
+        rejectWithError: null,
+      };
+      {
+        event: token(1250).NetworkActionNames.USER_VERIFY;
+      }
+      request.rejectWithError = token(1272).rejectWithMigratedError();
+      closure_128_0 = await tmp2(4753).post(request);
+      tmp2(573).dispatch({ type: "LOGIN_SUCCESS", token: closure_128_0.body.token });
+      return closure_128_0.body.user_id;
     })();
   },
   authorizePayment(token) {
-    obj = _modDef4753;
-    obj = { url: closure_9.AUTHORIZE_PAYMENT, body: obj, trackedActionData: null, rejectWithError: true };
-    obj = { token };
-    obj[2] = { event: encodeProperties.NetworkActionNames.AUTHORIZE_PAYMENT };
-    return obj.post(obj);
+    const request = { url: React7.AUTHORIZE_PAYMENT, body: null, trackedActionData: null, rejectWithError: true };
+    let trackedActionData = { token };
+    request.body = trackedActionData;
+    trackedActionData = { event: discord_common_AnalyticsUtils.NetworkActionNames.AUTHORIZE_PAYMENT };
+    request.trackedActionData = trackedActionData;
+    return trackedActionData.post(request);
   },
-  authorizeIPAddress(closure_0) {
-    obj = _modDef4753;
-    obj = { url: closure_9.AUTHORIZE_IP, body: obj, trackedActionData: null, rejectWithError: true };
-    obj = { token: closure_0 };
-    obj[2] = { event: encodeProperties.NetworkActionNames.AUTHORIZE_IP };
-    return obj.post(obj);
+  authorizeIPAddress(token) {
+    const request = { url: React7.AUTHORIZE_IP, body: null, trackedActionData: null, rejectWithError: true };
+    let trackedActionData = { token };
+    request.body = trackedActionData;
+    trackedActionData = { event: discord_common_AnalyticsUtils.NetworkActionNames.AUTHORIZE_IP };
+    request.trackedActionData = trackedActionData;
+    return trackedActionData.post(request);
   },
   verifyResend() {
-    obj = _modDef4753;
-    obj = { url: closure_9.VERIFY_RESEND, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
-    obj = { event: encodeProperties.NetworkActionNames.USER_VERIFY_RESEND };
-    obj[2] = obj;
-    obj[3] = sendRequest.rejectWithMigratedError();
-    return obj.post(obj);
+    let trackedActionData = {
+      url: React7.VERIFY_RESEND,
+      oldFormErrors: true,
+      trackedActionData: null,
+      rejectWithError: null,
+    };
+    trackedActionData = { event: discord_common_AnalyticsUtils.NetworkActionNames.USER_VERIFY_RESEND };
+    trackedActionData.trackedActionData = trackedActionData;
+    trackedActionData.rejectWithError = HTTPUtils.rejectWithMigratedError();
+    return trackedActionData.post(trackedActionData);
   },
   resetPassword(arg0, arg1, arg2) {
     closure_0 = arg0;
     closure_1 = arg1;
     closure_2 = arg2;
-    return callback(function* () {
-      if (token === 2) {
-        token = 3;
-        HermesBuiltin.throwTypeError();
+    return (async (arg0, value) => {
+      if (c5 === 2) {
+        c5 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp6 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
         }
       } else {
         try {
-          token = 2;
-          if (0 === ticket) {
+          c5 = 2;
+          if (0 === c4) {
             if (arg0 === 1) {
-              token = 3;
-              throw arg1;
+              c5 = 3;
+              throw value;
             } else if (arg0 === 2) {
-              token = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              c5 = 3;
+              obj = { value, done: true };
               return obj;
             } else {
-              let mfa = tmp3;
-              let body = tmp7;
-              body = undefined;
-              mfa = undefined;
+              const password = tmp3;
+              const token = tmp7;
+              let body;
+              let mfa;
               let sms;
-              dependencyMap = undefined;
-              ticket = undefined;
-              token = undefined;
+              let webauthn;
+              let ticket;
+              let token2;
               let backup;
               let totp;
-              c8 = undefined;
-              closure_1_1(573).dispatch({ type: "LOGIN" });
-              obj1 = { token: null, password: null, source: null };
-              obj1[0] = closure_1_0;
-              obj1[1] = closure_1_1;
-              obj1[2] = closure_1_2;
-              const Storage2 = closure_1_0(510).Storage;
-              let value = Storage2.get(closure_1_10);
-              const tmp75 = closure_1_15();
-              let tmp31 = null != tmp75;
+              closure_128_8 = undefined;
+              password(573).dispatch({ type: "LOGIN" });
+              const obj1 = { token, password, source };
+              const Storage2 = token(510).Storage;
+              value = Storage2.get(closure_1_10);
+              const tmp74 = closure_1_15();
+              let tmp31 = null != tmp74;
               if (tmp31) {
                 tmp31 = null != value;
               }
               if (tmp31) {
-                obj1.push_provider = tmp75;
+                obj1.push_provider = tmp74;
                 obj1.push_token = value;
               }
-              const Storage = closure_1_0(510).Storage;
+              const Storage = token(510).Storage;
               value = Storage.get(closure_1_11);
-              let tmp37 = null != closure_1_14;
+              let tmp37 = null != voip_provider;
               if (tmp37) {
                 tmp37 = null != value;
               }
@@ -848,47 +789,48 @@ obj = {
                 obj1.push_voip_token = value;
               }
               dependencyMap = 1;
-              let obj4 = closure_1_1(4753);
-              let obj2 = { url: null, body: null, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
-              obj2[0] = constants.RESET_PASSWORD;
-              obj2[1] = obj1;
-              const obj3 = { event: null };
-              obj3[0] = closure_1_0(1250).NetworkActionNames.USER_RESET_PASSWORD;
-              obj2[3] = obj3;
-              const obj12 = closure_1_1(573);
-              tmp36 = closure_1_14;
-              obj2[4] = closure_1_0(1272).rejectWithMigratedError();
-              ticket = 2;
-              token = 1;
-              obj4 = { value: null, done: false };
-              obj4[0] = obj4.post(obj2);
-              return obj4;
+              let obj4 = password(4753);
+              const request = {
+                url: constants.RESET_PASSWORD,
+                body: obj1,
+                oldFormErrors: true,
+                trackedActionData: null,
+                rejectWithError: null,
+              };
+              let obj2 = { event: token(1250).NetworkActionNames.USER_RESET_PASSWORD };
+              request.trackedActionData = obj2;
+              const obj12 = password(573);
+              tmp36 = voip_provider;
+              request.rejectWithError = token(1272).rejectWithMigratedError();
+              c4 = 2;
+              c5 = 1;
+              const obj3 = { value: obj4.post(request), done: false };
+              return obj3;
             }
           } else if (1 === tmp7) {
             dependencyMap = 0;
-            constants = sms;
-            const v6OrEarlierAPIError = new closure_1_0(4461).V6OrEarlierAPIError(constants);
-            obj2 = closure_1_1(573);
-            const obj5 = { type: "LOGIN_FAILURE", error: null };
-            obj5[1] = v6OrEarlierAPIError;
-            obj2.dispatch(obj5);
-            throw v6OrEarlierAPIError;
+            closure_128_9 = source;
+            const v6OrEarlierAPIError = new token(4461).V6OrEarlierAPIError(closure_128_9);
+            closure_128_8 = v6OrEarlierAPIError;
+            obj2 = password(573);
+            obj4 = { type: "LOGIN_FAILURE", error: closure_128_8 };
+            obj2.dispatch(obj4);
+            throw closure_128_8;
           } else if (arg0 === 1) {
-            token = 3;
-            throw arg1;
+            c5 = 3;
+            throw value;
           } else if (arg0 === 2) {
             dependencyMap = 0;
-            token = 3;
-            const obj6 = { value: null, done: true };
-            obj6[0] = arg1;
-            return obj6;
+            c5 = 3;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
-            body = arg1.body;
+            body = value.body;
             mfa = body.mfa;
             sms = body.sms;
-            dependencyMap = body.webauthn;
+            webauthn = body.webauthn;
             ticket = body.ticket;
-            token = body.token;
+            token2 = body.token;
             backup = body.backup;
             totp = body.totp;
             let tmp14 = closure_1_18;
@@ -897,25 +839,19 @@ obj = {
             } else {
               SUCCESS = tmp14.SUCCESS;
             }
-            obj = { result: null, sms: null, webauthn: null, ticket: null, token: null, backup: null, totp: null };
-            obj[0] = SUCCESS;
-            obj[1] = closure_1_2;
-            obj[2] = dependencyMap;
-            obj[3] = c4;
-            obj[4] = token;
-            obj[5] = closure_1_6;
-            tmp14 = closure_1_7;
-            obj[6] = closure_1_7;
+            obj = { result: SUCCESS, sms, webauthn, ticket, token: token2, backup, totp: null };
+            tmp14 = totp;
+            obj.totp = totp;
             dependencyMap = 0;
-            token = 3;
+            c5 = 3;
           }
         } catch (tmp45) {
-          sms = tmp45;
+          source = tmp45;
           if (tmp4 === dependencyMap) {
-            token = tmp2;
+            c5 = tmp2;
             throw tmp45;
           } else {
-            ticket = tmp;
+            c4 = tmp;
           }
         }
       }
@@ -928,41 +864,32 @@ obj = {
       ticket: importAll,
       password: dependencyMap,
       token: closure_4,
-      source: closure_5,
+      source: asyncGeneratorStep,
     } = arg0);
-    return callback(function* () {
-      const obj5 = v02(closure_1_3[8]);
-      obj5.dispatch({ type: "LOGIN_MFA" });
-      obj1 = { url: null, body: null, oldFormErrors: true, trackedActionData: null, rejectWithError: true };
-      obj1[0] = closure_1_9.RESET_PASSWORD;
-      const obj2 = { code: null, ticket: null, password: null, token: null, source: null, method: null };
-      obj2[0] = v02;
-      obj2[1] = closure_1_2;
-      obj2[2] = closure_1_3;
-      obj2[3] = closure_1_4;
-      obj2[4] = closure_1_5;
-      obj2[5] = v0;
-      obj1[1] = obj2;
-      const obj3 = { event: null, properties: null };
-      obj3[0] = v0(closure_1_3[13]).NetworkActionNames.USER_RESET_PASSWORD;
-      obj3[1] = { mfa: true };
-      obj1[3] = obj3;
-      yield v02(closure_1_3[12]).post(obj1);
+    return (async () => {
+      v1(573).dispatch({ type: "LOGIN_MFA" });
+      const request = {
+        url: constants.RESET_PASSWORD,
+        body: { code, ticket, password, token, source, method },
+        oldFormErrors: true,
+        trackedActionData: { event: v3(1250).NetworkActionNames.USER_RESET_PASSWORD, properties: { mfa: true } },
+        rejectWithError: true,
+      };
+      await v1(4753).post(request);
       return arg1.body.token;
     })();
   },
-  forgotPassword(closure_1_6) {
-    closure_0 = closure_1_6;
-    return callback(function* () {
+  forgotPassword(arg0) {
+    closure_0 = arg0;
+    return (async (arg0, value) => {
       if (c5 === 2) {
         c5 = 3;
-        HermesBuiltin.throwTypeError();
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp6 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
@@ -973,73 +900,71 @@ obj = {
           if (0 === c4) {
             if (arg0 === 1) {
               c5 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj = { value, done: true };
               return obj;
             } else {
-              c1 = tmp3;
-              let body = tmp7;
-              body = undefined;
-              c1 = undefined;
-              v6OrEarlierAPIError(573).dispatch({ type: "FORGOT_PASSWORD_REQUEST" });
+              const login = tmp7;
+              closure_128_0 = undefined;
+              closure_128_1 = undefined;
+              tmp3(573).dispatch({ type: "FORGOT_PASSWORD_REQUEST" });
               dependencyMap = 1;
-              const obj12 = v6OrEarlierAPIError(573);
-              obj1 = { url: null, body: null, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
-              obj1[0] = closure_1_9.FORGOT_PASSWORD;
-              const obj2 = { login: null };
-              obj2[0] = closure_1_0;
-              obj1[1] = obj2;
-              let obj3 = { event: null };
-              obj3[0] = closure_1_0(1250).NetworkActionNames.FORGOT_PASSWORD;
-              obj1[3] = obj3;
-              const obj13 = v6OrEarlierAPIError(4753);
-              obj1[4] = closure_1_0(1272).rejectWithMigratedError();
+              const obj12 = tmp3(573);
+              const request = {
+                url: constants.FORGOT_PASSWORD,
+                body: null,
+                oldFormErrors: true,
+                trackedActionData: null,
+                rejectWithError: null,
+              };
+              const obj1 = { login };
+              request.body = obj1;
+              const obj2 = { event: login(1250).NetworkActionNames.FORGOT_PASSWORD };
+              request.trackedActionData = obj2;
+              const obj13 = tmp3(4753);
+              request.rejectWithError = login(1272).rejectWithMigratedError();
               c4 = 2;
               c5 = 1;
-              const obj4 = { value: null, done: false };
-              obj4[0] = obj13.post(obj1);
-              return obj4;
+              let obj3 = { value: obj13.post(request), done: false };
+              return obj3;
             }
           } else if (1 === tmp7) {
             dependencyMap = 0;
-            v6OrEarlierAPIError = new closure_1_0(4461).V6OrEarlierAPIError(closure_2);
-            if (v6OrEarlierAPIError.code === closure_1_12.PHONE_VERIFICATION_REQUIRED) {
-              let obj5 = v6OrEarlierAPIError(573);
-              obj5 = { type: "LOGIN_PASSWORD_RECOVERY_PHONE_VERIFICATION", credentials: null };
-              const obj6 = { login: null };
-              obj6[0] = body;
-              obj5[1] = obj6;
-              obj5.dispatch(obj5);
+            closure_128_2 = closure_2;
+            const v6OrEarlierAPIError = new login(4461).V6OrEarlierAPIError(closure_128_2);
+            closure_128_1 = v6OrEarlierAPIError;
+            if (closure_128_1.code === constants2.PHONE_VERIFICATION_REQUIRED) {
+              let obj5 = tmp3(573);
+              const obj4 = { type: "LOGIN_PASSWORD_RECOVERY_PHONE_VERIFICATION", credentials: null };
+              obj5 = { login: closure_129_0 };
+              obj4.credentials = obj5;
+              obj5.dispatch(obj4);
               c5 = 3;
               return { value: false, done: true };
             } else {
-              obj3 = v6OrEarlierAPIError(573);
-              const obj7 = { type: "LOGIN_FAILURE", error: null };
-              obj7[1] = v6OrEarlierAPIError;
-              obj3.dispatch(obj7);
-              throw v6OrEarlierAPIError;
+              obj3 = tmp3(573);
+              const obj6 = { type: "LOGIN_FAILURE", error: closure_128_1 };
+              obj3.dispatch(obj6);
+              throw closure_128_1;
             }
           } else if (arg0 === 1) {
             c5 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             dependencyMap = 0;
             c5 = 3;
-            const obj8 = { value: null, done: true };
-            obj8[0] = arg1;
-            return obj8;
+            const obj7 = { value, done: true };
+            return obj7;
           } else {
-            body = arg1;
-            obj = v6OrEarlierAPIError(573);
+            closure_128_0 = value;
+            obj = tmp3(573);
             obj.dispatch({ type: "FORGOT_PASSWORD_SENT" });
             dependencyMap = 0;
             c5 = 3;
-            const obj9 = { value: null, done: true };
-            obj9[0] = body.body.method;
-            return obj9;
+            const obj8 = { value: closure_128_0.body.method, done: true };
+            return obj8;
           }
         } catch (tmp39) {
           closure_2 = tmp39;
@@ -1054,12 +979,10 @@ obj = {
     })();
   },
   setFingerprint(fingerprint) {
-    obj = dispatcherDefault;
     obj = { type: "FINGERPRINT", fingerprint };
     obj.dispatch(obj);
   },
   getExperiments(withGuildExperiments) {
-    obj = dispatcherDefault;
     obj = { type: "EXPERIMENTS_FETCH", withGuildExperiments };
     obj.dispatch(obj);
   },
@@ -1069,15 +992,14 @@ obj = {
       clearTimeout(timeout);
       const _setTimeout = setTimeout;
       timeout = setTimeout(() => {
-        callback(573).dispatch({ type: "SET_CONSENT_REQUIRED", consentRequired: true });
+        DispatcherDefault.dispatch({ type: "SET_CONSENT_REQUIRED", consentRequired: true });
       }, 5000);
-      const HTTP = sendRequest.HTTP;
-      obj = { url: null, retries: 2, oldFormErrors: true, rejectWithError: true };
-      obj[0] = closure_9.AUTH_LOCATION_METADATA;
-      const value = HTTP.get(obj);
+      const HTTP = HTTPUtils.HTTP;
+      obj = { url: React7.AUTH_LOCATION_METADATA, retries: 2, oldFormErrors: true, rejectWithError: true };
+      value = HTTP.get(obj);
       nextPromise = value.then(
         (body) => {
-          clearTimeout(closure_4);
+          clearTimeout(closure_1_4);
           if (null == authenticationConsentRequired.getAuthenticationConsentRequired()) {
             let flag;
             if (body != null) {
@@ -1089,9 +1011,7 @@ obj = {
             if (flag == null) {
               flag = true;
             }
-            obj = callback(573);
-            obj = { type: "SET_CONSENT_REQUIRED", consentRequired: null };
-            obj[1] = flag;
+            obj = { type: "SET_CONSENT_REQUIRED", consentRequired: flag };
             obj.dispatch(obj);
           }
           let country_code;
@@ -1101,7 +1021,7 @@ obj = {
               country_code = body2.country_code;
             }
           }
-          callback(573).dispatch({ type: "SET_LOCATION_METADATA", countryCode: country_code });
+          DispatcherDefault.dispatch({ type: "SET_LOCATION_METADATA", countryCode: country_code });
           c17 = null;
           let prop;
           if (body != null) {
@@ -1112,13 +1032,17 @@ obj = {
           }
           if (null != prop) {
             obj = { required: null, checked: null, preChecked: null };
-            ({ required: obj4[0], pre_checked: obj4[1], pre_checked: obj4[2] } = body.body.promotional_email_opt_in);
-            callback2(obj);
+            ({
+              required: obj4.required,
+              pre_checked: obj4.checked,
+              pre_checked: obj4.preChecked,
+            } = body.body.promotional_email_opt_in);
+            setPromoEmailConsentState(obj);
           }
         },
         () => {
-          clearTimeout(closure_4);
-          callback(573).dispatch({ type: "SET_CONSENT_REQUIRED", consentRequired: true });
+          clearTimeout(closure_1_4);
+          DispatcherDefault.dispatch({ type: "SET_CONSENT_REQUIRED", consentRequired: true });
           c17 = null;
         },
       );
@@ -1126,11 +1050,11 @@ obj = {
     return nextPromise;
   },
   closeSuspendedUser() {
-    dispatcherDefault.dispatch({ type: "CLOSE_SUSPENDED_USER" });
+    DispatcherDefault.dispatch({ type: "CLOSE_SUSPENDED_USER" });
   },
 };
-let tmp4 = new timestampDefault("AuthenticationActionCreators");
-let result = require("set").fileFinishedImporting("actions/AuthenticationActionCreators.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("actions/AuthenticationActionCreators.tsx");
 
-export default obj;
-export const PasswordResetResult = obj;
+export default PasswordResetResult;
+export { PasswordResetResult };

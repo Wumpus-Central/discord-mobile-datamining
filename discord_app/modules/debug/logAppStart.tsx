@@ -1,14 +1,14 @@
 // discord_app/modules/debug/logAppStart.tsx
-import timestamp from "Logger.tsx";
-import serialize from "../tti_analytics/TTITracker.tsx";
-import set from "../../../_runtime/00002_set.js";
+import Logger from "Logger.tsx";
+import TTITracker from "../tti_analytics/TTITracker.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-set = set.clear();
-new timestamp.default("app").log("Initializing app");
-const loadIndex = serialize.default.loadIndex;
+size.clear();
+new Logger.default("app").log("Initializing app");
+const loadIndex = TTITracker.default.loadIndex;
 loadIndex.recordStart();
-const loadImports = serialize.default.loadImports;
+const loadImports = TTITracker.default.loadImports;
 loadImports.recordStart();
-const result = set.fileFinishedImporting("modules/debug/logAppStart.tsx");
+const result = size.fileFinishedImporting("modules/debug/logAppStart.tsx");
 
 export default null;

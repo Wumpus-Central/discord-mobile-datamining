@@ -1,7 +1,7 @@
 // discord_app/modules/labs/LabFeatures.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/labs/LabFeatures.tsx");
+const result = size.fileFinishedImporting("modules/labs/LabFeatures.tsx");
 
 export default {
   hide_icymi_tab: { description: "Hide ICYMI tab" },

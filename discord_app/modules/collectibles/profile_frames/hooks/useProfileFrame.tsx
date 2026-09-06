@@ -1,25 +1,26 @@
 // discord_app/modules/collectibles/profile_frames/hooks/useProfileFrame.tsx
-import closure_2 from "../../CollectiblesCategoryStore.tsx";
-import closure_3 from "../../CollectiblesPurchaseStore.tsx";
-import { isProfileFrameRecord } from "../../records/ProfileFrameRecord.tsx";
+import CollectiblesCategoryStore from "../../CollectiblesCategoryStore.tsx";
+import CollectiblesPurchaseStore from "../../CollectiblesPurchaseStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/collectibles/profile_frames/hooks/useProfileFrame.tsx");
+const require = fn;
+const isProfileFrameRecord = fn(7549).isProfileFrameRecord;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/profile_frames/hooks/useProfileFrame.tsx");
 
 export default function useProfileFrame(arg0) {
-  const _require = arg0;
-  const items = [closure_2, closure_3];
-  return require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  _require = arg0;
+  const items = [CollectiblesCategoryStore, CollectiblesPurchaseStore];
+  return require("initialize").useStateFromStores(items, () => {
     if (null != closure_0) {
-      const product = closure_1_2.getProduct(tmp);
+      const product = CollectiblesCategoryStore.getProduct(tmp);
       let first;
       if (product != null) {
         first = product.items[0];
       }
-      if (closure_1_4(first)) {
+      if (isProfileFrameRecord(first)) {
         return product.items[0];
       } else {
-        const purchase = closure_1_3.getPurchase(tmp);
+        const purchase = CollectiblesPurchaseStore.getPurchase(tmp);
         let first1;
         if (purchase != null) {
           first1 = purchase.items[0];

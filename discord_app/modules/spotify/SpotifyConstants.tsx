@@ -1,11 +1,17 @@
 // discord_app/modules/spotify/SpotifyConstants.tsx
-import getPlatformUserUrlDefault from "../../lib/Platforms.tsx";
-import set from "../../utils/PlatformUtils.tsx";
+import Platforms from "../../lib/Platforms.tsx";
 
 const spotify = "spotify";
 let c1 = "spotify:";
-let obj = { TRACK: "track", ARTIST: "artist", ALBUM: "album", PLAYLIST: "playlist", EPISODE: "episode", SHOW: "show" };
-obj = {
+let SpotifyResourceTypes = {
+  TRACK: "track",
+  ARTIST: "artist",
+  ALBUM: "album",
+  PLAYLIST: "playlist",
+  EPISODE: "episode",
+  SHOW: "show",
+};
+SpotifyResourceTypes = {
   PROFILE: "" + "https://api.spotify.com/v1" + "/me",
   NOTIFICATIONS_PLAYER: "" + "https://api.spotify.com/v1" + "/me/notifications/player",
   PLAYER: "" + "https://api.spotify.com/v1" + "/me/player",
@@ -35,7 +41,7 @@ obj = {
     }
     return "https://open.spotify.com/embed" + arg0 + "?utm_source=discord&utm_medium=" + str;
   },
-  PLAYER_OPEN(TRACK, album_id, arg2, mobile) {
+  PLAYER_OPEN(TRACK, sync_id, arg2, mobile) {
     let flag = arg2;
     if (arg2 === undefined) {
       flag = true;
@@ -51,7 +57,7 @@ obj = {
       const _HermesInternal = HermesInternal;
       str2 = "?utm_source=discord&utm_medium=" + str;
     }
-    return "" + tmp + ":" + encodeURIComponentResult + ":" + encodeURIComponent(album_id) + str2;
+    return "" + tmp + ":" + encodeURIComponentResult + ":" + encodeURIComponent(sync_id) + str2;
   },
   PREMIUM_SITE: "https://www.spotify.com/premium/" + "?utm_source=discord&utm_medium=" + "desktop",
   INSTALL_ATTRIBUTION(Identifier) {
@@ -60,17 +66,19 @@ obj = {
   APP_STORE: null,
   IOS_APP_STORE: "https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8",
 };
+const PlatformUtils = fn(1115);
 let str = "https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8";
-if (set.isAndroid()) {
+if (PlatformUtils.isAndroid()) {
   str = "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US";
 }
-obj[12] = str;
-const frozen = Object.freeze(obj);
-const result = set.fileFinishedImporting("modules/spotify/SpotifyConstants.tsx");
+SpotifyResourceTypes.APP_STORE = str;
+const frozen = Object.freeze(SpotifyResourceTypes);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/spotify/SpotifyConstants.tsx");
 
 export const SPOTIFY_APP_PROTOCOL = "spotify";
 export const SPOTIFY_PARTY_PREFIX = "spotify:";
-export const SPOTIFY_PLATFORM_NAME = getPlatformUserUrlDefault.get(require("ME").PlatformTypes.SPOTIFY).name;
+export const SPOTIFY_PLATFORM_NAME = Platforms.get(fn(1074).PlatformTypes.SPOTIFY).name;
 export const isSpotifyParty = function isSpotifyParty(id) {
   let startsWithResult = null != id;
   if (startsWithResult) {
@@ -78,7 +86,7 @@ export const isSpotifyParty = function isSpotifyParty(id) {
   }
   return startsWithResult;
 };
-export const SpotifyResourceTypes = obj;
+export { SpotifyResourceTypes };
 export const SpotifyActionTypes = {
   USER_ACTIVITY_PLAY: "user_activity_play",
   USER_ACTIVITY_SYNC: "user_activity_sync",

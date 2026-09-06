@@ -1,131 +1,111 @@
 // discord_app/modules/app_database/system/DatabaseManager.tsx
-import timestampDefault from "../../debug/Logger.tsx";
+import LoggerDefault from "../../debug/Logger.tsx";
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
-import getUserIdAll from "StartupData.native.tsx";
-import closure_4 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_5 from "../../../stores/AuthenticationStore.tsx";
-import importDefaultResult from "../../../Dispatcher.tsx";
+import Dispatcher2 from "../../../Dispatcher.tsx";
+import _mod1987 from "../../../../discord_common/js/packages/kv-storage/js/index.tsx";
+import StartupDataAll from "StartupData.native.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 
-let closure_0 = arg1;
+const Dispatcher = Dispatcher2;
+
+require = fn;
 function databaseName(arg0) {
   return "@account." + arg0;
 }
-function _trySpeculativelyOpenDatabaseAsync() {
-  const self = this;
-  const tmp = callback2((arg0) => {
-    closure_0 = arg0;
-    c5 = 0;
-    c6 = 0;
-    c4 = 0;
-    return (function* (arg0) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
+let closure_8 = async function _trySpeculativelyOpenDatabaseAsync(arg0, value) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
         if (arg0 === 1) {
-          throw arg1;
+          c6 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c6 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_2 = tmp3;
+          closure_1 = tmp7;
+          const tmp25 = databaseName(closure_0);
+          const _HermesInternal = HermesInternal;
+          timestampProducer.verbose("speculatively opening " + tmp25);
+          c4 = 1;
+          const Database = require("../../../../discord_common/js/packages/kv-storage/js/index.tsx").Database;
+          c5 = 2;
+          c6 = 1;
+          const obj1 = { value: Database.open(tmp25), done: false };
+          return obj1;
         }
+      } else if (1 === tmp7) {
+        c4 = 0;
+        closure_129_0 = closure_3;
+        closure_130_6.warn("couldn't speculatively open database.", closure_129_0);
+        c6 = 3;
+        return { value: null, done: true };
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 0;
+        c6 = 3;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_2 = tmp3;
-              closure_1 = tmp7;
-              const tmp26 = closure_1_7(callback);
-              const _HermesInternal = HermesInternal;
-              c6.verbose("speculatively opening " + tmp26);
-              c4 = 1;
-              const Database = callback(closure_1_3[6]).Database;
-              c5 = 2;
-              c6 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = Database.open(tmp26);
-              return obj1;
-            }
-          } else if (1 === tmp7) {
-            c4 = 0;
-            callback = closure_3;
-            c6.warn("couldn't speculatively open database.", callback);
-            c6 = 3;
-            return { value: null, done: true };
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 0;
-            c6 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          } else {
-            c4 = 0;
-            c6 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp15) {
-          closure_3 = tmp15;
-          if (tmp4 === c4) {
-            c6 = tmp2;
-            throw tmp15;
-          } else {
-            c5 = tmp;
-          }
-        }
+        c4 = 0;
+        c6 = 3;
+        obj = { value, done: true };
+        return obj;
       }
-    })();
-  });
-  closure_8 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp15) {
+      closure_3 = tmp15;
+      if (tmp4 === c4) {
+        c6 = tmp2;
+        throw tmp15;
+      } else {
+        c5 = tmp;
+      }
+    }
   }
-  return applyArgumentsResult;
-}
-let closure_6 = new timestampDefault("DatabaseManager");
+};
+let closure_6 = new LoggerDefault("DatabaseManager");
 const Store = initializeDefault.Store;
 class DatabaseManager extends Store {
   constructor() {
     closure_0 = undefined;
-    tmp2 = require("dispatcher");
+    tmp2 = closure_1(closure_3[4]);
     obj = {
       CLEAR_CACHES(arg0) {
-        return obj.handleClearCaches(arg0);
+        return closure_0.handleClearCaches(arg0);
       },
       CONNECTION_CLOSED() {
-        return obj.handleAuthenticationStoreChanged();
+        return closure_0.handleAuthenticationStoreChanged();
       },
       CONNECTION_OPEN() {
-        return obj.handleConnectionOpen();
+        return closure_0.handleConnectionOpen();
       },
       LOGOUT: null,
     };
     class LOGOUT {
       constructor() {
-        return obj.handleAuthenticationStoreChanged();
+        return closure_0.handleAuthenticationStoreChanged();
       }
     }
-    obj[3] = LOGOUT;
-    tmp = new tmp(tmp2, obj, require("dispatcher").DispatchBand.Early, LOGOUT, new.target, tmp, tmp2);
-    // ThrowIfThisInitialized (0x7c)
+    obj.LOGOUT = LOGOUT;
+    tmp = new tmp(tmp2, obj, closure_0(closure_3[4]).DispatchBand.Early, LOGOUT, new.target, tmp, tmp2);
     closure_0 = tmp;
     map = new Map();
     tmp.databases = map;
@@ -137,10 +117,10 @@ class DatabaseManager extends Store {
 const prototype = DatabaseManager.prototype;
 prototype["initialize"] = function initialize() {
   const self = this;
-  this.waitFor(store);
-  const result = this.carefullySpeculativelyOpen(getUserIdAll.getUserId());
+  this.waitFor(AuthenticationStore);
+  const result = this.carefullySpeculativelyOpen(StartupDataAll.getUserId());
   const result1 = this.handleAuthenticationStoreChanged();
-  store.addChangeListener(() => self.handleAuthenticationStoreChanged());
+  AuthenticationStore.addChangeListener(() => self.handleAuthenticationStoreChanged());
 };
 prototype["databaseName"] = function databaseName(arg0) {
   return "@account." + arg0;
@@ -150,7 +130,7 @@ prototype["database"] = function database(arg0) {
   if (null != arg0) {
     const self = this;
     const databases = this.databases;
-    let value = databases.get(arg0);
+    value = databases.get(arg0);
     if (value == null) {
       value = null;
     }
@@ -161,7 +141,7 @@ prototype["database"] = function database(arg0) {
 prototype["carefullyOpenDatabase"] = function carefullyOpenDatabase(id) {
   const self = this;
   if (this.preventWritingCachesAgainThisSession) {
-    closure_6.verbose("Not opening database because caches have been manually cleared.");
+    logger.verbose("Not opening database because caches have been manually cleared.");
     return null;
   } else {
     if (null != id) {
@@ -170,25 +150,24 @@ prototype["carefullyOpenDatabase"] = function carefullyOpenDatabase(id) {
         const _HermesInternal = HermesInternal;
         const combined = "@account." + id;
         const _HermesInternal2 = HermesInternal;
-        closure_6.verbose("synchronously opening " + combined);
-        const tmp6 = (function tryUntil(arg0, arg1) {
-          let num = 0;
+        logger.verbose("synchronously opening " + combined);
+        const tmp6 = (function tryUntil(arg0, fn) {
           if (0 >= 50) {
             return null;
           } else {
             try {
-              return arg1();
+              return fn();
             } catch (tmp7) {
               logger.error(tmp2 + tmp5, tmp7);
-              num = tmp5 + tmp;
+              const num = tmp5 + tmp;
             }
           }
         })(50, () => {
-          const Database = combined(closure_1_3[6]).Database;
+          const Database = _mod1987.Database;
           return Database.openSyncUnsafe(combined, { invalidateDisabledHandles: true });
         });
         const _HermesInternal3 = HermesInternal;
-        closure_6.verbose("added database (" + id + " \u2192 " + tmp6 + ")");
+        logger.verbose("added database (" + id + " \u2192 " + tmp6 + ")");
         const databases = self.databases;
         const result = databases.set(id, tmp6);
         self.emitChange();
@@ -207,17 +186,15 @@ prototype["replaceDisableAllDatabases"] = function replaceDisableAllDatabases(ar
   while (iter !== undefined) {
     let databases2 = self.databases;
     let tmp4 = nextResult;
-    let value = databases2.get(nextResult);
+    value = databases2.get(nextResult);
     let obj2 = value;
     if (value != null) {
       let disableResult = value.disable(arg0);
     }
-    let tmp6 = value;
     if (obj2 != null) {
       let closeResult = obj2.close();
     }
     let databases3 = self.databases;
-    let tmp8 = nextResult;
     let result = databases3.set(tmp4, null);
     continue;
   }
@@ -226,7 +203,7 @@ prototype["replaceDisableAllDatabases"] = function replaceDisableAllDatabases(ar
 prototype["remove"] = function remove(arg0) {
   const self = this;
   const databases = this.databases;
-  const value = databases.get(arg0);
+  value = databases.get(arg0);
   closure_6.log("removing database (user: " + arg0 + ", database: " + value + ")");
   if (value != null) {
     value.close();
@@ -246,15 +223,15 @@ prototype["handleClearCaches"] = function handleClearCaches(preventWritingCaches
 };
 prototype["handleConnectionOpen"] = function handleConnectionOpen() {
   const self = this;
-  const id = store.getId();
+  const id = AuthenticationStore.getId();
   const databases = this.databases;
-  const value = databases.get(id);
+  value = databases.get(id);
   if (value != null) {
     const stateResult = value.state();
   }
   let tmp3 = null == value;
   if (tmp3) {
-    tmp3 = stateResult !== callback(1987).DatabaseState.Open;
+    tmp3 = stateResult !== _mod1987.DatabaseState.Open;
   }
   if (tmp3) {
     self.remove(id);
@@ -263,36 +240,34 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen() {
 };
 prototype["handleAuthenticationStoreChanged"] = function handleAuthenticationStoreChanged() {
   const self = this;
-  const id = store.getId();
+  const id = AuthenticationStore.getId();
   const activeUserId = this.activeUserId;
   if (id !== activeUserId) {
     const databases2 = self.databases;
-    const value = databases2.get(activeUserId);
+    value = databases2.get(activeUserId);
     const _HermesInternal = HermesInternal;
     closure_6.verbose("active user changed (now: " + id + ", was: " + activeUserId + ", was: " + value + ")");
     if (value != null) {
       value.close();
     }
-    getUserIdAll.setUserId(id);
+    StartupDataAll.setUserId(id);
     self.activeUserId = id;
     const databases = self.databases;
     databases.delete(activeUserId);
-    const obj = getUserIdAll;
   }
 };
 function carefullySpeculativelyOpen(userId) {
   closure_0 = userId;
   let self = this;
-  return callback2(function* () {
+  return (async (arg0, value) => {
     if (c3 === 2) {
       c3 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp5 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
@@ -304,62 +279,62 @@ function carefullySpeculativelyOpen(userId) {
         if (0 === c2) {
           if (arg0 === 1) {
             c3 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
             closure_1 = tmp2;
             closure_0 = tmp3;
-            closure_0 = undefined;
-            if (closure_1_1.preventWritingCachesAgainThisSession) {
+            closure_128_0 = undefined;
+            if (self.preventWritingCachesAgainThisSession) {
               verboseResult = closure_1_6.verbose("Not opening database because caches have been manually cleared.");
-            } else if (null != closure_1_0) {
+            } else if (null != closure_0) {
               c2 = 1;
               c3 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = (function trySpeculativelyOpenDatabaseAsync(closure_1_0) {
-                self = this;
-                const apply = closure_8.apply;
-                if (typeof apply === "unknown") {
-                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                } else {
-                  applyArgumentsResult = apply(self, arguments);
-                }
-                return applyArgumentsResult;
-              })(closure_1_0);
+              const obj1 = {
+                value: (function trySpeculativelyOpenDatabaseAsync() {
+                  self = this;
+                  const apply = closure_1_8.apply;
+                  if (typeof apply === "unknown") {
+                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                  } else {
+                    applyArgumentsResult = apply(self, arguments);
+                  }
+                  return applyArgumentsResult;
+                })(closure_0),
+                done: false,
+              };
               return obj1;
             }
             c3 = 3;
           }
         } else if (arg0 === 1) {
           c3 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = arg1;
+          const obj2 = { value, done: true };
           return obj2;
         } else {
-          closure_0 = arg1;
+          closure_128_0 = value;
           verboseResult = null;
-          if (null != closure_0) {
-            const databases2 = closure_1.databases;
-            if (!databases2.has(closure_0)) {
+          if (null != closure_128_0) {
+            const databases2 = closure_129_1.databases;
+            if (!databases2.has(closure_129_0)) {
               const _HermesInternal = HermesInternal;
-              closure_1_6.verbose("added speculative database (" + closure_0 + " \u2192 " + closure_0 + ")");
-              const databases = closure_1.databases;
-              const result = databases.set(closure_0, closure_0);
-              closure_1.emitChange();
+              closure_1_6.verbose("added speculative database (" + closure_129_0 + " \u2192 " + closure_128_0 + ")");
+              const databases = closure_129_1.databases;
+              const result = databases.set(closure_129_0, closure_128_0);
+              closure_129_1.emitChange();
             }
           }
         }
         const _HermesInternal2 = HermesInternal;
-        closure_1_6.verbose("discarding speculative database (" + closure_0 + " \u2192 " + closure_0 + ")");
-        obj = closure_0;
-        if (closure_0 != verboseResult) {
+        closure_1_6.verbose("discarding speculative database (" + closure_129_0 + " \u2192 " + closure_128_0 + ")");
+        obj = closure_128_0;
+        if (closure_128_0 != verboseResult) {
           verboseResult = obj.close();
         }
       } catch (tmp32) {
@@ -370,42 +345,40 @@ function carefullySpeculativelyOpen(userId) {
   })();
 }
 prototype["carefullySpeculativelyOpen"] = carefullySpeculativelyOpen;
-closure_0 = undefined;
 let obj = {
   CLEAR_CACHES(arg0) {
-    return obj.handleClearCaches(arg0);
+    return closure_0.handleClearCaches(arg0);
   },
   CONNECTION_CLOSED() {
-    return obj.handleAuthenticationStoreChanged();
+    return closure_0.handleAuthenticationStoreChanged();
   },
   CONNECTION_OPEN() {
-    return obj.handleConnectionOpen();
+    return closure_0.handleConnectionOpen();
   },
   LOGOUT() {
-    return obj.handleAuthenticationStoreChanged();
+    return closure_0.handleAuthenticationStoreChanged();
   },
 };
 tmp = new tmp(
-  importDefaultResult,
+  Dispatcher,
   obj,
-  require("dispatcher").DispatchBand.Early,
+  fn(573).DispatchBand.Early,
   DatabaseManager,
   tmp,
-  importDefaultResult,
+  Dispatcher,
   obj,
   new.target,
   undefined,
   carefullySpeculativelyOpen,
   globalThis,
-  arg1,
+  fn,
 );
-// ThrowIfThisInitialized (0x7c)
-closure_0 = tmp;
-let tmp3 = new timestampDefault("DatabaseManager");
+let closure_129_0 = tmp;
+let tmp3 = new LoggerDefault("DatabaseManager");
 tmp.databases = new Map();
 tmp.activeUserId = null;
 tmp.preventWritingCachesAgainThisSession = false;
-const map = new Map();
-let result = require("set").fileFinishedImporting("modules/app_database/system/DatabaseManager.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/app_database/system/DatabaseManager.tsx");
 
 export default tmp;

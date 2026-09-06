@@ -1,26 +1,24 @@
 // discord_app/modules/gesture_handlers/native/NonCollapsableGestureDetector.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
 import LegacyBaseButton from "../../../../_runtime/06655_LegacyBaseButton.js";
-import closure_3 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+require = fn;
 let closure_2 = ["children"];
-noopAll;
-let closure_6 = { flex: 1 };
-const result = require("set").fileFinishedImporting(
-  "modules/gesture_handlers/native/NonCollapsableGestureDetector.tsx",
-);
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const style = { flex: 1 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/gesture_handlers/native/NonCollapsableGestureDetector.tsx");
 
 export const NonCollapsableGestureDetector = function NonCollapsableGestureDetector(children) {
   let obj = {};
-  const merged = Object.assign(callback(children, closure_2));
-  obj = { style: closure_6, collapsable: false, children: children.children };
+  const merged = Object.assign(_objectWithoutProperties(children, closure_2));
+  obj = { style, collapsable: false, children: children.children };
   obj.children = (
-    <View style={closure_6} collapsable={false}>
+    <View style={style} collapsable={false}>
       {arg0.children}
     </View>
   );
-  return jsx(LegacyBaseButton.GestureDetector, { style: closure_6, collapsable: false, children: children.children });
+  return jsx(LegacyBaseButton.GestureDetector, { style, collapsable: false, children: children.children });
 };

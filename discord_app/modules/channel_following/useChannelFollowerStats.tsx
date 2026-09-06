@@ -1,38 +1,39 @@
 // discord_app/modules/channel_following/useChannelFollowerStats.tsx
-import setDefault from "../../utils/Durations.tsx";
-import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../_runtime/00019_noop.js";
-import closure_5 from "../../stores/ChannelFollowerStatsStore.tsx";
+import DurationsDefault from "../../utils/Durations.tsx";
+import ChannelFollowerActionCreatorsDefault from "../../actions/ChannelFollowerActionCreators.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import noop from "../../../_runtime/metro/00019__.js";
+import ChannelFollowerStatsStore from "../../stores/ChannelFollowerStatsStore.tsx";
 
-const require = arg1;
-const HOUR = setDefault.Millis.HOUR;
-const result = require("set").fileFinishedImporting("modules/channel_following/useChannelFollowerStats.tsx");
+const require = fn;
+const HOUR = DurationsDefault.Millis.HOUR;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/channel_following/useChannelFollowerStats.tsx");
 
 export default function useChannelFollowerStats(arg0) {
-  const _require = arg0;
-  const tmp = stateFromStores(React.useState(false), 2);
+  _require = arg0;
+  const tmp = stateFromStores(noop.useState(false), 2);
   const first = tmp[0];
   dependencyMap = tmp[1];
-  const items = [closure_5];
+  const items = [ChannelFollowerStatsStore];
   const items1 = [arg0];
-  stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+  stateFromStores = require("initialize").useStateFromStores(
     items,
-    () => closure_1_5.getFollowerStatsForChannel(closure_0),
+    () => ChannelFollowerStatsStore.getFollowerStatsForChannel(closure_0),
     items1,
   );
   const items2 = [arg0, stateFromStores, first];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (null == stateFromStores) {
       if (!first) {
-        dependencyMap(true);
-        const channelFollowerStats = first(11332).fetchChannelFollowerStats(closure_0);
-        const obj = first(11332);
+        closure_2(true);
+        const channelFollowerStats = ChannelFollowerActionCreatorsDefault.fetchChannelFollowerStats(closure_0);
       }
     } else {
       const _Date = Date;
     }
     if (tmp11) {
-      dependencyMap(false);
+      closure_2(false);
     }
   }, items2);
   const items3 = [stateFromStores, first];

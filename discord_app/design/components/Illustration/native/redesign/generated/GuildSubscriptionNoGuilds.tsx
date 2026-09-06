@@ -1,61 +1,58 @@
 // discord_app/design/components/Illustration/native/redesign/generated/GuildSubscriptionNoGuilds.tsx
-import noopAll from "../../../../../../../_runtime/00019_noop.js";
-import AccessibilityAnnouncer from "../../../../../shared.tsx";
-import getIllustrationSource from "../../index.tsx";
-import { Image } from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
+import shared from "../../../../../shared.tsx";
+import _mod8233 from "../../index.tsx";
+import noop from "../../../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting(
+require = fn;
+const Image = fn(17).Image;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "design/components/Illustration/native/redesign/generated/GuildSubscriptionNoGuilds.tsx",
 );
 
 export const getGuildSubscriptionNoGuildsSource = function getGuildSubscriptionNoGuildsSource(theme) {
-  let obj = getIllustrationSource;
-  obj = {
+  const obj = {
     dark() {
-      return callback(13534);
+      return require("../../../../../../../_runtime/metro/13534__.js");
     },
     darker() {
-      return callback(13535);
+      return require("../../../../../../../_runtime/metro/13535__.js");
     },
     light() {
-      return callback(13536);
+      return require("../../../../../../../_runtime/metro/13536__.js");
     },
   };
   return obj.getIllustrationSource(theme, obj);
 };
 export const useGuildSubscriptionNoGuildsSource = function useGuildSubscriptionNoGuildsSource() {
-  let obj = AccessibilityAnnouncer;
-  obj = {
+  const obj = {
     dark() {
-      return callback(13534);
+      return require("../../../../../../../_runtime/metro/13534__.js");
     },
     darker() {
-      return callback(13535);
+      return require("../../../../../../../_runtime/metro/13535__.js");
     },
     light() {
-      return callback(13536);
+      return require("../../../../../../../_runtime/metro/13536__.js");
     },
   };
-  return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
+  return _mod8233.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
 export const GuildSubscriptionNoGuilds = function GuildSubscriptionNoGuilds(arg0) {
-  let obj = AccessibilityAnnouncer;
-  obj = {
+  let obj = {
     dark() {
-      return callback(13534);
+      return require("../../../../../../../_runtime/metro/13534__.js");
     },
     darker() {
-      return callback(13535);
+      return require("../../../../../../../_runtime/metro/13535__.js");
     },
     light() {
-      return callback(13536);
+      return require("../../../../../../../_runtime/metro/13536__.js");
     },
   };
   obj = {};
-  const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
+  const illustrationSource = _mod8233.getIllustrationSource(obj.useThemeContext().theme, obj);
   const merged = Object.assign(arg0);
   obj.source = illustrationSource;
   return <Image />;

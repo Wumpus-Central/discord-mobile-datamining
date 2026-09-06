@@ -1,39 +1,39 @@
 // discord_app/modules/messages/native/renderer/RowGeneratorUtils.tsx
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import getSrcWithWidthAndHeightDefault from "../../../../utils/native/ImageUtils.tsx";
-import hexToRgba from "../../../../utils/ColorUtils.tsx";
-import createMinimalMessageRecord from "../../MessageRecordUtils.tsx";
-import useCanManageGuildOfficialMessages from "../../GuildOfficialMessageUtils.tsx";
-import closure_3 from "../../../a11y/AccessibilityStore.tsx";
-import closure_4 from "../../../../stores/ChannelStore.tsx";
-import closure_5 from "../../../../stores/GuildStore.tsx";
-import MESSAGE_GROUP_SPACING from "../../MessageConstants.tsx";
-import { SwipeActionsType } from "RowGeneratorConstants.tsx";
-import ME from "../../../../Constants.tsx";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import set from "../../../../../_runtime/00002_set.js";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import utils_ImageUtilsDefault from "../../../../utils/native/ImageUtils.tsx";
+import ColorUtils from "../../../../utils/ColorUtils.tsx";
+import MessageRecordUtils from "../../MessageRecordUtils.tsx";
+import GuildOfficialMessageUtils from "../../GuildOfficialMessageUtils.tsx";
+import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
+import ChannelStore from "../../../../stores/ChannelStore.tsx";
+import GuildStore from "../../../../stores/GuildStore.tsx";
 
-require = arg1;
-({ DEFAULT_GUILD_OFFICIAL_COLOR: closure_6, GUILD_OFFICIAL_HIGHLIGHT_ALPHA_COLOR: error } = MESSAGE_GROUP_SPACING);
-({ MessageFlags: c9, MessageTypes: c10 } = ME);
-const result = createCacheKey.experimental_createToken(() =>
-  hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.BRAND_500, 0.1),
+require = fn;
+const MessageConstants = fn(4553);
+({ DEFAULT_GUILD_OFFICIAL_COLOR: metroRequire, GUILD_OFFICIAL_HIGHLIGHT_ALPHA_COLOR: closure_7 } = MessageConstants);
+const SwipeActionsType = fn(7933).SwipeActionsType;
+const Constants = fn(1074);
+({ MessageFlags: closure_9, MessageTypes: c10 } = Constants);
+let createStyles = fn(4560);
+const result = createStyles.experimental_createToken(() =>
+  ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BRAND_500, 0.1),
 );
-createCacheKey = {
-  ephemeralBackgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE,
-  ephemeralGutterColor: ThemesDefault.colors.BACKGROUND_BRAND,
+fn(4560);
+createStyles = {
+  ephemeralBackgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE,
+  ephemeralGutterColor: nativeDefault.colors.BACKGROUND_BRAND,
   giftIntentEphemeralBackgroundColor: result,
-  mentionedBackgroundColor: ThemesDefault.colors.MESSAGE_MENTIONED_BACKGROUND_DEFAULT,
-  mentionedGutterColor: ThemesDefault.unsafe_rawColors.YELLOW_300,
-  automodBlockedBackgroundColor: ThemesDefault.colors.MESSAGE_AUTOMOD_BACKGROUND_DEFAULT,
-  automodBlockedGutterColor: ThemesDefault.unsafe_rawColors.RED_345,
-  editingColor: ThemesDefault.colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT,
+  mentionedBackgroundColor: nativeDefault.colors.MESSAGE_MENTIONED_BACKGROUND_DEFAULT,
+  mentionedGutterColor: nativeDefault.unsafe_rawColors.YELLOW_300,
+  automodBlockedBackgroundColor: nativeDefault.colors.MESSAGE_AUTOMOD_BACKGROUND_DEFAULT,
+  automodBlockedGutterColor: nativeDefault.unsafe_rawColors.RED_345,
+  editingColor: nativeDefault.colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT,
 };
-createCacheKey = createCacheKey.createNativeStyleProperties(createCacheKey);
-const MediaManager = require("get ActivityIndicator").NativeModules.MediaManager;
-let set = new Set(MediaManager.getConstants().supportedExtensions);
-createCacheKey = {
-  getImageSrc(proxy_url, width, height) {
+createStyles.createNativeStyleProperties(createStyles);
+const MediaManager = fn(17).NativeModules.MediaManager;
+const set = new Set(MediaManager.getConstants().supportedExtensions);
+createStyles = {
+  getImageSrc(proxy_url, width, height, arg3) {
     const endsWithResult = proxy_url.endsWith(".webp");
     let hasItem = !endsWithResult;
     if (!endsWithResult) {
@@ -50,30 +50,29 @@ createCacheKey = {
     if (flag) {
       str3 = "png";
     }
-    return getSrcWithWidthAndHeightDefault.getMobileOptimizedSrc(proxy_url, width, height, str3);
+    return utils_ImageUtilsDefault.getMobileOptimizedSrc(proxy_url, width, height, str3);
   },
   createBackgroundHighlight(message) {
     message = message.message;
     ({ isEditing, isAutomodBlockedMessage } = message);
-    const tmp = createCacheKey(message.theme);
+    const tmp = createStyles(message.theme);
     if (isEditing) {
-      let obj = { backgroundColor: null };
-      obj[0] = tmp.editingColor;
+      let obj = { backgroundColor: tmp.editingColor };
       return obj;
     } else if (isAutomodBlockedMessage) {
       obj = { backgroundColor: null, gutterColor: null };
-      ({ automodBlockedBackgroundColor: obj8[0], automodBlockedGutterColor: obj8[1] } = tmp);
+      ({ automodBlockedBackgroundColor: obj8.backgroundColor, automodBlockedGutterColor: obj8.gutterColor } = tmp);
       return obj;
     } else {
       if (message.hasFlag(constants.IS_GUILD_OFFICIAL)) {
-        obj = useCanManageGuildOfficialMessages;
-        if (obj.showGuildOfficialMessageGradient(officialMessageStyle.officialMessageStyle)) {
-          channel = channel.getChannel(message.getChannelId());
+        obj = GuildOfficialMessageUtils;
+        if (obj.showGuildOfficialMessageGradient(AccessibilityStore.officialMessageStyle)) {
+          const channel = ChannelStore.getChannel(message.getChannelId());
           let guild_id;
           if (channel != null) {
             guild_id = channel.guild_id;
           }
-          guild = guild.getGuild(guild_id);
+          const guild = GuildStore.getGuild(guild_id);
           let tmp3Result = tmp3(7267);
           if (tmp3Result.isGuildOfficialMessagesEnabled(guild, "RowGeneratorUtils")) {
             let officialMessageColor;
@@ -81,7 +80,7 @@ createCacheKey = {
               officialMessageColor = guild.officialMessageColor;
             }
             if (officialMessageColor == null) {
-              officialMessageColor = closure_6;
+              officialMessageColor = timestampProducer;
             }
             if (message.mentioned) {
               let ephemeralGutterColor = tmp.mentionedGutterColor;
@@ -91,26 +90,25 @@ createCacheKey = {
                 ephemeralGutterColor = tmp.ephemeralGutterColor;
               }
             }
-            obj1 = { backgroundColor: null, gutterColor: null };
-            obj1[0] = officialMessageColor | closure_7;
-            obj1[1] = ephemeralGutterColor;
+            const obj1 = { backgroundColor: officialMessageColor | React5, gutterColor: ephemeralGutterColor };
             return obj1;
           }
         }
       }
       if (message.mentioned) {
         let obj2 = { backgroundColor: null, gutterColor: null };
-        ({ mentionedBackgroundColor: obj5[0], mentionedGutterColor: obj5[1] } = tmp);
+        ({ mentionedBackgroundColor: obj5.backgroundColor, mentionedGutterColor: obj5.gutterColor } = tmp);
         const tmp14 = obj2;
       } else {
-        obj2 = createMinimalMessageRecord;
+        obj2 = MessageRecordUtils;
         if (obj2.hasEphemeralAppearance(message)) {
-          const obj3 = { backgroundColor: null, gutterColor: null };
-          obj3[0] =
-            message.type === constants2.GIFTING_PROMPT
-              ? tmp.giftIntentEphemeralBackgroundColor
-              : tmp.ephemeralBackgroundColor;
-          obj3[1] = tmp.ephemeralGutterColor;
+          const obj3 = {
+            backgroundColor:
+              message.type === constants2.GIFTING_PROMPT
+                ? tmp.giftIntentEphemeralBackgroundColor
+                : tmp.ephemeralBackgroundColor,
+            gutterColor: tmp.ephemeralGutterColor,
+          };
         }
       }
       return tmp14;
@@ -122,8 +120,9 @@ createCacheKey = {
     }
   },
 };
-const result1 = set.fileFinishedImporting("modules/messages/native/renderer/RowGeneratorUtils.tsx");
+const size = fn(2);
+const result1 = size.fileFinishedImporting("modules/messages/native/renderer/RowGeneratorUtils.tsx");
 
-export default createCacheKey;
+export default createStyles;
 export const InviteEmbedBackground = { dark: "#313339", light: "#fafafa" };
-export const resolveHighlightThemedColors = createCacheKey;
+export const resolveHighlightThemedColors = createStyles;

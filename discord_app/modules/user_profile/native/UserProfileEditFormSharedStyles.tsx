@@ -1,10 +1,10 @@
 // discord_app/modules/user_profile/native/UserProfileEditFormSharedStyles.tsx
-import set from "../../../../_runtime/00002_set.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import ARBITRARY_LARGE_OFFSET from "Constants.tsx";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import Constants from "Constants.tsx";
+import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-({ ARBITRARY_LARGE_OFFSET, FLOATING_UPSELL_HEIGHT } = ARBITRARY_LARGE_OFFSET);
+({ ARBITRARY_LARGE_OFFSET, FLOATING_UPSELL_HEIGHT } = Constants);
 let obj = {
   container: { flex: 1 },
   bounceOffset: null,
@@ -13,34 +13,28 @@ let obj = {
   errorContainer: null,
   floatingUpsell: null,
 };
-obj = {
+const rect = {
   position: "absolute",
   top: -ARBITRARY_LARGE_OFFSET,
   height: ARBITRARY_LARGE_OFFSET,
   right: 0,
   left: 0,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
+  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
-obj[1] = obj;
-obj[2] = { zIndex: 1 };
-obj[3] = { marginTop: 16, padding: 16, borderRadius: ThemesDefault.radii.lg, rowGap: 20 };
-obj[4] = { flex: 1, flexDirection: "row", justifyContent: "center" };
-const obj1 = { marginTop: 16, padding: 16, borderRadius: ThemesDefault.radii.lg, rowGap: 20 };
-obj[5] = {
+obj.bounceOffset = rect;
+obj.avatarContainer = { zIndex: 1 };
+obj = { marginTop: 16, padding: 16, borderRadius: nativeDefault.radii.lg, rowGap: 20 };
+obj.formContainer = obj;
+obj.errorContainer = { flex: 1, flexDirection: "row", justifyContent: "center" };
+const rect1 = {
   position: "absolute",
-  marginBottom: ThemesDefault.space.PX_4,
+  marginBottom: nativeDefault.space.PX_4,
   left: 0,
   right: 0,
   maxHeight: FLOATING_UPSELL_HEIGHT - 12,
 };
-const styles = createCacheKey.createStyles(obj);
-const obj2 = {
-  position: "absolute",
-  marginBottom: ThemesDefault.space.PX_4,
-  left: 0,
-  right: 0,
-  maxHeight: FLOATING_UPSELL_HEIGHT - 12,
-};
-const result = set.fileFinishedImporting("modules/user_profile/native/UserProfileEditFormSharedStyles.tsx");
+obj.floatingUpsell = rect1;
+const styles = createStyles.createStyles(obj);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileEditFormSharedStyles.tsx");
 
 export default styles;

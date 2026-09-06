@@ -1,45 +1,46 @@
 // discord_app/modules/guild_member_verification/hooks/useGetJoinRequestAndGuildForInterviewChannel.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
-import closure_5 from "../../../stores/GuildStore.tsx";
-import closure_6 from "../../../stores/PermissionStore.tsx";
-import closure_7 from "../GuildJoinRequestStore.tsx";
-import closure_8 from "../UserGuildJoinRequestStore.tsx";
-import { Permissions } from "../../../Constants.tsx";
+import GuildJoinRequestActionCreatorsDefault from "../GuildJoinRequestActionCreators.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
+import GuildStore from "../../../stores/GuildStore.tsx";
+import PermissionStore from "../../../stores/PermissionStore.tsx";
+import GuildJoinRequestStore from "../GuildJoinRequestStore.tsx";
+import UserGuildJoinRequestStore from "../UserGuildJoinRequestStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting(
+require = fn;
+const Permissions = fn(1074).Permissions;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/guild_member_verification/hooks/useGetJoinRequestAndGuildForInterviewChannel.tsx",
 );
 
 export default function useGetJoinRequestAndGuildForInterviewChannel(id) {
-  [tmp2, require] = callback(joinRequest.useState(false), 2);
-  const tmp3 = callback(joinRequest.useState(false), 2);
+  [tmp2, require] = _slicedToArray(joinRequest.useState(false), 2);
+  const tmp3 = _slicedToArray(joinRequest.useState(false), 2);
   const first = tmp3[0];
   dependencyMap = tmp3[1];
-  const tmp = callback(joinRequest.useState(false), 2);
+  const tmp = _slicedToArray(joinRequest.useState(false), 2);
   const castResult = first(11).cast(id);
-  callback = castResult;
+  _slicedToArray = castResult;
   let obj = first(11);
-  const items = [closure_7, closure_8, joinRequestGuild, closure_6];
+  const items = [GuildJoinRequestStore, UserGuildJoinRequestStore, joinRequestGuild, PermissionStore];
   const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => {
-    const request = closure_1_7.getRequest(closure_3);
+    const request = GuildJoinRequestStore.getRequest(castResult);
     if (null == request) {
       return { joinRequest: null, isModmin: false, guild: null };
     } else {
-      let guild = joinRequestGuild.getGuild(request.guildId);
+      let guild = GuildStore.getGuild(request.guildId);
       if (guild == null) {
-        guild = closure_1_8.getJoinRequestGuild(request.guildId);
+        guild = UserGuildJoinRequestStore.getJoinRequestGuild(request.guildId);
       }
-      const obj = { joinRequest: null, isModmin: null, guild: null };
-      obj[0] = request;
+      const obj = { joinRequest: request, isModmin: null, guild: null };
       let canResult = null != guild;
       if (canResult) {
-        canResult = closure_1_6.can(closure_1_9.KICK_MEMBERS, guild);
+        canResult = PermissionStore.can(Permissions.KICK_MEMBERS, guild);
       }
-      obj[1] = canResult;
-      obj[2] = guild;
+      obj.isModmin = canResult;
+      obj.guild = guild;
       return obj;
     }
   });
@@ -48,20 +49,18 @@ export default function useGetJoinRequestAndGuildForInterviewChannel(id) {
   const items1 = [joinRequestGuild, first];
   const effect = joinRequest.useEffect(() => {
     if (!tmp) {
-      dependencyMap(true);
-      const requestToJoinGuilds = first(5541).fetchRequestToJoinGuilds();
-      const obj = first(5541);
+      closure_2(true);
+      const requestToJoinGuilds = GuildJoinRequestActionCreatorsDefault.fetchRequestToJoinGuilds();
     }
   }, items1);
   const items2 = [joinRequest, castResult];
   const effect1 = joinRequest.useEffect(() => {
     if (null == joinRequest) {
-      callback(true);
-      const joinRequestForInterview = first(5541).fetchJoinRequestForInterview(closure_3);
+      require(true);
+      const joinRequestForInterview = GuildJoinRequestActionCreatorsDefault.fetchJoinRequestForInterview(castResult);
       joinRequestForInterview.finally(() => {
-        callback(false);
+        closure_1_0(false);
       });
-      const obj = first(5541);
     }
   }, items2);
   return { loading, joinRequest, joinRequestGuild };

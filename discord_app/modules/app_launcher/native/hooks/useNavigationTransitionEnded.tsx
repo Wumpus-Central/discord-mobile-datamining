@@ -1,26 +1,26 @@
 // discord_app/modules/app_launcher/native/hooks/useNavigationTransitionEnded.tsx
-import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import { useAppLauncherNavigation } from "../AppLauncherNativeConstants.tsx";
+import Link from "../../../../../_runtime/01484_Link.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
-  "modules/app_launcher/native/hooks/useNavigationTransitionEnded.tsx",
-);
+require = fn;
+const useAppLauncherNavigation = fn(1482).useAppLauncherNavigation;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/hooks/useNavigationTransitionEnded.tsx");
 
 export default function useNavigationTransitionEnded() {
-  const tmp = route(React.useState(false), 2);
-  const _require = tmp2;
+  const tmp = _slicedToArray(noop.useState(false), 2);
+  closure_0 = tmp2;
   const tmp3 = useAppLauncherNavigation();
-  dependencyMap = tmp3;
-  route = require("../../../../../_runtime/01484_createStandardNavigationFactories.js").useRoute();
+  closure_1 = tmp3;
+  const route = Link.useRoute();
   const items = [tmp3, route, tmp[1]];
-  const effect = React.useEffect(
+  const effect = noop.useEffect(
     () =>
-      closure_1.addListener("transitionEnd", () => {
+      state.addListener("transitionEnd", () => {
         state = state.getState();
         if (state.routes[state.index].key === key.key) {
-          callback(true);
+          closure_1_0(true);
         }
       }),
     items,

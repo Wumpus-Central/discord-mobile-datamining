@@ -1,68 +1,68 @@
 // discord_app/modules/user_settings/defs/native/AccountAgeGroupSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import ME from "../../../../Constants.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import DismissibleContent from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import TableRowInner from "../../../../design/components/TableRow/native/TableRow.native.tsx";
-import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
-import useIsTinyBroncoSettingsEnabled from "../../../tiny_bronco/native/TinyBroncoSettingsPredicate.tsx";
-import AgeGroupState from "../../../age_assurance/useAgeGroupPresentation.tsx";
-import isTinyBroncoAnnouncementCountry from "../../../tiny_bronco/TinyBroncoAccountStatusVisibility.tsx";
+import _mod17 from "../../../../../_runtime/metro/00017__.js";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Constants from "../../../../Constants.tsx";
+import util from "../../../../intl/index.native.tsx";
+import dismissible_content from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
+import TinyBroncoSettingsPredicate from "../../../tiny_bronco/native/TinyBroncoSettingsPredicate.tsx";
+import useAgeGroupPresentation from "../../../age_assurance/useAgeGroupPresentation.tsx";
+import TinyBroncoAccountStatusVisibility from "../../../tiny_bronco/TinyBroncoAccountStatusVisibility.tsx";
 import DismissiblePremiumNewBadgeDefault from "DismissiblePremiumNewBadge.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
-import useAlwaysShow from "DismissibleBadgeUtils.tsx";
-import { SettingsAgeGroupHeader } from "../../age_group/native/SettingsAgeGroupScreen.tsx";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import DismissibleBadgeUtils from "DismissibleBadgeUtils.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const View = get_ActivityIndicator.View;
-({ jsx: c4, jsxs: c5 } = jsxProd);
+const View = _mod17.View;
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let obj = { trailing: { flexDirection: "row", alignItems: "center", flexShrink: 1 }, badge: null };
-obj = { marginLeft: 0, marginRight: ThemesDefault.space.PX_4 };
-obj[1] = obj;
-let closure_6 = createCacheKey.createStyles(obj);
+obj = { marginLeft: 0, marginRight: nativeDefault.space.PX_4 };
+obj.badge = obj;
+let closure_6 = createStyles.createStyles(obj);
 const obj1 = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.piqs0o);
+    const intl = util.intl;
+    return intl.string(util.t.piqs0o);
   },
-  parent: MobileUserSettings.MobileUserSettings.ACCOUNT,
+  parent: SettingsConstants.MobileUserSettings.ACCOUNT,
   useTrailing: function useAccountAgeGroupTrailing() {
-    const tmp = callback2();
-    let obj = AgeGroupState;
+    const tmp = closure_6();
+    let obj = useAgeGroupPresentation;
     const ageGroupValueLabel = obj.useAgeGroupValueLabel();
-    const shouldShowTinyBroncoAccountStatus = isTinyBroncoAnnouncementCountry.useShouldShowTinyBroncoAccountStatus();
+    const shouldShowTinyBroncoAccountStatus = TinyBroncoAccountStatusVisibility.useShouldShowTinyBroncoAccountStatus();
     obj = { style: tmp.trailing, children: null };
     let tmp8 = shouldShowTinyBroncoAccountStatus;
     if (shouldShowTinyBroncoAccountStatus) {
-      obj = { dismissibleContent: null, containerStyle: null, noGradient: true };
-      obj[0] = tmp2(1943).DismissibleContent.TINY_BRONCO_SETTINGS;
-      obj[1] = tmp.badge;
-      tmp8 = callback(DismissiblePremiumNewBadgeDefault, obj);
-      const tmp11 = DismissiblePremiumNewBadgeDefault;
+      obj = {
+        dismissibleContent: tmp2(1943).DismissibleContent.TINY_BRONCO_SETTINGS,
+        containerStyle: tmp.badge,
+        noGradient: true,
+      };
+      tmp8 = React4(DismissiblePremiumNewBadgeDefault, obj);
     }
-    const items = [tmp8, callback(TableRowInner.TableRow.TrailingText, { text: ageGroupValueLabel })];
-    obj[1] = items;
-    return closure_5(View, obj);
+    const items = [tmp8, React4(TableRow.TableRow.TrailingText, { text: ageGroupValueLabel })];
+    obj.children = items;
+    return hasOwnProperty(View, obj);
   },
   usePreNavigationAction: null,
   usePredicate: null,
   screen: null,
 };
-obj1[3] = useAlwaysShow.createDismissibleBadgePreNavigationAction(
-  DismissibleContent.DismissibleContent.TINY_BRONCO_SETTINGS,
-  isTinyBroncoAnnouncementCountry.useShouldShowTinyBroncoAccountStatus,
+obj1.usePreNavigationAction = DismissibleBadgeUtils.createDismissibleBadgePreNavigationAction(
+  dismissible_content.DismissibleContent.TINY_BRONCO_SETTINGS,
+  TinyBroncoAccountStatusVisibility.useShouldShowTinyBroncoAccountStatus,
 );
-obj1[4] = useIsTinyBroncoSettingsEnabled.useIsTinyBroncoSettingsEnabled;
-obj1[5] = {
-  route: ME.UserSettingsSections.AGE_GROUP,
+obj1.usePredicate = TinyBroncoSettingsPredicate.useIsTinyBroncoSettingsEnabled;
+obj1.screen = {
+  route: Constants.UserSettingsSections.AGE_GROUP,
   getComponent() {
-    return SettingsAgeGroupHeader /* SettingsAgeGroupHeader */.default;
+    return require("SettingsAgeGroupScreen").default;
   },
 };
-const route = createToggle.createRoute(obj1);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/AccountAgeGroupSetting.tsx");
+const route = SettingBuilders.createRoute(obj1);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountAgeGroupSetting.tsx");
 
 export default route;

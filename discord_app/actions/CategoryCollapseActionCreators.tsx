@@ -1,26 +1,22 @@
 // discord_app/actions/CategoryCollapseActionCreators.tsx
-import set from "../../_runtime/00002_set.js";
-import dispatcherDefault from "../Dispatcher.tsx";
+import DispatcherDefault from "../Dispatcher.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("actions/CategoryCollapseActionCreators.tsx");
+const result = size.fileFinishedImporting("actions/CategoryCollapseActionCreators.tsx");
 
-export const categoryCollapse = function categoryCollapse(id) {
-  let obj = dispatcherDefault;
-  obj = { type: "CATEGORY_COLLAPSE", id };
+export const categoryCollapse = function categoryCollapse(channel) {
+  const obj = { type: "CATEGORY_COLLAPSE", id: channel };
   obj.dispatch(obj);
 };
-export const categoryExpand = function categoryExpand(id) {
-  let obj = dispatcherDefault;
-  obj = { type: "CATEGORY_EXPAND", id };
+export const categoryExpand = function categoryExpand(channel) {
+  const obj = { type: "CATEGORY_EXPAND", id: channel };
   obj.dispatch(obj);
 };
 export const categoryCollapseAll = function categoryCollapseAll(guildId) {
-  let obj = dispatcherDefault;
-  obj = { type: "CATEGORY_COLLAPSE_ALL", guildId };
+  const obj = { type: "CATEGORY_COLLAPSE_ALL", guildId };
   obj.dispatch(obj);
 };
 export const categoryExpandAll = function categoryExpandAll(guildId) {
-  let obj = dispatcherDefault;
-  obj = { type: "CATEGORY_EXPAND_ALL", guildId };
+  const obj = { type: "CATEGORY_EXPAND_ALL", guildId };
   obj.dispatch(obj);
 };

@@ -1,23 +1,23 @@
 // discord_app/modules/feedback/native/RatingSelector.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import registerAssetDefault from "../../../../_runtime/11631_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/11636_registerAsset.js";
-import registerAssetDefault3 from "../../../../_runtime/11641_registerAsset.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import FeedbackRating from "../Constants.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import _modDef11631 from "../../../../_runtime/metro/11631__.js";
+import _modDef11636 from "../../../../_runtime/metro/11636__.js";
+import _modDef11641 from "../../../../_runtime/metro/11641__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-noopAll;
-({ View: c3, Image: c4 } = get_ActivityIndicator);
-({ DEFAULT_RATINGS: c5, FeedbackRating: closure_6 } = FeedbackRating);
-let closure_8 = createCacheKey.createStyles({
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ View: c3, Image: closure_4 } = get_ActivityIndicator);
+const Constants = fn(11626);
+({ DEFAULT_RATINGS: hasOwnProperty, FeedbackRating: metroRequire } = Constants);
+const jsx = fn(21).jsx;
+let createStyles = fn(4560);
+let closure_8 = createStyles.createStyles({
   ratings: { flexDirection: "row", alignItems: "center", justifyContent: "center" },
   rating: {},
   emoji: { width: 64, height: 64, marginVertical: 24, marginHorizontal: 12 },
 });
-let closure_9 = createCacheKey.createStyles({
+createStyles = fn(4560);
+let closure_9 = createStyles.createStyles({
   ratings: {
     flexDirection: "column",
     alignItems: "flex-start",
@@ -28,7 +28,8 @@ let closure_9 = createCacheKey.createStyles({
   rating: { width: "100%" },
   emoji: { width: 32, height: 32 },
 });
-const result = require("set").fileFinishedImporting("modules/feedback/native/RatingSelector.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/feedback/native/RatingSelector.tsx");
 
 export default function RatingSelector(ratingOptions) {
   ratingOptions = ratingOptions.ratingOptions;
@@ -36,51 +37,50 @@ export default function RatingSelector(ratingOptions) {
     ratingOptions = closure_5;
   }
   const textLabels = ratingOptions.textLabels;
-  let obj = textLabels;
   ({ selectedRating: importDefault, onChangeRating: dependencyMap } = ratingOptions);
   closure_3 = undefined;
-  let tmp2 = callback();
+  let tmp2 = closure_8();
   if (null != textLabels) {
     tmp2 = tmp;
   }
   closure_3 = tmp2;
-  obj = undefined;
-  obj = {};
+  let obj = {};
   obj = { source: null, getLabel: null, rating: null };
-  obj = { selected: registerAssetDefault, normal: null };
-  let obj3 = obj(11632);
-  obj[1] = obj3.useFeedbackModalSadDesaturatedSource();
-  obj[0] = obj;
-  obj[1] = function getLabel() {
-    const intl = obj(1114).intl;
-    return intl.string(obj(1114).t["C/12Tt"]);
+  obj = { selected: _modDef11631, normal: null };
+  let obj3 = textLabels(11632);
+  obj.normal = obj3.useFeedbackModalSadDesaturatedSource();
+  obj.source = obj;
+  obj.getLabel = function getLabel() {
+    const intl = textLabels(1114).intl;
+    return intl.string(textLabels(1114).t["C/12Tt"]);
   };
-  obj[2] = constants.BAD;
+  obj.rating = constants.BAD;
   obj[constants.BAD] = obj;
-  obj1 = { source: null, getLabel: null, rating: null };
-  let obj2 = { selected: registerAssetDefault2, normal: null };
-  tmp = callback2();
-  obj2[1] = obj(11637).useFeedbackModalNeutralDesaturatedSource();
-  obj1[0] = obj2;
-  obj1[1] = function getLabel() {
-    const intl = obj(1114).intl;
-    return intl.string(obj(1114).t.Xcb4cF);
+  let obj1 = { source: null, getLabel: null, rating: null };
+  let obj2 = { selected: _modDef11636, normal: null };
+  tmp = closure_9();
+  obj2.normal = textLabels(11637).useFeedbackModalNeutralDesaturatedSource();
+  obj1.source = obj2;
+  obj1.getLabel = function getLabel() {
+    const intl = textLabels(1114).intl;
+    return intl.string(textLabels(1114).t.Xcb4cF);
   };
-  obj1[2] = constants.NEUTRAL;
+  obj1.rating = constants.NEUTRAL;
   obj[constants.NEUTRAL] = obj1;
   obj3 = { source: null, getLabel: null, rating: null };
-  let obj4 = { selected: registerAssetDefault3, normal: null };
-  const obj7 = obj(11637);
-  obj4[1] = obj(11642).useFeedbackModalHappyDesaturatedSource();
-  obj3[0] = obj4;
-  obj3[1] = function getLabel() {
-    const intl = obj(1114).intl;
-    return intl.string(obj(1114).t["1Vyb5J"]);
+  let obj4 = { selected: _modDef11641, normal: null };
+  const obj7 = textLabels(11637);
+  obj4.normal = textLabels(11642).useFeedbackModalHappyDesaturatedSource();
+  obj3.source = obj4;
+  obj3.getLabel = function getLabel() {
+    const intl = textLabels(1114).intl;
+    return intl.string(textLabels(1114).t["1Vyb5J"]);
   };
-  obj3[2] = constants.GOOD;
+  obj3.rating = constants.GOOD;
   obj[constants.GOOD] = obj3;
-  const mapped = ratingOptions.map((arg0) => obj[arg0]);
-  const obj10 = obj(11642);
+  closure_129_0 = obj;
+  const mapped = ratingOptions.map((item) => textLabels[item]);
+  const obj10 = textLabels(11642);
   return (
     <closure_3 style={tmp2.ratings}>
       {mapped.map((rating) => {
@@ -88,65 +88,60 @@ export default function RatingSelector(ratingOptions) {
         ({ selected, normal } = rating.source);
         const getLabel = rating.getLabel;
         if (null != rating) {
-          obj = { style: null, children: null };
-          obj[0] = closure_3.rating;
+          let obj = { style: closure_3.rating, children: null };
           obj = {
             accessibilityRole: "button",
-            accessibilityLabel: null,
+            accessibilityLabel: getLabel(),
             accessibilityState: null,
             onPress: null,
             icon: null,
             label: null,
           };
-          obj[1] = getLabel();
-          obj = { selected: null };
-          obj[0] = closure_1 === rating;
-          obj[2] = obj;
-          obj[3] = function onPress() {
-            return closure_1_2(rating);
+          obj = { selected: closure_1 === rating };
+          obj.accessibilityState = obj;
+          obj.onPress = function onPress() {
+            return dependencyMap(rating);
           };
-          obj1 = { style: null, source: null };
-          obj1[0] = closure_3.emoji;
+          const obj1 = { style: closure_3.emoji, source: null };
           if (closure_1 === rating) {
             normal = selected;
           }
-          obj1[1] = normal;
-          obj[4] = closure_1_7(closure_1_4, obj1);
-          obj[5] = tmp[rating];
-          obj[1] = closure_1_7(obj(closure_1_2[12]).RowButton, obj);
-          let tmp14Result = closure_1_7(closure_3, obj, rating);
-          const tmp12 = closure_1_7;
-          const tmp13 = closure_1_4;
-          const tmp4 = closure_1_7;
-          const tmp5 = closure_3;
-          const tmp7 = closure_1_7;
+          obj1.source = normal;
+          obj.icon = <closure_1_4 style={closure_3.emoji} source={null} />;
+          obj.label = tmp[rating];
+          obj.children = jsx(textLabels(8595).RowButton, { selected: closure_1 === rating });
+          let tmp14Result = <closure_3 key={rating} selected={closure_1 === rating} />;
         } else {
           const obj2 = {
             accessibilityRole: "button",
-            accessibilityLabel: null,
+            accessibilityLabel: getLabel(),
             accessibilityState: null,
             onPress: null,
             children: null,
           };
-          obj2[1] = getLabel();
-          const obj3 = { selected: null };
-          obj3[0] = closure_1 === rating;
-          obj2[2] = obj3;
-          obj2[3] = function onPress() {
-            return closure_1_2(rating);
+          const obj3 = { selected: closure_1 === rating };
+          obj2.accessibilityState = obj3;
+          obj2.onPress = function onPress() {
+            return dependencyMap(rating);
           };
-          const obj4 = { style: null, source: null };
-          obj4[0] = closure_3.emoji;
+          const obj4 = { style: closure_3.emoji, source: null };
           let tmp2 = normal;
           if (closure_1 === rating) {
             tmp2 = selected;
           }
-          obj4[1] = tmp2;
-          obj2[4] = closure_1_7(closure_1_4, obj4);
-          tmp14Result = closure_1_7(obj(closure_1_2[13]).PressableOpacity, obj2, rating);
-          const tmp14 = closure_1_7;
-          const tmp19 = closure_1_7;
-          const tmp20 = closure_1_4;
+          obj4.source = tmp2;
+          obj2.children = <closure_1_4 style={closure_3.emoji} source={null} />;
+          tmp14Result = jsx(
+            textLabels(5123).PressableOpacity,
+            {
+              accessibilityRole: "button",
+              accessibilityLabel: getLabel(),
+              accessibilityState: null,
+              onPress: null,
+              children: null,
+            },
+            rating,
+          );
         }
         return tmp14Result;
       })}

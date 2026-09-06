@@ -1,93 +1,95 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplatePreviewCard.tsx
-import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../../../intl/index.native.tsx";
-import Button from "../../../../../design/void/native.tsx";
-import Text from "../../../../../design/components/Text/native/Text.tsx";
-import registerAssetDefault from "../../../../../../_runtime/07158_registerAsset.js";
-import getPrivateChannelIconComponent from "GuildRoleSubscriptionTierTemplateUtils.tsx";
-import closure_4 from "../../../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import ME from "../../../../../Constants.tsx";
-import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../../intl/index.native.tsx";
+import native from "../../../../../design/void/native.tsx";
+import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
+import asyncRequireImpl from "../../../../../../_runtime/01896_asyncRequireImpl.js";
+import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
+import _modDef7158 from "../../../../../../_runtime/metro/07158__.js";
+import GuildRoleSubscriptionTierTemplateUtils from "GuildRoleSubscriptionTierTemplateUtils.tsx";
+import GuildRoleSubscriptionTierTemplateActionCreators from "../../../tier_templates/GuildRoleSubscriptionTierTemplateActionCreators.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+const AppAnalyticsUtils = tmp(4740);
+require = fn;
 function ContentHeader(arg0) {
   ({ count, title } = arg0);
-  const tmp = callback3();
+  const tmp = closure_11();
   let obj = { variant: "text-xs/bold", color: "text-muted", style: tmp.contentHeader, children: null };
   obj = { variant: "text-xs/bold", color: "text-default", style: tmp.contentHeader, children: count };
-  const items = [callback(Text.Text, obj), " ", title];
-  obj[3] = items;
-  return callback2(Text.Text, obj);
+  const items = [React7(Text_Text.Text, obj), " ", title];
+  obj.children = items;
+  return closure_1_10(Text_Text.Text, obj);
 }
 function Separator() {
-  return callback(closure_6, { style: callback3().separator });
+  return React7(timestampProducer, { style: closure_11().separator });
 }
 function BenefitShowCase(children) {
   const title = children.title;
   let tmp3 = title;
   if (typeof title === "string") {
-    let obj = { variant: "text-md/semibold", color: "text-default", children: null };
-    obj[2] = title;
-    tmp3 = callback(Text.Text, obj);
+    let obj = { variant: "text-md/semibold", color: "text-default", children: title };
+    tmp3 = React7(Text_Text.Text, obj);
   }
   obj = { children: null };
   const items = [
     tmp3,
-    callback(Button.Spacer, { size: 2 }),
-    callback(Text.Text, {
+    React7(native.Spacer, { size: 2 }),
+    React7(Text_Text.Text, {
       variant: "text-sm/medium",
       color: "interactive-text-default",
       children: children.description,
     }),
   ];
-  obj[0] = items;
-  return closure_10(closure_6, obj);
+  obj.children = items;
+  return closure_1_10(timestampProducer, obj);
 }
 function ChannelBenefitShowCase(channel) {
   ({ description, type, name } = channel.channel);
-  let obj = getPrivateChannelIconComponent;
-  obj = { style: { flexDirection: "row", alignItems: "center" }, children: null };
+  let obj = { style: { flexDirection: "row", alignItems: "center" }, children: null };
   const items = [
-    callback(obj.getPrivateChannelIconComponent(type), { size: "xs" }),
-    callback(Button.Spacer, { size: 4 }),
-    callback(Text.Text, { variant: "text-md/semibold", color: "text-default", children: name }),
+    React7(obj.getPrivateChannelIconComponent(type), { size: "xs" }),
+    React7(native.Spacer, { size: 4 }),
+    React7(Text_Text.Text, { variant: "text-md/semibold", color: "text-default", children: name }),
   ];
-  obj[1] = items;
-  obj = { title: callback2(closure_6, obj), description };
-  return callback(BenefitShowCase, obj);
+  obj.children = items;
+  obj = { title: closure_1_10(timestampProducer, obj), description };
+  return React7(BenefitShowCase, obj);
 }
 function ViewEntireTemplateFooter() {
-  const tmp = callback3();
+  const tmp = closure_11();
   let obj = { style: tmp.viewEntireTemplateFooter, children: null };
   obj = { children: null };
   obj = { variant: "text-sm/semibold", color: "interactive-text-hover", style: { marginTop: -1 }, children: null };
-  const intl = getSystemLocale.intl;
-  obj[3] = intl.string(getSystemLocale.t.kejaOD);
+  const intl = util.intl;
+  obj.children = intl.string(util.t.kejaOD);
   const items = [
-    callback(Text.Text, obj),
-    callback(Button.Spacer, { size: 3 }),
-    callback(closure_6, { style: tmp.viewEntireTemplateFooterUnderline }),
+    React7(Text_Text.Text, obj),
+    React7(native.Spacer, { size: 3 }),
+    React7(timestampProducer, { style: tmp.viewEntireTemplateFooterUnderline }),
   ];
-  obj[0] = items;
-  const items1 = [callback2(closure_6, obj)];
-  const obj2 = {
-    children: callback(Button.Icon, {
-      size: Button.Icon.Sizes.REFRESH_SMALL_16,
-      source: registerAssetDefault,
-      style: { transform: items2 },
-    }),
-  };
-  items2 = [{ rotate: "180deg" }];
-  items1[1] = callback(closure_6, obj2);
-  obj[1] = items1;
-  return callback2(closure_6, obj);
+  obj.children = items;
+  const items1 = [closure_1_10(timestampProducer, obj)];
+  const obj2 = { children: null };
+  const obj3 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef7158, style: null };
+  const obj4 = { transform: null };
+  const items2 = [{ rotate: "180deg" }];
+  obj4.transform = items2;
+  obj3.style = obj4;
+  obj2.children = React7(native.Icon, obj3);
+  items1[1] = React7(timestampProducer, obj2);
+  obj.children = items1;
+  return closure_1_10(timestampProducer, obj);
 }
-({ TouchableOpacity: c5, View: closure_6 } = get_ActivityIndicator);
-({ AnalyticEvents: error, GuildSettingsSections: closure_8 } = ME);
-({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = {
+get_ActivityIndicator = fn(17);
+({ TouchableOpacity: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+const Constants = fn(1074);
+({ AnalyticEvents: closure_7, GuildSettingsSections: closure_8 } = Constants);
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+fn(4560);
+let createStyles = {
   container: null,
   subscriptionPlanTextStyle: null,
   descriptionPlanTextStyle: null,
@@ -97,88 +99,64 @@ createCacheKey = {
   viewEntireTemplateFooter: null,
   viewEntireTemplateFooterUnderline: null,
 };
-createCacheKey = {
+createStyles = {
   padding: 16,
-  borderRadius: ThemesDefault.radii.md,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL,
+  borderRadius: nativeDefault.radii.md,
+  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL,
   width: 319,
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { color: ThemesDefault.colors.TEXT_SUBTLE };
-let obj1 = { color: ThemesDefault.colors.TEXT_SUBTLE };
-createCacheKey[2] = { color: ThemesDefault.colors.TEXT_MUTED, paddingTop: 8, paddingBottom: 16 };
-let obj2 = { color: ThemesDefault.colors.TEXT_MUTED, paddingTop: 8, paddingBottom: 16 };
-createCacheKey[3] = {
+createStyles.container = createStyles;
+createStyles.subscriptionPlanTextStyle = { color: nativeDefault.colors.TEXT_SUBTLE };
+let obj1 = { color: nativeDefault.colors.TEXT_SUBTLE };
+createStyles.descriptionPlanTextStyle = { color: nativeDefault.colors.TEXT_MUTED, paddingTop: 8, paddingBottom: 16 };
+let size = {
   width: "100%",
   height: 1,
-  backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_HOVER,
+  backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_HOVER,
   marginVertical: 16,
 };
+createStyles.separator = size;
+let obj2 = { color: nativeDefault.colors.TEXT_MUTED, paddingTop: 8, paddingBottom: 16 };
+createStyles.contentContainer = {
+  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderTopRightRadius: nativeDefault.radii.sm,
+  borderTopLeftRadius: nativeDefault.radii.sm,
+  padding: 16,
+  paddingBottom: 0,
+};
+createStyles.contentHeader = { textTransform: "uppercase" };
 let obj3 = {
-  width: "100%",
-  height: 1,
-  backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_HOVER,
-  marginVertical: 16,
-};
-createCacheKey[4] = {
-  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
-  borderTopRightRadius: ThemesDefault.radii.sm,
-  borderTopLeftRadius: ThemesDefault.radii.sm,
+  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderTopRightRadius: nativeDefault.radii.sm,
+  borderTopLeftRadius: nativeDefault.radii.sm,
   padding: 16,
   paddingBottom: 0,
 };
-createCacheKey[5] = { textTransform: "uppercase" };
-let obj4 = {
-  backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH,
-  borderTopRightRadius: ThemesDefault.radii.sm,
-  borderTopLeftRadius: ThemesDefault.radii.sm,
-  padding: 16,
-  paddingBottom: 0,
-};
-createCacheKey[6] = {
+createStyles.viewEntireTemplateFooter = {
   paddingVertical: 16,
   display: "flex",
   flexDirection: "row",
   justifyContent: "center",
   alignItems: "center",
-  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
-  borderBottomLeftRadius: ThemesDefault.radii.sm,
-  borderBottomRightRadius: ThemesDefault.radii.sm,
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
+  borderBottomLeftRadius: nativeDefault.radii.sm,
+  borderBottomRightRadius: nativeDefault.radii.sm,
   marginLeft: -16,
   marginRight: -16,
   marginTop: 16,
 };
-let obj5 = {
-  paddingVertical: 16,
-  display: "flex",
-  flexDirection: "row",
-  justifyContent: "center",
-  alignItems: "center",
-  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
-  borderBottomLeftRadius: ThemesDefault.radii.sm,
-  borderBottomRightRadius: ThemesDefault.radii.sm,
-  marginLeft: -16,
-  marginRight: -16,
-  marginTop: 16,
-};
-createCacheKey[7] = {
+const rect = {
   position: "absolute",
   left: 0,
   right: 0,
   height: 1,
   bottom: 0,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
+  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
 };
-let closure_11 = createCacheKey.createStyles(createCacheKey);
-let obj6 = {
-  position: "absolute",
-  left: 0,
-  right: 0,
-  height: 1,
-  bottom: 0,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED,
-};
-let result = require("set").fileFinishedImporting(
+createStyles.viewEntireTemplateFooterUnderline = rect;
+let closure_11 = createStyles.createStyles(createStyles);
+size = fn(2);
+let result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplatePreviewCard.tsx",
 );
 
@@ -187,16 +165,13 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
   ({ priceTiers, guildId } = template);
   const groupListingId = template.groupListingId;
   let navigation;
-  let addNewEditStateFromTemplate;
-  let callback;
-  let suggestedUnusedPrices;
   closure_7 = undefined;
   let callback1;
-  let tmp = callback3();
+  let tmp = closure_11();
   let obj = template(navigation[15]);
   navigation = obj.useNavigation();
-  obj1 = groupListingId(navigation[16]);
-  addNewEditStateFromTemplate = obj1.useEditStateIds(groupListingId, template.editGroupId, {
+  let obj1 = groupListingId(navigation[16]);
+  const addNewEditStateFromTemplate = obj1.useEditStateIds(groupListingId, template.editGroupId, {
     includeSoftDeleted: true,
   }).addNewEditStateFromTemplate;
   const first = template.listings[0];
@@ -204,41 +179,35 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
   const first1 = additional_perks[0];
   let obj2 = addNewEditStateFromTemplate;
   const items = [addNewEditStateFromTemplate, groupListingId, navigation, guildId];
-  callback = addNewEditStateFromTemplate.useCallback((selectedTemplate) => {
-    let obj = template(navigation[17]);
+  const callback = addNewEditStateFromTemplate.useCallback((selectedTemplate, arg1) => {
+    let obj = GuildRoleSubscriptionTierTemplateActionCreators;
     const result = obj.stashTemplateChannels(selectedTemplate, guildId);
     if (arg1) {
-      guildId(tmp2[7]).hideActionSheet();
-      const obj2 = guildId(tmp2[7]);
+      ActionSheetActionCreatorsDefault.hideActionSheet();
     }
-    const tmp = template;
     const tmp3 = guildId;
     const tmp5 = addNewEditStateFromTemplate(selectedTemplate);
     obj = { exit_reason: "template_selected" };
-    const obj3 = guildId(navigation[18]);
-    const merged = Object.assign(tmp(navigation[19]).collectGuildAnalyticsMetadata(tmp3));
+    const obj3 = AnalyticsUtilsDefault;
+    const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(tmp3));
     obj3.track(constants.ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR_EXITED, obj);
     obj = { groupListingId, initialEditStateId: tmp5 };
-    const replaced = navigation.replace(callback1.ROLE_SUBSCRIPTIONS_TIER_EDIT, obj);
+    const replaced = navigation.replace(constants2.ROLE_SUBSCRIPTIONS_TIER_EDIT, obj);
   }, items);
   let obj3 = template(navigation[20]);
-  suggestedUnusedPrices = obj3.useSuggestedUnusedPrices(guildId, priceTiers, first.price_tier);
+  const suggestedUnusedPrices = obj3.useSuggestedUnusedPrices(guildId, priceTiers, first.price_tier);
   let tmp8 = null != suggestedUnusedPrices;
   if (tmp8) {
     tmp8 = suggestedUnusedPrices.length > 0;
   }
   closure_7 = tmp8;
   const items1 = [callback, suggestedUnusedPrices, tmp8];
-  callback1 = obj2.useCallback((arg0, arg1) => {
+  callback1 = obj2.useCallback((selectedTemplate, arg1) => {
     if (closure_7) {
-      let obj = guildId(navigation[7]);
-      obj = { selectedTemplate: null, handleCreateFromTemplate: null, newPricesToPick: null };
-      obj[0] = arg0;
-      obj[1] = tmp;
-      obj[2] = suggestedUnusedPrices;
-      obj.openLazy(template(navigation[9])(navigation[10], navigation.paths), "TierTemplatePriceReselectionCard", obj);
+      const obj = { selectedTemplate, handleCreateFromTemplate: tmp, newPricesToPick: suggestedUnusedPrices };
+      obj.openLazy(asyncRequireImpl(17788, dependencyMap.paths), "TierTemplatePriceReselectionCard", obj);
     } else {
-      tmp(arg0, arg1);
+      tmp(selectedTemplate, arg1);
     }
   }, items1);
   obj = { style: tmp.container, children: null };
@@ -250,53 +219,52 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
     closeActionSheet: false,
     descriptionTextProps: { numberOfLines: 2, ellipsizeMode: "tail" },
   };
-  const items2 = [callback(template(navigation[21]).GuildRoleSubscriptionTierTemplateBasicInfo, obj)];
+  const items2 = [closure_9(template(navigation[21]).GuildRoleSubscriptionTierTemplateBasicInfo, obj)];
   obj1 = {
     style: tmp.contentContainer,
     onPress() {
-      let obj = guildId(navigation[7]);
-      obj = { template, guildId, handleSelectTemplateInPreview: callback1 };
-      obj.openLazy(template(navigation[9])(navigation[8], navigation.paths), "TierTemplateCard", obj);
+      const obj = { template, guildId, handleSelectTemplateInPreview: callback1 };
+      obj.openLazy(asyncRequireImpl(17784, dependencyMap.paths), "TierTemplateCard", obj);
     },
     children: null,
   };
   obj2 = {
     renderGap() {
-      return callback(closure_13, {});
+      return closure_1_9(Separator, {});
     },
     children: null,
   };
   obj3 = { children: null };
   const obj4 = { title: null, count: null };
   const intl = tmp2(tmp3[13]).intl;
-  obj4[0] = intl.formatToPlainString(template(navigation[13]).t.y7dUrm, { numChannels: channels.length });
-  obj4[1] = channels.length;
+  obj4.title = intl.formatToPlainString(template(navigation[13]).t.y7dUrm, { numChannels: channels.length });
+  obj4.count = channels.length;
   const items3 = [
-    callback(ContentHeader, obj4),
-    callback(template(navigation[11]).Spacer, { size: 12 }),
-    callback(ChannelBenefitShowCase, { channel: channels[0] }),
-    callback(template(navigation[11]).Spacer, { size: 6 }),
+    closure_9(ContentHeader, obj4),
+    closure_9(template(navigation[11]).Spacer, { size: 12 }),
+    closure_9(ChannelBenefitShowCase, { channel: channels[0] }),
+    closure_9(template(navigation[11]).Spacer, { size: 6 }),
   ];
-  obj3[0] = items3;
-  const items4 = [callback2(suggestedUnusedPrices, obj3)];
+  obj3.children = items3;
+  const items4 = [closure_10(suggestedUnusedPrices, obj3)];
   const obj5 = { children: null };
   const obj6 = { title: null, count: null };
   const intl2 = tmp2(tmp3[13]).intl;
-  obj6[0] = intl2.formatToPlainString(template(navigation[13]).t.MR7oOF, { numBenefits: additional_perks.length });
-  obj6[1] = additional_perks.length;
+  obj6.title = intl2.formatToPlainString(template(navigation[13]).t.MR7oOF, { numBenefits: additional_perks.length });
+  obj6.count = additional_perks.length;
   const items5 = [
-    callback(ContentHeader, obj6),
-    callback(template(navigation[11]).Spacer, { size: 12 }),
-    callback(BenefitShowCase, { title: first1.name, description: first1.description }),
-    callback(template(navigation[11]).Spacer, { size: 6 }),
+    closure_9(ContentHeader, obj6),
+    closure_9(template(navigation[11]).Spacer, { size: 12 }),
+    closure_9(BenefitShowCase, { title: first1.name, description: first1.description }),
+    closure_9(template(navigation[11]).Spacer, { size: 6 }),
   ];
-  obj5[0] = items5;
-  items4[1] = callback2(suggestedUnusedPrices, obj5);
-  obj2[1] = items4;
-  const items6 = [callback2(template(navigation[22]).GappedList, obj2), callback(ViewEntireTemplateFooter, {})];
-  obj1[2] = items6;
-  items2[1] = callback2(callback, obj1);
-  obj[1] = items2;
-  return callback2(suggestedUnusedPrices, obj);
+  obj5.children = items5;
+  items4[1] = closure_10(suggestedUnusedPrices, obj5);
+  obj2.children = items4;
+  const items6 = [closure_10(template(navigation[22]).GappedList, obj2), closure_9(ViewEntireTemplateFooter, {})];
+  obj1.children = items6;
+  items2[1] = closure_10(callback, obj1);
+  obj.children = items2;
+  return closure_10(suggestedUnusedPrices, obj);
 }
 export const CARD_WIDTH = 319;

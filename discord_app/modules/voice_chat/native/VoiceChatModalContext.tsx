@@ -1,11 +1,11 @@
 // discord_app/modules/voice_chat/native/VoiceChatModalContext.tsx
-import importAllResult from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let c0 = importAllResult;
-const context = importAllResult.createContext(null);
-const result = require("set").fileFinishedImporting("modules/voice_chat/native/VoiceChatModalContext.tsx");
+const context = noop.createContext(null);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_chat/native/VoiceChatModalContext.tsx");
 
 export const VoiceChatNavigationContext = context;
 export const useVoiceChatNavigationContext = function useVoiceChatNavigationContext() {
-  return importAllResult.useContext(context);
+  return noop.useContext(context);
 };

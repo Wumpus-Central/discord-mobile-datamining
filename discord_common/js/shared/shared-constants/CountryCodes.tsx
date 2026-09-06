@@ -1,8 +1,8 @@
 // discord_common/js/shared/shared-constants/CountryCodes.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
 let obj = {
-  NON_STANDARD_CODES: null,
+  NON_STANDARD_CODES: new Set(["AC", "AN", "DG", "EL", "IC", "MI", "TP", "WK", "XK"]),
   ALL: null,
   US_TERRITORIES: null,
   FRENCH_REGIONS: null,
@@ -30,9 +30,8 @@ let obj = {
   QUESTS_3P_DATA_OPT_OUT_COUNTRIES: null,
   STRIPE_CONNECT_SUPPORTED_COUNTRIES: null,
 };
-let set = new Set(["AC", "AN", "DG", "EL", "IC", "MI", "TP", "WK", "XK"]);
-obj[0] = set;
-obj[1] = new Set([
+const set = new Set(["AC", "AN", "DG", "EL", "IC", "MI", "TP", "WK", "XK"]);
+obj.ALL = new Set([
   "AC",
   "AD",
   "AE",
@@ -552,13 +551,13 @@ const set1 = new Set([
   "ZM",
   "ZW",
 ]);
-obj[2] = new Set(["AS", "GU", "MP", "PR", "UM", "VI"]);
+obj.US_TERRITORIES = new Set(["AS", "GU", "MP", "PR", "UM", "VI"]);
 const set2 = new Set(["AS", "GU", "MP", "PR", "UM", "VI"]);
-obj[3] = new Set(["GF", "GP", "MQ", "NC", "PF", "PM", "RE", "TF", "WF", "YT"]);
+obj.FRENCH_REGIONS = new Set(["GF", "GP", "MQ", "NC", "PF", "PM", "RE", "TF", "WF", "YT"]);
 const set3 = new Set(["GF", "GP", "MQ", "NC", "PF", "PM", "RE", "TF", "WF", "YT"]);
-obj[4] = new Set(["FR", "GF", "GP", "MQ", "NC", "PF", "PM", "RE", "TF", "WF", "YT"]);
+obj.FRANCE_AND_FRENCH_REGION = new Set(["FR", "GF", "GP", "MQ", "NC", "PF", "PM", "RE", "TF", "WF", "YT"]);
 const set4 = new Set(["FR", "GF", "GP", "MQ", "NC", "PF", "PM", "RE", "TF", "WF", "YT"]);
-obj[5] = new Set([
+obj.VAT_EU_COUNTRIES = new Set([
   "AT",
   "BE",
   "BG",
@@ -618,7 +617,7 @@ const set5 = new Set([
   "SI",
   "SK",
 ]);
-obj[6] = new Set([
+obj.VAT_COUNTRIES = new Set([
   "AT",
   "AU",
   "BE",
@@ -684,9 +683,9 @@ const set6 = new Set([
   "SI",
   "SK",
 ]);
-obj[7] = new Set(["CA", "GB", "US"]);
+obj.TAX_DOMESTIC = new Set(["CA", "GB", "US"]);
 const set7 = new Set(["CA", "GB", "US"]);
-obj[8] = new Set([
+obj.EU_COUNTRIES = new Set([
   "AD",
   "AL",
   "AT",
@@ -788,7 +787,7 @@ const set8 = new Set([
   "UA",
   "VA",
 ]);
-obj[9] = new Set([
+obj.EEA_COUNTRIES = new Set([
   "AT",
   "BE",
   "BG",
@@ -854,7 +853,7 @@ const set9 = new Set([
   "SI",
   "SK",
 ]);
-obj[10] = new Set([
+obj.EUROZONE_COUNTRIES = new Set([
   "AT",
   "BE",
   "BG",
@@ -900,7 +899,7 @@ const set10 = new Set([
   "SI",
   "SK",
 ]);
-obj[11] = new Set([
+obj.EURO_CURRENCY_COUNTRIES = new Set([
   "AD",
   "AT",
   "BE",
@@ -958,7 +957,7 @@ const set11 = new Set([
   "VA",
   "XK",
 ]);
-obj[12] = new Set([
+obj.DSA_COUNTRIES = new Set([
   "AT",
   "BE",
   "BG",
@@ -1018,9 +1017,9 @@ const set12 = new Set([
   "SI",
   "SK",
 ]);
-obj[13] = new Set(["AU", "CA", "GB", "NZ", "US"]);
+obj.FIVE_EYES_COUNTRIES = new Set(["AU", "CA", "GB", "NZ", "US"]);
 const set13 = new Set(["AU", "CA", "GB", "NZ", "US"]);
-obj[14] = new Set([
+obj.WITHOUT_POSTAL_CODES = new Set([
   "AE",
   "AG",
   "AN",
@@ -1169,7 +1168,7 @@ const set14 = new Set([
   "ZA",
   "ZW",
 ]);
-obj[0] = new Set([
+obj.US = new Set([
   "AA",
   "AE",
   "AK",
@@ -1233,7 +1232,7 @@ obj[0] = new Set([
   "WV",
   "WY",
 ]);
-obj[15] = obj;
+obj.COUNTRY_STATES = obj;
 const set15 = new Set([
   "AA",
   "AE",
@@ -1298,9 +1297,9 @@ const set15 = new Set([
   "WV",
   "WY",
 ]);
-obj[16] = new Set(["KP", "SY"]);
+obj.EMBARGOED_BILLING_ADDRESS_COUNTRIES = new Set(["KP", "SY"]);
 const set16 = new Set(["KP", "SY"]);
-obj[17] = new Set([
+obj.ALLOWED_BILLING_ADDRESS_COUNTRIES = new Set([
   "AC",
   "AD",
   "AE",
@@ -1816,23 +1815,23 @@ const set17 = new Set([
   "ZM",
   "ZW",
 ]);
-obj[18] = new Set(["RU", "TR"]);
+obj.NON_AD_SERVING_COUNTRIES = new Set(["RU", "TR"]);
 const set18 = new Set(["RU", "TR"]);
-obj[19] = new Set(["CA", "KR", "US"]);
+obj.TAX_EXCLUSIVE = new Set(["CA", "KR", "US"]);
 const set19 = new Set(["CA", "KR", "US"]);
-obj[20] = new Set(["CA", "US"]);
+obj.TAX_ADDRESS_REQUIRE_POSTAL_CODE = new Set(["CA", "US"]);
 const set20 = new Set(["CA", "US"]);
-obj[21] = new Set(["AR", "NY"]);
+obj.QUESTS_1P_DATA_OPT_OUT_U18_REGIONS = new Set(["AR", "NY"]);
 const set21 = new Set(["AR", "NY"]);
-obj[22] = new Set(["BR"]);
+obj.QUESTS_1P_DATA_OPT_OUT_COUNTRIES_U18 = new Set(["BR"]);
 const set22 = new Set(["BR"]);
-obj[23] = new Set(["CA", "MN", "NH", "OR"]);
+obj.QUESTS_3P_DATA_OPT_OUT_U16_REGIONS = new Set(["CA", "MN", "NH", "OR"]);
 const set23 = new Set(["CA", "MN", "NH", "OR"]);
-obj[24] = new Set(["CO", "CT", "DE", "MD", "MT", "NJ", "SC", "TX"]);
+obj.QUESTS_3P_DATA_OPT_OUT_U18_REGIONS = new Set(["CO", "CT", "DE", "MD", "MT", "NJ", "SC", "TX"]);
 const set24 = new Set(["CO", "CT", "DE", "MD", "MT", "NJ", "SC", "TX"]);
-obj[25] = new Set(["BR", "KR"]);
+obj.QUESTS_3P_DATA_OPT_OUT_COUNTRIES = new Set(["BR", "KR"]);
 const set25 = new Set(["BR", "KR"]);
-obj[26] = new Set([
+obj.STRIPE_CONNECT_SUPPORTED_COUNTRIES = new Set([
   "AT",
   "BE",
   "BG",
@@ -1864,7 +1863,7 @@ obj[26] = new Set([
   "SK",
   "US",
 ]);
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/CountryCodes.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/CountryCodes.tsx");
 
 export const CountryCodes = {
   AD: "AD",

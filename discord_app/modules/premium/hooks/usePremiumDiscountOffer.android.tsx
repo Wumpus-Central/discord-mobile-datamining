@@ -1,39 +1,39 @@
 // discord_app/modules/premium/hooks/usePremiumDiscountOffer.android.tsx
+import useStateFromStores from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import ProductIds from "../native/ProductIds.android.tsx";
 import useDiscountOfferDefault from "useDiscountOffer.tsx";
-import closure_3 from "../../../stores/native/IAPStore.android.tsx";
-import GuildFeatures from "../PremiumConstants.tsx";
+import IAPStore from "../../../stores/native/IAPStore.android.tsx";
 
-const require = arg1;
+require = fn;
+const PremiumConstants = fn(1373);
 ({
-  PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_40_PERCENT_DISCOUNT_ID: c4,
-  PREMIUM_TIER_2_REENGAGEMENT_1_MONTH_40_PERCENT_DISCOUNT_ID: c5,
-} = GuildFeatures);
-const result = require("set").fileFinishedImporting("modules/premium/hooks/usePremiumDiscountOffer.android.tsx");
+  PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_40_PERCENT_DISCOUNT_ID: closure_4,
+  PREMIUM_TIER_2_REENGAGEMENT_1_MONTH_40_PERCENT_DISCOUNT_ID: hasOwnProperty,
+} = PremiumConstants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/hooks/usePremiumDiscountOffer.android.tsx");
 
 export const usePremiumDiscountOffer = function usePremiumDiscountOffer() {
-  const items = [closure_3];
-  offerIds = offerIds(563).useStateFromStoresObject(items, () => ({
-    isFetchingProducts: closure_3.isFetchingProducts(),
-    offerIds: closure_3.getOfferIds(),
+  const items = [IAPStore];
+  const offerIds = useStateFromStores.useStateFromStoresObject(items, () => ({
+    isFetchingProducts: IAPStore.isFetchingProducts(),
+    offerIds: IAPStore.getOfferIds(),
   })).offerIds;
-  const obj = offerIds(563);
-  const tmp = offerIds;
-  const tmp3 = importDefault;
-  let values = Object.values(offerIds(7240).DiscountIdToProductOfferId[closure_4]);
+  let values = Object.values(ProductIds.DiscountIdToProductOfferId[React4]);
   let tmp5 = null;
   if (0 !== values.length) {
     let tmp6 = null;
-    if (values.every((arg0) => offerIds.has(arg0))) {
+    if (values.every((item) => offerIds.has(item))) {
       tmp6 = tmp4;
     }
     tmp5 = tmp6;
   }
-  tmp4 = useDiscountOfferDefault(closure_4);
-  values = Object.values(tmp(7240).DiscountIdToProductOfferId[closure_5]);
+  tmp4 = useDiscountOfferDefault(React4);
+  values = Object.values(ProductIds.DiscountIdToProductOfferId[hasOwnProperty]);
   let tmp8 = null;
   if (0 !== values.length) {
     let tmp9 = null;
-    if (values.every((arg0) => offerIds.has(arg0))) {
+    if (values.every((item) => offerIds.has(item))) {
       tmp9 = tmp7;
     }
     tmp8 = tmp9;

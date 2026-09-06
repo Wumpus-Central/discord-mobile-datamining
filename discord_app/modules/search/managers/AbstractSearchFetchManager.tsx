@@ -1,13 +1,13 @@
 // discord_app/modules/search/managers/AbstractSearchFetchManager.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-let result = set.fileFinishedImporting("modules/search/managers/AbstractSearchFetchManager.tsx");
+let result = size.fileFinishedImporting("modules/search/managers/AbstractSearchFetchManager.tsx");
 class AbstractSearchFetchManager {
   constructor() {
-    obj = Object.create(new.target.prototype);
+    merged = Object.assign({ searchFetchers: null });
     map = new Map();
-    obj[0] = map;
-    return obj;
+    merged[0] = map;
+    return merged;
   }
 }
 const prototype = AbstractSearchFetchManager.prototype;
@@ -17,7 +17,7 @@ prototype["cleanUp"] = function cleanUp(arg0) {
 };
 prototype["cancel"] = function cancel(arg0) {
   const searchFetchers = this.searchFetchers;
-  const value = searchFetchers.get(arg0);
+  value = searchFetchers.get(arg0);
   if (value != null) {
     value.cancel();
   }

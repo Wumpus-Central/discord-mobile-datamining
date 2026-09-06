@@ -1,14 +1,13 @@
 // discord_app/modules/voice_panel/native/controller/VoicePanelStreamOutputSinkStack.tsx
-import closure_0 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_1 from "../../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let result = require("set").fileFinishedImporting(
-  "modules/voice_panel/native/controller/VoicePanelStreamOutputSinkStack.tsx",
-);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/voice_panel/native/controller/VoicePanelStreamOutputSinkStack.tsx");
 class VoicePanelStreamOutputSinkStack {
   constructor(arg0) {
-    flag = arg1;
-    if (arg1 === undefined) {
+    flag = fn;
+    if (fn === undefined) {
       flag = false;
     }
     obj = Object.create(new.target.prototype);
@@ -32,21 +31,19 @@ prototype["cleanUp"] = function cleanUp() {
 prototype["logSinks"] = function logSinks() {
   const items = [];
   while (tmp !== undefined) {
-    let tmp3 = callback;
-    let tmp4 = callback(tmp2, 2);
+    let tmp4 = _slicedToArray(tmp2, 2);
     let first = tmp4[0];
     let _Array = Array;
     let arr = Array.from(tmp4[1]);
     let _HermesInternal = HermesInternal;
     let str = "[Stream:";
-    let tmp6 = first;
     let str2 = ", Locks:[";
     let str3 = "]]";
     arr = items.push("[Stream:" + first + ", Locks:[" + arr.join(",") + "]]");
     continue;
   }
 };
-prototype["setHasActiveVideoOutputSink"] = function setHasActiveVideoOutputSink(closure_1) {
+prototype["setHasActiveVideoOutputSink"] = function setHasActiveVideoOutputSink(dependencyMap, arg1, arg2) {
   const self = this;
   const activeSinks = this.activeSinks;
   let set = activeSinks.get(arg1);
@@ -54,38 +51,35 @@ prototype["setHasActiveVideoOutputSink"] = function setHasActiveVideoOutputSink(
     const _Set = Set;
     set = new Set();
   }
-  const hasItem = set.has(closure_1);
+  const hasItem = set.has(dependencyMap);
   if (arg2) {
     if (!hasItem) {
-      set.add(closure_1);
+      set.add(dependencyMap);
       if (1 === set.size) {
-        self.setActive(arg1, true, self.sourceId(closure_1));
+        self.setActive(arg1, true, self.sourceId(dependencyMap));
         const activeSinks3 = self.activeSinks;
         const result = activeSinks3.set(arg1, set);
       }
     }
   } else if (hasItem) {
-    set.delete(closure_1);
+    set.delete(dependencyMap);
     if (0 === set.size) {
-      self.setActive(arg1, false, self.sourceId(closure_1));
+      self.setActive(arg1, false, self.sourceId(dependencyMap));
       const activeSinks2 = self.activeSinks;
       activeSinks2.delete(arg1);
     }
   }
 };
-prototype["clearLock"] = function clearLock(closure_1) {
+prototype["clearLock"] = function clearLock(dependencyMap) {
   const self = this;
   while (tmp !== undefined) {
-    let tmp3 = callback;
-    let tmp4 = callback(tmp2, 2);
+    let tmp4 = _slicedToArray(tmp2, 2);
     [tmp5, obj] = tmp4;
     let obj2 = obj;
-    if (obj.has(closure_1)) {
-      let tmp6 = obj;
-      let deleteResult = obj2.delete(closure_1);
+    if (obj.has(dependencyMap)) {
+      let deleteResult = obj2.delete(dependencyMap);
       if (0 === obj2.size) {
-        let tmp8 = tmp5;
-        let setActiveResult = self.setActive(tmp5, false, self.sourceId(closure_1));
+        let setActiveResult = self.setActive(tmp5, false, self.sourceId(dependencyMap));
         let activeSinks = self.activeSinks;
         let deleteResult1 = activeSinks.delete(tmp5);
       }
@@ -102,19 +96,18 @@ prototype["setActive"] = function setActive(arg0, arg1, arg2) {
     setHasActiveVideoOutputSink.setHasActiveVideoOutputSink(closure_0, closure_1, closure_2),
   );
 };
-prototype["sourceId"] = function sourceId(closure_1) {
-  return "VoicePanelStreamOutputSinkStack-" + closure_1;
+prototype["sourceId"] = function sourceId(dependencyMap) {
+  return "VoicePanelStreamOutputSinkStack-" + dependencyMap;
 };
 
 export default VoicePanelStreamOutputSinkStack;
 export const useSetHasActiveVideoOutputSink = function useSetHasActiveVideoOutputSink(streamOutputSinkStack) {
-  closure_0 = streamOutputSinkStack;
-  id = id.useId();
+  const id = noop.useId();
   const items = [id, streamOutputSinkStack];
-  const callback = id.useCallback((arg0, arg1) => {
+  const callback = noop.useCallback((arg0, arg1) => {
     const result = streamOutputSinkStack.setHasActiveVideoOutputSink(id, arg0, arg1);
   }, items);
   const items1 = [id, callback, streamOutputSinkStack];
-  const effect = id.useEffect(() => () => closure_0.clearLock(closure_1), items1);
+  const effect = noop.useEffect(() => () => streamOutputSinkStack.clearLock(id), items1);
   return callback;
 };

@@ -1,101 +1,91 @@
 // discord_app/modules/toast/native/Toast.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import Button from "../../../design/void/native.tsx";
-import map from "../../../design/tokens/native/useToken.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
-import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import native from "../../../design/void/native.tsx";
+import useToken from "../../../design/tokens/native/useToken.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+require = fn;
 function ToastIcon(recolorLegacyIcon) {
   ({ icon, IconComponent, iconColor } = recolorLegacyIcon);
-  let obj = map;
+  let obj = useToken;
   if (iconColor == null) {
     iconColor = "mobile-text-heading-primary";
   }
   const token = obj.useToken(iconColor);
   if (recolorLegacyIcon.recolorLegacyIcon) {
-    obj = { color: null };
-    obj[0] = token;
+    obj = { color: token };
   } else {
     obj = { disableColor: true };
   }
   if (null != IconComponent) {
-    obj1 = { size: "sm", color: null };
-    obj1[1] = token;
-    let tmp8 = callback2(IconComponent, obj1);
+    const obj1 = { size: "sm", color: token };
+    let tmp8 = hasOwnProperty(IconComponent, obj1);
   } else if (typeof icon === "function") {
-    const obj2 = { children: null };
-    obj2[0] = icon();
-    tmp8 = callback2(closure_6, obj2);
+    const obj2 = { children: icon() };
+    tmp8 = hasOwnProperty(timestampProducer, obj2);
   } else {
     tmp8 = null;
     if (null != icon) {
-      const obj3 = { resizeMode: "contain", source: null };
-      obj3[1] = icon;
+      const obj3 = { resizeMode: "contain", source: icon };
       const merged = Object.assign(obj);
-      tmp8 = callback2(Button.Icon, obj3);
+      tmp8 = hasOwnProperty(native.Icon, obj3);
     }
   }
   return tmp8;
 }
 function ToastContent(content) {
   content = content.content;
-  const tmp = callback3();
+  const tmp = closure_8();
   if (typeof content === "function") {
-    let obj = { style: null, children: null };
-    obj[0] = tmp.contentContainer;
-    obj[1] = content();
-    let tmp4 = callback2(View, obj);
+    let obj = { style: tmp.contentContainer, children: content() };
+    let tmp4 = hasOwnProperty(View, obj);
   } else {
     obj = {
-      onTextLayout: null,
-      style: null,
+      onTextLayout: content.onTextLayout,
+      style: tmp.contentContainer,
       lineClamp: 3,
       variant: "text-sm/semibold",
       color: "mobile-text-heading-primary",
-      children: null,
+      children: content,
     };
-    obj[0] = content.onTextLayout;
-    obj[1] = tmp.contentContainer;
-    obj[5] = content;
-    tmp4 = callback2(Text.Text, obj);
+    tmp4 = hasOwnProperty(Text_Text.Text, obj);
   }
   return tmp4;
 }
-({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: null, multilineContainer: null, contentContainer: null };
-createCacheKey = {
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+fn(4560);
+let createStyles = { container: null, multilineContainer: null, contentContainer: null };
+createStyles = {
   flexDirection: "row",
   alignItems: "center",
-  borderRadius: ThemesDefault.radii.xxl,
-  padding: ThemesDefault.space.PX_8,
-  paddingRight: ThemesDefault.space.PX_12,
-  backgroundColor: ThemesDefault.colors.MOBILE_TOAST_BACKGROUND_DEFAULT,
-  borderColor: ThemesDefault.colors.BORDER_SUBTLE,
+  borderRadius: nativeDefault.radii.xxl,
+  padding: nativeDefault.space.PX_8,
+  paddingRight: nativeDefault.space.PX_12,
+  backgroundColor: nativeDefault.colors.MOBILE_TOAST_BACKGROUND_DEFAULT,
+  borderColor: nativeDefault.colors.BORDER_SUBTLE,
   borderWidth: 1,
 };
-let merged = Object.assign(ThemesDefault.shadows.SHADOW_HIGH);
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { paddingLeft: ThemesDefault.space.PX_12 };
-createCacheKey[2] = { marginLeft: 8, flexShrink: 1 };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { paddingLeft: ThemesDefault.space.PX_12 };
-const result = require("set").fileFinishedImporting("modules/toast/native/Toast.tsx");
+let merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
+createStyles.container = createStyles;
+createStyles.multilineContainer = { paddingLeft: nativeDefault.space.PX_12 };
+createStyles.contentContainer = { marginLeft: 8, flexShrink: 1 };
+let closure_8 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/toast/native/Toast.tsx");
 
 export default function Toast(arg0) {
   c0 = undefined;
-  closure_1 = undefined;
   ({ icon, iconColor, IconComponent, content, containerStyle, recolorLegacyIcon } = arg0);
-  const tmp = callback3();
-  [tmp3, c0] = callback(React.useState(false), 2);
-  closure_1 = React.useRef(false);
+  const tmp = closure_8();
+  [tmp3, c0] = _slicedToArray(noop.useState(false), 2);
+  noop.useRef(false);
   const items = [tmp.container, ,];
   let multilineContainer = null;
-  callback = React.useCallback((nativeEvent) => {
+  const callback = noop.useCallback((nativeEvent) => {
     if (!ref.current) {
       tmp.current = true;
       _undefined(nativeEvent.nativeEvent.lines.length > 1);
@@ -108,9 +98,9 @@ export default function Toast(arg0) {
   items[1] = multilineContainer;
   items[2] = containerStyle;
   const items1 = [
-    callback2(ToastIcon, { icon, iconColor, IconComponent, recolorLegacyIcon }),
-    callback2(ToastContent, { content, onTextLayout: callback }),
+    hasOwnProperty(ToastIcon, { icon, iconColor, IconComponent, recolorLegacyIcon }),
+    hasOwnProperty(ToastContent, { content, onTextLayout: callback }),
   ];
-  obj[2] = items1;
-  return closure_7(View, obj);
+  obj.children = items1;
+  return React5(View, obj);
 }

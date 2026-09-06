@@ -1,10 +1,10 @@
 // discord_app/modules/activities/utils/trackApplicationOpen.tsx
-import set from "../../../../_runtime/00002_set.js";
-import ME from "../../../Constants.tsx";
-import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import Constants from "../../../Constants.tsx";
+import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/activities/utils/trackApplicationOpen.tsx");
+const AnalyticEvents = Constants.AnalyticEvents;
+const result = size.fileFinishedImporting("modules/activities/utils/trackApplicationOpen.tsx");
 
 export default function trackApplicationOpen(partyId) {
   partyId = partyId.partyId;
@@ -23,8 +23,7 @@ export default function trackApplicationOpen(partyId) {
     inviterUserId,
     remoteJoinPlatform,
   } = partyId);
-  let obj = expandEventPropertiesDefault;
-  obj = {
+  const obj = {
     type,
     source,
     guild_id: guildId,

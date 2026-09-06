@@ -1,57 +1,67 @@
 // discord_app/modules/display_name_styles/native/DisplayNameStylesEditPreview.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import Button from "../../../design/void/native.tsx";
-import messagesProxyDefault from "../intl/DisplayNameStyles.messages.js";
-import Text from "../../../design/components/Text/native/Text.tsx";
-import AVERAGE_FONT_WIDTH_RATIODefault from "UsernameWithEffects.tsx";
-import DisplayNameStyleColorPreset from "../types.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
+import native from "../../../design/void/native.tsx";
+import utils from "../../collectibles/nameplates/utils.tsx";
+import _modDef2786 from "../intl/DisplayNameStyles.messages.js";
+import DateUtils from "../../../utils/DateUtils.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import ProfileCustomizationUtils from "../../profile_customization/ProfileCustomizationUtils.tsx";
+import UsernameWithEffectsDefault from "UsernameWithEffects.tsx";
+import types from "../types.tsx";
+import UserProfilePreviewDefault from "../../user_profile/native/UserProfilePreview.tsx";
+import NameplatePreview from "../../collectibles/nameplates/native/NameplatePreview.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+require = fn;
 function ChatPreview(arg0) {
   ({ user, guildId } = arg0);
   ({ displayName, displayNameStyles } = arg0);
-  const tmp = callback3();
+  const tmp = closure_7();
   let obj = { style: tmp.chatContainer, pointerEvents: "none", children: null };
-  const memo = React.useMemo(() => {
-    const obj = callback(table[11]);
+  const memo = noop.useMemo(() => {
+    const obj = DateUtils;
     return obj.calendarFormat(new Date(), true);
   }, []);
-  obj = { user, size: Button.AvatarSizes.NORMAL, guildId };
-  const items = [callback(Button.Avatar, obj)];
+  obj = { user, size: native.AvatarSizes.NORMAL, guildId };
+  const items = [hasOwnProperty(native.Avatar, obj)];
   obj = { style: tmp.chatContent, children: null };
-  obj1 = { style: tmp.chatHeader, children: null };
+  const obj1 = { style: tmp.chatHeader, children: null };
   const obj2 = {
     userId: user.id,
     guildId,
     userName: displayName,
     variant: "text-md/semibold",
-    effectDisplayType: DisplayNameStyleColorPreset.EffectDisplayType.PLAIN,
+    effectDisplayType: types.EffectDisplayType.PLAIN,
     lineClamp: 1,
     pendingDisplayNameStyles: displayNameStyles,
     style: tmp.chatUsername,
   };
   const items1 = [
-    callback(AVERAGE_FONT_WIDTH_RATIODefault, obj2),
-    callback(Text.Text, { variant: "text-xs/medium", color: "text-muted", style: tmp.chatTimestamp, children: memo }),
+    hasOwnProperty(UsernameWithEffectsDefault, obj2),
+    hasOwnProperty(Text_Text.Text, {
+      variant: "text-xs/medium",
+      color: "text-muted",
+      style: tmp.chatTimestamp,
+      children: memo,
+    }),
   ];
-  obj1[1] = items1;
-  const items2 = [callback2(View, obj1)];
+  obj1.children = items1;
+  const items2 = [timestampProducer(View, obj1)];
   const obj4 = { variant: "text-md/normal", color: "text-default", style: tmp.chatMessageText, children: null };
-  const intl = getSystemLocale.intl;
-  obj4[3] = intl.string(messagesProxyDefault.h5Cuej);
-  items2[1] = callback(Text.Text, obj4);
-  obj[1] = items2;
-  items[1] = callback2(View, obj);
-  obj[2] = items;
-  return callback2(View, obj);
+  const intl = util.intl;
+  obj4.children = intl.string(_modDef2786.h5Cuej);
+  items2[1] = hasOwnProperty(Text_Text.Text, obj4);
+  obj.children = items2;
+  items[1] = timestampProducer(View, obj);
+  obj.children = items;
+  return timestampProducer(View, obj);
 }
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = {
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+fn(4560);
+let createStyles = {
   previewSection: null,
   chatPreviewWrapper: null,
   nameplatePreviewWrapper: null,
@@ -62,67 +72,59 @@ createCacheKey = {
   chatTimestamp: null,
   chatMessageText: null,
 };
-createCacheKey = {
-  marginBottom: ThemesDefault.space.PX_24,
+createStyles = {
+  marginBottom: nativeDefault.space.PX_24,
   alignItems: "center",
   alignSelf: "center",
   width: "100%",
   maxWidth: 360,
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = {
+createStyles.previewSection = createStyles;
+createStyles.chatPreviewWrapper = {
   marginTop: -18,
   alignSelf: "flex-end",
   width: 260,
-  borderRadius: ThemesDefault.radii.sm,
+  borderRadius: nativeDefault.radii.sm,
   borderWidth: 1,
-  borderColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  borderColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
 };
-createCacheKey[2] = { marginTop: -6, width: 260 };
+createStyles.nameplatePreviewWrapper = { marginTop: -6, width: 260 };
 let obj1 = {
   marginTop: -18,
   alignSelf: "flex-end",
   width: 260,
-  borderRadius: ThemesDefault.radii.sm,
+  borderRadius: nativeDefault.radii.sm,
   borderWidth: 1,
-  borderColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE,
+  borderColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
 };
-createCacheKey[3] = {
+createStyles.chatContainer = {
   flexDirection: "row",
-  borderRadius: ThemesDefault.radii.sm,
-  padding: ThemesDefault.space.PX_16,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
-  gap: ThemesDefault.space.PX_12,
+  borderRadius: nativeDefault.radii.sm,
+  padding: nativeDefault.space.PX_16,
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
+  gap: nativeDefault.space.PX_12,
 };
-createCacheKey[4] = { flex: 1 };
-createCacheKey[5] = { flexDirection: "row", alignItems: "baseline", gap: 6 };
-createCacheKey[6] = { flexShrink: 1, minWidth: 0 };
-createCacheKey[7] = { marginTop: -8, flexShrink: 0 };
-createCacheKey[8] = {};
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj2 = {
-  flexDirection: "row",
-  borderRadius: ThemesDefault.radii.sm,
-  padding: ThemesDefault.space.PX_16,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
-  gap: ThemesDefault.space.PX_12,
-};
-const result = require("set").fileFinishedImporting(
-  "modules/display_name_styles/native/DisplayNameStylesEditPreview.tsx",
-);
+createStyles.chatContent = { flex: 1 };
+createStyles.chatHeader = { flexDirection: "row", alignItems: "baseline", gap: 6 };
+createStyles.chatUsername = { flexShrink: 1, minWidth: 0 };
+createStyles.chatTimestamp = { marginTop: -8, flexShrink: 0 };
+createStyles.chatMessageText = {};
+let closure_7 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesEditPreview.tsx");
 
 export default function DisplayNameStylesEditPreview(selectedEffectId) {
   ({ user, displayName, guildId, selectedFontId } = selectedEffectId);
   selectedEffectId = selectedEffectId.selectedEffectId;
   const selectedColors = selectedEffectId.selectedColors;
-  const tmp = callback3();
-  let obj = selectedFontId(selectedColors[5]);
+  const tmp = closure_7();
+  let obj = ProfileCustomizationUtils;
   const guildMemberAndUserPendingNameplate = obj.useGuildMemberAndUserPendingNameplate(user, guildId);
   ({ pendingNameplate, userNameplate, guildNameplate } = guildMemberAndUserPendingNameplate);
-  obj1 = selectedFontId(selectedColors[6]);
+  let obj1 = utils;
   let nameplateData = obj1.getNameplateData(guildNameplate);
   const items = [selectedFontId, selectedEffectId, selectedColors];
-  const memo = React.useMemo(
+  const memo = noop.useMemo(
     () => ({ fontId: selectedFontId, effectId: selectedEffectId, colors: selectedColors }),
     items,
   );
@@ -137,14 +139,14 @@ export default function DisplayNameStylesEditPreview(selectedEffectId) {
     maxWidth: 320,
     accessibilityLabel: null,
   };
-  const intl = selectedFontId(selectedColors[8]).intl;
-  obj[7] = intl.string(selectedEffectId(selectedColors[9]).zoh6MT);
-  const items1 = [callback(selectedEffectId(selectedColors[7]), obj), ,];
+  const intl = util.intl;
+  obj.accessibilityLabel = intl.string(_modDef2786.zoh6MT);
+  const items1 = [hasOwnProperty(UserProfilePreviewDefault, obj), ,];
   obj1 = {
     style: tmp.chatPreviewWrapper,
-    children: callback(ChatPreview, { user, displayName, displayNameStyles: memo, guildId }),
+    children: hasOwnProperty(ChatPreview, { user, displayName, displayNameStyles: memo, guildId }),
   };
-  items1[1] = callback(View, obj1);
+  items1[1] = hasOwnProperty(View, obj1);
   const obj2 = { style: tmp.nameplatePreviewWrapper, children: null };
   const obj3 = {
     user,
@@ -161,12 +163,12 @@ export default function DisplayNameStylesEditPreview(selectedEffectId) {
     }
     tmp9 = nameplateData;
   }
-  obj3[2] = tmp9;
-  obj3[3] = guildId;
-  obj3[4] = memo;
-  obj3[5] = displayName;
-  obj2[1] = callback(selectedFontId(selectedColors[10]).NameplatePreview, obj3);
-  items1[2] = callback(View, obj2);
-  obj[1] = items1;
-  return closure_6(View, obj);
+  obj3.nameplateData = tmp9;
+  obj3.guildId = guildId;
+  obj3.pendingDisplayNameStyles = memo;
+  obj3.pendingGlobalName = displayName;
+  obj2.children = hasOwnProperty(NameplatePreview.NameplatePreview, obj3);
+  items1[2] = hasOwnProperty(View, obj2);
+  obj.children = items1;
+  return timestampProducer(View, obj);
 }

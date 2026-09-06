@@ -1,14 +1,15 @@
 // discord_app/modules/virtual_currency/native/BalanceCounter.tsx
-import context from "../../../../discord_common/js/packages/design/components/AccessibilityPreferencesContext/AccessibilityPreferencesContext.tsx";
-import _mod4296 from "../../reanimated/ReanimatedRexport.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
-import closure_8 from "../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import AccessibilityPreferencesContext from "../../../../discord_common/js/packages/design/components/AccessibilityPreferencesContext/AccessibilityPreferencesContext.tsx";
+import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import spring from "../../../design/animation/reanimated/spring/spring.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-({ useState: c4, useEffect: c5, useRef: closure_6, useCallback: error } = noop);
+require = fn;
+let noop = fn(19);
+({ useState: closure_4, useEffect: hasOwnProperty, useRef: metroRequire, useCallback: closure_7 } = noop);
+let jsx = fn(21).jsx;
 let closure_10 = {
   code: "function BalanceCounterTsx1(){const{runOnJS,setIsAnimating}=this.__closure;runOnJS(setIsAnimating)(false);}",
 };
@@ -35,21 +36,21 @@ class BalanceCounter {
         clearTimeout(tmp.current);
         tmp.current = null;
       }
-      callback(false);
+      setIsAnimating(false);
     };
     ({ onValueReached, style } = global);
     closure_2 = closure_6(null);
     tmp2 = closure_2;
     tmp = closure_0;
-    obj = require("../../reanimated/ReanimatedRexport.tsx");
-    sharedValue = require("../../../index.native.tsx");
+    obj = closure_0(closure_2[3]);
+    sharedValue = obj.useSharedValue(0);
     closure_3 = sharedValue;
     closure_4 = closure_6(null);
-    enabled = closure_8.useContext(require("context").AccessibilityPreferencesContext).reducedMotion.enabled;
-    tmp4 = closure_3(require("../../../index.native.tsx"), 2);
+    enabled = closure_8.useContext(closure_0(closure_2[4]).AccessibilityPreferencesContext).reducedMotion.enabled;
+    tmp4 = closure_3(closure_4(0), 2);
     [obj2, tmp5] = tmp4;
     closure_6 = tmp5;
-    tmp6 = closure_3(require("../../debug/logAppStart.tsx"), 2);
+    tmp6 = closure_3(closure_4(1), 2);
     tmp7 = tmp6[1];
     closure_7 = tmp7;
     tmp8 = closure_3(closure_4(false), 2);
@@ -57,16 +58,15 @@ class BalanceCounter {
     closure_8 = first;
     closure_9 = tmp8[1];
     tmp10 = closure_7((set, value, duration) => {
-      callback(true);
-      let obj = value(ref[5]);
-      obj = { duration, damping: 15, stiffness: 150, mass: 1 };
+      setIsAnimating(true);
+      let obj = { duration, damping: 15, stiffness: 150, mass: 1 };
       const fn = function l() {
-        closure_1_0(closure_1_2[3]).runOnJS(closure_9)(false);
+        value(closure_2[3]).runOnJS(setIsAnimating)(false);
       };
-      obj = { runOnJS: value(ref[3]).runOnJS, setIsAnimating: callback };
+      obj = { runOnJS: ReanimatedRexport.runOnJS, setIsAnimating };
       fn.__closure = obj;
       fn.__workletHash = 16153226572520;
-      fn.__initData = closure_10;
+      fn.__initData = __initData;
       const result = set.set(obj.withSpring(value, obj, "respect-motion-settings", fn));
     }, []);
     closure_10 = tmp10;
@@ -85,9 +85,8 @@ class BalanceCounter {
               const diff = tmp - tmp2.current;
               onValueChange(diff);
               tmp2.current = tmp;
-              let obj = value(ref[6]);
-              obj = { targetTime: null };
-              obj[0] = value(ref[6]).EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS;
+              value(ref[6]);
+              const obj = { targetTime: value(ref[6]).EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS };
               const orbBalanceCounterAnimationConfigs = obj.getOrbBalanceCounterAnimationConfigs(diff, obj);
               duration = orbBalanceCounterAnimationConfigs.duration;
               if (null != ref2.current) {
@@ -95,11 +94,11 @@ class BalanceCounter {
                 clearTimeout(tmp12.current);
                 tmp12.current = null;
               }
-              callback(false);
+              setIsAnimating(false);
               const _setTimeout = setTimeout;
               ref2.current = setTimeout(() => {
-                closure_1_10(closure_1_3, duration, duration);
-                closure_1_4.current = null;
+                closure_10(sharedValue, value, duration);
+                closure_4.current = null;
               }, orbBalanceCounterAnimationConfigs.delay);
               return clearAnimationTimeout;
             } else {
@@ -112,7 +111,7 @@ class BalanceCounter {
         ref.current = tmp;
       }
     }, items);
-    tmp12 = require("../../reanimated/ReanimatedRexport.tsx");
+    tmp12 = closure_0(closure_2[3]);
     class F {
       constructor() {
         if (closure_8) {
@@ -120,12 +119,12 @@ class BalanceCounter {
           _Math = Math;
           tmp2 = closure_3;
           str = Math.round(closure_3.get());
-          tmp3 = value;
+          tmp3 = closure_0;
           tmp4 = closure_2;
-          obj = require("../../reanimated/ReanimatedRexport.tsx");
+          obj = closure_0(closure_2[3]);
           tmp5 = closure_6;
           tmp6 = obj.runOnJS(closure_6)(str);
-          obj2 = require("../../reanimated/ReanimatedRexport.tsx");
+          obj2 = closure_0(closure_2[3]);
           tmp7 = closure_7;
           runOnJSResult = obj2.runOnJS(closure_7);
           tmp8Result = runOnJSResult(str.toString().length);
@@ -136,7 +135,7 @@ class BalanceCounter {
     obj = {
       isAnimating: first,
       animatedValue: sharedValue,
-      runOnJS: require("../../reanimated/ReanimatedRexport.tsx").runOnJS,
+      runOnJS: closure_0(closure_2[3]).runOnJS,
       setDisplayValue: tmp5,
       setMaxDigits: tmp7,
     };
@@ -152,19 +151,20 @@ class BalanceCounter {
       items1[0] = tmp13;
       obj2 = { minWidth: null };
       num = 7;
-      obj2[0] = 7 * tmp6[0];
+      obj2.minWidth = 7 * tmp6[0];
       items1[1] = obj2;
-      obj1[0] = items1;
+      obj1.style = items1;
       obj3 = { variant: "text-sm/semibold", style: null, maxFontSizeMultiplier: 2, children: null };
-      obj3[1] = style;
-      obj3[3] = require("../../../index.native.tsx");
-      obj1[1] = closure_9(require("Text").Text, obj3);
-      tmp14 = closure_9(require("../../reanimated/ReanimatedRexport.tsx").View, obj1);
+      obj3.style = style;
+      obj3.children = obj2.toFixed(0);
+      obj1.children = closure_9(tmp(tmp2[7]).Text, obj3);
+      tmp14 = closure_9(onValueChange(tmp2[3]).View, obj1);
     }
     return tmp14;
   }
 }
-let result = require("set").fileFinishedImporting("modules/virtual_currency/native/BalanceCounter.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/virtual_currency/native/BalanceCounter.tsx");
 
 export default BalanceCounter;
 export { BalanceCounter };

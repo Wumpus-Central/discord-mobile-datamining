@@ -1,39 +1,40 @@
 // discord_app/modules/interaction_components/native/display/TextDisplayComponent.tsx
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
-import closure_5 from "../../../a11y/AccessibilityStore.tsx";
-import closure_6 from "../../../../stores/SelectedChannelStore.tsx";
-import { TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS as closure_7 } from "../../InteractionComponentConstants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import MarkupUtilsDefault from "../../../markup/MarkupUtils.tsx";
+import renderMessageMarkup from "../../../messages/renderMessageMarkup.tsx";
+import handleMessagesTapLink from "../../../messages/native/handlers/handleMessagesTapLink.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
+import SelectedChannelStore from "../../../../stores/SelectedChannelStore.tsx";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting(
-  "modules/interaction_components/native/display/TextDisplayComponent.tsx",
-);
+require = fn;
+let closure_7 = fn(8111).TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/interaction_components/native/display/TextDisplayComponent.tsx");
 
 export default function TextDisplayComponent(type) {
   type = type.type;
   const id = type.id;
   const content = type.content;
-  let channelId;
   let obj = type(content[6]);
   const componentContainerId = obj.useComponentContainerId();
-  channelId = channelId.getChannelId();
+  const channelId = SelectedChannelStore.getChannelId();
   id(content[7])(null != channelId, "channelId not available in TextDisplayComponent");
   let items = [type, id, content, channelId];
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     let obj = { type, id, content: null };
-    const obj2 = id(content[8]);
-    obj = { channelId, renderOptions: closure_1_7 };
-    obj[2] = obj2.parseToAST(content, true, type(content[9]).getInitialParserState(obj));
+    const obj2 = MarkupUtilsDefault;
+    obj = { channelId, renderOptions };
+    obj.content = obj2.parseToAST(content, true, renderMessageMarkup.getInitialParserState(obj));
     return JSON.stringify(obj);
   }, items);
-  const items1 = [closure_5];
+  const items1 = [AccessibilityStore];
   let obj2 = type(content[10]);
   [tmp6, tmp7] = channelId(
     type(content[10]).useStateFromStoresArray(items1, () => {
       const items = [,];
-      ({ roleStyle: arr[0], alwaysShowLinkDecorations: arr[1] } = closure_5);
+      ({ roleStyle: arr[0], alwaysShowLinkDecorations: arr[1] } = AccessibilityStore);
       return items;
     }),
     2,
@@ -42,9 +43,9 @@ export default function TextDisplayComponent(type) {
   const setting = AnimateEmoji.useSetting();
   obj = {
     model: memo,
-    markdownTextRenderOptions: obj,
+    markdownTextRenderOptions: null,
     onTapLink(nativeEvent) {
-      const result = type(content[13]).handleMessagesTapURLLink(nativeEvent.nativeEvent.data, channelId);
+      const result = handleMessagesTapLink.handleMessagesTapURLLink(nativeEvent.nativeEvent.data, channelId);
     },
     onLongPressLink: null,
     onTapAttachmentLink: null,
@@ -62,22 +63,23 @@ export default function TextDisplayComponent(type) {
     shouldShowRoleDot: "dot" === tmp6,
     shouldShowRoleOnName: "username" === tmp6,
   };
+  obj.markdownTextRenderOptions = obj;
   const tmp5 = channelId(
     type(content[10]).useStateFromStoresArray(items1, () => {
       const items = [,];
-      ({ roleStyle: arr[0], alwaysShowLinkDecorations: arr[1] } = closure_5);
+      ({ roleStyle: arr[0], alwaysShowLinkDecorations: arr[1] } = AccessibilityStore);
       return items;
     }),
     2,
   );
-  obj[3] = type(content[14]).contentHandlers.onLongPressLink;
-  obj[4] = type(content[14]).contentHandlers.onTapAttachmentLink;
-  obj[5] = type(content[14]).contentHandlers.onLongPressAttachmentLink;
-  obj[6] = type(content[14]).contentHandlers.onTapMention;
-  obj[7] = type(content[14]).contentHandlers.onTapTimestamp;
-  obj[8] = type(content[14]).contentHandlers.onTapInlineCode;
-  obj[9] = type(content[14]).contentHandlers.onTapEmoji;
-  obj[10] = { width: "100%" };
+  obj.onLongPressLink = type(content[14]).contentHandlers.onLongPressLink;
+  obj.onTapAttachmentLink = type(content[14]).contentHandlers.onTapAttachmentLink;
+  obj.onLongPressAttachmentLink = type(content[14]).contentHandlers.onLongPressAttachmentLink;
+  obj.onTapMention = type(content[14]).contentHandlers.onTapMention;
+  obj.onTapTimestamp = type(content[14]).contentHandlers.onTapTimestamp;
+  obj.onTapInlineCode = type(content[14]).contentHandlers.onTapInlineCode;
+  obj.onTapEmoji = type(content[14]).contentHandlers.onTapEmoji;
+  obj.style = { width: "100%" };
   return jsx(id(content[12]), {
     containerId: componentContainerId,
     shouldAnimateEmoji: setting,

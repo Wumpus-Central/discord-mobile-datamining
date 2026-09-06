@@ -1,16 +1,13 @@
 // discord_app/modules/premium/sounds/soundmoji/SoundmojiRenderingExperiment.tsx
-import set from "../../../../../_runtime/00002_set.js";
 import ApexExperiment from "../../../experiments/apex/index.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const obj = { 1: null };
+let obj = { name: "2026-03-soundmoji-rendering", kind: "user", defaultConfig: { enabled: false }, variations: null };
+obj = { 1: null };
 obj[1] = { enabled: true };
-let closure_0 = ApexExperiment.createApexExperiment({
-  name: "2026-03-soundmoji-rendering",
-  kind: "user",
-  defaultConfig: { enabled: false },
-  variations: obj,
-});
-const result = set.fileFinishedImporting("modules/premium/sounds/soundmoji/SoundmojiRenderingExperiment.tsx");
+obj.variations = obj;
+let closure_0 = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/premium/sounds/soundmoji/SoundmojiRenderingExperiment.tsx");
 
 export const getSoundmojiRenderingExperiment = function getSoundmojiRenderingExperiment(location) {
   return closure_0.getConfig({ location: location.location }).enabled;

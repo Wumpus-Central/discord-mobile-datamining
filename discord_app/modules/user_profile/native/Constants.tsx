@@ -1,13 +1,13 @@
 // discord_app/modules/user_profile/native/Constants.tsx
-import set from "../../../../_runtime/00002_set.js";
-import Button from "../../../design/void/native.tsx";
-import ICON_SIZE from "../../../design/components/Icon/IconSize.tsx";
+import native from "../../../design/void/native.tsx";
+import IconSize from "../../../design/components/Icon/IconSize.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const XXLARGE = Button.AvatarSizes.XXLARGE;
-const tmp2 = Button.AVATAR_SIZE_MAP[XXLARGE];
+const XXLARGE = native.AvatarSizes.XXLARGE;
+const tmp2 = native.AVATAR_SIZE_MAP[XXLARGE];
 const sum = tmp2 + 12;
 const result = tmp2 / 2;
-const result1 = set.fileFinishedImporting("modules/user_profile/native/Constants.tsx");
+const result1 = size.fileFinishedImporting("modules/user_profile/native/Constants.tsx");
 
 export const ARBITRARY_LARGE_OFFSET = 250;
 export const PROFILE_SIDE_PADDING = 16;
@@ -21,7 +21,7 @@ export const PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING = 12 + result + 6;
 export const PROFILE_CONTENT_BOTTOM_PADDING = 20;
 export const CARD_PADDING = 16;
 export const CARD_ROWS_ICON_SIZE_VARIANT = "md";
-export const CARD_ROWS_ICON_SIZE = ICON_SIZE.ICON_SIZE.md;
+export const CARD_ROWS_ICON_SIZE = IconSize.ICON_SIZE.md;
 export const CARD_ROWS_COLUMN_GAP = 16;
 export const WISHLIST_SUGGESTION_CARD_GAP = 8;
 export const FLOATING_UPSELL_HEIGHT = 140;

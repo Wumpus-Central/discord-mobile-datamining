@@ -1,27 +1,24 @@
 // discord_app/modules/user_settings/defs/native/PremiumGuildBoostingSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import ME from "../../../../Constants.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
+import Constants from "../../../../Constants.tsx";
+import util from "../../../../intl/index.native.tsx";
 import BoostGemIcon from "../../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
-import { componentDidMount } from "../../premium/native/UserSettingsPremiumGuildSubscriptions.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["+CbP2v"]);
+    const intl = util.intl;
+    return intl.string(util.t["+CbP2v"]);
   },
   parent: null,
   IconComponent: BoostGemIcon.BoostGemIcon,
-  screen: obj,
-};
-obj = {
-  route: ME.UserSettingsSections.GUILD_BOOSTING,
-  getComponent() {
-    return componentDidMount /* componentDidMount */.default;
+  screen: {
+    route: Constants.UserSettingsSections.GUILD_BOOSTING,
+    getComponent() {
+      return require("UserSettingsPremiumGuildSubscriptions").default;
+    },
   },
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/PremiumGuildBoostingSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/PremiumGuildBoostingSetting.tsx");
 
 export default route;

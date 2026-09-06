@@ -1,48 +1,45 @@
 // discord_app/modules/guild_onboarding/DefaultChannelUtils.tsx
-import fromStringAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
-import applyOverwritesAll from "../../utils/PermissionUtils.tsx";
-import closure_3 from "../channel/GatedChannelStore.tsx";
-import closure_4 from "../../stores/ChannelStore.tsx";
-import ME from "../../Constants.tsx";
+import BigFlagUtilsAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import PermissionUtilsAll from "../../utils/PermissionUtils.tsx";
+import GatedChannelStore from "../channel/GatedChannelStore.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
 
-const require = arg1;
-({ ChannelTypesSets: c5, Permissions: closure_6 } = ME);
-const result = require("set").fileFinishedImporting("modules/guild_onboarding/DefaultChannelUtils.tsx");
+const require = fn;
+const Constants = fn(1074);
+({ ChannelTypesSets: hasOwnProperty, Permissions: metroRequire } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_onboarding/DefaultChannelUtils.tsx");
 
 export const useCanChannelBeDefault = function useCanChannelBeDefault(arg0, arg1) {
-  const _require = arg0;
+  _require = arg0;
   closure_1 = arg1;
-  const items = [closure_3, closure_4];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    const channel = closure_1_4.getChannel(callback);
+  const items = [GatedChannelStore, ChannelStore];
+  return require("initialize").useStateFromStores(items, () => {
+    const channel = ChannelStore.getChannel(closure_1);
     if (null != channel) {
-      const GUILD_VOCAL = closure_1_5.GUILD_VOCAL;
+      const GUILD_VOCAL = constants.GUILD_VOCAL;
       if (GUILD_VOCAL.has(channel.type)) {
-        let VIEW_CHANNEL = callback(closure_1_2[3]).combine(closure_1_6.VIEW_CHANNEL, closure_1_6.CONNECT);
-        const obj = callback(closure_1_2[3]);
+        let VIEW_CHANNEL = BigFlagUtilsAll.combine(constants2.VIEW_CHANNEL, constants2.CONNECT);
       }
-      let isChannelGatedResult = closure_1_3.isChannelGated(closure_0, callback);
+      let isChannelGatedResult = GatedChannelStore.isChannelGated(closure_0, closure_1);
       if (!isChannelGatedResult) {
-        isChannelGatedResult = callback(closure_1_2[5]).canEveryoneRole(VIEW_CHANNEL, channel);
-        const obj2 = callback(closure_1_2[5]);
+        isChannelGatedResult = PermissionUtilsAll.canEveryoneRole(VIEW_CHANNEL, channel);
       }
       return isChannelGatedResult;
     }
-    VIEW_CHANNEL = closure_1_6.VIEW_CHANNEL;
+    VIEW_CHANNEL = constants2.VIEW_CHANNEL;
   });
 };
 export const canChannelBeDefault = function canChannelBeDefault(guild_id, id) {
-  channel = channel.getChannel(id);
+  const channel = ChannelStore.getChannel(id);
   if (null != channel) {
     const GUILD_VOCAL = constants.GUILD_VOCAL;
     if (GUILD_VOCAL.has(channel.type)) {
-      let VIEW_CHANNEL = fromStringAll.combine(constants2.VIEW_CHANNEL, constants2.CONNECT);
-      const obj2 = fromStringAll;
+      let VIEW_CHANNEL = BigFlagUtilsAll.combine(constants2.VIEW_CHANNEL, constants2.CONNECT);
     }
-    let isChannelGatedResult = channelGated.isChannelGated(guild_id, id);
+    let isChannelGatedResult = GatedChannelStore.isChannelGated(guild_id, id);
     if (!isChannelGatedResult) {
-      isChannelGatedResult = applyOverwritesAll.canEveryoneRole(VIEW_CHANNEL, channel.getChannel(id));
-      const obj3 = applyOverwritesAll;
+      isChannelGatedResult = PermissionUtilsAll.canEveryoneRole(VIEW_CHANNEL, ChannelStore.getChannel(id));
     }
     return isChannelGatedResult;
   }

@@ -1,35 +1,35 @@
 // discord_app/modules/user_settings/defs/native/ImageDescriptionsSetting.tsx
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import explicitContentFromProto from "../../UserSettings.tsx";
+import util from "../../../../intl/index.native.tsx";
+import UserSettings from "../../UserSettings.tsx";
 import UserSettingsText from "../../chat/native/UserSettingsText.tsx";
-import closure_2 from "../../UnsyncedUserSettingsStore.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import UnsyncedUserSettingsStore from "../../UnsyncedUserSettingsStore.tsx";
 
-require = arg1;
+require = fn;
 function onImageDescriptionSettingValueChange(viewImageDescriptions) {
-  let obj = UserSettingsText;
-  obj = {
-    videoUploadQuality: closure_2.videoUploadQuality,
+  const obj = {
+    videoUploadQuality: UnsyncedUserSettingsStore.videoUploadQuality,
     viewImageDescriptions,
-    lowQualityImageMode: closure_2.lowQualityImageMode,
-    dataSavingMode: closure_2.dataSavingMode,
+    lowQualityImageMode: UnsyncedUserSettingsStore.lowQualityImageMode,
+    dataSavingMode: UnsyncedUserSettingsStore.dataSavingMode,
   };
   obj.setImageDescriptions(obj);
 }
-createToggle = {
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["w8j+yW"]);
+    const intl = util.intl;
+    return intl.string(util.t["w8j+yW"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.CHAT,
+  parent: fn(7975).MobileUserSettings.CHAT,
   useValue: function useImageDescriptionSettingValue() {
-    const ViewImageDescriptions = explicitContentFromProto.ViewImageDescriptions;
+    const ViewImageDescriptions = UserSettings.ViewImageDescriptions;
     return ViewImageDescriptions.useSetting();
   },
   onValueChange: onImageDescriptionSettingValueChange,
 };
-createToggle = createToggle.createToggle(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ImageDescriptionsSetting.tsx");
+SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/ImageDescriptionsSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;
 export { onImageDescriptionSettingValueChange };

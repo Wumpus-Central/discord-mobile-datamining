@@ -1,14 +1,13 @@
 // discord_app/modules/window/native/AppEntryKeyContext.tsx
-import timestampDefault from "../../debug/Logger.tsx";
-import importAllResult from "../../../../_runtime/00019_noop.js";
+import LoggerDefault from "../../debug/Logger.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let c0 = importAllResult;
-let closure_1 = new timestampDefault("AppEntryKeyContext");
+let closure_1 = new LoggerDefault("AppEntryKeyContext");
 const main = "main";
-let context = importAllResult.createContext(undefined);
+let context = noop.createContext(undefined);
 let c4 = false;
-const tmp2 = new timestampDefault("AppEntryKeyContext");
-const result = require("set").fileFinishedImporting("modules/window/native/AppEntryKeyContext.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/window/native/AppEntryKeyContext.tsx");
 
 export const DEFAULT_APP_ENTRY_KEY = "main";
 export const AppEntryKeyContext = context;
@@ -18,7 +17,7 @@ export const useAppEntryKey = function useAppEntryKey() {
   const effect = context.useEffect(() => {
     if (!tmp) {
       c4 = true;
-      closure_1_1.warn('AppEntryKey context was not provided; falling back to default entry key "main".');
+      logger.warn('AppEntryKey context was not provided; falling back to default entry key "main".');
     }
   }, items);
   if (context == null) {

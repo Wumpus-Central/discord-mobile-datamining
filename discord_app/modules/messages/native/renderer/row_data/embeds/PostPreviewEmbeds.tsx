@@ -1,9 +1,10 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/PostPreviewEmbeds.tsx
-import set from "../../../../../../../_runtime/00002_set.js";
-import ME from "../../../../../../Constants.tsx";
+import Constants from "../../../../../../Constants.tsx";
+import createMediaPostPreviewEmbedContentDefault from "../../../../../media_channel/native/createMediaPostPreviewEmbedContent.tsx";
+import size from "../../../../../../../_runtime/metro/00002__.js";
 
-const MessageEmbedTypes = ME.MessageEmbedTypes;
-const result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/PostPreviewEmbeds.tsx");
+const MessageEmbedTypes = Constants.MessageEmbedTypes;
+const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/PostPreviewEmbeds.tsx");
 
 export const createPostPreviewEmbeds = function createPostPreviewEmbeds(message, roleStyle, useReducedMotion) {
   closure_0 = message;
@@ -16,8 +17,8 @@ export const createPostPreviewEmbeds = function createPostPreviewEmbeds(message,
   const embeds = message.embeds;
   if (embeds != null) {
     const item = embeds.forEach((type) => {
-      if (type.type === flag.POST_PREVIEW) {
-        const tmp6 = message(table[1])(message, table, type.url, flag);
+      if (type.type === MessageEmbedTypes.POST_PREVIEW) {
+        const tmp6 = createMediaPostPreviewEmbedContentDefault(closure_0, closure_1, type.url, flag);
         if (null != tmp6) {
           items.push(tmp6);
         }

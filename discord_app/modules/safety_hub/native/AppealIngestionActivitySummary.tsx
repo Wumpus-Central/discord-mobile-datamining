@@ -1,17 +1,17 @@
 // discord_app/modules/safety_hub/native/AppealIngestionActivitySummary.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
 import ClassificationEvidenceDefault from "ClassificationEvidence.tsx";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-noopAll;
-let closure_4 = createCacheKey.createStyles({ activity: { marginBottom: 16 } });
-const result = require("set").fileFinishedImporting("modules/safety_hub/native/AppealIngestionActivitySummary.tsx");
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_4 = createStyles.createStyles({ activity: { marginBottom: 16 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_hub/native/AppealIngestionActivitySummary.tsx");
 
 export default function AppealIngestionActivitySummary(flaggedContent) {
   return (
-    <View style={callback().activity}>
+    <View style={closure_4().activity}>
       {jsx(ClassificationEvidenceDefault, { flaggedContent: arg0.flaggedContent })}
     </View>
   );

@@ -1,13 +1,14 @@
 // discord_app/modules/stage_channels/useMyCurrentStageChannel.tsx
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import closure_2 from "../../stores/ChannelStore.tsx";
-import closure_3 from "../../stores/SelectedChannelStore.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
+import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/stage_channels/useMyCurrentStageChannel.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/useMyCurrentStageChannel.tsx");
 
 export default function useMyCurrentStageChannel() {
-  const items = [closure_3, closure_2];
+  const items = [SelectedChannelStore, ChannelStore];
   return initialize.useStateFromStores(items, () => {
     voiceChannelId = voiceChannelId.getVoiceChannelId();
     if (null != voiceChannelId) {

@@ -1,16 +1,15 @@
 // discord_app/modules/virtual_currency/shared/AnimationUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-let obj = { EARN: 0.25, SPEND: 0.3 };
-let result = set.fileFinishedImporting("modules/virtual_currency/shared/AnimationUtils.tsx");
+const ORB_LOTTIE_COUNTER_ANIMATION_FACTORS = { EARN: 0.25, SPEND: 0.3 };
+let result = size.fileFinishedImporting("modules/virtual_currency/shared/AnimationUtils.tsx");
 
 export const EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS = 3000;
-export const ORB_LOTTIE_COUNTER_ANIMATION_FACTORS = obj;
+export { ORB_LOTTIE_COUNTER_ANIMATION_FACTORS };
 export const getOrbBalanceCounterAnimationConfigs = function getOrbBalanceCounterAnimationConfigs(diff, targetTime) {
   targetTime = targetTime.targetTime;
   if (targetTime.isRenderedWithoutLottieAnimation) {
-    obj = { duration: null, delay: 0 };
-    obj[0] = targetTime;
+    let obj = { duration: targetTime, delay: 0 };
     return obj;
   } else {
     let str = "SPEND";
@@ -18,13 +17,12 @@ export const getOrbBalanceCounterAnimationConfigs = function getOrbBalanceCounte
       str = "EARN";
     }
     const result = targetTime * obj[str];
-    obj = { duration: null, delay: null };
-    obj[0] = result;
+    obj = { duration: result, delay: null };
     let num2 = 0;
     if (diff > 0) {
       num2 = targetTime - result;
     }
-    obj[1] = num2;
+    obj.delay = num2;
     return obj;
   }
 };

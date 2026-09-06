@@ -1,946 +1,883 @@
 // discord_common/js/packages/http-utils/stringifyErrors.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-function stringifyErrors(str) {
-  closure_0 = str;
-  str = "";
+function stringifyErrors(message) {
+  closure_0 = message;
+  let str = "";
   let str2 = "";
-  if (null != str) {
-    if (typeof str === "string") {
-      str2 = str;
-    } else {
-      if (null == str) {
-        const _Array = Array;
-        if (Array.isArray(str)) {
-          const reduced = str.reduce((arr, str) => {
-            if (typeof closure_0 !== "function") {
-              HermesBuiltin.throwTypeError();
-            }
-            closure_0 = str;
-            str = "";
+  if (null != message) {
+    if (typeof message === "string") {
+      str2 = message;
+    } else if (null == message) {
+      const _Array = Array;
+      if (Array.isArray(message)) {
+        const reduced = message.reduce((acc, message) => {
+          if (typeof closure_0 === "function") {
+            closure_0 = message;
+            let str = "";
             let str2 = "";
-            if (null != str) {
-              if (typeof str === "string") {
-                str2 = str;
-              } else {
-                if (null == str) {
-                  const _Array = Array;
-                  if (Array.isArray(str)) {
-                    const reduced = str.reduce((arr, str) => {
-                      if (typeof closure_0 !== "function") {
-                        HermesBuiltin.throwTypeError();
-                      }
-                      closure_0 = str;
-                      str = "";
+            if (null != message) {
+              if (typeof message === "string") {
+                str2 = message;
+              } else if (null == message) {
+                const _Array = Array;
+                if (Array.isArray(message)) {
+                  const reduced = message.reduce((acc, message) => {
+                    if (typeof closure_0 === "function") {
+                      closure_0 = message;
+                      let str = "";
                       let str2 = "";
-                      if (null != str) {
-                        if (typeof str === "string") {
-                          str2 = str;
-                        } else {
-                          if (null == str) {
-                            const _Array = Array;
-                            if (Array.isArray(str)) {
-                              const reduced = str.reduce((arr, str) => {
-                                if (typeof closure_0 !== "function") {
-                                  HermesBuiltin.throwTypeError();
-                                }
-                                closure_0 = str;
-                                str = "";
+                      if (null != message) {
+                        if (typeof message === "string") {
+                          str2 = message;
+                        } else if (null == message) {
+                          const _Array = Array;
+                          if (Array.isArray(message)) {
+                            const reduced = message.reduce((acc, message) => {
+                              if (typeof closure_0 === "function") {
+                                closure_0 = message;
+                                let str = "";
                                 let str2 = "";
-                                if (null != str) {
-                                  if (typeof str === "string") {
-                                    str2 = str;
-                                  } else {
-                                    if (null == str) {
-                                      const _Array = Array;
-                                      if (Array.isArray(str)) {
-                                        const reduced = str.reduce((arr, str) => {
-                                          if (typeof closure_0 !== "function") {
-                                            HermesBuiltin.throwTypeError();
-                                          }
-                                          closure_0 = str;
-                                          str = "";
+                                if (null != message) {
+                                  if (typeof message === "string") {
+                                    str2 = message;
+                                  } else if (null == message) {
+                                    const _Array = Array;
+                                    if (Array.isArray(message)) {
+                                      const reduced = message.reduce((acc, message) => {
+                                        if (typeof closure_0 === "function") {
+                                          closure_0 = message;
+                                          let str = "";
                                           let str2 = "";
-                                          if (null != str) {
-                                            if (typeof str === "string") {
-                                              str2 = str;
-                                            } else {
-                                              if (null == str) {
-                                                const _Array = Array;
-                                                if (Array.isArray(str)) {
-                                                  const reduced = str.reduce(() => { ... }, []);
-                                                  str = reduced.join(", ");
-                                                } else if (typeof str === "object") {
-                                                  const _Object = Object;
-                                                  const keys = Object.keys(str);
-                                                  const reduced1 = keys.reduce(() => { ... }, []);
-                                                  str = reduced1.join(", ");
-                                                }
+                                          if (null != message) {
+                                            if (typeof message === "string") {
+                                              str2 = message;
+                                            } else if (null == message) {
+                                              const _Array = Array;
+                                              if (Array.isArray(message)) {
+                                                const reduced = message.reduce(() => { ... }, []);
+                                                str = reduced.join(", ");
+                                              } else if (typeof message === "object") {
+                                                const _Object = Object;
+                                                const keys = Object.keys(message);
+                                                const reduced1 = keys.reduce(() => { ... }, []);
+                                                str = reduced1.join(", ");
                                               }
-                                              str = str.message;
                                             }
                                           }
-                                          return arr.concat(str2);
-                                        }, []);
-                                        str = reduced.join(", ");
-                                      } else if (typeof str === "object") {
-                                        const _Object = Object;
-                                        const keys = Object.keys(str);
-                                        const reduced1 = keys.reduce((arr) => {
-                                          arr = arr[arg1];
-                                          if (typeof closure_1_0 !== "function") {
-                                            HermesBuiltin.throwTypeError();
-                                          }
-                                          let str = "";
+                                          return tmp(str2);
+                                        } else {
+                                          throw new TypeError("Trying to call a non-function");
+                                        }
+                                      }, []);
+                                      str = reduced.join(", ");
+                                    } else if (typeof message === "object") {
+                                      const _Object = Object;
+                                      const keys = Object.keys(message);
+                                      const reduced1 = keys.reduce((arr, item) => {
+                                        arr = closure_1_0[item];
+                                        if (typeof closure_2_0 === "function") {
+                                          let str2 = "";
                                           if (null != arr) {
                                             if (typeof arr === "string") {
-                                              str = arr;
-                                            } else {
-                                              if (null == arr) {
+                                              str2 = arr;
+                                            } else if (null == arr) {
+                                              let _Array = Array;
+                                              if (Array.isArray(arr)) {
+                                                let reduced = arr.reduce(() => { ... }, []);
+                                                let str3 = reduced.join(", ");
+                                              } else {
+                                                str3 = "";
+                                                if (typeof arr === "object") {
+                                                  let _Object = Object;
+                                                  let keys = Object.keys(arr);
+                                                  let reduced1 = keys.reduce(() => { ... }, []);
+                                                  str3 = reduced1.join(", ");
+                                                }
+                                              }
+                                            }
+                                          }
+                                          let combined = arr;
+                                          if (str2) {
+                                            let _HermesInternal = HermesInternal;
+                                            combined = arr.concat("" + str2 + " (" + item + ")");
+                                          }
+                                          return combined;
+                                        } else {
+                                          throw new TypeError("Trying to call a non-function");
+                                        }
+                                      }, []);
+                                      str = reduced1.join(", ");
+                                    }
+                                  }
+                                }
+                                return tmp(str2);
+                              } else {
+                                throw new TypeError("Trying to call a non-function");
+                              }
+                            }, []);
+                            str = reduced.join(", ");
+                          } else if (typeof message === "object") {
+                            const _Object = Object;
+                            const keys = Object.keys(message);
+                            const reduced1 = keys.reduce((arr, item) => {
+                              arr = closure_1_0[item];
+                              if (typeof closure_2_0 === "function") {
+                                let str2 = "";
+                                if (null != arr) {
+                                  if (typeof arr === "string") {
+                                    str2 = arr;
+                                  } else if (null == arr) {
+                                    let _Array = Array;
+                                    if (Array.isArray(arr)) {
+                                      let reduced = arr.reduce((acc, message) => {
+                                        if (typeof closure_0 === "function") {
+                                          closure_0 = message;
+                                          let str = "";
+                                          let str2 = "";
+                                          if (null != message) {
+                                            if (typeof message === "string") {
+                                              str2 = message;
+                                            } else if (null == message) {
+                                              const _Array = Array;
+                                              if (Array.isArray(message)) {
+                                                const reduced = message.reduce(() => { ... }, []);
+                                                str = reduced.join(", ");
+                                              } else if (typeof message === "object") {
+                                                const _Object = Object;
+                                                const keys = Object.keys(message);
+                                                const reduced1 = keys.reduce(() => { ... }, []);
+                                                str = reduced1.join(", ");
+                                              }
+                                            }
+                                          }
+                                          return tmp(str2);
+                                        } else {
+                                          throw new TypeError("Trying to call a non-function");
+                                        }
+                                      }, []);
+                                      let str3 = reduced.join(", ");
+                                    } else {
+                                      str3 = "";
+                                      if (typeof arr === "object") {
+                                        let _Object = Object;
+                                        let keys = Object.keys(arr);
+                                        let reduced1 = keys.reduce((arr, item) => {
+                                          arr = closure_1_0[item];
+                                          if (typeof closure_2_0 === "function") {
+                                            let str2 = "";
+                                            if (null != arr) {
+                                              if (typeof arr === "string") {
+                                                str2 = arr;
+                                              } else if (null == arr) {
                                                 let _Array = Array;
                                                 if (Array.isArray(arr)) {
                                                   let reduced = arr.reduce(() => { ... }, []);
-                                                  let str2 = reduced.join(", ");
+                                                  let str3 = reduced.join(", ");
                                                 } else {
-                                                  str2 = "";
+                                                  str3 = "";
                                                   if (typeof arr === "object") {
                                                     let _Object = Object;
                                                     let keys = Object.keys(arr);
                                                     let reduced1 = keys.reduce(() => { ... }, []);
-                                                    str2 = reduced1.join(", ");
+                                                    str3 = reduced1.join(", ");
                                                   }
                                                 }
                                               }
-                                              str2 = arr.message;
+                                            }
+                                            let combined = arr;
+                                            if (str2) {
+                                              let _HermesInternal = HermesInternal;
+                                              combined = arr.concat("" + str2 + " (" + item + ")");
+                                            }
+                                            return combined;
+                                          } else {
+                                            throw new TypeError("Trying to call a non-function");
+                                          }
+                                        }, []);
+                                        str3 = reduced1.join(", ");
+                                      }
+                                    }
+                                  }
+                                }
+                                let combined = arr;
+                                if (str2) {
+                                  let _HermesInternal = HermesInternal;
+                                  combined = arr.concat("" + str2 + " (" + item + ")");
+                                }
+                                return combined;
+                              } else {
+                                throw new TypeError("Trying to call a non-function");
+                              }
+                            }, []);
+                            str = reduced1.join(", ");
+                          }
+                        }
+                      }
+                      return tmp(str2);
+                    } else {
+                      throw new TypeError("Trying to call a non-function");
+                    }
+                  }, []);
+                  str = reduced.join(", ");
+                } else if (typeof message === "object") {
+                  const _Object = Object;
+                  const keys = Object.keys(message);
+                  const reduced1 = keys.reduce((arr, item) => {
+                    arr = closure_1_0[item];
+                    if (typeof closure_2_0 === "function") {
+                      let str2 = "";
+                      if (null != arr) {
+                        if (typeof arr === "string") {
+                          str2 = arr;
+                        } else if (null == arr) {
+                          let _Array = Array;
+                          if (Array.isArray(arr)) {
+                            let reduced = arr.reduce((acc, message) => {
+                              if (typeof closure_0 === "function") {
+                                closure_0 = message;
+                                let str = "";
+                                let str2 = "";
+                                if (null != message) {
+                                  if (typeof message === "string") {
+                                    str2 = message;
+                                  } else if (null == message) {
+                                    const _Array = Array;
+                                    if (Array.isArray(message)) {
+                                      const reduced = message.reduce((acc, message) => {
+                                        if (typeof closure_0 === "function") {
+                                          closure_0 = message;
+                                          let str = "";
+                                          let str2 = "";
+                                          if (null != message) {
+                                            if (typeof message === "string") {
+                                              str2 = message;
+                                            } else if (null == message) {
+                                              const _Array = Array;
+                                              if (Array.isArray(message)) {
+                                                const reduced = message.reduce(() => { ... }, []);
+                                                str = reduced.join(", ");
+                                              } else if (typeof message === "object") {
+                                                const _Object = Object;
+                                                const keys = Object.keys(message);
+                                                const reduced1 = keys.reduce(() => { ... }, []);
+                                                str = reduced1.join(", ");
+                                              }
+                                            }
+                                          }
+                                          return tmp(str2);
+                                        } else {
+                                          throw new TypeError("Trying to call a non-function");
+                                        }
+                                      }, []);
+                                      str = reduced.join(", ");
+                                    } else if (typeof message === "object") {
+                                      const _Object = Object;
+                                      const keys = Object.keys(message);
+                                      const reduced1 = keys.reduce((arr, item) => {
+                                        arr = closure_1_0[item];
+                                        if (typeof closure_2_0 === "function") {
+                                          let str2 = "";
+                                          if (null != arr) {
+                                            if (typeof arr === "string") {
+                                              str2 = arr;
+                                            } else if (null == arr) {
+                                              let _Array = Array;
+                                              if (Array.isArray(arr)) {
+                                                let reduced = arr.reduce(() => { ... }, []);
+                                                let str3 = reduced.join(", ");
+                                              } else {
+                                                str3 = "";
+                                                if (typeof arr === "object") {
+                                                  let _Object = Object;
+                                                  let keys = Object.keys(arr);
+                                                  let reduced1 = keys.reduce(() => { ... }, []);
+                                                  str3 = reduced1.join(", ");
+                                                }
+                                              }
                                             }
                                           }
                                           let combined = arr;
-                                          if (str) {
+                                          if (str2) {
                                             let _HermesInternal = HermesInternal;
-                                            combined = arr.concat("" + str + " (" + arg1 + ")");
+                                            combined = arr.concat("" + str2 + " (" + item + ")");
                                           }
                                           return combined;
-                                        }, []);
-                                        str = reduced1.join(", ");
-                                      }
+                                        } else {
+                                          throw new TypeError("Trying to call a non-function");
+                                        }
+                                      }, []);
+                                      str = reduced1.join(", ");
                                     }
-                                    str = str.message;
                                   }
                                 }
-                                return arr.concat(str2);
-                              }, []);
-                              str = reduced.join(", ");
-                            } else if (typeof str === "object") {
-                              const _Object = Object;
-                              const keys = Object.keys(str);
-                              const reduced1 = keys.reduce((arr) => {
-                                arr = arr[arg1];
-                                if (typeof closure_1_0 !== "function") {
-                                  HermesBuiltin.throwTypeError();
-                                }
-                                let str = "";
-                                if (null != arr) {
-                                  if (typeof arr === "string") {
-                                    str = arr;
-                                  } else {
-                                    if (null == arr) {
+                                return tmp(str2);
+                              } else {
+                                throw new TypeError("Trying to call a non-function");
+                              }
+                            }, []);
+                            let str3 = reduced.join(", ");
+                          } else {
+                            str3 = "";
+                            if (typeof arr === "object") {
+                              let _Object = Object;
+                              let keys = Object.keys(arr);
+                              let reduced1 = keys.reduce((arr, item) => {
+                                arr = closure_1_0[item];
+                                if (typeof closure_2_0 === "function") {
+                                  let str2 = "";
+                                  if (null != arr) {
+                                    if (typeof arr === "string") {
+                                      str2 = arr;
+                                    } else if (null == arr) {
                                       let _Array = Array;
                                       if (Array.isArray(arr)) {
-                                        let reduced = arr.reduce((arr, str) => {
-                                          if (typeof closure_0 !== "function") {
-                                            HermesBuiltin.throwTypeError();
-                                          }
-                                          closure_0 = str;
-                                          str = "";
-                                          let str2 = "";
-                                          if (null != str) {
-                                            if (typeof str === "string") {
-                                              str2 = str;
-                                            } else {
-                                              if (null == str) {
+                                        let reduced = arr.reduce((acc, message) => {
+                                          if (typeof closure_0 === "function") {
+                                            closure_0 = message;
+                                            let str = "";
+                                            let str2 = "";
+                                            if (null != message) {
+                                              if (typeof message === "string") {
+                                                str2 = message;
+                                              } else if (null == message) {
                                                 const _Array = Array;
-                                                if (Array.isArray(str)) {
-                                                  const reduced = str.reduce(() => { ... }, []);
+                                                if (Array.isArray(message)) {
+                                                  const reduced = message.reduce(() => { ... }, []);
                                                   str = reduced.join(", ");
-                                                } else if (typeof str === "object") {
+                                                } else if (typeof message === "object") {
                                                   const _Object = Object;
-                                                  const keys = Object.keys(str);
+                                                  const keys = Object.keys(message);
                                                   const reduced1 = keys.reduce(() => { ... }, []);
                                                   str = reduced1.join(", ");
                                                 }
                                               }
-                                              str = str.message;
                                             }
+                                            return tmp(str2);
+                                          } else {
+                                            throw new TypeError("Trying to call a non-function");
                                           }
-                                          return arr.concat(str2);
                                         }, []);
-                                        let str2 = reduced.join(", ");
+                                        let str3 = reduced.join(", ");
                                       } else {
-                                        str2 = "";
+                                        str3 = "";
                                         if (typeof arr === "object") {
                                           let _Object = Object;
                                           let keys = Object.keys(arr);
-                                          let reduced1 = keys.reduce((arr) => {
-                                            arr = arr[arg1];
-                                            if (typeof closure_1_0 !== "function") {
-                                              HermesBuiltin.throwTypeError();
-                                            }
-                                            let str = "";
-                                            if (null != arr) {
-                                              if (typeof arr === "string") {
-                                                str = arr;
-                                              } else {
-                                                if (null == arr) {
+                                          let reduced1 = keys.reduce((arr, item) => {
+                                            arr = closure_1_0[item];
+                                            if (typeof closure_2_0 === "function") {
+                                              let str2 = "";
+                                              if (null != arr) {
+                                                if (typeof arr === "string") {
+                                                  str2 = arr;
+                                                } else if (null == arr) {
                                                   let _Array = Array;
                                                   if (Array.isArray(arr)) {
                                                     let reduced = arr.reduce(() => { ... }, []);
-                                                    let str2 = reduced.join(", ");
+                                                    let str3 = reduced.join(", ");
                                                   } else {
-                                                    str2 = "";
+                                                    str3 = "";
                                                     if (typeof arr === "object") {
                                                       let _Object = Object;
                                                       let keys = Object.keys(arr);
                                                       let reduced1 = keys.reduce(() => { ... }, []);
-                                                      str2 = reduced1.join(", ");
+                                                      str3 = reduced1.join(", ");
                                                     }
                                                   }
                                                 }
-                                                str2 = arr.message;
                                               }
+                                              let combined = arr;
+                                              if (str2) {
+                                                let _HermesInternal = HermesInternal;
+                                                combined = arr.concat("" + str2 + " (" + item + ")");
+                                              }
+                                              return combined;
+                                            } else {
+                                              throw new TypeError("Trying to call a non-function");
                                             }
-                                            let combined = arr;
-                                            if (str) {
-                                              let _HermesInternal = HermesInternal;
-                                              combined = arr.concat("" + str + " (" + arg1 + ")");
-                                            }
-                                            return combined;
                                           }, []);
-                                          str2 = reduced1.join(", ");
+                                          str3 = reduced1.join(", ");
                                         }
                                       }
                                     }
-                                    str2 = arr.message;
                                   }
+                                  let combined = arr;
+                                  if (str2) {
+                                    let _HermesInternal = HermesInternal;
+                                    combined = arr.concat("" + str2 + " (" + item + ")");
+                                  }
+                                  return combined;
+                                } else {
+                                  throw new TypeError("Trying to call a non-function");
                                 }
-                                let combined = arr;
-                                if (str) {
-                                  let _HermesInternal = HermesInternal;
-                                  combined = arr.concat("" + str + " (" + arg1 + ")");
-                                }
-                                return combined;
                               }, []);
-                              str = reduced1.join(", ");
+                              str3 = reduced1.join(", ");
                             }
                           }
-                          str = str.message;
                         }
                       }
-                      return arr.concat(str2);
-                    }, []);
-                    str = reduced.join(", ");
-                  } else if (typeof str === "object") {
-                    const _Object = Object;
-                    const keys = Object.keys(str);
-                    const reduced1 = keys.reduce((arr) => {
-                      arr = arr[arg1];
-                      if (typeof closure_1_0 !== "function") {
-                        HermesBuiltin.throwTypeError();
+                      let combined = arr;
+                      if (str2) {
+                        let _HermesInternal = HermesInternal;
+                        combined = arr.concat("" + str2 + " (" + item + ")");
                       }
+                      return combined;
+                    } else {
+                      throw new TypeError("Trying to call a non-function");
+                    }
+                  }, []);
+                  str = reduced1.join(", ");
+                }
+              }
+            }
+            return tmp(str2);
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+        }, []);
+        str = reduced.join(", ");
+      } else if (typeof message === "object") {
+        const _Object = Object;
+        const keys = Object.keys(message);
+        const reduced1 = keys.reduce((arr, item) => {
+          arr = closure_1_0[item];
+          if (typeof closure_2_0 === "function") {
+            let str2 = "";
+            if (null != arr) {
+              if (typeof arr === "string") {
+                str2 = arr;
+              } else if (null == arr) {
+                let _Array = Array;
+                if (Array.isArray(arr)) {
+                  let reduced = arr.reduce((acc, message) => {
+                    if (typeof closure_0 === "function") {
+                      closure_0 = message;
                       let str = "";
-                      if (null != arr) {
-                        if (typeof arr === "string") {
-                          str = arr;
-                        } else {
-                          if (null == arr) {
-                            let _Array = Array;
-                            if (Array.isArray(arr)) {
-                              let reduced = arr.reduce((arr, str) => {
-                                if (typeof closure_0 !== "function") {
-                                  HermesBuiltin.throwTypeError();
-                                }
-                                closure_0 = str;
-                                str = "";
+                      let str2 = "";
+                      if (null != message) {
+                        if (typeof message === "string") {
+                          str2 = message;
+                        } else if (null == message) {
+                          const _Array = Array;
+                          if (Array.isArray(message)) {
+                            const reduced = message.reduce((acc, message) => {
+                              if (typeof closure_0 === "function") {
+                                closure_0 = message;
+                                let str = "";
                                 let str2 = "";
-                                if (null != str) {
-                                  if (typeof str === "string") {
-                                    str2 = str;
-                                  } else {
-                                    if (null == str) {
-                                      const _Array = Array;
-                                      if (Array.isArray(str)) {
-                                        const reduced = str.reduce((arr, str) => {
-                                          if (typeof closure_0 !== "function") {
-                                            HermesBuiltin.throwTypeError();
-                                          }
-                                          closure_0 = str;
-                                          str = "";
+                                if (null != message) {
+                                  if (typeof message === "string") {
+                                    str2 = message;
+                                  } else if (null == message) {
+                                    const _Array = Array;
+                                    if (Array.isArray(message)) {
+                                      const reduced = message.reduce((acc, message) => {
+                                        if (typeof closure_0 === "function") {
+                                          closure_0 = message;
+                                          let str = "";
                                           let str2 = "";
-                                          if (null != str) {
-                                            if (typeof str === "string") {
-                                              str2 = str;
-                                            } else {
-                                              if (null == str) {
-                                                const _Array = Array;
-                                                if (Array.isArray(str)) {
-                                                  const reduced = str.reduce(() => { ... }, []);
-                                                  str = reduced.join(", ");
-                                                } else if (typeof str === "object") {
-                                                  const _Object = Object;
-                                                  const keys = Object.keys(str);
-                                                  const reduced1 = keys.reduce(() => { ... }, []);
-                                                  str = reduced1.join(", ");
-                                                }
+                                          if (null != message) {
+                                            if (typeof message === "string") {
+                                              str2 = message;
+                                            } else if (null == message) {
+                                              const _Array = Array;
+                                              if (Array.isArray(message)) {
+                                                const reduced = message.reduce(() => { ... }, []);
+                                                str = reduced.join(", ");
+                                              } else if (typeof message === "object") {
+                                                const _Object = Object;
+                                                const keys = Object.keys(message);
+                                                const reduced1 = keys.reduce(() => { ... }, []);
+                                                str = reduced1.join(", ");
                                               }
-                                              str = str.message;
                                             }
                                           }
-                                          return arr.concat(str2);
-                                        }, []);
-                                        str = reduced.join(", ");
-                                      } else if (typeof str === "object") {
-                                        const _Object = Object;
-                                        const keys = Object.keys(str);
-                                        const reduced1 = keys.reduce((arr) => {
-                                          arr = arr[arg1];
-                                          if (typeof closure_1_0 !== "function") {
-                                            HermesBuiltin.throwTypeError();
-                                          }
-                                          let str = "";
+                                          return tmp(str2);
+                                        } else {
+                                          throw new TypeError("Trying to call a non-function");
+                                        }
+                                      }, []);
+                                      str = reduced.join(", ");
+                                    } else if (typeof message === "object") {
+                                      const _Object = Object;
+                                      const keys = Object.keys(message);
+                                      const reduced1 = keys.reduce((arr, item) => {
+                                        arr = closure_1_0[item];
+                                        if (typeof closure_2_0 === "function") {
+                                          let str2 = "";
                                           if (null != arr) {
                                             if (typeof arr === "string") {
-                                              str = arr;
-                                            } else {
-                                              if (null == arr) {
+                                              str2 = arr;
+                                            } else if (null == arr) {
+                                              let _Array = Array;
+                                              if (Array.isArray(arr)) {
+                                                let reduced = arr.reduce(() => { ... }, []);
+                                                let str3 = reduced.join(", ");
+                                              } else {
+                                                str3 = "";
+                                                if (typeof arr === "object") {
+                                                  let _Object = Object;
+                                                  let keys = Object.keys(arr);
+                                                  let reduced1 = keys.reduce(() => { ... }, []);
+                                                  str3 = reduced1.join(", ");
+                                                }
+                                              }
+                                            }
+                                          }
+                                          let combined = arr;
+                                          if (str2) {
+                                            let _HermesInternal = HermesInternal;
+                                            combined = arr.concat("" + str2 + " (" + item + ")");
+                                          }
+                                          return combined;
+                                        } else {
+                                          throw new TypeError("Trying to call a non-function");
+                                        }
+                                      }, []);
+                                      str = reduced1.join(", ");
+                                    }
+                                  }
+                                }
+                                return tmp(str2);
+                              } else {
+                                throw new TypeError("Trying to call a non-function");
+                              }
+                            }, []);
+                            str = reduced.join(", ");
+                          } else if (typeof message === "object") {
+                            const _Object = Object;
+                            const keys = Object.keys(message);
+                            const reduced1 = keys.reduce((arr, item) => {
+                              arr = closure_1_0[item];
+                              if (typeof closure_2_0 === "function") {
+                                let str2 = "";
+                                if (null != arr) {
+                                  if (typeof arr === "string") {
+                                    str2 = arr;
+                                  } else if (null == arr) {
+                                    let _Array = Array;
+                                    if (Array.isArray(arr)) {
+                                      let reduced = arr.reduce((acc, message) => {
+                                        if (typeof closure_0 === "function") {
+                                          closure_0 = message;
+                                          let str = "";
+                                          let str2 = "";
+                                          if (null != message) {
+                                            if (typeof message === "string") {
+                                              str2 = message;
+                                            } else if (null == message) {
+                                              const _Array = Array;
+                                              if (Array.isArray(message)) {
+                                                const reduced = message.reduce(() => { ... }, []);
+                                                str = reduced.join(", ");
+                                              } else if (typeof message === "object") {
+                                                const _Object = Object;
+                                                const keys = Object.keys(message);
+                                                const reduced1 = keys.reduce(() => { ... }, []);
+                                                str = reduced1.join(", ");
+                                              }
+                                            }
+                                          }
+                                          return tmp(str2);
+                                        } else {
+                                          throw new TypeError("Trying to call a non-function");
+                                        }
+                                      }, []);
+                                      let str3 = reduced.join(", ");
+                                    } else {
+                                      str3 = "";
+                                      if (typeof arr === "object") {
+                                        let _Object = Object;
+                                        let keys = Object.keys(arr);
+                                        let reduced1 = keys.reduce((arr, item) => {
+                                          arr = closure_1_0[item];
+                                          if (typeof closure_2_0 === "function") {
+                                            let str2 = "";
+                                            if (null != arr) {
+                                              if (typeof arr === "string") {
+                                                str2 = arr;
+                                              } else if (null == arr) {
                                                 let _Array = Array;
                                                 if (Array.isArray(arr)) {
                                                   let reduced = arr.reduce(() => { ... }, []);
-                                                  let str2 = reduced.join(", ");
+                                                  let str3 = reduced.join(", ");
                                                 } else {
-                                                  str2 = "";
+                                                  str3 = "";
                                                   if (typeof arr === "object") {
                                                     let _Object = Object;
                                                     let keys = Object.keys(arr);
                                                     let reduced1 = keys.reduce(() => { ... }, []);
-                                                    str2 = reduced1.join(", ");
+                                                    str3 = reduced1.join(", ");
                                                   }
                                                 }
                                               }
-                                              str2 = arr.message;
                                             }
+                                            let combined = arr;
+                                            if (str2) {
+                                              let _HermesInternal = HermesInternal;
+                                              combined = arr.concat("" + str2 + " (" + item + ")");
+                                            }
+                                            return combined;
+                                          } else {
+                                            throw new TypeError("Trying to call a non-function");
                                           }
-                                          let combined = arr;
-                                          if (str) {
-                                            let _HermesInternal = HermesInternal;
-                                            combined = arr.concat("" + str + " (" + arg1 + ")");
+                                        }, []);
+                                        str3 = reduced1.join(", ");
+                                      }
+                                    }
+                                  }
+                                }
+                                let combined = arr;
+                                if (str2) {
+                                  let _HermesInternal = HermesInternal;
+                                  combined = arr.concat("" + str2 + " (" + item + ")");
+                                }
+                                return combined;
+                              } else {
+                                throw new TypeError("Trying to call a non-function");
+                              }
+                            }, []);
+                            str = reduced1.join(", ");
+                          }
+                        }
+                      }
+                      return tmp(str2);
+                    } else {
+                      throw new TypeError("Trying to call a non-function");
+                    }
+                  }, []);
+                  let str3 = reduced.join(", ");
+                } else {
+                  str3 = "";
+                  if (typeof arr === "object") {
+                    let _Object = Object;
+                    let keys = Object.keys(arr);
+                    let reduced1 = keys.reduce((arr, item) => {
+                      arr = closure_1_0[item];
+                      if (typeof closure_2_0 === "function") {
+                        let str2 = "";
+                        if (null != arr) {
+                          if (typeof arr === "string") {
+                            str2 = arr;
+                          } else if (null == arr) {
+                            let _Array = Array;
+                            if (Array.isArray(arr)) {
+                              let reduced = arr.reduce((acc, message) => {
+                                if (typeof closure_0 === "function") {
+                                  closure_0 = message;
+                                  let str = "";
+                                  let str2 = "";
+                                  if (null != message) {
+                                    if (typeof message === "string") {
+                                      str2 = message;
+                                    } else if (null == message) {
+                                      const _Array = Array;
+                                      if (Array.isArray(message)) {
+                                        const reduced = message.reduce((acc, message) => {
+                                          if (typeof closure_0 === "function") {
+                                            closure_0 = message;
+                                            let str = "";
+                                            let str2 = "";
+                                            if (null != message) {
+                                              if (typeof message === "string") {
+                                                str2 = message;
+                                              } else if (null == message) {
+                                                const _Array = Array;
+                                                if (Array.isArray(message)) {
+                                                  const reduced = message.reduce(() => { ... }, []);
+                                                  str = reduced.join(", ");
+                                                } else if (typeof message === "object") {
+                                                  const _Object = Object;
+                                                  const keys = Object.keys(message);
+                                                  const reduced1 = keys.reduce(() => { ... }, []);
+                                                  str = reduced1.join(", ");
+                                                }
+                                              }
+                                            }
+                                            return tmp(str2);
+                                          } else {
+                                            throw new TypeError("Trying to call a non-function");
                                           }
-                                          return combined;
+                                        }, []);
+                                        str = reduced.join(", ");
+                                      } else if (typeof message === "object") {
+                                        const _Object = Object;
+                                        const keys = Object.keys(message);
+                                        const reduced1 = keys.reduce((arr, item) => {
+                                          arr = closure_1_0[item];
+                                          if (typeof closure_2_0 === "function") {
+                                            let str2 = "";
+                                            if (null != arr) {
+                                              if (typeof arr === "string") {
+                                                str2 = arr;
+                                              } else if (null == arr) {
+                                                let _Array = Array;
+                                                if (Array.isArray(arr)) {
+                                                  let reduced = arr.reduce(() => { ... }, []);
+                                                  let str3 = reduced.join(", ");
+                                                } else {
+                                                  str3 = "";
+                                                  if (typeof arr === "object") {
+                                                    let _Object = Object;
+                                                    let keys = Object.keys(arr);
+                                                    let reduced1 = keys.reduce(() => { ... }, []);
+                                                    str3 = reduced1.join(", ");
+                                                  }
+                                                }
+                                              }
+                                            }
+                                            let combined = arr;
+                                            if (str2) {
+                                              let _HermesInternal = HermesInternal;
+                                              combined = arr.concat("" + str2 + " (" + item + ")");
+                                            }
+                                            return combined;
+                                          } else {
+                                            throw new TypeError("Trying to call a non-function");
+                                          }
                                         }, []);
                                         str = reduced1.join(", ");
                                       }
                                     }
-                                    str = str.message;
                                   }
+                                  return tmp(str2);
+                                } else {
+                                  throw new TypeError("Trying to call a non-function");
                                 }
-                                return arr.concat(str2);
                               }, []);
-                              let str2 = reduced.join(", ");
+                              let str3 = reduced.join(", ");
                             } else {
-                              str2 = "";
+                              str3 = "";
                               if (typeof arr === "object") {
                                 let _Object = Object;
                                 let keys = Object.keys(arr);
-                                let reduced1 = keys.reduce((arr) => {
-                                  arr = arr[arg1];
-                                  if (typeof closure_1_0 !== "function") {
-                                    HermesBuiltin.throwTypeError();
-                                  }
-                                  let str = "";
-                                  if (null != arr) {
-                                    if (typeof arr === "string") {
-                                      str = arr;
-                                    } else {
-                                      if (null == arr) {
+                                let reduced1 = keys.reduce((arr, item) => {
+                                  arr = closure_1_0[item];
+                                  if (typeof closure_2_0 === "function") {
+                                    let str2 = "";
+                                    if (null != arr) {
+                                      if (typeof arr === "string") {
+                                        str2 = arr;
+                                      } else if (null == arr) {
                                         let _Array = Array;
                                         if (Array.isArray(arr)) {
-                                          let reduced = arr.reduce((arr, str) => {
-                                            if (typeof closure_0 !== "function") {
-                                              HermesBuiltin.throwTypeError();
-                                            }
-                                            closure_0 = str;
-                                            str = "";
-                                            let str2 = "";
-                                            if (null != str) {
-                                              if (typeof str === "string") {
-                                                str2 = str;
-                                              } else {
-                                                if (null == str) {
+                                          let reduced = arr.reduce((acc, message) => {
+                                            if (typeof closure_0 === "function") {
+                                              closure_0 = message;
+                                              let str = "";
+                                              let str2 = "";
+                                              if (null != message) {
+                                                if (typeof message === "string") {
+                                                  str2 = message;
+                                                } else if (null == message) {
                                                   const _Array = Array;
-                                                  if (Array.isArray(str)) {
-                                                    const reduced = str.reduce(() => { ... }, []);
+                                                  if (Array.isArray(message)) {
+                                                    const reduced = message.reduce(() => { ... }, []);
                                                     str = reduced.join(", ");
-                                                  } else if (typeof str === "object") {
+                                                  } else if (typeof message === "object") {
                                                     const _Object = Object;
-                                                    const keys = Object.keys(str);
+                                                    const keys = Object.keys(message);
                                                     const reduced1 = keys.reduce(() => { ... }, []);
                                                     str = reduced1.join(", ");
                                                   }
                                                 }
-                                                str = str.message;
                                               }
+                                              return tmp(str2);
+                                            } else {
+                                              throw new TypeError("Trying to call a non-function");
                                             }
-                                            return arr.concat(str2);
                                           }, []);
-                                          let str2 = reduced.join(", ");
+                                          let str3 = reduced.join(", ");
                                         } else {
-                                          str2 = "";
+                                          str3 = "";
                                           if (typeof arr === "object") {
                                             let _Object = Object;
                                             let keys = Object.keys(arr);
-                                            let reduced1 = keys.reduce((arr) => {
-                                              arr = arr[arg1];
-                                              if (typeof closure_1_0 !== "function") {
-                                                HermesBuiltin.throwTypeError();
-                                              }
-                                              let str = "";
-                                              if (null != arr) {
-                                                if (typeof arr === "string") {
-                                                  str = arr;
-                                                } else {
-                                                  if (null == arr) {
+                                            let reduced1 = keys.reduce((arr, item) => {
+                                              arr = closure_1_0[item];
+                                              if (typeof closure_2_0 === "function") {
+                                                let str2 = "";
+                                                if (null != arr) {
+                                                  if (typeof arr === "string") {
+                                                    str2 = arr;
+                                                  } else if (null == arr) {
                                                     let _Array = Array;
                                                     if (Array.isArray(arr)) {
                                                       let reduced = arr.reduce(() => { ... }, []);
-                                                      let str2 = reduced.join(", ");
+                                                      let str3 = reduced.join(", ");
                                                     } else {
-                                                      str2 = "";
+                                                      str3 = "";
                                                       if (typeof arr === "object") {
                                                         let _Object = Object;
                                                         let keys = Object.keys(arr);
                                                         let reduced1 = keys.reduce(() => { ... }, []);
-                                                        str2 = reduced1.join(", ");
+                                                        str3 = reduced1.join(", ");
                                                       }
                                                     }
-                                                  }
-                                                  str2 = arr.message;
-                                                }
-                                              }
-                                              let combined = arr;
-                                              if (str) {
-                                                let _HermesInternal = HermesInternal;
-                                                combined = arr.concat("" + str + " (" + arg1 + ")");
-                                              }
-                                              return combined;
-                                            }, []);
-                                            str2 = reduced1.join(", ");
-                                          }
-                                        }
-                                      }
-                                      str2 = arr.message;
-                                    }
-                                  }
-                                  let combined = arr;
-                                  if (str) {
-                                    let _HermesInternal = HermesInternal;
-                                    combined = arr.concat("" + str + " (" + arg1 + ")");
-                                  }
-                                  return combined;
-                                }, []);
-                                str2 = reduced1.join(", ");
-                              }
-                            }
-                          }
-                          str2 = arr.message;
-                        }
-                      }
-                      let combined = arr;
-                      if (str) {
-                        let _HermesInternal = HermesInternal;
-                        combined = arr.concat("" + str + " (" + arg1 + ")");
-                      }
-                      return combined;
-                    }, []);
-                    str = reduced1.join(", ");
-                  }
-                }
-                str = str.message;
-              }
-            }
-            return arr.concat(str2);
-          }, []);
-          str = reduced.join(", ");
-        } else if (typeof str === "object") {
-          const _Object = Object;
-          const keys = Object.keys(str);
-          const reduced1 = keys.reduce((arr) => {
-            arr = arr[arg1];
-            if (typeof closure_1_0 !== "function") {
-              HermesBuiltin.throwTypeError();
-            }
-            let str = "";
-            if (null != arr) {
-              if (typeof arr === "string") {
-                str = arr;
-              } else {
-                if (null == arr) {
-                  let _Array = Array;
-                  if (Array.isArray(arr)) {
-                    let reduced = arr.reduce((arr, str) => {
-                      if (typeof closure_0 !== "function") {
-                        HermesBuiltin.throwTypeError();
-                      }
-                      closure_0 = str;
-                      str = "";
-                      let str2 = "";
-                      if (null != str) {
-                        if (typeof str === "string") {
-                          str2 = str;
-                        } else {
-                          if (null == str) {
-                            const _Array = Array;
-                            if (Array.isArray(str)) {
-                              const reduced = str.reduce((arr, str) => {
-                                if (typeof closure_0 !== "function") {
-                                  HermesBuiltin.throwTypeError();
-                                }
-                                closure_0 = str;
-                                str = "";
-                                let str2 = "";
-                                if (null != str) {
-                                  if (typeof str === "string") {
-                                    str2 = str;
-                                  } else {
-                                    if (null == str) {
-                                      const _Array = Array;
-                                      if (Array.isArray(str)) {
-                                        const reduced = str.reduce((arr, str) => {
-                                          if (typeof closure_0 !== "function") {
-                                            HermesBuiltin.throwTypeError();
-                                          }
-                                          closure_0 = str;
-                                          str = "";
-                                          let str2 = "";
-                                          if (null != str) {
-                                            if (typeof str === "string") {
-                                              str2 = str;
-                                            } else {
-                                              if (null == str) {
-                                                const _Array = Array;
-                                                if (Array.isArray(str)) {
-                                                  const reduced = str.reduce(() => { ... }, []);
-                                                  str = reduced.join(", ");
-                                                } else if (typeof str === "object") {
-                                                  const _Object = Object;
-                                                  const keys = Object.keys(str);
-                                                  const reduced1 = keys.reduce(() => { ... }, []);
-                                                  str = reduced1.join(", ");
-                                                }
-                                              }
-                                              str = str.message;
-                                            }
-                                          }
-                                          return arr.concat(str2);
-                                        }, []);
-                                        str = reduced.join(", ");
-                                      } else if (typeof str === "object") {
-                                        const _Object = Object;
-                                        const keys = Object.keys(str);
-                                        const reduced1 = keys.reduce((arr) => {
-                                          arr = arr[arg1];
-                                          if (typeof closure_1_0 !== "function") {
-                                            HermesBuiltin.throwTypeError();
-                                          }
-                                          let str = "";
-                                          if (null != arr) {
-                                            if (typeof arr === "string") {
-                                              str = arr;
-                                            } else {
-                                              if (null == arr) {
-                                                let _Array = Array;
-                                                if (Array.isArray(arr)) {
-                                                  let reduced = arr.reduce(() => { ... }, []);
-                                                  let str2 = reduced.join(", ");
-                                                } else {
-                                                  str2 = "";
-                                                  if (typeof arr === "object") {
-                                                    let _Object = Object;
-                                                    let keys = Object.keys(arr);
-                                                    let reduced1 = keys.reduce(() => { ... }, []);
-                                                    str2 = reduced1.join(", ");
-                                                  }
-                                                }
-                                              }
-                                              str2 = arr.message;
-                                            }
-                                          }
-                                          let combined = arr;
-                                          if (str) {
-                                            let _HermesInternal = HermesInternal;
-                                            combined = arr.concat("" + str + " (" + arg1 + ")");
-                                          }
-                                          return combined;
-                                        }, []);
-                                        str = reduced1.join(", ");
-                                      }
-                                    }
-                                    str = str.message;
-                                  }
-                                }
-                                return arr.concat(str2);
-                              }, []);
-                              str = reduced.join(", ");
-                            } else if (typeof str === "object") {
-                              const _Object = Object;
-                              const keys = Object.keys(str);
-                              const reduced1 = keys.reduce((arr) => {
-                                arr = arr[arg1];
-                                if (typeof closure_1_0 !== "function") {
-                                  HermesBuiltin.throwTypeError();
-                                }
-                                let str = "";
-                                if (null != arr) {
-                                  if (typeof arr === "string") {
-                                    str = arr;
-                                  } else {
-                                    if (null == arr) {
-                                      let _Array = Array;
-                                      if (Array.isArray(arr)) {
-                                        let reduced = arr.reduce((arr, str) => {
-                                          if (typeof closure_0 !== "function") {
-                                            HermesBuiltin.throwTypeError();
-                                          }
-                                          closure_0 = str;
-                                          str = "";
-                                          let str2 = "";
-                                          if (null != str) {
-                                            if (typeof str === "string") {
-                                              str2 = str;
-                                            } else {
-                                              if (null == str) {
-                                                const _Array = Array;
-                                                if (Array.isArray(str)) {
-                                                  const reduced = str.reduce(() => { ... }, []);
-                                                  str = reduced.join(", ");
-                                                } else if (typeof str === "object") {
-                                                  const _Object = Object;
-                                                  const keys = Object.keys(str);
-                                                  const reduced1 = keys.reduce(() => { ... }, []);
-                                                  str = reduced1.join(", ");
-                                                }
-                                              }
-                                              str = str.message;
-                                            }
-                                          }
-                                          return arr.concat(str2);
-                                        }, []);
-                                        let str2 = reduced.join(", ");
-                                      } else {
-                                        str2 = "";
-                                        if (typeof arr === "object") {
-                                          let _Object = Object;
-                                          let keys = Object.keys(arr);
-                                          let reduced1 = keys.reduce((arr) => {
-                                            arr = arr[arg1];
-                                            if (typeof closure_1_0 !== "function") {
-                                              HermesBuiltin.throwTypeError();
-                                            }
-                                            let str = "";
-                                            if (null != arr) {
-                                              if (typeof arr === "string") {
-                                                str = arr;
-                                              } else {
-                                                if (null == arr) {
-                                                  let _Array = Array;
-                                                  if (Array.isArray(arr)) {
-                                                    let reduced = arr.reduce(() => { ... }, []);
-                                                    let str2 = reduced.join(", ");
-                                                  } else {
-                                                    str2 = "";
-                                                    if (typeof arr === "object") {
-                                                      let _Object = Object;
-                                                      let keys = Object.keys(arr);
-                                                      let reduced1 = keys.reduce(() => { ... }, []);
-                                                      str2 = reduced1.join(", ");
-                                                    }
-                                                  }
-                                                }
-                                                str2 = arr.message;
-                                              }
-                                            }
-                                            let combined = arr;
-                                            if (str) {
-                                              let _HermesInternal = HermesInternal;
-                                              combined = arr.concat("" + str + " (" + arg1 + ")");
-                                            }
-                                            return combined;
-                                          }, []);
-                                          str2 = reduced1.join(", ");
-                                        }
-                                      }
-                                    }
-                                    str2 = arr.message;
-                                  }
-                                }
-                                let combined = arr;
-                                if (str) {
-                                  let _HermesInternal = HermesInternal;
-                                  combined = arr.concat("" + str + " (" + arg1 + ")");
-                                }
-                                return combined;
-                              }, []);
-                              str = reduced1.join(", ");
-                            }
-                          }
-                          str = str.message;
-                        }
-                      }
-                      return arr.concat(str2);
-                    }, []);
-                    let str2 = reduced.join(", ");
-                  } else {
-                    str2 = "";
-                    if (typeof arr === "object") {
-                      let _Object = Object;
-                      let keys = Object.keys(arr);
-                      let reduced1 = keys.reduce((arr) => {
-                        arr = arr[arg1];
-                        if (typeof closure_1_0 !== "function") {
-                          HermesBuiltin.throwTypeError();
-                        }
-                        let str = "";
-                        if (null != arr) {
-                          if (typeof arr === "string") {
-                            str = arr;
-                          } else {
-                            if (null == arr) {
-                              let _Array = Array;
-                              if (Array.isArray(arr)) {
-                                let reduced = arr.reduce((arr, str) => {
-                                  if (typeof closure_0 !== "function") {
-                                    HermesBuiltin.throwTypeError();
-                                  }
-                                  closure_0 = str;
-                                  str = "";
-                                  let str2 = "";
-                                  if (null != str) {
-                                    if (typeof str === "string") {
-                                      str2 = str;
-                                    } else {
-                                      if (null == str) {
-                                        const _Array = Array;
-                                        if (Array.isArray(str)) {
-                                          const reduced = str.reduce((arr, str) => {
-                                            if (typeof closure_0 !== "function") {
-                                              HermesBuiltin.throwTypeError();
-                                            }
-                                            closure_0 = str;
-                                            str = "";
-                                            let str2 = "";
-                                            if (null != str) {
-                                              if (typeof str === "string") {
-                                                str2 = str;
-                                              } else {
-                                                if (null == str) {
-                                                  const _Array = Array;
-                                                  if (Array.isArray(str)) {
-                                                    const reduced = str.reduce(() => { ... }, []);
-                                                    str = reduced.join(", ");
-                                                  } else if (typeof str === "object") {
-                                                    const _Object = Object;
-                                                    const keys = Object.keys(str);
-                                                    const reduced1 = keys.reduce(() => { ... }, []);
-                                                    str = reduced1.join(", ");
-                                                  }
-                                                }
-                                                str = str.message;
-                                              }
-                                            }
-                                            return arr.concat(str2);
-                                          }, []);
-                                          str = reduced.join(", ");
-                                        } else if (typeof str === "object") {
-                                          const _Object = Object;
-                                          const keys = Object.keys(str);
-                                          const reduced1 = keys.reduce((arr) => {
-                                            arr = arr[arg1];
-                                            if (typeof closure_1_0 !== "function") {
-                                              HermesBuiltin.throwTypeError();
-                                            }
-                                            let str = "";
-                                            if (null != arr) {
-                                              if (typeof arr === "string") {
-                                                str = arr;
-                                              } else {
-                                                if (null == arr) {
-                                                  let _Array = Array;
-                                                  if (Array.isArray(arr)) {
-                                                    let reduced = arr.reduce(() => { ... }, []);
-                                                    let str2 = reduced.join(", ");
-                                                  } else {
-                                                    str2 = "";
-                                                    if (typeof arr === "object") {
-                                                      let _Object = Object;
-                                                      let keys = Object.keys(arr);
-                                                      let reduced1 = keys.reduce(() => { ... }, []);
-                                                      str2 = reduced1.join(", ");
-                                                    }
-                                                  }
-                                                }
-                                                str2 = arr.message;
-                                              }
-                                            }
-                                            let combined = arr;
-                                            if (str) {
-                                              let _HermesInternal = HermesInternal;
-                                              combined = arr.concat("" + str + " (" + arg1 + ")");
-                                            }
-                                            return combined;
-                                          }, []);
-                                          str = reduced1.join(", ");
-                                        }
-                                      }
-                                      str = str.message;
-                                    }
-                                  }
-                                  return arr.concat(str2);
-                                }, []);
-                                let str2 = reduced.join(", ");
-                              } else {
-                                str2 = "";
-                                if (typeof arr === "object") {
-                                  let _Object = Object;
-                                  let keys = Object.keys(arr);
-                                  let reduced1 = keys.reduce((arr) => {
-                                    arr = arr[arg1];
-                                    if (typeof closure_1_0 !== "function") {
-                                      HermesBuiltin.throwTypeError();
-                                    }
-                                    let str = "";
-                                    if (null != arr) {
-                                      if (typeof arr === "string") {
-                                        str = arr;
-                                      } else {
-                                        if (null == arr) {
-                                          let _Array = Array;
-                                          if (Array.isArray(arr)) {
-                                            let reduced = arr.reduce((arr, str) => {
-                                              if (typeof closure_0 !== "function") {
-                                                HermesBuiltin.throwTypeError();
-                                              }
-                                              closure_0 = str;
-                                              str = "";
-                                              let str2 = "";
-                                              if (null != str) {
-                                                if (typeof str === "string") {
-                                                  str2 = str;
-                                                } else {
-                                                  if (null == str) {
-                                                    const _Array = Array;
-                                                    if (Array.isArray(str)) {
-                                                      const reduced = str.reduce(() => { ... }, []);
-                                                      str = reduced.join(", ");
-                                                    } else if (typeof str === "object") {
-                                                      const _Object = Object;
-                                                      const keys = Object.keys(str);
-                                                      const reduced1 = keys.reduce(() => { ... }, []);
-                                                      str = reduced1.join(", ");
-                                                    }
-                                                  }
-                                                  str = str.message;
-                                                }
-                                              }
-                                              return arr.concat(str2);
-                                            }, []);
-                                            let str2 = reduced.join(", ");
-                                          } else {
-                                            str2 = "";
-                                            if (typeof arr === "object") {
-                                              let _Object = Object;
-                                              let keys = Object.keys(arr);
-                                              let reduced1 = keys.reduce((arr) => {
-                                                arr = arr[arg1];
-                                                if (typeof closure_1_0 !== "function") {
-                                                  HermesBuiltin.throwTypeError();
-                                                }
-                                                let str = "";
-                                                if (null != arr) {
-                                                  if (typeof arr === "string") {
-                                                    str = arr;
-                                                  } else {
-                                                    if (null == arr) {
-                                                      let _Array = Array;
-                                                      if (Array.isArray(arr)) {
-                                                        let reduced = arr.reduce(() => { ... }, []);
-                                                        let str2 = reduced.join(", ");
-                                                      } else {
-                                                        str2 = "";
-                                                        if (typeof arr === "object") {
-                                                          let _Object = Object;
-                                                          let keys = Object.keys(arr);
-                                                          let reduced1 = keys.reduce(() => { ... }, []);
-                                                          str2 = reduced1.join(", ");
-                                                        }
-                                                      }
-                                                    }
-                                                    str2 = arr.message;
                                                   }
                                                 }
                                                 let combined = arr;
-                                                if (str) {
+                                                if (str2) {
                                                   let _HermesInternal = HermesInternal;
-                                                  combined = arr.concat("" + str + " (" + arg1 + ")");
+                                                  combined = arr.concat("" + str2 + " (" + item + ")");
                                                 }
                                                 return combined;
-                                              }, []);
-                                              str2 = reduced1.join(", ");
-                                            }
+                                              } else {
+                                                throw new TypeError("Trying to call a non-function");
+                                              }
+                                            }, []);
+                                            str3 = reduced1.join(", ");
                                           }
                                         }
-                                        str2 = arr.message;
                                       }
                                     }
                                     let combined = arr;
-                                    if (str) {
+                                    if (str2) {
                                       let _HermesInternal = HermesInternal;
-                                      combined = arr.concat("" + str + " (" + arg1 + ")");
+                                      combined = arr.concat("" + str2 + " (" + item + ")");
                                     }
                                     return combined;
-                                  }, []);
-                                  str2 = reduced1.join(", ");
-                                }
+                                  } else {
+                                    throw new TypeError("Trying to call a non-function");
+                                  }
+                                }, []);
+                                str3 = reduced1.join(", ");
                               }
                             }
-                            str2 = arr.message;
                           }
                         }
                         let combined = arr;
-                        if (str) {
+                        if (str2) {
                           let _HermesInternal = HermesInternal;
-                          combined = arr.concat("" + str + " (" + arg1 + ")");
+                          combined = arr.concat("" + str2 + " (" + item + ")");
                         }
                         return combined;
-                      }, []);
-                      str2 = reduced1.join(", ");
-                    }
+                      } else {
+                        throw new TypeError("Trying to call a non-function");
+                      }
+                    }, []);
+                    str3 = reduced1.join(", ");
                   }
                 }
-                str2 = arr.message;
               }
             }
             let combined = arr;
-            if (str) {
+            if (str2) {
               let _HermesInternal = HermesInternal;
-              combined = arr.concat("" + str + " (" + arg1 + ")");
+              combined = arr.concat("" + str2 + " (" + item + ")");
             }
             return combined;
-          }, []);
-          str = reduced1.join(", ");
-        }
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+        }, []);
+        str = reduced1.join(", ");
       }
-      str = str.message;
     }
   }
   return str2;
 }
-const result = set.fileFinishedImporting("../discord_common/js/packages/http-utils/stringifyErrors.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/http-utils/stringifyErrors.tsx");
 
 export { stringifyErrors };

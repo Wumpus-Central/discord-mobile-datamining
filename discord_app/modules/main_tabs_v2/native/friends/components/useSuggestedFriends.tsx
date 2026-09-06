@@ -1,13 +1,13 @@
 // discord_app/modules/main_tabs_v2/native/friends/components/useSuggestedFriends.tsx
-import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../../_runtime/00019_noop.js";
-import closure_5 from "../../../../friend_suggestions/FriendSuggestionStore.tsx";
-import { SuggestedFriendSource } from "../screens/FriendsScreenConstants.tsx";
+import _modDef12 from "../../../../../../_runtime/metro/00012__.js";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
+import FriendSuggestionStore from "../../../../friend_suggestions/FriendSuggestionStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
-  "modules/main_tabs_v2/native/friends/components/useSuggestedFriends.tsx",
-);
+const require = fn;
+const SuggestedFriendSource = fn(12699).SuggestedFriendSource;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/components/useSuggestedFriends.tsx");
 
 export default function useSuggestedFriends(arg0) {
   let obj = arg0;
@@ -15,43 +15,43 @@ export default function useSuggestedFriends(arg0) {
     obj = {};
   }
   let flag = obj.isConnected;
-  const items = [closure_5];
+  const items = [FriendSuggestionStore];
   stateFromStoresArray = stateFromStoresArray(flag[4]).useStateFromStoresArray(items, () =>
     suggestions.getSuggestions(),
   );
-  const tmp = callback(React.useState([]), 2);
-  const first = tmp[0];
+  const tmp = _slicedToArray(noop.useState([]), 2);
+  const added = tmp[0];
   if (flag == null) {
     flag = true;
   }
-  const items1 = [first, stateFromStoresArray, flag];
-  const memo = React.useMemo(() => {
+  const items1 = [added, stateFromStoresArray, flag];
+  const memo = noop.useMemo(() => {
     if (flag) {
       const found = first.filter((source) => source.source === constants.USER_SUGGESTIONS);
       const mapped = stateFromStoresArray.map((user) => {
         const obj = {
           user: user.user,
-          friendSuggestionName: name,
+          friendSuggestionName: null,
           source: constants.USER_SUGGESTIONS,
           contactNames: user.contactNames,
         };
-        name = user.name;
+        const name = user.name;
+        obj.friendSuggestionName = name;
         return obj;
       });
-      let obj = first(flag[5]);
-      return first(flag[5])
+      return _modDef12
         .unionBy(found, mapped, (user) => user.user.id)
         .sort((user, user2) => {
-          const name = callback(4404).getName(user.user);
-          const obj = callback(4404);
-          return name.localeCompare(callback(4404).getName(user2.user));
+          const name = added(4404).getName(user.user);
+          const obj = added(4404);
+          return name.localeCompare(added(4404).getName(user2.user));
         });
     } else {
       return [];
     }
   }, items1);
   obj = {
-    added: first,
+    added,
     setAdded: tmp[1],
     friendSuggestions: memo,
     numFriendSuggestions: flag ? memo.length : stateFromStoresArray.length,

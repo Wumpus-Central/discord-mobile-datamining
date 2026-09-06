@@ -1,5 +1,5 @@
 // discord_app/modules/emojis/EmojiConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
 const obj = {
   REACTION: 0,
@@ -43,8 +43,8 @@ const items = [, , , ,];
   SOUNDBOARD: arr[3],
   GIFT: arr[4],
 } = obj);
-let set = new Set(items);
-const result = set.fileFinishedImporting("modules/emojis/EmojiConstants.tsx");
+const set = new Set(items);
+const result = size.fileFinishedImporting("modules/emojis/EmojiConstants.tsx");
 
 export const DEFAULT_EMOJI_SLOTS = 50;
 export const EMOJI_MAX_SLOTS_MORE = 200;

@@ -1,21 +1,23 @@
 // discord_app/modules/user_settings/FrecencyUserSettingsHooks.tsx
-import closure_2 from "../../../_runtime/00019_noop.js";
-import closure_3 from "UserSettingsProtoStore.tsx";
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators.tsx";
+import noop from "../../../_runtime/metro/00019__.js";
+import UserSettingsProtoStore from "UserSettingsProtoStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_settings/FrecencyUserSettingsHooks.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/FrecencyUserSettingsHooks.tsx");
 
 export const useFrecencySettings = function useFrecencySettings(flag) {
   if (flag === undefined) {
     flag = true;
   }
   const items = [flag];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (flag) {
-      const FrecencyUserSettingsActionCreators = flag(closure_1_1[2]).FrecencyUserSettingsActionCreators;
+      const FrecencyUserSettingsActionCreators = UserSettingsProtoActionCreators.FrecencyUserSettingsActionCreators;
       const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
     }
   }, items);
-  const items1 = [closure_3];
-  return flag(504).useStateFromStores(items1, () => obj.frecencyWithoutFetchingLatest);
+  const items1 = [UserSettingsProtoStore];
+  return flag(504).useStateFromStores(items1, () => UserSettingsProtoStore.frecencyWithoutFetchingLatest);
 };

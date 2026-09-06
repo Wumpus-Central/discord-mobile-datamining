@@ -1,7 +1,7 @@
 // discord_app/modules/vibegrations/lib/vibegrationsLocalDev.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/vibegrations/lib/vibegrationsLocalDev.tsx");
+const result = size.fileFinishedImporting("modules/vibegrations/lib/vibegrationsLocalDev.tsx");
 
 export function isVibegrationsLocalDev() {
   return false;

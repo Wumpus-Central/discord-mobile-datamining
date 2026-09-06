@@ -1,22 +1,23 @@
 // discord_app/modules/people/hooks/useFriendRequestCounts.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../game_relationships/GameRelationshipStore.tsx";
-import closure_4 from "../../../stores/RelationshipStore.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import GameRelationshipStore from "../../game_relationships/GameRelationshipStore.tsx";
+import RelationshipStore from "../../../stores/RelationshipStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/people/hooks/useFriendRequestCounts.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/people/hooks/useFriendRequestCounts.tsx");
 
 export const getIncomingFriendRequestCount = function getIncomingFriendRequestCount(items) {
-  [obj, obj2] = callback(items, 2);
+  [obj, obj2] = _slicedToArray(items, 2);
   const pendingCount = obj.getPendingCount();
   return pendingCount + obj2.getPendingIncomingCount();
 };
 export const useIncomingFriendRequestCount = function useIncomingFriendRequestCount() {
-  let items = [closure_4, closure_3];
+  let items = [RelationshipStore, GameRelationshipStore];
   return initialize.useStateFromStores(items, () => {
-    const items = [closure_4, closure_3];
-    [obj, obj2] = callback(items, 2);
+    const items = [RelationshipStore, GameRelationshipStore];
+    [obj, obj2] = _slicedToArray(items, 2);
     const pendingCount = obj.getPendingCount();
     return pendingCount + obj2.getPendingIncomingCount();
   });
@@ -28,7 +29,7 @@ export const getOutgoingFriendRequestCount = function getOutgoingFriendRequestCo
     items[1] = globalThis.s;
     tmp = items;
   }
-  [obj, obj2] = callback(tmp, 2);
+  [obj, obj2] = _slicedToArray(tmp, 2);
   const outgoingCount = obj.getOutgoingCount();
   return outgoingCount + obj2.getPendingOutgoingCount();
 };

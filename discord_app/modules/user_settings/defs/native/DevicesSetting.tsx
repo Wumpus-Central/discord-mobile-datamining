@@ -1,27 +1,24 @@
 // discord_app/modules/user_settings/defs/native/DevicesSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import ME from "../../../../Constants.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
+import Constants from "../../../../Constants.tsx";
+import util from "../../../../intl/index.native.tsx";
 import LaptopPhoneIcon from "../../../../design/components/Icon/native/redesign/generated/LaptopPhoneIcon.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
-import { UserSettingsSessions } from "../../devices/native/UserSettingsSessions.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["+1h0k/"]);
+    const intl = util.intl;
+    return intl.string(util.t["+1h0k/"]);
   },
   parent: null,
   IconComponent: LaptopPhoneIcon.LaptopPhoneIcon,
-  screen: obj,
-};
-obj = {
-  route: ME.UserSettingsSections.SESSIONS,
-  getComponent() {
-    return UserSettingsSessions /* UserSettingsSessions */.default;
+  screen: {
+    route: Constants.UserSettingsSections.SESSIONS,
+    getComponent() {
+      return require("UserSettingsSessions").default;
+    },
   },
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/DevicesSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/DevicesSetting.tsx");
 
 export default route;

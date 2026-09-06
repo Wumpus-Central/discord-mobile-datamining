@@ -1,35 +1,29 @@
 // discord_app/modules/age_gate/getPreviousSafeRouteForNsfwReturn.native.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME2 from "../../Constants.tsx";
-import shouldShowAgeGateForVoiceChannel from "AgeGateUtils.tsx";
-import getIdFromHistoryItem from "../main_tabs_v2/native/NavigationHistoryStore.tsx";
-import closure_5 from "../main_tabs_v2/native/NavigationHistoryStore.tsx";
-import closure_6 from "../../stores/ChannelStore.tsx";
-import closure_7 from "../../stores/GuildChannelStore.tsx";
+import Constants from "../../Constants.tsx";
+import AgeGateUtils from "AgeGateUtils.tsx";
+import NavigationHistoryStore from "../main_tabs_v2/native/NavigationHistoryStore.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
+import GuildChannelStore from "../../stores/GuildChannelStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-({ CHANNEL_PREFIX: obj1, GUILD_PREFIX: c3, getIdFromHistoryItem: c4 } = getIdFromHistoryItem);
-const ME = ME2.ME;
-const result = set.fileFinishedImporting("modules/age_gate/getPreviousSafeRouteForNsfwReturn.native.tsx");
+({ CHANNEL_PREFIX: c2, GUILD_PREFIX: c3, getIdFromHistoryItem: closure_4 } = NavigationHistoryStore);
+const ME = Constants.ME;
+const result = size.fileFinishedImporting("modules/age_gate/getPreviousSafeRouteForNsfwReturn.native.tsx");
 
 export default function getPreviousSafeRouteForNsfwReturn() {
   let defaultChannel;
   let tmp3;
-  const history = state.getState().history;
+  const history = NavigationHistoryStore.getState().history;
   let diff = history.length - 2;
   if (0 <= diff) {
     while (true) {
       let obj = history[diff];
-      let tmp2 = callback;
-      tmp3 = callback(obj);
-      let tmp4 = closure_2;
-      let tmp5 = diff;
-      if (obj.startsWith(closure_2)) {
-        let tmp9 = channel;
-        channel = channel.getChannel(tmp3);
+      tmp3 = React4(obj);
+      if (obj.startsWith(React2)) {
+        let channel = ChannelStore.getChannel(tmp3);
         if (null != channel) {
           let tmp11 = require;
-          let tmp12 = dependencyMap;
-          let obj4 = shouldShowAgeGateForVoiceChannel;
+          let obj4 = AgeGateUtils;
           if (!obj4.isChannelContentGated(channel)) {
             let tmp11Result = tmp11(7329);
             if (!tmp11Result.isChannelSpoilerGated(channel)) {
@@ -37,36 +31,27 @@ export default function getPreviousSafeRouteForNsfwReturn() {
               if (guild_id == null) {
                 guild_id = ME;
               }
-              obj = { guildId: null, channelId: null };
-              obj[0] = guild_id;
-              obj[1] = tmp3;
+              obj = { guildId: guild_id, channelId: tmp3 };
               return obj;
             }
           }
         }
-      } else {
-        let tmp6 = closure_3;
-        if (obj.startsWith(closure_3)) {
-          let tmp7 = defaultChannel;
-          defaultChannel = defaultChannel.getDefaultChannel(tmp3);
-          if (null != defaultChannel) {
-            let tmp13 = require;
-            let tmp14 = dependencyMap;
-            let obj7 = shouldShowAgeGateForVoiceChannel;
-            if (!obj7.isChannelContentGated(defaultChannel)) {
-              let tmp13Result = tmp13(7329);
-              if (!tmp13Result.isChannelSpoilerGated(defaultChannel)) {
-                break;
-              }
+      } else if (obj.startsWith(React3)) {
+        defaultChannel = GuildChannelStore.getDefaultChannel(tmp3);
+        if (null != defaultChannel) {
+          let tmp13 = require;
+          let obj7 = AgeGateUtils;
+          if (!obj7.isChannelContentGated(defaultChannel)) {
+            let tmp13Result = tmp13(7329);
+            if (!tmp13Result.isChannelSpoilerGated(defaultChannel)) {
+              break;
             }
           }
         }
       }
       diff = diff - 1;
     }
-    obj = { guildId: null, channelId: null };
-    obj[0] = tmp3;
-    obj[1] = defaultChannel.id;
+    obj = { guildId: tmp3, channelId: defaultChannel.id };
     return obj;
   }
   return null;

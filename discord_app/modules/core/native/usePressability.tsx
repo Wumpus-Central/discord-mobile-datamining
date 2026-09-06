@@ -1,7 +1,7 @@
 // discord_app/modules/core/native/usePressability.tsx
-import set from "../../../../_runtime/00002_set.js";
-import usePressabilityDefault from "../../../../_runtime/00301_usePressability.js";
+import _modDef301 from "../../../../_runtime/metro/00301__.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/core/native/usePressability.tsx");
+const result = size.fileFinishedImporting("modules/core/native/usePressability.tsx");
 
-export default usePressabilityDefault;
+export default _modDef301;

@@ -1,7 +1,7 @@
 // discord_app/modules/premium/powerups/constants/EnhancedRoleColorConstants.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/premium/powerups/constants/EnhancedRoleColorConstants.tsx");
+const result = size.fileFinishedImporting("modules/premium/powerups/constants/EnhancedRoleColorConstants.tsx");
 const items = [
   { colors: [11156283, 16730184], name: "fire" },
   { colors: [13927485, 16768656], name: "golddust" },

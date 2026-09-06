@@ -1,25 +1,23 @@
 // discord_app/modules/integration_settings/native/IntegrationsSettingsWebhooksOverview.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import combinedDefault from "../../../utils/HelpdeskUtils.tsx";
-import Stack from "../../../design/components/Stack/native/Stack.native.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
+import AvatarUtils from "../../../utils/AvatarUtils.tsx";
+import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
+import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import NavScrim from "../../../design/components/Navigator/native/NavScrim.android.tsx";
 import Form from "../../../design/void/Form/native/index.tsx";
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import importAllResult from "../../../../_runtime/00019_noop.js";
-import closure_5 from "../../../stores/ChannelStore.tsx";
-import comparator from "../../../stores/GuildChannelStore.tsx";
-import closure_8 from "../../../stores/GuildChannelStore.tsx";
-import closure_9 from "../../../stores/GuildStore.tsx";
-import closure_10 from "../../../stores/PermissionStore.tsx";
-import closure_11 from "../../../stores/UserStore.tsx";
-import closure_12 from "../../../stores/WebhooksStore.tsx";
-import ME from "../../../Constants.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import WebhooksActionCreatorsDefault from "../../../actions/WebhooksActionCreators.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../../_runtime/metro/00019__.js";
+import ChannelStore from "../../../stores/ChannelStore.tsx";
+import GuildChannelStore from "../../../stores/GuildChannelStore.tsx";
+import GuildStore from "../../../stores/GuildStore.tsx";
+import PermissionStore from "../../../stores/PermissionStore.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
+import WebhooksStore from "../../../stores/WebhooksStore.tsx";
 
-require = arg1;
+require = fn;
 function WebhookItem(avatar) {
   avatar = avatar.avatar;
   const channel = avatar.channel;
@@ -28,21 +26,19 @@ function WebhookItem(avatar) {
   const token = avatar.token;
   ({ user, webhookId } = avatar);
   const webhookType = avatar.webhookType;
-  let navigation;
   let obj = avatar(guildId[12]);
-  navigation = obj.useNavigation();
+  const navigation = obj.useNavigation();
   const items = [webhookId, webhookType, avatar, channel, guildId, name, token, navigation];
   const items1 = [webhookId, avatar];
   const callback = token.useCallback(() => {
-    navigation.push(closure_1_14.EDIT_WEBHOOK, { webhookId, webhookType, avatar, name, channel, guildId, token });
+    navigation.push(constants2.EDIT_WEBHOOK, { webhookId, webhookType, avatar, name, channel, guildId, token });
   }, items);
   const memo = token.useMemo(() => {
-    let obj = avatar(guildId[13]);
-    obj = { id: webhookId, avatar, discriminator: closure_1_15 };
-    return obj.makeSource(avatar(guildId[13]).getUserAvatarURL(obj));
+    const obj = { id: webhookId, avatar, discriminator };
+    return obj.makeSource(AvatarUtils.getUserAvatarURL(obj));
   }, items1);
   obj = {
-    icon: callback(avatar(guildId[15]).Avatar, { source: memo }),
+    icon: closure_18(avatar(guildId[15]).Avatar, { source: memo }),
     arrow: true,
     label: name,
     subLabel: null,
@@ -50,59 +46,56 @@ function WebhookItem(avatar) {
   };
   if (null != user) {
     const intl2 = tmp(tmp2[16]).intl;
-    obj = { timestamp: null, user: null };
-    obj[0] = channel(tmp2[17]).extractTimestamp(webhookId);
+    obj = { timestamp: channel(tmp2[17]).extractTimestamp(webhookId), user: null };
     const obj6 = channel(tmp2[17]);
-    obj[1] = channel(tmp2[18]).getUserTag(user);
+    obj.user = channel(tmp2[18]).getUserTag(user);
     let formatToPlainStringResult = intl2.formatToPlainString(tmp(tmp2[16]).t["7EcUbr"], obj);
     const obj7 = channel(tmp2[18]);
   } else {
     const intl = tmp(tmp2[16]).intl;
-    obj1 = { timestamp: null };
-    obj1[0] = channel(tmp2[17]).extractTimestamp(webhookId);
+    const obj1 = { timestamp: channel(tmp2[17]).extractTimestamp(webhookId) };
     formatToPlainStringResult = intl.formatToPlainString(tmp(tmp2[16]).t["7mv59O"], obj1);
     const obj4 = channel(tmp2[17]);
   }
-  obj[3] = formatToPlainStringResult;
-  obj[4] = callback;
-  return callback(avatar(guildId[14]).TableRow, obj);
+  obj.subLabel = formatToPlainStringResult;
+  obj.onPress = callback;
+  return closure_18(avatar(guildId[14]).TableRow, obj);
 }
 function ConnectedWebhookItem(arg0) {
   ({ channelId: require, user: importDefault } = arg0);
-  const merged = Object.assign(arg0, Object.create(null));
+  const merged = Object.assign(arg0, Object.assign({ channelId: 0, user: 0 }));
   let obj = initialize;
-  const items = [closure_11];
+  const items = [UserStore];
   const stateFromStores = obj.useStateFromStores(items, () => {
-    let id;
+    id = undefined;
     if (id != null) {
       id = id.id;
     }
-    return closure_1_11.getUser(id);
+    return UserStore.getUser(id);
   });
-  const items1 = [closure_5];
+  const items1 = [ChannelStore];
   obj = {};
-  const stateFromStores1 = initialize.useStateFromStores(items1, () => closure_1_5.getChannel(closure_0));
+  const stateFromStores1 = initialize.useStateFromStores(items1, () => ChannelStore.getChannel(require));
   const merged1 = Object.assign(merged);
   obj.user = stateFromStores;
   obj.channel = stateFromStores1;
-  return callback(WebhookItem, obj);
+  return closure_18(WebhookItem, obj);
 }
 function CreateWebhookButton(guild) {
   guild = guild.guild;
   let channel = guild.channel;
   let navigation;
-  let stateFromStores;
   let obj = guild(navigation[12]);
   navigation = obj.useNavigation();
-  let items = [closure_8, closure_10];
-  stateFromStores = guild(navigation[19]).useStateFromStores(items, () => {
+  let items = [GuildChannelStore, PermissionStore];
+  const stateFromStores = guild(navigation[19]).useStateFromStores(items, () => {
     if (null != channel) {
       return channel;
     } else {
-      const channels = closure_1_8.getChannels(guild.id);
+      const channels = GuildChannelStore.getChannels(guild.id);
       const items = [];
-      HermesBuiltin.arraySpread(channels[closure_1_7], HermesBuiltin.arraySpread(channels[closure_1_6], 0));
-      const found = items.find((channel) => closure_10.can(constants.MANAGE_WEBHOOKS, channel.channel));
+      HermesBuiltin.arraySpread(channels[React5], HermesBuiltin.arraySpread(channels[timestampProducer], 0));
+      const found = items.find((channel) => closure_1_10.can(constants.MANAGE_WEBHOOKS, channel.channel));
       channel = undefined;
       if (found != null) {
         channel = found.channel;
@@ -111,17 +104,16 @@ function CreateWebhookButton(guild) {
     }
   });
   const items1 = [stateFromStores, guild.id, navigation];
-  const callback = importAllResult.useCallback(
-    stateFromStores(function* () {
+  const callback = noop.useCallback(
+    stateFromStores(function* (arg0, value) {
       if (c4 === 2) {
         c4 = 3;
-        HermesBuiltin.throwTypeError();
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp4 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          let obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
@@ -129,25 +121,22 @@ function CreateWebhookButton(guild) {
       } else {
         try {
           c4 = 2;
-          if (0 === id) {
+          if (0 === c3) {
             if (arg0 === 1) {
               c4 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj = { value, done: true };
               return obj;
             } else {
-              let arr = tmp5;
-              closure_1 = tmp2;
-              let user;
-              if (null != id) {
-                obj1 = closure_1_1(closure_1_2[20]);
-                id = 1;
+              closure_129_0 = undefined;
+              if (null != stateFromStores) {
+                let obj1 = tmp2(tmp5[20]);
+                c3 = 1;
                 c4 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = obj1.create(closure_1_0.id, id.id);
+                obj1.value = obj1.create(guild.id, stateFromStores.id);
                 return obj1;
               } else {
                 c4 = 3;
@@ -155,37 +144,33 @@ function CreateWebhookButton(guild) {
             }
           } else if (arg0 === 1) {
             c4 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 !== 2) {
-            user = arg1;
-            if (null != user) {
+            closure_129_0 = value;
+            if (null != closure_129_0) {
               const obj2 = {
-                webhookId: null,
-                webhookType: null,
+                webhookId: closure_129_0.id,
+                webhookType: closure_129_0.type,
                 avatar: null,
                 name: null,
                 channel: null,
                 guildId: null,
                 token: null,
               };
-              obj2[0] = user.id;
-              obj2[1] = user.type;
-              const avatar = user.avatar;
-              user = avatar;
+              let avatar = closure_129_0.avatar;
               if (avatar == null) {
-                user = undefined;
+                avatar = undefined;
               }
-              obj2[2] = user;
-              obj2[3] = user.name;
-              obj2[4] = id;
-              obj2[5] = user.id;
-              obj2[6] = user.token;
-              arr = arr.push(closure_1_14.EDIT_WEBHOOK, obj2);
+              obj2.avatar = avatar;
+              obj2.name = closure_129_0.name;
+              obj2.channel = closure_130_3;
+              obj2.guildId = closure_130_0.id;
+              obj2.token = closure_129_0.token;
+              closure_130_2.push(constants.EDIT_WEBHOOK, obj2);
             }
           }
           c4 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj = { value, done: true };
           return obj;
         } catch (tmp18) {
           c4 = tmp;
@@ -197,49 +182,48 @@ function CreateWebhookButton(guild) {
   );
   obj = { icon: null, label: null, disabled: null, onPress: null };
   obj = { IconComponent: guild(navigation[22]).WebhookPlusIcon };
-  obj[0] = callback(guild(navigation[21]).RowButton.Icon, obj);
+  obj.icon = closure_18(guild(navigation[21]).RowButton.Icon, obj);
   const intl = guild(navigation[16]).intl;
-  obj[1] = intl.string(guild(navigation[16]).t["nrO/HH"]);
-  obj[2] = null == stateFromStores;
-  obj[3] = callback;
-  return callback(guild(navigation[21]).RowButton, obj);
+  obj.label = intl.string(guild(navigation[16]).t["nrO/HH"]);
+  obj.disabled = null == stateFromStores;
+  obj.onPress = callback;
+  return closure_18(guild(navigation[21]).RowButton, obj);
 }
-let c4 = importAllResult;
-({ GUILD_SELECTABLE_CHANNELS_KEY: closure_6, GUILD_VOCAL_CHANNELS_KEY: error } = comparator);
+let GuildChannelStore = fn(2012);
+({ GUILD_SELECTABLE_CHANNELS_KEY: metroRequire, GUILD_VOCAL_CHANNELS_KEY: closure_7 } = GuildChannelStore);
+const Constants = fn(1074);
 ({
   HelpdeskArticles: map1,
   ChannelSettingsSections: closure_14,
   NON_USER_BOT_DISCRIMINATOR: closure_15,
   Permissions: closure_16,
   WebhookTypes: closure_17,
-} = ME);
+} = Constants);
+const jsxProd = fn(21);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
-createCacheKey = { form: null, content: null, hint: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = {
-  paddingTop: ThemesDefault.space.PX_16,
-  paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING,
+fn(4560);
+let createStyles = { form: null, content: null, hint: null };
+createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+createStyles.form = createStyles;
+createStyles.content = {
+  paddingTop: nativeDefault.space.PX_16,
+  paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING,
 };
-let obj1 = { paddingTop: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
-createCacheKey[2] = { paddingHorizontal: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_16 };
-let closure_21 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
-const PureComponent = importAllResult.PureComponent;
+let obj1 = { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
+createStyles.hint = { paddingHorizontal: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_16 };
+let closure_21 = createStyles.createLegacyClassComponentStyles(createStyles);
+const PureComponent = noop.PureComponent;
 class WebhooksOverview extends PureComponent {}
 const prototype = WebhooksOverview.prototype;
 prototype["getHelpText"] = function getHelpText() {
-  if (this.props.webhookType === constants2.CHANNEL_FOLLOWER) {
-    const intl2 = getSystemLocale.intl;
-    let obj = { helpdeskArticle: null };
-    obj[0] = combinedDefault.getArticleURL(constants.CHANNEL_FOLLOWING);
-    let formatResult = intl2.format(getSystemLocale.t["5u+aV1"], obj);
-    const obj4 = combinedDefault;
+  if (this.props.webhookType === constants3.CHANNEL_FOLLOWER) {
+    const intl2 = util.intl;
+    let obj = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(constants.CHANNEL_FOLLOWING) };
+    let formatResult = intl2.format(util.t["5u+aV1"], obj);
   } else {
-    const intl = getSystemLocale.intl;
-    obj = { articleURL: null };
-    obj[0] = combinedDefault.getArticleURL(constants.WEBHOOKS_INTRODUCTION);
-    formatResult = intl.format(getSystemLocale.t["3hX7G+"], obj);
-    const obj2 = combinedDefault;
+    const intl = util.intl;
+    obj = { articleURL: HelpdeskUtilsDefault.getArticleURL(constants.WEBHOOKS_INTRODUCTION) };
+    formatResult = intl.format(util.t["3hX7G+"], obj);
   }
   return formatResult;
 };
@@ -253,21 +237,18 @@ prototype["renderWebhooks"] = function renderWebhooks() {
   let dkHRkE = dependencyMap;
   const helpText = self.getHelpText();
   const items = [
-    callback(webhookType(4556).Text, { variant: "text-sm/medium", color: "text-muted", children: helpText }),
+    closure_18(webhookType(4556).Text, { variant: "text-sm/medium", color: "text-muted", children: helpText }),
     ,
   ];
-  let tmp4Result = webhookType === constants2.INCOMING;
+  let tmp4Result = webhookType === constants3.INCOMING;
   if (tmp4Result) {
-    let obj = { guild: null, channel: null };
-    obj[0] = self.props.guild;
-    obj[1] = self.props.channel;
+    let obj = { guild: self.props.guild, channel: self.props.channel };
     tmp4Result = tmp4(CreateWebhookButton, obj);
   }
   items[1] = tmp4Result;
   if (0 === found.length) {
-    obj = { Illustration: null, title: null };
-    obj[0] = tmp5(16846).WebhookEmpty;
-    if (webhookType === constants2.CHANNEL_FOLLOWER) {
+    obj = { Illustration: tmp5(16846).WebhookEmpty, title: null };
+    if (webhookType === constants3.CHANNEL_FOLLOWER) {
       const intl2 = tmp5(1114).intl;
       dkHRkE = tmp5(1114).t.dkHRkE;
       let stringResult = intl2.string(dkHRkE);
@@ -275,45 +256,47 @@ prototype["renderWebhooks"] = function renderWebhooks() {
       const intl = tmp5(1114).intl;
       stringResult = intl.string(tmp5(1114).t["4JAVI+"]);
     }
-    obj[1] = stringResult;
+    obj.title = stringResult;
     tmp4Result = tmp4(tmp5(1178).EmptyState, obj);
   } else {
-    obj = { hasIcons: true, children: null };
-    obj[1] = found.map((type) => {
-      ({ id, avatar } = type);
-      const obj = {
-        webhookId: id,
-        webhookType: type.type,
-        avatar,
-        name,
-        user,
-        channelId: channel_id,
-        token,
-        guildId: guild_id,
-      };
-      ({ name, user, token, guild_id, channel_id } = type);
-      return closure_18(closure_23, obj, id);
-    });
-    obj1 = { children: null };
+    obj = {
+      hasIcons: true,
+      children: found.map((type) => {
+        ({ id, avatar } = type);
+        const obj = {
+          webhookId: id,
+          webhookType: type.type,
+          avatar,
+          name,
+          user,
+          channelId: channel_id,
+          token,
+          guildId: guild_id,
+        };
+        ({ name, user, token, guild_id, channel_id } = type);
+        return closure_1_18(ConnectedWebhookItem, obj, id);
+      }),
+    };
+    const obj1 = { children: null };
     items[2] = tmp4(tmp5(5687).TableRowGroup, obj);
-    obj1[0] = items;
+    obj1.children = items;
     return closure_20(closure_19, obj1);
   }
 };
 prototype["render"] = function render() {
-  const tmp = callback3(this.context);
+  const tmp = closure_21(this.context);
   let obj = { children: null };
   obj = { style: tmp.form, contentContainerStyle: this.props.contentContainerStyle, children: null };
-  obj = { spacing: ThemesDefault.space.PX_24, style: tmp.content, children: this.renderWebhooks() };
-  obj[2] = callback(Stack.Stack, obj);
-  const items = [callback(Form.Form, obj), callback(NavScrim.NavScrim, {})];
-  obj[0] = items;
-  return callback2(closure_19, obj);
+  obj = { spacing: nativeDefault.space.PX_24, style: tmp.content, children: this.renderWebhooks() };
+  obj.children = collapsedCategories(Stack_Stack.Stack, obj);
+  const items = [collapsedCategories(Form.Form, obj), collapsedCategories(NavScrim.NavScrim, {})];
+  obj.children = items;
+  return closure_1_20(closure_1_19, obj);
 };
-WebhooksOverview.contextType = require("ManaContext").ThemeContext;
+WebhooksOverview.contextType = fn(4271).ThemeContext;
 let closure_26 = [];
-let obj2 = { paddingHorizontal: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting(
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/integration_settings/native/IntegrationsSettingsWebhooksOverview.tsx",
 );
 
@@ -321,13 +304,12 @@ export default function ConnectedWebhooksOverview(channelId) {
   channelId = channelId.channelId;
   const guildId = channelId.guildId;
   let stateFromStores;
-  let id;
   let id1;
   ({ contentContainerStyle, webhookType } = channelId);
   let obj = channelId(stateFromStores[19]);
-  const items = [closure_5];
-  stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getChannel(channelId));
-  const items1 = [closure_9];
+  const items = [ChannelStore];
+  stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(channelId));
+  const items1 = [GuildStore];
   const stateFromStores1 = channelId(stateFromStores[19]).useStateFromStores(items1, () => {
     let guild_id;
     if (stateFromStores != null) {
@@ -336,9 +318,9 @@ export default function ConnectedWebhooksOverview(channelId) {
     if (guild_id == null) {
       guild_id = guildId;
     }
-    return closure_1_9.getGuild(guild_id);
+    return GuildStore.getGuild(guild_id);
   });
-  id = undefined;
+  let id;
   if (stateFromStores1 != null) {
     id = stateFromStores1.id;
   }
@@ -353,44 +335,41 @@ export default function ConnectedWebhooksOverview(channelId) {
     id1 = channelId;
   }
   let obj2 = channelId(stateFromStores[19]);
-  const tmp = channelId;
-  const tmp2 = stateFromStores;
-  const items2 = [closure_12];
+  const items2 = [WebhooksStore];
   const items3 = [id, id1];
   const stateFromStoresArray = channelId(stateFromStores[19]).useStateFromStoresArray(items2, () => {
     if (null != id) {
       if (null != id1) {
-        let webhooksForChannel = closure_1_12.getWebhooksForChannel(tmp, tmp2);
+        let webhooksForChannel = WebhooksStore.getWebhooksForChannel(tmp, tmp2);
       }
       return webhooksForChannel;
     }
     if (null != id) {
-      webhooksForChannel = closure_1_12.getWebhooksForGuild(tmp);
+      webhooksForChannel = WebhooksStore.getWebhooksForGuild(tmp);
     } else {
-      webhooksForChannel = closure_1_26;
+      webhooksForChannel = closure_26;
     }
   });
   const effect = id1.useEffect(() => {
     if (null != id) {
       if (null != id1) {
-        const forChannel = guildId(stateFromStores[20]).fetchForChannel(tmp, tmp2);
-        const obj2 = guildId(stateFromStores[20]);
+        const forChannel = WebhooksActionCreatorsDefault.fetchForChannel(tmp, tmp2);
       }
     }
     if (null != id) {
-      const forGuild = guildId(stateFromStores[20]).fetchForGuild(tmp);
-      const obj = guildId(stateFromStores[20]);
+      const forGuild = WebhooksActionCreatorsDefault.fetchForGuild(tmp);
     }
   }, items3);
   let tmp9 = null;
   if (null != stateFromStores1) {
-    obj = { guild: null, channel: null, webhooks: null, contentContainerStyle: null, webhookType: null };
-    obj[0] = stateFromStores1;
-    obj[1] = stateFromStores;
-    obj[2] = stateFromStoresArray;
-    obj[3] = contentContainerStyle;
-    obj[4] = webhookType;
-    tmp9 = callback(WebhooksOverview, obj);
+    obj = {
+      guild: stateFromStores1,
+      channel: stateFromStores,
+      webhooks: stateFromStoresArray,
+      contentContainerStyle,
+      webhookType,
+    };
+    tmp9 = closure_18(WebhooksOverview, obj);
   }
   return tmp9;
 }

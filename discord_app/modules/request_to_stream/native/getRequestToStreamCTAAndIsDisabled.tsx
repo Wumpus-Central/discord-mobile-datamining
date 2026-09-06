@@ -1,26 +1,23 @@
 // discord_app/modules/request_to_stream/native/getRequestToStreamCTAAndIsDisabled.tsx
-import DISCORD_EPOCHDefault from "../../../utils/SnowflakeUtils.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import messagesProxyDefault from "../RequestToStream.messages.js";
-import result2 from "../../activities/utils/isInviteActive.tsx";
-import canFulfillStreamRequest from "../useCanFulfillStreamRequest.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../stores/AuthenticationStore.tsx";
+import SnowflakeUtilsDefault from "../../../utils/SnowflakeUtils.tsx";
+import util from "../../../intl/index.native.tsx";
+import _modDef2882 from "../RequestToStream.messages.js";
+import isInviteActive from "../../activities/utils/isInviteActive.tsx";
+import useCanFulfillStreamRequest from "../useCanFulfillStreamRequest.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting(
-  "modules/request_to_stream/native/getRequestToStreamCTAAndIsDisabled.tsx",
-);
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/request_to_stream/native/getRequestToStreamCTAAndIsDisabled.tsx");
 
 export default function getRequestToStreamCTAAndIsDisabled(id) {
-  const tmp3 = callback(canFulfillStreamRequest.canFulfillStreamRequest(id, true), 2);
-  id = id.getId();
-  const obj = canFulfillStreamRequest;
-  const obj2 = DISCORD_EPOCHDefault;
-  const sum = DISCORD_EPOCHDefault.extractTimestamp(id.id) + result2.EMBED_LIFETIME;
-  const extractTimestampResult = DISCORD_EPOCHDefault.extractTimestamp(id.id);
-  const intl = getSystemLocale.intl;
-  const stringResult = intl.string(messagesProxyDefault["5+172e"]);
+  const tmp3 = _slicedToArray(useCanFulfillStreamRequest.canFulfillStreamRequest(id, true), 2);
+  id = AuthenticationStore.getId();
+  const sum = SnowflakeUtilsDefault.extractTimestamp(id.id) + isInviteActive.EMBED_LIFETIME;
+  const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(id.id);
+  const intl = util.intl;
+  const stringResult = intl.string(_modDef2882["5+172e"]);
   if (tmp9) {
     const intl6 = tmp(1114).intl;
     let text = intl6.string(tmp6(2882).u4QmWl);

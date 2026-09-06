@@ -1,18 +1,20 @@
 // discord_app/modules/oauth2/convertor.tsx
-import set from "../../../_runtime/00002_set.js";
+import BigFlagUtilsAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/oauth2/convertor.tsx");
+const result = size.fileFinishedImporting("modules/oauth2/convertor.tsx");
 
-export const convertOAuth2Authorization = function convertOAuth2Authorization(closure_0) {
-  let tmp = closure_0;
-  if (null != closure_0.guilds) {
+export const convertOAuth2Authorization = function convertOAuth2Authorization(guilds) {
+  let tmp = guilds;
+  if (null != guilds.guilds) {
     let obj = {};
-    let merged = Object.assign(closure_0);
-    const guilds = closure_0.guilds;
+    let merged = Object.assign(guilds);
+    guilds = guilds.guilds;
     obj.guilds = guilds.map((permissions) => {
       const obj = {};
       const merged = Object.assign(permissions);
-      obj.permissions = callback(table[0]).deserialize(permissions.permissions);
+      const deserializer = BigFlagUtilsAll;
+      obj.permissions = deserializer.deserialize(permissions.permissions);
       return obj;
     });
     tmp = obj;

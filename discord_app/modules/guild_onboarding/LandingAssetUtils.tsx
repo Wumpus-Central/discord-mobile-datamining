@@ -1,28 +1,27 @@
 // discord_app/modules/guild_onboarding/LandingAssetUtils.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/guild_onboarding/LandingAssetUtils.tsx");
+const result = size.fileFinishedImporting("modules/guild_onboarding/LandingAssetUtils.tsx");
 
-export default function replaceFlagIconAndFlagColor(layers, p) {
-  closure_0 = layers;
+export default function replaceFlagIconAndFlagColor(layers, p, arg2) {
   closure_1 = arg2;
   layers.assets[0].p = p;
   layers = layers.layers;
   const findIndexResult = layers.findIndex((nm) => "flag" === nm.nm);
   closure_2 = findIndexResult;
   let it = layers.layers[findIndexResult].shapes[0].it;
-  const item = it.forEach((arg0, arg1) => {
-    if ("gr" === layers.layers[closure_2].shapes[0].it[arg1].ty) {
-      const it = tmp.layers[tmp2].shapes[0].it[arg1].it;
+  const item = it.forEach((item, index) => {
+    if ("gr" === layers.layers[findIndexResult].shapes[0].it[index].ty) {
+      const it = tmp.layers[tmp2].shapes[0].it[index].it;
       if (it.findIndex((ty) => "fl" === ty.ty) >= 0) {
         const items = [];
         items[
           HermesBuiltin.arraySpread(
-            closure_1.map((arg0) => arg0 / 256),
+            closure_1.map((item) => item / 256),
             0,
           )
         ] = 1;
-        tmp.layers[tmp2].shapes[0].it[arg1].it[1].c.k = items;
+        tmp.layers[tmp2].shapes[0].it[index].it[1].c.k = items;
       }
     }
   });

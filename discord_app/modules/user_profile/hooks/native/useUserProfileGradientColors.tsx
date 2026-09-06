@@ -1,30 +1,25 @@
 // discord_app/modules/user_profile/hooks/native/useUserProfileGradientColors.tsx
-import closure_2 from "../../../../../_runtime/00019_noop.js";
-import closure_3 from "../../../a11y/AccessibilityStore.tsx";
-import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import UserProfileGradientUtils from "../../UserProfileGradientUtils.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileGradientColors.tsx");
+require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileGradientColors.tsx");
 
 export const useUserProfileGradientColors = function useUserProfileGradientColors(
   primaryColor,
   secondaryColor,
   fallbackBackground,
 ) {
-  const _require = primaryColor;
+  _require = primaryColor;
   dependencyMap = secondaryColor;
-  const React = fallbackBackground;
+  noop = fallbackBackground;
   const items = [overlay];
-  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
-    items,
-    () => overlay.syncProfileThemeWithUserTheme,
-  );
-  let obj = initialize;
-  let obj2 = ManaContext;
-  const profileThemeValues = require("../../useProfileThemeValues.native.tsx").useProfileThemeValues(
-    obj2.useThemeContext().theme,
-  );
+  const stateFromStores = require("initialize").useStateFromStores(items, () => overlay.syncProfileThemeWithUserTheme);
+  let obj = require("initialize");
+  let obj2 = require("native");
+  const profileThemeValues = require("useProfileThemeValues").useProfileThemeValues(obj2.useThemeContext().theme);
   if (stateFromStores) {
     let prop;
     if (!tmp3) {
@@ -35,23 +30,21 @@ export const useUserProfileGradientColors = function useUserProfileGradientColor
     overlay = profileThemeValues.overlay;
   }
   const items1 = [fallbackBackground, primaryColor, secondaryColor, overlay];
-  return React.useMemo(() => {
+  return noop.useMemo(() => {
     let result = null;
-    if (null != primaryColor) {
+    if (null != closure_0) {
       result = null;
       if (null != overlay) {
-        result = primaryColor(secondaryColor[5]).calculateOverlayedColor(tmp, tmp3);
-        const obj = primaryColor(secondaryColor[5]);
+        result = UserProfileGradientUtils.calculateOverlayedColor(tmp, tmp3);
       }
     }
     let result1 = null;
-    if (null != secondaryColor) {
+    if (null != closure_1) {
       result1 = null;
       if (null != overlay) {
-        result1 = primaryColor(secondaryColor[5]).calculateOverlayedColor(tmp6, tmp8);
-        const obj2 = primaryColor(secondaryColor[5]);
+        result1 = UserProfileGradientUtils.calculateOverlayedColor(tmp6, tmp8);
       }
     }
-    return primaryColor(secondaryColor[5]).getUserProfileGradientContainerColors(result, result1, closure_2);
+    return UserProfileGradientUtils.getUserProfileGradientContainerColors(result, result1, closure_2);
   }, items1);
 };

@@ -1,18 +1,18 @@
 // discord_app/modules/activity_status/native/ActivityStatusIcon.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-noopAll;
-let closure_1 = createCacheKey.createStyles({ icon: { flexShrink: 0 } });
-const result = require("set").fileFinishedImporting("modules/activity_status/native/ActivityStatusIcon.tsx");
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_1 = createStyles.createStyles({ icon: { flexShrink: 0 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activity_status/native/ActivityStatusIcon.tsx");
 
 export default function ActivityStatusIcon(arg0) {
   ({ icon, style } = arg0);
-  const merged = Object.assign(arg0, Object.create(null));
+  const merged = Object.assign(arg0, Object.assign({ icon: 0, style: 0 }));
   const obj = { size: "xxs", style: null, color: "status-positive" };
-  const items = [callback().icon, style];
-  obj[1] = items;
+  const items = [closure_1().icon, style];
+  obj.style = items;
   const merged1 = Object.assign(merged);
   return <icon size="xxs" style={null} color="status-positive" />;
 }

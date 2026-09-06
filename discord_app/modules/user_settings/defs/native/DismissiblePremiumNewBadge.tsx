@@ -1,18 +1,22 @@
 // discord_app/modules/user_settings/defs/native/DismissiblePremiumNewBadge.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ConstantsIOS from "../../../../ConstantsIOS.tsx";
+import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
+import native from "../../../../design/void/native.tsx";
+import LinearGradientDefault from "../../../../../_runtime/04987_LinearGradient.js";
 import SelectedDismissibleContentDefault from "../../../dismissible_content/native/SelectedDismissibleContent.tsx";
-import { Gradients } from "../../../colors/native/ColorConstants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-noopAll;
-createCacheKey = { newTag: { backgroundColor: "transparent" }, newTagContainer: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.sm, marginLeft: ThemesDefault.space.PX_4 };
-createCacheKey[1] = createCacheKey;
-let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/DismissiblePremiumNewBadge.tsx");
+require = fn;
+const Gradients = fn(7432).Gradients;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { newTag: { backgroundColor: "transparent" }, newTagContainer: null };
+createStyles = { borderRadius: nativeDefault.radii.sm, marginLeft: nativeDefault.space.PX_4 };
+createStyles.newTagContainer = createStyles;
+let closure_5 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/DismissiblePremiumNewBadge.tsx");
 
 export default function DismissiblePremiumNewBadge(dismissibleContent) {
   dismissibleContent = dismissibleContent.dismissibleContent;
@@ -23,57 +27,110 @@ export default function DismissiblePremiumNewBadge(dismissibleContent) {
     colors: jsx,
     variantOverride: closure_5,
   } = dismissibleContent);
-  closure_6 = undefined;
-  closure_6 = callback();
-  let items = [dismissibleContent];
-  return jsx(SelectedDismissibleContentDefault, {
-    contentTypes: items,
+  closure_6 = closure_5();
+  let obj = {
+    contentTypes: null,
     children(visibleContent) {
       if (visibleContent.visibleContent !== dismissibleContent) {
         return null;
       } else {
-        let tmp3 = closure_5;
-        if (null == closure_5) {
-          let obj = dismissibleContent(closure_1_2[6]);
+        let tmp3 = closure_1_5;
+        if (null == closure_1_5) {
+          let obj = PlatformUtils;
           let str = "text-xs/bold";
           if (obj.isAndroid()) {
             str = "text-xxs/bold";
           }
           tmp3 = str;
         }
-        if (closure_2) {
-          obj = { variant: null, containerStyle: null };
-          obj[0] = tmp3;
-          const items = [closure_6.newTagContainer, closure_1];
-          obj[1] = items;
-          let tmp6Result = closure_1_4(dismissibleContent(closure_1_2[7]).NewTag, obj);
-        } else if (closure_3) {
-          obj = { variant: null, containerStyle: null, gradient: true, colors: null };
-          obj[0] = tmp3;
-          obj[1] = closure_6.newTag;
-          obj[3] = closure_1_3.PREMIUM_TIER_2_TRI_COLOR;
-          tmp6Result = tmp6(dismissibleContent(closure_1_2[7]).NewTag, obj);
+        if (dependencyMap) {
+          obj = { variant: tmp3, containerStyle: null };
+          const items = [closure_6.newTagContainer, closure_1_1];
+          obj.containerStyle = items;
+          let tmp6Result = jsx(native.NewTag, { variant: tmp3, containerStyle: null });
+        } else if (closure_1_3) {
+          obj = {
+            variant: tmp3,
+            containerStyle: closure_6.newTag,
+            gradient: true,
+            colors: Gradients.PREMIUM_TIER_2_TRI_COLOR,
+          };
+          tmp6Result = tmp6(native.NewTag, obj);
         } else {
-          obj1 = { style: null, start: null, end: null, colors: null, children: null };
-          obj1[0] = closure_6.newTagContainer;
-          obj1[1] = dismissibleContent(closure_1_2[9]).HorizontalGradient.START;
-          obj1[2] = dismissibleContent(closure_1_2[9]).HorizontalGradient.END;
-          let tmp15 = closure_4;
-          if (closure_4 == null) {
+          const obj1 = {
+            style: closure_6.newTagContainer,
+            start: ConstantsIOS.HorizontalGradient.START,
+            end: ConstantsIOS.HorizontalGradient.END,
+            colors: null,
+            children: null,
+          };
+          let tmp15 = closure_1_4;
+          if (closure_1_4 == null) {
             const items1 = [
-              tmp7(closure_1_2[4]).unsafe_rawColors.PREMIUM_TIER_2_PURPLE,
-              tmp7(closure_1_2[4]).unsafe_rawColors.PREMIUM_TIER_2_PINK,
+              tmp7(576).unsafe_rawColors.PREMIUM_TIER_2_PURPLE,
+              tmp7(576).unsafe_rawColors.PREMIUM_TIER_2_PINK,
             ];
             tmp15 = items1;
           }
-          obj1[3] = tmp15;
-          const obj2 = { containerStyle: null, variant: null };
-          obj2[0] = closure_6.newTag;
-          obj2[1] = tmp3;
-          obj1[4] = closure_1_4(dismissibleContent(closure_1_2[7]).NewTag, obj2);
-          tmp6Result = tmp6(closure_1_1(closure_1_2[8]), obj1);
-          const tmp10 = closure_6;
-          const tmp9 = closure_1_1(closure_1_2[8]);
+          obj1.colors = tmp15;
+          const obj2 = { containerStyle: closure_6.newTag, variant: tmp3 };
+          obj1.children = jsx(native.NewTag, { containerStyle: closure_6.newTag, variant: tmp3 });
+          tmp6Result = tmp6(LinearGradientDefault, obj1);
+        }
+        return tmp6Result;
+      }
+    },
+  };
+  let items = [dismissibleContent];
+  obj.contentTypes = items;
+  return jsx(SelectedDismissibleContentDefault, {
+    contentTypes: null,
+    children(visibleContent) {
+      if (visibleContent.visibleContent !== dismissibleContent) {
+        return null;
+      } else {
+        let tmp3 = closure_1_5;
+        if (null == closure_1_5) {
+          let obj = PlatformUtils;
+          let str = "text-xs/bold";
+          if (obj.isAndroid()) {
+            str = "text-xxs/bold";
+          }
+          tmp3 = str;
+        }
+        if (dependencyMap) {
+          obj = { variant: tmp3, containerStyle: null };
+          const items = [closure_6.newTagContainer, closure_1_1];
+          obj.containerStyle = items;
+          let tmp6Result = jsx(native.NewTag, { variant: tmp3, containerStyle: null });
+        } else if (closure_1_3) {
+          obj = {
+            variant: tmp3,
+            containerStyle: closure_6.newTag,
+            gradient: true,
+            colors: Gradients.PREMIUM_TIER_2_TRI_COLOR,
+          };
+          tmp6Result = tmp6(native.NewTag, obj);
+        } else {
+          const obj1 = {
+            style: closure_6.newTagContainer,
+            start: ConstantsIOS.HorizontalGradient.START,
+            end: ConstantsIOS.HorizontalGradient.END,
+            colors: null,
+            children: null,
+          };
+          let tmp15 = closure_1_4;
+          if (closure_1_4 == null) {
+            const items1 = [
+              tmp7(576).unsafe_rawColors.PREMIUM_TIER_2_PURPLE,
+              tmp7(576).unsafe_rawColors.PREMIUM_TIER_2_PINK,
+            ];
+            tmp15 = items1;
+          }
+          obj1.colors = tmp15;
+          const obj2 = { containerStyle: closure_6.newTag, variant: tmp3 };
+          obj1.children = jsx(native.NewTag, { containerStyle: closure_6.newTag, variant: tmp3 });
+          tmp6Result = tmp6(LinearGradientDefault, obj1);
         }
         return tmp6Result;
       }

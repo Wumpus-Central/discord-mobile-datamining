@@ -1,44 +1,46 @@
 // discord_app/modules/user_settings/defs/native/TimestampHourCycleSetting.tsx
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import explicitContentFromProto from "../../UserSettings.tsx";
-import closure_2 from "../../../../../_runtime/00019_noop.js";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import util from "../../../../intl/index.native.tsx";
+import preloaded_user_settings from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import UserSettings from "../../UserSettings.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-createToggle = {
+require = fn;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.dyamEI);
+    const intl = util.intl;
+    return intl.string(util.t.dyamEI);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.APPEARANCE,
-  useValue: require("explicitContentFromProto").TimestampHourCycle.useSetting,
+  parent: fn(7975).MobileUserSettings.APPEARANCE,
+  useValue: fn(1935).TimestampHourCycle.useSetting,
   onValueChange: function onTimestampHourCycleChange(arg0) {
-    const TimestampHourCycle = explicitContentFromProto.TimestampHourCycle;
+    const TimestampHourCycle = UserSettings.TimestampHourCycle;
     TimestampHourCycle.updateSetting(Number(arg0));
   },
   useOptions: function useDMsMessagePreviewsOptions() {
-    return React.useMemo(() => {
+    return noop.useMemo(() => {
       let obj = { label: null, value: null };
-      const intl = callback(1114).intl;
-      obj[0] = intl.string(callback(1114).t.FMWYvb);
-      obj[1] = callback(1187).TimestampHourCycle.AUTO;
+      const intl = util.intl;
+      obj.label = intl.string(util.t.FMWYvb);
+      obj.value = preloaded_user_settings.TimestampHourCycle.AUTO;
       const items = [obj, ,];
       obj = { label: null, value: null };
-      const intl2 = callback(1114).intl;
-      obj[0] = intl2.string(callback(1114).t.p8NOwi);
-      obj[1] = callback(1187).TimestampHourCycle.H12;
+      const intl2 = util.intl;
+      obj.label = intl2.string(util.t.p8NOwi);
+      obj.value = preloaded_user_settings.TimestampHourCycle.H12;
       items[1] = obj;
       obj = { label: null, value: null };
-      const intl3 = callback(1114).intl;
-      obj[0] = intl3.string(callback(1114).t["+o/sOo"]);
-      obj[1] = callback(1187).TimestampHourCycle.H23;
+      const intl3 = util.intl;
+      obj.label = intl3.string(util.t["+o/sOo"]);
+      obj.value = preloaded_user_settings.TimestampHourCycle.H23;
       items[2] = obj;
       return items;
     }, []);
   },
-  usePredicate: require("__DiscordCreateDateFormatter").supportsSystemDateFormatter,
+  usePredicate: fn(4245).supportsSystemDateFormatter,
 };
-createToggle = createToggle.createRadio(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/TimestampHourCycleSetting.tsx");
+SettingBuilders = SettingBuilders.createRadio(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/TimestampHourCycleSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

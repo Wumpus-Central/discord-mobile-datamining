@@ -1,9 +1,10 @@
 // discord_app/modules/user_profile/hooks/native/useProfileSectionTabs.tsx
-import closure_0 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_1 from "../../../../../_runtime/00019_noop.js";
-import { UserProfileSections } from "../../Constants.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const result = require("set").fileFinishedImporting("modules/user_profile/hooks/native/useProfileSectionTabs.tsx");
+const UserProfileSections = fn(8183).UserProfileSections;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/hooks/native/useProfileSectionTabs.tsx");
 
 export function useProfileTabIndices(arg0, arg1) {
   let num = -1;
@@ -19,19 +20,18 @@ export function useProfileTabIndices(arg0, arg1) {
     }
     num = num3;
   }
-  obj[1] = num;
+  obj.wishlistTabIndex = num;
   return obj;
 }
 export const useProfileSectionTabs = function useProfileSectionTabs(boardTabIndex) {
-  ({ initialUserProfileSection: closure_0, wishlistTabIndex } = boardTabIndex);
+  ({ initialUserProfileSection: _slicedToArray, wishlistTabIndex } = boardTabIndex);
   boardTabIndex = boardTabIndex.boardTabIndex;
   const onTabChange = boardTabIndex.onTabChange;
-  c4 = undefined;
   let num2;
   let obj = wishlistTabIndex;
-  [tmp2, tmp3] = callback(
+  [tmp2, tmp3] = _slicedToArray(
     wishlistTabIndex.useState(() => {
-      if (boardTabIndex.WISHLIST === closure_0) {
+      if (UserProfileSections.WISHLIST === _slicedToArray) {
         return tmp2.WISHLIST;
       } else {
         return tmp2.WIDGETS === tmp ? tmp2.WIDGETS : tmp2.MAIN;
@@ -58,13 +58,13 @@ export const useProfileSectionTabs = function useProfileSectionTabs(boardTabInde
   }
   const items = [wishlistTabIndex, boardTabIndex, onTabChange];
   const items1 = [num2];
-  callback = obj.useCallback((arg0) => {
+  const callback = obj.useCallback((arg0) => {
     if (wishlistTabIndex === arg0) {
-      let MAIN = boardTabIndex.WISHLIST;
+      let MAIN = UserProfileSections.WISHLIST;
     } else if (boardTabIndex === arg0) {
-      MAIN = boardTabIndex.WIDGETS;
+      MAIN = UserProfileSections.WIDGETS;
     } else {
-      MAIN = boardTabIndex.MAIN;
+      MAIN = UserProfileSections.MAIN;
     }
     _undefined(MAIN);
     if (onTabChange != null) {

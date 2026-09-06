@@ -1,18 +1,18 @@
 // discord_app/modules/display_name_styles/hooks/useDisplayNameStylesEnabled.tsx
-import set from "../../../../_runtime/00002_set.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import _mod19 from "../../../../_runtime/metro/00019__.js";
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import context from "../DisplayNameStylesContext.tsx";
-import closure_3 from "../../a11y/AccessibilityStore.tsx";
+import DisplayNameStylesContext from "../DisplayNameStylesContext.tsx";
+import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const useContext = noop.useContext;
-const result = set.fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesEnabled.tsx");
+const useContext = _mod19.useContext;
+const result = size.fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesEnabled.tsx");
 
-export const useDisplayNameStylesEnabled = function useDisplayNameStylesEnabled(arg0) {
-  const items = [closure_3];
-  let overrideSettings = initialize.useStateFromStores(items, () => obj.displayNameStylesEnabled);
+export const useDisplayNameStylesEnabled = function useDisplayNameStylesEnabled() {
+  const items = [AccessibilityStore];
+  let overrideSettings = initialize.useStateFromStores(items, () => AccessibilityStore.displayNameStylesEnabled);
   if (!overrideSettings) {
-    overrideSettings = useContext(context.DisplayNameStylesContext).overrideSettings;
+    overrideSettings = useContext(DisplayNameStylesContext.DisplayNameStylesContext).overrideSettings;
   }
   return overrideSettings;
 };

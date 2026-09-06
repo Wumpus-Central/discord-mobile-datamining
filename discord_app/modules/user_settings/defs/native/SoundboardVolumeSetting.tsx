@@ -1,38 +1,25 @@
 // discord_app/modules/user_settings/defs/native/SoundboardVolumeSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import QUICK_SWITCHERDefault from "../../../app_analytics/AnalyticsLocation.tsx";
-import _fetchDefaultSoundsFromApi2 from "../../../soundboard/SoundboardActionCreators.tsx";
-import hasPermissionToPlaySound from "../../../soundboard/SoundboardUtils.tsx";
-import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import util from "../../../../intl/index.native.tsx";
+import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
+import SoundboardActionCreators from "../../../soundboard/SoundboardActionCreators.tsx";
+import SoundboardUtils from "../../../soundboard/SoundboardUtils.tsx";
+import SettingsConstants from "../../core/native/SettingsConstants.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const volumeSlider = createToggle.createVolumeSlider({
+const volumeSlider = SettingBuilders.createVolumeSlider({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.kbFsAD);
+    const intl = util.intl;
+    return intl.string(util.t.kbFsAD);
   },
-  parent: MobileUserSettings.MobileUserSettings.VOICE,
+  parent: SettingsConstants.MobileUserSettings.VOICE,
   maximum: 100,
-  useValue: hasPermissionToPlaySound.getAmplitudinalSoundboardVolume,
+  useValue: SoundboardUtils.getAmplitudinalSoundboardVolume,
   onValueChange(volume) {
-    const items = [QUICK_SWITCHERDefault.USER_SETTINGS];
-    return _fetchDefaultSoundsFromApi2.updateUserSoundboardVolume(volume, items);
+    const items = [AnalyticsLocationDefault.USER_SETTINGS];
+    return SoundboardActionCreators.updateUserSoundboardVolume(volume, items);
   },
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.kbFsAD);
-  },
-  parent: MobileUserSettings.MobileUserSettings.VOICE,
-  maximum: 100,
-  useValue: hasPermissionToPlaySound.getAmplitudinalSoundboardVolume,
-  onValueChange(volume) {
-    const items = [QUICK_SWITCHERDefault.USER_SETTINGS];
-    return _fetchDefaultSoundsFromApi2.updateUserSoundboardVolume(volume, items);
-  },
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/SoundboardVolumeSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/SoundboardVolumeSetting.tsx");
 
 export default volumeSlider;

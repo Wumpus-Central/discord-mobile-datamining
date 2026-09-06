@@ -1,16 +1,18 @@
 // discord_app/modules/premium/experiments/AndroidTwoWeekTrialsExperiment.tsx
-import set from "../../../../_runtime/00002_set.js";
 import ApexExperiment from "../../experiments/apex/index.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const obj = { 1: null, 2: { enabled: true, trialCTAEnabled: true } };
-obj[2] = { enabled: true, trialCTAEnabled: false };
-const apexExperiment = ApexExperiment.createApexExperiment({
+let obj = {
   name: "2026-06-android-two-week-trials",
   kind: "user",
   defaultConfig: { enabled: false, trialCTAEnabled: false },
-  variations: obj,
-});
-const result = set.fileFinishedImporting("modules/premium/experiments/AndroidTwoWeekTrialsExperiment.tsx");
+  variations: null,
+};
+obj = { 1: null, 2: { enabled: true, trialCTAEnabled: true } };
+obj[2] = { enabled: true, trialCTAEnabled: false };
+obj.variations = obj;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/premium/experiments/AndroidTwoWeekTrialsExperiment.tsx");
 
 export const AndroidTwoWeekTrialsExperiment = apexExperiment;
 export const isAndroidTwoWeekTrialsExperimentEnabled = function isAndroidTwoWeekTrialsExperimentEnabled(location) {

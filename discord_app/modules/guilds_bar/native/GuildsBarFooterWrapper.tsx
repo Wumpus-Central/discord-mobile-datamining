@@ -1,40 +1,38 @@
 // discord_app/modules/guilds_bar/native/GuildsBarFooterWrapper.tsx
-import set from "../../../../_runtime/00002_set.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import map from "../../../design/tokens/native/useToken.tsx";
-import setDefault from "../../core/native/NativeView.tsx";
-import context from "../../home_drawer/native/useHomeDrawerGesture.tsx";
-import GUILD_ITEM_SIZE from "GuildsBarConstants.tsx";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import useToken from "../../../design/tokens/native/useToken.tsx";
+import NativeViewDefault from "../../core/native/NativeView.tsx";
+import useHomeDrawerGesture from "../../home_drawer/native/useHomeDrawerGesture.tsx";
+import GuildsBarConstants from "GuildsBarConstants.tsx";
+import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const GUILD_ITEM_HIT_SLOP = GUILD_ITEM_SIZE.GUILD_ITEM_HIT_SLOP;
+const GUILD_ITEM_HIT_SLOP = GuildsBarConstants.GUILD_ITEM_HIT_SLOP;
 const jsx = jsxProd.jsx;
 let obj = { footerWrapper: null };
 obj = {
   display: "flex",
   alignSelf: "stretch",
   alignItems: "center",
-  gap: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_PADDING,
+  gap: nativeDefault.modules.mobile.GUILD_BAR_ITEM_PADDING,
 };
-obj[0] = obj;
-let closure_5 = createCacheKey.createStyles(obj);
-const result = set.fileFinishedImporting("modules/guilds_bar/native/GuildsBarFooterWrapper.tsx");
+obj.footerWrapper = obj;
+let closure_5 = createStyles.createStyles(obj);
+const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarFooterWrapper.tsx");
 
 export default function GuildsBarFooterWrapper(children) {
-  let obj = map;
-  const token = obj.useToken(ThemesDefault.modules.mobile.GUILD_BAR_ITEM_SIZE);
-  const tmp2 = callback();
-  const isHomeDrawerEnabled = context.useIsHomeDrawerEnabled();
+  let obj = useToken;
+  const token = obj.useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE);
+  const tmp2 = closure_5();
+  const isHomeDrawerEnabled = useHomeDrawerGesture.useIsHomeDrawerEnabled();
   const style = [tmp2.footerWrapper];
   let tmp6 = null;
-  const obj2 = context;
   const tmp4 = jsx;
   if (!isHomeDrawerEnabled) {
-    obj = { width: null };
-    obj[0] = token + GUILD_ITEM_HIT_SLOP.left + GUILD_ITEM_HIT_SLOP.right;
+    obj = { width: token + GUILD_ITEM_HIT_SLOP.left + GUILD_ITEM_HIT_SLOP.right };
     tmp6 = obj;
   }
   style[1] = tmp6;
-  return tmp4(setDefault, { style, children: children.children });
+  return tmp4(NativeViewDefault, { style, children: children.children });
 }

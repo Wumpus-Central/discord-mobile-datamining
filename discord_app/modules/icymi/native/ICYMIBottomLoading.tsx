@@ -1,29 +1,29 @@
 // discord_app/modules/icymi/native/ICYMIBottomLoading.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-noopAll;
-({ View: obj1, ActivityIndicator: c3 } = get_ActivityIndicator);
-let closure_5 = createCacheKey.createStyles(() => {
+get_ActivityIndicator = fn(17);
+({ View: c2, ActivityIndicator: c3 } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_5 = createStyles.createStyles(() => {
   let obj = { container: null };
   obj = {
-    paddingTop: ThemesDefault.space.PX_8,
-    paddingBottom: ThemesDefault.space.PX_24,
+    paddingTop: nativeDefault.space.PX_8,
+    paddingBottom: nativeDefault.space.PX_24,
     alignItems: "center",
     justifyContent: "center",
   };
-  obj[0] = obj;
+  obj.container = obj;
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/icymi/native/ICYMIBottomLoading.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/icymi/native/ICYMIBottomLoading.tsx");
 
 export const ICYMIBottomLoading = function ICYMIBottomLoading() {
   return (
-    <closure_2 style={callback().container}>
-      <closure_3 size="small" />
-    </closure_2>
+    <React2 style={closure_5().container}>
+      <React3 size="small" />
+    </React2>
   );
 };

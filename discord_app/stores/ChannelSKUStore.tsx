@@ -1,15 +1,15 @@
 // discord_app/stores/ChannelSKUStore.tsx
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../Dispatcher.tsx";
+import DispatcherDefault from "../Dispatcher.tsx";
 
 let closure_0 = {};
 const Store = initializeDefault.Store;
 class ChannelSKUStore extends Store {}
 ChannelSKUStore.prototype["getSkuIdForChannel"] = function getSkuIdForChannel(arg0) {
-  return table[arg0];
+  return closure_0[arg0];
 };
 ChannelSKUStore.displayName = "ChannelSKUStore";
-const channelSKUStore = new ChannelSKUStore(dispatcherDefault, {
+const channelSKUStore = new ChannelSKUStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     closure_0 = {};
   },
@@ -20,6 +20,7 @@ const channelSKUStore = new ChannelSKUStore(dispatcherDefault, {
     }
   },
 });
-const result = require("set").fileFinishedImporting("stores/ChannelSKUStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("stores/ChannelSKUStore.tsx");
 
 export default channelSKUStore;

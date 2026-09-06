@@ -1,14 +1,12 @@
 // discord_app/modules/application_commands/ApplicationCommandFrecencyStore.tsx
-import applyDefault from "../../../_runtime/00012_apply.js";
+import _modDef12 from "../../../_runtime/metro/00012__.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import DEFAULT_FRECENCYDefault from "../../lib/Frecency.tsx";
-import closure_2 from "../user_settings/UserSettingsProtoStore.tsx";
-import TRUE_OPTION_NAME from "ApplicationCommandConstants.tsx";
-import { UserSettingsTypes } from "../user_settings/UserSettingsConstants.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import FrecencyDefault from "../../lib/Frecency.tsx";
+import UserSettingsProtoStore from "../user_settings/UserSettingsProtoStore.tsx";
 
 function handleUserSettingsProtoStoreChange() {
-  const applicationCommandFrecency = obj.frecencyWithoutFetchingLatest.applicationCommandFrecency;
+  const applicationCommandFrecency = UserSettingsProtoStore.frecencyWithoutFetchingLatest.applicationCommandFrecency;
   let applicationCommands;
   if (applicationCommandFrecency != null) {
     applicationCommands = applicationCommandFrecency.applicationCommands;
@@ -17,19 +15,21 @@ function handleUserSettingsProtoStoreChange() {
     applicationCommands = {};
   }
   closure_7.overwriteHistory(
-    applyDefault.mapValues(applicationCommands, (recentUses) => {
+    _modDef12.mapValues(applicationCommands, (recentUses) => {
       const obj = {};
       const merged = Object.assign(recentUses);
       recentUses = recentUses.recentUses;
       const mapped = recentUses.map(Number);
-      obj.recentUses = mapped.filter((arg0) => arg0 > 0);
+      obj.recentUses = mapped.filter((item) => item > 0);
       return obj;
     }),
-    closure_6.pendingUsages,
+    global.pendingUsages,
   );
 }
-({ DISCOVERY_COMMAND_FRECENCY_GATEWAY_LIMIT: c3, SUB_COMMAND_KEY_SEPARATOR: c4 } = TRUE_OPTION_NAME);
-let closure_6 = { pendingUsages: [] };
+const ApplicationCommandConstants = fn(4999);
+({ DISCOVERY_COMMAND_FRECENCY_GATEWAY_LIMIT: c3, SUB_COMMAND_KEY_SEPARATOR: closure_4 } = ApplicationCommandConstants);
+const UserSettingsTypes = fn(1084).UserSettingsTypes;
+let global = { pendingUsages: [] };
 let obj = {
   computeBonus() {
     return 1;
@@ -38,24 +38,24 @@ let obj = {
     return arg0;
   },
   afterCompute() {},
-  numFrequentlyItems: require("ApplicationTypes").FREQUENCY_ITEM_LIMIT,
+  numFrequentlyItems: fn(1350).FREQUENCY_ITEM_LIMIT,
 };
-let closure_7 = new DEFAULT_FRECENCYDefault(obj);
+let closure_7 = new FrecencyDefault(obj);
 const PersistedStore = initializeDefault.PersistedStore;
 class ApplicationCommandFrecencyStore extends PersistedStore {}
 const prototype = ApplicationCommandFrecencyStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   if (null != arg0) {
-    closure_6 = arg0;
+    global = arg0;
   }
-  const items = [closure_2];
+  const items = [UserSettingsProtoStore];
   this.syncWith(items, handleUserSettingsProtoStoreChange);
 };
 prototype["getState"] = function getState() {
-  return closure_6;
+  return global;
 };
 prototype["hasPendingUsage"] = function hasPendingUsage() {
-  return closure_6.pendingUsages.length > 0;
+  return global.pendingUsages.length > 0;
 };
 prototype["getCommandFrecencyWithoutLoadingLatest"] = function getCommandFrecencyWithoutLoadingLatest() {
   return closure_7;
@@ -105,7 +105,7 @@ obj = {
       }
       id = command.id;
     }
-    const pendingUsages = closure_6.pendingUsages;
+    const pendingUsages = global.pendingUsages;
     pendingUsages.push({ key: id, timestamp: Date.now() });
     closure_7.track(id);
     closure_7.compute();
@@ -113,44 +113,37 @@ obj = {
   USER_SETTINGS_PROTO_UPDATE: function handleUserSettingsProtoUpdate(settings) {
     if (settings.settings.type === UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) {
       if (settings.wasSaved) {
-        closure_6.pendingUsages = [];
+        global.pendingUsages = [];
       }
     }
     return false;
   },
 };
-const applicationCommandFrecencyStore = new ApplicationCommandFrecencyStore(dispatcherDefault, obj);
-let tmp3 = new DEFAULT_FRECENCYDefault(obj);
-const result = require("set").fileFinishedImporting("modules/application_commands/ApplicationCommandFrecencyStore.tsx");
+const applicationCommandFrecencyStore = new ApplicationCommandFrecencyStore(DispatcherDefault, obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandFrecencyStore.tsx");
 
 export default applicationCommandFrecencyStore;
 export const getTopRealCommands = function getTopRealCommands(arg0) {
   const set = new Set();
   const iter = arg0[Symbol.iterator]();
   while (iter !== undefined) {
-    let tmp = closure_4;
-    let first = str.split(closure_4)[0];
+    let first = str.split(React4)[0];
     let _Number = Number;
     let tmp3 = first;
     if (Number(first) > 0) {
-      let tmp4 = first;
       let addResult = set.add(tmp3);
     }
-    let tmp6 = closure_3;
-    if (set.size >= closure_3) {
-      let tmp7 = iter;
+    if (set.size >= React3) {
       iter.return();
       break;
     }
     let items = [];
-    let tmp8 = items;
-    let tmp9 = set;
-    let num = 0;
     let arraySpreadResult = HermesBuiltin.arraySpread(set, 0);
     return items;
   }
 };
-export const getFilteredTopCommands = function getFilteredTopCommands(arr) {
+export const getFilteredTopCommands = function getFilteredTopCommands(arr, arg1) {
   closure_0 = arg1;
   const found = arr.filter((arr) => {
     const hasItem = arr.includes(":");
@@ -168,5 +161,5 @@ export const getFilteredTopCommands = function getFilteredTopCommands(arr) {
     }
     return tmp2;
   });
-  return found.map((arg0) => arg0.split(":")[0]);
+  return found.map((item) => item.split(":")[0]);
 };

@@ -1,13 +1,13 @@
 // discord_app/modules/stage_channels/useGuildMemberDisplayRole.tsx
-import applyOverwritesAll from "../../utils/PermissionUtils.tsx";
-import closure_3 from "../../stores/GuildMemberStore.tsx";
-import closure_4 from "../../stores/GuildStore.tsx";
+import PermissionUtilsAll from "../../utils/PermissionUtils.tsx";
+import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
+import GuildStore from "../../stores/GuildStore.tsx";
 
-const require = arg1;
+const require = fn;
 function getHighestHoistedRole(arg0, arg1) {
   let tmp = arg2;
   if (arg2 === undefined) {
-    const items = [closure_4, closure_3];
+    const items = [GuildStore, GuildMemberStore];
     tmp = items;
   }
   [obj, obj2] = tmp;
@@ -20,8 +20,7 @@ function getHighestHoistedRole(arg0, arg1) {
         const member = obj2.getMember(guild.id, arg1);
         let highestHoistedRole = null;
         if (null != member) {
-          highestHoistedRole = applyOverwritesAll.getHighestHoistedRole(guild, member);
-          const obj3 = applyOverwritesAll;
+          highestHoistedRole = PermissionUtilsAll.getHighestHoistedRole(guild, member);
         }
         return highestHoistedRole;
       }
@@ -29,18 +28,19 @@ function getHighestHoistedRole(arg0, arg1) {
   }
   return null;
 }
-const result = require("set").fileFinishedImporting("modules/stage_channels/useGuildMemberDisplayRole.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/useGuildMemberDisplayRole.tsx");
 
 export default function useGuildMemberDisplayRole(arg0, arg1) {
-  const _require = arg0;
+  _require = arg0;
   closure_1 = arg1;
-  let items = [closure_4, closure_3];
+  let items = [GuildStore, GuildMemberStore];
   const items1 = [arg0, arg1];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
+  return require("initialize").useStateFromStores(
     items,
     () => {
-      const items = [closure_1_4, closure_1_3];
-      return closure_1_5(closure_0, closure_1, items);
+      const items = [GuildStore, GuildMemberStore];
+      return getHighestHoistedRole(closure_0, closure_1, items);
     },
     items1,
   );

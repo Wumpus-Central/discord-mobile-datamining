@@ -1,7 +1,7 @@
 // discord_app/modules/message_request/MessageRequestTypes.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/message_request/MessageRequestTypes.tsx");
+const result = size.fileFinishedImporting("modules/message_request/MessageRequestTypes.tsx");
 
 export const MessageRequestConsentStatusTypes = {
   UNSPECIFIED: 0,

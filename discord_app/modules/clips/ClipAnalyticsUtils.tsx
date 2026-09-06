@@ -1,17 +1,15 @@
 // discord_app/modules/clips/ClipAnalyticsUtils.tsx
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
-import isStreamKey from "../go_live/utils/StreamKeyUtils.tsx";
-import isEqualDefault from "../../../_runtime/04679_isEqual.js";
-import parseEncoder from "../../lib/VideoQualityStats.tsx";
-import closure_3 from "../../stores/ApplicationStreamingSettingsStore.tsx";
-import closure_4 from "../../stores/ApplicationStreamingStore.tsx";
-import closure_5 from "../../stores/RTCConnectionStore.tsx";
-import closure_6 from "../../stores/StreamRTCConnectionStore.tsx";
-import closure_7 from "ClipsStore.tsx";
-import result from "ClipsConstants.tsx";
-import { AnalyticEvents } from "../../Constants.tsx";
+import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
+import StreamKeyUtils from "../go_live/utils/StreamKeyUtils.tsx";
+import _modDef4679 from "../../../_runtime/metro/04679__.js";
+import VideoQualityStats from "../../lib/VideoQualityStats.tsx";
+import ApplicationStreamingSettingsStore from "../../stores/ApplicationStreamingSettingsStore.tsx";
+import ApplicationStreamingStore from "../../stores/ApplicationStreamingStore.tsx";
+import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
+import StreamRTCConnectionStore from "../../stores/StreamRTCConnectionStore.tsx";
+import ClipsStore from "ClipsStore.tsx";
 
-require = arg1;
+require = fn;
 function getClipSignalTypes(arg0) {
   const items = [];
   const iter = arg0.timeline[Symbol.iterator]();
@@ -28,7 +26,6 @@ function getClipSignalTypes(arg0) {
     } else if (tmp3.SHOUTING === type) {
       let arr2 = items.push("shouting");
     } else if (tmp3.GAME_EVENT === type) {
-      let tmp4 = nextResult;
       let _HermesInternal = HermesInternal;
       let arr3 = items.push("game_event:" + tmp2.signal.eventType);
     }
@@ -39,10 +36,7 @@ function getClipSignalTypes(arg0) {
 function getPostSaveClipAnalytics(arg0, framesEncodedByEncoder) {
   const map = new Map();
   for (const key10011 in arg1.framesEncodedByEncoder) {
-    let tmp7 = key10011;
-    let tmp8 = require;
-    let tmp9 = dependencyMap;
-    let obj3 = parseEncoder;
+    let obj3 = VideoQualityStats;
     let parseEncoderResult = obj3.parseEncoder(key10011);
     let num = map.get(parseEncoderResult);
     if (num == null) {
@@ -53,7 +47,7 @@ function getPostSaveClipAnalytics(arg0, framesEncodedByEncoder) {
   }
   const obj = {};
   const merged = Object.assign(arg0);
-  let num2 = map.get(parseEncoder.Encoders.NVIDIA_CUDA);
+  let num2 = map.get(VideoQualityStats.Encoders.NVIDIA_CUDA);
   if (num2 == null) {
     num2 = 0;
   }
@@ -145,7 +139,7 @@ function getPostSaveClipAnalytics(arg0, framesEncodedByEncoder) {
     framesDropped: obj2.frames_dropped,
     framesDroppedDuringClip: obj2.frames_dropped_during_clip,
   } = framesEncodedByEncoder);
-  obj.clip_duration_setting = store.getSettings().clipsLength;
+  obj.clip_duration_setting = ClipsStore.getSettings().clipsLength;
   ({
     clipDuration: obj2.clip_duration,
     clipResolutionWidth: obj2.clip_resolution_width,
@@ -154,12 +148,15 @@ function getPostSaveClipAnalytics(arg0, framesEncodedByEncoder) {
     maxFps: obj2.max_fps,
     submittedFps: obj2.submitted_fps,
   } = framesEncodedByEncoder);
-  obj.target_fps = state.getState().fps;
+  obj.target_fps = ApplicationStreamingSettingsStore.getState().fps;
   ({ audioTrackCount: obj2.audio_track_count, savedAt: obj2.saved_at } = framesEncodedByEncoder);
   return obj;
 }
-({ ClipSignalTypes: closure_8, CLIP_RUNTIME: c9 } = result);
-result = require("set").fileFinishedImporting("modules/clips/ClipAnalyticsUtils.tsx");
+const ClipsConstants = fn(5132);
+({ ClipSignalTypes: closure_8, CLIP_RUNTIME: closure_9 } = ClipsConstants);
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/clips/ClipAnalyticsUtils.tsx");
 
 export const getClipType = function getClipType(decision) {
   decision = decision.decision;
@@ -214,22 +211,22 @@ export const getClipBaseProperties = function getClipBaseProperties(clip) {
   };
 };
 export const getClipContextProperties = function getClipContextProperties() {
-  const obj = { clip_runtime: closure_9, current_clip_session_id: null };
-  const currentClipsSession = store.getCurrentClipsSession();
+  const obj = { clip_runtime, current_clip_session_id: null };
+  const currentClipsSession = ClipsStore.getCurrentClipsSession();
   let id;
   if (currentClipsSession != null) {
     id = currentClipsSession.id;
   }
-  obj[1] = id;
+  obj.current_clip_session_id = id;
   return obj;
 };
 export { getClipSignalTypes };
 export const getPreSaveClipAnalytics = function getPreSaveClipAnalytics(decision) {
-  currentUserActiveStream = currentUserActiveStream.getCurrentUserActiveStream();
+  const currentUserActiveStream = ApplicationStreamingStore.getCurrentUserActiveStream();
   let rTCConnection = null;
   if (null != currentUserActiveStream) {
-    let obj = isStreamKey;
-    rTCConnection = rTCConnection.getRTCConnection(obj.encodeStreamKey(currentUserActiveStream));
+    let obj = StreamKeyUtils;
+    rTCConnection = StreamRTCConnectionStore.getRTCConnection(obj.encodeStreamKey(currentUserActiveStream));
   }
   decision = decision.decision;
   let type;
@@ -259,13 +256,13 @@ export const getPreSaveClipAnalytics = function getPreSaveClipAnalytics(decision
     is_candidate: decision.isCandidate,
   };
   const merged = Object.assign(obj);
-  obj1 = { clip_runtime: closure_9, current_clip_session_id: null };
-  const currentClipsSession = store.getCurrentClipsSession();
+  const obj1 = { clip_runtime, current_clip_session_id: null };
+  const currentClipsSession = ClipsStore.getCurrentClipsSession();
   let id;
   if (currentClipsSession != null) {
     id = currentClipsSession.id;
   }
-  obj1[1] = id;
+  obj1.current_clip_session_id = id;
   const merged1 = Object.assign(obj1);
   let rTCConnectionId;
   if (rTCConnection != null) {
@@ -277,7 +274,7 @@ export const getPreSaveClipAnalytics = function getPreSaveClipAnalytics(decision
     mediaSessionId = rTCConnection.getMediaSessionId();
   }
   obj.media_session_id = mediaSessionId;
-  obj.parent_media_session_id = mediaSessionId.getMediaSessionId();
+  obj.parent_media_session_id = RTCConnectionStore.getMediaSessionId();
   ({
     guildId: obj2.guild_id,
     channelId: obj2.channel_id,
@@ -289,7 +286,7 @@ export const getPreSaveClipAnalytics = function getPreSaveClipAnalytics(decision
   return obj;
 };
 export { getPostSaveClipAnalytics };
-export const getClipSavedAnalytics = function getClipSavedAnalytics(arg0, framesEncodedByEncoder) {
+export const getClipSavedAnalytics = function getClipSavedAnalytics(arg0, framesEncodedByEncoder, arg2, arg3) {
   const tmp = getPostSaveClipAnalytics(arg0, framesEncodedByEncoder);
   ({ clipSaveTimeMs: tmp.clip_save_time_ms, clipSizeBytes: tmp.clip_size_bytes } = framesEncodedByEncoder);
   tmp.clip_signal_types = getClipSignalTypes(arg2);
@@ -308,7 +305,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   isFavorite = isFavorite.isFavorite;
   let tmp2;
   if (null != isFavorite) {
-    if (!isEqualDefault(isFavorite, tmp)) {
+    if (!_modDef4679(isFavorite, tmp)) {
       tmp2 = isFavorite;
     }
   }
@@ -325,7 +322,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   const name = isFavorite.name;
   let tmp6;
   if (null != name) {
-    if (!isEqualDefault(name, tmp5)) {
+    if (!_modDef4679(name, tmp5)) {
       tmp6 = name;
     }
   }
@@ -333,7 +330,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   if (tmp6 != null) {
     length = tmp6.length;
   }
-  obj[1] = length;
+  obj.title_length = length;
   editMetadata = editMetadata.editMetadata;
   if (editMetadata != null) {
     let start = editMetadata.start;
@@ -345,11 +342,11 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp11;
   if (null != start) {
-    if (!isEqualDefault(start, start)) {
+    if (!_modDef4679(start, start)) {
       tmp11 = start;
     }
   }
-  obj[2] = tmp11;
+  obj.edit_start_time = tmp11;
   const editMetadata3 = editMetadata.editMetadata;
   if (editMetadata3 != null) {
     let end = editMetadata3.end;
@@ -361,11 +358,11 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp15;
   if (null != end) {
-    if (!isEqualDefault(end, end)) {
+    if (!_modDef4679(end, end)) {
       tmp15 = end;
     }
   }
-  obj[3] = tmp15;
+  obj.edit_end_time = tmp15;
   const editMetadata5 = editMetadata.editMetadata;
   if (editMetadata5 != null) {
     let applicationAudio = editMetadata5.applicationAudio;
@@ -377,11 +374,11 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp19;
   if (null != applicationAudio) {
-    if (!isEqualDefault(applicationAudio, applicationAudio)) {
+    if (!_modDef4679(applicationAudio, applicationAudio)) {
       tmp19 = applicationAudio;
     }
   }
-  obj[4] = tmp19;
+  obj.application_audio_enabled = tmp19;
   const editMetadata7 = editMetadata.editMetadata;
   if (editMetadata7 != null) {
     let voiceAudio = editMetadata7.voiceAudio;
@@ -393,11 +390,11 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp23;
   if (null != voiceAudio) {
-    if (!isEqualDefault(voiceAudio, voiceAudio)) {
+    if (!_modDef4679(voiceAudio, voiceAudio)) {
       tmp23 = voiceAudio;
     }
   }
-  obj[5] = tmp23;
+  obj.voice_audio_enabled = tmp23;
   const editMetadata9 = editMetadata.editMetadata;
   if (editMetadata9 != null) {
     let soundboardAudio = editMetadata9.soundboardAudio;
@@ -409,11 +406,11 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp27;
   if (null != soundboardAudio) {
-    if (!isEqualDefault(soundboardAudio, soundboardAudio)) {
+    if (!_modDef4679(soundboardAudio, soundboardAudio)) {
       tmp27 = soundboardAudio;
     }
   }
-  obj[6] = tmp27;
+  obj.soundboard_audio_enabled = tmp27;
   const editMetadata11 = editMetadata.editMetadata;
   if (editMetadata11 != null) {
     const crop = editMetadata11.crop;
@@ -431,26 +428,23 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp31;
   if (null != preset) {
-    if (!isEqualDefault(preset, preset)) {
+    if (!_modDef4679(preset, preset)) {
       tmp31 = preset;
     }
   }
-  obj[7] = tmp31;
+  obj.crop = tmp31;
   const values = Object.values(obj);
-  if (!values.every((arg0) => null == arg0)) {
-    obj = { clip_runtime: null, current_clip_session_id: null };
-    obj[0] = closure_9;
-    const currentClipsSession = store.getCurrentClipsSession();
+  if (!values.every((item) => null == item)) {
+    obj = { clip_runtime, current_clip_session_id: null };
+    const currentClipsSession = ClipsStore.getCurrentClipsSession();
     let id;
     if (currentClipsSession != null) {
       id = currentClipsSession.id;
     }
-    obj = {};
-    obj[1] = id;
+    obj = { current_clip_session_id: id };
     const merged = Object.assign(obj);
     obj.clip_uuid = editMetadata.id;
     const merged1 = Object.assign(obj);
-    expandEventPropertiesDefault.track(AnalyticEvents.CLIP_EDITED, obj);
-    const obj3 = expandEventPropertiesDefault;
+    AnalyticsUtilsDefault.track(AnalyticEvents.CLIP_EDITED, obj);
   }
 };

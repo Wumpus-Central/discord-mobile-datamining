@@ -1,20 +1,20 @@
 // discord_app/modules/guild_role_subscriptions/GuildRoleSubscriptionsConstants.tsx
-import set from "../../../_runtime/00002_set.js";
-import sum from "../../../discord_common/js/shared/Constants.tsx";
-import GuildFeatures from "../premium/PremiumConstants.tsx";
+import Constants from "../../../discord_common/js/shared/Constants.tsx";
+import PremiumConstants from "../premium/PremiumConstants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const SubscriptionIntervalTypes = GuildFeatures.SubscriptionIntervalTypes;
+const SubscriptionIntervalTypes = PremiumConstants.SubscriptionIntervalTypes;
 const items = [
   { interval: SubscriptionIntervalTypes.DAY, interval_count: 1 },
   { interval: SubscriptionIntervalTypes.DAY, interval_count: 7 },
 ];
-const combined = "https://" + sum.PRIMARY_DOMAIN + "/creators";
+const combined = "https://" + Constants.PRIMARY_DOMAIN + "/creators";
 const frozen = Object.freeze({
   MUST_READ_ARTICLES: "https://discord.com/creators/5-must-read-articles-for-beginners",
   CREATOR_TO_ADMIN_101: "https://discord.com/creators/creator-to-server-admin-101",
   CREATOR_TO_ADMIN_201: "https://discord.com/creators/creator-to-server-admin-201",
 });
-const result = set.fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionsConstants.tsx");
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionsConstants.tsx");
 
 export const MAX_SUBSCRIPTION_TIERS = 3;
 export const MAX_SUBSCRIPTION_TIER_NAME_LENGTH = 100;

@@ -1,16 +1,15 @@
 // discord_app/modules/icymi/native/ReplyRow.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
-import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import ReactionIcon from "../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createICYMIStyles from "createICYMIStyles.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createICYMIStyles = fn(16452);
 let closure_6 = createICYMIStyles.createICYMIStyles((marginLeft) => {
   let obj = {
     separator: null,
@@ -25,13 +24,13 @@ let closure_6 = createICYMIStyles.createICYMIStyles((marginLeft) => {
     contentInventoryText: null,
     replyContainer: null,
   };
-  obj = {
+  const size = {
     height: 1,
-    backgroundColor: ThemesDefault.colors.BORDER_SUBTLE,
+    backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
     marginBottom: marginLeft.margin,
     width: "100%",
   };
-  obj[0] = obj;
+  obj.separator = size;
   obj = {
     flex: 1,
     alignItems: "center",
@@ -39,61 +38,67 @@ let closure_6 = createICYMIStyles.createICYMIStyles((marginLeft) => {
     flexDirection: "row",
     marginHorizontal: marginLeft.margin,
     marginBottom: marginLeft.margin,
-    gap: ThemesDefault.space.PX_12,
+    gap: nativeDefault.space.PX_12,
   };
-  obj[1] = obj;
-  obj[2] = { flexGrow: 1, flexBasis: 0, height: ThemesDefault.space.PX_40 };
-  obj1 = { flexGrow: 1, flexBasis: 0, height: ThemesDefault.space.PX_40 };
-  obj[3] = {
+  obj.container = obj;
+  obj = { flexGrow: 1, flexBasis: 0, height: nativeDefault.space.PX_40 };
+  obj.buttonContainer = obj;
+  obj.feedbackContainer = {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    gap: ThemesDefault.space.PX_12,
-    height: ThemesDefault.space.PX_40,
+    gap: nativeDefault.space.PX_12,
+    height: nativeDefault.space.PX_40,
   };
-  obj[4] = { width: 20, height: 20 };
-  const obj2 = {
+  obj.icon = { width: 20, height: 20 };
+  const obj1 = {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    gap: ThemesDefault.space.PX_12,
-    height: ThemesDefault.space.PX_40,
+    gap: nativeDefault.space.PX_12,
+    height: nativeDefault.space.PX_40,
   };
-  obj[5] = { tintColor: ThemesDefault.colors.BUTTON_OUTLINE_PRIMARY_TEXT };
-  const obj3 = { tintColor: ThemesDefault.colors.BUTTON_OUTLINE_PRIMARY_TEXT };
-  obj[6] = { flex: 1, borderRadius: ThemesDefault.radii.round };
-  const obj4 = { flex: 1, borderRadius: ThemesDefault.radii.round };
-  obj[7] = {
+  obj.feedbackButtonIcon = { tintColor: nativeDefault.colors.BUTTON_OUTLINE_PRIMARY_TEXT };
+  const obj2 = { tintColor: nativeDefault.colors.BUTTON_OUTLINE_PRIMARY_TEXT };
+  obj.input = { flex: 1, borderRadius: nativeDefault.radii.round };
+  const obj3 = { flex: 1, borderRadius: nativeDefault.radii.round };
+  obj.contentInventoryPressable = {
     borderRadius: 20,
     width: "100%",
     minHeight: 40,
-    backgroundColor: ThemesDefault.colors.REDESIGN_CHAT_INPUT_BACKGROUND,
+    backgroundColor: nativeDefault.colors.REDESIGN_CHAT_INPUT_BACKGROUND,
     justifyContent: "center",
   };
-  const obj5 = {
+  const obj4 = {
     borderRadius: 20,
     width: "100%",
     minHeight: 40,
-    backgroundColor: ThemesDefault.colors.REDESIGN_CHAT_INPUT_BACKGROUND,
+    backgroundColor: nativeDefault.colors.REDESIGN_CHAT_INPUT_BACKGROUND,
     justifyContent: "center",
   };
-  obj[8] = {
+  obj.contentInventoryContainer = {
     marginLeft: marginLeft.margin,
     marginRight: 10,
-    paddingVertical: ThemesDefault.space.PX_8,
+    paddingVertical: nativeDefault.space.PX_8,
     flexDirection: "row",
     alignItems: "center",
-    gap: ThemesDefault.space.PX_4,
+    gap: nativeDefault.space.PX_4,
   };
-  obj[9] = { flexShrink: 1 };
-  obj[10] = { flexDirection: "row", alignItems: "center", marginLeft: marginLeft.inset, marginTop: marginLeft.margin };
+  obj.contentInventoryText = { flexShrink: 1 };
+  obj.replyContainer = {
+    flexDirection: "row",
+    alignItems: "center",
+    marginLeft: marginLeft.inset,
+    marginTop: marginLeft.margin,
+  };
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/icymi/native/ReplyRow.tsx");
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/icymi/native/ReplyRow.tsx");
 
 export const ContentInventoryReplyRow = function ContentInventoryReplyRow(onPress) {
   const reactText = onPress.reactText;
-  const tmp = callback3();
+  const tmp = closure_6();
   let obj = { style: tmp.replyContainer, children: null };
   obj = {
     accessibilityRole: "button",
@@ -105,17 +110,17 @@ export const ContentInventoryReplyRow = function ContentInventoryReplyRow(onPres
   };
   obj = { style: tmp.contentInventoryContainer, children: null };
   const items = [
-    callback(Text.Text, {
+    React4(Text_Text.Text, {
       variant: "text-md/medium",
       color: "input-placeholder-text-default",
       lineClamp: 1,
       style: tmp.contentInventoryText,
       children: reactText,
     }),
-    callback(ReactionIcon.ReactionIcon, { style: tmp.icon, size: "custom" }),
+    React4(ReactionIcon.ReactionIcon, { style: tmp.icon, size: "custom" }),
   ];
-  obj[1] = items;
-  obj[5] = callback2(View, obj);
-  obj[1] = callback(PressableBase.PressableOpacity, obj);
-  return callback(View, obj);
+  obj.children = items;
+  obj.children = hasOwnProperty(View, obj);
+  obj.children = React4(Pressables.PressableOpacity, obj);
+  return React4(View, obj);
 };

@@ -1,12 +1,12 @@
 // discord_app/modules/media_uploads/ImageEncodingLadder.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
+import Constants from "../../Constants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-function getAdaptiveImageCompressionQuality(width, ADAPTIVE_COMPRESSION_CONFIG) {
+function getAdaptiveImageCompressionQuality(size, ADAPTIVE_COMPRESSION_CONFIG) {
   if (ADAPTIVE_COMPRESSION_CONFIG.useAdaptiveCompression) {
-    if (null != width.width) {
-      if (null != width.height) {
-        const result = width.width * width.height;
+    if (null != size.width) {
+      if (null != size.height) {
+        const result = size.width * size.height;
         if (result <= obj.SMALL) {
           let HIGH5 = ADAPTIVE_COMPRESSION_CONFIG.veryHighQuality;
           if (HIGH5 == null) {
@@ -45,7 +45,7 @@ function getAdaptiveImageCompressionQuality(width, ADAPTIVE_COMPRESSION_CONFIG) 
     return CompressionQuality.HIGH;
   }
 }
-const CompressionQuality = ME.CompressionQuality;
+const CompressionQuality = Constants.CompressionQuality;
 let obj = { SMALL: 921600, MEDIUM: 2073600, LARGE: 3686400, VERY_LARGE: 8294400 };
 obj = {
   useAdaptiveCompression: true,
@@ -56,21 +56,18 @@ obj = {
   veryLowQuality: 0.4,
   useOriginalIfSmaller: true,
 };
-let prototype;
-prototype = function ImageEncodingLadder() {
+const prototype = function ImageEncodingLadder() {
   return Object.create(new.target.prototype);
 }.prototype;
-prototype["selectEncodingConfig"] = function selectEncodingConfig(width) {
-  ({ targetWidth, targetHeight } = prototype.clampDimensions(width.width, width.height, 3840, 2160));
-  if (width.width === targetWidth) {
-    if (width.height === targetHeight) {
+prototype["selectEncodingConfig"] = function selectEncodingConfig(size1) {
+  ({ targetWidth, targetHeight } = prototype.clampDimensions(size1.width, size1.height, 3840, 2160));
+  if (size1.width === targetWidth) {
+    if (size1.height === targetHeight) {
       obj = { compressionQuality: null, targetWidth: null, targetHeight: null };
-      obj = { width: null, height: null };
-      obj[0] = targetWidth;
-      obj[1] = targetHeight;
-      obj[0] = 100 * getAdaptiveImageCompressionQuality(obj, obj);
-      obj[1] = targetWidth;
-      obj[2] = targetHeight;
+      const size = { width: targetWidth, height: targetHeight };
+      obj.compressionQuality = 100 * getAdaptiveImageCompressionQuality(size, obj);
+      obj.targetWidth = targetWidth;
+      obj.targetHeight = targetHeight;
     }
     return obj;
   }
@@ -87,9 +84,7 @@ prototype["clampDimensions"] = function clampDimensions(width, height, arg2, arg
   const bound3 = Math.min(arg2, arg3);
   if (bound <= bound2) {
     if (bound1 <= bound3) {
-      obj = { targetWidth: null, targetHeight: null };
-      obj[0] = width;
-      obj[1] = height;
+      obj = { targetWidth: width, targetHeight: height };
       return obj;
     }
   }
@@ -100,7 +95,7 @@ prototype["clampDimensions"] = function clampDimensions(width, height, arg2, arg
   };
   return obj;
 };
-let result = set.fileFinishedImporting("modules/media_uploads/ImageEncodingLadder.tsx");
+let result = size.fileFinishedImporting("modules/media_uploads/ImageEncodingLadder.tsx");
 
 export const IMAGE_COMPRESSION_THRESHOLDS = obj;
 export const ADAPTIVE_COMPRESSION_CONFIG = obj;

@@ -1,8 +1,8 @@
 // discord_app/utils/GameUtils.native.tsx
-import set from "../../_runtime/00002_set.js";
+import size from "../../_runtime/metro/00002__.js";
 
 let c0 = "not supported";
-const result = set.fileFinishedImporting("utils/GameUtils.native.tsx");
+const result = size.fileFinishedImporting("utils/GameUtils.native.tsx");
 
 export default {
   waitSubscribed() {
@@ -24,11 +24,11 @@ export default {
     return Promise.resolve(false);
   },
   launch() {
-    error = new Error(c0);
+    const error = new Error(c0);
     return Promise.reject(error);
   },
   launchDispatchApplication() {
-    error = new Error(c0);
+    const error = new Error(c0);
     return Promise.reject(error);
   },
   removeShortcuts() {
@@ -38,7 +38,7 @@ export default {
     return Promise.resolve(false);
   },
   launchGame() {
-    error = new Error(c0);
+    const error = new Error(c0);
     return Promise.reject(error);
   },
   isProtocolRegistered() {

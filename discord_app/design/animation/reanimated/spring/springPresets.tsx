@@ -1,8 +1,8 @@
 // discord_app/design/animation/reanimated/spring/springPresets.tsx
-import set from "../../../../../_runtime/00002_set.js";
 import SUBTLE_SPRING from "../../../../../discord_common/js/packages/tokens/motion/generated/generated-definitions.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("design/animation/reanimated/spring/springPresets.tsx");
+const result = size.fileFinishedImporting("design/animation/reanimated/spring/springPresets.tsx");
 
 export const SUBTLE_SPRING = SUBTLE_SPRING.SUBTLE_SPRING;
 export const ON_PRESS_SPRING = { mass: 1, overshootClamping: true, damping: 27, stiffness: 300 };

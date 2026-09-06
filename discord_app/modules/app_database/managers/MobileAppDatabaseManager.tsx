@@ -1,22 +1,6 @@
 // discord_app/modules/app_database/managers/MobileAppDatabaseManager.tsx
-import set from "../../../../_runtime/00002_set.js";
-import set2 from "../system/AppDatabaseManager.tsx";
-import { handleBackgroundSync } from "../modules/Channels.tsx";
-import { hasBasicChannelChanged } from "../modules/GuildBasicChannels.tsx";
-import { getAsync } from "../modules/GuildEmojis.tsx";
-import { getAsync } from "../modules/Guilds.tsx";
-import { getAll } from "../modules/GuildsRequiringChannelSync.tsx";
-import { getAll } from "../modules/GuildsRequiringDeletedIdsSync.tsx";
-import { getAsync } from "../modules/GuildStickers.tsx";
-import { getCommittedVersions } from "../modules/GuildVersions.tsx";
-import { okAsync } from "../modules/KvCacheVersion.tsx";
-import { handlePostConnectionOpen } from "../modules/LowDiskTrim.tsx";
-import { computeUsersAndMembers } from "../modules/Messages.tsx";
-import { getCommittedVersions } from "../modules/NonGuildVersions.tsx";
-import { getAll } from "../modules/ReadStates.tsx";
-import { getAll } from "../modules/UserGuildSettings.tsx";
-import { getAll } from "../modules/UserSearchItems.tsx";
-import { getAll } from "../modules/UserSettingsProto.tsx";
+import AppDatabaseManager from "../system/AppDatabaseManager.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const items = [
   {
@@ -34,7 +18,7 @@ const items = [
       "GUILD_DELETE",
     ],
     require() {
-      return handleBackgroundSync /* handleBackgroundSync */.default;
+      return require("Channels").default;
     },
   },
   {
@@ -54,7 +38,7 @@ const items = [
       "WRITE_CACHES",
     ],
     require() {
-      return hasBasicChannelChanged /* hasBasicChannelChanged */.default;
+      return require("GuildBasicChannels").default;
     },
   },
   {
@@ -68,7 +52,7 @@ const items = [
       "GUILD_UPDATE",
     ],
     require() {
-      return getAsync /* getAsync */.default;
+      return require("GuildEmojis").default;
     },
   },
   {
@@ -86,21 +70,21 @@ const items = [
       "GUILD_UPDATE",
     ],
     require() {
-      return getAsync /* getAsync */.default;
+      return require("Guilds").default;
     },
   },
   {
     name: "GuildsRequiringDeletedIdsSync",
     actions: ["BACKGROUND_SYNC", "CONNECTION_OPEN", "GUILD_CREATE", "DELETED_ENTITY_IDS"],
     require() {
-      return getAll /* getAll */.default;
+      return require("GuildsRequiringDeletedIdsSync").default;
     },
   },
   {
     name: "GuildsRequiringChannelSync",
     actions: ["BACKGROUND_SYNC", "CONNECTION_OPEN", "GUILD_CREATE", "CHANNEL_SYNC", "UNMARK_RESYNC_GUILDS"],
     require() {
-      return getAll /* getAll */.default;
+      return require("GuildsRequiringChannelSync").default;
     },
   },
   {
@@ -114,7 +98,7 @@ const items = [
       "GUILD_UPDATE",
     ],
     require() {
-      return getAsync /* getAsync */.default;
+      return require("GuildStickers").default;
     },
   },
   {
@@ -135,14 +119,14 @@ const items = [
       "GUILD_UPDATE",
     ],
     require() {
-      return getCommittedVersions /* getCommittedVersions */.default;
+      return require("GuildVersions").default;
     },
   },
   {
     name: "KvCacheVersion",
     actions: ["CONNECTION_OPEN", "WRITE_CACHES", "BACKGROUND_SYNC"],
     require() {
-      return okAsync /* okAsync */.default;
+      return require("KvCacheVersion").default;
     },
   },
   {
@@ -158,28 +142,28 @@ const items = [
       "MESSAGE_UPDATE",
     ],
     require() {
-      return computeUsersAndMembers /* computeUsersAndMembers */.default;
+      return require("modules/Messages").default;
     },
   },
   {
     name: "LowDiskTrim",
     actions: ["POST_CONNECTION_OPEN"],
     require() {
-      return handlePostConnectionOpen /* handlePostConnectionOpen */.default;
+      return require("LowDiskTrim").default;
     },
   },
   {
     name: "NonGuildVersions",
     actions: ["CONNECTION_OPEN", "BACKGROUND_SYNC"],
     require() {
-      return getCommittedVersions /* getCommittedVersions */.default;
+      return require("NonGuildVersions").default;
     },
   },
   {
     name: "ReadStates",
     actions: ["CONNECTION_OPEN", "CHANNEL_PINS_ACK", "MESSAGE_ACK", "BACKGROUND_SYNC_FINISHED", "WRITE_CACHES"],
     require() {
-      return getAll /* getAll */.default;
+      return require("ReadStates").default;
     },
   },
   {
@@ -191,25 +175,25 @@ const items = [
       "USER_SETTINGS_PROTO_UPDATE_EDIT_INFO",
     ],
     require() {
-      return getAll /* getAll */.default;
+      return require("UserSettingsProto").default;
     },
   },
   {
     name: "UserGuildSettings",
     actions: ["CONNECTION_OPEN", "USER_GUILD_SETTINGS_FULL_UPDATE"],
     require() {
-      return getAll /* getAll */.default;
+      return require("UserGuildSettings").default;
     },
   },
   {
     name: "UserSearchItems",
     actions: ["POST_CONNECTION_OPEN", "WRITE_CACHES"],
     require() {
-      return getAll /* getAll */.default;
+      return require("UserSearchItems").default;
     },
   },
 ];
-const appDatabaseManager = new set2.AppDatabaseManager("MobileAppDatabaseManager", [], items);
-const result = set.fileFinishedImporting("modules/app_database/managers/MobileAppDatabaseManager.tsx");
+const appDatabaseManager = new AppDatabaseManager.AppDatabaseManager("MobileAppDatabaseManager", [], items);
+const result = size.fileFinishedImporting("modules/app_database/managers/MobileAppDatabaseManager.tsx");
 
 export default appDatabaseManager;

@@ -1,13 +1,15 @@
 // discord_app/modules/quests/hooks/useHasNewAdContent.tsx
-import setDefault from "../../../utils/Durations.tsx";
-import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../AdContentSeenStore.tsx";
-import closure_4 from "../QuestStore.tsx";
-import { QuestsExperimentLocations } from "../QuestConstants.tsx";
+import DurationsDefault from "../../../utils/Durations.tsx";
+import AdCreativeType from "../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import AdContentSeenStore from "../AdContentSeenStore.tsx";
+import QuestStore from "../QuestStore.tsx";
 
-const require = arg1;
-const DAY = setDefault.Millis.DAY;
-const result = require("set").fileFinishedImporting("modules/quests/hooks/useHasNewAdContent.tsx");
+require = fn;
+const QuestsExperimentLocations = fn(5444).QuestsExperimentLocations;
+const DAY = DurationsDefault.Millis.DAY;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/hooks/useHasNewAdContent.tsx");
 
 export default function useHasNewAdContent() {
   const MobileQuestHomeRedDotNotificationExperiment = enabled(
@@ -15,15 +17,17 @@ export default function useHasNewAdContent() {
   ).MobileQuestHomeRedDotNotificationExperiment;
   let obj = { location: QuestsExperimentLocations.YOU_TAB_PROFILE_HEADER };
   enabled = MobileQuestHomeRedDotNotificationExperiment.useConfig(obj).enabled;
-  const items = [closure_4];
+  const items = [QuestStore];
   const items1 = [enabled];
   stateFromStoresArray = enabled(stateFromStoresArray[6]).useStateFromStoresArray(
     items,
     () => {
       if (enabled) {
         const _Array = Array;
-        const quests = closure_1_4.quests;
-        const found = Array.from(quests.values()).filter((arg0) => !callback(table[7]).isQuestExpired(arg0));
+        const quests = QuestStore.quests;
+        const found = Array.from(quests.values()).filter(
+          (item) => !enabled(stateFromStoresArray[7]).isQuestExpired(item),
+        );
         let mapped = found.map((id) => id.id);
         const arr = Array.from(quests.values());
       } else {
@@ -36,19 +40,15 @@ export default function useHasNewAdContent() {
   const obj2 = enabled(stateFromStoresArray[6]);
   let tmp = enabled;
   let tmp2 = stateFromStoresArray;
-  const items2 = [closure_3];
+  const items2 = [AdContentSeenStore];
   const items3 = [stateFromStoresArray];
   const stateFromStores = enabled(stateFromStoresArray[6]).useStateFromStores(
     items2,
     () => {
       for (const item10005 of stateFromStoresArray) {
-        let tmp = closure_1_3;
-        let tmp2 = enabled;
-        let tmp3 = stateFromStoresArray;
-        if (closure_1_3.hasSeen(enabled(stateFromStoresArray[8]).AdCreativeType.QUEST, item10005)) {
+        if (AdContentSeenStore.hasSeen(AdCreativeType.AdCreativeType.QUEST, item10005)) {
           continue;
         } else {
-          let tmp4 = obj;
           obj.return();
           let flag = true;
           return true;
@@ -67,7 +67,7 @@ export default function useHasNewAdContent() {
     }
   }
   obj = { cooldownDurationMs: DAY };
-  const tmp6 = callback(
+  const tmp6 = _slicedToArray(
     enabled(stateFromStoresArray[9]).useSelectedTimeRecurringDismissibleContent(prop, obj, undefined, true),
     2,
   );

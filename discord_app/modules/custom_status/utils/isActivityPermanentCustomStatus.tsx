@@ -1,9 +1,9 @@
 // discord_app/modules/custom_status/utils/isActivityPermanentCustomStatus.tsx
-import set from "../../../../_runtime/00002_set.js";
-import ME from "../../../Constants.tsx";
+import Constants from "../../../Constants.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const ActivityTypes = ME.ActivityTypes;
-const result = set.fileFinishedImporting("modules/custom_status/utils/isActivityPermanentCustomStatus.tsx");
+const ActivityTypes = Constants.ActivityTypes;
+const result = size.fileFinishedImporting("modules/custom_status/utils/isActivityPermanentCustomStatus.tsx");
 
 export const isActivityPermanentCustomStatus = function isActivityPermanentCustomStatus(type) {
   let tmp = type.type === ActivityTypes.CUSTOM_STATUS;

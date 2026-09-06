@@ -1,37 +1,37 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsDisabledWarning.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import Text from "../../../../design/components/Text/native/Text.tsx";
+import _mod17 from "../../../../../_runtime/metro/00017__.js";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import WarningIcon from "../../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const View = get_ActivityIndicator.View;
-({ jsx: c4, jsxs: c5 } = jsxProd);
+const View = _mod17.View;
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let obj = { container: null, text: null };
 obj = {
   flexDirection: "row",
   alignItems: "center",
-  gap: ThemesDefault.space.PX_8,
-  borderColor: ThemesDefault.colors.STATUS_WARNING_BACKGROUND,
+  gap: nativeDefault.space.PX_8,
+  borderColor: nativeDefault.colors.STATUS_WARNING_BACKGROUND,
   borderWidth: 1,
-  borderRadius: ThemesDefault.radii.lg,
-  padding: ThemesDefault.space.PX_12,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_WARNING,
+  borderRadius: nativeDefault.radii.lg,
+  padding: nativeDefault.space.PX_12,
+  backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING,
 };
-obj[0] = obj;
-obj[1] = { flex: 1 };
-let closure_6 = createCacheKey.createStyles(obj);
-const result = set.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsDisabledWarning.tsx");
+obj.container = obj;
+obj.text = { flex: 1 };
+let closure_6 = createStyles.createStyles(obj);
+const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsDisabledWarning.tsx");
 
 export default function GuildPowerupsDisabledWarning(children) {
-  const tmp = callback3();
+  const tmp = closure_6();
   let obj = { style: tmp.container, children: null };
-  obj = { color: ThemesDefault.colors.TEXT_FEEDBACK_WARNING, size: "md" };
-  const items = [callback(WarningIcon.WarningIcon, obj)];
+  obj = { color: nativeDefault.colors.TEXT_FEEDBACK_WARNING, size: "md" };
+  const items = [React4(WarningIcon.WarningIcon, obj)];
   obj = { style: tmp.text, variant: "text-md/semibold", color: "text-feedback-warning", children: children.text };
-  items[1] = callback(Text.Text, obj);
-  obj[1] = items;
-  return callback2(View, obj);
+  items[1] = React4(Text_Text.Text, obj);
+  obj.children = items;
+  return hasOwnProperty(View, obj);
 }

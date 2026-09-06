@@ -1,10 +1,10 @@
 // discord_app/modules/voice_messages/VoiceMessageAnalytics.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import Constants from "../../Constants.tsx";
+import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/voice_messages/VoiceMessageAnalytics.tsx");
+const AnalyticEvents = Constants.AnalyticEvents;
+const result = size.fileFinishedImporting("modules/voice_messages/VoiceMessageAnalytics.tsx");
 
 export const VoiceMessageRecordingResult = {
   SENT: "sent",
@@ -20,8 +20,7 @@ export const logVoiceMessagePlaybackStarted = function logVoiceMessagePlaybackSt
   id,
 ) {
   let tmp = totalDurationSecs;
-  let obj = expandEventPropertiesDefault;
-  obj = {
+  const obj = {
     message_id: messageId,
     total_duration_secs: totalDurationSecs,
     start_duration_secs: null,
@@ -30,8 +29,8 @@ export const logVoiceMessagePlaybackStarted = function logVoiceMessagePlaybackSt
   if (totalDurationSecs == null) {
     tmp = startDurationSecs;
   }
-  obj[2] = Math.min(tmp, startDurationSecs);
-  obj[3] = id;
+  obj.start_duration_secs = Math.min(tmp, startDurationSecs);
+  obj.sender_user_id = id;
   obj.track(AnalyticEvents.VOICE_MESSAGE_PLAYBACK_STARTED, obj);
 };
 export const logVoiceMessagePlaybackEnded = function logVoiceMessagePlaybackEnded(
@@ -42,8 +41,7 @@ export const logVoiceMessagePlaybackEnded = function logVoiceMessagePlaybackEnde
   durationListeningSecs,
 ) {
   let tmp = totalDurationSecs;
-  let obj = expandEventPropertiesDefault;
-  obj = {
+  const obj = {
     message_id: messageId,
     total_duration_secs: totalDurationSecs,
     end_duration_secs: null,
@@ -53,13 +51,12 @@ export const logVoiceMessagePlaybackEnded = function logVoiceMessagePlaybackEnde
   if (totalDurationSecs == null) {
     tmp = endDurationSecs;
   }
-  obj[2] = Math.min(tmp, endDurationSecs);
-  obj[3] = id;
-  obj[4] = durationListeningSecs;
+  obj.end_duration_secs = Math.min(tmp, endDurationSecs);
+  obj.sender_user_id = id;
+  obj.duration_listening_secs = durationListeningSecs;
   obj.track(AnalyticEvents.VOICE_MESSAGE_PLAYBACK_ENDED, obj);
 };
 export const logVoiceMessagePlaybackFailed = function logVoiceMessagePlaybackFailed(messageId, errorMessage) {
-  let obj = expandEventPropertiesDefault;
-  obj = { message_id: messageId, error_message: errorMessage };
+  const obj = { message_id: messageId, error_message: errorMessage };
   obj.track(AnalyticEvents.VOICE_MESSAGE_PLAYBACK_FAILED, obj);
 };

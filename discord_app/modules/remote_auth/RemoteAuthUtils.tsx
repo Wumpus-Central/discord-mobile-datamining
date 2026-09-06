@@ -1,57 +1,42 @@
 // discord_app/modules/remote_auth/RemoteAuthUtils.tsx
-import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../records/UserRecord.tsx";
+import RemoteAuthCryptoDefault from "RemoteAuthCrypto.android.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import UserRecord from "../../records/UserRecord.tsx";
 
-function _decodeEncodedUserRecord() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c4 = 0;
-    c5 = 0;
-    return (function* (arg0, str) {
-      closure_3 = tmp2;
-      dependencyMap = tmp5;
-      let callback = table;
-      const obj2 = callback(table[3]);
-      callback = yield obj2.decryptEncodedCiphertext(callback, callback);
-      table = str.match(/^(\d+):(\d{1,4}):([a-zA-Z0-9_]+):(.*)$/);
-      if (null == table) {
-        const _Error = Error;
-        error = new Error("Invalid encoded user record.");
-        throw error;
-      }
-      dependencyMap = dependencyMap(table, 5);
-      closure_3 = 5;
-      closure_6 = 2;
-      const obj3 = { id: null, discriminator: null, avatar: null, username: null };
-      obj3[0] = closure_3;
-      obj3[1] = closure_4;
-      let tmp7 = null;
-      if ("0" !== c5) {
-        tmp7 = c5;
-      }
-      obj3[2] = tmp7;
-      obj3[3] = closure_6;
-      tmp42 = new tmp42(obj3);
-      return tmp42;
-    })();
-  });
-  closure_5 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+let closure_5 = async function _decodeEncodedUserRecord() {
+  closure_3 = tmp2;
+  closure_2 = tmp5;
+  closure_130_0 = closure_1;
+  closure_130_0 = await RemoteAuthCryptoDefault.decryptEncodedCiphertext(closure_0, closure_130_0);
+  closure_130_1 = arg1.match(/^(\d+):(\d{1,4}):([a-zA-Z0-9_]+):(.*)$/);
+  if (null == closure_130_1) {
+    const _Error = Error;
+    const error = new Error("Invalid encoded user record.");
+    throw error;
   }
-  return applyArgumentsResult;
-}
-const result = require("set").fileFinishedImporting("modules/remote_auth/RemoteAuthUtils.tsx");
+  closure_130_2 = closure_131_2(closure_130_1, 5);
+  closure_130_3 = closure_130_2[1];
+  closure_130_4 = closure_130_2[2];
+  closure_130_5 = closure_130_2[3];
+  closure_130_6 = closure_130_2[4];
+  const obj3 = { id: closure_130_3, discriminator: closure_130_4, avatar: null, username: null };
+  let tmp7 = null;
+  let tmp41 = closure_131_4;
+  if ("0" !== closure_130_5) {
+    tmp7 = closure_130_5;
+  }
+  obj3.avatar = tmp7;
+  obj3.username = closure_130_6;
+  tmp41 = new tmp41(obj3);
+  return tmp41;
+};
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/remote_auth/RemoteAuthUtils.tsx");
 
-export const decodeEncodedUserRecord = function decodeEncodedUserRecord(arg0, closure_6) {
+export const decodeEncodedUserRecord = function decodeEncodedUserRecord() {
   const self = this;
-  const apply = _decodeEncodedUserRecord.apply;
+  const apply = closure_5.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -69,6 +54,6 @@ export const base64Encode = function base64Encode(arg0) {
     .replace(/\+/g, "-")
     .replace(/={1,2}$/, "");
 };
-export const base64Decode = function base64Decode(closure_0) {
-  return Uint8Array.from(atob(closure_0), (str) => str.charCodeAt(0));
+export const base64Decode = function base64Decode(match) {
+  return Uint8Array.from(atob(match), (str) => str.charCodeAt(0));
 };

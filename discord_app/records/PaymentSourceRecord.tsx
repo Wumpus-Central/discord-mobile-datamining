@@ -1,16 +1,14 @@
 // discord_app/records/PaymentSourceRecord.tsx
-import isDiscordFrontendDevelopment from "../utils/GlobalUtils.tsx";
-import hasFlag from "../../discord_common/js/shared/utils/FlagUtils.tsx";
-import toJSDefault from "../lib/Record.tsx";
-import ME from "../Constants.tsx";
+import GlobalUtils from "../utils/GlobalUtils.tsx";
+import FlagUtils from "../../discord_common/js/shared/utils/FlagUtils.tsx";
+import Record from "../lib/Record.tsx";
 
-require = arg1;
-toJSDefault;
-({ IRREDEEMABLE_PAYMENT_SOURCES: obj1, PaymentGateways: c3, PaymentSourceTypes: c4 } = ME);
+require = fn;
+const Constants = fn(1074);
+({ IRREDEEMABLE_PAYMENT_SOURCES: c2, PaymentGateways: c3, PaymentSourceTypes: closure_4 } = Constants);
 class PaymentSourceRecord extends tmp2 {
   constructor(arg0) {
     tmp5 = new PaymentSourceRecord(tmp4, tmp3, tmp2, tmp, new.target);
-    // ThrowIfThisInitialized (0x7c)
     values = Object.values(PaymentSourceTypes);
     if (values.includes(global.type)) {
       tmp10 = tmp5;
@@ -55,1114 +53,828 @@ PaymentSourceRecord["createFromServer"] = function createFromServer(billing_addr
   if (billing_address == null) {
     billing_address = {};
   }
-  obj = {
+  let obj = {
     id: billing_address.id,
     type: billing_address.type,
     paymentGateway: billing_address.payment_gateway,
     invalid: billing_address.invalid,
     isDefault: billing_address.default,
-    billingAddress: obj,
+    billingAddress: {
+      name: billing_address.name,
+      line1: billing_address.line_1,
+      line2: billing_address.line_2,
+      city: billing_address.city,
+      postalCode: billing_address.postal_code,
+      state: billing_address.state,
+      country: billing_address.country,
+    },
     country: billing_address.country,
     flags: billing_address.flags,
     pixMetadata: null,
   };
-  obj = {
-    name: billing_address.name,
-    line1: billing_address.line_1,
-    line2: billing_address.line_2,
-    city: billing_address.city,
-    postalCode: billing_address.postal_code,
-    state: billing_address.state,
-    country: billing_address.country,
-  };
   let tmp6;
   if (null != billing_address.pix) {
-    obj1 = { taxId: null };
-    obj1[0] = billing_address.pix.tax_id;
-    tmp6 = obj1;
+    obj = { taxId: billing_address.pix.tax_id };
+    tmp6 = obj;
   }
-  obj[8] = tmp6;
+  obj.pixMetadata = tmp6;
   const type = billing_address.type;
-  const tmp7 = closure_4;
-  if (closure_4.CARD === type) {
-    let merged = CreditCardSourceRecord;
-    const obj2 = {};
-    merged = obj2;
-    merged = obj;
-    merged = Object.assign(obj);
+  const tmp7 = React4;
+  if (React4.CARD === type) {
+    const obj1 = {};
+    const merged = Object.assign(obj);
     ({
-      brand: obj24.brand,
-      last_4: obj24.last4,
-      expires_month: obj24.expiresMonth,
-      expires_year: obj24.expiresYear,
+      brand: obj23.brand,
+      last_4: obj23.last4,
+      expires_month: obj23.expiresMonth,
+      expires_year: obj23.expiresYear,
     } = billing_address);
-    merged = new.target;
-    if (typeof CreditCardSourceRecord !== "function") {
-      merged = HermesBuiltin.throwTypeError();
-    }
-    merged = CreditCardSourceRecord;
-    merged = new.target;
-    merged = new.target;
-    merged = obj2;
-    merged = new CreditCardSourceRecord(obj2, obj, tmp5, tmp4, tmp3);
-    // ThrowIfThisInitialized (0x7c)
-    if (obj2.type !== tmp7.CARD) {
-      merged = globalThis;
-      const _Error19 = Error;
-      const _HermesInternal19 = HermesInternal;
-      merged = new.target;
-      merged = new.target;
-      merged = new Error(
-        "Cannot instantiate CreditCardSourceRecord with type: " + obj2.type + ", must be " + tmp7.CARD,
-      );
-      throw merged;
+    if (typeof CreditCardSourceRecord === "function") {
+      const tmp313 = new CreditCardSourceRecord(obj1, obj, tmp5, tmp4, tmp3);
+      if (obj1.type !== tmp7.CARD) {
+        const _Error19 = Error;
+        const _HermesInternal19 = HermesInternal;
+        const error = new Error(
+          "Cannot instantiate CreditCardSourceRecord with type: " + obj1.type + ", must be " + tmp7.CARD,
+        );
+        throw error;
+      } else {
+        let str38 = obj1.brand;
+        if (str38 == null) {
+          str38 = "";
+        }
+        tmp313.brand = str38;
+        let str39 = obj1.last4;
+        if (str39 == null) {
+          str39 = "";
+        }
+        tmp313.last4 = str39;
+        let num = obj1.expiresMonth;
+        if (num == null) {
+          num = 0;
+        }
+        tmp313.expiresMonth = num;
+        let num2 = obj1.expiresYear;
+        if (num2 == null) {
+          num2 = 0;
+        }
+        tmp313.expiresYear = num2;
+        return tmp313;
+      }
     } else {
-      let str38 = obj2.brand;
-      if (str38 == null) {
-        str38 = "";
-      }
-      merged.brand = str38;
-      let str39 = obj2.last4;
-      if (str39 == null) {
-        str39 = "";
-      }
-      merged.last4 = str39;
-      let num = obj2.expiresMonth;
-      if (num == null) {
-        num = 0;
-      }
-      merged.expiresMonth = num;
-      let num2 = obj2.expiresYear;
-      if (num2 == null) {
-        num2 = 0;
-      }
-      merged.expiresYear = num2;
-      return merged;
+      throw new TypeError("Trying to call a non-function");
     }
   } else if (tmp7.PAYPAL === type) {
-    const obj3 = {};
-    merged = obj3;
-    merged = obj;
-    merged = PaypalSourceRecord;
-    merged = Object.assign(obj);
-    obj3.email = billing_address.email;
-    merged = new.target;
-    if (typeof PaypalSourceRecord !== "function") {
-      merged = HermesBuiltin.throwTypeError();
-    }
-    merged = PaypalSourceRecord;
-    merged = new.target;
-    merged = new.target;
-    merged = obj3;
-    merged = new PaypalSourceRecord(obj3, obj, tmp5, tmp4, tmp3, tmp2, merged, new.target, merged);
-    // ThrowIfThisInitialized (0x7c)
-    if (obj3.type !== tmp7.PAYPAL) {
-      merged = globalThis;
-      const _Error18 = Error;
-      const _HermesInternal18 = HermesInternal;
-      merged = new.target;
-      merged = new.target;
-      merged = new Error("Cannot instantiate PaypalSourceRecord with type: " + obj3.type + ", must be " + tmp7.PAYPAL);
-      throw merged;
+    const obj2 = {};
+    const merged1 = Object.assign(obj);
+    obj2.email = billing_address.email;
+    if (typeof PaypalSourceRecord === "function") {
+      const tmp296 = new PaypalSourceRecord(obj2, obj, tmp5, tmp4, tmp3, tmp2, tmp, new.target, tmp287);
+      if (obj2.type !== tmp7.PAYPAL) {
+        const _Error18 = Error;
+        const _HermesInternal18 = HermesInternal;
+        const error1 = new Error(
+          "Cannot instantiate PaypalSourceRecord with type: " + obj2.type + ", must be " + tmp7.PAYPAL,
+        );
+        throw error1;
+      } else {
+        tmp296.email = obj2.email || "";
+        return tmp296;
+      }
     } else {
-      merged = obj3.email || "";
-      merged.email = merged;
-      return merged;
+      throw new TypeError("Trying to call a non-function");
     }
+    tmp287 = PaypalSourceRecord;
   } else if (tmp7.VENMO === type) {
-    let obj4 = {};
-    merged = obj4;
-    merged = obj;
-    merged = VenmoSourceRecord;
-    merged = Object.assign(obj);
-    obj4.username = billing_address.username;
-    merged = new.target;
-    if (typeof VenmoSourceRecord !== "function") {
-      merged = HermesBuiltin.throwTypeError();
-    }
-    merged = VenmoSourceRecord;
-    merged = new.target;
-    merged = new.target;
-    merged = obj4;
-    merged = new VenmoSourceRecord(obj4, obj, tmp5, tmp4, tmp3, tmp2, merged, new.target, merged);
-    // ThrowIfThisInitialized (0x7c)
-    if (obj4.type !== tmp7.VENMO) {
-      merged = globalThis;
-      const _Error17 = Error;
-      const _HermesInternal17 = HermesInternal;
-      merged = new.target;
-      merged = new.target;
-      merged = new Error("Cannot instantiate VenmoSourceRecord with type: " + obj4.type + ", must be " + tmp7.VENMO);
-      throw merged;
+    let obj3 = {};
+    const merged2 = Object.assign(obj);
+    obj3.username = billing_address.username;
+    if (typeof VenmoSourceRecord === "function") {
+      const tmp279 = new VenmoSourceRecord(obj3, obj, tmp5, tmp4, tmp3, tmp2, tmp, new.target, tmp270);
+      if (obj3.type !== tmp7.VENMO) {
+        const _Error17 = Error;
+        const _HermesInternal17 = HermesInternal;
+        const error2 = new Error(
+          "Cannot instantiate VenmoSourceRecord with type: " + obj3.type + ", must be " + tmp7.VENMO,
+        );
+        throw error2;
+      } else {
+        tmp279.username = obj3.username || "";
+        return tmp279;
+      }
     } else {
-      merged = obj4.username || "";
-      merged.username = merged;
-      return merged;
+      throw new TypeError("Trying to call a non-function");
     }
+    tmp270 = VenmoSourceRecord;
   } else {
     if (tmp7.SEPA_DEBIT !== type) {
       if (tmp7.SOFORT !== type) {
         if (tmp7.GIROPAY === type) {
-          const obj5 = {};
-          merged = obj5;
-          merged = obj;
-          merged = GiropaySourceRecord;
-          merged = Object.assign(obj);
-          merged = new.target;
-          if (typeof GiropaySourceRecord !== "function") {
-            merged = HermesBuiltin.throwTypeError();
-          }
-          merged = GiropaySourceRecord;
-          merged = new.target;
-          merged = new.target;
-          merged = obj5;
-          merged = new GiropaySourceRecord(obj5, obj, tmp5, tmp4, tmp3, tmp2, merged, merged, new.target, obj);
-          // ThrowIfThisInitialized (0x7c)
-          if (obj5.type !== tmp7.GIROPAY) {
-            merged = globalThis;
-            const _Error15 = Error;
-            const _HermesInternal15 = HermesInternal;
-            merged = new.target;
-            merged = new.target;
-            merged = new Error(
-              "Cannot instantiate GiropaySourceRecord with type: " + obj5.type + ", must be " + tmp7.GIROPAY,
-            );
-            throw merged;
-          } else {
-            return merged;
-          }
-        } else if (tmp7.PRZELEWY24 === type) {
-          const obj6 = {};
-          merged = obj6;
-          merged = obj;
-          merged = Przelewy24SourceRecord;
-          merged = Object.assign(obj);
-          ({ email: obj19.email, bank: obj19.bank } = billing_address);
-          merged = new.target;
-          if (typeof Przelewy24SourceRecord !== "function") {
-            merged = HermesBuiltin.throwTypeError();
-          }
-          merged = Przelewy24SourceRecord;
-          merged = new.target;
-          merged = new.target;
-          merged = obj6;
-          merged = new Przelewy24SourceRecord(obj6, obj, tmp5, tmp4, tmp3, tmp2, merged, new.target, merged);
-          // ThrowIfThisInitialized (0x7c)
-          if (obj6.type !== tmp7.PRZELEWY24) {
-            merged = globalThis;
-            const _Error14 = Error;
-            const _HermesInternal14 = HermesInternal;
-            merged = new.target;
-            merged = new.target;
-            merged = new Error(
-              "Cannot instantiate Przelewy24SourceRecord with type: " + obj6.type + ", must be " + tmp7.PRZELEWY24,
-            );
-            throw merged;
-          } else {
-            merged = obj6.email || "";
-            merged.email = merged;
-            merged.bank = obj6.bank;
-            return merged;
-          }
-        } else if (tmp7.EPS === type) {
-          const obj7 = {};
-          merged = obj7;
-          merged = obj;
-          merged = EPSSourceRecord;
-          merged = Object.assign(obj);
-          obj7.bank = billing_address.bank;
-          merged = new.target;
-          if (typeof EPSSourceRecord !== "function") {
-            merged = HermesBuiltin.throwTypeError();
-          }
-          merged = EPSSourceRecord;
-          merged = new.target;
-          merged = new.target;
-          merged = obj7;
-          merged = new EPSSourceRecord(obj7, obj, tmp5, tmp4, tmp3, tmp2, merged, merged, new.target, obj);
-          // ThrowIfThisInitialized (0x7c)
-          if (obj7.type !== tmp7.EPS) {
-            merged = globalThis;
-            const _Error13 = Error;
-            const _HermesInternal13 = HermesInternal;
-            merged = new.target;
-            merged = new.target;
-            merged = new Error("Cannot instantiate EPSSourceRecord with type: " + obj7.type + ", must be " + tmp7.EPS);
-            throw merged;
-          } else {
-            merged.bank = obj7.bank;
-            return merged;
-          }
-        } else if (tmp7.PAYSAFE_CARD === type) {
-          const obj8 = {};
-          merged = obj8;
-          merged = obj;
-          merged = PaysafeSourceRecord;
-          merged = Object.assign(obj);
-          merged = new.target;
-          if (typeof PaysafeSourceRecord !== "function") {
-            merged = HermesBuiltin.throwTypeError();
-          }
-          merged = PaysafeSourceRecord;
-          merged = new.target;
-          merged = new.target;
-          merged = obj8;
-          merged = new PaysafeSourceRecord(obj8, obj, tmp5, tmp4, tmp3, tmp2, merged, merged, new.target, obj);
-          // ThrowIfThisInitialized (0x7c)
-          if (obj8.type !== tmp7.PAYSAFE_CARD) {
-            merged = globalThis;
-            const _Error12 = Error;
-            const _HermesInternal12 = HermesInternal;
-            merged = new.target;
-            merged = new.target;
-            merged = new Error(
-              "Cannot instantiate PaysafeSourceRecord with type: " + obj8.type + ", must be " + tmp7.PAYSAFE_CARD,
-            );
-            throw merged;
-          } else {
-            return merged;
-          }
-        } else if (tmp7.GCASH === type) {
-          const obj9 = {};
-          merged = obj9;
-          merged = obj;
-          merged = GcashSourceRecord;
-          merged = Object.assign(obj);
-          merged = new.target;
-          if (typeof GcashSourceRecord !== "function") {
-            merged = HermesBuiltin.throwTypeError();
-          }
-          merged = GcashSourceRecord;
-          merged = new.target;
-          merged = new.target;
-          merged = obj9;
-          merged = new GcashSourceRecord(obj9, obj, tmp5, tmp4, tmp3, tmp2, merged, merged, new.target, obj);
-          // ThrowIfThisInitialized (0x7c)
-          if (obj9.type !== tmp7.GCASH) {
-            merged = globalThis;
-            const _Error11 = Error;
-            const _HermesInternal11 = HermesInternal;
-            merged = new.target;
-            merged = new.target;
-            merged = new Error(
-              "Cannot instantiate GcashSourceRecord with type: " + obj9.type + ", must be " + tmp7.GCASH,
-            );
-            throw merged;
-          } else {
-            return merged;
-          }
-        } else if (tmp7.GRABPAY_MY === type) {
-          const obj10 = {};
-          merged = obj10;
-          merged = obj;
-          merged = GrabPayMySourceRecord;
-          merged = Object.assign(obj);
-          merged = new.target;
-          if (typeof GrabPayMySourceRecord !== "function") {
-            merged = HermesBuiltin.throwTypeError();
-          }
-          merged = GrabPayMySourceRecord;
-          merged = new.target;
-          merged = new.target;
-          merged = obj10;
-          merged = new GrabPayMySourceRecord(obj10, obj, tmp5, tmp4, tmp3, tmp2, merged, merged, new.target, obj);
-          // ThrowIfThisInitialized (0x7c)
-          if (obj10.type !== tmp7.GRABPAY_MY) {
-            merged = globalThis;
-            const _Error10 = Error;
-            const _HermesInternal10 = HermesInternal;
-            merged = new.target;
-            merged = new.target;
-            merged = new Error(
-              "Cannot instantiate GrabPayMySourceRecord with type: " + obj10.type + ", must be " + tmp7.GRABPAY_MY,
-            );
-            throw merged;
-          } else {
-            return merged;
-          }
-        } else if (tmp7.MOMO_WALLET === type) {
-          const obj11 = {};
-          merged = obj11;
-          merged = obj;
-          merged = MomoWalletSourceRecord;
-          merged = Object.assign(obj);
-          merged = new.target;
-          if (typeof MomoWalletSourceRecord !== "function") {
-            merged = HermesBuiltin.throwTypeError();
-          }
-          merged = MomoWalletSourceRecord;
-          merged = new.target;
-          merged = new.target;
-          merged = obj11;
-          merged = new MomoWalletSourceRecord(obj11, obj, tmp5, tmp4, tmp3, tmp2, merged, merged, new.target, obj);
-          // ThrowIfThisInitialized (0x7c)
-          if (obj11.type !== tmp7.MOMO_WALLET) {
-            merged = globalThis;
-            const _Error9 = Error;
-            const _HermesInternal9 = HermesInternal;
-            merged = new.target;
-            merged = new.target;
-            merged = new Error(
-              "Cannot instantiate MomoWalletSourceRecord with type: " + obj11.type + ", must be " + tmp7.MOMO_WALLET,
-            );
-            throw merged;
-          } else {
-            return merged;
-          }
-        } else if (tmp7.KAKAOPAY === type) {
-          const obj12 = {};
-          merged = obj12;
-          merged = obj;
-          merged = KaKaoPaySourceRecord;
-          merged = Object.assign(obj);
-          merged = new.target;
-          if (typeof KaKaoPaySourceRecord !== "function") {
-            merged = HermesBuiltin.throwTypeError();
-          }
-          merged = KaKaoPaySourceRecord;
-          merged = new.target;
-          merged = new.target;
-          merged = obj12;
-          merged = new KaKaoPaySourceRecord(obj12, obj, tmp5, tmp4, tmp3, tmp2, merged, merged, new.target, obj);
-          // ThrowIfThisInitialized (0x7c)
-          if (obj12.type !== tmp7.KAKAOPAY) {
-            merged = globalThis;
-            const _Error8 = Error;
-            const _HermesInternal8 = HermesInternal;
-            merged = new.target;
-            merged = new.target;
-            merged = new Error(
-              "Cannot instantiate KaKaoPaySourceRecord with type: " + obj12.type + ", must be " + tmp7.KAKAOPAY,
-            );
-            throw merged;
-          } else {
-            return merged;
-          }
-        } else if (tmp7.GOPAY_WALLET === type) {
-          const obj13 = {};
-          merged = obj13;
-          merged = obj;
-          merged = GoPayWalletSourceRecord;
-          merged = Object.assign(obj);
-          merged = new.target;
-          if (typeof GoPayWalletSourceRecord !== "function") {
-            merged = HermesBuiltin.throwTypeError();
-          }
-          merged = GoPayWalletSourceRecord;
-          merged = new.target;
-          merged = new.target;
-          merged = obj13;
-          merged = new GoPayWalletSourceRecord(obj13, obj, tmp5, tmp4, tmp3, tmp2, merged, merged, new.target, obj);
-          // ThrowIfThisInitialized (0x7c)
-          if (obj13.type !== tmp7.GOPAY_WALLET) {
-            merged = globalThis;
-            const _Error7 = Error;
-            const _HermesInternal7 = HermesInternal;
-            merged = new.target;
-            merged = new.target;
-            merged = new Error(
-              "Cannot instantiate GoPayWalletSourceRecord with type: " + obj13.type + ", must be " + tmp7.GOPAY_WALLET,
-            );
-            throw merged;
-          } else {
-            return merged;
-          }
-        } else if (tmp7.BANCONTACT === type) {
-          const obj14 = {};
-          const merged1 = Object.assign(obj);
-          if (typeof BancontactSourceRecord !== "function") {
-            merged = HermesBuiltin.throwTypeError();
-          }
-          merged = obj14;
-          merged = new BancontactSourceRecord(
-            obj14,
-            obj,
-            tmp5,
-            tmp4,
-            tmp3,
-            tmp2,
-            merged,
-            BancontactSourceRecord,
-            new.target,
-            obj,
-          );
-          // ThrowIfThisInitialized (0x7c)
-          if (obj14.type !== tmp7.BANCONTACT) {
-            merged = globalThis;
-            const _Error6 = Error;
-            const _HermesInternal6 = HermesInternal;
-            merged = new.target;
-            merged = new.target;
-            merged = new Error(
-              "Cannot instantiate BancontactSourceRecord with type: " + obj14.type + ", must be " + tmp7.BANCONTACT,
-            );
-            throw merged;
-          } else {
-            return merged;
-          }
-          const tmp92 = BancontactSourceRecord;
-        } else if (tmp7.IDEAL === type) {
-          const obj15 = {};
-          const merged2 = Object.assign(obj);
-          obj15.bank = billing_address.bank;
-          if (typeof IdealSourceRecord !== "function") {
-            merged = HermesBuiltin.throwTypeError();
-          }
-          const tmp85 = new IdealSourceRecord(
-            obj15,
-            obj,
-            tmp5,
-            tmp4,
-            tmp3,
-            tmp2,
-            merged,
-            IdealSourceRecord,
-            new.target,
-            obj,
-          );
-          // ThrowIfThisInitialized (0x7c)
-          if (obj15.type !== tmp7.IDEAL) {
-            const _Error5 = Error;
-            const _HermesInternal5 = HermesInternal;
-            error = new Error(
-              "Cannot instantiate IdealSourceRecord with type: " + obj15.type + ", must be " + tmp7.IDEAL,
-            );
-            throw error;
-          } else {
-            tmp85.bank = obj15.bank;
-            return tmp85;
-          }
-          const tmp76 = IdealSourceRecord;
-        } else if (tmp7.CASH_APP === type) {
-          const obj16 = {};
+          const obj4 = {};
           const merged3 = Object.assign(obj);
-          obj16.username = billing_address.username;
-          if (typeof CashAppSourceRecord !== "function") {
-            merged = HermesBuiltin.throwTypeError();
-          }
-          const tmp68 = new CashAppSourceRecord(
-            obj16,
-            obj,
-            tmp5,
-            tmp4,
-            tmp3,
-            tmp2,
-            merged,
-            new.target,
-            CashAppSourceRecord,
-          );
-          // ThrowIfThisInitialized (0x7c)
-          if (obj16.type !== tmp7.CASH_APP) {
-            const _Error4 = Error;
-            const _HermesInternal4 = HermesInternal;
-            const error1 = new Error(
-              "Cannot instantiate Cashapp with type: " + obj16.type + ", must be " + tmp7.CASH_APP,
-            );
-            throw error1;
+          if (typeof GiropaySourceRecord === "function") {
+            const tmp246 = new GiropaySourceRecord(obj4, obj, tmp5, tmp4, tmp3, tmp2, tmp, tmp237, new.target, obj);
+            if (obj4.type !== tmp7.GIROPAY) {
+              const _Error15 = Error;
+              const _HermesInternal15 = HermesInternal;
+              const error3 = new Error(
+                "Cannot instantiate GiropaySourceRecord with type: " + obj4.type + ", must be " + tmp7.GIROPAY,
+              );
+              throw error3;
+            } else {
+              return tmp246;
+            }
           } else {
-            tmp68.username = obj16.username || "";
-            return tmp68;
+            throw new TypeError("Trying to call a non-function");
           }
-          const tmp59 = CashAppSourceRecord;
-        } else if (tmp7.TDS_WALLET === type) {
-          const obj17 = {};
+          tmp237 = GiropaySourceRecord;
+        } else if (tmp7.PRZELEWY24 === type) {
+          const obj5 = {};
           const merged4 = Object.assign(obj);
-          if (typeof TDSWalletSourceRecord !== "function") {
-            merged = HermesBuiltin.throwTypeError();
-          }
-          const tmp52 = new TDSWalletSourceRecord(
-            obj17,
-            obj,
-            tmp5,
-            tmp4,
-            tmp3,
-            tmp2,
-            merged,
-            TDSWalletSourceRecord,
-            new.target,
-            obj,
-          );
-          // ThrowIfThisInitialized (0x7c)
-          if (obj17.type !== tmp7.TDS_WALLET) {
-            const _Error3 = Error;
-            const _HermesInternal3 = HermesInternal;
-            const error2 = new Error(
-              "Cannot instantiate TDSWalletSourceRecord with type: " + obj17.type + ", must be " + tmp7.TDS_WALLET,
-            );
-            throw error2;
+          ({ email: obj18.email, bank: obj18.bank } = billing_address);
+          if (typeof Przelewy24SourceRecord === "function") {
+            const tmp229 = new Przelewy24SourceRecord(obj5, obj, tmp5, tmp4, tmp3, tmp2, tmp, new.target, tmp220);
+            if (obj5.type !== tmp7.PRZELEWY24) {
+              const _Error14 = Error;
+              const _HermesInternal14 = HermesInternal;
+              const error4 = new Error(
+                "Cannot instantiate Przelewy24SourceRecord with type: " + obj5.type + ", must be " + tmp7.PRZELEWY24,
+              );
+              throw error4;
+            } else {
+              tmp229.email = obj5.email || "";
+              tmp229.bank = obj5.bank;
+              return tmp229;
+            }
           } else {
-            return tmp52;
+            throw new TypeError("Trying to call a non-function");
           }
-          const tmp43 = TDSWalletSourceRecord;
-        } else if (tmp7.PIX === type) {
-          const obj18 = {};
+          tmp220 = Przelewy24SourceRecord;
+        } else if (tmp7.EPS === type) {
+          const obj6 = {};
           const merged5 = Object.assign(obj);
-          obj18.email = billing_address.email;
-          if (typeof PixSourceRecord !== "function") {
-            merged = HermesBuiltin.throwTypeError();
-          }
-          const tmp36 = new PixSourceRecord(
-            obj18,
-            obj,
-            tmp5,
-            tmp4,
-            tmp3,
-            tmp2,
-            merged,
-            PixSourceRecord,
-            new.target,
-            obj,
-          );
-          // ThrowIfThisInitialized (0x7c)
-          if (obj18.type !== tmp7.PIX) {
-            const _Error2 = Error;
-            const _HermesInternal2 = HermesInternal;
-            const error3 = new Error(
-              "Cannot instantiate PixSourceRecord with type: " + obj18.type + ", must be " + tmp7.PIX,
-            );
-            throw error3;
+          obj6.bank = billing_address.bank;
+          if (typeof EPSSourceRecord === "function") {
+            const tmp213 = new EPSSourceRecord(obj6, obj, tmp5, tmp4, tmp3, tmp2, tmp, tmp204, new.target, obj);
+            if (obj6.type !== tmp7.EPS) {
+              const _Error13 = Error;
+              const _HermesInternal13 = HermesInternal;
+              const error5 = new Error(
+                "Cannot instantiate EPSSourceRecord with type: " + obj6.type + ", must be " + tmp7.EPS,
+              );
+              throw error5;
+            } else {
+              tmp213.bank = obj6.bank;
+              return tmp213;
+            }
           } else {
-            tmp36.email = obj18.email;
-            return tmp36;
+            throw new TypeError("Trying to call a non-function");
           }
-          const tmp27 = PixSourceRecord;
-        } else if (tmp7.PIX_AUTOMATICO === type) {
-          const obj19 = {};
+          tmp204 = EPSSourceRecord;
+        } else if (tmp7.PAYSAFE_CARD === type) {
+          const obj7 = {};
           const merged6 = Object.assign(obj);
-          obj19.email = billing_address.email;
-          if (typeof prototype2 !== "function") {
-            merged = HermesBuiltin.throwTypeError();
-          }
-          const tmp20 = new prototype2(obj19, obj, tmp5, tmp4, tmp3, tmp2, merged, prototype2, new.target, obj);
-          // ThrowIfThisInitialized (0x7c)
-          if (obj19.type !== tmp7.PIX_AUTOMATICO) {
-            const _Error = Error;
-            const _HermesInternal = HermesInternal;
-            const error4 = new Error(
-              "Cannot instantiate PixAutomaticoSourceRecord with type: " +
-                obj19.type +
-                ", must be " +
-                tmp7.PIX_AUTOMATICO,
-            );
-            throw error4;
+          if (typeof PaysafeSourceRecord === "function") {
+            const tmp197 = new PaysafeSourceRecord(obj7, obj, tmp5, tmp4, tmp3, tmp2, tmp, tmp188, new.target, obj);
+            if (obj7.type !== tmp7.PAYSAFE_CARD) {
+              const _Error12 = Error;
+              const _HermesInternal12 = HermesInternal;
+              const error6 = new Error(
+                "Cannot instantiate PaysafeSourceRecord with type: " + obj7.type + ", must be " + tmp7.PAYSAFE_CARD,
+              );
+              throw error6;
+            } else {
+              return tmp197;
+            }
           } else {
-            tmp20.email = obj19.email;
-            return tmp20;
+            throw new TypeError("Trying to call a non-function");
           }
-          const tmp11 = prototype2;
+          tmp188 = PaysafeSourceRecord;
+        } else if (tmp7.GCASH === type) {
+          const obj8 = {};
+          const merged7 = Object.assign(obj);
+          if (typeof GcashSourceRecord === "function") {
+            const tmp181 = new GcashSourceRecord(obj8, obj, tmp5, tmp4, tmp3, tmp2, tmp, tmp172, new.target, obj);
+            if (obj8.type !== tmp7.GCASH) {
+              const _Error11 = Error;
+              const _HermesInternal11 = HermesInternal;
+              const error7 = new Error(
+                "Cannot instantiate GcashSourceRecord with type: " + obj8.type + ", must be " + tmp7.GCASH,
+              );
+              throw error7;
+            } else {
+              return tmp181;
+            }
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+          tmp172 = GcashSourceRecord;
+        } else if (tmp7.GRABPAY_MY === type) {
+          const obj9 = {};
+          const merged8 = Object.assign(obj);
+          if (typeof GrabPayMySourceRecord === "function") {
+            const tmp165 = new GrabPayMySourceRecord(obj9, obj, tmp5, tmp4, tmp3, tmp2, tmp, tmp156, new.target, obj);
+            if (obj9.type !== tmp7.GRABPAY_MY) {
+              const _Error10 = Error;
+              const _HermesInternal10 = HermesInternal;
+              const error8 = new Error(
+                "Cannot instantiate GrabPayMySourceRecord with type: " + obj9.type + ", must be " + tmp7.GRABPAY_MY,
+              );
+              throw error8;
+            } else {
+              return tmp165;
+            }
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+          tmp156 = GrabPayMySourceRecord;
+        } else if (tmp7.MOMO_WALLET === type) {
+          const obj10 = {};
+          const merged9 = Object.assign(obj);
+          if (typeof MomoWalletSourceRecord === "function") {
+            const tmp149 = new MomoWalletSourceRecord(obj10, obj, tmp5, tmp4, tmp3, tmp2, tmp, tmp140, new.target, obj);
+            if (obj10.type !== tmp7.MOMO_WALLET) {
+              const _Error9 = Error;
+              const _HermesInternal9 = HermesInternal;
+              const error9 = new Error(
+                "Cannot instantiate MomoWalletSourceRecord with type: " + obj10.type + ", must be " + tmp7.MOMO_WALLET,
+              );
+              throw error9;
+            } else {
+              return tmp149;
+            }
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+          tmp140 = MomoWalletSourceRecord;
+        } else if (tmp7.KAKAOPAY === type) {
+          const obj11 = {};
+          const merged10 = Object.assign(obj);
+          if (typeof KaKaoPaySourceRecord === "function") {
+            const tmp133 = new KaKaoPaySourceRecord(obj11, obj, tmp5, tmp4, tmp3, tmp2, tmp, tmp124, new.target, obj);
+            if (obj11.type !== tmp7.KAKAOPAY) {
+              const _Error8 = Error;
+              const _HermesInternal8 = HermesInternal;
+              const error10 = new Error(
+                "Cannot instantiate KaKaoPaySourceRecord with type: " + obj11.type + ", must be " + tmp7.KAKAOPAY,
+              );
+              throw error10;
+            } else {
+              return tmp133;
+            }
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+          tmp124 = KaKaoPaySourceRecord;
+        } else if (tmp7.GOPAY_WALLET === type) {
+          const obj12 = {};
+          const merged11 = Object.assign(obj);
+          if (typeof GoPayWalletSourceRecord === "function") {
+            const tmp117 = new GoPayWalletSourceRecord(
+              obj12,
+              obj,
+              tmp5,
+              tmp4,
+              tmp3,
+              tmp2,
+              tmp,
+              tmp108,
+              new.target,
+              obj,
+            );
+            if (obj12.type !== tmp7.GOPAY_WALLET) {
+              const _Error7 = Error;
+              const _HermesInternal7 = HermesInternal;
+              const error11 = new Error(
+                "Cannot instantiate GoPayWalletSourceRecord with type: " +
+                  obj12.type +
+                  ", must be " +
+                  tmp7.GOPAY_WALLET,
+              );
+              throw error11;
+            } else {
+              return tmp117;
+            }
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+          tmp108 = GoPayWalletSourceRecord;
+        } else if (tmp7.BANCONTACT === type) {
+          const obj13 = {};
+          const merged12 = Object.assign(obj);
+          if (typeof BancontactSourceRecord === "function") {
+            const tmp101 = new BancontactSourceRecord(obj13, obj, tmp5, tmp4, tmp3, tmp2, tmp, tmp92, new.target, obj);
+            if (obj13.type !== tmp7.BANCONTACT) {
+              const _Error6 = Error;
+              const _HermesInternal6 = HermesInternal;
+              const error12 = new Error(
+                "Cannot instantiate BancontactSourceRecord with type: " + obj13.type + ", must be " + tmp7.BANCONTACT,
+              );
+              throw error12;
+            } else {
+              return tmp101;
+            }
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+          tmp92 = BancontactSourceRecord;
+        } else if (tmp7.IDEAL === type) {
+          const obj14 = {};
+          const merged13 = Object.assign(obj);
+          obj14.bank = billing_address.bank;
+          if (typeof IdealSourceRecord === "function") {
+            const tmp85 = new IdealSourceRecord(obj14, obj, tmp5, tmp4, tmp3, tmp2, tmp, tmp76, new.target, obj);
+            if (obj14.type !== tmp7.IDEAL) {
+              const _Error5 = Error;
+              const _HermesInternal5 = HermesInternal;
+              const error13 = new Error(
+                "Cannot instantiate IdealSourceRecord with type: " + obj14.type + ", must be " + tmp7.IDEAL,
+              );
+              throw error13;
+            } else {
+              tmp85.bank = obj14.bank;
+              return tmp85;
+            }
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+          tmp76 = IdealSourceRecord;
+        } else if (tmp7.CASH_APP === type) {
+          const obj15 = {};
+          const merged14 = Object.assign(obj);
+          obj15.username = billing_address.username;
+          if (typeof CashAppSourceRecord === "function") {
+            const tmp68 = new CashAppSourceRecord(obj15, obj, tmp5, tmp4, tmp3, tmp2, tmp, new.target, tmp59);
+            if (obj15.type !== tmp7.CASH_APP) {
+              const _Error4 = Error;
+              const _HermesInternal4 = HermesInternal;
+              const error14 = new Error(
+                "Cannot instantiate Cashapp with type: " + obj15.type + ", must be " + tmp7.CASH_APP,
+              );
+              throw error14;
+            } else {
+              tmp68.username = obj15.username || "";
+              return tmp68;
+            }
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+          tmp59 = CashAppSourceRecord;
+        } else if (tmp7.TDS_WALLET === type) {
+          const obj16 = {};
+          const merged15 = Object.assign(obj);
+          if (typeof TDSWalletSourceRecord === "function") {
+            const tmp52 = new TDSWalletSourceRecord(obj16, obj, tmp5, tmp4, tmp3, tmp2, tmp, tmp43, new.target, obj);
+            if (obj16.type !== tmp7.TDS_WALLET) {
+              const _Error3 = Error;
+              const _HermesInternal3 = HermesInternal;
+              const error15 = new Error(
+                "Cannot instantiate TDSWalletSourceRecord with type: " + obj16.type + ", must be " + tmp7.TDS_WALLET,
+              );
+              throw error15;
+            } else {
+              return tmp52;
+            }
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+          tmp43 = TDSWalletSourceRecord;
+        } else if (tmp7.PIX === type) {
+          const obj17 = {};
+          const merged16 = Object.assign(obj);
+          obj17.email = billing_address.email;
+          if (typeof PixSourceRecord === "function") {
+            const tmp36 = new PixSourceRecord(obj17, obj, tmp5, tmp4, tmp3, tmp2, tmp, tmp27, new.target, obj);
+            if (obj17.type !== tmp7.PIX) {
+              const _Error2 = Error;
+              const _HermesInternal2 = HermesInternal;
+              const error16 = new Error(
+                "Cannot instantiate PixSourceRecord with type: " + obj17.type + ", must be " + tmp7.PIX,
+              );
+              throw error16;
+            } else {
+              tmp36.email = obj17.email;
+              return tmp36;
+            }
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+          tmp27 = PixSourceRecord;
+        } else if (tmp7.PIX_AUTOMATICO === type) {
+          const obj18 = {};
+          const merged17 = Object.assign(obj);
+          obj18.email = billing_address.email;
+          if (typeof prototype2 === "function") {
+            const tmp20 = new prototype2(obj18, obj, tmp5, tmp4, tmp3, tmp2, tmp, tmp11, new.target, obj);
+            if (obj18.type !== tmp7.PIX_AUTOMATICO) {
+              const _Error = Error;
+              const _HermesInternal = HermesInternal;
+              const error17 = new Error(
+                "Cannot instantiate PixAutomaticoSourceRecord with type: " +
+                  obj18.type +
+                  ", must be " +
+                  tmp7.PIX_AUTOMATICO,
+              );
+              throw error17;
+            } else {
+              tmp20.email = obj18.email;
+              return tmp20;
+            }
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+          tmp11 = prototype2;
         } else {
-          obj4 = isDiscordFrontendDevelopment;
-          obj4.assertNever(billing_address);
+          obj3 = GlobalUtils;
+          obj3.assertNever(billing_address);
         }
       }
     }
-    const obj20 = {};
-    merged = obj20;
-    merged = obj;
-    merged = SofortSourceRecord;
-    merged = Object.assign(obj);
-    obj20.email = billing_address.email;
-    merged = new.target;
-    if (typeof SofortSourceRecord !== "function") {
-      merged = HermesBuiltin.throwTypeError();
-    }
-    merged = SofortSourceRecord;
-    merged = new.target;
-    merged = new.target;
-    merged = obj20;
-    merged = new SofortSourceRecord(obj20, obj, tmp5, tmp4, tmp3, tmp2, merged, new.target, merged);
-    // ThrowIfThisInitialized (0x7c)
-    if (obj20.type !== tmp7.SOFORT) {
-      if (obj20.type !== tmp7.SEPA_DEBIT) {
-        merged = globalThis;
-        const _Error16 = Error;
-        const _HermesInternal16 = HermesInternal;
-        merged = new.target;
-        merged = new.target;
-        merged = new Error(
-          "Cannot instantiate SofortSourceRecord with type: " +
-            obj20.type +
-            ", must be " +
-            tmp7.SOFORT +
-            " or " +
-            tmp7.SEPA_DEBIT,
-        );
-        throw merged;
+    const obj19 = {};
+    const merged18 = Object.assign(obj);
+    obj19.email = billing_address.email;
+    if (typeof SofortSourceRecord === "function") {
+      const tmp262 = new SofortSourceRecord(obj19, obj, tmp5, tmp4, tmp3, tmp2, tmp, new.target, tmp253);
+      if (obj19.type !== tmp7.SOFORT) {
+        if (obj19.type !== tmp7.SEPA_DEBIT) {
+          const _Error16 = Error;
+          const _HermesInternal16 = HermesInternal;
+          const error18 = new Error(
+            "Cannot instantiate SofortSourceRecord with type: " +
+              obj19.type +
+              ", must be " +
+              tmp7.SOFORT +
+              " or " +
+              tmp7.SEPA_DEBIT,
+          );
+          throw error18;
+        }
       }
+      tmp262.email = obj19.email || "";
+      return tmp262;
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    merged = obj20.email || "";
-    merged.email = merged;
-    return merged;
+    tmp253 = SofortSourceRecord;
   }
 };
 PaymentSourceRecord["createFromSerialized"] = function createFromSerialized(type) {
   type = type.type;
-  const tmp6 = closure_4;
-  if (closure_4.CARD === type) {
-    let throwTypeErrorResult = CreditCardSourceRecord;
-    throwTypeErrorResult = new.target;
-    if (typeof CreditCardSourceRecord !== "function") {
-      throwTypeErrorResult = HermesBuiltin.throwTypeError();
-    }
-    throwTypeErrorResult = CreditCardSourceRecord;
-    throwTypeErrorResult = new.target;
-    throwTypeErrorResult = new.target;
-    throwTypeErrorResult = type;
-    throwTypeErrorResult = new CreditCardSourceRecord(type, tmp5, tmp4);
-    // ThrowIfThisInitialized (0x7c)
-    if (type.type !== tmp6.CARD) {
-      throwTypeErrorResult = globalThis;
-      const _Error19 = Error;
-      const _HermesInternal19 = HermesInternal;
-      throwTypeErrorResult = new.target;
-      throwTypeErrorResult = new.target;
-      throwTypeErrorResult = new Error(
-        "Cannot instantiate CreditCardSourceRecord with type: " + type.type + ", must be " + tmp6.CARD,
-      );
-      throw throwTypeErrorResult;
+  const tmp6 = React4;
+  if (React4.CARD === type) {
+    if (typeof CreditCardSourceRecord === "function") {
+      const tmp255 = new CreditCardSourceRecord(type, tmp5, tmp4);
+      if (type.type !== tmp6.CARD) {
+        const _Error19 = Error;
+        const _HermesInternal19 = HermesInternal;
+        const error = new Error(
+          "Cannot instantiate CreditCardSourceRecord with type: " + type.type + ", must be " + tmp6.CARD,
+        );
+        throw error;
+      } else {
+        let str38 = type.brand;
+        if (str38 == null) {
+          str38 = "";
+        }
+        tmp255.brand = str38;
+        let str39 = type.last4;
+        if (str39 == null) {
+          str39 = "";
+        }
+        tmp255.last4 = str39;
+        let num = type.expiresMonth;
+        if (num == null) {
+          num = 0;
+        }
+        tmp255.expiresMonth = num;
+        let num2 = type.expiresYear;
+        if (num2 == null) {
+          num2 = 0;
+        }
+        tmp255.expiresYear = num2;
+        return tmp255;
+      }
     } else {
-      let str38 = type.brand;
-      throwTypeErrorResult = null;
-      if (str38 == null) {
-        str38 = "";
-      }
-      throwTypeErrorResult.brand = str38;
-      let str39 = type.last4;
-      if (str39 == null) {
-        str39 = "";
-      }
-      throwTypeErrorResult.last4 = str39;
-      let num = type.expiresMonth;
-      if (num == null) {
-        num = 0;
-      }
-      throwTypeErrorResult.expiresMonth = num;
-      let num2 = type.expiresYear;
-      if (num2 == null) {
-        num2 = 0;
-      }
-      throwTypeErrorResult.expiresYear = num2;
-      return throwTypeErrorResult;
+      throw new TypeError("Trying to call a non-function");
     }
   } else if (tmp6.PAYPAL === type) {
-    throwTypeErrorResult = PaypalSourceRecord;
-    throwTypeErrorResult = new.target;
-    if (typeof PaypalSourceRecord !== "function") {
-      throwTypeErrorResult = HermesBuiltin.throwTypeError();
-    }
-    throwTypeErrorResult = PaypalSourceRecord;
-    throwTypeErrorResult = new.target;
-    throwTypeErrorResult = new.target;
-    throwTypeErrorResult = type;
-    throwTypeErrorResult = new PaypalSourceRecord(type, tmp5, tmp4, tmp3, tmp2);
-    // ThrowIfThisInitialized (0x7c)
-    if (type.type !== tmp6.PAYPAL) {
-      throwTypeErrorResult = globalThis;
-      const _Error18 = Error;
-      const _HermesInternal18 = HermesInternal;
-      throwTypeErrorResult = new.target;
-      throwTypeErrorResult = new.target;
-      throwTypeErrorResult = new Error(
-        "Cannot instantiate PaypalSourceRecord with type: " + type.type + ", must be " + tmp6.PAYPAL,
-      );
-      throw throwTypeErrorResult;
+    if (typeof PaypalSourceRecord === "function") {
+      const tmp241 = new PaypalSourceRecord(type, tmp5, tmp4, tmp3, tmp2);
+      if (type.type !== tmp6.PAYPAL) {
+        const _Error18 = Error;
+        const _HermesInternal18 = HermesInternal;
+        const error1 = new Error(
+          "Cannot instantiate PaypalSourceRecord with type: " + type.type + ", must be " + tmp6.PAYPAL,
+        );
+        throw error1;
+      } else {
+        tmp241.email = type.email || "";
+        return tmp241;
+      }
     } else {
-      throwTypeErrorResult = type.email || "";
-      throwTypeErrorResult.email = throwTypeErrorResult;
-      return throwTypeErrorResult;
+      throw new TypeError("Trying to call a non-function");
     }
   } else {
     if (tmp6.SOFORT !== type) {
       if (tmp6.SEPA_DEBIT !== type) {
         if (tmp6.GIROPAY === type) {
-          throwTypeErrorResult = GiropaySourceRecord;
-          throwTypeErrorResult = new.target;
-          if (typeof GiropaySourceRecord !== "function") {
-            throwTypeErrorResult = HermesBuiltin.throwTypeError();
-          }
-          throwTypeErrorResult = GiropaySourceRecord;
-          throwTypeErrorResult = new.target;
-          throwTypeErrorResult = new.target;
-          throwTypeErrorResult = type;
-          throwTypeErrorResult = new GiropaySourceRecord(type, tmp5, tmp4, tmp3, tmp2, throwTypeErrorResult);
-          // ThrowIfThisInitialized (0x7c)
-          if (type.type !== tmp6.GIROPAY) {
-            throwTypeErrorResult = globalThis;
-            const _Error16 = Error;
-            const _HermesInternal16 = HermesInternal;
-            throwTypeErrorResult = new.target;
-            throwTypeErrorResult = new.target;
-            throwTypeErrorResult = new Error(
-              "Cannot instantiate GiropaySourceRecord with type: " + type.type + ", must be " + tmp6.GIROPAY,
-            );
-            throw throwTypeErrorResult;
+          if (typeof GiropaySourceRecord === "function") {
+            const tmp214 = new GiropaySourceRecord(type, tmp5, tmp4, tmp3, tmp2, tmp);
+            if (type.type !== tmp6.GIROPAY) {
+              const _Error16 = Error;
+              const _HermesInternal16 = HermesInternal;
+              const error2 = new Error(
+                "Cannot instantiate GiropaySourceRecord with type: " + type.type + ", must be " + tmp6.GIROPAY,
+              );
+              throw error2;
+            } else {
+              return tmp214;
+            }
           } else {
-            return throwTypeErrorResult;
+            throw new TypeError("Trying to call a non-function");
           }
         } else if (tmp6.PRZELEWY24 === type) {
-          throwTypeErrorResult = Przelewy24SourceRecord;
-          throwTypeErrorResult = new.target;
-          if (typeof Przelewy24SourceRecord !== "function") {
-            throwTypeErrorResult = HermesBuiltin.throwTypeError();
-          }
-          throwTypeErrorResult = Przelewy24SourceRecord;
-          throwTypeErrorResult = new.target;
-          throwTypeErrorResult = new.target;
-          throwTypeErrorResult = type;
-          throwTypeErrorResult = new Przelewy24SourceRecord(type, tmp5, tmp4, tmp3, tmp2);
-          // ThrowIfThisInitialized (0x7c)
-          if (type.type !== tmp6.PRZELEWY24) {
-            throwTypeErrorResult = globalThis;
-            const _Error15 = Error;
-            const _HermesInternal15 = HermesInternal;
-            throwTypeErrorResult = new.target;
-            throwTypeErrorResult = new.target;
-            throwTypeErrorResult = new Error(
-              "Cannot instantiate Przelewy24SourceRecord with type: " + type.type + ", must be " + tmp6.PRZELEWY24,
-            );
-            throw throwTypeErrorResult;
+          if (typeof Przelewy24SourceRecord === "function") {
+            const tmp200 = new Przelewy24SourceRecord(type, tmp5, tmp4, tmp3, tmp2);
+            if (type.type !== tmp6.PRZELEWY24) {
+              const _Error15 = Error;
+              const _HermesInternal15 = HermesInternal;
+              const error3 = new Error(
+                "Cannot instantiate Przelewy24SourceRecord with type: " + type.type + ", must be " + tmp6.PRZELEWY24,
+              );
+              throw error3;
+            } else {
+              tmp200.email = type.email || "";
+              tmp200.bank = type.bank;
+              return tmp200;
+            }
           } else {
-            throwTypeErrorResult = type.email || "";
-            throwTypeErrorResult.email = throwTypeErrorResult;
-            throwTypeErrorResult.bank = type.bank;
-            return throwTypeErrorResult;
+            throw new TypeError("Trying to call a non-function");
           }
         } else if (tmp6.PAYSAFE_CARD === type) {
-          throwTypeErrorResult = PaysafeSourceRecord;
-          throwTypeErrorResult = new.target;
-          if (typeof PaysafeSourceRecord !== "function") {
-            throwTypeErrorResult = HermesBuiltin.throwTypeError();
-          }
-          throwTypeErrorResult = PaysafeSourceRecord;
-          throwTypeErrorResult = new.target;
-          throwTypeErrorResult = new.target;
-          throwTypeErrorResult = type;
-          throwTypeErrorResult = new PaysafeSourceRecord(type, tmp5, tmp4, tmp3, tmp2, throwTypeErrorResult);
-          // ThrowIfThisInitialized (0x7c)
-          if (type.type !== tmp6.PAYSAFE_CARD) {
-            throwTypeErrorResult = globalThis;
-            const _Error14 = Error;
-            const _HermesInternal14 = HermesInternal;
-            throwTypeErrorResult = new.target;
-            throwTypeErrorResult = new.target;
-            throwTypeErrorResult = new Error(
-              "Cannot instantiate PaysafeSourceRecord with type: " + type.type + ", must be " + tmp6.PAYSAFE_CARD,
-            );
-            throw throwTypeErrorResult;
+          if (typeof PaysafeSourceRecord === "function") {
+            const tmp187 = new PaysafeSourceRecord(type, tmp5, tmp4, tmp3, tmp2, tmp);
+            if (type.type !== tmp6.PAYSAFE_CARD) {
+              const _Error14 = Error;
+              const _HermesInternal14 = HermesInternal;
+              const error4 = new Error(
+                "Cannot instantiate PaysafeSourceRecord with type: " + type.type + ", must be " + tmp6.PAYSAFE_CARD,
+              );
+              throw error4;
+            } else {
+              return tmp187;
+            }
           } else {
-            return throwTypeErrorResult;
+            throw new TypeError("Trying to call a non-function");
           }
         } else if (tmp6.GCASH === type) {
-          throwTypeErrorResult = GcashSourceRecord;
-          throwTypeErrorResult = new.target;
-          if (typeof GcashSourceRecord !== "function") {
-            throwTypeErrorResult = HermesBuiltin.throwTypeError();
-          }
-          throwTypeErrorResult = GcashSourceRecord;
-          throwTypeErrorResult = new.target;
-          throwTypeErrorResult = new.target;
-          throwTypeErrorResult = type;
-          throwTypeErrorResult = new GcashSourceRecord(type, tmp5, tmp4, tmp3, tmp2, throwTypeErrorResult);
-          // ThrowIfThisInitialized (0x7c)
-          if (type.type !== tmp6.GCASH) {
-            throwTypeErrorResult = globalThis;
-            const _Error13 = Error;
-            const _HermesInternal13 = HermesInternal;
-            throwTypeErrorResult = new.target;
-            throwTypeErrorResult = new.target;
-            throwTypeErrorResult = new Error(
-              "Cannot instantiate GcashSourceRecord with type: " + type.type + ", must be " + tmp6.GCASH,
-            );
-            throw throwTypeErrorResult;
+          if (typeof GcashSourceRecord === "function") {
+            const tmp174 = new GcashSourceRecord(type, tmp5, tmp4, tmp3, tmp2, tmp);
+            if (type.type !== tmp6.GCASH) {
+              const _Error13 = Error;
+              const _HermesInternal13 = HermesInternal;
+              const error5 = new Error(
+                "Cannot instantiate GcashSourceRecord with type: " + type.type + ", must be " + tmp6.GCASH,
+              );
+              throw error5;
+            } else {
+              return tmp174;
+            }
           } else {
-            return throwTypeErrorResult;
+            throw new TypeError("Trying to call a non-function");
           }
         } else if (tmp6.GRABPAY_MY === type) {
-          throwTypeErrorResult = GrabPayMySourceRecord;
-          throwTypeErrorResult = new.target;
-          if (typeof GrabPayMySourceRecord !== "function") {
-            throwTypeErrorResult = HermesBuiltin.throwTypeError();
-          }
-          throwTypeErrorResult = GrabPayMySourceRecord;
-          throwTypeErrorResult = new.target;
-          throwTypeErrorResult = new.target;
-          throwTypeErrorResult = type;
-          throwTypeErrorResult = new GrabPayMySourceRecord(type, tmp5, tmp4, tmp3, tmp2, throwTypeErrorResult);
-          // ThrowIfThisInitialized (0x7c)
-          if (type.type !== tmp6.GRABPAY_MY) {
-            throwTypeErrorResult = globalThis;
-            const _Error12 = Error;
-            const _HermesInternal12 = HermesInternal;
-            throwTypeErrorResult = new.target;
-            throwTypeErrorResult = new.target;
-            throwTypeErrorResult = new Error(
-              "Cannot instantiate GrabPayMySourceRecord with type: " + type.type + ", must be " + tmp6.GRABPAY_MY,
-            );
-            throw throwTypeErrorResult;
+          if (typeof GrabPayMySourceRecord === "function") {
+            const tmp161 = new GrabPayMySourceRecord(type, tmp5, tmp4, tmp3, tmp2, tmp);
+            if (type.type !== tmp6.GRABPAY_MY) {
+              const _Error12 = Error;
+              const _HermesInternal12 = HermesInternal;
+              const error6 = new Error(
+                "Cannot instantiate GrabPayMySourceRecord with type: " + type.type + ", must be " + tmp6.GRABPAY_MY,
+              );
+              throw error6;
+            } else {
+              return tmp161;
+            }
           } else {
-            return throwTypeErrorResult;
+            throw new TypeError("Trying to call a non-function");
           }
         } else if (tmp6.MOMO_WALLET === type) {
-          throwTypeErrorResult = MomoWalletSourceRecord;
-          throwTypeErrorResult = new.target;
-          if (typeof MomoWalletSourceRecord !== "function") {
-            throwTypeErrorResult = HermesBuiltin.throwTypeError();
-          }
-          throwTypeErrorResult = MomoWalletSourceRecord;
-          throwTypeErrorResult = new.target;
-          throwTypeErrorResult = new.target;
-          throwTypeErrorResult = type;
-          throwTypeErrorResult = new MomoWalletSourceRecord(type, tmp5, tmp4, tmp3, tmp2, throwTypeErrorResult);
-          // ThrowIfThisInitialized (0x7c)
-          if (type.type !== tmp6.MOMO_WALLET) {
-            throwTypeErrorResult = globalThis;
-            const _Error11 = Error;
-            const _HermesInternal11 = HermesInternal;
-            throwTypeErrorResult = new.target;
-            throwTypeErrorResult = new.target;
-            throwTypeErrorResult = new Error(
-              "Cannot instantiate MomoWalletSourceRecord with type: " + type.type + ", must be " + tmp6.MOMO_WALLET,
-            );
-            throw throwTypeErrorResult;
+          if (typeof MomoWalletSourceRecord === "function") {
+            const tmp148 = new MomoWalletSourceRecord(type, tmp5, tmp4, tmp3, tmp2, tmp);
+            if (type.type !== tmp6.MOMO_WALLET) {
+              const _Error11 = Error;
+              const _HermesInternal11 = HermesInternal;
+              const error7 = new Error(
+                "Cannot instantiate MomoWalletSourceRecord with type: " + type.type + ", must be " + tmp6.MOMO_WALLET,
+              );
+              throw error7;
+            } else {
+              return tmp148;
+            }
           } else {
-            return throwTypeErrorResult;
+            throw new TypeError("Trying to call a non-function");
           }
         } else if (tmp6.VENMO === type) {
-          throwTypeErrorResult = VenmoSourceRecord;
-          throwTypeErrorResult = new.target;
-          if (typeof VenmoSourceRecord !== "function") {
-            throwTypeErrorResult = HermesBuiltin.throwTypeError();
-          }
-          throwTypeErrorResult = VenmoSourceRecord;
-          throwTypeErrorResult = new.target;
-          throwTypeErrorResult = new.target;
-          throwTypeErrorResult = type;
-          throwTypeErrorResult = new VenmoSourceRecord(type, tmp5, tmp4, tmp3, tmp2);
-          // ThrowIfThisInitialized (0x7c)
-          if (type.type !== tmp6.VENMO) {
-            throwTypeErrorResult = globalThis;
-            const _Error10 = Error;
-            const _HermesInternal10 = HermesInternal;
-            throwTypeErrorResult = new.target;
-            throwTypeErrorResult = new.target;
-            throwTypeErrorResult = new Error(
-              "Cannot instantiate VenmoSourceRecord with type: " + type.type + ", must be " + tmp6.VENMO,
-            );
-            throw throwTypeErrorResult;
+          if (typeof VenmoSourceRecord === "function") {
+            const tmp134 = new VenmoSourceRecord(type, tmp5, tmp4, tmp3, tmp2);
+            if (type.type !== tmp6.VENMO) {
+              const _Error10 = Error;
+              const _HermesInternal10 = HermesInternal;
+              const error8 = new Error(
+                "Cannot instantiate VenmoSourceRecord with type: " + type.type + ", must be " + tmp6.VENMO,
+              );
+              throw error8;
+            } else {
+              tmp134.username = type.username || "";
+              return tmp134;
+            }
           } else {
-            throwTypeErrorResult = type.username || "";
-            throwTypeErrorResult.username = throwTypeErrorResult;
-            return throwTypeErrorResult;
+            throw new TypeError("Trying to call a non-function");
           }
         } else if (tmp6.KAKAOPAY === type) {
-          throwTypeErrorResult = KaKaoPaySourceRecord;
-          throwTypeErrorResult = new.target;
-          if (typeof KaKaoPaySourceRecord !== "function") {
-            throwTypeErrorResult = HermesBuiltin.throwTypeError();
-          }
-          throwTypeErrorResult = KaKaoPaySourceRecord;
-          throwTypeErrorResult = new.target;
-          throwTypeErrorResult = new.target;
-          throwTypeErrorResult = type;
-          throwTypeErrorResult = new KaKaoPaySourceRecord(type, tmp5, tmp4, tmp3, tmp2, throwTypeErrorResult);
-          // ThrowIfThisInitialized (0x7c)
-          if (type.type !== tmp6.KAKAOPAY) {
-            throwTypeErrorResult = globalThis;
-            const _Error9 = Error;
-            const _HermesInternal9 = HermesInternal;
-            throwTypeErrorResult = new.target;
-            throwTypeErrorResult = new.target;
-            throwTypeErrorResult = new Error(
-              "Cannot instantiate KaKaoPaySourceRecord with type: " + type.type + ", must be " + tmp6.KAKAOPAY,
-            );
-            throw throwTypeErrorResult;
+          if (typeof KaKaoPaySourceRecord === "function") {
+            const tmp121 = new KaKaoPaySourceRecord(type, tmp5, tmp4, tmp3, tmp2, tmp);
+            if (type.type !== tmp6.KAKAOPAY) {
+              const _Error9 = Error;
+              const _HermesInternal9 = HermesInternal;
+              const error9 = new Error(
+                "Cannot instantiate KaKaoPaySourceRecord with type: " + type.type + ", must be " + tmp6.KAKAOPAY,
+              );
+              throw error9;
+            } else {
+              return tmp121;
+            }
           } else {
-            return throwTypeErrorResult;
+            throw new TypeError("Trying to call a non-function");
           }
         } else if (tmp6.GOPAY_WALLET === type) {
-          throwTypeErrorResult = GoPayWalletSourceRecord;
-          throwTypeErrorResult = new.target;
-          if (typeof GoPayWalletSourceRecord !== "function") {
-            throwTypeErrorResult = HermesBuiltin.throwTypeError();
-          }
-          throwTypeErrorResult = GoPayWalletSourceRecord;
-          throwTypeErrorResult = new.target;
-          throwTypeErrorResult = new.target;
-          throwTypeErrorResult = type;
-          throwTypeErrorResult = new GoPayWalletSourceRecord(type, tmp5, tmp4, tmp3, tmp2, throwTypeErrorResult);
-          // ThrowIfThisInitialized (0x7c)
-          if (type.type !== tmp6.GOPAY_WALLET) {
-            throwTypeErrorResult = globalThis;
-            const _Error8 = Error;
-            const _HermesInternal8 = HermesInternal;
-            throwTypeErrorResult = new.target;
-            throwTypeErrorResult = new.target;
-            throwTypeErrorResult = new Error(
-              "Cannot instantiate GoPayWalletSourceRecord with type: " + type.type + ", must be " + tmp6.GOPAY_WALLET,
-            );
-            throw throwTypeErrorResult;
+          if (typeof GoPayWalletSourceRecord === "function") {
+            const tmp108 = new GoPayWalletSourceRecord(type, tmp5, tmp4, tmp3, tmp2, tmp);
+            if (type.type !== tmp6.GOPAY_WALLET) {
+              const _Error8 = Error;
+              const _HermesInternal8 = HermesInternal;
+              const error10 = new Error(
+                "Cannot instantiate GoPayWalletSourceRecord with type: " + type.type + ", must be " + tmp6.GOPAY_WALLET,
+              );
+              throw error10;
+            } else {
+              return tmp108;
+            }
           } else {
-            return throwTypeErrorResult;
+            throw new TypeError("Trying to call a non-function");
           }
         } else if (tmp6.BANCONTACT === type) {
-          if (typeof BancontactSourceRecord !== "function") {
-            throwTypeErrorResult = HermesBuiltin.throwTypeError();
-          }
-          const tmp95 = new BancontactSourceRecord(type, tmp5, tmp4, tmp3, tmp2, throwTypeErrorResult);
-          // ThrowIfThisInitialized (0x7c)
-          if (type.type !== tmp6.BANCONTACT) {
-            const _Error7 = Error;
-            const _HermesInternal7 = HermesInternal;
-            throwTypeErrorResult = new Error(
-              "Cannot instantiate BancontactSourceRecord with type: " + type.type + ", must be " + tmp6.BANCONTACT,
-            );
-            throw throwTypeErrorResult;
+          if (typeof BancontactSourceRecord === "function") {
+            const tmp95 = new BancontactSourceRecord(type, tmp5, tmp4, tmp3, tmp2, tmp);
+            if (type.type !== tmp6.BANCONTACT) {
+              const _Error7 = Error;
+              const _HermesInternal7 = HermesInternal;
+              const error11 = new Error(
+                "Cannot instantiate BancontactSourceRecord with type: " + type.type + ", must be " + tmp6.BANCONTACT,
+              );
+              throw error11;
+            } else {
+              return tmp95;
+            }
           } else {
-            return tmp95;
+            throw new TypeError("Trying to call a non-function");
           }
         } else if (tmp6.EPS === type) {
-          if (typeof EPSSourceRecord !== "function") {
-            throwTypeErrorResult = HermesBuiltin.throwTypeError();
-          }
-          const tmp82 = new EPSSourceRecord(type, tmp5, tmp4, tmp3, tmp2, throwTypeErrorResult);
-          // ThrowIfThisInitialized (0x7c)
-          if (type.type !== tmp6.EPS) {
-            const _Error6 = Error;
-            const _HermesInternal6 = HermesInternal;
-            error = new Error("Cannot instantiate EPSSourceRecord with type: " + type.type + ", must be " + tmp6.EPS);
-            throw error;
+          if (typeof EPSSourceRecord === "function") {
+            const tmp82 = new EPSSourceRecord(type, tmp5, tmp4, tmp3, tmp2, tmp);
+            if (type.type !== tmp6.EPS) {
+              const _Error6 = Error;
+              const _HermesInternal6 = HermesInternal;
+              const error12 = new Error(
+                "Cannot instantiate EPSSourceRecord with type: " + type.type + ", must be " + tmp6.EPS,
+              );
+              throw error12;
+            } else {
+              tmp82.bank = type.bank;
+              return tmp82;
+            }
           } else {
-            tmp82.bank = type.bank;
-            return tmp82;
+            throw new TypeError("Trying to call a non-function");
           }
         } else if (tmp6.IDEAL === type) {
-          if (typeof IdealSourceRecord !== "function") {
-            throwTypeErrorResult = HermesBuiltin.throwTypeError();
-          }
-          const tmp69 = new IdealSourceRecord(type, tmp5, tmp4, tmp3, tmp2, throwTypeErrorResult);
-          // ThrowIfThisInitialized (0x7c)
-          if (type.type !== tmp6.IDEAL) {
-            const _Error5 = Error;
-            const _HermesInternal5 = HermesInternal;
-            const error1 = new Error(
-              "Cannot instantiate IdealSourceRecord with type: " + type.type + ", must be " + tmp6.IDEAL,
-            );
-            throw error1;
+          if (typeof IdealSourceRecord === "function") {
+            const tmp69 = new IdealSourceRecord(type, tmp5, tmp4, tmp3, tmp2, tmp);
+            if (type.type !== tmp6.IDEAL) {
+              const _Error5 = Error;
+              const _HermesInternal5 = HermesInternal;
+              const error13 = new Error(
+                "Cannot instantiate IdealSourceRecord with type: " + type.type + ", must be " + tmp6.IDEAL,
+              );
+              throw error13;
+            } else {
+              tmp69.bank = type.bank;
+              return tmp69;
+            }
           } else {
-            tmp69.bank = type.bank;
-            return tmp69;
+            throw new TypeError("Trying to call a non-function");
           }
         } else if (tmp6.CASH_APP === type) {
-          if (typeof CashAppSourceRecord !== "function") {
-            throwTypeErrorResult = HermesBuiltin.throwTypeError();
-          }
-          const tmp55 = new CashAppSourceRecord(type, tmp5, tmp4, tmp3, tmp2);
-          // ThrowIfThisInitialized (0x7c)
-          if (type.type !== tmp6.CASH_APP) {
-            const _Error4 = Error;
-            const _HermesInternal4 = HermesInternal;
-            const error2 = new Error(
-              "Cannot instantiate Cashapp with type: " + type.type + ", must be " + tmp6.CASH_APP,
-            );
-            throw error2;
+          if (typeof CashAppSourceRecord === "function") {
+            const tmp55 = new CashAppSourceRecord(type, tmp5, tmp4, tmp3, tmp2);
+            if (type.type !== tmp6.CASH_APP) {
+              const _Error4 = Error;
+              const _HermesInternal4 = HermesInternal;
+              const error14 = new Error(
+                "Cannot instantiate Cashapp with type: " + type.type + ", must be " + tmp6.CASH_APP,
+              );
+              throw error14;
+            } else {
+              tmp55.username = type.username || "";
+              return tmp55;
+            }
           } else {
-            tmp55.username = type.username || "";
-            return tmp55;
+            throw new TypeError("Trying to call a non-function");
           }
         } else if (tmp6.TDS_WALLET === type) {
-          if (typeof TDSWalletSourceRecord !== "function") {
-            throwTypeErrorResult = HermesBuiltin.throwTypeError();
-          }
-          const tmp42 = new TDSWalletSourceRecord(type, tmp5, tmp4, tmp3, tmp2, throwTypeErrorResult);
-          // ThrowIfThisInitialized (0x7c)
-          if (type.type !== tmp6.TDS_WALLET) {
-            const _Error3 = Error;
-            const _HermesInternal3 = HermesInternal;
-            const error3 = new Error(
-              "Cannot instantiate TDSWalletSourceRecord with type: " + type.type + ", must be " + tmp6.TDS_WALLET,
-            );
-            throw error3;
+          if (typeof TDSWalletSourceRecord === "function") {
+            const tmp42 = new TDSWalletSourceRecord(type, tmp5, tmp4, tmp3, tmp2, tmp);
+            if (type.type !== tmp6.TDS_WALLET) {
+              const _Error3 = Error;
+              const _HermesInternal3 = HermesInternal;
+              const error15 = new Error(
+                "Cannot instantiate TDSWalletSourceRecord with type: " + type.type + ", must be " + tmp6.TDS_WALLET,
+              );
+              throw error15;
+            } else {
+              return tmp42;
+            }
           } else {
-            return tmp42;
+            throw new TypeError("Trying to call a non-function");
           }
         } else if (tmp6.PIX === type) {
-          if (typeof PixSourceRecord !== "function") {
-            throwTypeErrorResult = HermesBuiltin.throwTypeError();
-          }
-          const tmp29 = new PixSourceRecord(type, tmp5, tmp4, tmp3, tmp2, throwTypeErrorResult);
-          // ThrowIfThisInitialized (0x7c)
-          if (type.type !== tmp6.PIX) {
-            const _Error2 = Error;
-            const _HermesInternal2 = HermesInternal;
-            const error4 = new Error(
-              "Cannot instantiate PixSourceRecord with type: " + type.type + ", must be " + tmp6.PIX,
-            );
-            throw error4;
+          if (typeof PixSourceRecord === "function") {
+            const tmp29 = new PixSourceRecord(type, tmp5, tmp4, tmp3, tmp2, tmp);
+            if (type.type !== tmp6.PIX) {
+              const _Error2 = Error;
+              const _HermesInternal2 = HermesInternal;
+              const error16 = new Error(
+                "Cannot instantiate PixSourceRecord with type: " + type.type + ", must be " + tmp6.PIX,
+              );
+              throw error16;
+            } else {
+              tmp29.email = type.email;
+              return tmp29;
+            }
           } else {
-            tmp29.email = type.email;
-            return tmp29;
+            throw new TypeError("Trying to call a non-function");
           }
         } else if (tmp6.PIX_AUTOMATICO === type) {
-          if (typeof prototype2 !== "function") {
-            throwTypeErrorResult = HermesBuiltin.throwTypeError();
-          }
-          const tmp16 = new prototype2(type, tmp5, tmp4, tmp3, tmp2, throwTypeErrorResult);
-          // ThrowIfThisInitialized (0x7c)
-          if (type.type !== tmp6.PIX_AUTOMATICO) {
-            const _Error = Error;
-            const _HermesInternal = HermesInternal;
-            const error5 = new Error(
-              "Cannot instantiate PixAutomaticoSourceRecord with type: " +
-                type.type +
-                ", must be " +
-                tmp6.PIX_AUTOMATICO,
-            );
-            throw error5;
+          if (typeof prototype2 === "function") {
+            const tmp16 = new prototype2(type, tmp5, tmp4, tmp3, tmp2, tmp);
+            if (type.type !== tmp6.PIX_AUTOMATICO) {
+              const _Error = Error;
+              const _HermesInternal = HermesInternal;
+              const error17 = new Error(
+                "Cannot instantiate PixAutomaticoSourceRecord with type: " +
+                  type.type +
+                  ", must be " +
+                  tmp6.PIX_AUTOMATICO,
+              );
+              throw error17;
+            } else {
+              tmp16.email = type.email;
+              return tmp16;
+            }
           } else {
-            tmp16.email = type.email;
-            return tmp16;
+            throw new TypeError("Trying to call a non-function");
           }
         } else {
-          isDiscordFrontendDevelopment.assertNever(type);
+          GlobalUtils.assertNever(type);
         }
       }
     }
-    throwTypeErrorResult = SofortSourceRecord;
-    throwTypeErrorResult = new.target;
-    if (typeof SofortSourceRecord !== "function") {
-      throwTypeErrorResult = HermesBuiltin.throwTypeError();
-    }
-    throwTypeErrorResult = SofortSourceRecord;
-    throwTypeErrorResult = new.target;
-    throwTypeErrorResult = new.target;
-    throwTypeErrorResult = type;
-    throwTypeErrorResult = new SofortSourceRecord(type, tmp5, tmp4, tmp3, tmp2);
-    // ThrowIfThisInitialized (0x7c)
-    if (type.type !== tmp6.SOFORT) {
-      if (type.type !== tmp6.SEPA_DEBIT) {
-        throwTypeErrorResult = globalThis;
-        const _Error17 = Error;
-        const _HermesInternal17 = HermesInternal;
-        throwTypeErrorResult = new.target;
-        throwTypeErrorResult = new.target;
-        throwTypeErrorResult = new Error(
-          "Cannot instantiate SofortSourceRecord with type: " +
-            type.type +
-            ", must be " +
-            tmp6.SOFORT +
-            " or " +
-            tmp6.SEPA_DEBIT,
-        );
-        throw throwTypeErrorResult;
+    if (typeof SofortSourceRecord === "function") {
+      const tmp227 = new SofortSourceRecord(type, tmp5, tmp4, tmp3, tmp2);
+      if (type.type !== tmp6.SOFORT) {
+        if (type.type !== tmp6.SEPA_DEBIT) {
+          const _Error17 = Error;
+          const _HermesInternal17 = HermesInternal;
+          const error18 = new Error(
+            "Cannot instantiate SofortSourceRecord with type: " +
+              type.type +
+              ", must be " +
+              tmp6.SOFORT +
+              " or " +
+              tmp6.SEPA_DEBIT,
+          );
+          throw error18;
+        }
       }
+      tmp227.email = type.email || "";
+      return tmp227;
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    throwTypeErrorResult = type.email || "";
-    throwTypeErrorResult.email = throwTypeErrorResult;
-    return throwTypeErrorResult;
   }
 };
 prototype["hasFlag"] = function hasFlag(arg0) {
-  return hasFlag.hasFlag(this.flags, arg0);
+  return FlagUtils.hasFlag(this.flags, arg0);
 };
 Object.defineProperty(prototype, "paymentMethodCountry", {
   get: function paymentMethodCountry() {
@@ -1183,7 +895,6 @@ prototype["canRedeemTrial"] = function canRedeemTrial() {
 class CreditCardSourceRecord extends PaymentSourceRecord {
   constructor(arg0) {
     tmp3 = new CreditCardSourceRecord(global, tmp2, tmp);
-    // ThrowIfThisInitialized (0x7c)
     if (global.type !== PaymentSourceTypes.CARD) {
       tmp7 = globalThis;
       _Error = Error;
@@ -1237,7 +948,6 @@ Object.defineProperty(CreditCardSourceRecord.prototype, "isStripeLinkBankAccount
 class PaypalSourceRecord extends PaymentSourceRecord {
   constructor(arg0) {
     tmp = new PaypalSourceRecord(global);
-    // ThrowIfThisInitialized (0x7c)
     if (global.type !== PaymentSourceTypes.PAYPAL) {
       tmp5 = globalThis;
       _Error = Error;
@@ -1260,7 +970,6 @@ class PaypalSourceRecord extends PaymentSourceRecord {
 class SofortSourceRecord extends PaymentSourceRecord {
   constructor(arg0) {
     tmp = new SofortSourceRecord(global);
-    // ThrowIfThisInitialized (0x7c)
     tmp2 = PaymentSourceTypes;
     if (global.type !== PaymentSourceTypes.SOFORT) {
       if (global.type !== tmp2.SEPA_DEBIT) {
@@ -1292,7 +1001,6 @@ class SofortSourceRecord extends PaymentSourceRecord {
 class GiropaySourceRecord extends PaymentSourceRecord {
   constructor(arg0) {
     tmp3 = new GiropaySourceRecord(global, tmp2, tmp);
-    // ThrowIfThisInitialized (0x7c)
     if (global.type !== PaymentSourceTypes.GIROPAY) {
       tmp6 = globalThis;
       _Error = Error;
@@ -1315,7 +1023,6 @@ class GiropaySourceRecord extends PaymentSourceRecord {
 class Przelewy24SourceRecord extends PaymentSourceRecord {
   constructor(arg0) {
     tmp = new Przelewy24SourceRecord(global);
-    // ThrowIfThisInitialized (0x7c)
     if (global.type !== PaymentSourceTypes.PRZELEWY24) {
       tmp5 = globalThis;
       _Error = Error;
@@ -1341,7 +1048,6 @@ class Przelewy24SourceRecord extends PaymentSourceRecord {
 class EPSSourceRecord extends PaymentSourceRecord {
   constructor(arg0) {
     tmp3 = new EPSSourceRecord(global, tmp2, tmp);
-    // ThrowIfThisInitialized (0x7c)
     if (global.type !== PaymentSourceTypes.EPS) {
       tmp6 = globalThis;
       _Error = Error;
@@ -1363,7 +1069,6 @@ class EPSSourceRecord extends PaymentSourceRecord {
 class IdealSourceRecord extends PaymentSourceRecord {
   constructor(arg0) {
     tmp3 = new IdealSourceRecord(global, tmp2, tmp);
-    // ThrowIfThisInitialized (0x7c)
     if (global.type !== PaymentSourceTypes.IDEAL) {
       tmp6 = globalThis;
       _Error = Error;
@@ -1385,7 +1090,6 @@ class IdealSourceRecord extends PaymentSourceRecord {
 class PaysafeSourceRecord extends PaymentSourceRecord {
   constructor(arg0) {
     tmp3 = new PaysafeSourceRecord(global, tmp2, tmp);
-    // ThrowIfThisInitialized (0x7c)
     if (global.type !== PaymentSourceTypes.PAYSAFE_CARD) {
       tmp6 = globalThis;
       _Error = Error;
@@ -1408,7 +1112,6 @@ class PaysafeSourceRecord extends PaymentSourceRecord {
 class GcashSourceRecord extends PaymentSourceRecord {
   constructor(arg0) {
     tmp3 = new GcashSourceRecord(global, tmp2, tmp);
-    // ThrowIfThisInitialized (0x7c)
     if (global.type !== PaymentSourceTypes.GCASH) {
       tmp6 = globalThis;
       _Error = Error;
@@ -1429,7 +1132,6 @@ class GcashSourceRecord extends PaymentSourceRecord {
 class GrabPayMySourceRecord extends PaymentSourceRecord {
   constructor(arg0) {
     tmp3 = new GrabPayMySourceRecord(global, tmp2, tmp);
-    // ThrowIfThisInitialized (0x7c)
     if (global.type !== PaymentSourceTypes.GRABPAY_MY) {
       tmp6 = globalThis;
       _Error = Error;
@@ -1452,7 +1154,6 @@ class GrabPayMySourceRecord extends PaymentSourceRecord {
 class MomoWalletSourceRecord extends PaymentSourceRecord {
   constructor(arg0) {
     tmp3 = new MomoWalletSourceRecord(global, tmp2, tmp);
-    // ThrowIfThisInitialized (0x7c)
     if (global.type !== PaymentSourceTypes.MOMO_WALLET) {
       tmp6 = globalThis;
       _Error = Error;
@@ -1475,7 +1176,6 @@ class MomoWalletSourceRecord extends PaymentSourceRecord {
 class VenmoSourceRecord extends PaymentSourceRecord {
   constructor(arg0) {
     tmp = new VenmoSourceRecord(global);
-    // ThrowIfThisInitialized (0x7c)
     if (global.type !== PaymentSourceTypes.VENMO) {
       tmp5 = globalThis;
       _Error = Error;
@@ -1498,7 +1198,6 @@ class VenmoSourceRecord extends PaymentSourceRecord {
 class KaKaoPaySourceRecord extends PaymentSourceRecord {
   constructor(arg0) {
     tmp3 = new KaKaoPaySourceRecord(global, tmp2, tmp);
-    // ThrowIfThisInitialized (0x7c)
     if (global.type !== PaymentSourceTypes.KAKAOPAY) {
       tmp6 = globalThis;
       _Error = Error;
@@ -1521,7 +1220,6 @@ class KaKaoPaySourceRecord extends PaymentSourceRecord {
 class GoPayWalletSourceRecord extends PaymentSourceRecord {
   constructor(arg0) {
     tmp3 = new GoPayWalletSourceRecord(global, tmp2, tmp);
-    // ThrowIfThisInitialized (0x7c)
     if (global.type !== PaymentSourceTypes.GOPAY_WALLET) {
       tmp6 = globalThis;
       _Error = Error;
@@ -1544,7 +1242,6 @@ class GoPayWalletSourceRecord extends PaymentSourceRecord {
 class BancontactSourceRecord extends PaymentSourceRecord {
   constructor(arg0) {
     tmp3 = new BancontactSourceRecord(global, tmp2, tmp);
-    // ThrowIfThisInitialized (0x7c)
     if (global.type !== PaymentSourceTypes.BANCONTACT) {
       tmp6 = globalThis;
       _Error = Error;
@@ -1567,7 +1264,6 @@ class BancontactSourceRecord extends PaymentSourceRecord {
 class CashAppSourceRecord extends PaymentSourceRecord {
   constructor(arg0) {
     tmp = new CashAppSourceRecord(global);
-    // ThrowIfThisInitialized (0x7c)
     if (global.type !== PaymentSourceTypes.CASH_APP) {
       tmp5 = globalThis;
       _Error = Error;
@@ -1590,7 +1286,6 @@ class CashAppSourceRecord extends PaymentSourceRecord {
 class TDSWalletSourceRecord extends PaymentSourceRecord {
   constructor(arg0) {
     tmp3 = new TDSWalletSourceRecord(global, tmp2, tmp);
-    // ThrowIfThisInitialized (0x7c)
     if (global.type !== PaymentSourceTypes.TDS_WALLET) {
       tmp6 = globalThis;
       _Error = Error;
@@ -1613,7 +1308,6 @@ class TDSWalletSourceRecord extends PaymentSourceRecord {
 class PixSourceRecord extends PaymentSourceRecord {
   constructor(arg0) {
     tmp3 = new PixSourceRecord(global, tmp2, tmp);
-    // ThrowIfThisInitialized (0x7c)
     if (global.type !== PaymentSourceTypes.PIX) {
       tmp6 = globalThis;
       _Error = Error;
@@ -1634,11 +1328,10 @@ class PixSourceRecord extends PaymentSourceRecord {
 }
 const prototype2 = function PixAutomaticoSourceRecord(type) {
   const tmp3 = new prototype2(type, tmp2, tmp);
-  // ThrowIfThisInitialized (0x7c)
-  if (type.type !== closure_4.PIX_AUTOMATICO) {
+  if (type.type !== React4.PIX_AUTOMATICO) {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    error = new Error(
+    const error = new Error(
       "Cannot instantiate PixAutomaticoSourceRecord with type: " + type.type + ", must be " + tmp4.PIX_AUTOMATICO,
     );
     throw error;
@@ -1648,27 +1341,27 @@ const prototype2 = function PixAutomaticoSourceRecord(type) {
   }
 }.prototype;
 class prototype2 extends PaymentSourceRecord {}
-const result = require("set").fileFinishedImporting("records/PaymentSourceRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("records/PaymentSourceRecord.tsx");
 const prototype3 = function AppleSourceRecord(type) {
   type.id = "";
   type.paymentGateway = constants.APPLE_PARTNER;
-  type.type = closure_4.APPLE;
+  type.type = React4.APPLE;
   type.billingAddress = {};
   type.country = "";
   type.invalid = false;
   type.isDefault = false;
   type.flags = 0;
   const tmp5 = new prototype3(type, tmp3, tmp2, tmp, new.target);
-  // ThrowIfThisInitialized (0x7c)
-  if (type.type !== closure_4.APPLE) {
+  if (type.type !== React4.APPLE) {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    error = new Error("Cannot instantiate AppleSourceRecord with type: " + type.type + ", must be " + tmp4.APPLE);
+    const error = new Error("Cannot instantiate AppleSourceRecord with type: " + type.type + ", must be " + tmp4.APPLE);
     throw error;
   } else {
     return tmp5;
   }
-  tmp4 = closure_4;
+  tmp4 = React4;
 }.prototype;
 class prototype3 extends PaymentSourceRecord {}
 

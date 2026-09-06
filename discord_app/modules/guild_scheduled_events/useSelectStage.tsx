@@ -1,71 +1,59 @@
 // discord_app/modules/guild_scheduled_events/useSelectStage.tsx
-import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../_runtime/00019_noop.js";
-import closure_5 from "../../stores/ChannelStore.tsx";
-import closure_6 from "../../stores/SelectedChannelStore.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import noop from "../../../_runtime/metro/00019__.js";
+import ChannelStore from "../../stores/ChannelStore.tsx";
+import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/useSelectStage.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/useSelectStage.tsx");
 
 export default function useSelectStage() {
-  const items = [closure_6];
-  const stateFromStores = _require(first[5]).useStateFromStores(items, () => voiceChannelId.getVoiceChannelId(), []);
-  _require = stateFromStores;
-  const tmp2 = callback2(React.useState(stateFromStores), 2);
+  const items = [SelectedChannelStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => voiceChannelId.getVoiceChannelId(), []);
+  const tmp2 = _slicedToArray(noop.useState(stateFromStores), 2);
   first = tmp2[0];
-  const callback = tmp2[1];
+  asyncGeneratorStep = tmp2[1];
   const items1 = [stateFromStores];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     const timeout = setTimeout(() => {
-      callback(closure_0);
+      closure_1_2(closure_0);
     }, 500);
     return () => {
       clearTimeout(closure_0);
     };
   }, items1);
-  _require = undefined;
-  _require = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c3 = 0;
-    c6 = 0;
-    c5 = 0;
-    return (function* (arg0, arg1) {
-      closure_2 = tmp3;
-      c5 = 1;
-      if (closure_1 === closure_1) {
-        const channel = closure_2_5.getChannel(tmp31);
-        if (null != channel) {
-          callback(first[6]).navigateToStage(channel);
-          c5 = 0;
-          c6 = 3;
-          obj1 = { value: null, done: true };
-          obj1[0] = undefined;
-          return obj1;
-        }
-      }
-      closure_1_2(closure_1);
-      obj1 = callback(first[6]);
-      yield obj1.connectOrLurkStage(callback, closure_1);
-      if (1 === tmp7) {
+  _require = asyncGeneratorStep(async (arg0, arg1) => {
+    if (closure_1 === closure_1) {
+      channel = channel.getChannel(tmp30);
+      if (null != channel) {
+        closure_0(first[6]).navigateToStage(channel);
         c5 = 0;
-        closure_1_2(null);
         c6 = 3;
-      } else if (arg0 === 1) {
-        c6 = 3;
-        throw arg1;
-      } else if (arg0 !== 2) {
-        c5 = 0;
+        let obj1 = { value: undefined, done: true };
+        return obj1;
       }
+    }
+    tmp3(closure_1);
+    obj1 = closure_0(first[6]);
+    await obj1.connectOrLurkStage(closure_0, closure_1);
+    if (1 === tmp7) {
       c5 = 0;
-      return arg1;
-    })();
+      tmp3(null);
+      c6 = 3;
+    } else if (arg0 === 1) {
+      c6 = 3;
+      throw arg1;
+    } else if (arg0 !== 2) {
+      c5 = 0;
+    }
+    return arg1;
   });
   const items2 = [first];
   const items3 = [
     first,
-    React.useCallback(function () {
+    noop.useCallback(function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {

@@ -1,33 +1,33 @@
 // discord_app/design/components/AlertModal/native/useAlertStore.native.tsx
 import markAccessibilityFocusDefault from "../../../../modules/a11y/native/markAccessibilityFocus.tsx";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import keys from "../../../../../_runtime/00560_keys.js";
-import { batchUpdates } from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 
-const require = arg1;
-keys = keys.create(() => ({ alerts: [] }));
-const result = require("set").fileFinishedImporting("design/components/AlertModal/native/useAlertStore.native.tsx");
+const require = fn;
+let module_560 = fn(560);
+module_560 = module_560.create(() => ({ alerts: [] }));
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/AlertModal/native/useAlertStore.native.tsx");
 
-export const useAlertStore = keys;
+export const useAlertStore = module_560;
 export const dismissAlerts = function dismissAlerts() {
-  const alerts = keys.getState().alerts;
+  const alerts = module_560.getState().alerts;
   const items = [[], []];
-  const tmp = callback(
-    alerts.reduce((arg0, dismissable) => {
+  const tmp = _slicedToArray(
+    alerts.reduce((acc, dismissable) => {
       let num = 0;
       if (false === dismissable.dismissable) {
         num = 1;
       }
-      let arr = arg0[num];
+      let arr = acc[num];
       arr = arr.push(dismissable);
-      return arg0;
+      return acc;
     }, items),
     2,
   );
   const first = tmp[0];
   const arr4 = tmp[1];
   first(1249).batchUpdates(() => {
-    closure_1_4.setState({ alerts: arr4 });
+    module_560.setState({ alerts: arr4 });
     const item = first.forEach((onDismiss) => {
       onDismiss = onDismiss.onDismiss;
       let onDismissResult;
@@ -42,8 +42,8 @@ export const dismissAlerts = function dismissAlerts() {
   }
 };
 export const dismissAlert = function dismissAlert(c6) {
-  const _require = c6;
-  let alerts = keys.getState().alerts;
+  _require = c6;
+  let alerts = module_560.getState().alerts;
   const found = alerts.find((key) => key.key === closure_0);
   if (null != found) {
     let tmp2 = 1 === alerts.length;
@@ -55,10 +55,12 @@ export const dismissAlert = function dismissAlert(c6) {
       }
       tmp2 = key === c6;
     }
-    require("../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
-      closure_1_4.setState((alerts) => {
+    require("ReactBatchUpdates").batchUpdates(() => {
+      module_560.setState((alerts) => {
+        const obj = { alerts: null };
         alerts = alerts.alerts;
-        return { alerts: alerts.filter((key) => key.key !== closure_0) };
+        obj.alerts = alerts.filter((key) => key.key !== closure_1_0);
+        return obj;
       });
       const onDismiss = found.onDismiss;
       if (onDismiss != null) {
@@ -68,26 +70,26 @@ export const dismissAlert = function dismissAlert(c6) {
     if (tmp2) {
       found(4907)();
     }
-    const obj = batchUpdates;
+    let obj = require("ReactBatchUpdates");
   }
 };
 export const openAlert = function openAlert(DeleteEventAlert, arg1, onCloseCallback, arg3) {
-  const _require = DeleteEventAlert;
+  _require = DeleteEventAlert;
   importDefault = arg1;
   dependencyMap = onCloseCallback;
   closure_3 = arg3;
-  if (0 === keys.getState().alerts.length) {
+  if (0 === module_560.getState().alerts.length) {
     markAccessibilityFocusDefault();
   }
-  require("../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
-    closure_1_4.setState((alerts) => {
+  require("ReactBatchUpdates").batchUpdates(() => {
+    module_560.setState((alerts) => {
       alerts = [...alerts.alerts];
-      const obj = { key: closure_0, node: closure_1, onDismiss: closure_2, dismissable: null };
-      let dismissable;
+      const obj = { key, node, onDismiss, dismissable: null };
+      dismissable = undefined;
       if (dismissable != null) {
         dismissable = dismissable.dismissable;
       }
-      obj[3] = dismissable;
+      obj.dismissable = dismissable;
       alerts[tmp] = obj;
       return { alerts };
     });

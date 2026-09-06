@@ -1,53 +1,45 @@
 // discord_app/modules/main_tabs_v2/native/ConnectionBanner.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import map from "../../../design/tokens/native/useToken.tsx";
-import _modDef4296 from "../../reanimated/ReanimatedRexport.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import _modDef672 from "../../../../_runtime/metro/00672__.js";
+import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
+import useToken from "../../../design/tokens/native/useToken.tsx";
+import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import LinearGradientDefault from "../../../../_runtime/04987_LinearGradient.js";
-import _isNativeReflectConstructDefault from "../../../../_runtime/05664__isNativeReflectConstruct.js";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_7 from "../../connectivity/native/ConnectivityIndicatorStateStore.tsx";
-import { ConnectivityIndicatorState as closure_8 } from "../../connectivity/native/ConnectivityIndicatorStateStore.tsx";
-import CONNECTION_BANNER_HEIGHT from "you_bar/YouBarConstants.tsx";
-import { AnalyticEvents } from "../../../Constants.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import _modDef5664 from "../../../../_runtime/metro/05664__.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
+import ConnectivityIndicatorStateStore from "../../connectivity/native/ConnectivityIndicatorStateStore.tsx";
 
-require = arg1;
+const ReanimatedRexportDefault = ReanimatedRexport;
+
+require = fn;
 function ConnectionBannerIcon(state) {
   state = state.state;
-  const tmp = callback3();
-  map;
+  const tmp = closure_21();
+  useToken;
   if (constants.WAITING_FOR_NETWORK === state) {
-    let obj = { style: null, children: null };
-    obj[0] = tmp.leadingSlot;
-    obj = { size: "small", color: null, style: null };
-    obj[1] = tmp6;
-    obj[2] = tmp.spinner;
-    obj[1] = callback2(closure_5, obj);
-    return callback2(closure_6, obj);
+    let obj = { style: tmp.leadingSlot, children: null };
+    obj = { size: "small", color: tmp6, style: tmp.spinner };
+    obj.children = closure_1_12(hasOwnProperty, obj);
+    return closure_1_12(timestampProducer, obj);
   } else if (tmp7.NO_CONNECTION === state) {
-    obj1 = { style: null, children: null };
-    obj1[0] = tmp.leadingSlot;
-    const obj2 = { size: "xs", color: null };
-    obj2[1] = tmp5(576).colors.INTERACTIVE_ICON_DEFAULT;
-    obj1[1] = callback2(tmp2(16397).ConnectionUnknownIcon, obj2);
-    return callback2(closure_6, obj1);
+    const obj1 = { style: tmp.leadingSlot, children: null };
+    const obj2 = { size: "xs", color: tmp5(576).colors.INTERACTIVE_ICON_DEFAULT };
+    obj1.children = closure_1_12(tmp2(16397).ConnectionUnknownIcon, obj2);
+    return closure_1_12(timestampProducer, obj1);
   } else if (tmp7.BACK_ONLINE === state) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.leadingSlot;
-    const obj3 = { size: "xs", color: null };
-    obj3[1] = tmp5(576).colors.ICON_FEEDBACK_POSITIVE;
-    obj[1] = callback2(tmp2(16399).ConnectionFineIcon, obj3);
-    return callback2(closure_6, obj);
+    obj = { style: tmp.leadingSlot, children: null };
+    const obj3 = { size: "xs", color: tmp5(576).colors.ICON_FEEDBACK_POSITIVE };
+    obj.children = closure_1_12(tmp2(16399).ConnectionFineIcon, obj3);
+    return closure_1_12(timestampProducer, obj);
   }
 }
 function ConnectionBannerContent(state) {
   state = state.state;
-  let obj = { style: callback3().content, children: null };
-  const items = [callback2(ConnectionBannerIcon, { state })];
+  let obj = { style: closure_21().content, children: null };
+  const items = [closure_1_12(ConnectionBannerIcon, { state })];
   let str = "text-muted";
   if (state === constants.BACK_ONLINE) {
     str = "text-feedback-positive";
@@ -63,19 +55,19 @@ function ConnectionBannerContent(state) {
     const intl3 = tmp4(1114).intl;
     stringResult = intl3.string(tmp4(1114).t.j8lYE2);
   }
-  obj[3] = stringResult;
-  items[1] = callback2(Text.Text, obj);
-  obj[1] = items;
-  return closure_13(closure_6, obj);
+  obj.children = stringResult;
+  items[1] = closure_1_12(Text_Text.Text, obj);
+  obj.children = items;
+  return map1(timestampProducer, obj);
 }
 function BackOnlineGlow(opacity) {
   let token;
-  const tmp = callback3();
+  const tmp = closure_21();
   let obj = token(4262);
-  token = obj.useToken(ThemesDefault.colors.ICON_FEEDBACK_POSITIVE);
+  token = obj.useToken(nativeDefault.colors.ICON_FEEDBACK_POSITIVE);
   let items = [token];
-  const memo = React.useMemo(() => {
-    const obj = closure_1_1(closure_1_2[14])(token);
+  const memo = noop.useMemo(() => {
+    const obj = _modDef672(token);
     const items = [obj.alpha(0).css(), , ,];
     const alphaResult = obj.alpha(0);
     items[1] = obj.alpha(0.1).css();
@@ -85,33 +77,28 @@ function BackOnlineGlow(opacity) {
     items[3] = obj.alpha(0.55).css();
     return items;
   }, items);
-  obj = { style: items1, pointerEvents: "none", children: null };
-  items1 = [tmp.glow, { opacity: opacity.progress }];
+  obj = { style: null, pointerEvents: "none", children: null };
+  const items1 = [tmp.glow, { opacity: opacity.progress }];
+  obj.style = items1;
   obj = {
     style: tmp.glow,
-    maskElement: callback2(LinearGradientDefault, {
-      style: tmp.glowMaskGradient,
-      colors: closure_14,
-      locations: closure_15,
-      start: closure_16,
-      end: closure_17,
-    }),
-    children: callback2(LinearGradientDefault, {
+    maskElement: closure_12(LinearGradientDefault, { style: tmp.glowMaskGradient, colors, locations, start, end }),
+    children: closure_12(LinearGradientDefault, {
       style: tmp.glowMaskGradient,
       colors: memo,
-      locations: closure_18,
-      start: closure_19,
-      end: closure_20,
+      locations: locations2,
+      start: start2,
+      end: end2,
     }),
   };
-  obj[2] = callback2(_isNativeReflectConstructDefault, obj);
-  return callback2(_modDef4296.View, obj);
+  obj.children = closure_12(_modDef5664, obj);
+  return closure_12(ReanimatedRexportDefault.View, obj);
 }
 function ConnectionBannerInner() {
-  let obj = _require(sharedValue[20]);
+  let obj = require("useYouBarMargins");
   const youBarBottomMargin = obj.useYouBarBottomMargin();
-  obj1 = _require(sharedValue[18]);
-  let items = [closure_7];
+  let obj1 = require("initialize");
+  let items = [ConnectivityIndicatorStateStore];
   const stateFromStores = obj1.useStateFromStores(items, () => state.getState());
   _require = tmp7;
   importDefault = tmp8;
@@ -121,10 +108,10 @@ function ConnectionBannerInner() {
   }
   let tmp2Result = tmp2(tmp3[15]);
   sharedValue = tmp2Result.useSharedValue(0);
-  const tmp = callback3();
+  const tmp = closure_21();
   const tmp6 = constants;
-  [tmp12, tmp13] = callback(sharedValue1.useState(tmp9), 2);
-  callback = tmp13;
+  [tmp12, tmp13] = _slicedToArray(sharedValue1.useState(tmp9), 2);
+  _slicedToArray = tmp13;
   tmp2Result = tmp2(tmp3[15]);
   sharedValue1 = tmp2Result.useSharedValue(0);
   if (tmp15) {
@@ -132,22 +119,22 @@ function ConnectionBannerInner() {
   }
   const items1 = [stateFromStores !== constants.HIDDEN, sharedValue1];
   const effect = obj4.useEffect(() => {
-    let obj = callback(sharedValue[21]);
+    let obj = spring;
     let num = 0;
-    if (callback) {
+    if (shouldShowBanner) {
       num = 1;
     }
     const fn = function n(arg0) {
       if (!tmp) {
-        closure_1_0(closure_1_2[15]).runOnJS(closure_3)(null);
-        const obj = closure_1_0(closure_1_2[15]);
+        closure_0(sharedValue[15]).runOnJS(setRenderState)(null);
+        const obj = closure_0(sharedValue[15]);
       }
     };
-    obj = { shouldShowBanner: callback, runOnJS: callback(sharedValue[15]).runOnJS, setRenderState: closure_3 };
+    obj = { shouldShowBanner, runOnJS: ReanimatedRexport.runOnJS, setRenderState };
     fn.__closure = obj;
     fn.__workletHash = 3065113239920;
-    fn.__initData = closure_1_25;
-    const result = sharedValue1.set(obj.withSpring(num, closure_1_10, "respect-motion-settings", fn));
+    fn.__initData = __initData;
+    const result = sharedValue1.set(obj.withSpring(num, YOU_BAR_SPRING_CONFIG, "respect-motion-settings", fn));
   }, items1);
   const items2 = [stateFromStores === constants.BACK_ONLINE, sharedValue];
   const effect1 = obj4.useEffect(() => {
@@ -155,57 +142,62 @@ function ConnectionBannerInner() {
     if (closure_1) {
       num = 1;
     }
-    const result = sharedValue.set(callback(sharedValue[21]).withSpring(num, closure_1_10));
+    const result = sharedValue.set(spring.withSpring(num, YOU_BAR_SPRING_CONFIG));
   }, items2);
-  const tmp11 = callback(sharedValue1.useState(tmp9), 2);
+  const tmp11 = _slicedToArray(sharedValue1.useState(tmp9), 2);
   tmp15 = null != tmp9 && tmp12 !== tmp9;
   class A {
     constructor() {
       obj = { transform: null, opacity: null };
-      obj = { translateY: (1 - closure_4.get()) * closure_1_9 };
+      obj = { translateY: (1 - closure_4.get()) * CONNECTION_BANNER_HEIGHT };
       items = [];
       items[0] = obj;
-      obj[0] = items;
-      obj[1] = closure_4.get();
+      obj.transform = items;
+      obj.opacity = closure_4.get();
       return obj;
     }
   }
   obj = { progress: sharedValue1, CONNECTION_BANNER_HEIGHT };
   A.__closure = obj;
   A.__workletHash = 13973493587548;
-  A.__initData = closure_26;
-  const animatedStyle = _require(sharedValue[15]).useAnimatedStyle(A);
-  obj = { pointerEvents: "none", style: items3, children: null };
-  items3 = [tmp.container, { height: youBarBottomMargin + CONNECTION_BANNER_HEIGHT }, animatedStyle];
+  A.__initData = __initData;
+  const animatedStyle = require("ReanimatedRexport").useAnimatedStyle(A);
+  obj = { pointerEvents: "none", style: null, children: null };
+  const items3 = [tmp.container, { height: youBarBottomMargin + CONNECTION_BANNER_HEIGHT }, animatedStyle];
+  obj.style = items3;
   let tmp21 = null;
   if (tmp12 === tmp6.BACK_ONLINE) {
-    obj1 = { progress: null };
-    obj1[0] = sharedValue;
-    tmp21 = callback2(BackOnlineGlow, obj1);
+    obj1 = { progress: sharedValue };
+    tmp21 = closure_12(BackOnlineGlow, obj1);
   }
   const items4 = [tmp21];
   let tmp24 = null;
   if (null != tmp12) {
-    const obj2 = { state: null };
-    obj2[0] = tmp12;
-    tmp24 = callback2(ConnectionBannerContent, obj2);
+    const obj2 = { state: tmp12 };
+    tmp24 = closure_12(ConnectionBannerContent, obj2);
   }
   items4[1] = tmp24;
-  obj[2] = items4;
-  return closure_13(importDefault(sharedValue[15]).View, obj);
+  obj.children = items4;
+  return closure_13(require("ReanimatedRexport").View, obj);
 }
-({ ActivityIndicator: c5, View: closure_6 } = get_ActivityIndicator);
-CONNECTION_BANNER_HEIGHT = CONNECTION_BANNER_HEIGHT.CONNECTION_BANNER_HEIGHT;
-const YOU_BAR_SPRING_CONFIG = CONNECTION_BANNER_HEIGHT.YOU_BAR_SPRING_CONFIG;
+get_ActivityIndicator = fn(17);
+({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+const constants = fn(13686).ConnectivityIndicatorState;
+const YouBarConstants = fn(15098);
+const CONNECTION_BANNER_HEIGHT = YouBarConstants.CONNECTION_BANNER_HEIGHT;
+const YOU_BAR_SPRING_CONFIG = YouBarConstants.YOU_BAR_SPRING_CONFIG;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-let closure_14 = ["transparent", "black", "black", "transparent"];
-let closure_15 = [0, 0.25, 0.75, 1];
-let closure_16 = { x: 0, y: 0.5 };
-let closure_17 = { x: 1, y: 0.5 };
-let closure_18 = [0, 0.4, 0.75, 1];
-let closure_19 = { x: 0, y: 0 };
-let closure_20 = { x: 0, y: 1 };
-createCacheKey = {
+const colors = ["transparent", "black", "black", "transparent"];
+const locations = [0, 0.25, 0.75, 1];
+const start = { x: 0, y: 0.5 };
+const end = { x: 1, y: 0.5 };
+const locations2 = [0, 0.4, 0.75, 1];
+const start2 = { x: 0, y: 0 };
+const end2 = { x: 0, y: 1 };
+fn(4560);
+let createStyles = {
   container: { position: "absolute", left: 0, right: 0, bottom: 0 },
   glow: { position: "absolute", top: 0, bottom: 0, left: 0, right: 0 },
   glowMaskGradient: { flex: 1 },
@@ -213,7 +205,7 @@ createCacheKey = {
   leadingSlot: null,
   spinner: null,
 };
-createCacheKey = {
+const rect = {
   position: "absolute",
   top: 0,
   left: 0,
@@ -222,37 +214,39 @@ createCacheKey = {
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "center",
-  gap: ThemesDefault.space.PX_8,
-  paddingHorizontal: ThemesDefault.space.PX_12,
+  gap: nativeDefault.space.PX_8,
+  paddingHorizontal: nativeDefault.space.PX_12,
 };
-createCacheKey[3] = createCacheKey;
-createCacheKey[4] = { width: 16, height: 16, alignItems: "center", justifyContent: "center" };
+createStyles.content = rect;
+createStyles.leadingSlot = { width: 16, height: 16, alignItems: "center", justifyContent: "center" };
+createStyles = { transform: null };
 let items = [{ scale: 0.8 }];
-createCacheKey[5] = { transform: items };
-let closure_21 = createCacheKey.createStyles(createCacheKey);
+createStyles.transform = items;
+createStyles.spinner = createStyles;
+let closure_21 = createStyles.createStyles(createStyles);
 let closure_25 = {
   code: "function ConnectionBannerTsx1(finished){const{shouldShowBanner,runOnJS,setRenderState}=this.__closure;if(finished===true&&!shouldShowBanner){runOnJS(setRenderState)(null);}}",
 };
-let closure_26 = {
+const __initData = {
   code: "function ConnectionBannerTsx2(){const{progress,CONNECTION_BANNER_HEIGHT}=this.__closure;return{transform:[{translateY:(1-progress.get())*CONNECTION_BANNER_HEIGHT}],opacity:progress.get()};}",
 };
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/ConnectionBanner.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/ConnectionBanner.tsx");
 
 export default function ConnectionBanner() {
   const config = stateFromStores(13687).useConfig({ location: "ConnectionBanner" });
   const hidden = config.hidden;
   stateFromStores = undefined;
-  dependencyMap = undefined;
   let obj = stateFromStores(13687);
-  const items = [closure_7];
+  const items = [ConnectivityIndicatorStateStore];
   stateFromStores = hidden(504).useStateFromStores(items, () => state.getState());
-  dependencyMap = React.useRef(null);
+  dependencyMap = noop.useRef(null);
   const items1 = [stateFromStores, hidden];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     const current = ref.current;
     ref.current = stateFromStores;
     if (null != current) {
-      if (current === closure_1_8.HIDDEN) {
+      if (current === constants.HIDDEN) {
         if (tmp !== tmp7.HIDDEN) {
           if (tmp !== tmp7.BACK_ONLINE) {
             let str = "hidden";
@@ -263,10 +257,8 @@ export default function ConnectionBanner() {
               }
               str = str2;
             }
-            let obj = stateFromStores(ref[19]);
-            obj = { connection_indicator_type: null };
-            obj[0] = str;
-            obj.track(closure_1_11.CONNECTION_INDICATOR_SHOWN, obj);
+            const obj = { connection_indicator_type: str };
+            obj.track(AnalyticEvents.CONNECTION_INDICATOR_SHOWN, obj);
           }
         }
       }
@@ -276,7 +268,7 @@ export default function ConnectionBanner() {
   if (null != config.timeoutMs) {
     tmp4 = null;
     if (!hidden) {
-      tmp4 = callback2(ConnectionBannerInner, {});
+      tmp4 = closure_12(ConnectionBannerInner, {});
     }
   }
   return tmp4;

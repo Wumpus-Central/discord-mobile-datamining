@@ -1,38 +1,38 @@
 // discord_app/modules/public_guilds/native/components/EnableCommunityModal/EnableCommunitySharedNavigation.tsx
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../../../guild_settings/GuildSettingsStore.tsx";
-import { GuildFeatures } from "../../../../../Constants.tsx";
-import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import DispatcherDefault from "../../../../../Dispatcher.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
+import GuildSettingsStore from "../../../../guild_settings/GuildSettingsStore.tsx";
 
-const require = arg1;
-({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
-({ jsx: closure_8, jsxs: c9 } = jsxProd);
-let closure_10 = createCacheKey.createStyles({
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
+let GuildFeatures = fn(1074).GuildFeatures;
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+let createStyles = fn(4560);
+let closure_10 = createStyles.createStyles({
   container: { flex: 1, height: "100%" },
   modal: { height: "100%", flex: 1, justifyContent: "space-between" },
   button: { flexGrow: 0, paddingLeft: 16, paddingTop: 16, paddingRight: 16 },
 });
-createCacheKey = { STEP_1: "STEP_1", STEP_2: "STEP_2", STEP_3: "STEP_3" };
-const result = require("set").fileFinishedImporting(
+createStyles = { STEP_1: "STEP_1", STEP_2: "STEP_2", STEP_3: "STEP_3" };
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/public_guilds/native/components/EnableCommunityModal/EnableCommunitySharedNavigation.tsx",
 );
 
-export const EnableCommunityModalSteps = createCacheKey;
+export const EnableCommunityModalSteps = createStyles;
 export const EnableCommunityModalScreen = function EnableCommunityModalScreen(arg0) {
   ({ onSuccess: require, buttonText, currentStep: importDefault, headerRef } = arg0);
-  let guild;
-  let hasItem;
   closure_5 = undefined;
   let isScreenReaderEnabled;
   GuildFeatures = undefined;
   ({ disableNextStep, children } = arg0);
-  const tmp = callback2();
-  let obj = require(headerRef[6]);
+  const tmp = closure_10();
+  let obj = require("initialize");
   const items = [isScreenReaderEnabled];
-  guild = obj.useStateFromStoresObject(items, () => isScreenReaderEnabled.getProps()).guild;
-  hasItem = undefined;
+  const guild = obj.useStateFromStoresObject(items, () => isScreenReaderEnabled.getProps()).guild;
+  let hasItem;
   if (guild != null) {
     const features = guild.features;
     hasItem = features.has(GuildFeatures.COMMUNITY);
@@ -49,8 +49,8 @@ export const EnableCommunityModalScreen = function EnableCommunityModalScreen(ar
         if (null != headerRef) {
           const _setTimeout = setTimeout;
           const timeout = setTimeout(() => {
-            let obj = callback(closure_1_2[9]);
-            obj = { ref: closure_2 };
+            require("setAccessibilityFocus");
+            const obj = { ref };
             return obj.setAccessibilityFocus(obj);
           }, 100);
           return () => clearTimeout(closure_0);
@@ -61,49 +61,43 @@ export const EnableCommunityModalScreen = function EnableCommunityModalScreen(ar
   const items2 = [hasItem];
   const effect1 = guild.useEffect(() => {
     if (hasItem) {
-      closure_1_1(headerRef[10]).wait(() => callback(table[11]).close());
-      const obj = closure_1_1(headerRef[10]);
+      DispatcherDefault.wait(() => closure_1_1(headerRef[11]).close());
     }
   }, items2);
   if (null == guild) {
-    let tmp12Result = callback(tmp2(tmp3[12]).SceneLoadingIndicator, {});
+    let tmp12Result = closure_8(tmp2(tmp3[12]).SceneLoadingIndicator, {});
   } else {
-    obj = { style: null, children: null };
-    obj[0] = tmp.container;
-    obj = { bottom: true, style: null, children: null };
-    obj[1] = tmp.modal;
-    obj1 = { style: null, children: null };
-    obj1[0] = { flexGrow: 1 };
-    obj1[1] = children;
-    const items3 = [callback(hasItem, obj1)];
-    const obj2 = { style: null, children: null };
-    obj2[0] = tmp.button;
+    obj = { style: tmp.container, children: null };
+    obj = { bottom: true, style: tmp.modal, children: null };
+    const obj1 = { style: { flexGrow: 1 }, children };
+    const items3 = [closure_8(hasItem, obj1)];
+    const obj2 = { style: tmp.button, children: null };
     if (buttonText == null) {
       const intl = tmp2(tmp3[15]).intl;
       buttonText = intl.string(tmp2(tmp3[15]).t.PDTjLN);
     }
-    const obj3 = { variant: "primary", grow: true, text: null, onPress: null, disabled: null };
-    obj3[2] = buttonText;
-    obj3[3] = function onPress() {
-      if (null != guild) {
-        if (closure_1_11.STEP_1 === closure_1) {
-          arr = arr.push(tmp3.STEP_2);
-        } else if (tmp3.STEP_2 === tmp2) {
-          arr = arr.push(tmp3.STEP_3);
-        } else if (closure_0 != null) {
-          tmp4(tmp);
+    const obj3 = {
+      variant: "primary",
+      grow: true,
+      text: buttonText,
+      onPress() {
+        if (null != guild) {
+          if (createStyles.STEP_1 === importDefault) {
+            closure_5.push(tmp3.STEP_2);
+          } else if (tmp3.STEP_2 === tmp2) {
+            closure_5.push(tmp3.STEP_3);
+          } else if (require != null) {
+            tmp4(tmp);
+          }
         }
-      }
+      },
+      disabled: disableNextStep,
     };
-    obj3[4] = disableNextStep;
-    obj2[1] = callback(tmp2(tmp3[14]).Button, obj3);
-    items3[1] = callback(hasItem, obj2);
-    obj[2] = items3;
-    obj[1] = closure_9(tmp2(tmp3[13]).SafeAreaPaddingView, obj);
+    obj2.children = closure_8(tmp2(tmp3[14]).Button, obj3);
+    items3[1] = closure_8(hasItem, obj2);
+    obj.children = items3;
+    obj.children = closure_9(tmp2(tmp3[13]).SafeAreaPaddingView, obj);
     tmp12Result = tmp12(closure_5, obj);
-    const tmp13 = closure_5;
-    const tmp14 = closure_9;
-    const tmp15 = hasItem;
   }
   return tmp12Result;
 };

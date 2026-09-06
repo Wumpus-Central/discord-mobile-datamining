@@ -1,17 +1,15 @@
 // discord_app/modules/message_request/getRestrictedHiddenMediaCount.tsx
-import set from "../../../_runtime/00002_set.js";
-import getStickerExtensionFromFormatType from "../stickers/StickersUtils.tsx";
-import getForwardInfo from "../forwarding/formatMessageForwards.tsx";
+import StickersUtils from "../stickers/StickersUtils.tsx";
+import formatMessageForwards from "../forwarding/formatMessageForwards.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-let result = set.fileFinishedImporting("modules/message_request/getRestrictedHiddenMediaCount.tsx");
+let result = size.fileFinishedImporting("modules/message_request/getRestrictedHiddenMediaCount.tsx");
 
 export default function getRestrictedHiddenMediaCount(message) {
-  const result = getForwardInfo.maybeCreateSingleForwardForMessage(message);
+  const result = formatMessageForwards.maybeCreateSingleForwardForMessage(message);
   if (null != result) {
     message = result.messageSnapshot.message;
   }
   const sum = message.attachments.length + message.embeds.length;
-  const obj = getForwardInfo;
-  const tmp = require;
-  return sum + getStickerExtensionFromFormatType.getMessageStickers(message).length;
+  return sum + StickersUtils.getMessageStickers(message).length;
 }

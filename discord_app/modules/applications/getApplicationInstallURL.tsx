@@ -1,9 +1,9 @@
 // discord_app/modules/applications/getApplicationInstallURL.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
+import Constants from "../../Constants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const Routes = ME.Routes;
-let result = set.fileFinishedImporting("modules/applications/getApplicationInstallURL.tsx");
+const Routes = Constants.Routes;
+let result = size.fileFinishedImporting("modules/applications/getApplicationInstallURL.tsx");
 
 export const getActivityLaunchURL = function getActivityLaunchURL(applicationId) {
   ({ customId, referrerId, linkId } = applicationId);

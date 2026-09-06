@@ -1,10 +1,13 @@
 // discord_app/modules/quests/lib/analytics/ContentImpressionTrackerHooks.tsx
-import set from "ContentImpressionTracker.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../QuestStore.tsx";
+import AdCreativeType from "../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
+import AnalyticsTypes from "AnalyticsTypes.tsx";
+import ContentImpressionTracker from "ContentImpressionTracker.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import QuestStore from "../../QuestStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/quests/lib/analytics/ContentImpressionTrackerHooks.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/lib/analytics/ContentImpressionTrackerHooks.tsx");
 
 export const useAdContentImpressionTrackerProps = function useAdContentImpressionTrackerProps(questOrQuests) {
   questOrQuests = undefined;
@@ -15,9 +18,8 @@ export const useAdContentImpressionTrackerProps = function useAdContentImpressio
   if ("adContentId" in questOrQuests) {
     adContentId = questOrQuests.adContentId;
   }
-  let memo = adContentId;
   let items = [questOrQuests, adContentId];
-  memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     if (null != memo) {
       const items = [tmp];
       let items1 = items;
@@ -39,27 +41,27 @@ export const useAdContentImpressionTrackerProps = function useAdContentImpressio
     adCreativeType = questOrQuests.adCreativeType;
   }
   let items1 = [memo, questOrQuests.questContent, adCreativeType];
-  return React.useMemo(() => {
+  return noop.useMemo(() => {
     const items = [...memo];
     const sorted = items.sort();
     const combined = "" + sorted.join("_") + "_" + questOrQuests.questContent;
-    const QUEST = questOrQuests(adCreativeType[2]).AdCreativeType.QUEST;
+    const QUEST = AdCreativeType.AdCreativeType.QUEST;
     return { adContentIds: memo, adCreativeType, key: combined };
   }, items1);
 };
 export const useQuestStatusChanged = function useQuestStatusChanged(adContentIds) {
   adContentIds = adContentIds.adContentIds;
   const adCreativeType = adContentIds.adCreativeType;
-  const items = [closure_4];
+  const items = [QuestStore];
   const items1 = [adContentIds, adCreativeType];
   stateFromStores = adContentIds(stateFromStores[3]).useStateFromStores(
     items,
     () => {
       let quest = null;
-      if (adCreativeType === adContentIds(stateFromStores[2]).AdCreativeType.QUEST) {
+      if (adCreativeType === AdCreativeType.AdCreativeType.QUEST) {
         quest = null;
         if (1 === adContentIds.length) {
-          quest = closure_1_4.getQuest(tmp2[0]);
+          quest = QuestStore.getQuest(tmp2[0]);
         }
       }
       return quest;
@@ -67,21 +69,20 @@ export const useQuestStatusChanged = function useQuestStatusChanged(adContentIds
     items1,
   );
   const items2 = [stateFromStores];
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     let questStatus = null;
     if (null != stateFromStores) {
-      questStatus = adContentIds(stateFromStores[4]).getQuestStatus(tmp);
-      const obj = adContentIds(stateFromStores[4]);
+      questStatus = AnalyticsTypes.getQuestStatus(tmp);
     }
     return questStatus;
   }, items2);
   return memo !== adCreativeType(stateFromStores[5])(memo);
 };
 export const useQuestImpressionRef = function useQuestImpressionRef() {
-  return React.useContext(set.QuestImpressionContext);
+  return noop.useContext(ContentImpressionTracker.QuestImpressionContext);
 };
 export const useQuestImpression = function useQuestImpression() {
-  const context = React.useContext(set.QuestImpressionContext);
+  const context = noop.useContext(ContentImpressionTracker.QuestImpressionContext);
   let current;
   if (context != null) {
     current = context.current;
@@ -89,7 +90,7 @@ export const useQuestImpression = function useQuestImpression() {
   return current;
 };
 export const useQuestImpressionId = function useQuestImpressionId() {
-  const context = React.useContext(set.QuestImpressionContext);
+  const context = noop.useContext(ContentImpressionTracker.QuestImpressionContext);
   let current;
   if (context != null) {
     current = context.current;
@@ -101,9 +102,9 @@ export const useQuestImpressionId = function useQuestImpressionId() {
   return id;
 };
 export const useGetQuestImpressionId = function useGetQuestImpressionId() {
-  context = React.useContext(context(11487).QuestImpressionContext);
+  const context = noop.useContext(ContentImpressionTracker.QuestImpressionContext);
   const items = [context];
-  return React.useCallback(() => {
+  return noop.useCallback(() => {
     let id;
     if (context != null) {
       const current = context.current;

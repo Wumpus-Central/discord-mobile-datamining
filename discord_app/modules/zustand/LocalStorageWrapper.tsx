@@ -1,11 +1,11 @@
 // discord_app/modules/zustand/LocalStorageWrapper.tsx
-import set from "../../../_runtime/00002_set.js";
 import Storage2 from "../../../discord_common/js/packages/storage/Storage.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 const frozen = Object.freeze({
   getItem(arg0) {
     const Storage = Storage2.Storage;
-    let value = Storage.get(arg0);
+    value = Storage.get(arg0);
     if (value == null) {
       value = null;
     }
@@ -20,6 +20,6 @@ const frozen = Object.freeze({
     return Storage.remove(arg0);
   },
 });
-const result = set.fileFinishedImporting("modules/zustand/LocalStorageWrapper.tsx");
+const result = size.fileFinishedImporting("modules/zustand/LocalStorageWrapper.tsx");
 
 export default frozen;

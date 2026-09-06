@@ -1,21 +1,21 @@
 // discord_app/modules/guild/native/GuildIconUploader.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import AccessibilityAnnouncer from "../../../design/shared.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
-import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
-import registerAssetDefault from "../../../../_runtime/11801_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/11802_registerAsset.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../user_settings/ThemeStore.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
-import importAllResult from "../../../../_runtime/00019_noop.js";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
+import shared from "../../../design/shared.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
+import _modDef11801 from "../../../../_runtime/metro/11801__.js";
+import _modDef11802 from "../../../../_runtime/metro/11802__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
+import ThemeStore from "../../user_settings/ThemeStore.tsx";
 
-require = arg1;
-({ View: c3, Image: c4 } = get_ActivityIndicator);
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = {
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: c3, Image: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+fn(4560);
+let createStyles = {
   container: { width: 82, height: 82, marginTop: 4 },
   guildPlaceholder: null,
   guildIcon: null,
@@ -26,10 +26,10 @@ createCacheKey = {
   emptyGuildIconText: null,
   uploadIcon: null,
 };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { width: 82, height: 82, borderRadius: 41 };
-createCacheKey[3] = {
+createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+createStyles.guildPlaceholder = createStyles;
+createStyles.guildIcon = { width: 82, height: 82, borderRadius: 41 };
+createStyles.iconWrapperBorder = {
   position: "absolute",
   top: -8,
   right: -8,
@@ -39,131 +39,105 @@ createCacheKey[3] = {
   justifyContent: "center",
   alignItems: "center",
 };
-createCacheKey[4] = {
+let size = {
   width: 32,
   height: 32,
-  borderRadius: ThemesDefault.radii.lg,
+  borderRadius: nativeDefault.radii.lg,
   justifyContent: "center",
   alignItems: "center",
-  backgroundColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE,
+  backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
 };
-let obj1 = {
-  width: 32,
-  height: 32,
-  borderRadius: ThemesDefault.radii.lg,
-  justifyContent: "center",
-  alignItems: "center",
-  backgroundColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE,
-};
-createCacheKey[5] = {
+createStyles.filledIconWrapper = size;
+const size1 = {
   position: "absolute",
   top: -4,
   right: -4,
   width: 32,
   height: 32,
-  borderRadius: ThemesDefault.radii.lg,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
+  borderRadius: nativeDefault.radii.lg,
+  backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
   justifyContent: "center",
   alignItems: "center",
 };
-let obj2 = {
-  position: "absolute",
-  top: -4,
-  right: -4,
-  width: 32,
-  height: 32,
-  borderRadius: ThemesDefault.radii.lg,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND,
-  justifyContent: "center",
-  alignItems: "center",
-};
-createCacheKey[6] = {
+createStyles.emptyIconWrapper = size1;
+createStyles.emptyGuildIcon = {
   borderWidth: 2,
   borderStyle: "dashed",
   justifyContent: "center",
   alignItems: "center",
-  borderColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT,
+  borderColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT,
 };
-createCacheKey[7] = { textAlign: "center", lineHeight: 16, paddingTop: 4 };
-createCacheKey[8] = { height: 16, width: 16 };
-let closure_8 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
-const PureComponent = importAllResult.PureComponent;
+createStyles.emptyGuildIconText = { textAlign: "center", lineHeight: 16, paddingTop: 4 };
+createStyles.uploadIcon = { height: 16, width: 16 };
+let closure_8 = createStyles.createLegacyClassComponentStyles(createStyles);
+const PureComponent = noop.PureComponent;
 class GuildIconUploader extends PureComponent {}
 const prototype = GuildIconUploader.prototype;
 prototype["renderIcon"] = function renderIcon() {
-  const tmp = callback3(this.context);
+  const tmp = closure_8(this.context);
   const icon = this.props.icon;
   if (null != icon) {
     let obj = { style: null, source: null };
     const items = [,];
     ({ guildIcon: arr2[0], guildPlaceholder: arr2[1] } = tmp);
-    obj[0] = items;
-    obj = { uri: null };
-    obj[0] = icon;
-    obj[1] = obj;
-    let tmp6Result = callback(closure_4, obj);
+    obj.style = items;
+    obj = { uri: icon };
+    obj.source = obj;
+    let tmp6Result = timestampProducer(React4, obj);
   } else {
-    obj1 = { style: null, children: null };
+    const obj1 = { style: null, children: null };
     const items1 = [,];
     ({ guildIcon: arr3[0], emptyGuildIcon: arr3[1] } = tmp);
-    obj1[0] = items1;
-    if (obj6.isThemeDark(theme.theme)) {
+    obj1.style = items1;
+    if (obj6.isThemeDark(ThemeStore.theme)) {
       let tmp13Result = tmp13(11799);
     } else {
       tmp13Result = tmp13(11800);
     }
-    obj = { source: null };
-    obj[0] = tmp13Result;
-    const items2 = [callback(closure_4, obj)];
-    const obj2 = { style: null, variant: "text-xs/bold", color: "text-default", children: null };
-    obj2[0] = tmp.emptyGuildIconText;
+    obj = { source: tmp13Result };
+    const items2 = [timestampProducer(React4, obj)];
+    const obj2 = { style: tmp.emptyGuildIconText, variant: "text-xs/bold", color: "text-default", children: null };
     const intl = tmp10(1114).intl;
-    obj6 = AccessibilityAnnouncer;
-    const tmp6 = closure_7;
-    const tmp7 = closure_3;
-    const tmp9 = closure_4;
-    obj2[3] = intl.string(getSystemLocale.t["3UB9ad"]).toUpperCase();
-    items2[1] = callback(Text.Text, obj2);
-    obj1[1] = items2;
+    obj6 = shared;
+    const tmp6 = React5;
+    const tmp7 = React3;
+    obj2.children = intl.string(util.t["3UB9ad"]).toUpperCase();
+    items2[1] = timestampProducer(Text_Text.Text, obj2);
+    obj1.children = items2;
     tmp6Result = tmp6(tmp7, obj1);
-    const str = intl.string(getSystemLocale.t["3UB9ad"]);
+    const str = intl.string(util.t["3UB9ad"]);
   }
   return tmp6Result;
 };
 prototype["renderUpload"] = function renderUpload() {
-  const tmp = callback3(this.context);
+  const tmp = closure_8(this.context);
   const props = this.props;
   const iconBackgroundColor = props.iconBackgroundColor;
   if (null != props.icon) {
     let obj = { style: null, children: null };
     const items = [tmp.iconWrapperBorder];
-    obj = { backgroundColor: null };
-    obj[0] = iconBackgroundColor;
+    obj = { backgroundColor: iconBackgroundColor };
     items[1] = obj;
-    obj[0] = items;
-    obj1 = { style: null, children: null };
-    obj1[0] = tmp.filledIconWrapper;
+    obj.style = items;
+    const obj1 = { style: tmp.filledIconWrapper, children: null };
     const obj2 = { style: null, source: null };
     const items1 = [tmp.uploadIcon];
-    const obj3 = { tintColor: null };
-    obj3[0] = iconBackgroundColor;
+    const obj3 = { tintColor: iconBackgroundColor };
     items1[1] = obj3;
-    obj2[0] = items1;
-    obj2[1] = registerAssetDefault;
-    obj1[1] = tmp2(closure_4, obj2);
-    obj[1] = tmp2(tmp3, obj1);
+    obj2.style = items1;
+    obj2.source = _modDef11801;
+    obj1.children = tmp2(React4, obj2);
+    obj.children = tmp2(tmp3, obj1);
   } else {
-    obj = { style: null, children: null };
-    obj[0] = tmp.emptyIconWrapper;
-    const obj4 = { source: null };
-    obj4[0] = registerAssetDefault2;
-    obj[1] = tmp2(closure_4, obj4);
+    obj = { style: tmp.emptyIconWrapper, children: null };
+    const obj4 = { source: _modDef11802 };
+    obj.children = tmp2(React4, obj4);
   }
-  return closure_6(closure_3, obj);
+  return timestampProducer(React3, obj);
 };
 prototype["render"] = function render() {
   const self = this;
-  const tmp = callback3(this.context);
+  const tmp = closure_8(this.context);
   ({ style, onPress, icon } = this.props);
   if (null != icon) {
     const intl2 = tmp3(1114).intl;
@@ -173,22 +147,17 @@ prototype["render"] = function render() {
     stringResult = intl.string(tmp3(1114).t["MsUY/S"]);
   }
   let obj = { accessibilityRole: "button", accessibilityLabel: stringResult, onPress, children: null };
-  obj = { style: items, children: null };
-  items = [tmp.container, style];
+  obj = { style: null, children: null };
+  const items = [tmp.container, style];
+  obj.style = items;
   obj = { style: tmp.guildIcon, children: self.renderIcon() };
-  const items1 = [closure_6(closure_3, obj), self.renderUpload()];
-  obj[1] = items1;
-  obj[3] = callback2(closure_3, obj);
-  return closure_6(PressableBase.PressableOpacity, obj);
+  const items1 = [timestampProducer(React3, obj), self.renderUpload()];
+  obj.children = items1;
+  obj.children = React5(React3, obj);
+  return timestampProducer(Pressables.PressableOpacity, obj);
 };
-GuildIconUploader.contextType = require("ManaContext").ThemeContext;
-let obj3 = {
-  borderWidth: 2,
-  borderStyle: "dashed",
-  justifyContent: "center",
-  alignItems: "center",
-  borderColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT,
-};
-const result = require("set").fileFinishedImporting("modules/guild/native/GuildIconUploader.tsx");
+GuildIconUploader.contextType = fn(4271).ThemeContext;
+size = fn(2);
+const result = size.fileFinishedImporting("modules/guild/native/GuildIconUploader.tsx");
 
 export default GuildIconUploader;

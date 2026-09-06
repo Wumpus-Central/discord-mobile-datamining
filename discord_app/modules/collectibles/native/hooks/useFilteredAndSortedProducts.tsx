@@ -1,44 +1,36 @@
 // discord_app/modules/collectibles/native/hooks/useFilteredAndSortedProducts.tsx
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../../stores/UserStore.tsx";
-import { CollectiblesMobileShopScreen as closure_5 } from "../../CollectiblesShopConstants.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import UserStore from "../../../../stores/UserStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
-  "modules/collectibles/native/hooks/useFilteredAndSortedProducts.tsx",
-);
+const require = fn;
+let closure_5 = fn(1076).CollectiblesMobileShopScreen;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/native/hooks/useFilteredAndSortedProducts.tsx");
 
 export const useFilteredAndSortedProducts = function useFilteredAndSortedProducts(products) {
   products = products.products;
-  let _require = products;
   const maxProducts = products.maxProducts;
-  importDefault = maxProducts;
   const bypassAndroidUnsyncedFilter = products.bypassAndroidUnsyncedFilter;
-  let badBundleFilter;
-  let androidUnsyncedFilter;
   let callback;
-  let purchasedProductsSort;
-  badBundleFilter = _require(bypassAndroidUnsyncedFilter[3]).useBadBundleFilter();
-  let obj = _require(bypassAndroidUnsyncedFilter[3]);
-  androidUnsyncedFilter = _require(bypassAndroidUnsyncedFilter[4]).useAndroidUnsyncedFilter();
-  _require = undefined;
-  importDefault = undefined;
-  _require = tmp3;
-  const obj2 = _require(bypassAndroidUnsyncedFilter[4]);
+  const badBundleFilter = products(bypassAndroidUnsyncedFilter[3]).useBadBundleFilter();
+  let obj = products(bypassAndroidUnsyncedFilter[3]);
+  const androidUnsyncedFilter = products(bypassAndroidUnsyncedFilter[4]).useAndroidUnsyncedFilter();
+  closure_129_0 = tmp3;
+  const obj2 = products(bypassAndroidUnsyncedFilter[4]);
   let items = [androidUnsyncedFilter];
-  const stateFromStores = _require(bypassAndroidUnsyncedFilter[6]).useStateFromStores(items, () =>
+  const stateFromStores = products(bypassAndroidUnsyncedFilter[6]).useStateFromStores(items, () =>
     androidUnsyncedFilter.getCurrentUser(),
   );
-  const obj3 = _require(bypassAndroidUnsyncedFilter[6]);
-  const canUseShopDiscountsResult = importDefault(bypassAndroidUnsyncedFilter[7]).canUseShopDiscounts(stateFromStores);
-  importDefault = canUseShopDiscountsResult;
+  const obj3 = products(bypassAndroidUnsyncedFilter[6]);
+  const canUseShopDiscountsResult = maxProducts(bypassAndroidUnsyncedFilter[7]).canUseShopDiscounts(stateFromStores);
+  closure_129_1 = canUseShopDiscountsResult;
   const items1 = [products.screen === callback.ORBS, canUseShopDiscountsResult];
   callback = badBundleFilter.useCallback((arr) => {
     let found = arr;
-    if (closure_0) {
+    if (products) {
       found = arr.filter((product) => {
-        let obj = closure_1_0(closure_1_2[8]);
-        obj = { product, hasShopDiscount: closure_1 };
+        products(bypassAndroidUnsyncedFilter[8]);
+        const obj = { product, hasShopDiscount };
         return null != obj.getProductOrbPrice(obj);
       });
     }
@@ -52,13 +44,13 @@ export const useFilteredAndSortedProducts = function useFilteredAndSortedProduct
       fn = androidUnsyncedFilter;
     }
     const items = [fn, badBundleFilter, callback];
-    return items.reduce((arg0, arg1) => arg1(arg0), closure_0);
+    return items.reduce((acc, fn) => fn(acc), products);
   }, items2);
-  const obj4 = importDefault(bypassAndroidUnsyncedFilter[7]);
-  purchasedProductsSort = _require(bypassAndroidUnsyncedFilter[5]).usePurchasedProductsSort(memo);
+  const obj4 = maxProducts(bypassAndroidUnsyncedFilter[7]);
+  const purchasedProductsSort = products(bypassAndroidUnsyncedFilter[5]).usePurchasedProductsSort(memo);
   const items3 = [purchasedProductsSort, maxProducts];
   return badBundleFilter.useMemo(() => {
-    if (null != c1) {
+    if (null != maxProducts) {
       let substr = purchasedProductsSort.slice(0, tmp);
     } else {
       substr = purchasedProductsSort;

@@ -1,5 +1,5 @@
 // discord_app/lib/ModalRegistry.tsx
-import set2 from "../../_runtime/00002_set.js";
+import size from "../../_runtime/metro/00002__.js";
 
 class ModalRegistry {
   constructor(arg0) {
@@ -10,8 +10,6 @@ class ModalRegistry {
       const iter = modals[Symbol.iterator]();
       while (iter !== undefined) {
         let stores = iter.next().stores;
-        let tmp = stores;
-        let tmp2 = stores;
         for (const item10016 of stores) {
           let addResult = set.add(item10016);
           continue;
@@ -42,24 +40,19 @@ prototype["getOpenModal"] = function getOpenModal() {
       props = {};
     }
     const obj = {
-      key: null,
-      component: null,
-      props: null,
-      closable: null,
-      backdropInstant: null,
-      backdropStyle: null,
-      disableAnimation: null,
+      key: findIndexResult,
+      component: this.modals[findIndexResult].getComponent(),
+      props,
+      closable: null == this.modals[findIndexResult].closable || this.modals[findIndexResult].closable,
+      backdropInstant:
+        null != this.modals[findIndexResult].backdropInstant && this.modals[findIndexResult].backdropInstant,
+      backdropStyle: this.modals[findIndexResult].backdropStyle,
+      disableAnimation:
+        null != this.modals[findIndexResult].disableAnimation && this.modals[findIndexResult].disableAnimation,
     };
-    obj[0] = findIndexResult;
-    obj[1] = this.modals[findIndexResult].getComponent();
-    obj[2] = props;
-    obj[3] = null == this.modals[findIndexResult].closable || this.modals[findIndexResult].closable;
-    obj[4] = null != this.modals[findIndexResult].backdropInstant && this.modals[findIndexResult].backdropInstant;
-    obj[5] = this.modals[findIndexResult].backdropStyle;
-    obj[6] = null != this.modals[findIndexResult].disableAnimation && this.modals[findIndexResult].disableAnimation;
     return obj;
   }
 };
-const result = set2.fileFinishedImporting("lib/ModalRegistry.tsx");
+const result = size.fileFinishedImporting("lib/ModalRegistry.tsx");
 
 export default ModalRegistry;

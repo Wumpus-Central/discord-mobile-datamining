@@ -1,21 +1,23 @@
 // discord_app/modules/favorites/hooks/useFavoritesGuildChannelFilter.tsx
-import closure_2 from "../../../../_runtime/00019_noop.js";
-import closure_3 from "../../../stores/ChannelStore.tsx";
-import closure_4 from "../../../stores/PermissionStore.tsx";
-import closure_5 from "../FavoriteStore.tsx";
-import { Permissions } from "../../../Constants.tsx";
+import sortByMatchScore from "../../autocompleter/index.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import ChannelStore from "../../../stores/ChannelStore.tsx";
+import PermissionStore from "../../../stores/PermissionStore.tsx";
+import FavoriteStore from "../FavoriteStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildChannelFilter.tsx");
+require = fn;
+const Permissions = fn(1074).Permissions;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildChannelFilter.tsx");
 
 export default function useFavoritesGuildChannelFilter() {
-  const items = [closure_5];
+  const items = [FavoriteStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => favoriteChannels.getFavoriteChannels());
   const items1 = [stateFromStores];
-  return React.useCallback((type) => {
+  return noop.useCallback((type, arg1) => {
     type = type.type;
-    if (stateFromStores(closure_1_1[6]).AutocompleterResultTypes.USER === type) {
-      const dMChannelFromUserId = closure_1_3.getDMChannelFromUserId(type.record.id);
+    if (sortByMatchScore.AutocompleterResultTypes.USER === type) {
+      const dMChannelFromUserId = ChannelStore.getDMChannelFromUserId(type.record.id);
       let tmp13 = !arg1;
       if (!arg1) {
         tmp13 = null == dMChannelFromUserId;
@@ -29,18 +31,18 @@ export default function useFavoritesGuildChannelFilter() {
         tmp15 = tmp17;
       }
       return tmp15;
-    } else if (tmp(tmp2[6]).AutocompleterResultTypes.GROUP_DM === type) {
+    } else if (tmp(9835).AutocompleterResultTypes.GROUP_DM === type) {
       return null == stateFromStores[type.record.id];
     } else {
-      if (tmp(tmp2[6]).AutocompleterResultTypes.TEXT_CHANNEL !== type) {
-        if (tmp(tmp2[6]).AutocompleterResultTypes.VOICE_CHANNEL !== type) {
-          let tmpResult = tmp(tmp2[8]);
+      if (tmp(9835).AutocompleterResultTypes.TEXT_CHANNEL !== type) {
+        if (tmp(9835).AutocompleterResultTypes.VOICE_CHANNEL !== type) {
+          let tmpResult = tmp(1369);
           return tmpResult.assertNever(type);
         }
       }
-      let canResult = closure_1_4.can(closure_1_6.VIEW_CHANNEL, type.record);
+      let canResult = PermissionStore.can(Permissions.VIEW_CHANNEL, type.record);
       if (canResult) {
-        tmpResult = tmp(tmp2[7]);
+        tmpResult = tmp(1982);
         canResult = tmpResult.isFavoritableChannel(type.record);
       }
       if (canResult) {

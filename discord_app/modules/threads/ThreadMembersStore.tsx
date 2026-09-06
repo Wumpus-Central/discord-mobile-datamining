@@ -1,9 +1,10 @@
 // discord_app/modules/threads/ThreadMembersStore.tsx
-import set from "../../../_runtime/00002_set.js";
+import _modDef12 from "../../../_runtime/metro/00012__.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import createChannelRecord from "../../records/ChannelRecord.tsx";
-import closure_3 from "../../stores/ChannelStore.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import ChannelRecord from "../../records/ChannelRecord.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 function updateFromGuild(threads) {
   threads = threads.threads;
@@ -15,18 +16,17 @@ function updateFromThread(type) {
   if (ALL_CHANNEL_TYPES.has(type.type)) {
     if (!(type.id in dependencyMap)) {
       const obj = { guildId: null, parentId: null, memberCount: null, memberIdsPreview: null };
-      ({ guild_id: obj[0], parent_id: obj[1], memberCount } = type);
+      ({ guild_id: obj.guildId, parent_id: obj.parentId, memberCount } = type);
       if (memberCount == null) {
         memberCount = 0;
       }
-      obj[2] = memberCount;
+      obj.memberCount = memberCount;
       let memberIdsPreview = type.memberIdsPreview;
       if (memberIdsPreview == null) {
         memberIdsPreview = [];
       }
-      obj[3] = memberIdsPreview;
+      obj.memberIdsPreview = memberIdsPreview;
       dependencyMap[type.id] = obj;
-      const tmp2 = dependencyMap;
     }
     if (null != type.memberCount) {
       tmp5.memberCount = type.memberCount;
@@ -43,18 +43,17 @@ function handleThreadCreateOrUpdate(channel) {
   if (ALL_CHANNEL_TYPES.has(channel.type)) {
     if (!(channel.id in dependencyMap)) {
       const obj = { guildId: null, parentId: null, memberCount: null, memberIdsPreview: null };
-      ({ guild_id: obj[0], parent_id: obj[1], memberCount } = channel);
+      ({ guild_id: obj.guildId, parent_id: obj.parentId, memberCount } = channel);
       if (memberCount == null) {
         memberCount = 0;
       }
-      obj[2] = memberCount;
+      obj.memberCount = memberCount;
       let memberIdsPreview = channel.memberIdsPreview;
       if (memberIdsPreview == null) {
         memberIdsPreview = [];
       }
-      obj[3] = memberIdsPreview;
+      obj.memberIdsPreview = memberIdsPreview;
       dependencyMap[channel.id] = obj;
-      const tmp2 = dependencyMap;
     }
     if (null != channel.memberCount) {
       tmp5.memberCount = channel.memberCount;
@@ -72,34 +71,33 @@ function handleLoadArchivedThreadsSuccess(threads) {
 function handleSearchMessagesSuccess(data) {
   data = data.data;
   c0 = false;
-  let item = data.forEach((arg0) => {
-    ({ threads, messages } = arg0);
-    let item = messages.forEach((arr) => {
+  let item = data.forEach((item) => {
+    ({ threads, messages } = item);
+    item = messages.forEach((arr) => {
       const item = arr.forEach((thread) => {
         thread = thread.thread;
-        let flag = false;
+        flag = false;
         if (null != thread) {
           flag = false;
-          if (!(thread.id in closure_1_4)) {
-            const channel = closure_1_3.getChannel(thread.id);
+          if (!(thread.id in closure_2_4)) {
+            channel = channel.getChannel(thread.id);
             flag = false;
             if (null != channel) {
               flag = true;
-              if (closure_1_2.has(channel.type)) {
-                if (!(channel.id in closure_1_4)) {
+              if (set.has(channel.type)) {
+                if (!(channel.id in closure_2_4)) {
                   const obj = { guildId: null, parentId: null, memberCount: null, memberIdsPreview: null };
-                  ({ guild_id: obj[0], parent_id: obj[1], memberCount } = channel);
+                  ({ guild_id: obj.guildId, parent_id: obj.parentId, memberCount } = channel);
                   if (memberCount == null) {
                     memberCount = 0;
                   }
-                  obj[2] = memberCount;
+                  obj.memberCount = memberCount;
                   let memberIdsPreview = channel.memberIdsPreview;
                   if (memberIdsPreview == null) {
                     memberIdsPreview = [];
                   }
-                  obj[3] = memberIdsPreview;
-                  closure_1_4[channel.id] = obj;
-                  const tmp6 = closure_1_4;
+                  obj.memberIdsPreview = memberIdsPreview;
+                  closure_2_4[channel.id] = obj;
                 }
                 if (null != channel.memberCount) {
                   tmp8.memberCount = channel.memberCount;
@@ -116,29 +114,28 @@ function handleSearchMessagesSuccess(data) {
       });
     });
     const item1 = threads.forEach((id) => {
-      let flag = false;
+      flag = false;
       if (null != id) {
         flag = false;
-        if (!(id.id in closure_1_4)) {
-          const channel = closure_1_3.getChannel(id.id);
+        if (!(id.id in dependencyMap)) {
+          channel = channel.getChannel(id.id);
           flag = false;
           if (null != channel) {
             flag = true;
-            if (closure_1_2.has(channel.type)) {
-              if (!(channel.id in closure_1_4)) {
+            if (set.has(channel.type)) {
+              if (!(channel.id in dependencyMap)) {
                 const obj = { guildId: null, parentId: null, memberCount: null, memberIdsPreview: null };
-                ({ guild_id: obj[0], parent_id: obj[1], memberCount } = channel);
+                ({ guild_id: obj.guildId, parent_id: obj.parentId, memberCount } = channel);
                 if (memberCount == null) {
                   memberCount = 0;
                 }
-                obj[2] = memberCount;
+                obj.memberCount = memberCount;
                 let memberIdsPreview = channel.memberIdsPreview;
                 if (memberIdsPreview == null) {
                   memberIdsPreview = [];
                 }
-                obj[3] = memberIdsPreview;
-                closure_1_4[channel.id] = obj;
-                const tmp6 = closure_1_4;
+                obj.memberIdsPreview = memberIdsPreview;
+                dependencyMap[channel.id] = obj;
               }
               if (null != channel.memberCount) {
                 tmp8.memberCount = channel.memberCount;
@@ -159,23 +156,22 @@ function handleSearchMessagesSuccess(data) {
 function updateFromServerThread(id) {
   if (null != id) {
     if (!(id.id in dependencyMap)) {
-      channel = channel.getChannel(id.id);
+      const channel = ChannelStore.getChannel(id.id);
       if (null != channel) {
         if (ALL_CHANNEL_TYPES.has(channel.type)) {
           if (!(channel.id in dependencyMap)) {
             const obj = { guildId: null, parentId: null, memberCount: null, memberIdsPreview: null };
-            ({ guild_id: obj[0], parent_id: obj[1], memberCount } = channel);
+            ({ guild_id: obj.guildId, parent_id: obj.parentId, memberCount } = channel);
             if (memberCount == null) {
               memberCount = 0;
             }
-            obj[2] = memberCount;
+            obj.memberCount = memberCount;
             let memberIdsPreview = channel.memberIdsPreview;
             if (memberIdsPreview == null) {
               memberIdsPreview = [];
             }
-            obj[3] = memberIdsPreview;
+            obj.memberIdsPreview = memberIdsPreview;
             dependencyMap[channel.id] = obj;
-            const tmp4 = dependencyMap;
           }
           if (null != channel.memberCount) {
             tmp6.memberCount = channel.memberCount;
@@ -190,13 +186,13 @@ function updateFromServerThread(id) {
   }
   return false;
 }
-const ALL_CHANNEL_TYPES = createChannelRecord.ALL_CHANNEL_TYPES;
-let closure_4 = {};
+const ALL_CHANNEL_TYPES = ChannelRecord.ALL_CHANNEL_TYPES;
+const dependencyMap = {};
 const Store = initializeDefault.Store;
 class ThreadMembersStore extends Store {}
 const prototype = ThreadMembersStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_3);
+  this.waitFor(ChannelStore);
 };
 prototype["getMemberCount"] = function getMemberCount(arg0) {
   let memberCount;
@@ -222,15 +218,15 @@ prototype["getInitialOverlayState"] = function getInitialOverlayState() {
   return closure_4;
 };
 ThreadMembersStore.displayName = "ThreadMembersStore";
-const threadMembersStore = new ThreadMembersStore(dispatcherDefault, {
+const threadMembersStore = new ThreadMembersStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(guilds) {
     closure_4 = {};
     guilds = guilds.guilds;
     const item = guilds.forEach(updateFromGuild);
   },
   OVERLAY_INITIALIZE: function handleOverlayInitialize(threadMembers) {
-    const obj = {};
     const merged = Object.assign(threadMembers.threadMembers);
+    closure_4 = {};
   },
   GUILD_CREATE: function handleGuildCreate(guild) {
     const threads = guild.guild.threads;
@@ -240,11 +236,11 @@ const threadMembersStore = new ThreadMembersStore(dispatcherDefault, {
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
     const id = guild.guild.id;
-    closure_4 = id(12).omitBy(closure_4, (guildId) => guildId.guildId === id);
+    closure_4 = _modDef12.omitBy(closure_4, (guildId) => guildId.guildId === id);
   },
   CHANNEL_DELETE: function handleChannelDelete(channel) {
     const id = channel.channel.id;
-    closure_4 = id(12).omitBy(closure_4, (parentId) => parentId.parentId === id);
+    closure_4 = _modDef12.omitBy(closure_4, (parentId) => parentId.parentId === id);
   },
   THREAD_CREATE: handleThreadCreateOrUpdate,
   THREAD_UPDATE: handleThreadCreateOrUpdate,
@@ -272,7 +268,6 @@ const threadMembersStore = new ThreadMembersStore(dispatcherDefault, {
   LOAD_MESSAGES_SUCCESS: function handleLoadMessagesSuccess(arg0) {
     let flag = false;
     for (const item10007 of tmp) {
-      let tmp2 = updateFromServerThread;
       let tmp3 = updateFromServerThread(item10007.thread);
       if (!tmp3) {
         tmp3 = flag;
@@ -283,6 +278,6 @@ const threadMembersStore = new ThreadMembersStore(dispatcherDefault, {
     return flag;
   },
 });
-const result = set.fileFinishedImporting("modules/threads/ThreadMembersStore.tsx");
+const result = size.fileFinishedImporting("modules/threads/ThreadMembersStore.tsx");
 
 export default threadMembersStore;

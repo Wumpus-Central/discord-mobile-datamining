@@ -1,24 +1,24 @@
 // discord_app/modules/user_settings/UnsyncedUserSettingsStore.tsx
-import set from "../../../_runtime/00002_set.js";
-import applyDefault from "../../../_runtime/00012_apply.js";
+import _modDef12 from "../../../_runtime/metro/00012__.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import Storage3 from "../../../discord_common/js/packages/storage/Storage.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import MAX_FAVORITES from "UserSettingsConstants.tsx";
-import SystemThemeState2 from "ThemeConstants.tsx";
-import ExpressionPickerViewType from "../expression_picker/ExpressionPickerConstants.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import UserSettingsConstants from "UserSettingsConstants.tsx";
+import ThemeConstants from "ThemeConstants.tsx";
+import ExpressionPickerConstants from "../expression_picker/ExpressionPickerConstants.tsx";
 import getSystemThemeDefault from "../themes/getSystemTheme.native.tsx";
-import ME from "../../Constants.tsx";
+import Constants from "../../Constants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const SystemThemeState = SystemThemeState2.SystemThemeState;
-const ListDensityMode = MAX_FAVORITES.ListDensityMode;
-({ DEFAULT_CHAT_SIDEBAR_WIDTH: c5, CHANNEL_SIDEBAR_WIDTH } = ME);
-let closure_7 = ME.DEFAULT_MESSAGE_REQUEST_SIDEBAR_WIDTH;
-const ExpressionPickerWidths = ExpressionPickerViewType.ExpressionPickerWidths;
+const SystemThemeState = ThemeConstants.SystemThemeState;
+const ListDensityMode = UserSettingsConstants.ListDensityMode;
+({ DEFAULT_CHAT_SIDEBAR_WIDTH: hasOwnProperty, CHANNEL_SIDEBAR_WIDTH } = Constants);
+let closure_7 = Constants.DEFAULT_MESSAGE_REQUEST_SIDEBAR_WIDTH;
+const ExpressionPickerWidths = ExpressionPickerConstants.ExpressionPickerWidths;
 let obj = { DATA_SAVER: "data_saver", STANDARD: "standard", BEST: "best" };
 let closure_9 = (window.innerWidth - CHANNEL_SIDEBAR_WIDTH) / 2;
 const STANDARD = obj.STANDARD;
-let c11 = null;
+let closure_11 = null;
 let closure_12 = {};
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class UnsyncedUserSettingsStore extends DeviceSettingsStore {}
@@ -28,22 +28,23 @@ prototype["initialize"] = function initialize(arg0) {
   if (arg0 == null) {
     obj = {};
   }
+  closure_12 = obj;
   const useSystemTheme = obj.useSystemTheme;
   if (null != useSystemTheme) {
     if (null != getSystemThemeDefault()) {
       let UNSET = useSystemTheme;
     }
     obj.useSystemTheme = UNSET;
-    let lowQualityImageMode = obj.dataSavingMode;
+    let lowQualityImageMode = closure_12.dataSavingMode;
     if (lowQualityImageMode == null) {
-      lowQualityImageMode = obj.lowQualityImageMode;
+      lowQualityImageMode = closure_12.lowQualityImageMode;
     }
-    obj.dataSavingMode = lowQualityImageMode;
-    let str = obj.hdrDynamicRange;
+    closure_12.dataSavingMode = lowQualityImageMode;
+    let str = closure_12.hdrDynamicRange;
     if (str == null) {
       str = "no-limit";
     }
-    obj.hdrDynamicRange = str;
+    closure_12.hdrDynamicRange = str;
   }
   UNSET = SystemThemeState.UNSET;
 };
@@ -71,7 +72,7 @@ Object.defineProperty(prototype, "lowQualityImageMode", {
   set: undefined,
 });
 Object.defineProperty(prototype, "videoUploadQuality", {
-  get: function videoUploadQuality(arg0) {
+  get: function videoUploadQuality() {
     let videoUploadQuality = closure_12.videoUploadQuality;
     if (videoUploadQuality == null) {
       videoUploadQuality = STANDARD;
@@ -117,7 +118,7 @@ Object.defineProperty(prototype, "threadSidebarWidth", {
   get: function threadSidebarWidth() {
     let threadSidebarWidth = closure_12.threadSidebarWidth;
     if (threadSidebarWidth == null) {
-      threadSidebarWidth = closure_5;
+      threadSidebarWidth = hasOwnProperty;
     }
     return threadSidebarWidth;
   },
@@ -137,7 +138,7 @@ Object.defineProperty(prototype, "callChatSidebarWidth", {
   get: function callChatSidebarWidth() {
     let callChatSidebarWidth = closure_12.callChatSidebarWidth;
     if (callChatSidebarWidth == null) {
-      callChatSidebarWidth = closure_5;
+      callChatSidebarWidth = hasOwnProperty;
     }
     return callChatSidebarWidth;
   },
@@ -150,7 +151,7 @@ Object.defineProperty(prototype, "homeSidebarWidth", {
       if (null == closure_11) {
         const _Math = Math;
         const _window = window;
-        closure_11 = Math.max(0.4 * (window.innerWidth - CHANNEL_SIDEBAR_WIDTH), closure_5);
+        closure_11 = Math.max(0.4 * (window.innerWidth - CHANNEL_SIDEBAR_WIDTH), hasOwnProperty);
       }
       homeSidebarWidth = closure_11;
     }
@@ -352,10 +353,10 @@ UnsyncedUserSettingsStore.persistKey = "UnsyncedUserSettingsStore";
 const items = [
   () => {
     const Storage = Storage3.Storage;
-    const value = Storage.get("UserSettingsStore");
+    value = Storage.get("UserSettingsStore");
     const Storage2 = Storage3.Storage;
     Storage2.remove("UserSettingsStore");
-    return applyDefault.pick(
+    return _modDef12.pick(
       value,
       "dataSavingMode",
       "videoUploadQuality",
@@ -382,12 +383,12 @@ const items = [
 UnsyncedUserSettingsStore.migrations = items;
 obj = {
   UNSYNCED_USER_SETTINGS_UPDATE: function handleUnsyncedUserSettingsUpdate(settings) {
-    const obj = {};
-    const merged = Object.assign(obj);
+    const merged = Object.assign(closure_12);
     const merged1 = Object.assign(settings.settings);
+    closure_12 = {};
   },
   LOGOUT: function handleLogOut() {
-    obj = { useSystemTheme: obj.useSystemTheme };
+    closure_12 = { useSystemTheme: closure_12.useSystemTheme };
   },
   LOGIN_SUCCESS: function handleLogInSuccess() {
     if (null == closure_12) {
@@ -398,8 +399,8 @@ obj = {
     closure_12.useSystemTheme = SystemThemeState.ON;
   },
 };
-const unsyncedUserSettingsStore = new UnsyncedUserSettingsStore(dispatcherDefault, obj);
-const result = set.fileFinishedImporting("modules/user_settings/UnsyncedUserSettingsStore.tsx");
+const unsyncedUserSettingsStore = new UnsyncedUserSettingsStore(DispatcherDefault, obj);
+const result = size.fileFinishedImporting("modules/user_settings/UnsyncedUserSettingsStore.tsx");
 
 export default unsyncedUserSettingsStore;
 export const VideoQualitySettings = obj;

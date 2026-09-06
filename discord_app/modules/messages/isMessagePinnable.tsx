@@ -1,12 +1,13 @@
 // discord_app/modules/messages/isMessagePinnable.tsx
-import useCanStartPrivateThread from "../threads/ThreadHooks.tsx";
+import ThreadHooks from "../threads/ThreadHooks.tsx";
 import isSystemMessageDefault from "isSystemMessage.tsx";
-import closure_3 from "../../stores/PermissionStore.tsx";
-import ME from "../../Constants.tsx";
+import PermissionStore from "../../stores/PermissionStore.tsx";
 
-require = arg1;
-({ ChannelTypes: c4, Permissions: c5 } = ME);
-const result = require("set").fileFinishedImporting("modules/messages/isMessagePinnable.tsx");
+require = fn;
+const Constants = fn(1074);
+({ ChannelTypes: closure_4, Permissions: hasOwnProperty } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/isMessagePinnable.tsx");
 
 export default function isMessagePinnable(arg0, isSystemDM) {
   const isSystemDMResult = isSystemDM.isSystemDM();
@@ -15,7 +16,8 @@ export default function isMessagePinnable(arg0, isSystemDM) {
     isActiveChannelOrUnarchivableThread = !isSystemMessageDefault(arg0);
   }
   let isPrivateResult =
-    closure_3.can(constants2.PIN_MESSAGES, isSystemDM) && closure_3.can(constants2.READ_MESSAGE_HISTORY, isSystemDM);
+    PermissionStore.can(constants2.PIN_MESSAGES, isSystemDM) &&
+    PermissionStore.can(constants2.READ_MESSAGE_HISTORY, isSystemDM);
   if (isActiveChannelOrUnarchivableThread) {
     if (!isPrivateResult) {
       isPrivateResult = isSystemDM.isPrivate();
@@ -23,8 +25,7 @@ export default function isMessagePinnable(arg0, isSystemDM) {
     isActiveChannelOrUnarchivableThread = isPrivateResult;
   }
   if (isActiveChannelOrUnarchivableThread) {
-    isActiveChannelOrUnarchivableThread = useCanStartPrivateThread.getIsActiveChannelOrUnarchivableThread(isSystemDM);
-    const obj2 = useCanStartPrivateThread;
+    isActiveChannelOrUnarchivableThread = ThreadHooks.getIsActiveChannelOrUnarchivableThread(isSystemDM);
   }
   if (isActiveChannelOrUnarchivableThread) {
     isActiveChannelOrUnarchivableThread = isSystemDM.type !== constants.GUILD_VOICE;

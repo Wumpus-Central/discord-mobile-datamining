@@ -1,24 +1,22 @@
 // discord_app/modules/threads/ThreadNotificationSettings.tsx
-import hasFlag from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import closure_2 from "../../stores/ChannelStore.tsx";
-import closure_3 from "../../stores/UserGuildSettingsStore.tsx";
-import closure_4 from "JoinedThreadsStore.tsx";
-import { ThreadMemberFlags } from "ThreadConstants.tsx";
-import { UserNotificationSettings } from "../../Constants.tsx";
+import FlagUtils from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
+import UserGuildSettingsStore from "../../stores/UserGuildSettingsStore.tsx";
+import JoinedThreadsStore from "JoinedThreadsStore.tsx";
 
-require = arg1;
+require = fn;
 function computeThreadNotificationSetting(channel) {
   let obj = arg1;
   if (arg1 === undefined) {
-    obj = closure_4;
+    obj = JoinedThreadsStore;
   }
   let obj2 = arg2;
   if (arg2 === undefined) {
-    obj2 = closure_3;
+    obj2 = UserGuildSettingsStore;
   }
   let obj3 = arg3;
   if (arg3 === undefined) {
-    obj3 = closure_2;
+    obj3 = ChannelStore;
   }
   const flagsResult = obj.flags(channel.id);
   if (null == flagsResult) {
@@ -52,19 +50,18 @@ function computeThreadNotificationSetting(channel) {
         }
       }
     }
-    obj6 = hasFlag;
+    obj6 = FlagUtils;
   }
 }
-let result = require("set").fileFinishedImporting("modules/threads/ThreadNotificationSettings.tsx");
+const ThreadMemberFlags = fn(1113).ThreadMemberFlags;
+const UserNotificationSettings = fn(1074).UserNotificationSettings;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/threads/ThreadNotificationSettings.tsx");
 
 export { computeThreadNotificationSetting };
 export const useThreadNotificationSetting = function useThreadNotificationSetting(channel) {
-  const _require = channel;
-  const items = [closure_4, closure_3, closure_2];
+  _require = channel;
+  const items = [JoinedThreadsStore, UserGuildSettingsStore, ChannelStore];
   const items1 = [channel];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(
-    items,
-    () => closure_1_7(closure_0),
-    items1,
-  );
+  return require("initialize").useStateFromStores(items, () => computeThreadNotificationSetting(closure_0), items1);
 };

@@ -1,38 +1,35 @@
 // discord_app/modules/user_settings/defs/native/HighlightNotificationsSetting.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import closure_2 from "../../../../stores/GuildStore.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
-import { Row } from "../../notifications/native/UserSettingsHighlightNotifications.tsx";
+import util from "../../../../intl/index.native.tsx";
+import GuildStore from "../../../../stores/GuildStore.tsx";
 
-require = arg1;
+require = fn;
 function useHighlightNotifications() {
-  const items = [closure_2];
+  const items = [GuildStore];
   return initialize.useStateFromStores(items, () => guildCount.getGuildCount() > 0);
 }
-createToggle = {
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.o8Bypv);
+    const intl = util.intl;
+    return intl.string(util.t.o8Bypv);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.NOTIFICATIONS,
+  parent: fn(7975).MobileUserSettings.NOTIFICATIONS,
   useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["Vw/Xn8"]);
+    const intl = util.intl;
+    return intl.string(util.t["Vw/Xn8"]);
   },
   usePredicate: useHighlightNotifications,
-  screen: createToggle,
-};
-createToggle = {
-  route: require("ME").UserSettingsSections.HIGHLIGHT_NOTIFICATIONS,
-  getComponent() {
-    return Row /* Row */.default;
+  screen: {
+    route: fn(1074).UserSettingsSections.HIGHLIGHT_NOTIFICATIONS,
+    getComponent() {
+      return require("UserSettingsHighlightNotifications").default;
+    },
   },
 };
-createToggle = createToggle.createRoute(createToggle);
-const result = require("set").fileFinishedImporting(
-  "modules/user_settings/defs/native/HighlightNotificationsSetting.tsx",
-);
+SettingBuilders = SettingBuilders.createRoute(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/HighlightNotificationsSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;
 export { useHighlightNotifications };

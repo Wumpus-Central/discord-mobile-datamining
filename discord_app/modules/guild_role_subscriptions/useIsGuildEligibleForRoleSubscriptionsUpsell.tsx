@@ -1,33 +1,29 @@
 // discord_app/modules/guild_role_subscriptions/useIsGuildEligibleForRoleSubscriptionsUpsell.tsx
-import set from "../../../_runtime/00002_set.js";
-import ME from "../../Constants.tsx";
-import GuildNSFWContentLevel from "../../records/GuildRecord.tsx";
-import closure_3 from "../../stores/GuildStore.tsx";
-import closure_4 from "../../stores/UserStore.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import Constants from "../../Constants.tsx";
+import GuildRecord from "../../records/GuildRecord.tsx";
+import GuildStore from "../../stores/GuildStore.tsx";
+import UserStore from "../../stores/UserStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const isGuildOwner = GuildNSFWContentLevel.isGuildOwner;
-const GuildFeatures = ME.GuildFeatures;
-const result = set.fileFinishedImporting(
+const isGuildOwner = GuildRecord.isGuildOwner;
+const GuildFeatures = Constants.GuildFeatures;
+const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/useIsGuildEligibleForRoleSubscriptionsUpsell.tsx",
 );
 
 export default function useIsGuildEligibleForRoleSubscriptionsUpsell(arg0) {
-  const _require = arg0;
-  const items = [closure_3];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () =>
-    closure_1_3.getGuild(closure_0),
-  );
-  initialize;
-  [][0] = closure_4;
+  _require = arg0;
+  const items = [GuildStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0));
+  require("initialize");
+  [][0] = UserStore;
   let tmp6 = null != stateFromStores;
   if (tmp6) {
     tmp6 = isGuildOwner(stateFromStores, tmp5);
   }
-  const obj = initialize;
-  const tmp = _require;
+  const obj = require("initialize");
   const isUserInCreatorMonetizationEligibleCountry =
-    require("../creator_monetization_eligibility/CreatorMonetizationEligibilityExperimentUtils.tsx").useIsUserInCreatorMonetizationEligibleCountry();
+    require("CreatorMonetizationEligibilityExperimentUtils").useIsUserInCreatorMonetizationEligibleCountry();
   if (tmp6) {
     let flag;
     if (stateFromStores != null) {

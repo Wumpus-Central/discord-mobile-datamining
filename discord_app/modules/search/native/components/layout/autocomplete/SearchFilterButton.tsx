@@ -1,31 +1,36 @@
 // discord_app/modules/search/native/components/layout/autocomplete/SearchFilterButton.tsx
-import importAllResult from "../../../../../../../_runtime/00019_noop.js";
-import { SearchFilterAddLocations } from "../../../tracking/TrackingConstants.tsx";
-import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
+import noop from "../../../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const memoResult = importAllResult.memo((searchContext) => {
+const require = fn;
+const SearchFilterAddLocations = fn(7877).SearchFilterAddLocations;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting(
+  "modules/search/native/components/layout/autocomplete/SearchFilterButton.tsx",
+);
+
+export default noop.memo((searchContext) => {
   searchContext = searchContext.searchContext;
   let validOrderedFilterTokens;
   ({ onOpen, onClose } = searchContext);
   let obj = searchContext(validOrderedFilterTokens[3]);
   validOrderedFilterTokens = obj.useValidOrderedFilterTokens(searchContext);
   const items = [searchContext, validOrderedFilterTokens];
-  const memo = importAllResult.useMemo(
+  const memo = noop.useMemo(
     () =>
-      validOrderedFilterTokens.map((searchTokenType) => {
+      validOrderedFilterTokens.map((item) => {
         const obj = {
-          label: closure_1_0(closure_1_1[4]).getSearchTokenLabel(closure_0, searchTokenType),
+          label: searchContext(validOrderedFilterTokens[4]).getSearchTokenLabel(closure_1_0, item),
           IconComponent: null,
           action: null,
         };
-        const obj2 = closure_1_0(closure_1_1[4]);
-        obj[1] = closure_1_0(closure_1_1[4]).getSearchTokenIcon(searchTokenType);
-        const obj3 = closure_1_0(closure_1_1[4]);
-        obj[2] = closure_1_0(closure_1_1[4]).getSearchTokenPressHandler(
-          closure_0,
-          searchTokenType,
-          closure_1_3.CONTEXT_MENU,
+        const obj2 = searchContext(validOrderedFilterTokens[4]);
+        obj.IconComponent = searchContext(validOrderedFilterTokens[4]).getSearchTokenIcon(item);
+        const obj3 = searchContext(validOrderedFilterTokens[4]);
+        obj.action = searchContext(validOrderedFilterTokens[4]).getSearchTokenPressHandler(
+          closure_1_0,
+          item,
+          constants.CONTEXT_MENU,
         );
         return obj;
       }),
@@ -41,22 +46,22 @@ const memoResult = importAllResult.memo((searchContext) => {
     children: null,
   };
   let intl = searchContext(validOrderedFilterTokens[6]).intl;
-  obj[2] = intl.string(searchContext(validOrderedFilterTokens[6]).t.oYEmhB);
-  obj[4] = onOpen;
-  obj[5] = onClose;
-  obj[6] = function children(ref) {
-    const merged = Object.assign(ref, Object.create(null));
+  obj.title = intl.string(searchContext(validOrderedFilterTokens[6]).t.oYEmhB);
+  obj.onOpen = onOpen;
+  obj.onClose = onClose;
+  obj.children = function children(ref) {
+    const merged = Object.assign(ref, Object.assign({ ref: 0 }));
     const obj = { ref: ref.ref };
     const merged1 = Object.assign(merged);
     obj.variant = "tertiary";
     const intl = searchContext(validOrderedFilterTokens[6]).intl;
     obj.accessibilityLabel = intl.string(searchContext(validOrderedFilterTokens[6]).t.kP6oFy);
     obj.size = "md";
-    obj.icon = callback(searchContext(validOrderedFilterTokens[8]).FiltersHorizontalIcon, {
+    obj.icon = jsx(searchContext(validOrderedFilterTokens[8]).FiltersHorizontalIcon, {
       size: "sm",
       color: "redesign-button-tertiary-text",
     });
-    return callback(searchContext(validOrderedFilterTokens[7]).IconButton, obj);
+    return jsx(searchContext(validOrderedFilterTokens[7]).IconButton, { ref: ref.ref });
   };
   return jsx(searchContext(validOrderedFilterTokens[5]).ContextMenu, {
     items: memo,
@@ -68,8 +73,3 @@ const memoResult = importAllResult.memo((searchContext) => {
     children: null,
   });
 });
-const result = require("set").fileFinishedImporting(
-  "modules/search/native/components/layout/autocomplete/SearchFilterButton.tsx",
-);
-
-export default memoResult;

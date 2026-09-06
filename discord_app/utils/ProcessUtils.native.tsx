@@ -1,7 +1,7 @@
 // discord_app/utils/ProcessUtils.native.tsx
-import set from "../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../_runtime/00017_get_ActivityIndicator.js";
-import ElectronProcessType from "ProcessUtilsBase.tsx";
+import _mod17 from "../../_runtime/metro/00017__.js";
+import ProcessUtilsBase from "ProcessUtilsBase.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
 let closure_1 = function getHermesInstrumentedStatsSummary() {
   const _HermesInternal = HermesInternal;
@@ -15,8 +15,8 @@ let closure_1 = function getHermesInstrumentedStatsSummary() {
             if (typeof tmp3 === "object") {
               const _Object = Object;
               const entries = Object.entries(instrumentedStats);
-              const found = entries.filter((arg0) => {
-                [, tmp] = arg0;
+              const found = entries.filter((item) => {
+                [, tmp] = item;
                 let isFiniteResult = typeof tmp === "number";
                 if (typeof tmp === "number") {
                   const _Number = Number;
@@ -25,8 +25,8 @@ let closure_1 = function getHermesInstrumentedStatsSummary() {
                 return isFiniteResult;
               });
               const substr = found.slice(0, 6);
-              const mapped = substr.map((arg0) => {
-                [tmp, tmp2] = arg0;
+              const mapped = substr.map((item) => {
+                [tmp, tmp2] = item;
                 return "" + tmp + "=" + tmp2;
               });
               let joined;
@@ -43,14 +43,13 @@ let closure_1 = function getHermesInstrumentedStatsSummary() {
     }
   }
 };
-const NativeModules = get_ActivityIndicator.NativeModules;
+const NativeModules = _mod17.NativeModules;
 let prop = NativeModules;
-const ProcessUtils = ElectronProcessType.ProcessUtils;
+const ProcessUtils = ProcessUtilsBase.ProcessUtils;
 class ProcessUtilsIOS extends ProcessUtils {
   constructor() {
     closure_1 = undefined;
     tmp5 = new ProcessUtilsIOS(tmp4, tmp3, new.target, new.target, undefined, tmp2, tmp, ProcessUtilsIOS);
-    // ThrowIfThisInitialized (0x7c)
     closure_1 = tmp5;
     tmp5.shouldCollectHermesInstrumentedStats = false;
     prop = undefined;
@@ -62,55 +61,53 @@ class ProcessUtilsIOS extends ProcessUtils {
       getCpuCoreCount = prop.getCpuCoreCount;
       if (getCpuCoreCount != null) {
         cpuCoreCount = getCpuCoreCount((cpuCoreCount) => {
-          tmp.cpuCoreCount = cpuCoreCount;
+          closure_1.cpuCoreCount = cpuCoreCount;
         });
       }
     }
     timerId = setInterval(() => {
       if (prop != null) {
-        const getCurrentCpuUsagePercent = tmp2.getCurrentCpuUsagePercent;
+        const getCurrentCpuUsagePercent = tmp.getCurrentCpuUsagePercent;
         if (getCurrentCpuUsagePercent != null) {
-          let currentCpuUsagePercent = getCurrentCpuUsagePercent((arg0) => {
-            let tmp3;
-            if (tmp2 >= 0) {
-              tmp3 = tmp2;
-            }
-            tmp.cpuPercentage = tmp3;
-          });
-        }
-      }
-      if (prop != null) {
-        const getCumulativeCpuUsage = tmp2.getCumulativeCpuUsage;
-        if (getCumulativeCpuUsage != null) {
-          currentCpuUsagePercent = getCumulativeCpuUsage((arg0) => {
+          const currentCpuUsagePercent = getCurrentCpuUsagePercent((arg0) => {
+            let tmp2;
             if (arg0 >= 0) {
-              const obj = { usage: null, sampleTime: null };
-              obj[0] = arg0;
+              tmp2 = arg0;
+            }
+            closure_1_1.cpuPercentage = tmp2;
+          });
+        }
+      }
+      if (prop != null) {
+        const getCumulativeCpuUsage = tmp.getCumulativeCpuUsage;
+        if (getCumulativeCpuUsage != null) {
+          const cumulativeCpuUsage = getCumulativeCpuUsage((usage) => {
+            if (usage >= 0) {
+              const obj = { usage, sampleTime: null };
               const _performance = performance;
-              obj[1] = performance.now();
-              tmp.cumulativeCpuUsage = obj;
-              throw tmp;
+              obj.sampleTime = performance.now();
+              closure_1_1.cumulativeCpuUsage = obj;
             }
           });
         }
       }
       if (prop != null) {
-        const getCurrentMemoryUsageKb = tmp2.getCurrentMemoryUsageKb;
+        const getCurrentMemoryUsageKb = tmp.getCurrentMemoryUsageKb;
         if (getCurrentMemoryUsageKb != null) {
-          currentCpuUsagePercent = getCurrentMemoryUsageKb((arg0) => {
-            let tmp3;
-            if (tmp2 >= 0) {
-              tmp3 = tmp2;
+          const currentMemoryUsageKb = getCurrentMemoryUsageKb((arg0) => {
+            let tmp2;
+            if (arg0 >= 0) {
+              tmp2 = arg0;
             }
-            tmp.memory = tmp3;
+            closure_1_1.memory = tmp2;
           });
         }
       }
-      let tmp4;
-      if (tmp.shouldCollectHermesInstrumentedStats) {
-        tmp4 = callback();
+      let tmp6;
+      if (closure_1.shouldCollectHermesInstrumentedStats) {
+        tmp6 = closure_1();
       }
-      currentCpuUsagePercent.hermesInstrumentedStatsSummary = tmp4;
+      closure_1.hermesInstrumentedStatsSummary = tmp6;
     }, 1000);
     return tmp5;
   }
@@ -134,7 +131,7 @@ prototype["setShouldCollectHermesInstrumentedStats"] = function setShouldCollect
   this.shouldCollectHermesInstrumentedStats = shouldCollectHermesInstrumentedStats;
   let tmp;
   if (shouldCollectHermesInstrumentedStats) {
-    tmp = callback();
+    tmp = closure_1();
   }
   this.hermesInstrumentedStatsSummary = tmp;
 };
@@ -207,8 +204,6 @@ function getCpuUsageElectronProcessTypeDetails() {
   return null;
 }
 prototype["getCpuUsageElectronProcessTypeDetails"] = getCpuUsageElectronProcessTypeDetails;
-prop = undefined;
-closure_1 = undefined;
 tmp = new tmp(
   tmp4,
   tmp3,
@@ -223,7 +218,6 @@ tmp = new tmp(
   dependencyMap,
   exports,
 );
-// ThrowIfThisInitialized (0x7c)
 closure_1 = tmp;
 tmp.shouldCollectHermesInstrumentedStats = false;
 prop = undefined;
@@ -234,56 +228,54 @@ if (prop != null) {
   let getCpuCoreCount = prop.getCpuCoreCount;
   if (getCpuCoreCount != null) {
     let cpuCoreCount = getCpuCoreCount((cpuCoreCount) => {
-      tmp.cpuCoreCount = cpuCoreCount;
+      closure_1.cpuCoreCount = cpuCoreCount;
     });
   }
 }
 let timerId = setInterval(() => {
   if (prop != null) {
-    const getCurrentCpuUsagePercent = tmp2.getCurrentCpuUsagePercent;
+    const getCurrentCpuUsagePercent = tmp.getCurrentCpuUsagePercent;
     if (getCurrentCpuUsagePercent != null) {
-      let currentCpuUsagePercent = getCurrentCpuUsagePercent((arg0) => {
-        let tmp3;
-        if (tmp2 >= 0) {
-          tmp3 = tmp2;
-        }
-        tmp.cpuPercentage = tmp3;
-      });
-    }
-  }
-  if (prop != null) {
-    const getCumulativeCpuUsage = tmp2.getCumulativeCpuUsage;
-    if (getCumulativeCpuUsage != null) {
-      currentCpuUsagePercent = getCumulativeCpuUsage((arg0) => {
+      const currentCpuUsagePercent = getCurrentCpuUsagePercent((arg0) => {
+        let tmp2;
         if (arg0 >= 0) {
-          const obj = { usage: null, sampleTime: null };
-          obj[0] = arg0;
+          tmp2 = arg0;
+        }
+        closure_1_1.cpuPercentage = tmp2;
+      });
+    }
+  }
+  if (prop != null) {
+    const getCumulativeCpuUsage = tmp.getCumulativeCpuUsage;
+    if (getCumulativeCpuUsage != null) {
+      const cumulativeCpuUsage = getCumulativeCpuUsage((usage) => {
+        if (usage >= 0) {
+          const obj = { usage, sampleTime: null };
           const _performance = performance;
-          obj[1] = performance.now();
-          tmp.cumulativeCpuUsage = obj;
-          throw tmp;
+          obj.sampleTime = performance.now();
+          closure_1_1.cumulativeCpuUsage = obj;
         }
       });
     }
   }
   if (prop != null) {
-    const getCurrentMemoryUsageKb = tmp2.getCurrentMemoryUsageKb;
+    const getCurrentMemoryUsageKb = tmp.getCurrentMemoryUsageKb;
     if (getCurrentMemoryUsageKb != null) {
-      currentCpuUsagePercent = getCurrentMemoryUsageKb((arg0) => {
-        let tmp3;
-        if (tmp2 >= 0) {
-          tmp3 = tmp2;
+      const currentMemoryUsageKb = getCurrentMemoryUsageKb((arg0) => {
+        let tmp2;
+        if (arg0 >= 0) {
+          tmp2 = arg0;
         }
-        tmp.memory = tmp3;
+        closure_1_1.memory = tmp2;
       });
     }
   }
-  let tmp4;
-  if (tmp.shouldCollectHermesInstrumentedStats) {
-    tmp4 = callback();
+  let tmp6;
+  if (closure_1.shouldCollectHermesInstrumentedStats) {
+    tmp6 = closure_1();
   }
-  currentCpuUsagePercent.hermesInstrumentedStatsSummary = tmp4;
+  closure_1.hermesInstrumentedStatsSummary = tmp6;
 }, 1000);
-const result = set.fileFinishedImporting("utils/ProcessUtils.native.tsx");
+const result = size.fileFinishedImporting("utils/ProcessUtils.native.tsx");
 
 export default tmp;

@@ -1,11 +1,10 @@
 // discord_app/actions/AnalyticsTrackingActionCreators.tsx
-import set from "../../_runtime/00002_set.js";
-import dispatcherDefault from "../Dispatcher.tsx";
+import DispatcherDefault from "../Dispatcher.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("actions/AnalyticsTrackingActionCreators.tsx");
+const result = size.fileFinishedImporting("actions/AnalyticsTrackingActionCreators.tsx");
 
 export const track = function track(event, properties) {
-  let obj = dispatcherDefault;
-  obj = { type: "TRACK", event, properties };
+  const obj = { type: "TRACK", event, properties };
   obj.dispatch(obj);
 };

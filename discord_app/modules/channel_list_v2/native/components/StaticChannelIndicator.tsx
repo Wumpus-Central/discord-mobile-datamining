@@ -1,14 +1,14 @@
 // discord_app/modules/channel_list_v2/native/components/StaticChannelIndicator.tsx
-import set from "../../../../../_runtime/00002_set.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import map from "../../../../design/tokens/native/useToken.tsx";
-import ReadStateTypes from "../../../read_states/ReadStateConstants.tsx";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useToken from "../../../../design/tokens/native/useToken.tsx";
+import ReadStateConstants from "../../../read_states/ReadStateConstants.tsx";
+import get_ActivityIndicator from "../../../../../_runtime/metro/00017__.js";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const UnreadSetting = ReadStateTypes.UnreadSetting;
+const UnreadSetting = ReadStateConstants.UnreadSetting;
 const jsx = jsxProd.jsx;
 let obj = { indicatorContainer: null, indicator: null };
 obj = {};
@@ -16,34 +16,32 @@ const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.top = 0;
 obj.bottom = 0;
 obj.justifyContent = "center";
-obj[0] = obj;
-obj[1] = { width: 8, height: 8, borderRadius: ThemesDefault.radii.round, marginLeft: -4 };
-let closure_6 = createCacheKey.createStyles(obj);
-const obj1 = { width: 8, height: 8, borderRadius: ThemesDefault.radii.round, marginLeft: -4 };
-const result = set.fileFinishedImporting("modules/channel_list_v2/native/components/StaticChannelIndicator.tsx");
+obj.indicatorContainer = obj;
+let size = { width: 8, height: 8, borderRadius: nativeDefault.radii.round, marginLeft: -4 };
+obj.indicator = size;
+let closure_6 = createStyles.createStyles(obj);
+const result = size.fileFinishedImporting("modules/channel_list_v2/native/components/StaticChannelIndicator.tsx");
 
 export default function ChannelIndicator(arg0) {
   ({ unread, resolvedUnreadSetting, style } = arg0);
-  const tmp = callback();
-  map;
+  const tmp = closure_6();
+  useToken;
   if (resolvedUnreadSetting === UnreadSetting.ALL_MESSAGES) {
-    let CHANNELS_DEFAULT = ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE;
+    let CHANNELS_DEFAULT = nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE;
   } else {
-    CHANNELS_DEFAULT = ThemesDefault.colors.CHANNELS_DEFAULT;
+    CHANNELS_DEFAULT = nativeDefault.colors.CHANNELS_DEFAULT;
   }
   let tmp7 = null;
   if (unread) {
-    let obj = { style: null, children: null };
-    obj[0] = tmp.indicatorContainer;
+    let obj = { style: tmp.indicatorContainer, children: null };
     obj = { style: null };
     const items = [tmp.indicator, ,];
-    obj = { backgroundColor: null };
-    obj[0] = tmp6;
+    obj = { backgroundColor: tmp6 };
     items[1] = obj;
     items[2] = style;
-    obj[0] = items;
-    obj[1] = <closure_3 backgroundColor={null} />;
-    tmp7 = <closure_3 backgroundColor={null} />;
+    obj.style = items;
+    obj.children = <React3 backgroundColor={tmp6} />;
+    tmp7 = <React3 backgroundColor={tmp6} />;
   }
   return tmp7;
 }

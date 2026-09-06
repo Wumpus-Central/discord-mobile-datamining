@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/SelectivelySyncedUserSettingsStore.tsx
-import set from "../../../_runtime/00002_set.js";
-import applyDefault from "../../../_runtime/00012_apply.js";
+import _modDef12 from "../../../_runtime/metro/00012__.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import Storage4 from "../../../discord_common/js/packages/storage/Storage.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
-import ME from "../../Constants.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import Constants from "../../Constants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const UserSettingsSections = ME.UserSettingsSections;
+const UserSettingsSections = Constants.UserSettingsSections;
 let closure_4 = {};
 const PersistedStore = initializeDefault.PersistedStore;
 class SelectivelySyncedUserSettingsStore extends PersistedStore {}
@@ -16,6 +16,7 @@ prototype["initialize"] = function initialize(arg0) {
   if (arg0 == null) {
     obj = {};
   }
+  closure_4 = obj;
 };
 prototype["getState"] = function getState() {
   return closure_4;
@@ -53,7 +54,7 @@ const items = [
       obj = {};
     }
     const Storage2 = tmp(510).Storage;
-    let value = Storage2.get("UserSettingsStore");
+    value = Storage2.get("UserSettingsStore");
     if (value == null) {
       value = {};
     }
@@ -61,25 +62,27 @@ const items = [
     Storage3.remove("UserSettingsSync");
     obj = {};
     if (false === obj[UserSettingsSections.TEXT]) {
-      obj1 = { shouldSync: false, settings: null };
-      obj1[1] = applyDefault.pick(value, [
-        "inlineAttachmentMedia",
-        "inlineEmbedMedia",
-        "renderEmbeds",
-        "renderReactions",
-        "animateEmoji",
-        "animateStickers",
-        "gifAutoPlay",
-        "defaultReactionEmoji",
-      ]);
+      const obj1 = {
+        shouldSync: false,
+        settings: _modDef12.pick(value, [
+          "inlineAttachmentMedia",
+          "inlineEmbedMedia",
+          "renderEmbeds",
+          "renderReactions",
+          "animateEmoji",
+          "animateStickers",
+          "gifAutoPlay",
+          "defaultReactionEmoji",
+        ]),
+      };
       obj.text = obj1;
-      const obj5 = applyDefault;
     }
     if (false === obj[tmp4.APPEARANCE]) {
-      const obj2 = { shouldSync: false, settings: null };
-      obj2[1] = applyDefault.pick(value, ["theme", "clientThemeSettings", "developerMode"]);
+      const obj2 = {
+        shouldSync: false,
+        settings: _modDef12.pick(value, ["theme", "clientThemeSettings", "developerMode"]),
+      };
       obj.appearance = obj2;
-      const obj7 = applyDefault;
     }
     return obj;
   },
@@ -109,21 +112,16 @@ const items = [
   },
 ];
 SelectivelySyncedUserSettingsStore.migrations = items;
-const selectivelySyncedUserSettingsStore = new SelectivelySyncedUserSettingsStore(dispatcherDefault, {
+const selectivelySyncedUserSettingsStore = new SelectivelySyncedUserSettingsStore(DispatcherDefault, {
   SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: function handleSelectivelySyncedUserSettingsUpdate(changes) {
     changes = changes.changes;
     for (const key10008 in changes) {
-      let tmp12 = key10008;
       ({ shouldSync, settings } = changes[key10008]);
       if (true !== shouldSync) {
         if (false === shouldSync) {
-          let tmp5 = closure_4;
-          let obj = { shouldSync: null, settings: null };
-          obj[0] = shouldSync;
-          obj[1] = {};
+          let obj = { shouldSync, settings: {} };
           closure_4[key10008] = obj;
         }
-        let tmp6 = closure_4;
         let tmp7 = closure_4[key10008];
         shouldSync = undefined;
         if (tmp7 != null) {
@@ -132,15 +130,12 @@ const selectivelySyncedUserSettingsStore = new SelectivelySyncedUserSettingsStor
         if (false !== shouldSync) {
           continue;
         } else {
-          let tmp9 = settings;
           let keys = Object.keys();
           if (keys === undefined) {
             continue;
           } else {
             let tmp11 = keys[tmp];
             while (tmp11 !== undefined) {
-              let tmp13 = tmp11;
-              let tmp14 = closure_4;
               closure_4[key10008].settings[tmp11] = settings[tmp11];
               continue;
             }
@@ -149,7 +144,6 @@ const selectivelySyncedUserSettingsStore = new SelectivelySyncedUserSettingsStor
         }
         continue;
       } else {
-        let tmp4 = closure_4;
         delete tmp2[tmp3];
         continue;
       }
@@ -160,6 +154,6 @@ const selectivelySyncedUserSettingsStore = new SelectivelySyncedUserSettingsStor
     closure_4 = {};
   },
 });
-const result = set.fileFinishedImporting("modules/user_settings/SelectivelySyncedUserSettingsStore.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/SelectivelySyncedUserSettingsStore.tsx");
 
 export default selectivelySyncedUserSettingsStore;

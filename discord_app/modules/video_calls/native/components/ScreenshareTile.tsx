@@ -1,35 +1,35 @@
 // discord_app/modules/video_calls/native/components/ScreenshareTile.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import Button from "../../../../design/void/native.tsx";
-import Text from "../../../../design/components/Text/native/Text.tsx";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
+import native from "../../../../design/void/native.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import LegacyBaseButton from "../../../../../_runtime/06655_LegacyBaseButton.js";
 import useParticipantTileTapGestureDefault from "../useParticipantTileTapGesture.tsx";
-import registerAssetDefault from "../../../../../_runtime/09593_registerAsset.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { NOOP } from "../../../../Constants.tsx";
-import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import _modDef9593 from "../../../../../_runtime/metro/09593__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-({ View: c3, Image: c4 } = get_ActivityIndicator);
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: null, image: null, label: null, liveContainer: null };
-createCacheKey = {
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: c3, Image: closure_4 } = get_ActivityIndicator);
+const NOOP = fn(1074).NOOP;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+fn(4560);
+let createStyles = { container: null, image: null, label: null, liveContainer: null };
+createStyles = {
   alignItems: "center",
   justifyContent: "center",
-  backgroundColor: ThemesDefault.colors.BLACK,
+  backgroundColor: nativeDefault.colors.BLACK,
   overflow: "hidden",
   flex: 1,
 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginBottom: 8, width: 60, height: 40 };
-createCacheKey[2] = { lineHeight: 18, textAlign: "center" };
-createCacheKey[3] = { position: "absolute", top: 8, right: 8, zIndex: 2 };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/video_calls/native/components/ScreenshareTile.tsx");
+createStyles.container = createStyles;
+createStyles.image = { marginBottom: 8, width: 60, height: 40 };
+createStyles.label = { lineHeight: 18, textAlign: "center" };
+createStyles.liveContainer = { position: "absolute", top: 8, right: 8, zIndex: 2 };
+let closure_8 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/native/components/ScreenshareTile.tsx");
 
 export default function ScreenShareTile(onSingleTap) {
   onSingleTap = onSingleTap.onSingleTap;
@@ -40,21 +40,21 @@ export default function ScreenShareTile(onSingleTap) {
   if (onDoubleTap === undefined) {
     onDoubleTap = NOOP;
   }
-  const tmp = callback3();
+  const tmp = closure_8();
   let obj = {
     gesture: useParticipantTileTapGestureDefault({ onSingleTapStart: onSingleTap, onDoubleTapStart: onDoubleTap }),
     children: null,
   };
   obj = { style: tmp.container, children: null };
-  obj = { style: tmp.liveContainer, children: callback(Button.LiveTag, {}) };
-  const items = [callback(closure_3, obj), ,];
+  obj = { style: tmp.liveContainer, children: timestampProducer(native.LiveTag, {}) };
+  const items = [timestampProducer(React3, obj), ,];
   const tmp2 = useParticipantTileTapGestureDefault({ onSingleTapStart: onSingleTap, onDoubleTapStart: onDoubleTap });
-  items[1] = callback(closure_4, { source: registerAssetDefault, style: tmp.image, resizeMode: "contain" });
+  items[1] = timestampProducer(React4, { source: _modDef9593, style: tmp.image, resizeMode: "contain" });
   const obj2 = { style: tmp.label, variant: "text-xs/bold", color: "text-overlay-light", children: null };
-  const intl = getSystemLocale.intl;
-  obj2[3] = intl.string(getSystemLocale.t.G84gtR);
-  items[2] = callback(Text.Text, obj2);
-  obj[1] = items;
-  obj[1] = callback2(closure_3, obj);
-  return callback(LegacyBaseButton.GestureDetector, obj);
+  const intl = util.intl;
+  obj2.children = intl.string(util.t.G84gtR);
+  items[2] = timestampProducer(Text_Text.Text, obj2);
+  obj.children = items;
+  obj.children = React5(React3, obj);
+  return timestampProducer(LegacyBaseButton.GestureDetector, obj);
 }

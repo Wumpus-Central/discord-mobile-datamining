@@ -1,13 +1,16 @@
 // discord_app/design/components/ContextMenu/native/ContextMenuConstants.native.tsx
-import HapticFeedbackTypes2 from "../../../../modules/haptics/HapticUtils.native.tsx";
-import set from "../../../../utils/PlatformUtils.tsx";
+import HapticUtils from "../../../../modules/haptics/HapticUtils.native.tsx";
+import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-set = set.isIOS();
-const HapticFeedbackTypes = HapticFeedbackTypes2.HapticFeedbackTypes;
-const result = set.fileFinishedImporting("design/components/ContextMenu/native/ContextMenuConstants.native.tsx");
+PlatformUtils = PlatformUtils.isIOS();
+const HapticFeedbackTypes = HapticUtils.HapticFeedbackTypes;
+const result = size.fileFinishedImporting("design/components/ContextMenu/native/ContextMenuConstants.native.tsx");
 
 export const CONTEXT_MENU_LONG_PRESS_DURATION_MS = 300;
-export const CONTEXT_MENU_OPEN_HAPTIC = set ? HapticFeedbackTypes.IMPACT_HEAVY : HapticFeedbackTypes.IMPACT_MEDIUM;
+export const CONTEXT_MENU_OPEN_HAPTIC = PlatformUtils
+  ? HapticFeedbackTypes.IMPACT_HEAVY
+  : HapticFeedbackTypes.IMPACT_MEDIUM;
 export const CONTEXT_MENU_ITEM_PADDING = 12;
 export const CONTEXT_MENU_ITEM_BASE_HEIGHT = 42;
 export const CONTEXT_MENU_DIVIDER_HEIGHT = 4;

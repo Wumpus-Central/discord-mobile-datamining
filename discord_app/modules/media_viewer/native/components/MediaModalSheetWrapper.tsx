@@ -1,19 +1,19 @@
 // discord_app/modules/media_viewer/native/components/MediaModalSheetWrapper.tsx
-import closure_2 from "../../../../../_runtime/00019_noop.js";
-import { MEDIA_MODAL_KEY } from "../../../../Constants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const result = require("set").fileFinishedImporting(
-  "modules/media_viewer/native/components/MediaModalSheetWrapper.tsx",
-);
+const MEDIA_MODAL_KEY = fn(1074).MEDIA_MODAL_KEY;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaModalSheetWrapper.tsx");
 
 export default function MediaModalSheetWrapper(onCloseCallback) {
   onCloseCallback = onCloseCallback.onCloseCallback;
-  const merged = Object.assign(onCloseCallback, Object.create(null));
+  const merged = Object.assign(onCloseCallback, Object.assign({ onCloseCallback: 0 }));
   let context;
-  context = React.useContext(onCloseCallback(context[3]));
+  context = noop.useContext(onCloseCallback(context[3]));
   const items = [context];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     let transitionState;
     if (context != null) {
       transitionState = obj.transitionState;
@@ -23,11 +23,11 @@ export default function MediaModalSheetWrapper(onCloseCallback) {
     }
   }, items);
   const items1 = [onCloseCallback];
-  const callback = React.useCallback(() => {
+  const callback = noop.useCallback(() => {
     if (onCloseCallback != null) {
       tmp();
     }
-    onCloseCallback(context[4]).hideActionSheet(closure_1_3);
+    ActionSheetActionCreatorsDefault.hideActionSheet(MEDIA_MODAL_KEY);
   }, items1);
   const obj = {};
   const merged1 = Object.assign(merged);

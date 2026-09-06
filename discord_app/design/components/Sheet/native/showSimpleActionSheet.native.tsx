@@ -1,17 +1,16 @@
 // discord_app/design/components/Sheet/native/showSimpleActionSheet.native.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import ACTION_SHEET_HEIGHT_HALFDefault from "../../../../modules/action_sheet/native/ActionSheetActionCreators.tsx";
+import ActionSheetActionCreatorsDefault from "../../../../modules/action_sheet/native/ActionSheetActionCreators.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("design/components/Sheet/native/showSimpleActionSheet.native.tsx");
+const result = size.fileFinishedImporting("design/components/Sheet/native/showSimpleActionSheet.native.tsx");
 
 export const showSimpleActionSheet = function showSimpleActionSheet(key) {
   key = key.key;
-  const merged = Object.assign(key, Object.create(null));
-  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj = {};
+  const merged = Object.assign(key, Object.assign({ key: 0, stackingBehavior: 0 }));
+  const obj = {};
   const merged1 = Object.assign(merged);
   obj.hideActionSheet = function hideActionSheet() {
-    closure_1_1(closure_1_2[0]).hideActionSheet(key);
+    ActionSheetActionCreatorsDefault.hideActionSheet(key);
   };
   obj.openLazy(key(1896)(7197, dependencyMap.paths), key, obj, key.stackingBehavior);
 };

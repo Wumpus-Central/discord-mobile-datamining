@@ -1,29 +1,28 @@
 // discord_app/modules/user_settings/defs/native/ExperimentOverrideActiveSetting.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import navigateToDevTools from "../../../devtools/native/components/DevToolsNavigator.tsx";
-import useStaffOrDeveloperSettingPredicate from "../../dev_tools/native/useIsStaffOrDeveloperSettingPredicate.tsx";
-import DevToolsContentSortButtons from "../../../devtools/native/components/DevToolsContent.tsx";
-import closure_2 from "../../../experiments/ExperimentStore.tsx";
-import closure_3 from "../../../experiments/apex/ApexExperimentStore.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import DevToolsNavigator from "../../../devtools/native/components/DevToolsNavigator.tsx";
+import useIsStaffOrDeveloperSettingPredicate from "../../dev_tools/native/useIsStaffOrDeveloperSettingPredicate.tsx";
+import DevToolsContent from "../../../devtools/native/components/DevToolsContent.tsx";
+import ExperimentStore from "../../../experiments/ExperimentStore.tsx";
+import ApexExperimentStore from "../../../experiments/apex/ApexExperimentStore.tsx";
 
-require = arg1;
-createToggle = {
+require = fn;
+const jsx = fn(21).jsx;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
     return "Experiments Overrides Active";
   },
   parent: null,
-  IconComponent: require("BeakerIcon").BeakerIcon,
+  IconComponent: fn(15583).BeakerIcon,
   useDescription: function useExperimentOverrideActiveDescription() {
     let obj = initialize;
-    const items = [closure_2];
+    const items = [ExperimentStore];
     const stateFromStores = obj.useStateFromStores(
       items,
       () => Object.keys(allExperimentOverrideDescriptors.getAllExperimentOverrideDescriptors()).length,
     );
-    const items1 = [closure_3];
-    const obj2 = initialize;
+    const items1 = [ApexExperimentStore];
     obj = {
       label: "Experiments overridden: ",
       value:
@@ -32,7 +31,7 @@ createToggle = {
           .useStateFromStores(items1, () => Object.keys(clientOverrides.getClientOverrides()).length)
           .toString(),
     };
-    return jsx(DevToolsContentSortButtons.DevToolsContentSubLabel, {
+    return jsx(DevToolsContent.DevToolsContentSubLabel, {
       label: "Experiments overridden: ",
       value:
         stateFromStores +
@@ -42,16 +41,14 @@ createToggle = {
     });
   },
   usePredicate: function useHasExperimentOverrideActive() {
-    const staffOrDeveloperSettingPredicate = useStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
-    const obj = useStaffOrDeveloperSettingPredicate;
-    const items = [closure_2];
+    const staffOrDeveloperSettingPredicate =
+      useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
+    const items = [ExperimentStore];
     const stateFromStores = initialize.useStateFromStores(
       items,
       () => Object.keys(allExperimentOverrideDescriptors.getAllExperimentOverrideDescriptors()).length,
     );
-    const obj2 = initialize;
-    const items1 = [closure_3];
-    const obj3 = initialize;
+    const items1 = [ApexExperimentStore];
     return (
       stateFromStores +
         initialize.useStateFromStores(items1, () => Object.keys(clientOverrides.getClientOverrides()).length) >
@@ -59,13 +56,12 @@ createToggle = {
     );
   },
   onPress: function handleExperimentOverrideActivePress() {
-    navigateToDevTools.navigateToDevTools({ screenKey: "experiments" });
+    DevToolsNavigator.navigateToDevTools({ screenKey: "experiments" });
   },
   withArrow: true,
 };
-createToggle = createToggle.createPressable(createToggle);
-const result = require("set").fileFinishedImporting(
-  "modules/user_settings/defs/native/ExperimentOverrideActiveSetting.tsx",
-);
+SettingBuilders = SettingBuilders.createPressable(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/ExperimentOverrideActiveSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

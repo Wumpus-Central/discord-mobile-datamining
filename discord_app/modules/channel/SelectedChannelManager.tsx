@@ -1,18 +1,17 @@
 // discord_app/modules/channel/SelectedChannelManager.tsx
-import dispatcherDefault from "../../Dispatcher.tsx";
-import transitionTo from "../routing/router_utils.tsx";
-import _modDef5411 from "../../actions/SelectedChannelActionCreators.tsx";
-import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import router_utils from "../routing/router_utils.tsx";
+import SelectedChannelActionCreatorsDefault from "../../actions/SelectedChannelActionCreators.tsx";
 import transitionToGuild from "../routing/transitionToGuild.native.tsx";
-import closure_3 from "../../stores/MediaEngineStore.tsx";
-import closure_4 from "../../stores/SelectedChannelStore.tsx";
-import { findFirstVoiceChannelId } from "../../stores/SelectedChannelStore.tsx";
-import closure_6 from "../../stores/SelectedGuildStore.tsx";
-import ME from "../../Constants.tsx";
+import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
+import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
+import SelectedGuildStore from "../../stores/SelectedGuildStore.tsx";
+import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
-require = arg1;
-({ ChannelTypes: error, Routes: closure_8, ME: c9, NULL_STRING_GUILD_ID: c10 } = ME);
-initializeDefault;
+require = fn;
+const findFirstVoiceChannelId = fn(2011).findFirstVoiceChannelId;
+const Constants = fn(1074);
+({ ChannelTypes: closure_7, Routes: closure_8, ME: closure_9, NULL_STRING_GUILD_ID: c10 } = Constants);
 class SelectedChannelManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -27,11 +26,10 @@ class SelectedChannelManager extends tmp3 {
 const prototype = SelectedChannelManager.prototype;
 prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
   guild = guild.guild;
-  const channelId = store.getChannelId(closure_9);
-  const voiceChannelId = store.getVoiceChannelId();
+  const channelId = SelectedChannelStore.getChannelId(React7);
+  const voiceChannelId = SelectedChannelStore.getVoiceChannelId();
   if (guild.id === channelId) {
     transitionToGuild.transitionToGuild(guild.id);
-    const obj = transitionToGuild;
   }
   let tmp6 = guild.id === voiceChannelId;
   if (tmp6) {
@@ -41,30 +39,29 @@ prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
     tmp6 = null == voiceChannelId;
   }
   if (tmp6) {
-    const voiceChannel = _modDef5411.selectVoiceChannel(findFirstVoiceChannelId(guild.id));
-    const obj2 = _modDef5411;
+    const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(findFirstVoiceChannelId(guild.id));
   }
 };
 prototype["handleChannelCreate"] = function handleChannelCreate(channel) {
   channel = channel.channel;
   if (channel.type === constants.GROUP_DM) {
     const originChannelId = channel.originChannelId;
-    const channelId = store.getChannelId(closure_10);
+    const channelId = SelectedChannelStore.getChannelId(closure_1_10);
     if (tmp) {
-      transitionTo.transitionTo(closure_8.CHANNEL(closure_9, channel.id));
-      const obj = transitionTo;
+      router_utils.transitionTo(React6.CHANNEL(React7, channel.id));
     }
-    const obj3 = store;
-    tmp = null == guildId.getGuildId() && null != originChannelId && originChannelId === channelId;
+    tmp = null == SelectedGuildStore.getGuildId() && null != originChannelId && originChannelId === channelId;
     if (tmp7) {
-      const voiceChannel = _modDef5411.selectVoiceChannel(channel.id, videoEnabled.isVideoEnabled());
-      const obj2 = _modDef5411;
+      const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(
+        channel.id,
+        MediaEngineStore.isVideoEnabled(),
+      );
     }
-    tmp7 = null != originChannelId && originChannelId === store.getVoiceChannelId();
+    tmp7 = null != originChannelId && originChannelId === SelectedChannelStore.getVoiceChannelId();
   }
 };
 prototype["handleLogout"] = function handleLogout() {
-  dispatcherDefault.dispatch({
+  DispatcherDefault.dispatch({
     type: "VOICE_CHANNEL_SELECT",
     channelId: null,
     guildId: null,
@@ -74,6 +71,7 @@ prototype["handleLogout"] = function handleLogout() {
   });
 };
 const selectedChannelManager = new SelectedChannelManager();
-const result = require("set").fileFinishedImporting("modules/channel/SelectedChannelManager.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/channel/SelectedChannelManager.tsx");
 
 export default selectedChannelManager;

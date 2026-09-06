@@ -1,27 +1,27 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/navigator/PressableNavigatorButtonWrapper.tsx
-import set from "../../../../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import _mod17 from "../../../../../../_runtime/metro/00017__.js";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import MIN_HEADER_HEIGHT2 from "../MainTabsV2Constants.tsx";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import MainTabsV2Constants from "../MainTabsV2Constants.tsx";
+import createStyles from "../../../../../design/components/Styles/native/createStyles.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-const View = get_ActivityIndicator.View;
-const MIN_HEADER_HEIGHT = MIN_HEADER_HEIGHT2.MIN_HEADER_HEIGHT;
+const View = _mod17.View;
+const MIN_HEADER_HEIGHT = MainTabsV2Constants.MIN_HEADER_HEIGHT;
 const jsx = jsxProd.jsx;
-let obj = { buttonWrapper: null, buttonWrapperModal: null };
-obj = {
+const obj = { buttonWrapper: null, buttonWrapperModal: null };
+let size = {
   flexShrink: 0,
   flexDirection: "row",
   alignItems: "center",
-  padding: ThemesDefault.space.PX_8,
+  padding: nativeDefault.space.PX_8,
   height: MIN_HEADER_HEIGHT,
   width: MIN_HEADER_HEIGHT,
 };
-obj[0] = obj;
-obj[1] = { marginLeft: -8 };
-let closure_2 = createCacheKey.createStyles(obj);
-const result = set.fileFinishedImporting(
+obj.buttonWrapper = size;
+obj.buttonWrapperModal = { marginLeft: -8 };
+let closure_2 = createStyles.createStyles(obj);
+const result = size.fileFinishedImporting(
   "modules/main_tabs_v2/native/shared_components/navigator/PressableNavigatorButtonWrapper.tsx",
 );
 
@@ -30,7 +30,7 @@ export default function PressableNavigatorButtonWrapper(children) {
   if (flag === undefined) {
     flag = false;
   }
-  const tmp = callback();
+  const tmp = closure_2();
   return (
     <View collapsable={false} style={flag ? tmp.buttonWrapperModal : tmp.buttonWrapper} importantForAccessibility="yes">
       {arg0.children}

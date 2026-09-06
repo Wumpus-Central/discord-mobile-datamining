@@ -1,7 +1,7 @@
 // discord_app/modules/guild_templates/GuildTemplatesConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/guild_templates/GuildTemplatesConstants.tsx");
+const result = size.fileFinishedImporting("modules/guild_templates/GuildTemplatesConstants.tsx");
 
 export const GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD = 50;
 export const GuildTemplateStates = {

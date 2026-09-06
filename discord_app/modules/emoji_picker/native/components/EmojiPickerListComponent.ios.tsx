@@ -1,29 +1,35 @@
 // discord_app/modules/emoji_picker/native/components/EmojiPickerListComponent.ios.tsx
-import importAllResult from "../../../../../_runtime/00019_noop.js";
-import IMAGE_SIZE from "EmojiPickerListConstants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let c3 = importAllResult;
-({ ROW_HEIGHT: c4, LABEL_HEIGHT: c5, LABEL_TOP_PADDING: closure_6, LABEL_BOTTOM_PADDING: error } = IMAGE_SIZE);
-const forwardRefResult = importAllResult.forwardRef((paddingTop, ref) => {
+const require = fn;
+const EmojiPickerListConstants = fn(10290);
+({
+  ROW_HEIGHT: closure_4,
+  LABEL_HEIGHT: hasOwnProperty,
+  LABEL_TOP_PADDING: metroRequire,
+  LABEL_BOTTOM_PADDING: closure_7,
+} = EmojiPickerListConstants);
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/emoji_picker/native/components/EmojiPickerListComponent.ios.tsx");
+
+export default noop.forwardRef((paddingTop, ref) => {
   ({ categoryIndexActive: require, data } = paddingTop);
   const stickyHeaderIndices = data.headerIndices;
   paddingTop = paddingTop.paddingTop;
   const paddingBottom = paddingTop.paddingBottom;
-  ref = undefined;
   ({ onShowNitroUpsell, renderItem } = paddingTop);
   ref = paddingBottom.useRef(null);
   const items = [paddingTop, paddingBottom];
   const contentContainerStyle = paddingBottom.useMemo(() => ({ paddingTop, paddingBottom }), items);
   const getItemType = paddingBottom.useCallback((type) => type.type, []);
-  const keyExtractor = paddingBottom.useCallback((type) => "" + type.type + "-" + arg1, []);
+  const keyExtractor = paddingBottom.useCallback((type, arg1) => "" + type.type + "-" + arg1, []);
   const overrideItemLayout = paddingBottom.useCallback((arg0, type) => {
     type = type.type;
-    if (callback(paddingTop[3]).EmojiPickerItemType.PLACEHOLDER === type) {
+    if (require("useEmojiPickerData").EmojiPickerItemType.PLACEHOLDER === type) {
       arg0.size = 0;
     } else if (tmp(tmp2[3]).EmojiPickerItemType.TITLE === type) {
-      arg0.size = closure_5 + closure_6 + closure_7;
+      arg0.size = closure_1_5 + closure_1_6 + closure_1_7;
     } else {
       if (tmp(tmp2[3]).EmojiPickerItemType.EMOJI_ROW !== type) {
         if (tmp(tmp2[3]).EmojiPickerItemType.EMOJI_ROW_NSFW !== type) {
@@ -47,9 +53,7 @@ const forwardRefResult = importAllResult.forwardRef((paddingTop, ref) => {
         if (num == null) {
           num = 0;
         }
-        const obj = { index: null, animated: null };
-        obj[0] = num;
-        obj[1] = flag;
+        const obj = { index: num, animated: flag };
         current.scrollToIndex(obj);
       }
     },
@@ -66,7 +70,6 @@ const forwardRefResult = importAllResult.forwardRef((paddingTop, ref) => {
       let num3 = 0;
       if (0 < length.length) {
         do {
-          let tmp = num2;
           let tmp2 = num3;
           arr = length;
           if (arg0 >= length[num2]) {
@@ -77,11 +80,11 @@ const forwardRefResult = importAllResult.forwardRef((paddingTop, ref) => {
           num = tmp2;
         } while (num2 < arr.length);
       }
-      const result = closure_0.set(num);
+      const result = closure_1_0.set(num);
     },
   }));
-  const preventNativeModalDismiss = require(paddingTop[6]).useIsPortalKeyboardInModal();
-  return jsx(require(paddingTop[7]).BottomSheetFlashList, {
+  const preventNativeModalDismiss = require("PortalKeyboardModalContext").useIsPortalKeyboardInModal();
+  return jsx(require("../../../../../discord_common/js/packages/flash-list/index.js").BottomSheetFlashList, {
     contentContainerStyle,
     data: data.data,
     getItemType,
@@ -95,8 +98,3 @@ const forwardRefResult = importAllResult.forwardRef((paddingTop, ref) => {
     stickyHeaderIndices,
   });
 });
-let result = require("set").fileFinishedImporting(
-  "modules/emoji_picker/native/components/EmojiPickerListComponent.ios.tsx",
-);
-
-export default forwardRefResult;

@@ -1,7 +1,7 @@
 // discord_assets/assets/mana/asset-library/generated/StreamingTier2LargeBadge-2x.png.js
-import set from "../../../../../_runtime/00002_set.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting(
+const result = size.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/StreamingTier2LargeBadge-2x.png.js",
 );
 

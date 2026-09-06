@@ -1,15 +1,16 @@
 // discord_app/modules/experiments/client_override_hooks/useApexExperiments.tsx
-import create from "../../../../discord_common/js/packages/protos/discord_protos/discord_experimentation/v1/experiment.tsx";
-import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
-import closure_5 from "../apex/ApexExperimentStore.tsx";
+import apex_ApexTypes from "../apex/ApexTypes.tsx";
+import ExperimentManager from "../ExperimentManager.tsx";
+import experiment from "../../../../discord_common/js/packages/protos/discord_protos/discord_experimentation/v1/experiment.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import ApexExperimentStore from "../apex/ApexExperimentStore.tsx";
 
-require = arg1;
+require = fn;
 function makeClientVariant(id) {
-  return { id, label: "Variant " + id, shortLabel: "Variant " + id, type: create.Variation_Type.UNSPECIFIED };
+  return { id, label: "Variant " + id, shortLabel: "Variant " + id, type: experiment.Variation_Type.UNSPECIFIED };
 }
 function mergeApexExperiments(experimentsMetadata, registeredExperiments) {
-  const _require = registeredExperiments;
+  _require = registeredExperiments;
   let obj = {};
   function _loop() {
     variants = variants.variants;
@@ -20,56 +21,51 @@ function mergeApexExperiments(experimentsMetadata, registeredExperiments) {
       type: id.type,
     }));
     const set = new Set(mapped.map((id) => id.id));
-    if (null != set[closure_2]) {
+    if (null != dependencyMap[_slicedToArray]) {
       const _Object = Object;
       const keys = Object.keys(tmp4.variations);
-      const mapped1 = keys.map((arg0) => Number(arg0));
-      const found = mapped1.filter((arg0) => !set.has(arg0));
-      let mapped2 = found.map(closure_1_6);
+      const mapped1 = keys.map((item) => Number(item));
+      const found = mapped1.filter((item) => !set.has(item));
+      let mapped2 = found.map(makeClientVariant);
     } else {
       mapped2 = [];
     }
     obj = {
-      system: callback(obj[4]).ExperimentSystem.APEX,
-      kind: callback(obj[5]).UnitTypeToKind[variants.unitType],
+      system: ExperimentManager.ExperimentSystem.APEX,
+      kind: apex_ApexTypes.UnitTypeToKind[variants.unitType],
       name: variants.name,
       title: variants.title,
-      variants: items.sort((id, id2) => id.id - id2.id),
+      variants: null,
     };
-    items = [...mapped2];
-    obj[closure_2] = obj;
+    const items = [...mapped2];
+    obj.variants = items.sort((id, id2) => id.id - id2.id);
+    obj[_slicedToArray] = obj;
   }
   const entries = Object.entries(experimentsMetadata);
   while (tmp2 !== undefined) {
-    let tmp4 = callback;
-    let tmp5 = callback(tmp3, 2);
-    [closure_2, closure_3] = tmp5;
+    let tmp5 = _slicedToArray(tmp3, 2);
+    [_slicedToArray, closure_3] = tmp5;
     let _loopResult = _loop();
     continue;
   }
   const entries1 = Object.entries(registeredExperiments);
   tmp2 = entries[Symbol.iterator]();
   while (tmp8 !== undefined) {
-    let tmp10 = callback;
-    let tmp11 = callback(tmp9, 2);
+    let tmp11 = _slicedToArray(tmp9, 2);
     [tmp12, tmp14] = tmp11;
     if (null == obj[tmp12]) {
-      let tmp15 = tmp12;
       obj = { system: null, kind: null, name: null, title: null, variants: null };
-      let tmp16 = _require;
-      let tmp17 = obj;
-      obj[0] = _require(obj[4]).ExperimentSystem.APEX;
-      let tmp18 = tmp14;
-      ({ kind: obj2[1], name: obj2[2], name: obj2[3] } = tmp14);
+      obj.system = require("ExperimentManager").ExperimentSystem.APEX;
+      ({ kind: obj2.kind, name: obj2.name, name: obj2.title } = tmp14);
       let _Object = Object;
       let keys = Object.keys(tmp14.variations);
-      obj[4] = keys.map((arg0) => {
-        const NumberResult = Number(arg0);
+      obj.variants = keys.map((item) => {
+        const NumberResult = Number(item);
         obj = {
           id: NumberResult,
           label: "Variant " + NumberResult,
           shortLabel: "Variant " + NumberResult,
-          type: callback(obj[3]).Variation_Type.UNSPECIFIED,
+          type: dependencyMap(obj[3]).Variation_Type.UNSPECIFIED,
         };
         return obj;
       });
@@ -83,51 +79,50 @@ function getApexExperimentOverridesInfo(clientOverrides) {
   let obj = {};
   const entries = Object.entries(clientOverrides);
   while (tmp2 !== undefined) {
-    let tmp4 = callback;
-    let tmp5 = callback(tmp3, 2);
+    let tmp5 = _slicedToArray(tmp3, 2);
     [tmp6, tmp7] = tmp5;
-    obj = { experimentId: null, variantId: null, originalDescriptor: null };
-    obj[0] = tmp6;
-    obj[1] = tmp7.variantId;
-    obj[2] = tmp7;
+    obj = { experimentId: tmp6, variantId: tmp7.variantId, originalDescriptor: tmp7 };
     obj[tmp6] = obj;
     continue;
   }
   return obj;
 }
-({ useEffect: c3, useMemo: c4 } = noop);
-const result = require("set").fileFinishedImporting("modules/experiments/client_override_hooks/useApexExperiments.tsx");
+const noop = fn(19);
+({ useEffect: c3, useMemo: closure_4 } = noop);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/experiments/client_override_hooks/useApexExperiments.tsx");
 
 export { mergeApexExperiments };
 export { getApexExperimentOverridesInfo };
 export const getApexExperiments = function getApexExperiments() {
   const obj = { experiments: null, overridesInfo: null };
-  const experimentsMetadata = store.getExperimentsMetadata();
-  obj[0] = mergeApexExperiments(experimentsMetadata, store.getRegisteredExperiments());
-  obj[1] = getApexExperimentOverridesInfo(store.getClientOverrides());
+  const experimentsMetadata = ApexExperimentStore.getExperimentsMetadata();
+  obj.experiments = mergeApexExperiments(experimentsMetadata, ApexExperimentStore.getRegisteredExperiments());
+  obj.overridesInfo = getApexExperimentOverridesInfo(ApexExperimentStore.getClientOverrides());
   return obj;
 };
 export const useApexExperiments = function useApexExperiments() {
-  callback2(() => {
+  closure_3(() => {
     const apexExperimentsMetadata = stateFromStores(stateFromStores1[6]).fetchApexExperimentsMetadata(
       stateFromStores(stateFromStores1[3]).Experiment_Surface.APP,
     );
   }, []);
   let obj = stateFromStores(stateFromStores1[7]);
-  const items = [closure_5];
-  stateFromStores = obj.useStateFromStores(items, () => store.getExperimentsMetadata());
-  const items1 = [closure_5];
+  const items = [ApexExperimentStore];
+  stateFromStores = obj.useStateFromStores(items, () => ApexExperimentStore.getExperimentsMetadata());
+  const items1 = [ApexExperimentStore];
   stateFromStores1 = stateFromStores(stateFromStores1[7]).useStateFromStores(items1, () =>
-    store.getRegisteredExperiments(),
+    ApexExperimentStore.getRegisteredExperiments(),
   );
   const items2 = [stateFromStores, stateFromStores1];
   const obj2 = stateFromStores(stateFromStores1[7]);
-  const tmp4 = callback3(() => closure_1_7(stateFromStores, stateFromStores1), items2);
-  const items3 = [closure_5];
+  const tmp4 = closure_4(() => mergeApexExperiments(stateFromStores, stateFromStores1), items2);
+  const items3 = [ApexExperimentStore];
   const stateFromStores2 = stateFromStores(stateFromStores1[7]).useStateFromStores(items3, () =>
-    store.getClientOverrides(),
+    ApexExperimentStore.getClientOverrides(),
   );
-  obj = { experiments: tmp4, overridesInfo: callback3(() => closure_1_8(stateFromStores2), items4) };
-  items4 = [stateFromStores2];
+  obj = { experiments: tmp4, overridesInfo: null };
+  const items4 = [stateFromStores2];
+  obj.overridesInfo = closure_4(() => getApexExperimentOverridesInfo(stateFromStores2), items4);
   return obj;
 };

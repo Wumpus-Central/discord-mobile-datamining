@@ -1,33 +1,34 @@
 // discord_app/modules/phone/native/CountryCallingCodeSelect.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
-import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import { getI18NCountryName } from "../../i18n/CountryCodeUtils.tsx";
-import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import fuzzysearchDefault from "../../../../_runtime/05517_fuzzysearch.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-let closure_9 = createCacheKey.createStyles((arg0) => {
+const require = fn;
+const View = fn(17).View;
+const getI18NCountryName = fn(4776).getI18NCountryName;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4560);
+let closure_9 = createStyles.createStyles((arg0) => {
   let obj = {
-    backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW,
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
     paddingHorizontal: null,
     paddingTop: null,
     paddingBottom: null,
     flex: 1,
   };
-  const space = ThemesDefault.space;
-  obj[1] = arg0 ? space.PX_24 : space.PX_12;
-  obj[2] = ThemesDefault.space.PX_16;
+  const space = nativeDefault.space;
+  obj.paddingHorizontal = arg0 ? space.PX_24 : space.PX_12;
+  obj.paddingTop = nativeDefault.space.PX_16;
   const space2 = tmp(576).space;
-  obj = { container: obj, searchFieldContainer: null };
-  obj[3] = arg0 ? space2.PX_24 : space2.PX_16;
+  obj = { container: obj, searchFieldContainer: null, paddingBottom: arg0 ? space2.PX_24 : space2.PX_16 };
   obj = { paddingBottom: tmp(576).space.PX_16 };
-  obj[1] = obj;
+  obj.searchFieldContainer = obj;
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/phone/native/CountryCallingCodeSelect.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/phone/native/CountryCallingCodeSelect.tsx");
 
 export default function CountryCallingCodeSelect(onCountrySelected) {
   onCountrySelected = onCountrySelected.onCountrySelected;
@@ -35,28 +36,28 @@ export default function CountryCallingCodeSelect(onCountrySelected) {
   let first;
   let memo;
   let rows;
-  let tmp3 = callback2(onClose(first[7])());
+  let tmp3 = closure_9(onClose(first[7])());
   const tmp4 = memo(rows.useState(""), 2);
   first = tmp4[0];
   memo = rows.useMemo(
     () =>
-      onClose(first[8]).flatMap((alpha2) => {
+      onClose(first[8]).flatMap((alpha2, index) => {
         alpha2 = alpha2.alpha2;
         ({ phoneCountryCodes, name: closure_1 } = alpha2);
-        closure_2 = arg1;
-        closure_3 = undefined;
-        closure_3 = callback(alpha2);
+        closure_2 = index;
+        const translatedName = closure_1_6(alpha2);
         return phoneCountryCodes.map((code) => {
-          obj = { translatedName: closure_3, key: "" + closure_2 + "-" + code, country: obj };
-          obj = { code, alpha2, name: closure_1 };
+          let obj = { translatedName, key: "" + closure_2 + "-" + code, country: null };
+          obj = { code, alpha2, name };
+          obj.country = obj;
           return obj;
         });
       }),
     [],
   );
-  const items = [memo, first];
+  let items = [memo, first];
   const memo1 = rows.useMemo(() => {
-    rows = [];
+    const items = [];
     const iter = memo[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
@@ -64,40 +65,34 @@ export default function CountryCallingCodeSelect(onCountrySelected) {
       let str = first;
       let startsWithResult = 0 === first.length;
       if (!startsWithResult) {
-        let tmp5 = nextResult;
         let str2 = tmp3.country.code;
         let replaced = str2.replace(/\+|\s/g, "");
         startsWithResult = replaced.startsWith(str.replace(/\+|\s/g, ""));
       }
       if (!startsWithResult) {
-        let tmp6 = onClose;
-        let tmp7 = first;
-        let tmp8 = onClose(first[10]);
-        let tmp10 = nextResult;
+        let tmp8 = fuzzysearchDefault;
         let str3 = tmp3.country.name;
         let formatted = str.toLowerCase();
         startsWithResult = tmp8(formatted, str3.toLowerCase());
       }
       if (!startsWithResult) {
-        let tmp11 = onClose;
-        let tmp12 = first;
-        let tmp13 = onClose(first[10]);
-        let tmp15 = nextResult;
+        let tmp13 = fuzzysearchDefault;
         let str4 = tmp3.translatedName;
         let formatted1 = str.toLowerCase();
         startsWithResult = tmp13(formatted1, str4.toLowerCase());
       }
       if (startsWithResult) {
-        let tmp16 = nextResult;
-        let arr = rows.push(tmp3);
+        let arr = items.push(tmp3);
       }
       continue;
     }
-    const sections = [rows.length];
-    return { rows, sections };
+    const obj = { rows: items, sections: null };
+    const items1 = [items.length];
+    obj.sections = items1;
+    return obj;
   }, items);
   rows = memo1.rows;
-  const items1 = [onClose, onCountrySelected, rows];
+  let items1 = [onClose, onCountrySelected, rows];
   let obj = { style: tmp3.container, children: null };
   obj = { style: tmp3.searchFieldContainer, children: null };
   const callback = rows.useCallback((arg0, arg1) => {
@@ -110,28 +105,27 @@ export default function CountryCallingCodeSelect(onCountrySelected) {
       onPress: null,
     };
     obj = { variant: "text-md/semibold", children: country.code };
-    obj[3] = closure_1_7(onCountrySelected(first[12]).Text, obj);
-    obj[4] = function onPress() {
-      country(country);
-      if (closure_1_1 != null) {
-        closure_1_1();
+    obj.trailing = closure_1_7(onCountrySelected(first[12]).Text, obj);
+    obj.onPress = function onPress() {
+      onCountrySelected(country);
+      if (onClose != null) {
+        onClose();
       }
     };
     return closure_1_7(onCountrySelected(first[11]).TableRow, obj);
   }, items1);
-  obj[1] = callback(onCountrySelected(first[13]).SearchField, { size: "md", onChange: tmp4[1] });
-  const items2 = [callback(View, obj)];
+  obj.children = closure_7(onCountrySelected(first[13]).SearchField, { size: "md", onChange: tmp4[1] });
+  const items2 = [closure_7(View, obj)];
   if ("" !== first) {
     if (0 === rows.length) {
-      obj = { source: null, text: null };
-      obj[0] = tmp(tmp2[15]);
+      obj = { source: tmp(tmp2[15]), text: null };
       const intl = tmp13(tmp2[16]).intl;
-      obj[1] = intl.string(tmp13(tmp2[16]).t.wEHnxW);
+      obj.text = intl.string(tmp13(tmp2[16]).t.wEHnxW);
       let tmp12Result = tmp12(tmp(tmp2[14]), obj);
       const tmpResult = tmp(tmp2[14]);
     }
     items2[1] = tmp12Result;
-    obj[1] = items2;
+    obj.children = items2;
     return closure_8(View, obj);
   }
   tmp12Result = tmp12(tmp(tmp2[17]), {

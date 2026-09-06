@@ -1,9 +1,11 @@
 // discord_app/modules/guild_role_subscriptions/feature_gating/getSystemVersion.native.tsx
-import set from "../../../../_runtime/00002_set.js";
-import DCDDeviceManager from "../../../utils/native/DeviceUtils.tsx";
+import DeviceUtils from "../../../utils/native/DeviceUtils.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/guild_role_subscriptions/feature_gating/getSystemVersion.native.tsx");
+const result = size.fileFinishedImporting(
+  "modules/guild_role_subscriptions/feature_gating/getSystemVersion.native.tsx",
+);
 
 export const getSystemVersion = function getSystemVersion() {
-  return DCDDeviceManager.getSystemVersion();
+  return DeviceUtils.getSystemVersion();
 };

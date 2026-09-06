@@ -1,10 +1,10 @@
 // discord_app/modules/media_uploads/native/VideoUploadUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
-import timestampDefault from "../../debug/Logger.tsx";
-import CHANNEL_SIDEBAR_WIDTH from "../../user_settings/UnsyncedUserSettingsStore.tsx";
+import LoggerDefault from "../../debug/Logger.tsx";
+import UnsyncedUserSettingsStore from "../../user_settings/UnsyncedUserSettingsStore.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const VideoCompressionQuality = CHANNEL_SIDEBAR_WIDTH.VideoCompressionQuality;
-let closure_1 = new timestampDefault("VideoUploadUtils.tsx");
+const VideoCompressionQuality = UnsyncedUserSettingsStore.VideoCompressionQuality;
+const logger = new LoggerDefault("VideoUploadUtils.tsx");
 let VideoQualityTarget;
 class VideoQualityTarget {
   constructor(arg0, arg1, arg2) {
@@ -57,7 +57,7 @@ VideoQualityTarget.fromCompressionQuality = function fromCompressionQuality(vide
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    error = new Error("Unknown compression quality: " + videoQualitySetting);
+    const error = new Error("Unknown compression quality: " + videoQualitySetting);
     throw error;
   }
   return VERY_HIGH;
@@ -77,8 +77,7 @@ obj = {
   transmuxLivePhotos: true,
   progressUpdateGranularity: 10,
 };
-const tmp2 = new timestampDefault("VideoUploadUtils.tsx");
-let result = set.fileFinishedImporting("modules/media_uploads/native/VideoUploadUtils.tsx");
+let result = size.fileFinishedImporting("modules/media_uploads/native/VideoUploadUtils.tsx");
 
 export { VideoQualityTarget };
 export const DEFAULT_VIDEO_ENCODING_CONFIG = obj;
@@ -100,15 +99,15 @@ export const calculateTargetDimensions = function calculateTargetDimensions(vide
   if (rounded % 2 !== 0) {
     sum = rounded + 1;
   }
-  const obj = { width: sum, height: null };
+  const size = { width: sum, height: null };
   let sum1 = rounded1;
   if (rounded1 % 2 !== 0) {
     sum1 = rounded1 + 1;
   }
-  obj[1] = sum1;
-  return obj;
+  size.height = sum1;
+  return size;
 };
-export const canSkipVideoTranscode = function canSkipVideoTranscode(result, videoMetadata, fileSize, arg3) {
+export const canSkipVideoTranscode = function canSkipVideoTranscode(targetResolution, videoMetadata, fileSize, arg3) {
   if (null != fileSize) {
     if (null != arg3) {
       if (fileSize > arg3) {
@@ -116,8 +115,8 @@ export const canSkipVideoTranscode = function canSkipVideoTranscode(result, vide
       }
     }
   }
-  const targetResolution = result.targetResolution;
-  result = videoMetadata.width / videoMetadata.height;
+  targetResolution = targetResolution.targetResolution;
+  const result = videoMetadata.width / videoMetadata.height;
   if (videoMetadata.width > videoMetadata.height) {
     const _Math3 = Math;
     const bound = Math.min(targetResolution, videoMetadata.height);
@@ -142,14 +141,13 @@ export const canSkipVideoTranscode = function canSkipVideoTranscode(result, vide
   const tmp11 = rounded2 <= sum && Math.round(videoMetadata.height) <= sum1;
   let tmp12 = !tmp11;
   if (tmp11) {
-    tmp12 = videoMetadata.bitRate > result.targetBitrate;
+    tmp12 = videoMetadata.bitRate > targetResolution.targetBitrate;
   }
   if (!tmp12) {
     tmp12 = null == videoMetadata.format;
   }
   if (!tmp12) {
     tmp12 = null === videoMetadata.format.match(/(avc1|hvc1|video\/(avc|hevc))/i);
-    const str = videoMetadata.format;
   }
   return !tmp12;
 };
@@ -179,8 +177,7 @@ export const logSourceMetadata = function logSourceMetadata(format) {
 };
 export const logEncoderSettings = function logEncoderSettings(videoQuality) {
   logger.info("Encoder Video Quality Settings:");
-  let str = videoQuality.videoQuality;
-  str = undefined;
+  let str;
   if (str != null) {
     str = str.toString();
   }
@@ -222,6 +219,6 @@ export const logEncoderSettings = function logEncoderSettings(videoQuality) {
     obj.info("- Progress Update Granularity: " + videoQuality.progressUpdateGranularity);
   }
 };
-export const calculateOptimalBitrate = function calculateOptimalBitrate(videoMetadata, result, bitrateFloor) {
-  return Math.min(Math.max(videoMetadata.bitRate, bitrateFloor), result.targetBitrate);
+export const calculateOptimalBitrate = function calculateOptimalBitrate(videoMetadata, targetBitrate, bitrateFloor) {
+  return Math.min(Math.max(videoMetadata.bitRate, bitrateFloor), targetBitrate.targetBitrate);
 };

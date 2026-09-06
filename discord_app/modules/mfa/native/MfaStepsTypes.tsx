@@ -1,7 +1,7 @@
 // discord_app/modules/mfa/native/MfaStepsTypes.tsx
-import set from "../../../../_runtime/00002_set.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/mfa/native/MfaStepsTypes.tsx");
+const result = size.fileFinishedImporting("modules/mfa/native/MfaStepsTypes.tsx");
 
 export const MfaScreens = {
   BACKUP: "backup",

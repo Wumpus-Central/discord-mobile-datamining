@@ -1,67 +1,62 @@
 // discord_common/js/packages/flux/useStateFromStores.tsx
-import shallowEqual from "../shallow-equal/shallowEqual.tsx";
-import shallowEqualDefault from "../shallow-equal/shallowEqual.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
-import { shallowEqual } from "../shallow-equal/shallowEqual.tsx";
+import discord_common_shallowEqual from "../shallow-equal/shallowEqual.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
-require = arg1;
+const discord_common_shallowEqualDefault = discord_common_shallowEqual;
+
+require = fn;
 function defaultAreStatesEqual(arg0, arg1) {
   return arg0 === arg1;
 }
 function useStateFromStores(items, getCurrentRestrictedHoursState, items1, isVersionEqual) {
-  const _require = items;
-  closure_1 = getCurrentRestrictedHoursState;
+  _require = items;
+  const getStateFromStores = getCurrentRestrictedHoursState;
   dependencyMap = items1;
   let tmp = isVersionEqual;
   if (isVersionEqual === undefined) {
     tmp = defaultAreStatesEqual;
   }
-  const callback = tmp;
+  _slicedToArray = tmp;
   let current;
-  let callback2;
-  let callback3;
-  const tmp2 = callback2(null);
+  let state;
+  closure_6 = undefined;
+  const tmp2 = state(null);
   if (null == tmp2.current) {
     const obj = {
-      stores: null,
-      areStatesEqual: null,
-      getStateFromStores: null,
+      stores: items,
+      areStatesEqual: tmp,
+      getStateFromStores: getCurrentRestrictedHoursState,
       prevDeps: "Boolean",
       state: "accessible",
     };
-    obj[0] = items;
-    obj[1] = tmp;
-    obj[2] = getCurrentRestrictedHoursState;
     tmp2.current = obj;
   }
   current = tmp2.current;
-  const state = current.state;
-  callback2 = state;
+  state = current.state;
   if (null == items1) {
     const tmp6 = getCurrentRestrictedHoursState();
     let tmp5 = state;
     if (!tmp7) {
-      callback2 = tmp6;
+      state = tmp6;
       tmp5 = tmp6;
     }
     tmp7 = null != state && tmp(state, tmp6);
   } else {
     tmp5 = state;
-    const obj2 = shallowEqual;
+    const obj2 = require("discord_common/shallowEqual");
   }
-  callback3(() => {
-    current.getStateFromStores = closure_1;
-    current.prevDeps = closure_2;
-    current.state = closure_5;
+  closure_6(() => {
+    current.getStateFromStores = getStateFromStores;
+    current.prevDeps = prevDeps;
+    current.state = state;
   });
-  callback3 = callback(current(null), 2)[1];
-  callback3(() => {
-    batchedStoreListener = new items(items1[3]).BatchedStoreListener(batchedStoreListener, () => {
+  closure_6 = _slicedToArray(current(null), 2)[1];
+  closure_6(() => {
+    batchedStoreListener = new items(prevDeps[3]).BatchedStoreListener(batchedStoreListener, () => {
       stateFromStores = stateFromStores.getStateFromStores();
-      if (!callback(stateFromStores.state, stateFromStores)) {
+      if (!closure_1_3(stateFromStores.state, stateFromStores)) {
         stateFromStores.state = stateFromStores;
-        callback2({});
+        closure_1_6({});
       }
     });
     batchedStoreListener.attach("useStateFromStores");
@@ -69,8 +64,10 @@ function useStateFromStores(items, getCurrentRestrictedHoursState, items1, isVer
   }, []);
   return tmp5;
 }
-({ useState: c4, useRef: c5, useInsertionEffect: closure_6 } = noop);
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/flux/useStateFromStores.tsx");
+const noop = fn(19);
+({ useState: closure_4, useRef: hasOwnProperty, useInsertionEffect: metroRequire } = noop);
+const size = fn(2);
+const result = size.fileFinishedImporting("../discord_common/js/packages/flux/useStateFromStores.tsx");
 
 export function statesWillNeverBeEqual() {
   return false;
@@ -81,8 +78,13 @@ export const useStateFromStoresObject = function useStateFromStoresObject(
   getCurrentRestrictedHoursState,
   items1,
 ) {
-  return useStateFromStores(items, getCurrentRestrictedHoursState, items1, shallowEqualDefault);
+  return useStateFromStores(items, getCurrentRestrictedHoursState, items1, discord_common_shallowEqualDefault);
 };
 export const useStateFromStoresArray = function useStateFromStoresArray(items, getCurrentRestrictedHoursState, items1) {
-  return useStateFromStores(items, getCurrentRestrictedHoursState, items1, shallowEqual.areArraysShallowEqual);
+  return useStateFromStores(
+    items,
+    getCurrentRestrictedHoursState,
+    items1,
+    discord_common_shallowEqual.areArraysShallowEqual,
+  );
 };

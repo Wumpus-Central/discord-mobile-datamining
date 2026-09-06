@@ -1,15 +1,17 @@
 // discord_app/modules/auth/native/components/MFA.tsx
-import applyDefault from "../../../../../_runtime/00012_apply.js";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../../stores/AuthenticationStore.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import _modDef12 from "../../../../../_runtime/metro/00012__.js";
+import AuthenticationActionCreatorsDefault from "../../../../actions/AuthenticationActionCreators.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 
-const require = arg1;
+const require = fn;
 function statesAreEqual(arg0, arg1) {
-  return applyDefault.isEqual(arg0, arg1);
+  return _modDef12.isEqual(arg0, arg1);
 }
+const jsx = fn(21).jsx;
 let closure_7 = { flex: 1, position: "relative" };
-const result = require("set").fileFinishedImporting("modules/auth/native/components/MFA.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/auth/native/components/MFA.tsx");
 
 export default function ConnectedMFA() {
   let obj = arg0;
@@ -17,28 +19,26 @@ export default function ConnectedMFA() {
     obj = {};
   }
   ({ inContainer, isMultiAccount } = obj);
-  let navigation;
-  navigation = isMultiAccount(1483).useNavigation();
+  const navigation = isMultiAccount(1483).useNavigation();
   if (inContainer) {
     inContainer = navigation(6944)();
   }
   let tmpResult = tmp(504);
-  const items = [closure_4];
+  const items = [AuthenticationStore];
   const items1 = [isMultiAccount];
   const stateFromStores = tmpResult.useStateFromStores(
     items,
-    () => ({ ticket: store.getMFATicket(), methods: store.getMFAMethods() }),
+    () => ({ ticket: AuthenticationStore.getMFATicket(), methods: AuthenticationStore.getMFAMethods() }),
     [],
     statesAreEqual,
   );
   const items2 = [navigation];
-  const callback = React.useCallback((arg0) => {
+  const callback = noop.useCallback((arg0) => {
     ({ mfaType, data, ticket } = arg0);
-    let obj = navigation(closure_1_2[7]);
-    obj = { code: data, ticket, mfaType, isMultiAccount };
+    const obj = { code: data, ticket, mfaType, isMultiAccount };
     return obj.loginMFAv2(obj);
   }, items1);
-  const callback1 = React.useCallback(() => {
+  const callback1 = noop.useCallback(() => {
     navigation.goBack();
   }, items2);
   obj = {
@@ -55,30 +55,28 @@ export default function ConnectedMFA() {
   if (inContainer) {
     tmp9 = closure_7;
   }
-  obj[4] = tmp9;
+  obj.containerStyle = tmp9;
   let num;
   if (inContainer) {
     num = 0;
   }
-  obj[5] = num;
+  obj.headerStatusBarHeight = num;
   if (!inContainer) {
-    obj[6] = undefined;
+    obj.headerLeftContainerStyle = undefined;
     let tmp13;
     if (inContainer) {
-      obj = { paddingRight: null, paddingTop: null, marginLeft: 0 };
-      obj[0] = tmp4(576).space.PX_16;
-      obj[1] = tmp4(576).space.PX_12;
+      obj = { paddingRight: tmp4(576).space.PX_16, paddingTop: tmp4(576).space.PX_12, marginLeft: 0 };
       tmp13 = obj;
     }
-    obj[7] = tmp13;
+    obj.headerRightContainerStyle = tmp13;
     return jsx(tmp(15666).MFAModal, obj);
   } else {
     tmpResult = tmp(1116);
-    let space = tmp4(576).space;
+    tmp4(576).space;
     const isAndroidResult = tmpResult.isAndroid();
-    space = { paddingLeft: null, paddingTop: null };
-    space[0] = tmpResult.isAndroid() ? space.PX_8 : space.PX_16;
-    space[1] = tmp4(576).space.PX_12;
+    const space = { paddingLeft: null, paddingTop: null };
+    space.paddingLeft = tmpResult.isAndroid() ? space.PX_8 : space.PX_16;
+    space.paddingTop = tmp4(576).space.PX_12;
     const tmp11 = tmpResult.isAndroid() ? space.PX_8 : space.PX_16;
   }
 }

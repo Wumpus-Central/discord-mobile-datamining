@@ -1,23 +1,24 @@
 // discord_app/modules/share/native/SearchableDestinationListRow.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
 import sortByMatchScore from "../../autocompleter/index.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import formatResults from "../formatResults.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-let result = require("set").fileFinishedImporting("modules/share/native/SearchableDestinationListRow.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/share/native/SearchableDestinationListRow.tsx");
 
 export default function SearchableDestinationListRow(result) {
   result = result.result;
   require = result;
   const onPressDestination = result.onPressDestination;
-  const merged = Object.assign(result, Object.create(null));
+  const merged = Object.assign(result, Object.assign({ result: 0, onPressDestination: 0 }));
   ({ type, record } = result);
   if (type === sortByMatchScore.AutocompleterResultTypes.HEADER) {
     return null;
   } else {
     if (null != onPressDestination) {
-      const fn = () => onPressDestination(result(closure_1_2[3]).getDestinationIdFromResult(closure_0));
+      const fn = () => onPressDestination(formatResults.getDestinationIdFromResult(result));
     }
     if (tmp2(9835).AutocompleterResultTypes.USER === type) {
       let obj = {};
@@ -40,7 +41,7 @@ export default function SearchableDestinationListRow(result) {
           return tmp2Result.assertNever(type);
         }
       }
-      obj1 = {};
+      const obj1 = {};
       const merged3 = Object.assign(merged);
       obj1.channel = record;
       obj1.onPress = fn;

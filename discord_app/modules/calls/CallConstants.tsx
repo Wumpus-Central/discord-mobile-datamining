@@ -1,7 +1,7 @@
 // discord_app/modules/calls/CallConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-let obj = {
+let PictureInPictureTypes = {
   STREAM: 0,
   [0]: "STREAM",
   HIDDEN_STREAM: 1,
@@ -11,10 +11,10 @@ let obj = {
   ACTIVITY: 3,
   [3]: "ACTIVITY",
 };
-obj = { VIDEO: 0, [0]: "VIDEO", CAMERA_PREVIEW: 1, [1]: "CAMERA_PREVIEW" };
-const result = set.fileFinishedImporting("modules/calls/CallConstants.tsx");
+PictureInPictureTypes = { VIDEO: 0, [0]: "VIDEO", CAMERA_PREVIEW: 1, [1]: "CAMERA_PREVIEW" };
+const result = size.fileFinishedImporting("modules/calls/CallConstants.tsx");
 
-export const ParticipantTypes = obj;
+export const ParticipantTypes = PictureInPictureTypes;
 export const ContextMenuTileTypes = { STREAM: "STREAM", USER: "USER", ACTIVITY: "ACTIVITY" };
 export const ParticipantSelectionTypes = { NONE: "NONE", AUTO: "AUTO" };
 export const VoicePlatforms = {
@@ -35,16 +35,16 @@ export const CallMenuEntrypoint = {
   CARET: "Caret",
   OTHER_BUTTON: "Other Button",
 };
-export const isStreamParticipant = function isStreamParticipant(stateFromStores) {
+export const isStreamParticipant = function isStreamParticipant(selectedParticipant) {
   let type;
-  if (stateFromStores != null) {
-    type = stateFromStores.type;
+  if (selectedParticipant != null) {
+    type = selectedParticipant.type;
   }
   let tmp3 = type === obj.STREAM;
   if (!tmp3) {
     let type1;
-    if (stateFromStores != null) {
-      type1 = stateFromStores.type;
+    if (selectedParticipant != null) {
+      type1 = selectedParticipant.type;
     }
     tmp3 = type1 === tmp2.HIDDEN_STREAM;
   }
@@ -57,17 +57,17 @@ export const isUserParticipant = function isUserParticipant(type) {
   }
   return type === obj.USER;
 };
-export const isActivityParticipant = function isActivityParticipant(type) {
-  type = undefined;
-  if (type != null) {
-    type = type.type;
+export const isActivityParticipant = function isActivityParticipant(participant) {
+  let type;
+  if (participant != null) {
+    type = participant.type;
   }
   return type === obj.ACTIVITY;
 };
-export const PictureInPictureTypes = obj;
-export const DEFAULT_PIP_WIDTH = { [obj.VIDEO]: 320, [obj.CAMERA_PREVIEW]: 160 };
-export const MAX_PIP_WIDTH = { [obj.VIDEO]: 960, [obj.CAMERA_PREVIEW]: 480 };
-export const MIN_PIP_WIDTH = { [obj.VIDEO]: 200, [obj.CAMERA_PREVIEW]: 160 };
+export { PictureInPictureTypes };
+export const DEFAULT_PIP_WIDTH = { [PictureInPictureTypes.VIDEO]: 320, [PictureInPictureTypes.CAMERA_PREVIEW]: 160 };
+export const MAX_PIP_WIDTH = { [PictureInPictureTypes.VIDEO]: 960, [PictureInPictureTypes.CAMERA_PREVIEW]: 480 };
+export const MIN_PIP_WIDTH = { [PictureInPictureTypes.VIDEO]: 200, [PictureInPictureTypes.CAMERA_PREVIEW]: 160 };
 export const EMOJI_PICKER_EMOJI_TO_SHOW_COUNT = 8;
 export const MIN_CALL_WIDTH = 550;
 export const MIN_CALL_HEIGHT = 230;

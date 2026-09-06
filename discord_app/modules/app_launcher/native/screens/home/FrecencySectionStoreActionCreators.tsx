@@ -1,13 +1,12 @@
 // discord_app/modules/app_launcher/native/screens/home/FrecencySectionStoreActionCreators.tsx
-import set from "../../../../../../_runtime/00002_set.js";
-import dispatcherDefault from "../../../../../Dispatcher.tsx";
+import DispatcherDefault from "../../../../../Dispatcher.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting(
+const result = size.fileFinishedImporting(
   "modules/app_launcher/native/screens/home/FrecencySectionStoreActionCreators.tsx",
 );
 
 export const setFrecencySectionSelection = function setFrecencySectionSelection(APPS) {
-  let obj = dispatcherDefault;
-  obj = { type: "FRECENCY_SECTION_SET_SELECTION", selection: APPS };
+  const obj = { type: "FRECENCY_SECTION_SET_SELECTION", selection: APPS };
   obj.dispatch(obj);
 };

@@ -1,11 +1,10 @@
 // discord_common/js/packages/design/components/Rive/native/generated/ExpressiveButtonRive.tsx
 import BaseRive from "../BaseRive.tsx";
-import getDerivedStateFromError from "../RiveErrorBoundary.tsx";
-import closure_4 from "../../../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import importAllResult from "../../../../../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../../../../../_runtime/react/00021_jsxProd.js";
+import RiveErrorBoundary from "../RiveErrorBoundary.tsx";
+import _objectWithoutProperties from "../../../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import noop from "../../../../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
+require = fn;
 let closure_3 = [
   "fallback",
   "artboard",
@@ -14,8 +13,8 @@ let closure_3 = [
   "dataBinding",
   "onDataBindingChange",
 ];
-let c5 = importAllResult;
-let closure_7 = {
+const jsx = fn(21).jsx;
+const artboardProperties = {
   "Mobile Expressive Button Lightmode": {
     posy: "number",
     posx: "number",
@@ -39,7 +38,7 @@ let closure_7 = {
   },
   Ambient: { posy: "number", posx: "number", buttonColor: "color", cornerRadius: "number", pressed: "boolean" },
 };
-let closure_8 = {
+const artboardViewModelInstances = {
   "Mobile Expressive Button Lightmode": ["Instance"],
   Ambient_Lightmode: ["Instance"],
   "Mobile Expressive Button Dark Mode": ["Instance"],
@@ -77,7 +76,6 @@ let closure_9 = {
       buttonColor1 = onDataBindingChange.buttonColor;
     }
     const colorBinding = tmpResult.useColorBinding("buttonColor", instance, buttonColor, buttonColor1, playIfNeeded);
-    const obj = BaseRive;
     let cornerRadius;
     if (dataBinding != null) {
       cornerRadius = dataBinding.cornerRadius;
@@ -136,7 +134,6 @@ let closure_9 = {
       buttonColor1 = onDataBindingChange.buttonColor;
     }
     const colorBinding = tmpResult.useColorBinding("buttonColor", instance, buttonColor, buttonColor1, playIfNeeded);
-    const obj = BaseRive;
     let cornerRadius;
     if (dataBinding != null) {
       cornerRadius = dataBinding.cornerRadius;
@@ -195,7 +192,6 @@ let closure_9 = {
       buttonColor1 = onDataBindingChange.buttonColor;
     }
     const colorBinding = tmpResult.useColorBinding("buttonColor", instance, buttonColor, buttonColor1, playIfNeeded);
-    const obj = BaseRive;
     let cornerRadius;
     if (dataBinding != null) {
       cornerRadius = dataBinding.cornerRadius;
@@ -254,7 +250,6 @@ let closure_9 = {
       buttonColor1 = onDataBindingChange.buttonColor;
     }
     const colorBinding = tmpResult.useColorBinding("buttonColor", instance, buttonColor, buttonColor1, playIfNeeded);
-    const obj = BaseRive;
     let cornerRadius;
     if (dataBinding != null) {
       cornerRadius = dataBinding.cornerRadius;
@@ -283,7 +278,7 @@ let closure_9 = {
     return null;
   },
 };
-let closure_10 = importAllResult.forwardRef(function ExpressiveButtonRiveInner(defaultViewModelInstance, ref) {
+let closure_10 = noop.forwardRef(function ExpressiveButtonRiveInner(defaultViewModelInstance, ref) {
   ({ fallback, artboard } = defaultViewModelInstance);
   let str = "Mobile Expressive Button Lightmode";
   if (undefined !== artboard) {
@@ -297,39 +292,39 @@ let closure_10 = importAllResult.forwardRef(function ExpressiveButtonRiveInner(d
   const dataBinding = defaultViewModelInstance.dataBinding;
   const onDataBindingChange = defaultViewModelInstance.onDataBindingChange;
   const items = [str, dataBinding, onDataBindingChange];
-  const callback = importAllResult.useCallback((arg0) => {
+  const callback = noop.useCallback((arg0) => {
     let tmp2 = null;
-    if (null != closure_1_9[str]) {
+    if (null != closure_9[str]) {
       const obj = {};
       const merged = Object.assign(arg0);
       obj.dataBinding = dataBinding;
       obj.onDataBindingChange = onDataBindingChange;
-      tmp2 = closure_1_6(tmp, obj);
+      tmp2 = <tmp />;
     }
     return tmp2;
   }, items);
-  const tmp = callback(defaultViewModelInstance, closure_3);
+  const tmp = _objectWithoutProperties(defaultViewModelInstance, closure_3);
   let merged = Object.assign(tmp);
   return jsx(str(onDataBindingChange[3]).BaseRive, {
     ref,
     src: dataBinding(onDataBindingChange[4]),
     artboard: str,
-    artboardProperties: closure_7,
-    artboardViewModelInstances: closure_8,
+    artboardProperties,
+    artboardViewModelInstances,
     defaultViewModelInstance: str2,
     stateMachine: defaultViewModelInstance.stateMachine,
     renderDataBinding: callback,
   });
 });
-const forwardRefResult = importAllResult.forwardRef(function ExpressiveButtonRiveWithBoundary(fallback, ref) {
-  let obj = { fallback: fallback.fallback, children: null };
-  obj = { ref };
-  const merged = Object.assign(fallback);
-  obj[1] = <closure_10 ref={arg1} />;
-  return jsx(getDerivedStateFromError.RiveErrorBoundary, { ref });
-});
-const result = require("set").fileFinishedImporting(
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "../discord_common/js/packages/design/components/Rive/native/generated/ExpressiveButtonRive.tsx",
 );
 
-export const ExpressiveButtonRive = forwardRefResult;
+export const ExpressiveButtonRive = noop.forwardRef(function ExpressiveButtonRiveWithBoundary(fallback, ref) {
+  let obj = { fallback: fallback.fallback, children: null };
+  obj = { ref };
+  const merged = Object.assign(fallback);
+  obj.children = <closure_10 ref={arg1} />;
+  return jsx(RiveErrorBoundary.RiveErrorBoundary, { ref });
+});

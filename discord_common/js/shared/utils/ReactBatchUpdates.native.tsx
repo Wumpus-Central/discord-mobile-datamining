@@ -1,10 +1,10 @@
 // discord_common/js/shared/utils/ReactBatchUpdates.native.tsx
-import set from "../../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import _mod17 from "../../../../_runtime/metro/00017__.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const unstable_batchedUpdates = get_ActivityIndicator.unstable_batchedUpdates;
-const result = set.fileFinishedImporting("../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx");
+const unstable_batchedUpdates = _mod17.unstable_batchedUpdates;
+const result = size.fileFinishedImporting("../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx");
 
-export const batchUpdates = function batchUpdates(arg0) {
-  unstable_batchedUpdates(arg0);
+export const batchUpdates = function batchUpdates(fn) {
+  unstable_batchedUpdates(fn);
 };

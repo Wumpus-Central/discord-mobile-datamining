@@ -1,47 +1,55 @@
 // discord_app/modules/hub/native/components/progress_bar/HubProgressActionSheet.tsx
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
-import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../../../stores/GuildChannelStore.tsx";
-import items from "../../../HubProgressBarConstants.tsx";
-import ME from "../../../../../Constants.tsx";
-import { DirectoryChannelScrollBehavior as closure_12 } from "../../../../directory_channels/native/GuildDirectoryConstants.tsx";
-import Steps from "../../../../guild_progress/GuildProgressConstants.tsx";
-import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import router_utils from "../../../../routing/router_utils.tsx";
+import preloaded_user_settings from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
+import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import instant_invite_InstantInviteUtils from "../../../../instant_invite/native/InstantInviteUtils.tsx";
+import HubProgressActionCreators from "../../../HubProgressActionCreators.tsx";
+import ContactSyncModalActionCreators from "../../../../contact_sync/native/ContactSyncModalActionCreators.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
+import GuildChannelStore from "../../../../../stores/GuildChannelStore.tsx";
 
-const require = arg1;
-({ HUB_PROGRESS_ACTION_SHEET_ID: closure_6, HUB_PROGRESS_NUM_TOTAL_STEPS: error } = items);
-({ AnalyticEvents: closure_8, AnalyticsLocations: c9, InstantInviteSources: c10, Routes: unpackModuleId } = ME);
-({ AnalyticsActions: map1, AnalyticsSetupTypes: closure_14 } = Steps);
+require = fn;
+const View = fn(17).View;
+const HubProgressBarConstants = fn(9831);
+({ HUB_PROGRESS_ACTION_SHEET_ID: metroRequire, HUB_PROGRESS_NUM_TOTAL_STEPS: closure_7 } = HubProgressBarConstants);
+const Constants = fn(1074);
+({
+  AnalyticEvents: closure_8,
+  AnalyticsLocations: closure_9,
+  InstantInviteSources: c10,
+  Routes: closure_11,
+} = Constants);
+let closure_12 = fn(12310).DirectoryChannelScrollBehavior;
+const GuildProgressConstants = fn(12469);
+({ AnalyticsActions: map1, AnalyticsSetupTypes: closure_14 } = GuildProgressConstants);
+const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-let closure_17 = createCacheKey.createStyles({
+const createStyles = fn(4560);
+let closure_17 = createStyles.createStyles({
   container: { padding: 16 },
   footer: { marginTop: 12, display: "flex", alignItems: "center" },
 });
-let result = require("set").fileFinishedImporting(
-  "modules/hub/native/components/progress_bar/HubProgressActionSheet.tsx",
-);
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/hub/native/components/progress_bar/HubProgressActionSheet.tsx");
 
 export default function HubProgressActionSheet(guild) {
   guild = guild.guild;
   const analyticsSource = guild.analyticsSource;
   let hubProgressBarCompletedSteps;
-  let size;
-  closure_4 = undefined;
-  const tmp = callback2();
+  const tmp = closure_17();
   let obj = guild(hubProgressBarCompletedSteps[10]);
   hubProgressBarCompletedSteps = obj.useHubProgressBarCompletedSteps(guild);
-  size = hubProgressBarCompletedSteps.size;
-  const tmp5 = 100 === Math.max(guild(hubProgressBarCompletedSteps[11]).MIN_PROGRESS_PERCENT, (100 * size) / closure_7);
-  closure_4 = size.useRef(analyticsSource);
+  const size = hubProgressBarCompletedSteps.size;
+  const tmp5 = 100 === Math.max(guild(hubProgressBarCompletedSteps[11]).MIN_PROGRESS_PERCENT, (100 * size) / total);
+  const ref = size.useRef(analyticsSource);
   const effect = size.useEffect(() => {
     closure_4.current = analyticsSource;
   });
   const items = [guild.id];
   const effect1 = size.useEffect(() => {
-    let obj = analyticsSource(hubProgressBarCompletedSteps[12]);
-    obj = { type: "Hub Progress Action Sheet", guild_id: guild.id, source: ref.current };
-    obj.track(closure_1_8.OPEN_MODAL, obj);
+    const obj = { type: "Hub Progress Action Sheet", guild_id: guild.id, source: ref.current };
+    obj.track(constants.OPEN_MODAL, obj);
   }, items);
   const intl = guild(hubProgressBarCompletedSteps[14]).intl;
   const string = intl.string;
@@ -52,45 +60,40 @@ export default function HubProgressActionSheet(guild) {
     stringResult = string(t.hRVjpT);
   }
   function handleFinishPress() {
-    let obj = analyticsSource(hubProgressBarCompletedSteps[12]);
-    obj = {
-      setup_type: closure_1_14.HUB_PROGRESS,
-      action: closure_1_13.DISMISS,
-      num_total_actions: closure_1_7,
+    const obj = {
+      setup_type: constants5.HUB_PROGRESS,
+      action: constants4.DISMISS,
+      num_total_actions,
       num_actions_completed: size,
     };
-    obj.track(closure_1_8.SERVER_SETUP_CTA_CLICKED, obj);
-    guild(hubProgressBarCompletedSteps[13]).skipHubProgress(guild.id);
-    const obj3 = guild(hubProgressBarCompletedSteps[13]);
-    analyticsSource(hubProgressBarCompletedSteps[8]).hideActionSheet(closure_1_6);
+    obj.track(constants.SERVER_SETUP_CTA_CLICKED, obj);
+    HubProgressActionCreators.skipHubProgress(guild.id);
+    ActionSheetActionCreatorsDefault.hideActionSheet(timestampProducer);
   }
   obj = { style: tmp.container, children: null };
   obj = { title: stringResult, subtitle: null };
   const intl2 = tmp2(tmp3[14]).intl;
-  obj[1] = intl2.format(guild(hubProgressBarCompletedSteps[14]).t.l6iRLs, {
+  obj.subtitle = intl2.format(guild(hubProgressBarCompletedSteps[14]).t.l6iRLs, {
     numFinished: size,
-    total: closure_7,
-    stepsHook(children) {
-      return callback(
+    total,
+    stepsHook(children, arg1) {
+      return closure_1_15(
         guild(hubProgressBarCompletedSteps[16]).Text,
         { variant: "text-sm/medium", color: "mobile-text-heading-primary", children },
         arg1,
       );
     },
   });
-  const items1 = [callback(guild(hubProgressBarCompletedSteps[15]).GuildProgressHeader, obj), , , ,];
+  const items1 = [closure_15(guild(hubProgressBarCompletedSteps[15]).GuildProgressHeader, obj), , , ,];
   let obj2 = {
     onPress() {
-      const defaultChannel = closure_1_5.getDefaultChannel(guild.id);
+      const defaultChannel = GuildChannelStore.getDefaultChannel(guild.id);
       if (null != defaultChannel) {
-        let obj = guild(hubProgressBarCompletedSteps[18]);
-        obj = { state: null };
-        obj = { scrollBehavior: null };
-        obj[0] = closure_1_12.GUILD_LIST_TOP;
-        obj[0] = obj;
-        obj.transitionTo(closure_1_11.CHANNEL(guild.id, defaultChannel.id), obj);
-        analyticsSource(hubProgressBarCompletedSteps[8]).hideActionSheet(closure_1_6);
-        const obj4 = analyticsSource(hubProgressBarCompletedSteps[8]);
+        let obj = { state: null };
+        obj = { scrollBehavior: constants.GUILD_LIST_TOP };
+        obj.state = obj;
+        obj.transitionTo(closure_2_11.CHANNEL(guild.id, defaultChannel.id), obj);
+        ActionSheetActionCreatorsDefault.hideActionSheet(timestampProducer);
       }
     },
     source: analyticsSource(hubProgressBarCompletedSteps[19]),
@@ -100,18 +103,20 @@ export default function HubProgressActionSheet(guild) {
     analyticsAction: null,
   };
   const intl3 = tmp2(tmp3[14]).intl;
-  obj2[2] = intl3.string(guild(hubProgressBarCompletedSteps[14]).t.iNR25n);
-  obj2[3] = hubProgressBarCompletedSteps.has(guild(hubProgressBarCompletedSteps[20]).HubProgressStep.JOIN_GUILD);
-  obj2[4] = constants2.HUB_PROGRESS;
-  obj2[5] = constants.JOIN_GUILD;
-  items1[1] = callback(analyticsSource(hubProgressBarCompletedSteps[17]), obj2);
+  obj2.title = intl3.string(guild(hubProgressBarCompletedSteps[14]).t.iNR25n);
+  obj2.isCompleted = hubProgressBarCompletedSteps.has(
+    guild(hubProgressBarCompletedSteps[20]).HubProgressStep.JOIN_GUILD,
+  );
+  obj2.analyticsSetupType = constants5.HUB_PROGRESS;
+  obj2.analyticsAction = constants4.JOIN_GUILD;
+  items1[1] = closure_15(analyticsSource(hubProgressBarCompletedSteps[17]), obj2);
   let obj3 = {
     onPress() {
-      const defaultChannel = closure_1_5.getDefaultChannel(guild.id);
-      const channels = closure_1_5.getChannels(guild.id);
+      const defaultChannel = GuildChannelStore.getDefaultChannel(guild.id);
+      const channels = GuildChannelStore.getChannels(guild.id);
       if (tmp4) {
-        const obj = guild(hubProgressBarCompletedSteps[21]);
-        const result = obj.handleOpenInviteActionsheet(tmp, defaultChannel.id, channels, closure_1_10.HUB_PROGRESS);
+        const obj = instant_invite_InstantInviteUtils;
+        const result = obj.handleOpenInviteActionsheet(tmp, defaultChannel.id, channels, constants3.HUB_PROGRESS);
       }
     },
     source: null,
@@ -120,11 +125,11 @@ export default function HubProgressActionSheet(guild) {
     analyticsSetupType: null,
     analyticsAction: null,
   };
-  obj1 = {
+  const obj1 = {
     numFinished: size,
-    total: closure_7,
-    stepsHook(children) {
-      return callback(
+    total,
+    stepsHook(children, arg1) {
+      return closure_1_15(
         guild(hubProgressBarCompletedSteps[16]).Text,
         { variant: "text-sm/medium", color: "mobile-text-heading-primary", children },
         arg1,
@@ -132,22 +137,22 @@ export default function HubProgressActionSheet(guild) {
     },
   };
   const tmp12 = analyticsSource(hubProgressBarCompletedSteps[17]);
-  const tmp4 = closure_7;
   const tmp9 = closure_16;
-  obj3[1] = analyticsSource(hubProgressBarCompletedSteps[22]);
+  obj3.source = analyticsSource(hubProgressBarCompletedSteps[22]);
   const intl4 = tmp2(tmp3[14]).intl;
-  obj3[2] = intl4.string(guild(hubProgressBarCompletedSteps[14]).t["3NlTYU"]);
-  obj3[3] = hubProgressBarCompletedSteps.has(guild(hubProgressBarCompletedSteps[20]).HubProgressStep.INVITE_USER);
-  obj3[4] = constants2.HUB_PROGRESS;
-  obj3[5] = constants.INVITE;
-  items1[2] = callback(analyticsSource(hubProgressBarCompletedSteps[17]), obj3);
+  obj3.title = intl4.string(guild(hubProgressBarCompletedSteps[14]).t["3NlTYU"]);
+  obj3.isCompleted = hubProgressBarCompletedSteps.has(
+    guild(hubProgressBarCompletedSteps[20]).HubProgressStep.INVITE_USER,
+  );
+  obj3.analyticsSetupType = constants5.HUB_PROGRESS;
+  obj3.analyticsAction = constants4.INVITE;
+  items1[2] = closure_15(analyticsSource(hubProgressBarCompletedSteps[17]), obj3);
   let obj4 = {
     onPress() {
-      if (!hubProgressBarCompletedSteps.has(guild(hubProgressBarCompletedSteps[20]).HubProgressStep.CONTACT_SYNC)) {
-        guild(tmp2[23]).openContactSyncModal({}, closure_1_9.HUB_PROGRESS);
-        const tmpResult = guild(tmp2[23]);
-        analyticsSource(tmp2[8]).hideActionSheet(closure_1_6);
-        const obj2 = analyticsSource(tmp2[8]);
+      if (!hubProgressBarCompletedSteps.has(preloaded_user_settings.HubProgressStep.CONTACT_SYNC)) {
+        ContactSyncModalActionCreators.openContactSyncModal({}, constants2.HUB_PROGRESS);
+        const tmpResult = ContactSyncModalActionCreators;
+        ActionSheetActionCreatorsDefault.hideActionSheet(timestampProducer);
       }
     },
     source: null,
@@ -157,33 +162,35 @@ export default function HubProgressActionSheet(guild) {
     analyticsAction: null,
   };
   const tmp13 = analyticsSource(hubProgressBarCompletedSteps[17]);
-  obj4[1] = analyticsSource(hubProgressBarCompletedSteps[24]);
+  obj4.source = analyticsSource(hubProgressBarCompletedSteps[24]);
   const intl5 = tmp2(tmp3[14]).intl;
-  obj4[2] = intl5.string(guild(hubProgressBarCompletedSteps[14]).t.HFvFte);
-  obj4[3] = hubProgressBarCompletedSteps.has(guild(hubProgressBarCompletedSteps[20]).HubProgressStep.CONTACT_SYNC);
-  obj4[4] = constants2.HUB_PROGRESS;
-  obj4[5] = constants.CONTACT_SYNC;
-  items1[3] = callback(analyticsSource(hubProgressBarCompletedSteps[17]), obj4);
-  const obj5 = { style: items2, children: null };
-  items2 = [tmp.footer];
+  obj4.title = intl5.string(guild(hubProgressBarCompletedSteps[14]).t.HFvFte);
+  obj4.isCompleted = hubProgressBarCompletedSteps.has(
+    guild(hubProgressBarCompletedSteps[20]).HubProgressStep.CONTACT_SYNC,
+  );
+  obj4.analyticsSetupType = constants5.HUB_PROGRESS;
+  obj4.analyticsAction = constants4.CONTACT_SYNC;
+  items1[3] = closure_15(analyticsSource(hubProgressBarCompletedSteps[17]), obj4);
+  const obj5 = { style: null, children: null };
+  const items2 = [tmp.footer];
+  obj5.style = items2;
   if (tmp5) {
     const obj6 = { text: null, onPress: null };
     const intl7 = tmp2(tmp3[14]).intl;
-    obj6[0] = intl7.string(tmp2(tmp3[14]).t["0/5zhg"]);
-    obj6[1] = handleFinishPress;
+    obj6.text = intl7.string(tmp2(tmp3[14]).t["0/5zhg"]);
+    obj6.onPress = handleFinishPress;
     let tmp11Result = tmp11(tmp2(tmp3[25]).Button, obj6);
   } else {
-    const obj7 = { accessibilityRole: "button", onPress: null, children: null };
-    obj7[1] = handleFinishPress;
+    const obj7 = { accessibilityRole: "button", onPress: handleFinishPress, children: null };
     const obj8 = { variant: "text-sm/medium", color: "text-default", children: null };
     const intl6 = tmp2(tmp3[14]).intl;
-    obj8[2] = intl6.string(tmp2(tmp3[14]).t["9E36wf"]);
-    obj7[2] = tmp11(tmp2(tmp3[16]).Text, obj8);
+    obj8.children = intl6.string(tmp2(tmp3[14]).t["9E36wf"]);
+    obj7.children = tmp11(tmp2(tmp3[16]).Text, obj8);
     tmp11Result = tmp11(tmp2(tmp3[26]).PressableOpacity, obj7);
   }
-  obj5[1] = tmp11Result;
-  items1[4] = callback(closure_4, obj5);
-  obj[1] = items1;
+  obj5.children = tmp11Result;
+  items1[4] = closure_15(ref, obj5);
+  obj.children = items1;
   const children = tmp9(tmp10, obj);
-  return callback(guild(hubProgressBarCompletedSteps[27]).BottomSheet, { startExpanded: true, children });
+  return closure_15(guild(hubProgressBarCompletedSteps[27]).BottomSheet, { startExpanded: true, children });
 }

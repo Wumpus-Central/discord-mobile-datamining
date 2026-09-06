@@ -1,18 +1,19 @@
 // discord_app/utils/ContextUtils.tsx
-import closure_0 from "../../_runtime/00019_noop.js";
-import { jsx } from "../../_runtime/react/00021_jsxProd.js";
+import noop from "../../_runtime/metro/00019__.js";
 
-const result = require("set").fileFinishedImporting("utils/ContextUtils.tsx");
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("utils/ContextUtils.tsx");
 
 export default function createDefinedContext() {
   context = context.createContext(undefined);
   const items = [
     context,
-    function useContext(context) {
-      context = context.useContext(context);
+    function useContext() {
+      context = noop.useContext(context);
       if (null == context) {
         const _Error = Error;
-        error = new Error("Context was used outside of defined provider.");
+        const error = new Error("Context was used outside of defined provider.");
         throw error;
       } else {
         return context;
@@ -22,10 +23,10 @@ export default function createDefinedContext() {
       context = context.useContext(context);
       if (null == context) {
         const _Error = Error;
-        error = new Error("Context was used outside of defined provider.");
+        const error = new Error("Context was used outside of defined provider.");
         throw error;
       } else {
-        return (children) => closure_2_1(context.Provider, { value: context, children: children.children });
+        return (children) => <context.Provider value={context}>{arg0.children}</context.Provider>;
       }
     },
   ];

@@ -1,11 +1,11 @@
 // discord_app/modules/guild_boosting/native/GuildBoostingMarketingUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
-import getGuildTierFromGuild from "../../../utils/GuildBoostingUtils.tsx";
+import GuildBoostingUtils from "../../../utils/GuildBoostingUtils.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/guild_boosting/native/GuildBoostingMarketingUtils.tsx");
+const result = size.fileFinishedImporting("modules/guild_boosting/native/GuildBoostingMarketingUtils.tsx");
 
 export const getIconForPerk = function getIconForPerk(perkIcon) {
-  if (getGuildTierFromGuild.PerkIcons.EMOJI === perkIcon) {
+  if (GuildBoostingUtils.PerkIcons.EMOJI === perkIcon) {
     return tmp(8757).ReactionIcon;
   } else if (tmp(4454).PerkIcons.SOUNDBOARD === perkIcon) {
     return tmp(12528).SoundboardIcon;

@@ -1,15 +1,13 @@
 // discord_app/modules/guild_role_subscriptions/native/components/LoadingIndicator.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import { ActivityIndicator } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-noopAll;
-let closure_2 = createCacheKey.createStyles({ indicator: { margin: 16 } });
-const result = require("set").fileFinishedImporting(
-  "modules/guild_role_subscriptions/native/components/LoadingIndicator.tsx",
-);
+const ActivityIndicator = fn(17).ActivityIndicator;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_2 = createStyles.createStyles({ indicator: { margin: 16 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/LoadingIndicator.tsx");
 
 export default function LoadingIndicator() {
-  return <ActivityIndicator style={callback().indicator} />;
+  return <ActivityIndicator style={closure_2().indicator} />;
 }

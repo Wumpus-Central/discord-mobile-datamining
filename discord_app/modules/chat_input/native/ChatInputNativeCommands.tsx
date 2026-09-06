@@ -1,87 +1,85 @@
 // discord_app/modules/chat_input/native/ChatInputNativeCommands.tsx
-import set2 from "../../../../_runtime/00002_set.js";
-import __INTERNAL_VIEW_CONFIG from "../../../../discord_common/js/packages/rtn-codegen/js/ChatInputNativeComponent.tsx";
+import createNonce from "../../messages/createNonce.tsx";
+import ChatInputNativeComponent from "../../../../discord_common/js/packages/rtn-codegen/js/ChatInputNativeComponent.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-let result = set2.fileFinishedImporting("modules/chat_input/native/ChatInputNativeCommands.tsx");
+let result = size.fileFinishedImporting("modules/chat_input/native/ChatInputNativeCommands.tsx");
 
 export default {
   backspace(arg0) {
     if (null != arg0) {
-      const Commands = __INTERNAL_VIEW_CONFIG.Commands;
+      const Commands = ChatInputNativeComponent.Commands;
       Commands.backspace(arg0);
     }
   },
   blur(arg0) {
     if (null != arg0) {
-      const Commands = __INTERNAL_VIEW_CONFIG.Commands;
+      const Commands = ChatInputNativeComponent.Commands;
       Commands.blur(arg0);
     }
   },
   closeCustomKeyboard(arg0) {
     if (null != arg0) {
-      const Commands = __INTERNAL_VIEW_CONFIG.Commands;
+      const Commands = ChatInputNativeComponent.Commands;
       Commands.closeCustomKeyboard(arg0);
     }
   },
   flushText(arg0, arg1) {
     if (null != arg0) {
-      const Commands = __INTERNAL_VIEW_CONFIG.Commands;
+      const Commands = ChatInputNativeComponent.Commands;
       Commands.flushText(arg0, arg1);
     }
   },
-  getText(arg0, set) {
-    const _require = set;
-    dependencyMap = arg2;
+  getText(arg0, set, arg2) {
+    closure_1 = arg2;
     if (null == arg0) {
       return null;
     } else {
-      const nonce = require("../../messages/createNonce.tsx").createNonce();
+      const nonce = createNonce.createNonce();
       const result = set.set(nonce, (arg0) => {
         set.delete(nonce);
-        callback(arg0);
+        closure_1(arg0);
       });
-      const Commands =
-        require("../../../../discord_common/js/packages/rtn-codegen/js/ChatInputNativeComponent.tsx").Commands;
+      const Commands = ChatInputNativeComponent.Commands;
       Commands.flushText(arg0, nonce);
     }
   },
   focus(arg0) {
     if (null != arg0) {
-      const Commands = __INTERNAL_VIEW_CONFIG.Commands;
+      const Commands = ChatInputNativeComponent.Commands;
       Commands.focus(arg0);
     }
   },
   openCustomKeyboard(arg0) {
     if (null != arg0) {
-      const Commands = __INTERNAL_VIEW_CONFIG.Commands;
+      const Commands = ChatInputNativeComponent.Commands;
       Commands.openCustomKeyboard(arg0);
     }
   },
   openSystemKeyboard(arg0) {
     if (null != arg0) {
-      const Commands = __INTERNAL_VIEW_CONFIG.Commands;
+      const Commands = ChatInputNativeComponent.Commands;
       Commands.openSystemKeyboard(arg0);
     }
   },
   setText(arg0, arg1) {
     if (null != arg0) {
-      const Commands = __INTERNAL_VIEW_CONFIG.Commands;
+      const Commands = ChatInputNativeComponent.Commands;
       Commands.setText(arg0, arg1);
     }
   },
   setSelectedRange(arg0, arg1, arg2) {
     if (null != arg0) {
-      const Commands = __INTERNAL_VIEW_CONFIG.Commands;
+      const Commands = ChatInputNativeComponent.Commands;
       Commands.setSelectedRange(arg0, arg1, arg2);
     }
   },
   updateTextBlocks(arg0, arg1, arg2) {
     if (null != arg0) {
-      const Commands = __INTERNAL_VIEW_CONFIG.Commands;
+      const Commands = ChatInputNativeComponent.Commands;
       const _JSON = JSON;
       const json = JSON.stringify(arg1);
       Commands.updateTextBlocks(arg0, json, arg2);
-      const tmp2 = arg2;
     }
   },
   replaceRange(arg0, keepCursorPosition) {
@@ -95,7 +93,7 @@ export default {
     }
     const editId = keepCursorPosition.editId;
     if (null != arg0) {
-      const Commands = __INTERNAL_VIEW_CONFIG.Commands;
+      const Commands = ChatInputNativeComponent.Commands;
       const _JSON = JSON;
       Commands.replaceRange(arg0, _location, length, text, JSON.stringify(nodes), flag, editId);
     }

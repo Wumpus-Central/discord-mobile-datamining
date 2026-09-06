@@ -1,15 +1,16 @@
 // discord_app/modules/premium/sounds/soundmoji/utils/isSoundValid.tsx
-import getPremiumPlanItemDefault from "../../../../../utils/PremiumUtils.tsx";
-import closure_2 from "../../../../../stores/ChannelStore.tsx";
-import closure_3 from "../../../../../stores/PermissionStore.tsx";
-import closure_4 from "../../../../../stores/UserStore.tsx";
-import { DEFAULT_SOUND_GUILD_ID } from "../../../../soundboard/SoundboardConstants.tsx";
-import { Permissions } from "../../../../../../discord_common/js/shared/Constants.tsx";
+import PremiumUtilsDefault from "../../../../../utils/PremiumUtils.tsx";
+import ChannelStore from "../../../../../stores/ChannelStore.tsx";
+import PermissionStore from "../../../../../stores/PermissionStore.tsx";
+import UserStore from "../../../../../stores/UserStore.tsx";
 
-let result = require("set").fileFinishedImporting("modules/premium/sounds/soundmoji/utils/isSoundValid.tsx");
+const DEFAULT_SOUND_GUILD_ID = fn(5014).DEFAULT_SOUND_GUILD_ID;
+const Permissions = fn(1085).Permissions;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/premium/sounds/soundmoji/utils/isSoundValid.tsx");
 
-export default function isSoundValid(guildId) {
-  channel = channel.getChannel(arg2);
+export default function isSoundValid(guildId, arg1, arg2) {
+  const channel = ChannelStore.getChannel(arg2);
   guildId = undefined;
   if (guildId != null) {
     guildId = guildId.guildId;
@@ -32,12 +33,12 @@ export default function isSoundValid(guildId) {
       }
       if (guildId2 !== arg1) {
         let canResult = null == channel;
-        const result = getPremiumPlanItemDefault.canUseSoundboardEverywhere(currentUser.getCurrentUser());
+        const result = PremiumUtilsDefault.canUseSoundboardEverywhere(UserStore.getCurrentUser());
         if (!canResult) {
           canResult = null == channel.guild_id;
         }
         if (!canResult) {
-          canResult = closure_3.can(Permissions.USE_EXTERNAL_SOUNDS, channel);
+          canResult = PermissionStore.can(Permissions.USE_EXTERNAL_SOUNDS, channel);
         }
         if (canResult) {
           canResult = result;

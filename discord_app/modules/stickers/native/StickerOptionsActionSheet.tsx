@@ -1,28 +1,34 @@
 // discord_app/modules/stickers/native/StickerOptionsActionSheet.tsx
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
+import ToastUtils from "../../toast/native/ToastUtils.tsx";
+import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/stickers/native/StickerOptionsActionSheet.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/stickers/native/StickerOptionsActionSheet.tsx");
 
 export default function StickerOptionsActionSheet(stickerUrl) {
   stickerUrl = stickerUrl.stickerUrl;
   const items = [stickerUrl];
-  const callback = React.useCallback(() => {
-    stickerUrl(closure_1_2[2]).copy(stickerUrl);
-    const obj = stickerUrl(closure_1_2[2]);
-    const result = stickerUrl(closure_1_2[3]).presentCopiedToClipboard();
-    const obj2 = stickerUrl(closure_1_2[3]);
-    closure_1_1(closure_1_2[4]).hideActionSheet();
+  const callback = noop.useCallback(() => {
+    ClipboardUtils.copy(stickerUrl);
+    const result = ToastUtils.presentCopiedToClipboard();
+    ActionSheetActionCreatorsDefault.hideActionSheet();
   }, items);
   let obj = { children: null };
   obj = { hasIcons: true, children: null };
   obj = { icon: jsx(stickerUrl(4503).LinkIcon, {}), label: null, onPress: null };
   const intl = stickerUrl(1114).intl;
-  obj[1] = intl.string(stickerUrl(1114).t.B1ubHx);
-  obj[2] = callback;
-  obj[1] = jsx(stickerUrl(5605).TableRow, { icon: jsx(stickerUrl(4503).LinkIcon, {}), label: null, onPress: null });
-  obj[0] = jsx(stickerUrl(5687).TableRowGroup, {
+  obj.label = intl.string(stickerUrl(1114).t.B1ubHx);
+  obj.onPress = callback;
+  obj.children = jsx(stickerUrl(5605).TableRow, {
+    icon: jsx(stickerUrl(4503).LinkIcon, {}),
+    label: null,
+    onPress: null,
+  });
+  obj.children = jsx(stickerUrl(5687).TableRowGroup, {
     icon: jsx(stickerUrl(4503).LinkIcon, {}),
     label: null,
     onPress: null,

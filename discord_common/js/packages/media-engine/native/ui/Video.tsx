@@ -1,13 +1,13 @@
 // discord_common/js/packages/media-engine/native/ui/Video.tsx
-import set from "../../../../../../_runtime/00002_set.js";
-import loggerDefault from "DirectVideo.tsx";
+import DirectVideoDefault from "DirectVideo.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
 class Video {
   constructor(arg0) {
-    return require("logger")(global, Video.onContainerResized);
+    return closure_0(closure_1[0])(global, Video.onContainerResized);
   }
 }
 Video.onContainerResized = () => {};
-const result = set.fileFinishedImporting("../discord_common/js/packages/media-engine/native/ui/Video.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/media-engine/native/ui/Video.tsx");
 
 export default Video;

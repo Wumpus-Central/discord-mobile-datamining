@@ -1,21 +1,19 @@
 // discord_app/modules/tooltip/TooltipActionCreators.tsx
-import set from "../../../_runtime/00002_set.js";
-import dispatcherDefault from "../../Dispatcher.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/tooltip/TooltipActionCreators.tsx");
+const result = size.fileFinishedImporting("modules/tooltip/TooltipActionCreators.tsx");
 
 export default {
   acknowledgeTooltip(GIF_PICKER_TOOLTIP) {
-    let obj = dispatcherDefault;
-    obj = { type: "TOOLTIP_ACKNOWLEDGE", tooltip: GIF_PICKER_TOOLTIP };
+    const obj = { type: "TOOLTIP_ACKNOWLEDGE", tooltip: GIF_PICKER_TOOLTIP };
     obj.dispatch(obj);
   },
-  attemptToShowTooltip(closure_0, flag) {
+  attemptToShowTooltip(tooltip, flag) {
     if (flag === undefined) {
       flag = false;
     }
-    let obj = dispatcherDefault;
-    obj = { type: "TOOLTIP_SHOW_ATTEMPT", tooltip: closure_0, ignoreMaxShownLimit: flag };
+    const obj = { type: "TOOLTIP_SHOW_ATTEMPT", tooltip, ignoreMaxShownLimit: flag };
     obj.dispatch(obj);
   },
 };

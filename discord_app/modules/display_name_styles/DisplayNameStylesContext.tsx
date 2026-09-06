@@ -1,8 +1,8 @@
 // discord_app/modules/display_name_styles/DisplayNameStylesContext.tsx
-import set from "../../../_runtime/00002_set.js";
-import noop from "../../../_runtime/00019_noop.js";
+import _mod19 from "../../../_runtime/metro/00019__.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const context = noop.createContext({ overrideSettings: false });
-const result = set.fileFinishedImporting("modules/display_name_styles/DisplayNameStylesContext.tsx");
+const context = _mod19.createContext({ overrideSettings: false });
+const result = size.fileFinishedImporting("modules/display_name_styles/DisplayNameStylesContext.tsx");
 
 export const DisplayNameStylesContext = context;

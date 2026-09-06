@@ -1,36 +1,33 @@
 // discord_app/modules/quests/native/BountiesModal/bountyError.tsx
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import dispatcherDefault from "../../../toast/native/ToastActionCreators.tsx";
-import registerAssetDefault from "../../../../../_runtime/05597_registerAsset.js";
-import BOUNTY_REWARD_CLAIM_FAILED_TOAST_DURATION_MS from "BountiesModalConstants.tsx";
-import set from "../../../../../_runtime/00002_set.js";
+import util from "../../../../intl/index.native.tsx";
+import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
+import _modDef5597 from "../../../../../_runtime/metro/05597__.js";
+import BountiesModalConstants from "BountiesModalConstants.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-let closure_3 = BOUNTY_REWARD_CLAIM_FAILED_TOAST_DURATION_MS.BOUNTY_REWARD_CLAIM_FAILED_TOAST_DURATION_MS;
-let set = new Set([260021]);
-const result = set.fileFinishedImporting("modules/quests/native/BountiesModal/bountyError.tsx");
+const toastDurationMs = BountiesModalConstants.BOUNTY_REWARD_CLAIM_FAILED_TOAST_DURATION_MS;
+const set = new Set([260021]);
+const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/bountyError.tsx");
 
-export const openBountyRewardClaimErrorToast = function openBountyRewardClaimErrorToast(closure_0) {
-  let obj = dispatcherDefault;
-  let code;
-  if (closure_0 != null) {
-    code = closure_0.code;
+export const openBountyRewardClaimErrorToast = function openBountyRewardClaimErrorToast(code) {
+  let obj = ToastActionCreatorsDefault;
+  code = undefined;
+  if (code != null) {
+    code = code.code;
   }
   if (null != code) {
-    if (set.has(closure_0.code)) {
+    if (set.has(code.code)) {
       let message;
-      if (closure_0 != null) {
-        message = closure_0.message;
+      if (code != null) {
+        message = code.message;
       }
       if (null != message) {
-        message = closure_0.message;
+        message = code.message;
       }
-      obj = { key: "QUESTS_BOUNTIES_REWARD_CLAIM_FAILED", content: null, icon: null, toastDurationMs: null };
-      obj[1] = message;
-      obj[2] = registerAssetDefault;
-      obj[3] = closure_3;
+      obj = { key: "QUESTS_BOUNTIES_REWARD_CLAIM_FAILED", content: message, icon: _modDef5597, toastDurationMs };
       obj.open(obj);
     }
   }
-  const intl = getSystemLocale.intl;
-  message = intl.string(getSystemLocale.t.uLjCfn);
+  const intl = util.intl;
+  message = intl.string(util.t.uLjCfn);
 };

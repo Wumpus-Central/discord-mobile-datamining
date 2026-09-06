@@ -1,11 +1,11 @@
 // discord_app/modules/guild_scheduled_events/native/handleAcceptEventInstantInvite.tsx
-import generateAcceptInviteOptionsDefault from "../../../actions/InstantInviteActionCreators.tsx";
-import closure_3 from "../GuildScheduledEventStore.tsx";
+import InstantInviteActionCreatorsDefault from "../../../actions/InstantInviteActionCreators.tsx";
+import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators.tsx";
+import GuildScheduledEventStore from "../GuildScheduledEventStore.tsx";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting(
-  "modules/guild_scheduled_events/native/handleAcceptEventInstantInvite.tsx",
-);
+require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_scheduled_events/native/handleAcceptEventInstantInvite.tsx");
 
 export default function handleAcceptEventInstantInvite(code) {
   let obj = guildScheduledEvent(10294);
@@ -17,16 +17,17 @@ export default function handleAcceptEventInstantInvite(code) {
         if (guild_scheduled_event != null) {
           id = guild_scheduled_event.id;
         }
-        guildScheduledEvent = guildScheduledEvent.getGuildScheduledEvent(id);
+        guildScheduledEvent = GuildScheduledEventStore.getGuildScheduledEvent(id);
         if (null != guildScheduledEvent) {
-          obj = { inviteKey: null, context: null, callback: null };
-          obj[0] = code.code;
-          obj[1] = { location: "Guild Scheduled Event Invite Button Embed" };
-          obj[2] = function callback() {
-            const result = guildScheduledEvent(closure_1_2[4]).transitionToEventDetailsFromInvite(guildScheduledEvent);
+          obj = {
+            inviteKey: code.code,
+            context: { location: "Guild Scheduled Event Invite Button Embed" },
+            callback() {
+              const result =
+                GuildScheduledEventModalActionCreators.transitionToEventDetailsFromInvite(guildScheduledEvent);
+            },
           };
-          generateAcceptInviteOptionsDefault.acceptInvite(obj);
-          const obj3 = generateAcceptInviteOptionsDefault;
+          InstantInviteActionCreatorsDefault.acceptInvite(obj);
         }
       }
     }

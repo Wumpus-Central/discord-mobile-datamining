@@ -1,41 +1,42 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsDeleteMessageElement.tsx
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
-import closure_5 from "../../../../stores/MessageStore.tsx";
-import { AnalyticEvents } from "../../../../Constants.tsx";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import AppAnalyticsUtilsDefault from "../../../app_analytics/AppAnalyticsUtils.tsx";
+import MessageActionCreatorsDefault from "../../../../actions/MessageActionCreators.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import MessageStore from "../../../../stores/MessageStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
+const require = fn;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/in_app_reports/native/components/InAppReportsDeleteMessageElement.tsx",
 );
 
 export default function DeleteMessageElement(message) {
   message = message.message;
   const reportId = message.reportId;
-  dependencyMap = undefined;
   let stateFromStores;
-  const tmp = stateFromStores(React.useState(false), 2);
+  const tmp = stateFromStores(noop.useState(false), 2);
   dependencyMap = tmp[1];
   let obj = message(504);
-  const items = [closure_5];
+  const items = [MessageStore];
   const items1 = [message];
   stateFromStores = obj.useStateFromStores(
     items,
-    () => null == closure_1_5.getMessage(message.getChannelId(), message.id),
+    () => null == MessageStore.getMessage(message.getChannelId(), message.id),
     items1,
   );
   const items2 = [stateFromStores];
-  const effect = React.useEffect(() => {
-    dependencyMap(stateFromStores);
+  const effect = noop.useEffect(() => {
+    closure_2(stateFromStores);
   }, items2);
   const items3 = [message, reportId];
-  const callback = React.useCallback(() => {
-    dependencyMap(true);
-    let obj = reportId(4740);
-    obj = { report_id: reportId };
-    obj.trackWithMetadata(closure_1_6.IAR_DELETE_MESSAGE_BUTTON_CLICKED, obj);
-    reportId(7456).deleteMessage(message.getChannelId(), message.id);
+  const callback = noop.useCallback(() => {
+    closure_2(true);
+    const obj = { report_id: reportId };
+    obj.trackWithMetadata(AnalyticEvents.IAR_DELETE_MESSAGE_BUTTON_CLICKED, obj);
+    MessageActionCreatorsDefault.deleteMessage(message.getChannelId(), message.id);
   }, items3);
   obj = {
     title: null,
@@ -47,14 +48,14 @@ export default function DeleteMessageElement(message) {
     icon: null,
   };
   const intl = message(1114).intl;
-  obj[0] = intl.string(message(1114).t.c9BHL9);
+  obj.title = intl.string(message(1114).t.c9BHL9);
   const intl2 = message(1114).intl;
-  obj[1] = intl2.string(message(1114).t.AT2KSd);
+  obj.disabledTitle = intl2.string(message(1114).t.AT2KSd);
   const intl3 = message(1114).intl;
-  obj[2] = intl3.string(message(1114).t.dK8S0w);
-  obj[3] = tmp[0];
-  obj[5] = callback;
-  obj[6] = jsx(message(4518).TrashIcon, { color: "text-feedback-critical" });
+  obj.description = intl3.string(message(1114).t.dK8S0w);
+  obj.disabled = tmp[0];
+  obj.onPress = callback;
+  obj.icon = jsx(message(4518).TrashIcon, { color: "text-feedback-critical" });
   return jsx(reportId(9051), {
     title: null,
     disabledTitle: null,

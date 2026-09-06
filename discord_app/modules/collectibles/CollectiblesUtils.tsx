@@ -1,20 +1,20 @@
 // discord_app/modules/collectibles/CollectiblesUtils.tsx
-import set from "../../../_runtime/00002_set.js";
-import apply from "../../../_runtime/00012_apply.js";
-import sum from "../../../discord_common/js/shared/Constants.tsx";
-import set2 from "../../utils/PlatformUtils.tsx";
-import parseServerPerkConfigKind from "../premium/perks_state/PerksStateUtils.tsx";
-import fromServer from "records/NameplateRecord.tsx";
+import _mod12 from "../../../_runtime/metro/00012__.js";
+import Constants2 from "../../../discord_common/js/shared/Constants.tsx";
+import PlatformUtils from "../../utils/PlatformUtils.tsx";
+import PerksStateUtils from "../premium/perks_state/PerksStateUtils.tsx";
+import NameplateRecord from "records/NameplateRecord.tsx";
 import CollectiblesItemType from "../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import getPremiumPlanItemDefault from "../../utils/PremiumUtils.tsx";
-import formatSingleCurrencyPrice from "../../utils/PriceUtils.tsx";
-import fromServer2 from "records/AvatarDecorationRecord.tsx";
-import fromServer3 from "records/ProfileEffectRecord.tsx";
-import fromServer4 from "records/ProfileFrameRecord.tsx";
-import fromServer5 from "records/ShopAssetConfigRecord.tsx";
-import items from "CollectiblesShopConstants.tsx";
-import ME from "../../Constants.tsx";
-import { set } from "../../utils/PlatformUtils.tsx";
+import PremiumUtilsDefault from "../../utils/PremiumUtils.tsx";
+import PriceUtils from "../../utils/PriceUtils.tsx";
+import AvatarDecorationRecord from "records/AvatarDecorationRecord.tsx";
+import ProfileEffectRecord from "records/ProfileEffectRecord.tsx";
+import ProfileFrameRecord from "records/ProfileFrameRecord.tsx";
+import CollectiblesProductUtils from "utils/CollectiblesProductUtils.tsx";
+import ShopAssetConfigRecord from "records/ShopAssetConfigRecord.tsx";
+import CollectiblesShopConstants from "CollectiblesShopConstants.tsx";
+import Constants from "../../Constants.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
 function getItemRecordsFromPurchases(arr, PROFILE_EFFECT) {
   if (PROFILE_EFFECT === CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION) {
@@ -51,20 +51,19 @@ function getItemRecordsFromPurchases(arr, PROFILE_EFFECT) {
 }
 function getItemRecordsFromCategories(arr, PROFILE_EFFECT) {
   items = [...arr.values()];
-  obj = apply;
-  const flatMapResult = apply.flatMap(items, "products");
-  const uniqByResult = apply.uniqBy(
+  const flatMapResult = _mod12.flatMap(items, "products");
+  const uniqByResult = _mod12.uniqBy(
     flatMapResult.reduce((arr, type) => {
-      const callback = type;
+      closure_0 = type;
       if (null != type) {
-        if (type.type === callback(table[14]).CollectiblesItemType.VARIANTS_GROUP) {
+        if (type.type === require("CollectiblesItemType").CollectiblesItemType.VARIANTS_GROUP) {
           if (null != type.variants) {
             const variants = type.variants;
             let combined = tmp(tmp2[15]).concat(
               arr,
-              variants.map((arg0) => {
+              variants.map((item) => {
                 obj = {};
-                const merged = Object.assign(arg0);
+                const merged = Object.assign(item);
                 ({ storeListingId: obj.variantGroupStoreListingId, eligibleOffers: obj.eligibleOffers } = closure_0);
                 return obj;
               }),
@@ -73,8 +72,8 @@ function getItemRecordsFromCategories(arr, PROFILE_EFFECT) {
           }
           return combined;
         }
-        tmp = callback;
-        tmp2 = table;
+        tmp = _require;
+        tmp2 = dependencyMap;
       }
       arr.push(type);
       combined = arr;
@@ -104,41 +103,40 @@ function getItemRecordsFromCategories(arr, PROFILE_EFFECT) {
   } else {
     return [];
   }
-  const obj2 = apply;
 }
-const isAvatarDecorationRecord = fromServer2.isAvatarDecorationRecord;
-const isNameplateRecord = fromServer.isNameplateRecord;
-const isProfileEffectRecord = fromServer3.isProfileEffectRecord;
-const isProfileFrameRecord = fromServer4.isProfileFrameRecord;
-const AssetDisplayConfigRecord = fromServer5.AssetDisplayConfigRecord;
+const isAvatarDecorationRecord = AvatarDecorationRecord.isAvatarDecorationRecord;
+const isNameplateRecord = NameplateRecord.isNameplateRecord;
+const isProfileEffectRecord = ProfileEffectRecord.isProfileEffectRecord;
+const isProfileFrameRecord = ProfileFrameRecord.isProfileFrameRecord;
+const AssetDisplayConfigRecord = ShopAssetConfigRecord.AssetDisplayConfigRecord;
 ({
   EXTERNAL_PRODUCT_SKU_IDS: closure_8,
-  LIMITED_TIME_BADGE_DAYS_THRESHOLD: c9,
+  LIMITED_TIME_BADGE_DAYS_THRESHOLD: closure_9,
   SHOP_CARD_PER_PRODUCT_NEW_BADGE_EXPIRY_SETTINGS: c10,
-} = items);
+} = CollectiblesShopConstants);
 ({
-  COLLECTIBLES_APPLICATION_ID: unpackModuleId,
+  COLLECTIBLES_APPLICATION_ID: closure_11,
   EntitlementTypes: closure_12,
   PriceSetAssignmentPurchaseTypes: map1,
-} = ME);
-const CurrencyCodes = sum.CurrencyCodes;
+} = Constants);
+const CurrencyCodes = Constants2.CurrencyCodes;
 let obj = { NITRO: "nitro", THIRDPARTY: "thirdparty" };
 let closure_16 = { [obj.NITRO]: "nitro", [obj.THIRDPARTY]: "xbox" };
 obj = { original: -1, discountPercentage: -1 };
-items = [, ,];
+let items = [, ,];
 ({ KZT: arr[0], NGN: arr[1], EGP: arr[2] } = CurrencyCodes);
-const result = set.fileFinishedImporting("modules/collectibles/CollectiblesUtils.tsx");
+const result = size.fileFinishedImporting("modules/collectibles/CollectiblesUtils.tsx");
 
 export const ShopDiscountSource = obj;
 export const getAnalyticsShopDiscountSource = function getAnalyticsShopDiscountSource(shopDiscountSource) {
   let tmp = null;
   if (null != shopDiscountSource) {
-    tmp = table2[shopDiscountSource];
+    tmp = closure_16[shopDiscountSource];
   }
   return tmp;
 };
 export const getShopDiscountSource = function getShopDiscountSource(currentUser) {
-  obj = getPremiumPlanItemDefault;
+  obj = PremiumUtilsDefault;
   if (obj.canUseShopDiscounts(currentUser)) {
     if (tmpResult.canUseCollectibles(currentUser)) {
       return obj.NITRO;
@@ -147,7 +145,7 @@ export const getShopDiscountSource = function getShopDiscountSource(currentUser)
       if (currentUser != null) {
         perks = currentUser.perks;
       }
-      const perkSource = parseServerPerkConfigKind.getPerkSource(perks, tmp4(1379).Perk.SHOP_DISCOUNTS);
+      const perkSource = PerksStateUtils.getPerkSource(perks, tmp4(1379).Perk.SHOP_DISCOUNTS);
       let hasItem;
       if (perkSource != null) {
         hasItem = perkSource.includes(tmp4(1379).PerkSource.SOURCE_NITRO);
@@ -170,11 +168,10 @@ export const getShopDiscountSource = function getShopDiscountSource(currentUser)
       }
       return NITRO;
     }
-    tmpResult = getPremiumPlanItemDefault;
+    tmpResult = PremiumUtilsDefault;
   } else {
     return null;
   }
-  const tmp = importDefault;
 };
 export const isPremiumCollectiblesProduct = function isPremiumCollectiblesProduct(product) {
   let premiumType;
@@ -199,9 +196,9 @@ export const getAssetForAvatarDecorationProduct = function getAssetForAvatarDeco
   }
   return asset;
 };
-export const getPriceForCollectiblesProduct = function getPriceForCollectiblesProduct(arg0, c5, arg2) {
+export const getPriceForCollectiblesProduct = function getPriceForCollectiblesProduct(stateFromStores, c5, arg2) {
   if (!arg2) {
-    const tmp4 = arg0.prices[c5 ? tmp.PREMIUM_TIER_2 : tmp.DEFAULT];
+    const tmp4 = stateFromStores.prices[c5 ? tmp.PREMIUM_TIER_2 : tmp.DEFAULT];
     let prices;
     if (tmp4 != null) {
       const countryPrices = tmp4.countryPrices;
@@ -252,22 +249,22 @@ export const getFormattedPriceForCollectiblesProduct = function getFormattedPric
       if (tmp7 != null) {
         currency = tmp7.currency;
       }
-      str = formatSingleCurrencyPrice.formatPrice(amount, currency);
-      obj = formatSingleCurrencyPrice;
+      str = PriceUtils.formatPrice(amount, currency);
     }
     return str;
   }
 };
 export const getDefaultPriceSetAssignmentPurchaseType = function getDefaultPriceSetAssignmentPurchaseType(
   canUseShopDiscountsResult,
+  arg1,
 ) {
   if (!obj.isAndroid()) {
-    const tmpResult = set2;
+    const tmpResult = PlatformUtils;
   }
-  return canUseShopDiscountsResult ? closure_13.PREMIUM_TIER_2 : closure_13.DEFAULT;
+  return canUseShopDiscountsResult ? constants3.PREMIUM_TIER_2 : constants3.DEFAULT;
 };
-export const getBundleItemsPriceSum = function getBundleItemsPriceSum(bundledProducts) {
-  const _require = arg1;
+export const getBundleItemsPriceSum = function getBundleItemsPriceSum(bundledProducts, arg1) {
+  _require = arg1;
   bundledProducts = bundledProducts.bundledProducts;
   if (null == bundledProducts) {
     return 0;
@@ -276,9 +273,10 @@ export const getBundleItemsPriceSum = function getBundleItemsPriceSum(bundledPro
       if (arg1 !== CurrencyCodes.DISCORD_ORB) {
         let DEFAULT = constants3.MOBILE;
       }
-      return bundledProducts.reduce((arg0, arg1) => {
+      return bundledProducts.reduce((acc, item) => {
+        closure_0 = _require;
         let prices;
-        if (arg1.prices[DEFAULT] != null) {
+        if (item.prices[DEFAULT] != null) {
           const countryPrices = tmp2.countryPrices;
           if (countryPrices != null) {
             prices = countryPrices.prices;
@@ -286,7 +284,7 @@ export const getBundleItemsPriceSum = function getBundleItemsPriceSum(bundledPro
         }
         let tmp4 = null;
         if (null != prices) {
-          if (null == closure_0) {
+          if (null == _require) {
             let first = prices[0];
           } else {
             first = prices.find((currency) => currency.currency === closure_0);
@@ -303,13 +301,13 @@ export const getBundleItemsPriceSum = function getBundleItemsPriceSum(bundledPro
         if (num == null) {
           num = 0;
         }
-        return arg0 + num;
+        return acc + num;
       }, 0);
     } else {
       const tmpResult = tmp(1115);
     }
     DEFAULT = constants3.DEFAULT;
-    obj = set;
+    obj = require("PlatformUtils");
     tmp = _require;
   }
 };
@@ -342,14 +340,14 @@ export const getProductDiscount = function getProductDiscount(product, hasShopDi
   if (null == product) {
     return obj;
   } else {
-    let _require = DISCORD_ORB;
+    _require = DISCORD_ORB;
     const bundledProducts = product.bundledProducts;
     if (null == bundledProducts) {
       if (0 <= 0) {
         return obj;
       } else {
         if (!obj5.isAndroid()) {
-          const tmp20Result = set;
+          const tmp20Result = require("PlatformUtils");
         }
         _require = DISCORD_ORB;
         const tmp11 = product.prices[hasShopDiscount ? constants3.PREMIUM_TIER_2 : constants3.DEFAULT];
@@ -373,22 +371,22 @@ export const getProductDiscount = function getProductDiscount(product, hasShopDi
           tmp13 = first;
         }
         if (null != tmp13) {
-          obj = { original: null, discountPercentage: null };
-          obj[0] = 0;
+          obj = { original: 0, discountPercentage: null };
           const _Math = Math;
-          obj[1] = Math.round(((0 - tmp13.amount) / 0) * 100);
+          obj.discountPercentage = Math.round(((0 - tmp13.amount) / 0) * 100);
         }
         return obj;
       }
     } else {
-      obj = set;
+      obj = require("PlatformUtils");
       if (obj.isAndroid()) {
         if (DISCORD_ORB !== CurrencyCodes.DISCORD_ORB) {
           let DEFAULT = constants3.MOBILE;
         }
-        const reduced = bundledProducts.reduce((arg0, arg1) => {
+        const reduced = bundledProducts.reduce((acc, item) => {
+          closure_0 = _require;
           let prices;
-          if (arg1.prices[DEFAULT] != null) {
+          if (item.prices[DEFAULT] != null) {
             const countryPrices = tmp2.countryPrices;
             if (countryPrices != null) {
               prices = countryPrices.prices;
@@ -396,7 +394,7 @@ export const getProductDiscount = function getProductDiscount(product, hasShopDi
           }
           let tmp4 = null;
           if (null != prices) {
-            if (null == closure_0) {
+            if (null == _require) {
               let first = prices[0];
             } else {
               first = prices.find((currency) => currency.currency === closure_0);
@@ -413,7 +411,7 @@ export const getProductDiscount = function getProductDiscount(product, hasShopDi
           if (num == null) {
             num = 0;
           }
-          return arg0 + num;
+          return acc + num;
         }, 0);
       } else {
         const tmpResult = tmp(1115);
@@ -428,7 +426,7 @@ export const getCollectiblesProductPriceComparisons = function getCollectiblesPr
   hasShopDiscount,
 ) {
   hasShopDiscount = hasShopDiscount.hasShopDiscount;
-  let _require;
+  c0 = undefined;
   let prices;
   if (type.prices[constants3.DEFAULT] != null) {
     const countryPrices = tmp2.countryPrices;
@@ -447,11 +445,10 @@ export const getCollectiblesProductPriceComparisons = function getCollectiblesPr
   if (null == tmp4) {
     return null;
   } else if (tmp4.amount <= 0) {
-    obj = { defaultPrice: null, showDefaultPriceOnly: true };
-    obj[0] = tmp4;
+    obj = { defaultPrice: tmp4, showDefaultPriceOnly: true };
     return obj;
   } else {
-    _require = undefined;
+    c0 = undefined;
     let prices1;
     if (type.prices[tmp.PREMIUM_TIER_2] != null) {
       const countryPrices2 = tmp17.countryPrices;
@@ -472,10 +469,7 @@ export const getCollectiblesProductPriceComparisons = function getCollectiblesPr
       type = type.type;
     }
     let tmp12 = tmp4;
-    if (
-      type ===
-      require("../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx").CollectiblesItemType.BUNDLE
-    ) {
+    if (type === CollectiblesItemType.CollectiblesItemType.BUNDLE) {
       tmp12 = tmp4;
       if (hasShopDiscount) {
         obj = {};
@@ -492,20 +486,14 @@ export const getCollectiblesProductPriceComparisons = function getCollectiblesPr
       tmp16 = tmp7;
     }
     obj = {
-      defaultPrice: null,
-      originalPrice: null,
-      premiumPrice: null,
-      finalPrice: null,
-      showDiscountPrice: null,
-      finalPriceIsDifferent: null,
+      defaultPrice: tmp4,
+      originalPrice: tmp12,
+      premiumPrice: tmp7,
+      finalPrice: tmp16,
+      showDiscountPrice: hasShopDiscount,
+      finalPriceIsDifferent: tmp16.amount !== tmp12.amount,
       showDefaultPriceOnly: false,
     };
-    obj[0] = tmp4;
-    obj[1] = tmp12;
-    obj[2] = tmp7;
-    obj[3] = tmp16;
-    obj[4] = hasShopDiscount;
-    obj[5] = tmp16.amount !== tmp12.amount;
     return obj;
   }
   tmp = constants3;
@@ -535,16 +523,16 @@ export const isFreeCollectiblesProduct = function isFreeCollectiblesProduct(prod
 };
 export const extendVariantsProducts = function extendVariantsProducts(items) {
   return items.reduce((arr, type) => {
-    const callback = type;
+    closure_0 = type;
     if (null != type) {
-      if (type.type === callback(table[14]).CollectiblesItemType.VARIANTS_GROUP) {
+      if (type.type === require("CollectiblesItemType").CollectiblesItemType.VARIANTS_GROUP) {
         if (null != type.variants) {
           const variants = type.variants;
           let combined = tmp(tmp2[15]).concat(
             arr,
-            variants.map((arg0) => {
+            variants.map((item) => {
               obj = {};
-              const merged = Object.assign(arg0);
+              const merged = Object.assign(item);
               ({ storeListingId: obj.variantGroupStoreListingId, eligibleOffers: obj.eligibleOffers } = closure_0);
               return obj;
             }),
@@ -553,30 +541,29 @@ export const extendVariantsProducts = function extendVariantsProducts(items) {
         }
         return combined;
       }
-      tmp = callback;
-      tmp2 = table;
+      tmp = _require;
+      tmp2 = dependencyMap;
     }
     arr.push(type);
     combined = arr;
   }, []);
 };
-export const getProductsFromCategories = function getProductsFromCategories(closure_14, arg1) {
-  items = [...closure_14.values()];
-  const flatMapResult = apply.flatMap(items, "products");
-  obj = apply;
+export const getProductsFromCategories = function getProductsFromCategories(arr, arg1) {
+  items = [...arr.values()];
+  const flatMapResult = _mod12.flatMap(items, "products");
   let reduced = flatMapResult;
   if (arg1) {
     reduced = flatMapResult.reduce((arr, type) => {
-      const callback = type;
+      closure_0 = type;
       if (null != type) {
-        if (type.type === callback(table[14]).CollectiblesItemType.VARIANTS_GROUP) {
+        if (type.type === require("CollectiblesItemType").CollectiblesItemType.VARIANTS_GROUP) {
           if (null != type.variants) {
             const variants = type.variants;
             let combined = tmp(tmp2[15]).concat(
               arr,
-              variants.map((arg0) => {
+              variants.map((item) => {
                 obj = {};
-                const merged = Object.assign(arg0);
+                const merged = Object.assign(item);
                 ({ storeListingId: obj.variantGroupStoreListingId, eligibleOffers: obj.eligibleOffers } = closure_0);
                 return obj;
               }),
@@ -585,14 +572,14 @@ export const getProductsFromCategories = function getProductsFromCategories(clos
           }
           return combined;
         }
-        tmp = callback;
-        tmp2 = table;
+        tmp = _require;
+        tmp2 = dependencyMap;
       }
       arr.push(type);
       combined = arr;
     }, []);
   }
-  return apply.uniqBy(reduced, "storeListingId");
+  return _mod12.uniqBy(reduced, "storeListingId");
 };
 export { getItemRecordsFromPurchases };
 export { getItemRecordsFromCategories };
@@ -626,12 +613,12 @@ export const getAvatarDecorationsFromPurchases = function getAvatarDecorationsFr
 export const getAvatarDecorationsFromCategories = function getAvatarDecorationsFromCategories(categories) {
   return getItemRecordsFromCategories(categories, CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION);
 };
-export const getAvatarDecorations = function getAvatarDecorations(stateFromStores, first) {
+export const getAvatarDecorations = function getAvatarDecorations(stateFromStores, arr) {
   items = [
     ...getItemRecordsFromPurchases(stateFromStores, CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION),
-    ...getItemRecordsFromCategories(first, CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION),
+    ...getItemRecordsFromCategories(arr, CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION),
   ];
-  return apply.uniqBy(items, "skuId");
+  return _mod12.uniqBy(items, "skuId");
 };
 export const getNameplatesFromPurchases = function getNameplatesFromPurchases(arr) {
   return getItemRecordsFromPurchases(arr, CollectiblesItemType.CollectiblesItemType.NAMEPLATE);
@@ -639,12 +626,12 @@ export const getNameplatesFromPurchases = function getNameplatesFromPurchases(ar
 export const getNameplatesFromCategories = function getNameplatesFromCategories(arr) {
   return getItemRecordsFromCategories(arr, CollectiblesItemType.CollectiblesItemType.NAMEPLATE);
 };
-export const getNameplates = function getNameplates(stateFromStores, first) {
+export const getNameplates = function getNameplates(stateFromStores, arr) {
   items = [
     ...getItemRecordsFromPurchases(stateFromStores, CollectiblesItemType.CollectiblesItemType.NAMEPLATE),
-    ...getItemRecordsFromCategories(first, CollectiblesItemType.CollectiblesItemType.NAMEPLATE),
+    ...getItemRecordsFromCategories(arr, CollectiblesItemType.CollectiblesItemType.NAMEPLATE),
   ];
-  return apply.uniqBy(items, "skuId");
+  return _mod12.uniqBy(items, "skuId");
 };
 export const getProfileEffectsFromPurchases = function getProfileEffectsFromPurchases(arr) {
   return getItemRecordsFromPurchases(arr, CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT);
@@ -652,35 +639,25 @@ export const getProfileEffectsFromPurchases = function getProfileEffectsFromPurc
 export const getProfileEffectsFromCategories = function getProfileEffectsFromCategories(arr) {
   return getItemRecordsFromCategories(arr, CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT);
 };
-export const getProfileEffects = function getProfileEffects(stateFromStores, first) {
+export const getProfileEffects = function getProfileEffects(stateFromStores, arr) {
   items = [
     ...getItemRecordsFromPurchases(stateFromStores, CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT),
-    ...getItemRecordsFromCategories(first, CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT),
+    ...getItemRecordsFromCategories(arr, CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT),
   ];
-  return apply.uniqBy(items, "skuId");
+  return _mod12.uniqBy(items, "skuId");
 };
 export const groupProfileEffects = function groupProfileEffects(arr, arr) {
-  const tmp = getItemRecordsFromPurchases(
-    arr,
-    require("../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx").CollectiblesItemType
-      .PROFILE_EFFECT,
-  );
-  _require = tmp;
-  arr = getItemRecordsFromCategories(
-    arr,
-    require("../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx").CollectiblesItemType
-      .PROFILE_EFFECT,
-  );
+  const tmp = getItemRecordsFromPurchases(arr, CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT);
+  closure_0 = tmp;
+  arr = getItemRecordsFromCategories(arr, CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT);
   return {
     purchased: tmp,
-    shopPreviews: getItemRecordsFromCategories(
-      arr,
-      require("../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx").CollectiblesItemType
-        .PROFILE_EFFECT,
-    ).filter((skuId) => {
-      skuId = skuId.skuId;
-      return !skuId.some((skuId) => skuId.skuId === skuId);
-    }),
+    shopPreviews: getItemRecordsFromCategories(arr, CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT).filter(
+      (skuId) => {
+        skuId = skuId.skuId;
+        return !closure_0.some((skuId) => skuId.skuId === skuId);
+      },
+    ),
   };
 };
 export const getProfileFramesFromPurchases = function getProfileFramesFromPurchases(arr) {
@@ -689,15 +666,15 @@ export const getProfileFramesFromPurchases = function getProfileFramesFromPurcha
 export const getProfileFramesFromCategories = function getProfileFramesFromCategories(arr) {
   return getItemRecordsFromCategories(arr, CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME);
 };
-export const getProfileFrames = function getProfileFrames(stateFromStores, first) {
+export const getProfileFrames = function getProfileFrames(stateFromStores, arr) {
   items = [
     ...getItemRecordsFromPurchases(stateFromStores, CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME),
-    ...getItemRecordsFromCategories(first, CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME),
+    ...getItemRecordsFromCategories(arr, CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME),
   ];
-  return apply.uniqBy(items, "skuId");
+  return _mod12.uniqBy(items, "skuId");
 };
 export const isCollectiblesGiftCode = function isCollectiblesGiftCode(giftCode) {
-  return giftCode.applicationId === closure_11;
+  return giftCode.applicationId === closure_1_11;
 };
 export const LOGO_ASPECT_RATIO = 3.8;
 export const getLogoSize = function getLogoSize(arg0) {
@@ -728,7 +705,7 @@ export const shouldShowLimitedTimeBadge = function shouldShowLimitedTimeBadge(da
     tmp =
       Math.floor(
         (Date.UTC(fullYear1, month1, date.getDate()) - Date.UTC(fullYear, month, date.getDate())) / 86400000,
-      ) <= closure_9;
+      ) <= React7;
     const UTCResult = Date.UTC(fullYear, month, date.getDate());
   }
   return tmp;
@@ -780,7 +757,7 @@ export const getCollectiblesPrice = function getCollectiblesPrice(arg0) {
   let tmp3;
   if (null != unitPrice) {
     obj = { amount: null, currency: null };
-    ({ amount: obj[0], currency: obj[1] } = unitPrice);
+    ({ amount: obj.amount, currency: obj.currency } = unitPrice);
     tmp3 = obj;
   }
   let tmp4 = tmp3;
@@ -793,9 +770,7 @@ export const getCollectiblesPrice = function getCollectiblesPrice(arg0) {
       }
       tmp4 = tmp3;
       if (null != price) {
-        obj = { amount: null, currency: null };
-        obj[0] = tmp5.price.amount;
-        obj[1] = tmp5.price.currency;
+        obj = { amount: tmp5.price.amount, currency: tmp5.price.currency };
         tmp4 = obj;
       }
     }
@@ -810,13 +785,13 @@ export const shouldHideGiftingForCurrency = function shouldHideGiftingForCurrenc
   return hasItem;
 };
 export const getStrikeThroughPriceAmountForCollectiblesProduct =
-  function getStrikeThroughPriceAmountForCollectiblesProduct(type, c5, arg2) {
-    type = undefined;
-    if (type != null) {
-      type = type.type;
+  function getStrikeThroughPriceAmountForCollectiblesProduct(stateFromStores, c5, arg2) {
+    let type;
+    if (stateFromStores != null) {
+      type = stateFromStores.type;
     }
     if (type === CollectiblesItemType.CollectiblesItemType.BUNDLE) {
-      const bundledProducts = type.bundledProducts;
+      const bundledProducts = stateFromStores.bundledProducts;
       if (null == bundledProducts) {
         return 0;
       } else {
@@ -825,9 +800,10 @@ export const getStrikeThroughPriceAmountForCollectiblesProduct =
           if (undefined !== CurrencyCodes.DISCORD_ORB) {
             let DEFAULT = constants3.MOBILE;
           }
-          const reduced = bundledProducts.reduce((arg0, arg1) => {
+          const reduced = bundledProducts.reduce((acc, item) => {
+            closure_0 = _require;
             let prices;
-            if (arg1.prices[DEFAULT] != null) {
+            if (item.prices[DEFAULT] != null) {
               const countryPrices = tmp2.countryPrices;
               if (countryPrices != null) {
                 prices = countryPrices.prices;
@@ -835,7 +811,7 @@ export const getStrikeThroughPriceAmountForCollectiblesProduct =
             }
             let tmp4 = null;
             if (null != prices) {
-              if (null == closure_0) {
+              if (null == _require) {
                 let first = prices[0];
               } else {
                 first = prices.find((currency) => currency.currency === closure_0);
@@ -852,7 +828,7 @@ export const getStrikeThroughPriceAmountForCollectiblesProduct =
             if (num == null) {
               num = 0;
             }
-            return arg0 + num;
+            return acc + num;
           }, 0);
         } else {
           tmp2Result = tmp2(1115);
@@ -860,7 +836,7 @@ export const getStrikeThroughPriceAmountForCollectiblesProduct =
         DEFAULT = constants3.DEFAULT;
       }
     } else if (!c5) {
-      const tmp5 = type.prices[arg2 ? tmp16.MOBILE_PREMIUM_TIER_2 : tmp16.PREMIUM_TIER_2];
+      const tmp5 = stateFromStores.prices[arg2 ? tmp16.MOBILE_PREMIUM_TIER_2 : tmp16.PREMIUM_TIER_2];
       let prices;
       if (tmp5 != null) {
         let countryPrices = tmp5.countryPrices;
@@ -926,20 +902,16 @@ export const getProductTypeNameForLogging = function getProductTypeNameForLoggin
     return "unknown";
   }
 };
-export const sortProductsByPrice = function sortProductsByPrice(arr) {
-  closure_0 = arg1;
+export const sortProductsByPrice = function sortProductsByPrice(arr, hasShopDiscount, arg2) {
   closure_1 = arg2;
-  return arr.sort((arg0, arg1) => {
+  return arr.sort((product, product2) => {
     if (closure_1) {
-      obj = callback(closure_1_2[17]);
-      obj = { product: null, hasShopDiscount: null };
-      obj[0] = arg0;
-      obj[1] = callback;
+      obj = { product, hasShopDiscount };
       let productOrbPrice = obj.getProductOrbPrice(obj);
-      let tmp2 = callback;
+      let tmp2 = hasShopDiscount;
     } else {
-      tmp2 = callback;
-      const tmp4 = arg0.prices[callback ? closure_1_13.MOBILE_PREMIUM_TIER_2 : closure_1_13.MOBILE];
+      tmp2 = hasShopDiscount;
+      const tmp4 = product.prices[hasShopDiscount ? constants3.MOBILE_PREMIUM_TIER_2 : constants3.MOBILE];
       let prices;
       if (tmp4 != null) {
         const countryPrices = tmp4.countryPrices;
@@ -957,13 +929,10 @@ export const sortProductsByPrice = function sortProductsByPrice(arr) {
       }
     }
     if (closure_1) {
-      obj = { product: null, hasShopDiscount: null };
-      obj[0] = arg1;
-      obj[1] = tmp2;
-      let productOrbPrice1 = callback(closure_1_2[17]).getProductOrbPrice(obj);
-      const obj3 = callback(closure_1_2[17]);
+      obj = { product: product2, hasShopDiscount: tmp2 };
+      let productOrbPrice1 = CollectiblesProductUtils.getProductOrbPrice(obj);
     } else {
-      const tmp13 = arg1.prices[tmp2 ? closure_1_13.MOBILE_PREMIUM_TIER_2 : closure_1_13.MOBILE];
+      const tmp13 = product2.prices[tmp2 ? constants3.MOBILE_PREMIUM_TIER_2 : constants3.MOBILE];
       let prices1;
       if (tmp13 != null) {
         const countryPrices2 = tmp13.countryPrices;

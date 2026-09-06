@@ -1,25 +1,22 @@
 // discord_app/modules/forums/native/ForumTagFilterActionSheet.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import getAvatarURLDefault from "../../../utils/AvatarUtils.tsx";
+import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
 import EmojiDefault from "../../emojis/native/Emoji.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
-import closure_5 from "../../emojis/EmojiStore.tsx";
-import set from "../ForumChannelStore.tsx";
-import ME from "../../../Constants.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import tracking_Tracking from "../tracking/Tracking.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
+import EmojiStore from "../../emojis/EmojiStore.tsx";
 
-require = arg1;
+require = fn;
 function EmojiIcon(arg0) {
   ({ emojiId: require, emojiName } = arg0);
-  const tmp = callback4();
+  const tmp = closure_12();
   let obj = initialize;
-  const items = [closure_5];
+  const items = [EmojiStore];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let usableCustomEmojiById = null;
-    if (null != closure_0) {
-      usableCustomEmojiById = closure_1_5.getUsableCustomEmojiById(tmp);
+    if (null != require) {
+      usableCustomEmojiById = EmojiStore.getUsableCustomEmojiById(tmp);
     }
     return usableCustomEmojiById;
   });
@@ -27,15 +24,15 @@ function EmojiIcon(arg0) {
   let emojiURL;
   if (null != stateFromStores) {
     obj = { id: null, animated: null, size: 18 };
-    ({ id: obj4[0], animated: obj4[1] } = stateFromStores);
-    emojiURL = getAvatarURLDefault.getEmojiURL(obj);
-    const tmp5Result = getAvatarURLDefault;
+    ({ id: obj4.id, animated: obj4.animated } = stateFromStores);
+    emojiURL = AvatarUtilsDefault.getEmojiURL(obj);
+    const tmp5Result = AvatarUtilsDefault;
   }
-  obj[3] = emojiURL;
+  obj.src = emojiURL;
   if (emojiName == null) {
     emojiName = "";
   }
-  obj[4] = emojiName;
+  obj.name = emojiName;
   return jsx(EmojiDefault, {
     style: tmp.emoji,
     textEmojiStyle: tmp.textEmoji,
@@ -44,24 +41,27 @@ function EmojiIcon(arg0) {
     name: null,
   });
 }
-({ useForumChannelStore: closure_6, useForumChannelStoreApi: error } = set);
-({ AnalyticsObjects: closure_8, AnalyticsPages: c9, AnalyticsSections: c10 } = ME);
-let closure_12 = createCacheKey.createStyles({
+const ForumChannelStore = fn(12001);
+({ useForumChannelStore: metroRequire, useForumChannelStoreApi: closure_7 } = ForumChannelStore);
+const Constants = fn(1074);
+({ AnalyticsObjects: closure_8, AnalyticsPages: closure_9, AnalyticsSections: c10 } = Constants);
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_12 = createStyles.createStyles({
   emoji: { height: 18, width: 18, marginRight: 4, display: "flex", alignItems: "center", justifyContent: "center" },
   imageEmoji: { height: 18, width: 18 },
   textEmoji: { fontSize: 14, lineHeight: 20 },
 });
-let result = set.fileFinishedImporting("modules/forums/native/ForumTagFilterActionSheet.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/forums/native/ForumTagFilterActionSheet.tsx");
 
 export default function ForumPostTagsActionSheet(channel) {
   channel = channel.channel;
-  closure_1 = undefined;
-  let first;
-  let callback;
-  closure_1 = callback3();
-  const tmp2 = callback(React.useState(new Set(callback2(channel.id).tagFilter)), 2);
-  first = tmp2[0];
-  callback = tmp2[1];
+  _slicedToArray = undefined;
+  let state = closure_7();
+  const tmp2 = _slicedToArray(noop.useState(new Set(closure_6(channel.id).tagFilter)), 2);
+  const first = tmp2[0];
+  _slicedToArray = tmp2[1];
   let obj = channel(first[8]);
   const unmountEffect = obj.useUnmountEffect(() => {
     state = state.getState();
@@ -69,77 +69,72 @@ export default function ForumPostTagsActionSheet(channel) {
   });
   obj = { title: null, subtitle: null, leading: null };
   let intl = channel(first[11]).intl;
-  obj[0] = intl.string(channel(first[11]).t.TdqRTh);
+  obj.title = intl.string(channel(first[11]).t.TdqRTh);
   let str = " ";
   if (first.size > 0) {
     const intl2 = tmp4(tmp5[11]).intl;
-    obj = { count: null };
-    obj[0] = first.size;
+    obj = { count: first.size };
     str = intl2.formatToPlainString(tmp4(tmp5[11]).t["/FzHJK"], obj);
   }
-  obj1 = { scrollable: true, header: null, children: null };
-  obj[1] = str;
+  const obj1 = { scrollable: true, header: null, children: null };
+  obj.subtitle = str;
   let obj2 = {
     onPress() {
-      callback(new Set());
+      closure_3(new Set());
     },
     label: null,
   };
   const intl3 = tmp4(tmp5[11]).intl;
-  obj2[1] = intl3.string(channel(first[11]).t.VkKicb);
-  obj[2] = jsx(channel(first[12]).ActionSheetHeaderPressableText, {
+  obj2.label = intl3.string(channel(first[11]).t.VkKicb);
+  obj.leading = jsx(channel(first[12]).ActionSheetHeaderPressableText, {
     onPress() {
-      callback(new Set());
+      closure_3(new Set());
     },
     label: null,
   });
-  obj1[1] = jsx(channel(first[10]).BottomSheetTitleHeader, { title: null, subtitle: null, leading: null });
+  obj1.header = jsx(channel(first[10]).BottomSheetTitleHeader, { title: null, subtitle: null, leading: null });
   const obj3 = { children: null };
-  let set = new Set(callback2(channel.id).tagFilter);
+  const obj4 = { hasIcons: true, children: null };
   const availableTags = channel.availableTags;
-  obj3[0] = jsx(channel(first[14]).TableRowGroup, {
-    hasIcons: true,
-    children: availableTags.map((emojiId) => {
-      closure_0 = emojiId;
-      let obj = { icon: null, label: null, accessibilityLabel: null, checked: null, onPress: null };
-      obj = { emojiId: emojiId.emojiId, emojiName: emojiId.emojiName };
-      obj[0] = closure_1_11(closure_1_13, obj);
-      obj[1] = emojiId.name;
-      const intl = channel(first[11]).intl;
-      obj = { tagName: emojiId.name };
-      obj[2] = intl.formatToPlainString(channel(first[11]).t.tXXD6v, obj);
-      obj[3] = first.has(emojiId.id);
-      obj[4] = function onPress() {
-        let obj = closure_0;
-        if (null != closure_0) {
-          let FORUM_CHANNEL_HEADER = globalThis;
-          const _Set = Set;
-          const set = new Set(closure_1_2);
-          if (set.has(obj.id)) {
-            set.delete(obj.id);
-          } else {
-            set.add(obj.id);
-          }
-          obj = { guildId: null, channelId: null, tagId: null, filterTagIds: null, added: null, location: null };
-          ({ guild_id: obj3[0], id: obj3[1] } = closure_0);
-          obj[2] = obj.id;
-          const _Array = FORUM_CHANNEL_HEADER.Array;
-          obj[3] = _Array.from(set);
-          obj[4] = !set.has(obj.id);
-          obj = { page: null, section: null, object: null };
-          obj[0] = closure_2_9.GUILD_CHANNEL;
-          FORUM_CHANNEL_HEADER = closure_2_10.FORUM_CHANNEL_HEADER;
-          obj[1] = FORUM_CHANNEL_HEADER;
-          obj[2] = closure_2_8.CHANNEL_TAG;
-          obj[5] = obj;
-          const result = channel(first[7]).trackForumTagFilterClicked(obj);
-          closure_1_3(set);
-          const obj2 = channel(first[7]);
+  obj4.children = availableTags.map((emojiId) => {
+    closure_0 = emojiId;
+    let obj = { icon: null, label: null, accessibilityLabel: null, checked: null, onPress: null };
+    obj = { emojiId: emojiId.emojiId, emojiName: emojiId.emojiName };
+    obj.icon = <EmojiIcon emojiId={arg0.emojiId} emojiName={arg0.emojiName} />;
+    obj.label = emojiId.name;
+    const intl = channel(first[11]).intl;
+    obj = { tagName: emojiId.name };
+    obj.accessibilityLabel = intl.formatToPlainString(channel(first[11]).t.tXXD6v, obj);
+    obj.checked = first.has(emojiId.id);
+    obj.onPress = function onPress() {
+      let obj = closure_0;
+      if (null != closure_0) {
+        let FORUM_CHANNEL_HEADER = globalThis;
+        const _Set = Set;
+        const set = new Set(first);
+        if (set.has(obj.id)) {
+          set.delete(obj.id);
+        } else {
+          set.add(obj.id);
         }
-      };
-      return closure_1_11(channel(first[15]).TableCheckboxRow, obj, emojiId.id);
-    }),
+        obj = { guildId: null, channelId: null, tagId: null, filterTagIds: null, added: null, location: null };
+        ({ guild_id: obj3.guildId, id: obj3.channelId } = channel);
+        obj.tagId = obj.id;
+        const _Array = FORUM_CHANNEL_HEADER.Array;
+        obj.filterTagIds = _Array.from(set);
+        obj.added = !set.has(obj.id);
+        obj = { page: constants2.GUILD_CHANNEL, section: null, object: null };
+        FORUM_CHANNEL_HEADER = constants3.FORUM_CHANNEL_HEADER;
+        obj.section = FORUM_CHANNEL_HEADER;
+        obj.object = constants.CHANNEL_TAG;
+        obj.location = obj;
+        const result = tracking_Tracking.trackForumTagFilterClicked(obj);
+        closure_3(set);
+      }
+    };
+    return jsx(channel(first[15]).TableCheckboxRow, { tagName: emojiId.name }, emojiId.id);
   });
-  obj1[2] = jsx(channel(first[13]).BottomSheetScrollView, { children: null });
+  obj3.children = jsx(channel(first[14]).TableRowGroup, { hasIcons: true, children: null });
+  obj1.children = jsx(channel(first[13]).BottomSheetScrollView, { children: null });
   return jsx(channel(first[9]).ActionSheet, { scrollable: true, header: null, children: null });
 }

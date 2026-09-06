@@ -1,10 +1,9 @@
 // discord_app/modules/voice_panel/native/hooks/useVoicePanelNavArrowPressed.tsx
-import closure_2 from "../../../../../_runtime/00019_noop.js";
-import { VoicePanelControlsModes } from "../controls/VoicePanelControlsConstants.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const result = require("set").fileFinishedImporting(
-  "modules/voice_panel/native/hooks/useVoicePanelNavArrowPressed.tsx",
-);
+const VoicePanelControlsModes = fn(12271).VoicePanelControlsModes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useVoicePanelNavArrowPressed.tsx");
 
 export default function useVoicePanelNavArrowPressed() {
   const context = dismissPanel.useContext(focused(setFocused[2]));
@@ -14,13 +13,13 @@ export default function useVoicePanelNavArrowPressed() {
   const controlsSpecs = context.controlsSpecs;
   const items = [focused, controlsSpecs, dismissPanel, setFocused];
   return dismissPanel.useCallback(() => {
-    const value = focused.get();
+    value = focused.get();
     let id;
     if (value != null) {
       id = value.id;
     }
     if (null != id) {
-      if (controlsSpecs.get().mode !== controlsSpecs.DRAWER) {
+      if (controlsSpecs.get().mode !== VoicePanelControlsModes.DRAWER) {
         setFocused(null);
         let flag = true;
       }

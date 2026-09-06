@@ -1,15 +1,15 @@
 // discord_app/modules/icymi/ICYMISessionStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
 import v1 from "../../../_runtime/01256_v1.js";
-import DEFAULT_UX_VARIATION2 from "ICYMIAnalytics.tsx";
-import closure_2 from "../experiments/ExperimentStore.tsx";
-import closure_3 from "../experiments/apex/ApexExperimentStore.tsx";
-import closure_4 from "../labs/LabFeatureStore.tsx";
-import closure_5 from "../../stores/AuthenticationStore.tsx";
-import closure_6 from "ICYMIStore.tsx";
+import ICYMIAnalytics2 from "ICYMIAnalytics.tsx";
+import ExperimentStore from "../experiments/ExperimentStore.tsx";
+import ApexExperimentStore from "../experiments/apex/ApexExperimentStore.tsx";
+import LabFeatureStore from "../labs/LabFeatureStore.tsx";
+import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
+import ICYMIStore from "ICYMIStore.tsx";
 
-require = arg1;
+require = fn;
 let c7 = 300000;
 let c8 = null;
 let closure_9 = [];
@@ -21,14 +21,14 @@ class ICYMISession {
     if (global === undefined) {
       items = [];
     }
-    str = arg1;
-    if (arg1 === undefined) {
+    str = fn;
+    if (fn === undefined) {
       str = "list";
     }
     list = str;
     obj = Object.create(new.target.prototype);
     closure_1 = obj;
-    obj2 = require("v1");
+    obj2 = closure_0(closure_1[5]);
     obj._sessionId = obj2.v4();
     obj._startTimestamp = Date.now();
     obj._endTimestamp = null;
@@ -48,19 +48,19 @@ class ICYMISession {
     obj._actionCount = 0;
     obj._latestDwellStartTimeMs = 0;
     obj._timeout = setTimeout(() => obj.endSession(), c7);
-    ICYMIAnalytics = require("DEFAULT_UX_VARIATION").ICYMIAnalytics;
+    ICYMIAnalytics = closure_0(closure_1[6]).ICYMIAnalytics;
     obj = {
       icymiSessionId: obj._sessionId,
       sessionStartTimeMs: obj._startTimestamp,
       previousIcymiSessionCount: c10,
-      uxVariation: require("DEFAULT_UX_VARIATION").DEFAULT_UX_VARIATION,
+      uxVariation: closure_0(closure_1[6]).DEFAULT_UX_VARIATION,
     };
     result = ICYMIAnalytics.trackFeedSessionStarted(obj);
     if (items.length > 0) {
       startItemsDwellResult = obj.startItemsDwell(
-        items.map((arg0) => {
+        items.map((item) => {
           obj = {};
-          const merged = Object.assign(arg0);
+          const merged = Object.assign(item);
           obj.triggerType = str;
           obj.isInitiallyVisible = true;
           return obj;
@@ -149,12 +149,11 @@ prototype["getImpression"] = function getImpression(itemId) {
   return _activeItems.find((itemId) => itemId.itemId === closure_0);
 };
 prototype["startItemsDwell"] = function startItemsDwell(arr) {
-  let self = this;
-  self = this;
+  const self = this;
   this._resetTimeout();
   closure_9 = arr;
   if (arr.length === this._activeItems.length) {
-    if (arr.every((itemId) => self._activeItems[arg1].itemId === itemId.itemId)) {
+    if (arr.every((itemId, index) => self._activeItems[index].itemId === itemId.itemId)) {
       return self._activeItems;
     }
   }
@@ -168,17 +167,14 @@ prototype["startItemsDwell"] = function startItemsDwell(arr) {
     let tmp3 = nextResult;
     let impression = self.getImpression(nextResult.itemId);
     if (null != impression) {
-      let tmp8 = impression;
       arr = items.push(tmp5);
-      let tmp10 = nextResult;
       let deleteResult = set.delete(tmp3.itemId);
     } else {
-      let tmp6 = nextResult;
       arr = items.push(self._createImpression(tmp3));
     }
     continue;
   }
-  const item = set.forEach((itemId) => self._endImpression(itemId));
+  const item = set.forEach((item) => self._endImpression(item));
   self._activeItems = items;
   return self._activeItems;
 };
@@ -192,7 +188,6 @@ prototype["trackItemsLongImpression"] = function trackItemsLongImpression(items)
     let result = impression;
     let tmp4 = impression;
     if (impression == null) {
-      let tmp6 = nextResult;
       result = self._constructImpressionFromInput(tmp2);
     }
     let tmp7 = result;
@@ -200,7 +195,6 @@ prototype["trackItemsLongImpression"] = function trackItemsLongImpression(items)
     self._impressionCount = sum;
     result.sessionImpressionIndex = sum;
     let _impressionItemIdMap = self._impressionItemIdMap;
-    let tmp9 = nextResult;
     let _impressionItemIdMap2 = self._impressionItemIdMap;
     let num = _impressionItemIdMap2.get(tmp2.itemId);
     if (num == null) {
@@ -208,10 +202,9 @@ prototype["trackItemsLongImpression"] = function trackItemsLongImpression(items)
     }
     let result1 = _impressionItemIdMap.set(tmp2.itemId, num + 1);
     let tmp11 = require;
-    let tmp12 = dependencyMap;
-    let ICYMIAnalytics = DEFAULT_UX_VARIATION2.ICYMIAnalytics;
+    let ICYMIAnalytics = ICYMIAnalytics2.ICYMIAnalytics;
     let obj = {
-      icymiSessionId: null,
+      icymiSessionId: self._sessionId,
       impressionId: null,
       itemId: null,
       itemType: null,
@@ -229,43 +222,44 @@ prototype["trackItemsLongImpression"] = function trackItemsLongImpression(items)
       uxVariation: null,
       sessionImpressionIndex: null,
     };
-    obj[0] = self._sessionId;
-    let tmp13 = result;
     ({
-      impressionId: obj[1],
-      itemId: obj[2],
-      itemType: obj[3],
-      impressionStartTimestamp: obj[4],
-      triggerType: obj[5],
+      impressionId: obj.impressionId,
+      itemId: obj.itemId,
+      itemType: obj.itemType,
+      impressionStartTimestamp: obj.dwellStartTimeMs,
+      triggerType: obj.triggerType,
     } = tmp7);
     let _dwelledItemIdMap = self._dwelledItemIdMap;
     let num2 = _dwelledItemIdMap.get(tmp7.itemId);
     if (num2 == null) {
       num2 = 0;
     }
-    obj[6] = num2;
-    let tmp14 = result;
-    ({ itemFeedIndex: obj[7], itemScore: obj[8], isInitiallyVisible: obj[9], itemChannelType: obj[10] } = tmp7);
-    let tmp15 = map;
+    obj.itemOccurenceCountInSession = num2;
+    ({
+      itemFeedIndex: obj.itemFeedIndex,
+      itemScore: obj.itemScore,
+      isInitiallyVisible: obj.isInitiallyVisible,
+      itemChannelType: obj.itemChannelType,
+    } = tmp7);
     let itemCardHeight = map.get(tmp7.itemId);
     if (itemCardHeight == null) {
-      let tmp17 = result;
       itemCardHeight = tmp7.itemCardHeight;
     }
     if (itemCardHeight == null) {
       itemCardHeight = null;
     }
-    obj[11] = itemCardHeight;
-    let tmp18 = impression;
-    obj[12] = null != tmp4;
-    let tmp19 = result;
-    ({ interactionActionTypes: obj[13], interactionCount: obj[14], uxVariation } = tmp7);
+    obj.itemCardHeight = itemCardHeight;
+    obj.isDwelling = null != tmp4;
+    ({
+      interactionActionTypes: obj.interactionActionTypes,
+      interactionCount: obj.interactionCount,
+      uxVariation,
+    } = tmp7);
     if (uxVariation == null) {
       uxVariation = tmp11(8359).DEFAULT_UX_VARIATION;
     }
-    obj[15] = uxVariation;
-    let tmp20 = result;
-    obj[16] = tmp7.sessionImpressionIndex;
+    obj.uxVariation = uxVariation;
+    obj.sessionImpressionIndex = tmp7.sessionImpressionIndex;
     let trackFeedItemDwell1sResult = ICYMIAnalytics.trackFeedItemDwell1s(obj);
     continue;
   }
@@ -273,7 +267,7 @@ prototype["trackItemsLongImpression"] = function trackItemsLongImpression(items)
 prototype["trackItemInteraction"] = function trackItemInteraction(id, type, actionType) {
   const self = this;
   const impression = this.getImpression(id);
-  const ICYMIAnalytics = DEFAULT_UX_VARIATION2.ICYMIAnalytics;
+  const ICYMIAnalytics = ICYMIAnalytics2.ICYMIAnalytics;
   const obj = {
     id,
     type,
@@ -287,19 +281,19 @@ prototype["trackItemInteraction"] = function trackItemInteraction(id, type, acti
   if (impression != null) {
     impressionId = impression.impressionId;
   }
-  obj[3] = impressionId;
+  obj.impressionId = impressionId;
   let uxVariation;
   if (impression != null) {
     uxVariation = impression.uxVariation;
   }
   if (uxVariation == null) {
-    uxVariation = DEFAULT_UX_VARIATION2.DEFAULT_UX_VARIATION;
+    uxVariation = ICYMIAnalytics2.DEFAULT_UX_VARIATION;
   }
-  obj[4] = uxVariation;
+  obj.uxVariation = uxVariation;
   const sum = self._interactionCount + 1;
   self._interactionCount = sum;
-  obj[5] = sum;
-  obj[6] = self._sessionId;
+  obj.sessionInteractionIndex = sum;
+  obj.icymiSessionId = self._sessionId;
   ICYMIAnalytics.trackItemInteraction(obj);
   if (null != impression) {
     const prop = impression.interactionActionTypes;
@@ -310,7 +304,7 @@ prototype["trackItemInteraction"] = function trackItemInteraction(id, type, acti
 prototype["trackFeedItemActioned"] = function trackFeedItemActioned(itemId) {
   const self = this;
   const impression = this.getImpression(itemId.itemId);
-  const ICYMIAnalytics = DEFAULT_UX_VARIATION2.ICYMIAnalytics;
+  const ICYMIAnalytics = ICYMIAnalytics2.ICYMIAnalytics;
   const obj = {
     icymiSessionId: this._sessionId,
     uxVariation: null,
@@ -325,13 +319,13 @@ prototype["trackFeedItemActioned"] = function trackFeedItemActioned(itemId) {
     uxVariation = impression.uxVariation;
   }
   if (uxVariation == null) {
-    uxVariation = DEFAULT_UX_VARIATION2.DEFAULT_UX_VARIATION;
+    uxVariation = ICYMIAnalytics2.DEFAULT_UX_VARIATION;
   }
-  obj[1] = uxVariation;
+  obj.uxVariation = uxVariation;
   const sum = self._actionCount + 1;
   self._actionCount = sum;
-  obj[2] = sum;
-  ({ itemId: obj[3], itemType: obj[4] } = itemId);
+  obj.sessionActionIndex = sum;
+  ({ itemId: obj.itemId, itemType: obj.itemType } = itemId);
   let impressionId;
   if (impression != null) {
     impressionId = impression.impressionId;
@@ -339,8 +333,8 @@ prototype["trackFeedItemActioned"] = function trackFeedItemActioned(itemId) {
   if (impressionId == null) {
     impressionId = null;
   }
-  obj[5] = impressionId;
-  obj[6] = itemId.actionParameters;
+  obj.impressionId = impressionId;
+  obj.actionParameters = itemId.actionParameters;
   const result = ICYMIAnalytics.trackFeedItemActioned(obj);
 };
 prototype["trackFeedFilterActioned"] = function trackFeedFilterActioned(itemId) {
@@ -349,7 +343,7 @@ prototype["trackFeedFilterActioned"] = function trackFeedFilterActioned(itemId) 
   if (null != itemId.itemId) {
     impression = self.getImpression(itemId.itemId);
   }
-  const ICYMIAnalytics = DEFAULT_UX_VARIATION2.ICYMIAnalytics;
+  const ICYMIAnalytics = ICYMIAnalytics2.ICYMIAnalytics;
   const obj = {
     icymiSessionId: self._sessionId,
     uxVariation: null,
@@ -364,13 +358,13 @@ prototype["trackFeedFilterActioned"] = function trackFeedFilterActioned(itemId) 
     uxVariation = impression.uxVariation;
   }
   if (uxVariation == null) {
-    uxVariation = DEFAULT_UX_VARIATION2.DEFAULT_UX_VARIATION;
+    uxVariation = ICYMIAnalytics2.DEFAULT_UX_VARIATION;
   }
-  obj[1] = uxVariation;
+  obj.uxVariation = uxVariation;
   const sum = self._actionCount + 1;
   self._actionCount = sum;
-  obj[2] = sum;
-  ({ filterParameters: obj[3], itemId: obj[4], itemType: obj[5] } = itemId);
+  obj.sessionActionIndex = sum;
+  ({ filterParameters: obj.filterParameters, itemId: obj.itemId, itemType: obj.itemType } = itemId);
   let impressionId;
   if (impression != null) {
     impressionId = impression.impressionId;
@@ -378,19 +372,21 @@ prototype["trackFeedFilterActioned"] = function trackFeedFilterActioned(itemId) 
   if (impressionId == null) {
     impressionId = null;
   }
-  obj[6] = impressionId;
+  obj.impressionId = impressionId;
   const result = ICYMIAnalytics.trackFeedFilterActioned(obj);
 };
 prototype["trackFeedPageActioned"] = function trackFeedPageActioned(arg0) {
-  const ICYMIAnalytics = DEFAULT_UX_VARIATION2.ICYMIAnalytics;
+  const ICYMIAnalytics = ICYMIAnalytics2.ICYMIAnalytics;
+  const obj = {
+    icymiSessionId: this._sessionId,
+    uxVariation: ICYMIAnalytics2.DEFAULT_UX_VARIATION,
+    sessionActionIndex: null,
+  };
   const sum = this._actionCount + 1;
   this._actionCount = sum;
+  obj.sessionActionIndex = sum;
   const merged = Object.assign(arg0);
-  const result = ICYMIAnalytics.trackFeedPageActioned({
-    icymiSessionId: this._sessionId,
-    uxVariation: DEFAULT_UX_VARIATION2.DEFAULT_UX_VARIATION,
-    sessionActionIndex: sum,
-  });
+  const result = ICYMIAnalytics.trackFeedPageActioned(obj);
 };
 prototype["incrementReloadCount"] = function incrementReloadCount() {
   this._resetTimeout();
@@ -407,7 +403,7 @@ prototype["endAllImpressions"] = function endAllImpressions() {
 prototype["endSession"] = function endSession() {
   this.endAllImpressions();
   this._endTimestamp = Date.now();
-  const ICYMIAnalytics = DEFAULT_UX_VARIATION2.ICYMIAnalytics;
+  const ICYMIAnalytics = ICYMIAnalytics2.ICYMIAnalytics;
   const result = ICYMIAnalytics.trackFeedSessionCompleted({
     icymiSessionId: this._sessionId,
     sessionDurationMs: this._endTimestamp - this._startTimestamp,
@@ -420,14 +416,14 @@ prototype["endSession"] = function endSession() {
     feedDwelledItemsChangedCount: this._dwelledItemsChangedCount,
     feedFetchCount: this._feedFetchCount,
     latestDwellStartTimeMs: this._latestDwellStartTimeMs,
-    previousIcyMiSessionCount: closure_10,
+    previousIcyMiSessionCount,
     interactionCount: this._interactionCount,
     dwelledCount: this._dwellCount,
     uniqueDwelledCount: this._dwelledItemIdMap.size,
-    uxVariation: DEFAULT_UX_VARIATION2.DEFAULT_UX_VARIATION,
+    uxVariation: ICYMIAnalytics2.DEFAULT_UX_VARIATION,
   });
   clearTimeout(this._timeout);
-  closure_10 = closure_10 + 1;
+  previousIcyMiSessionCount = previousIcyMiSessionCount + 1;
   c8 = null;
   map.clear();
   return this;
@@ -471,18 +467,18 @@ prototype["_constructImpressionFromInput"] = function _constructImpressionFromIn
     interactionCount: 0,
     sessionImpressionIndex: null,
   };
-  let value = map.get(itemId.itemId);
+  value = map.get(itemId.itemId);
   if (value == null) {
     value = null;
   }
-  obj[10] = value;
-  obj[11] = DEFAULT_UX_VARIATION2.DEFAULT_UX_VARIATION;
-  obj[12] = [];
+  obj.itemCardHeight = value;
+  obj.uxVariation = ICYMIAnalytics2.DEFAULT_UX_VARIATION;
+  obj.interactionActionTypes = [];
   return obj;
 };
 prototype["_endImpression"] = function _endImpression(itemId) {
   const self = this;
-  const _require = itemId;
+  closure_0 = itemId;
   let _activeItems = this._activeItems;
   const findIndexResult = _activeItems.findIndex((itemId) => itemId.itemId === closure_0);
   let tmp3 = null;
@@ -490,11 +486,11 @@ prototype["_endImpression"] = function _endImpression(itemId) {
     const _Date = Date;
     tmp2.impressionEndTimestamp = Date.now();
     tmp2.impressionComplete = true;
-    const ICYMIAnalytics = require("ICYMIAnalytics.tsx").ICYMIAnalytics;
+    const ICYMIAnalytics = ICYMIAnalytics2.ICYMIAnalytics;
     const obj = {
-      icymiSessionId: null,
-      impressionId: null,
-      dwellTimeMs: null,
+      icymiSessionId: self._sessionId,
+      impressionId: tmp2.impressionId,
+      dwellTimeMs: tmp2.impressionEndTimestamp - tmp2.impressionStartTimestamp,
       itemId: null,
       itemType: null,
       dwellStartTimeMs: null,
@@ -511,23 +507,25 @@ prototype["_endImpression"] = function _endImpression(itemId) {
       interactionCount: null,
       sessionImpressionIndex: null,
     };
-    obj[0] = self._sessionId;
-    obj[1] = tmp2.impressionId;
-    obj[2] = tmp2.impressionEndTimestamp - tmp2.impressionStartTimestamp;
     ({
-      itemId: obj[3],
-      itemType: obj[4],
-      impressionStartTimestamp: obj[5],
-      impressionEndTimestamp: obj[6],
-      triggerType: obj[7],
+      itemId: obj.itemId,
+      itemType: obj.itemType,
+      impressionStartTimestamp: obj.dwellStartTimeMs,
+      impressionEndTimestamp: obj.dwellEndTimeMs,
+      triggerType: obj.triggerType,
     } = tmp2);
     const _dwelledItemIdMap = self._dwelledItemIdMap;
     let num = _dwelledItemIdMap.get(tmp2.itemId);
     if (num == null) {
       num = 0;
     }
-    obj[8] = num;
-    ({ itemFeedIndex: obj[9], itemScore: obj[10], isInitiallyVisible: obj[11], itemChannelType: obj[12] } = tmp2);
+    obj.itemOccurenceCountInSession = num;
+    ({
+      itemFeedIndex: obj.itemFeedIndex,
+      itemScore: obj.itemScore,
+      isInitiallyVisible: obj.isInitiallyVisible,
+      itemChannelType: obj.itemChannelType,
+    } = tmp2);
     let itemCardHeight = map.get(tmp2.itemId);
     if (itemCardHeight == null) {
       itemCardHeight = tmp2.itemCardHeight;
@@ -535,18 +533,22 @@ prototype["_endImpression"] = function _endImpression(itemId) {
     if (itemCardHeight == null) {
       itemCardHeight = null;
     }
-    obj[13] = itemCardHeight;
+    obj.itemCardHeight = itemCardHeight;
     let DEFAULT_UX_VARIATION = tmp2.uxVariation;
     if (DEFAULT_UX_VARIATION == null) {
       DEFAULT_UX_VARIATION = tmp5(8359).DEFAULT_UX_VARIATION;
     }
-    obj[14] = DEFAULT_UX_VARIATION;
-    ({ interactionActionTypes: obj[15], interactionCount: obj[16], sessionImpressionIndex: obj[17] } = tmp2);
+    obj.uxVariation = DEFAULT_UX_VARIATION;
+    ({
+      interactionActionTypes: obj.interactionActionTypes,
+      interactionCount: obj.interactionCount,
+      sessionImpressionIndex: obj.sessionImpressionIndex,
+    } = tmp2);
     ICYMIAnalytics.trackFeedItemDwelled(obj);
     _activeItems = self._activeItems;
     _activeItems.splice(findIndexResult, 1);
     tmp3 = tmp2;
-    tmp5 = _require;
+    tmp5 = require;
   }
   return tmp3;
 };
@@ -554,7 +556,7 @@ const Store = initializeDefault.Store;
 class ICYMISessionStore extends Store {}
 const prototype2 = ICYMISessionStore.prototype;
 prototype2["initialize"] = function initialize() {
-  this.waitFor(closure_3, closure_5, closure_6, closure_2, closure_4);
+  this.waitFor(ApexExperimentStore, AuthenticationStore, ICYMIStore, ExperimentStore, LabFeatureStore);
 };
 Object.defineProperty(prototype2, "currentSession", {
   get: function currentSession() {
@@ -568,7 +570,7 @@ Object.defineProperty(prototype2, "endedSessionCount", {
   },
   set: undefined,
 });
-const iCYMISessionStore = new ICYMISessionStore(dispatcherDefault, {
+const iCYMISessionStore = new ICYMISessionStore(DispatcherDefault, {
   ICYMI_TAB_OPENED: function handleTabOpened() {
     let flag = null != _null;
     if (flag) {
@@ -594,9 +596,9 @@ const iCYMISessionStore = new ICYMISessionStore(dispatcherDefault, {
       if (null != tmp) {
         if (closure_9.length > 0) {
           _null.startItemsDwell(
-            closure_9.map((arg0) => {
+            closure_9.map((item) => {
               const obj = {};
-              const merged = Object.assign(arg0);
+              const merged = Object.assign(item);
               obj.triggerType = "focus";
               obj.isInitiallyVisible = true;
               return obj;
@@ -693,7 +695,7 @@ const iCYMISessionStore = new ICYMISessionStore(dispatcherDefault, {
     const result = map.set(itemId.itemId, itemId.height);
     return true;
   },
-  ICYMI_ITEM_INTERACTED: function handleItemInteracted(press_comments, arg1) {
+  ICYMI_ITEM_INTERACTED: function handleItemInteracted(press_comments) {
     if (null == _null) {
       _null = new ICYMISession(closure_9, "focus");
     }
@@ -722,7 +724,8 @@ const iCYMISessionStore = new ICYMISessionStore(dispatcherDefault, {
     return true;
   },
 });
-let result = require("set").fileFinishedImporting("modules/icymi/ICYMISessionStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/icymi/ICYMISessionStore.tsx");
 
 export default iCYMISessionStore;
 export const resetGlobalState = function resetGlobalState() {

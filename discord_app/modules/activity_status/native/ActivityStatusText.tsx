@@ -1,13 +1,13 @@
 // discord_app/modules/activity_status/native/ActivityStatusText.tsx
-import noopAll from "../../../../_runtime/00019_noop.js";
-import Text from "../../../design/components/Text/native/Text.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-noopAll;
-let closure_3 = createCacheKey.createStyles({ text: { flexShrink: 1 } });
-const result = require("set").fileFinishedImporting("modules/activity_status/native/ActivityStatusText.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_3 = createStyles.createStyles({ text: { flexShrink: 1 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activity_status/native/ActivityStatusText.tsx");
 
 export default function ActivityStatusText(variant) {
   let str = variant.variant;
@@ -15,10 +15,11 @@ export default function ActivityStatusText(variant) {
   if (str === undefined) {
     str = "text-xs/medium";
   }
-  const merged = Object.assign(variant, Object.create(null));
-  const obj = { variant: str, color: "text-muted", style: items, lineClamp: 1 };
-  items = [callback().text, style];
+  const merged = Object.assign(variant, Object.assign({ children: 0, style: 0, variant: 0 }));
+  const obj = { variant: str, color: "text-muted", style: null, lineClamp: 1 };
+  const items = [closure_3().text, style];
+  obj.style = items;
   const merged1 = Object.assign(merged);
   obj.children = children;
-  return jsx(Text.Text, { variant: str, color: "text-muted", style: items, lineClamp: 1 });
+  return jsx(Text_Text.Text, { variant: str, color: "text-muted", style: null, lineClamp: 1 });
 }

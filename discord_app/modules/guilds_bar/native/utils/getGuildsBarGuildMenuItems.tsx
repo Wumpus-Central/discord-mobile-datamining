@@ -1,36 +1,35 @@
 // discord_app/modules/guilds_bar/native/utils/getGuildsBarGuildMenuItems.tsx
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../stores/GuildStore.tsx";
-import closure_5 from "../../../../stores/UserGuildSettingsStore.tsx";
-import { AnalyticsSections } from "../../../../Constants.tsx";
-import { getMuteTimeOptions } from "../../../notifications/NotificationUtils.tsx";
+import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js";
+import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import NotificationSettingsUtils from "../../../../utils/NotificationSettingsUtils.tsx";
+import NotificationSettingsModalActionCreatorsDefault from "../../../../actions/NotificationSettingsModalActionCreators.tsx";
+import openGuildActionSheetDefault from "../../../guild_action_sheet/native/openGuildActionSheet.tsx";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import GuildStore from "../../../../stores/GuildStore.tsx";
+import UserGuildSettingsStore from "../../../../stores/UserGuildSettingsStore.tsx";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/guilds_bar/native/utils/getGuildsBarGuildMenuItems.tsx");
+require = fn;
+const AnalyticsSections = fn(1074).AnalyticsSections;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guilds_bar/native/utils/getGuildsBarGuildMenuItems.tsx");
 
-export default function getGuildsBarGuildMenuItems(arg0) {
-  const _require = arg0;
-  let obj = getMuteTimeOptions;
+export default function getGuildsBarGuildMenuItems(guildId) {
+  _require = guildId;
+  let obj = require("notifications/NotificationUtils");
   let result = obj.shouldShowUseNewNotificationSystem("GuildPopoutMenu");
-  obj = {
-    IconComponent: require("../../../../design/components/Icon/native/redesign/generated/EnvelopeIcon.tsx")
-      .EnvelopeIcon,
-    label: null,
-    action: null,
-  };
-  const intl = require("../../../../intl/index.native.tsx").intl;
-  obj[1] = intl.string(require("../../../../intl/index.native.tsx").t.e6RscS);
-  obj[2] = function action() {
-    return closure_1_3(function* () {
+  obj = { IconComponent: require("EnvelopeIcon").EnvelopeIcon, label: null, action: null };
+  const intl = require("util").intl;
+  obj.label = intl.string(require("util").t.e6RscS);
+  obj.action = function action() {
+    return (async (arg0, value) => {
       if (paths === 2) {
         paths = 3;
-        HermesBuiltin.throwTypeError();
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp3 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          let obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
@@ -41,31 +40,27 @@ export default function getGuildsBarGuildMenuItems(arg0) {
           if (0 === c1) {
             if (arg0 === 1) {
               paths = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               paths = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj = { value, done: true };
               return obj;
             } else {
-              closure_0 = tmp4;
               c1 = 1;
               paths = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = closure_1_0(paths[8])(paths[7], paths.paths);
+              const obj1 = { value: tmp4(paths[8])(paths[7], paths.paths), done: false };
               return obj1;
             }
           } else if (arg0 === 1) {
             paths = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             paths = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
-            const items = [closure_0];
-            arg1.default(items, closure_1_6.GUILD_LIST);
+            const items = [closure_128_0];
+            value.default(items, constants.GUILD_LIST);
             paths = 3;
             return { value: "HermesInternal", done: null };
           }
@@ -77,29 +72,20 @@ export default function getGuildsBarGuildMenuItems(arg0) {
     })();
   };
   let items = [obj, ,];
-  obj = {
-    IconComponent: require("../../../../design/components/Icon/native/redesign/generated/BellIcon.tsx").BellIcon,
-    label: null,
-    action: null,
-  };
-  const intl2 = require("../../../../intl/index.native.tsx").intl;
-  obj[1] = intl2.string(require("../../../../intl/index.native.tsx").t.HcoRu0);
-  obj[2] = function action() {
-    closure_1_1(closure_1_2[10]).open(closure_0);
+  obj = { IconComponent: require("BellIcon").BellIcon, label: null, action: null };
+  const intl2 = require("util").intl;
+  obj.label = intl2.string(require("util").t.HcoRu0);
+  obj.action = function action() {
+    NotificationSettingsModalActionCreatorsDefault.open(closure_0);
   };
   items[1] = obj;
-  obj1 = {
-    IconComponent: require("../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx")
-      .SettingsIcon,
-    label: null,
-    action: null,
-  };
-  const intl3 = require("../../../../intl/index.native.tsx").intl;
-  obj1[1] = intl3.string(require("../../../../intl/index.native.tsx").t.PdRCRg);
-  obj1[2] = function action() {
-    const guild = closure_1_4.getGuild(closure_0);
+  let obj1 = { IconComponent: require("SettingsIcon").SettingsIcon, label: null, action: null };
+  const intl3 = require("util").intl;
+  obj1.label = intl3.string(require("util").t.PdRCRg);
+  obj1.action = function action() {
+    const guild = GuildStore.getGuild(closure_0);
     if (null != guild) {
-      closure_1_1(closure_1_2[12])(guild);
+      openGuildActionSheetDefault(guild);
     }
   };
   items[2] = obj1;
@@ -107,28 +93,26 @@ export default function getGuildsBarGuildMenuItems(arg0) {
     const splice = items.splice;
     const obj2 = { iconSource: null, label: null, action: null };
     if (isMutedResult) {
-      obj2[0] = tmp5(12378);
+      obj2.iconSource = tmp5(12378);
       const intl5 = tmp(1114).intl;
-      obj2[1] = intl5.string(tmp(1114).t.De0BTC);
-      obj2[2] = function action() {
-        if (null != callback) {
-          const result = closure_1_1(closure_1_2[10]).updateGuildNotificationSettings(
+      obj2.label = intl5.string(tmp(1114).t.De0BTC);
+      obj2.action = function action() {
+        if (null != closure_0) {
+          const result = NotificationSettingsModalActionCreatorsDefault.updateGuildNotificationSettings(
             tmp,
             { muted: false },
-            callback(closure_1_2[17]).NotificationLabels.Unmuted,
+            NotificationSettingsUtils.NotificationLabels.Unmuted,
           );
-          const obj = closure_1_1(closure_1_2[10]);
         }
       };
       splice(1, 0, obj2);
     } else {
-      obj2[0] = tmp5(12377);
+      obj2.iconSource = tmp5(12377);
       const intl4 = tmp(1114).intl;
-      obj2[1] = intl4.string(tmp(1114).t.vRzp7P);
-      obj2[2] = function action() {
-        let obj = closure_1_1(closure_1_2[14]);
-        obj = { guildId: callback };
-        obj.openLazy(callback(closure_1_2[8])(closure_1_2[15], closure_1_2.paths), "muteSettings" + callback, obj);
+      obj2.label = intl4.string(tmp(1114).t.vRzp7P);
+      obj2.action = function action() {
+        const obj = { guildId };
+        obj.openLazy(asyncRequireImpl(10144, dependencyMap.paths), "muteSettings" + guildId, obj);
       };
       splice(1, 0, obj2);
     }

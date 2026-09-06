@@ -1,7 +1,7 @@
 // discord_app/modules/overlay/OverlayTrackingUtils.native.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/overlay/OverlayTrackingUtils.native.tsx");
+const result = size.fileFinishedImporting("modules/overlay/OverlayTrackingUtils.native.tsx");
 
 export function useOverlayTrackedGames() {
   return [];

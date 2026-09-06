@@ -1,32 +1,32 @@
 // discord_app/modules/user_settings/defs/native/PremiumManageSubscriptionsSetting.tsx
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import getPremiumPlanItem from "../../../../utils/PremiumUtils.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
-import { PremiumPlanSelectSettingScreen } from "../../premium/native/PremiumManagePlanScreen.tsx";
+import util from "../../../../intl/index.native.tsx";
+import PremiumUtils from "../../../../utils/PremiumUtils.tsx";
+import BlockedPaymentsCountryExperiment from "../../../billing/experiments/BlockedPaymentsCountryExperiment.tsx";
+import openBlockedPaymentsCountryActionSheetDefault from "../../../billing/native/openBlockedPaymentsCountryActionSheet.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = arg1;
-createToggle = {
+require = fn;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["z5YcJ+"]);
+    const intl = util.intl;
+    return intl.string(util.t["z5YcJ+"]);
   },
   parent: null,
-  IconComponent: require("SubscriptionIcon").SubscriptionIcon,
+  IconComponent: fn(14987).SubscriptionIcon,
   usePreNavigationAction: function useCanNavigateToPaymentSetting() {
-    return React.useCallback(() => {
-      const isPaymentsBlocked = callback(table[2]).getIsPaymentsBlocked();
+    return noop.useCallback(() => {
+      const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();
       let flag = !isPaymentsBlocked;
       if (isPaymentsBlocked) {
-        callback2(table[3])();
+        openBlockedPaymentsCountryActionSheetDefault();
         flag = false;
       }
       return flag;
     }, []);
   },
   usePredicate: function useShowManageSubscriptionsSetting() {
-    let hasPremiumSubscriptionToDisplay = getPremiumPlanItem.useHasPremiumSubscriptionToDisplay();
-    const obj = getPremiumPlanItem;
+    let hasPremiumSubscriptionToDisplay = PremiumUtils.useHasPremiumSubscriptionToDisplay();
     if (hasPremiumSubscriptionToDisplay) {
       hasPremiumSubscriptionToDisplay = obj2.useMobileNitroManageSubscriptionsSettingsExperiment({
         location: "useShowManageSubscriptionsSetting",
@@ -34,17 +34,15 @@ createToggle = {
     }
     return hasPremiumSubscriptionToDisplay;
   },
-  screen: createToggle,
-};
-createToggle = {
-  route: require("ME").UserSettingsSections.PREMIUM_MANAGE_PLAN,
-  getComponent() {
-    return PremiumPlanSelectSettingScreen /* PremiumPlanSelectSettingScreen */.default;
+  screen: {
+    route: fn(1074).UserSettingsSections.PREMIUM_MANAGE_PLAN,
+    getComponent() {
+      return require("PremiumManagePlanScreen").default;
+    },
   },
 };
-createToggle = createToggle.createRoute(createToggle);
-const result = require("set").fileFinishedImporting(
-  "modules/user_settings/defs/native/PremiumManageSubscriptionsSetting.tsx",
-);
+SettingBuilders = SettingBuilders.createRoute(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/PremiumManageSubscriptionsSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

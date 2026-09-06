@@ -1,7 +1,7 @@
 // discord_app/modules/gateway/GatewaySocketOpcode.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/gateway/GatewaySocketOpcode.tsx");
+const result = size.fileFinishedImporting("modules/gateway/GatewaySocketOpcode.tsx");
 
 export const Opcode = {
   DISPATCH: 0,

@@ -1,9 +1,10 @@
 // discord_app/modules/age_assurance/AgeVerificationAnalyticsUtils.tsx
-import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
-import closure_2 from "../../stores/ChannelStore.tsx";
-import { AnalyticEvents } from "../../Constants.tsx";
+import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
 
-const result = require("set").fileFinishedImporting("modules/age_assurance/AgeVerificationAnalyticsUtils.tsx");
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/age_assurance/AgeVerificationAnalyticsUtils.tsx");
 
 export const AgeVerificationModalEntryPoint = {
   GET_STARTED_MODAL: "get_started_modal",
@@ -79,8 +80,7 @@ export const trackAgeVerificationModalViewed = function trackAgeVerificationModa
   EXPRESSIVE_PRIMARY,
   entryPoint,
 ) {
-  let obj = expandEventPropertiesDefault;
-  obj = { modal_session_id: memo, modal_version: EXPRESSIVE_PRIMARY, entry_point: entryPoint };
+  const obj = { modal_session_id: memo, modal_version: EXPRESSIVE_PRIMARY, entry_point: entryPoint };
   obj.track(AnalyticEvents.AGE_VERIFICATION_MODAL_VIEWED, obj);
 };
 export const trackAgeVerificationModalClicked = function trackAgeVerificationModalClicked(
@@ -89,13 +89,16 @@ export const trackAgeVerificationModalClicked = function trackAgeVerificationMod
   METHOD_SELECT,
   GOOGLE_WALLET,
 ) {
-  let obj = expandEventPropertiesDefault;
-  obj = { modal_session_id: modalSessionId, modal_version: EXPRESSIVE_V2, cta: METHOD_SELECT, method: GOOGLE_WALLET };
+  const obj = {
+    modal_session_id: modalSessionId,
+    modal_version: EXPRESSIVE_V2,
+    cta: METHOD_SELECT,
+    method: GOOGLE_WALLET,
+  };
   obj.track(AnalyticEvents.AGE_VERIFICATION_MODAL_CLICKED, obj);
 };
 export const trackAgeVerificationDmClicked = function trackAgeVerificationDmClicked(CONNECT_TO_TEEN, channelId) {
-  let obj = expandEventPropertiesDefault;
-  obj = { cta: CONNECT_TO_TEEN, channel_id: channelId };
+  const obj = { cta: CONNECT_TO_TEEN, channel_id: channelId };
   obj.track(AnalyticEvents.AGE_VERIFICATION_DM_CLICKED, obj);
 };
 export const trackNsfwSpaceWarningModalViewed = function trackNsfwSpaceWarningModalViewed(
@@ -103,8 +106,7 @@ export const trackNsfwSpaceWarningModalViewed = function trackNsfwSpaceWarningMo
   channelId,
   guildId,
 ) {
-  let obj = expandEventPropertiesDefault;
-  obj = { channel_id: channelId, guild_id: guildId, modal_type: modalType };
+  const obj = { channel_id: channelId, guild_id: guildId, modal_type: modalType };
   obj.track(AnalyticEvents.NSFW_SPACE_WARNING_MODAL_VIEWED, obj);
 };
 export const trackNsfwSpaceWarningModalClicked = function trackNsfwSpaceWarningModalClicked(
@@ -115,7 +117,7 @@ export const trackNsfwSpaceWarningModalClicked = function trackNsfwSpaceWarningM
 ) {
   let channel = null;
   if (null != channelId) {
-    channel = channel.getChannel(channelId);
+    channel = ChannelStore.getChannel(channelId);
   }
   let topic;
   if (channel != null) {
@@ -124,10 +126,8 @@ export const trackNsfwSpaceWarningModalClicked = function trackNsfwSpaceWarningM
   let tmp4 = null != topic;
   if (tmp4) {
     tmp4 = "" !== channel.topic.trim();
-    const str = channel.topic;
   }
-  let obj = expandEventPropertiesDefault;
-  obj = {
+  const obj = {
     cta: NSFW_CHANNEL_AGREE_CTA,
     modal_type: modalType,
     channel_id: channelId,
@@ -145,7 +145,6 @@ export const AgeVerificationToastType = {
   UNDERAGE: "underage",
 };
 export const trackAgeVerificationToastViewed = function trackAgeVerificationToastViewed(toast_type) {
-  let obj = expandEventPropertiesDefault;
-  obj = { toast_type };
+  const obj = { toast_type };
   obj.track(AnalyticEvents.AGE_VERIFICATION_TOAST_VIEWED, obj);
 };

@@ -1,25 +1,30 @@
 // discord_app/components_native/common/ImageWithPlaceholder.tsx
 import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
-import preloadDefault from "FastImage.tsx";
-import __INTERNAL_VIEW_CONFIGDefault from "../../../discord_common/js/packages/rtn-codegen/js/ImageWithThumbhashPlaceholderNativeComponent.tsx";
-import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
-import set from "../../utils/PlatformUtils.tsx";
+import FastImageDefault from "FastImage.tsx";
+import ImageWithThumbhashPlaceholderNativeComponentDefault from "../../../discord_common/js/packages/rtn-codegen/js/ImageWithThumbhashPlaceholderNativeComponent.tsx";
+import get_ActivityIndicator from "../../../_runtime/metro/00017__.js";
+import PlatformUtils from "../../utils/PlatformUtils.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-({ View: obj1, requireNativeComponent } = get_ActivityIndicator);
+({ View: c2, requireNativeComponent } = get_ActivityIndicator);
 const jsx = jsxProd.jsx;
-let closure_4 = { flex: 1 };
-let obj = { THUMBHASH: 1, [1]: "THUMBHASH" };
-if (set.isAndroid()) {
-  let importDefaultResult = __INTERNAL_VIEW_CONFIGDefault;
+const style = { flex: 1 };
+const ImagePlaceholderVersions = { THUMBHASH: 1, [1]: "THUMBHASH" };
+if (PlatformUtils.isAndroid()) {
+  let importDefaultResult = ImageWithThumbhashPlaceholderNativeComponentDefault;
 } else {
   importDefaultResult = requireNativeComponent("DCDImageWithThumbhashPlaceholderView");
 }
-const result = set.fileFinishedImporting("components_native/common/ImageWithPlaceholder.tsx");
+const metroRequire = importDefaultResult;
+const result = size.fileFinishedImporting("components_native/common/ImageWithPlaceholder.tsx");
 
-export const ImagePlaceholderVersions = obj;
+export { ImagePlaceholderVersions };
 export const ImageWithPlaceholder = function ImageWithPlaceholder(arg0) {
   ({ uri, placeholder, placeholderVersion, alt, style } = arg0);
-  const merged = Object.assign(arg0, Object.create(null));
+  const merged = Object.assign(
+    arg0,
+    Object.assign({ uri: 0, placeholder: 0, placeholderVersion: 0, alt: 0, style: 0 }),
+  );
   if (null != placeholder) {
     if (placeholderVersion === obj.THUMBHASH) {
       obj = {};
@@ -29,13 +34,13 @@ export const ImageWithPlaceholder = function ImageWithPlaceholder(arg0) {
       obj.placeholder = placeholder;
       obj.placeholderVersion = placeholderVersion;
       obj.alt = alt;
-      let tmp4 = <closure_6 />;
+      let tmp4 = <importDefaultResult />;
     }
     return tmp4;
   }
   obj = { style };
   const merged2 = Object.assign(merged);
-  obj = { style: closure_4, resizeMode: "cover", source: { uri }, alt };
-  obj.children = jsx(preloadDefault, { style: closure_4, resizeMode: "cover", source: { uri }, alt });
-  tmp4 = <closure_2 style={closure_4} resizeMode="cover" source={{ uri }} alt={alt} />;
+  obj = { style, resizeMode: "cover", source: { uri }, alt };
+  obj.children = jsx(FastImageDefault, { style, resizeMode: "cover", source: { uri }, alt });
+  tmp4 = <React2 style={style} resizeMode="cover" source={{ uri }} alt={alt} />;
 };

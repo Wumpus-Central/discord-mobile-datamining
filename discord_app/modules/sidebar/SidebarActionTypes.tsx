@@ -1,7 +1,7 @@
 // discord_app/modules/sidebar/SidebarActionTypes.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/sidebar/SidebarActionTypes.tsx");
+const result = size.fileFinishedImporting("modules/sidebar/SidebarActionTypes.tsx");
 
 export const SidebarType = {
   CREATE_THREAD: 0,

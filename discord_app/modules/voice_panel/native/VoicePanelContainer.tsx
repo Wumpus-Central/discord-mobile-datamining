@@ -1,20 +1,19 @@
 // discord_app/modules/voice_panel/native/VoicePanelContainer.tsx
-import isIterable from "../../../../_runtime/04184_isIterable.js";
-import ManaContext from "../../../../discord_common/js/packages/design/native.tsx";
+import _mod4184 from "../../../../_runtime/metro/04184__.js";
+import native from "../../../../discord_common/js/packages/design/native.tsx";
 import VoicePanelControllerDefault from "VoicePanelController.tsx";
-import importAllResult from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../stores/ChannelStore.tsx";
-import closure_5 from "../VoicePanelStore.tsx";
-import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import VoicePanelUIDefault from "VoicePanelUI.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import ChannelStore from "../../../stores/ChannelStore.tsx";
+import VoicePanelStore from "../VoicePanelStore.tsx";
 
-require = arg1;
+require = fn;
 function VoicePanel(arg0) {
-  const _require = arg0;
-  let obj = initialize;
-  const items = [closure_4];
+  _require = arg0;
+  let obj = require("initialize");
+  const items = [ChannelStore];
   const stateFromStores = obj.useStateFromStores(items, () => {
-    const channel = closure_1_4.getChannel(channelId.channelId);
+    const channel = ChannelStore.getChannel(channelId.channelId);
     let guild_id;
     if (channel != null) {
       guild_id = channel.guild_id;
@@ -24,7 +23,7 @@ function VoicePanel(arg0) {
   obj = {};
   const merged = Object.assign(arg0);
   obj.guildId = stateFromStores;
-  obj.children = importAllResult.useMemo(() => callback2(callback(table[6]), {}), []);
+  obj.children = noop.useMemo(() => jsx(VoicePanelUIDefault, {}), []);
   return jsx(VoicePanelControllerDefault, {});
 }
 function getChannelKey(arg0) {
@@ -33,15 +32,15 @@ function getChannelKey(arg0) {
 function renderVoicePanel(arg0, channelId, transitionState, transitionCleanUp) {
   return <VoicePanel key={arg1} channelId={arg1} transitionState={arg2} transitionCleanUp={arg3} />;
 }
-let c3 = importAllResult;
-const memoResult = importAllResult.memo(function VoicePanelContainer() {
-  const tmp = callback((channels) => Array.from(channels.channels), isIterable.shallow);
-  return jsx(ManaContext.TransitionGroup, {
-    items: callback((channels) => Array.from(channels.channels), isIterable.shallow),
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/native/VoicePanelContainer.tsx");
+
+export default noop.memo(function VoicePanelContainer() {
+  const tmp = VoicePanelStore((channels) => Array.from(channels.channels), _mod4184.shallow);
+  return jsx(native.TransitionGroup, {
+    items: VoicePanelStore((channels) => Array.from(channels.channels), _mod4184.shallow),
     getItemKey: getChannelKey,
     renderItem: renderVoicePanel,
   });
 });
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/VoicePanelContainer.tsx");
-
-export default memoResult;

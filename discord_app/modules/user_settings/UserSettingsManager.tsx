@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/UserSettingsManager.tsx
-import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
+import UserSettings from "UserSettings.tsx";
+import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
-let require = arg1;
+require = fn;
 let c2 = false;
-initializeDefault;
 class UserSettingsManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -32,14 +32,15 @@ prototype["ensureTimezoneUpdated"] = function ensureTimezoneUpdated() {
     if (TimezoneOffset.getSetting() !== timezoneOffset) {
       const _setImmediate = setImmediate;
       setImmediate(() => {
-        const TimezoneOffset = timezoneOffset(closure_1_1[1]).TimezoneOffset;
+        const TimezoneOffset = UserSettings.TimezoneOffset;
         return TimezoneOffset.updateSetting(timezoneOffset);
       });
     }
   }
 };
 const userSettingsManager = new UserSettingsManager();
-const result = require("set").fileFinishedImporting("modules/user_settings/UserSettingsManager.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/UserSettingsManager.tsx");
 
 export default userSettingsManager;
 export { UserSettingsManager };

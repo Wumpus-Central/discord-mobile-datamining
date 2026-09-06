@@ -1,26 +1,24 @@
 // discord_app/modules/user_settings/defs/native/AdvancedSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import ME from "../../../../Constants.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
+import Constants from "../../../../Constants.tsx";
+import util from "../../../../intl/index.native.tsx";
 import SettingsIcon from "../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["8/udY0"]);
+    const intl = util.intl;
+    return intl.string(util.t["8/udY0"]);
   },
   parent: null,
   IconComponent: SettingsIcon.SettingsIcon,
-  screen: obj,
-};
-obj = {
-  route: ME.UserSettingsSections.ADVANCED,
-  getComponent() {
-    return require("../../advanced/native/SettingsAdvancedScreen.tsx").default;
+  screen: {
+    route: Constants.UserSettingsSections.ADVANCED,
+    getComponent() {
+      return require("SettingsAdvancedScreen").default;
+    },
   },
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/AdvancedSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AdvancedSetting.tsx");
 
 export default route;

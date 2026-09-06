@@ -1,22 +1,23 @@
 // discord_app/modules/user_settings/appearance/native/FontScaleStore.tsx
-import enforcingDefault from "../../../../../discord_common/js/packages/rtn-codegen/js/NativeFontModule.tsx";
-import set from "../../../../utils/PlatformUtils.tsx";
-import identity from "../../../../../_runtime/01244_identity.js";
+import NativeFontModuleDefault from "../../../../../discord_common/js/packages/rtn-codegen/js/NativeFontModule.tsx";
+import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
+import identity from "../../../../../_runtime/metro/01244__.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-if (set.isAndroid()) {
-  let customFontScale = enforcingDefault.getCustomFontScale();
-  const importDefaultResult = enforcingDefault;
+if (PlatformUtils.isAndroid()) {
+  let customFontScale = NativeFontModuleDefault.getCustomFontScale();
+  const importDefaultResult = NativeFontModuleDefault;
 } else {
   customFontScale = { fontScale: 1, isClassicChatFontScaleEnabled: false };
 }
-const obj = {
+const DEFAULT_FONT_SCALE_STORE_STATE = {
   persistedFontScale: customFontScale.fontScale,
   persistedIsClassicChatFontScaleEnabled: customFontScale.isClassicChatFontScaleEnabled,
   fontScale: customFontScale.fontScale,
   isClassicChatFontScaleEnabled: customFontScale.isClassicChatFontScaleEnabled,
 };
 const withEqualityFn = identity.createWithEqualityFn(() => obj);
-const result = set.fileFinishedImporting("modules/user_settings/appearance/native/FontScaleStore.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/appearance/native/FontScaleStore.tsx");
 
-export const DEFAULT_FONT_SCALE_STORE_STATE = obj;
+export { DEFAULT_FONT_SCALE_STORE_STATE };
 export const useFontScaleStore = withEqualityFn;

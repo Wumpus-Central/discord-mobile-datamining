@@ -1,9 +1,9 @@
 // discord_app/modules/video_calls/native/VoiceActionUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
-import _handleToggleVideo from "../../voice_calls/native/CallsUtils.tsx";
+import CallsUtils from "../../voice_calls/native/CallsUtils.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 function NOOP() {}
-const obj = {
+const DominantMuteState = {
   SERVER_MUTE: 0,
   [0]: "SERVER_MUTE",
   SUPPRESS: 1,
@@ -13,9 +13,9 @@ const obj = {
   NONE: 3,
   [3]: "NONE",
 };
-const result = set.fileFinishedImporting("modules/video_calls/native/VoiceActionUtils.tsx");
+const result = size.fileFinishedImporting("modules/video_calls/native/VoiceActionUtils.tsx");
 
-export const DominantMuteState = obj;
+export { DominantMuteState };
 export const createMuteHandler = function createMuteHandler(muteStates, stateFromStores) {
   let flag = stateFromStores;
   if (stateFromStores === undefined) {
@@ -28,23 +28,23 @@ export const createMuteHandler = function createMuteHandler(muteStates, stateFro
   if (flag) {
     let onPress = NOOP;
   } else {
-    onPress = _handleToggleVideo.handleToggleSelfMute;
+    onPress = CallsUtils.handleToggleSelfMute;
   }
   if (muteStates.suppress) {
-    onPress = _handleToggleVideo.showSuppressedAlert;
+    onPress = CallsUtils.showSuppressedAlert;
     dominantMuteState = tmp.SUPPRESS;
   }
   if (muteStates.mute) {
-    onPress = _handleToggleVideo.showServerMuteAlert;
+    onPress = CallsUtils.showServerMuteAlert;
     dominantMuteState = tmp.SERVER_MUTE;
   }
   const mute = muteStates.selfMute || muteStates.mute || muteStates.suppress;
   return { mute, onPress, dominantMuteState };
 };
 export const createDeafHandler = function createDeafHandler(deafStates) {
-  let onPress = _handleToggleVideo.handleToggleSelfDeaf;
+  let onPress = CallsUtils.handleToggleSelfDeaf;
   if (deafStates.deaf) {
-    onPress = _handleToggleVideo.showServerDeafenAlert;
+    onPress = CallsUtils.showServerDeafenAlert;
   }
   const deaf = deafStates.selfDeaf || deafStates.deaf;
   return { deaf, onPress };

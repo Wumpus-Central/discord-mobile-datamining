@@ -1,23 +1,24 @@
 // discord_app/modules/app_analytics/track/channel_opened/getChannelOpenedRouteTrackingProps.tsx
-import transitionTo from "../../../routing/router_utils.tsx";
-import collectThreadMetadata from "../../ThreadAnalyticsUtils.tsx";
-import closure_2 from "../../../../stores/ChannelStore.tsx";
+import router_utils from "../../../routing/router_utils.tsx";
+import ThreadAnalyticsUtils from "../../ThreadAnalyticsUtils.tsx";
+import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
-require = arg1;
-let result = require("set").fileFinishedImporting(
+require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting(
   "modules/app_analytics/track/channel_opened/getChannelOpenedRouteTrackingProps.tsx",
 );
 
 export const getChannelOpenedRouteTrackingProps = function getChannelOpenedRouteTrackingProps(selectedChannelId) {
-  let obj = collectThreadMetadata;
-  const result = obj.collectThreadMetadata(channel.getChannel(selectedChannelId), true);
+  let obj = ThreadAnalyticsUtils;
+  const result = obj.collectThreadMetadata(ChannelStore.getChannel(selectedChannelId), true);
   let _location;
   if (result != null) {
     _location = result.location;
   }
   if (_location == null) {
-    _location = transitionTo.getLastRouteChangeSource();
-    const tmpResult = transitionTo;
+    _location = router_utils.getLastRouteChangeSource();
+    const tmpResult = router_utils;
   }
   obj = result;
   if (result == null) {
@@ -26,8 +27,7 @@ export const getChannelOpenedRouteTrackingProps = function getChannelOpenedRoute
   obj = {};
   const merged = Object.assign(obj);
   if (null != _location) {
-    obj1 = { location: null };
-    obj1[0] = _location;
+    const obj1 = { location: _location };
     let obj2 = obj1;
   } else {
     obj2 = {};

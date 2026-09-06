@@ -1,27 +1,30 @@
 // discord_app/modules/video_calls/native/components/ChannelVoiceChatModal.tsx
-import computeChannelNameDefault from "../../../channel/useChannelName.tsx";
-import _modDef10924 from "../../../main_tabs_v2/native/utils/ModalStackNavigator.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import GuildThemeGuildIdOverrideContextDefault from "../../../guild_themes/native/GuildThemeGuildIdOverrideContext.tsx";
+import useChannelNameDefault from "../../../channel/useChannelName.tsx";
+import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
+import ChannelVoiceChatDefault from "ChannelVoiceChat.tsx";
+import ModalStackNavigatorDefault from "../../../main_tabs_v2/native/utils/ModalStackNavigator.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/video_calls/native/components/ChannelVoiceChatModal.tsx");
+const require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/native/components/ChannelVoiceChatModal.tsx");
 
 export default function ChannelVoiceChatModal(channel) {
   channel = channel.channel;
-  const tmp2 = computeChannelNameDefault(channel);
+  const tmp2 = useChannelNameDefault(channel);
   const items = [channel.id];
-  const effect = React.useEffect(() => {
-    closure_1_1(closure_1_2[3]).updateChatOpen(channel.id, true);
+  const effect = noop.useEffect(() => {
+    ChannelRTCActionCreatorsDefault.updateChatOpen(channel.id, true);
     return () => {
-      closure_1_1(closure_1_2[3]).updateChatOpen(id.id, false);
+      ChannelRTCActionCreatorsDefault.updateChatOpen(id.id, false);
     };
   }, items);
   let str = tmp2;
   if (tmp2 == null) {
     str = "";
   }
-  const tmp5 = _modDef10924;
   return (
     <tmp5
       screenKey="StageVoiceChat"
@@ -32,9 +35,9 @@ export default function ChannelVoiceChatModal(channel) {
         if (guild_id == null) {
           guild_id = null;
         }
-        return closure_1_4(closure_1_1(closure_1_2[6]).Provider, {
+        return jsx(GuildThemeGuildIdOverrideContextDefault.Provider, {
           value: guild_id,
-          children: closure_1_4(closure_1_1(closure_1_2[7]), { channel, inModal: true }),
+          children: jsx(ChannelVoiceChatDefault, { channel, inModal: true }),
         });
       }}
     />

@@ -1,13 +1,13 @@
 // discord_app/modules/auth/getAuthenticationErrorsFromAPIError.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/auth/getAuthenticationErrorsFromAPIError.tsx");
+const result = size.fileFinishedImporting("modules/auth/getAuthenticationErrorsFromAPIError.tsx");
 
-export const getAuthenticationErrorsFromAPIError = function getAuthenticationErrorsFromAPIError(c6) {
-  const obj = { error_code: c6.code };
-  if (null != c6.errors) {
+export const getAuthenticationErrorsFromAPIError = function getAuthenticationErrorsFromAPIError(error) {
+  const obj = { error_code: error.code };
+  if (null != error.errors) {
     const _Object = Object;
-    const keys = Object.keys(c6.errors);
+    const keys = Object.keys(error.errors);
     for (const item10017 of keys) {
       let items = [arg0.getFirstFieldErrorMessage(item10017)];
       obj[item10017] = items;
@@ -15,23 +15,22 @@ export const getAuthenticationErrorsFromAPIError = function getAuthenticationErr
     }
     return obj;
   } else {
-    obj.message = c6.message;
-    if (null != c6.retryAfter) {
-      obj.retry_after = c6.retryAfter;
+    obj.message = error.message;
+    if (null != error.retryAfter) {
+      obj.retry_after = error.retryAfter;
     }
     return obj;
   }
 };
 export const getAuthenticationErrorsFromV6OrEarlierAPIError = function getAuthenticationErrorsFromV6OrEarlierAPIError(
-  closure_2,
+  error,
 ) {
-  if (Object.keys(closure_2.fields).length > 0) {
-    return closure_2.fields;
+  if (Object.keys(error.fields).length > 0) {
+    return error.fields;
   } else {
-    const obj = { message: null };
-    obj[0] = closure_2.message;
-    if (null != closure_2.retryAfter) {
-      obj.retry_after = closure_2.retryAfter;
+    const obj = { message: error.message };
+    if (null != error.retryAfter) {
+      obj.retry_after = error.retryAfter;
     }
     return obj;
   }

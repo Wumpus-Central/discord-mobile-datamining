@@ -1,11 +1,11 @@
 // discord_app/modules/main_tabs_v2/native/modal/ModalDispatchQueue.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
 class ModalDispatchQueue {
   constructor() {
-    obj = Object.create(new.target.prototype);
-    obj[0] = [];
-    return obj;
+    merged = Object.assign({ queue: null });
+    merged[0] = [];
+    return merged;
   }
 }
 const prototype = ModalDispatchQueue.prototype;
@@ -25,8 +25,8 @@ prototype["flush"] = function flush() {
     } while (self.queue.length > 0);
   }
 };
-let obj = Object.create(ModalDispatchQueue.prototype);
-obj[0] = [];
-const result = set.fileFinishedImporting("modules/main_tabs_v2/native/modal/ModalDispatchQueue.tsx");
+let merged = Object.assign({ queue: null });
+merged[0] = [];
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/modal/ModalDispatchQueue.tsx");
 
-export default obj;
+export default merged;

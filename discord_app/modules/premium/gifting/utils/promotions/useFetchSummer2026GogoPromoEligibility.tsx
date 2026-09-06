@@ -1,39 +1,40 @@
 // discord_app/modules/premium/gifting/utils/promotions/useFetchSummer2026GogoPromoEligibility.tsx
-import closure_2 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
-import { Endpoints } from "../../../../../Constants.tsx";
+import HTTPUtils from "../../../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting(
+require = fn;
+const Endpoints = fn(1074).Endpoints;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/premium/gifting/utils/promotions/useFetchSummer2026GogoPromoEligibility.tsx",
 );
 
 export const useFetchSummer2026GogoPromoEligibility = function useFetchSummer2026GogoPromoEligibility(someResult) {
   closure_0 = someResult;
-  let tmp = callback(React.useState({ isEligible: false, hasFetched: false }), 2);
+  let tmp = _slicedToArray(noop.useState({ isEligible: false, hasFetched: false }), 2);
   closure_1 = tmp[1];
-  callback = React.useRef(false);
+  _slicedToArray = noop.useRef(false);
   const items = [someResult];
-  const effect = React.useEffect(() => {
-    let tmp = someResult;
-    if (someResult) {
+  const effect = noop.useEffect(() => {
+    let tmp = closure_0;
+    if (closure_0) {
       tmp = !ref.current;
     }
     if (tmp) {
       ref.current = true;
-      const HTTP = someResult(table[3]).HTTP;
-      const obj = { url: null, rejectWithError: true };
-      obj[0] = closure_1_4.GIFTING_PROMOTION_SUMMER_2026_GOGO_CAMPAIGN_ELIGIBILITY;
-      const value = HTTP.get(obj);
+      const HTTP = HTTPUtils.HTTP;
+      const obj = { url: Endpoints.GIFTING_PROMOTION_SUMMER_2026_GOGO_CAMPAIGN_ELIGIBILITY, rejectWithError: true };
+      value = HTTP.get(obj);
       value
         .then((body) => {
-          callback({ isEligible: body.body.is_eligible, hasFetched: true });
+          closure_1_1({ isEligible: body.body.is_eligible, hasFetched: true });
         })
         .catch(() => {
-          callback({ isEligible: false, hasFetched: true });
+          closure_1_1({ isEligible: false, hasFetched: true });
         });
       const nextPromise = value.then((body) => {
-        callback({ isEligible: body.body.is_eligible, hasFetched: true });
+        closure_1_1({ isEligible: body.body.is_eligible, hasFetched: true });
       });
     }
   }, items);

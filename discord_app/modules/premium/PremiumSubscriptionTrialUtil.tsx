@@ -1,22 +1,23 @@
 // discord_app/modules/premium/PremiumSubscriptionTrialUtil.tsx
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import closure_2 from "../../stores/UserStore.tsx";
-import closure_3 from "../../stores/billing/SubscriptionStore.tsx";
-import closure_4 from "../../stores/billing/UserOfferStore.tsx";
-import GuildFeatures from "PremiumConstants.tsx";
+import UserStore from "../../stores/UserStore.tsx";
+import SubscriptionStore from "../../stores/billing/SubscriptionStore.tsx";
+import UserOfferStore from "../../stores/billing/UserOfferStore.tsx";
 
-require = arg1;
+require = fn;
+const PremiumConstants = fn(1373);
 ({
-  PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID: c5,
-  PREMIUM_TIER_2_REACTIVATION_TRIAL_ID: closure_6,
-  PREMIUM_TIER_2_3P_ONE_MONTH_TRIAL_ID: error,
+  PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID: hasOwnProperty,
+  PREMIUM_TIER_2_REACTIVATION_TRIAL_ID: metroRequire,
+  PREMIUM_TIER_2_3P_ONE_MONTH_TRIAL_ID: closure_7,
   PREMIUM_TIER_2_REFERRAL_TRIAL_ID: closure_8,
-  PREMIUM_TRIAL_IDS_ALL: c9,
-} = GuildFeatures);
-const result = require("set").fileFinishedImporting("modules/premium/PremiumSubscriptionTrialUtil.tsx");
+  PREMIUM_TRIAL_IDS_ALL: closure_9,
+} = PremiumConstants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/PremiumSubscriptionTrialUtil.tsx");
 
 export const useHasActiveTrial = function useHasActiveTrial() {
-  const items = [closure_3];
+  const items = [SubscriptionStore];
   const stateFromStores = initialize.useStateFromStores(items, () =>
     premiumTypeSubscription.getPremiumTypeSubscription(),
   );
@@ -27,7 +28,7 @@ export const useHasActiveTrial = function useHasActiveTrial() {
   return hasActiveTrial;
 };
 export const hasActiveTrial = function hasActiveTrial() {
-  premiumTypeSubscription = premiumTypeSubscription.getPremiumTypeSubscription();
+  const premiumTypeSubscription = SubscriptionStore.getPremiumTypeSubscription();
   let trialId;
   if (premiumTypeSubscription != null) {
     trialId = premiumTypeSubscription.trialId;
@@ -41,27 +42,26 @@ export const isEligibleTrialSub = function isEligibleTrialSub(trialId) {
   }
   let tmp2 = null != trialId;
   if (tmp2) {
-    let tmp4 = trialId.trialId === closure_5;
+    let tmp4 = trialId.trialId === hasOwnProperty;
     if (!tmp4) {
-      tmp4 = trialId.trialId === closure_6;
+      tmp4 = trialId.trialId === timestampProducer;
     }
     if (!tmp4) {
-      tmp4 = trialId.trialId === closure_7;
+      tmp4 = trialId.trialId === React5;
     }
     if (!tmp4) {
-      tmp4 = trialId.trialId === closure_8;
+      tmp4 = trialId.trialId === React6;
     }
     tmp2 = tmp4;
   }
   return tmp2;
 };
 export const useCurrentPremiumTrialTier = function useCurrentPremiumTrialTier() {
-  const items = [closure_3];
+  const items = [SubscriptionStore];
   const stateFromStores = initialize.useStateFromStores(items, () =>
     premiumTypeSubscription.getPremiumTypeSubscription(),
   );
-  const obj = initialize;
-  const items1 = [closure_2];
+  const items1 = [UserStore];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => currentUser.getCurrentUser());
   let hasActiveTrial;
   if (stateFromStores != null) {
@@ -78,7 +78,7 @@ export const useCurrentPremiumTrialTier = function useCurrentPremiumTrialTier() 
   return tmp4;
 };
 export const getPremiumTrialOffer = function getPremiumTrialOffer() {
-  const mapped = closure_9.map((closure_9) => userTrialOffer.getUserTrialOffer(closure_9));
+  const mapped = React7.map((item) => userTrialOffer.getUserTrialOffer(item));
   const found = mapped.filter((hasExpired) => null != hasExpired && !hasExpired.hasExpired);
   return found.shift();
 };

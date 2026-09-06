@@ -1,13 +1,11 @@
 // discord_app/modules/popout-window/PopoutWindowStore.native.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../../Dispatcher.tsx";
+import DispatcherDefault from "../../Dispatcher.tsx";
 
-let closure_0 = {};
 const PersistedStore = initializeDefault.PersistedStore;
 class PopoutWindowStore extends PersistedStore {}
 const prototype = PopoutWindowStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
-  let obj = arg0;
   if (arg0 == null) {
     obj = {};
   }
@@ -21,7 +19,7 @@ prototype["getWindowState"] = function getWindowState() {
 prototype["getWindowKeys"] = function getWindowKeys() {
   return [];
 };
-prototype["getWindowOpen"] = function getWindowOpen(CHANNEL_CALL_POPOUT) {
+prototype["getWindowOpen"] = function getWindowOpen() {
   return false;
 };
 prototype["getIsAlwaysOnTop"] = function getIsAlwaysOnTop() {
@@ -34,7 +32,7 @@ prototype["getWindowVisible"] = function getWindowVisible() {
   return false;
 };
 prototype["getState"] = function getState() {
-  return closure_0;
+  return obj;
 };
 prototype["isWindowFullyInitialized"] = function isWindowFullyInitialized() {
   return false;
@@ -45,7 +43,8 @@ prototype["isWindowFullScreen"] = function isWindowFullScreen() {
 prototype["unmountWindow"] = function unmountWindow() {};
 PopoutWindowStore.displayName = "PopoutWindowStore";
 PopoutWindowStore.persistKey = "PopoutWindowStoreIOS";
-const popoutWindowStore = new PopoutWindowStore(dispatcherDefault, {});
-const result = require("set").fileFinishedImporting("modules/popout-window/PopoutWindowStore.native.tsx");
+const popoutWindowStore = new PopoutWindowStore(DispatcherDefault, {});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/popout-window/PopoutWindowStore.native.tsx");
 
 export default popoutWindowStore;

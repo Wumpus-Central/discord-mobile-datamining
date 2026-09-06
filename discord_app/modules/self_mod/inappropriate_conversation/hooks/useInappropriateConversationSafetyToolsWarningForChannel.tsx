@@ -1,22 +1,20 @@
 // discord_app/modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationSafetyToolsWarningForChannel.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import InappropriateConversationExperiment from "../SelfModInappropriateConversationExperiment.tsx";
+import SelfModInappropriateConversationExperiment from "../SelfModInappropriateConversationExperiment.tsx";
 import useSafetyAlertsSettingOrDefault from "useSafetyAlertsSettingOrDefault.tsx";
 import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting(
+const result = size.fileFinishedImporting(
   "modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationSafetyToolsWarningForChannel.tsx",
 );
 
 export const useInappropriateConversationSafetyToolsWarningForChannel =
   function useInappropriateConversationSafetyToolsWarningForChannel(channelId) {
     const isEligibleForInappropriateConversationWarning =
-      InappropriateConversationExperiment.useIsEligibleForInappropriateConversationWarning({
+      SelfModInappropriateConversationExperiment.useIsEligibleForInappropriateConversationWarning({
         location: "safety-tools-button",
       });
-    const obj = InappropriateConversationExperiment;
     const safetyAlertsSettingOrDefault = useSafetyAlertsSettingOrDefault.useSafetyAlertsSettingOrDefault();
-    const obj2 = useSafetyAlertsSettingOrDefault;
     const inappropriateConversationWarningsForChannel =
       useInappropriateConversationWarningsForChannel.useInappropriateConversationWarningsForChannel(channelId);
     if (isEligibleForInappropriateConversationWarning) {

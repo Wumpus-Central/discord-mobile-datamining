@@ -1,27 +1,26 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/items/MessagesItemSeparator.tsx
-import ThemesDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import get_ActivityIndicator from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
-import importAllResult from "../../../../../../../_runtime/00019_noop.js";
+import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import noop from "../../../../../../../_runtime/metro/00019__.js";
 
-({ StyleSheet, View: c0 } = get_ActivityIndicator);
-const PX_12 = ThemesDefault.space.PX_12;
+get_ActivityIndicator = fn(17);
+({ StyleSheet, View: closure_0 } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const PX_12 = nativeDefault.space.PX_12;
+const createStyles = fn(4560);
 let obj = { container: { height: PX_12 }, separator: null };
-obj = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, height: StyleSheet.hairlineWidth };
+obj = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, height: StyleSheet.hairlineWidth };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.top = undefined;
-obj[1] = obj;
-let closure_2 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(function MessagesItemSeperator() {
-  const tmp = callback();
-  obj = { style: tmp.container, collapsable: false, children: <closure_0 {...obj} /> };
-  obj = { style: tmp.separator };
-  return <closure_0 style={tmp.separator} />;
-});
-const result = require("set").fileFinishedImporting(
-  "modules/main_tabs_v2/native/tabs/messages/items/MessagesItemSeparator.tsx",
-);
+obj.separator = obj;
+let closure_2 = createStyles.createStyles(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/MessagesItemSeparator.tsx");
 
-export default memoResult;
+export default noop.memo(function MessagesItemSeperator() {
+  const tmp = closure_2();
+  let obj = { style: tmp.container, collapsable: false, children: null };
+  obj = { style: tmp.separator };
+  obj.children = <React style={tmp.separator} />;
+  return <React style={tmp.separator} />;
+});
 export const MESSAGES_ITEM_SEPERATOR_HEIGHT = PX_12;

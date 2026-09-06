@@ -1,7 +1,7 @@
 // discord_app/modules/guild_products/GuildProductConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/guild_products/GuildProductConstants.tsx");
+const result = size.fileFinishedImporting("modules/guild_products/GuildProductConstants.tsx");
 
 export const GUILD_PRODUCT_EDIT_MODAL_KEY = "guild-product-edit-modal";
 export const MAX_ATTACHMENT_UPLOAD_FILESIZE_BYTES = 1073741824;

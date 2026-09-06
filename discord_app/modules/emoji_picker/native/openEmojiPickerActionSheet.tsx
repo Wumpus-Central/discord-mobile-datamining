@@ -1,19 +1,20 @@
 // discord_app/modules/emoji_picker/native/openEmojiPickerActionSheet.tsx
-import set from "../../../../_runtime/00002_set.js";
-import set2 from "../../emojis/EmojiConstants.tsx";
+import EmojiConstants from "../../emojis/EmojiConstants.tsx";
 import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
-import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import toggleGuildExpandedState from "../../emojis/EmojiActionCreators.tsx";
+import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import emojis_EmojiActionCreators from "../../emojis/EmojiActionCreators.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const EmojiInteractionPoint = set2.EmojiInteractionPoint;
+const EmojiInteractionPoint = EmojiConstants.EmojiInteractionPoint;
 const EmojiPickerActionSheet = "EmojiPickerActionSheet";
-let result = set.fileFinishedImporting("modules/emoji_picker/native/openEmojiPickerActionSheet.tsx");
+let result = size.fileFinishedImporting("modules/emoji_picker/native/openEmojiPickerActionSheet.tsx");
 
 export const EMOJI_PICKER_ACTION_SHEET_KEY = "EmojiPickerActionSheet";
 export const openEmojiPickerActionSheet = function openEmojiPickerActionSheet(arg0, stack) {
-  const result = toggleGuildExpandedState.initiateEmojiInteraction(EmojiInteractionPoint.EmojiPickerActionSheetOpened);
-  const obj = toggleGuildExpandedState;
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(
+  const result = emojis_EmojiActionCreators.initiateEmojiInteraction(
+    EmojiInteractionPoint.EmojiPickerActionSheetOpened,
+  );
+  ActionSheetActionCreatorsDefault.openLazy(
     asyncRequireImpl(11122, dependencyMap.paths),
     EmojiPickerActionSheet,
     arg0,

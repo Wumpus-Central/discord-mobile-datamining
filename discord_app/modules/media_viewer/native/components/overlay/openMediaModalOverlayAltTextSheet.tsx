@@ -1,14 +1,14 @@
 // discord_app/modules/media_viewer/native/components/overlay/openMediaModalOverlayAltTextSheet.tsx
-import set from "../../../../../../_runtime/00002_set.js";
 import asyncRequireImpl from "../../../../../../_runtime/01896_asyncRequireImpl.js";
-import ACTION_SHEET_HEIGHT_HALFDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting(
+const result = size.fileFinishedImporting(
   "modules/media_viewer/native/components/overlay/openMediaModalOverlayAltTextSheet.tsx",
 );
 
 export default function openMediaModalOverlayAltTextSheet(description) {
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(
+  ActionSheetActionCreatorsDefault.openLazy(
     asyncRequireImpl(11536, dependencyMap.paths),
     "MediaModalOverlayAltTextSheet",
     { description: description.description },

@@ -1,14 +1,14 @@
 // discord_app/modules/chat/native/NativeExperimentBridgeManager.tsx
-import set from "../../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import set2 from "../../../utils/PlatformUtils.tsx";
-import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
-import sendRequest from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
-import shouldEnableYYTextReplacement from "../../messages/YYTextReplacementExperiment.tsx";
-import apexExperimentDefault from "../../cache/NotificationLoadMessagesExperiment.tsx";
-import closure_4 from "../../user_settings/LocaleStore.tsx";
-import closure_5 from "../../../stores/AuthenticationStore.tsx";
+import _mod17 from "../../../../_runtime/metro/00017__.js";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
+import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
+import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import YYTextReplacementExperiment from "../../messages/YYTextReplacementExperiment.tsx";
+import NotificationLoadMessagesExperimentDefault from "../../cache/NotificationLoadMessagesExperiment.tsx";
+import LocaleStore from "../../user_settings/LocaleStore.tsx";
+import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
+import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
 function syncYYTextReplacementExperiment() {
   if (obj.isIOS()) {
@@ -17,9 +17,9 @@ function syncYYTextReplacementExperiment() {
       const setShouldEnableYYTextReplacement = NSUserDefaultsBridge.setShouldEnableYYTextReplacement;
       if (setShouldEnableYYTextReplacement != null) {
         const result = setShouldEnableYYTextReplacement(
-          shouldEnableYYTextReplacement.shouldEnableYYTextReplacement({ location: "NativeExperimentBridgeManager" }),
+          YYTextReplacementExperiment.shouldEnableYYTextReplacement({ location: "NativeExperimentBridgeManager" }),
         );
-        const tmpResult = shouldEnableYYTextReplacement;
+        const tmpResult = YYTextReplacementExperiment;
       }
     }
   }
@@ -47,7 +47,7 @@ function updateIOSExperiments() {
       );
     }
   }
-  obj = set2;
+  obj = PlatformUtils;
   if (obj4.getConfig({ location: "NativeExperimentBridgeManager" }).enabled) {
     const RNVVideo = tmp6.RNVVideo;
     if (RNVVideo != null) {
@@ -61,14 +61,13 @@ function updateIOSExperiments() {
 }
 function updateAndroidExperiments() {
   let obj = {
-    "X-Super-Properties": expandEventPropertiesDefault.getSuperPropertiesBase64(),
-    "X-Fingerprint": store.getFingerprint(),
-    "X-Installation-ID": store.getInstallationForTracking(),
-    "X-Discord-Locale": locale.locale,
+    "X-Super-Properties": AnalyticsUtilsDefault.getSuperPropertiesBase64(),
+    "X-Fingerprint": AuthenticationStore.getFingerprint(),
+    "X-Installation-ID": AuthenticationStore.getInstallationForTracking(),
+    "X-Discord-Locale": LocaleStore.locale,
   };
-  const obj2 = expandEventPropertiesDefault;
-  const obj3 = store;
-  const config = apexExperimentDefault.getConfig({ location: "NativeExperimentBridgeManager" });
+  const obj3 = AuthenticationStore;
+  const config = NotificationLoadMessagesExperimentDefault.getConfig({ location: "NativeExperimentBridgeManager" });
   const NativeCacheModule = NativeModules.NativeCacheModule;
   if (NativeCacheModule != null) {
     const _JSON = JSON;
@@ -81,28 +80,26 @@ function updateAndroidExperiments() {
       cooldownMs: null,
       debounceMs: null,
     };
-    obj[0] = obj;
-    obj[1] = obj3.getId();
-    obj[2] = tmp3;
-    obj[3] = sendRequest.getAPIBaseURL();
+    obj.headers = obj;
+    obj.userId = obj3.getId();
+    obj.enabled = tmp3;
+    obj.apiBaseUrl = HTTPUtils.getAPIBaseURL();
     const _HermesInternal = HermesInternal;
-    obj[4] = "?limit=" + tmp4;
-    obj[5] = tmp5;
-    obj[6] = tmp6;
+    obj.urlQueryParams = "?limit=" + tmp4;
+    obj.cooldownMs = tmp5;
+    obj.debounceMs = tmp6;
     const result = NativeCacheModule.setItem("notificationNetworkRequest", JSON.stringify(obj));
-    const obj6 = sendRequest;
   }
 }
-const NativeModules = get_ActivityIndicator.NativeModules;
-initializeDefault;
+const NativeModules = _mod17.NativeModules;
 let prototype = function NativeExperimentBridgeManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  let obj = set2;
+  let obj = PlatformUtils;
   if (obj.isIOS()) {
     let tmp5 = updateIOSExperiments;
   } else {
-    tmp5 = set2.isAndroid() ? updateAndroidExperiments : () => {};
-    const tmp3Result = set2;
+    tmp5 = PlatformUtils.isAndroid() ? updateAndroidExperiments : () => {};
+    const tmp3Result = PlatformUtils;
   }
   applyArgumentsResult.handleUpdate = tmp5;
   obj = { APP_STATE_UPDATE: syncYYTextReplacementExperiment, POST_CONNECTION_OPEN: applyArgumentsResult.handleUpdate };
@@ -111,6 +108,6 @@ let prototype = function NativeExperimentBridgeManager() {
 }.prototype;
 class prototype extends tmp2 {}
 prototype = new prototype();
-let result = set.fileFinishedImporting("modules/chat/native/NativeExperimentBridgeManager.tsx");
+let result = size.fileFinishedImporting("modules/chat/native/NativeExperimentBridgeManager.tsx");
 
 export default prototype;

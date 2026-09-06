@@ -1,22 +1,22 @@
 // discord_app/modules/notifications/settings/native/routes/RedesignSettingsCategoryOtherScreen.tsx
-import _modDef14689 from "../../../../settings/native/renderer/SettingLayout.tsx";
-import importAllResult from "../../../../../../_runtime/00019_noop.js";
-import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import SettingBuilders from "../../../../settings/native/renderer/SettingBuilders.tsx";
+import SettingLayoutDefault from "../../../../settings/native/renderer/SettingLayout.tsx";
+import MobileNotifSettingsRouteBuilders from "../MobileNotifSettingsRouteBuilders.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-let c3 = importAllResult;
-const memoResult = importAllResult.memo(() => {
-  const node = importAllResult.useMemo(() => {
-    let obj = callback(11468);
-    obj = { sections: null };
-    const items = [callback(15918).buildCategoryOtherSettingsSection()];
-    obj[0] = items;
-    return obj.createList(obj);
-  }, []);
-  return jsx(_modDef14689, { node });
-});
-const result = require("set").fileFinishedImporting(
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/notifications/settings/native/routes/RedesignSettingsCategoryOtherScreen.tsx",
 );
 
-export default memoResult;
+export default noop.memo(() => {
+  const node = noop.useMemo(() => {
+    const obj = { sections: null };
+    const items = [MobileNotifSettingsRouteBuilders.buildCategoryOtherSettingsSection()];
+    obj.sections = items;
+    return obj.createList(obj);
+  }, []);
+  return jsx(SettingLayoutDefault, { node });
+});

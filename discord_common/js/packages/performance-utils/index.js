@@ -1,5 +1,5 @@
 // discord_common/js/packages/performance-utils/index.js
-import set from "../../../../_runtime/00002_set.js";
+import _mod2 from "../../../../_runtime/metro/00002__.js";
 import u from "performance-polyfill.js";
 
 try {
@@ -36,8 +36,7 @@ try {
   })();
   if (null == global.performance.timing) {
     try {
-      const obj = { navigationStart: null };
-      obj[0] = tmp4;
+      const obj = { navigationStart: tmp4 };
       global.performance.timing = obj;
     } catch (err) {}
   }
@@ -46,7 +45,7 @@ try {
       global.performance.timeOrigin = tmp5;
     } catch (err) {}
   }
-  const _module1 = set;
+  const _module1 = _mod2;
   const result = _module1.fileFinishedImporting("../discord_common/js/packages/performance-utils/index.js");
   exports.navigationStart = tmp4;
   exports.timeOrigin = tmp5;

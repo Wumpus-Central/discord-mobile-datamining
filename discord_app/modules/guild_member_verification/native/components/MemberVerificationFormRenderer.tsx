@@ -1,71 +1,114 @@
 // discord_app/modules/guild_member_verification/native/components/MemberVerificationFormRenderer.tsx
-import noopAll from "../../../../../_runtime/00019_noop.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = arg1;
-noopAll;
-({ Keyboard: c3, View: c4 } = get_ActivityIndicator);
-let closure_6 = createCacheKey.createStyles({
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ Keyboard: c3, View: closure_4 } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_6 = createStyles.createStyles({
   container: { flex: 1, flexDirection: "column", alignItems: "stretch", paddingHorizontal: 0 },
 });
-const result = require("set").fileFinishedImporting(
+const size = fn(2);
+const result = size.fileFinishedImporting(
   "modules/guild_member_verification/native/components/MemberVerificationFormRenderer.tsx",
 );
 
 export default function MemberVerificationFormRenderer(arg0) {
   ({ rulesChannelId: require, formFields, onChange: importDefault, verification: dependencyMap } = arg0);
-  let obj = { style: callback().container, children: null };
+  let obj = { style: closure_6().container, children: null };
   let mapped;
   if (formFields != null) {
-    mapped = formFields.map((field_type) => {
-      const combined = "verification-field-" + arg1;
-      closure_0 = arg1;
+    mapped = formFields.map((field_type, index) => {
+      const combined = "verification-field-" + index;
+      rulesChannelId = index;
       field_type = field_type.field_type;
-      if (closure_1_0(closure_1_2[4]).VerificationFormFieldTypes.TERMS === field_type) {
-        let obj = { field: null, rulesChannelId: null, onChange: null };
-        obj[0] = field_type;
-        obj[1] = closure_0;
-        obj[2] = function onChange(arg0) {
-          closure_1_1(closure_0, arg0);
-          closure_2_3.dismiss();
+      if (rulesChannelId(verification[4]).VerificationFormFieldTypes.TERMS === field_type) {
+        let obj = {
+          field: field_type,
+          rulesChannelId,
+          onChange(arg0) {
+            importDefault(closure_0, arg0);
+            React3.dismiss();
+          },
         };
-        let tmp4 = closure_1_5(closure_1_1(tmp3[5]), obj, combined);
+        let tmp4 = jsx(
+          require("TermsField"),
+          {
+            field: field_type,
+            rulesChannelId,
+            onChange(arg0) {
+              importDefault(closure_0, arg0);
+              React3.dismiss();
+            },
+          },
+          combined,
+        );
       } else if (tmp2(tmp3[4]).VerificationFormFieldTypes.VERIFICATION === field_type) {
-        obj = { verification: null, field: null };
-        obj[0] = closure_2;
-        obj[1] = field_type;
-        tmp4 = closure_1_5(closure_1_1(tmp3[6]), obj, combined);
+        obj = { verification, field: field_type };
+        tmp4 = jsx(require("UserVerification"), { verification, field: field_type }, combined);
       } else if (tmp2(tmp3[4]).VerificationFormFieldTypes.TEXT_INPUT === field_type) {
-        obj1 = { field: null, onChange: null };
-        obj1[0] = field_type;
-        obj1[1] = function onChange(arg0) {
-          return closure_1_1(closure_0, arg0);
+        const obj1 = {
+          field: field_type,
+          onChange(arg0) {
+            return importDefault(closure_0, arg0);
+          },
         };
-        tmp4 = closure_1_5(closure_1_1(tmp3[7]), obj1, combined);
+        tmp4 = jsx(
+          require("TextInputField"),
+          {
+            field: field_type,
+            onChange(arg0) {
+              return importDefault(closure_0, arg0);
+            },
+          },
+          combined,
+        );
       } else if (tmp2(tmp3[4]).VerificationFormFieldTypes.PARAGRAPH === field_type) {
-        obj = { field: null, onChange: null };
-        obj[0] = field_type;
-        obj[1] = function onChange(arg0) {
-          return closure_1_1(closure_0, arg0);
+        obj = {
+          field: field_type,
+          onChange(arg0) {
+            return importDefault(closure_0, arg0);
+          },
         };
-        tmp4 = closure_1_5(closure_1_1(tmp3[8]), obj, combined);
+        tmp4 = jsx(
+          require("ParagraphField"),
+          {
+            field: field_type,
+            onChange(arg0) {
+              return importDefault(closure_0, arg0);
+            },
+          },
+          combined,
+        );
       } else {
         tmp4 = null;
         if (tmp2(tmp3[4]).VerificationFormFieldTypes.MULTIPLE_CHOICE === field_type) {
-          const obj2 = { field: null, hasIcons: false, onChange: null };
-          obj2[0] = field_type;
-          obj2[2] = function onChange(arg0) {
-            closure_1_1(closure_0, arg0);
-            closure_2_3.dismiss();
+          const obj2 = {
+            field: field_type,
+            hasIcons: false,
+            onChange(arg0) {
+              importDefault(closure_0, arg0);
+              React3.dismiss();
+            },
           };
-          tmp4 = closure_1_5(closure_1_1(tmp3[9]), obj2, combined);
+          tmp4 = jsx(
+            require("MultipleChoiceField"),
+            {
+              field: field_type,
+              hasIcons: false,
+              onChange(arg0) {
+                importDefault(closure_0, arg0);
+                React3.dismiss();
+              },
+            },
+            combined,
+          );
         }
       }
       return tmp4;
     });
   }
-  obj[1] = mapped;
-  return <closure_4 style={callback().container}>{null}</closure_4>;
+  obj.children = mapped;
+  return <closure_4 style={closure_6().container}>{null}</closure_4>;
 }

@@ -1,14 +1,14 @@
 // discord_app/stores/NotificationSettingsStore.tsx
-import set from "../../_runtime/00002_set.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
-import dispatcherDefault from "../Dispatcher.tsx";
-import set2 from "../utils/PlatformUtils.tsx";
-import ME from "../Constants.tsx";
+import DispatcherDefault from "../Dispatcher.tsx";
+import PlatformUtils from "../utils/PlatformUtils.tsx";
+import Constants from "../Constants.tsx";
+import size from "../../_runtime/metro/00002__.js";
 
-const DesktopNotificationTypes = ME.DesktopNotificationTypes;
-({ NotificationPermissionTypes: c3, TTSNotificationTypes } = ME);
+const DesktopNotificationTypes = Constants.DesktopNotificationTypes;
+({ NotificationPermissionTypes: c3, TTSNotificationTypes } = Constants);
 let obj = {
-  desktopType: set2.isPlatformEmbedded ? DesktopNotificationTypes.ALL : DesktopNotificationTypes.NEVER,
+  desktopType: PlatformUtils.isPlatformEmbedded ? DesktopNotificationTypes.ALL : DesktopNotificationTypes.NEVER,
   disableAllSounds: false,
   disabledSounds: [],
   ttsType: TTSNotificationTypes.NEVER,
@@ -86,7 +86,9 @@ const items = [
     if (null != obj.desktopType) {
       return obj;
     } else {
-      obj.desktopType = set2.isPlatformEmbedded ? DesktopNotificationTypes.ALL : DesktopNotificationTypes.NEVER;
+      obj.desktopType = PlatformUtils.isPlatformEmbedded
+        ? DesktopNotificationTypes.ALL
+        : DesktopNotificationTypes.NEVER;
     }
   },
 ];
@@ -123,7 +125,7 @@ obj = {
     obj.screenDowntimeReminder = screenDowntimeReminder.screenDowntimeReminder;
   },
 };
-const notificationSettingsStore = new NotificationSettingsStore(dispatcherDefault, obj);
-const result = set.fileFinishedImporting("stores/NotificationSettingsStore.tsx");
+const notificationSettingsStore = new NotificationSettingsStore(DispatcherDefault, obj);
+const result = size.fileFinishedImporting("stores/NotificationSettingsStore.tsx");
 
 export default notificationSettingsStore;

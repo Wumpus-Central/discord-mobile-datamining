@@ -1,12 +1,13 @@
 // discord_app/modules/wishlists/hooks/useWishlistApplicationIds.native.tsx
-import closure_0 from "../../../../_runtime/00019_noop.js";
-import { COLLECTIBLES_APPLICATION_ID as closure_1 } from "../../../Constants.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const result = require("set").fileFinishedImporting("modules/wishlists/hooks/useWishlistApplicationIds.native.tsx");
+let closure_1 = fn(1074).COLLECTIBLES_APPLICATION_ID;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/wishlists/hooks/useWishlistApplicationIds.native.tsx");
 
-export const useWishlistApplicationIds = function useWishlistApplicationIds(userId) {
-  return React.useMemo(() => {
-    const items = [closure_1];
+export const useWishlistApplicationIds = function useWishlistApplicationIds() {
+  return noop.useMemo(() => {
+    const items = [closure_1_1];
     return items;
   }, []);
 };

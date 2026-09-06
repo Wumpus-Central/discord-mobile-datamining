@@ -1,17 +1,17 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/SafetyPolicyNoticeEmbed.tsx
-import set from "../../../../../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import ME from "../../../../../../Constants.tsx";
-import getSystemLocale from "../../../../../../intl/index.native.tsx";
-import hooksDefault from "../../../../../../../_runtime/04153_hooks.js";
-import frozen from "../../EmbedUtils.tsx";
-import SafetyHubView from "../../../../../safety_hub/SafetyHubConstants.tsx";
-import registerAssetDefault from "../../../../../../../_runtime/08589_registerAsset.js";
+import _mod17 from "../../../../../../../_runtime/metro/00017__.js";
+import Constants from "../../../../../../Constants.tsx";
+import util from "../../../../../../intl/index.native.tsx";
+import _modDef4153 from "../../../../../../../_runtime/metro/04153__.js";
+import renderer_EmbedUtils from "../../EmbedUtils.tsx";
+import SafetyHubConstants from "../../../../../safety_hub/SafetyHubConstants.tsx";
+import _modDef8589 from "../../../../../../../_runtime/metro/08589__.js";
+import size from "../../../../../../../_runtime/metro/00002__.js";
 
-const Image = get_ActivityIndicator.Image;
-const MessageEmbedTypes = ME.MessageEmbedTypes;
-const SafetyHubPolicyNoticeKeys = SafetyHubView.SafetyHubPolicyNoticeKeys;
-const result = set.fileFinishedImporting(
+const Image = _mod17.Image;
+const MessageEmbedTypes = Constants.MessageEmbedTypes;
+const SafetyHubPolicyNoticeKeys = SafetyHubConstants.SafetyHubPolicyNoticeKeys;
+const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/row_data/embeds/SafetyPolicyNoticeEmbed.tsx",
 );
 
@@ -60,20 +60,19 @@ export const createSafetyPolicyNoticeEmbed = function createSafetyPolicyNoticeEm
               ctaText: null,
               classificationId: null,
             };
-            const intl = getSystemLocale.intl;
-            obj[0] = intl.string(getSystemLocale.t["4CxGXi"]);
-            obj[1] = frozen.getAssetUriForEmbed(Image.resolveAssetSource(registerAssetDefault));
-            const intl2 = getSystemLocale.intl;
+            const intl = util.intl;
+            obj.titleText = intl.string(util.t["4CxGXi"]);
+            obj.titleIcon = renderer_EmbedUtils.getAssetUriForEmbed(Image.resolveAssetSource(_modDef8589));
+            const intl2 = util.intl;
             obj = { daysAgo: null };
-            const obj2 = frozen;
-            const obj4 = hooksDefault();
-            obj[0] = obj4.diff(hooksDefault.unix(parsed), "days");
-            obj[2] = intl2.formatToPlainString(getSystemLocale.t.eevFb6, obj);
-            const intl3 = getSystemLocale.intl;
-            obj[3] = intl3.string(getSystemLocale.t["5CLb0A"]);
-            const intl4 = getSystemLocale.intl;
-            obj[4] = intl4.string(getSystemLocale.t.zKnzwm);
-            obj[5] = rawValue;
+            const obj4 = _modDef4153();
+            obj.daysAgo = obj4.diff(_modDef4153.unix(parsed), "days");
+            obj.subtitleText = intl2.formatToPlainString(util.t.eevFb6, obj);
+            const intl3 = util.intl;
+            obj.descriptionText = intl3.string(util.t["5CLb0A"]);
+            const intl4 = util.intl;
+            obj.ctaText = intl4.string(util.t.zKnzwm);
+            obj.classificationId = rawValue;
             return obj;
           }
         }

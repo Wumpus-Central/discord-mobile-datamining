@@ -1,11 +1,11 @@
 // discord_app/modules/guild_automod/ExperimentUtils.tsx
-import set from "../../../_runtime/00002_set.js";
-import experiment from "AutomodExperiment.tsx";
+import AutomodExperiment from "AutomodExperiment.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-const result = set.fileFinishedImporting("modules/guild_automod/ExperimentUtils.tsx");
+const result = size.fileFinishedImporting("modules/guild_automod/ExperimentUtils.tsx");
 
 export const isInMentionRaidExperiment = function isInMentionRaidExperiment(guildId) {
-  const AutomodMentionRaidLimit = experiment.AutomodMentionRaidLimit;
+  const AutomodMentionRaidLimit = AutomodExperiment.AutomodMentionRaidLimit;
   return AutomodMentionRaidLimit.getCurrentConfig({ guildId, location: "988d4e_3" }).enabled;
 };
 export const useIsMentionRaidExperimentEnabled = function useIsMentionRaidExperimentEnabled(id, arg1) {
@@ -13,6 +13,6 @@ export const useIsMentionRaidExperimentEnabled = function useIsMentionRaidExperi
   if (arg1 === undefined) {
     autoTrackExposure = true;
   }
-  const AutomodMentionRaidLimit = experiment.AutomodMentionRaidLimit;
+  const AutomodMentionRaidLimit = AutomodExperiment.AutomodMentionRaidLimit;
   return AutomodMentionRaidLimit.useExperiment({ guildId: id, location: "988d4e_4" }, { autoTrackExposure }).enabled;
 };

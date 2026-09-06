@@ -1,9 +1,9 @@
 // discord_app/modules/collectibles/native/hooks/useCardLayout.tsx
-import set from "../../../../../_runtime/00002_set.js";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
-import CollectiblesShopCardInternalV2 from "../CollectiblesShopCardV2.tsx";
+import CollectiblesShopCardV2 from "../CollectiblesShopCardV2.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-let result = set.fileFinishedImporting("modules/collectibles/native/hooks/useCardLayout.tsx");
+let result = size.fileFinishedImporting("modules/collectibles/native/hooks/useCardLayout.tsx");
 
 export const useCardLayout = function useCardLayout() {
   const width = useWindowDimensionsDefault().width;
@@ -12,18 +12,17 @@ export const useCardLayout = function useCardLayout() {
     num = 2;
   }
   if (num < 2) {
-    let obj = { columns: null, cardWidth: "Array", rowWidth: "isArray" };
-    obj[0] = num;
+    let obj = { columns: num, cardWidth: "Array", rowWidth: "isArray" };
     return obj;
   } else {
     let num2 = 2;
     if (width >= 768) {
       num2 = 4;
     }
-    const result = CollectiblesShopCardInternalV2.COLLECTIBLES_SHOP_CARD_WIDTH * num;
+    const result = CollectiblesShopCardV2.COLLECTIBLES_SHOP_CARD_WIDTH * num;
     const diff = num - 1;
-    const diff1 = width - (result + CollectiblesShopCardInternalV2.COLLECTIBLES_SHOP_CARD_GAP * diff);
-    if (diff1 < 2 * CollectiblesShopCardInternalV2.COLLECTIBLES_SHOP_CARD_GAP) {
+    const diff1 = width - (result + CollectiblesShopCardV2.COLLECTIBLES_SHOP_CARD_GAP * diff);
+    if (diff1 < 2 * CollectiblesShopCardV2.COLLECTIBLES_SHOP_CARD_GAP) {
       const _Math = Math;
       let bound = Math.max(4, diff1);
     } else {
@@ -34,7 +33,7 @@ export const useCardLayout = function useCardLayout() {
     let tmp11 = result1;
     let tmp12 = num;
     let tmp14 = tmp2;
-    if (result1 > CollectiblesShopCardInternalV2.COLLECTIBLES_SHOP_CARD_MAX_WIDTH) {
+    if (result1 > CollectiblesShopCardV2.COLLECTIBLES_SHOP_CARD_MAX_WIDTH) {
       let tmp19 = num;
       tmp10 = tmp2;
       tmp11 = result1;
@@ -42,17 +41,15 @@ export const useCardLayout = function useCardLayout() {
       tmp12 = num;
       if (num < num2) {
         const sum = tmp19 + 1;
-        const result2 = (width - (bound + CollectiblesShopCardInternalV2.COLLECTIBLES_SHOP_CARD_GAP * (sum - 1))) / sum;
+        const result2 = (width - (bound + CollectiblesShopCardV2.COLLECTIBLES_SHOP_CARD_GAP * (sum - 1))) / sum;
         tmp10 = require;
         tmp11 = result2;
         tmp12 = sum;
         tmp14 = require;
-        while (result2 > CollectiblesShopCardInternalV2.COLLECTIBLES_SHOP_CARD_MAX_WIDTH) {
+        while (result2 > CollectiblesShopCardV2.COLLECTIBLES_SHOP_CARD_MAX_WIDTH) {
           tmp19 = sum;
-          let tmp9 = tmp17;
           tmp10 = tmp16;
           tmp11 = result2;
-          let tmp13 = tmp17;
           tmp14 = tmp16;
           tmp12 = sum;
           if (sum >= num2) {
@@ -73,10 +70,8 @@ export const useCardLayout = function useCardLayout() {
       }
       return obj;
     }
-    obj = { columns: null, cardWidth: null, rowWidth: null };
-    obj[0] = tmp12;
-    obj[1] = bound2;
+    obj = { columns: tmp12, cardWidth: bound2, rowWidth: null };
     const result4 = bound2 * tmp12;
-    obj[2] = result4 + tmp14(8764).COLLECTIBLES_SHOP_CARD_GAP * diff2;
+    obj.rowWidth = result4 + tmp14(8764).COLLECTIBLES_SHOP_CARD_GAP * diff2;
   }
 };

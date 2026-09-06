@@ -1,8 +1,8 @@
 // discord_common/js/packages/kv-storage/js/implementation/Classic.native.tsx
-import set from "../../../../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
+import _mod17 from "../../../../../../_runtime/metro/00017__.js";
+import size from "../../../../../../_runtime/metro/00002__.js";
 
-const NativeModules = get_ActivityIndicator.NativeModules;
+const NativeModules = _mod17.NativeModules;
 if (null != global.__KvStorage) {
   let __KvStorage = global.__KvStorage;
 } else if (null == NativeModules.KvStorage) {
@@ -34,7 +34,7 @@ if (null != global.__KvStorage) {
     throw error3;
   }
 }
-const result = set.fileFinishedImporting(
+const result = size.fileFinishedImporting(
   "../discord_common/js/packages/kv-storage/js/implementation/Classic.native.tsx",
 );
 
